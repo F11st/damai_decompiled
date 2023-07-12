@@ -3,9 +3,6 @@ package tb;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8215n;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptorWithTypeParameters;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
@@ -24,13 +21,12 @@ import org.jetbrains.annotations.Nullable;
 public final class xf2 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.xf2$a */
     /* loaded from: classes3.dex */
-    public static final class C9929a extends oq2 {
+    public static final class a extends oq2 {
         final /* synthetic */ List<TypeConstructor> a;
 
         /* JADX WARN: Multi-variable type inference failed */
-        C9929a(List<? extends TypeConstructor> list) {
+        a(List<? extends TypeConstructor> list) {
             this.a = list;
         }
 
@@ -47,10 +43,10 @@ public final class xf2 {
         }
     }
 
-    private static final z71 a(List<? extends TypeConstructor> list, List<? extends z71> list2, AbstractC8271b abstractC8271b) {
-        z71 q = TypeSubstitutor.g(new C9929a(list)).q((z71) C8212k.P(list2), Variance.OUT_VARIANCE);
+    private static final z71 a(List<? extends TypeConstructor> list, List<? extends z71> list2, kotlin.reflect.jvm.internal.impl.builtins.b bVar) {
+        z71 q = TypeSubstitutor.g(new a(list)).q((z71) kotlin.collections.k.P(list2), Variance.OUT_VARIANCE);
         if (q == null) {
-            q = abstractC8271b.y();
+            q = bVar.y();
         }
         b41.h(q, "typeParameters: List<Typ… ?: builtIns.defaultBound");
         return q;
@@ -66,7 +62,7 @@ public final class xf2 {
         if (containingDeclaration instanceof ClassifierDescriptorWithTypeParameters) {
             List<TypeParameterDescriptor> parameters = ((ClassifierDescriptorWithTypeParameters) containingDeclaration).getTypeConstructor().getParameters();
             b41.h(parameters, "descriptor.typeConstructor.parameters");
-            q2 = C8215n.q(parameters, 10);
+            q2 = kotlin.collections.n.q(parameters, 10);
             ArrayList arrayList = new ArrayList(q2);
             for (TypeParameterDescriptor typeParameterDescriptor2 : parameters) {
                 TypeConstructor typeConstructor = typeParameterDescriptor2.getTypeConstructor();
@@ -79,7 +75,7 @@ public final class xf2 {
         } else if (containingDeclaration instanceof FunctionDescriptor) {
             List<TypeParameterDescriptor> typeParameters = ((FunctionDescriptor) containingDeclaration).getTypeParameters();
             b41.h(typeParameters, "descriptor.typeParameters");
-            q = C8215n.q(typeParameters, 10);
+            q = kotlin.collections.n.q(typeParameters, 10);
             ArrayList arrayList2 = new ArrayList(q);
             for (TypeParameterDescriptor typeParameterDescriptor3 : typeParameters) {
                 TypeConstructor typeConstructor2 = typeParameterDescriptor3.getTypeConstructor();

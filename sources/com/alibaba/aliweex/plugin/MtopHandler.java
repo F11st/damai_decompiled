@@ -35,9 +35,8 @@ public class MtopHandler {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.plugin.MtopHandler$a */
     /* loaded from: classes15.dex */
-    public static class C3096a {
+    public static class a {
         public String a;
         public String b;
         public boolean c;
@@ -48,7 +47,7 @@ public class MtopHandler {
         public int h;
         private Map<String, String> i;
 
-        private C3096a() {
+        private a() {
             this.i = new HashMap();
         }
 
@@ -61,9 +60,9 @@ public class MtopHandler {
         }
     }
 
-    private static RemoteBusiness a(MtopRequest mtopRequest, C3096a c3096a) {
-        RemoteBusiness build = RemoteBusiness.build(mtopRequest, c3096a.g);
-        if (c3096a.f) {
+    private static RemoteBusiness a(MtopRequest mtopRequest, a aVar) {
+        RemoteBusiness build = RemoteBusiness.build(mtopRequest, aVar.g);
+        if (aVar.f) {
             build.protocol(ProtocolEnum.HTTPSECURE);
         } else {
             build.protocol(ProtocolEnum.HTTP);
@@ -71,49 +70,49 @@ public class MtopHandler {
         if ("true".equals(oz2.j().h(oz2.j().m))) {
             build.useCache();
         }
-        int i = c3096a.h;
+        int i = aVar.h;
         if (i > 0) {
             build.setConnectionTimeoutMilliSecond(i);
         }
-        if (c3096a.e) {
+        if (aVar.e) {
             build.useWua();
         }
-        build.reqMethod(c3096a.c ? MethodEnum.POST : MethodEnum.GET);
+        build.reqMethod(aVar.c ? MethodEnum.POST : MethodEnum.GET);
         return build;
     }
 
-    private static MtopRequest b(C3096a c3096a) {
+    private static MtopRequest b(a aVar) {
         MtopRequest mtopRequest = new MtopRequest();
-        mtopRequest.setApiName(c3096a.a);
-        mtopRequest.setVersion(c3096a.b);
-        mtopRequest.setNeedEcode(c3096a.d);
-        Map<String, String> b = c3096a.b();
+        mtopRequest.setApiName(aVar.a);
+        mtopRequest.setVersion(aVar.b);
+        mtopRequest.setNeedEcode(aVar.d);
+        Map<String, String> b = aVar.b();
         mtopRequest.dataParams = b;
         mtopRequest.setData(ReflectUtil.converMapToDataStr(b));
         return mtopRequest;
     }
 
-    private static C3096a c(String str) {
+    private static a c(String str) {
         try {
-            C3096a c3096a = new C3096a();
+            a aVar = new a();
             JSONObject jSONObject = new JSONObject(str);
-            c3096a.a = jSONObject.getString("api");
-            c3096a.b = jSONObject.optString("v", jn1.MUL);
-            c3096a.c = jSONObject.optInt(gn1.TYPE_OPEN_URL_METHOD_POST, 0) != 0;
-            c3096a.d = jSONObject.optInt("ecode", 0) != 0;
-            c3096a.e = jSONObject.optInt("isSec", 1) != 0;
-            c3096a.f = jSONObject.optInt("isHttps", 0) != 0;
-            c3096a.g = jSONObject.optString("ttid");
-            c3096a.h = jSONObject.optInt("timer", -1);
+            aVar.a = jSONObject.getString("api");
+            aVar.b = jSONObject.optString("v", jn1.MUL);
+            aVar.c = jSONObject.optInt(gn1.TYPE_OPEN_URL_METHOD_POST, 0) != 0;
+            aVar.d = jSONObject.optInt("ecode", 0) != 0;
+            aVar.e = jSONObject.optInt("isSec", 1) != 0;
+            aVar.f = jSONObject.optInt("isHttps", 0) != 0;
+            aVar.g = jSONObject.optString("ttid");
+            aVar.h = jSONObject.optInt("timer", -1);
             JSONObject optJSONObject = jSONObject.optJSONObject("param");
             if (optJSONObject != null) {
                 Iterator<String> keys = optJSONObject.keys();
                 while (keys.hasNext()) {
                     String next = keys.next();
-                    c3096a.a(next, optJSONObject.getString(next));
+                    aVar.a(next, optJSONObject.getString(next));
                 }
             }
-            return c3096a;
+            return aVar;
         } catch (JSONException unused) {
             WXLogUtils.e("parseParams error, param=" + str);
             return null;
@@ -127,7 +126,7 @@ public class MtopHandler {
         if (mtopFinshCallback == null) {
             return;
         }
-        C3096a c = c(str);
+        a c = c(str);
         if (c == null) {
             mtopFinshCallback.onError(WXMtopRequest.MSG_PARAM_ERR);
         } else {

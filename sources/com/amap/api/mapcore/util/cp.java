@@ -15,20 +15,20 @@ import java.util.List;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class cp implements IBuildingDelegate, IOverlayDelegate {
-    private C4637r b;
+    private r b;
     private BuildingOverlayOptions c;
     private List<BuildingOverlayOptions> e;
     private String g;
     private float h;
     private boolean i;
-    private C4505de j;
+    private de j;
     long a = -1;
     private List<BuildingOverlayOptions> d = new ArrayList();
     private boolean f = true;
 
-    public cp(C4637r c4637r) {
+    public cp(r rVar) {
         try {
-            this.b = c4637r;
+            this.b = rVar;
             if (this.c == null) {
                 BuildingOverlayOptions buildingOverlayOptions = new BuildingOverlayOptions();
                 this.c = buildingOverlayOptions;
@@ -103,7 +103,7 @@ public class cp implements IBuildingDelegate, IOverlayDelegate {
 
     @Override // com.autonavi.base.amap.api.mapcore.overlays.IOverlayDelegate
     public void draw(MapConfig mapConfig) throws RemoteException {
-        C4505de c4505de;
+        de deVar;
         if (mapConfig == null) {
             return;
         }
@@ -126,10 +126,10 @@ public class cp implements IBuildingDelegate, IOverlayDelegate {
             }
             long nativeCreate = AMapNativeBuildingRenderer.nativeCreate();
             this.a = nativeCreate;
-            if (nativeCreate == -1 || (c4505de = this.j) == null) {
+            if (nativeCreate == -1 || (deVar = this.j) == null) {
                 return;
             }
-            AMapNativeBuildingRenderer.nativeSetGLShaderManager(nativeCreate, c4505de.a());
+            AMapNativeBuildingRenderer.nativeSetGLShaderManager(nativeCreate, deVar.a());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -189,8 +189,8 @@ public class cp implements IBuildingDelegate, IOverlayDelegate {
 
     @Override // com.autonavi.amap.mapcore.interfaces.IOverlay
     public void remove() throws RemoteException {
-        C4637r c4637r = this.b;
-        if (c4637r == null || c4637r.a(this.g, true)) {
+        r rVar = this.b;
+        if (rVar == null || rVar.a(this.g, true)) {
             return;
         }
         destroy();
@@ -240,7 +240,7 @@ public class cp implements IBuildingDelegate, IOverlayDelegate {
         }
     }
 
-    public void a(C4505de c4505de) {
-        this.j = c4505de;
+    public void a(de deVar) {
+        this.j = deVar;
     }
 }

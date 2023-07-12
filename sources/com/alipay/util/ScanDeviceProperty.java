@@ -3,7 +3,7 @@ package com.alipay.util;
 import android.text.TextUtils;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
 import com.alipay.mobile.scan.util.BQCSystemUtil;
-import com.alipay.sdk.m.c.C4151a;
+import com.alipay.sdk.m.c.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -54,7 +54,7 @@ public class ScanDeviceProperty {
                 } else if (isOppoDevice()) {
                     d = BQCSystemUtil.reflectSystemProperties("ro.build.version.opporom");
                 } else if (isHuaweiDevice()) {
-                    d = BQCSystemUtil.reflectSystemProperties(C4151a.a);
+                    d = BQCSystemUtil.reflectSystemProperties(a.a);
                 }
                 String str = d;
                 if (str != null) {

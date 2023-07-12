@@ -21,15 +21,15 @@ public class DynamicInfoView extends View {
     private static final float MOVING_DISTANCE = 1.5f;
     private int childCount;
     private int dividerCount;
-    private AbstractC2493a mCurrentClick;
-    private List<AbstractC2493a> mCurrentClickList;
+    private a mCurrentClick;
+    private List<a> mCurrentClickList;
     private Runnable mDrawingTask;
     private int mInfoIndex;
     private long mLastNotifyTimestamp;
     private DisplayListener mListener;
-    private ArrayList<AbstractC2493a> mPastedList;
-    private ArrayList<AbstractC2493a> mRunningList;
-    private LinkedList<AbstractC2493a> mWaitingList;
+    private ArrayList<a> mPastedList;
+    private ArrayList<a> mRunningList;
+    private LinkedList<a> mWaitingList;
 
     /* compiled from: Taobao */
     /* loaded from: classes17.dex */
@@ -40,9 +40,8 @@ public class DynamicInfoView extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.dynamicinfo.DynamicInfoView$a */
     /* loaded from: classes17.dex */
-    public static abstract class AbstractC2493a<T> {
+    public static abstract class a<T> {
         private static transient /* synthetic */ IpChange $ipChange;
         protected int a;
         private int b;
@@ -76,16 +75,16 @@ public class DynamicInfoView extends View {
                     dynamicInfoView.postDelayed(dynamicInfoView.mDrawingTask, 20L);
                 } else {
                     int height = DynamicInfoView.this.getHeight();
-                    int a = yr2.a(DynamicInfoView.this.getContext(), 0.45000002f);
+                    int a2 = yr2.a(DynamicInfoView.this.getContext(), 0.45000002f);
                     ArrayList arrayList = new ArrayList();
                     Iterator it = DynamicInfoView.this.mRunningList.iterator();
                     while (it.hasNext()) {
-                        AbstractC2493a abstractC2493a = (AbstractC2493a) it.next();
-                        int d = abstractC2493a.d(DynamicInfoView.this.getContext());
-                        abstractC2493a.b -= a;
-                        int i = d + abstractC2493a.b;
+                        a aVar = (a) it.next();
+                        int d = aVar.d(DynamicInfoView.this.getContext());
+                        aVar.b -= a2;
+                        int i = d + aVar.b;
                         if (i <= 0) {
-                            arrayList.add(abstractC2493a);
+                            arrayList.add(aVar);
                         }
                         height = i;
                     }
@@ -96,13 +95,13 @@ public class DynamicInfoView extends View {
                         DynamicInfoView.this.mPastedList.remove(0);
                     }
                     if (height <= DynamicInfoView.this.getBottom() && !DynamicInfoView.this.mWaitingList.isEmpty()) {
-                        AbstractC2493a abstractC2493a2 = (AbstractC2493a) DynamicInfoView.this.mWaitingList.getFirst();
-                        if (abstractC2493a2.d(DynamicInfoView.this.getContext()) + height < DynamicInfoView.this.getHeight()) {
+                        a aVar2 = (a) DynamicInfoView.this.mWaitingList.getFirst();
+                        if (aVar2.d(DynamicInfoView.this.getContext()) + height < DynamicInfoView.this.getHeight()) {
                             height = DynamicInfoView.this.getHeight();
                         }
-                        abstractC2493a2.b = height + 1;
-                        DynamicInfoView.this.mWaitingList.remove(abstractC2493a2);
-                        DynamicInfoView.this.mRunningList.add(abstractC2493a2);
+                        aVar2.b = height + 1;
+                        DynamicInfoView.this.mWaitingList.remove(aVar2);
+                        DynamicInfoView.this.mRunningList.add(aVar2);
                     }
                     if (DynamicInfoView.this.mListener != null && (!DynamicInfoView.this.mWaitingList.isEmpty() || !DynamicInfoView.this.mRunningList.isEmpty())) {
                         DynamicInfoView.this.mListener.onDisplayCountdown(DynamicInfoView.this.getDynamicInfoCount());
@@ -118,22 +117,22 @@ public class DynamicInfoView extends View {
         };
     }
 
-    public void addDynamicInfo(AbstractC2493a abstractC2493a) {
+    public void addDynamicInfo(a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-198093393")) {
-            ipChange.ipc$dispatch("-198093393", new Object[]{this, abstractC2493a});
+            ipChange.ipc$dispatch("-198093393", new Object[]{this, aVar});
             return;
         }
-        this.mWaitingList.add(abstractC2493a);
+        this.mWaitingList.add(aVar);
         int i = this.childCount + 1;
         this.childCount = i;
         int i2 = this.dividerCount;
         if (i2 > 0 && i % i2 == 0) {
-            abstractC2493a.c = true;
+            aVar.c = true;
         }
         int i3 = this.mInfoIndex;
         this.mInfoIndex = i3 + 1;
-        abstractC2493a.a = i3;
+        aVar.a = i3;
     }
 
     public int getDynamicInfoCount() {
@@ -171,9 +170,9 @@ public class DynamicInfoView extends View {
             return;
         }
         super.onDraw(canvas);
-        Iterator<AbstractC2493a> it = this.mRunningList.iterator();
+        Iterator<a> it = this.mRunningList.iterator();
         while (it.hasNext()) {
-            AbstractC2493a next = it.next();
+            a next = it.next();
             next.c(canvas, next.b);
         }
     }
@@ -248,16 +247,16 @@ public class DynamicInfoView extends View {
                     dynamicInfoView.postDelayed(dynamicInfoView.mDrawingTask, 20L);
                 } else {
                     int height = DynamicInfoView.this.getHeight();
-                    int a = yr2.a(DynamicInfoView.this.getContext(), 0.45000002f);
+                    int a2 = yr2.a(DynamicInfoView.this.getContext(), 0.45000002f);
                     ArrayList arrayList = new ArrayList();
                     Iterator it = DynamicInfoView.this.mRunningList.iterator();
                     while (it.hasNext()) {
-                        AbstractC2493a abstractC2493a = (AbstractC2493a) it.next();
-                        int d = abstractC2493a.d(DynamicInfoView.this.getContext());
-                        abstractC2493a.b -= a;
-                        int i = d + abstractC2493a.b;
+                        a aVar = (a) it.next();
+                        int d = aVar.d(DynamicInfoView.this.getContext());
+                        aVar.b -= a2;
+                        int i = d + aVar.b;
                         if (i <= 0) {
-                            arrayList.add(abstractC2493a);
+                            arrayList.add(aVar);
                         }
                         height = i;
                     }
@@ -268,13 +267,13 @@ public class DynamicInfoView extends View {
                         DynamicInfoView.this.mPastedList.remove(0);
                     }
                     if (height <= DynamicInfoView.this.getBottom() && !DynamicInfoView.this.mWaitingList.isEmpty()) {
-                        AbstractC2493a abstractC2493a2 = (AbstractC2493a) DynamicInfoView.this.mWaitingList.getFirst();
-                        if (abstractC2493a2.d(DynamicInfoView.this.getContext()) + height < DynamicInfoView.this.getHeight()) {
+                        a aVar2 = (a) DynamicInfoView.this.mWaitingList.getFirst();
+                        if (aVar2.d(DynamicInfoView.this.getContext()) + height < DynamicInfoView.this.getHeight()) {
                             height = DynamicInfoView.this.getHeight();
                         }
-                        abstractC2493a2.b = height + 1;
-                        DynamicInfoView.this.mWaitingList.remove(abstractC2493a2);
-                        DynamicInfoView.this.mRunningList.add(abstractC2493a2);
+                        aVar2.b = height + 1;
+                        DynamicInfoView.this.mWaitingList.remove(aVar2);
+                        DynamicInfoView.this.mRunningList.add(aVar2);
                     }
                     if (DynamicInfoView.this.mListener != null && (!DynamicInfoView.this.mWaitingList.isEmpty() || !DynamicInfoView.this.mRunningList.isEmpty())) {
                         DynamicInfoView.this.mListener.onDisplayCountdown(DynamicInfoView.this.getDynamicInfoCount());

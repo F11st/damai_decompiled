@@ -47,7 +47,7 @@ public class PtrFrameLayout extends ViewGroup {
     private boolean mPreventForHorizontal;
     private PtrHandler mPtrHandler;
     private rx1 mPtrIndicator;
-    private C8112a mPtrUIHandlerHolder;
+    private a mPtrUIHandlerHolder;
     private boolean mPullToRefresh;
     private PtrUIHandlerHook mRefreshCompleteHook;
     private ScrollChecker mScrollChecker;
@@ -401,7 +401,7 @@ public class PtrFrameLayout extends ViewGroup {
     }
 
     public void addPtrUIHandler(PtrUIHandler ptrUIHandler) {
-        C8112a.a(this.mPtrUIHandlerHolder, ptrUIHandler);
+        a.a(this.mPtrUIHandlerHolder, ptrUIHandler);
     }
 
     public void autoRefresh() {
@@ -659,7 +659,7 @@ public class PtrFrameLayout extends ViewGroup {
     }
 
     public void removePtrUIHandler(PtrUIHandler ptrUIHandler) {
-        this.mPtrUIHandlerHolder = C8112a.f(this.mPtrUIHandlerHolder, ptrUIHandler);
+        this.mPtrUIHandlerHolder = a.f(this.mPtrUIHandlerHolder, ptrUIHandler);
     }
 
     public void setDurationToClose(int i) {
@@ -783,7 +783,7 @@ public class PtrFrameLayout extends ViewGroup {
         this.mDurationToCloseHeader = 1000;
         this.mKeepHeaderWhenRefresh = true;
         this.mPullToRefresh = false;
-        this.mPtrUIHandlerHolder = C8112a.c();
+        this.mPtrUIHandlerHolder = a.c();
         this.mDisableWhenHorizontalMove = false;
         this.mFlag = 0;
         this.mPreventForHorizontal = false;

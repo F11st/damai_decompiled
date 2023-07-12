@@ -3,8 +3,6 @@ package com.alibaba.wireless.security.aopsdk;
 import android.app.Application;
 import android.content.Context;
 import com.alibaba.wireless.security.aopsdk.config.ConfigManager;
-import com.alibaba.wireless.security.aopsdk.h.InfoCollector;
-import com.alibaba.wireless.security.aopsdk.i.LogUtils;
 import java.util.HashMap;
 
 /* loaded from: classes.dex */
@@ -12,12 +10,11 @@ public class AopEntry {
     private static final String a = "AopEntry";
     private static boolean b;
 
-    /* renamed from: com.alibaba.wireless.security.aopsdk.AopEntry$a */
     /* loaded from: classes.dex */
-    public static class C3962a extends Thread {
+    public static class a extends Thread {
         public final /* synthetic */ Context a;
 
-        public C3962a(Context context) {
+        public a(Context context) {
             this.a = context;
         }
 
@@ -27,9 +24,9 @@ public class AopEntry {
                 try {
                     Application application = (Application) this.a.getApplicationContext();
                     if (application != null) {
-                        LogUtils.b(AopEntry.a, "注册Activity生命周期回调");
-                        application.registerActivityLifecycleCallbacks(new ActivityListener());
-                        InfoCollector.b(true);
+                        com.alibaba.wireless.security.aopsdk.i.a.b(AopEntry.a, "注册Activity生命周期回调");
+                        application.registerActivityLifecycleCallbacks(new com.alibaba.wireless.security.aopsdk.a());
+                        com.alibaba.wireless.security.aopsdk.h.a.b(true);
                         return;
                     }
                     Thread.sleep(1000L);
@@ -42,28 +39,28 @@ public class AopEntry {
     }
 
     private static void a(Context context) {
-        new C3962a(context).start();
+        new a(context).start();
     }
 
     public static void init(Context context) {
         Application application;
         try {
             ConfigManager.getInstance().init(context, true);
-            LogUtils.a(a, "初始化切面组件");
+            com.alibaba.wireless.security.aopsdk.i.a.a(a, "初始化切面组件");
             if (context instanceof Application) {
                 application = (Application) context;
             } else {
                 application = (Application) context.getApplicationContext();
             }
             if (application != null) {
-                LogUtils.b(a, "注册Activity生命周期回调");
-                application.registerActivityLifecycleCallbacks(new ActivityListener());
-                InfoCollector.b(true);
+                com.alibaba.wireless.security.aopsdk.i.a.b(a, "注册Activity生命周期回调");
+                application.registerActivityLifecycleCallbacks(new com.alibaba.wireless.security.aopsdk.a());
+                com.alibaba.wireless.security.aopsdk.h.a.b(true);
                 return;
             }
             a(context);
         } catch (Throwable th) {
-            LogUtils.a(a, "Init failed", th);
+            com.alibaba.wireless.security.aopsdk.i.a.a(a, "Init failed", th);
         }
     }
 
@@ -72,7 +69,7 @@ public class AopEntry {
         synchronized (AopEntry.class) {
             if (!b) {
                 b = true;
-                LogUtils.a(a, "初始化切面组件");
+                com.alibaba.wireless.security.aopsdk.i.a.a(a, "初始化切面组件");
                 ConfigManager.getInstance().init(context, aopInitConfig.shouldFetchConfig());
                 HashMap hashMap = new HashMap();
                 if (aopInitConfig.isDebug()) {
@@ -87,15 +84,15 @@ public class AopEntry {
                         application = (Application) context.getApplicationContext();
                     }
                     if (application != null) {
-                        LogUtils.b(a, "注册Activity生命周期回调");
-                        application.registerActivityLifecycleCallbacks(new ActivityListener());
-                        InfoCollector.b(true);
+                        com.alibaba.wireless.security.aopsdk.i.a.b(a, "注册Activity生命周期回调");
+                        application.registerActivityLifecycleCallbacks(new com.alibaba.wireless.security.aopsdk.a());
+                        com.alibaba.wireless.security.aopsdk.h.a.b(true);
                     } else {
                         a(context);
                     }
                 }
             } else {
-                LogUtils.b(a, "请勿重复初始化切面");
+                com.alibaba.wireless.security.aopsdk.i.a.b(a, "请勿重复初始化切面");
             }
         }
     }

@@ -1,19 +1,16 @@
 package tb;
 
-import com.efs.sdk.base.a.d.C4786a;
-
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public final class n73 {
     public a53 a;
-    public C4786a b;
+    public com.efs.sdk.base.a.d.a b;
     public y53 c;
     public e83 d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.n73$a */
     /* loaded from: classes10.dex */
-    public static class C9462a {
+    public static class a {
         private static final n73 a = new n73((byte) 0);
 
         public static /* synthetic */ n73 a() {
@@ -38,17 +35,17 @@ public final class n73 {
     }
 
     public final void b(int i) {
-        C4786a c4786a = this.b;
-        if (c4786a != null) {
-            c4786a.b(a("flow_limit", i));
+        com.efs.sdk.base.a.d.a aVar = this.b;
+        if (aVar != null) {
+            aVar.b(a("flow_limit", i));
         }
     }
 
     public final void c(int i, String str) {
-        if (this.b != null || C4786a.a().d) {
-            o43 a = a("flow_limit_type", i);
-            a.a("code", str);
-            this.b.b(a);
+        if (this.b != null || com.efs.sdk.base.a.d.a.a().d) {
+            o43 a2 = a("flow_limit_type", i);
+            a2.a("code", str);
+            this.b.b(a2);
         }
     }
 

@@ -44,18 +44,17 @@ public class StaggeredGridView extends ExtendableListView {
     /* loaded from: classes.dex */
     public static class GridItemRecord implements Parcelable {
         private static transient /* synthetic */ IpChange $ipChange;
-        public static final Parcelable.Creator<GridItemRecord> CREATOR = new C0293a();
+        public static final Parcelable.Creator<GridItemRecord> CREATOR = new a();
         int column;
         double heightRatio;
         boolean isHeaderFooter;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.baseview.grid.StaggeredGridView$GridItemRecord$a */
         /* loaded from: classes.dex */
-        public static final class C0293a implements Parcelable.Creator<GridItemRecord> {
+        public static final class a implements Parcelable.Creator<GridItemRecord> {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C0293a() {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator
@@ -116,18 +115,17 @@ public class StaggeredGridView extends ExtendableListView {
     /* loaded from: classes.dex */
     public static class GridListSavedState extends ExtendableListView.ListSavedState {
         private static transient /* synthetic */ IpChange $ipChange;
-        public static final Parcelable.Creator<GridListSavedState> CREATOR = new C0294a();
+        public static final Parcelable.Creator<GridListSavedState> CREATOR = new a();
         int columnCount;
         int[] columnTops;
         SparseArray positionData;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.baseview.grid.StaggeredGridView$GridListSavedState$a */
         /* loaded from: classes.dex */
-        public static final class C0294a implements Parcelable.Creator<GridListSavedState> {
+        public static final class a implements Parcelable.Creator<GridListSavedState> {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C0294a() {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator

@@ -1,11 +1,11 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8146a;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.a;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -22,11 +22,11 @@ import tb.jm;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableFlatMapCompletableCompletable<T> extends AbstractC8146a implements FuseToFlowable<T> {
+public final class FlowableFlatMapCompletableCompletable<T> extends a implements FuseToFlowable<T> {
     final boolean delayErrors;
     final Function<? super T, ? extends CompletableSource> mapper;
     final int maxConcurrency;
-    final AbstractC8147b<T> source;
+    final b<T> source;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -175,19 +175,19 @@ public final class FlowableFlatMapCompletableCompletable<T> extends AbstractC814
         }
     }
 
-    public FlowableFlatMapCompletableCompletable(AbstractC8147b<T> abstractC8147b, Function<? super T, ? extends CompletableSource> function, boolean z, int i) {
-        this.source = abstractC8147b;
+    public FlowableFlatMapCompletableCompletable(b<T> bVar, Function<? super T, ? extends CompletableSource> function, boolean z, int i) {
+        this.source = bVar;
         this.mapper = function;
         this.delayErrors = z;
         this.maxConcurrency = i;
     }
 
     @Override // io.reactivex.internal.fuseable.FuseToFlowable
-    public AbstractC8147b<T> fuseToFlowable() {
+    public b<T> fuseToFlowable() {
         return i42.l(new FlowableFlatMapCompletable(this.source, this.mapper, this.delayErrors, this.maxConcurrency));
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     protected void subscribeActual(CompletableObserver completableObserver) {
         this.source.subscribe((FlowableSubscriber) new FlatMapCompletableMainSubscriber(completableObserver, this.mapper, this.delayErrors, this.maxConcurrency));
     }

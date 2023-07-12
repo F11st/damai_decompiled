@@ -11,7 +11,7 @@ import tb.jn1;
 /* loaded from: classes11.dex */
 public class FunctionParser<K, V> {
     public static final char SPACE = ' ';
-    private InterfaceC6978Mapper<K, V> a;
+    private Mapper<K, V> a;
     private Lexer b;
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -107,9 +107,8 @@ public class FunctionParser<K, V> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.utils.FunctionParser$Mapper */
     /* loaded from: classes11.dex */
-    public interface InterfaceC6978Mapper<K, V> {
+    public interface Mapper<K, V> {
         Map<K, V> map(String str, List<String> list);
     }
 
@@ -132,9 +131,9 @@ public class FunctionParser<K, V> {
         }
     }
 
-    public FunctionParser(@NonNull String str, @NonNull InterfaceC6978Mapper<K, V> interfaceC6978Mapper) {
+    public FunctionParser(@NonNull String str, @NonNull Mapper<K, V> mapper) {
         this.b = new Lexer(str);
-        this.a = interfaceC6978Mapper;
+        this.a = mapper;
     }
 
     private LinkedHashMap<K, V> a() {

@@ -52,12 +52,11 @@ public final class f83 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.f83$a */
     /* loaded from: classes10.dex */
-    public static class C9131a implements LocationListener {
+    public static class a implements LocationListener {
         private f83 a;
 
-        C9131a(f83 f83Var) {
+        a(f83 f83Var) {
             this.a = f83Var;
         }
 
@@ -412,7 +411,7 @@ public final class f83 {
             this.a = com.loc.m1.B();
             if (r(this.l)) {
                 if (this.q == null) {
-                    this.q = new C9131a(this);
+                    this.q = new a(this);
                 }
                 com.alibaba.wireless.security.aopsdk.replace.android.location.LocationManager.requestLocationUpdates(this.l, "network", this.m.getInterval(), this.m.getDeviceModeDistanceFilter(), this.q, myLooper);
             }
@@ -433,7 +432,7 @@ public final class f83 {
                     new StringBuilder("CoarseLocation | sendExtraCommand error: ").append(th.getMessage());
                 }
                 if (this.q == null) {
-                    this.q = new C9131a(this);
+                    this.q = new a(this);
                 }
                 com.alibaba.wireless.security.aopsdk.replace.android.location.LocationManager.requestLocationUpdates(this.l, GeocodeSearch.GPS, this.m.getInterval(), this.m.getDeviceModeDistanceFilter(), this.q, myLooper);
             }
@@ -463,7 +462,7 @@ public final class f83 {
             LocationListener locationListener = this.q;
             if (locationListener != null) {
                 locationManager.removeUpdates(locationListener);
-                ((C9131a) this.q).a();
+                ((a) this.q).a();
                 this.q = null;
             }
         } catch (Throwable th) {

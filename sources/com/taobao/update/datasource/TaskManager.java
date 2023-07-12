@@ -24,10 +24,9 @@ public class TaskManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.update.datasource.TaskManager$a */
     /* loaded from: classes11.dex */
-    public class C6917a implements UpdateListener.PatchListener {
-        C6917a() {
+    public class a implements UpdateListener.PatchListener {
+        a() {
         }
 
         @Override // com.taobao.update.datasource.UpdateListener.PatchListener
@@ -64,10 +63,9 @@ public class TaskManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.update.datasource.TaskManager$b */
     /* loaded from: classes11.dex */
-    public class C6918b implements UpdateListener.PatchListener {
-        C6918b() {
+    public class b implements UpdateListener.PatchListener {
+        b() {
         }
 
         @Override // com.taobao.update.datasource.UpdateListener.PatchListener
@@ -96,10 +94,9 @@ public class TaskManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.update.datasource.TaskManager$c */
     /* loaded from: classes11.dex */
-    public class C6919c implements UpdateListener.PatchListener {
-        C6919c() {
+    public class c implements UpdateListener.PatchListener {
+        c() {
         }
 
         @Override // com.taobao.update.datasource.UpdateListener.PatchListener
@@ -188,12 +185,12 @@ public class TaskManager {
             } else if (qu1Var.getPatchType().getPriority() == 2) {
                 UpdateDataSource.sUpdateAdapter.commitSuccess("update_center_all", "update_dispatch_dexpatch", "");
                 if (qu1Var.getRunnable().getUpdateListener() != null) {
-                    qu1Var.getRunnable().getUpdateListener().patchProcessListener(new C6917a());
+                    qu1Var.getRunnable().getUpdateListener().patchProcessListener(new a());
                 }
                 qu1Var.syncRun();
             } else if (qu1Var.getPatchType().getPriority() == 3) {
                 if (qu1Var.getRunnable().getUpdateListener() != null) {
-                    qu1Var.getRunnable().getUpdateListener().patchProcessListener(new C6918b());
+                    qu1Var.getRunnable().getUpdateListener().patchProcessListener(new b());
                 }
                 qu1Var.syncRun();
             } else if (qu1Var.getPatchType().getPriority() == 4) {
@@ -202,7 +199,7 @@ public class TaskManager {
                 }
                 UpdateDataSource.sUpdateAdapter.commitSuccess("update_center_all", "update_dispatch_dynamic", "");
                 if (qu1Var.getRunnable().getUpdateListener() != null) {
-                    qu1Var.getRunnable().getUpdateListener().patchProcessListener(new C6919c());
+                    qu1Var.getRunnable().getUpdateListener().patchProcessListener(new c());
                 }
                 qu1Var.syncRun();
             } else if (qu1Var.getPatchType().getPriority() == 5) {

@@ -12,11 +12,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.category.ranking.ui.RankListFragment;
 import cn.damai.category.ranksquare.bean.RankSquareGroupItemBean;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -52,12 +51,11 @@ public class RankSquareLocalAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         private int f;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.category.ranksquare.ui.adapter.RankSquareLocalAdapter$RankSquareLocalItemHolder$a */
         /* loaded from: classes.dex */
-        public class View$OnClickListenerC0432a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC0432a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -72,9 +70,9 @@ public class RankSquareLocalAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                     return;
                 }
                 if (rankSquareGroupItemBean.isLocalRank) {
-                    C0529c.e().x(zy1.f().l(rankSquareGroupItemBean.shortName, String.valueOf(rankSquareGroupItemBean.id), rankSquareGroupItemBean.index));
+                    c.e().x(zy1.f().l(rankSquareGroupItemBean.shortName, String.valueOf(rankSquareGroupItemBean.id), rankSquareGroupItemBean.index));
                 } else {
-                    C0529c.e().x(zy1.f().n(rankSquareGroupItemBean.shortName, String.valueOf(rankSquareGroupItemBean.id), rankSquareGroupItemBean.index));
+                    c.e().x(zy1.f().n(rankSquareGroupItemBean.shortName, String.valueOf(rankSquareGroupItemBean.id), rankSquareGroupItemBean.index));
                 }
                 Bundle bundle = new Bundle();
                 bundle.putLong(RankListFragment.KEY_RANK_ID, rankSquareGroupItemBean.id);
@@ -102,7 +100,7 @@ public class RankSquareLocalAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             this.c = (DMCategroyTagView) view.findViewById(R$id.image_tag);
             this.d = (TextView) view.findViewById(R$id.tv_rank_title);
             this.e = (TextView) view.findViewById(R$id.tv_rank_subtitle);
-            this.itemView.setOnClickListener(new View$OnClickListenerC0432a());
+            this.itemView.setOnClickListener(new a());
         }
 
         public void a(RankSquareGroupItemBean rankSquareGroupItemBean) {
@@ -115,7 +113,7 @@ public class RankSquareLocalAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                 this.e.setText(rankSquareGroupItemBean.shortDesc);
                 DMCategroyTagView dMCategroyTagView = this.c;
                 dMCategroyTagView.setTagName("共" + rankSquareGroupItemBean.total + "部");
-                DMImageCreator e = C0504a.b().e(wh2.e(rankSquareGroupItemBean.verticalPicList) > 0 ? rankSquareGroupItemBean.verticalPicList.get(0) : "");
+                DMImageCreator e = cn.damai.common.image.a.b().e(wh2.e(rankSquareGroupItemBean.verticalPicList) > 0 ? rankSquareGroupItemBean.verticalPicList.get(0) : "");
                 int i = R$drawable.uikit_default_image_bg_gradient;
                 e.c(i).i(i).g(this.b);
                 LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) this.a.getLayoutParams();

@@ -14,13 +14,12 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseModel;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.commonbusiness.home.bean.HomeHeaderBg;
 import cn.damai.commonbusiness.home.bean.HomeTabBean;
@@ -67,10 +66,10 @@ import tb.z20;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
-public final class ChannelPageTabFragment extends DamaiBaseMvpFragment<AbstractC0470a<Object, Object>, BaseModel> {
+public final class ChannelPageTabFragment extends DamaiBaseMvpFragment<cn.damai.common.app.base.a<Object, Object>, BaseModel> {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C1252a Companion = new C1252a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String EXTRA = "extra_key";
     @Nullable
@@ -115,27 +114,25 @@ public final class ChannelPageTabFragment extends DamaiBaseMvpFragment<AbstractC
         }
     };
     @NotNull
-    private final HomeTopBgListener mHomeTopBgListener = new C1253b();
+    private final HomeTopBgListener mHomeTopBgListener = new b();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.ChannelPageTabFragment$a */
     /* loaded from: classes14.dex */
-    public static final class C1252a {
-        private C1252a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C1252a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.ChannelPageTabFragment$b */
     /* loaded from: classes5.dex */
-    public static final class C1253b implements HomeTopBgListener {
+    public static final class b implements HomeTopBgListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1253b() {
+        b() {
         }
 
         @Override // cn.damai.homepage.ui.listener.HomeTopBgListener
@@ -200,7 +197,7 @@ public final class ChannelPageTabFragment extends DamaiBaseMvpFragment<AbstractC
                 return;
             }
             this.mCurIndex = i;
-            C0529c e = C0529c.e();
+            c e = c.e();
             xy0 g = xy0.g();
             int i2 = this.mCurIndex;
             HomeTabBean homeTabBean = this.mSelectTab;
@@ -240,12 +237,12 @@ public final class ChannelPageTabFragment extends DamaiBaseMvpFragment<AbstractC
         View findViewById = this.rootView.findViewById(R$id.status_bar_space);
         Activity activity = super.mActivity;
         if (activity != null) {
-            int a = t60.a(activity, 45.0f);
+            int a2 = t60.a(activity, 45.0f);
             if (Build.VERSION.SDK_INT >= 23) {
                 if (findViewById != null) {
                     findViewById.getLayoutParams().height = kg2.a(activity);
                     findViewById.setVisibility(0);
-                    a = t60.a(activity, 45.0f) + kg2.a(activity);
+                    a2 = t60.a(activity, 45.0f) + kg2.a(activity);
                 }
                 kg2.f(requireActivity(), true, R$color.black);
                 kg2.d(true, activity);
@@ -254,14 +251,14 @@ public final class ChannelPageTabFragment extends DamaiBaseMvpFragment<AbstractC
                 if (findViewById != null) {
                     findViewById.setVisibility(8);
                 }
-                a = t60.a(activity, 45.0f);
+                a2 = t60.a(activity, 45.0f);
             }
             View view = this.mTitleBar;
             ViewGroup.LayoutParams layoutParams = view != null ? view.getLayoutParams() : null;
             if (layoutParams == null) {
                 return;
             }
-            layoutParams.height = a;
+            layoutParams.height = a2;
         }
     }
 
@@ -389,9 +386,9 @@ public final class ChannelPageTabFragment extends DamaiBaseMvpFragment<AbstractC
         Bundle bundle = new Bundle();
         if (z) {
             bundle.putString("autowords", str);
-            C0529c.e().x(py0.I().s(str));
+            c.e().x(py0.I().s(str));
         } else {
-            C0529c.e().x(py0.I().t(str));
+            c.e().x(py0.I().t(str));
         }
         bundle.putString(OneArchConstants.LayoutKey.KEY_WORDS, str);
         bundle.putString(YKActionSheet.ACTION_STYLE_DESCRIBE, str);
@@ -514,14 +511,14 @@ public final class ChannelPageTabFragment extends DamaiBaseMvpFragment<AbstractC
             return;
         }
         TabPagerAdapter tabPagerAdapter = this.mPagerAdapter;
-        HomeCmsFragment b = tabPagerAdapter != null ? tabPagerAdapter.b() : null;
+        HomeCmsFragment b2 = tabPagerAdapter != null ? tabPagerAdapter.b() : null;
         if (m91.a(list)) {
             return;
         }
-        if (this.mPagerAdapter != null && b != null) {
+        if (this.mPagerAdapter != null && b2 != null) {
             FragmentManager childFragmentManager = getChildFragmentManager();
             b41.h(childFragmentManager, "childFragmentManager");
-            childFragmentManager.beginTransaction().remove(b).commit();
+            childFragmentManager.beginTransaction().remove(b2).commit();
         }
         addRefItemId2HomeTabBeanIfNeed(list, this.mCurIndex, this.mTabExtra);
         setViewPaperItem(this.mCurIndex);
@@ -571,8 +568,8 @@ public final class ChannelPageTabFragment extends DamaiBaseMvpFragment<AbstractC
         viewPager3.setCurrentItem(this.mCurIndex);
         PageUtExecutor pageUtExecutor = new PageUtExecutor(super.mActivity, new PageUtExecutor.UTKeyBuilderProvider() { // from class: tb.uh
             @Override // cn.damai.commonbusiness.pageut.PageUtExecutor.UTKeyBuilderProvider
-            public final C0525a.C0527b get(int i) {
-                C0525a.C0527b m53updateViewPager$lambda7;
+            public final a.b get(int i) {
+                a.b m53updateViewPager$lambda7;
                 m53updateViewPager$lambda7 = ChannelPageTabFragment.m53updateViewPager$lambda7(ChannelPageTabFragment.this, i);
                 return m53updateViewPager$lambda7;
             }
@@ -585,17 +582,17 @@ public final class ChannelPageTabFragment extends DamaiBaseMvpFragment<AbstractC
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: updateViewPager$lambda-7  reason: not valid java name */
-    public static final C0525a.C0527b m53updateViewPager$lambda7(ChannelPageTabFragment channelPageTabFragment, int i) {
+    public static final a.b m53updateViewPager$lambda7(ChannelPageTabFragment channelPageTabFragment, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1422609142")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1422609142", new Object[]{channelPageTabFragment, Integer.valueOf(i)});
+            return (a.b) ipChange.ipc$dispatch("1422609142", new Object[]{channelPageTabFragment, Integer.valueOf(i)});
         }
         b41.i(channelPageTabFragment, "this$0");
         List<ScrollTitleBean> list = channelPageTabFragment.mTabList;
         if (list != null) {
             ScrollTitleBean scrollTitleBean = (ScrollTitleBean) cb2.b(list, i);
             if (scrollTitleBean instanceof HomeTabBean) {
-                return new C0525a.C0527b().i(((HomeTabBean) scrollTitleBean).spmb).a(z20.d());
+                return new a.b().i(((HomeTabBean) scrollTitleBean).spmb).a(z20.d());
             }
             return null;
         }

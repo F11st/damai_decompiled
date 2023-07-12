@@ -22,19 +22,19 @@ public abstract class BaseMonthView extends BaseView {
 
     @SuppressLint({"WrongConstant"})
     private void initCalendar() {
-        C6488b c6488b;
+        b bVar;
         CalendarView.OnCalendarInterceptListener onCalendarInterceptListener;
-        this.mNextDiff = C6487a.h(this.mYear, this.mMonth, this.mDelegate.E());
-        int l = C6487a.l(this.mYear, this.mMonth, this.mDelegate.E());
-        int g = C6487a.g(this.mYear, this.mMonth);
-        List<Calendar> n = C6487a.n(this.mYear, this.mMonth, this.mDelegate);
+        this.mNextDiff = a.h(this.mYear, this.mMonth, this.mDelegate.E());
+        int l = a.l(this.mYear, this.mMonth, this.mDelegate.E());
+        int g = a.g(this.mYear, this.mMonth);
+        List<Calendar> n = a.n(this.mYear, this.mMonth, this.mDelegate);
         this.mItems = n;
         if (n.contains(this.mDelegate.g())) {
             this.mCurrentItem = this.mItems.indexOf(this.mDelegate.g());
         } else {
             this.mCurrentItem = this.mItems.indexOf(this.mDelegate.L);
         }
-        if (this.mCurrentItem > 0 && (onCalendarInterceptListener = (c6488b = this.mDelegate).D) != null && onCalendarInterceptListener.onCalendarIntercept(c6488b.L)) {
+        if (this.mCurrentItem > 0 && (onCalendarInterceptListener = (bVar = this.mDelegate).D) != null && onCalendarInterceptListener.onCalendarIntercept(bVar.L)) {
             this.mCurrentItem = -1;
         }
         if (this.mDelegate.w() == 0) {
@@ -46,12 +46,12 @@ public abstract class BaseMonthView extends BaseView {
     }
 
     private void onClickCalendarPadding() {
-        C6488b c6488b = this.mDelegate;
-        if (c6488b.C == null) {
+        b bVar = this.mDelegate;
+        if (bVar.C == null) {
             return;
         }
         Calendar calendar = null;
-        int e = ((int) (this.mX - c6488b.e())) / this.mItemWidth;
+        int e = ((int) (this.mX - bVar.e())) / this.mItemWidth;
         if (e >= 7) {
             e = 6;
         }
@@ -102,7 +102,7 @@ public abstract class BaseMonthView extends BaseView {
         this.mYear = i;
         this.mMonth = i2;
         initCalendar();
-        this.mHeight = C6487a.k(i, i2, this.mItemHeight, this.mDelegate.E(), this.mDelegate.w());
+        this.mHeight = a.k(i, i2, this.mItemHeight, this.mDelegate.E(), this.mDelegate.w());
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -151,6 +151,6 @@ public abstract class BaseMonthView extends BaseView {
     @Override // com.taobao.android.dinamicx.widget.calander.BaseView
     public void updateItemHeight() {
         super.updateItemHeight();
-        this.mHeight = C6487a.k(this.mYear, this.mMonth, this.mItemHeight, this.mDelegate.E(), this.mDelegate.w());
+        this.mHeight = a.k(this.mYear, this.mMonth, this.mItemHeight, this.mDelegate.E(), this.mDelegate.w());
     }
 }

@@ -12,12 +12,11 @@ import tb.o1;
 /* loaded from: classes3.dex */
 public interface ContinuationInterceptor extends CoroutineContext.Element {
     @NotNull
-    public static final C8231b Key = C8231b.a;
+    public static final b Key = b.a;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.coroutines.ContinuationInterceptor$a */
     /* loaded from: classes3.dex */
-    public static final class C8230a {
+    public static final class a {
         @Nullable
         public static <E extends CoroutineContext.Element> E a(@NotNull ContinuationInterceptor continuationInterceptor, @NotNull CoroutineContext.Key<E> key) {
             b41.i(key, "key");
@@ -51,12 +50,11 @@ public interface ContinuationInterceptor extends CoroutineContext.Element {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.coroutines.ContinuationInterceptor$b */
     /* loaded from: classes3.dex */
-    public static final class C8231b implements CoroutineContext.Key<ContinuationInterceptor> {
-        static final /* synthetic */ C8231b a = new C8231b();
+    public static final class b implements CoroutineContext.Key<ContinuationInterceptor> {
+        static final /* synthetic */ b a = new b();
 
-        private C8231b() {
+        private b() {
         }
     }
 

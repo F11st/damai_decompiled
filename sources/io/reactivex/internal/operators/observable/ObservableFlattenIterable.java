@@ -105,7 +105,7 @@ public final class ObservableFlattenIterable<T, R> extends AbstractObservableWit
         this.mapper = function;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super R> observer) {
         this.source.subscribe(new FlattenIterableObserver(observer, this.mapper));
     }

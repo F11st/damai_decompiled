@@ -7,7 +7,6 @@ import android.os.Build;
 import android.telephony.TelephonyManager;
 import androidx.annotation.Keep;
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
-import com.youku.e.C7901a;
 import java.util.HashMap;
 
 /* compiled from: Taobao */
@@ -65,7 +64,7 @@ public class TLogUtilNative {
 
     private static String getMobileNetworkType() {
         try {
-            TelephonyManager telephonyManager = (TelephonyManager) C7901a.a.getSystemService("phone");
+            TelephonyManager telephonyManager = (TelephonyManager) com.youku.e.a.a.getSystemService("phone");
             if (telephonyManager == null) {
                 return "获取移动网络状态失败，";
             }
@@ -112,16 +111,16 @@ public class TLogUtilNative {
     }
 
     public static boolean hasInternet() {
-        ConnectivityManager connectivityManager = (ConnectivityManager) C7901a.a.getSystemService("connectivity");
+        ConnectivityManager connectivityManager = (ConnectivityManager) com.youku.e.a.a.getSystemService("connectivity");
         if (connectivityManager == null) {
-            C8063c.a("NetWorkState", "Unavailabel");
+            c.a("NetWorkState", "Unavailabel");
             return false;
         }
         NetworkInfo[] allNetworkInfo = connectivityManager.getAllNetworkInfo();
         if (allNetworkInfo != null) {
             for (NetworkInfo networkInfo : allNetworkInfo) {
                 if (networkInfo.getState() == NetworkInfo.State.CONNECTED) {
-                    C8063c.a("NetWorkState", "Availabel");
+                    c.a("NetWorkState", "Availabel");
                     return true;
                 }
             }
@@ -134,28 +133,28 @@ public class TLogUtilNative {
     }
 
     public static boolean isWifi() {
-        NetworkInfo activeNetworkInfo = com.alibaba.wireless.security.aopsdk.replace.android.net.ConnectivityManager.getActiveNetworkInfo((ConnectivityManager) C7901a.a.getSystemService("connectivity"));
+        NetworkInfo activeNetworkInfo = com.alibaba.wireless.security.aopsdk.replace.android.net.ConnectivityManager.getActiveNetworkInfo((ConnectivityManager) com.youku.e.a.a.getSystemService("connectivity"));
         return activeNetworkInfo != null && activeNetworkInfo.getType() == 1;
     }
 
     public static void logd(String str, String str2) {
-        C8068f.a().a(str, str2);
+        f.a().a(str, str2);
     }
 
     public static void loge(String str, String str2) {
-        C8068f.a().a(str, str2);
+        f.a().a(str, str2);
     }
 
     public static void logi(String str, String str2) {
-        C8068f.a().a(str, str2);
+        f.a().a(str, str2);
     }
 
     public static void logv(String str, String str2) {
-        C8068f.a().a(str, str2);
+        f.a().a(str, str2);
     }
 
     public static void logw(String str, String str2) {
-        C8068f.a().a(str, str2);
+        f.a().a(str, str2);
     }
 
     public static void playErrorLog(String str, int i, int i2) {
@@ -185,7 +184,7 @@ public class TLogUtilNative {
     public static void uploadTlogFile(String str) {
         new HashMap().put("type", str);
         playLog(str + "， 上传TLog日志!");
-        C8068f.a().a(str);
+        f.a().a(str);
     }
 
     private static void uploadTlogPlayError(int i) {

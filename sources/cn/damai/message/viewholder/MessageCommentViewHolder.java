@@ -31,14 +31,13 @@ public class MessageCommentViewHolder extends RecyclerView.ViewHolder {
     private DMAvatar g;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.message.viewholder.MessageCommentViewHolder$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1351a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ MessageItem a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC1351a(MessageItem messageItem, int i) {
+        a(MessageItem messageItem, int i) {
             this.a = messageItem;
             this.b = i;
         }
@@ -100,7 +99,7 @@ public class MessageCommentViewHolder extends RecyclerView.ViewHolder {
             if (!TextUtils.isEmpty(messageItem.getExtJson())) {
                 this.e.setText(messageItem.getExtJson());
             }
-            this.f.setOnClickListener(new View$OnClickListenerC1351a(messageItem, i));
+            this.f.setOnClickListener(new a(messageItem, i));
             if (!TextUtils.isEmpty(messageItem.getMotion())) {
                 this.d.setVisibility(0);
                 this.d.setText(messageItem.getMotion());

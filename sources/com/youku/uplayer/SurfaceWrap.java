@@ -6,7 +6,7 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
 import android.view.Surface;
-import com.youku.player.util.C8064d;
+import com.youku.player.util.d;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -25,9 +25,9 @@ public class SurfaceWrap extends Surface {
         this.mRenderCtx = 0;
         this.mDecoderId = -1;
         try {
-            z = Boolean.parseBoolean(C8064d.a().a("youku_player_config", "render_in_main", "false"));
+            z = Boolean.parseBoolean(d.a().a("youku_player_config", "render_in_main", "false"));
             try {
-                z2 = Boolean.parseBoolean(C8064d.a().a("youku_player_config", "surfacewrap_thread_background", "false"));
+                z2 = Boolean.parseBoolean(d.a().a("youku_player_config", "surfacewrap_thread_background", "false"));
             } catch (Exception e) {
                 e = e;
                 e.printStackTrace();

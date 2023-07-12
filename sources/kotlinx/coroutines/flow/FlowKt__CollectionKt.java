@@ -13,12 +13,11 @@ public final /* synthetic */ class FlowKt__CollectionKt {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.flow.FlowKt__CollectionKt$a */
     /* loaded from: classes11.dex */
-    public static final class C8660a<T> implements FlowCollector<T> {
+    public static final class a<T> implements FlowCollector<T> {
         final /* synthetic */ Collection a;
 
-        public C8660a(Collection collection) {
+        public a(Collection collection) {
             this.a = collection;
         }
 
@@ -55,7 +54,7 @@ public final /* synthetic */ class FlowKt__CollectionKt {
             r0.<init>(r6)
         L18:
             java.lang.Object r6 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L3e

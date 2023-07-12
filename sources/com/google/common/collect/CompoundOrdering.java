@@ -55,6 +55,6 @@ final class CompoundOrdering<T> extends Ordering<T> implements Serializable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public CompoundOrdering(Iterable<? extends Comparator<? super T>> iterable) {
-        this.comparators = (Comparator[]) C5152a0.l(iterable, new Comparator[0]);
+        this.comparators = (Comparator[]) a0.l(iterable, new Comparator[0]);
     }
 }

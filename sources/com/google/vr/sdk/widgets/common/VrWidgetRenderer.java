@@ -8,7 +8,7 @@ import android.view.Display;
 import android.view.WindowManager;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -79,7 +79,7 @@ public abstract class VrWidgetRenderer implements GLSurfaceView.Renderer {
         this.glThreadScheduler = gLThreadScheduler;
         this.xMetersPerPixel = f;
         this.yMetersPerPixel = f2;
-        this.display = ((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
+        this.display = ((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
     }
 
     /* JADX INFO: Access modifiers changed from: protected */

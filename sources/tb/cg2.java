@@ -23,14 +23,13 @@ public class cg2 {
     public static boolean b;
     public static long c;
     private static boolean d;
-    private static final C9003b e = new C9003b(null);
+    private static final b e = new b(null);
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.cg2$a */
     /* loaded from: classes11.dex */
-    public static class C9002a implements IUTCrashCaughtListener {
-        C9002a() {
+    public static class a implements IUTCrashCaughtListener {
+        a() {
         }
 
         @Override // com.alibaba.motu.crashreporter.IUTCrashCaughtListener
@@ -86,7 +85,7 @@ public class cg2 {
             }
         }
         ur1.o().x(e);
-        MotuCrashReporter.getInstance().setCrashCaughtListener(new C9002a());
+        MotuCrashReporter.getInstance().setCrashCaughtListener(new a());
         xt2.f("StatMonitor4Phenix", "init stat monitor with sampling=%d", Integer.valueOf(i));
         try {
             Class.forName("com.taobao.analysis.fulltrace.FullTraceAnalysis");
@@ -99,12 +98,11 @@ public class cg2 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.cg2$b */
     /* loaded from: classes11.dex */
-    public static class C9003b implements ImageDecodingListener {
+    public static class b implements ImageDecodingListener {
         final Map<Long, String> a;
 
-        private C9003b() {
+        private b() {
             this.a = new LinkedHashMap(2);
         }
 
@@ -137,7 +135,7 @@ public class cg2 {
             MotuCrashReporter.getInstance().addNativeHeaderInfo("PHENIX_LATEST_DECODING", a());
         }
 
-        /* synthetic */ C9003b(C9002a c9002a) {
+        /* synthetic */ b(a aVar) {
             this();
         }
     }

@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -33,12 +32,11 @@ public class ThemeBannerViewHolder extends BaseViewHolderV2<ThemeBannerWrapBean>
     private OnItemBindListener<ThemeBannerBean> d;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.discover.viewholder.ThemeBannerViewHolder$a */
     /* loaded from: classes4.dex */
-    public class C0649a implements XBanner.BannerItemViewCreator {
+    public class a implements XBanner.BannerItemViewCreator {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0649a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.banner.sub.XBanner.BannerItemViewCreator
@@ -65,7 +63,7 @@ public class ThemeBannerViewHolder extends BaseViewHolderV2<ThemeBannerWrapBean>
         this.d = onItemBindListener;
         XBanner xBanner = (XBanner) view.findViewById(R$id.theme_banner);
         this.c = xBanner;
-        xBanner.setViewCreator(new C0649a());
+        xBanner.setViewCreator(new a());
         xBanner.setBannerClickListener(this);
         xBanner.setListener((XIndicator) view.findViewById(R$id.theme_indicator));
     }
@@ -80,7 +78,7 @@ public class ThemeBannerViewHolder extends BaseViewHolderV2<ThemeBannerWrapBean>
         TextView textView = (TextView) view.findViewById(R$id.t_banner_join_count);
         DMCategroyTagView dMCategroyTagView = (DMCategroyTagView) view.findViewById(R$id.t_banner_tag);
         View findViewById = view.findViewById(R$id.t_banner_title_prefix);
-        C0504a.b().f(themeBannerBean.bannerPicUrl(), DisplayMetrics.getwidthPixels(l62.b(mu0.a())) - (l62.a(mu0.a(), 21.0f) * 2), l62.a(mu0.a(), 84.0f)).i(R$drawable.img_corners_4_gradient_placeholder).g((ImageView) view.findViewById(R$id.t_banner_img));
+        cn.damai.common.image.a.b().f(themeBannerBean.bannerPicUrl(), DisplayMetrics.getwidthPixels(l62.b(mu0.a())) - (l62.a(mu0.a(), 21.0f) * 2), l62.a(mu0.a(), 84.0f)).i(R$drawable.img_corners_4_gradient_placeholder).g((ImageView) view.findViewById(R$id.t_banner_img));
         ((TextView) view.findViewById(R$id.t_banner_title)).setText(themeBannerBean.getTitle());
         findViewById.setVisibility(themeBannerBean.isOldTheme() ? 0 : 8);
         textView.setText(themeBannerBean.getSubTitle());

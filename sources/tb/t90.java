@@ -12,20 +12,19 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public final class t90 extends br2 {
     @NotNull
-    public static final C9709a Companion = new C9709a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final br2 a;
     @NotNull
     private final br2 b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.t90$a */
     /* loaded from: classes3.dex */
-    public static final class C9709a {
-        private C9709a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9709a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

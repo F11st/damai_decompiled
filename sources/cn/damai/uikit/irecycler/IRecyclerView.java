@@ -66,12 +66,11 @@ public class IRecyclerView extends RecyclerView {
     int refreshHeaderLayoutRes;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.irecycler.IRecyclerView$a */
     /* loaded from: classes17.dex */
-    public class C2507a implements ValueAnimator.AnimatorUpdateListener {
+    public class a implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2507a() {
+        a() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -96,12 +95,11 @@ public class IRecyclerView extends RecyclerView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.irecycler.IRecyclerView$b */
     /* loaded from: classes8.dex */
-    public class C2508b extends vc2 {
+    public class b extends vc2 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2508b() {
+        b() {
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -154,12 +152,11 @@ public class IRecyclerView extends RecyclerView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.irecycler.IRecyclerView$c */
     /* loaded from: classes8.dex */
-    public class C2509c implements RefreshTrigger {
+    public class c implements RefreshTrigger {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2509c() {
+        c() {
         }
 
         @Override // cn.damai.uikit.irecycler.RefreshTrigger
@@ -824,9 +821,9 @@ public class IRecyclerView extends RecyclerView {
         this.mLastTouchX = 0;
         this.mLastTouchY = 0;
         this.mMaxDownHeight = 0;
-        this.mAnimatorUpdateListener = new C2507a();
-        this.mAnimationListener = new C2508b();
-        this.mRefreshTrigger = new C2509c();
+        this.mAnimatorUpdateListener = new a();
+        this.mAnimationListener = new b();
+        this.mRefreshTrigger = new c();
         TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R$styleable.IRecyclerView, i, 0);
         try {
             boolean z = obtainStyledAttributes.getBoolean(R$styleable.IRecyclerView_refreshEnabled, false);

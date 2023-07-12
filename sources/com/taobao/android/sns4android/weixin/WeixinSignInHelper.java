@@ -35,13 +35,12 @@ public class WeixinSignInHelper extends SNSSignInAbstractHelper {
     private static WeakReference<Activity> mActivity;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.weixin.WeixinSignInHelper$a */
     /* loaded from: classes12.dex */
-    class AsyncTaskC6630a extends AsyncTask<Object, Void, Boolean> {
+    class a extends AsyncTask<Object, Void, Boolean> {
         final /* synthetic */ Activity a;
         final /* synthetic */ SNSSignInListener b;
 
-        AsyncTaskC6630a(Activity activity, SNSSignInListener sNSSignInListener) {
+        a(Activity activity, SNSSignInListener sNSSignInListener) {
             this.a = activity;
             this.b = sNSSignInListener;
         }
@@ -70,13 +69,12 @@ public class WeixinSignInHelper extends SNSSignInAbstractHelper {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.weixin.WeixinSignInHelper$b */
     /* loaded from: classes11.dex */
-    public class C6631b implements OauthCallback {
+    public class b implements OauthCallback {
         final /* synthetic */ SNSSignInListener a;
         final /* synthetic */ boolean b;
 
-        C6631b(SNSSignInListener sNSSignInListener, boolean z) {
+        b(SNSSignInListener sNSSignInListener, boolean z) {
             this.a = sNSSignInListener;
             this.b = z;
         }
@@ -135,7 +133,7 @@ public class WeixinSignInHelper extends SNSSignInAbstractHelper {
 
     @Override // com.taobao.android.sns4android.SNSSignInAbstractHelper
     public void auth(Activity activity, SNSSignInListener sNSSignInListener) {
-        new CoordinatorWrapper().execute(new AsyncTaskC6630a(activity, sNSSignInListener), new Object[0]);
+        new CoordinatorWrapper().execute(new a(activity, sNSSignInListener), new Object[0]);
     }
 
     @Override // com.taobao.android.sns4android.SNSSignInAbstractHelper
@@ -149,7 +147,7 @@ public class WeixinSignInHelper extends SNSSignInAbstractHelper {
         HashMap hashMap = new HashMap();
         hashMap.put(ParamsConstants.Key.PARAM_ONLY_AUTHCODE, "1");
         if (AliMemberSDK.getService(OauthService.class) != null) {
-            ((OauthService) AliMemberSDK.getService(OauthService.class)).oauth(activity, "wechat", hashMap, new C6631b(sNSSignInListener, z));
+            ((OauthService) AliMemberSDK.getService(OauthService.class)).oauth(activity, "wechat", hashMap, new b(sNSSignInListener, z));
         } else if (sNSSignInListener != null) {
             sNSSignInListener.onError(activity, SNS_TYPE, 10012, activity.getString(R.string.aliuser_SNS_platform_auth_not_init_ucc));
         }

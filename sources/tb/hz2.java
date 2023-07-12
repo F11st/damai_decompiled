@@ -1,7 +1,6 @@
 package tb;
 
 import android.text.TextUtils;
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.IConfigAdapter;
 import com.taobao.weex.adapter.IWXConfigAdapter;
 
@@ -10,7 +9,7 @@ import com.taobao.weex.adapter.IWXConfigAdapter;
 public class hz2 implements IWXConfigAdapter {
     @Override // com.taobao.weex.adapter.IWXConfigAdapter
     public boolean checkMode(String str) {
-        IConfigAdapter c = C3004a.l().c();
+        IConfigAdapter c = com.alibaba.aliweex.a.l().c();
         if (c == null) {
             return false;
         }
@@ -19,7 +18,7 @@ public class hz2 implements IWXConfigAdapter {
 
     @Override // com.taobao.weex.adapter.IWXConfigAdapter
     public String getConfig(String str, String str2, String str3) {
-        IConfigAdapter c = C3004a.l().c();
+        IConfigAdapter c = com.alibaba.aliweex.a.l().c();
         if (c == null) {
             return str3;
         }

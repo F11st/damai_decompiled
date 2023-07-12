@@ -30,8 +30,8 @@ public class NumberFlipView extends View {
     private INumberFormat mFormat;
     private String mLastText;
     private TextPaint mPaint;
-    private C2598c mSuffixBottom;
-    private C2598c mSuffixTop;
+    private c mSuffixBottom;
+    private c mSuffixTop;
     private int mTextColor;
     private String mTextPrefix;
 
@@ -42,12 +42,11 @@ public class NumberFlipView extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.NumberFlipView$a */
     /* loaded from: classes8.dex */
-    public class C2596a implements ValueAnimator.AnimatorUpdateListener {
+    public class a implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2596a() {
+        a() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -69,9 +68,8 @@ public class NumberFlipView extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.NumberFlipView$b */
     /* loaded from: classes8.dex */
-    public static class C2597b implements INumberFormat {
+    public static class b implements INumberFormat {
         private static transient /* synthetic */ IpChange $ipChange;
 
         @Override // cn.damai.uikit.view.NumberFlipView.INumberFormat
@@ -88,16 +86,15 @@ public class NumberFlipView extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.NumberFlipView$c */
     /* loaded from: classes8.dex */
-    public class C2598c {
+    public class c {
         private static transient /* synthetic */ IpChange $ipChange;
         public float a;
         public float b;
         public float c;
         public String d;
 
-        public C2598c(float f, float f2, String str) {
+        public c(float f, float f2, String str) {
             this.a = f;
             this.b = f2;
             this.d = str;
@@ -191,10 +188,10 @@ public class NumberFlipView extends View {
         }
     }
 
-    private boolean isTextPartCanDraw(C2598c c2598c) {
+    private boolean isTextPartCanDraw(c cVar) {
         String str;
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1953330032") ? ((Boolean) ipChange.ipc$dispatch("-1953330032", new Object[]{this, c2598c})).booleanValue() : (c2598c == null || (str = c2598c.d) == null || str.length() <= 0) ? false : true;
+        return AndroidInstantRuntime.support(ipChange, "-1953330032") ? ((Boolean) ipChange.ipc$dispatch("-1953330032", new Object[]{this, cVar})).booleanValue() : (cVar == null || (str = cVar.d) == null || str.length() <= 0) ? false : true;
     }
 
     private boolean isTextSupportAnimation(String str, String str2) {
@@ -263,12 +260,12 @@ public class NumberFlipView extends View {
             String str = isAnimationUp ? splitFix[2] : splitFix[1];
             String str2 = isAnimationUp ? splitFix[1] : splitFix[2];
             this.mTextPrefix = splitFix[0];
-            this.mSuffixTop = new C2598c(f, paddingTop, str);
-            this.mSuffixBottom = new C2598c(paddingTop2, height, str2);
+            this.mSuffixTop = new c(f, paddingTop, str);
+            this.mSuffixBottom = new c(paddingTop2, height, str2);
             ValueAnimator ofFloat = ValueAnimator.ofFloat(0.0f, 100.0f);
             this.mAnimator = ofFloat;
             ofFloat.setDuration(300L);
-            this.mAnimator.addUpdateListener(new C2596a());
+            this.mAnimator.addUpdateListener(new a());
             this.mAnimator.start();
             return;
         }
@@ -331,12 +328,12 @@ public class NumberFlipView extends View {
             paddingLeft = (int) (f + measureText);
         }
         if (isTextPartCanDraw(this.mSuffixTop)) {
-            C2598c c2598c = this.mSuffixTop;
-            canvas.drawText(c2598c.d, paddingLeft, c2598c.a(), this.mPaint);
+            c cVar = this.mSuffixTop;
+            canvas.drawText(cVar.d, paddingLeft, cVar.a(), this.mPaint);
         }
         if (isTextPartCanDraw(this.mSuffixBottom)) {
-            C2598c c2598c2 = this.mSuffixBottom;
-            canvas.drawText(c2598c2.d, paddingLeft, c2598c2.a(), this.mPaint);
+            c cVar2 = this.mSuffixBottom;
+            canvas.drawText(cVar2.d, paddingLeft, cVar2.a(), this.mPaint);
         }
     }
 
@@ -420,7 +417,7 @@ public class NumberFlipView extends View {
     public NumberFlipView(Context context, @Nullable AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         this.mPaint = new TextPaint(1);
-        this.mFormat = new C2597b();
+        this.mFormat = new b();
         this.isAttachedToWindow = false;
         this.mAnimationTrigger = new Runnable() { // from class: cn.damai.uikit.view.NumberFlipView.1
             private static transient /* synthetic */ IpChange $ipChange;

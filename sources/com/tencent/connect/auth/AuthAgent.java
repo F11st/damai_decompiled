@@ -33,21 +33,19 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
 import com.alibaba.wireless.security.aopsdk.replace.android.view.Display;
-import com.tencent.connect.C7035a;
-import com.tencent.connect.a.C7036a;
 import com.tencent.connect.common.BaseApi;
 import com.tencent.connect.common.Constants;
 import com.tencent.connect.common.UIListenerManager;
 import com.tencent.open.TDialog;
-import com.tencent.open.b.C7084e;
+import com.tencent.open.b.e;
 import com.tencent.open.log.SLog;
-import com.tencent.open.utils.C7119g;
-import com.tencent.open.utils.C7121i;
-import com.tencent.open.utils.C7122j;
-import com.tencent.open.utils.C7123k;
-import com.tencent.open.utils.C7124l;
-import com.tencent.open.utils.C7126m;
 import com.tencent.open.utils.HttpUtils;
+import com.tencent.open.utils.g;
+import com.tencent.open.utils.i;
+import com.tencent.open.utils.j;
+import com.tencent.open.utils.k;
+import com.tencent.open.utils.l;
+import com.tencent.open.utils.m;
 import com.tencent.open.web.security.JniInterface;
 import com.tencent.tauth.DefaultUiListener;
 import com.tencent.tauth.IUiListener;
@@ -58,7 +56,7 @@ import java.lang.ref.WeakReference;
 import java.util.Map;
 import org.json.JSONException;
 import org.json.JSONObject;
-import tb.C9796v;
+import tb.v;
 import tv.cjump.jni.DeviceUtils;
 
 /* compiled from: Taobao */
@@ -77,12 +75,11 @@ public class AuthAgent extends BaseApi {
     private WeakReference<Activity> e;
 
     /* compiled from: Taobao */
-    /* renamed from: com.tencent.connect.auth.AuthAgent$a */
     /* loaded from: classes11.dex */
-    private class C7037a extends DefaultUiListener {
+    private class a extends DefaultUiListener {
         IUiListener a;
 
-        public C7037a(IUiListener iUiListener) {
+        public a(IUiListener iUiListener) {
             this.a = iUiListener;
         }
 
@@ -125,14 +122,13 @@ public class AuthAgent extends BaseApi {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.tencent.connect.auth.AuthAgent$c */
     /* loaded from: classes11.dex */
-    public class C7040c extends DefaultUiListener {
+    public class c extends DefaultUiListener {
         private final IUiListener b;
         private final boolean c;
         private final Context d;
 
-        public C7040c(Context context, IUiListener iUiListener, boolean z, boolean z2) {
+        public c(Context context, IUiListener iUiListener, boolean z, boolean z2) {
             this.d = context;
             this.b = iUiListener;
             this.c = z;
@@ -157,7 +153,7 @@ public class AuthAgent extends BaseApi {
                 if (string != null && ((BaseApi) AuthAgent.this).c != null && string3 != null) {
                     ((BaseApi) AuthAgent.this).c.setAccessToken(string, string2);
                     ((BaseApi) AuthAgent.this).c.setOpenId(string3);
-                    C7036a.d(this.d, ((BaseApi) AuthAgent.this).c);
+                    com.tencent.connect.a.a.d(this.d, ((BaseApi) AuthAgent.this).c);
                 }
                 String string4 = jSONObject.getString(Constants.PARAM_PLATFORM_ID);
                 if (string4 != null) {
@@ -227,7 +223,7 @@ public class AuthAgent extends BaseApi {
     }
 
     public int doLogin(Activity activity, String str, IUiListener iUiListener, boolean z, Fragment fragment, boolean z2, Map<String, Object> map) {
-        if (C7035a.a("openSDK_LOG.AuthAgent", iUiListener)) {
+        if (com.tencent.connect.a.a("openSDK_LOG.AuthAgent", iUiListener)) {
             return -1;
         }
         this.d = str;
@@ -235,18 +231,18 @@ public class AuthAgent extends BaseApi {
         this.a = iUiListener;
         Object[] objArr = new Object[2];
         boolean booleanExtra = activity.getIntent().getBooleanExtra(KEY_FORCE_QR_LOGIN, false);
-        boolean b = C7121i.a(activity, this.c.getAppId()).b("C_LoginWeb");
-        SLog.i("openSDK_LOG.AuthAgent", "doLogin needForceQrLogin=" + booleanExtra + ", toWebLogin=" + b);
-        if (!booleanExtra && !b && a(activity, fragment, map, z, objArr)) {
+        boolean b2 = i.a(activity, this.c.getAppId()).b("C_LoginWeb");
+        SLog.i("openSDK_LOG.AuthAgent", "doLogin needForceQrLogin=" + booleanExtra + ", toWebLogin=" + b2);
+        if (!booleanExtra && !b2 && a(activity, fragment, map, z, objArr)) {
             SLog.i("openSDK_LOG.AuthAgent", "OpenUi, showUi, return Constants.UI_ACTIVITY");
-            C7084e.a().a(this.c.getOpenId(), this.c.getAppId(), "2", "1", "5", (String) objArr[0], "0", "0");
+            e.a().a(this.c.getOpenId(), this.c.getAppId(), "2", "1", "5", (String) objArr[0], "0", "0");
             return ((Integer) objArr[1]).intValue();
         }
-        C7084e.a().a(this.c.getOpenId(), this.c.getAppId(), "2", "1", "5", "1", "0", "0");
+        e.a().a(this.c.getOpenId(), this.c.getAppId(), "2", "1", "5", "1", "0", "0");
         SLog.w("openSDK_LOG.AuthAgent", "doLogin startActivity fail show dialog.");
-        C7038b c7038b = new C7038b(this.a);
-        this.a = c7038b;
-        return a(z, c7038b, z2, map);
+        b bVar = new b(this.a);
+        this.a = bVar;
+        return a(z, bVar, z2, map);
     }
 
     @Override // com.tencent.connect.common.BaseApi
@@ -256,9 +252,9 @@ public class AuthAgent extends BaseApi {
 
     /* JADX INFO: Access modifiers changed from: protected */
     public void b(IUiListener iUiListener) {
-        Bundle a = a();
-        a.putString("reqType", "checkLogin");
-        HttpUtils.requestAsync(this.c, C7119g.a(), "https://openmobile.qq.com/v3/user/get_info", a, "GET", new BaseApi.TempRequestListener(new C7037a(iUiListener)));
+        Bundle a2 = a();
+        a2.putString("reqType", "checkLogin");
+        HttpUtils.requestAsync(this.c, g.a(), "https://openmobile.qq.com/v3/user/get_info", a2, "GET", new BaseApi.TempRequestListener(new a(iUiListener)));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -267,41 +263,41 @@ public class AuthAgent extends BaseApi {
     }
 
     private int a(boolean z, IUiListener iUiListener, boolean z2, Map<String, Object> map) {
-        CookieSyncManager.createInstance(C7119g.a());
-        Bundle a = a();
+        CookieSyncManager.createInstance(g.a());
+        Bundle a2 = a();
         if (z) {
-            a.putString("isadd", "1");
+            a2.putString("isadd", "1");
         }
-        a.putString("scope", this.d);
-        a.putString("client_id", this.c.getAppId());
+        a2.putString("scope", this.d);
+        a2.putString("client_id", this.c.getAppId());
         if (BaseApi.isOEM) {
-            a.putString(Constants.PARAM_PLATFORM_ID, "desktop_m_qq-" + BaseApi.installChannel + "-android-" + BaseApi.registerChannel + "-" + BaseApi.businessId);
+            a2.putString(Constants.PARAM_PLATFORM_ID, "desktop_m_qq-" + BaseApi.installChannel + "-android-" + BaseApi.registerChannel + "-" + BaseApi.businessId);
         } else {
-            a.putString(Constants.PARAM_PLATFORM_ID, Constants.DEFAULT_PF);
+            a2.putString(Constants.PARAM_PLATFORM_ID, Constants.DEFAULT_PF);
         }
         String str = (System.currentTimeMillis() / 1000) + "";
-        a.putString("sign", C7123k.b(C7119g.a(), str));
-        a.putString("time", str);
-        a.putString("display", "mobile");
-        a.putString("response_type", "token");
-        a.putString("redirect_uri", "auth://tauth.qq.com/");
-        a.putString("cancel_display", "1");
-        a.putString("switch", "1");
-        a.putString("compat_v", "1");
+        a2.putString("sign", k.b(g.a(), str));
+        a2.putString("time", str);
+        a2.putString("display", "mobile");
+        a2.putString("response_type", "token");
+        a2.putString("redirect_uri", "auth://tauth.qq.com/");
+        a2.putString("cancel_display", "1");
+        a2.putString("switch", "1");
+        a2.putString("compat_v", "1");
         if (z2) {
-            a.putString("style", "qr");
+            a2.putString("style", "qr");
         }
-        boolean a2 = a(map);
-        a.putString("show_download_ui", Boolean.toString(a2));
-        SLog.i("openSDK_LOG.AuthAgent", "OpenUi, showDialog -- start, isShowDownloadUi=" + a2);
-        final String str2 = C7122j.a().a(C7119g.a(), "https://openmobile.qq.com/oauth2.0/m_authorize?") + HttpUtils.encodeUrl(a);
-        final C7040c c7040c = new C7040c(C7119g.a(), iUiListener, true, false);
+        boolean a3 = a(map);
+        a2.putString("show_download_ui", Boolean.toString(a3));
+        SLog.i("openSDK_LOG.AuthAgent", "OpenUi, showDialog -- start, isShowDownloadUi=" + a3);
+        final String str2 = j.a().a(g.a(), "https://openmobile.qq.com/oauth2.0/m_authorize?") + HttpUtils.encodeUrl(a2);
+        final c cVar = new c(g.a(), iUiListener, true, false);
         SLog.d("openSDK_LOG.AuthAgent", "OpenUi, showDialog TDialog");
-        C7124l.b(new Runnable() { // from class: com.tencent.connect.auth.AuthAgent.1
+        l.b(new Runnable() { // from class: com.tencent.connect.auth.AuthAgent.1
             @Override // java.lang.Runnable
             public void run() {
                 final Activity activity;
-                C7123k.a(AuthAgent.SECURE_LIB_FILE_NAME, AuthAgent.SECURE_LIB_NAME, 5);
+                k.a(AuthAgent.SECURE_LIB_FILE_NAME, AuthAgent.SECURE_LIB_NAME, 5);
                 JniInterface.loadSo();
                 if (AuthAgent.this.e == null || (activity = (Activity) AuthAgent.this.e.get()) == null) {
                     return;
@@ -312,18 +308,18 @@ public class AuthAgent extends BaseApi {
                         if (JniInterface.isJniOk) {
                             Activity activity2 = activity;
                             AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
-                            DialogC7041a dialogC7041a = new DialogC7041a(activity2, "action_login", str2, c7040c, ((BaseApi) AuthAgent.this).c);
+                            com.tencent.connect.auth.a aVar = new com.tencent.connect.auth.a(activity2, "action_login", str2, cVar, ((BaseApi) AuthAgent.this).c);
                             if (activity.isFinishing()) {
                                 return;
                             }
-                            dialogC7041a.show();
+                            aVar.show();
                             return;
                         }
                         SLog.w("openSDK_LOG.AuthAgent", "OpenUi, secure so load failed, goto download QQ.");
                         Activity activity3 = activity;
-                        String a3 = AuthAgent.this.a("");
+                        String a4 = AuthAgent.this.a("");
                         AnonymousClass1 anonymousClass12 = AnonymousClass1.this;
-                        TDialog tDialog = new TDialog(activity3, "", a3, c7040c, ((BaseApi) AuthAgent.this).c);
+                        TDialog tDialog = new TDialog(activity3, "", a4, cVar, ((BaseApi) AuthAgent.this).c);
                         if (activity.isFinishing()) {
                             return;
                         }
@@ -338,26 +334,24 @@ public class AuthAgent extends BaseApi {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.tencent.connect.auth.AuthAgent$b */
     /* loaded from: classes11.dex */
-    public class C7038b extends DefaultUiListener {
+    public class b extends DefaultUiListener {
         WeakReference<IUiListener> a;
         private final String c = "sendinstall";
         private final String d = "installwording";
         private final String e = "https://appsupport.qq.com/cgi-bin/qzapps/mapp_addapp.cgi";
 
         /* compiled from: Taobao */
-        /* renamed from: com.tencent.connect.auth.AuthAgent$b$a */
         /* loaded from: classes11.dex */
-        private abstract class AbstractView$OnClickListenerC7039a implements View.OnClickListener {
+        private abstract class a implements View.OnClickListener {
             Dialog d;
 
-            AbstractView$OnClickListenerC7039a(Dialog dialog) {
+            a(Dialog dialog) {
                 this.d = dialog;
             }
         }
 
-        public C7038b(IUiListener iUiListener) {
+        public b(IUiListener iUiListener) {
             this.a = new WeakReference<>(iUiListener);
         }
 
@@ -379,10 +373,10 @@ public class AuthAgent extends BaseApi {
                     packageInfo = null;
                 }
                 Drawable loadIcon = packageInfo != null ? packageInfo.applicationInfo.loadIcon(packageManager) : null;
-                View.OnClickListener onClickListener = new AbstractView$OnClickListenerC7039a(dialog) { // from class: com.tencent.connect.auth.AuthAgent.b.1
+                View.OnClickListener onClickListener = new a(dialog) { // from class: com.tencent.connect.auth.AuthAgent.b.1
                     @Override // android.view.View.OnClickListener
                     public void onClick(View view) {
-                        C7038b.this.a();
+                        b.this.a();
                         Dialog dialog2 = this.d;
                         if (dialog2 != null && dialog2.isShowing()) {
                             this.d.dismiss();
@@ -393,7 +387,7 @@ public class AuthAgent extends BaseApi {
                         }
                     }
                 };
-                View.OnClickListener onClickListener2 = new AbstractView$OnClickListenerC7039a(dialog) { // from class: com.tencent.connect.auth.AuthAgent.b.2
+                View.OnClickListener onClickListener2 = new a(dialog) { // from class: com.tencent.connect.auth.AuthAgent.b.2
                     @Override // android.view.View.OnClickListener
                     public void onClick(View view) {
                         Dialog dialog2 = this.d;
@@ -525,7 +519,7 @@ public class AuthAgent extends BaseApi {
             La3:
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.tencent.connect.auth.AuthAgent.C7038b.onComplete(java.lang.Object):void");
+            throw new UnsupportedOperationException("Method not decompiled: com.tencent.connect.auth.AuthAgent.b.onComplete(java.lang.Object):void");
         }
 
         @Override // com.tencent.tauth.DefaultUiListener, com.tencent.tauth.IUiListener
@@ -568,7 +562,7 @@ public class AuthAgent extends BaseApi {
 
         private View a(Context context, Drawable drawable, String str, View.OnClickListener onClickListener, View.OnClickListener onClickListener2) {
             DisplayMetrics displayMetrics = new DisplayMetrics();
-            Display.getMetrics(((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+            Display.getMetrics(((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
             float f = displayMetrics.density;
             RelativeLayout relativeLayout = new RelativeLayout(context);
             ImageView imageView = new ImageView(context);
@@ -670,38 +664,38 @@ public class AuthAgent extends BaseApi {
 
     private boolean a(Activity activity, Fragment fragment, Map<String, Object> map, boolean z, Object[] objArr) {
         SLog.i("openSDK_LOG.AuthAgent", "startActionActivity() -- start");
-        Intent c = c();
-        if (c != null) {
-            Bundle a = a();
+        Intent c2 = c();
+        if (c2 != null) {
+            Bundle a2 = a();
             if (z) {
-                a.putString("isadd", "1");
+                a2.putString("isadd", "1");
             }
-            a.putString("scope", this.d);
-            a.putString("client_id", this.c.getAppId());
+            a2.putString("scope", this.d);
+            a2.putString("client_id", this.c.getAppId());
             if (BaseApi.isOEM) {
-                a.putString(Constants.PARAM_PLATFORM_ID, "desktop_m_qq-" + BaseApi.installChannel + "-android-" + BaseApi.registerChannel + "-" + BaseApi.businessId);
+                a2.putString(Constants.PARAM_PLATFORM_ID, "desktop_m_qq-" + BaseApi.installChannel + "-android-" + BaseApi.registerChannel + "-" + BaseApi.businessId);
             } else {
-                a.putString(Constants.PARAM_PLATFORM_ID, Constants.DEFAULT_PF);
+                a2.putString(Constants.PARAM_PLATFORM_ID, Constants.DEFAULT_PF);
             }
-            a.putString("need_pay", "1");
-            a(a, map);
-            a.putString(Constants.KEY_APP_NAME, C7123k.a(C7119g.a()));
-            c.putExtra(Constants.KEY_ACTION, "action_login");
-            c.putExtra(Constants.KEY_PARAMS, a);
-            c.putExtra("appid", this.c.getAppId());
-            a.putString(Constants.KEY_PPSTS, C7123k.a(activity, a(a)));
+            a2.putString("need_pay", "1");
+            a(a2, map);
+            a2.putString(Constants.KEY_APP_NAME, k.a(g.a()));
+            c2.putExtra(Constants.KEY_ACTION, "action_login");
+            c2.putExtra(Constants.KEY_PARAMS, a2);
+            c2.putExtra("appid", this.c.getAppId());
+            a2.putString(Constants.KEY_PPSTS, k.a(activity, a(a2)));
             try {
-                this.a = new C7038b(this.a);
+                this.a = new b(this.a);
                 UIListenerManager.getInstance().setListenerWithRequestcode(Constants.REQUEST_LOGIN, this.a);
                 if (fragment != null) {
                     SLog.d("openSDK_LOG.AuthAgent", "startAssitActivity fragment");
-                    a(fragment, c, Constants.REQUEST_LOGIN, map);
+                    a(fragment, c2, Constants.REQUEST_LOGIN, map);
                 } else {
                     SLog.d("openSDK_LOG.AuthAgent", "startAssitActivity activity");
-                    a(activity, c, Constants.REQUEST_LOGIN, map);
+                    a(activity, c2, Constants.REQUEST_LOGIN, map);
                 }
                 SLog.i("openSDK_LOG.AuthAgent", "startActionActivity() -- end, found activity for loginIntent");
-                C7084e.a().a(0, "LOGIN_CHECK_SDK", "1000", this.c.getAppId(), "", Long.valueOf(SystemClock.elapsedRealtime()), 0, 1, "");
+                e.a().a(0, "LOGIN_CHECK_SDK", "1000", this.c.getAppId(), "", Long.valueOf(SystemClock.elapsedRealtime()), 0, 1, "");
                 objArr[0] = "0";
                 objArr[1] = 1;
                 return true;
@@ -709,7 +703,7 @@ public class AuthAgent extends BaseApi {
                 SLog.e("openSDK_LOG.AuthAgent", "startActionActivity() exception", e);
             }
         }
-        C7084e.a().a(1, "LOGIN_CHECK_SDK", "1000", this.c.getAppId(), "", Long.valueOf(SystemClock.elapsedRealtime()), 0, 1, "startActionActivity fail");
+        e.a().a(1, "LOGIN_CHECK_SDK", "1000", this.c.getAppId(), "", Long.valueOf(SystemClock.elapsedRealtime()), 0, 1, "startActionActivity fail");
         SLog.i("openSDK_LOG.AuthAgent", "startActionActivity() -- end, no target activity for loginIntent");
         return false;
     }
@@ -765,15 +759,15 @@ public class AuthAgent extends BaseApi {
         if (TextUtils.isEmpty(accessToken) || TextUtils.isEmpty(openId) || TextUtils.isEmpty(appId)) {
             str = "";
         } else {
-            str = C7126m.g("tencent&sdk&qazxc***14969%%" + accessToken + appId + openId + "qzone3.4");
+            str = m.g("tencent&sdk&qazxc***14969%%" + accessToken + appId + openId + "qzone3.4");
         }
         if (TextUtils.isEmpty(str)) {
             SLog.e("openSDK_LOG.AuthAgent", "reportDAU -- encrytoken is null");
             return;
         }
-        Bundle a = a();
-        a.putString("encrytoken", str);
-        HttpUtils.requestAsync(this.c, C7119g.a(), "https://openmobile.qq.com/user/user_login_statis", a, "POST", null);
+        Bundle a2 = a();
+        a2.putString("encrytoken", str);
+        HttpUtils.requestAsync(this.c, g.a(), "https://openmobile.qq.com/user/user_login_statis", a2, "POST", null);
         SLog.i("openSDK_LOG.AuthAgent", "reportDAU() -- end");
     }
 }

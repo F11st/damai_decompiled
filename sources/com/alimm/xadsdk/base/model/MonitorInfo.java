@@ -1,12 +1,12 @@
 package com.alimm.xadsdk.base.model;
 
 import com.alibaba.fastjson.annotation.JSONField;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class MonitorInfo implements BaseInfo {
-    @JSONField(name = C3834a.C3835a.a)
+    @JSONField(name = a.C0166a.a)
     private String mSdk;
     @JSONField(name = "time")
     private int mTime;

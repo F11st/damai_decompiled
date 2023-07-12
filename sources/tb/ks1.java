@@ -24,7 +24,7 @@ public class ks1 implements Application.ActivityLifecycleCallbacks {
     }
 
     private final void b(String str, Activity activity, Object obj) {
-        Map<Integer, WeakReference<js1.AbstractC9321b>> d;
+        Map<Integer, WeakReference<js1.b>> d;
         js1 a = js1.Companion.a();
         if (a == null || (d = a.d()) == null) {
             return;
@@ -32,18 +32,18 @@ public class ks1 implements Application.ActivityLifecycleCallbacks {
         ArrayList<Integer> arrayList = null;
         for (Integer num : d.keySet()) {
             int intValue = num.intValue();
-            WeakReference<js1.AbstractC9321b> weakReference = d.get(Integer.valueOf(intValue));
-            js1.AbstractC9321b abstractC9321b = weakReference != null ? weakReference.get() : null;
-            if (abstractC9321b == null) {
+            WeakReference<js1.b> weakReference = d.get(Integer.valueOf(intValue));
+            js1.b bVar = weakReference != null ? weakReference.get() : null;
+            if (bVar == null) {
                 if (arrayList == null) {
                     arrayList = new ArrayList();
                 }
                 arrayList.add(Integer.valueOf(intValue));
-            } else if (abstractC9321b.a(activity)) {
+            } else if (bVar.a(activity)) {
                 if (b41.d(str, Constants.AndroidJointPointKey.LIFECYCLE_KEY_ACTIVITY_PAUSED)) {
-                    abstractC9321b.b(activity);
+                    bVar.b(activity);
                 } else if (b41.d(str, Constants.AndroidJointPointKey.LIFECYCLE_KEY_ACTIVITY_RESUMED)) {
-                    abstractC9321b.c(activity);
+                    bVar.c(activity);
                 }
             }
         }
@@ -101,9 +101,9 @@ public class ks1 implements Application.ActivityLifecycleCallbacks {
         String str = this.a;
         i23Var.a(str, "onActivityDestroyed " + activity);
         a(activity);
-        lt1.C9421a c9421a = lt1.Companion;
-        lt1 a2 = c9421a.a();
-        if ((a2 != null ? a2.k() : null) != activity || (a = c9421a.a()) == null) {
+        lt1.a aVar = lt1.Companion;
+        lt1 a2 = aVar.a();
+        if ((a2 != null ? a2.k() : null) != activity || (a = aVar.a()) == null) {
             return;
         }
         a.s(null);

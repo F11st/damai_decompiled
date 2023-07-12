@@ -5,9 +5,9 @@ import android.graphics.Rect;
 import android.text.TextUtils;
 import android.util.Base64;
 import com.alibaba.security.biometrics.jni.listener.OnSgProcessListener;
-import com.alibaba.security.common.c.C3800a;
-import com.alibaba.security.common.d.C3820n;
-import com.alibaba.security.common.d.C3823p;
+import com.alibaba.security.common.c.a;
+import com.alibaba.security.common.d.n;
+import com.alibaba.security.common.d.p;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
@@ -33,7 +33,7 @@ public class ALBiometricsJni {
             System.loadLibrary(TAG);
             bLoaded = true;
         } catch (Throwable unused) {
-            C3800a.b();
+            a.b();
         }
     }
 
@@ -298,11 +298,11 @@ public class ALBiometricsJni {
     }
 
     public static boolean loadSo(Context context) {
-        if (!bLoaded && C3823p.f()) {
-            bLoaded = C3820n.a(context).a("ALBiometricsJni_x86");
+        if (!bLoaded && p.f()) {
+            bLoaded = n.a(context).a("ALBiometricsJni_x86");
         }
         if (!bLoaded) {
-            bLoaded = C3820n.a(context).a(TAG);
+            bLoaded = n.a(context).a(TAG);
         }
         return bLoaded;
     }

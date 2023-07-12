@@ -29,12 +29,11 @@ public class ThreadSwitcher {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.common.ThreadSwitcher$a */
     /* loaded from: classes11.dex */
-    private static class HandlerC6759a extends Handler {
+    private static class a extends Handler {
         private final List<ThreadConversion> a;
 
-        public HandlerC6759a(Looper looper, List<ThreadConversion> list) {
+        public a(Looper looper, List<ThreadConversion> list) {
             super(looper);
             this.a = list;
         }
@@ -88,6 +87,6 @@ public class ThreadSwitcher {
     }
 
     public void f(HandlerThread handlerThread) {
-        this.b = new HandlerC6759a(handlerThread.getLooper(), this.a);
+        this.b = new a(handlerThread.getLooper(), this.a);
     }
 }

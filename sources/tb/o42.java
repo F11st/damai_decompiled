@@ -15,12 +15,11 @@ public class o42 extends SQLiteOpenHelper {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.o42$a */
     /* loaded from: classes5.dex */
-    public static class C9505a implements FileFilter {
+    public static class a implements FileFilter {
         final /* synthetic */ String a;
 
-        C9505a(String str) {
+        a(String str) {
             this.a = str;
         }
 
@@ -62,7 +61,7 @@ public class o42 extends SQLiteOpenHelper {
         boolean delete = file.delete() | false | new File(file.getPath() + "-journal").delete() | new File(file.getPath() + "-shm").delete() | new File(file.getPath() + "-wal").delete();
         File parentFile = file.getParentFile();
         if (parentFile != null) {
-            File[] listFiles = parentFile.listFiles(new C9505a(file.getName() + "-mj"));
+            File[] listFiles = parentFile.listFiles(new a(file.getName() + "-mj"));
             if (listFiles != null) {
                 for (File file2 : listFiles) {
                     delete |= file2.delete();

@@ -25,31 +25,30 @@ public class BeforeLogoutBiz {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.biz.before.logout.BeforeLogoutBiz$a */
     /* loaded from: classes11.dex */
-    public static class C6710a implements RpcRequestCallback {
+    public static class a implements RpcRequestCallback {
         final /* synthetic */ CommonCallback a;
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.taobao.login4android.biz.before.logout.BeforeLogoutBiz$a$a */
+        /* renamed from: com.taobao.login4android.biz.before.logout.BeforeLogoutBiz$a$a  reason: collision with other inner class name */
         /* loaded from: classes11.dex */
-        public class C6711a implements LoginFilterCallback {
-            C6711a() {
+        public class C0305a implements LoginFilterCallback {
+            C0305a() {
             }
 
             @Override // com.ali.user.mobile.filter.LoginFilterCallback
             public void onFail(int i, Map<String, String> map) {
-                BeforeLogoutBiz.callbackSuccess(C6710a.this.a);
+                BeforeLogoutBiz.callbackSuccess(a.this.a);
             }
 
             @Override // com.ali.user.mobile.filter.LoginFilterCallback
             public void onSuccess() {
-                BeforeLogoutBiz.callbackSuccess(C6710a.this.a);
+                BeforeLogoutBiz.callbackSuccess(a.this.a);
             }
         }
 
-        C6710a(CommonCallback commonCallback) {
+        a(CommonCallback commonCallback) {
             this.a = commonCallback;
         }
 
@@ -58,7 +57,7 @@ public class BeforeLogoutBiz {
             if (rpcResponse != null) {
                 try {
                     if (rpcResponse.returnValue != 0) {
-                        ((NavigatorService) ServiceFactory.getService(NavigatorService.class)).navToLoginPostPage(DataProviderFactory.getApplicationContext(), ((LogoutPreResponseData) ((PreLogoutResponse) rpcResponse).returnValue).h5Url, new C6711a());
+                        ((NavigatorService) ServiceFactory.getService(NavigatorService.class)).navToLoginPostPage(DataProviderFactory.getApplicationContext(), ((LogoutPreResponseData) ((PreLogoutResponse) rpcResponse).returnValue).h5Url, new C0305a());
                         return;
                     }
                 } catch (Throwable th) {
@@ -90,7 +89,7 @@ public class BeforeLogoutBiz {
             UserLoginServiceImpl.buildBaseRequest(null, logoutPreCheckRequest);
             rpcRequest.addParam("request", JSON.toJSONString(logoutPreCheckRequest));
             rpcRequest.addParam("riskControlInfo", JSON.toJSONString(SecurityGuardManagerWraper.buildWSecurityData()));
-            ((RpcService) ServiceFactory.getService(RpcService.class)).remoteBusiness(rpcRequest, PreLogoutResponse.class, new C6710a(commonCallback));
+            ((RpcService) ServiceFactory.getService(RpcService.class)).remoteBusiness(rpcRequest, PreLogoutResponse.class, new a(commonCallback));
         } catch (Throwable th) {
             LoginTLogAdapter.w("login.BeforeLogoutBiz", "logout from server failed.", th);
             th.printStackTrace();

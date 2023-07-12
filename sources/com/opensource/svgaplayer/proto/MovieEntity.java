@@ -14,8 +14,8 @@ import okio.ByteString;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public final class MovieEntity extends Message<MovieEntity, C6116a> {
-    public static final ProtoAdapter<MovieEntity> ADAPTER = new C6117b();
+public final class MovieEntity extends Message<MovieEntity, a> {
+    public static final ProtoAdapter<MovieEntity> ADAPTER = new b();
     public static final String DEFAULT_VERSION = "";
     private static final long serialVersionUID = 0;
     @WireField(adapter = "com.opensource.svgaplayer.proto.AudioEntity#ADAPTER", label = WireField.Label.REPEATED, tag = 5)
@@ -30,9 +30,8 @@ public final class MovieEntity extends Message<MovieEntity, C6116a> {
     public final String version;
 
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.proto.MovieEntity$a */
     /* loaded from: classes10.dex */
-    public static final class C6116a extends Message.Builder<MovieEntity, C6116a> {
+    public static final class a extends Message.Builder<MovieEntity, a> {
         public String a;
         public MovieParams b;
         public Map<String, ByteString> c = Internal.newMutableMap();
@@ -45,24 +44,23 @@ public final class MovieEntity extends Message<MovieEntity, C6116a> {
             return new MovieEntity(this.a, this.b, this.c, this.d, this.e, super.buildUnknownFields());
         }
 
-        public C6116a b(MovieParams movieParams) {
+        public a b(MovieParams movieParams) {
             this.b = movieParams;
             return this;
         }
 
-        public C6116a c(String str) {
+        public a c(String str) {
             this.a = str;
             return this;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.proto.MovieEntity$b */
     /* loaded from: classes10.dex */
-    private static final class C6117b extends ProtoAdapter<MovieEntity> {
+    private static final class b extends ProtoAdapter<MovieEntity> {
         private final ProtoAdapter<Map<String, ByteString>> a;
 
-        C6117b() {
+        b() {
             super(FieldEncoding.LENGTH_DELIMITED, MovieEntity.class);
             this.a = ProtoAdapter.newMapAdapter(ProtoAdapter.STRING, ProtoAdapter.BYTES);
         }
@@ -70,26 +68,26 @@ public final class MovieEntity extends Message<MovieEntity, C6116a> {
         @Override // com.youku.squareup.wire.ProtoAdapter
         /* renamed from: a */
         public MovieEntity decode(ProtoReader protoReader) throws IOException {
-            C6116a c6116a = new C6116a();
+            a aVar = new a();
             long beginMessage = protoReader.beginMessage();
             while (true) {
                 int nextTag = protoReader.nextTag();
                 if (nextTag == -1) {
                     protoReader.endMessage(beginMessage);
-                    return c6116a.build();
+                    return aVar.build();
                 } else if (nextTag == 1) {
-                    c6116a.c(ProtoAdapter.STRING.decode(protoReader));
+                    aVar.c(ProtoAdapter.STRING.decode(protoReader));
                 } else if (nextTag == 2) {
-                    c6116a.b(MovieParams.ADAPTER.decode(protoReader));
+                    aVar.b(MovieParams.ADAPTER.decode(protoReader));
                 } else if (nextTag == 3) {
-                    c6116a.c.putAll(this.a.decode(protoReader));
+                    aVar.c.putAll(this.a.decode(protoReader));
                 } else if (nextTag == 4) {
-                    c6116a.d.add(SpriteEntity.ADAPTER.decode(protoReader));
+                    aVar.d.add(SpriteEntity.ADAPTER.decode(protoReader));
                 } else if (nextTag != 5) {
                     FieldEncoding peekFieldEncoding = protoReader.peekFieldEncoding();
-                    c6116a.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
+                    aVar.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
                 } else {
-                    c6116a.e.add(AudioEntity.ADAPTER.decode(protoReader));
+                    aVar.e.add(AudioEntity.ADAPTER.decode(protoReader));
                 }
             }
         }
@@ -204,14 +202,14 @@ public final class MovieEntity extends Message<MovieEntity, C6116a> {
 
     @Override // com.youku.squareup.wire.Message
     /* renamed from: newBuilder */
-    public Message.Builder<MovieEntity, C6116a> newBuilder2() {
-        C6116a c6116a = new C6116a();
-        c6116a.a = this.version;
-        c6116a.b = this.params;
-        c6116a.c = Internal.copyOf("images", this.images);
-        c6116a.d = Internal.copyOf("sprites", this.sprites);
-        c6116a.e = Internal.copyOf("audios", this.audios);
-        c6116a.addUnknownFields(unknownFields());
-        return c6116a;
+    public Message.Builder<MovieEntity, a> newBuilder2() {
+        a aVar = new a();
+        aVar.a = this.version;
+        aVar.b = this.params;
+        aVar.c = Internal.copyOf("images", this.images);
+        aVar.d = Internal.copyOf("sprites", this.sprites);
+        aVar.e = Internal.copyOf("audios", this.audios);
+        aVar.addUnknownFields(unknownFields());
+        return aVar;
     }
 }

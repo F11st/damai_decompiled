@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.address.bean.AddressBean;
 import cn.damai.commonbusiness.address.bean.AddressListBean;
@@ -53,16 +52,15 @@ public class DmChoseAddressListActivity extends SimpleBaseActivity implements Dm
     private LinearLayout rl_empty_view;
     private int type;
     private View v_outside;
-    DmUltronChooseListenerImpl<AddressBean> itemClickListener = new C2635b();
+    DmUltronChooseListenerImpl<AddressBean> itemClickListener = new b();
     private boolean modifyAddress = false;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.secondpage.chooseaddress.DmChoseAddressListActivity$a */
     /* loaded from: classes9.dex */
-    public class C2634a implements AddressListener {
+    public class a implements AddressListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2634a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.address.manager.AddressListener
@@ -110,12 +108,11 @@ public class DmChoseAddressListActivity extends SimpleBaseActivity implements Dm
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.secondpage.chooseaddress.DmChoseAddressListActivity$b */
     /* loaded from: classes9.dex */
-    public class C2635b implements DmUltronChooseListenerImpl<AddressBean> {
+    public class b implements DmUltronChooseListenerImpl<AddressBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2635b() {
+        b() {
         }
 
         @Override // cn.damai.ultron.utils.DmUltronChooseListenerImpl
@@ -133,12 +130,11 @@ public class DmChoseAddressListActivity extends SimpleBaseActivity implements Dm
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.secondpage.chooseaddress.DmChoseAddressListActivity$c  reason: invalid class name */
     /* loaded from: classes17.dex */
-    public class animationAnimation$AnimationListenerC2636c implements Animation.AnimationListener {
+    public class c implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        animationAnimation$AnimationListenerC2636c() {
+        c() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -175,7 +171,7 @@ public class DmChoseAddressListActivity extends SimpleBaseActivity implements Dm
         if (AndroidInstantRuntime.support(ipChange, "-682972211")) {
             ipChange.ipc$dispatch("-682972211", new Object[]{this, addressBean});
         } else if (addressBean != null) {
-            C0529c.e().x(kb0.u().E(String.valueOf(ua0.b(this))));
+            cn.damai.common.user.c.e().x(kb0.u().E(String.valueOf(ua0.b(this))));
             Intent intent = new Intent();
             intent.putExtra("added_address", addressBean);
             intent.putExtra("addressId", addressBean.getAddressId());
@@ -189,7 +185,7 @@ public class DmChoseAddressListActivity extends SimpleBaseActivity implements Dm
         if (AndroidInstantRuntime.support(ipChange, "-688325087")) {
             ipChange.ipc$dispatch("-688325087", new Object[]{this});
         } else {
-            AddressManager.b().a(z20.q(), new C2634a());
+            AddressManager.b().a(z20.q(), new a());
         }
     }
 
@@ -202,7 +198,7 @@ public class DmChoseAddressListActivity extends SimpleBaseActivity implements Dm
         } else {
             Animation loadAnimation = AnimationUtils.loadAnimation(this, R$anim.activity_item_animexit);
             this.mAnimView.startAnimation(loadAnimation);
-            loadAnimation.setAnimationListener(new animationAnimation$AnimationListenerC2636c());
+            loadAnimation.setAnimationListener(new c());
         }
     }
 
@@ -308,7 +304,7 @@ public class DmChoseAddressListActivity extends SimpleBaseActivity implements Dm
         if (AndroidInstantRuntime.support(ipChange, "242637722")) {
             ipChange.ipc$dispatch("242637722", new Object[]{this, view});
         } else if (view.getId() == R$id.ll_add) {
-            C0529c.e().x(kb0.u().f(String.valueOf(ua0.b(this))));
+            cn.damai.common.user.c.e().x(kb0.u().f(String.valueOf(ua0.b(this))));
             Bundle bundle = new Bundle();
             bundle.putInt(AddAddressActivity.KEY_OPERATION_ADDRESS, 1);
             DMNav.from(this).withExtras(bundle).forResult(37).toUri(NavUri.b("addaddress"));

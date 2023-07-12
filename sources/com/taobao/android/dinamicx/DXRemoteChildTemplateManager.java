@@ -6,7 +6,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.taobao.android.dinamicx.model.DXJSONObjectForVM;
 import com.taobao.android.dinamicx.notification.DXNotificationCenter;
 import com.taobao.android.dinamicx.template.download.DXTemplateItem;
-import com.taobao.android.dinamicx.widget.C6493f;
 import com.taobao.android.dinamicx.widget.DXTemplateWidgetNode;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
 import java.util.ArrayList;
@@ -20,13 +19,12 @@ import tb.y00;
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
 public class DXRemoteChildTemplateManager {
-    public static final ThreadLocal<Boolean> needNotifyMap = new C6356a();
+    public static final ThreadLocal<Boolean> needNotifyMap = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.DXRemoteChildTemplateManager$a */
     /* loaded from: classes12.dex */
-    static class C6356a extends ThreadLocal<Boolean> {
-        C6356a() {
+    static class a extends ThreadLocal<Boolean> {
+        a() {
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
@@ -40,15 +38,14 @@ public class DXRemoteChildTemplateManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.DXRemoteChildTemplateManager$b */
     /* loaded from: classes11.dex */
-    public class C6357b implements IDXDownloadCallback {
+    public class b implements IDXDownloadCallback {
         final /* synthetic */ DXTemplateManager a;
         final /* synthetic */ DXRuntimeContext b;
         final /* synthetic */ DXTemplateWidgetNode c;
         final /* synthetic */ int d;
 
-        C6357b(DXTemplateManager dXTemplateManager, DXRuntimeContext dXRuntimeContext, DXTemplateWidgetNode dXTemplateWidgetNode, int i) {
+        b(DXTemplateManager dXTemplateManager, DXRuntimeContext dXRuntimeContext, DXTemplateWidgetNode dXTemplateWidgetNode, int i) {
             this.a = dXTemplateManager;
             this.b = dXRuntimeContext;
             this.c = dXTemplateWidgetNode;
@@ -72,11 +69,11 @@ public class DXRemoteChildTemplateManager {
         if (dXWidgetNode != null) {
             dXWidgetNode.setSourceWidget(dXWidgetNode);
         }
-        if (!(dXWidgetNode instanceof C6493f) || dXWidgetNode.getChildrenCount() <= 0) {
+        if (!(dXWidgetNode instanceof com.taobao.android.dinamicx.widget.f) || dXWidgetNode.getChildrenCount() <= 0) {
             return;
         }
         if (!wt.p0() || dXWidgetNode.getDataParsersExprNode() == null || dXWidgetNode.getDataParsersExprNode().indexOfKey(mz.DX_PARSER_LISTDATA) <= -1) {
-            for (DXWidgetNode dXWidgetNode2 : ((C6493f) dXWidgetNode).getChildren()) {
+            for (DXWidgetNode dXWidgetNode2 : ((com.taobao.android.dinamicx.widget.f) dXWidgetNode).getChildren()) {
                 c(dXWidgetNode2);
             }
         }
@@ -88,7 +85,7 @@ public class DXRemoteChildTemplateManager {
         if (e != null && dXTemplateWidgetNode != null) {
             dXTemplateWidgetNode.addChild(e, false);
             dXTemplateWidgetNode.setData(e.getDXRuntimeContext().getData());
-            new C6386m().f(e);
+            new m().f(e);
             return true;
         }
         s00.b("createAndBindTree 失败");
@@ -219,7 +216,7 @@ public class DXRemoteChildTemplateManager {
         if (DinamicXEngine.x()) {
             nz.b("DXRemoteChildTemplateManager", "模版" + dXTemplateItem.getIdentifier() + "不存在，开始下载");
         }
-        dXTemplateManager.g(arrayList, new C6357b(dXTemplateManager, dXRuntimeContext, dXTemplateWidgetNode, i), false);
+        dXTemplateManager.g(arrayList, new b(dXTemplateManager, dXRuntimeContext, dXTemplateWidgetNode, i), false);
         return null;
     }
 }

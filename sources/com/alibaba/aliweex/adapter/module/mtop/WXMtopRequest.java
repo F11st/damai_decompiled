@@ -6,7 +6,6 @@ import android.os.Looper;
 import android.os.Message;
 import android.text.TextUtils;
 import anetwork.channel.statist.StatisticData;
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.IConfigAdapter;
 import com.alibaba.aliweex.adapter.module.mtop.WXMtopModule;
 import com.alibaba.aliweex.interceptor.mtop.MtopTracker;
@@ -57,7 +56,7 @@ public class WXMtopRequest {
     private MtopTracker a;
     private WXMtopModule.MTOP_VERSION b;
     public String c;
-    private Handler d = new HandlerC3059a(Looper.getMainLooper());
+    private Handler d = new a(Looper.getMainLooper());
 
     /* compiled from: Taobao */
     /* loaded from: classes5.dex */
@@ -113,7 +112,7 @@ public class WXMtopRequest {
                         @Override // java.lang.Runnable
                         public void run() {
                             RbListener rbListener = RbListener.this;
-                            C3060a n = WXMtopRequest.this.n(rbListener.callback, RbListener.this.failure, mtopResponse);
+                            com.alibaba.aliweex.adapter.module.mtop.a n = WXMtopRequest.this.n(rbListener.callback, RbListener.this.failure, mtopResponse);
                             if (RbListener.this.mtopTracker != null) {
                                 RbListener.this.mtopTracker.n(mtopResponse.getApi(), n.toString());
                             }
@@ -177,43 +176,42 @@ public class WXMtopRequest {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.module.mtop.WXMtopRequest$a */
     /* loaded from: classes15.dex */
-    class HandlerC3059a extends Handler {
-        HandlerC3059a(Looper looper) {
+    class a extends Handler {
+        a(Looper looper) {
             super(looper);
         }
 
         @Override // android.os.Handler
         public void handleMessage(Message message) {
             JSCallback d;
-            if (message.what == 500 && (message.obj instanceof C3060a)) {
+            if (message.what == 500 && (message.obj instanceof com.alibaba.aliweex.adapter.module.mtop.a)) {
                 if (TBSdkLog.isLogEnable(TBSdkLog.LogEnable.DebugEnable)) {
-                    TBSdkLog.d("WXMtopRequest", "call result, retString: " + ((C3060a) message.obj).toString());
+                    TBSdkLog.d("WXMtopRequest", "call result, retString: " + ((com.alibaba.aliweex.adapter.module.mtop.a) message.obj).toString());
                 }
                 try {
-                    C3060a c3060a = (C3060a) message.obj;
-                    if (c3060a.c() == null || c3060a.e() == null) {
+                    com.alibaba.aliweex.adapter.module.mtop.a aVar = (com.alibaba.aliweex.adapter.module.mtop.a) message.obj;
+                    if (aVar.c() == null || aVar.e() == null) {
                         return;
                     }
                     JSONObject jSONObject = new JSONObject();
                     if (WXMtopRequest.this.b == WXMtopModule.MTOP_VERSION.V1) {
-                        jSONObject.put("result", (Object) (c3060a.g() ? "WX_SUCCESS" : "WX_FAILED"));
-                        jSONObject.put("data", (Object) JSON.parseObject(c3060a.toString()));
-                        d = c3060a.c();
+                        jSONObject.put("result", (Object) (aVar.g() ? "WX_SUCCESS" : "WX_FAILED"));
+                        jSONObject.put("data", (Object) JSON.parseObject(aVar.toString()));
+                        d = aVar.c();
                     } else {
-                        jSONObject = JSON.parseObject(c3060a.toString());
-                        if (c3060a.g()) {
-                            d = c3060a.c();
+                        jSONObject = JSON.parseObject(aVar.toString());
+                        if (aVar.g()) {
+                            d = aVar.c();
                         } else {
                             if (!jSONObject.containsKey("result")) {
-                                jSONObject.put("result", (Object) c3060a.f());
+                                jSONObject.put("result", (Object) aVar.f());
                             }
-                            d = c3060a.d();
+                            d = aVar.d();
                         }
                     }
                     JSCallback jSCallback = d;
-                    WXMtopRequest.this.o("weex-mtop-end", null, null, null, c3060a);
+                    WXMtopRequest.this.o("weex-mtop-end", null, null, null, aVar);
                     if (jSCallback != null) {
                         jSCallback.invoke(jSONObject);
                     }
@@ -288,8 +286,8 @@ public class WXMtopRequest {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void l(C3060a c3060a) {
-        this.d.obtainMessage(500, c3060a).sendToTarget();
+    public void l(com.alibaba.aliweex.adapter.module.mtop.a aVar) {
+        this.d.obtainMessage(500, aVar).sendToTarget();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -314,22 +312,22 @@ public class WXMtopRequest {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public C3060a n(JSCallback jSCallback, JSCallback jSCallback2, MtopResponse mtopResponse) {
+    public com.alibaba.aliweex.adapter.module.mtop.a n(JSCallback jSCallback, JSCallback jSCallback2, MtopResponse mtopResponse) {
         long currentTimeMillis = System.currentTimeMillis();
-        C3060a c3060a = new C3060a(jSCallback, jSCallback2);
+        com.alibaba.aliweex.adapter.module.mtop.a aVar = new com.alibaba.aliweex.adapter.module.mtop.a(jSCallback, jSCallback2);
         if (mtopResponse != null) {
-            c3060a.f = mtopResponse.getApi();
+            aVar.f = mtopResponse.getApi();
         }
-        c3060a.b("ret", new JSONArray().put("HY_FAILED"));
+        aVar.b("ret", new JSONArray().put("HY_FAILED"));
         if (mtopResponse == null) {
-            c3060a.a("code", "-1");
+            aVar.a("code", "-1");
             TBSdkLog.d("WXMtopRequest", "parseResult: time out");
-            return c3060a;
+            return aVar;
         }
-        c3060a.a("code", String.valueOf(mtopResponse.getResponseCode()));
+        aVar.a("code", String.valueOf(mtopResponse.getResponseCode()));
         if (mtopResponse.isSessionInvalid()) {
-            c3060a.b("ret", new JSONArray().put("ERR_SID_INVALID"));
-            return c3060a;
+            aVar.b("ret", new JSONArray().put("ERR_SID_INVALID"));
+            return aVar;
         }
         try {
             if (mtopResponse.getBytedata() != null) {
@@ -345,12 +343,12 @@ public class WXMtopRequest {
                     jSONObject2.put("recDataSize", 0);
                 }
                 jSONObject.put(UCCore.EVENT_STAT, jSONObject2);
-                c3060a.h(jSONObject);
+                aVar.h(jSONObject);
             }
             if (mtopResponse.isApiSuccess()) {
-                c3060a.j(true);
+                aVar.j(true);
             } else {
-                c3060a.i(mtopResponse.getRetCode());
+                aVar.i(mtopResponse.getRetCode());
             }
         } catch (Exception unused) {
             if (TBSdkLog.isPrintLog()) {
@@ -360,13 +358,13 @@ public class WXMtopRequest {
         if (TBSdkLog.isLogEnable(TBSdkLog.LogEnable.DebugEnable)) {
             TBSdkLog.d("WXMtopRequest", "parseResult cost time(ms):" + (System.currentTimeMillis() - currentTimeMillis));
         }
-        return c3060a;
+        return aVar;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void o(String str, String str2, String str3, String str4, C3060a c3060a) {
-        IConfigAdapter c = C3004a.l().c();
-        if ((c == null || Boolean.valueOf(c.getConfig(oz2.WXAPM_CONFIG_GROUP, "recordMtopState", "true")).booleanValue()) && C3004a.l().h() != null) {
+    public void o(String str, String str2, String str3, String str4, com.alibaba.aliweex.adapter.module.mtop.a aVar) {
+        IConfigAdapter c = com.alibaba.aliweex.a.l().c();
+        if ((c == null || Boolean.valueOf(c.getConfig(oz2.WXAPM_CONFIG_GROUP, "recordMtopState", "true")).booleanValue()) && com.alibaba.aliweex.a.l().h() != null) {
             HashMap hashMap = new HashMap();
             if (str3 != null) {
                 hashMap.put("url", str3);
@@ -379,19 +377,19 @@ public class WXMtopRequest {
             if (str4 != null) {
                 hashMap.put("msg", str4);
             }
-            if (c3060a != null) {
-                String str5 = c3060a.f;
+            if (aVar != null) {
+                String str5 = aVar.f;
                 if (str5 == null) {
                     str5 = "";
                 }
                 hashMap.put("callApi", str5);
-                hashMap.put("success", Boolean.valueOf(c3060a.g()));
-                hashMap.put("retCode", c3060a.f());
-                if (!c3060a.g()) {
-                    hashMap.put("result", c3060a.e().toString());
+                hashMap.put("success", Boolean.valueOf(aVar.g()));
+                hashMap.put("retCode", aVar.f());
+                if (!aVar.g()) {
+                    hashMap.put("result", aVar.e().toString());
                 }
                 WXStateRecord d2 = WXStateRecord.d();
-                d2.i("", "receiveMtop:" + str5 + ",result" + c3060a.e().toString());
+                d2.i("", "receiveMtop:" + str5 + ",result" + aVar.e().toString());
             }
         }
     }
@@ -415,9 +413,9 @@ public class WXMtopRequest {
                     org.json.JSONObject jSONObject = new org.json.JSONObject(str);
                     th1 m = WXMtopRequest.this.m(jSONObject);
                     if (m == null) {
-                        C3060a c3060a = new C3060a(jSCallback, jSCallback2);
-                        c3060a.b("ret", new JSONArray().put("HY_PARAM_ERR"));
-                        WXMtopRequest.this.l(c3060a);
+                        com.alibaba.aliweex.adapter.module.mtop.a aVar = new com.alibaba.aliweex.adapter.module.mtop.a(jSCallback, jSCallback2);
+                        aVar.b("ret", new JSONArray().put("HY_PARAM_ERR"));
+                        WXMtopRequest.this.l(aVar);
                         return;
                     }
                     WXSDKInstance y2 = WXSDKManager.v().y(WXMtopRequest.this.c);
@@ -443,9 +441,9 @@ public class WXMtopRequest {
                     j.startRequest();
                 } catch (Exception e2) {
                     TBSdkLog.e("WXMtopRequest", "send Request failed" + e2);
-                    C3060a c3060a2 = new C3060a(jSCallback, jSCallback2);
-                    c3060a2.b("ret", new JSONArray().put("HY_FAILED"));
-                    WXMtopRequest.this.l(c3060a2);
+                    com.alibaba.aliweex.adapter.module.mtop.a aVar2 = new com.alibaba.aliweex.adapter.module.mtop.a(jSCallback, jSCallback2);
+                    aVar2.b("ret", new JSONArray().put("HY_FAILED"));
+                    WXMtopRequest.this.l(aVar2);
                 }
             }
         });

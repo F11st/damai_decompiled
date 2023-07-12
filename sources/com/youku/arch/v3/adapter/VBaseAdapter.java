@@ -4,8 +4,8 @@ import android.content.Context;
 import androidx.annotation.LayoutRes;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
-import com.alibaba.android.vlayout.AbstractC3289a;
 import com.alibaba.android.vlayout.DelegateAdapter;
+import com.alibaba.android.vlayout.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.arch.v3.IItem;
@@ -41,7 +41,7 @@ public abstract class VBaseAdapter<DATA extends IItem<ItemValue>, VH extends VBa
     public int dataCount;
     @Nullable
     private VBaseAdapter<DATA, VH> innerAdapter;
-    public AbstractC3289a layoutHelper;
+    public a layoutHelper;
     private int level;
     public IContext pageContext;
     @NotNull
@@ -216,14 +216,14 @@ public abstract class VBaseAdapter<DATA extends IItem<ItemValue>, VH extends VBa
     }
 
     @NotNull
-    public final AbstractC3289a getLayoutHelper() {
+    public final a getLayoutHelper() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-835253301")) {
-            return (AbstractC3289a) ipChange.ipc$dispatch("-835253301", new Object[]{this});
+            return (a) ipChange.ipc$dispatch("-835253301", new Object[]{this});
         }
-        AbstractC3289a abstractC3289a = this.layoutHelper;
-        if (abstractC3289a != null) {
-            return abstractC3289a;
+        a aVar = this.layoutHelper;
+        if (aVar != null) {
+            return aVar;
         }
         b41.A("layoutHelper");
         return null;
@@ -278,9 +278,9 @@ public abstract class VBaseAdapter<DATA extends IItem<ItemValue>, VH extends VBa
 
     @Override // com.alibaba.android.vlayout.DelegateAdapter.Adapter
     @NotNull
-    public AbstractC3289a onCreateLayoutHelper() {
+    public a onCreateLayoutHelper() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "923096614") ? (AbstractC3289a) ipChange.ipc$dispatch("923096614", new Object[]{this}) : getLayoutHelper();
+        return AndroidInstantRuntime.support(ipChange, "923096614") ? (a) ipChange.ipc$dispatch("923096614", new Object[]{this}) : getLayoutHelper();
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -352,14 +352,14 @@ public abstract class VBaseAdapter<DATA extends IItem<ItemValue>, VH extends VBa
     }
 
     /* renamed from: setLayoutHelper  reason: collision with other method in class */
-    public final void m1250setLayoutHelper(@NotNull AbstractC3289a abstractC3289a) {
+    public final void m1250setLayoutHelper(@NotNull a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1522718067")) {
-            ipChange.ipc$dispatch("-1522718067", new Object[]{this, abstractC3289a});
+            ipChange.ipc$dispatch("-1522718067", new Object[]{this, aVar});
             return;
         }
-        b41.i(abstractC3289a, "<set-?>");
-        this.layoutHelper = abstractC3289a;
+        b41.i(aVar, "<set-?>");
+        this.layoutHelper = aVar;
     }
 
     @NotNull
@@ -482,13 +482,13 @@ public abstract class VBaseAdapter<DATA extends IItem<ItemValue>, VH extends VBa
     }
 
     @NotNull
-    public final VBaseAdapter<DATA, VH> setLayoutHelper(@NotNull AbstractC3289a abstractC3289a) {
+    public final VBaseAdapter<DATA, VH> setLayoutHelper(@NotNull a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-498367549")) {
-            return (VBaseAdapter) ipChange.ipc$dispatch("-498367549", new Object[]{this, abstractC3289a});
+            return (VBaseAdapter) ipChange.ipc$dispatch("-498367549", new Object[]{this, aVar});
         }
-        b41.i(abstractC3289a, "layoutHelper");
-        m1250setLayoutHelper(abstractC3289a);
+        b41.i(aVar, "layoutHelper");
+        m1250setLayoutHelper(aVar);
         return this;
     }
 

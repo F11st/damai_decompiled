@@ -5,7 +5,6 @@ import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.PropertyReference1Impl;
 import kotlin.reflect.KProperty;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.deserialization.AdditionalClassPartsProvider;
@@ -22,12 +21,12 @@ import tb.tg2;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class JvmBuiltIns extends AbstractC8271b {
+public final class JvmBuiltIns extends kotlin.reflect.jvm.internal.impl.builtins.b {
     static final /* synthetic */ KProperty<Object>[] j = {a12.i(new PropertyReference1Impl(a12.b(JvmBuiltIns.class), "customizer", "getCustomizer()Lorg/jetbrains/kotlin/builtins/jvm/JvmBuiltInsCustomizer;"))};
     @NotNull
     private final Kind g;
     @Nullable
-    private Function0<C8282a> h;
+    private Function0<a> h;
     @NotNull
     private final NotNullLazyValue i;
 
@@ -40,14 +39,13 @@ public final class JvmBuiltIns extends AbstractC8271b {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltIns$a */
     /* loaded from: classes3.dex */
-    public static final class C8282a {
+    public static final class a {
         @NotNull
         private final ModuleDescriptor a;
         private final boolean b;
 
-        public C8282a(@NotNull ModuleDescriptor moduleDescriptor, boolean z) {
+        public a(@NotNull ModuleDescriptor moduleDescriptor, boolean z) {
             b41.i(moduleDescriptor, "ownerModuleDescriptor");
             this.a = moduleDescriptor;
             this.b = z;
@@ -64,9 +62,8 @@ public final class JvmBuiltIns extends AbstractC8271b {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltIns$b */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C8283b {
+    public /* synthetic */ class b {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -98,27 +95,27 @@ public final class JvmBuiltIns extends AbstractC8271b {
                 b41.h(r, "builtInsModule");
                 StorageManager storageManager2 = storageManager;
                 final JvmBuiltIns jvmBuiltIns = JvmBuiltIns.this;
-                return new JvmBuiltInsCustomizer(r, storageManager2, new Function0<JvmBuiltIns.C8282a>() { // from class: kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltIns$customizer$2.1
+                return new JvmBuiltInsCustomizer(r, storageManager2, new Function0<JvmBuiltIns.a>() { // from class: kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltIns$customizer$2.1
                     {
                         super(0);
                     }
 
                     @Override // kotlin.jvm.functions.Function0
                     @NotNull
-                    public final JvmBuiltIns.C8282a invoke() {
+                    public final JvmBuiltIns.a invoke() {
                         Function0 function0;
                         function0 = JvmBuiltIns.this.h;
                         if (function0 != null) {
-                            JvmBuiltIns.C8282a c8282a = (JvmBuiltIns.C8282a) function0.invoke();
+                            JvmBuiltIns.a aVar = (JvmBuiltIns.a) function0.invoke();
                             JvmBuiltIns.this.h = null;
-                            return c8282a;
+                            return aVar;
                         }
                         throw new AssertionError("JvmBuiltins instance has not been initialized properly");
                     }
                 });
             }
         });
-        int i = C8283b.$EnumSwitchMapping$0[kind.ordinal()];
+        int i = b.$EnumSwitchMapping$0[kind.ordinal()];
         if (i == 2) {
             f(false);
         } else if (i != 3) {
@@ -128,7 +125,7 @@ public final class JvmBuiltIns extends AbstractC8271b {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b
+    @Override // kotlin.reflect.jvm.internal.impl.builtins.b
     @NotNull
     /* renamed from: F0 */
     public List<ClassDescriptorFactory> v() {
@@ -150,7 +147,7 @@ public final class JvmBuiltIns extends AbstractC8271b {
 
     public final void H0(@NotNull final ModuleDescriptor moduleDescriptor, final boolean z) {
         b41.i(moduleDescriptor, "moduleDescriptor");
-        I0(new Function0<C8282a>() { // from class: kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltIns$initialize$1
+        I0(new Function0<a>() { // from class: kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltIns$initialize$1
             /* JADX INFO: Access modifiers changed from: package-private */
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             {
@@ -159,24 +156,24 @@ public final class JvmBuiltIns extends AbstractC8271b {
 
             @Override // kotlin.jvm.functions.Function0
             @NotNull
-            public final JvmBuiltIns.C8282a invoke() {
-                return new JvmBuiltIns.C8282a(ModuleDescriptor.this, z);
+            public final JvmBuiltIns.a invoke() {
+                return new JvmBuiltIns.a(ModuleDescriptor.this, z);
             }
         });
     }
 
-    public final void I0(@NotNull Function0<C8282a> function0) {
+    public final void I0(@NotNull Function0<a> function0) {
         b41.i(function0, "computation");
         this.h = function0;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b
+    @Override // kotlin.reflect.jvm.internal.impl.builtins.b
     @NotNull
     protected PlatformDependentDeclarationFilter M() {
         return G0();
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b
+    @Override // kotlin.reflect.jvm.internal.impl.builtins.b
     @NotNull
     protected AdditionalClassPartsProvider g() {
         return G0();

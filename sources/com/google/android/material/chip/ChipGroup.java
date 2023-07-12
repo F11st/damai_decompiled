@@ -23,7 +23,7 @@ import java.util.List;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class ChipGroup extends FlowLayout {
-    private static final int DEF_STYLE_RES = R.C4819style.Widget_MaterialComponents_ChipGroup;
+    private static final int DEF_STYLE_RES = R.style.Widget_MaterialComponents_ChipGroup;
     @IdRes
     private int checkedId;
     private final CheckedStateTracker checkedStateTracker;

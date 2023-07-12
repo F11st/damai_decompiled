@@ -7,9 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.IdRes;
 import androidx.fragment.app.FragmentActivity;
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseActivity;
 import cn.damai.common.app.base.BaseModel;
+import cn.damai.common.app.base.a;
 import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
@@ -22,7 +22,7 @@ import tb.mu0;
 
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
-public abstract class CompatBaseFragment<P extends AbstractC0470a, M extends BaseModel> extends DamaiBaseMvpFragment<P, M> implements IBaseCompatView {
+public abstract class CompatBaseFragment<P extends a, M extends BaseModel> extends DamaiBaseMvpFragment<P, M> implements IBaseCompatView {
     private static transient /* synthetic */ IpChange $ipChange;
 
     protected void adjustStatusBar() {

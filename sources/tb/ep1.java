@@ -1,7 +1,6 @@
 package tb;
 
 import android.view.View;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.model.RealNameAuthStatusBean;
 import cn.damai.user.userhome.view.usercenter.HeadUserTrackListener;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -80,7 +79,7 @@ public class ep1 implements HeadUserTrackListener {
         if (AndroidInstantRuntime.support(ipChange, "-1771725085")) {
             ipChange.ipc$dispatch("-1771725085", new Object[]{this, str});
         } else {
-            C0529c.e().x(iv2.j().m(str));
+            cn.damai.common.user.c.e().x(iv2.j().m(str));
         }
     }
 

@@ -48,7 +48,7 @@ public class GiftTrackView extends RelativeLayout {
         super(context);
         this.mNumber = 0;
         this.isAnimationRunning = false;
-        this.currentBgResId = R.C7941drawable.dago_pgc_gift_track_a_bg;
+        this.currentBgResId = R.drawable.dago_pgc_gift_track_a_bg;
         this.mGiftTrackBean = giftTrackBean;
         initView(context, z);
     }
@@ -72,7 +72,7 @@ public class GiftTrackView extends RelativeLayout {
             return;
         }
         setClipChildren(false);
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ykl_gift_track_item, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_ykl_gift_track_item, (ViewGroup) this, true);
         initPaint(context);
         ImageView imageView = (ImageView) findViewById(R.id.iv_user_avatar);
         TextView textView = (TextView) findViewById(R.id.tv_gift_name);
@@ -104,7 +104,7 @@ public class GiftTrackView extends RelativeLayout {
         TextPaint textPaint = this.mTextPaint;
         this.mTextViewGiftNumber.setWidth((int) (textPaint.measureText(" x" + this.mGiftTrackBean.giftNum) + 10.0f));
         this.mImageViewGiftIcon = (ImageView) findViewById(R.id.iv_gift_icon);
-        DagoImageLoader.getInstance().showCircle(getContext(), this.mGiftTrackBean.userIcon, imageView, R.C7941drawable.dago_pgc_ykl_gift_track_bg);
+        DagoImageLoader.getInstance().showCircle(getContext(), this.mGiftTrackBean.userIcon, imageView, R.drawable.dago_pgc_ykl_gift_track_bg);
         DagoImageLoader.getInstance().showDefault(getContext(), this.mGiftTrackBean.giftIcon, this.mImageViewGiftIcon);
         this.mImageViewGiftIcon.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.dago_pgc_track_gift_icon_anim));
     }
@@ -302,21 +302,21 @@ public class GiftTrackView extends RelativeLayout {
         }
         if (10 <= i && i < 50) {
             int i2 = this.currentBgResId;
-            int i3 = R.C7941drawable.dago_pgc_gift_track_a_bg;
+            int i3 = R.drawable.dago_pgc_gift_track_a_bg;
             if (i2 != i3) {
                 this.currentBgResId = i3;
                 this.mBackAnimImage.setImageResource(i3);
             }
         } else if (50 <= i && i < 100) {
             int i4 = this.currentBgResId;
-            int i5 = R.C7941drawable.dago_pgc_gift_track_b_bg;
+            int i5 = R.drawable.dago_pgc_gift_track_b_bg;
             if (i4 != i5) {
                 this.currentBgResId = i5;
                 this.mBackAnimImage.setImageResource(i5);
             }
         } else if (i >= 100) {
             int i6 = this.currentBgResId;
-            int i7 = R.C7941drawable.dago_pgc_gift_track_c_bg;
+            int i7 = R.drawable.dago_pgc_gift_track_c_bg;
             if (i6 != i7) {
                 this.currentBgResId = i7;
                 this.mBackAnimImage.setImageResource(i7);

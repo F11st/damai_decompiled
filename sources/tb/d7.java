@@ -5,10 +5,7 @@ import android.content.MutableContextWrapper;
 import android.text.TextUtils;
 import com.alibaba.poplayer.PopLayer;
 import com.alibaba.poplayer.factory.view.base.PopLayerBaseView;
-import com.alibaba.poplayer.layermanager.C3660e;
 import com.alibaba.poplayer.layermanager.PopRequest;
-import com.alibaba.poplayer.trigger.AbstractC3683b;
-import com.alibaba.poplayer.trigger.C3685d;
 import com.alibaba.poplayer.trigger.Event;
 import com.alibaba.poplayer.trigger.app.AppConfigItem;
 import java.util.ArrayList;
@@ -17,7 +14,7 @@ import org.json.JSONObject;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
-public class d7 extends AbstractC3683b<Event, AppConfigItem, p6> {
+public class d7 extends com.alibaba.poplayer.trigger.b<Event, AppConfigItem, p6> {
     public static final String APP_SCHEME = "poplayerapp://";
     private MutableContextWrapper i = new MutableContextWrapper(null);
     private ArrayList<t01<AppConfigItem>> j = new ArrayList<>();
@@ -25,14 +22,13 @@ public class d7 extends AbstractC3683b<Event, AppConfigItem, p6> {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.d7$a */
     /* loaded from: classes8.dex */
-    public static class C9029a {
+    public static class a {
         private static d7 a = new d7();
     }
 
     public static d7 A() {
-        return C9029a.a;
+        return a.a;
     }
 
     private void B(Event event) {
@@ -146,7 +142,7 @@ public class d7 extends AbstractC3683b<Event, AppConfigItem, p6> {
         }
     }
 
-    @Override // com.alibaba.poplayer.trigger.AbstractC3683b
+    @Override // com.alibaba.poplayer.trigger.b
     public void a(Event event) {
         ArrayList<t01<AppConfigItem>> z;
         if (event == null || (z = z(event, this.g, this.h)) == null || z.isEmpty()) {
@@ -167,15 +163,15 @@ public class d7 extends AbstractC3683b<Event, AppConfigItem, p6> {
         }
     }
 
-    @Override // com.alibaba.poplayer.trigger.AbstractC3683b
+    @Override // com.alibaba.poplayer.trigger.b
     protected void j() {
         this.a = new p6(PopLayer.getReference().getConfigAdapter(1));
-        this.b = new C3685d(this);
+        this.b = new com.alibaba.poplayer.trigger.d(this);
         this.k = new b9(this);
         this.c = new ArrayList();
     }
 
-    @Override // com.alibaba.poplayer.trigger.AbstractC3683b
+    @Override // com.alibaba.poplayer.trigger.b
     protected boolean k(ArrayList<t01<AppConfigItem>> arrayList, t01<AppConfigItem> t01Var) {
         if (arrayList != null && !arrayList.isEmpty() && t01Var != null) {
             Iterator<t01<AppConfigItem>> it = arrayList.iterator();
@@ -189,7 +185,7 @@ public class d7 extends AbstractC3683b<Event, AppConfigItem, p6> {
         return false;
     }
 
-    @Override // com.alibaba.poplayer.trigger.AbstractC3683b, com.alibaba.poplayer.layermanager.PopRequest.PopRequestStatusCallBack
+    @Override // com.alibaba.poplayer.trigger.b, com.alibaba.poplayer.layermanager.PopRequest.PopRequestStatusCallBack
     public void onReady(PopRequest popRequest) {
         PopLayerBaseView popLayerBaseView;
         if (popRequest instanceof t01) {
@@ -212,7 +208,7 @@ public class d7 extends AbstractC3683b<Event, AppConfigItem, p6> {
             } catch (Throwable th) {
                 dt1.c("PopLayerView init fail.", th);
             }
-            C3660e.f().b(popRequest);
+            com.alibaba.poplayer.layermanager.e.f().b(popRequest);
             try {
                 popLayerBaseView.onViewAdded(this.i);
             } catch (Throwable th2) {
@@ -229,7 +225,7 @@ public class d7 extends AbstractC3683b<Event, AppConfigItem, p6> {
         }
     }
 
-    @Override // com.alibaba.poplayer.trigger.AbstractC3683b
+    @Override // com.alibaba.poplayer.trigger.b
     public void q(PopRequest popRequest) {
         r(popRequest, true, true);
         for (int i = 0; i < this.j.size(); i++) {

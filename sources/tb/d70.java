@@ -4,7 +4,6 @@ import cn.damai.common.app.ShareperfenceConstants;
 import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.Set;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -131,8 +130,8 @@ public class d70 {
         if (fr2.b(z71Var)) {
             return true;
         }
-        AbstractC8271b g = DescriptorUtilsKt.g(variableDescriptor);
-        if (!AbstractC8271b.q0(z71Var)) {
+        kotlin.reflect.jvm.internal.impl.builtins.b g = DescriptorUtilsKt.g(variableDescriptor);
+        if (!kotlin.reflect.jvm.internal.impl.builtins.b.q0(z71Var)) {
             KotlinTypeChecker kotlinTypeChecker = KotlinTypeChecker.DEFAULT;
             if (!kotlinTypeChecker.equalTypes(g.W(), z71Var) && !kotlinTypeChecker.equalTypes(g.K().getDefaultType(), z71Var) && !kotlinTypeChecker.equalTypes(g.i(), z71Var)) {
                 eu2 eu2Var = eu2.INSTANCE;

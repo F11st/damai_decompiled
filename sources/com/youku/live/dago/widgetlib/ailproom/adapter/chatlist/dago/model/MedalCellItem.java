@@ -2,7 +2,7 @@ package com.youku.live.dago.widgetlib.ailproom.adapter.chatlist.dago.model;
 
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import java.util.Map;
 
 /* compiled from: Taobao */
@@ -31,8 +31,8 @@ public class MedalCellItem extends BaseCellItem<MedalCellItem> {
         if (map.containsKey("id")) {
             this.id = getInt(map.get("id"));
         }
-        if (map.containsKey(AbstractC5658c.a)) {
-            this.c = getString(map.get(AbstractC5658c.a));
+        if (map.containsKey(c.a)) {
+            this.c = getString(map.get(c.a));
         }
         return this;
     }

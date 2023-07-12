@@ -1,7 +1,6 @@
 package com.taobao.power_image.request;
 
 import com.taobao.power_image.dispatcher.PowerImageDispatcher;
-import com.taobao.power_image.loader.C6867a;
 import com.taobao.power_image.loader.PowerImageLoaderProtocol;
 import com.taobao.power_image.loader.PowerImageResult;
 import java.util.HashMap;
@@ -20,10 +19,9 @@ public abstract class PowerImageBaseRequest {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.power_image.request.PowerImageBaseRequest$a */
     /* loaded from: classes11.dex */
-    public class C6870a implements PowerImageLoaderProtocol.PowerImageResponse {
-        C6870a() {
+    public class a implements PowerImageLoaderProtocol.PowerImageResponse {
+        a() {
         }
 
         @Override // com.taobao.power_image.loader.PowerImageLoaderProtocol.PowerImageResponse
@@ -38,7 +36,7 @@ public abstract class PowerImageBaseRequest {
     }
 
     private void f() {
-        C6867a.a().handleRequest(this.a, new C6870a());
+        com.taobao.power_image.loader.a.a().handleRequest(this.a, new a());
     }
 
     public boolean a() {
@@ -66,7 +64,7 @@ public abstract class PowerImageBaseRequest {
                     str2 = "failed!";
                 }
                 b.put("errMsg", str2);
-                ut1.C9791b.a().b(b, false);
+                ut1.b.a().b(b, false);
             }
         });
     }
@@ -78,7 +76,7 @@ public abstract class PowerImageBaseRequest {
             @Override // java.lang.Runnable
             public void run() {
                 PowerImageBaseRequest.this.c = "loadSucceed";
-                ut1.C9791b.a().b(PowerImageBaseRequest.this.b(), true);
+                ut1.b.a().b(PowerImageBaseRequest.this.b(), true);
             }
         });
     }

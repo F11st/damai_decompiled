@@ -3,7 +3,7 @@ package com.youku.middlewareservice.provider;
 import android.app.Activity;
 import android.util.Log;
 import java.util.Map;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -12,7 +12,7 @@ public class ShareProviderProxy {
 
     public static ShareProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (ShareProvider) C8883a.j("com.youku.middlewareservice_impl.provider.DefaultShareProviderImpl").b().f();
+            sProxy = (ShareProvider) a.j("com.youku.middlewareservice_impl.provider.DefaultShareProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -30,7 +30,7 @@ public class ShareProviderProxy {
     public static void show(Activity activity, Map<String, String> map) {
         try {
             if (sProxy == null) {
-                sProxy = (ShareProvider) C8883a.j("com.youku.middlewareservice_impl.provider.DefaultShareProviderImpl").b().f();
+                sProxy = (ShareProvider) a.j("com.youku.middlewareservice_impl.provider.DefaultShareProviderImpl").b().f();
             }
             sProxy.show(activity, map);
         } catch (Throwable th) {

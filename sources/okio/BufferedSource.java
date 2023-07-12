@@ -95,7 +95,7 @@ public interface BufferedSource extends ReadableByteChannel, Source {
 
     void require(long j) throws IOException;
 
-    int select(C8849i c8849i) throws IOException;
+    int select(i iVar) throws IOException;
 
     void skip(long j) throws IOException;
 }

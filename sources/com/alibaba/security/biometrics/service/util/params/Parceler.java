@@ -2,7 +2,7 @@ package com.alibaba.security.biometrics.service.util.params;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import com.alibaba.security.common.c.C3800a;
+import com.alibaba.security.common.c.a;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -86,7 +86,7 @@ public class Parceler<T> {
         if (map != null && map.containsKey(str) && (bundleSerializerBean = this.fieldBundleKeyMap.get(str)) != null) {
             T t = this.object;
             if (t == null) {
-                C3800a.d(TAG, "check your createParceler before get");
+                a.d(TAG, "check your createParceler before get");
                 return this;
             }
             try {
@@ -116,7 +116,7 @@ public class Parceler<T> {
             try {
                 T t = this.object;
                 if (t == null) {
-                    C3800a.d(TAG, "check your createParceler before put");
+                    a.d(TAG, "check your createParceler before put");
                     return this;
                 }
                 field.set(t, deserialize);

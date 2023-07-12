@@ -37,7 +37,7 @@ public class YKAtmosphereImageView extends TUrlImageView implements IStyle {
     public YKAtmosphereImageView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         this.colorOnly = false;
-        this.defaultImage = R.C8072drawable.yk_top_bg_layer;
+        this.defaultImage = R.drawable.yk_top_bg_layer;
         this.mForceLoadUrl = false;
         this.mStyleBgColor = 0;
         initView(context, attributeSet, i);
@@ -100,13 +100,13 @@ public class YKAtmosphereImageView extends TUrlImageView implements IStyle {
         if (attributeSet != null) {
             TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.YKAtmosphereImageView, i, 0);
             try {
-                this.defaultColor = obtainStyledAttributes.getColor(R.styleable.YKAtmosphereImageView_default_color, context.getResources().getColor(R.C8071color.ykn_deep_black_gradient_top_point));
+                this.defaultColor = obtainStyledAttributes.getColor(R.styleable.YKAtmosphereImageView_default_color, context.getResources().getColor(R.color.ykn_deep_black_gradient_top_point));
                 boolean z = obtainStyledAttributes.getBoolean(R.styleable.YKAtmosphereImageView_color_only, false);
                 this.colorOnly = z;
                 if (z) {
                     this.defaultImage = 0;
                 } else {
-                    this.defaultImage = obtainStyledAttributes.getResourceId(R.styleable.YKAtmosphereImageView_default_image, R.C8072drawable.yk_top_bg_layer);
+                    this.defaultImage = obtainStyledAttributes.getResourceId(R.styleable.YKAtmosphereImageView_default_image, R.drawable.yk_top_bg_layer);
                 }
             } finally {
                 obtainStyledAttributes.recycle();
@@ -259,7 +259,7 @@ public class YKAtmosphereImageView extends TUrlImageView implements IStyle {
     public YKAtmosphereImageView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         this.colorOnly = false;
-        this.defaultImage = R.C8072drawable.yk_top_bg_layer;
+        this.defaultImage = R.drawable.yk_top_bg_layer;
         this.mForceLoadUrl = false;
         this.mStyleBgColor = 0;
         initView(context, attributeSet, 0);
@@ -268,7 +268,7 @@ public class YKAtmosphereImageView extends TUrlImageView implements IStyle {
     public YKAtmosphereImageView(Context context) {
         super(context);
         this.colorOnly = false;
-        this.defaultImage = R.C8072drawable.yk_top_bg_layer;
+        this.defaultImage = R.drawable.yk_top_bg_layer;
         this.mForceLoadUrl = false;
         this.mStyleBgColor = 0;
         initView(context, null, 0);

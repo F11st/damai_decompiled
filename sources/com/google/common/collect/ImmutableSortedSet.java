@@ -42,43 +42,42 @@ public abstract class ImmutableSortedSet<E> extends ImmutableSortedSetFauxveride
 
         /* JADX WARN: Multi-variable type inference failed */
         Object readResolve() {
-            return new C4995a(this.comparator).n(this.elements).l();
+            return new a(this.comparator).n(this.elements).l();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableSortedSet$a */
     /* loaded from: classes10.dex */
-    public static final class C4995a<E> extends ImmutableSet.C4989a<E> {
+    public static final class a<E> extends ImmutableSet.a<E> {
         private final Comparator<? super E> f;
 
-        public C4995a(Comparator<? super E> comparator) {
+        public a(Comparator<? super E> comparator) {
             this.f = (Comparator) du1.p(comparator);
         }
 
-        @Override // com.google.common.collect.ImmutableSet.C4989a
+        @Override // com.google.common.collect.ImmutableSet.a
         @CanIgnoreReturnValue
         /* renamed from: m */
-        public C4995a<E> h(E e) {
+        public a<E> h(E e) {
             super.a(e);
             return this;
         }
 
         @CanIgnoreReturnValue
-        public C4995a<E> n(E... eArr) {
+        public a<E> n(E... eArr) {
             super.i(eArr);
             return this;
         }
 
-        @Override // com.google.common.collect.ImmutableSet.C4989a
+        @Override // com.google.common.collect.ImmutableSet.a
         @CanIgnoreReturnValue
         /* renamed from: o */
-        public C4995a<E> j(Iterator<? extends E> it) {
+        public a<E> j(Iterator<? extends E> it) {
             super.j(it);
             return this;
         }
 
-        @Override // com.google.common.collect.ImmutableSet.C4989a
+        @Override // com.google.common.collect.ImmutableSet.a
         /* renamed from: p */
         public ImmutableSortedSet<E> l() {
             ImmutableSortedSet<E> construct = ImmutableSortedSet.construct(this.f, this.b, this.a);
@@ -99,7 +98,7 @@ public abstract class ImmutableSortedSet<E> extends ImmutableSortedSetFauxveride
         if (i == 0) {
             return emptySet(comparator);
         }
-        C5158b0.c(eArr, i);
+        b0.c(eArr, i);
         Arrays.sort(eArr, 0, i, comparator);
         int i2 = 1;
         for (int i3 = 1; i3 < i; i3++) {
@@ -122,12 +121,12 @@ public abstract class ImmutableSortedSet<E> extends ImmutableSortedSetFauxveride
     }
 
     public static <E> ImmutableSortedSet<E> copyOfSorted(SortedSet<E> sortedSet) {
-        Comparator a = C5179g0.a(sortedSet);
+        Comparator a2 = g0.a(sortedSet);
         ImmutableList copyOf = ImmutableList.copyOf((Collection) sortedSet);
         if (copyOf.isEmpty()) {
-            return emptySet(a);
+            return emptySet(a2);
         }
-        return new RegularImmutableSortedSet(copyOf, a);
+        return new RegularImmutableSortedSet(copyOf, a2);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -138,29 +137,29 @@ public abstract class ImmutableSortedSet<E> extends ImmutableSortedSetFauxveride
         return new RegularImmutableSortedSet<>(ImmutableList.of(), comparator);
     }
 
-    public static <E extends Comparable<?>> C4995a<E> naturalOrder() {
-        return new C4995a<>(Ordering.natural());
+    public static <E extends Comparable<?>> a<E> naturalOrder() {
+        return new a<>(Ordering.natural());
     }
 
     public static <E> ImmutableSortedSet<E> of() {
         return RegularImmutableSortedSet.NATURAL_EMPTY_SET;
     }
 
-    public static <E> C4995a<E> orderedBy(Comparator<E> comparator) {
-        return new C4995a<>(comparator);
+    public static <E> a<E> orderedBy(Comparator<E> comparator) {
+        return new a<>(comparator);
     }
 
     private void readObject(ObjectInputStream objectInputStream) throws InvalidObjectException {
         throw new InvalidObjectException("Use SerializedForm");
     }
 
-    public static <E extends Comparable<?>> C4995a<E> reverseOrder() {
-        return new C4995a<>(Collections.reverseOrder());
+    public static <E extends Comparable<?>> a<E> reverseOrder() {
+        return new a<>(Collections.reverseOrder());
     }
 
     @GwtIncompatible
     public E ceiling(E e) {
-        return (E) C5152a0.e(tailSet((ImmutableSortedSet<E>) e, true), null);
+        return (E) a0.e(tailSet((ImmutableSortedSet<E>) e, true), null);
     }
 
     @Override // java.util.SortedSet, com.google.common.collect.SortedIterable
@@ -195,7 +194,7 @@ public abstract class ImmutableSortedSet<E> extends ImmutableSortedSetFauxveride
 
     @GwtIncompatible
     public E higher(E e) {
-        return (E) C5152a0.e(tailSet((ImmutableSortedSet<E>) e, false), null);
+        return (E) a0.e(tailSet((ImmutableSortedSet<E>) e, false), null);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -367,18 +366,18 @@ public abstract class ImmutableSortedSet<E> extends ImmutableSortedSetFauxveride
     }
 
     public static <E> ImmutableSortedSet<E> copyOf(Comparator<? super E> comparator, Iterator<? extends E> it) {
-        return new C4995a(comparator).j(it).l();
+        return new a(comparator).j(it).l();
     }
 
     public static <E> ImmutableSortedSet<E> copyOf(Comparator<? super E> comparator, Iterable<? extends E> iterable) {
         du1.p(comparator);
-        if (C5179g0.b(comparator, iterable) && (iterable instanceof ImmutableSortedSet)) {
+        if (g0.b(comparator, iterable) && (iterable instanceof ImmutableSortedSet)) {
             ImmutableSortedSet<E> immutableSortedSet = (ImmutableSortedSet) iterable;
             if (!immutableSortedSet.isPartialView()) {
                 return immutableSortedSet;
             }
         }
-        Object[] k = C5152a0.k(iterable);
+        Object[] k = a0.k(iterable);
         return construct(comparator, k.length, k);
     }
 

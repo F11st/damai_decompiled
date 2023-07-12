@@ -9,9 +9,9 @@ import java.util.Objects;
 import okio.AsyncTimeout;
 import okio.Buffer;
 import okio.BufferedSource;
-import okio.C8857o;
 import okio.Sink;
 import okio.Source;
+import okio.o;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -98,7 +98,7 @@ public final class SpdyStream {
         }
 
         @Override // okio.Sink
-        public C8857o timeout() {
+        public o timeout() {
             return SpdyStream.this.writeTimeout;
         }
 
@@ -222,7 +222,7 @@ public final class SpdyStream {
         }
 
         @Override // okio.Source
-        public C8857o timeout() {
+        public o timeout() {
             return SpdyStream.this.readTimeout;
         }
 
@@ -401,7 +401,7 @@ public final class SpdyStream {
         return true;
     }
 
-    public C8857o readTimeout() {
+    public o readTimeout() {
         return this.readTimeout;
     }
 
@@ -489,7 +489,7 @@ public final class SpdyStream {
         }
     }
 
-    public C8857o writeTimeout() {
+    public o writeTimeout() {
         return this.writeTimeout;
     }
 }

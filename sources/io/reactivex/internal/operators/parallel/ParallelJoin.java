@@ -1,15 +1,15 @@
 package io.reactivex.internal.operators.parallel;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.internal.fuseable.SimplePlainQueue;
 import io.reactivex.internal.queue.SpscArrayQueue;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import io.reactivex.internal.util.AtomicThrowable;
 import io.reactivex.internal.util.BackpressureHelper;
-import io.reactivex.parallel.AbstractC8161a;
+import io.reactivex.parallel.a;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicReference;
@@ -19,10 +19,10 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ParallelJoin<T> extends AbstractC8147b<T> {
+public final class ParallelJoin<T> extends b<T> {
     final boolean delayErrors;
     final int prefetch;
-    final AbstractC8161a<? extends T> source;
+    final a<? extends T> source;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
@@ -365,13 +365,13 @@ public final class ParallelJoin<T> extends AbstractC8147b<T> {
         }
     }
 
-    public ParallelJoin(AbstractC8161a<? extends T> abstractC8161a, int i, boolean z) {
-        this.source = abstractC8161a;
+    public ParallelJoin(a<? extends T> aVar, int i, boolean z) {
+        this.source = aVar;
         this.prefetch = i;
         this.delayErrors = z;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         JoinSubscriptionBase joinSubscription;
         if (this.delayErrors) {

@@ -27,19 +27,19 @@ public abstract class ie extends gj {
             return byteArrayOutputStream.toByteArray();
         } catch (Throwable th) {
             try {
-                C4573ha.a(th, "bre", "gbh");
+                ha.a(th, "bre", "gbh");
                 try {
                     byteArrayOutputStream.close();
                     return null;
                 } catch (Throwable th2) {
-                    C4573ha.a(th2, "bre", "gbh");
+                    ha.a(th2, "bre", "gbh");
                     return null;
                 }
             } finally {
                 try {
                     byteArrayOutputStream.close();
                 } catch (Throwable th3) {
-                    C4573ha.a(th3, "bre", "gbh");
+                    ha.a(th3, "bre", "gbh");
                 }
             }
         }
@@ -60,23 +60,23 @@ public abstract class ie extends gj {
             try {
                 byteArrayOutputStream.close();
             } catch (Throwable th) {
-                C4573ha.a(th, "bre", "grrd");
+                ha.a(th, "bre", "grrd");
             }
             return byteArray;
         } catch (Throwable th2) {
             try {
-                C4573ha.a(th2, "bre", "grrd");
+                ha.a(th2, "bre", "grrd");
                 try {
                     byteArrayOutputStream.close();
                 } catch (Throwable th3) {
-                    C4573ha.a(th3, "bre", "grrd");
+                    ha.a(th3, "bre", "grrd");
                 }
                 return new byte[]{0};
             } finally {
                 try {
                     byteArrayOutputStream.close();
                 } catch (Throwable th4) {
-                    C4573ha.a(th4, "bre", "grrd");
+                    ha.a(th4, "bre", "grrd");
                 }
             }
         }
@@ -98,23 +98,23 @@ public abstract class ie extends gj {
             try {
                 byteArrayOutputStream.close();
             } catch (Throwable th) {
-                C4573ha.a(th, "bre", "gred");
+                ha.a(th, "bre", "gred");
             }
             return byteArray;
         } catch (Throwable th2) {
             try {
-                C4573ha.a(th2, "bre", "gred");
+                ha.a(th2, "bre", "gred");
                 try {
                     byteArrayOutputStream.close();
                 } catch (Throwable th3) {
-                    C4573ha.a(th3, "bre", "gred");
+                    ha.a(th3, "bre", "gred");
                 }
                 return new byte[]{0};
             } finally {
                 try {
                     byteArrayOutputStream.close();
                 } catch (Throwable th4) {
-                    C4573ha.a(th4, "bre", "gred");
+                    ha.a(th4, "bre", "gred");
                 }
             }
         }
@@ -144,19 +144,19 @@ public abstract class ie extends gj {
             return byteArrayOutputStream.toByteArray();
         } catch (Throwable th) {
             try {
-                C4573ha.a(th, "bre", "geb");
+                ha.a(th, "bre", "geb");
                 try {
                     byteArrayOutputStream.close();
                     return null;
                 } catch (Throwable th2) {
-                    C4573ha.a(th2, "bre", "geb");
+                    ha.a(th2, "bre", "geb");
                     return null;
                 }
             } finally {
                 try {
                     byteArrayOutputStream.close();
                 } catch (Throwable th3) {
-                    C4573ha.a(th3, "bre", "geb");
+                    ha.a(th3, "bre", "geb");
                 }
             }
         }
@@ -164,7 +164,7 @@ public abstract class ie extends gj {
 
     @Override // com.amap.api.mapcore.util.ii
     public Map<String, String> getParams() {
-        String f = C4554gc.f(this.d);
+        String f = gc.f(this.d);
         String a = gf.a();
         Context context = this.d;
         String a2 = gf.a(context, a, "key=" + f);
@@ -207,18 +207,18 @@ public abstract class ie extends gj {
             return byteArrayOutputStream.toByteArray();
         } catch (Throwable th) {
             try {
-                C4573ha.a(th, "bre", "gpd");
+                ha.a(th, "bre", "gpd");
                 try {
                     byteArrayOutputStream.close();
                 } catch (Throwable th2) {
-                    C4573ha.a(th2, "bre", "gred");
+                    ha.a(th2, "bre", "gred");
                 }
                 return new byte[]{0};
             } finally {
                 try {
                     byteArrayOutputStream.close();
                 } catch (Throwable th3) {
-                    C4573ha.a(th3, "bre", "gred");
+                    ha.a(th3, "bre", "gred");
                 }
             }
         }

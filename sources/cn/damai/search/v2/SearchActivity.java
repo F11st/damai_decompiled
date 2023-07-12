@@ -12,8 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import cn.damai.comment.util.SoftInputUtils;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.homepage.R$color;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -71,7 +70,7 @@ public final class SearchActivity extends GenericActivity implements ErrorContro
     private SearchInputObserver mHistoryObserver;
     private SearchInputManager mInputManager;
     private ViewGroup mTabUi;
-    public C0525a.C0527b mUTBuilder;
+    public a.b mUTBuilder;
     private DownFocusViewFlipper pageContainer;
     private TabLayout searchResultTabLayout;
 
@@ -97,18 +96,17 @@ public final class SearchActivity extends GenericActivity implements ErrorContro
             return build;
         }
 
-        /* synthetic */ SearchResultTabRequestBuilder(SearchActivity searchActivity, C1635a c1635a) {
+        /* synthetic */ SearchResultTabRequestBuilder(SearchActivity searchActivity, a aVar) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.v2.SearchActivity$a */
     /* loaded from: classes6.dex */
-    public class C1635a implements DownFocusViewFlipper.OnDispatchDownListener {
+    public class a implements DownFocusViewFlipper.OnDispatchDownListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1635a() {
+        a() {
         }
 
         @Override // cn.damai.search.v2.view.DownFocusViewFlipper.OnDispatchDownListener
@@ -123,19 +121,17 @@ public final class SearchActivity extends GenericActivity implements ErrorContro
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.v2.SearchActivity$b */
     /* loaded from: classes6.dex */
-    public class C1636b implements OnSearchInputListener {
+    public class b implements OnSearchInputListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.search.v2.SearchActivity$b$a */
         /* loaded from: classes6.dex */
-        public class C1637a implements OnEggListener {
+        public class a implements OnEggListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ InputInfo a;
 
-            C1637a(InputInfo inputInfo) {
+            a(InputInfo inputInfo) {
                 this.a = inputInfo;
             }
 
@@ -168,7 +164,7 @@ public final class SearchActivity extends GenericActivity implements ErrorContro
             }
         }
 
-        C1636b() {
+        b() {
         }
 
         @Override // cn.damai.search.v2.listener.OnSearchInputListener
@@ -178,24 +174,22 @@ public final class SearchActivity extends GenericActivity implements ErrorContro
                 ipChange.ipc$dispatch("1493590813", new Object[]{this, inputInfo});
             } else if (SearchActivity.this.mEggManager == null) {
             } else {
-                SearchActivity.this.mEggManager.i(inputInfo.inputText, new C1637a(inputInfo));
+                SearchActivity.this.mEggManager.i(inputInfo.inputText, new a(inputInfo));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.v2.SearchActivity$c */
     /* loaded from: classes6.dex */
-    public class C1638c implements OnHisWordClickListener {
+    public class c implements OnHisWordClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.search.v2.SearchActivity$c$a */
         /* loaded from: classes6.dex */
-        public class C1639a implements OnEggListener {
+        public class a implements OnEggListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1639a() {
+            a() {
             }
 
             @Override // cn.damai.search.v2.listener.OnEggListener
@@ -221,7 +215,7 @@ public final class SearchActivity extends GenericActivity implements ErrorContro
             }
         }
 
-        C1638c() {
+        c() {
         }
 
         @Override // cn.damai.search.v2.listener.OnHisWordClickListener
@@ -232,7 +226,7 @@ public final class SearchActivity extends GenericActivity implements ErrorContro
                 return;
             }
             SearchActivity.this.mInputManager.m(str);
-            SearchActivity.this.mEggManager.i(str, new C1639a());
+            SearchActivity.this.mEggManager.i(str, new a());
         }
     }
 
@@ -402,9 +396,9 @@ public final class SearchActivity extends GenericActivity implements ErrorContro
             lp0Var.b(this, getIntent().getExtras());
         }
         SearchExtra obtainExtra = SearchExtra.obtainExtra(this);
-        boolean a = on1.a();
-        cb1.c("SearchOSwitch", "isDowngrade2OldPage " + a);
-        if (a) {
+        boolean a2 = on1.a();
+        cb1.c("SearchOSwitch", "isDowngrade2OldPage " + a2);
+        if (a2) {
             DMNav.from(this).withExtras(SearchExtra.makeBundle2OldSearch(obtainExtra)).toHost("home_search_bak");
             finish();
             return;
@@ -415,19 +409,19 @@ public final class SearchActivity extends GenericActivity implements ErrorContro
         if (!TextUtils.isEmpty(obtainExtra.autowords)) {
             this.pageContainer.setVisibility(4);
         }
-        this.pageContainer.setListener(new C1635a());
-        SearchInputManager searchInputManager = new SearchInputManager(this, this, findViewById(R$id.header_search_v2_ui), this.pageContainer.getChildAt(1), obtainExtra, new C1636b());
+        this.pageContainer.setListener(new a());
+        SearchInputManager searchInputManager = new SearchInputManager(this, this, findViewById(R$id.header_search_v2_ui), this.pageContainer.getChildAt(1), obtainExtra, new b());
         this.mInputManager = searchInputManager;
         searchInputManager.p();
         this.mEggManager = new SearchEggManager(this, this.pageContainer.getChildAt(3), this, this.mInputManager);
-        SearchHistoryFragment searchHistoryFragment = SearchHistoryFragment.getInstance(new C1638c());
+        SearchHistoryFragment searchHistoryFragment = SearchHistoryFragment.getInstance(new c());
         this.mHistoryObserver = searchHistoryFragment;
         getSupportFragmentManager().beginTransaction().add(R$id.search_v2_search_history_layout, searchHistoryFragment).commitAllowingStateLoss();
         this.pageContainer.setDisplayedChild(0);
         this.mErrControlImpl = new bf0(this);
         this.mUTBuilder = c82.f(obtainExtra.keywords);
-        C0529c.e().m(this);
-        C0529c.e().K(this);
+        cn.damai.common.user.c.e().m(this);
+        cn.damai.common.user.c.e().K(this);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -454,7 +448,7 @@ public final class SearchActivity extends GenericActivity implements ErrorContro
             return;
         }
         super.onPause();
-        C0529c.e().q(this);
+        cn.damai.common.user.c.e().q(this);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -466,7 +460,7 @@ public final class SearchActivity extends GenericActivity implements ErrorContro
             return;
         }
         super.onResume();
-        C0529c.e().n(this, this.mUTBuilder);
+        cn.damai.common.user.c.e().n(this, this.mUTBuilder);
     }
 
     @Override // com.youku.arch.v3.page.GenericActivity
@@ -583,8 +577,8 @@ public final class SearchActivity extends GenericActivity implements ErrorContro
             ipChange.ipc$dispatch("-59329671", new Object[]{this, Integer.valueOf(i)});
             return;
         }
-        C0529c.e().v("hotsearch_list", "search");
-        C0529c.e().v("searchhistory", "search");
+        cn.damai.common.user.c.e().v("hotsearch_list", "search");
+        cn.damai.common.user.c.e().v("searchhistory", "search");
         this.pageContainer.setDisplayedChild(i);
     }
 

@@ -37,12 +37,11 @@ public final class GenericBannerViewExt extends BaseBannerView {
     private final View view;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.scriptmurder.GenericBannerViewExt$a */
     /* loaded from: classes7.dex */
-    public static final class View$OnAttachStateChangeListenerC3502a implements View.OnAttachStateChangeListener {
+    public static final class a implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC3502a() {
+        a() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -100,13 +99,12 @@ public final class GenericBannerViewExt extends BaseBannerView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.scriptmurder.GenericBannerViewExt$b  reason: invalid class name */
     /* loaded from: classes7.dex */
-    public static final class animationAnimation$AnimationListenerC3503b implements Animation.AnimationListener {
+    public static final class b implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Ref$ObjectRef<ArrayList<OrderItem>> b;
 
-        animationAnimation$AnimationListenerC3503b(Ref$ObjectRef<ArrayList<OrderItem>> ref$ObjectRef) {
+        b(Ref$ObjectRef<ArrayList<OrderItem>> ref$ObjectRef) {
             this.b = ref$ObjectRef;
         }
 
@@ -143,13 +141,12 @@ public final class GenericBannerViewExt extends BaseBannerView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.scriptmurder.GenericBannerViewExt$c  reason: invalid class name */
     /* loaded from: classes7.dex */
-    public static final class animationAnimation$AnimationListenerC3504c implements Animation.AnimationListener {
+    public static final class c implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Ref$ObjectRef<ArrayList<OrderItem>> b;
 
-        animationAnimation$AnimationListenerC3504c(Ref$ObjectRef<ArrayList<OrderItem>> ref$ObjectRef) {
+        c(Ref$ObjectRef<ArrayList<OrderItem>> ref$ObjectRef) {
             this.b = ref$ObjectRef;
         }
 
@@ -285,7 +282,7 @@ public final class GenericBannerViewExt extends BaseBannerView {
         View findViewById = this.view.findViewById(R$id.common_navbar_infoll);
         b41.h(findViewById, "view.findViewById<View>(R.id.common_navbar_infoll)");
         setTitlell(findViewById);
-        this.view.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC3502a());
+        this.view.addOnAttachStateChangeListener(new a());
     }
 
     public final void setBgColor(int i) {
@@ -366,8 +363,8 @@ public final class GenericBannerViewExt extends BaseBannerView {
             this.dismisAni.setDuration(1000L);
             this.dismisAni.setStartOffset(1000L);
             this.dismisAni.setFillAfter(true);
-            this.dismisAni.setAnimationListener(new animationAnimation$AnimationListenerC3503b(ref$ObjectRef));
-            this.showAni.setAnimationListener(new animationAnimation$AnimationListenerC3504c(ref$ObjectRef));
+            this.dismisAni.setAnimationListener(new b(ref$ObjectRef));
+            this.showAni.setAnimationListener(new c(ref$ObjectRef));
             View titlell = getTitlell();
             Object obj = ref$ObjectRef.element;
             ArrayList arrayList = (ArrayList) obj;

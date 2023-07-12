@@ -30,7 +30,7 @@ public final class DetailInfoViewHolder {
     @Nullable
     private OnChangeListener a;
     @NotNull
-    public static final C3522a Companion = new C3522a(null);
+    public static final a Companion = new a(null);
     private static final int c = 1;
 
     /* compiled from: Taobao */
@@ -40,15 +40,14 @@ public final class DetailInfoViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.coupon.view.DetailInfoViewHolder$a */
     /* loaded from: classes7.dex */
-    public static final class C3522a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3522a() {
+        private a() {
         }
 
-        public /* synthetic */ C3522a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -64,13 +63,12 @@ public final class DetailInfoViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.coupon.view.DetailInfoViewHolder$b */
     /* loaded from: classes7.dex */
-    public static final class C3523b implements HtmlParserManager.OnSpanClickListener {
+    public static final class b implements HtmlParserManager.OnSpanClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context a;
 
-        C3523b(Context context) {
+        b(Context context) {
             this.a = context;
         }
 
@@ -87,16 +85,15 @@ public final class DetailInfoViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.coupon.view.DetailInfoViewHolder$c */
     /* loaded from: classes7.dex */
-    public static final class C3524c implements HtmlParserManager.OnParseFinishedListener {
+    public static final class c implements HtmlParserManager.OnParseFinishedListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ RecyclerView a;
         final /* synthetic */ Context b;
         final /* synthetic */ TextView c;
         final /* synthetic */ DetailInfoViewHolder d;
 
-        C3524c(RecyclerView recyclerView, Context context, TextView textView, DetailInfoViewHolder detailInfoViewHolder) {
+        c(RecyclerView recyclerView, Context context, TextView textView, DetailInfoViewHolder detailInfoViewHolder) {
             this.a = recyclerView;
             this.b = context;
             this.c = textView;
@@ -141,7 +138,7 @@ public final class DetailInfoViewHolder {
         }
 
         @Override // com.alibaba.pictures.bricks.util.htmlparser.HtmlParserManager.OnParseFinishedListener
-        public void onParseFinished(@Nullable List<HtmlParserManager.C3555b> list) {
+        public void onParseFinished(@Nullable List<HtmlParserManager.b> list) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "638493666")) {
                 ipChange.ipc$dispatch("638493666", new Object[]{this, list});
@@ -151,18 +148,18 @@ public final class DetailInfoViewHolder {
                 final TextView textView = this.c;
                 final DetailInfoViewHolder detailInfoViewHolder = this.d;
                 ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();
-                ArrayList<HtmlParserManager.C3555b> arrayList2 = new ArrayList();
+                ArrayList<HtmlParserManager.b> arrayList2 = new ArrayList();
                 for (Object obj : list) {
-                    if (((HtmlParserManager.C3555b) obj).f() == 2) {
+                    if (((HtmlParserManager.b) obj).f() == 2) {
                         arrayList2.add(obj);
                     }
                 }
-                for (HtmlParserManager.C3555b c3555b : arrayList2) {
+                for (HtmlParserManager.b bVar : arrayList2) {
                     HashMap<String, String> hashMap = new HashMap<>();
-                    hashMap.put("img", String.valueOf(c3555b.a()));
+                    hashMap.put("img", String.valueOf(bVar.a()));
                     arrayList.add(hashMap);
                 }
-                final List<HtmlParserManager.C3555b> c = v11.INSTANCE.c(list);
+                final List<HtmlParserManager.b> c = v11.INSTANCE.c(list);
                 if (c.size() > 2) {
                     recyclerView.setAdapter(new RichTextAdapter(c.subList(0, 2), context));
                     RecyclerView.Adapter adapter = recyclerView.getAdapter();
@@ -174,7 +171,7 @@ public final class DetailInfoViewHolder {
                     textView.setOnClickListener(new View.OnClickListener() { // from class: tb.t70
                         @Override // android.view.View.OnClickListener
                         public final void onClick(View view) {
-                            DetailInfoViewHolder.C3524c.b(RecyclerView.this, c, textView, detailInfoViewHolder, view);
+                            DetailInfoViewHolder.c.b(RecyclerView.this, c, textView, detailInfoViewHolder, view);
                         }
                     });
                     return;
@@ -201,7 +198,7 @@ public final class DetailInfoViewHolder {
         b41.i(textView, "btn");
         b41.i(onChangeListener, "listener");
         e(onChangeListener);
-        HtmlParserManager.Companion.a(DisplayMetrics.getwidthPixels(s60.INSTANCE.f(context)), 1.4f, 333333, 16, 888888, 14).b(context, str, new C3523b(context), new C3524c(recyclerView, context, textView, this));
+        HtmlParserManager.Companion.a(DisplayMetrics.getwidthPixels(s60.INSTANCE.f(context)), 1.4f, 333333, 16, 888888, 14).b(context, str, new b(context), new c(recyclerView, context, textView, this));
     }
 
     public final void e(@NotNull OnChangeListener onChangeListener) {

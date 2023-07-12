@@ -1,7 +1,7 @@
 package com.alibaba.security.realidentity.http.base;
 
-import com.alibaba.security.common.c.C3800a;
-import com.alibaba.security.common.d.C3811h;
+import com.alibaba.security.common.c.a;
+import com.alibaba.security.common.d.h;
 import com.alibaba.security.realidentity.http.IHttpCallback;
 import com.alibaba.security.realidentity.http.RpHttpResponse;
 import com.alibaba.security.realidentity.http.model.HttpResponse;
@@ -14,9 +14,9 @@ public abstract class RetrofitHttpCallback implements IHttpCallback {
 
     private HttpResponse analyzeResponse(String str, Class<? extends HttpResponse> cls) {
         try {
-            return (HttpResponse) C3811h.a(str, cls, false);
+            return (HttpResponse) h.a(str, cls, false);
         } catch (Throwable unused) {
-            C3800a.c(TAG, "analyzeResponse fail ,jsonResponse is ".concat(String.valueOf(str)));
+            a.c(TAG, "analyzeResponse fail ,jsonResponse is ".concat(String.valueOf(str)));
             return new HttpResponse() { // from class: com.alibaba.security.realidentity.http.base.RetrofitHttpCallback.1
                 @Override // com.alibaba.security.realidentity.http.model.HttpResponse
                 public boolean isSuccessful() {

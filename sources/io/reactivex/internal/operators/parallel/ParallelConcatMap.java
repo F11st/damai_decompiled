@@ -4,31 +4,31 @@ import io.reactivex.functions.Function;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.operators.flowable.FlowableConcatMap;
 import io.reactivex.internal.util.ErrorMode;
-import io.reactivex.parallel.AbstractC8161a;
+import io.reactivex.parallel.a;
 import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ParallelConcatMap<T, R> extends AbstractC8161a<R> {
+public final class ParallelConcatMap<T, R> extends a<R> {
     final ErrorMode errorMode;
     final Function<? super T, ? extends Publisher<? extends R>> mapper;
     final int prefetch;
-    final AbstractC8161a<T> source;
+    final a<T> source;
 
-    public ParallelConcatMap(AbstractC8161a<T> abstractC8161a, Function<? super T, ? extends Publisher<? extends R>> function, int i, ErrorMode errorMode) {
-        this.source = abstractC8161a;
+    public ParallelConcatMap(a<T> aVar, Function<? super T, ? extends Publisher<? extends R>> function, int i, ErrorMode errorMode) {
+        this.source = aVar;
         this.mapper = (Function) ObjectHelper.requireNonNull(function, "mapper");
         this.prefetch = i;
         this.errorMode = (ErrorMode) ObjectHelper.requireNonNull(errorMode, "errorMode");
     }
 
-    @Override // io.reactivex.parallel.AbstractC8161a
+    @Override // io.reactivex.parallel.a
     public int parallelism() {
         return this.source.parallelism();
     }
 
-    @Override // io.reactivex.parallel.AbstractC8161a
+    @Override // io.reactivex.parallel.a
     public void subscribe(Subscriber<? super R>[] subscriberArr) {
         if (validate(subscriberArr)) {
             int length = subscriberArr.length;

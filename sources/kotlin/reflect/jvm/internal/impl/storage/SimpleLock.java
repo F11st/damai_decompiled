@@ -11,15 +11,14 @@ import tb.wt2;
 /* loaded from: classes3.dex */
 public interface SimpleLock {
     @NotNull
-    public static final C8529a Companion = C8529a.a;
+    public static final a Companion = a.a;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.storage.SimpleLock$a */
     /* loaded from: classes3.dex */
-    public static final class C8529a {
-        static final /* synthetic */ C8529a a = new C8529a();
+    public static final class a {
+        static final /* synthetic */ a a = new a();
 
-        private C8529a() {
+        private a() {
         }
 
         @NotNull

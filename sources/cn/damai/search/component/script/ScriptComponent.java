@@ -2,7 +2,7 @@ package cn.damai.search.component.script;
 
 import android.app.Activity;
 import cn.damai.common.AppConfig;
-import cn.damai.common.util.toastutil.C0537a;
+import cn.damai.common.util.toastutil.a;
 import cn.damai.live.LiveActivity;
 import cn.damai.onearch.errpage.ErrorControlView;
 import com.alibaba.fastjson.JSON;
@@ -50,7 +50,7 @@ public final class ScriptComponent extends GenericComponent<ComponentValue> {
     @NotNull
     private static final String API_NAME = "mtop.damai.mec.aristotle.get";
     @NotNull
-    public static final C1574a Companion = new C1574a(null);
+    public static final a Companion = new a(null);
     private static final boolean NEED_ENCODE = false;
     private static final boolean NEED_SESSION = false;
     private static final int REQUEST_TIME_OUT = 3000;
@@ -227,7 +227,7 @@ public final class ScriptComponent extends GenericComponent<ComponentValue> {
                         if (fragment2 != null && (refreshLayout = fragment2.getRefreshLayout()) != null) {
                             refreshLayout.setEnableLoadMore(false);
                         }
-                        C0537a.i(activity, str2);
+                        a.i(activity, str2);
                         return activity;
                     }
                     return null;
@@ -352,13 +352,12 @@ public final class ScriptComponent extends GenericComponent<ComponentValue> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.component.script.ScriptComponent$a */
     /* loaded from: classes15.dex */
-    public static final class C1574a {
-        private C1574a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C1574a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

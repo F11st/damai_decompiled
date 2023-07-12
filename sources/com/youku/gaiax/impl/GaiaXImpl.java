@@ -180,35 +180,35 @@ public final class GaiaXImpl implements IGaiaXApi {
                 }
                 Context context = GaiaXContext.this.getParams().getContext();
                 if (context != null) {
-                    GXTemplateEngine.C3347i c3347i = new GXTemplateEngine.C3347i(context, GaiaXContext.this.getParams().getTemplateBiz(), GaiaXContext.this.getParams().getTemplateId());
-                    c3347i.g(GaiaXContext.this.getParams().getForceLocalTemplate());
-                    final GXTemplateEngine.C3343f c3343f = new GXTemplateEngine.C3343f(GaiaXContext.this.getParams().getViewPort().b(), GaiaXContext.this.getParams().getViewPort().a());
+                    GXTemplateEngine.i iVar = new GXTemplateEngine.i(context, GaiaXContext.this.getParams().getTemplateBiz(), GaiaXContext.this.getParams().getTemplateId());
+                    iVar.g(GaiaXContext.this.getParams().getForceLocalTemplate());
+                    final GXTemplateEngine.f fVar = new GXTemplateEngine.f(GaiaXContext.this.getParams().getViewPort().b(), GaiaXContext.this.getParams().getViewPort().a());
                     JSONObject data = GaiaXContext.this.getParams().getData();
                     if (data == null) {
                         data = new JSONObject();
                     }
-                    final GXTemplateEngine.C3346h c3346h = new GXTemplateEngine.C3346h(data);
+                    final GXTemplateEngine.h hVar = new GXTemplateEngine.h(data);
                     GaiaXContext gaiaXContext2 = GaiaXContext.this;
-                    c3346h.j(gaiaXContext2.getParams());
-                    c3346h.g(gaiaXContext2.getGxDataListener());
-                    c3346h.i(gaiaXContext2.getParams().getScrollPosition$GaiaX_Android());
-                    c3346h.h(gaiaXContext2.getGxEventListener());
-                    c3346h.k(gaiaXContext2.getGxTrackListener());
-                    GXTemplateEngine.C3337a c3337a = GXTemplateEngine.Companion;
-                    GXTemplateEngine.v(c3337a.a(), c3347i, c3343f, null, 4, null);
+                    hVar.j(gaiaXContext2.getParams());
+                    hVar.g(gaiaXContext2.getGxDataListener());
+                    hVar.i(gaiaXContext2.getParams().getScrollPosition$GaiaX_Android());
+                    hVar.h(gaiaXContext2.getGxEventListener());
+                    hVar.k(gaiaXContext2.getGxTrackListener());
+                    GXTemplateEngine.a aVar = GXTemplateEngine.Companion;
+                    GXTemplateEngine.v(aVar.a(), iVar, fVar, null, 4, null);
                     GaiaXMonitor gaiaXMonitor = GaiaXMonitor.INSTANCE;
                     gaiaXMonitor.onStep1A(GaiaXContext.this);
-                    os0 e = c3337a.a().e(c3347i, c3343f, GaiaXContext.this.getParams().getGxExtendParams());
+                    os0 e = aVar.a().e(iVar, fVar, GaiaXContext.this.getParams().getGxExtendParams());
                     if (e != null) {
                         GaiaXContext.this.setGXTemplateContext(e);
                         gaiaXMonitor.onStep1B(GaiaXContext.this);
                         gaiaXMonitor.onStep2A(GaiaXContext.this);
-                        final View f = c3337a.a().f(e);
+                        final View f = aVar.a().f(e);
                         if (f != null) {
                             f.setTag(GaiaXContext.this);
                             gaiaXMonitor.onStep2B(GaiaXContext.this);
                             gaiaXMonitor.onStep3A(GaiaXContext.this);
-                            c3337a.a().b(f, c3346h, c3343f);
+                            aVar.a().b(f, hVar, fVar);
                             gaiaXMonitor.onStep3B(GaiaXContext.this);
                             if (propUtils.isTrace()) {
                                 Trace.endSection();
@@ -235,7 +235,7 @@ public final class GaiaXImpl implements IGaiaXApi {
                                     }
                                     GaiaXMonitor gaiaXMonitor2 = GaiaXMonitor.INSTANCE;
                                     gaiaXMonitor2.onStep4A(GaiaXContext.this);
-                                    GXTemplateEngine.Companion.a().c(f, c3346h, c3343f);
+                                    GXTemplateEngine.Companion.a().c(f, hVar, fVar);
                                     gaiaXMonitor2.onStep4B(GaiaXContext.this);
                                     gaiaXImpl.onViewCreateResultDispatcher(GaiaXContext.this, f);
                                     gaiaXMonitor2.onCreateBAsync(GaiaXContext.this);
@@ -306,36 +306,36 @@ public final class GaiaXImpl implements IGaiaXApi {
         Context context = gaiaXContext.getParams().getContext();
         if (context != null) {
             gaiaXContext.setTypeStatus(1);
-            GXTemplateEngine.C3347i c3347i = new GXTemplateEngine.C3347i(context, gaiaXContext.getParams().getTemplateBiz(), gaiaXContext.getParams().getTemplateId());
-            c3347i.g(gaiaXContext.getParams().getForceLocalTemplate());
-            GXTemplateEngine.C3343f c3343f = new GXTemplateEngine.C3343f(gaiaXContext.getParams().getViewPort().b(), gaiaXContext.getParams().getViewPort().a());
+            GXTemplateEngine.i iVar = new GXTemplateEngine.i(context, gaiaXContext.getParams().getTemplateBiz(), gaiaXContext.getParams().getTemplateId());
+            iVar.g(gaiaXContext.getParams().getForceLocalTemplate());
+            GXTemplateEngine.f fVar = new GXTemplateEngine.f(gaiaXContext.getParams().getViewPort().b(), gaiaXContext.getParams().getViewPort().a());
             JSONObject data = gaiaXContext.getParams().getData();
             if (data == null) {
                 data = new JSONObject();
             }
-            GXTemplateEngine.C3346h c3346h = new GXTemplateEngine.C3346h(data);
-            c3346h.j(gaiaXContext.getParams());
-            c3346h.g(gaiaXContext.getGxDataListener());
-            c3346h.i(gaiaXContext.getParams().getScrollPosition$GaiaX_Android());
-            c3346h.h(gaiaXContext.getGxEventListener());
-            c3346h.k(gaiaXContext.getGxTrackListener());
-            GXTemplateEngine.C3337a c3337a = GXTemplateEngine.Companion;
-            GXTemplateEngine.v(c3337a.a(), c3347i, c3343f, null, 4, null);
+            GXTemplateEngine.h hVar = new GXTemplateEngine.h(data);
+            hVar.j(gaiaXContext.getParams());
+            hVar.g(gaiaXContext.getGxDataListener());
+            hVar.i(gaiaXContext.getParams().getScrollPosition$GaiaX_Android());
+            hVar.h(gaiaXContext.getGxEventListener());
+            hVar.k(gaiaXContext.getGxTrackListener());
+            GXTemplateEngine.a aVar = GXTemplateEngine.Companion;
+            GXTemplateEngine.v(aVar.a(), iVar, fVar, null, 4, null);
             gaiaXMonitor.onStep1A(gaiaXContext);
-            os0 e = c3337a.a().e(c3347i, c3343f, gaiaXContext.getParams().getGxExtendParams());
+            os0 e = aVar.a().e(iVar, fVar, gaiaXContext.getParams().getGxExtendParams());
             if (e != null) {
                 gaiaXContext.setGXTemplateContext(e);
                 gaiaXMonitor.onStep1B(gaiaXContext);
                 gaiaXMonitor.onStep2A(gaiaXContext);
-                View f = c3337a.a().f(e);
+                View f = aVar.a().f(e);
                 if (f != null) {
                     f.setTag(gaiaXContext);
                     gaiaXMonitor.onStep2B(gaiaXContext);
                     gaiaXMonitor.onStep3A(gaiaXContext);
-                    c3337a.a().b(f, c3346h, c3343f);
+                    aVar.a().b(f, hVar, fVar);
                     gaiaXMonitor.onStep3B(gaiaXContext);
                     gaiaXMonitor.onStep4A(gaiaXContext);
-                    c3337a.a().c(f, c3346h, c3343f);
+                    aVar.a().c(f, hVar, fVar);
                     gaiaXMonitor.onStep4B(gaiaXContext);
                     onViewCreateResultDispatcher(gaiaXContext, f);
                     gaiaXMonitor.onCreateBSync(gaiaXContext);
@@ -500,21 +500,21 @@ public final class GaiaXImpl implements IGaiaXApi {
                 }
                 final View rootView = GaiaXContext.this.getRootView();
                 if (rootView != null) {
-                    final GXTemplateEngine.C3343f c3343f = new GXTemplateEngine.C3343f(GaiaXContext.this.getParams().getViewPort().b(), GaiaXContext.this.getParams().getViewPort().a());
+                    final GXTemplateEngine.f fVar = new GXTemplateEngine.f(GaiaXContext.this.getParams().getViewPort().b(), GaiaXContext.this.getParams().getViewPort().a());
                     JSONObject data = GaiaXContext.this.getParams().getData();
                     if (data == null) {
                         data = new JSONObject();
                     }
-                    final GXTemplateEngine.C3346h c3346h = new GXTemplateEngine.C3346h(data);
+                    final GXTemplateEngine.h hVar = new GXTemplateEngine.h(data);
                     GaiaXContext gaiaXContext2 = GaiaXContext.this;
-                    c3346h.j(gaiaXContext2.getParams());
-                    c3346h.g(gaiaXContext2.getGxDataListener());
-                    c3346h.i(gaiaXContext2.getParams().getScrollPosition$GaiaX_Android());
-                    c3346h.h(gaiaXContext2.getGxEventListener());
-                    c3346h.k(gaiaXContext2.getGxTrackListener());
+                    hVar.j(gaiaXContext2.getParams());
+                    hVar.g(gaiaXContext2.getGxDataListener());
+                    hVar.i(gaiaXContext2.getParams().getScrollPosition$GaiaX_Android());
+                    hVar.h(gaiaXContext2.getGxEventListener());
+                    hVar.k(gaiaXContext2.getGxTrackListener());
                     GaiaXMonitor gaiaXMonitor = GaiaXMonitor.INSTANCE;
                     gaiaXMonitor.onStep3A(GaiaXContext.this);
-                    GXTemplateEngine.Companion.a().b(rootView, c3346h, c3343f);
+                    GXTemplateEngine.Companion.a().b(rootView, hVar, fVar);
                     gaiaXMonitor.onStep3B(GaiaXContext.this);
                     if (propUtils.isTrace()) {
                         Trace.endSection();
@@ -541,7 +541,7 @@ public final class GaiaXImpl implements IGaiaXApi {
                             }
                             GaiaXMonitor gaiaXMonitor2 = GaiaXMonitor.INSTANCE;
                             gaiaXMonitor2.onStep4A(GaiaXContext.this);
-                            GXTemplateEngine.Companion.a().c(rootView, c3346h, c3343f);
+                            GXTemplateEngine.Companion.a().c(rootView, hVar, fVar);
                             gaiaXMonitor2.onStep4B(GaiaXContext.this);
                             gaiaXImpl.onViewRefreshResultDispatcher(GaiaXContext.this);
                             gaiaXMonitor2.onRefreshBAsync(GaiaXContext.this);
@@ -601,23 +601,23 @@ public final class GaiaXImpl implements IGaiaXApi {
         gaiaXContext.setTypeStatus(3);
         View rootView = gaiaXContext.getRootView();
         if (rootView != null) {
-            GXTemplateEngine.C3343f c3343f = new GXTemplateEngine.C3343f(gaiaXContext.getParams().getViewPort().b(), gaiaXContext.getParams().getViewPort().a());
+            GXTemplateEngine.f fVar = new GXTemplateEngine.f(gaiaXContext.getParams().getViewPort().b(), gaiaXContext.getParams().getViewPort().a());
             JSONObject data = gaiaXContext.getParams().getData();
             if (data == null) {
                 data = new JSONObject();
             }
-            GXTemplateEngine.C3346h c3346h = new GXTemplateEngine.C3346h(data);
-            c3346h.j(gaiaXContext.getParams());
-            c3346h.g(gaiaXContext.getGxDataListener());
-            c3346h.i(gaiaXContext.getParams().getScrollPosition$GaiaX_Android());
-            c3346h.h(gaiaXContext.getGxEventListener());
-            c3346h.k(gaiaXContext.getGxTrackListener());
+            GXTemplateEngine.h hVar = new GXTemplateEngine.h(data);
+            hVar.j(gaiaXContext.getParams());
+            hVar.g(gaiaXContext.getGxDataListener());
+            hVar.i(gaiaXContext.getParams().getScrollPosition$GaiaX_Android());
+            hVar.h(gaiaXContext.getGxEventListener());
+            hVar.k(gaiaXContext.getGxTrackListener());
             gaiaXMonitor.onStep3A(gaiaXContext);
-            GXTemplateEngine.C3337a c3337a = GXTemplateEngine.Companion;
-            c3337a.a().b(rootView, c3346h, c3343f);
+            GXTemplateEngine.a aVar = GXTemplateEngine.Companion;
+            aVar.a().b(rootView, hVar, fVar);
             gaiaXMonitor.onStep3B(gaiaXContext);
             gaiaXMonitor.onStep4A(gaiaXContext);
-            c3337a.a().c(rootView, c3346h, c3343f);
+            aVar.a().c(rootView, hVar, fVar);
             gaiaXMonitor.onStep4B(gaiaXContext);
             onViewRefreshResultDispatcher(gaiaXContext);
             gaiaXMonitor.onRefreshBSync(gaiaXContext);

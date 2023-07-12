@@ -14,7 +14,7 @@ import com.alibaba.wireless.security.aopsdk.replace.android.view.Display;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.arch.v3.data.Constants;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
@@ -74,7 +74,7 @@ public class ContextUtils {
         }
         if (sScreenHeight == -1) {
             DisplayMetrics displayMetrics = new DisplayMetrics();
-            Display.getMetrics(((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+            Display.getMetrics(((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
             sScreenHeight = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(displayMetrics);
         }
         return sScreenHeight;
@@ -94,7 +94,7 @@ public class ContextUtils {
         if (sRealScreenHeight == -1) {
             char c = context.getResources().getConfiguration().orientation != 1 ? (char) 1 : (char) 0;
             if (mRealSizes[c] == null) {
-                WindowManager windowManager = (WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+                WindowManager windowManager = (WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW);
                 if (windowManager == null) {
                     return getScreenHeight(context);
                 }
@@ -118,7 +118,7 @@ public class ContextUtils {
         }
         if (sScreenWidth == -1) {
             DisplayMetrics displayMetrics = new DisplayMetrics();
-            Display.getMetrics(((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+            Display.getMetrics(((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
             sScreenWidth = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(displayMetrics);
         }
         return sScreenWidth;
@@ -149,7 +149,7 @@ public class ContextUtils {
         mHasCheckAllScreen = true;
         mIsAllScreenDevice = false;
         if (context != null && Build.VERSION.SDK_INT >= 21) {
-            WindowManager windowManager = (WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+            WindowManager windowManager = (WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW);
             if (windowManager != null) {
                 android.view.Display defaultDisplay = windowManager.getDefaultDisplay();
                 Point point = new Point();

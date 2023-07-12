@@ -3,13 +3,12 @@ package com.google.protobuf;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 interface MutabilityOracle {
-    public static final MutabilityOracle IMMUTABLE = new C5384a();
+    public static final MutabilityOracle IMMUTABLE = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.MutabilityOracle$a */
     /* loaded from: classes10.dex */
-    static class C5384a implements MutabilityOracle {
-        C5384a() {
+    static class a implements MutabilityOracle {
+        a() {
         }
 
         @Override // com.google.protobuf.MutabilityOracle

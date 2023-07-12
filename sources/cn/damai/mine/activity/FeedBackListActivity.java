@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.screenshot.ScreenShotBean;
@@ -56,7 +56,7 @@ public class FeedBackListActivity extends DamaiBaseActivity<FeedBackPresenter, F
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            C0529c e2 = C0529c.e();
+            c e2 = c.e();
             e2.x(vf1.x().v(i, feedBack.name + JSMethod.NOT_SET + feedBack.title));
         }
     }
@@ -104,7 +104,7 @@ public class FeedBackListActivity extends DamaiBaseActivity<FeedBackPresenter, F
         if (AndroidInstantRuntime.support(ipChange, "1098548406")) {
             ipChange.ipc$dispatch("1098548406", new Object[]{this, Integer.valueOf(i)});
         } else if (i == 10002) {
-            C0529c.e().x(vf1.x().l0());
+            c.e().x(vf1.x().l0());
             startActivity(new Intent(this, MyFeedBackListActivity.class));
         } else {
             finish();

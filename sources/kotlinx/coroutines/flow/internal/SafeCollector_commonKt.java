@@ -4,7 +4,6 @@ import kotlin.coroutines.CoroutineContext;
 import kotlin.jvm.JvmName;
 import kotlin.jvm.functions.Function2;
 import kotlinx.coroutines.Job;
-import kotlinx.coroutines.internal.C8694a;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -49,10 +48,10 @@ public final class SafeCollector_commonKt {
     @Nullable
     public static final Job b(@Nullable Job job, @Nullable Job job2) {
         while (job != null) {
-            if (job == job2 || !(job instanceof C8694a)) {
+            if (job == job2 || !(job instanceof kotlinx.coroutines.internal.a)) {
                 return job;
             }
-            job = ((C8694a) job).getParent$kotlinx_coroutines_core();
+            job = ((kotlinx.coroutines.internal.a) job).getParent$kotlinx_coroutines_core();
         }
         return null;
     }

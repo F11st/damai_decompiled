@@ -62,7 +62,7 @@ public final class RegularImmutableSortedSet<E> extends ImmutableSortedSet<E> {
         if (collection instanceof Multiset) {
             collection = ((Multiset) collection).elementSet();
         }
-        if (C5179g0.b(comparator(), collection) && collection.size() > 1) {
+        if (g0.b(comparator(), collection) && collection.size() > 1) {
             yt2<E> it = iterator();
             Iterator<?> it2 = collection.iterator();
             if (!it.hasNext()) {
@@ -139,7 +139,7 @@ public final class RegularImmutableSortedSet<E> extends ImmutableSortedSet<E> {
             return r0
         L1e:
             java.util.Comparator<? super E> r1 = r5.comparator
-            boolean r1 = com.google.common.collect.C5179g0.b(r1, r6)
+            boolean r1 = com.google.common.collect.g0.b(r1, r6)
             if (r1 == 0) goto L47
             java.util.Iterator r6 = r6.iterator()
             tb.yt2 r1 = r5.iterator()     // Catch: java.lang.Throwable -> L46

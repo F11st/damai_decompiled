@@ -22,17 +22,16 @@ public final class yv1 {
     private static final String f = "yv1";
     private Context a;
     private final List<ProjectDataHolder> b;
-    private List<HtmlParserManager.C2244a> c;
+    private List<HtmlParserManager.a> c;
     private HashMap<Integer, Integer> d;
     private LinkedHashMap<String, Integer> e;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yv1$a */
     /* loaded from: classes8.dex */
-    public class C10001a implements HtmlParserManager.OnSpanClickListener {
+    public class a implements HtmlParserManager.OnSpanClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C10001a() {
+        a() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.htmlparser.HtmlParserManager.OnSpanClickListener
@@ -47,16 +46,15 @@ public final class yv1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yv1$b */
     /* loaded from: classes8.dex */
-    public class C10002b implements HtmlParserManager.OnParseFinishedListener {
+    public class b implements HtmlParserManager.OnParseFinishedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C10002b() {
+        b() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.htmlparser.HtmlParserManager.OnParseFinishedListener
-        public void onParseFinished(List<HtmlParserManager.C2244a> list) {
+        public void onParseFinished(List<HtmlParserManager.a> list) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1776276092")) {
                 ipChange.ipc$dispatch("1776276092", new Object[]{this, list});
@@ -97,7 +95,7 @@ public final class yv1 {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public List<ProjectDataHolder> j(List<HtmlParserManager.C2244a> list) {
+    public List<ProjectDataHolder> j(List<HtmlParserManager.a> list) {
         IpChange ipChange = $ipChange;
         int i = 1;
         if (AndroidInstantRuntime.support(ipChange, "-1403538274")) {
@@ -113,15 +111,15 @@ public final class yv1 {
         }
         int i2 = 0;
         for (int i3 = 0; i3 < size; i3++) {
-            HtmlParserManager.C2244a c2244a = list.get(i3);
+            HtmlParserManager.a aVar = list.get(i3);
             ProjectDataHolder projectDataHolder = new ProjectDataHolder(3);
-            projectDataHolder.setConvertedItem(c2244a);
+            projectDataHolder.setConvertedItem(aVar);
             projectDataHolder.setConvertedItemPosition(i3);
             projectDataHolder.setConvertedItemSize(size);
             projectDataHolder.setMorePosition(i);
             this.d.put(Integer.valueOf(i3), 0);
-            if (c2244a.e() == 2) {
-                this.e.put(c2244a.a().toString(), Integer.valueOf(i2));
+            if (aVar.e() == 2) {
+                this.e.put(aVar.a().toString(), Integer.valueOf(i2));
                 i2++;
             }
             arrayList.add(projectDataHolder);
@@ -168,7 +166,7 @@ public final class yv1 {
             return (List) ipChange.ipc$dispatch("1432262555", new Object[]{this, str});
         }
         if (!wh2.j(str)) {
-            HtmlParserManager.a(800, 1.4f, 333333, 16, 888888, 14).c(this.a, "<span>" + str.replaceAll("\r|\t|\n", "") + "</span>", new C10001a(), new C10002b());
+            HtmlParserManager.a(800, 1.4f, 333333, 16, 888888, 14).c(this.a, "<span>" + str.replaceAll("\r|\t|\n", "") + "</span>", new a(), new b());
         }
         return this.b;
     }

@@ -13,8 +13,8 @@ import androidx.annotation.Nullable;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.viewpager.widget.ViewPager;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.commonbusiness.servicenotice.ProjectTicketNoticeAdapter;
@@ -55,12 +55,11 @@ public class DmPurchaseNoticeActivity extends SimpleBaseActivity {
     private View v_outside;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.secondpage.notice.view.DmPurchaseNoticeActivity$a */
     /* loaded from: classes9.dex */
-    public class C2640a implements DmPurchaseIndicatorView.OnAnchorItemClickListener {
+    public class a implements DmPurchaseIndicatorView.OnAnchorItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2640a() {
+        a() {
         }
 
         @Override // cn.damai.ultron.secondpage.notice.view.DmPurchaseIndicatorView.OnAnchorItemClickListener
@@ -71,17 +70,16 @@ public class DmPurchaseNoticeActivity extends SimpleBaseActivity {
                 return;
             }
             DmPurchaseNoticeActivity.this.mViewPager.setCurrentItem(i);
-            C0529c.e().x(kb0.u().h(DmPurchaseNoticeActivity.this.fromConform, DmPurchaseNoticeActivity.this.mViewModel != null ? DmPurchaseNoticeActivity.this.mViewModel.getItemId() : "0", str));
+            c.e().x(kb0.u().h(DmPurchaseNoticeActivity.this.fromConform, DmPurchaseNoticeActivity.this.mViewModel != null ? DmPurchaseNoticeActivity.this.mViewModel.getItemId() : "0", str));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.secondpage.notice.view.DmPurchaseNoticeActivity$b  reason: invalid class name */
     /* loaded from: classes17.dex */
-    public class animationAnimation$AnimationListenerC2641b implements Animation.AnimationListener {
+    public class b implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        animationAnimation$AnimationListenerC2641b() {
+        b() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -118,7 +116,7 @@ public class DmPurchaseNoticeActivity extends SimpleBaseActivity {
             ipChange.ipc$dispatch("-1097033101", new Object[]{this});
             return;
         }
-        this.mPagerIndicator.setOnAnchorItemClickListener(new C2640a());
+        this.mPagerIndicator.setOnAnchorItemClickListener(new a());
         this.mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() { // from class: cn.damai.ultron.secondpage.notice.view.DmPurchaseNoticeActivity.3
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -231,7 +229,7 @@ public class DmPurchaseNoticeActivity extends SimpleBaseActivity {
         } else {
             Animation loadAnimation = AnimationUtils.loadAnimation(this, R$anim.activity_item_animexit);
             this.mAnimView.startAnimation(loadAnimation);
-            loadAnimation.setAnimationListener(new animationAnimation$AnimationListenerC2641b());
+            loadAnimation.setAnimationListener(new b());
         }
     }
 
@@ -332,7 +330,7 @@ public class DmPurchaseNoticeActivity extends SimpleBaseActivity {
         if (this.fromConform) {
             setDamaiUTKeyBuilder(kb0.u().o(this));
         } else {
-            setDamaiUTKeyBuilder(new C0525a.C0527b().i(pp2.ORDER_DETAL_PAGE));
+            setDamaiUTKeyBuilder(new a.b().i(pp2.ORDER_DETAL_PAGE));
         }
     }
 

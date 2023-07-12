@@ -2,13 +2,12 @@ package com.xiaomi.push;
 
 import android.content.Context;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.service.XMPushService;
 import java.io.File;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class hd implements XMPushService.InterfaceC7711n {
+public class hd implements XMPushService.n {
     private static boolean a;
 
     /* renamed from: a  reason: collision with other field name */
@@ -45,27 +44,27 @@ public class hd implements XMPushService.InterfaceC7711n {
         if (!bj.b(this.f455a) || hhVar == null || TextUtils.isEmpty(a(this.f455a.getPackageName())) || !new File(this.f455a.getFilesDir(), "tiny_data.data").exists() || a) {
             return false;
         }
-        return !com.xiaomi.push.service.ba.a(this.f455a).a(ho.ScreenOnOrChargingTinyDataUploadSwitch.a(), false) || C7680j.m1093a(this.f455a) || C7680j.m1095b(this.f455a);
+        return !com.xiaomi.push.service.ba.a(this.f455a).a(ho.ScreenOnOrChargingTinyDataUploadSwitch.a(), false) || j.m1093a(this.f455a) || j.m1095b(this.f455a);
     }
 
-    @Override // com.xiaomi.push.service.XMPushService.InterfaceC7711n
+    @Override // com.xiaomi.push.service.XMPushService.n
     /* renamed from: a  reason: collision with other method in class */
     public void mo951a() {
         hh a2 = hg.a(this.f455a).a();
         if (hi.a(this.f455a) && a2 != null) {
             hf.a(this.f455a, a2, com.xiaomi.push.service.ca.f956a);
             com.xiaomi.push.service.ca.a();
-            AbstractC7535b.c("coord data upload");
+            com.xiaomi.channel.commonutils.logger.b.c("coord data upload");
         }
         a(this.f455a);
         if (this.b && a()) {
-            AbstractC7535b.m586a("TinyData TinyDataCacheProcessor.pingFollowUpAction ts:" + System.currentTimeMillis());
+            com.xiaomi.channel.commonutils.logger.b.m586a("TinyData TinyDataCacheProcessor.pingFollowUpAction ts:" + System.currentTimeMillis());
             if (a(a2)) {
                 a = true;
                 he.a(this.f455a, a2);
                 return;
             }
-            AbstractC7535b.m586a("TinyData TinyDataCacheProcessor.pingFollowUpAction !canUpload(uploader) ts:" + System.currentTimeMillis());
+            com.xiaomi.channel.commonutils.logger.b.m586a("TinyData TinyDataCacheProcessor.pingFollowUpAction !canUpload(uploader) ts:" + System.currentTimeMillis());
         }
     }
 }

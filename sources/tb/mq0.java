@@ -9,7 +9,6 @@ import com.alibaba.gaiax.GXRegisterCenter;
 import com.youku.live.livesdk.wkit.component.Constants;
 import java.util.List;
 import java.util.Objects;
-import kotlin.text.C8604o;
 import kotlin.text.StringsKt__StringsKt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -20,7 +19,7 @@ public final class mq0 {
     public static final int COLOR_TYPE_DYNAMIC = 1;
     public static final int COLOR_TYPE_STATIC = 0;
     @NotNull
-    public static final C9449a Companion = new C9449a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final mq0 c = new mq0(0, 0);
     private final int a;
@@ -28,19 +27,18 @@ public final class mq0 {
     private final Object b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.mq0$a */
     /* loaded from: classes6.dex */
-    public static final class C9449a {
-        private C9449a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9449a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
         private final String d(String str) {
             boolean s;
-            s = C8604o.s(str);
+            s = kotlin.text.o.s(str);
             if (!s) {
                 return str;
             }
@@ -49,7 +47,7 @@ public final class mq0 {
 
         private final Integer e(String str) {
             boolean F;
-            F = C8604o.F(str, Constants.TYPE_LIVE_ROOM_BG_COLOR_PREFFIX, false, 2, null);
+            F = kotlin.text.o.F(str, Constants.TYPE_LIVE_ROOM_BG_COLOR_PREFFIX, false, 2, null);
             if (F) {
                 if (str.length() == 9) {
                     String substring = str.substring(7, str.length());
@@ -72,9 +70,9 @@ public final class mq0 {
             CharSequence M02;
             CharSequence M03;
             CharSequence M04;
-            F = C8604o.F(str, "rgba(", false, 2, null);
+            F = kotlin.text.o.F(str, "rgba(", false, 2, null);
             if (F) {
-                p = C8604o.p(str, jn1.BRACKET_END_STR, false, 2, null);
+                p = kotlin.text.o.p(str, jn1.BRACKET_END_STR, false, 2, null);
                 if (p) {
                     f0 = StringsKt__StringsKt.f0(str, jn1.BRACKET_END_STR, 0, false, 6, null);
                     Objects.requireNonNull(str, "null cannot be cast to non-null type java.lang.String");
@@ -109,9 +107,9 @@ public final class mq0 {
             CharSequence M0;
             CharSequence M02;
             CharSequence M03;
-            F = C8604o.F(str, "rgb(", false, 2, null);
+            F = kotlin.text.o.F(str, "rgb(", false, 2, null);
             if (F) {
-                p = C8604o.p(str, jn1.BRACKET_END_STR, false, 2, null);
+                p = kotlin.text.o.p(str, jn1.BRACKET_END_STR, false, 2, null);
                 if (p) {
                     f0 = StringsKt__StringsKt.f0(str, jn1.BRACKET_END_STR, 0, false, 6, null);
                     Objects.requireNonNull(str, "null cannot be cast to non-null type java.lang.String");
@@ -148,51 +146,51 @@ public final class mq0 {
             boolean q10;
             boolean q11;
             boolean q12;
-            q = C8604o.q(str, "BLACK", true);
+            q = kotlin.text.o.q(str, "BLACK", true);
             if (q) {
                 return -16777216;
             }
-            q2 = C8604o.q(str, "DKGRAY", true);
+            q2 = kotlin.text.o.q(str, "DKGRAY", true);
             if (q2) {
                 return -12303292;
             }
-            q3 = C8604o.q(str, "GRAY", true);
+            q3 = kotlin.text.o.q(str, "GRAY", true);
             if (q3) {
                 return -7829368;
             }
-            q4 = C8604o.q(str, "LTGRAY", true);
+            q4 = kotlin.text.o.q(str, "LTGRAY", true);
             if (q4) {
                 return -3355444;
             }
-            q5 = C8604o.q(str, "WHITE", true);
+            q5 = kotlin.text.o.q(str, "WHITE", true);
             if (q5) {
                 return -1;
             }
-            q6 = C8604o.q(str, "RED", true);
+            q6 = kotlin.text.o.q(str, "RED", true);
             if (q6) {
                 return Integer.valueOf((int) SupportMenu.CATEGORY_MASK);
             }
-            q7 = C8604o.q(str, "GREEN", true);
+            q7 = kotlin.text.o.q(str, "GREEN", true);
             if (q7) {
                 return -16711936;
             }
-            q8 = C8604o.q(str, "BLUE", true);
+            q8 = kotlin.text.o.q(str, "BLUE", true);
             if (q8) {
                 return -16776961;
             }
-            q9 = C8604o.q(str, "YELLOW", true);
+            q9 = kotlin.text.o.q(str, "YELLOW", true);
             if (q9) {
                 return Integer.valueOf((int) InputDeviceCompat.SOURCE_ANY);
             }
-            q10 = C8604o.q(str, "CYAN", true);
+            q10 = kotlin.text.o.q(str, "CYAN", true);
             if (q10) {
                 return -16711681;
             }
-            q11 = C8604o.q(str, "MAGENTA", true);
+            q11 = kotlin.text.o.q(str, "MAGENTA", true);
             if (q11) {
                 return -65281;
             }
-            q12 = C8604o.q(str, "TRANSPARENT", true);
+            q12 = kotlin.text.o.q(str, "TRANSPARENT", true);
             return q12 ? 0 : null;
         }
 

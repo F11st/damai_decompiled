@@ -7,19 +7,18 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes3.dex */
 public class ci implements Iterable<Character>, KMappedMarker {
     @NotNull
-    public static final C9007a Companion = new C9007a(null);
+    public static final a Companion = new a(null);
     private final char a;
     private final char b;
     private final int c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ci$a */
     /* loaded from: classes3.dex */
-    public static final class C9007a {
-        private C9007a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9007a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

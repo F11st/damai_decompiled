@@ -54,17 +54,13 @@ import cn.damai.comment.view.PublishDMSelectView;
 import cn.damai.comment.view.PublishInputTipsView;
 import cn.damai.common.AppConfig;
 import cn.damai.common.askpermission.OnGrantListener;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMRoundedCornersBitmapProcessor;
-import cn.damai.common.image.luban.C0517b;
 import cn.damai.common.image.luban.Luban;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
 import cn.damai.common.uploader.AusResult;
-import cn.damai.common.user.C0529c;
-import cn.damai.common.util.C0535a;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.commonbusiness.photoselect.imageselected.entry.Image;
@@ -111,7 +107,7 @@ import com.alibaba.pictures.bricks.view.DMRatingBar;
 import com.alibaba.pictures.uploader.FileUploadListener;
 import com.alibaba.pictures.uploader.FileUploader;
 import com.alibaba.pictures.uploader.UploadErrorCode;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.uploader.export.ITaskResult;
@@ -237,7 +233,7 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
     private int mIsRequestLoading = 0;
     private int visibleWindowDisplayHeight = 0;
     private int tempBottom = 0;
-    private TextWatcher mOnTextChangedListener = new C1302p();
+    private TextWatcher mOnTextChangedListener = new p();
     private boolean isDelay = false;
     private DMRatingBar.OnStarChangeListener mOnStarChangeListener = new DMRatingBar.OnStarChangeListener() { // from class: cn.damai.issue.IssueFragment.10
         private static transient /* synthetic */ IpChange $ipChange;
@@ -245,10 +241,10 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
         /* compiled from: Taobao */
         /* renamed from: cn.damai.issue.IssueFragment$10$a */
         /* loaded from: classes14.dex */
-        public class C1282a implements Animator.AnimatorListener {
+        public class a implements Animator.AnimatorListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1282a() {
+            a() {
             }
 
             @Override // android.animation.Animator.AnimatorListener
@@ -310,22 +306,22 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
             pf0.g().o(IssueFragment.this.fullStarLottie);
             IssueFragment.this.fullStarLottie.playAnimation();
             if (Build.VERSION.SDK_INT >= 11) {
-                IssueFragment.this.fullStarLottie.addAnimatorListener(new C1282a());
+                IssueFragment.this.fullStarLottie.addAnimatorListener(new a());
             }
         }
 
         @Override // com.alibaba.pictures.bricks.view.DMRatingBar.OnStarChangeListener
-        public void onStarChange(float f) {
+        public void onStarChange(float f2) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1943223143")) {
-                ipChange.ipc$dispatch("-1943223143", new Object[]{this, Float.valueOf(f)});
+                ipChange.ipc$dispatch("-1943223143", new Object[]{this, Float.valueOf(f2)});
                 return;
             }
             SoftInputUtils.a(IssueFragment.this.getActivity());
             pf0.g().o(IssueFragment.this.mDMRatingBar);
             pf0.g().m(IssueFragment.this.fullStarLottie);
             cb1.b("IssueActivity", "点击总评分 分评分无或者已经显示");
-            IssueFragment.this.issueViewModel.setmGrades((int) (f * 2.0f));
+            IssueFragment.this.issueViewModel.setmGrades((int) (f2 * 2.0f));
             IssueFragment issueFragment = IssueFragment.this;
             issueFragment.gradesDesc(el.a(issueFragment.issueViewModel.getmGrades()));
             if (IssueFragment.this.mSumItemBar == null || IssueFragment.this.mSumItemBar.getChildCount() <= 0 || IssueFragment.this.mSumItemBar.getVisibility() != 8 || IssueFragment.this.isDelay) {
@@ -354,27 +350,26 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
         }
     };
     String coverPath = "";
-    DMSortableNinePhotoLayout.OnNinePhotoClickListener mShowPhotoListener = new C1288c();
-    private DMSortableNinePhotoLayout.OnSortListener mOnSortListener = new C1289d();
-    private View.OnClickListener mOnClickListener = new View$OnClickListenerC1291f();
-    private FileUploadListener mSubmitFilesListener = new C1296j();
-    private FileUploadListener mCoverUploadListener = new C1297k();
-    private FileUploadListener mCoverUpdateListener = new C1298l();
+    DMSortableNinePhotoLayout.OnNinePhotoClickListener mShowPhotoListener = new c();
+    private DMSortableNinePhotoLayout.OnSortListener mOnSortListener = new d();
+    private View.OnClickListener mOnClickListener = new f();
+    private FileUploadListener mSubmitFilesListener = new j();
+    private FileUploadListener mCoverUploadListener = new k();
+    private FileUploadListener mCoverUpdateListener = new l();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.IssueFragment$a */
     /* loaded from: classes5.dex */
-    public class C1285a implements OnCheckDraftListener {
+    public class a implements OnCheckDraftListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.issue.IssueFragment$a$a */
+        /* renamed from: cn.damai.issue.IssueFragment$a$a  reason: collision with other inner class name */
         /* loaded from: classes5.dex */
-        public class C1286a implements OnDialogListener {
+        public class C0054a implements OnDialogListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ DraftBean a;
 
-            C1286a(DraftBean draftBean) {
+            C0054a(DraftBean draftBean) {
                 this.a = draftBean;
             }
 
@@ -431,7 +426,7 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
             }
         }
 
-        C1285a() {
+        a() {
         }
 
         @Override // cn.damai.issue.listener.OnCheckDraftListener
@@ -445,7 +440,7 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
                     String e = m61.e(draftBean);
                     cb1.c(DraftBox.TAG, "命中草稿： " + e);
                 }
-                wc0.e(activity, new C1286a(draftBean));
+                wc0.e(activity, new C0054a(draftBean));
             }
         }
 
@@ -461,15 +456,14 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.IssueFragment$b */
     /* loaded from: classes5.dex */
-    public class C1287b extends q50 {
+    public class b extends q50 {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ long a;
         final /* synthetic */ long b;
         final /* synthetic */ String c;
 
-        C1287b(long j, long j2, String str) {
+        b(long j, long j2, String str) {
             this.a = j;
             this.b = j2;
             this.c = str;
@@ -484,7 +478,7 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
             }
             IssueFragment.this.delVideo(true);
             cb1.c("uploader end fail", (System.currentTimeMillis() - this.a) + "");
-            b23.g("IssueFragment:jsondata={HavanaId:" + z20.i() + ",videoSize:" + C0517b.b(this.c) + ",apn:" + IssueFragment.this.getNetworkType() + "}", "-7300", "上传视频失败");
+            b23.g("IssueFragment:jsondata={HavanaId:" + z20.i() + ",videoSize:" + cn.damai.common.image.luban.b.b(this.c) + ",apn:" + IssueFragment.this.getNetworkType() + "}", "-7300", "上传视频失败");
         }
 
         @Override // tb.q50
@@ -531,12 +525,11 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.IssueFragment$c */
     /* loaded from: classes5.dex */
-    public class C1288c implements DMSortableNinePhotoLayout.OnNinePhotoClickListener {
+    public class c implements DMSortableNinePhotoLayout.OnNinePhotoClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1288c() {
+        c() {
         }
 
         @Override // cn.damai.issue.view.DMSortableNinePhotoLayout.OnNinePhotoClickListener
@@ -639,12 +632,11 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.IssueFragment$d */
     /* loaded from: classes5.dex */
-    public class C1289d implements DMSortableNinePhotoLayout.OnSortListener {
+    public class d implements DMSortableNinePhotoLayout.OnSortListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1289d() {
+        d() {
         }
 
         @Override // cn.damai.issue.view.DMSortableNinePhotoLayout.OnSortListener
@@ -675,12 +667,11 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.IssueFragment$e */
     /* loaded from: classes5.dex */
-    public class C1290e implements OnGrantListener {
+    public class e implements OnGrantListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1290e() {
+        e() {
         }
 
         @Override // cn.damai.common.askpermission.OnGrantListener
@@ -710,18 +701,16 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.IssueFragment$f */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1291f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.issue.IssueFragment$f$a */
         /* loaded from: classes5.dex */
-        public class C1292a implements OnGrantListener {
+        public class a implements OnGrantListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1292a() {
+            a() {
             }
 
             @Override // cn.damai.common.askpermission.OnGrantListener
@@ -735,7 +724,7 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
             }
         }
 
-        View$OnClickListenerC1291f() {
+        f() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -778,13 +767,13 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
                     if ((!IssueFragment.this.issueViewModel.isEdit() || wh2.e(IssueFragment.this.mEditAddImages) <= 0) && wh2.e(IssueFragment.this.issueViewModel.getmImages()) <= 0) {
                         IssueFragment.this.onIssueClicked();
                     } else {
-                        ir1.b(IssueFragment.this.getActivity(), false, mr1.STORAGE, "用于选取、上传图片/视频", new C1292a());
+                        ir1.b(IssueFragment.this.getActivity(), false, mr1.STORAGE, "用于选取、上传图片/视频", new a());
                     }
                 } else if (id == R$id.issue_title_teach_good_evaluate) {
                     i41.i().u(IssueFragment.this.issueViewModel.getmIssueType(), IssueFragment.this.issueViewModel.isEvaluate() ? IssueFragment.this.issueViewModel.getmItemId() : "");
                     Bundle bundle = new Bundle();
                     bundle.putString("url", g41.ISSUE_TEACH_GOOD_URL);
-                    DMNav.from(IssueFragment.this.getActivity()).withExtras(bundle).toUri(NavUri.b(C3834a.C3837c.d));
+                    DMNav.from(IssueFragment.this.getActivity()).withExtras(bundle).toUri(NavUri.b(a.c.d));
                 } else if (id == R$id.issue_evaluate_associated_project) {
                     i41.i().r();
                     Bundle bundle2 = new Bundle();
@@ -802,12 +791,11 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.IssueFragment$g */
     /* loaded from: classes5.dex */
-    public class C1293g implements OnDialogListener {
+    public class g implements OnDialogListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1293g() {
+        g() {
         }
 
         @Override // cn.damai.issue.listener.OnDialogListener
@@ -822,12 +810,11 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.IssueFragment$h */
     /* loaded from: classes14.dex */
-    public class DialogInterface$OnClickListenerC1294h implements DialogInterface.OnClickListener {
+    public class h implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC1294h() {
+        h() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -849,12 +836,11 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.IssueFragment$i */
     /* loaded from: classes14.dex */
-    public class DialogInterface$OnClickListenerC1295i implements DialogInterface.OnClickListener {
+    public class i implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC1295i(IssueFragment issueFragment) {
+        i(IssueFragment issueFragment) {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -867,12 +853,11 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.IssueFragment$j */
     /* loaded from: classes5.dex */
-    public class C1296j extends q50 {
+    public class j extends q50 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1296j() {
+        j() {
         }
 
         @Override // tb.q50, com.alibaba.pictures.uploader.FileUploadListener
@@ -919,12 +904,11 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.IssueFragment$k */
     /* loaded from: classes5.dex */
-    public class C1297k extends q50 {
+    public class k extends q50 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1297k() {
+        k() {
         }
 
         @Override // tb.q50
@@ -971,12 +955,11 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.IssueFragment$l */
     /* loaded from: classes5.dex */
-    public class C1298l extends q50 {
+    public class l extends q50 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1298l() {
+        l() {
         }
 
         @Override // tb.q50
@@ -1026,12 +1009,11 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.IssueFragment$m */
     /* loaded from: classes5.dex */
-    public class C1299m implements DMLinearLayoutIssue.IssueSoftControl {
+    public class m implements DMLinearLayoutIssue.IssueSoftControl {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1299m() {
+        m() {
         }
 
         @Override // cn.damai.issue.view.DMLinearLayoutIssue.IssueSoftControl
@@ -1050,12 +1032,11 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.IssueFragment$n */
     /* loaded from: classes5.dex */
-    public class C1300n implements OnTipsSelectedListener {
+    public class n implements OnTipsSelectedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1300n() {
+        n() {
         }
 
         @Override // cn.damai.comment.view.OnTipsSelectedListener
@@ -1077,12 +1058,11 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.IssueFragment$o */
     /* loaded from: classes14.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC1301o implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class o implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC1301o() {
+        o() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -1126,12 +1106,11 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.IssueFragment$p */
     /* loaded from: classes14.dex */
-    public class C1302p implements TextWatcher {
+    public class p implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1302p() {
+        p() {
         }
 
         @Override // android.text.TextWatcher
@@ -1188,7 +1167,7 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
             this.associatedProjectImage.setVisibility(0);
         }
         if (!TextUtils.isEmpty(str4) && !this.issueViewModel.isEvaluate()) {
-            C0504a.b().e(str4).k(new DMRoundedCornersBitmapProcessor(t60.a(getActivity(), 6.0f), 0)).d(getResources().getDrawable(R$drawable.uikit_default_image_bg_grey)).g(this.associatedProjectImage);
+            cn.damai.common.image.a.b().e(str4).k(new DMRoundedCornersBitmapProcessor(t60.a(getActivity(), 6.0f), 0)).d(getResources().getDrawable(R$drawable.uikit_default_image_bg_grey)).g(this.associatedProjectImage);
         } else {
             this.associatedProjectImage.setImageResource(R$drawable.uikit_default_image_bg_grey);
         }
@@ -1239,8 +1218,8 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
                 return 2;
             }
             if (this.correlationView.getCorrelationId() != null) {
-                for (int i = 0; i < this.mSumItemBar.getChildCount(); i++) {
-                    if ((this.mSumItemBar.getChildAt(i) instanceof DMCommentSubItemView) && (dMCommentSubItemView = (DMCommentSubItemView) this.mSumItemBar.getChildAt(i)) != null) {
+                for (int i2 = 0; i2 < this.mSumItemBar.getChildCount(); i2++) {
+                    if ((this.mSumItemBar.getChildAt(i2) instanceof DMCommentSubItemView) && (dMCommentSubItemView = (DMCommentSubItemView) this.mSumItemBar.getChildAt(i2)) != null) {
                         if ((dMCommentSubItemView.getGrades() == 0) & (dMCommentSubItemView.getTagBean() != null)) {
                             return 3;
                         }
@@ -1252,9 +1231,9 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public int delImagePosCorrect(int i) {
+    public int delImagePosCorrect(int i2) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1810476753") ? ((Integer) ipChange.ipc$dispatch("-1810476753", new Object[]{this, Integer.valueOf(i)})).intValue() : (this.mShowNiePhoto.getData() == null || this.mShowNiePhoto.getData().size() <= 0 || this.mShowNiePhoto.getData().get(0) == null || !"2".equals(this.mShowNiePhoto.getData().get(0).getType())) ? i : i - 1;
+        return AndroidInstantRuntime.support(ipChange, "-1810476753") ? ((Integer) ipChange.ipc$dispatch("-1810476753", new Object[]{this, Integer.valueOf(i2)})).intValue() : (this.mShowNiePhoto.getData() == null || this.mShowNiePhoto.getData().size() <= 0 || this.mShowNiePhoto.getData().get(0) == null || !"2".equals(this.mShowNiePhoto.getData().get(0).getType())) ? i2 : i2 - 1;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -1291,7 +1270,7 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
             return;
         }
         if ((issueViewModel.isEdit() || this.issueViewModel.isPrivilege() || this.issueViewModel.isEvaluate()) ? true : true) {
-            this.mDraftBox.checkCacheDraft(new C1285a());
+            this.mDraftBox.checkCacheDraft(new a());
         }
     }
 
@@ -1438,24 +1417,24 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
         }
         ArrayList<String> arrayList = new ArrayList<>();
         if (this.issueViewModel.isEdit()) {
-            for (int i = 0; i < wh2.e(this.issueViewModel.getmImages()); i++) {
-                if (this.issueViewModel.getmImages().get(i).startsWith("http")) {
-                    arrayList.add(this.issueViewModel.getmImages().get(i));
+            for (int i2 = 0; i2 < wh2.e(this.issueViewModel.getmImages()); i2++) {
+                if (this.issueViewModel.getmImages().get(i2).startsWith("http")) {
+                    arrayList.add(this.issueViewModel.getmImages().get(i2));
                 }
             }
         }
         Iterator<String> it = this.mPaths.iterator();
         while (it.hasNext()) {
             String next = it.next();
-            int i2 = 0;
+            int i3 = 0;
             while (true) {
-                if (i2 < wh2.e(this.mImagesSelectData)) {
-                    uu2 uu2Var = this.mImagesSelectData.get(i2);
+                if (i3 < wh2.e(this.mImagesSelectData)) {
+                    uu2 uu2Var = this.mImagesSelectData.get(i3);
                     if (uu2Var.d() != null && !TextUtils.isEmpty(next) && !TextUtils.isEmpty(uu2Var.b()) && next.equals(uu2Var.b())) {
                         arrayList.add(imageUrl(uu2Var.d()));
                         break;
                     }
-                    i2++;
+                    i3++;
                 }
             }
         }
@@ -1468,8 +1447,8 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
         if (AndroidInstantRuntime.support(ipChange, "-697634683")) {
             return (String) ipChange.ipc$dispatch("-697634683", new Object[]{this});
         }
-        NetworkType b = wj1.b(mu0.a().getApplicationContext());
-        return b == NetworkType.NETWORK_WIFI ? "WiFi" : b == NetworkType.NETWORK_2G ? "2G" : b == NetworkType.NETWORK_3G ? "3G" : b == NetworkType.NETWORK_4G ? "4G" : "none";
+        NetworkType b2 = wj1.b(mu0.a().getApplicationContext());
+        return b2 == NetworkType.NETWORK_WIFI ? "WiFi" : b2 == NetworkType.NETWORK_2G ? "2G" : b2 == NetworkType.NETWORK_3G ? "3G" : b2 == NetworkType.NETWORK_4G ? "4G" : "none";
     }
 
     private void getRenderTags() {
@@ -1486,17 +1465,17 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
                 /* compiled from: Taobao */
                 /* renamed from: cn.damai.issue.IssueFragment$2$a */
                 /* loaded from: classes5.dex */
-                public class C1283a implements DMImageCreator.DMImageFailListener {
+                public class a implements DMImageCreator.DMImageFailListener {
                     private static transient /* synthetic */ IpChange $ipChange;
 
-                    C1283a() {
+                    a() {
                     }
 
                     @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-                    public void onFail(DMImageCreator.C0501d c0501d) {
+                    public void onFail(DMImageCreator.d dVar) {
                         IpChange ipChange = $ipChange;
                         if (AndroidInstantRuntime.support(ipChange, "-110245045")) {
-                            ipChange.ipc$dispatch("-110245045", new Object[]{this, c0501d});
+                            ipChange.ipc$dispatch("-110245045", new Object[]{this, dVar});
                         } else {
                             IssueFragment.this.giftIntroduce.setVisibility(8);
                         }
@@ -1506,19 +1485,19 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
                 /* compiled from: Taobao */
                 /* renamed from: cn.damai.issue.IssueFragment$2$b */
                 /* loaded from: classes5.dex */
-                public class C1284b implements DMImageCreator.DMImageSuccListener {
+                public class b implements DMImageCreator.DMImageSuccListener {
                     private static transient /* synthetic */ IpChange $ipChange;
 
-                    C1284b() {
+                    b() {
                     }
 
                     @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-                    public void onSuccess(DMImageCreator.C0502e c0502e) {
+                    public void onSuccess(DMImageCreator.e eVar) {
                         Bitmap bitmap;
                         IpChange ipChange = $ipChange;
                         if (AndroidInstantRuntime.support(ipChange, "-1807689568")) {
-                            ipChange.ipc$dispatch("-1807689568", new Object[]{this, c0502e});
-                        } else if (c0502e == null || (bitmap = c0502e.b) == null) {
+                            ipChange.ipc$dispatch("-1807689568", new Object[]{this, eVar});
+                        } else if (eVar == null || (bitmap = eVar.b) == null) {
                             IssueFragment.this.giftIntroduce.setVisibility(8);
                         } else {
                             IssueFragment.this.giftIntroduce.setVisibility(0);
@@ -1555,14 +1534,14 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
                             IssueFragment.this.associatedProjectTimeAddress.setText(issueRenderResponse.getStoreInfo().getDes());
                             IssueFragment.this.associatedProjectName.setText(issueRenderResponse.getStoreInfo().getStoreName());
                             IssueFragment.this.associatedProjectImage.getLayoutParams().width = t60.a(IssueFragment.this.getContext(), 42.0f);
-                            C0504a.b().e(issueRenderResponse.getStoreInfo().getStoreImgUrl()).k(new DMRoundedCornersBitmapProcessor(t60.a(IssueFragment.this.getActivity(), 6.0f), 0)).d(IssueFragment.this.getResources().getDrawable(R$drawable.store_defult_img)).g(IssueFragment.this.associatedProjectImage);
+                            cn.damai.common.image.a.b().e(issueRenderResponse.getStoreInfo().getStoreImgUrl()).k(new DMRoundedCornersBitmapProcessor(t60.a(IssueFragment.this.getActivity(), 6.0f), 0)).d(IssueFragment.this.getResources().getDrawable(R$drawable.store_defult_img)).g(IssueFragment.this.associatedProjectImage);
                             IssueFragment.this.correlationView.setDefaultData(issueRenderResponse.associatedScriptNum, CorrelationType.SCRIPT, issueRenderResponse.getStoreInfo().getStoreId());
                             IssueFragment.this.issueViewModel.setStoreId(issueRenderResponse.getStoreInfo().getStoreId() + "");
                             IssueFragment.this.issueViewModel.setItemType(issueRenderResponse.getItemType());
                         } else if (issueRenderResponse.scriptInfo != null && "2".equals(issueRenderResponse.getItemType())) {
                             IssueFragment.this.associatedProjectTimeAddress.setText(issueRenderResponse.scriptInfo.getDes());
                             IssueFragment.this.associatedProjectName.setText(issueRenderResponse.scriptInfo.getName());
-                            C0504a.b().e(issueRenderResponse.scriptInfo.getPosterUrl()).k(new DMRoundedCornersBitmapProcessor(t60.a(IssueFragment.this.getActivity(), 6.0f), 0)).d(IssueFragment.this.getResources().getDrawable(R$drawable.uikit_default_image_bg_grey)).g(IssueFragment.this.associatedProjectImage);
+                            cn.damai.common.image.a.b().e(issueRenderResponse.scriptInfo.getPosterUrl()).k(new DMRoundedCornersBitmapProcessor(t60.a(IssueFragment.this.getActivity(), 6.0f), 0)).d(IssueFragment.this.getResources().getDrawable(R$drawable.uikit_default_image_bg_grey)).g(IssueFragment.this.associatedProjectImage);
                             IssueFragment.this.correlationView.setDefaultData(issueRenderResponse.associatedStoreNum, CorrelationType.STORE, issueRenderResponse.scriptInfo.getId());
                             IssueFragment.this.spoilerSwitchView.setVisibility(0);
                             IssueFragment.this.issueViewModel.setItemType(issueRenderResponse.getItemType());
@@ -1581,7 +1560,7 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
                                 IssueFragment.this.issueViewModel.setmProjectName(projectDO.getName());
                                 IssueFragment.this.issueViewModel.setmProjectPoster(projectDO.getVerticalPic());
                                 IssueFragment.this.issueViewModel.setTimeAddress(str);
-                                C0504a.b().e(IssueFragment.this.issueViewModel.getmProjectPoster()).k(new DMRoundedCornersBitmapProcessor(t60.a(IssueFragment.this.getActivity(), 6.0f), 0)).d(IssueFragment.this.getResources().getDrawable(R$drawable.uikit_default_image_bg_grey)).g(IssueFragment.this.associatedProjectImage);
+                                cn.damai.common.image.a.b().e(IssueFragment.this.issueViewModel.getmProjectPoster()).k(new DMRoundedCornersBitmapProcessor(t60.a(IssueFragment.this.getActivity(), 6.0f), 0)).d(IssueFragment.this.getResources().getDrawable(R$drawable.uikit_default_image_bg_grey)).g(IssueFragment.this.associatedProjectImage);
                                 IssueFragment.this.associatedProjectTimeAddress.setText(IssueFragment.this.issueViewModel.getTimeAddress());
                                 IssueFragment.this.associatedProjectName.setText(IssueFragment.this.issueViewModel.getmProjectName());
                             }
@@ -1594,7 +1573,7 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
                             if (TextUtils.isEmpty(issueRenderResponse.getNoticeInfo().getActivityPic())) {
                                 IssueFragment.this.giftIntroduce.setVisibility(8);
                             } else {
-                                C0504a.b().e(issueRenderResponse.getNoticeInfo().getActivityPic()).k(new DMRoundedCornersBitmapProcessor(12, 0)).n(new C1284b()).e(new C1283a()).f();
+                                cn.damai.common.image.a.b().e(issueRenderResponse.getNoticeInfo().getActivityPic()).k(new DMRoundedCornersBitmapProcessor(12, 0)).n(new b()).e(new a()).f();
                             }
                         }
                     }
@@ -1638,10 +1617,10 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
             ipChange.ipc$dispatch("1622193737", new Object[]{this});
             return;
         }
-        String e = pf0.g().e(this.issueViewModel.getmGrades(), this.issueViewModel.getCommentGradeTexts(), "");
-        if (!TextUtils.isEmpty(e)) {
+        String e2 = pf0.g().e(this.issueViewModel.getmGrades(), this.issueViewModel.getCommentGradeTexts(), "");
+        if (!TextUtils.isEmpty(e2)) {
             pf0.g().o(this.gradeTip);
-            this.gradeTip.setText(e);
+            this.gradeTip.setText(e2);
             return;
         }
         pf0.g().m(this.gradeTip);
@@ -1658,8 +1637,8 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
         sb.append(String.format("\"%1$s%2$s%3$s\"", "1", ":", Integer.valueOf(this.issueViewModel.getmGrades())));
         LinearLayout linearLayout = this.mSumItemBar;
         if (linearLayout != null && linearLayout.getChildCount() > 0) {
-            for (int i = 0; i < this.mSumItemBar.getChildCount(); i++) {
-                if ((this.mSumItemBar.getChildAt(i) instanceof DMCommentSubItemView) && (dMCommentSubItemView = (DMCommentSubItemView) this.mSumItemBar.getChildAt(i)) != null && dMCommentSubItemView.getTagBean() != null) {
+            for (int i2 = 0; i2 < this.mSumItemBar.getChildCount(); i2++) {
+                if ((this.mSumItemBar.getChildAt(i2) instanceof DMCommentSubItemView) && (dMCommentSubItemView = (DMCommentSubItemView) this.mSumItemBar.getChildAt(i2)) != null && dMCommentSubItemView.getTagBean() != null) {
                     sb.append(",");
                     if (!TextUtils.isEmpty(dMCommentSubItemView.getTagBean().getDesc())) {
                         sb.append(String.format("\"%1$s%2$s%3$s%4$s%5$s\"", Long.valueOf(dMCommentSubItemView.getTagBean().getType()), ":", Integer.valueOf(dMCommentSubItemView.getGrades()), ":", dMCommentSubItemView.getTagBean().getDesc()));
@@ -1722,8 +1701,8 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
         this.mImagesSelectData.clear();
         this.mImagesPublishCount = 0;
         if (arrayList != null && arrayList.size() > 0) {
-            for (int i = 0; i < arrayList.size(); i++) {
-                this.mPaths.add(pf0.f(arrayList.get(i)));
+            for (int i2 = 0; i2 < arrayList.size(); i2++) {
+                this.mPaths.add(pf0.f(arrayList.get(i2)));
             }
         }
         if (this.mIsRequestLoading == 0) {
@@ -1782,9 +1761,9 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
         this.giftIntroduce = (ImageView) findViewById(R$id.comment_gift_introduce);
         this.associatedProjectTip = (TextView) findViewById(R$id.issue_associated_project_tip);
         this.associatedLayout = (RelativeLayout) findViewById(R$id.issue_evaluate_associated_project);
-        int i = R$id.issue_associated_tip_hint;
-        this.associatedTipHint = (TextView) findViewById(i);
-        this.associatedTipHint = (TextView) findViewById(i);
+        int i2 = R$id.issue_associated_tip_hint;
+        this.associatedTipHint = (TextView) findViewById(i2);
+        this.associatedTipHint = (TextView) findViewById(i2);
         this.associatedProjectImage = (RoundRadiusImageView) findViewById(R$id.issue_associated_project_image);
         this.associatedProjectName = (TextView) findViewById(R$id.issue_associated_project_name);
         this.associatedProjectTimeAddress = (TextView) findViewById(R$id.issue_associated_project_time_address);
@@ -1858,7 +1837,7 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
             privilegeView(false, null, false);
             HashMap hashMap = new HashMap();
             hashMap.put("usercode", z20.E());
-            C0529c.e().G(this.associatedLayout, b82.SEARCH_ITEM_ASSOCIATE, "top", i41.PAGE_EVALUATE_SUBMIT, hashMap);
+            cn.damai.common.user.c.e().G(this.associatedLayout, b82.SEARCH_ITEM_ASSOCIATE, "top", i41.PAGE_EVALUATE_SUBMIT, hashMap);
         } else {
             str = "";
         }
@@ -1899,7 +1878,7 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
         Rect rect = new Rect();
         this.issue_window_layout.getWindowVisibleDisplayFrame(rect);
         this.visibleWindowDisplayHeight = rect.bottom;
-        this.mEditor.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC1301o());
+        this.mEditor.getViewTreeObserver().addOnGlobalLayoutListener(new o());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -1951,11 +1930,11 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
                 return;
             }
             String string = getResources().getString(R$string.edit_content_text);
-            new h4(getActivity()).e(string).h(getResources().getString(R$string.edit_comment_tv), new DialogInterface$OnClickListenerC1295i(this)).f(getResources().getString(R$string.edit_back_tv), new DialogInterface$OnClickListenerC1294h()).c(false).j();
+            new h4(getActivity()).e(string).h(getResources().getString(R$string.edit_comment_tv), new i(this)).f(getResources().getString(R$string.edit_back_tv), new h()).c(false).j();
             return;
         }
         IDraftBox iDraftBox = this.mDraftBox;
-        if (iDraftBox == null || !iDraftBox.checkBackPressed(new C1293g())) {
+        if (iDraftBox == null || !iDraftBox.checkBackPressed(new g())) {
             finishByUser();
         }
     }
@@ -1992,17 +1971,17 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
             if (stringArrayListExtra.size() > 0) {
                 String str = stringArrayListExtra.get(0);
                 this.coverPath = str;
-                Bitmap b = w11.b(str, -1, -1);
-                if (b == null) {
+                Bitmap b2 = w11.b(str, -1, -1);
+                if (b2 == null) {
                     try {
                         this.coverPath = Luban.l(this.mActivity).k(this.coverPath).h(this.coverPath).getAbsolutePath();
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                    } catch (IOException e2) {
+                        e2.printStackTrace();
                     }
-                    b = C0535a.i(this.coverPath);
+                    b2 = cn.damai.common.util.a.i(this.coverPath);
                 }
                 if (isNetAvailable()) {
-                    uploadVideoCover(b, this.mCoverUpdateListener, true);
+                    uploadVideoCover(b2, this.mCoverUpdateListener, true);
                 } else {
                     ToastUtil.i(getResources().getString(R$string.damai_base_net_toast));
                 }
@@ -2031,8 +2010,8 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
             showEditorLimitTip();
             setmEvaGiftContent();
             updateIssueButtonStatus();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 
@@ -2076,14 +2055,14 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
         dMShareMessage.evaluateGrade = this.issueViewModel.getmGrades();
         dMShareMessage.evaluateGradeDesc = el.a(this.issueViewModel.getmGrades());
         if (issueResponse.getCommentsDO() != null && wh2.e(issueResponse.getCommentsDO().getGradeDOList()) > 0) {
-            int i = 0;
+            int i2 = 0;
             while (true) {
-                if (i >= issueResponse.getCommentsDO().getGradeDOList().size()) {
+                if (i2 >= issueResponse.getCommentsDO().getGradeDOList().size()) {
                     break;
                 }
-                CommentGradeBean commentGradeBean = issueResponse.getCommentsDO().getGradeDOList().get(i);
+                CommentGradeBean commentGradeBean = issueResponse.getCommentsDO().getGradeDOList().get(i2);
                 if (commentGradeBean == null || commentGradeBean.type != 1) {
-                    i++;
+                    i2++;
                 } else {
                     dMShareMessage.evaluateGradeDesc = commentGradeBean.valueDesc;
                     if (!TextUtils.isEmpty(commentGradeBean.value)) {
@@ -2169,15 +2148,15 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
             } else {
                 if (this.issueViewModel.isEdit()) {
                     this.mEditAddImages = intent.getStringArrayListExtra(s11.SELECT_RESULT);
-                    for (int i = 0; i < wh2.e(this.mEditAddImages); i++) {
-                        if (!this.issueViewModel.getmImages().contains(this.mEditAddImages.get(i))) {
-                            this.issueViewModel.getmImages().add(this.mEditAddImages.get(i));
+                    for (int i2 = 0; i2 < wh2.e(this.mEditAddImages); i2++) {
+                        if (!this.issueViewModel.getmImages().contains(this.mEditAddImages.get(i2))) {
+                            this.issueViewModel.getmImages().add(this.mEditAddImages.get(i2));
                         }
                     }
                     this.mEditAddSelectImages = intent.getParcelableArrayListExtra("imagelist");
-                    for (int i2 = 0; i2 < wh2.e(this.mEditAddSelectImages); i2++) {
-                        if (!this.issueViewModel.getmSelectImages().contains(this.mEditAddSelectImages.get(i2))) {
-                            this.issueViewModel.getmSelectImages().add(this.mEditAddSelectImages.get(i2));
+                    for (int i3 = 0; i3 < wh2.e(this.mEditAddSelectImages); i3++) {
+                        if (!this.issueViewModel.getmSelectImages().contains(this.mEditAddSelectImages.get(i3))) {
+                            this.issueViewModel.getmSelectImages().add(this.mEditAddSelectImages.get(i3));
                         }
                     }
                 } else {
@@ -2197,7 +2176,7 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
         if (AndroidInstantRuntime.support(ipChange, "-1285877896")) {
             ipChange.ipc$dispatch("-1285877896", new Object[]{this});
         } else {
-            ir1.b(getActivity(), false, mr1.STORAGE, "用于选取图片文件进行发布", new C1290e());
+            ir1.b(getActivity(), false, mr1.STORAGE, "用于选取图片文件进行发布", new e());
         }
     }
 
@@ -2239,7 +2218,7 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
         if (!TextUtils.isEmpty(str)) {
             hashMap.put("item_id", str);
         }
-        C0529c.e().G(this.mIssueTitleCancel, "cancel_comment", "top", i41.PAGE_EVALUATE_SUBMIT, hashMap);
+        cn.damai.common.user.c.e().G(this.mIssueTitleCancel, "cancel_comment", "top", i41.PAGE_EVALUATE_SUBMIT, hashMap);
         this.mTeachGoodEvaluate.setOnClickListener(this.mOnClickListener);
         this.mIssueTitleConfirm.setOnClickListener(this.mOnClickListener);
         this.mEditor.addTextChangedListener(this.mOnTextChangedListener);
@@ -2249,16 +2228,16 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
         this.tvCircleContent.setOnClickListener(this.mOnClickListener);
         this.ivCircleScreen.setOnClickListener(this.mOnClickListener);
         this.guideAnimLayout.setOnClickListener(null);
-        this.issue_window_layout.setListener(new C1299m());
-        this.inputTipsView.setTipsSelectedListener(new C1300n());
+        this.issue_window_layout.setListener(new m());
+        this.inputTipsView.setTipsSelectedListener(new n());
         this.dmSelectView.setOnItemClickListener(new OnItemClickListener() { // from class: cn.damai.issue.IssueFragment.7
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // cn.damai.comment.view.OnItemClickListener
-            public void onItemClick(@NotNull View view, int i, @org.jetbrains.annotations.Nullable DmInfo dmInfo) {
+            public void onItemClick(@NotNull View view, int i2, @org.jetbrains.annotations.Nullable DmInfo dmInfo) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "-1190383351")) {
-                    ipChange2.ipc$dispatch("-1190383351", new Object[]{this, view, Integer.valueOf(i), dmInfo});
+                    ipChange2.ipc$dispatch("-1190383351", new Object[]{this, view, Integer.valueOf(i2), dmInfo});
                 } else if (dmInfo != null) {
                     IssueFragment.this.dmSelectView.postDelayed(new Runnable() { // from class: cn.damai.issue.IssueFragment.7.1
                         private static transient /* synthetic */ IpChange $ipChange;
@@ -2291,9 +2270,9 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
         this.viewHeight = 0;
         if (list != null && list.size() > 0) {
             this.mSumItemBar.removeAllViews();
-            for (int i = 0; i < list.size(); i++) {
+            for (int i2 = 0; i2 < list.size(); i2++) {
                 new CommentGradeTagBean();
-                CommentGradeTagBean commentGradeTagBean = list.get(i);
+                CommentGradeTagBean commentGradeTagBean = list.get(i2);
                 if (commentGradeTagBean != null) {
                     DMCommentSubItemView dMCommentSubItemView = new DMCommentSubItemView(getActivity());
                     dMCommentSubItemView.setData(commentGradeTagBean, zk.a(TextUtils.isEmpty(commentGradeTagBean.getValue()) ? 0.0f : Float.valueOf(commentGradeTagBean.getValue()).floatValue()), R$drawable.comment_evalaute_default_icon);
@@ -2385,8 +2364,8 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
                                     i41.n(String.valueOf(selectedDm.getDmId()));
                                     ArrayList<String> arrayList = selectedDm.dmTags;
                                     if (arrayList != null && arrayList.size() > 0 && selectedDm.allDmTags != null) {
-                                        for (int i = 0; i < selectedDm.dmTags.size(); i++) {
-                                            i41.o(String.valueOf(selectedDm.getDmId()), IssueFragment.this.dmSelectView.getSelectedDmIndex(), selectedDm.dmTags.get(i), selectedDm.allDmTags.indexOf(selectedDm.dmTags.get(i)));
+                                        for (int i2 = 0; i2 < selectedDm.dmTags.size(); i2++) {
+                                            i41.o(String.valueOf(selectedDm.getDmId()), IssueFragment.this.dmSelectView.getSelectedDmIndex(), selectedDm.dmTags.get(i2), selectedDm.allDmTags.indexOf(selectedDm.dmTags.get(i2)));
                                         }
                                     }
                                 }
@@ -2404,8 +2383,8 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
                                 } else {
                                     try {
                                         IssueFragment.this.onIssueCommentSuccess(issueResponse);
-                                    } catch (Exception e) {
-                                        e.printStackTrace();
+                                    } catch (Exception e2) {
+                                        e2.printStackTrace();
                                     }
                                 }
                                 JSONObject jSONObject = new JSONObject();
@@ -2455,8 +2434,8 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
             ArrayList arrayList = new ArrayList();
             String str = "";
             if (wh2.e(commentsItemBean.getGradeDOList()) > 0) {
-                for (int i = 0; i < commentsItemBean.getGradeDOList().size(); i++) {
-                    CommentGradeBean commentGradeBean = commentsItemBean.getGradeDOList().get(i);
+                for (int i2 = 0; i2 < commentsItemBean.getGradeDOList().size(); i2++) {
+                    CommentGradeBean commentGradeBean = commentsItemBean.getGradeDOList().get(i2);
                     if (commentGradeBean != null) {
                         if (commentGradeBean.type == 1) {
                             if (!TextUtils.isEmpty(commentGradeBean.value)) {
@@ -2536,7 +2515,7 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
         if (!TextUtils.isEmpty(str)) {
             hashMap.put("item_id", str);
         }
-        C0529c.e().G(this.mTeachGoodEvaluate, "tips", "top", i41.PAGE_EVALUATE_SUBMIT, hashMap);
+        cn.damai.common.user.c.e().G(this.mTeachGoodEvaluate, "tips", "top", i41.PAGE_EVALUATE_SUBMIT, hashMap);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -2763,13 +2742,13 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
                         this.mShowNiePhoto.setIsSortable(false);
                         this.mIsRequestLoading = 3;
                         startProgressDialog();
-                    } catch (Exception e) {
+                    } catch (Exception e2) {
                         if (z) {
                             updateCoverFail();
                         } else {
                             delVideo(true);
                         }
-                        e.printStackTrace();
+                        e2.printStackTrace();
                         if (bitmap == null) {
                             return;
                         }
@@ -2780,8 +2759,8 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
                 if (!wh2.j(initPicPath) && bitmap != null) {
                     this.coverBitmap = bitmap;
                     String str = this.mFilePath + "/coverUrl.jpg";
-                    C0535a.d(str);
-                    C0535a.u(bitmap, str);
+                    cn.damai.common.util.a.d(str);
+                    cn.damai.common.util.a.u(bitmap, str);
                     FileUploader q = FileUploader.q("damai_comment_oss");
                     this.mCoverUploader = q;
                     q.C(fileUploadListener).D(str);
@@ -2811,10 +2790,10 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
         }
     }
 
-    private void uploader(String str, long j) {
+    private void uploader(String str, long j2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1493389051")) {
-            ipChange.ipc$dispatch("1493389051", new Object[]{this, str, Long.valueOf(j)});
+            ipChange.ipc$dispatch("1493389051", new Object[]{this, str, Long.valueOf(j2)});
             return;
         }
         long currentTimeMillis = System.currentTimeMillis();
@@ -2824,7 +2803,7 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
             cb1.c("uploader fileUrl", "有网络");
             FileUploader q = FileUploader.q(rx2.MtopUploadBiz);
             this.mVideoUploader = q;
-            q.C(new C1287b(currentTimeMillis, j, str)).D(str);
+            q.C(new b(currentTimeMillis, j2, str)).D(str);
             this.mShowNiePhoto.post(new Runnable() { // from class: cn.damai.issue.IssueFragment.12
                 private static transient /* synthetic */ IpChange $ipChange;
 
@@ -2852,23 +2831,23 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
             ipChange.ipc$dispatch("-1132711629", new Object[]{this});
             return;
         }
-        int i = this.mIsRequestLoading;
-        if (i == 2) {
+        int i2 = this.mIsRequestLoading;
+        if (i2 == 2) {
             ToastUtil.i("视频上传中，请稍等");
-        } else if (i == 3) {
+        } else if (i2 == 3) {
             ToastUtil.i("封面上传中，请稍等");
         }
     }
 
-    public final <T extends View> T findViewById(@IdRes int i) {
+    public final <T extends View> T findViewById(@IdRes int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1561672264")) {
-            return (T) ipChange.ipc$dispatch("1561672264", new Object[]{this, Integer.valueOf(i)});
+            return (T) ipChange.ipc$dispatch("1561672264", new Object[]{this, Integer.valueOf(i2)});
         }
-        if (i == -1) {
+        if (i2 == -1) {
             return null;
         }
-        return (T) this.rootView.findViewById(i);
+        return (T) this.rootView.findViewById(i2);
     }
 
     @Override // cn.damai.issue.tool.IDraftContentProvider
@@ -3009,10 +2988,10 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
     }
 
     @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
-    public void handleError(int i) {
+    public void handleError(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "219487622")) {
-            ipChange.ipc$dispatch("219487622", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("219487622", new Object[]{this, Integer.valueOf(i2)});
         } else {
             getRenderTags();
         }
@@ -3039,7 +3018,7 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
             HashMap hashMap = new HashMap();
             hashMap.put("usercode", z20.E());
             i41.m(hashMap);
-            C0529c.e().G(this.mIssueTitleConfirm, "release", "bottom", i41.PAGE_EVALUATE_SUBMIT, hashMap);
+            cn.damai.common.user.c.e().G(this.mIssueTitleConfirm, "release", "bottom", i41.PAGE_EVALUATE_SUBMIT, hashMap);
             registerListener();
             initSetting();
             setDamaiUTKeyBuilder(i41.i().j());
@@ -3064,23 +3043,23 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
     }
 
     @Override // androidx.fragment.app.Fragment
-    public void onActivityResult(int i, int i2, Intent intent) {
+    public void onActivityResult(int i2, int i3, Intent intent) {
         String str;
         String str2;
         String str3;
         String str4;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1441805313")) {
-            ipChange.ipc$dispatch("-1441805313", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), intent});
+            ipChange.ipc$dispatch("-1441805313", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3), intent});
             return;
         }
-        super.onActivityResult(i, i2, intent);
+        super.onActivityResult(i2, i3, intent);
         cb1.b("wpf", "onActivityResult/in data:");
-        if (i2 == -1) {
-            if (i == 17) {
+        if (i3 == -1) {
+            if (i2 == 17) {
                 onSelectAlbumResult(intent, "1");
-            } else if (i != 18) {
-                switch (i) {
+            } else if (i2 != 18) {
+                switch (i2) {
                     case 103:
                         if (intent != null && "3".equals(intent.getStringExtra(IssueConstants.privilegeType))) {
                             String stringExtra = intent.getStringExtra("projectName");
@@ -3126,7 +3105,7 @@ public class IssueFragment extends DamaiBaseMvpFragment implements DMCommentSubI
                         }
                         return;
                     default:
-                        switch (i) {
+                        switch (i2) {
                             case 1000:
                                 requestIssue();
                                 return;

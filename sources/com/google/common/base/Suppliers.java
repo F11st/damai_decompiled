@@ -35,7 +35,7 @@ public final class Suppliers {
         @Override // com.google.common.base.Supplier
         public T get() {
             long j = this.expirationNanos;
-            long f = C4838f.f();
+            long f = f.f();
             if (j == 0 || f - j >= 0) {
                 synchronized (this) {
                     if (j == this.expirationNanos) {

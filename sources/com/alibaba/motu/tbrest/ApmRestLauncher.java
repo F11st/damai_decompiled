@@ -2,8 +2,8 @@ package com.alibaba.motu.tbrest;
 
 import android.app.Application;
 import com.alibaba.motu.tbrest.rest.RestReqSend;
-import com.taobao.application.common.C6673b;
 import com.taobao.application.common.IApmEventListener;
+import com.taobao.application.common.b;
 import java.io.Serializable;
 import java.util.HashMap;
 
@@ -31,6 +31,6 @@ public class ApmRestLauncher implements Serializable {
             return;
         }
         init = true;
-        C6673b.a(new ApmListener());
+        b.a(new ApmListener());
     }
 }

@@ -18,7 +18,7 @@ import tb.yt2;
 /* compiled from: Taobao */
 @GwtCompatible
 /* loaded from: classes10.dex */
-public abstract class AggregateFuture<InputT, OutputT> extends AbstractFuture.AbstractC5300g<OutputT> {
+public abstract class AggregateFuture<InputT, OutputT> extends AbstractFuture.g<OutputT> {
     private static final Logger b = Logger.getLogger(AggregateFuture.class.getName());
     @NullableDecl
     private AggregateFuture<InputT, OutputT>.RunningState a;
@@ -26,7 +26,7 @@ public abstract class AggregateFuture<InputT, OutputT> extends AbstractFuture.Ab
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
-    public abstract class RunningState extends AbstractC5339d implements Runnable {
+    public abstract class RunningState extends d implements Runnable {
         private final boolean allMustSucceed;
         private final boolean collectsValues;
         private ImmutableCollection<? extends ListenableFuture<? extends InputT>> futures;
@@ -164,7 +164,7 @@ public abstract class AggregateFuture<InputT, OutputT> extends AbstractFuture.Ab
             handleAllCompleted();
         }
 
-        @Override // com.google.common.util.concurrent.AbstractC5339d
+        @Override // com.google.common.util.concurrent.d
         final void addInitialException(Set<Throwable> set) {
             if (AggregateFuture.this.isCancelled()) {
                 return;

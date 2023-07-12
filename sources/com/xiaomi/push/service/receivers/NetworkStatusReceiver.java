@@ -4,8 +4,6 @@ import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
-import com.xiaomi.mipush.sdk.C7564b;
 import com.xiaomi.mipush.sdk.COSPushHelper;
 import com.xiaomi.mipush.sdk.FTOSPushHelper;
 import com.xiaomi.mipush.sdk.HWPushHelper;
@@ -13,9 +11,10 @@ import com.xiaomi.mipush.sdk.MiPushClient;
 import com.xiaomi.mipush.sdk.af;
 import com.xiaomi.mipush.sdk.ao;
 import com.xiaomi.mipush.sdk.au;
-import com.xiaomi.push.C7690o;
+import com.xiaomi.mipush.sdk.b;
 import com.xiaomi.push.bj;
 import com.xiaomi.push.hb;
+import com.xiaomi.push.o;
 import com.xiaomi.push.service.ServiceClient;
 
 /* compiled from: Taobao */
@@ -36,14 +35,14 @@ public class NetworkStatusReceiver extends BroadcastReceiver {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void a(Context context) {
-        if (!ao.a(context).m622a() && C7564b.m629a(context).m638c() && !C7564b.m629a(context).m641f()) {
+        if (!ao.a(context).m622a() && b.m629a(context).m638c() && !b.m629a(context).m641f()) {
             try {
                 Intent intent = new Intent();
                 intent.setComponent(new ComponentName(context, "com.xiaomi.push.service.XMPushService"));
                 intent.setAction("com.xiaomi.push.network_status_changed");
                 ServiceClient.getInstance(context).startServiceSafely(intent);
             } catch (Exception e) {
-                AbstractC7535b.a(e);
+                com.xiaomi.channel.commonutils.logger.b.a(e);
             }
         }
         hb.m949a(context);
@@ -87,6 +86,6 @@ public class NetworkStatusReceiver extends BroadcastReceiver {
         if (this.b) {
             return;
         }
-        C7690o.a().post(new RunnableC7774a(this, context));
+        o.a().post(new a(this, context));
     }
 }

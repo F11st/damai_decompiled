@@ -31,9 +31,8 @@ public class Luban implements Handler.Callback {
     private Handler h;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.image.luban.Luban$a */
     /* loaded from: classes13.dex */
-    public static class C0513a {
+    public static class a {
         private static transient /* synthetic */ IpChange $ipChange;
         private Context a;
         private String b;
@@ -44,13 +43,13 @@ public class Luban implements Handler.Callback {
         private List<InputStreamProvider> g = new ArrayList();
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.common.image.luban.Luban$a$a */
+        /* renamed from: cn.damai.common.image.luban.Luban$a$a  reason: collision with other inner class name */
         /* loaded from: classes4.dex */
-        public class C0514a implements InputStreamProvider {
+        public class C0025a implements InputStreamProvider {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ String a;
 
-            C0514a(C0513a c0513a, String str) {
+            C0025a(a aVar, String str) {
                 this.a = str;
             }
 
@@ -68,13 +67,12 @@ public class Luban implements Handler.Callback {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.common.image.luban.Luban$a$b */
         /* loaded from: classes4.dex */
-        public class C0515b implements InputStreamProvider {
+        public class b implements InputStreamProvider {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ String a;
 
-            C0515b(C0513a c0513a, String str) {
+            b(a aVar, String str) {
                 this.a = str;
             }
 
@@ -91,7 +89,7 @@ public class Luban implements Handler.Callback {
             }
         }
 
-        C0513a(Context context) {
+        a(Context context) {
             this.a = context;
         }
 
@@ -102,13 +100,13 @@ public class Luban implements Handler.Callback {
 
         public File h(String str) throws IOException {
             IpChange ipChange = $ipChange;
-            return AndroidInstantRuntime.support(ipChange, "-386196541") ? (File) ipChange.ipc$dispatch("-386196541", new Object[]{this, str}) : g().f(new C0515b(this, str), this.a);
+            return AndroidInstantRuntime.support(ipChange, "-386196541") ? (File) ipChange.ipc$dispatch("-386196541", new Object[]{this, str}) : g().f(new b(this, str), this.a);
         }
 
-        public C0513a i(int i) {
+        public a i(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "880876978")) {
-                return (C0513a) ipChange.ipc$dispatch("880876978", new Object[]{this, Integer.valueOf(i)});
+                return (a) ipChange.ipc$dispatch("880876978", new Object[]{this, Integer.valueOf(i)});
             }
             this.c = i;
             return this;
@@ -123,37 +121,37 @@ public class Luban implements Handler.Callback {
             }
         }
 
-        public C0513a k(String str) {
+        public a k(String str) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-881384590")) {
-                return (C0513a) ipChange.ipc$dispatch("-881384590", new Object[]{this, str});
+                return (a) ipChange.ipc$dispatch("-881384590", new Object[]{this, str});
             }
-            this.g.add(new C0514a(this, str));
+            this.g.add(new C0025a(this, str));
             return this;
         }
 
-        public C0513a l(OnCompressListener onCompressListener) {
+        public a l(OnCompressListener onCompressListener) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1115681228")) {
-                return (C0513a) ipChange.ipc$dispatch("1115681228", new Object[]{this, onCompressListener});
+                return (a) ipChange.ipc$dispatch("1115681228", new Object[]{this, onCompressListener});
             }
             this.e = onCompressListener;
             return this;
         }
 
-        public C0513a m(OnRenameListener onRenameListener) {
+        public a m(OnRenameListener onRenameListener) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-160099884")) {
-                return (C0513a) ipChange.ipc$dispatch("-160099884", new Object[]{this, onRenameListener});
+                return (a) ipChange.ipc$dispatch("-160099884", new Object[]{this, onRenameListener});
             }
             this.d = onRenameListener;
             return this;
         }
 
-        public C0513a n(String str) {
+        public a n(String str) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-2007027746")) {
-                return (C0513a) ipChange.ipc$dispatch("-2007027746", new Object[]{this, str});
+                return (a) ipChange.ipc$dispatch("-2007027746", new Object[]{this, str});
             }
             this.b = str;
             return this;
@@ -175,11 +173,11 @@ public class Luban implements Handler.Callback {
         CompressionPredicate compressionPredicate = this.f;
         if (compressionPredicate != null) {
             if (compressionPredicate.apply(inputStreamProvider.getPath()) && checker.needCompress(this.c, inputStreamProvider.getPath())) {
-                return new C0516a(inputStreamProvider, i, this.b).a();
+                return new cn.damai.common.image.luban.a(inputStreamProvider, i, this.b).a();
             }
             return new File(inputStreamProvider.getPath());
         } else if (checker.needCompress(this.c, inputStreamProvider.getPath())) {
-            return new C0516a(inputStreamProvider, i, this.b).a();
+            return new cn.damai.common.image.luban.a(inputStreamProvider, i, this.b).a();
         } else {
             return new File(inputStreamProvider.getPath());
         }
@@ -188,7 +186,7 @@ public class Luban implements Handler.Callback {
     /* JADX INFO: Access modifiers changed from: private */
     public File f(InputStreamProvider inputStreamProvider, Context context) throws IOException {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1277884262") ? (File) ipChange.ipc$dispatch("-1277884262", new Object[]{this, inputStreamProvider, context}) : new C0516a(inputStreamProvider, i(context, Checker.SINGLE.extSuffix(inputStreamProvider)), this.b).a();
+        return AndroidInstantRuntime.support(ipChange, "-1277884262") ? (File) ipChange.ipc$dispatch("-1277884262", new Object[]{this, inputStreamProvider, context}) : new cn.damai.common.image.luban.a(inputStreamProvider, i(context, Checker.SINGLE.extSuffix(inputStreamProvider)), this.b).a();
     }
 
     private File g(Context context) {
@@ -282,9 +280,9 @@ public class Luban implements Handler.Callback {
         }
     }
 
-    public static C0513a l(Context context) {
+    public static a l(Context context) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "287689835") ? (C0513a) ipChange.ipc$dispatch("287689835", new Object[]{context}) : new C0513a(context);
+        return AndroidInstantRuntime.support(ipChange, "287689835") ? (a) ipChange.ipc$dispatch("287689835", new Object[]{context}) : new a(context);
     }
 
     @Override // android.os.Handler.Callback
@@ -308,13 +306,13 @@ public class Luban implements Handler.Callback {
         return false;
     }
 
-    private Luban(C0513a c0513a) {
-        this.a = c0513a.b;
-        this.d = c0513a.d;
-        this.g = c0513a.g;
-        this.e = c0513a.e;
-        this.c = c0513a.c;
-        this.f = c0513a.f;
+    private Luban(a aVar) {
+        this.a = aVar.b;
+        this.d = aVar.d;
+        this.g = aVar.g;
+        this.e = aVar.e;
+        this.c = aVar.c;
+        this.f = aVar.f;
         this.h = new Handler(Looper.getMainLooper(), this);
     }
 }

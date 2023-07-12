@@ -14,7 +14,6 @@ import com.taobao.android.dinamic.R$id;
 import com.taobao.android.dinamic.R$layout;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
 import com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode;
-import com.taobao.android.dinamicx.widget.calander.C6487a;
 import com.taobao.android.dinamicx.widget.calander.Calendar;
 import com.taobao.android.dinamicx.widget.calander.CalendarView;
 import java.util.ArrayList;
@@ -64,14 +63,13 @@ public class qt extends DXWidgetNode {
     private int o = 0;
     private boolean p = true;
     private int r = -13421773;
-    private final CalendarView.OnMonthChangeListener s = new C9624c();
-    private final CalendarView.OnMonthUIRangeChangeListener t = new C9625d();
+    private final CalendarView.OnMonthChangeListener s = new c();
+    private final CalendarView.OnMonthUIRangeChangeListener t = new d();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qt$a */
     /* loaded from: classes11.dex */
-    class View$OnClickListenerC9622a implements View.OnClickListener {
-        View$OnClickListenerC9622a() {
+    class a implements View.OnClickListener {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -81,10 +79,9 @@ public class qt extends DXWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qt$b */
     /* loaded from: classes11.dex */
-    class View$OnClickListenerC9623b implements View.OnClickListener {
-        View$OnClickListenerC9623b() {
+    class b implements View.OnClickListener {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -94,10 +91,9 @@ public class qt extends DXWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qt$c */
     /* loaded from: classes11.dex */
-    class C9624c implements CalendarView.OnMonthChangeListener {
-        C9624c() {
+    class c implements CalendarView.OnMonthChangeListener {
+        c() {
         }
 
         @Override // com.taobao.android.dinamicx.widget.calander.CalendarView.OnMonthChangeListener
@@ -108,10 +104,9 @@ public class qt extends DXWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qt$d */
     /* loaded from: classes11.dex */
-    class C9625d implements CalendarView.OnMonthUIRangeChangeListener {
-        C9625d() {
+    class d implements CalendarView.OnMonthUIRangeChangeListener {
+        d() {
         }
 
         @Override // com.taobao.android.dinamicx.widget.calander.CalendarView.OnMonthUIRangeChangeListener
@@ -132,9 +127,8 @@ public class qt extends DXWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qt$e */
     /* loaded from: classes11.dex */
-    public static class C9626e implements IDXBuilderWidgetNode {
+    public static class e implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(Object obj) {
             return new qt();
@@ -142,10 +136,9 @@ public class qt extends DXWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qt$f */
     /* loaded from: classes11.dex */
-    private class C9627f implements CalendarView.OnCalendarSelectListener {
-        private C9627f() {
+    private class f implements CalendarView.OnCalendarSelectListener {
+        private f() {
         }
 
         @Override // com.taobao.android.dinamicx.widget.calander.CalendarView.OnCalendarSelectListener
@@ -161,7 +154,7 @@ public class qt extends DXWidgetNode {
             }
         }
 
-        /* synthetic */ C9627f(qt qtVar, View$OnClickListenerC9622a view$OnClickListenerC9622a) {
+        /* synthetic */ f(qt qtVar, a aVar) {
             this();
         }
     }
@@ -172,7 +165,7 @@ public class qt extends DXWidgetNode {
 
     private HashMap<String, Calendar> d() {
         String key;
-        Calendar e;
+        Calendar e2;
         JSONObject jSONObject = this.n;
         if (jSONObject == null || jSONObject.isEmpty()) {
             return null;
@@ -180,17 +173,17 @@ public class qt extends DXWidgetNode {
         HashMap<String, Calendar> hashMap = new HashMap<>();
         for (Map.Entry<String, Object> entry : this.n.entrySet()) {
             Object value = entry.getValue();
-            if ((value instanceof JSONObject) && (e = e((key = entry.getKey()))) != null) {
+            if ((value instanceof JSONObject) && (e2 = e((key = entry.getKey()))) != null) {
                 JSONObject jSONObject2 = (JSONObject) value;
-                e.setBooked(jSONObject2.getBooleanValue("booked"));
+                e2.setBooked(jSONObject2.getBooleanValue("booked"));
                 JSONObject jSONObject3 = jSONObject2.getJSONObject("activityInfo");
                 if (jSONObject3 != null) {
-                    Calendar.C6483a c6483a = new Calendar.C6483a();
-                    c6483a.a = jSONObject3.getString("title");
-                    c6483a.b = jSONObject3.getString("color");
-                    e.setCalendarInfo(c6483a);
+                    Calendar.a aVar = new Calendar.a();
+                    aVar.a = jSONObject3.getString("title");
+                    aVar.b = jSONObject3.getString("color");
+                    e2.setCalendarInfo(aVar);
                 }
-                hashMap.put(key, e);
+                hashMap.put(key, e2);
             }
         }
         return hashMap;
@@ -211,8 +204,8 @@ public class qt extends DXWidgetNode {
     }
 
     private List<Pair<Calendar, Calendar>> f() {
-        Calendar e;
         Calendar e2;
+        Calendar e3;
         JSONArray jSONArray = this.m;
         if (jSONArray == null || jSONArray.isEmpty()) {
             return null;
@@ -222,8 +215,8 @@ public class qt extends DXWidgetNode {
             String string = this.m.getString(i);
             if (!TextUtils.isEmpty(string)) {
                 String[] split = string.split(",");
-                if (split.length == 2 && (e = e(split[0])) != null && (e2 = e(split[1])) != null) {
-                    arrayList.add(new Pair(e, e2));
+                if (split.length == 2 && (e2 = e(split[0])) != null && (e3 = e(split[1])) != null) {
+                    arrayList.add(new Pair(e2, e3));
                 }
             }
         }
@@ -262,15 +255,15 @@ public class qt extends DXWidgetNode {
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.taobao.android.dinamicx.widget.DXWidgetNode
     public View onCreateView(Context context) {
-        View a = e10.a(context, R$layout.datepicker_widget);
-        this.k = (CalendarView) a.findViewById(R$id.calendarView);
-        this.l = (TextView) a.findViewById(R$id.tv_cur_month);
+        View a2 = e10.a(context, R$layout.datepicker_widget);
+        this.k = (CalendarView) a2.findViewById(R$id.calendarView);
+        this.l = (TextView) a2.findViewById(R$id.tv_cur_month);
         int i = R$id.iv_left;
-        ImageView imageView = (ImageView) a.findViewById(i);
+        ImageView imageView = (ImageView) a2.findViewById(i);
         int i2 = R$id.iv_right;
-        ImageView imageView2 = (ImageView) a.findViewById(i2);
-        imageView.setOnClickListener(new View$OnClickListenerC9622a());
-        imageView2.setOnClickListener(new View$OnClickListenerC9623b());
+        ImageView imageView2 = (ImageView) a2.findViewById(i2);
+        imageView.setOnClickListener(new a());
+        imageView2.setOnClickListener(new b());
         int i3 = this.e;
         if (i3 != 0) {
             this.k.setDayTextSize(i3);
@@ -282,10 +275,10 @@ public class qt extends DXWidgetNode {
         this.k.setCalendarItemHeight(this.j);
         this.k.setOnMonthChangeListener(this.s);
         this.k.setOnMonthUIRangeChangeListener(this.t);
-        a.setTag(R$id.dx_date_picker_view_tag, this.k);
+        a2.setTag(R$id.dx_date_picker_view_tag, this.k);
         this.k.setTag(i, imageView);
         this.k.setTag(i2, imageView2);
-        return a;
+        return a2;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -295,12 +288,12 @@ public class qt extends DXWidgetNode {
             super.onMeasure(i, i2);
             return;
         }
-        int c = C6487a.c(getDXRuntimeContext().getContext(), 50.0f);
+        int c2 = com.taobao.android.dinamicx.widget.calander.a.c(getDXRuntimeContext().getContext(), 50.0f);
         int i3 = this.j;
         if (i3 <= 0) {
-            i3 = C6487a.c(getDXRuntimeContext().getContext(), 56.0f);
+            i3 = com.taobao.android.dinamicx.widget.calander.a.c(getDXRuntimeContext().getContext(), 56.0f);
         }
-        setMeasuredDimension(i, c + C6487a.c(getDXRuntimeContext().getContext(), 40.0f) + this.q + (i3 * 6));
+        setMeasuredDimension(i, c2 + com.taobao.android.dinamicx.widget.calander.a.c(getDXRuntimeContext().getContext(), 40.0f) + this.q + (i3 * 6));
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -329,16 +322,16 @@ public class qt extends DXWidgetNode {
         this.k.setDateTextFont(this.g);
         this.k.setScrollable(this.p);
         this.k.setAutoChangeMonth(this.b);
-        this.k.setOnCalendarSelectListener(new C9627f(this, null));
-        Calendar e = e(this.c);
-        Calendar e2 = e(this.f);
-        Calendar e3 = e(this.a);
-        List<Pair<Calendar, Calendar>> f = f();
-        HashMap<String, Calendar> d = d();
-        if (e != null) {
-            int year = e.getYear();
-            int month = e.getMonth();
-            i3 = e.getDay();
+        this.k.setOnCalendarSelectListener(new f(this, null));
+        Calendar e2 = e(this.c);
+        Calendar e3 = e(this.f);
+        Calendar e4 = e(this.a);
+        List<Pair<Calendar, Calendar>> f2 = f();
+        HashMap<String, Calendar> d2 = d();
+        if (e2 != null) {
+            int year = e2.getYear();
+            int month = e2.getMonth();
+            i3 = e2.getDay();
             i = year;
             i2 = month;
         } else {
@@ -346,26 +339,26 @@ public class qt extends DXWidgetNode {
             i2 = 1;
             i3 = 1;
         }
-        if (e2 != null) {
-            int year2 = e2.getYear();
-            int month2 = e2.getMonth();
+        if (e3 != null) {
+            int year2 = e3.getYear();
+            int month2 = e3.getMonth();
             i4 = year2;
-            i6 = e2.getDay();
+            i6 = e3.getDay();
             i5 = month2;
         } else {
             i4 = GLMapStaticValue.MAP_PARAMETERNAME_POLYGON_FILL_CONTROL;
             i5 = 12;
             i6 = -1;
         }
-        this.k.setAnchorCalendar(e3);
-        this.k.setRange(i, i2, i3, i4, i5, i6, f, d);
-        if (e3 != null && this.k.isInRange(e3)) {
-            this.k.scrollToCalendar(e3.getYear(), e3.getMonth(), e3.getDay(), false, false, false);
+        this.k.setAnchorCalendar(e4);
+        this.k.setRange(i, i2, i3, i4, i5, i6, f2, d2);
+        if (e4 != null && this.k.isInRange(e4)) {
+            this.k.scrollToCalendar(e4.getYear(), e4.getMonth(), e4.getDay(), false, false, false);
             return;
         }
-        Calendar e4 = e(this.i);
-        if (e4 != null && this.k.isInRange(e4)) {
-            this.k.scrollToCalendar(e4.getYear(), e4.getMonth(), e4.getDay());
+        Calendar e5 = e(this.i);
+        if (e5 != null && this.k.isInRange(e5)) {
+            this.k.scrollToCalendar(e5.getYear(), e5.getMonth(), e5.getDay());
         } else {
             this.k.scrollToCalendar(i, i2, i3, false, false, false);
         }

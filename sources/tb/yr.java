@@ -13,15 +13,14 @@ public class yr {
     private HashMap<String, EventCenter> a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yr$b */
     /* loaded from: classes6.dex */
-    private static class C9997b {
+    private static class b {
         private static final yr a = new yr();
     }
 
     public static yr c() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1755104352") ? (yr) ipChange.ipc$dispatch("1755104352", new Object[0]) : C9997b.a;
+        return AndroidInstantRuntime.support(ipChange, "1755104352") ? (yr) ipChange.ipc$dispatch("1755104352", new Object[0]) : b.a;
     }
 
     private EventCenter d(String str) {

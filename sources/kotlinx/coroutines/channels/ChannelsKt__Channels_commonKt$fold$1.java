@@ -34,6 +34,6 @@ public final class ChannelsKt__Channels_commonKt$fold$1 extends ContinuationImpl
     public final Object invokeSuspend(@NotNull Object obj) {
         this.result = obj;
         this.label |= Integer.MIN_VALUE;
-        return C8648b.G(null, null, null, this);
+        return b.G(null, null, null, this);
     }
 }

@@ -118,7 +118,7 @@ public class RadialViewGroup extends ConstraintLayout {
 
     public RadialViewGroup(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        LayoutInflater.from(context).inflate(R.C4818layout.material_radial_view_group, this);
+        LayoutInflater.from(context).inflate(R.layout.material_radial_view_group, this);
         ViewCompat.setBackground(this, createBackground());
         TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.RadialViewGroup, i, 0);
         this.radius = obtainStyledAttributes.getDimensionPixelSize(R.styleable.RadialViewGroup_materialCircleRadius, 0);

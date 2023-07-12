@@ -25,7 +25,7 @@ public class YKFavoriteButton extends FrameLayout {
     }
 
     private void init(Context context) {
-        this.lottieAnimationView = (LottieAnimationView) LayoutInflater.from(context).inflate(R.C8074layout.resource_yk_fav_button, (ViewGroup) this, true).findViewById(R.id.favorite_button);
+        this.lottieAnimationView = (LottieAnimationView) LayoutInflater.from(context).inflate(R.layout.resource_yk_fav_button, (ViewGroup) this, true).findViewById(R.id.favorite_button);
         if (!Utils.isDebug(context) && YoukuDeviceInfoProviderProxy.getDeviceScore() <= 80) {
             this.animate = false;
         } else {
@@ -47,19 +47,19 @@ public class YKFavoriteButton extends FrameLayout {
             this.lottieAnimationView.playAnimation();
             this.clicked = true;
         } else if (this.clicked) {
-            this.lottieAnimationView.setImageResource(R.C8072drawable.yk_button_fav_cancel);
+            this.lottieAnimationView.setImageResource(R.drawable.yk_button_fav_cancel);
             this.clicked = false;
         } else {
-            this.lottieAnimationView.setImageResource(R.C8072drawable.yk_button_fav_confim);
+            this.lottieAnimationView.setImageResource(R.drawable.yk_button_fav_confim);
             this.clicked = true;
         }
     }
 
     public void setInitState(boolean z) {
         if (z) {
-            this.lottieAnimationView.setImageResource(R.C8072drawable.yk_button_fav_confim);
+            this.lottieAnimationView.setImageResource(R.drawable.yk_button_fav_confim);
         } else {
-            this.lottieAnimationView.setImageResource(R.C8072drawable.yk_button_fav_cancel);
+            this.lottieAnimationView.setImageResource(R.drawable.yk_button_fav_cancel);
         }
         this.clicked = z;
     }

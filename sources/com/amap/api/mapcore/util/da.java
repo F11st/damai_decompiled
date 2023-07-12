@@ -40,8 +40,8 @@ public class da implements IInfoWindowManager, IInfoWindowAction, IOverlayDelega
     private GLAnimation H;
     private GLAnimation I;
     IAMapDelegate a;
-    C4501a c;
-    C4479ar f;
+    a c;
+    ar f;
     private Context g;
     private BaseOverlayImp h;
     private FPoint n;
@@ -77,14 +77,13 @@ public class da implements IInfoWindowManager, IInfoWindowAction, IOverlayDelega
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.da$a */
     /* loaded from: classes10.dex */
-    public static class C4501a extends dd {
+    public static class a extends dd {
         int a;
         int b;
         int c;
 
-        C4501a(String str) {
+        a(String str) {
             if (a(str)) {
                 this.a = c("aMVP");
                 this.b = b("aVertex");
@@ -392,9 +391,9 @@ public class da implements IInfoWindowManager, IInfoWindowAction, IOverlayDelega
     }
 
     @Override // com.autonavi.base.amap.api.mapcore.infowindow.IInfoWindowAction
-    public void setInfoWindowAdapterManager(C4479ar c4479ar) {
+    public void setInfoWindowAdapterManager(ar arVar) {
         synchronized (this) {
-            this.f = c4479ar;
+            this.f = arVar;
         }
     }
 
@@ -527,7 +526,7 @@ public class da implements IInfoWindowManager, IInfoWindowAction, IOverlayDelega
     }
 
     public void d() {
-        this.c = new C4501a("texture.glsl");
+        this.c = new a("texture.glsl");
     }
 
     protected void e() {
@@ -576,30 +575,30 @@ public class da implements IInfoWindowManager, IInfoWindowAction, IOverlayDelega
             BaseOverlayImp baseOverlayImp = this.h;
             if (baseOverlayImp instanceof cu) {
                 Marker marker = new Marker((IMarker) baseOverlayImp);
-                C4479ar c4479ar = this.f;
-                if (c4479ar != null) {
-                    Bitmap a = a(c4479ar.a((BasePointOverlay) marker));
-                    if (a == null && (b2 = this.f.b((BasePointOverlay) marker)) != null) {
+                ar arVar = this.f;
+                if (arVar != null) {
+                    Bitmap a2 = a(arVar.a((BasePointOverlay) marker));
+                    if (a2 == null && (b2 = this.f.b((BasePointOverlay) marker)) != null) {
                         if (b2.getBackground() == null) {
                             b2.setBackground(this.f.g());
                         }
-                        a = a(b2);
+                        a2 = a(b2);
                     }
-                    a(a);
+                    a(a2);
                     d(a(this.f.a(marker)));
                     e(a(this.f.b(marker)));
                     f(a(this.f.c(marker)));
                 }
             } else if (this.f != null) {
                 GL3DModel gL3DModel = new GL3DModel((cr) baseOverlayImp);
-                Bitmap a2 = a(this.f.a(gL3DModel));
-                if (a2 == null && (b = this.f.b(gL3DModel)) != null) {
+                Bitmap a3 = a(this.f.a(gL3DModel));
+                if (a3 == null && (b = this.f.b(gL3DModel)) != null) {
                     if (b.getBackground() == null) {
                         b.setBackground(this.f.g());
                     }
-                    a2 = a(b);
+                    a3 = a(b);
                 }
-                a(a2);
+                a(a3);
             }
         } catch (Throwable th) {
             hd.c(th, "PopupOverlay", "getInfoWindow");

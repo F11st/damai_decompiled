@@ -29,7 +29,7 @@ import tb.z01;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class QuickRemoteChannel extends AbstractC6693b {
+public class QuickRemoteChannel extends b {
     private static final String f = "QuickRemoteChannel";
     private static final Set<String> g = new CopyOnWriteArraySet();
     private final Uri c;
@@ -131,7 +131,7 @@ public class QuickRemoteChannel extends AbstractC6693b {
         return this.e;
     }
 
-    @Override // com.taobao.aranger.core.ipc.channel.AbstractC6693b
+    @Override // com.taobao.aranger.core.ipc.channel.b
     public void c() throws IPCException {
         try {
             i(this.c).connect();
@@ -146,7 +146,7 @@ public class QuickRemoteChannel extends AbstractC6693b {
         }
     }
 
-    @Override // com.taobao.aranger.core.ipc.channel.AbstractC6693b
+    @Override // com.taobao.aranger.core.ipc.channel.b
     public Reply d(Call call) throws IPCException {
         try {
             return i(this.c).sendCall(call);

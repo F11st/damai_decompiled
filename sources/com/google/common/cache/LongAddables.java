@@ -32,17 +32,16 @@ final class LongAddables {
             return get();
         }
 
-        /* synthetic */ PureJavaLongAddable(C4887a c4887a) {
+        /* synthetic */ PureJavaLongAddable(a aVar) {
             this();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.cache.LongAddables$a */
     /* loaded from: classes10.dex */
-    public static class C4887a implements Supplier<LongAddable> {
-        C4887a() {
+    public static class a implements Supplier<LongAddable> {
+        a() {
         }
 
         @Override // com.google.common.base.Supplier
@@ -53,10 +52,9 @@ final class LongAddables {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.cache.LongAddables$b */
     /* loaded from: classes10.dex */
-    static class C4888b implements Supplier<LongAddable> {
-        C4888b() {
+    static class b implements Supplier<LongAddable> {
+        b() {
         }
 
         @Override // com.google.common.base.Supplier
@@ -67,14 +65,14 @@ final class LongAddables {
     }
 
     static {
-        Supplier<LongAddable> c4888b;
+        Supplier<LongAddable> bVar;
         try {
             new LongAdder();
-            c4888b = new C4887a();
+            bVar = new a();
         } catch (Throwable unused) {
-            c4888b = new C4888b();
+            bVar = new b();
         }
-        a = c4888b;
+        a = bVar;
     }
 
     public static LongAddable a() {

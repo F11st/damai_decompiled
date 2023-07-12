@@ -24,21 +24,20 @@ import tb.sm1;
 /* loaded from: classes7.dex */
 public class RegionPresenter extends RegionContract.Presenter {
     private static transient /* synthetic */ IpChange $ipChange;
-    private OnJpgRegionUiListener mUiListener = new C1680a();
+    private OnJpgRegionUiListener mUiListener = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.presenter.RegionPresenter$a */
     /* loaded from: classes7.dex */
-    public class C1680a implements OnJpgRegionUiListener {
+    public class a implements OnJpgRegionUiListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.seat.presenter.RegionPresenter$a$a */
+        /* renamed from: cn.damai.seat.presenter.RegionPresenter$a$a  reason: collision with other inner class name */
         /* loaded from: classes7.dex */
-        public class C1681a extends sm1 {
+        public class C0072a extends sm1 {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1681a() {
+            C0072a() {
             }
 
             @Override // tb.sm1
@@ -52,7 +51,7 @@ public class RegionPresenter extends RegionContract.Presenter {
             }
         }
 
-        C1680a() {
+        a() {
         }
 
         @Override // cn.damai.seat.listener.seatui.ApiType
@@ -63,7 +62,7 @@ public class RegionPresenter extends RegionContract.Presenter {
                 return;
             }
             ((RegionContract.RegionView) RegionPresenter.this.mView).showLoading(false);
-            ((RegionContract.RegionView) RegionPresenter.this.mView).showErrorView(str, str2, str3, new C1681a());
+            ((RegionContract.RegionView) RegionPresenter.this.mView).showErrorView(str, str2, str3, new C0072a());
         }
 
         @Override // cn.damai.seat.listener.seatui.ApiType
@@ -112,12 +111,11 @@ public class RegionPresenter extends RegionContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.presenter.RegionPresenter$b */
     /* loaded from: classes7.dex */
-    public class C1682b implements SimpleCallBack<TbParams> {
+    public class b implements SimpleCallBack<TbParams> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1682b() {
+        b() {
         }
 
         @Override // cn.damai.seat.listener.SimpleCallBack
@@ -143,19 +141,17 @@ public class RegionPresenter extends RegionContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.presenter.RegionPresenter$c */
     /* loaded from: classes7.dex */
-    public class C1683c implements OnPerformListener {
+    public class c implements OnPerformListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ClickedPerform a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.seat.presenter.RegionPresenter$c$a */
         /* loaded from: classes7.dex */
-        public class C1684a extends sm1 {
+        public class a extends sm1 {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1684a() {
+            a() {
             }
 
             @Override // tb.sm1
@@ -165,12 +161,12 @@ public class RegionPresenter extends RegionContract.Presenter {
                     ipChange.ipc$dispatch("-561301159", new Object[]{this, Integer.valueOf(i)});
                     return;
                 }
-                C1683c c1683c = C1683c.this;
-                RegionPresenter.this.doPerformChanged(c1683c.a);
+                c cVar = c.this;
+                RegionPresenter.this.doPerformChanged(cVar.a);
             }
         }
 
-        C1683c(ClickedPerform clickedPerform) {
+        c(ClickedPerform clickedPerform) {
             this.a = clickedPerform;
         }
 
@@ -190,7 +186,7 @@ public class RegionPresenter extends RegionContract.Presenter {
             if (AndroidInstantRuntime.support(ipChange, "-1774627592")) {
                 ipChange.ipc$dispatch("-1774627592", new Object[]{this, str, str2});
             } else {
-                ((RegionContract.RegionView) RegionPresenter.this.mView).showErrorView(str, str2, null, new C1684a());
+                ((RegionContract.RegionView) RegionPresenter.this.mView).showErrorView(str, str2, null, new a());
             }
         }
 
@@ -222,7 +218,7 @@ public class RegionPresenter extends RegionContract.Presenter {
         if (AndroidInstantRuntime.support(ipChange, "790736265")) {
             ipChange.ipc$dispatch("790736265", new Object[]{this, clickedPerform});
         } else {
-            ((RegionContract.RegionModel) this.mModel).changePerform(clickedPerform, new C1683c(clickedPerform));
+            ((RegionContract.RegionModel) this.mModel).changePerform(clickedPerform, new c(clickedPerform));
         }
     }
 
@@ -295,7 +291,7 @@ public class RegionPresenter extends RegionContract.Presenter {
         if (AndroidInstantRuntime.support(ipChange, "959576767")) {
             ipChange.ipc$dispatch("959576767", new Object[]{this, tbParams});
         } else {
-            ((RegionContract.RegionModel) this.mModel).prepare(tbParams, new C1682b());
+            ((RegionContract.RegionModel) this.mModel).prepare(tbParams, new b());
         }
     }
 }

@@ -21,10 +21,9 @@ public class nn1 implements IRemoteConfig {
     private static boolean a = true;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.nn1$a */
     /* loaded from: classes.dex */
-    class C9478a implements OrangeConfigListenerV1 {
-        C9478a() {
+    class a implements OrangeConfigListenerV1 {
+        a() {
         }
 
         @Override // com.taobao.orange.OrangeConfigListenerV1
@@ -80,13 +79,13 @@ public class nn1 implements IRemoteConfig {
         } catch (Exception unused4) {
         }
         try {
-            C9708t9.k0(Boolean.valueOf(getConfig(str, "network_https_sni_enable_switch", "true")).booleanValue());
+            t9.k0(Boolean.valueOf(getConfig(str, "network_https_sni_enable_switch", "true")).booleanValue());
         } catch (Exception unused5) {
         }
         try {
             String config2 = getConfig(str, "network_accs_session_bg_switch", null);
             if (!TextUtils.isEmpty(config2)) {
-                C9708t9.V(Boolean.valueOf(config2).booleanValue());
+                t9.V(Boolean.valueOf(config2).booleanValue());
             }
         } catch (Exception unused6) {
         }
@@ -120,11 +119,11 @@ public class nn1 implements IRemoteConfig {
         } catch (Exception unused11) {
         }
         try {
-            C9708t9.e0(Boolean.valueOf(getConfig(str, "network_horse_race_switch", "true")).booleanValue());
+            t9.e0(Boolean.valueOf(getConfig(str, "network_horse_race_switch", "true")).booleanValue());
         } catch (Exception unused12) {
         }
         try {
-            C9708t9.D0(Boolean.valueOf(getConfig(str, "tnet_enable_header_cache", "true")).booleanValue());
+            t9.D0(Boolean.valueOf(getConfig(str, "tnet_enable_header_cache", "true")).booleanValue());
         } catch (Exception unused13) {
         }
         try {
@@ -132,11 +131,11 @@ public class nn1 implements IRemoteConfig {
             SharedPreferences.Editor edit = PreferenceManager.getDefaultSharedPreferences(NetworkSdkSetting.getContext()).edit();
             if (!TextUtils.isEmpty(config6)) {
                 boolean booleanValue = Boolean.valueOf(config6).booleanValue();
-                edit.putBoolean(C9708t9.HTTP3_ENABLE, booleanValue);
+                edit.putBoolean(t9.HTTP3_ENABLE, booleanValue);
                 edit.apply();
-                C9708t9.g0(booleanValue);
+                t9.g0(booleanValue);
             } else {
-                edit.remove(C9708t9.HTTP3_ENABLE);
+                edit.remove(t9.HTTP3_ENABLE);
                 edit.apply();
             }
         } catch (Exception unused14) {
@@ -176,7 +175,7 @@ public class nn1 implements IRemoteConfig {
         try {
             String config10 = getConfig(str, "network_idle_session_close_switch", null);
             if (!TextUtils.isEmpty(config10)) {
-                C9708t9.l0(Boolean.valueOf(config10).booleanValue());
+                t9.l0(Boolean.valueOf(config10).booleanValue());
             }
         } catch (Exception unused19) {
         }
@@ -197,21 +196,21 @@ public class nn1 implements IRemoteConfig {
         try {
             String config13 = getConfig(str, "network_session_preset_hosts", null);
             if (!TextUtils.isEmpty(config13)) {
-                C9708t9.R(config13);
+                t9.R(config13);
             }
         } catch (Exception unused22) {
         }
         try {
             String config14 = getConfig(str, "network_ipv6_blacklist_switch", null);
             if (!TextUtils.isEmpty(config14)) {
-                C9708t9.n0(Boolean.valueOf(config14).booleanValue());
+                t9.n0(Boolean.valueOf(config14).booleanValue());
             }
         } catch (Exception unused23) {
         }
         try {
             String config15 = getConfig(str, "network_ipv6_blacklist_ttl", null);
             if (!TextUtils.isEmpty(config15)) {
-                C9708t9.o0(Long.valueOf(config15).longValue());
+                t9.o0(Long.valueOf(config15).longValue());
             }
         } catch (Exception unused24) {
         }
@@ -244,7 +243,7 @@ public class nn1 implements IRemoteConfig {
             if (!TextUtils.isEmpty(config19)) {
                 boolean booleanValue4 = Boolean.valueOf(config19).booleanValue();
                 SharedPreferences.Editor edit4 = PreferenceManager.getDefaultSharedPreferences(NetworkSdkSetting.getContext()).edit();
-                edit4.putBoolean(C9708t9.NEXT_LAUNCH_FORBID, booleanValue4);
+                edit4.putBoolean(t9.NEXT_LAUNCH_FORBID, booleanValue4);
                 edit4.apply();
             }
         } catch (Exception unused28) {
@@ -252,21 +251,21 @@ public class nn1 implements IRemoteConfig {
         try {
             String config20 = getConfig(str, "network_detect_enable_switch", null);
             if (!TextUtils.isEmpty(config20)) {
-                C9708t9.y0(Boolean.valueOf(config20).booleanValue());
+                t9.y0(Boolean.valueOf(config20).booleanValue());
             }
         } catch (Exception unused29) {
         }
         try {
             String config21 = getConfig(str, "network_ipv6_global_enable_swtich", null);
             if (!TextUtils.isEmpty(config21)) {
-                C9708t9.q0(Boolean.valueOf(config21).booleanValue());
+                t9.q0(Boolean.valueOf(config21).booleanValue());
             }
         } catch (Exception unused30) {
         }
         try {
             String config22 = getConfig(str, "network_xquic_cong_control", null);
             if (!TextUtils.isEmpty(config22)) {
-                C9708t9.E0(Integer.valueOf(config22).intValue());
+                t9.E0(Integer.valueOf(config22).intValue());
             }
         } catch (Exception unused31) {
         }
@@ -287,7 +286,7 @@ public class nn1 implements IRemoteConfig {
         try {
             String config25 = getConfig(str, "network_cookie_header_redundant_fix", null);
             if (!TextUtils.isEmpty(config25)) {
-                C9708t9.a0(Boolean.valueOf(config25).booleanValue());
+                t9.a0(Boolean.valueOf(config25).booleanValue());
             }
         } catch (Exception unused34) {
         }
@@ -315,14 +314,14 @@ public class nn1 implements IRemoteConfig {
         try {
             String config29 = getConfig(str, "network_send_connect_info_by_service", null);
             if (!TextUtils.isEmpty(config29)) {
-                C9708t9.z0(Boolean.valueOf(config29).booleanValue());
+                t9.z0(Boolean.valueOf(config29).booleanValue());
             }
         } catch (Exception unused38) {
         }
         try {
             String config30 = getConfig(str, "network_http_dns_notify_white_list", null);
             if (!TextUtils.isEmpty(config30)) {
-                C9708t9.j0(config30);
+                t9.j0(config30);
             }
         } catch (Exception unused39) {
         }
@@ -338,10 +337,10 @@ public class nn1 implements IRemoteConfig {
             SharedPreferences.Editor edit5 = PreferenceManager.getDefaultSharedPreferences(hu0.c()).edit();
             if (!TextUtils.isEmpty(config32)) {
                 boolean booleanValue5 = Boolean.valueOf(config32).booleanValue();
-                C9708t9.s0(booleanValue5);
-                edit5.putBoolean(C9708t9.IPV6_RATE_OPTIMIZE_EANBLE, booleanValue5);
+                t9.s0(booleanValue5);
+                edit5.putBoolean(t9.IPV6_RATE_OPTIMIZE_EANBLE, booleanValue5);
             } else {
-                edit5.remove(C9708t9.IPV6_RATE_OPTIMIZE_EANBLE);
+                edit5.remove(t9.IPV6_RATE_OPTIMIZE_EANBLE);
             }
             edit5.apply();
         } catch (Exception unused41) {
@@ -356,21 +355,21 @@ public class nn1 implements IRemoteConfig {
         try {
             String config34 = getConfig(str, "network_ipv6_only_enable_switch", null);
             if (!TextUtils.isEmpty(config34)) {
-                C9708t9.r0(Boolean.valueOf(config34).booleanValue());
+                t9.r0(Boolean.valueOf(config34).booleanValue());
             }
         } catch (Exception unused43) {
         }
         try {
             String config35 = getConfig(str, "network_allow_convert_ipv4_to_ipv6_enable_switch", null);
             if (!TextUtils.isEmpty(config35)) {
-                C9708t9.u0(Boolean.valueOf(config35).booleanValue());
+                t9.u0(Boolean.valueOf(config35).booleanValue());
             }
         } catch (Exception unused44) {
         }
         try {
             String config36 = getConfig(str, "network_strategy_new_unique_id_enable_switch", null);
             if (!TextUtils.isEmpty(config36)) {
-                C9708t9.A0(Boolean.valueOf(config36).booleanValue());
+                t9.A0(Boolean.valueOf(config36).booleanValue());
             }
         } catch (Exception unused45) {
         }
@@ -424,10 +423,10 @@ public class nn1 implements IRemoteConfig {
             String config41 = getConfig(str, "network_multi_path_monitor_enable_switch", null);
             if (!TextUtils.isEmpty(config41)) {
                 boolean booleanValue6 = Boolean.valueOf(config41).booleanValue();
-                C9708t9.x0(booleanValue6);
-                edit10.putBoolean(C9708t9.MULTI_PATH_MONITOR_KEY, booleanValue6).apply();
+                t9.x0(booleanValue6);
+                edit10.putBoolean(t9.MULTI_PATH_MONITOR_KEY, booleanValue6).apply();
             } else {
-                edit10.remove(C9708t9.MULTI_PATH_MONITOR_KEY).apply();
+                edit10.remove(t9.MULTI_PATH_MONITOR_KEY).apply();
             }
         } catch (Exception unused50) {
         }
@@ -435,10 +434,10 @@ public class nn1 implements IRemoteConfig {
             SharedPreferences.Editor edit11 = PreferenceManager.getDefaultSharedPreferences(hu0.c()).edit();
             String config42 = getConfig(str, "network_multi_path_harmony_white_list", null);
             if (!TextUtils.isEmpty(config42)) {
-                C9708t9.d0(config42);
-                edit11.putString(C9708t9.MULTI_PATH_HARMONY_WHITE_LIST, config42).apply();
+                t9.d0(config42);
+                edit11.putString(t9.MULTI_PATH_HARMONY_WHITE_LIST, config42).apply();
             } else {
-                edit11.remove(C9708t9.MULTI_PATH_HARMONY_WHITE_LIST).apply();
+                edit11.remove(t9.MULTI_PATH_HARMONY_WHITE_LIST).apply();
             }
         } catch (Exception unused51) {
         }
@@ -446,11 +445,11 @@ public class nn1 implements IRemoteConfig {
             String config43 = getConfig(str, "network_http3_black_list_switch", null);
             SharedPreferences.Editor edit12 = PreferenceManager.getDefaultSharedPreferences(NetworkSdkSetting.getContext()).edit();
             if (!TextUtils.isEmpty(config43)) {
-                C9708t9.f0(config43);
-                edit12.putString(C9708t9.HTTP3_BLACK_LIST_KEY, config43);
+                t9.f0(config43);
+                edit12.putString(t9.HTTP3_BLACK_LIST_KEY, config43);
                 edit12.apply();
             } else {
-                edit12.remove(C9708t9.HTTP3_BLACK_LIST_KEY);
+                edit12.remove(t9.HTTP3_BLACK_LIST_KEY);
                 edit12.apply();
             }
         } catch (Exception unused52) {
@@ -465,14 +464,14 @@ public class nn1 implements IRemoteConfig {
         try {
             String config45 = getConfig(str, "network_exception_detect_url", null);
             if (!TextUtils.isEmpty(config45)) {
-                C9708t9.c0(config45);
+                t9.c0(config45);
             }
         } catch (Exception unused54) {
         }
         try {
             String config46 = getConfig(str, "network_http_detect_white_list", null);
             if (!TextUtils.isEmpty(config46)) {
-                C9708t9.i0(config46);
+                t9.i0(config46);
             }
         } catch (Exception unused55) {
         }
@@ -481,10 +480,10 @@ public class nn1 implements IRemoteConfig {
             SharedPreferences.Editor edit13 = PreferenceManager.getDefaultSharedPreferences(hu0.c()).edit();
             if (!TextUtils.isEmpty(config47)) {
                 boolean booleanValue7 = Boolean.valueOf(config47).booleanValue();
-                edit13.putBoolean(C9708t9.DETECT_CENTER_ENABLE, booleanValue7);
-                C9708t9.b0(booleanValue7);
+                edit13.putBoolean(t9.DETECT_CENTER_ENABLE, booleanValue7);
+                t9.b0(booleanValue7);
             } else {
-                edit13.remove(C9708t9.DETECT_CENTER_ENABLE);
+                edit13.remove(t9.DETECT_CENTER_ENABLE);
             }
             edit13.apply();
         } catch (Exception unused56) {
@@ -494,10 +493,10 @@ public class nn1 implements IRemoteConfig {
             SharedPreferences.Editor edit14 = PreferenceManager.getDefaultSharedPreferences(hu0.c()).edit();
             if (!TextUtils.isEmpty(config48)) {
                 boolean booleanValue8 = Boolean.valueOf(config48).booleanValue();
-                C9708t9.T(booleanValue8);
-                edit14.putBoolean(C9708t9.AMDC_VERSION_DEGRADED_KEY, booleanValue8);
+                t9.T(booleanValue8);
+                edit14.putBoolean(t9.AMDC_VERSION_DEGRADED_KEY, booleanValue8);
             } else {
-                edit14.remove(C9708t9.AMDC_VERSION_DEGRADED_KEY);
+                edit14.remove(t9.AMDC_VERSION_DEGRADED_KEY);
             }
             edit14.apply();
         } catch (Exception unused57) {
@@ -505,21 +504,21 @@ public class nn1 implements IRemoteConfig {
         try {
             String config49 = getConfig(str, "network_complex_connect_enable_switch", null);
             if (!TextUtils.isEmpty(config49)) {
-                C9708t9.Y(Boolean.valueOf(config49).booleanValue());
+                t9.Y(Boolean.valueOf(config49).booleanValue());
             }
         } catch (Exception unused58) {
         }
         try {
             String config50 = getConfig(str, "network_complex_connect_white_list", null);
             if (!TextUtils.isEmpty(config50)) {
-                C9708t9.Z(config50);
+                t9.Z(config50);
             }
         } catch (Exception unused59) {
         }
         try {
             String config51 = getConfig(str, "network_delay_complex_connect", null);
             if (!TextUtils.isEmpty(config51)) {
-                C9708t9.X(Long.valueOf(config51).longValue());
+                t9.X(Long.valueOf(config51).longValue());
             }
         } catch (Exception unused60) {
         }
@@ -535,10 +534,10 @@ public class nn1 implements IRemoteConfig {
             SharedPreferences.Editor edit15 = PreferenceManager.getDefaultSharedPreferences(hu0.c()).edit();
             if (!TextUtils.isEmpty(config53)) {
                 boolean booleanValue9 = Boolean.valueOf(config53).booleanValue();
-                C9708t9.p0(booleanValue9);
-                edit15.putBoolean(C9708t9.IPV6_DETECT_KEY, booleanValue9);
+                t9.p0(booleanValue9);
+                edit15.putBoolean(t9.IPV6_DETECT_KEY, booleanValue9);
             } else {
-                edit15.remove(C9708t9.IPV6_DETECT_KEY);
+                edit15.remove(t9.IPV6_DETECT_KEY);
             }
             edit15.apply();
         } catch (Exception unused62) {
@@ -546,14 +545,14 @@ public class nn1 implements IRemoteConfig {
         try {
             String config54 = getConfig(str, "network_ip_sort_enable_switch", null);
             if (!TextUtils.isEmpty(config54)) {
-                C9708t9.m0(Boolean.valueOf(config54).booleanValue());
+                t9.m0(Boolean.valueOf(config54).booleanValue());
             }
         } catch (Exception unused63) {
         }
         try {
             String config55 = getConfig(str, "network_mtu_detect_enable_switch", null);
             if (!TextUtils.isEmpty(config55)) {
-                C9708t9.w0(Boolean.valueOf(config55).booleanValue());
+                t9.w0(Boolean.valueOf(config55).booleanValue());
             }
         } catch (Exception unused64) {
         }
@@ -562,10 +561,10 @@ public class nn1 implements IRemoteConfig {
             SharedPreferences.Editor edit16 = PreferenceManager.getDefaultSharedPreferences(hu0.c()).edit();
             if (!TextUtils.isEmpty(config56)) {
                 boolean booleanValue10 = Boolean.valueOf(config56).booleanValue();
-                C9708t9.t0(booleanValue10);
-                edit16.putBoolean(C9708t9.IPV6_RECTIFICATION_KEY, booleanValue10);
+                t9.t0(booleanValue10);
+                edit16.putBoolean(t9.IPV6_RECTIFICATION_KEY, booleanValue10);
             } else {
-                edit16.remove(C9708t9.IPV6_RECTIFICATION_KEY);
+                edit16.remove(t9.IPV6_RECTIFICATION_KEY);
             }
             edit16.apply();
         } catch (Exception unused65) {
@@ -603,7 +602,7 @@ public class nn1 implements IRemoteConfig {
             return;
         }
         try {
-            OrangeConfig.getInstance().registerListener(new String[]{"networkSdk", "amdc"}, new C9478a());
+            OrangeConfig.getInstance().registerListener(new String[]{"networkSdk", "amdc"}, new a());
             getConfig("networkSdk", "network_empty_scheme_https_switch", "true");
             getConfig("amdc", "amdc_control_mode", null);
         } catch (Exception e) {

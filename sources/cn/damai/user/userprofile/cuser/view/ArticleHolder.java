@@ -3,9 +3,9 @@ package cn.damai.user.userprofile.cuser.view;
 import android.app.Activity;
 import android.view.View;
 import android.widget.ImageView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMRoundedCornersBitmapProcessor;
+import cn.damai.common.image.a;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
 import cn.damai.user.userprofile.bean.ArticleFeedData;
@@ -37,7 +37,7 @@ public class ArticleHolder extends FeedsWraperHolder {
             ArticleFeedData articleFeedData = feedMergeDataDO.articleData.get(0);
             v(articleFeedData.articleTitle, R$id.tv_comment_text);
             v(articleFeedData.articleContent, R$id.tv_comment);
-            DMImageCreator k = C0504a.b().c(articleFeedData.img).k(new DMRoundedCornersBitmapProcessor(t60.a(this.w, 3.0f), 0));
+            DMImageCreator k = a.b().c(articleFeedData.img).k(new DMRoundedCornersBitmapProcessor(t60.a(this.w, 3.0f), 0));
             int i = R$drawable.uikit_default_image_bg_grey;
             k.i(i).c(i).g((ImageView) this.itemView.findViewById(R$id.user_feeds_article_img));
         }

@@ -18,7 +18,7 @@ public class UiAsyncTaskDemo {
         @Override // android.app.Activity
         protected void onResume() {
             super.onResume();
-            new AsyncTaskC6586a(this, this).execute("http://...");
+            new a(this, this).execute("http://...");
         }
 
         @Override // com.taobao.android.routine.UiAsyncTask.UiPostExecutable
@@ -27,10 +27,9 @@ public class UiAsyncTaskDemo {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.routine.UiAsyncTaskDemo$a */
     /* loaded from: classes11.dex */
-    static class AsyncTaskC6586a extends UiAsyncTask<String, Integer, Object> {
-        public AsyncTaskC6586a(Activity activity, UiAsyncTask.UiPostExecutable<Object> uiPostExecutable) {
+    static class a extends UiAsyncTask<String, Integer, Object> {
+        public a(Activity activity, UiAsyncTask.UiPostExecutable<Object> uiPostExecutable) {
             super(activity, uiPostExecutable);
         }
 

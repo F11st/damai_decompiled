@@ -18,16 +18,16 @@ public class mv1 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
 
     @Override // cn.damai.tetris.v2.convertor.IConverter
     /* renamed from: a */
-    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, C9039db c9039db) {
+    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, db dbVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "809856769")) {
-            return (List) ipChange.ipc$dispatch("809856769", new Object[]{this, baseResponse, baseSection, globalConfig, c9039db});
+            return (List) ipChange.ipc$dispatch("809856769", new Object[]{this, baseResponse, baseSection, globalConfig, dbVar});
         }
         NodeData item = baseSection.getItem();
         if (item != null) {
             item.put(ProjectShowBean.REQUEST_FINISH_TIME, (Object) Long.valueOf(baseResponse.requestFinishTime));
             item.put(ProjectShowBean.SERVER_TIME, (Object) Long.valueOf(baseResponse.serverTime));
         }
-        return new g32().convert(baseResponse, baseSection, globalConfig, c9039db);
+        return new g32().convert(baseResponse, baseSection, globalConfig, dbVar);
     }
 }

@@ -1,8 +1,6 @@
 package tb;
 
 import java.util.Set;
-import kotlin.collections.C8201d0;
-import kotlin.collections.C8205f0;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.load.java.components.TypeUsage;
 import kotlin.reflect.jvm.internal.impl.load.java.lazy.types.JavaTypeFlexibility;
@@ -128,7 +126,7 @@ public final class q51 {
     public final q51 j(@NotNull TypeParameterDescriptor typeParameterDescriptor) {
         b41.i(typeParameterDescriptor, "typeParameter");
         Set<TypeParameterDescriptor> set = this.d;
-        return b(this, null, null, false, set != null ? C8205f0.j(set, typeParameterDescriptor) : C8201d0.c(typeParameterDescriptor), null, 23, null);
+        return b(this, null, null, false, set != null ? kotlin.collections.f0.j(set, typeParameterDescriptor) : kotlin.collections.d0.c(typeParameterDescriptor), null, 23, null);
     }
 
     @NotNull

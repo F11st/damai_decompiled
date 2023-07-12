@@ -6,15 +6,14 @@ import com.android.alibaba.ip.runtime.IpChange;
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
 public interface KeyTransformer {
-    public static final KeyTransformer IDENTITY = new C3552a();
+    public static final KeyTransformer IDENTITY = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.util.blur.KeyTransformer$a */
     /* loaded from: classes7.dex */
-    public class C3552a implements KeyTransformer {
+    public class a implements KeyTransformer {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3552a() {
+        a() {
         }
 
         @Override // com.alibaba.pictures.bricks.util.blur.KeyTransformer

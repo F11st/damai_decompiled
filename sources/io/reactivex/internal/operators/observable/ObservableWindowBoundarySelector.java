@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -10,7 +10,7 @@ import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.observers.QueueDrainObserver;
 import io.reactivex.internal.queue.MpscLinkedQueue;
 import io.reactivex.internal.util.NotificationLite;
-import io.reactivex.observers.AbstractC8160b;
+import io.reactivex.observers.b;
 import io.reactivex.subjects.UnicastSubject;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,7 @@ import tb.ra2;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableWindowBoundarySelector<T, B, V> extends AbstractObservableWithUpstream<T, AbstractC8149d<T>> {
+public final class ObservableWindowBoundarySelector<T, B, V> extends AbstractObservableWithUpstream<T, d<T>> {
     final int bufferSize;
     final Function<? super B, ? extends ObservableSource<V>> close;
     final ObservableSource<B> open;
@@ -31,7 +31,7 @@ public final class ObservableWindowBoundarySelector<T, B, V> extends AbstractObs
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    public static final class OperatorWindowBoundaryCloseObserver<T, V> extends AbstractC8160b<V> {
+    public static final class OperatorWindowBoundaryCloseObserver<T, V> extends b<V> {
         boolean done;
         final WindowBoundaryMainObserver<T, ?, V> parent;
         final UnicastSubject<T> w;
@@ -73,7 +73,7 @@ public final class ObservableWindowBoundarySelector<T, B, V> extends AbstractObs
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class OperatorWindowBoundaryOpenObserver<T, B> extends AbstractC8160b<B> {
+    static final class OperatorWindowBoundaryOpenObserver<T, B> extends b<B> {
         final WindowBoundaryMainObserver<T, B, ?> parent;
 
         OperatorWindowBoundaryOpenObserver(WindowBoundaryMainObserver<T, B, ?> windowBoundaryMainObserver) {
@@ -98,7 +98,7 @@ public final class ObservableWindowBoundarySelector<T, B, V> extends AbstractObs
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class WindowBoundaryMainObserver<T, B, V> extends QueueDrainObserver<T, Object, AbstractC8149d<T>> implements Disposable {
+    static final class WindowBoundaryMainObserver<T, B, V> extends QueueDrainObserver<T, Object, d<T>> implements Disposable {
         final AtomicReference<Disposable> boundary;
         final int bufferSize;
         final Function<? super B, ? extends ObservableSource<V>> close;
@@ -108,7 +108,7 @@ public final class ObservableWindowBoundarySelector<T, B, V> extends AbstractObs
         final AtomicLong windows;
         final List<UnicastSubject<T>> ws;
 
-        WindowBoundaryMainObserver(Observer<? super AbstractC8149d<T>> observer, ObservableSource<B> observableSource, Function<? super B, ? extends ObservableSource<V>> function, int i) {
+        WindowBoundaryMainObserver(Observer<? super d<T>> observer, ObservableSource<B> observableSource, Function<? super B, ? extends ObservableSource<V>> function, int i) {
             super(observer, new MpscLinkedQueue());
             this.boundary = new AtomicReference<>();
             AtomicLong atomicLong = new AtomicLong();
@@ -122,7 +122,7 @@ public final class ObservableWindowBoundarySelector<T, B, V> extends AbstractObs
         }
 
         @Override // io.reactivex.internal.observers.QueueDrainObserver, io.reactivex.internal.util.ObservableQueueDrain
-        public void accept(Observer<? super AbstractC8149d<T>> observer, Object obj) {
+        public void accept(Observer<? super d<T>> observer, Object obj) {
         }
 
         void close(OperatorWindowBoundaryCloseObserver<T, V> operatorWindowBoundaryCloseObserver) {
@@ -314,8 +314,8 @@ public final class ObservableWindowBoundarySelector<T, B, V> extends AbstractObs
         this.bufferSize = i;
     }
 
-    @Override // io.reactivex.AbstractC8149d
-    public void subscribeActual(Observer<? super AbstractC8149d<T>> observer) {
+    @Override // io.reactivex.d
+    public void subscribeActual(Observer<? super d<T>> observer) {
         this.source.subscribe(new WindowBoundaryMainObserver(new ra2(observer), this.open, this.close, this.bufferSize));
     }
 }

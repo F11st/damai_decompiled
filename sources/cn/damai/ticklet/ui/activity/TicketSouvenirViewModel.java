@@ -25,12 +25,11 @@ public class TicketSouvenirViewModel extends ViewModel implements Serializable {
     public final MutableLiveData<String> mNetLiveData = new MutableLiveData<>();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TicketSouvenirViewModel$a */
     /* loaded from: classes7.dex */
-    public class C2026a implements SimpleCallBack<TicketSouvenirPaperBean> {
+    public class a implements SimpleCallBack<TicketSouvenirPaperBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2026a() {
+        a() {
         }
 
         @Override // cn.damai.ticklet.inteface.SimpleCallBack
@@ -114,7 +113,7 @@ public class TicketSouvenirViewModel extends ViewModel implements Serializable {
         if (AndroidInstantRuntime.support(ipChange, "1167282267")) {
             ipChange.ipc$dispatch("1167282267", new Object[]{this});
         } else {
-            this.mSouvenirModel.loadSouvenirDetail(new C2026a());
+            this.mSouvenirModel.loadSouvenirDetail(new a());
         }
     }
 

@@ -2,7 +2,6 @@ package tb;
 
 import com.alibaba.fastjson.JSONObject;
 import java.util.Objects;
-import kotlin.text.C8600k;
 import kotlin.text.StringsKt__StringsKt;
 import org.jetbrains.annotations.NotNull;
 
@@ -10,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes6.dex */
 public final class qq0 {
     @NotNull
-    public static final C9614a Companion = new C9614a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final qq0 g = new qq0();
     @NotNull
@@ -26,13 +25,12 @@ public final class qq0 {
     private int f;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qq0$a */
     /* loaded from: classes6.dex */
-    public static final class C9614a {
-        private C9614a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9614a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -80,7 +78,7 @@ public final class qq0 {
             String substring = obj.substring(1);
             b41.h(substring, "(this as java.lang.String).substring(startIndex)");
             this.b = substring;
-            C8600k.f(this.a);
+            kotlin.text.k.f(this.a);
             return;
         }
         this.a.append(c);
@@ -99,8 +97,8 @@ public final class qq0 {
             b41.h(sb2, "valueName.toString()");
             M02 = StringsKt__StringsKt.M0(sb2);
             jSONObject.put((JSONObject) obj, M02.toString());
-            C8600k.f(this.c);
-            C8600k.f(this.d);
+            kotlin.text.k.f(this.c);
+            kotlin.text.k.f(this.d);
             this.f = 1;
             return;
         }

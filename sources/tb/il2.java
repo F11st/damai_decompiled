@@ -10,20 +10,19 @@ import java.util.concurrent.atomic.AtomicInteger;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class il2 {
-    private static Executor a = new C9265b(1, "slide-pool-");
-    private static Executor b = new C9265b(3, "slide-pool-d-");
+    private static Executor a = new b(1, "slide-pool-");
+    private static Executor b = new b(3, "slide-pool-d-");
 
     /* compiled from: Taobao */
-    /* renamed from: tb.il2$a */
     /* loaded from: classes11.dex */
-    private static class ThreadFactoryC9264a implements ThreadFactory {
+    private static class a implements ThreadFactory {
         private static final AtomicInteger e = new AtomicInteger(1);
         private final String c;
         private final int d;
         private final AtomicInteger b = new AtomicInteger(1);
         private final ThreadGroup a = Thread.currentThread().getThreadGroup();
 
-        ThreadFactoryC9264a(int i, String str) {
+        a(int i, String str) {
             this.d = i;
             this.c = str + e.getAndIncrement() + "-thread-";
         }
@@ -41,11 +40,10 @@ public class il2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.il2$b */
     /* loaded from: classes11.dex */
-    static class C9265b extends ThreadPoolExecutor {
-        C9265b(int i, String str) {
-            super(i, i, 20L, TimeUnit.SECONDS, new LinkedBlockingQueue(), new ThreadFactoryC9264a(5, str));
+    static class b extends ThreadPoolExecutor {
+        b(int i, String str) {
+            super(i, i, 20L, TimeUnit.SECONDS, new LinkedBlockingQueue(), new a(5, str));
             allowCoreThreadTimeOut(true);
         }
     }

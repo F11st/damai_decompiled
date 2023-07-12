@@ -39,12 +39,11 @@ public class ContentBasePresenter extends BasePresenter<ContentBaseContract.Mode
     private int mPageNum;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.content.base.ContentBasePresenter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1958a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1958a(ContentBasePresenter contentBasePresenter) {
+        a(ContentBasePresenter contentBasePresenter) {
         }
 
         @Override // android.view.View.OnClickListener
@@ -60,13 +59,12 @@ public class ContentBasePresenter extends BasePresenter<ContentBaseContract.Mode
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.content.base.ContentBasePresenter$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1959b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        View$OnClickListenerC1959b(String str) {
+        b(String str) {
             this.a = str;
         }
 
@@ -83,12 +81,11 @@ public class ContentBasePresenter extends BasePresenter<ContentBaseContract.Mode
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.content.base.ContentBasePresenter$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1960c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1960c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -104,13 +101,12 @@ public class ContentBasePresenter extends BasePresenter<ContentBaseContract.Mode
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.content.base.ContentBasePresenter$d */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1961d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Button a;
 
-        View$OnClickListenerC1961d(Button button) {
+        d(Button button) {
             this.a = button;
         }
 
@@ -132,13 +128,12 @@ public class ContentBasePresenter extends BasePresenter<ContentBaseContract.Mode
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.content.base.ContentBasePresenter$e */
     /* loaded from: classes7.dex */
-    public class C1962e implements OnBizListener<Pair<BaseResponse, AtmosphereBean>> {
+    public class e implements OnBizListener<Pair<BaseResponse, AtmosphereBean>> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        C1962e(int i) {
+        e(int i) {
             this.a = i;
         }
 
@@ -190,7 +185,7 @@ public class ContentBasePresenter extends BasePresenter<ContentBaseContract.Mode
             drObj.targetArgs = tetrisRequest.args;
             tetrisRequest.dr = jn1.ARRAY_START_STR + JSON.toJSONString(drObj) + jn1.ARRAY_END_STR;
         }
-        getModel().load(new C1962e(i), getSection().getComponentId(), tetrisRequest);
+        getModel().load(new e(i), getSection().getComponentId(), tetrisRequest);
     }
 
     private void updateList() {
@@ -205,34 +200,34 @@ public class ContentBasePresenter extends BasePresenter<ContentBaseContract.Mode
         int type = getModel().allData().getType();
         String componentId = getSection().getComponentId();
         componentId.hashCode();
-        char c = 65535;
+        char c2 = 65535;
         switch (componentId.hashCode()) {
             case -2085257335:
                 if (componentId.equals(xl2.DM_ARTIST_MAIN_YUEHUA_CONTENT)) {
-                    c = 0;
+                    c2 = 0;
                     break;
                 }
                 break;
             case -2039381270:
                 if (componentId.equals(xl2.DM_BASE_CONTENT_FREE)) {
-                    c = 1;
+                    c2 = 1;
                     break;
                 }
                 break;
             case -1731511831:
                 if (componentId.equals(xl2.DM_ARTIST_MAIN_OFFICIAL_CONTENT)) {
-                    c = 2;
+                    c2 = 2;
                     break;
                 }
                 break;
             case -1312697377:
                 if (componentId.equals(xl2.DM_BASE_CONTENT_VIP)) {
-                    c = 3;
+                    c2 = 3;
                     break;
                 }
                 break;
         }
-        switch (c) {
+        switch (c2) {
             case 0:
             case 2:
             case 3:
@@ -241,7 +236,7 @@ public class ContentBasePresenter extends BasePresenter<ContentBaseContract.Mode
             case 1:
                 if (hasNext && type == 1) {
                     textView.setVisibility(0);
-                    textView.setOnClickListener(new View$OnClickListenerC1960c());
+                    textView.setOnClickListener(new c());
                     return;
                 }
                 textView.setVisibility(8);
@@ -269,7 +264,7 @@ public class ContentBasePresenter extends BasePresenter<ContentBaseContract.Mode
             String styleValue = getModel().getStyleValue("subTitle");
             linearLayout2.setVisibility(0);
             textView2.setText(styleValue);
-            linearLayout2.setOnClickListener(new View$OnClickListenerC1959b(getModel().allData().getSubPageUrl()));
+            linearLayout2.setOnClickListener(new b(getModel().allData().getSubPageUrl()));
             userTrackExpose(textView2, "all");
             return;
         }
@@ -315,7 +310,7 @@ public class ContentBasePresenter extends BasePresenter<ContentBaseContract.Mode
             linearLayout2.setVisibility(8);
             recyclerView.setVisibility(0);
         }
-        linearLayout2.setOnClickListener(new View$OnClickListenerC1961d(button));
+        linearLayout2.setOnClickListener(new d(button));
     }
 
     public boolean hasVipButton() {
@@ -352,7 +347,7 @@ public class ContentBasePresenter extends BasePresenter<ContentBaseContract.Mode
         linearLayoutManager.setOrientation(1);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setHasFixedSize(true);
-        ContentBaseAdapter contentBaseAdapter = new ContentBaseAdapter(getContext().getActivity(), new View$OnClickListenerC1958a(this), this);
+        ContentBaseAdapter contentBaseAdapter = new ContentBaseAdapter(getContext().getActivity(), new a(this), this);
         this.mMainListAdapter = contentBaseAdapter;
         recyclerView.setAdapter(contentBaseAdapter);
         this.mMainListAdapter.g(getModel().allData());

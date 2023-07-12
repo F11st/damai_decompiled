@@ -93,7 +93,7 @@ public class DagoExChatListView extends FrameLayout implements View.OnClickListe
             ipChange.ipc$dispatch("1758381949", new Object[]{this, context});
             return;
         }
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ailp_chat_list, this);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_ailp_chat_list, this);
         NestRecyclerView nestRecyclerView = (NestRecyclerView) findViewById(R.id.portrait_chat_recyclerview);
         this.mChatRecyclerView = nestRecyclerView;
         nestRecyclerView.setItemAnimator(null);

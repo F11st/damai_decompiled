@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import org.joor.C8883a;
 import org.joor.ReflectException;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -27,7 +27,7 @@ public class ShareProxy {
         }
         if (a == null) {
             try {
-                a = (IShareProxy) C8883a.j("cn.damai.launcher.DmShareImpl").b().f();
+                a = (IShareProxy) a.j("cn.damai.launcher.DmShareImpl").b().f();
             } catch (ReflectException e) {
                 e.printStackTrace();
             }

@@ -19,15 +19,15 @@ public class yp1 implements ApplicationBackgroundChangedDispatcher.BackgroundCha
     private PageLeaveDispatcher b;
 
     public yp1() {
-        IDispatcher b = ca0.b(C8934b0.APPLICATION_BACKGROUND_CHANGED_DISPATCHER);
+        IDispatcher b = ca0.b(b0.APPLICATION_BACKGROUND_CHANGED_DISPATCHER);
         if (b instanceof ApplicationBackgroundChangedDispatcher) {
             ((ApplicationBackgroundChangedDispatcher) b).addListener(this);
         }
-        IDispatcher b2 = ca0.b(C8934b0.WINDOW_EVENT_DISPATCHER);
+        IDispatcher b2 = ca0.b(b0.WINDOW_EVENT_DISPATCHER);
         if (b2 instanceof WindowEventDispatcher) {
             ((WindowEventDispatcher) b2).addListener(this);
         }
-        IDispatcher b3 = ca0.b(C8934b0.PAGE_LEAVE_DISPATCHER);
+        IDispatcher b3 = ca0.b(b0.PAGE_LEAVE_DISPATCHER);
         if (b3 instanceof PageLeaveDispatcher) {
             this.b = (PageLeaveDispatcher) b3;
         }

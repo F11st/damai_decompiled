@@ -195,7 +195,7 @@ public class GiftStarItemView extends LinearLayout {
         if (AndroidInstantRuntime.support(ipChange, "-2108021846")) {
             ipChange.ipc$dispatch("-2108021846", new Object[]{this, giftInfoBean});
         } else if (giftInfoBean.isChecked) {
-            setBackgroundResource(R.C7941drawable.dago_pgc_ykl_gift_item_bg);
+            setBackgroundResource(R.drawable.dago_pgc_ykl_gift_item_bg);
             this.mLoadingImageView.postDelayed(new Runnable() { // from class: com.youku.live.dago.widgetlib.interactive.gift.star.GiftStarItemView.1
                 private static transient /* synthetic */ IpChange $ipChange;
 
@@ -221,7 +221,7 @@ public class GiftStarItemView extends LinearLayout {
         if (AndroidInstantRuntime.support(ipChange, "1806966118")) {
             ipChange.ipc$dispatch("1806966118", new Object[]{this, giftInfoBean});
         } else if (giftInfoBean.isChecked) {
-            setBackgroundResource(R.C7941drawable.dago_pgc_ykl_gift_item_bg);
+            setBackgroundResource(R.drawable.dago_pgc_ykl_gift_item_bg);
             this.mLoadingImageView.startAnimation(this.scaleAnim);
         } else {
             setBackground(null);
@@ -311,7 +311,7 @@ public class GiftStarItemView extends LinearLayout {
                 }
             }
         };
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_lf_star_view, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_lf_star_view, (ViewGroup) this, true);
         initView();
     }
 }

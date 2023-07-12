@@ -19,7 +19,6 @@ import android.widget.TextView;
 import cn.damai.comment.bean.DmInfo;
 import cn.damai.comment.bean.StoreInfo;
 import cn.damai.comment.view.DMTagView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMRoundedCornersBitmapProcessor;
 import cn.damai.common.util.ToastUtil;
@@ -87,13 +86,12 @@ public class EvaluateShareViewHolder extends g1<Object> {
     private int y = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.evaluate.EvaluateShareViewHolder$a */
     /* loaded from: classes.dex */
-    public class C0896a implements DMAvatar.OnImageLoadListener {
+    public class a implements DMAvatar.OnImageLoadListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnFinishListener a;
 
-        C0896a(OnFinishListener onFinishListener) {
+        a(OnFinishListener onFinishListener) {
             this.a = onFinishListener;
         }
 
@@ -119,13 +117,12 @@ public class EvaluateShareViewHolder extends g1<Object> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.evaluate.EvaluateShareViewHolder$b */
     /* loaded from: classes.dex */
-    public class C0897b implements Function0<wt2> {
+    public class b implements Function0<wt2> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnFinishListener a;
 
-        C0897b(OnFinishListener onFinishListener) {
+        b(OnFinishListener onFinishListener) {
             this.a = onFinishListener;
         }
 
@@ -142,21 +139,20 @@ public class EvaluateShareViewHolder extends g1<Object> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.evaluate.EvaluateShareViewHolder$c */
     /* loaded from: classes.dex */
-    public class C0898c implements DMImageCreator.DMImageFailListener {
+    public class c implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnFinishListener a;
 
-        C0898c(OnFinishListener onFinishListener) {
+        c(OnFinishListener onFinishListener) {
             this.a = onFinishListener;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-2030395743")) {
-                ipChange.ipc$dispatch("-2030395743", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-2030395743", new Object[]{this, dVar});
                 return;
             }
             EvaluateShareViewHolder.this.d.setImageDrawable(EvaluateShareViewHolder.this.a.getResources().getDrawable(R$drawable.uikit_default_image_bg_gradient));
@@ -166,25 +162,24 @@ public class EvaluateShareViewHolder extends g1<Object> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.evaluate.EvaluateShareViewHolder$d */
     /* loaded from: classes.dex */
-    public class C0899d implements DMImageCreator.DMImageSuccListener {
+    public class d implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnFinishListener a;
 
-        C0899d(OnFinishListener onFinishListener) {
+        d(OnFinishListener onFinishListener) {
             this.a = onFinishListener;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             int parseColor;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1358648182")) {
-                ipChange.ipc$dispatch("1358648182", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("1358648182", new Object[]{this, eVar});
                 return;
             }
-            Bitmap bitmap = c0502e.b;
+            Bitmap bitmap = eVar.b;
             if (bitmap != null) {
                 int a = t60.a(EvaluateShareViewHolder.this.a, 86.0f);
                 RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(a, (bitmap.getHeight() * a) / bitmap.getWidth());
@@ -362,7 +357,7 @@ public class EvaluateShareViewHolder extends g1<Object> {
         this.y = i;
         g(this.a, ((int) yr2.d(this.a)) - t60.a(this.a, 84.0f), true, this.o, dMShareMessage.extraMedia, onFinishListener);
         if (!TextUtils.isEmpty(dMShareMessage.userHeaderIcon)) {
-            this.f.setOnImageLoadListener(new C0896a(onFinishListener));
+            this.f.setOnImageLoadListener(new a(onFinishListener));
             this.f.setAvatar(dMShareMessage.userHeaderIcon);
         } else {
             this.f.setAvatarPlaceholder(R$drawable.uikit_user_default_icon);
@@ -378,7 +373,7 @@ public class EvaluateShareViewHolder extends g1<Object> {
         this.f.setYYMemberTagView(dMShareMessage.vip, dMShareMessage.memberFlag);
         if (!TextUtils.isEmpty(dMShareMessage.vipLevelIcon)) {
             this.i.setVisibility(0);
-            C0504a.b().e(dMShareMessage.vipLevelIcon).g(this.i);
+            cn.damai.common.image.a.b().e(dMShareMessage.vipLevelIcon).g(this.i);
         } else {
             this.i.setVisibility(8);
         }
@@ -409,7 +404,7 @@ public class EvaluateShareViewHolder extends g1<Object> {
             this.u.setVisibility(8);
             DmInfo dmInfo = dMShareMessage.dmInfo;
             if (dmInfo != null) {
-                this.w.setDmBaseData(dmInfo.dmHeadImageUrl, dmInfo.dmName, new C0897b(onFinishListener));
+                this.w.setDmBaseData(dmInfo.dmHeadImageUrl, dmInfo.dmName, new b(onFinishListener));
                 this.w.setDmTagData(dMShareMessage.dmInfo.dmTags);
                 this.w.setVisibility(0);
             } else {
@@ -447,6 +442,6 @@ public class EvaluateShareViewHolder extends g1<Object> {
             this.r.setText(sb.toString());
         }
         this.w.setVisibility(8);
-        C0504a.b().h(this.a).c(dMShareMessage.sharePictureUrl).k(new DMRoundedCornersBitmapProcessor(t60.a(this.a, 6.0f), 0)).n(new C0899d(onFinishListener)).e(new C0898c(onFinishListener)).f();
+        cn.damai.common.image.a.b().h(this.a).c(dMShareMessage.sharePictureUrl).k(new DMRoundedCornersBitmapProcessor(t60.a(this.a, 6.0f), 0)).n(new d(onFinishListener)).e(new c(onFinishListener)).f();
     }
 }

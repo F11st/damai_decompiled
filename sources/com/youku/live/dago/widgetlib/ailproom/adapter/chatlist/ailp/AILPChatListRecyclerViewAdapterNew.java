@@ -238,7 +238,7 @@ public class AILPChatListRecyclerViewAdapterNew extends BaseChatListRecyclerView
                 if (yellBean != null && !TextUtils.isEmpty(yellBean.url) && !ChatResourceManager.getInstance().isOrangeDowngradeGif()) {
                     spannableStringBuilder.append(AltriaXLaunchTime.SPACE);
                     wr1 s = ur1.o().s(yellBean.url);
-                    int i2 = R.C7941drawable.dago_pgc_chat_expression_default_bg;
+                    int i2 = R.drawable.dago_pgc_chat_expression_default_bg;
                     s.H(i2).k(i2).y(this.mUserYellImage);
                     if (yellBean.w != 0 && yellBean.h != 0 && (layoutParams = this.mUserYellImage.getLayoutParams()) != null) {
                         layoutParams.height = dp2px(AILPChatListRecyclerViewAdapterNew.this.mContext, yellBean.h);
@@ -296,7 +296,7 @@ public class AILPChatListRecyclerViewAdapterNew extends BaseChatListRecyclerView
         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder("分享了直播，邀好友来围观 立即分享，戳这里   ");
         this.shareString = spannableStringBuilder;
         spannableStringBuilder.setSpan(new ForegroundColorSpan(-8667649), 12, 22, 33);
-        this.shareString.setSpan(new ImageSpan(context, R.C7941drawable.dago_pgc_ailp_live_share), 22, 23, 33);
+        this.shareString.setSpan(new ImageSpan(context, R.drawable.dago_pgc_ailp_live_share), 22, 23, 33);
         HashMap hashMap = new HashMap(2);
         this.mShareMap = hashMap;
         hashMap.put("ilpType", "share");
@@ -365,14 +365,14 @@ public class AILPChatListRecyclerViewAdapterNew extends BaseChatListRecyclerView
         }
         viewHolder.setText(aILPChatBean, getItemViewType(i));
         if (!TextUtils.isEmpty(aILPChatBean.getFace())) {
-            DagoImageLoader.getInstance().showCircle(this.mContext, aILPChatBean.getFace(), viewHolder.mUserIcon, R.C7941drawable.dago_pgc_ailp_gift_user_header_2x);
+            DagoImageLoader.getInstance().showCircle(this.mContext, aILPChatBean.getFace(), viewHolder.mUserIcon, R.drawable.dago_pgc_ailp_gift_user_header_2x);
             viewHolder.mUserIcon.setVisibility(0);
         } else {
             viewHolder.mUserIcon.setVisibility(8);
         }
         if (!TextUtils.isEmpty(aILPChatBean.getFaceIcon())) {
             viewHolder.mUserVipIcon.setVisibility(0);
-            DagoImageLoader.getInstance().showCircle(this.mContext, aILPChatBean.getFaceIcon(), viewHolder.mUserVipIcon, R.C7941drawable.dago_pgc_ailp_chat_gold_icon);
+            DagoImageLoader.getInstance().showCircle(this.mContext, aILPChatBean.getFaceIcon(), viewHolder.mUserVipIcon, R.drawable.dago_pgc_ailp_chat_gold_icon);
             return;
         }
         viewHolder.mUserVipIcon.setVisibility(8);
@@ -381,7 +381,7 @@ public class AILPChatListRecyclerViewAdapterNew extends BaseChatListRecyclerView
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "2129934205") ? (ViewHolder) ipChange.ipc$dispatch("2129934205", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.C7942layout.dago_pgc_ailp_comment_item_new, viewGroup, false));
+        return AndroidInstantRuntime.support(ipChange, "2129934205") ? (ViewHolder) ipChange.ipc$dispatch("2129934205", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.dago_pgc_ailp_comment_item_new, viewGroup, false));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
@@ -415,7 +415,7 @@ public class AILPChatListRecyclerViewAdapterNew extends BaseChatListRecyclerView
                         return;
                     }
                     if (viewHolder.mUserComment.getLineCount() == 1) {
-                        Drawable drawable = AILPChatListRecyclerViewAdapterNew.this.mContext.getResources().getDrawable(R.C7941drawable.dago_pgc_chat_item_bg_one_line_border);
+                        Drawable drawable = AILPChatListRecyclerViewAdapterNew.this.mContext.getResources().getDrawable(R.drawable.dago_pgc_chat_item_bg_one_line_border);
                         if (drawable instanceof GradientDrawable) {
                             if (aILPChatBean.getBgColor() != -1) {
                                 ((GradientDrawable) drawable).setColor(aILPChatBean.getBgColor());
@@ -435,7 +435,7 @@ public class AILPChatListRecyclerViewAdapterNew extends BaseChatListRecyclerView
                         }
                         return;
                     }
-                    Drawable drawable2 = AILPChatListRecyclerViewAdapterNew.this.mContext.getResources().getDrawable(R.C7941drawable.dago_pgc_chat_item_bg_more_line_border);
+                    Drawable drawable2 = AILPChatListRecyclerViewAdapterNew.this.mContext.getResources().getDrawable(R.drawable.dago_pgc_chat_item_bg_more_line_border);
                     if (drawable2 instanceof GradientDrawable) {
                         if (aILPChatBean.getBgColor() != -1) {
                             ((GradientDrawable) drawable2).setColor(aILPChatBean.getBgColor());
@@ -464,7 +464,7 @@ public class AILPChatListRecyclerViewAdapterNew extends BaseChatListRecyclerView
                     if (AndroidInstantRuntime.support(ipChange2, "938222484")) {
                         ipChange2.ipc$dispatch("938222484", new Object[]{this});
                     } else if (viewHolder.mUserComment.getLineCount() == 1) {
-                        Drawable drawable = AILPChatListRecyclerViewAdapterNew.this.mContext.getResources().getDrawable(R.C7941drawable.dago_pgc_chat_item_bg_one_line);
+                        Drawable drawable = AILPChatListRecyclerViewAdapterNew.this.mContext.getResources().getDrawable(R.drawable.dago_pgc_chat_item_bg_one_line);
                         if (drawable instanceof GradientDrawable) {
                             if (aILPChatBean.getBgColor() != -1) {
                                 ((GradientDrawable) drawable).setColor(aILPChatBean.getBgColor());
@@ -476,7 +476,7 @@ public class AILPChatListRecyclerViewAdapterNew extends BaseChatListRecyclerView
                             viewHolder.itemLayout.setBackground(drawable);
                         }
                     } else {
-                        Drawable drawable2 = AILPChatListRecyclerViewAdapterNew.this.mContext.getResources().getDrawable(R.C7941drawable.dago_pgc_chat_item_bg_more_line);
+                        Drawable drawable2 = AILPChatListRecyclerViewAdapterNew.this.mContext.getResources().getDrawable(R.drawable.dago_pgc_chat_item_bg_more_line);
                         if (drawable2 instanceof GradientDrawable) {
                             if (aILPChatBean.getBgColor() != -1) {
                                 ((GradientDrawable) drawable2).setColor(aILPChatBean.getBgColor());

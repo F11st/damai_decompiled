@@ -17,7 +17,7 @@ import androidx.lifecycle.LiveData;
 import androidx.sqlite.db.SimpleSQLiteQuery;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.sqlite.db.SupportSQLiteStatement;
-import anet.channel.request.C0193a;
+import anet.channel.request.a;
 import com.taobao.weex.annotation.JSMethod;
 import java.lang.ref.WeakReference;
 import java.util.Arrays;
@@ -42,7 +42,7 @@ public class InvalidationTracker {
     @VisibleForTesting
     static final String SELECT_UPDATED_TABLES_SQL = "SELECT * FROM room_table_modification_log WHERE invalidated = 1;";
     private static final String TABLE_ID_COLUMN_NAME = "table_id";
-    private static final String[] TRIGGERS = {"UPDATE", C0193a.C0196c.DELETE, "INSERT"};
+    private static final String[] TRIGGERS = {"UPDATE", a.c.DELETE, "INSERT"};
     private static final String UPDATE_TABLE_NAME = "room_table_modification_log";
     @Nullable
     AutoCloser mAutoCloser;

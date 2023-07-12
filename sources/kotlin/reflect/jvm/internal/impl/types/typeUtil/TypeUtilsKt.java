@@ -8,12 +8,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.k;
+import kotlin.collections.n;
 import kotlin.jvm.JvmOverloads;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
+import kotlin.reflect.jvm.internal.impl.builtins.b;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptorWithTypeParameters;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeAliasDescriptor;
@@ -68,7 +68,7 @@ public final class TypeUtilsKt {
             for (i21 i21Var : G0) {
                 int a = i21Var.a();
                 TypeProjection typeProjection = (TypeProjection) i21Var.b();
-                TypeParameterDescriptor typeParameterDescriptor = declaredTypeParameters == null ? null : (TypeParameterDescriptor) C8212k.S(declaredTypeParameters, a);
+                TypeParameterDescriptor typeParameterDescriptor = declaredTypeParameters == null ? null : (TypeParameterDescriptor) k.S(declaredTypeParameters, a);
                 if (((typeParameterDescriptor == null || set == null || !set.contains(typeParameterDescriptor)) ? false : true) || typeProjection.isStarProjection()) {
                     z = false;
                     continue;
@@ -138,7 +138,7 @@ public final class TypeUtilsKt {
         int i = 0;
         for (TypeProjection typeProjection : z71Var.b()) {
             int i2 = i + 1;
-            TypeParameterDescriptor typeParameterDescriptor = declaredTypeParameters == null ? null : (TypeParameterDescriptor) C8212k.S(declaredTypeParameters, i);
+            TypeParameterDescriptor typeParameterDescriptor = declaredTypeParameters == null ? null : (TypeParameterDescriptor) k.S(declaredTypeParameters, i);
             if (!((typeParameterDescriptor == null || set2 == null || !set2.contains(typeParameterDescriptor)) ? false : true) && !typeProjection.isStarProjection()) {
                 J = CollectionsKt___CollectionsKt.J(set, typeProjection.getType().c().getDeclarationDescriptor());
                 if (!J && !b41.d(typeProjection.getType().c(), z71Var2.c())) {
@@ -152,9 +152,9 @@ public final class TypeUtilsKt {
     }
 
     @NotNull
-    public static final AbstractC8271b h(@NotNull z71 z71Var) {
+    public static final b h(@NotNull z71 z71Var) {
         b41.i(z71Var, "<this>");
-        AbstractC8271b builtIns = z71Var.c().getBuiltIns();
+        b builtIns = z71Var.c().getBuiltIns();
         b41.h(builtIns, "constructor.builtIns");
         return builtIns;
     }
@@ -214,7 +214,7 @@ public final class TypeUtilsKt {
             if (r3 != 0) goto L68
             java.util.List r7 = r7.getUpperBounds()
             tb.b41.h(r7, r1)
-            java.lang.Object r7 = kotlin.collections.C8212k.P(r7)
+            java.lang.Object r7 = kotlin.collections.k.P(r7)
             java.lang.String r0 = "upperBounds.first()"
             tb.b41.h(r7, r0)
             r3 = r7
@@ -321,10 +321,10 @@ public final class TypeUtilsKt {
             if (!k.c().getParameters().isEmpty() && k.c().getDeclarationDescriptor() != null) {
                 List<TypeParameterDescriptor> parameters = k.c().getParameters();
                 b41.h(parameters, "constructor.parameters");
-                q3 = C8215n.q(parameters, 10);
+                q3 = n.q(parameters, 10);
                 ArrayList arrayList = new ArrayList(q3);
                 for (TypeParameterDescriptor typeParameterDescriptor : parameters) {
-                    TypeProjection typeProjection = (TypeProjection) C8212k.S(z71Var.b(), typeParameterDescriptor.getIndex());
+                    TypeProjection typeProjection = (TypeProjection) k.S(z71Var.b(), typeParameterDescriptor.getIndex());
                     if ((set != null && set.contains(typeParameterDescriptor)) || typeProjection == null || !map.containsKey(typeProjection.getType().c())) {
                         typeProjection = new StarProjectionImpl(typeParameterDescriptor);
                     }
@@ -336,10 +336,10 @@ public final class TypeUtilsKt {
             if (!l.c().getParameters().isEmpty() && l.c().getDeclarationDescriptor() != null) {
                 List<TypeParameterDescriptor> parameters2 = l.c().getParameters();
                 b41.h(parameters2, "constructor.parameters");
-                q2 = C8215n.q(parameters2, 10);
+                q2 = n.q(parameters2, 10);
                 ArrayList arrayList2 = new ArrayList(q2);
                 for (TypeParameterDescriptor typeParameterDescriptor2 : parameters2) {
-                    TypeProjection typeProjection2 = (TypeProjection) C8212k.S(z71Var.b(), typeParameterDescriptor2.getIndex());
+                    TypeProjection typeProjection2 = (TypeProjection) k.S(z71Var.b(), typeParameterDescriptor2.getIndex());
                     if ((set != null && set.contains(typeParameterDescriptor2)) || typeProjection2 == null || !map.containsKey(typeProjection2.getType().c())) {
                         typeProjection2 = new StarProjectionImpl(typeParameterDescriptor2);
                     }
@@ -355,10 +355,10 @@ public final class TypeUtilsKt {
             } else {
                 List<TypeParameterDescriptor> parameters3 = fd2Var.c().getParameters();
                 b41.h(parameters3, "constructor.parameters");
-                q = C8215n.q(parameters3, 10);
+                q = n.q(parameters3, 10);
                 ArrayList arrayList3 = new ArrayList(q);
                 for (TypeParameterDescriptor typeParameterDescriptor3 : parameters3) {
-                    TypeProjection typeProjection3 = (TypeProjection) C8212k.S(z71Var.b(), typeParameterDescriptor3.getIndex());
+                    TypeProjection typeProjection3 = (TypeProjection) k.S(z71Var.b(), typeParameterDescriptor3.getIndex());
                     if ((set != null && set.contains(typeParameterDescriptor3)) || typeProjection3 == null || !map.containsKey(typeProjection3.getType().c())) {
                         typeProjection3 = new StarProjectionImpl(typeParameterDescriptor3);
                     }
@@ -390,7 +390,7 @@ public final class TypeUtilsKt {
             if (!k.c().getParameters().isEmpty() && k.c().getDeclarationDescriptor() != null) {
                 List<TypeParameterDescriptor> parameters = k.c().getParameters();
                 b41.h(parameters, "constructor.parameters");
-                q3 = C8215n.q(parameters, 10);
+                q3 = n.q(parameters, 10);
                 ArrayList arrayList = new ArrayList(q3);
                 for (TypeParameterDescriptor typeParameterDescriptor : parameters) {
                     arrayList.add(new StarProjectionImpl(typeParameterDescriptor));
@@ -401,7 +401,7 @@ public final class TypeUtilsKt {
             if (!l.c().getParameters().isEmpty() && l.c().getDeclarationDescriptor() != null) {
                 List<TypeParameterDescriptor> parameters2 = l.c().getParameters();
                 b41.h(parameters2, "constructor.parameters");
-                q2 = C8215n.q(parameters2, 10);
+                q2 = n.q(parameters2, 10);
                 ArrayList arrayList2 = new ArrayList(q2);
                 for (TypeParameterDescriptor typeParameterDescriptor2 : parameters2) {
                     arrayList2.add(new StarProjectionImpl(typeParameterDescriptor2));
@@ -419,7 +419,7 @@ public final class TypeUtilsKt {
                 if (declarationDescriptor != null) {
                     List<TypeParameterDescriptor> parameters3 = fd2Var2.c().getParameters();
                     b41.h(parameters3, "constructor.parameters");
-                    q = C8215n.q(parameters3, 10);
+                    q = n.q(parameters3, 10);
                     ArrayList arrayList3 = new ArrayList(q);
                     for (TypeParameterDescriptor typeParameterDescriptor3 : parameters3) {
                         arrayList3.add(new StarProjectionImpl(typeParameterDescriptor3));

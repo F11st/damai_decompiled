@@ -1,7 +1,7 @@
 package com.youku.gaiax.quickjs;
 
 import androidx.annotation.Keep;
-import com.alipay.sdk.m.n.C4250a;
+import com.alipay.sdk.m.n.a;
 
 /* compiled from: Taobao */
 @Keep
@@ -25,7 +25,7 @@ public final class JSInt extends JSNumber {
 
     @Override // com.youku.gaiax.quickjs.JSNumber
     public byte getByte() {
-        return (byte) getIntInRange("byte", C4250a.g, 127);
+        return (byte) getIntInRange("byte", a.g, 127);
     }
 
     @Override // com.youku.gaiax.quickjs.JSNumber

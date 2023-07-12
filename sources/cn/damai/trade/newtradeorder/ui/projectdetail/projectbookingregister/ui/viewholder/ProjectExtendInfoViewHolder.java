@@ -12,8 +12,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
-import cn.damai.common.image.C0511b;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMImageStrategyConfig;
 import cn.damai.trade.R$drawable;
@@ -27,8 +25,8 @@ import com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.phenix.animate.AnimatedImageDrawable;
-import tb.C9826vr;
 import tb.t60;
+import tb.vr;
 import tb.vv1;
 import tb.yv1;
 
@@ -41,45 +39,42 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
     private TextView c;
     private RoundImageView d;
     private LinearLayout e;
-    private HtmlParserManager.C2244a f;
+    private HtmlParserManager.a f;
     private int g;
     private int h;
     private yv1 i;
     private OnExtendInfoImageItemClickListener j;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.viewholder.ProjectExtendInfoViewHolder$a */
     /* loaded from: classes8.dex */
-    public class C2268a implements DMImageCreator.DMImageFailListener {
+    public class a implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2268a(ProjectExtendInfoViewHolder projectExtendInfoViewHolder) {
+        a(ProjectExtendInfoViewHolder projectExtendInfoViewHolder) {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1592845539")) {
-                ipChange.ipc$dispatch("-1592845539", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-1592845539", new Object[]{this, dVar});
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.viewholder.ProjectExtendInfoViewHolder$b */
     /* loaded from: classes8.dex */
-    public class C2269b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
         final /* synthetic */ ImageView b;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.viewholder.ProjectExtendInfoViewHolder$b$a */
         /* loaded from: classes16.dex */
-        public class View$OnClickListenerC2270a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC2270a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -93,65 +88,62 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
             }
         }
 
-        C2269b(int i, ImageView imageView) {
+        b(int i, ImageView imageView) {
             this.a = i;
             this.b = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Drawable drawable;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1337490702")) {
-                ipChange.ipc$dispatch("-1337490702", new Object[]{this, c0502e});
-            } else if (c0502e == null || (drawable = c0502e.a) == null) {
+                ipChange.ipc$dispatch("-1337490702", new Object[]{this, eVar});
+            } else if (eVar == null || (drawable = eVar.a) == null) {
             } else {
-                ProjectExtendInfoViewHolder.this.l(this.a, (int) (c0502e.a.getIntrinsicHeight() * ((this.a * 1.0f) / drawable.getIntrinsicWidth())));
+                ProjectExtendInfoViewHolder.this.l(this.a, (int) (eVar.a.getIntrinsicHeight() * ((this.a * 1.0f) / drawable.getIntrinsicWidth())));
                 try {
-                    AnimatedImageDrawable animatedImageDrawable = (AnimatedImageDrawable) c0502e.a;
+                    AnimatedImageDrawable animatedImageDrawable = (AnimatedImageDrawable) eVar.a;
                     animatedImageDrawable.start();
                     this.b.setImageDrawable(animatedImageDrawable);
                 } catch (Exception unused) {
-                    this.b.setImageDrawable(c0502e.a);
+                    this.b.setImageDrawable(eVar.a);
                 }
-                this.b.setOnClickListener(new View$OnClickListenerC2270a());
+                this.b.setOnClickListener(new a());
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.viewholder.ProjectExtendInfoViewHolder$c */
     /* loaded from: classes8.dex */
-    public class C2271c implements DMImageCreator.DMImageFailListener {
+    public class c implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2271c(ProjectExtendInfoViewHolder projectExtendInfoViewHolder) {
+        c(ProjectExtendInfoViewHolder projectExtendInfoViewHolder) {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "368729119")) {
-                ipChange.ipc$dispatch("368729119", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("368729119", new Object[]{this, dVar});
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.viewholder.ProjectExtendInfoViewHolder$d */
     /* loaded from: classes8.dex */
-    public class C2272d implements DMImageCreator.DMImageSuccListener {
+    public class d implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
         final /* synthetic */ ImageView b;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.viewholder.ProjectExtendInfoViewHolder$d$a */
         /* loaded from: classes16.dex */
-        public class View$OnClickListenerC2273a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC2273a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -165,30 +157,30 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
             }
         }
 
-        C2272d(int i, ImageView imageView) {
+        d(int i, ImageView imageView) {
             this.a = i;
             this.b = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Drawable drawable;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1741322868")) {
-                ipChange.ipc$dispatch("1741322868", new Object[]{this, c0502e});
-            } else if (c0502e == null || (drawable = c0502e.a) == null) {
+                ipChange.ipc$dispatch("1741322868", new Object[]{this, eVar});
+            } else if (eVar == null || (drawable = eVar.a) == null) {
             } else {
                 float intrinsicWidth = (this.a * 1.0f) / drawable.getIntrinsicWidth();
                 this.b.getLayoutParams().width = this.a;
-                this.b.getLayoutParams().height = (int) (c0502e.a.getIntrinsicHeight() * intrinsicWidth);
+                this.b.getLayoutParams().height = (int) (eVar.a.getIntrinsicHeight() * intrinsicWidth);
                 try {
-                    AnimatedImageDrawable animatedImageDrawable = (AnimatedImageDrawable) c0502e.a;
+                    AnimatedImageDrawable animatedImageDrawable = (AnimatedImageDrawable) eVar.a;
                     animatedImageDrawable.start();
                     this.b.setImageDrawable(animatedImageDrawable);
                 } catch (Exception unused) {
-                    this.b.setImageDrawable(c0502e.a);
+                    this.b.setImageDrawable(eVar.a);
                 }
-                this.b.setOnClickListener(new View$OnClickListenerC2273a());
+                this.b.setOnClickListener(new a());
             }
         }
     }
@@ -207,35 +199,35 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
         this.b = (FrameLayout) this.itemView;
     }
 
-    private void d(HtmlParserManager.C2244a c2244a) {
+    private void d(HtmlParserManager.a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "309451704")) {
-            ipChange.ipc$dispatch("309451704", new Object[]{this, c2244a});
+            ipChange.ipc$dispatch("309451704", new Object[]{this, aVar});
             return;
         }
         m();
         this.c.setVisibility(8);
-        if (!vv1.b(c2244a.c(), c2244a.b())) {
+        if (!vv1.b(aVar.c(), aVar.b())) {
             this.d.setVisibility(0);
             this.e.setVisibility(8);
-            i(this.d, c2244a.a().toString());
+            i(this.d, aVar.a().toString());
             return;
         }
         this.d.setVisibility(8);
         this.e.setVisibility(0);
         this.e.removeAllViews();
-        int b = c2244a.b() / 500;
-        if (c2244a.b() % 500 > 0) {
-            b++;
+        int b2 = aVar.b() / 500;
+        if (aVar.b() % 500 > 0) {
+            b2++;
         }
-        for (int i = 0; i < b; i++) {
+        for (int i = 0; i < b2; i++) {
             RoundImageView roundImageView = new RoundImageView(this.a);
             roundImageView.setScaleType(ImageView.ScaleType.FIT_XY);
             roundImageView.setType(1);
             roundImageView.setBorderRadius(0);
             this.e.setBackgroundResource(R$drawable.project_image_bg);
             this.e.addView(roundImageView);
-            j(roundImageView, c2244a.a().toString(), DMImageStrategyConfig.DMImageCropType.cy500, i);
+            j(roundImageView, aVar.a().toString(), DMImageStrategyConfig.DMImageCropType.cy500, i);
         }
     }
 
@@ -245,9 +237,9 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
             ipChange.ipc$dispatch("-2030113816", new Object[]{this});
             return;
         }
-        HtmlParserManager.C2244a c2244a = this.f;
-        if (c2244a != null) {
-            f(c2244a.e());
+        HtmlParserManager.a aVar = this.f;
+        if (aVar != null) {
+            f(aVar.e());
         }
     }
 
@@ -288,17 +280,17 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
             ipChange.ipc$dispatch("-615429172", new Object[]{this, imageView, str});
         } else if (imageView == null) {
         } else {
-            if (imageView.getTag() instanceof C9826vr) {
-                ((C9826vr) imageView.getTag()).cancel();
+            if (imageView.getTag() instanceof vr) {
+                ((vr) imageView.getTag()).cancel();
             }
-            int a = DisplayMetrics.getwidthPixels(this.a.getResources().getDisplayMetrics()) - (t60.a(this.a, 21.0f) * 2);
-            DMImageStrategyConfig b = C0511b.b(str, -1, -1);
-            if (b != null) {
-                b.b = false;
+            int a2 = DisplayMetrics.getwidthPixels(this.a.getResources().getDisplayMetrics()) - (t60.a(this.a, 21.0f) * 2);
+            DMImageStrategyConfig b2 = cn.damai.common.image.b.b(str, -1, -1);
+            if (b2 != null) {
+                b2.b = false;
             }
-            DMImageCreator g = C0504a.b().g(str, b);
+            DMImageCreator g = cn.damai.common.image.a.b().g(str, b2);
             int i = R$drawable.project_default_image_bg;
-            imageView.setTag(g.i(i).c(i).n(new C2269b(a, imageView)).e(new C2268a(this)).f());
+            imageView.setTag(g.i(i).c(i).n(new b(a2, imageView)).e(new a(this)).f());
         }
     }
 
@@ -308,20 +300,20 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
             ipChange.ipc$dispatch("1307128048", new Object[]{this, imageView, str, dMImageCropType, Integer.valueOf(i)});
         } else if (imageView == null) {
         } else {
-            if (imageView.getTag() instanceof C9826vr) {
-                ((C9826vr) imageView.getTag()).cancel();
+            if (imageView.getTag() instanceof vr) {
+                ((vr) imageView.getTag()).cancel();
             }
-            int a = DisplayMetrics.getwidthPixels(this.a.getResources().getDisplayMetrics()) - (t60.a(this.a, 21.0f) * 2);
-            DMImageStrategyConfig b = C0511b.b(str, -1, -1);
-            if (b != null) {
-                b.b = false;
-                b.c = true;
-                b.d = dMImageCropType;
-                b.e = i;
+            int a2 = DisplayMetrics.getwidthPixels(this.a.getResources().getDisplayMetrics()) - (t60.a(this.a, 21.0f) * 2);
+            DMImageStrategyConfig b2 = cn.damai.common.image.b.b(str, -1, -1);
+            if (b2 != null) {
+                b2.b = false;
+                b2.c = true;
+                b2.d = dMImageCropType;
+                b2.e = i;
             }
-            DMImageCreator g = C0504a.b().g(str, b);
+            DMImageCreator g = cn.damai.common.image.a.b().g(str, b2);
             int i2 = R$drawable.project_default_image_bg;
-            imageView.setTag(g.i(i2).c(i2).n(new C2272d(a, imageView)).e(new C2271c(this)).f());
+            imageView.setTag(g.i(i2).c(i2).n(new d(a2, imageView)).e(new c(this)).f());
         }
     }
 
@@ -370,11 +362,11 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
             return;
         }
         int i = this.h;
-        int a = t60.a(this.a, 21.0f);
+        int a2 = t60.a(this.a, 21.0f);
         if (i > 0) {
             if (i == 1) {
                 FrameLayout frameLayout = this.b;
-                frameLayout.setPadding(frameLayout.getPaddingLeft(), 0, this.b.getPaddingRight(), a);
+                frameLayout.setPadding(frameLayout.getPaddingLeft(), 0, this.b.getPaddingRight(), a2);
                 return;
             }
             int i2 = this.g;

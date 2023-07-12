@@ -14,9 +14,8 @@ public class bk {
     private static final Map<Class<?>, Class<?>> a;
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.bk$a */
     /* loaded from: classes11.dex */
-    public static class C7611a<T> {
+    public static class a<T> {
         public final Class<? extends T> a;
 
         /* renamed from: a  reason: collision with other field name */
@@ -116,7 +115,7 @@ public class bk {
 
     public static <T> T a(String str, String str2) {
         try {
-            return (T) a((Class<? extends Object>) C7786v.a(null, str), (Object) null, str2);
+            return (T) a((Class<? extends Object>) v.a(null, str), (Object) null, str2);
         } catch (Exception e) {
             Log.w("JavaCalls", "Meet exception when call getStaticField '" + str2 + "' in " + str + AVFSCacheConstants.COMMA_SEP + e);
             return null;
@@ -125,7 +124,7 @@ public class bk {
 
     public static <T> T a(String str, String str2, Object... objArr) {
         try {
-            return (T) a(C7786v.a(null, str), str2, objArr);
+            return (T) a(v.a(null, str), str2, objArr);
         } catch (Exception e) {
             Log.w("JavaCalls", "Meet exception when call Method '" + str2 + "' in " + str + AVFSCacheConstants.COMMA_SEP + e);
             return null;
@@ -189,10 +188,10 @@ public class bk {
         Class<?>[] clsArr = new Class[objArr.length];
         for (int i = 0; i < objArr.length; i++) {
             Object obj = objArr[i];
-            if (obj == null || !(obj instanceof C7611a)) {
+            if (obj == null || !(obj instanceof a)) {
                 clsArr[i] = obj == null ? null : obj.getClass();
             } else {
-                clsArr[i] = ((C7611a) obj).a;
+                clsArr[i] = ((a) obj).a;
             }
         }
         return clsArr;
@@ -206,10 +205,10 @@ public class bk {
         Object[] objArr2 = new Object[objArr.length];
         for (int i = 0; i < objArr.length; i++) {
             Object obj = objArr[i];
-            if (obj == null || !(obj instanceof C7611a)) {
+            if (obj == null || !(obj instanceof a)) {
                 objArr2[i] = obj;
             } else {
-                objArr2[i] = ((C7611a) obj).f133a;
+                objArr2[i] = ((a) obj).f133a;
             }
         }
         return objArr2;

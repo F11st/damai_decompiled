@@ -30,7 +30,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import kotlin.Metadata;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -156,7 +156,7 @@ public class ComponentLoader extends AbsLoader<IComponent<ComponentValue>> {
                                 for (Object obj : children2) {
                                     int i3 = i2 + 1;
                                     if (i2 < 0) {
-                                        C8214m.p();
+                                        m.p();
                                     }
                                     Node node2 = (Node) obj;
                                     IItem<ItemValue> createItem = iComponent.createItem(new Config<>(iComponent.getPageContext(), node2.getType(), node2, 0, false, 24, null));

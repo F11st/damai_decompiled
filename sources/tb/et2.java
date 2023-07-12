@@ -4,7 +4,6 @@ import android.net.Uri;
 import com.alibaba.analytics.AnalyticsMgr;
 import com.alibaba.analytics.core.config.UTClientConfigMgr;
 import com.alibaba.analytics.utils.Logger;
-import com.alipay.sdk.m.s.C4293a;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -71,7 +70,7 @@ public class et2 {
                         if (yh2.f(optString)) {
                             optString = "${" + string + "}";
                         }
-                        String optString2 = optJSONObject.optString(C4293a.s, ft2.TYPE_FAR);
+                        String optString2 = optJSONObject.optString(com.alipay.sdk.m.s.a.s, ft2.TYPE_FAR);
                         ft2Var.d(string);
                         ft2Var.e(optString);
                         ft2Var.f(optString2);

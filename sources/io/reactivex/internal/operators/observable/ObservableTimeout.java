@@ -8,7 +8,7 @@ import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.disposables.ObserverFullArbiter;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.observers.FullArbiterObserver;
-import io.reactivex.observers.AbstractC8160b;
+import io.reactivex.observers.b;
 import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicReference;
 import tb.dg0;
@@ -32,7 +32,7 @@ public final class ObservableTimeout<T, U, V> extends AbstractObservableWithUpst
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class TimeoutInnerObserver<T, U, V> extends AbstractC8160b<Object> {
+    static final class TimeoutInnerObserver<T, U, V> extends b<Object> {
         boolean done;
         final long index;
         final OnTimeout parent;
@@ -289,7 +289,7 @@ public final class ObservableTimeout<T, U, V> extends AbstractObservableWithUpst
         this.other = observableSource3;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         if (this.other == null) {
             this.source.subscribe(new TimeoutObserver(new ra2(observer), this.firstTimeoutIndicator, this.itemTimeoutIndicator));

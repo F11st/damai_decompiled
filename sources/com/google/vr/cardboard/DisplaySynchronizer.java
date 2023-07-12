@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class DisplaySynchronizer implements Choreographer.FrameCallback {
     public static final long DISPLAY_ROTATION_REFRESH_INTERVAL_NANOS = TimeUnit.SECONDS.toNanos(1);
     private volatile long a;
-    private final Choreographer$FrameCallbackC5434c b;
+    private final c b;
     private volatile Display c;
     private volatile int d = -1;
     private long e = 0;
@@ -22,9 +22,9 @@ public class DisplaySynchronizer implements Choreographer.FrameCallback {
         this.a = nativeCreate(getClass().getClassLoader(), context.getApplicationContext());
         if (this.a != 0) {
             h(display);
-            Choreographer$FrameCallbackC5434c choreographer$FrameCallbackC5434c = new Choreographer$FrameCallbackC5434c(this);
-            this.b = choreographer$FrameCallbackC5434c;
-            choreographer$FrameCallbackC5434c.a();
+            c cVar = new c(this);
+            this.b = cVar;
+            cVar.a();
             return;
         }
         throw new IllegalStateException("Native DisplaySynchronizer creation failed, implementation unavailable.");

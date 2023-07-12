@@ -11,13 +11,12 @@ import tb.z71;
 public interface FlexibleTypeDeserializer {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.serialization.deserialization.FlexibleTypeDeserializer$a */
     /* loaded from: classes3.dex */
-    public static final class C8509a implements FlexibleTypeDeserializer {
+    public static final class a implements FlexibleTypeDeserializer {
         @NotNull
-        public static final C8509a INSTANCE = new C8509a();
+        public static final a INSTANCE = new a();
 
-        private C8509a() {
+        private a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.serialization.deserialization.FlexibleTypeDeserializer

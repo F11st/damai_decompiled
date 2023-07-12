@@ -1,20 +1,20 @@
 package kotlin.reflect.jvm.internal.impl.serialization.deserialization;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8226x;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.k;
+import kotlin.collections.m;
+import kotlin.collections.n;
+import kotlin.collections.x;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
+import kotlin.reflect.jvm.internal.impl.builtins.b;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
@@ -84,7 +84,7 @@ public final class TypeDeserializer {
 
     public TypeDeserializer(@NotNull j70 j70Var, @Nullable TypeDeserializer typeDeserializer, @NotNull List<ProtoBuf$TypeParameter> list, @NotNull String str, @NotNull String str2, boolean z) {
         Map<Integer, TypeParameterDescriptor> linkedHashMap;
-        b41.i(j70Var, AbstractC5658c.a);
+        b41.i(j70Var, c.a);
         b41.i(list, "typeParameterProtos");
         b41.i(str, "debugName");
         b41.i(str2, "containerPresentableName");
@@ -130,7 +130,7 @@ public final class TypeDeserializer {
             }
         });
         if (list.isEmpty()) {
-            linkedHashMap = C8226x.i();
+            linkedHashMap = x.i();
         } else {
             linkedHashMap = new LinkedHashMap<>();
             int i = 0;
@@ -168,11 +168,11 @@ public final class TypeDeserializer {
     private final fd2 g(z71 z71Var, z71 z71Var2) {
         List<TypeProjection> M;
         int q;
-        AbstractC8271b h = TypeUtilsKt.h(z71Var);
+        b h = TypeUtilsKt.h(z71Var);
         Annotations annotations = z71Var.getAnnotations();
         z71 h2 = up0.h(z71Var);
         M = CollectionsKt___CollectionsKt.M(up0.j(z71Var), 1);
-        q = C8215n.q(M, 10);
+        q = n.q(M, 10);
         ArrayList arrayList = new ArrayList(q);
         for (TypeProjection typeProjection : M) {
             arrayList.add(typeProjection.getType());
@@ -226,7 +226,7 @@ public final class TypeDeserializer {
         ProtoBuf$Type g = jx1.g(protoBuf$Type, typeDeserializer.a.j());
         List<ProtoBuf$Type.Argument> n = g == null ? null : n(g, typeDeserializer);
         if (n == null) {
-            n = C8214m.g();
+            n = m.g();
         }
         m0 = CollectionsKt___CollectionsKt.m0(argumentList, n);
         return m0;
@@ -241,7 +241,7 @@ public final class TypeDeserializer {
 
     private final fd2 p(z71 z71Var) {
         boolean releaseCoroutines = this.a.c().g().getReleaseCoroutines();
-        TypeProjection typeProjection = (TypeProjection) C8212k.d0(up0.j(z71Var));
+        TypeProjection typeProjection = (TypeProjection) k.d0(up0.j(z71Var));
         z71 type = typeProjection == null ? null : typeProjection.getType();
         if (type == null) {
             return null;
@@ -250,7 +250,7 @@ public final class TypeDeserializer {
         hp0 i = declarationDescriptor == null ? null : DescriptorUtilsKt.i(declarationDescriptor);
         boolean z = true;
         if (type.b().size() == 1 && (fj2.a(i, true) || fj2.a(i, false))) {
-            z71 type2 = ((TypeProjection) C8212k.q0(type.b())).getType();
+            z71 type2 = ((TypeProjection) k.q0(type.b())).getType();
             b41.h(type2, "continuationArgumentType.arguments.single().type");
             DeclarationDescriptor e = this.a.e();
             if (!(e instanceof CallableDescriptor)) {
@@ -334,13 +334,11 @@ public final class TypeDeserializer {
     }
 
     private static final ClassDescriptor t(TypeDeserializer typeDeserializer, ProtoBuf$Type protoBuf$Type, int i) {
-        Sequence h;
         Sequence v;
         List<Integer> C;
-        Sequence h2;
         int m;
         hj a = pi1.a(typeDeserializer.a.g(), i);
-        h = SequencesKt__SequencesKt.h(protoBuf$Type, new Function1<ProtoBuf$Type, ProtoBuf$Type>() { // from class: kotlin.reflect.jvm.internal.impl.serialization.deserialization.TypeDeserializer$typeConstructor$notFoundClass$typeParametersCount$1
+        v = SequencesKt___SequencesKt.v(SequencesKt__SequencesKt.h(protoBuf$Type, new Function1<ProtoBuf$Type, ProtoBuf$Type>() { // from class: kotlin.reflect.jvm.internal.impl.serialization.deserialization.TypeDeserializer$typeConstructor$notFoundClass$typeParametersCount$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(1);
@@ -354,8 +352,7 @@ public final class TypeDeserializer {
                 j70Var = TypeDeserializer.this.a;
                 return jx1.g(protoBuf$Type2, j70Var.j());
             }
-        });
-        v = SequencesKt___SequencesKt.v(h, new Function1<ProtoBuf$Type, Integer>() { // from class: kotlin.reflect.jvm.internal.impl.serialization.deserialization.TypeDeserializer$typeConstructor$notFoundClass$typeParametersCount$2
+        }), new Function1<ProtoBuf$Type, Integer>() { // from class: kotlin.reflect.jvm.internal.impl.serialization.deserialization.TypeDeserializer$typeConstructor$notFoundClass$typeParametersCount$2
             @Override // kotlin.jvm.functions.Function1
             @NotNull
             public final Integer invoke(@NotNull ProtoBuf$Type protoBuf$Type2) {
@@ -364,8 +361,7 @@ public final class TypeDeserializer {
             }
         });
         C = SequencesKt___SequencesKt.C(v);
-        h2 = SequencesKt__SequencesKt.h(a, TypeDeserializer$typeConstructor$notFoundClass$classNestingLevel$1.INSTANCE);
-        m = SequencesKt___SequencesKt.m(h2);
+        m = SequencesKt___SequencesKt.m(SequencesKt__SequencesKt.h(a, TypeDeserializer$typeConstructor$notFoundClass$classNestingLevel$1.INSTANCE));
         while (C.size() < m) {
             C.add(0);
         }
@@ -426,17 +422,17 @@ public final class TypeDeserializer {
             }
         });
         List<ProtoBuf$Type.Argument> n = n(protoBuf$Type, this);
-        q = C8215n.q(n, 10);
+        q = n.q(n, 10);
         ArrayList arrayList = new ArrayList(q);
         int i2 = 0;
         for (Object obj : n) {
             int i3 = i2 + 1;
             if (i2 < 0) {
-                C8214m.p();
+                m.p();
             }
             List<TypeParameterDescriptor> parameters = s.getParameters();
             b41.h(parameters, "constructor.parameters");
-            arrayList.add(r((TypeParameterDescriptor) C8212k.S(parameters, i2), (ProtoBuf$Type.Argument) obj));
+            arrayList.add(r((TypeParameterDescriptor) k.S(parameters, i2), (ProtoBuf$Type.Argument) obj));
             i2 = i3;
         }
         A0 = CollectionsKt___CollectionsKt.A0(arrayList);
@@ -445,9 +441,9 @@ public final class TypeDeserializer {
             KotlinTypeFactory kotlinTypeFactory = KotlinTypeFactory.INSTANCE;
             fd2 b = KotlinTypeFactory.b((TypeAliasDescriptor) declarationDescriptor, A0);
             fd2 j2 = b.j(a81.b(b) || protoBuf$Type.getNullable());
-            Annotations.C8302a c8302a = Annotations.Companion;
+            Annotations.a aVar = Annotations.Companion;
             k0 = CollectionsKt___CollectionsKt.k0(k70Var, b.getAnnotations());
-            i = j2.k(c8302a.a(k0));
+            i = j2.k(aVar.a(k0));
         } else {
             Boolean d = yj0.SUSPEND_TYPE.d(protoBuf$Type.getFlags());
             b41.h(d, "SUSPEND_TYPE.get(proto.flags)");
@@ -458,7 +454,7 @@ public final class TypeDeserializer {
                 Boolean d2 = yj0.DEFINITELY_NOT_NULL_TYPE.d(protoBuf$Type.getFlags());
                 b41.h(d2, "DEFINITELY_NOT_NULL_TYPE.get(proto.flags)");
                 if (d2.booleanValue()) {
-                    j60 c = j60.C9300a.c(j60.Companion, i, false, 2, null);
+                    j60 c = j60.a.c(j60.Companion, i, false, 2, null);
                     if (c == null) {
                         throw new IllegalStateException(("null DefinitelyNotNullType for '" + i + '\'').toString());
                     }

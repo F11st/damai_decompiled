@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.single;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.subscriptions.DeferredScalarSubscription;
@@ -10,7 +10,7 @@ import org.reactivestreams.Subscriber;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SingleToFlowable<T> extends AbstractC8147b<T> {
+public final class SingleToFlowable<T> extends b<T> {
     final SingleSource<? extends T> source;
 
     /* compiled from: Taobao */
@@ -52,7 +52,7 @@ public final class SingleToFlowable<T> extends AbstractC8147b<T> {
         this.source = singleSource;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe(new SingleToFlowableObserver(subscriber));
     }

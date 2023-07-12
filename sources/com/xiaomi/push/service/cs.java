@@ -5,7 +5,7 @@ import com.xiaomi.push.service.XMPushService;
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class cs extends XMPushService.AbstractC7707j {
+public class cs extends XMPushService.j {
     final /* synthetic */ XMPushService a;
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -15,13 +15,13 @@ public class cs extends XMPushService.AbstractC7707j {
         this.a = xMPushService;
     }
 
-    @Override // com.xiaomi.push.service.XMPushService.AbstractC7707j
+    @Override // com.xiaomi.push.service.XMPushService.j
     /* renamed from: a */
     public String mo1157a() {
         return "prepare the mi push account.";
     }
 
-    @Override // com.xiaomi.push.service.XMPushService.AbstractC7707j
+    @Override // com.xiaomi.push.service.XMPushService.j
     /* renamed from: a */
     public void mo878a() {
         ah.a(this.a);

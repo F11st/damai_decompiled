@@ -11,8 +11,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.search.bean.BaccountInfo;
 import cn.damai.homepage.R$color;
 import cn.damai.homepage.R$drawable;
@@ -23,8 +23,8 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import tb.C9826vr;
 import tb.q60;
+import tb.vr;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
@@ -92,10 +92,10 @@ public class SearchWordPrivilegeJuMuViewHolder extends RecyclerView.ViewHolder {
                 this.g = null;
             }
         }
-        if (this.d.getTag() instanceof C9826vr) {
-            ((C9826vr) this.d.getTag()).cancel();
+        if (this.d.getTag() instanceof vr) {
+            ((vr) this.d.getTag()).cancel();
         }
-        DMImageCreator c = C0504a.b().c(baccountInfo.headPic);
+        DMImageCreator c = a.b().c(baccountInfo.headPic);
         int i2 = R$drawable.uikit_default_image_bg_gradient;
         this.d.setTag(c.i(i2).c(i2).g(this.d));
         this.b.setText(baccountInfo.description);

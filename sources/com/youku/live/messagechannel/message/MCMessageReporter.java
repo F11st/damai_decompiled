@@ -7,11 +7,11 @@ import com.taobao.orange.OrangeConfig;
 import com.youku.live.messagechannel.conf.OrangeConfKey;
 import com.youku.live.messagechannel.utils.MyLog;
 import com.youku.live.messagechannel.utils.UTEvent;
-import io.reactivex.AbstractC8149d;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Predicate;
-import io.reactivex.schedulers.C8162a;
+import io.reactivex.schedulers.a;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -42,7 +42,7 @@ public class MCMessageReporter {
         OrangeConfKey.KeyInfo keyInfo3 = OrangeConfKey.reportDistributeInterval;
         this.reportDistributeInterval = orangeConfig3.getConfig(OrangeConfKey.Group.android_youku_messagechannel, keyInfo3.name, keyInfo3.def);
         TimeUnit timeUnit = TimeUnit.SECONDS;
-        this.mcMessageReportQueueDisposable = this.mcMessageReportQueue.getObservable().subscribeOn(C8162a.a()).filter(new Predicate<MCMessageDispatch4UTRecord>() { // from class: com.youku.live.messagechannel.message.MCMessageReporter.2
+        this.mcMessageReportQueueDisposable = this.mcMessageReportQueue.getObservable().subscribeOn(a.a()).filter(new Predicate<MCMessageDispatch4UTRecord>() { // from class: com.youku.live.messagechannel.message.MCMessageReporter.2
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // io.reactivex.functions.Predicate
@@ -74,7 +74,7 @@ public class MCMessageReporter {
                 }
             }
         });
-        this.mcMessageReportErrorQueueDisposable = this.mcMessageReportErrorQueue.getObservable().subscribeOn(C8162a.a()).filter(new Predicate<MCMessage>() { // from class: com.youku.live.messagechannel.message.MCMessageReporter.4
+        this.mcMessageReportErrorQueueDisposable = this.mcMessageReportErrorQueue.getObservable().subscribeOn(a.a()).filter(new Predicate<MCMessage>() { // from class: com.youku.live.messagechannel.message.MCMessageReporter.4
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // io.reactivex.functions.Predicate
@@ -145,7 +145,7 @@ public class MCMessageReporter {
         if (AndroidInstantRuntime.support(ipChange, "-1798007691")) {
             ipChange.ipc$dispatch("-1798007691", new Object[]{this, mCMessage});
         } else {
-            AbstractC8149d.just(mCMessage).subscribe(this.mcMessageReportErrorQueue);
+            d.just(mCMessage).subscribe(this.mcMessageReportErrorQueue);
         }
     }
 
@@ -154,7 +154,7 @@ public class MCMessageReporter {
         if (AndroidInstantRuntime.support(ipChange, "-1971106643")) {
             ipChange.ipc$dispatch("-1971106643", new Object[]{this, mCMessageDispatch4UTRecord});
         } else {
-            AbstractC8149d.just(mCMessageDispatch4UTRecord).subscribe(this.mcMessageReportQueue);
+            d.just(mCMessageDispatch4UTRecord).subscribe(this.mcMessageReportQueue);
         }
     }
 }

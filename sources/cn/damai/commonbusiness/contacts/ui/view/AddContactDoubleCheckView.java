@@ -29,9 +29,8 @@ public class AddContactDoubleCheckView extends FrameLayout {
     private TextView mRenewalNumberTipTv;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.ui.view.AddContactDoubleCheckView$a */
     /* loaded from: classes14.dex */
-    public static class C0629a {
+    public static class a {
         private static transient /* synthetic */ IpChange $ipChange;
         String a;
         String b;
@@ -77,7 +76,7 @@ public class AddContactDoubleCheckView extends FrameLayout {
         this.mRenewalNumberDataTv = (TextView) findViewById(R$id.tv_renewal_number_data);
     }
 
-    public void setData(List<C0629a> list) {
+    public void setData(List<a> list) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-249773697")) {
             ipChange.ipc$dispatch("-249773697", new Object[]{this, list});

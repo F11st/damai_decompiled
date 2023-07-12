@@ -79,7 +79,7 @@ public final class p70 extends bx1 implements DeserializedCallableMemberDescript
     @Override // kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedMemberDescriptor
     @NotNull
     public List<hx2> getVersionRequirements() {
-        return DeserializedCallableMemberDescriptor.C8511a.a(this);
+        return DeserializedCallableMemberDescriptor.a.a(this);
     }
 
     @Override // tb.bx1

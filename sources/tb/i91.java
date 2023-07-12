@@ -10,7 +10,7 @@ import java.util.List;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class i91 implements BytesPool {
-    protected static final Comparator<byte[]> i = new C9257a();
+    protected static final Comparator<byte[]> i = new a();
     private List<byte[]> a = new LinkedList();
     private List<byte[]> b = new ArrayList(64);
     private int c = 0;
@@ -21,10 +21,9 @@ public class i91 implements BytesPool {
     private int h;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.i91$a */
     /* loaded from: classes11.dex */
-    static class C9257a implements Comparator<byte[]> {
-        C9257a() {
+    static class a implements Comparator<byte[]> {
+        a() {
         }
 
         @Override // java.util.Comparator

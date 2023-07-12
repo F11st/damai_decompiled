@@ -36,12 +36,11 @@ public class RealNameTipView extends LinearLayout {
     private TextView textView;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.view.RealNameTipView$a */
     /* loaded from: classes14.dex */
-    public class C0632a extends ClickableSpan {
+    public class a extends ClickableSpan {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0632a() {
+        a() {
         }
 
         @Override // android.text.style.ClickableSpan
@@ -91,8 +90,8 @@ public class RealNameTipView extends LinearLayout {
         this.checkBox = checkBox;
         checkBox.setButtonDrawable((Drawable) null);
         this.checkBox.setBackgroundResource(R$drawable.common_business_check_circle_selector);
-        int a = m62.a(context, 16.0f);
-        this.checkBox.setLayoutParams(new LinearLayout.LayoutParams(a, a));
+        int a2 = m62.a(context, 16.0f);
+        this.checkBox.setLayoutParams(new LinearLayout.LayoutParams(a2, a2));
         addView(this.checkBox);
         updateIconVis(false);
         TextView textView = new TextView(context);
@@ -123,7 +122,7 @@ public class RealNameTipView extends LinearLayout {
         } else {
             int indexOf = str.indexOf(str2);
             SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(str);
-            spannableStringBuilder.setSpan(new C0632a(), indexOf, str2.length() + indexOf, 18);
+            spannableStringBuilder.setSpan(new a(), indexOf, str2.length() + indexOf, 18);
             this.textView.setHighlightColor(0);
             this.textView.setMovementMethod(LinkMovementMethod.getInstance());
             this.textView.setText(spannableStringBuilder);

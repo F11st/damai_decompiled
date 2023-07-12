@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -30,12 +29,11 @@ public class SearchEggRecommendViewHolder extends RecyclerView.ViewHolder {
     private SearchListener f;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.viewholder.SearchEggRecommendViewHolder$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1622a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1622a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -65,7 +63,7 @@ public class SearchEggRecommendViewHolder extends RecyclerView.ViewHolder {
             ipChange.ipc$dispatch("-1705901066", new Object[]{this, str, imageView});
             return;
         }
-        DMImageCreator c = C0504a.b().c(str);
+        DMImageCreator c = cn.damai.common.image.a.b().c(str);
         int i = R$drawable.uikit_default_image_bg_gradient;
         c.i(i).c(i).g(imageView);
     }
@@ -76,7 +74,7 @@ public class SearchEggRecommendViewHolder extends RecyclerView.ViewHolder {
             ipChange.ipc$dispatch("-521272315", new Object[]{this, view});
         } else if (view == null) {
         } else {
-            view.setOnClickListener(new View$OnClickListenerC1622a());
+            view.setOnClickListener(new a());
         }
     }
 

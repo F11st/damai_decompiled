@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
 public final class hp2<BizResponse> implements IRemoteDataTransformer<BizResponse> {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C9226a Companion = new C9226a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String KEY_RESULT_CODE = "returnCode";
     @NotNull
@@ -25,13 +25,12 @@ public final class hp2<BizResponse> implements IRemoteDataTransformer<BizRespons
     public static final String TAG = "TppMtopDataTransformer";
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hp2$a */
     /* loaded from: classes7.dex */
-    public static final class C9226a {
-        private C9226a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9226a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

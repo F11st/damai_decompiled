@@ -83,7 +83,7 @@ public class ChangeQualityPlugin extends AbsPlugin implements ChangeQualityContr
                 }
             }
         };
-        ChangeQualityView changeQualityView = new ChangeQualityView(alixPlayerContext, alixPlayerContext.getPluginManager(viewGroup).getLayerManager(), this.mLayerId, R.C7935layout.dago_change_quality_view, alixPlayerContext.getPluginManager(viewGroup).getViewPlaceholder(this.mName));
+        ChangeQualityView changeQualityView = new ChangeQualityView(alixPlayerContext, alixPlayerContext.getPluginManager(viewGroup).getLayerManager(), this.mLayerId, R.layout.dago_change_quality_view, alixPlayerContext.getPluginManager(viewGroup).getViewPlaceholder(this.mName));
         this.mView = changeQualityView;
         changeQualityView.setPresenter((ChangeQualityContract.Presenter) this);
         this.mAttachToParent = true;

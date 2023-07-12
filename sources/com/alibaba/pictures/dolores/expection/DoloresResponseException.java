@@ -13,7 +13,7 @@ import tb.k50;
 public final class DoloresResponseException extends DoloresException {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C3606a Companion = new C3606a(null);
+    public static final a Companion = new a(null);
     private int bizReturnCode;
     @Nullable
     private String bizReturnMessage;
@@ -25,15 +25,14 @@ public final class DoloresResponseException extends DoloresException {
     private Object tag;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.dolores.expection.DoloresResponseException$a */
     /* loaded from: classes7.dex */
-    public static final class C3606a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3606a() {
+        private a() {
         }
 
-        public /* synthetic */ C3606a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
-import kotlin.collections.C8203e0;
-import kotlin.collections.C8220r;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
@@ -33,7 +31,7 @@ public class o70 extends DeserializedMemberScope {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public o70(@org.jetbrains.annotations.NotNull kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentDescriptor r17, @org.jetbrains.annotations.NotNull kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Package r18, @org.jetbrains.annotations.NotNull kotlin.reflect.jvm.internal.impl.metadata.deserialization.NameResolver r19, @org.jetbrains.annotations.NotNull tb.AbstractC9135fc r20, @org.jetbrains.annotations.Nullable kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedContainerSource r21, @org.jetbrains.annotations.NotNull tb.h70 r22, @org.jetbrains.annotations.NotNull java.lang.String r23, @org.jetbrains.annotations.NotNull kotlin.jvm.functions.Function0<? extends java.util.Collection<tb.ni1>> r24) {
+    public o70(@org.jetbrains.annotations.NotNull kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentDescriptor r17, @org.jetbrains.annotations.NotNull kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Package r18, @org.jetbrains.annotations.NotNull kotlin.reflect.jvm.internal.impl.metadata.deserialization.NameResolver r19, @org.jetbrains.annotations.NotNull tb.fc r20, @org.jetbrains.annotations.Nullable kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedContainerSource r21, @org.jetbrains.annotations.NotNull tb.h70 r22, @org.jetbrains.annotations.NotNull java.lang.String r23, @org.jetbrains.annotations.NotNull kotlin.jvm.functions.Function0<? extends java.util.Collection<tb.ni1>> r24) {
         /*
             r16 = this;
             r6 = r16
@@ -125,7 +123,7 @@ public class o70 extends DeserializedMemberScope {
     @Nullable
     public Set<ni1> m() {
         Set<ni1> d;
-        d = C8203e0.d();
+        d = kotlin.collections.e0.d();
         return d;
     }
 
@@ -134,7 +132,7 @@ public class o70 extends DeserializedMemberScope {
     @NotNull
     public Set<ni1> n() {
         Set<ni1> d;
-        d = C8203e0.d();
+        d = kotlin.collections.e0.d();
         return d;
     }
 
@@ -143,7 +141,7 @@ public class o70 extends DeserializedMemberScope {
     @NotNull
     public Set<ni1> o() {
         Set<ni1> d;
-        d = C8203e0.d();
+        d = kotlin.collections.e0.d();
         return d;
     }
 
@@ -186,7 +184,7 @@ public class o70 extends DeserializedMemberScope {
         Iterable<ClassDescriptorFactory> k = j().c().k();
         ArrayList arrayList = new ArrayList();
         for (ClassDescriptorFactory classDescriptorFactory : k) {
-            C8220r.v(arrayList, classDescriptorFactory.getAllContributedClassesIfPossible(this.h));
+            kotlin.collections.r.v(arrayList, classDescriptorFactory.getAllContributedClassesIfPossible(this.h));
         }
         m0 = CollectionsKt___CollectionsKt.m0(d, arrayList);
         return m0;

@@ -41,13 +41,12 @@ public class AnchorIndicatorView extends LinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.AnchorIndicatorView$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2341a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ c5 a;
 
-        View$OnClickListenerC2341a(c5 c5Var) {
+        a(c5 c5Var) {
             this.a = c5Var;
         }
 
@@ -87,7 +86,7 @@ public class AnchorIndicatorView extends LinearLayout {
                 textView.setText(c5Var.a());
                 textView.setTextColor(this.mUnSelectedFontColor);
                 textView.setTextSize(1, this.mUnSelectedFontSize);
-                inflate.setOnClickListener(new View$OnClickListenerC2341a(c5Var));
+                inflate.setOnClickListener(new a(c5Var));
                 addView(inflate);
             }
         }

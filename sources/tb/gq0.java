@@ -47,10 +47,9 @@ public final class gq0 {
     private final ViewTreeObserver.OnPreDrawListener p;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.gq0$a */
     /* loaded from: classes6.dex */
-    static final class ViewTreeObserver$OnPreDrawListenerC9182a implements ViewTreeObserver.OnPreDrawListener {
-        ViewTreeObserver$OnPreDrawListenerC9182a() {
+    static final class a implements ViewTreeObserver.OnPreDrawListener {
+        a() {
         }
 
         @Override // android.view.ViewTreeObserver.OnPreDrawListener
@@ -108,7 +107,7 @@ public final class gq0 {
         this.l = new Paint();
         this.m = new Rect();
         this.n = new Rect();
-        this.p = new ViewTreeObserver$OnPreDrawListenerC9182a();
+        this.p = new a();
     }
 
     private final void i(Canvas canvas, Bitmap bitmap) {

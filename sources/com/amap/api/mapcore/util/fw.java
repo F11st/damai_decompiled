@@ -4,7 +4,6 @@ import com.alibaba.security.biometrics.activity.BaseBioNavigatorActivity;
 import com.amap.api.maps.AMapUtils;
 import com.amap.api.maps.model.LatLng;
 import com.amap.api.services.core.AMapException;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.dp.http.ResCode;
 import java.util.List;
 import org.json.JSONException;
@@ -85,9 +84,9 @@ public class fw {
                                     throw new ft(AMapException.AMAP_ENGINE_RESPONSE_ERROR);
                                 case 30001:
                                     throw new ft(AMapException.AMAP_ENGINE_RESPONSE_DATA_ERROR);
-                                case C6368e.DXError_EngineInitException /* 30002 */:
+                                case com.taobao.android.dinamicx.e.DXError_EngineInitException /* 30002 */:
                                     throw new ft(AMapException.AMAP_ENGINE_CONNECT_TIMEOUT);
-                                case C6368e.DXError_EngineSizeException /* 30003 */:
+                                case com.taobao.android.dinamicx.e.DXError_EngineSizeException /* 30003 */:
                                     throw new ft(AMapException.AMAP_ENGINE_RETURN_TIMEOUT);
                                 default:
                                     throw new ft(str);

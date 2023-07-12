@@ -3,8 +3,6 @@ package com.xiaomi.push;
 import android.content.Context;
 import android.content.pm.ProviderInfo;
 import android.net.Uri;
-import com.alipay.sdk.m.p0.C4273b;
-import com.alipay.sdk.m.p0.C4274c;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -13,8 +11,8 @@ class bf implements au {
     private static String b = a + "OAID";
     private static String c = a + "VAID_";
     private static String d = a + "AAID_";
-    private static String e = a + C4273b.h;
-    private static String f = C4274c.c;
+    private static String e = a + com.alipay.sdk.m.p0.b.h;
+    private static String f = com.alipay.sdk.m.p0.c.c;
 
     /* renamed from: a  reason: collision with other field name */
     private Context f129a;
@@ -111,6 +109,6 @@ class bf implements au {
     @Override // com.xiaomi.push.au
     /* renamed from: a */
     public boolean mo671a() {
-        return "1".equals(C7785u.a(f, "0"));
+        return "1".equals(u.a(f, "0"));
     }
 }

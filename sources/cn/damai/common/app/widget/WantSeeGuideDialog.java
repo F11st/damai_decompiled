@@ -50,12 +50,11 @@ public class WantSeeGuideDialog extends TDialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.app.widget.WantSeeGuideDialog$a */
     /* loaded from: classes13.dex */
-    public class View$OnClickListenerC0481a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0481a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -73,12 +72,11 @@ public class WantSeeGuideDialog extends TDialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.app.widget.WantSeeGuideDialog$b */
     /* loaded from: classes13.dex */
-    public class View$OnClickListenerC0482b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0482b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -96,12 +94,11 @@ public class WantSeeGuideDialog extends TDialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.app.widget.WantSeeGuideDialog$c */
     /* loaded from: classes4.dex */
-    public class C0483c implements LottieListener<Throwable> {
+    public class c implements LottieListener<Throwable> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0483c() {
+        c() {
         }
 
         @Override // com.airbnb.lottie.LottieListener
@@ -146,8 +143,8 @@ public class WantSeeGuideDialog extends TDialog {
             ipChange.ipc$dispatch("-1225155803", new Object[]{this});
             return;
         }
-        this.m.setOnClickListener(new View$OnClickListenerC0481a());
-        this.j.setOnClickListener(new View$OnClickListenerC0482b());
+        this.m.setOnClickListener(new a());
+        this.j.setOnClickListener(new b());
     }
 
     public WantSeeGuideDialog(@NonNull Context context, Listener listener, WantGuidePageSource wantGuidePageSource) {
@@ -157,7 +154,7 @@ public class WantSeeGuideDialog extends TDialog {
         if (wantGuidePageSource != null) {
             if (!TextUtils.isEmpty(wantGuidePageSource.lottieUrl())) {
                 String lottieUrl = wantGuidePageSource.lottieUrl();
-                this.i.setFailureListener(new C0483c());
+                this.i.setFailureListener(new c());
                 this.i.setAnimationFromUrl(lottieUrl);
             } else {
                 this.i.setAnimation("wantseeguidelottie.zip");

@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
@@ -27,7 +26,6 @@ import cn.damai.tetris.component.brand.bean.IpBean;
 import cn.damai.tetris.core.BasePresenter;
 import cn.damai.tetris.core.BaseSection;
 import cn.damai.tetris.core.TrackInfo;
-import cn.damai.uikit.image.C2497a;
 import cn.damai.uikit.view.DMPosterView;
 import cn.damai.uikit.view.ScoreStarViewV2;
 import cn.damai.uikit.view.round.RoundImageView2;
@@ -38,8 +36,8 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
 import java.util.HashMap;
-import tb.C9175gc;
 import tb.cs;
+import tb.gc;
 import tb.ja;
 import tb.t60;
 
@@ -51,38 +49,35 @@ public class BrandIpPresenter extends BasePresenter<BrandIpContract.Model, Brand
     private TrackInfo mTrackInfo;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.brand.BrandIpPresenter$a */
     /* loaded from: classes7.dex */
-    public class C1783a implements DMImageCreator.DMImageFailListener {
+    public class a implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1783a(BrandIpPresenter brandIpPresenter) {
+        a(BrandIpPresenter brandIpPresenter) {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1475354764")) {
-                ipChange.ipc$dispatch("-1475354764", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-1475354764", new Object[]{this, dVar});
                 return;
             }
-            Log.e("BrandIpPresenter", "DMImageCreator.FailEvent: " + c0501d.a);
+            Log.e("BrandIpPresenter", "DMImageCreator.FailEvent: " + dVar.a);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.brand.BrandIpPresenter$b */
     /* loaded from: classes7.dex */
-    public class C1784b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.tetris.component.brand.BrandIpPresenter$b$a */
         /* loaded from: classes7.dex */
-        public class C1785a implements DMRGBUtil.OnFetchColorListener {
+        public class a implements DMRGBUtil.OnFetchColorListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1785a() {
+            a() {
             }
 
             @Override // cn.damai.commonbusiness.util.DMRGBUtil.OnFetchColorListener
@@ -99,30 +94,29 @@ public class BrandIpPresenter extends BasePresenter<BrandIpContract.Model, Brand
             }
         }
 
-        C1784b() {
+        b() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1226610167")) {
-                ipChange.ipc$dispatch("-1226610167", new Object[]{this, c0502e});
-            } else if (c0502e == null || (bitmap = c0502e.b) == null) {
+                ipChange.ipc$dispatch("-1226610167", new Object[]{this, eVar});
+            } else if (eVar == null || (bitmap = eVar.b) == null) {
             } else {
-                DMRGBUtil.g(1.0f, bitmap, BrandIpPresenter.this.getModel().getBrandInfo().backgroundPic, new C1785a());
+                DMRGBUtil.g(1.0f, bitmap, BrandIpPresenter.this.getModel().getBrandInfo().backgroundPic, new a());
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.brand.BrandIpPresenter$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1786c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ HashMap a;
 
-        View$OnClickListenerC1786c(HashMap hashMap) {
+        c(HashMap hashMap) {
             this.a = hashMap;
         }
 
@@ -144,13 +138,12 @@ public class BrandIpPresenter extends BasePresenter<BrandIpContract.Model, Brand
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.brand.BrandIpPresenter$d */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1787d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ HashMap a;
 
-        View$OnClickListenerC1787d(HashMap hashMap) {
+        d(HashMap hashMap) {
             this.a = hashMap;
         }
 
@@ -170,14 +163,13 @@ public class BrandIpPresenter extends BasePresenter<BrandIpContract.Model, Brand
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.brand.BrandIpPresenter$e */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1788e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ IpBean a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC1788e(IpBean ipBean, int i) {
+        e(IpBean ipBean, int i) {
             this.a = ipBean;
             this.b = i;
         }
@@ -208,13 +200,13 @@ public class BrandIpPresenter extends BasePresenter<BrandIpContract.Model, Brand
             return;
         }
         ((DMPosterView) viewGroup.findViewById(R$id.brandip_top_item_image)).setImageUrl(ipBean.pic);
-        C9175gc.a((TextView) viewGroup.findViewById(R$id.brandip_top_item_title), ipBean.subTitle);
-        C9175gc.a((TextView) viewGroup.findViewById(R$id.brandip_top_item_desc), ipBean.briefIntroduction);
+        gc.a((TextView) viewGroup.findViewById(R$id.brandip_top_item_title), ipBean.subTitle);
+        gc.a((TextView) viewGroup.findViewById(R$id.brandip_top_item_desc), ipBean.briefIntroduction);
         if (ipBean.getItemScoreFloat() > 0.0f) {
             int i2 = R$id.brandip_grade_star;
             viewGroup.findViewById(i2).setVisibility(0);
             ((ScoreStarViewV2) viewGroup.findViewById(i2)).updateView(ipBean.getItemScoreFloat());
-            C9175gc.a((TextView) viewGroup.findViewById(R$id.brandip_grade_score), ipBean.getItemScoreFloat() + "");
+            gc.a((TextView) viewGroup.findViewById(R$id.brandip_grade_score), ipBean.getItemScoreFloat() + "");
         } else {
             viewGroup.findViewById(R$id.brandip_grade_star).setVisibility(8);
             if (ipBean.ipvuv < 10000) {
@@ -223,7 +215,7 @@ public class BrandIpPresenter extends BasePresenter<BrandIpContract.Model, Brand
                 ((TextView) viewGroup.findViewById(R$id.brandip_grade_score)).setText(getFansDesc(ipBean.ipvuv, "人想看"));
             }
         }
-        viewGroup.setOnClickListener(new View$OnClickListenerC1788e(ipBean, i));
+        viewGroup.setOnClickListener(new e(ipBean, i));
         HashMap hashMap = new HashMap();
         if (getModel() != null && getModel().getTrackInfo() != null) {
             hashMap.putAll(getModel().getTrackInfo().getArgsMap());
@@ -246,9 +238,9 @@ public class BrandIpPresenter extends BasePresenter<BrandIpContract.Model, Brand
                 if (iArr.length == 3) {
                     int i2 = R$id.brandip_top_item_image;
                     ViewGroup.LayoutParams layoutParams = viewGroup.findViewById(i2).getLayoutParams();
-                    int a = (DisplayMetrics.getwidthPixels(t60.b(this.mContext.getActivity())) - t60.a(this.mContext.getActivity(), 126.0f)) / 3;
-                    layoutParams.width = a;
-                    layoutParams.height = (a / 3) * 4;
+                    int a2 = (DisplayMetrics.getwidthPixels(t60.b(this.mContext.getActivity())) - t60.a(this.mContext.getActivity(), 126.0f)) / 3;
+                    layoutParams.width = a2;
+                    layoutParams.height = (a2 / 3) * 4;
                     viewGroup.findViewById(i2).setLayoutParams(layoutParams);
                 }
             }
@@ -270,8 +262,8 @@ public class BrandIpPresenter extends BasePresenter<BrandIpContract.Model, Brand
                 return j + str;
             }
             return (((float) (j / 1000)) / 10.0f) + "万" + str;
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
             return "";
         }
     }
@@ -320,8 +312,8 @@ public class BrandIpPresenter extends BasePresenter<BrandIpContract.Model, Brand
             SpannableString spannableString = new SpannableString(fansNum);
             spannableString.setSpan(new ForegroundColorSpan(this.mContext.getActivity().getResources().getColor(R$color.color_FF993A)), 0, fansNum.indexOf(str), 17);
             return spannableString;
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
             return new SpannableString("");
         }
     }
@@ -341,8 +333,8 @@ public class BrandIpPresenter extends BasePresenter<BrandIpContract.Model, Brand
             }
             try {
                 this.attentionView.setState(Integer.parseInt(string2));
-            } catch (NumberFormatException e) {
-                e.printStackTrace();
+            } catch (NumberFormatException e2) {
+                e2.printStackTrace();
             }
             if (getModel().getBrandInfo().activityDO != null && getModel().getBrandInfo().activityDO.isValid() && !this.attentionView.followed()) {
                 showGetGiftAnim();
@@ -382,9 +374,9 @@ public class BrandIpPresenter extends BasePresenter<BrandIpContract.Model, Brand
             getView().getRootView().findViewById(R$id.brandip_top_imgbg_4).setVisibility(0);
         }
         if (getModel().getBrandInfo() != null) {
-            C2497a.a().loadinto(getModel().getBrandInfo().pic, getView().getHeader());
-            C9175gc.a(getView().getTitle(), getModel().getBrandInfo().name);
-            C9175gc.a(getView().getSubTitle(), getModel().getBrandInfo().subTitle);
+            cn.damai.uikit.image.a.a().loadinto(getModel().getBrandInfo().pic, getView().getHeader());
+            gc.a(getView().getTitle(), getModel().getBrandInfo().name);
+            gc.a(getView().getSubTitle(), getModel().getBrandInfo().subTitle);
             HashMap hashMap = new HashMap();
             if (getModel() != null && getModel().getTrackInfo() != null) {
                 hashMap.putAll(getModel().getTrackInfo().getArgsMap());
@@ -395,7 +387,7 @@ public class BrandIpPresenter extends BasePresenter<BrandIpContract.Model, Brand
             }
             hashMap.put("status", getModel().getBrandInfo().followStatus);
             userTrackExpose(getView().getTitle(), "card", hashMap, true);
-            C0504a.b().c(getModel().getBrandInfo().backgroundPic).n(new C1784b()).e(new C1783a(this)).f();
+            cn.damai.common.image.a.b().c(getModel().getBrandInfo().backgroundPic).n(new b()).e(new a(this)).f();
             AttentionView attentionView = (AttentionView) getView().getRootView().findViewById(R$id.attent_view_ipbrand);
             this.attentionView = attentionView;
             attentionView.setCancelFollow(false);
@@ -408,8 +400,8 @@ public class BrandIpPresenter extends BasePresenter<BrandIpContract.Model, Brand
             if (!TextUtils.isEmpty(getModel().getBrandInfo().followStatus)) {
                 try {
                     this.attentionView.setState(Integer.parseInt(getModel().getBrandInfo().followStatus));
-                } catch (NumberFormatException e) {
-                    e.printStackTrace();
+                } catch (NumberFormatException e2) {
+                    e2.printStackTrace();
                 }
             }
             this.attentionView.setInitParams(getModel().getBrandInfo().id, "4");
@@ -427,12 +419,12 @@ public class BrandIpPresenter extends BasePresenter<BrandIpContract.Model, Brand
                     getView().getHeader().setVisibility(8);
                     ((RelativeLayout.LayoutParams) getView().getTitle().getLayoutParams()).setMargins(t60.a(this.mContext.getActivity(), 12.0f), t60.a(this.mContext.getActivity(), 11.0f), 0, 0);
                     ((RelativeLayout.LayoutParams) getView().getSubTitle().getLayoutParams()).setMargins(t60.a(this.mContext.getActivity(), 12.0f), t60.a(this.mContext.getActivity(), 3.0f), 0, 0);
-                    lottieAnimationView.setOnClickListener(new View$OnClickListenerC1786c(hashMap));
+                    lottieAnimationView.setOnClickListener(new c(hashMap));
                 }
             } else {
                 showAttention();
             }
-            getView().getRootView().findViewById(R$id.ip_brand_card_line1).setOnClickListener(new View$OnClickListenerC1787d(hashMap));
+            getView().getRootView().findViewById(R$id.ip_brand_card_line1).setOnClickListener(new d(hashMap));
         }
     }
 }

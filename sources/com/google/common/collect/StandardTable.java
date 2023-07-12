@@ -24,29 +24,28 @@ import tb.gp0;
 /* compiled from: Taobao */
 @GwtCompatible
 /* loaded from: classes10.dex */
-public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements Serializable {
+public class StandardTable<R, C, V> extends com.google.common.collect.h<R, C, V> implements Serializable {
     private static final long serialVersionUID = 0;
     @GwtTransient
     final Map<R, Map<C, V>> backingMap;
     @MonotonicNonNullDecl
     private transient Set<C> columnKeySet;
     @MonotonicNonNullDecl
-    private transient StandardTable<R, C, V>.C5112f columnMap;
+    private transient StandardTable<R, C, V>.f columnMap;
     @GwtTransient
     final Supplier<? extends Map<C, V>> factory;
     @MonotonicNonNullDecl
     private transient Map<R, Map<C, V>> rowMap;
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.StandardTable$b */
     /* loaded from: classes10.dex */
-    private class C5103b implements Iterator<Table.Cell<R, C, V>> {
+    private class b implements Iterator<Table.Cell<R, C, V>> {
         final Iterator<Map.Entry<R, Map<C, V>>> a;
         @NullableDecl
         Map.Entry<R, Map<C, V>> b;
         Iterator<Map.Entry<C, V>> c;
 
-        private C5103b() {
+        private b() {
             this.a = StandardTable.this.backingMap.entrySet().iterator();
             this.c = Iterators.j();
         }
@@ -80,62 +79,60 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.StandardTable$c */
     /* loaded from: classes10.dex */
-    public class C5104c extends Maps.AbstractC5070t<R, V> {
+    public class c extends Maps.t<R, V> {
         final C d;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.StandardTable$c$a */
         /* loaded from: classes10.dex */
-        private class C5105a extends Sets.AbstractC5098a<Map.Entry<R, V>> {
-            private C5105a() {
+        private class a extends Sets.a<Map.Entry<R, V>> {
+            private a() {
             }
 
             @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
             public void clear() {
-                C5104c.this.d(Predicates.b());
+                c.this.d(Predicates.b());
             }
 
             @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
             public boolean contains(Object obj) {
                 if (obj instanceof Map.Entry) {
                     Map.Entry entry = (Map.Entry) obj;
-                    return StandardTable.this.containsMapping(entry.getKey(), C5104c.this.d, entry.getValue());
+                    return StandardTable.this.containsMapping(entry.getKey(), c.this.d, entry.getValue());
                 }
                 return false;
             }
 
             @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
             public boolean isEmpty() {
-                C5104c c5104c = C5104c.this;
-                return !StandardTable.this.containsColumn(c5104c.d);
+                c cVar = c.this;
+                return !StandardTable.this.containsColumn(cVar.d);
             }
 
             @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
             public Iterator<Map.Entry<R, V>> iterator() {
-                return new C5106b();
+                return new b();
             }
 
             @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
             public boolean remove(Object obj) {
                 if (obj instanceof Map.Entry) {
                     Map.Entry entry = (Map.Entry) obj;
-                    return StandardTable.this.removeMapping(entry.getKey(), C5104c.this.d, entry.getValue());
+                    return StandardTable.this.removeMapping(entry.getKey(), c.this.d, entry.getValue());
                 }
                 return false;
             }
 
-            @Override // com.google.common.collect.Sets.AbstractC5098a, java.util.AbstractCollection, java.util.Collection, java.util.Set
+            @Override // com.google.common.collect.Sets.a, java.util.AbstractCollection, java.util.Collection, java.util.Set
             public boolean retainAll(Collection<?> collection) {
-                return C5104c.this.d(Predicates.g(Predicates.e(collection)));
+                return c.this.d(Predicates.g(Predicates.e(collection)));
             }
 
             @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
             public int size() {
                 int i = 0;
                 for (Map<C, V> map : StandardTable.this.backingMap.values()) {
-                    if (map.containsKey(C5104c.this.d)) {
+                    if (map.containsKey(c.this.d)) {
                         i++;
                     }
                 }
@@ -144,40 +141,38 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.StandardTable$c$b */
         /* loaded from: classes10.dex */
-        private class C5106b extends AbstractIterator<Map.Entry<R, V>> {
+        private class b extends AbstractIterator<Map.Entry<R, V>> {
             final Iterator<Map.Entry<R, Map<C, V>>> c;
 
             /* JADX INFO: Access modifiers changed from: package-private */
             /* compiled from: Taobao */
-            /* renamed from: com.google.common.collect.StandardTable$c$b$a */
             /* loaded from: classes10.dex */
-            public class C5107a extends AbstractC5157b<R, V> {
+            public class a extends com.google.common.collect.b<R, V> {
                 final /* synthetic */ Map.Entry a;
 
-                C5107a(Map.Entry entry) {
+                a(Map.Entry entry) {
                     this.a = entry;
                 }
 
-                @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+                @Override // com.google.common.collect.b, java.util.Map.Entry
                 public R getKey() {
                     return (R) this.a.getKey();
                 }
 
-                @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+                @Override // com.google.common.collect.b, java.util.Map.Entry
                 public V getValue() {
-                    return (V) ((Map) this.a.getValue()).get(C5104c.this.d);
+                    return (V) ((Map) this.a.getValue()).get(c.this.d);
                 }
 
                 /* JADX WARN: Multi-variable type inference failed */
-                @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+                @Override // com.google.common.collect.b, java.util.Map.Entry
                 public V setValue(V v) {
-                    return (V) ((Map) this.a.getValue()).put(C5104c.this.d, du1.p(v));
+                    return (V) ((Map) this.a.getValue()).put(c.this.d, du1.p(v));
                 }
             }
 
-            private C5106b() {
+            private b() {
                 this.c = StandardTable.this.backingMap.entrySet().iterator();
             }
 
@@ -187,8 +182,8 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
             public Map.Entry<R, V> a() {
                 while (this.c.hasNext()) {
                     Map.Entry<R, Map<C, V>> next = this.c.next();
-                    if (next.getValue().containsKey(C5104c.this.d)) {
-                        return new C5107a(next);
+                    if (next.getValue().containsKey(c.this.d)) {
+                        return new a(next);
                     }
                 }
                 return b();
@@ -196,72 +191,71 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.StandardTable$c$c */
+        /* renamed from: com.google.common.collect.StandardTable$c$c  reason: collision with other inner class name */
         /* loaded from: classes10.dex */
-        private class C5108c extends Maps.C5062l<R, V> {
-            C5108c() {
-                super(C5104c.this);
+        private class C0233c extends Maps.l<R, V> {
+            C0233c() {
+                super(c.this);
             }
 
-            @Override // com.google.common.collect.Maps.C5062l, java.util.AbstractCollection, java.util.Collection, java.util.Set
+            @Override // com.google.common.collect.Maps.l, java.util.AbstractCollection, java.util.Collection, java.util.Set
             public boolean contains(Object obj) {
-                C5104c c5104c = C5104c.this;
-                return StandardTable.this.contains(obj, c5104c.d);
+                c cVar = c.this;
+                return StandardTable.this.contains(obj, cVar.d);
             }
 
-            @Override // com.google.common.collect.Maps.C5062l, java.util.AbstractCollection, java.util.Collection, java.util.Set
+            @Override // com.google.common.collect.Maps.l, java.util.AbstractCollection, java.util.Collection, java.util.Set
             public boolean remove(Object obj) {
-                C5104c c5104c = C5104c.this;
-                return StandardTable.this.remove(obj, c5104c.d) != null;
+                c cVar = c.this;
+                return StandardTable.this.remove(obj, cVar.d) != null;
             }
 
-            @Override // com.google.common.collect.Sets.AbstractC5098a, java.util.AbstractCollection, java.util.Collection, java.util.Set
+            @Override // com.google.common.collect.Sets.a, java.util.AbstractCollection, java.util.Collection, java.util.Set
             public boolean retainAll(Collection<?> collection) {
-                return C5104c.this.d(Maps.o(Predicates.g(Predicates.e(collection))));
+                return c.this.d(Maps.o(Predicates.g(Predicates.e(collection))));
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.StandardTable$c$d */
         /* loaded from: classes10.dex */
-        private class C5109d extends Maps.C5069s<R, V> {
-            C5109d() {
-                super(C5104c.this);
+        private class d extends Maps.s<R, V> {
+            d() {
+                super(c.this);
             }
 
-            @Override // com.google.common.collect.Maps.C5069s, java.util.AbstractCollection, java.util.Collection
+            @Override // com.google.common.collect.Maps.s, java.util.AbstractCollection, java.util.Collection
             public boolean remove(Object obj) {
-                return obj != null && C5104c.this.d(Maps.N(Predicates.d(obj)));
+                return obj != null && c.this.d(Maps.N(Predicates.d(obj)));
             }
 
-            @Override // com.google.common.collect.Maps.C5069s, java.util.AbstractCollection, java.util.Collection
+            @Override // com.google.common.collect.Maps.s, java.util.AbstractCollection, java.util.Collection
             public boolean removeAll(Collection<?> collection) {
-                return C5104c.this.d(Maps.N(Predicates.e(collection)));
+                return c.this.d(Maps.N(Predicates.e(collection)));
             }
 
-            @Override // com.google.common.collect.Maps.C5069s, java.util.AbstractCollection, java.util.Collection
+            @Override // com.google.common.collect.Maps.s, java.util.AbstractCollection, java.util.Collection
             public boolean retainAll(Collection<?> collection) {
-                return C5104c.this.d(Maps.N(Predicates.g(Predicates.e(collection))));
+                return c.this.d(Maps.N(Predicates.g(Predicates.e(collection))));
             }
         }
 
-        C5104c(C c) {
+        c(C c) {
             this.d = (C) du1.p(c);
         }
 
-        @Override // com.google.common.collect.Maps.AbstractC5070t
+        @Override // com.google.common.collect.Maps.t
         Set<Map.Entry<R, V>> a() {
-            return new C5105a();
+            return new a();
         }
 
-        @Override // com.google.common.collect.Maps.AbstractC5070t
+        @Override // com.google.common.collect.Maps.t
         Set<R> b() {
-            return new C5108c();
+            return new C0233c();
         }
 
-        @Override // com.google.common.collect.Maps.AbstractC5070t
+        @Override // com.google.common.collect.Maps.t
         Collection<V> c() {
-            return new C5109d();
+            return new d();
         }
 
         @Override // java.util.AbstractMap, java.util.Map
@@ -306,14 +300,13 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.StandardTable$d */
     /* loaded from: classes10.dex */
-    public class C5110d extends AbstractIterator<C> {
+    public class d extends AbstractIterator<C> {
         final Map<C, V> c;
         final Iterator<Map<C, V>> d;
         Iterator<Map.Entry<C, V>> e;
 
-        private C5110d() {
+        private d() {
             this.c = StandardTable.this.factory.get();
             this.d = StandardTable.this.backingMap.values().iterator();
             this.e = Iterators.h();
@@ -339,10 +332,9 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.StandardTable$e */
     /* loaded from: classes10.dex */
-    public class C5111e extends StandardTable<R, C, V>.AbstractC5122i<C> {
-        private C5111e() {
+    public class e extends StandardTable<R, C, V>.i<C> {
+        private e() {
             super();
         }
 
@@ -375,7 +367,7 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
             return z;
         }
 
-        @Override // com.google.common.collect.Sets.AbstractC5098a, java.util.AbstractSet, java.util.AbstractCollection, java.util.Collection, java.util.Set
+        @Override // com.google.common.collect.Sets.a, java.util.AbstractSet, java.util.AbstractCollection, java.util.Collection, java.util.Set
         public boolean removeAll(Collection<?> collection) {
             du1.p(collection);
             Iterator<Map<C, V>> it = StandardTable.this.backingMap.values().iterator();
@@ -392,7 +384,7 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
             return z;
         }
 
-        @Override // com.google.common.collect.Sets.AbstractC5098a, java.util.AbstractCollection, java.util.Collection, java.util.Set
+        @Override // com.google.common.collect.Sets.a, java.util.AbstractCollection, java.util.Collection, java.util.Set
         public boolean retainAll(Collection<?> collection) {
             du1.p(collection);
             Iterator<Map<C, V>> it = StandardTable.this.backingMap.values().iterator();
@@ -417,21 +409,19 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.StandardTable$f */
     /* loaded from: classes10.dex */
-    public class C5112f extends Maps.AbstractC5070t<C, Map<R, V>> {
+    public class f extends Maps.t<C, Map<R, V>> {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.StandardTable$f$a */
         /* loaded from: classes10.dex */
-        public class C5113a extends StandardTable<R, C, V>.AbstractC5122i<Map.Entry<C, Map<R, V>>> {
+        public class a extends StandardTable<R, C, V>.i<Map.Entry<C, Map<R, V>>> {
 
             /* compiled from: Taobao */
-            /* renamed from: com.google.common.collect.StandardTable$f$a$a */
+            /* renamed from: com.google.common.collect.StandardTable$f$a$a  reason: collision with other inner class name */
             /* loaded from: classes10.dex */
-            class C5114a implements Function<C, Map<R, V>> {
-                C5114a() {
+            class C0234a implements Function<C, Map<R, V>> {
+                C0234a() {
                 }
 
                 @Override // com.google.common.base.Function
@@ -441,7 +431,7 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
                 }
             }
 
-            C5113a() {
+            a() {
                 super();
             }
 
@@ -450,7 +440,7 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
                 if (obj instanceof Map.Entry) {
                     Map.Entry entry = (Map.Entry) obj;
                     if (StandardTable.this.containsColumn(entry.getKey())) {
-                        return C5112f.this.get(entry.getKey()).equals(entry.getValue());
+                        return f.this.get(entry.getKey()).equals(entry.getValue());
                     }
                     return false;
                 }
@@ -459,7 +449,7 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
 
             @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
             public Iterator<Map.Entry<C, Map<R, V>>> iterator() {
-                return Maps.d(StandardTable.this.columnKeySet(), new C5114a());
+                return Maps.d(StandardTable.this.columnKeySet(), new C0234a());
             }
 
             @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
@@ -471,14 +461,14 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
                 return false;
             }
 
-            @Override // com.google.common.collect.Sets.AbstractC5098a, java.util.AbstractSet, java.util.AbstractCollection, java.util.Collection, java.util.Set
+            @Override // com.google.common.collect.Sets.a, java.util.AbstractSet, java.util.AbstractCollection, java.util.Collection, java.util.Set
             public boolean removeAll(Collection<?> collection) {
                 du1.p(collection);
                 return Sets.i(this, collection.iterator());
             }
 
             /* JADX WARN: Multi-variable type inference failed */
-            @Override // com.google.common.collect.Sets.AbstractC5098a, java.util.AbstractCollection, java.util.Collection, java.util.Set
+            @Override // com.google.common.collect.Sets.a, java.util.AbstractCollection, java.util.Collection, java.util.Set
             public boolean retainAll(Collection<?> collection) {
                 du1.p(collection);
                 Iterator it = Lists.k(StandardTable.this.columnKeySet().iterator()).iterator();
@@ -500,16 +490,15 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.StandardTable$f$b */
         /* loaded from: classes10.dex */
-        private class C5115b extends Maps.C5069s<C, Map<R, V>> {
-            C5115b() {
-                super(C5112f.this);
+        private class b extends Maps.s<C, Map<R, V>> {
+            b() {
+                super(f.this);
             }
 
-            @Override // com.google.common.collect.Maps.C5069s, java.util.AbstractCollection, java.util.Collection
+            @Override // com.google.common.collect.Maps.s, java.util.AbstractCollection, java.util.Collection
             public boolean remove(Object obj) {
-                for (Map.Entry<C, Map<R, V>> entry : C5112f.this.entrySet()) {
+                for (Map.Entry<C, Map<R, V>> entry : f.this.entrySet()) {
                     if (entry.getValue().equals(obj)) {
                         StandardTable.this.removeColumn(entry.getKey());
                         return true;
@@ -519,7 +508,7 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
             }
 
             /* JADX WARN: Multi-variable type inference failed */
-            @Override // com.google.common.collect.Maps.C5069s, java.util.AbstractCollection, java.util.Collection
+            @Override // com.google.common.collect.Maps.s, java.util.AbstractCollection, java.util.Collection
             public boolean removeAll(Collection<?> collection) {
                 du1.p(collection);
                 Iterator it = Lists.k(StandardTable.this.columnKeySet().iterator()).iterator();
@@ -535,7 +524,7 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
             }
 
             /* JADX WARN: Multi-variable type inference failed */
-            @Override // com.google.common.collect.Maps.C5069s, java.util.AbstractCollection, java.util.Collection
+            @Override // com.google.common.collect.Maps.s, java.util.AbstractCollection, java.util.Collection
             public boolean retainAll(Collection<?> collection) {
                 du1.p(collection);
                 Iterator it = Lists.k(StandardTable.this.columnKeySet().iterator()).iterator();
@@ -551,17 +540,17 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
             }
         }
 
-        private C5112f() {
+        private f() {
         }
 
-        @Override // com.google.common.collect.Maps.AbstractC5070t
+        @Override // com.google.common.collect.Maps.t
         public Set<Map.Entry<C, Map<R, V>>> a() {
-            return new C5113a();
+            return new a();
         }
 
-        @Override // com.google.common.collect.Maps.AbstractC5070t
+        @Override // com.google.common.collect.Maps.t
         Collection<Map<R, V>> c() {
-            return new C5115b();
+            return new b();
         }
 
         @Override // java.util.AbstractMap, java.util.Map
@@ -587,7 +576,7 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
             return null;
         }
 
-        @Override // com.google.common.collect.Maps.AbstractC5070t, java.util.AbstractMap, java.util.Map
+        @Override // com.google.common.collect.Maps.t, java.util.AbstractMap, java.util.Map
         public Set<C> keySet() {
             return StandardTable.this.columnKeySet();
         }
@@ -595,27 +584,25 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.StandardTable$g */
     /* loaded from: classes10.dex */
-    public class C5116g extends Maps.AbstractC5060k<C, V> {
+    public class g extends Maps.k<C, V> {
         final R a;
         @NullableDecl
         Map<C, V> b;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.StandardTable$g$a */
         /* loaded from: classes10.dex */
-        class C5117a implements Iterator<Map.Entry<C, V>> {
+        class a implements Iterator<Map.Entry<C, V>> {
             final /* synthetic */ Iterator a;
 
-            C5117a(Iterator it) {
+            a(Iterator it) {
                 this.a = it;
             }
 
             @Override // java.util.Iterator
             /* renamed from: a */
             public Map.Entry<C, V> next() {
-                return C5116g.this.e((Map.Entry) this.a.next());
+                return g.this.e((Map.Entry) this.a.next());
             }
 
             @Override // java.util.Iterator
@@ -626,23 +613,22 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
             @Override // java.util.Iterator
             public void remove() {
                 this.a.remove();
-                C5116g.this.d();
+                g.this.d();
             }
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.StandardTable$g$b */
         /* loaded from: classes10.dex */
-        public class C5118b extends gp0<C, V> {
+        public class b extends gp0<C, V> {
             final /* synthetic */ Map.Entry a;
 
-            C5118b(C5116g c5116g, Map.Entry entry) {
+            b(g gVar, Map.Entry entry) {
                 this.a = entry;
             }
 
             /* JADX INFO: Access modifiers changed from: protected */
-            @Override // com.google.common.collect.AbstractC5205t
+            @Override // com.google.common.collect.t
             /* renamed from: a */
             public Map.Entry<C, V> delegate() {
                 return this.a;
@@ -661,18 +647,18 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C5116g(R r) {
+        public g(R r) {
             this.a = (R) du1.p(r);
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.Maps.AbstractC5060k
+        @Override // com.google.common.collect.Maps.k
         public Iterator<Map.Entry<C, V>> a() {
-            Map<C, V> b = b();
-            if (b == null) {
+            Map<C, V> b2 = b();
+            if (b2 == null) {
                 return Iterators.j();
             }
-            return new C5117a(b.entrySet().iterator());
+            return new a(b2.entrySet().iterator());
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
@@ -690,19 +676,19 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
             return StandardTable.this.backingMap.get(this.a);
         }
 
-        @Override // com.google.common.collect.Maps.AbstractC5060k, java.util.AbstractMap, java.util.Map
+        @Override // com.google.common.collect.Maps.k, java.util.AbstractMap, java.util.Map
         public void clear() {
-            Map<C, V> b = b();
-            if (b != null) {
-                b.clear();
+            Map<C, V> b2 = b();
+            if (b2 != null) {
+                b2.clear();
             }
             d();
         }
 
         @Override // java.util.AbstractMap, java.util.Map
         public boolean containsKey(Object obj) {
-            Map<C, V> b = b();
-            return (obj == null || b == null || !Maps.w(b, obj)) ? false : true;
+            Map<C, V> b2 = b();
+            return (obj == null || b2 == null || !Maps.w(b2, obj)) ? false : true;
         }
 
         void d() {
@@ -714,16 +700,16 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
         }
 
         Map.Entry<C, V> e(Map.Entry<C, V> entry) {
-            return new C5118b(this, entry);
+            return new b(this, entry);
         }
 
         @Override // java.util.AbstractMap, java.util.Map
         public V get(Object obj) {
-            Map<C, V> b = b();
-            if (obj == null || b == null) {
+            Map<C, V> b2 = b();
+            if (obj == null || b2 == null) {
                 return null;
             }
-            return (V) Maps.x(b, obj);
+            return (V) Maps.x(b2, obj);
         }
 
         @Override // java.util.AbstractMap, java.util.Map
@@ -739,42 +725,40 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
 
         @Override // java.util.AbstractMap, java.util.Map
         public V remove(Object obj) {
-            Map<C, V> b = b();
-            if (b == null) {
+            Map<C, V> b2 = b();
+            if (b2 == null) {
                 return null;
             }
-            V v = (V) Maps.y(b, obj);
+            V v = (V) Maps.y(b2, obj);
             d();
             return v;
         }
 
         @Override // java.util.AbstractMap, java.util.Map
         public int size() {
-            Map<C, V> b = b();
-            if (b == null) {
+            Map<C, V> b2 = b();
+            if (b2 == null) {
                 return 0;
             }
-            return b.size();
+            return b2.size();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.StandardTable$h */
     /* loaded from: classes10.dex */
-    public class C5119h extends Maps.AbstractC5070t<R, Map<C, V>> {
+    public class h extends Maps.t<R, Map<C, V>> {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.StandardTable$h$a */
         /* loaded from: classes10.dex */
-        public class C5120a extends StandardTable<R, C, V>.AbstractC5122i<Map.Entry<R, Map<C, V>>> {
+        public class a extends StandardTable<R, C, V>.i<Map.Entry<R, Map<C, V>>> {
 
             /* compiled from: Taobao */
-            /* renamed from: com.google.common.collect.StandardTable$h$a$a */
+            /* renamed from: com.google.common.collect.StandardTable$h$a$a  reason: collision with other inner class name */
             /* loaded from: classes10.dex */
-            class C5121a implements Function<R, Map<C, V>> {
-                C5121a() {
+            class C0235a implements Function<R, Map<C, V>> {
+                C0235a() {
                 }
 
                 @Override // com.google.common.base.Function
@@ -784,7 +768,7 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
                 }
             }
 
-            C5120a() {
+            a() {
                 super();
             }
 
@@ -792,14 +776,14 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
             public boolean contains(Object obj) {
                 if (obj instanceof Map.Entry) {
                     Map.Entry entry = (Map.Entry) obj;
-                    return entry.getKey() != null && (entry.getValue() instanceof Map) && C5193l.d(StandardTable.this.backingMap.entrySet(), entry);
+                    return entry.getKey() != null && (entry.getValue() instanceof Map) && l.d(StandardTable.this.backingMap.entrySet(), entry);
                 }
                 return false;
             }
 
             @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
             public Iterator<Map.Entry<R, Map<C, V>>> iterator() {
-                return Maps.d(StandardTable.this.backingMap.keySet(), new C5121a());
+                return Maps.d(StandardTable.this.backingMap.keySet(), new C0235a());
             }
 
             @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
@@ -818,12 +802,12 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C5119h() {
+        public h() {
         }
 
-        @Override // com.google.common.collect.Maps.AbstractC5070t
+        @Override // com.google.common.collect.Maps.t
         protected Set<Map.Entry<R, Map<C, V>>> a() {
-            return new C5120a();
+            return new a();
         }
 
         @Override // java.util.AbstractMap, java.util.Map
@@ -851,10 +835,9 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.StandardTable$i */
     /* loaded from: classes10.dex */
-    private abstract class AbstractC5122i<T> extends Sets.AbstractC5098a<T> {
-        private AbstractC5122i() {
+    private abstract class i<T> extends Sets.a<T> {
+        private i() {
         }
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
@@ -916,54 +899,54 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
         return false;
     }
 
-    @Override // com.google.common.collect.AbstractC5180h
+    @Override // com.google.common.collect.h
     Iterator<Table.Cell<R, C, V>> cellIterator() {
-        return new C5103b();
+        return new b();
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public Set<Table.Cell<R, C, V>> cellSet() {
         return super.cellSet();
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public void clear() {
         this.backingMap.clear();
     }
 
     @Override // com.google.common.collect.Table
-    public Map<R, V> column(C c) {
-        return new C5104c(c);
+    public Map<R, V> column(C c2) {
+        return new c(c2);
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public Set<C> columnKeySet() {
         Set<C> set = this.columnKeySet;
         if (set == null) {
-            C5111e c5111e = new C5111e();
-            this.columnKeySet = c5111e;
-            return c5111e;
+            e eVar = new e();
+            this.columnKeySet = eVar;
+            return eVar;
         }
         return set;
     }
 
     @Override // com.google.common.collect.Table
     public Map<C, Map<R, V>> columnMap() {
-        StandardTable<R, C, V>.C5112f c5112f = this.columnMap;
-        if (c5112f == null) {
-            StandardTable<R, C, V>.C5112f c5112f2 = new C5112f();
-            this.columnMap = c5112f2;
-            return c5112f2;
+        StandardTable<R, C, V>.f fVar = this.columnMap;
+        if (fVar == null) {
+            StandardTable<R, C, V>.f fVar2 = new f();
+            this.columnMap = fVar2;
+            return fVar2;
         }
-        return c5112f;
+        return fVar;
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public boolean contains(@NullableDecl Object obj, @NullableDecl Object obj2) {
         return (obj == null || obj2 == null || !super.contains(obj, obj2)) ? false : true;
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public boolean containsColumn(@NullableDecl Object obj) {
         if (obj == null) {
             return false;
@@ -976,25 +959,25 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
         return false;
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public boolean containsRow(@NullableDecl Object obj) {
         return obj != null && Maps.w(this.backingMap, obj);
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public boolean containsValue(@NullableDecl Object obj) {
         return obj != null && super.containsValue(obj);
     }
 
     Iterator<C> createColumnKeyIterator() {
-        return new C5110d();
+        return new d();
     }
 
     Map<R, Map<C, V>> createRowMap() {
-        return new C5119h();
+        return new h();
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public V get(@NullableDecl Object obj, @NullableDecl Object obj2) {
         if (obj == null || obj2 == null) {
             return null;
@@ -1002,21 +985,21 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
         return (V) super.get(obj, obj2);
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public boolean isEmpty() {
         return this.backingMap.isEmpty();
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     @CanIgnoreReturnValue
-    public V put(R r, C c, V v) {
+    public V put(R r, C c2, V v) {
         du1.p(r);
-        du1.p(c);
+        du1.p(c2);
         du1.p(v);
-        return getOrCreate(r).put(c, v);
+        return getOrCreate(r).put(c2, v);
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     @CanIgnoreReturnValue
     public V remove(@NullableDecl Object obj, @NullableDecl Object obj2) {
         Map map;
@@ -1032,10 +1015,10 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
 
     @Override // com.google.common.collect.Table
     public Map<C, V> row(R r) {
-        return new C5116g(r);
+        return new g(r);
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public Set<R> rowKeySet() {
         return rowMap().keySet();
     }
@@ -1053,14 +1036,14 @@ public class StandardTable<R, C, V> extends AbstractC5180h<R, C, V> implements S
 
     @Override // com.google.common.collect.Table
     public int size() {
-        int i = 0;
+        int i2 = 0;
         for (Map<C, V> map : this.backingMap.values()) {
-            i += map.size();
+            i2 += map.size();
         }
-        return i;
+        return i2;
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public Collection<V> values() {
         return super.values();
     }

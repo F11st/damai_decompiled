@@ -3,7 +3,6 @@ package com.youku.media.decoder;
 import android.annotation.TargetApi;
 import android.media.MediaCodec;
 import android.media.MediaExtractor;
-import com.youku.opengl.a.C8013a;
 import java.nio.ByteBuffer;
 import tb.jn1;
 
@@ -18,7 +17,7 @@ public class VideoSimpleDecoder {
         private volatile boolean mExtractFinish;
         private MediaExtractor mExtractor;
         private long mFirestFramePtsUs;
-        private InterfaceC7969a mListener;
+        private a mListener;
         private volatile boolean mLooping;
         private MediaCodec mMediaCodec;
         private volatile boolean mPause;
@@ -66,8 +65,8 @@ public class VideoSimpleDecoder {
                     byteBuffer.clear();
                     int readSampleData = this.mExtractor.readSampleData(byteBuffer, 0);
                     long sampleTime = this.mExtractor.getSampleTime();
-                    if (C8013a.b) {
-                        C8013a.b("VideoNormalDecoder", "presentationTime:[" + sampleTime + "] size:[" + readSampleData + jn1.ARRAY_END_STR);
+                    if (com.youku.opengl.a.a.b) {
+                        com.youku.opengl.a.a.b("VideoNormalDecoder", "presentationTime:[" + sampleTime + "] size:[" + readSampleData + jn1.ARRAY_END_STR);
                     }
                     if (readSampleData >= 0) {
                         this.mMediaCodec.queueInputBuffer(dequeueInputBuffer, 0, readSampleData, sampleTime, this.mExtractor.getSampleFlags() > 0 ? this.mExtractor.getSampleFlags() : 0);
@@ -86,27 +85,27 @@ public class VideoSimpleDecoder {
                         }
                         long j = bufferInfo.presentationTimeUs - this.mFirestFramePtsUs;
                         bufferInfo.presentationTimeUs = j;
-                        InterfaceC7969a interfaceC7969a = this.mListener;
-                        if (interfaceC7969a != null) {
-                            interfaceC7969a.a(j);
+                        a aVar = this.mListener;
+                        if (aVar != null) {
+                            aVar.a(j);
                             this.mListener.c(bufferInfo.presentationTimeUs);
                         }
                         this.mMediaCodec.releaseOutputBuffer(dequeueOutputBuffer, z);
                         if (z) {
-                            InterfaceC7969a interfaceC7969a2 = this.mListener;
-                            if (interfaceC7969a2 != null) {
-                                interfaceC7969a2.d(bufferInfo.presentationTimeUs);
+                            a aVar2 = this.mListener;
+                            if (aVar2 != null) {
+                                aVar2.d(bufferInfo.presentationTimeUs);
                             }
                             if (!this.mWaiting) {
-                                InterfaceC7969a interfaceC7969a3 = this.mListener;
-                                if (interfaceC7969a3 != null) {
-                                    interfaceC7969a3.b(bufferInfo.presentationTimeUs);
+                                a aVar3 = this.mListener;
+                                if (aVar3 != null) {
+                                    aVar3.b(bufferInfo.presentationTimeUs);
                                 }
                             } else if (bufferInfo.presentationTimeUs >= this.mSeekTime && !this.mSeek) {
                                 this.mWaiting = false;
-                                InterfaceC7969a interfaceC7969a4 = this.mListener;
-                                if (interfaceC7969a4 != null) {
-                                    interfaceC7969a4.b(bufferInfo.presentationTimeUs);
+                                a aVar4 = this.mListener;
+                                if (aVar4 != null) {
+                                    aVar4.b(bufferInfo.presentationTimeUs);
                                 }
                                 synchronized (this.mPauseLock) {
                                     if (this.mPauseSeek) {
@@ -123,9 +122,9 @@ public class VideoSimpleDecoder {
                                 this.mExtractor.seekTo(0L, 0);
                                 this.mMediaCodec.flush();
                             } else {
-                                InterfaceC7969a interfaceC7969a5 = this.mListener;
-                                if (interfaceC7969a5 != null) {
-                                    interfaceC7969a5.a();
+                                a aVar5 = this.mListener;
+                                if (aVar5 != null) {
+                                    aVar5.a();
                                 }
                             }
                         }
@@ -174,8 +173,8 @@ public class VideoSimpleDecoder {
 
         /* JADX INFO: Access modifiers changed from: private */
         public void stopDecode() {
-            if (C8013a.b) {
-                C8013a.a("VideoNormalDecoder", "Start to stop video decoding thread");
+            if (com.youku.opengl.a.a.b) {
+                com.youku.opengl.a.a.a("VideoNormalDecoder", "Start to stop video decoding thread");
             }
             this.mStart = false;
             this.mWaiting = false;
@@ -186,8 +185,8 @@ public class VideoSimpleDecoder {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            if (C8013a.b) {
-                C8013a.a("VideoNormalDecoder", "Video decoding thread stopping finish");
+            if (com.youku.opengl.a.a.b) {
+                com.youku.opengl.a.a.a("VideoNormalDecoder", "Video decoding thread stopping finish");
             }
         }
 
@@ -200,8 +199,8 @@ public class VideoSimpleDecoder {
             }
         }
 
-        public void setListener(InterfaceC7969a interfaceC7969a) {
-            this.mListener = interfaceC7969a;
+        public void setListener(a aVar) {
+            this.mListener = aVar;
         }
 
         public void setLooping(boolean z) {

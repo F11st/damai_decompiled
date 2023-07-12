@@ -2,10 +2,9 @@ package com.youku.arch.v3.core.component;
 
 import android.taobao.windvane.connect.api.ApiResponse;
 import android.util.SparseArray;
-import com.alibaba.android.vlayout.layout.C3299b;
-import com.alibaba.android.vlayout.layout.C3302c;
-import com.alibaba.android.vlayout.layout.C3308h;
 import com.alibaba.android.vlayout.layout.FixAreaLayoutHelper;
+import com.alibaba.android.vlayout.layout.c;
+import com.alibaba.android.vlayout.layout.h;
 import com.alibaba.fastjson.JSONObject;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -56,10 +55,10 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.JvmField;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
@@ -139,7 +138,7 @@ public class GenericComponent<VALUE extends ComponentValue> implements IComponen
         this.unmodifiableChildItems = unmodifiableList;
         JSONObject data = this.node.getData();
         this.rawJson = data == null ? null : data.toJSONString();
-        a = C8177b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<VBaseAdapter<IItem<ItemValue>, VBaseHolder<IItem<ItemValue>, GenericRenderConfig>>>(this) { // from class: com.youku.arch.v3.core.component.GenericComponent$adapter$2
+        a = b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<VBaseAdapter<IItem<ItemValue>, VBaseHolder<IItem<ItemValue>, GenericRenderConfig>>>(this) { // from class: com.youku.arch.v3.core.component.GenericComponent$adapter$2
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ GenericComponent<VALUE> this$0;
 
@@ -287,7 +286,7 @@ public class GenericComponent<VALUE extends ComponentValue> implements IComponen
             boolean r1 = r1 instanceof com.youku.arch.v3.recyclerview.layouthelper.GridFixAutoStatLayoutHelper
             if (r1 != 0) goto L8b
             com.alibaba.android.vlayout.a r1 = r0.getLayoutHelper()
-            boolean r1 = r1 instanceof com.alibaba.android.vlayout.layout.C3302c
+            boolean r1 = r1 instanceof com.alibaba.android.vlayout.layout.c
             if (r1 == 0) goto La5
         L8b:
             com.youku.arch.v3.core.ComponentValue r1 = r9.getProperty()
@@ -568,10 +567,10 @@ public class GenericComponent<VALUE extends ComponentValue> implements IComponen
             if (adapter.data == next.data) {
                 break;
             }
-            if (!(next.getLayoutHelper() instanceof C3299b) && !(next.getLayoutHelper() instanceof GridFixAutoStatLayoutHelper)) {
+            if (!(next.getLayoutHelper() instanceof com.alibaba.android.vlayout.layout.b) && !(next.getLayoutHelper() instanceof GridFixAutoStatLayoutHelper)) {
                 next.getLayoutHelper();
-                if (!(next.getLayoutHelper() instanceof C3302c)) {
-                    if ((next.getLayoutHelper() instanceof C3308h) || (next.getLayoutHelper() instanceof FixAreaLayoutHelper)) {
+                if (!(next.getLayoutHelper() instanceof c)) {
+                    if ((next.getLayoutHelper() instanceof h) || (next.getLayoutHelper() instanceof FixAreaLayoutHelper)) {
                         i++;
                     }
                 }

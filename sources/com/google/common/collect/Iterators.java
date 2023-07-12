@@ -45,19 +45,18 @@ public final class Iterators {
 
         @Override // java.util.Iterator
         public void remove() {
-            C5191k.e(false);
+            k.e(false);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Iterators$a */
     /* loaded from: classes10.dex */
-    public static class C4997a<T> extends yt2<T> {
+    public static class a<T> extends yt2<T> {
         final /* synthetic */ Iterator a;
 
-        C4997a(Iterator it) {
+        a(Iterator it) {
             this.a = it;
         }
 
@@ -74,13 +73,12 @@ public final class Iterators {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Iterators$b */
     /* loaded from: classes10.dex */
-    static class C4998b<T> extends AbstractIterator<T> {
+    static class b<T> extends AbstractIterator<T> {
         final /* synthetic */ Iterator c;
         final /* synthetic */ Predicate d;
 
-        C4998b(Iterator it, Predicate predicate) {
+        b(Iterator it, Predicate predicate) {
             this.c = it;
             this.d = predicate;
         }
@@ -99,19 +97,18 @@ public final class Iterators {
 
     /* JADX INFO: Add missing generic type declarations: [T, F] */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Iterators$c */
     /* loaded from: classes10.dex */
-    static class C4999c<F, T> extends AbstractC5190j0<F, T> {
+    static class c<F, T> extends j0<F, T> {
         final /* synthetic */ Function b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        C4999c(Iterator it, Function function) {
+        c(Iterator it, Function function) {
             super(it);
             this.b = function;
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.AbstractC5190j0
+        @Override // com.google.common.collect.j0
         public T a(F f) {
             return (T) this.b.apply(f);
         }
@@ -119,13 +116,12 @@ public final class Iterators {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Iterators$d */
     /* loaded from: classes10.dex */
-    static class C5000d<T> extends yt2<T> {
+    static class d<T> extends yt2<T> {
         boolean a;
         final /* synthetic */ Object b;
 
-        C5000d(Object obj) {
+        d(Object obj) {
             this.b = obj;
         }
 
@@ -146,29 +142,27 @@ public final class Iterators {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Iterators$e */
     /* loaded from: classes10.dex */
-    public static final class C5001e<T> extends AbstractC5151a<T> {
-        static final au2<Object> e = new C5001e(new Object[0], 0, 0, 0);
+    public static final class e<T> extends com.google.common.collect.a<T> {
+        static final au2<Object> e = new e(new Object[0], 0, 0, 0);
         private final T[] c;
         private final int d;
 
-        C5001e(T[] tArr, int i, int i2, int i3) {
+        e(T[] tArr, int i, int i2, int i3) {
             super(i2, i3);
             this.c = tArr;
             this.d = i;
         }
 
-        @Override // com.google.common.collect.AbstractC5151a
+        @Override // com.google.common.collect.a
         protected T a(int i) {
             return this.c[this.d + i];
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Iterators$f */
     /* loaded from: classes10.dex */
-    private static class C5002f<T> implements Iterator<T> {
+    private static class f<T> implements Iterator<T> {
         @NullableDecl
         private Iterator<? extends T> a;
         private Iterator<? extends T> b = Iterators.h();
@@ -176,7 +170,7 @@ public final class Iterators {
         @NullableDecl
         private Deque<Iterator<? extends Iterator<? extends T>>> d;
 
-        C5002f(Iterator<? extends Iterator<? extends T>> it) {
+        f(Iterator<? extends Iterator<? extends T>> it) {
             this.c = (Iterator) du1.p(it);
         }
 
@@ -205,19 +199,19 @@ public final class Iterators {
                 }
                 Iterator<? extends T> next = a.next();
                 this.b = next;
-                if (next instanceof C5002f) {
-                    C5002f c5002f = (C5002f) next;
-                    this.b = c5002f.b;
+                if (next instanceof f) {
+                    f fVar = (f) next;
+                    this.b = fVar.b;
                     if (this.d == null) {
                         this.d = new ArrayDeque();
                     }
                     this.d.addFirst(this.c);
-                    if (c5002f.d != null) {
-                        while (!c5002f.d.isEmpty()) {
-                            this.d.addFirst(c5002f.d.removeLast());
+                    if (fVar.d != null) {
+                        while (!fVar.d.isEmpty()) {
+                            this.d.addFirst(fVar.d.removeLast());
                         }
                     }
-                    this.c = c5002f.c;
+                    this.c = fVar.c;
                 }
             }
             return true;
@@ -235,25 +229,23 @@ public final class Iterators {
 
         @Override // java.util.Iterator
         public void remove() {
-            C5191k.e(this.a != null);
+            k.e(this.a != null);
             this.a.remove();
             this.a = null;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Iterators$g */
     /* loaded from: classes10.dex */
-    private static class C5003g<T> extends yt2<T> {
+    private static class g<T> extends yt2<T> {
         final Queue<PeekingIterator<T>> a;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.Iterators$g$a */
         /* loaded from: classes10.dex */
-        class C5004a implements Comparator<PeekingIterator<T>> {
+        class a implements Comparator<PeekingIterator<T>> {
             final /* synthetic */ Comparator a;
 
-            C5004a(C5003g c5003g, Comparator comparator) {
+            a(g gVar, Comparator comparator) {
                 this.a = comparator;
             }
 
@@ -264,8 +256,8 @@ public final class Iterators {
             }
         }
 
-        public C5003g(Iterable<? extends Iterator<? extends T>> iterable, Comparator<? super T> comparator) {
-            this.a = new PriorityQueue(2, new C5004a(this, comparator));
+        public g(Iterable<? extends Iterator<? extends T>> iterable, Comparator<? super T> comparator) {
+            this.a = new PriorityQueue(2, new a(this, comparator));
             for (Iterator<? extends T> it : iterable) {
                 if (it.hasNext()) {
                     this.a.add(Iterators.p(it));
@@ -291,15 +283,14 @@ public final class Iterators {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Iterators$h */
     /* loaded from: classes10.dex */
-    public static class C5005h<E> implements PeekingIterator<E> {
+    public static class h<E> implements PeekingIterator<E> {
         private final Iterator<? extends E> a;
         private boolean b;
         @NullableDecl
         private E c;
 
-        public C5005h(Iterator<? extends E> it) {
+        public h(Iterator<? extends E> it) {
             this.a = (Iterator) du1.p(it);
         }
 
@@ -373,7 +364,7 @@ public final class Iterators {
     }
 
     public static <T> Iterator<T> e(Iterator<? extends Iterator<? extends T>> it) {
-        return new C5002f(it);
+        return new f(it);
     }
 
     public static boolean f(Iterator<?> it, @NullableDecl Object obj) {
@@ -427,7 +418,7 @@ public final class Iterators {
     }
 
     static <T> au2<T> i() {
-        return (au2<T>) C5001e.e;
+        return (au2<T>) e.e;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -438,7 +429,7 @@ public final class Iterators {
     public static <T> yt2<T> k(Iterator<T> it, Predicate<? super T> predicate) {
         du1.p(it);
         du1.p(predicate);
-        return new C4998b(it, predicate);
+        return new b(it, predicate);
     }
 
     public static <T> T l(Iterator<T> it) {
@@ -477,14 +468,14 @@ public final class Iterators {
     public static <T> yt2<T> o(Iterable<? extends Iterator<? extends T>> iterable, Comparator<? super T> comparator) {
         du1.q(iterable, "iterators");
         du1.q(comparator, "comparator");
-        return new C5003g(iterable, comparator);
+        return new g(iterable, comparator);
     }
 
     public static <T> PeekingIterator<T> p(Iterator<? extends T> it) {
-        if (it instanceof C5005h) {
-            return (C5005h) it;
+        if (it instanceof h) {
+            return (h) it;
         }
-        return new C5005h(it);
+        return new h(it);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -525,7 +516,7 @@ public final class Iterators {
     }
 
     public static <T> yt2<T> t(@NullableDecl T t) {
-        return new C5000d(t);
+        return new d(t);
     }
 
     public static int u(Iterator<?> it) {
@@ -554,7 +545,7 @@ public final class Iterators {
 
     public static <F, T> Iterator<T> w(Iterator<F> it, Function<? super F, ? extends T> function) {
         du1.p(function);
-        return new C4999c(it, function);
+        return new c(it, function);
     }
 
     public static <T> yt2<T> x(Iterator<? extends T> it) {
@@ -562,6 +553,6 @@ public final class Iterators {
         if (it instanceof yt2) {
             return (yt2) it;
         }
-        return new C4997a(it);
+        return new a(it);
     }
 }

@@ -8,31 +8,31 @@ import java.lang.ref.WeakReference;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class iu {
-    public static void a(Context context, C4593in c4593in, String str, int i, int i2, String str2) {
-        c4593in.a = hb.c(context, str);
-        c4593in.d = i;
-        c4593in.b = i2;
-        c4593in.c = str2;
+    public static void a(Context context, in inVar, String str, int i, int i2, String str2) {
+        inVar.a = hb.c(context, str);
+        inVar.d = i;
+        inVar.b = i2;
+        inVar.c = str2;
     }
 
-    public static C4593in a(WeakReference<C4593in> weakReference) {
+    public static in a(WeakReference<in> weakReference) {
         if (weakReference == null || weakReference.get() == null) {
-            weakReference = new WeakReference<>(new C4593in());
+            weakReference = new WeakReference<>(new in());
         }
         return weakReference.get();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static byte[] a(hy hyVar, String str, boolean z) {
-        hy.C4582b c4582b;
+        hy.b bVar;
         byte[] bArr = new byte[0];
         InputStream inputStream = null;
         try {
-            c4582b = hyVar.a(str);
-            if (c4582b == null) {
-                if (c4582b != null) {
+            bVar = hyVar.a(str);
+            if (bVar == null) {
+                if (bVar != null) {
                     try {
-                        c4582b.close();
+                        bVar.close();
                     } catch (Throwable th) {
                         th.printStackTrace();
                     }
@@ -40,7 +40,7 @@ public class iu {
                 return bArr;
             }
             try {
-                InputStream a = c4582b.a(0);
+                InputStream a = bVar.a(0);
                 if (a == null) {
                     if (a != null) {
                         try {
@@ -50,7 +50,7 @@ public class iu {
                         }
                     }
                     try {
-                        c4582b.close();
+                        bVar.close();
                     } catch (Throwable th3) {
                         th3.printStackTrace();
                     }
@@ -67,7 +67,7 @@ public class iu {
                     th4.printStackTrace();
                 }
                 try {
-                    c4582b.close();
+                    bVar.close();
                 } catch (Throwable th5) {
                     th5.printStackTrace();
                 }
@@ -85,9 +85,9 @@ public class iu {
                             th7.printStackTrace();
                         }
                     }
-                    if (c4582b != null) {
+                    if (bVar != null) {
                         try {
-                            c4582b.close();
+                            bVar.close();
                         } catch (Throwable th8) {
                             th8.printStackTrace();
                         }
@@ -96,7 +96,7 @@ public class iu {
             }
         } catch (Throwable th9) {
             th = th9;
-            c4582b = null;
+            bVar = null;
         }
     }
 

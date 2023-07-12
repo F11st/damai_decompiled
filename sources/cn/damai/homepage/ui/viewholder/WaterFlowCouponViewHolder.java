@@ -11,10 +11,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
 import cn.damai.h5container.h5url.VipUrlGetter;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -25,10 +23,10 @@ import cn.damai.tetris.component.home.HomeData;
 import com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import tb.C9826vr;
 import tb.nk;
 import tb.py0;
 import tb.t60;
+import tb.vr;
 import tb.wh2;
 
 /* compiled from: Taobao */
@@ -48,12 +46,11 @@ public class WaterFlowCouponViewHolder extends RecyclerView.ViewHolder {
     private int k;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.viewholder.WaterFlowCouponViewHolder$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1192a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1192a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -68,12 +65,11 @@ public class WaterFlowCouponViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.viewholder.WaterFlowCouponViewHolder$b */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1193b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1193b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -88,12 +84,11 @@ public class WaterFlowCouponViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.viewholder.WaterFlowCouponViewHolder$c */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1194c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1194c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -119,9 +114,9 @@ public class WaterFlowCouponViewHolder extends RecyclerView.ViewHolder {
         this.g = (TextView) this.itemView.findViewById(R$id.homepage_waterflow_coupon_get_btn);
         this.b = (TextView) this.itemView.findViewById(R$id.homepage_waterflow_coupon_rmb_symbol);
         this.i = (ImageView) this.itemView.findViewById(R$id.homepage_waterflow_coupon_image);
-        int a = ((DisplayMetrics.getwidthPixels(t60.b(context)) - t60.a(context, 24.0f)) / 2) - t60.a(context, 4.5f);
-        this.j = a;
-        this.k = (int) (((a * 214) * 1.0f) / 160.0f);
+        int a2 = ((DisplayMetrics.getwidthPixels(t60.b(context)) - t60.a(context, 24.0f)) / 2) - t60.a(context, 4.5f);
+        this.j = a2;
+        this.k = (int) (((a2 * 214) * 1.0f) / 160.0f);
         ViewGroup.LayoutParams layoutParams = relativeLayout.getLayoutParams();
         layoutParams.width = this.j;
         layoutParams.height = this.k;
@@ -137,7 +132,7 @@ public class WaterFlowCouponViewHolder extends RecyclerView.ViewHolder {
             return;
         }
         WaterFlowRecommendItem waterFlowRecommendItem = (WaterFlowRecommendItem) view.getTag();
-        C0529c.e().x(py0.I().M(this.h, waterFlowRecommendItem.projectId, waterFlowRecommendItem.alg, waterFlowRecommendItem.scm, waterFlowRecommendItem.cardType, "", waterFlowRecommendItem.pageNum, waterFlowRecommendItem.index, waterFlowRecommendItem.title, waterFlowRecommendItem.schema));
+        cn.damai.common.user.c.e().x(py0.I().M(this.h, waterFlowRecommendItem.projectId, waterFlowRecommendItem.alg, waterFlowRecommendItem.scm, waterFlowRecommendItem.cardType, "", waterFlowRecommendItem.pageNum, waterFlowRecommendItem.index, waterFlowRecommendItem.title, waterFlowRecommendItem.schema));
         if (LoginManager.k().q()) {
             return;
         }
@@ -179,7 +174,7 @@ public class WaterFlowCouponViewHolder extends RecyclerView.ViewHolder {
         this.g.setTextColor(Color.parseColor("#ffffff"));
         this.g.setText("立即领取");
         this.itemView.setTag(waterFlowRecommendItem);
-        this.itemView.setOnClickListener(new View$OnClickListenerC1193b());
+        this.itemView.setOnClickListener(new b());
     }
 
     private void handleMarktingView(WaterFlowRecommendItem waterFlowRecommendItem) {
@@ -193,11 +188,11 @@ public class WaterFlowCouponViewHolder extends RecyclerView.ViewHolder {
         this.c.setVisibility(4);
         this.b.setVisibility(4);
         this.d.setVisibility(4);
-        if (this.i.getTag() instanceof C9826vr) {
-            ((C9826vr) this.i.getTag()).cancel();
+        if (this.i.getTag() instanceof vr) {
+            ((vr) this.i.getTag()).cancel();
         }
         this.i.setImageDrawable(null);
-        DMImageCreator f = C0504a.b().f(waterFlowRecommendItem.pic, this.j, this.k);
+        DMImageCreator f = cn.damai.common.image.a.b().f(waterFlowRecommendItem.pic, this.j, this.k);
         int i = R$drawable.uikit_default_image_bg_gradient;
         this.i.setTag(f.i(i).c(i).g(this.i));
         if (!wh2.j(waterFlowRecommendItem.buttonText)) {
@@ -215,7 +210,7 @@ public class WaterFlowCouponViewHolder extends RecyclerView.ViewHolder {
             this.g.setVisibility(4);
         }
         this.itemView.setTag(waterFlowRecommendItem);
-        this.itemView.setOnClickListener(new View$OnClickListenerC1194c());
+        this.itemView.setOnClickListener(new c());
     }
 
     private void handleVipView(WaterFlowRecommendItem waterFlowRecommendItem) {
@@ -256,7 +251,7 @@ public class WaterFlowCouponViewHolder extends RecyclerView.ViewHolder {
         this.g.setText("立即开通");
         this.g.setTextColor(Color.parseColor("#11172D"));
         this.itemView.setTag(waterFlowRecommendItem);
-        this.itemView.setOnClickListener(new View$OnClickListenerC1192a());
+        this.itemView.setOnClickListener(new a());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -267,7 +262,7 @@ public class WaterFlowCouponViewHolder extends RecyclerView.ViewHolder {
             return;
         }
         WaterFlowRecommendItem waterFlowRecommendItem = (WaterFlowRecommendItem) view.getTag();
-        C0529c.e().x(py0.I().M(this.h, waterFlowRecommendItem.projectId, waterFlowRecommendItem.alg, waterFlowRecommendItem.scm, waterFlowRecommendItem.cardType, "", waterFlowRecommendItem.pageNum, waterFlowRecommendItem.index, waterFlowRecommendItem.title, waterFlowRecommendItem.schema));
+        cn.damai.common.user.c.e().x(py0.I().M(this.h, waterFlowRecommendItem.projectId, waterFlowRecommendItem.alg, waterFlowRecommendItem.scm, waterFlowRecommendItem.cardType, "", waterFlowRecommendItem.pageNum, waterFlowRecommendItem.index, waterFlowRecommendItem.title, waterFlowRecommendItem.schema));
         DMNav.from(this.a).toUri(waterFlowRecommendItem.schema);
     }
 
@@ -279,7 +274,7 @@ public class WaterFlowCouponViewHolder extends RecyclerView.ViewHolder {
             return;
         }
         WaterFlowRecommendItem waterFlowRecommendItem = (WaterFlowRecommendItem) view.getTag();
-        C0529c.e().x(py0.I().M(this.h, waterFlowRecommendItem.projectId, waterFlowRecommendItem.alg, waterFlowRecommendItem.scm, waterFlowRecommendItem.cardType, "", waterFlowRecommendItem.pageNum, waterFlowRecommendItem.index, waterFlowRecommendItem.title, waterFlowRecommendItem.schema));
+        cn.damai.common.user.c.e().x(py0.I().M(this.h, waterFlowRecommendItem.projectId, waterFlowRecommendItem.alg, waterFlowRecommendItem.scm, waterFlowRecommendItem.cardType, "", waterFlowRecommendItem.pageNum, waterFlowRecommendItem.index, waterFlowRecommendItem.title, waterFlowRecommendItem.schema));
         if (LoginManager.k().q()) {
             DMNav.from(this.a).toUri(VipUrlGetter.vipBuyUrl());
         } else {

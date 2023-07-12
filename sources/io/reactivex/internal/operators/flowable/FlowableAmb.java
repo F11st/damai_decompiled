@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.internal.subscriptions.EmptySubscription;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -15,7 +15,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableAmb<T> extends AbstractC8147b<T> {
+public final class FlowableAmb<T> extends b<T> {
     final Publisher<? extends T>[] sources;
     final Iterable<? extends Publisher<? extends T>> sourcesIterable;
 
@@ -164,7 +164,7 @@ public final class FlowableAmb<T> extends AbstractC8147b<T> {
         this.sourcesIterable = iterable;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super T> subscriber) {
         int length;
         Publisher<? extends T>[] publisherArr = this.sources;

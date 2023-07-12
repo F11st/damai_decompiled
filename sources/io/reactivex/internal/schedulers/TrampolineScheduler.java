@@ -2,8 +2,8 @@ package io.reactivex.internal.schedulers;
 
 import io.reactivex.Scheduler;
 import io.reactivex.annotations.NonNull;
-import io.reactivex.disposables.C8151a;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.disposables.a;
 import io.reactivex.internal.disposables.EmptyDisposable;
 import io.reactivex.internal.functions.ObjectHelper;
 import java.util.concurrent.PriorityBlockingQueue;
@@ -132,7 +132,7 @@ public final class TrampolineScheduler extends Scheduler {
                 this.queue.clear();
                 return EmptyDisposable.INSTANCE;
             }
-            return C8151a.c(new AppendToQueueTask(timedRunnable));
+            return a.c(new AppendToQueueTask(timedRunnable));
         }
 
         @Override // io.reactivex.disposables.Disposable

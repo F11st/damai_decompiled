@@ -12,7 +12,7 @@ public class Cif {
     /* compiled from: Taobao */
     /* renamed from: com.amap.api.mapcore.util.if$a */
     /* loaded from: classes10.dex */
-    public interface InterfaceC4587a {
+    public interface a {
         void onDownload(byte[] bArr, long j);
 
         void onException(Throwable th);
@@ -26,8 +26,8 @@ public class Cif {
         this(iiVar, 0L, -1L);
     }
 
-    public void a(InterfaceC4587a interfaceC4587a) {
-        this.a.a(this.b.getURL(), this.b.c(), this.b.isIPRequest(), this.b.getIPDNSName(), this.b.getRequestHead(), this.b.getParams(), this.b.getEntityBytes(), interfaceC4587a, ig.a(2, this.b));
+    public void a(a aVar) {
+        this.a.a(this.b.getURL(), this.b.c(), this.b.isIPRequest(), this.b.getIPDNSName(), this.b.getRequestHead(), this.b.getParams(), this.b.getEntityBytes(), aVar, ig.a(2, this.b));
     }
 
     public Cif(ii iiVar, long j, long j2) {

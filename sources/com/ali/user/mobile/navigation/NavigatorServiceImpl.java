@@ -348,7 +348,7 @@ public class NavigatorServiceImpl implements NavigatorService {
             fetchRegisterUrl(context, registParam);
         } else if (i == 3 && DataProviderFactory.getDataProvider().needEnterPriseRegister()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(context, 16973939));
-            View inflate = LayoutInflater.from(context).inflate(R.C2965layout.aliuser_cbu_register_dialog, (ViewGroup) null);
+            View inflate = LayoutInflater.from(context).inflate(R.layout.aliuser_cbu_register_dialog, (ViewGroup) null);
             final AlertDialog create = builder.setView(inflate).create();
             Window window = create.getWindow();
             WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();

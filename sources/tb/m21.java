@@ -13,14 +13,13 @@ import org.jetbrains.annotations.Nullable;
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class m21<M extends Member> implements Caller<M> {
-    private final C9430a a;
+    private final a a;
     private final Caller<M> b;
     private final boolean c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.m21$a */
     /* loaded from: classes3.dex */
-    private static final class C9430a {
+    private static final class a {
         @NotNull
         private final n31 a;
         @NotNull
@@ -28,7 +27,7 @@ public final class m21<M extends Member> implements Caller<M> {
         @Nullable
         private final Method c;
 
-        public C9430a(@NotNull n31 n31Var, @NotNull Method[] methodArr, @Nullable Method method) {
+        public a(@NotNull n31 n31Var, @NotNull Method[] methodArr, @Nullable Method method) {
             b41.i(n31Var, "argumentRange");
             b41.i(methodArr, "unbox");
             this.a = n31Var;
@@ -73,19 +72,19 @@ public final class m21<M extends Member> implements Caller<M> {
     public Object call(@NotNull Object[] objArr) {
         Object invoke;
         b41.i(objArr, "args");
-        C9430a c9430a = this.a;
-        n31 a = c9430a.a();
-        Method[] b = c9430a.b();
-        Method c = c9430a.c();
+        a aVar = this.a;
+        n31 a2 = aVar.a();
+        Method[] b = aVar.b();
+        Method c = aVar.c();
         Object[] copyOf = Arrays.copyOf(objArr, objArr.length);
         b41.h(copyOf, "java.util.Arrays.copyOf(this, size)");
         Objects.requireNonNull(copyOf, "null cannot be cast to non-null type kotlin.Array<kotlin.Any?>");
-        int a2 = a.a();
-        int b2 = a.b();
-        if (a2 <= b2) {
+        int a3 = a2.a();
+        int b2 = a2.b();
+        if (a3 <= b2) {
             while (true) {
-                Method method = b[a2];
-                Object obj = objArr[a2];
+                Method method = b[a3];
+                Object obj = objArr[a3];
                 if (method != null) {
                     if (obj != null) {
                         obj = method.invoke(obj, new Object[0]);
@@ -95,11 +94,11 @@ public final class m21<M extends Member> implements Caller<M> {
                         obj = zv2.g(returnType);
                     }
                 }
-                copyOf[a2] = obj;
-                if (a2 == b2) {
+                copyOf[a3] = obj;
+                if (a3 == b2) {
                     break;
                 }
-                a2++;
+                a3++;
             }
         }
         Object call = this.b.call(copyOf);

@@ -21,12 +21,11 @@ public class gk0 implements FloatContainer {
     private FloatLayer d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.gk0$a */
     /* loaded from: classes6.dex */
-    public class View$OnClickListenerC9177a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9177a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -46,7 +45,7 @@ public class gk0 implements FloatContainer {
         this.b = frameLayout;
         this.a.addView(frameLayout, -1, -1);
         this.b.setBackgroundColor(jh0.C_A30_000000);
-        viewGroup.setOnClickListener(new View$OnClickListenerC9177a());
+        viewGroup.setOnClickListener(new a());
     }
 
     @Override // cn.damai.projectfiltercopy.floatcontainer.FloatContainer

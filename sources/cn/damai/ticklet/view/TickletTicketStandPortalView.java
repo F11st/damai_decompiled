@@ -10,8 +10,8 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.member.R$drawable;
 import cn.damai.member.R$id;
@@ -65,7 +65,7 @@ public class TickletTicketStandPortalView extends FrameLayout implements View.On
             ipChange.ipc$dispatch("1934211297", new Object[]{this, view});
         } else if (this.context == null || this.ticket.getStandPortal() == null) {
         } else {
-            C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "center", "open_entrance_pic", un2.k().t(this.projectId, this.ticket.getPerformId()), Boolean.TRUE));
+            c.e().x(b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "center", "open_entrance_pic", un2.k().t(this.projectId, this.ticket.getPerformId()), Boolean.TRUE));
             py2.f().u((Activity) this.context, this.ticket.getStandPortal().pic);
         }
     }
@@ -94,7 +94,7 @@ public class TickletTicketStandPortalView extends FrameLayout implements View.On
                 return;
             }
             this.projectId = ((TicketDeatilActivity) context).getProjectId();
-            C0529c e = C0529c.e();
+            c e = c.e();
             TextView textView = this.standEntry;
             e.G(textView, "button_" + this.postion, "center", un2.TICKLET_DETAIL_PAGE, un2.k().t(this.projectId, userTicketTable.getPerformId()));
         } else {

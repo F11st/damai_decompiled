@@ -30,7 +30,7 @@ public enum ShareChannel {
     REPORT(15, BottomActionDialog.REPORT);
     
     @NotNull
-    public static final C3631a Companion = new C3631a(null);
+    public static final a Companion = new a(null);
     @JvmField
     @NotNull
     public String channelName;
@@ -38,15 +38,14 @@ public enum ShareChannel {
     public final int value;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.share.common.share.ShareChannel$a */
     /* loaded from: classes8.dex */
-    public static final class C3631a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3631a() {
+        private a() {
         }
 
-        public /* synthetic */ C3631a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

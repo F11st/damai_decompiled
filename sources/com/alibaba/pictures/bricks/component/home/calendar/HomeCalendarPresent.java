@@ -22,19 +22,18 @@ import tb.k50;
 public final class HomeCalendarPresent extends AbsPresenter<GenericItem<ItemValue>, HomeCalendarModel, HomeCalendarView> implements HomeCalendarContract.Present {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C3467a Companion = new C3467a(null);
+    public static final a Companion = new a(null);
     private static int DISPATCH_INDEX;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.calendar.HomeCalendarPresent$a */
     /* loaded from: classes7.dex */
-    public static final class C3467a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3467a() {
+        private a() {
         }
 
-        public /* synthetic */ C3467a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

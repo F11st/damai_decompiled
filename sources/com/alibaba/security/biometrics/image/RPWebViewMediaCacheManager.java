@@ -5,9 +5,9 @@ import android.net.Uri;
 import android.taobao.windvane.util.WVConstants;
 import android.text.TextUtils;
 import android.util.Pair;
-import com.alibaba.security.common.d.C3808e;
-import com.alibaba.security.common.d.C3810g;
-import com.alibaba.security.common.d.C3816j;
+import com.alibaba.security.common.d.e;
+import com.alibaba.security.common.d.g;
+import com.alibaba.security.common.d.j;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -60,7 +60,7 @@ public class RPWebViewMediaCacheManager {
             sb.append(externalCacheDir.getAbsolutePath());
             sb.append(File.separator);
         } else {
-            File a = C3808e.a(context);
+            File a = e.a(context);
             if (a != null) {
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append(a.getAbsolutePath());
@@ -81,7 +81,7 @@ public class RPWebViewMediaCacheManager {
     private FileInputStream getIdCardInputStream(Context context, String str) {
         String removeScheme = removeScheme(str);
         try {
-            return new FileInputStream(new File(getCacheDir(context) + File.separator + C3816j.b(removeScheme)));
+            return new FileInputStream(new File(getCacheDir(context) + File.separator + j.b(removeScheme)));
         } catch (Exception unused) {
             return null;
         }
@@ -131,8 +131,8 @@ public class RPWebViewMediaCacheManager {
     private Pair<String, String> saveBitmapToCache(Context context, File file) {
         String valueOf = String.valueOf(System.currentTimeMillis());
         String virtualImageKey = getVirtualImageKey(ID_CARD, valueOf);
-        File file2 = new File(getCacheDir(context), C3816j.b(getVirtualImageKey(ID_CARD, valueOf)));
-        if (file != null && file.exists() && C3808e.a(file, file2)) {
+        File file2 = new File(getCacheDir(context), j.b(getVirtualImageKey(ID_CARD, valueOf)));
+        if (file != null && file.exists() && e.a(file, file2)) {
             return new Pair<>(valueOf, virtualImageKey);
         }
         return new Pair<>("0", virtualImageKey);
@@ -189,7 +189,7 @@ public class RPWebViewMediaCacheManager {
         synchronized (this.mImageCache) {
             File file = new File(str);
             saveBitmapToCache = saveBitmapToCache(context, file);
-            String a = C3816j.a(file);
+            String a = j.a(file);
             PhotoTair photoTair = new PhotoTair();
             photoTair.md5 = a;
             photoTair.path = str;
@@ -227,10 +227,10 @@ public class RPWebViewMediaCacheManager {
 
     public String putIdCardImage(Context context, String str, String str2) {
         synchronized (this.mImageCache) {
-            String a = C3810g.a(context, str2, str);
+            String a = g.a(context, str2, str);
             if (a != null) {
                 String valueOf = String.valueOf((int) (((Math.random() * 9.0d) + 1.0d) * 1.0E7d));
-                String a2 = C3816j.a(new File(a));
+                String a2 = j.a(new File(a));
                 if (a2 == null) {
                     return "0";
                 }

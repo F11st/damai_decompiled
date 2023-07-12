@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.observable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8149d;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import org.reactivestreams.Publisher;
@@ -11,7 +11,7 @@ import org.reactivestreams.Subscription;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableFromPublisher<T> extends AbstractC8149d<T> {
+public final class ObservableFromPublisher<T> extends d<T> {
     final Publisher<? extends T> source;
 
     /* compiled from: Taobao */
@@ -64,7 +64,7 @@ public final class ObservableFromPublisher<T> extends AbstractC8149d<T> {
         this.source = publisher;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new PublisherSubscriber(observer));
     }

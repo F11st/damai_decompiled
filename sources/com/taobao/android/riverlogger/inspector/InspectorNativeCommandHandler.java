@@ -16,7 +16,7 @@ class InspectorNativeCommandHandler implements InspectorCommandHandler {
     private native void handleNative(long j, String str, int i, String str2, String str3);
 
     @Override // com.taobao.android.riverlogger.inspector.InspectorCommandHandler
-    public void handle(@NonNull JSONObject jSONObject, @NonNull C6577b c6577b) {
-        handleNative(this.a, c6577b.b(), c6577b.a(), c6577b.c(), jSONObject.toString());
+    public void handle(@NonNull JSONObject jSONObject, @NonNull b bVar) {
+        handleNative(this.a, bVar.b(), bVar.a(), bVar.c(), jSONObject.toString());
     }
 }

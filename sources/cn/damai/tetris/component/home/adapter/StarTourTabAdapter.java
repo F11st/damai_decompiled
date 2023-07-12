@@ -24,7 +24,7 @@ public class StarTourTabAdapter extends RecyclerView.Adapter<StarTourTabViewHold
     private static transient /* synthetic */ IpChange $ipChange;
     private OnTabItemClickListener a;
     private List<HomeStarTourBean.HomeStarTourItem> b = new ArrayList();
-    private View.OnClickListener c = new View$OnClickListenerC1851a();
+    private View.OnClickListener c = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes16.dex */
@@ -67,12 +67,11 @@ public class StarTourTabAdapter extends RecyclerView.Adapter<StarTourTabViewHold
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.adapter.StarTourTabAdapter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1851a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1851a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener

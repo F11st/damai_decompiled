@@ -12,7 +12,7 @@ import tb.y33;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public abstract class bl {
-    bg.InterfaceC5793a c;
+    bg.a c;
     private String g;
     private boolean h;
     private boolean i;
@@ -21,13 +21,12 @@ public abstract class bl {
     private boolean d = false;
     private int e = 20000;
     private boolean f = true;
-    private EnumC5800a j = EnumC5800a.NORMAL;
-    private EnumC5801b k = EnumC5801b.FIRST_NONDEGRADE;
+    private a j = a.NORMAL;
+    private b k = b.FIRST_NONDEGRADE;
 
     /* compiled from: Taobao */
-    /* renamed from: com.loc.bl$a */
     /* loaded from: classes10.dex */
-    public enum EnumC5800a {
+    public enum a {
         NORMAL(0),
         INTERRUPT_IO(1),
         NEVER(2),
@@ -36,15 +35,14 @@ public abstract class bl {
         
         private int f;
 
-        EnumC5800a(int i) {
+        a(int i) {
             this.f = i;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.loc.bl$b */
     /* loaded from: classes10.dex */
-    public enum EnumC5801b {
+    public enum b {
         FIRST_NONDEGRADE(0),
         NEVER_GRADE(1),
         DEGRADE_BYERROR(2),
@@ -55,7 +53,7 @@ public abstract class bl {
         
         private int h;
 
-        EnumC5801b(int i2) {
+        b(int i2) {
             this.h = i2;
         }
 
@@ -84,15 +82,14 @@ public abstract class bl {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.loc.bl$c */
     /* loaded from: classes10.dex */
-    public enum EnumC5802c {
+    public enum c {
         HTTP(0),
         HTTPS(1);
         
         private int c;
 
-        EnumC5802c(int i) {
+        c(int i) {
             this.c = i;
         }
     }
@@ -129,11 +126,11 @@ public abstract class bl {
         if (q == null) {
             return str;
         }
-        String c = bj.c(q);
+        String c2 = bj.c(q);
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append(str);
         stringBuffer.append("?");
-        stringBuffer.append(c);
+        stringBuffer.append(c2);
         return stringBuffer.toString();
     }
 
@@ -190,12 +187,12 @@ public abstract class bl {
         return this.i;
     }
 
-    public final bg.InterfaceC5793a C() {
+    public final bg.a C() {
         return this.c;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public final EnumC5801b D() {
+    public final b D() {
         return this.k;
     }
 
@@ -245,16 +242,16 @@ public abstract class bl {
         this.a = i;
     }
 
-    public final void d(EnumC5800a enumC5800a) {
-        this.j = enumC5800a;
+    public final void d(a aVar) {
+        this.j = aVar;
     }
 
-    public final void e(EnumC5801b enumC5801b) {
-        this.k = enumC5801b;
+    public final void e(b bVar) {
+        this.k = bVar;
     }
 
-    public final void f(EnumC5802c enumC5802c) {
-        this.i = enumC5802c == EnumC5802c.HTTPS;
+    public final void f(c cVar) {
+        this.i = cVar == c.HTTPS;
     }
 
     public final void g(String str) {
@@ -319,7 +316,7 @@ public abstract class bl {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public final EnumC5800a y() {
+    public final a y() {
         return this.j;
     }
 

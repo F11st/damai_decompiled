@@ -17,14 +17,11 @@ import com.huawei.hms.api.Api;
 import com.huawei.hms.api.HuaweiApiClient;
 import com.huawei.hms.common.api.ConnectionPostProcessor;
 import com.huawei.hms.common.internal.AutoLifecycleFragment;
-import com.huawei.hms.core.aidl.C5545a;
-import com.huawei.hms.core.aidl.C5546b;
-import com.huawei.hms.core.aidl.C5554e;
 import com.huawei.hms.core.aidl.IMessageEntity;
-import com.huawei.hms.core.aidl.InterfaceC5548c;
-import com.huawei.hms.core.aidl.InterfaceC5551d;
 import com.huawei.hms.core.aidl.RequestHeader;
 import com.huawei.hms.core.aidl.ResponseHeader;
+import com.huawei.hms.core.aidl.c;
+import com.huawei.hms.core.aidl.d;
 import com.huawei.hms.support.api.PendingResultImpl;
 import com.huawei.hms.support.api.ResolveResult;
 import com.huawei.hms.support.api.client.ApiClient;
@@ -73,7 +70,7 @@ public class HuaweiApiClientImpl extends HuaweiApiClient implements ServiceConne
     private final String c;
     private String d;
     private String e;
-    private volatile InterfaceC5551d f;
+    private volatile com.huawei.hms.core.aidl.d f;
     private String g;
     private WeakReference<Activity> h;
     private WeakReference<Activity> i;
@@ -99,10 +96,9 @@ public class HuaweiApiClientImpl extends HuaweiApiClient implements ServiceConne
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.api.HuaweiApiClientImpl$a */
     /* loaded from: classes10.dex */
-    public class C5517a implements Handler.Callback {
-        C5517a() {
+    public class a implements Handler.Callback {
+        a() {
         }
 
         @Override // android.os.Handler.Callback
@@ -121,10 +117,9 @@ public class HuaweiApiClientImpl extends HuaweiApiClient implements ServiceConne
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.api.HuaweiApiClientImpl$b */
     /* loaded from: classes10.dex */
-    public class C5518b implements Handler.Callback {
-        C5518b() {
+    public class b implements Handler.Callback {
+        b() {
         }
 
         @Override // android.os.Handler.Callback
@@ -142,22 +137,21 @@ public class HuaweiApiClientImpl extends HuaweiApiClient implements ServiceConne
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.api.HuaweiApiClientImpl$c */
     /* loaded from: classes10.dex */
-    class BinderC5519c extends InterfaceC5548c.AbstractBinderC5549a {
+    class c extends c.a {
         final /* synthetic */ ResultCallback a;
 
-        BinderC5519c(HuaweiApiClientImpl huaweiApiClientImpl, ResultCallback resultCallback) {
+        c(HuaweiApiClientImpl huaweiApiClientImpl, ResultCallback resultCallback) {
             this.a = resultCallback;
         }
 
-        @Override // com.huawei.hms.core.aidl.InterfaceC5548c
-        public void call(C5546b c5546b) {
-            if (c5546b != null) {
-                C5554e a = C5545a.a(c5546b.c());
+        @Override // com.huawei.hms.core.aidl.c
+        public void call(com.huawei.hms.core.aidl.b bVar) {
+            if (bVar != null) {
+                com.huawei.hms.core.aidl.e a = com.huawei.hms.core.aidl.a.a(bVar.c());
                 ResponseHeader responseHeader = new ResponseHeader();
-                a.a(c5546b.b, responseHeader);
-                BundleResult bundleResult = new BundleResult(responseHeader.getStatusCode(), c5546b.a());
+                a.a(bVar.b, responseHeader);
+                BundleResult bundleResult = new BundleResult(responseHeader.getStatusCode(), bVar.a());
                 HMSLog.i("HuaweiApiClientImpl", "Exit asyncRequest onResult");
                 this.a.onResult(bundleResult);
                 return;
@@ -168,10 +162,9 @@ public class HuaweiApiClientImpl extends HuaweiApiClient implements ServiceConne
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.api.HuaweiApiClientImpl$d */
     /* loaded from: classes10.dex */
-    static class C5520d extends PendingResultImpl<Status, IMessageEntity> {
-        public C5520d(ApiClient apiClient, String str, IMessageEntity iMessageEntity) {
+    static class d extends PendingResultImpl<Status, IMessageEntity> {
+        public d(ApiClient apiClient, String str, IMessageEntity iMessageEntity) {
             super(apiClient, str, iMessageEntity);
         }
 
@@ -183,18 +176,16 @@ public class HuaweiApiClientImpl extends HuaweiApiClient implements ServiceConne
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.api.HuaweiApiClientImpl$e */
     /* loaded from: classes10.dex */
-    public class C5521e implements ResultCallback<ResolveResult<ConnectResp>> {
+    public class e implements ResultCallback<ResolveResult<ConnectResp>> {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.huawei.hms.api.HuaweiApiClientImpl$e$a */
         /* loaded from: classes10.dex */
-        public class RunnableC5522a implements Runnable {
+        public class a implements Runnable {
             final /* synthetic */ ResolveResult a;
 
-            RunnableC5522a(ResolveResult resolveResult) {
+            a(ResolveResult resolveResult) {
                 this.a = resolveResult;
             }
 
@@ -204,34 +195,32 @@ public class HuaweiApiClientImpl extends HuaweiApiClient implements ServiceConne
             }
         }
 
-        private C5521e() {
+        private e() {
         }
 
         @Override // com.huawei.hms.support.api.client.ResultCallback
         /* renamed from: a */
         public void onResult(ResolveResult<ConnectResp> resolveResult) {
-            new Handler(Looper.getMainLooper()).post(new RunnableC5522a(resolveResult));
+            new Handler(Looper.getMainLooper()).post(new a(resolveResult));
         }
 
-        /* synthetic */ C5521e(HuaweiApiClientImpl huaweiApiClientImpl, C5517a c5517a) {
+        /* synthetic */ e(HuaweiApiClientImpl huaweiApiClientImpl, a aVar) {
             this();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.api.HuaweiApiClientImpl$f */
     /* loaded from: classes10.dex */
-    public class C5523f implements ResultCallback<ResolveResult<DisconnectResp>> {
+    public class f implements ResultCallback<ResolveResult<DisconnectResp>> {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.huawei.hms.api.HuaweiApiClientImpl$f$a */
         /* loaded from: classes10.dex */
-        public class RunnableC5524a implements Runnable {
+        public class a implements Runnable {
             final /* synthetic */ ResolveResult a;
 
-            RunnableC5524a(ResolveResult resolveResult) {
+            a(ResolveResult resolveResult) {
                 this.a = resolveResult;
             }
 
@@ -241,26 +230,25 @@ public class HuaweiApiClientImpl extends HuaweiApiClient implements ServiceConne
             }
         }
 
-        private C5523f() {
+        private f() {
         }
 
         @Override // com.huawei.hms.support.api.client.ResultCallback
         /* renamed from: a */
         public void onResult(ResolveResult<DisconnectResp> resolveResult) {
-            new Handler(Looper.getMainLooper()).post(new RunnableC5524a(resolveResult));
+            new Handler(Looper.getMainLooper()).post(new a(resolveResult));
         }
 
-        /* synthetic */ C5523f(HuaweiApiClientImpl huaweiApiClientImpl, C5517a c5517a) {
+        /* synthetic */ f(HuaweiApiClientImpl huaweiApiClientImpl, a aVar) {
             this();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.api.HuaweiApiClientImpl$g */
     /* loaded from: classes10.dex */
-    public class C5525g implements ResultCallback<ResolveResult<JosGetNoticeResp>> {
-        private C5525g() {
+    public class g implements ResultCallback<ResolveResult<JosGetNoticeResp>> {
+        private g() {
         }
 
         @Override // com.huawei.hms.support.api.client.ResultCallback
@@ -281,7 +269,7 @@ public class HuaweiApiClientImpl extends HuaweiApiClient implements ServiceConne
             HMSLog.e("HuaweiApiClientImpl", "showNotice no valid activity!");
         }
 
-        /* synthetic */ C5525g(HuaweiApiClientImpl huaweiApiClientImpl, C5517a c5517a) {
+        /* synthetic */ g(HuaweiApiClientImpl huaweiApiClientImpl, a aVar) {
             this();
         }
     }
@@ -313,16 +301,16 @@ public class HuaweiApiClientImpl extends HuaweiApiClient implements ServiceConne
     private int e() {
         int hmsVersion = Util.getHmsVersion(this.b);
         if (hmsVersion == 0 || hmsVersion < 20503000) {
-            int f = f();
+            int f2 = f();
             if (g()) {
-                if (f < 20503000) {
+                if (f2 < 20503000) {
                     return 20503000;
                 }
-                return f;
-            } else if (f < 20600000) {
+                return f2;
+            } else if (f2 < 20600000) {
                 return 20600000;
             } else {
-                return f;
+                return f2;
             }
         }
         return hmsVersion;
@@ -363,7 +351,7 @@ public class HuaweiApiClientImpl extends HuaweiApiClient implements ServiceConne
         if (handler != null) {
             handler.removeMessages(2);
         } else {
-            this.x = new Handler(Looper.getMainLooper(), new C5517a());
+            this.x = new Handler(Looper.getMainLooper(), new a());
         }
         this.x.sendEmptyMessageDelayed(2, DanmakuFactory.DEFAULT_DANMAKU_DURATION_V);
     }
@@ -374,7 +362,7 @@ public class HuaweiApiClientImpl extends HuaweiApiClient implements ServiceConne
             if (handler != null) {
                 handler.removeMessages(3);
             } else {
-                this.y = new Handler(Looper.getMainLooper(), new C5518b());
+                this.y = new Handler(Looper.getMainLooper(), new b());
             }
             boolean sendEmptyMessageDelayed = this.y.sendEmptyMessageDelayed(3, 3000L);
             HMSLog.d("HuaweiApiClientImpl", "sendEmptyMessageDelayed for onConnectionResult 3 seconds. the result is : " + sendEmptyMessageDelayed);
@@ -383,23 +371,23 @@ public class HuaweiApiClientImpl extends HuaweiApiClient implements ServiceConne
 
     private void j() {
         HMSLog.i("HuaweiApiClientImpl", "Enter sendConnectApiServceRequest.");
-        ConnectService.connect(this, c()).setResultCallback(new C5521e(this, null));
+        ConnectService.connect(this, c()).setResultCallback(new e(this, null));
     }
 
     private void k() {
-        ConnectService.disconnect(this, d()).setResultCallback(new C5523f(this, null));
+        ConnectService.disconnect(this, d()).setResultCallback(new f(this, null));
     }
 
     private void l() {
         HMSLog.i("HuaweiApiClientImpl", "Enter sendForceConnectApiServceRequest.");
-        ConnectService.forceConnect(this, c()).setResultCallback(new C5521e(this, null));
+        ConnectService.forceConnect(this, c()).setResultCallback(new e(this, null));
     }
 
     private void m() {
         if (this.j) {
             HMSLog.i("HuaweiApiClientImpl", "Connect notice has been shown.");
         } else if (HuaweiApiAvailability.getInstance().isHuaweiMobileNoticeAvailable(this.b) == 0) {
-            ConnectService.getNotice(this, 0, "6.4.0.302").setResultCallback(new C5525g(this, null));
+            ConnectService.getNotice(this, 0, "6.4.0.302").setResultCallback(new g(this, null));
         }
     }
 
@@ -415,17 +403,17 @@ public class HuaweiApiClientImpl extends HuaweiApiClient implements ServiceConne
                 HMSLog.e("HuaweiApiClientImpl", "client is unConnect.");
                 return CommonCode.ErrorCode.CLIENT_API_INVALID;
             }
-            C5546b c5546b = new C5546b(str, i);
-            C5554e a = C5545a.a(c5546b.c());
-            c5546b.a(bundle);
+            com.huawei.hms.core.aidl.b bVar = new com.huawei.hms.core.aidl.b(str, i);
+            com.huawei.hms.core.aidl.e a2 = com.huawei.hms.core.aidl.a.a(bVar.c());
+            bVar.a(bundle);
             RequestHeader requestHeader = new RequestHeader(getAppID(), getPackageName(), 60400302, getSessionId());
             requestHeader.setApiNameList(getApiNameList());
-            c5546b.b = a.a(requestHeader, new Bundle());
+            bVar.b = a2.a(requestHeader, new Bundle());
             try {
-                getService().a(c5546b, new BinderC5519c(this, resultCallback));
+                getService().a(bVar, new c(this, resultCallback));
                 return 0;
-            } catch (RemoteException e) {
-                HMSLog.e("HuaweiApiClientImpl", "remote exception:" + e.getMessage());
+            } catch (RemoteException e2) {
+                HMSLog.e("HuaweiApiClientImpl", "remote exception:" + e2.getMessage());
                 return CommonCode.ErrorCode.INTERNAL_ERROR;
             }
         }
@@ -455,10 +443,10 @@ public class HuaweiApiClientImpl extends HuaweiApiClient implements ServiceConne
             this.i = new WeakReference<>(activity);
         }
         this.d = TextUtils.isEmpty(this.c) ? Util.getAppId(this.b) : this.c;
-        int e = e();
-        HMSLog.i("HuaweiApiClientImpl", "connect minVersion:" + e);
-        HuaweiApiAvailability.setServicesVersionCode(e);
-        int isHuaweiMobileServicesAvailable = HuaweiMobileServicesUtil.isHuaweiMobileServicesAvailable(this.b, e);
+        int e2 = e();
+        HMSLog.i("HuaweiApiClientImpl", "connect minVersion:" + e2);
+        HuaweiApiAvailability.setServicesVersionCode(e2);
+        int isHuaweiMobileServicesAvailable = HuaweiMobileServicesUtil.isHuaweiMobileServicesAvailable(this.b, e2);
         HMSLog.i("HuaweiApiClientImpl", "In connect, isHuaweiMobileServicesAvailable result: " + isHuaweiMobileServicesAvailable);
         this.q = HMSPackageManager.getInstance(this.b).getHmsMultiServiceVersion();
         if (isHuaweiMobileServicesAvailable == 0) {
@@ -498,7 +486,7 @@ public class HuaweiApiClientImpl extends HuaweiApiClient implements ServiceConne
 
     @Override // com.huawei.hms.api.HuaweiApiClient
     public PendingResult<Status> discardAndReconnect() {
-        return new C5520d(this, null, null);
+        return new d(this, null, null);
     }
 
     @Override // com.huawei.hms.api.HuaweiApiClient
@@ -575,7 +563,7 @@ public class HuaweiApiClientImpl extends HuaweiApiClient implements ServiceConne
     }
 
     @Override // com.huawei.hms.support.api.client.AidlApiClient
-    public InterfaceC5551d getService() {
+    public com.huawei.hms.core.aidl.d getService() {
         return this.f;
     }
 
@@ -708,7 +696,7 @@ public class HuaweiApiClientImpl extends HuaweiApiClient implements ServiceConne
     public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
         HMSLog.i("HuaweiApiClientImpl", "HuaweiApiClientImpl Enter onServiceConnected.");
         a(2);
-        this.f = InterfaceC5551d.AbstractBinderC5552a.a(iBinder);
+        this.f = d.a.a(iBinder);
         if (this.f == null) {
             HMSLog.e("HuaweiApiClientImpl", "In onServiceConnected, mCoreService must not be null.");
             n();

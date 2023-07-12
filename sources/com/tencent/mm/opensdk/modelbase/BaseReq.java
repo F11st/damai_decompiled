@@ -1,7 +1,7 @@
 package com.tencent.mm.opensdk.modelbase;
 
 import android.os.Bundle;
-import com.tencent.mm.opensdk.channel.a.C7054a;
+import com.tencent.mm.opensdk.channel.a.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -12,8 +12,8 @@ public abstract class BaseReq {
     public abstract boolean checkArgs();
 
     public void fromBundle(Bundle bundle) {
-        this.transaction = C7054a.a(bundle, "_wxapi_basereq_transaction");
-        this.openId = C7054a.a(bundle, "_wxapi_basereq_openid");
+        this.transaction = a.a(bundle, "_wxapi_basereq_transaction");
+        this.openId = a.a(bundle, "_wxapi_basereq_openid");
     }
 
     public abstract int getType();

@@ -16,21 +16,21 @@ import java.util.Collection;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class ct implements IHeatMapLayer, IOverlayDelegate {
-    private C4637r b;
+    private r b;
     private String d;
     private boolean f;
-    private C4505de g;
+    private de g;
     private HeatMapLayerOptions h;
     private boolean i;
     long a = -1;
     private boolean c = true;
     private float e = 0.0f;
 
-    public ct(C4637r c4637r) {
+    public ct(r rVar) {
         this.i = false;
         try {
             this.i = false;
-            this.b = c4637r;
+            this.b = rVar;
             this.d = getId();
         } catch (Exception e) {
             e.printStackTrace();
@@ -66,15 +66,15 @@ public class ct implements IHeatMapLayer, IOverlayDelegate {
 
     @Override // com.autonavi.base.amap.api.mapcore.overlays.IOverlayDelegate
     public void draw(MapConfig mapConfig) throws RemoteException {
-        C4505de c4505de;
+        de deVar;
         LatLng latLng;
         try {
             if (this.i) {
                 return;
             }
-            C4637r c4637r = this.b;
-            if (c4637r != null && this.g == null) {
-                this.g = c4637r.b();
+            r rVar = this.b;
+            if (rVar != null && this.g == null) {
+                this.g = rVar.b();
             }
             if (this.g == null || mapConfig == null || !this.c) {
                 return;
@@ -111,10 +111,10 @@ public class ct implements IHeatMapLayer, IOverlayDelegate {
             }
             long nativeCreate = AMapNativeHeatMapLayer.nativeCreate();
             this.a = nativeCreate;
-            if (nativeCreate == -1 || (c4505de = this.g) == null) {
+            if (nativeCreate == -1 || (deVar = this.g) == null) {
                 return;
             }
-            AMapNativeHeatMapLayer.nativeSetGLShaderManager(nativeCreate, c4505de.a());
+            AMapNativeHeatMapLayer.nativeSetGLShaderManager(nativeCreate, deVar.a());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -178,8 +178,8 @@ public class ct implements IHeatMapLayer, IOverlayDelegate {
 
     @Override // com.autonavi.amap.mapcore.interfaces.IOverlay
     public void remove() throws RemoteException {
-        C4637r c4637r = this.b;
-        if (c4637r == null || c4637r.a(this.d, true)) {
+        r rVar = this.b;
+        if (rVar == null || rVar.a(this.d, true)) {
             return;
         }
         destroy();
@@ -214,7 +214,7 @@ public class ct implements IHeatMapLayer, IOverlayDelegate {
         }
     }
 
-    public void a(C4505de c4505de) {
-        this.g = c4505de;
+    public void a(de deVar) {
+        this.g = deVar;
     }
 }

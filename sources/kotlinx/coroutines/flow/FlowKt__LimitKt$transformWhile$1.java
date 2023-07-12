@@ -3,7 +3,6 @@ package kotlinx.coroutines.flow;
 import com.youku.uplayer.AliMediaPlayer;
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function2;
@@ -54,7 +53,7 @@ public final class FlowKt__LimitKt$transformWhile$1 extends SuspendLambda implem
     public final Object invokeSuspend(@NotNull Object obj) {
         Object d;
         FlowKt__LimitKt$transformWhile$1$invokeSuspend$$inlined$collectWhile$1 flowKt__LimitKt$transformWhile$1$invokeSuspend$$inlined$collectWhile$1;
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         int i = this.label;
         if (i == 0) {
             i32.b(obj);

@@ -37,9 +37,8 @@ public class DMShadowLayout extends FrameLayout {
     private int padding;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.shadowlayout.DMShadowLayout$a */
     /* loaded from: classes8.dex */
-    public static class C2544a extends Drawable {
+    public static class a extends Drawable {
         private static transient /* synthetic */ IpChange $ipChange;
         private float a;
         private float b;
@@ -49,7 +48,7 @@ public class DMShadowLayout extends FrameLayout {
         private Paint f = new Paint(1);
         private RectF g = new RectF();
 
-        public C2544a(float f, float f2, float f3, float f4, float f5, int i, int i2) {
+        public a(float f, float f2, float f3, float f4, float f5, int i, int i2) {
             this.a = f;
             this.b = f2;
             this.c = f3;
@@ -184,7 +183,7 @@ public class DMShadowLayout extends FrameLayout {
 
     private Drawable createShadowDrawable(int i, int i2, float f, float f2, float f3, float f4, int i3, int i4) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "9649743") ? (Drawable) ipChange.ipc$dispatch("9649743", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), Float.valueOf(f), Float.valueOf(f2), Float.valueOf(f3), Float.valueOf(f4), Integer.valueOf(i3), Integer.valueOf(i4)}) : new C2544a(f, f, f2, f3, f4, i3, i4);
+        return AndroidInstantRuntime.support(ipChange, "9649743") ? (Drawable) ipChange.ipc$dispatch("9649743", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), Float.valueOf(f), Float.valueOf(f2), Float.valueOf(f3), Float.valueOf(f4), Integer.valueOf(i3), Integer.valueOf(i4)}) : new a(f, f, f2, f3, f4, i3, i4);
     }
 
     private TypedArray getTypedArray(Context context, AttributeSet attributeSet, int[] iArr) {

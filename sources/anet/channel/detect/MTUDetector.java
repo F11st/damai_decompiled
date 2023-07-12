@@ -5,8 +5,8 @@ import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import anet.channel.statist.MtuDetectStat;
 import anet.channel.status.NetworkStatusHelper;
-import anet.channel.strategy.C0213a;
 import anet.channel.strategy.IConnStrategy;
+import anet.channel.strategy.a;
 import anet.channel.thread.ThreadPoolExecutorFactory;
 import anet.channel.util.ALog;
 import com.ali.user.open.tbauth.TbAuthConstants;
@@ -16,15 +16,14 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 import mtopsdk.mtop.intf.MtopUnitStrategy;
-import org.android.netutil.C8874a;
-import org.android.netutil.C8875b;
 import org.android.netutil.PingTask;
+import org.android.netutil.b;
 import org.android.spdy.SpdyAgent;
 import org.android.spdy.SpdySessionKind;
 import org.android.spdy.SpdyVersion;
-import tb.C9708t9;
 import tb.h23;
 import tb.hu0;
+import tb.t9;
 import tb.x6;
 
 /* JADX INFO: Access modifiers changed from: package-private */
@@ -36,8 +35,8 @@ public class MTUDetector {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void c(String str) {
-        C8875b c8875b;
-        if (!C9708t9.H()) {
+        b bVar;
+        if (!t9.H()) {
             ALog.f("anet.MTUDetector", "mtu detect closed.", null, new Object[0]);
             return;
         }
@@ -56,29 +55,29 @@ public class MTUDetector {
                 ALog.e("anet.MTUDetector", "mtuDetectTask in period of validity", null, new Object[0]);
                 return;
             }
-            List<IConnStrategy> connStrategyListByHost = C0213a.a().getConnStrategyListByHost(MtopUnitStrategy.GUIDE_ONLINE_DOMAIN);
+            List<IConnStrategy> connStrategyListByHost = a.a().getConnStrategyListByHost(MtopUnitStrategy.GUIDE_ONLINE_DOMAIN);
             String ip = (connStrategyListByHost == null || connStrategyListByHost.isEmpty()) ? null : connStrategyListByHost.get(0).getIp();
             if (TextUtils.isEmpty(ip)) {
                 return;
             }
             ALog.e("anet.MTUDetector", "[mtuDetectTask]", null, TbAuthConstants.IP, ip);
             String str2 = ip;
-            Future<C8875b> launch = new PingTask(str2, 1000, 3, 0, 0).launch();
-            Future<C8875b> launch2 = new PingTask(str2, 1000, 3, 972, 0).launch();
-            Future<C8875b> launch3 = new PingTask(str2, 1000, 3, 1172, 0).launch();
-            Future<C8875b> launch4 = new PingTask(str2, 1000, 3, 1272, 0).launch();
-            Future<C8875b> launch5 = new PingTask(str2, 1000, 3, 1372, 0).launch();
-            Future<C8875b> launch6 = new PingTask(str2, 1000, 3, 1432, 0).launch();
+            Future<b> launch = new PingTask(str2, 1000, 3, 0, 0).launch();
+            Future<b> launch2 = new PingTask(str2, 1000, 3, 972, 0).launch();
+            Future<b> launch3 = new PingTask(str2, 1000, 3, 1172, 0).launch();
+            Future<b> launch4 = new PingTask(str2, 1000, 3, 1272, 0).launch();
+            Future<b> launch5 = new PingTask(str2, 1000, 3, 1372, 0).launch();
+            Future<b> launch6 = new PingTask(str2, 1000, 3, 1432, 0).launch();
             try {
-                c8875b = launch.get();
+                bVar = launch.get();
             } catch (Exception unused) {
-                c8875b = null;
+                bVar = null;
             }
-            if (c8875b == null) {
+            if (bVar == null) {
                 return;
             }
-            if (c8875b.f() < 2) {
-                ALog.e("anet.MTUDetector", "MTU detect preTask error", null, "errCode", Integer.valueOf(c8875b.b()), h23.POINT_SUCCESS_COUNT_MEASURE, Integer.valueOf(c8875b.f()));
+            if (bVar.f() < 2) {
+                ALog.e("anet.MTUDetector", "MTU detect preTask error", null, "errCode", Integer.valueOf(bVar.b()), h23.POINT_SUCCESS_COUNT_MEASURE, Integer.valueOf(bVar.f()));
                 return;
             }
             int i = e(ip, 1000, launch2) ? 1000 : 0;
@@ -103,20 +102,20 @@ public class MTUDetector {
         }
     }
 
-    private boolean e(String str, int i, Future<C8875b> future) {
-        C8875b c8875b;
+    private boolean e(String str, int i, Future<b> future) {
+        b bVar;
         try {
-            c8875b = future.get();
+            bVar = future.get();
         } catch (Exception unused) {
-            c8875b = null;
+            bVar = null;
         }
-        if (c8875b == null) {
+        if (bVar == null) {
             return false;
         }
-        int f = c8875b.f();
+        int f = bVar.f();
         int i2 = 3 - f;
         StringBuilder sb = new StringBuilder();
-        C8874a[] e = c8875b.e();
+        org.android.netutil.a[] e = bVar.e();
         int length = e.length;
         for (int i3 = 0; i3 < length; i3++) {
             sb.append(e[i3].a);
@@ -131,7 +130,7 @@ public class MTUDetector {
         mtuDetectStat.pingSuccessCount = f;
         mtuDetectStat.pingTimeoutCount = i2;
         mtuDetectStat.rtt = sb.toString();
-        mtuDetectStat.errCode = c8875b.b();
+        mtuDetectStat.errCode = bVar.b();
         x6.b().commitStat(mtuDetectStat);
         return f > i2;
     }

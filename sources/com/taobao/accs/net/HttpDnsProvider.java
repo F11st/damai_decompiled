@@ -1,8 +1,8 @@
 package com.taobao.accs.net;
 
 import anet.channel.entity.ConnType;
-import anet.channel.strategy.C0213a;
 import anet.channel.strategy.IConnStrategy;
+import anet.channel.strategy.a;
 import anet.channel.strategy.dispatch.HttpDispatcher;
 import com.taobao.accs.common.ThreadPoolExecutorFactory;
 import com.taobao.accs.utl.ALog;
@@ -25,7 +25,7 @@ public class HttpDnsProvider {
                 ThreadPoolExecutorFactory.schedule(new Runnable() { // from class: com.taobao.accs.net.HttpDnsProvider.1.1
                     @Override // java.lang.Runnable
                     public void run() {
-                        C0213a.a().saveData();
+                        a.a().saveData();
                     }
                 }, 2000L, TimeUnit.MILLISECONDS);
             }
@@ -34,12 +34,12 @@ public class HttpDnsProvider {
     }
 
     public void forceUpdateStrategy(String str) {
-        C0213a.a().forceRefreshStrategy(str);
+        a.a().forceRefreshStrategy(str);
     }
 
     public List<IConnStrategy> getAvailableStrategy(String str) {
         List<IConnStrategy> connStrategyListByHost;
-        if ((this.mCurrStrategyPos == 0 || this.mStrategys.isEmpty()) && (connStrategyListByHost = C0213a.a().getConnStrategyListByHost(str)) != null && !connStrategyListByHost.isEmpty()) {
+        if ((this.mCurrStrategyPos == 0 || this.mStrategys.isEmpty()) && (connStrategyListByHost = a.a().getConnStrategyListByHost(str)) != null && !connStrategyListByHost.isEmpty()) {
             this.mStrategys.clear();
             for (IConnStrategy iConnStrategy : connStrategyListByHost) {
                 ConnType l = ConnType.l(iConnStrategy.getProtocol());

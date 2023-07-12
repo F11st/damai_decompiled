@@ -261,20 +261,19 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
         }
 
         @Override // com.google.protobuf.ByteString
-        final void writeTo(AbstractC5398d abstractC5398d) throws IOException {
-            abstractC5398d.b(this.bytes, getOffsetIntoBytes(), size());
+        final void writeTo(com.google.protobuf.d dVar) throws IOException {
+            dVar.b(this.bytes, getOffsetIntoBytes(), size());
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.ByteString$a */
     /* loaded from: classes10.dex */
-    public class C5367a implements ByteIterator {
+    public class a implements ByteIterator {
         private int a = 0;
         private final int b;
 
-        C5367a() {
+        a() {
             this.b = ByteString.this.size();
         }
 
@@ -308,10 +307,9 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.ByteString$b */
     /* loaded from: classes10.dex */
-    private static final class C5368b implements ByteArrayCopier {
-        private C5368b() {
+    private static final class b implements ByteArrayCopier {
+        private b() {
         }
 
         @Override // com.google.protobuf.ByteString.ByteArrayCopier
@@ -319,19 +317,18 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
             return Arrays.copyOfRange(bArr, i, i2 + i);
         }
 
-        /* synthetic */ C5368b(C5367a c5367a) {
+        /* synthetic */ b(a aVar) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.ByteString$c */
     /* loaded from: classes10.dex */
-    static final class C5369c {
+    static final class c {
         private final CodedOutputStream a;
         private final byte[] b;
 
-        /* synthetic */ C5369c(int i, C5367a c5367a) {
+        /* synthetic */ c(int i, a aVar) {
             this(i);
         }
 
@@ -344,7 +341,7 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
             return this.a;
         }
 
-        private C5369c(int i) {
+        private c(int i) {
             byte[] bArr = new byte[i];
             this.b = bArr;
             this.a = CodedOutputStream.w(bArr);
@@ -352,10 +349,9 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.ByteString$e */
     /* loaded from: classes10.dex */
-    private static final class C5371e implements ByteArrayCopier {
-        private C5371e() {
+    private static final class e implements ByteArrayCopier {
+        private e() {
         }
 
         @Override // com.google.protobuf.ByteString.ByteArrayCopier
@@ -365,7 +361,7 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
             return bArr2;
         }
 
-        /* synthetic */ C5371e(C5367a c5367a) {
+        /* synthetic */ e(a aVar) {
             this();
         }
     }
@@ -377,7 +373,7 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
         } catch (ClassNotFoundException unused) {
             z = false;
         }
-        byteArrayCopier = z ? new C5371e(null) : new C5368b(null);
+        byteArrayCopier = z ? new e(null) : new b(null);
     }
 
     private static ByteString balancedConcat(Iterator<ByteString> it, int i) {
@@ -422,12 +418,12 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static C5369c newCodedBuilder(int i) {
-        return new C5369c(i, null);
+    public static c newCodedBuilder(int i) {
+        return new c(i, null);
     }
 
-    public static C5370d newOutput(int i) {
-        return new C5370d(i);
+    public static d newOutput(int i) {
+        return new d(i);
     }
 
     private static ByteString readChunk(InputStream inputStream, int i) throws IOException {
@@ -548,9 +544,9 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
     public final String toString(String str) throws UnsupportedEncodingException {
         try {
             return toString(Charset.forName(str));
-        } catch (UnsupportedCharsetException e) {
+        } catch (UnsupportedCharsetException e2) {
             UnsupportedEncodingException unsupportedEncodingException = new UnsupportedEncodingException(str);
-            unsupportedEncodingException.initCause(e);
+            unsupportedEncodingException.initCause(e2);
             throw unsupportedEncodingException;
         }
     }
@@ -562,7 +558,7 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public abstract void writeTo(AbstractC5398d abstractC5398d) throws IOException;
+    public abstract void writeTo(com.google.protobuf.d dVar) throws IOException;
 
     public abstract void writeTo(OutputStream outputStream) throws IOException;
 
@@ -580,8 +576,8 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
         return copyFrom(bArr, 0, bArr.length);
     }
 
-    public static C5370d newOutput() {
-        return new C5370d(128);
+    public static d newOutput() {
+        return new d(128);
     }
 
     public static ByteString readFrom(InputStream inputStream, int i) throws IOException {
@@ -604,7 +600,7 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
     @Override // java.lang.Iterable
     /* renamed from: iterator */
     public final Iterator<Byte> iterator2() {
-        return new C5367a();
+        return new a();
     }
 
     public static ByteString copyFrom(ByteBuffer byteBuffer, int i) {
@@ -626,16 +622,15 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.ByteString$d */
     /* loaded from: classes10.dex */
-    public static final class C5370d extends OutputStream {
+    public static final class d extends OutputStream {
         private final int a;
         private final ArrayList<ByteString> b;
         private int c;
         private byte[] d;
         private int e;
 
-        C5370d(int i) {
+        d(int i) {
             if (i >= 0) {
                 this.a = i;
                 this.b = new ArrayList<>();

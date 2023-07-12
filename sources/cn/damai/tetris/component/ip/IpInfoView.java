@@ -32,18 +32,17 @@ public class IpInfoView extends AbsView<IpInfoContract.Presenter> implements IpI
     private View wannaSee;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.ip.IpInfoView$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1910a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.tetris.component.ip.IpInfoView$a$a */
+        /* renamed from: cn.damai.tetris.component.ip.IpInfoView$a$a  reason: collision with other inner class name */
         /* loaded from: classes16.dex */
-        public class DialogInterface$OnClickListenerC1911a implements DialogInterface.OnClickListener {
+        public class DialogInterface$OnClickListenerC0077a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC1911a(View$OnClickListenerC1910a view$OnClickListenerC1910a) {
+            DialogInterface$OnClickListenerC0077a(a aVar) {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -57,7 +56,7 @@ public class IpInfoView extends AbsView<IpInfoContract.Presenter> implements IpI
             }
         }
 
-        View$OnClickListenerC1910a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -68,7 +67,7 @@ public class IpInfoView extends AbsView<IpInfoContract.Presenter> implements IpI
                 return;
             }
             DMThemeDialog dMThemeDialog = new DMThemeDialog(IpInfoView.this.mContext);
-            dMThemeDialog.k("粉丝数解释说明文案\n粉丝数解释说明文案继续选购").i("知道了", new DialogInterface$OnClickListenerC1911a(this)).g(false, null);
+            dMThemeDialog.k("粉丝数解释说明文案\n粉丝数解释说明文案继续选购").i("知道了", new DialogInterface$OnClickListenerC0077a(this)).g(false, null);
             dMThemeDialog.show();
         }
     }
@@ -88,7 +87,7 @@ public class IpInfoView extends AbsView<IpInfoContract.Presenter> implements IpI
         this.ratingBar = (ScoreStarViewV2) view.findViewById(R$id.ipinfo_score_ratingbar);
         this.userImg = (ImageView) view.findViewById(R$id.ipinfo_score_userimg);
         this.userComment = (TextView) view.findViewById(R$id.ipinfo_score_usertext);
-        view.findViewById(R$id.tv_fans_icon_tip).setOnClickListener(new View$OnClickListenerC1910a());
+        view.findViewById(R$id.tv_fans_icon_tip).setOnClickListener(new a());
     }
 
     @Override // cn.damai.tetris.component.ip.IpInfoContract.View

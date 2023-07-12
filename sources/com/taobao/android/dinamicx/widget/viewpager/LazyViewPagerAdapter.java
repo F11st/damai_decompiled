@@ -5,8 +5,8 @@ import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DXRuntimeContext;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.view.DXNativeFrameLayout;
 import com.taobao.android.dinamicx.widget.DXTemplateWidgetNode;
 import com.taobao.android.dinamicx.widget.DXViewPager;
@@ -44,9 +44,9 @@ public class LazyViewPagerAdapter extends ViewPagerAdapter {
         DXWidgetNode dXWidgetNode = list.get(i);
         DXNativeFrameLayout dXNativeFrameLayout = new DXNativeFrameLayout(this.d);
         DXRuntimeContext cloneWithWidgetNode = dXWidgetNode.getDXRuntimeContext().cloneWithWidgetNode(dXWidgetNode);
-        C6368e c6368e = new C6368e(cloneWithWidgetNode.getBizType());
-        c6368e.b = cloneWithWidgetNode.getDxTemplateItem();
-        cloneWithWidgetNode.setDxError(c6368e);
+        e eVar = new e(cloneWithWidgetNode.getBizType());
+        eVar.b = cloneWithWidgetNode.getDxTemplateItem();
+        cloneWithWidgetNode.setDxError(eVar);
         return dXNativeFrameLayout;
     }
 

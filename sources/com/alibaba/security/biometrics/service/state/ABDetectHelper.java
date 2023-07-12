@@ -23,9 +23,9 @@ import com.alibaba.security.biometrics.service.model.result.ABActionResult;
 import com.alibaba.security.biometrics.service.model.result.ABImageResult;
 import com.alibaba.security.biometrics.service.model.result.ALBiometricsCodes;
 import com.alibaba.security.biometrics.service.model.result.ALBiometricsResult;
-import com.alibaba.security.common.c.C3800a;
-import com.alibaba.security.common.d.C3808e;
-import com.alibaba.security.common.d.C3816j;
+import com.alibaba.security.common.c.a;
+import com.alibaba.security.common.d.e;
+import com.alibaba.security.common.d.j;
 import com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect;
 import com.taobao.weex.annotation.JSMethod;
 import com.youku.arch.v3.view.render.RenderConstant;
@@ -127,7 +127,7 @@ public class ABDetectHelper {
                 }
             }
         } catch (Throwable unused) {
-            C3800a.b();
+            a.b();
         }
     }
 
@@ -215,7 +215,7 @@ public class ABDetectHelper {
                 }
                 return true;
             } catch (Exception unused) {
-                C3800a.b();
+                a.b();
                 return true;
             }
         }
@@ -233,7 +233,7 @@ public class ABDetectHelper {
             }
             return true;
         }
-        C3800a.d(TAG, "isEyeOpen... fail, detectInfo == null || detectInfo.getLandmarks() == null || detectInfo.getLandmarks().length < 20");
+        a.d(TAG, "isEyeOpen... fail, detectInfo == null || detectInfo.getLandmarks() == null || detectInfo.getLandmarks().length < 20");
         return false;
     }
 
@@ -328,7 +328,7 @@ public class ABDetectHelper {
             saveGlobalImageData(ABDetectContext.getInstance().getResult(), globalImage);
             return true;
         } catch (Throwable th) {
-            C3800a.b();
+            a.b();
             ABLogRecorder.i().record(th);
             return false;
         }
@@ -360,7 +360,7 @@ public class ABDetectHelper {
             saveLocalImageData(ABDetectContext.getInstance().getResult(), localImage);
             return true;
         } catch (Throwable th) {
-            C3800a.b();
+            a.b();
             ABLogRecorder.i().record(th);
             return false;
         }
@@ -381,7 +381,7 @@ public class ABDetectHelper {
 
     public void saveOriginImageData(ALBiometricsResult aLBiometricsResult, byte[] bArr) {
         if (bArr == null) {
-            C3800a.d(TAG, "saveOriginImageData... Save origin image fail imageData=null");
+            a.d(TAG, "saveOriginImageData... Save origin image fail imageData=null");
             return;
         }
         ABImageResult oi = ABDetectContext.getInstance().getResult().getOi();
@@ -417,7 +417,7 @@ public class ABDetectHelper {
             }
             return true;
         } catch (Throwable th) {
-            C3800a.b();
+            a.b();
             ABLogRecorder.i().record(th);
             return false;
         }
@@ -425,7 +425,7 @@ public class ABDetectHelper {
 
     public void saveQualityImageData(ALBiometricsResult aLBiometricsResult, byte[] bArr) {
         if (bArr == null) {
-            C3800a.d(TAG, "saveQualityImageData... save best quality image fail imageData=null");
+            a.d(TAG, "saveQualityImageData... save best quality image fail imageData=null");
             return;
         }
         ABImageResult qi = ABDetectContext.getInstance().getResult().getQi();
@@ -477,11 +477,11 @@ public class ABDetectHelper {
 
     public boolean saveDataToImageResult(byte[] bArr, String str, ABImageResult aBImageResult, String str2) {
         aBImageResult.setBf(bArr);
-        aBImageResult.setD(C3816j.a(bArr));
+        aBImageResult.setD(j.a(bArr));
         aBImageResult.setDt(0);
         if (this.mABParams.saveImagesFile) {
-            String str3 = this.mContext.getFilesDir().toString() + File.separator + (C3816j.a(str) + str2);
-            boolean a = C3808e.a(new File(str3), bArr);
+            String str3 = this.mContext.getFilesDir().toString() + File.separator + (j.a(str) + str2);
+            boolean a = e.a(new File(str3), bArr);
             aBImageResult.setP(str3);
             return a;
         }

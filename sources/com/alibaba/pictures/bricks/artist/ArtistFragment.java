@@ -95,7 +95,7 @@ public final class ArtistFragment extends BaseFragment {
     @NotNull
     public static final String ACTION_BAR_FOLLOW_BTN = "barfollowBtn";
     @NotNull
-    public static final C3443a Companion = new C3443a(null);
+    public static final a Companion = new a(null);
     @Nullable
     private String artistId;
     @Nullable
@@ -416,24 +416,22 @@ public final class ArtistFragment extends BaseFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.artist.ArtistFragment$a */
     /* loaded from: classes7.dex */
-    public static final class C3443a {
-        private C3443a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3443a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.artist.ArtistFragment$b */
     /* loaded from: classes7.dex */
-    public static final class C3444b implements ActionRelation<FollowStateBean> {
+    public static final class b implements ActionRelation<FollowStateBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3444b() {
+        b() {
         }
 
         @Override // com.alibaba.pictures.bricks.component.artist.wishcity.cityrequest.ActionRelation
@@ -753,7 +751,7 @@ public final class ArtistFragment extends BaseFragment {
                 }
             });
         }
-        h8.Companion.a().h(this, this.artistId, new C3444b());
+        h8.Companion.a().h(this, this.artistId, new b());
         RecyclerView recyclerView = getRecyclerView();
         if (recyclerView != null) {
             recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() { // from class: com.alibaba.pictures.bricks.artist.ArtistFragment$onViewCreated$3

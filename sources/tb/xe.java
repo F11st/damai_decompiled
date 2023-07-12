@@ -12,12 +12,11 @@ public class xe {
     public static LruCache<String, Bitmap> a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.xe$a */
     /* loaded from: classes4.dex */
-    public class C9924a extends LruCache<String, Bitmap> {
+    public class a extends LruCache<String, Bitmap> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9924a(int i) {
+        a(int i) {
             super(i);
         }
 
@@ -32,7 +31,7 @@ public class xe {
 
     static {
         if (Build.VERSION.SDK_INT >= 12) {
-            a = new C9924a(((int) Runtime.getRuntime().maxMemory()) / 6);
+            a = new a(((int) Runtime.getRuntime().maxMemory()) / 6);
         }
     }
 }

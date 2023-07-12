@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.tetris.component.live.bean.LiveHeaderCardItemBean;
-import cn.damai.uikit.image.C2497a;
 import cn.damai.uikit.tag.DMCategroyTagView;
 import com.alibaba.pictures.bricks.view.DMCategroyTagView;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -28,14 +27,13 @@ public class BannerTopicHolder extends RecyclerView.ViewHolder {
     private TextView f;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.live.mvp.BannerTopicHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1917a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ BannerPresenter a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC1917a(BannerTopicHolder bannerTopicHolder, BannerPresenter bannerPresenter, int i) {
+        a(BannerTopicHolder bannerTopicHolder, BannerPresenter bannerPresenter, int i) {
             this.a = bannerPresenter;
             this.b = i;
         }
@@ -83,7 +81,7 @@ public class BannerTopicHolder extends RecyclerView.ViewHolder {
             } else {
                 this.b.setVisibility(8);
             }
-            C2497a.a().loadinto(liveHeaderCardItemBean.pic, this.c);
+            cn.damai.uikit.image.a.a().loadinto(liveHeaderCardItemBean.pic, this.c);
             this.d.setVisibility(8);
             int i3 = liveHeaderCardItemBean.themePrize;
             if (i3 == 1) {
@@ -104,7 +102,7 @@ public class BannerTopicHolder extends RecyclerView.ViewHolder {
                 str = liveHeaderCardItemBean.ipvuv;
             }
             this.f.setText(str);
-            this.itemView.setOnClickListener(new View$OnClickListenerC1917a(this, bannerPresenter, i));
+            this.itemView.setOnClickListener(new a(this, bannerPresenter, i));
         }
     }
 }

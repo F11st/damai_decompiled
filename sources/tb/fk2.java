@@ -1,11 +1,10 @@
 package tb;
 
 import com.taobao.android.dinamicx.DXRuntimeContext;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
-public class fk2 extends AbstractC6375a {
+public class fk2 extends com.taobao.android.dinamicx.expression.parser.a {
     public static final String PARSER_TAG = "theme";
     public static final String TYPE_COLOR = "color";
     public static final String TYPE_GRADIENT = "gradient";
@@ -38,9 +37,9 @@ public class fk2 extends AbstractC6375a {
             java.util.Map r7 = (java.util.Map) r7
             java.lang.String r1 = "dianmicContextKeyPresenter"
             java.lang.Object r7 = r7.get(r1)
-            boolean r1 = r7 instanceof com.alibaba.android.ultron.trade.presenter.AbstractC3258a
+            boolean r1 = r7 instanceof com.alibaba.android.ultron.trade.presenter.a
             if (r1 == 0) goto L2a
-            com.alibaba.android.ultron.trade.presenter.a r7 = (com.alibaba.android.ultron.trade.presenter.AbstractC3258a) r7
+            com.alibaba.android.ultron.trade.presenter.a r7 = (com.alibaba.android.ultron.trade.presenter.a) r7
             tb.km2 r7 = r7.getThemeManager()
             goto L2b
         L2a:
@@ -129,7 +128,7 @@ public class fk2 extends AbstractC6375a {
         throw new UnsupportedOperationException("Method not decompiled: tb.fk2.a(java.lang.Object[], com.taobao.android.dinamicx.DXRuntimeContext):java.lang.Object");
     }
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         try {
             return a(objArr, dXRuntimeContext);

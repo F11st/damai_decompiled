@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.Scheduler;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -23,7 +23,7 @@ import tb.ua2;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableWindowTimed<T> extends AbstractFlowableWithUpstream<T, AbstractC8147b<T>> {
+public final class FlowableWindowTimed<T> extends AbstractFlowableWithUpstream<T, b<T>> {
     final int bufferSize;
     final long maxSize;
     final boolean restartTimerOnMaxSize;
@@ -34,7 +34,7 @@ public final class FlowableWindowTimed<T> extends AbstractFlowableWithUpstream<T
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class WindowExactBoundedSubscriber<T> extends QueueDrainSubscriber<T, Object, AbstractC8147b<T>> implements Subscription {
+    static final class WindowExactBoundedSubscriber<T> extends QueueDrainSubscriber<T, Object, b<T>> implements Subscription {
         final int bufferSize;
         long count;
         final long maxSize;
@@ -76,7 +76,7 @@ public final class FlowableWindowTimed<T> extends AbstractFlowableWithUpstream<T
             }
         }
 
-        WindowExactBoundedSubscriber(Subscriber<? super AbstractC8147b<T>> subscriber, long j, TimeUnit timeUnit, Scheduler scheduler, int i, long j2, boolean z) {
+        WindowExactBoundedSubscriber(Subscriber<? super b<T>> subscriber, long j, TimeUnit timeUnit, Scheduler scheduler, int i, long j2, boolean z) {
             super(subscriber, new MpscLinkedQueue());
             this.timer = new SequentialDisposable();
             this.timespan = j;
@@ -324,7 +324,7 @@ public final class FlowableWindowTimed<T> extends AbstractFlowableWithUpstream<T
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class WindowExactUnboundedSubscriber<T> extends QueueDrainSubscriber<T, Object, AbstractC8147b<T>> implements FlowableSubscriber<T>, Subscription {
+    static final class WindowExactUnboundedSubscriber<T> extends QueueDrainSubscriber<T, Object, b<T>> implements FlowableSubscriber<T>, Subscription {
         static final Object NEXT = new Object();
         final int bufferSize;
         Subscription s;
@@ -335,7 +335,7 @@ public final class FlowableWindowTimed<T> extends AbstractFlowableWithUpstream<T
         final TimeUnit unit;
         UnicastProcessor<T> window;
 
-        WindowExactUnboundedSubscriber(Subscriber<? super AbstractC8147b<T>> subscriber, long j, TimeUnit timeUnit, Scheduler scheduler, int i) {
+        WindowExactUnboundedSubscriber(Subscriber<? super b<T>> subscriber, long j, TimeUnit timeUnit, Scheduler scheduler, int i) {
             super(subscriber, new MpscLinkedQueue());
             this.timer = new SequentialDisposable();
             this.timespan = j;
@@ -546,7 +546,7 @@ public final class FlowableWindowTimed<T> extends AbstractFlowableWithUpstream<T
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class WindowSkipSubscriber<T> extends QueueDrainSubscriber<T, Object, AbstractC8147b<T>> implements Subscription, Runnable {
+    static final class WindowSkipSubscriber<T> extends QueueDrainSubscriber<T, Object, b<T>> implements Subscription, Runnable {
         final int bufferSize;
         Subscription s;
         volatile boolean terminated;
@@ -585,7 +585,7 @@ public final class FlowableWindowTimed<T> extends AbstractFlowableWithUpstream<T
             }
         }
 
-        WindowSkipSubscriber(Subscriber<? super AbstractC8147b<T>> subscriber, long j, long j2, TimeUnit timeUnit, Scheduler.Worker worker, int i) {
+        WindowSkipSubscriber(Subscriber<? super b<T>> subscriber, long j, long j2, TimeUnit timeUnit, Scheduler.Worker worker, int i) {
             super(subscriber, new MpscLinkedQueue());
             this.timespan = j;
             this.timeskip = j2;
@@ -761,8 +761,8 @@ public final class FlowableWindowTimed<T> extends AbstractFlowableWithUpstream<T
         }
     }
 
-    public FlowableWindowTimed(AbstractC8147b<T> abstractC8147b, long j, long j2, TimeUnit timeUnit, Scheduler scheduler, long j3, int i, boolean z) {
-        super(abstractC8147b);
+    public FlowableWindowTimed(b<T> bVar, long j, long j2, TimeUnit timeUnit, Scheduler scheduler, long j3, int i, boolean z) {
+        super(bVar);
         this.timespan = j;
         this.timeskip = j2;
         this.unit = timeUnit;
@@ -772,8 +772,8 @@ public final class FlowableWindowTimed<T> extends AbstractFlowableWithUpstream<T
         this.restartTimerOnMaxSize = z;
     }
 
-    @Override // io.reactivex.AbstractC8147b
-    protected void subscribeActual(Subscriber<? super AbstractC8147b<T>> subscriber) {
+    @Override // io.reactivex.b
+    protected void subscribeActual(Subscriber<? super b<T>> subscriber) {
         ua2 ua2Var = new ua2(subscriber);
         long j = this.timespan;
         long j2 = this.timeskip;

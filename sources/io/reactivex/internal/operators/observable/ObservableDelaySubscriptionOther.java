@@ -1,15 +1,15 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.SequentialDisposable;
 import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableDelaySubscriptionOther<T, U> extends AbstractC8149d<T> {
+public final class ObservableDelaySubscriptionOther<T, U> extends d<T> {
     final ObservableSource<? extends T> main;
     final ObservableSource<U> other;
 
@@ -88,7 +88,7 @@ public final class ObservableDelaySubscriptionOther<T, U> extends AbstractC8149d
         this.other = observableSource2;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         SequentialDisposable sequentialDisposable = new SequentialDisposable();
         observer.onSubscribe(sequentialDisposable);

@@ -17,7 +17,7 @@ public final class ObservableLift<R, T> extends AbstractObservableWithUpstream<T
         this.operator = observableOperator;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super R> observer) {
         try {
             Observer<? super Object> apply = this.operator.apply(observer);

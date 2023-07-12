@@ -13,10 +13,9 @@ public class ApplicationGCDispatcher extends AbsDispatcher<ApplicationGCListener
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.ApplicationGCDispatcher$a */
     /* loaded from: classes11.dex */
-    class C6775a implements AbsDispatcher.ListenerCaller<ApplicationGCListener> {
-        C6775a(ApplicationGCDispatcher applicationGCDispatcher) {
+    class a implements AbsDispatcher.ListenerCaller<ApplicationGCListener> {
+        a(ApplicationGCDispatcher applicationGCDispatcher) {
         }
 
         @Override // com.taobao.monitor.impl.trace.AbsDispatcher.ListenerCaller
@@ -27,6 +26,6 @@ public class ApplicationGCDispatcher extends AbsDispatcher<ApplicationGCListener
     }
 
     public void f() {
-        c(new C6775a(this));
+        c(new a(this));
     }
 }

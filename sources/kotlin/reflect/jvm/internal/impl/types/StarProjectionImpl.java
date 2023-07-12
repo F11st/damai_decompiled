@@ -1,6 +1,5 @@
 package kotlin.reflect.jvm.internal.impl.types;
 
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
 import kotlin.jvm.functions.Function0;
@@ -24,7 +23,7 @@ public final class StarProjectionImpl extends yq2 {
         Lazy a;
         b41.i(typeParameterDescriptor, "typeParameter");
         this.a = typeParameterDescriptor;
-        a = C8177b.a(LazyThreadSafetyMode.PUBLICATION, new Function0<z71>() { // from class: kotlin.reflect.jvm.internal.impl.types.StarProjectionImpl$_type$2
+        a = kotlin.b.a(LazyThreadSafetyMode.PUBLICATION, new Function0<z71>() { // from class: kotlin.reflect.jvm.internal.impl.types.StarProjectionImpl$_type$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);

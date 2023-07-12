@@ -11,13 +11,12 @@ import android.taobao.windvane.packageapp.WVPackageAppRuntime;
 import android.taobao.windvane.packageapp.zipapp.ZCacheResourceResponse;
 import android.taobao.windvane.packageapp.zipapp.utils.ZipAppUtils;
 import android.text.TextUtils;
-import com.alibaba.aliweex.adapter.adapter.C3016a;
-import com.alibaba.aliweex.adapter.adapter.C3017b;
-import com.alibaba.aliweex.adapter.adapter.C3022d;
 import com.alibaba.aliweex.adapter.adapter.PhenixBasedDrawableLoader;
 import com.alibaba.aliweex.adapter.adapter.WXAPMAdapter;
 import com.alibaba.aliweex.adapter.adapter.WXHttpAdapter;
 import com.alibaba.aliweex.adapter.adapter.WXImgLoaderAdapter;
+import com.alibaba.aliweex.adapter.adapter.b;
+import com.alibaba.aliweex.adapter.adapter.d;
 import com.alibaba.aliweex.adapter.component.AliGifImage;
 import com.alibaba.aliweex.adapter.component.AliWXEmbed;
 import com.alibaba.aliweex.adapter.component.AliWXImage;
@@ -54,7 +53,6 @@ import com.alibaba.aliweex.adapter.module.blur.WXBlurEXModule;
 import com.alibaba.aliweex.adapter.module.broadcast.WXBroadcastModule;
 import com.alibaba.aliweex.adapter.module.mtop.WXMtopModule;
 import com.alibaba.aliweex.adapter.module.net.WXConnectionModule;
-import com.alibaba.aliweex.plugin.C3098a;
 import com.alibaba.aliweex.plugin.SimpleAudioPlayer;
 import com.alibaba.aliweex.utils.MemoryMonitor;
 import com.alibaba.android.bindingx.plugin.weex.BindingX;
@@ -63,10 +61,10 @@ import com.alibaba.weex.plugin.gcanvas.GCanvasWeexRegister;
 import com.taobao.message.weex.MessgeBundleWeexModuleRegister;
 import com.taobao.soloader.SoLoader;
 import com.taobao.weaver.prefetch.WMLPrefetch;
-import com.taobao.weex.C6948a;
 import com.taobao.weex.WXEnvironment;
 import com.taobao.weex.WXSDKEngine;
 import com.taobao.weex.WXSDKManager;
+import com.taobao.weex.a;
 import com.taobao.weex.adapter.ICrashInfoReporter;
 import com.taobao.weex.adapter.IWXConfigAdapter;
 import com.taobao.weex.bridge.ModuleFactory;
@@ -119,10 +117,9 @@ public class AliWXSDKEngine {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.AliWXSDKEngine$a */
     /* loaded from: classes5.dex */
-    public static class C3003a implements ICrashInfoReporter {
-        C3003a() {
+    public static class a implements ICrashInfoReporter {
+        a() {
         }
 
         @Override // com.taobao.weex.adapter.ICrashInfoReporter
@@ -135,18 +132,18 @@ public class AliWXSDKEngine {
     }
 
     private static void c() {
-        C6948a k;
+        com.taobao.weex.a k;
         boolean z;
         if (GlobalConfig.context == null) {
-            GlobalConfig.context = C3004a.l().b();
+            GlobalConfig.context = com.alibaba.aliweex.a.l().b();
         }
         String b2 = zz2.b("weex", a);
         if (TextUtils.isEmpty(b2)) {
             WXLogUtils.e("TBWXSDKEngine", "TBWXSDKEngine: WV obtain  FRAMEWORK_JS failed");
         }
-        C3004a l = C3004a.l();
+        com.alibaba.aliweex.a l = com.alibaba.aliweex.a.l();
         if (l.k() == null) {
-            C6948a.C6950b e2 = new C6948a.C6950b().h(l.j() == null ? new WXImgLoaderAdapter() : l.j()).g(l.i() == null ? new WXHttpAdapter() : l.i()).m(new yz2()).f(b2).d(new PhenixBasedDrawableLoader()).n(new C3022d()).i(new mz2()).c(new fz2()).j(new pz2()).k(new qz2()).e(C3016a.a());
+            a.b e2 = new a.b().h(l.j() == null ? new WXImgLoaderAdapter() : l.j()).g(l.i() == null ? new WXHttpAdapter() : l.i()).m(new yz2()).f(b2).d(new PhenixBasedDrawableLoader()).n(new d()).i(new mz2()).c(new fz2()).j(new pz2()).k(new qz2()).e(com.alibaba.aliweex.adapter.adapter.a.a());
             try {
                 Class.forName(SoLoader.class.getName());
                 WXLogUtils.e("so loader existed");
@@ -157,7 +154,7 @@ public class AliWXSDKEngine {
             String i2 = oz2.j().i(oz2.j().c);
             if (z && "true".equals(i2)) {
                 WXLogUtils.e("use so loader");
-                e2.l(new C3017b());
+                e2.l(new b());
             }
             if (l.m() != null) {
                 for (String str : l.m()) {
@@ -182,7 +179,7 @@ public class AliWXSDKEngine {
         try {
             i = new iz2();
             MotuCrashReporter.getInstance().setCrashCaughtListener(i);
-            WXSDKManager.v().V(new C3003a());
+            WXSDKManager.v().V(new a());
             WXSDKManager.v().a0(new hz2());
         } catch (Throwable unused2) {
         }
@@ -200,7 +197,7 @@ public class AliWXSDKEngine {
         WXSDKEngine.addCustomOptions(WXEnvironment.SETTING_EXCLUDE_X86SUPPORT, String.valueOf(true));
         WXSDKEngine.addCustomOptions("isTabletDevice", String.valueOf(WXUtils.isTabletDevice()));
         boolean z = false;
-        if (WXDeviceUtils.isAutoResize(C3004a.l().b())) {
+        if (WXDeviceUtils.isAutoResize(com.alibaba.aliweex.a.l().b())) {
             WXEnvironment.SETTING_FORCE_VERTICAL_SCREEN = false;
         } else {
             WXEnvironment.SETTING_FORCE_VERTICAL_SCREEN = true;
@@ -232,7 +229,7 @@ public class AliWXSDKEngine {
                     }
                 }
             });
-            IConfigAdapter c2 = C3004a.l().c();
+            IConfigAdapter c2 = com.alibaba.aliweex.a.l().c();
             if (c2 != null && c2.checkMode("mainBlock")) {
                 WXBridgeManager.getInstance().postDelay(secure, 3000L);
             } else {
@@ -250,7 +247,7 @@ public class AliWXSDKEngine {
 
     /* JADX INFO: Access modifiers changed from: private */
     public static void e() {
-        WMLPrefetch.getInstance().registerHandler(new C3098a());
+        WMLPrefetch.getInstance().registerHandler(new com.alibaba.aliweex.plugin.a());
     }
 
     private static void f() {
@@ -342,8 +339,8 @@ public class AliWXSDKEngine {
             WXSDKEngine.registerComponent("mask", WXMask.class);
             WXSDKEngine.registerComponent("tabbar", WXTabbar.class);
             WXSDKEngine.registerComponent(WXBasicComponentType.EMBED, (Class<? extends WXComponent>) AliWXEmbed.class, true);
-            WXSDKEngine.registerComponent((IFComponentHolder) new SimpleComponentHolder(AliWXImage.class, new AliWXImage.C3024a()), false, "image", "img");
-            WXSDKEngine.registerComponent((IFComponentHolder) new SimpleComponentHolder(AliGifImage.class, new AliGifImage.C3023a()), false, "gif");
+            WXSDKEngine.registerComponent((IFComponentHolder) new SimpleComponentHolder(AliWXImage.class, new AliWXImage.a()), false, "image", "img");
+            WXSDKEngine.registerComponent((IFComponentHolder) new SimpleComponentHolder(AliGifImage.class, new AliGifImage.a()), false, "gif");
             WXSDKEngine.registerComponent("a", (Class<? extends WXComponent>) WXExtA.class, false);
             WXSDKEngine.registerModule("device", WXDeviceModule.class);
             WXSDKEngine.registerModule("broadcast", WXBroadcastModule.class);
@@ -383,7 +380,7 @@ public class AliWXSDKEngine {
     }
 
     public static void n() {
-        IConfigAdapter c2 = C3004a.l().c();
+        IConfigAdapter c2 = com.alibaba.aliweex.a.l().c();
         if (c2 == null) {
             return;
         }

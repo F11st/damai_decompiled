@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.completable;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
+import io.reactivex.a;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.operators.completable.CompletableMergeDelayErrorArray;
 import io.reactivex.internal.util.AtomicThrowable;
@@ -13,14 +13,14 @@ import tb.jm;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class CompletableMergeDelayErrorIterable extends AbstractC8146a {
+public final class CompletableMergeDelayErrorIterable extends a {
     final Iterable<? extends CompletableSource> sources;
 
     public CompletableMergeDelayErrorIterable(Iterable<? extends CompletableSource> iterable) {
         this.sources = iterable;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     public void subscribeActual(CompletableObserver completableObserver) {
         jm jmVar = new jm();
         completableObserver.onSubscribe(jmVar);

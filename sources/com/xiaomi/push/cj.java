@@ -34,15 +34,14 @@ public class cj {
     private ThreadPoolExecutor f158a = new ThreadPoolExecutor(1, 1, 15, TimeUnit.SECONDS, new LinkedBlockingQueue());
 
     /* renamed from: a  reason: collision with other field name */
-    private final ArrayList<AbstractRunnableC7617a> f156a = new ArrayList<>();
+    private final ArrayList<a> f156a = new ArrayList<>();
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.cj$a */
     /* loaded from: classes11.dex */
-    public static abstract class AbstractRunnableC7617a implements Runnable {
+    public static abstract class a implements Runnable {
 
         /* renamed from: a  reason: collision with other field name */
-        private AbstractRunnableC7617a f160a;
+        private a f160a;
 
         /* renamed from: a  reason: collision with other field name */
         private String f161a;
@@ -58,7 +57,7 @@ public class cj {
         private Random f163a = new Random();
         private int a = 0;
 
-        public AbstractRunnableC7617a(String str) {
+        public a(String str) {
             this.f161a = str;
         }
 
@@ -78,9 +77,9 @@ public class cj {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         public void a(Context context) {
-            AbstractRunnableC7617a abstractRunnableC7617a = this.f160a;
-            if (abstractRunnableC7617a != null) {
-                abstractRunnableC7617a.a(context, mo737a());
+            a aVar = this.f160a;
+            if (aVar != null) {
+                aVar.a(context, mo737a());
             }
             b(context);
         }
@@ -97,8 +96,8 @@ public class cj {
             this.f162a = new WeakReference<>(context);
         }
 
-        public void a(AbstractRunnableC7617a abstractRunnableC7617a) {
-            this.f160a = abstractRunnableC7617a;
+        public void a(a aVar) {
+            this.f160a = aVar;
         }
 
         /* renamed from: a  reason: collision with other method in class */
@@ -117,14 +116,13 @@ public class cj {
                 return;
             }
             File file = new File(this.f161a);
-            AbstractRunnableC7790y.a(context, new File(file.getParentFile(), bo.b(file.getAbsolutePath())), new cl(this, context));
+            y.a(context, new File(file.getParentFile(), bo.b(file.getAbsolutePath())), new cl(this, context));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.cj$b */
     /* loaded from: classes11.dex */
-    public static abstract class AbstractC7618b<T> extends AbstractRunnableC7617a {
+    public static abstract class b<T> extends a {
         private int a;
 
         /* renamed from: a  reason: collision with other field name */
@@ -140,7 +138,7 @@ public class cj {
         private String d;
         private String e;
 
-        public AbstractC7618b(String str, List<String> list, String str2, String[] strArr, String str3, String str4, String str5, int i) {
+        public b(String str, List<String> list, String str2, String[] strArr, String str3, String str4, String str5, int i) {
             super(str);
             this.b = new ArrayList();
             this.f165a = list;
@@ -152,14 +150,14 @@ public class cj {
             this.a = i;
         }
 
-        @Override // com.xiaomi.push.cj.AbstractRunnableC7617a
+        @Override // com.xiaomi.push.cj.a
         public SQLiteDatabase a() {
-            return ((AbstractRunnableC7617a) this).f159a.getReadableDatabase();
+            return ((a) this).f159a.getReadableDatabase();
         }
 
         public abstract T a(Context context, Cursor cursor);
 
-        @Override // com.xiaomi.push.cj.AbstractRunnableC7617a
+        @Override // com.xiaomi.push.cj.a
         public void a(Context context, SQLiteDatabase sQLiteDatabase) {
             String[] strArr;
             this.b.clear();
@@ -189,35 +187,34 @@ public class cj {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.cj$c */
     /* loaded from: classes11.dex */
-    public static class C7619c extends AbstractRunnableC7617a {
-        private ArrayList<AbstractRunnableC7617a> a;
+    public static class c extends a {
+        private ArrayList<a> a;
 
-        public C7619c(String str, ArrayList<AbstractRunnableC7617a> arrayList) {
+        public c(String str, ArrayList<a> arrayList) {
             super(str);
-            ArrayList<AbstractRunnableC7617a> arrayList2 = new ArrayList<>();
+            ArrayList<a> arrayList2 = new ArrayList<>();
             this.a = arrayList2;
             arrayList2.addAll(arrayList);
         }
 
-        @Override // com.xiaomi.push.cj.AbstractRunnableC7617a
+        @Override // com.xiaomi.push.cj.a
         public final void a(Context context) {
             super.a(context);
-            Iterator<AbstractRunnableC7617a> it = this.a.iterator();
+            Iterator<a> it = this.a.iterator();
             while (it.hasNext()) {
-                AbstractRunnableC7617a next = it.next();
+                a next = it.next();
                 if (next != null) {
                     next.a(context);
                 }
             }
         }
 
-        @Override // com.xiaomi.push.cj.AbstractRunnableC7617a
+        @Override // com.xiaomi.push.cj.a
         public void a(Context context, SQLiteDatabase sQLiteDatabase) {
-            Iterator<AbstractRunnableC7617a> it = this.a.iterator();
+            Iterator<a> it = this.a.iterator();
             while (it.hasNext()) {
-                AbstractRunnableC7617a next = it.next();
+                a next = it.next();
                 if (next != null) {
                     next.a(context, sQLiteDatabase);
                 }
@@ -226,38 +223,36 @@ public class cj {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.cj$d */
     /* loaded from: classes11.dex */
-    public static class C7620d extends AbstractRunnableC7617a {
+    public static class d extends a {
         private String a;
 
         /* renamed from: a  reason: collision with other field name */
         protected String[] f167a;
 
-        public C7620d(String str, String str2, String[] strArr) {
+        public d(String str, String str2, String[] strArr) {
             super(str);
             this.a = str2;
             this.f167a = strArr;
         }
 
-        @Override // com.xiaomi.push.cj.AbstractRunnableC7617a
+        @Override // com.xiaomi.push.cj.a
         public void a(Context context, SQLiteDatabase sQLiteDatabase) {
             sQLiteDatabase.delete(this.b, this.a, this.f167a);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.cj$e */
     /* loaded from: classes11.dex */
-    public static class C7621e extends AbstractRunnableC7617a {
+    public static class e extends a {
         private ContentValues a;
 
-        public C7621e(String str, ContentValues contentValues) {
+        public e(String str, ContentValues contentValues) {
             super(str);
             this.a = contentValues;
         }
 
-        @Override // com.xiaomi.push.cj.AbstractRunnableC7617a
+        @Override // com.xiaomi.push.cj.a
         public void a(Context context, SQLiteDatabase sQLiteDatabase) {
             sQLiteDatabase.insert(this.b, null, this.a);
         }
@@ -300,15 +295,15 @@ public class cj {
         return a(str).a();
     }
 
-    public void a(AbstractRunnableC7617a abstractRunnableC7617a) {
+    public void a(a aVar) {
         ch chVar;
-        if (abstractRunnableC7617a == null) {
+        if (aVar == null) {
             return;
         }
         if (this.f155a == null) {
             throw new IllegalStateException("should exec init method first!");
         }
-        String m738a = abstractRunnableC7617a.m738a();
+        String m738a = aVar.m738a();
         synchronized (this.f157a) {
             chVar = this.f157a.get(m738a);
             if (chVar == null) {
@@ -319,9 +314,9 @@ public class cj {
         if (this.f158a.isShutdown()) {
             return;
         }
-        abstractRunnableC7617a.a(chVar, this.f154a);
+        aVar.a(chVar, this.f154a);
         synchronized (this.f156a) {
-            this.f156a.add(abstractRunnableC7617a);
+            this.f156a.add(aVar);
             a();
         }
     }
@@ -333,7 +328,7 @@ public class cj {
         this.f158a.execute(runnable);
     }
 
-    public void a(ArrayList<AbstractRunnableC7617a> arrayList) {
+    public void a(ArrayList<a> arrayList) {
         if (this.f155a == null) {
             throw new IllegalStateException("should exec setDbHelperFactory method first!");
         }
@@ -341,9 +336,9 @@ public class cj {
         if (this.f158a.isShutdown()) {
             return;
         }
-        Iterator<AbstractRunnableC7617a> it = arrayList.iterator();
+        Iterator<a> it = arrayList.iterator();
         while (it.hasNext()) {
-            AbstractRunnableC7617a next = it.next();
+            a next = it.next();
             if (next.m739a()) {
                 next.a(a(next.m738a()), this.f154a);
             }
@@ -357,22 +352,22 @@ public class cj {
         for (String str : hashMap.keySet()) {
             ArrayList arrayList3 = (ArrayList) hashMap.get(str);
             if (arrayList3 != null && arrayList3.size() > 0) {
-                C7619c c7619c = new C7619c(str, arrayList3);
-                c7619c.a(((AbstractRunnableC7617a) arrayList3.get(0)).f159a, this.f154a);
-                this.f158a.execute(c7619c);
+                c cVar = new c(str, arrayList3);
+                cVar.a(((a) arrayList3.get(0)).f159a, this.f154a);
+                this.f158a.execute(cVar);
             }
         }
     }
 
-    public void b(AbstractRunnableC7617a abstractRunnableC7617a) {
+    public void b(a aVar) {
         ch chVar;
-        if (abstractRunnableC7617a == null) {
+        if (aVar == null) {
             return;
         }
         if (this.f155a == null) {
             throw new IllegalStateException("should exec init method first!");
         }
-        String m738a = abstractRunnableC7617a.m738a();
+        String m738a = aVar.m738a();
         synchronized (this.f157a) {
             chVar = this.f157a.get(m738a);
             if (chVar == null) {
@@ -383,7 +378,7 @@ public class cj {
         if (this.f158a.isShutdown()) {
             return;
         }
-        abstractRunnableC7617a.a(chVar, this.f154a);
-        a((Runnable) abstractRunnableC7617a);
+        aVar.a(chVar, this.f154a);
+        a((Runnable) aVar);
     }
 }

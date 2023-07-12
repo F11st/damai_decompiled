@@ -12,10 +12,9 @@ public class s12 {
     private static AtomicInteger b = new AtomicInteger(0);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.s12$a */
     /* loaded from: classes.dex */
-    static class ThreadFactoryC9671a implements ThreadFactory {
-        ThreadFactoryC9671a() {
+    static class a implements ThreadFactory {
+        a() {
         }
 
         @Override // java.util.concurrent.ThreadFactory
@@ -26,7 +25,7 @@ public class s12 {
 
     static {
         for (int i = 0; i < 2; i++) {
-            a[i] = Executors.newSingleThreadExecutor(new ThreadFactoryC9671a());
+            a[i] = Executors.newSingleThreadExecutor(new a());
         }
     }
 

@@ -16,10 +16,8 @@ public final class mo {
 
     static {
         Sequence c;
-        List<CoroutineExceptionHandler> B;
         c = SequencesKt__SequencesKt.c(ServiceLoader.load(CoroutineExceptionHandler.class, CoroutineExceptionHandler.class.getClassLoader()).iterator());
-        B = SequencesKt___SequencesKt.B(c);
-        a = B;
+        a = SequencesKt___SequencesKt.B(c);
     }
 
     public static final void a(@NotNull CoroutineContext coroutineContext, @NotNull Throwable th) {

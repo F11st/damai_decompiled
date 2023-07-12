@@ -8,9 +8,9 @@ import java.util.Random;
 import okio.Buffer;
 import okio.BufferedSink;
 import okio.BufferedSource;
-import okio.C8844h;
-import okio.C8857o;
 import okio.Sink;
+import okio.h;
+import okio.o;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -86,7 +86,7 @@ public final class WebSocketWriter {
         }
 
         @Override // okio.Sink
-        public C8857o timeout() {
+        public o timeout() {
             return WebSocketWriter.this.sink.timeout();
         }
 
@@ -203,7 +203,7 @@ public final class WebSocketWriter {
             this.activeWriter = true;
             this.frameSink.payloadType = payloadType;
             this.frameSink.isFirstFrame = true;
-            return C8844h.c(this.frameSink);
+            return h.c(this.frameSink);
         }
         throw new IllegalStateException("Another message writer is active. Did you call close()?");
     }

@@ -9,7 +9,6 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-import kotlin.text.C8604o;
 import org.android.agoo.common.AgooConstants;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -47,7 +46,7 @@ public final class pt1 {
             if (r4 >= r1) goto L2c
             r5 = r7[r4]
             if (r5 == 0) goto L23
-            boolean r6 = kotlin.text.C8596g.s(r5)
+            boolean r6 = kotlin.text.g.s(r5)
             if (r6 == 0) goto L21
             goto L23
         L21:
@@ -144,8 +143,8 @@ public final class pt1 {
 
     public static final boolean f(@NotNull String str) {
         b41.i(str, "sceneName");
-        ct1.C9015a c9015a = ct1.Companion;
-        if (d(c9015a.a().f(), str, "net_sceneType") || d(c9015a.a().e(), str, "orange_sceneType")) {
+        ct1.a aVar = ct1.Companion;
+        if (d(aVar.a().f(), str, "net_sceneType") || d(aVar.a().e(), str, "orange_sceneType")) {
             return true;
         }
         return d(lt1.Companion.a().h(), str, "local_sceneType");
@@ -157,7 +156,7 @@ public final class pt1 {
         b41.i(str2, "spmc");
         b41.i(str3, "spmd");
         TrackInfo trackInfo = new TrackInfo();
-        s = C8604o.s(str);
+        s = kotlin.text.o.s(str);
         if (s) {
             str = AgooConstants.MESSAGE_POPUP;
         }

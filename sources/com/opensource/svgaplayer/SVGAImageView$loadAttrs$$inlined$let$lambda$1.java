@@ -4,7 +4,7 @@ import android.os.Handler;
 import com.opensource.svgaplayer.SVGAParser;
 import java.net.URL;
 import kotlin.Metadata;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
 
@@ -55,9 +55,9 @@ final class SVGAImageView$loadAttrs$$inlined$let$lambda$1 implements Runnable {
             public void onError() {
             }
         };
-        F = C8604o.F(this.$it, "http://", false, 2, null);
+        F = o.F(this.$it, "http://", false, 2, null);
         if (!F) {
-            F2 = C8604o.F(this.$it, "https://", false, 2, null);
+            F2 = o.F(this.$it, "https://", false, 2, null);
             if (!F2) {
                 this.$parser.j(this.$it, parseCompletion);
                 return;

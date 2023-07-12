@@ -44,12 +44,11 @@ public class WaterFlowCategoryViewHolder extends BaseViewHolder<WaterFlowRecomme
     private TextView mTitle;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.feed.WaterFlowCategoryViewHolder$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1261a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1261a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -83,7 +82,7 @@ public class WaterFlowCategoryViewHolder extends BaseViewHolder<WaterFlowRecomme
 
     public WaterFlowCategoryViewHolder(View view) {
         super(view);
-        this.mOnClickListener = new View$OnClickListenerC1261a();
+        this.mOnClickListener = new a();
         this.mContext = view.getContext();
         this.mTitle = (TextView) this.itemView.findViewById(R$id.homepage_waterflow_category_title);
         this.mSubtitle = (TextView) this.itemView.findViewById(R$id.homepage_waterflow_category_subtitle);

@@ -24,9 +24,9 @@ public class p32 implements IRichTextManager {
     public static final int RICH_TYPE_OUTLINE = 2;
     private Context a;
     private ProjectDataHolder b;
-    private List<HtmlParserManager.C2244a> c;
+    private List<HtmlParserManager.a> c;
     private ProjectDataHolder d;
-    private List<HtmlParserManager.C2244a> g;
+    private List<HtmlParserManager.a> g;
     private ProjectDataHolder h;
     private boolean j;
     private boolean k;
@@ -39,12 +39,11 @@ public class p32 implements IRichTextManager {
     private LinkedHashMap<String, Integer> i = new LinkedHashMap<>();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.p32$a */
     /* loaded from: classes8.dex */
-    public class C9542a implements HtmlParserManager.OnSpanClickListener {
+    public class a implements HtmlParserManager.OnSpanClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9542a() {
+        a() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.htmlparser.HtmlParserManager.OnSpanClickListener
@@ -59,27 +58,26 @@ public class p32 implements IRichTextManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.p32$b */
     /* loaded from: classes8.dex */
-    public class C9543b implements HtmlParserManager.OnParseFinishedListener {
+    public class b implements HtmlParserManager.OnParseFinishedListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C9543b(String str) {
+        b(String str) {
             this.a = str;
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.htmlparser.HtmlParserManager.OnParseFinishedListener
-        public void onParseFinished(List<HtmlParserManager.C2244a> list) {
+        public void onParseFinished(List<HtmlParserManager.a> list) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1504109496")) {
                 ipChange.ipc$dispatch("-1504109496", new Object[]{this, list});
             } else if (!m91.a(list)) {
                 ArrayList arrayList = new ArrayList();
                 for (int i = 0; i < list.size(); i++) {
-                    HtmlParserManager.C2244a c2244a = list.get(i);
-                    if (c2244a != null && c2244a.a() != null && !"".equals(c2244a.a().toString().trim())) {
-                        arrayList.add(c2244a);
+                    HtmlParserManager.a aVar = list.get(i);
+                    if (aVar != null && aVar.a() != null && !"".equals(aVar.a().toString().trim())) {
+                        arrayList.add(aVar);
                     }
                 }
                 if (m91.a(arrayList)) {
@@ -108,7 +106,7 @@ public class p32 implements IRichTextManager {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public List<ProjectDataHolder> h(List<HtmlParserManager.C2244a> list) {
+    public List<ProjectDataHolder> h(List<HtmlParserManager.a> list) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1602742255")) {
             return (List) ipChange.ipc$dispatch("1602742255", new Object[]{this, list});
@@ -127,14 +125,14 @@ public class p32 implements IRichTextManager {
             }
             int i = 0;
             for (int i2 = 0; i2 < e; i2++) {
-                HtmlParserManager.C2244a c2244a = list.get(i2);
+                HtmlParserManager.a aVar = list.get(i2);
                 ProjectDataHolder projectDataHolder = new ProjectDataHolder(3);
-                projectDataHolder.setConvertedItem(c2244a);
+                projectDataHolder.setConvertedItem(aVar);
                 projectDataHolder.setConvertedItemPosition(i2);
                 projectDataHolder.setConvertedItemSize(e);
                 projectDataHolder.setRichType(this.m);
-                if (c2244a.e() == 2) {
-                    this.i.put(c2244a.a().toString(), Integer.valueOf(i));
+                if (aVar.e() == 2) {
+                    this.i.put(aVar.a().toString(), Integer.valueOf(i));
                     i++;
                 }
                 arrayList.add(projectDataHolder);
@@ -203,7 +201,7 @@ public class p32 implements IRichTextManager {
             ipChange.ipc$dispatch("-1978393844", new Object[]{this, str, str2});
         } else if (TextUtils.isEmpty(str2)) {
         } else {
-            HtmlParserManager.a(800, 1.4f, 16, 0, 12, 666666).c(this.a, "<span>" + str2.replaceAll("\r|\t|\n", "").replaceAll("\u2028", "").replaceAll("\u2029", "") + "</span>", new C9542a(), new C9543b(str));
+            HtmlParserManager.a(800, 1.4f, 16, 0, 12, 666666).c(this.a, "<span>" + str2.replaceAll("\r|\t|\n", "").replaceAll("\u2028", "").replaceAll("\u2029", "") + "</span>", new a(), new b(str));
         }
     }
 
@@ -319,7 +317,7 @@ public class p32 implements IRichTextManager {
         if (AndroidInstantRuntime.support(ipChange, "1626661836")) {
             return ((Integer) ipChange.ipc$dispatch("1626661836", new Object[]{this})).intValue();
         }
-        List<HtmlParserManager.C2244a> list = this.g;
+        List<HtmlParserManager.a> list = this.g;
         if (list == null) {
             return 0;
         }
@@ -351,7 +349,7 @@ public class p32 implements IRichTextManager {
         if (AndroidInstantRuntime.support(ipChange, "281337995")) {
             return (ProjectDataHolder) ipChange.ipc$dispatch("281337995", new Object[]{this});
         }
-        List<HtmlParserManager.C2244a> list = this.c;
+        List<HtmlParserManager.a> list = this.c;
         if (list != null && list.size() > 0 && this.d == null) {
             ProjectDataHolder projectDataHolder = new ProjectDataHolder(11);
             this.d = projectDataHolder;

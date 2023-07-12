@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import io.reactivex.internal.util.BackpressureHelper;
 import io.reactivex.internal.util.LinkedArrayList;
@@ -29,14 +29,14 @@ public final class FlowableCache<T> extends AbstractFlowableWithUpstream<T, T> {
         static final ReplaySubscription[] TERMINATED = new ReplaySubscription[0];
         final AtomicReference<Subscription> connection;
         volatile boolean isConnected;
-        final AbstractC8147b<T> source;
+        final b<T> source;
         boolean sourceDone;
         final AtomicReference<ReplaySubscription<T>[]> subscribers;
 
-        CacheState(AbstractC8147b<T> abstractC8147b, int i) {
+        CacheState(b<T> bVar, int i) {
             super(i);
             this.connection = new AtomicReference<>();
-            this.source = abstractC8147b;
+            this.source = bVar;
             this.subscribers = new AtomicReference<>(EMPTY);
         }
 
@@ -250,9 +250,9 @@ public final class FlowableCache<T> extends AbstractFlowableWithUpstream<T, T> {
         }
     }
 
-    public FlowableCache(AbstractC8147b<T> abstractC8147b, int i) {
-        super(abstractC8147b);
-        this.state = new CacheState<>(abstractC8147b, i);
+    public FlowableCache(b<T> bVar, int i) {
+        super(bVar);
+        this.state = new CacheState<>(bVar, i);
         this.once = new AtomicBoolean();
     }
 
@@ -268,7 +268,7 @@ public final class FlowableCache<T> extends AbstractFlowableWithUpstream<T, T> {
         return this.state.isConnected;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         ReplaySubscription<T> replaySubscription = new ReplaySubscription<>(subscriber, this.state);
         this.state.addChild(replaySubscription);

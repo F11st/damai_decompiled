@@ -81,17 +81,17 @@ public class YKErrorView extends RelativeLayout {
                 if (i != 3) {
                     if (i != 4) {
                         if (i != 5) {
-                            return R.C8072drawable.lottie_error_empty;
+                            return R.drawable.lottie_error_empty;
                         }
-                        return R.C8072drawable.lottie_error_nocopyright;
+                        return R.drawable.lottie_error_nocopyright;
                     }
-                    return R.C8072drawable.lottie_error_upload;
+                    return R.drawable.lottie_error_upload;
                 }
-                return R.C8072drawable.lottie_error_notlogin;
+                return R.drawable.lottie_error_notlogin;
             }
-            return R.C8072drawable.lottie_error_empty;
+            return R.drawable.lottie_error_empty;
         }
-        return R.C8072drawable.lottie_error_net;
+        return R.drawable.lottie_error_net;
     }
 
     private boolean isVisivle() {

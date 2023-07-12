@@ -11,53 +11,52 @@ import org.jetbrains.annotations.Nullable;
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public class yj0 {
-    public static final AbstractC9990d<ProtoBuf$Class.Kind> CLASS_KIND;
-    public static final C9988b DECLARES_DEFAULT_VALUE;
-    public static final C9988b DEFINITELY_NOT_NULL_TYPE;
-    public static final C9988b HAS_ANNOTATIONS;
-    public static final C9988b HAS_CONSTANT;
-    public static final C9988b HAS_GETTER;
-    public static final C9988b HAS_SETTER;
-    public static final C9988b IS_CONST;
-    public static final C9988b IS_CONSTRUCTOR_WITH_NON_STABLE_PARAMETER_NAMES;
-    public static final C9988b IS_CROSSINLINE;
-    public static final C9988b IS_DATA;
-    public static final C9988b IS_DELEGATED;
-    public static final C9988b IS_EXPECT_CLASS;
-    public static final C9988b IS_EXPECT_FUNCTION;
-    public static final C9988b IS_EXPECT_PROPERTY;
-    public static final C9988b IS_EXTERNAL_ACCESSOR;
-    public static final C9988b IS_EXTERNAL_CLASS;
-    public static final C9988b IS_EXTERNAL_FUNCTION;
-    public static final C9988b IS_EXTERNAL_PROPERTY;
-    public static final C9988b IS_FUNCTION_WITH_NON_STABLE_PARAMETER_NAMES;
-    public static final C9988b IS_FUN_INTERFACE;
-    public static final C9988b IS_INFIX;
-    public static final C9988b IS_INLINE;
-    public static final C9988b IS_INLINE_ACCESSOR;
-    public static final C9988b IS_INLINE_CLASS;
-    public static final C9988b IS_INNER;
-    public static final C9988b IS_LATEINIT;
-    public static final C9988b IS_NEGATED;
-    public static final C9988b IS_NOINLINE;
-    public static final C9988b IS_NOT_DEFAULT;
-    public static final C9988b IS_NULL_CHECK_PREDICATE;
-    public static final C9988b IS_OPERATOR;
-    public static final C9988b IS_SECONDARY;
-    public static final C9988b IS_SUSPEND;
-    public static final C9988b IS_TAILREC;
-    public static final C9988b IS_UNSIGNED;
-    public static final C9988b IS_VAR;
-    public static final AbstractC9990d<ProtoBuf$MemberKind> MEMBER_KIND;
-    public static final AbstractC9990d<ProtoBuf$Modality> MODALITY;
-    public static final C9988b SUSPEND_TYPE;
-    public static final AbstractC9990d<ProtoBuf$Visibility> VISIBILITY;
+    public static final d<ProtoBuf$Class.Kind> CLASS_KIND;
+    public static final b DECLARES_DEFAULT_VALUE;
+    public static final b DEFINITELY_NOT_NULL_TYPE;
+    public static final b HAS_ANNOTATIONS;
+    public static final b HAS_CONSTANT;
+    public static final b HAS_GETTER;
+    public static final b HAS_SETTER;
+    public static final b IS_CONST;
+    public static final b IS_CONSTRUCTOR_WITH_NON_STABLE_PARAMETER_NAMES;
+    public static final b IS_CROSSINLINE;
+    public static final b IS_DATA;
+    public static final b IS_DELEGATED;
+    public static final b IS_EXPECT_CLASS;
+    public static final b IS_EXPECT_FUNCTION;
+    public static final b IS_EXPECT_PROPERTY;
+    public static final b IS_EXTERNAL_ACCESSOR;
+    public static final b IS_EXTERNAL_CLASS;
+    public static final b IS_EXTERNAL_FUNCTION;
+    public static final b IS_EXTERNAL_PROPERTY;
+    public static final b IS_FUNCTION_WITH_NON_STABLE_PARAMETER_NAMES;
+    public static final b IS_FUN_INTERFACE;
+    public static final b IS_INFIX;
+    public static final b IS_INLINE;
+    public static final b IS_INLINE_ACCESSOR;
+    public static final b IS_INLINE_CLASS;
+    public static final b IS_INNER;
+    public static final b IS_LATEINIT;
+    public static final b IS_NEGATED;
+    public static final b IS_NOINLINE;
+    public static final b IS_NOT_DEFAULT;
+    public static final b IS_NULL_CHECK_PREDICATE;
+    public static final b IS_OPERATOR;
+    public static final b IS_SECONDARY;
+    public static final b IS_SUSPEND;
+    public static final b IS_TAILREC;
+    public static final b IS_UNSIGNED;
+    public static final b IS_VAR;
+    public static final d<ProtoBuf$MemberKind> MEMBER_KIND;
+    public static final d<ProtoBuf$Modality> MODALITY;
+    public static final b SUSPEND_TYPE;
+    public static final d<ProtoBuf$Visibility> VISIBILITY;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yj0$b */
     /* loaded from: classes3.dex */
-    public static class C9988b extends AbstractC9990d<Boolean> {
-        public C9988b(int i) {
+    public static class b extends d<Boolean> {
+        public b(int i) {
             super(i, 1);
         }
 
@@ -65,7 +64,7 @@ public class yj0 {
             throw new IllegalStateException(String.format("@NotNull method %s.%s must not return null", "kotlin/reflect/jvm/internal/impl/metadata/deserialization/Flags$BooleanFlagField", gn1.TYPE_OPEN_URL_METHOD_GET));
         }
 
-        @Override // tb.yj0.AbstractC9990d
+        @Override // tb.yj0.d
         @NotNull
         /* renamed from: g */
         public Boolean d(int i) {
@@ -76,7 +75,7 @@ public class yj0 {
             return valueOf;
         }
 
-        @Override // tb.yj0.AbstractC9990d
+        @Override // tb.yj0.d
         /* renamed from: h */
         public int e(Boolean bool) {
             if (bool.booleanValue()) {
@@ -88,12 +87,11 @@ public class yj0 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.yj0$c */
     /* loaded from: classes3.dex */
-    public static class C9989c<E extends Internal.EnumLite> extends AbstractC9990d<E> {
+    public static class c<E extends Internal.EnumLite> extends d<E> {
         private final E[] c;
 
-        public C9989c(int i, E[] eArr) {
+        public c(int i, E[] eArr) {
             super(i, g(eArr));
             this.c = eArr;
         }
@@ -118,7 +116,7 @@ public class yj0 {
             throw new IllegalStateException("Empty enum: " + eArr.getClass());
         }
 
-        @Override // tb.yj0.AbstractC9990d
+        @Override // tb.yj0.d
         @Nullable
         /* renamed from: h */
         public E d(int i) {
@@ -133,7 +131,7 @@ public class yj0 {
             return null;
         }
 
-        @Override // tb.yj0.AbstractC9990d
+        @Override // tb.yj0.d
         /* renamed from: i */
         public int e(E e) {
             return e.getNumber() << this.a;
@@ -141,109 +139,108 @@ public class yj0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yj0$d */
     /* loaded from: classes3.dex */
-    public static abstract class AbstractC9990d<E> {
+    public static abstract class d<E> {
         public final int a;
         public final int b;
 
         /* JADX WARN: Incorrect types in method signature: <E::Lkotlin/reflect/jvm/internal/impl/protobuf/Internal$EnumLite;>(Ltb/yj0$d<*>;[TE;)Ltb/yj0$d<TE;>; */
-        public static AbstractC9990d a(AbstractC9990d abstractC9990d, Internal.EnumLite[] enumLiteArr) {
-            return new C9989c(abstractC9990d.a + abstractC9990d.b, enumLiteArr);
+        public static d a(d dVar, Internal.EnumLite[] enumLiteArr) {
+            return new c(dVar.a + dVar.b, enumLiteArr);
         }
 
-        public static C9988b b(AbstractC9990d<?> abstractC9990d) {
-            return new C9988b(abstractC9990d.a + abstractC9990d.b);
+        public static b b(d<?> dVar) {
+            return new b(dVar.a + dVar.b);
         }
 
-        public static C9988b c() {
-            return new C9988b(0);
+        public static b c() {
+            return new b(0);
         }
 
         public abstract E d(int i);
 
         public abstract int e(E e);
 
-        private AbstractC9990d(int i, int i2) {
+        private d(int i, int i2) {
             this.a = i;
             this.b = i2;
         }
     }
 
     static {
-        C9988b c = AbstractC9990d.c();
-        SUSPEND_TYPE = c;
-        DEFINITELY_NOT_NULL_TYPE = AbstractC9990d.b(c);
-        C9988b c2 = AbstractC9990d.c();
-        HAS_ANNOTATIONS = c2;
-        AbstractC9990d<ProtoBuf$Visibility> a = AbstractC9990d.a(c2, ProtoBuf$Visibility.values());
-        VISIBILITY = a;
-        AbstractC9990d<ProtoBuf$Modality> a2 = AbstractC9990d.a(a, ProtoBuf$Modality.values());
-        MODALITY = a2;
-        AbstractC9990d<ProtoBuf$Class.Kind> a3 = AbstractC9990d.a(a2, ProtoBuf$Class.Kind.values());
-        CLASS_KIND = a3;
-        C9988b b = AbstractC9990d.b(a3);
-        IS_INNER = b;
-        C9988b b2 = AbstractC9990d.b(b);
-        IS_DATA = b2;
-        C9988b b3 = AbstractC9990d.b(b2);
-        IS_EXTERNAL_CLASS = b3;
-        C9988b b4 = AbstractC9990d.b(b3);
-        IS_EXPECT_CLASS = b4;
-        C9988b b5 = AbstractC9990d.b(b4);
-        IS_INLINE_CLASS = b5;
-        IS_FUN_INTERFACE = AbstractC9990d.b(b5);
-        C9988b b6 = AbstractC9990d.b(a);
-        IS_SECONDARY = b6;
-        IS_CONSTRUCTOR_WITH_NON_STABLE_PARAMETER_NAMES = AbstractC9990d.b(b6);
-        AbstractC9990d<ProtoBuf$MemberKind> a4 = AbstractC9990d.a(a2, ProtoBuf$MemberKind.values());
-        MEMBER_KIND = a4;
-        C9988b b7 = AbstractC9990d.b(a4);
-        IS_OPERATOR = b7;
-        C9988b b8 = AbstractC9990d.b(b7);
-        IS_INFIX = b8;
-        C9988b b9 = AbstractC9990d.b(b8);
-        IS_INLINE = b9;
-        C9988b b10 = AbstractC9990d.b(b9);
-        IS_TAILREC = b10;
-        C9988b b11 = AbstractC9990d.b(b10);
-        IS_EXTERNAL_FUNCTION = b11;
-        C9988b b12 = AbstractC9990d.b(b11);
-        IS_SUSPEND = b12;
-        C9988b b13 = AbstractC9990d.b(b12);
-        IS_EXPECT_FUNCTION = b13;
-        IS_FUNCTION_WITH_NON_STABLE_PARAMETER_NAMES = AbstractC9990d.b(b13);
-        C9988b b14 = AbstractC9990d.b(a4);
-        IS_VAR = b14;
-        C9988b b15 = AbstractC9990d.b(b14);
-        HAS_GETTER = b15;
-        C9988b b16 = AbstractC9990d.b(b15);
-        HAS_SETTER = b16;
-        C9988b b17 = AbstractC9990d.b(b16);
-        IS_CONST = b17;
-        C9988b b18 = AbstractC9990d.b(b17);
-        IS_LATEINIT = b18;
-        C9988b b19 = AbstractC9990d.b(b18);
-        HAS_CONSTANT = b19;
-        C9988b b20 = AbstractC9990d.b(b19);
-        IS_EXTERNAL_PROPERTY = b20;
-        C9988b b21 = AbstractC9990d.b(b20);
-        IS_DELEGATED = b21;
-        IS_EXPECT_PROPERTY = AbstractC9990d.b(b21);
-        C9988b b22 = AbstractC9990d.b(c2);
-        DECLARES_DEFAULT_VALUE = b22;
-        C9988b b23 = AbstractC9990d.b(b22);
-        IS_CROSSINLINE = b23;
-        IS_NOINLINE = AbstractC9990d.b(b23);
-        C9988b b24 = AbstractC9990d.b(a2);
-        IS_NOT_DEFAULT = b24;
-        C9988b b25 = AbstractC9990d.b(b24);
-        IS_EXTERNAL_ACCESSOR = b25;
-        IS_INLINE_ACCESSOR = AbstractC9990d.b(b25);
-        C9988b c3 = AbstractC9990d.c();
-        IS_NEGATED = c3;
-        IS_NULL_CHECK_PREDICATE = AbstractC9990d.b(c3);
-        IS_UNSIGNED = AbstractC9990d.c();
+        b c2 = d.c();
+        SUSPEND_TYPE = c2;
+        DEFINITELY_NOT_NULL_TYPE = d.b(c2);
+        b c3 = d.c();
+        HAS_ANNOTATIONS = c3;
+        d<ProtoBuf$Visibility> a2 = d.a(c3, ProtoBuf$Visibility.values());
+        VISIBILITY = a2;
+        d<ProtoBuf$Modality> a3 = d.a(a2, ProtoBuf$Modality.values());
+        MODALITY = a3;
+        d<ProtoBuf$Class.Kind> a4 = d.a(a3, ProtoBuf$Class.Kind.values());
+        CLASS_KIND = a4;
+        b b2 = d.b(a4);
+        IS_INNER = b2;
+        b b3 = d.b(b2);
+        IS_DATA = b3;
+        b b4 = d.b(b3);
+        IS_EXTERNAL_CLASS = b4;
+        b b5 = d.b(b4);
+        IS_EXPECT_CLASS = b5;
+        b b6 = d.b(b5);
+        IS_INLINE_CLASS = b6;
+        IS_FUN_INTERFACE = d.b(b6);
+        b b7 = d.b(a2);
+        IS_SECONDARY = b7;
+        IS_CONSTRUCTOR_WITH_NON_STABLE_PARAMETER_NAMES = d.b(b7);
+        d<ProtoBuf$MemberKind> a5 = d.a(a3, ProtoBuf$MemberKind.values());
+        MEMBER_KIND = a5;
+        b b8 = d.b(a5);
+        IS_OPERATOR = b8;
+        b b9 = d.b(b8);
+        IS_INFIX = b9;
+        b b10 = d.b(b9);
+        IS_INLINE = b10;
+        b b11 = d.b(b10);
+        IS_TAILREC = b11;
+        b b12 = d.b(b11);
+        IS_EXTERNAL_FUNCTION = b12;
+        b b13 = d.b(b12);
+        IS_SUSPEND = b13;
+        b b14 = d.b(b13);
+        IS_EXPECT_FUNCTION = b14;
+        IS_FUNCTION_WITH_NON_STABLE_PARAMETER_NAMES = d.b(b14);
+        b b15 = d.b(a5);
+        IS_VAR = b15;
+        b b16 = d.b(b15);
+        HAS_GETTER = b16;
+        b b17 = d.b(b16);
+        HAS_SETTER = b17;
+        b b18 = d.b(b17);
+        IS_CONST = b18;
+        b b19 = d.b(b18);
+        IS_LATEINIT = b19;
+        b b20 = d.b(b19);
+        HAS_CONSTANT = b20;
+        b b21 = d.b(b20);
+        IS_EXTERNAL_PROPERTY = b21;
+        b b22 = d.b(b21);
+        IS_DELEGATED = b22;
+        IS_EXPECT_PROPERTY = d.b(b22);
+        b b23 = d.b(c3);
+        DECLARES_DEFAULT_VALUE = b23;
+        b b24 = d.b(b23);
+        IS_CROSSINLINE = b24;
+        IS_NOINLINE = d.b(b24);
+        b b25 = d.b(a3);
+        IS_NOT_DEFAULT = b25;
+        b b26 = d.b(b25);
+        IS_EXTERNAL_ACCESSOR = b26;
+        IS_INLINE_ACCESSOR = d.b(b26);
+        b c4 = d.c();
+        IS_NEGATED = c4;
+        IS_NULL_CHECK_PREDICATE = d.b(c4);
+        IS_UNSIGNED = d.c();
     }
 
     /* JADX WARN: Removed duplicated region for block: B:21:0x0036  */

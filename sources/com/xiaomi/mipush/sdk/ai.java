@@ -2,12 +2,8 @@ package com.xiaomi.mipush.sdk;
 
 import android.content.Context;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
-import com.xiaomi.push.C7613bm;
-import com.xiaomi.push.C7674i;
-import com.xiaomi.push.C7675im;
-import com.xiaomi.push.C7677io;
 import com.xiaomi.push.Cif;
+import com.xiaomi.push.bm;
 import com.xiaomi.push.hj;
 import com.xiaomi.push.hy;
 import com.xiaomi.push.hz;
@@ -16,6 +12,8 @@ import com.xiaomi.push.ie;
 import com.xiaomi.push.ii;
 import com.xiaomi.push.ik;
 import com.xiaomi.push.il;
+import com.xiaomi.push.im;
+import com.xiaomi.push.io;
 import com.xiaomi.push.iq;
 import com.xiaomi.push.is;
 import com.xiaomi.push.it;
@@ -27,7 +25,7 @@ import java.nio.ByteBuffer;
 public class ai {
     /* JADX INFO: Access modifiers changed from: protected */
     public static <T extends iu<T, ?>> Cif a(Context context, T t, hj hjVar) {
-        return a(context, t, hjVar, !hjVar.equals(hj.Registration), context.getPackageName(), C7564b.m629a(context).m630a());
+        return a(context, t, hjVar, !hjVar.equals(hj.Registration), context.getPackageName(), b.m629a(context).m630a());
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -41,14 +39,14 @@ public class ai {
         if (a != null) {
             Cif cif = new Cif();
             if (z) {
-                String d = C7564b.m629a(context).d();
+                String d = b.m629a(context).d();
                 if (TextUtils.isEmpty(d)) {
                     str3 = "regSecret is empty, return null";
                 } else {
                     try {
-                        a = C7674i.b(C7613bm.m701a(d), a);
+                        a = com.xiaomi.push.i.b(bm.m701a(d), a);
                     } catch (Exception unused) {
-                        AbstractC7535b.d("encryption error. ");
+                        com.xiaomi.channel.commonutils.logger.b.d("encryption error. ");
                     }
                 }
             }
@@ -65,21 +63,21 @@ public class ai {
             return cif;
         }
         str3 = "invoke convertThriftObjectToBytes method, return null.";
-        AbstractC7535b.m586a(str3);
+        com.xiaomi.channel.commonutils.logger.b.m586a(str3);
         return null;
     }
 
     public static iu a(Context context, Cif cif) {
         byte[] m1028a;
         if (cif.m1030b()) {
-            byte[] a = C7572i.a(context, cif, EnumC7568e.ASSEMBLE_PUSH_FCM);
+            byte[] a = i.a(context, cif, e.ASSEMBLE_PUSH_FCM);
             if (a == null) {
-                a = C7613bm.m701a(C7564b.m629a(context).d());
+                a = bm.m701a(b.m629a(context).d());
             }
             try {
-                m1028a = C7674i.a(a, cif.m1028a());
+                m1028a = com.xiaomi.push.i.a(a, cif.m1028a());
             } catch (Exception e) {
-                throw new C7585u("the aes decrypt failed.", e);
+                throw new u("the aes decrypt failed.", e);
             }
         } else {
             m1028a = cif.m1028a();
@@ -98,11 +96,11 @@ public class ai {
             case 2:
                 return new iq();
             case 3:
-                return new C7677io();
+                return new io();
             case 4:
                 return new is();
             case 5:
-                return new C7675im();
+                return new im();
             case 6:
                 return new hz();
             case 7:

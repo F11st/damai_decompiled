@@ -30,12 +30,11 @@ public class ProjectCommonProblemViewHolder extends RecyclerView.ViewHolder {
     private String g;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectCommonProblemViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2389a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2389a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -50,14 +49,13 @@ public class ProjectCommonProblemViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectCommonProblemViewHolder$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2390b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
         final /* synthetic */ String b;
 
-        View$OnClickListenerC2390b(int i, String str) {
+        b(int i, String str) {
             this.a = i;
             this.b = str;
         }
@@ -80,7 +78,7 @@ public class ProjectCommonProblemViewHolder extends RecyclerView.ViewHolder {
         this.b = (FlowLayout) this.itemView.findViewById(R$id.project_common_problems_fl);
         TextView textView = (TextView) this.itemView.findViewById(R$id.project_item_more_text_tv);
         this.c = textView;
-        textView.setOnClickListener(new View$OnClickListenerC2389a());
+        textView.setOnClickListener(new a());
     }
 
     private void c() {
@@ -104,7 +102,7 @@ public class ProjectCommonProblemViewHolder extends RecyclerView.ViewHolder {
         TextView textView = (TextView) inflate.findViewById(R$id.problem_name_tv);
         textView.setText(str);
         pp2.u().I1(textView, this.g, i);
-        textView.setOnClickListener(new View$OnClickListenerC2390b(i, str));
+        textView.setOnClickListener(new b(i, str));
         return inflate;
     }
 

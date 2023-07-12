@@ -271,7 +271,7 @@ public class yb {
         }
         ArrayList arrayList = new ArrayList();
         for (String str : list) {
-            arrayList.add(new AvatarRecyclerView.C2566b(str));
+            arrayList.add(new AvatarRecyclerView.b(str));
             i2++;
             if (i2 >= i) {
                 break;

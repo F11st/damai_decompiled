@@ -40,12 +40,11 @@ public class AreaCodeChooseActivity extends DamaiBaseActivity {
     private DMIconFontTextView mTvClose;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AreaCodeChooseActivity$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0567a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0567a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -60,12 +59,11 @@ public class AreaCodeChooseActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AreaCodeChooseActivity$b */
     /* loaded from: classes4.dex */
-    public class C0568b implements AreaCodeChooseAdapter.OnAreaCodeItemClickListener {
+    public class b implements AreaCodeChooseAdapter.OnAreaCodeItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0568b() {
+        b() {
         }
 
         @Override // cn.damai.commonbusiness.address.adapter.AreaCodeChooseAdapter.OnAreaCodeItemClickListener
@@ -87,12 +85,11 @@ public class AreaCodeChooseActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AreaCodeChooseActivity$c  reason: invalid class name */
     /* loaded from: classes14.dex */
-    public class animationAnimation$AnimationListenerC0569c implements Animation.AnimationListener {
+    public class c implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        animationAnimation$AnimationListenerC0569c() {
+        c() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -132,7 +129,7 @@ public class AreaCodeChooseActivity extends DamaiBaseActivity {
         }
         Animation loadAnimation = AnimationUtils.loadAnimation(this, R$anim.anim_activity_item_exit);
         this.mLvAreaCodeChooseLayer.startAnimation(loadAnimation);
-        loadAnimation.setAnimationListener(new animationAnimation$AnimationListenerC0569c());
+        loadAnimation.setAnimationListener(new c());
     }
 
     private void initExtraData() {
@@ -165,8 +162,8 @@ public class AreaCodeChooseActivity extends DamaiBaseActivity {
             ipChange.ipc$dispatch("5446727", new Object[]{this});
             return;
         }
-        this.mOnCloseClickListener = new View$OnClickListenerC0567a();
-        this.mOnAreaCodeItemClickListener = new C0568b();
+        this.mOnCloseClickListener = new a();
+        this.mOnAreaCodeItemClickListener = new b();
     }
 
     private void initViews() {

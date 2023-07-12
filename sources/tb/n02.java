@@ -2,7 +2,6 @@ package tb;
 
 import java.util.Collection;
 import java.util.List;
-import kotlin.collections.C8214m;
 import kotlin.reflect.jvm.internal.impl.builtins.PrimitiveType;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotation;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaPrimitiveType;
@@ -23,7 +22,7 @@ public final class n02 extends o02 implements JavaPrimitiveType {
         List g;
         b41.i(cls, "reflectType");
         this.a = cls;
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         this.b = g;
     }
 

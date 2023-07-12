@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8148c;
 import io.reactivex.MaybeObserver;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.c;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -13,7 +13,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableReduceMaybe<T> extends AbstractC8148c<T> {
+public final class ObservableReduceMaybe<T> extends c<T> {
     final BiFunction<T, T, T> reducer;
     final ObservableSource<T> source;
 
@@ -100,7 +100,7 @@ public final class ObservableReduceMaybe<T> extends AbstractC8148c<T> {
         this.reducer = biFunction;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         this.source.subscribe(new ReduceObserver(maybeObserver, this.reducer));
     }

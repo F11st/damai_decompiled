@@ -6,12 +6,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.WindowManager;
 import com.alibaba.security.biometrics.R;
-import com.alibaba.security.biometrics.c.b.C3750a;
-import com.alibaba.security.biometrics.c.c.C3754a;
-import com.alibaba.security.biometrics.c.c.C3756c;
+import com.alibaba.security.biometrics.c.c.a;
+import com.alibaba.security.biometrics.c.c.c;
 import com.alibaba.security.biometrics.transition.TransitionMode;
-import com.alibaba.security.common.c.C3800a;
-import com.alibaba.security.common.d.C3823p;
+import com.alibaba.security.common.d.p;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
@@ -92,13 +90,13 @@ public abstract class BaseBioNavigatorActivity extends BaseAlBioActivity {
                 WindowManager.LayoutParams attributes = getWindow().getAttributes();
                 attributes.layoutInDisplayCutoutMode = 1;
                 getWindow().setAttributes(attributes);
-            } else if (C3823p.a() && C3754a.a(this)) {
-                C3754a.a(getWindow());
-            } else if (C3823p.c() && C3756c.a(this)) {
-                C3756c.a(getWindow());
+            } else if (p.a() && a.a(this)) {
+                a.a(getWindow());
+            } else if (p.c() && c.a(this)) {
+                c.a(getWindow());
             }
         } catch (Exception unused) {
-            C3800a.b();
+            com.alibaba.security.common.c.a.b();
         }
     }
 
@@ -112,7 +110,7 @@ public abstract class BaseBioNavigatorActivity extends BaseAlBioActivity {
         try {
             a(this, u);
         } catch (Throwable unused) {
-            C3800a.b();
+            com.alibaba.security.common.c.a.b();
         }
     }
 
@@ -126,23 +124,23 @@ public abstract class BaseBioNavigatorActivity extends BaseAlBioActivity {
                 WindowManager.LayoutParams attributes = getWindow().getAttributes();
                 attributes.layoutInDisplayCutoutMode = 1;
                 getWindow().setAttributes(attributes);
-            } else if (C3823p.a() && C3754a.a(this)) {
-                C3754a.a(getWindow());
-            } else if (C3823p.c() && C3756c.a(this)) {
-                C3756c.a(getWindow());
+            } else if (p.a() && a.a(this)) {
+                a.a(getWindow());
+            } else if (p.c() && c.a(this)) {
+                c.a(getWindow());
             }
         } catch (Exception unused) {
-            C3800a.b();
+            com.alibaba.security.common.c.a.b();
         }
         setVolumeControlStream(3);
         if (Build.VERSION.SDK_INT != 26) {
             setRequestedOrientation(1);
         }
-        getWindow().setBackgroundDrawableResource(R.C3735drawable.rpsdk_face_win_bg);
+        getWindow().setBackgroundDrawableResource(R.drawable.rpsdk_face_win_bg);
         getWindow().addFlags(128);
         getWindow().setFlags(1024, 1024);
-        C3750a.b();
-        C3750a.c();
+        com.alibaba.security.biometrics.c.b.a.b();
+        com.alibaba.security.biometrics.c.b.a.c();
     }
 
     @Override // android.app.Activity
@@ -154,8 +152,8 @@ public abstract class BaseBioNavigatorActivity extends BaseAlBioActivity {
     @Override // com.alibaba.security.biometrics.activity.BaseAlBioActivity, android.app.Activity
     public void onDestroy() {
         super.onDestroy();
-        C3750a.b();
-        C3750a.c();
+        com.alibaba.security.biometrics.c.b.a.b();
+        com.alibaba.security.biometrics.c.b.a.c();
     }
 
     @Override // android.app.Activity, android.view.Window.Callback

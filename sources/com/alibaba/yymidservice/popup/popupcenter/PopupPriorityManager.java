@@ -15,12 +15,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
-import kotlinx.coroutines.C8690g;
+import kotlin.coroutines.intrinsics.b;
+import kotlinx.coroutines.g;
 import org.android.agoo.common.AgooConstants;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tb.AbstractC9710ta;
 import tb.b41;
 import tb.cq1;
 import tb.i23;
@@ -29,6 +28,7 @@ import tb.lt1;
 import tb.mt1;
 import tb.nt1;
 import tb.pt1;
+import tb.ta;
 import tb.wt2;
 
 /* compiled from: Taobao */
@@ -68,7 +68,7 @@ public final class PopupPriorityManager {
     private final Object e(PopupViewHandle popupViewHandle, Object obj, kt1 kt1Var, Continuation<? super wt2> continuation) {
         Object d;
         Object popHandle = popupViewHandle.popHandle(obj, kt1Var, continuation);
-        d = C8234b.d();
+        d = b.d();
         if (popHandle == d) {
             return popHandle;
         }
@@ -110,7 +110,7 @@ public final class PopupPriorityManager {
             r0.<init>(r10, r12)
         L18:
             java.lang.Object r12 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 0
             r4 = 2
@@ -150,7 +150,7 @@ public final class PopupPriorityManager {
             java.util.HashMap r5 = new java.util.HashMap
             r5.<init>()
             if (r11 == 0) goto L69
-            tb.kt1$c r6 = tb.kt1.C9377c.INSTANCE
+            tb.kt1$c r6 = tb.kt1.c.INSTANCE
             boolean r7 = tb.b41.d(r11, r6)
             if (r7 == 0) goto La0
         L69:
@@ -181,7 +181,7 @@ public final class PopupPriorityManager {
             r2 = r11
             if (r6 != 0) goto La0
         L9e:
-            tb.kt1$c r6 = tb.kt1.C9377c.INSTANCE
+            tb.kt1$c r6 = tb.kt1.c.INSTANCE
         La0:
             r2.e = r3
             tb.nt1 r11 = new tb.nt1
@@ -287,7 +287,7 @@ public final class PopupPriorityManager {
             r0.<init>(r10, r11)
         L18:
             java.lang.Object r11 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 0
             r4 = 2
@@ -348,7 +348,7 @@ public final class PopupPriorityManager {
             if (r11 != 0) goto L8e
             r2 = r0
         L8b:
-            tb.kt1$c r11 = tb.kt1.C9377c.INSTANCE
+            tb.kt1$c r11 = tb.kt1.c.INSTANCE
             r0 = r2
         L8e:
             r0.b = r3
@@ -391,7 +391,7 @@ public final class PopupPriorityManager {
                     b41.h(simpleName, "mContent::class.java.simpleName");
                     pt1.g(simpleName, AgooConstants.MESSAGE_POPUP, "start", hashMap);
                     this.d = new MiddlePriortyDefaultHandle(activity);
-                    C8690g.b(LifecycleOwnerKt.getLifecycleScope((LifecycleOwner) activity), null, null, new PopupPriorityManager$popupLaunch$1$1(this, null), 3, null);
+                    g.b(LifecycleOwnerKt.getLifecycleScope((LifecycleOwner) activity), null, null, new PopupPriorityManager$popupLaunch$1$1(this, null), 3, null);
                     return;
                 }
                 i23Var.a(mt1.TAG, "PopupPriorityManager 弹窗逻辑非FragmentActivity fromStartToEnd 设置false");
@@ -426,7 +426,7 @@ public final class PopupPriorityManager {
         cq1 cq1Var = new cq1();
         cq1Var.d(this);
         cq1Var.c(new WeakReference<>(this.a));
-        AbstractC9710ta.f(cq1Var, str, str2, arrayList, jSONObject, null, 16, null);
+        ta.f(cq1Var, str, str2, arrayList, jSONObject, null, 16, null);
     }
 
     public final void s(@Nullable JSONObject jSONObject) {

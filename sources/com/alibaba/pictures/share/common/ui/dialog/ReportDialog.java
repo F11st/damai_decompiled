@@ -33,20 +33,19 @@ public final class ReportDialog extends Dialog implements View.OnClickListener {
     private final Integer b;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.share.common.ui.dialog.ReportDialog$a */
     /* loaded from: classes8.dex */
-    public static final class DialogInterface$OnClickListenerC3642a implements DialogInterface.OnClickListener {
+    public static final class a implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int b;
         final /* synthetic */ String c;
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.pictures.share.common.ui.dialog.ReportDialog$a$a */
+        /* renamed from: com.alibaba.pictures.share.common.ui.dialog.ReportDialog$a$a  reason: collision with other inner class name */
         /* loaded from: classes8.dex */
-        public static final class C3643a implements ShareManager.IReport.IReportListener {
+        public static final class C0155a implements ShareManager.IReport.IReportListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C3643a() {
+            C0155a() {
             }
 
             @Override // com.alibaba.pictures.share.ShareManager.IReport.IReportListener
@@ -66,7 +65,7 @@ public final class ReportDialog extends Dialog implements View.OnClickListener {
             }
         }
 
-        DialogInterface$OnClickListenerC3642a(int i, String str) {
+        a(int i, String str) {
             this.b = i;
             this.c = str;
         }
@@ -80,7 +79,7 @@ public final class ReportDialog extends Dialog implements View.OnClickListener {
             }
             ShareManager.IReport q = ShareManager.INSTANCE.b().q();
             if (q != null) {
-                q.report(this.b, this.c, ReportDialog.this.a, ReportDialog.this.b, new C3643a());
+                q.report(this.b, this.c, ReportDialog.this.a, ReportDialog.this.b, new C0155a());
             }
         }
     }
@@ -109,7 +108,7 @@ public final class ReportDialog extends Dialog implements View.OnClickListener {
         if (AndroidInstantRuntime.support(ipChange, "-2059914840")) {
             ipChange.ipc$dispatch("-2059914840", new Object[]{this, Integer.valueOf(i), str});
         } else {
-            new AlertDialog.Builder(getContext()).setMessage("确认举报该内容吗？").setNegativeButton("取消", (DialogInterface.OnClickListener) null).setPositiveButton("确定", new DialogInterface$OnClickListenerC3642a(i, str)).show();
+            new AlertDialog.Builder(getContext()).setMessage("确认举报该内容吗？").setNegativeButton("取消", (DialogInterface.OnClickListener) null).setPositiveButton("确定", new a(i, str)).show();
         }
     }
 

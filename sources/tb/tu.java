@@ -38,9 +38,8 @@ public class tu extends DXTextViewWidgetNode {
     private int z;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.tu$a */
     /* loaded from: classes4.dex */
-    public static class C9734a implements IDXBuilderWidgetNode {
+    public static class a implements IDXBuilderWidgetNode {
         private static transient /* synthetic */ IpChange $ipChange;
 
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode

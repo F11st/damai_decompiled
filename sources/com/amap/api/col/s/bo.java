@@ -50,7 +50,6 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.UUID;
 import org.xmlpull.v1.XmlPullParser;
-import tb.C9796v;
 import tb.jn1;
 
 /* compiled from: Taobao */
@@ -75,14 +74,14 @@ public final class bo {
     private static boolean Q = false;
     private static int R = -1;
     private static boolean S = false;
-    private static volatile C4392b T = null;
+    private static volatile b T = null;
     static String a = "";
     static String b = "";
     static volatile boolean c = true;
     public static boolean d = false;
     static String e = "";
     static boolean f = false;
-    public static InterfaceC4391a g = null;
+    public static a g = null;
     static int h = -1;
     static String i = "";
     static String j = "";
@@ -104,9 +103,8 @@ public final class bo {
     private static String z = "";
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.bo$a */
     /* loaded from: classes10.dex */
-    public interface InterfaceC4391a {
+    public interface a {
         df a(byte[] bArr, Map<String, String> map);
 
         String a();
@@ -119,9 +117,8 @@ public final class bo {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.bo$b */
     /* loaded from: classes10.dex */
-    public static class C4392b {
+    public static class b {
         private static Context a;
         private static BroadcastReceiver b;
         private static ConnectivityManager c;
@@ -173,14 +170,13 @@ public final class bo {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.bo$c */
     /* loaded from: classes10.dex */
-    public static class ServiceConnectionC4393c implements ServiceConnection {
+    public static class c implements ServiceConnection {
         private static String a;
         private Context b;
         private int c;
 
-        ServiceConnectionC4393c(Context context, int i) {
+        c(Context context, int i) {
             this.b = context;
             this.c = i;
         }
@@ -276,7 +272,7 @@ public final class bo {
                 r6.recycle()
                 throw r7
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.amap.api.col.s.bo.ServiceConnectionC4393c.onServiceConnected(android.content.ComponentName, android.os.IBinder):void");
+            throw new UnsupportedOperationException("Method not decompiled: com.amap.api.col.s.bo.c.onServiceConnected(android.content.ComponentName, android.os.IBinder):void");
         }
 
         @Override // android.content.ServiceConnection
@@ -618,21 +614,21 @@ public final class bo {
         return null;
     }
 
-    private static synchronized C4392b P(Context context) {
+    private static synchronized b P(Context context) {
         synchronized (bo.class) {
             if (T == null) {
                 if (context == null) {
                     return null;
                 }
-                C4392b c4392b = new C4392b();
-                T = c4392b;
-                c4392b.a(context.getApplicationContext());
+                b bVar = new b();
+                T = bVar;
+                bVar.a(context.getApplicationContext());
             }
             return T;
         }
     }
 
-    public static InterfaceC4391a c() {
+    public static a c() {
         return g;
     }
 
@@ -816,7 +812,7 @@ public final class bo {
             return z;
         }
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        WindowManager windowManager = (WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+        WindowManager windowManager = (WindowManager) context.getSystemService(tb.v.ATTACH_MODE_WINDOW);
         if (windowManager == null) {
             return "";
         }
@@ -1094,8 +1090,8 @@ public final class bo {
             if (!TextUtils.isEmpty(e)) {
                 return e;
             }
-            InterfaceC4391a interfaceC4391a = g;
-            return interfaceC4391a == null ? "" : interfaceC4391a.a();
+            a aVar = g;
+            return aVar == null ? "" : aVar.a();
         } catch (Throwable unused) {
             return "";
         }
@@ -1155,9 +1151,9 @@ public final class bo {
         return str3 == null ? "" : str3;
     }
 
-    public static void a(InterfaceC4391a interfaceC4391a) {
+    public static void a(a aVar) {
         if (g == null) {
-            g = interfaceC4391a;
+            g = aVar;
         }
     }
 
@@ -1276,14 +1272,14 @@ public final class bo {
                 intent.setClassName(bw.c("YY29tLmhleXRhcC5vcGVuaWQ"), bw.c("SY29tLmhleXRhcC5vcGVuaWQuSWRlbnRpZnlTZXJ2aWNl"));
                 intent.setAction(bw.c("EYWN0aW9uLmNvbS5oZXl0YXAub3BlbmlkLk9QRU5fSURfU0VSVklDRQ"));
             }
-            ServiceConnectionC4393c serviceConnectionC4393c = new ServiceConnectionC4393c(context, i2);
-            if (context.bindService(intent, serviceConnectionC4393c, 1)) {
+            c cVar = new c(context, i2);
+            if (context.bindService(intent, cVar, 1)) {
                 int i3 = 0;
                 while (i3 < 100 && TextUtils.isEmpty(n)) {
                     i3++;
                     Thread.sleep(15L);
                 }
-                context.unbindService(serviceConnectionC4393c);
+                context.unbindService(cVar);
             }
             return n;
         } catch (Throwable th) {

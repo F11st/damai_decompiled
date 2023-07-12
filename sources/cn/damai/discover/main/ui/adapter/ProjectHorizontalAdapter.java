@@ -9,8 +9,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.discover.viewholder.BaseViewHolder;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
 import cn.damai.homepage.R$id;
@@ -106,7 +106,7 @@ public class ProjectHorizontalAdapter extends RecyclerView.Adapter<BaseViewHolde
                 this.f.setVisibility(0);
             }
             this.a.setBorder(1, Color.parseColor("#1A000000"));
-            DMImageCreator f = C0504a.b().f(projectItemBean.verticalPic, ProjectHorizontalAdapter.this.e, ProjectHorizontalAdapter.this.f);
+            DMImageCreator f = a.b().f(projectItemBean.verticalPic, ProjectHorizontalAdapter.this.e, ProjectHorizontalAdapter.this.f);
             int i2 = R$drawable.uikit_default_image_bg_gradient;
             f.i(i2).c(i2);
             f.g(this.a);

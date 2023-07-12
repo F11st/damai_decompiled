@@ -1,6 +1,5 @@
 package tb;
 
-import cn.damai.solid.C1768a;
 import cn.damai.solid.bean.SoGroupEnum;
 import cn.damai.solid.listener.SoInstallListener;
 import cn.damai.solid.listener.UniqueKeyProvider;
@@ -51,7 +50,7 @@ public class re2 implements SoInstallListener, UniqueKeyProvider {
             ipChange.ipc$dispatch("432955817", new Object[]{this, str, str2});
             return;
         }
-        C1768a.f("onInstallFail group:" + this.c.soGroupName + "code:" + str + " msg:" + str2);
+        cn.damai.solid.a.f("onInstallFail group:" + this.c.soGroupName + "code:" + str + " msg:" + str2);
         HashMap hashMap = new HashMap();
         Map<String, String> alarmExtraMap = alarmExtraMap();
         if (!cb2.f(alarmExtraMap)) {
@@ -72,7 +71,7 @@ public class re2 implements SoInstallListener, UniqueKeyProvider {
             ipChange.ipc$dispatch("2115818580", new Object[]{this});
             return;
         }
-        C1768a.f("onInstallSuccess group:" + this.c.soGroupName);
+        cn.damai.solid.a.f("onInstallSuccess group:" + this.c.soGroupName);
         HashMap hashMap = new HashMap();
         hashMap.put("successSoGroup", this.c.soGroupName);
         se2.b(hashMap);

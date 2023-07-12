@@ -21,7 +21,7 @@ public class ly extends cz {
         return x41.f(hyVar, true, hy.class);
     }
 
-    @Override // tb.cz, com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // tb.cz, com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         Object evalWithArgs = super.evalWithArgs(objArr, dXRuntimeContext);
         if (evalWithArgs != null) {
@@ -37,7 +37,7 @@ public class ly extends cz {
         return new JSONObject();
     }
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
     public String getDxFunctionName() {
         return "eventChainEventData";
     }

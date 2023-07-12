@@ -6,9 +6,9 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DXRootView;
 import com.taobao.android.dinamicx.DXRuntimeContext;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import com.taobao.android.dinamicx.view.DXLinearLayoutManager;
 import com.taobao.android.dinamicx.view.DXNativeAutoLoopRecyclerView;
@@ -124,11 +124,11 @@ public class DXSliderLayout extends DXScrollerLayout {
                     }
                 })) {
                     s00.d(DXSliderLayout.TAG, DXSliderLayout.TAG, "onScrollStateChanged state idle scrollToPosition failed, position =  " + findFirstVisibleItemPosition);
-                    C6368e c6368e = new C6368e(r10.DB_NAME);
-                    C6368e.C6369a c6369a = new C6368e.C6369a("Render", "RENDER_ERROR", C6368e.DX_ERROR_CODE_SLIDER_LAYOUT_IDLE_SCROLL_TO_FAILED);
-                    c6369a.e = "onScrollStateChanged state idle scrollToPosition failed, position =  " + findFirstVisibleItemPosition;
-                    c6368e.c.add(c6369a);
-                    DXAppMonitor.n(c6368e);
+                    com.taobao.android.dinamicx.e eVar = new com.taobao.android.dinamicx.e(r10.DB_NAME);
+                    e.a aVar = new e.a("Render", "RENDER_ERROR", com.taobao.android.dinamicx.e.DX_ERROR_CODE_SLIDER_LAYOUT_IDLE_SCROLL_TO_FAILED);
+                    aVar.e = "onScrollStateChanged state idle scrollToPosition failed, position =  " + findFirstVisibleItemPosition;
+                    eVar.c.add(aVar);
+                    DXAppMonitor.n(eVar);
                 }
                 if (dXNativeAutoLoopRecyclerView.getOnPageChangeListener() != null) {
                     dXNativeAutoLoopRecyclerView.getOnPageChangeListener().onPageSelected(findFirstVisibleItemPosition);
@@ -169,9 +169,8 @@ public class DXSliderLayout extends DXScrollerLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXSliderLayout$a */
     /* loaded from: classes11.dex */
-    public static class C6456a implements IDXBuilderWidgetNode {
+    public static class a implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(Object obj) {
             return new DXSliderLayout();
@@ -179,14 +178,13 @@ public class DXSliderLayout extends DXScrollerLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXSliderLayout$b */
     /* loaded from: classes11.dex */
-    public static class C6457b implements DXNativeAutoLoopRecyclerView.OnPageChangeListener {
+    public static class b implements DXNativeAutoLoopRecyclerView.OnPageChangeListener {
         private DXSliderLayout a;
         private int b;
         private b00 c = new b00(-8975195222378757716L);
 
-        public C6457b(DXSliderLayout dXSliderLayout, int i) {
+        public b(DXSliderLayout dXSliderLayout, int i) {
             this.a = dXSliderLayout;
             this.b = i;
         }
@@ -195,11 +193,11 @@ public class DXSliderLayout extends DXScrollerLayout {
         public void onPageSelected(int i) {
             if (this.b == 0) {
                 DXRuntimeContext dXRuntimeContext = this.a.getDXRuntimeContext();
-                C6368e c6368e = new C6368e(dXRuntimeContext.getBizType());
-                c6368e.b = dXRuntimeContext.getDxTemplateItem();
-                C6368e.C6369a c6369a = new C6368e.C6369a("Engine", "Engine_Render", C6368e.DX_ERROR_CODE_SLIDER_LAYOUT_ITEM_COUNT_0);
-                c6369a.e = "position=" + i;
-                c6368e.c.add(c6369a);
+                com.taobao.android.dinamicx.e eVar = new com.taobao.android.dinamicx.e(dXRuntimeContext.getBizType());
+                eVar.b = dXRuntimeContext.getDxTemplateItem();
+                e.a aVar = new e.a("Engine", "Engine_Render", com.taobao.android.dinamicx.e.DX_ERROR_CODE_SLIDER_LAYOUT_ITEM_COUNT_0);
+                aVar.e = "position=" + i;
+                eVar.c.add(aVar);
                 return;
             }
             DXRuntimeContext dXRuntimeContext2 = this.a.getDXRuntimeContext();
@@ -208,8 +206,8 @@ public class DXSliderLayout extends DXScrollerLayout {
             }
             DXNativeAutoLoopRecyclerView dXNativeAutoLoopRecyclerView = (DXNativeAutoLoopRecyclerView) dXRuntimeContext2.getNativeView();
             if (dXNativeAutoLoopRecyclerView == null) {
-                new C6368e(dXRuntimeContext2.getBizType()).b = dXRuntimeContext2.getDxTemplateItem();
-                C6368e.C6369a c6369a2 = new C6368e.C6369a("Engine", "Engine_Render", C6368e.DX_ERROR_CODE_SLIDER_LAYOUT_RECYCLER_VIEW_NULL);
+                new com.taobao.android.dinamicx.e(dXRuntimeContext2.getBizType()).b = dXRuntimeContext2.getDxTemplateItem();
+                e.a aVar2 = new e.a("Engine", "Engine_Render", com.taobao.android.dinamicx.e.DX_ERROR_CODE_SLIDER_LAYOUT_RECYCLER_VIEW_NULL);
                 DXWidgetNode referenceNode = this.a.getReferenceNode();
                 WeakReference<View> wRView = referenceNode != null ? referenceNode.getWRView() : null;
                 StringBuilder sb = new StringBuilder();
@@ -217,7 +215,7 @@ public class DXSliderLayout extends DXScrollerLayout {
                 sb.append(referenceNode == null ? "null" : "notNull");
                 sb.append("weakReferenceView is");
                 sb.append(wRView != null ? "notNull" : "null");
-                c6369a2.e = sb.toString();
+                aVar2.e = sb.toString();
                 try {
                     StringBuilder sb2 = new StringBuilder();
                     sb2.append("thread info:");
@@ -238,7 +236,7 @@ public class DXSliderLayout extends DXScrollerLayout {
                         }
                     }
                     s00.b(sb2.toString());
-                    c6369a2.e += sb2.toString();
+                    aVar2.e += sb2.toString();
                 } finally {
                     try {
                         return;
@@ -329,7 +327,7 @@ public class DXSliderLayout extends DXScrollerLayout {
         return super.getDefaultValueForIntAttr(j);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.IDXNodePropProvider
+    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.IDXNodePropProvider
     public Object getNodePropByKey(String str) {
         if ("pageIndex".equals(str)) {
             return Integer.valueOf(this.pageIndex);
@@ -357,7 +355,7 @@ public class DXSliderLayout extends DXScrollerLayout {
         return new SliderScrollListener(this.isCorrectionSlideOffset_Android, this.avoidIndexDeltaToLarge_Android);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onClone(DXWidgetNode dXWidgetNode, boolean z) {
         super.onClone(dXWidgetNode, z);
         if (dXWidgetNode instanceof DXSliderLayout) {
@@ -398,9 +396,9 @@ public class DXSliderLayout extends DXScrollerLayout {
             return false;
         }
         dXNativeAutoLoopRecyclerView.setNeedProcessViewLifeCycle(false);
-        long b = hyVar.b();
-        if (5288671110273408574L != b) {
-            if (5388973340095122049L == b) {
+        long b2 = hyVar.b();
+        if (5288671110273408574L != b2) {
+            if (5388973340095122049L == b2) {
                 try {
                     dXNativeAutoLoopRecyclerView.stopTimer();
                     dXNativeAutoLoopRecyclerView.setSaveInstanceState(dXNativeAutoLoopRecyclerView.getLayoutManager().onSaveInstanceState());
@@ -430,11 +428,11 @@ public class DXSliderLayout extends DXScrollerLayout {
                 }
             })) {
                 s00.d(TAG, TAG, "onAppear correct index scrollToPosition failed, position =  " + scrolledX2);
-                C6368e c6368e = new C6368e(r10.DB_NAME);
-                C6368e.C6369a c6369a = new C6368e.C6369a("Render", "RENDER_ERROR", C6368e.DX_ERROR_CODE_SLIDER_LAYOUT_APPEAR_SCROLL_TO_FAILED);
-                c6369a.e = "onAppear correct index scrollToPosition failed, position =  " + scrolledX2;
-                c6368e.c.add(c6369a);
-                DXAppMonitor.n(c6368e);
+                com.taobao.android.dinamicx.e eVar = new com.taobao.android.dinamicx.e(r10.DB_NAME);
+                e.a aVar = new e.a("Render", "RENDER_ERROR", com.taobao.android.dinamicx.e.DX_ERROR_CODE_SLIDER_LAYOUT_APPEAR_SCROLL_TO_FAILED);
+                aVar.e = "onAppear correct index scrollToPosition failed, position =  " + scrolledX2;
+                eVar.c.add(aVar);
+                DXAppMonitor.n(eVar);
             }
             if (dXNativeAutoLoopRecyclerView.getOnPageChangeListener() != null) {
                 dXNativeAutoLoopRecyclerView.getOnPageChangeListener().onPageSelected(scrolledX2);
@@ -456,7 +454,7 @@ public class DXSliderLayout extends DXScrollerLayout {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onRenderView(Context context, View view) {
         DXSliderLayout dXSliderLayout;
         int i;
@@ -493,20 +491,20 @@ public class DXSliderLayout extends DXScrollerLayout {
                 });
                 if (this.avoidIndexDeltaToLarge_Android && !e) {
                     s00.d(TAG, TAG, "onRenderView scrollToPosition failed, targetIndex = " + calculateTargetIndex);
-                    C6368e c6368e = new C6368e(r10.DB_NAME);
-                    C6368e.C6369a c6369a = new C6368e.C6369a("Render", "RENDER_ERROR", C6368e.DX_ERROR_CODE_SLIDER_LAYOUT_RENDER_SCROLL_TO_FAILED);
-                    c6369a.e = "onRenderView scrollToPosition failed, targetIndex = " + calculateTargetIndex;
-                    c6368e.c.add(c6369a);
-                    DXAppMonitor.n(c6368e);
+                    com.taobao.android.dinamicx.e eVar = new com.taobao.android.dinamicx.e(r10.DB_NAME);
+                    e.a aVar = new e.a("Render", "RENDER_ERROR", com.taobao.android.dinamicx.e.DX_ERROR_CODE_SLIDER_LAYOUT_RENDER_SCROLL_TO_FAILED);
+                    aVar.e = "onRenderView scrollToPosition failed, targetIndex = " + calculateTargetIndex;
+                    eVar.c.add(aVar);
+                    DXAppMonitor.n(eVar);
                 }
             } else {
                 scrollToIndexOnIsNotInfinite(dXNativeAutoLoopRecyclerView, dXSliderLayout, calculateTargetIndex);
             }
             ArrayList<DXWidgetNode> arrayList = dXSliderLayout.itemWidgetNodes;
-            C6457b c6457b = new C6457b(dXSliderLayout, arrayList != null ? arrayList.size() : 0);
-            dXNativeAutoLoopRecyclerView.setOnPageChangeListener(c6457b);
+            b bVar = new b(dXSliderLayout, arrayList != null ? arrayList.size() : 0);
+            dXNativeAutoLoopRecyclerView.setOnPageChangeListener(bVar);
             if (!this.disablePageSelectAndstartTimeOnPreRender || getDXRuntimeContext().getRenderType() != 2) {
-                c6457b.onPageSelected(calculateTargetIndex);
+                bVar.onPageSelected(calculateTargetIndex);
             }
             dXNativeAutoLoopRecyclerView.setManualSwitchEnabled(this.manualSwitchEnabled);
             dXNativeAutoLoopRecyclerView.setAvoidIncessantScroll(this.avoidIncessantScroll);
@@ -524,7 +522,7 @@ public class DXSliderLayout extends DXScrollerLayout {
         }
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetIntAttribute(long j, int i) {
         if (j == DX_SLIDER_LAYOUT_AUTO_SCROLL) {
             this.autoScroll = i != 0;

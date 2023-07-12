@@ -7,7 +7,7 @@ import cn.damai.common.app.ShareperfenceConstants;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public final class ei implements Parcelable {
-    public static final Parcelable.Creator<ei> CREATOR = new C5823a();
+    public static final Parcelable.Creator<ei> CREATOR = new a();
     private String e;
     private String f;
     private long a = 0;
@@ -20,10 +20,9 @@ public final class ei implements Parcelable {
     private String j = null;
 
     /* compiled from: Taobao */
-    /* renamed from: com.loc.ei$a */
     /* loaded from: classes10.dex */
-    static class C5823a implements Parcelable.Creator<ei> {
-        C5823a() {
+    static class a implements Parcelable.Creator<ei> {
+        a() {
         }
 
         private static ei a(Parcel parcel) {

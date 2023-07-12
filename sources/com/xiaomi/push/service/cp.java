@@ -1,6 +1,5 @@
 package com.xiaomi.push.service;
 
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.dx;
 import com.xiaomi.push.fx;
 import com.xiaomi.push.ga;
@@ -22,11 +21,11 @@ class cp extends fx {
     /* renamed from: a */
     public byte[] mo918a() {
         try {
-            dx.C7636b c7636b = new dx.C7636b();
-            c7636b.a(bv.a().m1209a());
-            return c7636b.m852a();
+            dx.b bVar = new dx.b();
+            bVar.a(bv.a().m1209a());
+            return bVar.m852a();
         } catch (Exception e) {
-            AbstractC7535b.m586a("getOBBString err: " + e.toString());
+            com.xiaomi.channel.commonutils.logger.b.m586a("getOBBString err: " + e.toString());
             return null;
         }
     }

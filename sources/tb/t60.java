@@ -72,7 +72,7 @@ public class t60 {
         try {
             if (Build.VERSION.SDK_INT > 16) {
                 Point point = new Point();
-                Display.getRealSize(((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), point);
+                Display.getRealSize(((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), point);
                 return new BigDecimal(Math.pow(com.alibaba.wireless.security.aopsdk.replace.android.graphics.Point.gety(point) / context.getResources().getDisplayMetrics().ydpi, 2.0d)).setScale(1, 4).doubleValue();
             }
             return 0.0d;

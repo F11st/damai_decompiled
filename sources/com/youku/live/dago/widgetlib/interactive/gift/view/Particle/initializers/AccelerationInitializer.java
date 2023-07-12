@@ -2,7 +2,7 @@ package com.youku.live.dago.widgetlib.interactive.gift.view.Particle.initializer
 
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.youku.live.dago.widgetlib.interactive.gift.view.Particle.C7945Particle;
+import com.youku.live.dago.widgetlib.interactive.gift.view.Particle.Particle;
 import java.util.Random;
 
 /* compiled from: Taobao */
@@ -22,10 +22,10 @@ public class AccelerationInitializer implements ParticleInitializer {
     }
 
     @Override // com.youku.live.dago.widgetlib.interactive.gift.view.Particle.initializers.ParticleInitializer
-    public void initParticle(C7945Particle c7945Particle, Random random) {
+    public void initParticle(Particle particle, Random random) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-214270228")) {
-            ipChange.ipc$dispatch("-214270228", new Object[]{this, c7945Particle, random});
+            ipChange.ipc$dispatch("-214270228", new Object[]{this, particle, random});
             return;
         }
         int i = this.mMinAngle;
@@ -39,7 +39,7 @@ public class AccelerationInitializer implements ParticleInitializer {
         float f3 = this.mMinValue;
         double d = (nextFloat * (f2 - f3)) + f3;
         double d2 = (float) ((f * 3.141592653589793d) / 180.0d);
-        c7945Particle.mAccelerationX = (float) (Math.cos(d2) * d);
-        c7945Particle.mAccelerationY = (float) (d * Math.sin(d2));
+        particle.mAccelerationX = (float) (Math.cos(d2) * d);
+        particle.mAccelerationY = (float) (d * Math.sin(d2));
     }
 }

@@ -1,16 +1,16 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.SingleObserver;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.disposables.DisposableHelper;
 import java.util.NoSuchElementException;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableLastSingle<T> extends AbstractC8152e<T> {
+public final class ObservableLastSingle<T> extends e<T> {
     final T defaultItem;
     final ObservableSource<T> source;
 
@@ -81,7 +81,7 @@ public final class ObservableLastSingle<T> extends AbstractC8152e<T> {
         this.defaultItem = t;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super T> singleObserver) {
         this.source.subscribe(new LastObserver(singleObserver, this.defaultItem));
     }

@@ -46,14 +46,14 @@ public final class Checks {
             i++;
             String invoke = check.invoke(functionDescriptor);
             if (invoke != null) {
-                return new ki.C9362b(invoke);
+                return new ki.b(invoke);
             }
         }
         String invoke2 = this.d.invoke(functionDescriptor);
         if (invoke2 != null) {
-            return new ki.C9362b(invoke2);
+            return new ki.b(invoke2);
         }
-        return ki.C9363c.INSTANCE;
+        return ki.c.INSTANCE;
     }
 
     public final boolean b(@NotNull FunctionDescriptor functionDescriptor) {

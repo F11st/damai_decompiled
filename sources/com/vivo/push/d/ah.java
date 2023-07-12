@@ -1,50 +1,38 @@
 package com.vivo.push.d;
 
 import android.content.Context;
-import com.vivo.push.AbstractC7496o;
-import com.vivo.push.AbstractRunnableC7491l;
-import com.vivo.push.C7481e;
-import com.vivo.push.a.C7411a;
-import com.vivo.push.b.C7415c;
-import com.vivo.push.b.C7417e;
-import com.vivo.push.b.C7435w;
 import com.vivo.push.cache.ClientConfigManagerImpl;
-import com.vivo.push.model.C7494b;
-import com.vivo.push.util.C7509b;
-import com.vivo.push.util.C7523p;
-import com.vivo.push.util.C7526s;
-import com.vivo.push.util.C7527t;
 
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public final class ah extends AbstractRunnableC7491l {
+public final class ah extends com.vivo.push.l {
     /* JADX INFO: Access modifiers changed from: package-private */
-    public ah(AbstractC7496o abstractC7496o) {
-        super(abstractC7496o);
+    public ah(com.vivo.push.o oVar) {
+        super(oVar);
     }
 
-    @Override // com.vivo.push.AbstractRunnableC7491l
-    protected final void a(AbstractC7496o abstractC7496o) {
+    @Override // com.vivo.push.l
+    protected final void a(com.vivo.push.o oVar) {
         Context context = this.a;
         if (context == null) {
-            C7523p.d("SendCommandTask", "SendCommandTask " + abstractC7496o + " ; mContext is Null");
-        } else if (abstractC7496o == null) {
-            C7523p.d("SendCommandTask", "SendCommandTask pushCommand is Null");
+            com.vivo.push.util.p.d("SendCommandTask", "SendCommandTask " + oVar + " ; mContext is Null");
+        } else if (oVar == null) {
+            com.vivo.push.util.p.d("SendCommandTask", "SendCommandTask pushCommand is Null");
         } else {
-            C7494b a = C7527t.a(context);
-            int b = abstractC7496o.b();
+            com.vivo.push.model.b a = com.vivo.push.util.t.a(context);
+            int b = oVar.b();
             if (b == 2009) {
-                C7523p.a(ClientConfigManagerImpl.getInstance(this.a).isDebug());
-                if (C7523p.a()) {
-                    C7481e.a().i();
-                    C7509b c7509b = new C7509b();
-                    c7509b.a(this.a, "com.vivo.push_preferences.hybridapptoken_v1");
-                    c7509b.a();
-                    C7509b c7509b2 = new C7509b();
-                    c7509b2.a(this.a, "com.vivo.push_preferences.appconfig_v1");
-                    c7509b2.a();
-                    if (!C7481e.a().e()) {
+                com.vivo.push.util.p.a(ClientConfigManagerImpl.getInstance(this.a).isDebug());
+                if (com.vivo.push.util.p.a()) {
+                    com.vivo.push.e.a().i();
+                    com.vivo.push.util.b bVar = new com.vivo.push.util.b();
+                    bVar.a(this.a, "com.vivo.push_preferences.hybridapptoken_v1");
+                    bVar.a();
+                    com.vivo.push.util.b bVar2 = new com.vivo.push.util.b();
+                    bVar2.a(this.a, "com.vivo.push_preferences.appconfig_v1");
+                    bVar2.a();
+                    if (!com.vivo.push.e.a().e()) {
                         ClientConfigManagerImpl.getInstance(this.a).clearPush();
                     }
                 }
@@ -55,36 +43,36 @@ public final class ah extends AbstractRunnableC7491l {
                     case 2004:
                     case 2005:
                         if (a != null && !a.c()) {
-                            C7415c c7415c = (C7415c) abstractC7496o;
-                            int a2 = C7526s.a(c7415c);
+                            com.vivo.push.b.c cVar = (com.vivo.push.b.c) oVar;
+                            int a2 = com.vivo.push.util.s.a(cVar);
                             if (a2 != 0) {
-                                C7481e.a().a(c7415c.h(), a2);
+                                com.vivo.push.e.a().a(cVar.h(), a2);
                                 return;
                             }
                         } else {
-                            C7481e.a().a(((C7415c) abstractC7496o).h(), 1005);
+                            com.vivo.push.e.a().a(((com.vivo.push.b.c) oVar).h(), 1005);
                             break;
                         }
                         break;
                 }
             } else {
-                C7523p.a(ClientConfigManagerImpl.getInstance(this.a).isDebug(((C7435w) abstractC7496o).d()));
+                com.vivo.push.util.p.a(ClientConfigManagerImpl.getInstance(this.a).isDebug(((com.vivo.push.b.w) oVar).d()));
             }
             if (a == null) {
-                C7523p.d("SendCommandTask", "SendCommandTask " + abstractC7496o + " ; pushPkgInfo is Null");
+                com.vivo.push.util.p.d("SendCommandTask", "SendCommandTask " + oVar + " ; pushPkgInfo is Null");
                 return;
             }
             String a3 = a.a();
             if (a.c()) {
                 try {
-                    C7481e.a().a(((C7415c) abstractC7496o).h(), 1004);
+                    com.vivo.push.e.a().a(((com.vivo.push.b.c) oVar).h(), 1004);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                abstractC7496o = new C7417e();
-                C7523p.d("SendCommandTask", "SendCommandTask " + abstractC7496o + " ; pkgName is InBlackList ");
+                oVar = new com.vivo.push.b.e();
+                com.vivo.push.util.p.d("SendCommandTask", "SendCommandTask " + oVar + " ; pkgName is InBlackList ");
             }
-            C7411a.a(this.a, a3, abstractC7496o);
+            com.vivo.push.a.a.a(this.a, a3, oVar);
         }
     }
 }

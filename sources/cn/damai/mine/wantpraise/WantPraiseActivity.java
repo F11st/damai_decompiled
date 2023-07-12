@@ -7,8 +7,8 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 import androidx.viewpager.widget.ViewPager;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.homepage.R$color;
 import cn.damai.homepage.R$id;
@@ -46,12 +46,11 @@ public class WantPraiseActivity extends DamaiBaseActivity implements WantPriseCa
     private String priseNum = "";
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.wantpraise.WantPraiseActivity$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1478a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1478a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -66,12 +65,11 @@ public class WantPraiseActivity extends DamaiBaseActivity implements WantPriseCa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.wantpraise.WantPraiseActivity$b */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1479b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1479b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -100,7 +98,7 @@ public class WantPraiseActivity extends DamaiBaseActivity implements WantPriseCa
             this.targetIdStr = intent.getStringExtra("targetIdStr");
             this.self = intent.getBooleanExtra("self", false);
         }
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i(vf1.WANT_PRAISE_PAGE));
+        setDamaiUTKeyBuilder(new a.b().i(vf1.WANT_PRAISE_PAGE));
     }
 
     private void initPageHeadView() {
@@ -131,7 +129,7 @@ public class WantPraiseActivity extends DamaiBaseActivity implements WantPriseCa
             scrollTitleBean.name = this.mTitles[i];
             arrayList.add(scrollTitleBean);
         }
-        this.mTitleScroll.setFontColor(R$color.color_000000, R$color.color_333333).setFontSize(16, 16).setTitle(arrayList).setHeight(46).setOnTitleClickListener(new View$OnClickListenerC1479b()).commit();
+        this.mTitleScroll.setFontColor(R$color.color_000000, R$color.color_333333).setFontSize(16, 16).setTitle(arrayList).setHeight(46).setOnTitleClickListener(new b()).commit();
     }
 
     private void initTitleView() {
@@ -145,7 +143,7 @@ public class WantPraiseActivity extends DamaiBaseActivity implements WantPriseCa
         this.mViewStatusBarSpace = findViewById.findViewById(R$id.title_bar_space);
         DMIconFontTextView dMIconFontTextView = (DMIconFontTextView) findViewById.findViewById(R$id.mine_title_left_icon_font_tv);
         this.mTvTitleBack = dMIconFontTextView;
-        dMIconFontTextView.setOnClickListener(new View$OnClickListenerC1478a());
+        dMIconFontTextView.setOnClickListener(new a());
         TextView textView = (TextView) findViewById.findViewById(R$id.mine_title_tv);
         this.mTvTitle = textView;
         this.preSuffix = "我";
@@ -208,9 +206,9 @@ public class WantPraiseActivity extends DamaiBaseActivity implements WantPriseCa
                     }
                     WantPraiseActivity.this.mTitleScroll.selectTitle(i);
                     if (i == 0) {
-                        C0529c.e().x(vf1.x().f0(0, "0"));
+                        c.e().x(vf1.x().f0(0, "0"));
                     } else {
-                        C0529c.e().x(vf1.x().f0(1, "1"));
+                        c.e().x(vf1.x().f0(1, "1"));
                     }
                 }
             });

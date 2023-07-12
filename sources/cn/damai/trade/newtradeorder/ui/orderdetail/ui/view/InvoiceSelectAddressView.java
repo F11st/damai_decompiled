@@ -41,12 +41,11 @@ public class InvoiceSelectAddressView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.view.InvoiceSelectAddressView$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2188a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2188a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -61,12 +60,11 @@ public class InvoiceSelectAddressView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.view.InvoiceSelectAddressView$b */
     /* loaded from: classes8.dex */
-    public class C2189b implements InvoiceAddressAdapter.OnAddressItemClickListener {
+    public class b implements InvoiceAddressAdapter.OnAddressItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2189b() {
+        b() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.orderdetail.ui.adapter.InvoiceAddressAdapter.OnAddressItemClickListener
@@ -128,8 +126,8 @@ public class InvoiceSelectAddressView extends FrameLayout {
             ipChange.ipc$dispatch("629493479", new Object[]{this});
             return;
         }
-        this.mOnConfirmClickListener = new View$OnClickListenerC2188a();
-        this.mOnAddressItemClickListener = new C2189b();
+        this.mOnConfirmClickListener = new a();
+        this.mOnAddressItemClickListener = new b();
     }
 
     private void setupListeners() {

@@ -4,8 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.text.TextUtils;
 import androidx.annotation.NonNull;
-import com.efs.sdk.base.a.c.a.C4783c;
-import com.efs.sdk.base.a.d.C4786a;
+import com.efs.sdk.base.a.c.a.c;
 import com.efs.sdk.base.protocol.ILogProtocol;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,7 +15,7 @@ import tb.w63;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class EfsReporter {
-    private static C4786a a;
+    private static com.efs.sdk.base.a.d.a a;
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
@@ -119,17 +118,17 @@ public class EfsReporter {
     }
 
     private EfsReporter(Builder builder) {
-        a = new C4786a(builder);
+        a = new com.efs.sdk.base.a.d.a(builder);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     @NonNull
     public f33 c() {
-        return C4786a.a();
+        return com.efs.sdk.base.a.d.a.a();
     }
 
     public Map<String, Object> b() {
-        return new HashMap(C4783c.a().e.f);
+        return new HashMap(c.a().e.f);
     }
 
     public void d(ILogProtocol iLogProtocol) {

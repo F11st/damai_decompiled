@@ -29,7 +29,7 @@ public final class CityWantRequestKt {
         b41.i(actionRelation, "actionRelation");
         b41.i(pageName, "pageName");
         actionRelation.start();
-        rb0.C9647a c9647a = rb0.Companion;
+        rb0.a aVar = rb0.Companion;
         CityWantRequest cityWantRequest = new CityWantRequest();
         cityWantRequest.setGroup(CityWantRequest.GroupType.ARTIST_GROUP.getValue());
         cityWantRequest.setTargetType(CityWantRequest.TargetType.ARTIST.getValue());
@@ -37,7 +37,7 @@ public final class CityWantRequestKt {
         cityWantRequest.setTargetId(str);
         cityWantRequest.setPageName(pageName.getValue());
         cityWantRequest.setReturnRelationStatus(1);
-        c9647a.b(cityWantRequest).a().doOnKTSuccess(new Function1<FollowStateBean, wt2>() { // from class: com.alibaba.pictures.bricks.component.artist.wishcity.cityrequest.CityWantRequestKt$doRelationUpdate4Artist$2
+        aVar.b(cityWantRequest).a().doOnKTSuccess(new Function1<FollowStateBean, wt2>() { // from class: com.alibaba.pictures.bricks.component.artist.wishcity.cityrequest.CityWantRequestKt$doRelationUpdate4Artist$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* JADX INFO: Access modifiers changed from: package-private */

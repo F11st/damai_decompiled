@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -13,9 +13,9 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableZipIterable<T, U, V> extends AbstractC8149d<V> {
+public final class ObservableZipIterable<T, U, V> extends d<V> {
     final Iterable<U> other;
-    final AbstractC8149d<? extends T> source;
+    final d<? extends T> source;
     final BiFunction<? super T, ? super U, ? extends V> zipper;
 
     /* compiled from: Taobao */
@@ -106,13 +106,13 @@ public final class ObservableZipIterable<T, U, V> extends AbstractC8149d<V> {
         }
     }
 
-    public ObservableZipIterable(AbstractC8149d<? extends T> abstractC8149d, Iterable<U> iterable, BiFunction<? super T, ? super U, ? extends V> biFunction) {
-        this.source = abstractC8149d;
+    public ObservableZipIterable(d<? extends T> dVar, Iterable<U> iterable, BiFunction<? super T, ? super U, ? extends V> biFunction) {
+        this.source = dVar;
         this.other = iterable;
         this.zipper = biFunction;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super V> observer) {
         try {
             Iterator it = (Iterator) ObjectHelper.requireNonNull(this.other.iterator(), "The iterator returned by other is null");

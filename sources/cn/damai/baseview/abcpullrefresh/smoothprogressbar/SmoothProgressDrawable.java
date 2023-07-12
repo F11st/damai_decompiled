@@ -65,9 +65,8 @@ public class SmoothProgressDrawable extends Drawable implements Animatable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.abcpullrefresh.smoothprogressbar.SmoothProgressDrawable$a */
     /* loaded from: classes.dex */
-    public static class C0285a {
+    public static class a {
         private static transient /* synthetic */ IpChange $ipChange;
         private Interpolator a;
         private int b;
@@ -85,7 +84,7 @@ public class SmoothProgressDrawable extends Drawable implements Animatable {
         private Drawable n;
         private Callbacks o;
 
-        public C0285a(Context context) {
+        public a(Context context) {
             g(context);
         }
 
@@ -110,10 +109,10 @@ public class SmoothProgressDrawable extends Drawable implements Animatable {
             this.m = false;
         }
 
-        public C0285a a(Drawable drawable) {
+        public a a(Drawable drawable) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-678451930")) {
-                return (C0285a) ipChange.ipc$dispatch("-678451930", new Object[]{this, drawable});
+                return (a) ipChange.ipc$dispatch("-678451930", new Object[]{this, drawable});
             }
             this.n = drawable;
             return this;
@@ -130,19 +129,19 @@ public class SmoothProgressDrawable extends Drawable implements Animatable {
             return new SmoothProgressDrawable(this.a, this.b, this.j, this.c, this.i, this.d, this.e, this.f, this.g, this.h, this.o, this.k, this.n, this.m);
         }
 
-        public C0285a c(int i) {
+        public a c(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "353344906")) {
-                return (C0285a) ipChange.ipc$dispatch("353344906", new Object[]{this, Integer.valueOf(i)});
+                return (a) ipChange.ipc$dispatch("353344906", new Object[]{this, Integer.valueOf(i)});
             }
             this.c = new int[]{i};
             return this;
         }
 
-        public C0285a d(int[] iArr) {
+        public a d(int[] iArr) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1843731508")) {
-                return (C0285a) ipChange.ipc$dispatch("-1843731508", new Object[]{this, iArr});
+                return (a) ipChange.ipc$dispatch("-1843731508", new Object[]{this, iArr});
             }
             if (iArr != null && iArr.length != 0) {
                 this.c = iArr;
@@ -151,28 +150,28 @@ public class SmoothProgressDrawable extends Drawable implements Animatable {
             throw new IllegalArgumentException("Your color array must not be empty");
         }
 
-        public C0285a e() {
+        public a e() {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1671186139")) {
-                return (C0285a) ipChange.ipc$dispatch("-1671186139", new Object[]{this});
+                return (a) ipChange.ipc$dispatch("-1671186139", new Object[]{this});
             }
             this.l = true;
             return this;
         }
 
-        public C0285a f(boolean z) {
+        public a f(boolean z) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1771160827")) {
-                return (C0285a) ipChange.ipc$dispatch("1771160827", new Object[]{this, Boolean.valueOf(z)});
+                return (a) ipChange.ipc$dispatch("1771160827", new Object[]{this, Boolean.valueOf(z)});
             }
             this.m = z;
             return this;
         }
 
-        public C0285a h(Interpolator interpolator) {
+        public a h(Interpolator interpolator) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1228825160")) {
-                return (C0285a) ipChange.ipc$dispatch("-1228825160", new Object[]{this, interpolator});
+                return (a) ipChange.ipc$dispatch("-1228825160", new Object[]{this, interpolator});
             }
             if (interpolator != null) {
                 this.a = interpolator;
@@ -181,28 +180,28 @@ public class SmoothProgressDrawable extends Drawable implements Animatable {
             throw new IllegalArgumentException("Interpolator can't be null");
         }
 
-        public C0285a i(boolean z) {
+        public a i(boolean z) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1017445538")) {
-                return (C0285a) ipChange.ipc$dispatch("1017445538", new Object[]{this, Boolean.valueOf(z)});
+                return (a) ipChange.ipc$dispatch("1017445538", new Object[]{this, Boolean.valueOf(z)});
             }
             this.h = z;
             return this;
         }
 
-        public C0285a j(boolean z) {
+        public a j(boolean z) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "454671735")) {
-                return (C0285a) ipChange.ipc$dispatch("454671735", new Object[]{this, Boolean.valueOf(z)});
+                return (a) ipChange.ipc$dispatch("454671735", new Object[]{this, Boolean.valueOf(z)});
             }
             this.k = z;
             return this;
         }
 
-        public C0285a k(float f) {
+        public a k(float f) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-321028908")) {
-                return (C0285a) ipChange.ipc$dispatch("-321028908", new Object[]{this, Float.valueOf(f)});
+                return (a) ipChange.ipc$dispatch("-321028908", new Object[]{this, Float.valueOf(f)});
             }
             if (f >= 0.0f) {
                 this.e = f;
@@ -211,10 +210,10 @@ public class SmoothProgressDrawable extends Drawable implements Animatable {
             throw new IllegalArgumentException("progressiveStartSpeed must be >= 0");
         }
 
-        public C0285a l(float f) {
+        public a l(float f) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-15250522")) {
-                return (C0285a) ipChange.ipc$dispatch("-15250522", new Object[]{this, Float.valueOf(f)});
+                return (a) ipChange.ipc$dispatch("-15250522", new Object[]{this, Float.valueOf(f)});
             }
             if (f >= 0.0f) {
                 this.f = f;
@@ -223,19 +222,19 @@ public class SmoothProgressDrawable extends Drawable implements Animatable {
             throw new IllegalArgumentException("progressiveStopSpeed must be >= 0");
         }
 
-        public C0285a m(boolean z) {
+        public a m(boolean z) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1986525538")) {
-                return (C0285a) ipChange.ipc$dispatch("1986525538", new Object[]{this, Boolean.valueOf(z)});
+                return (a) ipChange.ipc$dispatch("1986525538", new Object[]{this, Boolean.valueOf(z)});
             }
             this.g = z;
             return this;
         }
 
-        public C0285a n(int i) {
+        public a n(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1159182120")) {
-                return (C0285a) ipChange.ipc$dispatch("1159182120", new Object[]{this, Integer.valueOf(i)});
+                return (a) ipChange.ipc$dispatch("1159182120", new Object[]{this, Integer.valueOf(i)});
             }
             if (i > 0) {
                 this.b = i;
@@ -244,10 +243,10 @@ public class SmoothProgressDrawable extends Drawable implements Animatable {
             throw new IllegalArgumentException("SectionsCount must be > 0");
         }
 
-        public C0285a o(int i) {
+        public a o(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-174863534")) {
-                return (C0285a) ipChange.ipc$dispatch("-174863534", new Object[]{this, Integer.valueOf(i)});
+                return (a) ipChange.ipc$dispatch("-174863534", new Object[]{this, Integer.valueOf(i)});
             }
             if (i >= 0) {
                 this.j = i;
@@ -256,10 +255,10 @@ public class SmoothProgressDrawable extends Drawable implements Animatable {
             throw new IllegalArgumentException("SeparatorLength must be >= 0");
         }
 
-        public C0285a p(float f) {
+        public a p(float f) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1169916651")) {
-                return (C0285a) ipChange.ipc$dispatch("1169916651", new Object[]{this, Float.valueOf(f)});
+                return (a) ipChange.ipc$dispatch("1169916651", new Object[]{this, Float.valueOf(f)});
             }
             if (f >= 0.0f) {
                 this.d = f;
@@ -268,10 +267,10 @@ public class SmoothProgressDrawable extends Drawable implements Animatable {
             throw new IllegalArgumentException("Speed must be >= 0");
         }
 
-        public C0285a q(float f) {
+        public a q(float f) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-80765742")) {
-                return (C0285a) ipChange.ipc$dispatch("-80765742", new Object[]{this, Float.valueOf(f)});
+                return (a) ipChange.ipc$dispatch("-80765742", new Object[]{this, Float.valueOf(f)});
             }
             if (f >= 0.0f) {
                 this.i = f;

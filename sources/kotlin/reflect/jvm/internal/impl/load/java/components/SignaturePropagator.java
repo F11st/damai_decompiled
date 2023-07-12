@@ -14,13 +14,12 @@ import tb.z71;
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public interface SignaturePropagator {
-    public static final SignaturePropagator DO_NOTHING = new C8337a();
+    public static final SignaturePropagator DO_NOTHING = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.components.SignaturePropagator$a */
     /* loaded from: classes3.dex */
-    static class C8337a implements SignaturePropagator {
-        C8337a() {
+    static class a implements SignaturePropagator {
+        a() {
         }
 
         private static /* synthetic */ void a(int i) {
@@ -70,7 +69,7 @@ public interface SignaturePropagator {
 
         @Override // kotlin.reflect.jvm.internal.impl.load.java.components.SignaturePropagator
         @NotNull
-        public C8338b resolvePropagatedSignature(@NotNull JavaMethod javaMethod, @NotNull ClassDescriptor classDescriptor, @NotNull z71 z71Var, @Nullable z71 z71Var2, @NotNull List<ValueParameterDescriptor> list, @NotNull List<TypeParameterDescriptor> list2) {
+        public b resolvePropagatedSignature(@NotNull JavaMethod javaMethod, @NotNull ClassDescriptor classDescriptor, @NotNull z71 z71Var, @Nullable z71 z71Var2, @NotNull List<ValueParameterDescriptor> list, @NotNull List<TypeParameterDescriptor> list2) {
             if (javaMethod == null) {
                 a(0);
             }
@@ -86,14 +85,13 @@ public interface SignaturePropagator {
             if (list2 == null) {
                 a(4);
             }
-            return new C8338b(z71Var, z71Var2, list, list2, Collections.emptyList(), false);
+            return new b(z71Var, z71Var2, list, list2, Collections.emptyList(), false);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.components.SignaturePropagator$b */
     /* loaded from: classes3.dex */
-    public static class C8338b {
+    public static class b {
         private final z71 a;
         private final z71 b;
         private final List<ValueParameterDescriptor> c;
@@ -101,7 +99,7 @@ public interface SignaturePropagator {
         private final List<String> e;
         private final boolean f;
 
-        public C8338b(@NotNull z71 z71Var, @Nullable z71 z71Var2, @NotNull List<ValueParameterDescriptor> list, @NotNull List<TypeParameterDescriptor> list2, @NotNull List<String> list3, boolean z) {
+        public b(@NotNull z71 z71Var, @Nullable z71 z71Var2, @NotNull List<ValueParameterDescriptor> list, @NotNull List<TypeParameterDescriptor> list2, @NotNull List<String> list3, boolean z) {
             if (z71Var == null) {
                 a(0);
             }
@@ -215,5 +213,5 @@ public interface SignaturePropagator {
     void reportSignatureErrors(@NotNull CallableMemberDescriptor callableMemberDescriptor, @NotNull List<String> list);
 
     @NotNull
-    C8338b resolvePropagatedSignature(@NotNull JavaMethod javaMethod, @NotNull ClassDescriptor classDescriptor, @NotNull z71 z71Var, @Nullable z71 z71Var2, @NotNull List<ValueParameterDescriptor> list, @NotNull List<TypeParameterDescriptor> list2);
+    b resolvePropagatedSignature(@NotNull JavaMethod javaMethod, @NotNull ClassDescriptor classDescriptor, @NotNull z71 z71Var, @Nullable z71 z71Var2, @NotNull List<ValueParameterDescriptor> list, @NotNull List<TypeParameterDescriptor> list2);
 }

@@ -3,7 +3,6 @@ package com.google.common.math;
 import com.alimm.xadsdk.base.ut.AdUtConstants;
 import com.google.common.annotations.Beta;
 import com.google.common.annotations.GwtIncompatible;
-import com.google.common.base.C4834e;
 import com.google.common.primitives.Doubles;
 import java.io.Serializable;
 import java.nio.ByteBuffer;
@@ -46,9 +45,9 @@ public final class Stats implements Serializable {
     }
 
     public static Stats of(Iterable<? extends Number> iterable) {
-        C5247f c5247f = new C5247f();
-        c5247f.b(iterable);
-        return c5247f.h();
+        f fVar = new f();
+        fVar.b(iterable);
+        return fVar.h();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -101,7 +100,7 @@ public final class Stats implements Serializable {
         if (this.count == 1) {
             return 0.0d;
         }
-        return C5237b.a(this.sumOfSquaresOfDeltas) / count();
+        return b.a(this.sumOfSquaresOfDeltas) / count();
     }
 
     public double sampleStandardDeviation() {
@@ -113,7 +112,7 @@ public final class Stats implements Serializable {
         if (Double.isNaN(this.sumOfSquaresOfDeltas)) {
             return Double.NaN;
         }
-        return C5237b.a(this.sumOfSquaresOfDeltas) / (this.count - 1);
+        return b.a(this.sumOfSquaresOfDeltas) / (this.count - 1);
     }
 
     public double sum() {
@@ -133,9 +132,9 @@ public final class Stats implements Serializable {
 
     public String toString() {
         if (count() > 0) {
-            return C4834e.b(this).c(AdUtConstants.XAD_UT_ARG_COUNT, this.count).a("mean", this.mean).a("populationStandardDeviation", populationStandardDeviation()).a("min", this.min).a("max", this.max).toString();
+            return com.google.common.base.e.b(this).c(AdUtConstants.XAD_UT_ARG_COUNT, this.count).a("mean", this.mean).a("populationStandardDeviation", populationStandardDeviation()).a("min", this.min).a("max", this.max).toString();
         }
-        return C4834e.b(this).c(AdUtConstants.XAD_UT_ARG_COUNT, this.count).toString();
+        return com.google.common.base.e.b(this).c(AdUtConstants.XAD_UT_ARG_COUNT, this.count).toString();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -152,21 +151,21 @@ public final class Stats implements Serializable {
         while (it.hasNext()) {
             double doubleValue2 = it.next().doubleValue();
             j++;
-            doubleValue = (Doubles.f(doubleValue2) && Doubles.f(doubleValue)) ? doubleValue + ((doubleValue2 - doubleValue) / j) : C5247f.g(doubleValue, doubleValue2);
+            doubleValue = (Doubles.f(doubleValue2) && Doubles.f(doubleValue)) ? doubleValue + ((doubleValue2 - doubleValue) / j) : f.g(doubleValue, doubleValue2);
         }
         return doubleValue;
     }
 
     public static Stats of(Iterator<? extends Number> it) {
-        C5247f c5247f = new C5247f();
-        c5247f.c(it);
-        return c5247f.h();
+        f fVar = new f();
+        fVar.c(it);
+        return fVar.h();
     }
 
     public static Stats of(double... dArr) {
-        C5247f c5247f = new C5247f();
-        c5247f.d(dArr);
-        return c5247f.h();
+        f fVar = new f();
+        fVar.d(dArr);
+        return fVar.h();
     }
 
     public static double meanOf(double... dArr) {
@@ -174,21 +173,21 @@ public final class Stats implements Serializable {
         double d = dArr[0];
         for (int i = 1; i < dArr.length; i++) {
             double d2 = dArr[i];
-            d = (Doubles.f(d2) && Doubles.f(d)) ? d + ((d2 - d) / (i + 1)) : C5247f.g(d, d2);
+            d = (Doubles.f(d2) && Doubles.f(d)) ? d + ((d2 - d) / (i + 1)) : f.g(d, d2);
         }
         return d;
     }
 
     public static Stats of(int... iArr) {
-        C5247f c5247f = new C5247f();
-        c5247f.e(iArr);
-        return c5247f.h();
+        f fVar = new f();
+        fVar.e(iArr);
+        return fVar.h();
     }
 
     public static Stats of(long... jArr) {
-        C5247f c5247f = new C5247f();
-        c5247f.f(jArr);
-        return c5247f.h();
+        f fVar = new f();
+        fVar.f(jArr);
+        return fVar.h();
     }
 
     public static double meanOf(int... iArr) {
@@ -196,7 +195,7 @@ public final class Stats implements Serializable {
         double d = iArr[0];
         for (int i = 1; i < iArr.length; i++) {
             double d2 = iArr[i];
-            d = (Doubles.f(d2) && Doubles.f(d)) ? d + ((d2 - d) / (i + 1)) : C5247f.g(d, d2);
+            d = (Doubles.f(d2) && Doubles.f(d)) ? d + ((d2 - d) / (i + 1)) : f.g(d, d2);
         }
         return d;
     }
@@ -206,7 +205,7 @@ public final class Stats implements Serializable {
         double d = jArr[0];
         for (int i = 1; i < jArr.length; i++) {
             double d2 = jArr[i];
-            d = (Doubles.f(d2) && Doubles.f(d)) ? d + ((d2 - d) / (i + 1)) : C5247f.g(d, d2);
+            d = (Doubles.f(d2) && Doubles.f(d)) ? d + ((d2 - d) / (i + 1)) : f.g(d, d2);
         }
         return d;
     }

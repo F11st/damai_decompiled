@@ -5,7 +5,7 @@ import com.amap.api.col.s.bt;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public final class bu {
-    public final bt.EnumC4398c a;
+    public final bt.c a;
     public final String b;
 
     /* compiled from: Taobao */
@@ -15,52 +15,52 @@ public final class bu {
         static final /* synthetic */ int[] a;
 
         static {
-            int[] iArr = new int[bt.EnumC4398c.values().length];
+            int[] iArr = new int[bt.c.values().length];
             a = iArr;
             try {
-                iArr[bt.EnumC4398c.ShowUnknowCode.ordinal()] = 1;
+                iArr[bt.c.ShowUnknowCode.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                a[bt.EnumC4398c.ShowNoShowCode.ordinal()] = 2;
+                a[bt.c.ShowNoShowCode.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                a[bt.EnumC4398c.InfoUnknowCode.ordinal()] = 3;
+                a[bt.c.InfoUnknowCode.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
             try {
-                a[bt.EnumC4398c.InfoNotContainCode.ordinal()] = 4;
+                a[bt.c.InfoNotContainCode.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
             try {
-                a[bt.EnumC4398c.AgreeUnknowCode.ordinal()] = 5;
+                a[bt.c.AgreeUnknowCode.ordinal()] = 5;
             } catch (NoSuchFieldError unused5) {
             }
             try {
-                a[bt.EnumC4398c.AgreeNotAgreeCode.ordinal()] = 6;
+                a[bt.c.AgreeNotAgreeCode.ordinal()] = 6;
             } catch (NoSuchFieldError unused6) {
             }
             try {
-                a[bt.EnumC4398c.InvaildUserKeyCode.ordinal()] = 7;
+                a[bt.c.InvaildUserKeyCode.ordinal()] = 7;
             } catch (NoSuchFieldError unused7) {
             }
             try {
-                a[bt.EnumC4398c.IllegalArgument.ordinal()] = 8;
+                a[bt.c.IllegalArgument.ordinal()] = 8;
             } catch (NoSuchFieldError unused8) {
             }
             try {
-                a[bt.EnumC4398c.SuccessCode.ordinal()] = 9;
+                a[bt.c.SuccessCode.ordinal()] = 9;
             } catch (NoSuchFieldError unused9) {
             }
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public bu(bt.EnumC4398c enumC4398c, bv bvVar) {
+    public bu(bt.c cVar, bv bvVar) {
         String format;
-        this.a = enumC4398c;
-        switch (AnonymousClass1.a[enumC4398c.ordinal()]) {
+        this.a = cVar;
+        switch (AnonymousClass1.a[cVar.ordinal()]) {
             case 1:
                 format = String.format("***确保调用SDK任何接口前先调用更新隐私合规updatePrivacyShow、updatePrivacyAgree两个接口并且参数值都为true，若未正确设置有崩溃风险***\n使用%s SDK 功能前请设置隐私权政策是否弹窗告知用户", bvVar.b());
                 break;

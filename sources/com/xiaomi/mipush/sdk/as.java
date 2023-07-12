@@ -6,7 +6,6 @@ import android.os.IBinder;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import java.util.List;
 
 /* JADX INFO: Access modifiers changed from: package-private */
@@ -34,7 +33,7 @@ public class as implements ServiceConnection {
                     messenger = this.a.f51a;
                     messenger.send(message);
                 } catch (RemoteException e) {
-                    AbstractC7535b.a(e);
+                    com.xiaomi.channel.commonutils.logger.b.a(e);
                 }
             }
             list2 = this.a.f54a;

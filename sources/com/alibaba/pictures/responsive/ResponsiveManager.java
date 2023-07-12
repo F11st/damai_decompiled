@@ -2,9 +2,9 @@ package com.alibaba.pictures.responsive;
 
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -15,22 +15,21 @@ import tb.k50;
 public final class ResponsiveManager {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C3625a Companion = new C3625a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final Lazy<ResponsiveManager> b;
     @Nullable
     private IConfig a;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.responsive.ResponsiveManager$a */
     /* loaded from: classes7.dex */
-    public static final class C3625a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3625a() {
+        private a() {
         }
 
-        public /* synthetic */ C3625a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -42,8 +41,8 @@ public final class ResponsiveManager {
     }
 
     static {
-        Lazy<ResponsiveManager> a;
-        a = C8177b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<ResponsiveManager>() { // from class: com.alibaba.pictures.responsive.ResponsiveManager$Companion$instance$2
+        Lazy<ResponsiveManager> a2;
+        a2 = b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<ResponsiveManager>() { // from class: com.alibaba.pictures.responsive.ResponsiveManager$Companion$instance$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* JADX WARN: Can't rename method to resolve collision */
@@ -54,7 +53,7 @@ public final class ResponsiveManager {
                 return AndroidInstantRuntime.support(ipChange, "981764511") ? (ResponsiveManager) ipChange.ipc$dispatch("981764511", new Object[]{this}) : new ResponsiveManager();
             }
         });
-        b = a;
+        b = a2;
     }
 
     @Nullable

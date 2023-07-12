@@ -32,7 +32,7 @@ public class AUProgressDialog extends ProgressDialog {
     @Override // android.app.ProgressDialog, android.app.AlertDialog, android.app.Dialog
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        setContentView(R.C2970layout.member_sdk_progress_dialog);
+        setContentView(R.layout.member_sdk_progress_dialog);
         if (getWindow() != null) {
             getWindow().setBackgroundDrawableResource(17170445);
         }

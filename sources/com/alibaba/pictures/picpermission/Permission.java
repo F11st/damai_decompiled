@@ -23,22 +23,21 @@ import tb.k50;
 public final class Permission {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C3622a Companion = new C3622a(null);
+    public static final a Companion = new a(null);
     private final Context a;
     private final String[] b;
     private final Queue<PermissionModel> c;
     private final PermissionModel d;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.picpermission.Permission$a */
     /* loaded from: classes7.dex */
-    public static final class C3622a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3622a() {
+        private a() {
         }
 
-        public /* synthetic */ C3622a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

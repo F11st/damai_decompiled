@@ -6,7 +6,7 @@ import android.os.RemoteException;
 import com.alibaba.analytics.AnalyticsMgr;
 import com.alibaba.analytics.IAnalytics;
 import com.alibaba.analytics.utils.Logger;
-import com.alibaba.appmonitor.pool.C3316a;
+import com.alibaba.appmonitor.pool.a;
 import com.alibaba.mtl.appmonitor.model.DimensionValueSet;
 import java.util.UUID;
 
@@ -110,7 +110,7 @@ public class Transaction implements Parcelable {
     public void addDimensionValues(String str, String str2) {
         synchronized (this.lock) {
             if (this.dimensionValues == null) {
-                this.dimensionValues = (DimensionValueSet) C3316a.a().poll(DimensionValueSet.class, new Object[0]);
+                this.dimensionValues = (DimensionValueSet) a.a().poll(DimensionValueSet.class, new Object[0]);
             }
             this.dimensionValues.setValue(str, str2);
         }

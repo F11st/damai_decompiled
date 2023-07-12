@@ -12,7 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 import cn.damai.comment.util.SoftInputUtils;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.share.ShareManager;
@@ -27,7 +27,7 @@ import cn.damai.trade.newtradeorder.ui.projectdetail.common.presenter.ProjectPre
 import cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.fragment.ProjectBookingRegisterFragment;
 import cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment;
 import cn.damai.trade.newtradeorder.ui.projectdetail.util.ProjectIntentExtraParser;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import tb.cs;
@@ -125,7 +125,7 @@ public class ProjectDetailActivity extends DamaiBaseActivity<ProjectPresenter, P
                         str = dataString + "?" + pc0.j;
                     }
                     bundle.putString("url", str);
-                    DMNav.from(this).withExtras(bundle).toUri(NavUri.b(C3834a.C3837c.d));
+                    DMNav.from(this).withExtras(bundle).toUri(NavUri.b(a.c.d));
                     finish();
                     return;
                 }
@@ -258,7 +258,7 @@ public class ProjectDetailActivity extends DamaiBaseActivity<ProjectPresenter, P
         }
         super.onCreate(bundle);
         LoginManager.k().h();
-        C0529c.e().K(this);
+        c.e().K(this);
     }
 
     @Override // androidx.appcompat.app.AppCompatActivity, android.app.Activity, android.view.KeyEvent.Callback
@@ -367,8 +367,9 @@ public class ProjectDetailActivity extends DamaiBaseActivity<ProjectPresenter, P
         addFragmentByProjectId();
     }
 
+    /* JADX INFO: Access modifiers changed from: protected */
     @Override // androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
-    protected void onSaveInstanceState(Bundle bundle) {
+    public void onSaveInstanceState(Bundle bundle) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1171432826")) {
             ipChange.ipc$dispatch("-1171432826", new Object[]{this, bundle});

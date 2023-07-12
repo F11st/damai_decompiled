@@ -20,8 +20,8 @@ import com.taobao.weex.ui.component.list.template.TemplateDom;
 import io.flutter.wpkbridge.WPKFactory;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.text.C8604o;
 import kotlin.text.StringsKt__StringsKt;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -38,7 +38,7 @@ import tb.wt2;
 /* loaded from: classes6.dex */
 public class GXImageView extends AppCompatImageView implements GXIRelease, GXIImageView {
     @NotNull
-    public static final C3363a Companion = new C3363a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String LOCAL_PREFIX = "local:";
     @NotNull
@@ -53,13 +53,12 @@ public class GXImageView extends AppCompatImageView implements GXIRelease, GXIIm
     private pr0 mode;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.view.basic.GXImageView$a */
     /* loaded from: classes6.dex */
-    public static final class C3363a {
-        private C3363a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3363a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -78,7 +77,7 @@ public class GXImageView extends AppCompatImageView implements GXIRelease, GXIIm
 
     private final String getLocalUri(String str) {
         String z;
-        z = C8604o.z(str, "local:", "", false, 4, null);
+        z = o.z(str, "local:", "", false, 4, null);
         return z;
     }
 
@@ -110,16 +109,16 @@ public class GXImageView extends AppCompatImageView implements GXIRelease, GXIIm
 
     private final boolean isLocalUri(String str) {
         boolean F;
-        F = C8604o.F(str, "local:", false, 2, null);
+        F = o.F(str, "local:", false, 2, null);
         return F;
     }
 
     private final boolean isNetUri(String str) {
         boolean F;
         boolean F2;
-        F = C8604o.F(str, "http:", false, 2, null);
+        F = o.F(str, "http:", false, 2, null);
         if (!F) {
-            F2 = C8604o.F(str, "https:", false, 2, null);
+            F2 = o.F(str, "https:", false, 2, null);
             if (!F2) {
                 return false;
             }

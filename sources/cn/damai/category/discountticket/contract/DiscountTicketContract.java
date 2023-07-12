@@ -12,8 +12,8 @@ import cn.damai.category.discountticket.model.OnApplyCouponListener;
 import cn.damai.category.discountticket.model.OnShareListener;
 import cn.damai.category.discountticket.model.OnTListener;
 import cn.damai.category.discountticket.ui.IBaseCompatView;
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseModel;
+import cn.damai.common.app.base.a;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
 
 /* compiled from: Taobao */
@@ -47,7 +47,7 @@ public interface DiscountTicketContract {
 
     /* compiled from: Taobao */
     /* loaded from: classes.dex */
-    public static abstract class DtPresenter extends AbstractC0470a<DtView, DtModel> {
+    public static abstract class DtPresenter extends a<DtView, DtModel> {
         public abstract void applyCoupon(HeaderCouponBean headerCouponBean, CouponActivityBean couponActivityBean);
 
         public abstract void changeCity(String str);

@@ -1,7 +1,7 @@
 package com.youku.uplayer;
 
 import androidx.annotation.Keep;
-import com.youku.player.util.C8063c;
+import com.youku.player.util.c;
 
 /* compiled from: Taobao */
 @Keep
@@ -14,7 +14,7 @@ public abstract class AudioCallback {
 
     public AudioCallback(int i) {
         this.mMsgID = 0;
-        C8063c.a("AudioCallback msgId: " + i);
+        c.a("AudioCallback msgId: " + i);
         this.mMsgID = i;
     }
 

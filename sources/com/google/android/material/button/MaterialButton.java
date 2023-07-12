@@ -46,7 +46,7 @@ import java.util.LinkedHashSet;
 public class MaterialButton extends AppCompatButton implements Checkable, Shapeable {
     private static final int[] CHECKABLE_STATE_SET = {16842911};
     private static final int[] CHECKED_STATE_SET = {16842912};
-    private static final int DEF_STYLE_RES = R.C4819style.Widget_MaterialComponents_Button;
+    private static final int DEF_STYLE_RES = R.style.Widget_MaterialComponents_Button;
     public static final int ICON_GRAVITY_END = 3;
     public static final int ICON_GRAVITY_START = 1;
     public static final int ICON_GRAVITY_TEXT_END = 4;

@@ -21,31 +21,31 @@ public final class cb {
     private static boolean f = false;
     private String g = "";
 
-    public static bo.InterfaceC4391a a() {
-        return new bo.InterfaceC4391a() { // from class: com.amap.api.col.s.cb.1
+    public static bo.a a() {
+        return new bo.a() { // from class: com.amap.api.col.s.cb.1
             private cb a = new cb();
 
-            @Override // com.amap.api.col.s.bo.InterfaceC4391a
+            @Override // com.amap.api.col.s.bo.a
             public final df a(byte[] bArr, Map<String, String> map) {
                 return new cy(bArr, map);
             }
 
-            @Override // com.amap.api.col.s.bo.InterfaceC4391a
+            @Override // com.amap.api.col.s.bo.a
             public final Map<String, String> b() {
                 return this.a.b();
             }
 
-            @Override // com.amap.api.col.s.bo.InterfaceC4391a
+            @Override // com.amap.api.col.s.bo.a
             public final String a() {
                 return cb.c();
             }
 
-            @Override // com.amap.api.col.s.bo.InterfaceC4391a
+            @Override // com.amap.api.col.s.bo.a
             public final String a(Context context, String str) {
                 return cb.a(context, str);
             }
 
-            @Override // com.amap.api.col.s.bo.InterfaceC4391a
+            @Override // com.amap.api.col.s.bo.a
             public final String a(String str, String str2, String str3, String str4) {
                 return this.a.a(str, str2, str3, str4);
             }
@@ -141,7 +141,7 @@ public final class cb {
             String a3 = bz.a(cv.a((jSONObject2 + "\u0000").getBytes(), a2.getBytes()));
             if (!TextUtils.isEmpty(a3)) {
                 try {
-                    String a4 = bz.a(C4403cd.a(a2.getBytes("utf-8"), C4403cd.a(d())));
+                    String a4 = bz.a(cd.a(a2.getBytes("utf-8"), cd.a(d())));
                     return bw.c("Fa2V5PQ") + URLEncoder.encode(a4) + bw.c("SJmRhdGE9") + URLEncoder.encode(a3);
                 } catch (Throwable th2) {
                     th2.printStackTrace();

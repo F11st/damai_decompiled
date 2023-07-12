@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 import java.util.Map;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -14,7 +14,7 @@ public class AppUpdateProviderProxy {
     public static void checkUpdate(Context context) {
         try {
             if (sProxy == null) {
-                sProxy = (AppUpdateProvider) C8883a.j("com.youku.middlewareservice_impl.provider.AppUpdateProviderImpl").b().f();
+                sProxy = (AppUpdateProvider) a.j("com.youku.middlewareservice_impl.provider.AppUpdateProviderImpl").b().f();
             }
             sProxy.checkUpdate(context);
         } catch (Throwable th) {
@@ -24,7 +24,7 @@ public class AppUpdateProviderProxy {
 
     public static AppUpdateProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (AppUpdateProvider) C8883a.j("com.youku.middlewareservice_impl.provider.AppUpdateProviderImpl").b().f();
+            sProxy = (AppUpdateProvider) a.j("com.youku.middlewareservice_impl.provider.AppUpdateProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -42,7 +42,7 @@ public class AppUpdateProviderProxy {
     public static void startUpdateActivity(Map<String, String> map, Activity activity) {
         try {
             if (sProxy == null) {
-                sProxy = (AppUpdateProvider) C8883a.j("com.youku.middlewareservice_impl.provider.AppUpdateProviderImpl").b().f();
+                sProxy = (AppUpdateProvider) a.j("com.youku.middlewareservice_impl.provider.AppUpdateProviderImpl").b().f();
             }
             sProxy.startUpdateActivity(map, activity);
         } catch (Throwable th) {

@@ -19,21 +19,20 @@ import java.util.Set;
 /* loaded from: classes17.dex */
 public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements Serializable {
     static final /* synthetic */ boolean $assertionsDisabled = false;
-    private static final Comparator<Comparable> NATURAL_ORDER = new C2912a();
+    private static final Comparator<Comparable> NATURAL_ORDER = new a();
     Comparator<? super K> comparator;
-    private LinkedHashTreeMap<K, V>.C2915d entrySet;
-    final C2920g<K, V> header;
-    private LinkedHashTreeMap<K, V>.C2917e keySet;
+    private LinkedHashTreeMap<K, V>.d entrySet;
+    final g<K, V> header;
+    private LinkedHashTreeMap<K, V>.e keySet;
     int modCount;
     int size;
-    C2920g<K, V>[] table;
+    g<K, V>[] table;
     int threshold;
 
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.parser.moshi.LinkedHashTreeMap$a */
     /* loaded from: classes17.dex */
-    class C2912a implements Comparator<Comparable> {
-        C2912a() {
+    class a implements Comparator<Comparable> {
+        a() {
         }
 
         @Override // java.util.Comparator
@@ -45,22 +44,21 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.parser.moshi.LinkedHashTreeMap$b */
     /* loaded from: classes17.dex */
-    public static final class C2913b<K, V> {
-        private C2920g<K, V> a;
+    public static final class b<K, V> {
+        private g<K, V> a;
         private int b;
         private int c;
         private int d;
 
-        C2913b() {
+        b() {
         }
 
-        void a(C2920g<K, V> c2920g) {
-            c2920g.c = null;
-            c2920g.a = null;
-            c2920g.b = null;
-            c2920g.i = 1;
+        void a(g<K, V> gVar) {
+            gVar.c = null;
+            gVar.a = null;
+            gVar.b = null;
+            gVar.i = 1;
             int i = this.b;
             if (i > 0) {
                 int i2 = this.d;
@@ -70,8 +68,8 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
                     this.c++;
                 }
             }
-            c2920g.a = this.a;
-            this.a = c2920g;
+            gVar.a = this.a;
+            this.a = gVar;
             int i3 = this.d + 1;
             this.d = i3;
             int i4 = this.b;
@@ -88,23 +86,23 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
                 }
                 int i7 = this.c;
                 if (i7 == 0) {
-                    C2920g<K, V> c2920g2 = this.a;
-                    C2920g<K, V> c2920g3 = c2920g2.a;
-                    C2920g<K, V> c2920g4 = c2920g3.a;
-                    c2920g3.a = c2920g4.a;
-                    this.a = c2920g3;
-                    c2920g3.b = c2920g4;
-                    c2920g3.c = c2920g2;
-                    c2920g3.i = c2920g2.i + 1;
-                    c2920g4.a = c2920g3;
-                    c2920g2.a = c2920g3;
+                    g<K, V> gVar2 = this.a;
+                    g<K, V> gVar3 = gVar2.a;
+                    g<K, V> gVar4 = gVar3.a;
+                    gVar3.a = gVar4.a;
+                    this.a = gVar3;
+                    gVar3.b = gVar4;
+                    gVar3.c = gVar2;
+                    gVar3.i = gVar2.i + 1;
+                    gVar4.a = gVar3;
+                    gVar2.a = gVar3;
                 } else if (i7 == 1) {
-                    C2920g<K, V> c2920g5 = this.a;
-                    C2920g<K, V> c2920g6 = c2920g5.a;
-                    this.a = c2920g6;
-                    c2920g6.c = c2920g5;
-                    c2920g6.i = c2920g5.i + 1;
-                    c2920g5.a = c2920g6;
+                    g<K, V> gVar5 = this.a;
+                    g<K, V> gVar6 = gVar5.a;
+                    this.a = gVar6;
+                    gVar6.c = gVar5;
+                    gVar6.i = gVar5.i + 1;
+                    gVar5.a = gVar6;
                     this.c = 0;
                 } else if (i7 == 2) {
                     this.c = 0;
@@ -120,10 +118,10 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
             this.a = null;
         }
 
-        C2920g<K, V> c() {
-            C2920g<K, V> c2920g = this.a;
-            if (c2920g.a == null) {
-                return c2920g;
+        g<K, V> c() {
+            g<K, V> gVar = this.a;
+            if (gVar.a == null) {
+                return gVar;
             }
             throw new IllegalStateException();
         }
@@ -131,56 +129,53 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.parser.moshi.LinkedHashTreeMap$c */
     /* loaded from: classes17.dex */
-    public static class C2914c<K, V> {
-        private C2920g<K, V> a;
+    public static class c<K, V> {
+        private g<K, V> a;
 
-        C2914c() {
+        c() {
         }
 
-        public C2920g<K, V> a() {
-            C2920g<K, V> c2920g = this.a;
-            if (c2920g == null) {
+        public g<K, V> a() {
+            g<K, V> gVar = this.a;
+            if (gVar == null) {
                 return null;
             }
-            C2920g<K, V> c2920g2 = c2920g.a;
-            c2920g.a = null;
-            C2920g<K, V> c2920g3 = c2920g.c;
+            g<K, V> gVar2 = gVar.a;
+            gVar.a = null;
+            g<K, V> gVar3 = gVar.c;
             while (true) {
-                C2920g<K, V> c2920g4 = c2920g2;
-                c2920g2 = c2920g3;
-                if (c2920g2 != null) {
-                    c2920g2.a = c2920g4;
-                    c2920g3 = c2920g2.b;
+                g<K, V> gVar4 = gVar2;
+                gVar2 = gVar3;
+                if (gVar2 != null) {
+                    gVar2.a = gVar4;
+                    gVar3 = gVar2.b;
                 } else {
-                    this.a = c2920g4;
-                    return c2920g;
+                    this.a = gVar4;
+                    return gVar;
                 }
             }
         }
 
-        void b(C2920g<K, V> c2920g) {
-            C2920g<K, V> c2920g2 = null;
-            while (c2920g != null) {
-                c2920g.a = c2920g2;
-                c2920g2 = c2920g;
-                c2920g = c2920g.b;
+        void b(g<K, V> gVar) {
+            g<K, V> gVar2 = null;
+            while (gVar != null) {
+                gVar.a = gVar2;
+                gVar2 = gVar;
+                gVar = gVar.b;
             }
-            this.a = c2920g2;
+            this.a = gVar2;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.parser.moshi.LinkedHashTreeMap$d */
     /* loaded from: classes17.dex */
-    final class C2915d extends AbstractSet<Map.Entry<K, V>> {
+    final class d extends AbstractSet<Map.Entry<K, V>> {
 
         /* compiled from: Taobao */
-        /* renamed from: com.airbnb.lottie.parser.moshi.LinkedHashTreeMap$d$a */
         /* loaded from: classes9.dex */
-        class C2916a extends LinkedHashTreeMap<K, V>.AbstractC2919f<Map.Entry<K, V>> {
-            C2916a(C2915d c2915d) {
+        class a extends LinkedHashTreeMap<K, V>.f<Map.Entry<K, V>> {
+            a(d dVar) {
                 super();
             }
 
@@ -191,7 +186,7 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
             }
         }
 
-        C2915d() {
+        d() {
         }
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
@@ -206,12 +201,12 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
         public Iterator<Map.Entry<K, V>> iterator() {
-            return new C2916a(this);
+            return new a(this);
         }
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
         public boolean remove(Object obj) {
-            C2920g<K, V> findByEntry;
+            g<K, V> findByEntry;
             if ((obj instanceof Map.Entry) && (findByEntry = LinkedHashTreeMap.this.findByEntry((Map.Entry) obj)) != null) {
                 LinkedHashTreeMap.this.removeInternal(findByEntry, true);
                 return true;
@@ -226,15 +221,13 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.parser.moshi.LinkedHashTreeMap$e */
     /* loaded from: classes17.dex */
-    final class C2917e extends AbstractSet<K> {
+    final class e extends AbstractSet<K> {
 
         /* compiled from: Taobao */
-        /* renamed from: com.airbnb.lottie.parser.moshi.LinkedHashTreeMap$e$a */
         /* loaded from: classes9.dex */
-        class C2918a extends LinkedHashTreeMap<K, V>.AbstractC2919f<K> {
-            C2918a(C2917e c2917e) {
+        class a extends LinkedHashTreeMap<K, V>.f<K> {
+            a(e eVar) {
                 super();
             }
 
@@ -244,7 +237,7 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
             }
         }
 
-        C2917e() {
+        e() {
         }
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
@@ -259,7 +252,7 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
         public Iterator<K> iterator() {
-            return new C2918a(this);
+            return new a(this);
         }
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
@@ -275,26 +268,25 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.parser.moshi.LinkedHashTreeMap$f */
     /* loaded from: classes17.dex */
-    public abstract class AbstractC2919f<T> implements Iterator<T> {
-        C2920g<K, V> a;
-        C2920g<K, V> b = null;
+    public abstract class f<T> implements Iterator<T> {
+        g<K, V> a;
+        g<K, V> b = null;
         int c;
 
-        AbstractC2919f() {
+        f() {
             this.a = LinkedHashTreeMap.this.header.d;
             this.c = LinkedHashTreeMap.this.modCount;
         }
 
-        final C2920g<K, V> a() {
-            C2920g<K, V> c2920g = this.a;
+        final g<K, V> a() {
+            g<K, V> gVar = this.a;
             LinkedHashTreeMap linkedHashTreeMap = LinkedHashTreeMap.this;
-            if (c2920g != linkedHashTreeMap.header) {
+            if (gVar != linkedHashTreeMap.header) {
                 if (linkedHashTreeMap.modCount == this.c) {
-                    this.a = c2920g.d;
-                    this.b = c2920g;
-                    return c2920g;
+                    this.a = gVar.d;
+                    this.b = gVar;
+                    return gVar;
                 }
                 throw new ConcurrentModificationException();
             }
@@ -308,9 +300,9 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
 
         @Override // java.util.Iterator
         public final void remove() {
-            C2920g<K, V> c2920g = this.b;
-            if (c2920g != null) {
-                LinkedHashTreeMap.this.removeInternal(c2920g, true);
+            g<K, V> gVar = this.b;
+            if (gVar != null) {
+                LinkedHashTreeMap.this.removeInternal(gVar, true);
                 this.b = null;
                 this.c = LinkedHashTreeMap.this.modCount;
                 return;
@@ -324,7 +316,7 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
     }
 
     private void doubleCapacity() {
-        C2920g<K, V>[] doubleCapacity = doubleCapacity(this.table);
+        g<K, V>[] doubleCapacity = doubleCapacity(this.table);
         this.table = doubleCapacity;
         this.threshold = (doubleCapacity.length / 2) + (doubleCapacity.length / 4);
     }
@@ -333,106 +325,106 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
         return obj == obj2 || (obj != null && obj.equals(obj2));
     }
 
-    private void rebalance(C2920g<K, V> c2920g, boolean z) {
-        while (c2920g != null) {
-            C2920g<K, V> c2920g2 = c2920g.b;
-            C2920g<K, V> c2920g3 = c2920g.c;
-            int i = c2920g2 != null ? c2920g2.i : 0;
-            int i2 = c2920g3 != null ? c2920g3.i : 0;
+    private void rebalance(g<K, V> gVar, boolean z) {
+        while (gVar != null) {
+            g<K, V> gVar2 = gVar.b;
+            g<K, V> gVar3 = gVar.c;
+            int i = gVar2 != null ? gVar2.i : 0;
+            int i2 = gVar3 != null ? gVar3.i : 0;
             int i3 = i - i2;
             if (i3 == -2) {
-                C2920g<K, V> c2920g4 = c2920g3.b;
-                C2920g<K, V> c2920g5 = c2920g3.c;
-                int i4 = (c2920g4 != null ? c2920g4.i : 0) - (c2920g5 != null ? c2920g5.i : 0);
+                g<K, V> gVar4 = gVar3.b;
+                g<K, V> gVar5 = gVar3.c;
+                int i4 = (gVar4 != null ? gVar4.i : 0) - (gVar5 != null ? gVar5.i : 0);
                 if (i4 != -1 && (i4 != 0 || z)) {
-                    rotateRight(c2920g3);
-                    rotateLeft(c2920g);
+                    rotateRight(gVar3);
+                    rotateLeft(gVar);
                 } else {
-                    rotateLeft(c2920g);
+                    rotateLeft(gVar);
                 }
                 if (z) {
                     return;
                 }
             } else if (i3 == 2) {
-                C2920g<K, V> c2920g6 = c2920g2.b;
-                C2920g<K, V> c2920g7 = c2920g2.c;
-                int i5 = (c2920g6 != null ? c2920g6.i : 0) - (c2920g7 != null ? c2920g7.i : 0);
+                g<K, V> gVar6 = gVar2.b;
+                g<K, V> gVar7 = gVar2.c;
+                int i5 = (gVar6 != null ? gVar6.i : 0) - (gVar7 != null ? gVar7.i : 0);
                 if (i5 != 1 && (i5 != 0 || z)) {
-                    rotateLeft(c2920g2);
-                    rotateRight(c2920g);
+                    rotateLeft(gVar2);
+                    rotateRight(gVar);
                 } else {
-                    rotateRight(c2920g);
+                    rotateRight(gVar);
                 }
                 if (z) {
                     return;
                 }
             } else if (i3 == 0) {
-                c2920g.i = i + 1;
+                gVar.i = i + 1;
                 if (z) {
                     return;
                 }
             } else {
-                c2920g.i = Math.max(i, i2) + 1;
+                gVar.i = Math.max(i, i2) + 1;
                 if (!z) {
                     return;
                 }
             }
-            c2920g = c2920g.a;
+            gVar = gVar.a;
         }
     }
 
-    private void replaceInParent(C2920g<K, V> c2920g, C2920g<K, V> c2920g2) {
-        C2920g<K, V> c2920g3 = c2920g.a;
-        c2920g.a = null;
-        if (c2920g2 != null) {
-            c2920g2.a = c2920g3;
+    private void replaceInParent(g<K, V> gVar, g<K, V> gVar2) {
+        g<K, V> gVar3 = gVar.a;
+        gVar.a = null;
+        if (gVar2 != null) {
+            gVar2.a = gVar3;
         }
-        if (c2920g3 != null) {
-            if (c2920g3.b == c2920g) {
-                c2920g3.b = c2920g2;
+        if (gVar3 != null) {
+            if (gVar3.b == gVar) {
+                gVar3.b = gVar2;
                 return;
             } else {
-                c2920g3.c = c2920g2;
+                gVar3.c = gVar2;
                 return;
             }
         }
-        int i = c2920g.g;
-        C2920g<K, V>[] c2920gArr = this.table;
-        c2920gArr[i & (c2920gArr.length - 1)] = c2920g2;
+        int i = gVar.g;
+        g<K, V>[] gVarArr = this.table;
+        gVarArr[i & (gVarArr.length - 1)] = gVar2;
     }
 
-    private void rotateLeft(C2920g<K, V> c2920g) {
-        C2920g<K, V> c2920g2 = c2920g.b;
-        C2920g<K, V> c2920g3 = c2920g.c;
-        C2920g<K, V> c2920g4 = c2920g3.b;
-        C2920g<K, V> c2920g5 = c2920g3.c;
-        c2920g.c = c2920g4;
-        if (c2920g4 != null) {
-            c2920g4.a = c2920g;
+    private void rotateLeft(g<K, V> gVar) {
+        g<K, V> gVar2 = gVar.b;
+        g<K, V> gVar3 = gVar.c;
+        g<K, V> gVar4 = gVar3.b;
+        g<K, V> gVar5 = gVar3.c;
+        gVar.c = gVar4;
+        if (gVar4 != null) {
+            gVar4.a = gVar;
         }
-        replaceInParent(c2920g, c2920g3);
-        c2920g3.b = c2920g;
-        c2920g.a = c2920g3;
-        int max = Math.max(c2920g2 != null ? c2920g2.i : 0, c2920g4 != null ? c2920g4.i : 0) + 1;
-        c2920g.i = max;
-        c2920g3.i = Math.max(max, c2920g5 != null ? c2920g5.i : 0) + 1;
+        replaceInParent(gVar, gVar3);
+        gVar3.b = gVar;
+        gVar.a = gVar3;
+        int max = Math.max(gVar2 != null ? gVar2.i : 0, gVar4 != null ? gVar4.i : 0) + 1;
+        gVar.i = max;
+        gVar3.i = Math.max(max, gVar5 != null ? gVar5.i : 0) + 1;
     }
 
-    private void rotateRight(C2920g<K, V> c2920g) {
-        C2920g<K, V> c2920g2 = c2920g.b;
-        C2920g<K, V> c2920g3 = c2920g.c;
-        C2920g<K, V> c2920g4 = c2920g2.b;
-        C2920g<K, V> c2920g5 = c2920g2.c;
-        c2920g.b = c2920g5;
-        if (c2920g5 != null) {
-            c2920g5.a = c2920g;
+    private void rotateRight(g<K, V> gVar) {
+        g<K, V> gVar2 = gVar.b;
+        g<K, V> gVar3 = gVar.c;
+        g<K, V> gVar4 = gVar2.b;
+        g<K, V> gVar5 = gVar2.c;
+        gVar.b = gVar5;
+        if (gVar5 != null) {
+            gVar5.a = gVar;
         }
-        replaceInParent(c2920g, c2920g2);
-        c2920g2.c = c2920g;
-        c2920g.a = c2920g2;
-        int max = Math.max(c2920g3 != null ? c2920g3.i : 0, c2920g5 != null ? c2920g5.i : 0) + 1;
-        c2920g.i = max;
-        c2920g2.i = Math.max(max, c2920g4 != null ? c2920g4.i : 0) + 1;
+        replaceInParent(gVar, gVar2);
+        gVar2.c = gVar;
+        gVar.a = gVar2;
+        int max = Math.max(gVar3 != null ? gVar3.i : 0, gVar5 != null ? gVar5.i : 0) + 1;
+        gVar.i = max;
+        gVar2.i = Math.max(max, gVar4 != null ? gVar4.i : 0) + 1;
     }
 
     private static int secondaryHash(int i) {
@@ -449,16 +441,16 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
         Arrays.fill(this.table, (Object) null);
         this.size = 0;
         this.modCount++;
-        C2920g<K, V> c2920g = this.header;
-        C2920g<K, V> c2920g2 = c2920g.d;
-        while (c2920g2 != c2920g) {
-            C2920g<K, V> c2920g3 = c2920g2.d;
-            c2920g2.e = null;
-            c2920g2.d = null;
-            c2920g2 = c2920g3;
+        g<K, V> gVar = this.header;
+        g<K, V> gVar2 = gVar.d;
+        while (gVar2 != gVar) {
+            g<K, V> gVar3 = gVar2.d;
+            gVar2.e = null;
+            gVar2.d = null;
+            gVar2 = gVar3;
         }
-        c2920g.e = c2920g;
-        c2920g.d = c2920g;
+        gVar.e = gVar;
+        gVar.d = gVar;
     }
 
     @Override // java.util.AbstractMap, java.util.Map
@@ -468,64 +460,64 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
 
     @Override // java.util.AbstractMap, java.util.Map
     public Set<Map.Entry<K, V>> entrySet() {
-        LinkedHashTreeMap<K, V>.C2915d c2915d = this.entrySet;
-        if (c2915d != null) {
-            return c2915d;
+        LinkedHashTreeMap<K, V>.d dVar = this.entrySet;
+        if (dVar != null) {
+            return dVar;
         }
-        LinkedHashTreeMap<K, V>.C2915d c2915d2 = new C2915d();
-        this.entrySet = c2915d2;
-        return c2915d2;
+        LinkedHashTreeMap<K, V>.d dVar2 = new d();
+        this.entrySet = dVar2;
+        return dVar2;
     }
 
-    C2920g<K, V> find(K k, boolean z) {
-        C2920g<K, V> c2920g;
+    g<K, V> find(K k, boolean z) {
+        g<K, V> gVar;
         int i;
-        C2920g<K, V> c2920g2;
+        g<K, V> gVar2;
         int compare;
         Comparator<? super K> comparator = this.comparator;
-        C2920g<K, V>[] c2920gArr = this.table;
+        g<K, V>[] gVarArr = this.table;
         int secondaryHash = secondaryHash(k.hashCode());
-        int length = (c2920gArr.length - 1) & secondaryHash;
-        C2920g<K, V> c2920g3 = c2920gArr[length];
-        if (c2920g3 != null) {
+        int length = (gVarArr.length - 1) & secondaryHash;
+        g<K, V> gVar3 = gVarArr[length];
+        if (gVar3 != null) {
             Comparable comparable = comparator == NATURAL_ORDER ? (Comparable) k : null;
             while (true) {
                 if (comparable != null) {
-                    compare = comparable.compareTo(c2920g3.f);
+                    compare = comparable.compareTo(gVar3.f);
                 } else {
-                    compare = comparator.compare(k, (K) c2920g3.f);
+                    compare = comparator.compare(k, (K) gVar3.f);
                 }
                 if (compare == 0) {
-                    return c2920g3;
+                    return gVar3;
                 }
-                C2920g<K, V> c2920g4 = compare < 0 ? c2920g3.b : c2920g3.c;
-                if (c2920g4 == null) {
-                    c2920g = c2920g3;
+                g<K, V> gVar4 = compare < 0 ? gVar3.b : gVar3.c;
+                if (gVar4 == null) {
+                    gVar = gVar3;
                     i = compare;
                     break;
                 }
-                c2920g3 = c2920g4;
+                gVar3 = gVar4;
             }
         } else {
-            c2920g = c2920g3;
+            gVar = gVar3;
             i = 0;
         }
         if (z) {
-            C2920g<K, V> c2920g5 = this.header;
-            if (c2920g == null) {
+            g<K, V> gVar5 = this.header;
+            if (gVar == null) {
                 if (comparator == NATURAL_ORDER && !(k instanceof Comparable)) {
                     throw new ClassCastException(k.getClass().getName() + " is not Comparable");
                 }
-                c2920g2 = new C2920g<>(c2920g, k, secondaryHash, c2920g5, c2920g5.e);
-                c2920gArr[length] = c2920g2;
+                gVar2 = new g<>(gVar, k, secondaryHash, gVar5, gVar5.e);
+                gVarArr[length] = gVar2;
             } else {
-                c2920g2 = new C2920g<>(c2920g, k, secondaryHash, c2920g5, c2920g5.e);
+                gVar2 = new g<>(gVar, k, secondaryHash, gVar5, gVar5.e);
                 if (i < 0) {
-                    c2920g.b = c2920g2;
+                    gVar.b = gVar2;
                 } else {
-                    c2920g.c = c2920g2;
+                    gVar.c = gVar2;
                 }
-                rebalance(c2920g, true);
+                rebalance(gVar, true);
             }
             int i2 = this.size;
             this.size = i2 + 1;
@@ -533,13 +525,13 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
                 doubleCapacity();
             }
             this.modCount++;
-            return c2920g2;
+            return gVar2;
         }
         return null;
     }
 
-    C2920g<K, V> findByEntry(Map.Entry<?, ?> entry) {
-        C2920g<K, V> findByObject = findByObject(entry.getKey());
+    g<K, V> findByEntry(Map.Entry<?, ?> entry) {
+        g<K, V> findByObject = findByObject(entry.getKey());
         if (findByObject != null && equal(findByObject.h, entry.getValue())) {
             return findByObject;
         }
@@ -547,7 +539,7 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    C2920g<K, V> findByObject(Object obj) {
+    g<K, V> findByObject(Object obj) {
         if (obj != 0) {
             try {
                 return find(obj, false);
@@ -560,7 +552,7 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
 
     @Override // java.util.AbstractMap, java.util.Map
     public V get(Object obj) {
-        C2920g<K, V> findByObject = findByObject(obj);
+        g<K, V> findByObject = findByObject(obj);
         if (findByObject != null) {
             return findByObject.h;
         }
@@ -569,19 +561,19 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
 
     @Override // java.util.AbstractMap, java.util.Map
     public Set<K> keySet() {
-        LinkedHashTreeMap<K, V>.C2917e c2917e = this.keySet;
-        if (c2917e != null) {
-            return c2917e;
+        LinkedHashTreeMap<K, V>.e eVar = this.keySet;
+        if (eVar != null) {
+            return eVar;
         }
-        LinkedHashTreeMap<K, V>.C2917e c2917e2 = new C2917e();
-        this.keySet = c2917e2;
-        return c2917e2;
+        LinkedHashTreeMap<K, V>.e eVar2 = new e();
+        this.keySet = eVar2;
+        return eVar2;
     }
 
     @Override // java.util.AbstractMap, java.util.Map
     public V put(K k, V v) {
         Objects.requireNonNull(k, "key == null");
-        C2920g<K, V> find = find(k, true);
+        g<K, V> find = find(k, true);
         V v2 = find.h;
         find.h = v;
         return v2;
@@ -589,65 +581,65 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
 
     @Override // java.util.AbstractMap, java.util.Map
     public V remove(Object obj) {
-        C2920g<K, V> removeInternalByKey = removeInternalByKey(obj);
+        g<K, V> removeInternalByKey = removeInternalByKey(obj);
         if (removeInternalByKey != null) {
             return removeInternalByKey.h;
         }
         return null;
     }
 
-    void removeInternal(C2920g<K, V> c2920g, boolean z) {
+    void removeInternal(g<K, V> gVar, boolean z) {
         int i;
         if (z) {
-            C2920g<K, V> c2920g2 = c2920g.e;
-            c2920g2.d = c2920g.d;
-            c2920g.d.e = c2920g2;
-            c2920g.e = null;
-            c2920g.d = null;
+            g<K, V> gVar2 = gVar.e;
+            gVar2.d = gVar.d;
+            gVar.d.e = gVar2;
+            gVar.e = null;
+            gVar.d = null;
         }
-        C2920g<K, V> c2920g3 = c2920g.b;
-        C2920g<K, V> c2920g4 = c2920g.c;
-        C2920g<K, V> c2920g5 = c2920g.a;
+        g<K, V> gVar3 = gVar.b;
+        g<K, V> gVar4 = gVar.c;
+        g<K, V> gVar5 = gVar.a;
         int i2 = 0;
-        if (c2920g3 != null && c2920g4 != null) {
-            C2920g<K, V> b = c2920g3.i > c2920g4.i ? c2920g3.b() : c2920g4.a();
-            removeInternal(b, false);
-            C2920g<K, V> c2920g6 = c2920g.b;
-            if (c2920g6 != null) {
-                i = c2920g6.i;
-                b.b = c2920g6;
-                c2920g6.a = b;
-                c2920g.b = null;
+        if (gVar3 != null && gVar4 != null) {
+            g<K, V> b2 = gVar3.i > gVar4.i ? gVar3.b() : gVar4.a();
+            removeInternal(b2, false);
+            g<K, V> gVar6 = gVar.b;
+            if (gVar6 != null) {
+                i = gVar6.i;
+                b2.b = gVar6;
+                gVar6.a = b2;
+                gVar.b = null;
             } else {
                 i = 0;
             }
-            C2920g<K, V> c2920g7 = c2920g.c;
-            if (c2920g7 != null) {
-                i2 = c2920g7.i;
-                b.c = c2920g7;
-                c2920g7.a = b;
-                c2920g.c = null;
+            g<K, V> gVar7 = gVar.c;
+            if (gVar7 != null) {
+                i2 = gVar7.i;
+                b2.c = gVar7;
+                gVar7.a = b2;
+                gVar.c = null;
             }
-            b.i = Math.max(i, i2) + 1;
-            replaceInParent(c2920g, b);
+            b2.i = Math.max(i, i2) + 1;
+            replaceInParent(gVar, b2);
             return;
         }
-        if (c2920g3 != null) {
-            replaceInParent(c2920g, c2920g3);
-            c2920g.b = null;
-        } else if (c2920g4 != null) {
-            replaceInParent(c2920g, c2920g4);
-            c2920g.c = null;
+        if (gVar3 != null) {
+            replaceInParent(gVar, gVar3);
+            gVar.b = null;
+        } else if (gVar4 != null) {
+            replaceInParent(gVar, gVar4);
+            gVar.c = null;
         } else {
-            replaceInParent(c2920g, null);
+            replaceInParent(gVar, null);
         }
-        rebalance(c2920g5, false);
+        rebalance(gVar5, false);
         this.size--;
         this.modCount++;
     }
 
-    C2920g<K, V> removeInternalByKey(Object obj) {
-        C2920g<K, V> findByObject = findByObject(obj);
+    g<K, V> removeInternalByKey(Object obj) {
+        g<K, V> findByObject = findByObject(obj);
         if (findByObject != null) {
             removeInternal(findByObject, true);
         }
@@ -663,90 +655,89 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
         this.size = 0;
         this.modCount = 0;
         this.comparator = comparator == null ? NATURAL_ORDER : comparator;
-        this.header = new C2920g<>();
-        C2920g<K, V>[] c2920gArr = new C2920g[16];
-        this.table = c2920gArr;
-        this.threshold = (c2920gArr.length / 2) + (c2920gArr.length / 4);
+        this.header = new g<>();
+        g<K, V>[] gVarArr = new g[16];
+        this.table = gVarArr;
+        this.threshold = (gVarArr.length / 2) + (gVarArr.length / 4);
     }
 
-    static <K, V> C2920g<K, V>[] doubleCapacity(C2920g<K, V>[] c2920gArr) {
-        int length = c2920gArr.length;
-        C2920g<K, V>[] c2920gArr2 = new C2920g[length * 2];
-        C2914c c2914c = new C2914c();
-        C2913b c2913b = new C2913b();
-        C2913b c2913b2 = new C2913b();
+    static <K, V> g<K, V>[] doubleCapacity(g<K, V>[] gVarArr) {
+        int length = gVarArr.length;
+        g<K, V>[] gVarArr2 = new g[length * 2];
+        c cVar = new c();
+        b bVar = new b();
+        b bVar2 = new b();
         for (int i = 0; i < length; i++) {
-            C2920g<K, V> c2920g = c2920gArr[i];
-            if (c2920g != null) {
-                c2914c.b(c2920g);
+            g<K, V> gVar = gVarArr[i];
+            if (gVar != null) {
+                cVar.b(gVar);
                 int i2 = 0;
                 int i3 = 0;
                 while (true) {
-                    C2920g<K, V> a = c2914c.a();
-                    if (a == null) {
+                    g<K, V> a2 = cVar.a();
+                    if (a2 == null) {
                         break;
-                    } else if ((a.g & length) == 0) {
+                    } else if ((a2.g & length) == 0) {
                         i2++;
                     } else {
                         i3++;
                     }
                 }
-                c2913b.b(i2);
-                c2913b2.b(i3);
-                c2914c.b(c2920g);
+                bVar.b(i2);
+                bVar2.b(i3);
+                cVar.b(gVar);
                 while (true) {
-                    C2920g<K, V> a2 = c2914c.a();
-                    if (a2 == null) {
+                    g<K, V> a3 = cVar.a();
+                    if (a3 == null) {
                         break;
-                    } else if ((a2.g & length) == 0) {
-                        c2913b.a(a2);
+                    } else if ((a3.g & length) == 0) {
+                        bVar.a(a3);
                     } else {
-                        c2913b2.a(a2);
+                        bVar2.a(a3);
                     }
                 }
-                c2920gArr2[i] = i2 > 0 ? c2913b.c() : null;
-                c2920gArr2[i + length] = i3 > 0 ? c2913b2.c() : null;
+                gVarArr2[i] = i2 > 0 ? bVar.c() : null;
+                gVarArr2[i + length] = i3 > 0 ? bVar2.c() : null;
             }
         }
-        return c2920gArr2;
+        return gVarArr2;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.parser.moshi.LinkedHashTreeMap$g */
     /* loaded from: classes17.dex */
-    public static final class C2920g<K, V> implements Map.Entry<K, V> {
-        C2920g<K, V> a;
-        C2920g<K, V> b;
-        C2920g<K, V> c;
-        C2920g<K, V> d;
-        C2920g<K, V> e;
+    public static final class g<K, V> implements Map.Entry<K, V> {
+        g<K, V> a;
+        g<K, V> b;
+        g<K, V> c;
+        g<K, V> d;
+        g<K, V> e;
         final K f;
         final int g;
         V h;
         int i;
 
-        C2920g() {
+        g() {
             this.f = null;
             this.g = -1;
             this.e = this;
             this.d = this;
         }
 
-        public C2920g<K, V> a() {
-            C2920g<K, V> c2920g = this;
-            for (C2920g<K, V> c2920g2 = this.b; c2920g2 != null; c2920g2 = c2920g2.b) {
-                c2920g = c2920g2;
+        public g<K, V> a() {
+            g<K, V> gVar = this;
+            for (g<K, V> gVar2 = this.b; gVar2 != null; gVar2 = gVar2.b) {
+                gVar = gVar2;
             }
-            return c2920g;
+            return gVar;
         }
 
-        public C2920g<K, V> b() {
-            C2920g<K, V> c2920g = this;
-            for (C2920g<K, V> c2920g2 = this.c; c2920g2 != null; c2920g2 = c2920g2.c) {
-                c2920g = c2920g2;
+        public g<K, V> b() {
+            g<K, V> gVar = this;
+            for (g<K, V> gVar2 = this.c; gVar2 != null; gVar2 = gVar2.c) {
+                gVar = gVar2;
             }
-            return c2920g;
+            return gVar;
         }
 
         @Override // java.util.Map.Entry
@@ -803,15 +794,15 @@ public final class LinkedHashTreeMap<K, V> extends AbstractMap<K, V> implements 
             return this.f + "=" + this.h;
         }
 
-        C2920g(C2920g<K, V> c2920g, K k, int i, C2920g<K, V> c2920g2, C2920g<K, V> c2920g3) {
-            this.a = c2920g;
+        g(g<K, V> gVar, K k, int i, g<K, V> gVar2, g<K, V> gVar3) {
+            this.a = gVar;
             this.f = k;
             this.g = i;
             this.i = 1;
-            this.d = c2920g2;
-            this.e = c2920g3;
-            c2920g3.d = this;
-            c2920g2.e = this;
+            this.d = gVar2;
+            this.e = gVar3;
+            gVar3.d = this;
+            gVar2.e = this;
         }
     }
 }

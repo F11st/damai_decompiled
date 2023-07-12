@@ -3,8 +3,8 @@ package com.tencent.mm.opensdk.modelbiz;
 import android.os.Bundle;
 import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.modelbase.BaseResp;
-import com.tencent.mm.opensdk.utils.C7065b;
 import com.tencent.mm.opensdk.utils.Log;
+import com.tencent.mm.opensdk.utils.b;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -18,7 +18,7 @@ public class WXLaunchMiniProgramWithToken {
 
         @Override // com.tencent.mm.opensdk.modelbase.BaseReq
         public boolean checkArgs() {
-            if (C7065b.b(this.token)) {
+            if (b.b(this.token)) {
                 Log.e(TAG, "token is null");
                 return false;
             }

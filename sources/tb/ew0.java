@@ -1,8 +1,6 @@
 package tb;
 
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.login.LoginManager;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -11,7 +9,7 @@ import java.util.HashMap;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
-public class ew0 extends C0528b {
+public class ew0 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange;
     private static ew0 b;
 
@@ -31,10 +29,10 @@ public class ew0 extends C0528b {
         return b;
     }
 
-    private C0525a.C0527b i(String str, String str2, String str3) {
+    private a.b i(String str, String str2, String str3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "670348709")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("670348709", new Object[]{this, str, str2, str3});
+            return (a.b) ipChange.ipc$dispatch("670348709", new Object[]{this, str, str2, str3});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("after_click", str);
@@ -43,10 +41,10 @@ public class ew0 extends C0528b {
         return e("login", "legal_dialog", "pro_select", hashMap, Boolean.FALSE);
     }
 
-    private C0525a.C0527b j(int i, String str) {
+    private a.b j(int i, String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "340335939")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("340335939", new Object[]{this, Integer.valueOf(i), str});
+            return (a.b) ipChange.ipc$dispatch("340335939", new Object[]{this, Integer.valueOf(i), str});
         }
         HashMap hashMap = new HashMap();
         hashMap.put(LoginConstants.LOGIN_TYPE, i + "");
@@ -55,15 +53,15 @@ public class ew0 extends C0528b {
         return e("login", "login", "result", hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b g() {
+    public a.b g() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-2014225519") ? (C0525a.C0527b) ipChange.ipc$dispatch("-2014225519", new Object[]{this}) : b("login");
+        return AndroidInstantRuntime.support(ipChange, "-2014225519") ? (a.b) ipChange.ipc$dispatch("-2014225519", new Object[]{this}) : b("login");
     }
 
-    public C0525a.C0527b h(String str, int i) {
+    public a.b h(String str, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1437761599")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-1437761599", new Object[]{this, str, Integer.valueOf(i)});
+            return (a.b) ipChange.ipc$dispatch("-1437761599", new Object[]{this, str, Integer.valueOf(i)});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("titlelabel", str);
@@ -75,7 +73,7 @@ public class ew0 extends C0528b {
         if (AndroidInstantRuntime.support(ipChange, "428186599")) {
             ipChange.ipc$dispatch("428186599", new Object[]{this, str, str2, str3});
         } else {
-            C0529c.e().x(f().i(str, str2, str3));
+            cn.damai.common.user.c.e().x(f().i(str, str2, str3));
         }
     }
 
@@ -84,7 +82,7 @@ public class ew0 extends C0528b {
         if (AndroidInstantRuntime.support(ipChange, "1686702789")) {
             ipChange.ipc$dispatch("1686702789", new Object[]{this, Integer.valueOf(i), str});
         } else {
-            C0529c.e().x(f().j(i, str));
+            cn.damai.common.user.c.e().x(f().j(i, str));
         }
     }
 }

@@ -1,7 +1,7 @@
 package com.alibaba.gaiax.studio.third.socket.websocket.dispatcher;
 
 import android.os.Process;
-import com.alibaba.gaiax.studio.third.socket.websocket.dispatcher.C3396a;
+import com.alibaba.gaiax.studio.third.socket.websocket.dispatcher.a;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -13,11 +13,11 @@ public class EngineThread extends Thread {
     private ExecutorService executorService;
     private boolean stop;
     private String TAG = "WSEngineThread";
-    private ArrayBlockingQueue<C3396a.C3397a> jobQueue = new ArrayBlockingQueue<>(10);
+    private ArrayBlockingQueue<a.C0143a> jobQueue = new ArrayBlockingQueue<>(10);
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public void add(final C3396a.C3397a c3397a) {
-        if (this.jobQueue.offer(c3397a)) {
+    public void add(final a.C0143a c0143a) {
+        if (this.jobQueue.offer(c0143a)) {
             return;
         }
         eb1.b(this.TAG, "Offer response to Engine failed!start an thread to put.");
@@ -31,7 +31,7 @@ public class EngineThread extends Thread {
                     return;
                 }
                 try {
-                    EngineThread.this.jobQueue.put(c3397a);
+                    EngineThread.this.jobQueue.put(c0143a);
                 } catch (Exception e) {
                     if (EngineThread.this.stop) {
                         eb1.c(EngineThread.this.TAG, "put response failed!", e);
@@ -55,13 +55,13 @@ public class EngineThread extends Thread {
         Process.setThreadPriority(10);
         while (!this.stop) {
             try {
-                C3396a.C3397a take = this.jobQueue.take();
+                a.C0143a take = this.jobQueue.take();
                 if (take.a) {
                     take.d.onSendDataError(take.c, take.e);
                 } else {
                     take.b.onResponse(take.d, take.e);
                 }
-                C3396a.C3397a.b(take);
+                a.C0143a.b(take);
             } catch (InterruptedException unused) {
                 if (this.stop) {
                     return;

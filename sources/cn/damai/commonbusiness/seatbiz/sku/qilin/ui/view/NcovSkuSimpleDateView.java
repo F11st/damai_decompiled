@@ -44,12 +44,11 @@ public class NcovSkuSimpleDateView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.view.NcovSkuSimpleDateView$a */
     /* loaded from: classes.dex */
-    public class C0852a implements DefHorScrollView.OnScrollListener {
+    public class a implements DefHorScrollView.OnScrollListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0852a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.view.DefHorScrollView.OnScrollListener
@@ -64,12 +63,11 @@ public class NcovSkuSimpleDateView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.view.NcovSkuSimpleDateView$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0853b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0853b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -84,12 +82,11 @@ public class NcovSkuSimpleDateView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.view.NcovSkuSimpleDateView$c */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0854c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0854c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -188,7 +185,7 @@ public class NcovSkuSimpleDateView {
                     textView4.setTextColor(this.f.getResources().getColor(i3));
                 }
                 inflate.setTag(dayEntity);
-                inflate.setOnClickListener(new View$OnClickListenerC0854c());
+                inflate.setOnClickListener(new c());
                 this.d.addView(inflate);
             }
         }
@@ -217,11 +214,11 @@ public class NcovSkuSimpleDateView {
         this.b = this.a.findViewById(R$id.layout_simple_day);
         DefHorScrollView defHorScrollView = (DefHorScrollView) this.a.findViewById(R$id.scroll_simple_date);
         this.c = defHorScrollView;
-        defHorScrollView.setOnScrollListener(new C0852a());
+        defHorScrollView.setOnScrollListener(new a());
         this.d = (LinearLayout) this.a.findViewById(R$id.lin_simple_date);
         View findViewById = this.a.findViewById(R$id.btn_open_date);
         this.e = findViewById;
-        findViewById.setOnClickListener(new View$OnClickListenerC0853b());
+        findViewById.setOnClickListener(new b());
     }
 
     public void i() {

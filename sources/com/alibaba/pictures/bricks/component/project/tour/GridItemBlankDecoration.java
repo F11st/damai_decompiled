@@ -25,16 +25,15 @@ public class GridItemBlankDecoration extends RecyclerView.ItemDecoration {
     private int c;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.project.tour.GridItemBlankDecoration$b */
     /* loaded from: classes7.dex */
-    public static class C3492b {
+    public static class b {
         private static transient /* synthetic */ IpChange $ipChange;
         private Resources a;
         private int b = 0;
         private int c = 0;
         private int d = -1;
 
-        public C3492b(Context context) {
+        public b(Context context) {
             this.a = context.getResources();
         }
 
@@ -43,28 +42,28 @@ public class GridItemBlankDecoration extends RecyclerView.ItemDecoration {
             return AndroidInstantRuntime.support(ipChange, "1185105685") ? (GridItemBlankDecoration) ipChange.ipc$dispatch("1185105685", new Object[]{this}) : new GridItemBlankDecoration(this.b, this.c, this.d);
         }
 
-        public C3492b b(@ColorInt int i) {
+        public b b(@ColorInt int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-574588650")) {
-                return (C3492b) ipChange.ipc$dispatch("-574588650", new Object[]{this, Integer.valueOf(i)});
+                return (b) ipChange.ipc$dispatch("-574588650", new Object[]{this, Integer.valueOf(i)});
             }
             this.d = i;
             return this;
         }
 
-        public C3492b c(float f) {
+        public b c(float f) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1152087460")) {
-                return (C3492b) ipChange.ipc$dispatch("-1152087460", new Object[]{this, Float.valueOf(f)});
+                return (b) ipChange.ipc$dispatch("-1152087460", new Object[]{this, Float.valueOf(f)});
             }
             this.b = (int) TypedValue.applyDimension(0, f, this.a.getDisplayMetrics());
             return this;
         }
 
-        public C3492b d(float f) {
+        public b d(float f) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-921925238")) {
-                return (C3492b) ipChange.ipc$dispatch("-921925238", new Object[]{this, Float.valueOf(f)});
+                return (b) ipChange.ipc$dispatch("-921925238", new Object[]{this, Float.valueOf(f)});
             }
             this.c = (int) TypedValue.applyDimension(0, f, this.a.getDisplayMetrics());
             return this;
@@ -167,15 +166,15 @@ public class GridItemBlankDecoration extends RecyclerView.ItemDecoration {
             ipChange.ipc$dispatch("591225482", new Object[]{this, rect, view, recyclerView, state});
             return;
         }
-        int b = b(recyclerView);
+        int b2 = b(recyclerView);
         int itemCount = recyclerView.getAdapter().getItemCount();
         int viewLayoutPosition = ((RecyclerView.LayoutParams) view.getLayoutParams()).getViewLayoutPosition();
         if (viewLayoutPosition < 0) {
             return;
         }
-        int i = viewLayoutPosition % b;
+        int i = viewLayoutPosition % b2;
         int i2 = this.c;
-        rect.set((i * i2) / b, 0, i2 - (((i + 1) * i2) / b), !c(recyclerView, viewLayoutPosition, b, itemCount) ? this.b : 0);
+        rect.set((i * i2) / b2, 0, i2 - (((i + 1) * i2) / b2), !c(recyclerView, viewLayoutPosition, b2, itemCount) ? this.b : 0);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.ItemDecoration

@@ -70,7 +70,7 @@ public class RegionAdapter extends BaseAdapter implements AUPinnedHeaderListView
     public View getView(int i, View view, ViewGroup viewGroup) {
         ViewHolder viewHolder;
         if (view == null) {
-            view = LayoutInflater.from(DataProviderFactory.getApplicationContext()).inflate(R.C2965layout.aliuser_region, (ViewGroup) null);
+            view = LayoutInflater.from(DataProviderFactory.getApplicationContext()).inflate(R.layout.aliuser_region, (ViewGroup) null);
             viewHolder = new ViewHolder();
             viewHolder.mHeaderLayout = (LinearLayout) view.findViewById(R.id.contact_item_head);
             viewHolder.mHeaderText = (TextView) view.findViewById(R.id.contact_item_header_text);
@@ -92,7 +92,7 @@ public class RegionAdapter extends BaseAdapter implements AUPinnedHeaderListView
             view.setBackgroundColor(-1);
         } else {
             viewHolder.mHeaderLayout.setVisibility(8);
-            view.setBackgroundResource(R.C2964drawable.aliuser_region_item_bg);
+            view.setBackgroundResource(R.drawable.aliuser_region_item_bg);
         }
         viewHolder.mRegiontNameText.setText(regionInfo.name);
         viewHolder.mRegionNubmerText.setText(regionInfo.code);
@@ -100,13 +100,13 @@ public class RegionAdapter extends BaseAdapter implements AUPinnedHeaderListView
         if (regionInfo2 != null && !TextUtils.isEmpty(regionInfo2.domain) && this.mCurrentRegion.domain.equals(regionInfo.domain)) {
             TextView textView = viewHolder.mRegionNubmerText;
             Resources resources = this.mContext.getResources();
-            int i2 = R.C2963color.aliuser_selected_country_color;
+            int i2 = R.color.aliuser_selected_country_color;
             textView.setTextColor(resources.getColor(i2));
             viewHolder.mRegiontNameText.setTextColor(this.mContext.getResources().getColor(i2));
             viewHolder.mRegionSelectIcon.setVisibility(0);
         } else {
-            viewHolder.mRegionNubmerText.setTextColor(this.mContext.getResources().getColor(R.C2963color.aliuser_color_light_gray));
-            viewHolder.mRegiontNameText.setTextColor(this.mContext.getResources().getColor(R.C2963color.aliuser_color_black));
+            viewHolder.mRegionNubmerText.setTextColor(this.mContext.getResources().getColor(R.color.aliuser_color_light_gray));
+            viewHolder.mRegiontNameText.setTextColor(this.mContext.getResources().getColor(R.color.aliuser_color_black));
             viewHolder.mRegionSelectIcon.setVisibility(4);
         }
         return view;

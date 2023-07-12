@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.bean.FocusEvent;
 import cn.damai.discover.content.bean.FollowInfo;
 import cn.damai.discover.content.bean.FollowedUser;
@@ -51,12 +51,11 @@ public class ContentShareViewHolder extends cp2<FollowInfo> implements OnFollowS
     private String n;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.content.ui.viewholder.ContentShareViewHolder$a */
     /* loaded from: classes5.dex */
-    public class C1010a implements OnItemBindListener<FollowedUser> {
+    public class a implements OnItemBindListener<FollowedUser> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1010a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -76,7 +75,7 @@ public class ContentShareViewHolder extends cp2<FollowInfo> implements OnFollowS
                 ipChange.ipc$dispatch("-423855310", new Object[]{this, followedUser, Integer.valueOf(i)});
             } else if (ContentShareViewHolder.this.a == null || !followedUser.isValid()) {
             } else {
-                C0529c.e().x(ContentShareViewHolder.this.getLiveUt().z(i));
+                c.e().x(ContentShareViewHolder.this.getLiveUt().z(i));
                 Bundle bundle = new Bundle();
                 bundle.putString("userId", followedUser.havanaIdStr);
                 DMNav.from(ContentShareViewHolder.this.a).withExtras(bundle).toUri(NavUri.b(cs.Y));
@@ -171,7 +170,7 @@ public class ContentShareViewHolder extends cp2<FollowInfo> implements OnFollowS
         this.l = (TextView) this.b.findViewById(R$id.live_content_detail_tip_focus_count);
         this.h = this.b.findViewById(R$id.live_content_detail_head_layout);
         RecyclerView recyclerView = (RecyclerView) this.b.findViewById(R$id.live_content_detail_head_lv);
-        this.i = new ContentFollowUserAdapter(this.a, new C1010a());
+        this.i = new ContentFollowUserAdapter(this.a, new a());
         recyclerView.setLayoutManager(new LinearLayoutManager(this.a, 0, false));
         recyclerView.addItemDecoration(new RecyclerView.ItemDecoration() { // from class: cn.damai.discover.content.ui.viewholder.ContentShareViewHolder.2
             private static transient /* synthetic */ IpChange $ipChange;
@@ -293,7 +292,7 @@ public class ContentShareViewHolder extends cp2<FollowInfo> implements OnFollowS
         super.onClick(view);
         if (this.k != null && view.getId() == R$id.live_content_detail_follow_layout) {
             j();
-            C0529c.e().x(getLiveUt().w());
+            c.e().x(getLiveUt().w());
         }
     }
 }

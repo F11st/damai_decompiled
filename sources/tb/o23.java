@@ -18,9 +18,8 @@ public class o23 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.o23$b */
     /* loaded from: classes4.dex */
-    public static class C9501b {
+    public static class b {
         private static final o23 a = new o23();
     }
 
@@ -34,7 +33,7 @@ public class o23 {
 
     public static final o23 c() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1009842757") ? (o23) ipChange.ipc$dispatch("-1009842757", new Object[0]) : C9501b.a;
+        return AndroidInstantRuntime.support(ipChange, "-1009842757") ? (o23) ipChange.ipc$dispatch("-1009842757", new Object[0]) : b.a;
     }
 
     public static String d(String str) {

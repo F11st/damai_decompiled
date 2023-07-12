@@ -13,14 +13,13 @@ import tb.k50;
 public interface KotlinClassFinder extends KotlinMetadataFinder {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.kotlin.KotlinClassFinder$a */
     /* loaded from: classes3.dex */
-    public static abstract class AbstractC8373a {
+    public static abstract class a {
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.load.kotlin.KotlinClassFinder$a$a */
+        /* renamed from: kotlin.reflect.jvm.internal.impl.load.kotlin.KotlinClassFinder$a$a  reason: collision with other inner class name */
         /* loaded from: classes3.dex */
-        public static final class C8374a extends AbstractC8373a {
+        public static final class C0420a extends a {
             @NotNull
             private final byte[] a;
 
@@ -31,14 +30,13 @@ public interface KotlinClassFinder extends KotlinMetadataFinder {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.load.kotlin.KotlinClassFinder$a$b */
         /* loaded from: classes3.dex */
-        public static final class C8375b extends AbstractC8373a {
+        public static final class b extends a {
             @NotNull
             private final KotlinJvmBinaryClass a;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C8375b(@NotNull KotlinJvmBinaryClass kotlinJvmBinaryClass, @Nullable byte[] bArr) {
+            public b(@NotNull KotlinJvmBinaryClass kotlinJvmBinaryClass, @Nullable byte[] bArr) {
                 super(null);
                 b41.i(kotlinJvmBinaryClass, "kotlinJvmBinaryClass");
                 this.a = kotlinJvmBinaryClass;
@@ -49,31 +47,31 @@ public interface KotlinClassFinder extends KotlinMetadataFinder {
                 return this.a;
             }
 
-            public /* synthetic */ C8375b(KotlinJvmBinaryClass kotlinJvmBinaryClass, byte[] bArr, int i, k50 k50Var) {
+            public /* synthetic */ b(KotlinJvmBinaryClass kotlinJvmBinaryClass, byte[] bArr, int i, k50 k50Var) {
                 this(kotlinJvmBinaryClass, (i & 2) != 0 ? null : bArr);
             }
         }
 
-        private AbstractC8373a() {
+        private a() {
         }
 
-        public /* synthetic */ AbstractC8373a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
         @Nullable
         public final KotlinJvmBinaryClass a() {
-            C8375b c8375b = this instanceof C8375b ? (C8375b) this : null;
-            if (c8375b == null) {
+            b bVar = this instanceof b ? (b) this : null;
+            if (bVar == null) {
                 return null;
             }
-            return c8375b.b();
+            return bVar.b();
         }
     }
 
     @Nullable
-    AbstractC8373a findKotlinClassOrContent(@NotNull JavaClass javaClass);
+    a findKotlinClassOrContent(@NotNull JavaClass javaClass);
 
     @Nullable
-    AbstractC8373a findKotlinClassOrContent(@NotNull hj hjVar);
+    a findKotlinClassOrContent(@NotNull hj hjVar);
 }

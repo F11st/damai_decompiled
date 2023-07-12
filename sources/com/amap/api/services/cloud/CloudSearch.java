@@ -1,9 +1,9 @@
 package com.amap.api.services.cloud;
 
 import android.content.Context;
-import com.amap.api.col.s.C4435i;
 import com.amap.api.col.s.aa;
 import com.amap.api.col.s.ax;
+import com.amap.api.col.s.i;
 import com.amap.api.services.core.AMapException;
 import com.amap.api.services.core.LatLonPoint;
 import com.amap.api.services.interfaces.ICloudSearch;
@@ -37,7 +37,7 @@ public class CloudSearch {
         private List<String> h = new ArrayList();
 
         public Query(String str, String str2, SearchBound searchBound) throws AMapException {
-            if (!C4435i.a(str) && searchBound != null) {
+            if (!i.a(str) && searchBound != null) {
                 this.d = str;
                 this.a = str2;
                 this.e = searchBound;
@@ -528,7 +528,7 @@ public class CloudSearch {
         }
 
         public String toString() {
-            if (C4435i.a(this.b)) {
+            if (i.a(this.b)) {
                 int i = this.a;
                 return i == 0 ? "_weight:desc" : i == 1 ? "_distance:asc" : "";
             } else if (this.c) {

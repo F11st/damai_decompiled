@@ -11,7 +11,6 @@ import android.os.ParcelFileDescriptor;
 import android.provider.MediaStore;
 import android.text.TextUtils;
 import com.alibaba.analytics.core.sync.UploadQueueMgr;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import io.flutter.wpkbridge.WPKFactory;
@@ -102,7 +101,7 @@ public final class yd1 {
             return (Uri) ipChange.ipc$dispatch("-424085128", new Object[]{context, str});
         }
         b41.i(context, WPKFactory.INIT_KEY_CONTEXT);
-        b41.i(str, AbstractC3893a.V);
+        b41.i(str, com.alibaba.security.realidentity.jsbridge.a.V);
         Cursor query = context.getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, new String[]{"_id"}, "_data=? ", new String[]{str}, null);
         if (query == null || !query.moveToFirst()) {
             return null;

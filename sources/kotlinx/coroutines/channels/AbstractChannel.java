@@ -8,7 +8,6 @@ import kotlin.Deprecated;
 import kotlin.DeprecationLevel;
 import kotlin.Result;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt;
 import kotlin.jvm.JvmField;
 import kotlin.jvm.JvmName;
@@ -52,20 +51,19 @@ import tb.zj;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
-public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Channel<E> {
+public abstract class AbstractChannel<E> extends kotlinx.coroutines.channels.a<E> implements Channel<E> {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.channels.AbstractChannel$a */
     /* loaded from: classes9.dex */
-    public static final class C8626a<E> implements ChannelIterator<E> {
+    public static final class a<E> implements ChannelIterator<E> {
         @Nullable
         private Object a = k1.POLL_FAILED;
         @JvmField
         @NotNull
         public final AbstractChannel<E> b;
 
-        public C8626a(@NotNull AbstractChannel<E> abstractChannel) {
+        public a(@NotNull AbstractChannel<E> abstractChannel) {
             this.b = abstractChannel;
         }
 
@@ -86,10 +84,10 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
             Object d;
             c = IntrinsicsKt__IntrinsicsJvmKt.c(continuation);
             CancellableContinuationImpl b = dg.b(c);
-            C8629d c8629d = new C8629d(this, b);
+            d dVar = new d(this, b);
             while (true) {
-                if (this.b.F(c8629d)) {
-                    this.b.U(b, c8629d);
+                if (this.b.F(dVar)) {
+                    this.b.U(b, dVar);
                     break;
                 }
                 Object P = this.b.P();
@@ -98,11 +96,11 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
                     zj zjVar = (zj) P;
                     if (zjVar.d == null) {
                         Boolean a = id.a(false);
-                        Result.C8174a c8174a = Result.Companion;
+                        Result.a aVar = Result.Companion;
                         b.resumeWith(Result.m1271constructorimpl(a));
                     } else {
                         Throwable A = zjVar.A();
-                        Result.C8174a c8174a2 = Result.Companion;
+                        Result.a aVar2 = Result.Companion;
                         b.resumeWith(Result.m1271constructorimpl(i32.a(A)));
                     }
                 } else if (P != k1.POLL_FAILED) {
@@ -112,7 +110,7 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
                 }
             }
             Object result = b.getResult();
-            d = C8234b.d();
+            d = kotlin.coroutines.intrinsics.b.d();
             if (result == d) {
                 n40.c(continuation);
             }
@@ -164,16 +162,15 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.channels.AbstractChannel$b */
     /* loaded from: classes9.dex */
-    public static class C8627b<E> extends gz1<E> {
+    public static class b<E> extends gz1<E> {
         @JvmField
         @NotNull
         public final CancellableContinuation<Object> d;
         @JvmField
         public final int e;
 
-        public C8627b(@NotNull CancellableContinuation<Object> cancellableContinuation, int i) {
+        public b(@NotNull CancellableContinuation<Object> cancellableContinuation, int i) {
             this.d = cancellableContinuation;
             this.e = i;
         }
@@ -191,16 +188,16 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
 
         @Override // kotlinx.coroutines.channels.ReceiveOrClosed
         @Nullable
-        public kj2 tryResumeReceive(E e, @Nullable ma1.C9437d c9437d) {
-            Object tryResume = this.d.tryResume(w(e), c9437d != null ? c9437d.c : null, u(e));
+        public kj2 tryResumeReceive(E e, @Nullable ma1.d dVar) {
+            Object tryResume = this.d.tryResume(w(e), dVar != null ? dVar.c : null, u(e));
             if (tryResume != null) {
                 if (k40.a()) {
                     if (!(tryResume == cg.RESUME_TOKEN)) {
                         throw new AssertionError();
                     }
                 }
-                if (c9437d != null) {
-                    c9437d.d();
+                if (dVar != null) {
+                    dVar.d();
                 }
                 return cg.RESUME_TOKEN;
             }
@@ -212,18 +209,18 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
             int i = this.e;
             if (i == 1 && zjVar.d == null) {
                 CancellableContinuation<Object> cancellableContinuation = this.d;
-                Result.C8174a c8174a = Result.Companion;
+                Result.a aVar = Result.Companion;
                 cancellableContinuation.resumeWith(Result.m1271constructorimpl(null));
             } else if (i == 2) {
                 CancellableContinuation<Object> cancellableContinuation2 = this.d;
-                yw2.C10005b c10005b = yw2.Companion;
-                yw2 a = yw2.a(yw2.b(new yw2.C10004a(zjVar.d)));
-                Result.C8174a c8174a2 = Result.Companion;
+                yw2.b bVar = yw2.Companion;
+                yw2 a = yw2.a(yw2.b(new yw2.a(zjVar.d)));
+                Result.a aVar2 = Result.Companion;
                 cancellableContinuation2.resumeWith(Result.m1271constructorimpl(a));
             } else {
                 CancellableContinuation<Object> cancellableContinuation3 = this.d;
                 Throwable A = zjVar.A();
-                Result.C8174a c8174a3 = Result.Companion;
+                Result.a aVar3 = Result.Companion;
                 cancellableContinuation3.resumeWith(Result.m1271constructorimpl(i32.a(A)));
             }
         }
@@ -233,22 +230,21 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
             if (this.e != 2) {
                 return e;
             }
-            yw2.C10005b c10005b = yw2.Companion;
+            yw2.b bVar = yw2.Companion;
             return yw2.a(yw2.b(e));
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.channels.AbstractChannel$c */
     /* loaded from: classes9.dex */
-    public static final class C8628c<E> extends C8627b<E> {
+    public static final class c<E> extends b<E> {
         @JvmField
         @NotNull
         public final Function1<E, wt2> f;
 
         /* JADX WARN: Multi-variable type inference failed */
-        public C8628c(@NotNull CancellableContinuation<Object> cancellableContinuation, int i, @NotNull Function1<? super E, wt2> function1) {
+        public c(@NotNull CancellableContinuation<Object> cancellableContinuation, int i, @NotNull Function1<? super E, wt2> function1) {
             super(cancellableContinuation, i);
             this.f = function1;
         }
@@ -262,19 +258,18 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.channels.AbstractChannel$d */
     /* loaded from: classes9.dex */
-    public static class C8629d<E> extends gz1<E> {
+    public static class d<E> extends gz1<E> {
         @JvmField
         @NotNull
-        public final C8626a<E> d;
+        public final a<E> d;
         @JvmField
         @NotNull
         public final CancellableContinuation<Boolean> e;
 
         /* JADX WARN: Multi-variable type inference failed */
-        public C8629d(@NotNull C8626a<E> c8626a, @NotNull CancellableContinuation<? super Boolean> cancellableContinuation) {
-            this.d = c8626a;
+        public d(@NotNull a<E> aVar, @NotNull CancellableContinuation<? super Boolean> cancellableContinuation) {
+            this.d = aVar;
             this.e = cancellableContinuation;
         }
 
@@ -292,16 +287,16 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
 
         @Override // kotlinx.coroutines.channels.ReceiveOrClosed
         @Nullable
-        public kj2 tryResumeReceive(E e, @Nullable ma1.C9437d c9437d) {
-            Object tryResume = this.e.tryResume(Boolean.TRUE, c9437d != null ? c9437d.c : null, u(e));
+        public kj2 tryResumeReceive(E e, @Nullable ma1.d dVar) {
+            Object tryResume = this.e.tryResume(Boolean.TRUE, dVar != null ? dVar.c : null, u(e));
             if (tryResume != null) {
                 if (k40.a()) {
                     if (!(tryResume == cg.RESUME_TOKEN)) {
                         throw new AssertionError();
                     }
                 }
-                if (c9437d != null) {
-                    c9437d.d();
+                if (dVar != null) {
+                    dVar.d();
                 }
                 return cg.RESUME_TOKEN;
             }
@@ -322,7 +317,7 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
         public void v(@NotNull zj<?> zjVar) {
             Object tryResumeWithException;
             if (zjVar.d == null) {
-                tryResumeWithException = CancellableContinuation.C8608a.a(this.e, Boolean.FALSE, null, 2, null);
+                tryResumeWithException = CancellableContinuation.a.a(this.e, Boolean.FALSE, null, 2, null);
             } else {
                 tryResumeWithException = this.e.tryResumeWithException(zjVar.A());
             }
@@ -335,9 +330,8 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.channels.AbstractChannel$e */
     /* loaded from: classes9.dex */
-    public static final class C8630e<R, E> extends gz1<E> implements DisposableHandle {
+    public static final class e<R, E> extends gz1<E> implements DisposableHandle {
         @JvmField
         @NotNull
         public final AbstractChannel<E> d;
@@ -351,7 +345,7 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
         public final int g;
 
         /* JADX WARN: Multi-variable type inference failed */
-        public C8630e(@NotNull AbstractChannel<E> abstractChannel, @NotNull SelectInstance<? super R> selectInstance, @NotNull Function2<Object, ? super Continuation<? super R>, ? extends Object> function2, int i) {
+        public e(@NotNull AbstractChannel<E> abstractChannel, @NotNull SelectInstance<? super R> selectInstance, @NotNull Function2<Object, ? super Continuation<? super R>, ? extends Object> function2, int i) {
             this.d = abstractChannel;
             this.e = selectInstance;
             this.f = function2;
@@ -363,7 +357,7 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
             Object obj;
             Function2<Object, Continuation<? super R>, Object> function2 = this.f;
             if (this.g == 2) {
-                yw2.C10005b c10005b = yw2.Companion;
+                yw2.b bVar = yw2.Companion;
                 obj = yw2.a(yw2.b(e));
             } else {
                 obj = e;
@@ -386,8 +380,8 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
 
         @Override // kotlinx.coroutines.channels.ReceiveOrClosed
         @Nullable
-        public kj2 tryResumeReceive(E e, @Nullable ma1.C9437d c9437d) {
-            return (kj2) this.e.trySelectOther(c9437d);
+        public kj2 tryResumeReceive(E e, @Nullable ma1.d dVar) {
+            return (kj2) this.e.trySelectOther(dVar);
         }
 
         @Override // tb.gz1
@@ -415,8 +409,8 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
                 } else if (i != 2) {
                 } else {
                     Function2<Object, Continuation<? super R>, Object> function2 = this.f;
-                    yw2.C10005b c10005b = yw2.Companion;
-                    eg.d(function2, yw2.a(yw2.b(new yw2.C10004a(zjVar.d))), this.e.getCompletion(), null, 4, null);
+                    yw2.b bVar = yw2.Companion;
+                    eg.d(function2, yw2.a(yw2.b(new yw2.a(zjVar.d))), this.e.getCompletion(), null, 4, null);
                 }
             }
         }
@@ -424,12 +418,11 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.channels.AbstractChannel$f */
     /* loaded from: classes9.dex */
-    public final class C8631f extends zb {
+    public final class f extends zb {
         private final gz1<?> a;
 
-        public C8631f(@NotNull gz1<?> gz1Var) {
+        public f(@NotNull gz1<?> gz1Var) {
             this.a = gz1Var;
         }
 
@@ -454,14 +447,13 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
 
     /* JADX INFO: Access modifiers changed from: protected */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.channels.AbstractChannel$g */
     /* loaded from: classes9.dex */
-    public static final class C8632g<E> extends ma1.C9438e<ha2> {
-        public C8632g(@NotNull ka1 ka1Var) {
+    public static final class g<E> extends ma1.e<ha2> {
+        public g(@NotNull ka1 ka1Var) {
             super(ka1Var);
         }
 
-        @Override // tb.ma1.C9438e, tb.ma1.AbstractC9434a
+        @Override // tb.ma1.e, tb.ma1.a
         @Nullable
         protected Object e(@NotNull ma1 ma1Var) {
             if (ma1Var instanceof zj) {
@@ -473,12 +465,12 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
             return k1.POLL_FAILED;
         }
 
-        @Override // tb.ma1.AbstractC9434a
+        @Override // tb.ma1.a
         @Nullable
-        public Object j(@NotNull ma1.C9437d c9437d) {
-            ma1 ma1Var = c9437d.a;
+        public Object j(@NotNull ma1.d dVar) {
+            ma1 ma1Var = dVar.a;
             Objects.requireNonNull(ma1Var, "null cannot be cast to non-null type kotlinx.coroutines.channels.Send");
-            kj2 w = ((ha2) ma1Var).w(c9437d);
+            kj2 w = ((ha2) ma1Var).w(dVar);
             if (w != null) {
                 Object obj = u8.RETRY_ATOMIC;
                 if (w == obj) {
@@ -495,7 +487,7 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
             return na1.REMOVE_PREPARED;
         }
 
-        @Override // tb.ma1.AbstractC9434a
+        @Override // tb.ma1.a
         public void k(@NotNull ma1 ma1Var) {
             Objects.requireNonNull(ma1Var, "null cannot be cast to non-null type kotlinx.coroutines.channels.Send");
             ((ha2) ma1Var).x();
@@ -503,13 +495,12 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.channels.AbstractChannel$h */
     /* loaded from: classes9.dex */
-    public static final class C8633h extends ma1.AbstractC9436c {
+    public static final class h extends ma1.c {
         final /* synthetic */ AbstractChannel d;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C8633h(ma1 ma1Var, ma1 ma1Var2, AbstractChannel abstractChannel) {
+        public h(ma1 ma1Var, ma1 ma1Var2, AbstractChannel abstractChannel) {
             super(ma1Var2);
             this.d = abstractChannel;
         }
@@ -526,10 +517,9 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.channels.AbstractChannel$i */
     /* loaded from: classes9.dex */
-    public static final class C8634i implements SelectClause1<E> {
-        C8634i() {
+    public static final class i implements SelectClause1<E> {
+        i() {
         }
 
         @Override // kotlinx.coroutines.selects.SelectClause1
@@ -541,10 +531,9 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.channels.AbstractChannel$j */
     /* loaded from: classes9.dex */
-    public static final class C8635j implements SelectClause1<yw2<? extends E>> {
-        C8635j() {
+    public static final class j implements SelectClause1<yw2<? extends E>> {
+        j() {
         }
 
         @Override // kotlinx.coroutines.selects.SelectClause1
@@ -556,10 +545,9 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.channels.AbstractChannel$k */
     /* loaded from: classes9.dex */
-    public static final class C8636k implements SelectClause1<E> {
-        C8636k() {
+    public static final class k implements SelectClause1<E> {
+        k() {
         }
 
         @Override // kotlinx.coroutines.selects.SelectClause1
@@ -583,11 +571,11 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
         return G;
     }
 
-    private final <R> boolean H(SelectInstance<? super R> selectInstance, Function2<Object, ? super Continuation<? super R>, ? extends Object> function2, int i) {
-        C8630e c8630e = new C8630e(this, selectInstance, function2, i);
-        boolean F = F(c8630e);
+    private final <R> boolean H(SelectInstance<? super R> selectInstance, Function2<Object, ? super Continuation<? super R>, ? extends Object> function2, int i2) {
+        e eVar = new e(this, selectInstance, function2, i2);
+        boolean F = F(eVar);
         if (F) {
-            selectInstance.disposeOnSelect(c8630e);
+            selectInstance.disposeOnSelect(eVar);
         }
         return F;
     }
@@ -605,10 +593,10 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public final <R> void T(SelectInstance<? super R> selectInstance, int i, Function2<Object, ? super Continuation<? super R>, ? extends Object> function2) {
+    public final <R> void T(SelectInstance<? super R> selectInstance, int i2, Function2<Object, ? super Continuation<? super R>, ? extends Object> function2) {
         while (!selectInstance.isSelected()) {
             if (L()) {
-                if (H(selectInstance, function2, i)) {
+                if (H(selectInstance, function2, i2)) {
                     return;
                 }
             } else {
@@ -617,7 +605,7 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
                     return;
                 }
                 if (Q != k1.POLL_FAILED && Q != u8.RETRY_ATOMIC) {
-                    V(function2, selectInstance, i, Q);
+                    V(function2, selectInstance, i2, Q);
                 }
             }
         }
@@ -625,31 +613,31 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
 
     /* JADX INFO: Access modifiers changed from: private */
     public final void U(CancellableContinuation<?> cancellableContinuation, gz1<?> gz1Var) {
-        cancellableContinuation.invokeOnCancellation(new C8631f(gz1Var));
+        cancellableContinuation.invokeOnCancellation(new f(gz1Var));
     }
 
-    private final <R> void V(Function2<Object, ? super Continuation<? super R>, ? extends Object> function2, SelectInstance<? super R> selectInstance, int i, Object obj) {
-        Object b;
+    private final <R> void V(Function2<Object, ? super Continuation<? super R>, ? extends Object> function2, SelectInstance<? super R> selectInstance, int i2, Object obj) {
+        Object b2;
         boolean z = obj instanceof zj;
         if (!z) {
-            if (i == 2) {
-                yw2.C10005b c10005b = yw2.Companion;
+            if (i2 == 2) {
+                yw2.b bVar = yw2.Companion;
                 if (z) {
-                    b = yw2.b(new yw2.C10004a(((zj) obj).d));
+                    b2 = yw2.b(new yw2.a(((zj) obj).d));
                 } else {
-                    b = yw2.b(obj);
+                    b2 = yw2.b(obj);
                 }
-                st2.d(function2, yw2.a(b), selectInstance.getCompletion());
+                st2.d(function2, yw2.a(b2), selectInstance.getCompletion());
                 return;
             }
             st2.d(function2, obj, selectInstance.getCompletion());
-        } else if (i == 0) {
+        } else if (i2 == 0) {
             throw pf2.k(((zj) obj).A());
         } else {
-            if (i != 1) {
-                if (i == 2 && selectInstance.trySelect()) {
-                    yw2.C10005b c10005b2 = yw2.Companion;
-                    st2.d(function2, yw2.a(yw2.b(new yw2.C10004a(((zj) obj).d))), selectInstance.getCompletion());
+            if (i2 != 1) {
+                if (i2 == 2 && selectInstance.trySelect()) {
+                    yw2.b bVar2 = yw2.Companion;
+                    st2.d(function2, yw2.a(yw2.b(new yw2.a(((zj) obj).d))), selectInstance.getCompletion());
                     return;
                 }
                 return;
@@ -676,8 +664,8 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
 
     /* JADX INFO: Access modifiers changed from: protected */
     @NotNull
-    public final C8632g<E> E() {
-        return new C8632g<>(j());
+    public final g<E> E() {
+        return new g<>(j());
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -685,22 +673,22 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
         int s;
         ma1 l;
         if (J()) {
-            ma1 j = j();
+            ma1 j2 = j();
             do {
-                l = j.l();
+                l = j2.l();
                 if (!(!(l instanceof ha2))) {
                     return false;
                 }
-            } while (!l.e(gz1Var, j));
+            } while (!l.e(gz1Var, j2));
         } else {
-            ma1 j2 = j();
-            C8633h c8633h = new C8633h(gz1Var, gz1Var, this);
+            ma1 j3 = j();
+            h hVar = new h(gz1Var, gz1Var, this);
             do {
-                ma1 l2 = j2.l();
+                ma1 l2 = j3.l();
                 if (!(!(l2 instanceof ha2))) {
                     return false;
                 }
-                s = l2.s(gz1Var, j2, c8633h);
+                s = l2.s(gz1Var, j3, hVar);
                 if (s != 1) {
                 }
             } while (s != 2);
@@ -725,22 +713,22 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
 
     /* JADX INFO: Access modifiers changed from: protected */
     public void M(boolean z) {
-        zj<?> i = i();
-        if (i != null) {
-            Object b = r21.b(null, 1, null);
+        zj<?> i2 = i();
+        if (i2 != null) {
+            Object b2 = r21.b(null, 1, null);
             while (true) {
-                ma1 l = i.l();
+                ma1 l = i2.l();
                 if (l instanceof ka1) {
-                    if (b == null) {
+                    if (b2 == null) {
                         return;
                     }
-                    if (!(b instanceof ArrayList)) {
-                        ((ha2) b).v(i);
+                    if (!(b2 instanceof ArrayList)) {
+                        ((ha2) b2).v(i2);
                         return;
                     }
-                    ArrayList arrayList = (ArrayList) b;
+                    ArrayList arrayList = (ArrayList) b2;
                     for (int size = arrayList.size() - 1; size >= 0; size--) {
-                        ((ha2) arrayList.get(size)).v(i);
+                        ((ha2) arrayList.get(size)).v(i2);
                     }
                     return;
                 } else if (k40.a() && !(l instanceof ha2)) {
@@ -749,7 +737,7 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
                     if (!l.p()) {
                         l.m();
                     } else {
-                        b = r21.c(b, (ha2) l);
+                        b2 = r21.c(b2, (ha2) l);
                     }
                 }
             }
@@ -788,7 +776,7 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
 
     @Nullable
     protected Object Q(@NotNull SelectInstance<?> selectInstance) {
-        C8632g<E> E = E();
+        g<E> E = E();
         Object performAtomicTrySelect = selectInstance.performAtomicTrySelect(E);
         if (performAtomicTrySelect != null) {
             return performAtomicTrySelect;
@@ -800,36 +788,36 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r1v3, types: [kotlinx.coroutines.channels.AbstractChannel$b] */
     @Nullable
-    final /* synthetic */ <R> Object S(int i, @NotNull Continuation<? super R> continuation) {
-        Continuation c;
-        C8628c c8628c;
-        Object d;
-        c = IntrinsicsKt__IntrinsicsJvmKt.c(continuation);
-        CancellableContinuationImpl b = dg.b(c);
+    final /* synthetic */ <R> Object S(int i2, @NotNull Continuation<? super R> continuation) {
+        Continuation c2;
+        c cVar;
+        Object d2;
+        c2 = IntrinsicsKt__IntrinsicsJvmKt.c(continuation);
+        CancellableContinuationImpl b2 = dg.b(c2);
         if (this.b == null) {
-            Objects.requireNonNull(b, "null cannot be cast to non-null type kotlinx.coroutines.CancellableContinuation<kotlin.Any?>");
-            c8628c = new C8627b(b, i);
+            Objects.requireNonNull(b2, "null cannot be cast to non-null type kotlinx.coroutines.CancellableContinuation<kotlin.Any?>");
+            cVar = new b(b2, i2);
         } else {
-            Objects.requireNonNull(b, "null cannot be cast to non-null type kotlinx.coroutines.CancellableContinuation<kotlin.Any?>");
-            c8628c = new C8628c(b, i, this.b);
+            Objects.requireNonNull(b2, "null cannot be cast to non-null type kotlinx.coroutines.CancellableContinuation<kotlin.Any?>");
+            cVar = new c(b2, i2, this.b);
         }
         while (true) {
-            if (F(c8628c)) {
-                U(b, c8628c);
+            if (F(cVar)) {
+                U(b2, cVar);
                 break;
             }
             Object P = P();
             if (P instanceof zj) {
-                c8628c.v((zj) P);
+                cVar.v((zj) P);
                 break;
             } else if (P != k1.POLL_FAILED) {
-                b.resume(c8628c.w(P), c8628c.u(P));
+                b2.resume(cVar.w(P), cVar.u(P));
                 break;
             }
         }
-        Object result = b.getResult();
-        d = C8234b.d();
-        if (result == d) {
+        Object result = b2.getResult();
+        d2 = kotlin.coroutines.intrinsics.b.d();
+        if (result == d2) {
             n40.c(continuation);
         }
         return result;
@@ -844,19 +832,19 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
     @Override // kotlinx.coroutines.channels.ReceiveChannel
     @NotNull
     public final SelectClause1<E> getOnReceive() {
-        return new C8634i();
+        return new i();
     }
 
     @Override // kotlinx.coroutines.channels.ReceiveChannel
     @NotNull
     public final SelectClause1<yw2<E>> getOnReceiveOrClosed() {
-        return new C8635j();
+        return new j();
     }
 
     @Override // kotlinx.coroutines.channels.ReceiveChannel
     @NotNull
     public final SelectClause1<E> getOnReceiveOrNull() {
-        return new C8636k();
+        return new k();
     }
 
     @Override // kotlinx.coroutines.channels.ReceiveChannel
@@ -872,7 +860,7 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
     @Override // kotlinx.coroutines.channels.ReceiveChannel
     @NotNull
     public final ChannelIterator<E> iterator() {
-        return new C8626a(this);
+        return new a(this);
     }
 
     @Override // kotlinx.coroutines.channels.ReceiveChannel
@@ -921,7 +909,7 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
             r0.<init>(r4, r5)
         L18:
             java.lang.Object r5 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L35
@@ -979,7 +967,7 @@ public abstract class AbstractChannel<E> extends AbstractC8641a<E> implements Ch
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // kotlinx.coroutines.channels.AbstractC8641a
+    @Override // kotlinx.coroutines.channels.a
     @Nullable
     public ReceiveOrClosed<E> y() {
         ReceiveOrClosed<E> y = super.y();

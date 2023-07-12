@@ -2,8 +2,8 @@ package kotlin.reflect.jvm.internal.impl.load.java;
 
 import java.util.Iterator;
 import java.util.List;
-import kotlin.collections.C8214m;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.m;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -29,9 +29,8 @@ import tb.z71;
 public final class ErasedOverridabilityCondition implements ExternalOverridabilityCondition {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.ErasedOverridabilityCondition$a */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C8327a {
+    public /* synthetic */ class a {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -84,7 +83,7 @@ public final class ErasedOverridabilityCondition implements ExternalOverridabili
                 b41.f(returnType);
                 y = SequencesKt___SequencesKt.y(v, returnType);
                 ReceiverParameterDescriptor extensionReceiverParameter = javaMethodDescriptor.getExtensionReceiverParameter();
-                k = C8214m.k(extensionReceiverParameter == null ? null : extensionReceiverParameter.getType());
+                k = m.k(extensionReceiverParameter == null ? null : extensionReceiverParameter.getType());
                 x = SequencesKt___SequencesKt.x(y, k);
                 Iterator it = x.iterator();
                 while (true) {
@@ -112,14 +111,14 @@ public final class ErasedOverridabilityCondition implements ExternalOverridabili
                         b41.h(typeParameters2, "erasedSuper.typeParameters");
                         if (!typeParameters2.isEmpty()) {
                             FunctionDescriptor.CopyBuilder<? extends SimpleFunctionDescriptor> newCopyBuilder = simpleFunctionDescriptor.newCopyBuilder();
-                            g = C8214m.g();
+                            g = m.g();
                             substitute = newCopyBuilder.setTypeParameters(g).build();
                             b41.f(substitute);
                         }
                     }
                     OverridingUtil.OverrideCompatibilityInfo.Result c = OverridingUtil.DEFAULT.G(substitute, callableDescriptor2, false).c();
                     b41.h(c, "DEFAULT.isOverridableByW…Descriptor, false).result");
-                    if (C8327a.$EnumSwitchMapping$0[c.ordinal()] == 1) {
+                    if (a.$EnumSwitchMapping$0[c.ordinal()] == 1) {
                         return ExternalOverridabilityCondition.Result.OVERRIDABLE;
                     }
                     return ExternalOverridabilityCondition.Result.UNKNOWN;

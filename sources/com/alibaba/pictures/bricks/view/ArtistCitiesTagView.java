@@ -15,7 +15,7 @@ import com.android.alibaba.ip.runtime.IpChange;
 import com.google.android.flexbox.FlexboxLayout;
 import com.taobao.weex.ui.component.list.template.TemplateDom;
 import java.util.List;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -86,7 +86,7 @@ public final class ArtistCitiesTagView extends FlexboxLayout {
         for (Object obj : list) {
             int i2 = i + 1;
             if (i < 0) {
-                C8214m.p();
+                m.p();
             }
             List<? extends BaseArtistDataMo> list2 = (List) obj;
             if (!list2.isEmpty()) {

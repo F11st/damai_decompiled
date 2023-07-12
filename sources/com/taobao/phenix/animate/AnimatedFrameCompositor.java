@@ -8,7 +8,7 @@ import android.graphics.PorterDuffXfermode;
 import com.taobao.pexode.animate.AnimatedDrawableFrameInfo;
 import com.taobao.pexode.animate.AnimatedImage;
 import com.taobao.pexode.animate.AnimatedImageFrame;
-import com.taobao.phenix.bitmap.C6849b;
+import com.taobao.phenix.bitmap.b;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -42,9 +42,8 @@ public class AnimatedFrameCompositor {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.phenix.animate.AnimatedFrameCompositor$a */
     /* loaded from: classes11.dex */
-    public static /* synthetic */ class C6847a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -102,7 +101,7 @@ public class AnimatedFrameCompositor {
     private void c() {
         Bitmap bitmap = this.g;
         if (bitmap == null) {
-            this.g = C6849b.a().get(this.b, this.c, Bitmap.Config.ARGB_8888);
+            this.g = b.a().get(this.b, this.c, Bitmap.Config.ARGB_8888);
         } else {
             bitmap.eraseColor(0);
         }
@@ -145,7 +144,7 @@ public class AnimatedFrameCompositor {
 
     private int h(int i, Canvas canvas) {
         while (i >= 0) {
-            int i2 = C6847a.a[d(i).ordinal()];
+            int i2 = a.a[d(i).ordinal()];
             if (i2 == 1) {
                 AnimatedDrawableFrameInfo animatedDrawableFrameInfo = this.f[i];
                 Bitmap cachedBitmapAt = this.d.getCachedBitmapAt(i);

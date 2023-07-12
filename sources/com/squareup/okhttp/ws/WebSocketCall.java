@@ -26,7 +26,7 @@ import java.util.concurrent.TimeUnit;
 import okio.BufferedSink;
 import okio.BufferedSource;
 import okio.ByteString;
-import okio.C8844h;
+import okio.h;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -81,7 +81,7 @@ public class WebSocketCall {
                         Connection callEngineGetConnection = Internal.instance.callEngineGetConnection(this.call);
                         if (Internal.instance.clearOwner(callEngineGetConnection)) {
                             Socket socket = callEngineGetConnection.getSocket();
-                            final RealWebSocket create = ConnectionWebSocket.create(response, callEngineGetConnection, C8844h.d(C8844h.m(socket)), C8844h.c(C8844h.i(socket)), this.random, webSocketListener);
+                            final RealWebSocket create = ConnectionWebSocket.create(response, callEngineGetConnection, h.d(h.m(socket)), h.c(h.i(socket)), this.random, webSocketListener);
                             new Thread(new NamedRunnable("OkHttp WebSocket reader %s", new Object[]{this.request.urlString()}) { // from class: com.squareup.okhttp.ws.WebSocketCall.2
                                 @Override // com.squareup.okhttp.internal.NamedRunnable
                                 protected void execute() {

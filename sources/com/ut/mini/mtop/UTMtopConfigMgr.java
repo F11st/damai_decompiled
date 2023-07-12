@@ -3,7 +3,7 @@ package com.ut.mini.mtop;
 import com.alibaba.analytics.utils.Logger;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.alipay.sdk.m.x.AbstractC4344c;
+import com.alipay.sdk.m.x.c;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -95,7 +95,7 @@ class UTMtopConfigMgr {
             if (isEmpty(map)) {
                 return;
             }
-            Object obj = map.get(AbstractC4344c.c);
+            Object obj = map.get(c.c);
             if (obj instanceof List) {
                 List<JSONObject> list = (List) obj;
                 synchronized (UTMtopConfigMgr.class) {

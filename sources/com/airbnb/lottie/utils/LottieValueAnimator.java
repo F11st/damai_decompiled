@@ -5,7 +5,7 @@ import androidx.annotation.FloatRange;
 import androidx.annotation.MainThread;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
-import com.airbnb.lottie.C2821a;
+import com.airbnb.lottie.a;
 import tb.eg1;
 import tb.f81;
 
@@ -13,7 +13,7 @@ import tb.f81;
 /* loaded from: classes9.dex */
 public class LottieValueAnimator extends BaseLottieAnimator implements Choreographer.FrameCallback {
     @Nullable
-    private C2821a composition;
+    private a composition;
     private float speed = 1.0f;
     private boolean speedReversedForRepeatMode = false;
     private long lastFrameTimeNs = 0;
@@ -25,11 +25,11 @@ public class LottieValueAnimator extends BaseLottieAnimator implements Choreogra
     protected boolean running = false;
 
     private float getFrameDurationNs() {
-        C2821a c2821a = this.composition;
-        if (c2821a == null) {
+        a aVar = this.composition;
+        if (aVar == null) {
             return Float.MAX_VALUE;
         }
-        return (1.0E9f / c2821a.h()) / Math.abs(this.speed);
+        return (1.0E9f / aVar.h()) / Math.abs(this.speed);
     }
 
     private boolean isReversed() {
@@ -133,20 +133,20 @@ public class LottieValueAnimator extends BaseLottieAnimator implements Choreogra
 
     @FloatRange(from = 0.0d, to = 1.0d)
     public float getAnimatedValueAbsolute() {
-        C2821a c2821a = this.composition;
-        if (c2821a == null) {
+        a aVar = this.composition;
+        if (aVar == null) {
             return 0.0f;
         }
-        return (this.frame - c2821a.o()) / (this.composition.f() - this.composition.o());
+        return (this.frame - aVar.o()) / (this.composition.f() - this.composition.o());
     }
 
     @Override // android.animation.ValueAnimator, android.animation.Animator
     public long getDuration() {
-        C2821a c2821a = this.composition;
-        if (c2821a == null) {
+        a aVar = this.composition;
+        if (aVar == null) {
             return 0L;
         }
-        return c2821a.d();
+        return aVar.d();
     }
 
     public float getFrame() {
@@ -154,21 +154,21 @@ public class LottieValueAnimator extends BaseLottieAnimator implements Choreogra
     }
 
     public float getMaxFrame() {
-        C2821a c2821a = this.composition;
-        if (c2821a == null) {
+        a aVar = this.composition;
+        if (aVar == null) {
             return 0.0f;
         }
         float f = this.maxFrame;
-        return f == 2.1474836E9f ? c2821a.f() : f;
+        return f == 2.1474836E9f ? aVar.f() : f;
     }
 
     public float getMinFrame() {
-        C2821a c2821a = this.composition;
-        if (c2821a == null) {
+        a aVar = this.composition;
+        if (aVar == null) {
             return 0.0f;
         }
         float f = this.minFrame;
-        return f == -2.1474836E9f ? c2821a.o() : f;
+        return f == -2.1474836E9f ? aVar.o() : f;
     }
 
     public float getSpeed() {
@@ -224,13 +224,13 @@ public class LottieValueAnimator extends BaseLottieAnimator implements Choreogra
         setSpeed(-getSpeed());
     }
 
-    public void setComposition(C2821a c2821a) {
+    public void setComposition(a aVar) {
         boolean z = this.composition == null;
-        this.composition = c2821a;
+        this.composition = aVar;
         if (z) {
-            setMinAndMaxFrames((int) Math.max(this.minFrame, c2821a.o()), (int) Math.min(this.maxFrame, c2821a.f()));
+            setMinAndMaxFrames((int) Math.max(this.minFrame, aVar.o()), (int) Math.min(this.maxFrame, aVar.f()));
         } else {
-            setMinAndMaxFrames((int) c2821a.o(), (int) c2821a.f());
+            setMinAndMaxFrames((int) aVar.o(), (int) aVar.f());
         }
         float f = this.frame;
         this.frame = 0.0f;
@@ -253,10 +253,10 @@ public class LottieValueAnimator extends BaseLottieAnimator implements Choreogra
 
     public void setMinAndMaxFrames(float f, float f2) {
         if (f <= f2) {
-            C2821a c2821a = this.composition;
-            float o = c2821a == null ? -3.4028235E38f : c2821a.o();
-            C2821a c2821a2 = this.composition;
-            float f3 = c2821a2 == null ? Float.MAX_VALUE : c2821a2.f();
+            a aVar = this.composition;
+            float o = aVar == null ? -3.4028235E38f : aVar.o();
+            a aVar2 = this.composition;
+            float f3 = aVar2 == null ? Float.MAX_VALUE : aVar2.f();
             this.minFrame = eg1.c(f, o, f3);
             this.maxFrame = eg1.c(f2, o, f3);
             setFrame((int) eg1.c(this.frame, f, f2));

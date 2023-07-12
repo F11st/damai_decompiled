@@ -52,13 +52,13 @@ class SingletonImmutableTable<R, C, V> extends ImmutableTable<R, C, V> {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    @Override // com.google.common.collect.ImmutableTable, com.google.common.collect.AbstractC5180h
+    @Override // com.google.common.collect.ImmutableTable, com.google.common.collect.h
     public ImmutableSet<Table.Cell<R, C, V>> createCellSet() {
         return ImmutableSet.of(ImmutableTable.cellOf(this.singleRowKey, this.singleColumnKey, this.singleValue));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    @Override // com.google.common.collect.ImmutableTable, com.google.common.collect.AbstractC5180h
+    @Override // com.google.common.collect.ImmutableTable, com.google.common.collect.h
     public ImmutableCollection<V> createValues() {
         return ImmutableSet.of(this.singleValue);
     }

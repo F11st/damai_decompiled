@@ -60,7 +60,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 import java.util.List;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -467,7 +467,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
     @RequiresApi(17)
     public int getScreenHeight() {
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        Display.getRealMetrics(((WindowManager) this.context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+        Display.getRealMetrics(((WindowManager) this.context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
         return com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(displayMetrics);
     }
 
@@ -734,7 +734,7 @@ public abstract class BaseTransientBottomBar<B extends BaseTransientBottomBar<B>
 
     @LayoutRes
     protected int getSnackbarBaseLayoutResId() {
-        return hasSnackbarStyleAttr() ? R.C4818layout.mtrl_layout_snackbar : R.C4818layout.design_layout_snackbar;
+        return hasSnackbarStyleAttr() ? R.layout.mtrl_layout_snackbar : R.layout.design_layout_snackbar;
     }
 
     @NonNull

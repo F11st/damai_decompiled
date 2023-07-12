@@ -4,15 +4,14 @@ import com.alibaba.fastjson.JSONArray;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.android.dinamicx.DXRuntimeContext;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
-public class nv extends AbstractC6375a {
+public class nv extends com.taobao.android.dinamicx.expression.parser.a {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final long DX_PARSER_DMSUBARRAY = -3678511738734981180L;
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         int i;
         IpChange ipChange = $ipChange;

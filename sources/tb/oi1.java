@@ -18,9 +18,8 @@ public final class oi1 implements NameResolver {
     private final ProtoBuf$QualifiedNameTable b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.oi1$a */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C9524a {
+    public /* synthetic */ class a {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -48,7 +47,7 @@ public final class oi1 implements NameResolver {
             String string = this.a.getString(qualifiedName.getShortName());
             ProtoBuf$QualifiedNameTable.QualifiedName.Kind kind = qualifiedName.getKind();
             b41.f(kind);
-            int i2 = C9524a.$EnumSwitchMapping$0[kind.ordinal()];
+            int i2 = a.$EnumSwitchMapping$0[kind.ordinal()];
             if (i2 == 1) {
                 linkedList2.addFirst(string);
             } else if (i2 == 2) {
@@ -67,9 +66,9 @@ public final class oi1 implements NameResolver {
     public String getQualifiedClassName(int i) {
         String Z;
         String Z2;
-        Triple<List<String>, List<String>, Boolean> a = a(i);
-        List<String> component1 = a.component1();
-        Z = CollectionsKt___CollectionsKt.Z(a.component2(), ".", null, null, 0, null, null, 62, null);
+        Triple<List<String>, List<String>, Boolean> a2 = a(i);
+        List<String> component1 = a2.component1();
+        Z = CollectionsKt___CollectionsKt.Z(a2.component2(), ".", null, null, 0, null, null, 62, null);
         if (component1.isEmpty()) {
             return Z;
         }

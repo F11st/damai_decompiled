@@ -4,7 +4,6 @@ import android.text.TextUtils;
 import androidx.annotation.NonNull;
 import com.alibaba.fastjson.JSONObject;
 import com.taobao.analysis.v3.FalcoSpan;
-import com.taobao.android.dinamicx.C6386m;
 import com.taobao.android.dinamicx.widget.DXAbsContainerBaseLayout;
 import com.taobao.android.dinamicx.widget.DXTemplateWidgetNode;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
@@ -17,7 +16,7 @@ import java.util.List;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class zx implements IDXDataSourceManager {
-    protected C6386m a;
+    protected com.taobao.android.dinamicx.m a;
     private List<Object> b;
     private List<DXWidgetNode> c;
     protected DXDataSourceLruManager d;
@@ -28,7 +27,7 @@ public class zx implements IDXDataSourceManager {
 
     private void g(DXTemplateWidgetNode dXTemplateWidgetNode) {
         if (this.a == null) {
-            this.a = new C6386m();
+            this.a = new com.taobao.android.dinamicx.m();
         }
         this.a.h(dXTemplateWidgetNode, true);
         if (TextUtils.isEmpty(dXTemplateWidgetNode.getSlotId())) {

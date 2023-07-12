@@ -3,10 +3,10 @@ package com.baseproject.utils.speedtest;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 class SpeedTest$1 implements Runnable {
-    final /* synthetic */ C4673j this$0;
+    final /* synthetic */ j this$0;
 
-    SpeedTest$1(C4673j c4673j) {
-        this.this$0 = c4673j;
+    SpeedTest$1(j jVar) {
+        this.this$0 = jVar;
     }
 
     @Override // java.lang.Runnable

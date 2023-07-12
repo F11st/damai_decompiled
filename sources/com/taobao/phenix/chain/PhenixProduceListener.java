@@ -1,12 +1,8 @@
 package com.taobao.phenix.chain;
 
-import com.taobao.phenix.bitmap.C6848a;
 import com.taobao.phenix.cache.memory.MemoryCacheProducer;
-import com.taobao.phenix.decode.C6859a;
 import com.taobao.phenix.intf.event.IPhenixListener;
-import com.taobao.phenix.loader.file.C6861b;
-import com.taobao.phenix.loader.network.C6863b;
-import com.taobao.phenix.request.C6865a;
+import com.taobao.phenix.loader.file.b;
 import com.taobao.phenix.request.ImageStatistics;
 import com.taobao.rxm.consume.Consumer;
 import com.taobao.rxm.produce.ProducerListener;
@@ -21,30 +17,29 @@ import tb.w90;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class PhenixProduceListener implements ProducerListener<C6865a> {
+public class PhenixProduceListener implements ProducerListener<com.taobao.phenix.request.a> {
     private final IPhenixListener<ce1> a;
     private final ImageDecodingListener b;
-    private final C6865a c;
+    private final com.taobao.phenix.request.a c;
     private ScheduledAction d;
     private Scheduler e;
     private Map<String, Long> f = new ConcurrentHashMap();
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.phenix.chain.PhenixProduceListener$a */
     /* loaded from: classes11.dex */
-    public static class C6853a {
+    public static class a {
         public String a;
         public ImageStatistics.FromType b;
 
-        public C6853a(String str, ImageStatistics.FromType fromType) {
+        public a(String str, ImageStatistics.FromType fromType) {
             this.a = str;
             this.b = fromType;
         }
     }
 
-    public PhenixProduceListener(C6865a c6865a, IPhenixListener<ce1> iPhenixListener, ImageDecodingListener imageDecodingListener) {
+    public PhenixProduceListener(com.taobao.phenix.request.a aVar, IPhenixListener<ce1> iPhenixListener, ImageDecodingListener imageDecodingListener) {
         this.a = iPhenixListener;
-        this.c = c6865a;
+        this.c = aVar;
         this.b = imageDecodingListener;
     }
 
@@ -70,22 +65,22 @@ public class PhenixProduceListener implements ProducerListener<C6865a> {
         this.a.onHappen(new ce1(this.c.P()));
     }
 
-    private C6853a d(Class cls, boolean z) {
+    private a d(Class cls, boolean z) {
         if (cls == MemoryCacheProducer.class) {
-            return new C6853a(ImageStatistics.KEY_READ_MEMORY_CACHE, ImageStatistics.FromType.FROM_MEMORY_CACHE);
+            return new a(ImageStatistics.KEY_READ_MEMORY_CACHE, ImageStatistics.FromType.FROM_MEMORY_CACHE);
         }
-        if (cls == C6861b.class) {
-            return new C6853a(ImageStatistics.KEY_READ_LOCAL_FILE, ImageStatistics.FromType.FROM_LOCAL_FILE);
+        if (cls == b.class) {
+            return new a(ImageStatistics.KEY_READ_LOCAL_FILE, ImageStatistics.FromType.FROM_LOCAL_FILE);
         }
         if (cls == w90.class) {
-            return new C6853a(ImageStatistics.KEY_READ_DISK_CACHE, ImageStatistics.FromType.FROM_DISK_CACHE);
+            return new a(ImageStatistics.KEY_READ_DISK_CACHE, ImageStatistics.FromType.FROM_DISK_CACHE);
         }
-        if (cls == C6863b.class) {
-            return new C6853a(z ? "download" : "connect", ImageStatistics.FromType.FROM_NETWORK);
-        } else if (cls == C6848a.class) {
-            return new C6853a(z ? ImageStatistics.KEY_BITMAP_PROCESS : ImageStatistics.KEY_BITMAP_SCALE, z ? ImageStatistics.FromType.FROM_UNKNOWN : ImageStatistics.FromType.FROM_LARGE_SCALE);
-        } else if (cls == C6859a.class) {
-            return new C6853a(ImageStatistics.KEY_BITMAP_DECODE, ImageStatistics.FromType.FROM_UNKNOWN);
+        if (cls == com.taobao.phenix.loader.network.b.class) {
+            return new a(z ? "download" : "connect", ImageStatistics.FromType.FROM_NETWORK);
+        } else if (cls == com.taobao.phenix.bitmap.a.class) {
+            return new a(z ? ImageStatistics.KEY_BITMAP_PROCESS : ImageStatistics.KEY_BITMAP_SCALE, z ? ImageStatistics.FromType.FROM_UNKNOWN : ImageStatistics.FromType.FROM_LARGE_SCALE);
+        } else if (cls == com.taobao.phenix.decode.a.class) {
+            return new a(ImageStatistics.KEY_BITMAP_DECODE, ImageStatistics.FromType.FROM_UNKNOWN);
         } else {
             return null;
         }
@@ -97,24 +92,24 @@ public class PhenixProduceListener implements ProducerListener<C6865a> {
 
     @Override // com.taobao.rxm.produce.ProducerListener
     /* renamed from: f */
-    public void onEnterIn(C6865a c6865a, Class cls, boolean z, boolean z2) {
-        C6853a d;
+    public void onEnterIn(com.taobao.phenix.request.a aVar, Class cls, boolean z, boolean z2) {
+        a d;
         String str;
         if ((z && !z2) || (d = d(cls, z)) == null || (str = d.a) == null) {
             return;
         }
         this.f.put(str, Long.valueOf(0 - System.currentTimeMillis()));
         ImageDecodingListener imageDecodingListener = this.b;
-        if (imageDecodingListener == null || cls != C6859a.class) {
+        if (imageDecodingListener == null || cls != com.taobao.phenix.decode.a.class) {
             return;
         }
-        imageDecodingListener.onDecodeStart(c6865a.d(), c6865a.N());
+        imageDecodingListener.onDecodeStart(aVar.d(), aVar.N());
     }
 
     @Override // com.taobao.rxm.produce.ProducerListener
     /* renamed from: g */
-    public void onExitOut(C6865a c6865a, Class cls, boolean z, boolean z2, boolean z3) {
-        C6853a d;
+    public void onExitOut(com.taobao.phenix.request.a aVar, Class cls, boolean z, boolean z2, boolean z3) {
+        a d;
         String str;
         long currentTimeMillis = System.currentTimeMillis();
         c(cls, z, z2);
@@ -129,10 +124,10 @@ public class PhenixProduceListener implements ProducerListener<C6865a> {
             this.c.U().b(d.b);
         }
         ImageDecodingListener imageDecodingListener = this.b;
-        if (imageDecodingListener == null || cls != C6859a.class) {
+        if (imageDecodingListener == null || cls != com.taobao.phenix.decode.a.class) {
             return;
         }
-        imageDecodingListener.onDecodeFinish(c6865a.d(), c6865a.N());
+        imageDecodingListener.onDecodeFinish(aVar.d(), aVar.N());
     }
 
     public void h(Scheduler scheduler) {

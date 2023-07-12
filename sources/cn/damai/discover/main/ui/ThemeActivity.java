@@ -22,12 +22,10 @@ import androidx.viewpager.widget.ViewPager;
 import cn.damai.baseview.RCRelativeLayoutView;
 import cn.damai.comment.view.DMHotDiscussView;
 import cn.damai.common.app.base.BaseActivity;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.base.ResponseErrorPage;
@@ -55,7 +53,6 @@ import cn.damai.homepage.R$layout;
 import cn.damai.login.LoginManager;
 import cn.damai.tetris.component.drama.viewholder.OnItemBindListener;
 import cn.damai.ticklet.ui.activity.TickletAttendanceActivity;
-import cn.damai.uikit.image.C2497a;
 import cn.damai.uikit.image.IImageLoader;
 import cn.damai.uikit.irecycler.helper.UpLoadMorePanel;
 import cn.damai.uikit.number.DMDigitTextView;
@@ -73,12 +70,12 @@ import in.srain.cube.views.ptr.PtrHandler;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import tb.C9548pb;
 import tb.cb2;
 import tb.cs;
 import tb.lm2;
 import tb.m62;
 import tb.mu0;
+import tb.pb;
 import tb.r92;
 import tb.rx1;
 import tb.s90;
@@ -148,18 +145,18 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
         private static transient /* synthetic */ IpChange $ipChange;
 
         @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
-        public void onScrolled(@NonNull RecyclerView recyclerView, int i, int i2) {
+        public void onScrolled(@NonNull RecyclerView recyclerView, int i2, int i3) {
             IpChange ipChange = $ipChange;
             boolean z = true;
             if (AndroidInstantRuntime.support(ipChange, "-1128241745")) {
-                ipChange.ipc$dispatch("-1128241745", new Object[]{this, recyclerView, Integer.valueOf(i), Integer.valueOf(i2)});
+                ipChange.ipc$dispatch("-1128241745", new Object[]{this, recyclerView, Integer.valueOf(i2), Integer.valueOf(i3)});
                 return;
             }
-            super.onScrolled(recyclerView, i, i2);
-            boolean z2 = i2 < 0;
-            boolean h = s90.h(recyclerView);
+            super.onScrolled(recyclerView, i2, i3);
+            boolean z2 = i3 < 0;
+            boolean h2 = s90.h(recyclerView);
             if (ThemeActivity.this.isCanShowPublishUi) {
-                if (h && !z2) {
+                if (h2 && !z2) {
                     z = false;
                 }
                 s90.c(ThemeActivity.this.mPublishContainer, z);
@@ -168,12 +165,11 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
     };
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeActivity$a */
     /* loaded from: classes5.dex */
-    public class C1042a implements DMUpMarqueeView.OnItemClickListener {
+    public class a implements DMUpMarqueeView.OnItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1042a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.dynamicx.customwidget.temp.DMUpMarqueeView.OnItemClickListener
@@ -185,17 +181,16 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
             }
             ProjectItemBean projectItemBean = (ProjectItemBean) view.getTag();
             s90.j(ThemeActivity.this, projectItemBean);
-            C9548pb.j(ThemeActivity.this.mUt.A(i, projectItemBean.id, false));
+            pb.j(ThemeActivity.this.mUt.A(i, projectItemBean.id, false));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeActivity$b */
     /* loaded from: classes5.dex */
-    public class C1043b implements DMThemeProjectItemView.ProjectLabelClickListener {
+    public class b implements DMThemeProjectItemView.ProjectLabelClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1043b() {
+        b() {
         }
 
         @Override // cn.damai.discover.main.ui.view.DMThemeProjectItemView.ProjectLabelClickListener
@@ -205,23 +200,22 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
                 ipChange.ipc$dispatch("354424580", new Object[]{this, Integer.valueOf(i), projectItemBean, list});
             } else if (1 == i) {
                 s90.j(ThemeActivity.this, projectItemBean);
-                C9548pb.j(ThemeActivity.this.mUt.A(i, projectItemBean.id, false));
+                pb.j(ThemeActivity.this.mUt.A(i, projectItemBean.id, false));
             } else {
                 Bundle bundle = new Bundle();
                 bundle.putSerializable(ProjectListActivity.DATA_LIST_KEY, (ArrayList) list);
                 DMNav.from(ThemeActivity.this).withExtras(bundle).toUri(NavUri.b("theme_project_list"));
-                C9548pb.j(ThemeActivity.this.mUt.B());
+                pb.j(ThemeActivity.this.mUt.B());
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeActivity$c */
     /* loaded from: classes5.dex */
-    public class C1044c implements DMThemeProjectItemView.ExposureCallBack {
+    public class c implements DMThemeProjectItemView.ExposureCallBack {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1044c() {
+        c() {
         }
 
         @Override // cn.damai.discover.main.ui.view.DMThemeProjectItemView.ExposureCallBack
@@ -236,12 +230,11 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeActivity$d */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1045d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1045d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -253,7 +246,7 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
             }
             ScrollTitleBean scrollTitleBean = (ScrollTitleBean) view.getTag();
             if (scrollTitleBean != null) {
-                C9548pb.j(ThemeActivity.this.mUt.J(scrollTitleBean.index));
+                pb.j(ThemeActivity.this.mUt.J(scrollTitleBean.index));
                 ThemeActivity.this.mSelectTitle = scrollTitleBean;
                 if (ThemeActivity.this.mViewPager != null && scrollTitleBean.index < wh2.e(ThemeActivity.this.mPageList)) {
                     ThemeActivity.this.mViewPager.setCurrentItem(scrollTitleBean.index);
@@ -266,19 +259,17 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeActivity$e */
     /* loaded from: classes5.dex */
-    public class C1046e implements OnBizListener<ThemePageBean> {
+    public class e implements OnBizListener<ThemePageBean> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ boolean a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.discover.main.ui.ThemeActivity$e$a */
         /* loaded from: classes5.dex */
-        public class C1047a implements OnErrClickListener {
+        public class a implements OnErrClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1047a() {
+            a() {
             }
 
             @Override // cn.damai.commonbusiness.wannasee.listener.OnErrClickListener
@@ -293,7 +284,7 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
             }
         }
 
-        C1046e(boolean z) {
+        e(boolean z) {
             this.a = z;
         }
 
@@ -326,7 +317,7 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
             }
             ThemeActivity.this.stopProgressDialog();
             if (this.a) {
-                ThemeActivity.this.showErrorView(str, str2, new C1047a());
+                ThemeActivity.this.showErrorView(str, str2, new a());
                 return;
             }
             ToastUtil.i(str2);
@@ -335,19 +326,18 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeActivity$f */
     /* loaded from: classes5.dex */
-    public class C1048f implements DMImageCreator.DMImageFailListener {
+    public class f implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1048f() {
+        f() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1083316070")) {
-                ipChange.ipc$dispatch("-1083316070", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-1083316070", new Object[]{this, dVar});
             } else {
                 ThemeActivity.this.mBgImg.setImageResource(R$drawable.bg_color_theme_head_fail);
             }
@@ -355,33 +345,31 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeActivity$g */
     /* loaded from: classes5.dex */
-    public class C1049g implements DMImageCreator.DMImageSuccListener {
+    public class g implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1049g() {
+        g() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1107525295")) {
-                ipChange.ipc$dispatch("1107525295", new Object[]{this, c0502e});
-            } else if (c0502e == null || c0502e.b == null) {
+                ipChange.ipc$dispatch("1107525295", new Object[]{this, eVar});
+            } else if (eVar == null || eVar.b == null) {
             } else {
-                ThemeActivity.this.mBgImg.setImageBitmap(c0502e.b);
+                ThemeActivity.this.mBgImg.setImageBitmap(eVar.b);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeActivity$h */
     /* loaded from: classes5.dex */
-    public class C1050h extends t3 {
+    public class h extends t3 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1050h() {
+        h() {
         }
 
         @Override // tb.t3, cn.damai.login.havana.ILoginListener
@@ -396,12 +384,11 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeActivity$i */
     /* loaded from: classes5.dex */
-    public class C1051i implements OnShareListener {
+    public class i implements OnShareListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1051i() {
+        i() {
         }
 
         @Override // cn.damai.discover.main.ui.listener.OnShareListener
@@ -441,13 +428,12 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeActivity$j */
     /* loaded from: classes5.dex */
-    public class C1052j implements ResponseErrorPage.ErrorRefreshListener {
+    public class j implements ResponseErrorPage.ErrorRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnErrClickListener a;
 
-        C1052j(ThemeActivity themeActivity, OnErrClickListener onErrClickListener) {
+        j(ThemeActivity themeActivity, OnErrClickListener onErrClickListener) {
             this.a = onErrClickListener;
         }
 
@@ -465,12 +451,11 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeActivity$k */
     /* loaded from: classes5.dex */
-    public class C1053k implements OnBizListener<PublishStateBean> {
+    public class k implements OnBizListener<PublishStateBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1053k() {
+        k() {
         }
 
         @Override // cn.damai.commonbusiness.wannasee.listener.OnBizListener
@@ -496,12 +481,11 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeActivity$l */
     /* loaded from: classes5.dex */
-    public class C1054l implements AppBarLayout.OnOffsetChangedListener {
+    public class l implements AppBarLayout.OnOffsetChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1054l() {
+        l() {
         }
 
         @Override // com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener, com.google.android.material.appbar.AppBarLayout.BaseOnOffsetChangedListener
@@ -519,12 +503,11 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeActivity$m */
     /* loaded from: classes5.dex */
-    public class C1055m implements NewSimpleTitleLayout.OnBtnClickListener {
+    public class m implements NewSimpleTitleLayout.OnBtnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1055m() {
+        m() {
         }
 
         @Override // cn.damai.uikit.view.NewSimpleTitleLayout.OnBtnClickListener
@@ -549,12 +532,11 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeActivity$n */
     /* loaded from: classes5.dex */
-    public class C1056n implements PtrHandler {
+    public class n implements PtrHandler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1056n() {
+        n() {
         }
 
         @Override // in.srain.cube.views.ptr.PtrHandler
@@ -575,12 +557,11 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeActivity$o */
     /* loaded from: classes5.dex */
-    public class C1057o implements OnItemBindListener<RankUserBean> {
+    public class o implements OnItemBindListener<RankUserBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1057o() {
+        o() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -610,12 +591,11 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeActivity$p */
     /* loaded from: classes5.dex */
-    public class C1058p implements VotePanel.VoteActionListener {
+    public class p implements VotePanel.VoteActionListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1058p() {
+        p() {
         }
 
         @Override // cn.damai.commonbusiness.discover.viewholder.VotePanel.VoteActionListener
@@ -655,7 +635,7 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
             if (AndroidInstantRuntime.support(ipChange, "-1370523474")) {
                 ipChange.ipc$dispatch("-1370523474", new Object[]{this, voteInfoBean});
             } else {
-                C9548pb.j(ThemeActivity.this.mUt.n(voteInfoBean.id, 0));
+                pb.j(ThemeActivity.this.mUt.n(voteInfoBean.id, 0));
             }
         }
 
@@ -675,39 +655,38 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
             if (AndroidInstantRuntime.support(ipChange, "-700459652")) {
                 ipChange.ipc$dispatch("-700459652", new Object[]{this, voteInfoBean, voteBean, Integer.valueOf(i)});
             } else {
-                C9548pb.j(ThemeActivity.this.mUt.k(voteInfoBean.id, i));
+                pb.j(ThemeActivity.this.mUt.k(voteInfoBean.id, i));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeActivity$q */
     /* loaded from: classes5.dex */
-    public class C1059q implements IImageLoader.IImageSuccListener {
+    public class q implements IImageLoader.IImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
         final /* synthetic */ int b;
         final /* synthetic */ ViewGroup.LayoutParams c;
 
-        C1059q(int i, int i2, ViewGroup.LayoutParams layoutParams) {
+        q(int i, int i2, ViewGroup.LayoutParams layoutParams) {
             this.a = i;
             this.b = i2;
             this.c = layoutParams;
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageSuccListener
-        public void onSuccess(IImageLoader.C2496b c2496b) {
+        public void onSuccess(IImageLoader.b bVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-739314430")) {
-                ipChange.ipc$dispatch("-739314430", new Object[]{this, c2496b});
-            } else if (c2496b.b != null) {
+                ipChange.ipc$dispatch("-739314430", new Object[]{this, bVar});
+            } else if (bVar.b != null) {
                 ThemeActivity.this.voteImage.setVisibility(0);
-                ThemeActivity.this.voteImage.setImageDrawable(c2496b.a);
-                int height = (this.a * c2496b.b.getHeight()) / c2496b.b.getWidth();
+                ThemeActivity.this.voteImage.setImageDrawable(bVar.a);
+                int height = (this.a * bVar.b.getHeight()) / bVar.b.getWidth();
                 int i = this.a;
                 int i2 = this.b;
                 if (i2 < height) {
-                    i = (c2496b.b.getWidth() * i2) / c2496b.b.getHeight();
+                    i = (bVar.b.getWidth() * i2) / bVar.b.getHeight();
                     height = i2;
                 }
                 ViewGroup.LayoutParams layoutParams = this.c;
@@ -718,19 +697,18 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeActivity$r */
     /* loaded from: classes5.dex */
-    public class C1060r implements IImageLoader.IImageFailListener {
+    public class r implements IImageLoader.IImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1060r() {
+        r() {
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageFailListener
-        public void onFail(IImageLoader.C2495a c2495a) {
+        public void onFail(IImageLoader.a aVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "753934059")) {
-                ipChange.ipc$dispatch("753934059", new Object[]{this, c2495a});
+                ipChange.ipc$dispatch("753934059", new Object[]{this, aVar});
             } else {
                 ThemeActivity.this.voteImage.setVisibility(4);
             }
@@ -779,7 +757,7 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
         if (AndroidInstantRuntime.support(ipChange, "1994109813")) {
             ipChange.ipc$dispatch("1994109813", new Object[]{this, Boolean.valueOf(z)});
         } else {
-            this.mModel.load(z, this.mSelectTitle.index, new C1046e(z));
+            this.mModel.load(z, this.mSelectTitle.index, new e(z));
         }
     }
 
@@ -802,7 +780,7 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
         } else if (isFinishing() || this.mModel == null) {
         } else {
             showPublishView(false);
-            this.mModel.loadPublish(new C1053k());
+            this.mModel.loadPublish(new k());
         }
     }
 
@@ -812,9 +790,9 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
             ipChange.ipc$dispatch("1878449352", new Object[]{this});
             return;
         }
-        this.mProjectRevUi.setProjectOnClick(new C1042a());
-        this.mProjectRevUi.setProjectLabelOnClick(new C1043b());
-        this.mProjectRevUi.setExposureCallBack(new C1044c());
+        this.mProjectRevUi.setProjectOnClick(new a());
+        this.mProjectRevUi.setProjectLabelOnClick(new b());
+        this.mProjectRevUi.setExposureCallBack(new c());
     }
 
     private void setUpVoteView() {
@@ -829,7 +807,7 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
         this.voteImage = (ImageView) findViewById(R$id.theme_circle_vote_img);
         this.voteWidget = (ViewGroup) findViewById(R$id.item_vote_layout_id);
         this.activityTag = (TextView) findViewById(R$id.theme_circle_vote_tag);
-        this.mPanel = new VotePanel(this.voteWidget, new C1058p());
+        this.mPanel = new VotePanel(this.voteWidget, new p());
         this.voteLayout.setVisibility(8);
     }
 
@@ -847,7 +825,7 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
         this.mTitleList.add(scrollTitleBean);
         this.mTitleList.add(scrollTitleBean2);
         this.mHorScrollView.setTitle(this.mTitleList).setLineType(2).setFontColor(R$color.color_000000, R$color.color_333333).setHeight(35).setSpace(10).setFontSize(16, 18).commit();
-        this.mHorScrollView.setOnTitleClickListener(new View$OnClickListenerC1045d());
+        this.mHorScrollView.setOnTitleClickListener(new d());
         this.mHorScrollView.selectTitle(0);
         this.mSelectTitle = this.mTitleList.get(0);
         this.mPageList.clear();
@@ -868,31 +846,31 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener
-            public void onPageScrollStateChanged(int i) {
+            public void onPageScrollStateChanged(int i2) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "1390987052")) {
-                    ipChange2.ipc$dispatch("1390987052", new Object[]{this, Integer.valueOf(i)});
+                    ipChange2.ipc$dispatch("1390987052", new Object[]{this, Integer.valueOf(i2)});
                 }
             }
 
             @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener
-            public void onPageScrolled(int i, float f, int i2) {
+            public void onPageScrolled(int i2, float f2, int i3) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "-1325449269")) {
-                    ipChange2.ipc$dispatch("-1325449269", new Object[]{this, Integer.valueOf(i), Float.valueOf(f), Integer.valueOf(i2)});
+                    ipChange2.ipc$dispatch("-1325449269", new Object[]{this, Integer.valueOf(i2), Float.valueOf(f2), Integer.valueOf(i3)});
                 }
             }
 
             @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener
-            public void onPageSelected(int i) {
+            public void onPageSelected(int i2) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "-1315738249")) {
-                    ipChange2.ipc$dispatch("-1315738249", new Object[]{this, Integer.valueOf(i)});
+                    ipChange2.ipc$dispatch("-1315738249", new Object[]{this, Integer.valueOf(i2)});
                     return;
                 }
                 ThemeActivity themeActivity = ThemeActivity.this;
-                themeActivity.mSelectTitle = (ScrollTitleBean) themeActivity.mTitleList.get(i);
-                ThemeActivity.this.mHorScrollView.selectTitle(i);
+                themeActivity.mSelectTitle = (ScrollTitleBean) themeActivity.mTitleList.get(i2);
+                ThemeActivity.this.mHorScrollView.selectTitle(i2);
             }
         });
         this.mViewPager.setCurrentItem(0);
@@ -914,8 +892,8 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
             if (TextUtils.isEmpty(str)) {
                 this.mBgImg.setImageDrawable(getRandomBg());
             } else {
-                DisplayMetrics b = m62.b(this);
-                C0504a.b().f(str, com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(b), com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(b) / 2).i(R$drawable.bg_holder_30grey).n(new C1049g()).e(new C1048f()).f();
+                DisplayMetrics b2 = m62.b(this);
+                cn.damai.common.image.a.b().f(str, com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(b2), com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(b2) / 2).i(R$drawable.bg_holder_30grey).n(new g()).e(new f()).f();
             }
             this.mHeadUi.post(new Runnable() { // from class: cn.damai.discover.main.ui.ThemeActivity.19
                 private static transient /* synthetic */ IpChange $ipChange;
@@ -927,9 +905,9 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
                         ipChange2.ipc$dispatch("-112098426", new Object[]{this});
                         return;
                     }
-                    int i = ThemeActivity.this.mDynamicBgImgHeight;
+                    int i2 = ThemeActivity.this.mDynamicBgImgHeight;
                     int measuredHeight = ThemeActivity.this.mHeadUi.getMeasuredHeight() + ThemeActivity.this.mTitleBar.getMeasuredHeight() + m62.a(mu0.a(), 44.0f);
-                    if (measuredHeight == i) {
+                    if (measuredHeight == i2) {
                         return;
                     }
                     ThemeActivity.this.mDynamicBgImgHeight = measuredHeight;
@@ -954,7 +932,7 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
                 this.mBannerUi.setVisibility(0);
                 this.mBannerImg.setTag(themeInfo);
                 this.mBannerImg.setOnClickListener(this);
-                C0504a.b().f(str3, com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(m62.b(this)) - (m62.a(this, 12.0f) * 2), m62.a(this, 88.0f)).g(this.mBannerImg);
+                cn.damai.common.image.a.b().f(str3, com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(m62.b(this)) - (m62.a(this, 12.0f) * 2), m62.a(this, 88.0f)).g(this.mBannerImg);
                 this.mUt.r(this.mBannerImg, 0, str4);
             } else {
                 this.mBannerUi.setVisibility(8);
@@ -990,18 +968,18 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
         this.isCanShowPublishUi = z;
         if (z) {
             this.mPublishUi.setVisibility(0);
-            boolean q = LoginManager.k().q();
-            this.mPublishPlusIcon.setVisibility(q ? 8 : 0);
-            this.mPublishUserImg.setVisibility(q ? 0 : 8);
-            if (q) {
+            boolean q2 = LoginManager.k().q();
+            this.mPublishPlusIcon.setVisibility(q2 ? 8 : 0);
+            this.mPublishUserImg.setVisibility(q2 ? 0 : 8);
+            if (q2) {
                 this.mPublishUserImg.setBackgroundResource(cn.damai.commonbusiness.R$drawable.uikit_user_default_icon);
                 String userHeadUrl = this.mModel.getUserHeadUrl();
                 if (TextUtils.isEmpty(userHeadUrl)) {
                     userHeadUrl = s90.d();
                 }
                 if (!TextUtils.isEmpty(userHeadUrl)) {
-                    int a = m62.a(this, 20.0f);
-                    C0504a.b().f(userHeadUrl, a, a).g(this.mPublishUserImg);
+                    int a2 = m62.a(this, 20.0f);
+                    cn.damai.common.image.a.b().f(userHeadUrl, a2, a2).g(this.mPublishUserImg);
                 }
             }
             this.mPublishUi.setOnClickListener(this);
@@ -1017,8 +995,8 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
             ipChange.ipc$dispatch("1570633982", new Object[]{this});
         } else if (this.mModel == null || isFinishing()) {
         } else {
-            C9548pb.j(this.mUt.H());
-            this.mModel.share(new C1051i());
+            pb.j(this.mUt.H());
+            this.mModel.share(new i());
         }
     }
 
@@ -1040,9 +1018,9 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
             ipChange.ipc$dispatch("-1168489861", new Object[]{this});
         } else if (this.mBuilder != null) {
             this.mUt.E(true);
-            C0525a.C0527b K = this.mUt.K();
+            a.b K = this.mUt.K();
             setDamaiUTKeyBuilder(K);
-            C0529c.e().l(this, K);
+            cn.damai.common.user.c.e().l(this, K);
         }
     }
 
@@ -1060,22 +1038,22 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
                 this.activityTag.setVisibility(8);
             }
             this.mPanel.d(themePageBean.themeInfo.vote, 0);
-            int a = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(t60.b(this)) - (t60.a(this, 21.0f) * 2);
-            this.frVoteLayout.getLayoutParams().width = (a * 196) / 320;
-            int i = (a * 124) / 320;
-            int h = this.mPanel.h() + t60.a(this, 12.0f);
-            int i2 = (i * TickletAttendanceActivity.ORDER_ADD_CONTACTS) / 372;
+            int a2 = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(t60.b(this)) - (t60.a(this, 21.0f) * 2);
+            this.frVoteLayout.getLayoutParams().width = (a2 * 196) / 320;
+            int i2 = (a2 * 124) / 320;
+            int h2 = this.mPanel.h() + t60.a(this, 12.0f);
+            int i3 = (i2 * TickletAttendanceActivity.ORDER_ADD_CONTACTS) / 372;
             ViewGroup.LayoutParams layoutParams = this.voteImage.getLayoutParams();
-            if (h < i2) {
-                layoutParams.width = (h * 372) / TickletAttendanceActivity.ORDER_ADD_CONTACTS;
-                layoutParams.height = h;
+            if (h2 < i3) {
+                layoutParams.width = (h2 * 372) / TickletAttendanceActivity.ORDER_ADD_CONTACTS;
+                layoutParams.height = h2;
             } else {
-                layoutParams.width = i;
-                layoutParams.height = i2;
+                layoutParams.width = i2;
+                layoutParams.height = i3;
             }
             if (!TextUtils.isEmpty(themePageBean.themeInfo.vote.backColor) && !TextUtils.isEmpty(themePageBean.themeInfo.vote.circleBackground)) {
                 this.voteLayoutBg.setBackgroundColor(Color.parseColor(themePageBean.themeInfo.vote.backColor));
-                C2497a.a().load(themePageBean.themeInfo.vote.circleBackground, 0, 0, 0, new C1059q(i, h, layoutParams), new C1060r());
+                cn.damai.uikit.image.a.a().load(themePageBean.themeInfo.vote.circleBackground, 0, 0, 0, new q(i2, h2, layoutParams), new r());
                 return;
             }
             this.voteLayoutBg.setBackground(getResources().getDrawable(cn.damai.commonbusiness.R$drawable.bg_vote));
@@ -1085,10 +1063,10 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
     }
 
     @Override // cn.damai.common.app.base.BaseActivity
-    public void dealHeaderClick(int i) {
+    public void dealHeaderClick(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "2196493")) {
-            ipChange.ipc$dispatch("2196493", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("2196493", new Object[]{this, Integer.valueOf(i2)});
         }
     }
 
@@ -1099,10 +1077,10 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
     }
 
     @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
-    public void handleError(int i) {
+    public void handleError(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1718977886")) {
-            ipChange.ipc$dispatch("1718977886", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("1718977886", new Object[]{this, Integer.valueOf(i2)});
         }
     }
 
@@ -1134,40 +1112,40 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
         removeHeadTitleView();
         this.mModel = new ThemeModel(this.mThemeId);
         findViews();
-        this.mAppBar.addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new C1054l());
+        this.mAppBar.addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new l());
         this.mTitleBar.enableImmersiveMode(this);
         this.mTitleBar.setAlpha(0.0f);
-        this.mTitleBar.setListener(new C1055m());
+        this.mTitleBar.setListener(new m());
         PtrUiHeader ptrUiHeader = new PtrUiHeader(this) { // from class: cn.damai.discover.main.ui.ThemeActivity.4
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // cn.damai.uikit.pulltorefresh.ptrheader.PtrUiHeader, in.srain.cube.views.ptr.PtrUIHandler
             @SuppressLint({"NewApi"})
-            public void onUIPositionChange(PtrFrameLayout ptrFrameLayout, boolean z, byte b, rx1 rx1Var) {
-                int a;
+            public void onUIPositionChange(PtrFrameLayout ptrFrameLayout, boolean z, byte b2, rx1 rx1Var) {
+                int a2;
                 int abs;
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "-2069455247")) {
-                    ipChange2.ipc$dispatch("-2069455247", new Object[]{this, ptrFrameLayout, Boolean.valueOf(z), Byte.valueOf(b), rx1Var});
+                    ipChange2.ipc$dispatch("-2069455247", new Object[]{this, ptrFrameLayout, Boolean.valueOf(z), Byte.valueOf(b2), rx1Var});
                     return;
                 }
-                super.onUIPositionChange(ptrFrameLayout, z, b, rx1Var);
+                super.onUIPositionChange(ptrFrameLayout, z, b2, rx1Var);
                 ThemeActivity.this.mIndicatorCurrentPosY = rx1Var.d();
                 ViewGroup.LayoutParams layoutParams = ThemeActivity.this.mBgImg.getLayoutParams();
                 if (ThemeActivity.this.mDynamicBgImgHeight > 0) {
-                    a = ThemeActivity.this.mDynamicBgImgHeight;
+                    a2 = ThemeActivity.this.mDynamicBgImgHeight;
                     abs = Math.abs(ThemeActivity.this.mIndicatorCurrentPosY);
                 } else {
-                    a = m62.a(getContext(), 300.0f);
+                    a2 = m62.a(getContext(), 300.0f);
                     abs = Math.abs(ThemeActivity.this.mIndicatorCurrentPosY);
                 }
-                layoutParams.height = a + abs;
-                float f = 1.0f;
+                layoutParams.height = a2 + abs;
+                float f2 = 1.0f;
                 if (ThemeActivity.this.mIndicatorCurrentPosY > 0 && ThemeActivity.this.mDynamicBgImgHeight > 0) {
-                    f = 1.0f + (ThemeActivity.this.mIndicatorCurrentPosY / ThemeActivity.this.mDynamicBgImgHeight);
+                    f2 = 1.0f + (ThemeActivity.this.mIndicatorCurrentPosY / ThemeActivity.this.mDynamicBgImgHeight);
                 }
-                ThemeActivity.this.mBgImg.setScaleX(f);
-                ThemeActivity.this.mBgImg.setScaleY(f);
+                ThemeActivity.this.mBgImg.setScaleX(f2);
+                ThemeActivity.this.mBgImg.setScaleY(f2);
                 ThemeActivity.this.mBgImg.setLayoutParams(layoutParams);
             }
         };
@@ -1175,10 +1153,10 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
         this.mPtr.addPtrUIHandler(ptrUiHeader);
         this.mPtr.setPtrIndicator(new xj0(100, this));
         this.mPtr.setResistance(1.7f);
-        this.mPtr.setPtrHandler(new C1056n());
+        this.mPtr.setPtrHandler(new n());
         this.mPtr.disableWhenHorizontalMove(true);
         setUpHorizontalProjectView();
-        this.mRankPanel = new ThemeRankPanel(this, this.mRankStub, new C1057o());
+        this.mRankPanel = new ThemeRankPanel(this, this.mRankStub, new o());
         setUpWaterFallView();
         setUpVoteView();
         startProgressDialog();
@@ -1188,15 +1166,15 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, android.app.Activity
-    public void onActivityResult(int i, int i2, Intent intent) {
+    public void onActivityResult(int i2, int i3, Intent intent) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1469388329")) {
-            ipChange.ipc$dispatch("-1469388329", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), intent});
+            ipChange.ipc$dispatch("-1469388329", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3), intent});
             return;
         }
-        super.onActivityResult(i, i2, intent);
-        ShareManager.E().r0(i, i2, intent);
-        if (i == 27 && i2 == -1) {
+        super.onActivityResult(i2, i3, intent);
+        ShareManager.E().r0(i2, i3, intent);
+        if (i2 == 27 && i3 == -1) {
             loadPublish();
         }
     }
@@ -1213,11 +1191,11 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
                 Object tag = this.mBannerImg.getTag();
                 if (tag instanceof ThemeInfo) {
                     ThemeInfo themeInfo = (ThemeInfo) tag;
-                    C9548pb.j(this.mUt.m(0, themeInfo.bannerUrl));
+                    pb.j(this.mUt.m(0, themeInfo.bannerUrl));
                     DMNav.from(this).toUri(themeInfo.bannerUrl);
                 }
             } else if (id == R$id.theme_new_publish_ui) {
-                C9548pb.j(this.mUt.I());
+                pb.j(this.mUt.I());
                 if (LoginManager.k().q()) {
                     PublishStateBean stateBean = this.mModel.getStateBean();
                     stateBean.themeId = this.mThemeId;
@@ -1249,8 +1227,8 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
         this.random = new Random().nextInt(5);
         super.onCreate(bundle);
         setDamaiUTKeyBuilder(this.mUt.K());
-        C0529c.e().K(this);
-        this.mLoginListener = new C1050h();
+        cn.damai.common.user.c.e().K(this);
+        this.mLoginListener = new h();
         LoginManager.k().c(this.mLoginListener);
     }
 
@@ -1307,7 +1285,7 @@ public class ThemeActivity extends DamaiBaseActivity implements UpLoadMorePanel.
         onResponseError(str2, str, null, this.mMainView, true);
         ResponseErrorPage responseErrorPage = this.mErrorPage;
         if (responseErrorPage != null) {
-            responseErrorPage.setRefreshListener(new C1052j(this, onErrClickListener));
+            responseErrorPage.setRefreshListener(new j(this, onErrClickListener));
         }
     }
 

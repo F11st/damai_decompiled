@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.internal.queue.SpscLinkedArrayQueue;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import io.reactivex.internal.util.BackpressureHelper;
@@ -17,7 +17,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableWindow<T> extends AbstractFlowableWithUpstream<T, AbstractC8147b<T>> {
+public final class FlowableWindow<T> extends AbstractFlowableWithUpstream<T, b<T>> {
     final int bufferSize;
     final long size;
     final long skip;
@@ -26,7 +26,7 @@ public final class FlowableWindow<T> extends AbstractFlowableWithUpstream<T, Abs
     /* loaded from: classes3.dex */
     static final class WindowExactSubscriber<T> extends AtomicInteger implements FlowableSubscriber<T>, Subscription, Runnable {
         private static final long serialVersionUID = -2365647875069161133L;
-        final Subscriber<? super AbstractC8147b<T>> actual;
+        final Subscriber<? super b<T>> actual;
         final int bufferSize;
         long index;
         final AtomicBoolean once;
@@ -34,7 +34,7 @@ public final class FlowableWindow<T> extends AbstractFlowableWithUpstream<T, Abs
         final long size;
         UnicastProcessor<T> window;
 
-        WindowExactSubscriber(Subscriber<? super AbstractC8147b<T>> subscriber, long j, int i) {
+        WindowExactSubscriber(Subscriber<? super b<T>> subscriber, long j, int i) {
             super(1);
             this.actual = subscriber;
             this.size = j;
@@ -117,7 +117,7 @@ public final class FlowableWindow<T> extends AbstractFlowableWithUpstream<T, Abs
     /* loaded from: classes3.dex */
     static final class WindowOverlapSubscriber<T> extends AtomicInteger implements FlowableSubscriber<T>, Subscription, Runnable {
         private static final long serialVersionUID = 2428527070996323976L;
-        final Subscriber<? super AbstractC8147b<T>> actual;
+        final Subscriber<? super b<T>> actual;
         final int bufferSize;
         volatile boolean cancelled;
         volatile boolean done;
@@ -134,7 +134,7 @@ public final class FlowableWindow<T> extends AbstractFlowableWithUpstream<T, Abs
         final ArrayDeque<UnicastProcessor<T>> windows;
         final AtomicInteger wip;
 
-        WindowOverlapSubscriber(Subscriber<? super AbstractC8147b<T>> subscriber, long j, long j2, int i) {
+        WindowOverlapSubscriber(Subscriber<? super b<T>> subscriber, long j, long j2, int i) {
             super(1);
             this.actual = subscriber;
             this.size = j;
@@ -366,7 +366,7 @@ public final class FlowableWindow<T> extends AbstractFlowableWithUpstream<T, Abs
     /* loaded from: classes3.dex */
     static final class WindowSkipSubscriber<T> extends AtomicInteger implements FlowableSubscriber<T>, Subscription, Runnable {
         private static final long serialVersionUID = -8792836352386833856L;
-        final Subscriber<? super AbstractC8147b<T>> actual;
+        final Subscriber<? super b<T>> actual;
         final int bufferSize;
         final AtomicBoolean firstRequest;
         long index;
@@ -376,7 +376,7 @@ public final class FlowableWindow<T> extends AbstractFlowableWithUpstream<T, Abs
         final long skip;
         UnicastProcessor<T> window;
 
-        WindowSkipSubscriber(Subscriber<? super AbstractC8147b<T>> subscriber, long j, long j2, int i) {
+        WindowSkipSubscriber(Subscriber<? super b<T>> subscriber, long j, long j2, int i) {
             super(1);
             this.actual = subscriber;
             this.size = j;
@@ -465,15 +465,15 @@ public final class FlowableWindow<T> extends AbstractFlowableWithUpstream<T, Abs
         }
     }
 
-    public FlowableWindow(AbstractC8147b<T> abstractC8147b, long j, long j2, int i) {
-        super(abstractC8147b);
+    public FlowableWindow(b<T> bVar, long j, long j2, int i) {
+        super(bVar);
         this.size = j;
         this.skip = j2;
         this.bufferSize = i;
     }
 
-    @Override // io.reactivex.AbstractC8147b
-    public void subscribeActual(Subscriber<? super AbstractC8147b<T>> subscriber) {
+    @Override // io.reactivex.b
+    public void subscribeActual(Subscriber<? super b<T>> subscriber) {
         long j = this.skip;
         long j2 = this.size;
         if (j == j2) {

@@ -38,9 +38,9 @@ public class SmoothMoveMarker {
     private int index = 0;
     private boolean useDefaultDescriptor = false;
     AtomicBoolean exitFlag = new AtomicBoolean(false);
-    private EnumC4656a moveStatus = EnumC4656a.ACTION_UNKNOWN;
+    private a moveStatus = a.ACTION_UNKNOWN;
     private long mAnimationBeginTime = System.currentTimeMillis();
-    private ExecutorService mThreadPools = new ThreadPoolExecutor(1, 2, 5, TimeUnit.SECONDS, new SynchronousQueue(), new ThreadFactoryC4657b());
+    private ExecutorService mThreadPools = new ThreadPoolExecutor(1, 2, 5, TimeUnit.SECONDS, new SynchronousQueue(), new b());
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
@@ -50,9 +50,8 @@ public class SmoothMoveMarker {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.maps.utils.overlay.SmoothMoveMarker$a */
     /* loaded from: classes10.dex */
-    public enum EnumC4656a {
+    public enum a {
         ACTION_UNKNOWN,
         ACTION_START,
         ACTION_RUNNING,
@@ -61,10 +60,9 @@ public class SmoothMoveMarker {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.maps.utils.overlay.SmoothMoveMarker$b */
     /* loaded from: classes10.dex */
-    private static class ThreadFactoryC4657b implements ThreadFactory {
-        private ThreadFactoryC4657b() {
+    private static class b implements ThreadFactory {
+        private b() {
         }
 
         @Override // java.util.concurrent.ThreadFactory
@@ -74,34 +72,33 @@ public class SmoothMoveMarker {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.maps.utils.overlay.SmoothMoveMarker$c */
     /* loaded from: classes10.dex */
-    private class RunnableC4658c implements Runnable {
-        private RunnableC4658c() {
+    private class c implements Runnable {
+        private c() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
             try {
                 SmoothMoveMarker.this.mAnimationBeginTime = System.currentTimeMillis();
-                SmoothMoveMarker.this.moveStatus = EnumC4656a.ACTION_START;
+                SmoothMoveMarker.this.moveStatus = a.ACTION_START;
                 SmoothMoveMarker.this.exitFlag.set(false);
                 while (!SmoothMoveMarker.this.exitFlag.get() && SmoothMoveMarker.this.index <= SmoothMoveMarker.this.points.size() - 1) {
                     synchronized (SmoothMoveMarker.this.mLock) {
                         if (SmoothMoveMarker.this.exitFlag.get()) {
                             return;
                         }
-                        if (SmoothMoveMarker.this.moveStatus != EnumC4656a.ACTION_PAUSE) {
+                        if (SmoothMoveMarker.this.moveStatus != a.ACTION_PAUSE) {
                             IPoint curPosition = SmoothMoveMarker.this.getCurPosition(System.currentTimeMillis() - SmoothMoveMarker.this.mAnimationBeginTime);
                             if (SmoothMoveMarker.this.marker != null) {
                                 SmoothMoveMarker.this.marker.setGeoPoint(curPosition);
                             }
-                            SmoothMoveMarker.this.moveStatus = EnumC4656a.ACTION_RUNNING;
+                            SmoothMoveMarker.this.moveStatus = a.ACTION_RUNNING;
                         }
                     }
                     Thread.sleep(SmoothMoveMarker.this.mStepDuration);
                 }
-                SmoothMoveMarker.this.moveStatus = EnumC4656a.ACTION_STOP;
+                SmoothMoveMarker.this.moveStatus = a.ACTION_STOP;
             } catch (Throwable th) {
                 th.printStackTrace();
             }
@@ -195,15 +192,15 @@ public class SmoothMoveMarker {
 
     private void reset() {
         try {
-            EnumC4656a enumC4656a = this.moveStatus;
-            if (enumC4656a == EnumC4656a.ACTION_RUNNING || enumC4656a == EnumC4656a.ACTION_PAUSE) {
+            a aVar = this.moveStatus;
+            if (aVar == a.ACTION_RUNNING || aVar == a.ACTION_PAUSE) {
                 this.exitFlag.set(true);
                 this.mThreadPools.awaitTermination(this.mStepDuration + 20, TimeUnit.MILLISECONDS);
                 Marker marker = this.marker;
                 if (marker != null) {
                     marker.setAnimation(null);
                 }
-                this.moveStatus = EnumC4656a.ACTION_UNKNOWN;
+                this.moveStatus = a.ACTION_UNKNOWN;
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -352,14 +349,14 @@ public class SmoothMoveMarker {
     }
 
     public void startSmoothMove() {
-        EnumC4656a enumC4656a = this.moveStatus;
-        if (enumC4656a == EnumC4656a.ACTION_PAUSE) {
-            this.moveStatus = EnumC4656a.ACTION_RUNNING;
+        a aVar = this.moveStatus;
+        if (aVar == a.ACTION_PAUSE) {
+            this.moveStatus = a.ACTION_RUNNING;
             this.mAnimationBeginTime += System.currentTimeMillis() - this.pauseMillis;
-        } else if ((enumC4656a == EnumC4656a.ACTION_UNKNOWN || enumC4656a == EnumC4656a.ACTION_STOP) && this.points.size() >= 1) {
+        } else if ((aVar == a.ACTION_UNKNOWN || aVar == a.ACTION_STOP) && this.points.size() >= 1) {
             this.index = 0;
             try {
-                this.mThreadPools.execute(new RunnableC4658c());
+                this.mThreadPools.execute(new c());
             } catch (Throwable th) {
                 th.printStackTrace();
             }
@@ -367,8 +364,8 @@ public class SmoothMoveMarker {
     }
 
     public void stopMove() {
-        if (this.moveStatus == EnumC4656a.ACTION_RUNNING) {
-            this.moveStatus = EnumC4656a.ACTION_PAUSE;
+        if (this.moveStatus == a.ACTION_RUNNING) {
+            this.moveStatus = a.ACTION_PAUSE;
             this.pauseMillis = System.currentTimeMillis();
         }
     }

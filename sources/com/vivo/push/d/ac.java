@@ -1,7 +1,6 @@
 package com.vivo.push.d;
 
 import android.content.Context;
-import com.vivo.push.AbstractRunnableC7491l;
 import com.vivo.push.sdk.PushMessageCallback;
 import java.util.List;
 
@@ -27,8 +26,8 @@ final class ac implements Runnable {
     public final void run() {
         Context context;
         aa aaVar = this.e;
-        PushMessageCallback pushMessageCallback = ((AbstractC7480z) aaVar).b;
-        context = ((AbstractRunnableC7491l) aaVar).a;
+        PushMessageCallback pushMessageCallback = ((z) aaVar).b;
+        context = ((com.vivo.push.l) aaVar).a;
         pushMessageCallback.onSetAlias(context, this.a, this.b, this.c, this.d);
     }
 }

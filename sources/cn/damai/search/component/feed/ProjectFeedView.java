@@ -24,12 +24,11 @@ public class ProjectFeedView extends AbsView<IItem<ItemValue>, ProjectFeedContra
     private HomeFeedProjectViewHolder<ProjectItemBean> mHolder;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.component.feed.ProjectFeedView$a */
     /* loaded from: classes6.dex */
-    public class C1573a implements OnItemBindListener<IFeedProjectBean<ProjectItemBean>> {
+    public class a implements OnItemBindListener<IFeedProjectBean<ProjectItemBean>> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1573a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -64,7 +63,7 @@ public class ProjectFeedView extends AbsView<IItem<ItemValue>, ProjectFeedContra
     public ProjectFeedView(View view) {
         super(view);
         ViewGroup viewGroup = (ViewGroup) view;
-        HomeFeedProjectViewHolder<ProjectItemBean> homeFeedProjectViewHolder = new HomeFeedProjectViewHolder<>(viewGroup, LayoutInflater.from(mu0.a()).inflate(R$layout.item_discover_feed_project_home, viewGroup, false), new C1573a());
+        HomeFeedProjectViewHolder<ProjectItemBean> homeFeedProjectViewHolder = new HomeFeedProjectViewHolder<>(viewGroup, LayoutInflater.from(mu0.a()).inflate(R$layout.item_discover_feed_project_home, viewGroup, false), new a());
         this.mHolder = homeFeedProjectViewHolder;
         viewGroup.addView(homeFeedProjectViewHolder.itemView);
     }

@@ -227,42 +227,42 @@ public class YKTextView extends AppCompatTextView implements YKCustomizedView {
                 setTypeface(Typeface.defaultFromStyle(1));
                 setSingleLine(true);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_primary_info));
+                setTextColor(getResources().getColor(R.color.ykn_primary_info));
                 return;
             case 1:
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_big1));
                 setTypeface(Typeface.defaultFromStyle(0));
                 setSingleLine(true);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_primary_info));
+                setTextColor(getResources().getColor(R.color.ykn_primary_info));
                 return;
             case 2:
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_big2));
                 setTypeface(Typeface.defaultFromStyle(1));
                 setSingleLine(true);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_primary_info));
+                setTextColor(getResources().getColor(R.color.ykn_primary_info));
                 return;
             case 3:
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_big2));
                 setTypeface(Typeface.defaultFromStyle(0));
                 setSingleLine(true);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_primary_info));
+                setTextColor(getResources().getColor(R.color.ykn_primary_info));
                 return;
             case 4:
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_big3));
                 setTypeface(Typeface.defaultFromStyle(1));
                 setSingleLine(true);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_primary_info));
+                setTextColor(getResources().getColor(R.color.ykn_primary_info));
                 return;
             case 5:
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_big3));
                 setTypeface(Typeface.defaultFromStyle(0));
                 setSingleLine(true);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_primary_info));
+                setTextColor(getResources().getColor(R.color.ykn_primary_info));
                 return;
             case 6:
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_big3));
@@ -270,21 +270,21 @@ public class YKTextView extends AppCompatTextView implements YKCustomizedView {
                 setMaxLines(2);
                 setSingleLine(false);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_primary_info));
+                setTextColor(getResources().getColor(R.color.ykn_primary_info));
                 return;
             case 7:
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_middle2));
                 setTypeface(Typeface.defaultFromStyle(1));
                 setSingleLine(true);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_primary_info));
+                setTextColor(getResources().getColor(R.color.ykn_primary_info));
                 return;
             case '\b':
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_middle2));
                 setTypeface(Typeface.defaultFromStyle(0));
                 setSingleLine(true);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_primary_info));
+                setTextColor(getResources().getColor(R.color.ykn_primary_info));
                 return;
             case '\t':
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_middle2));
@@ -292,21 +292,21 @@ public class YKTextView extends AppCompatTextView implements YKCustomizedView {
                 setMaxLines(2);
                 setSingleLine(false);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_primary_info));
+                setTextColor(getResources().getColor(R.color.ykn_primary_info));
                 return;
             case '\n':
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_middle2));
                 setTypeface(Typeface.defaultFromStyle(1));
                 setSingleLine(true);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_primary_info));
+                setTextColor(getResources().getColor(R.color.ykn_primary_info));
                 return;
             case 11:
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_middle2));
                 setTypeface(Typeface.defaultFromStyle(0));
                 setSingleLine(true);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_primary_info));
+                setTextColor(getResources().getColor(R.color.ykn_primary_info));
                 return;
             case '\f':
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_middle2));
@@ -314,21 +314,21 @@ public class YKTextView extends AppCompatTextView implements YKCustomizedView {
                 setMaxLines(2);
                 setSingleLine(false);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_primary_info));
+                setTextColor(getResources().getColor(R.color.ykn_primary_info));
                 return;
             case '\r':
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_middle3));
                 setTypeface(Typeface.defaultFromStyle(1));
                 setSingleLine(true);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_tertiary_info));
+                setTextColor(getResources().getColor(R.color.ykn_tertiary_info));
                 return;
             case 14:
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_middle3));
                 setTypeface(Typeface.defaultFromStyle(0));
                 setSingleLine(true);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_tertiary_info));
+                setTextColor(getResources().getColor(R.color.ykn_tertiary_info));
                 return;
             case 15:
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_middle3));
@@ -336,21 +336,21 @@ public class YKTextView extends AppCompatTextView implements YKCustomizedView {
                 setMaxLines(2);
                 setSingleLine(false);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_tertiary_info));
+                setTextColor(getResources().getColor(R.color.ykn_tertiary_info));
                 return;
             case 16:
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_middle4));
                 setTypeface(Typeface.defaultFromStyle(1));
                 setSingleLine(true);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_tertiary_info));
+                setTextColor(getResources().getColor(R.color.ykn_tertiary_info));
                 return;
             case 17:
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_middle4));
                 setTypeface(Typeface.defaultFromStyle(0));
                 setSingleLine(true);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_tertiary_info));
+                setTextColor(getResources().getColor(R.color.ykn_tertiary_info));
                 return;
             case 18:
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_middle4));
@@ -358,21 +358,21 @@ public class YKTextView extends AppCompatTextView implements YKCustomizedView {
                 setMaxLines(2);
                 setSingleLine(false);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_tertiary_info));
+                setTextColor(getResources().getColor(R.color.ykn_tertiary_info));
                 return;
             case 19:
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_small1));
                 setTypeface(Typeface.defaultFromStyle(1));
                 setSingleLine(true);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_primary_info));
+                setTextColor(getResources().getColor(R.color.ykn_primary_info));
                 return;
             case 20:
                 setTextSize(0, getResources().getDimension(R.dimen.font_size_small2));
                 setTypeface(Typeface.defaultFromStyle(1));
                 setSingleLine(true);
                 setEllipsize(TextUtils.TruncateAt.END);
-                setTextColor(getResources().getColor(R.C8071color.ykn_primary_info));
+                setTextColor(getResources().getColor(R.color.ykn_primary_info));
                 return;
             default:
                 return;

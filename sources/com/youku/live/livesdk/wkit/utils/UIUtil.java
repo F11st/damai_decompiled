@@ -14,7 +14,7 @@ import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.arch.v3.data.Constants;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -80,7 +80,7 @@ public class UIUtil {
         mHasCheckAllScreen = true;
         mIsAllScreenDevice = false;
         if (Build.VERSION.SDK_INT >= 21 && context != null) {
-            WindowManager windowManager = (WindowManager) context.getApplicationContext().getSystemService(C9796v.ATTACH_MODE_WINDOW);
+            WindowManager windowManager = (WindowManager) context.getApplicationContext().getSystemService(v.ATTACH_MODE_WINDOW);
             if (windowManager != null) {
                 Display defaultDisplay = windowManager.getDefaultDisplay();
                 Point point = new Point();

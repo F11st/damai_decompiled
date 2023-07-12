@@ -9,7 +9,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public final class s51 {
     @NotNull
-    public static final C9674a Companion = new C9674a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final s51 e = new s51(null, null, false, false, 8, null);
     @Nullable
@@ -20,13 +20,12 @@ public final class s51 {
     private final boolean d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.s51$a */
     /* loaded from: classes3.dex */
-    public static final class C9674a {
-        private C9674a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9674a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

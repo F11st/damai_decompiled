@@ -18,12 +18,11 @@ public class fb {
     public static final String SEAT_PAGE_EXTRA = "EXTRA_DATA";
 
     /* compiled from: Taobao */
-    /* renamed from: tb.fb$a */
     /* loaded from: classes.dex */
-    public class C9133a extends ud {
+    public class a extends ud {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9133a() {
+        a() {
         }
 
         @Override // tb.ud
@@ -37,12 +36,11 @@ public class fb {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.fb$b */
     /* loaded from: classes.dex */
-    public class C9134b extends ud {
+    public class b extends ud {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9134b() {
+        b() {
         }
 
         @Override // tb.ud
@@ -65,9 +63,9 @@ public class fb {
                 for (Method method : Class.forName("cn.damai.seat.request.BufferUtil").getDeclaredMethods()) {
                     String name = method.getName();
                     if (TextUtils.equals("loadStatus", name)) {
-                        method.invoke(null, Long.valueOf(tbParams.itemId), Long.valueOf(tbParams.projectId), Long.valueOf(tbParams.performId), Integer.valueOf(regionData.ri.vesion), null, null, null, new C9133a());
+                        method.invoke(null, Long.valueOf(tbParams.itemId), Long.valueOf(tbParams.projectId), Long.valueOf(tbParams.performId), Integer.valueOf(regionData.ri.vesion), null, null, null, new a());
                     } else if (TextUtils.equals("loadDynamic", name)) {
-                        method.invoke(null, Long.valueOf(tbParams.projectId), Long.valueOf(tbParams.itemId), Long.valueOf(tbParams.performId), null, tbParams.privilegeId, null, Boolean.valueOf(tbParams.hasPromotion), null, new C9134b());
+                        method.invoke(null, Long.valueOf(tbParams.projectId), Long.valueOf(tbParams.itemId), Long.valueOf(tbParams.performId), null, tbParams.privilegeId, null, Boolean.valueOf(tbParams.hasPromotion), null, new b());
                     }
                 }
             } catch (Exception e) {

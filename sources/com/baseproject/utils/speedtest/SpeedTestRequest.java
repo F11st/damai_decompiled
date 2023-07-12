@@ -3,9 +3,8 @@ package com.baseproject.utils.speedtest;
 import android.content.Context;
 import android.os.SystemClock;
 import android.text.TextUtils;
-import com.baseproject.utils.speedtest.C4666a;
+import com.baseproject.utils.speedtest.a;
 import com.taobao.tlog.adapter.AdapterForTLog;
-import com.youku.b.a.C7892a;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -32,14 +31,14 @@ public class SpeedTestRequest {
     private static final String q = "SpeedTestRequest";
     private volatile boolean a;
     private Worker[] c;
-    private C4664c d;
+    private c d;
     private Foreman e;
     private ScheduledExecutorService f;
     private long h;
     private long[] i;
-    private C4666a.C4667a j;
-    private C4666a k;
-    private InterfaceC4662a l;
+    private a.C0218a j;
+    private com.baseproject.utils.speedtest.a k;
+    private a l;
     private int m;
     private int n;
     private volatile l83 p;
@@ -96,7 +95,7 @@ public class SpeedTestRequest {
         public void run() {
             int read;
             String str = SpeedTestRequest.q;
-            C7892a.a(str, "worker[" + this.index + "] start working for task " + SpeedTestRequest.this.j.f);
+            com.youku.b.a.a.a(str, "worker[" + this.index + "] start working for task " + SpeedTestRequest.this.j.f);
             while (!SpeedTestRequest.this.a) {
                 HttpURLConnection httpURLConnection = null;
                 b63 b63Var = new b63();
@@ -104,7 +103,7 @@ public class SpeedTestRequest {
                     try {
                         URL url = new URL(SpeedTestRequest.this.j.a);
                         String host = url.getHost();
-                        String a = TextUtils.isEmpty(SpeedTestRequest.this.j.b) ? C4669f.a(host) : SpeedTestRequest.this.j.b;
+                        String a = TextUtils.isEmpty(SpeedTestRequest.this.j.b) ? f.a(host) : SpeedTestRequest.this.j.b;
                         httpURLConnection = (HttpURLConnection) (a.contains(":") ? new URL(SpeedTestRequest.this.j.a).openConnection() : new URL(SpeedTestRequest.this.j.a.replaceFirst(host, a)).openConnection());
                         httpURLConnection.setConnectTimeout(this.mConnectTimeout);
                         httpURLConnection.setReadTimeout(this.mReadTiemout);
@@ -121,9 +120,9 @@ public class SpeedTestRequest {
                             SpeedTestRequest.this.b.add(b63Var);
                         }
                         String str2 = SpeedTestRequest.q;
-                        C7892a.a(str2, "tcp_conn_time:" + b63Var.b);
+                        com.youku.b.a.a.a(str2, "tcp_conn_time:" + b63Var.b);
                         String str3 = SpeedTestRequest.q;
-                        C7892a.a(str3, "status_code:" + b63Var.a);
+                        com.youku.b.a.a.a(str3, "status_code:" + b63Var.a);
                         InputStream inputStream = httpURLConnection.getInputStream();
                         byte[] bArr = new byte[128];
                         while (!SpeedTestRequest.this.a && (read = inputStream.read(bArr)) > 0) {
@@ -131,7 +130,7 @@ public class SpeedTestRequest {
                             int i = this.index;
                             jArr[i] = jArr[i] + read;
                         }
-                        C7892a.a(SpeedTestRequest.q, "read data complete");
+                        com.youku.b.a.a.a(SpeedTestRequest.q, "read data complete");
                     } catch (IOException e) {
                         b63Var.a = -99;
                         if (!SpeedTestRequest.this.a && !SpeedTestRequest.this.b.isEmpty()) {
@@ -169,22 +168,20 @@ public class SpeedTestRequest {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.baseproject.utils.speedtest.SpeedTestRequest$a */
     /* loaded from: classes10.dex */
-    public interface InterfaceC4662a {
+    public interface a {
         void a(l83 l83Var);
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.baseproject.utils.speedtest.SpeedTestRequest$b */
     /* loaded from: classes10.dex */
-    class C4663b implements InterfaceC4662a {
-        C4663b() {
+    class b implements a {
+        b() {
         }
 
-        @Override // com.baseproject.utils.speedtest.SpeedTestRequest.InterfaceC4662a
+        @Override // com.baseproject.utils.speedtest.SpeedTestRequest.a
         public void a(l83 l83Var) {
-            C7892a.a(SpeedTestRequest.q, "sync exec finish normally!");
+            com.youku.b.a.a.a(SpeedTestRequest.q, "sync exec finish normally!");
             SpeedTestRequest.this.p = l83Var;
             SpeedTestRequest.this.o.notifyAll();
         }
@@ -192,15 +189,13 @@ public class SpeedTestRequest {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.baseproject.utils.speedtest.SpeedTestRequest$c */
     /* loaded from: classes10.dex */
-    public class C4664c extends ThreadPoolExecutor {
+    public class c extends ThreadPoolExecutor {
 
         /* compiled from: Taobao */
-        /* renamed from: com.baseproject.utils.speedtest.SpeedTestRequest$c$a */
         /* loaded from: classes10.dex */
-        class ThreadFactoryC4665a implements ThreadFactory {
-            ThreadFactoryC4665a(SpeedTestRequest speedTestRequest) {
+        class a implements ThreadFactory {
+            a(SpeedTestRequest speedTestRequest) {
             }
 
             @Override // java.util.concurrent.ThreadFactory
@@ -209,30 +204,30 @@ public class SpeedTestRequest {
             }
         }
 
-        public C4664c(SpeedTestRequest speedTestRequest, int i) {
-            super(i, i, 0L, TimeUnit.SECONDS, speedTestRequest.g, new ThreadFactoryC4665a(speedTestRequest));
+        public c(SpeedTestRequest speedTestRequest, int i) {
+            super(i, i, 0L, TimeUnit.SECONDS, speedTestRequest.g, new a(speedTestRequest));
         }
 
         @Override // java.util.concurrent.ThreadPoolExecutor
         protected void afterExecute(Runnable runnable, Throwable th) {
-            C7892a.a(SpeedTestRequest.q, "afterExecute ");
+            com.youku.b.a.a.a(SpeedTestRequest.q, "afterExecute ");
         }
 
         @Override // java.util.concurrent.ThreadPoolExecutor
         protected void beforeExecute(Thread thread, Runnable runnable) {
             String str = SpeedTestRequest.q;
-            C7892a.a(str, "beforeExecute " + thread.getName());
+            com.youku.b.a.a.a(str, "beforeExecute " + thread.getName());
         }
     }
 
-    public SpeedTestRequest(Context context, C4666a c4666a, C4666a.C4667a c4667a, int i, int i2) {
-        this.k = c4666a;
-        this.j = c4667a;
+    public SpeedTestRequest(Context context, com.baseproject.utils.speedtest.a aVar, a.C0218a c0218a, int i, int i2) {
+        this.k = aVar;
+        this.j = c0218a;
         this.b.clear();
         this.f = Executors.newSingleThreadScheduledExecutor();
         this.e = new Foreman();
-        this.d = new C4664c(this, c4667a.e);
-        int i3 = c4667a.e;
+        this.d = new c(this, c0218a.e);
+        int i3 = c0218a.e;
         this.c = new Worker[i3];
         this.i = new long[i3];
         this.m = i;
@@ -253,20 +248,20 @@ public class SpeedTestRequest {
     }
 
     public void d() {
-        C7892a.a(q, "exec");
+        com.youku.b.a.a.a(q, "exec");
         this.a = false;
         this.h = 0L;
         o();
         this.f.schedule(this.e, this.j.d, TimeUnit.SECONDS);
     }
 
-    public void e(InterfaceC4662a interfaceC4662a) {
-        this.l = interfaceC4662a;
+    public void e(a aVar) {
+        this.l = aVar;
     }
 
     public l83 h() {
         this.p = null;
-        e(new C4663b());
+        e(new b());
         d();
         try {
             synchronized (this.o) {

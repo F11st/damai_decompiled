@@ -37,7 +37,7 @@ final class ImmutableEnumMap<K extends Enum<K>, V> extends ImmutableMap.Iterator
             if (size != 1) {
                 return new ImmutableEnumMap(enumMap);
             }
-            Map.Entry entry = (Map.Entry) C5152a0.h(enumMap.entrySet());
+            Map.Entry entry = (Map.Entry) a0.h(enumMap.entrySet());
             return ImmutableMap.of(entry.getKey(), entry.getValue());
         }
         return ImmutableMap.of();

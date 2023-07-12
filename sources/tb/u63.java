@@ -3,8 +3,6 @@ package tb;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Build;
-import com.alibaba.security.common.d.AbstractC3806c;
-import com.heytap.mcssdk.C5462c;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -14,15 +12,14 @@ public class u63 {
     private Object c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.u63$b */
     /* loaded from: classes10.dex */
-    private static class C9765b {
+    private static class b {
         static u63 a = new u63();
     }
 
     private u63() {
         this.c = new Object();
-        Context k = C5462c.m().k();
+        Context k = com.heytap.mcssdk.c.m().k();
         if (k != null) {
             this.a = a(k);
         }
@@ -33,13 +30,13 @@ public class u63 {
     }
 
     private Context a(Context context) {
-        boolean b = b33.b();
-        z53.a("fbeVersion is " + b);
-        return (!b || Build.VERSION.SDK_INT < 24) ? context.getApplicationContext() : context.createDeviceProtectedStorageContext();
+        boolean b2 = b33.b();
+        z53.a("fbeVersion is " + b2);
+        return (!b2 || Build.VERSION.SDK_INT < 24) ? context.getApplicationContext() : context.createDeviceProtectedStorageContext();
     }
 
     public static u63 f() {
-        return C9765b.a;
+        return b.a;
     }
 
     private SharedPreferences g() {
@@ -83,6 +80,6 @@ public class u63 {
 
     public String e() {
         SharedPreferences g = g();
-        return g != null ? g.getString("decryptTag", AbstractC3806c.a) : AbstractC3806c.a;
+        return g != null ? g.getString("decryptTag", com.alibaba.security.common.d.c.a) : com.alibaba.security.common.d.c.a;
     }
 }

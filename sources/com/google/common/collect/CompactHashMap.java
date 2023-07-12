@@ -55,14 +55,13 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.CompactHashMap$a */
     /* loaded from: classes10.dex */
-    public class C4933a extends CompactHashMap<K, V>.AbstractC4937e<K> {
-        C4933a() {
+    public class a extends CompactHashMap<K, V>.e<K> {
+        a() {
             super(CompactHashMap.this, null);
         }
 
-        @Override // com.google.common.collect.CompactHashMap.AbstractC4937e
+        @Override // com.google.common.collect.CompactHashMap.e
         K b(int i) {
             return (K) CompactHashMap.this.keys[i];
         }
@@ -70,31 +69,29 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.CompactHashMap$b */
     /* loaded from: classes10.dex */
-    public class C4934b extends CompactHashMap<K, V>.AbstractC4937e<Map.Entry<K, V>> {
-        C4934b() {
+    public class b extends CompactHashMap<K, V>.e<Map.Entry<K, V>> {
+        b() {
             super(CompactHashMap.this, null);
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.CompactHashMap.AbstractC4937e
+        @Override // com.google.common.collect.CompactHashMap.e
         /* renamed from: c */
         public Map.Entry<K, V> b(int i) {
-            return new C4939g(i);
+            return new g(i);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.CompactHashMap$c */
     /* loaded from: classes10.dex */
-    public class C4935c extends CompactHashMap<K, V>.AbstractC4937e<V> {
-        C4935c() {
+    public class c extends CompactHashMap<K, V>.e<V> {
+        c() {
             super(CompactHashMap.this, null);
         }
 
-        @Override // com.google.common.collect.CompactHashMap.AbstractC4937e
+        @Override // com.google.common.collect.CompactHashMap.e
         V b(int i) {
             return (V) CompactHashMap.this.values[i];
         }
@@ -102,10 +99,9 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.CompactHashMap$d */
     /* loaded from: classes10.dex */
-    public class C4936d extends AbstractSet<Map.Entry<K, V>> {
-        C4936d() {
+    public class d extends AbstractSet<Map.Entry<K, V>> {
+        d() {
         }
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
@@ -150,10 +146,9 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.CompactHashMap$f */
     /* loaded from: classes10.dex */
-    public class C4938f extends AbstractSet<K> {
-        C4938f() {
+    public class f extends AbstractSet<K> {
+        f() {
         }
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
@@ -189,14 +184,13 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.CompactHashMap$g */
     /* loaded from: classes10.dex */
-    public final class C4939g extends AbstractC5157b<K, V> {
+    public final class g extends com.google.common.collect.b<K, V> {
         @NullableDecl
         private final K a;
         private int b;
 
-        C4939g(int i) {
+        g(int i) {
             this.a = (K) CompactHashMap.this.keys[i];
             this.b = i;
         }
@@ -208,12 +202,12 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
             }
         }
 
-        @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+        @Override // com.google.common.collect.b, java.util.Map.Entry
         public K getKey() {
             return this.a;
         }
 
-        @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+        @Override // com.google.common.collect.b, java.util.Map.Entry
         public V getValue() {
             a();
             int i = this.b;
@@ -223,7 +217,7 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
             return (V) CompactHashMap.this.values[i];
         }
 
-        @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+        @Override // com.google.common.collect.b, java.util.Map.Entry
         public V setValue(V v) {
             a();
             int i = this.b;
@@ -240,10 +234,9 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.CompactHashMap$h */
     /* loaded from: classes10.dex */
-    public class C4940h extends AbstractCollection<V> {
-        C4940h() {
+    public class h extends AbstractCollection<V> {
+        h() {
         }
 
         @Override // java.util.AbstractCollection, java.util.Collection
@@ -291,11 +284,11 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
         if (needsAllocArrays()) {
             return -1;
         }
-        int d = C5211z.d(obj);
-        int i = this.table[hashTableMask() & d];
+        int d2 = z.d(obj);
+        int i = this.table[hashTableMask() & d2];
         while (i != -1) {
             long j = this.entries[i];
-            if (getHash(j) == d && nm1.a(obj, this.keys[i])) {
+            if (getHash(j) == d2 && nm1.a(obj, this.keys[i])) {
                 return i;
             }
             i = getNext(j);
@@ -388,7 +381,7 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
     public void allocArrays() {
         du1.x(needsAllocArrays(), "Arrays already allocated");
         int i = this.modCount;
-        this.table = newTable(C5211z.a(i, 1.0d));
+        this.table = newTable(z.a(i, 1.0d));
         this.entries = newEntries(i);
         this.keys = new Object[i];
         this.values = new Object[i];
@@ -423,15 +416,15 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
     }
 
     Set<Map.Entry<K, V>> createEntrySet() {
-        return new C4936d();
+        return new d();
     }
 
     Set<K> createKeySet() {
-        return new C4938f();
+        return new f();
     }
 
     Collection<V> createValues() {
-        return new C4940h();
+        return new h();
     }
 
     @Override // java.util.AbstractMap, java.util.Map
@@ -446,7 +439,7 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
     }
 
     Iterator<Map.Entry<K, V>> entrySetIterator() {
-        return new C4934b();
+        return new b();
     }
 
     int firstEntryIndex() {
@@ -501,7 +494,7 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
     }
 
     Iterator<K> keySetIterator() {
-        return new C4933a();
+        return new a();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -556,8 +549,8 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
         long[] jArr = this.entries;
         Object[] objArr = this.keys;
         Object[] objArr2 = this.values;
-        int d = C5211z.d(k);
-        int hashTableMask = hashTableMask() & d;
+        int d2 = z.d(k);
+        int hashTableMask = hashTableMask() & d2;
         int i = this.size;
         int[] iArr = this.table;
         int i2 = iArr[hashTableMask];
@@ -566,7 +559,7 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
         } else {
             while (true) {
                 long j = jArr[i2];
-                if (getHash(j) == d && nm1.a(k, objArr[i2])) {
+                if (getHash(j) == d2 && nm1.a(k, objArr[i2])) {
                     V v2 = (V) objArr2[i2];
                     objArr2[i2] = v;
                     accessEntry(i2);
@@ -583,10 +576,10 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
         if (i != Integer.MAX_VALUE) {
             int i3 = i + 1;
             resizeMeMaybe(i3);
-            insertEntry(i, k, v, d);
+            insertEntry(i, k, v, d2);
             this.size = i3;
             int length = this.table.length;
-            if (C5211z.b(i, length, 1.0d)) {
+            if (z.b(i, length, 1.0d)) {
                 resizeTable(length * 2);
             }
             this.modCount++;
@@ -602,7 +595,7 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
         if (needsAllocArrays()) {
             return null;
         }
-        return remove(obj, C5211z.d(obj));
+        return remove(obj, z.d(obj));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -631,9 +624,9 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
         if (i < this.entries.length) {
             resizeEntries(i);
         }
-        int a = C5211z.a(i, 1.0d);
-        if (a < this.table.length) {
-            resizeTable(a);
+        int a2 = z.a(i, 1.0d);
+        if (a2 < this.table.length) {
+            resizeTable(a2);
         }
     }
 
@@ -649,7 +642,7 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
     }
 
     Iterator<V> valuesIterator() {
-        return new C4935c();
+        return new c();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -689,14 +682,13 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.CompactHashMap$e */
     /* loaded from: classes10.dex */
-    private abstract class AbstractC4937e<T> implements Iterator<T> {
+    private abstract class e<T> implements Iterator<T> {
         int a;
         int b;
         int c;
 
-        private AbstractC4937e() {
+        private e() {
             this.a = CompactHashMap.this.modCount;
             this.b = CompactHashMap.this.firstEntryIndex();
             this.c = -1;
@@ -731,14 +723,14 @@ public class CompactHashMap<K, V> extends AbstractMap<K, V> implements Serializa
         @Override // java.util.Iterator
         public void remove() {
             a();
-            C5191k.e(this.c >= 0);
+            k.e(this.c >= 0);
             this.a++;
             CompactHashMap.this.removeEntry(this.c);
             this.b = CompactHashMap.this.adjustAfterRemove(this.b, this.c);
             this.c = -1;
         }
 
-        /* synthetic */ AbstractC4937e(CompactHashMap compactHashMap, C4933a c4933a) {
+        /* synthetic */ e(CompactHashMap compactHashMap, a aVar) {
             this();
         }
     }

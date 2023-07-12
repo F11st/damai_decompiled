@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.completable;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
+import io.reactivex.a;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.EmptyDisposable;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -12,7 +12,7 @@ import tb.jm;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class CompletableAmb extends AbstractC8146a {
+public final class CompletableAmb extends a {
     private final CompletableSource[] sources;
     private final Iterable<? extends CompletableSource> sourcesIterable;
 
@@ -58,7 +58,7 @@ public final class CompletableAmb extends AbstractC8146a {
         this.sourcesIterable = iterable;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     public void subscribeActual(CompletableObserver completableObserver) {
         int length;
         CompletableSource[] completableSourceArr = this.sources;

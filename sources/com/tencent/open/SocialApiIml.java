@@ -9,20 +9,17 @@ import android.text.TextUtils;
 import android.webkit.CookieSyncManager;
 import android.webkit.WebSettings;
 import com.taobao.weex.annotation.JSMethod;
-import com.tencent.connect.auth.C7048c;
 import com.tencent.connect.auth.QQToken;
 import com.tencent.connect.common.BaseApi;
 import com.tencent.connect.common.Constants;
 import com.tencent.connect.common.UIListenerManager;
-import com.tencent.open.c.C7091b;
 import com.tencent.open.log.SLog;
-import com.tencent.open.utils.C7119g;
-import com.tencent.open.utils.C7121i;
-import com.tencent.open.utils.C7122j;
-import com.tencent.open.utils.C7123k;
-import com.tencent.open.utils.C7126m;
 import com.tencent.open.utils.HttpUtils;
-import com.tencent.open.web.C7129a;
+import com.tencent.open.utils.g;
+import com.tencent.open.utils.i;
+import com.tencent.open.utils.j;
+import com.tencent.open.utils.k;
+import com.tencent.open.utils.m;
 import com.tencent.tauth.DefaultUiListener;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.UiError;
@@ -37,16 +34,15 @@ public class SocialApiIml extends BaseApi {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.tencent.open.SocialApiIml$a */
     /* loaded from: classes11.dex */
-    public class C7066a extends DefaultUiListener {
+    public class a extends DefaultUiListener {
         private IUiListener b;
         private String c;
         private String d;
         private Bundle e;
         private Activity f;
 
-        C7066a(Activity activity, IUiListener iUiListener, String str, String str2, Bundle bundle) {
+        a(Activity activity, IUiListener iUiListener, String str, String str2, Bundle bundle) {
             this.b = iUiListener;
             this.c = str;
             this.d = str2;
@@ -97,15 +93,15 @@ public class SocialApiIml extends BaseApi {
     protected Intent b(String str) {
         Intent intent = new Intent();
         intent.setClassName(Constants.PACKAGE_QQ_PAD, str);
-        if (C7126m.c(C7119g.a()) && C7123k.a(C7119g.a(), intent)) {
+        if (m.c(g.a()) && k.a(g.a(), intent)) {
             return intent;
         }
         Intent intent2 = new Intent();
         intent2.setClassName("com.tencent.mobileqq", str);
-        if (!C7123k.a(C7119g.a(), intent2) || C7123k.c(C7119g.a(), "4.7") < 0) {
+        if (!k.a(g.a(), intent2) || k.c(g.a(), "4.7") < 0) {
             Intent intent3 = new Intent();
             intent3.setClassName(Constants.PACKAGE_QZONE, str);
-            if (C7123k.a(C7119g.a(), intent3) && C7123k.a(C7123k.a(C7119g.a(), Constants.PACKAGE_QZONE), UCBuildFlags.AION_FRAMEWORK_VERSION) >= 0 && C7123k.a(C7119g.a(), intent3.getComponent().getPackageName(), Constants.SIGNATRUE_QZONE)) {
+            if (k.a(g.a(), intent3) && k.a(k.a(g.a(), Constants.PACKAGE_QZONE), UCBuildFlags.AION_FRAMEWORK_VERSION) >= 0 && k.a(g.a(), intent3.getComponent().getPackageName(), Constants.SIGNATRUE_QZONE)) {
                 return intent3;
             }
             return null;
@@ -125,14 +121,14 @@ public class SocialApiIml extends BaseApi {
             c = c(SocialConstants.ACTIVITY_INVITE);
         }
         bundle.putAll(b());
-        a(activity, c, SocialConstants.ACTION_INVITE, bundle, C7122j.a().a(C7119g.a(), "https://imgcache.qq.com/open/mobile/invite/sdk_invite.html?"), iUiListener, false);
+        a(activity, c, SocialConstants.ACTION_INVITE, bundle, j.a().a(g.a(), "https://imgcache.qq.com/open/mobile/invite/sdk_invite.html?"), iUiListener, false);
     }
 
     public void story(Activity activity, Bundle bundle, IUiListener iUiListener) {
         this.a = activity;
         Intent c = c(SocialConstants.ACTIVITY_STORY);
         bundle.putAll(b());
-        a(activity, c, SocialConstants.ACTION_STORY, bundle, C7122j.a().a(C7119g.a(), "https://imgcache.qq.com/open/mobile/sendstory/sdk_sendstory_v1.3.html?"), iUiListener, false);
+        a(activity, c, SocialConstants.ACTION_STORY, bundle, j.a().a(g.a(), "https://imgcache.qq.com/open/mobile/sendstory/sdk_sendstory_v1.3.html?"), iUiListener, false);
     }
 
     @SuppressLint({"SetJavaScriptEnabled"})
@@ -144,19 +140,19 @@ public class SocialApiIml extends BaseApi {
         if (accessToken == null || accessToken.length() <= 0 || appId == null || appId.length() <= 0 || openId == null || openId.length() <= 0) {
             str = null;
         } else {
-            str = C7126m.g("tencent&sdk&qazxc***14969%%" + accessToken + appId + openId + "qzone3.4");
+            str = m.g("tencent&sdk&qazxc***14969%%" + accessToken + appId + openId + "qzone3.4");
         }
-        C7091b c7091b = new C7091b(context);
-        WebSettings settings = c7091b.getSettings();
+        com.tencent.open.c.b bVar = new com.tencent.open.c.b(context);
+        WebSettings settings = bVar.getSettings();
         settings.setDomStorageEnabled(true);
         settings.setDatabaseEnabled(true);
-        C7129a.a(c7091b);
-        String a = C7122j.a().a(context, "https://imgcache.qq.com");
-        c7091b.loadDataWithBaseURL(a, "<!DOCTYPE HTML><html lang=\"en-US\"><head><meta charset=\"UTF-8\"><title>localStorage Test</title><script type=\"text/javascript\">document.domain = 'qq.com';localStorage[\"" + this.c.getOpenId() + JSMethod.NOT_SET + this.c.getAppId() + "\"]=\"" + str + "\";</script></head><body></body></html>", "text/html", "utf-8", a);
+        com.tencent.open.web.a.a(bVar);
+        String a2 = j.a().a(context, "https://imgcache.qq.com");
+        bVar.loadDataWithBaseURL(a2, "<!DOCTYPE HTML><html lang=\"en-US\"><head><meta charset=\"UTF-8\"><title>localStorage Test</title><script type=\"text/javascript\">document.domain = 'qq.com';localStorage[\"" + this.c.getOpenId() + JSMethod.NOT_SET + this.c.getAppId() + "\"]=\"" + str + "\";</script></head><body></body></html>", "text/html", "utf-8", a2);
     }
 
-    public SocialApiIml(C7048c c7048c, QQToken qQToken) {
-        super(c7048c, qQToken);
+    public SocialApiIml(com.tencent.connect.auth.c cVar, QQToken qQToken) {
+        super(cVar, qQToken);
     }
 
     private void a(Activity activity, String str, Bundle bundle, IUiListener iUiListener) {
@@ -173,7 +169,7 @@ public class SocialApiIml extends BaseApi {
         } else if (SocialConstants.ACTION_GIFT.equals(str)) {
             bundle.putString("type", SocialConstants.TYPE_FREEGIFT);
         }
-        a(activity, intent, str, bundle, C7122j.a().a(C7119g.a(), "https://imgcache.qq.com/open/mobile/request/sdk_request.html?"), iUiListener, false);
+        a(activity, intent, str, bundle, j.a().a(g.a(), "https://imgcache.qq.com/open/mobile/request/sdk_request.html?"), iUiListener, false);
     }
 
     private void a(Activity activity, Intent intent, String str, Bundle bundle, String str2, IUiListener iUiListener, boolean z) {
@@ -188,8 +184,8 @@ public class SocialApiIml extends BaseApi {
             a(activity, intent, str, bundle, iUiListener);
             return;
         }
-        C7121i a = C7121i.a(C7119g.a(), this.c.getAppId());
-        if (!z && !a.b("C_LoginH5")) {
+        i a2 = i.a(g.a(), this.c.getAppId());
+        if (!z && !a2.b("C_LoginH5")) {
             z2 = false;
         }
         if (z2) {
@@ -210,7 +206,7 @@ public class SocialApiIml extends BaseApi {
     private void a(Activity activity, String str, Bundle bundle, String str2, IUiListener iUiListener) {
         SLog.i("openSDK_LOG.SocialApiIml", "-->handleIntentWithH5 action = " + str);
         Intent c = c();
-        IUiListener c7066a = new C7066a(activity, iUiListener, str, str2, bundle);
+        IUiListener aVar = new a(activity, iUiListener, str, str2, bundle);
         Intent b = b("com.tencent.open.agent.EncryTokenActivity");
         if (b != null && c != null && c.getComponent() != null && b.getComponent() != null && c.getComponent().getPackageName().equals(b.getComponent().getPackageName())) {
             b.putExtra("oauth_consumer_key", this.c.getAppId());
@@ -219,21 +215,21 @@ public class SocialApiIml extends BaseApi {
             b.putExtra(Constants.KEY_ACTION, SocialConstants.ACTION_CHECK_TOKEN);
             if (a(b)) {
                 SLog.i("openSDK_LOG.SocialApiIml", "-->handleIntentWithH5--found token activity");
-                UIListenerManager.getInstance().setListenerWithRequestcode(Constants.REQUEST_SOCIAL_H5, c7066a);
+                UIListenerManager.getInstance().setListenerWithRequestcode(Constants.REQUEST_SOCIAL_H5, aVar);
                 a(activity, b, Constants.REQUEST_SOCIAL_H5);
                 return;
             }
             return;
         }
         SLog.i("openSDK_LOG.SocialApiIml", "-->handleIntentWithH5--token activity not found");
-        String g = C7126m.g("tencent&sdk&qazxc***14969%%" + this.c.getAccessToken() + this.c.getAppId() + this.c.getOpenId() + "qzone3.4");
+        String g = m.g("tencent&sdk&qazxc***14969%%" + this.c.getAccessToken() + this.c.getAppId() + this.c.getOpenId() + "qzone3.4");
         JSONObject jSONObject = new JSONObject();
         try {
             jSONObject.put(SocialConstants.PARAM_ENCRY_EOKEN, g);
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        c7066a.onComplete(jSONObject);
+        aVar.onComplete(jSONObject);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -249,7 +245,7 @@ public class SocialApiIml extends BaseApi {
             bundle.putString("openid", openId);
         }
         try {
-            bundle.putString(Constants.PARAM_PLATFORM_ID, C7119g.a().getSharedPreferences(Constants.PREFERENCE_PF, 0).getString(Constants.PARAM_PLATFORM_ID, Constants.DEFAULT_PF));
+            bundle.putString(Constants.PARAM_PLATFORM_ID, g.a().getSharedPreferences(Constants.PREFERENCE_PF, 0).getString(Constants.PARAM_PLATFORM_ID, Constants.DEFAULT_PF));
         } catch (Exception e) {
             e.printStackTrace();
             bundle.putString(Constants.PARAM_PLATFORM_ID, Constants.DEFAULT_PF);
@@ -261,6 +257,6 @@ public class SocialApiIml extends BaseApi {
             return;
         }
         SLog.d("openSDK_LOG.SocialApiIml", "OpenUi, showDialog PKDialog");
-        new DialogC7094d(this.a, str, str3, iUiListener, this.c).show();
+        new d(this.a, str, str3, iUiListener, this.c).show();
     }
 }

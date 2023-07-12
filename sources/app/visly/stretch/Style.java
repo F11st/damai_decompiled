@@ -21,7 +21,7 @@ import tb.wt2;
 /* loaded from: classes.dex */
 public final class Style {
     @NotNull
-    public static final C0257a Companion = new C0257a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private AlignContent alignContent;
     @NotNull
@@ -65,13 +65,12 @@ public final class Style {
     private ld2<k80> size;
 
     /* compiled from: Taobao */
-    /* renamed from: app.visly.stretch.Style$a */
     /* loaded from: classes.dex */
-    public static final class C0257a {
-        private C0257a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C0257a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -138,56 +137,56 @@ public final class Style {
         int ordinal8 = this.alignSelf.ordinal();
         int ordinal9 = this.alignContent.ordinal();
         int ordinal10 = this.justifyContent.ordinal();
-        int a = this.position.c().a();
+        int a2 = this.position.c().a();
         float b = this.position.c().b();
-        int a2 = this.position.b().a();
+        int a3 = this.position.b().a();
         float b2 = this.position.b().b();
-        int a3 = this.position.d().a();
+        int a4 = this.position.d().a();
         float b3 = this.position.d().b();
-        int a4 = this.position.a().a();
+        int a5 = this.position.a().a();
         float b4 = this.position.a().b();
-        int a5 = this.margin.c().a();
+        int a6 = this.margin.c().a();
         float b5 = this.margin.c().b();
-        int a6 = this.margin.b().a();
+        int a7 = this.margin.b().a();
         float b6 = this.margin.b().b();
-        int a7 = this.margin.d().a();
+        int a8 = this.margin.d().a();
         float b7 = this.margin.d().b();
-        int a8 = this.margin.a().a();
+        int a9 = this.margin.a().a();
         float b8 = this.margin.a().b();
-        int a9 = this.padding.c().a();
+        int a10 = this.padding.c().a();
         float b9 = this.padding.c().b();
-        int a10 = this.padding.b().a();
+        int a11 = this.padding.b().a();
         float b10 = this.padding.b().b();
-        int a11 = this.padding.d().a();
+        int a12 = this.padding.d().a();
         float b11 = this.padding.d().b();
-        int a12 = this.padding.a().a();
+        int a13 = this.padding.a().a();
         float b12 = this.padding.a().b();
-        int a13 = this.border.c().a();
+        int a14 = this.border.c().a();
         float b13 = this.border.c().b();
-        int a14 = this.border.b().a();
+        int a15 = this.border.b().a();
         float b14 = this.border.b().b();
-        int a15 = this.border.d().a();
+        int a16 = this.border.d().a();
         float b15 = this.border.d().b();
-        int a16 = this.border.a().a();
+        int a17 = this.border.a().a();
         float b16 = this.border.a().b();
         float f = this.flexGrow;
         float f2 = this.flexShrink;
-        int a17 = this.flexBasis.a();
+        int a18 = this.flexBasis.a();
         float b17 = this.flexBasis.b();
-        int a18 = this.size.b().a();
+        int a19 = this.size.b().a();
         float b18 = this.size.b().b();
-        int a19 = this.size.a().a();
+        int a20 = this.size.a().a();
         float b19 = this.size.a().b();
-        int a20 = this.minSize.b().a();
+        int a21 = this.minSize.b().a();
         float b20 = this.minSize.b().b();
-        int a21 = this.minSize.a().a();
+        int a22 = this.minSize.a().a();
         float b21 = this.minSize.a().b();
-        int a22 = this.maxSize.b().a();
+        int a23 = this.maxSize.b().a();
         float b22 = this.maxSize.b().b();
-        int a23 = this.maxSize.a().a();
+        int a24 = this.maxSize.a().a();
         float b23 = this.maxSize.a().b();
         Float f3 = this.aspectRatio;
-        this.rustptr = nConstruct(ordinal, ordinal2, ordinal3, ordinal4, ordinal5, ordinal6, ordinal7, ordinal8, ordinal9, ordinal10, a, b, a2, b2, a3, b3, a4, b4, a5, b5, a6, b6, a7, b7, a8, b8, a9, b9, a10, b10, a11, b11, a12, b12, a13, b13, a14, b14, a15, b15, a16, b16, f, f2, a17, b17, a18, b18, a19, b19, a20, b20, a21, b21, a22, b22, a23, b23, f3 == null ? Float.NaN : f3.floatValue());
+        this.rustptr = nConstruct(ordinal, ordinal2, ordinal3, ordinal4, ordinal5, ordinal6, ordinal7, ordinal8, ordinal9, ordinal10, a2, b, a3, b2, a4, b3, a5, b4, a6, b5, a7, b6, a8, b7, a9, b8, a10, b9, a11, b10, a12, b11, a13, b12, a14, b13, a15, b14, a16, b15, a17, b16, f, f2, a18, b17, a19, b18, a20, b19, a21, b20, a22, b21, a23, b22, a24, b23, f3 == null ? Float.NaN : f3.floatValue());
     }
 
     private final native long nConstruct(int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, int i10, int i11, float f, int i12, float f2, int i13, float f3, int i14, float f4, int i15, float f5, int i16, float f6, int i17, float f7, int i18, float f8, int i19, float f9, int i20, float f10, int i21, float f11, int i22, float f12, int i23, float f13, int i24, float f14, int i25, float f15, int i26, float f16, float f17, float f18, int i27, float f19, int i28, float f20, int i29, float f21, int i30, float f22, int i31, float f23, int i32, float f24, int i33, float f25, float f26);

@@ -2,8 +2,8 @@ package com.alibaba.mtl.appmonitor.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import com.alibaba.appmonitor.pool.C3316a;
 import com.alibaba.appmonitor.pool.Reusable;
+import com.alibaba.appmonitor.pool.a;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,17 +27,17 @@ public class MeasureValueSet implements IMerge<MeasureValueSet>, Reusable, Parce
     private Map<String, MeasureValue> map = new LinkedHashMap();
 
     public static MeasureValueSet create() {
-        return (MeasureValueSet) C3316a.a().poll(MeasureValueSet.class, new Object[0]);
+        return (MeasureValueSet) a.a().poll(MeasureValueSet.class, new Object[0]);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public static MeasureValueSet fromStringMap(Map<String, String> map) {
-        MeasureValueSet measureValueSet = (MeasureValueSet) C3316a.a().poll(MeasureValueSet.class, new Object[0]);
+        MeasureValueSet measureValueSet = (MeasureValueSet) a.a().poll(MeasureValueSet.class, new Object[0]);
         if (map != null) {
             for (Map.Entry<String, String> entry : map.entrySet()) {
                 Double d = toDouble(entry.getValue());
                 if (d != null) {
-                    measureValueSet.map.put(entry.getKey(), C3316a.a().poll(MeasureValue.class, d));
+                    measureValueSet.map.put(entry.getKey(), a.a().poll(MeasureValue.class, d));
                 }
             }
         }
@@ -79,7 +79,7 @@ public class MeasureValueSet implements IMerge<MeasureValueSet>, Reusable, Parce
     @Override // com.alibaba.appmonitor.pool.Reusable
     public void clean() {
         for (MeasureValue measureValue : this.map.values()) {
-            C3316a.a().offer(measureValue);
+            a.a().offer(measureValue);
         }
         this.map.clear();
     }
@@ -127,7 +127,7 @@ public class MeasureValueSet implements IMerge<MeasureValueSet>, Reusable, Parce
 
     /* JADX WARN: Multi-variable type inference failed */
     public MeasureValueSet setValue(String str, double d) {
-        this.map.put(str, C3316a.a().poll(MeasureValue.class, Double.valueOf(d)));
+        this.map.put(str, a.a().poll(MeasureValue.class, Double.valueOf(d)));
         return this;
     }
 
@@ -138,7 +138,7 @@ public class MeasureValueSet implements IMerge<MeasureValueSet>, Reusable, Parce
 
     @Deprecated
     public static MeasureValueSet create(int i) {
-        return (MeasureValueSet) C3316a.a().poll(MeasureValueSet.class, new Object[0]);
+        return (MeasureValueSet) a.a().poll(MeasureValueSet.class, new Object[0]);
     }
 
     @Override // com.alibaba.mtl.appmonitor.model.IMerge
@@ -154,13 +154,13 @@ public class MeasureValueSet implements IMerge<MeasureValueSet>, Reusable, Parce
 
     /* JADX WARN: Multi-variable type inference failed */
     public static MeasureValueSet create(Map<String, Double> map) {
-        MeasureValueSet measureValueSet = (MeasureValueSet) C3316a.a().poll(MeasureValueSet.class, new Object[0]);
+        MeasureValueSet measureValueSet = (MeasureValueSet) a.a().poll(MeasureValueSet.class, new Object[0]);
         if (map != null) {
             try {
                 for (String str : map.keySet()) {
                     Double d = map.get(str);
                     if (d != null) {
-                        measureValueSet.map.put(str, C3316a.a().poll(MeasureValue.class, d));
+                        measureValueSet.map.put(str, a.a().poll(MeasureValue.class, d));
                     }
                 }
             } catch (Exception unused) {

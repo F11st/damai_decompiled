@@ -26,12 +26,11 @@ import com.alibaba.security.biometrics.service.model.params.ALBiometricsParams;
 import com.alibaba.security.biometrics.service.model.result.ALBiometricsCodes;
 import com.alibaba.security.biometrics.service.state.ABDetectListener;
 import com.alibaba.security.biometrics.service.state.ABStateMachine;
-import com.alibaba.security.common.c.C3800a;
-import com.alibaba.security.common.d.C3808e;
-import com.alibaba.security.common.d.C3811h;
-import com.alibaba.security.common.d.C3823p;
+import com.alibaba.security.common.d.e;
+import com.alibaba.security.common.d.h;
+import com.alibaba.security.common.d.p;
 import com.alibaba.security.common.track.model.TrackLog;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
+import com.alibaba.security.realidentity.jsbridge.a;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -234,10 +233,10 @@ public class ABFrameDetector extends ABDetector {
             hashMap.put("ldClaPath", this.mModelDirPath + LD_CLA_NAME);
             hashMap.put("fcPath", this.mModelDirPath + FC_NAME);
             hashMap.put("errorCode", Integer.valueOf(init));
-            hashMap.put(AbstractC3893a.d, this.mParams.secToken);
-            ALBiometricsJni.bhL(8, C3811h.a((Object) hashMap));
+            hashMap.put(a.d, this.mParams.secToken);
+            ALBiometricsJni.bhL(8, h.a((Object) hashMap));
             if (init != 0) {
-                handleError(GlobalErrorCode.ERROR_ALGO_INIT_FAIL, C3811h.a((Object) hashMap));
+                handleError(GlobalErrorCode.ERROR_ALGO_INIT_FAIL, h.a((Object) hashMap));
                 return false;
             }
             this.initWidth = i;
@@ -524,7 +523,7 @@ public class ABFrameDetector extends ABDetector {
             }
             return null;
         } catch (Throwable unused) {
-            C3800a.b();
+            com.alibaba.security.common.c.a.b();
             return null;
         }
     }
@@ -606,7 +605,7 @@ public class ABFrameDetector extends ABDetector {
     @Override // com.alibaba.security.biometrics.service.model.detector.ABDetector
     public boolean init(Context context, ALBiometricsParams aLBiometricsParams) {
         int checkLicense;
-        if (!C3823p.g()) {
+        if (!p.g()) {
             handleError(GlobalErrorCode.ERROR_DEVICE_NOT_SUPPORT_NEON, "");
             return false;
         }
@@ -690,10 +689,10 @@ public class ABFrameDetector extends ABDetector {
     }
 
     private boolean copyModel(Context context, String str, String str2) {
-        byte[] a = C3808e.a(context, str);
+        byte[] a = e.a(context, str);
         if (a == null) {
             return false;
         }
-        return C3808e.a(str2, a);
+        return e.a(str2, a);
     }
 }

@@ -60,12 +60,11 @@ public class FilterViewHolder extends BaseViewHolder<FilterBean> implements cn.d
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.drama.viewholder.FilterViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1834a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1834a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -80,12 +79,11 @@ public class FilterViewHolder extends BaseViewHolder<FilterBean> implements cn.d
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.drama.viewholder.FilterViewHolder$b */
     /* loaded from: classes7.dex */
-    public class C1835b implements OnItemBindListener<FilterMainBean> {
+    public class b implements OnItemBindListener<FilterMainBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1835b() {
+        b() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -122,7 +120,7 @@ public class FilterViewHolder extends BaseViewHolder<FilterBean> implements cn.d
         this.f = (DMIconFontTextView) view.findViewById(R$id.filter_timer_arrow);
         this.h = (XHorizontalScrollView) view.findViewById(R$id.filter_sub_horizontal_scroll_view);
         this.i = (ViewGroup) view.findViewById(R$id.filter_sub_container);
-        this.d.setOnClickListener(new View$OnClickListenerC1834a());
+        this.d.setOnClickListener(new a());
         this.c.setLayoutManager(new LinearLayoutManager(mu0.a(), 0, false));
         this.c.addItemDecoration(new RecyclerView.ItemDecoration() { // from class: cn.damai.tetris.component.drama.viewholder.FilterViewHolder.2
             private static transient /* synthetic */ IpChange $ipChange;
@@ -137,7 +135,7 @@ public class FilterViewHolder extends BaseViewHolder<FilterBean> implements cn.d
                 }
             }
         });
-        FilterMainAdapter filterMainAdapter = new FilterMainAdapter(new C1835b());
+        FilterMainAdapter filterMainAdapter = new FilterMainAdapter(new b());
         this.g = filterMainAdapter;
         this.c.setAdapter(filterMainAdapter);
     }

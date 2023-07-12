@@ -13,15 +13,14 @@ public class LogsUtil {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.secure.android.common.util.LogsUtil$a */
     /* loaded from: classes10.dex */
-    public static class C5759a extends Throwable {
+    public static class a extends Throwable {
         private static final long d = 7129050843360571879L;
         private String a;
         private Throwable b;
         private Throwable c;
 
-        public C5759a(Throwable th) {
+        public a(Throwable th) {
             this.c = th;
         }
 
@@ -296,19 +295,19 @@ public class LogsUtil {
         if (th == null) {
             return null;
         }
-        C5759a c5759a = new C5759a(th);
-        c5759a.setStackTrace(th.getStackTrace());
-        c5759a.a(b(th.getMessage()));
+        a aVar = new a(th);
+        aVar.setStackTrace(th.getStackTrace());
+        aVar.a(b(th.getMessage()));
         Throwable cause = th.getCause();
-        C5759a c5759a2 = c5759a;
+        a aVar2 = aVar;
         while (cause != null) {
-            C5759a c5759a3 = new C5759a(cause);
-            c5759a3.setStackTrace(cause.getStackTrace());
-            c5759a3.a(b(cause.getMessage()));
-            c5759a2.a(c5759a3);
+            a aVar3 = new a(cause);
+            aVar3.setStackTrace(cause.getStackTrace());
+            aVar3.a(b(cause.getMessage()));
+            aVar2.a(aVar3);
             cause = cause.getCause();
-            c5759a2 = c5759a3;
+            aVar2 = aVar3;
         }
-        return c5759a;
+        return aVar;
     }
 }

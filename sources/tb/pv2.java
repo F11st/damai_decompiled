@@ -12,10 +12,9 @@ public class pv2 {
     private ScheduledThreadPoolExecutor a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.pv2$a */
     /* loaded from: classes5.dex */
-    static class ThreadFactoryC9572a implements ThreadFactory {
-        ThreadFactoryC9572a() {
+    static class a implements ThreadFactory {
+        a() {
         }
 
         @Override // java.util.concurrent.ThreadFactory
@@ -27,7 +26,7 @@ public class pv2 {
 
     public pv2() {
         this.a = null;
-        ScheduledThreadPoolExecutor scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1, new ThreadFactoryC9572a());
+        ScheduledThreadPoolExecutor scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1, new a());
         this.a = scheduledThreadPoolExecutor;
         scheduledThreadPoolExecutor.setKeepAliveTime(3000L, TimeUnit.MILLISECONDS);
         this.a.allowCoreThreadTimeOut(true);

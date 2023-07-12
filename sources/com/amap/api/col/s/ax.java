@@ -3,8 +3,8 @@ package com.amap.api.col.s;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
-import com.amap.api.col.s.HandlerC4447t;
 import com.amap.api.col.s.bt;
+import com.amap.api.col.s.t;
 import com.amap.api.services.cloud.CloudItemDetail;
 import com.amap.api.services.cloud.CloudResult;
 import com.amap.api.services.cloud.CloudSearch;
@@ -25,10 +25,10 @@ public final class ax implements ICloudSearch {
     private Handler f;
 
     public ax(Context context) throws AMapException {
-        bu a = bt.a(context, C4434h.a(false));
-        if (a.a == bt.EnumC4398c.SuccessCode) {
+        bu a = bt.a(context, h.a(false));
+        if (a.a == bt.c.SuccessCode) {
             this.a = context.getApplicationContext();
-            this.f = HandlerC4447t.a();
+            this.f = t.a();
             return;
         }
         String str = a.b;
@@ -41,15 +41,15 @@ public final class ax implements ICloudSearch {
             ao.a().a(new Runnable() { // from class: com.amap.api.col.s.ax.1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                    Message obtainMessage = t.a().obtainMessage();
                     try {
                         try {
                             obtainMessage.arg1 = 12;
                             obtainMessage.what = 700;
-                            HandlerC4447t.C4451d c4451d = new HandlerC4447t.C4451d();
-                            c4451d.b = ax.this.b;
-                            obtainMessage.obj = c4451d;
-                            c4451d.a = ax.this.a(query);
+                            t.d dVar = new t.d();
+                            dVar.b = ax.this.b;
+                            obtainMessage.obj = dVar;
+                            dVar.a = ax.this.a(query);
                             obtainMessage.arg2 = 1000;
                         } catch (AMapException e) {
                             obtainMessage.arg2 = e.getErrorCode();
@@ -70,15 +70,15 @@ public final class ax implements ICloudSearch {
             ao.a().a(new Runnable() { // from class: com.amap.api.col.s.ax.2
                 @Override // java.lang.Runnable
                 public final void run() {
-                    Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                    Message obtainMessage = t.a().obtainMessage();
                     try {
                         try {
                             obtainMessage.arg1 = 12;
                             obtainMessage.what = 701;
-                            HandlerC4447t.C4450c c4450c = new HandlerC4447t.C4450c();
-                            c4450c.b = ax.this.b;
-                            obtainMessage.obj = c4450c;
-                            c4450c.a = ax.this.a(str, str2);
+                            t.c cVar = new t.c();
+                            cVar.b = ax.this.b;
+                            obtainMessage.obj = cVar;
+                            cVar.a = ax.this.a(str, str2);
                             obtainMessage.arg2 = 1000;
                         } catch (AMapException e) {
                             obtainMessage.arg2 = e.getErrorCode();
@@ -103,7 +103,7 @@ public final class ax implements ICloudSearch {
     }
 
     private static boolean b(CloudSearch.Query query) {
-        if (query == null || C4435i.a(query.getTableID()) || query.getBound() == null) {
+        if (query == null || i.a(query.getTableID()) || query.getBound() == null) {
             return false;
         }
         if (query.getBound() != null && query.getBound().getShape().equals("Bound") && query.getBound().getCenter() == null) {
@@ -155,7 +155,7 @@ public final class ax implements ICloudSearch {
             } catch (Throwable th2) {
                 th = th2;
                 cloudResult = r1;
-                C4435i.a(th, "CloudSearch", "searchCloud");
+                i.a(th, "CloudSearch", "searchCloud");
                 if (!(th instanceof AMapException)) {
                     th.printStackTrace();
                     return cloudResult;
@@ -163,13 +163,13 @@ public final class ax implements ICloudSearch {
                 throw th;
             }
             if (r1 == 0) {
-                CloudResult b = new C4433g(this.a, query).b();
+                CloudResult b = new g(this.a, query).b();
                 a(b, query);
                 r1 = b;
             } else {
                 cloudResult = a(query.getPageNum());
                 if (cloudResult == null) {
-                    CloudResult b2 = new C4433g(this.a, query).b();
+                    CloudResult b2 = new g(this.a, query).b();
                     this.e.put(Integer.valueOf(query.getPageNum()), b2);
                     r1 = b2;
                 }
@@ -185,9 +185,9 @@ public final class ax implements ICloudSearch {
         if (str != null && !str.trim().equals("")) {
             if (str2 != null && !str2.trim().equals("")) {
                 try {
-                    return new C4432f(this.a, new C4371ab(str, str2)).b();
+                    return new f(this.a, new ab(str, str2)).b();
                 } catch (Throwable th) {
-                    C4435i.a(th, "CloudSearch", "searchCloudDetail");
+                    i.a(th, "CloudSearch", "searchCloudDetail");
                     if (!(th instanceof AMapException)) {
                         th.printStackTrace();
                         return null;

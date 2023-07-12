@@ -38,7 +38,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import kotlin.Metadata;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -219,7 +219,7 @@ public class GenericHorizontalViewHolder extends BaseViewHolder<Object> {
             for (Object obj : children) {
                 int i2 = i + 1;
                 if (i < 0) {
-                    C8214m.p();
+                    m.p();
                 }
                 Node node = (Node) obj;
                 try {

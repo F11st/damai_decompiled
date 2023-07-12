@@ -47,12 +47,11 @@ public class SearchPresenter extends SearchContract.Presenter {
     private final int BRAND_SIZE = 3;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.presenter.SearchPresenter$a */
     /* loaded from: classes6.dex */
-    public class C1579a implements Action<ArtistFollowResultBean> {
+    public class a implements Action<ArtistFollowResultBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1579a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -68,12 +67,11 @@ public class SearchPresenter extends SearchContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.presenter.SearchPresenter$b */
     /* loaded from: classes6.dex */
-    public class C1580b implements Action<ArtistFollowResultBean> {
+    public class b implements Action<ArtistFollowResultBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1580b() {
+        b() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -89,12 +87,11 @@ public class SearchPresenter extends SearchContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.presenter.SearchPresenter$c */
     /* loaded from: classes6.dex */
-    public class C1581c implements Action<BaccountInfo> {
+    public class c implements Action<BaccountInfo> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1581c() {
+        c() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -110,12 +107,11 @@ public class SearchPresenter extends SearchContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.presenter.SearchPresenter$d */
     /* loaded from: classes6.dex */
-    public class C1582d implements Action<BaccountInfo> {
+    public class d implements Action<BaccountInfo> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1582d() {
+        d() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -131,12 +127,11 @@ public class SearchPresenter extends SearchContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.presenter.SearchPresenter$e */
     /* loaded from: classes6.dex */
-    public class C1583e implements Action<Integer> {
+    public class e implements Action<Integer> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1583e() {
+        e() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -152,12 +147,11 @@ public class SearchPresenter extends SearchContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.presenter.SearchPresenter$f */
     /* loaded from: classes6.dex */
-    public class C1584f implements Action<SearchTourUT> {
+    public class f implements Action<SearchTourUT> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1584f() {
+        f() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -180,8 +174,8 @@ public class SearchPresenter extends SearchContract.Presenter {
         }
         try {
             i = Integer.parseInt(str);
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
         return i != 10 ? i != 11 ? i != 13 ? "2" : "5" : "4" : "3";
     }
@@ -211,8 +205,8 @@ public class SearchPresenter extends SearchContract.Presenter {
                 }
                 arrayList.add(i, arrayList.remove(i2));
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 
@@ -537,13 +531,13 @@ public class SearchPresenter extends SearchContract.Presenter {
         }
         searchListV2Request.categories = params.categories;
         searchListV2Request.aaid = str4;
-        double[] b = ja1.b();
-        if (b == null || b.length <= 1) {
+        double[] b2 = ja1.b();
+        if (b2 == null || b2.length <= 1) {
             str2 = "116.43672127748412";
             str3 = "39.93700227507351";
         } else {
-            str2 = String.valueOf(b[0]);
-            str3 = String.valueOf(b[1]);
+            str2 = String.valueOf(b2[0]);
+            str3 = String.valueOf(b2[1]);
         }
         searchListV2Request.longitude = str2;
         searchListV2Request.latitude = str3;
@@ -612,7 +606,7 @@ public class SearchPresenter extends SearchContract.Presenter {
         }
     }
 
-    @Override // cn.damai.common.app.base.AbstractC0470a
+    @Override // cn.damai.common.app.base.a
     public void onStart() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "218643229")) {
@@ -620,11 +614,11 @@ public class SearchPresenter extends SearchContract.Presenter {
             return;
         }
         super.onStart();
-        this.mDMMessage.b(SearchHelper.ACCOUNT_MORE_SEARCH_ATTENTION, new C1579a());
-        this.mDMMessage.b("artist_follow_status", new C1580b());
-        this.mDMMessage.b(SearchHelper.ATTENTION_SEARCH_ACCOUNT, new C1581c());
-        this.mDMMessage.b(SearchHelper.JUMP_ACCOUNT_MAIN_PAGE, new C1582d());
-        this.mDMMessage.b(y72.NOTIFY_RFRESH, new C1583e());
-        this.mDMMessage.b(SearchHelper.TOUR_JUMP_PROJECT_PAGE, new C1584f());
+        this.mDMMessage.b(SearchHelper.ACCOUNT_MORE_SEARCH_ATTENTION, new a());
+        this.mDMMessage.b("artist_follow_status", new b());
+        this.mDMMessage.b(SearchHelper.ATTENTION_SEARCH_ACCOUNT, new c());
+        this.mDMMessage.b(SearchHelper.JUMP_ACCOUNT_MAIN_PAGE, new d());
+        this.mDMMessage.b(y72.NOTIFY_RFRESH, new e());
+        this.mDMMessage.b(SearchHelper.TOUR_JUMP_PROJECT_PAGE, new f());
     }
 }

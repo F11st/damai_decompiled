@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.Scheduler;
+import io.reactivex.b;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import java.util.concurrent.TimeUnit;
 import org.reactivestreams.Subscriber;
@@ -68,13 +68,13 @@ public final class FlowableTimeInterval<T> extends AbstractFlowableWithUpstream<
         }
     }
 
-    public FlowableTimeInterval(AbstractC8147b<T> abstractC8147b, TimeUnit timeUnit, Scheduler scheduler) {
-        super(abstractC8147b);
+    public FlowableTimeInterval(b<T> bVar, TimeUnit timeUnit, Scheduler scheduler) {
+        super(bVar);
         this.scheduler = scheduler;
         this.unit = timeUnit;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super io2<T>> subscriber) {
         this.source.subscribe((FlowableSubscriber) new TimeIntervalSubscriber(subscriber, this.unit, this.scheduler));
     }

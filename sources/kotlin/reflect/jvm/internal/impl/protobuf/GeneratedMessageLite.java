@@ -26,9 +26,8 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite$a */
     /* loaded from: classes3.dex */
-    public static /* synthetic */ class C8439a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -47,16 +46,15 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite$b */
     /* loaded from: classes3.dex */
-    public static final class C8440b implements FieldSet.FieldDescriptorLite<C8440b> {
+    public static final class b implements FieldSet.FieldDescriptorLite<b> {
         final Internal.EnumLiteMap<?> a;
         final int b;
         final WireFormat.FieldType c;
         final boolean d;
         final boolean e;
 
-        C8440b(Internal.EnumLiteMap<?> enumLiteMap, int i, WireFormat.FieldType fieldType, boolean z, boolean z2) {
+        b(Internal.EnumLiteMap<?> enumLiteMap, int i, WireFormat.FieldType fieldType, boolean z, boolean z2) {
             this.a = enumLiteMap;
             this.b = i;
             this.c = fieldType;
@@ -66,8 +64,8 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
 
         @Override // java.lang.Comparable
         /* renamed from: a */
-        public int compareTo(C8440b c8440b) {
-            return this.b - c8440b.b;
+        public int compareTo(b bVar) {
+            return this.b - bVar.b;
         }
 
         public Internal.EnumLiteMap<?> b() {
@@ -106,24 +104,23 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite$c */
     /* loaded from: classes3.dex */
-    public static class C8441c<ContainingType extends MessageLite, Type> {
+    public static class c<ContainingType extends MessageLite, Type> {
         final ContainingType a;
         final Type b;
         final MessageLite c;
-        final C8440b d;
+        final b d;
         final Method e;
 
-        C8441c(ContainingType containingtype, Type type, MessageLite messageLite, C8440b c8440b, Class cls) {
+        c(ContainingType containingtype, Type type, MessageLite messageLite, b bVar, Class cls) {
             if (containingtype != null) {
-                if (c8440b.getLiteType() == WireFormat.FieldType.MESSAGE && messageLite == null) {
+                if (bVar.getLiteType() == WireFormat.FieldType.MESSAGE && messageLite == null) {
                     throw new IllegalArgumentException("Null messageDefaultInstance");
                 }
                 this.a = containingtype;
                 this.b = type;
                 this.c = messageLite;
-                this.d = c8440b;
+                this.d = bVar;
                 if (Internal.EnumLite.class.isAssignableFrom(cls)) {
                     this.e = GeneratedMessageLite.getMethodOrDie(cls, "valueOf", Integer.TYPE);
                     return;
@@ -207,12 +204,12 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
         }
     }
 
-    public static <ContainingType extends MessageLite, Type> C8441c<ContainingType, Type> newRepeatedGeneratedExtension(ContainingType containingtype, MessageLite messageLite, Internal.EnumLiteMap<?> enumLiteMap, int i, WireFormat.FieldType fieldType, boolean z, Class cls) {
-        return new C8441c<>(containingtype, Collections.emptyList(), messageLite, new C8440b(enumLiteMap, i, fieldType, true, z), cls);
+    public static <ContainingType extends MessageLite, Type> c<ContainingType, Type> newRepeatedGeneratedExtension(ContainingType containingtype, MessageLite messageLite, Internal.EnumLiteMap<?> enumLiteMap, int i, WireFormat.FieldType fieldType, boolean z, Class cls) {
+        return new c<>(containingtype, Collections.emptyList(), messageLite, new b(enumLiteMap, i, fieldType, true, z), cls);
     }
 
-    public static <ContainingType extends MessageLite, Type> C8441c<ContainingType, Type> newSingularGeneratedExtension(ContainingType containingtype, Type type, MessageLite messageLite, Internal.EnumLiteMap<?> enumLiteMap, int i, WireFormat.FieldType fieldType, Class cls) {
-        return new C8441c<>(containingtype, type, messageLite, new C8440b(enumLiteMap, i, fieldType, false, false), cls);
+    public static <ContainingType extends MessageLite, Type> c<ContainingType, Type> newSingularGeneratedExtension(ContainingType containingtype, Type type, MessageLite messageLite, Internal.EnumLiteMap<?> enumLiteMap, int i, WireFormat.FieldType fieldType, Class cls) {
+        return new c<>(containingtype, type, messageLite, new b(enumLiteMap, i, fieldType, false, false), cls);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.protobuf.MessageLite
@@ -225,7 +222,7 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public boolean parseUnknownField(CodedInputStream codedInputStream, CodedOutputStream codedOutputStream, C8447c c8447c, int i) throws IOException {
+    public boolean parseUnknownField(CodedInputStream codedInputStream, CodedOutputStream codedOutputStream, kotlin.reflect.jvm.internal.impl.protobuf.c cVar, int i) throws IOException {
         return codedInputStream.P(i, codedOutputStream);
     }
 
@@ -258,28 +255,27 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
     public static abstract class ExtendableMessage<MessageType extends ExtendableMessage<MessageType>> extends GeneratedMessageLite implements ExtendableMessageOrBuilder<MessageType> {
-        private final FieldSet<C8440b> extensions;
+        private final FieldSet<b> extensions;
 
         /* JADX INFO: Access modifiers changed from: protected */
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite$ExtendableMessage$a */
         /* loaded from: classes3.dex */
-        public class C8438a {
-            private final Iterator<Map.Entry<C8440b, Object>> a;
-            private Map.Entry<C8440b, Object> b;
+        public class a {
+            private final Iterator<Map.Entry<b, Object>> a;
+            private Map.Entry<b, Object> b;
             private final boolean c;
 
-            /* synthetic */ C8438a(ExtendableMessage extendableMessage, boolean z, C8439a c8439a) {
+            /* synthetic */ a(ExtendableMessage extendableMessage, boolean z, a aVar) {
                 this(z);
             }
 
             public void a(int i, CodedOutputStream codedOutputStream) throws IOException {
                 while (true) {
-                    Map.Entry<C8440b, Object> entry = this.b;
+                    Map.Entry<b, Object> entry = this.b;
                     if (entry == null || entry.getKey().getNumber() >= i) {
                         return;
                     }
-                    C8440b key = this.b.getKey();
+                    b key = this.b.getKey();
                     if (this.c && key.getLiteJavaType() == WireFormat.JavaType.MESSAGE && !key.isRepeated()) {
                         codedOutputStream.f0(key.getNumber(), (MessageLite) this.b.getValue());
                     } else {
@@ -293,8 +289,8 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
                 }
             }
 
-            private C8438a(boolean z) {
-                Iterator<Map.Entry<C8440b, Object>> p = ExtendableMessage.this.extensions.p();
+            private a(boolean z) {
+                Iterator<Map.Entry<b, Object>> p = ExtendableMessage.this.extensions.p();
                 this.a = p;
                 if (p.hasNext()) {
                     this.b = p.next();
@@ -308,8 +304,8 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
             this.extensions = FieldSet.t();
         }
 
-        private void verifyExtensionContainingType(C8441c<MessageType, ?> c8441c) {
-            if (c8441c.b() != getDefaultInstanceForType()) {
+        private void verifyExtensionContainingType(c<MessageType, ?> cVar) {
+            if (cVar.b() != getDefaultInstanceForType()) {
                 throw new IllegalArgumentException("This extension is for a different message type.  Please make sure that you are not suppressing any generics type warnings.");
             }
         }
@@ -325,24 +321,24 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        public final <Type> Type getExtension(C8441c<MessageType, Type> c8441c) {
-            verifyExtensionContainingType(c8441c);
-            Object h = this.extensions.h(c8441c.d);
+        public final <Type> Type getExtension(c<MessageType, Type> cVar) {
+            verifyExtensionContainingType(cVar);
+            Object h = this.extensions.h(cVar.d);
             if (h == null) {
-                return c8441c.b;
+                return cVar.b;
             }
-            return (Type) c8441c.a(h);
+            return (Type) cVar.a(h);
         }
 
-        public final <Type> int getExtensionCount(C8441c<MessageType, List<Type>> c8441c) {
-            verifyExtensionContainingType(c8441c);
-            return this.extensions.j(c8441c.d);
+        public final <Type> int getExtensionCount(c<MessageType, List<Type>> cVar) {
+            verifyExtensionContainingType(cVar);
+            return this.extensions.j(cVar.d);
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        public final <Type> boolean hasExtension(C8441c<MessageType, Type> c8441c) {
-            verifyExtensionContainingType(c8441c);
-            return this.extensions.m(c8441c.d);
+        public final <Type> boolean hasExtension(c<MessageType, Type> cVar) {
+            verifyExtensionContainingType(cVar);
+            return this.extensions.m(cVar.d);
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
@@ -352,14 +348,14 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        public ExtendableMessage<MessageType>.C8438a newExtensionWriter() {
-            return new C8438a(this, false, null);
+        public ExtendableMessage<MessageType>.a newExtensionWriter() {
+            return new a(this, false, null);
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
         @Override // kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite
-        public boolean parseUnknownField(CodedInputStream codedInputStream, CodedOutputStream codedOutputStream, C8447c c8447c, int i) throws IOException {
-            return GeneratedMessageLite.parseUnknownField(this.extensions, getDefaultInstanceForType(), codedInputStream, codedOutputStream, c8447c, i);
+        public boolean parseUnknownField(CodedInputStream codedInputStream, CodedOutputStream codedOutputStream, kotlin.reflect.jvm.internal.impl.protobuf.c cVar, int i) throws IOException {
+            return GeneratedMessageLite.parseUnknownField(this.extensions, getDefaultInstanceForType(), codedInputStream, codedOutputStream, cVar, i);
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
@@ -367,9 +363,9 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
             this.extensions = extendableBuilder.buildExtensions();
         }
 
-        public final <Type> Type getExtension(C8441c<MessageType, List<Type>> c8441c, int i) {
-            verifyExtensionContainingType(c8441c);
-            return (Type) c8441c.e(this.extensions.i(c8441c.d, i));
+        public final <Type> Type getExtension(c<MessageType, List<Type>> cVar, int i) {
+            verifyExtensionContainingType(cVar);
+            return (Type) cVar.e(this.extensions.i(cVar.d, i));
         }
     }
 
@@ -384,7 +380,7 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public static <MessageType extends kotlin.reflect.jvm.internal.impl.protobuf.MessageLite> boolean parseUnknownField(kotlin.reflect.jvm.internal.impl.protobuf.FieldSet<kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite.C8440b> r5, MessageType r6, kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r7, kotlin.reflect.jvm.internal.impl.protobuf.CodedOutputStream r8, kotlin.reflect.jvm.internal.impl.protobuf.C8447c r9, int r10) throws java.io.IOException {
+    public static <MessageType extends kotlin.reflect.jvm.internal.impl.protobuf.MessageLite> boolean parseUnknownField(kotlin.reflect.jvm.internal.impl.protobuf.FieldSet<kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite.b> r5, MessageType r6, kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r7, kotlin.reflect.jvm.internal.impl.protobuf.CodedOutputStream r8, kotlin.reflect.jvm.internal.impl.protobuf.c r9, int r10) throws java.io.IOException {
         /*
             Method dump skipped, instructions count: 289
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -395,11 +391,11 @@ public abstract class GeneratedMessageLite extends AbstractMessageLite implement
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
     public static abstract class ExtendableBuilder<MessageType extends ExtendableMessage<MessageType>, BuilderType extends ExtendableBuilder<MessageType, BuilderType>> extends Builder<MessageType, BuilderType> implements ExtendableMessageOrBuilder<MessageType> {
-        private FieldSet<C8440b> extensions = FieldSet.g();
+        private FieldSet<b> extensions = FieldSet.g();
         private boolean extensionsIsMutable;
 
         /* JADX INFO: Access modifiers changed from: private */
-        public FieldSet<C8440b> buildExtensions() {
+        public FieldSet<b> buildExtensions() {
             this.extensions.q();
             this.extensionsIsMutable = false;
             return this.extensions;

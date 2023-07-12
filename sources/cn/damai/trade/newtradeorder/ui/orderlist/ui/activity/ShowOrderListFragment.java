@@ -14,7 +14,6 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager.widget.ViewPager;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.commonbusiness.base.PermissionsHelper;
 import cn.damai.login.LoginManager;
@@ -84,25 +83,24 @@ public class ShowOrderListFragment extends DamaiBaseMvpFragment {
                 ShowOrderListFragment.this.mCurrentPage = i;
                 ShowOrderListFragment.this.tabLayout.selectTitle(i);
                 if (i == 0) {
-                    C0529c.e().x(pp2.u().W(ShowOrderListFragment.this.mUserCode));
+                    cn.damai.common.user.c.e().x(pp2.u().W(ShowOrderListFragment.this.mUserCode));
                 } else if (i == 1) {
-                    C0529c.e().x(pp2.u().X(ShowOrderListFragment.this.mUserCode));
+                    cn.damai.common.user.c.e().x(pp2.u().X(ShowOrderListFragment.this.mUserCode));
                 } else if (i != 2) {
                 } else {
-                    C0529c.e().x(pp2.u().Y(ShowOrderListFragment.this.mUserCode));
+                    cn.damai.common.user.c.e().x(pp2.u().Y(ShowOrderListFragment.this.mUserCode));
                 }
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderlist.ui.activity.ShowOrderListFragment$a */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC2236a implements DialogInterface.OnClickListener {
+    public class a implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
 
-        DialogInterface$OnClickListenerC2236a(Activity activity) {
+        a(Activity activity) {
             this.a = activity;
         }
 
@@ -113,7 +111,7 @@ public class ShowOrderListFragment extends DamaiBaseMvpFragment {
                 ipChange.ipc$dispatch("1848143821", new Object[]{this, dialogInterface, Integer.valueOf(i)});
                 return;
             }
-            C0529c.e().A(pp2.u().i("paysucc", "1"), "selectsuggestmessage", "message");
+            cn.damai.common.user.c.e().A(pp2.u().i("paysucc", "1"), "selectsuggestmessage", "message");
             Intent intent = new Intent("android.settings.APPLICATION_DETAILS_SETTINGS");
             intent.setData(Uri.parse("package:" + this.a.getPackageName()));
             ShowOrderListFragment.this.startActivity(intent);
@@ -121,12 +119,11 @@ public class ShowOrderListFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderlist.ui.activity.ShowOrderListFragment$b */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC2237b implements DialogInterface.OnClickListener {
+    public class b implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC2237b(ShowOrderListFragment showOrderListFragment) {
+        b(ShowOrderListFragment showOrderListFragment) {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -135,18 +132,17 @@ public class ShowOrderListFragment extends DamaiBaseMvpFragment {
             if (AndroidInstantRuntime.support(ipChange, "-1477242452")) {
                 ipChange.ipc$dispatch("-1477242452", new Object[]{this, dialogInterface, Integer.valueOf(i)});
             } else {
-                C0529c.e().A(pp2.u().i("paysucc", "0"), "selectsuggestmessage", "message");
+                cn.damai.common.user.c.e().A(pp2.u().i("paysucc", "0"), "selectsuggestmessage", "message");
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderlist.ui.activity.ShowOrderListFragment$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2238c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2238c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -200,7 +196,7 @@ public class ShowOrderListFragment extends DamaiBaseMvpFragment {
                 return;
             }
             z20.T(DamaiPayConstants.PAY_SUCCESS_PUSH_OPEN_STAYUS, DamaiPayConstants.PAY_SUCCESS_PUSH_OPEN_STAYUS_SHOW);
-            PermissionsHelper.b(activity, getResources().getString(R$string.trade_orderlist_pay_success_push), "去设置", new DialogInterface$OnClickListenerC2236a(activity), "不再提示", new DialogInterface$OnClickListenerC2237b(this));
+            PermissionsHelper.b(activity, getResources().getString(R$string.trade_orderlist_pay_success_push), "去设置", new a(activity), "不再提示", new b(this));
         }
     }
 

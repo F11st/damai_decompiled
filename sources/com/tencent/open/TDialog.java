@@ -22,14 +22,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.tencent.connect.auth.QQToken;
 import com.tencent.connect.common.Constants;
-import com.tencent.open.C7077b;
-import com.tencent.open.b.C7087h;
-import com.tencent.open.c.C7091b;
-import com.tencent.open.c.C7092c;
+import com.tencent.open.b;
+import com.tencent.open.b.h;
 import com.tencent.open.log.SLog;
-import com.tencent.open.utils.C7122j;
-import com.tencent.open.utils.C7126m;
-import com.tencent.open.web.C7129a;
+import com.tencent.open.utils.j;
+import com.tencent.open.utils.m;
 import com.tencent.tauth.DefaultUiListener;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.UiError;
@@ -39,7 +36,7 @@ import org.json.JSONObject;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class TDialog extends AbstractDialogC7088c {
+public class TDialog extends c {
     static final FrameLayout.LayoutParams c = new FrameLayout.LayoutParams(-1, -1);
     static Toast d = null;
     private static WeakReference<ProgressDialog> f;
@@ -48,7 +45,7 @@ public class TDialog extends AbstractDialogC7088c {
     private OnTimeListener h;
     private IUiListener i;
     private FrameLayout j;
-    private C7091b k;
+    private com.tencent.open.c.b k;
     private Handler l;
     private boolean m;
     private QQToken n;
@@ -86,8 +83,8 @@ public class TDialog extends AbstractDialogC7088c {
         public boolean shouldOverrideUrlLoading(WebView webView, String str) {
             Uri parse;
             SLog.v("openSDK_LOG.TDialog", "Redirect URL: " + str);
-            if (str.startsWith(C7122j.a().a((Context) TDialog.this.e.get(), "auth://tauth.qq.com/"))) {
-                TDialog.this.h.onComplete(C7126m.c(str));
+            if (str.startsWith(j.a().a((Context) TDialog.this.e.get(), "auth://tauth.qq.com/"))) {
+                TDialog.this.h.onComplete(m.c(str));
                 if (TDialog.this.isShowing()) {
                     TDialog.this.dismiss();
                 }
@@ -128,7 +125,7 @@ public class TDialog extends AbstractDialogC7088c {
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
     /* loaded from: classes11.dex */
-    public class JsListener extends C7077b.C7079b {
+    public class JsListener extends b.C0344b {
         private JsListener() {
         }
 
@@ -205,7 +202,7 @@ public class TDialog extends AbstractDialogC7088c {
         @Override // com.tencent.tauth.DefaultUiListener, com.tencent.tauth.IUiListener
         public void onComplete(Object obj) {
             JSONObject jSONObject = (JSONObject) obj;
-            C7087h a = C7087h.a();
+            h a = h.a();
             a.a(this.d + "_H5", SystemClock.elapsedRealtime(), 0L, 0L, jSONObject.optInt("ret", -6), this.a, false);
             IUiListener iUiListener = this.e;
             if (iUiListener != null) {
@@ -222,7 +219,7 @@ public class TDialog extends AbstractDialogC7088c {
             } else {
                 str = this.a;
             }
-            C7087h a = C7087h.a();
+            h a = h.a();
             a.a(this.d + "_H5", SystemClock.elapsedRealtime(), 0L, 0L, uiError.errorCode, str, false);
             IUiListener iUiListener = this.e;
             if (iUiListener != null) {
@@ -234,7 +231,7 @@ public class TDialog extends AbstractDialogC7088c {
         /* JADX INFO: Access modifiers changed from: private */
         public void a(String str) {
             try {
-                onComplete(C7126m.d(str));
+                onComplete(m.d(str));
             } catch (JSONException e) {
                 e.printStackTrace();
                 onError(new UiError(-4, Constants.MSG_JSON_ERROR, str));
@@ -294,11 +291,11 @@ public class TDialog extends AbstractDialogC7088c {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.tencent.open.AbstractDialogC7088c, android.app.Dialog
+    @Override // com.tencent.open.c, android.app.Dialog
     public void onCreate(Bundle bundle) {
         requestWindowFeature(1);
         super.onCreate(bundle);
-        C7067a.a(getWindow());
+        a.a(getWindow());
         a();
         new Handler(Looper.getMainLooper()).post(new Runnable() { // from class: com.tencent.open.TDialog.1
             @Override // java.lang.Runnable
@@ -318,7 +315,7 @@ public class TDialog extends AbstractDialogC7088c {
     /* JADX INFO: Access modifiers changed from: private */
     public static void c(Context context, String str) {
         try {
-            JSONObject d2 = C7126m.d(str);
+            JSONObject d2 = m.d(str);
             int i = d2.getInt("type");
             String string = d2.getString("msg");
             if (i == 0) {
@@ -353,7 +350,7 @@ public class TDialog extends AbstractDialogC7088c {
             return;
         }
         try {
-            JSONObject d2 = C7126m.d(str);
+            JSONObject d2 = m.d(str);
             int i = d2.getInt("action");
             String string = d2.getString("msg");
             if (i == 1) {
@@ -386,13 +383,13 @@ public class TDialog extends AbstractDialogC7088c {
     private void a() {
         new TextView(this.e.get()).setText("test");
         FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(-1, -1);
-        C7091b c7091b = new C7091b(this.e.get());
-        this.k = c7091b;
-        c7091b.setLayoutParams(layoutParams);
+        com.tencent.open.c.b bVar = new com.tencent.open.c.b(this.e.get());
+        this.k = bVar;
+        bVar.setLayoutParams(layoutParams);
         layoutParams.gravity = 17;
-        C7092c c7092c = new C7092c(this.e.get());
-        this.j = c7092c;
-        c7092c.setLayoutParams(layoutParams);
+        com.tencent.open.c.c cVar = new com.tencent.open.c.c(this.e.get());
+        this.j = cVar;
+        cVar.setLayoutParams(layoutParams);
         this.j.setBackgroundColor(-1);
         this.j.addView(this.k);
         setContentView(this.j);
@@ -409,7 +406,7 @@ public class TDialog extends AbstractDialogC7088c {
         if (settings == null) {
             return;
         }
-        C7129a.a(this.k);
+        com.tencent.open.web.a.a(this.k);
         settings.setSaveFormData(false);
         settings.setCacheMode(-1);
         settings.setNeedInitialFocus(false);
@@ -428,7 +425,7 @@ public class TDialog extends AbstractDialogC7088c {
         this.k.setVisibility(4);
     }
 
-    @Override // com.tencent.open.AbstractDialogC7088c
+    @Override // com.tencent.open.c
     protected void a(String str) {
         SLog.d("openSDK_LOG.TDialog", "--onConsoleMessage--");
         try {

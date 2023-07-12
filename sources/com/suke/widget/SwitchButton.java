@@ -26,13 +26,13 @@ public class SwitchButton extends View implements Checkable {
     private final int ANIMATE_STATE_PENDING_RESET;
     private final int ANIMATE_STATE_PENDING_SETTLE;
     private final int ANIMATE_STATE_SWITCH;
-    private C6244c afterState;
+    private c afterState;
     private int animateState;
     private Animator.AnimatorListener animatorListener;
     private ValueAnimator.AnimatorUpdateListener animatorUpdateListener;
     private final ArgbEvaluator argbEvaluator;
     private int background;
-    private C6244c beforeState;
+    private c beforeState;
     private int borderWidth;
     private float bottom;
     private float buttonMaxX;
@@ -73,7 +73,7 @@ public class SwitchButton extends View implements Checkable {
     private int uncheckColor;
     private ValueAnimator valueAnimator;
     private float viewRadius;
-    private C6244c viewState;
+    private c viewState;
     private float width;
     private static final int DEFAULT_WIDTH = dp2pxInt(58.0f);
     private static final int DEFAULT_HEIGHT = dp2pxInt(36.0f);
@@ -85,10 +85,9 @@ public class SwitchButton extends View implements Checkable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.suke.widget.SwitchButton$a */
     /* loaded from: classes7.dex */
-    class C6242a implements ValueAnimator.AnimatorUpdateListener {
-        C6242a() {
+    class a implements ValueAnimator.AnimatorUpdateListener {
+        a() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -114,10 +113,9 @@ public class SwitchButton extends View implements Checkable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.suke.widget.SwitchButton$b */
     /* loaded from: classes7.dex */
-    class C6243b implements Animator.AnimatorListener {
-        C6243b() {
+    class b implements Animator.AnimatorListener {
+        b() {
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -160,23 +158,22 @@ public class SwitchButton extends View implements Checkable {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.suke.widget.SwitchButton$c */
     /* loaded from: classes7.dex */
-    public static class C6244c {
+    public static class c {
         float a;
         int b;
         int c;
         float d;
 
-        C6244c() {
+        c() {
         }
 
         /* JADX INFO: Access modifiers changed from: private */
-        public void b(C6244c c6244c) {
-            this.a = c6244c.a;
-            this.b = c6244c.b;
-            this.c = c6244c.c;
-            this.d = c6244c.d;
+        public void b(c cVar) {
+            this.a = cVar.a;
+            this.b = cVar.b;
+            this.c = cVar.c;
+            this.d = cVar.d;
         }
     }
 
@@ -203,8 +200,8 @@ public class SwitchButton extends View implements Checkable {
                 SwitchButton.this.pendingDragState();
             }
         };
-        this.animatorUpdateListener = new C6242a();
-        this.animatorListener = new C6243b();
+        this.animatorUpdateListener = new a();
+        this.animatorListener = new b();
         init(context, null);
     }
 
@@ -290,9 +287,9 @@ public class SwitchButton extends View implements Checkable {
         if (this.shadowEffect) {
             this.buttonPaint.setShadowLayer(this.shadowRadius, 0.0f, this.shadowOffset, this.shadowColor);
         }
-        this.viewState = new C6244c();
-        this.beforeState = new C6244c();
-        this.afterState = new C6244c();
+        this.viewState = new c();
+        this.beforeState = new c();
+        this.afterState = new c();
         ValueAnimator ofFloat = ValueAnimator.ofFloat(0.0f, 1.0f);
         this.valueAnimator = ofFloat;
         ofFloat.setDuration(optInt);
@@ -362,16 +359,16 @@ public class SwitchButton extends View implements Checkable {
             this.beforeState.b(this.viewState);
             this.afterState.b(this.viewState);
             if (isChecked()) {
-                C6244c c6244c = this.afterState;
+                c cVar = this.afterState;
                 int i = this.checkedColor;
-                c6244c.b = i;
-                c6244c.a = this.buttonMaxX;
-                c6244c.c = i;
+                cVar.b = i;
+                cVar.a = this.buttonMaxX;
+                cVar.c = i;
             } else {
-                C6244c c6244c2 = this.afterState;
-                c6244c2.b = this.uncheckColor;
-                c6244c2.a = this.buttonMinX;
-                c6244c2.d = this.viewRadius;
+                c cVar2 = this.afterState;
+                cVar2.b = this.uncheckColor;
+                cVar2.a = this.buttonMinX;
+                cVar2.d = this.viewRadius;
             }
             this.valueAnimator.start();
         }
@@ -391,18 +388,18 @@ public class SwitchButton extends View implements Checkable {
         this.valueAnimator.start();
     }
 
-    private void setCheckedViewState(C6244c c6244c) {
-        c6244c.d = this.viewRadius;
-        c6244c.b = this.checkedColor;
-        c6244c.c = this.checkLineColor;
-        c6244c.a = this.buttonMaxX;
+    private void setCheckedViewState(c cVar) {
+        cVar.d = this.viewRadius;
+        cVar.b = this.checkedColor;
+        cVar.c = this.checkLineColor;
+        cVar.a = this.buttonMaxX;
     }
 
-    private void setUncheckViewState(C6244c c6244c) {
-        c6244c.d = 0.0f;
-        c6244c.b = this.uncheckColor;
-        c6244c.c = 0;
-        c6244c.a = this.buttonMinX;
+    private void setUncheckViewState(c cVar) {
+        cVar.d = 0.0f;
+        cVar.b = this.uncheckColor;
+        cVar.c = 0;
+        cVar.a = this.buttonMinX;
     }
 
     protected void drawCheckedIndicator(Canvas canvas) {
@@ -526,15 +523,15 @@ public class SwitchButton extends View implements Checkable {
                 float x = motionEvent.getX();
                 if (isPendingDragState()) {
                     float max = Math.max(0.0f, Math.min(1.0f, x / getWidth()));
-                    C6244c c6244c = this.viewState;
+                    c cVar = this.viewState;
                     float f = this.buttonMinX;
-                    c6244c.a = f + ((this.buttonMaxX - f) * max);
+                    cVar.a = f + ((this.buttonMaxX - f) * max);
                 } else if (isDragState()) {
                     float max2 = Math.max(0.0f, Math.min(1.0f, x / getWidth()));
-                    C6244c c6244c2 = this.viewState;
+                    c cVar2 = this.viewState;
                     float f2 = this.buttonMinX;
-                    c6244c2.a = f2 + ((this.buttonMaxX - f2) * max2);
-                    c6244c2.b = ((Integer) this.argbEvaluator.evaluate(max2, Integer.valueOf(this.uncheckColor), Integer.valueOf(this.checkedColor))).intValue();
+                    cVar2.a = f2 + ((this.buttonMaxX - f2) * max2);
+                    cVar2.b = ((Integer) this.argbEvaluator.evaluate(max2, Integer.valueOf(this.uncheckColor), Integer.valueOf(this.checkedColor))).intValue();
                     postInvalidate();
                 }
             } else if (actionMasked == 3) {
@@ -683,8 +680,8 @@ public class SwitchButton extends View implements Checkable {
                 SwitchButton.this.pendingDragState();
             }
         };
-        this.animatorUpdateListener = new C6242a();
-        this.animatorListener = new C6243b();
+        this.animatorUpdateListener = new a();
+        this.animatorListener = new b();
         init(context, attributeSet);
     }
 
@@ -711,8 +708,8 @@ public class SwitchButton extends View implements Checkable {
                 SwitchButton.this.pendingDragState();
             }
         };
-        this.animatorUpdateListener = new C6242a();
-        this.animatorListener = new C6243b();
+        this.animatorUpdateListener = new a();
+        this.animatorListener = new b();
         init(context, attributeSet);
     }
 
@@ -740,8 +737,8 @@ public class SwitchButton extends View implements Checkable {
                 SwitchButton.this.pendingDragState();
             }
         };
-        this.animatorUpdateListener = new C6242a();
-        this.animatorListener = new C6243b();
+        this.animatorUpdateListener = new a();
+        this.animatorListener = new b();
         init(context, attributeSet);
     }
 }

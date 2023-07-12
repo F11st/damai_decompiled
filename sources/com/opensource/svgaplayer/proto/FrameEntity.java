@@ -13,8 +13,8 @@ import okio.ByteString;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public final class FrameEntity extends Message<FrameEntity, C6112a> {
-    public static final ProtoAdapter<FrameEntity> ADAPTER = new C6113b();
+public final class FrameEntity extends Message<FrameEntity, a> {
+    public static final ProtoAdapter<FrameEntity> ADAPTER = new b();
     public static final Float DEFAULT_ALPHA = Float.valueOf(0.0f);
     public static final String DEFAULT_CLIPPATH = "";
     private static final long serialVersionUID = 0;
@@ -30,16 +30,15 @@ public final class FrameEntity extends Message<FrameEntity, C6112a> {
     public final Transform transform;
 
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.proto.FrameEntity$a */
     /* loaded from: classes10.dex */
-    public static final class C6112a extends Message.Builder<FrameEntity, C6112a> {
+    public static final class a extends Message.Builder<FrameEntity, a> {
         public Float a;
         public Layout b;
         public Transform c;
         public String d;
         public List<ShapeEntity> e = Internal.newMutableList();
 
-        public C6112a a(Float f) {
+        public a a(Float f) {
             this.a = f;
             return this;
         }
@@ -50,53 +49,52 @@ public final class FrameEntity extends Message<FrameEntity, C6112a> {
             return new FrameEntity(this.a, this.b, this.c, this.d, this.e, super.buildUnknownFields());
         }
 
-        public C6112a c(String str) {
+        public a c(String str) {
             this.d = str;
             return this;
         }
 
-        public C6112a d(Layout layout) {
+        public a d(Layout layout) {
             this.b = layout;
             return this;
         }
 
-        public C6112a e(Transform transform) {
+        public a e(Transform transform) {
             this.c = transform;
             return this;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.proto.FrameEntity$b */
     /* loaded from: classes10.dex */
-    private static final class C6113b extends ProtoAdapter<FrameEntity> {
-        C6113b() {
+    private static final class b extends ProtoAdapter<FrameEntity> {
+        b() {
             super(FieldEncoding.LENGTH_DELIMITED, FrameEntity.class);
         }
 
         @Override // com.youku.squareup.wire.ProtoAdapter
         /* renamed from: a */
         public FrameEntity decode(ProtoReader protoReader) throws IOException {
-            C6112a c6112a = new C6112a();
+            a aVar = new a();
             long beginMessage = protoReader.beginMessage();
             while (true) {
                 int nextTag = protoReader.nextTag();
                 if (nextTag == -1) {
                     protoReader.endMessage(beginMessage);
-                    return c6112a.build();
+                    return aVar.build();
                 } else if (nextTag == 1) {
-                    c6112a.a(ProtoAdapter.FLOAT.decode(protoReader));
+                    aVar.a(ProtoAdapter.FLOAT.decode(protoReader));
                 } else if (nextTag == 2) {
-                    c6112a.d(Layout.ADAPTER.decode(protoReader));
+                    aVar.d(Layout.ADAPTER.decode(protoReader));
                 } else if (nextTag == 3) {
-                    c6112a.e(Transform.ADAPTER.decode(protoReader));
+                    aVar.e(Transform.ADAPTER.decode(protoReader));
                 } else if (nextTag == 4) {
-                    c6112a.c(ProtoAdapter.STRING.decode(protoReader));
+                    aVar.c(ProtoAdapter.STRING.decode(protoReader));
                 } else if (nextTag != 5) {
                     FieldEncoding peekFieldEncoding = protoReader.peekFieldEncoding();
-                    c6112a.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
+                    aVar.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
                 } else {
-                    c6112a.e.add(ShapeEntity.ADAPTER.decode(protoReader));
+                    aVar.e.add(ShapeEntity.ADAPTER.decode(protoReader));
                 }
             }
         }
@@ -228,14 +226,14 @@ public final class FrameEntity extends Message<FrameEntity, C6112a> {
 
     @Override // com.youku.squareup.wire.Message
     /* renamed from: newBuilder */
-    public Message.Builder<FrameEntity, C6112a> newBuilder2() {
-        C6112a c6112a = new C6112a();
-        c6112a.a = this.alpha;
-        c6112a.b = this.layout;
-        c6112a.c = this.transform;
-        c6112a.d = this.clipPath;
-        c6112a.e = Internal.copyOf("shapes", this.shapes);
-        c6112a.addUnknownFields(unknownFields());
-        return c6112a;
+    public Message.Builder<FrameEntity, a> newBuilder2() {
+        a aVar = new a();
+        aVar.a = this.alpha;
+        aVar.b = this.layout;
+        aVar.c = this.transform;
+        aVar.d = this.clipPath;
+        aVar.e = Internal.copyOf("shapes", this.shapes);
+        aVar.addUnknownFields(unknownFields());
+        return aVar;
     }
 }

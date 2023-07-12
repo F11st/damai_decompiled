@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes3.dex */
 public final class hs2 implements Comparable<hs2> {
     @NotNull
-    public static final C9233a Companion = new C9233a(null);
+    public static final a Companion = new a(null);
     public static final short MAX_VALUE = -1;
     public static final short MIN_VALUE = 0;
     public static final int SIZE_BITS = 16;
@@ -22,13 +22,12 @@ public final class hs2 implements Comparable<hs2> {
     private final short a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hs2$a */
     /* loaded from: classes3.dex */
-    public static final class C9233a {
-        private C9233a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9233a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

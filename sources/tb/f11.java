@@ -16,7 +16,7 @@ import org.jetbrains.annotations.Nullable;
 public final class f11 extends ReplacementSpan {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C9124a Companion = new C9124a(null);
+    public static final a Companion = new a(null);
     private static final float c = 0.71428573f;
     private static final int d = ((Integer) Float.valueOf(a01.Companion.a())).intValue() / 5;
     @NotNull
@@ -25,13 +25,12 @@ public final class f11 extends ReplacementSpan {
     private WeakReference<Drawable> b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.f11$a */
     /* loaded from: classes7.dex */
-    public static final class C9124a {
-        private C9124a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9124a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -75,17 +74,17 @@ public final class f11 extends ReplacementSpan {
         b41.i(canvas, "canvas");
         b41.i(charSequence, "text");
         b41.i(paint, "paint");
-        Drawable a = a();
+        Drawable a2 = a();
         canvas.save();
         if (b()) {
-            b41.f(a);
-            i6 = (i5 - a.getBounds().bottom) - paint.getFontMetricsInt().descent;
+            b41.f(a2);
+            i6 = (i5 - a2.getBounds().bottom) - paint.getFontMetricsInt().descent;
         } else {
             i6 = i3 + d;
         }
         canvas.translate(f, i6);
-        b41.f(a);
-        a.draw(canvas);
+        b41.f(a2);
+        a2.draw(canvas);
         canvas.restore();
     }
 
@@ -96,9 +95,9 @@ public final class f11 extends ReplacementSpan {
             return ((Integer) ipChange.ipc$dispatch("1896007828", new Object[]{this, paint, charSequence, Integer.valueOf(i), Integer.valueOf(i2), fontMetricsInt})).intValue();
         }
         b41.i(paint, "paint");
-        Drawable a = a();
-        b41.f(a);
-        Rect bounds = a.getBounds();
+        Drawable a2 = a();
+        b41.f(a2);
+        Rect bounds = a2.getBounds();
         b41.h(bounds, "d!!.bounds");
         if (fontMetricsInt != null) {
             if (b()) {

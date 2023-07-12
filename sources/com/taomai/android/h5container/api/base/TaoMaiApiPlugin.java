@@ -4,9 +4,9 @@ import android.taobao.windvane.jsbridge.WVApiPlugin;
 import android.taobao.windvane.webview.IWVWebView;
 import androidx.fragment.app.Fragment;
 import com.youku.arch.v3.event.Subject;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -21,7 +21,7 @@ public abstract class TaoMaiApiPlugin extends WVApiPlugin {
 
     public TaoMaiApiPlugin() {
         Lazy b;
-        b = C8177b.b(new Function0<Fragment>() { // from class: com.taomai.android.h5container.api.base.TaoMaiApiPlugin$fragment$2
+        b = b.b(new Function0<Fragment>() { // from class: com.taomai.android.h5container.api.base.TaoMaiApiPlugin$fragment$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);

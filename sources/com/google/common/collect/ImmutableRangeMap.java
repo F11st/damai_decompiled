@@ -37,13 +37,13 @@ public class ImmutableRangeMap<K extends Comparable<?>, V> implements RangeMap<K
         }
 
         Object createRangeMap() {
-            C4985a c4985a = new C4985a();
+            a aVar = new a();
             yt2<Map.Entry<Range<K>, V>> it = this.mapOfRanges.entrySet().iterator();
             while (it.hasNext()) {
                 Map.Entry<Range<K>, V> next = it.next();
-                c4985a.b(next.getKey(), next.getValue());
+                aVar.b(next.getKey(), next.getValue());
             }
-            return c4985a.a();
+            return aVar.a();
         }
 
         Object readResolve() {
@@ -55,15 +55,14 @@ public class ImmutableRangeMap<K extends Comparable<?>, V> implements RangeMap<K
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableRangeMap$a */
     /* loaded from: classes10.dex */
-    public static final class C4985a<K extends Comparable<?>, V> {
+    public static final class a<K extends Comparable<?>, V> {
         private final List<Map.Entry<Range<K>, V>> a = Lists.i();
 
         public ImmutableRangeMap<K, V> a() {
             Collections.sort(this.a, Range.rangeLexOrdering().onKeys());
-            ImmutableList.C4971a c4971a = new ImmutableList.C4971a(this.a.size());
-            ImmutableList.C4971a c4971a2 = new ImmutableList.C4971a(this.a.size());
+            ImmutableList.a aVar = new ImmutableList.a(this.a.size());
+            ImmutableList.a aVar2 = new ImmutableList.a(this.a.size());
             for (int i = 0; i < this.a.size(); i++) {
                 Range<K> key = this.a.get(i).getKey();
                 if (i > 0) {
@@ -72,14 +71,14 @@ public class ImmutableRangeMap<K extends Comparable<?>, V> implements RangeMap<K
                         throw new IllegalArgumentException("Overlapping ranges: range " + key2 + " overlaps with entry " + key);
                     }
                 }
-                c4971a.a(key);
-                c4971a2.a(this.a.get(i).getValue());
+                aVar.a(key);
+                aVar2.a(this.a.get(i).getValue());
             }
-            return new ImmutableRangeMap<>(c4971a.j(), c4971a2.j());
+            return new ImmutableRangeMap<>(aVar.j(), aVar2.j());
         }
 
         @CanIgnoreReturnValue
-        public C4985a<K, V> b(Range<K> range, V v) {
+        public a<K, V> b(Range<K> range, V v) {
             du1.p(range);
             du1.p(v);
             du1.k(!range.isEmpty(), "Range must not be empty, but was %s", range);
@@ -93,8 +92,8 @@ public class ImmutableRangeMap<K extends Comparable<?>, V> implements RangeMap<K
         this.values = immutableList2;
     }
 
-    public static <K extends Comparable<?>, V> C4985a<K, V> builder() {
-        return new C4985a<>();
+    public static <K extends Comparable<?>, V> a<K, V> builder() {
+        return new a<>();
     }
 
     public static <K extends Comparable<?>, V> ImmutableRangeMap<K, V> copyOf(RangeMap<K, ? extends V> rangeMap) {
@@ -102,13 +101,13 @@ public class ImmutableRangeMap<K extends Comparable<?>, V> implements RangeMap<K
             return (ImmutableRangeMap) rangeMap;
         }
         Map<Range<K>, ? extends V> asMapOfRanges = rangeMap.asMapOfRanges();
-        ImmutableList.C4971a c4971a = new ImmutableList.C4971a(asMapOfRanges.size());
-        ImmutableList.C4971a c4971a2 = new ImmutableList.C4971a(asMapOfRanges.size());
+        ImmutableList.a aVar = new ImmutableList.a(asMapOfRanges.size());
+        ImmutableList.a aVar2 = new ImmutableList.a(asMapOfRanges.size());
         for (Map.Entry<Range<K>, ? extends V> entry : asMapOfRanges.entrySet()) {
-            c4971a.a(entry.getKey());
-            c4971a2.a(entry.getValue());
+            aVar.a(entry.getKey());
+            aVar2.a(entry.getValue());
         }
-        return new ImmutableRangeMap<>(c4971a.j(), c4971a2.j());
+        return new ImmutableRangeMap<>(aVar.j(), aVar2.j());
     }
 
     public static <K extends Comparable<?>, V> ImmutableRangeMap<K, V> of() {
@@ -132,9 +131,9 @@ public class ImmutableRangeMap<K extends Comparable<?>, V> implements RangeMap<K
     @Override // com.google.common.collect.RangeMap
     @NullableDecl
     public V get(K k) {
-        int a = SortedLists.a(this.ranges, Range.lowerBoundFn(), Cut.belowValue(k), SortedLists.KeyPresentBehavior.ANY_PRESENT, SortedLists.KeyAbsentBehavior.NEXT_LOWER);
-        if (a != -1 && this.ranges.get(a).contains(k)) {
-            return this.values.get(a);
+        int a2 = SortedLists.a(this.ranges, Range.lowerBoundFn(), Cut.belowValue(k), SortedLists.KeyPresentBehavior.ANY_PRESENT, SortedLists.KeyAbsentBehavior.NEXT_LOWER);
+        if (a2 != -1 && this.ranges.get(a2).contains(k)) {
+            return this.values.get(a2);
         }
         return null;
     }
@@ -142,13 +141,13 @@ public class ImmutableRangeMap<K extends Comparable<?>, V> implements RangeMap<K
     @Override // com.google.common.collect.RangeMap
     @NullableDecl
     public Map.Entry<Range<K>, V> getEntry(K k) {
-        int a = SortedLists.a(this.ranges, Range.lowerBoundFn(), Cut.belowValue(k), SortedLists.KeyPresentBehavior.ANY_PRESENT, SortedLists.KeyAbsentBehavior.NEXT_LOWER);
-        if (a == -1) {
+        int a2 = SortedLists.a(this.ranges, Range.lowerBoundFn(), Cut.belowValue(k), SortedLists.KeyPresentBehavior.ANY_PRESENT, SortedLists.KeyAbsentBehavior.NEXT_LOWER);
+        if (a2 == -1) {
             return null;
         }
-        Range<K> range = this.ranges.get(a);
+        Range<K> range = this.ranges.get(a2);
         if (range.contains(k)) {
-            return Maps.j(range, this.values.get(a));
+            return Maps.j(range, this.values.get(a2));
         }
         return null;
     }
@@ -233,12 +232,12 @@ public class ImmutableRangeMap<K extends Comparable<?>, V> implements RangeMap<K
         Cut<K> cut = range.lowerBound;
         SortedLists.KeyPresentBehavior keyPresentBehavior = SortedLists.KeyPresentBehavior.FIRST_AFTER;
         SortedLists.KeyAbsentBehavior keyAbsentBehavior = SortedLists.KeyAbsentBehavior.NEXT_HIGHER;
-        final int a = SortedLists.a(immutableList, upperBoundFn, cut, keyPresentBehavior, keyAbsentBehavior);
-        int a2 = SortedLists.a(this.ranges, Range.lowerBoundFn(), range.upperBound, SortedLists.KeyPresentBehavior.ANY_PRESENT, keyAbsentBehavior);
-        if (a >= a2) {
+        final int a2 = SortedLists.a(immutableList, upperBoundFn, cut, keyPresentBehavior, keyAbsentBehavior);
+        int a3 = SortedLists.a(this.ranges, Range.lowerBoundFn(), range.upperBound, SortedLists.KeyPresentBehavior.ANY_PRESENT, keyAbsentBehavior);
+        if (a2 >= a3) {
             return of();
         }
-        final int i = a2 - a;
+        final int i = a3 - a2;
         return (ImmutableRangeMap<K, V>) new ImmutableRangeMap<K, V>(new ImmutableList<Range<K>>() { // from class: com.google.common.collect.ImmutableRangeMap.1
             /* JADX INFO: Access modifiers changed from: package-private */
             @Override // com.google.common.collect.ImmutableCollection
@@ -254,9 +253,9 @@ public class ImmutableRangeMap<K extends Comparable<?>, V> implements RangeMap<K
             @Override // java.util.List
             public Range<K> get(int i2) {
                 du1.n(i2, i);
-                return (i2 == 0 || i2 == i + (-1)) ? ((Range) ImmutableRangeMap.this.ranges.get(i2 + a)).intersection(range) : (Range) ImmutableRangeMap.this.ranges.get(i2 + a);
+                return (i2 == 0 || i2 == i + (-1)) ? ((Range) ImmutableRangeMap.this.ranges.get(i2 + a2)).intersection(range) : (Range) ImmutableRangeMap.this.ranges.get(i2 + a2);
             }
-        }, this.values.subList(a, a2)) { // from class: com.google.common.collect.ImmutableRangeMap.2
+        }, this.values.subList(a2, a3)) { // from class: com.google.common.collect.ImmutableRangeMap.2
             @Override // com.google.common.collect.ImmutableRangeMap, com.google.common.collect.RangeMap
             public /* bridge */ /* synthetic */ Map asDescendingMapOfRanges() {
                 return super.asDescendingMapOfRanges();

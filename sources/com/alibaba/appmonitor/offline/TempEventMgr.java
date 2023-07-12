@@ -62,9 +62,8 @@ public class TempEventMgr implements SystemConfigMgr.IKVChangeListener, CrashLis
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.appmonitor.offline.TempEventMgr$a */
     /* loaded from: classes15.dex */
-    public static /* synthetic */ class C3315a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -188,7 +187,7 @@ public class TempEventMgr implements SystemConfigMgr.IKVChangeListener, CrashLis
                 }
                 int i4 = 0;
                 while (i4 < s.size()) {
-                    int i5 = C3315a.a[eventType.ordinal()];
+                    int i5 = a.a[eventType.ordinal()];
                     if (i5 == i) {
                         nl2 nl2Var = (nl2) s.get(i4);
                         if (nl2Var.a()) {

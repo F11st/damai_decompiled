@@ -35,7 +35,7 @@ public abstract class fv<T, V> extends fu<T, V> {
         }
     }
 
-    @Override // com.amap.api.mapcore.util.AbstractC4517dp, com.amap.api.mapcore.util.ii
+    @Override // com.amap.api.mapcore.util.dp, com.amap.api.mapcore.util.ii
     public Map<String, String> getParams() {
         return null;
     }

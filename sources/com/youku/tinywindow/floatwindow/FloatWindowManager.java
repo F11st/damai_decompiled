@@ -12,7 +12,7 @@ import com.alibaba.wireless.security.aopsdk.replace.android.view.Display;
 import com.google.android.material.badge.BadgeDrawable;
 import com.youku.tinywindow.R;
 import com.youku.tinywindow.utils.TinyLogger;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -49,15 +49,15 @@ public class FloatWindowManager {
         RelativeLayout relativeLayout = (RelativeLayout) mFloatLayout.findViewById(R.id.btn_mute_layout);
         final ImageButton imageButton = (ImageButton) mFloatLayout.findViewById(R.id.btn_mute);
         if (mIsMute) {
-            imageButton.setBackgroundResource(R.C8080drawable.tiny_btn_volume_close);
+            imageButton.setBackgroundResource(R.drawable.tiny_btn_volume_close);
         } else {
-            imageButton.setBackgroundResource(R.C8080drawable.tiny_btn_volume_open);
+            imageButton.setBackgroundResource(R.drawable.tiny_btn_volume_open);
         }
         relativeLayout.setOnClickListener(new View.OnClickListener() { // from class: com.youku.tinywindow.floatwindow.FloatWindowManager.2
             @Override // android.view.View.OnClickListener
             public void onClick(View view2) {
                 boolean unused = FloatWindowManager.mIsMute = !FloatWindowManager.mIsMute;
-                imageButton.setBackgroundResource(FloatWindowManager.mIsMute ? R.C8080drawable.tiny_btn_volume_close : R.C8080drawable.tiny_btn_volume_open);
+                imageButton.setBackgroundResource(FloatWindowManager.mIsMute ? R.drawable.tiny_btn_volume_close : R.drawable.tiny_btn_volume_open);
                 FloatingWindowClickCallBack floatingWindowClickCallBack2 = floatingWindowClickCallBack;
                 if (floatingWindowClickCallBack2 != null) {
                     floatingWindowClickCallBack2.onMuteBtnClick(FloatWindowManager.mIsMute);
@@ -96,7 +96,7 @@ public class FloatWindowManager {
 
     private static WindowManager getWindowManager(Context context) {
         if (mWindowManager == null) {
-            mWindowManager = (WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+            mWindowManager = (WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW);
         }
         return mWindowManager;
     }
@@ -133,7 +133,7 @@ public class FloatWindowManager {
         mIsMute = z;
         FloatingLayout floatingLayout = mFloatLayout;
         if (floatingLayout != null) {
-            ((ImageButton) floatingLayout.findViewById(R.id.btn_mute)).setBackgroundResource(mIsMute ? R.C8080drawable.tiny_btn_volume_close : R.C8080drawable.tiny_btn_volume_open);
+            ((ImageButton) floatingLayout.findViewById(R.id.btn_mute)).setBackgroundResource(mIsMute ? R.drawable.tiny_btn_volume_close : R.drawable.tiny_btn_volume_open);
         }
     }
 

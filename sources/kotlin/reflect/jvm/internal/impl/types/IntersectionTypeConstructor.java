@@ -6,11 +6,10 @@ import java.util.Collection;
 import java.util.Comparator;
 import java.util.LinkedHashSet;
 import java.util.List;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.m;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
@@ -36,12 +35,11 @@ public final class IntersectionTypeConstructor implements TypeConstructor, Inter
     private final int c;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.types.IntersectionTypeConstructor$a */
     /* loaded from: classes3.dex */
-    public static final class C8537a<T> implements Comparator {
+    public static final class a<T> implements Comparator {
         final /* synthetic */ Function1 a;
 
-        public C8537a(Function1 function1) {
+        public a(Function1 function1) {
             this.a = function1;
         }
 
@@ -92,7 +90,7 @@ public final class IntersectionTypeConstructor implements TypeConstructor, Inter
     public final fd2 b() {
         List g;
         Annotations b = Annotations.Companion.b();
-        g = C8214m.g();
+        g = m.g();
         return KotlinTypeFactory.k(b, this, g, false, a(), new Function1<b81, fd2>() { // from class: kotlin.reflect.jvm.internal.impl.types.IntersectionTypeConstructor$createType$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
@@ -118,7 +116,7 @@ public final class IntersectionTypeConstructor implements TypeConstructor, Inter
         List u0;
         String Z;
         b41.i(function1, "getProperTypeRelatedToStringify");
-        u0 = CollectionsKt___CollectionsKt.u0(this.b, new C8537a(function1));
+        u0 = CollectionsKt___CollectionsKt.u0(this.b, new a(function1));
         Z = CollectionsKt___CollectionsKt.Z(u0, " & ", jn1.BLOCK_START_STR, "}", 0, null, new Function1<z71, CharSequence>() { // from class: kotlin.reflect.jvm.internal.impl.types.IntersectionTypeConstructor$makeDebugNameForIntersectionType$3
             /* JADX INFO: Access modifiers changed from: package-private */
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -155,7 +153,7 @@ public final class IntersectionTypeConstructor implements TypeConstructor, Inter
         int q;
         b41.i(b81Var, "kotlinTypeRefiner");
         Collection<z71> supertypes = getSupertypes();
-        q = C8215n.q(supertypes, 10);
+        q = n.q(supertypes, 10);
         ArrayList arrayList = new ArrayList(q);
         boolean z = false;
         for (z71 z71Var : supertypes) {
@@ -177,8 +175,8 @@ public final class IntersectionTypeConstructor implements TypeConstructor, Inter
 
     @Override // kotlin.reflect.jvm.internal.impl.types.TypeConstructor
     @NotNull
-    public AbstractC8271b getBuiltIns() {
-        AbstractC8271b builtIns = this.b.iterator().next().c().getBuiltIns();
+    public kotlin.reflect.jvm.internal.impl.builtins.b getBuiltIns() {
+        kotlin.reflect.jvm.internal.impl.builtins.b builtIns = this.b.iterator().next().c().getBuiltIns();
         b41.h(builtIns, "intersectedTypes.iterato…xt().constructor.builtIns");
         return builtIns;
     }
@@ -193,7 +191,7 @@ public final class IntersectionTypeConstructor implements TypeConstructor, Inter
     @NotNull
     public List<TypeParameterDescriptor> getParameters() {
         List<TypeParameterDescriptor> g;
-        g = C8214m.g();
+        g = m.g();
         return g;
     }
 

@@ -67,9 +67,8 @@ public class DXJSCacheManager {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.template.DXJSCacheManager$a */
     /* loaded from: classes12.dex */
-    public static class C6391a {
+    public static class a {
         private static final DXJSCacheManager a = new DXJSCacheManager();
     }
 
@@ -81,7 +80,7 @@ public class DXJSCacheManager {
     }
 
     public static DXJSCacheManager c() {
-        return C6391a.a;
+        return a.a;
     }
 
     public byte[] b(String str) {

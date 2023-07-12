@@ -25,7 +25,7 @@ import tb.t10;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class DXTextInputViewWidgetNode extends C6499j {
+public class DXTextInputViewWidgetNode extends j {
     public static final long DXORDERTEXTINPUTVIEWCHEN_CURSORCOLOR = -1990674490194665048L;
     public static final long DXTEXTINPUTVIEW_COUNTNUMCOLOR = 9071837297406208101L;
     public static final long DXTEXTINPUTVIEW_ISSHOWHINTNUM = 2472129721305181261L;
@@ -41,12 +41,11 @@ public class DXTextInputViewWidgetNode extends C6499j {
     private boolean o = false;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXTextInputViewWidgetNode$a */
     /* loaded from: classes12.dex */
-    class View$OnClickListenerC6465a implements View.OnClickListener {
+    class a implements View.OnClickListener {
         final /* synthetic */ EditText a;
 
-        View$OnClickListenerC6465a(EditText editText) {
+        a(EditText editText) {
             this.a = editText;
         }
 
@@ -59,12 +58,11 @@ public class DXTextInputViewWidgetNode extends C6499j {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXTextInputViewWidgetNode$b */
     /* loaded from: classes12.dex */
-    class View$OnTouchListenerC6466b implements View.OnTouchListener {
+    class b implements View.OnTouchListener {
         final /* synthetic */ EditText a;
 
-        View$OnTouchListenerC6466b(DXTextInputViewWidgetNode dXTextInputViewWidgetNode, EditText editText) {
+        b(DXTextInputViewWidgetNode dXTextInputViewWidgetNode, EditText editText) {
             this.a = editText;
         }
 
@@ -79,9 +77,8 @@ public class DXTextInputViewWidgetNode extends C6499j {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXTextInputViewWidgetNode$c */
     /* loaded from: classes11.dex */
-    public static class C6467c implements IDXBuilderWidgetNode {
+    public static class c implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(@Nullable Object obj) {
             return new DXTextInputViewWidgetNode();
@@ -89,14 +86,13 @@ public class DXTextInputViewWidgetNode extends C6499j {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXTextInputViewWidgetNode$d */
     /* loaded from: classes12.dex */
-    public static class C6468d implements TextWatcher {
+    public static class d implements TextWatcher {
         private DXTextInputViewWidgetNode a;
         private View b;
         t10 c = new t10(5288679823228297259L);
 
-        public C6468d(DXTextInputViewWidgetNode dXTextInputViewWidgetNode, View view) {
+        public d(DXTextInputViewWidgetNode dXTextInputViewWidgetNode, View view) {
             this.a = dXTextInputViewWidgetNode;
             this.b = view;
         }
@@ -137,7 +133,7 @@ public class DXTextInputViewWidgetNode extends C6499j {
         inputMethodManager.showSoftInput(editText, 0);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6499j, com.taobao.android.dinamicx.widget.DXWidgetNode, com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.j, com.taobao.android.dinamicx.widget.DXWidgetNode, com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
     public DXWidgetNode build(@Nullable Object obj) {
         return new DXTextInputViewWidgetNode();
     }
@@ -162,7 +158,7 @@ public class DXTextInputViewWidgetNode extends C6499j {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.C6499j, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.j, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onBindEvent(Context context, View view, long j) {
         if (j == 5288679823228297259L) {
             if (view instanceof EditText) {
@@ -170,20 +166,20 @@ public class DXTextInputViewWidgetNode extends C6499j {
                 return;
             }
             int i = a90.TEXT_WATCHER;
-            C6468d c6468d = (C6468d) view.getTag(i);
+            d dVar = (d) view.getTag(i);
             EditText editText = (EditText) view.findViewById(R$id.dx_multi_line_input);
-            if (c6468d != null) {
-                editText.removeTextChangedListener(c6468d);
+            if (dVar != null) {
+                editText.removeTextChangedListener(dVar);
             }
-            C6468d c6468d2 = new C6468d(this, view);
-            editText.setTag(i, c6468d2);
-            editText.addTextChangedListener(c6468d2);
+            d dVar2 = new d(this, view);
+            editText.setTag(i, dVar2);
+            editText.addTextChangedListener(dVar2);
             return;
         }
         super.onBindEvent(context, view, j);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6499j, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.j, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onClone(DXWidgetNode dXWidgetNode, boolean z) {
         super.onClone(dXWidgetNode, z);
         if (dXWidgetNode instanceof DXTextInputViewWidgetNode) {
@@ -198,22 +194,22 @@ public class DXTextInputViewWidgetNode extends C6499j {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.C6499j, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.j, com.taobao.android.dinamicx.widget.DXWidgetNode
     public View onCreateView(Context context) {
         if (!this.k) {
-            View a = e10.a(context, R$layout.multi_line_input_view);
-            ((EditText) a.findViewById(R$id.dx_multi_line_input)).setBackgroundColor(0);
+            View a2 = e10.a(context, R$layout.multi_line_input_view);
+            ((EditText) a2.findViewById(R$id.dx_multi_line_input)).setBackgroundColor(0);
             if (this.o) {
-                ((TextView) a.findViewById(R$id.tv_word_total)).setVisibility(0);
-                ((TextView) a.findViewById(R$id.tv_word_count)).setVisibility(0);
+                ((TextView) a2.findViewById(R$id.tv_word_total)).setVisibility(0);
+                ((TextView) a2.findViewById(R$id.tv_word_count)).setVisibility(0);
             }
-            return a;
+            return a2;
         }
         return super.onCreateView(context);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.C6499j, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.j, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onMeasure(int i, int i2) {
         if (!this.k) {
             setMeasuredDimension(i, this.j);
@@ -223,7 +219,7 @@ public class DXTextInputViewWidgetNode extends C6499j {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.C6499j, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.j, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onRenderView(Context context, final View view) {
         final EditText editText;
         if (view != null) {
@@ -242,7 +238,7 @@ public class DXTextInputViewWidgetNode extends C6499j {
                     if (i2 != 0) {
                         textView.setTextColor(tryFetchDarkModeColor("textColor", 0, i2));
                     }
-                    view.setOnClickListener(new View$OnClickListenerC6465a(editText));
+                    view.setOnClickListener(new a(editText));
                     if (this.o) {
                         view.post(new Runnable() { // from class: com.taobao.android.dinamicx.widget.DXTextInputViewWidgetNode.2
                             @Override // java.lang.Runnable
@@ -266,7 +262,7 @@ public class DXTextInputViewWidgetNode extends C6499j {
                 if (i3 != 0) {
                     d(editText, i3);
                 }
-                editText.setOnTouchListener(new View$OnTouchListenerC6466b(this, editText));
+                editText.setOnTouchListener(new b(this, editText));
                 if (this.f <= 0) {
                     editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(Integer.MAX_VALUE)});
                 } else {
@@ -276,7 +272,7 @@ public class DXTextInputViewWidgetNode extends C6499j {
         }
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6499j, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.j, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetIntAttribute(long j, int i) {
         if (j == DXTEXTINPUTVIEW_MULTILINEMAXHEIGHT) {
             this.j = i;

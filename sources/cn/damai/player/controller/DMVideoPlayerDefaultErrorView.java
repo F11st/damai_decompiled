@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import androidx.fragment.app.FragmentActivity;
-import cn.damai.common.soloader.C0522a;
+import cn.damai.common.soloader.a;
 import cn.damai.common.soloader.reporter.SoLoadMonitor;
 import cn.damai.player.base.IVideoController;
 import cn.damai.player.base.IVideoPlayer;
@@ -44,7 +44,7 @@ public class DMVideoPlayerDefaultErrorView extends FrameLayout implements View.O
             return;
         }
         int a = this.mDataHolder.c().a();
-        if (a != 17 || C0522a.a().b()) {
+        if (a != 17 || a.a().b()) {
             if (a == 8) {
                 this.mPlayer.play();
             } else {

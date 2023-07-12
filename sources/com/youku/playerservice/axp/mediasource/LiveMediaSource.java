@@ -126,15 +126,15 @@ public class LiveMediaSource extends AxpMediaSource {
         if (useRaphaelPlayer() && this.mPlayInfo.getPlayInfoResponse() != null && this.mPlayInfo.getPlayInfoResponse().getLiveInfo() != null && (livePlayControl = this.mPlayInfo.getPlayInfoResponse().getLiveInfo().getLivePlayControl()) != null && (list = livePlayControl.streams) != null && list.size() > 0) {
             for (Stream stream : livePlayControl.streams) {
                 if (livePlayControl.sceneId.equals(stream.sceneId)) {
-                    ArrayList<d01.C9027a> b = d01.b("s-ybd.youku.com", false);
-                    d01.C9027a c9027a = null;
+                    ArrayList<d01.a> b = d01.b("s-ybd.youku.com", false);
+                    d01.a aVar = null;
                     if (b != null && b.size() > 0) {
-                        c9027a = b.get(0);
-                        Logger.d(TAG, "origin ip is " + c9027a.b() + " port is " + c9027a.c());
+                        aVar = b.get(0);
+                        Logger.d(TAG, "origin ip is " + aVar.b() + " port is " + aVar.c());
                     }
                     Logger.d(TAG, "origin is " + b);
-                    buildPlaylistByLiveInfo.addHeader("rh_server_ip", c9027a != null ? c9027a.b() : "");
-                    buildPlaylistByLiveInfo.addHeader("rh_udp_port", c9027a != null ? c9027a.c() + "" : "1940");
+                    buildPlaylistByLiveInfo.addHeader("rh_server_ip", aVar != null ? aVar.b() : "");
+                    buildPlaylistByLiveInfo.addHeader("rh_udp_port", aVar != null ? aVar.c() + "" : "1940");
                     if (stream.sixDofInfo != null && stream.sixDofInfo.sixDof == 1) {
                         TLogUtil.playLog("6dof video, set raphael player header.");
                         str = constructSixdofJsonParam(stream.sixDofInfo.confUrl, stream.sixDofInfo.maxAngle);

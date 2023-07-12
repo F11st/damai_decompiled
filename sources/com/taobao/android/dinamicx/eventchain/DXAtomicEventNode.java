@@ -18,17 +18,17 @@ import com.taobao.android.dinamicx.monitor.DXTraceUtil;
 import com.taobao.weex.bridge.WXBridgeManager;
 import java.util.HashMap;
 import java.util.Map;
-import tb.C9192h;
-import tb.C9327k;
-import tb.C9392l;
-import tb.C9428m;
-import tb.C9586q;
-import tb.C9703t;
+import tb.h;
+import tb.k;
 import tb.ky;
+import tb.l;
+import tb.m;
 import tb.m80;
 import tb.nz;
 import tb.oy;
+import tb.q;
 import tb.s00;
+import tb.t;
 import tb.wt;
 import tb.y00;
 import tb.zz;
@@ -51,10 +51,9 @@ public class DXAtomicEventNode {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.eventchain.DXAtomicEventNode$a */
     /* loaded from: classes11.dex */
-    public class C6370a extends TypeReference<Map<String, String>> {
-        C6370a(DXAtomicEventNode dXAtomicEventNode) {
+    public class a extends TypeReference<Map<String, String>> {
+        a(DXAtomicEventNode dXAtomicEventNode) {
         }
     }
 
@@ -65,29 +64,29 @@ public class DXAtomicEventNode {
         this.b = l;
     }
 
-    private void e(JSONArray jSONArray, C6371a c6371a) {
+    private void e(JSONArray jSONArray, com.taobao.android.dinamicx.eventchain.a aVar) {
         for (int i = 0; i < jSONArray.size(); i++) {
             Object obj = jSONArray.get(i);
             if (obj instanceof JSONObject) {
-                f((JSONObject) obj, c6371a);
+                f((JSONObject) obj, aVar);
             } else if (obj instanceof JSONArray) {
-                e((JSONArray) obj, c6371a);
+                e((JSONArray) obj, aVar);
             } else {
-                jSONArray.set(i, g(obj.toString(), c6371a));
+                jSONArray.set(i, g(obj.toString(), aVar));
             }
         }
     }
 
-    private void f(JSONObject jSONObject, C6371a c6371a) {
+    private void f(JSONObject jSONObject, com.taobao.android.dinamicx.eventchain.a aVar) {
         for (Map.Entry<String, Object> entry : jSONObject.entrySet()) {
             String key = entry.getKey();
             Object value = entry.getValue();
             if (value instanceof JSONObject) {
-                f((JSONObject) value, c6371a);
+                f((JSONObject) value, aVar);
             } else if (value instanceof JSONArray) {
-                e((JSONArray) value, c6371a);
+                e((JSONArray) value, aVar);
             } else {
-                Object g = g(value.toString(), c6371a);
+                Object g = g(value.toString(), aVar);
                 if (g == null) {
                     jSONObject.put(key, "");
                 } else {
@@ -97,8 +96,8 @@ public class DXAtomicEventNode {
         }
     }
 
-    private Object g(String str, C6371a c6371a) {
-        return (str.startsWith(m80.DINAMIC_PREFIX_AT) && str.endsWith("}")) ? c6371a.n().b(str).b(null, c6371a.l()) : str;
+    private Object g(String str, com.taobao.android.dinamicx.eventchain.a aVar) {
+        return (str.startsWith(m80.DINAMIC_PREFIX_AT) && str.endsWith("}")) ? aVar.n().b(str).b(null, aVar.l()) : str;
     }
 
     private void i(JSONObject jSONObject, JSONObject jSONObject2) {
@@ -149,39 +148,39 @@ public class DXAtomicEventNode {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void l(C6371a c6371a) {
+    public void l(com.taobao.android.dinamicx.eventchain.a aVar) {
         nz.g("DXFullTrace", "EventChain finish");
-        if (c6371a != null) {
-            zz.h(c6371a.q());
-            if (c6371a.g() != null) {
-                zz.l(c6371a.g());
+        if (aVar != null) {
+            zz.h(aVar.q());
+            if (aVar.g() != null) {
+                zz.l(aVar.g());
             }
-            if (c6371a.h() != null) {
-                zz.l(c6371a.h());
+            if (aVar.h() != null) {
+                zz.l(aVar.h());
             }
-            c6371a.x(null);
-            c6371a.y(null);
+            aVar.x(null);
+            aVar.y(null);
         }
-        c6371a.c();
+        aVar.c();
     }
 
-    private FalcoAbilitySpan r(C6371a c6371a) {
+    private FalcoAbilitySpan r(com.taobao.android.dinamicx.eventchain.a aVar) {
         FalcoStage g;
         nz.f("DXFullTrace", "Atomic ftData is not null ", this.k);
-        if (c6371a == null || c6371a.l() == null) {
+        if (aVar == null || aVar.l() == null) {
             return null;
         }
         if (this.k.b() == "start") {
-            FalcoBusinessSpan c = zz.c(c6371a.l().getBizType(), this.k.d());
+            FalcoBusinessSpan c = zz.c(aVar.l().getBizType(), this.k.d());
             if (c == null) {
                 return null;
             }
-            c6371a.x(c);
+            aVar.x(c);
             zz.m(c);
-            zz.q(c, "DXEventChain_ChainName", c6371a.o());
+            zz.q(c, "DXEventChain_ChainName", aVar.o());
             FalcoContainerSpan d = zz.d(c.context(), "DX", this.k.d());
-            c6371a.y(d);
-            c6371a.l().setOpenTracerSpan(d);
+            aVar.y(d);
+            aVar.l().setOpenTracerSpan(d);
             zz.m(d);
             if (TextUtils.isEmpty(this.k.e())) {
                 g = zz.f(d);
@@ -189,14 +188,14 @@ public class DXAtomicEventNode {
                 g = zz.g(d, this.k.c());
             }
             zz.r(g);
-            c6371a.F(g);
-            FalcoAbilitySpan a = zz.a(d.context(), "DX", "Atomic");
-            zz.q(a, "DXEventChain_AbilityName", this.a);
-            zz.p(a, "DXEventChain_AbilityType", this.b.longValue());
-            return a;
+            aVar.F(g);
+            FalcoAbilitySpan a2 = zz.a(d.context(), "DX", "Atomic");
+            zz.q(a2, "DXEventChain_AbilityName", this.a);
+            zz.p(a2, "DXEventChain_AbilityType", this.b.longValue());
+            return a2;
         } else if (this.k.b() == "finish") {
-            zz.h(c6371a.q());
-            l(c6371a);
+            zz.h(aVar.q());
+            l(aVar);
             return null;
         } else {
             return null;
@@ -212,7 +211,7 @@ public class DXAtomicEventNode {
             }
             JSONObject parseObject = JSON.parseObject(this.d);
             if (parseObject.containsKey(WXBridgeManager.METHOD_CALLBACK)) {
-                this.j = (Map) JSON.parseObject(parseObject.getJSONObject(WXBridgeManager.METHOD_CALLBACK).toJSONString(), new C6370a(this), new Feature[0]);
+                this.j = (Map) JSON.parseObject(parseObject.getJSONObject(WXBridgeManager.METHOD_CALLBACK).toJSONString(), new a(this), new Feature[0]);
             }
             if (parseObject.containsKey("params")) {
                 this.g = parseObject.getJSONObject("params").toJSONString();
@@ -262,17 +261,17 @@ public class DXAtomicEventNode {
 
     /* JADX INFO: Access modifiers changed from: protected */
     /* JADX WARN: Type inference failed for: r0v6, types: [com.taobao.android.dinamicx.eventchain.DXAtomicEventNode$1] */
-    public oy j(final C6371a c6371a, final DXEventChainCallback dXEventChainCallback) {
+    public oy j(final com.taobao.android.dinamicx.eventchain.a aVar, final DXEventChainCallback dXEventChainCallback) {
         JSONObject parseObject;
-        C9703t c9703t;
+        t tVar;
         DXRuntimeContext l;
         JSONObject jSONObject;
         JSONObject jSONObject2;
         DXAtomicFTData dXAtomicFTData;
-        if (c6371a == null) {
+        if (aVar == null) {
             return oy.b(ky.EVENT_CHAIN_ERROR_ATOMIC_EXECUTE_CONTEXT_IS_NULL);
         }
-        C9192h d = c6371a.d();
+        h d = aVar.d();
         if (d == null) {
             return oy.b(ky.EVENT_CHAIN_ERROR_ATOMIC_EXECUTE_ABILITY_IS_NULL);
         }
@@ -292,17 +291,17 @@ public class DXAtomicEventNode {
             parseObject = JSON.parseObject(this.g);
         }
         DXTraceUtil.a(2, "DX-AtomicEvent-执行表达式");
-        f(parseObject, c6371a);
+        f(parseObject, aVar);
         this.i = parseObject;
         DXTraceUtil.d(2);
-        if (c6371a.g() != null && c6371a.h() != null && (dXAtomicFTData = this.k) != null && !TextUtils.isEmpty(dXAtomicFTData.e())) {
-            zz.h(c6371a.q());
-            FalcoStage g = zz.g(c6371a.h(), this.k.c());
+        if (aVar.g() != null && aVar.h() != null && (dXAtomicFTData = this.k) != null && !TextUtils.isEmpty(dXAtomicFTData.e())) {
+            zz.h(aVar.q());
+            FalcoStage g = zz.g(aVar.h(), this.k.c());
             zz.r(g);
-            c6371a.F(g);
+            aVar.F(g);
         }
-        if (c6371a.g() != null && c6371a.h() != null) {
-            falcoAbilitySpan = zz.b(zz.i(c6371a.h()), "DX", "Atomic");
+        if (aVar.g() != null && aVar.h() != null) {
+            falcoAbilitySpan = zz.b(zz.i(aVar.h()), "DX", "Atomic");
             zz.q(falcoAbilitySpan, "DXEventChain_AbilityName", this.a);
             DXAtomicFTData dXAtomicFTData2 = this.k;
             if (dXAtomicFTData2 != null && dXAtomicFTData2.f() && (jSONObject2 = this.i) != null) {
@@ -314,12 +313,12 @@ public class DXAtomicEventNode {
             }
         }
         DXAtomicFTData dXAtomicFTData4 = this.k;
-        if (dXAtomicFTData4 != null && !TextUtils.isEmpty(dXAtomicFTData4.b()) && !"none".equals(this.k.b()) && wt.f0() && (l = c6371a.l()) != null && l.getEngineContext().b().n()) {
-            falcoAbilitySpan = r(c6371a);
+        if (dXAtomicFTData4 != null && !TextUtils.isEmpty(dXAtomicFTData4.b()) && !"none".equals(this.k.b()) && wt.f0() && (l = aVar.l()) != null && l.getEngineContext().b().n()) {
+            falcoAbilitySpan = r(aVar);
         }
         nz.f("DXFullTrace", "atomic ", this.a, this.j);
-        if (c6371a.g() != null && c6371a.h() != null && this.j != null) {
-            c6371a.a();
+        if (aVar.g() != null && aVar.h() != null && this.j != null) {
+            aVar.a();
         }
         JSONObject parseObject2 = JSON.parseObject(this.d);
         parseObject2.put("params", (Object) parseObject);
@@ -327,14 +326,14 @@ public class DXAtomicEventNode {
             zz.q(falcoAbilitySpan, "DXEventChain_AbilityParams", JSON.toJSONString(k(parseObject2.getJSONObject("params"))));
         }
         if (wt.k0()) {
-            AKBaseAbility<C9586q> c = d.c(String.valueOf(this.b));
+            AKBaseAbility<q> c = d.c(String.valueOf(this.b));
             this.l = c;
             if (c == null) {
                 DXTraceUtil.d(2);
                 return oy.b(ky.EVENT_CHAIN_ERROR_ABILITY_IS_NULL);
             }
         } else if (this.l == null) {
-            AKBaseAbility<C9586q> c2 = d.c(String.valueOf(this.b));
+            AKBaseAbility<q> c2 = d.c(String.valueOf(this.b));
             this.l = c2;
             if (c2 == null) {
                 DXTraceUtil.d(2);
@@ -343,7 +342,7 @@ public class DXAtomicEventNode {
         }
         this.l.d(falcoAbilitySpan);
         zz.q(falcoAbilitySpan, "DXEventChain_AbilityType", this.l.getClass().getSimpleName());
-        AKIAbilityCallback a = new AKIAbilityCallback() { // from class: com.taobao.android.dinamicx.eventchain.DXAtomicEventNode.1
+        AKIAbilityCallback a2 = new AKIAbilityCallback() { // from class: com.taobao.android.dinamicx.eventchain.DXAtomicEventNode.1
             FalcoAbilitySpan a = null;
 
             public AKIAbilityCallback a(FalcoAbilitySpan falcoAbilitySpan2) {
@@ -352,37 +351,37 @@ public class DXAtomicEventNode {
             }
 
             @Override // com.taobao.android.abilitykit.AKIAbilityCallback
-            public void callback(final String str, final C9392l c9392l) {
+            public void callback(final String str, final l lVar) {
                 FalcoAbilitySpan falcoAbilitySpan2;
-                if (dXEventChainCallback != null && c9392l != null) {
+                if (dXEventChainCallback != null && lVar != null) {
                     if (DXAtomicEventNode.this.j == null) {
                         return;
                     }
-                    c6371a.J();
-                    if (c6371a.g() != null && c6371a.h() != null && (falcoAbilitySpan2 = this.a) != null) {
-                        if (c9392l instanceof C9327k) {
-                            zz.q(falcoAbilitySpan2, "DXEventChain_AbilityResult", JSON.toJSONString(c9392l));
+                    aVar.J();
+                    if (aVar.g() != null && aVar.h() != null && (falcoAbilitySpan2 = this.a) != null) {
+                        if (lVar instanceof k) {
+                            zz.q(falcoAbilitySpan2, "DXEventChain_AbilityResult", JSON.toJSONString(lVar));
                         }
                         if (DXAtomicEventNode.this.l != null && DXAtomicEventNode.this.l.e()) {
                             zz.l(this.a);
                         }
                     }
-                    if (c6371a.g() != null && c6371a.h() != null && TextUtils.isEmpty(str) && c6371a.t() <= 0) {
+                    if (aVar.g() != null && aVar.h() != null && TextUtils.isEmpty(str) && aVar.t() <= 0) {
                         nz.g("DXFullTrace", "EvnetChian finish callback ", " ", DXAtomicEventNode.this.a);
-                        DXAtomicEventNode.this.l(c6371a);
+                        DXAtomicEventNode.this.l(aVar);
                     }
-                    if (c6371a.u()) {
+                    if (aVar.u()) {
                         nz.b("DXAtomicEventNode", "eventchain callback: event cancle");
                         return;
                     } else if (Looper.getMainLooper() == Looper.myLooper()) {
-                        dXEventChainCallback.callback(new C6374c(str, (String) DXAtomicEventNode.this.j.get(str)), oy.e(c9392l));
+                        dXEventChainCallback.callback(new c(str, (String) DXAtomicEventNode.this.j.get(str)), oy.e(lVar));
                         return;
                     } else {
                         y00.m(new Runnable() { // from class: com.taobao.android.dinamicx.eventchain.DXAtomicEventNode.1.1
                             @Override // java.lang.Runnable
                             public void run() {
                                 AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
-                                dXEventChainCallback.callback(new C6374c(str, (String) DXAtomicEventNode.this.j.get(str)), oy.e(c9392l));
+                                dXEventChainCallback.callback(new c(str, (String) DXAtomicEventNode.this.j.get(str)), oy.e(lVar));
                             }
                         });
                         return;
@@ -391,24 +390,24 @@ public class DXAtomicEventNode {
                 nz.g("DXAtomicEventNode", "eventchain callback is null or abilityExecuteResult is null [ " + DXAtomicEventNode.this.a);
             }
         }.a(falcoAbilitySpan);
-        if (c6371a.g() != null && c6371a.h() != null && falcoAbilitySpan != null && (c6371a.e() instanceof C9703t) && (c9703t = (C9703t) c6371a.e()) != null) {
-            c9703t.h(falcoAbilitySpan);
+        if (aVar.g() != null && aVar.h() != null && falcoAbilitySpan != null && (aVar.e() instanceof t) && (tVar = (t) aVar.e()) != null) {
+            tVar.h(falcoAbilitySpan);
         }
-        C9392l a2 = this.l.a(parseObject2, c6371a.e(), a);
-        if (this.j == null && c6371a.g() != null && c6371a.h() != null && falcoAbilitySpan != null) {
-            if (a2 instanceof C9327k) {
-                zz.q(falcoAbilitySpan, "DXEventChain_AbilityResult", JSON.toJSONString(a2));
+        l a3 = this.l.a(parseObject2, aVar.e(), a2);
+        if (this.j == null && aVar.g() != null && aVar.h() != null && falcoAbilitySpan != null) {
+            if (a3 instanceof k) {
+                zz.q(falcoAbilitySpan, "DXEventChain_AbilityResult", JSON.toJSONString(a3));
             }
-            if (!(a2 instanceof C9428m)) {
+            if (!(a3 instanceof m)) {
                 zz.l(falcoAbilitySpan);
             }
         }
-        if (TextUtils.isEmpty(this.c) && c6371a.t() <= 0 && c6371a.g() != null && c6371a.h() != null) {
+        if (TextUtils.isEmpty(this.c) && aVar.t() <= 0 && aVar.g() != null && aVar.h() != null) {
             nz.g("DXFullTrace", "EvnetChian finish  ", this.a);
-            l(c6371a);
+            l(aVar);
         }
         DXTraceUtil.d(2);
-        return oy.e(a2);
+        return oy.e(a3);
     }
 
     public Map<String, String> m() {

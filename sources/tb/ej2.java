@@ -1,7 +1,6 @@
 package tb;
 
 import kotlin.jvm.JvmField;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
 import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
@@ -15,7 +14,7 @@ public final class ej2 {
     public static final wf KOTLIN_SUSPEND_BUILT_IN_FUNCTION_FQ_NAME_CALLABLE_ID;
 
     static {
-        hp0 hp0Var = C8277c.BUILT_INS_PACKAGE_FQ_NAME;
+        hp0 hp0Var = kotlin.reflect.jvm.internal.impl.builtins.c.BUILT_INS_PACKAGE_FQ_NAME;
         ni1 f = ni1.f("suspend");
         b41.h(f, "identifier(\"suspend\")");
         KOTLIN_SUSPEND_BUILT_IN_FUNCTION_FQ_NAME_CALLABLE_ID = new wf(hp0Var, f);

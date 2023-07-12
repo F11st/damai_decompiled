@@ -212,7 +212,7 @@ public final class ObservableSwitchMap<T, R> extends AbstractObservableWithUpstr
         this.delayErrors = z;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super R> observer) {
         if (ObservableScalarXMap.tryScalarXMapSubscribe(this.source, observer, this.mapper)) {
             return;

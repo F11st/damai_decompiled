@@ -748,9 +748,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.resource.R$color */
     /* loaded from: classes3.dex */
-    public static final class C8071color {
+    public static final class color {
         public static final int SwipeRefrshRingColor1 = 0x7f060030;
         public static final int SwipeRefrshRingColor2 = 0x7f060031;
         public static final int abc_background_cache_hint_selector_material_dark = 0x7f06003a;
@@ -1430,7 +1429,7 @@ public final class R {
         public static final int yp_vip_abnormal_text_color_youku = 0x7f0605af;
         public static final int zpd_subscribe_tip_color = 0x7f0605b4;
 
-        private C8071color() {
+        private color() {
         }
     }
 
@@ -3462,9 +3461,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.resource.R$drawable */
     /* loaded from: classes3.dex */
-    public static final class C8072drawable {
+    public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha = 0x7f080006;
         public static final int abc_action_bar_item_background_material = 0x7f080007;
         public static final int abc_btn_borderless_material = 0x7f080009;
@@ -4385,7 +4383,7 @@ public final class R {
         public static final int yp_vip_abnormalerrorpage_button = 0x7f081071;
         public static final int zhankai = 0x7f081074;
 
-        private C8072drawable() {
+        private drawable() {
         }
     }
 
@@ -6107,22 +6105,20 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.resource.R$interpolator */
     /* loaded from: classes3.dex */
-    public static final class C8073interpolator {
+    public static final class interpolator {
         public static final int collection_decelerate_cubic = 0x7f0b0006;
         public static final int collection_decelerate_quint = 0x7f0b0007;
         public static final int decelerate_cubic = 0x7f0b0008;
         public static final int decelerate_quint = 0x7f0b0009;
 
-        private C8073interpolator() {
+        private interpolator() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.resource.R$layout */
     /* loaded from: classes3.dex */
-    public static final class C8074layout {
+    public static final class layout {
         public static final int abc_action_bar_title_item = 0x7f0c0000;
         public static final int abc_action_bar_up_container = 0x7f0c0001;
         public static final int abc_action_menu_item_layout = 0x7f0c0002;
@@ -6344,18 +6340,17 @@ public final class R {
         public static final int youku_dialog_picker = 0x7f0c086a;
         public static final int youku_dialog_title = 0x7f0c086b;
 
-        private C8074layout() {
+        private layout() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.resource.R$menu */
     /* loaded from: classes3.dex */
-    public static final class C8075menu {
+    public static final class menu {
         public static final int home = 0x7f0d0002;
         public static final int search = 0x7f0d0003;
 
-        private C8075menu() {
+        private menu() {
         }
     }
 
@@ -6369,15 +6364,14 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.resource.R$raw */
     /* loaded from: classes3.dex */
-    public static final class C8076raw {
+    public static final class raw {
         public static final int aes = 0x7f100000;
         public static final int beep = 0x7f100005;
         public static final int lucky = 0x7f100081;
         public static final int shortvideo_black_loading = 0x7f100092;
 
-        private C8076raw() {
+        private raw() {
         }
     }
 
@@ -7067,9 +7061,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.resource.R$style */
     /* loaded from: classes3.dex */
-    public static final class C8077style {
+    public static final class style {
         public static final int ActionBar = 0x7f120000;
         public static final int ActionBar_Home = 0x7f120001;
         public static final int ActionBar_TabBar = 0x7f120002;
@@ -7868,7 +7861,7 @@ public final class R {
         public static final int yk_DialogAnimation = 0x7f12058d;
         public static final int yk_feed_plugin_small_time = 0x7f12058e;
 
-        private C8077style() {
+        private style() {
         }
     }
 
@@ -9051,9 +9044,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.resource.R$xml */
     /* loaded from: classes3.dex */
-    public static final class C8078xml {
+    public static final class xml {
         public static final int authenticator = 0x7f140001;
         public static final int debug_provider_paths = 0x7f140002;
         public static final int provider_path = 0x7f140009;
@@ -9061,7 +9053,7 @@ public final class R {
         public static final int syncadapter = 0x7f140011;
         public static final int update_sdk_provider_paths = 0x7f140013;
 
-        private C8078xml() {
+        private xml() {
         }
     }
 

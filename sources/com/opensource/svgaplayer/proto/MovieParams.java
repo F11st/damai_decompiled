@@ -12,8 +12,8 @@ import okio.ByteString;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public final class MovieParams extends Message<MovieParams, C6118a> {
-    public static final ProtoAdapter<MovieParams> ADAPTER = new C6119b();
+public final class MovieParams extends Message<MovieParams, a> {
+    public static final ProtoAdapter<MovieParams> ADAPTER = new b();
     public static final Integer DEFAULT_FPS;
     public static final Integer DEFAULT_FRAMES;
     public static final Float DEFAULT_VIEWBOXHEIGHT;
@@ -29,9 +29,8 @@ public final class MovieParams extends Message<MovieParams, C6118a> {
     public final Float viewBoxWidth;
 
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.proto.MovieParams$a */
     /* loaded from: classes10.dex */
-    public static final class C6118a extends Message.Builder<MovieParams, C6118a> {
+    public static final class a extends Message.Builder<MovieParams, a> {
         public Float a;
         public Float b;
         public Integer c;
@@ -43,56 +42,55 @@ public final class MovieParams extends Message<MovieParams, C6118a> {
             return new MovieParams(this.a, this.b, this.c, this.d, super.buildUnknownFields());
         }
 
-        public C6118a b(Integer num) {
+        public a b(Integer num) {
             this.c = num;
             return this;
         }
 
-        public C6118a c(Integer num) {
+        public a c(Integer num) {
             this.d = num;
             return this;
         }
 
-        public C6118a d(Float f) {
+        public a d(Float f) {
             this.b = f;
             return this;
         }
 
-        public C6118a e(Float f) {
+        public a e(Float f) {
             this.a = f;
             return this;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.proto.MovieParams$b */
     /* loaded from: classes10.dex */
-    private static final class C6119b extends ProtoAdapter<MovieParams> {
-        C6119b() {
+    private static final class b extends ProtoAdapter<MovieParams> {
+        b() {
             super(FieldEncoding.LENGTH_DELIMITED, MovieParams.class);
         }
 
         @Override // com.youku.squareup.wire.ProtoAdapter
         /* renamed from: a */
         public MovieParams decode(ProtoReader protoReader) throws IOException {
-            C6118a c6118a = new C6118a();
+            a aVar = new a();
             long beginMessage = protoReader.beginMessage();
             while (true) {
                 int nextTag = protoReader.nextTag();
                 if (nextTag == -1) {
                     protoReader.endMessage(beginMessage);
-                    return c6118a.build();
+                    return aVar.build();
                 } else if (nextTag == 1) {
-                    c6118a.e(ProtoAdapter.FLOAT.decode(protoReader));
+                    aVar.e(ProtoAdapter.FLOAT.decode(protoReader));
                 } else if (nextTag == 2) {
-                    c6118a.d(ProtoAdapter.FLOAT.decode(protoReader));
+                    aVar.d(ProtoAdapter.FLOAT.decode(protoReader));
                 } else if (nextTag == 3) {
-                    c6118a.b(ProtoAdapter.INT32.decode(protoReader));
+                    aVar.b(ProtoAdapter.INT32.decode(protoReader));
                 } else if (nextTag != 4) {
                     FieldEncoding peekFieldEncoding = protoReader.peekFieldEncoding();
-                    c6118a.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
+                    aVar.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
                 } else {
-                    c6118a.c(ProtoAdapter.INT32.decode(protoReader));
+                    aVar.c(ProtoAdapter.INT32.decode(protoReader));
                 }
             }
         }
@@ -217,13 +215,13 @@ public final class MovieParams extends Message<MovieParams, C6118a> {
 
     @Override // com.youku.squareup.wire.Message
     /* renamed from: newBuilder */
-    public Message.Builder<MovieParams, C6118a> newBuilder2() {
-        C6118a c6118a = new C6118a();
-        c6118a.a = this.viewBoxWidth;
-        c6118a.b = this.viewBoxHeight;
-        c6118a.c = this.fps;
-        c6118a.d = this.frames;
-        c6118a.addUnknownFields(unknownFields());
-        return c6118a;
+    public Message.Builder<MovieParams, a> newBuilder2() {
+        a aVar = new a();
+        aVar.a = this.viewBoxWidth;
+        aVar.b = this.viewBoxHeight;
+        aVar.c = this.fps;
+        aVar.d = this.frames;
+        aVar.addUnknownFields(unknownFields());
+        return aVar;
     }
 }

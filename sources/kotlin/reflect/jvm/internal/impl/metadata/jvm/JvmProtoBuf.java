@@ -14,10 +14,8 @@ import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Package;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Property;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Type;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$TypeParameter;
-import kotlin.reflect.jvm.internal.impl.protobuf.AbstractC8443a;
 import kotlin.reflect.jvm.internal.impl.protobuf.AbstractMessageLite;
 import kotlin.reflect.jvm.internal.impl.protobuf.ByteString;
-import kotlin.reflect.jvm.internal.impl.protobuf.C8447c;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedOutputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite;
@@ -26,29 +24,30 @@ import kotlin.reflect.jvm.internal.impl.protobuf.InvalidProtocolBufferException;
 import kotlin.reflect.jvm.internal.impl.protobuf.MessageLiteOrBuilder;
 import kotlin.reflect.jvm.internal.impl.protobuf.Parser;
 import kotlin.reflect.jvm.internal.impl.protobuf.WireFormat;
+import kotlin.reflect.jvm.internal.impl.protobuf.c;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class JvmProtoBuf {
-    public static final GeneratedMessageLite.C8441c<ProtoBuf$Class, Integer> anonymousObjectOriginName;
-    public static final GeneratedMessageLite.C8441c<ProtoBuf$Class, List<ProtoBuf$Property>> classLocalVariable;
-    public static final GeneratedMessageLite.C8441c<ProtoBuf$Class, Integer> classModuleName;
-    public static final GeneratedMessageLite.C8441c<ProtoBuf$Constructor, JvmMethodSignature> constructorSignature;
-    public static final GeneratedMessageLite.C8441c<ProtoBuf$Property, Integer> flags;
-    public static final GeneratedMessageLite.C8441c<ProtoBuf$Type, Boolean> isRaw;
-    public static final GeneratedMessageLite.C8441c<ProtoBuf$Class, Integer> jvmClassFlags;
-    public static final GeneratedMessageLite.C8441c<ProtoBuf$Function, Integer> lambdaClassOriginName;
-    public static final GeneratedMessageLite.C8441c<ProtoBuf$Function, JvmMethodSignature> methodSignature;
-    public static final GeneratedMessageLite.C8441c<ProtoBuf$Package, List<ProtoBuf$Property>> packageLocalVariable;
-    public static final GeneratedMessageLite.C8441c<ProtoBuf$Package, Integer> packageModuleName;
-    public static final GeneratedMessageLite.C8441c<ProtoBuf$Property, JvmPropertySignature> propertySignature;
-    public static final GeneratedMessageLite.C8441c<ProtoBuf$Type, List<ProtoBuf$Annotation>> typeAnnotation;
-    public static final GeneratedMessageLite.C8441c<ProtoBuf$TypeParameter, List<ProtoBuf$Annotation>> typeParameterAnnotation;
+    public static final GeneratedMessageLite.c<ProtoBuf$Class, Integer> anonymousObjectOriginName;
+    public static final GeneratedMessageLite.c<ProtoBuf$Class, List<ProtoBuf$Property>> classLocalVariable;
+    public static final GeneratedMessageLite.c<ProtoBuf$Class, Integer> classModuleName;
+    public static final GeneratedMessageLite.c<ProtoBuf$Constructor, JvmMethodSignature> constructorSignature;
+    public static final GeneratedMessageLite.c<ProtoBuf$Property, Integer> flags;
+    public static final GeneratedMessageLite.c<ProtoBuf$Type, Boolean> isRaw;
+    public static final GeneratedMessageLite.c<ProtoBuf$Class, Integer> jvmClassFlags;
+    public static final GeneratedMessageLite.c<ProtoBuf$Function, Integer> lambdaClassOriginName;
+    public static final GeneratedMessageLite.c<ProtoBuf$Function, JvmMethodSignature> methodSignature;
+    public static final GeneratedMessageLite.c<ProtoBuf$Package, List<ProtoBuf$Property>> packageLocalVariable;
+    public static final GeneratedMessageLite.c<ProtoBuf$Package, Integer> packageModuleName;
+    public static final GeneratedMessageLite.c<ProtoBuf$Property, JvmPropertySignature> propertySignature;
+    public static final GeneratedMessageLite.c<ProtoBuf$Type, List<ProtoBuf$Annotation>> typeAnnotation;
+    public static final GeneratedMessageLite.c<ProtoBuf$TypeParameter, List<ProtoBuf$Annotation>> typeParameterAnnotation;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
     public static final class JvmFieldSignature extends GeneratedMessageLite implements JvmFieldSignatureOrBuilder {
-        public static Parser<JvmFieldSignature> PARSER = new C8426a();
+        public static Parser<JvmFieldSignature> PARSER = new a();
         private static final JvmFieldSignature defaultInstance;
         private int bitField0_;
         private int desc_;
@@ -149,7 +148,7 @@ public final class JvmProtoBuf {
                 Code decompiled incorrectly, please refer to instructions dump.
                 To view partially-correct code enable 'Show inconsistent code' option in preferences
             */
-            public kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf.JvmFieldSignature.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.C8447c r4) throws java.io.IOException {
+            public kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf.JvmFieldSignature.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.c r4) throws java.io.IOException {
                 /*
                     r2 = this;
                     r0 = 0
@@ -182,16 +181,15 @@ public final class JvmProtoBuf {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf$JvmFieldSignature$a */
         /* loaded from: classes3.dex */
-        static class C8426a extends AbstractC8443a<JvmFieldSignature> {
-            C8426a() {
+        static class a extends kotlin.reflect.jvm.internal.impl.protobuf.a<JvmFieldSignature> {
+            a() {
             }
 
             @Override // kotlin.reflect.jvm.internal.impl.protobuf.Parser
             /* renamed from: i */
-            public JvmFieldSignature parsePartialFrom(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
-                return new JvmFieldSignature(codedInputStream, c8447c);
+            public JvmFieldSignature parsePartialFrom(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
+                return new JvmFieldSignature(codedInputStream, cVar);
             }
         }
 
@@ -307,11 +305,11 @@ public final class JvmProtoBuf {
             this.unknownFields = ByteString.EMPTY;
         }
 
-        private JvmFieldSignature(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
+        private JvmFieldSignature(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
             this.memoizedIsInitialized = (byte) -1;
             this.memoizedSerializedSize = -1;
             initFields();
-            ByteString.C8436a n = ByteString.n();
+            ByteString.a n = ByteString.n();
             CodedOutputStream J = CodedOutputStream.J(n, 1);
             boolean z = false;
             while (!z) {
@@ -323,7 +321,7 @@ public final class JvmProtoBuf {
                                 this.bitField0_ |= 1;
                                 this.name_ = codedInputStream.s();
                             } else if (K != 16) {
-                                if (!parseUnknownField(codedInputStream, J, c8447c, K)) {
+                                if (!parseUnknownField(codedInputStream, J, cVar, K)) {
                                 }
                             } else {
                                 this.bitField0_ |= 2;
@@ -369,7 +367,7 @@ public final class JvmProtoBuf {
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
     public static final class JvmMethodSignature extends GeneratedMessageLite implements JvmMethodSignatureOrBuilder {
-        public static Parser<JvmMethodSignature> PARSER = new C8427a();
+        public static Parser<JvmMethodSignature> PARSER = new a();
         private static final JvmMethodSignature defaultInstance;
         private int bitField0_;
         private int desc_;
@@ -470,7 +468,7 @@ public final class JvmProtoBuf {
                 Code decompiled incorrectly, please refer to instructions dump.
                 To view partially-correct code enable 'Show inconsistent code' option in preferences
             */
-            public kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf.JvmMethodSignature.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.C8447c r4) throws java.io.IOException {
+            public kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf.JvmMethodSignature.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.c r4) throws java.io.IOException {
                 /*
                     r2 = this;
                     r0 = 0
@@ -503,16 +501,15 @@ public final class JvmProtoBuf {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf$JvmMethodSignature$a */
         /* loaded from: classes3.dex */
-        static class C8427a extends AbstractC8443a<JvmMethodSignature> {
-            C8427a() {
+        static class a extends kotlin.reflect.jvm.internal.impl.protobuf.a<JvmMethodSignature> {
+            a() {
             }
 
             @Override // kotlin.reflect.jvm.internal.impl.protobuf.Parser
             /* renamed from: i */
-            public JvmMethodSignature parsePartialFrom(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
-                return new JvmMethodSignature(codedInputStream, c8447c);
+            public JvmMethodSignature parsePartialFrom(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
+                return new JvmMethodSignature(codedInputStream, cVar);
             }
         }
 
@@ -628,11 +625,11 @@ public final class JvmProtoBuf {
             this.unknownFields = ByteString.EMPTY;
         }
 
-        private JvmMethodSignature(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
+        private JvmMethodSignature(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
             this.memoizedIsInitialized = (byte) -1;
             this.memoizedSerializedSize = -1;
             initFields();
-            ByteString.C8436a n = ByteString.n();
+            ByteString.a n = ByteString.n();
             CodedOutputStream J = CodedOutputStream.J(n, 1);
             boolean z = false;
             while (!z) {
@@ -644,7 +641,7 @@ public final class JvmProtoBuf {
                                 this.bitField0_ |= 1;
                                 this.name_ = codedInputStream.s();
                             } else if (K != 16) {
-                                if (!parseUnknownField(codedInputStream, J, c8447c, K)) {
+                                if (!parseUnknownField(codedInputStream, J, cVar, K)) {
                                 }
                             } else {
                                 this.bitField0_ |= 2;
@@ -690,7 +687,7 @@ public final class JvmProtoBuf {
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
     public static final class JvmPropertySignature extends GeneratedMessageLite implements JvmPropertySignatureOrBuilder {
-        public static Parser<JvmPropertySignature> PARSER = new C8428a();
+        public static Parser<JvmPropertySignature> PARSER = new a();
         private static final JvmPropertySignature defaultInstance;
         private int bitField0_;
         private JvmFieldSignature field_;
@@ -837,7 +834,7 @@ public final class JvmProtoBuf {
                 Code decompiled incorrectly, please refer to instructions dump.
                 To view partially-correct code enable 'Show inconsistent code' option in preferences
             */
-            public kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf.JvmPropertySignature.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.C8447c r4) throws java.io.IOException {
+            public kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf.JvmPropertySignature.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.c r4) throws java.io.IOException {
                 /*
                     r2 = this;
                     r0 = 0
@@ -870,16 +867,15 @@ public final class JvmProtoBuf {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf$JvmPropertySignature$a */
         /* loaded from: classes3.dex */
-        static class C8428a extends AbstractC8443a<JvmPropertySignature> {
-            C8428a() {
+        static class a extends kotlin.reflect.jvm.internal.impl.protobuf.a<JvmPropertySignature> {
+            a() {
             }
 
             @Override // kotlin.reflect.jvm.internal.impl.protobuf.Parser
             /* renamed from: i */
-            public JvmPropertySignature parsePartialFrom(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
-                return new JvmPropertySignature(codedInputStream, c8447c);
+            public JvmPropertySignature parsePartialFrom(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
+                return new JvmPropertySignature(codedInputStream, cVar);
             }
         }
 
@@ -1025,11 +1021,11 @@ public final class JvmProtoBuf {
             this.unknownFields = ByteString.EMPTY;
         }
 
-        private JvmPropertySignature(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
+        private JvmPropertySignature(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
             this.memoizedIsInitialized = (byte) -1;
             this.memoizedSerializedSize = -1;
             initFields();
-            ByteString.C8436a n = ByteString.n();
+            ByteString.a n = ByteString.n();
             CodedOutputStream J = CodedOutputStream.J(n, 1);
             boolean z = false;
             while (!z) {
@@ -1039,7 +1035,7 @@ public final class JvmProtoBuf {
                         if (K != 0) {
                             if (K == 10) {
                                 JvmFieldSignature.Builder builder = (this.bitField0_ & 1) == 1 ? this.field_.toBuilder() : null;
-                                JvmFieldSignature jvmFieldSignature = (JvmFieldSignature) codedInputStream.u(JvmFieldSignature.PARSER, c8447c);
+                                JvmFieldSignature jvmFieldSignature = (JvmFieldSignature) codedInputStream.u(JvmFieldSignature.PARSER, cVar);
                                 this.field_ = jvmFieldSignature;
                                 if (builder != null) {
                                     builder.mergeFrom(jvmFieldSignature);
@@ -1048,7 +1044,7 @@ public final class JvmProtoBuf {
                                 this.bitField0_ |= 1;
                             } else if (K == 18) {
                                 JvmMethodSignature.Builder builder2 = (this.bitField0_ & 2) == 2 ? this.syntheticMethod_.toBuilder() : null;
-                                JvmMethodSignature jvmMethodSignature = (JvmMethodSignature) codedInputStream.u(JvmMethodSignature.PARSER, c8447c);
+                                JvmMethodSignature jvmMethodSignature = (JvmMethodSignature) codedInputStream.u(JvmMethodSignature.PARSER, cVar);
                                 this.syntheticMethod_ = jvmMethodSignature;
                                 if (builder2 != null) {
                                     builder2.mergeFrom(jvmMethodSignature);
@@ -1057,7 +1053,7 @@ public final class JvmProtoBuf {
                                 this.bitField0_ |= 2;
                             } else if (K == 26) {
                                 JvmMethodSignature.Builder builder3 = (this.bitField0_ & 4) == 4 ? this.getter_.toBuilder() : null;
-                                JvmMethodSignature jvmMethodSignature2 = (JvmMethodSignature) codedInputStream.u(JvmMethodSignature.PARSER, c8447c);
+                                JvmMethodSignature jvmMethodSignature2 = (JvmMethodSignature) codedInputStream.u(JvmMethodSignature.PARSER, cVar);
                                 this.getter_ = jvmMethodSignature2;
                                 if (builder3 != null) {
                                     builder3.mergeFrom(jvmMethodSignature2);
@@ -1065,11 +1061,11 @@ public final class JvmProtoBuf {
                                 }
                                 this.bitField0_ |= 4;
                             } else if (K != 34) {
-                                if (!parseUnknownField(codedInputStream, J, c8447c, K)) {
+                                if (!parseUnknownField(codedInputStream, J, cVar, K)) {
                                 }
                             } else {
                                 JvmMethodSignature.Builder builder4 = (this.bitField0_ & 8) == 8 ? this.setter_.toBuilder() : null;
-                                JvmMethodSignature jvmMethodSignature3 = (JvmMethodSignature) codedInputStream.u(JvmMethodSignature.PARSER, c8447c);
+                                JvmMethodSignature jvmMethodSignature3 = (JvmMethodSignature) codedInputStream.u(JvmMethodSignature.PARSER, cVar);
                                 this.setter_ = jvmMethodSignature3;
                                 if (builder4 != null) {
                                     builder4.mergeFrom(jvmMethodSignature3);
@@ -1117,7 +1113,7 @@ public final class JvmProtoBuf {
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
     public static final class StringTableTypes extends GeneratedMessageLite implements StringTableTypesOrBuilder {
-        public static Parser<StringTableTypes> PARSER = new C8431a();
+        public static Parser<StringTableTypes> PARSER = new a();
         private static final StringTableTypes defaultInstance;
         private int localNameMemoizedSerializedSize;
         private List<Integer> localName_;
@@ -1234,7 +1230,7 @@ public final class JvmProtoBuf {
                 Code decompiled incorrectly, please refer to instructions dump.
                 To view partially-correct code enable 'Show inconsistent code' option in preferences
             */
-            public kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf.StringTableTypes.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.C8447c r4) throws java.io.IOException {
+            public kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf.StringTableTypes.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.c r4) throws java.io.IOException {
                 /*
                     r2 = this;
                     r0 = 0
@@ -1269,7 +1265,7 @@ public final class JvmProtoBuf {
         /* compiled from: Taobao */
         /* loaded from: classes3.dex */
         public static final class Record extends GeneratedMessageLite implements RecordOrBuilder {
-            public static Parser<Record> PARSER = new C8430a();
+            public static Parser<Record> PARSER = new a();
             private static final Record defaultInstance;
             private int bitField0_;
             private byte memoizedIsInitialized;
@@ -1444,7 +1440,7 @@ public final class JvmProtoBuf {
                     Code decompiled incorrectly, please refer to instructions dump.
                     To view partially-correct code enable 'Show inconsistent code' option in preferences
                 */
-                public kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf.StringTableTypes.Record.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.C8447c r4) throws java.io.IOException {
+                public kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf.StringTableTypes.Record.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.c r4) throws java.io.IOException {
                     /*
                         r2 = this;
                         r0 = 0
@@ -1483,14 +1479,13 @@ public final class JvmProtoBuf {
                 INTERNAL_TO_CLASS_ID(1, 1),
                 DESC_TO_CLASS_ID(2, 2);
                 
-                private static Internal.EnumLiteMap<Operation> internalValueMap = new C8429a();
+                private static Internal.EnumLiteMap<Operation> internalValueMap = new a();
                 private final int value;
 
                 /* compiled from: Taobao */
-                /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf$StringTableTypes$Record$Operation$a */
                 /* loaded from: classes3.dex */
-                static class C8429a implements Internal.EnumLiteMap<Operation> {
-                    C8429a() {
+                static class a implements Internal.EnumLiteMap<Operation> {
+                    a() {
                     }
 
                     @Override // kotlin.reflect.jvm.internal.impl.protobuf.Internal.EnumLiteMap
@@ -1524,16 +1519,15 @@ public final class JvmProtoBuf {
             }
 
             /* compiled from: Taobao */
-            /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf$StringTableTypes$Record$a */
             /* loaded from: classes3.dex */
-            static class C8430a extends AbstractC8443a<Record> {
-                C8430a() {
+            static class a extends kotlin.reflect.jvm.internal.impl.protobuf.a<Record> {
+                a() {
                 }
 
                 @Override // kotlin.reflect.jvm.internal.impl.protobuf.Parser
                 /* renamed from: i */
-                public Record parsePartialFrom(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
-                    return new Record(codedInputStream, c8447c);
+                public Record parsePartialFrom(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
+                    return new Record(codedInputStream, cVar);
                 }
             }
 
@@ -1752,13 +1746,13 @@ public final class JvmProtoBuf {
                 this.unknownFields = ByteString.EMPTY;
             }
 
-            private Record(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
+            private Record(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
                 this.substringIndexMemoizedSerializedSize = -1;
                 this.replaceCharMemoizedSerializedSize = -1;
                 this.memoizedIsInitialized = (byte) -1;
                 this.memoizedSerializedSize = -1;
                 initFields();
-                ByteString.C8436a n = ByteString.n();
+                ByteString.a n = ByteString.n();
                 CodedOutputStream J = CodedOutputStream.J(n, 1);
                 boolean z = false;
                 boolean z2 = false;
@@ -1816,7 +1810,7 @@ public final class JvmProtoBuf {
                                     }
                                     codedInputStream.i(j2);
                                 } else if (K != 50) {
-                                    if (!parseUnknownField(codedInputStream, J, c8447c, K)) {
+                                    if (!parseUnknownField(codedInputStream, J, cVar, K)) {
                                     }
                                 } else {
                                     ByteString l = codedInputStream.l();
@@ -1873,16 +1867,15 @@ public final class JvmProtoBuf {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf$StringTableTypes$a */
         /* loaded from: classes3.dex */
-        static class C8431a extends AbstractC8443a<StringTableTypes> {
-            C8431a() {
+        static class a extends kotlin.reflect.jvm.internal.impl.protobuf.a<StringTableTypes> {
+            a() {
             }
 
             @Override // kotlin.reflect.jvm.internal.impl.protobuf.Parser
             /* renamed from: i */
-            public StringTableTypes parsePartialFrom(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
-                return new StringTableTypes(codedInputStream, c8447c);
+            public StringTableTypes parsePartialFrom(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
+                return new StringTableTypes(codedInputStream, cVar);
             }
         }
 
@@ -1905,8 +1898,8 @@ public final class JvmProtoBuf {
             return Builder.access$1200();
         }
 
-        public static StringTableTypes parseDelimitedFrom(InputStream inputStream, C8447c c8447c) throws IOException {
-            return PARSER.parseDelimitedFrom(inputStream, c8447c);
+        public static StringTableTypes parseDelimitedFrom(InputStream inputStream, c cVar) throws IOException {
+            return PARSER.parseDelimitedFrom(inputStream, cVar);
         }
 
         public List<Integer> getLocalNameList() {
@@ -2010,12 +2003,12 @@ public final class JvmProtoBuf {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        private StringTableTypes(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
+        private StringTableTypes(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
             this.localNameMemoizedSerializedSize = -1;
             this.memoizedIsInitialized = (byte) -1;
             this.memoizedSerializedSize = -1;
             initFields();
-            ByteString.C8436a n = ByteString.n();
+            ByteString.a n = ByteString.n();
             CodedOutputStream J = CodedOutputStream.J(n, 1);
             boolean z = false;
             boolean z2 = false;
@@ -2029,7 +2022,7 @@ public final class JvmProtoBuf {
                                     this.record_ = new ArrayList();
                                     z2 |= true;
                                 }
-                                this.record_.add(codedInputStream.u(Record.PARSER, c8447c));
+                                this.record_.add(codedInputStream.u(Record.PARSER, cVar));
                             } else if (K == 40) {
                                 if (!(z2 & true)) {
                                     this.localName_ = new ArrayList();
@@ -2037,7 +2030,7 @@ public final class JvmProtoBuf {
                                 }
                                 this.localName_.add(Integer.valueOf(codedInputStream.s()));
                             } else if (K != 42) {
-                                if (!parseUnknownField(codedInputStream, J, c8447c, K)) {
+                                if (!parseUnknownField(codedInputStream, J, cVar, K)) {
                                 }
                             } else {
                                 int j = codedInputStream.j(codedInputStream.A());
@@ -2122,20 +2115,20 @@ public final class JvmProtoBuf {
         packageLocalVariable = GeneratedMessageLite.newRepeatedGeneratedExtension(ProtoBuf$Package.getDefaultInstance(), ProtoBuf$Property.getDefaultInstance(), null, 102, fieldType, false, ProtoBuf$Property.class);
     }
 
-    public static void a(C8447c c8447c) {
-        c8447c.a(constructorSignature);
-        c8447c.a(methodSignature);
-        c8447c.a(lambdaClassOriginName);
-        c8447c.a(propertySignature);
-        c8447c.a(flags);
-        c8447c.a(typeAnnotation);
-        c8447c.a(isRaw);
-        c8447c.a(typeParameterAnnotation);
-        c8447c.a(classModuleName);
-        c8447c.a(classLocalVariable);
-        c8447c.a(anonymousObjectOriginName);
-        c8447c.a(jvmClassFlags);
-        c8447c.a(packageModuleName);
-        c8447c.a(packageLocalVariable);
+    public static void a(c cVar) {
+        cVar.a(constructorSignature);
+        cVar.a(methodSignature);
+        cVar.a(lambdaClassOriginName);
+        cVar.a(propertySignature);
+        cVar.a(flags);
+        cVar.a(typeAnnotation);
+        cVar.a(isRaw);
+        cVar.a(typeParameterAnnotation);
+        cVar.a(classModuleName);
+        cVar.a(classLocalVariable);
+        cVar.a(anonymousObjectOriginName);
+        cVar.a(jvmClassFlags);
+        cVar.a(packageModuleName);
+        cVar.a(packageLocalVariable);
     }
 }

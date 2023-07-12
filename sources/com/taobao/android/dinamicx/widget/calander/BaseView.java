@@ -22,7 +22,7 @@ public abstract class BaseView extends View implements View.OnClickListener, Vie
     boolean isClick;
     protected Paint mCurMonthTextPaint;
     int mCurrentItem;
-    C6488b mDelegate;
+    b mDelegate;
     protected int mItemHeight;
     protected int mItemWidth;
     protected List<Calendar> mItems;
@@ -44,15 +44,15 @@ public abstract class BaseView extends View implements View.OnClickListener, Vie
         paint.setTextAlign(Paint.Align.CENTER);
         paint.setColor(i);
         paint.setFakeBoldText(true);
-        paint.setTextSize(C6487a.c(getContext(), i2));
+        paint.setTextSize(a.c(getContext(), i2));
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     public void initCommonPaintWithTypeFace(Paint paint, @ColorInt int i, int i2) {
-        C6488b c6488b;
+        b bVar;
         initCommonPaint(paint, i, i2);
         try {
-            if (this.typeface == null && (c6488b = this.mDelegate) != null && !TextUtils.isEmpty(c6488b.j())) {
+            if (this.typeface == null && (bVar = this.mDelegate) != null && !TextUtils.isEmpty(bVar.j())) {
                 this.typeface = FontUtil.c().b(this.mDelegate.j(), 0);
             }
             if (this.typeface != null) {
@@ -78,8 +78,8 @@ public abstract class BaseView extends View implements View.OnClickListener, Vie
 
     /* JADX INFO: Access modifiers changed from: protected */
     public final boolean isInRange(Calendar calendar) {
-        C6488b c6488b = this.mDelegate;
-        return c6488b != null && C6487a.q(calendar, c6488b);
+        b bVar = this.mDelegate;
+        return bVar != null && a.q(calendar, bVar);
     }
 
     protected boolean isSelected(Calendar calendar) {
@@ -121,9 +121,9 @@ public abstract class BaseView extends View implements View.OnClickListener, Vie
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public final void setup(C6488b c6488b) {
-        this.mDelegate = c6488b;
-        this.mWeekStartWidth = c6488b.E();
+    public final void setup(b bVar) {
+        this.mDelegate = bVar;
+        this.mWeekStartWidth = bVar.E();
         initPaint();
         updateStyle();
         updateItemHeight();
@@ -145,11 +145,11 @@ public abstract class BaseView extends View implements View.OnClickListener, Vie
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public void updateStyle() {
-        C6488b c6488b = this.mDelegate;
-        if (c6488b == null) {
+        b bVar = this.mDelegate;
+        if (bVar == null) {
             return;
         }
-        this.mCurMonthTextPaint.setColor(c6488b.i());
+        this.mCurMonthTextPaint.setColor(bVar.i());
         this.mSelectTextPaint.setColor(this.mDelegate.z());
         this.mCurMonthTextPaint.setTextSize(this.mDelegate.l());
         this.mSelectTextPaint.setTextSize(this.mDelegate.l());

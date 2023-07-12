@@ -20,7 +20,7 @@ public final class Cdo {
         b41.i(continuation, "completion");
         a = IntrinsicsKt__IntrinsicsJvmKt.a(function1, continuation);
         c = IntrinsicsKt__IntrinsicsJvmKt.c(a);
-        Result.C8174a c8174a = Result.Companion;
+        Result.a aVar = Result.Companion;
         c.resumeWith(Result.m1271constructorimpl(wt2.INSTANCE));
     }
 
@@ -32,7 +32,7 @@ public final class Cdo {
         b41.i(continuation, "completion");
         b = IntrinsicsKt__IntrinsicsJvmKt.b(function2, r, continuation);
         c = IntrinsicsKt__IntrinsicsJvmKt.c(b);
-        Result.C8174a c8174a = Result.Companion;
+        Result.a aVar = Result.Companion;
         c.resumeWith(Result.m1271constructorimpl(wt2.INSTANCE));
     }
 }

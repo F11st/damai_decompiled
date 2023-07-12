@@ -20,7 +20,7 @@ import tb.wt2;
 /* loaded from: classes6.dex */
 public final class GXSliderDefaultIndicatorView extends GXSliderBaseIndicatorView {
     @NotNull
-    public static final C3372a Companion = new C3372a(null);
+    public static final a Companion = new a(null);
     private static final float INDICATOR_HEIGHT;
     private static final float INDICATOR_NORMAL_WIDTH;
     private static final float INDICATOR_SELECTED_WIDTH;
@@ -36,23 +36,22 @@ public final class GXSliderDefaultIndicatorView extends GXSliderBaseIndicatorVie
     private Integer unselectedColor;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.view.container.slider.GXSliderDefaultIndicatorView$a */
     /* loaded from: classes6.dex */
-    public static final class C3372a {
-        private C3372a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3372a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     static {
-        hs0.C9228b c9228b = hs0.Companion;
-        INDICATOR_SPACING = c9228b.e(5.0f);
-        INDICATOR_NORMAL_WIDTH = c9228b.e(8.0f);
-        INDICATOR_SELECTED_WIDTH = c9228b.e(8.0f);
-        INDICATOR_HEIGHT = c9228b.e(8.0f);
+        hs0.b bVar = hs0.Companion;
+        INDICATOR_SPACING = bVar.e(5.0f);
+        INDICATOR_NORMAL_WIDTH = bVar.e(8.0f);
+        INDICATOR_SELECTED_WIDTH = bVar.e(8.0f);
+        INDICATOR_HEIGHT = bVar.e(8.0f);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

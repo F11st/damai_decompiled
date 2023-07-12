@@ -1,8 +1,8 @@
 package com.vivo.push.model;
 
 import android.text.TextUtils;
-import com.vivo.push.util.C7520m;
-import com.vivo.push.util.C7523p;
+import com.vivo.push.util.m;
+import com.vivo.push.util.p;
 import java.util.HashMap;
 import java.util.Map;
 import org.json.JSONArray;
@@ -25,17 +25,17 @@ public class UnvarnishedMessage {
     private void packToObj(String str) {
         try {
             if (TextUtils.isEmpty(str)) {
-                C7523p.a(TAG, "unvarnishedMsg pack to obj is null");
+                p.a(TAG, "unvarnishedMsg pack to obj is null");
                 return;
             }
             JSONArray jSONArray = new JSONArray(str);
             this.mTargetType = jSONArray.optInt(0);
             this.mTragetContent = jSONArray.getString(1);
             this.mMessage = jSONArray.getString(2);
-            this.mParams = C7520m.a(new JSONObject(jSONArray.getString(3)));
+            this.mParams = m.a(new JSONObject(jSONArray.getString(3)));
         } catch (JSONException e) {
             e.printStackTrace();
-            C7523p.a(TAG, "unvarnishedMsg pack to obj error", e);
+            p.a(TAG, "unvarnishedMsg pack to obj error", e);
         }
     }
 

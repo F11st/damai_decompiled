@@ -3,7 +3,6 @@ package kotlinx.coroutines.flow;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function2;
@@ -56,7 +55,7 @@ public final class FlowKt__MergeKt$mapLatest$1<R, T> extends SuspendLambda imple
         FlowCollector flowCollector;
         FlowCollector flowCollector2;
         Object obj2;
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         int i = this.label;
         if (i == 0) {
             i32.b(obj);

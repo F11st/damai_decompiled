@@ -2,7 +2,6 @@ package kotlinx.coroutines.flow;
 
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function2;
@@ -28,13 +27,12 @@ final class FlowKt__ShareKt$launchSharingDeferred$1 extends SuspendLambda implem
     private CoroutineScope p$;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharingDeferred$1$a */
     /* loaded from: classes11.dex */
-    public static final class C8668a implements FlowCollector<Object> {
+    public static final class a implements FlowCollector<Object> {
         final /* synthetic */ CoroutineScope b;
         final /* synthetic */ Ref$ObjectRef c;
 
-        public C8668a(CoroutineScope coroutineScope, Ref$ObjectRef ref$ObjectRef) {
+        public a(CoroutineScope coroutineScope, Ref$ObjectRef ref$ObjectRef) {
             this.b = coroutineScope;
             this.c = ref$ObjectRef;
         }
@@ -51,13 +49,13 @@ final class FlowKt__ShareKt$launchSharingDeferred$1 extends SuspendLambda implem
                 mutableStateFlow.setValue(obj);
                 wt2Var = wt2.INSTANCE;
             } else {
-                ?? a = C8688m.a(obj);
-                FlowKt__ShareKt$launchSharingDeferred$1.this.$result.complete(C8672c.a(a));
+                ?? a = m.a(obj);
+                FlowKt__ShareKt$launchSharingDeferred$1.this.$result.complete(c.a(a));
                 wt2 wt2Var2 = wt2.INSTANCE;
                 ref$ObjectRef.element = a;
                 wt2Var = wt2Var2;
             }
-            d = C8234b.d();
+            d = kotlin.coroutines.intrinsics.b.d();
             return wt2Var == d ? wt2Var : wt2.INSTANCE;
         }
     }
@@ -86,7 +84,7 @@ final class FlowKt__ShareKt$launchSharingDeferred$1 extends SuspendLambda implem
     @Nullable
     public final Object invokeSuspend(@NotNull Object obj) {
         Object d;
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         int i = this.label;
         try {
             if (i == 0) {
@@ -95,12 +93,12 @@ final class FlowKt__ShareKt$launchSharingDeferred$1 extends SuspendLambda implem
                 Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
                 ref$ObjectRef.element = null;
                 Flow flow = this.$upstream;
-                C8668a c8668a = new C8668a(coroutineScope, ref$ObjectRef);
+                a aVar = new a(coroutineScope, ref$ObjectRef);
                 this.L$0 = coroutineScope;
                 this.L$1 = ref$ObjectRef;
                 this.L$2 = flow;
                 this.label = 1;
-                if (flow.collect(c8668a, this) == d) {
+                if (flow.collect(aVar, this) == d) {
                     return d;
                 }
             } else if (i != 1) {

@@ -47,13 +47,12 @@ public class TickletAttendanceAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.adapter.TickletAttendanceAdapter$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2043a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        View$OnClickListenerC2043a(int i) {
+        a(int i) {
             this.a = i;
         }
 
@@ -101,7 +100,7 @@ public class TickletAttendanceAdapter extends RecyclerView.Adapter<ViewHolder> {
             viewHolder.d.setText(this.b.getString(R$string.iconfont_weigouxuan));
             viewHolder.d.setTextColor(this.b.getResources().getColor(R$color.color_999999));
         }
-        viewHolder.itemView.setOnClickListener(new View$OnClickListenerC2043a(i));
+        viewHolder.itemView.setOnClickListener(new a(i));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

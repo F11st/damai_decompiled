@@ -4,10 +4,8 @@ import android.content.Context;
 import android.text.TextUtils;
 import anet.channel.entity.ConnType;
 import anet.channel.entity.EventCb;
-import anet.channel.request.C0193a;
 import anet.channel.request.Cancelable;
 import anet.channel.statist.SessionStatistic;
-import anet.channel.strategy.C0213a;
 import anet.channel.strategy.IConnStrategy;
 import anet.channel.thread.ThreadPoolExecutorFactory;
 import anet.channel.util.ALog;
@@ -58,9 +56,8 @@ public abstract class Session implements Comparable<Session> {
     public boolean A = false;
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.Session$a */
     /* loaded from: classes.dex */
-    public static class C0154a {
+    public static class a {
         public static final int AUTHING = 3;
         public static final int AUTH_FAIL = 5;
         public static final int AUTH_SUCC = 4;
@@ -186,8 +183,8 @@ public abstract class Session implements Comparable<Session> {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public void o(C0193a c0193a, int i) {
-        if (c0193a.g().containsKey(HttpHeaderConstant.X_PV) && i >= 500 && i < 600) {
+    public void o(anet.channel.request.a aVar, int i) {
+        if (aVar.g().containsKey(HttpHeaderConstant.X_PV) && i >= 500 && i < 600) {
             synchronized (this) {
                 if (this.x == null) {
                     this.x = new LinkedList();
@@ -198,7 +195,7 @@ public abstract class Session implements Comparable<Session> {
                     long longValue = this.x.remove(0).longValue();
                     long currentTimeMillis = System.currentTimeMillis();
                     if (currentTimeMillis - longValue <= DateUtils.MILLIS_PER_MINUTE) {
-                        C0213a.a().forceRefreshStrategy(c0193a.h());
+                        anet.channel.strategy.a.a().forceRefreshStrategy(aVar.h());
                         this.x.clear();
                     } else {
                         this.x.add(Long.valueOf(currentTimeMillis));
@@ -209,7 +206,7 @@ public abstract class Session implements Comparable<Session> {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public void p(C0193a c0193a, Map<String, List<String>> map) {
+    public void p(anet.channel.request.a aVar, Map<String, List<String>> map) {
         try {
             if (map.containsKey("x-switch-unit")) {
                 String d = h01.d(map, "x-switch-unit");
@@ -221,7 +218,7 @@ public abstract class Session implements Comparable<Session> {
                 }
                 long currentTimeMillis = System.currentTimeMillis();
                 if (currentTimeMillis - this.y > DateUtils.MILLIS_PER_MINUTE) {
-                    C0213a.a().forceRefreshStrategy(c0193a.h());
+                    anet.channel.strategy.a.a().forceRefreshStrategy(aVar.h());
                     this.y = currentTimeMillis;
                 }
             }
@@ -233,7 +230,7 @@ public abstract class Session implements Comparable<Session> {
 
     /* JADX INFO: Access modifiers changed from: protected */
     public synchronized void r(int i, sf0 sf0Var) {
-        ALog.e("awcn.Session", "notifyStatus", this.r, "status", C0154a.a(i));
+        ALog.e("awcn.Session", "notifyStatus", this.r, "status", a.a(i));
         if (i == this.o) {
             ALog.f("awcn.Session", "ignore notifyStatus", this.r, new Object[0]);
             return;
@@ -244,7 +241,7 @@ public abstract class Session implements Comparable<Session> {
         } else if (i == 2) {
             n(256, sf0Var);
         } else if (i == 4) {
-            this.m = C0213a.a().getUnitByHost(this.e);
+            this.m = anet.channel.strategy.a.a().getUnitByHost(this.e);
             n(512, sf0Var);
         } else if (i == 5) {
             n(1024, sf0Var);
@@ -276,7 +273,7 @@ public abstract class Session implements Comparable<Session> {
         }
     }
 
-    public abstract Cancelable w(C0193a c0193a, RequestCb requestCb);
+    public abstract Cancelable w(anet.channel.request.a aVar, RequestCb requestCb);
 
     public void x(int i, byte[] bArr, int i2) {
     }

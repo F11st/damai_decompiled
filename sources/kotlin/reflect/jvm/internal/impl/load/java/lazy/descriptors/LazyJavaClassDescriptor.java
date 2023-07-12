@@ -5,17 +5,16 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.C8177b;
 import kotlin.Lazy;
-import kotlin.collections.C8203e0;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.e0;
+import kotlin.collections.k;
+import kotlin.collections.l;
+import kotlin.collections.m;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
+import kotlin.reflect.jvm.internal.impl.builtins.b;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassKind;
@@ -38,7 +37,6 @@ import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClass;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClassifierType;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaType;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaTypeParameter;
-import kotlin.reflect.jvm.internal.impl.name.C8433a;
 import kotlin.reflect.jvm.internal.impl.resolve.descriptorUtil.DescriptorUtilsKt;
 import kotlin.reflect.jvm.internal.impl.resolve.scopes.MemberScope;
 import kotlin.reflect.jvm.internal.impl.serialization.deserialization.ErrorReporter;
@@ -77,7 +75,7 @@ import tb.z71;
 /* loaded from: classes3.dex */
 public final class LazyJavaClassDescriptor extends fj implements JavaClassDescriptor {
     @NotNull
-    public static final C8344a Companion = new C8344a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final r81 h;
     @NotNull
@@ -138,7 +136,7 @@ public final class LazyJavaClassDescriptor extends fj implements JavaClassDescri
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:11:0x001b, code lost:
-            if ((!r0.d() && r0.i(kotlin.reflect.jvm.internal.impl.builtins.C8277c.BUILT_INS_PACKAGE_NAME)) != false) goto L4;
+            if ((!r0.d() && r0.i(kotlin.reflect.jvm.internal.impl.builtins.c.BUILT_INS_PACKAGE_NAME)) != false) goto L4;
          */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
@@ -157,7 +155,7 @@ public final class LazyJavaClassDescriptor extends fj implements JavaClassDescri
             La:
                 boolean r3 = r0.d()
                 if (r3 != 0) goto L1a
-                tb.ni1 r3 = kotlin.reflect.jvm.internal.impl.builtins.C8277c.BUILT_INS_PACKAGE_NAME
+                tb.ni1 r3 = kotlin.reflect.jvm.internal.impl.builtins.c.BUILT_INS_PACKAGE_NAME
                 boolean r3 = r0.i(r3)
                 if (r3 == 0) goto L1a
                 r3 = 1
@@ -197,7 +195,7 @@ public final class LazyJavaClassDescriptor extends fj implements JavaClassDescri
                 r7 = 10
                 if (r6 != r4) goto L8d
                 java.util.ArrayList r0 = new java.util.ArrayList
-                int r1 = kotlin.collections.C8212k.q(r5, r7)
+                int r1 = kotlin.collections.k.q(r5, r7)
                 r0.<init>(r1)
                 java.util.Iterator r1 = r5.iterator()
             L72:
@@ -217,14 +215,14 @@ public final class LazyJavaClassDescriptor extends fj implements JavaClassDescri
                 if (r0 != 0) goto Ld2
                 tb.zq2 r0 = new tb.zq2
                 kotlin.reflect.jvm.internal.impl.types.Variance r2 = kotlin.reflect.jvm.internal.impl.types.Variance.INVARIANT
-                java.lang.Object r5 = kotlin.collections.C8212k.q0(r5)
+                java.lang.Object r5 = kotlin.collections.k.q0(r5)
                 kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor r5 = (kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor) r5
                 tb.fd2 r5 = r5.getDefaultType()
                 r0.<init>(r2, r5)
                 tb.n31 r2 = new tb.n31
                 r2.<init>(r1, r4)
                 java.util.ArrayList r1 = new java.util.ArrayList
-                int r4 = kotlin.collections.C8212k.q(r2, r7)
+                int r4 = kotlin.collections.k.q(r2, r7)
                 r1.<init>(r4)
                 java.util.Iterator r2 = r2.iterator()
             Lb6:
@@ -256,10 +254,10 @@ public final class LazyJavaClassDescriptor extends fj implements JavaClassDescri
             if (findAnnotation == null) {
                 return null;
             }
-            Object r0 = C8212k.r0(findAnnotation.getAllValueArguments().values());
+            Object r0 = k.r0(findAnnotation.getAllValueArguments().values());
             ai2 ai2Var = r0 instanceof ai2 ? (ai2) r0 : null;
             String b = ai2Var == null ? null : ai2Var.b();
-            if (b != null && C8433a.e(b)) {
+            if (b != null && kotlin.reflect.jvm.internal.impl.name.a.e(b)) {
                 return new hp0(b);
             }
             return null;
@@ -283,10 +281,10 @@ public final class LazyJavaClassDescriptor extends fj implements JavaClassDescri
                 }
                 JavaClassifierType next = it.next();
                 z71 f = this.e.k.a().r().f(this.e.k.g().o(next, u51.d(TypeUsage.SUPERTYPE, false, null, 3, null)), this.e.k);
-                if (f.c().getDeclarationDescriptor() instanceof NotFoundClasses.C8294b) {
+                if (f.c().getDeclarationDescriptor() instanceof NotFoundClasses.b) {
                     arrayList2.add(next);
                 }
-                if (!b41.d(f.c(), q2 != null ? q2.c() : null) && !AbstractC8271b.b0(f)) {
+                if (!b41.d(f.c(), q2 != null ? q2.c() : null) && !b.b0(f)) {
                     arrayList.add(f);
                 }
             }
@@ -296,7 +294,7 @@ public final class LazyJavaClassDescriptor extends fj implements JavaClassDescri
             if (!arrayList2.isEmpty()) {
                 ErrorReporter c = this.e.k.a().c();
                 ClassDescriptor declarationDescriptor = getDeclarationDescriptor();
-                q = C8215n.q(arrayList2, 10);
+                q = n.q(arrayList2, 10);
                 ArrayList arrayList3 = new ArrayList(q);
                 for (JavaType javaType : arrayList2) {
                     arrayList3.add(((JavaClassifierType) javaType).getPresentableText());
@@ -307,7 +305,7 @@ public final class LazyJavaClassDescriptor extends fj implements JavaClassDescri
                 A0 = CollectionsKt___CollectionsKt.A0(arrayList);
                 return A0;
             }
-            e = C8213l.e(this.e.k.d().getBuiltIns().i());
+            e = l.e(this.e.k.d().getBuiltIns().i());
             return e;
         }
 
@@ -345,19 +343,18 @@ public final class LazyJavaClassDescriptor extends fj implements JavaClassDescri
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaClassDescriptor$a */
     /* loaded from: classes3.dex */
-    public static final class C8344a {
-        private C8344a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8344a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     static {
-        C8203e0.g("equals", "hashCode", "getClass", "wait", AgooConstants.MESSAGE_NOTIFICATION, "notifyAll", "toString");
+        e0.g("equals", "hashCode", "getClass", "wait", AgooConstants.MESSAGE_NOTIFICATION, "notifyAll", "toString");
     }
 
     public /* synthetic */ LazyJavaClassDescriptor(r81 r81Var, DeclarationDescriptor declarationDescriptor, JavaClass javaClass, ClassDescriptor classDescriptor, int i, k50 k50Var) {
@@ -417,7 +414,7 @@ public final class LazyJavaClassDescriptor extends fj implements JavaClassDescri
             }
             return arrayList;
         }
-        g = C8214m.g();
+        g = m.g();
         return g;
     }
 
@@ -565,7 +562,7 @@ public final class LazyJavaClassDescriptor extends fj implements JavaClassDescri
         this.k = d;
         d.a().h().recordClass(javaClass, this);
         javaClass.getLightClassOriginKind();
-        b = C8177b.b(new Function0<List<? extends JavaAnnotation>>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaClassDescriptor$moduleAnnotations$2
+        b = kotlin.b.b(new Function0<List<? extends JavaAnnotation>>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaClassDescriptor$moduleAnnotations$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -635,7 +632,7 @@ public final class LazyJavaClassDescriptor extends fj implements JavaClassDescri
                 int q;
                 List<JavaTypeParameter> typeParameters = LazyJavaClassDescriptor.this.j().getTypeParameters();
                 LazyJavaClassDescriptor lazyJavaClassDescriptor = LazyJavaClassDescriptor.this;
-                q = C8215n.q(typeParameters, 10);
+                q = n.q(typeParameters, 10);
                 ArrayList arrayList = new ArrayList(q);
                 for (JavaTypeParameter javaTypeParameter : typeParameters) {
                     TypeParameterDescriptor resolveTypeParameter = lazyJavaClassDescriptor.k.f().resolveTypeParameter(javaTypeParameter);

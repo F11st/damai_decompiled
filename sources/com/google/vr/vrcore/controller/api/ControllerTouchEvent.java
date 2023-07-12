@@ -11,17 +11,16 @@ public final class ControllerTouchEvent extends ControllerEvent {
     public static final int ACTION_MOVE = 2;
     public static final int ACTION_NONE = 0;
     public static final int ACTION_UP = 3;
-    public static final Parcelable.Creator<ControllerTouchEvent> CREATOR = new C5447a();
+    public static final Parcelable.Creator<ControllerTouchEvent> CREATOR = new a();
     public int action;
     public int fingerId;
     public float x;
     public float y;
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.vrcore.controller.api.ControllerTouchEvent$a */
     /* loaded from: classes10.dex */
-    class C5447a implements Parcelable.Creator<ControllerTouchEvent> {
-        C5447a() {
+    class a implements Parcelable.Creator<ControllerTouchEvent> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

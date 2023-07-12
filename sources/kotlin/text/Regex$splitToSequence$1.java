@@ -59,7 +59,7 @@ public final class Regex$splitToSequence$1 extends RestrictedSuspendLambda imple
     public final java.lang.Object invokeSuspend(@org.jetbrains.annotations.NotNull java.lang.Object r11) {
         /*
             r10 = this;
-            java.lang.Object r0 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r0 = kotlin.coroutines.intrinsics.a.d()
             int r1 = r10.label
             r2 = 0
             r3 = 3

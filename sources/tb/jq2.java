@@ -3,8 +3,6 @@ package tb;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8226x;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeAliasDescriptor;
@@ -18,7 +16,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public final class jq2 {
     @NotNull
-    public static final C9317a Companion = new C9317a(null);
+    public static final a Companion = new a(null);
     @Nullable
     private final jq2 a;
     @NotNull
@@ -29,13 +27,12 @@ public final class jq2 {
     private final Map<TypeParameterDescriptor, TypeProjection> d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.jq2$a */
     /* loaded from: classes3.dex */
-    public static final class C9317a {
-        private C9317a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9317a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -48,13 +45,13 @@ public final class jq2 {
             b41.i(list, "arguments");
             List<TypeParameterDescriptor> parameters = typeAliasDescriptor.getTypeConstructor().getParameters();
             b41.h(parameters, "typeAliasDescriptor.typeConstructor.parameters");
-            q = C8215n.q(parameters, 10);
+            q = kotlin.collections.n.q(parameters, 10);
             ArrayList arrayList = new ArrayList(q);
             for (TypeParameterDescriptor typeParameterDescriptor : parameters) {
                 arrayList.add(typeParameterDescriptor.getOriginal());
             }
             H0 = CollectionsKt___CollectionsKt.H0(arrayList, list);
-            r = C8226x.r(H0);
+            r = kotlin.collections.x.r(H0);
             return new jq2(jq2Var, typeAliasDescriptor, list, r, null);
         }
     }

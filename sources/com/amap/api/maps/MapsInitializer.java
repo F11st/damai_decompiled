@@ -4,10 +4,10 @@ import android.content.Context;
 import android.os.RemoteException;
 import android.text.TextUtils;
 import android.util.Log;
-import com.amap.api.mapcore.util.C4640t;
 import com.amap.api.mapcore.util.gd;
 import com.amap.api.mapcore.util.gi;
 import com.amap.api.mapcore.util.id;
+import com.amap.api.mapcore.util.t;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -70,7 +70,7 @@ public final class MapsInitializer {
 
     public static void initialize(Context context) throws RemoteException {
         if (context != null) {
-            C4640t.a = context.getApplicationContext();
+            t.a = context.getApplicationContext();
         } else {
             Log.w("MapsInitializer", "the context is null");
         }
@@ -108,7 +108,7 @@ public final class MapsInitializer {
         if (str == null || str.trim().length() <= 0) {
             return;
         }
-        gd.a(C4640t.a, str);
+        gd.a(t.a, str);
     }
 
     public static void setBuildingHeight(int i2) {

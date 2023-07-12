@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.util.Log;
 import cn.damai.common.AppConfig;
 import cn.damai.common.DamaiConstants;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.accs.ACCSClient;
@@ -50,12 +50,11 @@ public class DaMaiPushAgent {
     };
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.push.DaMaiPushAgent$a */
     /* loaded from: classes6.dex */
-    public static class C1538a implements IAppReceiver {
+    public static class a implements IAppReceiver {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C1538a() {
+        private a() {
         }
 
         @Override // com.taobao.accs.IAppReceiver
@@ -81,10 +80,10 @@ public class DaMaiPushAgent {
             if (i == 200) {
                 Log.e(DaMaiPushAgent.a + "_accs_Youku", "bindApp success");
                 x20.g();
-                C0529c.e().A(ml.g().i(DaMaiPushAgent.b, "accs", "1", ""), "trip_yk_accs_sync_login", "push");
+                c.e().A(ml.g().i(DaMaiPushAgent.b, "accs", "1", ""), "trip_yk_accs_sync_login", "push");
                 return;
             }
-            C0529c.e().A(ml.g().i(DaMaiPushAgent.b, "accs", "2", ""), "trip_yk_accs_sync_login", "push");
+            c.e().A(ml.g().i(DaMaiPushAgent.b, "accs", "2", ""), "trip_yk_accs_sync_login", "push");
         }
 
         @Override // com.taobao.accs.IAppReceiver
@@ -95,7 +94,7 @@ public class DaMaiPushAgent {
                 return;
             }
             TLog.logd(DaMaiPushAgent.TAG_ACCS, "Accs-Youku onBindUser result: " + i + " userId: " + str);
-            C0529c e = C0529c.e();
+            c e = c.e();
             ml g = ml.g();
             Context context = DaMaiPushAgent.b;
             e.A(g.i(context, "accs", "4", "userId=" + str), "trip_yk_accs_sync_login", "push");
@@ -197,7 +196,7 @@ public class DaMaiPushAgent {
                 AccsClientConfig.Builder builder = new AccsClientConfig.Builder();
                 builder.setInappHost(g).setInappPubKey(f).setChannelHost(null).setChannelPubKey(f).setConfigEnv(i).setAppKey(AppConfig.c()).setDisableChannel(true).setTag("youku");
                 ACCSClient.init(mu0.a(), builder.build());
-                ACCSClient.getAccsClient("youku").bindApp(AppConfig.p(), new C1538a());
+                ACCSClient.getAccsClient("youku").bindApp(AppConfig.p(), new a());
             } catch (AccsException e) {
                 TLog.logd(TAG_ACCS, "init Accs-Youku AccsException " + e);
             }

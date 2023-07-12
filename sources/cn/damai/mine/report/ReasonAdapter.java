@@ -24,13 +24,12 @@ public class ReasonAdapter extends RecyclerView.Adapter {
     Context c;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.report.ReasonAdapter$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1452a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        View$OnClickListenerC1452a(int i) {
+        a(int i) {
             this.a = i;
         }
 
@@ -46,13 +45,12 @@ public class ReasonAdapter extends RecyclerView.Adapter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.report.ReasonAdapter$b */
     /* loaded from: classes6.dex */
-    class C1453b extends RecyclerView.ViewHolder {
+    class b extends RecyclerView.ViewHolder {
         public TextView a;
         public TextView b;
 
-        public C1453b(ReasonAdapter reasonAdapter, View view) {
+        public b(ReasonAdapter reasonAdapter, View view) {
             super(view);
             this.a = (TextView) view.findViewById(R$id.report_item_tv);
             this.b = (TextView) view.findViewById(R$id.report_item_check);
@@ -98,16 +96,16 @@ public class ReasonAdapter extends RecyclerView.Adapter {
             return;
         }
         ReportReason reportReason = this.a.get(i);
-        C1453b c1453b = (C1453b) viewHolder;
-        c1453b.a.setText(reportReason.reasonStr);
-        viewHolder.itemView.setOnClickListener(new View$OnClickListenerC1452a(i));
+        b bVar = (b) viewHolder;
+        bVar.a.setText(reportReason.reasonStr);
+        viewHolder.itemView.setOnClickListener(new a(i));
         if (reportReason.checked) {
-            c1453b.b.setTextColor(this.c.getResources().getColor(R$color.red_text));
-            c1453b.b.setText(R$string.iconfont_danxuanxuanzhong24);
+            bVar.b.setTextColor(this.c.getResources().getColor(R$color.red_text));
+            bVar.b.setText(R$string.iconfont_danxuanxuanzhong24);
             return;
         }
-        c1453b.b.setTextColor(this.c.getResources().getColor(R$color.black));
-        c1453b.b.setText(R$string.iconfont_danxuanweixuanzhong24);
+        bVar.b.setTextColor(this.c.getResources().getColor(R$color.black));
+        bVar.b.setText(R$string.iconfont_danxuanweixuanzhong24);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
@@ -121,6 +119,6 @@ public class ReasonAdapter extends RecyclerView.Adapter {
         }
         Context context = viewGroup.getContext();
         this.c = context;
-        return new C1453b(this, LayoutInflater.from(context).inflate(R$layout.report_list_item, viewGroup, false));
+        return new b(this, LayoutInflater.from(context).inflate(R$layout.report_list_item, viewGroup, false));
     }
 }

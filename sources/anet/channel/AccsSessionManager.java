@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.text.TextUtils;
 import anet.channel.entity.ConnType;
 import anet.channel.status.NetworkStatusHelper;
-import anet.channel.strategy.C0213a;
 import anet.channel.thread.ThreadPoolExecutorFactory;
 import anet.channel.util.ALog;
 import java.util.Collection;
@@ -13,9 +12,9 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.concurrent.CopyOnWriteArraySet;
-import tb.C9708t9;
 import tb.hu0;
 import tb.jg1;
+import tb.t9;
 import tb.xa2;
 import tb.zh2;
 
@@ -24,13 +23,13 @@ import tb.zh2;
 /* loaded from: classes.dex */
 public class AccsSessionManager {
     private static CopyOnWriteArraySet<ISessionListener> c = new CopyOnWriteArraySet<>();
-    C0162c a;
+    c a;
     Set<String> b = Collections.EMPTY_SET;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public AccsSessionManager(C0162c c0162c) {
+    public AccsSessionManager(c cVar) {
         this.a = null;
-        this.a = c0162c;
+        this.a = cVar;
     }
 
     private void c(String str) {
@@ -42,7 +41,7 @@ public class AccsSessionManager {
     }
 
     private boolean e() {
-        return !(hu0.i() && C9708t9.i()) && NetworkStatusHelper.n();
+        return !(hu0.i() && t9.i()) && NetworkStatusHelper.n();
     }
 
     public synchronized void b() {
@@ -53,7 +52,7 @@ public class AccsSessionManager {
         }
         for (xa2 xa2Var : c2) {
             if (xa2Var.b) {
-                set.add(zh2.e(C0213a.a().getSchemeByHost(xa2Var.a, xa2Var.c ? "https" : "http"), jg1.SCHEME_SLASH, xa2Var.a));
+                set.add(zh2.e(anet.channel.strategy.a.a().getSchemeByHost(xa2Var.a, xa2Var.c ? "https" : "http"), jg1.SCHEME_SLASH, xa2Var.a));
             }
         }
         for (String str : this.b) {

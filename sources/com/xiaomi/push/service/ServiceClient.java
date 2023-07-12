@@ -11,9 +11,6 @@ import android.os.Messenger;
 import android.os.RemoteException;
 import android.text.TextUtils;
 import com.tencent.connect.common.Constants;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
-import com.xiaomi.push.C7596ae;
-import com.xiaomi.push.C7688m;
 import com.xiaomi.push.et;
 import com.xiaomi.push.gk;
 import com.xiaomi.push.gl;
@@ -61,7 +58,7 @@ public class ServiceClient {
         this.f827a = false;
         this.f824a = context.getApplicationContext();
         if (m1132a()) {
-            AbstractC7535b.c("use miui push service");
+            com.xiaomi.channel.commonutils.logger.b.c("use miui push service");
             this.f827a = true;
         }
     }
@@ -181,7 +178,7 @@ public class ServiceClient {
 
     /* renamed from: a  reason: collision with other method in class */
     private boolean m1132a() {
-        if (C7596ae.e) {
+        if (com.xiaomi.push.ae.e) {
             return false;
         }
         try {
@@ -228,7 +225,7 @@ public class ServiceClient {
                     gkVar.a(gkVar2);
                     gmVarArr[i].a(gkVar);
                 }
-                AbstractC7535b.c("SEND:" + gmVarArr[i].mo926a());
+                com.xiaomi.channel.commonutils.logger.b.c("SEND:" + gmVarArr[i].mo926a());
                 bundleArr[i] = gmVarArr[i].a();
             }
             if (length > 0) {
@@ -316,7 +313,7 @@ public class ServiceClient {
             Intent a2 = a();
             Bundle a3 = glVar.a();
             if (a3 != null) {
-                AbstractC7535b.c("SEND:" + glVar.mo926a());
+                com.xiaomi.channel.commonutils.logger.b.c("SEND:" + glVar.mo926a());
                 a2.setAction(bk.f);
                 a2.putExtra(bk.F, f823a);
                 a2.putExtra("ext_packet", a3);
@@ -340,7 +337,7 @@ public class ServiceClient {
             }
             Bundle a4 = gmVar.a();
             if (a4 != null) {
-                AbstractC7535b.c("SEND:" + gmVar.mo926a());
+                com.xiaomi.channel.commonutils.logger.b.c("SEND:" + gmVar.mo926a());
                 a2.setAction(bk.e);
                 a2.putExtra(bk.F, f823a);
                 a2.putExtra("ext_packet", a4);
@@ -355,7 +352,7 @@ public class ServiceClient {
     public boolean sendMessage(byte[] bArr, String str, String str2) {
         String str3;
         if (!com.xiaomi.push.bj.b(this.f824a) || bArr == null || TextUtils.isEmpty(str) || TextUtils.isEmpty(str2)) {
-            AbstractC7535b.m586a("Failed to send message: message|userId|chid may be empty, or the network is unavailable.");
+            com.xiaomi.channel.commonutils.logger.b.m586a("Failed to send message: message|userId|chid may be empty, or the network is unavailable.");
             return false;
         }
         Intent a2 = a();
@@ -383,7 +380,7 @@ public class ServiceClient {
         String sb2 = sb.toString();
         a2.putExtra("ext_pkt_id", sb2);
         a2.putExtra("ext_chid", str2);
-        AbstractC7535b.e("SEND: chid=" + str2 + ", packetId=" + sb2);
+        com.xiaomi.channel.commonutils.logger.b.e("SEND: chid=" + str2 + ", packetId=" + sb2);
         return startServiceSafely(a2);
     }
 
@@ -392,7 +389,7 @@ public class ServiceClient {
             Intent a2 = a();
             Bundle a3 = gpVar.a();
             if (a3 != null) {
-                AbstractC7535b.c("SEND:" + gpVar.mo926a());
+                com.xiaomi.channel.commonutils.logger.b.c("SEND:" + gpVar.mo926a());
                 a2.setAction(bk.h);
                 a2.putExtra(bk.F, f823a);
                 a2.putExtra("ext_packet", a3);
@@ -409,14 +406,14 @@ public class ServiceClient {
 
     public boolean startServiceSafely(Intent intent) {
         try {
-            if (C7688m.m1118a() || Build.VERSION.SDK_INT < 26) {
+            if (com.xiaomi.push.m.m1118a() || Build.VERSION.SDK_INT < 26) {
                 this.f824a.startService(intent);
                 return true;
             }
             m1131a(intent);
             return true;
         } catch (Exception e) {
-            AbstractC7535b.a(e);
+            com.xiaomi.channel.commonutils.logger.b.a(e);
             return false;
         }
     }

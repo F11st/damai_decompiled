@@ -24,7 +24,7 @@ import cn.damai.category.ranksquare.bean.RankSquareResponse;
 import cn.damai.category.ranksquare.model.RankSquareModel;
 import cn.damai.category.ranksquare.ui.adapter.RankSquareAdapter;
 import cn.damai.category.ranksquare.ui.adapter.RankSquareNewAdapter;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.commonbusiness.share.ShareManager;
@@ -508,7 +508,7 @@ public class RankSquareActivity extends SimpleBaseActivity implements OnLoadMore
             finish();
         } else if (id != R$id.tv_share || (tag = view.getTag()) == null) {
         } else {
-            C0529c.e().x(zy1.f().q());
+            c.e().x(zy1.f().q());
             if (tag instanceof RankSquareListItemBean) {
                 RankSquareListItemBean rankSquareListItemBean = (RankSquareListItemBean) tag;
                 updateShareContent(rankSquareListItemBean.name, rankSquareListItemBean.subHead, rankSquareListItemBean.headPic);
@@ -532,7 +532,7 @@ public class RankSquareActivity extends SimpleBaseActivity implements OnLoadMore
         this.mViewModel = rankSquareModel;
         rankSquareModel.getPageIndex().observe(this, this.moreRankPageChangeObserver);
         setDamaiUTKeyBuilder(zy1.f().g());
-        C0529c.e().K(this);
+        c.e().K(this);
         requestRankData(true);
     }
 

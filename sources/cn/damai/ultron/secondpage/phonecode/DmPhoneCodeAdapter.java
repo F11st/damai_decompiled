@@ -42,13 +42,12 @@ public class DmPhoneCodeAdapter extends RecyclerView.Adapter<CodeViewHolder> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.secondpage.phonecode.DmPhoneCodeAdapter$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2642a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        View$OnClickListenerC2642a(int i) {
+        a(int i) {
             this.a = i;
         }
 
@@ -90,7 +89,7 @@ public class DmPhoneCodeAdapter extends RecyclerView.Adapter<CodeViewHolder> {
             z = true;
         }
         codeViewHolder.c.setChecked(z);
-        codeViewHolder.a.setOnClickListener(new View$OnClickListenerC2642a(i));
+        codeViewHolder.a.setOnClickListener(new a(i));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

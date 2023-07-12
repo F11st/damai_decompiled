@@ -57,13 +57,12 @@ public class DiscountTicketAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.discountticket.adapter.DiscountTicketAdapter$a */
     /* loaded from: classes.dex */
-    public static class C0382a implements OnItemClickListener {
+    public static class a implements OnItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private OnItemClickListener a;
 
-        public C0382a(OnItemClickListener onItemClickListener) {
+        public a(OnItemClickListener onItemClickListener) {
             this.a = onItemClickListener;
         }
 
@@ -134,13 +133,12 @@ public class DiscountTicketAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.discountticket.adapter.DiscountTicketAdapter$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0383b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private ProjectItemBean a;
 
-        public View$OnClickListenerC0383b(ProjectItemBean projectItemBean) {
+        public b(ProjectItemBean projectItemBean) {
             this.a = projectItemBean;
         }
 
@@ -156,7 +154,7 @@ public class DiscountTicketAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     }
 
     public DiscountTicketAdapter(mv2 mv2Var, Context context, OnItemClickListener onItemClickListener) {
-        this.d = new C0382a(onItemClickListener);
+        this.d = new a(onItemClickListener);
         this.b = context;
         this.e = mv2Var;
         this.a = LayoutInflater.from(context);
@@ -249,7 +247,7 @@ public class DiscountTicketAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         } else if (viewHolder instanceof ProjectItemViewHolder) {
             ProjectItemBean projectItemBean = (ProjectItemBean) obj;
             ((ProjectItemViewHolder) viewHolder).k(projectItemBean);
-            viewHolder.itemView.setOnClickListener(new View$OnClickListenerC0383b(projectItemBean));
+            viewHolder.itemView.setOnClickListener(new b(projectItemBean));
             mv2 mv2Var = this.e;
             if (mv2Var != null) {
                 mv2Var.l(viewHolder.itemView, projectItemBean.pos, projectItemBean.id);

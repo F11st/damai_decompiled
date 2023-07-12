@@ -51,14 +51,14 @@ public class RegionDialogFragment extends DialogFragment {
     @Override // androidx.fragment.app.DialogFragment, androidx.fragment.app.Fragment
     public void onCreate(@Nullable Bundle bundle) {
         super.onCreate(bundle);
-        setStyle(0, R.C2967style.AliUserDialogTheme);
+        setStyle(0, R.style.AliUserDialogTheme);
     }
 
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         RegionAdapter regionAdapter;
         getDialog().requestWindowFeature(1);
-        View inflate = layoutInflater.inflate(R.C2965layout.aliuser_register_region_fragment, viewGroup);
+        View inflate = layoutInflater.inflate(R.layout.aliuser_register_region_fragment, viewGroup);
         ListView listView = (ListView) inflate.findViewById(R.id.aliuser_region_listview);
         this.mListView = listView;
         if (listView != null && (regionAdapter = this.mAdapter) != null) {

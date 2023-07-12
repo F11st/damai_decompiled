@@ -3,7 +3,6 @@ package tb;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
-import kotlin.collections.C8212k;
 import kotlin.jvm.JvmName;
 import kotlin.reflect.KClass;
 import kotlin.reflect.KClassifier;
@@ -54,7 +53,7 @@ public final class l71 {
             }
             KType kType2 = (KType) obj;
             if (kType2 == null) {
-                kType2 = (KType) C8212k.R(upperBounds);
+                kType2 = (KType) kotlin.collections.k.R(upperBounds);
             }
             return (kType2 == null || (b = b(kType2)) == null) ? a12.b(Object.class) : b;
         }

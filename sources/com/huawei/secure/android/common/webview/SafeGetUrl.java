@@ -2,8 +2,8 @@ package com.huawei.secure.android.common.webview;
 
 import android.util.Log;
 import android.webkit.WebView;
-import com.huawei.secure.android.common.util.C5762b;
-import com.huawei.secure.android.common.util.C5763c;
+import com.huawei.secure.android.common.util.b;
+import com.huawei.secure.android.common.util.c;
 import java.util.concurrent.CountDownLatch;
 
 /* compiled from: Taobao */
@@ -15,12 +15,11 @@ public class SafeGetUrl {
     private WebView b;
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.secure.android.common.webview.SafeGetUrl$a */
     /* loaded from: classes10.dex */
-    class RunnableC5765a implements Runnable {
+    class a implements Runnable {
         final /* synthetic */ CountDownLatch a;
 
-        RunnableC5765a(CountDownLatch countDownLatch) {
+        a(CountDownLatch countDownLatch) {
             this.a = countDownLatch;
         }
 
@@ -39,11 +38,11 @@ public class SafeGetUrl {
         if (this.b == null) {
             return "";
         }
-        if (C5762b.a()) {
+        if (b.a()) {
             return this.b.getUrl();
         }
         CountDownLatch countDownLatch = new CountDownLatch(1);
-        C5763c.a(new RunnableC5765a(countDownLatch));
+        c.a(new a(countDownLatch));
         try {
             countDownLatch.await();
         } catch (InterruptedException e) {

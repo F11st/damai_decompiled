@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.text.TextUtils;
 import com.meizu.cloud.pushinternal.DebugLogger;
 import com.meizu.cloud.pushsdk.constants.PushConstants;
-import com.meizu.cloud.pushsdk.platform.a.C6091b;
-import com.meizu.cloud.pushsdk.util.C6102b;
 import com.meizu.cloud.pushsdk.util.MzSystemUtils;
 
 /* compiled from: Taobao */
@@ -35,7 +33,7 @@ public class PushManager {
 
     public static void checkPush(Context context, String str, String str2, String str3) {
         if (MzSystemUtils.isBrandMeizu(context)) {
-            C6091b.a(context).a(str, str2, context.getPackageName(), str3);
+            com.meizu.cloud.pushsdk.platform.a.b.a(context).a(str, str2, context.getPackageName(), str3);
         } else {
             DebugLogger.e(TAG, "please invoke checkPush on meizu device Build-in FlymeOS");
         }
@@ -43,7 +41,7 @@ public class PushManager {
 
     public static void checkSubScribeAlias(Context context, String str, String str2, String str3) {
         if (MzSystemUtils.isBrandMeizu(context)) {
-            C6091b.a(context).d(str, str2, context.getPackageName(), str3);
+            com.meizu.cloud.pushsdk.platform.a.b.a(context).d(str, str2, context.getPackageName(), str3);
         } else {
             DebugLogger.e(TAG, "please invoke checkSubScribeAlias on meizu device Build-in FlymeOS");
         }
@@ -51,28 +49,28 @@ public class PushManager {
 
     public static void checkSubScribeTags(Context context, String str, String str2, String str3) {
         if (MzSystemUtils.isBrandMeizu(context)) {
-            C6091b.a(context).c(str, str2, context.getPackageName(), str3);
+            com.meizu.cloud.pushsdk.platform.a.b.a(context).c(str, str2, context.getPackageName(), str3);
         } else {
             DebugLogger.e(TAG, "please invoke checkSubScribeTags on meizu device Build-in FlymeOS");
         }
     }
 
     public static void clearNotification(Context context) {
-        C6091b.a(context).a(context.getPackageName());
+        com.meizu.cloud.pushsdk.platform.a.b.a(context).a(context.getPackageName());
     }
 
     public static void clearNotification(Context context, int... iArr) {
-        C6091b.a(context).a(context.getPackageName(), iArr);
+        com.meizu.cloud.pushsdk.platform.a.b.a(context).a(context.getPackageName(), iArr);
     }
 
     public static void enableCacheRequest(Context context, boolean z) {
-        C6091b.a(context).a(z);
+        com.meizu.cloud.pushsdk.platform.a.b.a(context).a(z);
     }
 
     public static String getPushId(Context context) {
-        int b = C6102b.b(context, context.getPackageName());
+        int b = com.meizu.cloud.pushsdk.util.b.b(context, context.getPackageName());
         if (b == 0 || System.currentTimeMillis() / 1000 <= b) {
-            return C6102b.a(context, context.getPackageName());
+            return com.meizu.cloud.pushsdk.util.b.a(context, context.getPackageName());
         }
         return null;
     }
@@ -117,7 +115,7 @@ public class PushManager {
     public static void register(Context context, String str, String str2) {
         DebugLogger.init(context);
         if (MzSystemUtils.isBrandMeizu(context)) {
-            C6091b.a(context).a(str, str2, context.getPackageName());
+            com.meizu.cloud.pushsdk.platform.a.b.a(context).a(str, str2, context.getPackageName());
         } else {
             DebugLogger.e(TAG, "please invoke register on meizu device Build-in FlymeOS");
         }
@@ -125,7 +123,7 @@ public class PushManager {
 
     public static void subScribeAlias(Context context, String str, String str2, String str3, String str4) {
         if (MzSystemUtils.isBrandMeizu(context)) {
-            C6091b.a(context).c(str, str2, context.getPackageName(), str3, str4);
+            com.meizu.cloud.pushsdk.platform.a.b.a(context).c(str, str2, context.getPackageName(), str3, str4);
         } else {
             DebugLogger.e(TAG, "please invoke subScribeAlias on meizu device Build-in FlymeOS");
         }
@@ -133,7 +131,7 @@ public class PushManager {
 
     public static void subScribeTags(Context context, String str, String str2, String str3, String str4) {
         if (MzSystemUtils.isBrandMeizu(context)) {
-            C6091b.a(context).a(str, str2, context.getPackageName(), str3, str4);
+            com.meizu.cloud.pushsdk.platform.a.b.a(context).a(str, str2, context.getPackageName(), str3, str4);
         } else {
             DebugLogger.e(TAG, "please invoke subScribeTags on meizu device Build-in FlymeOS");
         }
@@ -141,7 +139,7 @@ public class PushManager {
 
     public static void switchPush(Context context, String str, String str2, String str3, int i, boolean z) {
         if (MzSystemUtils.isBrandMeizu(context)) {
-            C6091b.a(context).a(str, str2, context.getPackageName(), str3, i, z);
+            com.meizu.cloud.pushsdk.platform.a.b.a(context).a(str, str2, context.getPackageName(), str3, i, z);
         } else {
             DebugLogger.e(TAG, "please invoke switchPush on meizu device Build-in FlymeOS");
         }
@@ -149,7 +147,7 @@ public class PushManager {
 
     public static void switchPush(Context context, String str, String str2, String str3, boolean z) {
         if (MzSystemUtils.isBrandMeizu(context)) {
-            C6091b.a(context).a(str, str2, context.getPackageName(), str3, z);
+            com.meizu.cloud.pushsdk.platform.a.b.a(context).a(str, str2, context.getPackageName(), str3, z);
         } else {
             DebugLogger.e(TAG, "please invoke switchPush on meizu device Build-in FlymeOS");
         }
@@ -192,7 +190,7 @@ public class PushManager {
 
     public static void unRegister(Context context, String str, String str2) {
         if (MzSystemUtils.isBrandMeizu(context)) {
-            C6091b.a(context).b(str, str2, context.getPackageName());
+            com.meizu.cloud.pushsdk.platform.a.b.a(context).b(str, str2, context.getPackageName());
         } else {
             DebugLogger.e(TAG, "please invoke unRegister on meizu device Build-in FlymeOS");
         }
@@ -200,7 +198,7 @@ public class PushManager {
 
     public static void unSubScribeAlias(Context context, String str, String str2, String str3, String str4) {
         if (MzSystemUtils.isBrandMeizu(context)) {
-            C6091b.a(context).d(str, str2, context.getPackageName(), str3, str4);
+            com.meizu.cloud.pushsdk.platform.a.b.a(context).d(str, str2, context.getPackageName(), str3, str4);
         } else {
             DebugLogger.e(TAG, "please invoke unSubScribeAlias on meizu device Build-in FlymeOS");
         }
@@ -208,7 +206,7 @@ public class PushManager {
 
     public static void unSubScribeAllTags(Context context, String str, String str2, String str3) {
         if (MzSystemUtils.isBrandMeizu(context)) {
-            C6091b.a(context).b(str, str2, context.getPackageName(), str3);
+            com.meizu.cloud.pushsdk.platform.a.b.a(context).b(str, str2, context.getPackageName(), str3);
         } else {
             DebugLogger.e(TAG, "please invoke unSubScribeAllTags on meizu device Build-in FlymeOS");
         }
@@ -216,7 +214,7 @@ public class PushManager {
 
     public static void unSubScribeTags(Context context, String str, String str2, String str3, String str4) {
         if (MzSystemUtils.isBrandMeizu(context)) {
-            C6091b.a(context).b(str, str2, context.getPackageName(), str3, str4);
+            com.meizu.cloud.pushsdk.platform.a.b.a(context).b(str, str2, context.getPackageName(), str3, str4);
         } else {
             DebugLogger.e(TAG, "please invoke unSubScribeTags on meizu device Build-in FlymeOS");
         }

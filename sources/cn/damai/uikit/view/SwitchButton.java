@@ -33,12 +33,11 @@ public class SwitchButton extends FrameLayout {
     private float mWidth;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.SwitchButton$a */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC2605a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2605a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -58,12 +57,11 @@ public class SwitchButton extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.SwitchButton$b */
     /* loaded from: classes8.dex */
-    public class C2606b implements ValueAnimator.AnimatorUpdateListener {
+    public class b implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2606b() {
+        b() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -133,7 +131,7 @@ public class SwitchButton extends FrameLayout {
         }
         ValueAnimator ofInt = ValueAnimator.ofInt(0, 100);
         ofInt.setDuration(200L);
-        ofInt.addUpdateListener(new C2606b());
+        ofInt.addUpdateListener(new b());
         ofInt.start();
     }
 
@@ -202,7 +200,7 @@ public class SwitchButton extends FrameLayout {
                     textView.setPadding(yr2.a(this.mContext, 9.0f), 0, yr2.a(this.mContext, 9.0f), 0);
                     textView.setGravity(17);
                     textView.setTag(option);
-                    textView.setOnClickListener(new View$OnClickListenerC2605a());
+                    textView.setOnClickListener(new a());
                     this.mTvList.add(textView);
                     this.mLinearLayout.addView(textView);
                 }

@@ -5,9 +5,8 @@ package com.amap.api.mapcore.util;
 public class br {
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.br$a */
     /* loaded from: classes10.dex */
-    public interface InterfaceC4485a {
+    public interface a {
         void a(String str, String str2);
 
         void a(String str, String str2, float f);
@@ -31,7 +30,7 @@ public class br {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public long a(java.io.File r21, java.io.File r22, long r23, long r25, com.amap.api.mapcore.util.br.InterfaceC4485a r27) {
+    public long a(java.io.File r21, java.io.File r22, long r23, long r25, com.amap.api.mapcore.util.br.a r27) {
         /*
             Method dump skipped, instructions count: 285
             To view this dump change 'Code comments level' option to 'DEBUG'

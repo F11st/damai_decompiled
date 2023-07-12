@@ -103,14 +103,13 @@ public class ArtistProMutiRecycleAdapter extends RecyclerView.Adapter<RecyclerVi
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.livehouse.viewholder.ArtistProMutiRecycleAdapter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1923a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ArtistContentBean a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC1923a(ArtistContentBean artistContentBean, int i) {
+        a(ArtistContentBean artistContentBean, int i) {
             this.a = artistContentBean;
             this.b = i;
         }
@@ -267,7 +266,7 @@ public class ArtistProMutiRecycleAdapter extends RecyclerView.Adapter<RecyclerVi
             ((ArtistContentViewHolder) viewHolder).a(artistContentBean);
         }
         d(viewHolder.itemView, i, artistContentBean.id, artistContentBean.type);
-        viewHolder.itemView.setOnClickListener(new View$OnClickListenerC1923a(artistContentBean, i));
+        viewHolder.itemView.setOnClickListener(new a(artistContentBean, i));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

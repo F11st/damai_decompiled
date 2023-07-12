@@ -3,9 +3,8 @@ package com.airbnb.lottie.model.content;
 import android.graphics.Paint;
 import androidx.annotation.Nullable;
 import com.airbnb.lottie.LottieDrawable;
-import com.airbnb.lottie.animation.content.C2841m;
 import com.airbnb.lottie.animation.content.Content;
-import com.airbnb.lottie.model.layer.AbstractC2872a;
+import com.airbnb.lottie.animation.content.m;
 import java.util.List;
 import tb.j5;
 import tb.k5;
@@ -34,7 +33,7 @@ public class ShapeStroke implements ContentModel {
         UNKNOWN;
 
         public Paint.Cap toPaintCap() {
-            int i = C2870a.a[ordinal()];
+            int i = a.a[ordinal()];
             if (i != 1) {
                 if (i != 2) {
                     return Paint.Cap.SQUARE;
@@ -53,7 +52,7 @@ public class ShapeStroke implements ContentModel {
         BEVEL;
 
         public Paint.Join toPaintJoin() {
-            int i = C2870a.b[ordinal()];
+            int i = a.b[ordinal()];
             if (i != 1) {
                 if (i != 2) {
                     if (i != 3) {
@@ -68,9 +67,8 @@ public class ShapeStroke implements ContentModel {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.model.content.ShapeStroke$a */
     /* loaded from: classes17.dex */
-    static /* synthetic */ class C2870a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
         static final /* synthetic */ int[] b;
 
@@ -160,7 +158,7 @@ public class ShapeStroke implements ContentModel {
     }
 
     @Override // com.airbnb.lottie.model.content.ContentModel
-    public Content toContent(LottieDrawable lottieDrawable, AbstractC2872a abstractC2872a) {
-        return new C2841m(lottieDrawable, abstractC2872a, this);
+    public Content toContent(LottieDrawable lottieDrawable, com.airbnb.lottie.model.layer.a aVar) {
+        return new m(lottieDrawable, aVar, this);
     }
 }

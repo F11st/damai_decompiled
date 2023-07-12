@@ -50,7 +50,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashSet;
 import java.util.Set;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -180,7 +180,7 @@ public class FlutterView extends FrameLayout implements MouseCursorPlugin.MouseC
     private ZeroSides calculateShouldZeroSides() {
         Context context = getContext();
         int i = context.getResources().getConfiguration().orientation;
-        int rotation = ((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getRotation();
+        int rotation = ((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getRotation();
         if (i == 2) {
             if (rotation == 1) {
                 return ZeroSides.RIGHT;

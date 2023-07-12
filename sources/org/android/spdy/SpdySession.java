@@ -30,10 +30,9 @@ public final class SpdySession {
     private SuperviseConnectInfo mSuperviseConnectInfo = new SuperviseConnectInfo();
 
     /* compiled from: Taobao */
-    /* renamed from: org.android.spdy.SpdySession$a */
     /* loaded from: classes2.dex */
-    class C8876a implements ProtectedPointer.ProtectedPointerOnClose {
-        C8876a(SpdySession spdySession) {
+    class a implements ProtectedPointer.ProtectedPointerOnClose {
+        a(SpdySession spdySession) {
         }
 
         @Override // org.android.spdy.ProtectedPointer.ProtectedPointerOnClose
@@ -54,10 +53,10 @@ public final class SpdySession {
         this.sessionNativePtr = j;
         ProtectedPointer protectedPointer = new ProtectedPointer(this);
         this.pptr4sessionNativePtr = protectedPointer;
-        protectedPointer.d(new C8876a(this));
+        protectedPointer.d(new a(this));
         this.agent = spdyAgent;
         this.authority = str;
-        this.intenalcb = new C8880d();
+        this.intenalcb = new d();
         this.domain = str2;
         this.spdyStream = new NetSparseArray<>(5);
         this.sessionCallBack = sessionCb;

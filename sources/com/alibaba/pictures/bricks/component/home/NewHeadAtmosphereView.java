@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import androidx.recyclerview.widget.RecyclerView;
-import com.airbnb.lottie.C2821a;
 import com.airbnb.lottie.LottieListener;
 import com.airbnb.lottie.LottieOnCompositionLoadedListener;
 import com.alibaba.pictures.R$id;
@@ -61,9 +60,8 @@ public final class NewHeadAtmosphereView extends AbsView<GenericItem<ItemValue>,
     private final NewHeadAtmosphereView$mScrollListener$1 mScrollListener;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.NewHeadAtmosphereView$a */
     /* loaded from: classes7.dex */
-    public /* synthetic */ class C3461a {
+    public /* synthetic */ class a {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -88,8 +86,8 @@ public final class NewHeadAtmosphereView extends AbsView<GenericItem<ItemValue>,
         SafeLottieAnimationView safeLottieAnimationView = this.mLottieView;
         safeLottieAnimationView.addLottieOnCompositionLoadedListener(new LottieOnCompositionLoadedListener() { // from class: tb.ck1
             @Override // com.airbnb.lottie.LottieOnCompositionLoadedListener
-            public final void onCompositionLoaded(C2821a c2821a) {
-                NewHeadAtmosphereView.m126lambda4$lambda0(NewHeadAtmosphereView.this, c2821a);
+            public final void onCompositionLoaded(com.airbnb.lottie.a aVar) {
+                NewHeadAtmosphereView.m126lambda4$lambda0(NewHeadAtmosphereView.this, aVar);
             }
         });
         safeLottieAnimationView.setFailureListener(new LottieListener() { // from class: tb.bk1
@@ -137,10 +135,10 @@ public final class NewHeadAtmosphereView extends AbsView<GenericItem<ItemValue>,
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-4$lambda-0  reason: not valid java name */
-    public static final void m126lambda4$lambda0(NewHeadAtmosphereView newHeadAtmosphereView, C2821a c2821a) {
+    public static final void m126lambda4$lambda0(NewHeadAtmosphereView newHeadAtmosphereView, com.airbnb.lottie.a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "414205287")) {
-            ipChange.ipc$dispatch("414205287", new Object[]{newHeadAtmosphereView, c2821a});
+            ipChange.ipc$dispatch("414205287", new Object[]{newHeadAtmosphereView, aVar});
             return;
         }
         b41.i(newHeadAtmosphereView, "this$0");
@@ -250,7 +248,7 @@ public final class NewHeadAtmosphereView extends AbsView<GenericItem<ItemValue>,
         }
         this.mCurState = state;
         dispatchStateEvent();
-        int i2 = C3461a.$EnumSwitchMapping$0[state.ordinal()];
+        int i2 = a.$EnumSwitchMapping$0[state.ordinal()];
         if (i2 == 1) {
             this.mLottieView.setVisibility(0);
             this.mImgView.setVisibility(8);
@@ -263,28 +261,28 @@ public final class NewHeadAtmosphereView extends AbsView<GenericItem<ItemValue>,
         }
         Activity activity = this.mActivity;
         if (activity != null) {
-            s8 a = r8.INSTANCE.a(activity);
+            s8 a2 = r8.INSTANCE.a(activity);
             ViewGroup.LayoutParams layoutParams = this.itemView.getLayoutParams();
             if (layoutParams != null) {
                 b41.h(layoutParams, "layoutParams");
                 int i3 = layoutParams.height;
                 if (state == State.INIT) {
                     if (this.isHasClickArea) {
-                        i = a.b();
+                        i = a2.b();
                     } else {
-                        b = a.b();
-                        c = a.c();
+                        b = a2.b();
+                        c = a2.c();
                         i = b + c;
                     }
                 } else if (state == State.LOTTIE_SUCCESS || state == State.PIC_SUCCESS) {
-                    b = a.b();
-                    c = a.c();
+                    b = a2.b();
+                    c = a2.c();
                     i = b + c;
                 }
-                int a2 = (a.a() - a.d()) - i;
-                double c2 = a.c() * 0.2d;
-                if (a2 < 0 && Math.abs(a2) <= c2) {
-                    this.mHeadLayout.scrollTo(0, -a2);
+                int a3 = (a2.a() - a2.d()) - i;
+                double c2 = a2.c() * 0.2d;
+                if (a3 < 0 && Math.abs(a3) <= c2) {
+                    this.mHeadLayout.scrollTo(0, -a3);
                 } else {
                     this.mHeadLayout.scrollTo(0, 0);
                 }

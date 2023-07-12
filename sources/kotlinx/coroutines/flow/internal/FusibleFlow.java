@@ -16,9 +16,8 @@ import org.jetbrains.annotations.NotNull;
 public interface FusibleFlow<T> extends Flow<T> {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.flow.internal.FusibleFlow$a */
     /* loaded from: classes11.dex */
-    public static final class C8681a {
+    public static final class a {
         public static /* synthetic */ Flow a(FusibleFlow fusibleFlow, CoroutineContext coroutineContext, int i, BufferOverflow bufferOverflow, int i2, Object obj) {
             if (obj == null) {
                 if ((i2 & 1) != 0) {

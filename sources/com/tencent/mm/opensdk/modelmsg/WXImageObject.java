@@ -3,8 +3,8 @@ package com.tencent.mm.opensdk.modelmsg;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
-import com.tencent.mm.opensdk.utils.C7065b;
 import com.tencent.mm.opensdk.utils.Log;
+import com.tencent.mm.opensdk.utils.b;
 import java.io.ByteArrayOutputStream;
 
 /* compiled from: Taobao */
@@ -35,7 +35,7 @@ public class WXImageObject implements WXMediaMessage.IMediaObject {
     }
 
     private int getFileSize(String str) {
-        return C7065b.a(str);
+        return b.a(str);
     }
 
     @Override // com.tencent.mm.opensdk.modelmsg.WXMediaMessage.IMediaObject

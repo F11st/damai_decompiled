@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.scriptmurder.venuedetail.VenueDetailFragment;
 import cn.damai.ticklet.bean.TicketServiceFacility;
 import cn.damai.ticklet.ui.fragment.TicketDetailExtFragment;
@@ -120,7 +120,7 @@ public class DmSelfAddressActivity extends DmPopWindowBaseActivity {
             ipChange.ipc$dispatch("572510066", new Object[]{this});
             return;
         }
-        C0529c.e().x(kb0.u().w(this, this.mSelfTip));
+        c.e().x(kb0.u().w(this, this.mSelfTip));
         super.finishActivity();
     }
 

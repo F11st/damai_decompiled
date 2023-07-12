@@ -2,10 +2,9 @@ package okhttp3.internal.http;
 
 import java.io.IOException;
 import javax.annotation.Nullable;
-import okhttp3.C8816l;
-import okhttp3.C8823o;
-import okhttp3.C8827q;
-import okhttp3.internal.connection.C8770e;
+import okhttp3.l;
+import okhttp3.o;
+import okhttp3.q;
 import okio.Sink;
 import okio.Source;
 
@@ -16,22 +15,22 @@ public interface ExchangeCodec {
 
     void cancel();
 
-    C8770e connection();
+    okhttp3.internal.connection.e connection();
 
-    Sink createRequestBody(C8823o c8823o, long j) throws IOException;
+    Sink createRequestBody(o oVar, long j) throws IOException;
 
     void finishRequest() throws IOException;
 
     void flushRequest() throws IOException;
 
-    Source openResponseBodySource(C8827q c8827q) throws IOException;
+    Source openResponseBodySource(q qVar) throws IOException;
 
     @Nullable
-    C8827q.C8828a readResponseHeaders(boolean z) throws IOException;
+    q.a readResponseHeaders(boolean z) throws IOException;
 
-    long reportedContentLength(C8827q c8827q) throws IOException;
+    long reportedContentLength(q qVar) throws IOException;
 
-    C8816l trailers() throws IOException;
+    l trailers() throws IOException;
 
-    void writeRequestHeaders(C8823o c8823o) throws IOException;
+    void writeRequestHeaders(o oVar) throws IOException;
 }

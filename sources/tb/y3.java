@@ -1,15 +1,13 @@
 package tb;
 
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
-public class y3 extends C0528b {
+public class y3 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange;
     private static y3 b;
 
@@ -24,9 +22,9 @@ public class y3 extends C0528b {
         return b;
     }
 
-    public C0525a.C0527b g() {
+    public a.b g() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-181626563") ? (C0525a.C0527b) ipChange.ipc$dispatch("-181626563", new Object[]{this}) : new C0525a.C0527b().i("addaddress");
+        return AndroidInstantRuntime.support(ipChange, "-181626563") ? (a.b) ipChange.ipc$dispatch("-181626563", new Object[]{this}) : new a.b().i("addaddress");
     }
 
     public void h(boolean z) {
@@ -41,6 +39,6 @@ public class y3 extends C0528b {
         } else {
             hashMap.put("contentlabel", "0");
         }
-        C0529c.e().x(e("addaddress", "top", "save", hashMap, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(e("addaddress", "top", "save", hashMap, Boolean.FALSE));
     }
 }

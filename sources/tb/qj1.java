@@ -5,15 +5,14 @@ import anet.channel.flow.INetworkAnalysis;
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
 public class qj1 {
-    private static volatile INetworkAnalysis a = new C9606a(null);
+    private static volatile INetworkAnalysis a = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qj1$a */
     /* loaded from: classes.dex */
-    private static class C9606a implements INetworkAnalysis {
+    private static class a implements INetworkAnalysis {
         private INetworkAnalysis a;
 
-        C9606a(INetworkAnalysis iNetworkAnalysis) {
+        a(INetworkAnalysis iNetworkAnalysis) {
             this.a = null;
             this.a = iNetworkAnalysis;
         }
@@ -32,6 +31,6 @@ public class qj1 {
     }
 
     public static void b(INetworkAnalysis iNetworkAnalysis) {
-        a = new C9606a(iNetworkAnalysis);
+        a = new a(iNetworkAnalysis);
     }
 }

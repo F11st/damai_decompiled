@@ -28,8 +28,8 @@ import com.alipay.util.ScanDeviceProperty;
 import com.autonavi.amap.mapcore.tools.GlMapUtil;
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
 import java.util.List;
-import tb.C9796v;
 import tb.jn1;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -650,7 +650,7 @@ public final class CameraConfigurationManager {
         }
         Camera.Parameters parameters = camera.getParameters();
         MPaasLogger.d("CameraConfiguration", new Object[]{"The first time to get parameters"});
-        Display defaultDisplay = ((WindowManager) this.a.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
+        Display defaultDisplay = ((WindowManager) this.a.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
         if (CameraConfigurationUtils.getPreviewOptimize()) {
             Point point2 = new Point();
             com.alibaba.wireless.security.aopsdk.replace.android.view.Display.getRealSize(defaultDisplay, point2);

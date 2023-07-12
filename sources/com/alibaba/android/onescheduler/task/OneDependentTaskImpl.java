@@ -19,9 +19,9 @@ public class OneDependentTaskImpl extends OneCommonTaskImpl implements OneDepend
     private Set<OneDependentTask> mSuccessorSet;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public OneDependentTaskImpl(@NonNull C3242a c3242a) {
-        super(c3242a);
-        this.mIsAnchorTask = c3242a.h;
+    public OneDependentTaskImpl(@NonNull a aVar) {
+        super(aVar);
+        this.mIsAnchorTask = aVar.h;
     }
 
     @Override // com.alibaba.android.onescheduler.task.InnerDepentTask

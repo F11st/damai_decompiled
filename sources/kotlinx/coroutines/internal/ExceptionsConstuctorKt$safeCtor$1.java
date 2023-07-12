@@ -25,10 +25,10 @@ public final class ExceptionsConstuctorKt$safeCtor$1 extends Lambda implements F
     public final Throwable invoke(@NotNull Throwable th) {
         Object m1271constructorimpl;
         try {
-            Result.C8174a c8174a = Result.Companion;
+            Result.a aVar = Result.Companion;
             m1271constructorimpl = Result.m1271constructorimpl((Throwable) this.$block.invoke(th));
         } catch (Throwable th2) {
-            Result.C8174a c8174a2 = Result.Companion;
+            Result.a aVar2 = Result.Companion;
             m1271constructorimpl = Result.m1271constructorimpl(i32.a(th2));
         }
         if (Result.m1277isFailureimpl(m1271constructorimpl)) {

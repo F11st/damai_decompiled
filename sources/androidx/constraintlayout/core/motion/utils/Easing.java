@@ -1,6 +1,6 @@
 package androidx.constraintlayout.core.motion.utils;
 
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import java.io.PrintStream;
 import java.util.Arrays;
 
@@ -17,7 +17,7 @@ public class Easing {
     private static final String OVERSHOOT_NAME = "overshoot";
     private static final String STANDARD = "cubic(0.4, 0.0, 0.2, 1)";
     private static final String STANDARD_NAME = "standard";
-    String str = C3834a.C3837c.a;
+    String str = a.c.a;
     static Easing sDefault = new Easing();
     private static final String ACCELERATE_NAME = "accelerate";
     private static final String DECELERATE_NAME = "decelerate";

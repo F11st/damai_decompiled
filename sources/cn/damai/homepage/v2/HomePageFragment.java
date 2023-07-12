@@ -12,10 +12,10 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.AppConfig;
 import cn.damai.common.net.mtop.Util;
-import cn.damai.common.user.C0525a;
+import cn.damai.common.user.a;
 import cn.damai.common.util.PriorityTask;
 import cn.damai.common.util.ToastUtil;
-import cn.damai.common.util.toastutil.C0537a;
+import cn.damai.common.util.toastutil.a;
 import cn.damai.commonbusiness.pageut.PageUtExecutor;
 import cn.damai.commonbusiness.tab.DamaiTabViewHelper;
 import cn.damai.commonbusiness.tab.DamaiTabbarManager;
@@ -111,7 +111,7 @@ import tb.zr;
 public final class HomePageFragment extends BaseFragment implements FragmentAgent, StickyHeaderFeature {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C1254a Companion = new C1254a(null);
+    public static final a Companion = new a(null);
     @Nullable
     private HomePageGuideBar guideBar;
     @Nullable
@@ -469,7 +469,7 @@ public final class HomePageFragment extends BaseFragment implements FragmentAgen
                             zr.INSTANCE.a().a("mtop.damai.mec.aristotle.get").h(wy0.patternName).i(wy0.patternVersion).c(iResponse.getRetCode()).d(iResponse.getRetMessage()).g("大麦oneArch新首页").f(false).b();
                             return;
                         }
-                        C0537a.i(HomePageFragment.this.requireContext(), errorMsg);
+                        a.i(HomePageFragment.this.requireContext(), errorMsg);
                     }
                 });
             }
@@ -770,15 +770,14 @@ public final class HomePageFragment extends BaseFragment implements FragmentAgen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.HomePageFragment$a */
     /* loaded from: classes14.dex */
-    public static final class C1254a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C1254a() {
+        private a() {
         }
 
-        public /* synthetic */ C1254a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -824,8 +823,8 @@ public final class HomePageFragment extends BaseFragment implements FragmentAgen
         } else {
             new PageUtExecutor(getActivity(), new PageUtExecutor.UTKeyBuilderProvider() { // from class: tb.vx0
                 @Override // cn.damai.commonbusiness.pageut.PageUtExecutor.UTKeyBuilderProvider
-                public final C0525a.C0527b get(int i) {
-                    C0525a.C0527b m54ensureSetUpPageSpmb$lambda6;
+                public final a.b get(int i) {
+                    a.b m54ensureSetUpPageSpmb$lambda6;
                     m54ensureSetUpPageSpmb$lambda6 = HomePageFragment.m54ensureSetUpPageSpmb$lambda6(i);
                     return m54ensureSetUpPageSpmb$lambda6;
                 }
@@ -835,9 +834,9 @@ public final class HomePageFragment extends BaseFragment implements FragmentAgen
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: ensureSetUpPageSpmb$lambda-6  reason: not valid java name */
-    public static final C0525a.C0527b m54ensureSetUpPageSpmb$lambda6(int i) {
+    public static final a.b m54ensureSetUpPageSpmb$lambda6(int i) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "672135750") ? (C0525a.C0527b) ipChange.ipc$dispatch("672135750", new Object[]{Integer.valueOf(i)}) : new C0525a.C0527b().i("home").a(z20.d());
+        return AndroidInstantRuntime.support(ipChange, "672135750") ? (a.b) ipChange.ipc$dispatch("672135750", new Object[]{Integer.valueOf(i)}) : new a.b().i("home").a(z20.d());
     }
 
     private final int getGuideBarHeight() {

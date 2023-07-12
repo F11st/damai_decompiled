@@ -7,7 +7,6 @@ import android.util.Log;
 import com.google.vr.ndk.base.Version;
 import com.google.vr.vrcore.base.api.VrCoreNotAvailableException;
 import com.google.vr.vrcore.base.api.VrCoreUtils;
-import com.google.vr.vrcore.library.api.C5448a;
 import com.google.vr.vrcore.library.api.IVrNativeLibraryLoader;
 import com.google.vr.vrcore.library.api.ObjectWrapper;
 
@@ -38,7 +37,7 @@ public class VrCoreLibraryLoader {
             if (VrCoreUtils.getVrCoreClientApiVersion(context) < 14) {
                 return 0L;
             }
-            IVrNativeLibraryLoader newNativeLibraryLoader = C5448a.c(context).newNativeLibraryLoader(ObjectWrapper.wrap(C5448a.a(context)), ObjectWrapper.wrap(context));
+            IVrNativeLibraryLoader newNativeLibraryLoader = com.google.vr.vrcore.library.api.a.c(context).newNativeLibraryLoader(ObjectWrapper.wrap(com.google.vr.vrcore.library.api.a.a(context)), ObjectWrapper.wrap(context));
             if (newNativeLibraryLoader == null) {
                 Log.e("VrCoreLibraryLoader", "Failed to load native dlsym handle from VrCore: no library loader available.");
                 return 0L;
@@ -63,9 +62,9 @@ public class VrCoreLibraryLoader {
     public static long loadNativeGvrLibrary(Context context, Version version, Version version2) {
         try {
             a(context, version);
-            Context a = C5448a.a(context);
-            int b = C5448a.b(context);
-            IVrNativeLibraryLoader newNativeLibraryLoader = C5448a.c(context).newNativeLibraryLoader(ObjectWrapper.wrap(a), ObjectWrapper.wrap(context));
+            Context a = com.google.vr.vrcore.library.api.a.a(context);
+            int b = com.google.vr.vrcore.library.api.a.b(context);
+            IVrNativeLibraryLoader newNativeLibraryLoader = com.google.vr.vrcore.library.api.a.c(context).newNativeLibraryLoader(ObjectWrapper.wrap(a), ObjectWrapper.wrap(context));
             if (newNativeLibraryLoader == null) {
                 Log.e("VrCoreLibraryLoader", "Failed to load native GVR library from VrCore: no library loader available.");
                 return 0L;

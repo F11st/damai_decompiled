@@ -64,7 +64,7 @@ public class GiftNumKeyBoardView extends FrameLayout implements View.OnClickList
             return;
         }
         this.mContext = context;
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ykl_gift_num_keyboard_layout, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_ykl_gift_num_keyboard_layout, (ViewGroup) this, true);
         this.mEditNumLayout = (RelativeLayout) findViewById(R.id.rl);
         this.gridView = (NoScrollGridView) findViewById(R.id.id_gv);
         this.mEditText = (EditText) findViewById(R.id.id_editText_show_num);
@@ -208,11 +208,11 @@ public class GiftNumKeyBoardView extends FrameLayout implements View.OnClickList
         if (AndroidInstantRuntime.support(ipChange, "-1373002241")) {
             ipChange.ipc$dispatch("-1373002241", new Object[]{this, Boolean.valueOf(z)});
         } else if (z) {
-            this.mEditNumLayout.setBackgroundResource(R.C7941drawable.dago_pgc_ykl_num_keyboard_top_full_bg);
-            this.gridView.setBackgroundResource(R.C7941drawable.dago_pgc_ykl_num_keyboard_bottom_full_bg);
+            this.mEditNumLayout.setBackgroundResource(R.drawable.dago_pgc_ykl_num_keyboard_top_full_bg);
+            this.gridView.setBackgroundResource(R.drawable.dago_pgc_ykl_num_keyboard_bottom_full_bg);
         } else {
-            this.mEditNumLayout.setBackgroundResource(R.C7941drawable.dago_pgc_ykl_num_keyboard_top_bg);
-            this.gridView.setBackgroundResource(R.C7941drawable.dago_pgc_ykl_num_keyboard_bottom_bg);
+            this.mEditNumLayout.setBackgroundResource(R.drawable.dago_pgc_ykl_num_keyboard_top_bg);
+            this.gridView.setBackgroundResource(R.drawable.dago_pgc_ykl_num_keyboard_bottom_bg);
         }
     }
 

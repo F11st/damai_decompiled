@@ -17,14 +17,14 @@ public class zy0 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
 
     @Override // cn.damai.tetris.v2.convertor.IConverter
     /* renamed from: a */
-    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, C9039db c9039db) {
+    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, db dbVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-565856798")) {
-            return (List) ipChange.ipc$dispatch("-565856798", new Object[]{this, baseResponse, baseSection, globalConfig, c9039db});
+            return (List) ipChange.ipc$dispatch("-565856798", new Object[]{this, baseResponse, baseSection, globalConfig, dbVar});
         }
         if (baseSection != null && baseSection.getItem() != null && baseSection.getStyle() != null) {
             baseSection.getItem().put("mainTitle", (Object) CardTitleBean.fromTetrisStyle(baseSection.getStyle()).title);
         }
-        return new g32().convert(baseResponse, baseSection, globalConfig, c9039db);
+        return new g32().convert(baseResponse, baseSection, globalConfig, dbVar);
     }
 }

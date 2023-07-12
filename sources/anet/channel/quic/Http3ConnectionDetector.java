@@ -3,19 +3,17 @@ package anet.channel.quic;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
-import anet.channel.C0162c;
 import anet.channel.Session;
 import anet.channel.entity.ConnType;
 import anet.channel.entity.EventCb;
 import anet.channel.session.TnetSpdySession;
 import anet.channel.statist.Http3DetectStat;
 import anet.channel.status.NetworkStatusHelper;
-import anet.channel.strategy.C0213a;
-import anet.channel.strategy.C0214b;
 import anet.channel.strategy.ConnProtocol;
 import anet.channel.strategy.IConnStrategy;
 import anet.channel.strategy.IStrategyFilter;
 import anet.channel.strategy.IStrategyListener;
+import anet.channel.strategy.b;
 import anet.channel.thread.ThreadPoolExecutorFactory;
 import anet.channel.util.ALog;
 import anet.channel.util.AppLifecycle;
@@ -25,11 +23,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.android.spdy.SpdyAgent;
 import org.android.spdy.SpdySessionKind;
 import org.android.spdy.SpdyVersion;
-import tb.C9708t9;
 import tb.ab2;
 import tb.hu0;
 import tb.o01;
 import tb.sf0;
+import tb.t9;
 import tb.v70;
 import tb.x6;
 import tb.zm;
@@ -44,17 +42,16 @@ public class Http3ConnectionDetector {
     private static AtomicBoolean d = new AtomicBoolean(false);
     private static AtomicBoolean e = new AtomicBoolean(false);
     private static boolean g = false;
-    private static IStrategyFilter h = new C0187a();
+    private static IStrategyFilter h = new a();
     private static AtomicInteger i = new AtomicInteger(1);
-    private static IStrategyListener j = new C0188b();
-    private static NetworkStatusHelper.INetworkStatusChangeListener k = new C0189c();
-    private static AppLifecycle.AppLifecycleListener l = new C0190d();
+    private static IStrategyListener j = new b();
+    private static NetworkStatusHelper.INetworkStatusChangeListener k = new c();
+    private static AppLifecycle.AppLifecycleListener l = new d();
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.quic.Http3ConnectionDetector$a */
     /* loaded from: classes.dex */
-    static class C0187a implements IStrategyFilter {
-        C0187a() {
+    static class a implements IStrategyFilter {
+        a() {
         }
 
         @Override // anet.channel.strategy.IStrategyFilter
@@ -65,10 +62,9 @@ public class Http3ConnectionDetector {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.quic.Http3ConnectionDetector$b */
     /* loaded from: classes.dex */
-    static class C0188b implements IStrategyListener {
-        C0188b() {
+    static class b implements IStrategyListener {
+        b() {
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:40:0x005d, code lost:
@@ -93,7 +89,7 @@ public class Http3ConnectionDetector {
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        private void a(anet.channel.strategy.C0214b.C0218d[] r12) {
+        private void a(anet.channel.strategy.b.d[] r12) {
             /*
                 r11 = this;
                 if (r12 == 0) goto L88
@@ -108,7 +104,7 @@ public class Http3ConnectionDetector {
                 if (r1 >= r2) goto L88
                 r2 = r12[r1]
                 java.lang.String r3 = r2.a
-                boolean r4 = tb.C9708t9.t(r3)
+                boolean r4 = tb.t9.t(r3)
                 if (r4 != 0) goto L84
                 anet.channel.strategy.b$i[] r4 = r2.k
                 if (r4 != 0) goto L1b
@@ -180,20 +176,20 @@ public class Http3ConnectionDetector {
             L88:
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: anet.channel.quic.Http3ConnectionDetector.C0188b.a(anet.channel.strategy.b$d[]):void");
+            throw new UnsupportedOperationException("Method not decompiled: anet.channel.quic.Http3ConnectionDetector.b.a(anet.channel.strategy.b$d[]):void");
         }
 
-        private void b(C0214b.C0219e[] c0219eArr) {
-            if (c0219eArr == null || c0219eArr.length == 0) {
+        private void b(b.e[] eVarArr) {
+            if (eVarArr == null || eVarArr.length == 0) {
                 return;
             }
-            for (int i = 0; i < c0219eArr.length; i++) {
-                String str = c0219eArr[i].a;
-                if (!C9708t9.t(str)) {
-                    C0214b.C0215a[] c0215aArr = c0219eArr[i].h;
-                    if (c0215aArr != null && c0215aArr.length > 0) {
-                        for (C0214b.C0215a c0215a : c0215aArr) {
-                            String str2 = c0215a.b;
+            for (int i = 0; i < eVarArr.length; i++) {
+                String str = eVarArr[i].a;
+                if (!t9.t(str)) {
+                    b.a[] aVarArr = eVarArr[i].h;
+                    if (aVarArr != null && aVarArr.length > 0) {
+                        for (b.a aVar : aVarArr) {
+                            String str2 = aVar.b;
                             if (ConnType.HTTP3.equals(str2) || ConnType.HTTP3_PLAIN.equals(str2)) {
                                 if (!str.equals(Http3ConnectionDetector.b)) {
                                     String unused = Http3ConnectionDetector.b = str;
@@ -206,11 +202,11 @@ public class Http3ConnectionDetector {
                             }
                         }
                     }
-                    C0214b.C0224j[] c0224jArr = c0219eArr[i].i;
-                    if (c0224jArr != null) {
-                        for (int i2 = 0; i2 < c0224jArr.length; i2++) {
-                            if (c0224jArr[i2].b != null) {
-                                String str3 = c0224jArr[i2].b.b;
+                    b.j[] jVarArr = eVarArr[i].i;
+                    if (jVarArr != null) {
+                        for (int i2 = 0; i2 < jVarArr.length; i2++) {
+                            if (jVarArr[i2].b != null) {
+                                String str3 = jVarArr[i2].b.b;
                                 if (ConnType.HTTP3.equals(str3) || ConnType.HTTP3_PLAIN.equals(str3)) {
                                     if (!str.equals(Http3ConnectionDetector.b)) {
                                         String unused2 = Http3ConnectionDetector.b = str;
@@ -232,23 +228,22 @@ public class Http3ConnectionDetector {
         }
 
         @Override // anet.channel.strategy.IStrategyListener
-        public void onStrategyUpdated(C0214b.C0221g c0221g) {
-            if (c0221g == null) {
+        public void onStrategyUpdated(b.g gVar) {
+            if (gVar == null) {
                 return;
             }
-            if (C9708t9.N()) {
-                a(c0221g.c);
+            if (t9.N()) {
+                a(gVar.c);
             } else {
-                b(c0221g.b);
+                b(gVar.b);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.quic.Http3ConnectionDetector$c */
     /* loaded from: classes.dex */
-    static class C0189c implements NetworkStatusHelper.INetworkStatusChangeListener {
-        C0189c() {
+    static class c implements NetworkStatusHelper.INetworkStatusChangeListener {
+        c() {
         }
 
         @Override // anet.channel.status.NetworkStatusHelper.INetworkStatusChangeListener
@@ -257,10 +252,9 @@ public class Http3ConnectionDetector {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.quic.Http3ConnectionDetector$d */
     /* loaded from: classes.dex */
-    static class C0190d implements AppLifecycle.AppLifecycleListener {
-        C0190d() {
+    static class d implements AppLifecycle.AppLifecycleListener {
+        d() {
         }
 
         @Override // anet.channel.util.AppLifecycle.AppLifecycleListener
@@ -277,12 +271,11 @@ public class Http3ConnectionDetector {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.quic.Http3ConnectionDetector$e */
     /* loaded from: classes.dex */
-    public static class C0191e implements IConnStrategy {
+    public static class e implements IConnStrategy {
         final /* synthetic */ IConnStrategy a;
 
-        C0191e(IConnStrategy iConnStrategy) {
+        e(IConnStrategy iConnStrategy) {
             this.a = iConnStrategy;
         }
 
@@ -352,20 +345,20 @@ public class Http3ConnectionDetector {
 
     /* JADX INFO: Access modifiers changed from: private */
     public static IConnStrategy k(IConnStrategy iConnStrategy) {
-        return new C0191e(iConnStrategy);
+        return new e(iConnStrategy);
     }
 
     public static void l() {
         try {
             if (c.compareAndSet(false, true)) {
-                ALog.e("awcn.Http3ConnDetector", "registerListener", null, "http3Enable", Boolean.valueOf(C9708t9.u()));
+                ALog.e("awcn.Http3ConnDetector", "registerListener", null, "http3Enable", Boolean.valueOf(t9.u()));
                 SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(hu0.c());
                 f = defaultSharedPreferences;
                 b = defaultSharedPreferences.getString("http3_detector_host", "");
                 m();
                 NetworkStatusHelper.a(k);
                 AppLifecycle.f(l);
-                C0213a.a().registerListener(j);
+                anet.channel.strategy.a.a().registerListener(j);
             }
         } catch (Exception e2) {
             ALog.d("awcn.Http3ConnDetector", "[registerListener]error", null, e2, new Object[0]);
@@ -373,17 +366,17 @@ public class Http3ConnectionDetector {
     }
 
     private static void m() {
-        if (o(NetworkStatusHelper.i()) || !C9708t9.r()) {
+        if (o(NetworkStatusHelper.i()) || !t9.r()) {
             return;
         }
-        C0162c.k().j(o01.g("https://guide-acs.m.taobao.com"), ab2.a, 0L);
+        anet.channel.c.k().j(o01.g("https://guide-acs.m.taobao.com"), ab2.a, 0L);
     }
 
     public static void n(long j2) {
     }
 
     public static boolean o(final NetworkStatusHelper.NetworkStatus networkStatus) {
-        if (!C9708t9.u()) {
+        if (!t9.u()) {
             ALog.f("awcn.Http3ConnDetector", "startDetect", null, "http3 global config close.");
             return false;
         } else if (e.get()) {
@@ -394,7 +387,7 @@ public class Http3ConnectionDetector {
                 ALog.e("awcn.Http3ConnDetector", "startDetect", null, "host is null");
                 return false;
             }
-            final List<IConnStrategy> connStrategyListByHost = C0213a.a().getConnStrategyListByHost(b, h);
+            final List<IConnStrategy> connStrategyListByHost = anet.channel.strategy.a.a().getConnStrategyListByHost(b, h);
             if (connStrategyListByHost.isEmpty()) {
                 ALog.e("awcn.Http3ConnDetector", "startDetect", null, "http3 strategy is null.");
                 return false;
@@ -419,10 +412,10 @@ public class Http3ConnectionDetector {
                     /* compiled from: Taobao */
                     /* renamed from: anet.channel.quic.Http3ConnectionDetector$5$a */
                     /* loaded from: classes.dex */
-                    class C0186a implements EventCb {
+                    class a implements EventCb {
                         final /* synthetic */ IConnStrategy a;
 
-                        C0186a(IConnStrategy iConnStrategy) {
+                        a(IConnStrategy iConnStrategy) {
                             this.a = iConnStrategy;
                         }
 
@@ -449,7 +442,7 @@ public class Http3ConnectionDetector {
                             }
                             http3DetectStat.isBg = hu0.i() ? "bg" : "fg";
                             x6.b().commitStat(http3DetectStat);
-                            C0162c.k().j(o01.g("https://guide-acs.m.taobao.com"), ab2.a, 0L);
+                            anet.channel.c.k().j(o01.g("https://guide-acs.m.taobao.com"), ab2.a, 0L);
                         }
                     }
 
@@ -457,7 +450,7 @@ public class Http3ConnectionDetector {
                     public void run() {
                         IConnStrategy iConnStrategy = (IConnStrategy) connStrategyListByHost.get(0);
                         TnetSpdySession tnetSpdySession = new TnetSpdySession(hu0.c(), new zm("https://" + Http3ConnectionDetector.b, "Http3Detect" + Http3ConnectionDetector.i.getAndIncrement(), Http3ConnectionDetector.k(iConnStrategy)));
-                        tnetSpdySession.v(257, new C0186a(iConnStrategy));
+                        tnetSpdySession.v(257, new a(iConnStrategy));
                         tnetSpdySession.s.isCommitted = true;
                         tnetSpdySession.e();
                     }

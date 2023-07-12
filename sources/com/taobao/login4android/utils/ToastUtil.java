@@ -42,12 +42,11 @@ public class ToastUtil {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.utils.ToastUtil$a */
     /* loaded from: classes11.dex */
-    public static class HandlerC6735a extends Handler {
+    public static class a extends Handler {
         private Handler a;
 
-        public HandlerC6735a(Handler handler) {
+        public a(Handler handler) {
             this.a = handler;
         }
 
@@ -82,7 +81,7 @@ public class ToastUtil {
                     sIsHookFieldInit = true;
                 }
                 Object obj = sField_TN.get(toast);
-                sField_TN_Handler.set(obj, new HandlerC6735a((Handler) sField_TN_Handler.get(obj)));
+                sField_TN_Handler.set(obj, new a((Handler) sField_TN_Handler.get(obj)));
             } catch (Exception e) {
                 Log.e(TAG, "Hook toast exception=" + e);
             }

@@ -17,7 +17,7 @@ import com.youku.middlewareservice.provider.info.DeviceInfoProviderProxy;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import kotlin.collections.C8212k;
+import kotlin.collections.k;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -32,7 +32,7 @@ public final class OrderConfirmAdapter extends RecyclerView.Adapter<RecyclerView
     private static transient /* synthetic */ IpChange $ipChange;
     public static final int BUY_NUM_TYPE = 0;
     @NotNull
-    public static final C3534a Companion = new C3534a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final Map<Integer, Integer> f = new LinkedHashMap();
     @Nullable
@@ -46,15 +46,14 @@ public final class OrderConfirmAdapter extends RecyclerView.Adapter<RecyclerView
     private JSONObject e;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.orderconfirm.OrderConfirmAdapter$a */
     /* loaded from: classes7.dex */
-    public static final class C3534a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3534a() {
+        private a() {
         }
 
-        public /* synthetic */ C3534a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -128,7 +127,7 @@ public final class OrderConfirmAdapter extends RecyclerView.Adapter<RecyclerView
         List<OrderCreateBean.GaiaxRender> list2 = orderCreateBean.render;
         if (list2 != null) {
             b41.h(list2, "render");
-            OrderCreateBean.GaiaxRender gaiaxRender = (OrderCreateBean.GaiaxRender) C8212k.P(list2);
+            OrderCreateBean.GaiaxRender gaiaxRender = (OrderCreateBean.GaiaxRender) k.P(list2);
             if (gaiaxRender != null) {
                 b41.h(gaiaxRender, "first()");
                 i2 = a(gaiaxRender);
@@ -171,7 +170,7 @@ public final class OrderConfirmAdapter extends RecyclerView.Adapter<RecyclerView
         } else if (!(viewHolder instanceof NativeGaiaXViewHolder) || orderCreateBean == null || (list = orderCreateBean.render) == null) {
         } else {
             b41.h(list, "render");
-            OrderCreateBean.GaiaxRender gaiaxRender = (OrderCreateBean.GaiaxRender) C8212k.P(list);
+            OrderCreateBean.GaiaxRender gaiaxRender = (OrderCreateBean.GaiaxRender) k.P(list);
             if (gaiaxRender != null) {
                 b41.h(gaiaxRender, "first()");
                 UrlUtil urlUtil = UrlUtil.INSTANCE;

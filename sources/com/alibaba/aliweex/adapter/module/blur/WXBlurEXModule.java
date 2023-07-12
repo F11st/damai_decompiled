@@ -150,7 +150,7 @@ public class WXBlurEXModule extends WXSDKEngine.DestroyableModule {
                     fireCallbackEvent("failure", -1L, jSCallback);
                     return;
                 }
-                final C3056b b2 = C3056b.b(new C3055a(true));
+                final b b2 = b.b(new a(true));
                 Coordinator.postTask(new Coordinator.TaggedRunnable(TAG) { // from class: com.alibaba.aliweex.adapter.module.blur.WXBlurEXModule.1
                     @Override // java.lang.Runnable
                     public void run() {

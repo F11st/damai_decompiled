@@ -28,14 +28,13 @@ public class y10 {
     public static final int PROP_TRANSFORM = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.y10$a */
     /* loaded from: classes11.dex */
-    static class C9944a implements ValueAnimator.AnimatorUpdateListener {
+    static class a implements ValueAnimator.AnimatorUpdateListener {
         final /* synthetic */ float a;
         final /* synthetic */ float b;
         final /* synthetic */ View c;
 
-        C9944a(float f, float f2, View view) {
+        a(float f, float f2, View view) {
             this.a = f;
             this.b = f2;
             this.c = view;
@@ -52,13 +51,12 @@ public class y10 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.y10$b */
     /* loaded from: classes11.dex */
-    static class C9945b implements Animator.AnimatorListener {
+    static class b implements Animator.AnimatorListener {
         final /* synthetic */ View a;
         final /* synthetic */ float b;
 
-        C9945b(View view, float f) {
+        b(View view, float f) {
             this.a = view;
             this.b = f;
         }
@@ -83,14 +81,13 @@ public class y10 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.y10$c */
     /* loaded from: classes11.dex */
-    static class C9946c implements ValueAnimator.AnimatorUpdateListener {
+    static class c implements ValueAnimator.AnimatorUpdateListener {
         final /* synthetic */ int a;
         final /* synthetic */ int b;
         final /* synthetic */ View c;
 
-        C9946c(int i, int i2, View view) {
+        c(int i, int i2, View view) {
             this.a = i;
             this.b = i2;
             this.c = view;
@@ -114,13 +111,12 @@ public class y10 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.y10$d */
     /* loaded from: classes11.dex */
-    static class C9947d implements Animator.AnimatorListener {
+    static class d implements Animator.AnimatorListener {
         final /* synthetic */ View a;
         final /* synthetic */ int b;
 
-        C9947d(View view, int i) {
+        d(View view, int i) {
             this.a = view;
             this.b = i;
         }
@@ -145,15 +141,14 @@ public class y10 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.y10$e */
     /* loaded from: classes11.dex */
-    public static class C9948e {
+    public static class e {
         public final int a;
         public final long b;
         public final long c;
         public final int d;
 
-        public C9948e(int i, long j, long j2, int i2) {
+        public e(int i, long j, long j2, int i2) {
             this.a = i;
             this.b = j;
             this.c = j2;
@@ -185,43 +180,43 @@ public class y10 {
         if (str == null) {
             return 0;
         }
-        char c = 65535;
+        char c2 = 65535;
         switch (str.hashCode()) {
             case -1965120668:
                 if (str.equals("ease-in")) {
-                    c = 0;
+                    c2 = 0;
                     break;
                 }
                 break;
             case -1102672091:
                 if (str.equals("linear")) {
-                    c = 4;
+                    c2 = 4;
                     break;
                 }
                 break;
             case -789192465:
                 if (str.equals("ease-out")) {
-                    c = 1;
+                    c2 = 1;
                     break;
                 }
                 break;
             case -361990811:
                 if (str.equals("ease-in-out")) {
-                    c = 2;
+                    c2 = 2;
                     break;
                 }
                 break;
             case 3105774:
                 if (str.equals(Constants.TimeFunction.EASE)) {
-                    c = 3;
+                    c2 = 3;
                     break;
                 }
                 break;
         }
-        if (c != 0) {
-            if (c != 1) {
-                if (c != 2) {
-                    return c != 3 ? 0 : 4;
+        if (c2 != 0) {
+            if (c2 != 1) {
+                if (c2 != 2) {
+                    return c2 != 3 ? 0 : 4;
                 }
                 return 3;
             }
@@ -232,28 +227,28 @@ public class y10 {
 
     private static int c(String str) {
         if (str != null) {
-            char c = 65535;
+            char c2 = 65535;
             switch (str.hashCode()) {
                 case -1267206133:
                     if (str.equals("opacity")) {
-                        c = 0;
+                        c2 = 0;
                         break;
                     }
                     break;
                 case 605322756:
                     if (str.equals("background-color")) {
-                        c = 1;
+                        c2 = 1;
                         break;
                     }
                     break;
                 case 1052666732:
                     if (str.equals("transform")) {
-                        c = 2;
+                        c2 = 2;
                         break;
                     }
                     break;
             }
-            switch (c) {
+            switch (c2) {
                 case 0:
                     return 1;
                 case 1:
@@ -267,16 +262,16 @@ public class y10 {
         throw new IllegalArgumentException("Invalid Transition prop: " + str);
     }
 
-    private static ValueAnimator d(C9948e c9948e) {
+    private static ValueAnimator d(e eVar) {
         ValueAnimator ofFloat = ValueAnimator.ofFloat(0.0f, 1.0f);
-        ofFloat.setDuration(c9948e.c);
-        ofFloat.setStartDelay(c9948e.b);
-        ofFloat.setInterpolator(a(c9948e.d));
+        ofFloat.setDuration(eVar.c);
+        ofFloat.setStartDelay(eVar.b);
+        ofFloat.setInterpolator(a(eVar.d));
         return ofFloat;
     }
 
     @Nullable
-    public static List<C9948e> e(@Nullable String str, @Nullable String str2, @Nullable String str3, @Nullable String str4, @Nullable String str5) {
+    public static List<e> e(@Nullable String str, @Nullable String str2, @Nullable String str3, @Nullable String str4, @Nullable String str5) {
         long j;
         int i;
         boolean isEmpty = TextUtils.isEmpty(str);
@@ -291,7 +286,7 @@ public class y10 {
             for (String str6 : split) {
                 String[] split2 = str6.trim().split("\\s");
                 if (split2.length == 3) {
-                    linkedList.add(new C9948e(c(split2[0].trim()), 0L, f(split2[1].trim()), b(split2[2].trim())));
+                    linkedList.add(new e(c(split2[0].trim()), 0L, f(split2[1].trim()), b(split2[2].trim())));
                 } else {
                     throw new IllegalArgumentException("split by space array's length != 3");
                 }
@@ -313,7 +308,7 @@ public class y10 {
                 }
                 LinkedList linkedList2 = new LinkedList();
                 for (int i2 = 0; i2 < split3.length; i2++) {
-                    int c = c(split3[i2].trim());
+                    int c2 = c(split3[i2].trim());
                     long f = f((split4.length != split3.length ? split4[0] : split4[i2]).trim());
                     if (split5 != null) {
                         j = f((split5.length != split3.length ? split5[0] : split5[i2]).trim());
@@ -326,7 +321,7 @@ public class y10 {
                     } else {
                         i = 0;
                     }
-                    linkedList2.add(new C9948e(c, j2, f, i));
+                    linkedList2.add(new e(c2, j2, f, i));
                 }
                 return linkedList2;
             }
@@ -346,14 +341,14 @@ public class y10 {
         return parseFloat;
     }
 
-    public static List<Animator> g(List<C9948e> list, View view, float f, int i) {
+    public static List<Animator> g(List<e> list, View view, float f, int i) {
         ArrayList arrayList = new ArrayList();
         if (list != null && list.size() > 0) {
             boolean z = false;
             loop0: while (true) {
                 boolean z2 = false;
-                for (C9948e c9948e : list) {
-                    int i2 = c9948e.a;
+                for (e eVar : list) {
+                    int i2 = eVar.a;
                     if (i2 != 1) {
                         if (i2 == 2 && !z2) {
                             int i3 = 16777215;
@@ -363,10 +358,10 @@ public class y10 {
                             if (i == i3) {
                                 break;
                             }
-                            ValueAnimator d = d(c9948e);
-                            d.addUpdateListener(new C9946c(i3, i, view));
-                            d.addListener(new C9947d(view, i));
-                            arrayList.add(d);
+                            ValueAnimator d2 = d(eVar);
+                            d2.addUpdateListener(new c(i3, i, view));
+                            d2.addListener(new d(view, i));
+                            arrayList.add(d2);
                             z2 = true;
                         }
                     } else if (!z) {
@@ -374,10 +369,10 @@ public class y10 {
                         if (Float.compare(alpha, f) == 0) {
                             z = false;
                         } else {
-                            ValueAnimator d2 = d(c9948e);
-                            d2.addUpdateListener(new C9944a(alpha, f, view));
-                            d2.addListener(new C9945b(view, f));
-                            arrayList.add(d2);
+                            ValueAnimator d3 = d(eVar);
+                            d3.addUpdateListener(new a(alpha, f, view));
+                            d3.addListener(new b(view, f));
+                            arrayList.add(d3);
                             z = true;
                         }
                     }

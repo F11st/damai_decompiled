@@ -1,8 +1,8 @@
 package cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.contract;
 
 import cn.damai.comment.bean.CommentsItemBean;
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseModel;
+import cn.damai.common.app.base.a;
 import cn.damai.commonbusiness.base.BaseDamaiView;
 import cn.damai.commonbusiness.search.bean.FollowDataBean;
 import cn.damai.commonbusiness.seatbiz.sku.qilin.bean.SkuBean;
@@ -22,7 +22,7 @@ public interface ProjectItemContract {
 
     /* compiled from: Taobao */
     /* loaded from: classes8.dex */
-    public static abstract class Presenter extends AbstractC0470a<View, Model> {
+    public static abstract class Presenter extends a<View, Model> {
         public abstract void getProjectDetailData(int i, String str);
 
         public abstract void getProjectDetailDiscussion(long j, long j2, String str);

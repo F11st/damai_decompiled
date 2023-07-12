@@ -8,13 +8,12 @@ import org.jetbrains.annotations.NotNull;
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public interface ErrorReporter {
-    public static final ErrorReporter DO_NOTHING = new C8508a();
+    public static final ErrorReporter DO_NOTHING = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.serialization.deserialization.ErrorReporter$a */
     /* loaded from: classes3.dex */
-    static class C8508a implements ErrorReporter {
-        C8508a() {
+    static class a implements ErrorReporter {
+        a() {
         }
 
         private static /* synthetic */ void a(int i) {

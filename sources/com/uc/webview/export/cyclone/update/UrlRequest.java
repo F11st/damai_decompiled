@@ -1,7 +1,7 @@
 package com.uc.webview.export.cyclone.update;
 
 import android.text.TextUtils;
-import anet.channel.request.C0193a;
+import anet.channel.request.a;
 import com.uc.webview.export.cyclone.update.Utils;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -41,7 +41,7 @@ class UrlRequest {
         HttpURLConnection httpURLConnection = (HttpURLConnection) new URL(url, str).openConnection();
         if (z) {
             httpURLConnection.setInstanceFollowRedirects(false);
-            httpURLConnection.setRequestMethod(C0193a.C0196c.HEAD);
+            httpURLConnection.setRequestMethod(a.c.HEAD);
         } else {
             httpURLConnection.setInstanceFollowRedirects(true);
             httpURLConnection.setRequestMethod("GET");

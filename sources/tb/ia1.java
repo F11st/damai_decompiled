@@ -8,7 +8,6 @@ import com.alibaba.pictures.piclocation.LocationInterface;
 import com.alibaba.pictures.piclocation.listener.GetBlackListInterface;
 import com.alibaba.pictures.piclocation.listener.GetLocationInfoInterface;
 import com.alibaba.pictures.piclocation.mtop.LocationRequestDelegate;
-import com.alipay.sdk.m.e0.C4186a;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.services.core.ServiceSettings;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -33,7 +32,7 @@ public final class ia1 {
     private static List<String> h;
     @NotNull
     public static final ia1 INSTANCE = new ia1();
-    private static long f = (long) C4186a.a;
+    private static long f = (long) com.alipay.sdk.m.e0.a.a;
 
     private ia1() {
     }

@@ -18,18 +18,18 @@ import tb.bw2;
 /* loaded from: classes12.dex */
 public class FileCache {
     private static final String f = FileEntry.SCHEMA.e();
-    private final LruCache<String, C6655b> a;
+    private final LruCache<String, b> a;
     private File b;
     private boolean c;
     private long d;
-    private C6656c e;
+    private c e;
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
     @Entry.Table("file_cache")
     /* loaded from: classes11.dex */
     public static class FileEntry extends Entry {
-        public static final C6657a SCHEMA = new C6657a(FileEntry.class);
+        public static final com.taobao.android.ultron.datamodel.cache.db.a SCHEMA = new com.taobao.android.ultron.datamodel.cache.db.a(FileEntry.class);
         @Entry.Column(indexed = true, value = "hash_code")
         public long b;
         @Entry.Column("tag")
@@ -60,14 +60,13 @@ public class FileCache {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.ultron.datamodel.cache.db.FileCache$b */
     /* loaded from: classes12.dex */
-    public static final class C6655b {
+    public static final class b {
         private long a;
         public String b;
         public File c;
 
-        private C6655b(long j, String str, File file) {
+        private b(long j, String str, File file) {
             this.a = j;
             this.b = str;
             this.c = file;
@@ -76,12 +75,11 @@ public class FileCache {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.ultron.datamodel.cache.db.FileCache$c */
     /* loaded from: classes12.dex */
-    public final class C6656c extends SQLiteOpenHelper {
+    public final class c extends SQLiteOpenHelper {
         public static final int DATABASE_VERSION = 1;
 
-        public C6656c(Context context, String str) {
+        public c(Context context, String str) {
             super(context, str, (SQLiteDatabase.CursorFactory) null, 1);
         }
 
@@ -145,13 +143,13 @@ public class FileCache {
 
     private FileEntry g(String str) {
         Cursor cursor;
-        C6657a c6657a;
+        com.taobao.android.ultron.datamodel.cache.db.a aVar;
         String[] strArr = {String.valueOf(bw2.b(str)), str};
         try {
             SQLiteDatabase readableDatabase = this.e.getReadableDatabase();
             String str2 = f;
-            c6657a = FileEntry.SCHEMA;
-            cursor = readableDatabase.query(str2, c6657a.d(), "hash_code=? AND tag=?", strArr, null, null, null);
+            aVar = FileEntry.SCHEMA;
+            cursor = readableDatabase.query(str2, aVar.d(), "hash_code=? AND tag=?", strArr, null, null, null);
         } catch (Throwable th) {
             th = th;
             cursor = null;
@@ -162,7 +160,7 @@ public class FileCache {
                 return null;
             }
             FileEntry fileEntry = new FileEntry();
-            c6657a.b(cursor, fileEntry);
+            aVar.b(cursor, fileEntry);
             i(fileEntry.a);
             cursor.close();
             return fileEntry;
@@ -193,14 +191,14 @@ public class FileCache {
         synchronized (this) {
             FileEntry g = g(str);
             if (g != null) {
-                C6655b c6655b = new C6655b(g.a, str, new File(this.b, g.d));
+                b bVar = new b(g.a, str, new File(this.b, g.d));
                 this.e.getWritableDatabase().delete(f, "_id=?", new String[]{String.valueOf(g.a)});
-                c6655b.c.delete();
+                bVar.c.delete();
             }
         }
     }
 
-    public List<C6655b> c() {
+    public List<b> c() {
         if (!this.c) {
             try {
                 e();
@@ -216,11 +214,11 @@ public class FileCache {
                 return null;
             }
             for (FileEntry fileEntry : d) {
-                C6655b c6655b = new C6655b(fileEntry.a, fileEntry.c, new File(this.b, fileEntry.d));
-                if (!c6655b.c.isFile()) {
+                b bVar = new b(fileEntry.a, fileEntry.c, new File(this.b, fileEntry.d));
+                if (!bVar.c.isFile()) {
                     this.e.getWritableDatabase().delete(f, "_id=?", new String[]{String.valueOf(fileEntry.a)});
                 } else {
-                    arrayList.add(c6655b);
+                    arrayList.add(bVar);
                 }
             }
             return arrayList;
@@ -240,7 +238,7 @@ public class FileCache {
         }
     }
 
-    public C6655b f(String str) {
+    public b f(String str) {
         if (!this.c) {
             try {
                 e();
@@ -249,13 +247,13 @@ public class FileCache {
                 return null;
             }
         }
-        C6655b c6655b = this.a.get(str);
-        if (c6655b != null) {
-            if (c6655b.c.isFile()) {
+        b bVar = this.a.get(str);
+        if (bVar != null) {
+            if (bVar.c.isFile()) {
                 synchronized (this) {
-                    i(c6655b.a);
+                    i(bVar.a);
                 }
-                return c6655b;
+                return bVar;
             }
             this.a.remove(str);
         }
@@ -264,13 +262,13 @@ public class FileCache {
             if (g == null) {
                 return null;
             }
-            C6655b c6655b2 = new C6655b(g.a, str, new File(this.b, g.d));
-            if (!c6655b2.c.isFile()) {
+            b bVar2 = new b(g.a, str, new File(this.b, g.d));
+            if (!bVar2.c.isFile()) {
                 this.e.getWritableDatabase().delete(f, "_id=?", new String[]{String.valueOf(g.a)});
                 return null;
             }
-            this.a.put(str, c6655b2);
-            return c6655b2;
+            this.a.put(str, bVar2);
+            return bVar2;
         }
     }
 
@@ -311,10 +309,10 @@ public class FileCache {
         this.b = file;
         this.d = j;
         this.a = new LruCache<>(i);
-        C6656c c6656c = new C6656c(context, str);
-        this.e = c6656c;
+        c cVar = new c(context, str);
+        this.e = cVar;
         if (Build.VERSION.SDK_INT >= 16) {
-            c6656c.setWriteAheadLoggingEnabled(false);
+            cVar.setWriteAheadLoggingEnabled(false);
         }
     }
 }

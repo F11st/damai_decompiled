@@ -12,15 +12,11 @@ import android.text.TextUtils;
 import android.util.Base64;
 import com.ali.user.mobile.login.model.LoginConstant;
 import com.alibaba.security.biometrics.service.model.params.ALBiometricsKeys;
-import com.alibaba.security.common.track.model.C3834a;
-import com.alipay.sdk.m.j.C4211a;
-import com.alipay.sdk.m.k.C4218a;
-import com.alipay.sdk.m.k.C4226b;
-import com.alipay.sdk.m.m.C4245a;
-import com.alipay.sdk.m.s.C4293a;
-import com.alipay.sdk.m.s.C4295b;
-import com.alipay.sdk.m.u.C4302e;
-import com.alipay.sdk.m.u.C4318n;
+import com.alibaba.security.common.track.model.a;
+import com.alipay.sdk.m.m.a;
+import com.alipay.sdk.m.s.a;
+import com.alipay.sdk.m.u.e;
+import com.alipay.sdk.m.u.n;
 import com.youku.live.livesdk.preloader.Preloader;
 import java.nio.charset.Charset;
 import java.util.HashMap;
@@ -66,9 +62,8 @@ public final class OpenAuthTask {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alipay.sdk.app.OpenAuthTask$a */
     /* loaded from: classes12.dex */
-    public static /* synthetic */ class C4124a {
+    public static /* synthetic */ class a {
         public static final /* synthetic */ int[] a;
 
         static {
@@ -90,14 +85,13 @@ public final class OpenAuthTask {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alipay.sdk.app.OpenAuthTask$b */
     /* loaded from: classes12.dex */
-    public final class RunnableC4125b implements Runnable {
+    public final class b implements Runnable {
         public final int a;
         public final String b;
         public final Bundle c;
 
-        public /* synthetic */ RunnableC4125b(OpenAuthTask openAuthTask, int i, String str, Bundle bundle, C4124a c4124a) {
+        public /* synthetic */ b(OpenAuthTask openAuthTask, int i, String str, Bundle bundle, a aVar) {
             this(i, str, bundle);
         }
 
@@ -108,7 +102,7 @@ public final class OpenAuthTask {
             }
         }
 
-        public RunnableC4125b(int i, String str, Bundle bundle) {
+        public b(int i, String str, Bundle bundle) {
             this.a = i;
             this.b = str;
             this.c = bundle;
@@ -117,7 +111,7 @@ public final class OpenAuthTask {
 
     public OpenAuthTask(Activity activity) {
         this.b = activity;
-        C4295b.d().a(activity);
+        com.alipay.sdk.m.s.b.d().a(activity);
     }
 
     private String b(long j, String str, BizType bizType, String str2) throws JSONException {
@@ -136,7 +130,7 @@ public final class OpenAuthTask {
     private String c(BizType bizType, Map<String, String> map) {
         if (bizType != null) {
             Uri.Builder appendQueryParameter = new Uri.Builder().scheme("alipays").authority("platformapi").path("startapp").appendQueryParameter(ALBiometricsKeys.KEY_APP_ID, bizType.appId);
-            if (C4124a.a[bizType.ordinal()] == 1) {
+            if (a.a[bizType.ordinal()] == 1) {
                 appendQueryParameter.appendQueryParameter("appClearTop", "false").appendQueryParameter("startMultApp", "YES");
             }
             for (Map.Entry<String, String> entry : map.entrySet()) {
@@ -147,70 +141,70 @@ public final class OpenAuthTask {
         throw new RuntimeException("missing bizType");
     }
 
-    private boolean d(C4293a c4293a, String str, BizType bizType, Map<String, String> map, boolean z) {
+    private boolean d(com.alipay.sdk.m.s.a aVar, String str, BizType bizType, Map<String, String> map, boolean z) {
         PackageInfo packageInfo;
         if (this.a) {
-            this.d.post(new RunnableC4125b(this, 4000, "该 OpenAuthTask 已在执行", null, null));
+            this.d.post(new b(this, 4000, "该 OpenAuthTask 已在执行", null, null));
             return true;
         }
         this.a = true;
         long elapsedRealtime = SystemClock.elapsedRealtime();
         if (elapsedRealtime - f <= 3000) {
-            this.d.post(new RunnableC4125b(this, 5000, "3s 内重复支付", null, null));
+            this.d.post(new b(this, 5000, "3s 内重复支付", null, null));
             return true;
         }
         f = elapsedRealtime;
-        C4211a.a("");
-        String a = C4318n.a(32);
+        com.alipay.sdk.m.j.a.a("");
+        String a2 = n.a(32);
         HashMap hashMap = new HashMap(map);
         hashMap.put("mqpPkgName", this.b.getPackageName());
-        hashMap.put("mqpScene", C3834a.C3835a.a);
-        List<C4245a.C4247b> l = C4245a.D().l();
-        if (!C4245a.D().h || l == null) {
-            l = C4211a.d;
+        hashMap.put("mqpScene", a.C0166a.a);
+        List<a.b> l = com.alipay.sdk.m.m.a.D().l();
+        if (!com.alipay.sdk.m.m.a.D().h || l == null) {
+            l = com.alipay.sdk.m.j.a.d;
         }
-        C4318n.C4321c a2 = C4318n.a(c4293a, this.b, l);
-        if (a2 == null || a2.a(c4293a) || a2.a() || (packageInfo = a2.a) == null || packageInfo.versionCode < 122) {
+        n.c a3 = n.a(aVar, this.b, l);
+        if (a3 == null || a3.a(aVar) || a3.a() || (packageInfo = a3.a) == null || packageInfo.versionCode < 122) {
             if (z) {
                 hashMap.put("mqpScheme", String.valueOf(str));
-                hashMap.put("mqpNotifyName", a);
+                hashMap.put("mqpNotifyName", a2);
                 hashMap.put("mqpScene", "landing");
                 String c = c(bizType, hashMap);
                 Intent intent = new Intent(this.b, H5OpenAuthActivity.class);
                 intent.putExtra("url", String.format("https://render.alipay.com/p/s/i?scheme=%s", Uri.encode(c)));
-                C4293a.C4294a.a(c4293a, intent);
+                a.C0200a.a(aVar, intent);
                 this.b.startActivity(intent);
                 return false;
             }
-            this.d.post(new RunnableC4125b(this, 4001, "支付宝未安装或签名错误", null, null));
+            this.d.post(new b(this, 4001, "支付宝未安装或签名错误", null, null));
             return true;
         }
         try {
-            HashMap<String, String> a3 = C4293a.a(c4293a);
-            a3.put("ts_scheme", String.valueOf(SystemClock.elapsedRealtime()));
-            hashMap.put("mqpLoc", new JSONObject(a3).toString());
+            HashMap<String, String> a4 = com.alipay.sdk.m.s.a.a(aVar);
+            a4.put("ts_scheme", String.valueOf(SystemClock.elapsedRealtime()));
+            hashMap.put("mqpLoc", new JSONObject(a4).toString());
             String c2 = c(bizType, hashMap);
-            e.put(a, this.c);
+            e.put(a2, this.c);
             String str2 = null;
             try {
-                str2 = b(elapsedRealtime, a, bizType, c2);
+                str2 = b(elapsedRealtime, a2, bizType, c2);
             } catch (JSONException e2) {
-                C4218a.a(c4293a, C4226b.l, C4226b.q0, e2);
+                com.alipay.sdk.m.k.a.a(aVar, com.alipay.sdk.m.k.b.l, com.alipay.sdk.m.k.b.q0, e2);
             }
             String str3 = str2;
             if (TextUtils.isEmpty(str3)) {
-                this.d.post(new RunnableC4125b(this, 4000, "参数错误", null, null));
+                this.d.post(new b(this, 4000, "参数错误", null, null));
                 return true;
             }
             Intent intent2 = new Intent("android.intent.action.VIEW", new Uri.Builder().scheme("alipays").authority("platformapi").path("startapp").appendQueryParameter(ALBiometricsKeys.KEY_APP_ID, "20001129").appendQueryParameter("payload", str3).build());
             intent2.addFlags(268435456);
-            intent2.setPackage(a2.a.packageName);
+            intent2.setPackage(a3.a.packageName);
             try {
-                C4218a.a(c4293a, C4226b.l, C4226b.Y, "" + elapsedRealtime);
-                C4293a.C4294a.a(c4293a, a);
+                com.alipay.sdk.m.k.a.a(aVar, com.alipay.sdk.m.k.b.l, com.alipay.sdk.m.k.b.Y, "" + elapsedRealtime);
+                a.C0200a.a(aVar, a2);
                 this.b.startActivity(intent2);
             } catch (Throwable th) {
-                C4218a.a(c4293a, C4226b.l, "StartWalletEx", th);
+                com.alipay.sdk.m.k.a.a(aVar, com.alipay.sdk.m.k.b.l, "StartWalletEx", th);
             }
             return false;
         }
@@ -219,10 +213,10 @@ public final class OpenAuthTask {
     public void execute(String str, BizType bizType, Map<String, String> map, Callback callback, boolean z) {
         Activity activity = this.b;
         String valueOf = String.valueOf(map);
-        C4293a c4293a = new C4293a(activity, valueOf, "oa-" + bizType);
+        com.alipay.sdk.m.s.a aVar = new com.alipay.sdk.m.s.a(activity, valueOf, "oa-" + bizType);
         this.c = callback;
-        if (d(c4293a, str, bizType, map, z)) {
-            C4218a.b(this.b, c4293a, "", c4293a.d);
+        if (d(aVar, str, bizType, map, z)) {
+            com.alipay.sdk.m.k.a.b(this.b, aVar, "", aVar.d);
         }
     }
 
@@ -232,7 +226,7 @@ public final class OpenAuthTask {
             try {
                 remove.onResult(i, str2, bundle);
             } catch (Throwable th) {
-                C4302e.a(th);
+                e.a(th);
             }
         }
     }

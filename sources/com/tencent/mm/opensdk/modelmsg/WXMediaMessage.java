@@ -2,8 +2,8 @@ package com.tencent.mm.opensdk.modelmsg;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import com.tencent.mm.opensdk.utils.C7065b;
 import com.tencent.mm.opensdk.utils.Log;
+import com.tencent.mm.opensdk.utils.b;
 import java.io.ByteArrayOutputStream;
 
 /* compiled from: Taobao */
@@ -159,11 +159,11 @@ public final class WXMediaMessage {
         byte[] bArr3;
         if (getType() == 8 && ((bArr3 = this.thumbData) == null || bArr3.length == 0)) {
             str = "checkArgs fail, thumbData should not be null when send emoji";
-        } else if (getType() == 76 && C7065b.b(this.title)) {
+        } else if (getType() == 76 && b.b(this.title)) {
             str = "checkArgs fail, Type = Music Video, but title == null";
-        } else if (C7065b.a(getType()) && ((bArr2 = this.thumbData) == null || bArr2.length > 131072)) {
+        } else if (b.a(getType()) && ((bArr2 = this.thumbData) == null || bArr2.length > 131072)) {
             str = "checkArgs fail, thumbData should not be null or exceed 128kb";
-        } else if (C7065b.a(getType()) || (bArr = this.thumbData) == null || bArr.length <= 65536) {
+        } else if (b.a(getType()) || (bArr = this.thumbData) == null || bArr.length <= 65536) {
             String str2 = this.title;
             if (str2 == null || str2.length() <= 512) {
                 String str3 = this.description;

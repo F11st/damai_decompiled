@@ -60,7 +60,7 @@ public class PortraitLoading extends ImageView {
         if (AndroidInstantRuntime.support(ipChange, "-1947597557")) {
             ipChange.ipc$dispatch("-1947597557", new Object[]{this});
         } else if (this.rotateAnim == null) {
-            setImageResource(R.C7959drawable.dago_container_buffering_circle);
+            setImageResource(R.drawable.dago_container_buffering_circle);
             RotateAnimation rotateAnimation = new RotateAnimation(0.0f, 360.0f, 1, 0.5f, 1, 0.5f);
             this.rotateAnim = rotateAnimation;
             rotateAnimation.setRepeatCount(-1);

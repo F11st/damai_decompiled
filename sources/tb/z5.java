@@ -2,8 +2,6 @@ package tb;
 
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.NotFoundClasses;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationDescriptor;
@@ -32,9 +30,8 @@ public final class z5 implements AnnotationAndConstantLoader<AnnotationDescripto
     private final a6 b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.z5$a */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C10013a {
+    public /* synthetic */ class a {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -83,7 +80,7 @@ public final class z5 implements AnnotationAndConstantLoader<AnnotationDescripto
         } else if (!(messageLite instanceof ProtoBuf$Property)) {
             throw new IllegalStateException(b41.r("Unknown message: ", messageLite).toString());
         } else {
-            int i = C10013a.$EnumSwitchMapping$0[annotatedCallableKind.ordinal()];
+            int i = a.$EnumSwitchMapping$0[annotatedCallableKind.ordinal()];
             if (i == 1) {
                 list = (List) ((ProtoBuf$Property) messageLite).getExtension(this.a.h());
             } else if (i == 2) {
@@ -95,9 +92,9 @@ public final class z5 implements AnnotationAndConstantLoader<AnnotationDescripto
             }
         }
         if (list == null) {
-            list = C8214m.g();
+            list = kotlin.collections.m.g();
         }
-        q = C8215n.q(list, 10);
+        q = kotlin.collections.n.q(list, 10);
         ArrayList arrayList = new ArrayList(q);
         for (ProtoBuf$Annotation protoBuf$Annotation : list) {
             arrayList.add(this.b.a(protoBuf$Annotation, gx1Var.b()));
@@ -107,17 +104,17 @@ public final class z5 implements AnnotationAndConstantLoader<AnnotationDescripto
 
     @Override // kotlin.reflect.jvm.internal.impl.serialization.deserialization.AnnotationAndConstantLoader
     @NotNull
-    public List<AnnotationDescriptor> loadClassAnnotations(@NotNull gx1.C9189a c9189a) {
+    public List<AnnotationDescriptor> loadClassAnnotations(@NotNull gx1.a aVar) {
         int q;
-        b41.i(c9189a, "container");
-        List<ProtoBuf$Annotation> list = (List) c9189a.f().getExtension(this.a.a());
+        b41.i(aVar, "container");
+        List<ProtoBuf$Annotation> list = (List) aVar.f().getExtension(this.a.a());
         if (list == null) {
-            list = C8214m.g();
+            list = kotlin.collections.m.g();
         }
-        q = C8215n.q(list, 10);
+        q = kotlin.collections.n.q(list, 10);
         ArrayList arrayList = new ArrayList(q);
         for (ProtoBuf$Annotation protoBuf$Annotation : list) {
-            arrayList.add(this.b.a(protoBuf$Annotation, c9189a.b()));
+            arrayList.add(this.b.a(protoBuf$Annotation, aVar.b()));
         }
         return arrayList;
     }
@@ -130,9 +127,9 @@ public final class z5 implements AnnotationAndConstantLoader<AnnotationDescripto
         b41.i(protoBuf$EnumEntry, "proto");
         List<ProtoBuf$Annotation> list = (List) protoBuf$EnumEntry.getExtension(this.a.d());
         if (list == null) {
-            list = C8214m.g();
+            list = kotlin.collections.m.g();
         }
-        q = C8215n.q(list, 10);
+        q = kotlin.collections.n.q(list, 10);
         ArrayList arrayList = new ArrayList(q);
         for (ProtoBuf$Annotation protoBuf$Annotation : list) {
             arrayList.add(this.b.a(protoBuf$Annotation, gx1Var.b()));
@@ -147,7 +144,7 @@ public final class z5 implements AnnotationAndConstantLoader<AnnotationDescripto
         b41.i(gx1Var, "container");
         b41.i(messageLite, "proto");
         b41.i(annotatedCallableKind, "kind");
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         return g;
     }
 
@@ -157,7 +154,7 @@ public final class z5 implements AnnotationAndConstantLoader<AnnotationDescripto
         List<AnnotationDescriptor> g;
         b41.i(gx1Var, "container");
         b41.i(protoBuf$Property, "proto");
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         return g;
     }
 
@@ -167,7 +164,7 @@ public final class z5 implements AnnotationAndConstantLoader<AnnotationDescripto
         List<AnnotationDescriptor> g;
         b41.i(gx1Var, "container");
         b41.i(protoBuf$Property, "proto");
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         return g;
     }
 
@@ -179,9 +176,9 @@ public final class z5 implements AnnotationAndConstantLoader<AnnotationDescripto
         b41.i(nameResolver, "nameResolver");
         List<ProtoBuf$Annotation> list = (List) protoBuf$Type.getExtension(this.a.k());
         if (list == null) {
-            list = C8214m.g();
+            list = kotlin.collections.m.g();
         }
-        q = C8215n.q(list, 10);
+        q = kotlin.collections.n.q(list, 10);
         ArrayList arrayList = new ArrayList(q);
         for (ProtoBuf$Annotation protoBuf$Annotation : list) {
             arrayList.add(this.b.a(protoBuf$Annotation, nameResolver));
@@ -197,9 +194,9 @@ public final class z5 implements AnnotationAndConstantLoader<AnnotationDescripto
         b41.i(nameResolver, "nameResolver");
         List<ProtoBuf$Annotation> list = (List) protoBuf$TypeParameter.getExtension(this.a.l());
         if (list == null) {
-            list = C8214m.g();
+            list = kotlin.collections.m.g();
         }
-        q = C8215n.q(list, 10);
+        q = kotlin.collections.n.q(list, 10);
         ArrayList arrayList = new ArrayList(q);
         for (ProtoBuf$Annotation protoBuf$Annotation : list) {
             arrayList.add(this.b.a(protoBuf$Annotation, nameResolver));
@@ -217,9 +214,9 @@ public final class z5 implements AnnotationAndConstantLoader<AnnotationDescripto
         b41.i(protoBuf$ValueParameter, "proto");
         List<ProtoBuf$Annotation> list = (List) protoBuf$ValueParameter.getExtension(this.a.g());
         if (list == null) {
-            list = C8214m.g();
+            list = kotlin.collections.m.g();
         }
-        q = C8215n.q(list, 10);
+        q = kotlin.collections.n.q(list, 10);
         ArrayList arrayList = new ArrayList(q);
         for (ProtoBuf$Annotation protoBuf$Annotation : list) {
             arrayList.add(this.b.a(protoBuf$Annotation, gx1Var.b()));

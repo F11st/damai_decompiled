@@ -1,7 +1,6 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.functions.ObjectHelper;
@@ -10,7 +9,7 @@ import io.reactivex.internal.subscribers.QueueDrainSubscriber;
 import io.reactivex.internal.subscriptions.EmptySubscription;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import io.reactivex.internal.util.QueueDrainHelper;
-import io.reactivex.subscribers.AbstractC8173b;
+import io.reactivex.subscribers.b;
 import java.util.Collection;
 import java.util.concurrent.Callable;
 import org.reactivestreams.Publisher;
@@ -27,7 +26,7 @@ public final class FlowableBufferExactBoundary<T, U extends Collection<? super T
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class BufferBoundarySubscriber<T, U extends Collection<? super T>, B> extends AbstractC8173b<B> {
+    static final class BufferBoundarySubscriber<T, U extends Collection<? super T>, B> extends b<B> {
         final BufferExactBoundarySubscriber<T, U, B> parent;
 
         BufferBoundarySubscriber(BufferExactBoundarySubscriber<T, U, B> bufferExactBoundarySubscriber) {
@@ -177,13 +176,13 @@ public final class FlowableBufferExactBoundary<T, U extends Collection<? super T
         }
     }
 
-    public FlowableBufferExactBoundary(AbstractC8147b<T> abstractC8147b, Publisher<B> publisher, Callable<U> callable) {
-        super(abstractC8147b);
+    public FlowableBufferExactBoundary(io.reactivex.b<T> bVar, Publisher<B> publisher, Callable<U> callable) {
+        super(bVar);
         this.boundary = publisher;
         this.bufferSupplier = callable;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super U> subscriber) {
         this.source.subscribe((FlowableSubscriber) new BufferExactBoundarySubscriber(new ua2(subscriber), this.bufferSupplier, this.boundary));
     }

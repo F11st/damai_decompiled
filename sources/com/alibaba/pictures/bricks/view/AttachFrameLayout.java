@@ -19,20 +19,19 @@ import tb.k50;
 public final class AttachFrameLayout extends FrameLayout {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C3563a Companion = new C3563a(null);
+    public static final a Companion = new a(null);
     @Nullable
     private static WeakReference<View> weakAttachView;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.AttachFrameLayout$a */
     /* loaded from: classes7.dex */
-    public static final class C3563a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3563a() {
+        private a() {
         }
 
-        public /* synthetic */ C3563a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

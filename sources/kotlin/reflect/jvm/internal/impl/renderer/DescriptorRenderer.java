@@ -3,10 +3,10 @@ package kotlin.reflect.jvm.internal.impl.renderer;
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
 import java.util.Set;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.collections.C8203e0;
+import kotlin.collections.e0;
 import kotlin.jvm.JvmField;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
+import kotlin.reflect.jvm.internal.impl.builtins.b;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassKind;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptorWithTypeParameters;
@@ -43,7 +43,7 @@ public abstract class DescriptorRenderer {
     @NotNull
     public static final DescriptorRenderer COMPACT_WITH_SHORT_TYPES;
     @NotNull
-    public static final C8475a Companion;
+    public static final a Companion;
     @JvmField
     @NotNull
     public static final DescriptorRenderer DEBUG_TEXT;
@@ -68,13 +68,12 @@ public abstract class DescriptorRenderer {
     public interface ValueParametersHandler {
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$ValueParametersHandler$a */
         /* loaded from: classes3.dex */
-        public static final class C8474a implements ValueParametersHandler {
+        public static final class a implements ValueParametersHandler {
             @NotNull
-            public static final C8474a INSTANCE = new C8474a();
+            public static final a INSTANCE = new a();
 
-            private C8474a() {
+            private a() {
             }
 
             @Override // kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer.ValueParametersHandler
@@ -115,14 +114,13 @@ public abstract class DescriptorRenderer {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$a */
     /* loaded from: classes3.dex */
-    public static final class C8475a {
+    public static final class a {
 
         /* compiled from: Taobao */
         /* renamed from: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$a$a */
         /* loaded from: classes3.dex */
-        public /* synthetic */ class C8476a {
+        public /* synthetic */ class C0427a {
             public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
             static {
@@ -137,10 +135,10 @@ public abstract class DescriptorRenderer {
             }
         }
 
-        private C8475a() {
+        private a() {
         }
 
-        public /* synthetic */ C8475a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -155,7 +153,7 @@ public abstract class DescriptorRenderer {
                 if (classDescriptor.isCompanionObject()) {
                     return "companion object";
                 }
-                switch (C8476a.$EnumSwitchMapping$0[classDescriptor.getKind().ordinal()]) {
+                switch (C0427a.$EnumSwitchMapping$0[classDescriptor.getKind().ordinal()]) {
                     case 1:
                         return "class";
                     case 2:
@@ -186,9 +184,9 @@ public abstract class DescriptorRenderer {
     }
 
     static {
-        C8475a c8475a = new C8475a(null);
-        Companion = c8475a;
-        COMPACT_WITH_MODIFIERS = c8475a.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$COMPACT_WITH_MODIFIERS$1
+        a aVar = new a(null);
+        Companion = aVar;
+        COMPACT_WITH_MODIFIERS = aVar.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$COMPACT_WITH_MODIFIERS$1
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ wt2 invoke(DescriptorRendererOptions descriptorRendererOptions) {
                 invoke2(descriptorRendererOptions);
@@ -201,7 +199,7 @@ public abstract class DescriptorRenderer {
                 descriptorRendererOptions.setWithDefinedIn(false);
             }
         });
-        COMPACT = c8475a.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$COMPACT$1
+        COMPACT = aVar.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$COMPACT$1
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ wt2 invoke(DescriptorRendererOptions descriptorRendererOptions) {
                 invoke2(descriptorRendererOptions);
@@ -213,11 +211,11 @@ public abstract class DescriptorRenderer {
                 Set<? extends DescriptorRendererModifier> d;
                 b41.i(descriptorRendererOptions, "$this$withOptions");
                 descriptorRendererOptions.setWithDefinedIn(false);
-                d = C8203e0.d();
+                d = e0.d();
                 descriptorRendererOptions.setModifiers(d);
             }
         });
-        COMPACT_WITHOUT_SUPERTYPES = c8475a.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$COMPACT_WITHOUT_SUPERTYPES$1
+        COMPACT_WITHOUT_SUPERTYPES = aVar.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$COMPACT_WITHOUT_SUPERTYPES$1
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ wt2 invoke(DescriptorRendererOptions descriptorRendererOptions) {
                 invoke2(descriptorRendererOptions);
@@ -229,12 +227,12 @@ public abstract class DescriptorRenderer {
                 Set<? extends DescriptorRendererModifier> d;
                 b41.i(descriptorRendererOptions, "$this$withOptions");
                 descriptorRendererOptions.setWithDefinedIn(false);
-                d = C8203e0.d();
+                d = e0.d();
                 descriptorRendererOptions.setModifiers(d);
                 descriptorRendererOptions.setWithoutSuperTypes(true);
             }
         });
-        COMPACT_WITH_SHORT_TYPES = c8475a.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$COMPACT_WITH_SHORT_TYPES$1
+        COMPACT_WITH_SHORT_TYPES = aVar.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$COMPACT_WITH_SHORT_TYPES$1
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ wt2 invoke(DescriptorRendererOptions descriptorRendererOptions) {
                 invoke2(descriptorRendererOptions);
@@ -245,13 +243,13 @@ public abstract class DescriptorRenderer {
             public final void invoke2(@NotNull DescriptorRendererOptions descriptorRendererOptions) {
                 Set<? extends DescriptorRendererModifier> d;
                 b41.i(descriptorRendererOptions, "$this$withOptions");
-                d = C8203e0.d();
+                d = e0.d();
                 descriptorRendererOptions.setModifiers(d);
-                descriptorRendererOptions.setClassifierNamePolicy(ClassifierNamePolicy.C8472b.INSTANCE);
+                descriptorRendererOptions.setClassifierNamePolicy(ClassifierNamePolicy.b.INSTANCE);
                 descriptorRendererOptions.setParameterNameRenderingPolicy(ParameterNameRenderingPolicy.ONLY_NON_SYNTHESIZED);
             }
         });
-        ONLY_NAMES_WITH_SHORT_TYPES = c8475a.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$ONLY_NAMES_WITH_SHORT_TYPES$1
+        ONLY_NAMES_WITH_SHORT_TYPES = aVar.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$ONLY_NAMES_WITH_SHORT_TYPES$1
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ wt2 invoke(DescriptorRendererOptions descriptorRendererOptions) {
                 invoke2(descriptorRendererOptions);
@@ -263,9 +261,9 @@ public abstract class DescriptorRenderer {
                 Set<? extends DescriptorRendererModifier> d;
                 b41.i(descriptorRendererOptions, "$this$withOptions");
                 descriptorRendererOptions.setWithDefinedIn(false);
-                d = C8203e0.d();
+                d = e0.d();
                 descriptorRendererOptions.setModifiers(d);
-                descriptorRendererOptions.setClassifierNamePolicy(ClassifierNamePolicy.C8472b.INSTANCE);
+                descriptorRendererOptions.setClassifierNamePolicy(ClassifierNamePolicy.b.INSTANCE);
                 descriptorRendererOptions.setWithoutTypeParameters(true);
                 descriptorRendererOptions.setParameterNameRenderingPolicy(ParameterNameRenderingPolicy.NONE);
                 descriptorRendererOptions.setReceiverAfterName(true);
@@ -274,7 +272,7 @@ public abstract class DescriptorRenderer {
                 descriptorRendererOptions.setStartFromName(true);
             }
         });
-        FQ_NAMES_IN_TYPES = c8475a.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$FQ_NAMES_IN_TYPES$1
+        FQ_NAMES_IN_TYPES = aVar.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$FQ_NAMES_IN_TYPES$1
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ wt2 invoke(DescriptorRendererOptions descriptorRendererOptions) {
                 invoke2(descriptorRendererOptions);
@@ -287,7 +285,7 @@ public abstract class DescriptorRenderer {
                 descriptorRendererOptions.setModifiers(DescriptorRendererModifier.ALL_EXCEPT_ANNOTATIONS);
             }
         });
-        FQ_NAMES_IN_TYPES_WITH_ANNOTATIONS = c8475a.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$FQ_NAMES_IN_TYPES_WITH_ANNOTATIONS$1
+        FQ_NAMES_IN_TYPES_WITH_ANNOTATIONS = aVar.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$FQ_NAMES_IN_TYPES_WITH_ANNOTATIONS$1
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ wt2 invoke(DescriptorRendererOptions descriptorRendererOptions) {
                 invoke2(descriptorRendererOptions);
@@ -300,7 +298,7 @@ public abstract class DescriptorRenderer {
                 descriptorRendererOptions.setModifiers(DescriptorRendererModifier.ALL);
             }
         });
-        SHORT_NAMES_IN_TYPES = c8475a.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$SHORT_NAMES_IN_TYPES$1
+        SHORT_NAMES_IN_TYPES = aVar.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$SHORT_NAMES_IN_TYPES$1
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ wt2 invoke(DescriptorRendererOptions descriptorRendererOptions) {
                 invoke2(descriptorRendererOptions);
@@ -310,11 +308,11 @@ public abstract class DescriptorRenderer {
             /* renamed from: invoke  reason: avoid collision after fix types in other method */
             public final void invoke2(@NotNull DescriptorRendererOptions descriptorRendererOptions) {
                 b41.i(descriptorRendererOptions, "$this$withOptions");
-                descriptorRendererOptions.setClassifierNamePolicy(ClassifierNamePolicy.C8472b.INSTANCE);
+                descriptorRendererOptions.setClassifierNamePolicy(ClassifierNamePolicy.b.INSTANCE);
                 descriptorRendererOptions.setParameterNameRenderingPolicy(ParameterNameRenderingPolicy.ONLY_NON_SYNTHESIZED);
             }
         });
-        DEBUG_TEXT = c8475a.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$DEBUG_TEXT$1
+        DEBUG_TEXT = aVar.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$DEBUG_TEXT$1
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ wt2 invoke(DescriptorRendererOptions descriptorRendererOptions) {
                 invoke2(descriptorRendererOptions);
@@ -325,11 +323,11 @@ public abstract class DescriptorRenderer {
             public final void invoke2(@NotNull DescriptorRendererOptions descriptorRendererOptions) {
                 b41.i(descriptorRendererOptions, "$this$withOptions");
                 descriptorRendererOptions.setDebugMode(true);
-                descriptorRendererOptions.setClassifierNamePolicy(ClassifierNamePolicy.C8471a.INSTANCE);
+                descriptorRendererOptions.setClassifierNamePolicy(ClassifierNamePolicy.a.INSTANCE);
                 descriptorRendererOptions.setModifiers(DescriptorRendererModifier.ALL);
             }
         });
-        HTML = c8475a.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$HTML$1
+        HTML = aVar.b(new Function1<DescriptorRendererOptions, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer$Companion$HTML$1
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ wt2 invoke(DescriptorRendererOptions descriptorRendererOptions) {
                 invoke2(descriptorRendererOptions);
@@ -362,7 +360,7 @@ public abstract class DescriptorRenderer {
     public abstract String b(@NotNull AnnotationDescriptor annotationDescriptor, @Nullable AnnotationUseSiteTarget annotationUseSiteTarget);
 
     @NotNull
-    public abstract String d(@NotNull String str, @NotNull String str2, @NotNull AbstractC8271b abstractC8271b);
+    public abstract String d(@NotNull String str, @NotNull String str2, @NotNull b bVar);
 
     @NotNull
     public abstract String e(@NotNull ip0 ip0Var);
@@ -379,9 +377,9 @@ public abstract class DescriptorRenderer {
     @NotNull
     public final DescriptorRenderer i(@NotNull Function1<? super DescriptorRendererOptions, wt2> function1) {
         b41.i(function1, "changeOptions");
-        DescriptorRendererOptionsImpl a = ((DescriptorRendererImpl) this).R().a();
-        function1.invoke(a);
-        a.V();
-        return new DescriptorRendererImpl(a);
+        DescriptorRendererOptionsImpl a2 = ((DescriptorRendererImpl) this).R().a();
+        function1.invoke(a2);
+        a2.V();
+        return new DescriptorRendererImpl(a2);
     }
 }

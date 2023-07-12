@@ -51,7 +51,7 @@ public class ga {
         }
         byte[] bArr = a;
         if (bArr == null || bArr.length <= 0) {
-            byte[] bytes = C4554gc.f(context).getBytes();
+            byte[] bytes = gc.f(context).getBytes();
             a = bytes;
             return bytes;
         }

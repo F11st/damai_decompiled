@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.single;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8152e;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.SingleObserver;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import java.util.NoSuchElementException;
 import org.reactivestreams.Publisher;
@@ -13,7 +13,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SingleFromPublisher<T> extends AbstractC8152e<T> {
+public final class SingleFromPublisher<T> extends e<T> {
     final Publisher<? extends T> publisher;
 
     /* compiled from: Taobao */
@@ -95,7 +95,7 @@ public final class SingleFromPublisher<T> extends AbstractC8152e<T> {
         this.publisher = publisher;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super T> singleObserver) {
         this.publisher.subscribe(new ToSingleObserver(singleObserver));
     }

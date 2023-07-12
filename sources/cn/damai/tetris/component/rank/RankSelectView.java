@@ -34,12 +34,11 @@ public final class RankSelectView extends AbsView<RankSelectPresenter> implement
     private final int mRightSize;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.rank.RankSelectView$a */
     /* loaded from: classes7.dex */
-    public static final class C1949a implements OnItemBindListener<RankSelectItemBean> {
+    public static final class a implements OnItemBindListener<RankSelectItemBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1949a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -85,7 +84,7 @@ public final class RankSelectView extends AbsView<RankSelectPresenter> implement
         this.mBack = tUrlImageView;
         tUrlImageView.setImageUrl(h62.p("bg_rank_square_apng.png"));
         recyclerView.setLayoutManager(new LinearLayoutManager(mu0.a(), 0, false));
-        RankSelectAdapter rankSelectAdapter = new RankSelectAdapter(new C1949a());
+        RankSelectAdapter rankSelectAdapter = new RankSelectAdapter(new a());
         this.mAdapter = rankSelectAdapter;
         recyclerView.setAdapter(rankSelectAdapter);
         recyclerView.addItemDecoration(new RecyclerView.ItemDecoration() { // from class: cn.damai.tetris.component.rank.RankSelectView.2

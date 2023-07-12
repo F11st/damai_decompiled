@@ -11,7 +11,6 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.app.widget.DMProgressDialog;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
 import cn.damai.im.AliMeUtil;
 import cn.damai.trade.R$id;
 import cn.damai.trade.R$layout;
@@ -48,12 +47,11 @@ public class OrderDetailTicketNotifyViewHolder extends RecyclerView.ViewHolder {
     private View.OnClickListener n;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailTicketNotifyViewHolder$a */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnDismissListenerC2217a implements DialogInterface.OnDismissListener {
+    public class a implements DialogInterface.OnDismissListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnDismissListenerC2217a(OrderDetailTicketNotifyViewHolder orderDetailTicketNotifyViewHolder) {
+        a(OrderDetailTicketNotifyViewHolder orderDetailTicketNotifyViewHolder) {
         }
 
         @Override // android.content.DialogInterface.OnDismissListener
@@ -66,26 +64,24 @@ public class OrderDetailTicketNotifyViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailTicketNotifyViewHolder$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2218b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ int b;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailTicketNotifyViewHolder$b$a */
         /* loaded from: classes8.dex */
-        public class C2219a implements AliMeUtil.UserCodeListener {
+        public class a implements AliMeUtil.UserCodeListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* compiled from: Taobao */
-            /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailTicketNotifyViewHolder$b$a$a */
+            /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailTicketNotifyViewHolder$b$a$a  reason: collision with other inner class name */
             /* loaded from: classes8.dex */
-            public class C2220a implements AliMeUtil.AliMeTokenListener {
+            public class C0082a implements AliMeUtil.AliMeTokenListener {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C2220a() {
+                C0082a() {
                 }
 
                 @Override // cn.damai.im.AliMeUtil.AliMeTokenListener
@@ -110,14 +106,14 @@ public class OrderDetailTicketNotifyViewHolder extends RecyclerView.ViewHolder {
                     OrderDetailTicketNotifyViewHolder.this.i();
                     OrderDetailTicketNotifyViewHolder.this.l = true;
                     if (!TextUtils.isEmpty(str)) {
-                        AliMeUtil.b(OrderDetailTicketNotifyViewHolder.this.a, AliMeUtil.g(AliMeUtil.FROM_ORDER_DETAIL_QUEST, str, OrderDetailTicketNotifyViewHolder.this.b, OrderDetailTicketNotifyViewHolder.this.c, View$OnClickListenerC2218b.this.a));
+                        AliMeUtil.b(OrderDetailTicketNotifyViewHolder.this.a, AliMeUtil.g(AliMeUtil.FROM_ORDER_DETAIL_QUEST, str, OrderDetailTicketNotifyViewHolder.this.b, OrderDetailTicketNotifyViewHolder.this.c, b.this.a));
                     } else {
                         AliMeUtil.o();
                     }
                 }
             }
 
-            C2219a() {
+            a() {
             }
 
             @Override // cn.damai.im.AliMeUtil.UserCodeListener
@@ -138,12 +134,12 @@ public class OrderDetailTicketNotifyViewHolder extends RecyclerView.ViewHolder {
                 if (AndroidInstantRuntime.support(ipChange, "219616824")) {
                     ipChange.ipc$dispatch("219616824", new Object[]{this, Long.valueOf(j)});
                 } else {
-                    AliMeUtil.e(j, AliMeUtil.FROM_ORDER_DETAIL_QUEST, new C2220a());
+                    AliMeUtil.e(j, AliMeUtil.FROM_ORDER_DETAIL_QUEST, new C0082a());
                 }
             }
         }
 
-        View$OnClickListenerC2218b(String str, int i) {
+        b(String str, int i) {
             this.a = str;
             this.b = i;
         }
@@ -157,19 +153,18 @@ public class OrderDetailTicketNotifyViewHolder extends RecyclerView.ViewHolder {
             } else {
                 OrderDetailTicketNotifyViewHolder.this.l = false;
                 OrderDetailTicketNotifyViewHolder.this.h();
-                C0529c.e().x(pp2.u().r1(OrderDetailTicketNotifyViewHolder.this.b, OrderDetailTicketNotifyViewHolder.this.c, this.a, this.b));
-                AliMeUtil.j(new C2219a());
+                cn.damai.common.user.c.e().x(pp2.u().r1(OrderDetailTicketNotifyViewHolder.this.b, OrderDetailTicketNotifyViewHolder.this.c, this.a, this.b));
+                AliMeUtil.j(new a());
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailTicketNotifyViewHolder$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2221c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2221c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -179,21 +174,20 @@ public class OrderDetailTicketNotifyViewHolder extends RecyclerView.ViewHolder {
                 ipChange.ipc$dispatch("-1501262593", new Object[]{this, view});
             } else if (TextUtils.isEmpty(OrderDetailTicketNotifyViewHolder.this.c)) {
             } else {
-                C0529c.e().x(pp2.u().F(z20.E(), OrderDetailTicketNotifyViewHolder.this.c));
+                cn.damai.common.user.c.e().x(pp2.u().F(z20.E(), OrderDetailTicketNotifyViewHolder.this.c));
                 AliMeUtil.k(OrderDetailTicketNotifyViewHolder.this.a, AliMeUtil.FROM_ORDER_DETAILS);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailTicketNotifyViewHolder$d */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2222d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ ServiceOrderInfo b;
 
-        View$OnClickListenerC2222d(String str, ServiceOrderInfo serviceOrderInfo) {
+        d(String str, ServiceOrderInfo serviceOrderInfo) {
             this.a = str;
             this.b = serviceOrderInfo;
         }
@@ -205,7 +199,7 @@ public class OrderDetailTicketNotifyViewHolder extends RecyclerView.ViewHolder {
                 ipChange.ipc$dispatch("610027776", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(pp2.u().x(this.a));
+            cn.damai.common.user.c.e().x(pp2.u().x(this.a));
             DMNav.from(OrderDetailTicketNotifyViewHolder.this.a).toUri(this.b.progressUrl);
         }
     }
@@ -213,7 +207,7 @@ public class OrderDetailTicketNotifyViewHolder extends RecyclerView.ViewHolder {
     public OrderDetailTicketNotifyViewHolder(Context context, LayoutInflater layoutInflater) {
         super(layoutInflater.inflate(R$layout.order_detail_ticket_info_item, (ViewGroup) null));
         this.l = true;
-        this.n = new View$OnClickListenerC2221c();
+        this.n = new c();
         this.itemView.setLayoutParams(new RecyclerView.LayoutParams(-1, -2));
         this.a = context;
         this.d = (DisplayMetrics.getwidthPixels(m62.b(context)) - m62.a(context, 15.0f)) / 2;
@@ -246,7 +240,7 @@ public class OrderDetailTicketNotifyViewHolder extends RecyclerView.ViewHolder {
         TextView textView = (TextView) inflate.findViewById(R$id.tv_quest);
         textView.setText(str);
         inflate.setLayoutParams(this.e);
-        textView.setOnClickListener(new View$OnClickListenerC2218b(str, i));
+        textView.setOnClickListener(new b(str, i));
         return inflate;
     }
 
@@ -261,11 +255,11 @@ public class OrderDetailTicketNotifyViewHolder extends RecyclerView.ViewHolder {
         if (serviceOrderInfo != null && serviceOrderInfo.isShowView()) {
             HashMap hashMap = new HashMap();
             hashMap.put("item_id", str);
-            C0529c.e().G(this.j, "aftersalesservice", "problem", pp2.ORDER_DETAL_PAGE, hashMap);
+            cn.damai.common.user.c.e().G(this.j, "aftersalesservice", "problem", pp2.ORDER_DETAL_PAGE, hashMap);
             this.j.setVisibility(0);
             this.k.setText(serviceOrderInfo.afterServiceGuide);
             if (!TextUtils.isEmpty(serviceOrderInfo.progressUrl)) {
-                this.j.setOnClickListener(new View$OnClickListenerC2222d(str, serviceOrderInfo));
+                this.j.setOnClickListener(new d(str, serviceOrderInfo));
             }
         } else {
             this.j.setVisibility(8);
@@ -299,9 +293,9 @@ public class OrderDetailTicketNotifyViewHolder extends RecyclerView.ViewHolder {
             return;
         }
         if (this.m == null) {
-            DMProgressDialog a = new DMProgressDialog(this.a).a();
-            this.m = a;
-            a.setOnDismissListener(new DialogInterface$OnDismissListenerC2217a(this));
+            DMProgressDialog a2 = new DMProgressDialog(this.a).a();
+            this.m = a2;
+            a2.setOnDismissListener(new a(this));
         }
         this.m.show();
     }

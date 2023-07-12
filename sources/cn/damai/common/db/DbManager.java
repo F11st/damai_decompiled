@@ -40,9 +40,8 @@ public interface DbManager extends Closeable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.db.DbManager$a */
     /* loaded from: classes13.dex */
-    public static class C0492a {
+    public static class a {
         private static transient /* synthetic */ IpChange $ipChange;
         private File a;
         private String b = "xUtils.db";
@@ -85,13 +84,13 @@ public interface DbManager extends Closeable {
             if (this == obj) {
                 return true;
             }
-            if (obj == null || C0492a.class != obj.getClass()) {
+            if (obj == null || a.class != obj.getClass()) {
                 return false;
             }
-            C0492a c0492a = (C0492a) obj;
-            if (this.b.equals(c0492a.b)) {
+            a aVar = (a) obj;
+            if (this.b.equals(aVar.b)) {
                 File file = this.a;
-                File file2 = c0492a.a;
+                File file2 = aVar.a;
                 return file == null ? file2 == null : file.equals(file2);
             }
             return false;
@@ -107,10 +106,10 @@ public interface DbManager extends Closeable {
             return AndroidInstantRuntime.support(ipChange, "1408492177") ? ((Boolean) ipChange.ipc$dispatch("1408492177", new Object[]{this})).booleanValue() : this.d;
         }
 
-        public C0492a h(String str) {
+        public a h(String str) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-99204911")) {
-                return (C0492a) ipChange.ipc$dispatch("-99204911", new Object[]{this, str});
+                return (a) ipChange.ipc$dispatch("-99204911", new Object[]{this, str});
             }
             if (!TextUtils.isEmpty(str)) {
                 this.b = str;
@@ -128,37 +127,37 @@ public interface DbManager extends Closeable {
             return hashCode + (file != null ? file.hashCode() : 0);
         }
 
-        public C0492a i(DbOpenListener dbOpenListener) {
+        public a i(DbOpenListener dbOpenListener) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "2045217638")) {
-                return (C0492a) ipChange.ipc$dispatch("2045217638", new Object[]{this, dbOpenListener});
+                return (a) ipChange.ipc$dispatch("2045217638", new Object[]{this, dbOpenListener});
             }
             this.g = dbOpenListener;
             return this;
         }
 
-        public C0492a j(DbUpgradeListener dbUpgradeListener) {
+        public a j(DbUpgradeListener dbUpgradeListener) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "220492088")) {
-                return (C0492a) ipChange.ipc$dispatch("220492088", new Object[]{this, dbUpgradeListener});
+                return (a) ipChange.ipc$dispatch("220492088", new Object[]{this, dbUpgradeListener});
             }
             this.e = dbUpgradeListener;
             return this;
         }
 
-        public C0492a k(int i) {
+        public a k(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-81203681")) {
-                return (C0492a) ipChange.ipc$dispatch("-81203681", new Object[]{this, Integer.valueOf(i)});
+                return (a) ipChange.ipc$dispatch("-81203681", new Object[]{this, Integer.valueOf(i)});
             }
             this.c = i;
             return this;
         }
 
-        public C0492a l(TableCreateListener tableCreateListener) {
+        public a l(TableCreateListener tableCreateListener) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1970886704")) {
-                return (C0492a) ipChange.ipc$dispatch("-1970886704", new Object[]{this, tableCreateListener});
+                return (a) ipChange.ipc$dispatch("-1970886704", new Object[]{this, tableCreateListener});
             }
             this.f = tableCreateListener;
             return this;
@@ -212,7 +211,7 @@ public interface DbManager extends Closeable {
 
     <T> T findFirst(Class<T> cls) throws DbException;
 
-    C0492a getDaoConfig();
+    a getDaoConfig();
 
     SQLiteDatabase getDatabase();
 

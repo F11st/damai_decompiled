@@ -78,9 +78,9 @@ public class x40 {
                         String attributeValue13 = newPullParser.getAttributeValue(0);
                         String attributeValue14 = newPullParser.getAttributeValue(1);
                         if (!cc.c().equalsIgnoreCase(attributeValue13)) {
-                            C9269io.a("binrary", ".bin is not Quantum Binary!");
+                            io.a("binrary", ".bin is not Quantum Binary!");
                         } else if (!cc.f().equalsIgnoreCase(attributeValue14)) {
-                            C9269io.a("binrary", ".bin version is not support!");
+                            io.a("binrary", ".bin version is not support!");
                         }
                     } else if ("dict".equalsIgnoreCase(name)) {
                         LinkedHashMap<String, ArrayList<String>> linkedHashMap = new LinkedHashMap<>();
@@ -104,7 +104,7 @@ public class x40 {
                 }
             }
         } catch (Throwable th) {
-            C9269io.b("binary", "DecodeParser error:" + th.toString());
+            io.b("binary", "DecodeParser error:" + th.toString());
             th.printStackTrace();
         }
         return w40Var;

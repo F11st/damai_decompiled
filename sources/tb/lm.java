@@ -3,7 +3,6 @@ package tb;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import kotlin.collections.C8220r;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.SimpleFunctionDescriptor;
@@ -58,7 +57,7 @@ public final class lm implements SyntheticJavaPartsProvider {
         List<SyntheticJavaPartsProvider> list = this.a;
         ArrayList arrayList = new ArrayList();
         for (SyntheticJavaPartsProvider syntheticJavaPartsProvider : list) {
-            C8220r.v(arrayList, syntheticJavaPartsProvider.getMethodNames(classDescriptor));
+            kotlin.collections.r.v(arrayList, syntheticJavaPartsProvider.getMethodNames(classDescriptor));
         }
         return arrayList;
     }
@@ -70,7 +69,7 @@ public final class lm implements SyntheticJavaPartsProvider {
         List<SyntheticJavaPartsProvider> list = this.a;
         ArrayList arrayList = new ArrayList();
         for (SyntheticJavaPartsProvider syntheticJavaPartsProvider : list) {
-            C8220r.v(arrayList, syntheticJavaPartsProvider.getStaticFunctionNames(classDescriptor));
+            kotlin.collections.r.v(arrayList, syntheticJavaPartsProvider.getStaticFunctionNames(classDescriptor));
         }
         return arrayList;
     }

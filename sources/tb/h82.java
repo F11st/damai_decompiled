@@ -2,8 +2,6 @@ package tb;
 
 import androidx.annotation.NonNull;
 import cn.damai.commonbusiness.seatbiz.seat.qilin.bean.SeatBox;
-import cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.AbstractC0818a;
-import cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.C0822c;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 
@@ -30,8 +28,8 @@ public class h82 extends oa<SeatBox, i82> {
     }
 
     @Override // tb.oa
-    public AbstractC0818a<SeatBox, i82> e(@NonNull kn1<i82> kn1Var) {
+    public cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.a<SeatBox, i82> e(@NonNull kn1<i82> kn1Var) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-2105157778") ? (AbstractC0818a) ipChange.ipc$dispatch("-2105157778", new Object[]{this, kn1Var}) : new C0822c(kn1Var);
+        return AndroidInstantRuntime.support(ipChange, "-2105157778") ? (cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.a) ipChange.ipc$dispatch("-2105157778", new Object[]{this, kn1Var}) : new cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.c(kn1Var);
     }
 }

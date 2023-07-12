@@ -7,7 +7,7 @@ import android.os.Binder;
 import android.os.Build;
 import android.os.IBinder;
 import android.os.RemoteException;
-import android.support.v4.app.Taobao;
+import android.support.v4.app.INotificationSideChannel;
 
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
@@ -15,11 +15,11 @@ public abstract class NotificationCompatSideChannelService extends Service {
 
     /* compiled from: Taobao */
     /* loaded from: classes.dex */
-    private class NotificationSideChannelStub extends Taobao.Stub {
+    private class NotificationSideChannelStub extends INotificationSideChannel.Stub {
         NotificationSideChannelStub() {
         }
 
-        @Override // android.support.v4.app.Taobao
+        @Override // android.support.v4.app.INotificationSideChannel
         public void cancel(String str, int i, String str2) throws RemoteException {
             NotificationCompatSideChannelService.this.checkPermission(Binder.getCallingUid(), str);
             long clearCallingIdentity = Binder.clearCallingIdentity();
@@ -30,7 +30,7 @@ public abstract class NotificationCompatSideChannelService extends Service {
             }
         }
 
-        @Override // android.support.v4.app.Taobao
+        @Override // android.support.v4.app.INotificationSideChannel
         public void cancelAll(String str) {
             NotificationCompatSideChannelService.this.checkPermission(Binder.getCallingUid(), str);
             long clearCallingIdentity = Binder.clearCallingIdentity();
@@ -41,7 +41,7 @@ public abstract class NotificationCompatSideChannelService extends Service {
             }
         }
 
-        @Override // android.support.v4.app.Taobao
+        @Override // android.support.v4.app.INotificationSideChannel
         public void notify(String str, int i, String str2, Notification notification) throws RemoteException {
             NotificationCompatSideChannelService.this.checkPermission(Binder.getCallingUid(), str);
             long clearCallingIdentity = Binder.clearCallingIdentity();

@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
@@ -52,21 +51,20 @@ public class HomeFeedProjectViewHolder<T> extends BaseViewHolderV2<IFeedProjectB
     private OnItemBindListener<IFeedProjectBean<T>> p;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.discover.viewholder.HomeFeedProjectViewHolder$a */
     /* loaded from: classes4.dex */
-    public class C0643a implements DMImageCreator.DMImageFailListener {
+    public class a implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CharSequence a;
 
-        C0643a(CharSequence charSequence) {
+        a(CharSequence charSequence) {
             this.a = charSequence;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "129333817")) {
-                ipChange.ipc$dispatch("129333817", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("129333817", new Object[]{this, dVar});
             } else {
                 HomeFeedProjectViewHolder.this.f.setText(this.a);
             }
@@ -74,24 +72,23 @@ public class HomeFeedProjectViewHolder<T> extends BaseViewHolderV2<IFeedProjectB
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.discover.viewholder.HomeFeedProjectViewHolder$b */
     /* loaded from: classes4.dex */
-    public class C0644b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CharSequence a;
 
-        C0644b(CharSequence charSequence) {
+        b(CharSequence charSequence) {
             this.a = charSequence;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "999890190")) {
-                ipChange.ipc$dispatch("999890190", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("999890190", new Object[]{this, eVar});
                 return;
             }
-            Bitmap bitmap = c0502e.b;
+            Bitmap bitmap = eVar.b;
             if (bitmap == null) {
                 HomeFeedProjectViewHolder.this.f.setText(this.a);
             } else {
@@ -113,9 +110,9 @@ public class HomeFeedProjectViewHolder<T> extends BaseViewHolderV2<IFeedProjectB
         this.n = view.findViewById(R$id.dfp_price_postfix);
         this.k = view.findViewById(R$id.dfp_price_pending);
         this.j = (TextView) view.findViewById(R$id.dfp_wanna_see_tag);
-        int a = ((DisplayMetrics.getwidthPixels(m62.b(mu0.a())) - (m62.a(mu0.a(), 21.0f) * 2)) - m62.a(mu0.a(), 12.0f)) / 2;
-        this.c = a;
-        this.d = (int) ((a * 224.0f) / 168.0f);
+        int a2 = ((DisplayMetrics.getwidthPixels(m62.b(mu0.a())) - (m62.a(mu0.a(), 21.0f) * 2)) - m62.a(mu0.a(), 12.0f)) / 2;
+        this.c = a2;
+        this.d = (int) ((a2 * 224.0f) / 168.0f);
         this.p = onItemBindListener;
     }
 
@@ -180,8 +177,8 @@ public class HomeFeedProjectViewHolder<T> extends BaseViewHolderV2<IFeedProjectB
             spannableStringBuilder.insert(0, (CharSequence) "123");
             int height = bitmap.getHeight();
             int width = bitmap.getWidth();
-            int a = t60.a(mu0.a(), 16.0f);
-            spannableStringBuilder.setSpan(new ImageSpan(mu0.a(), a21.f(bitmap, (width * a) / height, a), 1), 0, 3, 18);
+            int a2 = t60.a(mu0.a(), 16.0f);
+            spannableStringBuilder.setSpan(new ImageSpan(mu0.a(), a21.f(bitmap, (width * a2) / height, a2), 1), 0, 3, 18);
             this.f.setText(spannableStringBuilder);
         } catch (Exception e) {
             e.printStackTrace();
@@ -203,7 +200,7 @@ public class HomeFeedProjectViewHolder<T> extends BaseViewHolderV2<IFeedProjectB
             if (TextUtils.isEmpty(atmospheric)) {
                 this.f.setText(g);
             } else {
-                C0504a.b().h(mu0.a()).c(atmospheric).n(new C0644b(g)).e(new C0643a(g)).f();
+                cn.damai.common.image.a.b().h(mu0.a()).c(atmospheric).n(new b(g)).e(new a(g)).f();
             }
             this.g.setText(iFeedProjectBean.getProjectDate());
             String rankText = iFeedProjectBean.getRankText();

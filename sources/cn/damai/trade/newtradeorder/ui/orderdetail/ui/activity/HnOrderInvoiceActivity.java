@@ -13,8 +13,8 @@ import androidx.fragment.app.FragmentTransaction;
 import cn.damai.common.askpermission.OnGrantListener;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.address.bean.AddressBean;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
@@ -76,12 +76,11 @@ public class HnOrderInvoiceActivity extends DamaiBaseActivity<HnOrderCreateInvoi
     private String mProjectId;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.HnOrderInvoiceActivity$a */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC2147a implements DialogInterface.OnClickListener {
+    public class a implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC2147a() {
+        a() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -97,12 +96,11 @@ public class HnOrderInvoiceActivity extends DamaiBaseActivity<HnOrderCreateInvoi
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.HnOrderInvoiceActivity$b */
     /* loaded from: classes8.dex */
-    public class C2148b implements OnGrantListener {
+    public class b implements OnGrantListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2148b() {
+        b() {
         }
 
         @Override // cn.damai.common.askpermission.OnGrantListener
@@ -233,19 +231,19 @@ public class HnOrderInvoiceActivity extends DamaiBaseActivity<HnOrderCreateInvoi
 
     private void reportUtInvoiceSubmitInfo() {
         List<HnInvoiceDeliverySupport> list;
-        HnInvoiceDeliveryInfo b;
+        HnInvoiceDeliveryInfo b2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1561481180")) {
             ipChange.ipc$dispatch("1561481180", new Object[]{this});
             return;
         }
         HnInvoiceApplyInfoResult hnInvoiceApplyInfoResult = this.mInvoiceApplyInfo;
-        if (hnInvoiceApplyInfoResult == null || (list = hnInvoiceApplyInfoResult.deliveryWaySupports) == null || list.isEmpty() || (b = this.mInvoiceDeliveryInfoHolder.b()) == null) {
+        if (hnInvoiceApplyInfoResult == null || (list = hnInvoiceApplyInfoResult.deliveryWaySupports) == null || list.isEmpty() || (b2 = this.mInvoiceDeliveryInfoHolder.b()) == null) {
             return;
         }
         pp2 u = pp2.u();
         String str = this.mOrderId;
-        C0529c.e().x(u.J1(str, this.mInvoiceApplyInfo.deliveryWaySupports.get(0).invoiceTicketType + "", b.deliveryWay));
+        c.e().x(u.J1(str, this.mInvoiceApplyInfo.deliveryWaySupports.get(0).invoiceTicketType + "", b2.deliveryWay));
     }
 
     private void requestInvoiceData(String str) {
@@ -263,7 +261,7 @@ public class HnOrderInvoiceActivity extends DamaiBaseActivity<HnOrderCreateInvoi
         if (AndroidInstantRuntime.support(ipChange, "-478158848")) {
             ipChange.ipc$dispatch("-478158848", new Object[]{this, str});
         } else {
-            new h4(this.mContext).c(false).e(str).h(getString(R$string.confirm), new DialogInterface$OnClickListenerC2147a()).j();
+            new h4(this.mContext).c(false).e(str).h(getString(R$string.confirm), new a()).j();
         }
     }
 
@@ -301,72 +299,72 @@ public class HnOrderInvoiceActivity extends DamaiBaseActivity<HnOrderCreateInvoi
             ipChange.ipc$dispatch("56415993", new Object[]{this});
         } else if (this.mInvoiceApplyInfo == null) {
         } else {
-            HnOrderInvoiceTitleHolder.C2227a b = this.mInvoiceTitleHolder.b();
-            if (b == null) {
+            HnOrderInvoiceTitleHolder.a b2 = this.mInvoiceTitleHolder.b();
+            if (b2 == null) {
                 ToastUtil.a().e(this, "请选择抬头类型");
                 return;
             }
-            HnInvoiceDeliveryInfo b2 = this.mInvoiceDeliveryInfoHolder.b();
-            if (b2 == null) {
+            HnInvoiceDeliveryInfo b3 = this.mInvoiceDeliveryInfoHolder.b();
+            if (b3 == null) {
                 ToastUtil.a().e(this, "请选择发票配送信息");
                 return;
             }
-            if (!"1".equals(b.a.invoiceTitleType)) {
-                if (TextUtils.isEmpty(b.b)) {
+            if (!"1".equals(b2.a.invoiceTitleType)) {
+                if (TextUtils.isEmpty(b2.b)) {
                     ToastUtil.a().e(this, "请填写发票抬头");
                     return;
-                } else if (TextUtils.isEmpty(b.c)) {
+                } else if (TextUtils.isEmpty(b2.c)) {
                     ToastUtil.a().e(this, "请填写税号");
                     return;
                 }
             }
-            if ("1".equals(b2.deliveryWay)) {
-                if (b2.deliveryAddress == null) {
+            if ("1".equals(b3.deliveryWay)) {
+                if (b3.deliveryAddress == null) {
                     ToastUtil.a().e(this, "请输入收货地址和联系方式");
                     return;
                 }
             } else {
-                if ("1".equals(b.a.invoiceTitleType)) {
-                    if (TextUtils.isEmpty(b.d)) {
+                if ("1".equals(b2.a.invoiceTitleType)) {
+                    if (TextUtils.isEmpty(b2.d)) {
                         ToastUtil.a().e(this, "请输入姓名");
                         return;
-                    } else if (TextUtils.isEmpty(b.e)) {
+                    } else if (TextUtils.isEmpty(b2.e)) {
                         ToastUtil.a().e(this, "请输入手机号码");
                         return;
                     }
                 }
-                if ("3".equals(b2.deliveryWay)) {
-                    HnInvoiceDeliveryInfo.HnInvoiceDeliveryAddress hnInvoiceDeliveryAddress = b2.deliveryAddress;
+                if ("3".equals(b3.deliveryWay)) {
+                    HnInvoiceDeliveryInfo.HnInvoiceDeliveryAddress hnInvoiceDeliveryAddress = b3.deliveryAddress;
                     if (hnInvoiceDeliveryAddress == null || TextUtils.isEmpty(hnInvoiceDeliveryAddress.email)) {
                         ToastUtil.a().e(this, "请填写邮箱");
                         return;
                     }
                 } else {
-                    "2".equals(b2.deliveryWay);
+                    "2".equals(b3.deliveryWay);
                 }
             }
             HNOrderInvoiceSubmitRequest hNOrderInvoiceSubmitRequest = new HNOrderInvoiceSubmitRequest();
             hNOrderInvoiceSubmitRequest.orderId = this.mOrderId;
             hNOrderInvoiceSubmitRequest.userId = Login.getUserId();
-            String str = b.a.invoiceTitleType;
+            String str = b2.a.invoiceTitleType;
             hNOrderInvoiceSubmitRequest.invoiceType = str;
             if (!"1".equals(str)) {
-                hNOrderInvoiceSubmitRequest.title = b.b;
-                hNOrderInvoiceSubmitRequest.dutyParagraph = b.c;
+                hNOrderInvoiceSubmitRequest.title = b2.b;
+                hNOrderInvoiceSubmitRequest.dutyParagraph = b2.c;
             }
-            hNOrderInvoiceSubmitRequest.deliveryWay = b2.deliveryWay;
+            hNOrderInvoiceSubmitRequest.deliveryWay = b3.deliveryWay;
             Map<String, String> hashMap = new HashMap<>();
-            if ("1".equals(b2.deliveryWay)) {
-                hashMap = buildDeliveryAddressData(b2.deliveryAddress, hashMap);
+            if ("1".equals(b3.deliveryWay)) {
+                hashMap = buildDeliveryAddressData(b3.deliveryAddress, hashMap);
             } else {
-                if ("1".equals(b.a.invoiceTitleType)) {
-                    hashMap.put("consignee", b.d);
-                    hashMap.put("mobile", b.e);
+                if ("1".equals(b2.a.invoiceTitleType)) {
+                    hashMap.put("consignee", b2.d);
+                    hashMap.put("mobile", b2.e);
                 }
-                if ("3".equals(b2.deliveryWay)) {
-                    hashMap.put("eMail", b2.deliveryAddress.email);
+                if ("3".equals(b3.deliveryWay)) {
+                    hashMap.put("eMail", b3.deliveryAddress.email);
                 } else {
-                    "2".equals(b2.deliveryWay);
+                    "2".equals(b3.deliveryWay);
                 }
             }
             try {
@@ -427,7 +425,7 @@ public class HnOrderInvoiceActivity extends DamaiBaseActivity<HnOrderCreateInvoi
             ipChange.ipc$dispatch("-489083143", new Object[]{this});
             return;
         }
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i(pp2.HN_ORDER_CREATE_INVOICE_PAGE));
+        setDamaiUTKeyBuilder(new a.b().i(pp2.HN_ORDER_CREATE_INVOICE_PAGE));
         prepareView();
         initData();
         requestInvoiceData(this.mOrderId);
@@ -509,7 +507,7 @@ public class HnOrderInvoiceActivity extends DamaiBaseActivity<HnOrderCreateInvoi
         if (AndroidInstantRuntime.support(ipChange, "-2015912375")) {
             ipChange.ipc$dispatch("-2015912375", new Object[]{this});
         } else {
-            ir1.a(this, false, "android.permission.READ_CONTACTS", "方便您快速填写手机号", new C2148b());
+            ir1.a(this, false, "android.permission.READ_CONTACTS", "方便您快速填写手机号", new b());
         }
     }
 

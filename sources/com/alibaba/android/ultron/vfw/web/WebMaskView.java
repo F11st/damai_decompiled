@@ -20,10 +20,9 @@ public class WebMaskView extends RelativeLayout {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.ultron.vfw.web.WebMaskView$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC3266a implements View.OnClickListener {
-        View$OnClickListenerC3266a() {
+    public class a implements View.OnClickListener {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -55,7 +54,7 @@ public class WebMaskView extends RelativeLayout {
             this.mRlErrView = (RelativeLayout) inflate.findViewById(R$id.rl_err);
             TextView textView = (TextView) inflate.findViewById(R$id.mask_view_refresh);
             this.mTextViewRefresh = textView;
-            textView.setOnClickListener(new View$OnClickListenerC3266a());
+            textView.setOnClickListener(new a());
         }
     }
 

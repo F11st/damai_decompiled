@@ -35,7 +35,7 @@ public class fy implements LocationSource.OnLocationChangedListener, LBSTraceBas
     private ExecutorService e;
     private TraceStatusListener h;
     private as i;
-    private HandlerC4551c n;
+    private c n;
     private long f = 2000;
     private int g = 5;
     private List<TraceLocation> j = new ArrayList();
@@ -52,12 +52,11 @@ public class fy implements LocationSource.OnLocationChangedListener, LBSTraceBas
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.fy$b */
     /* loaded from: classes10.dex */
-    public class C4550b implements TraceListener {
+    public class b implements TraceListener {
         private final List<TraceLocation> b;
 
-        public C4550b(List<TraceLocation> list) {
+        public b(List<TraceLocation> list) {
             this.b = list;
         }
 
@@ -112,12 +111,11 @@ public class fy implements LocationSource.OnLocationChangedListener, LBSTraceBas
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.fy$c */
     /* loaded from: classes10.dex */
-    static class HandlerC4551c extends Handler {
+    static class c extends Handler {
         private TraceListener a;
 
-        public HandlerC4551c(Looper looper) {
+        public c(Looper looper) {
             super(looper);
         }
 
@@ -154,7 +152,7 @@ public class fy implements LocationSource.OnLocationChangedListener, LBSTraceBas
         Context applicationContext = context.getApplicationContext();
         this.b = applicationContext;
         this.c = new CoordinateConverter(applicationContext);
-        this.n = new HandlerC4551c(Looper.getMainLooper());
+        this.n = new c(Looper.getMainLooper());
         gi.a().a(this.b);
         int i = this.a * 2;
         TimeUnit timeUnit = s;
@@ -224,7 +222,7 @@ public class fy implements LocationSource.OnLocationChangedListener, LBSTraceBas
     @Override // com.amap.api.trace.LBSTraceBase
     public void queryProcessedTrace(int i, List<TraceLocation> list, int i2, TraceListener traceListener) {
         try {
-            this.d.execute(new RunnableC4549a(i, list, i2, traceListener));
+            this.d.execute(new a(i, list, i2, traceListener));
         } catch (Throwable th) {
             th.printStackTrace();
         }
@@ -299,7 +297,7 @@ public class fy implements LocationSource.OnLocationChangedListener, LBSTraceBas
         }
         if (size <= 50) {
             ArrayList arrayList = new ArrayList(this.j);
-            queryProcessedTrace(0, arrayList, 1, new C4550b(arrayList));
+            queryProcessedTrace(0, arrayList, 1, new b(arrayList));
             return;
         }
         int i = size - 50;
@@ -308,14 +306,13 @@ public class fy implements LocationSource.OnLocationChangedListener, LBSTraceBas
         }
         a(new ArrayList(this.j.subList(i - this.g, i)));
         ArrayList arrayList2 = new ArrayList(this.j.subList(i, size));
-        queryProcessedTrace(i, arrayList2, 1, new C4550b(arrayList2));
+        queryProcessedTrace(i, arrayList2, 1, new b(arrayList2));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.fy$a */
     /* loaded from: classes10.dex */
-    public class RunnableC4549a implements Runnable {
+    public class a implements Runnable {
         private int c;
         private int d;
         private List<TraceLocation> e;
@@ -323,7 +320,7 @@ public class fy implements LocationSource.OnLocationChangedListener, LBSTraceBas
         private List<TraceLocation> b = new ArrayList();
         private String f = ei.a();
 
-        public RunnableC4549a(int i, List<TraceLocation> list, int i2, TraceListener traceListener) {
+        public a(int i, List<TraceLocation> list, int i2, TraceListener traceListener) {
             this.c = i2;
             this.d = i;
             this.e = list;
@@ -439,9 +436,9 @@ public class fy implements LocationSource.OnLocationChangedListener, LBSTraceBas
                     for (TraceLocation traceLocation2 : list) {
                         if (traceLocation2 != null) {
                             if (traceLocation != null) {
-                                double a = a(traceLocation.getLatitude(), traceLocation.getLongitude(), traceLocation2.getLatitude(), traceLocation2.getLongitude());
-                                if (a <= 100.0d) {
-                                    d2 += a;
+                                double a2 = a(traceLocation.getLatitude(), traceLocation.getLongitude(), traceLocation2.getLatitude(), traceLocation2.getLongitude());
+                                if (a2 <= 100.0d) {
+                                    d2 += a2;
                                 }
                             }
                             traceLocation = traceLocation2;

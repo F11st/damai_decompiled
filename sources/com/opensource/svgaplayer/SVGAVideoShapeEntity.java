@@ -4,8 +4,7 @@ import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Path;
 import android.graphics.RectF;
-import com.alipay.sdk.m.s.C4293a;
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import com.opensource.svgaplayer.proto.ShapeEntity;
 import com.opensource.svgaplayer.proto.Transform;
 import com.taobao.weex.common.Constants;
@@ -14,7 +13,7 @@ import java.util.Iterator;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONArray;
@@ -32,7 +31,7 @@ public final class SVGAVideoShapeEntity {
     @Nullable
     private Map<String, ? extends Object> b;
     @Nullable
-    private C6109a c;
+    private a c;
     @Nullable
     private Matrix d;
     @Nullable
@@ -49,9 +48,8 @@ public final class SVGAVideoShapeEntity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.SVGAVideoShapeEntity$a */
     /* loaded from: classes10.dex */
-    public static final class C6109a {
+    public static final class a {
         private int a;
         private int b;
         private float c;
@@ -215,7 +213,7 @@ public final class SVGAVideoShapeEntity {
     private final void h(ShapeEntity shapeEntity) {
         ShapeEntity.ShapeStyle shapeStyle = shapeEntity.styles;
         if (shapeStyle != null) {
-            C6109a c6109a = new C6109a();
+            a aVar = new a();
             ShapeEntity.ShapeStyle.RGBAColor rGBAColor = shapeStyle.fill;
             if (rGBAColor != null) {
                 Float f = rGBAColor.a;
@@ -226,7 +224,7 @@ public final class SVGAVideoShapeEntity {
                 Float f4 = rGBAColor.g;
                 int floatValue3 = (int) ((f4 != null ? f4.floatValue() : 0.0f) * f2);
                 Float f5 = rGBAColor.b;
-                c6109a.h(Color.argb(floatValue, floatValue2, floatValue3, (int) ((f5 != null ? f5.floatValue() : 0.0f) * f2)));
+                aVar.h(Color.argb(floatValue, floatValue2, floatValue3, (int) ((f5 != null ? f5.floatValue() : 0.0f) * f2)));
             }
             ShapeEntity.ShapeStyle.RGBAColor rGBAColor2 = shapeStyle.stroke;
             if (rGBAColor2 != null) {
@@ -238,82 +236,82 @@ public final class SVGAVideoShapeEntity {
                 Float f9 = rGBAColor2.g;
                 int floatValue6 = (int) ((f9 != null ? f9.floatValue() : 0.0f) * f7);
                 Float f10 = rGBAColor2.b;
-                c6109a.m(Color.argb(floatValue4, floatValue5, floatValue6, (int) ((f10 != null ? f10.floatValue() : 0.0f) * f7)));
+                aVar.m(Color.argb(floatValue4, floatValue5, floatValue6, (int) ((f10 != null ? f10.floatValue() : 0.0f) * f7)));
             }
             Float f11 = shapeStyle.strokeWidth;
-            c6109a.n(f11 != null ? f11.floatValue() : 0.0f);
+            aVar.n(f11 != null ? f11.floatValue() : 0.0f);
             ShapeEntity.ShapeStyle.LineCap lineCap = shapeStyle.lineCap;
             if (lineCap != null) {
                 int i = b52.$EnumSwitchMapping$1[lineCap.ordinal()];
                 if (i == 1) {
-                    c6109a.i("butt");
+                    aVar.i("butt");
                 } else if (i == 2) {
-                    c6109a.i("round");
+                    aVar.i("round");
                 } else if (i == 3) {
-                    c6109a.i("square");
+                    aVar.i("square");
                 }
             }
             ShapeEntity.ShapeStyle.LineJoin lineJoin = shapeStyle.lineJoin;
             if (lineJoin != null) {
                 int i2 = b52.$EnumSwitchMapping$2[lineJoin.ordinal()];
                 if (i2 == 1) {
-                    c6109a.k("bevel");
+                    aVar.k("bevel");
                 } else if (i2 == 2) {
-                    c6109a.k("miter");
+                    aVar.k("miter");
                 } else if (i2 == 3) {
-                    c6109a.k("round");
+                    aVar.k("round");
                 }
             }
             Float f12 = shapeStyle.miterLimit;
-            c6109a.l((int) (f12 != null ? f12.floatValue() : 0.0f));
-            c6109a.j(new float[3]);
+            aVar.l((int) (f12 != null ? f12.floatValue() : 0.0f));
+            aVar.j(new float[3]);
             Float f13 = shapeStyle.lineDashI;
             if (f13 != null) {
-                c6109a.c()[0] = f13.floatValue();
+                aVar.c()[0] = f13.floatValue();
             }
             Float f14 = shapeStyle.lineDashII;
             if (f14 != null) {
-                c6109a.c()[1] = f14.floatValue();
+                aVar.c()[1] = f14.floatValue();
             }
             Float f15 = shapeStyle.lineDashIII;
             if (f15 != null) {
-                c6109a.c()[2] = f15.floatValue();
+                aVar.c()[2] = f15.floatValue();
             }
-            this.c = c6109a;
+            this.c = aVar;
         }
     }
 
     private final void i(JSONObject jSONObject) {
         JSONObject optJSONObject = jSONObject.optJSONObject("styles");
         if (optJSONObject != null) {
-            C6109a c6109a = new C6109a();
+            a aVar = new a();
             JSONArray optJSONArray = optJSONObject.optJSONArray("fill");
             if (optJSONArray != null && optJSONArray.length() == 4) {
                 double d = 255;
-                c6109a.h(Color.argb((int) (optJSONArray.optDouble(3) * d), (int) (optJSONArray.optDouble(0) * d), (int) (optJSONArray.optDouble(1) * d), (int) (optJSONArray.optDouble(2) * d)));
+                aVar.h(Color.argb((int) (optJSONArray.optDouble(3) * d), (int) (optJSONArray.optDouble(0) * d), (int) (optJSONArray.optDouble(1) * d), (int) (optJSONArray.optDouble(2) * d)));
             }
             JSONArray optJSONArray2 = optJSONObject.optJSONArray("stroke");
             if (optJSONArray2 != null && optJSONArray2.length() == 4) {
                 double d2 = 255;
-                c6109a.m(Color.argb((int) (optJSONArray2.optDouble(3) * d2), (int) (optJSONArray2.optDouble(0) * d2), (int) (optJSONArray2.optDouble(1) * d2), (int) (optJSONArray2.optDouble(2) * d2)));
+                aVar.m(Color.argb((int) (optJSONArray2.optDouble(3) * d2), (int) (optJSONArray2.optDouble(0) * d2), (int) (optJSONArray2.optDouble(1) * d2), (int) (optJSONArray2.optDouble(2) * d2)));
             }
-            c6109a.n((float) optJSONObject.optDouble("strokeWidth", 0.0d));
+            aVar.n((float) optJSONObject.optDouble("strokeWidth", 0.0d));
             String optString = optJSONObject.optString("lineCap", "butt");
             b41.e(optString, "it.optString(\"lineCap\", \"butt\")");
-            c6109a.i(optString);
+            aVar.i(optString);
             String optString2 = optJSONObject.optString("lineJoin", "miter");
             b41.e(optString2, "it.optString(\"lineJoin\", \"miter\")");
-            c6109a.k(optString2);
-            c6109a.l(optJSONObject.optInt("miterLimit", 0));
+            aVar.k(optString2);
+            aVar.l(optJSONObject.optInt("miterLimit", 0));
             JSONArray optJSONArray3 = optJSONObject.optJSONArray("lineDash");
             if (optJSONArray3 != null) {
-                c6109a.j(new float[optJSONArray3.length()]);
+                aVar.j(new float[optJSONArray3.length()]);
                 int length = optJSONArray3.length();
                 for (int i = 0; i < length; i++) {
-                    c6109a.c()[i] = (float) optJSONArray3.optDouble(i, 0.0d);
+                    aVar.c()[i] = (float) optJSONArray3.optDouble(i, 0.0d);
                 }
             }
-            this.c = c6109a;
+            this.c = aVar;
         }
     }
 
@@ -355,7 +353,7 @@ public final class SVGAVideoShapeEntity {
             double optDouble = optJSONObject.optDouble("a", 1.0d);
             double optDouble2 = optJSONObject.optDouble("b", 0.0d);
             float f = (float) 0.0d;
-            matrix.setValues(new float[]{(float) optDouble, (float) optJSONObject.optDouble(AbstractC5658c.a, 0.0d), (float) optJSONObject.optDouble("tx", 0.0d), (float) optDouble2, (float) optJSONObject.optDouble("d", 1.0d), (float) optJSONObject.optDouble(C4293a.s, 0.0d), f, f, (float) 1.0d});
+            matrix.setValues(new float[]{(float) optDouble, (float) optJSONObject.optDouble(c.a, 0.0d), (float) optJSONObject.optDouble("tx", 0.0d), (float) optDouble2, (float) optJSONObject.optDouble("d", 1.0d), (float) optJSONObject.optDouble(com.alipay.sdk.m.s.a.s, 0.0d), f, f, (float) 1.0d});
             this.d = matrix;
         }
     }
@@ -387,22 +385,22 @@ public final class SVGAVideoShapeEntity {
         boolean q4;
         String optString = jSONObject.optString("type");
         if (optString != null) {
-            q = C8604o.q(optString, "shape", true);
+            q = o.q(optString, "shape", true);
             if (q) {
                 this.a = Type.shape;
                 return;
             }
-            q2 = C8604o.q(optString, "rect", true);
+            q2 = o.q(optString, "rect", true);
             if (q2) {
                 this.a = Type.rect;
                 return;
             }
-            q3 = C8604o.q(optString, "ellipse", true);
+            q3 = o.q(optString, "ellipse", true);
             if (q3) {
                 this.a = Type.ellipse;
                 return;
             }
-            q4 = C8604o.q(optString, "keep", true);
+            q4 = o.q(optString, "keep", true);
             if (q4) {
                 this.a = Type.keep;
             }
@@ -521,7 +519,7 @@ public final class SVGAVideoShapeEntity {
     }
 
     @Nullable
-    public final C6109a c() {
+    public final a c() {
         return this.c;
     }
 

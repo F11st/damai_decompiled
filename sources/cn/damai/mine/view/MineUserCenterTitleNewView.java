@@ -17,7 +17,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.homepage.R$color;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -77,7 +77,7 @@ public class MineUserCenterTitleNewView extends LinearLayout implements View.OnC
             ipChange.ipc$dispatch("847431280", new Object[]{this});
         } else if (this.mContext == null) {
         } else {
-            C0529c.e().x(vf1.x().I());
+            c.e().x(vf1.x().I());
             if (!LoginManager.k().q()) {
                 DMNav.from(this.mContext).withExtras(new Bundle()).toUri(cs.f());
                 return;
@@ -93,7 +93,7 @@ public class MineUserCenterTitleNewView extends LinearLayout implements View.OnC
             ipChange.ipc$dispatch("-1947095032", new Object[]{this});
             return;
         }
-        C0529c.e().x(vf1.x().J());
+        c.e().x(vf1.x().J());
         Bundle bundle = new Bundle();
         long n = wh2.n(z20.E());
         if (n > 0) {
@@ -236,7 +236,7 @@ public class MineUserCenterTitleNewView extends LinearLayout implements View.OnC
             ipChange.ipc$dispatch("-1837896734", new Object[]{this});
         } else if (this.mContext == null) {
         } else {
-            C0529c.e().x(vf1.x().g0(pl.MY_ALIME_PAGE));
+            c.e().x(vf1.x().g0(pl.MY_ALIME_PAGE));
             if (LoginManager.k().q()) {
                 AliMeUtil.k(this.mContext, AliMeUtil.FROM_MINE);
                 return;
@@ -284,7 +284,7 @@ public class MineUserCenterTitleNewView extends LinearLayout implements View.OnC
         } else if (R$id.ll_kefu == id) {
             gotoAliMeCustomerService();
         } else if (R$id.ll_edit == id) {
-            C0529c.e().x(vf1.x().i0(Constants.TAG_FOR_EDIT));
+            c.e().x(vf1.x().i0(Constants.TAG_FOR_EDIT));
             Object tag = view.getTag();
             if (tag != null && wf1.d()) {
                 if (tag instanceof UserInfoBean) {

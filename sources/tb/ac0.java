@@ -70,8 +70,8 @@ public final class ac0<BizResponse> extends DoloresKernel<BizResponse> {
         if (p == null || (str = p.d()) == null) {
             str = Mtop.Id.INNER;
         }
-        sb0.C9690a c9690a = sb0.Companion;
-        Mtop instance = Mtop.instance(str, c9690a.g().i(), c9690a.g().n());
+        sb0.a aVar = sb0.Companion;
+        Mtop instance = Mtop.instance(str, aVar.g().i(), aVar.g().n());
         y12 p2 = p();
         if (p2 != null && (c = p2.c()) != null) {
             if (!(c.length >= 2)) {

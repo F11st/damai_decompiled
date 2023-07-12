@@ -3,7 +3,7 @@ package com.alibaba.fastjson.serializer;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.parser.JSONLexer;
-import com.alipay.sdk.m.n.C4250a;
+import com.alipay.sdk.m.n.a;
 import com.youku.upsplayer.util.YKUpsConvert;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -495,7 +495,7 @@ public final class SerializeWriter extends Writer {
                     int i10 = ((bArr[i] & 255) << 10) | (i9 == 2 ? (bArr[i2] & 255) << 2 : 0);
                     write(cArr[i10 >> 12]);
                     write(cArr[(i10 >>> 6) & 63]);
-                    write(i9 == 2 ? cArr[i10 & 63] : C4250a.h);
+                    write(i9 == 2 ? cArr[i10 & 63] : a.h);
                     write(61);
                 }
                 write(c);
@@ -530,8 +530,8 @@ public final class SerializeWriter extends Writer {
             char[] cArr3 = this.buf;
             cArr3[i4 - 5] = cArr[i22 >> 12];
             cArr3[i4 - 4] = cArr[(i22 >>> 6) & 63];
-            cArr3[i4 - 3] = i21 == 2 ? cArr[i22 & 63] : C4250a.h;
-            cArr3[i4 - 2] = C4250a.h;
+            cArr3[i4 - 3] = i21 == 2 ? cArr[i22 & 63] : a.h;
+            cArr3[i4 - 2] = a.h;
         }
         this.buf[i4 - 1] = c;
     }

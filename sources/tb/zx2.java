@@ -44,7 +44,7 @@ public class zx2 {
         if (AndroidInstantRuntime.support(ipChange, "796979545")) {
             return (LinearLayout) ipChange.ipc$dispatch("796979545", new Object[]{this, arrayList, viewGroup});
         }
-        List<BaseLayer> o = C9039db.o(arrayList);
+        List<BaseLayer> o = db.o(arrayList);
         VerticalAdapter verticalAdapter = new VerticalAdapter(this.a, new ox2());
         verticalAdapter.b(o);
         ja jaVar = this.a;

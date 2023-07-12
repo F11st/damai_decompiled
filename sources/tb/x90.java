@@ -3,13 +3,12 @@ package tb;
 import android.text.TextUtils;
 import com.taobao.phenix.cache.disk.DiskCacheKeyValueStore;
 import com.taobao.phenix.cache.disk.DiskCacheSupplier;
-import com.taobao.phenix.request.C6865a;
 import com.taobao.rxm.consume.Consumer;
 import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class x90 extends AbstractC9433ma<z40, z40> {
+public class x90 extends ma<z40, z40> {
     private DiskCacheKeyValueStore k;
 
     public x90(DiskCacheSupplier diskCacheSupplier, DiskCacheKeyValueStore diskCacheKeyValueStore) {
@@ -17,14 +16,14 @@ public class x90 extends AbstractC9433ma<z40, z40> {
         this.k = diskCacheKeyValueStore;
     }
 
-    private boolean N(C6865a c6865a) {
-        Map<String, String> H = c6865a.H();
-        return (this.k == null || H == null || TextUtils.isEmpty(H.get("max-age")) || !this.k.isTTLDomain(c6865a.N())) ? false : true;
+    private boolean N(com.taobao.phenix.request.a aVar) {
+        Map<String, String> H = aVar.H();
+        return (this.k == null || H == null || TextUtils.isEmpty(H.get("max-age")) || !this.k.isTTLDomain(aVar.N())) ? false : true;
     }
 
     @Override // com.taobao.rxm.produce.BaseChainProducer, com.taobao.rxm.consume.ChainConsumer
     /* renamed from: M */
-    public void consumeNewResult(Consumer<z40, C6865a> consumer, boolean z, z40 z40Var) {
+    public void consumeNewResult(Consumer<z40, com.taobao.phenix.request.a> consumer, boolean z, z40 z40Var) {
         xt2.n("Phenix", "DiskCache Writer Started.", consumer.getContext());
         consumer.onNewResult(z40Var, z);
         L(consumer.getContext(), z40Var.d(), true);
@@ -47,7 +46,7 @@ public class x90 extends AbstractC9433ma<z40, z40> {
     }
 
     @Override // tb.jh
-    protected boolean a(Consumer<z40, C6865a> consumer) {
+    protected boolean a(Consumer<z40, com.taobao.phenix.request.a> consumer) {
         return false;
     }
 }

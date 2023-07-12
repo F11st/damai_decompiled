@@ -3,7 +3,6 @@ package tb;
 import android.app.Application;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.IConfigAdapter;
 import com.alibaba.aliweex.adapter.IConfigGeneratorAdapter;
 import com.alibaba.aliweex.adapter.IConfigModuleAdapter;
@@ -32,39 +31,38 @@ public class oz2 {
     private static volatile oz2 s;
     private IConfigModuleAdapter o;
     private IConfigModuleListener p;
-    public C9538b a = null;
-    public C9538b b = null;
-    public C9538b c = null;
-    public C9538b d = null;
-    public C9538b e = null;
-    public C9538b f = null;
-    public C9538b g = null;
-    public C9538b h = null;
-    public C9538b i = null;
-    public C9538b j = null;
-    public C9538b k = null;
-    public C9538b l = null;
-    public C9538b m = null;
-    public C9538b n = null;
+    public b a = null;
+    public b b = null;
+    public b c = null;
+    public b d = null;
+    public b e = null;
+    public b f = null;
+    public b g = null;
+    public b h = null;
+    public b i = null;
+    public b j = null;
+    public b k = null;
+    public b l = null;
+    public b m = null;
+    public b n = null;
     private SharedPreferences q = null;
-    private List<C9538b> r = new ArrayList();
+    private List<b> r = new ArrayList();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.oz2$a */
     /* loaded from: classes5.dex */
-    class C9537a implements IConfigModuleListener {
-        C9537a() {
+    class a implements IConfigModuleListener {
+        a() {
         }
 
         @Override // com.alibaba.aliweex.adapter.IConfigModuleListener
         public void onConfigUpdate(String str, Map<String, String> map) {
-            IConfigAdapter c = C3004a.l().c();
+            IConfigAdapter c = com.alibaba.aliweex.a.l().c();
             if (c == null) {
                 return;
             }
-            for (C9538b c9538b : oz2.this.r) {
-                if (c9538b.a.equals(str)) {
-                    oz2.this.g(c, c9538b);
+            for (b bVar : oz2.this.r) {
+                if (bVar.a.equals(str)) {
+                    oz2.this.g(c, bVar);
                 }
             }
             if ("android_weex_ext_config".equals(str)) {
@@ -74,15 +72,14 @@ public class oz2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.oz2$b */
     /* loaded from: classes5.dex */
-    public static class C9538b {
+    public static class b {
         public String a;
         public String b;
         public String c;
         public String d = null;
 
-        C9538b(String str, String str2, String str3) {
+        b(String str, String str2, String str3) {
             this.b = str;
             this.c = str2;
             this.a = str3;
@@ -93,10 +90,10 @@ public class oz2 {
         this.o = null;
         this.p = null;
         l();
-        IConfigGeneratorAdapter d = C3004a.l().d();
+        IConfigGeneratorAdapter d = com.alibaba.aliweex.a.l().d();
         if (d != null) {
             this.o = d.generateConfigInstance("");
-            this.p = new C9537a();
+            this.p = new a();
             n(new String[]{"android_weex_ext_config", WXAPM_CONFIG_GROUP});
         }
         e();
@@ -111,15 +108,15 @@ public class oz2 {
         if (this.q != null) {
             return;
         }
-        Application b = C3004a.l().b();
-        if (b != null) {
-            this.q = b.getSharedPreferences("weex_init_config", 0);
+        Application b2 = com.alibaba.aliweex.a.l().b();
+        if (b2 != null) {
+            this.q = b2.getSharedPreferences("weex_init_config", 0);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void g(IConfigAdapter iConfigAdapter, C9538b c9538b) {
-        p(c9538b.b, iConfigAdapter.getConfig(c9538b.a, c9538b.b, c9538b.c));
+    public void g(IConfigAdapter iConfigAdapter, b bVar) {
+        p(bVar.b, iConfigAdapter.getConfig(bVar.a, bVar.b, bVar.c));
     }
 
     public static oz2 j() {
@@ -136,48 +133,48 @@ public class oz2 {
     private void l() {
         boolean e = zz2.e();
         WXLogUtils.e("aliweex initInitConfig:" + e);
-        C9538b c9538b = new C9538b(key_enableAutoScan, e ? "false" : "true", "android_weex_ext_config");
-        this.a = c9538b;
-        this.r.add(c9538b);
-        C9538b c9538b2 = new C9538b(key_enableRegisterCache, e ? "true" : "false", "android_weex_ext_config");
-        this.b = c9538b2;
-        this.r.add(c9538b2);
-        C9538b c9538b3 = new C9538b(key_enableBackUpThread, e ? "true" : "false", "android_weex_ext_config");
-        this.d = c9538b3;
-        this.r.add(c9538b3);
-        C9538b c9538b4 = new C9538b(key_enableBackUpThreadCache, "true", "android_weex_ext_config");
-        this.e = c9538b4;
-        this.r.add(c9538b4);
-        C9538b c9538b5 = new C9538b(key_enable_so_loader, "true", "android_weex_ext_config");
-        this.c = c9538b5;
-        this.r.add(c9538b5);
-        C9538b c9538b6 = new C9538b(key_initLeftSize, "50", "android_weex_ext_config");
-        this.f = c9538b6;
-        this.r.add(c9538b6);
-        C9538b c9538b7 = new C9538b(key_enable_lazy_init, "true", "android_weex_ext_config");
-        this.g = c9538b7;
-        this.r.add(c9538b7);
-        C9538b c9538b8 = new C9538b(key_enable_init_async, "true", "android_weex_ext_config");
-        this.h = c9538b8;
-        this.r.add(c9538b8);
-        C9538b c9538b9 = new C9538b(key_back_to_home_when_exception, "false", "android_weex_ext_config");
-        this.n = c9538b9;
-        this.r.add(c9538b9);
-        C9538b c9538b10 = new C9538b("use_runtime_api", "0", WXAPM_CONFIG_GROUP);
-        this.i = c9538b10;
-        this.r.add(c9538b10);
-        C9538b c9538b11 = new C9538b("enableAlarmSignal", "true", WXAPM_CONFIG_GROUP);
-        this.j = c9538b11;
-        this.r.add(c9538b11);
-        C9538b c9538b12 = new C9538b("loadRaxPkg", "true", WXAPM_CONFIG_GROUP);
-        this.k = c9538b12;
-        this.r.add(c9538b12);
-        C9538b c9538b13 = new C9538b("release_map", "true", WXAPM_CONFIG_GROUP);
-        this.l = c9538b13;
-        this.r.add(c9538b13);
-        C9538b c9538b14 = new C9538b(key_enable_mtop_usecache, "false", "android_weex_ext_config");
-        this.m = c9538b14;
-        this.r.add(c9538b14);
+        b bVar = new b(key_enableAutoScan, e ? "false" : "true", "android_weex_ext_config");
+        this.a = bVar;
+        this.r.add(bVar);
+        b bVar2 = new b(key_enableRegisterCache, e ? "true" : "false", "android_weex_ext_config");
+        this.b = bVar2;
+        this.r.add(bVar2);
+        b bVar3 = new b(key_enableBackUpThread, e ? "true" : "false", "android_weex_ext_config");
+        this.d = bVar3;
+        this.r.add(bVar3);
+        b bVar4 = new b(key_enableBackUpThreadCache, "true", "android_weex_ext_config");
+        this.e = bVar4;
+        this.r.add(bVar4);
+        b bVar5 = new b(key_enable_so_loader, "true", "android_weex_ext_config");
+        this.c = bVar5;
+        this.r.add(bVar5);
+        b bVar6 = new b(key_initLeftSize, "50", "android_weex_ext_config");
+        this.f = bVar6;
+        this.r.add(bVar6);
+        b bVar7 = new b(key_enable_lazy_init, "true", "android_weex_ext_config");
+        this.g = bVar7;
+        this.r.add(bVar7);
+        b bVar8 = new b(key_enable_init_async, "true", "android_weex_ext_config");
+        this.h = bVar8;
+        this.r.add(bVar8);
+        b bVar9 = new b(key_back_to_home_when_exception, "false", "android_weex_ext_config");
+        this.n = bVar9;
+        this.r.add(bVar9);
+        b bVar10 = new b("use_runtime_api", "0", WXAPM_CONFIG_GROUP);
+        this.i = bVar10;
+        this.r.add(bVar10);
+        b bVar11 = new b("enableAlarmSignal", "true", WXAPM_CONFIG_GROUP);
+        this.j = bVar11;
+        this.r.add(bVar11);
+        b bVar12 = new b("loadRaxPkg", "true", WXAPM_CONFIG_GROUP);
+        this.k = bVar12;
+        this.r.add(bVar12);
+        b bVar13 = new b("release_map", "true", WXAPM_CONFIG_GROUP);
+        this.l = bVar13;
+        this.r.add(bVar13);
+        b bVar14 = new b(key_enable_mtop_usecache, "false", "android_weex_ext_config");
+        this.m = bVar14;
+        this.r.add(bVar14);
     }
 
     private synchronized void p(String str, String str2) {
@@ -199,21 +196,21 @@ public class oz2 {
         return str2;
     }
 
-    public synchronized String h(C9538b c9538b) {
-        if (c9538b == null) {
+    public synchronized String h(b bVar) {
+        if (bVar == null) {
             return null;
         }
-        if (c9538b.d == null) {
-            c9538b.d = o(c9538b.a, c9538b.b, c9538b.c);
+        if (bVar.d == null) {
+            bVar.d = o(bVar.a, bVar.b, bVar.c);
         }
-        return c9538b.d;
+        return bVar.d;
     }
 
-    public synchronized String i(C9538b c9538b) {
-        if (c9538b == null) {
+    public synchronized String i(b bVar) {
+        if (bVar == null) {
             return null;
         }
-        return f(c9538b.b, c9538b.c);
+        return f(bVar.b, bVar.c);
     }
 
     public void k() {
@@ -252,7 +249,7 @@ public class oz2 {
 
     public String o(String str, String str2, String str3) {
         String f = f(str2, str3);
-        IConfigAdapter c = C3004a.l().c();
+        IConfigAdapter c = com.alibaba.aliweex.a.l().c();
         return c == null ? f : c.getConfig(str, str2, f);
     }
 }

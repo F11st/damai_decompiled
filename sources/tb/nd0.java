@@ -2,8 +2,7 @@ package tb;
 
 import android.text.TextUtils;
 import android.view.View;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import com.alibaba.fastjson.JSONArray;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -74,7 +73,7 @@ public class nd0 {
                                 z = false;
                             }
                             z = true;
-                        } else if (!z || i != 2 || (!C9548pb.PRE_CONTENT_ID.equals(string4) && !C9548pb.PRE_CONTENT_TYPE.equals(string4))) {
+                        } else if (!z || i != 2 || (!pb.PRE_CONTENT_ID.equals(string4) && !pb.PRE_CONTENT_TYPE.equals(string4))) {
                             hashMap.put(string4, str);
                         }
                     }
@@ -82,9 +81,9 @@ public class nd0 {
                 hashMap.put("usercode", z20.E());
                 hashMap.put("city", z20.d() + "市");
                 if (i == 1) {
-                    C0529c.e().G(view, string3, string2, string, hashMap);
+                    cn.damai.common.user.c.e().G(view, string3, string2, string, hashMap);
                 } else {
-                    C0529c.e().x(new C0525a.C0527b().i(string).f(string2).l(string3).g(z).j(hashMap));
+                    cn.damai.common.user.c.e().x(new a.b().i(string).f(string2).l(string3).g(z).j(hashMap));
                 }
             }
         } catch (Exception e) {

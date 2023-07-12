@@ -1,18 +1,18 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
-import io.reactivex.AbstractC8152e;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.SingleObserver;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.fuseable.FuseToObservable;
 import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableCountSingle<T> extends AbstractC8152e<Long> implements FuseToObservable<Long> {
+public final class ObservableCountSingle<T> extends e<Long> implements FuseToObservable<Long> {
     final ObservableSource<T> source;
 
     /* compiled from: Taobao */
@@ -68,11 +68,11 @@ public final class ObservableCountSingle<T> extends AbstractC8152e<Long> impleme
     }
 
     @Override // io.reactivex.internal.fuseable.FuseToObservable
-    public AbstractC8149d<Long> fuseToObservable() {
+    public d<Long> fuseToObservable() {
         return i42.n(new ObservableCount(this.source));
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     public void subscribeActual(SingleObserver<? super Long> singleObserver) {
         this.source.subscribe(new CountObserver(singleObserver));
     }

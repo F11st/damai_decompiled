@@ -9,7 +9,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.RemoteViews;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import java.util.Map;
 
 /* compiled from: Taobao */
@@ -65,7 +64,7 @@ public class eq extends Notification.Builder {
             try {
                 bk.a((Object) this, "setColor", Integer.valueOf(Color.parseColor(str)));
             } catch (Exception e) {
-                AbstractC7535b.d("fail to set color. " + e);
+                com.xiaomi.channel.commonutils.logger.b.d("fail to set color. " + e);
             }
         }
         return this;

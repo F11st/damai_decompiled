@@ -23,18 +23,17 @@ public abstract class ImmutableBiMap<K, V> extends ImmutableMap<K, V> implements
 
         @Override // com.google.common.collect.ImmutableMap.SerializedForm
         Object readResolve() {
-            return createMap(new C4964a());
+            return createMap(new a());
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableBiMap$a */
     /* loaded from: classes10.dex */
-    public static final class C4964a<K, V> extends ImmutableMap.C4977b<K, V> {
-        public C4964a() {
+    public static final class a<K, V> extends ImmutableMap.b<K, V> {
+        public a() {
         }
 
-        @Override // com.google.common.collect.ImmutableMap.C4977b
+        @Override // com.google.common.collect.ImmutableMap.b
         /* renamed from: h */
         public ImmutableBiMap<K, V> a() {
             if (this.c == 0) {
@@ -45,52 +44,52 @@ public abstract class ImmutableBiMap<K, V> extends ImmutableMap<K, V> implements
             return new RegularImmutableBiMap(this.b, this.c);
         }
 
-        @Override // com.google.common.collect.ImmutableMap.C4977b
+        @Override // com.google.common.collect.ImmutableMap.b
         @CanIgnoreReturnValue
         /* renamed from: i */
-        public C4964a<K, V> c(K k, V v) {
+        public a<K, V> c(K k, V v) {
             super.c(k, v);
             return this;
         }
 
-        @Override // com.google.common.collect.ImmutableMap.C4977b
+        @Override // com.google.common.collect.ImmutableMap.b
         @CanIgnoreReturnValue
         /* renamed from: j */
-        public C4964a<K, V> d(Map.Entry<? extends K, ? extends V> entry) {
+        public a<K, V> d(Map.Entry<? extends K, ? extends V> entry) {
             super.d(entry);
             return this;
         }
 
-        @Override // com.google.common.collect.ImmutableMap.C4977b
+        @Override // com.google.common.collect.ImmutableMap.b
         @CanIgnoreReturnValue
         @Beta
         /* renamed from: k */
-        public C4964a<K, V> e(Iterable<? extends Map.Entry<? extends K, ? extends V>> iterable) {
+        public a<K, V> e(Iterable<? extends Map.Entry<? extends K, ? extends V>> iterable) {
             super.e(iterable);
             return this;
         }
 
-        @Override // com.google.common.collect.ImmutableMap.C4977b
+        @Override // com.google.common.collect.ImmutableMap.b
         @CanIgnoreReturnValue
         /* renamed from: l */
-        public C4964a<K, V> f(Map<? extends K, ? extends V> map) {
+        public a<K, V> f(Map<? extends K, ? extends V> map) {
             super.f(map);
             return this;
         }
 
-        C4964a(int i) {
+        a(int i) {
             super(i);
         }
     }
 
-    public static <K, V> C4964a<K, V> builder() {
-        return new C4964a<>();
+    public static <K, V> a<K, V> builder() {
+        return new a<>();
     }
 
     @Beta
-    public static <K, V> C4964a<K, V> builderWithExpectedSize(int i) {
-        C5191k.b(i, "expectedSize");
-        return new C4964a<>(i);
+    public static <K, V> a<K, V> builderWithExpectedSize(int i) {
+        k.b(i, "expectedSize");
+        return new a<>(i);
     }
 
     public static <K, V> ImmutableBiMap<K, V> copyOf(Map<? extends K, ? extends V> map) {
@@ -123,7 +122,7 @@ public abstract class ImmutableBiMap<K, V> extends ImmutableMap<K, V> implements
     }
 
     public static <K, V> ImmutableBiMap<K, V> of(K k, V v) {
-        C5191k.a(k, v);
+        k.a(k, v);
         return new RegularImmutableBiMap(new Object[]{k, v}, 1);
     }
 
@@ -134,8 +133,8 @@ public abstract class ImmutableBiMap<K, V> extends ImmutableMap<K, V> implements
     }
 
     public static <K, V> ImmutableBiMap<K, V> of(K k, V v, K k2, V v2) {
-        C5191k.a(k, v);
-        C5191k.a(k2, v2);
+        k.a(k, v);
+        k.a(k2, v2);
         return new RegularImmutableBiMap(new Object[]{k, v, k2, v2}, 2);
     }
 
@@ -146,30 +145,30 @@ public abstract class ImmutableBiMap<K, V> extends ImmutableMap<K, V> implements
 
     @Beta
     public static <K, V> ImmutableBiMap<K, V> copyOf(Iterable<? extends Map.Entry<? extends K, ? extends V>> iterable) {
-        return new C4964a(iterable instanceof Collection ? ((Collection) iterable).size() : 4).e(iterable).a();
+        return new a(iterable instanceof Collection ? ((Collection) iterable).size() : 4).e(iterable).a();
     }
 
     public static <K, V> ImmutableBiMap<K, V> of(K k, V v, K k2, V v2, K k3, V v3) {
-        C5191k.a(k, v);
-        C5191k.a(k2, v2);
-        C5191k.a(k3, v3);
+        k.a(k, v);
+        k.a(k2, v2);
+        k.a(k3, v3);
         return new RegularImmutableBiMap(new Object[]{k, v, k2, v2, k3, v3}, 3);
     }
 
     public static <K, V> ImmutableBiMap<K, V> of(K k, V v, K k2, V v2, K k3, V v3, K k4, V v4) {
-        C5191k.a(k, v);
-        C5191k.a(k2, v2);
-        C5191k.a(k3, v3);
-        C5191k.a(k4, v4);
+        k.a(k, v);
+        k.a(k2, v2);
+        k.a(k3, v3);
+        k.a(k4, v4);
         return new RegularImmutableBiMap(new Object[]{k, v, k2, v2, k3, v3, k4, v4}, 4);
     }
 
     public static <K, V> ImmutableBiMap<K, V> of(K k, V v, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5) {
-        C5191k.a(k, v);
-        C5191k.a(k2, v2);
-        C5191k.a(k3, v3);
-        C5191k.a(k4, v4);
-        C5191k.a(k5, v5);
+        k.a(k, v);
+        k.a(k2, v2);
+        k.a(k3, v3);
+        k.a(k4, v4);
+        k.a(k5, v5);
         return new RegularImmutableBiMap(new Object[]{k, v, k2, v2, k3, v3, k4, v4, k5, v5}, 5);
     }
 }

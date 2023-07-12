@@ -5,14 +5,13 @@ package com.huawei.android.hms.push;
 public final class R {
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.android.hms.push.R$color */
     /* loaded from: classes10.dex */
-    public static final class C5491color {
+    public static final class color {
         public static final int emui_color_gray_1 = 0x7f0602fb;
         public static final int emui_color_gray_10 = 0x7f0602fc;
         public static final int emui_color_gray_7 = 0x7f0602fd;
 
-        private C5491color() {
+        private color() {
         }
     }
 
@@ -26,13 +25,12 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.android.hms.push.R$layout */
     /* loaded from: classes10.dex */
-    public static final class C5492layout {
+    public static final class layout {
         public static final int activity_endisable_service = 0x7f0c0036;
         public static final int hwpush_trans_activity = 0x7f0c03ce;
 
-        private C5492layout() {
+        private layout() {
         }
     }
 
@@ -56,12 +54,11 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.android.hms.push.R$style */
     /* loaded from: classes10.dex */
-    public static final class C5493style {
+    public static final class style {
         public static final int Base_Translucent = 0x7f12010d;
 
-        private C5493style() {
+        private style() {
         }
     }
 

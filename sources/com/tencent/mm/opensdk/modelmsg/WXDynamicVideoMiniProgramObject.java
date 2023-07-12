@@ -1,8 +1,8 @@
 package com.tencent.mm.opensdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.opensdk.utils.C7065b;
 import com.tencent.mm.opensdk.utils.Log;
+import com.tencent.mm.opensdk.utils.b;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -14,9 +14,9 @@ public class WXDynamicVideoMiniProgramObject extends WXMiniProgramObject {
     @Override // com.tencent.mm.opensdk.modelmsg.WXMiniProgramObject, com.tencent.mm.opensdk.modelmsg.WXMediaMessage.IMediaObject
     public boolean checkArgs() {
         String str;
-        if (C7065b.b(this.webpageUrl)) {
+        if (b.b(this.webpageUrl)) {
             str = "webPageUrl is null";
-        } else if (C7065b.b(this.userName)) {
+        } else if (b.b(this.userName)) {
             str = "userName is null";
         } else {
             int i = this.miniprogramType;

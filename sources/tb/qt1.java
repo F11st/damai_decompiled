@@ -22,7 +22,7 @@ import org.jetbrains.annotations.Nullable;
 public final class qt1 {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C9628a Companion = new C9628a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final View a;
     private int b;
@@ -30,15 +30,14 @@ public final class qt1 {
     private PopupWindow c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qt1$a */
     /* loaded from: classes7.dex */
-    public static final class C9628a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9628a() {
+        private a() {
         }
 
-        public /* synthetic */ C9628a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -89,7 +88,7 @@ public final class qt1 {
             return ((Integer) ipChange.ipc$dispatch("180547562", new Object[]{this, activity})).intValue();
         }
         b41.i(activity, "activity");
-        Object systemService = activity.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+        Object systemService = activity.getSystemService(v.ATTACH_MODE_WINDOW);
         b41.g(systemService, "null cannot be cast to non-null type android.view.WindowManager");
         WindowManager windowManager = (WindowManager) systemService;
         Point point = new Point();

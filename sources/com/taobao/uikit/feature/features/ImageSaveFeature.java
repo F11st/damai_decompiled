@@ -235,12 +235,12 @@ public class ImageSaveFeature extends AbsFeature<ImageView> implements ImageSave
         if (this.mChoices.size() <= 0) {
             return;
         }
-        this.mDialog = new Dialog(this.mContext, R.C6906style.uik_imagesavedialog);
+        this.mDialog = new Dialog(this.mContext, R.style.uik_imagesavedialog);
         LayoutInflater layoutInflater = (LayoutInflater) this.mContext.getSystemService("layout_inflater");
-        LinearLayout linearLayout = (LinearLayout) layoutInflater.inflate(R.C6905layout.uik_image_save_dialog, (ViewGroup) null);
+        LinearLayout linearLayout = (LinearLayout) layoutInflater.inflate(R.layout.uik_image_save_dialog, (ViewGroup) null);
         Iterator<String> it = this.mChoices.keySet().iterator();
         while (it.hasNext()) {
-            TextView textView = (TextView) layoutInflater.inflate(R.C6905layout.uik_image_save_choice, (ViewGroup) linearLayout, false);
+            TextView textView = (TextView) layoutInflater.inflate(R.layout.uik_image_save_choice, (ViewGroup) linearLayout, false);
             String next = it.next();
             textView.setText(next);
             final ImageSaveFeatureCallback imageSaveFeatureCallback = this.mChoices.get(next);
@@ -253,7 +253,7 @@ public class ImageSaveFeature extends AbsFeature<ImageView> implements ImageSave
             });
             linearLayout.addView(textView);
             if (it.hasNext()) {
-                linearLayout.addView(layoutInflater.inflate(R.C6905layout.uik_choice_divider, (ViewGroup) linearLayout, false));
+                linearLayout.addView(layoutInflater.inflate(R.layout.uik_choice_divider, (ViewGroup) linearLayout, false));
             }
         }
         this.mDialog.setContentView(linearLayout);

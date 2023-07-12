@@ -17,7 +17,7 @@ import com.youku.android.liveservice.bean.MicPlayInfo;
 import com.youku.android.liveservice.bean.Quality;
 import com.youku.android.liveservice.bean.Stream;
 import com.youku.arch.v3.core.Constants;
-import com.youku.d.C7898a;
+import com.youku.d.a;
 import com.youku.middlewareservice.provider.info.AppInfoProviderProxy;
 import com.youku.playerservice.axp.axpinterface.PlayDefinition;
 import com.youku.playerservice.axp.item.Codec;
@@ -66,7 +66,7 @@ public class PlayInfoLiveResponse extends PlayInfoResponse {
             mtopRequest.setVersion(this.VERSION);
             mtopRequest.setNeedEcode(false);
             mtopRequest.setData(BaseMtopRequest.convertMapToDataStr(hashMap));
-            return C7898a.a().build(mtopRequest, AppInfoProviderProxy.getTTID()).syncRequest();
+            return a.a().build(mtopRequest, AppInfoProviderProxy.getTTID()).syncRequest();
         }
     }
 

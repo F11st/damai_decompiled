@@ -1,6 +1,6 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
+import io.reactivex.b;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.subscriptions.EmptySubscription;
@@ -18,7 +18,7 @@ public final class FlowableScalarXMap {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    public static final class ScalarXMapFlowable<T, R> extends AbstractC8147b<R> {
+    public static final class ScalarXMapFlowable<T, R> extends b<R> {
         final Function<? super T, ? extends Publisher<? extends R>> mapper;
         final T value;
 
@@ -27,7 +27,7 @@ public final class FlowableScalarXMap {
             this.mapper = function;
         }
 
-        @Override // io.reactivex.AbstractC8147b
+        @Override // io.reactivex.b
         public void subscribeActual(Subscriber<? super R> subscriber) {
             try {
                 Publisher publisher = (Publisher) ObjectHelper.requireNonNull(this.mapper.apply((T) this.value), "The mapper returned a null Publisher");
@@ -58,7 +58,7 @@ public final class FlowableScalarXMap {
         throw new IllegalStateException("No instances!");
     }
 
-    public static <T, U> AbstractC8147b<U> scalarXMap(T t, Function<? super T, ? extends Publisher<? extends U>> function) {
+    public static <T, U> b<U> scalarXMap(T t, Function<? super T, ? extends Publisher<? extends U>> function) {
         return i42.l(new ScalarXMapFlowable(t, function));
     }
 

@@ -13,12 +13,11 @@ import java.util.List;
 public class dn1 extends ib {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.dn1$a */
     /* loaded from: classes6.dex */
-    class C9050a implements PopupWindowManager.OnCancelListener {
+    class a implements PopupWindowManager.OnCancelListener {
         final /* synthetic */ np2 a;
 
-        C9050a(dn1 dn1Var, np2 np2Var) {
+        a(dn1 dn1Var, np2 np2Var) {
             this.a = np2Var;
         }
 
@@ -47,7 +46,7 @@ public class dn1 extends ib {
         xh1 xh1Var = new xh1(components);
         xh1Var.a();
         np2Var.o(xh1Var);
-        this.c.getViewManager().showPopup(components, openPopupWindowEventModel, new C9050a(this, np2Var));
+        this.c.getViewManager().showPopup(components, openPopupWindowEventModel, new a(this, np2Var));
         this.c.getViewManager().setPopupWindowTrigger(new Pair<>(this.e, e));
         this.c.getTradeEventHandler().n(np2Var);
     }

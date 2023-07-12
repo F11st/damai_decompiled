@@ -54,7 +54,7 @@ public class ToolbarWidgetWrapper implements DecorToolbar {
     Window.Callback mWindowCallback;
 
     public ToolbarWidgetWrapper(Toolbar toolbar, boolean z) {
-        this(toolbar, z, R.string.abc_action_bar_up_description, R.C0011drawable.abc_ic_ab_back_material);
+        this(toolbar, z, R.string.abc_action_bar_up_description, R.drawable.abc_ic_ab_back_material);
     }
 
     private int detectDisplayOptions() {

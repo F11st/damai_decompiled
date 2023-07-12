@@ -5,7 +5,6 @@ import kotlin.reflect.jvm.internal.impl.descriptors.runtime.structure.ReflectJav
 import kotlin.reflect.jvm.internal.impl.load.java.JavaClassFinder;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClass;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaPackage;
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -22,15 +21,15 @@ public final class b02 implements JavaClassFinder {
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.JavaClassFinder
     @Nullable
-    public JavaClass findClass(@NotNull JavaClassFinder.C8328a c8328a) {
+    public JavaClass findClass(@NotNull JavaClassFinder.a aVar) {
         String y;
-        b41.i(c8328a, "request");
-        hj a = c8328a.a();
+        b41.i(aVar, "request");
+        hj a = aVar.a();
         hp0 h = a.h();
         b41.h(h, "classId.packageFqName");
         String b = a.i().b();
         b41.h(b, "classId.relativeClassName.asString()");
-        y = C8604o.y(b, '.', '$', false, 4, null);
+        y = kotlin.text.o.y(b, '.', '$', false, 4, null);
         if (!h.d()) {
             y = h.b() + '.' + y;
         }

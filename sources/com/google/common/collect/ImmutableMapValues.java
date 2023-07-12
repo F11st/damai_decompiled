@@ -31,12 +31,11 @@ final class ImmutableMapValues<K, V> extends ImmutableCollection<V> {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableMapValues$a */
     /* loaded from: classes10.dex */
-    public class C4978a extends yt2<V> {
+    public class a extends yt2<V> {
         final yt2<Map.Entry<K, V>> a;
 
-        C4978a() {
+        a() {
             this.a = ImmutableMapValues.this.map.entrySet().iterator();
         }
 
@@ -102,6 +101,6 @@ final class ImmutableMapValues<K, V> extends ImmutableCollection<V> {
 
     @Override // com.google.common.collect.ImmutableCollection, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set, java.util.NavigableSet, com.google.common.collect.SortedIterable
     public yt2<V> iterator() {
-        return new C4978a();
+        return new a();
     }
 }

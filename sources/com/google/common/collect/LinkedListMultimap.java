@@ -25,54 +25,52 @@ import tb.du1;
 /* compiled from: Taobao */
 @GwtCompatible(emulated = true, serializable = true)
 /* loaded from: classes10.dex */
-public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements ListMultimap<K, V>, Serializable {
+public class LinkedListMultimap<K, V> extends com.google.common.collect.c<K, V> implements ListMultimap<K, V>, Serializable {
     @GwtIncompatible
     private static final long serialVersionUID = 0;
     @NullableDecl
-    private transient C5016g<K, V> head;
-    private transient Map<K, C5015f<K, V>> keyToKeyList;
+    private transient g<K, V> head;
+    private transient Map<K, f<K, V>> keyToKeyList;
     private transient int modCount;
     private transient int size;
     @NullableDecl
-    private transient C5016g<K, V> tail;
+    private transient g<K, V> tail;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.LinkedListMultimap$a */
     /* loaded from: classes10.dex */
-    public class C5009a extends AbstractSequentialList<V> {
+    public class a extends AbstractSequentialList<V> {
         final /* synthetic */ Object a;
 
-        C5009a(Object obj) {
+        a(Object obj) {
             this.a = obj;
         }
 
         @Override // java.util.AbstractSequentialList, java.util.AbstractList, java.util.List
         public ListIterator<V> listIterator(int i) {
-            return new C5018i(this.a, i);
+            return new i(this.a, i);
         }
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
         public int size() {
-            C5015f c5015f = (C5015f) LinkedListMultimap.this.keyToKeyList.get(this.a);
-            if (c5015f == null) {
+            f fVar = (f) LinkedListMultimap.this.keyToKeyList.get(this.a);
+            if (fVar == null) {
                 return 0;
             }
-            return c5015f.c;
+            return fVar.c;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.LinkedListMultimap$b */
     /* loaded from: classes10.dex */
-    public class C5010b extends AbstractSequentialList<Map.Entry<K, V>> {
-        C5010b() {
+    public class b extends AbstractSequentialList<Map.Entry<K, V>> {
+        b() {
         }
 
         @Override // java.util.AbstractSequentialList, java.util.AbstractList, java.util.List
         public ListIterator<Map.Entry<K, V>> listIterator(int i) {
-            return new C5017h(i);
+            return new h(i);
         }
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
@@ -82,10 +80,9 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.LinkedListMultimap$c */
     /* loaded from: classes10.dex */
-    class C5011c extends Sets.AbstractC5098a<K> {
-        C5011c() {
+    class c extends Sets.a<K> {
+        c() {
         }
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
@@ -95,7 +92,7 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
         public Iterator<K> iterator() {
-            return new C5014e(LinkedListMultimap.this, null);
+            return new e(LinkedListMultimap.this, null);
         }
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
@@ -111,42 +108,40 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.LinkedListMultimap$d */
     /* loaded from: classes10.dex */
-    public class C5012d extends AbstractSequentialList<V> {
+    public class d extends AbstractSequentialList<V> {
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.LinkedListMultimap$d$a */
         /* loaded from: classes10.dex */
-        class C5013a extends AbstractC5192k0<Map.Entry<K, V>, V> {
-            final /* synthetic */ C5017h b;
+        class a extends k0<Map.Entry<K, V>, V> {
+            final /* synthetic */ h b;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            C5013a(C5012d c5012d, ListIterator listIterator, C5017h c5017h) {
+            a(d dVar, ListIterator listIterator, h hVar) {
                 super(listIterator);
-                this.b = c5017h;
+                this.b = hVar;
             }
 
             /* JADX INFO: Access modifiers changed from: package-private */
-            @Override // com.google.common.collect.AbstractC5190j0
+            @Override // com.google.common.collect.j0
             /* renamed from: c */
             public V a(Map.Entry<K, V> entry) {
                 return entry.getValue();
             }
 
-            @Override // com.google.common.collect.AbstractC5192k0, java.util.ListIterator
+            @Override // com.google.common.collect.k0, java.util.ListIterator
             public void set(V v) {
                 this.b.f(v);
             }
         }
 
-        C5012d() {
+        d() {
         }
 
         @Override // java.util.AbstractSequentialList, java.util.AbstractList, java.util.List
         public ListIterator<V> listIterator(int i) {
-            C5017h c5017h = new C5017h(i);
-            return new C5013a(this, c5017h, c5017h);
+            h hVar = new h(i);
+            return new a(this, hVar, hVar);
         }
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
@@ -157,56 +152,54 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.LinkedListMultimap$f */
     /* loaded from: classes10.dex */
-    public static class C5015f<K, V> {
-        C5016g<K, V> a;
-        C5016g<K, V> b;
+    public static class f<K, V> {
+        g<K, V> a;
+        g<K, V> b;
         int c;
 
-        C5015f(C5016g<K, V> c5016g) {
-            this.a = c5016g;
-            this.b = c5016g;
-            c5016g.f = null;
-            c5016g.e = null;
+        f(g<K, V> gVar) {
+            this.a = gVar;
+            this.b = gVar;
+            gVar.f = null;
+            gVar.e = null;
             this.c = 1;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.LinkedListMultimap$g */
     /* loaded from: classes10.dex */
-    public static final class C5016g<K, V> extends AbstractC5157b<K, V> {
+    public static final class g<K, V> extends com.google.common.collect.b<K, V> {
         @NullableDecl
         final K a;
         @NullableDecl
         V b;
         @NullableDecl
-        C5016g<K, V> c;
+        g<K, V> c;
         @NullableDecl
-        C5016g<K, V> d;
+        g<K, V> d;
         @NullableDecl
-        C5016g<K, V> e;
+        g<K, V> e;
         @NullableDecl
-        C5016g<K, V> f;
+        g<K, V> f;
 
-        C5016g(@NullableDecl K k, @NullableDecl V v) {
+        g(@NullableDecl K k, @NullableDecl V v) {
             this.a = k;
             this.b = v;
         }
 
-        @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+        @Override // com.google.common.collect.b, java.util.Map.Entry
         public K getKey() {
             return this.a;
         }
 
-        @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+        @Override // com.google.common.collect.b, java.util.Map.Entry
         public V getValue() {
             return this.b;
         }
 
-        @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+        @Override // com.google.common.collect.b, java.util.Map.Entry
         public V setValue(@NullableDecl V v) {
             V v2 = this.b;
             this.b = v;
@@ -215,19 +208,18 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.LinkedListMultimap$h */
     /* loaded from: classes10.dex */
-    private class C5017h implements ListIterator<Map.Entry<K, V>> {
+    private class h implements ListIterator<Map.Entry<K, V>> {
         int a;
         @NullableDecl
-        C5016g<K, V> b;
+        g<K, V> b;
         @NullableDecl
-        C5016g<K, V> c;
+        g<K, V> c;
         @NullableDecl
-        C5016g<K, V> d;
+        g<K, V> d;
         int e;
 
-        C5017h(int i) {
+        h(int i) {
             this.e = LinkedListMultimap.this.modCount;
             int size = LinkedListMultimap.this.size();
             du1.t(i, size);
@@ -271,29 +263,29 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
         @Override // java.util.ListIterator, java.util.Iterator
         @CanIgnoreReturnValue
         /* renamed from: c */
-        public C5016g<K, V> next() {
+        public g<K, V> next() {
             b();
             LinkedListMultimap.checkElement(this.b);
-            C5016g<K, V> c5016g = this.b;
-            this.c = c5016g;
-            this.d = c5016g;
-            this.b = c5016g.c;
+            g<K, V> gVar = this.b;
+            this.c = gVar;
+            this.d = gVar;
+            this.b = gVar.c;
             this.a++;
-            return c5016g;
+            return gVar;
         }
 
         @Override // java.util.ListIterator
         @CanIgnoreReturnValue
         /* renamed from: d */
-        public C5016g<K, V> previous() {
+        public g<K, V> previous() {
             b();
             LinkedListMultimap.checkElement(this.d);
-            C5016g<K, V> c5016g = this.d;
-            this.c = c5016g;
-            this.b = c5016g;
-            this.d = c5016g.d;
+            g<K, V> gVar = this.d;
+            this.c = gVar;
+            this.b = gVar;
+            this.d = gVar.d;
             this.a--;
-            return c5016g;
+            return gVar;
         }
 
         @Override // java.util.ListIterator
@@ -332,15 +324,15 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
         @Override // java.util.ListIterator, java.util.Iterator
         public void remove() {
             b();
-            C5191k.e(this.c != null);
-            C5016g<K, V> c5016g = this.c;
-            if (c5016g != this.b) {
-                this.d = c5016g.d;
+            k.e(this.c != null);
+            g<K, V> gVar = this.c;
+            if (gVar != this.b) {
+                this.d = gVar.d;
                 this.a--;
             } else {
-                this.b = c5016g.c;
+                this.b = gVar.c;
             }
-            LinkedListMultimap.this.removeNode(c5016g);
+            LinkedListMultimap.this.removeNode(gVar);
             this.c = null;
             this.e = LinkedListMultimap.this.modCount;
         }
@@ -352,52 +344,52 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
 
     /* JADX INFO: Access modifiers changed from: private */
     @CanIgnoreReturnValue
-    public C5016g<K, V> addNode(@NullableDecl K k, @NullableDecl V v, @NullableDecl C5016g<K, V> c5016g) {
-        C5016g<K, V> c5016g2 = new C5016g<>(k, v);
+    public g<K, V> addNode(@NullableDecl K k, @NullableDecl V v, @NullableDecl g<K, V> gVar) {
+        g<K, V> gVar2 = new g<>(k, v);
         if (this.head == null) {
-            this.tail = c5016g2;
-            this.head = c5016g2;
-            this.keyToKeyList.put(k, new C5015f<>(c5016g2));
+            this.tail = gVar2;
+            this.head = gVar2;
+            this.keyToKeyList.put(k, new f<>(gVar2));
             this.modCount++;
-        } else if (c5016g == null) {
-            C5016g<K, V> c5016g3 = this.tail;
-            c5016g3.c = c5016g2;
-            c5016g2.d = c5016g3;
-            this.tail = c5016g2;
-            C5015f<K, V> c5015f = this.keyToKeyList.get(k);
-            if (c5015f == null) {
-                this.keyToKeyList.put(k, new C5015f<>(c5016g2));
+        } else if (gVar == null) {
+            g<K, V> gVar3 = this.tail;
+            gVar3.c = gVar2;
+            gVar2.d = gVar3;
+            this.tail = gVar2;
+            f<K, V> fVar = this.keyToKeyList.get(k);
+            if (fVar == null) {
+                this.keyToKeyList.put(k, new f<>(gVar2));
                 this.modCount++;
             } else {
-                c5015f.c++;
-                C5016g<K, V> c5016g4 = c5015f.b;
-                c5016g4.e = c5016g2;
-                c5016g2.f = c5016g4;
-                c5015f.b = c5016g2;
+                fVar.c++;
+                g<K, V> gVar4 = fVar.b;
+                gVar4.e = gVar2;
+                gVar2.f = gVar4;
+                fVar.b = gVar2;
             }
         } else {
             this.keyToKeyList.get(k).c++;
-            c5016g2.d = c5016g.d;
-            c5016g2.f = c5016g.f;
-            c5016g2.c = c5016g;
-            c5016g2.e = c5016g;
-            C5016g<K, V> c5016g5 = c5016g.f;
-            if (c5016g5 == null) {
-                this.keyToKeyList.get(k).a = c5016g2;
+            gVar2.d = gVar.d;
+            gVar2.f = gVar.f;
+            gVar2.c = gVar;
+            gVar2.e = gVar;
+            g<K, V> gVar5 = gVar.f;
+            if (gVar5 == null) {
+                this.keyToKeyList.get(k).a = gVar2;
             } else {
-                c5016g5.e = c5016g2;
+                gVar5.e = gVar2;
             }
-            C5016g<K, V> c5016g6 = c5016g.d;
-            if (c5016g6 == null) {
-                this.head = c5016g2;
+            g<K, V> gVar6 = gVar.d;
+            if (gVar6 == null) {
+                this.head = gVar2;
             } else {
-                c5016g6.c = c5016g2;
+                gVar6.c = gVar2;
             }
-            c5016g.d = c5016g2;
-            c5016g.f = c5016g2;
+            gVar.d = gVar2;
+            gVar.f = gVar2;
         }
         this.size++;
-        return c5016g2;
+        return gVar2;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -412,7 +404,7 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
     }
 
     private List<V> getCopy(@NullableDecl Object obj) {
-        return Collections.unmodifiableList(Lists.k(new C5018i(obj)));
+        return Collections.unmodifiableList(Lists.k(new i(obj)));
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -421,47 +413,47 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
         objectInputStream.defaultReadObject();
         this.keyToKeyList = CompactLinkedHashMap.create();
         int readInt = objectInputStream.readInt();
-        for (int i = 0; i < readInt; i++) {
+        for (int i2 = 0; i2 < readInt; i2++) {
             put(objectInputStream.readObject(), objectInputStream.readObject());
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public void removeAllNodes(@NullableDecl Object obj) {
-        Iterators.d(new C5018i(obj));
+        Iterators.d(new i(obj));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void removeNode(C5016g<K, V> c5016g) {
-        C5016g<K, V> c5016g2 = c5016g.d;
-        if (c5016g2 != null) {
-            c5016g2.c = c5016g.c;
+    public void removeNode(g<K, V> gVar) {
+        g<K, V> gVar2 = gVar.d;
+        if (gVar2 != null) {
+            gVar2.c = gVar.c;
         } else {
-            this.head = c5016g.c;
+            this.head = gVar.c;
         }
-        C5016g<K, V> c5016g3 = c5016g.c;
-        if (c5016g3 != null) {
-            c5016g3.d = c5016g2;
+        g<K, V> gVar3 = gVar.c;
+        if (gVar3 != null) {
+            gVar3.d = gVar2;
         } else {
-            this.tail = c5016g2;
+            this.tail = gVar2;
         }
-        if (c5016g.f == null && c5016g.e == null) {
-            this.keyToKeyList.remove(c5016g.a).c = 0;
+        if (gVar.f == null && gVar.e == null) {
+            this.keyToKeyList.remove(gVar.a).c = 0;
             this.modCount++;
         } else {
-            C5015f<K, V> c5015f = this.keyToKeyList.get(c5016g.a);
-            c5015f.c--;
-            C5016g<K, V> c5016g4 = c5016g.f;
-            if (c5016g4 == null) {
-                c5015f.a = c5016g.e;
+            f<K, V> fVar = this.keyToKeyList.get(gVar.a);
+            fVar.c--;
+            g<K, V> gVar4 = gVar.f;
+            if (gVar4 == null) {
+                fVar.a = gVar.e;
             } else {
-                c5016g4.e = c5016g.e;
+                gVar4.e = gVar.e;
             }
-            C5016g<K, V> c5016g5 = c5016g.e;
-            if (c5016g5 == null) {
-                c5015f.b = c5016g4;
+            g<K, V> gVar5 = gVar.e;
+            if (gVar5 == null) {
+                fVar.b = gVar4;
             } else {
-                c5016g5.f = c5016g4;
+                gVar5.f = gVar4;
             }
         }
         this.size--;
@@ -477,7 +469,7 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
         }
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap, com.google.common.collect.ListMultimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap, com.google.common.collect.ListMultimap
     public /* bridge */ /* synthetic */ Map asMap() {
         return super.asMap();
     }
@@ -491,7 +483,7 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
         this.modCount++;
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public /* bridge */ /* synthetic */ boolean containsEntry(@NullableDecl Object obj, @NullableDecl Object obj2) {
         return super.containsEntry(obj, obj2);
     }
@@ -501,32 +493,32 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
         return this.keyToKeyList.containsKey(obj);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public boolean containsValue(@NullableDecl Object obj) {
         return values().contains(obj);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     Map<K, Collection<V>> createAsMap() {
-        return new Multimaps.C5074a(this);
+        return new Multimaps.a(this);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     Set<K> createKeySet() {
-        return new C5011c();
+        return new c();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     Multiset<K> createKeys() {
-        return new Multimaps.C5078c(this);
+        return new Multimaps.c(this);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     Iterator<Map.Entry<K, V>> entryIterator() {
         throw new AssertionError("should never be called");
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap, com.google.common.collect.ListMultimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap, com.google.common.collect.ListMultimap
     public /* bridge */ /* synthetic */ boolean equals(@NullableDecl Object obj) {
         return super.equals(obj);
     }
@@ -537,47 +529,47 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
         return get((LinkedListMultimap<K, V>) obj);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public /* bridge */ /* synthetic */ int hashCode() {
         return super.hashCode();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public boolean isEmpty() {
         return this.head == null;
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public /* bridge */ /* synthetic */ Set keySet() {
         return super.keySet();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public /* bridge */ /* synthetic */ Multiset keys() {
         return super.keys();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     public boolean put(@NullableDecl K k, @NullableDecl V v) {
         addNode(k, v, null);
         return true;
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     public /* bridge */ /* synthetic */ boolean putAll(Multimap multimap) {
         return super.putAll(multimap);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     public /* bridge */ /* synthetic */ boolean remove(@NullableDecl Object obj, @NullableDecl Object obj2) {
         return super.remove(obj, obj2);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     public /* bridge */ /* synthetic */ Collection replaceValues(@NullableDecl Object obj, Iterable iterable) {
         return replaceValues((LinkedListMultimap<K, V>) obj, iterable);
@@ -588,43 +580,43 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
         return this.size;
     }
 
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     public /* bridge */ /* synthetic */ String toString() {
         return super.toString();
     }
 
-    private LinkedListMultimap(int i) {
-        this.keyToKeyList = C5172e0.c(i);
+    private LinkedListMultimap(int i2) {
+        this.keyToKeyList = e0.c(i2);
     }
 
-    public static <K, V> LinkedListMultimap<K, V> create(int i) {
-        return new LinkedListMultimap<>(i);
+    public static <K, V> LinkedListMultimap<K, V> create(int i2) {
+        return new LinkedListMultimap<>(i2);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     public List<Map.Entry<K, V>> createEntries() {
-        return new C5010b();
+        return new b();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     public List<V> createValues() {
-        return new C5012d();
+        return new d();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public List<Map.Entry<K, V>> entries() {
         return (List) super.entries();
     }
 
     @Override // com.google.common.collect.Multimap
     public List<V> get(@NullableDecl K k) {
-        return new C5009a(k);
+        return new a(k);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     public /* bridge */ /* synthetic */ boolean putAll(@NullableDecl Object obj, Iterable iterable) {
         return super.putAll(obj, iterable);
@@ -638,27 +630,27 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
         return copy;
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     public List<V> replaceValues(@NullableDecl K k, Iterable<? extends V> iterable) {
         List<V> copy = getCopy(k);
-        C5018i c5018i = new C5018i(k);
+        i iVar = new i(k);
         Iterator<? extends V> it = iterable.iterator();
-        while (c5018i.hasNext() && it.hasNext()) {
-            c5018i.next();
-            c5018i.set(it.next());
+        while (iVar.hasNext() && it.hasNext()) {
+            iVar.next();
+            iVar.set(it.next());
         }
-        while (c5018i.hasNext()) {
-            c5018i.next();
-            c5018i.remove();
+        while (iVar.hasNext()) {
+            iVar.next();
+            iVar.remove();
         }
         while (it.hasNext()) {
-            c5018i.add(it.next());
+            iVar.add(it.next());
         }
         return copy;
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public List<V> values() {
         return (List) super.values();
     }
@@ -668,16 +660,15 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.LinkedListMultimap$e */
     /* loaded from: classes10.dex */
-    private class C5014e implements Iterator<K> {
+    private class e implements Iterator<K> {
         final Set<K> a;
-        C5016g<K, V> b;
+        g<K, V> b;
         @NullableDecl
-        C5016g<K, V> c;
+        g<K, V> c;
         int d;
 
-        private C5014e() {
+        private e() {
             this.a = Sets.e(LinkedListMultimap.this.keySet().size());
             this.b = LinkedListMultimap.this.head;
             this.d = LinkedListMultimap.this.modCount;
@@ -697,55 +688,54 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
 
         @Override // java.util.Iterator
         public K next() {
-            C5016g<K, V> c5016g;
+            g<K, V> gVar;
             a();
             LinkedListMultimap.checkElement(this.b);
-            C5016g<K, V> c5016g2 = this.b;
-            this.c = c5016g2;
-            this.a.add(c5016g2.a);
+            g<K, V> gVar2 = this.b;
+            this.c = gVar2;
+            this.a.add(gVar2.a);
             do {
-                c5016g = this.b.c;
-                this.b = c5016g;
-                if (c5016g == null) {
+                gVar = this.b.c;
+                this.b = gVar;
+                if (gVar == null) {
                     break;
                 }
-            } while (!this.a.add(c5016g.a));
+            } while (!this.a.add(gVar.a));
             return this.c.a;
         }
 
         @Override // java.util.Iterator
         public void remove() {
             a();
-            C5191k.e(this.c != null);
+            k.e(this.c != null);
             LinkedListMultimap.this.removeAllNodes(this.c.a);
             this.c = null;
             this.d = LinkedListMultimap.this.modCount;
         }
 
-        /* synthetic */ C5014e(LinkedListMultimap linkedListMultimap, C5009a c5009a) {
+        /* synthetic */ e(LinkedListMultimap linkedListMultimap, a aVar) {
             this();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.LinkedListMultimap$i */
     /* loaded from: classes10.dex */
-    public class C5018i implements ListIterator<V> {
+    public class i implements ListIterator<V> {
         @NullableDecl
         final Object a;
         int b;
         @NullableDecl
-        C5016g<K, V> c;
+        g<K, V> c;
         @NullableDecl
-        C5016g<K, V> d;
+        g<K, V> d;
         @NullableDecl
-        C5016g<K, V> e;
+        g<K, V> e;
 
-        C5018i(@NullableDecl Object obj) {
+        i(@NullableDecl Object obj) {
             this.a = obj;
-            C5015f c5015f = (C5015f) LinkedListMultimap.this.keyToKeyList.get(obj);
-            this.c = c5015f == null ? null : c5015f.a;
+            f fVar = (f) LinkedListMultimap.this.keyToKeyList.get(obj);
+            this.c = fVar == null ? null : fVar.a;
         }
 
         @Override // java.util.ListIterator
@@ -769,12 +759,12 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
         @CanIgnoreReturnValue
         public V next() {
             LinkedListMultimap.checkElement(this.c);
-            C5016g<K, V> c5016g = this.c;
-            this.d = c5016g;
-            this.e = c5016g;
-            this.c = c5016g.e;
+            g<K, V> gVar = this.c;
+            this.d = gVar;
+            this.e = gVar;
+            this.c = gVar.e;
             this.b++;
-            return c5016g.b;
+            return gVar.b;
         }
 
         @Override // java.util.ListIterator
@@ -786,12 +776,12 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
         @CanIgnoreReturnValue
         public V previous() {
             LinkedListMultimap.checkElement(this.e);
-            C5016g<K, V> c5016g = this.e;
-            this.d = c5016g;
-            this.c = c5016g;
-            this.e = c5016g.f;
+            g<K, V> gVar = this.e;
+            this.d = gVar;
+            this.c = gVar;
+            this.e = gVar.f;
             this.b--;
-            return c5016g.b;
+            return gVar.b;
         }
 
         @Override // java.util.ListIterator
@@ -801,15 +791,15 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
 
         @Override // java.util.ListIterator, java.util.Iterator
         public void remove() {
-            C5191k.e(this.d != null);
-            C5016g<K, V> c5016g = this.d;
-            if (c5016g != this.c) {
-                this.e = c5016g.f;
+            k.e(this.d != null);
+            g<K, V> gVar = this.d;
+            if (gVar != this.c) {
+                this.e = gVar.f;
                 this.b--;
             } else {
-                this.c = c5016g.e;
+                this.c = gVar.e;
             }
-            LinkedListMultimap.this.removeNode(c5016g);
+            LinkedListMultimap.this.removeNode(gVar);
             this.d = null;
         }
 
@@ -819,12 +809,12 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
             this.d.b = v;
         }
 
-        public C5018i(@NullableDecl Object obj, int i) {
-            C5015f c5015f = (C5015f) LinkedListMultimap.this.keyToKeyList.get(obj);
-            int i2 = c5015f == null ? 0 : c5015f.c;
+        public i(@NullableDecl Object obj, int i) {
+            f fVar = (f) LinkedListMultimap.this.keyToKeyList.get(obj);
+            int i2 = fVar == null ? 0 : fVar.c;
             du1.t(i, i2);
             if (i >= i2 / 2) {
-                this.e = c5015f == null ? null : c5015f.b;
+                this.e = fVar == null ? null : fVar.b;
                 this.b = i2;
                 while (true) {
                     int i3 = i + 1;
@@ -835,7 +825,7 @@ public class LinkedListMultimap<K, V> extends AbstractC5159c<K, V> implements Li
                     i = i3;
                 }
             } else {
-                this.c = c5015f == null ? null : c5015f.a;
+                this.c = fVar == null ? null : fVar.a;
                 while (true) {
                     int i4 = i - 1;
                     if (i <= 0) {

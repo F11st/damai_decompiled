@@ -2,7 +2,6 @@ package tb;
 
 import android.graphics.Rect;
 import android.view.View;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 
 /* compiled from: Taobao */
@@ -41,6 +40,6 @@ public class vg0 {
     }
 
     public static void c(String str) {
-        DXAppMonitor.q(nz.TAG, null, "native", "native_crash", C6368e.DX_NATIVE_CRASH_6, str);
+        DXAppMonitor.q(nz.TAG, null, "native", "native_crash", com.taobao.android.dinamicx.e.DX_NATIVE_CRASH_6, str);
     }
 }

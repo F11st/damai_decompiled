@@ -27,85 +27,82 @@ public class iw0 extends ob {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.iw0$a */
     /* loaded from: classes9.dex */
-    public class C9287a implements DMImageCreator.DMImageSuccListener {
+    public class a implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
         final /* synthetic */ Activity b;
         final /* synthetic */ String c;
 
-        C9287a(View view, Activity activity, String str) {
+        a(View view, Activity activity, String str) {
             this.a = view;
             this.b = activity;
             this.c = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-902419546")) {
-                ipChange.ipc$dispatch("-902419546", new Object[]{this, c0502e});
-            } else if (c0502e == null || c0502e.b == null) {
+                ipChange.ipc$dispatch("-902419546", new Object[]{this, eVar});
+            } else if (eVar == null || eVar.b == null) {
             } else {
-                ((ImageView) this.a.findViewById(R$id.user_iv_header)).setImageDrawable(new C9771ui(c0502e.b));
+                ((ImageView) this.a.findViewById(R$id.user_iv_header)).setImageDrawable(new ui(eVar.b));
                 Activity activity = this.b;
                 if (activity instanceof UserIndexActivity) {
-                    ((UserIndexViewModel) ViewModelProviders.of((UserIndexActivity) activity).get(UserIndexViewModel.class)).sinapath = iw0.f(this.c, c0502e.b, this.b);
+                    ((UserIndexViewModel) ViewModelProviders.of((UserIndexActivity) activity).get(UserIndexViewModel.class)).sinapath = iw0.f(this.c, eVar.b, this.b);
                 }
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.iw0$b */
     /* loaded from: classes9.dex */
-    public class C9288b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
         final /* synthetic */ String b;
 
-        C9288b(Activity activity, String str) {
+        b(Activity activity, String str) {
             this.a = activity;
             this.b = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1510496409")) {
-                ipChange.ipc$dispatch("-1510496409", new Object[]{this, c0502e});
-            } else if (c0502e == null || c0502e.b == null) {
+                ipChange.ipc$dispatch("-1510496409", new Object[]{this, eVar});
+            } else if (eVar == null || eVar.b == null) {
             } else {
                 Activity activity = this.a;
                 if (activity instanceof UserIndexActivity) {
-                    ((UserIndexViewModel) ViewModelProviders.of((UserIndexActivity) activity).get(UserIndexViewModel.class)).sinapath = iw0.f(this.b, c0502e.b, this.a);
+                    ((UserIndexViewModel) ViewModelProviders.of((UserIndexActivity) activity).get(UserIndexViewModel.class)).sinapath = iw0.f(this.b, eVar.b, this.a);
                 }
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.iw0$c */
     /* loaded from: classes9.dex */
-    public class C9289c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
         final /* synthetic */ UserData b;
         final /* synthetic */ View c;
 
-        C9289c(Activity activity, UserData userData, View view) {
+        c(Activity activity, UserData userData, View view) {
             this.a = activity;
             this.b = userData;
             this.c = view;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Drawable drawable;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-2118573272")) {
-                ipChange.ipc$dispatch("-2118573272", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("-2118573272", new Object[]{this, eVar});
                 return;
             }
             Activity activity = this.a;
@@ -114,7 +111,7 @@ public class iw0 extends ob {
             }
             Drawable[] drawableArr = new Drawable[2];
             drawableArr[1] = activity.getResources().getDrawable(R$drawable.account_header_gradient_bg);
-            if (this.b.type != 1 || c0502e == null || (drawable = c0502e.a) == null) {
+            if (this.b.type != 1 || eVar == null || (drawable = eVar.a) == null) {
                 return;
             }
             drawableArr[0] = drawable;

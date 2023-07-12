@@ -3,8 +3,6 @@ package tb;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import kotlin.collections.C8214m;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
@@ -28,7 +26,7 @@ public final class t31 implements TypeConstructor {
 
     @Override // kotlin.reflect.jvm.internal.impl.types.TypeConstructor
     @NotNull
-    public AbstractC8271b getBuiltIns() {
+    public kotlin.reflect.jvm.internal.impl.builtins.b getBuiltIns() {
         return this.b.getBuiltIns();
     }
 
@@ -41,7 +39,7 @@ public final class t31 implements TypeConstructor {
     @NotNull
     public List<TypeParameterDescriptor> getParameters() {
         List<TypeParameterDescriptor> g;
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         return g;
     }
 

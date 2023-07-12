@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.trade.R$drawable;
 import cn.damai.trade.R$id;
@@ -36,12 +35,11 @@ public class ProjectArtistSingleViewHolder extends RecyclerView.ViewHolder {
     View.OnClickListener h;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectArtistSingleViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2384a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2384a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -66,7 +64,7 @@ public class ProjectArtistSingleViewHolder extends RecyclerView.ViewHolder {
 
     public ProjectArtistSingleViewHolder(Context context, ViewGroup viewGroup) {
         super(LayoutInflater.from(context).inflate(R$layout.project_item_artist_brand_single_layout, viewGroup, false));
-        this.h = new View$OnClickListenerC2384a();
+        this.h = new a();
         this.a = context;
         e();
     }
@@ -105,7 +103,7 @@ public class ProjectArtistSingleViewHolder extends RecyclerView.ViewHolder {
             this.itemView.setTag(brandAndArtists);
             this.g = projectDataHolder.getTheaterValue();
             this.f = projectDataHolder.getProjectId();
-            DMImageCreator c = C0504a.b().h(this.a).c(brandAndArtists.picUrl);
+            DMImageCreator c = cn.damai.common.image.a.b().h(this.a).c(brandAndArtists.picUrl);
             int i = R$drawable.uikit_user_default_icon;
             c.i(i).c(i).k(new yq()).g(this.b);
             if (!TextUtils.isEmpty(brandAndArtists.name)) {

@@ -6,7 +6,7 @@ import android.os.RemoteException;
 import android.util.Log;
 import com.alibaba.wireless.security.aopsdk.replace.android.graphics.Point;
 import com.alimm.xadsdk.base.constant.AdConstants;
-import com.amap.api.mapcore.util.C4505de;
+import com.amap.api.mapcore.util.de;
 import com.amap.api.maps.AMapUtils;
 import com.amap.api.maps.model.BaseHoleOptions;
 import com.amap.api.maps.model.CircleHoleOptions;
@@ -42,7 +42,7 @@ public class cq implements ICircleDelegate {
     private int s;
     private FloatBuffer t;
     private FloatBuffer u;
-    private C4505de.C4510e y;
+    private de.e y;
     private LatLng b = null;
     private double c = 0.0d;
     private float d = 10.0f;
@@ -71,7 +71,7 @@ public class cq implements ICircleDelegate {
     private void b() {
         IAMapDelegate iAMapDelegate = this.j;
         if (iAMapDelegate != null) {
-            this.y = (C4505de.C4510e) iAMapDelegate.getGLShader(3);
+            this.y = (de.e) iAMapDelegate.getGLShader(3);
         }
     }
 
@@ -99,8 +99,8 @@ public class cq implements ICircleDelegate {
                 a((CircleHoleOptions) baseHoleOptions);
             }
             if (this.t != null && this.r > 0) {
-                C4505de.C4510e c4510e = this.y;
-                if (c4510e == null || c4510e.c()) {
+                de.e eVar = this.y;
+                if (eVar == null || eVar.c()) {
                     b();
                 }
                 if (z2) {
@@ -134,8 +134,8 @@ public class cq implements ICircleDelegate {
                 a((CircleHoleOptions) baseHoleOptions);
             }
             if (this.t != null && this.r > 0) {
-                C4505de.C4510e c4510e = this.y;
-                if (c4510e == null || c4510e.c()) {
+                de.e eVar = this.y;
+                if (eVar == null || eVar.c()) {
                     b();
                 }
                 if (z2) {
@@ -256,8 +256,8 @@ public class cq implements ICircleDelegate {
         calMapFPoint();
         c();
         if (this.k != null && this.l > 0) {
-            C4505de.C4510e c4510e = this.y;
-            if (c4510e == null || c4510e.c()) {
+            de.e eVar = this.y;
+            if (eVar == null || eVar.c()) {
                 b();
             }
             this.a = this.j.getMapConfig().getMapPerPixelUnitLength();

@@ -11,7 +11,6 @@ import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.member.R$drawable;
 import cn.damai.member.R$id;
@@ -56,12 +55,11 @@ public class TickletSouvenirClassicsView extends RelativeLayout {
     private Bitmap usetBitmap;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletSouvenirClassicsView$a */
     /* loaded from: classes7.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC2112a implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class a implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC2112a() {
+        a() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -80,19 +78,18 @@ public class TickletSouvenirClassicsView extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletSouvenirClassicsView$b */
     /* loaded from: classes7.dex */
-    public class C2113b implements DMImageCreator.DMImageFailListener {
+    public class b implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2113b() {
+        b() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "475881251")) {
-                ipChange.ipc$dispatch("475881251", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("475881251", new Object[]{this, dVar});
             } else {
                 TickletSouvenirClassicsView.this.defaultSet();
             }
@@ -100,27 +97,26 @@ public class TickletSouvenirClassicsView extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletSouvenirClassicsView$c */
     /* loaded from: classes7.dex */
-    public class C2114c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TicketSouvenirBean a;
 
-        C2114c(TicketSouvenirBean ticketSouvenirBean) {
+        c(TicketSouvenirBean ticketSouvenirBean) {
             this.a = ticketSouvenirBean;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1580739192")) {
-                ipChange.ipc$dispatch("1580739192", new Object[]{this, c0502e});
-            } else if (c0502e == null || c0502e.b == null) {
+                ipChange.ipc$dispatch("1580739192", new Object[]{this, eVar});
+            } else if (eVar == null || eVar.b == null) {
                 TickletSouvenirClassicsView.this.defaultSet();
             } else {
                 TickletSouvenirClassicsView.this.souvenir_project_image.setVisibility(0);
                 TickletSouvenirClassicsView.this.souvenir_color_mask_bg.setVisibility(0);
-                TickletSouvenirClassicsView.this.souvenir_project_image.setImageBitmap(c0502e.b);
+                TickletSouvenirClassicsView.this.souvenir_project_image.setImageBitmap(eVar.b);
                 TickletSouvenirClassicsView.this.souvenir_color_mask_bg.setColors(TickletSouvenirClassicsView.this.getColor(Color.parseColor(this.a.cardColor)));
                 TickletSouvenirClassicsView.this.souvenir_color_mask_bg.setPosition(TickletSouvenirClassicsView.this.position);
                 TickletSouvenirClassicsView.this.souvenir_defalut_mask_bg.setImageResource(R$drawable.ticklet_souvenir_black_bg);
@@ -130,19 +126,18 @@ public class TickletSouvenirClassicsView extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletSouvenirClassicsView$d */
     /* loaded from: classes7.dex */
-    public class C2115d implements DMImageCreator.DMImageFailListener {
+    public class d implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2115d() {
+        d() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1857511387")) {
-                ipChange.ipc$dispatch("-1857511387", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-1857511387", new Object[]{this, dVar});
             } else {
                 TickletSouvenirClassicsView.this.cb_user_icon.setAvatar(R$drawable.mine_account_default);
             }
@@ -150,21 +145,20 @@ public class TickletSouvenirClassicsView extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletSouvenirClassicsView$e */
     /* loaded from: classes7.dex */
-    public class C2116e implements DMImageCreator.DMImageSuccListener {
+    public class e implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2116e() {
+        e() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "364585466")) {
-                ipChange.ipc$dispatch("364585466", new Object[]{this, c0502e});
-            } else if (c0502e == null || (bitmap = c0502e.b) == null) {
+                ipChange.ipc$dispatch("364585466", new Object[]{this, eVar});
+            } else if (eVar == null || (bitmap = eVar.b) == null) {
                 TickletSouvenirClassicsView.this.cb_user_icon.setAvatar(R$drawable.mine_account_default);
             } else {
                 TickletSouvenirClassicsView.this.usetBitmap = bitmap;
@@ -231,7 +225,7 @@ public class TickletSouvenirClassicsView extends RelativeLayout {
         if (AndroidInstantRuntime.support(ipChange, "1332269055")) {
             ipChange.ipc$dispatch("1332269055", new Object[]{this});
         } else {
-            this.souvenir_divider.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC2112a());
+            this.souvenir_divider.getViewTreeObserver().addOnGlobalLayoutListener(new a());
         }
     }
 
@@ -311,7 +305,7 @@ public class TickletSouvenirClassicsView extends RelativeLayout {
                 ticketSouvenirBean.cardColor = "#9264FE";
             }
             if (!TextUtils.isEmpty(ticketSouvenirBean.projectImage)) {
-                C0504a.b().e(ticketSouvenirBean.projectImage).n(new C2114c(ticketSouvenirBean)).e(new C2113b()).f();
+                cn.damai.common.image.a.b().e(ticketSouvenirBean.projectImage).n(new c(ticketSouvenirBean)).e(new b()).f();
             } else {
                 defaultSet();
             }
@@ -360,7 +354,7 @@ public class TickletSouvenirClassicsView extends RelativeLayout {
             }
             this.cb_user_icon.setYYMemberTagView("1".equals(ticketSouvenirBean.vip), ticketSouvenirBean.pfVipMemberLevel);
             if (!TextUtils.isEmpty(ticketSouvenirBean.userImageUrl)) {
-                C0504a.b().e(ticketSouvenirBean.userImageUrl).n(new C2116e()).e(new C2115d()).f();
+                cn.damai.common.image.a.b().e(ticketSouvenirBean.userImageUrl).n(new e()).e(new d()).f();
             } else {
                 this.cb_user_icon.setAvatar(R$drawable.mine_account_default);
             }

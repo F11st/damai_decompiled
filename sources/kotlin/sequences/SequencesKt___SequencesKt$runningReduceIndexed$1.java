@@ -54,7 +54,7 @@ final class SequencesKt___SequencesKt$runningReduceIndexed$1 extends RestrictedS
     public final java.lang.Object invokeSuspend(@org.jetbrains.annotations.NotNull java.lang.Object r11) {
         /*
             r10 = this;
-            java.lang.Object r0 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r0 = kotlin.coroutines.intrinsics.a.d()
             int r1 = r10.label
             r2 = 2
             r3 = 1
@@ -111,7 +111,7 @@ final class SequencesKt___SequencesKt$runningReduceIndexed$1 extends RestrictedS
             kotlin.jvm.functions.Function3<java.lang.Integer, java.lang.Object, java.lang.Object, java.lang.Object> r6 = r11.$operation
             int r7 = r3 + 1
             if (r3 >= 0) goto L6f
-            kotlin.collections.C8212k.p()
+            kotlin.collections.k.p()
         L6f:
             java.lang.Integer r3 = tb.id.c(r3)
             java.lang.Object r8 = r4.next()

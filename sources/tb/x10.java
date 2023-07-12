@@ -21,13 +21,12 @@ public class x10 {
     public static final int METHOD_TRANSLATE_Y = 3;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.x10$a */
     /* loaded from: classes11.dex */
-    public static class C9898a {
+    public static class a {
         public int a;
         public float[] b;
 
-        public C9898a(int i, float[] fArr) {
+        public a(int i, float[] fArr) {
             this.a = i;
             this.b = fArr;
         }
@@ -123,7 +122,7 @@ public class x10 {
     }
 
     @Nullable
-    public static List<C9898a> b(@Nullable String str) {
+    public static List<a> b(@Nullable String str) {
         if (str == null) {
             return null;
         }
@@ -155,7 +154,7 @@ public class x10 {
                     float c2 = c(str.substring(i, i4).trim(), i2, i3);
                     if (i3 < 3) {
                         fArr[i3] = c2;
-                        linkedList.add(new C9898a(i2, fArr));
+                        linkedList.add(new a(i2, fArr));
                         float[] fArr2 = new float[3];
                         Arrays.fill(fArr2, Float.NaN);
                         i = i4 + 1;

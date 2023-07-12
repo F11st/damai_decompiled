@@ -4,10 +4,10 @@ import android.util.SparseArray;
 import com.xiaomi.mipush.sdk.MiPushClient;
 import java.util.HashMap;
 import java.util.Map;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -44,7 +44,7 @@ public final class ComponentFooterDelegateManager {
 
     static {
         Lazy<ComponentFooterDelegateManager> a;
-        a = C8177b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<ComponentFooterDelegateManager>() { // from class: com.alient.onearch.adapter.component.footer.ComponentFooterDelegateManager$Companion$instance$2
+        a = b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<ComponentFooterDelegateManager>() { // from class: com.alient.onearch.adapter.component.footer.ComponentFooterDelegateManager$Companion$instance$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull

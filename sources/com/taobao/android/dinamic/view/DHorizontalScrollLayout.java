@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.HorizontalScrollView;
 import androidx.constraintlayout.core.motion.utils.TypedValues;
-import com.taobao.android.dinamic.C6313b;
+import com.taobao.android.dinamic.b;
 import com.taobao.android.dinamic.property.DAttrConstant;
 import java.util.Map;
 import tb.e90;
@@ -34,7 +34,7 @@ public class DHorizontalScrollLayout extends DFrameLayout {
     }
 
     private void generateChildView(AttributeSet attributeSet, v80 v80Var) {
-        Map<String, Object> map = C6313b.d(m80.D_HORIZONTAL_SCROLL_LAYOUT).handleAttributeSet(attributeSet).b;
+        Map<String, Object> map = b.d(m80.D_HORIZONTAL_SCROLL_LAYOUT).handleAttributeSet(attributeSet).b;
         String str = (String) map.get(DAttrConstant.SL_LAYOUT_TYPE);
         HorizontalScrollView horizontalScrollView = new HorizontalScrollView(getContext());
         this.scrollView = horizontalScrollView;

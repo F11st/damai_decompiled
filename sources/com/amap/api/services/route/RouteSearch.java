@@ -3,8 +3,8 @@ package com.amap.api.services.route;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
-import com.amap.api.col.s.C4435i;
 import com.amap.api.col.s.bf;
+import com.amap.api.col.s.i;
 import com.amap.api.services.core.AMapException;
 import com.amap.api.services.core.LatLonPoint;
 import com.amap.api.services.interfaces.IRouteSearch;
@@ -242,7 +242,7 @@ public class RouteSearch {
             try {
                 super.clone();
             } catch (CloneNotSupportedException e) {
-                C4435i.a(e, "RouteSearch", "BusRouteQueryclone");
+                i.a(e, "RouteSearch", "BusRouteQueryclone");
             }
             BusRouteQuery busRouteQuery = new BusRouteQuery(this.a, this.b, this.c, this.e);
             busRouteQuery.setCityd(this.d);
@@ -402,7 +402,7 @@ public class RouteSearch {
             try {
                 super.clone();
             } catch (CloneNotSupportedException e) {
-                C4435i.a(e, "RouteSearch", "DriveRouteQueryclone");
+                i.a(e, "RouteSearch", "DriveRouteQueryclone");
             }
             DrivePlanQuery drivePlanQuery = new DrivePlanQuery(this.a, this.e, this.f, this.g);
             drivePlanQuery.setDestParentPoiID(this.b);
@@ -613,15 +613,15 @@ public class RouteSearch {
         }
 
         public boolean hasAvoidRoad() {
-            return !C4435i.a(getAvoidRoad());
+            return !i.a(getAvoidRoad());
         }
 
         public boolean hasAvoidpolygons() {
-            return !C4435i.a(getAvoidpolygonsStr());
+            return !i.a(getAvoidpolygonsStr());
         }
 
         public boolean hasPassPoint() {
-            return !C4435i.a(getPassedPointStr());
+            return !i.a(getPassedPointStr());
         }
 
         public int hashCode() {
@@ -681,7 +681,7 @@ public class RouteSearch {
             try {
                 super.clone();
             } catch (CloneNotSupportedException e) {
-                C4435i.a(e, "RouteSearch", "DriveRouteQueryclone");
+                i.a(e, "RouteSearch", "DriveRouteQueryclone");
             }
             DriveRouteQuery driveRouteQuery = new DriveRouteQuery(this.a, this.b, this.c, this.d, this.e);
             driveRouteQuery.setUseFerry(this.f);
@@ -909,7 +909,7 @@ public class RouteSearch {
             try {
                 super.clone();
             } catch (CloneNotSupportedException e) {
-                C4435i.a(e, "RouteSearch", "FromAndToclone");
+                i.a(e, "RouteSearch", "FromAndToclone");
             }
             FromAndTo fromAndTo = new FromAndTo(this.a, this.b);
             fromAndTo.setStartPoiID(this.c);
@@ -1045,7 +1045,7 @@ public class RouteSearch {
             try {
                 super.clone();
             } catch (CloneNotSupportedException e) {
-                C4435i.a(e, "RouteSearch", "RideRouteQueryclone");
+                i.a(e, "RouteSearch", "RideRouteQueryclone");
             }
             RideRouteQuery rideRouteQuery = new RideRouteQuery(this.a);
             rideRouteQuery.setExtensions(this.c);
@@ -1175,7 +1175,7 @@ public class RouteSearch {
         }
 
         public boolean hasPassPoint() {
-            return !C4435i.a(getPassedPointStr());
+            return !i.a(getPassedPointStr());
         }
 
         public void setExtensions(String str) {
@@ -1229,7 +1229,7 @@ public class RouteSearch {
             try {
                 super.clone();
             } catch (CloneNotSupportedException e) {
-                C4435i.a(e, "RouteSearch", "TruckRouteQueryclone");
+                i.a(e, "RouteSearch", "TruckRouteQueryclone");
             }
             TruckRouteQuery truckRouteQuery = new TruckRouteQuery(this.a, this.c, this.d, this.b);
             truckRouteQuery.setExtensions(this.j);
@@ -1349,7 +1349,7 @@ public class RouteSearch {
             try {
                 super.clone();
             } catch (CloneNotSupportedException e) {
-                C4435i.a(e, "RouteSearch", "WalkRouteQueryclone");
+                i.a(e, "RouteSearch", "WalkRouteQueryclone");
             }
             WalkRouteQuery walkRouteQuery = new WalkRouteQuery(this.a);
             walkRouteQuery.setExtensions(this.c);

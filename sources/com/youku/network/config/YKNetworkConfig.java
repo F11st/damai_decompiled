@@ -2,7 +2,7 @@ package com.youku.network.config;
 
 import android.text.TextUtils;
 import com.taobao.orange.OrangeConfig;
-import com.youku.httpcommunication.C7926c;
+import com.youku.httpcommunication.c;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -48,7 +48,7 @@ public class YKNetworkConfig {
 
     private static boolean b(String str) {
         try {
-            return C7926c.a(new URL(str).getHost());
+            return c.a(new URL(str).getHost());
         } catch (MalformedURLException e) {
             e.printStackTrace();
             return false;

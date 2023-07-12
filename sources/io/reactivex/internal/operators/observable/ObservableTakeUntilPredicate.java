@@ -88,7 +88,7 @@ public final class ObservableTakeUntilPredicate<T> extends AbstractObservableWit
         this.predicate = predicate;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new TakeUntilPredicateObserver(observer, this.predicate));
     }

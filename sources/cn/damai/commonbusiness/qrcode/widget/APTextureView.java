@@ -9,7 +9,7 @@ import android.view.TextureView;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.lang.reflect.Field;
-import tb.C8986c0;
+import tb.c0;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
@@ -44,12 +44,12 @@ public class APTextureView extends TextureView {
                 declaredField.setAccessible(true);
             }
             SurfaceTexture surfaceTexture = (SurfaceTexture) this.mSurfaceField.get(this);
-            if (surfaceTexture == null || (surfaceTexture instanceof C8986c0)) {
+            if (surfaceTexture == null || (surfaceTexture instanceof c0)) {
                 return;
             }
-            C8986c0 c8986c0 = new C8986c0();
-            c8986c0.a = surfaceTexture;
-            this.mSurfaceField.set(this, c8986c0);
+            c0 c0Var = new c0();
+            c0Var.a = surfaceTexture;
+            this.mSurfaceField.set(this, c0Var);
             Log.d(TAG, "afterSetSurfaceTexture wrap mSurface");
         } catch (Exception e) {
             Log.e(TAG, "afterSetSurfaceTexture exception:" + e.getMessage());

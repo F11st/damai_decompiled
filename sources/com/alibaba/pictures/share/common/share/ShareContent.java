@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.jvm.JvmField;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -23,7 +23,7 @@ import tb.k50;
 public final class ShareContent implements Serializable {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3632a Companion = new C3632a(null);
+    public static final a Companion = new a(null);
     public static final int SHARE_TYPE_IMG = 1;
     public static final int SHARE_TYPE_TEXT = 0;
     public static final int SHARE_TYPE_VIDEO = 3;
@@ -66,13 +66,12 @@ public final class ShareContent implements Serializable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.share.common.share.ShareContent$a */
     /* loaded from: classes8.dex */
-    public static final class C3632a {
-        private C3632a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3632a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -195,7 +194,7 @@ public final class ShareContent implements Serializable {
         String str2 = this.url;
         if (str2 != null) {
             if ((str2.length() > 0) && (str = this.url) != null) {
-                C8604o.z(str, "&amp;", "&", false, 4, null);
+                o.z(str, "&amp;", "&", false, 4, null);
             }
         }
         return this.url;

@@ -1,6 +1,5 @@
 package tb;
 
-import com.efs.sdk.base.a.h.a.InterfaceC4798b;
 import com.efs.sdk.base.http.IHttpUtil;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,12 +8,11 @@ import java.util.List;
 /* loaded from: classes10.dex */
 public class f01 {
     private IHttpUtil a;
-    private List<InterfaceC4798b<l01>> b;
+    private List<com.efs.sdk.base.a.h.a.b<l01>> b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.f01$b */
     /* loaded from: classes10.dex */
-    static class C9123b {
+    static class b {
         private static final f01 a = new f01();
     }
 
@@ -24,10 +22,10 @@ public class f01 {
     }
 
     public static f01 c() {
-        return C9123b.a;
+        return b.a;
     }
 
-    public List<InterfaceC4798b<l01>> a() {
+    public List<com.efs.sdk.base.a.h.a.b<l01>> a() {
         return new ArrayList(this.b);
     }
 

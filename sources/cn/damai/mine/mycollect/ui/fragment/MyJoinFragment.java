@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import cn.damai.common.app.base.BaseFragment;
 import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.bean.RankBean;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.homepage.R$id;
@@ -128,23 +128,22 @@ public class MyJoinFragment extends DamaiBaseMvpFragment implements OnLoadMoreLi
         }
     };
     private int mDeletePos = -1;
-    View.OnLongClickListener mItemLongListener = new View$OnLongClickListenerC1446a();
+    View.OnLongClickListener mItemLongListener = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.mycollect.ui.fragment.MyJoinFragment$a */
     /* loaded from: classes15.dex */
-    public class View$OnLongClickListenerC1446a implements View.OnLongClickListener {
+    public class a implements View.OnLongClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.mine.mycollect.ui.fragment.MyJoinFragment$a$a */
+        /* renamed from: cn.damai.mine.mycollect.ui.fragment.MyJoinFragment$a$a  reason: collision with other inner class name */
         /* loaded from: classes15.dex */
-        public class DialogInterface$OnClickListenerC1447a implements DialogInterface.OnClickListener {
+        public class DialogInterface$OnClickListenerC0057a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ RankBean a;
             final /* synthetic */ int b;
 
-            DialogInterface$OnClickListenerC1447a(RankBean rankBean, int i) {
+            DialogInterface$OnClickListenerC0057a(RankBean rankBean, int i) {
                 this.a = rankBean;
                 this.b = i;
             }
@@ -163,7 +162,7 @@ public class MyJoinFragment extends DamaiBaseMvpFragment implements OnLoadMoreLi
             }
         }
 
-        View$OnLongClickListenerC1446a() {
+        a() {
         }
 
         @Override // android.view.View.OnLongClickListener
@@ -181,7 +180,7 @@ public class MyJoinFragment extends DamaiBaseMvpFragment implements OnLoadMoreLi
             DMDialog dMDialog = new DMDialog(MyJoinFragment.this.getActivity());
             dMDialog.v("是否取消想看?");
             dMDialog.i("否", null);
-            dMDialog.n("是", new DialogInterface$OnClickListenerC1447a(rankBean, intValue));
+            dMDialog.n("是", new DialogInterface$OnClickListenerC0057a(rankBean, intValue));
             dMDialog.show();
             return true;
         }
@@ -288,7 +287,7 @@ public class MyJoinFragment extends DamaiBaseMvpFragment implements OnLoadMoreLi
             startProgressDialog();
             this.mDeletePos = i2;
             this.mViewModel.cancelFollowData(str, String.valueOf(i)).observe(this, this.cancelFollowObserver);
-            C0529c e = C0529c.e();
+            c e = c.e();
             hi1 m = hi1.m();
             e.x(m.k(str + "&" + i, i2));
         }

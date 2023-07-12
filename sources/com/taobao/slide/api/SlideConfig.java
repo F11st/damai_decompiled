@@ -30,9 +30,8 @@ public class SlideConfig implements Serializable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.slide.api.SlideConfig$b */
     /* loaded from: classes11.dex */
-    public static class C6884b {
+    public static class b {
         private String b;
         private String c;
         private String d;
@@ -69,27 +68,27 @@ public class SlideConfig implements Serializable {
             return slideConfig;
         }
 
-        public C6884b b(@NonNull String str) {
+        public b b(@NonNull String str) {
             this.c = str;
             return this;
         }
 
-        public C6884b c(@NonNull String str) {
+        public b c(@NonNull String str) {
             this.b = str;
             return this;
         }
 
-        public C6884b d(boolean z) {
+        public b d(boolean z) {
             this.i = z;
             return this;
         }
 
-        public C6884b e(@NonNull ENV env) {
+        public b e(@NonNull ENV env) {
             this.a = env;
             return this;
         }
 
-        public C6884b f(@NonNull String str) {
+        public b f(@NonNull String str) {
             this.f = str;
             return this;
         }

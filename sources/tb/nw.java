@@ -16,7 +16,7 @@ public class nw extends mw {
         return -1;
     }
 
-    @Override // tb.mw, com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
+    @Override // tb.mw, com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
     public String getDxFunctionName() {
         return "index_of_value";
     }

@@ -1,13 +1,13 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
+import io.reactivex.b;
 import io.reactivex.internal.operators.flowable.FlowableTake;
 import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableTakePublisher<T> extends AbstractC8147b<T> {
+public final class FlowableTakePublisher<T> extends b<T> {
     final long limit;
     final Publisher<T> source;
 
@@ -16,7 +16,7 @@ public final class FlowableTakePublisher<T> extends AbstractC8147b<T> {
         this.limit = j;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe(new FlowableTake.TakeSubscriber(subscriber, this.limit));
     }

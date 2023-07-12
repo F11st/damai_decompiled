@@ -18,7 +18,7 @@ public class Config {
     @AnimatorRes
     int animatorReverseResId = 0;
     @DrawableRes
-    int backgroundResId = R.C4041drawable.indicator_white_dot;
+    int backgroundResId = R.drawable.indicator_white_dot;
     int orientation = 0;
     int gravity = 17;
 

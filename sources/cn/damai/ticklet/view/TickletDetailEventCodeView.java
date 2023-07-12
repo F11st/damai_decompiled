@@ -13,8 +13,8 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import cn.damai.member.R$drawable;
 import cn.damai.member.R$id;
 import cn.damai.member.R$layout;
@@ -62,12 +62,11 @@ public class TickletDetailEventCodeView extends ConstraintLayout implements View
     float ylocArrow;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletDetailEventCodeView$a */
     /* loaded from: classes7.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC2098a implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class a implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC2098a() {
+        a() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -157,7 +156,7 @@ public class TickletDetailEventCodeView extends ConstraintLayout implements View
                 TickletDetailEventCodeView.this.upArrow(false);
             }
         });
-        this.popText.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC2098a());
+        this.popText.getViewTreeObserver().addOnGlobalLayoutListener(new a());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -201,12 +200,12 @@ public class TickletDetailEventCodeView extends ConstraintLayout implements View
         }
         this.popWindowView.measure(0, 0);
         this.popupWidth = this.popWindowView.getMeasuredWidth();
-        int a = q60.a(this.context, 6.0f);
+        int a2 = q60.a(this.context, 6.0f);
         cb1.b("TickletDetailEventCodeView", "popupWidth = " + this.popupWidth);
         cb1.b("TickletDetailEventCodeView", "popupHeight = " + this.popupHeight);
         int i = DisplayMetrics.getwidthPixels(q60.b(this.context));
-        int a2 = q60.a(this.context, 15.0f);
-        int i2 = i - (a2 * 2);
+        int a3 = q60.a(this.context, 15.0f);
+        int i2 = i - (a3 * 2);
         int i3 = this.popupWidth;
         if (i3 > i2) {
             this.popupWindow.setWidth(i2);
@@ -222,16 +221,16 @@ public class TickletDetailEventCodeView extends ConstraintLayout implements View
         this.ylocArrow = f;
         if (f2 >= i / 2) {
             int i4 = this.popupWidth;
-            if ((i - a2) - f2 >= i4 / 2) {
-                this.xloc = (f2 - (i4 / 2)) + a;
+            if ((i - a3) - f2 >= i4 / 2) {
+                this.xloc = (f2 - (i4 / 2)) + a2;
             } else {
-                this.xloc = (f2 - (i4 / 2)) - ((i4 / 2) - ((i - f2) - a2));
+                this.xloc = (f2 - (i4 / 2)) - ((i4 / 2) - ((i - f2) - a3));
             }
         } else {
-            float f3 = a2;
+            float f3 = a3;
             int i5 = this.popupWidth;
             if (f2 - f3 >= i5 / 2) {
-                this.xloc = (f2 - (i5 / 2)) + a;
+                this.xloc = (f2 - (i5 / 2)) + a2;
             } else {
                 this.xloc = f3;
             }
@@ -264,14 +263,14 @@ public class TickletDetailEventCodeView extends ConstraintLayout implements View
             Context context = this.context;
             if (context != null) {
                 nb2.b(context, this.codeBean.code, "券码已复制至剪切板");
-                C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "thirdcode", rz0.ARG_COPY, un2.k().t(this.projectId, this.performId), Boolean.FALSE));
+                c.e().x(b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "thirdcode", rz0.ARG_COPY, un2.k().t(this.projectId, this.performId), Boolean.FALSE));
             }
         } else if (view.getId() == R$id.tiklet_detail_event_code_icon_arrow) {
             py2.f().n(this.context, this.codeBean.schema);
-            C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "thirdcode", "open", un2.k().t(this.projectId, this.performId), Boolean.FALSE));
+            c.e().x(b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "thirdcode", "open", un2.k().t(this.projectId, this.performId), Boolean.FALSE));
         } else if ((view.getId() == R$id.ticklet_detail_event_code_tip_icon || view.getId() == R$id.ticklet_detail_event_code_title) && !TextUtils.isEmpty(this.codeBean.description)) {
             showPop();
-            C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "thirdcode", "info", un2.k().t(this.projectId, this.performId), Boolean.FALSE));
+            c.e().x(b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "thirdcode", "info", un2.k().t(this.projectId, this.performId), Boolean.FALSE));
         }
     }
 

@@ -1,10 +1,9 @@
 package com.huawei.secure.android.common.ssl;
 
 import android.content.Context;
-import com.huawei.secure.android.common.ssl.util.AbstractC5754f;
 import com.huawei.secure.android.common.ssl.util.BksUtil;
-import com.huawei.secure.android.common.ssl.util.C5751c;
-import com.huawei.secure.android.common.ssl.util.C5755g;
+import com.huawei.secure.android.common.ssl.util.f;
+import com.huawei.secure.android.common.ssl.util.g;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -38,7 +37,7 @@ public class SecureX509TrustManager implements X509TrustManager {
     }
 
     private void a() {
-        C5755g.c(c, "loadSystemCA");
+        g.c(c, "loadSystemCA");
         long currentTimeMillis = System.currentTimeMillis();
         try {
             KeyStore keyStore = KeyStore.getInstance(h);
@@ -53,22 +52,22 @@ public class SecureX509TrustManager implements X509TrustManager {
             }
         } catch (IOException | KeyStoreException | NoSuchAlgorithmException | CertificateException e2) {
             String str = c;
-            C5755g.b(str, "loadSystemCA: exception : " + e2.getMessage());
+            g.b(str, "loadSystemCA: exception : " + e2.getMessage());
         }
         String str2 = c;
-        C5755g.a(str2, "loadSystemCA: cost : " + (System.currentTimeMillis() - currentTimeMillis) + " ms");
+        g.a(str2, "loadSystemCA: cost : " + (System.currentTimeMillis() - currentTimeMillis) + " ms");
     }
 
     @Override // javax.net.ssl.X509TrustManager
     public void checkClientTrusted(X509Certificate[] x509CertificateArr, String str) throws CertificateException {
-        C5755g.c(c, "checkClientTrusted: ");
+        g.c(c, "checkClientTrusted: ");
         for (X509TrustManager x509TrustManager : this.a) {
             try {
                 x509TrustManager.checkServerTrusted(x509CertificateArr, str);
                 return;
             } catch (CertificateException e2) {
                 String str2 = c;
-                C5755g.b(str2, "checkServerTrusted CertificateException" + e2.getMessage());
+                g.b(str2, "checkServerTrusted CertificateException" + e2.getMessage());
             }
         }
         throw new CertificateException("checkServerTrusted CertificateException");
@@ -77,42 +76,42 @@ public class SecureX509TrustManager implements X509TrustManager {
     @Override // javax.net.ssl.X509TrustManager
     public void checkServerTrusted(X509Certificate[] x509CertificateArr, String str) throws CertificateException {
         setChain(x509CertificateArr);
-        C5755g.c(c, "checkServerTrusted begin ,server ca chain size is : " + x509CertificateArr.length + " ,auth type is : " + str);
+        g.c(c, "checkServerTrusted begin ,server ca chain size is : " + x509CertificateArr.length + " ,auth type is : " + str);
         long currentTimeMillis = System.currentTimeMillis();
         for (X509Certificate x509Certificate : x509CertificateArr) {
             String str2 = c;
-            C5755g.a(str2, "server ca chain: getSubjectDN is :" + x509Certificate.getSubjectDN());
-            C5755g.a(str2, "IssuerDN :" + x509Certificate.getIssuerDN());
-            C5755g.a(str2, "SerialNumber : " + x509Certificate.getSerialNumber());
+            g.a(str2, "server ca chain: getSubjectDN is :" + x509Certificate.getSubjectDN());
+            g.a(str2, "IssuerDN :" + x509Certificate.getIssuerDN());
+            g.a(str2, "SerialNumber : " + x509Certificate.getSerialNumber());
         }
         int size = this.a.size();
         for (int i = 0; i < size; i++) {
             try {
                 String str3 = c;
-                C5755g.c(str3, "check server i : " + i);
+                g.c(str3, "check server i : " + i);
                 X509TrustManager x509TrustManager = this.a.get(i);
                 X509Certificate[] acceptedIssuers = x509TrustManager.getAcceptedIssuers();
                 if (acceptedIssuers != null) {
-                    C5755g.c(str3, "client root ca size is : " + acceptedIssuers.length);
+                    g.c(str3, "client root ca size is : " + acceptedIssuers.length);
                     for (int i2 = 0; i2 < acceptedIssuers.length; i2++) {
-                        C5755g.a(c, "client root ca getIssuerDN :" + acceptedIssuers[i2].getIssuerDN());
+                        g.a(c, "client root ca getIssuerDN :" + acceptedIssuers[i2].getIssuerDN());
                     }
                 }
                 x509TrustManager.checkServerTrusted(x509CertificateArr, str);
-                C5755g.c(c, "checkServerTrusted succeed ,root ca issuer is : " + x509CertificateArr[x509CertificateArr.length - 1].getIssuerDN());
+                g.c(c, "checkServerTrusted succeed ,root ca issuer is : " + x509CertificateArr[x509CertificateArr.length - 1].getIssuerDN());
                 return;
             } catch (CertificateException e2) {
                 String str4 = c;
-                C5755g.b(str4, "checkServerTrusted error :" + e2.getMessage() + " , time : " + i);
+                g.b(str4, "checkServerTrusted error :" + e2.getMessage() + " , time : " + i);
                 if (i == size - 1) {
                     if (x509CertificateArr.length > 0) {
-                        C5755g.b(str4, "root ca issuer : " + x509CertificateArr[x509CertificateArr.length - 1].getIssuerDN());
+                        g.b(str4, "root ca issuer : " + x509CertificateArr[x509CertificateArr.length - 1].getIssuerDN());
                     }
                     throw e2;
                 }
             }
         }
-        C5755g.a(c, "checkServerTrusted: cost : " + (System.currentTimeMillis() - currentTimeMillis) + " ms");
+        g.a(c, "checkServerTrusted: cost : " + (System.currentTimeMillis() - currentTimeMillis) + " ms");
     }
 
     @Override // javax.net.ssl.X509TrustManager
@@ -125,7 +124,7 @@ public class SecureX509TrustManager implements X509TrustManager {
             return (X509Certificate[]) arrayList.toArray(new X509Certificate[arrayList.size()]);
         } catch (Exception e2) {
             String str = c;
-            C5755g.b(str, "getAcceptedIssuers exception : " + e2.getMessage());
+            g.b(str, "getAcceptedIssuers exception : " + e2.getMessage());
             return new X509Certificate[0];
         }
     }
@@ -149,7 +148,7 @@ public class SecureX509TrustManager implements X509TrustManager {
     public SecureX509TrustManager(Context context, boolean z) throws IOException, NoSuchAlgorithmException, CertificateException, KeyStoreException, IllegalArgumentException {
         this.a = new ArrayList();
         if (context != null) {
-            C5751c.a(context);
+            com.huawei.secure.android.common.ssl.util.c.a(context);
             if (z) {
                 a();
             }
@@ -174,26 +173,26 @@ public class SecureX509TrustManager implements X509TrustManager {
     private void a(Context context) throws CertificateException, NoSuchAlgorithmException, KeyStoreException, IOException {
         boolean z;
         String str = c;
-        C5755g.c(str, "loadBksCA");
+        g.c(str, "loadBksCA");
         long currentTimeMillis = System.currentTimeMillis();
         InputStream filesBksIS = BksUtil.getFilesBksIS(context);
         if (filesBksIS != null) {
             try {
-                C5755g.c(str, "get bks not from assets");
+                g.c(str, "get bks not from assets");
                 a(filesBksIS);
             } catch (IOException | KeyStoreException | NoSuchAlgorithmException | CertificateException e2) {
                 String str2 = c;
-                C5755g.b(str2, "loadBksCA: exception : " + e2.getMessage());
+                g.b(str2, "loadBksCA: exception : " + e2.getMessage());
                 z = false;
             }
         }
         z = true;
         if (!z || filesBksIS == null) {
-            C5755g.c(c, " get bks from assets ");
+            g.c(c, " get bks from assets ");
             a(context.getAssets().open("hmsrootcas.bks"));
         }
         String str3 = c;
-        C5755g.a(str3, "loadBksCA: cost : " + (System.currentTimeMillis() - currentTimeMillis) + " ms");
+        g.a(str3, "loadBksCA: cost : " + (System.currentTimeMillis() - currentTimeMillis) + " ms");
     }
 
     public SecureX509TrustManager(String str, boolean z) throws IllegalArgumentException, FileNotFoundException {
@@ -207,13 +206,13 @@ public class SecureX509TrustManager implements X509TrustManager {
         }
         try {
             a(fileInputStream, "");
-            AbstractC5754f.a((InputStream) fileInputStream);
+            f.a((InputStream) fileInputStream);
             if (z) {
                 a();
             }
         } catch (Throwable th2) {
             th = th2;
-            AbstractC5754f.a((InputStream) fileInputStream);
+            f.a((InputStream) fileInputStream);
             throw th;
         }
     }
@@ -239,7 +238,7 @@ public class SecureX509TrustManager implements X509TrustManager {
                 }
             }
         } finally {
-            AbstractC5754f.a(inputStream);
+            f.a(inputStream);
         }
     }
 
@@ -258,16 +257,16 @@ public class SecureX509TrustManager implements X509TrustManager {
                             this.a.add((X509TrustManager) trustManagers[i]);
                         }
                     }
-                    AbstractC5754f.a(inputStream);
+                    f.a(inputStream);
                 } catch (IOException | KeyStoreException | NoSuchAlgorithmException | CertificateException e2) {
                     String str2 = c;
-                    C5755g.b(str2, "loadInputStream: exception : " + e2.getMessage());
+                    g.b(str2, "loadInputStream: exception : " + e2.getMessage());
                 }
                 String str3 = c;
-                C5755g.a(str3, "loadInputStream: cost : " + (System.currentTimeMillis() - currentTimeMillis) + " ms");
+                g.a(str3, "loadInputStream: cost : " + (System.currentTimeMillis() - currentTimeMillis) + " ms");
                 return;
             } finally {
-                AbstractC5754f.a(inputStream);
+                f.a(inputStream);
             }
         }
         throw new IllegalArgumentException("inputstream or trustPwd is null");

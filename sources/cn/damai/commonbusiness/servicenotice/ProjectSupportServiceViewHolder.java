@@ -10,7 +10,6 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMRoundedCornersBitmapProcessor;
 import cn.damai.commonbusiness.R$drawable;
@@ -43,12 +42,11 @@ public class ProjectSupportServiceViewHolder extends RecyclerView.ViewHolder {
     private ArrayList<IdCardTypes> j;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.servicenotice.ProjectSupportServiceViewHolder$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0866a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0866a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -64,19 +62,18 @@ public class ProjectSupportServiceViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.servicenotice.ProjectSupportServiceViewHolder$b */
     /* loaded from: classes.dex */
-    public class C0867b implements DMImageCreator.DMImageFailListener {
+    public class b implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0867b() {
+        b() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1723373389")) {
-                ipChange.ipc$dispatch("-1723373389", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-1723373389", new Object[]{this, dVar});
             } else {
                 ProjectSupportServiceViewHolder.this.e.setVisibility(8);
             }
@@ -84,23 +81,22 @@ public class ProjectSupportServiceViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.servicenotice.ProjectSupportServiceViewHolder$c */
     /* loaded from: classes.dex */
-    public class C0868c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0868c() {
+        c() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-583481336")) {
-                ipChange.ipc$dispatch("-583481336", new Object[]{this, c0502e});
-            } else if (c0502e == null || c0502e.a == null) {
+                ipChange.ipc$dispatch("-583481336", new Object[]{this, eVar});
+            } else if (eVar == null || eVar.a == null) {
             } else {
-                ProjectSupportServiceViewHolder.this.f.setImageDrawable(c0502e.a);
-                ProjectSupportServiceViewHolder.this.f.getLayoutParams().height = (int) (c0502e.a.getIntrinsicHeight() * ((ProjectSupportServiceViewHolder.this.h * 1.0f) / c0502e.a.getIntrinsicWidth()));
+                ProjectSupportServiceViewHolder.this.f.setImageDrawable(eVar.a);
+                ProjectSupportServiceViewHolder.this.f.getLayoutParams().height = (int) (eVar.a.getIntrinsicHeight() * ((ProjectSupportServiceViewHolder.this.h * 1.0f) / eVar.a.getIntrinsicWidth()));
                 ProjectSupportServiceViewHolder.this.e.setVisibility(0);
             }
         }
@@ -139,7 +135,7 @@ public class ProjectSupportServiceViewHolder extends RecyclerView.ViewHolder {
             }
             this.d.setText(this.i.getResources().getString(R$string.add_contacts_title_text));
             this.c.setVisibility(this.j == null ? 8 : 0);
-            this.c.setOnClickListener(new View$OnClickListenerC0866a());
+            this.c.setOnClickListener(new a());
         } else if (this.c.getVisibility() == 0) {
             this.c.setVisibility(8);
         }
@@ -152,9 +148,9 @@ public class ProjectSupportServiceViewHolder extends RecyclerView.ViewHolder {
         } else if (TextUtils.isEmpty(str)) {
             this.e.setVisibility(8);
         } else {
-            DMImageCreator c = C0504a.b().c(str);
+            DMImageCreator c2 = cn.damai.common.image.a.b().c(str);
             int i = R$drawable.uikit_default_image_bg_grey;
-            c.i(i).c(i).k(new DMRoundedCornersBitmapProcessor(6, 0)).n(new C0868c()).e(new C0867b()).f();
+            c2.i(i).c(i).k(new DMRoundedCornersBitmapProcessor(6, 0)).n(new c()).e(new b()).f();
         }
     }
 

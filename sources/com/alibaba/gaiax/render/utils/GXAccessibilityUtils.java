@@ -34,7 +34,7 @@ public final class GXAccessibilityUtils {
             try {
                 string = jSONObject.getString("accessibilityDesc");
             } catch (Exception e) {
-                GXRegisterCenter.C3334b d = GXRegisterCenter.Companion.a().d();
+                GXRegisterCenter.b d = GXRegisterCenter.Companion.a().d();
                 if ((d == null || d.e()) ? false : true) {
                     throw e;
                 }
@@ -76,7 +76,7 @@ public final class GXAccessibilityUtils {
             try {
                 string = jSONObject.getString("accessibilityDesc");
             } catch (Exception e) {
-                GXRegisterCenter.C3334b d = GXRegisterCenter.Companion.a().d();
+                GXRegisterCenter.b d = GXRegisterCenter.Companion.a().d();
                 if (d != null && !d.e()) {
                     z = true;
                 }
@@ -124,7 +124,7 @@ public final class GXAccessibilityUtils {
             try {
                 string = jSONObject.getString("accessibilityDesc");
             } catch (Exception e) {
-                GXRegisterCenter.C3334b d = GXRegisterCenter.Companion.a().d();
+                GXRegisterCenter.b d = GXRegisterCenter.Companion.a().d();
                 if ((d == null || d.e()) ? false : true) {
                     throw e;
                 }

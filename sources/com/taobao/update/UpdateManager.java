@@ -10,8 +10,8 @@ import android.os.Bundle;
 import android.util.Log;
 import com.taobao.update.framework.UpdateRuntime;
 import java.util.List;
-import tb.C9444mm;
 import tb.ju2;
+import tb.mm;
 import tb.pu2;
 
 /* compiled from: Taobao */
@@ -21,14 +21,13 @@ public class UpdateManager {
     private Application a;
     private ActivityManager b;
     private volatile UpdateSDK c;
-    private Application.ActivityLifecycleCallbacks d = new C6911a();
-    private ComponentCallbacks2 e = new ComponentCallbacks2C6912b();
+    private Application.ActivityLifecycleCallbacks d = new a();
+    private ComponentCallbacks2 e = new b();
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.update.UpdateManager$a */
     /* loaded from: classes11.dex */
-    class C6911a implements Application.ActivityLifecycleCallbacks {
-        C6911a() {
+    class a implements Application.ActivityLifecycleCallbacks {
+        a() {
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
@@ -63,10 +62,9 @@ public class UpdateManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.update.UpdateManager$b */
     /* loaded from: classes11.dex */
-    class ComponentCallbacks2C6912b implements ComponentCallbacks2 {
-        ComponentCallbacks2C6912b() {
+    class b implements ComponentCallbacks2 {
+        b() {
         }
 
         @Override // android.content.ComponentCallbacks
@@ -121,20 +119,20 @@ public class UpdateManager {
         return f;
     }
 
-    public void init(final C9444mm c9444mm, boolean z) {
+    public void init(final mm mmVar, boolean z) {
         Application application;
-        if (c9444mm != null && (application = c9444mm.application) != null) {
+        if (mmVar != null && (application = mmVar.application) != null) {
             this.a = application;
             String processName = pu2.getProcessName(application);
             UpdateRuntime.processName = processName;
-            if (processName.equals(c9444mm.application.getPackageName())) {
+            if (processName.equals(mmVar.application.getPackageName())) {
                 Log.d("update-sdk", "initialize app in process " + UpdateRuntime.processName);
-                UpdateRuntime.init(this.a, c9444mm);
+                UpdateRuntime.init(this.a, mmVar);
                 UpdateRuntime.execute(new Runnable() { // from class: com.taobao.update.UpdateManager.3
                     @Override // java.lang.Runnable
                     public void run() {
-                        ju2 enableMonitor = new ju2(c9444mm).enableApkUpdate().enableMonitor(null);
-                        if (c9444mm.autoStart) {
+                        ju2 enableMonitor = new ju2(mmVar).enableApkUpdate().enableMonitor(null);
+                        if (mmVar.autoStart) {
                             enableMonitor.enableCheckUpdateOnStartup();
                         }
                         UpdateManager.this.c = new UpdateSDK(enableMonitor);
@@ -142,7 +140,7 @@ public class UpdateManager {
                     }
                 });
                 if (z) {
-                    c9444mm.application.registerComponentCallbacks(this.e);
+                    mmVar.application.registerComponentCallbacks(this.e);
                     return;
                 }
                 return;

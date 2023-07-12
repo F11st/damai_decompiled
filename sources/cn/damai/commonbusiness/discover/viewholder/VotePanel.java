@@ -62,14 +62,13 @@ public class VotePanel implements cn.damai.tetris.component.drama.viewholder.OnI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.discover.viewholder.VotePanel$a */
     /* loaded from: classes4.dex */
-    public class C0651a implements BottomListDialog.OnActionListener {
+    public class a implements BottomListDialog.OnActionListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ VoteBean a;
         final /* synthetic */ String b;
 
-        C0651a(VoteBean voteBean, String str) {
+        a(VoteBean voteBean, String str) {
             this.a = voteBean;
             this.b = str;
         }
@@ -262,7 +261,7 @@ public class VotePanel implements cn.damai.tetris.component.drama.viewholder.OnI
             Activity activity = this.g.getActivity();
             VoteInfoBean voteInfoBean = this.e;
             if (voteInfoBean.hasVote) {
-                new BottomListDialog(activity, new C0651a(voteBean, voteInfoBean.getVotedItemId())).show();
+                new BottomListDialog(activity, new a(voteBean, voteInfoBean.getVotedItemId())).show();
             } else {
                 g(voteBean, voteBean.id, true, this.f);
             }

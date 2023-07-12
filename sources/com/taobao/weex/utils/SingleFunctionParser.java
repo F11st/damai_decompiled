@@ -25,8 +25,8 @@ public class SingleFunctionParser<V> extends FunctionParser<String, List<V>> {
     }
 
     public SingleFunctionParser(@NonNull String str, @NonNull final FlatMapper<V> flatMapper) {
-        super(str, new FunctionParser.InterfaceC6978Mapper<String, List<V>>() { // from class: com.taobao.weex.utils.SingleFunctionParser.1
-            @Override // com.taobao.weex.utils.FunctionParser.InterfaceC6978Mapper
+        super(str, new FunctionParser.Mapper<String, List<V>>() { // from class: com.taobao.weex.utils.SingleFunctionParser.1
+            @Override // com.taobao.weex.utils.FunctionParser.Mapper
             public Map<String, List<V>> map(String str2, List<String> list) {
                 HashMap hashMap = new HashMap();
                 LinkedList linkedList = new LinkedList();
@@ -48,8 +48,8 @@ public class SingleFunctionParser<V> extends FunctionParser<String, List<V>> {
     }
 
     public SingleFunctionParser(@NonNull String str, @NonNull final NonUniformMapper<V> nonUniformMapper) {
-        super(str, new FunctionParser.InterfaceC6978Mapper<String, List<V>>() { // from class: com.taobao.weex.utils.SingleFunctionParser.2
-            @Override // com.taobao.weex.utils.FunctionParser.InterfaceC6978Mapper
+        super(str, new FunctionParser.Mapper<String, List<V>>() { // from class: com.taobao.weex.utils.SingleFunctionParser.2
+            @Override // com.taobao.weex.utils.FunctionParser.Mapper
             public Map<String, List<V>> map(String str2, List<String> list) {
                 HashMap hashMap = new HashMap();
                 hashMap.put(str2, NonUniformMapper.this.map(list));

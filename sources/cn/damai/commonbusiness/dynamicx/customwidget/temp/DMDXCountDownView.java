@@ -62,13 +62,12 @@ public class DMDXCountDownView extends LinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.temp.DMDXCountDownView$a */
     /* loaded from: classes14.dex */
-    public static class HandlerC0668a extends Handler {
+    public static class a extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
         private final WeakReference<DMDXCountDownView> a;
 
-        HandlerC0668a(DMDXCountDownView dMDXCountDownView) {
+        a(DMDXCountDownView dMDXCountDownView) {
             this.a = new WeakReference<>(dMDXCountDownView);
         }
 
@@ -1110,7 +1109,7 @@ public class DMDXCountDownView extends LinearLayout {
         this.isContinue = false;
         this.colon = ":";
         this.mExecutorService = Executors.newSingleThreadExecutor();
-        this.myHandler = new HandlerC0668a(this);
+        this.myHandler = new a(this);
         this.lastTime = 0L;
         this.timeEnd = 0L;
         this.context = context;

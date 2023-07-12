@@ -37,12 +37,11 @@ public class AnchorFloatingPlugin extends ComponentPlugin {
     private RecyclerView mRecycler;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.componentplugin.AnchorFloatingPlugin$a */
     /* loaded from: classes16.dex */
-    public class View$OnTouchListenerC1979a implements View.OnTouchListener {
+    public class a implements View.OnTouchListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnTouchListenerC1979a() {
+        a() {
         }
 
         @Override // android.view.View.OnTouchListener
@@ -76,7 +75,7 @@ public class AnchorFloatingPlugin extends ComponentPlugin {
         if (recyclerView == null) {
             return;
         }
-        recyclerView.setOnTouchListener(new View$OnTouchListenerC1979a());
+        recyclerView.setOnTouchListener(new a());
         this.mRecycler.addOnScrollListener(new RecyclerView.OnScrollListener() { // from class: cn.damai.tetris.componentplugin.AnchorFloatingPlugin.2
             private static transient /* synthetic */ IpChange $ipChange;
 

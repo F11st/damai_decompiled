@@ -5,9 +5,8 @@ package com.ali.user.mobile.ext.tb;
 public final class R {
 
     /* compiled from: Taobao */
-    /* renamed from: com.ali.user.mobile.ext.tb.R$color */
     /* loaded from: classes17.dex */
-    public static final class C2954color {
+    public static final class color {
         public static final int aliuser_bg_color = 0x7f06005b;
         public static final int aliuser_bg_transparent = 0x7f06005c;
         public static final int aliuser_cancel_red = 0x7f06005d;
@@ -43,7 +42,7 @@ public final class R {
         public static final int aliuser_selected_country_color = 0x7f06008e;
         public static final int aliuser_text_light_gray = 0x7f060098;
 
-        private C2954color() {
+        private color() {
         }
     }
 
@@ -71,9 +70,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.ali.user.mobile.ext.tb.R$drawable */
     /* loaded from: classes17.dex */
-    public static final class C2955drawable {
+    public static final class drawable {
         public static final int aliuser_btn_main_background = 0x7f0800a7;
         public static final int aliuser_btn_main_press_background = 0x7f0800a9;
         public static final int aliuser_dialog_bg = 0x7f0800b3;
@@ -83,7 +81,7 @@ public final class R {
         public static final int aliuser_progress_d = 0x7f0800c7;
         public static final int aliuser_toast_bg = 0x7f0800d4;
 
-        private C2955drawable() {
+        private drawable() {
         }
     }
 
@@ -103,15 +101,14 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.ali.user.mobile.ext.tb.R$layout */
     /* loaded from: classes17.dex */
-    public static final class C2956layout {
+    public static final class layout {
         public static final int aliuser_activity_permission = 0x7f0c00a2;
         public static final int aliuser_dialog_layout = 0x7f0c00aa;
         public static final int aliuser_progress_dialog = 0x7f0c00bd;
         public static final int aliuser_transient_notification = 0x7f0c00c3;
 
-        private C2956layout() {
+        private layout() {
         }
     }
 
@@ -137,9 +134,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.ali.user.mobile.ext.tb.R$style */
     /* loaded from: classes17.dex */
-    public static final class C2957style {
+    public static final class style {
         public static final int AliUserDialogTheme = 0x7f120011;
         public static final int Aliuser_Theme_Permission_Transparent = 0x7f12001b;
         public static final int aliuser_text_24 = 0x7f1203ed;
@@ -152,7 +148,7 @@ public final class R {
         public static final int aliuser_text_white_32 = 0x7f1203f4;
         public static final int aliuser_text_white_42 = 0x7f1203f5;
 
-        private C2957style() {
+        private style() {
         }
     }
 

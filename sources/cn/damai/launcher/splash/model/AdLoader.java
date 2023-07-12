@@ -5,8 +5,8 @@ import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.wannasee.listener.OnBizListener;
 import cn.damai.launcher.splash.api.SplashResponse;
 import cn.damai.launcher.splash.model.bean.AdCacheResult;
@@ -44,17 +44,17 @@ public class AdLoader implements OnAdFetchListener {
         if (AndroidInstantRuntime.support(ipChange, "-83336992")) {
             ipChange.ipc$dispatch("-83336992", new Object[]{this, str, onBizListener});
         } else {
-            C0504a.b().c(str).n(new DMImageCreator.DMImageSuccListener() { // from class: cn.damai.launcher.splash.model.AdLoader.3
+            a.b().c(str).n(new DMImageCreator.DMImageSuccListener() { // from class: cn.damai.launcher.splash.model.AdLoader.3
                 private static transient /* synthetic */ IpChange $ipChange;
 
                 @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-                public void onSuccess(DMImageCreator.C0502e c0502e) {
+                public void onSuccess(DMImageCreator.e eVar) {
                     IpChange ipChange2 = $ipChange;
                     if (AndroidInstantRuntime.support(ipChange2, "1090795507")) {
-                        ipChange2.ipc$dispatch("1090795507", new Object[]{this, c0502e});
+                        ipChange2.ipc$dispatch("1090795507", new Object[]{this, eVar});
                         return;
                     }
-                    Drawable drawable = c0502e.a;
+                    Drawable drawable = eVar.a;
                     if (drawable != null) {
                         onBizListener.onBizSuccess(drawable);
                     } else {
@@ -65,14 +65,14 @@ public class AdLoader implements OnAdFetchListener {
                 private static transient /* synthetic */ IpChange $ipChange;
 
                 @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-                public void onFail(DMImageCreator.C0501d c0501d) {
+                public void onFail(DMImageCreator.d dVar) {
                     IpChange ipChange2 = $ipChange;
                     if (AndroidInstantRuntime.support(ipChange2, "1454630110")) {
-                        ipChange2.ipc$dispatch("1454630110", new Object[]{this, c0501d});
+                        ipChange2.ipc$dispatch("1454630110", new Object[]{this, dVar});
                         return;
                     }
                     OnBizListener onBizListener2 = onBizListener;
-                    onBizListener2.onBizFail(c0501d.a + "", "DMImageLoader.onFail");
+                    onBizListener2.onBizFail(dVar.a + "", "DMImageLoader.onFail");
                 }
             }).f();
         }

@@ -23,7 +23,7 @@ import org.jetbrains.annotations.Nullable;
 public final class xo2 extends Handler {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C9935b Companion = new C9935b(null);
+    public static final b Companion = new b(null);
     @Nullable
     private static WeakReference<Activity> d;
     @NotNull
@@ -33,12 +33,11 @@ public final class xo2 extends Handler {
     private boolean c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.xo2$a */
     /* loaded from: classes7.dex */
-    public static final class C9934a implements Application.ActivityLifecycleCallbacks {
+    public static final class a implements Application.ActivityLifecycleCallbacks {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9934a() {
+        a() {
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
@@ -113,7 +112,7 @@ public final class xo2 extends Handler {
                 return;
             }
             b41.i(activity, "activity");
-            C9935b c9935b = xo2.Companion;
+            b bVar = xo2.Companion;
             xo2.d = new WeakReference(activity);
         }
 
@@ -133,15 +132,14 @@ public final class xo2 extends Handler {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.xo2$b */
     /* loaded from: classes7.dex */
-    public static final class C9935b {
+    public static final class b {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9935b() {
+        private b() {
         }
 
-        public /* synthetic */ C9935b(k50 k50Var) {
+        public /* synthetic */ b(k50 k50Var) {
             this();
         }
 
@@ -168,11 +166,11 @@ public final class xo2 extends Handler {
             if (a() != null) {
                 Activity a = a();
                 b41.f(a);
-                Object systemService = a.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+                Object systemService = a.getSystemService(v.ATTACH_MODE_WINDOW);
                 b41.g(systemService, "null cannot be cast to non-null type android.view.WindowManager");
                 return (WindowManager) systemService;
             }
-            Object systemService2 = AppInfoProviderProxy.getApplication().getSystemService(C9796v.ATTACH_MODE_WINDOW);
+            Object systemService2 = AppInfoProviderProxy.getApplication().getSystemService(v.ATTACH_MODE_WINDOW);
             b41.g(systemService2, "null cannot be cast to non-null type android.view.WindowManager");
             return (WindowManager) systemService2;
         }
@@ -187,7 +185,7 @@ public final class xo2 extends Handler {
         String packageName = application.getPackageName();
         b41.h(packageName, "application.packageName");
         this.b = packageName;
-        application.registerActivityLifecycleCallbacks(new C9934a());
+        application.registerActivityLifecycleCallbacks(new a());
     }
 
     public final void c() {

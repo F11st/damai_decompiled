@@ -1,17 +1,17 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeSource;
 import io.reactivex.SingleObserver;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.fuseable.HasUpstreamMaybeSource;
 import java.util.NoSuchElementException;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeToSingle<T> extends AbstractC8152e<T> implements HasUpstreamMaybeSource<T> {
+public final class MaybeToSingle<T> extends e<T> implements HasUpstreamMaybeSource<T> {
     final T defaultValue;
     final MaybeSource<T> source;
 
@@ -80,7 +80,7 @@ public final class MaybeToSingle<T> extends AbstractC8152e<T> implements HasUpst
         return this.source;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super T> singleObserver) {
         this.source.subscribe(new ToSingleMaybeSubscriber(singleObserver, this.defaultValue));
     }

@@ -8,7 +8,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public final class l51 {
     @NotNull
-    public static final C9405a Companion = new C9405a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final l51 d = new l51(ReportLevel.STRICT, null, null, 6, null);
     @NotNull
@@ -19,13 +19,12 @@ public final class l51 {
     private final ReportLevel c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.l51$a */
     /* loaded from: classes3.dex */
-    public static final class C9405a {
-        private C9405a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9405a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

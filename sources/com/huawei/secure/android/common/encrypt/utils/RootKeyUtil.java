@@ -33,11 +33,11 @@ public class RootKeyUtil {
     @SuppressLint({"NewApi"})
     private void a(String str, String str2, String str3, byte[] bArr) {
         if (Build.VERSION.SDK_INT < 26) {
-            C5742b.c(b, "initRootKey: sha1");
+            b.c(b, "initRootKey: sha1");
             this.a = BaseKeyUtil.exportRootKey(str, str2, str3, bArr, false);
             return;
         }
-        C5742b.c(b, "initRootKey: sha256");
+        b.c(b, "initRootKey: sha256");
         this.a = BaseKeyUtil.exportRootKey(str, str2, str3, bArr, true);
     }
 

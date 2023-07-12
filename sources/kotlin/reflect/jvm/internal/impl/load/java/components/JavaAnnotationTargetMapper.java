@@ -5,12 +5,12 @@ import java.util.EnumSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import kotlin.collections.C8203e0;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8220r;
-import kotlin.collections.C8226x;
+import kotlin.collections.e0;
+import kotlin.collections.n;
+import kotlin.collections.r;
+import kotlin.collections.x;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
+import kotlin.reflect.jvm.internal.impl.builtins.c;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.KotlinRetention;
@@ -45,9 +45,9 @@ public final class JavaAnnotationTargetMapper {
     static {
         Map<String, EnumSet<KotlinTarget>> l;
         Map<String, KotlinRetention> l2;
-        l = C8226x.l(hq2.a("PACKAGE", EnumSet.noneOf(KotlinTarget.class)), hq2.a("TYPE", EnumSet.of(KotlinTarget.CLASS, KotlinTarget.FILE)), hq2.a("ANNOTATION_TYPE", EnumSet.of(KotlinTarget.ANNOTATION_CLASS)), hq2.a("TYPE_PARAMETER", EnumSet.of(KotlinTarget.TYPE_PARAMETER)), hq2.a("FIELD", EnumSet.of(KotlinTarget.FIELD)), hq2.a("LOCAL_VARIABLE", EnumSet.of(KotlinTarget.LOCAL_VARIABLE)), hq2.a("PARAMETER", EnumSet.of(KotlinTarget.VALUE_PARAMETER)), hq2.a("CONSTRUCTOR", EnumSet.of(KotlinTarget.CONSTRUCTOR)), hq2.a("METHOD", EnumSet.of(KotlinTarget.FUNCTION, KotlinTarget.PROPERTY_GETTER, KotlinTarget.PROPERTY_SETTER)), hq2.a("TYPE_USE", EnumSet.of(KotlinTarget.TYPE)));
+        l = x.l(hq2.a("PACKAGE", EnumSet.noneOf(KotlinTarget.class)), hq2.a("TYPE", EnumSet.of(KotlinTarget.CLASS, KotlinTarget.FILE)), hq2.a("ANNOTATION_TYPE", EnumSet.of(KotlinTarget.ANNOTATION_CLASS)), hq2.a("TYPE_PARAMETER", EnumSet.of(KotlinTarget.TYPE_PARAMETER)), hq2.a("FIELD", EnumSet.of(KotlinTarget.FIELD)), hq2.a("LOCAL_VARIABLE", EnumSet.of(KotlinTarget.LOCAL_VARIABLE)), hq2.a("PARAMETER", EnumSet.of(KotlinTarget.VALUE_PARAMETER)), hq2.a("CONSTRUCTOR", EnumSet.of(KotlinTarget.CONSTRUCTOR)), hq2.a("METHOD", EnumSet.of(KotlinTarget.FUNCTION, KotlinTarget.PROPERTY_GETTER, KotlinTarget.PROPERTY_SETTER)), hq2.a("TYPE_USE", EnumSet.of(KotlinTarget.TYPE)));
         a = l;
-        l2 = C8226x.l(hq2.a("RUNTIME", KotlinRetention.RUNTIME), hq2.a("CLASS", KotlinRetention.BINARY), hq2.a("SOURCE", KotlinRetention.SOURCE));
+        l2 = x.l(hq2.a("RUNTIME", KotlinRetention.RUNTIME), hq2.a("CLASS", KotlinRetention.BINARY), hq2.a("SOURCE", KotlinRetention.SOURCE));
         b = l2;
     }
 
@@ -66,7 +66,7 @@ public final class JavaAnnotationTargetMapper {
         if (kotlinRetention == null) {
             return null;
         }
-        hj m = hj.m(C8277c.C8278a.annotationRetention);
+        hj m = hj.m(c.a.annotationRetention);
         b41.h(m, "topLevel(StandardNames.F…ames.annotationRetention)");
         ni1 f = ni1.f(kotlinRetention.name());
         b41.h(f, "identifier(retention.name)");
@@ -78,7 +78,7 @@ public final class JavaAnnotationTargetMapper {
         Set<KotlinTarget> d;
         EnumSet<KotlinTarget> enumSet = a.get(str);
         if (enumSet == null) {
-            d = C8203e0.d();
+            d = e0.d();
             return d;
         }
         return enumSet;
@@ -98,12 +98,12 @@ public final class JavaAnnotationTargetMapper {
         for (JavaEnumValueAnnotationArgument javaEnumValueAnnotationArgument : arrayList) {
             JavaAnnotationTargetMapper javaAnnotationTargetMapper = INSTANCE;
             ni1 entryName = javaEnumValueAnnotationArgument.getEntryName();
-            C8220r.v(arrayList2, javaAnnotationTargetMapper.b(entryName == null ? null : entryName.b()));
+            r.v(arrayList2, javaAnnotationTargetMapper.b(entryName == null ? null : entryName.b()));
         }
-        q = C8215n.q(arrayList2, 10);
+        q = n.q(arrayList2, 10);
         ArrayList arrayList3 = new ArrayList(q);
         for (KotlinTarget kotlinTarget : arrayList2) {
-            hj m = hj.m(C8277c.C8278a.annotationTarget);
+            hj m = hj.m(c.a.annotationTarget);
             b41.h(m, "topLevel(StandardNames.FqNames.annotationTarget)");
             ni1 f = ni1.f(kotlinTarget.name());
             b41.h(f, "identifier(kotlinTarget.name)");
@@ -114,7 +114,7 @@ public final class JavaAnnotationTargetMapper {
             @NotNull
             public final z71 invoke(@NotNull ModuleDescriptor moduleDescriptor) {
                 b41.i(moduleDescriptor, "module");
-                ValueParameterDescriptor b2 = a70.b(z41.INSTANCE.d(), moduleDescriptor.getBuiltIns().o(C8277c.C8278a.target));
+                ValueParameterDescriptor b2 = a70.b(z41.INSTANCE.d(), moduleDescriptor.getBuiltIns().o(c.a.target));
                 z71 type = b2 == null ? null : b2.getType();
                 if (type == null) {
                     fd2 j = kf0.j("Error: AnnotationTarget[]");

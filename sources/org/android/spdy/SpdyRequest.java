@@ -4,7 +4,6 @@ import com.youku.live.livesdk.wkit.component.Constants;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
-import okhttp3.internal.http2.C8789a;
 import tb.jg1;
 import tb.r10;
 
@@ -94,11 +93,11 @@ public final class SpdyRequest {
     /* JADX INFO: Access modifiers changed from: package-private */
     public Map<String, String> getHeaders() {
         HashMap hashMap = new HashMap(5);
-        hashMap.put(C8789a.TARGET_PATH_UTF8, getPath());
-        hashMap.put(C8789a.TARGET_METHOD_UTF8, this.method);
+        hashMap.put(okhttp3.internal.http2.a.TARGET_PATH_UTF8, getPath());
+        hashMap.put(okhttp3.internal.http2.a.TARGET_METHOD_UTF8, this.method);
         hashMap.put(":version", "HTTP/1.1");
         hashMap.put(":host", this.url.getAuthority());
-        hashMap.put(C8789a.TARGET_SCHEME_UTF8, this.url.getProtocol());
+        hashMap.put(okhttp3.internal.http2.a.TARGET_SCHEME_UTF8, this.url.getProtocol());
         Map<String, String> map = this.extHead;
         if (map != null && map.size() > 0) {
             hashMap.putAll(this.extHead);

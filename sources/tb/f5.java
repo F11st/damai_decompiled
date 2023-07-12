@@ -22,12 +22,11 @@ public class f5 {
     private int e;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.f5$a */
     /* loaded from: classes11.dex */
-    class ViewTreeObserver$OnGlobalLayoutListenerC9126a implements ViewTreeObserver.OnGlobalLayoutListener {
+    class a implements ViewTreeObserver.OnGlobalLayoutListener {
         final /* synthetic */ Activity a;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC9126a(Activity activity) {
+        a(Activity activity) {
             this.a = activity;
         }
 
@@ -44,7 +43,7 @@ public class f5 {
         }
         View childAt = ((FrameLayout) activity.findViewById(16908290)).getChildAt(0);
         this.b = childAt;
-        childAt.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC9126a(activity));
+        childAt.getViewTreeObserver().addOnGlobalLayoutListener(new a(activity));
         this.d = (FrameLayout.LayoutParams) this.b.getLayoutParams();
     }
 

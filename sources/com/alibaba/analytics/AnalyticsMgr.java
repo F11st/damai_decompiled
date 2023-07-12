@@ -32,7 +32,7 @@ public class AnalyticsMgr {
     private static Application a;
     public static IAnalytics b;
     private static HandlerThread c;
-    public static HandlerC3105c d;
+    public static c d;
     public static volatile boolean g;
     private static final Object e = new Object();
     private static final Object f = new Object();
@@ -50,13 +50,13 @@ public class AnalyticsMgr {
     private static boolean s = false;
     private static Map<String, String> t = null;
     private static Map<String, String> u = null;
-    public static final List<C3104b> mRegisterList = Collections.synchronizedList(new ArrayList());
+    public static final List<b> mRegisterList = Collections.synchronizedList(new ArrayList());
     private static Map<String, String> v = new ConcurrentHashMap();
     private static boolean w = false;
     private static boolean x = false;
     private static String y = null;
     private static int z = 10;
-    private static ServiceConnection A = new ServiceConnectionC3103a();
+    private static ServiceConnection A = new a();
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
@@ -121,10 +121,9 @@ public class AnalyticsMgr {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.analytics.AnalyticsMgr$a */
     /* loaded from: classes15.dex */
-    static class ServiceConnectionC3103a implements ServiceConnection {
-        ServiceConnectionC3103a() {
+    static class a implements ServiceConnection {
+        a() {
         }
 
         @Override // android.content.ServiceConnection
@@ -151,9 +150,8 @@ public class AnalyticsMgr {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.analytics.AnalyticsMgr$b */
     /* loaded from: classes15.dex */
-    public static class C3104b {
+    public static class b {
         public String a;
         public String b;
         public MeasureSet c;
@@ -162,10 +160,9 @@ public class AnalyticsMgr {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.analytics.AnalyticsMgr$c */
     /* loaded from: classes15.dex */
-    public static class HandlerC3105c extends Handler {
-        public HandlerC3105c(Looper looper) {
+    public static class c extends Handler {
+        public c(Looper looper) {
             super(looper);
         }
 
@@ -333,9 +330,9 @@ public class AnalyticsMgr {
                         }
                         Thread.sleep(10L);
                     }
-                    HandlerC3105c handlerC3105c = new HandlerC3105c(looper);
-                    d = handlerC3105c;
-                    handlerC3105c.postAtFrontOfQueue(new UtDelayInitTask());
+                    c cVar = new c(looper);
+                    d = cVar;
+                    cVar.postAtFrontOfQueue(new UtDelayInitTask());
                     g = true;
                     Logger.f("AnalyticsMgr", "外面init完成");
                 }
@@ -395,13 +392,13 @@ public class AnalyticsMgr {
                 synchronized (mRegisterList) {
                     int i2 = 0;
                     while (true) {
-                        List<C3104b> list = mRegisterList;
+                        List<b> list = mRegisterList;
                         if (i2 >= list.size()) {
                             break;
                         }
-                        C3104b c3104b = list.get(i2);
-                        if (c3104b != null) {
-                            q(c3104b.a, c3104b.b, c3104b.c, c3104b.d, c3104b.e).run();
+                        b bVar = list.get(i2);
+                        if (bVar != null) {
+                            q(bVar.a, bVar.b, bVar.c, bVar.d, bVar.e).run();
                         }
                         i2++;
                     }

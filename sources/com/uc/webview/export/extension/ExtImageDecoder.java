@@ -50,7 +50,7 @@ public class ExtImageDecoder {
         }
         if (WebView.getCoreType() == 3 && SDKFactory.d != null) {
             try {
-                SDKFactory.d.invoke(105, new Object[]{extImageDecoderParam, new C7208a(imageDecoderListener), new C7209b(imageDecoderListener)});
+                SDKFactory.d.invoke(105, new Object[]{extImageDecoderParam, new a(imageDecoderListener), new b(imageDecoderListener)});
                 return;
             } catch (AbstractMethodError unused) {
                 return;

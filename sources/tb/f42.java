@@ -13,13 +13,12 @@ public final class f42 implements JavaSourceElementFactory {
     public static final f42 INSTANCE = new f42();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.f42$a */
     /* loaded from: classes3.dex */
-    public static final class C9125a implements JavaSourceElement {
+    public static final class a implements JavaSourceElement {
         @NotNull
         private final g02 a;
 
-        public C9125a(@NotNull g02 g02Var) {
+        public a(@NotNull g02 g02Var) {
             b41.i(g02Var, "javaElement");
             this.a = g02Var;
         }
@@ -41,7 +40,7 @@ public final class f42 implements JavaSourceElementFactory {
 
         @NotNull
         public String toString() {
-            return C9125a.class.getName() + ": " + getJavaElement();
+            return a.class.getName() + ": " + getJavaElement();
         }
     }
 
@@ -52,6 +51,6 @@ public final class f42 implements JavaSourceElementFactory {
     @NotNull
     public JavaSourceElement source(@NotNull JavaElement javaElement) {
         b41.i(javaElement, "javaElement");
-        return new C9125a((g02) javaElement);
+        return new a((g02) javaElement);
     }
 }

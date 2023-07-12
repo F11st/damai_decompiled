@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.nav.DMNav;
 import cn.damai.uikit.iconfont.DMIconFontTextView;
 import cn.damai.ultron.R$drawable;
@@ -43,16 +42,15 @@ public class eb0 {
     private Context i;
     private DmUltronChooseListenerImpl<String> j;
     HashMap<String, Integer> k = new HashMap<>();
-    View.OnClickListener l = new View$OnClickListenerC9090c();
+    View.OnClickListener l = new c();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.eb0$a */
     /* loaded from: classes9.dex */
-    public class View$OnClickListenerC9088a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DetailInfoVO a;
 
-        View$OnClickListenerC9088a(DetailInfoVO detailInfoVO) {
+        a(DetailInfoVO detailInfoVO) {
             this.a = detailInfoVO;
         }
 
@@ -68,13 +66,12 @@ public class eb0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.eb0$b */
     /* loaded from: classes9.dex */
-    public class View$OnClickListenerC9089b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DetailInfoVO a;
 
-        View$OnClickListenerC9089b(DetailInfoVO detailInfoVO) {
+        b(DetailInfoVO detailInfoVO) {
             this.a = detailInfoVO;
         }
 
@@ -90,12 +87,11 @@ public class eb0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.eb0$c */
     /* loaded from: classes9.dex */
-    public class View$OnClickListenerC9090c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9090c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -300,12 +296,12 @@ public class eb0 {
             if (!z) {
                 i = R$drawable.commonbusiness_help_gray_icon;
             }
-            C0504a.b().c(detailInfoVO.icon).i(i).c(i).g(imageView);
+            cn.damai.common.image.a.b().c(detailInfoVO.icon).i(i).c(i).g(imageView);
         } else {
             imageView.setVisibility(8);
         }
-        imageView.setOnClickListener(new View$OnClickListenerC9088a(detailInfoVO));
-        textView.setOnClickListener(new View$OnClickListenerC9089b(detailInfoVO));
+        imageView.setOnClickListener(new a(detailInfoVO));
+        textView.setOnClickListener(new b(detailInfoVO));
     }
 
     public void c() {

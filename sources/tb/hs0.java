@@ -5,8 +5,6 @@ import android.util.TypedValue;
 import com.alibaba.gaiax.GXRegisterCenter;
 import com.alibaba.gaiax.GXTemplateEngine;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.text.C8602m;
-import kotlin.text.C8604o;
 import kotlin.text.StringsKt__StringsKt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -16,28 +14,26 @@ import tb.k80;
 /* loaded from: classes6.dex */
 public abstract class hs0 {
     @NotNull
-    public static final C9228b Companion = new C9228b(null);
+    public static final b Companion = new b(null);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hs0$a */
     /* loaded from: classes6.dex */
-    public static final class C9227a extends hs0 {
+    public static final class a extends hs0 {
         @NotNull
-        public static final C9227a INSTANCE = new C9227a();
+        public static final a INSTANCE = new a();
 
-        private C9227a() {
+        private a() {
             super(null);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hs0$b */
     /* loaded from: classes6.dex */
-    public static final class C9228b {
-        private C9228b() {
+    public static final class b {
+        private b() {
         }
 
-        public /* synthetic */ C9228b(k50 k50Var) {
+        public /* synthetic */ b(k50 k50Var) {
             this();
         }
 
@@ -83,34 +79,34 @@ public abstract class hs0 {
             b41.i(str, "targetSize");
             M0 = StringsKt__StringsKt.M0(str);
             String obj = M0.toString();
-            p = C8604o.p(obj, "px", false, 2, null);
+            p = kotlin.text.o.p(obj, "px", false, 2, null);
             if (p) {
-                return new C9231e(obj, c(obj));
+                return new e(obj, c(obj));
             }
-            p2 = C8604o.p(obj, "pt", false, 2, null);
+            p2 = kotlin.text.o.p(obj, "pt", false, 2, null);
             if (p2) {
-                return new C9230d(obj, b(obj));
+                return new d(obj, b(obj));
             }
-            p3 = C8604o.p(obj, "%", false, 2, null);
+            p3 = kotlin.text.o.p(obj, "%", false, 2, null);
             if (p3) {
-                return new C9229c(obj, a(obj));
+                return new c(obj, a(obj));
             }
             if (b41.d(obj, "auto")) {
-                return C9227a.INSTANCE;
+                return a.INSTANCE;
             }
-            s = C8604o.s(obj);
+            s = kotlin.text.o.s(obj);
             if (!s) {
-                h = C8602m.h(obj);
+                h = kotlin.text.m.h(obj);
                 if (h == null) {
                     GXRegisterCenter.GXIExtensionSize p4 = GXRegisterCenter.Companion.a().p();
                     if (p4 == null || (create = p4.create(obj)) == null) {
-                        return C9232f.INSTANCE;
+                        return f.INSTANCE;
                     }
-                    return new C9231e(obj, create.floatValue());
+                    return new e(obj, create.floatValue());
                 }
-                return new C9231e(obj, hs0.Companion.e(h.floatValue()));
+                return new e(obj, hs0.Companion.e(h.floatValue()));
             }
-            return C9232f.INSTANCE;
+            return f.INSTANCE;
         }
 
         public final float e(float f) {
@@ -123,8 +119,8 @@ public abstract class hs0 {
             int b;
             Float convert;
             es0 es0Var = es0.INSTANCE;
-            GXTemplateEngine.C3337a c3337a = GXTemplateEngine.Companion;
-            float min = Math.min(es0Var.b(c3337a.a().g()), es0Var.a(c3337a.a().g())) / e(375.0f);
+            GXTemplateEngine.a aVar = GXTemplateEngine.Companion;
+            float min = Math.min(es0Var.b(aVar.a().g()), es0Var.a(aVar.a().g())) / e(375.0f);
             GXRegisterCenter.GXIExtensionSize p = GXRegisterCenter.Companion.a().p();
             if (p != null && (convert = p.convert(min)) != null) {
                 min = convert.floatValue();
@@ -135,15 +131,14 @@ public abstract class hs0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hs0$c */
     /* loaded from: classes6.dex */
-    public static final class C9229c extends hs0 {
+    public static final class c extends hs0 {
         @NotNull
         private final String a;
         private final float b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C9229c(@NotNull String str, float f) {
+        public c(@NotNull String str, float f) {
             super(null);
             b41.i(str, "targetName");
             this.a = str;
@@ -159,9 +154,9 @@ public abstract class hs0 {
             if (this == obj) {
                 return true;
             }
-            if (obj instanceof C9229c) {
-                C9229c c9229c = (C9229c) obj;
-                return b41.d(this.a, c9229c.a) && b41.d(Float.valueOf(this.b), Float.valueOf(c9229c.b));
+            if (obj instanceof c) {
+                c cVar = (c) obj;
+                return b41.d(this.a, cVar.a) && b41.d(Float.valueOf(this.b), Float.valueOf(cVar.b));
             }
             return false;
         }
@@ -181,15 +176,14 @@ public abstract class hs0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hs0$d */
     /* loaded from: classes6.dex */
-    public static final class C9230d extends hs0 {
+    public static final class d extends hs0 {
         @NotNull
         private final String a;
         private final float b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C9230d(@NotNull String str, float f) {
+        public d(@NotNull String str, float f) {
             super(null);
             b41.i(str, "targetName");
             this.a = str;
@@ -205,9 +199,9 @@ public abstract class hs0 {
             if (this == obj) {
                 return true;
             }
-            if (obj instanceof C9230d) {
-                C9230d c9230d = (C9230d) obj;
-                return b41.d(this.a, c9230d.a) && b41.d(Float.valueOf(this.b), Float.valueOf(c9230d.b));
+            if (obj instanceof d) {
+                d dVar = (d) obj;
+                return b41.d(this.a, dVar.a) && b41.d(Float.valueOf(this.b), Float.valueOf(dVar.b));
             }
             return false;
         }
@@ -227,15 +221,14 @@ public abstract class hs0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hs0$e */
     /* loaded from: classes6.dex */
-    public static final class C9231e extends hs0 {
+    public static final class e extends hs0 {
         @NotNull
         private final String a;
         private final float b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C9231e(@NotNull String str, float f) {
+        public e(@NotNull String str, float f) {
             super(null);
             b41.i(str, "targetName");
             this.a = str;
@@ -251,9 +244,9 @@ public abstract class hs0 {
             if (this == obj) {
                 return true;
             }
-            if (obj instanceof C9231e) {
-                C9231e c9231e = (C9231e) obj;
-                return b41.d(this.a, c9231e.a) && b41.d(Float.valueOf(this.b), Float.valueOf(c9231e.b));
+            if (obj instanceof e) {
+                e eVar = (e) obj;
+                return b41.d(this.a, eVar.a) && b41.d(Float.valueOf(this.b), Float.valueOf(eVar.b));
             }
             return false;
         }
@@ -273,13 +266,12 @@ public abstract class hs0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hs0$f */
     /* loaded from: classes6.dex */
-    public static final class C9232f extends hs0 {
+    public static final class f extends hs0 {
         @NotNull
-        public static final C9232f INSTANCE = new C9232f();
+        public static final f INSTANCE = new f();
 
-        private C9232f() {
+        private f() {
             super(null);
         }
     }
@@ -293,19 +285,19 @@ public abstract class hs0 {
 
     @NotNull
     public final String a() {
-        if (this instanceof C9231e) {
-            return ((C9231e) this).e();
+        if (this instanceof e) {
+            return ((e) this).e();
         }
-        if (this instanceof C9229c) {
-            return ((C9229c) this).e();
+        if (this instanceof c) {
+            return ((c) this).e();
         }
-        if (this instanceof C9230d) {
-            return ((C9230d) this).e();
+        if (this instanceof d) {
+            return ((d) this).e();
         }
-        if (this instanceof C9227a) {
+        if (this instanceof a) {
             return "Auto";
         }
-        if (this instanceof C9232f) {
+        if (this instanceof f) {
             return "Undefined";
         }
         throw new NoWhenBranchMatchedException();
@@ -313,48 +305,48 @@ public abstract class hs0 {
 
     @NotNull
     public final k80 b() {
-        if (this instanceof C9231e) {
-            return new k80.C9339c(((C9231e) this).f());
+        if (this instanceof e) {
+            return new k80.c(((e) this).f());
         }
-        if (this instanceof C9229c) {
-            return new k80.C9338b(((C9229c) this).f());
+        if (this instanceof c) {
+            return new k80.b(((c) this).f());
         }
-        if (this instanceof C9230d) {
-            return new k80.C9339c(Companion.f(((C9230d) this).f()));
+        if (this instanceof d) {
+            return new k80.c(Companion.f(((d) this).f()));
         }
-        if (this instanceof C9227a) {
-            return k80.C9337a.INSTANCE;
+        if (this instanceof a) {
+            return k80.a.INSTANCE;
         }
-        if (this instanceof C9232f) {
-            return k80.C9340d.INSTANCE;
+        if (this instanceof f) {
+            return k80.d.INSTANCE;
         }
         throw new NoWhenBranchMatchedException();
     }
 
     public final float c() {
-        if (this instanceof C9231e) {
-            return ((C9231e) this).f();
+        if (this instanceof e) {
+            return ((e) this).f();
         }
-        if (this instanceof C9229c) {
-            return ((C9229c) this).f();
+        if (this instanceof c) {
+            return ((c) this).f();
         }
-        if (this instanceof C9230d) {
-            return Companion.f(((C9230d) this).f());
+        if (this instanceof d) {
+            return Companion.f(((d) this).f());
         }
         return 0.0f;
     }
 
     public final int d() {
-        float f;
-        if (this instanceof C9231e) {
-            f = ((C9231e) this).f();
-        } else if (this instanceof C9229c) {
-            f = ((C9229c) this).f();
-        } else if (!(this instanceof C9230d)) {
+        float f2;
+        if (this instanceof e) {
+            f2 = ((e) this).f();
+        } else if (this instanceof c) {
+            f2 = ((c) this).f();
+        } else if (!(this instanceof d)) {
             return 0;
         } else {
-            f = Companion.f(((C9230d) this).f());
+            f2 = Companion.f(((d) this).f());
         }
-        return (int) f;
+        return (int) f2;
     }
 }

@@ -6,13 +6,13 @@ import java.util.concurrent.ScheduledFuture;
 /* loaded from: classes7.dex */
 public class TaskExecutor {
     private static TaskExecutor instance;
-    private static C6247a mHandler2Executor;
+    private static a mHandler2Executor;
 
     public static synchronized TaskExecutor getInstance() {
         TaskExecutor taskExecutor;
         synchronized (TaskExecutor.class) {
             if (instance == null) {
-                mHandler2Executor = new C6247a();
+                mHandler2Executor = new a();
                 instance = new TaskExecutor();
             }
             taskExecutor = instance;

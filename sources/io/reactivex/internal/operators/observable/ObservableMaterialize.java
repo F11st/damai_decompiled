@@ -60,7 +60,7 @@ public final class ObservableMaterialize<T> extends AbstractObservableWithUpstre
         super(observableSource);
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super ul1<T>> observer) {
         this.source.subscribe(new MaterializeObserver(observer));
     }

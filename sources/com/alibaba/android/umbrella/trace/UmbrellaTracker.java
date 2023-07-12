@@ -23,13 +23,12 @@ public class UmbrellaTracker {
     public static final String PURCHASE_POINT_PRE = "Monitor_";
     private static HashMap<String, Integer> identifyMap = new HashMap<>();
     private static int currIndex = 1;
-    private static Handler sHandler = new HandlerC3277a(Looper.getMainLooper());
+    private static Handler sHandler = new a(Looper.getMainLooper());
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.umbrella.trace.UmbrellaTracker$a */
     /* loaded from: classes15.dex */
-    static class HandlerC3277a extends Handler {
-        HandlerC3277a(Looper looper) {
+    static class a extends Handler {
+        a(Looper looper) {
             super(looper);
         }
 
@@ -95,14 +94,14 @@ public class UmbrellaTracker {
             return;
         }
         int messageIndex = getMessageIndex(getIdentify(str, str2, str3));
-        UmbrellaInfo.C3276b c3276b = new UmbrellaInfo.C3276b(str2, str3, str, str4, str5);
+        UmbrellaInfo.b bVar = new UmbrellaInfo.b(str2, str3, str, str4, str5);
         HashMap hashMap = new HashMap();
         hashMap.put("errorCode", str6);
         hashMap.put("errorMsg", str7);
-        c3276b.b(hashMap);
-        c3276b.c(str3).b(map);
+        bVar.b(hashMap);
+        bVar.c(str3).b(map);
         Message obtainMessage = sHandler.obtainMessage(messageIndex);
-        obtainMessage.obj = c3276b.a();
+        obtainMessage.obj = bVar.a();
         sHandler.removeMessages(messageIndex);
         sHandler.sendMessageDelayed(obtainMessage, j);
     }
@@ -118,17 +117,17 @@ public class UmbrellaTracker {
         if (kt2.B()) {
             return;
         }
-        UmbrellaInfo.C3276b c3276b = new UmbrellaInfo.C3276b(str2, str3, str, str4, str5);
-        c3276b.c(str3).b(map);
-        commitSuccessStability(c3276b.a());
+        UmbrellaInfo.b bVar = new UmbrellaInfo.b(str2, str3, str, str4, str5);
+        bVar.c(str3).b(map);
+        commitSuccessStability(bVar.a());
     }
 
     public static void commitFailureStability(String str, String str2, String str3, String str4, String str5, Map<String, String> map, String str6, String str7) {
         if (kt2.y()) {
             return;
         }
-        UmbrellaInfo.C3276b c3276b = new UmbrellaInfo.C3276b(str2, str3, str, str4, str5);
-        c3276b.c(str3).b(map);
-        commitFailureStability(c3276b.a(), str6, str7);
+        UmbrellaInfo.b bVar = new UmbrellaInfo.b(str2, str3, str, str4, str5);
+        bVar.c(str3).b(map);
+        commitFailureStability(bVar.a(), str6, str7);
     }
 }

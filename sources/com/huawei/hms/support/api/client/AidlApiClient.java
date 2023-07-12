@@ -1,6 +1,6 @@
 package com.huawei.hms.support.api.client;
 
-import com.huawei.hms.core.aidl.InterfaceC5551d;
+import com.huawei.hms.core.aidl.d;
 import java.util.List;
 
 /* compiled from: Taobao */
@@ -8,5 +8,5 @@ import java.util.List;
 public interface AidlApiClient extends ApiClient {
     List<String> getApiNameList();
 
-    InterfaceC5551d getService();
+    d getService();
 }

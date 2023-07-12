@@ -16,12 +16,11 @@ public class FollowCommentPresenter extends FollowCommentContract.Presenter {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.message.presenter.FollowCommentPresenter$a */
     /* loaded from: classes6.dex */
-    public class C1343a implements Action<String> {
+    public class a implements Action<String> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1343a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -37,12 +36,11 @@ public class FollowCommentPresenter extends FollowCommentContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.message.presenter.FollowCommentPresenter$b */
     /* loaded from: classes6.dex */
-    public class C1344b implements Action<String> {
+    public class b implements Action<String> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1344b() {
+        b() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -102,7 +100,7 @@ public class FollowCommentPresenter extends FollowCommentContract.Presenter {
         });
     }
 
-    @Override // cn.damai.common.app.base.AbstractC0470a
+    @Override // cn.damai.common.app.base.a
     public void onStart() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-2006036250")) {
@@ -110,7 +108,7 @@ public class FollowCommentPresenter extends FollowCommentContract.Presenter {
             return;
         }
         super.onStart();
-        this.mDMMessage.b("comment", new C1343a());
-        this.mDMMessage.b(StarFragment.KEY_FOLLOW, new C1344b());
+        this.mDMMessage.b("comment", new a());
+        this.mDMMessage.b(StarFragment.KEY_FOLLOW, new b());
     }
 }

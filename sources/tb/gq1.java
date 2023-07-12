@@ -3,8 +3,6 @@ package tb;
 import android.app.Activity;
 import android.text.TextUtils;
 import com.alibaba.poplayer.PopLayer;
-import com.alibaba.poplayer.trigger.AbstractC3683b;
-import com.alibaba.poplayer.trigger.C3685d;
 import com.alibaba.poplayer.trigger.Event;
 import com.alibaba.poplayer.trigger.page.PageConfigItem;
 import java.util.ArrayList;
@@ -12,20 +10,19 @@ import java.util.Iterator;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
-public class gq1 extends AbstractC3683b<Event, PageConfigItem, tp1> {
+public class gq1 extends com.alibaba.poplayer.trigger.b<Event, PageConfigItem, tp1> {
     public static final String PAGE_SCHEME = "poplayer://";
     public static final String TAG = "gq1";
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.gq1$a */
     /* loaded from: classes8.dex */
-    public static class C9183a {
+    public static class a {
         private static gq1 a = new gq1();
     }
 
     public static gq1 A() {
-        return C9183a.a;
+        return a.a;
     }
 
     private Event z(String str, String str2, String str3) {
@@ -54,7 +51,7 @@ public class gq1 extends AbstractC3683b<Event, PageConfigItem, tp1> {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.alibaba.poplayer.trigger.AbstractC3683b
+    @Override // com.alibaba.poplayer.trigger.b
     public void a(Event event) {
         if (TextUtils.isEmpty(event.attachActivityKeyCode) || !event.attachActivityKeyCode.equals(this.f)) {
             dt1.b("%s activeAccept Useless event,eventKeyCode:%s,curKeyCode:%s.", TAG, event.attachActivityKeyCode, this.f);
@@ -76,14 +73,14 @@ public class gq1 extends AbstractC3683b<Event, PageConfigItem, tp1> {
         this.b.c(event, g.b);
     }
 
-    @Override // com.alibaba.poplayer.trigger.AbstractC3683b
+    @Override // com.alibaba.poplayer.trigger.b
     protected void j() {
         this.a = new tp1(PopLayer.getReference().getConfigAdapter(2));
         this.c = new ArrayList();
-        this.b = new C3685d(this);
+        this.b = new com.alibaba.poplayer.trigger.d(this);
     }
 
-    @Override // com.alibaba.poplayer.trigger.AbstractC3683b
+    @Override // com.alibaba.poplayer.trigger.b
     public void n(Activity activity, String str) {
         this.b.b(-1);
         c(false, str, false);

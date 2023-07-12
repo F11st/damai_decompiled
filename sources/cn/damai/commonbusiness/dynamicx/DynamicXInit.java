@@ -4,21 +4,20 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 import cn.damai.common.AppConfig;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.dynamicx.customwidget.imageview.DMDXWebImageInterface;
 import cn.damai.commonbusiness.dynamicx.customwidget.imageview.DXDMImageViewWidgetNode;
 import cn.damai.commonbusiness.dynamicx.customwidget.scrollerlayout.DXDMScrollLayoutWidgetNode;
-import cn.damai.commonbusiness.dynamicx.customwidget.temp.C0676a;
 import cn.damai.commonbusiness.dynamicx.customwidget.temp.DXDMPicConvertViewWidgetNode;
+import cn.damai.commonbusiness.dynamicx.customwidget.temp.a;
 import cn.damai.uikit.view.RoundImageView;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.taobao.android.dinamicx.C6376f;
 import com.taobao.android.dinamicx.DinamicXEngine;
 import com.taobao.android.dinamicx.IDXEventHandler;
 import com.taobao.android.dinamicx.expression.parser.IDXDataParser;
+import com.taobao.android.dinamicx.f;
 import com.taobao.android.dinamicx.log.IDXRemoteDebugLog;
 import com.taobao.android.dinamicx.model.DXLongSparseArray;
 import com.taobao.android.dinamicx.monitor.IDXAppMonitor;
@@ -27,8 +26,7 @@ import com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode;
 import com.taobao.android.dinamicx.widget.IDXWebImageInterface;
 import com.taobao.weex.common.Constants;
 import java.io.Serializable;
-import tb.C8921ar;
-import tb.C9240hv;
+import tb.ar;
 import tb.br;
 import tb.cb1;
 import tb.cu;
@@ -40,6 +38,7 @@ import tb.fu;
 import tb.gu;
 import tb.gv;
 import tb.hu;
+import tb.hv;
 import tb.iu;
 import tb.iv;
 import tb.ju;
@@ -82,30 +81,29 @@ public class DynamicXInit {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.dynamicx.DynamicXInit$a */
     /* loaded from: classes4.dex */
-    public class C0652a implements DMDXWebImageInterface {
+    public class a implements DMDXWebImageInterface {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.commonbusiness.dynamicx.DynamicXInit$a$a */
+        /* renamed from: cn.damai.commonbusiness.dynamicx.DynamicXInit$a$a  reason: collision with other inner class name */
         /* loaded from: classes4.dex */
-        public class C0653a implements DMImageCreator.DMImageSuccListener {
+        public class C0033a implements DMImageCreator.DMImageSuccListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ ImageView a;
 
-            C0653a(C0652a c0652a, ImageView imageView) {
+            C0033a(a aVar, ImageView imageView) {
                 this.a = imageView;
             }
 
             @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-            public void onSuccess(DMImageCreator.C0502e c0502e) {
+            public void onSuccess(DMImageCreator.e eVar) {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "275876484")) {
-                    ipChange.ipc$dispatch("275876484", new Object[]{this, c0502e});
+                    ipChange.ipc$dispatch("275876484", new Object[]{this, eVar});
                     return;
                 }
-                Drawable drawable = c0502e.a;
+                Drawable drawable = eVar.a;
                 if (drawable != null) {
                     this.a.setImageDrawable(drawable);
                 }
@@ -113,23 +111,22 @@ public class DynamicXInit {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.commonbusiness.dynamicx.DynamicXInit$a$b */
         /* loaded from: classes4.dex */
-        public class C0654b implements DMImageCreator.DMImageFailListener {
+        public class b implements DMImageCreator.DMImageFailListener {
             private static transient /* synthetic */ IpChange $ipChange;
-            final /* synthetic */ DXDMImageViewWidgetNode.C0661c a;
+            final /* synthetic */ DXDMImageViewWidgetNode.c a;
             final /* synthetic */ ImageView b;
 
-            C0654b(C0652a c0652a, DXDMImageViewWidgetNode.C0661c c0661c, ImageView imageView) {
-                this.a = c0661c;
+            b(a aVar, DXDMImageViewWidgetNode.c cVar, ImageView imageView) {
+                this.a = cVar;
                 this.b = imageView;
             }
 
             @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-            public void onFail(DMImageCreator.C0501d c0501d) {
+            public void onFail(DMImageCreator.d dVar) {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "1105066289")) {
-                    ipChange.ipc$dispatch("1105066289", new Object[]{this, c0501d});
+                    ipChange.ipc$dispatch("1105066289", new Object[]{this, dVar});
                 } else if (this.a.k()) {
                     dr.b(this.b, this.a.b, new ImgStateRecord(true));
                 }
@@ -137,26 +134,25 @@ public class DynamicXInit {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.commonbusiness.dynamicx.DynamicXInit$a$c */
         /* loaded from: classes4.dex */
-        public class C0655c implements DMImageCreator.DMImageSuccListener {
+        public class c implements DMImageCreator.DMImageSuccListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ ImgStateRecord a;
             final /* synthetic */ ImageView b;
 
-            C0655c(C0652a c0652a, ImgStateRecord imgStateRecord, ImageView imageView) {
+            c(a aVar, ImgStateRecord imgStateRecord, ImageView imageView) {
                 this.a = imgStateRecord;
                 this.b = imageView;
             }
 
             @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-            public void onSuccess(DMImageCreator.C0502e c0502e) {
+            public void onSuccess(DMImageCreator.e eVar) {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "-940277242")) {
-                    ipChange.ipc$dispatch("-940277242", new Object[]{this, c0502e});
+                    ipChange.ipc$dispatch("-940277242", new Object[]{this, eVar});
                     return;
                 }
-                Drawable drawable = c0502e.a;
+                Drawable drawable = eVar.a;
                 if (drawable != null) {
                     this.a.isShouldUseDefault = false;
                     dr.a = true;
@@ -165,7 +161,7 @@ public class DynamicXInit {
             }
         }
 
-        C0652a() {
+        a() {
         }
 
         @Override // com.taobao.android.dinamicx.widget.IDXWebImageInterface
@@ -181,63 +177,63 @@ public class DynamicXInit {
         }
 
         @Override // com.taobao.android.dinamicx.widget.IDXWebImageInterface
-        public void setImage(ImageView imageView, String str, DXImageWidgetNode.C6440c c6440c) {
-            DMImageCreator c;
+        public void setImage(ImageView imageView, String str, DXImageWidgetNode.c cVar) {
+            DMImageCreator c2;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1957313351")) {
-                ipChange.ipc$dispatch("-1957313351", new Object[]{this, imageView, str, c6440c});
+                ipChange.ipc$dispatch("-1957313351", new Object[]{this, imageView, str, cVar});
                 return;
             }
             if (!wh2.j(str) && str.contains("?optParams=")) {
                 int[] f = DynamicXInit.f(str);
-                c = C0504a.b().f(DynamicXInit.g(str), f[0], f[1]);
+                c2 = cn.damai.common.image.a.b().f(DynamicXInit.g(str), f[0], f[1]);
             } else {
-                c = C0504a.b().c(str);
+                c2 = cn.damai.common.image.a.b().c(str);
             }
-            if (c6440c.m()) {
+            if (cVar.m()) {
                 imageView.setImageResource(R$drawable.uikit_default_image_bg_gradient);
             }
-            if (c6440c.l()) {
-                ((RoundImageView) imageView).setBorderRadius(t60.e(imageView.getContext(), c6440c.a[0]));
+            if (cVar.l()) {
+                ((RoundImageView) imageView).setBorderRadius(t60.e(imageView.getContext(), cVar.a[0]));
             }
-            c.n(new C0653a(this, imageView));
-            c.f();
+            c2.n(new C0033a(this, imageView));
+            c2.f();
         }
 
         @Override // cn.damai.commonbusiness.dynamicx.customwidget.imageview.DMDXWebImageInterface
-        public void setImageWithPlaceHolder(ImageView imageView, String str, DXDMImageViewWidgetNode.C0661c c0661c) {
-            DMImageCreator c;
+        public void setImageWithPlaceHolder(ImageView imageView, String str, DXDMImageViewWidgetNode.c cVar) {
+            DMImageCreator c2;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-670335442")) {
-                ipChange.ipc$dispatch("-670335442", new Object[]{this, imageView, str, c0661c});
+                ipChange.ipc$dispatch("-670335442", new Object[]{this, imageView, str, cVar});
                 return;
             }
             if (!wh2.j(str) && str.contains("?optParams=")) {
                 int[] f = DynamicXInit.f(str);
-                c = C0504a.b().f(DynamicXInit.g(str), f[0], f[1]);
+                c2 = cn.damai.common.image.a.b().f(DynamicXInit.g(str), f[0], f[1]);
             } else {
-                c = C0504a.b().c(str);
+                c2 = cn.damai.common.image.a.b().c(str);
             }
             ImgStateRecord imgStateRecord = new ImgStateRecord(true);
-            if (c0661c.k()) {
-                dr.b(imageView, c0661c.b, imgStateRecord);
+            if (cVar.k()) {
+                dr.b(imageView, cVar.b, imgStateRecord);
             }
-            if (c0661c.j()) {
-                int[] iArr = c0661c.a;
-                if (c0661c.i()) {
+            if (cVar.j()) {
+                int[] iArr = cVar.a;
+                if (cVar.i()) {
                     ((RoundImageView) imageView).setType(0);
                 } else {
                     ((RoundImageView) imageView).setBorderRadius(t60.e(imageView.getContext(), iArr[0]));
                 }
             }
-            c.n(new C0655c(this, imgStateRecord, imageView)).e(new C0654b(this, c0661c, imageView));
-            c.f();
+            c2.n(new c(this, imgStateRecord, imageView)).e(new b(this, cVar, imageView));
+            c2.f();
         }
     }
 
     public static IDXAppMonitor c() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-2009300106") ? (IDXAppMonitor) ipChange.ipc$dispatch("-2009300106", new Object[0]) : new C8921ar();
+        return AndroidInstantRuntime.support(ipChange, "-2009300106") ? (IDXAppMonitor) ipChange.ipc$dispatch("-2009300106", new Object[0]) : new ar();
     }
 
     public static DXLongSparseArray<IDXEventHandler> d() {
@@ -252,7 +248,7 @@ public class DynamicXInit {
 
     private static IDXWebImageInterface e() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1080750527") ? (IDXWebImageInterface) ipChange.ipc$dispatch("1080750527", new Object[0]) : new C0652a();
+        return AndroidInstantRuntime.support(ipChange, "1080750527") ? (IDXWebImageInterface) ipChange.ipc$dispatch("1080750527", new Object[0]) : new a();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -313,7 +309,7 @@ public class DynamicXInit {
         dXLongSparseArray.put(jv.DX_PARSER_DXDATAPARSERDMMERGE, new jv());
         dXLongSparseArray.put(mv.DX_PARSER_DMRANDOMEQUAL, new mv());
         dXLongSparseArray.put(kv.DX_PARSER_DMNUMBERFORMAT, new kv());
-        dXLongSparseArray.put(C9240hv.DX_PARSER_DMINDEX, new C9240hv());
+        dXLongSparseArray.put(hv.DX_PARSER_DMINDEX, new hv());
         dXLongSparseArray.put(nv.DX_PARSER_DMSUBARRAY, new nv());
         return dXLongSparseArray;
     }
@@ -329,19 +325,19 @@ public class DynamicXInit {
             return (DXLongSparseArray) ipChange.ipc$dispatch("906630299", new Object[0]);
         }
         DXLongSparseArray<IDXBuilderWidgetNode> dXLongSparseArray = new DXLongSparseArray<>();
-        dXLongSparseArray.put(gu.DX_DMFRAMELAYOUT, new gu.C9187a());
-        dXLongSparseArray.put(tu.DX_DMTEXTVIEW, new tu.C9734a());
-        dXLongSparseArray.put(iu.DX_DMHOMECARDTAGVIEW, new iu.C9284a());
-        dXLongSparseArray.put(du.DX_DMCOLORFRAMELAYOUT, new du.C9061a());
-        dXLongSparseArray.put(DXDMScrollLayoutWidgetNode.DX_DMSCROLLLAYOUT, new DXDMScrollLayoutWidgetNode.C0667a());
-        dXLongSparseArray.put(mu.DX_DMICONFONTVIEW, new mu.C9453a());
-        dXLongSparseArray.put(hu.DXDMGRADUALCOLORTEXTVIEW_DMGRADUALCOLORTEXTVIEW, new hu.C9238a());
-        dXLongSparseArray.put(ru.DX_DMTAPFRAMELAYOUT, new ru.C9666a());
-        dXLongSparseArray.put(DXDMImageViewWidgetNode.DX_DMIMAGEVIEW, new DXDMImageViewWidgetNode.C0660b());
-        dXLongSparseArray.put(fu.DX_DMDASHVIEW, new fu.C9147a());
-        dXLongSparseArray.put(ju.DXDMHOMEGRABTICKETNOTICEVIEW_DMHOMEGRABTICKETNOTICEVIEW, new ju.C9322a());
-        dXLongSparseArray.put(C0676a.DX_DMCOUNTDOWNVIEW, new C0676a.C0677a());
-        dXLongSparseArray.put(qu.DX_DMSELLTEXTVIEW, new qu.C9629a());
+        dXLongSparseArray.put(gu.DX_DMFRAMELAYOUT, new gu.a());
+        dXLongSparseArray.put(tu.DX_DMTEXTVIEW, new tu.a());
+        dXLongSparseArray.put(iu.DX_DMHOMECARDTAGVIEW, new iu.a());
+        dXLongSparseArray.put(du.DX_DMCOLORFRAMELAYOUT, new du.a());
+        dXLongSparseArray.put(DXDMScrollLayoutWidgetNode.DX_DMSCROLLLAYOUT, new DXDMScrollLayoutWidgetNode.a());
+        dXLongSparseArray.put(mu.DX_DMICONFONTVIEW, new mu.a());
+        dXLongSparseArray.put(hu.DXDMGRADUALCOLORTEXTVIEW_DMGRADUALCOLORTEXTVIEW, new hu.a());
+        dXLongSparseArray.put(ru.DX_DMTAPFRAMELAYOUT, new ru.a());
+        dXLongSparseArray.put(DXDMImageViewWidgetNode.DX_DMIMAGEVIEW, new DXDMImageViewWidgetNode.b());
+        dXLongSparseArray.put(fu.DX_DMDASHVIEW, new fu.a());
+        dXLongSparseArray.put(ju.DXDMHOMEGRABTICKETNOTICEVIEW_DMHOMEGRABTICKETNOTICEVIEW, new ju.a());
+        dXLongSparseArray.put(cn.damai.commonbusiness.dynamicx.customwidget.temp.a.DX_DMCOUNTDOWNVIEW, new a.C0034a());
+        dXLongSparseArray.put(qu.DX_DMSELLTEXTVIEW, new qu.a());
         dXLongSparseArray.put(ku.DXDMHOMEMARKETADVIEW_DMHOMEMARKETADVIEW, new ku());
         dXLongSparseArray.put(pu.DXDMSCALEANIMATIONVIEW_DMSCALEANIMATIONVIEW, new pu());
         dXLongSparseArray.put(ou.DXDMPROJECTSTATUSTAGVIEW_DMPROJECTSTATUSTAGVIEW, new ou());
@@ -359,14 +355,14 @@ public class DynamicXInit {
             ipChange.ipc$dispatch("-173634525", new Object[0]);
             return;
         }
-        C6376f.C6378b c6378b = new C6376f.C6378b();
-        c6378b.B(e());
-        c6378b.z(j());
-        c6378b.x(h());
-        c6378b.y(d());
-        c6378b.w(AppConfig.v());
-        c6378b.v(c());
-        c6378b.A(i());
-        DinamicXEngine.w(mu0.a(), c6378b.u());
+        f.b bVar = new f.b();
+        bVar.B(e());
+        bVar.z(j());
+        bVar.x(h());
+        bVar.y(d());
+        bVar.w(AppConfig.v());
+        bVar.v(c());
+        bVar.A(i());
+        DinamicXEngine.w(mu0.a(), bVar.u());
     }
 }

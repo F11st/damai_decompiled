@@ -12,9 +12,8 @@ import tb.b41;
 public interface GXIViewBindData {
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.view.GXIViewBindData$a */
     /* loaded from: classes6.dex */
-    public static final class C3361a {
+    public static final class a {
         public static void a(@NotNull GXIViewBindData gXIViewBindData) {
             b41.i(gXIViewBindData, "this");
         }

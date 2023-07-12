@@ -1,12 +1,12 @@
 package com.autonavi.amap.mapcore;
 
 import android.content.Context;
-import com.amap.api.mapcore.util.C4576hn;
+import com.amap.api.mapcore.util.hn;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class MsgProcessor {
-    private static C4576hn mDelegate = new C4576hn();
+    private static hn mDelegate = new hn();
 
     public static native int nativeInit(Context context);
 

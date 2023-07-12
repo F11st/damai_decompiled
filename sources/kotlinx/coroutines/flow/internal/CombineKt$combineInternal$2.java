@@ -3,7 +3,6 @@ package kotlinx.coroutines.flow.internal;
 import java.util.concurrent.atomic.AtomicInteger;
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function0;
@@ -84,7 +83,7 @@ public final class CombineKt$combineInternal$2 extends SuspendLambda implements 
         public final Object invokeSuspend(@NotNull Object obj) {
             Object d;
             AtomicInteger atomicInteger;
-            d = C8234b.d();
+            d = kotlin.coroutines.intrinsics.b.d();
             int i = this.label;
             try {
                 if (i == 0) {
@@ -106,12 +105,12 @@ public final class CombineKt$combineInternal$2 extends SuspendLambda implements 
                     i32.b(obj);
                 }
                 if (atomicInteger.decrementAndGet() == 0) {
-                    SendChannel.C8640a.a(this.$resultChannel, null, 1, null);
+                    SendChannel.a.a(this.$resultChannel, null, 1, null);
                 }
                 return wt2.INSTANCE;
             } finally {
                 if (this.$nonClosed.decrementAndGet() == 0) {
-                    SendChannel.C8640a.a(this.$resultChannel, null, 1, null);
+                    SendChannel.a.a(this.$resultChannel, null, 1, null);
                 }
             }
         }

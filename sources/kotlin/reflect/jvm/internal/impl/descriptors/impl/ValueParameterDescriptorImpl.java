@@ -3,9 +3,8 @@ package kotlin.reflect.jvm.internal.impl.descriptors.impl;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import kotlin.C8177b;
 import kotlin.Lazy;
-import kotlin.collections.C8215n;
+import kotlin.collections.n;
 import kotlin.jvm.JvmStatic;
 import kotlin.jvm.functions.Function0;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
@@ -29,9 +28,9 @@ import tb.z71;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public class ValueParameterDescriptorImpl extends AbstractC8320b implements ValueParameterDescriptor {
+public class ValueParameterDescriptorImpl extends b implements ValueParameterDescriptor {
     @NotNull
-    public static final C8315a Companion = new C8315a(null);
+    public static final a Companion = new a(null);
     private final int f;
     private final boolean g;
     private final boolean h;
@@ -57,7 +56,7 @@ public class ValueParameterDescriptorImpl extends AbstractC8320b implements Valu
             b41.i(z71Var, "outType");
             b41.i(sourceElement, "source");
             b41.i(function0, "destructuringVariables");
-            b = C8177b.b(function0);
+            b = kotlin.b.b(function0);
             this.l = b;
         }
 
@@ -97,13 +96,12 @@ public class ValueParameterDescriptorImpl extends AbstractC8320b implements Valu
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.impl.ValueParameterDescriptorImpl$a */
     /* loaded from: classes3.dex */
-    public static final class C8315a {
-        private C8315a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8315a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -205,7 +203,7 @@ public class ValueParameterDescriptorImpl extends AbstractC8320b implements Valu
         int q;
         Collection<? extends CallableDescriptor> overriddenDescriptors = getContainingDeclaration().getOverriddenDescriptors();
         b41.h(overriddenDescriptors, "containingDeclaration.overriddenDescriptors");
-        q = C8215n.q(overriddenDescriptors, 10);
+        q = n.q(overriddenDescriptors, 10);
         ArrayList arrayList = new ArrayList(q);
         for (CallableDescriptor callableDescriptor : overriddenDescriptors) {
             arrayList.add(callableDescriptor.getValueParameters().get(getIndex()));
@@ -234,7 +232,7 @@ public class ValueParameterDescriptorImpl extends AbstractC8320b implements Valu
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.VariableDescriptor
     public boolean isLateInit() {
-        return ValueParameterDescriptor.C8299a.a(this);
+        return ValueParameterDescriptor.a.a(this);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor

@@ -13,9 +13,8 @@ import org.jetbrains.annotations.Nullable;
 public interface IAbilityEnv {
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.ability.env.IAbilityEnv$a */
     /* loaded from: classes9.dex */
-    public static final class C3001a {
+    public static final class a {
         @Nullable
         public static Context a(@NotNull IAbilityEnv iAbilityEnv) {
             WeakReference<Context> contextRef = iAbilityEnv.getContextRef();

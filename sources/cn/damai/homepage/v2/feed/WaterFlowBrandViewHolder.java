@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.blur.ImageBlurHelper;
 import cn.damai.common.nav.DMNav;
@@ -50,12 +49,11 @@ public class WaterFlowBrandViewHolder extends BaseViewHolder<WaterFlowRecommendI
     private TextView mVenueName;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.feed.WaterFlowBrandViewHolder$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1256a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1256a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -75,19 +73,18 @@ public class WaterFlowBrandViewHolder extends BaseViewHolder<WaterFlowRecommendI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.feed.WaterFlowBrandViewHolder$b */
     /* loaded from: classes5.dex */
-    public class C1257b implements DMImageCreator.DMImageFailListener {
+    public class b implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1257b() {
+        b() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1555225949")) {
-                ipChange.ipc$dispatch("1555225949", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("1555225949", new Object[]{this, dVar});
                 return;
             }
             WaterFlowBrandViewHolder.this.mVenueBgImage.setImageResource(R$drawable.homepage_waterflow_venues_default_bg);
@@ -96,19 +93,17 @@ public class WaterFlowBrandViewHolder extends BaseViewHolder<WaterFlowRecommendI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.feed.WaterFlowBrandViewHolder$c */
     /* loaded from: classes5.dex */
-    public class C1258c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ WaterFlowRecommendItem a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.homepage.v2.feed.WaterFlowBrandViewHolder$c$a */
         /* loaded from: classes5.dex */
-        public class C1259a implements DMRGBUtil.OnFetchColorListener {
+        public class a implements DMRGBUtil.OnFetchColorListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1259a() {
+            a() {
             }
 
             @Override // cn.damai.commonbusiness.util.DMRGBUtil.OnFetchColorListener
@@ -123,12 +118,11 @@ public class WaterFlowBrandViewHolder extends BaseViewHolder<WaterFlowRecommendI
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.homepage.v2.feed.WaterFlowBrandViewHolder$c$b */
         /* loaded from: classes5.dex */
-        public class C1260b implements ImageBlurHelper.BlurImageCallback {
+        public class b implements ImageBlurHelper.BlurImageCallback {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1260b() {
+            b() {
             }
 
             @Override // cn.damai.common.image.blur.ImageBlurHelper.BlurImageCallback
@@ -142,29 +136,29 @@ public class WaterFlowBrandViewHolder extends BaseViewHolder<WaterFlowRecommendI
             }
         }
 
-        C1258c(WaterFlowRecommendItem waterFlowRecommendItem) {
+        c(WaterFlowRecommendItem waterFlowRecommendItem) {
             this.a = waterFlowRecommendItem;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1742695118")) {
-                ipChange.ipc$dispatch("-1742695118", new Object[]{this, c0502e});
-            } else if (c0502e == null || (bitmap = c0502e.b) == null) {
+                ipChange.ipc$dispatch("-1742695118", new Object[]{this, eVar});
+            } else if (eVar == null || (bitmap = eVar.b) == null) {
                 WaterFlowBrandViewHolder.this.mVenueBgImage.setImageResource(R$drawable.homepage_waterflow_venues_default_bg);
                 WaterFlowBrandViewHolder.this.mVenueBgShade.setImageResource(R$drawable.homepage_waterflow_venues_default_shade);
             } else {
-                DMRGBUtil.g(0.7f, bitmap, this.a.backgroundPic, new C1259a());
-                b21.c(WaterFlowBrandViewHolder.this.mContext, this.a.backgroundPic, c0502e.b, new C1260b());
+                DMRGBUtil.g(0.7f, bitmap, this.a.backgroundPic, new a());
+                b21.c(WaterFlowBrandViewHolder.this.mContext, this.a.backgroundPic, eVar.b, new b());
             }
         }
     }
 
     public WaterFlowBrandViewHolder(View view) {
         super(view);
-        this.mOnClickListener = new View$OnClickListenerC1256a();
+        this.mOnClickListener = new a();
         this.mContext = view.getContext();
         this.mVenueBgImage = (ImageView) this.itemView.findViewById(R$id.homepage_waterflow_venues_image);
         this.mVenueBgShade = (ImageView) this.itemView.findViewById(R$id.homepage_waterflow_venues_shade);
@@ -188,9 +182,9 @@ public class WaterFlowBrandViewHolder extends BaseViewHolder<WaterFlowRecommendI
             ipChange.ipc$dispatch("-2136904435", new Object[]{this, iItem});
             return;
         }
-        int a = gi0.INSTANCE.a(this.itemView.getContext());
-        this.imageViewWidth = a;
-        int i = (int) (((a * UCNetworkDelegate.CHANGE_WEBVIEW_URL) * 1.0f) / 168.0f);
+        int a2 = gi0.INSTANCE.a(this.itemView.getContext());
+        this.imageViewWidth = a2;
+        int i = (int) (((a2 * UCNetworkDelegate.CHANGE_WEBVIEW_URL) * 1.0f) / 168.0f);
         this.imageViewHeight = i;
         this.itemView.setLayoutParams(new ViewGroup.LayoutParams(-1, i + t60.a(this.mContext, 12.0f)));
         handleView(getValue());
@@ -202,8 +196,8 @@ public class WaterFlowBrandViewHolder extends BaseViewHolder<WaterFlowRecommendI
             ipChange.ipc$dispatch("1346834047", new Object[]{this, waterFlowRecommendItem});
         } else if (waterFlowRecommendItem == null) {
         } else {
-            C0504a.b().f(waterFlowRecommendItem.backgroundPic, this.imageViewWidth, this.imageViewHeight).n(new C1258c(waterFlowRecommendItem)).e(new C1257b()).f();
-            DMImageCreator f = C0504a.b().f(waterFlowRecommendItem.pic, t60.a(this.mContext, 50.0f), t60.a(this.mContext, 50.0f));
+            cn.damai.common.image.a.b().f(waterFlowRecommendItem.backgroundPic, this.imageViewWidth, this.imageViewHeight).n(new c(waterFlowRecommendItem)).e(new b()).f();
+            DMImageCreator f = cn.damai.common.image.a.b().f(waterFlowRecommendItem.pic, t60.a(this.mContext, 50.0f), t60.a(this.mContext, 50.0f));
             int i = R$drawable.uikit_user_default_icon_trans_white;
             f.i(i).c(i).g(this.mVenueHeaderIcon);
             this.mVenueName.setText(waterFlowRecommendItem.title);

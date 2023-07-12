@@ -1,8 +1,6 @@
 package com.xiaomi.push.service;
 
 import android.content.Context;
-import com.xiaomi.push.C7675im;
-import com.xiaomi.push.C7677io;
 import com.xiaomi.push.Cif;
 import com.xiaomi.push.hj;
 import com.xiaomi.push.hz;
@@ -11,6 +9,8 @@ import com.xiaomi.push.ie;
 import com.xiaomi.push.ii;
 import com.xiaomi.push.ik;
 import com.xiaomi.push.il;
+import com.xiaomi.push.im;
+import com.xiaomi.push.io;
 import com.xiaomi.push.iq;
 import com.xiaomi.push.is;
 import com.xiaomi.push.it;
@@ -38,11 +38,11 @@ public class ce {
             case 2:
                 return new iq();
             case 3:
-                return new C7677io();
+                return new io();
             case 4:
                 return new is();
             case 5:
-                return new C7675im();
+                return new im();
             case 6:
                 return new hz();
             case 7:

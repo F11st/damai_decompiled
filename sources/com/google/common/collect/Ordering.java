@@ -40,13 +40,12 @@ public abstract class Ordering<T> implements Comparator<T> {
 
     /* compiled from: Taobao */
     @VisibleForTesting
-    /* renamed from: com.google.common.collect.Ordering$a */
     /* loaded from: classes10.dex */
-    static class C5089a extends Ordering<Object> {
+    static class a extends Ordering<Object> {
         private final AtomicInteger a = new AtomicInteger(0);
-        private final ConcurrentMap<Object, Integer> b = C5172e0.i(new MapMaker()).i();
+        private final ConcurrentMap<Object, Integer> b = e0.i(new MapMaker()).i();
 
-        C5089a() {
+        a() {
         }
 
         private Integer a(Object obj) {
@@ -92,10 +91,9 @@ public abstract class Ordering<T> implements Comparator<T> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Ordering$b */
     /* loaded from: classes10.dex */
-    private static class C5090b {
-        static final Ordering<Object> a = new C5089a();
+    private static class b {
+        static final Ordering<Object> a = new a();
     }
 
     @GwtCompatible(serializable = true)
@@ -104,7 +102,7 @@ public abstract class Ordering<T> implements Comparator<T> {
     }
 
     public static Ordering<Object> arbitrary() {
-        return C5090b.a;
+        return b.a;
     }
 
     @GwtCompatible(serializable = true)
@@ -243,7 +241,7 @@ public abstract class Ordering<T> implements Comparator<T> {
     }
 
     public <E extends T> List<E> sortedCopy(Iterable<E> iterable) {
-        Object[] k = C5152a0.k(iterable);
+        Object[] k = a0.k(iterable);
         Arrays.sort(k, this);
         return Lists.j(Arrays.asList(k));
     }
@@ -304,7 +302,7 @@ public abstract class Ordering<T> implements Comparator<T> {
 
     public <E extends T> List<E> leastOf(Iterator<E> it, int i) {
         du1.p(it);
-        C5191k.b(i, "k");
+        k.b(i, "k");
         if (i == 0 || !it.hasNext()) {
             return Collections.emptyList();
         }
@@ -317,8 +315,8 @@ public abstract class Ordering<T> implements Comparator<T> {
             k.trimToSize();
             return Collections.unmodifiableList(k);
         }
-        C5188i0 a = C5188i0.a(i, this);
-        a.c(it);
-        return a.f();
+        i0 a2 = i0.a(i, this);
+        a2.c(it);
+        return a2.f();
     }
 }

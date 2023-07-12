@@ -6,8 +6,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DXRuntimeContext;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
 import java.util.ArrayList;
@@ -43,18 +43,18 @@ public class DXNativeLinearLayout extends LinearLayout {
             if (!(tag instanceof DXWidgetNode) || (dXRuntimeContext = ((DXWidgetNode) tag).getDXRuntimeContext()) == null) {
                 return;
             }
-            C6368e c6368e = new C6368e(dXRuntimeContext.getBizType());
-            C6368e.C6369a c6369a = new C6368e.C6369a("native", "native_crash", C6368e.DX_NATIVE_CRASH_4);
-            if (c6368e.c == null) {
-                c6368e.c = new ArrayList();
+            e eVar = new e(dXRuntimeContext.getBizType());
+            e.a aVar = new e.a("native", "native_crash", e.DX_NATIVE_CRASH_4);
+            if (eVar.c == null) {
+                eVar.c = new ArrayList();
             }
-            c6368e.c.add(c6369a);
-            c6369a.e = ry.a(th);
-            c6368e.b = dXRuntimeContext.getDxTemplateItem();
+            eVar.c.add(aVar);
+            aVar.e = ry.a(th);
+            eVar.b = dXRuntimeContext.getDxTemplateItem();
             if (dXRuntimeContext.getDxError() != null) {
-                c6368e.b(dXRuntimeContext.getDxError().a());
+                eVar.b(dXRuntimeContext.getDxError().a());
             }
-            DXAppMonitor.n(c6368e);
+            DXAppMonitor.n(eVar);
         }
     }
 

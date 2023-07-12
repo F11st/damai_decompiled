@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.alipay.sdk.m.x.C4337a;
+import com.alipay.sdk.m.x.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -50,7 +50,7 @@ public class WebWaitingView extends RelativeLayout {
         layoutParams2.topMargin = ((int) f2) + 10;
         addView(progressBar, layoutParams2);
         TextView textView = new TextView(context);
-        textView.setText(EnvUtil.isCN() ? C4337a.i : "Loading");
+        textView.setText(EnvUtil.isCN() ? a.i : "Loading");
         textView.setTextColor(-1);
         RelativeLayout.LayoutParams layoutParams3 = new RelativeLayout.LayoutParams(-2, -2);
         layoutParams3.addRule(14);

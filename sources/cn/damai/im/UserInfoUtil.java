@@ -35,16 +35,15 @@ public class UserInfoUtil {
     /* loaded from: classes14.dex */
     public static class PersonalInfoResult implements Parcelable {
         private static transient /* synthetic */ IpChange $ipChange;
-        public static final Parcelable.Creator<PersonalInfoResult> CREATOR = new C1276a();
+        public static final Parcelable.Creator<PersonalInfoResult> CREATOR = new a();
         private String result;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.im.UserInfoUtil$PersonalInfoResult$a */
         /* loaded from: classes14.dex */
-        public class C1276a implements Parcelable.Creator<PersonalInfoResult> {
+        public class a implements Parcelable.Creator<PersonalInfoResult> {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1276a() {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator

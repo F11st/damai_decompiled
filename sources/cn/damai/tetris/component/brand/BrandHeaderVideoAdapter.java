@@ -51,16 +51,15 @@ public class BrandHeaderVideoAdapter extends PagerAdapter {
     private HashMap<Integer, WeakReference<View>> b = new HashMap<>();
     private int g = 0;
     ArrayList<VideoInfo> i = new ArrayList<>();
-    private OnPlayerUTReportListener j = new C1781b();
+    private OnPlayerUTReportListener j = new b();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.brand.BrandHeaderVideoAdapter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1780a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ProjectDO a;
 
-        View$OnClickListenerC1780a(ProjectDO projectDO) {
+        a(ProjectDO projectDO) {
             this.a = projectDO;
         }
 
@@ -80,12 +79,11 @@ public class BrandHeaderVideoAdapter extends PagerAdapter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.brand.BrandHeaderVideoAdapter$b */
     /* loaded from: classes7.dex */
-    public class C1781b implements OnPlayerUTReportListener {
+    public class b implements OnPlayerUTReportListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1781b() {
+        b() {
         }
 
         @Override // cn.damai.player.listener.OnPlayerUTReportListener
@@ -335,7 +333,7 @@ public class BrandHeaderVideoAdapter extends PagerAdapter {
                     textView.setVisibility(0);
                     inflate.findViewById(cn.damai.commonbusiness.R$id.brand_header_videotitle_arrow).setVisibility(0);
                     textView.setText(projectDO.getName());
-                    textView.setOnClickListener(new View$OnClickListenerC1780a(projectDO));
+                    textView.setOnClickListener(new a(projectDO));
                 } else {
                     textView.setVisibility(8);
                     inflate.findViewById(cn.damai.commonbusiness.R$id.brand_header_videotitle_arrow).setVisibility(8);

@@ -26,9 +26,9 @@ import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import tb.C9548pb;
 import tb.f91;
 import tb.l62;
+import tb.pb;
 import tb.ys;
 
 /* compiled from: Taobao */
@@ -50,13 +50,12 @@ public class HeaderView extends AbsView<HeaderContract$Presenter> implements Hea
     private DMVideoPlayer mVideoPlayerView;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.live.mvp.HeaderView$a */
     /* loaded from: classes7.dex */
-    public class C1918a implements OnBannerListener {
+    public class a implements OnBannerListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ LiveHeaderPicBean a;
 
-        C1918a(LiveHeaderPicBean liveHeaderPicBean) {
+        a(LiveHeaderPicBean liveHeaderPicBean) {
             this.a = liveHeaderPicBean;
         }
 
@@ -72,13 +71,12 @@ public class HeaderView extends AbsView<HeaderContract$Presenter> implements Hea
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.live.mvp.HeaderView$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1919b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ LiveHeaderPicBean a;
 
-        View$OnClickListenerC1919b(LiveHeaderPicBean liveHeaderPicBean) {
+        b(LiveHeaderPicBean liveHeaderPicBean) {
             this.a = liveHeaderPicBean;
         }
 
@@ -94,13 +92,12 @@ public class HeaderView extends AbsView<HeaderContract$Presenter> implements Hea
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.live.mvp.HeaderView$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1920c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ LiveHeaderPicBean a;
 
-        View$OnClickListenerC1920c(LiveHeaderPicBean liveHeaderPicBean) {
+        c(LiveHeaderPicBean liveHeaderPicBean) {
             this.a = liveHeaderPicBean;
         }
 
@@ -116,12 +113,11 @@ public class HeaderView extends AbsView<HeaderContract$Presenter> implements Hea
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.live.mvp.HeaderView$d */
     /* loaded from: classes16.dex */
-    public class View$OnAttachStateChangeListenerC1921d implements View.OnAttachStateChangeListener {
+    public class d implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC1921d() {
+        d() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -183,7 +179,7 @@ public class HeaderView extends AbsView<HeaderContract$Presenter> implements Hea
         this.mBannerView.isAutoPlay(true);
         this.mBannerView.setIndicatorGravity(5);
         this.mBannerView.start();
-        this.mBannerView.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC1921d());
+        this.mBannerView.addOnAttachStateChangeListener(new d());
     }
 
     private Drawable newLinearGDrawable() {
@@ -211,7 +207,7 @@ public class HeaderView extends AbsView<HeaderContract$Presenter> implements Hea
                 this.mVideoPlayerView.setVisibility(8);
                 this.mBannerView.setVisibility(0);
                 this.mBannerView.update(Arrays.asList(strArr));
-                this.mBannerView.setOnBannerListener(new C1918a(liveHeaderPicBean));
+                this.mBannerView.setOnBannerListener(new a(liveHeaderPicBean));
             } else {
                 VideoInfo videoInfo = liveHeaderPicBean.videoInfo;
                 if (videoInfo != null && !TextUtils.isEmpty(videoInfo.url) && !TextUtils.isEmpty(liveHeaderPicBean.videoInfo.coverUrl)) {
@@ -224,9 +220,9 @@ public class HeaderView extends AbsView<HeaderContract$Presenter> implements Hea
                     this.mVideoPlayerView.setVideoData(videoInfo2);
                     this.mVideoPlayerView.mute(0);
                     this.mDMVideoPlayerManager.a();
-                    this.mVideoPlayerView.setOnClickListener(new View$OnClickListenerC1919b(liveHeaderPicBean));
+                    this.mVideoPlayerView.setOnClickListener(new b(liveHeaderPicBean));
                 } else {
-                    getView().setOnClickListener(new View$OnClickListenerC1920c(liveHeaderPicBean));
+                    getView().setOnClickListener(new c(liveHeaderPicBean));
                 }
             }
             if (getPresenter() != null) {
@@ -236,8 +232,8 @@ public class HeaderView extends AbsView<HeaderContract$Presenter> implements Hea
                     hashMap.put("city", headerPresenter.mTrackInfo.get("city") + "");
                     hashMap.put("contentlabel", liveHeaderPicBean.themeName);
                     hashMap.put("usercode", headerPresenter.mTrackInfo.get("usercode") + "");
-                    hashMap.put(C9548pb.PRE_CONTENT_ID, liveHeaderPicBean.themeId);
-                    hashMap.put(C9548pb.PRE_CONTENT_TYPE, "theme");
+                    hashMap.put(pb.PRE_CONTENT_ID, liveHeaderPicBean.themeId);
+                    hashMap.put(pb.PRE_CONTENT_TYPE, "theme");
                     TrackType trackType = TrackType.expose;
                     SendYouToTheSkyView sendYouToTheSkyView = this.mSkyView;
                     TrackInfo trackInfo = headerPresenter.mTrackInfo;

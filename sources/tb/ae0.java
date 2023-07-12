@@ -5,14 +5,13 @@ package tb;
 public class ae0 extends yd0 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ae0$b */
     /* loaded from: classes11.dex */
-    private static class C8908b {
+    private static class b {
         private static ae0 a = new ae0();
     }
 
     public static ae0 INSTANCE() {
-        return C8908b.a;
+        return b.a;
     }
 
     @Override // tb.be0

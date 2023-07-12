@@ -36,10 +36,9 @@ public final class CompositeException extends RuntimeException {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: io.reactivex.exceptions.CompositeException$a */
     /* loaded from: classes3.dex */
-    public static abstract class AbstractC8153a {
-        AbstractC8153a() {
+    public static abstract class a {
+        a() {
         }
 
         abstract void a(Object obj);
@@ -47,32 +46,30 @@ public final class CompositeException extends RuntimeException {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: io.reactivex.exceptions.CompositeException$b */
     /* loaded from: classes3.dex */
-    public static final class C8154b extends AbstractC8153a {
+    public static final class b extends a {
         private final PrintStream a;
 
-        C8154b(PrintStream printStream) {
+        b(PrintStream printStream) {
             this.a = printStream;
         }
 
-        @Override // io.reactivex.exceptions.CompositeException.AbstractC8153a
+        @Override // io.reactivex.exceptions.CompositeException.a
         void a(Object obj) {
             this.a.println(obj);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: io.reactivex.exceptions.CompositeException$c */
     /* loaded from: classes3.dex */
-    static final class C8155c extends AbstractC8153a {
+    static final class c extends a {
         private final PrintWriter a;
 
-        C8155c(PrintWriter printWriter) {
+        c(PrintWriter printWriter) {
             this.a = printWriter;
         }
 
-        @Override // io.reactivex.exceptions.CompositeException.AbstractC8153a
+        @Override // io.reactivex.exceptions.CompositeException.a
         void a(Object obj) {
             this.a.println(obj);
         }
@@ -182,12 +179,12 @@ public final class CompositeException extends RuntimeException {
 
     @Override // java.lang.Throwable
     public void printStackTrace(PrintStream printStream) {
-        printStackTrace(new C8154b(printStream));
+        printStackTrace(new b(printStream));
     }
 
     @Override // java.lang.Throwable
     public void printStackTrace(PrintWriter printWriter) {
-        printStackTrace(new C8155c(printWriter));
+        printStackTrace(new c(printWriter));
     }
 
     public CompositeException(@NonNull Iterable<? extends Throwable> iterable) {
@@ -216,7 +213,7 @@ public final class CompositeException extends RuntimeException {
         throw new IllegalArgumentException("errors is empty");
     }
 
-    private void printStackTrace(AbstractC8153a abstractC8153a) {
+    private void printStackTrace(a aVar) {
         StackTraceElement[] stackTrace;
         StringBuilder sb = new StringBuilder(128);
         sb.append(this);
@@ -234,6 +231,6 @@ public final class CompositeException extends RuntimeException {
             appendStackTrace(sb, th, "\t");
             i++;
         }
-        abstractC8153a.a(sb.toString());
+        aVar.a(sb.toString());
     }
 }

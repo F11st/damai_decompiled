@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeSource;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.fuseable.SimplePlainQueue;
@@ -127,7 +127,7 @@ public final class ObservableMergeWithMaybe<T> extends AbstractObservableWithUps
         SimplePlainQueue<T> getOrCreateQueue() {
             SimplePlainQueue<T> simplePlainQueue = this.queue;
             if (simplePlainQueue == null) {
-                SpscLinkedArrayQueue spscLinkedArrayQueue = new SpscLinkedArrayQueue(AbstractC8149d.bufferSize());
+                SpscLinkedArrayQueue spscLinkedArrayQueue = new SpscLinkedArrayQueue(d.bufferSize());
                 this.queue = spscLinkedArrayQueue;
                 return spscLinkedArrayQueue;
             }
@@ -205,12 +205,12 @@ public final class ObservableMergeWithMaybe<T> extends AbstractObservableWithUps
         }
     }
 
-    public ObservableMergeWithMaybe(AbstractC8149d<T> abstractC8149d, MaybeSource<? extends T> maybeSource) {
-        super(abstractC8149d);
+    public ObservableMergeWithMaybe(d<T> dVar, MaybeSource<? extends T> maybeSource) {
+        super(dVar);
         this.other = maybeSource;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super T> observer) {
         MergeWithObserver mergeWithObserver = new MergeWithObserver(observer);
         observer.onSubscribe(mergeWithObserver);

@@ -20,9 +20,9 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public final class hx2 {
     @NotNull
-    public static final C9242a Companion = new C9242a(null);
+    public static final a Companion = new a(null);
     @NotNull
-    private final C9244b a;
+    private final b a;
     @NotNull
     private final ProtoBuf$VersionRequirement.VersionKind b;
     @NotNull
@@ -33,14 +33,13 @@ public final class hx2 {
     private final String e;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hx2$a */
     /* loaded from: classes3.dex */
-    public static final class C9242a {
+    public static final class a {
 
         /* compiled from: Taobao */
-        /* renamed from: tb.hx2$a$a */
+        /* renamed from: tb.hx2$a$a  reason: collision with other inner class name */
         /* loaded from: classes3.dex */
-        public /* synthetic */ class C9243a {
+        public /* synthetic */ class C0454a {
             public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
             static {
@@ -52,10 +51,10 @@ public final class hx2 {
             }
         }
 
-        private C9242a() {
+        private a() {
         }
 
-        public /* synthetic */ C9242a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -81,9 +80,9 @@ public final class hx2 {
             b41.h(versionRequirementList, "ids");
             ArrayList arrayList = new ArrayList();
             for (Integer num : versionRequirementList) {
-                C9242a c9242a = hx2.Companion;
+                a aVar = hx2.Companion;
                 b41.h(num, "id");
-                hx2 b = c9242a.b(num.intValue(), nameResolver, ix2Var);
+                hx2 b = aVar.b(num.intValue(), nameResolver, ix2Var);
                 if (b != null) {
                     arrayList.add(b);
                 }
@@ -100,10 +99,10 @@ public final class hx2 {
             if (b == null) {
                 return null;
             }
-            C9244b a = C9244b.Companion.a(b.hasVersion() ? Integer.valueOf(b.getVersion()) : null, b.hasVersionFull() ? Integer.valueOf(b.getVersionFull()) : null);
+            b a = b.Companion.a(b.hasVersion() ? Integer.valueOf(b.getVersion()) : null, b.hasVersionFull() ? Integer.valueOf(b.getVersionFull()) : null);
             ProtoBuf$VersionRequirement.Level level = b.getLevel();
             b41.f(level);
-            int i2 = C9243a.$EnumSwitchMapping$0[level.ordinal()];
+            int i2 = C0454a.$EnumSwitchMapping$0[level.ordinal()];
             if (i2 == 1) {
                 deprecationLevel = DeprecationLevel.WARNING;
             } else if (i2 == 2) {
@@ -123,42 +122,40 @@ public final class hx2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hx2$b */
     /* loaded from: classes3.dex */
-    public static final class C9244b {
+    public static final class b {
         @NotNull
-        public static final C9245a Companion = new C9245a(null);
+        public static final a Companion = new a(null);
         @JvmField
         @NotNull
-        public static final C9244b INFINITY = new C9244b(256, 256, 256);
+        public static final b INFINITY = new b(256, 256, 256);
         private final int a;
         private final int b;
         private final int c;
 
         /* compiled from: Taobao */
-        /* renamed from: tb.hx2$b$a */
         /* loaded from: classes3.dex */
-        public static final class C9245a {
-            private C9245a() {
+        public static final class a {
+            private a() {
             }
 
-            public /* synthetic */ C9245a(k50 k50Var) {
+            public /* synthetic */ a(k50 k50Var) {
                 this();
             }
 
             @NotNull
-            public final C9244b a(@Nullable Integer num, @Nullable Integer num2) {
+            public final b a(@Nullable Integer num, @Nullable Integer num2) {
                 if (num2 != null) {
-                    return new C9244b(num2.intValue() & 255, (num2.intValue() >> 8) & 255, (num2.intValue() >> 16) & 255);
+                    return new b(num2.intValue() & 255, (num2.intValue() >> 8) & 255, (num2.intValue() >> 16) & 255);
                 }
                 if (num != null) {
-                    return new C9244b(num.intValue() & 7, (num.intValue() >> 3) & 15, (num.intValue() >> 7) & 127);
+                    return new b(num.intValue() & 7, (num.intValue() >> 3) & 15, (num.intValue() >> 7) & 127);
                 }
-                return C9244b.INFINITY;
+                return b.INFINITY;
             }
         }
 
-        public C9244b(int i, int i2, int i3) {
+        public b(int i, int i2, int i3) {
             this.a = i;
             this.b = i2;
             this.c = i3;
@@ -189,9 +186,9 @@ public final class hx2 {
             if (this == obj) {
                 return true;
             }
-            if (obj instanceof C9244b) {
-                C9244b c9244b = (C9244b) obj;
-                return this.a == c9244b.a && this.b == c9244b.b && this.c == c9244b.c;
+            if (obj instanceof b) {
+                b bVar = (b) obj;
+                return this.a == bVar.a && this.b == bVar.b && this.c == bVar.c;
             }
             return false;
         }
@@ -205,16 +202,16 @@ public final class hx2 {
             return a();
         }
 
-        public /* synthetic */ C9244b(int i, int i2, int i3, int i4, k50 k50Var) {
+        public /* synthetic */ b(int i, int i2, int i3, int i4, k50 k50Var) {
             this(i, i2, (i4 & 4) != 0 ? 0 : i3);
         }
     }
 
-    public hx2(@NotNull C9244b c9244b, @NotNull ProtoBuf$VersionRequirement.VersionKind versionKind, @NotNull DeprecationLevel deprecationLevel, @Nullable Integer num, @Nullable String str) {
-        b41.i(c9244b, "version");
+    public hx2(@NotNull b bVar, @NotNull ProtoBuf$VersionRequirement.VersionKind versionKind, @NotNull DeprecationLevel deprecationLevel, @Nullable Integer num, @Nullable String str) {
+        b41.i(bVar, "version");
         b41.i(versionKind, "kind");
         b41.i(deprecationLevel, "level");
-        this.a = c9244b;
+        this.a = bVar;
         this.b = versionKind;
         this.c = deprecationLevel;
         this.d = num;
@@ -227,7 +224,7 @@ public final class hx2 {
     }
 
     @NotNull
-    public final C9244b b() {
+    public final b b() {
         return this.a;
     }
 

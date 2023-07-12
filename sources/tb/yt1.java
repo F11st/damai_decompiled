@@ -9,7 +9,6 @@ import android.text.style.CharacterStyle;
 import android.text.style.LineBackgroundSpan;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.huawei.hms.opendevice.AbstractC5658c;
 import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
@@ -17,16 +16,15 @@ import org.jetbrains.annotations.NotNull;
 public final class yt1 extends CharacterStyle implements LineBackgroundSpan {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C10000a Companion = new C10000a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yt1$a */
     /* loaded from: classes7.dex */
-    public static final class C10000a {
-        private C10000a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C10000a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -38,7 +36,7 @@ public final class yt1 extends CharacterStyle implements LineBackgroundSpan {
             ipChange.ipc$dispatch("-683556241", new Object[]{this, canvas, paint, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4), Integer.valueOf(i5), charSequence, Integer.valueOf(i6), Integer.valueOf(i7), Integer.valueOf(i8)});
             return;
         }
-        b41.i(canvas, AbstractC5658c.a);
+        b41.i(canvas, com.huawei.hms.opendevice.c.a);
         b41.i(paint, "p");
         b41.i(charSequence, "text");
         int color = paint.getColor();

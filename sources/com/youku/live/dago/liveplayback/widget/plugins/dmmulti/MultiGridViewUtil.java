@@ -9,7 +9,7 @@ import android.view.WindowManager;
 import com.alibaba.wireless.security.aopsdk.replace.android.view.Display;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
@@ -45,7 +45,7 @@ public class MultiGridViewUtil {
             return ((Integer) ipChange.ipc$dispatch("-593746287", new Object[]{context})).intValue();
         }
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        Display.getRealMetrics(((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+        Display.getRealMetrics(((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
         return com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(displayMetrics);
     }
 
@@ -56,7 +56,7 @@ public class MultiGridViewUtil {
             return ((Integer) ipChange.ipc$dispatch("1420930600", new Object[]{context})).intValue();
         }
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        Display.getRealMetrics(((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+        Display.getRealMetrics(((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
         return com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(displayMetrics);
     }
 

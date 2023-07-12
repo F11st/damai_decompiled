@@ -309,9 +309,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.youkuskinmanager.R$color */
     /* loaded from: classes3.dex */
-    public static final class C8095color {
+    public static final class color {
         public static final int abc_background_cache_hint_selector_material_dark = 0x7f06003a;
         public static final int abc_background_cache_hint_selector_material_light = 0x7f06003b;
         public static final int abc_btn_colored_borderless_text_material = 0x7f06003c;
@@ -394,7 +393,7 @@ public final class R {
         public static final int tooltip_background_dark = 0x7f060520;
         public static final int tooltip_background_light = 0x7f060521;
 
-        private C8095color() {
+        private color() {
         }
     }
 
@@ -518,9 +517,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.youkuskinmanager.R$drawable */
     /* loaded from: classes3.dex */
-    public static final class C8096drawable {
+    public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha = 0x7f080006;
         public static final int abc_action_bar_item_background_material = 0x7f080007;
         public static final int abc_btn_borderless_material = 0x7f080009;
@@ -607,7 +605,7 @@ public final class R {
         public static final int tooltip_frame_dark = 0x7f080f06;
         public static final int tooltip_frame_light = 0x7f080f07;
 
-        private C8096drawable() {
+        private drawable() {
         }
     }
 
@@ -762,9 +760,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.youkuskinmanager.R$layout */
     /* loaded from: classes3.dex */
-    public static final class C8097layout {
+    public static final class layout {
         public static final int abc_action_bar_title_item = 0x7f0c0000;
         public static final int abc_action_bar_up_container = 0x7f0c0001;
         public static final int abc_action_menu_item_layout = 0x7f0c0002;
@@ -803,7 +800,7 @@ public final class R {
         public static final int select_dialog_singlechoice_material = 0x7f0c072e;
         public static final int support_simple_spinner_dropdown_item = 0x7f0c0758;
 
-        private C8097layout() {
+        private layout() {
         }
     }
 
@@ -836,9 +833,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.youkuskinmanager.R$style */
     /* loaded from: classes3.dex */
-    public static final class C8098style {
+    public static final class style {
         public static final int AlertDialog_AppCompat = 0x7f120009;
         public static final int AlertDialog_AppCompat_Light = 0x7f12000a;
         public static final int Animation_AppCompat_Dialog = 0x7f120020;
@@ -1181,7 +1177,7 @@ public final class R {
         public static final int Widget_Compat_NotificationActionText = 0x7f120355;
         public static final int Widget_Support_CoordinatorLayout = 0x7f1203d9;
 
-        private C8098style() {
+        private style() {
         }
     }
 

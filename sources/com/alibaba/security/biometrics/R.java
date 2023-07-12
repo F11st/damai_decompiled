@@ -21,9 +21,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.security.biometrics.R$color */
     /* loaded from: classes8.dex */
-    public static final class C3734color {
+    public static final class color {
         public static final int rpsdk_ab_face_color_alpha40white = 0x7f060479;
         public static final int rpsdk_ab_face_dialog_negative = 0x7f06047a;
         public static final int rpsdk_ab_face_dialog_positive = 0x7f06047b;
@@ -41,14 +40,13 @@ public final class R {
         public static final int rpsdk_transparency_65 = 0x7f060487;
         public static final int rpsdk_white = 0x7f060488;
 
-        private C3734color() {
+        private color() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.security.biometrics.R$drawable */
     /* loaded from: classes8.dex */
-    public static final class C3735drawable {
+    public static final class drawable {
         public static final int rp_backcardhk = 0x7f080c96;
         public static final int rp_backcardpic = 0x7f080c97;
         public static final int rp_backward = 0x7f080c98;
@@ -130,7 +128,7 @@ public final class R {
         public static final int rp_passport_bg = 0x7f080ce4;
         public static final int rpsdk_face_win_bg = 0x7f080ce5;
 
-        private C3735drawable() {
+        private drawable() {
         }
     }
 
@@ -227,9 +225,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.security.biometrics.R$layout */
     /* loaded from: classes8.dex */
-    public static final class C3736layout {
+    public static final class layout {
         public static final int rp_alrealidentity_activity_rp_preview_photo = 0x7f0c0704;
         public static final int rp_alrealidentity_activity_rp_take_photo = 0x7f0c0705;
         public static final int rp_alrealidentity_activity_rph5 = 0x7f0c0706;
@@ -243,21 +240,20 @@ public final class R {
         public static final int rp_face_widget_privacy = 0x7f0c070e;
         public static final int rp_face_widget_titlebar = 0x7f0c070f;
 
-        private C3736layout() {
+        private layout() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.security.biometrics.R$raw */
     /* loaded from: classes8.dex */
-    public static final class C3737raw {
+    public static final class raw {
         public static final int rp_face_blink = 0x7f100086;
         public static final int rp_face_ding = 0x7f100087;
         public static final int rp_face_open_mouth = 0x7f100088;
         public static final int rp_face_pitch_up = 0x7f100089;
         public static final int rp_face_yaw_left_right = 0x7f10008a;
 
-        private C3737raw() {
+        private raw() {
         }
     }
 
@@ -460,13 +456,12 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.security.biometrics.R$style */
     /* loaded from: classes8.dex */
-    public static final class C3738style {
+    public static final class style {
         public static final int RP_Dialog = 0x7f1201c0;
         public static final int RP_FullScreenTheme = 0x7f1201c1;
 
-        private C3738style() {
+        private style() {
         }
     }
 

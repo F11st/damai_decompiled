@@ -14,15 +14,14 @@ public class qg0 {
     private ListeningExecutorService e;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qg0$b */
     /* loaded from: classes5.dex */
-    private static class C9604b {
+    private static class b {
         private static final qg0 a = new qg0();
     }
 
     @NonNull
     public static qg0 c() {
-        return C9604b.a;
+        return b.a;
     }
 
     public ListeningExecutorService a() {

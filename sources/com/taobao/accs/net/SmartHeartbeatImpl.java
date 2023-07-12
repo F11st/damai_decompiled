@@ -1,8 +1,8 @@
 package com.taobao.accs.net;
 
 import android.os.SystemClock;
-import anet.channel.C0162c;
 import anet.channel.Session;
+import anet.channel.c;
 import anet.channel.heartbeat.IHeartbeat;
 import com.taobao.accs.client.GlobalClientInfo;
 import com.taobao.accs.common.ThreadPoolExecutorFactory;
@@ -79,7 +79,7 @@ public class SmartHeartbeatImpl implements IHeartbeat, Runnable {
             AppMonitorAdapter.commitCount("accs", BaseMonitor.COUNT_HB_DELAY, "", (int) ((SystemClock.elapsedRealtime() - this.lastRescheduleTimeMill) / 1000));
         }
         try {
-            Session session = AccsSessionCenter.get(C0162c.m(this.inAppConnection.getAppkey()), this.inAppConnection.getHost(null), 0L);
+            Session session = AccsSessionCenter.get(c.m(this.inAppConnection.getAppkey()), this.inAppConnection.getHost(null), 0L);
             this.session = session;
             if (session != null) {
                 session.t(true);

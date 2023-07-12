@@ -9,11 +9,9 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMRoundedCornersBitmapProcessor;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
 import cn.damai.trade.R$drawable;
 import cn.damai.trade.R$id;
 import cn.damai.trade.R$layout;
@@ -37,12 +35,11 @@ public class ProjectAtmosphericBannerViewHolder extends RecyclerView.ViewHolder 
     private String f;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectAtmosphericBannerViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2385a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2385a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -52,26 +49,25 @@ public class ProjectAtmosphericBannerViewHolder extends RecyclerView.ViewHolder 
                 ipChange.ipc$dispatch("-151307650", new Object[]{this, view});
             } else if (TextUtils.isEmpty(ProjectAtmosphericBannerViewHolder.this.e)) {
             } else {
-                C0529c.e().x(pp2.u().h0(ProjectAtmosphericBannerViewHolder.this.f));
+                cn.damai.common.user.c.e().x(pp2.u().h0(ProjectAtmosphericBannerViewHolder.this.f));
                 DMNav.from(ProjectAtmosphericBannerViewHolder.this.a).toUri(ProjectAtmosphericBannerViewHolder.this.e);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectAtmosphericBannerViewHolder$b */
     /* loaded from: classes8.dex */
-    public class C2386b implements DMImageCreator.DMImageFailListener {
+    public class b implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2386b() {
+        b() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "2081705777")) {
-                ipChange.ipc$dispatch("2081705777", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("2081705777", new Object[]{this, dVar});
             } else {
                 ProjectAtmosphericBannerViewHolder.this.b.setVisibility(8);
             }
@@ -79,21 +75,20 @@ public class ProjectAtmosphericBannerViewHolder extends RecyclerView.ViewHolder 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectAtmosphericBannerViewHolder$c */
     /* loaded from: classes8.dex */
-    public class C2387c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2387c() {
+        c() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Drawable drawable;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1502763014")) {
-                ipChange.ipc$dispatch("1502763014", new Object[]{this, c0502e});
-            } else if (c0502e == null || (drawable = c0502e.a) == null) {
+                ipChange.ipc$dispatch("1502763014", new Object[]{this, eVar});
+            } else if (eVar == null || (drawable = eVar.a) == null) {
             } else {
                 ProjectAtmosphericBannerViewHolder.this.k(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
                 ProjectAtmosphericBannerViewHolder.this.b.setImageDrawable(drawable);
@@ -129,7 +124,7 @@ public class ProjectAtmosphericBannerViewHolder extends RecyclerView.ViewHolder 
         }
         ImageView imageView = (ImageView) this.itemView.findViewById(R$id.project_atmospheric_banner_iv);
         this.b = imageView;
-        imageView.setOnClickListener(new View$OnClickListenerC2385a());
+        imageView.setOnClickListener(new a());
     }
 
     private void i() {
@@ -138,7 +133,7 @@ public class ProjectAtmosphericBannerViewHolder extends RecyclerView.ViewHolder 
             ipChange.ipc$dispatch("1762174221", new Object[]{this});
         } else if (TextUtils.isEmpty(this.d)) {
         } else {
-            C0504a.b().c(this.d).k(new DMRoundedCornersBitmapProcessor(6, 0)).n(new C2387c()).e(new C2386b()).f();
+            cn.damai.common.image.a.b().c(this.d).k(new DMRoundedCornersBitmapProcessor(6, 0)).n(new c()).e(new b()).f();
         }
     }
 

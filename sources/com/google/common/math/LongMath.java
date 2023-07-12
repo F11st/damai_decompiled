@@ -110,15 +110,14 @@ public final class LongMath {
 
         abstract long squareMod(long j, long j2);
 
-        /* synthetic */ MillerRabinTester(C5234a c5234a) {
+        /* synthetic */ MillerRabinTester(a aVar) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.math.LongMath$a */
     /* loaded from: classes10.dex */
-    static /* synthetic */ class C5234a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -191,7 +190,7 @@ public final class LongMath {
             int r10 = (int) r9
             r9 = 1
             r10 = r10 | r9
-            int[] r7 = com.google.common.math.LongMath.C5234a.a
+            int[] r7 = com.google.common.math.LongMath.a.a
             int r8 = r13.ordinal()
             r7 = r7[r8]
             r8 = 0
@@ -257,7 +256,7 @@ public final class LongMath {
         L5d:
             r9 = 0
         L5e:
-            com.google.common.math.C5246e.d(r9)
+            com.google.common.math.e.d(r9)
         L61:
             r9 = 0
         L62:

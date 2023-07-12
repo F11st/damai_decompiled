@@ -73,17 +73,17 @@ public class TickletTransferFaceUnbindDialogView extends LinearLayout {
                 ipChange.ipc$dispatch("-213641469", new Object[]{this, viewHolder, Integer.valueOf(i)});
                 return;
             }
-            C2126a c2126a = (C2126a) viewHolder;
+            a aVar = (a) viewHolder;
             TickletTransferManagerListExtra tickletTransferManagerListExtra = this.b.get(i);
             if (i == 0) {
-                TextView textView = c2126a.a;
-                textView.setPadding(textView.getPaddingLeft(), t60.a(this.a, 18.0f), c2126a.a.getPaddingLeft(), c2126a.a.getPaddingBottom());
+                TextView textView = aVar.a;
+                textView.setPadding(textView.getPaddingLeft(), t60.a(this.a, 18.0f), aVar.a.getPaddingLeft(), aVar.a.getPaddingBottom());
             } else {
-                TextView textView2 = c2126a.a;
-                textView2.setPadding(textView2.getPaddingLeft(), 0, c2126a.a.getPaddingLeft(), c2126a.a.getPaddingBottom());
+                TextView textView2 = aVar.a;
+                textView2.setPadding(textView2.getPaddingLeft(), 0, aVar.a.getPaddingLeft(), aVar.a.getPaddingBottom());
             }
             if (tickletTransferManagerListExtra != null) {
-                a(c2126a.a, tickletTransferManagerListExtra.fullSeatInfo);
+                a(aVar.a, tickletTransferManagerListExtra.fullSeatInfo);
             }
         }
 
@@ -91,7 +91,7 @@ public class TickletTransferFaceUnbindDialogView extends LinearLayout {
         @NonNull
         public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
             IpChange ipChange = $ipChange;
-            return AndroidInstantRuntime.support(ipChange, "-1635402157") ? (RecyclerView.ViewHolder) ipChange.ipc$dispatch("-1635402157", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new C2126a(LayoutInflater.from(this.a).inflate(R$layout.ticklet_transfer_face_unbind_ticket_item_layout, viewGroup, false));
+            return AndroidInstantRuntime.support(ipChange, "-1635402157") ? (RecyclerView.ViewHolder) ipChange.ipc$dispatch("-1635402157", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new a(LayoutInflater.from(this.a).inflate(R$layout.ticklet_transfer_face_unbind_ticket_item_layout, viewGroup, false));
         }
 
         public void setData(List<TickletTransferManagerListExtra> list) {
@@ -106,12 +106,11 @@ public class TickletTransferFaceUnbindDialogView extends LinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletTransferFaceUnbindDialogView$a */
     /* loaded from: classes7.dex */
-    private static class C2126a extends RecyclerView.ViewHolder {
+    private static class a extends RecyclerView.ViewHolder {
         public TextView a;
 
-        public C2126a(View view) {
+        public a(View view) {
             super(view);
             this.a = (TextView) view.findViewById(R$id.ticklet_transfer_ticket_item_seat_info_tv);
             TextView textView = (TextView) view.findViewById(R$id.ticklet_transfer_ticket_item_cert_num_tv);

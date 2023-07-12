@@ -8,56 +8,56 @@ import java.util.Map;
 /* loaded from: classes10.dex */
 public class GrsClient {
     private static final String EMPTY_STRING = "";
-    private final C5561c grsClientGlobal;
+    private final c grsClientGlobal;
 
     public GrsClient(Context context, GrsBaseInfo grsBaseInfo) {
         if (context == null || grsBaseInfo == null) {
             throw new NullPointerException("invalid init params for context is null or GrsBaseInfo instance is null Object.");
         }
-        this.grsClientGlobal = C5563d.a(grsBaseInfo, context);
+        this.grsClientGlobal = d.a(grsBaseInfo, context);
     }
 
     public void ayncGetGrsUrl(String str, String str2, IQueryUrlCallBack iQueryUrlCallBack) {
-        C5561c c5561c = this.grsClientGlobal;
-        if (c5561c == null) {
+        c cVar = this.grsClientGlobal;
+        if (cVar == null) {
             iQueryUrlCallBack.onCallBackFail(-8);
         } else {
-            c5561c.a(str, str2, iQueryUrlCallBack);
+            cVar.a(str, str2, iQueryUrlCallBack);
         }
     }
 
     public void ayncGetGrsUrls(String str, IQueryUrlsCallBack iQueryUrlsCallBack) {
-        C5561c c5561c = this.grsClientGlobal;
-        if (c5561c == null) {
+        c cVar = this.grsClientGlobal;
+        if (cVar == null) {
             iQueryUrlsCallBack.onCallBackFail(-8);
         } else {
-            c5561c.a(str, iQueryUrlsCallBack);
+            cVar.a(str, iQueryUrlsCallBack);
         }
     }
 
     public void clearSp() {
-        C5561c c5561c = this.grsClientGlobal;
-        if (c5561c == null) {
+        c cVar = this.grsClientGlobal;
+        if (cVar == null) {
             return;
         }
-        c5561c.a();
+        cVar.a();
     }
 
     public boolean forceExpire() {
-        C5561c c5561c = this.grsClientGlobal;
-        if (c5561c == null) {
+        c cVar = this.grsClientGlobal;
+        if (cVar == null) {
             return false;
         }
-        return c5561c.b();
+        return cVar.b();
     }
 
     public String synGetGrsUrl(String str, String str2) {
-        C5561c c5561c = this.grsClientGlobal;
-        return c5561c == null ? "" : c5561c.a(str, str2);
+        c cVar = this.grsClientGlobal;
+        return cVar == null ? "" : cVar.a(str, str2);
     }
 
     public Map<String, String> synGetGrsUrls(String str) {
-        C5561c c5561c = this.grsClientGlobal;
-        return c5561c == null ? new HashMap() : c5561c.a(str);
+        c cVar = this.grsClientGlobal;
+        return cVar == null ? new HashMap() : cVar.a(str);
     }
 }

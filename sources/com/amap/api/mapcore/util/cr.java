@@ -9,7 +9,7 @@ import android.opengl.Matrix;
 import android.os.RemoteException;
 import android.view.animation.AnimationUtils;
 import com.alibaba.wireless.security.aopsdk.replace.android.graphics.Point;
-import com.amap.api.mapcore.util.C4505de;
+import com.amap.api.mapcore.util.de;
 import com.amap.api.maps.model.BitmapDescriptor;
 import com.amap.api.maps.model.GL3DModelOptions;
 import com.amap.api.maps.model.LatLng;
@@ -36,7 +36,7 @@ public class cr extends BaseOverlayImp implements IglModel {
     float[] a;
     float[] b;
     private String f;
-    private C4636q h;
+    private q h;
     private BitmapDescriptor i;
     private IAMapDelegate j;
     private int k;
@@ -44,10 +44,10 @@ public class cr extends BaseOverlayImp implements IglModel {
     private LatLng m;
     private GLAnimation n;
     private Bitmap q;
-    private C4505de.C4507b r;
+    private de.b r;
     private float s;
     private Object t;
-    private C4629o y;
+    private o y;
     private int z;
     private boolean e = true;
     private float[] g = new float[16];
@@ -68,13 +68,13 @@ public class cr extends BaseOverlayImp implements IglModel {
     float d = 1.0f;
     private float J = -1.0f;
 
-    public cr(C4629o c4629o, GL3DModelOptions gL3DModelOptions, IAMapDelegate iAMapDelegate) {
+    public cr(o oVar, GL3DModelOptions gL3DModelOptions, IAMapDelegate iAMapDelegate) {
         this.a = new float[16];
         this.b = new float[16];
         if (gL3DModelOptions == null || iAMapDelegate == null) {
             return;
         }
-        this.y = c4629o;
+        this.y = oVar;
         this.j = iAMapDelegate;
         this.i = gL3DModelOptions.getBitmapDescriptor();
         List<Float> textrue = gL3DModelOptions.getTextrue();
@@ -91,9 +91,9 @@ public class cr extends BaseOverlayImp implements IglModel {
         }
         if (textrue != null && textrue.size() > 0 && vertext != null) {
             if ((vertext.size() > 0) & (this.i != null)) {
-                C4636q c4636q = new C4636q(vertext, textrue);
-                this.h = c4636q;
-                c4636q.a(this.s);
+                q qVar = new q(vertext, textrue);
+                this.h = qVar;
+                qVar.a(this.s);
             }
         }
         this.a = new float[16];
@@ -142,7 +142,7 @@ public class cr extends BaseOverlayImp implements IglModel {
         try {
             if (this.h != null) {
                 if (this.r == null) {
-                    this.r = (C4505de.C4507b) this.j.getGLShader(5);
+                    this.r = (de.b) this.j.getGLShader(5);
                 }
                 if (this.v == -1.0f) {
                     this.v = this.j.getUnitLengthByZoom((int) this.u);
@@ -191,13 +191,13 @@ public class cr extends BaseOverlayImp implements IglModel {
         if (bitmap != null) {
             eq.b(bitmap);
         }
-        C4629o c4629o = this.y;
-        if (c4629o != null) {
-            c4629o.a(this.z);
+        o oVar = this.y;
+        if (oVar != null) {
+            oVar.a(this.z);
         }
-        C4636q c4636q = this.h;
-        if (c4636q != null) {
-            c4636q.c();
+        q qVar = this.h;
+        if (qVar != null) {
+            qVar.c();
         }
     }
 

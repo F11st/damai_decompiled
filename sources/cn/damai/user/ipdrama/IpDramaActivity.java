@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentTransaction;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.commonbusiness.share.ShareManager;
@@ -43,12 +42,11 @@ public class IpDramaActivity extends SimpleBaseActivity {
     Action wantSeeTipsShowAction;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.ipdrama.IpDramaActivity$a */
     /* loaded from: classes9.dex */
-    public class C2685a implements IpDramaFragment.OnAlphaChangeListener {
+    public class a implements IpDramaFragment.OnAlphaChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2685a() {
+        a() {
         }
 
         @Override // cn.damai.user.ipdrama.IpDramaFragment.OnAlphaChangeListener
@@ -63,12 +61,11 @@ public class IpDramaActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.ipdrama.IpDramaActivity$b */
     /* loaded from: classes9.dex */
-    public class C2686b implements Action<Bundle> {
+    public class b implements Action<Bundle> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2686b() {
+        b() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -84,12 +81,11 @@ public class IpDramaActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.ipdrama.IpDramaActivity$c */
     /* loaded from: classes9.dex */
-    public class C2687c implements Action<String> {
+    public class c implements Action<String> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2687c() {
+        c() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -99,21 +95,20 @@ public class IpDramaActivity extends SimpleBaseActivity {
             if (AndroidInstantRuntime.support(ipChange, "-1923680849")) {
                 ipChange.ipc$dispatch("-1923680849", new Object[]{this, str});
             } else if (IpDramaActivity.this.wantSeeTips != null) {
-                WantSeeTips.AbstractC1562a.C1566d c1566d = WantSeeTips.AbstractC1562a.C1566d.INSTANCE;
-                c1566d.l(str);
-                IpDramaActivity.this.wantSeeTips.setPageSource(c1566d);
+                WantSeeTips.a.d dVar = WantSeeTips.a.d.INSTANCE;
+                dVar.l(str);
+                IpDramaActivity.this.wantSeeTips.setPageSource(dVar);
                 IpDramaActivity.this.wantSeeTips.showAnim();
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.ipdrama.IpDramaActivity$d */
     /* loaded from: classes9.dex */
-    public class C2688d implements Action<String> {
+    public class d implements Action<String> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2688d() {
+        d() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -129,12 +124,11 @@ public class IpDramaActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.ipdrama.IpDramaActivity$e */
     /* loaded from: classes9.dex */
-    public class C2689e implements SimpleTitleLayout.OnBtnClickListener {
+    public class e implements SimpleTitleLayout.OnBtnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2689e() {
+        e() {
         }
 
         @Override // cn.damai.uikit.view.SimpleTitleLayout.OnBtnClickListener
@@ -159,12 +153,11 @@ public class IpDramaActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.ipdrama.IpDramaActivity$f */
     /* loaded from: classes9.dex */
-    public class C2690f implements ShareBean.OnShareListener {
+    public class f implements ShareBean.OnShareListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2690f() {
+        f() {
         }
 
         @Override // cn.damai.user.bean.ShareBean.OnShareListener
@@ -212,7 +205,7 @@ public class IpDramaActivity extends SimpleBaseActivity {
             ipChange.ipc$dispatch("-1219570415", new Object[]{this});
         } else if (this.mShareBean == null || isFinishing()) {
         } else {
-            ShareBean.doIpDramaShare(this.mShareBean, new C2690f());
+            ShareBean.doIpDramaShare(this.mShareBean, new f());
         }
     }
 
@@ -227,7 +220,7 @@ public class IpDramaActivity extends SimpleBaseActivity {
         this.mStlLayout.enableDivider(false);
         this.mStlLayout.showShareBtn(true);
         this.mStlLayout.setTitleGravity(3);
-        this.mStlLayout.setListener(new C2689e());
+        this.mStlLayout.setListener(new e());
     }
 
     @Override // cn.damai.common.app.base.BaseActivity
@@ -249,7 +242,7 @@ public class IpDramaActivity extends SimpleBaseActivity {
         }
         super.onCreate(bundle);
         setContentView(R$layout.activity_layout_ipdrama);
-        C0529c.e().K(this);
+        cn.damai.common.user.c.e().K(this);
         this.mStlLayout = (SimpleTitleLayout) findViewById(R$id.simple_title_layout);
         this.mRootView = (ViewGroup) findViewById(R$id.ip_drama_root);
         this.wantSeeTips = (WantSeeTips) findViewById(R$id.want_see_tips_ip_drama);
@@ -271,15 +264,15 @@ public class IpDramaActivity extends SimpleBaseActivity {
         }
         IpDramaFragment newInstance = IpDramaFragment.newInstance(str);
         this.fragment = newInstance;
-        newInstance.setOnAlphaChangeListener(new C2685a());
+        newInstance.setOnAlphaChangeListener(new a());
         FragmentTransaction beginTransaction = getSupportFragmentManager().beginTransaction();
         beginTransaction.replace(R$id.fragment_container, this.fragment);
         beginTransaction.commitAllowingStateLoss();
-        this.action = new C2686b();
+        this.action = new b();
         yr.c().e("brand_state_changed", this.action);
-        this.wantSeeTipsShowAction = new C2687c();
+        this.wantSeeTipsShowAction = new c();
         yr.c().e(IP_DRAMA_WANT_SEE_TIPS_SHOW, this.wantSeeTipsShowAction);
-        this.wantSeeTipsClickAction = new C2688d();
+        this.wantSeeTipsClickAction = new d();
         yr.c().e(IP_DRAMA_WANT_SEE_TIPS_CLICK, this.wantSeeTipsClickAction);
     }
 

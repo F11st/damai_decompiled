@@ -9,20 +9,19 @@ import java.util.concurrent.atomic.AtomicInteger;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class qu1 implements Comparable<qu1>, Task {
-    private final ThreadFactoryC9630a a;
+    private final a a;
     private PatchType b;
     private boolean c;
     private String d;
     private PatchRunnable e;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qu1$a */
     /* loaded from: classes11.dex */
-    static class ThreadFactoryC9630a implements ThreadFactory {
+    static class a implements ThreadFactory {
         private AtomicInteger a = new AtomicInteger();
         private PatchType b;
 
-        public ThreadFactoryC9630a(PatchType patchType) {
+        public a(PatchType patchType) {
             this.b = patchType;
         }
 
@@ -37,7 +36,7 @@ public class qu1 implements Comparable<qu1>, Task {
         this.b = patchType;
         this.d = str;
         this.c = z;
-        this.a = new ThreadFactoryC9630a(patchType);
+        this.a = new a(patchType);
     }
 
     @Override // com.taobao.update.datasource.Task

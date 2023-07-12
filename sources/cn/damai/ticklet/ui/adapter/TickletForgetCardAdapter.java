@@ -21,16 +21,15 @@ import tb.t60;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
-public class TickletForgetCardAdapter extends RecyclerView.Adapter<C2046a> {
+public class TickletForgetCardAdapter extends RecyclerView.Adapter<a> {
     private static transient /* synthetic */ IpChange $ipChange;
     private Context a;
     private List<TickletForgetCardResult.TickletForgetCardData> b = new ArrayList();
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.adapter.TickletForgetCardAdapter$a */
     /* loaded from: classes7.dex */
-    public class C2046a extends RecyclerView.ViewHolder {
+    public class a extends RecyclerView.ViewHolder {
         View a;
         TextView b;
         TextView c;
@@ -38,7 +37,7 @@ public class TickletForgetCardAdapter extends RecyclerView.Adapter<C2046a> {
         LinearLayout e;
         ImageView f;
 
-        public C2046a(TickletForgetCardAdapter tickletForgetCardAdapter, View view) {
+        public a(TickletForgetCardAdapter tickletForgetCardAdapter, View view) {
             super(view);
             this.a = view;
             this.b = (TextView) view.findViewById(R$id.ticklet_forget_card_list_num);
@@ -53,12 +52,12 @@ public class TickletForgetCardAdapter extends RecyclerView.Adapter<C2046a> {
         this.a = context;
     }
 
-    private void c(C2046a c2046a, TickletForgetCardResult.TickletForgetCardData tickletForgetCardData, int i) {
+    private void c(a aVar, TickletForgetCardResult.TickletForgetCardData tickletForgetCardData, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "716827124")) {
-            ipChange.ipc$dispatch("716827124", new Object[]{this, c2046a, tickletForgetCardData, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("716827124", new Object[]{this, aVar, tickletForgetCardData, Integer.valueOf(i)});
         } else if (tickletForgetCardData != null) {
-            ViewGroup.LayoutParams layoutParams = c2046a.b.getLayoutParams();
+            ViewGroup.LayoutParams layoutParams = aVar.b.getLayoutParams();
             int i2 = i + 1;
             if (i2 < 9) {
                 layoutParams.height = t60.a(this.a, 16.0f);
@@ -70,17 +69,17 @@ public class TickletForgetCardAdapter extends RecyclerView.Adapter<C2046a> {
                 layoutParams.height = t60.a(this.a, 26.0f);
                 layoutParams.width = t60.a(this.a, 26.0f);
             }
-            c2046a.b.setLayoutParams(layoutParams);
-            c2046a.b.setText(String.valueOf(i2));
-            py2.F(c2046a.c, tickletForgetCardData.code);
-            py2.z(tickletForgetCardData.state, c2046a.c, "#111111", "#DDDDDD");
-            c2046a.e.removeAllViews();
-            d(c2046a.e, tickletForgetCardData.state, tickletForgetCardData.seatInfo);
-            py2.B(tickletForgetCardData.state, c2046a.f);
+            aVar.b.setLayoutParams(layoutParams);
+            aVar.b.setText(String.valueOf(i2));
+            py2.F(aVar.c, tickletForgetCardData.code);
+            py2.z(tickletForgetCardData.state, aVar.c, "#111111", "#DDDDDD");
+            aVar.e.removeAllViews();
+            d(aVar.e, tickletForgetCardData.state, tickletForgetCardData.seatInfo);
+            py2.B(tickletForgetCardData.state, aVar.f);
             if (i != getItemCount() - 1) {
-                c2046a.d.setVisibility(0);
+                aVar.d.setVisibility(0);
             } else {
-                c2046a.d.setVisibility(8);
+                aVar.d.setVisibility(8);
             }
         }
     }
@@ -104,20 +103,20 @@ public class TickletForgetCardAdapter extends RecyclerView.Adapter<C2046a> {
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     /* renamed from: a */
-    public void onBindViewHolder(C2046a c2046a, int i) {
+    public void onBindViewHolder(a aVar, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-774443553")) {
-            ipChange.ipc$dispatch("-774443553", new Object[]{this, c2046a, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-774443553", new Object[]{this, aVar, Integer.valueOf(i)});
         } else {
-            c(c2046a, this.b.get(i), i);
+            c(aVar, this.b.get(i), i);
         }
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     /* renamed from: b */
-    public C2046a onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public a onCreateViewHolder(ViewGroup viewGroup, int i) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1667070025") ? (C2046a) ipChange.ipc$dispatch("-1667070025", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new C2046a(this, LayoutInflater.from(this.a).inflate(R$layout.ticklet_forget_card_item, viewGroup, false));
+        return AndroidInstantRuntime.support(ipChange, "-1667070025") ? (a) ipChange.ipc$dispatch("-1667070025", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new a(this, LayoutInflater.from(this.a).inflate(R$layout.ticklet_forget_card_item, viewGroup, false));
     }
 
     public void clear() {

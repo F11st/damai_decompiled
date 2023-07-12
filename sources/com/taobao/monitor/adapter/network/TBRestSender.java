@@ -14,7 +14,7 @@ public class TBRestSender implements INetworkSender {
     private final Integer a = 61004;
     private final String b = null;
     private boolean c = true;
-    private ILiteDb d = new C6758a();
+    private ILiteDb d = new a();
 
     /* JADX INFO: Access modifiers changed from: private */
     public void f(String str, String str2) {

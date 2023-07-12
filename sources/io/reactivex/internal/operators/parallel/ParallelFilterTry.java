@@ -4,18 +4,18 @@ import io.reactivex.functions.BiFunction;
 import io.reactivex.functions.Predicate;
 import io.reactivex.internal.fuseable.ConditionalSubscriber;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
-import io.reactivex.parallel.AbstractC8161a;
 import io.reactivex.parallel.ParallelFailureHandling;
+import io.reactivex.parallel.a;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ParallelFilterTry<T> extends AbstractC8161a<T> {
+public final class ParallelFilterTry<T> extends a<T> {
     final BiFunction<? super Long, ? super Throwable, ParallelFailureHandling> errorHandler;
     final Predicate<? super T> predicate;
-    final AbstractC8161a<T> source;
+    final a<T> source;
 
     /* compiled from: Taobao */
     /* renamed from: io.reactivex.internal.operators.parallel.ParallelFilterTry$1  reason: invalid class name */
@@ -283,18 +283,18 @@ public final class ParallelFilterTry<T> extends AbstractC8161a<T> {
         }
     }
 
-    public ParallelFilterTry(AbstractC8161a<T> abstractC8161a, Predicate<? super T> predicate, BiFunction<? super Long, ? super Throwable, ParallelFailureHandling> biFunction) {
-        this.source = abstractC8161a;
+    public ParallelFilterTry(a<T> aVar, Predicate<? super T> predicate, BiFunction<? super Long, ? super Throwable, ParallelFailureHandling> biFunction) {
+        this.source = aVar;
         this.predicate = predicate;
         this.errorHandler = biFunction;
     }
 
-    @Override // io.reactivex.parallel.AbstractC8161a
+    @Override // io.reactivex.parallel.a
     public int parallelism() {
         return this.source.parallelism();
     }
 
-    @Override // io.reactivex.parallel.AbstractC8161a
+    @Override // io.reactivex.parallel.a
     public void subscribe(Subscriber<? super T>[] subscriberArr) {
         if (validate(subscriberArr)) {
             int length = subscriberArr.length;

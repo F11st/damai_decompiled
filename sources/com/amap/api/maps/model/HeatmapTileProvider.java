@@ -35,7 +35,7 @@ public class HeatmapTileProvider implements TileProvider {
     private double[] mMaxIntensity;
     private double mOpacity;
     private int mRadius;
-    private C4651a mTree;
+    private a mTree;
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
@@ -114,7 +114,7 @@ public class HeatmapTileProvider implements TileProvider {
             this.mData = arrayList;
             du a = a(arrayList);
             this.mBounds = a;
-            this.mTree = new C4651a(a);
+            this.mTree = new a(a);
             for (WeightedLatLng weightedLatLng2 : this.mData) {
                 this.mTree.a(weightedLatLng2);
             }

@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeSource;
 import io.reactivex.Observer;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -15,7 +15,7 @@ import tb.dg0;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeFlatMapIterableObservable<T, R> extends AbstractC8149d<R> {
+public final class MaybeFlatMapIterableObservable<T, R> extends d<R> {
     final Function<? super T, ? extends Iterable<? extends R>> mapper;
     final MaybeSource<T> source;
 
@@ -147,7 +147,7 @@ public final class MaybeFlatMapIterableObservable<T, R> extends AbstractC8149d<R
         this.mapper = function;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super R> observer) {
         this.source.subscribe(new FlatMapIterableObserver(observer, this.mapper));
     }

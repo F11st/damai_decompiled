@@ -18,7 +18,7 @@ public class as1 implements IPhenixLifeCycle {
     }
 
     private void a() {
-        IDispatcher b = ca0.b(C8934b0.IMAGE_STAGE_DISPATCHER);
+        IDispatcher b = ca0.b(b0.IMAGE_STAGE_DISPATCHER);
         if (b instanceof ImageStageDispatcher) {
             this.a = (ImageStageDispatcher) b;
         }

@@ -17,11 +17,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.HashMap;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -45,7 +45,7 @@ public final class TaoMaiFilePlugin extends TaoMaiApiPlugin {
     @NotNull
     public static final String BRIDGE_NAME = "TMFile";
     @NotNull
-    public static final C7002a Companion = new C7002a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String FILES_DIR = "h5files";
     public static final long FILE_MAX_SIZE = 6291456;
@@ -54,20 +54,19 @@ public final class TaoMaiFilePlugin extends TaoMaiApiPlugin {
     private final Lazy cacheDir$delegate;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TaoMaiFilePlugin$a */
     /* loaded from: classes11.dex */
-    public static final class C7002a {
-        private C7002a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C7002a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     public TaoMaiFilePlugin() {
         Lazy b;
-        b = C8177b.b(new Function0<String>() { // from class: com.taomai.android.h5container.api.TaoMaiFilePlugin$cacheDir$2
+        b = b.b(new Function0<String>() { // from class: com.taomai.android.h5container.api.TaoMaiFilePlugin$cacheDir$2
             @Override // kotlin.jvm.functions.Function0
             @NotNull
             public final String invoke() {
@@ -98,12 +97,12 @@ public final class TaoMaiFilePlugin extends TaoMaiApiPlugin {
     }
 
     public final void deleteFile(@Nullable String str, @Nullable WVCallBackContext wVCallBackContext) {
-        JSONObject a;
-        if (str == null || (a = kh2.a(str)) == null) {
+        JSONObject a2;
+        if (str == null || (a2 = kh2.a(str)) == null) {
             return;
         }
         try {
-            String string = a.getString("fileName");
+            String string = a2.getString("fileName");
             if (getCacheDir() == null) {
                 if (wVCallBackContext != null) {
                     WVResult wVResult = new WVResult();
@@ -161,14 +160,14 @@ public final class TaoMaiFilePlugin extends TaoMaiApiPlugin {
     }
 
     public final void readFile(@Nullable String str, @Nullable WVCallBackContext wVCallBackContext) {
-        JSONObject a;
+        JSONObject a2;
         String str2;
-        if (str == null || (a = kh2.a(str)) == null || a.size() == 0) {
+        if (str == null || (a2 = kh2.a(str)) == null || a2.size() == 0) {
             return;
         }
         try {
-            String string = a.getString("fileName");
-            boolean d = b41.d(File_ENCODE_BASE64, a.getString("fileOption"));
+            String string = a2.getString("fileName");
+            boolean d = b41.d(File_ENCODE_BASE64, a2.getString("fileOption"));
             if (string == null || string.length() == 0) {
                 if (wVCallBackContext != null) {
                     WVResult wVResult = new WVResult();
@@ -238,19 +237,19 @@ public final class TaoMaiFilePlugin extends TaoMaiApiPlugin {
 
     @Nullable
     public final String saveFile(@Nullable String str, @Nullable WVCallBackContext wVCallBackContext) {
-        JSONObject a;
+        JSONObject a2;
         boolean q;
         byte[] bytes;
         boolean q2;
-        if (str != null && (a = kh2.a(str)) != null) {
+        if (str != null && (a2 = kh2.a(str)) != null) {
             try {
-                String string = a.getString("fileName");
-                String string2 = a.getString("fileContent");
+                String string = a2.getString("fileName");
+                String string2 = a2.getString("fileContent");
                 if (string2 == null) {
                     string2 = "";
                 }
-                String string3 = a.getString("fileOption");
-                String string4 = a.getString("mode");
+                String string3 = a2.getString("fileOption");
+                String string4 = a2.getString("mode");
                 if (getCacheDir() == null) {
                     if (wVCallBackContext != null) {
                         WVResult wVResult = new WVResult();
@@ -273,7 +272,7 @@ public final class TaoMaiFilePlugin extends TaoMaiApiPlugin {
                 String str3 = sb2 + str2 + string;
                 File file2 = new File(str3);
                 if (file2.exists()) {
-                    q2 = C8604o.q(kh1.OPERATION_WRITE, string4, true);
+                    q2 = o.q(kh1.OPERATION_WRITE, string4, true);
                     if (q2) {
                         if (wVCallBackContext != null) {
                             WVResult wVResult2 = new WVResult();
@@ -297,7 +296,7 @@ public final class TaoMaiFilePlugin extends TaoMaiApiPlugin {
                     }
                 }
                 try {
-                    q = C8604o.q("append", string4, true);
+                    q = o.q("append", string4, true);
                     if (!canWriteFile(file2.length(), string2, q)) {
                         if (wVCallBackContext != null) {
                             WVResult wVResult4 = new WVResult();

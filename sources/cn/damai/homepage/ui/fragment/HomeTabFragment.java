@@ -27,13 +27,11 @@ import cn.damai.common.DamaiConstants;
 import cn.damai.common.askpermission.OnGrantListener;
 import cn.damai.common.badge.DMBadgeListener;
 import cn.damai.common.badge.bean.BadgeNodeItem;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.commonbusiness.calendar.bean.CalendarBean;
 import cn.damai.commonbusiness.calendar.request.CategoryCalendarRequest;
@@ -140,9 +138,9 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
     private boolean mIsHasBg = false;
     private boolean mIsScrollCurPage = true;
     private boolean mIsRefresh = false;
-    private HomeTopBgListener mHomeTopBgListener = new C1162b();
+    private HomeTopBgListener mHomeTopBgListener = new b();
     int lastTy = -2;
-    private IsRefreshListener mHomeIsRefreshListener = new C1163c();
+    private IsRefreshListener mHomeIsRefreshListener = new c();
     private int mUpdateHeaderInt = -1;
     List<String> rootNodes = new ArrayList() { // from class: cn.damai.homepage.ui.fragment.HomeTabFragment.18
         {
@@ -150,7 +148,7 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
             add(uq.f);
         }
     };
-    private DMBadgeListener mBadgeListener = new C1168h();
+    private DMBadgeListener mBadgeListener = new h();
 
     /* compiled from: Taobao */
     /* loaded from: classes14.dex */
@@ -159,24 +157,23 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.fragment.HomeTabFragment$a */
     /* loaded from: classes5.dex */
-    public class C1161a implements PageUtExecutor.UTKeyBuilderProvider {
+    public class a implements PageUtExecutor.UTKeyBuilderProvider {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1161a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.pageut.PageUtExecutor.UTKeyBuilderProvider
-        public C0525a.C0527b get(int i) {
+        public a.b get(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-27392381")) {
-                return (C0525a.C0527b) ipChange.ipc$dispatch("-27392381", new Object[]{this, Integer.valueOf(i)});
+                return (a.b) ipChange.ipc$dispatch("-27392381", new Object[]{this, Integer.valueOf(i)});
             }
             if (HomeTabFragment.this.mTabList != null) {
                 ScrollTitleBean scrollTitleBean = (ScrollTitleBean) cb2.b(HomeTabFragment.this.mTabList, i);
                 if (scrollTitleBean instanceof HomeTabBean) {
-                    return new C0525a.C0527b().i(((HomeTabBean) scrollTitleBean).spmb).a(z20.d());
+                    return new a.b().i(((HomeTabBean) scrollTitleBean).spmb).a(z20.d());
                 }
                 return null;
             }
@@ -185,12 +182,11 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.fragment.HomeTabFragment$b */
     /* loaded from: classes5.dex */
-    public class C1162b implements HomeTopBgListener {
+    public class b implements HomeTopBgListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1162b() {
+        b() {
         }
 
         @Override // cn.damai.homepage.ui.listener.HomeTopBgListener
@@ -222,12 +218,11 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.fragment.HomeTabFragment$c */
     /* loaded from: classes5.dex */
-    public class C1163c implements IsRefreshListener {
+    public class c implements IsRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1163c() {
+        c() {
         }
 
         @Override // cn.damai.tetris.listener.IsRefreshListener
@@ -242,13 +237,12 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.fragment.HomeTabFragment$d */
     /* loaded from: classes5.dex */
-    public class C1164d implements HomePageTopLottieHelper.OnLoadResultListener {
+    public class d implements HomePageTopLottieHelper.OnLoadResultListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ HomeHeaderBg a;
 
-        C1164d(HomeHeaderBg homeHeaderBg) {
+        d(HomeHeaderBg homeHeaderBg) {
             this.a = homeHeaderBg;
         }
 
@@ -290,21 +284,20 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.fragment.HomeTabFragment$e */
     /* loaded from: classes5.dex */
-    public class C1165e implements DMImageCreator.DMImageFailListener {
+    public class e implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C1165e(String str) {
+        e(String str) {
             this.a = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "519264932")) {
-                ipChange.ipc$dispatch("519264932", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("519264932", new Object[]{this, dVar});
             } else {
                 HomeTabFragment.this.updateTopColor(this.a);
             }
@@ -312,31 +305,30 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.fragment.HomeTabFragment$f */
     /* loaded from: classes5.dex */
-    public class C1166f implements DMImageCreator.DMImageSuccListener {
+    public class f implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1166f() {
+        f() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
         @SuppressLint({"NewApi"})
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             int intrinsicHeight;
             int i;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1054228167")) {
-                ipChange.ipc$dispatch("-1054228167", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("-1054228167", new Object[]{this, eVar});
                 return;
             }
-            Bitmap bitmap = c0502e.b;
+            Bitmap bitmap = eVar.b;
             if (bitmap != null) {
                 i = bitmap.getWidth();
                 intrinsicHeight = bitmap.getHeight();
                 HomeTabFragment.this.mHeaderbgImage.setImageBitmap(bitmap);
             } else {
-                Drawable drawable = c0502e.a;
+                Drawable drawable = eVar.a;
                 intrinsicHeight = drawable.getIntrinsicHeight();
                 int intrinsicWidth = drawable.getIntrinsicWidth();
                 HomeTabFragment.this.mHeaderbgImage.setBackground(drawable);
@@ -353,12 +345,11 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.fragment.HomeTabFragment$g */
     /* loaded from: classes5.dex */
-    public class C1167g implements Action<String> {
+    public class g implements Action<String> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1167g() {
+        g() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -376,12 +367,11 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.fragment.HomeTabFragment$h */
     /* loaded from: classes5.dex */
-    public class C1168h implements DMBadgeListener {
+    public class h implements DMBadgeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1168h() {
+        h() {
         }
 
         @Override // cn.damai.common.badge.DMBadgeListener
@@ -409,12 +399,11 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.fragment.HomeTabFragment$i */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1169i implements View.OnClickListener {
+    public class i implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1169i() {
+        i() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -429,12 +418,11 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.fragment.HomeTabFragment$j */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1170j implements View.OnClickListener {
+    public class j implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1170j() {
+        j() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -444,7 +432,7 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
                 ipChange.ipc$dispatch("-456244520", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(py0.I().A());
+            cn.damai.common.user.c.e().x(py0.I().A());
             Bundle bundle = new Bundle();
             bundle.putString("data", "home");
             bundle.putBoolean(MonitorType.SKIP, true);
@@ -453,12 +441,11 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.fragment.HomeTabFragment$k */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1171k implements View.OnClickListener {
+    public class k implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1171k() {
+        k() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -475,14 +462,14 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                C0529c.e().x(py0.I().F(charSequence, null));
+                cn.damai.common.user.c.e().x(py0.I().F(charSequence, null));
                 Bundle bundle = new Bundle();
                 bundle.putString(OneArchConstants.LayoutKey.KEY_WORDS, charSequence);
                 bundle.putString(YKActionSheet.ACTION_STYLE_DESCRIBE, charSequence);
                 DMNav.from(HomeTabFragment.this.getActivity()).withExtras(bundle).toUri(NavUri.b(cs.o));
             }
             charSequence = "";
-            C0529c.e().x(py0.I().F(charSequence, null));
+            cn.damai.common.user.c.e().x(py0.I().F(charSequence, null));
             Bundle bundle2 = new Bundle();
             bundle2.putString(OneArchConstants.LayoutKey.KEY_WORDS, charSequence);
             bundle2.putString(YKActionSheet.ACTION_STYLE_DESCRIBE, charSequence);
@@ -491,18 +478,16 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.fragment.HomeTabFragment$l */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1172l implements View.OnClickListener {
+    public class l implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.homepage.ui.fragment.HomeTabFragment$l$a */
         /* loaded from: classes5.dex */
-        public class C1173a implements OnGrantListener {
+        public class a implements OnGrantListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1173a() {
+            a() {
             }
 
             @Override // cn.damai.common.askpermission.OnGrantListener
@@ -518,7 +503,7 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
             }
         }
 
-        View$OnClickListenerC1172l() {
+        l() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -528,18 +513,17 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
                 ipChange.ipc$dispatch("-528631078", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(py0.I().D());
-            ir1.c(HomeTabFragment.this, false, mr1.CAMERA, "才能扫码～", new C1173a());
+            cn.damai.common.user.c.e().x(py0.I().D());
+            ir1.c(HomeTabFragment.this, false, mr1.CAMERA, "才能扫码～", new a());
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.fragment.HomeTabFragment$m */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1174m implements View.OnClickListener {
+    public class m implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1174m() {
+        m() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -556,12 +540,11 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.fragment.HomeTabFragment$n */
     /* loaded from: classes5.dex */
-    public class C1175n implements Action<Object> {
+    public class n implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1175n() {
+        n() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -579,12 +562,11 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.fragment.HomeTabFragment$o */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1176o implements View.OnClickListener {
+    public class o implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1176o() {
+        o() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -610,28 +592,28 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void changePage(int i) {
+    public void changePage(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "175691945")) {
-            ipChange.ipc$dispatch("175691945", new Object[]{this, Integer.valueOf(i)});
-        } else if (this.mOldPosition == i) {
+            ipChange.ipc$dispatch("175691945", new Object[]{this, Integer.valueOf(i2)});
+        } else if (this.mOldPosition == i2) {
         } else {
-            this.mOldPosition = i;
+            this.mOldPosition = i2;
             OnTabClickListener onTabClickListener = this.mTabClickListener;
             if (onTabClickListener != null) {
-                onTabClickListener.onTabSelect(i);
+                onTabClickListener.onTabSelect(i2);
             }
-            this.mScrollView.selectTitle(i);
+            this.mScrollView.selectTitle(i2);
             this.mOldSelectTab = this.mSelectTab;
-            this.mSelectTab = (HomeTabBean) this.mTabList.get(i);
-            this.mSelectTab2 = (HomeTabBean) this.mTabList.get(i);
+            this.mSelectTab = (HomeTabBean) this.mTabList.get(i2);
+            this.mSelectTab2 = (HomeTabBean) this.mTabList.get(i2);
             if (this.mSelectTab == null) {
                 return;
             }
-            this.mCurIndex = i;
+            this.mCurIndex = i2;
             resetHeader();
             utBuilder();
-            C0529c.e().x(xy0.g().h(this.mCurIndex, this.mSelectTab.name));
+            cn.damai.common.user.c.e().x(xy0.g().h(this.mCurIndex, this.mSelectTab.name));
         }
     }
 
@@ -723,15 +705,15 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
         this.certInfoView = (DMCertInfoTagView) this.rootView.findViewById(R$id.homepage_title_cert_info);
         this.mMessageIcon = (DMIconFontTextView) this.rootView.findViewById(R$id.homepage_title_message);
         this.mMessageTip = (TextView) this.rootView.findViewById(R$id.homepage_title_message_tip_point);
-        String d = z20.d();
-        this.mCurrentCity = d;
-        this.mSelectCity.setText(d);
+        String d2 = z20.d();
+        this.mCurrentCity = d2;
+        this.mSelectCity.setText(d2);
         this.mSearchText.setText("搜索明星 演出 赛事 场馆");
-        this.certInfoView.setOnClickListener(new View$OnClickListenerC1169i());
-        this.mSelectCityLayout.setOnClickListener(new View$OnClickListenerC1170j());
-        this.mSearchView.setOnClickListener(new View$OnClickListenerC1171k());
-        this.mScan.setOnClickListener(new View$OnClickListenerC1172l());
-        this.mMessage.setOnClickListener(new View$OnClickListenerC1174m());
+        this.certInfoView.setOnClickListener(new i());
+        this.mSelectCityLayout.setOnClickListener(new j());
+        this.mSearchView.setOnClickListener(new k());
+        this.mScan.setOnClickListener(new l());
+        this.mMessage.setOnClickListener(new m());
     }
 
     private boolean isShowTransBg() {
@@ -757,7 +739,7 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
         if (AndroidInstantRuntime.support(ipChange, "1711483180")) {
             ipChange.ipc$dispatch("1711483180", new Object[]{this});
         } else {
-            this.mDMMessage.b(DamaiConstants.CITY_CHANGED, new C1175n());
+            this.mDMMessage.b(DamaiConstants.CITY_CHANGED, new n());
         }
     }
 
@@ -766,7 +748,7 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
         if (AndroidInstantRuntime.support(ipChange, "-144549788")) {
             ipChange.ipc$dispatch("-144549788", new Object[]{this});
         } else {
-            this.mDMMessage.b(HomeMessage.SEARCH_WORD, new C1167g());
+            this.mDMMessage.b(HomeMessage.SEARCH_WORD, new g());
         }
     }
 
@@ -833,17 +815,17 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
 
     /* JADX INFO: Access modifiers changed from: private */
     public void saveTopBg(HomeHeaderBg homeHeaderBg) {
-        int i;
+        int i2;
         String str;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1111074758")) {
             ipChange.ipc$dispatch("-1111074758", new Object[]{this, homeHeaderBg});
             return;
         }
-        for (int i2 = 0; i2 < this.mTabList.size(); i2++) {
-            HomeTabBean homeTabBean = (HomeTabBean) this.mTabList.get(i2);
-            if (homeTabBean != null && (i = homeTabBean.type) == homeHeaderBg.type) {
-                if (i != 999 && i != 4 && i != 5 && i != 6) {
+        for (int i3 = 0; i3 < this.mTabList.size(); i3++) {
+            HomeTabBean homeTabBean = (HomeTabBean) this.mTabList.get(i3);
+            if (homeTabBean != null && (i2 = homeTabBean.type) == homeHeaderBg.type) {
+                if (i2 != 999 && i2 != 4 && i2 != 5 && i2 != 6) {
                     String str2 = homeTabBean.categoryId;
                     if (str2 != null && (str = homeHeaderBg.categoryId) != null && str2.equals(str)) {
                         homeTabBean.homeHeaderBg = homeHeaderBg;
@@ -855,22 +837,22 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
         }
     }
 
-    private void setBgTy(int i) {
+    private void setBgTy(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1459267778")) {
-            ipChange.ipc$dispatch("-1459267778", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-1459267778", new Object[]{this, Integer.valueOf(i2)});
             return;
         }
-        int i2 = this.lastTy;
-        if (i == i2) {
-            if (i2 == m62.a(this.mActivity, 1000.0f) && this.mLottieTopView.isAnimating()) {
+        int i3 = this.lastTy;
+        if (i2 == i3) {
+            if (i3 == m62.a(this.mActivity, 1000.0f) && this.mLottieTopView.isAnimating()) {
                 this.mLottieTopView.pauseAnimation();
                 return;
             }
             return;
         }
-        this.lastTy = i;
-        this.mTopBgLayout.setTranslationY(-i);
+        this.lastTy = i2;
+        this.mTopBgLayout.setTranslationY(-i2);
         if (this.mLottieTopView.isAnimating() || this.lastTy >= m62.a(this.mActivity, 1000.0f)) {
             return;
         }
@@ -885,7 +867,7 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
         }
         this.mTopBgLayout.setVisibility(0);
         this.mHeaderbgImage.setVisibility(8);
-        HomePageTopLottieHelper.n().r(getActivity(), homeHeaderBg.headLottie, homeHeaderBg.weiyiId, this.mTopBgView, this.mLottieTopView, new C1164d(homeHeaderBg));
+        HomePageTopLottieHelper.n().r(getActivity(), homeHeaderBg.headLottie, homeHeaderBg.weiyiId, this.mTopBgView, this.mLottieTopView, new d(homeHeaderBg));
     }
 
     private void setSearchBackground(Context context, View view, boolean z) {
@@ -943,7 +925,7 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
         }
         this.mHeaderbgImage.setLayoutParams(new FrameLayout.LayoutParams(-1, -2));
         if (!TextUtils.isEmpty(str)) {
-            C0504a.b().c(str).n(new C1166f()).e(new C1165e(str2)).f();
+            cn.damai.common.image.a.b().c(str).n(new f()).e(new e(str2)).f();
         } else {
             updateTopColor(str2);
         }
@@ -951,35 +933,35 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
 
     /* JADX INFO: Access modifiers changed from: private */
     @SuppressLint({"NewApi"})
-    public void setTopBgTranslationY(int i) {
+    public void setTopBgTranslationY(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "149313514")) {
-            ipChange.ipc$dispatch("149313514", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("149313514", new Object[]{this, Integer.valueOf(i2)});
             return;
         }
-        if (i > t60.a(getActivity(), 5.0f)) {
+        if (i2 > t60.a(getActivity(), 5.0f)) {
             this.mIsPageTop = false;
         } else {
             this.mIsPageTop = true;
         }
-        if (i >= 0) {
-            this.mHeaderbgImage.setTranslationY(-i);
+        if (i2 >= 0) {
+            this.mHeaderbgImage.setTranslationY(-i2);
         }
-        setBgTy(i);
+        setBgTy(i2);
     }
 
-    private void setViewPaperItem(int i) {
+    private void setViewPaperItem(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-111146718")) {
-            ipChange.ipc$dispatch("-111146718", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-111146718", new Object[]{this, Integer.valueOf(i2)});
             return;
         }
         try {
             Field declaredField = Class.forName("android.support.v4.view.ViewPager").getDeclaredField("mCurItem");
             declaredField.setAccessible(true);
-            declaredField.setInt(this.mViewPager, i);
-        } catch (Exception e) {
-            e.printStackTrace();
+            declaredField.setInt(this.mViewPager, i2);
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 
@@ -996,14 +978,14 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
             if (homeTabScrollView == null || (linearLayout = (LinearLayout) homeTabScrollView.getChildAt(0)) == null) {
                 return;
             }
-            for (int i = 0; i < linearLayout.getChildCount(); i++) {
-                View childAt = linearLayout.getChildAt(i);
-                if (childAt != null && (list = this.mTabList) != null && list.size() > i) {
-                    xy0.g().j(childAt, "home", i, ((HomeTabBean) this.mTabList.get(i)).name);
+            for (int i2 = 0; i2 < linearLayout.getChildCount(); i2++) {
+                View childAt = linearLayout.getChildAt(i2);
+                if (childAt != null && (list = this.mTabList) != null && list.size() > i2) {
+                    xy0.g().j(childAt, "home", i2, ((HomeTabBean) this.mTabList.get(i2)).name);
                 }
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 
@@ -1016,10 +998,10 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
         } else if (getActivity() == null) {
         } else {
             boolean isShowTransBg = isShowTransBg();
-            int i = !isShowTransBg;
-            int i2 = this.mUpdateHeaderInt;
-            if (i2 == -1 || i != i2) {
-                this.mUpdateHeaderInt = i;
+            int i2 = !isShowTransBg;
+            int i3 = this.mUpdateHeaderInt;
+            if (i3 == -1 || i2 != i3) {
+                this.mUpdateHeaderInt = i2;
                 if (Build.VERSION.SDK_INT < 23) {
                     kg2.f(getActivity(), false, R$color.black);
                 } else if (isShowTransBg != 0) {
@@ -1038,19 +1020,19 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
                     this.mSelectCity.setTextColor(-16777216);
                     DMIconFontTextView dMIconFontTextView = this.mSelectCityIcon;
                     Resources resources = getResources();
-                    int i3 = R$color.color_3C3F44;
-                    dMIconFontTextView.setTextColor(resources.getColor(i3));
+                    int i4 = R$color.color_3C3F44;
+                    dMIconFontTextView.setTextColor(resources.getColor(i4));
                     setSearchBackground(getActivity(), this.mSearchView, false);
-                    this.mMessageIcon.setTextColor(getResources().getColor(i3));
+                    this.mMessageIcon.setTextColor(getResources().getColor(i4));
                     this.certInfoView.setWhiteMode(false);
                 }
                 if (isShowTransBg != 0) {
                     View view = this.mTitleBar;
                     Resources resources2 = getResources();
-                    int i4 = R$drawable.transparent_bg;
-                    view.setBackground(resources2.getDrawable(i4));
-                    this.mTitleBar.findViewById(R$id.homepage_title_subll).setBackground(getResources().getDrawable(i4));
-                    this.mScrollView.setBackground(getResources().getDrawable(i4));
+                    int i5 = R$drawable.transparent_bg;
+                    view.setBackground(resources2.getDrawable(i5));
+                    this.mTitleBar.findViewById(R$id.homepage_title_subll).setBackground(getResources().getDrawable(i5));
+                    this.mScrollView.setBackground(getResources().getDrawable(i5));
                     this.mScrollView.enableWhite();
                     this.mScrollView.updateColor(R$color.color_ffffff, R$color.color_99FFFFFF);
                 } else {
@@ -1072,11 +1054,11 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
             ipChange.ipc$dispatch("993617608", new Object[]{this});
             return;
         }
-        String d = z20.d();
-        this.mCurrentCity = d;
+        String d2 = z20.d();
+        this.mCurrentCity = d2;
         TextView textView = this.mSelectCity;
         if (textView != null) {
-            textView.setText(d);
+            textView.setText(d2);
             this.mSelectCity.setTextSize(1, TextUtils.getTrimmedLength(this.mCurrentCity) >= 3 ? 16.0f : 20.0f);
         }
         TextView textView2 = this.mSearchText;
@@ -1092,13 +1074,13 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
             ipChange.ipc$dispatch("722820681", new Object[]{this, homeTabListBean});
         } else if (yy0.i(homeTabListBean)) {
             this.mTabList.clear();
-            List<HomeTabBean> c = yy0.c(homeTabListBean);
-            this.mHomeTabBeanList = c;
-            this.mCurIndex = yy0.e(this.mTabExtra, c);
-            for (int i = 0; i < this.mHomeTabBeanList.size(); i++) {
-                this.mTabList.add(this.mHomeTabBeanList.get(i));
+            List<HomeTabBean> c2 = yy0.c(homeTabListBean);
+            this.mHomeTabBeanList = c2;
+            this.mCurIndex = yy0.e(this.mTabExtra, c2);
+            for (int i2 = 0; i2 < this.mHomeTabBeanList.size(); i2++) {
+                this.mTabList.add(this.mHomeTabBeanList.get(i2));
             }
-            this.mScrollView.setFontColor(R$color.color_000000, R$color.color_9C9CA5).setFontSize(16, 20).setTitle(this.mTabList).setHeight(44).setDefaultPadding(11).setOnTitleClickListener(new View$OnClickListenerC1176o()).commit();
+            this.mScrollView.setFontColor(R$color.color_000000, R$color.color_9C9CA5).setFontSize(16, 20).setTitle(this.mTabList).setHeight(44).setDefaultPadding(11).setOnTitleClickListener(new o()).commit();
             this.mScrollView.selectTitle(this.mCurIndex);
             this.mSelectTab = (HomeTabBean) this.mTabList.get(this.mCurIndex);
             updateViewPager(this.mHomeTabBeanList);
@@ -1144,26 +1126,26 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
                 private static transient /* synthetic */ IpChange $ipChange;
 
                 @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener
-                public void onPageScrollStateChanged(int i) {
+                public void onPageScrollStateChanged(int i2) {
                     IpChange ipChange2 = $ipChange;
                     if (AndroidInstantRuntime.support(ipChange2, "-1171375803")) {
-                        ipChange2.ipc$dispatch("-1171375803", new Object[]{this, Integer.valueOf(i)});
+                        ipChange2.ipc$dispatch("-1171375803", new Object[]{this, Integer.valueOf(i2)});
                     }
                 }
 
                 @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener
                 @SuppressLint({"NewApi"})
-                public void onPageScrolled(int i, float f, int i2) {
+                public void onPageScrolled(int i2, float f2, int i3) {
                     IpChange ipChange2 = $ipChange;
                     if (AndroidInstantRuntime.support(ipChange2, "526441188")) {
-                        ipChange2.ipc$dispatch("526441188", new Object[]{this, Integer.valueOf(i), Float.valueOf(f), Integer.valueOf(i2)});
+                        ipChange2.ipc$dispatch("526441188", new Object[]{this, Integer.valueOf(i2), Float.valueOf(f2), Integer.valueOf(i3)});
                         return;
                     }
                     if (HomeTabFragment.this.mTopBgLayout.getVisibility() != 0) {
                         HomeTabFragment.this.mIsScrollCurPage = true;
                     }
-                    HomeTabFragment.this.mTopBgLayout.setTranslationX(-i2);
-                    if (i2 > 0) {
+                    HomeTabFragment.this.mTopBgLayout.setTranslationX(-i3);
+                    if (i3 > 0) {
                         HomeTabFragment.this.mIsScrollCurPage = false;
                     } else {
                         HomeTabFragment.this.mIsScrollCurPage = true;
@@ -1172,17 +1154,17 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
                 }
 
                 @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener
-                public void onPageSelected(int i) {
+                public void onPageSelected(int i2) {
                     IpChange ipChange2 = $ipChange;
                     if (AndroidInstantRuntime.support(ipChange2, "-442303792")) {
-                        ipChange2.ipc$dispatch("-442303792", new Object[]{this, Integer.valueOf(i)});
+                        ipChange2.ipc$dispatch("-442303792", new Object[]{this, Integer.valueOf(i2)});
                     } else {
-                        HomeTabFragment.this.changePage(i);
+                        HomeTabFragment.this.changePage(i2);
                     }
                 }
             });
             this.mViewPager.setCurrentItem(this.mCurIndex);
-            PageUtExecutor pageUtExecutor = new PageUtExecutor(this.mActivity, new C1161a());
+            PageUtExecutor pageUtExecutor = new PageUtExecutor(this.mActivity, new a());
             this.mViewPager.addOnPageChangeListener(pageUtExecutor);
             pageUtExecutor.a();
         }
@@ -1226,10 +1208,10 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
     }
 
     @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
-    public void handleError(int i) {
+    public void handleError(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1929748178")) {
-            ipChange.ipc$dispatch("1929748178", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("1929748178", new Object[]{this, Integer.valueOf(i2)});
         }
     }
 
@@ -1271,14 +1253,14 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
     }
 
     @Override // androidx.fragment.app.Fragment
-    public void onActivityResult(int i, int i2, Intent intent) {
+    public void onActivityResult(int i2, int i3, Intent intent) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1912340405")) {
-            ipChange.ipc$dispatch("-1912340405", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), intent});
+            ipChange.ipc$dispatch("-1912340405", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3), intent});
             return;
         }
-        super.onActivityResult(i, i2, intent);
-        if (i2 == -1 && i == 111) {
+        super.onActivityResult(i2, i3, intent);
+        if (i3 == -1 && i2 == 111) {
             DMNav.from(getActivity()).toUri(NavUri.b(cs.x));
         }
     }
@@ -1477,9 +1459,9 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
             return;
         }
         this.mTabExtra = tabExtra;
-        int e = yy0.e(tabExtra, this.mHomeTabBeanList);
-        this.mScrollView.selectTitle(e);
-        this.mViewPager.setCurrentItem(e);
+        int e2 = yy0.e(tabExtra, this.mHomeTabBeanList);
+        this.mScrollView.selectTitle(e2);
+        this.mViewPager.setCurrentItem(e2);
     }
 
     public void utBuilder() {
@@ -1488,7 +1470,7 @@ public class HomeTabFragment extends DamaiBaseMvpFragment implements HomeFragmen
             ipChange.ipc$dispatch("-1196838763", new Object[]{this});
         } else if (this.mSelectTab == null || this.mOldSelectTab == null) {
         } else {
-            C0529c.e().x(xy0.g().i(this.mOldSelectTab.spmb, this.mCurIndex, this.mSelectTab.name));
+            cn.damai.common.user.c.e().x(xy0.g().i(this.mOldSelectTab.spmb, this.mCurIndex, this.mSelectTab.name));
         }
     }
 }

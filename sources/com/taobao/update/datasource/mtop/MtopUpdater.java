@@ -10,7 +10,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.taobao.update.datasource.IUpdater;
 import com.taobao.update.datasource.data.UpdateDataListener;
 import com.taobao.update.datasource.logger.Log;
-import com.taobao.update.datasource.mtop.C6923a;
+import com.taobao.update.datasource.mtop.a;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,7 +23,7 @@ import tb.ub1;
 /* loaded from: classes11.dex */
 public class MtopUpdater implements IUpdater {
     public static final String DEGRADE = "degrade";
-    private C6923a a;
+    private a a;
     private DegradeListener c;
     private MtopDataListener d;
     private List<UpdateDataListener> b = new ArrayList();
@@ -44,7 +44,7 @@ public class MtopUpdater implements IUpdater {
     }
 
     public MtopUpdater(Application application, String str, String str2, boolean z) {
-        this.a = C6923a.C6925b.newBuilder(application).setTtid(str).setGroup(str2).setOutApk(z).setFrom(from()).build();
+        this.a = a.b.newBuilder(application).setTtid(str).setGroup(str2).setOutApk(z).setFrom(from()).build();
     }
 
     @Override // com.taobao.update.datasource.IUpdater

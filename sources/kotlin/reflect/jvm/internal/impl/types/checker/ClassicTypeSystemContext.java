@@ -5,9 +5,9 @@ import com.tencent.open.SocialConstants;
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
 import kotlin.reflect.jvm.internal.impl.builtins.PrimitiveType;
+import kotlin.reflect.jvm.internal.impl.builtins.b;
+import kotlin.reflect.jvm.internal.impl.builtins.c;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassKind;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
@@ -70,9 +70,8 @@ import tb.zj1;
 public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext, TypeSystemInferenceExtensionContext {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.types.checker.ClassicTypeSystemContext$a */
     /* loaded from: classes3.dex */
-    public static final class C8546a {
+    public static final class a {
         @NotNull
         public static TypeVariance A(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull TypeParameterMarker typeParameterMarker) {
             b41.i(classicTypeSystemContext, "this");
@@ -98,7 +97,7 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
         public static boolean C(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull KotlinTypeMarker kotlinTypeMarker) {
             b41.i(classicTypeSystemContext, "this");
             b41.i(kotlinTypeMarker, SocialConstants.PARAM_RECEIVER);
-            return TypeSystemInferenceExtensionContext.C8552a.d(classicTypeSystemContext, kotlinTypeMarker);
+            return TypeSystemInferenceExtensionContext.a.d(classicTypeSystemContext, kotlinTypeMarker);
         }
 
         public static boolean D(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull TypeParameterMarker typeParameterMarker, @Nullable TypeConstructorMarker typeConstructorMarker) {
@@ -137,7 +136,7 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
             b41.i(classicTypeSystemContext, "this");
             b41.i(typeConstructorMarker, SocialConstants.PARAM_RECEIVER);
             if (typeConstructorMarker instanceof TypeConstructor) {
-                return AbstractC8271b.u0((TypeConstructor) typeConstructorMarker, C8277c.C8278a.any);
+                return b.u0((TypeConstructor) typeConstructorMarker, c.a.any);
             }
             throw new IllegalArgumentException(("ClassicTypeSystemContext couldn't handle: " + typeConstructorMarker + AVFSCacheConstants.COMMA_SEP + a12.b(typeConstructorMarker.getClass())).toString());
         }
@@ -145,13 +144,13 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
         public static boolean H(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull KotlinTypeMarker kotlinTypeMarker) {
             b41.i(classicTypeSystemContext, "this");
             b41.i(kotlinTypeMarker, SocialConstants.PARAM_RECEIVER);
-            return TypeSystemInferenceExtensionContext.C8552a.e(classicTypeSystemContext, kotlinTypeMarker);
+            return TypeSystemInferenceExtensionContext.a.e(classicTypeSystemContext, kotlinTypeMarker);
         }
 
         public static boolean I(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull SimpleTypeMarker simpleTypeMarker) {
             b41.i(classicTypeSystemContext, "this");
             b41.i(simpleTypeMarker, SocialConstants.PARAM_RECEIVER);
-            return TypeSystemInferenceExtensionContext.C8552a.f(classicTypeSystemContext, simpleTypeMarker);
+            return TypeSystemInferenceExtensionContext.a.f(classicTypeSystemContext, simpleTypeMarker);
         }
 
         public static boolean J(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull TypeConstructorMarker typeConstructorMarker) {
@@ -177,7 +176,7 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
         public static boolean L(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull KotlinTypeMarker kotlinTypeMarker) {
             b41.i(classicTypeSystemContext, "this");
             b41.i(kotlinTypeMarker, SocialConstants.PARAM_RECEIVER);
-            return TypeSystemInferenceExtensionContext.C8552a.g(classicTypeSystemContext, kotlinTypeMarker);
+            return TypeSystemInferenceExtensionContext.a.g(classicTypeSystemContext, kotlinTypeMarker);
         }
 
         public static boolean M(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull TypeConstructorMarker typeConstructorMarker) {
@@ -192,7 +191,7 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
         public static boolean N(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull KotlinTypeMarker kotlinTypeMarker) {
             b41.i(classicTypeSystemContext, "this");
             b41.i(kotlinTypeMarker, SocialConstants.PARAM_RECEIVER);
-            return TypeSystemInferenceExtensionContext.C8552a.h(classicTypeSystemContext, kotlinTypeMarker);
+            return TypeSystemInferenceExtensionContext.a.h(classicTypeSystemContext, kotlinTypeMarker);
         }
 
         public static boolean O(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull KotlinTypeMarker kotlinTypeMarker) {
@@ -218,7 +217,7 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
         public static boolean Q(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull SimpleTypeMarker simpleTypeMarker) {
             b41.i(classicTypeSystemContext, "this");
             b41.i(simpleTypeMarker, SocialConstants.PARAM_RECEIVER);
-            return TypeSystemInferenceExtensionContext.C8552a.i(classicTypeSystemContext, simpleTypeMarker);
+            return TypeSystemInferenceExtensionContext.a.i(classicTypeSystemContext, simpleTypeMarker);
         }
 
         public static boolean R(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull TypeConstructorMarker typeConstructorMarker) {
@@ -242,7 +241,7 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
         public static boolean T(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull KotlinTypeMarker kotlinTypeMarker) {
             b41.i(classicTypeSystemContext, "this");
             b41.i(kotlinTypeMarker, SocialConstants.PARAM_RECEIVER);
-            return TypeSystemInferenceExtensionContext.C8552a.j(classicTypeSystemContext, kotlinTypeMarker);
+            return TypeSystemInferenceExtensionContext.a.j(classicTypeSystemContext, kotlinTypeMarker);
         }
 
         public static boolean U(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull SimpleTypeMarker simpleTypeMarker) {
@@ -257,14 +256,14 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
         public static boolean V(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull KotlinTypeMarker kotlinTypeMarker) {
             b41.i(classicTypeSystemContext, "this");
             b41.i(kotlinTypeMarker, SocialConstants.PARAM_RECEIVER);
-            return TypeSystemInferenceExtensionContext.C8552a.k(classicTypeSystemContext, kotlinTypeMarker);
+            return TypeSystemInferenceExtensionContext.a.k(classicTypeSystemContext, kotlinTypeMarker);
         }
 
         public static boolean W(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull TypeConstructorMarker typeConstructorMarker) {
             b41.i(classicTypeSystemContext, "this");
             b41.i(typeConstructorMarker, SocialConstants.PARAM_RECEIVER);
             if (typeConstructorMarker instanceof TypeConstructor) {
-                return AbstractC8271b.u0((TypeConstructor) typeConstructorMarker, C8277c.C8278a.nothing);
+                return b.u0((TypeConstructor) typeConstructorMarker, c.a.nothing);
             }
             throw new IllegalArgumentException(("ClassicTypeSystemContext couldn't handle: " + typeConstructorMarker + AVFSCacheConstants.COMMA_SEP + a12.b(typeConstructorMarker.getClass())).toString());
         }
@@ -288,7 +287,7 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
             b41.i(classicTypeSystemContext, "this");
             b41.i(simpleTypeMarker, SocialConstants.PARAM_RECEIVER);
             if (simpleTypeMarker instanceof z71) {
-                return AbstractC8271b.q0((z71) simpleTypeMarker);
+                return b.q0((z71) simpleTypeMarker);
             }
             throw new IllegalArgumentException(("ClassicTypeSystemContext couldn't handle: " + simpleTypeMarker + AVFSCacheConstants.COMMA_SEP + a12.b(simpleTypeMarker.getClass())).toString());
         }
@@ -451,7 +450,7 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
             b41.i(typeConstructorMarker, SocialConstants.PARAM_RECEIVER);
             if (typeConstructorMarker instanceof TypeConstructor) {
                 ClassifierDescriptor declarationDescriptor = ((TypeConstructor) typeConstructorMarker).getDeclarationDescriptor();
-                return declarationDescriptor != null && AbstractC8271b.z0(declarationDescriptor);
+                return declarationDescriptor != null && b.z0(declarationDescriptor);
             }
             throw new IllegalArgumentException(("ClassicTypeSystemContext couldn't handle: " + typeConstructorMarker + AVFSCacheConstants.COMMA_SEP + a12.b(typeConstructorMarker.getClass())).toString());
         }
@@ -494,7 +493,7 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
         public static SimpleTypeMarker i0(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull KotlinTypeMarker kotlinTypeMarker) {
             b41.i(classicTypeSystemContext, "this");
             b41.i(kotlinTypeMarker, SocialConstants.PARAM_RECEIVER);
-            return TypeSystemInferenceExtensionContext.C8552a.l(classicTypeSystemContext, kotlinTypeMarker);
+            return TypeSystemInferenceExtensionContext.a.l(classicTypeSystemContext, kotlinTypeMarker);
         }
 
         @Nullable
@@ -558,7 +557,7 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
         public static KotlinTypeMarker l0(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull KotlinTypeMarker kotlinTypeMarker) {
             b41.i(classicTypeSystemContext, "this");
             b41.i(kotlinTypeMarker, SocialConstants.PARAM_RECEIVER);
-            return TypeSystemCommonBackendContext.C8542a.a(classicTypeSystemContext, kotlinTypeMarker);
+            return TypeSystemCommonBackendContext.a.a(classicTypeSystemContext, kotlinTypeMarker);
         }
 
         @Nullable
@@ -566,7 +565,7 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
             b41.i(classicTypeSystemContext, "this");
             b41.i(simpleTypeMarker, SocialConstants.PARAM_RECEIVER);
             b41.i(typeConstructorMarker, "constructor");
-            return TypeSystemInferenceExtensionContext.C8552a.a(classicTypeSystemContext, simpleTypeMarker, typeConstructorMarker);
+            return TypeSystemInferenceExtensionContext.a.a(classicTypeSystemContext, simpleTypeMarker, typeConstructorMarker);
         }
 
         @NotNull
@@ -579,7 +578,7 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
         public static TypeArgumentMarker n(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull TypeArgumentListMarker typeArgumentListMarker, int i) {
             b41.i(classicTypeSystemContext, "this");
             b41.i(typeArgumentListMarker, SocialConstants.PARAM_RECEIVER);
-            return TypeSystemInferenceExtensionContext.C8552a.b(classicTypeSystemContext, typeArgumentListMarker, i);
+            return TypeSystemInferenceExtensionContext.a.b(classicTypeSystemContext, typeArgumentListMarker, i);
         }
 
         @NotNull
@@ -615,7 +614,7 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
         public static TypeArgumentMarker p(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull SimpleTypeMarker simpleTypeMarker, int i) {
             b41.i(classicTypeSystemContext, "this");
             b41.i(simpleTypeMarker, SocialConstants.PARAM_RECEIVER);
-            return TypeSystemInferenceExtensionContext.C8552a.c(classicTypeSystemContext, simpleTypeMarker, i);
+            return TypeSystemInferenceExtensionContext.a.c(classicTypeSystemContext, simpleTypeMarker, i);
         }
 
         @NotNull
@@ -666,7 +665,7 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
         public static int r0(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull TypeArgumentListMarker typeArgumentListMarker) {
             b41.i(classicTypeSystemContext, "this");
             b41.i(typeArgumentListMarker, SocialConstants.PARAM_RECEIVER);
-            return TypeSystemInferenceExtensionContext.C8552a.m(classicTypeSystemContext, typeArgumentListMarker);
+            return TypeSystemInferenceExtensionContext.a.m(classicTypeSystemContext, typeArgumentListMarker);
         }
 
         @Nullable
@@ -676,7 +675,7 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
             if (typeConstructorMarker instanceof TypeConstructor) {
                 ClassifierDescriptor declarationDescriptor = ((TypeConstructor) typeConstructorMarker).getDeclarationDescriptor();
                 Objects.requireNonNull(declarationDescriptor, "null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
-                return AbstractC8271b.P((ClassDescriptor) declarationDescriptor);
+                return b.P((ClassDescriptor) declarationDescriptor);
             }
             throw new IllegalArgumentException(("ClassicTypeSystemContext couldn't handle: " + typeConstructorMarker + AVFSCacheConstants.COMMA_SEP + a12.b(typeConstructorMarker.getClass())).toString());
         }
@@ -700,7 +699,7 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
             if (typeConstructorMarker instanceof TypeConstructor) {
                 ClassifierDescriptor declarationDescriptor = ((TypeConstructor) typeConstructorMarker).getDeclarationDescriptor();
                 Objects.requireNonNull(declarationDescriptor, "null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.ClassDescriptor");
-                return AbstractC8271b.S((ClassDescriptor) declarationDescriptor);
+                return b.S((ClassDescriptor) declarationDescriptor);
             }
             throw new IllegalArgumentException(("ClassicTypeSystemContext couldn't handle: " + typeConstructorMarker + AVFSCacheConstants.COMMA_SEP + a12.b(typeConstructorMarker.getClass())).toString());
         }
@@ -729,7 +728,7 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
         public static TypeConstructorMarker u0(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull KotlinTypeMarker kotlinTypeMarker) {
             b41.i(classicTypeSystemContext, "this");
             b41.i(kotlinTypeMarker, SocialConstants.PARAM_RECEIVER);
-            return TypeSystemInferenceExtensionContext.C8552a.n(classicTypeSystemContext, kotlinTypeMarker);
+            return TypeSystemInferenceExtensionContext.a.n(classicTypeSystemContext, kotlinTypeMarker);
         }
 
         @Nullable
@@ -786,7 +785,7 @@ public interface ClassicTypeSystemContext extends TypeSystemCommonBackendContext
         public static SimpleTypeMarker x0(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull KotlinTypeMarker kotlinTypeMarker) {
             b41.i(classicTypeSystemContext, "this");
             b41.i(kotlinTypeMarker, SocialConstants.PARAM_RECEIVER);
-            return TypeSystemInferenceExtensionContext.C8552a.o(classicTypeSystemContext, kotlinTypeMarker);
+            return TypeSystemInferenceExtensionContext.a.o(classicTypeSystemContext, kotlinTypeMarker);
         }
 
         @Nullable

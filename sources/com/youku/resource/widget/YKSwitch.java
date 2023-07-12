@@ -19,10 +19,10 @@ public class YKSwitch extends AppCompatCheckBox implements YKCustomizedView {
         if (attributeSet != null) {
             TypedArray obtainStyledAttributes = context.getTheme().obtainStyledAttributes(attributeSet, R.styleable.YKSwitch, 0, 0);
             if (obtainStyledAttributes.getInt(R.styleable.YKSwitch_switch_style, 0) == 0) {
-                setBackgroundResource(R.C8072drawable.swtich_style_big);
+                setBackgroundResource(R.drawable.swtich_style_big);
                 setButtonDrawable(getResources().getDrawable(17170445));
             } else {
-                setBackgroundResource(R.C8072drawable.swtich_style_small);
+                setBackgroundResource(R.drawable.swtich_style_small);
                 setButtonDrawable(getResources().getDrawable(17170445));
             }
             obtainStyledAttributes.recycle();

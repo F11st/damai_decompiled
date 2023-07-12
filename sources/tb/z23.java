@@ -8,7 +8,7 @@ import com.heytap.msp.push.mode.BaseMode;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class z23 extends b53 {
-    @Override // com.heytap.mcssdk.d.InterfaceC5465d
+    @Override // com.heytap.mcssdk.d.d
     public BaseMode a(Context context, int i, Intent intent) {
         if (4105 == i) {
             return b(intent, i);

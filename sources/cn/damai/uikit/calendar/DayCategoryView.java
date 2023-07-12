@@ -56,16 +56,16 @@ public class DayCategoryView extends LinearLayout {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public void applyFacade(C2490a c2490a) {
+    public void applyFacade(a aVar) {
         IpChange ipChange = $ipChange;
         boolean z = true;
         if (AndroidInstantRuntime.support(ipChange, "1595706176")) {
-            ipChange.ipc$dispatch("1595706176", new Object[]{this, c2490a});
-        } else if (c2490a == null) {
+            ipChange.ipc$dispatch("1595706176", new Object[]{this, aVar});
+        } else if (aVar == null) {
         } else {
             boolean z2 = this.mDayView.isInMonth() && this.mDayView.isInRange();
             boolean equals = this.mDayView.getDate().equals(CalendarDay.from(new Date()));
-            if (c2490a.f()) {
+            if (aVar.f()) {
                 this.mMarkProject.setVisibility(0);
                 if (z2) {
                     this.mMarkProject.setBackgroundResource(R$drawable.red_radius);
@@ -75,10 +75,10 @@ public class DayCategoryView extends LinearLayout {
             } else {
                 this.mMarkProject.setVisibility(4);
             }
-            if (c2490a.g()) {
+            if (aVar.g()) {
                 this.mMarkClass.setText("休");
                 this.mMarkClass.setBackgroundResource(R$drawable.icon_calendar_ban);
-            } else if (c2490a.h()) {
+            } else if (aVar.h()) {
                 this.mMarkClass.setText("班");
                 this.mMarkClass.setBackgroundResource(R$drawable.icon_calendar_xiu);
             } else {
@@ -89,19 +89,19 @@ public class DayCategoryView extends LinearLayout {
                 this.mMarkHoliday.setVisibility(0);
                 this.mMarkHoliday.setText("今天");
                 this.mMarkHoliday.setTextColor(ContextCompat.getColor(this.mContext, R$color.day_default_day));
-            } else if (TextUtils.isEmpty(c2490a.e())) {
+            } else if (TextUtils.isEmpty(aVar.e())) {
                 this.mMarkHoliday.setVisibility(4);
             } else {
                 this.mMarkHoliday.setVisibility(0);
-                this.mMarkHoliday.setText(c2490a.e());
+                this.mMarkHoliday.setText(aVar.e());
                 if (z2) {
                     this.mMarkHoliday.setTextColor(ContextCompat.getColor(this.mContext, R$color.coupon_item_price_red));
                 } else {
                     this.mMarkHoliday.setTextColor(ContextCompat.getColor(this.mContext, R$color.text_ddd));
                 }
             }
-            this.mDayView.applyFacade(c2490a);
-            if (c2490a.n() && z2) {
+            this.mDayView.applyFacade(aVar);
+            if (aVar.n() && z2) {
                 this.mDayView.setTextColor(ContextCompat.getColor(this.mContext, R$color.coupon_item_price_red));
             }
         }

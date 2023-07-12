@@ -73,10 +73,9 @@ public class Elevator {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.view.Elevator$a  reason: invalid class name */
     /* loaded from: classes15.dex */
-    class animationAnimation$AnimationListenerC3064a implements Animation.AnimationListener {
-        animationAnimation$AnimationListenerC3064a() {
+    class a implements Animation.AnimationListener {
+        a() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -96,10 +95,9 @@ public class Elevator {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.view.Elevator$b  reason: invalid class name */
     /* loaded from: classes15.dex */
-    class animationAnimation$AnimationListenerC3065b implements Animation.AnimationListener {
-        animationAnimation$AnimationListenerC3065b() {
+    class b implements Animation.AnimationListener {
+        b() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -119,10 +117,9 @@ public class Elevator {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.view.Elevator$c */
     /* loaded from: classes15.dex */
-    class View$OnTouchListenerC3066c implements View.OnTouchListener {
-        View$OnTouchListenerC3066c() {
+    class c implements View.OnTouchListener {
+        c() {
         }
 
         @Override // android.view.View.OnTouchListener
@@ -138,10 +135,9 @@ public class Elevator {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.view.Elevator$d */
     /* loaded from: classes5.dex */
-    class C3067d implements WXHorizontalScrollView.ScrollViewListener {
-        C3067d() {
+    class d implements WXHorizontalScrollView.ScrollViewListener {
+        d() {
         }
 
         @Override // com.taobao.weex.ui.view.WXHorizontalScrollView.ScrollViewListener
@@ -153,10 +149,9 @@ public class Elevator {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.view.Elevator$e */
     /* loaded from: classes15.dex */
-    class View$OnClickListenerC3068e implements View.OnClickListener {
-        View$OnClickListenerC3068e() {
+    class e implements View.OnClickListener {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -169,12 +164,11 @@ public class Elevator {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.view.Elevator$f */
     /* loaded from: classes15.dex */
-    class View$OnClickListenerC3069f implements View.OnClickListener {
+    class f implements View.OnClickListener {
         final /* synthetic */ int[] a;
 
-        View$OnClickListenerC3069f(int[] iArr) {
+        f(int[] iArr) {
             this.a = iArr;
         }
 
@@ -206,10 +200,9 @@ public class Elevator {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.view.Elevator$g */
     /* loaded from: classes15.dex */
-    class View$OnClickListenerC3070g implements View.OnClickListener {
-        View$OnClickListenerC3070g() {
+    class g implements View.OnClickListener {
+        g() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -262,11 +255,11 @@ public class Elevator {
         });
         this.m.setTouchable(true);
         this.m.setFocusable(true);
-        this.v.setAnimationListener(new animationAnimation$AnimationListenerC3064a());
-        this.w.setAnimationListener(new animationAnimation$AnimationListenerC3065b());
-        this.m.getContentView().setOnTouchListener(new View$OnTouchListenerC3066c());
-        this.f.setScrollViewListener(new C3067d());
-        ((LinearLayout) inflate.findViewById(R$id.downMongolia)).setOnClickListener(new View$OnClickListenerC3068e());
+        this.v.setAnimationListener(new a());
+        this.w.setAnimationListener(new b());
+        this.m.getContentView().setOnTouchListener(new c());
+        this.f.setScrollViewListener(new d());
+        ((LinearLayout) inflate.findViewById(R$id.downMongolia)).setOnClickListener(new e());
         GridView gridView = (GridView) inflate.findViewById(i);
         this.g = gridView;
         gridView.setAdapter((ListAdapter) this.h);
@@ -279,7 +272,7 @@ public class Elevator {
                 Elevator.this.l();
             }
         });
-        this.i.setOnClickListener(new View$OnClickListenerC3069f(new int[2]));
+        this.i.setOnClickListener(new f(new int[2]));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -346,7 +339,7 @@ public class Elevator {
             elevatorText.setLayoutParams(layoutParams);
             this.t.add(elevatorText);
             elevatorText.setTag(ud0Var);
-            elevatorText.setOnClickListener(new View$OnClickListenerC3070g());
+            elevatorText.setOnClickListener(new g());
             this.b.addView(elevatorText);
             i++;
         }

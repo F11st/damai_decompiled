@@ -53,9 +53,8 @@ public class WaterfallLayout implements IEleSectionHeightListener, TBSwipeRefres
     public boolean z;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.WaterfallLayout$b */
     /* loaded from: classes12.dex */
-    public static class C6509b {
+    public static class b {
         private int a = 1;
         private int b = -1;
         private int c;
@@ -82,81 +81,80 @@ public class WaterfallLayout implements IEleSectionHeightListener, TBSwipeRefres
             return new WaterfallLayout(this.a, this.b, this.c, this.d, this.e, this.f, this.g, this.h, this.i, this.j, this.k, this.l, this.m, this.n, this.o, this.p, this.q, this.r, this.s, this.t, this.u);
         }
 
-        public C6509b b(int i) {
+        public b b(int i) {
             this.a = i;
             return this;
         }
 
-        public C6509b c(int i) {
+        public b c(int i) {
             this.c = i;
             return this;
         }
 
-        public C6509b d(boolean z) {
+        public b d(boolean z) {
             this.p = z;
             return this;
         }
 
-        public C6509b e(DXNestedScrollerView dXNestedScrollerView) {
+        public b e(DXNestedScrollerView dXNestedScrollerView) {
             this.r = dXNestedScrollerView;
             return this;
         }
 
-        public C6509b f(boolean z) {
+        public b f(boolean z) {
             this.s = z;
             return this;
         }
 
-        public C6509b g(boolean z) {
+        public b g(boolean z) {
             this.l = z;
             return this;
         }
 
-        public C6509b h(int i) {
+        public b h(int i) {
             this.d = i;
             return this;
         }
 
-        public C6509b i(int i) {
+        public b i(int i) {
             this.j = i;
             return this;
         }
 
-        public C6509b j(int i) {
+        public b j(int i) {
             this.k = i;
             return this;
         }
 
-        public C6509b k(boolean z) {
+        public b k(boolean z) {
             this.t = z;
             return this;
         }
 
-        public C6509b l(String[] strArr) {
+        public b l(String[] strArr) {
             this.n = strArr;
             return this;
         }
 
-        public C6509b m(int i) {
+        public b m(int i) {
             this.e = i;
             return this;
         }
 
-        public C6509b n(TBAbsRefreshHeader tBAbsRefreshHeader) {
+        public b n(TBAbsRefreshHeader tBAbsRefreshHeader) {
             this.q = tBAbsRefreshHeader;
             return this;
         }
 
-        public C6509b o(int i) {
+        public b o(int i) {
             this.u = i;
             return this;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.WaterfallLayout$c */
     /* loaded from: classes11.dex */
-    public static class C6510c extends te {
+    public static class c extends te {
         @Override // tb.te
         public boolean g() {
             return super.g() && !"VTR-AL00".equals(Build.getMODEL());
@@ -297,10 +295,10 @@ public class WaterfallLayout implements IEleSectionHeightListener, TBSwipeRefres
         this.u.k(baseStickyAdapter);
     }
 
-    public void j(C6510c c6510c) {
+    public void j(c cVar) {
         WaterfallLayoutRelativeLayout waterfallLayoutRelativeLayout = this.s;
         if (waterfallLayoutRelativeLayout != null) {
-            waterfallLayoutRelativeLayout.setClipRadiusHandler(c6510c);
+            waterfallLayoutRelativeLayout.setClipRadiusHandler(cVar);
         }
     }
 

@@ -9,9 +9,8 @@ public class bi2 {
     private static final int[] b = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
 
     /* compiled from: Taobao */
-    /* renamed from: tb.bi2$a */
     /* loaded from: classes5.dex */
-    static /* synthetic */ class C8966a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -49,7 +48,7 @@ public class bi2 {
     }
 
     public static String a(CssEnum cssEnum, int i) {
-        switch (C8966a.a[cssEnum.ordinal()]) {
+        switch (a.a[cssEnum.ordinal()]) {
             case 1:
                 return String.valueOf(i) + ". ";
             case 2:

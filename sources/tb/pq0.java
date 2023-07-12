@@ -8,28 +8,27 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes6.dex */
 public final class pq0 {
     @NotNull
-    public static final C9564a Companion = new C9564a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final ls0 a;
     @NotNull
     private final br0 b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.pq0$a */
     /* loaded from: classes6.dex */
-    public static final class C9564a {
-        private C9564a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9564a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
-        public static /* synthetic */ pq0 b(C9564a c9564a, JSONObject jSONObject, int i, Object obj) {
+        public static /* synthetic */ pq0 b(a aVar, JSONObject jSONObject, int i, Object obj) {
             if ((i & 1) != 0) {
                 jSONObject = new JSONObject();
             }
-            return c9564a.a(jSONObject);
+            return aVar.a(jSONObject);
         }
 
         @NotNull

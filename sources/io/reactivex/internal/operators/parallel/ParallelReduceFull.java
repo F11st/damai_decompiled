@@ -1,13 +1,13 @@
 package io.reactivex.internal.operators.parallel;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.subscriptions.DeferredScalarSubscription;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
-import io.reactivex.parallel.AbstractC8161a;
+import io.reactivex.parallel.a;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 import org.reactivestreams.Subscriber;
@@ -17,9 +17,9 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ParallelReduceFull<T> extends AbstractC8147b<T> {
+public final class ParallelReduceFull<T> extends b<T> {
     final BiFunction<T, T, T> reducer;
-    final AbstractC8161a<? extends T> source;
+    final a<? extends T> source;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
@@ -212,12 +212,12 @@ public final class ParallelReduceFull<T> extends AbstractC8147b<T> {
         }
     }
 
-    public ParallelReduceFull(AbstractC8161a<? extends T> abstractC8161a, BiFunction<T, T, T> biFunction) {
-        this.source = abstractC8161a;
+    public ParallelReduceFull(a<? extends T> aVar, BiFunction<T, T, T> biFunction) {
+        this.source = aVar;
         this.reducer = biFunction;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         ParallelReduceFullMainSubscriber parallelReduceFullMainSubscriber = new ParallelReduceFullMainSubscriber(subscriber, this.source.parallelism(), this.reducer);
         subscriber.onSubscribe(parallelReduceFullMainSubscriber);

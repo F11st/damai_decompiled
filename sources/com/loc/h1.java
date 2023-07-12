@@ -49,7 +49,7 @@ public final class h1 {
 
     public final t43 c(u73 u73Var) throws Throwable {
         if (this.c) {
-            u73Var.f(bl.EnumC5802c.HTTPS);
+            u73Var.f(bl.c.HTTPS);
         }
         return bg.c(u73Var);
     }

@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.completable;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
 import io.reactivex.Scheduler;
+import io.reactivex.a;
 import io.reactivex.disposables.Disposable;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
@@ -13,7 +13,7 @@ import tb.jm;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class CompletableTimeout extends AbstractC8146a {
+public final class CompletableTimeout extends a {
     final CompletableSource other;
     final Scheduler scheduler;
     final CompletableSource source;
@@ -116,7 +116,7 @@ public final class CompletableTimeout extends AbstractC8146a {
         this.other = completableSource2;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     public void subscribeActual(CompletableObserver completableObserver) {
         jm jmVar = new jm();
         completableObserver.onSubscribe(jmVar);

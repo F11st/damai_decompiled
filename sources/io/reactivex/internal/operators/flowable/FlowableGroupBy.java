@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.annotations.Nullable;
-import io.reactivex.flowables.AbstractC8156a;
+import io.reactivex.b;
+import io.reactivex.flowables.a;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.functions.ObjectHelper;
@@ -30,7 +30,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableGroupBy<T, K, V> extends AbstractFlowableWithUpstream<T, AbstractC8156a<K, V>> {
+public final class FlowableGroupBy<T, K, V> extends AbstractFlowableWithUpstream<T, a<K, V>> {
     final int bufferSize;
     final boolean delayError;
     final Function<? super T, ? extends K> keySelector;
@@ -58,10 +58,10 @@ public final class FlowableGroupBy<T, K, V> extends AbstractFlowableWithUpstream
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    public static final class GroupBySubscriber<T, K, V> extends BasicIntQueueSubscription<AbstractC8156a<K, V>> implements FlowableSubscriber<T> {
+    public static final class GroupBySubscriber<T, K, V> extends BasicIntQueueSubscription<a<K, V>> implements FlowableSubscriber<T> {
         static final Object NULL_KEY = new Object();
         private static final long serialVersionUID = -3688291656102519502L;
-        final Subscriber<? super AbstractC8156a<K, V>> actual;
+        final Subscriber<? super a<K, V>> actual;
         final int bufferSize;
         final boolean delayError;
         volatile boolean done;
@@ -70,14 +70,14 @@ public final class FlowableGroupBy<T, K, V> extends AbstractFlowableWithUpstream
         final Map<Object, GroupedUnicast<K, V>> groups;
         final Function<? super T, ? extends K> keySelector;
         boolean outputFused;
-        final SpscLinkedArrayQueue<AbstractC8156a<K, V>> queue;
+        final SpscLinkedArrayQueue<a<K, V>> queue;
         Subscription s;
         final Function<? super T, ? extends V> valueSelector;
         final AtomicBoolean cancelled = new AtomicBoolean();
         final AtomicLong requested = new AtomicLong();
         final AtomicInteger groupCount = new AtomicInteger(1);
 
-        public GroupBySubscriber(Subscriber<? super AbstractC8156a<K, V>> subscriber, Function<? super T, ? extends K> function, Function<? super T, ? extends V> function2, int i, boolean z, Map<Object, GroupedUnicast<K, V>> map, Queue<GroupedUnicast<K, V>> queue) {
+        public GroupBySubscriber(Subscriber<? super a<K, V>> subscriber, Function<? super T, ? extends K> function, Function<? super T, ? extends V> function2, int i, boolean z, Map<Object, GroupedUnicast<K, V>> map, Queue<GroupedUnicast<K, V>> queue) {
             this.actual = subscriber;
             this.keySelector = function;
             this.valueSelector = function2;
@@ -145,8 +145,8 @@ public final class FlowableGroupBy<T, K, V> extends AbstractFlowableWithUpstream
 
         void drainFused() {
             Throwable th;
-            SpscLinkedArrayQueue<AbstractC8156a<K, V>> spscLinkedArrayQueue = this.queue;
-            Subscriber<? super AbstractC8156a<K, V>> subscriber = this.actual;
+            SpscLinkedArrayQueue<a<K, V>> spscLinkedArrayQueue = this.queue;
+            Subscriber<? super a<K, V>> subscriber = this.actual;
             int i = 1;
             while (!this.cancelled.get()) {
                 boolean z = this.done;
@@ -176,8 +176,8 @@ public final class FlowableGroupBy<T, K, V> extends AbstractFlowableWithUpstream
 
         void drainNormal() {
             int i;
-            SpscLinkedArrayQueue<AbstractC8156a<K, V>> spscLinkedArrayQueue = this.queue;
-            Subscriber<? super AbstractC8156a<K, V>> subscriber = this.actual;
+            SpscLinkedArrayQueue<a<K, V>> spscLinkedArrayQueue = this.queue;
+            Subscriber<? super a<K, V>> subscriber = this.actual;
             int i2 = 1;
             do {
                 long j = this.requested.get();
@@ -188,7 +188,7 @@ public final class FlowableGroupBy<T, K, V> extends AbstractFlowableWithUpstream
                         break;
                     }
                     boolean z = this.done;
-                    AbstractC8156a<K, V> poll = spscLinkedArrayQueue.poll();
+                    a<K, V> poll = spscLinkedArrayQueue.poll();
                     boolean z2 = poll == null;
                     if (checkTerminated(z, z2, subscriber, spscLinkedArrayQueue)) {
                         return;
@@ -259,7 +259,7 @@ public final class FlowableGroupBy<T, K, V> extends AbstractFlowableWithUpstream
             if (this.done) {
                 return;
             }
-            SpscLinkedArrayQueue<AbstractC8156a<K, V>> spscLinkedArrayQueue = this.queue;
+            SpscLinkedArrayQueue<a<K, V>> spscLinkedArrayQueue = this.queue;
             try {
                 K apply = this.keySelector.apply(t);
                 boolean z = false;
@@ -329,7 +329,7 @@ public final class FlowableGroupBy<T, K, V> extends AbstractFlowableWithUpstream
 
         @Override // io.reactivex.internal.fuseable.SimpleQueue
         @Nullable
-        public AbstractC8156a<K, V> poll() {
+        public a<K, V> poll() {
             return this.queue.poll();
         }
 
@@ -350,7 +350,7 @@ public final class FlowableGroupBy<T, K, V> extends AbstractFlowableWithUpstream
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    public static final class GroupedUnicast<K, T> extends AbstractC8156a<K, T> {
+    public static final class GroupedUnicast<K, T> extends a<K, T> {
         final State<T, K> state;
 
         protected GroupedUnicast(K k, State<T, K> state) {
@@ -374,7 +374,7 @@ public final class FlowableGroupBy<T, K, V> extends AbstractFlowableWithUpstream
             this.state.onNext(t);
         }
 
-        @Override // io.reactivex.AbstractC8147b
+        @Override // io.reactivex.b
         protected void subscribeActual(Subscriber<? super T> subscriber) {
             this.state.subscribe(subscriber);
         }
@@ -614,8 +614,8 @@ public final class FlowableGroupBy<T, K, V> extends AbstractFlowableWithUpstream
         }
     }
 
-    public FlowableGroupBy(AbstractC8147b<T> abstractC8147b, Function<? super T, ? extends K> function, Function<? super T, ? extends V> function2, int i, boolean z, Function<? super Consumer<Object>, ? extends Map<K, Object>> function3) {
-        super(abstractC8147b);
+    public FlowableGroupBy(b<T> bVar, Function<? super T, ? extends K> function, Function<? super T, ? extends V> function2, int i, boolean z, Function<? super Consumer<Object>, ? extends Map<K, Object>> function3) {
+        super(bVar);
         this.keySelector = function;
         this.valueSelector = function2;
         this.bufferSize = i;
@@ -623,8 +623,8 @@ public final class FlowableGroupBy<T, K, V> extends AbstractFlowableWithUpstream
         this.mapFactory = function3;
     }
 
-    @Override // io.reactivex.AbstractC8147b
-    protected void subscribeActual(Subscriber<? super AbstractC8156a<K, V>> subscriber) {
+    @Override // io.reactivex.b
+    protected void subscribeActual(Subscriber<? super a<K, V>> subscriber) {
         ConcurrentLinkedQueue concurrentLinkedQueue;
         Map<K, Object> apply;
         try {

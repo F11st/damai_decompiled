@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import cn.damai.common.user.C0525a;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.homepage.R$id;
@@ -25,12 +25,11 @@ public class StarSecondActivity extends SimpleBaseActivity implements ScrollAlph
     private View navBar;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.star.second.StarSecondActivity$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2709a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2709a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -155,8 +154,8 @@ public class StarSecondActivity extends SimpleBaseActivity implements ScrollAlph
             str = "";
         }
         initFragment(str2, str);
-        findViewById(R$id.star_second_activity_goback).setOnClickListener(new View$OnClickListenerC2709a());
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i("content_extend"));
+        findViewById(R$id.star_second_activity_goback).setOnClickListener(new a());
+        setDamaiUTKeyBuilder(new a.b().i("content_extend"));
     }
 
     @Override // cn.damai.common.app.base.BaseActivity

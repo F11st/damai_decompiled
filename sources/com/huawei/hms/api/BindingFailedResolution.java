@@ -28,7 +28,7 @@ import com.youku.danmaku.engine.danmaku.model.android.DanmakuFactory;
 public class BindingFailedResolution implements ServiceConnection, IBridgeActivityDelegate {
     private static final Object g = new Object();
     private Activity a;
-    private C5515d c;
+    private d c;
     private FailedBinderCallBack.BinderCallBack d;
     private boolean b = true;
     private Handler e = null;
@@ -36,10 +36,9 @@ public class BindingFailedResolution implements ServiceConnection, IBridgeActivi
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.api.BindingFailedResolution$a */
     /* loaded from: classes10.dex */
-    public class C5512a implements Handler.Callback {
-        C5512a() {
+    public class a implements Handler.Callback {
+        a() {
         }
 
         @Override // android.os.Handler.Callback
@@ -54,10 +53,9 @@ public class BindingFailedResolution implements ServiceConnection, IBridgeActivi
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.api.BindingFailedResolution$b */
     /* loaded from: classes10.dex */
-    public class C5513b implements Handler.Callback {
-        C5513b() {
+    public class b implements Handler.Callback {
+        b() {
         }
 
         @Override // android.os.Handler.Callback
@@ -73,10 +71,9 @@ public class BindingFailedResolution implements ServiceConnection, IBridgeActivi
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.api.BindingFailedResolution$c */
     /* loaded from: classes10.dex */
-    public class C5514c implements AbstractDialog.Callback {
-        C5514c() {
+    public class c implements AbstractDialog.Callback {
+        c() {
         }
 
         @Override // com.huawei.hms.ui.AbstractDialog.Callback
@@ -96,10 +93,9 @@ public class BindingFailedResolution implements ServiceConnection, IBridgeActivi
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.api.BindingFailedResolution$d */
     /* loaded from: classes10.dex */
-    public static class C5515d extends AbstractPromptDialog {
-        private C5515d() {
+    public static class d extends AbstractPromptDialog {
+        private d() {
         }
 
         @Override // com.huawei.hms.ui.AbstractDialog
@@ -112,7 +108,7 @@ public class BindingFailedResolution implements ServiceConnection, IBridgeActivi
             return ResourceLoaderUtil.getString("hms_confirm");
         }
 
-        /* synthetic */ C5515d(C5512a c5512a) {
+        /* synthetic */ d(a aVar) {
             this();
         }
     }
@@ -130,7 +126,7 @@ public class BindingFailedResolution implements ServiceConnection, IBridgeActivi
         if (handler != null) {
             handler.removeMessages(3);
         } else {
-            this.f = new Handler(Looper.getMainLooper(), new C5512a());
+            this.f = new Handler(Looper.getMainLooper(), new a());
         }
         this.f.sendEmptyMessageDelayed(3, DanmakuFactory.MIN_DANMAKU_DURATION);
     }
@@ -140,14 +136,14 @@ public class BindingFailedResolution implements ServiceConnection, IBridgeActivi
         if (activity == null || activity.isFinishing()) {
             return;
         }
-        C5515d c5515d = this.c;
-        if (c5515d == null) {
-            this.c = new C5515d(null);
+        d dVar = this.c;
+        if (dVar == null) {
+            this.c = new d(null);
         } else {
-            c5515d.dismiss();
+            dVar.dismiss();
         }
         HMSLog.i("BindingFailedResolution", "showPromptdlg to resolve conn error");
-        this.c.show(activity, new C5514c());
+        this.c.show(activity, new c());
     }
 
     protected Activity getActivity() {
@@ -166,7 +162,7 @@ public class BindingFailedResolution implements ServiceConnection, IBridgeActivi
             this.d = FailedBinderCallBack.getInstance().getCallBack(Long.valueOf(intent.getLongExtra(FailedBinderCallBack.CALLER_ID, 0L)));
         }
         this.a = activity;
-        C5526a.b.a(activity);
+        com.huawei.hms.api.a.b.a(activity);
         c();
         a(activity);
     }
@@ -174,7 +170,7 @@ public class BindingFailedResolution implements ServiceConnection, IBridgeActivi
     @Override // com.huawei.hms.activity.IBridgeActivityDelegate
     public void onBridgeActivityDestroy() {
         a();
-        C5526a.b.b(this.a);
+        com.huawei.hms.api.a.b.b(this.a);
         this.a = null;
     }
 
@@ -256,7 +252,7 @@ public class BindingFailedResolution implements ServiceConnection, IBridgeActivi
         if (handler != null) {
             handler.removeMessages(2);
         } else {
-            this.e = new Handler(Looper.getMainLooper(), new C5513b());
+            this.e = new Handler(Looper.getMainLooper(), new b());
         }
         this.e.sendEmptyMessageDelayed(2, DanmakuFactory.DEFAULT_DANMAKU_DURATION_V);
     }

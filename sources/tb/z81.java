@@ -8,7 +8,6 @@ import android.text.Spanned;
 import android.text.style.LeadingMarginSpan;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.huawei.hms.opendevice.AbstractC5658c;
 import com.meizu.cloud.pushsdk.notification.model.NotifyType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -19,7 +18,7 @@ import tb.a01;
 public final class z81 implements LeadingMarginSpan {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C10017a Companion = new C10017a(null);
+    public static final a Companion = new a(null);
     private static final float c;
     private static final int d;
     @Nullable
@@ -28,21 +27,20 @@ public final class z81 implements LeadingMarginSpan {
     private final int b = -13421773;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.z81$a */
     /* loaded from: classes7.dex */
-    public static final class C10017a {
-        private C10017a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C10017a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     static {
-        a01.C8891a c8891a = a01.Companion;
-        c = c8891a.a();
-        d = ((Integer) Float.valueOf(c8891a.a() / 8)).intValue();
+        a01.a aVar = a01.Companion;
+        c = aVar.a();
+        d = ((Integer) Float.valueOf(aVar.a() / 8)).intValue();
     }
 
     @Override // android.text.style.LeadingMarginSpan
@@ -52,7 +50,7 @@ public final class z81 implements LeadingMarginSpan {
             ipChange.ipc$dispatch("1550113519", new Object[]{this, canvas, paint, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4), Integer.valueOf(i5), charSequence, Integer.valueOf(i6), Integer.valueOf(i7), Boolean.valueOf(z), layout});
             return;
         }
-        b41.i(canvas, AbstractC5658c.a);
+        b41.i(canvas, com.huawei.hms.opendevice.c.a);
         b41.i(paint, "p");
         b41.i(charSequence, "text");
         b41.i(layout, NotifyType.LIGHTS);

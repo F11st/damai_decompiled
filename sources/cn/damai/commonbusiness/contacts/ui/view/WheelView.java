@@ -34,7 +34,7 @@ public class WheelView extends ScrollView {
     List<String> items;
     int newCheck;
     int offset;
-    private C0631b onWheelViewListener;
+    private b onWheelViewListener;
     Paint paint;
     private int scrollDirection;
     Runnable scrollerTask;
@@ -44,12 +44,11 @@ public class WheelView extends ScrollView {
     private LinearLayout views;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.ui.view.WheelView$a */
     /* loaded from: classes14.dex */
-    public class C0630a extends Drawable {
+    public class a extends Drawable {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0630a() {
+        a() {
         }
 
         @Override // android.graphics.drawable.Drawable
@@ -94,9 +93,8 @@ public class WheelView extends ScrollView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.ui.view.WheelView$b */
     /* loaded from: classes14.dex */
-    public static class C0631b {
+    public static class b {
         private static transient /* synthetic */ IpChange $ipChange;
 
         public void a(int i, String str) {
@@ -274,10 +272,10 @@ public class WheelView extends ScrollView {
             ipChange.ipc$dispatch("-1988100759", new Object[]{this});
             return;
         }
-        C0631b c0631b = this.onWheelViewListener;
-        if (c0631b != null) {
+        b bVar = this.onWheelViewListener;
+        if (bVar != null) {
             int i = this.selectedIndex;
-            c0631b.a(i, this.items.get(i));
+            bVar.a(i, this.items.get(i));
         }
     }
 
@@ -326,9 +324,9 @@ public class WheelView extends ScrollView {
         return AndroidInstantRuntime.support(ipChange, "-1286251647") ? ((Integer) ipChange.ipc$dispatch("-1286251647", new Object[]{this})).intValue() : this.offset;
     }
 
-    public C0631b getOnWheelViewListener() {
+    public b getOnWheelViewListener() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1129140990") ? (C0631b) ipChange.ipc$dispatch("-1129140990", new Object[]{this}) : this.onWheelViewListener;
+        return AndroidInstantRuntime.support(ipChange, "-1129140990") ? (b) ipChange.ipc$dispatch("-1129140990", new Object[]{this}) : this.onWheelViewListener;
     }
 
     public int getSeletedIndex() {
@@ -397,7 +395,7 @@ public class WheelView extends ScrollView {
             paint.setColor(Color.parseColor("#f2f3f4"));
             this.paint.setStrokeWidth(dip2px(0.5f));
         }
-        super.setBackgroundDrawable(new C0630a());
+        super.setBackgroundDrawable(new a());
     }
 
     public void setItems(List<String> list) {
@@ -427,12 +425,12 @@ public class WheelView extends ScrollView {
         }
     }
 
-    public void setOnWheelViewListener(C0631b c0631b) {
+    public void setOnWheelViewListener(b bVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1889936224")) {
-            ipChange.ipc$dispatch("1889936224", new Object[]{this, c0631b});
+            ipChange.ipc$dispatch("1889936224", new Object[]{this, bVar});
         } else {
-            this.onWheelViewListener = c0631b;
+            this.onWheelViewListener = bVar;
         }
     }
 

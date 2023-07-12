@@ -1,14 +1,14 @@
 package io.reactivex.internal.operators.completable;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.a;
 import io.reactivex.disposables.Disposable;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class CompletableFromObservable<T> extends AbstractC8146a {
+public final class CompletableFromObservable<T> extends a {
     final ObservableSource<T> observable;
 
     /* compiled from: Taobao */
@@ -44,7 +44,7 @@ public final class CompletableFromObservable<T> extends AbstractC8146a {
         this.observable = observableSource;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     protected void subscribeActual(CompletableObserver completableObserver) {
         this.observable.subscribe(new CompletableFromObservableObserver(completableObserver));
     }

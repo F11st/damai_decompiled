@@ -12,8 +12,8 @@ import okio.ByteString;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public final class Layout extends Message<Layout, C6114a> {
-    public static final ProtoAdapter<Layout> ADAPTER = new C6115b();
+public final class Layout extends Message<Layout, a> {
+    public static final ProtoAdapter<Layout> ADAPTER = new b();
     public static final Float DEFAULT_HEIGHT;
     public static final Float DEFAULT_WIDTH;
     public static final Float DEFAULT_X;
@@ -29,9 +29,8 @@ public final class Layout extends Message<Layout, C6114a> {
     public final Float y;
 
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.proto.Layout$a */
     /* loaded from: classes10.dex */
-    public static final class C6114a extends Message.Builder<Layout, C6114a> {
+    public static final class a extends Message.Builder<Layout, a> {
         public Float a;
         public Float b;
         public Float c;
@@ -43,56 +42,55 @@ public final class Layout extends Message<Layout, C6114a> {
             return new Layout(this.a, this.b, this.c, this.d, super.buildUnknownFields());
         }
 
-        public C6114a b(Float f) {
+        public a b(Float f) {
             this.d = f;
             return this;
         }
 
-        public C6114a c(Float f) {
+        public a c(Float f) {
             this.c = f;
             return this;
         }
 
-        public C6114a d(Float f) {
+        public a d(Float f) {
             this.a = f;
             return this;
         }
 
-        public C6114a e(Float f) {
+        public a e(Float f) {
             this.b = f;
             return this;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.proto.Layout$b */
     /* loaded from: classes10.dex */
-    private static final class C6115b extends ProtoAdapter<Layout> {
-        C6115b() {
+    private static final class b extends ProtoAdapter<Layout> {
+        b() {
             super(FieldEncoding.LENGTH_DELIMITED, Layout.class);
         }
 
         @Override // com.youku.squareup.wire.ProtoAdapter
         /* renamed from: a */
         public Layout decode(ProtoReader protoReader) throws IOException {
-            C6114a c6114a = new C6114a();
+            a aVar = new a();
             long beginMessage = protoReader.beginMessage();
             while (true) {
                 int nextTag = protoReader.nextTag();
                 if (nextTag == -1) {
                     protoReader.endMessage(beginMessage);
-                    return c6114a.build();
+                    return aVar.build();
                 } else if (nextTag == 1) {
-                    c6114a.d(ProtoAdapter.FLOAT.decode(protoReader));
+                    aVar.d(ProtoAdapter.FLOAT.decode(protoReader));
                 } else if (nextTag == 2) {
-                    c6114a.e(ProtoAdapter.FLOAT.decode(protoReader));
+                    aVar.e(ProtoAdapter.FLOAT.decode(protoReader));
                 } else if (nextTag == 3) {
-                    c6114a.c(ProtoAdapter.FLOAT.decode(protoReader));
+                    aVar.c(ProtoAdapter.FLOAT.decode(protoReader));
                 } else if (nextTag != 4) {
                     FieldEncoding peekFieldEncoding = protoReader.peekFieldEncoding();
-                    c6114a.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
+                    aVar.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
                 } else {
-                    c6114a.b(ProtoAdapter.FLOAT.decode(protoReader));
+                    aVar.b(ProtoAdapter.FLOAT.decode(protoReader));
                 }
             }
         }
@@ -217,13 +215,13 @@ public final class Layout extends Message<Layout, C6114a> {
 
     @Override // com.youku.squareup.wire.Message
     /* renamed from: newBuilder */
-    public Message.Builder<Layout, C6114a> newBuilder2() {
-        C6114a c6114a = new C6114a();
-        c6114a.a = this.x;
-        c6114a.b = this.y;
-        c6114a.c = this.width;
-        c6114a.d = this.height;
-        c6114a.addUnknownFields(unknownFields());
-        return c6114a;
+    public Message.Builder<Layout, a> newBuilder2() {
+        a aVar = new a();
+        aVar.a = this.x;
+        aVar.b = this.y;
+        aVar.c = this.width;
+        aVar.d = this.height;
+        aVar.addUnknownFields(unknownFields());
+        return aVar;
     }
 }

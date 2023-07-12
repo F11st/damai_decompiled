@@ -3,7 +3,7 @@ package androidx.lifecycle;
 import androidx.lifecycle.Lifecycle;
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
+import kotlin.coroutines.intrinsics.b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function2;
@@ -49,7 +49,7 @@ public final class LifecycleCoroutineScopeImpl$register$1 extends SuspendLambda 
     @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
     @Nullable
     public final Object invokeSuspend(@NotNull Object obj) {
-        C8234b.d();
+        b.d();
         if (this.label == 0) {
             i32.b(obj);
             CoroutineScope coroutineScope = (CoroutineScope) this.L$0;

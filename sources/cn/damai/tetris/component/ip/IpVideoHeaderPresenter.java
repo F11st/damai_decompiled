@@ -10,8 +10,8 @@ import cn.damai.tetris.core.BaseSection;
 import cn.damai.tetris.core.TrackInfo;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import tb.C9548pb;
 import tb.ja;
+import tb.pb;
 import tb.ys;
 
 /* compiled from: Taobao */
@@ -119,8 +119,8 @@ public class IpVideoHeaderPresenter extends BasePresenter<IpVideoHeaderContract.
         int i = R$id.cover_half_bottom;
         if (rootView.findViewById(i) != null) {
             if (getModel().getVideoInfo() != null && getModel().getTrackInfo() != null) {
-                getModel().getTrackInfo().put(C9548pb.PRE_CONTENT_ID, (Object) getModel().getVideoInfo().getVid());
-                getModel().getTrackInfo().put(C9548pb.PRE_CONTENT_TYPE, (Object) "video");
+                getModel().getTrackInfo().put(pb.PRE_CONTENT_ID, (Object) getModel().getVideoInfo().getVid());
+                getModel().getTrackInfo().put(pb.PRE_CONTENT_TYPE, (Object) "video");
             }
             userTrackExpose(getView().getRootView().findViewById(i), "video");
         }

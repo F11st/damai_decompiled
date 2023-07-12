@@ -23,12 +23,12 @@ class Utils$2 extends Thread {
         try {
             try {
                 try {
-                    file2 = new File(C7926c.a);
+                    file2 = new File(c.a);
                     try {
                         if (!file2.exists()) {
-                            C7924a.b("HttpCommunication.Utils", "make dir " + file2.mkdir());
+                            a.b("HttpCommunication.Utils", "make dir " + file2.mkdir());
                         }
-                        file = new File(C7926c.a, this.val$filename);
+                        file = new File(c.a, this.val$filename);
                         try {
                             FileOutputStream fileOutputStream2 = new FileOutputStream(file);
                             try {
@@ -37,11 +37,11 @@ class Utils$2 extends Thread {
                             } catch (Exception e2) {
                                 e = e2;
                                 fileOutputStream = fileOutputStream2;
-                                C7924a.a("HttpCommunication.Utils", "saveUrlCacheToLocal()", e);
+                                a.a("HttpCommunication.Utils", "saveUrlCacheToLocal()", e);
                                 if (fileOutputStream != null) {
                                     fileOutputStream.close();
                                 }
-                                C7926c.a(file2, file);
+                                c.a(file2, file);
                             } catch (Throwable th) {
                                 th = th;
                                 fileOutputStream = fileOutputStream2;
@@ -49,7 +49,7 @@ class Utils$2 extends Thread {
                                     try {
                                         fileOutputStream.close();
                                     } catch (Exception e3) {
-                                        C7924a.a("HttpCommunication.Utils", "saveUrlCacheToLocal()", e3);
+                                        a.a("HttpCommunication.Utils", "saveUrlCacheToLocal()", e3);
                                     }
                                 }
                                 throw th;
@@ -70,8 +70,8 @@ class Utils$2 extends Thread {
                 file = null;
             }
         } catch (Exception e7) {
-            C7924a.a("HttpCommunication.Utils", "saveUrlCacheToLocal()", e7);
+            a.a("HttpCommunication.Utils", "saveUrlCacheToLocal()", e7);
         }
-        C7926c.a(file2, file);
+        c.a(file2, file);
     }
 }

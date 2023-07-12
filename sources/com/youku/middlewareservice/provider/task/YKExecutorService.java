@@ -2,7 +2,7 @@ package com.youku.middlewareservice.provider.task;
 
 import android.content.SharedPreferences;
 import androidx.annotation.NonNull;
-import com.alibaba.android.onescheduler.task.C3242a;
+import com.alibaba.android.onescheduler.task.a;
 import com.youku.middlewareservice.provider.info.AppInfoProviderProxy;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
@@ -56,7 +56,7 @@ public class YKExecutorService extends ThreadPoolExecutor {
             if (um1.g().f(this.groupName) == null) {
                 um1.g().a(this.groupName, 10);
             }
-            C3242a taskGroup = um1.g().h().setRunnable(runnable).setTaskGroup(this.groupName);
+            a taskGroup = um1.g().h().setRunnable(runnable).setTaskGroup(this.groupName);
             if (runnable instanceof YKRunnable) {
                 YKRunnable yKRunnable = (YKRunnable) runnable;
                 sb = yKRunnable.getName();

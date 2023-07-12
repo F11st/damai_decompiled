@@ -5,8 +5,8 @@ import com.uc.webview.export.internal.SDKFactory;
 import com.uc.webview.export.internal.interfaces.IGlobalSettings;
 import com.uc.webview.export.internal.interfaces.InvokeObject;
 import com.uc.webview.export.internal.interfaces.UCMobileWebKit;
-import com.uc.webview.export.internal.utility.C7329e;
 import com.uc.webview.export.internal.utility.Log;
+import com.uc.webview.export.internal.utility.e;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -155,7 +155,7 @@ public abstract class UCSettings implements InvokeObject {
     }
 
     public static void updateDynamicSettings(String str, String str2) {
-        C7329e.a(str, str2);
+        e.a(str, str2);
     }
 
     public void setCameraType(int i) {

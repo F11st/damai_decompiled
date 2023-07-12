@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.functions.BooleanSupplier;
 import io.reactivex.internal.subscriptions.SubscriptionArbiter;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -81,12 +81,12 @@ public final class FlowableRepeatUntil<T> extends AbstractFlowableWithUpstream<T
         }
     }
 
-    public FlowableRepeatUntil(AbstractC8147b<T> abstractC8147b, BooleanSupplier booleanSupplier) {
-        super(abstractC8147b);
+    public FlowableRepeatUntil(b<T> bVar, BooleanSupplier booleanSupplier) {
+        super(bVar);
         this.until = booleanSupplier;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super T> subscriber) {
         SubscriptionArbiter subscriptionArbiter = new SubscriptionArbiter();
         subscriber.onSubscribe(subscriptionArbiter);

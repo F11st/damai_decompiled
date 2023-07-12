@@ -13,15 +13,14 @@ public abstract class ClassLoaderSavedState implements Parcelable {
     private Parcelable mSuperState;
     public static final ClassLoaderSavedState EMPTY_STATE = new ClassLoaderSavedState() { // from class: cn.damai.baseview.grid.ClassLoaderSavedState.1
     };
-    public static final Parcelable.Creator<ClassLoaderSavedState> CREATOR = new C0286a();
+    public static final Parcelable.Creator<ClassLoaderSavedState> CREATOR = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.grid.ClassLoaderSavedState$a */
     /* loaded from: classes.dex */
-    public static final class C0286a implements Parcelable.Creator<ClassLoaderSavedState> {
+    public static final class a implements Parcelable.Creator<ClassLoaderSavedState> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0286a() {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

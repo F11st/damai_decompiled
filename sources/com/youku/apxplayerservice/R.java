@@ -12,11 +12,10 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.apxplayerservice.R$drawable */
     /* loaded from: classes8.dex */
-    public static final class C7799drawable {
-        public static final int edit_bg_shape = com.youku.player.fat.R.C8056drawable.edit_bg_shape;
-        public static final int tag_background = com.youku.player.fat.R.C8056drawable.tag_background;
+    public static final class drawable {
+        public static final int edit_bg_shape = com.youku.player.fat.R.drawable.edit_bg_shape;
+        public static final int tag_background = com.youku.player.fat.R.drawable.tag_background;
     }
 
     /* compiled from: Taobao */
@@ -36,12 +35,11 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.apxplayerservice.R$layout */
     /* loaded from: classes8.dex */
-    public static final class C7800layout {
-        public static final int edit_layout = com.youku.player.fat.R.C8057layout.edit_layout;
-        public static final int grid_item = com.youku.player.fat.R.C8057layout.grid_item;
-        public static final int pop_view = com.youku.player.fat.R.C8057layout.pop_view;
+    public static final class layout {
+        public static final int edit_layout = com.youku.player.fat.R.layout.edit_layout;
+        public static final int grid_item = com.youku.player.fat.R.layout.grid_item;
+        public static final int pop_view = com.youku.player.fat.R.layout.pop_view;
     }
 
     /* compiled from: Taobao */

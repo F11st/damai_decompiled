@@ -12,16 +12,15 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public abstract class o02 implements JavaType {
     @NotNull
-    public static final C9490a Factory = new C9490a(null);
+    public static final a Factory = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.o02$a */
     /* loaded from: classes3.dex */
-    public static final class C9490a {
-        private C9490a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9490a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -55,7 +54,7 @@ public abstract class o02 implements JavaType {
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotationOwner
     @Nullable
     public JavaAnnotation findAnnotation(@NotNull hp0 hp0Var) {
-        return JavaType.C8359a.a(this, hp0Var);
+        return JavaType.a.a(this, hp0Var);
     }
 
     public int hashCode() {

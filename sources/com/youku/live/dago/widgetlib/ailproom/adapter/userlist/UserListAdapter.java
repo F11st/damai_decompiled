@@ -65,17 +65,17 @@ public class UserListAdapter extends RecyclerView.Adapter<UserViewHolder> {
             UIUtil.setGone(imageView, false);
             UIUtil.setGone(textView, false);
             if (i == 0) {
-                imageView.setBackgroundResource(R.C7941drawable.dago_pgc_rank_one);
-                textView.setBackgroundResource(R.C7941drawable.dago_pgc_rank_num_bg_one);
+                imageView.setBackgroundResource(R.drawable.dago_pgc_rank_one);
+                textView.setBackgroundResource(R.drawable.dago_pgc_rank_num_bg_one);
             } else if (i == 1) {
-                imageView.setBackgroundResource(R.C7941drawable.dago_pgc_rank_two);
-                textView.setBackgroundResource(R.C7941drawable.dago_pgc_rank_num_bg_two);
+                imageView.setBackgroundResource(R.drawable.dago_pgc_rank_two);
+                textView.setBackgroundResource(R.drawable.dago_pgc_rank_num_bg_two);
             } else if (i != 2) {
-                textView.setBackgroundResource(R.C7941drawable.dago_pgc_rank_num_bg_normal);
+                textView.setBackgroundResource(R.drawable.dago_pgc_rank_num_bg_normal);
                 UIUtil.setGone(imageView, true);
             } else {
-                imageView.setBackgroundResource(R.C7941drawable.dago_pgc_rank_three);
-                textView.setBackgroundResource(R.C7941drawable.dago_pgc_rank_num_bg_three);
+                imageView.setBackgroundResource(R.drawable.dago_pgc_rank_three);
+                textView.setBackgroundResource(R.drawable.dago_pgc_rank_num_bg_three);
             }
             textView.setText(Util.formatNumber2(j));
         } else {
@@ -214,6 +214,6 @@ public class UserListAdapter extends RecyclerView.Adapter<UserViewHolder> {
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1027335568") ? (UserViewHolder) ipChange.ipc$dispatch("-1027335568", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new UserViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.C7942layout.dago_pgc_item_userlist_image, viewGroup, false));
+        return AndroidInstantRuntime.support(ipChange, "-1027335568") ? (UserViewHolder) ipChange.ipc$dispatch("-1027335568", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new UserViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.dago_pgc_item_userlist_image, viewGroup, false));
     }
 }

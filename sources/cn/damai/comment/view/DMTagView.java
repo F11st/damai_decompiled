@@ -10,8 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.RequiresApi;
 import cn.damai.comment.view.DMTagView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.uikit.banner.sub.RoundRadiusImageView;
@@ -89,10 +89,10 @@ public final class DMTagView extends LinearLayout {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setDmBaseData$lambda-0  reason: not valid java name */
-    public static final void m9setDmBaseData$lambda0(DMTagView dMTagView, Function0 function0, DMImageCreator.C0502e c0502e) {
+    public static final void m9setDmBaseData$lambda0(DMTagView dMTagView, Function0 function0, DMImageCreator.e eVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1129689960")) {
-            ipChange.ipc$dispatch("-1129689960", new Object[]{dMTagView, function0, c0502e});
+            ipChange.ipc$dispatch("-1129689960", new Object[]{dMTagView, function0, eVar});
             return;
         }
         b41.i(dMTagView, "this$0");
@@ -101,7 +101,7 @@ public final class DMTagView extends LinearLayout {
             b41.A("mDmImgIv");
             roundRadiusImageView = null;
         }
-        roundRadiusImageView.setImageBitmap(c0502e.b);
+        roundRadiusImageView.setImageBitmap(eVar.b);
         if (function0 != null) {
             function0.invoke();
         }
@@ -109,10 +109,10 @@ public final class DMTagView extends LinearLayout {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setDmBaseData$lambda-1  reason: not valid java name */
-    public static final void m10setDmBaseData$lambda1(Function0 function0, DMImageCreator.C0501d c0501d) {
+    public static final void m10setDmBaseData$lambda1(Function0 function0, DMImageCreator.d dVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1411580142")) {
-            ipChange.ipc$dispatch("-1411580142", new Object[]{function0, c0501d});
+            ipChange.ipc$dispatch("-1411580142", new Object[]{function0, dVar});
         } else if (function0 != null) {
             function0.invoke();
         }
@@ -131,15 +131,15 @@ public final class DMTagView extends LinearLayout {
             return;
         }
         if (!TextUtils.isEmpty(str)) {
-            C0504a.b().c(str).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.rs
+            a.b().c(str).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.rs
                 @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-                public final void onSuccess(DMImageCreator.C0502e c0502e) {
-                    DMTagView.m9setDmBaseData$lambda0(DMTagView.this, function0, c0502e);
+                public final void onSuccess(DMImageCreator.e eVar) {
+                    DMTagView.m9setDmBaseData$lambda0(DMTagView.this, function0, eVar);
                 }
             }).e(new DMImageCreator.DMImageFailListener() { // from class: tb.qs
                 @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-                public final void onFail(DMImageCreator.C0501d c0501d) {
-                    DMTagView.m10setDmBaseData$lambda1(Function0.this, c0501d);
+                public final void onFail(DMImageCreator.d dVar) {
+                    DMTagView.m10setDmBaseData$lambda1(Function0.this, dVar);
                 }
             }).f();
         } else if (function0 != null) {
@@ -282,7 +282,7 @@ public final class DMTagView extends LinearLayout {
         }
         TextView textView2 = null;
         if (!TextUtils.isEmpty(str) && this.mDmImgIv != null) {
-            DMImageCreator c = C0504a.b().c(str);
+            DMImageCreator c = a.b().c(str);
             RoundRadiusImageView roundRadiusImageView = this.mDmImgIv;
             if (roundRadiusImageView == null) {
                 b41.A("mDmImgIv");

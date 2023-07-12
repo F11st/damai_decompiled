@@ -27,7 +27,7 @@ import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.tao.remotebusiness.js.MtopJSBridge;
 import in.srain.cube.views.ptr.PtrFrameLayout;
 import java.util.ArrayList;
-import tb.C9548pb;
+import tb.pb;
 import tb.t3;
 import tb.z20;
 import tb.z91;
@@ -52,15 +52,14 @@ public class Wanna2SeeFragment extends Fragment implements PtrChildHandler {
     private int tabIndex;
     private boolean isFirst = true;
     private int mLastCheckId = -1;
-    private t3 mLoginListener = new C0983a();
+    private t3 mLoginListener = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.fragment.Wanna2SeeFragment$a */
     /* loaded from: classes.dex */
-    public class C0983a extends t3 {
+    public class a extends t3 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0983a() {
+        a() {
         }
 
         @Override // tb.t3, cn.damai.login.havana.ILoginListener
@@ -78,12 +77,11 @@ public class Wanna2SeeFragment extends Fragment implements PtrChildHandler {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.fragment.Wanna2SeeFragment$b */
     /* loaded from: classes.dex */
-    public class C0984b implements OnWannaBeanListener {
+    public class b implements OnWannaBeanListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0984b() {
+        b() {
         }
 
         @Override // cn.damai.commonbusiness.wannasee.listener.OnWannaBeanListener
@@ -177,9 +175,9 @@ public class Wanna2SeeFragment extends Fragment implements PtrChildHandler {
         }
         StatePagerAdapter statePagerAdapter = this.mAdapter;
         if (statePagerAdapter != null) {
-            Fragment a = statePagerAdapter.a();
-            if (a instanceof PtrChildHandler) {
-                return (PtrChildHandler) a;
+            Fragment a2 = statePagerAdapter.a();
+            if (a2 instanceof PtrChildHandler) {
+                return (PtrChildHandler) a2;
             }
             return null;
         }
@@ -259,27 +257,27 @@ public class Wanna2SeeFragment extends Fragment implements PtrChildHandler {
                     z91 u = z91.u();
                     String str = this.mUtPageName;
                     PageType pageType = PageType.RECORD;
-                    C9548pb.j(u.E(str, pageType.tabIndex, pageType.tabName));
+                    pb.j(u.E(str, pageType.tabIndex, pageType.tabName));
                 } else if (i == R$id.show_btn) {
                     z91 u2 = z91.u();
                     String str2 = this.mUtPageName;
                     PageType pageType2 = PageType.SHOW;
-                    C9548pb.j(u2.E(str2, pageType2.tabIndex, pageType2.tabName));
+                    pb.j(u2.E(str2, pageType2.tabIndex, pageType2.tabName));
                 } else if (i == R$id.compilation_btn) {
                     z91 u3 = z91.u();
                     String str3 = this.mUtPageName;
                     PageType pageType3 = PageType.COMPILATION;
-                    C9548pb.j(u3.E(str3, pageType3.tabIndex, pageType3.tabName));
+                    pb.j(u3.E(str3, pageType3.tabIndex, pageType3.tabName));
                 } else if (i == R$id.script_btn) {
                     z91 u4 = z91.u();
                     String str4 = this.mUtPageName;
                     PageType pageType4 = PageType.SCRIPT;
-                    C9548pb.j(u4.E(str4, pageType4.tabIndex, pageType4.tabName));
+                    pb.j(u4.E(str4, pageType4.tabIndex, pageType4.tabName));
                 } else if (i == R$id.valid_show_btn) {
                     z91 u5 = z91.u();
                     String str5 = this.mUtPageName;
                     PageType pageType5 = PageType.VALID_SHOW;
-                    C9548pb.j(u5.E(str5, pageType5.tabIndex, pageType5.tabName));
+                    pb.j(u5.E(str5, pageType5.tabIndex, pageType5.tabName));
                 }
             }
             this.isFirst = false;
@@ -394,10 +392,10 @@ public class Wanna2SeeFragment extends Fragment implements PtrChildHandler {
         instance4.setUtPageName(this.mUtPageName, this.mUserId, this.isEnableDeleteItem, this.isNeedLogin);
         instance5.setUtPageName(this.mUtPageName, this.mUserId, this.isEnableDeleteItem, this.isNeedLogin);
         instance3.setUtPageName(this.mUtPageName, this.mUserId, this.isEnableDeleteItem, this.isNeedLogin);
-        C0984b c0984b = new C0984b();
-        instance.setListener(c0984b);
-        instance2.setListener(c0984b);
-        instance4.setListener(c0984b);
+        b bVar = new b();
+        instance.setListener(bVar);
+        instance2.setListener(bVar);
+        instance4.setListener(bVar);
         arrayList.add(instance);
         arrayList.add(instance2);
         arrayList.add(instance3);

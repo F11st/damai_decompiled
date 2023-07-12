@@ -11,27 +11,23 @@ import com.alibaba.security.biometrics.service.constants.GlobalErrorCode;
 import com.alibaba.security.biometrics.service.listener.OnRetryListener;
 import com.alibaba.security.biometrics.service.model.params.ALBiometricsKeys;
 import com.alibaba.security.biometrics.service.model.result.ALBiometricsResult;
-import com.alibaba.security.common.c.C3800a;
-import com.alibaba.security.common.d.C3811h;
-import com.alibaba.security.common.track.a.C3829a;
+import com.alibaba.security.common.d.h;
+import com.alibaba.security.common.track.a.a;
 import com.alibaba.security.common.track.model.TrackLog;
-import com.alibaba.security.realidentity.C3839a;
 import com.alibaba.security.realidentity.RPResult;
-import com.alibaba.security.realidentity.a.AbstractC3840a;
-import com.alibaba.security.realidentity.a.AbstractC3841b;
-import com.alibaba.security.realidentity.business.C3873c;
+import com.alibaba.security.realidentity.a.b;
 import com.alibaba.security.realidentity.business.RPBusinessHeadParams;
 import com.alibaba.security.realidentity.business.base.chain.BusinessHeadParams;
 import com.alibaba.security.realidentity.business.biometrics.AbsBiometricsBucketParams;
 import com.alibaba.security.realidentity.business.biometrics.model.RiskActionMaterial;
 import com.alibaba.security.realidentity.business.bucket.BucketParams;
+import com.alibaba.security.realidentity.business.c;
 import com.alibaba.security.realidentity.business.dynamic.model.ScConfig;
 import com.alibaba.security.realidentity.business.start.StartHttpParams;
 import com.alibaba.security.realidentity.business.start.StartHttpResponse;
 import com.alibaba.security.realidentity.business.start.model.StartExtraInfo;
 import com.alibaba.security.realidentity.business.start.model.StepItem;
 import com.alibaba.security.realidentity.http.RpcInvoker;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -52,15 +48,14 @@ public class BiometricsBucketParams extends AbsBiometricsBucketParams {
     private Bundle params = new Bundle();
     private StartHttpParams startHttpParams = null;
     private boolean sessionless = false;
-    private final HandlerC3868a mUiHandler = new HandlerC3868a(this);
+    private final a mUiHandler = new a(this);
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.security.realidentity.business.biometrics.BiometricsBucketParams$a */
     /* loaded from: classes8.dex */
-    static class HandlerC3868a extends Handler {
+    static class a extends Handler {
         private final BiometricsBucketParams a;
 
-        public HandlerC3868a(BiometricsBucketParams biometricsBucketParams) {
+        public a(BiometricsBucketParams biometricsBucketParams) {
             super(Looper.getMainLooper());
             this.a = biometricsBucketParams;
         }
@@ -105,7 +100,7 @@ public class BiometricsBucketParams extends AbsBiometricsBucketParams {
                 this.params.putIntArray("strategy", iArr);
             }
         }
-        String str = C3811h.a(rPBusinessHeadParams.livenessConfig) ? rPBusinessHeadParams.livenessConfig : null;
+        String str = h.a(rPBusinessHeadParams.livenessConfig) ? rPBusinessHeadParams.livenessConfig : null;
         if (!TextUtils.isEmpty(str)) {
             this.params.putString(ALBiometricsKeys.KEY_BIOMETRICS_CONFIG, str);
         }
@@ -130,7 +125,7 @@ public class BiometricsBucketParams extends AbsBiometricsBucketParams {
                 this.params.putInt(ALBiometricsKeys.KEY_DATA_COLLECT_MAX_CLICK_COUNT, Integer.parseInt(scConfig.getMaxClickCnt()));
                 this.params.putInt(ALBiometricsKeys.KEY_DATA_COLLECT_MAX_SENSOR_COUNT, Integer.parseInt(scConfig.getClickSensorCnt()));
             } catch (Exception unused) {
-                C3800a.b();
+                com.alibaba.security.common.c.a.b();
             }
         }
         if (rPBusinessHeadParams.onlyGaze) {
@@ -179,7 +174,7 @@ public class BiometricsBucketParams extends AbsBiometricsBucketParams {
         HashMap hashMap = new HashMap();
         hashMap.put("errorCode", 2);
         hashMap.put("errorMsg", "验证不通过，请按提示做动作");
-        AbstractC3841b.a().a(0, AbstractC3840a.F, "livenessFailed", hashMap);
+        b.a().a(0, com.alibaba.security.realidentity.a.a.F, "livenessFailed", hashMap);
         return aLBiometricsCallBackBean2;
     }
 
@@ -188,13 +183,13 @@ public class BiometricsBucketParams extends AbsBiometricsBucketParams {
             @Override // java.lang.Runnable
             public final void run() {
                 HashMap hashMap = new HashMap();
-                hashMap.put(AbstractC3893a.d, BiometricsBucketParams.this.mVerifyToken);
+                hashMap.put(com.alibaba.security.realidentity.jsbridge.a.d, BiometricsBucketParams.this.mVerifyToken);
                 hashMap.put("eventCode", str4);
                 hashMap.put("name", str);
                 RiskActionMaterial riskActionMaterial = new RiskActionMaterial();
                 riskActionMaterial.flActionLog = str2;
                 riskActionMaterial.sensorActionLog = str3;
-                hashMap.put("eventData", C3811h.a(riskActionMaterial));
+                hashMap.put("eventData", h.a(riskActionMaterial));
                 BiometricsBucketParams.this.trackRiskStart(str2, str3, str4);
                 BiometricsBucketParams biometricsBucketParams = BiometricsBucketParams.this;
                 biometricsBucketParams.isLimited = biometricsBucketParams.verifyLimitedEvent(context, hashMap);
@@ -217,8 +212,8 @@ public class BiometricsBucketParams extends AbsBiometricsBucketParams {
         createRiskEndLog.setVerifyToken(this.mVerifyToken);
         createRiskEndLog.addTag9(VersionKey.RP_SDK_VERSION + "/3.3.0");
         createRiskEndLog.addTag10("Android");
-        C3829a.C3830a.a.a(createRiskEndLog);
-        C3829a.C3830a.a.a(false);
+        a.C0165a.a.a(createRiskEndLog);
+        a.C0165a.a.a(false);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -234,14 +229,14 @@ public class BiometricsBucketParams extends AbsBiometricsBucketParams {
         createRiskStartLog.setVerifyToken(this.mVerifyToken);
         createRiskStartLog.addTag9(VersionKey.RP_SDK_VERSION + "/3.3.0");
         createRiskStartLog.addTag10("Android");
-        C3829a.C3830a.a.a(createRiskStartLog);
-        C3829a.C3830a.a.a(false);
+        a.C0165a.a.a(createRiskStartLog);
+        a.C0165a.a.a(false);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public boolean verifyLimitedEvent(Context context, Map<String, String> map) {
         JSONObject jSONObject;
-        String str = this.sessionless ? C3839a.b : C3839a.a;
+        String str = this.sessionless ? com.alibaba.security.realidentity.a.b : com.alibaba.security.realidentity.a.a;
         if (context == null) {
             return false;
         }
@@ -272,7 +267,7 @@ public class BiometricsBucketParams extends AbsBiometricsBucketParams {
     }
 
     @Override // com.alibaba.security.realidentity.business.bucket.BucketParams
-    public boolean finishTask(Context context, boolean z, BucketParams.InterfaceC3872a interfaceC3872a, Object... objArr) {
+    public boolean finishTask(Context context, boolean z, BucketParams.a aVar, Object... objArr) {
         if (z) {
             onLivenessDetectSuccess(context, this.biometricsResult);
             return true;
@@ -291,15 +286,15 @@ public class BiometricsBucketParams extends AbsBiometricsBucketParams {
     }
 
     @Override // com.alibaba.security.realidentity.business.bucket.BucketParams
-    public boolean onDelivering(C3873c c3873c) {
-        StartHttpParams startHttpParams = c3873c.c;
+    public boolean onDelivering(c cVar) {
+        StartHttpParams startHttpParams = cVar.c;
         if (startHttpParams != null) {
             this.startHttpParams = startHttpParams;
-            BusinessHeadParams businessHeadParams = c3873c.b;
+            BusinessHeadParams businessHeadParams = cVar.b;
             assemable(startHttpParams.mStartHttpResponse, businessHeadParams == null ? -2 : businessHeadParams.getCtidCode(), this.startHttpParams.mShowResult, businessHeadParams.getScConfig());
             return true;
         }
-        BusinessHeadParams businessHeadParams2 = c3873c.b;
+        BusinessHeadParams businessHeadParams2 = cVar.b;
         if (businessHeadParams2 != null) {
             StartHttpParams startHttpParams2 = new StartHttpParams();
             RPBusinessHeadParams rPBusinessHeadParams = (RPBusinessHeadParams) businessHeadParams2;
@@ -316,7 +311,7 @@ public class BiometricsBucketParams extends AbsBiometricsBucketParams {
             startHttpParams2.mShowNav = rPBusinessHeadParams.showNav;
             startHttpParams2.mNeedOriginalImage = rPBusinessHeadParams.needOriginalImage;
             new StepItem.JsonAssist().setBioStepsEx(rPBusinessHeadParams.bioStepsEx);
-            c3873c.c = startHttpParams2;
+            cVar.c = startHttpParams2;
             assemable(rPBusinessHeadParams);
         }
         return true;
@@ -376,7 +371,7 @@ public class BiometricsBucketParams extends AbsBiometricsBucketParams {
                 this.params.putInt(ALBiometricsKeys.KEY_DATA_COLLECT_MAX_CLICK_COUNT, Integer.parseInt(scConfig.getMaxClickCnt()));
                 this.params.putInt(ALBiometricsKeys.KEY_DATA_COLLECT_MAX_SENSOR_COUNT, Integer.parseInt(scConfig.getClickSensorCnt()));
             } catch (Exception unused) {
-                C3800a.b();
+                com.alibaba.security.common.c.a.b();
             }
         }
         StepItem.JsonAssist jsonAssistBean = biometricsStepItem.getJsonAssistBean();
@@ -391,7 +386,7 @@ public class BiometricsBucketParams extends AbsBiometricsBucketParams {
                 this.params.putIntArray("strategy", iArr);
             }
         }
-        String livenessConfig = C3811h.a(jsonAssistBean.getLivenessConfig()) ? jsonAssistBean.getLivenessConfig() : null;
+        String livenessConfig = h.a(jsonAssistBean.getLivenessConfig()) ? jsonAssistBean.getLivenessConfig() : null;
         if (!TextUtils.isEmpty(livenessConfig)) {
             this.params.putString(ALBiometricsKeys.KEY_BIOMETRICS_CONFIG, livenessConfig);
         }

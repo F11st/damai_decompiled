@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import kotlin.Metadata;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -367,7 +367,7 @@ public abstract class BaseViewPagerAdapter extends PagerAdapter {
             Set<String> keySet = bundle.keySet();
             b41.h(keySet, "bundle.keySet()");
             for (String str : keySet) {
-                F = C8604o.F(str, "f", false, 2, null);
+                F = o.F(str, "f", false, 2, null);
                 if (F) {
                     Objects.requireNonNull(str, "null cannot be cast to non-null type java.lang.String");
                     String substring = str.substring(1);

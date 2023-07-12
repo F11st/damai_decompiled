@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
@@ -16,7 +15,7 @@ import cn.damai.commonbusiness.R$layout;
 import cn.damai.uikit.view.photoview.PhotoView;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import tb.C9826vr;
+import tb.vr;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
@@ -32,12 +31,11 @@ public class ImageFragment extends LazyLoadFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.videobrowse.fragment.ImageFragment$a */
     /* loaded from: classes17.dex */
-    public class View$OnLongClickListenerC2786a implements View.OnLongClickListener {
+    public class a implements View.OnLongClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnLongClickListenerC2786a() {
+        a() {
         }
 
         @Override // android.view.View.OnLongClickListener
@@ -122,11 +120,11 @@ public class ImageFragment extends LazyLoadFragment {
         }
         View inflate = layoutInflater.inflate(R$layout.image_browse_item_layout, viewGroup, false);
         PhotoView photoView = (PhotoView) inflate.findViewById(R$id.poster);
-        photoView.setOnLongClickListener(new View$OnLongClickListenerC2786a());
-        if (photoView.getTag() instanceof C9826vr) {
-            ((C9826vr) photoView.getTag()).cancel();
+        photoView.setOnLongClickListener(new a());
+        if (photoView.getTag() instanceof vr) {
+            ((vr) photoView.getTag()).cancel();
         }
-        DMImageCreator c = C0504a.b().c(this.mPicUrl);
+        DMImageCreator c = cn.damai.common.image.a.b().c(this.mPicUrl);
         int i = R$drawable.damai_image_defalut;
         photoView.setTag(c.i(i).c(i).g(photoView));
         return inflate;

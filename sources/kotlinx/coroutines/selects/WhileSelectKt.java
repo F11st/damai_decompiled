@@ -37,7 +37,7 @@ public final class WhileSelectKt {
             r0.<init>(r5)
         L18:
             java.lang.Object r5 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L35
@@ -65,7 +65,7 @@ public final class WhileSelectKt {
             r5.x(r2)
         L49:
             java.lang.Object r5 = r5.w()
-            java.lang.Object r2 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r2 = kotlin.coroutines.intrinsics.a.d()
             if (r5 != r2) goto L56
             tb.n40.c(r0)
         L56:

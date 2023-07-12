@@ -24,8 +24,8 @@ public final class bh implements IShareSearch {
     private ShareSearch.OnShareSearchListener g;
 
     public bh(Context context) throws AMapException {
-        bu a = bt.a(context, C4434h.a(false));
-        if (a.a == bt.EnumC4398c.SuccessCode) {
+        bu a = bt.a(context, h.a(false));
+        if (a.a == bt.c.SuccessCode) {
             this.a = context;
         } else {
             String str = a.b;
@@ -52,7 +52,7 @@ public final class bh implements IShareSearch {
             }
             throw new AMapException("无效的参数 - IllegalArgumentException");
         } catch (AMapException e2) {
-            C4435i.a(e2, "ShareSearch", "searchBusRouteShareUrl");
+            i.a(e2, "ShareSearch", "searchBusRouteShareUrl");
             throw e2;
         }
     }
@@ -66,7 +66,7 @@ public final class bh implements IShareSearch {
                     if (bh.this.g == null) {
                         return;
                     }
-                    Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                    Message obtainMessage = t.a().obtainMessage();
                     obtainMessage.arg1 = 11;
                     obtainMessage.what = 1103;
                     obtainMessage.obj = bh.this.g;
@@ -81,7 +81,7 @@ public final class bh implements IShareSearch {
                             obtainMessage.arg2 = e2.getErrorCode();
                         }
                     } finally {
-                        HandlerC4447t.a().sendMessage(obtainMessage);
+                        t.a().sendMessage(obtainMessage);
                     }
                 }
             });
@@ -109,7 +109,7 @@ public final class bh implements IShareSearch {
             }
             throw new AMapException("无效的参数 - IllegalArgumentException");
         } catch (AMapException e2) {
-            C4435i.a(e2, "ShareSearch", "searchDrivingRouteShareUrl");
+            i.a(e2, "ShareSearch", "searchDrivingRouteShareUrl");
             throw e2;
         }
     }
@@ -123,7 +123,7 @@ public final class bh implements IShareSearch {
                     if (bh.this.g == null) {
                         return;
                     }
-                    Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                    Message obtainMessage = t.a().obtainMessage();
                     obtainMessage.arg1 = 11;
                     obtainMessage.what = SecExceptionCode.SEC_ERROE_OPENSDK_UNSUPPORTED_VERSION;
                     obtainMessage.obj = bh.this.g;
@@ -138,7 +138,7 @@ public final class bh implements IShareSearch {
                             obtainMessage.arg2 = e2.getErrorCode();
                         }
                     } finally {
-                        HandlerC4447t.a().sendMessage(obtainMessage);
+                        t.a().sendMessage(obtainMessage);
                     }
                 }
             });
@@ -155,7 +155,7 @@ public final class bh implements IShareSearch {
             }
             throw new AMapException("无效的参数 - IllegalArgumentException");
         } catch (AMapException e2) {
-            C4435i.a(e2, "ShareSearch", "searchLocationShareUrl");
+            i.a(e2, "ShareSearch", "searchLocationShareUrl");
             throw e2;
         }
     }
@@ -169,7 +169,7 @@ public final class bh implements IShareSearch {
                     if (bh.this.g == null) {
                         return;
                     }
-                    Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                    Message obtainMessage = t.a().obtainMessage();
                     obtainMessage.arg1 = 11;
                     obtainMessage.what = 1101;
                     obtainMessage.obj = bh.this.g;
@@ -184,7 +184,7 @@ public final class bh implements IShareSearch {
                             obtainMessage.arg2 = e2.getErrorCode();
                         }
                     } finally {
-                        HandlerC4447t.a().sendMessage(obtainMessage);
+                        t.a().sendMessage(obtainMessage);
                     }
                 }
             });
@@ -214,7 +214,7 @@ public final class bh implements IShareSearch {
             }
             throw new AMapException("无效的参数 - IllegalArgumentException");
         } catch (AMapException e2) {
-            C4435i.a(e2, "ShareSearch", "searchNaviShareUrl");
+            i.a(e2, "ShareSearch", "searchNaviShareUrl");
             throw e2;
         }
     }
@@ -228,7 +228,7 @@ public final class bh implements IShareSearch {
                     if (bh.this.g == null) {
                         return;
                     }
-                    Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                    Message obtainMessage = t.a().obtainMessage();
                     obtainMessage.arg1 = 11;
                     obtainMessage.what = 1102;
                     obtainMessage.obj = bh.this.g;
@@ -243,7 +243,7 @@ public final class bh implements IShareSearch {
                             obtainMessage.arg2 = e2.getErrorCode();
                         }
                     } finally {
-                        HandlerC4447t.a().sendMessage(obtainMessage);
+                        t.a().sendMessage(obtainMessage);
                     }
                 }
             });
@@ -261,7 +261,7 @@ public final class bh implements IShareSearch {
                     return new al(this.a, String.format(e, poiItem.getPoiId(), Double.valueOf(latLonPoint.getLatitude()), Double.valueOf(latLonPoint.getLongitude()), poiItem.getTitle(), poiItem.getSnippet())).b();
                 }
             } catch (AMapException e2) {
-                C4435i.a(e2, "ShareSearch", "searchPoiShareUrl");
+                i.a(e2, "ShareSearch", "searchPoiShareUrl");
                 throw e2;
             }
         }
@@ -277,7 +277,7 @@ public final class bh implements IShareSearch {
                     if (bh.this.g == null) {
                         return;
                     }
-                    Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                    Message obtainMessage = t.a().obtainMessage();
                     obtainMessage.arg1 = 11;
                     obtainMessage.what = 1100;
                     obtainMessage.obj = bh.this.g;
@@ -292,7 +292,7 @@ public final class bh implements IShareSearch {
                             obtainMessage.arg2 = e2.getErrorCode();
                         }
                     } finally {
-                        HandlerC4447t.a().sendMessage(obtainMessage);
+                        t.a().sendMessage(obtainMessage);
                     }
                 }
             });
@@ -320,7 +320,7 @@ public final class bh implements IShareSearch {
             }
             throw new AMapException("无效的参数 - IllegalArgumentException");
         } catch (AMapException e2) {
-            C4435i.a(e2, "ShareSearch", "searchWalkRouteShareUrl");
+            i.a(e2, "ShareSearch", "searchWalkRouteShareUrl");
             throw e2;
         }
     }
@@ -334,7 +334,7 @@ public final class bh implements IShareSearch {
                     if (bh.this.g == null) {
                         return;
                     }
-                    Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                    Message obtainMessage = t.a().obtainMessage();
                     obtainMessage.arg1 = 11;
                     obtainMessage.what = 1105;
                     obtainMessage.obj = bh.this.g;
@@ -349,7 +349,7 @@ public final class bh implements IShareSearch {
                             obtainMessage.arg2 = e2.getErrorCode();
                         }
                     } finally {
-                        HandlerC4447t.a().sendMessage(obtainMessage);
+                        t.a().sendMessage(obtainMessage);
                     }
                 }
             });

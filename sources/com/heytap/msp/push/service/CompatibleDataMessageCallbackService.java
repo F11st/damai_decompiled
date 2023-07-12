@@ -4,8 +4,8 @@ import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
-import com.heytap.mcssdk.C5460b;
-import com.heytap.mcssdk.C5462c;
+import com.heytap.mcssdk.b;
+import com.heytap.mcssdk.c;
 import com.heytap.msp.push.callback.IDataMessageCallBackService;
 import com.heytap.msp.push.mode.DataMessage;
 import tb.z53;
@@ -20,8 +20,8 @@ public class CompatibleDataMessageCallbackService extends Service implements IDa
 
     @Override // android.app.Service
     public final int onStartCommand(Intent intent, int i, int i2) {
-        C5462c.m().C(getApplicationContext());
-        C5460b.a(getApplicationContext(), intent, this);
+        c.m().C(getApplicationContext());
+        b.a(getApplicationContext(), intent, this);
         return 2;
     }
 

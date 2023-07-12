@@ -1,14 +1,13 @@
 package com.xiaomi.push.service;
 
 import android.content.Context;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.Cif;
 import com.xiaomi.push.gh;
 import com.xiaomi.push.service.XMPushService;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-final class ac extends XMPushService.AbstractC7707j {
+final class ac extends XMPushService.j {
     final /* synthetic */ Cif a;
 
     /* renamed from: a  reason: collision with other field name */
@@ -22,21 +21,21 @@ final class ac extends XMPushService.AbstractC7707j {
         this.a = cif;
     }
 
-    @Override // com.xiaomi.push.service.XMPushService.AbstractC7707j
+    @Override // com.xiaomi.push.service.XMPushService.j
     /* renamed from: a */
     public String mo1157a() {
         return "send ack message for unrecognized new miui message.";
     }
 
-    @Override // com.xiaomi.push.service.XMPushService.AbstractC7707j
+    @Override // com.xiaomi.push.service.XMPushService.j
     /* renamed from: a */
     public void mo878a() {
         try {
-            Cif a = C7782y.a((Context) this.f871a, this.a);
+            Cif a = y.a((Context) this.f871a, this.a);
             a.m1022a().a("miui_message_unrecognized", "1");
             ah.a(this.f871a, a);
         } catch (gh e) {
-            AbstractC7535b.a(e);
+            com.xiaomi.channel.commonutils.logger.b.a(e);
             this.f871a.a(10, e);
         }
     }

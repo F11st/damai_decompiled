@@ -119,7 +119,7 @@ public class GiftItemView extends LinearLayout {
         }
         this.giftId = giftInfoBean.id;
         if (giftInfoBean.isChecked) {
-            setBackgroundResource(R.C7941drawable.dago_pgc_ykl_gift_item_bg);
+            setBackgroundResource(R.drawable.dago_pgc_ykl_gift_item_bg);
             showScaleAnim();
             return;
         }
@@ -133,7 +133,7 @@ public class GiftItemView extends LinearLayout {
 
     public GiftItemView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ykl_send_gift_item_layout, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_ykl_send_gift_item_layout, (ViewGroup) this, true);
         setOrientation(1);
         this.imageViewIcon = (TUrlImageView) findViewById(R.id.id_image_icon);
         this.textViewPrice = (TextView) findViewById(R.id.id_tv_price);

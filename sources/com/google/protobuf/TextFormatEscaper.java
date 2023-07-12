@@ -17,12 +17,11 @@ final class TextFormatEscaper {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.TextFormatEscaper$a */
     /* loaded from: classes10.dex */
-    public static class C5390a implements ByteSequence {
+    public static class a implements ByteSequence {
         final /* synthetic */ ByteString a;
 
-        C5390a(ByteString byteString) {
+        a(ByteString byteString) {
             this.a = byteString;
         }
 
@@ -39,7 +38,7 @@ final class TextFormatEscaper {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static String a(ByteString byteString) {
-        return b(new C5390a(byteString));
+        return b(new a(byteString));
     }
 
     static String b(ByteSequence byteSequence) {

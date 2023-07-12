@@ -17,7 +17,6 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.markers.KMappedMarker;
 import kotlin.sequences.Sequence;
 import kotlin.sequences.SequencesKt__SequencesKt;
-import kotlin.text.C8597h;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -29,15 +28,14 @@ import tb.r7;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public class ArraysKt___ArraysKt extends C8207h {
+public class ArraysKt___ArraysKt extends h {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.collections.ArraysKt___ArraysKt$a */
     /* loaded from: classes3.dex */
-    public static final class C8180a<T> implements Iterable<T>, KMappedMarker {
+    public static final class a<T> implements Iterable<T>, KMappedMarker {
         final /* synthetic */ Object[] a;
 
-        public C8180a(Object[] objArr) {
+        public a(Object[] objArr) {
             this.a = objArr;
         }
 
@@ -49,12 +47,11 @@ public class ArraysKt___ArraysKt extends C8207h {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.collections.ArraysKt___ArraysKt$b */
     /* loaded from: classes3.dex */
-    public static final class C8181b<T> implements Sequence<T> {
+    public static final class b<T> implements Sequence<T> {
         final /* synthetic */ Object[] a;
 
-        public C8181b(Object[] objArr) {
+        public b(Object[] objArr) {
             this.a = objArr;
         }
 
@@ -100,30 +97,30 @@ public class ArraysKt___ArraysKt extends C8207h {
     }
 
     @NotNull
-    public static final <T, A extends Appendable> A C(@NotNull T[] tArr, @NotNull A a, @NotNull CharSequence charSequence, @NotNull CharSequence charSequence2, @NotNull CharSequence charSequence3, int i, @NotNull CharSequence charSequence4, @Nullable Function1<? super T, ? extends CharSequence> function1) {
+    public static final <T, A extends Appendable> A C(@NotNull T[] tArr, @NotNull A a2, @NotNull CharSequence charSequence, @NotNull CharSequence charSequence2, @NotNull CharSequence charSequence3, int i, @NotNull CharSequence charSequence4, @Nullable Function1<? super T, ? extends CharSequence> function1) {
         b41.i(tArr, "<this>");
-        b41.i(a, "buffer");
+        b41.i(a2, "buffer");
         b41.i(charSequence, "separator");
         b41.i(charSequence2, Constants.Name.PREFIX);
         b41.i(charSequence3, "postfix");
         b41.i(charSequence4, "truncated");
-        a.append(charSequence2);
+        a2.append(charSequence2);
         int i2 = 0;
         for (T t : tArr) {
             i2++;
             if (i2 > 1) {
-                a.append(charSequence);
+                a2.append(charSequence);
             }
             if (i >= 0 && i2 > i) {
                 break;
             }
-            C8597h.a(a, t, function1);
+            kotlin.text.h.a(a2, t, function1);
         }
         if (i >= 0 && i2 > i) {
-            a.append(charSequence4);
+            a2.append(charSequence4);
         }
-        a.append(charSequence3);
-        return a;
+        a2.append(charSequence3);
+        return a2;
     }
 
     @NotNull
@@ -165,13 +162,13 @@ public class ArraysKt___ArraysKt extends C8207h {
         throw new NoSuchElementException("Array is empty.");
     }
 
-    public static final int H(@NotNull byte[] bArr, byte b) {
+    public static final int H(@NotNull byte[] bArr, byte b2) {
         b41.i(bArr, "<this>");
         int length = bArr.length - 1;
         if (length >= 0) {
             while (true) {
                 int i = length - 1;
-                if (b == bArr[length]) {
+                if (b2 == bArr[length]) {
                     return length;
                 }
                 if (i < 0) {
@@ -252,11 +249,11 @@ public class ArraysKt___ArraysKt extends C8207h {
         b41.i(bArr, "<this>");
         b41.i(n31Var, "indices");
         if (n31Var.isEmpty()) {
-            g2 = C8214m.g();
+            g2 = m.g();
             return g2;
         }
-        g = C8207h.g(bArr, n31Var.getStart().intValue(), n31Var.getEndInclusive().intValue() + 1);
-        return C8207h.b(g);
+        g = h.g(bArr, n31Var.getStart().intValue(), n31Var.getEndInclusive().intValue() + 1);
+        return h.b(g);
     }
 
     @NotNull
@@ -268,7 +265,7 @@ public class ArraysKt___ArraysKt extends C8207h {
         }
         T[] tArr2 = (T[]) Arrays.copyOf(tArr, tArr.length);
         b41.h(tArr2, "copyOf(this, size)");
-        C8207h.m(tArr2, comparator);
+        h.m(tArr2, comparator);
         return tArr2;
     }
 
@@ -277,7 +274,7 @@ public class ArraysKt___ArraysKt extends C8207h {
         List<T> d;
         b41.i(tArr, "<this>");
         b41.i(comparator, "comparator");
-        d = C8207h.d(O(tArr, comparator));
+        d = h.d(O(tArr, comparator));
         return d;
     }
 
@@ -298,12 +295,12 @@ public class ArraysKt___ArraysKt extends C8207h {
         b41.i(bArr, "<this>");
         int length = bArr.length;
         if (length == 0) {
-            g = C8214m.g();
+            g = m.g();
             return g;
         } else if (length != 1) {
             return a0(bArr);
         } else {
-            e = C8213l.e(Byte.valueOf(bArr[0]));
+            e = l.e(Byte.valueOf(bArr[0]));
             return e;
         }
     }
@@ -315,12 +312,12 @@ public class ArraysKt___ArraysKt extends C8207h {
         b41.i(cArr, "<this>");
         int length = cArr.length;
         if (length == 0) {
-            g = C8214m.g();
+            g = m.g();
             return g;
         } else if (length != 1) {
             return b0(cArr);
         } else {
-            e = C8213l.e(Character.valueOf(cArr[0]));
+            e = l.e(Character.valueOf(cArr[0]));
             return e;
         }
     }
@@ -332,12 +329,12 @@ public class ArraysKt___ArraysKt extends C8207h {
         b41.i(dArr, "<this>");
         int length = dArr.length;
         if (length == 0) {
-            g = C8214m.g();
+            g = m.g();
             return g;
         } else if (length != 1) {
             return c0(dArr);
         } else {
-            e = C8213l.e(Double.valueOf(dArr[0]));
+            e = l.e(Double.valueOf(dArr[0]));
             return e;
         }
     }
@@ -349,12 +346,12 @@ public class ArraysKt___ArraysKt extends C8207h {
         b41.i(fArr, "<this>");
         int length = fArr.length;
         if (length == 0) {
-            g = C8214m.g();
+            g = m.g();
             return g;
         } else if (length != 1) {
             return d0(fArr);
         } else {
-            e = C8213l.e(Float.valueOf(fArr[0]));
+            e = l.e(Float.valueOf(fArr[0]));
             return e;
         }
     }
@@ -366,12 +363,12 @@ public class ArraysKt___ArraysKt extends C8207h {
         b41.i(iArr, "<this>");
         int length = iArr.length;
         if (length == 0) {
-            g = C8214m.g();
+            g = m.g();
             return g;
         } else if (length != 1) {
             return e0(iArr);
         } else {
-            e = C8213l.e(Integer.valueOf(iArr[0]));
+            e = l.e(Integer.valueOf(iArr[0]));
             return e;
         }
     }
@@ -383,12 +380,12 @@ public class ArraysKt___ArraysKt extends C8207h {
         b41.i(jArr, "<this>");
         int length = jArr.length;
         if (length == 0) {
-            g = C8214m.g();
+            g = m.g();
             return g;
         } else if (length != 1) {
             return f0(jArr);
         } else {
-            e = C8213l.e(Long.valueOf(jArr[0]));
+            e = l.e(Long.valueOf(jArr[0]));
             return e;
         }
     }
@@ -401,13 +398,13 @@ public class ArraysKt___ArraysKt extends C8207h {
         b41.i(tArr, "<this>");
         int length = tArr.length;
         if (length == 0) {
-            g = C8214m.g();
+            g = m.g();
             return g;
         } else if (length != 1) {
             g0 = g0(tArr);
             return g0;
         } else {
-            e = C8213l.e(tArr[0]);
+            e = l.e(tArr[0]);
             return e;
         }
     }
@@ -419,12 +416,12 @@ public class ArraysKt___ArraysKt extends C8207h {
         b41.i(sArr, "<this>");
         int length = sArr.length;
         if (length == 0) {
-            g = C8214m.g();
+            g = m.g();
             return g;
         } else if (length != 1) {
             return h0(sArr);
         } else {
-            e = C8213l.e(Short.valueOf(sArr[0]));
+            e = l.e(Short.valueOf(sArr[0]));
             return e;
         }
     }
@@ -436,12 +433,12 @@ public class ArraysKt___ArraysKt extends C8207h {
         b41.i(zArr, "<this>");
         int length = zArr.length;
         if (length == 0) {
-            g = C8214m.g();
+            g = m.g();
             return g;
         } else if (length != 1) {
             return i0(zArr);
         } else {
-            e = C8213l.e(Boolean.valueOf(zArr[0]));
+            e = l.e(Boolean.valueOf(zArr[0]));
             return e;
         }
     }
@@ -450,8 +447,8 @@ public class ArraysKt___ArraysKt extends C8207h {
     public static final List<Byte> a0(@NotNull byte[] bArr) {
         b41.i(bArr, "<this>");
         ArrayList arrayList = new ArrayList(bArr.length);
-        for (byte b : bArr) {
-            arrayList.add(Byte.valueOf(b));
+        for (byte b2 : bArr) {
+            arrayList.add(Byte.valueOf(b2));
         }
         return arrayList;
     }
@@ -509,7 +506,7 @@ public class ArraysKt___ArraysKt extends C8207h {
     @NotNull
     public static <T> List<T> g0(@NotNull T[] tArr) {
         b41.i(tArr, "<this>");
-        return new ArrayList(C8214m.f(tArr));
+        return new ArrayList(m.f(tArr));
     }
 
     @NotNull
@@ -540,13 +537,13 @@ public class ArraysKt___ArraysKt extends C8207h {
         b41.i(tArr, "<this>");
         int length = tArr.length;
         if (length == 0) {
-            d = C8203e0.d();
+            d = e0.d();
             return d;
         } else if (length != 1) {
-            e = C8225w.e(tArr.length);
+            e = w.e(tArr.length);
             return (Set) Q(tArr, new LinkedHashSet(e));
         } else {
-            c = C8201d0.c(tArr[0]);
+            c = d0.c(tArr[0]);
             return c;
         }
     }
@@ -586,10 +583,10 @@ public class ArraysKt___ArraysKt extends C8207h {
         List g;
         b41.i(tArr, "<this>");
         if (tArr.length == 0) {
-            g = C8214m.g();
+            g = m.g();
             return g;
         }
-        return new C8180a(tArr);
+        return new a(tArr);
     }
 
     @NotNull
@@ -600,12 +597,12 @@ public class ArraysKt___ArraysKt extends C8207h {
             e = SequencesKt__SequencesKt.e();
             return e;
         }
-        return new C8181b(tArr);
+        return new b(tArr);
     }
 
-    public static final boolean p(@NotNull byte[] bArr, byte b) {
+    public static final boolean p(@NotNull byte[] bArr, byte b2) {
         b41.i(bArr, "<this>");
-        return z(bArr, b) >= 0;
+        return z(bArr, b2) >= 0;
     }
 
     public static final boolean q(@NotNull int[] iArr, int i) {
@@ -674,11 +671,11 @@ public class ArraysKt___ArraysKt extends C8207h {
         return Integer.valueOf(iArr[i]);
     }
 
-    public static final int z(@NotNull byte[] bArr, byte b) {
+    public static final int z(@NotNull byte[] bArr, byte b2) {
         b41.i(bArr, "<this>");
         int length = bArr.length;
         for (int i = 0; i < length; i++) {
-            if (b == bArr[i]) {
+            if (b2 == bArr[i]) {
                 return i;
             }
         }

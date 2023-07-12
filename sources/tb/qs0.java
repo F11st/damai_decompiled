@@ -12,7 +12,7 @@ import tb.pq0;
 /* loaded from: classes6.dex */
 public final class qs0 {
     @NotNull
-    public static final C9621a Companion = new C9621a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final gr0 a;
     @NotNull
@@ -35,13 +35,12 @@ public final class qs0 {
     private JSONObject j;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qs0$a */
     /* loaded from: classes6.dex */
-    public static final class C9621a {
-        private C9621a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9621a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -89,11 +88,11 @@ public final class qs0 {
             return new ls0(ls0Var.B(), ls0Var.v(), ls0Var.J(), ls0Var.z(), ls0Var.t(), ls0Var.H(), ls0Var.D(), ls0Var.d(), ls0Var.f(), ls0Var.P(), ls0Var.R(), ls0Var.p(), ls0Var.L(), ls0Var.U(), ls0Var.l(), ls0Var.h(), ls0Var.j(), ls0Var.x(), ls0Var.F(), ls0Var.N(), ls0Var.n(), ls0Var.b(), ls0Var.r());
         }
 
-        public static /* synthetic */ qs0 j(C9621a c9621a, String str, GXTemplateInfo gXTemplateInfo, qs0 qs0Var, int i, Object obj) {
+        public static /* synthetic */ qs0 j(a aVar, String str, GXTemplateInfo gXTemplateInfo, qs0 qs0Var, int i, Object obj) {
             if ((i & 4) != 0) {
                 qs0Var = null;
             }
-            return c9621a.i(str, gXTemplateInfo, qs0Var);
+            return aVar.i(str, gXTemplateInfo, qs0Var);
         }
 
         @NotNull
@@ -104,7 +103,7 @@ public final class qs0 {
             if (g != null) {
                 pq0 d = gXTemplateInfo.d(str);
                 if (d == null) {
-                    d = pq0.C9564a.b(pq0.Companion, null, 1, null);
+                    d = pq0.a.b(pq0.Companion, null, 1, null);
                 }
                 return new qs0(d(g), a(d), gXTemplateInfo.e(str), gXTemplateInfo.f(str), gXTemplateInfo.i(str), gXTemplateInfo.c(str), qs0Var);
             }
@@ -213,11 +212,11 @@ public final class qs0 {
 
     @Nullable
     public final JSON f(@NotNull JSONObject jSONObject) {
-        JSONObject a;
+        JSONObject a2;
         b41.i(jSONObject, "templateData");
         if (this.i == null) {
             rq0 rq0Var = this.c;
-            Object obj = (rq0Var == null || (a = rq0Var.a(jSONObject)) == null) ? null : a.get("value");
+            Object obj = (rq0Var == null || (a2 = rq0Var.a(jSONObject)) == null) ? null : a2.get("value");
             this.i = obj instanceof JSON ? (JSON) obj : null;
         }
         return this.i;

@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.RemoteViews;
 import com.huawei.hms.push.constant.RemoteMessageConst;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import java.util.Map;
 
 /* compiled from: Taobao */
@@ -27,7 +26,7 @@ public class ep extends es {
     public ep a(Bitmap bitmap) {
         if (m871b() && bitmap != null) {
             if (bitmap.getWidth() != 984 || 184 > bitmap.getHeight() || bitmap.getHeight() > 1678) {
-                AbstractC7535b.m586a("colorful notification banner image resolution error, must belong to [984*184, 984*1678]");
+                com.xiaomi.channel.commonutils.logger.b.m586a("colorful notification banner image resolution error, must belong to [984*184, 984*1678]");
             } else {
                 this.b = bitmap;
             }
@@ -42,7 +41,7 @@ public class ep extends es {
             try {
                 this.a = Color.parseColor(str);
             } catch (Exception unused) {
-                AbstractC7535b.m586a("parse banner notification image text color error");
+                com.xiaomi.channel.commonutils.logger.b.m586a("parse banner notification image text color error");
             }
         }
         return this;
@@ -73,7 +72,7 @@ public class ep extends es {
         Resources resources = a().getResources();
         String packageName = a().getPackageName();
         int a = a(resources, "bg", "id", packageName);
-        if (C7688m.a(a()) >= 10) {
+        if (m.a(a()) >= 10) {
             m867a = m867a();
             bitmap = a(this.b, 30.0f);
         } else {
@@ -105,10 +104,10 @@ public class ep extends es {
     @Override // com.xiaomi.push.es
     /* renamed from: a  reason: collision with other method in class */
     protected boolean mo862a() {
-        if (C7688m.m1118a()) {
+        if (m.m1118a()) {
             Resources resources = a().getResources();
             String packageName = a().getPackageName();
-            return (a(a().getResources(), "bg", "id", a().getPackageName()) == 0 || a(resources, RemoteMessageConst.Notification.ICON, "id", packageName) == 0 || a(resources, "title", "id", packageName) == 0 || C7688m.a(a()) < 9) ? false : true;
+            return (a(a().getResources(), "bg", "id", a().getPackageName()) == 0 || a(resources, RemoteMessageConst.Notification.ICON, "id", packageName) == 0 || a(resources, "title", "id", packageName) == 0 || m.a(a()) < 9) ? false : true;
         }
         return false;
     }

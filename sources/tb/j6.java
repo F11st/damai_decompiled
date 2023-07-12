@@ -23,17 +23,16 @@ public class j6 implements Processor<ApkUpdateContext> {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.j6$a */
     /* loaded from: classes11.dex */
-    public class C9298a implements UserAction {
+    public class a implements UserAction {
         final /* synthetic */ ApkUpdateContext a;
         final /* synthetic */ CountDownLatch b;
 
         /* compiled from: Taobao */
-        /* renamed from: tb.j6$a$a */
+        /* renamed from: tb.j6$a$a  reason: collision with other inner class name */
         /* loaded from: classes11.dex */
-        class C9299a implements UserAction {
-            C9299a() {
+        class C0457a implements UserAction {
+            C0457a() {
             }
 
             @Override // com.taobao.update.adapter.UserAction
@@ -53,24 +52,24 @@ public class j6 implements Processor<ApkUpdateContext> {
 
             @Override // com.taobao.update.adapter.UserAction
             public void onCancel() {
-                j6.this.a.commitNotify(C9298a.this.a, "ForceInstallClickCancel", Boolean.TRUE, null);
-                C9298a c9298a = C9298a.this;
-                ApkUpdateContext apkUpdateContext = c9298a.a;
+                j6.this.a.commitNotify(a.this.a, "ForceInstallClickCancel", Boolean.TRUE, null);
+                a aVar = a.this;
+                ApkUpdateContext apkUpdateContext = aVar.a;
                 apkUpdateContext.errorCode = -51;
                 j6.this.d(apkUpdateContext);
-                C9298a.this.b.countDown();
+                a.this.b.countDown();
             }
 
             @Override // com.taobao.update.adapter.UserAction
             public void onConfirm() {
-                j6.this.a.commitNotify(C9298a.this.a, "ForceInstallClickConfirm", Boolean.TRUE, null);
-                C9298a c9298a = C9298a.this;
-                j6.this.e(c9298a.a);
-                C9298a.this.b.countDown();
+                j6.this.a.commitNotify(a.this.a, "ForceInstallClickConfirm", Boolean.TRUE, null);
+                a aVar = a.this;
+                j6.this.e(aVar.a);
+                a.this.b.countDown();
             }
         }
 
-        C9298a(ApkUpdateContext apkUpdateContext, CountDownLatch countDownLatch) {
+        a(ApkUpdateContext apkUpdateContext, CountDownLatch countDownLatch) {
             this.a = apkUpdateContext;
             this.b = countDownLatch;
         }
@@ -94,7 +93,7 @@ public class j6 implements Processor<ApkUpdateContext> {
         public void onCancel() {
             if (this.a.isForceUpdate()) {
                 j6.this.a.commitNotify(this.a, "installCancel", Boolean.TRUE, "ForceInstall");
-                UpdateRuntime.doUIAlertForConfirm(pu2.getAppNameString(R$string.confirm_forceupdate_install, UpdateRuntime.sAppName), new C9299a());
+                UpdateRuntime.doUIAlertForConfirm(pu2.getAppNameString(R$string.confirm_forceupdate_install, UpdateRuntime.sAppName), new C0457a());
                 return;
             }
             j6.this.a.commitNotify(this.a, "installCancel", Boolean.TRUE, null);
@@ -179,7 +178,7 @@ public class j6 implements Processor<ApkUpdateContext> {
             return;
         }
         CountDownLatch countDownLatch = new CountDownLatch(1);
-        UpdateRuntime.doUIAlertForConfirm(apkUpdateContext.hasNotified ? pu2.getAppNameString(R$string.update_notification_finish, UpdateRuntime.sAppName) : pu2.getAppNameString(R$string.confirm_install_hint1, UpdateRuntime.sAppName), new C9298a(apkUpdateContext, countDownLatch));
+        UpdateRuntime.doUIAlertForConfirm(apkUpdateContext.hasNotified ? pu2.getAppNameString(R$string.update_notification_finish, UpdateRuntime.sAppName) : pu2.getAppNameString(R$string.confirm_install_hint1, UpdateRuntime.sAppName), new a(apkUpdateContext, countDownLatch));
         this.a.commitNotify(apkUpdateContext, "popInstall", Boolean.TRUE, null);
         try {
             countDownLatch.await();

@@ -18,10 +18,9 @@ public class WXLatestVisitView extends WXComponent {
     private NearlyAround mNearlyAround;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.component.WXLatestVisitView$a */
     /* loaded from: classes5.dex */
-    class C3028a implements NearlyAround.OnNearlyItemClickListener {
-        C3028a(WXLatestVisitView wXLatestVisitView) {
+    class a implements NearlyAround.OnNearlyItemClickListener {
+        a(WXLatestVisitView wXLatestVisitView) {
         }
 
         @Override // com.alibaba.aliweex.adapter.view.NearlyAround.OnNearlyItemClickListener
@@ -42,7 +41,7 @@ public class WXLatestVisitView extends WXComponent {
         NearlyAround nearlyAround = new NearlyAround(context);
         this.mNearlyAround = nearlyAround;
         nearlyAround.e();
-        this.mNearlyAround.d(new C3028a(this));
+        this.mNearlyAround.d(new a(this));
         return this.mNearlyAround.b();
     }
 

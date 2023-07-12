@@ -28,11 +28,11 @@ import com.tencent.connect.UserInfo;
 import com.tencent.connect.auth.QQToken;
 import com.tencent.connect.common.BaseApi;
 import com.tencent.connect.common.Constants;
-import com.tencent.open.b.C7084e;
-import com.tencent.open.b.C7087h;
-import com.tencent.open.utils.C7119g;
-import com.tencent.open.utils.C7126m;
+import com.tencent.open.b.e;
+import com.tencent.open.b.h;
 import com.tencent.open.utils.HttpUtils;
+import com.tencent.open.utils.g;
+import com.tencent.open.utils.m;
 import com.tencent.tauth.DefaultUiListener;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.UiError;
@@ -51,10 +51,10 @@ public class ImageActivity extends Activity {
     private QQToken b;
     private String c;
     private Handler d;
-    private C7052c e;
+    private c e;
     private Button f;
     private Button g;
-    private C7051b h;
+    private b h;
     private TextView i;
     private ProgressBar j;
     private String r;
@@ -120,7 +120,7 @@ public class ImageActivity extends Activity {
             if (i == 0) {
                 ImageActivity.this.a("设置成功", 0);
                 ImageActivity.this.a("10658", 0L);
-                C7084e.a().a(ImageActivity.this.b.getOpenId(), ImageActivity.this.b.getAppId(), Constants.VIA_SET_AVATAR_SUCCEED, "12", "3", "0");
+                e.a().a(ImageActivity.this.b.getOpenId(), ImageActivity.this.b.getAppId(), Constants.VIA_SET_AVATAR_SUCCEED, "12", "3", "0");
                 ImageActivity imageActivity = ImageActivity.this;
                 if (imageActivity.c != null && !"".equals(ImageActivity.this.c)) {
                     Intent intent = new Intent();
@@ -134,7 +134,7 @@ public class ImageActivity extends Activity {
                 return;
             }
             ImageActivity.this.a("设置出错了，请重新登录再尝试下呢：）", 1);
-            C7084e.a().a(ImageActivity.this.b.getOpenId(), ImageActivity.this.b.getAppId(), Constants.VIA_SET_AVATAR_SUCCEED, "12", Constants.VIA_ACT_TYPE_NINETEEN, "1");
+            e.a().a(ImageActivity.this.b.getOpenId(), ImageActivity.this.b.getAppId(), Constants.VIA_SET_AVATAR_SUCCEED, "12", Constants.VIA_ACT_TYPE_NINETEEN, "1");
         }
 
         @Override // com.tencent.tauth.DefaultUiListener, com.tencent.tauth.IUiListener
@@ -209,17 +209,16 @@ public class ImageActivity extends Activity {
             bitmap.recycle();
             BaseApi.TempRequestListener tempRequestListener = new BaseApi.TempRequestListener(iUiListener);
             a.putByteArray("picture", byteArray);
-            HttpUtils.requestAsync(this.c, C7119g.a(), "user/set_user_face", a, "POST", tempRequestListener);
-            C7084e.a().a(this.c.getOpenId(), this.c.getAppId(), Constants.VIA_SET_AVATAR_SUCCEED, "12", Constants.VIA_ACT_TYPE_NINETEEN, "0");
+            HttpUtils.requestAsync(this.c, g.a(), "user/set_user_face", a, "POST", tempRequestListener);
+            e.a().a(this.c.getOpenId(), this.c.getAppId(), Constants.VIA_SET_AVATAR_SUCCEED, "12", Constants.VIA_ACT_TYPE_NINETEEN, "0");
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.tencent.connect.avatar.ImageActivity$a */
     /* loaded from: classes11.dex */
-    public class C7049a extends View {
-        public C7049a(Context context) {
+    public class a extends View {
+        public a(Context context) {
             super(context);
         }
 
@@ -340,22 +339,22 @@ public class ImageActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: private */
     public Drawable b(String str) {
-        return C7126m.a(str, this);
+        return m.a(str, this);
     }
 
     private void b() {
-        Bitmap a;
+        Bitmap a2;
         try {
-            a = a(this.r);
-            this.s = a;
+            a2 = a(this.r);
+            this.s = a2;
         } catch (IOException e) {
             e.printStackTrace();
             a(Constants.MSG_IMAGE_ERROR, 1);
             a(-5, null, Constants.MSG_IMAGE_ERROR, e.getMessage());
             d();
         }
-        if (a != null) {
-            this.e.setImageBitmap(a);
+        if (a2 != null) {
+            this.e.setImageBitmap(a2);
             this.f.setOnClickListener(this.t);
             this.g.setOnClickListener(this.u);
             this.a.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() { // from class: com.tencent.connect.avatar.ImageActivity.1
@@ -414,7 +413,7 @@ public class ImageActivity extends Activity {
         LinearLayout linearLayout = (LinearLayout) makeText.getView();
         ((TextView) linearLayout.getChildAt(0)).setPadding(8, 0, 0, 0);
         ImageView imageView = new ImageView(this);
-        imageView.setLayoutParams(new LinearLayout.LayoutParams(C7050a.a(this, 16.0f), C7050a.a(this, 16.0f)));
+        imageView.setLayoutParams(new LinearLayout.LayoutParams(com.tencent.connect.avatar.a.a(this, 16.0f), com.tencent.connect.avatar.a.a(this, 16.0f)));
         if (i == 0) {
             imageView.setImageDrawable(b("com.tencent.plus.ic_success.png"));
         } else {
@@ -439,31 +438,31 @@ public class ImageActivity extends Activity {
         RelativeLayout relativeLayout2 = new RelativeLayout(this);
         relativeLayout2.setLayoutParams(layoutParams3);
         this.a.addView(relativeLayout2);
-        C7052c c7052c = new C7052c(this);
-        this.e = c7052c;
-        c7052c.setLayoutParams(layoutParams2);
+        c cVar = new c(this);
+        this.e = cVar;
+        cVar.setLayoutParams(layoutParams2);
         this.e.setScaleType(ImageView.ScaleType.MATRIX);
         relativeLayout2.addView(this.e);
-        this.h = new C7051b(this);
+        this.h = new b(this);
         RelativeLayout.LayoutParams layoutParams4 = new RelativeLayout.LayoutParams(layoutParams2);
         layoutParams4.addRule(14, -1);
         layoutParams4.addRule(15, -1);
         this.h.setLayoutParams(layoutParams4);
         relativeLayout2.addView(this.h);
         LinearLayout linearLayout = new LinearLayout(this);
-        RelativeLayout.LayoutParams layoutParams5 = new RelativeLayout.LayoutParams(-2, C7050a.a(this, 80.0f));
+        RelativeLayout.LayoutParams layoutParams5 = new RelativeLayout.LayoutParams(-2, com.tencent.connect.avatar.a.a(this, 80.0f));
         layoutParams5.addRule(14, -1);
         linearLayout.setLayoutParams(layoutParams5);
         linearLayout.setOrientation(0);
         linearLayout.setGravity(17);
         this.a.addView(linearLayout);
         ImageView imageView = new ImageView(this);
-        imageView.setLayoutParams(new LinearLayout.LayoutParams(C7050a.a(this, 24.0f), C7050a.a(this, 24.0f)));
+        imageView.setLayoutParams(new LinearLayout.LayoutParams(com.tencent.connect.avatar.a.a(this, 24.0f), com.tencent.connect.avatar.a.a(this, 24.0f)));
         imageView.setImageDrawable(b("com.tencent.plus.logo.png"));
         linearLayout.addView(imageView);
         this.i = new TextView(this);
         LinearLayout.LayoutParams layoutParams6 = new LinearLayout.LayoutParams(layoutParams3);
-        layoutParams6.leftMargin = C7050a.a(this, 7.0f);
+        layoutParams6.leftMargin = com.tencent.connect.avatar.a.a(this, 7.0f);
         this.i.setLayoutParams(layoutParams6);
         this.i.setEllipsize(TextUtils.TruncateAt.END);
         this.i.setSingleLine();
@@ -472,41 +471,41 @@ public class ImageActivity extends Activity {
         this.i.setVisibility(8);
         linearLayout.addView(this.i);
         RelativeLayout relativeLayout3 = new RelativeLayout(this);
-        RelativeLayout.LayoutParams layoutParams7 = new RelativeLayout.LayoutParams(-1, C7050a.a(this, 60.0f));
+        RelativeLayout.LayoutParams layoutParams7 = new RelativeLayout.LayoutParams(-1, com.tencent.connect.avatar.a.a(this, 60.0f));
         layoutParams7.addRule(12, -1);
         layoutParams7.addRule(9, -1);
         relativeLayout3.setLayoutParams(layoutParams7);
         relativeLayout3.setBackgroundDrawable(b("com.tencent.plus.bar.png"));
-        int a = C7050a.a(this, 10.0f);
-        relativeLayout3.setPadding(a, a, a, 0);
+        int a2 = com.tencent.connect.avatar.a.a(this, 10.0f);
+        relativeLayout3.setPadding(a2, a2, a2, 0);
         this.a.addView(relativeLayout3);
-        C7049a c7049a = new C7049a(this);
-        int a2 = C7050a.a(this, 14.0f);
-        int a3 = C7050a.a(this, 7.0f);
+        a aVar = new a(this);
+        int a3 = com.tencent.connect.avatar.a.a(this, 14.0f);
+        int a4 = com.tencent.connect.avatar.a.a(this, 7.0f);
         this.g = new Button(this);
-        this.g.setLayoutParams(new RelativeLayout.LayoutParams(C7050a.a(this, 78.0f), C7050a.a(this, 45.0f)));
+        this.g.setLayoutParams(new RelativeLayout.LayoutParams(com.tencent.connect.avatar.a.a(this, 78.0f), com.tencent.connect.avatar.a.a(this, 45.0f)));
         this.g.setText("取消");
         this.g.setTextColor(-1);
         this.g.setTextSize(18.0f);
-        this.g.setPadding(a2, a3, a2, a3);
-        c7049a.b(this.g);
+        this.g.setPadding(a3, a4, a3, a4);
+        aVar.b(this.g);
         relativeLayout3.addView(this.g);
         this.f = new Button(this);
-        RelativeLayout.LayoutParams layoutParams8 = new RelativeLayout.LayoutParams(C7050a.a(this, 78.0f), C7050a.a(this, 45.0f));
+        RelativeLayout.LayoutParams layoutParams8 = new RelativeLayout.LayoutParams(com.tencent.connect.avatar.a.a(this, 78.0f), com.tencent.connect.avatar.a.a(this, 45.0f));
         layoutParams8.addRule(11, -1);
         this.f.setLayoutParams(layoutParams8);
         this.f.setTextColor(-1);
         this.f.setTextSize(18.0f);
-        this.f.setPadding(a2, a3, a2, a3);
+        this.f.setPadding(a3, a4, a3, a4);
         this.f.setText("选取");
-        c7049a.a(this.f);
+        aVar.a(this.f);
         relativeLayout3.addView(this.f);
         TextView textView = new TextView(this);
         RelativeLayout.LayoutParams layoutParams9 = new RelativeLayout.LayoutParams(layoutParams3);
         layoutParams9.addRule(13, -1);
         textView.setLayoutParams(layoutParams9);
         textView.setText("移动和缩放");
-        textView.setPadding(0, C7050a.a(this, 3.0f), 0, 0);
+        textView.setPadding(0, com.tencent.connect.avatar.a.a(this, 3.0f), 0, 0);
         textView.setTextSize(18.0f);
         textView.setTextColor(-1);
         relativeLayout3.addView(textView);
@@ -566,6 +565,6 @@ public class ImageActivity extends Activity {
         if (j != 0) {
             hashMap.put("elt", String.valueOf(j));
         }
-        C7087h.a().a("https://cgi.qplus.com/report/report", hashMap);
+        h.a().a("https://cgi.qplus.com/report/report", hashMap);
     }
 }

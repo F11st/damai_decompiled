@@ -22,12 +22,11 @@ public final class CouponBannerViewExt extends BaseBannerView {
     private final View view;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.scriptmurder.CouponBannerViewExt$a */
     /* loaded from: classes7.dex */
-    public static final class View$OnAttachStateChangeListenerC3500a implements View.OnAttachStateChangeListener {
+    public static final class a implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC3500a() {
+        a() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -104,7 +103,7 @@ public final class CouponBannerViewExt extends BaseBannerView {
             return;
         }
         super.initRecyclerSettings(recycledViewPool, map);
-        this.view.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC3500a());
+        this.view.addOnAttachStateChangeListener(new a());
     }
 
     public final void setIndex(int i) {

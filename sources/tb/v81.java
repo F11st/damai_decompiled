@@ -38,10 +38,9 @@ public class v81 extends wg1 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.v81$a */
     /* loaded from: classes3.dex */
-    public class C9813a implements Function1<TypeParameterDescriptor, Boolean> {
-        C9813a(v81 v81Var) {
+    public class a implements Function1<TypeParameterDescriptor, Boolean> {
+        a(v81 v81Var) {
         }
 
         @Override // kotlin.jvm.functions.Function1
@@ -98,7 +97,7 @@ public class v81 extends wg1 {
                 List<TypeParameterDescriptor> parameters = this.a.getTypeConstructor().getParameters();
                 this.d = new ArrayList(parameters.size());
                 this.c = b70.b(parameters, this.b.j(), this, this.d);
-                N = CollectionsKt___CollectionsKt.N(this.d, new C9813a(this));
+                N = CollectionsKt___CollectionsKt.N(this.d, new a(this));
                 this.e = N;
             }
         }
@@ -119,14 +118,14 @@ public class v81 extends wg1 {
         if (b81Var == null) {
             c(6);
         }
-        MemberScope a = this.a.a(br2Var, b81Var);
+        MemberScope a2 = this.a.a(br2Var, b81Var);
         if (this.b.k()) {
-            if (a == null) {
+            if (a2 == null) {
                 c(7);
             }
-            return a;
+            return a2;
         }
-        return new SubstitutingScope(a, d());
+        return new SubstitutingScope(a2, d());
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor
@@ -243,11 +242,11 @@ public class v81 extends wg1 {
         if (br2Var == null) {
             c(10);
         }
-        MemberScope a = a(br2Var, DescriptorUtilsKt.k(d70.g(this)));
-        if (a == null) {
+        MemberScope a2 = a(br2Var, DescriptorUtilsKt.k(d70.g(this)));
+        if (a2 == null) {
             c(11);
         }
-        return a;
+        return a2;
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor, kotlin.reflect.jvm.internal.impl.descriptors.MemberDescriptor

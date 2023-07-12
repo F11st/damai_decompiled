@@ -35,15 +35,14 @@ public class VideoProjectView extends RelativeLayout {
     TextView tvSeeProject;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.videobrowse.view.VideoProjectView$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2789a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ String b;
         final /* synthetic */ String c;
 
-        View$OnClickListenerC2789a(String str, String str2, String str3) {
+        a(String str, String str2, String str3) {
             this.a = str;
             this.b = str2;
             this.c = str3;
@@ -105,7 +104,7 @@ public class VideoProjectView extends RelativeLayout {
         this.tvProjectTime.setText(str3);
         this.tvProjectName.setText(str2);
         this.tvProjectAddress.setText(str4);
-        this.tvSeeProject.setOnClickListener(new View$OnClickListenerC2789a(str, str2, str5));
+        this.tvSeeProject.setOnClickListener(new a(str, str2, str5));
     }
 
     public VideoProjectView(Context context, @Nullable AttributeSet attributeSet) {

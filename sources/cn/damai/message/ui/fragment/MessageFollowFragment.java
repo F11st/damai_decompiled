@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.homepage.R$id;
@@ -171,7 +171,7 @@ public class MessageFollowFragment extends DamaiBaseMvpFragment<FollowCommentPre
             if (TextUtils.isEmpty(havanaId)) {
                 return;
             }
-            C0529c.e().x(te1.m().k(z20.E(), String.valueOf(havanaId), i));
+            c.e().x(te1.m().k(z20.E(), String.valueOf(havanaId), i));
             Bundle bundle = new Bundle();
             bundle.putString(FeedsViewModel.ARG_USERID, havanaId);
             DMNav.from(getActivity()).withExtras(bundle).toUri(NavUri.b(cs.ARTISTID_THEME));

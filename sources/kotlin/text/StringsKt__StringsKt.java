@@ -8,10 +8,6 @@ import java.util.Iterator;
 import java.util.List;
 import kotlin.Pair;
 import kotlin.collections.ArraysKt___ArraysKt;
-import kotlin.collections.C8207h;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8215n;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.sequences.Sequence;
@@ -30,16 +26,15 @@ import tb.ty1;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public class StringsKt__StringsKt extends C8604o {
+public class StringsKt__StringsKt extends o {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.text.StringsKt__StringsKt$a */
     /* loaded from: classes3.dex */
-    public static final class C8588a extends ai {
+    public static final class a extends ai {
         private int a;
         final /* synthetic */ CharSequence b;
 
-        C8588a(CharSequence charSequence) {
+        a(CharSequence charSequence) {
             this.b = charSequence;
         }
 
@@ -211,7 +206,7 @@ public class StringsKt__StringsKt extends C8604o {
     public static final boolean L(@Nullable CharSequence charSequence, @Nullable CharSequence charSequence2) {
         boolean q;
         if ((charSequence instanceof String) && (charSequence2 instanceof String)) {
-            q = C8604o.q((String) charSequence, (String) charSequence2, true);
+            q = o.q((String) charSequence, (String) charSequence2, true);
             return q;
         } else if (charSequence == charSequence2) {
             return true;
@@ -221,7 +216,7 @@ public class StringsKt__StringsKt extends C8604o {
             }
             int length = charSequence.length();
             for (int i = 0; i < length; i++) {
-                if (!C8591c.d(charSequence.charAt(i), charSequence2.charAt(i), true)) {
+                if (!c.d(charSequence.charAt(i), charSequence2.charAt(i), true)) {
                     return false;
                 }
             }
@@ -271,7 +266,7 @@ public class StringsKt__StringsKt extends C8604o {
         int i = 0;
         boolean z = false;
         while (i <= length) {
-            c = C8590b.c(charSequence.charAt(!z ? i : length));
+            c = b.c(charSequence.charAt(!z ? i : length));
             if (z) {
                 if (!c) {
                     break;
@@ -291,7 +286,7 @@ public class StringsKt__StringsKt extends C8604o {
         b41.i(charSequence, "<this>");
         if (charSequence.length() > 0) {
             T = T(charSequence);
-            if (C8591c.d(charSequence.charAt(T), c, z)) {
+            if (c.d(charSequence.charAt(T), c, z)) {
                 return true;
             }
         }
@@ -303,7 +298,7 @@ public class StringsKt__StringsKt extends C8604o {
         b41.i(charSequence, "<this>");
         b41.i(charSequence2, Constants.Name.SUFFIX);
         if (!z && (charSequence instanceof String) && (charSequence2 instanceof String)) {
-            p = C8604o.p((String) charSequence, (String) charSequence2, false, 2, null);
+            p = o.p((String) charSequence, (String) charSequence2, false, 2, null);
             return p;
         }
         return n0(charSequence, charSequence.length() - charSequence2.length(), charSequence2, 0, charSequence2.length(), z);
@@ -329,9 +324,9 @@ public class StringsKt__StringsKt extends C8604o {
         l31 g;
         Object obj;
         Object obj2;
-        int a;
+        int a2;
         if (!z && collection.size() == 1) {
-            String str = (String) C8212k.p0(collection);
+            String str = (String) kotlin.collections.k.p0(collection);
             int Z = !z2 ? Z(charSequence, str, i, false, 4, null) : f0(charSequence, str, i, false, 4, null);
             if (Z < 0) {
                 return null;
@@ -343,14 +338,14 @@ public class StringsKt__StringsKt extends C8604o {
             d = ty1.d(i, T);
             g = ty1.g(d, 0);
         } else {
-            a = ty1.a(i, 0);
-            g = new n31(a, charSequence.length());
+            a2 = ty1.a(i, 0);
+            g = new n31(a2, charSequence.length());
         }
         if (charSequence instanceof String) {
-            int a2 = g.a();
+            int a3 = g.a();
             int b = g.b();
             int c = g.c();
-            if ((c > 0 && a2 <= b) || (c < 0 && b <= a2)) {
+            if ((c > 0 && a3 <= b) || (c < 0 && b <= a3)) {
                 while (true) {
                     Iterator<T> it = collection.iterator();
                     while (true) {
@@ -360,26 +355,26 @@ public class StringsKt__StringsKt extends C8604o {
                         }
                         obj2 = it.next();
                         String str2 = (String) obj2;
-                        if (C8604o.t(str2, 0, (String) charSequence, a2, str2.length(), z)) {
+                        if (o.t(str2, 0, (String) charSequence, a3, str2.length(), z)) {
                             break;
                         }
                     }
                     String str3 = (String) obj2;
                     if (str3 == null) {
-                        if (a2 == b) {
+                        if (a3 == b) {
                             break;
                         }
-                        a2 += c;
+                        a3 += c;
                     } else {
-                        return hq2.a(Integer.valueOf(a2), str3);
+                        return hq2.a(Integer.valueOf(a3), str3);
                     }
                 }
             }
         } else {
-            int a3 = g.a();
+            int a4 = g.a();
             int b2 = g.b();
             int c2 = g.c();
-            if ((c2 > 0 && a3 <= b2) || (c2 < 0 && b2 <= a3)) {
+            if ((c2 > 0 && a4 <= b2) || (c2 < 0 && b2 <= a4)) {
                 while (true) {
                     Iterator<T> it2 = collection.iterator();
                     while (true) {
@@ -389,18 +384,18 @@ public class StringsKt__StringsKt extends C8604o {
                         }
                         obj = it2.next();
                         String str4 = (String) obj;
-                        if (n0(str4, 0, charSequence, a3, str4.length(), z)) {
+                        if (n0(str4, 0, charSequence, a4, str4.length(), z)) {
                             break;
                         }
                     }
                     String str5 = (String) obj;
                     if (str5 == null) {
-                        if (a3 == b2) {
+                        if (a4 == b2) {
                             break;
                         }
-                        a3 += c2;
+                        a4 += c2;
                     } else {
-                        return hq2.a(Integer.valueOf(a3), str5);
+                        return hq2.a(Integer.valueOf(a4), str5);
                     }
                 }
             }
@@ -439,48 +434,48 @@ public class StringsKt__StringsKt extends C8604o {
     private static final int W(CharSequence charSequence, CharSequence charSequence2, int i, int i2, boolean z, boolean z2) {
         int T;
         int d;
-        int a;
-        l31 g;
         int a2;
+        l31 g;
+        int a3;
         int d2;
         if (!z2) {
-            a2 = ty1.a(i, 0);
+            a3 = ty1.a(i, 0);
             d2 = ty1.d(i2, charSequence.length());
-            g = new n31(a2, d2);
+            g = new n31(a3, d2);
         } else {
             T = T(charSequence);
             d = ty1.d(i, T);
-            a = ty1.a(i2, 0);
-            g = ty1.g(d, a);
+            a2 = ty1.a(i2, 0);
+            g = ty1.g(d, a2);
         }
         if ((charSequence instanceof String) && (charSequence2 instanceof String)) {
-            int a3 = g.a();
+            int a4 = g.a();
             int b = g.b();
             int c = g.c();
-            if ((c <= 0 || a3 > b) && (c >= 0 || b > a3)) {
+            if ((c <= 0 || a4 > b) && (c >= 0 || b > a4)) {
                 return -1;
             }
-            while (!C8604o.t((String) charSequence2, 0, (String) charSequence, a3, charSequence2.length(), z)) {
-                if (a3 == b) {
+            while (!o.t((String) charSequence2, 0, (String) charSequence, a4, charSequence2.length(), z)) {
+                if (a4 == b) {
                     return -1;
                 }
-                a3 += c;
+                a4 += c;
             }
-            return a3;
+            return a4;
         }
-        int a4 = g.a();
+        int a5 = g.a();
         int b2 = g.b();
         int c2 = g.c();
-        if ((c2 <= 0 || a4 > b2) && (c2 >= 0 || b2 > a4)) {
+        if ((c2 <= 0 || a5 > b2) && (c2 >= 0 || b2 > a5)) {
             return -1;
         }
-        while (!n0(charSequence2, 0, charSequence, a4, charSequence2.length(), z)) {
-            if (a4 == b2) {
+        while (!n0(charSequence2, 0, charSequence, a5, charSequence2.length(), z)) {
+            if (a5 == b2) {
                 return -1;
             }
-            a4 += c2;
+            a5 += c2;
         }
-        return a4;
+        return a5;
     }
 
     static /* synthetic */ int X(CharSequence charSequence, CharSequence charSequence2, int i, int i2, boolean z, boolean z2, int i3, Object obj) {
@@ -508,7 +503,7 @@ public class StringsKt__StringsKt extends C8604o {
     }
 
     public static final int a0(@NotNull CharSequence charSequence, @NotNull char[] cArr, int i, boolean z) {
-        int a;
+        int a2;
         int T;
         boolean z2;
         char K;
@@ -518,9 +513,9 @@ public class StringsKt__StringsKt extends C8604o {
             K = ArraysKt___ArraysKt.K(cArr);
             return ((String) charSequence).indexOf(K, i);
         }
-        a = ty1.a(i, 0);
+        a2 = ty1.a(i, 0);
         T = T(charSequence);
-        i31 it = new n31(a, T).iterator();
+        i31 it = new n31(a2, T).iterator();
         while (it.hasNext()) {
             int nextInt = it.nextInt();
             char charAt = charSequence.charAt(nextInt);
@@ -531,7 +526,7 @@ public class StringsKt__StringsKt extends C8604o {
                     z2 = false;
                     continue;
                     break;
-                } else if (C8591c.d(cArr[i2], charAt, z)) {
+                } else if (c.d(cArr[i2], charAt, z)) {
                     z2 = true;
                     continue;
                     break;
@@ -549,7 +544,7 @@ public class StringsKt__StringsKt extends C8604o {
     @NotNull
     public static final ai b0(@NotNull CharSequence charSequence) {
         b41.i(charSequence, "<this>");
-        return new C8588a(charSequence);
+        return new a(charSequence);
     }
 
     public static final int c0(@NotNull CharSequence charSequence, char c, int i, boolean z) {
@@ -608,7 +603,7 @@ public class StringsKt__StringsKt extends C8604o {
             while (true) {
                 if (i2 >= length) {
                     break;
-                } else if (C8591c.d(cArr[i2], charAt, z)) {
+                } else if (c.d(cArr[i2], charAt, z)) {
                     z2 = true;
                     break;
                 } else {
@@ -630,10 +625,8 @@ public class StringsKt__StringsKt extends C8604o {
 
     @NotNull
     public static final List<String> i0(@NotNull CharSequence charSequence) {
-        List<String> B;
         b41.i(charSequence, "<this>");
-        B = SequencesKt___SequencesKt.B(h0(charSequence));
-        return B;
+        return SequencesKt___SequencesKt.B(h0(charSequence));
     }
 
     @NotNull
@@ -664,8 +657,8 @@ public class StringsKt__StringsKt extends C8604o {
     private static final Sequence<n31> l0(CharSequence charSequence, String[] strArr, int i, final boolean z, int i2) {
         final List d;
         q0(i2);
-        d = C8207h.d(strArr);
-        return new C8592d(charSequence, i, i2, new Function2<CharSequence, Integer, Pair<? extends Integer, ? extends Integer>>() { // from class: kotlin.text.StringsKt__StringsKt$rangesDelimitedBy$2
+        d = kotlin.collections.h.d(strArr);
+        return new d(charSequence, i, i2, new Function2<CharSequence, Integer, Pair<? extends Integer, ? extends Integer>>() { // from class: kotlin.text.StringsKt__StringsKt$rangesDelimitedBy$2
             /* JADX INFO: Access modifiers changed from: package-private */
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             {
@@ -710,7 +703,7 @@ public class StringsKt__StringsKt extends C8604o {
             return false;
         }
         for (int i4 = 0; i4 < i3; i4++) {
-            if (!C8591c.d(charSequence.charAt(i + i4), charSequence2.charAt(i2 + i4), z)) {
+            if (!c.d(charSequence.charAt(i + i4), charSequence2.charAt(i2 + i4), z)) {
                 return false;
             }
         }
@@ -765,7 +758,7 @@ public class StringsKt__StringsKt extends C8604o {
             }
         }
         l = SequencesKt___SequencesKt.l(m0(charSequence, strArr, 0, z, i, 2, null));
-        q = C8215n.q(l, 10);
+        q = kotlin.collections.n.q(l, 10);
         ArrayList arrayList = new ArrayList(q);
         for (n31 n31Var : l) {
             arrayList.add(A0(charSequence, n31Var));
@@ -792,7 +785,7 @@ public class StringsKt__StringsKt extends C8604o {
             arrayList.add(charSequence.subSequence(i2, charSequence.length()).toString());
             return arrayList;
         }
-        e = C8213l.e(charSequence.toString());
+        e = kotlin.collections.l.e(charSequence.toString());
         return e;
     }
 
@@ -840,7 +833,7 @@ public class StringsKt__StringsKt extends C8604o {
 
     public static final boolean w0(@NotNull CharSequence charSequence, char c, boolean z) {
         b41.i(charSequence, "<this>");
-        return charSequence.length() > 0 && C8591c.d(charSequence.charAt(0), c, z);
+        return charSequence.length() > 0 && c.d(charSequence.charAt(0), c, z);
     }
 
     public static final boolean x0(@NotNull CharSequence charSequence, @NotNull CharSequence charSequence2, boolean z) {
@@ -848,7 +841,7 @@ public class StringsKt__StringsKt extends C8604o {
         b41.i(charSequence, "<this>");
         b41.i(charSequence2, Constants.Name.PREFIX);
         if (!z && (charSequence instanceof String) && (charSequence2 instanceof String)) {
-            F = C8604o.F((String) charSequence, (String) charSequence2, false, 2, null);
+            F = o.F((String) charSequence, (String) charSequence2, false, 2, null);
             return F;
         }
         return n0(charSequence, 0, charSequence2, 0, charSequence2.length(), z);

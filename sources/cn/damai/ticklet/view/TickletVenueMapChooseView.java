@@ -29,13 +29,12 @@ public class TickletVenueMapChooseView extends RelativeLayout {
     private TextView tvTitle;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletVenueMapChooseView$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2130a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TickletAnimWindow.ICustomDialogEventListener a;
 
-        View$OnClickListenerC2130a(TickletVenueMapChooseView tickletVenueMapChooseView, TickletAnimWindow.ICustomDialogEventListener iCustomDialogEventListener) {
+        a(TickletVenueMapChooseView tickletVenueMapChooseView, TickletAnimWindow.ICustomDialogEventListener iCustomDialogEventListener) {
             this.a = iCustomDialogEventListener;
         }
 
@@ -88,7 +87,7 @@ public class TickletVenueMapChooseView extends RelativeLayout {
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(-1, -2);
             layoutParams.setMargins(0, 0, 0, 30);
             textView.setTag(resolveInfo.activityInfo.packageName);
-            textView.setOnClickListener(new View$OnClickListenerC2130a(this, iCustomDialogEventListener));
+            textView.setOnClickListener(new a(this, iCustomDialogEventListener));
             this.llMapappView.addView(textView, layoutParams);
         }
     }

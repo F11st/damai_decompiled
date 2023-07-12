@@ -6,7 +6,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.text.TextUtils;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.faceverify.activity.FaceVerifyFailedActivity;
 import cn.damai.commonbusiness.faceverify.activity.IdentityInfoQueryActivity;
@@ -42,9 +41,8 @@ public class DMFaceVerifyManager {
     private DMFaceVerifyResult b;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.faceverify.manager.DMFaceVerifyManager$a */
     /* loaded from: classes4.dex */
-    public class C0689a implements RPSDK.RPCompletedListener {
+    public class a implements RPSDK.RPCompletedListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context a;
         final /* synthetic */ String b;
@@ -52,7 +50,7 @@ public class DMFaceVerifyManager {
         final /* synthetic */ String d;
         final /* synthetic */ String e;
 
-        C0689a(Context context, String str, String str2, String str3, String str4) {
+        a(Context context, String str, String str2, String str3, String str4) {
             this.a = context;
             this.b = str;
             this.c = str2;
@@ -74,12 +72,11 @@ public class DMFaceVerifyManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.faceverify.manager.DMFaceVerifyManager$b */
     /* loaded from: classes14.dex */
-    public class DialogInterface$OnClickListenerC0690b implements DialogInterface.OnClickListener {
+    public class b implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC0690b() {
+        b() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -95,16 +92,15 @@ public class DMFaceVerifyManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.faceverify.manager.DMFaceVerifyManager$c */
     /* loaded from: classes14.dex */
-    public class DialogInterface$OnClickListenerC0691c implements DialogInterface.OnClickListener {
+    public class c implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context a;
         final /* synthetic */ String b;
         final /* synthetic */ String c;
         final /* synthetic */ String d;
 
-        DialogInterface$OnClickListenerC0691c(Context context, String str, String str2, String str3) {
+        c(Context context, String str, String str2, String str3) {
             this.a = context;
             this.b = str;
             this.c = str2;
@@ -224,7 +220,7 @@ public class DMFaceVerifyManager {
         }
         Activity c2 = k3.b().c();
         if (c2 != null) {
-            new h4(c2).h("是", new DialogInterface$OnClickListenerC0691c(context, str, str2, str3)).f("否", new DialogInterface$OnClickListenerC0690b()).e("将该人脸信息补充到您的账号实名认证？").d(false).j();
+            new h4(c2).h("是", new c(context, str, str2, str3)).f("否", new b()).e("将该人脸信息补充到您的账号实名认证？").d(false).j();
         }
     }
 
@@ -403,17 +399,17 @@ public class DMFaceVerifyManager {
                 if (mu0.a() == null) {
                     HashMap hashMap = new HashMap();
                     hashMap.put("contentlabel", "application 为null");
-                    C0529c.e().A(hashMap, "RPSDK_Application", "faceService");
+                    cn.damai.common.user.c.e().A(hashMap, "RPSDK_Application", "faceService");
                     return;
                 }
                 my1.a(mu0.a());
                 if (RPSDK.getContext() == null) {
                     HashMap hashMap2 = new HashMap();
                     hashMap2.put("contentlabel", "RPSDK Context 为null");
-                    C0529c.e().A(hashMap2, "RPSDK_Context", "faceService");
+                    cn.damai.common.user.c.e().A(hashMap2, "RPSDK_Context", "faceService");
                     return;
                 }
-                RPSDK.start(faceVerifyTokenBean.getVerifyToken(), context, new C0689a(context, str, str2, str3, str4));
+                RPSDK.start(faceVerifyTokenBean.getVerifyToken(), context, new a(context, str, str2, str3, str4));
             } catch (Exception e) {
                 e.printStackTrace();
             }

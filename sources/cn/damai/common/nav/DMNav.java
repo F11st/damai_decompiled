@@ -120,12 +120,11 @@ public class DMNav extends INav {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.nav.DMNav$b */
     /* loaded from: classes4.dex */
-    public static final class C0519b implements NavResolver {
+    public static final class b implements NavResolver {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C0519b() {
+        private b() {
         }
 
         @Override // cn.damai.common.nav.DMNav.NavResolver
@@ -142,15 +141,14 @@ public class DMNav extends INav {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.nav.DMNav$c */
     /* loaded from: classes13.dex */
-    public final class C0520c implements Comparable<C0520c> {
+    public final class c implements Comparable<c> {
         private static transient /* synthetic */ IpChange $ipChange;
         private final ResolveInfo a;
         private int b;
         private int c;
 
-        public C0520c(DMNav dMNav, ResolveInfo resolveInfo, int i, int i2) {
+        public c(DMNav dMNav, ResolveInfo resolveInfo, int i, int i2) {
             this.b = 0;
             this.c = 0;
             this.a = resolveInfo;
@@ -160,29 +158,29 @@ public class DMNav extends INav {
 
         @Override // java.lang.Comparable
         /* renamed from: b */
-        public int compareTo(C0520c c0520c) {
+        public int compareTo(c cVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1747806745")) {
-                return ((Integer) ipChange.ipc$dispatch("-1747806745", new Object[]{this, c0520c})).intValue();
+                return ((Integer) ipChange.ipc$dispatch("-1747806745", new Object[]{this, cVar})).intValue();
             }
-            if (this == c0520c) {
+            if (this == cVar) {
                 return 0;
             }
-            int i = c0520c.b;
+            int i = cVar.b;
             int i2 = this.b;
             if (i != i2) {
                 return i - i2;
             }
-            int i3 = c0520c.c;
+            int i3 = cVar.c;
             int i4 = this.c;
-            return i3 != i4 ? i3 - i4 : System.identityHashCode(this) < System.identityHashCode(c0520c) ? -1 : 1;
+            return i3 != i4 ? i3 - i4 : System.identityHashCode(this) < System.identityHashCode(cVar) ? -1 : 1;
         }
     }
 
     static {
-        C0519b c0519b = new C0519b();
-        DEFAULT_RESOLVER = c0519b;
-        mNavResolver = c0519b;
+        b bVar = new b();
+        DEFAULT_RESOLVER = bVar;
+        mNavResolver = bVar;
     }
 
     private DMNav(Context context) {
@@ -243,14 +241,14 @@ public class DMNav extends INav {
         for (ResolveInfo resolveInfo : list) {
             if (!TextUtils.isEmpty(resolveInfo.activityInfo.packageName)) {
                 if (resolveInfo.activityInfo.packageName.endsWith(this.mContext.getPackageName())) {
-                    arrayList.add(new C0520c(this, resolveInfo, resolveInfo.priority, 1));
+                    arrayList.add(new c(this, resolveInfo, resolveInfo.priority, 1));
                 } else {
                     String str = resolveInfo.activityInfo.packageName;
                     String packageName = this.mContext.getPackageName();
                     String[] split = str.split("\\.");
                     String[] split2 = packageName.split("\\.");
                     if (split.length >= 2 && split2.length >= 2 && split[0].equals(split2[0]) && split[1].equals(split2[1])) {
-                        arrayList.add(new C0520c(this, resolveInfo, resolveInfo.priority, 0));
+                        arrayList.add(new c(this, resolveInfo, resolveInfo.priority, 0));
                     }
                 }
             }
@@ -259,7 +257,7 @@ public class DMNav extends INav {
             if (arrayList.size() > 1) {
                 Collections.sort(arrayList);
             }
-            ResolveInfo resolveInfo2 = ((C0520c) arrayList.get(0)).a;
+            ResolveInfo resolveInfo2 = ((c) arrayList.get(0)).a;
             arrayList.clear();
             return resolveInfo2;
         }

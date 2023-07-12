@@ -58,12 +58,11 @@ public class BannerViewHolder extends CommonViewHolder {
     private int onPageSelectedPos;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.viewholder.BannerViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1856a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1856a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -80,12 +79,11 @@ public class BannerViewHolder extends CommonViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.viewholder.BannerViewHolder$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1857b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1857b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -102,12 +100,11 @@ public class BannerViewHolder extends CommonViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.viewholder.BannerViewHolder$c */
     /* loaded from: classes7.dex */
-    public class C1858c implements OnBannerListener {
+    public class c implements OnBannerListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1858c() {
+        c() {
         }
 
         @Override // cn.damai.tetris.component.home.widget.banner.listener.OnBannerListener
@@ -137,12 +134,11 @@ public class BannerViewHolder extends CommonViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.viewholder.BannerViewHolder$d */
     /* loaded from: classes7.dex */
-    public class C1859d implements OnTagListener {
+    public class d implements OnTagListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1859d() {
+        d() {
         }
 
         @Override // cn.damai.tetris.component.home.widget.banner.listener.OnTagListener
@@ -191,38 +187,38 @@ public class BannerViewHolder extends CommonViewHolder {
                 }
             }
         };
-        this.mOnBannerListener = new C1858c();
-        this.mOnTagListener = new C1859d();
+        this.mOnBannerListener = new c();
+        this.mOnTagListener = new d();
         this.mContext = view.getContext();
-        int d = e80.d();
+        int d2 = e80.d();
         this.mBanner = (Banner) this.itemView.findViewById(R$id.homepage_banner);
         this.mNullView = this.itemView.findViewById(R$id.view_null);
         this.mViewBtn1 = this.itemView.findViewById(R$id.view_btn1);
         this.mViewBtn2 = this.itemView.findViewById(R$id.view_btn2);
-        this.mBannerHeight = ((d - t60.a(this.mContext, 42.0f)) * 125) / 333;
+        this.mBannerHeight = ((d2 - t60.a(this.mContext, 42.0f)) * 125) / 333;
         LinearLayout.LayoutParams layoutParams2 = new LinearLayout.LayoutParams(-1, this.mBannerHeight);
         layoutParams2.topMargin = t60.a(this.mContext, 9.0f);
         layoutParams2.bottomMargin = t60.a(this.mContext, 9.0f);
         this.mBanner.setLayoutParams(layoutParams2);
         bannerSetting(this.mBanner);
         this.itemView.setLayoutParams(new ViewGroup.LayoutParams(-1, -2));
-        this.mViewBtn1.setOnClickListener(new View$OnClickListenerC1856a());
-        this.mViewBtn2.setOnClickListener(new View$OnClickListenerC1857b());
+        this.mViewBtn1.setOnClickListener(new a());
+        this.mViewBtn2.setOnClickListener(new b());
         new xr().b("showNullView", new c13(this));
         int homeLottieViewHeight = LottieHeight.getHomeLottieViewHeight();
-        int a = this.mBannerHeight + t60.a(this.mContext, 18.0f);
-        int a2 = t60.a(this.mContext, 45.0f);
+        int a2 = this.mBannerHeight + t60.a(this.mContext, 18.0f);
+        int a3 = t60.a(this.mContext, 45.0f);
         if (Build.VERSION.SDK_INT >= 23) {
             Context context = this.mContext;
             if (context instanceof Activity) {
-                a2 += kg2.a((Activity) context);
+                a3 += kg2.a((Activity) context);
             }
         }
-        int a3 = ((homeLottieViewHeight - a) - a2) - t60.a(this.mContext, 44.0f);
-        if (a3 <= 0 || (layoutParams = this.mNullView.getLayoutParams()) == null) {
+        int a4 = ((homeLottieViewHeight - a2) - a3) - t60.a(this.mContext, 44.0f);
+        if (a4 <= 0 || (layoutParams = this.mNullView.getLayoutParams()) == null) {
             return;
         }
-        layoutParams.height = a3;
+        layoutParams.height = a4;
     }
 
     private void bannerSetting(Banner banner) {

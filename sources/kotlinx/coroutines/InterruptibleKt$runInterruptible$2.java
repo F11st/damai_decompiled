@@ -2,7 +2,6 @@ package kotlinx.coroutines;
 
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function0;
@@ -45,7 +44,7 @@ final class InterruptibleKt$runInterruptible$2 extends SuspendLambda implements 
     @Nullable
     public final Object invokeSuspend(@NotNull Object obj) {
         Object b;
-        C8234b.d();
+        kotlin.coroutines.intrinsics.b.d();
         if (this.label == 0) {
             i32.b(obj);
             b = z31.b(this.p$.getCoroutineContext(), this.$block);

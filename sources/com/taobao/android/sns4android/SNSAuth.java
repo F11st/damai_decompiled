@@ -75,13 +75,12 @@ public class SNSAuth {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.taobao.android.sns4android.SNSAuth$SNSListenerImpl$a */
         /* loaded from: classes11.dex */
-        public class C6594a implements RpcRequestCallback {
+        public class a implements RpcRequestCallback {
             final /* synthetic */ Activity a;
             final /* synthetic */ SNSSignInAccount b;
 
-            C6594a(Activity activity, SNSSignInAccount sNSSignInAccount) {
+            a(Activity activity, SNSSignInAccount sNSSignInAccount) {
                 this.a = activity;
                 this.b = sNSSignInAccount;
             }
@@ -104,15 +103,14 @@ public class SNSAuth {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.taobao.android.sns4android.SNSAuth$SNSListenerImpl$b */
         /* loaded from: classes12.dex */
-        public class DialogInterface$OnClickListenerC6595b implements DialogInterface.OnClickListener {
+        public class b implements DialogInterface.OnClickListener {
             final /* synthetic */ DialogHelper a;
             final /* synthetic */ Activity b;
             final /* synthetic */ SNSSignInAccount c;
             final /* synthetic */ RpcResponse d;
 
-            DialogInterface$OnClickListenerC6595b(SNSListenerImpl sNSListenerImpl, DialogHelper dialogHelper, Activity activity, SNSSignInAccount sNSSignInAccount, RpcResponse rpcResponse) {
+            b(SNSListenerImpl sNSListenerImpl, DialogHelper dialogHelper, Activity activity, SNSSignInAccount sNSSignInAccount, RpcResponse rpcResponse) {
                 this.a = dialogHelper;
                 this.b = activity;
                 this.c = sNSSignInAccount;
@@ -135,14 +133,13 @@ public class SNSAuth {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.taobao.android.sns4android.SNSAuth$SNSListenerImpl$c */
         /* loaded from: classes11.dex */
-        public class C6596c implements CommonDataCallback {
+        public class c implements CommonDataCallback {
             final /* synthetic */ SNSSignInAccount a;
             final /* synthetic */ UrlParam b;
             final /* synthetic */ Activity c;
 
-            C6596c(SNSListenerImpl sNSListenerImpl, SNSSignInAccount sNSSignInAccount, UrlParam urlParam, Activity activity) {
+            c(SNSListenerImpl sNSListenerImpl, SNSSignInAccount sNSSignInAccount, UrlParam urlParam, Activity activity) {
                 this.a = sNSSignInAccount;
                 this.b = urlParam;
                 this.c = activity;
@@ -190,13 +187,12 @@ public class SNSAuth {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.taobao.android.sns4android.SNSAuth$SNSListenerImpl$d */
         /* loaded from: classes12.dex */
-        public class DialogInterface$OnClickListenerC6597d implements DialogInterface.OnClickListener {
+        public class d implements DialogInterface.OnClickListener {
             final /* synthetic */ RpcResponse a;
             final /* synthetic */ DialogHelper b;
 
-            DialogInterface$OnClickListenerC6597d(SNSListenerImpl sNSListenerImpl, RpcResponse rpcResponse, DialogHelper dialogHelper) {
+            d(SNSListenerImpl sNSListenerImpl, RpcResponse rpcResponse, DialogHelper dialogHelper) {
                 this.a = rpcResponse;
                 this.b = dialogHelper;
             }
@@ -261,7 +257,7 @@ public class SNSAuth {
                 } else if (ApiConstants.ResultActionType.ALERT_WITH_H5.equals(str)) {
                     SNSAuth.snsTokenUT(rpcResponse, UTConstant.PageName.UT_PAGE_EXTEND, "alert_with_h5");
                     DialogHelper dialogHelper = new DialogHelper(activity);
-                    dialogHelper.alert("", rpcResponse.message, activity.getResources().getString(R.string.aliuser_confirm), new DialogInterface$OnClickListenerC6595b(this, dialogHelper, activity, sNSSignInAccount, rpcResponse), null, null);
+                    dialogHelper.alert("", rpcResponse.message, activity.getResources().getString(R.string.aliuser_confirm), new b(this, dialogHelper, activity, sNSSignInAccount, rpcResponse), null, null);
                 } else if (ApiConstants.ResultActionType.UCC_H5.equals(str) && rpcResponse.returnValue != null) {
                     SNSAuth.snsTokenUT(rpcResponse, UTConstant.PageName.UT_PAGE_EXTEND, "ucc_h5");
                     String str4 = rpcResponse.returnValue.h5Url;
@@ -271,7 +267,7 @@ public class SNSAuth {
                     urlParam2.token = loginReturnData.token;
                     urlParam2.scene = loginReturnData.scene;
                     urlParam2.url = str4;
-                    UrlUtil.OpenUCC(activity, urlParam2, new C6596c(this, sNSSignInAccount, urlParam2, activity));
+                    UrlUtil.OpenUCC(activity, urlParam2, new c(this, sNSSignInAccount, urlParam2, activity));
                 } else if (ApiConstants.ResultActionType.ALERT.equals(str)) {
                     SNSAuth.snsTokenUT(rpcResponse, UTConstant.PageName.UT_PAGE_EXTEND, "Alert");
                     UserTrackAdapter.sendUT(UTConstant.PageName.UT_PAGE_EXTEND, UTConstant.CustomEvent.UT_SINGLE_LOGIN_FAILURE, String.valueOf(rpcResponse.code), UTConstans.convertSnsTypeToLoginType(sNSSignInAccount.snsType), SNSAuth.access$100());
@@ -279,8 +275,8 @@ public class SNSAuth {
                         DialogHelper dialogHelper2 = new DialogHelper(activity);
                         String string = activity.getResources().getString(R.string.aliuser_SNS_cancel);
                         String string2 = activity.getResources().getString(R.string.aliuser_confirm);
-                        DialogInterface$OnClickListenerC6597d dialogInterface$OnClickListenerC6597d = new DialogInterface$OnClickListenerC6597d(this, rpcResponse, dialogHelper2);
-                        dialogHelper2.alert("", rpcResponse.message, string2, dialogInterface$OnClickListenerC6597d, string, dialogInterface$OnClickListenerC6597d);
+                        d dVar = new d(this, rpcResponse, dialogHelper2);
+                        dialogHelper2.alert("", rpcResponse.message, string2, dVar, string, dVar);
                     }
                 } else if (!ApiConstants.CodeGroup.SNSFAILED.equals(str2) || rpcResponse.returnValue == null) {
                     SNSAuth.snsTokenUT(rpcResponse, UTConstant.PageName.UT_PAGE_EXTEND, "Other");
@@ -348,29 +344,28 @@ public class SNSAuth {
                 UserTrackAdapter.sendUT(UTConstant.PageName.UT_PAGE_EXTEND, UTConstans.CustomEvent.UT_SNS_AUTHCODE_SUCCESS, "", UTConstans.convertSnsTypeToLoginType(sNSSignInAccount.snsType), access$100);
                 UserTrackAdapter.sendUT(UTConstant.PageName.UT_PAGE_EXTEND, UTConstant.CustomEvent.UT_SINGLE_LOGIN_COMMIT, "", UTConstans.convertSnsTypeToLoginType(sNSSignInAccount.snsType), access$100);
             }
-            SNSDataRepository.getInstance().snsLogin(sNSSignInAccount, new C6594a(activity, sNSSignInAccount));
+            SNSDataRepository.getInstance().snsLogin(sNSSignInAccount, new a(activity, sNSSignInAccount));
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.SNSAuth$a */
     /* loaded from: classes12.dex */
-    public static class DialogInterface$OnClickListenerC6598a implements DialogInterface.OnClickListener {
+    public static class a implements DialogInterface.OnClickListener {
         final /* synthetic */ String a;
         final /* synthetic */ Activity b;
         final /* synthetic */ IDialogHelper c;
 
         /* compiled from: Taobao */
-        /* renamed from: com.taobao.android.sns4android.SNSAuth$a$a */
+        /* renamed from: com.taobao.android.sns4android.SNSAuth$a$a  reason: collision with other inner class name */
         /* loaded from: classes11.dex */
-        class C6599a implements RpcRequestCallback {
-            C6599a() {
+        class C0300a implements RpcRequestCallback {
+            C0300a() {
             }
 
             @Override // com.ali.user.mobile.callback.RpcRequestCallback
             public void onError(RpcResponse rpcResponse) {
-                ((SNSService) ServiceFactory.getService(SNSService.class)).toast(DialogInterface$OnClickListenerC6598a.this.b, ResourceUtil.getStringById("aliuser_SNS_platform_auth_fail"));
+                ((SNSService) ServiceFactory.getService(SNSService.class)).toast(a.this.b, ResourceUtil.getStringById("aliuser_SNS_platform_auth_fail"));
             }
 
             @Override // com.ali.user.mobile.callback.RpcRequestCallback
@@ -382,22 +377,22 @@ public class SNSAuth {
                     }
                     if (rpcResponse.returnValue != 0 && rpcResponse.code == 200 && (rpcResponse instanceof SnsCainiaoBindResult)) {
                         T t = ((SnsCainiaoBindResult) rpcResponse).returnValue;
-                        ((SNSService) ServiceFactory.getService(SNSService.class)).onTokenLogin(DialogInterface$OnClickListenerC6598a.this.b, ((ExtraBindResult) t).trustLoginToken, ((ExtraBindResult) t).scene);
+                        ((SNSService) ServiceFactory.getService(SNSService.class)).onTokenLogin(a.this.b, ((ExtraBindResult) t).trustLoginToken, ((ExtraBindResult) t).scene);
                         return;
                     }
-                    ((SNSService) ServiceFactory.getService(SNSService.class)).toast(DialogInterface$OnClickListenerC6598a.this.b, stringById);
+                    ((SNSService) ServiceFactory.getService(SNSService.class)).toast(a.this.b, stringById);
                     return;
                 }
-                ((SNSService) ServiceFactory.getService(SNSService.class)).toast(DialogInterface$OnClickListenerC6598a.this.b, ResourceUtil.getStringById("aliuser_SNS_platform_auth_fail"));
+                ((SNSService) ServiceFactory.getService(SNSService.class)).toast(a.this.b, ResourceUtil.getStringById("aliuser_SNS_platform_auth_fail"));
             }
 
             @Override // com.ali.user.mobile.callback.RpcRequestCallback
             public void onSystemError(RpcResponse rpcResponse) {
-                ((SNSService) ServiceFactory.getService(SNSService.class)).toast(DialogInterface$OnClickListenerC6598a.this.b, ResourceUtil.getStringById("aliuser_SNS_platform_auth_fail"));
+                ((SNSService) ServiceFactory.getService(SNSService.class)).toast(a.this.b, ResourceUtil.getStringById("aliuser_SNS_platform_auth_fail"));
             }
         }
 
-        DialogInterface$OnClickListenerC6598a(String str, Activity activity, IDialogHelper iDialogHelper) {
+        a(String str, Activity activity, IDialogHelper iDialogHelper) {
             this.a = str;
             this.b = activity;
             this.c = iDialogHelper;
@@ -405,19 +400,18 @@ public class SNSAuth {
 
         @Override // android.content.DialogInterface.OnClickListener
         public void onClick(DialogInterface dialogInterface, int i) {
-            SNSDataRepository.getInstance().newBind(this.a, new C6599a());
+            SNSDataRepository.getInstance().newBind(this.a, new C0300a());
             this.c.dismissAlertDialog();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.SNSAuth$b */
     /* loaded from: classes12.dex */
-    public static class DialogInterface$OnClickListenerC6600b implements DialogInterface.OnClickListener {
+    public static class b implements DialogInterface.OnClickListener {
         final /* synthetic */ IDialogHelper a;
 
-        DialogInterface$OnClickListenerC6600b(IDialogHelper iDialogHelper) {
+        b(IDialogHelper iDialogHelper) {
             this.a = iDialogHelper;
         }
 
@@ -533,7 +527,7 @@ public class SNSAuth {
                         }
                         String str9 = string;
                         ActivityUIHelper activityUIHelper2 = new ActivityUIHelper(activity);
-                        activityUIHelper2.alert(activity, str7, str8, str9, new DialogInterface$OnClickListenerC6598a(str5, activity, activityUIHelper2), string2, new DialogInterface$OnClickListenerC6600b(activityUIHelper2));
+                        activityUIHelper2.alert(activity, str7, str8, str9, new a(str5, activity, activityUIHelper2), string2, new b(activityUIHelper2));
                         return;
                     }
                 }

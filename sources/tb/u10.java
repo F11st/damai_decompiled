@@ -4,8 +4,8 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.view.View;
 import com.alibaba.fastjson.JSONArray;
-import com.taobao.android.dinamicx.view.richtext.node.C6424b;
 import com.taobao.android.dinamicx.view.richtext.node.RichTextNode;
+import com.taobao.android.dinamicx.view.richtext.node.b;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
 
 /* compiled from: Taobao */
@@ -52,19 +52,18 @@ public class u10 extends DXWidgetNode {
     private Integer n;
     private int o;
     private int p;
-    private C6424b r;
+    private com.taobao.android.dinamicx.view.richtext.node.b r;
     private boolean a = true;
     private String g = "none";
     private int l = 0;
     private int q = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.u10$a */
     /* loaded from: classes11.dex */
-    class C9756a implements RichTextNode.OnLinkTapListener {
+    class a implements RichTextNode.OnLinkTapListener {
         final /* synthetic */ long a;
 
-        C9756a(long j) {
+        a(long j) {
             this.a = j;
         }
 
@@ -77,12 +76,11 @@ public class u10 extends DXWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.u10$b */
     /* loaded from: classes11.dex */
-    class C9757b implements RichTextNode.OnLongPressListener {
+    class b implements RichTextNode.OnLongPressListener {
         final /* synthetic */ long a;
 
-        C9757b(long j) {
+        b(long j) {
             this.a = j;
         }
 
@@ -96,10 +94,9 @@ public class u10 extends DXWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.u10$c */
     /* loaded from: classes11.dex */
-    class C9758c implements RichTextNode.OnTapListener {
-        C9758c() {
+    class c implements RichTextNode.OnTapListener {
+        c() {
         }
 
         @Override // com.taobao.android.dinamicx.view.richtext.node.RichTextNode.OnTapListener
@@ -109,10 +106,9 @@ public class u10 extends DXWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.u10$d */
     /* loaded from: classes11.dex */
-    class C9759d implements RichTextNode.OnLongTapListener {
-        C9759d() {
+    class d implements RichTextNode.OnLongTapListener {
+        d() {
         }
 
         @Override // com.taobao.android.dinamicx.view.richtext.node.RichTextNode.OnLongTapListener
@@ -121,11 +117,11 @@ public class u10 extends DXWidgetNode {
         }
     }
 
-    public C6424b a() {
+    public com.taobao.android.dinamicx.view.richtext.node.b a() {
         if (TextUtils.isEmpty(this.m)) {
             return null;
         }
-        C6424b.C6433i o = new C6424b.C6433i(this.m).q(this.o).b(getBackGroundColor()).c(getBorderColor()).d(getBorderWidth()).e(getCornerRadius()).g(this.c).h(this.d).i(this.f).j(this.g).m((float) this.j).r(this.p).s(this.q).n(this.k).o(this.l);
+        b.i o = new b.i(this.m).q(this.o).b(getBackGroundColor()).c(getBorderColor()).d(getBorderWidth()).e(getCornerRadius()).g(this.c).h(this.d).i(this.f).j(this.g).m((float) this.j).r(this.p).s(this.q).n(this.k).o(this.l);
         Integer num = this.n;
         if (num != null) {
             o.p(num.intValue());
@@ -142,9 +138,9 @@ public class u10 extends DXWidgetNode {
         if (getDXRuntimeContext() != null && getDXRuntimeContext().getContext() != null) {
             o.f(getDXRuntimeContext().getContext().getAssets(), this.b);
         }
-        C6424b a = o.a();
-        this.r = a;
-        return a;
+        com.taobao.android.dinamicx.view.richtext.node.b a2 = o.a();
+        this.r = a2;
+        return a2;
     }
 
     public int b() {
@@ -194,20 +190,20 @@ public class u10 extends DXWidgetNode {
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onBindEvent(Context context, View view, long j) {
-        C6424b c6424b = this.r;
-        if (c6424b == null) {
+        com.taobao.android.dinamicx.view.richtext.node.b bVar = this.r;
+        if (bVar == null) {
             if (wt.j0(this)) {
                 return;
             }
             super.onBindEvent(context, view, j);
         } else if (j == 9859228430928305L) {
-            c6424b.I(new C9756a(j));
+            bVar.I(new a(j));
         } else if (j == 5176476879387311985L) {
-            c6424b.J(new C9757b(j));
+            bVar.J(new b(j));
         } else if (j == 18903999933159L) {
-            c6424b.L(new C9758c());
+            bVar.L(new c());
         } else if (j == -6544685697300501093L) {
-            c6424b.K(new C9759d());
+            bVar.K(new d());
         } else if (wt.j0(this)) {
         } else {
             super.onBindEvent(context, view, j);
@@ -258,11 +254,11 @@ public class u10 extends DXWidgetNode {
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.taobao.android.dinamicx.widget.DXWidgetNode
-    public void onSetDoubleAttribute(long j, double d) {
+    public void onSetDoubleAttribute(long j, double d2) {
         if (j == -946376925464026374L) {
-            this.j = d;
+            this.j = d2;
         } else {
-            super.onSetDoubleAttribute(j, d);
+            super.onSetDoubleAttribute(j, d2);
         }
     }
 

@@ -8,7 +8,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Messenger;
 import android.text.TextUtils;
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import com.huawei.hms.support.api.entity.core.CommonCode;
 import com.taobao.accs.ACCSManager;
 import com.taobao.accs.common.Constants;
@@ -85,10 +85,10 @@ public class MsgDistributeService extends Service {
                 });
             } else if (Constants.ACTION_SENDMESSAGE_INMAIN.equals(action)) {
                 if (ConnectionServiceManager.getInstance().isEnabled(getApplicationContext())) {
-                    ConnectionServiceManager.getInstance().getConnectionWrapper().send((Message) intent.getSerializableExtra(WXComponent.PROP_FS_MATCH_PARENT), intent.getBooleanExtra(AbstractC5658c.a, true));
+                    ConnectionServiceManager.getInstance().getConnectionWrapper().send((Message) intent.getSerializableExtra(WXComponent.PROP_FS_MATCH_PARENT), intent.getBooleanExtra(c.a, true));
                 }
             } else if (Constants.ACTION_CHANNEL_CONNECTION_CHANGED.equals(action)) {
-                boolean booleanExtra = intent.getBooleanExtra(AbstractC5658c.a, false);
+                boolean booleanExtra = intent.getBooleanExtra(c.a, false);
                 ALog.e(TAG, "ACTION_CHANNEL_CONNECTION_CHANGED", "available", Boolean.valueOf(booleanExtra));
                 ConnectionServiceManager.getInstance().onChannelConnectionChanged(booleanExtra);
             } else {

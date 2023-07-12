@@ -16,14 +16,13 @@ public class Gradient {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.maps.model.Gradient$a */
     /* loaded from: classes10.dex */
-    public static class C4650a {
+    public static class a {
         private final int a;
         private final int b;
         private final float c;
 
-        private C4650a(int i, int i2, float f) {
+        private a(int i, int i2, float f) {
             this.a = i;
             this.b = i2;
             this.c = f;
@@ -34,10 +33,10 @@ public class Gradient {
         this(iArr, fArr, 1000);
     }
 
-    private HashMap<Integer, C4650a> a() {
-        HashMap<Integer, C4650a> hashMap = new HashMap<>(32);
+    private HashMap<Integer, a> a() {
+        HashMap<Integer, a> hashMap = new HashMap<>(32);
         if (this.mStartPoints[0] != 0.0f) {
-            hashMap.put(0, new C4650a(Color.argb(0, Color.red(this.mColors[0]), Color.green(this.mColors[0]), Color.blue(this.mColors[0])), this.mColors[0], this.mColorMapSize * this.mStartPoints[0]));
+            hashMap.put(0, new a(Color.argb(0, Color.red(this.mColors[0]), Color.green(this.mColors[0]), Color.blue(this.mColors[0])), this.mColors[0], this.mColorMapSize * this.mStartPoints[0]));
         }
         for (int i = 1; i < this.mColors.length; i++) {
             int i2 = i - 1;
@@ -46,30 +45,30 @@ public class Gradient {
             int i3 = iArr[i2];
             int i4 = iArr[i];
             float[] fArr = this.mStartPoints;
-            hashMap.put(valueOf, new C4650a(i3, i4, this.mColorMapSize * (fArr[i] - fArr[i2])));
+            hashMap.put(valueOf, new a(i3, i4, this.mColorMapSize * (fArr[i] - fArr[i2])));
         }
         float[] fArr2 = this.mStartPoints;
         if (fArr2[fArr2.length - 1] != 1.0f) {
             int length = fArr2.length - 1;
             Integer valueOf2 = Integer.valueOf((int) (this.mColorMapSize * fArr2[length]));
             int[] iArr2 = this.mColors;
-            hashMap.put(valueOf2, new C4650a(iArr2[length], iArr2[length], this.mColorMapSize * (1.0f - this.mStartPoints[length])));
+            hashMap.put(valueOf2, new a(iArr2[length], iArr2[length], this.mColorMapSize * (1.0f - this.mStartPoints[length])));
         }
         return hashMap;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     public int[] generateColorMap(double d) {
-        HashMap<Integer, C4650a> a = a();
+        HashMap<Integer, a> a2 = a();
         int[] iArr = new int[this.mColorMapSize];
-        C4650a c4650a = a.get(0);
+        a aVar = a2.get(0);
         int i = 0;
         for (int i2 = 0; i2 < this.mColorMapSize; i2++) {
-            if (a.containsKey(Integer.valueOf(i2))) {
-                c4650a = a.get(Integer.valueOf(i2));
+            if (a2.containsKey(Integer.valueOf(i2))) {
+                aVar = a2.get(Integer.valueOf(i2));
                 i = i2;
             }
-            iArr[i2] = a(c4650a.a, c4650a.b, (i2 - i) / c4650a.c);
+            iArr[i2] = a(aVar.a, aVar.b, (i2 - i) / aVar.c);
         }
         if (d != 1.0d) {
             for (int i3 = 0; i3 < this.mColorMapSize; i3++) {

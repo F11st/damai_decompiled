@@ -9,7 +9,6 @@ import android.util.Log;
 import android.webkit.URLUtil;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.qrcode.QrCodeResultActivity;
 import cn.damai.commonbusiness.update.UpdateUtil;
@@ -121,7 +120,7 @@ public class ey1 {
                 if (TextUtils.isEmpty(queryParameter)) {
                     return;
                 }
-                C0529c.e().H("utm", queryParameter);
+                cn.damai.common.user.c.e().H("utm", queryParameter);
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.fuseable.QueueSubscription;
 import io.reactivex.internal.fuseable.SimpleQueue;
@@ -20,7 +20,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableZip<T, R> extends AbstractC8147b<R> {
+public final class FlowableZip<T, R> extends b<R> {
     final int bufferSize;
     final boolean delayError;
     final Publisher<? extends T>[] sources;
@@ -327,7 +327,7 @@ public final class FlowableZip<T, R> extends AbstractC8147b<R> {
         this.delayError = z;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super R> subscriber) {
         int length;
         Publisher<? extends T>[] publisherArr = this.sources;

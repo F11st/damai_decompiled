@@ -3,7 +3,6 @@ package tb;
 import android.os.Build;
 import android.text.TextUtils;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
-import com.alipay.sdk.m.c.C4151a;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -209,7 +208,7 @@ public final class x33 {
     }
 
     private static boolean i(com.loc.ah ahVar) {
-        String e = e(C4151a.a);
+        String e = e(com.alipay.sdk.m.c.a.a);
         if (TextUtils.isEmpty(e)) {
             return false;
         }

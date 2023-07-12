@@ -91,7 +91,7 @@ public class Logger {
             com.xiaomi.push.dj r3 = com.xiaomi.push.dj.a(r4)
         L26:
             r0.<init>(r2, r3)
-            com.xiaomi.channel.commonutils.logger.AbstractC7535b.a(r0)
+            com.xiaomi.channel.commonutils.logger.b.a(r0)
             return
         */
         throw new UnsupportedOperationException("Method not decompiled: com.xiaomi.mipush.sdk.Logger.setPushLog(android.content.Context):void");

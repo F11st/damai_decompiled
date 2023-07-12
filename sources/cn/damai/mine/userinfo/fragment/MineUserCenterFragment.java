@@ -14,7 +14,6 @@ import cn.damai.common.badge.DMBadgeListener;
 import cn.damai.common.badge.bean.BadgeNodeItem;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.commonbusiness.coupondialog.CouponDialogHelper;
@@ -110,20 +109,19 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
     private TextView tv_member_authorithize_desc;
     private gv2 mHeaderPanel = new gv2();
     private boolean isResume = false;
-    ILoginListener mLoginListener = new C1458a();
+    ILoginListener mLoginListener = new a();
     private String type = "-1";
     private List<Fragment> mPageList = new ArrayList();
     private List<String> messageNodes = new ArrayList();
     private List<String> badgeNodes = new ArrayList();
-    private DMBadgeListener listenerBadge = new C1466h();
+    private DMBadgeListener listenerBadge = new h();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.userinfo.fragment.MineUserCenterFragment$a */
     /* loaded from: classes6.dex */
-    public class C1458a extends t3 {
+    public class a extends t3 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1458a() {
+        a() {
         }
 
         @Override // tb.t3, cn.damai.login.havana.ILoginListener
@@ -161,12 +159,11 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.userinfo.fragment.MineUserCenterFragment$b */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1459b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1459b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -176,18 +173,17 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
                 ipChange.ipc$dispatch("881822625", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(vf1.x().A(MineUserCenterFragment.this.type));
+            cn.damai.common.user.c.e().x(vf1.x().A(MineUserCenterFragment.this.type));
             MineUserCenterFragment.this.ll_member_authorithize.setVisibility(8);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.userinfo.fragment.MineUserCenterFragment$c */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1460c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1460c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -197,7 +193,7 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
                 ipChange.ipc$dispatch("-1301854302", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(vf1.x().z(MineUserCenterFragment.this.type));
+            cn.damai.common.user.c.e().x(vf1.x().z(MineUserCenterFragment.this.type));
             if (LoginManager.k().q()) {
                 DMNav.from(MineUserCenterFragment.this.mActivity).toUri(k23.j());
             } else {
@@ -207,18 +203,16 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.userinfo.fragment.MineUserCenterFragment$d */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1461d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.mine.userinfo.fragment.MineUserCenterFragment$d$a */
         /* loaded from: classes6.dex */
-        public class C1462a implements MemberAuthPopWindow.ICustomDialogEventListener {
+        public class a implements MemberAuthPopWindow.ICustomDialogEventListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1462a() {
+            a() {
             }
 
             @Override // cn.damai.commonbusiness.yymember.view.MemberAuthPopWindow.ICustomDialogEventListener
@@ -232,7 +226,7 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
             }
         }
 
-        View$OnClickListenerC1461d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -242,18 +236,17 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
                 ipChange.ipc$dispatch("809436067", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(vf1.x().z(MineUserCenterFragment.this.type));
-            k23.g(MineUserCenterFragment.this.getContext(), MineUserCenterFragment.this.mActivity, vf1.MY_PAGE, new C1462a());
+            cn.damai.common.user.c.e().x(vf1.x().z(MineUserCenterFragment.this.type));
+            k23.g(MineUserCenterFragment.this.getContext(), MineUserCenterFragment.this.mActivity, vf1.MY_PAGE, new a());
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.userinfo.fragment.MineUserCenterFragment$e */
     /* loaded from: classes6.dex */
-    public class C1463e implements AppBarLayout.OnOffsetChangedListener {
+    public class e implements AppBarLayout.OnOffsetChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1463e() {
+        e() {
         }
 
         @Override // com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener, com.google.android.material.appbar.AppBarLayout.BaseOnOffsetChangedListener
@@ -272,12 +265,11 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.userinfo.fragment.MineUserCenterFragment$f */
     /* loaded from: classes6.dex */
-    public class C1464f implements MineUserCenterBadeListener {
+    public class f implements MineUserCenterBadeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1464f() {
+        f() {
         }
 
         @Override // cn.damai.mine.userinfo.help.MineUserCenterBadeListener
@@ -297,12 +289,11 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.userinfo.fragment.MineUserCenterFragment$g */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1465g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1465g() {
+        g() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -324,12 +315,11 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.userinfo.fragment.MineUserCenterFragment$h */
     /* loaded from: classes6.dex */
-    public class C1466h implements DMBadgeListener {
+    public class h implements DMBadgeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1466h() {
+        h() {
         }
 
         @Override // cn.damai.common.badge.DMBadgeListener
@@ -402,9 +392,9 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
         }
         UserHomePagerAdapter userHomePagerAdapter = this.mPagerAdapter;
         if (userHomePagerAdapter != null) {
-            Fragment a = userHomePagerAdapter.a();
-            if (a instanceof PtrChildHandler) {
-                return (PtrChildHandler) a;
+            Fragment a2 = userHomePagerAdapter.a();
+            if (a2 instanceof PtrChildHandler) {
+                return (PtrChildHandler) a2;
             }
             return null;
         }
@@ -452,7 +442,7 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
         zf1 zf1Var = new zf1(getActivity(), this.rootView);
         this.mServicePanel = zf1Var;
         zf1Var.i();
-        this.mServicePanel.q(new C1464f());
+        this.mServicePanel.q(new f());
     }
 
     private void initHeadUserInfoView() {
@@ -482,7 +472,7 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
         this.mTitleList.add(scrollTitleBean);
         this.mTitleList.add(scrollTitleBean2);
         this.mHorScrollView.setTitle(this.mTitleList).setLineType(2).setFontColor(R$color.color_000000, R$color.color_333333).setHeight(35).setSpace(10).setFontSize(16, 18).commit();
-        this.mHorScrollView.setOnTitleClickListener(new View$OnClickListenerC1465g());
+        this.mHorScrollView.setOnTitleClickListener(new g());
         this.mPageList.clear();
         MineDynamicFragment newInstance = MineDynamicFragment.newInstance(z20.i(), vf1.MY_PAGE);
         this.dynamicFragment = newInstance;
@@ -505,10 +495,10 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
             }
 
             @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener
-            public void onPageScrolled(int i, float f, int i2) {
+            public void onPageScrolled(int i, float f2, int i2) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "-1100452246")) {
-                    ipChange2.ipc$dispatch("-1100452246", new Object[]{this, Integer.valueOf(i), Float.valueOf(f), Integer.valueOf(i2)});
+                    ipChange2.ipc$dispatch("-1100452246", new Object[]{this, Integer.valueOf(i), Float.valueOf(f2), Integer.valueOf(i2)});
                 }
             }
 
@@ -523,7 +513,7 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
                 mineUserCenterFragment.mSelectTitle = (ScrollTitleBean) mineUserCenterFragment.mTitleList.get(i);
                 MineUserCenterFragment.this.mHorScrollView.selectTitle(i);
                 if (MineUserCenterFragment.this.mSelectTitle != null) {
-                    C0529c.e().x(vf1.x().e0(MineUserCenterFragment.this.mSelectTitle.index, MineUserCenterFragment.this.mSelectTitle.name));
+                    cn.damai.common.user.c.e().x(vf1.x().e0(MineUserCenterFragment.this.mSelectTitle.index, MineUserCenterFragment.this.mSelectTitle.name));
                 }
             }
         });
@@ -575,7 +565,7 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
         collapsingToolbarLayout.setMinimumHeight(this.mTitleBarHeight);
         AppBarLayout appBarLayout = (AppBarLayout) this.rootView.findViewById(R$id.appbar);
         this.mAppBar = appBarLayout;
-        appBarLayout.addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new C1463e());
+        appBarLayout.addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new e());
     }
 
     private boolean isPicImage(String str) {
@@ -848,9 +838,9 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
             ipChange.ipc$dispatch("306508253", new Object[]{this});
             return;
         }
-        UserCenterDataBean b = wf1.b();
-        if (b != null) {
-            updateUserInfoData(b);
+        UserCenterDataBean b2 = wf1.b();
+        if (b2 != null) {
+            updateUserInfoData(b2);
             this.mHeaderPanel.hideRealNameAuthView();
             xf1 xf1Var = this.mLogisticsPanel;
             if (xf1Var != null) {
@@ -903,7 +893,7 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
         if (AndroidInstantRuntime.support(ipChange, "792768296")) {
             ipChange.ipc$dispatch("792768296", new Object[]{this, userGuideBean});
         } else if (userGuideBean != null && !TextUtils.isEmpty(userGuideBean.content)) {
-            this.tv_member_authorithize_close.setOnClickListener(new View$OnClickListenerC1459b());
+            this.tv_member_authorithize_close.setOnClickListener(new b());
             this.ll_member_authorithize.setVisibility(0);
             this.tv_member_authorithize_desc.setText(userGuideBean.content);
             if (userGuideBean.isUnbind()) {
@@ -913,7 +903,7 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
                     this.type = "3";
                 }
                 this.tv_member_authorithize_action.setText("立即绑定");
-                this.ll_member_authorithize.setOnClickListener(new View$OnClickListenerC1460c());
+                this.ll_member_authorithize.setOnClickListener(new c());
             } else if (userGuideBean.isbindNotAuth()) {
                 if (userGuideBean.memberThreshold) {
                     this.type = "2";
@@ -921,7 +911,7 @@ public class MineUserCenterFragment extends DamaiBaseMvpFragment {
                     this.type = "4";
                 }
                 this.tv_member_authorithize_action.setText("立即授权");
-                this.ll_member_authorithize.setOnClickListener(new View$OnClickListenerC1461d());
+                this.ll_member_authorithize.setOnClickListener(new d());
             } else {
                 this.ll_member_authorithize.setVisibility(8);
             }

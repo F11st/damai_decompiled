@@ -3,7 +3,6 @@ package tb;
 import android.content.Context;
 import android.text.TextUtils;
 import cn.damai.common.app.ShareperfenceConstants;
-import cn.damai.common.util.C0535a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 
@@ -24,7 +23,7 @@ public class yi {
             cb1.b("CityListDefaultUitl", "read cache -> start time = " + System.currentTimeMillis());
             if (wh2.j(str)) {
                 cb1.b("CityListDefaultUitl", "read default -> start time = " + System.currentTimeMillis());
-                str = C0535a.n(context.getAssets().open("damai_city_list.json"));
+                str = cn.damai.common.util.a.n(context.getAssets().open("damai_city_list.json"));
                 if (!TextUtils.isEmpty(str)) {
                     z20.T(ShareperfenceConstants.CITY_DATA_New, str);
                 }

@@ -1,10 +1,9 @@
 package kotlin.reflect.jvm.internal.impl.builtins;
 
 import java.util.Set;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
-import kotlin.collections.C8203e0;
+import kotlin.collections.e0;
 import kotlin.jvm.JvmField;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
@@ -26,7 +25,7 @@ public enum PrimitiveType {
     DOUBLE("Double");
     
     @NotNull
-    public static final C8266a Companion = new C8266a(null);
+    public static final a Companion = new a(null);
     @JvmField
     @NotNull
     public static final Set<PrimitiveType> NUMBER_TYPES;
@@ -40,13 +39,12 @@ public enum PrimitiveType {
     private final ni1 typeName;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.builtins.PrimitiveType$a */
     /* loaded from: classes3.dex */
-    public static final class C8266a {
-        private C8266a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8266a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -59,13 +57,13 @@ public enum PrimitiveType {
         PrimitiveType primitiveType5;
         PrimitiveType primitiveType6;
         Set<PrimitiveType> g;
-        g = C8203e0.g(r0, primitiveType, primitiveType2, primitiveType3, primitiveType4, primitiveType5, primitiveType6);
+        g = e0.g(r0, primitiveType, primitiveType2, primitiveType3, primitiveType4, primitiveType5, primitiveType6);
         NUMBER_TYPES = g;
     }
 
     PrimitiveType(String str) {
-        Lazy a;
         Lazy a2;
+        Lazy a3;
         ni1 f = ni1.f(str);
         b41.h(f, "identifier(typeName)");
         this.typeName = f;
@@ -73,7 +71,7 @@ public enum PrimitiveType {
         b41.h(f2, "identifier(\"${typeName}Array\")");
         this.arrayTypeName = f2;
         LazyThreadSafetyMode lazyThreadSafetyMode = LazyThreadSafetyMode.PUBLICATION;
-        a = C8177b.a(lazyThreadSafetyMode, new Function0<hp0>() { // from class: kotlin.reflect.jvm.internal.impl.builtins.PrimitiveType$typeFqName$2
+        a2 = kotlin.b.a(lazyThreadSafetyMode, new Function0<hp0>() { // from class: kotlin.reflect.jvm.internal.impl.builtins.PrimitiveType$typeFqName$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -82,13 +80,13 @@ public enum PrimitiveType {
             @Override // kotlin.jvm.functions.Function0
             @NotNull
             public final hp0 invoke() {
-                hp0 c = C8277c.BUILT_INS_PACKAGE_FQ_NAME.c(PrimitiveType.this.getTypeName());
+                hp0 c = c.BUILT_INS_PACKAGE_FQ_NAME.c(PrimitiveType.this.getTypeName());
                 b41.h(c, "BUILT_INS_PACKAGE_FQ_NAME.child(this.typeName)");
                 return c;
             }
         });
-        this.typeFqName$delegate = a;
-        a2 = C8177b.a(lazyThreadSafetyMode, new Function0<hp0>() { // from class: kotlin.reflect.jvm.internal.impl.builtins.PrimitiveType$arrayTypeFqName$2
+        this.typeFqName$delegate = a2;
+        a3 = kotlin.b.a(lazyThreadSafetyMode, new Function0<hp0>() { // from class: kotlin.reflect.jvm.internal.impl.builtins.PrimitiveType$arrayTypeFqName$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -97,12 +95,12 @@ public enum PrimitiveType {
             @Override // kotlin.jvm.functions.Function0
             @NotNull
             public final hp0 invoke() {
-                hp0 c = C8277c.BUILT_INS_PACKAGE_FQ_NAME.c(PrimitiveType.this.getArrayTypeName());
+                hp0 c = c.BUILT_INS_PACKAGE_FQ_NAME.c(PrimitiveType.this.getArrayTypeName());
                 b41.h(c, "BUILT_INS_PACKAGE_FQ_NAME.child(arrayTypeName)");
                 return c;
             }
         });
-        this.arrayTypeFqName$delegate = a2;
+        this.arrayTypeFqName$delegate = a3;
     }
 
     @NotNull

@@ -34,10 +34,10 @@ public class WXAudioModule extends WXModule implements IWXAudio, Destroyable {
     AudioManager mAudioManager = null;
     boolean mHasErrorInGainAudioFocus = false;
     Handler handler = new Handler(Looper.getMainLooper());
-    C3054d mPreparedListener = new C3054d();
-    C3053c mErrorListener = new C3053c();
+    d mPreparedListener = new d();
+    c mErrorListener = new c();
     WXAudioOnCompletionListener mCompletionListener = new WXAudioOnCompletionListener();
-    private C3052b mWXAudioFocusListener = new C3052b();
+    private b mWXAudioFocusListener = new b();
 
     /* compiled from: Taobao */
     /* loaded from: classes15.dex */
@@ -73,12 +73,11 @@ public class WXAudioModule extends WXModule implements IWXAudio, Destroyable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.module.audio.WXAudioModule$b */
     /* loaded from: classes15.dex */
-    public class C3052b implements AudioManager.OnAudioFocusChangeListener {
+    public class b implements AudioManager.OnAudioFocusChangeListener {
         boolean a = false;
 
-        C3052b() {
+        b() {
         }
 
         private void a() {
@@ -124,10 +123,9 @@ public class WXAudioModule extends WXModule implements IWXAudio, Destroyable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.module.audio.WXAudioModule$c */
     /* loaded from: classes15.dex */
-    private class C3053c implements MediaPlayer.OnErrorListener {
-        private C3053c() {
+    private class c implements MediaPlayer.OnErrorListener {
+        private c() {
         }
 
         @Override // android.media.MediaPlayer.OnErrorListener
@@ -142,10 +140,9 @@ public class WXAudioModule extends WXModule implements IWXAudio, Destroyable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.module.audio.WXAudioModule$d */
     /* loaded from: classes15.dex */
-    private class C3054d implements MediaPlayer.OnPreparedListener {
-        private C3054d() {
+    private class d implements MediaPlayer.OnPreparedListener {
+        private d() {
         }
 
         @Override // android.media.MediaPlayer.OnPreparedListener

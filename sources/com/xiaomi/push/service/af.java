@@ -1,6 +1,5 @@
 package com.xiaomi.push.service;
 
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.Cif;
 import com.xiaomi.push.gh;
 import com.xiaomi.push.hj;
@@ -11,7 +10,7 @@ import com.xiaomi.push.service.XMPushService;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-final class af extends XMPushService.AbstractC7707j {
+final class af extends XMPushService.j {
     final /* synthetic */ Cif a;
 
     /* renamed from: a  reason: collision with other field name */
@@ -29,13 +28,13 @@ final class af extends XMPushService.AbstractC7707j {
         this.f877a = xMPushService;
     }
 
-    @Override // com.xiaomi.push.service.XMPushService.AbstractC7707j
+    @Override // com.xiaomi.push.service.XMPushService.j
     /* renamed from: a */
     public String mo1157a() {
         return "send ack message for clear push message.";
     }
 
-    @Override // com.xiaomi.push.service.XMPushService.AbstractC7707j
+    @Override // com.xiaomi.push.service.XMPushService.j
     /* renamed from: a */
     public void mo878a() {
         try {
@@ -49,7 +48,7 @@ final class af extends XMPushService.AbstractC7707j {
             iaVar.d("success clear push message.");
             ah.a(this.f877a, ah.b(this.a.b(), this.a.m1023a(), iaVar, hj.Notification));
         } catch (gh e) {
-            AbstractC7535b.d("clear push message. " + e);
+            com.xiaomi.channel.commonutils.logger.b.d("clear push message. " + e);
             this.f877a.a(10, e);
         }
     }

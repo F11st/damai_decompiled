@@ -167,7 +167,7 @@ public abstract class Cut<C extends Comparable> implements Comparable<Cut<C>>, S
 
         @Override // com.google.common.collect.Cut
         Cut<C> withLowerBoundType(BoundType boundType, DiscreteDomain<C> discreteDomain) {
-            int i = C4947a.a[boundType.ordinal()];
+            int i = a.a[boundType.ordinal()];
             if (i == 1) {
                 C next = discreteDomain.next(this.endpoint);
                 return next == null ? Cut.belowAll() : Cut.belowValue(next);
@@ -180,7 +180,7 @@ public abstract class Cut<C extends Comparable> implements Comparable<Cut<C>>, S
 
         @Override // com.google.common.collect.Cut
         Cut<C> withUpperBoundType(BoundType boundType, DiscreteDomain<C> discreteDomain) {
-            int i = C4947a.a[boundType.ordinal()];
+            int i = a.a[boundType.ordinal()];
             if (i != 1) {
                 if (i == 2) {
                     C next = discreteDomain.next(this.endpoint);
@@ -344,7 +344,7 @@ public abstract class Cut<C extends Comparable> implements Comparable<Cut<C>>, S
 
         @Override // com.google.common.collect.Cut
         Cut<C> withLowerBoundType(BoundType boundType, DiscreteDomain<C> discreteDomain) {
-            int i = C4947a.a[boundType.ordinal()];
+            int i = a.a[boundType.ordinal()];
             if (i != 1) {
                 if (i == 2) {
                     C previous = discreteDomain.previous(this.endpoint);
@@ -357,7 +357,7 @@ public abstract class Cut<C extends Comparable> implements Comparable<Cut<C>>, S
 
         @Override // com.google.common.collect.Cut
         Cut<C> withUpperBoundType(BoundType boundType, DiscreteDomain<C> discreteDomain) {
-            int i = C4947a.a[boundType.ordinal()];
+            int i = a.a[boundType.ordinal()];
             if (i == 1) {
                 C previous = discreteDomain.previous(this.endpoint);
                 return previous == null ? Cut.aboveAll() : new AboveValue(previous);
@@ -370,9 +370,8 @@ public abstract class Cut<C extends Comparable> implements Comparable<Cut<C>>, S
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Cut$a */
     /* loaded from: classes10.dex */
-    static /* synthetic */ class C4947a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {

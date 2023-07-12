@@ -1,7 +1,6 @@
 package tb;
 
 import android.text.TextUtils;
-import cn.damai.common.user.C0529c;
 import cn.damai.push.DaMaiPushAgent;
 import cn.damai.push.model.AckMessageDO;
 import cn.damai.push.model.RecModel;
@@ -35,20 +34,19 @@ public final class u2 implements IAccsServiceDelegate {
     @NotNull
     public static final String ACCS_TYPE_POPCORN_CONFIG = "maisync_test01";
     @NotNull
-    public static final C9762a Companion = new C9762a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String EVENT_PAGE_NAME = "dm_sync_accs";
     @NotNull
     public static final String TAG = "AccsServiceDelegate";
 
     /* compiled from: Taobao */
-    /* renamed from: tb.u2$a */
     /* loaded from: classes6.dex */
-    public static final class C9762a {
-        private C9762a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9762a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -116,13 +114,13 @@ public final class u2 implements IAccsServiceDelegate {
         if (recModel.getData() == null) {
             ackMessageDO.setResultCode("1");
             DaMaiPushAgent.i(str3, JSON.toJSONBytes(ackMessageDO, new SerializerFeature[0]));
-            C0529c.e().A(hashMap, "model_error", EVENT_PAGE_NAME);
+            cn.damai.common.user.c.e().A(hashMap, "model_error", EVENT_PAGE_NAME);
             a("1", "ACCS_ERROR_STATUS", 0L, 0L);
         } else if (b41.d(ACCS_TICKLET_TYPE, recModel.getBizType())) {
             ackMessageDO.setResultCode("0");
             DaMaiPushAgent.i(str3, JSON.toJSONBytes(ackMessageDO, new SerializerFeature[0]));
             DaMaiPushAgent.k(recModel.getBizType(), recModel.getDataId(), recModel.getData());
-            C0529c.e().A(hashMap, recModel.getBizType(), EVENT_PAGE_NAME);
+            cn.damai.common.user.c.e().A(hashMap, recModel.getBizType(), EVENT_PAGE_NAME);
             if (recModel.getSendTime() == null || str2 == null) {
                 return;
             }
@@ -133,7 +131,7 @@ public final class u2 implements IAccsServiceDelegate {
             ackMessageDO.setResultCode("0");
             DaMaiPushAgent.i(str3, JSON.toJSONBytes(ackMessageDO, new SerializerFeature[0]));
             DaMaiPushAgent.l(recModel.getData());
-            C0529c.e().A(hashMap, recModel.getBizType(), EVENT_PAGE_NAME);
+            cn.damai.common.user.c.e().A(hashMap, recModel.getBizType(), EVENT_PAGE_NAME);
             if (recModel.getSendTime() == null || str2 == null) {
                 return;
             }
@@ -148,9 +146,9 @@ public final class u2 implements IAccsServiceDelegate {
             ackMessageDO.setResultCode("2");
             DaMaiPushAgent.i(str3, JSON.toJSONBytes(ackMessageDO, new SerializerFeature[0]));
             if (!TextUtils.isEmpty(recModel.getBizType())) {
-                C0529c.e().A(hashMap, recModel.getBizType(), EVENT_PAGE_NAME);
+                cn.damai.common.user.c.e().A(hashMap, recModel.getBizType(), EVENT_PAGE_NAME);
             } else {
-                C0529c.e().A(hashMap, ACCS_TYPE_NOT_USED, EVENT_PAGE_NAME);
+                cn.damai.common.user.c.e().A(hashMap, ACCS_TYPE_NOT_USED, EVENT_PAGE_NAME);
             }
             if (recModel.getSendTime() == null || str2 == null) {
                 return;
@@ -180,7 +178,7 @@ public final class u2 implements IAccsServiceDelegate {
             String E = z20.E();
             b41.h(E, "getUserCode()");
             hashMap.put("usercode", E);
-            C0529c.e().A(hashMap, "model_error", EVENT_PAGE_NAME);
+            cn.damai.common.user.c.e().A(hashMap, "model_error", EVENT_PAGE_NAME);
         }
     }
 

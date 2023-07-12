@@ -13,14 +13,13 @@ public class ok1 {
     private UpdateMonitor a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ok1$b */
     /* loaded from: classes11.dex */
-    private static class C9527b {
+    private static class b {
         private static final ok1 a = new ok1();
     }
 
     public static ok1 getInstance() {
-        return C9527b.a;
+        return b.a;
     }
 
     public ApkUpdateContext doUpdate(ApkUpdateContext apkUpdateContext, String str, String str2) {

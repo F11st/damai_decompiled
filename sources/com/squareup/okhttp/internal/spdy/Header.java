@@ -1,6 +1,6 @@
 package com.squareup.okhttp.internal.spdy;
 
-import okhttp3.internal.http2.C8789a;
+import okhttp3.internal.http2.a;
 import okio.ByteString;
 
 /* compiled from: Taobao */
@@ -9,11 +9,11 @@ public final class Header {
     final int hpackSize;
     public final ByteString name;
     public final ByteString value;
-    public static final ByteString RESPONSE_STATUS = ByteString.encodeUtf8(C8789a.RESPONSE_STATUS_UTF8);
-    public static final ByteString TARGET_METHOD = ByteString.encodeUtf8(C8789a.TARGET_METHOD_UTF8);
-    public static final ByteString TARGET_PATH = ByteString.encodeUtf8(C8789a.TARGET_PATH_UTF8);
-    public static final ByteString TARGET_SCHEME = ByteString.encodeUtf8(C8789a.TARGET_SCHEME_UTF8);
-    public static final ByteString TARGET_AUTHORITY = ByteString.encodeUtf8(C8789a.TARGET_AUTHORITY_UTF8);
+    public static final ByteString RESPONSE_STATUS = ByteString.encodeUtf8(a.RESPONSE_STATUS_UTF8);
+    public static final ByteString TARGET_METHOD = ByteString.encodeUtf8(a.TARGET_METHOD_UTF8);
+    public static final ByteString TARGET_PATH = ByteString.encodeUtf8(a.TARGET_PATH_UTF8);
+    public static final ByteString TARGET_SCHEME = ByteString.encodeUtf8(a.TARGET_SCHEME_UTF8);
+    public static final ByteString TARGET_AUTHORITY = ByteString.encodeUtf8(a.TARGET_AUTHORITY_UTF8);
     public static final ByteString TARGET_HOST = ByteString.encodeUtf8(":host");
     public static final ByteString VERSION = ByteString.encodeUtf8(":version");
 

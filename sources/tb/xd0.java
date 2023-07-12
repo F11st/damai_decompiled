@@ -10,14 +10,13 @@ public class xd0 extends be0 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.xd0$b */
     /* loaded from: classes11.dex */
-    public static class C9919b {
+    public static class b {
         private static xd0 a = new xd0();
     }
 
     public static xd0 INSTANCE() {
-        return C9919b.a;
+        return b.a;
     }
 
     @Override // tb.be0

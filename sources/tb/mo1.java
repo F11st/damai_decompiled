@@ -7,7 +7,6 @@ import android.text.TextUtils;
 import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ACache;
 import cn.damai.commonbusiness.servicenotice.ServiceNote;
 import cn.damai.issue.tool.IssueConstants;
@@ -58,13 +57,12 @@ public class mo1 {
     public static boolean c = true;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.mo1$a */
     /* loaded from: classes8.dex */
-    public class DialogInterface$OnClickListenerC9445a implements DialogInterface.OnClickListener {
+    public class a implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context a;
 
-        DialogInterface$OnClickListenerC9445a(Context context) {
+        a(Context context) {
             this.a = context;
         }
 
@@ -82,12 +80,11 @@ public class mo1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.mo1$b */
     /* loaded from: classes8.dex */
-    public class DialogInterface$OnClickListenerC9446b implements DialogInterface.OnClickListener {
+    public class b implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC9446b() {
+        b() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -154,9 +151,9 @@ public class mo1 {
         } else if (str == null) {
         } else {
             if (z) {
-                C0529c.e().x(pp2.u().D(str));
+                cn.damai.common.user.c.e().x(pp2.u().D(str));
             } else {
-                C0529c.e().x(pp2.u().R(str));
+                cn.damai.common.user.c.e().x(pp2.u().R(str));
             }
             Bundle bundle = new Bundle();
             bundle.putString("orderid", str);
@@ -170,7 +167,7 @@ public class mo1 {
             ipChange.ipc$dispatch("-343925335", new Object[]{context, str, str2, str3});
             return;
         }
-        C0529c.e().x(pp2.u().S(str));
+        cn.damai.common.user.c.e().x(pp2.u().S(str));
         Bundle bundle = new Bundle();
         bundle.putString("orderId", str);
         bundle.putString("addressId", str3);
@@ -208,7 +205,7 @@ public class mo1 {
         if (AndroidInstantRuntime.support(ipChange, "1464798011")) {
             ipChange.ipc$dispatch("1464798011", new Object[]{context, purchaseNotice});
         } else if (purchaseNotice != null) {
-            C0529c.e().x(pp2.u().L(purchaseNotice.orderId, purchaseNotice.itemId));
+            cn.damai.common.user.c.e().x(pp2.u().L(purchaseNotice.orderId, purchaseNotice.itemId));
             Bundle bundle = new Bundle();
             bundle.putString("itemId", purchaseNotice.itemId);
             bundle.putString("conform", "false");
@@ -233,7 +230,7 @@ public class mo1 {
             ipChange.ipc$dispatch("-1595232134", new Object[]{context, str});
             return;
         }
-        C0529c.e().x(pp2.u().Q(str));
+        cn.damai.common.user.c.e().x(pp2.u().Q(str));
         Bundle bundle = new Bundle();
         bundle.putString("orderId", str);
         DMNav.from(context).withExtras(bundle).toUri(NavUri.b(cs.Z));
@@ -259,14 +256,14 @@ public class mo1 {
             if (context != null) {
                 DMDialog dMDialog = new DMDialog(context);
                 dMDialog.q("选座前将通过APP消息通知您，请您不要关闭通知哦");
-                dMDialog.n("知道了", new DialogInterface$OnClickListenerC9446b());
+                dMDialog.n("知道了", new b());
                 dMDialog.show();
             }
         } else {
             DMDialog dMDialog2 = new DMDialog(context);
             dMDialog2.v(PurchaseConstants.NORMAL_WARNING_TITLE);
             dMDialog2.q("您未打开通知权限，为了保证第一时间收到选座通知，请您先打开通知权限");
-            dMDialog2.n("打开", new DialogInterface$OnClickListenerC9445a(context));
+            dMDialog2.n("打开", new a(context));
             dMDialog2.i("关闭", null);
             dMDialog2.show();
         }

@@ -3,9 +3,6 @@ package tb;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8226x;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.jvm.JvmOverloads;
 import kotlin.jvm.JvmStatic;
@@ -19,22 +16,21 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public abstract class oq2 extends br2 {
     @NotNull
-    public static final C9530a Companion = new C9530a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.oq2$a */
     /* loaded from: classes3.dex */
-    public static final class C9530a {
+    public static final class a {
 
         /* compiled from: Taobao */
-        /* renamed from: tb.oq2$a$a */
+        /* renamed from: tb.oq2$a$a  reason: collision with other inner class name */
         /* loaded from: classes3.dex */
-        public static final class C9531a extends oq2 {
+        public static final class C0461a extends oq2 {
             final /* synthetic */ Map<TypeConstructor, TypeProjection> a;
             final /* synthetic */ boolean b;
 
             /* JADX WARN: Multi-variable type inference failed */
-            C9531a(Map<TypeConstructor, ? extends TypeProjection> map, boolean z) {
+            C0461a(Map<TypeConstructor, ? extends TypeProjection> map, boolean z) {
                 this.a = map;
                 this.b = z;
             }
@@ -57,18 +53,18 @@ public abstract class oq2 extends br2 {
             }
         }
 
-        private C9530a() {
+        private a() {
         }
 
-        public /* synthetic */ C9530a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
-        public static /* synthetic */ oq2 e(C9530a c9530a, Map map, boolean z, int i, Object obj) {
+        public static /* synthetic */ oq2 e(a aVar, Map map, boolean z, int i, Object obj) {
             if ((i & 2) != 0) {
                 z = false;
             }
-            return c9530a.d(map, z);
+            return aVar.d(map, z);
         }
 
         @JvmStatic
@@ -81,17 +77,17 @@ public abstract class oq2 extends br2 {
             b41.i(list, "arguments");
             List<TypeParameterDescriptor> parameters = typeConstructor.getParameters();
             b41.h(parameters, "typeConstructor.parameters");
-            TypeParameterDescriptor typeParameterDescriptor = (TypeParameterDescriptor) C8212k.d0(parameters);
+            TypeParameterDescriptor typeParameterDescriptor = (TypeParameterDescriptor) kotlin.collections.k.d0(parameters);
             if (typeParameterDescriptor != null && typeParameterDescriptor.isCapturedFromOuterDeclaration()) {
                 List<TypeParameterDescriptor> parameters2 = typeConstructor.getParameters();
                 b41.h(parameters2, "typeConstructor.parameters");
-                q = C8215n.q(parameters2, 10);
+                q = kotlin.collections.n.q(parameters2, 10);
                 ArrayList arrayList = new ArrayList(q);
                 for (TypeParameterDescriptor typeParameterDescriptor2 : parameters2) {
                     arrayList.add(typeParameterDescriptor2.getTypeConstructor());
                 }
                 H0 = CollectionsKt___CollectionsKt.H0(arrayList, list);
-                r = C8226x.r(H0);
+                r = kotlin.collections.x.r(H0);
                 return e(this, r, false, 2, null);
             }
             return new h21(parameters, list);
@@ -117,7 +113,7 @@ public abstract class oq2 extends br2 {
         @NotNull
         public final oq2 d(@NotNull Map<TypeConstructor, ? extends TypeProjection> map, boolean z) {
             b41.i(map, "map");
-            return new C9531a(map, z);
+            return new C0461a(map, z);
         }
     }
 

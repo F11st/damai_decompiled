@@ -2,7 +2,6 @@ package tb;
 
 import kotlin.jvm.JvmField;
 import kotlinx.coroutines.InternalCoroutinesApi;
-import kotlinx.coroutines.channels.C8648b;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -10,23 +9,22 @@ import org.jetbrains.annotations.Nullable;
 @InternalCoroutinesApi
 /* loaded from: classes9.dex */
 public final class yw2<T> {
-    public static final C10005b Companion = new C10005b(null);
+    public static final b Companion = new b(null);
     private final Object a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yw2$a */
     /* loaded from: classes9.dex */
-    public static final class C10004a {
+    public static final class a {
         @JvmField
         @Nullable
         public final Throwable a;
 
-        public C10004a(@Nullable Throwable th) {
+        public a(@Nullable Throwable th) {
             this.a = th;
         }
 
         public boolean equals(@Nullable Object obj) {
-            return (obj instanceof C10004a) && b41.d(this.a, ((C10004a) obj).a);
+            return (obj instanceof a) && b41.d(this.a, ((a) obj).a);
         }
 
         public int hashCode() {
@@ -44,13 +42,12 @@ public final class yw2<T> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yw2$b */
     /* loaded from: classes9.dex */
-    public static final class C10005b {
-        private C10005b() {
+    public static final class b {
+        private b() {
         }
 
-        public /* synthetic */ C10005b(k50 k50Var) {
+        public /* synthetic */ b(k50 k50Var) {
             this();
         }
     }
@@ -75,16 +72,16 @@ public final class yw2<T> {
 
     @Nullable
     public static final Throwable d(Object obj) {
-        if (obj instanceof C10004a) {
-            return ((C10004a) obj).a;
+        if (obj instanceof a) {
+            return ((a) obj).a;
         }
         throw new IllegalStateException("Channel was not closed".toString());
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public static final T e(Object obj) {
-        if (obj instanceof C10004a) {
-            throw new IllegalStateException(C8648b.DEFAULT_CLOSE_MESSAGE.toString());
+        if (obj instanceof a) {
+            throw new IllegalStateException(kotlinx.coroutines.channels.b.DEFAULT_CLOSE_MESSAGE.toString());
         }
         return obj;
     }
@@ -97,12 +94,12 @@ public final class yw2<T> {
     }
 
     public static final boolean g(Object obj) {
-        return obj instanceof C10004a;
+        return obj instanceof a;
     }
 
     @NotNull
     public static String h(Object obj) {
-        if (obj instanceof C10004a) {
+        if (obj instanceof a) {
             return obj.toString();
         }
         return "Value(" + obj + ')';

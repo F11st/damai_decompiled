@@ -1,7 +1,7 @@
 package com.tencent.stat;
 
 import android.content.Context;
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import com.taobao.weex.ui.component.WXComponent;
 import com.tencent.stat.common.StatCommonHelper;
 import com.tencent.stat.common.StatLogger;
@@ -450,8 +450,8 @@ public class StatConfig {
                 String next = keys.next();
                 if (next.equalsIgnoreCase("v")) {
                     onlineConfig.version = jSONObject.getInt(next);
-                } else if (next.equalsIgnoreCase(AbstractC5658c.a)) {
-                    String string = jSONObject.getString(AbstractC5658c.a);
+                } else if (next.equalsIgnoreCase(c.a)) {
+                    String string = jSONObject.getString(c.a);
                     if (string.length() > 0) {
                         onlineConfig.props = new JSONObject(string);
                     }

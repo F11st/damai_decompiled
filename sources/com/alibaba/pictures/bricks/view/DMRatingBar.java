@@ -44,7 +44,7 @@ public class DMRatingBar extends View {
     private boolean isShow;
     private int[] location;
     private Context mContext;
-    private HandlerC3576a mHandler;
+    private a mHandler;
     private List<String> mStarContent;
     private float minMarks;
     private OnStarChangeListener onStarChangeListener;
@@ -70,12 +70,11 @@ public class DMRatingBar extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.DMRatingBar$a */
     /* loaded from: classes7.dex */
-    public class HandlerC3576a extends Handler {
+    public class a extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC3576a() {
+        a() {
         }
 
         @Override // android.os.Handler
@@ -205,7 +204,7 @@ public class DMRatingBar extends View {
         this.tvTipGrade = (TextView) inflate.findViewById(R$id.tip_grade);
         ((ImageView) this.popWindowView.findViewById(R$id.uikit_first)).setImageBitmap(this.starFillBitmap);
         this.popupWindow = new PopupWindow(this.popWindowView, -2, -2, true);
-        this.mHandler = new HandlerC3576a();
+        this.mHandler = new a();
     }
 
     private void showPop(String str, float f) {

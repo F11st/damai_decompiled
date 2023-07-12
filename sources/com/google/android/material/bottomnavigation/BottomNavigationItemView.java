@@ -25,6 +25,6 @@ public class BottomNavigationItemView extends NavigationBarItemView {
     @Override // com.google.android.material.navigation.NavigationBarItemView
     @LayoutRes
     protected int getItemLayoutResId() {
-        return R.C4818layout.design_bottom_navigation_item;
+        return R.layout.design_bottom_navigation_item;
     }
 }

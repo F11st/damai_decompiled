@@ -1,7 +1,6 @@
 package tb;
 
 import com.alibaba.appmonitor.event.EventType;
-import com.alibaba.appmonitor.pool.C3316a;
 import com.alibaba.appmonitor.pool.Reusable;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,7 +22,7 @@ public class pf1 implements Reusable {
             nf1Var = of1.c().b(str, str2);
             z = false;
         } else {
-            nf1Var = (nf1) C3316a.a().poll(nf1.class, str, str2, str3);
+            nf1Var = (nf1) com.alibaba.appmonitor.pool.a.a().poll(nf1.class, str, str2, str3);
             z = true;
         }
         qf0 qf0Var2 = null;
@@ -33,13 +32,13 @@ public class pf1 implements Reusable {
                 z2 = z;
             } else {
                 synchronized (pf1.class) {
-                    qf0Var = (qf0) C3316a.a().poll(cls, num, str, str2, str3);
+                    qf0Var = (qf0) com.alibaba.appmonitor.pool.a.a().poll(cls, num, str, str2, str3);
                     this.a.put(nf1Var, qf0Var);
                 }
                 qf0Var2 = qf0Var;
             }
             if (z2) {
-                C3316a.a().offer(nf1Var);
+                com.alibaba.appmonitor.pool.a.a().offer(nf1Var);
             }
         }
         return qf0Var2;
@@ -52,7 +51,7 @@ public class pf1 implements Reusable {
     @Override // com.alibaba.appmonitor.pool.Reusable
     public void clean() {
         for (qf0 qf0Var : this.a.values()) {
-            C3316a.a().offer(qf0Var);
+            com.alibaba.appmonitor.pool.a.a().offer(qf0Var);
         }
         this.a.clear();
     }

@@ -83,7 +83,7 @@ public final class MaybeDoFinally<T> extends AbstractMaybeWithUpstream<T, T> {
         this.onFinally = action;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         this.source.subscribe(new DoFinallyObserver(maybeObserver, this.onFinally));
     }

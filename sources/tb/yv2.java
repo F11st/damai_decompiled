@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import kotlin.Pair;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -31,7 +30,7 @@ public final class yv2 {
         collection.size();
         collection2.size();
         H0 = CollectionsKt___CollectionsKt.H0(collection, collection2);
-        q = C8215n.q(H0, 10);
+        q = kotlin.collections.n.q(H0, 10);
         ArrayList arrayList = new ArrayList(q);
         for (Pair pair : H0) {
             ax2 ax2Var = (ax2) pair.component1();

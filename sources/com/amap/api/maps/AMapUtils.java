@@ -3,11 +3,11 @@ package com.amap.api.maps;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import com.amap.api.mapcore.util.C4554gc;
-import com.amap.api.mapcore.util.C4614m;
 import com.amap.api.mapcore.util.gb;
+import com.amap.api.mapcore.util.gc;
 import com.amap.api.mapcore.util.ge;
 import com.amap.api.mapcore.util.gm;
+import com.amap.api.mapcore.util.m;
 import com.amap.api.maps.model.LatLng;
 import com.amap.api.maps.model.NaviPara;
 import com.amap.api.maps.model.PoiPara;
@@ -36,13 +36,12 @@ public class AMapUtils {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.maps.AMapUtils$a */
     /* loaded from: classes10.dex */
-    public static class C4649a extends Thread {
+    public static class a extends Thread {
         String a;
         Context b;
 
-        public C4649a(String str, Context context) {
+        public a(String str, Context context) {
             this.a = "";
             this.a = str;
             if (context != null) {
@@ -54,7 +53,7 @@ public class AMapUtils {
         public void run() {
             if (this.b != null) {
                 try {
-                    ge.a(this.b, new gm.C4569a(this.a, "7.4.0", C4614m.c).a(new String[]{"com.amap.api.maps"}).a());
+                    ge.a(this.b, new gm.a(this.a, "7.4.0", m.c).a(new String[]{"com.amap.api.maps"}).a());
                     interrupt();
                 } catch (gb e) {
                     e.printStackTrace();
@@ -71,7 +70,7 @@ public class AMapUtils {
                 intent.addCategory("android.intent.category.DEFAULT");
                 intent.setData(Uri.parse(b(routePara, context, i)));
                 intent.setPackage("com.autonavi.minimap");
-                new C4649a("oan", context).start();
+                new a("oan", context).start();
                 context.startActivity(intent);
                 return;
             }
@@ -81,7 +80,7 @@ public class AMapUtils {
     }
 
     private static String b(RoutePara routePara, Context context, int i) {
-        String format = String.format(Locale.US, "androidamap://route?sourceApplication=%s&slat=%f&slon=%f&sname=%s&dlat=%f&dlon=%f&dname=%s&dev=0&t=%d", C4554gc.b(context), Double.valueOf(routePara.getStartPoint().latitude), Double.valueOf(routePara.getStartPoint().longitude), routePara.getStartName(), Double.valueOf(routePara.getEndPoint().latitude), Double.valueOf(routePara.getEndPoint().longitude), routePara.getEndName(), Integer.valueOf(i));
+        String format = String.format(Locale.US, "androidamap://route?sourceApplication=%s&slat=%f&slon=%f&sname=%s&dlat=%f&dlon=%f&dname=%s&dev=0&t=%d", gc.b(context), Double.valueOf(routePara.getStartPoint().latitude), Double.valueOf(routePara.getStartPoint().longitude), routePara.getStartName(), Double.valueOf(routePara.getEndPoint().latitude), Double.valueOf(routePara.getEndPoint().longitude), routePara.getEndName(), Integer.valueOf(i));
         if (i == 1) {
             return format + "&m=" + routePara.getTransitRouteStyle();
         } else if (i == 2) {
@@ -151,7 +150,7 @@ public class AMapUtils {
             intent.addFlags(276824064);
             intent.addCategory("android.intent.category.DEFAULT");
             intent.setData(Uri.parse("http://wap.amap.com/"));
-            new C4649a("glaa", context).start();
+            new a("glaa", context).start();
             context.startActivity(intent);
         } catch (Throwable th) {
             th.printStackTrace();
@@ -170,7 +169,7 @@ public class AMapUtils {
                 intent.addCategory("android.intent.category.DEFAULT");
                 intent.setData(Uri.parse(a(naviPara, context)));
                 intent.setPackage("com.autonavi.minimap");
-                new C4649a("oan", context).start();
+                new a("oan", context).start();
                 context.startActivity(intent);
                 return;
             }
@@ -187,7 +186,7 @@ public class AMapUtils {
                 intent.addCategory("android.intent.category.DEFAULT");
                 intent.setData(Uri.parse(a(poiPara, context)));
                 intent.setPackage("com.autonavi.minimap");
-                new C4649a("oan", context).start();
+                new a("oan", context).start();
                 context.startActivity(intent);
                 return;
             }
@@ -227,11 +226,11 @@ public class AMapUtils {
     }
 
     private static String a(NaviPara naviPara, Context context) {
-        return String.format(Locale.US, "androidamap://navi?sourceApplication=%s&lat=%f&lon=%f&dev=0&style=%d", C4554gc.b(context), Double.valueOf(naviPara.getTargetPoint().latitude), Double.valueOf(naviPara.getTargetPoint().longitude), Integer.valueOf(naviPara.getNaviStyle()));
+        return String.format(Locale.US, "androidamap://navi?sourceApplication=%s&lat=%f&lon=%f&dev=0&style=%d", gc.b(context), Double.valueOf(naviPara.getTargetPoint().latitude), Double.valueOf(naviPara.getTargetPoint().longitude), Integer.valueOf(naviPara.getNaviStyle()));
     }
 
     private static String a(PoiPara poiPara, Context context) {
-        String format = String.format(Locale.US, "androidamap://arroundpoi?sourceApplication=%s&keywords=%s&dev=0", C4554gc.b(context), poiPara.getKeywords());
+        String format = String.format(Locale.US, "androidamap://arroundpoi?sourceApplication=%s&keywords=%s&dev=0", gc.b(context), poiPara.getKeywords());
         if (poiPara.getCenter() != null) {
             return format + "&lat=" + poiPara.getCenter().latitude + "&lon=" + poiPara.getCenter().longitude;
         }

@@ -63,7 +63,7 @@ public final class ObservableSkip<T> extends AbstractObservableWithUpstream<T, T
         this.n = j;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new SkipObserver(observer, this.n));
     }

@@ -86,7 +86,7 @@ public class DecodeQRImage extends Thread {
         try {
             Hashtable hashtable = new Hashtable();
             hashtable.put(me0.CHARACTER_SET, "utf-8");
-            nc encode = new C2132a().encode(str, fa.QR_CODE, this.QR_WIDTH, this.QR_HEIGHT, hashtable);
+            nc encode = new a().encode(str, fa.QR_CODE, this.QR_WIDTH, this.QR_HEIGHT, hashtable);
             int c = encode.c();
             int b = encode.b();
             int[] iArr = new int[c * b];
@@ -168,7 +168,7 @@ public class DecodeQRImage extends Thread {
                     Hashtable hashtable = new Hashtable();
                     hashtable.put(me0.CHARACTER_SET, "utf-8");
                     hashtable.put(me0.ERROR_CORRECTION, df0.H);
-                    nc encode = new C2132a().encode(str, fa.QR_CODE, this.QR_WIDTH, this.QR_HEIGHT, hashtable);
+                    nc encode = new a().encode(str, fa.QR_CODE, this.QR_WIDTH, this.QR_HEIGHT, hashtable);
                     int c = encode.c();
                     int b = encode.b();
                     int i = c / 2;

@@ -14,8 +14,8 @@ import tb.p70;
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class KPropertyImplKt {
-    public static final /* synthetic */ Caller a(KPropertyImpl.AbstractC8261a abstractC8261a, boolean z) {
-        return c(abstractC8261a, z);
+    public static final /* synthetic */ Caller a(KPropertyImpl.a aVar, boolean z) {
+        return c(aVar, z);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:111:0x005a  */
@@ -26,7 +26,7 @@ public final class KPropertyImplKt {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public static final kotlin.reflect.jvm.internal.calls.Caller<?> c(final kotlin.reflect.jvm.internal.KPropertyImpl.AbstractC8261a<?, ?> r7, final boolean r8) {
+    public static final kotlin.reflect.jvm.internal.calls.Caller<?> c(final kotlin.reflect.jvm.internal.KPropertyImpl.a<?, ?> r7, final boolean r8) {
         /*
             Method dump skipped, instructions count: 602
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -35,9 +35,9 @@ public final class KPropertyImplKt {
     }
 
     @Nullable
-    public static final Object d(@NotNull KPropertyImpl.AbstractC8261a<?, ?> abstractC8261a) {
-        b41.i(abstractC8261a, "$this$boundReceiver");
-        return abstractC8261a.m().m();
+    public static final Object d(@NotNull KPropertyImpl.a<?, ?> aVar) {
+        b41.i(aVar, "$this$boundReceiver");
+        return aVar.m().m();
     }
 
     public static final boolean e(PropertyDescriptor propertyDescriptor) {

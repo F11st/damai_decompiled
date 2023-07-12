@@ -3,8 +3,8 @@ package com.tencent.mm.opensdk.modelbiz;
 import android.os.Bundle;
 import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.modelbase.BaseResp;
-import com.tencent.mm.opensdk.utils.C7065b;
 import com.tencent.mm.opensdk.utils.Log;
+import com.tencent.mm.opensdk.utils.b;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -21,9 +21,9 @@ public class WXChannelOpenLive {
         @Override // com.tencent.mm.opensdk.modelbase.BaseReq
         public boolean checkArgs() {
             String str;
-            if (C7065b.b(this.feedID)) {
+            if (b.b(this.feedID)) {
                 str = "feedID is null";
-            } else if (C7065b.b(this.nonceID)) {
+            } else if (b.b(this.nonceID)) {
                 str = "nonceID is null";
             } else if (this.feedID.length() > 1024) {
                 str = "feedID.length too long!";

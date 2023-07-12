@@ -55,13 +55,12 @@ public class DMEvaluateListHeadView extends LinearLayout {
     private View titleViewDiv;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.view.DMEvaluateListHeadView$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1099a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CommentsResultBean a;
 
-        View$OnClickListenerC1099a(CommentsResultBean commentsResultBean) {
+        a(CommentsResultBean commentsResultBean) {
             this.a = commentsResultBean;
         }
 
@@ -77,13 +76,12 @@ public class DMEvaluateListHeadView extends LinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.view.DMEvaluateListHeadView$b */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1100b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CommentContentLabelBean a;
 
-        View$OnClickListenerC1100b(CommentContentLabelBean commentContentLabelBean) {
+        b(CommentContentLabelBean commentContentLabelBean) {
             this.a = commentContentLabelBean;
         }
 
@@ -158,7 +156,7 @@ public class DMEvaluateListHeadView extends LinearLayout {
             }
             textView.setLayoutParams(layoutParams);
         }
-        inflate.setOnClickListener(new View$OnClickListenerC1100b(commentContentLabelBean));
+        inflate.setOnClickListener(new b(commentContentLabelBean));
         return inflate;
     }
 
@@ -206,7 +204,7 @@ public class DMEvaluateListHeadView extends LinearLayout {
             }
             setVisibility(0);
             if (!TextUtils.isEmpty(commentsResultBean.getDamaiCommentInfoUrl())) {
-                this.commentUrl.setOnClickListener(new View$OnClickListenerC1099a(commentsResultBean));
+                this.commentUrl.setOnClickListener(new a(commentsResultBean));
             }
             if (TextUtils.isEmpty(commentsResultBean.getItemScore())) {
                 this.leftTitleViewDiv.setVisibility(8);

@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
+import io.reactivex.d;
 import io.reactivex.internal.util.BlockingHelper;
 import io.reactivex.internal.util.ExceptionHelper;
-import io.reactivex.observers.AbstractC8160b;
+import io.reactivex.observers.b;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.concurrent.Semaphore;
@@ -19,7 +19,7 @@ public final class BlockingObservableLatest<T> implements Iterable<T> {
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class BlockingObservableLatestIterator<T> extends AbstractC8160b<ul1<T>> implements Iterator<T> {
+    static final class BlockingObservableLatestIterator<T> extends b<ul1<T>> implements Iterator<T> {
         ul1<T> iteratorNotification;
         final Semaphore notify = new Semaphore(0);
         final AtomicReference<ul1<T>> value = new AtomicReference<>();
@@ -94,7 +94,7 @@ public final class BlockingObservableLatest<T> implements Iterable<T> {
     @Override // java.lang.Iterable
     public Iterator<T> iterator() {
         BlockingObservableLatestIterator blockingObservableLatestIterator = new BlockingObservableLatestIterator();
-        AbstractC8149d.wrap(this.source).materialize().subscribe(blockingObservableLatestIterator);
+        d.wrap(this.source).materialize().subscribe(blockingObservableLatestIterator);
         return blockingObservableLatestIterator;
     }
 }

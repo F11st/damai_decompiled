@@ -12,16 +12,15 @@ public enum Modality {
     ABSTRACT;
     
     @NotNull
-    public static final C8291a Companion = new C8291a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.Modality$a */
     /* loaded from: classes3.dex */
-    public static final class C8291a {
-        private C8291a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8291a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

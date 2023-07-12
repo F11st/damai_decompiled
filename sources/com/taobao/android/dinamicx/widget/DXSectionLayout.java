@@ -32,7 +32,7 @@ public class DXSectionLayout extends DXLinearLayoutWidgetNode {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onRenderView(Context context, View view) {
         super.onRenderView(context, view);
     }

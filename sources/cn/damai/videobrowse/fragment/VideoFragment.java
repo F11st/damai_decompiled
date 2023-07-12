@@ -34,12 +34,11 @@ public class VideoFragment extends LazyLoadFragment {
     private TextView sourceLabel;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.videobrowse.fragment.VideoFragment$a */
     /* loaded from: classes9.dex */
-    public class C2787a implements IVideoPlayerExtend {
+    public class a implements IVideoPlayerExtend {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2787a() {
+        a() {
         }
 
         @Override // cn.damai.player.base.IVideoPlayerExtend
@@ -56,12 +55,11 @@ public class VideoFragment extends LazyLoadFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.videobrowse.fragment.VideoFragment$b */
     /* loaded from: classes9.dex */
-    public class C2788b implements OnPlayerUTReportListener {
+    public class b implements OnPlayerUTReportListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2788b() {
+        b() {
         }
 
         @Override // cn.damai.player.listener.OnPlayerUTReportListener
@@ -165,7 +163,7 @@ public class VideoFragment extends LazyLoadFragment {
         if (AndroidInstantRuntime.support(ipChange, "299595456")) {
             ipChange.ipc$dispatch("299595456", new Object[]{this});
         } else {
-            this.mController.setUTReportListener(new C2788b());
+            this.mController.setUTReportListener(new b());
         }
     }
 
@@ -252,7 +250,7 @@ public class VideoFragment extends LazyLoadFragment {
         this.projectLayout = (FrameLayout) findViewById(R$id.video_project);
         DMVideoPlayerDefaultController dMVideoPlayerDefaultController = new DMVideoPlayerDefaultController(getActivity());
         this.mController = dMVideoPlayerDefaultController;
-        dMVideoPlayerDefaultController.setPlayerExtend(new C2787a());
+        dMVideoPlayerDefaultController.setPlayerExtend(new a());
         this.mController.setAutoReport(true);
         this.mController.setSpmData("video", Constants.Value.PLAY);
         if (this.mVideoInfo.getProjectInfo() == null) {

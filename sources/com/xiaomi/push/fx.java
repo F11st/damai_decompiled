@@ -30,11 +30,11 @@ public class fx implements Cloneable {
 
     public static final String a() {
         String str = c;
-        return str != null ? str : C7596ae.m661a() ? "sandbox.xmpush.xiaomi.com" : C7596ae.b() ? b : "app.chat.xiaomi.net";
+        return str != null ? str : ae.m661a() ? "sandbox.xmpush.xiaomi.com" : ae.b() ? b : "app.chat.xiaomi.net";
     }
 
     public static final void a(String str) {
-        if (C7688m.m1119a(C7786v.m1245a()) && C7596ae.b()) {
+        if (m.m1119a(v.m1245a()) && ae.b()) {
             return;
         }
         c = str;

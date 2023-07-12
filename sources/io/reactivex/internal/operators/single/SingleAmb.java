@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.single;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.disposables.EmptyDisposable;
 import java.util.concurrent.atomic.AtomicBoolean;
 import tb.dg0;
@@ -12,7 +12,7 @@ import tb.jm;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SingleAmb<T> extends AbstractC8152e<T> {
+public final class SingleAmb<T> extends e<T> {
     private final SingleSource<? extends T>[] sources;
     private final Iterable<? extends SingleSource<? extends T>> sourcesIterable;
 
@@ -57,7 +57,7 @@ public final class SingleAmb<T> extends AbstractC8152e<T> {
         this.sourcesIterable = iterable;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super T> singleObserver) {
         int length;
         SingleSource<? extends T>[] singleSourceArr = this.sources;

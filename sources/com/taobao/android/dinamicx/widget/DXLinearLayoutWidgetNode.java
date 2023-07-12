@@ -13,16 +13,15 @@ import tb.te;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class DXLinearLayoutWidgetNode extends C6493f implements Cloneable {
+public class DXLinearLayoutWidgetNode extends f implements Cloneable {
     public static final int HORIZONTAL = 0;
     public static final int VERTICAL = 1;
     private int mOrientation;
     int mTotalLength;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode$a */
     /* loaded from: classes11.dex */
-    public static class C6443a implements IDXBuilderWidgetNode {
+    public static class a implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(@Nullable Object obj) {
             return new DXLinearLayoutWidgetNode();
@@ -66,7 +65,7 @@ public class DXLinearLayoutWidgetNode extends C6493f implements Cloneable {
         }
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6493f
+    @Override // com.taobao.android.dinamicx.widget.f
     public ViewGroup.LayoutParams generateLayoutParams(lz lzVar) {
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(lzVar.a, lzVar.b);
         layoutParams.gravity = lzVar.d;
@@ -337,7 +336,7 @@ public class DXLinearLayoutWidgetNode extends C6493f implements Cloneable {
         throw new UnsupportedOperationException("Method not decompiled: com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode.measureVertical(int, int):void");
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onClone(DXWidgetNode dXWidgetNode, boolean z) {
         super.onClone(dXWidgetNode, z);
         if (dXWidgetNode instanceof DXLinearLayoutWidgetNode) {
@@ -372,7 +371,7 @@ public class DXLinearLayoutWidgetNode extends C6493f implements Cloneable {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onRenderView(Context context, View view) {
         if (view != null && (view instanceof LinearLayout)) {
             ((LinearLayout) view).setOrientation(this.mOrientation);
@@ -380,7 +379,7 @@ public class DXLinearLayoutWidgetNode extends C6493f implements Cloneable {
         super.onRenderView(context, view);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetIntAttribute(long j, int i) {
         if (-7199229155167727177L == j) {
             this.mOrientation = i;
@@ -416,7 +415,7 @@ public class DXLinearLayoutWidgetNode extends C6493f implements Cloneable {
         this.mOrientation = i;
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6493f
+    @Override // com.taobao.android.dinamicx.widget.f
     public ViewGroup.LayoutParams generateLayoutParams(@NonNull lz lzVar, @NonNull ViewGroup.LayoutParams layoutParams) {
         if (layoutParams instanceof LinearLayout.LayoutParams) {
             ((LinearLayout.LayoutParams) layoutParams).gravity = lzVar.d;

@@ -3,8 +3,8 @@ package cn.damai.login.havana;
 import android.os.Bundle;
 import android.widget.RelativeLayout;
 import androidx.annotation.Nullable;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -71,7 +71,7 @@ public class DamaiAccountLoginFragment extends AliUserLoginFragment {
             ipChange.ipc$dispatch("-331195278", new Object[]{this, str});
             return;
         }
-        DMImageCreator c = C0504a.b().c(z20.B(str));
+        DMImageCreator c = a.b().c(z20.B(str));
         int i = R$drawable.uikit_user_default_icon;
         c.i(i).c(i).g(this.mAvatarIV);
     }

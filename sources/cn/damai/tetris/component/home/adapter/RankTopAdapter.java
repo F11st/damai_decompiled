@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.category.ranking.ui.RankListFragment;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
@@ -25,12 +24,12 @@ import com.alibaba.fastjson.JSONObject;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.List;
-import tb.C9826vr;
 import tb.cb1;
 import tb.cs;
 import tb.d23;
 import tb.oy0;
 import tb.t60;
+import tb.vr;
 import tb.wh2;
 
 /* compiled from: Taobao */
@@ -45,7 +44,7 @@ public class RankTopAdapter extends RecyclerView.Adapter<RankTopItemViewHolder> 
     private JSONObject f;
     private String h;
     int g = 0;
-    private View.OnClickListener i = new View$OnClickListenerC1849a();
+    private View.OnClickListener i = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes7.dex */
@@ -76,11 +75,11 @@ public class RankTopAdapter extends RecyclerView.Adapter<RankTopItemViewHolder> 
                 return;
             }
             rankLists.position = i;
-            if (this.a.getTag() instanceof C9826vr) {
-                ((C9826vr) this.a.getTag()).cancel();
+            if (this.a.getTag() instanceof vr) {
+                ((vr) this.a.getTag()).cancel();
             }
             this.a.setImageDrawable(null);
-            DMImageCreator f = C0504a.b().f(rankLists.pic, t60.a(RankTopAdapter.this.b, 86.0f), t60.a(RankTopAdapter.this.b, 115.0f));
+            DMImageCreator f = cn.damai.common.image.a.b().f(rankLists.pic, t60.a(RankTopAdapter.this.b, 86.0f), t60.a(RankTopAdapter.this.b, 115.0f));
             int i2 = R$drawable.uikit_default_image_bg_gradient;
             this.a.setTag(f.i(i2).c(i2).g(this.a));
             this.b.setText(rankLists.title);
@@ -108,12 +107,11 @@ public class RankTopAdapter extends RecyclerView.Adapter<RankTopItemViewHolder> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.adapter.RankTopAdapter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1849a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1849a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener

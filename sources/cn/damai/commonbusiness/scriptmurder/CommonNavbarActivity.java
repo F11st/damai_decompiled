@@ -9,8 +9,8 @@ import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import cn.damai.category.category.ui.StarFragment;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -261,7 +261,7 @@ public abstract class CommonNavbarActivity extends SimpleBaseActivity implements
         setImmersionStyle();
         addFragment();
         addUtPage();
-        C0529c.e().K(this);
+        c.e().K(this);
         View findViewById = findViewById(R$id.common_navbar_back);
         if (findViewById != null) {
             findViewById.setOnClickListener(new View.OnClickListener() { // from class: tb.il
@@ -315,7 +315,7 @@ public abstract class CommonNavbarActivity extends SimpleBaseActivity implements
             TrackInfo trackInfo = actionAuth.getTrackInfo();
             if (trackInfo != null) {
                 b41.h(trackInfo, "trackInfo");
-                C0529c.e().x(new C0525a.C0527b().i(trackInfo.getSpmb()).f(trackInfo.getSpmc()).l(trackInfo.getSpmd()).g(true).j(trackInfo.getArgs()));
+                c.e().x(new a.b().i(trackInfo.getSpmb()).f(trackInfo.getSpmc()).l(trackInfo.getSpmd()).g(true).j(trackInfo.getArgs()));
             }
         }
     }
@@ -450,15 +450,15 @@ public abstract class CommonNavbarActivity extends SimpleBaseActivity implements
         } else if (this.actionShare == null || (trackInfo = getActionShare().getTrackInfo()) == null) {
         } else {
             b41.h(trackInfo, "trackInfo");
-            C0529c e = C0529c.e();
-            C0525a.C0527b i = new C0525a.C0527b().i(trackInfo.getSpmb());
+            c e = c.e();
+            a.b i = new a.b().i(trackInfo.getSpmb());
             String spmc = trackInfo.getSpmc();
             if (spmc == null) {
                 spmc = "top";
             } else {
                 b41.h(spmc, "info.spmc ?: \"top\"");
             }
-            C0525a.C0527b f = i.f(spmc);
+            a.b f = i.f(spmc);
             String spmd = trackInfo.getSpmd();
             if (spmd == null) {
                 spmd = "share";

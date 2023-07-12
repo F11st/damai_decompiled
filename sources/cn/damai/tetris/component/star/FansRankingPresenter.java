@@ -21,7 +21,6 @@ import cn.damai.tetris.core.BasePresenter;
 import cn.damai.tetris.core.BaseSection;
 import cn.damai.tetris.core.msg.Message;
 import cn.damai.tetris.page.AbsFragment;
-import cn.damai.uikit.image.C2497a;
 import cn.damai.uikit.image.IImageLoader;
 import cn.damai.uikit.nav.NavProxy;
 import cn.damai.uikit.view.DMAvatar;
@@ -30,8 +29,8 @@ import cn.damai.uikit.view.DMLabelView;
 import com.alibaba.pictures.bricks.view.DMAvatar;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import tb.C9175gc;
 import tb.e80;
+import tb.gc;
 import tb.ja;
 import tb.q60;
 
@@ -41,12 +40,11 @@ public class FansRankingPresenter extends BasePresenter<FansRankingContract.Mode
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.FansRankingPresenter$a */
     /* loaded from: classes7.dex */
-    public class C1950a implements FansRankingViewHolder.ITaskHandler {
+    public class a implements FansRankingViewHolder.ITaskHandler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1950a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.star.view.FansRankingViewHolder.ITaskHandler
@@ -67,12 +65,11 @@ public class FansRankingPresenter extends BasePresenter<FansRankingContract.Mode
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.FansRankingPresenter$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1951b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1951b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -88,13 +85,12 @@ public class FansRankingPresenter extends BasePresenter<FansRankingContract.Mode
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.FansRankingPresenter$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1952c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FansRankingBean a;
 
-        View$OnClickListenerC1952c(FansRankingBean fansRankingBean) {
+        c(FansRankingBean fansRankingBean) {
             this.a = fansRankingBean;
         }
 
@@ -111,27 +107,26 @@ public class FansRankingPresenter extends BasePresenter<FansRankingContract.Mode
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.FansRankingPresenter$d */
     /* loaded from: classes7.dex */
-    public class C1953d implements IImageLoader.IImageSuccListener {
+    public class d implements IImageLoader.IImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
-        C1953d(ImageView imageView) {
+        d(ImageView imageView) {
             this.a = imageView;
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageSuccListener
-        public void onSuccess(IImageLoader.C2496b c2496b) {
+        public void onSuccess(IImageLoader.b bVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1501565012")) {
-                ipChange.ipc$dispatch("-1501565012", new Object[]{this, c2496b});
+                ipChange.ipc$dispatch("-1501565012", new Object[]{this, bVar});
                 return;
             }
-            Bitmap bitmap = c2496b.b;
+            Bitmap bitmap = bVar.b;
             if (bitmap != null) {
                 int width = bitmap.getWidth();
-                int height = c2496b.b.getHeight();
+                int height = bVar.b.getHeight();
                 int d = e80.d() - q60.a(((BasePresenter) FansRankingPresenter.this).mContext.getActivity(), 42.0f);
                 int i = (height * d) / width;
                 ViewGroup.LayoutParams layoutParams = this.a.getLayoutParams();
@@ -143,19 +138,18 @@ public class FansRankingPresenter extends BasePresenter<FansRankingContract.Mode
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.FansRankingPresenter$e */
     /* loaded from: classes7.dex */
-    public class C1954e implements IImageLoader.IImageFailListener {
+    public class e implements IImageLoader.IImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1954e(FansRankingPresenter fansRankingPresenter) {
+        e(FansRankingPresenter fansRankingPresenter) {
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageFailListener
-        public void onFail(IImageLoader.C2495a c2495a) {
+        public void onFail(IImageLoader.a aVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1814765291")) {
-                ipChange.ipc$dispatch("-1814765291", new Object[]{this, c2495a});
+                ipChange.ipc$dispatch("-1814765291", new Object[]{this, aVar});
             }
         }
     }
@@ -170,8 +164,8 @@ public class FansRankingPresenter extends BasePresenter<FansRankingContract.Mode
             ipChange.ipc$dispatch("1674901464", new Object[]{this, view, topFans, Integer.valueOf(i)});
             return;
         }
-        C9175gc.a((TextView) view.findViewById(R$id.ll_fans_ranking_item_name), topFans.nickName);
-        C9175gc.a((TextView) view.findViewById(R$id.ll_fans_ranking_item_value), topFans.score);
+        gc.a((TextView) view.findViewById(R$id.ll_fans_ranking_item_name), topFans.nickName);
+        gc.a((TextView) view.findViewById(R$id.ll_fans_ranking_item_value), topFans.score);
         DMAvatar dMAvatar = (DMAvatar) view.findViewById(R$id.ll_fans_ranking_item_pic);
         dMAvatar.setVisibility(0);
         dMAvatar.setAvatar(topFans.headPic);
@@ -225,7 +219,7 @@ public class FansRankingPresenter extends BasePresenter<FansRankingContract.Mode
                     textView.setVisibility(8);
                 }
             }
-            new FansRankingViewHolder(getView().getFansView(), new C1950a(), this.mContext.getActivity(), this).q(rankingData);
+            new FansRankingViewHolder(getView().getFansView(), new a(), this.mContext.getActivity(), this).q(rankingData);
             if (model.getFansList() != null) {
                 LinearLayout linearLayout = (LinearLayout) getView().getRootView().findViewById(R$id.ll_fans_ranking_parent);
                 linearLayout.removeAllViews();
@@ -241,22 +235,22 @@ public class FansRankingPresenter extends BasePresenter<FansRankingContract.Mode
                 ViewGroup fansView = getView().getFansView();
                 int i2 = R$id.layout_all;
                 fansView.findViewById(i2).setVisibility(0);
-                getView().getFansView().findViewById(i2).setOnClickListener(new View$OnClickListenerC1951b());
+                getView().getFansView().findViewById(i2).setOnClickListener(new b());
                 userTrackExpose(getView().getFansView().findViewById(i2), "rule");
             }
             ViewGroup fansView2 = getView().getFansView();
             int i3 = R$id.tv_all_click_toall;
-            C9175gc.a((TextView) fansView2.findViewById(i3), rankingData.rankingMoreLinkDesc);
-            getView().getFansView().findViewById(R$id.layout_all_click_toall).setOnClickListener(new View$OnClickListenerC1952c(rankingData));
+            gc.a((TextView) fansView2.findViewById(i3), rankingData.rankingMoreLinkDesc);
+            getView().getFansView().findViewById(R$id.layout_all_click_toall).setOnClickListener(new c(rankingData));
             userTrackExpose(getView().getFansView().findViewById(i3), "more");
             ImageView imageView = (ImageView) getView().getFansView().findViewById(R$id.fans_banner);
             if (!TextUtils.isEmpty(getModel().getBannerImg())) {
                 imageView.setVisibility(0);
-                IImageLoader a = C2497a.a();
+                IImageLoader a2 = cn.damai.uikit.image.a.a();
                 String bannerImg = getModel().getBannerImg();
                 int i4 = R$drawable.uikit_default_image_bg_gradient_v2;
-                a.loadinto(bannerImg, imageView, i4, i4);
-                C2497a.a().load(getModel().getBannerImg(), R$drawable.uikit_default_image_bg_grey, new C1953d(imageView), new C1954e(this));
+                a2.loadinto(bannerImg, imageView, i4, i4);
+                cn.damai.uikit.image.a.a().load(getModel().getBannerImg(), R$drawable.uikit_default_image_bg_grey, new d(imageView), new e(this));
                 return;
             }
             imageView.setVisibility(8);

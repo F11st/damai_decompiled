@@ -2,7 +2,6 @@ package tb;
 
 import java.util.Collection;
 import java.util.List;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -18,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes3.dex */
 public final class o21 {
     private static final boolean a(ClassDescriptor classDescriptor) {
-        return b41.d(DescriptorUtilsKt.i(classDescriptor), C8277c.RESULT_FQ_NAME);
+        return b41.d(DescriptorUtilsKt.i(classDescriptor), kotlin.reflect.jvm.internal.impl.builtins.c.RESULT_FQ_NAME);
     }
 
     public static final boolean b(@NotNull DeclarationDescriptor declarationDescriptor) {

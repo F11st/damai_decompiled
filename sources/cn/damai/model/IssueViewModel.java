@@ -20,7 +20,6 @@ import cn.damai.comment.bean.QueryThemeCliqueInfoBean;
 import cn.damai.comment.bean.QueryThemeResultBean;
 import cn.damai.comment.util.CommentItemMoreUtil;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.util.C0535a;
 import cn.damai.commonbusiness.photoselect.imageselected.entry.Image;
 import cn.damai.discover.content.net.ContentDetailApi;
 import cn.damai.evaluate.request.CommentListRequest;
@@ -86,13 +85,12 @@ public class IssueViewModel extends AndroidViewModel implements Serializable {
     private String watchActivityId;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.model.IssueViewModel$a */
     /* loaded from: classes15.dex */
-    public class C1480a implements ValueAnimator.AnimatorUpdateListener {
+    public class a implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ LinearLayout a;
 
-        C1480a(LinearLayout linearLayout) {
+        a(LinearLayout linearLayout) {
             this.a = linearLayout;
         }
 
@@ -162,7 +160,7 @@ public class IssueViewModel extends AndroidViewModel implements Serializable {
         } else if (Build.VERSION.SDK_INT >= 11) {
             ValueAnimator ofFloat = ValueAnimator.ofFloat(0.0f, i);
             ofFloat.setDuration(150L);
-            ofFloat.addUpdateListener(new C1480a(linearLayout));
+            ofFloat.addUpdateListener(new a(linearLayout));
             ofFloat.start();
         }
     }
@@ -438,13 +436,13 @@ public class IssueViewModel extends AndroidViewModel implements Serializable {
             return (String) ipChange.ipc$dispatch("-2067042060", new Object[]{this, str});
         }
         if (ir1.i(mr1.STORAGE)) {
-            String m = C0535a.m();
+            String m = cn.damai.common.util.a.m();
             if (wh2.j(m)) {
                 return str;
             }
             String str2 = m + "/publish";
-            C0535a.f(str2);
-            C0535a.t(str2, false);
+            cn.damai.common.util.a.f(str2);
+            cn.damai.common.util.a.t(str2, false);
             return str2;
         }
         return str;

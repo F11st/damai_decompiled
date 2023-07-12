@@ -1,6 +1,6 @@
 package com.alient.oneservice.image;
 
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -9,7 +9,7 @@ public class ImageTicketProxy {
 
     public static ImageTicket getProxy() {
         if (sProxy == null) {
-            sProxy = (ImageTicket) C8883a.j("com.alient.oneservice.provider.impl.image.ImageTicketImpl").b().f();
+            sProxy = (ImageTicket) a.j("com.alient.oneservice.provider.impl.image.ImageTicketImpl").b().f();
         }
         return sProxy;
     }

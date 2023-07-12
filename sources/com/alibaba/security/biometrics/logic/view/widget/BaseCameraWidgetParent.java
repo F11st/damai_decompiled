@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.widget.FrameLayout;
 import com.alibaba.security.biometrics.R;
 import com.alibaba.security.biometrics.logic.view.custom.CameraGLSurfaceView;
-import com.alibaba.security.common.d.C3807d;
+import com.alibaba.security.common.d.d;
 import java.text.DecimalFormat;
 
 /* compiled from: Taobao */
@@ -26,9 +26,9 @@ public abstract class BaseCameraWidgetParent extends FrameLayout {
         float parseFloat;
         DecimalFormat decimalFormat = new DecimalFormat("#0");
         if (!z) {
-            parseFloat = Float.parseFloat(decimalFormat.format(C3807d.c(getContext())));
+            parseFloat = Float.parseFloat(decimalFormat.format(d.c(getContext())));
         } else {
-            parseFloat = Float.parseFloat(decimalFormat.format(C3807d.a(getContext()) * 2.0f));
+            parseFloat = Float.parseFloat(decimalFormat.format(d.a(getContext()) * 2.0f));
         }
         FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) this.a.getLayoutParams();
         int i4 = (int) parseFloat;

@@ -24,8 +24,8 @@ public class DXRenderOptions {
     private int h;
     private int i;
     private Map<String, String> j;
-    public static final DXRenderOptions DEFAULT_RENDER_OPTIONS = new C6359b().k();
-    public static final DXRenderOptions DEFAULT_PRERENDER_OPTIONS = new C6359b().r(2).s(8).k();
+    public static final DXRenderOptions DEFAULT_RENDER_OPTIONS = new b().k();
+    public static final DXRenderOptions DEFAULT_PRERENDER_OPTIONS = new b().r(2).s(8).k();
 
     /* compiled from: Taobao */
     @Retention(RetentionPolicy.SOURCE)
@@ -34,9 +34,8 @@ public class DXRenderOptions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.DXRenderOptions$b */
     /* loaded from: classes12.dex */
-    public static final class C6359b {
+    public static final class b {
         private c20 c;
         private Object d;
         private boolean e;
@@ -52,51 +51,51 @@ public class DXRenderOptions {
             return new DXRenderOptions(this);
         }
 
-        public C6359b l(int i) {
+        public b l(int i) {
             this.h = i;
             return this;
         }
 
-        public C6359b m(int i) {
+        public b m(int i) {
             this.b = i;
             return this;
         }
 
-        public C6359b n(boolean z) {
+        public b n(boolean z) {
             this.f = z;
             return this;
         }
 
-        public C6359b o(boolean z) {
+        public b o(boolean z) {
             this.e = z;
             return this;
         }
 
-        public C6359b p(Object obj) {
+        public b p(Object obj) {
             this.d = obj;
             return this;
         }
 
-        public C6359b q(Map<String, String> map) {
+        public b q(Map<String, String> map) {
             this.j = map;
             return this;
         }
 
-        public C6359b r(int i) {
+        public b r(int i) {
             this.g = i;
             return this;
         }
 
-        public C6359b s(int i) {
+        public b s(int i) {
             this.i = i;
             return this;
         }
 
-        public C6359b t(c20 c20Var) {
+        public b t(c20 c20Var) {
             return this;
         }
 
-        public C6359b u(int i) {
+        public b u(int i) {
             this.a = i;
             return this;
         }
@@ -148,16 +147,16 @@ public class DXRenderOptions {
         this.f = z;
     }
 
-    private DXRenderOptions(C6359b c6359b) {
-        this.a = c6359b.a;
-        this.b = c6359b.b;
-        c20 unused = c6359b.c;
-        this.d = c6359b.d;
-        this.e = c6359b.e;
-        this.f = c6359b.f;
-        this.h = c6359b.h;
-        this.i = c6359b.i;
-        this.g = c6359b.g;
-        this.j = c6359b.j;
+    private DXRenderOptions(b bVar) {
+        this.a = bVar.a;
+        this.b = bVar.b;
+        c20 unused = bVar.c;
+        this.d = bVar.d;
+        this.e = bVar.e;
+        this.f = bVar.f;
+        this.h = bVar.h;
+        this.i = bVar.i;
+        this.g = bVar.g;
+        this.j = bVar.j;
     }
 }

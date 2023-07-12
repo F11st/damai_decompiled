@@ -7,7 +7,7 @@ import android.taobao.windvane.runtimepermission.PermissionProposer;
 import android.taobao.windvane.util.ImageTool;
 import android.taobao.windvane.util.TaoLog;
 import android.text.TextUtils;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
+import com.alibaba.security.realidentity.jsbridge.a;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -57,7 +57,7 @@ public class WVImage extends WVApiPlugin {
                     @Override // java.lang.Runnable
                     public void run() {
                         WVResult wVResult = new WVResult();
-                        wVResult.addData("msg", AbstractC3893a.al);
+                        wVResult.addData("msg", a.al);
                         wVCallBackContext.error(wVResult);
                     }
                 }).execute();

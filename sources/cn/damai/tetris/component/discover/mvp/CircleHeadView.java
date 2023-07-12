@@ -44,12 +44,11 @@ public class CircleHeadView extends AbsView<CircleHeadContract.Presenter> implem
     UserAvatarOverlayListLayout userOverlay;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.discover.mvp.CircleHeadView$a */
     /* loaded from: classes7.dex */
-    public class C1812a implements DMUpMarqueeView.OnItemClickListener {
+    public class a implements DMUpMarqueeView.OnItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1812a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.dynamicx.customwidget.temp.DMUpMarqueeView.OnItemClickListener
@@ -64,12 +63,11 @@ public class CircleHeadView extends AbsView<CircleHeadContract.Presenter> implem
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.discover.mvp.CircleHeadView$b */
     /* loaded from: classes7.dex */
-    public class C1813b implements DMThemeProjectItemView.ProjectLabelClickListener {
+    public class b implements DMThemeProjectItemView.ProjectLabelClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1813b() {
+        b() {
         }
 
         @Override // cn.damai.discover.main.ui.view.DMThemeProjectItemView.ProjectLabelClickListener
@@ -86,12 +84,11 @@ public class CircleHeadView extends AbsView<CircleHeadContract.Presenter> implem
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.discover.mvp.CircleHeadView$c */
     /* loaded from: classes7.dex */
-    public class C1814c implements DMThemeProjectItemView.ExposureCallBack {
+    public class c implements DMThemeProjectItemView.ExposureCallBack {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1814c() {
+        c() {
         }
 
         @Override // cn.damai.discover.main.ui.view.DMThemeProjectItemView.ExposureCallBack
@@ -106,12 +103,11 @@ public class CircleHeadView extends AbsView<CircleHeadContract.Presenter> implem
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.discover.mvp.CircleHeadView$d */
     /* loaded from: classes7.dex */
-    public class C1815d implements OnItemBindListener<RankUserBean> {
+    public class d implements OnItemBindListener<RankUserBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1815d() {
+        d() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -151,12 +147,12 @@ public class CircleHeadView extends AbsView<CircleHeadContract.Presenter> implem
         this.joinIcon = (DMIconFontTextView) view.findViewById(R$id.theme_circle_join_icon);
         DMThemeProjectItemView dMThemeProjectItemView = (DMThemeProjectItemView) view.findViewById(R$id.theme_project_ui);
         this.mProjectRevUi = dMThemeProjectItemView;
-        dMThemeProjectItemView.setProjectOnClick(new C1812a());
-        this.mProjectRevUi.setProjectLabelOnClick(new C1813b());
-        this.mProjectRevUi.setExposureCallBack(new C1814c());
+        dMThemeProjectItemView.setProjectOnClick(new a());
+        this.mProjectRevUi.setProjectLabelOnClick(new b());
+        this.mProjectRevUi.setExposureCallBack(new c());
         ViewStub viewStub = (ViewStub) view.findViewById(R$id.theme_rank_view_stub);
         this.mRankStub = viewStub;
-        this.mRankPanel = new CircleRankPanel(this.mContext, viewStub, new C1815d());
+        this.mRankPanel = new CircleRankPanel(this.mContext, viewStub, new d());
         this.mBannerUi = view.findViewById(R$id.theme_image_ui);
         this.mBannerImg = (ImageView) view.findViewById(R$id.theme_banner_img);
     }

@@ -28,7 +28,7 @@ import org.apache.commons.codec.digest.MessageDigestAlgorithms;
 import org.apache.http.HttpHost;
 import org.json.JSONException;
 import org.json.JSONObject;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -208,7 +208,7 @@ public class StatCommonHelper {
 
     public static DisplayMetrics getDisplayMetrics(Context context) {
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        Display.getMetrics(((WindowManager) context.getApplicationContext().getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+        Display.getMetrics(((WindowManager) context.getApplicationContext().getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
         return displayMetrics;
     }
 

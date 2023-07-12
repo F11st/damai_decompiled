@@ -6,16 +6,16 @@ import android.os.Bundle;
 import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import com.taobao.monitor.impl.trace.C6805a;
 import com.taobao.monitor.impl.trace.FragmentLifecycleDispatcher;
 import com.taobao.monitor.impl.trace.IDispatcher;
+import com.taobao.monitor.impl.trace.a;
 import com.taobao.monitor.procedure.IPage;
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import tb.C8934b0;
+import tb.b0;
 import tb.ca0;
 import tb.e30;
 import tb.ho2;
@@ -31,20 +31,20 @@ public class FragmentLifecycle extends FragmentManager.FragmentLifecycleCallback
     private static final Map<WeakReference<Fragment>, Long> f = new ConcurrentHashMap();
     private final Map<Fragment, IPage> a = new HashMap();
     private FragmentLifecycleDispatcher b;
-    private C6805a c;
+    private a c;
     private final Activity d;
     private final String e;
 
     public FragmentLifecycle(Activity activity, String str) {
         this.d = activity;
         this.e = str;
-        IDispatcher a = C8934b0.a(C8934b0.FRAGMENT_LIFECYCLE_DISPATCHER);
+        IDispatcher a = b0.a(b0.FRAGMENT_LIFECYCLE_DISPATCHER);
         if (a instanceof FragmentLifecycleDispatcher) {
             this.b = (FragmentLifecycleDispatcher) a;
         }
-        IDispatcher a2 = C8934b0.a(C8934b0.FRAGMENT_LIFECYCLE_FUNCTION_DISPATCHER);
-        if (a2 instanceof C6805a) {
-            this.c = (C6805a) a2;
+        IDispatcher a2 = b0.a(b0.FRAGMENT_LIFECYCLE_FUNCTION_DISPATCHER);
+        if (a2 instanceof a) {
+            this.c = (a) a2;
         }
     }
 

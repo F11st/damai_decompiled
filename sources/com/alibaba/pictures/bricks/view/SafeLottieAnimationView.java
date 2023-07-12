@@ -5,12 +5,10 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.view.animation.Animation;
-import com.airbnb.lottie.C2821a;
 import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.LottieDrawable;
 import com.airbnb.lottie.LottieListener;
 import com.alibaba.pictures.bricks.view.SafeLottieAnimationView;
-import com.alibaba.pictures.bricks.view.safelottiemonitor.C3596a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.lang.reflect.Field;
@@ -28,7 +26,7 @@ public class SafeLottieAnimationView extends LottieAnimationView implements Anim
     private OnLottieDrawFailListener mListener;
     private String mLottieNetWorkUrl;
     private LottieListener<Throwable> onLottieFailListener;
-    private LottieListener<C2821a> onLottieSuccessListener;
+    private LottieListener<com.airbnb.lottie.a> onLottieSuccessListener;
 
     /* compiled from: Taobao */
     /* loaded from: classes7.dex */
@@ -56,7 +54,7 @@ public class SafeLottieAnimationView extends LottieAnimationView implements Anim
             replaceSuccessListener(this, new LottieListener() { // from class: tb.p52
                 @Override // com.airbnb.lottie.LottieListener
                 public final void onResult(Object obj) {
-                    SafeLottieAnimationView.this.lambda$hackDefaultListener$1((C2821a) obj);
+                    SafeLottieAnimationView.this.lambda$hackDefaultListener$1((com.airbnb.lottie.a) obj);
                 }
             });
             addAnimatorListener(this);
@@ -79,17 +77,17 @@ public class SafeLottieAnimationView extends LottieAnimationView implements Anim
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void lambda$hackDefaultListener$1(C2821a c2821a) {
+    public /* synthetic */ void lambda$hackDefaultListener$1(com.airbnb.lottie.a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "636131465")) {
-            ipChange.ipc$dispatch("636131465", new Object[]{this, c2821a});
+            ipChange.ipc$dispatch("636131465", new Object[]{this, aVar});
             return;
         }
         nd.a("downLoad-success ", TAG);
-        setComposition(c2821a);
-        LottieListener<C2821a> lottieListener = this.onLottieSuccessListener;
+        setComposition(aVar);
+        LottieListener<com.airbnb.lottie.a> lottieListener = this.onLottieSuccessListener;
         if (lottieListener != null) {
-            lottieListener.onResult(c2821a);
+            lottieListener.onResult(aVar);
         }
     }
 
@@ -100,7 +98,7 @@ public class SafeLottieAnimationView extends LottieAnimationView implements Anim
         } else if (lottieAnimationView == null || lottieListener == null) {
         } else {
             try {
-                Field a = C3596a.b(LottieAnimationView.class, "failureListener").b(LottieListener.class).a();
+                Field a = com.alibaba.pictures.bricks.view.safelottiemonitor.a.b(LottieAnimationView.class, "failureListener").b(LottieListener.class).a();
                 a.setAccessible(true);
                 a.set(lottieAnimationView, lottieListener);
             } catch (Throwable th) {
@@ -109,14 +107,14 @@ public class SafeLottieAnimationView extends LottieAnimationView implements Anim
         }
     }
 
-    private static void replaceSuccessListener(LottieAnimationView lottieAnimationView, LottieListener<C2821a> lottieListener) {
+    private static void replaceSuccessListener(LottieAnimationView lottieAnimationView, LottieListener<com.airbnb.lottie.a> lottieListener) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "170502666")) {
             ipChange.ipc$dispatch("170502666", new Object[]{lottieAnimationView, lottieListener});
         } else if (lottieAnimationView == null || lottieListener == null) {
         } else {
             try {
-                Field a = C3596a.b(LottieAnimationView.class, "loadedListener").b(LottieListener.class).a();
+                Field a = com.alibaba.pictures.bricks.view.safelottiemonitor.a.b(LottieAnimationView.class, "loadedListener").b(LottieListener.class).a();
                 a.setAccessible(true);
                 a.set(lottieAnimationView, lottieListener);
             } catch (Throwable th) {
@@ -227,7 +225,7 @@ public class SafeLottieAnimationView extends LottieAnimationView implements Anim
         setImageAssetsFolder(str);
     }
 
-    public void setOnLottieSuccessListener(LottieListener<C2821a> lottieListener) {
+    public void setOnLottieSuccessListener(LottieListener<com.airbnb.lottie.a> lottieListener) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-706863690")) {
             ipChange.ipc$dispatch("-706863690", new Object[]{this, lottieListener});

@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import java.util.Map;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
@@ -29,7 +29,7 @@ public final class LazyJavaTypeParameterResolver implements TypeParameterResolve
     private final MemoizedFunctionToNullable<JavaTypeParameter, t81> e;
 
     public LazyJavaTypeParameterResolver(@NotNull r81 r81Var, @NotNull DeclarationDescriptor declarationDescriptor, @NotNull JavaTypeParameterListOwner javaTypeParameterListOwner, int i) {
-        b41.i(r81Var, AbstractC5658c.a);
+        b41.i(r81Var, c.a);
         b41.i(declarationDescriptor, "containingDeclaration");
         b41.i(javaTypeParameterListOwner, "typeParameterOwner");
         this.a = r81Var;

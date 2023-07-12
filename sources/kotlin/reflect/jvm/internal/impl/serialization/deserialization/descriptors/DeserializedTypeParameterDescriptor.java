@@ -2,8 +2,8 @@ package kotlin.reflect.jvm.internal.impl.serialization.deserialization.descripto
 
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8215n;
+import kotlin.collections.l;
+import kotlin.collections.n;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Type;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$TypeParameter;
 import kotlin.reflect.jvm.internal.impl.resolve.descriptorUtil.DescriptorUtilsKt;
@@ -52,7 +52,7 @@ public final class DeserializedTypeParameterDescriptor extends t1 {
             kotlin.reflect.jvm.internal.impl.types.Variance r6 = r0.d(r1)
             boolean r7 = r13.getReified()
             kotlin.reflect.jvm.internal.impl.descriptors.SourceElement r9 = kotlin.reflect.jvm.internal.impl.descriptors.SourceElement.NO_SOURCE
-            kotlin.reflect.jvm.internal.impl.descriptors.SupertypeLoopChecker$a r10 = kotlin.reflect.jvm.internal.impl.descriptors.SupertypeLoopChecker.C8298a.INSTANCE
+            kotlin.reflect.jvm.internal.impl.descriptors.SupertypeLoopChecker$a r10 = kotlin.reflect.jvm.internal.impl.descriptors.SupertypeLoopChecker.a.INSTANCE
             r1 = r11
             r8 = r14
             r1.<init>(r2, r3, r4, r5, r6, r7, r8, r9, r10)
@@ -76,11 +76,11 @@ public final class DeserializedTypeParameterDescriptor extends t1 {
         List<z71> e;
         List<ProtoBuf$Type> p = jx1.p(this.l, this.k.j());
         if (p.isEmpty()) {
-            e = C8213l.e(DescriptorUtilsKt.g(this).y());
+            e = l.e(DescriptorUtilsKt.g(this).y());
             return e;
         }
         TypeDeserializer i = this.k.i();
-        q = C8215n.q(p, 10);
+        q = n.q(p, 10);
         ArrayList arrayList = new ArrayList(q);
         for (ProtoBuf$Type protoBuf$Type : p) {
             arrayList.add(i.q(protoBuf$Type));

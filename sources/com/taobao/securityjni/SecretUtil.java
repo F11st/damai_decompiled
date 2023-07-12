@@ -1,7 +1,7 @@
 package com.taobao.securityjni;
 
 import android.content.ContextWrapper;
-import com.alipay.sdk.m.n.C4250a;
+import com.alipay.sdk.m.n.a;
 import com.taobao.securityjni.tools.DataContext;
 import com.taobao.wireless.security.sdk.SecurityGuardManager;
 import com.taobao.wireless.security.sdk.SecurityGuardParamContext;
@@ -78,7 +78,7 @@ public class SecretUtil {
                     String str2 = linkedHashMap.get(str);
                     if (str2 != null) {
                         sb.append(str);
-                        sb.append(C4250a.h);
+                        sb.append(a.h);
                         sb.append(str2);
                     } else {
                         sb.append(str);

@@ -68,19 +68,18 @@ public abstract class CacheLoader<K, V> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.cache.CacheLoader$a */
     /* loaded from: classes10.dex */
-    static class C4850a extends CacheLoader<K, V> {
+    static class a extends CacheLoader<K, V> {
         final /* synthetic */ Executor b;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.cache.CacheLoader$a$a */
+        /* renamed from: com.google.common.cache.CacheLoader$a$a  reason: collision with other inner class name */
         /* loaded from: classes10.dex */
-        class CallableC4851a implements Callable<V> {
+        class CallableC0227a implements Callable<V> {
             final /* synthetic */ Object a;
             final /* synthetic */ Object b;
 
-            CallableC4851a(Object obj, Object obj2) {
+            CallableC0227a(Object obj, Object obj2) {
                 this.a = obj;
                 this.b = obj2;
             }
@@ -92,7 +91,7 @@ public abstract class CacheLoader<K, V> {
             }
         }
 
-        C4850a(Executor executor) {
+        a(Executor executor) {
             this.b = executor;
         }
 
@@ -108,7 +107,7 @@ public abstract class CacheLoader<K, V> {
 
         @Override // com.google.common.cache.CacheLoader
         public ListenableFuture<V> reload(K k, V v) throws Exception {
-            ListenableFutureTask create = ListenableFutureTask.create(new CallableC4851a(k, v));
+            ListenableFutureTask create = ListenableFutureTask.create(new CallableC0227a(k, v));
             this.b.execute(create);
             return create;
         }
@@ -118,7 +117,7 @@ public abstract class CacheLoader<K, V> {
     public static <K, V> CacheLoader<K, V> asyncReloading(CacheLoader<K, V> cacheLoader, Executor executor) {
         du1.p(cacheLoader);
         du1.p(executor);
-        return new C4850a(executor);
+        return new a(executor);
     }
 
     public static <K, V> CacheLoader<K, V> from(Function<K, V> function) {

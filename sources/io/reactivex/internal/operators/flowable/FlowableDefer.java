@@ -1,6 +1,6 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
+import io.reactivex.b;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.subscriptions.EmptySubscription;
 import java.util.concurrent.Callable;
@@ -10,14 +10,14 @@ import tb.dg0;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableDefer<T> extends AbstractC8147b<T> {
+public final class FlowableDefer<T> extends b<T> {
     final Callable<? extends Publisher<? extends T>> supplier;
 
     public FlowableDefer(Callable<? extends Publisher<? extends T>> callable) {
         this.supplier = callable;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super T> subscriber) {
         try {
             ((Publisher) ObjectHelper.requireNonNull(this.supplier.call(), "The publisher supplied is null")).subscribe(subscriber);

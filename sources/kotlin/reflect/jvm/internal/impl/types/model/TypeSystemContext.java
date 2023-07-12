@@ -14,9 +14,8 @@ import tb.b41;
 public interface TypeSystemContext extends TypeSystemOptimizationContext {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.types.model.TypeSystemContext$a */
     /* loaded from: classes3.dex */
-    public static final class C8551a {
+    public static final class a {
         @Nullable
         public static List<SimpleTypeMarker> a(@NotNull TypeSystemContext typeSystemContext, @NotNull SimpleTypeMarker simpleTypeMarker, @NotNull TypeConstructorMarker typeConstructorMarker) {
             b41.i(typeSystemContext, "this");

@@ -1,6 +1,5 @@
 package tb;
 
-import kotlin.collections.C8212k;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.incremental.components.NoLookupLocation;
@@ -55,7 +54,7 @@ public final class d51 {
             LazyJavaPackageFragmentProvider lazyJavaPackageFragmentProvider = this.a;
             hp0 e = fqName.e();
             b41.h(e, "fqName.parent()");
-            LazyJavaPackageFragment lazyJavaPackageFragment = (LazyJavaPackageFragment) C8212k.R(lazyJavaPackageFragmentProvider.getPackageFragments(e));
+            LazyJavaPackageFragment lazyJavaPackageFragment = (LazyJavaPackageFragment) kotlin.collections.k.R(lazyJavaPackageFragmentProvider.getPackageFragments(e));
             if (lazyJavaPackageFragment == null) {
                 return null;
             }

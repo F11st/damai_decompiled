@@ -31,6 +31,6 @@ public final class FlowKt__ErrorsKt$catchImpl$1 extends ContinuationImpl {
     public final Object invokeSuspend(@NotNull Object obj) {
         this.result = obj;
         this.label |= Integer.MIN_VALUE;
-        return C8672c.d(null, null, this);
+        return c.d(null, null, this);
     }
 }

@@ -76,9 +76,8 @@ public class BubbleLayout extends FrameLayout {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.app.widget.BubbleLayout$a */
     /* loaded from: classes13.dex */
-    public static /* synthetic */ class C0475a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -169,7 +168,7 @@ public class BubbleLayout extends FrameLayout {
         if (i26 > i27) {
             i21 = i27 - this.mLookWidth;
         }
-        int i28 = C0475a.a[this.mLook.ordinal()];
+        int i28 = a.a[this.mLook.ordinal()];
         if (i28 == 1) {
             if (i21 >= this.mBubbleRadius + this.mArrowDownRightRadius) {
                 this.mPath.moveTo(i21 - i, this.mBottom);
@@ -409,7 +408,7 @@ public class BubbleLayout extends FrameLayout {
             return;
         }
         int i = this.mBubblePadding;
-        int i2 = C0475a.a[this.mLook.ordinal()];
+        int i2 = a.a[this.mLook.ordinal()];
         if (i2 == 1) {
             setPadding(i, i, i, this.mLookLength + i);
         } else if (i2 == 2) {

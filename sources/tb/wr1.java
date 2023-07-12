@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import com.taobao.phenix.bitmap.BitmapProcessor;
 import com.taobao.phenix.intf.event.IPhenixListener;
 import com.taobao.phenix.intf.event.IRetryHandlerOnFailure;
-import com.taobao.phenix.request.C6865a;
 import com.taobao.rxm.produce.Producer;
 import com.taobao.rxm.schedule.SchedulerSupplier;
 import java.lang.ref.WeakReference;
@@ -20,7 +19,7 @@ import java.util.Map;
 /* loaded from: classes11.dex */
 public class wr1 extends d1 {
     private static int[] m;
-    private final C6865a a;
+    private final com.taobao.phenix.request.a a;
     private int b;
     private Drawable c;
     private int d;
@@ -35,10 +34,9 @@ public class wr1 extends d1 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.wr1$a */
     /* loaded from: classes11.dex */
-    public class C9875a implements IPhenixListener<ui2> {
-        C9875a() {
+    public class a implements IPhenixListener<ui2> {
+        a() {
         }
 
         @Override // com.taobao.phenix.intf.event.IPhenixListener
@@ -58,10 +56,9 @@ public class wr1 extends d1 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.wr1$b */
     /* loaded from: classes11.dex */
-    public class C9876b implements IPhenixListener<ce1> {
-        C9876b() {
+    public class b implements IPhenixListener<ce1> {
+        b() {
         }
 
         @Override // com.taobao.phenix.intf.event.IPhenixListener
@@ -85,10 +82,9 @@ public class wr1 extends d1 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.wr1$c */
     /* loaded from: classes11.dex */
-    public class C9877c implements IPhenixListener<nh0> {
-        C9877c() {
+    public class c implements IPhenixListener<nh0> {
+        c() {
         }
 
         @Override // com.taobao.phenix.intf.event.IPhenixListener
@@ -112,14 +108,14 @@ public class wr1 extends d1 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public wr1(dh1 dh1Var, String str, ye yeVar) {
-        this.a = new C6865a(str, yeVar, ur1.o().isGenericTypeCheckEnabled());
+        this.a = new com.taobao.phenix.request.a(str, yeVar, ur1.o().isGenericTypeCheckEnabled());
         J(ur1.o().q());
         M(ur1.o().r());
     }
 
     private ds1 o(ImageView imageView) {
         this.f = new WeakReference<>(imageView);
-        return m(new C9877c()).C(new C9876b()).Q(new C9875a()).n();
+        return m(new c()).C(new b()).Q(new a()).n();
     }
 
     public static int[] v(Context context) {
@@ -321,9 +317,9 @@ public class wr1 extends d1 {
             this.a.U().r = str;
         }
         il1 m2 = ur1.o().m();
-        Producer<tq1, C6865a> producer = m2.get();
-        SchedulerSupplier c = m2.c();
-        producer.produceResults(new zr1(this.a, this, ur1.o().k(), c, ur1.o().j()).consumeOn(c.forUiThread()));
+        Producer<tq1, com.taobao.phenix.request.a> producer = m2.get();
+        SchedulerSupplier c2 = m2.c();
+        producer.produceResults(new zr1(this.a, this, ur1.o().k(), c2, ur1.o().j()).consumeOn(c2.forUiThread()));
         return P;
     }
 
@@ -357,9 +353,9 @@ public class wr1 extends d1 {
     }
 
     public int x() {
-        C6865a c6865a = this.a;
-        if (c6865a != null) {
-            return c6865a.d();
+        com.taobao.phenix.request.a aVar = this.a;
+        if (aVar != null) {
+            return aVar.d();
         }
         return -1;
     }
@@ -371,10 +367,10 @@ public class wr1 extends d1 {
     public ds1 z(ImageView imageView, float f) {
         A(imageView);
         if (f > 1.0f) {
-            C6865a c6865a = this.a;
-            c6865a.n0((int) (c6865a.J() / f));
-            C6865a c6865a2 = this.a;
-            c6865a2.m0((int) (c6865a2.I() / f));
+            com.taobao.phenix.request.a aVar = this.a;
+            aVar.n0((int) (aVar.J() / f));
+            com.taobao.phenix.request.a aVar2 = this.a;
+            aVar2.m0((int) (aVar2.I() / f));
         }
         return o(imageView);
     }

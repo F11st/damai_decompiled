@@ -8,7 +8,7 @@ import android.widget.RadioGroup;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.homepage.R$id;
 import cn.damai.search.ui.customview.XRadioGroup;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -48,12 +48,11 @@ public class SearchTabPanel {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.customview.SearchTabPanel$a */
     /* loaded from: classes6.dex */
-    public class C1613a implements XRadioGroup.OnTouchL {
+    public class a implements XRadioGroup.OnTouchL {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1613a() {
+        a() {
         }
 
         @Override // cn.damai.search.ui.customview.XRadioGroup.OnTouchL
@@ -69,12 +68,11 @@ public class SearchTabPanel {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.customview.SearchTabPanel$b */
     /* loaded from: classes15.dex */
-    public class View$OnTouchListenerC1614b implements View.OnTouchListener {
+    public class b implements View.OnTouchListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnTouchListenerC1614b() {
+        b() {
         }
 
         @Override // android.view.View.OnTouchListener
@@ -98,7 +96,7 @@ public class SearchTabPanel {
         this.j = utParamsProvider;
         XRadioGroup xRadioGroup = (XRadioGroup) view.findViewById(R$id.search_top_tab_layout);
         this.h = xRadioGroup;
-        xRadioGroup.mTouchL = new C1613a();
+        xRadioGroup.mTouchL = new a();
         this.h.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() { // from class: cn.damai.search.ui.customview.SearchTabPanel.2
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -127,7 +125,7 @@ public class SearchTabPanel {
         this.f = true;
         this.h.check(R$id.search_top_tab_show);
         this.d = recyclerView;
-        recyclerView.setOnTouchListener(new View$OnTouchListenerC1614b());
+        recyclerView.setOnTouchListener(new b());
         this.c = recyclerView.getAdapter();
         p();
         this.b = recyclerView.getLayoutManager();
@@ -185,7 +183,7 @@ public class SearchTabPanel {
         } else {
             UtParamsProvider utParamsProvider = this.j;
             if (utParamsProvider != null) {
-                C0529c.e().x(b82.C().G(this.j.getInputWord(), utParamsProvider.getAaid(), i != R$id.search_top_tab_xian));
+                c.e().x(b82.C().G(this.j.getInputWord(), utParamsProvider.getAaid(), i != R$id.search_top_tab_xian));
             }
             if (i == R$id.search_top_tab_xian) {
                 int n = n();

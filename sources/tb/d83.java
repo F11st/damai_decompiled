@@ -9,10 +9,9 @@ public class d83 {
     public static final ThreadLocal<Charset> a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.d83$a */
     /* loaded from: classes10.dex */
-    static class C9032a extends ThreadLocal<CharsetDecoder> {
-        C9032a() {
+    static class a extends ThreadLocal<CharsetDecoder> {
+        a() {
         }
 
         private static CharsetDecoder a() {
@@ -26,10 +25,9 @@ public class d83 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.d83$b */
     /* loaded from: classes10.dex */
-    static class C9033b extends ThreadLocal<Charset> {
-        C9033b() {
+    static class b extends ThreadLocal<Charset> {
+        b() {
         }
 
         private static Charset a() {
@@ -43,8 +41,8 @@ public class d83 {
     }
 
     static {
-        new C9032a();
-        a = new C9033b();
+        new a();
+        a = new b();
         new ThreadLocal();
     }
 }

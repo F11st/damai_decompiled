@@ -8,5 +8,5 @@ import io.reactivex.annotations.NonNull;
 /* loaded from: classes3.dex */
 public interface ObservableConverter<T, R> {
     @NonNull
-    R apply(@NonNull AbstractC8149d<T> abstractC8149d);
+    R apply(@NonNull d<T> dVar);
 }

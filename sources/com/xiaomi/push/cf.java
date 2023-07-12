@@ -4,7 +4,7 @@ import com.xiaomi.push.cj;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class cf extends cj.C7620d {
+public class cf extends cj.d {
     protected String a;
 
     public cf(String str, String str2, String[] strArr, String str3) {

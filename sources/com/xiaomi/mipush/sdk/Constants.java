@@ -1,7 +1,6 @@
 package com.xiaomi.mipush.sdk;
 
 import com.huawei.hms.support.api.entity.core.JosStatusCodes;
-import com.xiaomi.push.C7596ae;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -51,6 +50,6 @@ public class Constants {
 
     /* JADX INFO: Access modifiers changed from: protected */
     public static int a() {
-        return C7596ae.a();
+        return com.xiaomi.push.ae.a();
     }
 }

@@ -15,7 +15,7 @@ import tb.k50;
 /* loaded from: classes3.dex */
 public final class Result<T> implements Serializable {
     @NotNull
-    public static final C8174a Companion = new C8174a(null);
+    public static final a Companion = new a(null);
     @Nullable
     private final Object value;
 
@@ -46,13 +46,12 @@ public final class Result<T> implements Serializable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.Result$a */
     /* loaded from: classes3.dex */
-    public static final class C8174a {
-        private C8174a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8174a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

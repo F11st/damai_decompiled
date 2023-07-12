@@ -60,9 +60,8 @@ public interface Service {
 
     /* compiled from: Taobao */
     @Beta
-    /* renamed from: com.google.common.util.concurrent.Service$b */
     /* loaded from: classes10.dex */
-    public static abstract class AbstractC5323b {
+    public static abstract class b {
         public void a(State state, Throwable th) {
         }
 
@@ -79,7 +78,7 @@ public interface Service {
         }
     }
 
-    void addListener(AbstractC5323b abstractC5323b, Executor executor);
+    void addListener(b bVar, Executor executor);
 
     void awaitRunning();
 

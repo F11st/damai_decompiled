@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.observable;
 
 import io.reactivex.Observer;
-import io.reactivex.disposables.C8151a;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.disposables.a;
 import io.reactivex.functions.Consumer;
 import io.reactivex.internal.disposables.DisposableHelper;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -149,7 +149,7 @@ public final class ObservableRefCount<T> extends AbstractObservableWithUpstream<
     }
 
     private Disposable disconnect(jm jmVar) {
-        return C8151a.c(new DisposeTask(jmVar));
+        return a.c(new DisposeTask(jmVar));
     }
 
     private Consumer<Disposable> onSubscribe(Observer<? super T> observer, AtomicBoolean atomicBoolean) {
@@ -162,7 +162,7 @@ public final class ObservableRefCount<T> extends AbstractObservableWithUpstream<
         this.source.subscribe(connectionObserver);
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         boolean z;
         this.lock.lock();

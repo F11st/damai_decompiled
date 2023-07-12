@@ -12,13 +12,12 @@ public class oy {
     private JSONObject b = null;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.oy$a */
     /* loaded from: classes11.dex */
-    public static class C9535a {
+    public static class a {
         public int a;
         public String b;
 
-        public C9535a(int i, String str) {
+        public a(int i, String str) {
             this.a = i;
             this.b = str;
         }
@@ -31,14 +30,14 @@ public class oy {
     public static oy a(int i, String str) {
         oy oyVar = new oy();
         oyVar.a = 1;
-        new C9535a(i, str);
+        new a(i, str);
         return oyVar;
     }
 
     public static oy b(ky kyVar) {
         oy oyVar = new oy();
         oyVar.a = 1;
-        new C9535a(kyVar.a, kyVar.b);
+        new a(kyVar.a, kyVar.b);
         return oyVar;
     }
 
@@ -52,22 +51,22 @@ public class oy {
     public static oy d(int i, String str) {
         oy oyVar = new oy();
         oyVar.a = 2;
-        new C9535a(i, str);
+        new a(i, str);
         return oyVar;
     }
 
-    public static oy e(C9392l c9392l) {
-        if (c9392l == null) {
+    public static oy e(l lVar) {
+        if (lVar == null) {
             return b(ky.EVENT_CHAIN_ERROR_ABILITY_EXEC_RESULT_IS_NULL);
         }
-        if (c9392l.b()) {
-            C9327k c9327k = (C9327k) c9392l;
-            if (c9392l.c()) {
-                return d(c9327k.a().a(), c9327k.a().b());
+        if (lVar.b()) {
+            k kVar = (k) lVar;
+            if (lVar.c()) {
+                return d(kVar.a().a(), kVar.a().b());
             }
-            return a(c9327k.a().a(), c9327k.a().b());
+            return a(kVar.a().a(), kVar.a().b());
         }
-        return c(((C9488o) c9392l).a());
+        return c(((o) lVar).a());
     }
 
     public JSONObject f() {

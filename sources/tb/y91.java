@@ -7,7 +7,7 @@ import android.text.TextUtils;
 import cn.damai.common.OrangeConfigCenter;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 
@@ -70,7 +70,7 @@ public class y91 extends ll {
                 if (c(str, a())) {
                     Bundle bundle = new Bundle();
                     bundle.putString("url", b(str));
-                    DMNav.from(context).withExtras(bundle).toUri(NavUri.b(C3834a.C3837c.d));
+                    DMNav.from(context).withExtras(bundle).toUri(NavUri.b(a.c.d));
                     cb1.b("LiveTempProcessor", "LiveTempProcessor intercept id : " + b(str));
                     return true;
                 }

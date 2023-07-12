@@ -14,10 +14,7 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.text.TextUtils;
 import android.widget.RemoteViews;
-import com.vivo.push.C7481e;
-import com.vivo.push.b.C7428p;
-import com.vivo.push.c.C7443d;
-import com.vivo.push.d.C7471r;
+import com.vivo.push.d.r;
 import com.vivo.push.model.InsideNotificationItem;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -75,21 +72,21 @@ public class NotifyAdapterUtil {
         return context.getResources().getConfiguration().locale.getLanguage().endsWith("zh");
     }
 
-    public static void pushNotification(Context context, List<Bitmap> list, InsideNotificationItem insideNotificationItem, long j, int i, C7471r.InterfaceC7472a interfaceC7472a) {
-        C7523p.d(TAG, "pushNotification");
+    public static void pushNotification(Context context, List<Bitmap> list, InsideNotificationItem insideNotificationItem, long j, int i, r.a aVar) {
+        p.d(TAG, "pushNotification");
         initAdapter(context);
         int notifyMode = NotifyUtil.getNotifyDataAdapter(context).getNotifyMode(insideNotificationItem);
         if (!TextUtils.isEmpty(insideNotificationItem.getPurePicUrl()) && list != null && list.size() > 1 && list.get(1) != null) {
             notifyMode = 1;
         }
         if (notifyMode == 2) {
-            pushNotificationBySystem(context, list, insideNotificationItem, j, i, interfaceC7472a);
+            pushNotificationBySystem(context, list, insideNotificationItem, j, i, aVar);
         } else if (notifyMode == 1) {
-            pushNotificationByCustom(context, list, insideNotificationItem, j, interfaceC7472a);
+            pushNotificationByCustom(context, list, insideNotificationItem, j, aVar);
         }
     }
 
-    private static void pushNotificationByCustom(Context context, List<Bitmap> list, InsideNotificationItem insideNotificationItem, long j, C7471r.InterfaceC7472a interfaceC7472a) {
+    private static void pushNotificationByCustom(Context context, List<Bitmap> list, InsideNotificationItem insideNotificationItem, long j, r.a aVar) {
         Notification notification;
         int i;
         int i2;
@@ -172,7 +169,7 @@ public class NotifyAdapterUtil {
         AudioManager audioManager = (AudioManager) context.getSystemService("audio");
         int ringerMode = audioManager.getRingerMode();
         int vibrateSetting = audioManager.getVibrateSetting(0);
-        C7523p.d(TAG, "ringMode=" + ringerMode + " callVibrateSetting=" + vibrateSetting);
+        p.d(TAG, "ringMode=" + ringerMode + " callVibrateSetting=" + vibrateSetting);
         int notifyType = insideNotificationItem.getNotifyType();
         if (notifyType != 2) {
             if (notifyType != 3) {
@@ -197,36 +194,36 @@ public class NotifyAdapterUtil {
         intent.setClassName(context.getPackageName(), "com.vivo.push.sdk.service.CommandService");
         intent.putExtra("command_type", "reflect_receiver");
         try {
-            intent.putExtra("security_avoid_pull", C7508a.a(context).a("com.vivo.pushservice"));
+            intent.putExtra("security_avoid_pull", a.a(context).a("com.vivo.pushservice"));
             if (i4 >= 18) {
-                intent.putExtra("security_avoid_pull_rsa", C7443d.a(context).a().a("com.vivo.pushservice"));
-                intent.putExtra("security_avoid_rsa_public_key", C7528u.a(C7443d.a(context).a().a()));
+                intent.putExtra("security_avoid_pull_rsa", com.vivo.push.c.d.a(context).a().a("com.vivo.pushservice"));
+                intent.putExtra("security_avoid_rsa_public_key", u.a(com.vivo.push.c.d.a(context).a().a()));
             }
         } catch (Exception e) {
-            C7523p.a(TAG, "pushNotificationByCustom encrypt ：" + e.getMessage());
+            p.a(TAG, "pushNotificationByCustom encrypt ：" + e.getMessage());
         }
-        new C7428p(packageName, j, insideNotificationItem).b(intent);
+        new com.vivo.push.b.p(packageName, j, insideNotificationItem).b(intent);
         notification.contentIntent = PendingIntent.getService(context, (int) SystemClock.uptimeMillis(), intent, 268435456);
         if (sNotificationManager != null) {
-            int k = C7481e.a().k();
+            int k = com.vivo.push.e.a().k();
             try {
                 if (k == 0) {
                     sNotificationManager.notify(sNotifyId, notification);
-                    if (interfaceC7472a != null) {
-                        interfaceC7472a.a();
+                    if (aVar != null) {
+                        aVar.a();
                     }
                 } else if (k == 1) {
                     sNotificationManager.notify((int) j, notification);
-                    if (interfaceC7472a != null) {
-                        interfaceC7472a.a();
+                    if (aVar != null) {
+                        aVar.a();
                     }
                 } else {
-                    C7523p.a(TAG, "unknow notify style ".concat(String.valueOf(k)));
+                    p.a(TAG, "unknow notify style ".concat(String.valueOf(k)));
                 }
             } catch (Exception e2) {
-                C7523p.a(TAG, e2);
-                if (interfaceC7472a != null) {
-                    interfaceC7472a.b();
+                p.a(TAG, e2);
+                if (aVar != null) {
+                    aVar.b();
                 }
             }
         }
@@ -238,7 +235,7 @@ public class NotifyAdapterUtil {
      */
     /* JADX WARN: Code restructure failed: missing block: B:71:0x01ba, code lost:
         r4 = r17;
-        com.vivo.push.util.C7523p.a(r4, "pushNotificationBySystem encrypt ：" + r0.getMessage());
+        com.vivo.push.util.p.a(r4, "pushNotificationBySystem encrypt ：" + r0.getMessage());
      */
     /* JADX WARN: Removed duplicated region for block: B:62:0x013c  */
     /* JADX WARN: Removed duplicated region for block: B:64:0x014c  */
@@ -249,7 +246,7 @@ public class NotifyAdapterUtil {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private static void pushNotificationBySystem(android.content.Context r20, java.util.List<android.graphics.Bitmap> r21, com.vivo.push.model.InsideNotificationItem r22, long r23, int r25, com.vivo.push.d.C7471r.InterfaceC7472a r26) {
+    private static void pushNotificationBySystem(android.content.Context r20, java.util.List<android.graphics.Bitmap> r21, com.vivo.push.model.InsideNotificationItem r22, long r23, int r25, com.vivo.push.d.r.a r26) {
         /*
             Method dump skipped, instructions count: 618
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -258,22 +255,22 @@ public class NotifyAdapterUtil {
     }
 
     public static boolean repealNotifyById(Context context, long j) {
-        int k = C7481e.a().k();
+        int k = com.vivo.push.e.a().k();
         if (k != 0) {
             if (k == 1) {
                 return cancelNotify(context, (int) j);
             }
-            C7523p.a(TAG, "unknow cancle notify style ".concat(String.valueOf(k)));
+            p.a(TAG, "unknow cancle notify style ".concat(String.valueOf(k)));
             return false;
         }
-        long b = C7530w.b().b("com.vivo.push.notify_key", -1L);
+        long b = w.b().b("com.vivo.push.notify_key", -1L);
         if (b == j) {
-            C7523p.d(TAG, "undo showed message ".concat(String.valueOf(j)));
-            C7523p.a(context, "回收已展示的通知： ".concat(String.valueOf(j)));
+            p.d(TAG, "undo showed message ".concat(String.valueOf(j)));
+            p.a(context, "回收已展示的通知： ".concat(String.valueOf(j)));
             return cancelNotify(context, sNotifyId);
         }
-        C7523p.d(TAG, "current showing message id " + b + " not match " + j);
-        C7523p.a(context, "与已展示的通知" + b + "与待回收的通知" + j + "不匹配");
+        p.d(TAG, "current showing message id " + b + " not match " + j);
+        p.a(context, "与已展示的通知" + b + "与待回收的通知" + j + "不匹配");
         return false;
     }
 

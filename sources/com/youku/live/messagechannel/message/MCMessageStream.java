@@ -3,9 +3,9 @@ package com.youku.live.messagechannel.message;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.live.messagechannel.utils.MyLog;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.BackpressureStrategy;
 import io.reactivex.Observer;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.subjects.PublishSubject;
 
@@ -16,9 +16,9 @@ public class MCMessageStream<T> implements Observer<T> {
     private final String TAG = getClass().getName();
     private PublishSubject<T> subject = PublishSubject.c();
 
-    public AbstractC8147b<T> getObservable() {
+    public b<T> getObservable() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "735913023") ? (AbstractC8147b) ipChange.ipc$dispatch("735913023", new Object[]{this}) : this.subject.toFlowable(BackpressureStrategy.BUFFER);
+        return AndroidInstantRuntime.support(ipChange, "735913023") ? (b) ipChange.ipc$dispatch("735913023", new Object[]{this}) : this.subject.toFlowable(BackpressureStrategy.BUFFER);
     }
 
     @Override // io.reactivex.Observer

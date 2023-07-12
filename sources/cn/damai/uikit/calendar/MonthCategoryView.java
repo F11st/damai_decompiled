@@ -44,7 +44,7 @@ public class MonthCategoryView extends CalendarPagerView {
     }
 
     @Override // cn.damai.uikit.calendar.CalendarPagerView, android.view.ViewGroup
-    public /* bridge */ /* synthetic */ CalendarPagerView.C2481a generateLayoutParams(AttributeSet attributeSet) {
+    public /* bridge */ /* synthetic */ CalendarPagerView.a generateLayoutParams(AttributeSet attributeSet) {
         return super.generateLayoutParams(attributeSet);
     }
 
@@ -69,20 +69,20 @@ public class MonthCategoryView extends CalendarPagerView {
             ipChange.ipc$dispatch("703743268", new Object[]{this});
             return;
         }
-        C2490a c2490a = new C2490a();
+        a aVar = new a();
         for (DayCategoryView dayCategoryView : this.dayCategoryViews) {
-            c2490a.q();
-            Iterator<C2492b> it = this.decoratorResults.iterator();
+            aVar.q();
+            Iterator<b> it = this.decoratorResults.iterator();
             while (it.hasNext()) {
-                C2492b next = it.next();
+                b next = it.next();
                 if (next.a.shouldDecorate(dayCategoryView.getDayView().getDate())) {
-                    next.b.b(c2490a);
+                    next.b.b(aVar);
                     if (next.a.updateFacade()) {
-                        c2490a.s(next.a.updateFacadeDesc(dayCategoryView.getDayView().getDate()));
+                        aVar.s(next.a.updateFacadeDesc(dayCategoryView.getDayView().getDate()));
                     }
                 }
             }
-            dayCategoryView.applyFacade(c2490a);
+            dayCategoryView.applyFacade(aVar);
         }
     }
 

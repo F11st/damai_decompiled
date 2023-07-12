@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.functions.Function;
@@ -24,7 +24,7 @@ import tb.jm;
 public final class ObservableGroupJoin<TLeft, TRight, TLeftEnd, TRightEnd, R> extends AbstractObservableWithUpstream<TLeft, R> {
     final Function<? super TLeft, ? extends ObservableSource<TLeftEnd>> leftEnd;
     final ObservableSource<? extends TRight> other;
-    final BiFunction<? super TLeft, ? super AbstractC8149d<TRight>, ? extends R> resultSelector;
+    final BiFunction<? super TLeft, ? super d<TRight>, ? extends R> resultSelector;
     final Function<? super TRight, ? extends ObservableSource<TRightEnd>> rightEnd;
 
     /* compiled from: Taobao */
@@ -35,7 +35,7 @@ public final class ObservableGroupJoin<TLeft, TRight, TLeftEnd, TRightEnd, R> ex
         volatile boolean cancelled;
         final Function<? super TLeft, ? extends ObservableSource<TLeftEnd>> leftEnd;
         int leftIndex;
-        final BiFunction<? super TLeft, ? super AbstractC8149d<TRight>, ? extends R> resultSelector;
+        final BiFunction<? super TLeft, ? super d<TRight>, ? extends R> resultSelector;
         final Function<? super TRight, ? extends ObservableSource<TRightEnd>> rightEnd;
         int rightIndex;
         static final Integer LEFT_VALUE = 1;
@@ -43,13 +43,13 @@ public final class ObservableGroupJoin<TLeft, TRight, TLeftEnd, TRightEnd, R> ex
         static final Integer LEFT_CLOSE = 3;
         static final Integer RIGHT_CLOSE = 4;
         final jm disposables = new jm();
-        final SpscLinkedArrayQueue<Object> queue = new SpscLinkedArrayQueue<>(AbstractC8149d.bufferSize());
+        final SpscLinkedArrayQueue<Object> queue = new SpscLinkedArrayQueue<>(d.bufferSize());
         final Map<Integer, UnicastSubject<TRight>> lefts = new LinkedHashMap();
         final Map<Integer, TRight> rights = new LinkedHashMap();
         final AtomicReference<Throwable> error = new AtomicReference<>();
         final AtomicInteger active = new AtomicInteger(2);
 
-        GroupJoinDisposable(Observer<? super R> observer, Function<? super TLeft, ? extends ObservableSource<TLeftEnd>> function, Function<? super TRight, ? extends ObservableSource<TRightEnd>> function2, BiFunction<? super TLeft, ? super AbstractC8149d<TRight>, ? extends R> biFunction) {
+        GroupJoinDisposable(Observer<? super R> observer, Function<? super TLeft, ? extends ObservableSource<TLeftEnd>> function, Function<? super TRight, ? extends ObservableSource<TRightEnd>> function2, BiFunction<? super TLeft, ? super d<TRight>, ? extends R> biFunction) {
             this.actual = observer;
             this.leftEnd = function;
             this.rightEnd = function2;
@@ -348,7 +348,7 @@ public final class ObservableGroupJoin<TLeft, TRight, TLeftEnd, TRightEnd, R> ex
         }
     }
 
-    public ObservableGroupJoin(ObservableSource<TLeft> observableSource, ObservableSource<? extends TRight> observableSource2, Function<? super TLeft, ? extends ObservableSource<TLeftEnd>> function, Function<? super TRight, ? extends ObservableSource<TRightEnd>> function2, BiFunction<? super TLeft, ? super AbstractC8149d<TRight>, ? extends R> biFunction) {
+    public ObservableGroupJoin(ObservableSource<TLeft> observableSource, ObservableSource<? extends TRight> observableSource2, Function<? super TLeft, ? extends ObservableSource<TLeftEnd>> function, Function<? super TRight, ? extends ObservableSource<TRightEnd>> function2, BiFunction<? super TLeft, ? super d<TRight>, ? extends R> biFunction) {
         super(observableSource);
         this.other = observableSource2;
         this.leftEnd = function;
@@ -356,7 +356,7 @@ public final class ObservableGroupJoin<TLeft, TRight, TLeftEnd, TRightEnd, R> ex
         this.resultSelector = biFunction;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super R> observer) {
         GroupJoinDisposable groupJoinDisposable = new GroupJoinDisposable(observer, this.leftEnd, this.rightEnd, this.resultSelector);
         observer.onSubscribe(groupJoinDisposable);

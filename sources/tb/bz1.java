@@ -2,8 +2,6 @@ package tb;
 
 import android.view.View;
 import androidx.constraintlayout.core.motion.utils.TypedValues;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import cn.damai.rank.RankSquareCMSActivity;
 import cn.damai.tetris.component.rank.bean.CategoryTabBean;
 import cn.damai.tetris.component.rank.bean.TypeTabBean;
@@ -14,25 +12,24 @@ import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
-public final class bz1 extends C0528b {
+public final class bz1 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C8984a Instance = new C8984a(null);
+    public static final a Instance = new a(null);
     @NotNull
     private final String b;
     @NotNull
     private final String c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.bz1$a */
     /* loaded from: classes7.dex */
-    public static final class C8984a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C8984a() {
+        private a() {
         }
 
-        public /* synthetic */ C8984a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -46,7 +43,7 @@ public final class bz1 extends C0528b {
             b41.i(str, RankSquareCMSActivity.PRESET_CITY_NAME);
             HashMap<String, String> g = d23.g();
             d23.h(g, "city", str);
-            C0529c.e().G(view, "city", "top", "ranklist_square", g);
+            cn.damai.common.user.c.e().G(view, "city", "top", "ranklist_square", g);
         }
 
         public final void b(@NotNull String str) {
@@ -58,7 +55,7 @@ public final class bz1 extends C0528b {
             b41.i(str, RankSquareCMSActivity.PRESET_CITY_NAME);
             HashMap<String, String> g = d23.g();
             d23.h(g, "city", str);
-            C0529c.e().x(new bz1("ranklist_square", str).e("ranklist_square", "top", "city", g, Boolean.TRUE));
+            cn.damai.common.user.c.e().x(new bz1("ranklist_square", str).e("ranklist_square", "top", "city", g, Boolean.TRUE));
         }
     }
 
@@ -79,7 +76,7 @@ public final class bz1 extends C0528b {
         b41.i(categoryTabBean, "tabBean");
         HashMap<String, String> g = d23.g();
         d23.h(g, "city", this.c);
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         e.G(view, "category_" + categoryTabBean.pos, "category", this.b, g);
     }
 
@@ -94,7 +91,7 @@ public final class bz1 extends C0528b {
         HashMap<String, String> g = d23.g();
         d23.h(g, "city", this.c);
         d23.h(g, "titlelabel", typeTabBean.name);
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         e.G(view, "category_" + i + "_dimension_" + typeTabBean.pos, TypedValues.Custom.S_DIMENSION, this.b, g);
     }
 
@@ -109,7 +106,7 @@ public final class bz1 extends C0528b {
         d23.h(g, "city", this.c);
         d23.h(g, "titlelabel", categoryTabBean.name);
         String str = this.b;
-        C0529c.e().x(e(str, "category", "category_" + i, g, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(e(str, "category", "category_" + i, g, Boolean.FALSE));
     }
 
     public final void i(@NotNull CategoryTabBean categoryTabBean, @NotNull TypeTabBean typeTabBean) {
@@ -124,6 +121,6 @@ public final class bz1 extends C0528b {
         d23.h(g, "city", this.c);
         d23.h(g, "titlelabel", typeTabBean.name);
         String str = this.b;
-        C0529c.e().x(e(str, TypedValues.Custom.S_DIMENSION, "category_" + categoryTabBean.pos + "_dimension_" + typeTabBean.pos, g, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(e(str, TypedValues.Custom.S_DIMENSION, "category_" + categoryTabBean.pos + "_dimension_" + typeTabBean.pos, g, Boolean.FALSE));
     }
 }

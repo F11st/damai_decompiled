@@ -6,17 +6,17 @@ import tb.du1;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 class CartesianList$1 extends ImmutableList<Object> {
-    final /* synthetic */ C5189j this$0;
+    final /* synthetic */ j this$0;
     final /* synthetic */ int val$index;
 
-    CartesianList$1(C5189j c5189j, int i) {
+    CartesianList$1(j jVar, int i) {
         this.val$index = i;
     }
 
     @Override // java.util.List
     public Object get(int i) {
         du1.n(i, size());
-        return ((List) C5189j.a(this.this$0).get(i)).get(C5189j.b(this.this$0, this.val$index, i));
+        return ((List) j.a(this.this$0).get(i)).get(j.b(this.this$0, this.val$index, i));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -27,6 +27,6 @@ class CartesianList$1 extends ImmutableList<Object> {
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public int size() {
-        return C5189j.a(this.this$0).size();
+        return j.a(this.this$0).size();
     }
 }

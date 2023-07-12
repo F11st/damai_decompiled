@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
@@ -72,12 +71,11 @@ public class NoteViewHolder extends BaseViewHolder<NoteBean> implements View.OnC
     private int z;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.discover.viewholder.NoteViewHolder$a */
     /* loaded from: classes14.dex */
-    public class View$OnAttachStateChangeListenerC0647a implements View.OnAttachStateChangeListener {
+    public class a implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC0647a() {
+        a() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -101,12 +99,11 @@ public class NoteViewHolder extends BaseViewHolder<NoteBean> implements View.OnC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.discover.viewholder.NoteViewHolder$b */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0648b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0648b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -139,8 +136,8 @@ public class NoteViewHolder extends BaseViewHolder<NoteBean> implements View.OnC
                 View view = this.itemView;
                 int i = R$id.ll_card_note_proj;
                 view.findViewById(i).setVisibility(0);
-                this.itemView.findViewById(i).setOnClickListener(new View$OnClickListenerC0648b());
-                C0504a.b().c(projectInNote.verticalPic).c(R$drawable.uikit_default_image_bg_gradient).g((ImageView) this.itemView.findViewById(R$id.ll_card_note_proj_img));
+                this.itemView.findViewById(i).setOnClickListener(new b());
+                cn.damai.common.image.a.b().c(projectInNote.verticalPic).c(R$drawable.uikit_default_image_bg_gradient).g((ImageView) this.itemView.findViewById(R$id.ll_card_note_proj_img));
                 ((TextView) this.itemView.findViewById(R$id.ll_card_note_proj_name)).setText(projectInNote.name);
                 this.B.removeAllViews();
                 this.B.setVisibility(8);
@@ -187,7 +184,7 @@ public class NoteViewHolder extends BaseViewHolder<NoteBean> implements View.OnC
                 if (TextUtils.isEmpty(projectInNote.attractiveLabel.icon)) {
                     ((ImageView) this.itemView.findViewById(R$id.note_card_bottom_icon)).setImageResource(R$drawable.home_card_note_tipicon);
                 } else {
-                    C0504a.b().c(projectInNote.attractiveLabel.icon).g((ImageView) this.itemView.findViewById(R$id.note_card_bottom_icon));
+                    cn.damai.common.image.a.b().c(projectInNote.attractiveLabel.icon).g((ImageView) this.itemView.findViewById(R$id.note_card_bottom_icon));
                 }
                 ((TextView) this.itemView.findViewById(R$id.note_card_bottom_desc)).setText(projectInNote.attractiveLabel.title);
                 return;
@@ -446,7 +443,7 @@ public class NoteViewHolder extends BaseViewHolder<NoteBean> implements View.OnC
 
     public NoteViewHolder(View view, OnItemClickListener<NoteBean> onItemClickListener) {
         super(view);
-        view.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC0647a());
+        view.addOnAttachStateChangeListener(new a());
         Context context = view.getContext();
         if (context != null) {
             this.z = h(context, 6.0f);

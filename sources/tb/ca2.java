@@ -3,7 +3,6 @@ package tb;
 import com.alibaba.fastjson.JSONObject;
 import com.taobao.android.ultron.common.model.IDMComponent;
 import com.taobao.android.ultron.common.model.IDMEvent;
-import com.taobao.android.ultron.datamodel.imp.C6663c;
 import com.taobao.weex.ui.component.WXBasicComponentType;
 import com.youku.resource.widget.YKActionSheet;
 import java.util.ArrayList;
@@ -76,7 +75,7 @@ public class ca2 extends ib {
         if (i >= intValue) {
             for (IDMComponent iDMComponent2 : arrayList) {
                 if (iDMComponent2 != null) {
-                    String e = C6663c.e(iDMComponent2);
+                    String e = com.taobao.android.ultron.datamodel.imp.c.e(iDMComponent2);
                     if (!"header".equals(e) && !WXBasicComponentType.FOOTER.equals(e)) {
                         iDMComponent2.getFields().put("status", (Object) YKActionSheet.ACTION_STYLE_DISABLE);
                     }
@@ -99,7 +98,7 @@ public class ca2 extends ib {
         }
         for (IDMComponent iDMComponent : children) {
             if (iDMComponent != null) {
-                String e = C6663c.e(iDMComponent);
+                String e = com.taobao.android.ultron.datamodel.imp.c.e(iDMComponent);
                 if (!this.e.equals(iDMComponent) && !"header".equals(e) && !WXBasicComponentType.FOOTER.equals(e)) {
                     u(iDMComponent, false);
                 }

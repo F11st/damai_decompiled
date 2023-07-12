@@ -29,7 +29,7 @@ enum Files$FilePredicate implements Predicate<File> {
         }
     };
 
-    /* synthetic */ Files$FilePredicate(C5233a c5233a) {
+    /* synthetic */ Files$FilePredicate(a aVar) {
         this();
     }
 }

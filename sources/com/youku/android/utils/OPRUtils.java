@@ -53,7 +53,7 @@ public class OPRUtils {
             goto Lbe
         L13:
             android.content.res.Resources r2 = r2.getResources()
-            int r3 = com.youku.android.barrage.R.C7798raw.shaders
+            int r3 = com.youku.android.barrage.R.raw.shaders
             java.io.InputStream r2 = r2.openRawResource(r3)
             r3 = 0
             int r4 = r2.available()     // Catch: java.io.IOException -> L34

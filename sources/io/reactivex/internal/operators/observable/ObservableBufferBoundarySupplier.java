@@ -9,7 +9,7 @@ import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.observers.QueueDrainObserver;
 import io.reactivex.internal.queue.MpscLinkedQueue;
 import io.reactivex.internal.util.QueueDrainHelper;
-import io.reactivex.observers.AbstractC8160b;
+import io.reactivex.observers.b;
 import java.util.Collection;
 import java.util.concurrent.Callable;
 import java.util.concurrent.atomic.AtomicReference;
@@ -26,7 +26,7 @@ public final class ObservableBufferBoundarySupplier<T, U extends Collection<? su
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    public static final class BufferBoundaryObserver<T, U extends Collection<? super T>, B> extends AbstractC8160b<B> {
+    public static final class BufferBoundaryObserver<T, U extends Collection<? super T>, B> extends b<B> {
         boolean once;
         final BufferBoundarySupplierObserver<T, U, B> parent;
 
@@ -211,7 +211,7 @@ public final class ObservableBufferBoundarySupplier<T, U extends Collection<? su
         this.bufferSupplier = callable2;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super U> observer) {
         this.source.subscribe(new BufferBoundarySupplierObserver(new ra2(observer), this.bufferSupplier, this.boundarySupplier));
     }

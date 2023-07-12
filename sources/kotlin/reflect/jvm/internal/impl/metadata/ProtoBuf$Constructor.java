@@ -4,20 +4,19 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import kotlin.reflect.jvm.internal.impl.protobuf.AbstractC8443a;
 import kotlin.reflect.jvm.internal.impl.protobuf.AbstractMessageLite;
 import kotlin.reflect.jvm.internal.impl.protobuf.ByteString;
-import kotlin.reflect.jvm.internal.impl.protobuf.C8447c;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedOutputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite;
 import kotlin.reflect.jvm.internal.impl.protobuf.InvalidProtocolBufferException;
 import kotlin.reflect.jvm.internal.impl.protobuf.Parser;
+import kotlin.reflect.jvm.internal.impl.protobuf.c;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class ProtoBuf$Constructor extends GeneratedMessageLite.ExtendableMessage<ProtoBuf$Constructor> implements ProtoBuf$ConstructorOrBuilder {
-    public static Parser<ProtoBuf$Constructor> PARSER = new C8394a();
+    public static Parser<ProtoBuf$Constructor> PARSER = new a();
     private static final ProtoBuf$Constructor defaultInstance;
     private int bitField0_;
     private int flags_;
@@ -162,7 +161,7 @@ public final class ProtoBuf$Constructor extends GeneratedMessageLite.ExtendableM
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Constructor.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.C8447c r4) throws java.io.IOException {
+        public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Constructor.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.c r4) throws java.io.IOException {
             /*
                 r2 = this;
                 r0 = 0
@@ -195,16 +194,15 @@ public final class ProtoBuf$Constructor extends GeneratedMessageLite.ExtendableM
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Constructor$a */
     /* loaded from: classes3.dex */
-    static class C8394a extends AbstractC8443a<ProtoBuf$Constructor> {
-        C8394a() {
+    static class a extends kotlin.reflect.jvm.internal.impl.protobuf.a<ProtoBuf$Constructor> {
+        a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.protobuf.Parser
         /* renamed from: i */
-        public ProtoBuf$Constructor parsePartialFrom(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
-            return new ProtoBuf$Constructor(codedInputStream, c8447c);
+        public ProtoBuf$Constructor parsePartialFrom(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
+            return new ProtoBuf$Constructor(codedInputStream, cVar);
         }
     }
 
@@ -302,7 +300,7 @@ public final class ProtoBuf$Constructor extends GeneratedMessageLite.ExtendableM
     @Override // kotlin.reflect.jvm.internal.impl.protobuf.MessageLite
     public void writeTo(CodedOutputStream codedOutputStream) throws IOException {
         getSerializedSize();
-        GeneratedMessageLite.ExtendableMessage<MessageType>.C8438a newExtensionWriter = newExtensionWriter();
+        GeneratedMessageLite.ExtendableMessage<MessageType>.a newExtensionWriter = newExtensionWriter();
         if ((this.bitField0_ & 1) == 1) {
             codedOutputStream.a0(1, this.flags_);
         }
@@ -349,11 +347,11 @@ public final class ProtoBuf$Constructor extends GeneratedMessageLite.ExtendableM
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    private ProtoBuf$Constructor(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
+    private ProtoBuf$Constructor(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
         this.memoizedIsInitialized = (byte) -1;
         this.memoizedSerializedSize = -1;
         initFields();
-        ByteString.C8436a n = ByteString.n();
+        ByteString.a n = ByteString.n();
         CodedOutputStream J = CodedOutputStream.J(n, 1);
         boolean z = false;
         boolean z2 = false;
@@ -371,7 +369,7 @@ public final class ProtoBuf$Constructor extends GeneratedMessageLite.ExtendableM
                                     this.valueParameter_ = new ArrayList();
                                     z2 |= true;
                                 }
-                                this.valueParameter_.add(codedInputStream.u(ProtoBuf$ValueParameter.PARSER, c8447c));
+                                this.valueParameter_.add(codedInputStream.u(ProtoBuf$ValueParameter.PARSER, cVar));
                             } else if (K == 248) {
                                 if (!(z2 & true)) {
                                     this.versionRequirement_ = new ArrayList();
@@ -379,7 +377,7 @@ public final class ProtoBuf$Constructor extends GeneratedMessageLite.ExtendableM
                                 }
                                 this.versionRequirement_.add(Integer.valueOf(codedInputStream.s()));
                             } else if (K != 250) {
-                                if (!parseUnknownField(codedInputStream, J, c8447c, K)) {
+                                if (!parseUnknownField(codedInputStream, J, cVar, K)) {
                                 }
                             } else {
                                 int j = codedInputStream.j(codedInputStream.A());

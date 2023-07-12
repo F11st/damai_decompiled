@@ -25,33 +25,33 @@ public class st {
         return this.e.get(str);
     }
 
-    public Map<String, DXWidgetNode> b(C9787ut c9787ut, DXRuntimeContext dXRuntimeContext, Context context) {
+    public Map<String, DXWidgetNode> b(ut utVar, DXRuntimeContext dXRuntimeContext, Context context) {
         int i = this.a;
         if (i <= 0 || this.b <= 0) {
             return null;
         }
-        if (!c9787ut.i(i)) {
+        if (!utVar.i(i)) {
             nz.g(null, "DXChildTemplateLoader 解析子模版区失败 !codeReader.seek(childTemplateStartPos)");
         }
-        int f = c9787ut.f();
+        int f = utVar.f();
         if (f <= 0) {
             return null;
         }
         DXTemplateItem dxTemplateItem = dXRuntimeContext.getDxTemplateItem();
         for (int i2 = 0; i2 < f; i2++) {
-            if (c9787ut.d() != this.c) {
+            if (utVar.d() != this.c) {
                 nz.g(null, "DXChildTemplateLoader 解析子模版区失败 startTag != START_TAG)");
                 return null;
             }
-            short h = c9787ut.h();
-            String str = new String(c9787ut.a(), c9787ut.c(), (int) h);
-            c9787ut.j(h);
-            short h2 = c9787ut.h();
-            int f2 = c9787ut.f();
+            short h = utVar.h();
+            String str = new String(utVar.a(), utVar.c(), (int) h);
+            utVar.j(h);
+            short h2 = utVar.h();
+            int f2 = utVar.f();
             byte[] bArr = new byte[f2];
-            System.arraycopy(c9787ut.a(), c9787ut.c(), bArr, 0, f2);
-            c9787ut.j(f2);
-            if (c9787ut.d() != this.d) {
+            System.arraycopy(utVar.a(), utVar.c(), bArr, 0, f2);
+            utVar.j(f2);
+            if (utVar.d() != this.d) {
                 nz.g(null, "DXChildTemplateLoader 解析子模版区失败 endTag != END_TAG)");
                 return null;
             }

@@ -7,26 +7,25 @@ import tb.go;
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
 public interface CookieJar {
-    public static final CookieJar NO_COOKIES = new C8731a();
+    public static final CookieJar NO_COOKIES = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: okhttp3.CookieJar$a */
     /* loaded from: classes2.dex */
-    class C8731a implements CookieJar {
-        C8731a() {
+    class a implements CookieJar {
+        a() {
         }
 
         @Override // okhttp3.CookieJar
-        public List<go> loadForRequest(C8818m c8818m) {
+        public List<go> loadForRequest(m mVar) {
             return Collections.emptyList();
         }
 
         @Override // okhttp3.CookieJar
-        public void saveFromResponse(C8818m c8818m, List<go> list) {
+        public void saveFromResponse(m mVar, List<go> list) {
         }
     }
 
-    List<go> loadForRequest(C8818m c8818m);
+    List<go> loadForRequest(m mVar);
 
-    void saveFromResponse(C8818m c8818m, List<go> list);
+    void saveFromResponse(m mVar, List<go> list);
 }

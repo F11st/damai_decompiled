@@ -21,10 +21,9 @@ public class SandoContainer extends FrameLayout {
     private final ViewTreeObserver.OnPreDrawListener mPreDrawLsn;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayer.layermanager.view.SandoContainer$a */
     /* loaded from: classes8.dex */
-    class ViewTreeObserver$OnPreDrawListenerC3670a implements ViewTreeObserver.OnPreDrawListener {
-        ViewTreeObserver$OnPreDrawListenerC3670a() {
+    class a implements ViewTreeObserver.OnPreDrawListener {
+        a() {
         }
 
         @Override // android.view.ViewTreeObserver.OnPreDrawListener
@@ -45,7 +44,7 @@ public class SandoContainer extends FrameLayout {
     public SandoContainer(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         this.isBeginPreDrawListener = false;
-        this.mPreDrawLsn = new ViewTreeObserver$OnPreDrawListenerC3670a();
+        this.mPreDrawLsn = new a();
         initialize(context);
     }
 
@@ -101,14 +100,14 @@ public class SandoContainer extends FrameLayout {
     public SandoContainer(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         this.isBeginPreDrawListener = false;
-        this.mPreDrawLsn = new ViewTreeObserver$OnPreDrawListenerC3670a();
+        this.mPreDrawLsn = new a();
         initialize(context);
     }
 
     public SandoContainer(Context context) {
         super(context);
         this.isBeginPreDrawListener = false;
-        this.mPreDrawLsn = new ViewTreeObserver$OnPreDrawListenerC3670a();
+        this.mPreDrawLsn = new a();
         initialize(context);
     }
 }

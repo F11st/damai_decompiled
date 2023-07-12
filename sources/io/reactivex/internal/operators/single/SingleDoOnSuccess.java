@@ -1,15 +1,15 @@
 package io.reactivex.internal.operators.single;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.functions.Consumer;
 import tb.dg0;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SingleDoOnSuccess<T> extends AbstractC8152e<T> {
+public final class SingleDoOnSuccess<T> extends e<T> {
     final Consumer<? super T> onSuccess;
     final SingleSource<T> source;
 
@@ -49,7 +49,7 @@ public final class SingleDoOnSuccess<T> extends AbstractC8152e<T> {
         this.onSuccess = consumer;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super T> singleObserver) {
         this.source.subscribe(new DoOnSuccess(singleObserver));
     }

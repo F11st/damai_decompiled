@@ -6,7 +6,6 @@ import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
 import kotlin.jvm.JvmField;
 import kotlin.jvm.functions.Function1;
-import kotlinx.coroutines.AbstractC8699m;
 import kotlinx.coroutines.InternalCoroutinesApi;
 import kotlinx.coroutines.Job;
 import kotlinx.coroutines.internal.DispatchedContinuation;
@@ -35,7 +34,7 @@ public final class aa0 {
                 return;
             }
             k40.a();
-            AbstractC8699m b2 = pm2.INSTANCE.b();
+            kotlinx.coroutines.m b2 = pm2.INSTANCE.b();
             if (b2.isUnconfinedLoopActive()) {
                 dispatchedContinuation._state = b;
                 dispatchedContinuation.resumeMode = 1;
@@ -50,7 +49,7 @@ public final class aa0 {
                 } else {
                     CancellationException cancellationException = job.getCancellationException();
                     dispatchedContinuation.cancelCompletedResult$kotlinx_coroutines_core(b, cancellationException);
-                    Result.C8174a c8174a = Result.Companion;
+                    Result.a aVar = Result.Companion;
                     dispatchedContinuation.resumeWith(Result.m1271constructorimpl(i32.a(cancellationException)));
                     z = true;
                 }
@@ -84,7 +83,7 @@ public final class aa0 {
     public static final boolean d(@NotNull DispatchedContinuation<? super wt2> dispatchedContinuation) {
         wt2 wt2Var = wt2.INSTANCE;
         k40.a();
-        AbstractC8699m b = pm2.INSTANCE.b();
+        kotlinx.coroutines.m b = pm2.INSTANCE.b();
         if (b.isUnconfinedQueueEmpty()) {
             return false;
         }

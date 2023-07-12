@@ -10,17 +10,16 @@ import com.android.alibaba.ip.runtime.IpChange;
 /* loaded from: classes.dex */
 public class u01 {
     private static transient /* synthetic */ IpChange $ipChange;
-    private static final LongSparseArray<C9751a> a = new LongSparseArray<>();
+    private static final LongSparseArray<a> a = new LongSparseArray<>();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.u01$a */
     /* loaded from: classes.dex */
-    public static final class C9751a {
+    public static final class a {
         public long a;
         public long b;
         public boolean c;
 
-        public C9751a(long j, long j2, boolean z) {
+        public a(long j, long j2, boolean z) {
             this.a = j;
             this.b = j2;
             this.c = z;
@@ -28,9 +27,9 @@ public class u01 {
     }
 
     @Nullable
-    public static C9751a a(long j) {
+    public static a a(long j) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1416718646") ? (C9751a) ipChange.ipc$dispatch("-1416718646", new Object[]{Long.valueOf(j)}) : a.get(j);
+        return AndroidInstantRuntime.support(ipChange, "-1416718646") ? (a) ipChange.ipc$dispatch("-1416718646", new Object[]{Long.valueOf(j)}) : a.get(j);
     }
 
     private static void b(long j, long j2, boolean z) {
@@ -38,7 +37,7 @@ public class u01 {
         if (AndroidInstantRuntime.support(ipChange, "341281447")) {
             ipChange.ipc$dispatch("341281447", new Object[]{Long.valueOf(j), Long.valueOf(j2), Boolean.valueOf(z)});
         } else {
-            a.put(fr1.a(j2), new C9751a(j, j2, z));
+            a.put(fr1.a(j2), new a(j, j2, z));
         }
     }
 

@@ -20,7 +20,7 @@ import android.os.HandlerThread;
 import android.os.IBinder;
 import android.os.Message;
 import android.os.RemoteException;
-import android.support.v4.app.Taobao;
+import android.support.v4.app.INotificationSideChannel;
 import android.util.Log;
 import androidx.annotation.GuardedBy;
 import androidx.annotation.NonNull;
@@ -87,8 +87,8 @@ public final class NotificationManagerCompat {
         }
 
         @Override // androidx.core.app.NotificationManagerCompat.Task
-        public void send(Taobao taobao) throws RemoteException {
-            taobao.notify(this.packageName, this.id, this.tag, this.notif);
+        public void send(INotificationSideChannel iNotificationSideChannel) throws RemoteException {
+            iNotificationSideChannel.notify(this.packageName, this.id, this.tag, this.notif);
         }
 
         @NonNull
@@ -128,7 +128,7 @@ public final class NotificationManagerCompat {
         /* loaded from: classes.dex */
         public static class ListenerRecord {
             final ComponentName componentName;
-            Taobao service;
+            INotificationSideChannel service;
             boolean bound = false;
             ArrayDeque<Task> taskQueue = new ArrayDeque<>();
             int retryCount = 0;
@@ -187,7 +187,7 @@ public final class NotificationManagerCompat {
         private void handleServiceConnected(ComponentName componentName, IBinder iBinder) {
             ListenerRecord listenerRecord = this.mRecordMap.get(componentName);
             if (listenerRecord != null) {
-                listenerRecord.service = Taobao.Stub.asInterface(iBinder);
+                listenerRecord.service = INotificationSideChannel.Stub.asInterface(iBinder);
                 listenerRecord.retryCount = 0;
                 processListenerQueue(listenerRecord);
             }
@@ -340,7 +340,7 @@ public final class NotificationManagerCompat {
     /* compiled from: Taobao */
     /* loaded from: classes.dex */
     public interface Task {
-        void send(Taobao taobao) throws RemoteException;
+        void send(INotificationSideChannel iNotificationSideChannel) throws RemoteException;
     }
 
     private NotificationManagerCompat(Context context) {
@@ -667,11 +667,11 @@ public final class NotificationManagerCompat {
         }
 
         @Override // androidx.core.app.NotificationManagerCompat.Task
-        public void send(Taobao taobao) throws RemoteException {
+        public void send(INotificationSideChannel iNotificationSideChannel) throws RemoteException {
             if (this.all) {
-                taobao.cancelAll(this.packageName);
+                iNotificationSideChannel.cancelAll(this.packageName);
             } else {
-                taobao.cancel(this.packageName, this.id, this.tag);
+                iNotificationSideChannel.cancel(this.packageName, this.id, this.tag);
             }
         }
 

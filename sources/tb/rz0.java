@@ -49,24 +49,24 @@ public class rz0 {
         c.edit().clear();
     }
 
-    private static void c(pz0.C9582a c9582a) {
-        if (c9582a == null) {
+    private static void c(pz0.a aVar) {
+        if (aVar == null) {
             return;
         }
-        AppMonitor.Stat.commit("hotpatch_unique", "efficiency", DimensionValueSet.create().setValue("fromVersion", c9582a.e).setValue("toVersion", c9582a.f).setValue(TLogEventConst.PARAM_UPLOAD_STAGE, c9582a.b).setValue("success", c9582a.a ? "true" : "false").setValue("error_code", c9582a.c).setValue("error_msg", c9582a.d).setValue("url", c9582a.g).setValue("disk_size", c9582a.h), MeasureValueSet.create().setValue("elapsed_time", 0.0d));
+        AppMonitor.Stat.commit("hotpatch_unique", "efficiency", DimensionValueSet.create().setValue("fromVersion", aVar.e).setValue("toVersion", aVar.f).setValue(TLogEventConst.PARAM_UPLOAD_STAGE, aVar.b).setValue("success", aVar.a ? "true" : "false").setValue("error_code", aVar.c).setValue("error_msg", aVar.d).setValue("url", aVar.g).setValue("disk_size", aVar.h), MeasureValueSet.create().setValue("elapsed_time", 0.0d));
     }
 
     public static void d(boolean z, String str, String str2, String str3, String str4, String str5, String str6) {
         if (a && !a(str5, str, z)) {
-            pz0.C9582a c9582a = new pz0.C9582a();
-            c9582a.a = z;
-            c9582a.b = str;
-            c9582a.c = str2;
-            c9582a.d = str3;
-            c9582a.e = str4;
-            c9582a.f = str5;
-            c9582a.g = str6;
-            c(c9582a);
+            pz0.a aVar = new pz0.a();
+            aVar.a = z;
+            aVar.b = str;
+            aVar.c = str2;
+            aVar.d = str3;
+            aVar.e = str4;
+            aVar.f = str5;
+            aVar.g = str6;
+            c(aVar);
         }
     }
 }

@@ -7,9 +7,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.homepage.R$id;
@@ -53,15 +52,14 @@ public class EditAccountInfoActivity extends DamaiBaseActivity<EditAccountInfoPr
     private String birth = "";
     private String mNickName = "";
     private String mUserIntro = "";
-    DatePickerDialog.OnDateSetListener dateListener = new C1373b();
+    DatePickerDialog.OnDateSetListener dateListener = new b();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.EditAccountInfoActivity$a */
     /* loaded from: classes6.dex */
-    public class C1372a implements SelectDialog.OnDialogClickListener {
+    public class a implements SelectDialog.OnDialogClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1372a() {
+        a() {
         }
 
         @Override // cn.damai.mine.view.SelectDialog.OnDialogClickListener
@@ -98,12 +96,11 @@ public class EditAccountInfoActivity extends DamaiBaseActivity<EditAccountInfoPr
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.EditAccountInfoActivity$b */
     /* loaded from: classes15.dex */
-    public class C1373b implements DatePickerDialog.OnDateSetListener {
+    public class b implements DatePickerDialog.OnDateSetListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1373b() {
+        b() {
         }
 
         @Override // android.app.DatePickerDialog.OnDateSetListener
@@ -227,7 +224,7 @@ public class EditAccountInfoActivity extends DamaiBaseActivity<EditAccountInfoPr
         }
         SelectDialog selectDialog = new SelectDialog(this, R$style.custom_dialog_style);
         selectDialog.e(cm2.b(this, R$string.damai_modifyuserdata_male), cm2.b(this, R$string.damai_modifyuserdata_girl));
-        selectDialog.f(new C1372a());
+        selectDialog.f(new a());
         selectDialog.show();
     }
 
@@ -283,7 +280,7 @@ public class EditAccountInfoActivity extends DamaiBaseActivity<EditAccountInfoPr
             return;
         }
         removeHeadTitleView();
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i("account_info_edit"));
+        setDamaiUTKeyBuilder(new a.b().i("account_info_edit"));
         this.mSex = getIntent().getIntExtra("sex", 0);
         this.mNickName = getIntent().getStringExtra("nickName");
         this.mUserIntro = getIntent().getStringExtra("userIntro");
@@ -388,7 +385,7 @@ public class EditAccountInfoActivity extends DamaiBaseActivity<EditAccountInfoPr
             if (!TextUtils.isEmpty(profileInfo.successMsg)) {
                 ToastUtil.i(profileInfo.successMsg);
             }
-            C0529c.e().z(new C0528b().c("account_info_edit", "top", "submit", Boolean.TRUE));
+            c.e().z(new cn.damai.common.user.b().c("account_info_edit", "top", "submit", Boolean.TRUE));
         }
         stopLoading();
         setResult(-1);

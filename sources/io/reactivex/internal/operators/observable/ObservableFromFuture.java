@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.observers.DeferredScalarDisposable;
 import java.util.concurrent.Future;
@@ -10,7 +10,7 @@ import tb.dg0;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableFromFuture<T> extends AbstractC8149d<T> {
+public final class ObservableFromFuture<T> extends d<T> {
     final Future<? extends T> future;
     final long timeout;
     final TimeUnit unit;
@@ -22,7 +22,7 @@ public final class ObservableFromFuture<T> extends AbstractC8149d<T> {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         DeferredScalarDisposable deferredScalarDisposable = new DeferredScalarDisposable(observer);
         observer.onSubscribe(deferredScalarDisposable);

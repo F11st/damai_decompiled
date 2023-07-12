@@ -32,12 +32,12 @@ public class k70 implements Annotations {
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations
     @Nullable
     public AnnotationDescriptor findAnnotation(@NotNull hp0 hp0Var) {
-        return Annotations.C8304b.a(this, hp0Var);
+        return Annotations.b.a(this, hp0Var);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations
     public boolean hasAnnotation(@NotNull hp0 hp0Var) {
-        return Annotations.C8304b.b(this, hp0Var);
+        return Annotations.b.b(this, hp0Var);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations

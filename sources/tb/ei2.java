@@ -14,28 +14,27 @@ import tb.vz0;
 public final class ei2 extends MetricAffectingSpan implements UpdateAppearance {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C9101a Companion = new C9101a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final float[] c = {0.9f, 1.0f, 1.1f, 1.2f, 1.28f, 1.35f, 1.4f};
     private int a;
     private int b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ei2$a */
     /* loaded from: classes7.dex */
-    public static final class C9101a {
-        private C9101a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9101a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
-    public ei2(@NotNull vz0.C9832b c9832b) {
-        b41.i(c9832b, RichTextNode.ATTR);
-        this.a = c9832b.b();
-        this.b = c9832b.e();
+    public ei2(@NotNull vz0.b bVar) {
+        b41.i(bVar, RichTextNode.ATTR);
+        this.a = bVar.b();
+        this.b = bVar.e();
     }
 
     @Override // android.text.style.CharacterStyle

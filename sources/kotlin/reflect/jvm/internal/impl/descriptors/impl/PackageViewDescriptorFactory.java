@@ -11,17 +11,16 @@ import tb.zg1;
 /* loaded from: classes3.dex */
 public interface PackageViewDescriptorFactory {
     @NotNull
-    public static final C8312a Companion = C8312a.a;
+    public static final a Companion = a.a;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.impl.PackageViewDescriptorFactory$a */
     /* loaded from: classes3.dex */
-    public static final class C8312a {
-        static final /* synthetic */ C8312a a = new C8312a();
+    public static final class a {
+        static final /* synthetic */ a a = new a();
         @NotNull
         private static final zg1<PackageViewDescriptorFactory> b = new zg1<>("PackageViewDescriptorFactory");
 
-        private C8312a() {
+        private a() {
         }
 
         @NotNull
@@ -31,13 +30,12 @@ public interface PackageViewDescriptorFactory {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.impl.PackageViewDescriptorFactory$b */
     /* loaded from: classes3.dex */
-    public static final class C8313b implements PackageViewDescriptorFactory {
+    public static final class b implements PackageViewDescriptorFactory {
         @NotNull
-        public static final C8313b INSTANCE = new C8313b();
+        public static final b INSTANCE = new b();
 
-        private C8313b() {
+        private b() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.PackageViewDescriptorFactory

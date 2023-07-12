@@ -20,9 +20,8 @@ public final class bv {
     private String[] l;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.bv$a */
     /* loaded from: classes10.dex */
-    public static class C4400a {
+    public static class a {
         private String a;
         private String b;
         private String c;
@@ -31,26 +30,26 @@ public final class bv {
         private String f = Point.STANDARD;
         private String[] g = null;
 
-        public C4400a(String str, String str2, String str3) {
+        public a(String str, String str2, String str3) {
             this.a = str2;
             this.b = str2;
             this.d = str3;
             this.c = str;
         }
 
-        public final C4400a a(boolean z) {
+        public final a a(boolean z) {
             this.e = z;
             return this;
         }
 
-        public final C4400a a(String[] strArr) {
+        public final a a(String[] strArr) {
             if (strArr != null) {
                 this.g = (String[]) strArr.clone();
             }
             return this;
         }
 
-        public final C4400a a(String str) {
+        public final a a(String str) {
             this.b = str;
             return this;
         }
@@ -63,8 +62,8 @@ public final class bv {
         }
     }
 
-    /* synthetic */ bv(C4400a c4400a, byte b) {
-        this(c4400a);
+    /* synthetic */ bv(a aVar, byte b) {
+        this(aVar);
     }
 
     public final void a() {
@@ -163,16 +162,16 @@ public final class bv {
         }
     }
 
-    private bv(C4400a c4400a) {
+    private bv(a aVar) {
         this.c = 1;
         this.l = null;
-        this.g = c4400a.a;
-        this.h = c4400a.b;
-        this.j = c4400a.c;
-        this.i = c4400a.d;
-        this.c = c4400a.e ? 1 : 0;
-        this.k = c4400a.f;
-        this.l = c4400a.g;
+        this.g = aVar.a;
+        this.h = aVar.b;
+        this.j = aVar.c;
+        this.i = aVar.d;
+        this.c = aVar.e ? 1 : 0;
+        this.k = aVar.f;
+        this.l = aVar.g;
         this.b = bw.b(this.h);
         this.a = bw.b(this.j);
         this.d = bw.b(this.i);

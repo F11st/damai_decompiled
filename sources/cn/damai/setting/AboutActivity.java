@@ -26,12 +26,11 @@ public class AboutActivity extends DamaiBaseActivity {
     private int mTimes = 1;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.AboutActivity$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1743a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1743a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -94,7 +93,7 @@ public class AboutActivity extends DamaiBaseActivity {
         setClearDoubleClick();
         this.version = (TextView) findViewById(R$id.version);
         this.mIcon = (ImageView) findViewById(R$id.iv);
-        this.version.setOnClickListener(new View$OnClickListenerC1743a());
+        this.version.setOnClickListener(new a());
         TextView textView = this.version;
         textView.setText(getResources().getString(R$string.damai_about_shoujiban) + AppConfig.q() + "");
     }

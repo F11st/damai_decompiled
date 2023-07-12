@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeSource;
+import io.reactivex.a;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -14,7 +14,7 @@ import tb.dg0;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeFlatMapCompletable<T> extends AbstractC8146a {
+public final class MaybeFlatMapCompletable<T> extends a {
     final Function<? super T, ? extends CompletableSource> mapper;
     final MaybeSource<T> source;
 
@@ -75,7 +75,7 @@ public final class MaybeFlatMapCompletable<T> extends AbstractC8146a {
         this.mapper = function;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     protected void subscribeActual(CompletableObserver completableObserver) {
         FlatMapCompletableObserver flatMapCompletableObserver = new FlatMapCompletableObserver(completableObserver, this.mapper);
         completableObserver.onSubscribe(flatMapCompletableObserver);

@@ -5,7 +5,7 @@ import android.view.View;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -90,7 +90,7 @@ public class RealNameChooseAutherFragment extends DamaiBaseMvpFragment implement
         }
         RealNameAuthActivity realNameAuthActivity = (RealNameAuthActivity) activity;
         realNameAuthActivity.dismissChooseAuthFragment();
-        C0529c.e().x(vf1.x().X());
+        c.e().x(vf1.x().X());
         realNameAuthActivity.refreshUI(realNameCustomerBean, true);
     }
 }

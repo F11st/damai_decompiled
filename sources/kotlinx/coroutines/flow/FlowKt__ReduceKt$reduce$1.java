@@ -31,6 +31,6 @@ public final class FlowKt__ReduceKt$reduce$1 extends ContinuationImpl {
     public final Object invokeSuspend(@NotNull Object obj) {
         this.result = obj;
         this.label |= Integer.MIN_VALUE;
-        return C8672c.v(null, null, this);
+        return c.v(null, null, this);
     }
 }

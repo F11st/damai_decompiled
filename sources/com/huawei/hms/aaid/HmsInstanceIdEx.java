@@ -14,9 +14,9 @@ import com.huawei.hms.api.HuaweiApiAvailability;
 import com.huawei.hms.common.ApiException;
 import com.huawei.hms.common.HuaweiApi;
 import com.huawei.hms.common.internal.Preconditions;
-import com.huawei.hms.opendevice.C5668l;
-import com.huawei.hms.opendevice.C5673o;
-import com.huawei.hms.opendevice.C5675q;
+import com.huawei.hms.opendevice.l;
+import com.huawei.hms.opendevice.o;
+import com.huawei.hms.opendevice.q;
 import com.huawei.hms.support.log.HMSLog;
 import java.util.UUID;
 
@@ -115,20 +115,20 @@ public class HmsInstanceIdEx {
                 return a(ErrorEnum.ERROR_INTERNAL_ERROR.toApiException());
             }
         }
-        String a = C5675q.a(this.a, "push.gettoken");
+        String a = q.a(this.a, "push.gettoken");
         try {
-            TokenReq b = C5673o.b(this.a, null, null);
+            TokenReq b = o.b(this.a, null, null);
             b.setAaid(HmsInstanceId.getInstance(this.a).getId());
-            return this.c.doWrite(new C5668l("push.gettoken", b, this.a, a));
+            return this.c.doWrite(new l("push.gettoken", b, this.a, a));
         } catch (RuntimeException unused2) {
             Context context = this.a;
             ErrorEnum errorEnum = ErrorEnum.ERROR_INTERNAL_ERROR;
-            C5675q.a(context, "push.gettoken", a, errorEnum);
+            q.a(context, "push.gettoken", a, errorEnum);
             return a(errorEnum.toApiException());
         } catch (Exception unused3) {
             Context context2 = this.a;
             ErrorEnum errorEnum2 = ErrorEnum.ERROR_INTERNAL_ERROR;
-            C5675q.a(context2, "push.gettoken", a, errorEnum2);
+            q.a(context2, "push.gettoken", a, errorEnum2);
             return a(errorEnum2.toApiException());
         }
     }

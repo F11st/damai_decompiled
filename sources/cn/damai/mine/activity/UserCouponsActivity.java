@@ -17,7 +17,6 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import cn.damai.common.app.widget.DMDialog;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.homepage.R$array;
@@ -93,12 +92,11 @@ public class UserCouponsActivity extends DamaiBaseActivity<UserCouponsPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.UserCouponsActivity$a */
     /* loaded from: classes6.dex */
-    public class C1415a implements PagerIndicator.TabViewFactory {
+    public class a implements PagerIndicator.TabViewFactory {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1415a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.indicator.PagerIndicator.TabViewFactory
@@ -118,12 +116,11 @@ public class UserCouponsActivity extends DamaiBaseActivity<UserCouponsPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.UserCouponsActivity$b */
     /* loaded from: classes15.dex */
-    public class DialogInterface$OnClickListenerC1416b implements DialogInterface.OnClickListener {
+    public class b implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC1416b() {
+        b() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -146,12 +143,11 @@ public class UserCouponsActivity extends DamaiBaseActivity<UserCouponsPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.UserCouponsActivity$c */
     /* loaded from: classes15.dex */
-    public class C1417c implements TextWatcher {
+    public class c implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1417c() {
+        c() {
         }
 
         @Override // android.text.TextWatcher
@@ -220,7 +216,7 @@ public class UserCouponsActivity extends DamaiBaseActivity<UserCouponsPresenter,
         PagerIndicator pagerIndicator = (PagerIndicator) findViewById(R$id.indicator);
         this.mPagerIndicator = pagerIndicator;
         pagerIndicator.setViewPager(this.mViewPager);
-        this.mPagerIndicator.setTabViewFactory(new C1415a());
+        this.mPagerIndicator.setTabViewFactory(new a());
     }
 
     private void registerListener() {
@@ -239,11 +235,11 @@ public class UserCouponsActivity extends DamaiBaseActivity<UserCouponsPresenter,
             ipChange.ipc$dispatch("-1880932101", new Object[]{this});
             return;
         }
-        int a = kg2.a(this);
+        int a2 = kg2.a(this);
         View findViewById = findViewById(R$id.title_bar_space);
         if (findViewById != null) {
             if (Build.VERSION.SDK_INT >= 23) {
-                findViewById.setLayoutParams(new RelativeLayout.LayoutParams(-1, a));
+                findViewById.setLayoutParams(new RelativeLayout.LayoutParams(-1, a2));
                 kg2.f(this, true, R$color.black);
                 kg2.d(true, this);
                 return;
@@ -269,9 +265,9 @@ public class UserCouponsActivity extends DamaiBaseActivity<UserCouponsPresenter,
         this.mTvError = (TextView) inflate.findViewById(R$id.mine_error_tv);
         this.mCouponDialog.u(inflate);
         this.mCouponDialog.i("取消", null);
-        this.mCouponDialog.n("确定", new DialogInterface$OnClickListenerC1416b());
+        this.mCouponDialog.n("确定", new b());
         this.mCouponDialog.show();
-        this.mCouponEdit.addTextChangedListener(new C1417c());
+        this.mCouponEdit.addTextChangedListener(new c());
     }
 
     private void submitCouponUT(String str, int i) {
@@ -279,7 +275,7 @@ public class UserCouponsActivity extends DamaiBaseActivity<UserCouponsPresenter,
         if (AndroidInstantRuntime.support(ipChange, "-2028799505")) {
             ipChange.ipc$dispatch("-2028799505", new Object[]{this, str, Integer.valueOf(i)});
         } else {
-            C0529c.e().x(vf1.x().D(str, i));
+            cn.damai.common.user.c.e().x(vf1.x().D(str, i));
         }
     }
 
@@ -360,7 +356,7 @@ public class UserCouponsActivity extends DamaiBaseActivity<UserCouponsPresenter,
             }
             finish();
         } else if (id == R$id.btn_header_right) {
-            C0529c.e().x(vf1.x().C());
+            cn.damai.common.user.c.e().x(vf1.x().C());
             startCouponDialog();
         }
     }
@@ -419,7 +415,7 @@ public class UserCouponsActivity extends DamaiBaseActivity<UserCouponsPresenter,
         stopLoading();
         ToastUtil.a().j(this, str2);
         this.isApplyingCoupon = false;
-        C0529c.e().x(vf1.x().D("", 0));
+        cn.damai.common.user.c.e().x(vf1.x().D("", 0));
     }
 
     @Override // cn.damai.mine.contract.UserCouponsContract.View

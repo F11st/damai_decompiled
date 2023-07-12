@@ -3,13 +3,12 @@ package com.real.android.nativehtml.common.dom;
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
 public interface HtmlCollection {
-    public static final HtmlCollection EMPTY = new C6142a();
+    public static final HtmlCollection EMPTY = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: com.real.android.nativehtml.common.dom.HtmlCollection$a */
     /* loaded from: classes5.dex */
-    static class C6142a implements HtmlCollection {
-        C6142a() {
+    static class a implements HtmlCollection {
+        a() {
         }
 
         @Override // com.real.android.nativehtml.common.dom.HtmlCollection

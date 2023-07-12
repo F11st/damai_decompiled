@@ -92,7 +92,7 @@ public final class ObservableOnErrorNext<T> extends AbstractObservableWithUpstre
         this.allowFatal = z;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         OnErrorNextObserver onErrorNextObserver = new OnErrorNextObserver(observer, this.nextSupplier, this.allowFatal);
         observer.onSubscribe(onErrorNextObserver.arbiter);

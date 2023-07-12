@@ -175,7 +175,7 @@ public final class MaybeTimeoutPublisher<T, U> extends AbstractMaybeWithUpstream
         this.fallback = maybeSource2;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         TimeoutMainMaybeObserver timeoutMainMaybeObserver = new TimeoutMainMaybeObserver(maybeObserver, this.fallback);
         maybeObserver.onSubscribe(timeoutMainMaybeObserver);

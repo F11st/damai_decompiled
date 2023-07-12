@@ -44,10 +44,10 @@ public class DViewGenerator {
 
         @Override // java.lang.Runnable
         public void run() {
-            if (C6313b.e()) {
-                DinamicLog.a(C6313b.TAG, "createView template=" + this.val$result.c() + "consumimg=" + (this.val$consumingTime / 1000000.0d));
+            if (b.e()) {
+                DinamicLog.a(b.TAG, "createView template=" + this.val$result.c() + "consumimg=" + (this.val$consumingTime / 1000000.0d));
             }
-            C6312a.h().d();
+            a.h().d();
             String unused = DViewGenerator.this.a;
             this.val$result.c();
             this.val$result.f();
@@ -72,10 +72,10 @@ public class DViewGenerator {
 
         @Override // java.lang.Runnable
         public void run() {
-            if (C6313b.e()) {
-                DinamicLog.a(C6313b.TAG, "bindData template=" + this.val$result.c() + "consuming=" + (this.val$consumingTime / 1000000.0d));
+            if (b.e()) {
+                DinamicLog.a(b.TAG, "bindData template=" + this.val$result.c() + "consuming=" + (this.val$consumingTime / 1000000.0d));
             }
-            C6312a.h().d();
+            a.h().d();
             String unused = DViewGenerator.this.a;
             this.val$result.c();
             this.val$result.e();
@@ -93,11 +93,11 @@ public class DViewGenerator {
     }
 
     private void b(DinamicTemplate dinamicTemplate) {
-        C6312a.h().c();
+        a.h().c();
     }
 
     private void c(DinamicTemplate dinamicTemplate) {
-        C6312a.h().c();
+        a.h().c();
     }
 
     private iy2 e(v80 v80Var) {
@@ -107,7 +107,7 @@ public class DViewGenerator {
         while (it.hasNext()) {
             View next = it.next();
             try {
-                C6314c.a(next, v80Var);
+                c.a(next, v80Var);
             } catch (Throwable unused) {
                 p80 b = e.b();
                 b.a("other", next.getClass() + "bind data failed;");
@@ -136,13 +136,13 @@ public class DViewGenerator {
                 }
             }
             b(iy2Var.c());
-            v80.C9812b c9812b = new v80.C9812b();
-            c9812b.h(obj2);
-            c9812b.i(this.a);
-            c9812b.k(iy2Var);
-            c9812b.j(obj);
-            c9812b.g(obj);
-            return e(c9812b.f());
+            v80.b bVar = new v80.b();
+            bVar.h(obj2);
+            bVar.i(this.a);
+            bVar.k(iy2Var);
+            bVar.j(obj);
+            bVar.g(obj);
+            return e(bVar.f());
         }
         iy2 iy2Var4 = new iy2(this.a);
         iy2Var4.b().a("other", "binddata rootView or data is null");
@@ -172,18 +172,18 @@ public class DViewGenerator {
     }
 
     private void m(iy2 iy2Var, long j) {
-        C6312a.h().d();
+        a.h().d();
     }
 
     private void n(iy2 iy2Var, long j) {
-        C6312a.h().d();
+        a.h().d();
     }
 
     public static DViewGenerator o(String str) {
         if (TextUtils.isEmpty(str)) {
-            return C6313b.c("default").a;
+            return b.c("default").a;
         }
-        return C6313b.c(str).a;
+        return b.c(str).a;
     }
 
     public iy2 d(View view, Object obj, Object obj2) {
@@ -195,7 +195,7 @@ public class DViewGenerator {
         while (it.hasNext()) {
             View next = it.next();
             try {
-                C6314c.a(next, v80Var);
+                c.a(next, v80Var);
             } catch (Throwable unused) {
                 p80 b = v80Var.e().b();
                 b.a("other", next.getClass() + "bind data failed;");
@@ -239,11 +239,11 @@ public class DViewGenerator {
                 try {
                     iy2Var.h(dinamicTemplate);
                     iy2Var.g(new ArrayList<>(20));
-                    v80.C9812b c9812b = new v80.C9812b();
-                    c9812b.k(iy2Var);
-                    c9812b.i(this.a);
-                    c9812b.h(obj);
-                    View inflate = C6322d.b(context, c9812b.f()).inflate(a, (ViewGroup) null);
+                    v80.b bVar = new v80.b();
+                    bVar.k(iy2Var);
+                    bVar.i(this.a);
+                    bVar.h(obj);
+                    View inflate = d.b(context, bVar.f()).inflate(a, (ViewGroup) null);
                     if (inflate instanceof CompatibleView) {
                         n(iy2Var, System.nanoTime() - nanoTime2);
                         return iy2Var;

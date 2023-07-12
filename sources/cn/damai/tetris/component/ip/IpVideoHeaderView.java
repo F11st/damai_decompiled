@@ -37,13 +37,12 @@ public class IpVideoHeaderView extends AbsView<IpVideoHeaderContract.Presenter> 
     View tip;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.ip.IpVideoHeaderView$a */
     /* loaded from: classes16.dex */
-    public class C1915a implements ValueAnimator.AnimatorUpdateListener {
+    public class a implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ RecyclerView a;
 
-        C1915a(RecyclerView recyclerView) {
+        a(RecyclerView recyclerView) {
             this.a = recyclerView;
         }
 
@@ -174,7 +173,7 @@ public class IpVideoHeaderView extends AbsView<IpVideoHeaderContract.Presenter> 
         View view = this.coverTop;
         ObjectAnimator duration = ObjectAnimator.ofFloat(view, "translationY", view.getTop(), this.coverTop.getTop() - this.coverTop.getHeight()).setDuration(1000L);
         Log.d("onLayoutChange", " ========= coverTop.getHeight()():" + this.coverTop.getHeight());
-        duration.addUpdateListener(new C1915a(recyclerView));
+        duration.addUpdateListener(new a(recyclerView));
         animatorSet.playTogether(duration);
         animatorSet.start();
         this.tip.setVisibility(8);

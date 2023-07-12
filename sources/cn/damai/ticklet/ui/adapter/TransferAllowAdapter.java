@@ -48,13 +48,12 @@ public class TransferAllowAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.adapter.TransferAllowAdapter$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2058a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        View$OnClickListenerC2058a(int i) {
+        a(int i) {
             this.a = i;
         }
 
@@ -110,7 +109,7 @@ public class TransferAllowAdapter extends RecyclerView.Adapter<ViewHolder> {
                 viewHolder.a.setTextColor(Color.parseColor("#636363"));
                 viewHolder.a.setText(this.b.getResources().getString(R$string.iconfont_weixuan16));
             }
-            viewHolder.itemView.setOnClickListener(new View$OnClickListenerC2058a(i));
+            viewHolder.itemView.setOnClickListener(new a(i));
         }
         String str = tickletTransferManagerListExtra.certName;
         String str2 = tickletTransferManagerListExtra.certId;

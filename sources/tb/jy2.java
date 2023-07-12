@@ -30,13 +30,12 @@ public class jy2 implements SkeletonScreen {
     private final int g;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.jy2$a */
     /* loaded from: classes.dex */
-    public class View$OnAttachStateChangeListenerC9325a implements View.OnAttachStateChangeListener {
+    public class a implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ShimmerLayout a;
 
-        View$OnAttachStateChangeListenerC9325a(jy2 jy2Var, ShimmerLayout shimmerLayout) {
+        a(jy2 jy2Var, ShimmerLayout shimmerLayout) {
             this.a = shimmerLayout;
         }
 
@@ -62,9 +61,8 @@ public class jy2 implements SkeletonScreen {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.jy2$b */
     /* loaded from: classes.dex */
-    public static class C9326b {
+    public static class b {
         private static transient /* synthetic */ IpChange $ipChange;
         private final View a;
         private int b;
@@ -73,42 +71,42 @@ public class jy2 implements SkeletonScreen {
         private int e = 1000;
         private int f = 20;
 
-        public C9326b(View view) {
+        public b(View view) {
             this.a = view;
             this.d = ContextCompat.getColor(view.getContext(), R$color.shimmer_color);
         }
 
-        public C9326b g(@IntRange(from = 0, to = 30) int i) {
+        public b g(@IntRange(from = 0, to = 30) int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1846333818")) {
-                return (C9326b) ipChange.ipc$dispatch("1846333818", new Object[]{this, Integer.valueOf(i)});
+                return (b) ipChange.ipc$dispatch("1846333818", new Object[]{this, Integer.valueOf(i)});
             }
             this.f = i;
             return this;
         }
 
-        public C9326b h(@ColorRes int i) {
+        public b h(@ColorRes int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1764558858")) {
-                return (C9326b) ipChange.ipc$dispatch("1764558858", new Object[]{this, Integer.valueOf(i)});
+                return (b) ipChange.ipc$dispatch("1764558858", new Object[]{this, Integer.valueOf(i)});
             }
             this.d = ContextCompat.getColor(this.a.getContext(), i);
             return this;
         }
 
-        public C9326b i(int i) {
+        public b i(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "467404879")) {
-                return (C9326b) ipChange.ipc$dispatch("467404879", new Object[]{this, Integer.valueOf(i)});
+                return (b) ipChange.ipc$dispatch("467404879", new Object[]{this, Integer.valueOf(i)});
             }
             this.e = i;
             return this;
         }
 
-        public C9326b j(@LayoutRes int i) {
+        public b j(@LayoutRes int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "909907105")) {
-                return (C9326b) ipChange.ipc$dispatch("909907105", new Object[]{this, Integer.valueOf(i)});
+                return (b) ipChange.ipc$dispatch("909907105", new Object[]{this, Integer.valueOf(i)});
             }
             this.b = i;
             return this;
@@ -125,8 +123,8 @@ public class jy2 implements SkeletonScreen {
         }
     }
 
-    /* synthetic */ jy2(C9326b c9326b, View$OnAttachStateChangeListenerC9325a view$OnAttachStateChangeListenerC9325a) {
-        this(c9326b);
+    /* synthetic */ jy2(b bVar, a aVar) {
+        this(bVar);
     }
 
     private ShimmerLayout a(ViewGroup viewGroup) {
@@ -144,7 +142,7 @@ public class jy2 implements SkeletonScreen {
             shimmerLayout.setLayoutParams(layoutParams);
         }
         shimmerLayout.addView(inflate);
-        shimmerLayout.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC9325a(this, shimmerLayout));
+        shimmerLayout.addOnAttachStateChangeListener(new a(this, shimmerLayout));
         shimmerLayout.startShimmerAnimation();
         return shimmerLayout;
     }
@@ -186,19 +184,19 @@ public class jy2 implements SkeletonScreen {
             ipChange.ipc$dispatch("684312023", new Object[]{this});
             return;
         }
-        View b = b();
-        if (b != null) {
-            this.a.c(b);
+        View b2 = b();
+        if (b2 != null) {
+            this.a.c(b2);
         }
     }
 
-    private jy2(C9326b c9326b) {
-        this.b = c9326b.a;
-        this.c = c9326b.b;
-        this.e = c9326b.c;
-        this.f = c9326b.e;
-        this.g = c9326b.f;
-        this.d = c9326b.d;
-        this.a = new hy2(c9326b.a);
+    private jy2(b bVar) {
+        this.b = bVar.a;
+        this.c = bVar.b;
+        this.e = bVar.c;
+        this.f = bVar.e;
+        this.g = bVar.f;
+        this.d = bVar.d;
+        this.a = new hy2(bVar.a);
     }
 }

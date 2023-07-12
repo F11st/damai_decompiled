@@ -22,7 +22,7 @@ public class yh1 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public java.util.List<cn.damai.tetris.v2.common.Node> convert(cn.damai.tetris.core.mtop.BaseResponse r5, cn.damai.tetris.core.BaseSection r6, cn.damai.tetris.core.mtop.GlobalConfig r7, tb.C9039db r8) {
+    public java.util.List<cn.damai.tetris.v2.common.Node> convert(cn.damai.tetris.core.mtop.BaseResponse r5, cn.damai.tetris.core.BaseSection r6, cn.damai.tetris.core.mtop.GlobalConfig r7, tb.db r8) {
         /*
             r4 = this;
             com.android.alibaba.ip.runtime.IpChange r0 = tb.yh1.$ipChange

@@ -14,7 +14,7 @@ import tb.qf;
 /* loaded from: classes17.dex */
 public final class CalendarDay implements Parcelable {
     private static transient /* synthetic */ IpChange $ipChange;
-    public static final Parcelable.Creator<CalendarDay> CREATOR = new C2480a();
+    public static final Parcelable.Creator<CalendarDay> CREATOR = new a();
     private transient Calendar _calendar;
     private transient Date _date;
     private final int day;
@@ -23,12 +23,11 @@ public final class CalendarDay implements Parcelable {
     private final int year;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.calendar.CalendarDay$a */
     /* loaded from: classes17.dex */
-    public static final class C2480a implements Parcelable.Creator<CalendarDay> {
+    public static final class a implements Parcelable.Creator<CalendarDay> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2480a() {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

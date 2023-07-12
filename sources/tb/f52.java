@@ -1,7 +1,6 @@
 package tb;
 
 import android.graphics.Color;
-import cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.C0864c;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
@@ -43,7 +42,7 @@ public abstract class f52 {
         }
         this.a = new ArrayList();
         for (String str : d) {
-            this.a.add(Integer.valueOf((C0864c.c(str).intValue() & 16777215) | (-16777216)));
+            this.a.add(Integer.valueOf((cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.c.c(str).intValue() & 16777215) | (-16777216)));
         }
         this.b = Color.parseColor(e());
     }

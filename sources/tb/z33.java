@@ -2,7 +2,6 @@ package tb;
 
 import android.content.Context;
 import com.alimm.xadsdk.request.builder.IRequestConst;
-import com.loc.C5846l;
 import io.flutter.stat.StatServices;
 import java.net.URLEncoder;
 import java.util.HashMap;
@@ -52,7 +51,7 @@ public final class z33 extends o83 {
                 }
             }
             stringBuffer.append("output=json");
-            String j = C5846l.j(this.m);
+            String j = com.loc.l.j(this.m);
             stringBuffer.append("&key=".concat(String.valueOf(j)));
             String a = com.loc.o1.a();
             stringBuffer.append("&ts=".concat(String.valueOf(a)));

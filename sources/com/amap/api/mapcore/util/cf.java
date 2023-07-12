@@ -2,7 +2,7 @@ package com.amap.api.mapcore.util;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public class cf extends AbstractC4497cd {
+public class cf extends cd {
     public cf(int i, az azVar) {
         super(i, azVar);
     }

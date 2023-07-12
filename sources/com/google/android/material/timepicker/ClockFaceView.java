@@ -92,7 +92,7 @@ class ClockFaceView extends RadialViewGroup implements ClockHandView.OnRotateLis
                 this.textViewPool.remove(i2);
             } else {
                 if (textView == null) {
-                    textView = (TextView) from.inflate(R.C4818layout.material_clockface_textview, (ViewGroup) this, false);
+                    textView = (TextView) from.inflate(R.layout.material_clockface_textview, (ViewGroup) this, false);
                     this.textViewPool.put(i2, textView);
                     addView(textView);
                 }
@@ -168,18 +168,18 @@ class ClockFaceView extends RadialViewGroup implements ClockHandView.OnRotateLis
         this.scratch = new RectF();
         this.textViewPool = new SparseArray<>();
         this.gradientPositions = new float[]{0.0f, 0.9f, 1.0f};
-        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.ClockFaceView, i, R.C4819style.Widget_MaterialComponents_TimePicker_Clock);
+        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.ClockFaceView, i, R.style.Widget_MaterialComponents_TimePicker_Clock);
         Resources resources = getResources();
         ColorStateList colorStateList = MaterialResources.getColorStateList(context, obtainStyledAttributes, R.styleable.ClockFaceView_clockNumberTextColor);
         this.textColor = colorStateList;
-        LayoutInflater.from(context).inflate(R.C4818layout.material_clockface_view, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.material_clockface_view, (ViewGroup) this, true);
         ClockHandView clockHandView = (ClockHandView) findViewById(R.id.material_clock_hand);
         this.clockHandView = clockHandView;
         this.clockHandPadding = resources.getDimensionPixelSize(R.dimen.material_clock_hand_padding);
         int colorForState = colorStateList.getColorForState(new int[]{16842913}, colorStateList.getDefaultColor());
         this.gradientColors = new int[]{colorForState, colorForState, colorStateList.getDefaultColor()};
         clockHandView.addOnRotateListener(this);
-        int defaultColor = AppCompatResources.getColorStateList(context, R.C4815color.material_timepicker_clockface).getDefaultColor();
+        int defaultColor = AppCompatResources.getColorStateList(context, R.color.material_timepicker_clockface).getDefaultColor();
         ColorStateList colorStateList2 = MaterialResources.getColorStateList(context, obtainStyledAttributes, R.styleable.ClockFaceView_clockFaceBackgroundColor);
         setBackgroundColor(colorStateList2 != null ? colorStateList2.getDefaultColor() : defaultColor);
         getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() { // from class: com.google.android.material.timepicker.ClockFaceView.1

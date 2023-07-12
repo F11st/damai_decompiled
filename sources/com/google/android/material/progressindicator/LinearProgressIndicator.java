@@ -14,7 +14,7 @@ import java.lang.annotation.RetentionPolicy;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public final class LinearProgressIndicator extends BaseProgressIndicator<LinearProgressIndicatorSpec> {
-    public static final int DEF_STYLE_RES = R.C4819style.Widget_MaterialComponents_LinearProgressIndicator;
+    public static final int DEF_STYLE_RES = R.style.Widget_MaterialComponents_LinearProgressIndicator;
     public static final int INDETERMINATE_ANIMATION_TYPE_CONTIGUOUS = 0;
     public static final int INDETERMINATE_ANIMATION_TYPE_DISJOINT = 1;
     public static final int INDICATOR_DIRECTION_END_TO_START = 3;

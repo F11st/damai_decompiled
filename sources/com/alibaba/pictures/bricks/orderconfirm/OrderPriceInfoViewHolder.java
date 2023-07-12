@@ -22,7 +22,7 @@ import tb.vn1;
 public final class OrderPriceInfoViewHolder extends RecyclerView.ViewHolder {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3535a Companion = new C3535a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String EVENT_BUY_AMOUNT_INPUT = "order_input";
     @NotNull
@@ -42,30 +42,28 @@ public final class OrderPriceInfoViewHolder extends RecyclerView.ViewHolder {
     private int i;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.orderconfirm.OrderPriceInfoViewHolder$a */
     /* loaded from: classes7.dex */
-    public static final class C3535a {
-        private C3535a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3535a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.orderconfirm.OrderPriceInfoViewHolder$b */
     /* loaded from: classes7.dex */
-    public static final class C3536b implements BricksTextInputDialog.OnClickListener {
+    public static final class b implements BricksTextInputDialog.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String b;
 
-        C3536b(String str) {
+        b(String str) {
             this.b = str;
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:12:0x003e, code lost:
-            r6 = kotlin.text.C8603n.i(r6);
+            r6 = kotlin.text.n.i(r6);
          */
         @Override // com.alibaba.pictures.bricks.orderconfirm.view.BricksTextInputDialog.OnClickListener
         /*
@@ -75,7 +73,7 @@ public final class OrderPriceInfoViewHolder extends RecyclerView.ViewHolder {
         public void onClick(@org.jetbrains.annotations.Nullable android.content.DialogInterface r6, @org.jetbrains.annotations.Nullable java.lang.CharSequence r7) {
             /*
                 r5 = this;
-                com.android.alibaba.ip.runtime.IpChange r0 = com.alibaba.pictures.bricks.orderconfirm.OrderPriceInfoViewHolder.C3536b.$ipChange
+                com.android.alibaba.ip.runtime.IpChange r0 = com.alibaba.pictures.bricks.orderconfirm.OrderPriceInfoViewHolder.b.$ipChange
                 java.lang.String r1 = "1747330610"
                 boolean r2 = com.android.alibaba.ip.runtime.AndroidInstantRuntime.support(r0, r1)
                 r3 = 1
@@ -100,10 +98,10 @@ public final class OrderPriceInfoViewHolder extends RecyclerView.ViewHolder {
                 if (r7 == 0) goto L74
                 java.lang.String r6 = r7.toString()
                 if (r6 == 0) goto L74
-                java.lang.CharSequence r6 = kotlin.text.C8596g.M0(r6)
+                java.lang.CharSequence r6 = kotlin.text.g.M0(r6)
                 java.lang.String r6 = r6.toString()
                 if (r6 == 0) goto L74
-                java.lang.Integer r6 = kotlin.text.C8596g.i(r6)
+                java.lang.Integer r6 = kotlin.text.g.i(r6)
                 if (r6 == 0) goto L74
                 int r6 = r6.intValue()
                 if (r6 >= r3) goto L52
@@ -130,7 +128,7 @@ public final class OrderPriceInfoViewHolder extends RecyclerView.ViewHolder {
             L74:
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.alibaba.pictures.bricks.orderconfirm.OrderPriceInfoViewHolder.C3536b.onClick(android.content.DialogInterface, java.lang.CharSequence):void");
+            throw new UnsupportedOperationException("Method not decompiled: com.alibaba.pictures.bricks.orderconfirm.OrderPriceInfoViewHolder.b.onClick(android.content.DialogInterface, java.lang.CharSequence):void");
         }
     }
 
@@ -204,7 +202,7 @@ public final class OrderPriceInfoViewHolder extends RecyclerView.ViewHolder {
             return;
         }
         b41.i(orderPriceInfoViewHolder, "this$0");
-        new BricksTextInputDialog(orderPriceInfoViewHolder.e.getContext()).g("", str).h(new C3536b(str2)).show();
+        new BricksTextInputDialog(orderPriceInfoViewHolder.e.getContext()).g("", str).h(new b(str2)).show();
     }
 
     public final void f(@Nullable JSONObject jSONObject) {

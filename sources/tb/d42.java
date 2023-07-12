@@ -1,7 +1,6 @@
 package tb;
 
 import java.util.List;
-import kotlin.collections.C8214m;
 import kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltIns;
 import kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltInsCustomizer;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
@@ -19,20 +18,19 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes3.dex */
 public final class d42 {
     @NotNull
-    public static final C9028a Companion = new C9028a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final h70 a;
     @NotNull
     private final lp1 b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.d42$a */
     /* loaded from: classes3.dex */
-    public static final class C9028a {
-        private C9028a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9028a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -64,12 +62,12 @@ public final class d42 {
             u02 u02Var2 = new u02(classLoader2);
             JvmBuiltInsCustomizer G0 = jvmBuiltIns.G0();
             JvmBuiltInsCustomizer G02 = jvmBuiltIns.G0();
-            DeserializationConfiguration.C8506a c8506a = DeserializationConfiguration.C8506a.INSTANCE;
+            DeserializationConfiguration.a aVar = DeserializationConfiguration.a.INSTANCE;
             hk1 a2 = NewKotlinTypeChecker.Companion.a();
-            g = C8214m.g();
-            q61 q61Var = new q61(lockBasedStorageManager, u02Var2, moduleDescriptorImpl, notFoundClasses, G0, G02, c8506a, a2, new u52(lockBasedStorageManager, g));
+            g = kotlin.collections.m.g();
+            q61 q61Var = new q61(lockBasedStorageManager, u02Var2, moduleDescriptorImpl, notFoundClasses, G0, G02, aVar, a2, new u52(lockBasedStorageManager, g));
             moduleDescriptorImpl.s(moduleDescriptorImpl);
-            j = C8214m.j(d51Var.a(), q61Var);
+            j = kotlin.collections.m.j(d51Var.a(), q61Var);
             moduleDescriptorImpl.m(new km(j, b41.r("CompositeProvider@RuntimeModuleData for ", moduleDescriptorImpl)));
             return new d42(a.a(), new lp1(deserializedDescriptorResolver, u02Var), null);
         }

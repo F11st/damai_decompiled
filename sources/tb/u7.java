@@ -1,7 +1,6 @@
 package tb;
 
 import java.util.Objects;
-import kotlin.collections.C8202e;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -16,11 +15,11 @@ public class u7<T> {
         Object[] objArr = this.a;
         int length = objArr.length;
         Object[] objArr2 = new Object[length << 1];
-        C8202e.f(objArr, objArr2, 0, this.b, 0, 10, null);
+        kotlin.collections.e.f(objArr, objArr2, 0, this.b, 0, 10, null);
         Object[] objArr3 = this.a;
         int length2 = objArr3.length;
         int i = this.b;
-        C8202e.f(objArr3, objArr2, length2 - i, 0, i, 4, null);
+        kotlin.collections.e.f(objArr3, objArr2, length2 - i, 0, i, 4, null);
         this.a = objArr2;
         this.b = 0;
         this.c = length;

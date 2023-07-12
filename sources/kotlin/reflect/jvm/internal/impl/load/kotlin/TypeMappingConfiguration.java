@@ -12,9 +12,8 @@ import tb.z71;
 public interface TypeMappingConfiguration<T> {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.kotlin.TypeMappingConfiguration$a */
     /* loaded from: classes3.dex */
-    public static final class C8377a {
+    public static final class a {
         @Nullable
         public static <T> String a(@NotNull TypeMappingConfiguration<? extends T> typeMappingConfiguration, @NotNull ClassDescriptor classDescriptor) {
             b41.i(typeMappingConfiguration, "this");

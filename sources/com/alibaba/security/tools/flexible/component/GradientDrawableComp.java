@@ -3,7 +3,7 @@ package com.alibaba.security.tools.flexible.component;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.view.View;
-import com.alibaba.security.common.c.C3800a;
+import com.alibaba.security.common.c.a;
 import com.alibaba.security.tools.flexible.FlexibleComponent;
 import java.lang.reflect.Field;
 import java.math.BigDecimal;
@@ -56,7 +56,7 @@ public class GradientDrawableComp implements IFlexibleComp {
                 }
                 throw new ClassCastException("null cannot be cast to non-null type kotlin.Boolean");
             } catch (Exception unused) {
-                C3800a.b();
+                a.b();
             }
         }
     }

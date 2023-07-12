@@ -130,7 +130,7 @@ public final class GXViewExtKt {
             gXText.setTypeface(null);
         }
         if ((gXText instanceof GXIconFont) && ls0Var.u() == null) {
-            GXRegisterCenter.C3334b d = GXRegisterCenter.Companion.a().d();
+            GXRegisterCenter.b d = GXRegisterCenter.Companion.a().d();
             boolean z = false;
             if (d != null && d.h()) {
                 z = true;

@@ -45,7 +45,7 @@ public interface ComponentFilterBridge {
     @Nullable
     String getUserCode();
 
-    void reportClick(@NotNull kc.C9346b c9346b);
+    void reportClick(@NotNull kc.b bVar);
 
     void reportExposureSingleCustomEvent(@Nullable String str, @Nullable String str2, @Nullable String str3, @Nullable String str4, long j, @Nullable Map<String, String> map, int i);
 

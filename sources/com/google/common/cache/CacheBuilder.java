@@ -2,11 +2,11 @@ package com.google.common.cache;
 
 import com.google.common.annotations.GwtCompatible;
 import com.google.common.annotations.GwtIncompatible;
-import com.google.common.base.AbstractC4845j;
-import com.google.common.base.C4834e;
 import com.google.common.base.Equivalence;
 import com.google.common.base.Supplier;
 import com.google.common.base.Suppliers;
+import com.google.common.base.e;
+import com.google.common.base.j;
 import com.google.common.cache.LocalCache;
 import com.google.errorprone.annotations.CheckReturnValue;
 import com.meizu.cloud.pushsdk.notification.model.NotificationStyle;
@@ -22,9 +22,9 @@ import tb.m8;
 @GwtCompatible(emulated = true)
 /* loaded from: classes10.dex */
 public final class CacheBuilder<K, V> {
-    static final Supplier<? extends AbstractCache$StatsCounter> q = Suppliers.a(new C4847a());
+    static final Supplier<? extends AbstractCache$StatsCounter> q = Suppliers.a(new a());
     static final cf r = new cf(0, 0, 0, 0, 0, 0);
-    static final AbstractC4845j s;
+    static final j s;
     private static final Logger t;
     @MonotonicNonNullDecl
     Weigher<? super K, ? super V> f;
@@ -39,7 +39,7 @@ public final class CacheBuilder<K, V> {
     @MonotonicNonNullDecl
     RemovalListener<? super K, ? super V> n;
     @MonotonicNonNullDecl
-    AbstractC4845j o;
+    j o;
     boolean a = true;
     int b = -1;
     int c = -1;
@@ -72,10 +72,9 @@ public final class CacheBuilder<K, V> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.cache.CacheBuilder$a */
     /* loaded from: classes10.dex */
-    static class C4847a implements AbstractCache$StatsCounter {
-        C4847a() {
+    static class a implements AbstractCache$StatsCounter {
+        a() {
         }
 
         @Override // com.google.common.cache.AbstractCache$StatsCounter
@@ -105,35 +104,33 @@ public final class CacheBuilder<K, V> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.cache.CacheBuilder$b */
     /* loaded from: classes10.dex */
-    static class C4848b implements Supplier<AbstractCache$StatsCounter> {
-        C4848b() {
+    static class b implements Supplier<AbstractCache$StatsCounter> {
+        b() {
         }
 
         @Override // com.google.common.base.Supplier
         /* renamed from: a */
         public AbstractCache$StatsCounter get() {
-            return new C4891a();
+            return new com.google.common.cache.a();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.cache.CacheBuilder$c */
     /* loaded from: classes10.dex */
-    static class C4849c extends AbstractC4845j {
-        C4849c() {
+    static class c extends j {
+        c() {
         }
 
-        @Override // com.google.common.base.AbstractC4845j
+        @Override // com.google.common.base.j
         public long a() {
             return 0L;
         }
     }
 
     static {
-        new C4848b();
-        s = new C4849c();
+        new b();
+        s = new c();
         t = Logger.getLogger(CacheBuilder.class.getName());
     }
 
@@ -174,9 +171,9 @@ public final class CacheBuilder<K, V> {
         return this;
     }
 
-    public CacheBuilder<K, V> C(AbstractC4845j abstractC4845j) {
+    public CacheBuilder<K, V> C(j jVar) {
         du1.w(this.o == null);
-        this.o = (AbstractC4845j) du1.p(abstractC4845j);
+        this.o = (j) du1.p(jVar);
         return this;
     }
 
@@ -274,12 +271,12 @@ public final class CacheBuilder<K, V> {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public Equivalence<Object> l() {
-        return (Equivalence) C4834e.a(this.l, m().defaultEquivalence());
+        return (Equivalence) e.a(this.l, m().defaultEquivalence());
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public LocalCache.Strength m() {
-        return (LocalCache.Strength) C4834e.a(this.g, LocalCache.Strength.STRONG);
+        return (LocalCache.Strength) e.a(this.g, LocalCache.Strength.STRONG);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -301,7 +298,7 @@ public final class CacheBuilder<K, V> {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public <K1 extends K, V1 extends V> RemovalListener<K1, V1> p() {
-        return (RemovalListener) C4834e.a(this.n, NullListener.INSTANCE);
+        return (RemovalListener) e.a(this.n, NullListener.INSTANCE);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -310,68 +307,68 @@ public final class CacheBuilder<K, V> {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public AbstractC4845j r(boolean z) {
-        AbstractC4845j abstractC4845j = this.o;
-        return abstractC4845j != null ? abstractC4845j : z ? AbstractC4845j.b() : s;
+    public j r(boolean z) {
+        j jVar = this.o;
+        return jVar != null ? jVar : z ? j.b() : s;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public Equivalence<Object> s() {
-        return (Equivalence) C4834e.a(this.m, t().defaultEquivalence());
+        return (Equivalence) e.a(this.m, t().defaultEquivalence());
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public LocalCache.Strength t() {
-        return (LocalCache.Strength) C4834e.a(this.h, LocalCache.Strength.STRONG);
+        return (LocalCache.Strength) e.a(this.h, LocalCache.Strength.STRONG);
     }
 
     public String toString() {
-        C4834e.C4836b b = C4834e.b(this);
+        e.b b2 = e.b(this);
         int i = this.b;
         if (i != -1) {
-            b.b("initialCapacity", i);
+            b2.b("initialCapacity", i);
         }
         int i2 = this.c;
         if (i2 != -1) {
-            b.b("concurrencyLevel", i2);
+            b2.b("concurrencyLevel", i2);
         }
         long j = this.d;
         if (j != -1) {
-            b.c("maximumSize", j);
+            b2.c("maximumSize", j);
         }
         long j2 = this.e;
         if (j2 != -1) {
-            b.c("maximumWeight", j2);
+            b2.c("maximumWeight", j2);
         }
         if (this.i != -1) {
-            b.d("expireAfterWrite", this.i + NotificationStyle.NOTIFICATION_STYLE);
+            b2.d("expireAfterWrite", this.i + NotificationStyle.NOTIFICATION_STYLE);
         }
         if (this.j != -1) {
-            b.d("expireAfterAccess", this.j + NotificationStyle.NOTIFICATION_STYLE);
+            b2.d("expireAfterAccess", this.j + NotificationStyle.NOTIFICATION_STYLE);
         }
         LocalCache.Strength strength = this.g;
         if (strength != null) {
-            b.d("keyStrength", m8.c(strength.toString()));
+            b2.d("keyStrength", m8.c(strength.toString()));
         }
         LocalCache.Strength strength2 = this.h;
         if (strength2 != null) {
-            b.d("valueStrength", m8.c(strength2.toString()));
+            b2.d("valueStrength", m8.c(strength2.toString()));
         }
         if (this.l != null) {
-            b.h("keyEquivalence");
+            b2.h("keyEquivalence");
         }
         if (this.m != null) {
-            b.h("valueEquivalence");
+            b2.h("valueEquivalence");
         }
         if (this.n != null) {
-            b.h("removalListener");
+            b2.h("removalListener");
         }
-        return b.toString();
+        return b2.toString();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public <K1 extends K, V1 extends V> Weigher<K1, V1> u() {
-        return (Weigher) C4834e.a(this.f, OneWeigher.INSTANCE);
+        return (Weigher) e.a(this.f, OneWeigher.INSTANCE);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */

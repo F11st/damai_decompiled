@@ -23,7 +23,7 @@ public final class kk {
     Inner_3dMap_locationOption i;
     kd b = null;
     kl c = null;
-    HandlerThreadC4603b d = null;
+    b d = null;
     Handler e = null;
     boolean g = false;
     boolean h = false;
@@ -33,10 +33,9 @@ public final class kk {
     Object l = new Object();
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.kk$a */
     /* loaded from: classes10.dex */
-    public class HandlerC4602a extends Handler {
-        public HandlerC4602a(Looper looper) {
+    public class a extends Handler {
+        public a(Looper looper) {
             super(looper);
         }
 
@@ -51,10 +50,9 @@ public final class kk {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.kk$b */
     /* loaded from: classes10.dex */
-    public static class HandlerThreadC4603b extends HandlerThread {
-        public HandlerThreadC4603b(String str) {
+    public static class b extends HandlerThread {
+        public b(String str) {
             super(str);
         }
 
@@ -113,11 +111,11 @@ public final class kk {
     }
 
     private void e() {
-        HandlerThreadC4603b handlerThreadC4603b = new HandlerThreadC4603b("locServiceAction");
-        this.d = handlerThreadC4603b;
-        handlerThreadC4603b.setPriority(5);
+        b bVar = new b("locServiceAction");
+        this.d = bVar;
+        bVar.setPriority(5);
         this.d.start();
-        this.e = new HandlerC4602a(this.d.getLooper());
+        this.e = new a(this.d.getLooper());
     }
 
     private void f() {
@@ -142,9 +140,9 @@ public final class kk {
     private void g() {
         try {
             n = kb.b(this.a, "maploc", "ue");
-            int a = kb.a(this.a, "maploc", "opn");
-            m = a;
-            if (a > 500) {
+            int a2 = kb.a(this.a, "maploc", "opn");
+            m = a2;
+            if (a2 > 500) {
                 m = 500;
             }
             if (m < 30) {
@@ -254,12 +252,12 @@ public final class kk {
         try {
             c();
             i();
-            HandlerThreadC4603b handlerThreadC4603b = this.d;
-            if (handlerThreadC4603b != null) {
+            b bVar = this.d;
+            if (bVar != null) {
                 if (Build.VERSION.SDK_INT >= 18) {
-                    ka.a(handlerThreadC4603b, HandlerThread.class, "quitSafely", new Object[0]);
+                    ka.a(bVar, HandlerThread.class, "quitSafely", new Object[0]);
                 } else {
-                    handlerThreadC4603b.quit();
+                    bVar.quit();
                 }
             }
             this.d = null;

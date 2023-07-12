@@ -11,7 +11,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.taobao.analysis.v3.FalcoAbilitySpan;
 import com.taobao.analysis.v3.FalcoSpan;
 import com.taobao.android.dinamic.R$id;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DXRuntimeContext;
 import com.taobao.android.dinamicx.DinamicXEngine;
 import com.taobao.android.dinamicx.videoc.DXVideoControlConfig;
@@ -20,8 +19,6 @@ import com.taobao.android.dinamicx.widget.recycler.PrefetchRecyclerAdapter;
 import com.taobao.android.dinamicx.widget.recycler.RecyclerAdapter;
 import com.taobao.android.dinamicx.widget.recycler.ScrollListener;
 import com.taobao.android.dinamicx.widget.recycler.WaterfallLayout;
-import com.taobao.android.dinamicx.widget.recycler.expose.C6513b;
-import com.taobao.android.dinamicx.widget.recycler.expose.C6514c;
 import com.taobao.android.dinamicx.widget.recycler.expose.listener.IExposeCallback;
 import com.taobao.android.dinamicx.widget.recycler.expose.listener.IExposeDistinctCallback;
 import com.taobao.android.dinamicx.widget.recycler.expose.listener.IExposeFilterCallback;
@@ -167,7 +164,7 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
     protected String loadMoreNoMoreDataText;
     private int loadMoreTextColor;
     private int loadMoreTextSize;
-    private C6513b mExposeHelper;
+    private com.taobao.android.dinamicx.widget.recycler.expose.b mExposeHelper;
     private boolean mShouldScroll;
     private int mToPosition;
     private n00 onTouchListener;
@@ -198,12 +195,11 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXRecyclerLayout$a */
     /* loaded from: classes11.dex */
-    public class C6448a implements IExposeStayCallback {
+    public class a implements IExposeStayCallback {
         final /* synthetic */ RecyclerView a;
 
-        C6448a(RecyclerView recyclerView) {
+        a(RecyclerView recyclerView) {
             this.a = recyclerView;
         }
 
@@ -224,10 +220,9 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXRecyclerLayout$b */
     /* loaded from: classes11.dex */
-    public class C6449b implements IExposeFilterCallback {
-        C6449b() {
+    public class b implements IExposeFilterCallback {
+        b() {
         }
 
         @Override // com.taobao.android.dinamicx.widget.recycler.expose.listener.IExposeFilterCallback
@@ -239,10 +234,9 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXRecyclerLayout$c */
     /* loaded from: classes11.dex */
-    public class C6450c implements IExposeDistinctCallback {
-        C6450c(DXRecyclerLayout dXRecyclerLayout) {
+    public class c implements IExposeDistinctCallback {
+        c(DXRecyclerLayout dXRecyclerLayout) {
         }
 
         @Override // com.taobao.android.dinamicx.widget.recycler.expose.listener.IExposeDistinctCallback
@@ -252,9 +246,8 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXRecyclerLayout$d */
     /* loaded from: classes11.dex */
-    public static class C6451d implements IDXBuilderWidgetNode {
+    public static class d implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(Object obj) {
             return new DXRecyclerLayout();
@@ -456,19 +449,19 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
         throw new UnsupportedOperationException("Method not decompiled: com.taobao.android.dinamicx.widget.DXRecyclerLayout.deleteItemsWithData(com.alibaba.fastjson.JSONArray, java.lang.Object, java.lang.String):boolean");
     }
 
-    private C6513b getExposeHelper() {
+    private com.taobao.android.dinamicx.widget.recycler.expose.b getExposeHelper() {
         if (this.mExposeHelper == null) {
             WaterfallLayout waterfallLayout = this.waterfallLayout;
             if (waterfallLayout == null || waterfallLayout.e() == null || !(this.waterfallLayout.e() instanceof DXRecyclerView)) {
                 return null;
             }
-            C6513b exposeHelper = ((DXRecyclerView) this.waterfallLayout.e()).getExposeHelper();
+            com.taobao.android.dinamicx.widget.recycler.expose.b exposeHelper = ((DXRecyclerView) this.waterfallLayout.e()).getExposeHelper();
             this.mExposeHelper = exposeHelper;
             if (exposeHelper == null) {
                 initExpose(this.waterfallLayout.e());
             }
-            C6513b c6513b = this.mExposeHelper;
-            if (c6513b != null && c6513b.f() == null) {
+            com.taobao.android.dinamicx.widget.recycler.expose.b bVar = this.mExposeHelper;
+            if (bVar != null && bVar.f() == null) {
                 this.mExposeHelper.i(this.dataSource);
             }
         }
@@ -529,7 +522,7 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
             if (getEventHandlersExprNode().get(6278152710403332930L) == null && getEventHandlersExprNode().get(9859236201376900L) == null) {
                 return;
             }
-            C6513b a = new C6514c(recyclerView, new IExposeCallback() { // from class: com.taobao.android.dinamicx.widget.DXRecyclerLayout.9
+            com.taobao.android.dinamicx.widget.recycler.expose.b a2 = new com.taobao.android.dinamicx.widget.recycler.expose.c(recyclerView, new IExposeCallback() { // from class: com.taobao.android.dinamicx.widget.DXRecyclerLayout.9
                 @Override // com.taobao.android.dinamicx.widget.recycler.expose.listener.IExposeCallback
                 public void expose(final int i) {
                     y00.m(new Runnable() { // from class: com.taobao.android.dinamicx.widget.DXRecyclerLayout.9.1
@@ -559,14 +552,14 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
                             sb.append(f == null ? "null" : Integer.valueOf(f.size()));
                             sb.append(" pos ");
                             sb.append(i);
-                            dXRecyclerLayout.trackError(C6368e.DX_ERROR_CODE_RECYCLER_LAYOUT_230006, sb.toString());
+                            dXRecyclerLayout.trackError(com.taobao.android.dinamicx.e.DX_ERROR_CODE_RECYCLER_LAYOUT_230006, sb.toString());
                         }
                     });
                 }
-            }).b(new C6450c(this)).d(new C6449b()).l(this.exposureTimeFactor).k((float) this.exposureSpaceFactor).c(getEventHandlersExprNode().get(9859236201376900L) != null && this.enableTrackStayTime ? new C6448a(recyclerView) : null).a();
-            this.mExposeHelper = a;
+            }).b(new c(this)).d(new b()).l(this.exposureTimeFactor).k((float) this.exposureSpaceFactor).c(getEventHandlersExprNode().get(9859236201376900L) != null && this.enableTrackStayTime ? new a(recyclerView) : null).a();
+            this.mExposeHelper = a2;
             if (recyclerView instanceof DXRecyclerView) {
-                ((DXRecyclerView) recyclerView).setExposeHelper(a);
+                ((DXRecyclerView) recyclerView).setExposeHelper(a2);
             }
         }
     }
@@ -580,9 +573,9 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
         }
         WaterfallLayout waterfallLayout = this.waterfallLayout;
         if (waterfallLayout != null && (waterfallLayout.d() instanceof n00)) {
-            n00 d = this.waterfallLayout.d();
-            this.onTouchListener = d;
-            d.b(this);
+            n00 d2 = this.waterfallLayout.d();
+            this.onTouchListener = d2;
+            d2.b(this);
             return;
         }
         n00 n00Var = new n00(this);
@@ -868,44 +861,44 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
                     adapter.notifyDataSetChanged();
                     return;
                 }
-                char c = 65535;
+                char c2 = 65535;
                 switch (str2.hashCode()) {
                     case -1472811200:
                         if (str2.equals(MSG_METHOD_APPEND_ITEMS)) {
-                            c = 2;
+                            c2 = 2;
                             break;
                         }
                         break;
                     case -708482225:
                         if (str2.equals(MSG_METHOD_DELETE_ITEMS)) {
-                            c = 0;
+                            c2 = 0;
                             break;
                         }
                         break;
                     case -232077206:
                         if (str2.equals(MSG_METHOD_UPDATE_CURRENT)) {
-                            c = 1;
+                            c2 = 1;
                             break;
                         }
                         break;
                     case 310191873:
                         if (str2.equals(MSG_METHOD_INSERT_ITEMS)) {
-                            c = 3;
+                            c2 = 3;
                             break;
                         }
                         break;
                 }
-                if (c == 0) {
+                if (c2 == 0) {
                     ((RecyclerAdapter) adapter).c();
                     adapter.notifyItemRangeRemoved(i, i2);
                     return;
-                } else if (c == 1) {
+                } else if (c2 == 1) {
                     adapter.notifyItemRangeChanged(i, i2);
                     return;
-                } else if (c == 2) {
+                } else if (c2 == 2) {
                     adapter.notifyItemRangeInserted(i, i2);
                     return;
-                } else if (c != 3) {
+                } else if (c2 != 3) {
                     adapter.notifyDataSetChanged();
                     return;
                 } else {
@@ -1414,10 +1407,10 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
     }
 
     private boolean updateStyle(JSONObject jSONObject) {
-        int d = x41.d(Constants.Name.LEFT_GAP, jSONObject, getLeftGap());
-        int d2 = x41.d(Constants.Name.RIGHT_GAP, jSONObject, getRightGap());
-        int d3 = x41.d(Constants.Name.COLUMN_GAP, jSONObject, getColumnGap());
-        if (d == getLeftGap() && d2 == getRightGap() && d3 == getColumnGap()) {
+        int d2 = x41.d(Constants.Name.LEFT_GAP, jSONObject, getLeftGap());
+        int d3 = x41.d(Constants.Name.RIGHT_GAP, jSONObject, getRightGap());
+        int d4 = x41.d(Constants.Name.COLUMN_GAP, jSONObject, getColumnGap());
+        if (d2 == getLeftGap() && d3 == getRightGap() && d4 == getColumnGap()) {
             return false;
         }
         setNeedRender(getDXRuntimeContext().getContext());
@@ -1674,70 +1667,70 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
     @Override // com.taobao.android.dinamicx.widget.DXWidgetNode
     public JSONObject invokeRefMethod(String str, JSONArray jSONArray) {
         str.hashCode();
-        char c = 65535;
+        char c2 = 65535;
         switch (str.hashCode()) {
             case -1411068134:
                 if (str.equals("append")) {
-                    c = 0;
+                    c2 = 0;
                     break;
                 }
                 break;
             case -1183792455:
                 if (str.equals("insert")) {
-                    c = 1;
+                    c2 = 1;
                     break;
                 }
                 break;
             case -1067535254:
                 if (str.equals("finishedLoading")) {
-                    c = 2;
+                    c2 = 2;
                     break;
                 }
                 break;
             case -1042636831:
                 if (str.equals("beginUpdates")) {
-                    c = 3;
+                    c2 = 3;
                     break;
                 }
                 break;
             case -948122918:
                 if (str.equals("stopLoading")) {
-                    c = 4;
+                    c2 = 4;
                     break;
                 }
                 break;
             case -934641255:
                 if (str.equals("reload")) {
-                    c = 5;
+                    c2 = 5;
                     break;
                 }
                 break;
             case -934610812:
                 if (str.equals(OPERATOR_ACTION_REMOVE)) {
-                    c = 6;
+                    c2 = 6;
                     break;
                 }
                 break;
             case -838846263:
                 if (str.equals("update")) {
-                    c = 7;
+                    c2 = 7;
                     break;
                 }
                 break;
             case -402165208:
                 if (str.equals("scrollTo")) {
-                    c = '\b';
+                    c2 = '\b';
                     break;
                 }
                 break;
             case -6925457:
                 if (str.equals("endUpdates")) {
-                    c = '\t';
+                    c2 = '\t';
                     break;
                 }
                 break;
         }
-        switch (c) {
+        switch (c2) {
             case 0:
                 if (wt.O0()) {
                     this.dxRecyclerJsOperator.r(this, jSONArray);
@@ -1832,7 +1825,7 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
         return false;
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXAbsContainerBaseLayout, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXAbsContainerBaseLayout, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onBeforeBindChildData() {
         initDataSourceManager();
         initOperator();
@@ -1860,7 +1853,7 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
         sb.append("生成的子节点为空，或者数量为 0 。 dataSource: ");
         List<Object> list3 = this.dataSource;
         sb.append(list3 == null ? " null " : Integer.valueOf(list3.size()));
-        trackError(C6368e.DX_ERROR_CODE_RECYCLER_LAYOUT_ON_BEFORE_DATA, sb.toString());
+        trackError(com.taobao.android.dinamicx.e.DX_ERROR_CODE_RECYCLER_LAYOUT_ON_BEFORE_DATA, sb.toString());
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -1869,7 +1862,7 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
         super.onBindEvent(context, view, j);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXAbsContainerBaseLayout, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXAbsContainerBaseLayout, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onClone(DXWidgetNode dXWidgetNode, boolean z) {
         if (dXWidgetNode instanceof DXRecyclerLayout) {
             super.onClone(dXWidgetNode, z);
@@ -1898,14 +1891,14 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
             this.scrollListener = dXRecyclerLayout.scrollListener;
             this.exposureTimeFactor = dXRecyclerLayout.exposureTimeFactor;
             this.exposureSpaceFactor = dXRecyclerLayout.exposureSpaceFactor;
-            C6513b c6513b = dXRecyclerLayout.mExposeHelper;
-            this.mExposeHelper = c6513b;
+            com.taobao.android.dinamicx.widget.recycler.expose.b bVar = dXRecyclerLayout.mExposeHelper;
+            this.mExposeHelper = bVar;
             this.enableLeftGapWhenSingleColumn = dXRecyclerLayout.enableLeftGapWhenSingleColumn;
             this.defaultLoadMoreStatus = dXRecyclerLayout.defaultLoadMoreStatus;
             this.idxRecyclerOnScrollToPos = dXRecyclerLayout.idxRecyclerOnScrollToPos;
             this.enableTrackStayTime = dXRecyclerLayout.enableTrackStayTime;
-            if (c6513b != null) {
-                c6513b.i(this.dataSource);
+            if (bVar != null) {
+                bVar.i(this.dataSource);
             }
             this.openPrefetch = dXRecyclerLayout.openPrefetch;
             this.preFetchBatchSize = dXRecyclerLayout.preFetchBatchSize;
@@ -1931,22 +1924,22 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
     public View onCreateView(Context context) {
         postEvent(new hy(5288680013941347641L));
         getDXRuntimeContext().getEngineContext().b().c();
-        WaterfallLayout.C6509b c6509b = new WaterfallLayout.C6509b();
+        WaterfallLayout.b bVar = new WaterfallLayout.b();
         DXNestedScrollerView dxNestedScrollerView = getDXRuntimeContext().getRootView().getDxNestedScrollerView();
         if (dxNestedScrollerView != null) {
             dxNestedScrollerView.setFixVerticalScrollConflict(this.fixVerticalScrollConflict);
         }
-        WaterfallLayout a = c6509b.b(this.columnCount).c(this.columnGap).i(this.marginLeft).j(this.marginRight).h(this.leftGap).m(this.rightGap).d(this.disableBounces == 1).g(this.isOpenPullToRefresh == 1).l(new String[]{this.refreshPullText, this.refreshReleaseText, this.refreshLoadingText, "刷新完成"}).n(null).e(dxNestedScrollerView).f(this.enableLeftGapWhenSingleColumn).k(this.needItemAnimation).o(getOrientation()).a();
-        this.waterfallLayout = a;
-        View a2 = a.a(context);
-        a2.setTag(R$id.dx_recycler_layout_view_tag, this.waterfallLayout);
+        WaterfallLayout a2 = bVar.b(this.columnCount).c(this.columnGap).i(this.marginLeft).j(this.marginRight).h(this.leftGap).m(this.rightGap).d(this.disableBounces == 1).g(this.isOpenPullToRefresh == 1).l(new String[]{this.refreshPullText, this.refreshReleaseText, this.refreshLoadingText, "刷新完成"}).n(null).e(dxNestedScrollerView).f(this.enableLeftGapWhenSingleColumn).k(this.needItemAnimation).o(getOrientation()).a();
+        this.waterfallLayout = a2;
+        View a3 = a2.a(context);
+        a3.setTag(R$id.dx_recycler_layout_view_tag, this.waterfallLayout);
         this.pullRefreshListener = new yx1(this);
         this.scrollListener = new ScrollListener(this);
         this.waterfallLayout.k(this.pullRefreshListener);
         this.waterfallLayout.l(this.scrollListener);
         initExpose(this.waterfallLayout.e());
         initVideoPlayControl(this.waterfallLayout.e());
-        return a2;
+        return a3;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -1964,82 +1957,82 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
                 FalcoAbilitySpan abilitySpanFromParams = getAbilitySpanFromParams(g);
                 zz.q(abilitySpanFromParams, MSG_METHOD_UPDATE_CURRENT, "start");
                 f.hashCode();
-                char c = 65535;
+                char c2 = 65535;
                 switch (f.hashCode()) {
                     case -1675200021:
                         if (f.equals(MSG_METHOD_INSERT_ITEMS_BY_OFFSET)) {
-                            c = 0;
+                            c2 = 0;
                             break;
                         }
                         break;
                     case -1472811200:
                         if (f.equals(MSG_METHOD_APPEND_ITEMS)) {
-                            c = 1;
+                            c2 = 1;
                             break;
                         }
                         break;
                     case -954124385:
                         if (f.equals(MSG_METHOD_REFRESH_DATA)) {
-                            c = 2;
+                            c2 = 2;
                             break;
                         }
                         break;
                     case -724196078:
                         if (f.equals(MSG_METHOD_UPDATE_ALL)) {
-                            c = 3;
+                            c2 = 3;
                             break;
                         }
                         break;
                     case -708482225:
                         if (f.equals(MSG_METHOD_DELETE_ITEMS)) {
-                            c = 4;
+                            c2 = 4;
                             break;
                         }
                         break;
                     case -232077206:
                         if (f.equals(MSG_METHOD_UPDATE_CURRENT)) {
-                            c = 5;
+                            c2 = 5;
                             break;
                         }
                         break;
                     case -160105743:
                         if (f.equals(MSG_METHOD_UPDATE_ITEMS)) {
-                            c = 6;
+                            c2 = 6;
                             break;
                         }
                         break;
                     case -150851358:
                         if (f.equals(MSG_METHOD_UPDATE_STYLE)) {
-                            c = 7;
+                            c2 = 7;
                             break;
                         }
                         break;
                     case 310191873:
                         if (f.equals(MSG_METHOD_INSERT_ITEMS)) {
-                            c = '\b';
+                            c2 = '\b';
                             break;
                         }
                         break;
                     case 1086719573:
                         if (f.equals(MSG_METHOD_PULL_TO_REFRESH)) {
-                            c = '\t';
+                            c2 = '\t';
                             break;
                         }
                         break;
                     case 1534853078:
                         if (f.equals(MSG_METHOD_MODIFY_CURRENT_ITEM_DATA)) {
-                            c = '\n';
+                            c2 = '\n';
                             break;
                         }
                         break;
                     case 1884917025:
                         if (f.equals(MSG_METHOD_LOAD_MORE)) {
-                            c = 11;
+                            c2 = 11;
                             break;
                         }
                         break;
                 }
-                switch (c) {
+                switch (c2) {
                     case 0:
                         if (wt.O0()) {
                             z = this.dxRecyclerOperator.j(this, g, abilitySpanFromParams);
@@ -2159,7 +2152,7 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onRenderView(Context context, View view) {
         RecyclerView e;
         PrefetchRecyclerAdapter prefetchRecyclerAdapter;
@@ -2252,15 +2245,15 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.taobao.android.dinamicx.widget.DXWidgetNode
-    public void onSetDoubleAttribute(long j, double d) {
+    public void onSetDoubleAttribute(long j, double d2) {
         if (j == DXRECYCLERLAYOUT_EXPOSURESPACEFACTOR) {
-            this.exposureSpaceFactor = d;
+            this.exposureSpaceFactor = d2;
         } else {
-            super.onSetDoubleAttribute(j, d);
+            super.onSetDoubleAttribute(j, d2);
         }
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXAbsContainerBaseLayout, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXAbsContainerBaseLayout, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetIntAttribute(long j, int i) {
         if (j == 4480460401770252962L) {
             this.columnCount = i;
@@ -2308,7 +2301,7 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.DXAbsContainerBaseLayout, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXAbsContainerBaseLayout, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetListAttribute(long j, JSONArray jSONArray) {
         if (j == -5948810534719014123L) {
             this.dataSource = jSONArray;
@@ -2384,7 +2377,7 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
         }
         int indexOfItem = indexOfItem(parentTemplateWidgetNode);
         if (indexOfItem < 0) {
-            trackError(C6368e.DX_ERROR_CODE_RECYCLER_LAYOUT_230007, "index: " + indexOfItem);
+            trackError(com.taobao.android.dinamicx.e.DX_ERROR_CODE_RECYCLER_LAYOUT_230007, "index: " + indexOfItem);
             return false;
         }
         s00.e(" updateCurrent 获取到的index 为" + indexOfItem);
@@ -2434,18 +2427,18 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
         }
         if (this.waterfallLayout != null) {
             if (hasCornerRadius()) {
-                WaterfallLayout.C6510c c6510c = new WaterfallLayout.C6510c();
+                WaterfallLayout.c cVar = new WaterfallLayout.c();
                 int i = this.cornerRadius;
                 if (i > 0) {
-                    c6510c.j(view, i);
+                    cVar.j(view, i);
                 } else {
-                    c6510c.k(view, this.cornerRadiusLeftTop, this.cornerRadiusRightTop, this.cornerRadiusLeftBottom, this.cornerRadiusRightBottom);
+                    cVar.k(view, this.cornerRadiusLeftTop, this.cornerRadiusRightTop, this.cornerRadiusLeftBottom, this.cornerRadiusRightBottom);
                 }
-                this.waterfallLayout.j(c6510c);
+                this.waterfallLayout.j(cVar);
             } else {
-                te b = this.waterfallLayout.b();
-                if (b != null) {
-                    b.j(view, 0.0f);
+                te b2 = this.waterfallLayout.b();
+                if (b2 != null) {
+                    b2.j(view, 0.0f);
                 }
             }
         }
@@ -2570,8 +2563,8 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
     private boolean updateWithActions(JSONArray jSONArray, int i, boolean z, FalcoSpan falcoSpan) {
-        char c;
         char c2;
+        char c3;
         if (i >= 0 && i < this.dataSource.size()) {
             List<DXWidgetNode> itemWidgetNodes = getItemWidgetNodes();
             if (itemWidgetNodes == null || itemWidgetNodes.isEmpty()) {
@@ -2605,30 +2598,30 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
                             switch (string.hashCode()) {
                                 case -1068795718:
                                     if (string.equals(OPERATOR_ACTION_MODIFY)) {
-                                        c = 0;
+                                        c2 = 0;
                                         break;
                                     }
-                                    c = 65535;
+                                    c2 = 65535;
                                     break;
                                 case -934610812:
                                     if (string.equals(OPERATOR_ACTION_REMOVE)) {
-                                        c = 1;
+                                        c2 = 1;
                                         break;
                                     }
-                                    c = 65535;
+                                    c2 = 65535;
                                     break;
                                 case 103785528:
                                     if (string.equals(OPERATOR_ACTION_MERGE)) {
-                                        c = 2;
+                                        c2 = 2;
                                         break;
                                     }
-                                    c = 65535;
+                                    c2 = 65535;
                                     break;
                                 default:
-                                    c = 65535;
+                                    c2 = 65535;
                                     break;
                             }
-                            switch (c) {
+                            switch (c2) {
                                 case 0:
                                     ((JSONObject) obj3).put(poll, obj2);
                                     if (!z) {
@@ -2669,30 +2662,30 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
                                     switch (string.hashCode()) {
                                         case -1068795718:
                                             if (string.equals(OPERATOR_ACTION_MODIFY)) {
-                                                c2 = 0;
+                                                c3 = 0;
                                                 break;
                                             }
-                                            c2 = 65535;
+                                            c3 = 65535;
                                             break;
                                         case -934610812:
                                             if (string.equals(OPERATOR_ACTION_REMOVE)) {
-                                                c2 = 1;
+                                                c3 = 1;
                                                 break;
                                             }
-                                            c2 = 65535;
+                                            c3 = 65535;
                                             break;
                                         case 103785528:
                                             if (string.equals(OPERATOR_ACTION_MERGE)) {
-                                                c2 = 2;
+                                                c3 = 2;
                                                 break;
                                             }
-                                            c2 = 65535;
+                                            c3 = 65535;
                                             break;
                                         default:
-                                            c2 = 65535;
+                                            c3 = 65535;
                                             break;
                                     }
-                                    switch (c2) {
+                                    switch (c3) {
                                         case 0:
                                             ((JSONArray) obj3).set(parseInt, obj2);
                                             if (!(obj instanceof JSONObject)) {
@@ -2739,7 +2732,7 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
             }
             return true;
         }
-        trackError(C6368e.DX_ERROR_CODE_RECYCLER_LAYOUT_230004, "index: " + i + " dataSource.size() " + this.dataSource.size());
+        trackError(com.taobao.android.dinamicx.e.DX_ERROR_CODE_RECYCLER_LAYOUT_230004, "index: " + i + " dataSource.size() " + this.dataSource.size());
         return false;
     }
 
@@ -2814,40 +2807,40 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
     private boolean onLoadMore(@NonNull JSONObject jSONObject) {
         String string = jSONObject.getString("status");
         string.hashCode();
-        char c = 65535;
+        char c2 = 65535;
         switch (string.hashCode()) {
             case -1884319283:
                 if (string.equals(LOAD_MORE_STOPED)) {
-                    c = 0;
+                    c2 = 0;
                     break;
                 }
                 break;
             case -1281977283:
                 if (string.equals("failed")) {
-                    c = 1;
+                    c2 = 1;
                     break;
                 }
                 break;
             case -1040845642:
                 if (string.equals(LOAD_MORE_NO_DATA_STRING)) {
-                    c = 2;
+                    c2 = 2;
                     break;
                 }
                 break;
             case 96634189:
                 if (string.equals(LOAD_MORE_EMPTY)) {
-                    c = 3;
+                    c2 = 3;
                     break;
                 }
                 break;
             case 336650556:
                 if (string.equals("loading")) {
-                    c = 4;
+                    c2 = 4;
                     break;
                 }
                 break;
         }
-        switch (c) {
+        switch (c2) {
             case 0:
                 return updateLoadMoreStatus(4);
             case 1:
@@ -2923,7 +2916,7 @@ public class DXRecyclerLayout extends DXAbsContainerBaseLayout {
         }
         int indexOfItem = indexOfItem(parentTemplateWidgetNode);
         if (indexOfItem < 0) {
-            trackError(C6368e.DX_ERROR_CODE_RECYCLER_LAYOUT_230005, "index: " + indexOfItem);
+            trackError(com.taobao.android.dinamicx.e.DX_ERROR_CODE_RECYCLER_LAYOUT_230005, "index: " + indexOfItem);
             return false;
         }
         s00.e(" updateCurrent 获取到的index 为" + indexOfItem);

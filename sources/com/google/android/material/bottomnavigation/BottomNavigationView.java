@@ -39,7 +39,7 @@ public class BottomNavigationView extends NavigationBarView {
 
     private void addCompatibilityTopDivider(@NonNull Context context) {
         View view = new View(context);
-        view.setBackgroundColor(ContextCompat.getColor(context, R.C4815color.design_bottom_navigation_shadow_color));
+        view.setBackgroundColor(ContextCompat.getColor(context, R.color.design_bottom_navigation_shadow_color));
         view.setLayoutParams(new FrameLayout.LayoutParams(-1, getResources().getDimensionPixelSize(R.dimen.design_bottom_navigation_shadow_height)));
         addView(view);
     }
@@ -87,7 +87,7 @@ public class BottomNavigationView extends NavigationBarView {
     }
 
     public BottomNavigationView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
-        this(context, attributeSet, i, R.C4819style.Widget_Design_BottomNavigationView);
+        this(context, attributeSet, i, R.style.Widget_Design_BottomNavigationView);
     }
 
     public BottomNavigationView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i, int i2) {

@@ -24,12 +24,11 @@ public class xa1 {
     private View e;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.xa1$a */
     /* loaded from: classes5.dex */
-    public class View$OnClickListenerC9914a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9914a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -44,12 +43,11 @@ public class xa1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.xa1$b */
     /* loaded from: classes5.dex */
-    public class View$OnClickListenerC9915b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9915b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -75,8 +73,8 @@ public class xa1 {
             popupWindow.setBackgroundDrawable(new ColorDrawable(-1));
             this.a.setOutsideTouchable(true);
         }
-        this.d.setOnClickListener(new View$OnClickListenerC9914a());
-        this.e.setOnClickListener(new View$OnClickListenerC9915b());
+        this.d.setOnClickListener(new a());
+        this.e.setOnClickListener(new b());
     }
 
     public static xa1 c(Activity activity, View view) {

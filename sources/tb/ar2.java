@@ -48,10 +48,10 @@ public final class ar2 {
                 hj o = classFqNameUnsafe == null ? null : o51.INSTANCE.o(classFqNameUnsafe);
                 if (o != null) {
                     if (!vq2Var.a()) {
-                        List<o51.C9506a> j = o51.INSTANCE.j();
+                        List<o51.a> j = o51.INSTANCE.j();
                         if (!(j instanceof Collection) || !j.isEmpty()) {
-                            for (o51.C9506a c9506a : j) {
-                                if (b41.d(c9506a.d(), o)) {
+                            for (o51.a aVar : j) {
+                                if (b41.d(aVar.d(), o)) {
                                     break;
                                 }
                             }

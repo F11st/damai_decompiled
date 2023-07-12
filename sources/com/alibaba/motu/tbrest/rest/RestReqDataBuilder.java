@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.zip.GZIPOutputStream;
-import tb.C9225hn;
+import tb.hn;
 import tb.jn1;
 
 /* compiled from: Taobao */
@@ -204,7 +204,7 @@ public class RestReqDataBuilder {
             stringBuffer.append(jn1.OR);
             stringBuffer.append(_fixVariableValue24);
             stringBuffer.append(jn1.OR);
-            stringBuffer.append(C9225hn.SDK_TYPE);
+            stringBuffer.append(hn.SDK_TYPE);
             stringBuffer.append(jn1.OR);
             stringBuffer.append("1.0");
             stringBuffer.append(jn1.OR);
@@ -320,7 +320,7 @@ public class RestReqDataBuilder {
             hashMap.put(RestFieldsScheme.SDKVERSION.toString(), "1.0");
             hashMap.put(RestFieldsScheme.START_SESSION_TIMESTAMP.toString(), "" + s_session_start_timestamp);
             hashMap.put(RestFieldsScheme.UTDID.toString(), _fixVariableValue23);
-            hashMap.put(RestFieldsScheme.SDKTYPE.toString(), C9225hn.SDK_TYPE);
+            hashMap.put(RestFieldsScheme.SDKTYPE.toString(), hn.SDK_TYPE);
             hashMap.put(RestFieldsScheme.RESERVE2.toString(), _fixVariableValue23);
             hashMap.put(RestFieldsScheme.RESERVE3.toString(), "-");
             hashMap.put(RestFieldsScheme.RESERVE4.toString(), "-");

@@ -4,16 +4,13 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Build;
 import androidx.annotation.NonNull;
-import com.taobao.pexode.common.C6829a;
 import com.taobao.pexode.common.DegradeEventListener;
 import com.taobao.pexode.common.NdkCore;
-import com.taobao.pexode.decoder.C6833c;
-import com.taobao.pexode.decoder.C6834d;
 import com.taobao.pexode.decoder.Decoder;
 import com.taobao.pexode.decoder.WebPDecoder;
-import com.taobao.pexode.entity.C6836b;
-import com.taobao.pexode.entity.C6837c;
+import com.taobao.pexode.decoder.d;
 import com.taobao.pexode.entity.RewindableStream;
+import com.taobao.pexode.entity.c;
 import com.taobao.pexode.exception.DegradeNotAllowedException;
 import com.taobao.pexode.exception.IncrementalDecodeException;
 import com.taobao.pexode.exception.NotSupportedException;
@@ -56,15 +53,14 @@ public class Pexode {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.pexode.Pexode$b */
     /* loaded from: classes11.dex */
-    public static class C6826b {
+    public static class b {
         private static final Pexode a = new Pexode();
     }
 
     public static boolean a(MimeType mimeType) {
         if (mimeType != null) {
-            for (Decoder decoder : C6826b.a.d) {
+            for (Decoder decoder : b.a.d) {
                 if (decoder.isSupported(mimeType)) {
                     return true;
                 }
@@ -75,7 +71,7 @@ public class Pexode {
     }
 
     public static boolean b(MimeType mimeType) {
-        return C6826b.a.c.isSupported(mimeType);
+        return b.a.c.isSupported(mimeType);
     }
 
     private static void c(PexodeOptions pexodeOptions) {
@@ -91,19 +87,19 @@ public class Pexode {
     }
 
     public static or1 d(@NonNull InputStream inputStream, @NonNull PexodeOptions pexodeOptions) throws IOException, PexodeException {
-        RewindableStream c6837c;
+        RewindableStream cVar;
         RewindableStream rewindableStream;
         if (inputStream instanceof RewindableStream) {
             rewindableStream = (RewindableStream) inputStream;
         } else {
             if (inputStream instanceof FileInputStream) {
-                c6837c = new C6836b((FileInputStream) inputStream, 1048576);
+                cVar = new com.taobao.pexode.entity.b((FileInputStream) inputStream, 1048576);
             } else {
-                c6837c = new C6837c(inputStream, 1048576);
+                cVar = new c(inputStream, 1048576);
             }
-            rewindableStream = c6837c;
+            rewindableStream = cVar;
         }
-        return e(rewindableStream, pexodeOptions, C6827a.f());
+        return e(rewindableStream, pexodeOptions, com.taobao.pexode.a.f());
     }
 
     private static or1 e(RewindableStream rewindableStream, PexodeOptions pexodeOptions, DegradeEventListener degradeEventListener) throws IOException, PexodeException {
@@ -137,10 +133,10 @@ public class Pexode {
         objArr[6] = Boolean.valueOf(pexodeOptions.incrementalDecode);
         objArr[7] = decode;
         hh0.a(TAG, "decoder=%s, type=%d, justBounds=%b, sizeAvailable=%b, ashmem=%b, inBitmap=%b, increment=%b, result=%s", objArr);
-        if (C6827a.i(decode, pexodeOptions) || p == C6826b.a.c) {
+        if (com.taobao.pexode.a.i(decode, pexodeOptions) || p == b.a.c) {
             return decode;
         }
-        Decoder decoder = C6826b.a.c;
+        Decoder decoder = b.a.c;
         if (mimeType2 != null && decoder.isSupported(mimeType2) && (!pexodeOptions.incrementalDecode || decoder.canDecodeIncrementally(mimeType2))) {
             if (pexodeOptions.allowDegrade2System) {
                 rewindableStream.rewind();
@@ -148,7 +144,7 @@ public class Pexode {
                 pexodeOptions.inBitmap = bitmap2;
                 or1 decode2 = decoder.decode(rewindableStream, pexodeOptions, degradeEventListener);
                 if (!pexodeOptions.cancelled) {
-                    degradeEventListener.onDegraded2System(C6827a.j(decode2, pexodeOptions));
+                    degradeEventListener.onDegraded2System(com.taobao.pexode.a.j(decode2, pexodeOptions));
                 }
                 return decode2;
             }
@@ -161,24 +157,24 @@ public class Pexode {
     }
 
     public static void f(boolean z) {
-        synchronized (C6826b.a) {
-            if (z == C6826b.a.a) {
+        synchronized (b.a) {
+            if (z == b.a.a) {
                 return;
             }
             hh0.i(TAG, "force degrading to system decoder, result=%b", Boolean.valueOf(z));
-            C6826b.a.d.remove(C6826b.a.c);
+            b.a.d.remove(b.a.c);
             if (z) {
-                C6826b.a.d.add(0, C6826b.a.c);
+                b.a.d.add(0, b.a.c);
             } else {
-                C6826b.a.d.add(C6826b.a.c);
+                b.a.d.add(b.a.c);
             }
-            C6826b.a.a = z;
+            b.a.a = z;
         }
     }
 
     public static List<Decoder> g(MimeType mimeType) {
         ArrayList arrayList = new ArrayList();
-        for (Decoder decoder : C6826b.a.d) {
+        for (Decoder decoder : b.a.d) {
             if (decoder.isSupported(mimeType)) {
                 arrayList.add(decoder);
             }
@@ -188,18 +184,18 @@ public class Pexode {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static ForcedDegradationListener h() {
-        return C6826b.a.e;
+        return b.a.e;
     }
 
     public static void i(Decoder decoder) {
-        synchronized (C6826b.a) {
-            if (C6826b.a.a) {
-                C6826b.a.d.add(1, decoder);
+        synchronized (b.a) {
+            if (b.a.a) {
+                b.a.d.add(1, decoder);
             } else {
-                C6826b.a.d.add(0, decoder);
+                b.a.d.add(0, decoder);
             }
-            if (C6826b.a.b != null) {
-                decoder.prepare(C6826b.a.b);
+            if (b.a.b != null) {
+                decoder.prepare(b.a.b);
             }
         }
     }
@@ -211,7 +207,7 @@ public class Pexode {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static boolean k() {
-        return C6826b.a.a;
+        return b.a.a;
     }
 
     public static boolean l() {
@@ -228,18 +224,18 @@ public class Pexode {
     }
 
     public static void n(Context context) {
-        synchronized (C6826b.a) {
-            C6826b.a.b = context;
-            C6829a.a(context);
+        synchronized (b.a) {
+            b.a.b = context;
+            com.taobao.pexode.common.a.a(context);
             NdkCore.c(context);
-            for (Decoder decoder : C6826b.a.d) {
+            for (Decoder decoder : b.a.d) {
                 decoder.prepare(context);
             }
         }
     }
 
     private static Decoder o(RewindableStream rewindableStream, PexodeOptions pexodeOptions, int i) throws IOException {
-        byte[] g2 = C6827a.f().g(i);
+        byte[] g2 = com.taobao.pexode.a.f().g(i);
         pexodeOptions.tempHeaderBuffer = g2;
         int i2 = 0;
         try {
@@ -248,7 +244,7 @@ public class Pexode {
         }
         rewindableStream.rewind();
         if (i2 > 0) {
-            for (Decoder decoder : C6826b.a.d) {
+            for (Decoder decoder : b.a.d) {
                 MimeType detectMimeType = decoder.detectMimeType(pexodeOptions.tempHeaderBuffer);
                 pexodeOptions.outMimeType = detectMimeType;
                 if (detectMimeType != null) {
@@ -256,35 +252,35 @@ public class Pexode {
                 }
             }
         }
-        return C6826b.a.c;
+        return b.a.c;
     }
 
     private static Decoder p(MimeType mimeType) {
         if (mimeType != null) {
-            for (Decoder decoder : C6826b.a.d) {
+            for (Decoder decoder : b.a.d) {
                 if (decoder.isSupported(mimeType)) {
                     return decoder;
                 }
             }
         }
-        return C6826b.a.c;
+        return b.a.c;
     }
 
     public static void q(BytesPool bytesPool) {
-        C6827a.f().k(bytesPool);
+        com.taobao.pexode.a.f().k(bytesPool);
     }
 
     public static void r(ForcedDegradationListener forcedDegradationListener) {
-        C6826b.a.e = forcedDegradationListener;
+        b.a.e = forcedDegradationListener;
     }
 
     private Pexode() {
-        C6834d c6834d = new C6834d();
-        this.c = c6834d;
+        d dVar = new d();
+        this.c = dVar;
         CopyOnWriteArrayList copyOnWriteArrayList = new CopyOnWriteArrayList();
         this.d = copyOnWriteArrayList;
         copyOnWriteArrayList.add(new WebPDecoder());
-        copyOnWriteArrayList.add(new C6833c());
-        copyOnWriteArrayList.add(c6834d);
+        copyOnWriteArrayList.add(new com.taobao.pexode.decoder.c());
+        copyOnWriteArrayList.add(dVar);
     }
 }

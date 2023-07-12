@@ -28,13 +28,12 @@ public final class ec0 {
     private static ThreadPoolExecutor f;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ec0$a */
     /* loaded from: classes7.dex */
-    public static final class ThreadFactoryC9095a implements ThreadFactory {
+    public static final class a implements ThreadFactory {
         private static transient /* synthetic */ IpChange $ipChange;
         private final AtomicInteger a = new AtomicInteger(1);
 
-        ThreadFactoryC9095a() {
+        a() {
         }
 
         @Override // java.util.concurrent.ThreadFactory
@@ -56,11 +55,11 @@ public final class ec0 {
         b = max;
         int i = (availableProcessors * 2) + 1;
         c = i;
-        ThreadFactoryC9095a threadFactoryC9095a = new ThreadFactoryC9095a();
-        d = threadFactoryC9095a;
+        a aVar = new a();
+        d = aVar;
         LinkedBlockingQueue linkedBlockingQueue = new LinkedBlockingQueue(512);
         e = linkedBlockingQueue;
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(max, i, 30L, TimeUnit.SECONDS, linkedBlockingQueue, threadFactoryC9095a);
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(max, i, 30L, TimeUnit.SECONDS, linkedBlockingQueue, aVar);
         f = threadPoolExecutor;
         threadPoolExecutor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
     }

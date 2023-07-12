@@ -42,12 +42,11 @@ public class CircleIndicator extends LinearLayout {
     private ViewPager mViewpager;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.CircleIndicator$a */
     /* loaded from: classes7.dex */
-    public class C2090a extends DataSetObserver {
+    public class a extends DataSetObserver {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2090a() {
+        a() {
         }
 
         @Override // android.database.DataSetObserver
@@ -73,12 +72,11 @@ public class CircleIndicator extends LinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.CircleIndicator$b  reason: invalid class name */
     /* loaded from: classes7.dex */
-    public class animationInterpolatorC2091b implements Interpolator {
+    public class b implements Interpolator {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private animationInterpolatorC2091b(CircleIndicator circleIndicator) {
+        private b(CircleIndicator circleIndicator) {
         }
 
         @Override // android.animation.TimeInterpolator
@@ -148,7 +146,7 @@ public class CircleIndicator extends LinearLayout {
                 }
             }
         };
-        this.mInternalDataSetObserver = new C2090a();
+        this.mInternalDataSetObserver = new a();
         init(context, null);
     }
 
@@ -233,7 +231,7 @@ public class CircleIndicator extends LinearLayout {
         int i = this.mAnimatorReverseResId;
         if (i == 0) {
             Animator loadAnimator = AnimatorInflater.loadAnimator(context, this.mAnimatorResId);
-            loadAnimator.setInterpolator(new animationInterpolatorC2091b());
+            loadAnimator.setInterpolator(new b());
             return loadAnimator;
         }
         return AnimatorInflater.loadAnimator(context, i);
@@ -429,7 +427,7 @@ public class CircleIndicator extends LinearLayout {
                 }
             }
         };
-        this.mInternalDataSetObserver = new C2090a();
+        this.mInternalDataSetObserver = new a();
         init(context, attributeSet);
     }
 
@@ -493,7 +491,7 @@ public class CircleIndicator extends LinearLayout {
                 }
             }
         };
-        this.mInternalDataSetObserver = new C2090a();
+        this.mInternalDataSetObserver = new a();
         init(context, attributeSet);
     }
 
@@ -558,7 +556,7 @@ public class CircleIndicator extends LinearLayout {
                 }
             }
         };
-        this.mInternalDataSetObserver = new C2090a();
+        this.mInternalDataSetObserver = new a();
         init(context, attributeSet);
     }
 }

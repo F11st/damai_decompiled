@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.youku.opengl.widget.C8040l;
+import com.youku.opengl.widget.l;
 import com.youku.playerservice.axp.axpinterface.IPlayerService;
 import com.youku.playerservice.axp.utils.TLogUtil;
 import java.util.List;
@@ -202,8 +202,8 @@ public class ResizeView extends FrameLayout implements IResizer {
         this.mPlayerService = iPlayerService;
         this.mPlayerIndex = i;
         this.mVideoView = view;
-        if (view instanceof C8040l) {
-            ((C8040l) view).setSurfaceTextureListener(this.mSurfaceTextureListener);
+        if (view instanceof l) {
+            ((l) view).setSurfaceTextureListener(this.mSurfaceTextureListener);
         } else if (view instanceof SurfaceView) {
             ((SurfaceView) view).getHolder().addCallback(this.mSurfaceCallback);
         } else if (view instanceof TextureView) {

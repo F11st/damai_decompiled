@@ -9,17 +9,16 @@ import tb.hk1;
 /* loaded from: classes3.dex */
 public interface NewKotlinTypeChecker extends KotlinTypeChecker {
     @NotNull
-    public static final C8548a Companion = C8548a.a;
+    public static final a Companion = a.a;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.types.checker.NewKotlinTypeChecker$a */
     /* loaded from: classes3.dex */
-    public static final class C8548a {
-        static final /* synthetic */ C8548a a = new C8548a();
+    public static final class a {
+        static final /* synthetic */ a a = new a();
         @NotNull
-        private static final hk1 b = new hk1(b81.C8955a.INSTANCE, null, 2, null);
+        private static final hk1 b = new hk1(b81.a.INSTANCE, null, 2, null);
 
-        private C8548a() {
+        private a() {
         }
 
         @NotNull

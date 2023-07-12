@@ -93,15 +93,14 @@ public class PullToRefreshListView extends PullToRefreshAdapterViewBase<ListView
         @Override // android.view.View
         protected boolean overScrollBy(int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, boolean z) {
             boolean overScrollBy = super.overScrollBy(i, i2, i3, i4, i5, i6, i7, i8, z);
-            C5456a.d(PullToRefreshListView.this, i2, i4, z);
+            com.handmark.pulltorefresh.library.a.d(PullToRefreshListView.this, i2, i4, z);
             return overScrollBy;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.handmark.pulltorefresh.library.PullToRefreshListView$a */
     /* loaded from: classes10.dex */
-    static /* synthetic */ class C5454a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -144,7 +143,7 @@ public class PullToRefreshListView extends PullToRefreshAdapterViewBase<ListView
         int footerHeight;
         ListAdapter adapter = ((ListView) this.mRefreshableView).getAdapter();
         if (getShowViewWhileRefreshing() && adapter != null && !adapter.isEmpty()) {
-            if (C5454a.a[getCurrentMode().ordinal()] != 1) {
+            if (a.a[getCurrentMode().ordinal()] != 1) {
                 footerLayout = getHeaderLayout();
                 loadingLayout = this.mHeaderLoadingView;
                 int i = -getHeaderHeight();
@@ -219,7 +218,7 @@ public class PullToRefreshListView extends PullToRefreshAdapterViewBase<ListView
         ListAdapter adapter = ((ListView) this.mRefreshableView).getAdapter();
         if (getShowViewWhileRefreshing() && adapter != null && !adapter.isEmpty()) {
             super.setRefreshingInternal(false);
-            if (C5454a.a[getCurrentMode().ordinal()] != 1) {
+            if (a.a[getCurrentMode().ordinal()] != 1) {
                 footerLayout = getHeaderLayout();
                 loadingLayout = this.mHeaderLoadingView;
                 scrollY = getScrollY() + getFooterHeight();

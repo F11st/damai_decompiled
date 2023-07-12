@@ -24,15 +24,15 @@ public final class dn {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static byte[] a(cw cwVar, String str) {
-        cw.C4407b c4407b;
+        cw.b bVar;
         byte[] bArr = new byte[0];
         InputStream inputStream = null;
         try {
-            c4407b = cwVar.a(str);
-            if (c4407b == null) {
-                if (c4407b != null) {
+            bVar = cwVar.a(str);
+            if (bVar == null) {
+                if (bVar != null) {
                     try {
-                        c4407b.close();
+                        bVar.close();
                     } catch (Throwable th) {
                         th.printStackTrace();
                     }
@@ -40,7 +40,7 @@ public final class dn {
                 return bArr;
             }
             try {
-                InputStream a = c4407b.a();
+                InputStream a = bVar.a();
                 if (a == null) {
                     if (a != null) {
                         try {
@@ -50,7 +50,7 @@ public final class dn {
                         }
                     }
                     try {
-                        c4407b.close();
+                        bVar.close();
                     } catch (Throwable th3) {
                         th3.printStackTrace();
                     }
@@ -64,7 +64,7 @@ public final class dn {
                     th4.printStackTrace();
                 }
                 try {
-                    c4407b.close();
+                    bVar.close();
                 } catch (Throwable th5) {
                     th5.printStackTrace();
                 }
@@ -82,9 +82,9 @@ public final class dn {
                             th7.printStackTrace();
                         }
                     }
-                    if (c4407b != null) {
+                    if (bVar != null) {
                         try {
-                            c4407b.close();
+                            bVar.close();
                         } catch (Throwable th8) {
                             th8.printStackTrace();
                         }
@@ -93,7 +93,7 @@ public final class dn {
             }
         } catch (Throwable th9) {
             th = th9;
-            c4407b = null;
+            bVar = null;
         }
     }
 

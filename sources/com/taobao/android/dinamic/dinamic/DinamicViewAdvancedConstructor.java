@@ -7,7 +7,7 @@ import android.os.Build;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
-import com.taobao.android.dinamic.C6313b;
+import com.taobao.android.dinamic.b;
 import com.taobao.android.dinamic.log.DinamicLog;
 import com.taobao.android.dinamic.property.DAttrConstant;
 import com.taobao.android.dinamicx.DXDarkModeCenter;
@@ -36,18 +36,17 @@ public class DinamicViewAdvancedConstructor {
     private boolean isInitialize = false;
     private boolean isNeedReflect;
     private boolean isRunSuperMethod;
-    private List<C6323a> methodInfos;
+    private List<a> methodInfos;
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamic.dinamic.DinamicViewAdvancedConstructor$a */
     /* loaded from: classes12.dex */
-    public static class C6323a {
+    public static class a {
         Method a;
         String[] b;
         Class[] c;
 
-        C6323a(Method method, String[] strArr, Class[] clsArr) {
+        a(Method method, String[] strArr, Class[] clsArr) {
             this.a = method;
             this.b = strArr;
             this.c = clsArr;
@@ -63,11 +62,11 @@ public class DinamicViewAdvancedConstructor {
         });
     }
 
-    private C6323a findMethodForAttr(String str) {
-        for (C6323a c6323a : this.methodInfos) {
-            for (String str2 : c6323a.b) {
+    private a findMethodForAttr(String str) {
+        for (a aVar : this.methodInfos) {
+            for (String str2 : aVar.b) {
                 if (TextUtils.equals(str, str2)) {
-                    return c6323a;
+                    return aVar;
                 }
             }
         }
@@ -98,26 +97,26 @@ public class DinamicViewAdvancedConstructor {
                     String[] attrSet = ((DinamicAttr) method.getAnnotation(DinamicAttr.class)).attrSet();
                     Class<?>[] parameterTypes = method.getParameterTypes();
                     if (attrSet.length > 0 && parameterTypes.length > 0 && parameterTypes.length - attrSet.length == 1) {
-                        this.methodInfos.add(new C6323a(method, attrSet, parameterTypes));
-                    } else if (C6313b.e()) {
-                        DinamicLog.a(C6313b.TAG, "Senioronstructor scanAllDinamicAttrMethods function info error");
+                        this.methodInfos.add(new a(method, attrSet, parameterTypes));
+                    } else if (b.e()) {
+                        DinamicLog.a(b.TAG, "Senioronstructor scanAllDinamicAttrMethods function info error");
                     }
                 }
             }
         } catch (Throwable th) {
-            if (C6313b.e()) {
-                DinamicLog.i(C6313b.TAG, th, "Senioronstructor scanAllDinamicAttrMethods exception");
+            if (b.e()) {
+                DinamicLog.i(b.TAG, th, "Senioronstructor scanAllDinamicAttrMethods exception");
             }
         }
     }
 
     private void setSpecificAttributes(View view, Map<String, Object> map, v80 v80Var) {
         boolean z;
-        C6323a findMethodForAttr;
+        a findMethodForAttr;
         Object obj;
         Class[] clsArr;
         View view2 = view;
-        List<C6323a> list = this.methodInfos;
+        List<a> list = this.methodInfos;
         if (list == null || list.size() == 0) {
             return;
         }
@@ -147,8 +146,8 @@ public class DinamicViewAdvancedConstructor {
                 Object[] objArr = new Object[clsArr2.length];
                 if (!clsArr2[0].isInstance(view2)) {
                     v80Var.e().b().a(p80.ERROR_CODE_VIEW_EXCEPTION, c.a);
-                    if (C6313b.e()) {
-                        DinamicLog.e(C6313b.TAG, "Senioronstructor first param class not match");
+                    if (b.e()) {
+                        DinamicLog.e(b.TAG, "Senioronstructor first param class not match");
                     }
                 } else {
                     objArr[0] = view2;
@@ -173,9 +172,9 @@ public class DinamicViewAdvancedConstructor {
                             if (obj != null) {
                                 v80Var.e().b().a(p80.ERROR_CODE_VIEW_EXCEPTION, c.a);
                             }
-                            if (C6313b.e()) {
+                            if (b.e()) {
                                 clsArr = clsArr2;
-                                DinamicLog.e(C6313b.TAG, String.format("AdvancedConstructor %s value is null or not exist", strArr[i]));
+                                DinamicLog.e(b.TAG, String.format("AdvancedConstructor %s value is null or not exist", strArr[i]));
                             } else {
                                 clsArr = clsArr2;
                             }
@@ -188,8 +187,8 @@ public class DinamicViewAdvancedConstructor {
                         method.invoke(this, objArr);
                     } catch (Exception e) {
                         v80Var.e().b().a(p80.ERROR_CODE_VIEW_EXCEPTION, c.a);
-                        if (C6313b.e()) {
-                            DinamicLog.i(C6313b.TAG, e, "AdvancedConstructor method invoke exception");
+                        if (b.e()) {
+                            DinamicLog.i(b.TAG, e, "AdvancedConstructor method invoke exception");
                         }
                     }
                     view2 = view;

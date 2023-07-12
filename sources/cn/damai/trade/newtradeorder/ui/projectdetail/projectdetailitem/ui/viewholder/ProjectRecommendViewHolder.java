@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
 import cn.damai.commonbusiness.search.viewholder.ProjectItemViewHolder;
 import cn.damai.trade.newtradeorder.ui.projectdetail.listeners.OnRecommendItemClickListener;
@@ -23,13 +23,12 @@ public class ProjectRecommendViewHolder extends ProjectItemViewHolder {
     private OnRecommendItemClickListener F;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectRecommendViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2402a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private int a;
 
-        public View$OnClickListenerC2402a(int i, ProjectItemBean projectItemBean) {
+        public a(int i, ProjectItemBean projectItemBean) {
             this.a = i;
         }
 
@@ -60,7 +59,7 @@ public class ProjectRecommendViewHolder extends ProjectItemViewHolder {
         hashMap.put("id", projectItemBean.id);
         hashMap.put("titlelabel", projectItemBean.name);
         hashMap.put("alg", projectItemBean.alg);
-        C0529c e = C0529c.e();
+        c e = c.e();
         View view = this.itemView;
         e.G(view, "item_" + i, "rec", gb.PROJECT_PAGE, hashMap);
     }
@@ -95,7 +94,7 @@ public class ProjectRecommendViewHolder extends ProjectItemViewHolder {
         int recommendItemPosition = projectDataHolder.getRecommendItemPosition();
         if (recommendItem != null) {
             this.itemView.setTag(recommendItem);
-            this.itemView.setOnClickListener(new View$OnClickListenerC2402a(recommendItemPosition, recommendItem));
+            this.itemView.setOnClickListener(new a(recommendItemPosition, recommendItem));
             F(recommendItem, recommendItemPosition);
             k(recommendItem);
             G(recommendItemPosition, projectDataHolder.getRecommendListSize());

@@ -21,9 +21,8 @@ public class hu extends DXTextViewWidgetNode {
     private String v;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hu$a */
     /* loaded from: classes4.dex */
-    public static class C9238a implements IDXBuilderWidgetNode {
+    public static class a implements IDXBuilderWidgetNode {
         private static transient /* synthetic */ IpChange $ipChange;
 
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
@@ -92,8 +91,8 @@ public class hu extends DXTextViewWidgetNode {
         if (view == null || !(view instanceof TextView)) {
             return;
         }
-        GradientBean a = ci1.c().a(jm1.j(this.v, 0));
-        ((TextView) view).getPaint().setShader(new LinearGradient(0.0f, 0.0f, getMeasuredWidth(), getMeasuredHeight(), new int[]{a.startColor, a.endColor}, (float[]) null, Shader.TileMode.REPEAT));
+        GradientBean a2 = ci1.c().a(jm1.j(this.v, 0));
+        ((TextView) view).getPaint().setShader(new LinearGradient(0.0f, 0.0f, getMeasuredWidth(), getMeasuredHeight(), new int[]{a2.startColor, a2.endColor}, (float[]) null, Shader.TileMode.REPEAT));
     }
 
     /* JADX INFO: Access modifiers changed from: protected */

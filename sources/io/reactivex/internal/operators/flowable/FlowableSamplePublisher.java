@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import io.reactivex.internal.util.BackpressureHelper;
@@ -16,7 +16,7 @@ import tb.ua2;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableSamplePublisher<T> extends AbstractC8147b<T> {
+public final class FlowableSamplePublisher<T> extends b<T> {
     final boolean emitLast;
     final Publisher<?> other;
     final Publisher<T> source;
@@ -220,7 +220,7 @@ public final class FlowableSamplePublisher<T> extends AbstractC8147b<T> {
         this.emitLast = z;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         ua2 ua2Var = new ua2(subscriber);
         if (this.emitLast) {

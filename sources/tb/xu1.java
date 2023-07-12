@@ -2,8 +2,6 @@ package tb;
 
 import androidx.annotation.NonNull;
 import com.taobao.android.tlog.protocol.model.joint.point.StartupJointPoint;
-import com.taobao.monitor.network.C6807a;
-import com.taobao.monitor.procedure.C6821f;
 import com.taobao.monitor.procedure.ProcedureImpl;
 import com.taobao.weex.annotation.JSMethod;
 import java.io.File;
@@ -42,8 +40,8 @@ public class xu1 implements ProcedureImpl.IProcedureLifeCycle {
         }
     }
 
-    private String c(C6821f c6821f) {
-        Object obj = c6821f.m().get("pageName");
+    private String c(com.taobao.monitor.procedure.f fVar) {
+        Object obj = fVar.m().get("pageName");
         return obj == null ? "null" : (String) obj;
     }
 
@@ -82,14 +80,14 @@ public class xu1 implements ProcedureImpl.IProcedureLifeCycle {
         e(fileArr, i4 + 1, i2);
     }
 
-    private void f(C6821f c6821f) {
-        if (c6821f.v() == null) {
+    private void f(com.taobao.monitor.procedure.f fVar) {
+        if (fVar.v() == null) {
             return;
         }
-        if ("pageLoad".equals(c6821f.o()) || StartupJointPoint.TYPE.equals(c6821f.o())) {
+        if ("pageLoad".equals(fVar.o()) || StartupJointPoint.TYPE.equals(fVar.o())) {
             File d = d();
             a(d);
-            g(d, c6821f.o() + JSMethod.NOT_SET + c(c6821f) + JSMethod.NOT_SET + c6821f.n() + ".json", C6807a.a(c6821f));
+            g(d, fVar.o() + JSMethod.NOT_SET + c(fVar) + JSMethod.NOT_SET + fVar.n() + ".json", com.taobao.monitor.network.a.a(fVar));
         }
     }
 
@@ -165,23 +163,23 @@ public class xu1 implements ProcedureImpl.IProcedureLifeCycle {
     }
 
     @Override // com.taobao.monitor.procedure.ProcedureImpl.IProcedureLifeCycle
-    public void begin(C6821f c6821f) {
+    public void begin(com.taobao.monitor.procedure.f fVar) {
     }
 
     @Override // com.taobao.monitor.procedure.ProcedureImpl.IProcedureLifeCycle
-    public void end(C6821f c6821f) {
+    public void end(com.taobao.monitor.procedure.f fVar) {
         try {
-            f(c6821f);
+            f(fVar);
         } catch (Exception e) {
             e30.a("ProcedureStorage", e);
         }
     }
 
     @Override // com.taobao.monitor.procedure.ProcedureImpl.IProcedureLifeCycle
-    public void event(C6821f c6821f, rf0 rf0Var) {
+    public void event(com.taobao.monitor.procedure.f fVar, rf0 rf0Var) {
     }
 
     @Override // com.taobao.monitor.procedure.ProcedureImpl.IProcedureLifeCycle
-    public void stage(C6821f c6821f, qf2 qf2Var) {
+    public void stage(com.taobao.monitor.procedure.f fVar, qf2 qf2Var) {
     }
 }

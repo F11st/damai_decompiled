@@ -2,7 +2,6 @@ package tb;
 
 import java.util.Collection;
 import java.util.List;
-import kotlin.collections.C8214m;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import org.jetbrains.annotations.NotNull;
 
@@ -13,7 +12,7 @@ public final class ku1 {
     public static final Collection<z71> a(@NotNull ModuleDescriptor moduleDescriptor) {
         List j;
         b41.i(moduleDescriptor, "<this>");
-        j = C8214m.j(moduleDescriptor.getBuiltIns().D(), moduleDescriptor.getBuiltIns().F(), moduleDescriptor.getBuiltIns().t(), moduleDescriptor.getBuiltIns().T());
+        j = kotlin.collections.m.j(moduleDescriptor.getBuiltIns().D(), moduleDescriptor.getBuiltIns().F(), moduleDescriptor.getBuiltIns().t(), moduleDescriptor.getBuiltIns().T());
         return j;
     }
 }

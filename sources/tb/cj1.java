@@ -36,12 +36,11 @@ public class cj1 {
     boolean p = false;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.cj1$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9008a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9008a(cj1 cj1Var) {
+        a(cj1 cj1Var) {
         }
 
         @Override // android.view.View.OnClickListener
@@ -54,12 +53,11 @@ public class cj1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.cj1$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9009b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9009b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -75,12 +73,11 @@ public class cj1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.cj1$c */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9010c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9010c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -107,7 +104,7 @@ public class cj1 {
         this.b = view;
         this.c = view2;
         this.o = ncovSkuBottomInfo;
-        view.setOnClickListener(new View$OnClickListenerC9008a(this));
+        view.setOnClickListener(new a(this));
         this.a = view.getContext();
         d();
     }
@@ -124,7 +121,7 @@ public class cj1 {
         this.g = (TextView) this.b.findViewById(R$id.tv_bottom_buy_tip);
         View findViewById = this.b.findViewById(R$id.layout_left);
         this.h = findViewById;
-        findViewById.setOnClickListener(new View$OnClickListenerC9009b());
+        findViewById.setOnClickListener(new b());
         this.i = (TextView) this.b.findViewById(R$id.tv_price);
         this.j = this.b.findViewById(R$id.layout_price_detail);
         this.k = (DMIconFontTextView) this.b.findViewById(R$id.view_jiantou);
@@ -132,7 +129,7 @@ public class cj1 {
         DMLabelView dMLabelView = (DMLabelView) this.b.findViewById(R$id.btn_buy);
         this.m = dMLabelView;
         dMLabelView.setLabelType(DMLabelType.LABEL_TYPE_BUYING).setLabelName("确定").setLabelTextSize(16.0f).setContentGravity(17).setCornerRadii(m62.a(this.a, 22.0f), m62.a(this.a, 22.0f), m62.a(this.a, 22.0f), m62.a(this.a, 2.0f));
-        this.m.setOnClickListener(new View$OnClickListenerC9010c());
+        this.m.setOnClickListener(new c());
         this.n = this.b.findViewById(R$id.view_translucent);
     }
 

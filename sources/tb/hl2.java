@@ -16,10 +16,9 @@ public class hl2 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.hl2$a */
     /* loaded from: classes5.dex */
-    public static class ThreadFactoryC9224a implements ThreadFactory {
-        ThreadFactoryC9224a() {
+    public static class a implements ThreadFactory {
+        a() {
         }
 
         @Override // java.util.concurrent.ThreadFactory
@@ -33,7 +32,7 @@ public class hl2 {
         ScheduledExecutorService scheduledExecutorService;
         synchronized (hl2.class) {
             if (b == null) {
-                b = Executors.newScheduledThreadPool(4, new ThreadFactoryC9224a());
+                b = Executors.newScheduledThreadPool(4, new a());
             }
             scheduledExecutorService = b;
         }

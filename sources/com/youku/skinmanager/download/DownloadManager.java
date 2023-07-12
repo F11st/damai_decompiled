@@ -7,7 +7,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
+import com.alibaba.security.realidentity.jsbridge.a;
 import com.youku.analytics.AnalyticsAgent;
 import com.youku.skinmanager.SkinManager;
 import com.youku.skinmanager.entity.SkinDTO;
@@ -56,7 +56,7 @@ public class DownloadManager {
                 DownloadManager.this.clear();
                 return;
             }
-            DownloadManager.this.mFinalDownloadPath = message.getData().getString(AbstractC3893a.V);
+            DownloadManager.this.mFinalDownloadPath = message.getData().getString(a.V);
             Log.d(DownloadManager.TAG, "get handler success msg, " + DownloadManager.this.mFinalDownloadPath);
             SkinManager.getInstance().loadSkin(DownloadManager.this.mSkinDto, DownloadManager.this.mFinalDownloadPath, null);
             if (DownloadManager.this.mSkinDto != null) {
@@ -143,7 +143,7 @@ public class DownloadManager {
                                                 DownloadManager.this.mHandler.sendEmptyMessage(4);
                                             } else {
                                                 Bundle bundle = new Bundle();
-                                                bundle.putString(AbstractC3893a.V, unZipFolder);
+                                                bundle.putString(a.V, unZipFolder);
                                                 Message obtainMessage = DownloadManager.this.mHandler.obtainMessage();
                                                 obtainMessage.what = 3;
                                                 obtainMessage.setData(bundle);

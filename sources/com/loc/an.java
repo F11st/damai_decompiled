@@ -62,12 +62,12 @@ public final class an extends y33 implements Thread.UncaughtExceptionHandler {
         }
     }
 
-    public static synchronized an g(Context context, u1 u1Var) throws C5844k {
+    public static synchronized an g(Context context, u1 u1Var) throws k {
         synchronized (an.class) {
             try {
                 if (u1Var != null) {
                     if (u1Var.a() == null || "".equals(u1Var.a())) {
-                        throw new C5844k("sdk name is invalid");
+                        throw new k("sdk name is invalid");
                     }
                     if (!f.add(Integer.valueOf(u1Var.hashCode()))) {
                         return (an) y33.c;
@@ -82,16 +82,16 @@ public final class an extends y33 implements Thread.UncaughtExceptionHandler {
                     y33Var2.c(u1Var, y33Var2.b);
                     return (an) y33.c;
                 }
-                throw new C5844k("sdk info is null");
+                throw new k("sdk info is null");
             } catch (Throwable th) {
                 throw th;
             }
         }
     }
 
-    public static void h(u1 u1Var, String str, C5844k c5844k) {
-        if (c5844k != null) {
-            j(u1Var, str, c5844k.c(), c5844k.d(), c5844k.e(), c5844k.b());
+    public static void h(u1 u1Var, String str, k kVar) {
+        if (kVar != null) {
+            j(u1Var, str, kVar.c(), kVar.d(), kVar.e(), kVar.b());
         }
     }
 
@@ -116,7 +116,7 @@ public final class an extends y33 implements Thread.UncaughtExceptionHandler {
                 if (executorService != null) {
                     executorService.shutdown();
                 }
-                C5887v.e();
+                v.e();
                 if (y33.c != null) {
                     Thread.UncaughtExceptionHandler defaultUncaughtExceptionHandler = Thread.getDefaultUncaughtExceptionHandler();
                     y33 y33Var = y33.c;
@@ -177,7 +177,7 @@ public final class an extends y33 implements Thread.UncaughtExceptionHandler {
     @Override // tb.y33
     public final void c(final u1 u1Var, final boolean z) {
         try {
-            C5866o0.f().d(new ck() { // from class: com.loc.an.1
+            o0.f().d(new ck() { // from class: com.loc.an.1
                 @Override // com.loc.ck
                 public final void a() {
                     try {

@@ -14,7 +14,7 @@ public class ReuseJSONArray extends JSONArray implements Reusable {
         while (it.hasNext()) {
             Object next = it.next();
             if (next instanceof Reusable) {
-                C3316a.a().offer((Reusable) next);
+                a.a().offer((Reusable) next);
             }
         }
         super.clear();

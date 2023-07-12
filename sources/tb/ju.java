@@ -32,9 +32,8 @@ public class ju extends DXWidgetNode {
     private JSONArray h;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ju$a */
     /* loaded from: classes4.dex */
-    public static class C9322a implements IDXBuilderWidgetNode {
+    public static class a implements IDXBuilderWidgetNode {
         private static transient /* synthetic */ IpChange $ipChange;
 
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode

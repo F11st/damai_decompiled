@@ -3,7 +3,6 @@ package com.xiaomi.push;
 import android.content.Context;
 import android.text.TextUtils;
 import com.alimm.xadsdk.request.builder.IRequestConst;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import java.util.Map;
 
 /* compiled from: Taobao */
@@ -19,7 +18,7 @@ public class ba implements au {
 
     private ba(Context context) {
         this.f121a = az.a(context);
-        AbstractC7535b.m586a("create id manager is: " + this.f120a);
+        com.xiaomi.channel.commonutils.logger.b.m586a("create id manager is: " + this.f120a);
     }
 
     public static ba a(Context context) {

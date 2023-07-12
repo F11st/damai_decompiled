@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeSource;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.fuseable.SimpleQueue;
@@ -22,7 +22,7 @@ import tb.jm;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeMergeArray<T> extends AbstractC8147b<T> {
+public final class MaybeMergeArray<T> extends b<T> {
     final MaybeSource<? extends T>[] sources;
 
     /* compiled from: Taobao */
@@ -346,12 +346,12 @@ public final class MaybeMergeArray<T> extends AbstractC8147b<T> {
         this.sources = maybeSourceArr;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         SimpleQueueWithConsumerIndex clqSimpleQueue;
         MaybeSource[] maybeSourceArr = this.sources;
         int length = maybeSourceArr.length;
-        if (length <= AbstractC8147b.bufferSize()) {
+        if (length <= b.bufferSize()) {
             clqSimpleQueue = new MpscFillOnceSimpleQueue(length);
         } else {
             clqSimpleQueue = new ClqSimpleQueue();

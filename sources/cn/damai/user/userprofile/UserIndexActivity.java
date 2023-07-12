@@ -23,9 +23,7 @@ import cn.damai.comment.bean.CommentSyncCircleBean;
 import cn.damai.comment.bean.CommentsItemBean;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
@@ -163,13 +161,12 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
     private boolean isAnimateIng = false;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.UserIndexActivity$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2744a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        View$OnClickListenerC2744a(String str) {
+        a(String str) {
             this.a = str;
         }
 
@@ -185,9 +182,8 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.UserIndexActivity$b */
     /* loaded from: classes9.dex */
-    public class C2745b implements AppBarLayout.OnOffsetChangedListener {
+    public class b implements AppBarLayout.OnOffsetChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
         final /* synthetic */ View b;
@@ -195,7 +191,7 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
         final /* synthetic */ TextView d;
         final /* synthetic */ View e;
 
-        C2745b(View view, View view2, View view3, TextView textView, View view4) {
+        b(View view, View view2, View view3, TextView textView, View view4) {
             this.a = view;
             this.b = view2;
             this.c = view3;
@@ -233,12 +229,11 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.UserIndexActivity$c */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2746c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2746c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -253,21 +248,19 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.UserIndexActivity$d */
     /* loaded from: classes9.dex */
-    public class C2747d extends jl {
+    public class d extends jl {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ List b;
         final /* synthetic */ ViewPager c;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.user.userprofile.UserIndexActivity$d$a */
         /* loaded from: classes17.dex */
-        public class View$OnClickListenerC2748a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ int a;
 
-            View$OnClickListenerC2748a(int i) {
+            a(int i) {
                 this.a = i;
             }
 
@@ -277,12 +270,12 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
                 if (AndroidInstantRuntime.support(ipChange, "-1455532568")) {
                     ipChange.ipc$dispatch("-1455532568", new Object[]{this, view});
                 } else {
-                    C2747d.this.c.setCurrentItem(this.a);
+                    d.this.c.setCurrentItem(this.a);
                 }
             }
         }
 
-        C2747d(List list, ViewPager viewPager) {
+        d(List list, ViewPager viewPager) {
             this.b = list;
             this.c = viewPager;
         }
@@ -330,18 +323,17 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
             pagerTitleView.setTextSize(13.0f);
             PagerTitleViewWarpper pagerTitleViewWarpper = new PagerTitleViewWarpper(UserIndexActivity.this);
             pagerTitleViewWarpper.setTitleView(pagerTitleView);
-            pagerTitleViewWarpper.setOnClickListener(new View$OnClickListenerC2748a(i));
+            pagerTitleViewWarpper.setOnClickListener(new a(i));
             return pagerTitleViewWarpper;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.UserIndexActivity$e */
     /* loaded from: classes9.dex */
-    public class C2749e implements AppBarLayout.OnOffsetChangedListener {
+    public class e implements AppBarLayout.OnOffsetChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2749e() {
+        e() {
         }
 
         @Override // com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener, com.google.android.material.appbar.AppBarLayout.BaseOnOffsetChangedListener
@@ -358,12 +350,11 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.UserIndexActivity$f */
     /* loaded from: classes9.dex */
-    public class C2750f implements LinearPullToRefreshView.OnRefreshListener {
+    public class f implements LinearPullToRefreshView.OnRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2750f() {
+        f() {
         }
 
         @Override // cn.damai.user.repertoite.view.LinearPullToRefreshView.OnRefreshListener
@@ -378,12 +369,11 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.UserIndexActivity$g */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2751g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2751g() {
+        g() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -398,13 +388,12 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.UserIndexActivity$h  reason: invalid class name */
     /* loaded from: classes17.dex */
-    public class animationAnimation$AnimationListenerC2752h implements Animation.AnimationListener {
+    public class h implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
         boolean a;
 
-        public animationAnimation$AnimationListenerC2752h(boolean z) {
+        public h(boolean z) {
             this.a = z;
         }
 
@@ -510,7 +499,7 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
         } else if (!this.isAnimateIng && this.viewModel.showPublish && this.publish.getVisibility() == 0) {
             TranslateAnimation translateAnimation = new TranslateAnimation(1, 0.0f, 1, 0.0f, 1, 0.0f, 1, 2.0f);
             translateAnimation.setDuration(600L);
-            translateAnimation.setAnimationListener(new animationAnimation$AnimationListenerC2752h(true));
+            translateAnimation.setAnimationListener(new h(true));
             translateAnimation.setFillAfter(true);
             this.publish.startAnimation(translateAnimation);
         }
@@ -527,7 +516,7 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
                 findViewById(R$id.user_publish).setVisibility(0);
                 findViewById(R$id.user_publish_icon).setVisibility(0);
                 ((TextView) findViewById(R$id.user_publish_tv)).setText("发评价");
-                findViewById(R$id.user_publish_click).setOnClickListener(new View$OnClickListenerC2751g());
+                findViewById(R$id.user_publish_click).setOnClickListener(new g());
                 return;
             }
             this.viewModel.showPublish = false;
@@ -537,7 +526,7 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
             findViewById(R$id.user_publish).setVisibility(0);
             findViewById(R$id.user_publish_icon).setVisibility(8);
             ((TextView) findViewById(R$id.user_publish_tv)).setText("查看我的评价");
-            findViewById(R$id.user_publish_click).setOnClickListener(new View$OnClickListenerC2744a(str));
+            findViewById(R$id.user_publish_click).setOnClickListener(new a(str));
         }
     }
 
@@ -547,8 +536,8 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
             ipChange.ipc$dispatch("-306059783", new Object[]{this});
             return;
         }
-        ((AppBarLayout) findViewById(R$id.appbar_layout)).addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new C2745b(findViewById(R$id.rl_header_c), findViewById(R$id.rl_header_b), findViewById(R$id.rl_header_b_other), (TextView) findViewById(R$id.bname_titile), findViewById(R$id.tv_attention)));
-        findViewById(R$id.tv_goback).setOnClickListener(new View$OnClickListenerC2746c());
+        ((AppBarLayout) findViewById(R$id.appbar_layout)).addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new b(findViewById(R$id.rl_header_c), findViewById(R$id.rl_header_b), findViewById(R$id.rl_header_b_other), (TextView) findViewById(R$id.bname_titile), findViewById(R$id.tv_attention)));
+        findViewById(R$id.tv_goback).setOnClickListener(new c());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -568,7 +557,7 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
             ((View) magicIndicator.getParent().getParent()).setVisibility(0);
         }
         ViewPager viewPager = (ViewPager) findViewById(R$id.view_pager);
-        commonNavigator.setAdapter(new C2747d(tabs, viewPager));
+        commonNavigator.setAdapter(new d(tabs, viewPager));
         magicIndicator.setNavigator(commonNavigator);
         gy2.a(magicIndicator, viewPager);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() { // from class: cn.damai.user.userprofile.UserIndexActivity.6
@@ -577,10 +566,10 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
             /* compiled from: Taobao */
             /* renamed from: cn.damai.user.userprofile.UserIndexActivity$6$a */
             /* loaded from: classes17.dex */
-            public class View$OnClickListenerC2743a implements View.OnClickListener {
+            public class a implements View.OnClickListener {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                View$OnClickListenerC2743a() {
+                a() {
                 }
 
                 @Override // android.view.View.OnClickListener
@@ -603,10 +592,10 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
             }
 
             @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener
-            public void onPageScrolled(int i, float f, int i2) {
+            public void onPageScrolled(int i, float f2, int i2) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "-839945003")) {
-                    ipChange2.ipc$dispatch("-839945003", new Object[]{this, Integer.valueOf(i), Float.valueOf(f), Integer.valueOf(i2)});
+                    ipChange2.ipc$dispatch("-839945003", new Object[]{this, Integer.valueOf(i), Float.valueOf(f2), Integer.valueOf(i2)});
                 }
             }
 
@@ -649,7 +638,7 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
                         }
                         UserIndexActivity.this.findViewById(R$id.user_publish_icon).setVisibility(8);
                         ((TextView) UserIndexActivity.this.findViewById(R$id.user_publish_tv)).setText("发圈子");
-                        UserIndexActivity.this.findViewById(R$id.user_publish_click).setOnClickListener(new View$OnClickListenerC2743a());
+                        UserIndexActivity.this.findViewById(R$id.user_publish_click).setOnClickListener(new a());
                     } else {
                         UserIndexActivity userIndexActivity4 = UserIndexActivity.this;
                         userIndexActivity4.viewModel.showPublish = false;
@@ -672,7 +661,7 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
                         if (UserIndexActivity.this.viewModel.getUserInfoValue() != null) {
                             utArgs.put(u12.VIEW_TYPE, UserIndexActivity.this.viewModel.getUserInfoValue().mySelf ? "1" : "0");
                         }
-                        C0529c.e().x(new C0528b().e("business_homepage", "center", str2, utArgs, Boolean.FALSE));
+                        cn.damai.common.user.c.e().x(new cn.damai.common.user.b().e("business_homepage", "center", str2, utArgs, Boolean.FALSE));
                     }
                 }
             }
@@ -774,10 +763,10 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
                                 return;
                             case 6:
                                 if (UserIndexActivity.this.viewModel.getUserInfoValue() != null) {
-                                    C0529c e = C0529c.e();
-                                    u12 h = u12.h();
+                                    cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
+                                    u12 h2 = u12.h();
                                     UserIndexViewModel userIndexViewModel = UserIndexActivity.this.viewModel;
-                                    e.x(h.g(userIndexViewModel.userid, userIndexViewModel.usertype, userIndexViewModel.getUserInfoValue().mySelf));
+                                    e2.x(h2.g(userIndexViewModel.userid, userIndexViewModel.usertype, userIndexViewModel.getUserInfoValue().mySelf));
                                 }
                                 String str2 = UserIndexActivity.this.viewModel.getUserInfoValue().headImg;
                                 if (str2 != null && str2.contains("?")) {
@@ -956,7 +945,7 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
         } else {
             TranslateAnimation translateAnimation = new TranslateAnimation(1, 0.0f, 1, 0.0f, 1, 1.0f, 1, 0.0f);
             translateAnimation.setDuration(600L);
-            translateAnimation.setAnimationListener(new animationAnimation$AnimationListenerC2752h(false));
+            translateAnimation.setAnimationListener(new h(false));
             translateAnimation.setFillAfter(true);
             this.publish.startAnimation(translateAnimation);
         }
@@ -1015,8 +1004,8 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
         if (headerLayout != null) {
             headerLayout.setBackgroundResource(cn.damai.homepage.R$color.white);
         }
-        ((AppBarLayout) findViewById(R$id.appbar_layout)).addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new C2749e());
-        this.mRefreshView.setOnRefreshListener(new C2750f());
+        ((AppBarLayout) findViewById(R$id.appbar_layout)).addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new e());
+        this.mRefreshView.setOnRefreshListener(new f());
     }
 
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, android.app.Activity
@@ -1106,7 +1095,7 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
             initRefreshHeader();
             refresh();
             observeClick();
-            setDamaiUTKeyBuilder(new C0525a.C0527b().i(iv2.USER_HOME_PAGE));
+            setDamaiUTKeyBuilder(new a.b().i(iv2.USER_HOME_PAGE));
         }
     }
 
@@ -1118,10 +1107,10 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
             ipChange.ipc$dispatch("-1889473041", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i), Integer.valueOf(i2)});
         } else if (commentsItemBean == null || commentsItemBean.getUserDO() == null || (userIndexViewModel = this.viewModel) == null || userIndexViewModel.getUserInfoValue() == null) {
         } else {
-            C0529c e = C0529c.e();
-            u12 h = u12.h();
+            cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
+            u12 h2 = u12.h();
             UserIndexViewModel userIndexViewModel2 = this.viewModel;
-            e.x(h.k(z, userIndexViewModel2.userid, userIndexViewModel2.usertype, userIndexViewModel2.getUserInfoValue().mySelf, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getTargetId(), commentsItemBean.getCommentType(), i));
+            e2.x(h2.k(z, userIndexViewModel2.userid, userIndexViewModel2.usertype, userIndexViewModel2.getUserInfoValue().mySelf, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getTargetId(), commentsItemBean.getCommentType(), i));
         }
     }
 
@@ -1133,10 +1122,10 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
             ipChange.ipc$dispatch("1561574572", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
         } else if (commentsItemBean == null || commentsItemBean.getUserDO() == null || (userIndexViewModel = this.viewModel) == null || userIndexViewModel.getUserInfoValue() == null) {
         } else {
-            C0529c e = C0529c.e();
-            u12 h = u12.h();
+            cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
+            u12 h2 = u12.h();
             UserIndexViewModel userIndexViewModel2 = this.viewModel;
-            e.x(h.i(z, userIndexViewModel2.userid, userIndexViewModel2.usertype, userIndexViewModel2.getUserInfoValue().mySelf, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getTargetId(), commentsItemBean.getCommentType(), i));
+            e2.x(h2.i(z, userIndexViewModel2.userid, userIndexViewModel2.usertype, userIndexViewModel2.getUserInfoValue().mySelf, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getTargetId(), commentsItemBean.getCommentType(), i));
         }
     }
 
@@ -1148,10 +1137,10 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
             ipChange.ipc$dispatch("2058548124", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
         } else if (commentsItemBean == null || commentsItemBean.getUserDO() == null || (userIndexViewModel = this.viewModel) == null || userIndexViewModel.getUserInfoValue() == null) {
         } else {
-            C0529c e = C0529c.e();
-            u12 h = u12.h();
+            cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
+            u12 h2 = u12.h();
             UserIndexViewModel userIndexViewModel2 = this.viewModel;
-            e.x(h.j(userIndexViewModel2.userid, userIndexViewModel2.usertype, userIndexViewModel2.getUserInfoValue().mySelf, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getTargetId(), commentsItemBean.getCommentType()));
+            e2.x(h2.j(userIndexViewModel2.userid, userIndexViewModel2.usertype, userIndexViewModel2.getUserInfoValue().mySelf, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getTargetId(), commentsItemBean.getCommentType()));
         }
     }
 
@@ -1163,10 +1152,10 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
             ipChange.ipc$dispatch("633746686", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
         } else if (commentsItemBean == null || commentsItemBean.getUserDO() == null || (userIndexViewModel = this.viewModel) == null || userIndexViewModel.getUserInfoValue() == null || commentsItemBean.getPraiseInfo() == null || !commentsItemBean.getPraiseInfo().isHasPraised()) {
         } else {
-            C0529c e = C0529c.e();
-            u12 h = u12.h();
+            cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
+            u12 h2 = u12.h();
             UserIndexViewModel userIndexViewModel2 = this.viewModel;
-            e.x(h.l(z, userIndexViewModel2.userid, userIndexViewModel2.usertype, userIndexViewModel2.getUserInfoValue().mySelf, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getTargetId(), commentsItemBean.getCommentType(), i));
+            e2.x(h2.l(z, userIndexViewModel2.userid, userIndexViewModel2.usertype, userIndexViewModel2.getUserInfoValue().mySelf, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getTargetId(), commentsItemBean.getCommentType(), i));
         }
     }
 
@@ -1178,10 +1167,10 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
             ipChange.ipc$dispatch("-924689485", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
         } else if (commentsItemBean == null || commentsItemBean.getUserDO() == null || (userIndexViewModel = this.viewModel) == null || userIndexViewModel.getUserInfoValue() == null) {
         } else {
-            C0529c e = C0529c.e();
-            u12 h = u12.h();
+            cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
+            u12 h2 = u12.h();
             UserIndexViewModel userIndexViewModel2 = this.viewModel;
-            e.x(h.n(z, userIndexViewModel2.userid, userIndexViewModel2.usertype, userIndexViewModel2.getUserInfoValue().mySelf, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getTargetId(), commentsItemBean.getCommentType(), i));
+            e2.x(h2.n(z, userIndexViewModel2.userid, userIndexViewModel2.usertype, userIndexViewModel2.getUserInfoValue().mySelf, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getTargetId(), commentsItemBean.getCommentType(), i));
         }
     }
 
@@ -1195,10 +1184,10 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
             ipChange.ipc$dispatch("34483380", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
         } else if (commentsItemBean == null || commentsItemBean.getUserDO() == null || (userIndexViewModel = this.viewModel) == null || userIndexViewModel.getUserInfoValue() == null || (syncCircle = commentsItemBean.getSyncCircle()) == null || syncCircle.isEmpty() || (commentSyncCircleBean = syncCircle.get(0)) == null) {
         } else {
-            C0529c e = C0529c.e();
-            u12 h = u12.h();
+            cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
+            u12 h2 = u12.h();
             UserIndexViewModel userIndexViewModel2 = this.viewModel;
-            e.x(h.f(z, userIndexViewModel2.userid, userIndexViewModel2.usertype, userIndexViewModel2.getUserInfoValue().mySelf, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getTargetId(), commentsItemBean.getCommentType(), commentSyncCircleBean.getCircleId(), i));
+            e2.x(h2.f(z, userIndexViewModel2.userid, userIndexViewModel2.usertype, userIndexViewModel2.getUserInfoValue().mySelf, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getTargetId(), commentsItemBean.getCommentType(), commentSyncCircleBean.getCircleId(), i));
         }
     }
 
@@ -1218,10 +1207,10 @@ public class UserIndexActivity extends SimpleBaseActivity implements EvaluateIte
             ipChange.ipc$dispatch("1046544742", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
         } else if (commentsItemBean == null || commentsItemBean.getUserDO() == null || (userIndexViewModel = this.viewModel) == null || userIndexViewModel.getUserInfoValue() == null) {
         } else {
-            C0529c e = C0529c.e();
-            u12 h = u12.h();
+            cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
+            u12 h2 = u12.h();
             UserIndexViewModel userIndexViewModel2 = this.viewModel;
-            e.x(h.p(z, userIndexViewModel2.userid, userIndexViewModel2.usertype, userIndexViewModel2.getUserInfoValue().mySelf, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getTargetId(), commentsItemBean.getCommentType(), i));
+            e2.x(h2.p(z, userIndexViewModel2.userid, userIndexViewModel2.usertype, userIndexViewModel2.getUserInfoValue().mySelf, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getTargetId(), commentsItemBean.getCommentType(), i));
         }
     }
 

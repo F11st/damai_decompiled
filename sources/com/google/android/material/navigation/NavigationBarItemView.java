@@ -188,7 +188,7 @@ public abstract class NavigationBarItemView extends FrameLayout implements MenuV
 
     @DrawableRes
     protected int getItemBackgroundResId() {
-        return R.C4816drawable.mtrl_navigation_bar_item_background;
+        return R.drawable.mtrl_navigation_bar_item_background;
     }
 
     @Override // androidx.appcompat.view.menu.MenuView.ItemView

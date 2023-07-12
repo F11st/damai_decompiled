@@ -3,7 +3,7 @@ package com.tencent.open.web.security;
 import android.content.Context;
 import com.tencent.connect.auth.AuthAgent;
 import com.tencent.open.log.SLog;
-import com.tencent.open.utils.C7119g;
+import com.tencent.open.utils.g;
 import java.io.File;
 
 /* compiled from: Taobao */
@@ -28,7 +28,7 @@ public class JniInterface {
             return;
         }
         try {
-            Context a = C7119g.a();
+            Context a = g.a();
             if (a != null) {
                 if (new File(a.getFilesDir().toString() + "/" + AuthAgent.SECURE_LIB_NAME).exists()) {
                     System.load(a.getFilesDir().toString() + "/" + AuthAgent.SECURE_LIB_NAME);

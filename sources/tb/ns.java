@@ -41,9 +41,8 @@ public class ns extends Drawable {
     private RectF r;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ns$b */
     /* loaded from: classes8.dex */
-    public static class C9481b {
+    public static class b {
         private static transient /* synthetic */ IpChange $ipChange;
         private int e;
         private int f;
@@ -59,7 +58,7 @@ public class ns extends Drawable {
         private int l = -1;
         private int m = -1;
 
-        public C9481b() {
+        public b() {
             this.e = 0;
             this.f = 0;
             this.e = 0;
@@ -73,73 +72,73 @@ public class ns extends Drawable {
             return AndroidInstantRuntime.support(ipChange, "1140439682") ? (ns) ipChange.ipc$dispatch("1140439682", new Object[]{this}) : new ns(this.a, this.g, this.b, this.c, this.d, this.e, this.f, this.j, this.i, this.k, this.h, this.m, this.l);
         }
 
-        public C9481b b(int i) {
+        public b b(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-223377797")) {
-                return (C9481b) ipChange.ipc$dispatch("-223377797", new Object[]{this, Integer.valueOf(i)});
+                return (b) ipChange.ipc$dispatch("-223377797", new Object[]{this, Integer.valueOf(i)});
             }
             this.g[0] = i;
             return this;
         }
 
-        public C9481b c(int[] iArr) {
+        public b c(int[] iArr) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "944433640")) {
-                return (C9481b) ipChange.ipc$dispatch("944433640", new Object[]{this, iArr});
+                return (b) ipChange.ipc$dispatch("944433640", new Object[]{this, iArr});
             }
             this.g = iArr;
             return this;
         }
 
-        public C9481b d(int i) {
+        public b d(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1909133396")) {
-                return (C9481b) ipChange.ipc$dispatch("1909133396", new Object[]{this, Integer.valueOf(i)});
+                return (b) ipChange.ipc$dispatch("1909133396", new Object[]{this, Integer.valueOf(i)});
             }
             this.e = i;
             return this;
         }
 
-        public C9481b e(int i) {
+        public b e(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-21485709")) {
-                return (C9481b) ipChange.ipc$dispatch("-21485709", new Object[]{this, Integer.valueOf(i)});
+                return (b) ipChange.ipc$dispatch("-21485709", new Object[]{this, Integer.valueOf(i)});
             }
             this.f = i;
             return this;
         }
 
-        public C9481b f(int i) {
+        public b f(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "26640278")) {
-                return (C9481b) ipChange.ipc$dispatch("26640278", new Object[]{this, Integer.valueOf(i)});
+                return (b) ipChange.ipc$dispatch("26640278", new Object[]{this, Integer.valueOf(i)});
             }
             this.c = i;
             return this;
         }
 
-        public C9481b g(int i) {
+        public b g(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "932663853")) {
-                return (C9481b) ipChange.ipc$dispatch("932663853", new Object[]{this, Integer.valueOf(i)});
+                return (b) ipChange.ipc$dispatch("932663853", new Object[]{this, Integer.valueOf(i)});
             }
             this.d = i;
             return this;
         }
 
-        public C9481b h(int i) {
+        public b h(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-488094312")) {
-                return (C9481b) ipChange.ipc$dispatch("-488094312", new Object[]{this, Integer.valueOf(i)});
+                return (b) ipChange.ipc$dispatch("-488094312", new Object[]{this, Integer.valueOf(i)});
             }
             this.a = i;
             return this;
         }
 
-        public C9481b i(int i) {
+        public b i(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1099985882")) {
-                return (C9481b) ipChange.ipc$dispatch("-1099985882", new Object[]{this, Integer.valueOf(i)});
+                return (b) ipChange.ipc$dispatch("-1099985882", new Object[]{this, Integer.valueOf(i)});
             }
             this.b = i;
             return this;
@@ -152,9 +151,9 @@ public class ns extends Drawable {
             ipChange.ipc$dispatch("-592344510", new Object[]{view, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4), Integer.valueOf(i5)});
             return;
         }
-        ns a = new C9481b().i(i).f(i2).g(i3).d(i4).e(i5).a();
+        ns a2 = new b().i(i).f(i2).g(i3).d(i4).e(i5).a();
         view.setLayerType(1, null);
-        ViewCompat.setBackground(view, a);
+        ViewCompat.setBackground(view, a2);
     }
 
     public static void b(View view, int i, int i2, int i3, int i4, int i5, int i6) {
@@ -163,9 +162,9 @@ public class ns extends Drawable {
             ipChange.ipc$dispatch("-1182781183", new Object[]{view, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4), Integer.valueOf(i5), Integer.valueOf(i6)});
             return;
         }
-        ns a = new C9481b().b(i).i(i2).f(i3).g(i4).d(i5).e(i6).a();
+        ns a2 = new b().b(i).i(i2).f(i3).g(i4).d(i5).e(i6).a();
         view.setLayerType(1, null);
-        ViewCompat.setBackground(view, a);
+        ViewCompat.setBackground(view, a2);
     }
 
     public static void c(View view, int i, int i2, int i3, int i4, int i5, int i6, int i7) {
@@ -174,9 +173,9 @@ public class ns extends Drawable {
             ipChange.ipc$dispatch("1988518434", new Object[]{view, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4), Integer.valueOf(i5), Integer.valueOf(i6), Integer.valueOf(i7)});
             return;
         }
-        ns a = new C9481b().h(i).b(i2).i(i3).f(i4).g(i5).d(i6).e(i7).a();
+        ns a2 = new b().h(i).b(i2).i(i3).f(i4).g(i5).d(i6).e(i7).a();
         view.setLayerType(1, null);
-        ViewCompat.setBackground(view, a);
+        ViewCompat.setBackground(view, a2);
     }
 
     public static void d(View view, int[] iArr, int i, int i2, int i3, int i4, int i5) {
@@ -185,9 +184,9 @@ public class ns extends Drawable {
             ipChange.ipc$dispatch("-480890828", new Object[]{view, iArr, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4), Integer.valueOf(i5)});
             return;
         }
-        ns a = new C9481b().c(iArr).i(i).f(i2).g(i3).d(i4).e(i5).a();
+        ns a2 = new b().c(iArr).i(i).f(i2).g(i3).d(i4).e(i5).a();
         view.setLayerType(1, null);
-        ViewCompat.setBackground(view, a);
+        ViewCompat.setBackground(view, a2);
     }
 
     private void e(RectF rectF) {

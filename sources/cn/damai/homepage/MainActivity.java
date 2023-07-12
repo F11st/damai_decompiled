@@ -32,12 +32,10 @@ import cn.damai.common.AppConfig;
 import cn.damai.common.DamaiConstants;
 import cn.damai.common.OrangeConfigCenter;
 import cn.damai.common.app.widget.DMDialog;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.base.PermissionsHelper;
@@ -48,11 +46,9 @@ import cn.damai.commonbusiness.home.bean.HomeContentFloatBean;
 import cn.damai.commonbusiness.home.bean.HomeFloatResBean;
 import cn.damai.commonbusiness.home.bean.TabExtraBean;
 import cn.damai.commonbusiness.home.request.HomeFloatLayerRequest;
-import cn.damai.commonbusiness.pageut.C0726a;
 import cn.damai.commonbusiness.pageut.PageUtExecutor;
 import cn.damai.commonbusiness.screenshot.ScreenShotDetector;
 import cn.damai.commonbusiness.tab.BottomSheetBean;
-import cn.damai.commonbusiness.tab.C0938a;
 import cn.damai.commonbusiness.tab.DamaiTabViewHelper;
 import cn.damai.commonbusiness.tab.DamaiTabbarManager;
 import cn.damai.commonbusiness.tab.TabItem;
@@ -120,7 +116,6 @@ import java.util.Map;
 import java.util.TimeZone;
 import org.apache.commons.codec.digest.MessageDigestAlgorithms;
 import org.jetbrains.annotations.NotNull;
-import tb.C9021d;
 import tb.ay0;
 import tb.b03;
 import tb.c80;
@@ -215,7 +210,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     long mExitTime = -1;
     public MainAlertEntity mMainAlertEntity = null;
     Map<String, Map> fragmentPropertiesMap = new HashMap();
-    private CityLocationUtil.LocaltionListener mLocaltionListener = new C1124p();
+    private CityLocationUtil.LocaltionListener mLocaltionListener = new p();
 
     /* compiled from: Taobao */
     /* renamed from: cn.damai.homepage.MainActivity$25  reason: invalid class name */
@@ -227,10 +222,10 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         /* compiled from: Taobao */
         /* renamed from: cn.damai.homepage.MainActivity$25$a */
         /* loaded from: classes5.dex */
-        public class C1103a implements DMProtocolDialog.OnDialogShowTimeListener {
+        public class a implements DMProtocolDialog.OnDialogShowTimeListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1103a() {
+            a() {
             }
 
             @Override // cn.damai.uikit.view.DMProtocolDialog.OnDialogShowTimeListener
@@ -248,10 +243,10 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         /* compiled from: Taobao */
         /* renamed from: cn.damai.homepage.MainActivity$25$b */
         /* loaded from: classes14.dex */
-        public class DialogInterface$OnDismissListenerC1104b implements DialogInterface.OnDismissListener {
+        public class b implements DialogInterface.OnDismissListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnDismissListenerC1104b() {
+            b() {
             }
 
             @Override // android.content.DialogInterface.OnDismissListener
@@ -270,11 +265,11 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1816009613")) {
-                ipChange.ipc$dispatch("1816009613", new Object[]{this, c0502e});
-            } else if (MainActivity.this.isActivityFinsihed() || !MainActivity.this.isActivityForeground() || c0502e.b == null) {
+                ipChange.ipc$dispatch("1816009613", new Object[]{this, eVar});
+            } else if (MainActivity.this.isActivityFinsihed() || !MainActivity.this.isActivityForeground() || eVar.b == null) {
                 MainActivity.this.checkUpdate();
             } else {
                 List<MainAlertEntity.MainAlertContentListItem> list = this.a.contentList;
@@ -295,7 +290,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
                     }
                     arrayList.add(ya0Var);
                 }
-                DMProtocolDialog n = new DMProtocolDialog(MainActivity.this).r(DMProtocolDialog.DMDialogTheme.THEME_DNA).o(arrayList).m(c0502e.b).p(new DMProtocolDialog.OnClickListener() { // from class: cn.damai.homepage.MainActivity.25.1
+                DMProtocolDialog n = new DMProtocolDialog(MainActivity.this).r(DMProtocolDialog.DMDialogTheme.THEME_DNA).o(arrayList).m(eVar.b).p(new DMProtocolDialog.OnClickListener() { // from class: cn.damai.homepage.MainActivity.25.1
                     private static transient /* synthetic */ IpChange $ipChange;
 
                     @Override // cn.damai.uikit.view.DMProtocolDialog.OnClickListener
@@ -304,7 +299,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
                         if (AndroidInstantRuntime.support(ipChange2, "337640841")) {
                             ipChange2.ipc$dispatch("337640841", new Object[]{this});
                         } else {
-                            C0529c.e().x(py0.I().z(String.valueOf(MainActivity.this.mMainAlertEntity.item.circleId), "1", 1, null));
+                            cn.damai.common.user.c.e().x(py0.I().z(String.valueOf(MainActivity.this.mMainAlertEntity.item.circleId), "1", 1, null));
                         }
                     }
 
@@ -314,7 +309,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
                         if (AndroidInstantRuntime.support(ipChange2, "-820608717")) {
                             ipChange2.ipc$dispatch("-820608717", new Object[]{this, dialogInterface, Boolean.valueOf(z)});
                         } else if (z) {
-                            C0529c.e().x(py0.I().z(String.valueOf(MainActivity.this.mMainAlertEntity.item.circleId), "1", 0, null));
+                            cn.damai.common.user.c.e().x(py0.I().z(String.valueOf(MainActivity.this.mMainAlertEntity.item.circleId), "1", 0, null));
                             SetupPermissionListRequest setupPermissionListRequest = new SetupPermissionListRequest();
                             HashMap hashMap = new HashMap();
                             hashMap.put("2", "1");
@@ -365,26 +360,25 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
                         }
                     }
                 }).n(false);
-                n.q(new C1103a());
-                n.setOnDismissListener(new DialogInterface$OnDismissListenerC1104b());
+                n.q(new a());
+                n.setOnDismissListener(new b());
                 n.show();
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$a */
     /* loaded from: classes5.dex */
-    public class C1105a implements MemberGuideDialogManger.IMemberDialogDispatcher {
+    public class a implements MemberGuideDialogManger.IMemberDialogDispatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.homepage.MainActivity$a$a */
+        /* renamed from: cn.damai.homepage.MainActivity$a$a  reason: collision with other inner class name */
         /* loaded from: classes14.dex */
-        public class DialogInterface$OnDismissListenerC1106a implements DialogInterface.OnDismissListener {
+        public class DialogInterface$OnDismissListenerC0048a implements DialogInterface.OnDismissListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnDismissListenerC1106a() {
+            DialogInterface$OnDismissListenerC0048a() {
             }
 
             @Override // android.content.DialogInterface.OnDismissListener
@@ -398,7 +392,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
             }
         }
 
-        C1105a() {
+        a() {
         }
 
         @Override // cn.damai.homepage.util.MemberGuideDialogManger.IMemberDialogDispatcher
@@ -408,18 +402,17 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
                 ipChange.ipc$dispatch("176229547", new Object[]{this, dialog});
                 return;
             }
-            dialog.setOnDismissListener(new DialogInterface$OnDismissListenerC1106a());
+            dialog.setOnDismissListener(new DialogInterface$OnDismissListenerC0048a());
             dialog.show();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$b */
     /* loaded from: classes5.dex */
-    public class C1107b implements Action<HomePageRecentBean.Labels.HomePageRecentItems> {
+    public class b implements Action<HomePageRecentBean.Labels.HomePageRecentItems> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1107b() {
+        b() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -435,13 +428,12 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$c */
     /* loaded from: classes5.dex */
-    public class C1108c implements GuideUtProvider {
+    public class c implements GuideUtProvider {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C1108c(MainActivity mainActivity, String str) {
+        c(MainActivity mainActivity, String str) {
             this.a = str;
         }
 
@@ -480,14 +472,13 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$d */
     /* loaded from: classes5.dex */
-    public class C1109d implements ImageDownLoader.AsyncImageLoaderListener {
+    public class d implements ImageDownLoader.AsyncImageLoaderListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ BottomSheetBean a;
         final /* synthetic */ ImageDownLoader b;
 
-        C1109d(BottomSheetBean bottomSheetBean, ImageDownLoader imageDownLoader) {
+        d(BottomSheetBean bottomSheetBean, ImageDownLoader imageDownLoader) {
             this.a = bottomSheetBean;
             this.b = imageDownLoader;
         }
@@ -508,14 +499,13 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$e */
     /* loaded from: classes5.dex */
-    public class C1110e implements ImageDownLoader.AsyncImageLoaderListener {
+    public class e implements ImageDownLoader.AsyncImageLoaderListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ BottomSheetBean a;
         final /* synthetic */ ImageDownLoader b;
 
-        C1110e(BottomSheetBean bottomSheetBean, ImageDownLoader imageDownLoader) {
+        e(BottomSheetBean bottomSheetBean, ImageDownLoader imageDownLoader) {
             this.a = bottomSheetBean;
             this.b = imageDownLoader;
         }
@@ -536,14 +526,13 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$f */
     /* loaded from: classes5.dex */
-    public class C1111f implements ImageDownLoader.AsyncImageLoaderListener {
+    public class f implements ImageDownLoader.AsyncImageLoaderListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ BottomSheetBean a;
         final /* synthetic */ ImageDownLoader b;
 
-        C1111f(BottomSheetBean bottomSheetBean, ImageDownLoader imageDownLoader) {
+        f(BottomSheetBean bottomSheetBean, ImageDownLoader imageDownLoader) {
             this.a = bottomSheetBean;
             this.b = imageDownLoader;
         }
@@ -564,12 +553,11 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$g */
     /* loaded from: classes5.dex */
-    public class C1112g implements IResponsivePage {
+    public class g implements IResponsivePage {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1112g(MainActivity mainActivity) {
+        g(MainActivity mainActivity) {
         }
 
         @Override // com.alibaba.pictures.responsive.page.IResponsivePage
@@ -582,14 +570,13 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$h */
     /* loaded from: classes14.dex */
-    public class DialogInterface$OnClickListenerC1113h implements DialogInterface.OnClickListener {
+    public class h implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ boolean b;
 
-        DialogInterface$OnClickListenerC1113h(String str, boolean z) {
+        h(String str, boolean z) {
             this.a = str;
             this.b = z;
         }
@@ -609,12 +596,11 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$i */
     /* loaded from: classes14.dex */
-    public class DialogInterface$OnDismissListenerC1114i implements DialogInterface.OnDismissListener {
+    public class i implements DialogInterface.OnDismissListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnDismissListenerC1114i() {
+        i() {
         }
 
         @Override // android.content.DialogInterface.OnDismissListener
@@ -629,12 +615,11 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$j */
     /* loaded from: classes5.dex */
-    public class C1115j implements HomepageEvaluateDialog.OnUserRejectListener {
+    public class j implements HomepageEvaluateDialog.OnUserRejectListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1115j() {
+        j() {
         }
 
         @Override // cn.damai.homepage.ui.view.HomepageEvaluateDialog.OnUserRejectListener
@@ -651,19 +636,18 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$k */
     /* loaded from: classes5.dex */
-    public class C1116k implements DMImageCreator.DMImageFailListener {
+    public class k implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1116k() {
+        k() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-762690310")) {
-                ipChange.ipc$dispatch("-762690310", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-762690310", new Object[]{this, dVar});
             } else {
                 MainActivity.this.checkUpdate();
             }
@@ -671,19 +655,17 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$l */
     /* loaded from: classes5.dex */
-    public class C1117l implements DMImageCreator.DMImageSuccListener {
+    public class l implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ MainAlertEntity.MainAlertModel a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.homepage.MainActivity$l$a */
         /* loaded from: classes14.dex */
-        public class View$OnClickListenerC1118a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC1118a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -693,18 +675,17 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
                     ipChange.ipc$dispatch("1550059607", new Object[]{this, view});
                 } else if (MainActivity.this.mAdView == null || !MainAlertEntity.PICK_TYPE_CALLBACK.equals(MainActivity.this.mMainAlertEntity.item.pkType)) {
                 } else {
-                    C0529c.e().x(py0.I().z(String.valueOf(MainActivity.this.mMainAlertEntity.item.circleId), "0", 1, C1117l.this.a.imageUrl));
+                    cn.damai.common.user.c.e().x(py0.I().z(String.valueOf(MainActivity.this.mMainAlertEntity.item.circleId), "0", 1, l.this.a.imageUrl));
                 }
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.homepage.MainActivity$l$b */
         /* loaded from: classes5.dex */
-        public class C1119b implements TDialog.OnDialogShowTimeListener {
+        public class b implements TDialog.OnDialogShowTimeListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1119b() {
+            b() {
             }
 
             @Override // cn.damai.uikit.util.TDialog.OnDialogShowTimeListener
@@ -714,22 +695,21 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
                     ipChange.ipc$dispatch("-115408847", new Object[]{this, Long.valueOf(j)});
                 } else if (MainAlertEntity.PICK_TYPE_CALLBACK.equals(MainActivity.this.mMainAlertEntity.item.pkType)) {
                     MainAlertEntity.MainAlertModel mainAlertModel = MainActivity.this.mMainAlertEntity.item;
-                    py0.p(j, mainAlertModel.schema, String.valueOf(mainAlertModel.circleId), "0", C1117l.this.a.imageUrl);
+                    py0.p(j, mainAlertModel.schema, String.valueOf(mainAlertModel.circleId), "0", l.this.a.imageUrl);
                 } else {
-                    C1117l c1117l = C1117l.this;
+                    l lVar = l.this;
                     MainAlertEntity.MainAlertModel mainAlertModel2 = MainActivity.this.mMainAlertEntity.item;
-                    py0.o(j, mainAlertModel2.schema, mainAlertModel2.scm, c1117l.a.imageUrl);
+                    py0.o(j, mainAlertModel2.schema, mainAlertModel2.scm, lVar.a.imageUrl);
                 }
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.homepage.MainActivity$l$c */
         /* loaded from: classes14.dex */
-        public class DialogInterface$OnDismissListenerC1120c implements DialogInterface.OnDismissListener {
+        public class c implements DialogInterface.OnDismissListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnDismissListenerC1120c() {
+            c() {
             }
 
             @Override // android.content.DialogInterface.OnDismissListener
@@ -743,41 +723,40 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
             }
         }
 
-        C1117l(MainAlertEntity.MainAlertModel mainAlertModel) {
+        l(MainAlertEntity.MainAlertModel mainAlertModel) {
             this.a = mainAlertModel;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-8220976")) {
-                ipChange.ipc$dispatch("-8220976", new Object[]{this, c0502e});
-            } else if (MainActivity.this.isActivityFinsihed() || !MainActivity.this.isActivityForeground() || (bitmap = c0502e.b) == null) {
+                ipChange.ipc$dispatch("-8220976", new Object[]{this, eVar});
+            } else if (MainActivity.this.isActivityFinsihed() || !MainActivity.this.isActivityForeground() || (bitmap = eVar.b) == null) {
                 MainActivity.this.checkUpdate();
             } else {
                 MainActivity mainActivity = MainActivity.this;
-                mainActivity.mAdView = DialogUtil.a(mainActivity, bitmap, new View$OnClickListenerC1137z(), new View$OnClickListenerC1118a(), new C1119b());
-                MainActivity.this.mAdView.setOnDismissListener(new DialogInterface$OnDismissListenerC1120c());
+                mainActivity.mAdView = DialogUtil.a(mainActivity, bitmap, new z(), new a(), new b());
+                MainActivity.this.mAdView.setOnDismissListener(new c());
                 MainActivity.this.mAdView.show();
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$m */
     /* loaded from: classes5.dex */
-    public class C1121m implements DMImageCreator.DMImageFailListener {
+    public class m implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1121m() {
+        m() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "32188029")) {
-                ipChange.ipc$dispatch("32188029", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("32188029", new Object[]{this, dVar});
             } else {
                 MainActivity.this.checkUpdate();
             }
@@ -785,12 +764,11 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$n */
     /* loaded from: classes5.dex */
-    public class C1122n implements HomeTabFragment.OnTabClickListener {
+    public class n implements HomeTabFragment.OnTabClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1122n() {
+        n() {
         }
 
         @Override // cn.damai.homepage.ui.fragment.HomeTabFragment.OnTabClickListener
@@ -807,12 +785,11 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$o */
     /* loaded from: classes5.dex */
-    public class C1123o implements PopupCallback {
+    public class o implements PopupCallback {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1123o() {
+        o() {
         }
 
         @Override // cn.damai.homepage.util.window.PopupCallback
@@ -865,20 +842,18 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$p */
     /* loaded from: classes5.dex */
-    public class C1124p implements CityLocationUtil.LocaltionListener {
+    public class p implements CityLocationUtil.LocaltionListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.homepage.MainActivity$p$a */
         /* loaded from: classes14.dex */
-        public class DialogInterface$OnDismissListenerC1125a implements DialogInterface.OnDismissListener {
+        public class a implements DialogInterface.OnDismissListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ boolean a;
             final /* synthetic */ SitesBean b;
 
-            DialogInterface$OnDismissListenerC1125a(boolean z, SitesBean sitesBean) {
+            a(boolean z, SitesBean sitesBean) {
                 this.a = z;
                 this.b = sitesBean;
             }
@@ -896,7 +871,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
             }
         }
 
-        C1124p() {
+        p() {
         }
 
         @Override // cn.damai.commonbusiness.city.util.CityLocationUtil.LocaltionListener
@@ -921,7 +896,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
                 z = false;
             }
             if (MainActivity.this.timeZoneDialog != null && MainActivity.this.timeZoneDialog.isShowing()) {
-                MainActivity.this.timeZoneDialog.setOnDismissListener(new DialogInterface$OnDismissListenerC1125a(z, sitesBean));
+                MainActivity.this.timeZoneDialog.setOnDismissListener(new a(z, sitesBean));
             } else if (z) {
                 MainActivity.this.showCityChange(sitesBean.getCityName());
             } else {
@@ -931,12 +906,11 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$q */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1126q implements View.OnClickListener {
+    public class q implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1126q() {
+        q() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -951,12 +925,11 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$r */
     /* loaded from: classes14.dex */
-    public class DialogInterface$OnClickListenerC1127r implements DialogInterface.OnClickListener {
+    public class r implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC1127r() {
+        r() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -979,18 +952,16 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$s */
     /* loaded from: classes5.dex */
-    public class C1128s implements IPermissionListener {
+    public class s implements IPermissionListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.homepage.MainActivity$s$a */
         /* loaded from: classes14.dex */
-        public class DialogInterface$OnClickListenerC1129a implements DialogInterface.OnClickListener {
+        public class a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC1129a() {
+            a() {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -1007,12 +978,11 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.homepage.MainActivity$s$b */
         /* loaded from: classes14.dex */
-        public class DialogInterface$OnClickListenerC1130b implements DialogInterface.OnClickListener {
+        public class b implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC1130b() {
+            b() {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -1027,7 +997,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
             }
         }
 
-        C1128s() {
+        s() {
         }
 
         @Override // com.alibaba.pictures.picpermission.custom.IPermissionListener
@@ -1060,18 +1030,17 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
             if (AndroidInstantRuntime.support(ipChange, "-139960667")) {
                 ipChange.ipc$dispatch("-139960667", new Object[]{this, strArr});
             } else {
-                gr1.a(MainActivity.this, "获取你所在城市的演出赛事信息，帮助你找到附近的演出赛事", Arrays.asList(strArr), false, new DialogInterface$OnClickListenerC1129a(), new DialogInterface$OnClickListenerC1130b());
+                gr1.a(MainActivity.this, "获取你所在城市的演出赛事信息，帮助你找到附近的演出赛事", Arrays.asList(strArr), false, new a(), new b());
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$t */
     /* loaded from: classes5.dex */
-    public class C1131t implements LoginLogoutBroadcastReceiver.LoginCallback {
+    public class t implements LoginLogoutBroadcastReceiver.LoginCallback {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1131t() {
+        t() {
         }
 
         @Override // cn.damai.homepage.util.LoginLogoutBroadcastReceiver.LoginCallback
@@ -1081,7 +1050,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
                 ipChange.ipc$dispatch("-858411520", new Object[]{this});
                 return;
             }
-            C9021d.f().doNotifyUserLogout();
+            tb.d.f().doNotifyUserLogout();
             MainActivity.this.mHomeTabFragment.logoutRefreshUI();
         }
 
@@ -1091,18 +1060,17 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
             if (AndroidInstantRuntime.support(ipChange, "-1074546979")) {
                 ipChange.ipc$dispatch("-1074546979", new Object[]{this});
             } else {
-                C9021d.f().doNotifyUserLogin(Login.getUserId());
+                tb.d.f().doNotifyUserLogin(Login.getUserId());
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$u */
     /* loaded from: classes14.dex */
-    public class DialogInterface$OnClickListenerC1132u implements DialogInterface.OnClickListener {
+    public class u implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC1132u() {
+        u() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -1117,12 +1085,11 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$v */
     /* loaded from: classes5.dex */
-    public class C1133v implements Action<String> {
+    public class v implements Action<String> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1133v() {
+        v() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -1146,12 +1113,11 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$w */
     /* loaded from: classes14.dex */
-    public class DialogInterface$OnDismissListenerC1134w implements DialogInterface.OnDismissListener {
+    public class w implements DialogInterface.OnDismissListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnDismissListenerC1134w() {
+        w() {
         }
 
         @Override // android.content.DialogInterface.OnDismissListener
@@ -1166,12 +1132,11 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$x */
     /* loaded from: classes5.dex */
-    public class C1135x implements TickletBusinessUtil.PopNoShow {
+    public class x implements TickletBusinessUtil.PopNoShow {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1135x() {
+        x() {
         }
 
         @Override // cn.damai.homepage.util.TickletBusinessUtil.PopNoShow
@@ -1186,12 +1151,11 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$y */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1136y implements View.OnClickListener {
+    public class y implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1136y() {
+        y() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -1207,12 +1171,11 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.MainActivity$z */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1137z implements View.OnClickListener {
+    public class z implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1137z() {
+        z() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -1229,9 +1192,9 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
                 bundle.putString("from_page", "homepage");
                 DMNav.from(MainActivity.this).withExtras(bundle).toUri(MainActivity.this.mMainAlertEntity.item.schema);
                 if (MainAlertEntity.PICK_TYPE_CALLBACK.equals(MainActivity.this.mMainAlertEntity.item.pkType)) {
-                    C0529c.e().x(py0.I().z(String.valueOf(MainActivity.this.mMainAlertEntity.item.circleId), "0", 0, MainActivity.this.mMainAlertEntity.item.imageUrl));
+                    cn.damai.common.user.c.e().x(py0.I().z(String.valueOf(MainActivity.this.mMainAlertEntity.item.circleId), "0", 0, MainActivity.this.mMainAlertEntity.item.imageUrl));
                 } else {
-                    C0529c e = C0529c.e();
+                    cn.damai.common.user.c e = cn.damai.common.user.c.e();
                     py0 I = py0.I();
                     MainAlertEntity mainAlertEntity2 = MainActivity.this.mMainAlertEntity;
                     MainAlertEntity.MainAlertModel mainAlertModel = mainAlertEntity2.item;
@@ -1298,7 +1261,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
             checkTimeZone(true);
         } else {
             z20.T(SP_KEY_LOCATION_DIALOG_SHOWED, "locationExaDes");
-            new Permission(mu0.a(), new PermissionModel(strArr, "位置权限使用说明", Integer.valueOf(R$drawable.permission_location_icon), "用于为你提供所在城市演出和场馆信息及帮助你找到附近的演出")).a(new C1128s()).b();
+            new Permission(mu0.a(), new PermissionModel(strArr, "位置权限使用说明", Integer.valueOf(R$drawable.permission_location_icon), "用于为你提供所在城市演出和场馆信息及帮助你找到附近的演出")).a(new s()).b();
         }
     }
 
@@ -1459,8 +1422,8 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
                     }
                     try {
                         ko.d().startCheckAndUpdateCacheableKV();
-                    } catch (Exception e) {
-                        cb1.a(e.getMessage());
+                    } catch (Exception e2) {
+                        cb1.a(e2.getMessage());
                     }
                 }
             }, 2000L);
@@ -1474,7 +1437,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
             return;
         }
         this.mAnimationView = (HomeLottieView) findViewById(R$id.homepage_lottie_animation);
-        this.mDMMessage.b("LottieDownLoadSuccess", new C1133v());
+        this.mDMMessage.b("LottieDownLoadSuccess", new v());
     }
 
     private void initPopUpLine() {
@@ -1531,7 +1494,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         }
         WantSeePosterTips wantSeePosterTips = (WantSeePosterTips) findViewById(R$id.want_see_project_tips);
         this.wantSeeProjectTips = wantSeePosterTips;
-        wantSeePosterTips.setPageSource(WantSeePosterTips.AbstractC1555b.C1557b.INSTANCE);
+        wantSeePosterTips.setPageSource(WantSeePosterTips.b.C0064b.INSTANCE);
         registerWantSee();
     }
 
@@ -1664,10 +1627,10 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
                 if (TextUtils.equals(result.type, "1")) {
                     this.reCheckSuccess = false;
                     this.checkedSuccess = true;
-                    imageDownLoader.j(result.reCheckedPic, 135, 135, new C1109d(bottomSheetBean, imageDownLoader));
+                    imageDownLoader.j(result.reCheckedPic, 135, 135, new d(bottomSheetBean, imageDownLoader));
                 }
-                imageDownLoader.j(result.checkedPic, 135, 135, new C1110e(bottomSheetBean, imageDownLoader));
-                imageDownLoader.j(result.defaultPic, 135, 135, new C1111f(bottomSheetBean, imageDownLoader));
+                imageDownLoader.j(result.checkedPic, 135, 135, new e(bottomSheetBean, imageDownLoader));
+                imageDownLoader.j(result.defaultPic, 135, 135, new f(bottomSheetBean, imageDownLoader));
             }
             this.index++;
         }
@@ -1683,7 +1646,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         if (this.isFirstStart) {
             mt1 mt1Var = new mt1(this);
             this.windowStart = mt1Var;
-            mt1Var.a(this.tickletBusinessUtil, this.mTickletContainer, this.wantSeeProjectTips, new C1123o());
+            mt1Var.a(this.tickletBusinessUtil, this.mTickletContainer, this.wantSeeProjectTips, new o());
         }
         if (this.windowStart != null) {
             cb1.b(mt1.TAG, "isFirstStart=" + this.isFirstStart + "  eventType=" + str);
@@ -1726,7 +1689,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
                     MainActivity.this.mHomeTabFragment.refreshHomeFragment(false);
                 }
             }
-        }, new C1131t());
+        }, new t());
         this.mLoginReceiver = loginLogoutBroadcastReceiver;
         registerReceiver(loginLogoutBroadcastReceiver, intentFilter);
     }
@@ -1739,20 +1702,20 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         }
         WantSeeTips wantSeeTips = (WantSeeTips) findViewById(R$id.want_see_tips);
         this.wantSeeTips = wantSeeTips;
-        wantSeeTips.setPageSource(WantSeeTips.AbstractC1562a.C1565c.INSTANCE);
-        new xr().b("showFollowTips", new C1107b());
+        wantSeeTips.setPageSource(WantSeeTips.a.c.INSTANCE);
+        new xr().b("showFollowTips", new b());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void reportUserOperation(String str, int i) {
+    public void reportUserOperation(String str, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1768522842")) {
-            ipChange.ipc$dispatch("1768522842", new Object[]{this, str, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("1768522842", new Object[]{this, str, Integer.valueOf(i2)});
             return;
         }
         CommentListOptrRequest commentListOptrRequest = new CommentListOptrRequest();
         commentListOptrRequest.mecPerformId = str;
-        commentListOptrRequest.operType = i;
+        commentListOptrRequest.operType = i2;
         commentListOptrRequest.request(new DMMtopRequestListener<CommentOptrBean>(CommentOptrBean.class) { // from class: cn.damai.homepage.MainActivity.24
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -1781,9 +1744,9 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         if (AndroidInstantRuntime.support(ipChange, "1718674444")) {
             ipChange.ipc$dispatch("1718674444", new Object[]{this});
         } else if (PermissionsHelper.a(this)) {
-            C0529c.e().A(py0.I().J("1", "", ""), py0.CUSTOM_PUSH, py0.PUSH_PAGE);
+            cn.damai.common.user.c.e().A(py0.I().J("1", "", ""), py0.CUSTOM_PUSH, py0.PUSH_PAGE);
         } else {
-            C0529c.e().A(py0.I().J("0", "", ""), py0.CUSTOM_PUSH, py0.PUSH_PAGE);
+            cn.damai.common.user.c.e().A(py0.I().J("0", "", ""), py0.CUSTOM_PUSH, py0.PUSH_PAGE);
         }
     }
 
@@ -1793,7 +1756,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
             ipChange.ipc$dispatch("-565532625", new Object[]{this, mainAlertModel});
             return;
         }
-        C0504a.b().c(mainAlertModel.imageUrl).e(new C1121m()).n(new C1117l(mainAlertModel)).f();
+        cn.damai.common.image.a.b().c(mainAlertModel.imageUrl).e(new m()).n(new l(mainAlertModel)).f();
         if (MainAlertEntity.PICK_TYPE_CALLBACK.equals(this.mMainAlertEntity.item.pkType)) {
             PopUpAdvertCallBackRequest popUpAdvertCallBackRequest = new PopUpAdvertCallBackRequest();
             MainAlertEntity.MainAlertModel mainAlertModel2 = this.mMainAlertEntity.item;
@@ -1834,7 +1797,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
             checkRecentTicket();
         } else {
             DMThemeDialog dMThemeDialog = new DMThemeDialog(this);
-            dMThemeDialog.o("地理位置变更").r(DMThemeDialog.DMDialogTheme.THEME_LOCATION).k(getString(R$string.change_city_tip, new Object[]{str})).i(getString(R$string.change_city, new Object[]{str}), new DialogInterface$OnClickListenerC1127r()).g(true, new View$OnClickListenerC1126q());
+            dMThemeDialog.o("地理位置变更").r(DMThemeDialog.DMDialogTheme.THEME_LOCATION).k(getString(R$string.change_city_tip, new Object[]{str})).i(getString(R$string.change_city, new Object[]{str}), new r()).g(true, new q());
             if (isFinishing()) {
                 return;
             }
@@ -1848,7 +1811,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
             ipChange.ipc$dispatch("-1709700814", new Object[]{this, mainAlertModel});
             return;
         }
-        C0504a.b().c(mainAlertModel.imageUrl).e(new C1116k()).n(new AnonymousClass25(mainAlertModel)).f();
+        cn.damai.common.image.a.b().c(mainAlertModel.imageUrl).e(new k()).n(new AnonymousClass25(mainAlertModel)).f();
         if (MainAlertEntity.PICK_HID_TYPE_CALLBACK.equals(this.mMainAlertEntity.item.pkType)) {
             PopUpAdvertCallBackRequest popUpAdvertCallBackRequest = new PopUpAdvertCallBackRequest();
             MainAlertEntity.MainAlertModel mainAlertModel2 = this.mMainAlertEntity.item;
@@ -1887,8 +1850,8 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
             ipChange.ipc$dispatch("1490210138", new Object[]{this, contentList});
             return;
         }
-        HomepageEvaluateDialog homepageEvaluateDialog = new HomepageEvaluateDialog(this, contentList, 1010, new DialogInterface$OnDismissListenerC1114i());
-        homepageEvaluateDialog.s(new C1115j());
+        HomepageEvaluateDialog homepageEvaluateDialog = new HomepageEvaluateDialog(this, contentList, 1010, new i());
+        homepageEvaluateDialog.s(new j());
         homepageEvaluateDialog.show();
     }
 
@@ -1935,21 +1898,21 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         if (homeData == null || TextUtils.isEmpty(homeData.lottieType)) {
             return;
         }
-        int i = DisplayMetrics.getwidthPixels(t60.b(this));
-        int i2 = (i * 1624) / FeatureFactory.PRIORITY_ABOVE_NORMAL;
-        int i3 = i2 - DisplayMetrics.getheightPixels(t60.b(this));
-        FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(i, i2);
+        int i2 = DisplayMetrics.getwidthPixels(t60.b(this));
+        int i3 = (i2 * 1624) / FeatureFactory.PRIORITY_ABOVE_NORMAL;
+        int i4 = i3 - DisplayMetrics.getheightPixels(t60.b(this));
+        FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(i2, i3);
         String str = this.mHomeData.lottieType;
         if (!"1".equals(str)) {
             if ("2".equals(str)) {
-                if (i3 > 0) {
-                    this.mAnimationView.setTranslationY(i3 / 2);
+                if (i4 > 0) {
+                    this.mAnimationView.setTranslationY(i4 / 2);
                 } else {
                     layoutParams.gravity = 17;
                 }
             } else if ("3".equals(str)) {
-                if (i3 > 0) {
-                    this.mAnimationView.setTranslationY(i3);
+                if (i4 > 0) {
+                    this.mAnimationView.setTranslationY(i4);
                 } else {
                     layoutParams.gravity = 80;
                 }
@@ -1997,13 +1960,13 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
             return;
         }
         try {
-            boolean g = c80.g(this);
-            HashMap<String, String> f = d23.f();
-            C0525a.C0527b c0527b = new C0525a.C0527b();
-            c0527b.i("home").f("screen_type").l(g ? "fold_screen" : "normal_screen").g(false).j(f);
-            C0529c.e().x(c0527b);
-        } catch (Exception e) {
-            e.printStackTrace();
+            boolean g2 = c80.g(this);
+            HashMap<String, String> f2 = d23.f();
+            a.b bVar = new a.b();
+            bVar.i("home").f("screen_type").l(g2 ? "fold_screen" : "normal_screen").g(false).j(f2);
+            cn.damai.common.user.c.e().x(bVar);
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 
@@ -2046,9 +2009,9 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "148810826")) {
             ipChange.ipc$dispatch("148810826", new Object[]{this, str});
-        } else if ((isNewPopupAble() && new b03().c(this, str, this.wantSeeTips, this.wantSeeProjectTips)) || g03.INSTANCE.e(this, new C1108c(this, str)) || this.wantSeeTips == null || this.wantSeeProjectTips.getVisibility() != 8) {
+        } else if ((isNewPopupAble() && new b03().c(this, str, this.wantSeeTips, this.wantSeeProjectTips)) || g03.INSTANCE.e(this, new c(this, str)) || this.wantSeeTips == null || this.wantSeeProjectTips.getVisibility() != 8) {
         } else {
-            this.wantSeeTips.setPageSource(WantSeeTips.AbstractC1562a.C1565c.INSTANCE);
+            this.wantSeeTips.setPageSource(WantSeeTips.a.c.INSTANCE);
             this.wantSeeTips.showAnim();
         }
     }
@@ -2070,10 +2033,10 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
             /* compiled from: Taobao */
             /* renamed from: cn.damai.homepage.MainActivity$21$a */
             /* loaded from: classes14.dex */
-            public class DialogInterface$OnDismissListenerC1102a implements DialogInterface.OnDismissListener {
+            public class a implements DialogInterface.OnDismissListener {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                DialogInterface$OnDismissListenerC1102a() {
+                a() {
                 }
 
                 @Override // android.content.DialogInterface.OnDismissListener
@@ -2109,7 +2072,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
                 } else if ("3".equals(mainAlertEntity.type)) {
                     MainActivity.this.showEvaluateDialog(mainAlertEntity.content);
                 } else if (MainActivity.this.mMemberDialogManger != null && MainActivity.this.mMemberDialogManger.k(mainAlertEntity)) {
-                    MainActivity.this.mMemberDialogManger.h(mainAlertEntity, new DialogInterface$OnDismissListenerC1102a());
+                    MainActivity.this.mMemberDialogManger.h(mainAlertEntity, new a());
                 } else {
                     MainActivity.this.showCycleDisplayRequiredDialog(mainAlertEntity);
                 }
@@ -2117,29 +2080,29 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         });
     }
 
-    public void checkTimeZone(boolean z) {
+    public void checkTimeZone(boolean z2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-632041170")) {
-            ipChange.ipc$dispatch("-632041170", new Object[]{this, Boolean.valueOf(z)});
+            ipChange.ipc$dispatch("-632041170", new Object[]{this, Boolean.valueOf(z2)});
             return;
         }
         try {
             List asList = Arrays.asList("Asia/Chongqing", "Asia/Harbin", "Asia/Hong_Kong", "Asia/Macau", "Asia/Shanghai", "Asia/Taipei", "Asia/Urumqi");
             String id = TimeZone.getDefault().getID();
             if (asList.contains(id)) {
-                if (z) {
+                if (z2) {
                     checkRecentTicket();
                     return;
                 }
                 return;
             }
-            String b = OrangeConfigCenter.c().b(on1.HOME_OTHER_TIME_ZONE_IN_CHINA, "otherzone", "");
-            if (!TextUtils.isEmpty(b) && b.contains(id)) {
-                if (z) {
+            String b2 = OrangeConfigCenter.c().b(on1.HOME_OTHER_TIME_ZONE_IN_CHINA, "otherzone", "");
+            if (!TextUtils.isEmpty(b2) && b2.contains(id)) {
+                if (z2) {
                     checkRecentTicket();
                 }
             } else if (us.a(this).equals(id)) {
-                if (z) {
+                if (z2) {
                     checkRecentTicket();
                 }
             } else {
@@ -2147,22 +2110,22 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
                 this.timeZoneDialog = dMDialog;
                 dMDialog.o(false);
                 this.timeZoneDialog.q("未特殊提示的，抢票和演出时间均为北京时间为准");
-                this.timeZoneDialog.n("知道了", new DialogInterface$OnClickListenerC1113h(id, z));
+                this.timeZoneDialog.n("知道了", new h(id, z2));
                 this.timeZoneDialog.show();
             }
-        } catch (Exception e) {
-            if (z) {
+        } catch (Exception e2) {
+            if (z2) {
                 checkRecentTicket();
             }
-            cb1.b("checkTimeZone", e.getMessage());
+            cb1.b("checkTimeZone", e2.getMessage());
         }
     }
 
     @Override // cn.damai.common.app.base.BaseActivity
-    public void dealHeaderClick(int i) {
+    public void dealHeaderClick(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1844896629")) {
-            ipChange.ipc$dispatch("-1844896629", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-1844896629", new Object[]{this, Integer.valueOf(i2)});
         }
     }
 
@@ -2205,8 +2168,8 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         try {
             byte[] digest = MessageDigest.getInstance(MessageDigestAlgorithms.MD5).digest(context.getPackageManager().getPackageInfo(context.getPackageName(), 64).signatures[0].toByteArray());
             StringBuffer stringBuffer = new StringBuffer();
-            for (byte b : digest) {
-                String upperCase = Integer.toHexString(b & 255).toUpperCase(Locale.US);
+            for (byte b2 : digest) {
+                String upperCase = Integer.toHexString(b2 & 255).toUpperCase(Locale.US);
                 if (upperCase.length() == 1) {
                     stringBuffer.append("0");
                 }
@@ -2215,11 +2178,11 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
             }
             String stringBuffer2 = stringBuffer.toString();
             return stringBuffer2.substring(0, stringBuffer2.length() - 1);
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-            return null;
-        } catch (Exception e2) {
+        } catch (PackageManager.NameNotFoundException e2) {
             e2.printStackTrace();
+            return null;
+        } catch (Exception e3) {
+            e3.printStackTrace();
             return null;
         }
     }
@@ -2236,10 +2199,10 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
-    public void handleError(int i) {
+    public void handleError(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-997651236")) {
-            ipChange.ipc$dispatch("-997651236", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-997651236", new Object[]{this, Integer.valueOf(i2)});
         }
     }
 
@@ -2261,7 +2224,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         hideBaseLayout();
         this.mTickletContainer = (FrameLayout) findViewById(R$id.homepage_ticklet_container);
         this.mCurrentCity = z20.d();
-        initTicklet(new DialogInterface$OnDismissListenerC1134w(), new C1135x());
+        initTicklet(new w(), new x());
         boolean isShowHomeDependOnOrange = StartConfig.isShowHomeDependOnOrange();
         if (isShowHomeDependOnOrange) {
             this.mIsUseNewHome = !StartConfig.isUseOldHomeCMSFragment();
@@ -2273,22 +2236,22 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         cb1.c("ShowHome", "show home " + str + " ; final use " + str2);
         initZhibotiao();
         initWantSee();
-        this.mPopTipPanel = new ContentPopTipPanel(this, new View$OnClickListenerC1136y());
-        this.mMemberDialogManger = new MemberGuideDialogManger(this, new C1105a());
+        this.mPopTipPanel = new ContentPopTipPanel(this, new y());
+        this.mMemberDialogManger = new MemberGuideDialogManger(this, new a());
         n3.b();
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, android.app.Activity
-    public void onActivityResult(int i, int i2, Intent intent) {
+    public void onActivityResult(int i2, int i3, Intent intent) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1869267157")) {
-            ipChange.ipc$dispatch("1869267157", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), intent});
+            ipChange.ipc$dispatch("1869267157", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3), intent});
             return;
         }
-        super.onActivityResult(i, i2, intent);
-        if (i == 1008) {
-            if (i2 != -1) {
+        super.onActivityResult(i2, i3, intent);
+        if (i2 == 1008) {
+            if (i3 != -1) {
                 return;
             }
             if (LoginManager.k().q()) {
@@ -2296,8 +2259,8 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
                 tr2.b().q((Activity) this.mContext, tr2.SCHEME_MINEPAGE);
             }
             sendBroadcast(new Intent(DamaiConstants.NOTIFY_REFRESH_MESSAGE));
-        } else if (i == 1009) {
-            if (i2 != -1) {
+        } else if (i2 == 1009) {
+            if (i3 != -1) {
                 return;
             }
             if (LoginManager.k().q()) {
@@ -2305,12 +2268,12 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
             } else {
                 tr2.b().q((Activity) this.mContext, tr2.SCHEME_HOMEPAGE);
             }
-        } else if (i == 100 && i2 == 101) {
+        } else if (i2 == 100 && i3 == 101) {
             tr2.b().q((Activity) this.mContext, "damai://V1/CategoryPage?id=100");
-        } else if (i == 78 && i2 == -1) {
+        } else if (i2 == 78 && i3 == -1) {
             cb1.c("CityChanged", "CityChanged  onAc");
             this.mHomeTabFragment.refreshAllFragment();
-        } else if (i != 1010 || i2 != -1 || intent == null || wh2.j(intent.getStringExtra("tip"))) {
+        } else if (i2 != 1010 || i3 != -1 || intent == null || wh2.j(intent.getStringExtra("tip"))) {
         } else {
             showEvaluateTips(intent.getStringExtra("tip"));
         }
@@ -2324,8 +2287,8 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
             return;
         }
         long currentTimeMillis = System.currentTimeMillis();
-        long j = this.mExitTime;
-        if (currentTimeMillis - j <= 2000 && j >= 0) {
+        long j2 = this.mExitTime;
+        if (currentTimeMillis - j2 <= 2000 && j2 >= 0) {
             super.onBackPressed();
             k3.b().a();
             return;
@@ -2362,10 +2325,10 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         }
         wu0.b();
         super.onCreate(bundle);
-        C0726a.i(this);
+        cn.damai.commonbusiness.pageut.a.i(this);
         this.mHomeData = new HomeData();
         ScreenShotDetector.k().A(this);
-        C0529c.e().K(this);
+        cn.damai.common.user.c.e().K(this);
         ja1.c();
         initLottieView();
         initTabBarLayout();
@@ -2374,7 +2337,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         if (this.mIsUseNewHome) {
             HomeNoticeView.Companion.a();
             this.mHomeTabFragment = new ay0(HomePageFragment.Companion.a());
-            this.responsiveActivityStateManager = new s22(this, new C1112g(this));
+            this.responsiveActivityStateManager = new s22(this, new g(this));
         } else {
             this.mHomeTabFragment = new HomeTabFragment();
         }
@@ -2385,13 +2348,13 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         }
         this.mHomeTabFragment.setArguments(bundle2);
         addFragment(this.mHomeTabFragment.self());
-        this.mHomeTabFragment.setOnTabClickListener(new C1122n());
+        this.mHomeTabFragment.setOnTabClickListener(new n());
         this.isFromHome = true;
         setPushUt();
         if (!checkKeyStore() && !AppConfig.v()) {
             DMDialog dMDialog = new DMDialog(this);
             dMDialog.o(false).q("应用签名冲突,为了保证您的使用安全,请使用官方渠道下载的APP").setCancelable(false);
-            dMDialog.n("我知道了", new DialogInterface$OnClickListenerC1132u()).show();
+            dMDialog.n("我知道了", new u()).show();
         }
         registerLoginLogoutBroadcastReceiver();
         initLater();
@@ -2423,7 +2386,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         this.tickletBusinessUtil = null;
         ScreenShotDetector.k().B();
         z20.l0(false);
-        C0726a.j(this);
+        cn.damai.commonbusiness.pageut.a.j(this);
         z20.T(DamaiTabbarManager.TabBar_SERVER_DATA, null);
         unregisterReceiver(this.mLoginReceiver);
         s22 s22Var = this.responsiveActivityStateManager;
@@ -2432,23 +2395,23 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         }
         try {
             ko.d().stopCheckAndUpdateCacheableKV();
-        } catch (Exception e) {
-            cb1.a(e.getMessage());
+        } catch (Exception e2) {
+            cb1.a(e2.getMessage());
         }
     }
 
     @Override // cn.damai.commonbusiness.tab.DamaiTabViewHelper.OnHomeIconTabStateChangedListener
-    public void onHomeIconTabStateChanged(int i) {
+    public void onHomeIconTabStateChanged(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1789921731")) {
-            ipChange.ipc$dispatch("-1789921731", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-1789921731", new Object[]{this, Integer.valueOf(i2)});
             return;
         }
         HomeFragmentAgent homeFragmentAgent = this.mHomeTabFragment;
         if (homeFragmentAgent != null) {
-            if (i == 1) {
+            if (i2 == 1) {
                 homeFragmentAgent.scrollToTop();
-            } else if (i == 2) {
+            } else if (i2 == 2) {
                 homeFragmentAgent.scrollToRecommend();
             }
         }
@@ -2515,7 +2478,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         if (this.mAnimationView.isAnimating()) {
             this.mAnimationView.cancelAnimation();
         }
-        C0726a.a(this);
+        cn.damai.commonbusiness.pageut.a.a(this);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -2536,7 +2499,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         if (!this.lottieIsShowed && this.lottieLoadSuccess) {
             showLottie();
         }
-        C0726a.b(this);
+        cn.damai.commonbusiness.pageut.a.b(this);
         DamaiTabbarManager damaiTabbarManager = this.mTabbarManager;
         if (damaiTabbarManager != null) {
             damaiTabbarManager.l();
@@ -2592,8 +2555,8 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
                 ToastUtil.i("页面跳转非法，请通过正常路径打开哦");
                 showed = true;
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 
@@ -2683,17 +2646,17 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         if (bottomSheetBean != null && !cb2.d(bottomSheetBean.content)) {
             bottomSheetBean2.content = new ArrayList(bottomSheetBean.content);
         }
-        boolean d = C0938a.d(bottomSheetBean);
-        if (!d && !yy0.g(bottomSheetBean)) {
-            String b = C0938a.b(bottomSheetBean2);
-            if (!TextUtils.isEmpty(b)) {
-                gz0.c(b);
+        boolean d2 = cn.damai.commonbusiness.tab.a.d(bottomSheetBean);
+        if (!d2 && !yy0.g(bottomSheetBean)) {
+            String b2 = cn.damai.commonbusiness.tab.a.b(bottomSheetBean2);
+            if (!TextUtils.isEmpty(b2)) {
+                gz0.c(b2);
             }
         }
         if (bottomSheetBean == null || wh2.e(bottomSheetBean.content) <= 0) {
             z20.T(DamaiTabbarManager.TabBar, JSON.toJSONString(bottomSheetBean));
             refreshTabBarLayout();
-        } else if (d) {
+        } else if (d2) {
             ImageDownLoader imageDownLoader = new ImageDownLoader(this);
             this.index = 0;
             loadImage(bottomSheetBean, imageDownLoader);
@@ -2708,10 +2671,10 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
     }
 
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity
-    public void setDamaiUTKeyBuilder(C0525a.C0527b c0527b) {
+    public void setDamaiUTKeyBuilder(a.b bVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-780297163")) {
-            ipChange.ipc$dispatch("-780297163", new Object[]{this, c0527b});
+            ipChange.ipc$dispatch("-780297163", new Object[]{this, bVar});
         }
     }
 
@@ -2741,9 +2704,9 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         } else {
             String queryParameter = Uri.parse(str).getQueryParameter("utm");
             if (!TextUtils.isEmpty(queryParameter)) {
-                C0529c.e().H("utm", queryParameter);
+                cn.damai.common.user.c.e().H("utm", queryParameter);
             }
-            C0529c.e().D("home", "applink", str, "homepage", null, 1013);
+            cn.damai.common.user.c.e().D("home", "applink", str, "homepage", null, 1013);
         }
     }
 
@@ -2775,7 +2738,7 @@ public class MainActivity extends DamaiBaseActivity implements DamaiConstants, P
         }
         WantSeeTips wantSeeTips = (WantSeeTips) findViewById(R$id.want_see_tips);
         this.wantSeeTips = wantSeeTips;
-        wantSeeTips.setPageSource(WantSeeTips.AbstractC1562a.C1565c.INSTANCE);
+        wantSeeTips.setPageSource(WantSeeTips.a.c.INSTANCE);
         wantActionShow(str);
     }
 }

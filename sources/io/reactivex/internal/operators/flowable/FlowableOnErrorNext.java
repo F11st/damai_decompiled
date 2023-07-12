@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.exceptions.CompositeException;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.subscriptions.SubscriptionArbiter;
@@ -92,13 +92,13 @@ public final class FlowableOnErrorNext<T> extends AbstractFlowableWithUpstream<T
         }
     }
 
-    public FlowableOnErrorNext(AbstractC8147b<T> abstractC8147b, Function<? super Throwable, ? extends Publisher<? extends T>> function, boolean z) {
-        super(abstractC8147b);
+    public FlowableOnErrorNext(b<T> bVar, Function<? super Throwable, ? extends Publisher<? extends T>> function, boolean z) {
+        super(bVar);
         this.nextSupplier = function;
         this.allowFatal = z;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         OnErrorNextSubscriber onErrorNextSubscriber = new OnErrorNextSubscriber(subscriber, this.nextSupplier, this.allowFatal);
         subscriber.onSubscribe(onErrorNextSubscriber.arbiter);

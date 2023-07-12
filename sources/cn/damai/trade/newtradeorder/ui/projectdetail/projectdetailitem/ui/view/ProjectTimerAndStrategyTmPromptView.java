@@ -15,9 +15,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.res.ResourcesCompat;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.calendar.remind.CalendarsResolver;
 import cn.damai.commonbusiness.yymember.view.MemberAuthPopWindow;
@@ -38,10 +36,9 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import io.flutter.wpkbridge.WPKFactory;
 import kotlin.jvm.JvmOverloads;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tb.C9796v;
 import tb.b41;
 import tb.gb;
 import tb.ir1;
@@ -52,6 +49,7 @@ import tb.m62;
 import tb.mr1;
 import tb.pp2;
 import tb.qv1;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes16.dex */
@@ -134,12 +132,11 @@ public final class ProjectTimerAndStrategyTmPromptView extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectTimerAndStrategyTmPromptView$a */
     /* loaded from: classes16.dex */
-    public final class CountDownTimerC2366a extends CountDownTimer {
+    public final class a extends CountDownTimer {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        public CountDownTimerC2366a(long j, long j2) {
+        public a(long j, long j2) {
             super(j, j2);
         }
 
@@ -168,12 +165,11 @@ public final class ProjectTimerAndStrategyTmPromptView extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectTimerAndStrategyTmPromptView$b */
     /* loaded from: classes8.dex */
-    public static final class C2367b implements CalendarsResolver.RemindMeListener {
+    public static final class b implements CalendarsResolver.RemindMeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2367b() {
+        b() {
         }
 
         @Override // cn.damai.commonbusiness.calendar.remind.CalendarsResolver.RemindMeListener
@@ -183,7 +179,7 @@ public final class ProjectTimerAndStrategyTmPromptView extends RelativeLayout {
                 ipChange.ipc$dispatch("-1279399051", new Object[]{this});
                 return;
             }
-            C0529c.e().x(pp2.u().o(ProjectTimerAndStrategyTmPromptView.this.mProjectId, "1", "2"));
+            cn.damai.common.user.c.e().x(pp2.u().o(ProjectTimerAndStrategyTmPromptView.this.mProjectId, "1", "2"));
             ProjectTimerAndStrategyTmPromptView.this.updateRemindMeBtnText(true);
             ProjectTimerAndStrategyTmPromptView.this.addRemindmeSuccessDialog();
         }
@@ -195,22 +191,21 @@ public final class ProjectTimerAndStrategyTmPromptView extends RelativeLayout {
                 ipChange.ipc$dispatch("-1934215643", new Object[]{this});
                 return;
             }
-            C0529c.e().x(pp2.u().o(ProjectTimerAndStrategyTmPromptView.this.mProjectId, "2", "2"));
+            cn.damai.common.user.c.e().x(pp2.u().o(ProjectTimerAndStrategyTmPromptView.this.mProjectId, "2", "2"));
             ProjectTimerAndStrategyTmPromptView.this.updateRemindMeBtnText(false);
             ProjectTimerAndStrategyTmPromptView.this.cancelRemindmeSuccess();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectTimerAndStrategyTmPromptView$c  reason: invalid class name */
     /* loaded from: classes16.dex */
-    public static final class animationAnimation$AnimationListenerC2368c implements Animation.AnimationListener {
+    public static final class c implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
         final /* synthetic */ View b;
         final /* synthetic */ ProjectTimerAndStrategyTmPromptView c;
 
-        animationAnimation$AnimationListenerC2368c(int i, View view, ProjectTimerAndStrategyTmPromptView projectTimerAndStrategyTmPromptView) {
+        c(int i, View view, ProjectTimerAndStrategyTmPromptView projectTimerAndStrategyTmPromptView) {
             this.a = i;
             this.b = view;
             this.c = projectTimerAndStrategyTmPromptView;
@@ -223,7 +218,7 @@ public final class ProjectTimerAndStrategyTmPromptView extends RelativeLayout {
                 ipChange.ipc$dispatch("-1023435765", new Object[]{this, animation});
                 return;
             }
-            b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+            b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             if (this.a == 8) {
                 this.b.setVisibility(8);
             }
@@ -236,7 +231,7 @@ public final class ProjectTimerAndStrategyTmPromptView extends RelativeLayout {
             if (AndroidInstantRuntime.support(ipChange, "285352841")) {
                 ipChange.ipc$dispatch("285352841", new Object[]{this, animation});
             } else {
-                b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+                b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             }
         }
 
@@ -246,18 +241,17 @@ public final class ProjectTimerAndStrategyTmPromptView extends RelativeLayout {
             if (AndroidInstantRuntime.support(ipChange, "-1479059292")) {
                 ipChange.ipc$dispatch("-1479059292", new Object[]{this, animation});
             } else {
-                b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+                b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectTimerAndStrategyTmPromptView$d */
     /* loaded from: classes8.dex */
-    public static final class C2369d implements CalendarsResolver.RemindMeListener {
+    public static final class d implements CalendarsResolver.RemindMeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2369d() {
+        d() {
         }
 
         @Override // cn.damai.commonbusiness.calendar.remind.CalendarsResolver.RemindMeListener
@@ -267,7 +261,7 @@ public final class ProjectTimerAndStrategyTmPromptView extends RelativeLayout {
                 ipChange.ipc$dispatch("1885146918", new Object[]{this});
                 return;
             }
-            C0529c.e().x(pp2.u().o(ProjectTimerAndStrategyTmPromptView.this.mProjectId, "1", "1"));
+            cn.damai.common.user.c.e().x(pp2.u().o(ProjectTimerAndStrategyTmPromptView.this.mProjectId, "1", "1"));
             ProjectTimerAndStrategyTmPromptView.this.promptUpdateRemindMeBtnText(true);
             ProjectTimerAndStrategyTmPromptView.this.addRemindmeSuccessDialog();
         }
@@ -279,19 +273,18 @@ public final class ProjectTimerAndStrategyTmPromptView extends RelativeLayout {
                 ipChange.ipc$dispatch("-1477400364", new Object[]{this});
                 return;
             }
-            C0529c.e().x(pp2.u().o(ProjectTimerAndStrategyTmPromptView.this.mProjectId, "2", "1"));
+            cn.damai.common.user.c.e().x(pp2.u().o(ProjectTimerAndStrategyTmPromptView.this.mProjectId, "2", "1"));
             ProjectTimerAndStrategyTmPromptView.this.promptUpdateRemindMeBtnText(false);
             ProjectTimerAndStrategyTmPromptView.this.cancelRemindmeSuccess();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectTimerAndStrategyTmPromptView$e */
     /* loaded from: classes8.dex */
-    public static final class C2370e implements MemberAuthPopWindow.ICustomDialogEventListener {
+    public static final class e implements MemberAuthPopWindow.ICustomDialogEventListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2370e() {
+        e() {
         }
 
         @Override // cn.damai.commonbusiness.yymember.view.MemberAuthPopWindow.ICustomDialogEventListener
@@ -559,7 +552,7 @@ public final class ProjectTimerAndStrategyTmPromptView extends RelativeLayout {
             return;
         }
         b41.i(projectTimerAndStrategyTmPromptView, "this$0");
-        C0529c.e().x(pp2.u().b2(projectTimerAndStrategyTmPromptView.mProjectId));
+        cn.damai.common.user.c.e().x(pp2.u().b2(projectTimerAndStrategyTmPromptView.mProjectId));
         projectTimerAndStrategyTmPromptView.playAnim(projectTimerAndStrategyTmPromptView.mResetAttendeesLayoutCl, 8);
     }
 
@@ -599,7 +592,7 @@ public final class ProjectTimerAndStrategyTmPromptView extends RelativeLayout {
             view.clearAnimation();
             final TranslateAnimation translateAnimation = new TranslateAnimation(2, 0.0f, 2, 0.0f, 2, i == 8 ? 0.0f : 1.0f, 2, i == 8 ? 1.0f : 0.0f);
             translateAnimation.setDuration(500L);
-            translateAnimation.setAnimationListener(new animationAnimation$AnimationListenerC2368c(i, view, this));
+            translateAnimation.setAnimationListener(new c(i, view, this));
             this.isPlaying = true;
             view.post(new Runnable() { // from class: tb.vw1
                 @Override // java.lang.Runnable
@@ -699,9 +692,9 @@ public final class ProjectTimerAndStrategyTmPromptView extends RelativeLayout {
             ipChange.ipc$dispatch("909677443", new Object[]{this});
             return;
         }
-        CountDownTimerC2366a countDownTimerC2366a = new CountDownTimerC2366a(this.downTime, this.intervalTime);
-        this.timeDown = countDownTimerC2366a;
-        countDownTimerC2366a.start();
+        a aVar = new a(this.downTime, this.intervalTime);
+        this.timeDown = aVar;
+        aVar.start();
     }
 
     private final void tmVipCountDownView(final ProjectMemberPrompt projectMemberPrompt) {
@@ -716,11 +709,11 @@ public final class ProjectTimerAndStrategyTmPromptView extends RelativeLayout {
             if (textView != null) {
                 textView.setText(projectMemberPrompt.getPriorityPurchaseTypeName());
             }
-            C0504a b = C0504a.b();
+            cn.damai.common.image.a b2 = cn.damai.common.image.a.b();
             String vipLogo = projectMemberPrompt.getVipLogo();
             ImageView imageView = this.promptVipIcon;
             int i = R$drawable.trade_tm_vip_icon;
-            b.loadinto(vipLogo, imageView, i, i);
+            b2.loadinto(vipLogo, imageView, i, i);
             TextView textView2 = this.promptExchangeAction;
             if (textView2 != null) {
                 textView2.setText(projectMemberPrompt.getButtonText());
@@ -829,7 +822,7 @@ public final class ProjectTimerAndStrategyTmPromptView extends RelativeLayout {
             return;
         }
         b41.i(projectTimerAndStrategyTmPromptView, "this$0");
-        C0529c.e().x(pp2.u().Z1(projectTimerAndStrategyTmPromptView.mProjectId, projectMemberPrompt.isPromptBeforeSale() ? "1" : "2", projectMemberPrompt.getButtonStatus()));
+        cn.damai.common.user.c.e().x(pp2.u().Z1(projectTimerAndStrategyTmPromptView.mProjectId, projectMemberPrompt.isPromptBeforeSale() ? "1" : "2", projectMemberPrompt.getButtonStatus()));
         if (LoginManager.k().q()) {
             if (projectMemberPrompt.isMemberAuthPage()) {
                 DMNav.from(projectTimerAndStrategyTmPromptView.mContext).toUri(k23.j());
@@ -837,7 +830,7 @@ public final class ProjectTimerAndStrategyTmPromptView extends RelativeLayout {
             } else if (projectMemberPrompt.isSpeedUpCardPage()) {
                 String speedUpCardUrl = projectMemberPrompt.getSpeedUpCardUrl();
                 if (speedUpCardUrl != null) {
-                    s2 = C8604o.s(speedUpCardUrl);
+                    s2 = o.s(speedUpCardUrl);
                     if (!s2) {
                         z = false;
                     }
@@ -850,7 +843,7 @@ public final class ProjectTimerAndStrategyTmPromptView extends RelativeLayout {
             } else if (projectMemberPrompt.isMemberAlipayPage()) {
                 String alipayDetailUrl = projectMemberPrompt.getAlipayDetailUrl();
                 if (alipayDetailUrl != null) {
-                    s = C8604o.s(alipayDetailUrl);
+                    s = o.s(alipayDetailUrl);
                     if (!s) {
                         z = false;
                     }
@@ -861,7 +854,7 @@ public final class ProjectTimerAndStrategyTmPromptView extends RelativeLayout {
                 DMNav.from(projectTimerAndStrategyTmPromptView.mContext).toUri(projectMemberPrompt.getAlipayDetailUrl());
                 return;
             } else if (projectMemberPrompt.isAuthPopWindow()) {
-                k23.g(projectTimerAndStrategyTmPromptView.mContext, projectTimerAndStrategyTmPromptView.damaiBaseActivity, gb.PROJECT_PAGE, new C2370e());
+                k23.g(projectTimerAndStrategyTmPromptView.mContext, projectTimerAndStrategyTmPromptView.damaiBaseActivity, gb.PROJECT_PAGE, new e());
                 return;
             } else {
                 ProjectPromptListener projectPromptListener = projectTimerAndStrategyTmPromptView.promptListener;
@@ -1166,7 +1159,7 @@ public final class ProjectTimerAndStrategyTmPromptView extends RelativeLayout {
         this.intervalTime = 500L;
         this.mContext = context;
         init();
-        this.calendRemindMeListener = new C2367b();
-        this.promptCalenderRemindMeListener = new C2369d();
+        this.calendRemindMeListener = new b();
+        this.promptCalenderRemindMeListener = new d();
     }
 }

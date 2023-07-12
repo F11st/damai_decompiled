@@ -15,7 +15,7 @@ import org.jetbrains.annotations.Nullable;
 public final class wu2 implements IUploaderTask {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C9887a Companion = new C9887a(null);
+    public static final a Companion = new a(null);
     private String a;
     @Nullable
     private BitmapFactory.Options b;
@@ -23,12 +23,11 @@ public final class wu2 implements IUploaderTask {
     private uu2 c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.wu2$a */
     /* loaded from: classes8.dex */
-    public static final class C9887a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9887a() {
+        private a() {
         }
 
         @NotNull
@@ -37,7 +36,7 @@ public final class wu2 implements IUploaderTask {
             return AndroidInstantRuntime.support(ipChange, "-1752618352") ? (String) ipChange.ipc$dispatch("-1752618352", new Object[]{this, str, str2}) : str != null ? str : "task_default";
         }
 
-        public /* synthetic */ C9887a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -77,11 +76,11 @@ public final class wu2 implements IUploaderTask {
         if (AndroidInstantRuntime.support(ipChange, "-1642572816")) {
             return (String) ipChange.ipc$dispatch("-1642572816", new Object[]{this});
         }
-        String a = this.c.a();
-        if (a == null) {
-            a = this.c.b();
+        String a2 = this.c.a();
+        if (a2 == null) {
+            a2 = this.c.b();
         }
-        return a != null ? a : "";
+        return a2 != null ? a2 : "";
     }
 
     @Override // com.uploader.export.IUploaderTask

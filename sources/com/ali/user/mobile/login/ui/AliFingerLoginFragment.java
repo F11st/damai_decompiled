@@ -28,7 +28,7 @@ public class AliFingerLoginFragment extends BaseHistoryFragment implements BaseL
 
     @Override // com.ali.user.mobile.base.ui.BaseFragment
     protected int getLayoutContent() {
-        return R.C2965layout.aliuser_finger_fragment;
+        return R.layout.aliuser_finger_fragment;
     }
 
     @Override // com.ali.user.mobile.login.ui.BaseLoginFragment, com.ali.user.mobile.base.ui.BaseFragment, com.ali.user.mobile.login.ui.BaseLoginView

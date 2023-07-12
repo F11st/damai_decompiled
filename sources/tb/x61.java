@@ -6,9 +6,9 @@ import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class x61 extends AbstractC9135fc {
+public final class x61 extends fc {
     @NotNull
-    public static final C9910a Companion = new C9910a(null);
+    public static final a Companion = new a(null);
     @JvmField
     @NotNull
     public static final x61 INSTANCE = new x61(1, 5, 1);
@@ -18,13 +18,12 @@ public final class x61 extends AbstractC9135fc {
     private final boolean f;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.x61$a */
     /* loaded from: classes3.dex */
-    public static final class C9910a {
-        private C9910a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9910a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -44,9 +43,9 @@ public final class x61 extends AbstractC9135fc {
         if (this.f) {
             z = f(INSTANCE);
         } else {
-            int a = a();
+            int a2 = a();
             x61 x61Var = INSTANCE;
-            z = a == x61Var.a() && b() <= x61Var.b() + 1;
+            z = a2 == x61Var.a() && b() <= x61Var.b() + 1;
         }
         return z;
     }

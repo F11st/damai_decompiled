@@ -8,20 +8,19 @@ import java.util.List;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Contract;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Type;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$TypeTable;
-import kotlin.reflect.jvm.internal.impl.protobuf.AbstractC8443a;
 import kotlin.reflect.jvm.internal.impl.protobuf.AbstractMessageLite;
 import kotlin.reflect.jvm.internal.impl.protobuf.ByteString;
-import kotlin.reflect.jvm.internal.impl.protobuf.C8447c;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedOutputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite;
 import kotlin.reflect.jvm.internal.impl.protobuf.InvalidProtocolBufferException;
 import kotlin.reflect.jvm.internal.impl.protobuf.Parser;
+import kotlin.reflect.jvm.internal.impl.protobuf.c;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class ProtoBuf$Function extends GeneratedMessageLite.ExtendableMessage<ProtoBuf$Function> implements ProtoBuf$FunctionOrBuilder {
-    public static Parser<ProtoBuf$Function> PARSER = new C8402a();
+    public static Parser<ProtoBuf$Function> PARSER = new a();
     private static final ProtoBuf$Function defaultInstance;
     private int bitField0_;
     private ProtoBuf$Contract contract_;
@@ -387,7 +386,7 @@ public final class ProtoBuf$Function extends GeneratedMessageLite.ExtendableMess
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Function.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.C8447c r4) throws java.io.IOException {
+        public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Function.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.c r4) throws java.io.IOException {
             /*
                 r2 = this;
                 r0 = 0
@@ -420,16 +419,15 @@ public final class ProtoBuf$Function extends GeneratedMessageLite.ExtendableMess
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Function$a */
     /* loaded from: classes3.dex */
-    static class C8402a extends AbstractC8443a<ProtoBuf$Function> {
-        C8402a() {
+    static class a extends kotlin.reflect.jvm.internal.impl.protobuf.a<ProtoBuf$Function> {
+        a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.protobuf.Parser
         /* renamed from: i */
-        public ProtoBuf$Function parsePartialFrom(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
-            return new ProtoBuf$Function(codedInputStream, c8447c);
+        public ProtoBuf$Function parsePartialFrom(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
+            return new ProtoBuf$Function(codedInputStream, cVar);
         }
     }
 
@@ -462,8 +460,8 @@ public final class ProtoBuf$Function extends GeneratedMessageLite.ExtendableMess
         return Builder.access$13600();
     }
 
-    public static ProtoBuf$Function parseFrom(InputStream inputStream, C8447c c8447c) throws IOException {
-        return PARSER.parseFrom(inputStream, c8447c);
+    public static ProtoBuf$Function parseFrom(InputStream inputStream, c cVar) throws IOException {
+        return PARSER.parseFrom(inputStream, cVar);
     }
 
     public ProtoBuf$Contract getContract() {
@@ -669,7 +667,7 @@ public final class ProtoBuf$Function extends GeneratedMessageLite.ExtendableMess
     @Override // kotlin.reflect.jvm.internal.impl.protobuf.MessageLite
     public void writeTo(CodedOutputStream codedOutputStream) throws IOException {
         getSerializedSize();
-        GeneratedMessageLite.ExtendableMessage<MessageType>.C8438a newExtensionWriter = newExtensionWriter();
+        GeneratedMessageLite.ExtendableMessage<MessageType>.a newExtensionWriter = newExtensionWriter();
         if ((this.bitField0_ & 2) == 2) {
             codedOutputStream.a0(1, this.oldFlags_);
         }
@@ -746,11 +744,11 @@ public final class ProtoBuf$Function extends GeneratedMessageLite.ExtendableMess
     /* JADX WARN: Type inference failed for: r5v0 */
     /* JADX WARN: Type inference failed for: r5v1 */
     /* JADX WARN: Type inference failed for: r5v2, types: [boolean] */
-    private ProtoBuf$Function(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
+    private ProtoBuf$Function(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
         this.memoizedIsInitialized = (byte) -1;
         this.memoizedSerializedSize = -1;
         initFields();
-        ByteString.C8436a n = ByteString.n();
+        ByteString.a n = ByteString.n();
         CodedOutputStream J = CodedOutputStream.J(n, 1);
         boolean z = false;
         boolean z2 = false;
@@ -774,7 +772,7 @@ public final class ProtoBuf$Function extends GeneratedMessageLite.ExtendableMess
                                     continue;
                                 case 26:
                                     ProtoBuf$Type.Builder builder = (this.bitField0_ & 8) == 8 ? this.returnType_.toBuilder() : null;
-                                    ProtoBuf$Type protoBuf$Type = (ProtoBuf$Type) codedInputStream.u(ProtoBuf$Type.PARSER, c8447c);
+                                    ProtoBuf$Type protoBuf$Type = (ProtoBuf$Type) codedInputStream.u(ProtoBuf$Type.PARSER, cVar);
                                     this.returnType_ = protoBuf$Type;
                                     if (builder != null) {
                                         builder.mergeFrom(protoBuf$Type);
@@ -787,11 +785,11 @@ public final class ProtoBuf$Function extends GeneratedMessageLite.ExtendableMess
                                         this.typeParameter_ = new ArrayList();
                                         z2 |= true;
                                     }
-                                    this.typeParameter_.add(codedInputStream.u(ProtoBuf$TypeParameter.PARSER, c8447c));
+                                    this.typeParameter_.add(codedInputStream.u(ProtoBuf$TypeParameter.PARSER, cVar));
                                     continue;
                                 case 42:
                                     ProtoBuf$Type.Builder builder2 = (this.bitField0_ & 32) == 32 ? this.receiverType_.toBuilder() : null;
-                                    ProtoBuf$Type protoBuf$Type2 = (ProtoBuf$Type) codedInputStream.u(ProtoBuf$Type.PARSER, c8447c);
+                                    ProtoBuf$Type protoBuf$Type2 = (ProtoBuf$Type) codedInputStream.u(ProtoBuf$Type.PARSER, cVar);
                                     this.receiverType_ = protoBuf$Type2;
                                     if (builder2 != null) {
                                         builder2.mergeFrom(protoBuf$Type2);
@@ -804,7 +802,7 @@ public final class ProtoBuf$Function extends GeneratedMessageLite.ExtendableMess
                                         this.valueParameter_ = new ArrayList();
                                         z2 |= true;
                                     }
-                                    this.valueParameter_.add(codedInputStream.u(ProtoBuf$ValueParameter.PARSER, c8447c));
+                                    this.valueParameter_.add(codedInputStream.u(ProtoBuf$ValueParameter.PARSER, cVar));
                                     continue;
                                 case 56:
                                     this.bitField0_ |= 16;
@@ -820,7 +818,7 @@ public final class ProtoBuf$Function extends GeneratedMessageLite.ExtendableMess
                                     continue;
                                 case 242:
                                     ProtoBuf$TypeTable.Builder builder3 = (this.bitField0_ & 128) == 128 ? this.typeTable_.toBuilder() : null;
-                                    ProtoBuf$TypeTable protoBuf$TypeTable = (ProtoBuf$TypeTable) codedInputStream.u(ProtoBuf$TypeTable.PARSER, c8447c);
+                                    ProtoBuf$TypeTable protoBuf$TypeTable = (ProtoBuf$TypeTable) codedInputStream.u(ProtoBuf$TypeTable.PARSER, cVar);
                                     this.typeTable_ = protoBuf$TypeTable;
                                     if (builder3 != null) {
                                         builder3.mergeFrom(protoBuf$TypeTable);
@@ -849,7 +847,7 @@ public final class ProtoBuf$Function extends GeneratedMessageLite.ExtendableMess
                                     break;
                                 case 258:
                                     ProtoBuf$Contract.Builder builder4 = (this.bitField0_ & 256) == 256 ? this.contract_.toBuilder() : null;
-                                    ProtoBuf$Contract protoBuf$Contract = (ProtoBuf$Contract) codedInputStream.u(ProtoBuf$Contract.PARSER, c8447c);
+                                    ProtoBuf$Contract protoBuf$Contract = (ProtoBuf$Contract) codedInputStream.u(ProtoBuf$Contract.PARSER, cVar);
                                     this.contract_ = protoBuf$Contract;
                                     if (builder4 != null) {
                                         builder4.mergeFrom(protoBuf$Contract);
@@ -858,7 +856,7 @@ public final class ProtoBuf$Function extends GeneratedMessageLite.ExtendableMess
                                     this.bitField0_ |= 256;
                                     continue;
                                 default:
-                                    r5 = parseUnknownField(codedInputStream, J, c8447c, K);
+                                    r5 = parseUnknownField(codedInputStream, J, cVar, K);
                                     if (r5 == 0) {
                                         break;
                                     } else {

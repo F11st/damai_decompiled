@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import kotlin.Metadata;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -37,15 +37,14 @@ public final class QQShareActivity extends Activity {
     private boolean b;
     private ShareContent c;
     @NotNull
-    private IUiListener d = new C3644a();
+    private IUiListener d = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.share.qqshare.QQShareActivity$a */
     /* loaded from: classes8.dex */
-    public static final class C3644a implements IUiListener {
+    public static final class a implements IUiListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3644a() {
+        a() {
         }
 
         @Override // com.tencent.tauth.IUiListener
@@ -463,7 +462,7 @@ public final class QQShareActivity extends Activity {
         if (!(imgUrls == null || imgUrls.isEmpty()) && !TextUtils.equals(imgUrls.get(0), ShareManager.INSTANCE.b().h())) {
             if (shareContent.getShareType() != 2 && shareContent.getShareType() != 3) {
                 if (shareContent.getShareType() == 1) {
-                    F = C8604o.F(imgUrls.get(0), "http", false, 2, null);
+                    F = o.F(imgUrls.get(0), "http", false, 2, null);
                     if (!F) {
                         return imgUrls.get(0);
                     }

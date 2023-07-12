@@ -2,7 +2,7 @@ package com.sina.weibo.sdk.auth;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import com.sina.weibo.sdk.b.C6212c;
+import com.sina.weibo.sdk.b.c;
 import org.json.JSONObject;
 
 /* compiled from: Taobao */
@@ -30,7 +30,7 @@ public class Oauth2AccessToken {
                 try {
                     oauth2AccessToken.setExpiresTime(Long.parseLong(bundle.getString("expires_in")) * 1000);
                 } catch (Exception e) {
-                    C6212c.b("Oauth2AccessToken expires parse error: ", e.getMessage());
+                    c.b("Oauth2AccessToken expires parse error: ", e.getMessage());
                 }
                 return oauth2AccessToken;
             } catch (Exception e2) {
@@ -102,7 +102,7 @@ public class Oauth2AccessToken {
             try {
                 oauth2AccessToken.setExpiresTime(Long.parseLong(jSONObject.getString("expires_in")) * 1000);
             } catch (Exception e) {
-                C6212c.b("Oauth2AccessToken expires parse error: ", e.getMessage());
+                c.b("Oauth2AccessToken expires parse error: ", e.getMessage());
             }
             oauth2AccessToken.setRefreshToken(jSONObject.optString(KEY_REFRESH_TOKEN));
             return oauth2AccessToken;

@@ -16,12 +16,11 @@ public class pu1 {
     private static ThreadPoolExecutor a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.pu1$a */
     /* loaded from: classes7.dex */
-    public static class C9568a extends ThreadPoolExecutor {
+    public static class a extends ThreadPoolExecutor {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        public C9568a(int i, int i2, long j, TimeUnit timeUnit, BlockingQueue<Runnable> blockingQueue) {
+        public a(int i, int i2, long j, TimeUnit timeUnit, BlockingQueue<Runnable> blockingQueue) {
             super(i, i2, j, timeUnit, blockingQueue);
         }
 
@@ -55,7 +54,7 @@ public class pu1 {
     static {
         int availableProcessors = Runtime.getRuntime().availableProcessors();
         Log.e("LauncherApplication_xxx", " threadPoolnum: " + availableProcessors);
-        a = new C9568a(availableProcessors + 1, (availableProcessors * 2) + 1, 0L, TimeUnit.SECONDS, new PriorityBlockingQueue());
+        a = new a(availableProcessors + 1, (availableProcessors * 2) + 1, 0L, TimeUnit.SECONDS, new PriorityBlockingQueue());
     }
 
     public static void a(PriorityTask priorityTask) {

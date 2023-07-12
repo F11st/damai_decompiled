@@ -373,7 +373,7 @@ public class UccWebViewActivity extends BaseWebViewActivity {
         if (AliMemberSDK.getService(StatusBarService.class) != null && ((StatusBarService) AliMemberSDK.getService(StatusBarService.class)).getWebLayout() > 0) {
             return ((StatusBarService) AliMemberSDK.getService(StatusBarService.class)).getWebLayout();
         }
-        return R.C2996layout.member_sdk_ucc_webview;
+        return R.layout.member_sdk_ucc_webview;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */

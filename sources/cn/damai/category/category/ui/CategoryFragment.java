@@ -34,7 +34,6 @@ import cn.damai.category.common.ui.adapter.HorizontalTitleAdapter;
 import cn.damai.category.common.utils.CalendarPopUtil;
 import cn.damai.category.discountticket.bean.biz.DtParams;
 import cn.damai.category.discountticket.ui.DiscountTicketFragment;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.commonbusiness.city.net.CityListResponse;
 import cn.damai.homepage.R$id;
@@ -50,12 +49,12 @@ import com.android.alibaba.ip.runtime.IpChange;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
-import tb.C9796v;
 import tb.bh;
 import tb.ja1;
 import tb.o91;
 import tb.q62;
 import tb.rf;
+import tb.v;
 import tb.xr;
 import tb.zi;
 
@@ -88,12 +87,11 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
     private boolean mHasCanledarData = false;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.CategoryFragment$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0330a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0330a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -127,12 +125,11 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.CategoryFragment$b */
     /* loaded from: classes.dex */
-    public class C0331b extends q62 {
+    public class b extends q62 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0331b(View view) {
+        b(View view) {
             super(view);
         }
 
@@ -167,7 +164,7 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
                 CategoryFragment.this.mData.conditionEntity.sortType = option.id;
                 CategoryFragment.this.getDoubleReuqest(false, true);
                 if (CategoryFragment.this.mSelectTitle != null) {
-                    C0529c e = C0529c.e();
+                    cn.damai.common.user.c e = cn.damai.common.user.c.e();
                     bh m = bh.m();
                     int i = option.index;
                     String str = CategoryFragment.this.mSelectTitle.name;
@@ -179,12 +176,11 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.CategoryFragment$c */
     /* loaded from: classes.dex */
-    public class C0332c extends CityView {
+    public class c extends CityView {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0332c(Activity activity, int i, View view, View view2, View view3) {
+        c(Activity activity, int i, View view, View view2, View view3) {
             super(activity, i, view, view2, view3);
         }
 
@@ -206,18 +202,17 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
             CategoryFragment.this.mModel.calendarRequest(CategoryFragment.this.mData.conditionEntity.currentCityId, rf.o(), rf.a());
             CategoryFragment.this.mScreenView.g();
             if (CategoryFragment.this.mSelectTitle != null) {
-                C0529c.e().x(bh.m().j(i, i2, CategoryFragment.this.mSelectTitle.name, str2));
+                cn.damai.common.user.c.e().x(bh.m().j(i, i2, CategoryFragment.this.mSelectTitle.name, str2));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.CategoryFragment$d */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0333d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0333d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -233,12 +228,11 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.CategoryFragment$e */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0334e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0334e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -268,7 +262,7 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
                 CategoryFragment.this.mData.conditionEntity.endDate = c;
                 CategoryFragment.this.getDoubleReuqest(true, false);
                 if (CategoryFragment.this.mSelectTitle != null) {
-                    C0529c.e().x(bh.m().l(4, CategoryFragment.this.mSelectTitle.name, "calendar", rf.c(day)));
+                    cn.damai.common.user.c.e().x(bh.m().l(4, CategoryFragment.this.mSelectTitle.name, "calendar", rf.c(day)));
                 }
                 CategoryFragment.this.mData.conditionEntity.projectIdList.clear();
             }
@@ -276,12 +270,11 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.CategoryFragment$f */
     /* loaded from: classes.dex */
-    public class C0335f extends CalendarPopUtil {
+    public class f extends CalendarPopUtil {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0335f(Context context, View view, View view2, ViewGroup viewGroup, boolean z, boolean z2, boolean z3, int i, View.OnClickListener onClickListener) {
+        f(Context context, View view, View view2, ViewGroup viewGroup, boolean z, boolean z2, boolean z3, int i, View.OnClickListener onClickListener) {
             super(context, view, view2, viewGroup, z, z2, z3, i, onClickListener);
         }
 
@@ -307,18 +300,17 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
                 if (CategoryFragment.this.mSelectTitle == null) {
                     return;
                 }
-                C0529c.e().x(bh.m().l(i2, CategoryFragment.this.mSelectTitle.name, "timerange", str));
+                cn.damai.common.user.c.e().x(bh.m().l(i2, CategoryFragment.this.mSelectTitle.name, "timerange", str));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.CategoryFragment$g */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0336g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0336g() {
+        g() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -353,9 +345,9 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
         if (this.mSelectTitle == null || (categoryPagerAdapter = this.mPagerAdapter) == null) {
             return null;
         }
-        Fragment b = categoryPagerAdapter.b();
-        if (b instanceof GirlFragment) {
-            return (GirlFragment) b;
+        Fragment b2 = categoryPagerAdapter.b();
+        if (b2 instanceof GirlFragment) {
+            return (GirlFragment) b2;
         }
         return null;
     }
@@ -370,9 +362,9 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
         if (this.mSelectTitle == null || (categoryPagerAdapter = this.mPagerAdapter) == null) {
             return null;
         }
-        Fragment b = categoryPagerAdapter.b();
-        if (b instanceof ShowFragment) {
-            return (ShowFragment) b;
+        Fragment b2 = categoryPagerAdapter.b();
+        if (b2 instanceof ShowFragment) {
+            return (ShowFragment) b2;
         }
         return null;
     }
@@ -411,9 +403,9 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
         }
         CategoryPagerAdapter categoryPagerAdapter = this.mPagerAdapter;
         if (categoryPagerAdapter != null) {
-            Fragment b = categoryPagerAdapter.b();
-            if (b instanceof DamaiBaseMvpFragment) {
-                return (DamaiBaseMvpFragment) b;
+            Fragment b2 = categoryPagerAdapter.b();
+            if (b2 instanceof DamaiBaseMvpFragment) {
+                return (DamaiBaseMvpFragment) b2;
             }
             return null;
         }
@@ -447,10 +439,10 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
         } else if (i == 1) {
             this.mCalendarPopUtil.i();
             if (!this.mCityView.p() && this.mSelectTitle != null) {
-                C0529c e = C0529c.e();
+                cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
                 bh m = bh.m();
                 String str = this.mSelectTitle.name;
-                e.x(m.i(str, ((Object) ((TextView) this.rootView.findViewById(R$id.tv_tab1)).getText()) + ""));
+                e2.x(m.i(str, ((Object) ((TextView) this.rootView.findViewById(R$id.tv_tab1)).getText()) + ""));
             }
             this.mCityView.z((DMIconFontTextView) this.rootView.findViewById(R$id.icon_tab1));
             if (getCurrentShowFragment() == null || getCurrentShowFragment().mRefreshView == null) {
@@ -461,10 +453,10 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
         } else {
             this.mCityView.q();
             if (!this.mCalendarPopUtil.h() && this.mSelectTitle != null) {
-                C0529c e2 = C0529c.e();
+                cn.damai.common.user.c e3 = cn.damai.common.user.c.e();
                 bh m2 = bh.m();
                 String str2 = this.mSelectTitle.name;
-                e2.x(m2.k(str2, ((Object) ((TextView) this.rootView.findViewById(R$id.tv_tab2)).getText()) + ""));
+                e3.x(m2.k(str2, ((Object) ((TextView) this.rootView.findViewById(R$id.tv_tab2)).getText()) + ""));
             }
             this.mCalendarPopUtil.q((DMIconFontTextView) this.rootView.findViewById(R$id.icon_tab2), true);
             if (getCurrentShowFragment() == null || getCurrentShowFragment().mRefreshView == null) {
@@ -480,9 +472,9 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
             ipChange.ipc$dispatch("-1809192907", new Object[]{this});
             return;
         }
-        C0335f c0335f = new C0335f(this.mActivity, this.rootView.findViewById(R$id.tv_tab2), this.mMengcengView, (ViewGroup) this.rootView.findViewById(R$id.layout_calendar), false, true, true, getRealHeight(), new View$OnClickListenerC0334e());
-        this.mCalendarPopUtil = c0335f;
-        c0335f.n(new View$OnClickListenerC0336g());
+        f fVar = new f(this.mActivity, this.rootView.findViewById(R$id.tv_tab2), this.mMengcengView, (ViewGroup) this.rootView.findViewById(R$id.layout_calendar), false, true, true, getRealHeight(), new e());
+        this.mCalendarPopUtil = fVar;
+        fVar.n(new g());
     }
 
     private void initCity() {
@@ -491,9 +483,9 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
             ipChange.ipc$dispatch("2043153896", new Object[]{this});
             return;
         }
-        C0332c c0332c = new C0332c(this.mActivity, getRealHeight(), this.rootView.findViewById(R$id.tv_tab1), this.rootView.findViewById(R$id.layout_city), this.mMengcengView);
-        this.mCityView = c0332c;
-        c0332c.y(new View$OnClickListenerC0333d());
+        c cVar = new c(this.mActivity, getRealHeight(), this.rootView.findViewById(R$id.tv_tab1), this.rootView.findViewById(R$id.layout_city), this.mMengcengView);
+        this.mCityView = cVar;
+        cVar.y(new d());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -567,7 +559,7 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
         view.getLocationOnScreen(iArr);
         int width = view.getWidth();
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        Display.getMetrics(((WindowManager) this.mActivity.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+        Display.getMetrics(((WindowManager) this.mActivity.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
         this.mHeadRlv.smoothScrollBy((iArr[0] - (com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(displayMetrics) / 2)) + (width / 2), 0);
     }
 
@@ -600,8 +592,8 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
             Field declaredField = Class.forName("androidx.viewpager.widget.ViewPager").getDeclaredField("mCurItem");
             declaredField.setAccessible(true);
             declaredField.setInt(this.mViewPager, i);
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 
@@ -741,10 +733,10 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
                 }
 
                 @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener
-                public void onPageScrolled(int i4, float f, int i5) {
+                public void onPageScrolled(int i4, float f2, int i5) {
                     IpChange ipChange2 = $ipChange;
                     if (AndroidInstantRuntime.support(ipChange2, "1819026092")) {
-                        ipChange2.ipc$dispatch("1819026092", new Object[]{this, Integer.valueOf(i4), Float.valueOf(f), Integer.valueOf(i5)});
+                        ipChange2.ipc$dispatch("1819026092", new Object[]{this, Integer.valueOf(i4), Float.valueOf(f2), Integer.valueOf(i5)});
                     }
                 }
 
@@ -881,10 +873,10 @@ public class CategoryFragment extends DamaiBaseMvpFragment {
         linearLayoutManager.setOrientation(0);
         this.mHeadRlv.setLayoutManager(this.mLayoutManager);
         this.mHeadRlv.addItemDecoration(new SpaceItemDecoration(ScreenUtil.dip2px(this.mActivity, 9.0f)));
-        HorizontalTitleAdapter horizontalTitleAdapter = new HorizontalTitleAdapter(this.mActivity, new View$OnClickListenerC0330a());
+        HorizontalTitleAdapter horizontalTitleAdapter = new HorizontalTitleAdapter(this.mActivity, new a());
         this.mHeadAdapter = horizontalTitleAdapter;
         this.mHeadRlv.setAdapter(horizontalTitleAdapter);
-        this.mScreenView = new C0331b(this.rootView.findViewById(R$id.layout_screen));
+        this.mScreenView = new b(this.rootView.findViewById(R$id.layout_screen));
         this.mViewPager = (ViewPager) this.rootView.findViewById(R$id.category_pager);
         initCity();
         initCalendar();

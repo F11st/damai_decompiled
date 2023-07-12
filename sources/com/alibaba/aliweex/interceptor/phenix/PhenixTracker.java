@@ -2,7 +2,6 @@ package com.alibaba.aliweex.interceptor.phenix;
 
 import android.graphics.Bitmap;
 import android.text.TextUtils;
-import com.alibaba.aliweex.interceptor.C3093a;
 import com.alibaba.aliweex.interceptor.IWeexAnalyzerInspector;
 import com.taobao.weex.WXEnvironment;
 import com.taobao.weex.ui.module.WXModalUIModule;
@@ -37,9 +36,8 @@ public class PhenixTracker {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.interceptor.phenix.PhenixTracker$a */
     /* loaded from: classes15.dex */
-    public static /* synthetic */ class C3095a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -61,7 +59,7 @@ public class PhenixTracker {
         this.f = false;
         if (WXEnvironment.isApkDebugable()) {
             this.a = sj1.d();
-            this.b = C3093a.a();
+            this.b = com.alibaba.aliweex.interceptor.a.a();
             this.c = Executors.newSingleThreadExecutor();
             this.f = this.a.g();
             WXLogUtils.d("PhenixTracker", "Create new instance " + toString());
@@ -74,7 +72,7 @@ public class PhenixTracker {
 
     /* JADX INFO: Access modifiers changed from: private */
     public String g(Bitmap.CompressFormat compressFormat) {
-        int i = C3095a.a[compressFormat.ordinal()];
+        int i = a.a[compressFormat.ordinal()];
         return i != 1 ? i != 2 ? "image/jpeg" : "image/png" : "image/webp";
     }
 
@@ -118,7 +116,7 @@ public class PhenixTracker {
         }
         if (WXEnvironment.isApkDebugable() && g && (iWeexAnalyzerInspector = this.b) != null && iWeexAnalyzerInspector.isEnabled()) {
             try {
-                this.b.onResponse("image", new IWeexAnalyzerInspector.C3092b(TextUtils.isEmpty(nh0Var.b()) ? "unknown" : nh0Var.b(), "download failed", 200, null));
+                this.b.onResponse("image", new IWeexAnalyzerInspector.b(TextUtils.isEmpty(nh0Var.b()) ? "unknown" : nh0Var.b(), "download failed", 200, null));
             } catch (Exception e) {
                 WXLogUtils.e("PhenixTracker", e.getMessage());
             }
@@ -173,7 +171,7 @@ public class PhenixTracker {
                     }
                     IWeexAnalyzerInspector iWeexAnalyzerInspector2 = PhenixTracker.this.b;
                     String b = TextUtils.isEmpty(ui2Var.b()) ? "unknown" : ui2Var.b();
-                    iWeexAnalyzerInspector2.onResponse("image", new IWeexAnalyzerInspector.C3092b(b, Collections.singletonMap(Constants.Protocol.CONTENT_LENGTH, length + "").toString(), ui2Var.g() ? 304 : 200, null));
+                    iWeexAnalyzerInspector2.onResponse("image", new IWeexAnalyzerInspector.b(b, Collections.singletonMap(Constants.Protocol.CONTENT_LENGTH, length + "").toString(), ui2Var.g() ? 304 : 200, null));
                 } catch (Exception e) {
                     WXLogUtils.e("PhenixTracker", e.getMessage());
                 }
@@ -201,7 +199,7 @@ public class PhenixTracker {
         }
         if (WXEnvironment.isApkDebugable() && g && (iWeexAnalyzerInspector = this.b) != null && iWeexAnalyzerInspector.isEnabled()) {
             try {
-                this.b.onRequest("image", new IWeexAnalyzerInspector.C3091a(TextUtils.isEmpty(wr1Var.R()) ? "unknown" : wr1Var.R(), "GET", map));
+                this.b.onRequest("image", new IWeexAnalyzerInspector.a(TextUtils.isEmpty(wr1Var.R()) ? "unknown" : wr1Var.R(), "GET", map));
             } catch (Exception e) {
                 WXLogUtils.e("PhenixTracker", e.getMessage());
             }

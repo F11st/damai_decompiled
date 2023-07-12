@@ -29,7 +29,7 @@ public class pq1 {
             if (WXEnvironment.isApkDebugable()) {
                 WXLogUtils.e("code " + str, e);
             }
-            return new C9850wc(null, 6);
+            return new wc(null, 6);
         }
     }
 
@@ -98,11 +98,11 @@ public class pq1 {
         if (this.c.i() == 1) {
             return this.c.f();
         }
-        return new C9850wc(this.c.c(), 6);
+        return new wc(this.c.c(), 6);
     }
 
     final void h() {
-        zo2 c9850wc;
+        zo2 wcVar;
         int i = this.c.i();
         int i2 = this.d.i();
         int i3 = this.b;
@@ -133,17 +133,17 @@ public class pq1 {
         if (i4 != 7 && this.c.i() != 0) {
             zo2 f2 = this.c.f();
             if (arrayList.size() == 1) {
-                c9850wc = (zo2) arrayList.get(0);
+                wcVar = (zo2) arrayList.get(0);
             } else {
-                c9850wc = new C9850wc(arrayList, 6);
+                wcVar = new wc(arrayList, 6);
             }
             hn1 hn1Var = new hn1(".", i4);
             hn1Var.d = f2;
-            hn1Var.e = c9850wc;
+            hn1Var.e = wcVar;
             this.c.g(hn1Var);
             return;
         }
-        this.c.g(new C9850wc(arrayList, 7));
+        this.c.g(new wc(arrayList, 7));
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -184,7 +184,7 @@ public class pq1 {
             this.c.g(arrayList.get(0));
             return;
         }
-        this.c.g(new C9850wc(arrayList, 6));
+        this.c.g(new wc(arrayList, 6));
     }
 
     final void j() {

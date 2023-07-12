@@ -12,7 +12,7 @@ import cn.damai.common.app.base.BaseFragment;
 import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
@@ -130,24 +130,23 @@ public class MyCollectFragment extends DamaiBaseMvpFragment implements OnLoadMor
         }
     };
     private int mDeletePos = -1;
-    View.OnLongClickListener mItemLongListener = new View$OnLongClickListenerC1443a();
-    View.OnClickListener mItemClickListener = new View$OnClickListenerC1445b();
+    View.OnLongClickListener mItemLongListener = new a();
+    View.OnClickListener mItemClickListener = new b();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.mycollect.ui.fragment.MyCollectFragment$a */
     /* loaded from: classes15.dex */
-    public class View$OnLongClickListenerC1443a implements View.OnLongClickListener {
+    public class a implements View.OnLongClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.mine.mycollect.ui.fragment.MyCollectFragment$a$a */
+        /* renamed from: cn.damai.mine.mycollect.ui.fragment.MyCollectFragment$a$a  reason: collision with other inner class name */
         /* loaded from: classes15.dex */
-        public class DialogInterface$OnClickListenerC1444a implements DialogInterface.OnClickListener {
+        public class DialogInterface$OnClickListenerC0056a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ ProjectItemBean a;
             final /* synthetic */ int b;
 
-            DialogInterface$OnClickListenerC1444a(ProjectItemBean projectItemBean, int i) {
+            DialogInterface$OnClickListenerC0056a(ProjectItemBean projectItemBean, int i) {
                 this.a = projectItemBean;
                 this.b = i;
             }
@@ -166,7 +165,7 @@ public class MyCollectFragment extends DamaiBaseMvpFragment implements OnLoadMor
             }
         }
 
-        View$OnLongClickListenerC1443a() {
+        a() {
         }
 
         @Override // android.view.View.OnLongClickListener
@@ -184,19 +183,18 @@ public class MyCollectFragment extends DamaiBaseMvpFragment implements OnLoadMor
             DMDialog dMDialog = new DMDialog(MyCollectFragment.this.getActivity());
             dMDialog.v("是否取消想看?");
             dMDialog.i("否", null);
-            dMDialog.n("是", new DialogInterface$OnClickListenerC1444a(projectItemBean, intValue));
+            dMDialog.n("是", new DialogInterface$OnClickListenerC0056a(projectItemBean, intValue));
             dMDialog.show();
             return true;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.mycollect.ui.fragment.MyCollectFragment$b */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1445b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1445b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -212,7 +210,7 @@ public class MyCollectFragment extends DamaiBaseMvpFragment implements OnLoadMor
             if (myCollectDataHolder == null || (projectItemBean = myCollectDataHolder.mProjectItemBean) == null) {
                 return;
             }
-            C0529c e = C0529c.e();
+            c e = c.e();
             hi1 m = hi1.m();
             e.x(m.l(projectItemBean.id + "&6", intValue));
             if (TextUtils.isEmpty(projectItemBean.schema)) {
@@ -339,7 +337,7 @@ public class MyCollectFragment extends DamaiBaseMvpFragment implements OnLoadMor
             startProgressDialog();
             this.mDeletePos = i2;
             this.mViewModel.cancelFollowData(str, String.valueOf(i)).observe(this, this.cancelFollowObserver);
-            C0529c e = C0529c.e();
+            c e = c.e();
             hi1 m = hi1.m();
             e.x(m.k(str + "&" + i, i2));
         }

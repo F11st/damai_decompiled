@@ -13,7 +13,7 @@ import cn.damai.baseview.CustomDialog;
 import cn.damai.common.askpermission.OnGrantListener;
 import cn.damai.commonbusiness.R$style;
 import cn.damai.wxapi.ShareUtil;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.huawei.hms.actions.SearchIntents;
@@ -163,7 +163,7 @@ public class WebViewUtil {
             return;
         }
         qw2.d("aa", "weixin share click");
-        ShareUtil shareUtil = new ShareUtil(activity, C3834a.C3837c.d);
+        ShareUtil shareUtil = new ShareUtil(activity, a.c.d);
         shareUtil.initShareData(str, str2, str3, str4, "");
         shareUtil.shareByWchart(i);
     }

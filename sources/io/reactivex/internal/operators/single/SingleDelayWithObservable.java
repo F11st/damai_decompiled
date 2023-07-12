@@ -1,11 +1,11 @@
 package io.reactivex.internal.operators.single;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.observers.ResumeSingleObserver;
 import java.util.concurrent.atomic.AtomicReference;
@@ -13,7 +13,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SingleDelayWithObservable<T, U> extends AbstractC8152e<T> {
+public final class SingleDelayWithObservable<T, U> extends e<T> {
     final ObservableSource<U> other;
     final SingleSource<T> source;
 
@@ -78,7 +78,7 @@ public final class SingleDelayWithObservable<T, U> extends AbstractC8152e<T> {
         this.other = observableSource;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super T> singleObserver) {
         this.other.subscribe(new OtherSubscriber(singleObserver, this.source));
     }

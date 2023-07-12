@@ -27,23 +27,23 @@ public final class h1 {
     public void a(Context context) {
         synchronized (c) {
             if (this.a != null) {
-                C5653y.f("hmsSdk", "DataManager already initialized.");
+                y.f("hmsSdk", "DataManager already initialized.");
                 return;
             }
             this.a = context;
-            C5624i.c().b().a(this.a);
-            C5624i.c().b().j(context.getPackageName());
+            i.c().b().a(this.a);
+            i.c().b().j(context.getPackageName());
             z0.a().a(context);
         }
     }
 
     public void a(String str) {
-        C5653y.c("hmsSdk", "HiAnalyticsDataManager.setAppid(String appid) is execute.");
+        y.c("hmsSdk", "HiAnalyticsDataManager.setAppid(String appid) is execute.");
         Context context = this.a;
         if (context == null) {
-            C5653y.e("hmsSdk", "sdk is not init");
+            y.e("hmsSdk", "sdk is not init");
             return;
         }
-        C5624i.c().b().i(s0.a("appID", str, "[a-zA-Z0-9_][a-zA-Z0-9. _-]{0,255}", context.getPackageName()));
+        i.c().b().i(s0.a("appID", str, "[a-zA-Z0-9_][a-zA-Z0-9. _-]{0,255}", context.getPackageName()));
     }
 }

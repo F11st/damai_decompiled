@@ -20,7 +20,6 @@ import android.widget.TextView;
 import androidx.annotation.AttrRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import cn.damai.common.image.C0504a;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -56,12 +55,11 @@ public class TabView extends FrameLayout implements ITabView {
     private String mTabName;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.tab.TabView$a */
     /* loaded from: classes.dex */
-    public class C0930a extends pk2 {
+    public class a extends pk2 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0930a() {
+        a() {
         }
 
         @Override // tb.pk2, android.animation.Animator.AnimatorListener
@@ -77,39 +75,37 @@ public class TabView extends FrameLayout implements ITabView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.tab.TabView$b */
     /* loaded from: classes.dex */
-    public class C0931b implements IImageLoader.IImageSuccListener {
+    public class b implements IImageLoader.IImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0931b() {
+        b() {
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageSuccListener
-        public void onSuccess(IImageLoader.C2496b c2496b) {
+        public void onSuccess(IImageLoader.b bVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "728138201")) {
-                ipChange.ipc$dispatch("728138201", new Object[]{this, c2496b});
+                ipChange.ipc$dispatch("728138201", new Object[]{this, bVar});
             } else {
-                TabView.this.mCoverImg.setImageDrawable(c2496b.a);
+                TabView.this.mCoverImg.setImageDrawable(bVar.a);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.tab.TabView$c */
     /* loaded from: classes.dex */
-    public class C0932c implements IImageLoader.IImageFailListener {
+    public class c implements IImageLoader.IImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0932c(TabView tabView) {
+        c(TabView tabView) {
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageFailListener
-        public void onFail(IImageLoader.C2495a c2495a) {
+        public void onFail(IImageLoader.a aVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1528047358")) {
-                ipChange.ipc$dispatch("-1528047358", new Object[]{this, c2495a});
+                ipChange.ipc$dispatch("-1528047358", new Object[]{this, aVar});
             }
         }
     }
@@ -134,18 +130,18 @@ public class TabView extends FrameLayout implements ITabView {
             ipChange.ipc$dispatch("1631257204", new Object[]{this, bitmap});
         } else if (this.mIconImageView == null || bitmap == null) {
         } else {
-            int a = t60.a(getContext(), bitmap.getWidth() / 3);
-            int a2 = t60.a(getContext(), bitmap.getHeight() / 3);
+            int a2 = t60.a(getContext(), bitmap.getWidth() / 3);
+            int a3 = t60.a(getContext(), bitmap.getHeight() / 3);
             int i2 = this.mItemMaxSize;
-            if (a > i2) {
-                a2 *= i2 / a;
-                a = i2;
+            if (a2 > i2) {
+                a3 *= i2 / a2;
+                a2 = i2;
             } else {
-                i = ((i2 - a) / 2) - t60.a(getContext(), 7.0f);
+                i = ((i2 - a2) / 2) - t60.a(getContext(), 7.0f);
             }
             ViewGroup.LayoutParams layoutParams = this.mIconImageView.getLayoutParams();
-            layoutParams.width = a;
-            layoutParams.height = a2;
+            layoutParams.width = a2;
+            layoutParams.height = a3;
             this.mIconImageView.setLayoutParams(layoutParams);
             FrameLayout.LayoutParams layoutParams2 = (FrameLayout.LayoutParams) this.mBadgeView.getLayoutParams();
             layoutParams2.topMargin = t60.a(getContext(), 8.0f);
@@ -277,7 +273,7 @@ public class TabView extends FrameLayout implements ITabView {
         if (lottieAnimationView == null) {
             return;
         }
-        lottieAnimationView.addAnimatorListener(new C0930a());
+        lottieAnimationView.addAnimatorListener(new a());
     }
 
     @Override // cn.damai.commonbusiness.tab.ITabView
@@ -301,9 +297,9 @@ public class TabView extends FrameLayout implements ITabView {
         } else if (tabExtraBean != null) {
             this.mCoverUi.setVisibility(0);
             this.mIconImageView.setVisibility(8);
-            int a = m62.a(mu0.a(), 34.0f);
+            int a2 = m62.a(mu0.a(), 34.0f);
             this.mCoverImg.setImageDrawable(mu0.a().getResources().getDrawable(R$drawable.uikit_default_image_bg_gradient));
-            C0504a.b().load(tabExtraBean.iconUrl, a, a, new C0931b(), new C0932c(this));
+            cn.damai.common.image.a.b().load(tabExtraBean.iconUrl, a2, a2, new b(), new c(this));
         } else {
             this.mCoverUi.setVisibility(8);
             this.mIconImageView.setVisibility(0);

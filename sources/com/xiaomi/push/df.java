@@ -3,7 +3,6 @@ package com.xiaomi.push;
 import android.content.Context;
 import android.content.SharedPreferences;
 import com.taobao.accs.common.Constants;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.ao;
 import java.io.File;
 import java.io.IOException;
@@ -22,17 +21,16 @@ public class df {
     private Context f198a;
 
     /* renamed from: a  reason: collision with other field name */
-    private final ConcurrentLinkedQueue<C7630b> f199a;
+    private final ConcurrentLinkedQueue<b> f199a;
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.df$a */
     /* loaded from: classes11.dex */
-    class C7629a extends C7630b {
-        C7629a() {
+    class a extends b {
+        a() {
             super();
         }
 
-        @Override // com.xiaomi.push.df.C7630b, com.xiaomi.push.ao.AbstractC7600b
+        @Override // com.xiaomi.push.df.b, com.xiaomi.push.ao.b
         public void b() {
             df.this.b();
         }
@@ -40,20 +38,19 @@ public class df {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.df$b */
     /* loaded from: classes11.dex */
-    public class C7630b extends ao.AbstractC7600b {
+    public class b extends ao.b {
         long a = System.currentTimeMillis();
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C7630b() {
+        public b() {
         }
 
         public boolean a() {
             return true;
         }
 
-        @Override // com.xiaomi.push.ao.AbstractC7600b
+        @Override // com.xiaomi.push.ao.b
         public void b() {
         }
 
@@ -64,9 +61,8 @@ public class df {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.df$c */
     /* loaded from: classes11.dex */
-    class C7631c extends C7630b {
+    class c extends b {
         int a;
 
         /* renamed from: a  reason: collision with other field name */
@@ -83,7 +79,7 @@ public class df {
         boolean f204b;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C7631c(String str, String str2, File file, boolean z) {
+        public c(String str, String str2, File file, boolean z) {
             super();
             this.f202a = str;
             this.b = str2;
@@ -117,17 +113,17 @@ public class df {
                 jSONObject2.put(Constants.KEY_TIMES, i2 + 1);
                 sharedPreferences.edit().putString("log.requst", jSONObject2.toString()).commit();
             } catch (JSONException e) {
-                AbstractC7535b.c("JSONException on put " + e.getMessage());
+                com.xiaomi.channel.commonutils.logger.b.c("JSONException on put " + e.getMessage());
             }
             return true;
         }
 
-        @Override // com.xiaomi.push.df.C7630b
+        @Override // com.xiaomi.push.df.b
         public boolean a() {
             return bj.e(df.this.f198a) || (this.f204b && bj.b(df.this.f198a));
         }
 
-        @Override // com.xiaomi.push.df.C7630b, com.xiaomi.push.ao.AbstractC7600b
+        @Override // com.xiaomi.push.df.b, com.xiaomi.push.ao.b
         public void b() {
             try {
                 if (c()) {
@@ -142,7 +138,7 @@ public class df {
             }
         }
 
-        @Override // com.xiaomi.push.ao.AbstractC7600b
+        @Override // com.xiaomi.push.ao.b
         /* renamed from: c  reason: collision with other method in class */
         public void mo765c() {
             if (!this.f203a) {
@@ -160,10 +156,10 @@ public class df {
     }
 
     private df(Context context) {
-        ConcurrentLinkedQueue<C7630b> concurrentLinkedQueue = new ConcurrentLinkedQueue<>();
+        ConcurrentLinkedQueue<b> concurrentLinkedQueue = new ConcurrentLinkedQueue<>();
         this.f199a = concurrentLinkedQueue;
         this.f198a = context;
-        concurrentLinkedQueue.add(new C7629a());
+        concurrentLinkedQueue.add(new a());
         b(0L);
     }
 
@@ -181,7 +177,7 @@ public class df {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void a(long j) {
-        C7630b peek = this.f199a.peek();
+        b peek = this.f199a.peek();
         if (peek == null || !peek.a()) {
             return;
         }
@@ -190,7 +186,7 @@ public class df {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void b() {
-        if (C7595ad.b() || C7595ad.m660a()) {
+        if (ad.b() || ad.m660a()) {
             return;
         }
         try {
@@ -213,12 +209,12 @@ public class df {
 
     private void c() {
         while (!this.f199a.isEmpty()) {
-            C7630b peek = this.f199a.peek();
+            b peek = this.f199a.peek();
             if (peek != null) {
                 if (!peek.m764b() && this.f199a.size() <= 6) {
                     return;
                 }
-                AbstractC7535b.c("remove Expired task");
+                com.xiaomi.channel.commonutils.logger.b.c("remove Expired task");
                 this.f199a.remove(peek);
             }
         }

@@ -33,17 +33,16 @@ public enum DescriptorRendererModifier {
     @NotNull
     public static final Set<DescriptorRendererModifier> ALL_EXCEPT_ANNOTATIONS;
     @NotNull
-    public static final C8480a Companion = new C8480a(null);
+    public static final a Companion = new a(null);
     private final boolean includeByDefault;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRendererModifier$a */
     /* loaded from: classes3.dex */
-    public static final class C8480a {
-        private C8480a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8480a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

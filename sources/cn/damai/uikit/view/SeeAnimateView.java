@@ -28,12 +28,11 @@ public class SeeAnimateView extends LottieAnimationView {
     private int mImageDp;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.SeeAnimateView$a */
     /* loaded from: classes8.dex */
-    public class C2602a implements Animator.AnimatorListener {
+    public class a implements Animator.AnimatorListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2602a() {
+        a() {
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -75,12 +74,11 @@ public class SeeAnimateView extends LottieAnimationView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.SeeAnimateView$b */
     /* loaded from: classes8.dex */
-    public class C2603b implements Animator.AnimatorListener {
+    public class b implements Animator.AnimatorListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2603b() {
+        b() {
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -122,12 +120,11 @@ public class SeeAnimateView extends LottieAnimationView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.SeeAnimateView$c */
     /* loaded from: classes8.dex */
-    public class C2604c implements Animator.AnimatorListener {
+    public class c implements Animator.AnimatorListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2604c() {
+        c() {
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -172,9 +169,9 @@ public class SeeAnimateView extends LottieAnimationView {
         super(context);
         this.mImageDp = 14;
         this.mAnimateDp = 18;
-        this.mGuidelistener = new C2602a();
-        this.mClicklistener = new C2603b();
-        this.mCancellistener = new C2604c();
+        this.mGuidelistener = new a();
+        this.mClicklistener = new b();
+        this.mCancellistener = new c();
     }
 
     private void setAnimationSize() {
@@ -336,17 +333,17 @@ public class SeeAnimateView extends LottieAnimationView {
         super(context, attributeSet);
         this.mImageDp = 14;
         this.mAnimateDp = 18;
-        this.mGuidelistener = new C2602a();
-        this.mClicklistener = new C2603b();
-        this.mCancellistener = new C2604c();
+        this.mGuidelistener = new a();
+        this.mClicklistener = new b();
+        this.mCancellistener = new c();
     }
 
     public SeeAnimateView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         this.mImageDp = 14;
         this.mAnimateDp = 18;
-        this.mGuidelistener = new C2602a();
-        this.mClicklistener = new C2603b();
-        this.mCancellistener = new C2604c();
+        this.mGuidelistener = new a();
+        this.mClicklistener = new b();
+        this.mCancellistener = new c();
     }
 }

@@ -17,7 +17,7 @@ public final class MaybeLift<T, R> extends AbstractMaybeWithUpstream<T, R> {
         this.operator = maybeOperator;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super R> maybeObserver) {
         try {
             this.source.subscribe((MaybeObserver) ObjectHelper.requireNonNull(this.operator.apply(maybeObserver), "The operator returned a null MaybeObserver"));

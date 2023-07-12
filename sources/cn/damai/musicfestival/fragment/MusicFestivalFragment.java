@@ -40,19 +40,18 @@ public class MusicFestivalFragment extends AbsFragmentV2 implements OnCityChange
     private MusicFestivalModel mModel = new MusicFestivalModel();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.musicfestival.fragment.MusicFestivalFragment$a */
     /* loaded from: classes6.dex */
-    public class C1481a implements OnBizListener<Pair<BaseResponse, AtmosphereBean>> {
+    public class a implements OnBizListener<Pair<BaseResponse, AtmosphereBean>> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ boolean a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.musicfestival.fragment.MusicFestivalFragment$a$a */
+        /* renamed from: cn.damai.musicfestival.fragment.MusicFestivalFragment$a$a  reason: collision with other inner class name */
         /* loaded from: classes6.dex */
-        public class C1482a implements OnErrClickListener {
+        public class C0058a implements OnErrClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1482a() {
+            C0058a() {
             }
 
             @Override // cn.damai.tetris.v2.componentplugin.OnErrClickListener
@@ -66,7 +65,7 @@ public class MusicFestivalFragment extends AbsFragmentV2 implements OnCityChange
             }
         }
 
-        C1481a(boolean z) {
+        a(boolean z) {
             this.a = z;
         }
 
@@ -98,7 +97,7 @@ public class MusicFestivalFragment extends AbsFragmentV2 implements OnCityChange
                 MusicFestivalFragment.this.stopProgressDialog();
             }
             MusicFestivalFragment.this.refreshFinish();
-            MusicFestivalFragment.this.showErrorViewV2(str, str2, new C1482a());
+            MusicFestivalFragment.this.showErrorViewV2(str, str2, new C0058a());
         }
     }
 
@@ -173,7 +172,7 @@ public class MusicFestivalFragment extends AbsFragmentV2 implements OnCityChange
         if (z) {
             startProgressDialog();
         }
-        this.mModel.load(new C1481a(z));
+        this.mModel.load(new a(z));
     }
 
     private void obtainBundleArgs() {

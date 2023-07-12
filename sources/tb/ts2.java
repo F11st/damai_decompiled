@@ -20,10 +20,9 @@ public class ts2 implements IUTCrashCaughtListener {
     private String b = "";
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ts2$a */
     /* loaded from: classes11.dex */
-    public class C9731a implements WVEventListener {
-        public C9731a() {
+    public class a implements WVEventListener {
+        public a() {
         }
 
         @Override // android.taobao.windvane.service.WVEventListener
@@ -63,7 +62,7 @@ public class ts2 implements IUTCrashCaughtListener {
 
     private void c() {
         this.a = new LinkedList();
-        WVEventService.getInstance().addEventListener(new C9731a());
+        WVEventService.getInstance().addEventListener(new a());
     }
 
     @Override // com.alibaba.motu.crashreporter.IUTCrashCaughtListener

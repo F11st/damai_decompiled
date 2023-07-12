@@ -2,7 +2,7 @@ package com.alient.oneservice.appconfig;
 
 import android.app.Activity;
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -11,7 +11,7 @@ public class AppConfigProviderProxy {
 
     public static AppConfigProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (AppConfigProvider) C8883a.j("com.alient.oneservice.provider.impl.appconfig.AppConfigProviderImpl").b().f();
+            sProxy = (AppConfigProvider) a.j("com.alient.oneservice.provider.impl.appconfig.AppConfigProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -29,7 +29,7 @@ public class AppConfigProviderProxy {
     public static void showToast(Activity activity, String str, int i) {
         try {
             if (sProxy == null) {
-                sProxy = (AppConfigProvider) C8883a.j("com.alient.oneservice.provider.impl.appconfig.AppConfigProviderImpl").b().f();
+                sProxy = (AppConfigProvider) a.j("com.alient.oneservice.provider.impl.appconfig.AppConfigProviderImpl").b().f();
             }
             sProxy.showToast(activity, str, i);
         } catch (Throwable th) {
@@ -40,7 +40,7 @@ public class AppConfigProviderProxy {
     public static Activity topActivity() {
         try {
             if (sProxy == null) {
-                sProxy = (AppConfigProvider) C8883a.j("com.alient.oneservice.provider.impl.appconfig.AppConfigProviderImpl").b().f();
+                sProxy = (AppConfigProvider) a.j("com.alient.oneservice.provider.impl.appconfig.AppConfigProviderImpl").b().f();
             }
             return sProxy.topActivity();
         } catch (Throwable th) {

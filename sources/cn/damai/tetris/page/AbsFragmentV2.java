@@ -9,9 +9,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.tetris.core.BaseLayer;
 import cn.damai.tetris.core.BaseSection;
 import cn.damai.tetris.core.TrackInfo;
@@ -25,7 +23,6 @@ import cn.damai.tetris.core.ut.TrackProxy;
 import cn.damai.tetris.core.ut.TrackType;
 import cn.damai.tetris.request.DrObj;
 import cn.damai.tetris.v2.common.Node;
-import cn.damai.tetris.v2.componentplugin.C2007a;
 import cn.damai.tetris.v2.componentplugin.ComponentPageUi;
 import cn.damai.tetris.v2.structure.container.IContainer;
 import cn.damai.tetris.v2.structure.layer.ILayer;
@@ -41,8 +38,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import tb.C9039db;
 import tb.cb2;
+import tb.db;
 import tb.ja;
 import tb.m61;
 import tb.nt0;
@@ -57,7 +54,7 @@ import tb.yl2;
 public abstract class AbsFragmentV2 extends AbsFragment implements ComponentPageUi {
     private static transient /* synthetic */ IpChange $ipChange;
     private DelegateAdapter mAdapter;
-    protected C2007a mManager;
+    protected cn.damai.tetris.v2.componentplugin.a mManager;
     private IContainer mPageContainer;
     private HashMap<String, SectionDataPreDealListener> preDealListenerHashMap = new HashMap<>();
     private String requestArgs;
@@ -69,12 +66,11 @@ public abstract class AbsFragmentV2 extends AbsFragment implements ComponentPage
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.page.AbsFragmentV2$a */
     /* loaded from: classes7.dex */
-    public class C1997a implements IImageLoader {
+    public class a implements IImageLoader {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1997a(AbsFragmentV2 absFragmentV2) {
+        a(AbsFragmentV2 absFragmentV2) {
         }
 
         @Override // cn.damai.uikit.image.IImageLoader
@@ -83,14 +79,14 @@ public abstract class AbsFragmentV2 extends AbsFragment implements ComponentPage
             if (AndroidInstantRuntime.support(ipChange, "-1967530544")) {
                 ipChange.ipc$dispatch("-1967530544", new Object[]{this, str, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), iImageSuccListener, iImageFailListener});
             } else {
-                C0504a.b().load(str, i, i2, i3, iImageSuccListener, iImageFailListener);
+                cn.damai.common.image.a.b().load(str, i, i2, i3, iImageSuccListener, iImageFailListener);
             }
         }
 
         @Override // cn.damai.uikit.image.IImageLoader
         public IImageLoader.ImageTicket loadinto(String str, ImageView imageView) {
             IpChange ipChange = $ipChange;
-            return AndroidInstantRuntime.support(ipChange, "2077729830") ? (IImageLoader.ImageTicket) ipChange.ipc$dispatch("2077729830", new Object[]{this, str, imageView}) : C0504a.b().loadinto(str, imageView);
+            return AndroidInstantRuntime.support(ipChange, "2077729830") ? (IImageLoader.ImageTicket) ipChange.ipc$dispatch("2077729830", new Object[]{this, str, imageView}) : cn.damai.common.image.a.b().loadinto(str, imageView);
         }
 
         @Override // cn.damai.uikit.image.IImageLoader
@@ -99,36 +95,35 @@ public abstract class AbsFragmentV2 extends AbsFragment implements ComponentPage
             if (AndroidInstantRuntime.support(ipChange, "-520679824")) {
                 ipChange.ipc$dispatch("-520679824", new Object[]{this, str, Integer.valueOf(i), iImageSuccListener, iImageFailListener});
             } else {
-                C0504a.b().load(str, i, iImageSuccListener, iImageFailListener);
+                cn.damai.common.image.a.b().load(str, i, iImageSuccListener, iImageFailListener);
             }
         }
 
         @Override // cn.damai.uikit.image.IImageLoader
         public IImageLoader.ImageTicket loadinto(String str, ImageView imageView, int i, int i2) {
             IpChange ipChange = $ipChange;
-            return AndroidInstantRuntime.support(ipChange, "-779918778") ? (IImageLoader.ImageTicket) ipChange.ipc$dispatch("-779918778", new Object[]{this, str, imageView, Integer.valueOf(i), Integer.valueOf(i2)}) : C0504a.b().loadinto(str, imageView, i, i2);
+            return AndroidInstantRuntime.support(ipChange, "-779918778") ? (IImageLoader.ImageTicket) ipChange.ipc$dispatch("-779918778", new Object[]{this, str, imageView, Integer.valueOf(i), Integer.valueOf(i2)}) : cn.damai.common.image.a.b().loadinto(str, imageView, i, i2);
         }
 
         @Override // cn.damai.uikit.image.IImageLoader
         public IImageLoader.ImageTicket load(String str, int i, int i2, IImageLoader.IImageSuccListener iImageSuccListener, IImageLoader.IImageFailListener iImageFailListener) {
             IpChange ipChange = $ipChange;
-            return AndroidInstantRuntime.support(ipChange, "1107888728") ? (IImageLoader.ImageTicket) ipChange.ipc$dispatch("1107888728", new Object[]{this, str, Integer.valueOf(i), Integer.valueOf(i2), iImageSuccListener, iImageFailListener}) : C0504a.b().load(str, i, i2, iImageSuccListener, iImageFailListener);
+            return AndroidInstantRuntime.support(ipChange, "1107888728") ? (IImageLoader.ImageTicket) ipChange.ipc$dispatch("1107888728", new Object[]{this, str, Integer.valueOf(i), Integer.valueOf(i2), iImageSuccListener, iImageFailListener}) : cn.damai.common.image.a.b().load(str, i, i2, iImageSuccListener, iImageFailListener);
         }
 
         @Override // cn.damai.uikit.image.IImageLoader
         public IImageLoader.ImageTicket load(String str, int i, int i2, int i3, int i4, IImageLoader.IImageSuccListener iImageSuccListener, IImageLoader.IImageFailListener iImageFailListener) {
             IpChange ipChange = $ipChange;
-            return AndroidInstantRuntime.support(ipChange, "-1461252360") ? (IImageLoader.ImageTicket) ipChange.ipc$dispatch("-1461252360", new Object[]{this, str, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4), iImageSuccListener, iImageFailListener}) : C0504a.b().load(str, i, i2, i3, i4, iImageSuccListener, iImageFailListener);
+            return AndroidInstantRuntime.support(ipChange, "-1461252360") ? (IImageLoader.ImageTicket) ipChange.ipc$dispatch("-1461252360", new Object[]{this, str, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4), iImageSuccListener, iImageFailListener}) : cn.damai.common.image.a.b().load(str, i, i2, i3, i4, iImageSuccListener, iImageFailListener);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.page.AbsFragmentV2$b */
     /* loaded from: classes7.dex */
-    public class C1998b implements TrackProxy.ITrack {
+    public class b implements TrackProxy.ITrack {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1998b() {
+        b() {
         }
 
         @Override // cn.damai.tetris.core.ut.TrackProxy.ITrack
@@ -138,21 +133,21 @@ public abstract class AbsFragmentV2 extends AbsFragment implements ComponentPage
                 ipChange.ipc$dispatch("-642515338", new Object[]{this, trackType, view, str, str2, str3, map, Boolean.valueOf(z)});
                 return;
             }
-            switch (C1999c.a[trackType.ordinal()]) {
+            switch (c.a[trackType.ordinal()]) {
                 case 1:
-                    C0529c.e().x(AbsFragmentV2.this.getUTKeyBuilder(str, str2, str3, map, Boolean.valueOf(z)));
+                    cn.damai.common.user.c.e().x(AbsFragmentV2.this.getUTKeyBuilder(str, str2, str3, map, Boolean.valueOf(z)));
                     return;
                 case 2:
-                    C0529c.e().x(AbsFragmentV2.this.getUTKeyBuilder(str, str2, str3, map, Boolean.valueOf(z)));
+                    cn.damai.common.user.c.e().x(AbsFragmentV2.this.getUTKeyBuilder(str, str2, str3, map, Boolean.valueOf(z)));
                     return;
                 case 3:
-                    C0529c.e().G(view, str3, str2, str, map);
+                    cn.damai.common.user.c.e().G(view, str3, str2, str, map);
                     return;
                 case 4:
-                    C0529c.e().D(str, str2, map.get("arg1"), map.get("arg2"), map, map.get("eventId") != null ? Integer.parseInt(map.get("eventId")) : 0);
+                    cn.damai.common.user.c.e().D(str, str2, map.get("arg1"), map.get("arg2"), map, map.get("eventId") != null ? Integer.parseInt(map.get("eventId")) : 0);
                     return;
                 case 5:
-                    C0529c.e().A(map, str2, str);
+                    cn.damai.common.user.c.e().A(map, str2, str);
                     return;
                 case 6:
                     try {
@@ -169,9 +164,8 @@ public abstract class AbsFragmentV2 extends AbsFragment implements ComponentPage
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.page.AbsFragmentV2$c */
     /* loaded from: classes16.dex */
-    static /* synthetic */ class C1999c {
+    static /* synthetic */ class c {
         static final /* synthetic */ int[] a;
 
         static {
@@ -228,7 +222,7 @@ public abstract class AbsFragmentV2 extends AbsFragment implements ComponentPage
         if (AndroidInstantRuntime.support(ipChange, "1743886039")) {
             ipChange.ipc$dispatch("1743886039", new Object[]{this});
         } else {
-            yl2.b(new C1997a(this), new C1998b());
+            yl2.b(new a(this), new b());
         }
     }
 
@@ -268,7 +262,7 @@ public abstract class AbsFragmentV2 extends AbsFragment implements ComponentPage
                         if (iLayer instanceof tt0) {
                             tt0 tt0Var = (tt0) iLayer;
                             if (str.equals(tt0Var.c())) {
-                                tt0Var.createSectionList(new C9039db().g(baseResponse, i), false);
+                                tt0Var.createSectionList(new db().g(baseResponse, i), false);
                                 this.mPageContainer.updateContentAdapter();
                             }
                         }
@@ -371,9 +365,9 @@ public abstract class AbsFragmentV2 extends AbsFragment implements ComponentPage
         return drObj;
     }
 
-    public C0525a.C0527b getUTKeyBuilder(String str, String str2, String str3, Map<String, String> map, Boolean bool) {
+    public a.b getUTKeyBuilder(String str, String str2, String str3, Map<String, String> map, Boolean bool) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "174235752") ? (C0525a.C0527b) ipChange.ipc$dispatch("174235752", new Object[]{this, str, str2, str3, map, bool}) : new C0525a.C0527b().i(str).f(str2).l(str3).g(bool.booleanValue()).j(map);
+        return AndroidInstantRuntime.support(ipChange, "174235752") ? (a.b) ipChange.ipc$dispatch("174235752", new Object[]{this, str, str2, str3, map, bool}) : new a.b().i(str).f(str2).l(str3).g(bool.booleanValue()).j(map);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -385,9 +379,9 @@ public abstract class AbsFragmentV2 extends AbsFragment implements ComponentPage
             return;
         }
         super.hookOnLoadMore(view);
-        C2007a c2007a = this.mManager;
-        if (c2007a != null) {
-            c2007a.b(view);
+        cn.damai.tetris.v2.componentplugin.a aVar = this.mManager;
+        if (aVar != null) {
+            aVar.b(view);
         }
     }
 
@@ -400,9 +394,9 @@ public abstract class AbsFragmentV2 extends AbsFragment implements ComponentPage
             return;
         }
         super.hookOnMessage(message);
-        C2007a c2007a = this.mManager;
-        if (c2007a != null) {
-            c2007a.c(message.what, message.value);
+        cn.damai.tetris.v2.componentplugin.a aVar = this.mManager;
+        if (aVar != null) {
+            aVar.c(message.what, message.value);
         }
     }
 
@@ -475,7 +469,7 @@ public abstract class AbsFragmentV2 extends AbsFragment implements ComponentPage
         if (AndroidInstantRuntime.support(ipChange, "-1786626720")) {
             ipChange.ipc$dispatch("-1786626720", new Object[]{this, baseResponse});
         } else {
-            this.mPageContainer.addSectionList(new C9039db().f(baseResponse), true, false);
+            this.mPageContainer.addSectionList(new db().f(baseResponse), true, false);
         }
     }
 
@@ -487,12 +481,12 @@ public abstract class AbsFragmentV2 extends AbsFragment implements ComponentPage
             return;
         }
         super.onViewCreated(view, bundle);
-        C2007a c2007a = new C2007a(this);
-        this.mManager = c2007a;
-        nt0 nt0Var = new nt0(this.baseContext, c2007a);
+        cn.damai.tetris.v2.componentplugin.a aVar = new cn.damai.tetris.v2.componentplugin.a(this);
+        this.mManager = aVar;
+        nt0 nt0Var = new nt0(this.baseContext, aVar);
         this.mPageContainer = nt0Var;
         this.baseContext.b(nt0Var);
-        if (!new C9039db().i(xl2.DM_COMMON_LOOP_BANNER_CID)) {
+        if (!new db().i(xl2.DM_COMMON_LOOP_BANNER_CID)) {
             initTetrisProxy();
         }
         initRecyclerViewSetting();
@@ -523,7 +517,7 @@ public abstract class AbsFragmentV2 extends AbsFragment implements ComponentPage
             addBottomBarView(iteratorSections);
         }
         this.requestArgs = baseResponse.args;
-        setData(new C9039db().e(baseResponse));
+        setData(new db().e(baseResponse));
         GlobalConfig globalConfig = baseResponse.globalConfig;
         if (globalConfig != null) {
             updateAB(globalConfig);
@@ -539,7 +533,7 @@ public abstract class AbsFragmentV2 extends AbsFragment implements ComponentPage
         }
         super.setUserVisibleHint(z);
         if (this.properties != null) {
-            C0529c.e().O(getActivity(), this.properties);
+            cn.damai.common.user.c.e().O(getActivity(), this.properties);
             Log.e("abtest", "v2 setUserVisibleHint updatePageProperties : " + this.properties.size());
         }
     }

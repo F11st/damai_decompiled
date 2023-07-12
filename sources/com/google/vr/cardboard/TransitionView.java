@@ -36,10 +36,9 @@ public class TransitionView extends FrameLayout implements View.OnTouchListener 
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.cardboard.TransitionView$a */
     /* loaded from: classes10.dex */
-    public class View$OnClickListenerC5425a implements View.OnClickListener {
-        View$OnClickListenerC5425a() {
+    public class a implements View.OnClickListener {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -50,10 +49,9 @@ public class TransitionView extends FrameLayout implements View.OnTouchListener 
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.cardboard.TransitionView$b */
     /* loaded from: classes10.dex */
-    public class View$OnClickListenerC5426b implements View.OnClickListener {
-        View$OnClickListenerC5426b() {
+    public class b implements View.OnClickListener {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -64,10 +62,9 @@ public class TransitionView extends FrameLayout implements View.OnTouchListener 
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.cardboard.TransitionView$c */
     /* loaded from: classes10.dex */
-    public class C5427c extends OrientationEventListener {
-        C5427c(Context context) {
+    public class c extends OrientationEventListener {
+        c(Context context) {
             super(context);
         }
 
@@ -86,10 +83,9 @@ public class TransitionView extends FrameLayout implements View.OnTouchListener 
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.cardboard.TransitionView$d  reason: invalid class name */
     /* loaded from: classes10.dex */
-    public class animationAnimation$AnimationListenerC5428d implements Animation.AnimationListener {
-        animationAnimation$AnimationListenerC5428d() {
+    public class d implements Animation.AnimationListener {
+        d() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -112,10 +108,9 @@ public class TransitionView extends FrameLayout implements View.OnTouchListener 
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.cardboard.TransitionView$e */
     /* loaded from: classes10.dex */
-    public class View$OnClickListenerC5429e implements View.OnClickListener {
-        View$OnClickListenerC5429e() {
+    public class e implements View.OnClickListener {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -151,15 +146,15 @@ public class TransitionView extends FrameLayout implements View.OnTouchListener 
         if (z) {
             alphaAnimation.setStartOffset(2000L);
         }
-        alphaAnimation.setAnimationListener(new animationAnimation$AnimationListenerC5428d());
+        alphaAnimation.setAnimationListener(new d());
         startAnimation(alphaAnimation);
     }
 
     private void inflateContentView(int i) {
         removeAllViews();
         LayoutInflater.from(getContext()).inflate(i, (ViewGroup) this, true);
-        findViewById(R$id.transition_switch_action).setOnClickListener(new View$OnClickListenerC5425a());
-        ((ImageView) findViewById(R$id.transition_icon)).setOnClickListener(new View$OnClickListenerC5426b());
+        findViewById(R$id.transition_switch_action).setOnClickListener(new a());
+        ((ImageView) findViewById(R$id.transition_icon)).setOnClickListener(new b());
         updateBackButtonVisibility();
         if (getResources().getConfiguration().orientation == 2) {
             findViewById(R$id.transition_bottom_frame).setVisibility(8);
@@ -222,9 +217,9 @@ public class TransitionView extends FrameLayout implements View.OnTouchListener 
         if (this.orientationEventListener != null) {
             return;
         }
-        C5427c c5427c = new C5427c(getContext());
-        this.orientationEventListener = c5427c;
-        c5427c.enable();
+        c cVar = new c(getContext());
+        this.orientationEventListener = cVar;
+        cVar.enable();
     }
 
     private void stopOrientationMonitor() {
@@ -249,7 +244,7 @@ public class TransitionView extends FrameLayout implements View.OnTouchListener 
         }
         imageButton.setTag(runnable);
         this.backButton.setVisibility(0);
-        this.backButton.setOnClickListener(new View$OnClickListenerC5429e());
+        this.backButton.setOnClickListener(new e());
     }
 
     @Override // android.view.ViewGroup, android.view.View

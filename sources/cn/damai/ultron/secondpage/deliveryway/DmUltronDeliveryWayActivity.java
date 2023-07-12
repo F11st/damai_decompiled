@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.ultron.R$id;
 import cn.damai.ultron.utils.DmChooseSwitchListenerImpl;
 import cn.damai.ultron.view.activity.DmPopWindowBaseActivity;
@@ -28,15 +28,14 @@ public class DmUltronDeliveryWayActivity extends DmPopWindowBaseActivity {
     private String mCurrentDeliveryWayType;
     private RecyclerView mRecyclerView;
     private List<DmDeliveryWayBean> mDeliveryWayEntries = new ArrayList();
-    DmChooseSwitchListenerImpl<List<DmDeliveryWayBean>> itemClickListener = new C2638a();
+    DmChooseSwitchListenerImpl<List<DmDeliveryWayBean>> itemClickListener = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.secondpage.deliveryway.DmUltronDeliveryWayActivity$a */
     /* loaded from: classes9.dex */
-    public class C2638a implements DmChooseSwitchListenerImpl<List<DmDeliveryWayBean>> {
+    public class a implements DmChooseSwitchListenerImpl<List<DmDeliveryWayBean>> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2638a() {
+        a() {
         }
 
         @Override // cn.damai.ultron.utils.DmChooseSwitchListenerImpl
@@ -48,7 +47,7 @@ public class DmUltronDeliveryWayActivity extends DmPopWindowBaseActivity {
                 ipChange.ipc$dispatch("1320767713", new Object[]{this, list, Integer.valueOf(i)});
             } else if (i >= wh2.e(list) || i < 0 || (dmDeliveryWayBean = list.get(i)) == null) {
             } else {
-                C0529c.e().x(kb0.u().k(DmUltronDeliveryWayActivity.this, dmDeliveryWayBean.desc, i));
+                c.e().x(kb0.u().k(DmUltronDeliveryWayActivity.this, dmDeliveryWayBean.desc, i));
                 String str = dmDeliveryWayBean.deliveryType;
                 if (DmUltronDeliveryWayActivity.this.mCurrentDeliveryWayType == null || !DmUltronDeliveryWayActivity.this.mCurrentDeliveryWayType.equalsIgnoreCase(str)) {
                     HashMap hashMap = new HashMap();
@@ -153,7 +152,7 @@ public class DmUltronDeliveryWayActivity extends DmPopWindowBaseActivity {
         } else if (view.getId() == R$id.v_outside) {
             finishActivity();
         } else if (view.getId() == R$id.text_ok) {
-            C0529c.e().x(kb0.u().j(this));
+            c.e().x(kb0.u().j(this));
             finishActivity();
         }
     }

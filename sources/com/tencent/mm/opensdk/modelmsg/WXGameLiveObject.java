@@ -2,7 +2,7 @@ package com.tencent.mm.opensdk.modelmsg;
 
 import android.os.Bundle;
 import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
-import com.tencent.mm.opensdk.utils.C7065b;
+import com.tencent.mm.opensdk.utils.b;
 import java.util.HashMap;
 
 /* compiled from: Taobao */
@@ -29,7 +29,7 @@ public class WXGameLiveObject implements WXMediaMessage.IMediaObject {
         if (this.extraInfoMap == null) {
             this.extraInfoMap = new HashMap<>();
         }
-        if (C7065b.b(str)) {
+        if (b.b(str)) {
             return;
         }
         this.extraInfoMap.put(str, str2);

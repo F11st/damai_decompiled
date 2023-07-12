@@ -10,8 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -56,7 +56,7 @@ public class DXViewFlipper extends FrameLayout {
             ipChange.ipc$dispatch("-1820336180", new Object[]{this, str, imageView});
             return;
         }
-        C0504a h = C0504a.b().h(mu0.a());
+        a h = a.b().h(mu0.a());
         int i = this.width;
         DMImageCreator f = h.f(str, i, i);
         int i2 = R$drawable.uikit_user_default_icon_trans_white;

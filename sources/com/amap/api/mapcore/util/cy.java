@@ -7,7 +7,7 @@ import android.opengl.GLES20;
 import android.os.RemoteException;
 import com.alibaba.wireless.security.aopsdk.replace.android.graphics.Point;
 import com.alimm.xadsdk.base.constant.AdConstants;
-import com.amap.api.mapcore.util.C4505de;
+import com.amap.api.mapcore.util.de;
 import com.amap.api.maps.model.AMapPara;
 import com.amap.api.maps.model.BaseHoleOptions;
 import com.amap.api.maps.model.CircleHoleOptions;
@@ -52,7 +52,7 @@ public class cy implements IPolygonDelegate {
     private List<BaseHoleOptions> n;
     private FloatBuffer o;
     private FloatBuffer p;
-    private C4505de.C4510e z;
+    private de.e z;
     private float c = 0.0f;
     private boolean d = true;
     private List<IPoint> l = new Vector();
@@ -149,8 +149,8 @@ public class cy implements IPolygonDelegate {
                 a((CircleHoleOptions) baseHoleOptions);
             }
             if (this.F != null && this.D > 0) {
-                C4505de.C4510e c4510e = this.z;
-                if (c4510e == null || c4510e.c()) {
+                de.e eVar = this.z;
+                if (eVar == null || eVar.c()) {
                     a();
                 }
                 if (z) {
@@ -184,8 +184,8 @@ public class cy implements IPolygonDelegate {
                 a((CircleHoleOptions) baseHoleOptions);
             }
             if (this.F != null && this.D > 0) {
-                C4505de.C4510e c4510e = this.z;
-                if (c4510e == null || c4510e.c()) {
+                de.e eVar = this.z;
+                if (eVar == null || eVar.c()) {
                     a();
                 }
                 if (z) {
@@ -295,8 +295,8 @@ public class cy implements IPolygonDelegate {
         if (list2.size() > 2) {
             b(list2, (int) mapConfig.getSX(), (int) mapConfig.getSY());
             if (this.o != null && this.p != null && this.q > 0 && this.r > 0) {
-                C4505de.C4510e c4510e = this.z;
-                if (c4510e == null || c4510e.c()) {
+                de.e eVar = this.z;
+                if (eVar == null || eVar.c()) {
                     a();
                 }
                 dy.a(this.z, this.h, this.i, this.o, this.g, this.p, this.q, this.r, this.b.getFinalMatrix(), this.b.getLineTextureID(), this.b.getLineTextureRatio(), mapConfig.getMapPerPixelUnitLength(), this.x.getTypeValue(), this.w.getTypeValue(), this.v, true);
@@ -480,7 +480,7 @@ public class cy implements IPolygonDelegate {
     private void a() {
         IAMapDelegate iAMapDelegate = this.b;
         if (iAMapDelegate != null) {
-            this.z = (C4505de.C4510e) iAMapDelegate.getGLShader(3);
+            this.z = (de.e) iAMapDelegate.getGLShader(3);
         }
     }
 

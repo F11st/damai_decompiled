@@ -7,18 +7,17 @@ import org.jetbrains.annotations.Nullable;
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
 public final class po extends n1 {
-    public static final C9559a Key = new C9559a(null);
+    public static final a Key = new a(null);
     @NotNull
     private final String a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.po$a */
     /* loaded from: classes8.dex */
-    public static final class C9559a implements CoroutineContext.Key<po> {
-        private C9559a() {
+    public static final class a implements CoroutineContext.Key<po> {
+        private a() {
         }
 
-        public /* synthetic */ C9559a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

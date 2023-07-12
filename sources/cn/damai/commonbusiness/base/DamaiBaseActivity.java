@@ -19,13 +19,13 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import cn.damai.baseview.abcpullrefresh.smoothprogressbar.SmoothProgressBar;
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseActivity;
 import cn.damai.common.app.base.BaseModel;
+import cn.damai.common.app.base.a;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -45,10 +45,10 @@ import tb.np0;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
-public abstract class DamaiBaseActivity<T extends AbstractC0470a, E extends BaseModel> extends BaseActivity<T, E> implements ResponseErrorPage.ErrorRefreshListener, IBaseActivityProxy {
+public abstract class DamaiBaseActivity<T extends cn.damai.common.app.base.a, E extends BaseModel> extends BaseActivity<T, E> implements ResponseErrorPage.ErrorRefreshListener, IBaseActivityProxy {
     private static transient /* synthetic */ IpChange $ipChange;
     private DamaiBaseMvpFragment currentFragment;
-    public C0525a.C0527b mBuilder;
+    public a.b mBuilder;
     protected ResponseErrorPage mErrorPage;
     protected View mProgressBar;
     protected SmoothProgressBar mSmoothProgressBar;
@@ -59,13 +59,12 @@ public abstract class DamaiBaseActivity<T extends AbstractC0470a, E extends Base
     ArrayList<IOnResultListener> listeners = new ArrayList<>();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.base.DamaiBaseActivity$a */
     /* loaded from: classes4.dex */
-    public class C0576a implements ResponseErrorPage.ErrorRefreshListener {
+    public class a implements ResponseErrorPage.ErrorRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ BricksBaseFragment.IClickListener a;
 
-        C0576a(DamaiBaseActivity damaiBaseActivity, BricksBaseFragment.IClickListener iClickListener) {
+        a(DamaiBaseActivity damaiBaseActivity, BricksBaseFragment.IClickListener iClickListener) {
             this.a = iClickListener;
         }
 
@@ -84,13 +83,12 @@ public abstract class DamaiBaseActivity<T extends AbstractC0470a, E extends Base
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.base.DamaiBaseActivity$b */
     /* loaded from: classes4.dex */
-    public class C0577b implements ResponseErrorPage.ErrorRefreshListener {
+    public class b implements ResponseErrorPage.ErrorRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ BricksBaseFragment.IClickListener a;
 
-        C0577b(DamaiBaseActivity damaiBaseActivity, BricksBaseFragment.IClickListener iClickListener) {
+        b(DamaiBaseActivity damaiBaseActivity, BricksBaseFragment.IClickListener iClickListener) {
             this.a = iClickListener;
         }
 
@@ -167,9 +165,9 @@ public abstract class DamaiBaseActivity<T extends AbstractC0470a, E extends Base
         return AndroidInstantRuntime.support(ipChange, "-628323380") ? (DamaiBaseMvpFragment) ipChange.ipc$dispatch("-628323380", new Object[]{this}) : this.currentFragment;
     }
 
-    public C0525a.C0527b getDamaiUTKeyBuilder() {
+    public a.b getDamaiUTKeyBuilder() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1730864878") ? (C0525a.C0527b) ipChange.ipc$dispatch("-1730864878", new Object[]{this}) : this.mBuilder;
+        return AndroidInstantRuntime.support(ipChange, "-1730864878") ? (a.b) ipChange.ipc$dispatch("-1730864878", new Object[]{this}) : this.mBuilder;
     }
 
     public ScreenShotBean getDetectBean(String str) {
@@ -275,7 +273,7 @@ public abstract class DamaiBaseActivity<T extends AbstractC0470a, E extends Base
         }
         super.onCreate(bundle);
         k3.b().e(this);
-        C0529c.e().m(this);
+        c.e().m(this);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -334,7 +332,7 @@ public abstract class DamaiBaseActivity<T extends AbstractC0470a, E extends Base
         }
         super.onPause();
         ScreenShotDetector.k().v(true);
-        C0529c.e().q(this);
+        c.e().q(this);
         List<Fragment> activeFragment = getActiveFragment();
         if (activeFragment != null && activeFragment.size() > 0) {
             for (int i = 0; i < activeFragment.size(); i++) {
@@ -419,7 +417,7 @@ public abstract class DamaiBaseActivity<T extends AbstractC0470a, E extends Base
         ScreenShotDetector.k().v(false);
         List<Fragment> activeFragment = getActiveFragment();
         if (this.mBuilder != null) {
-            C0529c.e().n(this, this.mBuilder);
+            c.e().n(this, this.mBuilder);
         } else if (activeFragment != null && activeFragment.size() > 0) {
             if (this.currentFragment != null) {
                 for (int i = 0; i < activeFragment.size(); i++) {
@@ -502,12 +500,12 @@ public abstract class DamaiBaseActivity<T extends AbstractC0470a, E extends Base
         }
     }
 
-    public void setDamaiUTKeyBuilder(C0525a.C0527b c0527b) {
+    public void setDamaiUTKeyBuilder(a.b bVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "948994496")) {
-            ipChange.ipc$dispatch("948994496", new Object[]{this, c0527b});
+            ipChange.ipc$dispatch("948994496", new Object[]{this, bVar});
         } else {
-            this.mBuilder = c0527b;
+            this.mBuilder = bVar;
         }
     }
 
@@ -552,7 +550,7 @@ public abstract class DamaiBaseActivity<T extends AbstractC0470a, E extends Base
         onResponseError(str, str2, null, viewGroup, true);
         ResponseErrorPage responseErrorPage = this.mErrorPage;
         if (responseErrorPage != null) {
-            responseErrorPage.setRefreshListener(new C0576a(this, iClickListener));
+            responseErrorPage.setRefreshListener(new a(this, iClickListener));
         }
     }
 
@@ -639,7 +637,7 @@ public abstract class DamaiBaseActivity<T extends AbstractC0470a, E extends Base
             if (!z2 && this.mErrorPage.getReportBtn() != null) {
                 this.mErrorPage.getReportBtn().setVisibility(8);
             }
-            this.mErrorPage.setRefreshListener(new C0577b(this, iClickListener));
+            this.mErrorPage.setRefreshListener(new b(this, iClickListener));
         }
     }
 }

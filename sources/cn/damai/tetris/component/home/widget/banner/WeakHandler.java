@@ -16,19 +16,19 @@ import java.util.concurrent.locks.ReentrantLock;
 /* loaded from: classes16.dex */
 public class WeakHandler {
     private static transient /* synthetic */ IpChange $ipChange;
-    private final HandlerC1893b a;
+    private final b a;
     private Lock b;
     @VisibleForTesting
-    final C1892a c;
+    final a c;
 
     /* compiled from: Taobao */
     /* loaded from: classes16.dex */
     public static class WeakRunnable implements Runnable {
         private static transient /* synthetic */ IpChange $ipChange;
         private final WeakReference<Runnable> mDelegate;
-        private final WeakReference<C1892a> mReference;
+        private final WeakReference<a> mReference;
 
-        WeakRunnable(WeakReference<Runnable> weakReference, WeakReference<C1892a> weakReference2) {
+        WeakRunnable(WeakReference<Runnable> weakReference, WeakReference<a> weakReference2) {
             this.mDelegate = weakReference;
             this.mReference = weakReference2;
         }
@@ -41,9 +41,9 @@ public class WeakHandler {
                 return;
             }
             Runnable runnable = this.mDelegate.get();
-            C1892a c1892a = this.mReference.get();
-            if (c1892a != null) {
-                c1892a.b();
+            a aVar = this.mReference.get();
+            if (aVar != null) {
+                aVar.b();
             }
             if (runnable != null) {
                 runnable.run();
@@ -52,14 +52,13 @@ public class WeakHandler {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.widget.banner.WeakHandler$a */
     /* loaded from: classes16.dex */
-    public static class C1892a {
+    public static class a {
         private static transient /* synthetic */ IpChange $ipChange;
         @Nullable
-        C1892a a;
+        a a;
         @Nullable
-        C1892a b;
+        a b;
         @NonNull
         final Runnable c;
         @NonNull
@@ -67,27 +66,27 @@ public class WeakHandler {
         @NonNull
         Lock e;
 
-        public C1892a(@NonNull Lock lock, @NonNull Runnable runnable) {
+        public a(@NonNull Lock lock, @NonNull Runnable runnable) {
             this.c = runnable;
             this.e = lock;
             this.d = new WeakRunnable(new WeakReference(runnable), new WeakReference(this));
         }
 
-        public void a(@NonNull C1892a c1892a) {
+        public void a(@NonNull a aVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1415590679")) {
-                ipChange.ipc$dispatch("1415590679", new Object[]{this, c1892a});
+                ipChange.ipc$dispatch("1415590679", new Object[]{this, aVar});
                 return;
             }
             this.e.lock();
             try {
-                C1892a c1892a2 = this.a;
-                if (c1892a2 != null) {
-                    c1892a2.b = c1892a;
+                a aVar2 = this.a;
+                if (aVar2 != null) {
+                    aVar2.b = aVar;
                 }
-                c1892a.a = c1892a2;
-                this.a = c1892a;
-                c1892a.b = this;
+                aVar.a = aVar2;
+                this.a = aVar;
+                aVar.b = this;
             } finally {
                 this.e.unlock();
             }
@@ -100,13 +99,13 @@ public class WeakHandler {
             }
             this.e.lock();
             try {
-                C1892a c1892a = this.b;
-                if (c1892a != null) {
-                    c1892a.a = this.a;
+                a aVar = this.b;
+                if (aVar != null) {
+                    aVar.a = this.a;
                 }
-                C1892a c1892a2 = this.a;
-                if (c1892a2 != null) {
-                    c1892a2.b = c1892a;
+                a aVar2 = this.a;
+                if (aVar2 != null) {
+                    aVar2.b = aVar;
                 }
                 this.b = null;
                 this.a = null;
@@ -126,9 +125,9 @@ public class WeakHandler {
             }
             this.e.lock();
             try {
-                for (C1892a c1892a = this.a; c1892a != null; c1892a = c1892a.a) {
-                    if (c1892a.c == runnable) {
-                        return c1892a.b();
+                for (a aVar = this.a; aVar != null; aVar = aVar.a) {
+                    if (aVar.c == runnable) {
+                        return aVar.b();
                     }
                 }
                 this.e.unlock();
@@ -140,13 +139,12 @@ public class WeakHandler {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.widget.banner.WeakHandler$b */
     /* loaded from: classes16.dex */
-    public static class HandlerC1893b extends Handler {
+    public static class b extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
         private final WeakReference<Handler.Callback> a = null;
 
-        HandlerC1893b() {
+        b() {
         }
 
         @Override // android.os.Handler
@@ -168,8 +166,8 @@ public class WeakHandler {
     public WeakHandler() {
         ReentrantLock reentrantLock = new ReentrantLock();
         this.b = reentrantLock;
-        this.c = new C1892a(reentrantLock, null);
-        this.a = new HandlerC1893b();
+        this.c = new a(reentrantLock, null);
+        this.a = new b();
     }
 
     private WeakRunnable e(@NonNull Runnable runnable) {
@@ -178,9 +176,9 @@ public class WeakHandler {
             return (WeakRunnable) ipChange.ipc$dispatch("-1752037582", new Object[]{this, runnable});
         }
         Objects.requireNonNull(runnable, "Runnable can't be null");
-        C1892a c1892a = new C1892a(this.b, runnable);
-        this.c.a(c1892a);
-        return c1892a.d;
+        a aVar = new a(this.b, runnable);
+        this.c.a(aVar);
+        return aVar.d;
     }
 
     public final boolean a(@NonNull Runnable runnable) {

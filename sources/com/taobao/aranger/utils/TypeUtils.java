@@ -258,14 +258,14 @@ public final class TypeUtils {
     public static Constructor<?> getConstructor(Class<?> cls, Class<?>[] clsArr) throws IPCException {
         Constructor[] constructors;
         String constructorId = getConstructorId(cls, clsArr);
-        Constructor d = C6702d.e().d(constructorId);
+        Constructor d = d.e().d(constructorId);
         if (d != null) {
             return d;
         }
         for (Constructor constructor : cls.getConstructors()) {
             if (classAssignable(constructor.getParameterTypes(), clsArr)) {
                 if (d == null) {
-                    C6702d.e().g(constructorId, constructor);
+                    d.e().g(constructorId, constructor);
                     d = constructor;
                 } else {
                     throw new IPCException(15, "The class " + cls.getName() + " has too many constructors whose  parameter types match the required types.");

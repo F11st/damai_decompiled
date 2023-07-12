@@ -71,7 +71,7 @@ public final class ObservableToList<T, U extends Collection<? super T>> extends 
         this.collectionSupplier = Functions.createArrayList(i);
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super U> observer) {
         try {
             this.source.subscribe(new ToListObserver(observer, (Collection) ObjectHelper.requireNonNull(this.collectionSupplier.call(), "The collectionSupplier returned a null collection. Null values are generally not allowed in 2.x operators and sources.")));

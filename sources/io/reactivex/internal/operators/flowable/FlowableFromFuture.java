@@ -1,6 +1,6 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
+import io.reactivex.b;
 import io.reactivex.internal.subscriptions.DeferredScalarSubscription;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
@@ -9,7 +9,7 @@ import tb.dg0;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableFromFuture<T> extends AbstractC8147b<T> {
+public final class FlowableFromFuture<T> extends b<T> {
     final Future<? extends T> future;
     final long timeout;
     final TimeUnit unit;
@@ -20,7 +20,7 @@ public final class FlowableFromFuture<T> extends AbstractC8147b<T> {
         this.unit = timeUnit;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super T> subscriber) {
         DeferredScalarSubscription deferredScalarSubscription = new DeferredScalarSubscription(subscriber);
         subscriber.onSubscribe(deferredScalarSubscription);

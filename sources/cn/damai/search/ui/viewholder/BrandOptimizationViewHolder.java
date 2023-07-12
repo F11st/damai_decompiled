@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.brand.BrandOptimizationDO;
 import cn.damai.homepage.R$layout;
@@ -29,13 +29,12 @@ public class BrandOptimizationViewHolder extends RecyclerView.ViewHolder {
     private String c;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.viewholder.BrandOptimizationViewHolder$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1619a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        View$OnClickListenerC1619a(int i) {
+        a(int i) {
             this.a = i;
         }
 
@@ -46,7 +45,7 @@ public class BrandOptimizationViewHolder extends RecyclerView.ViewHolder {
                 ipChange.ipc$dispatch("-774918511", new Object[]{this, view});
             } else if (view.getTag() instanceof BrandOptimizationDO) {
                 BrandOptimizationDO brandOptimizationDO = (BrandOptimizationDO) view.getTag();
-                C0529c.e().x(b82.C().o(BrandOptimizationViewHolder.this.c, "", brandOptimizationDO.id, brandOptimizationDO.type, this.a));
+                c.e().x(b82.C().o(BrandOptimizationViewHolder.this.c, "", brandOptimizationDO.id, brandOptimizationDO.type, this.a));
                 Bundle bundle = new Bundle();
                 bundle.putString(IssueConstants.ProjectID, brandOptimizationDO.id);
                 DMNav.from(BrandOptimizationViewHolder.this.b).withExtras(bundle).toUri(cs.a());
@@ -62,7 +61,7 @@ public class BrandOptimizationViewHolder extends RecyclerView.ViewHolder {
         for (int i = 0; i < 3; i++) {
             View findViewById = this.itemView.findViewById(this.a[i]);
             if (findViewById != null) {
-                findViewById.setOnClickListener(new View$OnClickListenerC1619a(i));
+                findViewById.setOnClickListener(new a(i));
             }
         }
     }

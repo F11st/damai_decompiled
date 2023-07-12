@@ -16,9 +16,9 @@ public final class tk {
     static {
         ConcurrentHashMap<String, ColumnConverter> concurrentHashMap = new ConcurrentHashMap<>();
         a = concurrentHashMap;
-        C8999cd c8999cd = new C8999cd();
-        concurrentHashMap.put(Boolean.TYPE.getName(), c8999cd);
-        concurrentHashMap.put(Boolean.class.getName(), c8999cd);
+        cd cdVar = new cd();
+        concurrentHashMap.put(Boolean.TYPE.getName(), cdVar);
+        concurrentHashMap.put(Boolean.class.getName(), cdVar);
         concurrentHashMap.put(byte[].class.getName(), new ie());
         le leVar = new le();
         concurrentHashMap.put(Byte.TYPE.getName(), leVar);

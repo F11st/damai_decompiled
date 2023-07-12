@@ -4,7 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import com.alibaba.security.biometrics.ALBiometricsEventListener;
 import com.alibaba.security.biometrics.activity.ALBiometricsActivity;
-import com.alibaba.security.biometrics.c.b.C3750a;
+import com.alibaba.security.biometrics.c.b.a;
 import com.alibaba.security.biometrics.service.model.params.ALBiometricsParams;
 import com.alibaba.security.biometrics.theme.ALBiometricsConfig;
 import com.alibaba.security.common.track.model.TrackLog;
@@ -51,7 +51,7 @@ public class ALBiometricsManager {
     }
 
     public void open(Context context) {
-        C3750a.b().a(getEventListener());
+        a.b().a(getEventListener());
         ALBiometricsActivity.a(context, this);
     }
 

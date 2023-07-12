@@ -11,17 +11,16 @@ import org.jetbrains.annotations.Nullable;
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
 public final class oo extends n1 implements ThreadContextElement<String> {
-    public static final C9529a Key = new C9529a(null);
+    public static final a Key = new a(null);
     private final long a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.oo$a */
     /* loaded from: classes8.dex */
-    public static final class C9529a implements CoroutineContext.Key<oo> {
-        private C9529a() {
+    public static final class a implements CoroutineContext.Key<oo> {
+        private a() {
         }
 
-        public /* synthetic */ C9529a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -79,13 +78,13 @@ public final class oo extends n1 implements ThreadContextElement<String> {
 
     @Override // tb.n1, kotlin.coroutines.CoroutineContext.Element, kotlin.coroutines.CoroutineContext
     public <R> R fold(R r, @NotNull Function2<? super R, ? super CoroutineContext.Element, ? extends R> function2) {
-        return (R) ThreadContextElement.C8618a.a(this, r, function2);
+        return (R) ThreadContextElement.a.a(this, r, function2);
     }
 
     @Override // tb.n1, kotlin.coroutines.CoroutineContext.Element, kotlin.coroutines.CoroutineContext
     @Nullable
     public <E extends CoroutineContext.Element> E get(@NotNull CoroutineContext.Key<E> key) {
-        return (E) ThreadContextElement.C8618a.b(this, key);
+        return (E) ThreadContextElement.a.b(this, key);
     }
 
     public int hashCode() {
@@ -96,13 +95,13 @@ public final class oo extends n1 implements ThreadContextElement<String> {
     @Override // tb.n1, kotlin.coroutines.CoroutineContext.Element, kotlin.coroutines.CoroutineContext
     @NotNull
     public CoroutineContext minusKey(@NotNull CoroutineContext.Key<?> key) {
-        return ThreadContextElement.C8618a.c(this, key);
+        return ThreadContextElement.a.c(this, key);
     }
 
     @Override // tb.n1, kotlin.coroutines.CoroutineContext
     @NotNull
     public CoroutineContext plus(@NotNull CoroutineContext coroutineContext) {
-        return ThreadContextElement.C8618a.d(this, coroutineContext);
+        return ThreadContextElement.a.d(this, coroutineContext);
     }
 
     @NotNull

@@ -1,7 +1,6 @@
 package tb;
 
 import java.util.List;
-import kotlin.collections.C8214m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -34,6 +33,6 @@ public final class eu1 {
     }
 
     public /* synthetic */ eu1(rq2 rq2Var, List list, int i, k50 k50Var) {
-        this((i & 1) != 0 ? null : rq2Var, (i & 2) != 0 ? C8214m.g() : list);
+        this((i & 1) != 0 ? null : rq2Var, (i & 2) != 0 ? kotlin.collections.m.g() : list);
     }
 }

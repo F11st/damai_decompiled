@@ -57,7 +57,7 @@ public class DagoAnchorInfoView extends RelativeLayout {
             ipChange.ipc$dispatch("1662455458", new Object[]{this, context});
             return;
         }
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_anchor_info_layout, this);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_anchor_info_layout, this);
         this.mAnchorNameView = (TextView) findViewById(R.id.id_anchor_name);
         this.mSubtitleIconView = (ImageView) findViewById(R.id.id_subtitle_icon);
         this.mAnchorDescView = (TextView) findViewById(R.id.id_anchor_desc);
@@ -104,7 +104,7 @@ public class DagoAnchorInfoView extends RelativeLayout {
         Log.d(RoomInfoWidget.TAG, "reset");
         this.mAttentionBtn.release();
         this.mAnchorImageView.setImageUrl("", new PhenixOptions().bitmapProcessors(new cq()));
-        this.mAnchorImageView.setImageResource(R.C7941drawable.dago_pgc_header_default);
+        this.mAnchorImageView.setImageResource(R.drawable.dago_pgc_header_default);
         this.mSubtitleIconView.setImageDrawable(null);
         this.mAnchorNameView.setText("");
         this.mAnchorDescView.setText("");
@@ -218,7 +218,7 @@ public class DagoAnchorInfoView extends RelativeLayout {
         }
         Log.d(RoomInfoWidget.TAG, "updateAnchorAvatar : url :" + str);
         TUrlImageView tUrlImageView = this.mAnchorImageView;
-        int i = R.C7941drawable.dago_pgc_header_default;
+        int i = R.drawable.dago_pgc_header_default;
         tUrlImageView.setPlaceHoldImageResId(i);
         this.mAnchorImageView.setErrorImageResId(i);
         this.mAnchorImageView.setImageUrl(str, new PhenixOptions().bitmapProcessors(new cq()));

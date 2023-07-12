@@ -7,15 +7,14 @@ import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 @GwtCompatible
 /* loaded from: classes10.dex */
 public abstract class sl {
-    private static final sl a = new C9695a();
-    private static final sl b = new C9696b(-1);
-    private static final sl c = new C9696b(1);
+    private static final sl a = new a();
+    private static final sl b = new b(-1);
+    private static final sl c = new b(1);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.sl$a */
     /* loaded from: classes10.dex */
-    static class C9695a extends sl {
-        C9695a() {
+    static class a extends sl {
+        a() {
             super(null);
         }
 
@@ -38,12 +37,11 @@ public abstract class sl {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.sl$b */
     /* loaded from: classes10.dex */
-    private static final class C9696b extends sl {
+    private static final class b extends sl {
         final int d;
 
-        C9696b(int i) {
+        b(int i) {
             super(null);
             this.d = i;
         }
@@ -59,7 +57,7 @@ public abstract class sl {
         }
     }
 
-    /* synthetic */ sl(C9695a c9695a) {
+    /* synthetic */ sl(a aVar) {
         this();
     }
 

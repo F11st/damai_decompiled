@@ -11,8 +11,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.member.R$id;
 import cn.damai.member.R$layout;
@@ -68,7 +68,7 @@ public class TickletTicketOrderView extends LinearLayout implements View.OnClick
         } else if (this.context != null) {
             un2 k = un2.k();
             UserTicketTable userTicketTable = this.ticket;
-            C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "center_" + this.postion, "checkorder", k.u(userTicketTable.tradeOrderId, userTicketTable.getPerformId()), Boolean.TRUE));
+            c.e().x(b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "center_" + this.postion, "checkorder", k.u(userTicketTable.tradeOrderId, userTicketTable.getPerformId()), Boolean.TRUE));
             Bundle bundle = new Bundle();
             bundle.putString("orderId", this.ticket.tradeOrderId);
             DMNav.from(this.context).withExtras(bundle).toUri(NavUri.b(cs.COUPON_ORDER_DETAIL));
@@ -85,7 +85,7 @@ public class TickletTicketOrderView extends LinearLayout implements View.OnClick
             this.postion = i;
             TextView textView = this.orderNum;
             textView.setText("订单号：" + userTicketTable.tradeOrderId);
-            C0529c e = C0529c.e();
+            c e = c.e();
             TextView textView2 = this.orderNum;
             e.G(textView2, "checkorder", "center_" + this.postion, un2.TICKLET_DETAIL_PAGE, un2.k().u(userTicketTable.tradeOrderId, userTicketTable.getPerformId()));
         }

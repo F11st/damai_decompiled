@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DXRuntimeContext;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
 import java.util.ArrayList;
@@ -59,18 +59,18 @@ public class DXNativeFrameLayout extends FrameLayout {
             if (!(tag instanceof DXWidgetNode) || (dXRuntimeContext = ((DXWidgetNode) tag).getDXRuntimeContext()) == null) {
                 return;
             }
-            C6368e c6368e = new C6368e(dXRuntimeContext.getBizType());
-            C6368e.C6369a c6369a = new C6368e.C6369a("native", "native_crash", C6368e.DX_NATIVE_CRASH_3);
-            if (c6368e.c == null) {
-                c6368e.c = new ArrayList();
+            e eVar = new e(dXRuntimeContext.getBizType());
+            e.a aVar = new e.a("native", "native_crash", e.DX_NATIVE_CRASH_3);
+            if (eVar.c == null) {
+                eVar.c = new ArrayList();
             }
-            c6368e.c.add(c6369a);
-            c6369a.e = ry.a(th);
-            c6368e.b = dXRuntimeContext.getDxTemplateItem();
+            eVar.c.add(aVar);
+            aVar.e = ry.a(th);
+            eVar.b = dXRuntimeContext.getDxTemplateItem();
             if (dXRuntimeContext.getDxError() != null) {
-                c6368e.b(dXRuntimeContext.getDxError().a());
+                eVar.b(dXRuntimeContext.getDxError().a());
             }
-            DXAppMonitor.n(c6368e);
+            DXAppMonitor.n(eVar);
         }
     }
 
@@ -110,28 +110,28 @@ public class DXNativeFrameLayout extends FrameLayout {
         } catch (Throwable th) {
             Object tag = getTag(DXWidgetNode.TAG_WIDGET_NODE);
             if ((tag instanceof DXWidgetNode) && (dXRuntimeContext = ((DXWidgetNode) tag).getDXRuntimeContext()) != null) {
-                C6368e c6368e = new C6368e(dXRuntimeContext.getBizType());
-                C6368e.C6369a c6369a = new C6368e.C6369a("native", "native_crash", C6368e.DX_NATIVE_ONMEASURE_CRASH);
-                if (c6368e.c == null) {
-                    c6368e.c = new ArrayList();
+                e eVar = new e(dXRuntimeContext.getBizType());
+                e.a aVar = new e.a("native", "native_crash", e.DX_NATIVE_ONMEASURE_CRASH);
+                if (eVar.c == null) {
+                    eVar.c = new ArrayList();
                 }
-                c6368e.c.add(c6369a);
-                c6369a.e = ry.a(th);
-                c6368e.b = dXRuntimeContext.getDxTemplateItem();
+                eVar.c.add(aVar);
+                aVar.e = ry.a(th);
+                eVar.b = dXRuntimeContext.getDxTemplateItem();
                 if (dXRuntimeContext.getDxError() != null) {
-                    c6368e.b(dXRuntimeContext.getDxError().a());
+                    eVar.b(dXRuntimeContext.getDxError().a());
                 }
-                DXAppMonitor.n(c6368e);
+                DXAppMonitor.n(eVar);
                 return;
             }
-            C6368e c6368e2 = new C6368e(nz.TAG);
-            C6368e.C6369a c6369a2 = new C6368e.C6369a("native", "native_crash", C6368e.DX_NATIVE_ONMEASURE_CRASH_2);
-            c6369a2.e = ry.a(th);
-            if (c6368e2.c == null) {
-                c6368e2.c = new ArrayList();
+            e eVar2 = new e(nz.TAG);
+            e.a aVar2 = new e.a("native", "native_crash", e.DX_NATIVE_ONMEASURE_CRASH_2);
+            aVar2.e = ry.a(th);
+            if (eVar2.c == null) {
+                eVar2.c = new ArrayList();
             }
-            c6368e2.c.add(c6369a2);
-            DXAppMonitor.n(c6368e2);
+            eVar2.c.add(aVar2);
+            DXAppMonitor.n(eVar2);
         }
     }
 

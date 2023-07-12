@@ -8,7 +8,7 @@ import io.reactivex.internal.fuseable.SimpleQueue;
 import io.reactivex.internal.queue.SpscArrayQueue;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import io.reactivex.internal.util.BackpressureHelper;
-import io.reactivex.parallel.AbstractC8161a;
+import io.reactivex.parallel.a;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLongArray;
 import org.reactivestreams.Publisher;
@@ -18,7 +18,7 @@ import tb.dg0;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ParallelFromPublisher<T> extends AbstractC8161a<T> {
+public final class ParallelFromPublisher<T> extends a<T> {
     final int parallelism;
     final int prefetch;
     final Publisher<? extends T> source;
@@ -343,12 +343,12 @@ public final class ParallelFromPublisher<T> extends AbstractC8161a<T> {
         this.prefetch = i2;
     }
 
-    @Override // io.reactivex.parallel.AbstractC8161a
+    @Override // io.reactivex.parallel.a
     public int parallelism() {
         return this.parallelism;
     }
 
-    @Override // io.reactivex.parallel.AbstractC8161a
+    @Override // io.reactivex.parallel.a
     public void subscribe(Subscriber<? super T>[] subscriberArr) {
         if (validate(subscriberArr)) {
             this.source.subscribe(new ParallelDispatcher(subscriberArr, this.prefetch));

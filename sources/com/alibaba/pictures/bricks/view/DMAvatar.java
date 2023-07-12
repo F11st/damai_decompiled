@@ -61,12 +61,11 @@ public class DMAvatar extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.DMAvatar$a */
     /* loaded from: classes7.dex */
-    public class C3569a implements IImageSuccListener {
+    public class a implements IImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3569a() {
+        a() {
         }
 
         @Override // com.alient.oneservice.image.IImageSuccListener
@@ -81,12 +80,11 @@ public class DMAvatar extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.DMAvatar$b */
     /* loaded from: classes7.dex */
-    public class C3570b implements IImageFailListener {
+    public class b implements IImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3570b() {
+        b() {
         }
 
         @Override // com.alient.oneservice.image.IImageFailListener
@@ -101,12 +99,11 @@ public class DMAvatar extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.DMAvatar$c */
     /* loaded from: classes7.dex */
-    public class C3571c implements IImageSuccListener {
+    public class c implements IImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3571c() {
+        c() {
         }
 
         @Override // com.alient.oneservice.image.IImageSuccListener
@@ -124,12 +121,11 @@ public class DMAvatar extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.DMAvatar$d */
     /* loaded from: classes7.dex */
-    public class C3572d implements IImageFailListener {
+    public class d implements IImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3572d() {
+        d() {
         }
 
         @Override // com.alient.oneservice.image.IImageFailListener
@@ -155,26 +151,26 @@ public class DMAvatar extends FrameLayout {
         }
         if (this.avatarLayout != null) {
             s60 s60Var = s60.INSTANCE;
-            int a = s60Var.a(getContext(), f4);
+            int a2 = s60Var.a(getContext(), f4);
             FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) this.avatarLayout.getLayoutParams();
-            layoutParams.topMargin = a;
+            layoutParams.topMargin = a2;
             if (this.avatarYYmemberTag != null) {
-                int a2 = s60Var.a(getContext(), f8);
-                int a3 = s60Var.a(getContext(), f9);
-                int a4 = s60Var.a(getContext(), f10);
+                int a3 = s60Var.a(getContext(), f8);
+                int a4 = s60Var.a(getContext(), f9);
+                int a5 = s60Var.a(getContext(), f10);
                 FrameLayout.LayoutParams layoutParams2 = (FrameLayout.LayoutParams) this.avatarYYmemberTag.getLayoutParams();
-                layoutParams2.width = a2;
-                layoutParams2.height = a3;
-                layoutParams.bottomMargin = a4;
+                layoutParams2.width = a3;
+                layoutParams2.height = a4;
+                layoutParams.bottomMargin = a5;
             }
         }
         if (this.avatarImage != null) {
             s60 s60Var2 = s60.INSTANCE;
-            int a5 = s60Var2.a(getContext(), f);
             int a6 = s60Var2.a(getContext(), f);
+            int a7 = s60Var2.a(getContext(), f);
             FrameLayout.LayoutParams layoutParams3 = (FrameLayout.LayoutParams) this.avatarImage.getLayoutParams();
-            layoutParams3.width = a5;
-            layoutParams3.height = a6;
+            layoutParams3.width = a6;
+            layoutParams3.height = a7;
             this.avatarImage.setLayoutParams(layoutParams3);
             this.avatarPlaceHolder.setLayoutParams(layoutParams3);
             this.avatarInnerBorder.setLayoutParams(layoutParams3);
@@ -182,33 +178,33 @@ public class DMAvatar extends FrameLayout {
         if (this.avatarBorder != null) {
             s60 s60Var3 = s60.INSTANCE;
             float f11 = f + (i * 2);
-            int a7 = s60Var3.a(getContext(), f11);
             int a8 = s60Var3.a(getContext(), f11);
+            int a9 = s60Var3.a(getContext(), f11);
             FrameLayout.LayoutParams layoutParams4 = (FrameLayout.LayoutParams) this.avatarBorder.getLayoutParams();
-            layoutParams4.width = a7;
-            layoutParams4.height = a8;
+            layoutParams4.width = a8;
+            layoutParams4.height = a9;
             this.avatarBorder.setLayoutParams(layoutParams4);
         }
         if (this.avatarCrown != null) {
             s60 s60Var4 = s60.INSTANCE;
-            int a9 = s60Var4.a(getContext(), f2);
-            int a10 = s60Var4.a(getContext(), f3);
-            int a11 = s60Var4.a(getContext(), f5);
+            int a10 = s60Var4.a(getContext(), f2);
+            int a11 = s60Var4.a(getContext(), f3);
+            int a12 = s60Var4.a(getContext(), f5);
             FrameLayout.LayoutParams layoutParams5 = (FrameLayout.LayoutParams) this.avatarCrown.getLayoutParams();
-            layoutParams5.width = a9;
-            layoutParams5.height = a10;
-            layoutParams5.rightMargin = a11;
+            layoutParams5.width = a10;
+            layoutParams5.height = a11;
+            layoutParams5.rightMargin = a12;
             this.avatarCrown.setLayoutParams(layoutParams5);
         }
         if (this.avatarVTag != null) {
             s60 s60Var5 = s60.INSTANCE;
-            int a12 = s60Var5.a(getContext(), f6);
             int a13 = s60Var5.a(getContext(), f6);
-            int a14 = s60Var5.a(getContext(), f7);
+            int a14 = s60Var5.a(getContext(), f6);
+            int a15 = s60Var5.a(getContext(), f7);
             FrameLayout.LayoutParams layoutParams6 = (FrameLayout.LayoutParams) this.avatarVTag.getLayoutParams();
-            layoutParams6.width = a12;
-            layoutParams6.height = a13;
-            layoutParams6.rightMargin = a14;
+            layoutParams6.width = a13;
+            layoutParams6.height = a14;
+            layoutParams6.rightMargin = a15;
             this.avatarVTag.setLayoutParams(layoutParams6);
         }
     }
@@ -251,7 +247,7 @@ public class DMAvatar extends FrameLayout {
         if (AndroidInstantRuntime.support(ipChange, "-1670726722")) {
             ipChange.ipc$dispatch("-1670726722", new Object[]{this});
         } else {
-            ImageLoaderProviderProxy.getProxy().load("", new C3569a(), new C3570b());
+            ImageLoaderProviderProxy.getProxy().load("", new a(), new b());
         }
     }
 
@@ -280,7 +276,7 @@ public class DMAvatar extends FrameLayout {
             ipChange.ipc$dispatch("352777076", new Object[]{this, str});
         } else if (this.avatarImage == null) {
         } else {
-            ImageLoaderProviderProxy.getProxy().load(str, new C3571c(), new C3572d());
+            ImageLoaderProviderProxy.getProxy().load(str, new c(), new d());
         }
     }
 

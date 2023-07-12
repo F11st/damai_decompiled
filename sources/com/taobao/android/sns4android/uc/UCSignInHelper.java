@@ -27,12 +27,11 @@ public class UCSignInHelper extends SNSSignInAbstractHelper {
     public static final String SNS_TYPE = "jiuyou";
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.uc.UCSignInHelper$a */
     /* loaded from: classes11.dex */
-    class C6626a implements OauthCallback {
+    class a implements OauthCallback {
         final /* synthetic */ Activity a;
 
-        C6626a(Activity activity) {
+        a(Activity activity) {
             this.a = activity;
         }
 
@@ -91,7 +90,7 @@ public class UCSignInHelper extends SNSSignInAbstractHelper {
             HashMap hashMap = new HashMap();
             hashMap.put(ParamsConstants.Key.PARAM_ONLY_AUTHCODE, "1");
             if (AliMemberSDK.getService(OauthService.class) != null) {
-                ((OauthService) AliMemberSDK.getService(OauthService.class)).oauth(activity, "jiuyou", hashMap, new C6626a(activity));
+                ((OauthService) AliMemberSDK.getService(OauthService.class)).oauth(activity, "jiuyou", hashMap, new a(activity));
             } else {
                 SNSSignInListener sNSSignInListener2 = this.snsSignInListener;
                 if (sNSSignInListener2 != null) {

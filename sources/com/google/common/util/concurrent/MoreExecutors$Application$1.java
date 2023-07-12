@@ -7,12 +7,12 @@ import java.util.concurrent.TimeUnit;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 class MoreExecutors$Application$1 implements Runnable {
-    final /* synthetic */ MoreExecutors.C5320c this$0;
+    final /* synthetic */ MoreExecutors.c this$0;
     final /* synthetic */ ExecutorService val$service;
     final /* synthetic */ long val$terminationTimeout;
     final /* synthetic */ TimeUnit val$timeUnit;
 
-    MoreExecutors$Application$1(MoreExecutors.C5320c c5320c, ExecutorService executorService, long j, TimeUnit timeUnit) {
+    MoreExecutors$Application$1(MoreExecutors.c cVar, ExecutorService executorService, long j, TimeUnit timeUnit) {
         this.val$service = executorService;
         this.val$terminationTimeout = j;
         this.val$timeUnit = timeUnit;

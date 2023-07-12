@@ -306,7 +306,7 @@ public class PropShowView extends FrameLayout {
         this.mSelectedPropInfoBean = null;
         this.mLastSelectedPid = null;
         this.mData = new ArrayList();
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ykl_prop_show_layout, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_ykl_prop_show_layout, (ViewGroup) this, true);
         this.propPageView = (YKLPropPageView) findViewById(R.id.id_prop_pager);
         this.refreshLayout = findViewById(R.id.refresh_prop_layout);
         this.refreshBtn = (TextView) findViewById(R.id.refresh_prop_btn);

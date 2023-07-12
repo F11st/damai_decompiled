@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.BackpressureStrategy;
 import io.reactivex.FlowableEmitter;
 import io.reactivex.FlowableOnSubscribe;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.functions.Cancellable;
@@ -24,7 +24,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableCreate<T> extends AbstractC8147b<T> {
+public final class FlowableCreate<T> extends b<T> {
     final BackpressureStrategy backpressure;
     final FlowableOnSubscribe<T> source;
 
@@ -632,7 +632,7 @@ public final class FlowableCreate<T> extends AbstractC8147b<T> {
         this.backpressure = backpressureStrategy;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super T> subscriber) {
         BaseEmitter missingEmitter;
         int i = AnonymousClass1.$SwitchMap$io$reactivex$BackpressureStrategy[this.backpressure.ordinal()];
@@ -643,7 +643,7 @@ public final class FlowableCreate<T> extends AbstractC8147b<T> {
         } else if (i == 3) {
             missingEmitter = new DropAsyncEmitter(subscriber);
         } else if (i != 4) {
-            missingEmitter = new BufferAsyncEmitter(subscriber, AbstractC8147b.bufferSize());
+            missingEmitter = new BufferAsyncEmitter(subscriber, b.bufferSize());
         } else {
             missingEmitter = new LatestAsyncEmitter(subscriber);
         }

@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.constraintlayout.core.motion.utils.TypedValues;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.view.AttentionView;
 import cn.damai.homepage.R$id;
 import cn.damai.tetris.component.brand.bean.ActivityInfo;
@@ -37,12 +36,11 @@ public class BrandScrollListener extends RecyclerView.OnScrollListener {
     long k;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.brand.BrandScrollListener$a */
     /* loaded from: classes9.dex */
-    public class C2678a implements BrandAttentionFloatLayerView.AttentionLayerCallBack {
+    public class a implements BrandAttentionFloatLayerView.AttentionLayerCallBack {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2678a() {
+        a() {
         }
 
         @Override // cn.damai.user.brand.BrandAttentionFloatLayerView.AttentionLayerCallBack
@@ -77,12 +75,11 @@ public class BrandScrollListener extends RecyclerView.OnScrollListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.brand.BrandScrollListener$b */
     /* loaded from: classes17.dex */
-    public class HandlerC2679b extends Handler {
+    public class b extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC2679b() {
+        b() {
         }
 
         @Override // android.os.Handler
@@ -102,12 +99,11 @@ public class BrandScrollListener extends RecyclerView.OnScrollListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.brand.BrandScrollListener$c */
     /* loaded from: classes9.dex */
-    public class C2680c implements AttentionView.StateListener {
+    public class c implements AttentionView.StateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2680c() {
+        c() {
         }
 
         @Override // cn.damai.commonbusiness.view.AttentionView.StateListener
@@ -154,7 +150,7 @@ public class BrandScrollListener extends RecyclerView.OnScrollListener {
             hashMap.put("brand_id", brandHeaderInfoBean.getBid());
         }
         hashMap.put("coupon_id", this.i.couponId);
-        C0529c.e().C("coupon_btn", TypedValues.Custom.S_FLOAT, "brand", "1.0", currentTimeMillis, hashMap, 2201);
+        cn.damai.common.user.c.e().C("coupon_btn", TypedValues.Custom.S_FLOAT, "brand", "1.0", currentTimeMillis, hashMap, 2201);
     }
 
     private void d(ViewGroup viewGroup) {
@@ -168,10 +164,10 @@ public class BrandScrollListener extends RecyclerView.OnScrollListener {
         this.c = brandAttentionFloatLayerView;
         ((ViewGroup) this.b).addView(brandAttentionFloatLayerView);
         if (this.b != null) {
-            this.c.setCallBack(new C2678a());
+            this.c.setCallBack(new a());
         }
         this.d = false;
-        this.e = new HandlerC2679b();
+        this.e = new b();
     }
 
     public void b() {
@@ -255,7 +251,7 @@ public class BrandScrollListener extends RecyclerView.OnScrollListener {
                                 handler.sendEmptyMessageDelayed(0, 6000L);
                             }
                             attentionView2.addAttentionView(this.j);
-                            this.j.setStateListener(new C2680c());
+                            this.j.setStateListener(new c());
                         }
                     }
                 } else {

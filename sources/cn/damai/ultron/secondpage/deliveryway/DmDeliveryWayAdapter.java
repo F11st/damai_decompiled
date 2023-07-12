@@ -43,13 +43,12 @@ public class DmDeliveryWayAdapter extends RecyclerView.Adapter<DeliveryViewHolde
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.secondpage.deliveryway.DmDeliveryWayAdapter$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2637a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        View$OnClickListenerC2637a(int i) {
+        a(int i) {
             this.a = i;
         }
 
@@ -106,7 +105,7 @@ public class DmDeliveryWayAdapter extends RecyclerView.Adapter<DeliveryViewHolde
         }
         deliveryViewHolder.d.setOnCheckedChangeListener(null);
         deliveryViewHolder.d.setChecked(dmDeliveryWayBean.getCheckState());
-        deliveryViewHolder.a.setOnClickListener(new View$OnClickListenerC2637a(i));
+        deliveryViewHolder.a.setOnClickListener(new a(i));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

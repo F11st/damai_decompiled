@@ -3,15 +3,14 @@ package tb;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.android.dinamicx.DXRuntimeContext;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
-public class kv extends AbstractC6375a {
+public class kv extends com.taobao.android.dinamicx.expression.parser.a {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final long DX_PARSER_DMNUMBERFORMAT = -2092015216107125647L;
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         Object obj;
         int i;

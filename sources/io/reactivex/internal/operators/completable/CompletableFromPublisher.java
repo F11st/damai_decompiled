@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.completable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.a;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import org.reactivestreams.Publisher;
@@ -11,7 +11,7 @@ import org.reactivestreams.Subscription;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class CompletableFromPublisher<T> extends AbstractC8146a {
+public final class CompletableFromPublisher<T> extends a {
     final Publisher<T> flowable;
 
     /* compiled from: Taobao */
@@ -63,7 +63,7 @@ public final class CompletableFromPublisher<T> extends AbstractC8146a {
         this.flowable = publisher;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     protected void subscribeActual(CompletableObserver completableObserver) {
         this.flowable.subscribe(new FromPublisherSubscriber(completableObserver));
     }

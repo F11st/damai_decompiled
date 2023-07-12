@@ -79,13 +79,12 @@ public class AddressListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.adapter.AddressListAdapter$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1418a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ AddressBean a;
 
-        View$OnClickListenerC1418a(AddressBean addressBean) {
+        a(AddressBean addressBean) {
             this.a = addressBean;
         }
 
@@ -102,14 +101,13 @@ public class AddressListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.adapter.AddressListAdapter$b */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1419b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
         final /* synthetic */ AddressBean b;
 
-        View$OnClickListenerC1419b(int i, AddressBean addressBean) {
+        b(int i, AddressBean addressBean) {
             this.a = i;
             this.b = addressBean;
         }
@@ -126,14 +124,13 @@ public class AddressListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.adapter.AddressListAdapter$c */
     /* loaded from: classes15.dex */
-    public class View$OnLongClickListenerC1420c implements View.OnLongClickListener {
+    public class c implements View.OnLongClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
         final /* synthetic */ AddressBean b;
 
-        View$OnLongClickListenerC1420c(int i, AddressBean addressBean) {
+        c(int i, AddressBean addressBean) {
             this.a = i;
             this.b = addressBean;
         }
@@ -249,7 +246,7 @@ public class AddressListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             textView4.setText(province + AltriaXLaunchTime.SPACE + city + AltriaXLaunchTime.SPACE + addressBean.getAddressDetail());
         }
         viewHolder2.f.setVisibility(0);
-        viewHolder2.h.setOnClickListener(new View$OnClickListenerC1418a(addressBean));
+        viewHolder2.h.setOnClickListener(new a(addressBean));
         if (!TextUtils.isEmpty(addressBean.getIsDefault()) && addressBean.getIsDefault().equals("1") && this.c == -1) {
             this.c = Long.parseLong(addressBean.getAddressId());
         }
@@ -291,8 +288,8 @@ public class AddressListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             viewHolder2.d.setTextColor(this.g);
             viewHolder2.g.setTextColor(this.g);
         }
-        viewHolder2.itemView.setOnClickListener(new View$OnClickListenerC1419b(i, addressBean));
-        viewHolder2.itemView.setOnLongClickListener(new View$OnLongClickListenerC1420c(i, addressBean));
+        viewHolder2.itemView.setOnClickListener(new b(i, addressBean));
+        viewHolder2.itemView.setOnLongClickListener(new c(i, addressBean));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

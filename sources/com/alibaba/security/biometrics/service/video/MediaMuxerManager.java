@@ -6,9 +6,9 @@ import android.media.MediaCodec;
 import android.media.MediaFormat;
 import android.media.MediaMuxer;
 import com.alibaba.security.biometrics.service.video.BaseCameraVideoRecorder;
-import com.alibaba.security.common.c.C3800a;
-import com.alibaba.security.common.d.C3805b;
-import com.alibaba.security.common.track.a.C3829a;
+import com.alibaba.security.common.c.a;
+import com.alibaba.security.common.d.b;
+import com.alibaba.security.common.track.a.a;
 import com.alibaba.security.common.track.model.TrackLog;
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -55,7 +55,7 @@ public class MediaMuxerManager implements OnVideoCodeCallback {
                         try {
                             MediaMuxerManager.this.lock.wait();
                         } catch (InterruptedException unused) {
-                            C3800a.b();
+                            a.b();
                         }
                     }
                     while (MediaMuxerManager.this.mThreadLoop && !Thread.interrupted()) {
@@ -64,10 +64,10 @@ public class MediaMuxerManager implements OnVideoCodeCallback {
                             MediaMuxerManager.this.mMediaMuxer.writeSampleData(MediaMuxerManager.this.mVideoTrackIndex, muxerData.byteBuf, muxerData.bufferInfo);
                         } catch (InterruptedException unused2) {
                         } catch (Exception e) {
-                            TrackLog createSdkExceptionLog = TrackLog.createSdkExceptionLog(C3805b.a(e));
+                            TrackLog createSdkExceptionLog = TrackLog.createSdkExceptionLog(b.a(e));
                             createSdkExceptionLog.addTag10("Android");
                             createSdkExceptionLog.setVerifyToken(str2);
-                            C3829a.C3830a.a.a(createSdkExceptionLog);
+                            a.C0165a.a.a(createSdkExceptionLog);
                         }
                     }
                     MediaMuxerManager.this.mMuxerDatas.clear();

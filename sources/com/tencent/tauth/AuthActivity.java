@@ -10,8 +10,8 @@ import com.tencent.connect.common.AssistActivity;
 import com.tencent.connect.common.Constants;
 import com.tencent.connect.common.UIListenerManager;
 import com.tencent.open.log.SLog;
-import com.tencent.open.utils.C7123k;
-import com.tencent.open.utils.C7126m;
+import com.tencent.open.utils.k;
+import com.tencent.open.utils.m;
 import java.util.HashMap;
 import java.util.Map;
 import tb.uj2;
@@ -84,7 +84,7 @@ public class AuthActivity extends Activity {
             String str = "";
             if (!uri.toString().equals("")) {
                 String uri2 = uri.toString();
-                Bundle a2 = C7126m.a(uri2.substring(uri2.indexOf(com.youku.live.livesdk.wkit.component.Constants.TYPE_LIVE_ROOM_BG_COLOR_PREFFIX) + 1));
+                Bundle a2 = m.a(uri2.substring(uri2.indexOf(com.youku.live.livesdk.wkit.component.Constants.TYPE_LIVE_ROOM_BG_COLOR_PREFFIX) + 1));
                 if (a2 == null) {
                     SLog.w("openSDK_LOG.AuthActivity", "-->handleActionUri, bundle is null");
                     finish();
@@ -109,7 +109,7 @@ public class AuthActivity extends Activity {
                     } else if (string.equals(ACTION_SHARE_PRIZE)) {
                         Intent launchIntentForPackage = getPackageManager().getLaunchIntentForPackage(getPackageName());
                         try {
-                            str = C7126m.d(a2.getString("response")).getString("activityid");
+                            str = m.d(a2.getString("response")).getString("activityid");
                         } catch (Exception e) {
                             SLog.e("openSDK_LOG.AuthActivity", "sharePrize parseJson has exception.", e);
                         }
@@ -193,7 +193,7 @@ public class AuthActivity extends Activity {
                         }
                     }
                 } else {
-                    if (string.equals("shareToQzone") && C7123k.a((Context) this, "com.tencent.mobileqq") != null && C7123k.c(this, uj2.BASE_TB_VERSION) < 0) {
+                    if (string.equals("shareToQzone") && k.a((Context) this, "com.tencent.mobileqq") != null && k.c(this, uj2.BASE_TB_VERSION) < 0) {
                         int i = a + 1;
                         a = i;
                         if (i == 2) {

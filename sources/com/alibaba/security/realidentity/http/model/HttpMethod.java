@@ -1,14 +1,14 @@
 package com.alibaba.security.realidentity.http.model;
 
-import anet.channel.request.C0193a;
+import anet.channel.request.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
 public enum HttpMethod {
     GET("GET", 1),
     POST("POST", 2),
-    PUT(C0193a.C0196c.PUT, 3),
-    DELETE(C0193a.C0196c.DELETE, 4),
+    PUT(a.c.PUT, 3),
+    DELETE(a.c.DELETE, 4),
     PATCH("PATCH", 5);
     
     private int index;

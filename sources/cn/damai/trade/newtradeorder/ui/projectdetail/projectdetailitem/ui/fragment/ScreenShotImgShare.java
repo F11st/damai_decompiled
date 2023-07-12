@@ -26,8 +26,7 @@ import cn.damai.common.image.luban.OnCompressListener;
 import cn.damai.common.image.luban.OnRenameListener;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.qrcode.util.QrcodeUtil;
 import cn.damai.commonbusiness.rank.RankInfo;
@@ -154,16 +153,16 @@ public class ScreenShotImgShare {
         /* compiled from: Taobao */
         /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ScreenShotImgShare$7$a */
         /* loaded from: classes16.dex */
-        public class View$OnClickListenerC2334a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* compiled from: Taobao */
-            /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ScreenShotImgShare$7$a$a */
+            /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ScreenShotImgShare$7$a$a  reason: collision with other inner class name */
             /* loaded from: classes8.dex */
-            public class C2335a implements OnGrantListener {
+            public class C0084a implements OnGrantListener {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C2335a() {
+                C0084a() {
                 }
 
                 @Override // cn.damai.common.askpermission.OnGrantListener
@@ -178,11 +177,11 @@ public class ScreenShotImgShare {
                     HashMap hashMap = new HashMap();
                     hashMap.put("usercode", z20.E());
                     hashMap.put("item_id", AnonymousClass7.this.val$mProjectId + "");
-                    C0529c.e().x(new C0525a.C0527b().i(gb.PROJECT_PAGE).f("screenshot").l("save").g(false).j(hashMap));
+                    cn.damai.common.user.c.e().x(new a.b().i(gb.PROJECT_PAGE).f("screenshot").l("save").g(false).j(hashMap));
                 }
             }
 
-            View$OnClickListenerC2334a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -191,7 +190,7 @@ public class ScreenShotImgShare {
                 if (AndroidInstantRuntime.support(ipChange, "-1189786957")) {
                     ipChange.ipc$dispatch("-1189786957", new Object[]{this, view});
                 } else {
-                    ir1.b(ScreenShotImgShare.this.g(), false, mr1.STORAGE, "用于为您保存图片至本地", new C2335a());
+                    ir1.b(ScreenShotImgShare.this.g(), false, mr1.STORAGE, "用于为您保存图片至本地", new C0084a());
                 }
             }
         }
@@ -209,22 +208,21 @@ public class ScreenShotImgShare {
                 ipChange.ipc$dispatch("-1615761078", new Object[]{this});
                 return;
             }
-            View$OnClickListenerC2334a view$OnClickListenerC2334a = new View$OnClickListenerC2334a();
-            this.val$shareView.findViewById(R$id.detail_screenshot_content_save1).setOnClickListener(view$OnClickListenerC2334a);
-            this.val$shareView.findViewById(R$id.detail_screenshot_content_save2).setOnClickListener(view$OnClickListenerC2334a);
+            a aVar = new a();
+            this.val$shareView.findViewById(R$id.detail_screenshot_content_save1).setOnClickListener(aVar);
+            this.val$shareView.findViewById(R$id.detail_screenshot_content_save2).setOnClickListener(aVar);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ScreenShotImgShare$a */
     /* loaded from: classes8.dex */
-    public class C2336a implements OnCompressListener {
+    public class a implements OnCompressListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ View b;
         final /* synthetic */ Activity c;
 
-        C2336a(String str, View view, Activity activity) {
+        a(String str, View view, Activity activity) {
             this.a = str;
             this.b = view;
             this.c = activity;
@@ -264,12 +262,11 @@ public class ScreenShotImgShare {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ScreenShotImgShare$b */
     /* loaded from: classes8.dex */
-    public class C2337b implements OnRenameListener {
+    public class b implements OnRenameListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2337b(ScreenShotImgShare screenShotImgShare) {
+        b(ScreenShotImgShare screenShotImgShare) {
         }
 
         @Override // cn.damai.common.image.luban.OnRenameListener
@@ -280,13 +277,12 @@ public class ScreenShotImgShare {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ScreenShotImgShare$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2338c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ PopupWindow a;
 
-        View$OnClickListenerC2338c(ScreenShotImgShare screenShotImgShare, PopupWindow popupWindow) {
+        c(ScreenShotImgShare screenShotImgShare, PopupWindow popupWindow) {
             this.a = popupWindow;
         }
 
@@ -302,9 +298,8 @@ public class ScreenShotImgShare {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ScreenShotImgShare$d */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2339d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ScrollView a;
         final /* synthetic */ View b;
@@ -312,7 +307,7 @@ public class ScreenShotImgShare {
         final /* synthetic */ String d;
         final /* synthetic */ long e;
 
-        View$OnClickListenerC2339d(ScrollView scrollView, View view, FrameLayout frameLayout, String str, long j) {
+        d(ScrollView scrollView, View view, FrameLayout frameLayout, String str, long j) {
             this.a = scrollView;
             this.b = view;
             this.c = frameLayout;
@@ -333,17 +328,16 @@ public class ScreenShotImgShare {
             HashMap hashMap = new HashMap();
             hashMap.put("usercode", z20.E());
             hashMap.put("item_id", this.e + "");
-            C0529c.e().x(new C0525a.C0527b().i(gb.PROJECT_PAGE).f("screenshot").l("share").g(false).j(hashMap));
+            cn.damai.common.user.c.e().x(new a.b().i(gb.PROJECT_PAGE).f("screenshot").l("share").g(false).j(hashMap));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ScreenShotImgShare$e */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2340e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2340e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -380,12 +374,12 @@ public class ScreenShotImgShare {
             ipChange.ipc$dispatch("-493519534", new Object[]{this, linearLayout, Integer.valueOf(i), view, Integer.valueOf(i2)});
             return;
         }
-        DisplayMetrics b = m62.b(g());
-        Bitmap createBitmap = Bitmap.createBitmap(com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(b), i, Bitmap.Config.ARGB_8888);
+        DisplayMetrics b2 = m62.b(g());
+        Bitmap createBitmap = Bitmap.createBitmap(com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(b2), i, Bitmap.Config.ARGB_8888);
         view.draw(new Canvas(createBitmap));
         ImageView imageView = (ImageView) linearLayout.findViewById(i2);
         ViewGroup.LayoutParams layoutParams = imageView.getLayoutParams();
-        layoutParams.height = (int) (((com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(b) - m62.a(g(), 94.0f)) / createBitmap.getWidth()) * createBitmap.getHeight());
+        layoutParams.height = (int) (((com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(b2) - m62.a(g(), 94.0f)) / createBitmap.getWidth()) * createBitmap.getHeight());
         imageView.setLayoutParams(layoutParams);
         imageView.setImageBitmap(createBitmap);
         view.setVisibility(8);
@@ -436,10 +430,10 @@ public class ScreenShotImgShare {
         this.b = activity;
         PopupWindow popupWindow = new PopupWindow(g());
         View inflate = LayoutInflater.from(g()).inflate(R$layout.layout_detail_screenshot_parent, (ViewGroup) null);
-        DisplayMetrics b = m62.b(g());
-        popupWindow.setWidth(com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(b));
-        final int a = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(b) + kg2.a(g());
-        popupWindow.setHeight(a);
+        DisplayMetrics b2 = m62.b(g());
+        popupWindow.setWidth(com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(b2));
+        final int a2 = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(b2) + kg2.a(g());
+        popupWindow.setHeight(a2);
         popupWindow.setClippingEnabled(false);
         popupWindow.setContentView(inflate);
         popupWindow.setBackgroundDrawable(new ColorDrawable(1711276032));
@@ -458,13 +452,13 @@ public class ScreenShotImgShare {
                 HashMap hashMap = new HashMap();
                 hashMap.put("usercode", z20.E());
                 hashMap.put("item_id", j + "");
-                C0529c.e().C("share", "screenshot", gb.PROJECT_PAGE, "1.0", System.currentTimeMillis() - ScreenShotImgShare.this.a, hashMap, 2201);
+                cn.damai.common.user.c.e().C("share", "screenshot", gb.PROJECT_PAGE, "1.0", System.currentTimeMillis() - ScreenShotImgShare.this.a, hashMap, 2201);
             }
         });
-        inflate.setOnClickListener(new View$OnClickListenerC2338c(this, popupWindow));
+        inflate.setOnClickListener(new c(this, popupWindow));
         int i = R$id.detail_screenshot_conent;
         ViewGroup.LayoutParams layoutParams = inflate.findViewById(i).getLayoutParams();
-        layoutParams.height = a - m62.a(g(), 154.0f);
+        layoutParams.height = a2 - m62.a(g(), 154.0f);
         inflate.findViewById(i).setLayoutParams(layoutParams);
         inflate.postInvalidate();
         ScrollView scrollView = (ScrollView) inflate.findViewById(R$id.screenshot_share_content_scroll);
@@ -502,15 +496,15 @@ public class ScreenShotImgShare {
                 ProjectDataHolder projectDataHolder = projectItemDetailAdapter.b().get(i2);
                 if (itemViewType == 11) {
                     view = view2;
-                    List<HtmlParserManager.C2244a> shrinkConvertedItem = projectDataHolder.getShrinkConvertedItem();
+                    List<HtmlParserManager.a> shrinkConvertedItem = projectDataHolder.getShrinkConvertedItem();
                     if (shrinkConvertedItem != null && shrinkConvertedItem.size() != 0) {
-                        for (HtmlParserManager.C2244a c2244a : shrinkConvertedItem) {
-                            if (c2244a != null && c2244a.e() == 1) {
+                        for (HtmlParserManager.a aVar : shrinkConvertedItem) {
+                            if (aVar != null && aVar.e() == 1) {
                                 linearLayout.findViewById(R$id.screenshot_share_content_gap).setVisibility(0);
                                 linearLayout.findViewById(R$id.screenshot_share_content_title_info).setVisibility(0);
                                 int i3 = R$id.screenshot_share_content_info;
                                 ((TextView) linearLayout.findViewById(i3)).setVisibility(0);
-                                ((TextView) linearLayout.findViewById(i3)).setText(c2244a.a());
+                                ((TextView) linearLayout.findViewById(i3)).setText(aVar.a());
                                 break;
                             }
                         }
@@ -585,15 +579,15 @@ public class ScreenShotImgShare {
                     ipChange2.ipc$dispatch("-1419247573", new Object[]{this});
                     return;
                 }
-                int a2 = a - m62.a(ScreenShotImgShare.this.g(), 344.0f);
+                int a3 = a2 - m62.a(ScreenShotImgShare.this.g(), 344.0f);
                 int height = view3.findViewById(R$id.screenshot_share_content_ll).getHeight();
-                if (height <= a2) {
-                    a2 = height;
+                if (height <= a3) {
+                    a3 = height;
                 }
                 View view4 = view3;
                 int i4 = R$id.screenshot_share_content_scroll_parent;
                 ViewGroup.LayoutParams layoutParams2 = view4.findViewById(i4).getLayoutParams();
-                layoutParams2.height = a2;
+                layoutParams2.height = a3;
                 view3.findViewById(i4).setLayoutParams(layoutParams2);
                 view3.postInvalidate();
             }
@@ -601,8 +595,8 @@ public class ScreenShotImgShare {
         String str = gw1.productUrl + j + "&from=appshare";
         ((ImageView) linearLayout.findViewById(R$id.screenshot_share_content_qrcode_img)).setImageBitmap(QrcodeUtil.a(t60.a(g(), 40.0f), str));
         view3.postDelayed(new AnonymousClass7(scrollView, view3, j), 100L);
-        view3.findViewById(R$id.screenshot_share_action).setOnClickListener(new View$OnClickListenerC2339d(scrollView, view3, frameLayout, str, j));
-        view3.findViewById(R$id.screenshot_feedback_action).setOnClickListener(new View$OnClickListenerC2340e());
+        view3.findViewById(R$id.screenshot_share_action).setOnClickListener(new d(scrollView, view3, frameLayout, str, j));
+        view3.findViewById(R$id.screenshot_feedback_action).setOnClickListener(new e());
         return popupWindow;
     }
 
@@ -617,9 +611,9 @@ public class ScreenShotImgShare {
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, bufferedOutputStream);
             bufferedOutputStream.flush();
             bufferedOutputStream.close();
-            Luban.l(activity).k(b21.e(activity)).n(b21.d(activity)).m(new C2337b(this)).l(new C2336a(str, view, activity)).j();
-        } catch (IOException e) {
-            e.printStackTrace();
+            Luban.l(activity).k(b21.e(activity)).n(b21.d(activity)).m(new b(this)).l(new a(str, view, activity)).j();
+        } catch (IOException e2) {
+            e2.printStackTrace();
         }
     }
 }

@@ -5,7 +5,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import androidx.viewpager.widget.PagerAdapter;
-import cn.damai.common.image.C0504a;
 import cn.damai.trade.R$drawable;
 import cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.bean.ProjectPicAndVideo;
 import cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.OnHeadClickListener;
@@ -24,13 +23,12 @@ public class ProjectPicAndVideoAdapter extends PagerAdapter {
     private OnHeadClickListener c;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.adapter.ProjectPicAndVideoAdapter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2284a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        View$OnClickListenerC2284a(int i) {
+        a(int i) {
             this.a = i;
         }
 
@@ -92,9 +90,9 @@ public class ProjectPicAndVideoAdapter extends PagerAdapter {
         ImageView imageView = new ImageView(this.a);
         imageView.setImageResource(R$drawable.uikit_default_image_bg_grey);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        C0504a.b().c(this.b.get(i).url).i(R$drawable.transparent_bg).c(R$drawable.ip_video_cover_black).g(imageView);
+        cn.damai.common.image.a.b().c(this.b.get(i).url).i(R$drawable.transparent_bg).c(R$drawable.ip_video_cover_black).g(imageView);
         viewGroup.addView(imageView);
-        imageView.setOnClickListener(new View$OnClickListenerC2284a(i));
+        imageView.setOnClickListener(new a(i));
         return imageView;
     }
 

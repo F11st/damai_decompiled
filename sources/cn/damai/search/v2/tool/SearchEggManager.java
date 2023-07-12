@@ -44,12 +44,11 @@ public class SearchEggManager {
     private InputInfoProvider h;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.v2.tool.SearchEggManager$a */
     /* loaded from: classes6.dex */
-    public class C1656a implements SearchEggRecommendViewHolderV2.OnEggListener {
+    public class a implements SearchEggRecommendViewHolderV2.OnEggListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1656a() {
+        a() {
         }
 
         @Override // cn.damai.search.ui.viewholder.SearchEggRecommendViewHolderV2.OnEggListener
@@ -72,12 +71,11 @@ public class SearchEggManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.v2.tool.SearchEggManager$b */
     /* loaded from: classes6.dex */
-    public class C1657b implements EggAdapter.OnProjectClickListener {
+    public class b implements EggAdapter.OnProjectClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1657b() {
+        b() {
         }
 
         @Override // cn.damai.search.v2.adapter.EggAdapter.OnProjectClickListener
@@ -212,8 +210,8 @@ public class SearchEggManager {
             recyclerView.setLayoutManager(new LinearLayoutManager(this.c, 1, false));
             EggAdapter eggAdapter = new EggAdapter(this.c);
             this.g = eggAdapter;
-            eggAdapter.c(new C1656a());
-            this.g.e(new C1657b());
+            eggAdapter.c(new a());
+            this.g.e(new b());
             recyclerView.setAdapter(this.g);
             this.d.addView(inflate);
         }

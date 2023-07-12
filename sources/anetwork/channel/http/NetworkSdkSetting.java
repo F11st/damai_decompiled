@@ -3,19 +3,18 @@ package anetwork.channel.http;
 import android.app.Application;
 import android.content.Context;
 import android.text.TextUtils;
-import anet.channel.C0162c;
+import anet.channel.c;
 import anet.channel.entity.ENV;
 import anet.channel.util.ALog;
-import anet.channel.util.C0241c;
 import anetwork.channel.cookie.CookieManager;
 import anetwork.channel.monitor.Monitor;
 import com.uc.webview.export.extension.UCCore;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
-import tb.C9708t9;
 import tb.hu0;
 import tb.rj1;
+import tb.t9;
 import tb.w70;
 
 /* compiled from: Taobao */
@@ -42,13 +41,13 @@ public class NetworkSdkSetting implements Serializable {
                 hu0.o(System.currentTimeMillis());
                 hu0.l(context2);
                 rj1.e();
-                C9708t9.f(context2);
+                t9.f(context2);
                 initTaobaoAdapter();
                 Monitor.init();
-                if (!C9708t9.O()) {
+                if (!t9.O()) {
                     CookieManager.n(context2);
                 }
-                C0162c.y(context2);
+                c.y(context2);
                 w70.a();
             }
         } catch (Throwable th) {
@@ -58,7 +57,7 @@ public class NetworkSdkSetting implements Serializable {
 
     private static void initTaobaoAdapter() {
         try {
-            C0241c.i("anet.channel.TaobaoNetworkAdapter", UCCore.LEGACY_EVENT_INIT, new Class[]{Context.class, HashMap.class}, context, initParams);
+            anet.channel.util.c.i("anet.channel.TaobaoNetworkAdapter", UCCore.LEGACY_EVENT_INIT, new Class[]{Context.class, HashMap.class}, context, initParams);
             ALog.f(TAG, "init taobao adapter success", null, new Object[0]);
         } catch (Exception e) {
             ALog.f(TAG, "initTaobaoAdapter failed. maybe not taobao app", null, e);

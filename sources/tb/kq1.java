@@ -15,14 +15,13 @@ public class kq1 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.kq1$b */
     /* loaded from: classes11.dex */
-    public static class C9372b {
+    public static class b {
         private static final kq1 a = new kq1();
     }
 
     public static kq1 a() {
-        return C9372b.a;
+        return b.a;
     }
 
     private void b(Application application, SharedPreferences sharedPreferences, HashMap<String, Object> hashMap) {

@@ -12,7 +12,7 @@ import cn.damai.comment.R$color;
 import cn.damai.comment.R$id;
 import cn.damai.comment.R$layout;
 import cn.damai.comment.bean.CommentsItemBean;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.share.ShareManager;
 import cn.damai.evaluate.ui.item.EvaluateItemDataBinder;
@@ -200,7 +200,7 @@ public class NewEvaluateListActivity extends DamaiBaseActivity implements Evalua
         }
         super.onCreate(bundle);
         setDamaiUTKeyBuilder(dl.I().z(z20.E()));
-        C0529c.e().K(this);
+        c.e().K(this);
     }
 
     @Override // cn.damai.evaluate.ui.item.EvaluateItemDataBinder.EvaluateItemUTReportListener
@@ -210,7 +210,7 @@ public class NewEvaluateListActivity extends DamaiBaseActivity implements Evalua
             ipChange.ipc$dispatch("-1073404463", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i), Integer.valueOf(i2)});
         } else if (commentsItemBean == null || commentsItemBean.getUserDO() == null || this.evaluateListFragment.getChooseLabel() == null) {
         } else {
-            C0529c.e().x(dl.I().B(commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), this.evaluateListFragment.getChooseLabel().getLabelName(), (i2 != 0 || commentsItemBean.getVideoDO() == null) ? "" : commentsItemBean.getVideoDO().getVideoId(), this.evaluateListFragment.getChooseLabel().getPos(), i, i2));
+            c.e().x(dl.I().B(commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), this.evaluateListFragment.getChooseLabel().getLabelName(), (i2 != 0 || commentsItemBean.getVideoDO() == null) ? "" : commentsItemBean.getVideoDO().getVideoId(), this.evaluateListFragment.getChooseLabel().getPos(), i, i2));
         }
     }
 
@@ -221,7 +221,7 @@ public class NewEvaluateListActivity extends DamaiBaseActivity implements Evalua
             ipChange.ipc$dispatch("196085262", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
         } else if (commentsItemBean == null || commentsItemBean.getUserDO() == null || this.evaluateListFragment.getChooseLabel() == null) {
         } else {
-            C0529c.e().x(dl.I().C(commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), this.mScriptId, this.evaluateListFragment.getChooseLabel().getLabelName(), this.evaluateListFragment.getChooseLabel().getPos(), i));
+            c.e().x(dl.I().C(commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), this.mScriptId, this.evaluateListFragment.getChooseLabel().getLabelName(), this.evaluateListFragment.getChooseLabel().getPos(), i));
         }
     }
 
@@ -232,7 +232,7 @@ public class NewEvaluateListActivity extends DamaiBaseActivity implements Evalua
             ipChange.ipc$dispatch("-2056799234", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
         } else if (commentsItemBean == null || commentsItemBean.getUserDO() == null || this.evaluateListFragment.getChooseLabel() == null) {
         } else {
-            C0529c.e().x(dl.I().G(commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), this.mScriptId, this.evaluateListFragment.getChooseLabel().getLabelName(), this.evaluateListFragment.getChooseLabel().getPos(), i));
+            c.e().x(dl.I().G(commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), this.mScriptId, this.evaluateListFragment.getChooseLabel().getLabelName(), this.evaluateListFragment.getChooseLabel().getPos(), i));
         }
     }
 
@@ -243,7 +243,7 @@ public class NewEvaluateListActivity extends DamaiBaseActivity implements Evalua
             ipChange.ipc$dispatch("1449815264", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
         } else if (commentsItemBean == null || commentsItemBean.getUserDO() == null || this.evaluateListFragment.getChooseLabel() == null) {
         } else {
-            C0529c.e().x(dl.I().E(commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), this.evaluateListFragment.getChooseLabel().getLabelName(), this.evaluateListFragment.getChooseLabel().getPos(), i));
+            c.e().x(dl.I().E(commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), this.evaluateListFragment.getChooseLabel().getLabelName(), this.evaluateListFragment.getChooseLabel().getPos(), i));
         }
     }
 
@@ -254,7 +254,7 @@ public class NewEvaluateListActivity extends DamaiBaseActivity implements Evalua
             ipChange.ipc$dispatch("-305185135", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
         } else if (commentsItemBean == null || commentsItemBean.getUserDO() == null || this.evaluateListFragment.getChooseLabel() == null) {
         } else {
-            C0529c.e().x(dl.I().F(commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), this.evaluateListFragment.getChooseLabel().getLabelName(), this.evaluateListFragment.getChooseLabel().getPos(), i));
+            c.e().x(dl.I().F(commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), this.evaluateListFragment.getChooseLabel().getLabelName(), this.evaluateListFragment.getChooseLabel().getPos(), i));
         }
     }
 
@@ -281,7 +281,7 @@ public class NewEvaluateListActivity extends DamaiBaseActivity implements Evalua
             ipChange.ipc$dispatch("1226164680", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
         } else if (commentsItemBean == null || commentsItemBean.getUserDO() == null || this.evaluateListFragment.getChooseLabel() == null) {
         } else {
-            C0529c.e().x(dl.I().H(commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), this.mScriptId, this.evaluateListFragment.getChooseLabel().getLabelName(), this.evaluateListFragment.getChooseLabel().getPos(), i));
+            c.e().x(dl.I().H(commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), this.mScriptId, this.evaluateListFragment.getChooseLabel().getLabelName(), this.evaluateListFragment.getChooseLabel().getPos(), i));
         }
     }
 

@@ -10,13 +10,12 @@ import tb.hj;
 public interface PlatformDependentTypeTransformer {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.deserialization.PlatformDependentTypeTransformer$a */
     /* loaded from: classes3.dex */
-    public static final class C8310a implements PlatformDependentTypeTransformer {
+    public static final class a implements PlatformDependentTypeTransformer {
         @NotNull
-        public static final C8310a INSTANCE = new C8310a();
+        public static final a INSTANCE = new a();
 
-        private C8310a() {
+        private a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.descriptors.deserialization.PlatformDependentTypeTransformer

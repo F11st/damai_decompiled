@@ -16,7 +16,6 @@ import anet.channel.session.TnetSpdySession;
 import anet.channel.statist.SessionConnStat;
 import anet.channel.statist.SessionStatistic;
 import anet.channel.status.NetworkStatusHelper;
-import anet.channel.strategy.C0213a;
 import anet.channel.strategy.IConnStrategy;
 import anet.channel.thread.ThreadPoolExecutorFactory;
 import anet.channel.util.ALog;
@@ -37,7 +36,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicBoolean;
 import me.ele.altriax.launcher.real.time.data.biz.BizTime;
-import tb.C9708t9;
 import tb.ab2;
 import tb.em;
 import tb.g4;
@@ -45,6 +43,7 @@ import tb.hu0;
 import tb.jg1;
 import tb.lw2;
 import tb.sf0;
+import tb.t9;
 import tb.x6;
 import tb.xa2;
 import tb.ya2;
@@ -58,8 +57,8 @@ import tb.zm;
 public class SessionRequest {
     private String a;
     private String b;
-    private C0162c c;
-    private C0165d d;
+    private anet.channel.c c;
+    private d d;
     private xa2 e;
     volatile Session f;
     private volatile Future g;
@@ -99,14 +98,14 @@ public class SessionRequest {
             }
             this.d = true;
             if (session.v) {
-                if (i2 && (SessionRequest.this.e == null || !SessionRequest.this.e.c || C9708t9.i())) {
+                if (i2 && (SessionRequest.this.e == null || !SessionRequest.this.e.c || t9.i())) {
                     ALog.e("awcn.SessionRequest", "[onDisConnect]app background, don't Recreate", this.c.h(), Preloader.KEY_SESSION, session);
                 } else if (NetworkStatusHelper.n()) {
                     try {
                         if (SessionRequest.this.d.f(SessionRequest.this, ab2.a) == null) {
                             int i3 = 10000;
                             if (SessionRequest.this.e != null && SessionRequest.this.e.c) {
-                                i3 = C9708t9.a();
+                                i3 = t9.a();
                             }
                             ALog.e("awcn.SessionRequest", "session disconnected, try to recreate session.", this.c.h(), "delay period ", Integer.valueOf(i3));
                             ThreadPoolExecutorFactory.j(new Runnable() { // from class: anet.channel.SessionRequest.ConnCb.1
@@ -179,7 +178,7 @@ public class SessionRequest {
                             if (!SessionRequest.this.n.isDone()) {
                                 ALog.c("awcn.SessionRequest", "it already failed , so start complex task!", session.r, new Object[0]);
                                 SessionRequest.this.n.cancel(false);
-                                ThreadPoolExecutorFactory.g(SessionRequest.this.m, ThreadPoolExecutorFactory.C0235b.b);
+                                ThreadPoolExecutorFactory.g(SessionRequest.this.m, ThreadPoolExecutorFactory.b.b);
                                 return;
                             }
                             ALog.c("awcn.SessionRequest", "we already start complex!", session.r, new Object[0]);
@@ -187,7 +186,7 @@ public class SessionRequest {
                         }
                         List<zm> list = this.b;
                         if ((list == null || list.isEmpty()) && Inet64Util.n() == 3) {
-                            this.b = SessionRequest.this.w(C0213a.a().getIpv4ConnStrategyListByHost(session.k(), SessionRequest.this.y().startsWith("https"), SessionRequest.this.x()), session.r);
+                            this.b = SessionRequest.this.w(anet.channel.strategy.a.a().getIpv4ConnStrategyListByHost(session.k(), SessionRequest.this.y().startsWith("https"), SessionRequest.this.x()), session.r);
                             ALog.e("awcn.SessionRequest", "ipv6 failed will retry with local dns ipv4 " + this.b.toString(), session.r, new Object[0]);
                         }
                     }
@@ -241,7 +240,7 @@ public class SessionRequest {
                     session.c(false);
                     return;
                 }
-                if (C9708t9.p() && ((!SessionRequest.this.p.compareAndSet(false, true) || !SessionRequest.this.q.get()) && !session.A)) {
+                if (t9.p() && ((!SessionRequest.this.p.compareAndSet(false, true) || !SessionRequest.this.q.get()) && !session.A)) {
                     ALog.e("awcn.SessionRequest", "session connect already finish", session.r, new Object[0]);
                     session.c(false);
                 }
@@ -386,13 +385,12 @@ public class SessionRequest {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.SessionRequest$a */
     /* loaded from: classes.dex */
-    public class C0155a implements EventCb {
+    public class a implements EventCb {
         final /* synthetic */ IConnCb a;
         final /* synthetic */ long b;
 
-        C0155a(IConnCb iConnCb, long j) {
+        a(IConnCb iConnCb, long j) {
             this.a = iConnCb;
             this.b = j;
         }
@@ -437,12 +435,11 @@ public class SessionRequest {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.SessionRequest$b */
     /* loaded from: classes.dex */
-    public class C0156b implements EventCb {
+    public class b implements EventCb {
         final /* synthetic */ Session a;
 
-        C0156b(Session session) {
+        b(Session session) {
             this.a = session;
         }
 
@@ -459,20 +456,19 @@ public class SessionRequest {
             if (!session.s.isReported) {
                 ALog.e("awcn.SessionRequest", "isReported is false!,we will not report to StrategyCenter", this.a.r, new Object[0]);
             } else {
-                C0213a.a().notifyConnEvent(this.a.k(), this.a.f(), ymVar);
+                anet.channel.strategy.a.a().notifyConnEvent(this.a.k(), this.a.f(), ymVar);
             }
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.SessionRequest$c */
     /* loaded from: classes.dex */
-    public class ServiceConnectionC0157c implements ServiceConnection {
+    public class c implements ServiceConnection {
         final /* synthetic */ Intent a;
         final /* synthetic */ Context b;
 
-        ServiceConnectionC0157c(SessionRequest sessionRequest, Intent intent, Context context) {
+        c(SessionRequest sessionRequest, Intent intent, Context context) {
             this.a = intent;
             this.b = context;
         }
@@ -502,26 +498,26 @@ public class SessionRequest {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public SessionRequest(String str, C0162c c0162c) {
+    public SessionRequest(String str, anet.channel.c cVar) {
         this.a = str;
         String substring = str.substring(str.indexOf(jg1.SCHEME_SLASH) + 3);
         this.b = substring;
-        this.c = c0162c;
-        this.e = c0162c.f.b(substring);
-        this.d = c0162c.d;
+        this.c = cVar;
+        this.e = cVar.f.b(substring);
+        this.d = cVar.d;
     }
 
     private void A(Session session, IConnCb iConnCb, long j, String str) {
         if (iConnCb == null) {
             return;
         }
-        session.v(4095, new C0155a(iConnCb, j));
-        session.v(1792, new C0156b(session));
+        session.v(4095, new a(iConnCb, j));
+        session.v(1792, new b(session));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public void B(Session session, int i, String str) {
-        if (C9708t9.L()) {
+        if (t9.L()) {
             D(session, i, str);
         }
         C(session, i, str);
@@ -549,15 +545,15 @@ public class SessionRequest {
 
     private void D(Session session, int i, String str) {
         xa2 xa2Var;
-        Context c = hu0.c();
-        if (c == null || (xa2Var = this.e) == null || !xa2Var.c) {
+        Context c2 = hu0.c();
+        if (c2 == null || (xa2Var = this.e) == null || !xa2Var.c) {
             return;
         }
         ALog.e("awcn.SessionRequest", "sendConnectInfoToAccsByService", null, new Object[0]);
         try {
             Intent intent = new Intent(Constants.ACTION_RECEIVE);
-            intent.setPackage(c.getPackageName());
-            intent.setClassName(c, AdapterUtilityImpl.msgService);
+            intent.setPackage(c2.getPackageName());
+            intent.setClassName(c2, AdapterUtilityImpl.msgService);
             intent.putExtra("command", 103);
             intent.putExtra("host", session.h());
             intent.putExtra(Constants.KEY_CENTER_HOST, true);
@@ -569,9 +565,9 @@ public class SessionRequest {
             intent.putExtra(Constants.KEY_CONNECT_AVAILABLE, q);
             intent.putExtra(Constants.KEY_TYPE_INAPP, true);
             if (Build.VERSION.SDK_INT >= 26) {
-                c.bindService(intent, new ServiceConnectionC0157c(this, intent, c), 1);
+                c2.bindService(intent, new c(this, intent, c2), 1);
             } else {
-                c.startService(intent);
+                c2.startService(intent);
             }
         } catch (Throwable th) {
             ALog.d("awcn.SessionRequest", "sendConnectInfoToAccsByService", null, th, new Object[0]);
@@ -622,21 +618,21 @@ public class SessionRequest {
         sessionConnStat2.isCreated = session.A;
         xa2 xa2Var = this.e;
         if (xa2Var != null && xa2Var.c) {
-            List<Session> c = this.d.c(this);
-            this.j.sessionCount = c != null ? c.size() : 0;
+            List<Session> c2 = this.d.c(this);
+            this.j.sessionCount = c2 != null ? c2.size() : 0;
         }
         x6.b().commitStat(this.j);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public void t(Context context, zm zmVar, IConnCb iConnCb, String str) {
-        ConnType a = zmVar.a();
-        if (context != null && !a.i()) {
+        ConnType a2 = zmVar.a();
+        if (context != null && !a2.i()) {
             TnetSpdySession tnetSpdySession = new TnetSpdySession(context, zmVar);
             tnetSpdySession.Q(this.c.c);
-            xa2 b = this.c.f.b(this.b);
-            this.e = b;
-            tnetSpdySession.R(b);
+            xa2 b2 = this.c.f.b(this.b);
+            this.e = b2;
+            tnetSpdySession.R(b2);
             tnetSpdySession.U(this.c.f.a(this.b));
             SessionStatistic sessionStatistic = tnetSpdySession.s;
             sessionStatistic.xqcConnEnv += "-isContainHttp3=" + this.l;
@@ -684,7 +680,7 @@ public class SessionRequest {
             if (r3 != 0) goto L10
             return r1
         L10:
-            anet.channel.strategy.IStrategyInstance r4 = anet.channel.strategy.C0213a.a()     // Catch: java.lang.Throwable -> L8d
+            anet.channel.strategy.IStrategyInstance r4 = anet.channel.strategy.a.a()     // Catch: java.lang.Throwable -> L8d
             java.lang.String r5 = r3.d()     // Catch: java.lang.Throwable -> L8d
             java.util.List r1 = r4.getConnStrategyListByHost(r5)     // Catch: java.lang.Throwable -> L8d
             boolean r4 = r1.isEmpty()     // Catch: java.lang.Throwable -> L8d
@@ -799,11 +795,11 @@ public class SessionRequest {
 
     /* JADX INFO: Access modifiers changed from: protected */
     public synchronized void F(Context context, int i, String str, SessionGetCallback sessionGetCallback, long j) {
-        List<zm> b;
-        String a = TextUtils.isEmpty(str) ? ya2.a(null) : str;
-        ALog.c("awcn.SessionRequest", "SessionRequest start", a, "host", this.a, "type", Integer.valueOf(i));
+        List<zm> b2;
+        String a2 = TextUtils.isEmpty(str) ? ya2.a(null) : str;
+        ALog.c("awcn.SessionRequest", "SessionRequest start", a2, "host", this.a, "type", Integer.valueOf(i));
         if (!this.q.compareAndSet(false, true)) {
-            ALog.e("awcn.SessionRequest", "session connecting", a, "host", y());
+            ALog.e("awcn.SessionRequest", "session connecting", a2, "host", y());
             if (sessionGetCallback != null) {
                 if (x() == i) {
                     SessionGetWaitTimeoutTask sessionGetWaitTimeoutTask = new SessionGetWaitTimeoutTask(sessionGetCallback);
@@ -819,7 +815,7 @@ public class SessionRequest {
         }
         Session f = this.d.f(this, i);
         if (f != null) {
-            ALog.e("awcn.SessionRequest", "Available Session exist!!!", a, new Object[0]);
+            ALog.e("awcn.SessionRequest", "Available Session exist!!!", a2, new Object[0]);
             if (sessionGetCallback != null) {
                 sessionGetCallback.onSessionGetSuccess(f);
             }
@@ -827,27 +823,27 @@ public class SessionRequest {
             return;
         }
         E(true);
-        this.g = ThreadPoolExecutorFactory.j(new ConnectTimeoutTask(a), 45L, TimeUnit.SECONDS);
+        this.g = ThreadPoolExecutorFactory.j(new ConnectTimeoutTask(a2), 45L, TimeUnit.SECONDS);
         SessionConnStat sessionConnStat = new SessionConnStat();
         this.j = sessionConnStat;
         sessionConnStat.start = System.currentTimeMillis();
         if (!NetworkStatusHelper.n()) {
             if (ALog.g(1)) {
-                ALog.c("awcn.SessionRequest", "network is not available, can't create session", a, "isConnected", Boolean.valueOf(NetworkStatusHelper.n()));
+                ALog.c("awcn.SessionRequest", "network is not available, can't create session", a2, "isConnected", Boolean.valueOf(NetworkStatusHelper.n()));
             }
             u();
             throw new RuntimeException("no network");
         }
-        List<IConnStrategy> v = v(i, a);
+        List<IConnStrategy> v = v(i, a2);
         if (!v.isEmpty()) {
-            List<zm> w = w(v, a);
+            List<zm> w = w(v, a2);
             zm remove = w.remove(0);
             t(context, remove, new ConnCb(context, w, remove), remove.h());
-            if (em.d(this.b, remove.e()) && (b = em.b(this.f, w, 1)) != null && b.size() > 0) {
-                long a2 = em.a();
-                ALog.c("awcn.SessionRequest", "sessionComplexTask will start", null, "delay", Long.valueOf(a2));
-                this.m = new SessionComplexTask(context, this, i, b);
-                this.n = ThreadPoolExecutorFactory.j(this.m, a2, TimeUnit.MILLISECONDS);
+            if (em.d(this.b, remove.e()) && (b2 = em.b(this.f, w, 1)) != null && b2.size() > 0) {
+                long a3 = em.a();
+                ALog.c("awcn.SessionRequest", "sessionComplexTask will start", null, "delay", Long.valueOf(a3));
+                this.m = new SessionComplexTask(context, this, i, b2);
+                this.n = ThreadPoolExecutorFactory.j(this.m, a3, TimeUnit.MILLISECONDS);
             }
             if (sessionGetCallback != null) {
                 SessionGetWaitTimeoutTask sessionGetWaitTimeoutTask2 = new SessionGetWaitTimeoutTask(sessionGetCallback);
@@ -858,18 +854,18 @@ public class SessionRequest {
             }
             return;
         }
-        ALog.f("awcn.SessionRequest", "no avalible strategy, can't create session", a, "host", this.a, "type", Integer.valueOf(i));
+        ALog.f("awcn.SessionRequest", "no avalible strategy, can't create session", a2, "host", this.a, "type", Integer.valueOf(i));
         u();
         throw new NoAvailStrategyException("no avalible strategy");
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     public synchronized void G(Context context, int i, String str, SessionGetCallback sessionGetCallback, long j) {
-        List<zm> b;
-        String a = TextUtils.isEmpty(str) ? ya2.a(null) : str;
-        ALog.c("awcn.SessionRequest", "SessionRequest start", a, "host", this.a, "type", Integer.valueOf(i));
+        List<zm> b2;
+        String a2 = TextUtils.isEmpty(str) ? ya2.a(null) : str;
+        ALog.c("awcn.SessionRequest", "SessionRequest start", a2, "host", this.a, "type", Integer.valueOf(i));
         if (!this.q.compareAndSet(false, true)) {
-            ALog.e("awcn.SessionRequest", "session connecting", a, "host", y());
+            ALog.e("awcn.SessionRequest", "session connecting", a2, "host", y());
             if (sessionGetCallback != null) {
                 if (x() == i) {
                     SessionGetWaitTimeoutTask sessionGetWaitTimeoutTask = new SessionGetWaitTimeoutTask(sessionGetCallback);
@@ -885,7 +881,7 @@ public class SessionRequest {
         }
         Session f = this.d.f(this, i);
         if (f != null) {
-            ALog.c("awcn.SessionRequest", "Available Session exist!!!", a, new Object[0]);
+            ALog.c("awcn.SessionRequest", "Available Session exist!!!", a2, new Object[0]);
             if (sessionGetCallback != null) {
                 sessionGetCallback.onSessionGetSuccess(f);
             }
@@ -893,27 +889,27 @@ public class SessionRequest {
             return;
         }
         E(true);
-        this.g = ThreadPoolExecutorFactory.j(new ConnectTimeoutTask(a), 45L, TimeUnit.SECONDS);
+        this.g = ThreadPoolExecutorFactory.j(new ConnectTimeoutTask(a2), 45L, TimeUnit.SECONDS);
         SessionConnStat sessionConnStat = new SessionConnStat();
         this.j = sessionConnStat;
         sessionConnStat.start = System.currentTimeMillis();
         if (!NetworkStatusHelper.n()) {
             if (ALog.g(1)) {
-                ALog.c("awcn.SessionRequest", "network is not available, can't create session", a, "isConnected", Boolean.valueOf(NetworkStatusHelper.n()));
+                ALog.c("awcn.SessionRequest", "network is not available, can't create session", a2, "isConnected", Boolean.valueOf(NetworkStatusHelper.n()));
             }
             u();
             throw new RuntimeException("no network");
         }
-        List<IConnStrategy> v = v(i, a);
+        List<IConnStrategy> v = v(i, a2);
         if (!v.isEmpty()) {
-            List<zm> w = w(v, a);
+            List<zm> w = w(v, a2);
             zm remove = w.remove(0);
             t(context, remove, new ConnCb(context, w, remove), remove.h());
-            if (em.d(this.b, remove.e()) && (b = em.b(this.f, w, 1)) != null && b.size() > 0) {
-                long a2 = em.a();
-                ALog.c("awcn.SessionRequest", "sessionComplexTask will start", null, "delay", Long.valueOf(a2));
-                this.m = new SessionComplexTask(context, this, i, b);
-                this.n = ThreadPoolExecutorFactory.j(this.m, a2, TimeUnit.MILLISECONDS);
+            if (em.d(this.b, remove.e()) && (b2 = em.b(this.f, w, 1)) != null && b2.size() > 0) {
+                long a3 = em.a();
+                ALog.c("awcn.SessionRequest", "sessionComplexTask will start", null, "delay", Long.valueOf(a3));
+                this.m = new SessionComplexTask(context, this, i, b2);
+                this.n = ThreadPoolExecutorFactory.j(this.m, a3, TimeUnit.MILLISECONDS);
             }
             SessionGetWaitTimeoutTask sessionGetWaitTimeoutTask2 = new SessionGetWaitTimeoutTask(sessionGetCallback);
             synchronized (this.i) {
@@ -922,7 +918,7 @@ public class SessionRequest {
             ThreadPoolExecutorFactory.j(sessionGetWaitTimeoutTask2, j, TimeUnit.MILLISECONDS);
             return;
         }
-        ALog.f("awcn.SessionRequest", "no avalible strategy, can't create session", a, "host", this.a, "type", Integer.valueOf(i));
+        ALog.f("awcn.SessionRequest", "no avalible strategy, can't create session", a2, "host", this.a, "type", Integer.valueOf(i));
         u();
         throw new NoAvailStrategyException("no avalible strategy");
     }
@@ -982,8 +978,8 @@ public class SessionRequest {
     }
 
     protected void s(Context context, zm zmVar, IConnCb iConnCb, String str) {
-        ConnType a = zmVar.a();
-        if (context != null && !a.i()) {
+        ConnType a2 = zmVar.a();
+        if (context != null && !a2.i()) {
             TnetSpdySession tnetSpdySession = new TnetSpdySession(context, zmVar);
             tnetSpdySession.Q(this.c.c);
             tnetSpdySession.R(this.e);

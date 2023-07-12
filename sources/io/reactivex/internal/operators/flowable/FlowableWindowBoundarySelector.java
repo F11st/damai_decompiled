@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.functions.Function;
@@ -14,7 +14,6 @@ import io.reactivex.internal.subscribers.QueueDrainSubscriber;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import io.reactivex.internal.util.NotificationLite;
 import io.reactivex.processors.UnicastProcessor;
-import io.reactivex.subscribers.AbstractC8173b;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
@@ -28,7 +27,7 @@ import tb.ua2;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableWindowBoundarySelector<T, B, V> extends AbstractFlowableWithUpstream<T, AbstractC8147b<T>> {
+public final class FlowableWindowBoundarySelector<T, B, V> extends AbstractFlowableWithUpstream<T, b<T>> {
     final int bufferSize;
     final Function<? super B, ? extends Publisher<V>> close;
     final Publisher<B> open;
@@ -36,7 +35,7 @@ public final class FlowableWindowBoundarySelector<T, B, V> extends AbstractFlowa
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    public static final class OperatorWindowBoundaryCloseSubscriber<T, V> extends AbstractC8173b<V> {
+    public static final class OperatorWindowBoundaryCloseSubscriber<T, V> extends io.reactivex.subscribers.b<V> {
         boolean done;
         final WindowBoundaryMainSubscriber<T, ?, V> parent;
         final UnicastProcessor<T> w;
@@ -78,7 +77,7 @@ public final class FlowableWindowBoundarySelector<T, B, V> extends AbstractFlowa
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class OperatorWindowBoundaryOpenSubscriber<T, B> extends AbstractC8173b<B> {
+    static final class OperatorWindowBoundaryOpenSubscriber<T, B> extends io.reactivex.subscribers.b<B> {
         boolean done;
         final WindowBoundaryMainSubscriber<T, B, ?> parent;
 
@@ -116,7 +115,7 @@ public final class FlowableWindowBoundarySelector<T, B, V> extends AbstractFlowa
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class WindowBoundaryMainSubscriber<T, B, V> extends QueueDrainSubscriber<T, Object, AbstractC8147b<T>> implements Subscription {
+    static final class WindowBoundaryMainSubscriber<T, B, V> extends QueueDrainSubscriber<T, Object, b<T>> implements Subscription {
         final AtomicReference<Disposable> boundary;
         final int bufferSize;
         final Function<? super B, ? extends Publisher<V>> close;
@@ -126,7 +125,7 @@ public final class FlowableWindowBoundarySelector<T, B, V> extends AbstractFlowa
         final AtomicLong windows;
         final List<UnicastProcessor<T>> ws;
 
-        WindowBoundaryMainSubscriber(Subscriber<? super AbstractC8147b<T>> subscriber, Publisher<B> publisher, Function<? super B, ? extends Publisher<V>> function, int i) {
+        WindowBoundaryMainSubscriber(Subscriber<? super b<T>> subscriber, Publisher<B> publisher, Function<? super B, ? extends Publisher<V>> function, int i) {
             super(subscriber, new MpscLinkedQueue());
             this.boundary = new AtomicReference<>();
             AtomicLong atomicLong = new AtomicLong();
@@ -140,7 +139,7 @@ public final class FlowableWindowBoundarySelector<T, B, V> extends AbstractFlowa
         }
 
         @Override // io.reactivex.internal.subscribers.QueueDrainSubscriber, io.reactivex.internal.util.QueueDrain
-        public boolean accept(Subscriber<? super AbstractC8147b<T>> subscriber, Object obj) {
+        public boolean accept(Subscriber<? super b<T>> subscriber, Object obj) {
             return false;
         }
 
@@ -339,15 +338,15 @@ public final class FlowableWindowBoundarySelector<T, B, V> extends AbstractFlowa
         }
     }
 
-    public FlowableWindowBoundarySelector(AbstractC8147b<T> abstractC8147b, Publisher<B> publisher, Function<? super B, ? extends Publisher<V>> function, int i) {
-        super(abstractC8147b);
+    public FlowableWindowBoundarySelector(b<T> bVar, Publisher<B> publisher, Function<? super B, ? extends Publisher<V>> function, int i) {
+        super(bVar);
         this.open = publisher;
         this.close = function;
         this.bufferSize = i;
     }
 
-    @Override // io.reactivex.AbstractC8147b
-    protected void subscribeActual(Subscriber<? super AbstractC8147b<T>> subscriber) {
+    @Override // io.reactivex.b
+    protected void subscribeActual(Subscriber<? super b<T>> subscriber) {
         this.source.subscribe((FlowableSubscriber) new WindowBoundaryMainSubscriber(new ua2(subscriber), this.open, this.close, this.bufferSize));
     }
 }

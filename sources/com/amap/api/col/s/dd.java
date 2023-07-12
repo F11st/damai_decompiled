@@ -87,7 +87,7 @@ public final class dd extends SSLSocketFactory {
 
     private static Socket a(Socket socket) {
         try {
-            if (Build.VERSION.SDK_INT >= 21 && bl.C4388f.b && (socket instanceof SSLSocket)) {
+            if (Build.VERSION.SDK_INT >= 21 && bl.f.b && (socket instanceof SSLSocket)) {
                 ((SSLSocket) socket).setEnabledProtocols(new String[]{"TLSv1.2"});
             }
         } catch (Throwable th) {
@@ -98,11 +98,11 @@ public final class dd extends SSLSocketFactory {
 
     private static void b(Socket socket) {
         int i = Build.VERSION.SDK_INT;
-        if (i >= 17 && bl.C4388f.c && bl.C4388f.e && (socket instanceof SSLSocket)) {
-            int i2 = bl.C4388f.f;
-            int i3 = bl.C4388f.d;
+        if (i >= 17 && bl.f.c && bl.f.e && (socket instanceof SSLSocket)) {
+            int i2 = bl.f.f;
+            int i3 = bl.f.d;
             if (i2 <= i3) {
-                i3 = bl.C4388f.f;
+                i3 = bl.f.f;
             }
             if (i3 <= 17 || i <= i3) {
                 try {
@@ -160,8 +160,8 @@ public final class dd extends SSLSocketFactory {
 
     public final void a() {
         int i = Build.VERSION.SDK_INT;
-        if (i >= 17 && bl.C4388f.c && this.b != null && this.c != null) {
-            int i2 = bl.C4388f.d;
+        if (i >= 17 && bl.f.c && this.b != null && this.c != null) {
+            int i2 = bl.f.d;
             if (i2 <= 17 || i <= i2) {
                 SSLSessionCache sSLSessionCache = new SSLSessionCache(this.b);
                 if (i > 20 && i < 28) {

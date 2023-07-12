@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.b;
 import io.reactivex.functions.Predicate;
 import io.reactivex.internal.fuseable.ConditionalSubscriber;
 import io.reactivex.internal.fuseable.QueueSubscription;
@@ -138,12 +138,12 @@ public final class FlowableFilter<T> extends AbstractFlowableWithUpstream<T, T> 
         }
     }
 
-    public FlowableFilter(AbstractC8147b<T> abstractC8147b, Predicate<? super T> predicate) {
-        super(abstractC8147b);
+    public FlowableFilter(b<T> bVar, Predicate<? super T> predicate) {
+        super(bVar);
         this.predicate = predicate;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         if (subscriber instanceof ConditionalSubscriber) {
             this.source.subscribe((FlowableSubscriber) new FilterConditionalSubscriber((ConditionalSubscriber) subscriber, this.predicate));

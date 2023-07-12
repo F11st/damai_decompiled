@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.uikit.R$id;
 import cn.damai.uikit.R$layout;
 import cn.damai.user.brand.bean.CommonCard;
@@ -98,7 +98,7 @@ public class HorizontalCommonCardAdapter extends RecyclerView.Adapter<CardHolder
             this.f.put("usercode", z20.E());
             this.f.put("biz_id", this.d);
             this.f.put("biz_type", this.e);
-            C0529c e = C0529c.e();
+            c e = c.e();
             View view = cardHolder.itemView;
             e.G(view, "item_" + i, "coupon_other", "brand", this.f);
             if (getItemCount() == 1) {

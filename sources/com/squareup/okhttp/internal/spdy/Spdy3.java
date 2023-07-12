@@ -13,9 +13,9 @@ import okio.Buffer;
 import okio.BufferedSink;
 import okio.BufferedSource;
 import okio.ByteString;
-import okio.C8838b;
-import okio.C8844h;
 import okio.Sink;
+import okio.b;
+import okio.h;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -203,7 +203,7 @@ public final class Spdy3 implements Variant {
             deflater.setDictionary(Spdy3.DICTIONARY);
             Buffer buffer = new Buffer();
             this.headerBlockBuffer = buffer;
-            this.headerBlockOut = C8844h.c(new C8838b((Sink) buffer, deflater));
+            this.headerBlockOut = h.c(new b((Sink) buffer, deflater));
         }
 
         private void writeNameValueBlockToBuffer(List<Header> list) throws IOException {

@@ -5,7 +5,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.trade.R$id;
 import cn.damai.trade.newtradeorder.ui.orderdetail.bean.OrderDetailRefundPopWindowBean;
 import cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity;
@@ -30,16 +30,15 @@ public class OrderDetailRefundView {
     private Context c;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailRefundView$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2215a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ boolean b;
         final /* synthetic */ String c;
         final /* synthetic */ Context d;
 
-        View$OnClickListenerC2215a(OrderDetailRefundView orderDetailRefundView, String str, boolean z, String str2, Context context) {
+        a(OrderDetailRefundView orderDetailRefundView, String str, boolean z, String str2, Context context) {
             this.a = str;
             this.b = z;
             this.c = str2;
@@ -53,7 +52,7 @@ public class OrderDetailRefundView {
                 ipChange.ipc$dispatch("1696086388", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(pp2.u().I(this.a));
+            c.e().x(pp2.u().I(this.a));
             if (this.b) {
                 xr.c(mo1.REFUND_CHECK_SERVICE, this.c);
                 return;
@@ -93,12 +92,12 @@ public class OrderDetailRefundView {
                     float f = iArr[1];
                     int i = iArr[0];
                     cb1.b("OrderDetailRefundView", "showPop y = " + f);
-                    float a = f + ((float) t60.a(OrderDetailRefundView.this.c, 27.0f));
+                    float a2 = f + ((float) t60.a(OrderDetailRefundView.this.c, 27.0f));
                     OrderDetailRefundPopWindowBean orderDetailRefundPopWindowBean = new OrderDetailRefundPopWindowBean();
                     orderDetailRefundPopWindowBean.content = str;
                     orderDetailRefundPopWindowBean.parent = OrderDetailRefundView.this.b;
                     orderDetailRefundPopWindowBean.xlocation = DisplayMetrics.getwidthPixels(t60.b(OrderDetailRefundView.this.c)) - t60.a(OrderDetailRefundView.this.c, 15.0f);
-                    orderDetailRefundPopWindowBean.ylocation = (int) a;
+                    orderDetailRefundPopWindowBean.ylocation = (int) a2;
                     xr.c(OrderDetailActivity.REFUND_POPWINDPW, orderDetailRefundPopWindowBean);
                 }
             });
@@ -112,7 +111,7 @@ public class OrderDetailRefundView {
         } else if (z && !TextUtils.isEmpty(str)) {
             this.a.setText(str4);
             this.b.setVisibility(0);
-            this.a.setOnClickListener(new View$OnClickListenerC2215a(this, str3, z2, str, context));
+            this.a.setOnClickListener(new a(this, str3, z2, str, context));
             if (mo1.c(str2)) {
                 z20.T(OrderDetailActivity.REFUND_POPWINDPW, r30.a("yyyyMMdd"));
                 c(str2);

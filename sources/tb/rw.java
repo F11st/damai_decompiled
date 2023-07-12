@@ -3,14 +3,13 @@ package tb;
 import android.text.TextUtils;
 import com.alibaba.fastjson.JSONObject;
 import com.taobao.android.dinamicx.DXRuntimeContext;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class rw extends AbstractC6375a {
+public class rw extends com.taobao.android.dinamicx.expression.parser.a {
     public static final long DX_PARSER_KV = 798575;
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         JSONObject jSONObject = new JSONObject();
         if (objArr != null && objArr.length != 0 && objArr.length % 2 == 0) {
@@ -28,7 +27,7 @@ public class rw extends AbstractC6375a {
         return null;
     }
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
     public String getDxFunctionName() {
         return "kv";
     }

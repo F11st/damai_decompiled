@@ -26,7 +26,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
 import tb.sb2;
@@ -65,7 +65,7 @@ public final class DDApi {
             if ((!arrayList.isEmpty()) && !TextUtils.isEmpty((CharSequence) arrayList.get(0))) {
                 Object obj = arrayList.get(0);
                 b41.h(obj, "imgUrls[0]");
-                F = C8604o.F((String) obj, "http", false, 2, null);
+                F = o.F((String) obj, "http", false, 2, null);
                 if (F) {
                     dDImageMessage.mImageUrl = (String) arrayList.get(0);
                     dDMediaMessage.mMediaObject = dDImageMessage;

@@ -10,9 +10,10 @@ import androidx.annotation.Nullable;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.widget.CompoundButtonCompat;
 
+/* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
-class AppCompatCompoundButtonHelper {
+public class AppCompatCompoundButtonHelper {
     private ColorStateList mButtonTintList = null;
     private PorterDuff.Mode mButtonTintMode = null;
     private boolean mHasButtonTint = false;

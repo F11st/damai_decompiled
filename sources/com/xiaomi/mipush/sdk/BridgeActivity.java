@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -32,7 +31,7 @@ public class BridgeActivity extends Activity {
                     PushMessageHandler.a(getApplicationContext(), intent);
                 }
             } catch (Exception e) {
-                AbstractC7535b.a(e);
+                com.xiaomi.channel.commonutils.logger.b.a(e);
             }
         } finally {
             finish();

@@ -2,10 +2,8 @@ package tb;
 
 import com.taobao.aranger.constant.Constants;
 import com.taobao.aranger.core.entity.Call;
-import com.taobao.aranger.core.handler.reply.AbstractC6690a;
 import com.taobao.aranger.exception.IPCException;
 import com.taobao.aranger.intf.IServiceProxy;
-import com.taobao.aranger.utils.C6702d;
 import com.taobao.aranger.utils.TypeUtils;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
@@ -14,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class zt0 extends AbstractC6690a {
+public class zt0 extends com.taobao.aranger.core.handler.reply.a {
     private static final String h = "zt0";
     private static final ConcurrentHashMap<String, Object> i = new ConcurrentHashMap<>();
     private final String b;
@@ -27,7 +25,7 @@ public class zt0 extends AbstractC6690a {
     public zt0(Call call) throws IPCException {
         super(call);
         this.b = call.getServiceWrapper().getTimeStamp();
-        Class<?> a = C6702d.e().a(call.getServiceWrapper());
+        Class<?> a = com.taobao.aranger.utils.d.e().a(call.getServiceWrapper());
         this.g = a;
         Object obj = i.get(a.getName());
         this.c = obj;
@@ -35,7 +33,7 @@ public class zt0 extends AbstractC6690a {
             boolean z = true;
             Class<?> cls = null;
             try {
-                C6702d e = C6702d.e();
+                com.taobao.aranger.utils.d e = com.taobao.aranger.utils.d.e();
                 cls = e.b(a.getName() + Constants.PROXY_SUFFIX);
             } catch (IPCException unused) {
                 z = false;
@@ -45,7 +43,7 @@ public class zt0 extends AbstractC6690a {
                 this.e = TypeUtils.getConstructor(cls, new Class[0]);
                 return;
             }
-            Method methodForGettingInstance = TypeUtils.getMethodForGettingInstance(this.g, call.getMethodWrapper().getName(), C6702d.e().c(call.getParameterWrappers()));
+            Method methodForGettingInstance = TypeUtils.getMethodForGettingInstance(this.g, call.getMethodWrapper().getName(), com.taobao.aranger.utils.d.e().c(call.getParameterWrappers()));
             this.f = methodForGettingInstance;
             if (Modifier.isStatic(methodForGettingInstance.getModifiers())) {
                 return;
@@ -54,7 +52,7 @@ public class zt0 extends AbstractC6690a {
         }
     }
 
-    @Override // com.taobao.aranger.core.handler.reply.AbstractC6690a
+    @Override // com.taobao.aranger.core.handler.reply.a
     public Object a(Object[] objArr) throws IPCException {
         try {
             if (this.c == null) {

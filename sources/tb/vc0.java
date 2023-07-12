@@ -1,7 +1,6 @@
 package tb;
 
 import android.text.TextUtils;
-import cn.damai.common.util.C0535a;
 import cn.damai.issue.bean.DraftBean;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -22,7 +21,7 @@ public class vc0 {
             if (TextUtils.isEmpty(draftBean.draftMd5FileName)) {
                 return false;
             }
-            return C0535a.e(new File(b(), draftBean.draftMd5FileName));
+            return cn.damai.common.util.a.e(new File(b(), draftBean.draftMd5FileName));
         } catch (Exception e) {
             e.printStackTrace();
             return false;
@@ -68,7 +67,7 @@ public class vc0 {
             File file = new File(b(), draftBean.draftMd5FileName);
             byte[] generateDraftBytes = draftBean.generateDraftBytes();
             if (generateDraftBytes != null) {
-                return C0535a.a(generateDraftBytes, file);
+                return cn.damai.common.util.a.a(generateDraftBytes, file);
             }
         } catch (Exception e) {
             e.printStackTrace();

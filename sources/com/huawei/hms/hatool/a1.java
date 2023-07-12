@@ -57,15 +57,15 @@ public abstract class a1 {
     public abstract int d();
 
     public final boolean e() {
-        C5630l b = C5624i.c().b();
+        l b = i.c().b();
         if (TextUtils.isEmpty(b.l())) {
-            b.h(AbstractC5616f.a());
+            b.h(f.a());
         }
         return !TextUtils.isEmpty(b.l());
     }
 
     public final String f() {
-        C5630l b = C5624i.c().b();
+        l b = i.c().b();
         if (TextUtils.isEmpty(b.i())) {
             b.e(b1.c());
         }

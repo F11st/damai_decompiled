@@ -1,6 +1,5 @@
 package tb;
 
-import com.loc.C5791b;
 import java.security.SecureRandom;
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
@@ -27,7 +26,7 @@ public final class v33 {
         try {
             KeyGenerator keyGenerator = KeyGenerator.getInstance(com.loc.v1.v("EQUVT"));
             keyGenerator.init(128, secureRandom);
-            return C5791b.a(keyGenerator.generateKey().getEncoded());
+            return com.loc.b.a(keyGenerator.generateKey().getEncoded());
         } catch (Throwable unused) {
             return null;
         }
@@ -87,7 +86,7 @@ public final class v33 {
 
     public static String h(String str) {
         try {
-            return C5791b.a(f(str.getBytes("UTF-8")));
+            return com.loc.b.a(f(str.getBytes("UTF-8")));
         } catch (Throwable unused) {
             return null;
         }

@@ -20,7 +20,7 @@ public final class GaiaxViewTypeConfig extends ViewTypeConfig {
     @Override // com.youku.arch.v3.adapter.ViewTypeConfig
     @Nullable
     public Integer getLayoutResId() {
-        return Integer.valueOf(R.C4036layout.component_common_gaiax);
+        return Integer.valueOf(R.layout.component_common_gaiax);
     }
 
     @Override // com.youku.arch.v3.adapter.ViewTypeConfig

@@ -82,7 +82,7 @@ public class TickletDialogShowFragment extends DamaiBaseMvpFragment implements S
     private int page = 1;
     private boolean isSwitchVisible = false;
     private int rendererTime = 0;
-    ScreenShotDetector.IScreenShotExtraListener screenShotExtraListener = new C2071b();
+    ScreenShotDetector.IScreenShotExtraListener screenShotExtraListener = new b();
 
     /* compiled from: Taobao */
     /* loaded from: classes7.dex */
@@ -93,12 +93,11 @@ public class TickletDialogShowFragment extends DamaiBaseMvpFragment implements S
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.TickletDialogShowFragment$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2070a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2070a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -113,12 +112,11 @@ public class TickletDialogShowFragment extends DamaiBaseMvpFragment implements S
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.TickletDialogShowFragment$b */
     /* loaded from: classes7.dex */
-    public class C2071b implements ScreenShotDetector.IScreenShotExtraListener {
+    public class b implements ScreenShotDetector.IScreenShotExtraListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2071b() {
+        b() {
         }
 
         @Override // cn.damai.commonbusiness.screenshot.ScreenShotDetector.IScreenShotExtraListener
@@ -189,7 +187,7 @@ public class TickletDialogShowFragment extends DamaiBaseMvpFragment implements S
             return;
         }
         this.tvProjectName = (TextView) this.rootView.findViewById(R$id.ticklet_float_layer_perform_name);
-        ((DMIconFontTextView) this.rootView.findViewById(R$id.dft_close)).setOnClickListener(new View$OnClickListenerC2070a());
+        ((DMIconFontTextView) this.rootView.findViewById(R$id.dft_close)).setOnClickListener(new a());
     }
 
     private void initData() {
@@ -208,9 +206,9 @@ public class TickletDialogShowFragment extends DamaiBaseMvpFragment implements S
             this.from = arguments.getString("from");
             this.pos = arguments.getInt("pos");
         }
-        rn2 a = rn2.a();
-        this.server = a;
-        a.registerObserver(this);
+        rn2 a2 = rn2.a();
+        this.server = a2;
+        a2.registerObserver(this);
         screenBright();
         this.utTimeUtils.n();
         if ((SHOW_TICKLET_FROM_DETAIL.equals(this.from) || SHOW_TICKLET_FROM_SOUVENIR.equals(this.from) || SHOW_TICKLET_FROM_UNBIND_FACE.equals(this.from)) && (ticketDeatilResult = this.ticketDetailResults) != null && ticketDeatilResult.getUserPerformVO() != null && wh2.e(this.ticketDetailResults.getTicketInfoList()) > 0) {

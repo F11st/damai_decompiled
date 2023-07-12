@@ -23,10 +23,9 @@ public final class MatcherMatchResult implements MatchResult {
     private List<String> d;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.text.MatcherMatchResult$a */
     /* loaded from: classes3.dex */
-    public static final class C8585a extends u1<String> {
-        C8585a() {
+    public static final class a extends u1<String> {
+        a() {
         }
 
         @Override // kotlin.collections.AbstractCollection
@@ -94,15 +93,15 @@ public final class MatcherMatchResult implements MatchResult {
 
     @Override // kotlin.text.MatchResult
     @NotNull
-    public MatchResult.C8584b getDestructured() {
-        return MatchResult.C8583a.a(this);
+    public MatchResult.b getDestructured() {
+        return MatchResult.a.a(this);
     }
 
     @Override // kotlin.text.MatchResult
     @NotNull
     public List<String> getGroupValues() {
         if (this.d == null) {
-            this.d = new C8585a();
+            this.d = new a();
         }
         List<String> list = this.d;
         b41.f(list);
@@ -119,7 +118,7 @@ public final class MatcherMatchResult implements MatchResult {
     @NotNull
     public n31 getRange() {
         n31 h;
-        h = C8594e.h(b());
+        h = e.h(b());
         return h;
     }
 
@@ -139,7 +138,7 @@ public final class MatcherMatchResult implements MatchResult {
         if (end <= this.b.length()) {
             Matcher matcher = this.a.pattern().matcher(this.b);
             b41.h(matcher, "matcher.pattern().matcher(input)");
-            f = C8594e.f(matcher, end, this.b);
+            f = e.f(matcher, end, this.b);
             return f;
         }
         return null;

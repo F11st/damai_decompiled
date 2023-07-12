@@ -29,7 +29,7 @@ public final class i23 {
             r0 = 0
             r1 = 1
             if (r4 == 0) goto L11
-            boolean r2 = kotlin.text.C8596g.s(r4)
+            boolean r2 = kotlin.text.g.s(r4)
             if (r2 == 0) goto Lf
             goto L11
         Lf:
@@ -40,7 +40,7 @@ public final class i23 {
         L12:
             if (r2 != 0) goto L22
             if (r5 == 0) goto L1c
-            boolean r2 = kotlin.text.C8596g.s(r5)
+            boolean r2 = kotlin.text.g.s(r5)
             if (r2 == 0) goto L1d
         L1c:
             r0 = 1
@@ -74,7 +74,7 @@ public final class i23 {
             r0 = 0
             r1 = 1
             if (r4 == 0) goto L11
-            boolean r2 = kotlin.text.C8596g.s(r4)
+            boolean r2 = kotlin.text.g.s(r4)
             if (r2 == 0) goto Lf
             goto L11
         Lf:
@@ -85,7 +85,7 @@ public final class i23 {
         L12:
             if (r2 != 0) goto L22
             if (r5 == 0) goto L1c
-            boolean r2 = kotlin.text.C8596g.s(r5)
+            boolean r2 = kotlin.text.g.s(r5)
             if (r2 == 0) goto L1d
         L1c:
             r0 = 1

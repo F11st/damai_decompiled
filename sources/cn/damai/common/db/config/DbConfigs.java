@@ -9,7 +9,7 @@ import tb.gb1;
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
 public enum DbConfigs {
-    HTTP(new DbManager.C0492a().h("xUtils_http_cache.db").k(1).i(new DbManager.DbOpenListener() { // from class: cn.damai.common.db.config.DbConfigs.b
+    HTTP(new DbManager.a().h("xUtils_http_cache.db").k(1).i(new DbManager.DbOpenListener() { // from class: cn.damai.common.db.config.DbConfigs.b
         private static transient /* synthetic */ IpChange $ipChange;
 
         @Override // cn.damai.common.db.DbManager.DbOpenListener
@@ -38,7 +38,7 @@ public enum DbConfigs {
             }
         }
     })),
-    COOKIE(new DbManager.C0492a().h("xUtils_http_cookie.db").k(1).i(new DbManager.DbOpenListener() { // from class: cn.damai.common.db.config.DbConfigs.d
+    COOKIE(new DbManager.a().h("xUtils_http_cookie.db").k(1).i(new DbManager.DbOpenListener() { // from class: cn.damai.common.db.config.DbConfigs.d
         private static transient /* synthetic */ IpChange $ipChange;
 
         @Override // cn.damai.common.db.DbManager.DbOpenListener
@@ -68,13 +68,13 @@ public enum DbConfigs {
         }
     }));
     
-    private DbManager.C0492a config;
+    private DbManager.a config;
 
-    DbConfigs(DbManager.C0492a c0492a) {
-        this.config = c0492a;
+    DbConfigs(DbManager.a aVar) {
+        this.config = aVar;
     }
 
-    public DbManager.C0492a getConfig() {
+    public DbManager.a getConfig() {
         return this.config;
     }
 }

@@ -5,9 +5,9 @@ import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8220r;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.m;
+import kotlin.collections.r;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.PropertyReference1Impl;
@@ -45,13 +45,12 @@ public abstract class GivenFunctionsMemberScope extends le1 {
     private final NotNullLazyValue b;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.resolve.scopes.GivenFunctionsMemberScope$a */
     /* loaded from: classes3.dex */
-    public static final class C8497a extends el1 {
+    public static final class a extends el1 {
         final /* synthetic */ ArrayList<DeclarationDescriptor> a;
         final /* synthetic */ GivenFunctionsMemberScope b;
 
-        C8497a(ArrayList<DeclarationDescriptor> arrayList, GivenFunctionsMemberScope givenFunctionsMemberScope) {
+        a(ArrayList<DeclarationDescriptor> arrayList, GivenFunctionsMemberScope givenFunctionsMemberScope) {
             this.a = arrayList;
             this.b = givenFunctionsMemberScope;
         }
@@ -103,7 +102,7 @@ public abstract class GivenFunctionsMemberScope extends le1 {
         b41.h(supertypes, "containingClass.typeConstructor.supertypes");
         ArrayList arrayList2 = new ArrayList();
         for (z71 z71Var : supertypes) {
-            C8220r.v(arrayList2, ResolutionScope.C8500a.a(z71Var.getMemberScope(), null, null, 3, null));
+            r.v(arrayList2, ResolutionScope.a.a(z71Var.getMemberScope(), null, null, 3, null));
         }
         ArrayList arrayList3 = new ArrayList();
         for (Object obj : arrayList2) {
@@ -145,9 +144,9 @@ public abstract class GivenFunctionsMemberScope extends le1 {
                         }
                     }
                 } else {
-                    g = C8214m.g();
+                    g = m.g();
                 }
-                overridingUtil.w(ni1Var, list2, g, this.a, new C8497a(arrayList, this));
+                overridingUtil.w(ni1Var, list2, g, this.a, new a(arrayList, this));
             }
         }
         return kk.c(arrayList);
@@ -176,7 +175,7 @@ public abstract class GivenFunctionsMemberScope extends le1 {
         if (z60Var.a(z60.CALLABLES.m())) {
             return d();
         }
-        g = C8214m.g();
+        g = m.g();
         return g;
     }
 

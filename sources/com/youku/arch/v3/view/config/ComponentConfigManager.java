@@ -18,14 +18,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.joor.C8883a;
+import org.joor.a;
 import tb.b41;
 import tb.k50;
 
@@ -73,7 +73,7 @@ public final class ComponentConfigManager {
 
     static {
         Lazy<ComponentConfigManager> a;
-        a = C8177b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<ComponentConfigManager>() { // from class: com.youku.arch.v3.view.config.ComponentConfigManager$Companion$instance$2
+        a = b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<ComponentConfigManager>() { // from class: com.youku.arch.v3.view.config.ComponentConfigManager$Companion$instance$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* JADX WARN: Can't rename method to resolve collision */
@@ -272,7 +272,7 @@ public final class ComponentConfigManager {
         if (z2) {
             return;
         }
-        Object f = C8883a.j(itemBean.getRenderPluginFactory()).b().f();
+        Object f = a.j(itemBean.getRenderPluginFactory()).b().f();
         RenderPluginFactory renderPluginFactory2 = f instanceof RenderPluginFactory ? (RenderPluginFactory) f : null;
         if (renderPluginFactory2 == null) {
             return;

@@ -18,7 +18,6 @@ import cn.damai.common.app.ShareperfenceConstants;
 import cn.damai.common.badge.DMBadgeListener;
 import cn.damai.common.badge.bean.BadgeNodeItem;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.base.PermissionsHelper;
 import cn.damai.homepage.R$color;
@@ -77,17 +76,16 @@ public class MessageMainActivity extends DamaiBaseActivity<MessageGroupPresenter
     private List<MessageGroupItem> mDatas = new ArrayList();
     private int count = 0;
     private boolean isNeedRequest = false;
-    private DMBadgeListener listenerBadge = new C1340b();
+    private DMBadgeListener listenerBadge = new b();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.message.MessageMainActivity$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1339a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ String b;
 
-        View$OnClickListenerC1339a(String str, String str2) {
+        a(String str, String str2) {
             this.a = str;
             this.b = str2;
         }
@@ -106,12 +104,11 @@ public class MessageMainActivity extends DamaiBaseActivity<MessageGroupPresenter
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.message.MessageMainActivity$b */
     /* loaded from: classes6.dex */
-    public class C1340b implements DMBadgeListener {
+    public class b implements DMBadgeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1340b() {
+        b() {
         }
 
         @Override // cn.damai.common.badge.DMBadgeListener
@@ -141,18 +138,16 @@ public class MessageMainActivity extends DamaiBaseActivity<MessageGroupPresenter
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.message.MessageMainActivity$c */
     /* loaded from: classes6.dex */
-    public class C1341c implements AliMeUtil.UserCodeListener {
+    public class c implements AliMeUtil.UserCodeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.message.MessageMainActivity$c$a */
         /* loaded from: classes6.dex */
-        public class C1342a implements AliMeUtil.AliMeTokenListener {
+        public class a implements AliMeUtil.AliMeTokenListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1342a() {
+            a() {
             }
 
             @Override // cn.damai.im.AliMeUtil.AliMeTokenListener
@@ -176,7 +171,7 @@ public class MessageMainActivity extends DamaiBaseActivity<MessageGroupPresenter
             }
         }
 
-        C1341c() {
+        c() {
         }
 
         @Override // cn.damai.im.AliMeUtil.UserCodeListener
@@ -195,7 +190,7 @@ public class MessageMainActivity extends DamaiBaseActivity<MessageGroupPresenter
             if (AndroidInstantRuntime.support(ipChange, "878080815")) {
                 ipChange.ipc$dispatch("878080815", new Object[]{this, Long.valueOf(j)});
             } else {
-                AliMeUtil.e(j, AliMeUtil.FROM_MESSAGE, new C1342a());
+                AliMeUtil.e(j, AliMeUtil.FROM_MESSAGE, new a());
             }
         }
     }
@@ -238,7 +233,7 @@ public class MessageMainActivity extends DamaiBaseActivity<MessageGroupPresenter
         if (AndroidInstantRuntime.support(ipChange, "1973452516")) {
             ipChange.ipc$dispatch("1973452516", new Object[]{this});
         } else {
-            AliMeUtil.j(new C1341c());
+            AliMeUtil.j(new c());
         }
     }
 
@@ -398,7 +393,7 @@ public class MessageMainActivity extends DamaiBaseActivity<MessageGroupPresenter
         ((TextView) inflate.findViewById(R$id.message_notice_content)).setText(str);
         if (TextUtils.isEmpty(str2)) {
             dMIconFontTextView.setText(getResources().getString(R$string.iconfont_guanbi12));
-            dMIconFontTextView2.setOnClickListener(new View$OnClickListenerC1339a(str, str2));
+            dMIconFontTextView2.setOnClickListener(new a(str, str2));
         } else {
             dMIconFontTextView.setText(getResources().getString(R$string.iconfont_youjiantou12));
             dMIconFontTextView2.setOnClickListener(new View.OnClickListener() { // from class: cn.damai.message.MessageMainActivity.2
@@ -535,11 +530,11 @@ public class MessageMainActivity extends DamaiBaseActivity<MessageGroupPresenter
         if (AndroidInstantRuntime.support(ipChange, "-2083235598")) {
             ipChange.ipc$dispatch("-2083235598", new Object[]{this, view});
         } else if (view.getId() == R$id.message_tv_push) {
-            C0529c.e().x(te1.m().p("0"));
+            cn.damai.common.user.c.e().x(te1.m().p("0"));
             z20.T(MESSAGE_PUSH_TIP_SHOW, PUSH_PERMISSION_CLOSE);
             hiddenMessageTip();
         } else if (view.getId() == R$id.message_tv_push_status) {
-            C0529c.e().x(te1.m().p("1"));
+            cn.damai.common.user.c.e().x(te1.m().p("1"));
             setPush();
         } else if (view.getId() == R$id.title_left_icon) {
             finish();
@@ -601,18 +596,18 @@ public class MessageMainActivity extends DamaiBaseActivity<MessageGroupPresenter
             if (messageGroupItem.getGroupId() == 7) {
                 markNode(DM_MSGBOX_ATTENTION_REPLY);
                 startActivity(new Intent(this, MessageFollowCommentActivity.class));
-                C0529c.e().x(te1.m().g("message", "list", te1.FOLLOW_REPLY_MSG, hashMap, Boolean.TRUE));
+                cn.damai.common.user.c.e().x(te1.m().g("message", "list", te1.FOLLOW_REPLY_MSG, hashMap, Boolean.TRUE));
             } else if (messageGroupItem.getGroupId() == 8) {
                 markNode(DM_MSGBOX_MY_HONEY);
-                C0529c.e().x(te1.m().g("message", "list", pl.MY_ALIME_PAGE, hashMap, Boolean.TRUE));
+                cn.damai.common.user.c.e().x(te1.m().g("message", "list", pl.MY_ALIME_PAGE, hashMap, Boolean.TRUE));
                 daMaiService();
             } else {
                 if (1 == messageGroupItem.getGroupId()) {
                     markNode(DM_MSGBOX_RECOMMEND);
-                    C0529c.e().x(te1.m().g("message", "list", "recommend", hashMap, Boolean.TRUE));
+                    cn.damai.common.user.c.e().x(te1.m().g("message", "list", "recommend", hashMap, Boolean.TRUE));
                 } else if (4 == messageGroupItem.getGroupId()) {
                     markNode(DM_MSGBOX_NOTICE);
-                    C0529c.e().x(te1.m().g("message", "list", "notice", hashMap, Boolean.TRUE));
+                    cn.damai.common.user.c.e().x(te1.m().g("message", "list", "notice", hashMap, Boolean.TRUE));
                 }
                 Intent intent = new Intent(this, MessageListActivity.class);
                 intent.putExtra("intent_extra_key_group_model", messageGroupItem);

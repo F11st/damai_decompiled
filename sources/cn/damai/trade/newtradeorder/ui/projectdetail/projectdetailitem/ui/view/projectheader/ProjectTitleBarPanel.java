@@ -12,7 +12,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.trade.R$color;
 import cn.damai.trade.R$drawable;
@@ -60,19 +59,18 @@ public class ProjectTitleBarPanel implements View.OnClickListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.ProjectTitleBarPanel$a */
     /* loaded from: classes8.dex */
-    public class C2377a implements DMImageCreator.DMImageFailListener {
+    public class a implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2377a() {
+        a() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1363889140")) {
-                ipChange.ipc$dispatch("1363889140", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("1363889140", new Object[]{this, dVar});
                 return;
             }
             ProjectTitleBarPanel.this.g.setVisibility(8);
@@ -82,21 +80,20 @@ public class ProjectTitleBarPanel implements View.OnClickListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.ProjectTitleBarPanel$b */
     /* loaded from: classes8.dex */
-    public class C2378b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2378b() {
+        b() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Drawable drawable;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-604277111")) {
-                ipChange.ipc$dispatch("-604277111", new Object[]{this, c0502e});
-            } else if (c0502e == null || (drawable = c0502e.a) == null) {
+                ipChange.ipc$dispatch("-604277111", new Object[]{this, eVar});
+            } else if (eVar == null || (drawable = eVar.a) == null) {
             } else {
                 int intrinsicWidth = drawable.getIntrinsicWidth();
                 int intrinsicHeight = drawable.getIntrinsicHeight();
@@ -109,7 +106,7 @@ public class ProjectTitleBarPanel implements View.OnClickListener {
                 }
                 ProjectTitleBarPanel.this.f.setVisibility(8);
                 ProjectTitleBarPanel.this.g.setVisibility(0);
-                ProjectTitleBarPanel.this.g.setImageDrawable(c0502e.a);
+                ProjectTitleBarPanel.this.g.setImageDrawable(eVar.a);
                 pp2.u().X1(ProjectTitleBarPanel.this.g, String.valueOf(ProjectTitleBarPanel.this.m));
             }
         }
@@ -142,7 +139,7 @@ public class ProjectTitleBarPanel implements View.OnClickListener {
         if (AndroidInstantRuntime.support(ipChange, "-792648665")) {
             ipChange.ipc$dispatch("-792648665", new Object[]{this, str});
         } else {
-            C0504a.b().c(str).n(new C2378b()).e(new C2377a()).f();
+            cn.damai.common.image.a.b().c(str).n(new b()).e(new a()).f();
         }
     }
 

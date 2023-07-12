@@ -5,11 +5,10 @@ import android.text.TextUtils;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.android.dinamicx.DXRuntimeContext;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
-public class gv extends AbstractC6375a {
+public class gv extends com.taobao.android.dinamicx.expression.parser.a {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final long DX_PARSER_DMADAPTIVEHEIGHT = -1525552786972270296L;
 
@@ -34,7 +33,7 @@ public class gv extends AbstractC6375a {
         return 0;
     }
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1369700938")) {

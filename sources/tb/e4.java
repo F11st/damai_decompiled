@@ -43,16 +43,15 @@ public final class e4 {
     private static final String a = "AGOO." + e4.class.getSimpleName();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.e4$a */
     /* loaded from: classes7.dex */
-    public static final class C9069a implements DecodeOverListener {
+    public static final class a implements DecodeOverListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context a;
         final /* synthetic */ AgooMessage b;
         final /* synthetic */ NotificationManager c;
         final /* synthetic */ int d;
 
-        C9069a(Context context, AgooMessage agooMessage, NotificationManager notificationManager, int i) {
+        a(Context context, AgooMessage agooMessage, NotificationManager notificationManager, int i) {
             this.a = context;
             this.b = agooMessage;
             this.c = notificationManager;
@@ -69,7 +68,7 @@ public final class e4 {
         public void onDecodeOver(@org.jetbrains.annotations.Nullable android.graphics.Bitmap[] r7) {
             /*
                 r6 = this;
-                com.android.alibaba.ip.runtime.IpChange r0 = tb.e4.C9069a.$ipChange
+                com.android.alibaba.ip.runtime.IpChange r0 = tb.e4.a.$ipChange
                 java.lang.String r1 = "1782686595"
                 boolean r2 = com.android.alibaba.ip.runtime.AndroidInstantRuntime.support(r0, r1)
                 r3 = 2
@@ -119,7 +118,7 @@ public final class e4 {
             L4b:
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.e4.C9069a.onDecodeOver(android.graphics.Bitmap[]):void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.e4.a.onDecodeOver(android.graphics.Bitmap[]):void");
         }
     }
 
@@ -245,7 +244,7 @@ public final class e4 {
             }
             INotifyActionHandler h = pushAgent.h();
             if (h != null) {
-                h.onNotifyImgResDecode(new String[]{agooMessage.getImgUrl(), agooMessage.getBigPicUrl()}, new C9069a(context, agooMessage, notificationManager, intValue));
+                h.onNotifyImgResDecode(new String[]{agooMessage.getImgUrl(), agooMessage.getBigPicUrl()}, new a(context, agooMessage, notificationManager, intValue));
             }
         }
     }

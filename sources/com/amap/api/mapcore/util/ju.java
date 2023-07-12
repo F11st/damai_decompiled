@@ -51,10 +51,10 @@ public final class ju {
                 hashMap.put("gzipped", "1");
                 hashMap.put(IRequestConst.CONNECTION, IRequestConst.CONNECTION_VALUE);
                 hashMap.put(IRequestConst.USER_AGENT, "AMAP_Location_SDK_Android 4.9.0");
-                hashMap.put(ApiResponse.KEY, C4554gc.f(context));
+                hashMap.put(ApiResponse.KEY, gc.f(context));
                 hashMap.put("enginever", y90.VER_CODE_OLD);
                 String a = gf.a();
-                String a2 = gf.a(context, a, "key=" + C4554gc.f(context));
+                String a2 = gf.a(context, a, "key=" + gc.f(context));
                 hashMap.put("ts", a);
                 hashMap.put("scode", a2);
                 hashMap.put("encr", "1");

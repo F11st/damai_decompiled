@@ -50,16 +50,16 @@ public final class SparseImmutableTable<R, C, V> extends RegularImmutableTable<R
         }
         this.cellRowIndices = iArr;
         this.cellColumnInRowIndices = iArr2;
-        ImmutableMap.C4977b c4977b = new ImmutableMap.C4977b(s.size());
+        ImmutableMap.b bVar = new ImmutableMap.b(s.size());
         for (Map.Entry entry : s.entrySet()) {
-            c4977b.c(entry.getKey(), ImmutableMap.copyOf((Map) entry.getValue()));
+            bVar.c(entry.getKey(), ImmutableMap.copyOf((Map) entry.getValue()));
         }
-        this.rowMap = c4977b.a();
-        ImmutableMap.C4977b c4977b2 = new ImmutableMap.C4977b(s2.size());
+        this.rowMap = bVar.a();
+        ImmutableMap.b bVar2 = new ImmutableMap.b(s2.size());
         for (Map.Entry entry2 : s2.entrySet()) {
-            c4977b2.c(entry2.getKey(), ImmutableMap.copyOf((Map) entry2.getValue()));
+            bVar2.c(entry2.getKey(), ImmutableMap.copyOf((Map) entry2.getValue()));
         }
-        this.columnMap = c4977b2.a();
+        this.columnMap = bVar2.a();
     }
 
     @Override // com.google.common.collect.ImmutableTable

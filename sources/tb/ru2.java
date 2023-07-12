@@ -80,11 +80,11 @@ public final class ru2 implements IImageCompressor {
         }
         FileOutputStream fileOutputStream2 = null;
         try {
-            FileUploader.C3645a c3645a = FileUploader.Companion;
+            FileUploader.a aVar = FileUploader.Companion;
             StringBuilder sb = new StringBuilder();
             sb.append("compress:after compress this file size = ");
             sb.append((bArr != null ? bArr.length : 0) / 1024);
-            c3645a.h(sb.toString());
+            aVar.h(sb.toString());
             createTempFile = File.createTempFile(WPKFactory.INIT_KEY_UPLOAD_COMPRESS, str, context.getCacheDir());
             fileOutputStream = new FileOutputStream(createTempFile);
         } catch (IOException e) {

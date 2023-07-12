@@ -7,8 +7,8 @@ import android.widget.TextView;
 import androidx.fragment.app.FragmentTransaction;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -38,20 +38,19 @@ import tb.z20;
 public final class CouponDetailActivity extends CommonNavbarActivity {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C0799a Companion = new C0799a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String TAG = "CouponDetailActivity";
     @Nullable
     private CouponInfoBean couponInfoBean;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.scriptmurder.coupon.CouponDetailActivity$a */
     /* loaded from: classes4.dex */
-    public static final class C0799a {
-        private C0799a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C0799a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -75,7 +74,7 @@ public final class CouponDetailActivity extends CommonNavbarActivity {
                 }
             }
             DMNav.from(this).withExtras(bundle).toUri(NavUri.b(cs.COUPON_ORDER_CONFIRM));
-            C0529c.e().x(new C0525a.C0527b().i("scriptkill_coupon").f("bottom").l("buy").g(true).j(hashMap));
+            c.e().x(new a.b().i("scriptkill_coupon").f("bottom").l("buy").g(true).j(hashMap));
         }
     }
 
@@ -131,7 +130,7 @@ public final class CouponDetailActivity extends CommonNavbarActivity {
         if (intent != null && (stringExtra = intent.getStringExtra(CouponDetailFragment.COUPON_ID)) != null) {
             hashMap.put("coupon_id", stringExtra);
         }
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i("scriptkill_coupon").a(z20.d()).j(hashMap));
+        setDamaiUTKeyBuilder(new a.b().i("scriptkill_coupon").a(z20.d()).j(hashMap));
     }
 
     @Nullable

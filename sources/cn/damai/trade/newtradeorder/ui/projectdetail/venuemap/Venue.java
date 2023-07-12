@@ -9,7 +9,7 @@ import com.android.alibaba.ip.runtime.IpChange;
 /* loaded from: classes16.dex */
 public class Venue implements Parcelable {
     private static transient /* synthetic */ IpChange $ipChange;
-    public static final Parcelable.Creator<Venue> CREATOR = new C2439a();
+    public static final Parcelable.Creator<Venue> CREATOR = new a();
     public String address;
     public String cityId;
     public String cityName;
@@ -19,12 +19,11 @@ public class Venue implements Parcelable {
     public String venueName;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.venuemap.Venue$a */
     /* loaded from: classes16.dex */
-    public class C2439a implements Parcelable.Creator<Venue> {
+    public class a implements Parcelable.Creator<Venue> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2439a() {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

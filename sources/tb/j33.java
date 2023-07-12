@@ -1,8 +1,5 @@
 package tb;
 
-import com.uploader.implement.C7399c;
-import com.uploader.implement.b.InterfaceC7398e;
-
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public abstract class j33 {
@@ -20,7 +17,7 @@ public abstract class j33 {
         this.e = z;
     }
 
-    public abstract InterfaceC7398e a(C7399c c7399c);
+    public abstract com.uploader.implement.b.e a(com.uploader.implement.c cVar);
 
     public boolean equals(Object obj) {
         if (this == obj) {

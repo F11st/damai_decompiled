@@ -2,7 +2,7 @@ package com.youku.playerservice.axp.cache;
 
 import android.content.Context;
 import android.text.TextUtils;
-import com.youku.a.C7792a;
+import com.youku.a.a;
 import com.youku.alixplayer.misc.Preloader;
 import com.youku.playerservice.axp.axpinterface.PlayDefinition;
 import com.youku.playerservice.axp.cache.CachePreloadParams;
@@ -122,7 +122,7 @@ public class CacheManager implements IInternalCachePreloadCallback {
             synchronized (poolIdList) {
                 if (poolIdList.size() > 0) {
                     for (String str2 : poolIdList) {
-                        C7792a.a(context).b(str2);
+                        a.a(context).b(str2);
                         TLogUtil.loge(TAG_PLAYER, "recyclePlayersByGroupid: recyclePlayer-" + str2);
                     }
                     poolIdList.clear();

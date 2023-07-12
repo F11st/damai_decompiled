@@ -2,7 +2,7 @@ package cn.damai.homepage.util;
 
 import android.os.Handler;
 import android.os.Message;
-import cn.damai.commonbusiness.util.C0949b;
+import cn.damai.commonbusiness.util.b;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.io.File;
@@ -19,7 +19,7 @@ public class ZipDownLoadManager {
     private OnZipDownLoadListsner a;
     private String b;
     private String c;
-    private Handler d = new HandlerC1214a();
+    private Handler d = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes14.dex */
@@ -30,12 +30,11 @@ public class ZipDownLoadManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.util.ZipDownLoadManager$a */
     /* loaded from: classes14.dex */
-    public class HandlerC1214a extends Handler {
+    public class a extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC1214a() {
+        a() {
         }
 
         @Override // android.os.Handler
@@ -88,8 +87,8 @@ public class ZipDownLoadManager {
                             try {
                                 URLConnection openConnection = new URL(ZipDownLoadManager.this.b).openConnection();
                                 openConnection.setReadTimeout(10000);
-                                C0949b.a(openConnection.getInputStream(), file3);
-                                C0949b.e(file3, ZipDownLoadManager.this.c);
+                                b.a(openConnection.getInputStream(), file3);
+                                b.e(file3, ZipDownLoadManager.this.c);
                                 ZipDownLoadManager.this.d.sendEmptyMessage(1);
                                 if (file3.exists()) {
                                     file3.delete();

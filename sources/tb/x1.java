@@ -17,7 +17,7 @@ public abstract class x1 {
                 return checks.a(functionDescriptor);
             }
         }
-        return ki.C9361a.INSTANCE;
+        return ki.a.INSTANCE;
     }
 
     @NotNull

@@ -12,7 +12,7 @@ public interface Sink extends Closeable, Flushable {
 
     void flush() throws IOException;
 
-    C8857o timeout();
+    o timeout();
 
     void write(Buffer buffer, long j) throws IOException;
 }

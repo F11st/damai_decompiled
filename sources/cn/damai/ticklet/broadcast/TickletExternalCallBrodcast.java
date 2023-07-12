@@ -17,7 +17,7 @@ import cn.damai.common.DamaiConstants;
 import cn.damai.common.R$id;
 import cn.damai.common.R$layout;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.login.LoginManager;
 import cn.damai.push.DaMaiPushAgent;
 import cn.damai.push.model.AckMessageDO;
@@ -68,14 +68,13 @@ public class TickletExternalCallBrodcast extends BroadcastReceiver {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.broadcast.TickletExternalCallBrodcast$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2013a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
         final /* synthetic */ PushMessageBean b;
 
-        View$OnClickListenerC2013a(Activity activity, PushMessageBean pushMessageBean) {
+        a(Activity activity, PushMessageBean pushMessageBean) {
             this.a = activity;
             this.b = pushMessageBean;
         }
@@ -125,7 +124,7 @@ public class TickletExternalCallBrodcast extends BroadcastReceiver {
             ipChange.ipc$dispatch("1882222507", new Object[]{this, str});
             return;
         }
-        C0529c.e().A(un2.k().j(str), un2.CUSTOM_ACCS_TICKLET, un2.TICKLET_DETAIL_PAGE);
+        c.e().A(un2.k().j(str), un2.CUSTOM_ACCS_TICKLET, un2.TICKLET_DETAIL_PAGE);
         UserTicketTable userTicketTable = (UserTicketTable) m61.a(str, UserTicketTable.class);
         if (userTicketTable == null) {
             return;
@@ -240,7 +239,7 @@ public class TickletExternalCallBrodcast extends BroadcastReceiver {
         } else {
             HashMap hashMap = new HashMap();
             hashMap.put("url", exts.url);
-            C0529c.e().A(hashMap, "transferconfim_push_click", un2.TICKLET_TRANSFER_CONDIRM_PAGE);
+            c.e().A(hashMap, "transferconfim_push_click", un2.TICKLET_TRANSFER_CONDIRM_PAGE);
             Bundle bundle = new Bundle();
             bundle.putString("from", "push");
             DMNav.from(activity).withExtras(bundle).toUri(exts.url);
@@ -259,7 +258,7 @@ public class TickletExternalCallBrodcast extends BroadcastReceiver {
             if (exts != null && !TextUtils.isEmpty(exts.type) && !TextUtils.isEmpty(exts.value)) {
                 hashMap.put("url", exts.url);
             }
-            C0529c.e().A(hashMap, "transferconfim_push", un2.TICKLET_TRANSFER_CONDIRM_PAGE);
+            c.e().A(hashMap, "transferconfim_push", un2.TICKLET_TRANSFER_CONDIRM_PAGE);
             View inflate = LayoutInflater.from(mu0.a().getApplicationContext()).inflate(R$layout.common_ticklet_toast_layout, (ViewGroup) null);
             TextView textView = (TextView) inflate.findViewById(R$id.push_bar_title);
             TextView textView2 = (TextView) inflate.findViewById(R$id.push_bar_text);
@@ -269,7 +268,7 @@ public class TickletExternalCallBrodcast extends BroadcastReceiver {
             if (!TextUtils.isEmpty(pushMessageBean.text)) {
                 textView2.setText(pushMessageBean.text);
             }
-            inflate.setOnClickListener(new View$OnClickListenerC2013a(c, pushMessageBean));
+            inflate.setOnClickListener(new a(c, pushMessageBean));
             dq.v(c, inflate).y();
         }
     }

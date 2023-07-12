@@ -9,8 +9,8 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import androidx.annotation.Nullable;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -42,7 +42,7 @@ public class StarIconListView extends FrameLayout {
                 ArtistItemBean artistItemBean = list.get(size);
                 if (artistItemBean != null && !TextUtils.isEmpty(artistItemBean.artistAvatar)) {
                     View inflate = LayoutInflater.from(getContext()).inflate(R$layout.online_star_pro_pic, (ViewGroup) null);
-                    DMImageCreator f = C0504a.b().h(mu0.a()).f(artistItemBean.artistAvatar, m62.a(mu0.a(), 20.0f), m62.a(mu0.a(), 20.0f));
+                    DMImageCreator f = a.b().h(mu0.a()).f(artistItemBean.artistAvatar, m62.a(mu0.a(), 20.0f), m62.a(mu0.a(), 20.0f));
                     int i = R$drawable.uikit_user_default_icon_trans_white;
                     f.i(i).c(i).k(new yq()).g((ImageView) inflate.findViewById(R$id.image_buy_user));
                     FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(-2, -2);

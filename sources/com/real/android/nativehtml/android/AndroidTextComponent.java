@@ -52,12 +52,11 @@ public class AndroidTextComponent extends TextView implements ComponentElement {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.real.android.nativehtml.android.AndroidTextComponent$a */
     /* loaded from: classes5.dex */
-    public class C6138a extends ClickableSpan {
+    public class a extends ClickableSpan {
         final /* synthetic */ Element a;
 
-        C6138a(Element element) {
+        a(Element element) {
             this.a = element;
         }
 
@@ -69,9 +68,8 @@ public class AndroidTextComponent extends TextView implements ComponentElement {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.real.android.nativehtml.android.AndroidTextComponent$b */
     /* loaded from: classes5.dex */
-    public static /* synthetic */ class C6139b {
+    public static /* synthetic */ class b {
         static final /* synthetic */ int[] a;
 
         static {
@@ -152,17 +150,17 @@ public class AndroidTextComponent extends TextView implements ComponentElement {
     @Override // com.real.android.nativehtml.common.layout.ComponentElement
     public float getIntrinsicContentBoxHeightForWidth(float f, float f2) {
         validateContent();
-        float a = this.document.h().a();
-        measure(Math.round(f * a) | 1073741824, 0);
-        return getMeasuredHeight() / a;
+        float a2 = this.document.h().a();
+        measure(Math.round(f * a2) | 1073741824, 0);
+        return getMeasuredHeight() / a2;
     }
 
     @Override // com.real.android.nativehtml.common.layout.ComponentElement
     public float getIntrinsicContentBoxWidth(Layout.Directive directive, float f) {
         validateContent();
-        float a = this.document.h().a();
-        measure(Math.round(f * a) | Integer.MIN_VALUE, 0);
-        return getMeasuredWidth() / a;
+        float a2 = this.document.h().a();
+        measure(Math.round(f * a2) | Integer.MIN_VALUE, 0);
+        return getMeasuredWidth() / a2;
     }
 
     @Override // com.real.android.nativehtml.common.dom.Element
@@ -218,8 +216,8 @@ public class AndroidTextComponent extends TextView implements ComponentElement {
         this.contentBoxWidth = f5;
         this.x = f;
         this.y = f2;
-        float a = this.document.h().a();
-        setMeasuredDimension(Math.round(f3 * a), Math.round(f4 * a));
+        float a2 = this.document.h().a();
+        setMeasuredDimension(Math.round(f3 * a2), Math.round(f4 * a2));
     }
 
     @Override // com.real.android.nativehtml.common.dom.Element
@@ -227,10 +225,10 @@ public class AndroidTextComponent extends TextView implements ComponentElement {
         this.computedStyle = fqVar;
         setTextSize(0, fqVar.g(CssProperty.FONT_SIZE, 0.0f) * this.document.h().a());
         setTextColor(fqVar.e(CssProperty.COLOR));
-        setTypeface(C6140a.e(fqVar));
-        setPaintFlags((getPaintFlags() & PAINT_MASK) | C6140a.c(fqVar));
+        setTypeface(com.real.android.nativehtml.android.a.e(fqVar));
+        setPaintFlags((getPaintFlags() & PAINT_MASK) | com.real.android.nativehtml.android.a.c(fqVar));
         setTextIsSelectable(fqVar.f(CssProperty.USER_SELECT) != CssEnum.NONE);
-        int i = C6139b.a[this.computedStyle.f(CssProperty.TEXT_ALIGN).ordinal()];
+        int i = b.a[this.computedStyle.f(CssProperty.TEXT_ALIGN).ordinal()];
         if (i == 1) {
             setGravity(5);
         } else if (i != 2) {
@@ -272,44 +270,44 @@ public class AndroidTextComponent extends TextView implements ComponentElement {
         }
         int length2 = this.content.length();
         ArrayList arrayList = new ArrayList();
-        float a = this.document.h().a();
+        float a2 = this.document.h().a();
         if (element.getLocalName().equals("img") && (attribute = element.getAttribute("src")) != null && !attribute.isEmpty()) {
-            Bitmap a2 = ((AndroidPlatform) this.document.f()).a(element, this.document.j(attribute));
-            if (a2 != null) {
-                BitmapDrawable bitmapDrawable = new BitmapDrawable(getContext().getResources(), a2);
-                float width = a2.getWidth();
-                float height = a2.getHeight();
+            Bitmap a3 = ((AndroidPlatform) this.document.f()).a(element, this.document.j(attribute));
+            if (a3 != null) {
+                BitmapDrawable bitmapDrawable = new BitmapDrawable(getContext().getResources(), a3);
+                float width = a3.getWidth();
+                float height = a3.getHeight();
                 CssProperty cssProperty = CssProperty.WIDTH;
                 if (computedStyle.k(cssProperty)) {
                     width = computedStyle.g(cssProperty, this.contentBoxWidth);
                     if (computedStyle.k(CssProperty.HEIGHT)) {
                         height = computedStyle.g(cssProperty, this.contentBoxWidth);
                     } else {
-                        height *= width / a2.getWidth();
+                        height *= width / a3.getWidth();
                     }
                 } else {
                     CssProperty cssProperty2 = CssProperty.HEIGHT;
                     if (computedStyle.k(cssProperty2)) {
                         height = computedStyle.g(cssProperty2, this.contentBoxWidth);
-                        width *= height / a2.getHeight();
+                        width *= height / a3.getHeight();
                     }
                 }
-                bitmapDrawable.setBounds(0, 0, Math.round(width * a), Math.round(height * a));
+                bitmapDrawable.setBounds(0, 0, Math.round(width * a2), Math.round(height * a2));
                 arrayList.add(new ImageSpan(bitmapDrawable, 1));
             }
         }
-        String b = C6140a.b(computedStyle);
-        if (!b.equals(C6140a.b(fqVar))) {
-            arrayList.add(new TypefaceSpan(b));
+        String b2 = com.real.android.nativehtml.android.a.b(computedStyle);
+        if (!b2.equals(com.real.android.nativehtml.android.a.b(fqVar))) {
+            arrayList.add(new TypefaceSpan(b2));
         }
-        int d = C6140a.d(computedStyle);
-        if (d != C6140a.d(fqVar)) {
+        int d = com.real.android.nativehtml.android.a.d(computedStyle);
+        if (d != com.real.android.nativehtml.android.a.d(fqVar)) {
             arrayList.add(new StyleSpan(d));
         }
         CssProperty cssProperty3 = CssProperty.FONT_SIZE;
         float g = fqVar.g(cssProperty3, 0.0f);
         if (g != computedStyle.g(cssProperty3, 0.0f)) {
-            arrayList.add(new AbsoluteSizeSpan(Math.round(g * a)));
+            arrayList.add(new AbsoluteSizeSpan(Math.round(g * a2)));
         }
         CssProperty cssProperty4 = CssProperty.COLOR;
         int e = computedStyle.e(cssProperty4);
@@ -319,7 +317,7 @@ public class AndroidTextComponent extends TextView implements ComponentElement {
         CssProperty cssProperty5 = CssProperty.TEXT_DECORATION;
         CssEnum f = computedStyle.f(cssProperty5);
         if (f != fqVar.f(cssProperty5)) {
-            int i2 = C6139b.a[f.ordinal()];
+            int i2 = b.a[f.ordinal()];
             if (i2 == 3) {
                 arrayList.add(new UnderlineSpan());
             } else if (i2 == 4) {
@@ -329,7 +327,7 @@ public class AndroidTextComponent extends TextView implements ComponentElement {
         CssProperty cssProperty6 = CssProperty.VERTICAL_ALIGN;
         CssEnum f2 = computedStyle.f(cssProperty6);
         if (f2 != fqVar.f(cssProperty6)) {
-            int i3 = C6139b.a[f2.ordinal()];
+            int i3 = b.a[f2.ordinal()];
             if (i3 == 5) {
                 arrayList.add(new SubscriptSpan());
             } else if (i3 == 6) {
@@ -339,7 +337,7 @@ public class AndroidTextComponent extends TextView implements ComponentElement {
         if (element.getLocalName().equals("a") && element.getAttribute("href") != null) {
             setTextIsSelectable(false);
             setMovementMethod(LinkMovementMethod.getInstance());
-            arrayList.add(new C6138a(element));
+            arrayList.add(new a(element));
         }
         if (arrayList.size() > 0) {
             Iterator it = arrayList.iterator();

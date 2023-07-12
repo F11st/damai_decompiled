@@ -1,8 +1,7 @@
 package tb;
 
 import java.util.List;
-import kotlin.collections.C8212k;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
+import kotlin.reflect.jvm.internal.impl.builtins.c;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -108,19 +107,19 @@ public final class mf1 {
             if (b41.d(functionDescriptor.getName().b(), "remove") && functionDescriptor.getValueParameters().size() == 1 && !SpecialBuiltinMembers.h((CallableMemberDescriptor) callableDescriptor)) {
                 List<ValueParameterDescriptor> valueParameters = functionDescriptor.getOriginal().getValueParameters();
                 b41.h(valueParameters, "f.original.valueParameters");
-                z71 type = ((ValueParameterDescriptor) C8212k.q0(valueParameters)).getType();
+                z71 type = ((ValueParameterDescriptor) kotlin.collections.k.q0(valueParameters)).getType();
                 b41.h(type, "f.original.valueParameters.single().type");
                 c71 g = g(type);
-                c71.C8993d c8993d = g instanceof c71.C8993d ? (c71.C8993d) g : null;
-                if ((c8993d != null ? c8993d.i() : null) == JvmPrimitiveType.INT && (k = BuiltinMethodsWithSpecialGenericSignature.k(functionDescriptor)) != null) {
+                c71.d dVar = g instanceof c71.d ? (c71.d) g : null;
+                if ((dVar != null ? dVar.i() : null) == JvmPrimitiveType.INT && (k = BuiltinMethodsWithSpecialGenericSignature.k(functionDescriptor)) != null) {
                     List<ValueParameterDescriptor> valueParameters2 = k.getOriginal().getValueParameters();
                     b41.h(valueParameters2, "overridden.original.valueParameters");
-                    z71 type2 = ((ValueParameterDescriptor) C8212k.q0(valueParameters2)).getType();
+                    z71 type2 = ((ValueParameterDescriptor) kotlin.collections.k.q0(valueParameters2)).getType();
                     b41.h(type2, "overridden.original.valueParameters.single().type");
                     c71 g2 = g(type2);
                     DeclarationDescriptor containingDeclaration = k.getContainingDeclaration();
                     b41.h(containingDeclaration, "overridden.containingDeclaration");
-                    return b41.d(DescriptorUtilsKt.j(containingDeclaration), C8277c.C8278a.mutableCollection.j()) && (g2 instanceof c71.C8992c) && b41.d(((c71.C8992c) g2).i(), "java/lang/Object");
+                    return b41.d(DescriptorUtilsKt.j(containingDeclaration), c.a.mutableCollection.j()) && (g2 instanceof c71.c) && b41.d(((c71.c) g2).i(), "java/lang/Object");
                 }
                 return false;
             }

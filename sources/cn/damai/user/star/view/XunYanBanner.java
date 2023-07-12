@@ -13,7 +13,6 @@ import androidx.annotation.Nullable;
 import androidx.core.util.Pools;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -53,43 +52,41 @@ public class XunYanBanner extends ViewPager {
         private int d = -1;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.user.star.view.XunYanBanner$BannerAdapter$a */
         /* loaded from: classes9.dex */
-        public class C2710a implements DMImageCreator.DMImageSuccListener {
+        public class a implements DMImageCreator.DMImageSuccListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ ImageView a;
 
-            C2710a(BannerAdapter bannerAdapter, ImageView imageView) {
+            a(BannerAdapter bannerAdapter, ImageView imageView) {
                 this.a = imageView;
             }
 
             @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-            public void onSuccess(DMImageCreator.C0502e c0502e) {
+            public void onSuccess(DMImageCreator.e eVar) {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "-1710739697")) {
-                    ipChange.ipc$dispatch("-1710739697", new Object[]{this, c0502e});
+                    ipChange.ipc$dispatch("-1710739697", new Object[]{this, eVar});
                 } else {
-                    this.a.setImageDrawable(c0502e.a);
+                    this.a.setImageDrawable(eVar.a);
                 }
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.user.star.view.XunYanBanner$BannerAdapter$b */
         /* loaded from: classes9.dex */
-        public class C2711b implements DMImageCreator.DMImageFailListener {
+        public class b implements DMImageCreator.DMImageFailListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ ImageView a;
 
-            C2711b(BannerAdapter bannerAdapter, ImageView imageView) {
+            b(BannerAdapter bannerAdapter, ImageView imageView) {
                 this.a = imageView;
             }
 
             @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-            public void onFail(DMImageCreator.C0501d c0501d) {
+            public void onFail(DMImageCreator.d dVar) {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "1480696316")) {
-                    ipChange.ipc$dispatch("1480696316", new Object[]{this, c0501d});
+                    ipChange.ipc$dispatch("1480696316", new Object[]{this, dVar});
                 } else {
                     this.a.setImageResource(R$drawable.uikit_default_image_bg_grey);
                 }
@@ -151,8 +148,8 @@ public class XunYanBanner extends ViewPager {
             }
             Banner banner = this.b.get(size);
             ImageView imageView = (ImageView) acquire.findViewById(R$id.banner_img);
-            C0504a.b().e(banner.pic).i(R$drawable.uikit_default_image_bg_grey).e(new C2711b(this, imageView)).n(new C2710a(this, imageView)).f();
-            imageView.setTag(new C2712a(banner, size));
+            cn.damai.common.image.a.b().e(banner.pic).i(R$drawable.uikit_default_image_bg_grey).e(new b(this, imageView)).n(new a(this, imageView)).f();
+            imageView.setTag(new a(banner, size));
             imageView.setOnClickListener(this);
             viewGroup.addView(acquire);
             return acquire;
@@ -172,11 +169,11 @@ public class XunYanBanner extends ViewPager {
                 return;
             }
             Object tag = view.getTag();
-            if (!(tag instanceof C2712a) || XunYanBanner.this.mClickListener == null) {
+            if (!(tag instanceof a) || XunYanBanner.this.mClickListener == null) {
                 return;
             }
-            C2712a c2712a = (C2712a) tag;
-            XunYanBanner.this.mClickListener.onBannerClick(c2712a.a, c2712a.b);
+            a aVar = (a) tag;
+            XunYanBanner.this.mClickListener.onBannerClick(aVar.a, aVar.b);
         }
 
         @Override // androidx.viewpager.widget.PagerAdapter
@@ -212,13 +209,12 @@ public class XunYanBanner extends ViewPager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.star.view.XunYanBanner$a */
     /* loaded from: classes17.dex */
-    public static class C2712a {
+    public static class a {
         public final Banner a;
         public final int b;
 
-        public C2712a(Banner banner, int i) {
+        public a(Banner banner, int i) {
             this.a = banner;
             this.b = i;
         }

@@ -18,12 +18,11 @@ public class FactLinearLayout extends LinearLayout {
     private View.OnClickListener mOuterClickListener;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.nodoubleclick.FactLinearLayout$a */
     /* loaded from: classes8.dex */
-    public class CountDownTimerC2521a extends CountDownTimer {
+    public class a extends CountDownTimer {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        CountDownTimerC2521a(long j, long j2) {
+        a(long j, long j2) {
             super(j, j2);
         }
 
@@ -47,12 +46,11 @@ public class FactLinearLayout extends LinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.nodoubleclick.FactLinearLayout$b */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC2522b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2522b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -75,8 +73,8 @@ public class FactLinearLayout extends LinearLayout {
         super(context);
         this.mOuterClickListener = null;
         this.mIsSleep = false;
-        this.mClickTimer = new CountDownTimerC2521a(500L, 500L);
-        this.mInternalClick = new View$OnClickListenerC2522b();
+        this.mClickTimer = new a(500L, 500L);
+        this.mInternalClick = new b();
     }
 
     @Override // android.view.ViewGroup, android.view.View
@@ -105,15 +103,15 @@ public class FactLinearLayout extends LinearLayout {
         super(context, attributeSet);
         this.mOuterClickListener = null;
         this.mIsSleep = false;
-        this.mClickTimer = new CountDownTimerC2521a(500L, 500L);
-        this.mInternalClick = new View$OnClickListenerC2522b();
+        this.mClickTimer = new a(500L, 500L);
+        this.mInternalClick = new b();
     }
 
     public FactLinearLayout(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         this.mOuterClickListener = null;
         this.mIsSleep = false;
-        this.mClickTimer = new CountDownTimerC2521a(500L, 500L);
-        this.mInternalClick = new View$OnClickListenerC2522b();
+        this.mClickTimer = new a(500L, 500L);
+        this.mInternalClick = new b();
     }
 }

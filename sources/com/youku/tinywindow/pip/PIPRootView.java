@@ -23,7 +23,7 @@ public class PIPRootView extends FrameLayout {
     public PIPRootView(@NonNull Context context) {
         super(context);
         this.mRational = new Rational(100, 100);
-        LayoutInflater.from(context).inflate(R.C8081layout.tinywindow_pip_root_layout, this);
+        LayoutInflater.from(context).inflate(R.layout.tinywindow_pip_root_layout, this);
         TextView textView = (TextView) findViewById(R.id.tv_pip);
         this.mPIPErrorView = textView;
         textView.setContentDescription("显示PIP信息的布局");

@@ -79,7 +79,7 @@ public final class ObservableSubscribeOn<T> extends AbstractObservableWithUpstre
         this.scheduler = scheduler;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         SubscribeOnObserver subscribeOnObserver = new SubscribeOnObserver(observer);
         observer.onSubscribe(subscribeOnObserver);

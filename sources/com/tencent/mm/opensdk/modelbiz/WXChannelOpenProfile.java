@@ -3,8 +3,8 @@ package com.tencent.mm.opensdk.modelbiz;
 import android.os.Bundle;
 import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.modelbase.BaseResp;
-import com.tencent.mm.opensdk.utils.C7065b;
 import com.tencent.mm.opensdk.utils.Log;
+import com.tencent.mm.opensdk.utils.b;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -20,7 +20,7 @@ public class WXChannelOpenProfile {
         @Override // com.tencent.mm.opensdk.modelbase.BaseReq
         public boolean checkArgs() {
             String str;
-            if (C7065b.b(this.userName)) {
+            if (b.b(this.userName)) {
                 str = "userName is null";
             } else if (this.userName.length() <= 1024) {
                 return true;

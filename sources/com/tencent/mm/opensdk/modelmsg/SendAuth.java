@@ -1,7 +1,7 @@
 package com.tencent.mm.opensdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.opensdk.channel.a.C7054a;
+import com.tencent.mm.opensdk.channel.a.a;
 import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.modelbase.BaseResp;
 import com.tencent.mm.opensdk.utils.Log;
@@ -18,8 +18,8 @@ public final class SendAuth {
         public int callbackFlags = -1;
 
         public void fromBundle(Bundle bundle) {
-            this.callbackClassName = C7054a.a(bundle, "_wxapi_sendauth_options_callback_classname");
-            this.callbackFlags = C7054a.a(bundle, "_wxapi_sendauth_options_callback_flags", -1);
+            this.callbackClassName = a.a(bundle, "_wxapi_sendauth_options_callback_classname");
+            this.callbackFlags = a.a(bundle, "_wxapi_sendauth_options_callback_flags", -1);
         }
 
         public void toBundle(Bundle bundle) {

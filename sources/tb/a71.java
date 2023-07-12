@@ -27,14 +27,13 @@ import tb.w61;
 public abstract class a71 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.a71$a */
     /* loaded from: classes3.dex */
-    public static final class C8898a extends a71 {
+    public static final class a extends a71 {
         @NotNull
         private final Field a;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C8898a(@NotNull Field field) {
+        public a(@NotNull Field field) {
             super(null);
             b41.i(field, "field");
             this.a = field;
@@ -61,16 +60,15 @@ public abstract class a71 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.a71$b */
     /* loaded from: classes3.dex */
-    public static final class C8899b extends a71 {
+    public static final class b extends a71 {
         @NotNull
         private final Method a;
         @Nullable
         private final Method b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C8899b(@NotNull Method method, @Nullable Method method2) {
+        public b(@NotNull Method method, @Nullable Method method2) {
             super(null);
             b41.i(method, "getterMethod");
             this.a = method;
@@ -97,9 +95,8 @@ public abstract class a71 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.a71$c */
     /* loaded from: classes3.dex */
-    public static final class C8900c extends a71 {
+    public static final class c extends a71 {
         private final String a;
         @NotNull
         private final PropertyDescriptor b;
@@ -113,7 +110,7 @@ public abstract class a71 {
         private final er2 f;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C8900c(@NotNull PropertyDescriptor propertyDescriptor, @NotNull ProtoBuf$Property protoBuf$Property, @NotNull JvmProtoBuf.JvmPropertySignature jvmPropertySignature, @NotNull NameResolver nameResolver, @NotNull er2 er2Var) {
+        public c(@NotNull PropertyDescriptor propertyDescriptor, @NotNull ProtoBuf$Property protoBuf$Property, @NotNull JvmProtoBuf.JvmPropertySignature jvmPropertySignature, @NotNull NameResolver nameResolver, @NotNull er2 er2Var) {
             super(null);
             String str;
             b41.i(propertyDescriptor, "descriptor");
@@ -136,7 +133,7 @@ public abstract class a71 {
                 sb.append(nameResolver.getString(getter2.getDesc()));
                 str = sb.toString();
             } else {
-                w61.C9845a d = b71.d(b71.INSTANCE, protoBuf$Property, nameResolver, er2Var, false, 8, null);
+                w61.a d = b71.d(b71.INSTANCE, protoBuf$Property, nameResolver, er2Var, false, 8, null);
                 if (d != null) {
                     String d2 = d.d();
                     str = n61.a(d2) + c() + "()" + d.e();
@@ -153,9 +150,9 @@ public abstract class a71 {
             b41.h(containingDeclaration, "descriptor.containingDeclaration");
             if (b41.d(this.b.getVisibility(), e70.INTERNAL) && (containingDeclaration instanceof DeserializedClassDescriptor)) {
                 ProtoBuf$Class t = ((DeserializedClassDescriptor) containingDeclaration).t();
-                GeneratedMessageLite.C8441c<ProtoBuf$Class, Integer> c8441c = JvmProtoBuf.classModuleName;
-                b41.h(c8441c, "JvmProtoBuf.classModuleName");
-                Integer num = (Integer) fx1.a(t, c8441c);
+                GeneratedMessageLite.c<ProtoBuf$Class, Integer> cVar = JvmProtoBuf.classModuleName;
+                b41.h(cVar, "JvmProtoBuf.classModuleName");
+                Integer num = (Integer) fx1.a(t, cVar);
                 if (num == null || (str = this.e.getString(num.intValue())) == null) {
                     str = lu2.MAIN;
                 }
@@ -210,20 +207,19 @@ public abstract class a71 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.a71$d */
     /* loaded from: classes3.dex */
-    public static final class C8901d extends a71 {
+    public static final class d extends a71 {
         @NotNull
-        private final JvmFunctionSignature.C8250c a;
+        private final JvmFunctionSignature.c a;
         @Nullable
-        private final JvmFunctionSignature.C8250c b;
+        private final JvmFunctionSignature.c b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C8901d(@NotNull JvmFunctionSignature.C8250c c8250c, @Nullable JvmFunctionSignature.C8250c c8250c2) {
+        public d(@NotNull JvmFunctionSignature.c cVar, @Nullable JvmFunctionSignature.c cVar2) {
             super(null);
-            b41.i(c8250c, "getterSignature");
-            this.a = c8250c;
-            this.b = c8250c2;
+            b41.i(cVar, "getterSignature");
+            this.a = cVar;
+            this.b = cVar2;
         }
 
         @Override // tb.a71
@@ -233,12 +229,12 @@ public abstract class a71 {
         }
 
         @NotNull
-        public final JvmFunctionSignature.C8250c b() {
+        public final JvmFunctionSignature.c b() {
             return this.a;
         }
 
         @Nullable
-        public final JvmFunctionSignature.C8250c c() {
+        public final JvmFunctionSignature.c c() {
             return this.b;
         }
     }

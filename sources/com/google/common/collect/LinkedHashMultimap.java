@@ -111,14 +111,13 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.LinkedHashMultimap$a */
     /* loaded from: classes10.dex */
-    public class C5006a implements Iterator<Map.Entry<K, V>> {
+    public class a implements Iterator<Map.Entry<K, V>> {
         ValueEntry<K, V> a;
         @NullableDecl
         ValueEntry<K, V> b;
 
-        C5006a() {
+        a() {
             this.a = LinkedHashMultimap.this.multimapHeaderEntry.successorInMultimap;
         }
 
@@ -141,7 +140,7 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
 
         @Override // java.util.Iterator
         public void remove() {
-            C5191k.e(this.b != null);
+            k.e(this.b != null);
             LinkedHashMultimap.this.remove(this.b.getKey(), this.b.getValue());
             this.b = null;
         }
@@ -150,9 +149,8 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     @VisibleForTesting
-    /* renamed from: com.google.common.collect.LinkedHashMultimap$b */
     /* loaded from: classes10.dex */
-    public final class C5007b extends Sets.AbstractC5098a<V> implements ValueSetLink<K, V> {
+    public final class b extends Sets.a<V> implements ValueSetLink<K, V> {
         private final K a;
         @VisibleForTesting
         ValueEntry<K, V>[] b;
@@ -162,21 +160,20 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
         private ValueSetLink<K, V> f = this;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.LinkedHashMultimap$b$a */
         /* loaded from: classes10.dex */
-        class C5008a implements Iterator<V> {
+        class a implements Iterator<V> {
             ValueSetLink<K, V> a;
             @NullableDecl
             ValueEntry<K, V> b;
             int c;
 
-            C5008a() {
-                this.a = C5007b.this.e;
-                this.c = C5007b.this.d;
+            a() {
+                this.a = b.this.e;
+                this.c = b.this.d;
             }
 
             private void a() {
-                if (C5007b.this.d != this.c) {
+                if (b.this.d != this.c) {
                     throw new ConcurrentModificationException();
                 }
             }
@@ -184,7 +181,7 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
             @Override // java.util.Iterator
             public boolean hasNext() {
                 a();
-                return this.a != C5007b.this;
+                return this.a != b.this;
             }
 
             @Override // java.util.Iterator
@@ -202,16 +199,16 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
             @Override // java.util.Iterator
             public void remove() {
                 a();
-                C5191k.e(this.b != null);
-                C5007b.this.remove(this.b.getValue());
-                this.c = C5007b.this.d;
+                k.e(this.b != null);
+                b.this.remove(this.b.getValue());
+                this.c = b.this.d;
                 this.b = null;
             }
         }
 
-        C5007b(K k, int i) {
+        b(K k, int i) {
             this.a = k;
-            this.b = new ValueEntry[C5211z.a(i, 1.0d)];
+            this.b = new ValueEntry[z.a(i, 1.0d)];
         }
 
         private int c() {
@@ -220,7 +217,7 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
 
         /* JADX WARN: Multi-variable type inference failed */
         private void d() {
-            if (C5211z.b(this.c, this.b.length, 1.0d)) {
+            if (z.b(this.c, this.b.length, 1.0d)) {
                 int length = this.b.length * 2;
                 ValueEntry<K, V>[] valueEntryArr = new ValueEntry[length];
                 this.b = valueEntryArr;
@@ -236,7 +233,7 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
         public boolean add(@NullableDecl V v) {
-            int d = C5211z.d(v);
+            int d = z.d(v);
             int c = c() & d;
             ValueEntry<K, V> valueEntry = this.b[c];
             for (ValueEntry<K, V> valueEntry2 = valueEntry; valueEntry2 != null; valueEntry2 = valueEntry2.nextInValueBucket) {
@@ -269,7 +266,7 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
         public boolean contains(@NullableDecl Object obj) {
-            int d = C5211z.d(obj);
+            int d = z.d(obj);
             for (ValueEntry<K, V> valueEntry = this.b[c() & d]; valueEntry != null; valueEntry = valueEntry.nextInValueBucket) {
                 if (valueEntry.matchesValue(obj, d)) {
                     return true;
@@ -290,13 +287,13 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
         public Iterator<V> iterator() {
-            return new C5008a();
+            return new a();
         }
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
         @CanIgnoreReturnValue
         public boolean remove(@NullableDecl Object obj) {
-            int d = C5211z.d(obj);
+            int d = z.d(obj);
             int c = c() & d;
             ValueEntry<K, V> valueEntry = null;
             for (ValueEntry<K, V> valueEntry2 = this.b[c]; valueEntry2 != null; valueEntry2 = valueEntry2.nextInValueBucket) {
@@ -334,9 +331,9 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
     }
 
     private LinkedHashMultimap(int i, int i2) {
-        super(C5172e0.e(i));
+        super(e0.e(i));
         this.valueSetCapacity = 2;
-        C5191k.b(i2, "expectedValuesPerKey");
+        k.b(i2, "expectedValuesPerKey");
         this.valueSetCapacity = i2;
         ValueEntry<K, V> valueEntry = new ValueEntry<>(null, null, 0, null);
         this.multimapHeaderEntry = valueEntry;
@@ -366,7 +363,7 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
         succeedsInMultimap(valueEntry, valueEntry);
         this.valueSetCapacity = 2;
         int readInt = objectInputStream.readInt();
-        Map e = C5172e0.e(12);
+        Map e = e0.e(12);
         for (int i = 0; i < readInt; i++) {
             Object readObject = objectInputStream.readObject();
             e.put(readObject, createCollection(readObject));
@@ -405,7 +402,7 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
         }
     }
 
-    @Override // com.google.common.collect.AbstractSetMultimap, com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap, com.google.common.collect.ListMultimap
+    @Override // com.google.common.collect.AbstractSetMultimap, com.google.common.collect.c, com.google.common.collect.Multimap, com.google.common.collect.ListMultimap
     public /* bridge */ /* synthetic */ Map asMap() {
         return super.asMap();
     }
@@ -417,7 +414,7 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
         succeedsInMultimap(valueEntry, valueEntry);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public /* bridge */ /* synthetic */ boolean containsEntry(@NullableDecl Object obj, @NullableDecl Object obj2) {
         return super.containsEntry(obj, obj2);
     }
@@ -427,17 +424,17 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
         return super.containsKey(obj);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public /* bridge */ /* synthetic */ boolean containsValue(@NullableDecl Object obj) {
         return super.containsValue(obj);
     }
 
-    @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.c
     Iterator<Map.Entry<K, V>> entryIterator() {
-        return new C5006a();
+        return new a();
     }
 
-    @Override // com.google.common.collect.AbstractSetMultimap, com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap, com.google.common.collect.ListMultimap
+    @Override // com.google.common.collect.AbstractSetMultimap, com.google.common.collect.c, com.google.common.collect.Multimap, com.google.common.collect.ListMultimap
     public /* bridge */ /* synthetic */ boolean equals(@NullableDecl Object obj) {
         return super.equals(obj);
     }
@@ -448,40 +445,40 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
         return super.get((LinkedHashMultimap<K, V>) obj);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public /* bridge */ /* synthetic */ int hashCode() {
         return super.hashCode();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public /* bridge */ /* synthetic */ boolean isEmpty() {
         return super.isEmpty();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public Set<K> keySet() {
         return super.keySet();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public /* bridge */ /* synthetic */ Multiset keys() {
         return super.keys();
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // com.google.common.collect.AbstractSetMultimap, com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.AbstractSetMultimap, com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     public /* bridge */ /* synthetic */ boolean put(@NullableDecl Object obj, @NullableDecl Object obj2) {
         return super.put(obj, obj2);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     public /* bridge */ /* synthetic */ boolean putAll(Multimap multimap) {
         return super.putAll(multimap);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     public /* bridge */ /* synthetic */ boolean remove(@NullableDecl Object obj, @NullableDecl Object obj2) {
         return super.remove(obj, obj2);
@@ -494,7 +491,7 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // com.google.common.collect.AbstractSetMultimap, com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.AbstractSetMultimap, com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     public /* bridge */ /* synthetic */ Collection replaceValues(@NullableDecl Object obj, Iterable iterable) {
         return replaceValues((LinkedHashMultimap<K, V>) obj, iterable);
@@ -505,17 +502,17 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
         return super.size();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     public /* bridge */ /* synthetic */ String toString() {
         return super.toString();
     }
 
-    @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.c
     Iterator<V> valueIterator() {
         return Maps.L(entryIterator());
     }
 
-    @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.c, com.google.common.collect.Multimap
     public Collection<V> values() {
         return super.values();
     }
@@ -527,22 +524,22 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
     /* JADX INFO: Access modifiers changed from: package-private */
     @Override // com.google.common.collect.AbstractSetMultimap, com.google.common.collect.AbstractMapBasedMultimap
     public Set<V> createCollection() {
-        return C5172e0.f(this.valueSetCapacity);
+        return e0.f(this.valueSetCapacity);
     }
 
-    @Override // com.google.common.collect.AbstractSetMultimap, com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.AbstractSetMultimap, com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.c, com.google.common.collect.Multimap
     public Set<Map.Entry<K, V>> entries() {
         return super.entries();
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     public /* bridge */ /* synthetic */ boolean putAll(@NullableDecl Object obj, Iterable iterable) {
         return super.putAll(obj, iterable);
     }
 
-    @Override // com.google.common.collect.AbstractSetMultimap, com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.AbstractSetMultimap, com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     public Set<V> replaceValues(@NullableDecl K k, Iterable<? extends V> iterable) {
         return super.replaceValues((LinkedHashMultimap<K, V>) k, (Iterable) iterable);
@@ -551,7 +548,7 @@ public final class LinkedHashMultimap<K, V> extends LinkedHashMultimapGwtSeriali
     /* JADX INFO: Access modifiers changed from: package-private */
     @Override // com.google.common.collect.AbstractMapBasedMultimap
     public Collection<V> createCollection(K k) {
-        return new C5007b(k, this.valueSetCapacity);
+        return new b(k, this.valueSetCapacity);
     }
 
     public static <K, V> LinkedHashMultimap<K, V> create(Multimap<? extends K, ? extends V> multimap) {

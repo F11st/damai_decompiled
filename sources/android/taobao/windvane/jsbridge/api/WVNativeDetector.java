@@ -11,8 +11,8 @@ import android.taobao.windvane.jsbridge.utils.DeviceInfo;
 import android.taobao.windvane.jsbridge.utils.YearClass;
 import android.taobao.windvane.util.TaoLog;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
-import com.taobao.application.common.C6673b;
 import com.taobao.application.common.IAppPreferences;
+import com.taobao.application.common.b;
 import com.taobao.wireless.security.sdk.SecurityGuardManager;
 import com.youku.live.dsl.config.IDynamicConfig;
 
@@ -50,7 +50,7 @@ public class WVNativeDetector extends WVApiPlugin {
     private void getPerformanceInfo(String str, WVCallBackContext wVCallBackContext) {
         WVResult wVResult = new WVResult();
         try {
-            IAppPreferences d = C6673b.d();
+            IAppPreferences d = b.d();
             d.getBoolean("isApm", false);
             int i = d.getInt(IDynamicConfig.KEY_DEVICE_SCORE, -1);
             int i2 = d.getInt("cpuScore", -1);

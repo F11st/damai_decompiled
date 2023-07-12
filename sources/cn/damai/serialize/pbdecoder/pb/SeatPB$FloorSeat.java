@@ -4,13 +4,13 @@ import cn.damai.serialize.pbdecoder.pb.SeatPB$Seat;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.google.protobuf.AbstractMessageLite;
-import com.google.protobuf.C5401g;
 import com.google.protobuf.CodedInputStream;
 import com.google.protobuf.CodedOutputStream;
 import com.google.protobuf.GeneratedMessageLite;
 import com.google.protobuf.Internal;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Parser;
+import com.google.protobuf.g;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
@@ -33,7 +33,7 @@ public final class SeatPB$FloorSeat extends GeneratedMessageLite<SeatPB$FloorSea
     public static final class Builder extends GeneratedMessageLite.Builder<SeatPB$FloorSeat, Builder> implements SeatPB$FloorSeatOrBuilder {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        /* synthetic */ Builder(C1742b c1742b) {
+        /* synthetic */ Builder(b bVar) {
             this();
         }
 
@@ -372,7 +372,7 @@ public final class SeatPB$FloorSeat extends GeneratedMessageLite<SeatPB$FloorSea
         if (AndroidInstantRuntime.support(ipChange, "-1905483510")) {
             return ipChange.ipc$dispatch("-1905483510", new Object[]{this, methodToInvoke, obj, obj2});
         }
-        switch (C1742b.a[methodToInvoke.ordinal()]) {
+        switch (b.a[methodToInvoke.ordinal()]) {
             case 1:
                 return new SeatPB$FloorSeat();
             case 2:
@@ -390,13 +390,13 @@ public final class SeatPB$FloorSeat extends GeneratedMessageLite<SeatPB$FloorSea
                 long j2 = seatPB$FloorSeat.e;
                 this.e = visitor.visitLong(z2, j, j2 != 0, j2);
                 this.f = visitor.visitList(this.f, seatPB$FloorSeat.f);
-                if (visitor == GeneratedMessageLite.C5383g.INSTANCE) {
+                if (visitor == GeneratedMessageLite.g.INSTANCE) {
                     this.d |= seatPB$FloorSeat.d;
                 }
                 return this;
             case 6:
                 CodedInputStream codedInputStream = (CodedInputStream) obj;
-                C5401g c5401g = (C5401g) obj2;
+                g gVar = (g) obj2;
                 while (!z) {
                     try {
                         int v = codedInputStream.v();
@@ -410,7 +410,7 @@ public final class SeatPB$FloorSeat extends GeneratedMessageLite<SeatPB$FloorSea
                                 if (!this.f.isModifiable()) {
                                     this.f = GeneratedMessageLite.r(this.f);
                                 }
-                                this.f.add(codedInputStream.l(SeatPB$Seat.k0(), c5401g));
+                                this.f.add(codedInputStream.l(SeatPB$Seat.k0(), gVar));
                             }
                         }
                         z = true;
@@ -427,7 +427,7 @@ public final class SeatPB$FloorSeat extends GeneratedMessageLite<SeatPB$FloorSea
                 if (h == null) {
                     synchronized (SeatPB$FloorSeat.class) {
                         if (h == null) {
-                            h = new GeneratedMessageLite.C5378b(g);
+                            h = new GeneratedMessageLite.b(g);
                         }
                     }
                 }

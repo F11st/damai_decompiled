@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
-import kotlin.collections.C8214m;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
@@ -36,7 +35,7 @@ public final class t21 extends le1 {
         b41.i(function1, "nameFilter");
         z60 n = z60Var.n(z60.Companion.c());
         if (n == null) {
-            g = C8214m.g();
+            g = kotlin.collections.m.g();
             return g;
         }
         Collection<DeclarationDescriptor> contributedDescriptors = this.a.getContributedDescriptors(n, function1);

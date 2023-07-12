@@ -6,14 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 import kotlin.ExperimentalStdlibApi;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8215n;
+import kotlin.collections.k;
+import kotlin.collections.n;
 import kotlin.jvm.internal.KTypeBase;
-import kotlin.sequences.C8576d;
 import kotlin.sequences.Sequence;
 import kotlin.sequences.SequencesKt__SequencesKt;
 import kotlin.sequences.SequencesKt___SequencesKt;
-import kotlin.text.C8604o;
+import kotlin.sequences.d;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
 import tb.k71;
@@ -24,9 +24,8 @@ import tb.s61;
 public final class TypesJVMKt {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.TypesJVMKt$a */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C8241a {
+    public /* synthetic */ class a {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -43,7 +42,7 @@ public final class TypesJVMKt {
     public static final Type c(KType kType, boolean z) {
         KClassifier classifier = kType.getClassifier();
         if (classifier instanceof KTypeParameter) {
-            return new C8243b((KTypeParameter) classifier);
+            return new b((KTypeParameter) classifier);
         }
         if (classifier instanceof KClass) {
             KClass kClass = (KClass) classifier;
@@ -56,11 +55,11 @@ public final class TypesJVMKt {
                 if (c.getComponentType().isPrimitive()) {
                     return c;
                 }
-                k71 k71Var = (k71) C8212k.s0(arguments);
+                k71 k71Var = (k71) k.s0(arguments);
                 if (k71Var != null) {
-                    KVariance a = k71Var.a();
+                    KVariance a2 = k71Var.a();
                     KType b = k71Var.b();
-                    int i = a == null ? -1 : C8241a.$EnumSwitchMapping$0[a.ordinal()];
+                    int i = a2 == null ? -1 : a.$EnumSwitchMapping$0[a2.ordinal()];
                     if (i == -1 || i == 1) {
                         return c;
                     }
@@ -69,7 +68,7 @@ public final class TypesJVMKt {
                     }
                     b41.f(b);
                     Type d = d(b, false, 1, null);
-                    return d instanceof Class ? c : new C8242a(d);
+                    return d instanceof Class ? c : new kotlin.reflect.a(d);
                 }
                 throw new IllegalArgumentException("kotlin.Array must have exactly one type argument: " + kType);
             }
@@ -92,14 +91,14 @@ public final class TypesJVMKt {
         int q3;
         Class<?> declaringClass = cls.getDeclaringClass();
         if (declaringClass == null) {
-            q3 = C8215n.q(list, 10);
+            q3 = n.q(list, 10);
             ArrayList arrayList = new ArrayList(q3);
             for (k71 k71Var : list) {
                 arrayList.add(g(k71Var));
             }
             return new ParameterizedTypeImpl(cls, null, arrayList);
         } else if (Modifier.isStatic(cls.getModifiers())) {
-            q2 = C8215n.q(list, 10);
+            q2 = n.q(list, 10);
             ArrayList arrayList2 = new ArrayList(q2);
             for (k71 k71Var2 : list) {
                 arrayList2.add(g(k71Var2));
@@ -109,7 +108,7 @@ public final class TypesJVMKt {
             int length = cls.getTypeParameters().length;
             Type e = e(declaringClass, list.subList(length, list.size()));
             List<k71> subList = list.subList(0, length);
-            q = C8215n.q(subList, 10);
+            q = n.q(subList, 10);
             ArrayList arrayList3 = new ArrayList(q);
             for (k71 k71Var3 : subList) {
                 arrayList3.add(g(k71Var3));
@@ -128,37 +127,36 @@ public final class TypesJVMKt {
     private static final Type g(k71 k71Var) {
         KVariance d = k71Var.d();
         if (d == null) {
-            return C8244c.Companion.a();
+            return c.Companion.a();
         }
         KType c = k71Var.c();
         b41.f(c);
-        int i = C8241a.$EnumSwitchMapping$0[d.ordinal()];
+        int i = a.$EnumSwitchMapping$0[d.ordinal()];
         if (i != 1) {
             if (i != 2) {
                 if (i == 3) {
-                    return new C8244c(c(c, true), null);
+                    return new c(c(c, true), null);
                 }
                 throw new NoWhenBranchMatchedException();
             }
             return c(c, true);
         }
-        return new C8244c(null, c(c, true));
+        return new c(null, c(c, true));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public static final String h(Type type) {
         String name;
-        Sequence h;
         int m;
         String v;
         if (type instanceof Class) {
             Class cls = (Class) type;
             if (cls.isArray()) {
-                h = SequencesKt__SequencesKt.h(type, TypesJVMKt$typeToString$unwrap$1.INSTANCE);
+                Sequence h = SequencesKt__SequencesKt.h(type, TypesJVMKt$typeToString$unwrap$1.INSTANCE);
                 StringBuilder sb = new StringBuilder();
-                sb.append(((Class) C8576d.u(h)).getName());
+                sb.append(((Class) d.u(h)).getName());
                 m = SequencesKt___SequencesKt.m(h);
-                v = C8604o.v("[]", m);
+                v = o.v("[]", m);
                 sb.append(v);
                 name = sb.toString();
             } else {

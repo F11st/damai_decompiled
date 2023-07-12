@@ -10,9 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.category.venue.bean.ProjectVo;
-import cn.damai.common.image.C0504a;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -66,14 +65,13 @@ public class VenueProjectGridAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.venue.adapter.VenueProjectGridAdapter$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0442a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ProjectVo a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC0442a(ProjectVo projectVo, int i) {
+        a(ProjectVo projectVo, int i) {
             this.a = projectVo;
             this.b = i;
         }
@@ -97,10 +95,10 @@ public class VenueProjectGridAdapter extends RecyclerView.Adapter<ViewHolder> {
             hashMap.put("venue_id", VenueProjectGridAdapter.this.c);
             hashMap.put("item_id", this.a.projectId);
             if (VenueProjectGridAdapter.this.g == 1) {
-                C0529c.e().x(new C0528b().e("venue", "venue_card_" + VenueProjectGridAdapter.this.e, "item_" + this.b, hashMap, Boolean.TRUE));
+                c.e().x(new b().e("venue", "venue_card_" + VenueProjectGridAdapter.this.e, "item_" + this.b, hashMap, Boolean.TRUE));
                 return;
             }
-            C0529c.e().x(new C0528b().e("venue", "nearby_venue_card_" + VenueProjectGridAdapter.this.e, "item_" + this.b, hashMap, Boolean.TRUE));
+            c.e().x(new b().e("venue", "nearby_venue_card_" + VenueProjectGridAdapter.this.e, "item_" + this.b, hashMap, Boolean.TRUE));
         }
     }
 
@@ -128,8 +126,8 @@ public class VenueProjectGridAdapter extends RecyclerView.Adapter<ViewHolder> {
         viewHolder.c.setText(projectVo.projectName);
         DMDigitTextView dMDigitTextView = viewHolder.e;
         dMDigitTextView.setText(String.valueOf("¥" + projectVo.priceLow));
-        C0504a.b().f(projectVo.projectPic, m62.a(this.a, 111.0f), m62.a(this.a, 148.0f)).c(R$drawable.uikit_default_image_bg_grey).g(viewHolder.a);
-        viewHolder.f.setOnClickListener(new View$OnClickListenerC0442a(projectVo, i));
+        cn.damai.common.image.a.b().f(projectVo.projectPic, m62.a(this.a, 111.0f), m62.a(this.a, 148.0f)).c(R$drawable.uikit_default_image_bg_grey).g(viewHolder.a);
+        viewHolder.f.setOnClickListener(new a(projectVo, i));
         String str = projectVo.categoryName;
         if (str != null && !str.isEmpty()) {
             viewHolder.b.setTagName(projectVo.categoryName);

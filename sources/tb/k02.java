@@ -17,14 +17,14 @@ public abstract class k02 extends g02 implements ReflectJavaAnnotationOwner, Ref
     @Nullable
     /* renamed from: a */
     public vz1 findAnnotation(@NotNull hp0 hp0Var) {
-        return ReflectJavaAnnotationOwner.C8322a.a(this, hp0Var);
+        return ReflectJavaAnnotationOwner.a.a(this, hp0Var);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotationOwner
     @NotNull
     /* renamed from: b */
     public List<vz1> getAnnotations() {
-        return ReflectJavaAnnotationOwner.C8322a.b(this);
+        return ReflectJavaAnnotationOwner.a.b(this);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaMember
@@ -83,12 +83,12 @@ public abstract class k02 extends g02 implements ReflectJavaAnnotationOwner, Ref
             goto L43
         L39:
             int r8 = r5 + r3
-            java.lang.Object r8 = kotlin.collections.C8212k.S(r1, r8)
+            java.lang.Object r8 = kotlin.collections.k.S(r1, r8)
             java.lang.String r8 = (java.lang.String) r8
             if (r8 == 0) goto L5d
         L43:
             if (r14 == 0) goto L4d
-            int r9 = kotlin.collections.C8202e.x(r12)
+            int r9 = kotlin.collections.e.x(r12)
             if (r5 != r9) goto L4d
             r9 = 1
             goto L4e
@@ -167,7 +167,7 @@ public abstract class k02 extends g02 implements ReflectJavaAnnotationOwner, Ref
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaModifierListOwner
     @NotNull
     public uy2 getVisibility() {
-        return ReflectJavaModifierListOwner.C8323a.a(this);
+        return ReflectJavaModifierListOwner.a.a(this);
     }
 
     public int hashCode() {
@@ -176,22 +176,22 @@ public abstract class k02 extends g02 implements ReflectJavaAnnotationOwner, Ref
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaModifierListOwner
     public boolean isAbstract() {
-        return ReflectJavaModifierListOwner.C8323a.b(this);
+        return ReflectJavaModifierListOwner.a.b(this);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotationOwner
     public boolean isDeprecatedInJavaDoc() {
-        return ReflectJavaAnnotationOwner.C8322a.c(this);
+        return ReflectJavaAnnotationOwner.a.c(this);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaModifierListOwner
     public boolean isFinal() {
-        return ReflectJavaModifierListOwner.C8323a.c(this);
+        return ReflectJavaModifierListOwner.a.c(this);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaModifierListOwner
     public boolean isStatic() {
-        return ReflectJavaModifierListOwner.C8323a.d(this);
+        return ReflectJavaModifierListOwner.a.d(this);
     }
 
     @NotNull

@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
-import io.reactivex.AbstractC8148c;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.MaybeObserver;
+import io.reactivex.b;
+import io.reactivex.c;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.fuseable.FuseToFlowable;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
@@ -13,9 +13,9 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableElementAtMaybe<T> extends AbstractC8148c<T> implements FuseToFlowable<T> {
+public final class FlowableElementAtMaybe<T> extends c<T> implements FuseToFlowable<T> {
     final long index;
-    final AbstractC8147b<T> source;
+    final b<T> source;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -89,17 +89,17 @@ public final class FlowableElementAtMaybe<T> extends AbstractC8148c<T> implement
         }
     }
 
-    public FlowableElementAtMaybe(AbstractC8147b<T> abstractC8147b, long j) {
-        this.source = abstractC8147b;
+    public FlowableElementAtMaybe(b<T> bVar, long j) {
+        this.source = bVar;
         this.index = j;
     }
 
     @Override // io.reactivex.internal.fuseable.FuseToFlowable
-    public AbstractC8147b<T> fuseToFlowable() {
+    public b<T> fuseToFlowable() {
         return i42.l(new FlowableElementAt(this.source, this.index, null, false));
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         this.source.subscribe((FlowableSubscriber) new ElementAtSubscriber(maybeObserver, this.index));
     }

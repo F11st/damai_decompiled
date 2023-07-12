@@ -10,7 +10,6 @@ import android.os.Build;
 import android.os.IBinder;
 import android.os.Looper;
 import android.os.Parcel;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import java.security.MessageDigest;
 
 /* JADX INFO: Access modifiers changed from: package-private */
@@ -29,16 +28,15 @@ public class bb implements au {
     private volatile int f122a = 0;
 
     /* renamed from: a  reason: collision with other field name */
-    private volatile C7606a f125a = null;
+    private volatile a f125a = null;
 
     /* renamed from: a  reason: collision with other field name */
     private final Object f126a = new Object();
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.bb$a */
     /* loaded from: classes11.dex */
-    public class C7606a {
+    public class a {
 
         /* renamed from: a  reason: collision with other field name */
         String f127a;
@@ -46,7 +44,7 @@ public class bb implements au {
         String c;
         String d;
 
-        private C7606a() {
+        private a() {
             this.f127a = null;
             this.b = null;
             this.c = null;
@@ -56,10 +54,9 @@ public class bb implements au {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.bb$b */
     /* loaded from: classes11.dex */
-    public class ServiceConnectionC7607b implements ServiceConnection {
-        private ServiceConnectionC7607b() {
+    public class b implements ServiceConnection {
+        private b() {
         }
 
         @Override // android.content.ServiceConnection
@@ -77,9 +74,8 @@ public class bb implements au {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.bb$c */
     /* loaded from: classes11.dex */
-    public static class C7608c {
+    public static class c {
         /* JADX INFO: Access modifiers changed from: package-private */
         public static String a(IBinder iBinder, String str, String str2, String str3) {
             Parcel obtain = Parcel.obtain();
@@ -106,7 +102,7 @@ public class bb implements au {
 
     private void a() {
         boolean z;
-        this.f124a = new ServiceConnectionC7607b();
+        this.f124a = new b();
         Intent intent = new Intent();
         intent.setClassName("com.heytap.openid", "com.heytap.openid.IdentifyService");
         intent.setAction("action.com.heytap.openid.OPEN_ID_SERVICE");
@@ -124,7 +120,7 @@ public class bb implements au {
         }
         synchronized (this.f126a) {
             try {
-                AbstractC7535b.m586a("oppo's " + str + " wait...");
+                com.xiaomi.channel.commonutils.logger.b.m586a("oppo's " + str + " wait...");
                 this.f126a.wait(3000L);
             } catch (Exception unused) {
             }
@@ -153,8 +149,8 @@ public class bb implements au {
             Signature[] signatureArr = this.f123a.getPackageManager().getPackageInfo(this.f123a.getPackageName(), 64).signatures;
             MessageDigest messageDigest = MessageDigest.getInstance("SHA1");
             StringBuilder sb = new StringBuilder();
-            for (byte b : messageDigest.digest(signatureArr[0].toByteArray())) {
-                sb.append(Integer.toHexString((b & 255) | 256).substring(1, 3));
+            for (byte b2 : messageDigest.digest(signatureArr[0].toByteArray())) {
+                sb.append(Integer.toHexString((b2 & 255) | 256).substring(1, 3));
             }
             return sb.toString();
         } catch (Exception unused) {

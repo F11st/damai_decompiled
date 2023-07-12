@@ -5,10 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.Pair;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8215n;
+import kotlin.collections.l;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
@@ -42,7 +41,7 @@ import tb.zq2;
 /* loaded from: classes3.dex */
 public final class RawSubstitution extends br2 {
     @NotNull
-    public static final C8354a Companion = new C8354a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final q51 b;
     @NotNull
@@ -51,21 +50,19 @@ public final class RawSubstitution extends br2 {
     private final TypeParameterUpperBoundEraser a;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.lazy.types.RawSubstitution$a */
     /* loaded from: classes3.dex */
-    public static final class C8354a {
-        private C8354a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8354a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.lazy.types.RawSubstitution$b */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C8355b {
+    public /* synthetic */ class b {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -102,12 +99,12 @@ public final class RawSubstitution extends br2 {
         if (fd2Var.c().getParameters().isEmpty()) {
             return hq2.a(fd2Var, Boolean.FALSE);
         }
-        if (AbstractC8271b.c0(fd2Var)) {
+        if (kotlin.reflect.jvm.internal.impl.builtins.b.c0(fd2Var)) {
             TypeProjection typeProjection = fd2Var.b().get(0);
             Variance projectionKind = typeProjection.getProjectionKind();
             z71 type = typeProjection.getType();
             b41.h(type, "componentTypeProjection.type");
-            e = C8213l.e(new zq2(projectionKind, m(type, q51Var)));
+            e = l.e(new zq2(projectionKind, m(type, q51Var)));
             return hq2.a(KotlinTypeFactory.i(fd2Var.getAnnotations(), fd2Var.c(), e, fd2Var.d(), null, 16, null), Boolean.FALSE);
         } else if (a81.a(fd2Var)) {
             fd2 j = kf0.j(b41.r("Raw error type: ", fd2Var.c()));
@@ -121,7 +118,7 @@ public final class RawSubstitution extends br2 {
             b41.h(typeConstructor, "declaration.typeConstructor");
             List<TypeParameterDescriptor> parameters = classDescriptor.getTypeConstructor().getParameters();
             b41.h(parameters, "declaration.typeConstructor.parameters");
-            q = C8215n.q(parameters, 10);
+            q = n.q(parameters, 10);
             ArrayList arrayList = new ArrayList(q);
             for (TypeParameterDescriptor typeParameterDescriptor : parameters) {
                 b41.h(typeParameterDescriptor, "parameter");
@@ -137,7 +134,7 @@ public final class RawSubstitution extends br2 {
                 @Override // kotlin.jvm.functions.Function1
                 @Nullable
                 public final fd2 invoke(@NotNull b81 b81Var) {
-                    ClassDescriptor a;
+                    ClassDescriptor a2;
                     Pair l;
                     b41.i(b81Var, "kotlinTypeRefiner");
                     ClassDescriptor classDescriptor2 = ClassDescriptor.this;
@@ -145,10 +142,10 @@ public final class RawSubstitution extends br2 {
                         classDescriptor2 = null;
                     }
                     hj h = classDescriptor2 == null ? null : DescriptorUtilsKt.h(classDescriptor2);
-                    if (h == null || (a = b81Var.a(h)) == null || b41.d(a, ClassDescriptor.this)) {
+                    if (h == null || (a2 = b81Var.a(h)) == null || b41.d(a2, ClassDescriptor.this)) {
                         return null;
                     }
-                    l = this.l(fd2Var, a, q51Var);
+                    l = this.l(fd2Var, a2, q51Var);
                     return (fd2) l.getFirst();
                 }
             }), Boolean.TRUE);
@@ -198,7 +195,7 @@ public final class RawSubstitution extends br2 {
         b41.i(typeParameterDescriptor, "parameter");
         b41.i(q51Var, RichTextNode.ATTR);
         b41.i(z71Var, "erasedUpperBound");
-        int i = C8355b.$EnumSwitchMapping$0[q51Var.d().ordinal()];
+        int i = b.$EnumSwitchMapping$0[q51Var.d().ordinal()];
         if (i != 1) {
             if (i != 2 && i != 3) {
                 throw new NoWhenBranchMatchedException();

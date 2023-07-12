@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
@@ -32,27 +31,26 @@ public class LoopViewPagerBannerView extends AbsView<LoopViewPagerBannerContract
     private TextView titleView;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.drama.mvp.LoopViewPagerBannerView$a */
     /* loaded from: classes7.dex */
-    public class C1825a implements XBanner.BannerItemViewCreator {
+    public class a implements XBanner.BannerItemViewCreator {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.tetris.component.drama.mvp.LoopViewPagerBannerView$a$a */
+        /* renamed from: cn.damai.tetris.component.drama.mvp.LoopViewPagerBannerView$a$a  reason: collision with other inner class name */
         /* loaded from: classes7.dex */
-        public class C1826a implements DMImageCreator.DMImageFailListener {
+        public class C0075a implements DMImageCreator.DMImageFailListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ ImageView a;
 
-            C1826a(C1825a c1825a, ImageView imageView) {
+            C0075a(a aVar, ImageView imageView) {
                 this.a = imageView;
             }
 
             @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-            public void onFail(DMImageCreator.C0501d c0501d) {
+            public void onFail(DMImageCreator.d dVar) {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "-442541112")) {
-                    ipChange.ipc$dispatch("-442541112", new Object[]{this, c0501d});
+                    ipChange.ipc$dispatch("-442541112", new Object[]{this, dVar});
                 } else {
                     this.a.setImageResource(R$drawable.uikit_default_image_bg_gradient_v2);
                 }
@@ -60,28 +58,27 @@ public class LoopViewPagerBannerView extends AbsView<LoopViewPagerBannerContract
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.tetris.component.drama.mvp.LoopViewPagerBannerView$a$b */
         /* loaded from: classes7.dex */
-        public class C1827b implements DMImageCreator.DMImageSuccListener {
+        public class b implements DMImageCreator.DMImageSuccListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ ImageView a;
 
-            C1827b(C1825a c1825a, ImageView imageView) {
+            b(a aVar, ImageView imageView) {
                 this.a = imageView;
             }
 
             @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-            public void onSuccess(DMImageCreator.C0502e c0502e) {
+            public void onSuccess(DMImageCreator.e eVar) {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "762402653")) {
-                    ipChange.ipc$dispatch("762402653", new Object[]{this, c0502e});
+                    ipChange.ipc$dispatch("762402653", new Object[]{this, eVar});
                 } else {
-                    this.a.setImageDrawable(c0502e.a);
+                    this.a.setImageDrawable(eVar.a);
                 }
             }
         }
 
-        C1825a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.banner.sub.XBanner.BannerItemViewCreator
@@ -96,7 +93,7 @@ public class LoopViewPagerBannerView extends AbsView<LoopViewPagerBannerContract
             imageView.setScaleType(LoopViewPagerBannerView.this.scaleType);
             String bannerPicUrl = bannerItem.bannerPicUrl();
             imageView.setImageResource(R$drawable.uikit_default_image_bg_grey);
-            C0504a.b().c(bannerPicUrl).n(new C1827b(this, imageView)).e(new C1826a(this, imageView)).f();
+            cn.damai.common.image.a.b().c(bannerPicUrl).n(new b(this, imageView)).e(new C0075a(this, imageView)).f();
         }
 
         @Override // cn.damai.uikit.banner.sub.XBanner.BannerItemViewCreator
@@ -116,7 +113,7 @@ public class LoopViewPagerBannerView extends AbsView<LoopViewPagerBannerContract
             view.findViewById(i).setVisibility(0);
             this.titleView = (TextView) view.findViewById(R$id.tv_project_tip);
         }
-        xBanner.setViewCreator(new C1825a());
+        xBanner.setViewCreator(new a());
         xBanner.setBannerClickListener(this);
         xBanner.setListener((XIndicator) view.findViewById(R$id.loop_indicator));
     }

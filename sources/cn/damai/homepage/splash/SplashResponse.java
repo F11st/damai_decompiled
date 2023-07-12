@@ -9,7 +9,7 @@ import com.android.alibaba.ip.runtime.IpChange;
 /* loaded from: classes14.dex */
 public class SplashResponse implements Parcelable {
     private static transient /* synthetic */ IpChange $ipChange;
-    public static final Parcelable.Creator<SplashResponse> CREATOR = new C1159a();
+    public static final Parcelable.Creator<SplashResponse> CREATOR = new a();
     private String os;
     private String pic;
     private String pic2;
@@ -17,12 +17,11 @@ public class SplashResponse implements Parcelable {
     private String scm;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.splash.SplashResponse$a */
     /* loaded from: classes14.dex */
-    public class C1159a implements Parcelable.Creator<SplashResponse> {
+    public class a implements Parcelable.Creator<SplashResponse> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1159a() {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

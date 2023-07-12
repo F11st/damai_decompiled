@@ -5,7 +5,7 @@ import java.io.InvalidObjectException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
 import java.util.Map;
-import kotlin.collections.C8225w;
+import kotlin.collections.w;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
 import tb.k50;
@@ -14,19 +14,18 @@ import tb.k50;
 /* loaded from: classes3.dex */
 final class SerializedMap implements Externalizable {
     @NotNull
-    public static final C8197a Companion = new C8197a(null);
+    public static final a Companion = new a(null);
     private static final long serialVersionUID = 0;
     @NotNull
     private Map<?, ?> map;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.collections.builders.SerializedMap$a */
     /* loaded from: classes3.dex */
-    public static final class C8197a {
-        private C8197a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8197a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -49,11 +48,11 @@ final class SerializedMap implements Externalizable {
         if (readByte == 0) {
             int readInt = objectInput.readInt();
             if (readInt >= 0) {
-                d = C8225w.d(readInt);
+                d = w.d(readInt);
                 for (int i = 0; i < readInt; i++) {
                     d.put(objectInput.readObject(), objectInput.readObject());
                 }
-                b = C8225w.b(d);
+                b = w.b(d);
                 this.map = b;
                 return;
             }
@@ -81,7 +80,7 @@ final class SerializedMap implements Externalizable {
     public SerializedMap() {
         /*
             r1 = this;
-            java.util.Map r0 = kotlin.collections.C8223u.i()
+            java.util.Map r0 = kotlin.collections.u.i()
             r1.<init>(r0)
             return
         */

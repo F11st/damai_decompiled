@@ -30,13 +30,12 @@ public class SDKJSBridgeService extends WVApiPlugin {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.jsbridge.SDKJSBridgeService$a */
     /* loaded from: classes11.dex */
-    public class AsyncTaskC6719a extends AsyncTask<Object, Void, RpcResponse<LoginReturnData>> {
+    public class a extends AsyncTask<Object, Void, RpcResponse<LoginReturnData>> {
         final /* synthetic */ String a;
         final /* synthetic */ WVCallBackContext b;
 
-        AsyncTaskC6719a(String str, WVCallBackContext wVCallBackContext) {
+        a(String str, WVCallBackContext wVCallBackContext) {
             this.a = str;
             this.b = wVCallBackContext;
         }
@@ -186,7 +185,7 @@ public class SDKJSBridgeService extends WVApiPlugin {
                 String str2 = (String) jSONObject.get("action");
                 String str3 = (String) jSONObject.get("token");
                 if (!TextUtils.isEmpty(str3) && "testAccountSso".equals(str2)) {
-                    new CoordinatorWrapper().execute(new AsyncTaskC6719a(str3, wVCallBackContext), new Object[0]);
+                    new CoordinatorWrapper().execute(new a(str3, wVCallBackContext), new Object[0]);
                 }
                 return;
             } catch (JSONException unused) {

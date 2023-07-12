@@ -11,10 +11,9 @@ import android.os.Bundle;
 import androidx.annotation.UiThread;
 import androidx.fragment.app.FragmentActivity;
 import com.taobao.android.tlog.protocol.Constants;
-import com.taobao.application.common.impl.C6674a;
 import com.taobao.monitor.impl.common.Constants;
 import com.taobao.monitor.impl.data.fps.FPSCollector;
-import com.taobao.monitor.impl.data.windowevent.C6767a;
+import com.taobao.monitor.impl.data.windowevent.a;
 import com.taobao.monitor.impl.processor.launcher.LauncherProcessor;
 import com.taobao.monitor.impl.trace.ActivityLifeCycleDispatcher;
 import com.taobao.monitor.impl.trace.ApplicationBackgroundChangedDispatcher;
@@ -28,7 +27,7 @@ import java.util.Map;
 import java.util.Observable;
 import java.util.Observer;
 import java.util.UUID;
-import tb.C8934b0;
+import tb.b0;
 import tb.ca0;
 import tb.d3;
 import tb.e30;
@@ -55,13 +54,13 @@ public class ActivityLifecycle implements Application.ActivityLifecycleCallbacks
     private final Context g;
     private ActivityLifeCycleDispatcher h;
     private final d3 m;
-    private final Map<Activity, C6767a> b = new HashMap();
+    private final Map<Activity, a> b = new HashMap();
     private final Map<Activity, ud2> c = new HashMap();
     private final Map<Activity, FPSCollector> d = new HashMap();
     private final Map<Activity, IPage> e = new HashMap();
     private WeakReference<Activity> f = new WeakReference<>(null);
-    private final Application.ActivityLifecycleCallbacks i = C6674a.g().f();
-    private final Application.ActivityLifecycleCallbacks j = C6674a.g().c();
+    private final Application.ActivityLifecycleCallbacks i = com.taobao.application.common.impl.a.g().f();
+    private final Application.ActivityLifecycleCallbacks j = com.taobao.application.common.impl.a.g().c();
     private final BackgroundForegroundEventImpl k = new BackgroundForegroundEventImpl();
     private int l = 0;
 
@@ -79,7 +78,7 @@ public class ActivityLifecycle implements Application.ActivityLifecycleCallbacks
         this.m = d3Var;
         d3Var.a(this.l);
         this.g = application;
-        IDispatcher a = C8934b0.a(C8934b0.ACTIVITY_LIFECYCLE_DISPATCHER);
+        IDispatcher a = b0.a(b0.ACTIVITY_LIFECYCLE_DISPATCHER);
         if (a instanceof ActivityLifeCycleDispatcher) {
             this.h = (ActivityLifeCycleDispatcher) a;
         }
@@ -131,10 +130,10 @@ public class ActivityLifecycle implements Application.ActivityLifecycleCallbacks
             ((FragmentActivity) activity).getSupportFragmentManager().registerFragmentLifecycleCallbacks(new FragmentLifecycle(activity, replaceAll), true);
         }
         if (jd0.C && !this.b.containsKey(activity)) {
-            this.b.put(activity, new C6767a(activity).a());
+            this.b.put(activity, new a(activity).a());
         }
         e30.a("ActivityLifeCycle", Constants.AndroidJointPointKey.LIFECYCLE_KEY_ACTIVITY_CREATED, activity.getClass().getSimpleName());
-        C6674a.g().i(activity);
+        com.taobao.application.common.impl.a.g().i(activity);
         this.i.onActivityCreated(activity, bundle);
         this.j.onActivityCreated(activity, bundle);
     }
@@ -153,7 +152,7 @@ public class ActivityLifecycle implements Application.ActivityLifecycleCallbacks
         }
         if (this.a == 0) {
             b("");
-            C6674a.g().i(null);
+            com.taobao.application.common.impl.a.g().i(null);
         }
         if (jd0.C && this.b.containsKey(activity)) {
             this.b.get(activity).b();
@@ -210,7 +209,7 @@ public class ActivityLifecycle implements Application.ActivityLifecycleCallbacks
         } else if (jd0.w && jd0.B && Build.VERSION.SDK_INT >= 16 && !this.c.containsKey(activity)) {
             this.d.put(activity, new FPSCollector(activity));
         }
-        C6674a.g().i(activity);
+        com.taobao.application.common.impl.a.g().i(activity);
         this.i.onActivityResumed(activity);
         this.j.onActivityResumed(activity);
     }
@@ -227,7 +226,7 @@ public class ActivityLifecycle implements Application.ActivityLifecycleCallbacks
         int i = this.a + 1;
         this.a = i;
         if (i == 1) {
-            IDispatcher b = ca0.b(C8934b0.APPLICATION_BACKGROUND_CHANGED_DISPATCHER);
+            IDispatcher b = ca0.b(b0.APPLICATION_BACKGROUND_CHANGED_DISPATCHER);
             if (b instanceof ApplicationBackgroundChangedDispatcher) {
                 ((ApplicationBackgroundChangedDispatcher) b).f(0, ho2.a());
             }
@@ -239,9 +238,9 @@ public class ActivityLifecycle implements Application.ActivityLifecycleCallbacks
             this.h.j(activity, ho2.a());
         }
         if (!jd0.C && !this.b.containsKey(activity)) {
-            this.b.put(activity, new C6767a(activity).a());
+            this.b.put(activity, new a(activity).a());
         }
-        C6674a.g().i(activity);
+        com.taobao.application.common.impl.a.g().i(activity);
         this.i.onActivityStarted(activity);
         this.j.onActivityStarted(activity);
     }
@@ -261,7 +260,7 @@ public class ActivityLifecycle implements Application.ActivityLifecycleCallbacks
         if (i == 0) {
             lu0.a = true;
             uu1.PROCEDURE_MANAGER.b();
-            IDispatcher b = ca0.b(C8934b0.APPLICATION_BACKGROUND_CHANGED_DISPATCHER);
+            IDispatcher b = ca0.b(b0.APPLICATION_BACKGROUND_CHANGED_DISPATCHER);
             if (b instanceof ApplicationBackgroundChangedDispatcher) {
                 ((ApplicationBackgroundChangedDispatcher) b).f(1, ho2.a());
             }

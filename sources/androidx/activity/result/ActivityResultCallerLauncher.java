@@ -9,9 +9,9 @@ import com.taobao.aranger.constant.Constants;
 import com.taobao.weex.bridge.WXBridgeManager;
 import com.xiaomi.mipush.sdk.MiPushClient;
 import io.flutter.wpkbridge.WPKFactory;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -37,7 +37,7 @@ public final class ActivityResultCallerLauncher<I, O> extends ActivityResultLaun
         this.launcher = activityResultLauncher;
         this.callerContract = activityResultContract;
         this.input = i;
-        b = C8177b.b(new Function0<ActivityResultCallerLauncher$resultContract$2.AnonymousClass1>() { // from class: androidx.activity.result.ActivityResultCallerLauncher$resultContract$2
+        b = b.b(new Function0<ActivityResultCallerLauncher$resultContract$2.AnonymousClass1>() { // from class: androidx.activity.result.ActivityResultCallerLauncher$resultContract$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);

@@ -265,7 +265,7 @@ public final class ObservableTimeoutTimed<T> extends AbstractObservableWithUpstr
         this.other = observableSource2;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         if (this.other == null) {
             this.source.subscribe(new TimeoutTimedObserver(new ra2(observer), this.timeout, this.unit, this.scheduler.createWorker()));

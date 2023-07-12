@@ -2,9 +2,9 @@ package com.huawei.secure.android.common.encrypt.hash;
 
 import android.os.Build;
 import android.text.TextUtils;
-import com.huawei.secure.android.common.encrypt.utils.C5742b;
 import com.huawei.secure.android.common.encrypt.utils.EncryptUtil;
 import com.huawei.secure.android.common.encrypt.utils.HexUtil;
+import com.huawei.secure.android.common.encrypt.utils.b;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import javax.crypto.SecretKeyFactory;
@@ -35,7 +35,7 @@ public abstract class PBKDF2 {
             return secretKeyFactory.generateSecret(pBEKeySpec).getEncoded();
         } catch (NoSuchAlgorithmException | InvalidKeySpecException e2) {
             String str = a;
-            C5742b.b(str, "pbkdf exception : " + e2.getMessage());
+            b.b(str, "pbkdf exception : " + e2.getMessage());
             return new byte[0];
         }
     }
@@ -56,7 +56,7 @@ public abstract class PBKDF2 {
     public static byte[] pbkdf2SHA256(char[] cArr, byte[] bArr, int i2, int i3) {
         byte[] bArr2 = new byte[0];
         if (Build.VERSION.SDK_INT < 26) {
-            C5742b.b(a, "system version not high than 26");
+            b.b(a, "system version not high than 26");
             return bArr2;
         }
         return a(cArr, bArr, i2, i3, true);
@@ -106,16 +106,16 @@ public abstract class PBKDF2 {
     @Deprecated
     public static String pbkdf2Encrypt(String str, byte[] bArr, int i2, int i3) {
         if (TextUtils.isEmpty(str)) {
-            C5742b.b(a, "pwd is null.");
+            b.b(a, "pwd is null.");
             return "";
         } else if (i2 < 1000) {
-            C5742b.b(a, "iterations times is not enough.");
+            b.b(a, "iterations times is not enough.");
             return "";
         } else if (bArr == null || bArr.length < 8) {
-            C5742b.b(a, "salt parameter is null or length is not enough");
+            b.b(a, "salt parameter is null or length is not enough");
             return "";
         } else if (i3 < 32) {
-            C5742b.b(a, "cipherLen length is not enough");
+            b.b(a, "cipherLen length is not enough");
             return "";
         } else {
             byte[] pbkdf2 = pbkdf2(str.toCharArray(), bArr, i2, i3 * 8);
@@ -126,23 +126,23 @@ public abstract class PBKDF2 {
     public static String pbkdf2EncryptNew(String str, byte[] bArr, int i2, int i3) {
         byte[] pbkdf2SHA256;
         if (TextUtils.isEmpty(str)) {
-            C5742b.b(a, "pwd is null.");
+            b.b(a, "pwd is null.");
             return "";
         } else if (i2 < 1000) {
-            C5742b.b(a, "iterations times is not enough.");
+            b.b(a, "iterations times is not enough.");
             return "";
         } else if (bArr == null || bArr.length < 16) {
-            C5742b.b(a, "salt parameter is null or length is not enough");
+            b.b(a, "salt parameter is null or length is not enough");
             return "";
         } else if (i3 < 32) {
-            C5742b.b(a, "cipherLen length is not enough");
+            b.b(a, "cipherLen length is not enough");
             return "";
         } else {
             if (Build.VERSION.SDK_INT < 26) {
-                C5742b.c(a, "sha 1");
+                b.c(a, "sha 1");
                 pbkdf2SHA256 = pbkdf2(str.toCharArray(), bArr, i2, i3 * 8);
             } else {
-                C5742b.c(a, "sha 256");
+                b.c(a, "sha 256");
                 pbkdf2SHA256 = pbkdf2SHA256(str.toCharArray(), bArr, i2, i3 * 8);
             }
             return HexUtil.byteArray2HexStr(bArr) + HexUtil.byteArray2HexStr(pbkdf2SHA256);

@@ -1,17 +1,17 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeSource;
 import io.reactivex.SingleObserver;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.fuseable.HasUpstreamMaybeSource;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeContains<T> extends AbstractC8152e<Boolean> implements HasUpstreamMaybeSource<T> {
+public final class MaybeContains<T> extends e<Boolean> implements HasUpstreamMaybeSource<T> {
     final MaybeSource<T> source;
     final Object value;
 
@@ -75,7 +75,7 @@ public final class MaybeContains<T> extends AbstractC8152e<Boolean> implements H
         return this.source;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super Boolean> singleObserver) {
         this.source.subscribe(new ContainsMaybeObserver(singleObserver, this.value));
     }

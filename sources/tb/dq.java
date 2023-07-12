@@ -42,7 +42,7 @@ public final class dq {
             this.f = activity;
             this.g = null;
             this.d = view;
-            this.b = new di2.C9046b().z();
+            this.b = new di2.b().z();
             this.a = null;
             return;
         }

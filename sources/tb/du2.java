@@ -2,7 +2,6 @@ package tb;
 
 import kotlin.PublishedApi;
 import kotlin.jvm.JvmName;
-import kotlin.text.C8590b;
 import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
@@ -30,7 +29,7 @@ public final class du2 {
         int a2;
         int a3;
         if (j >= 0) {
-            a3 = C8590b.a(i);
+            a3 = kotlin.text.b.a(i);
             String l = Long.toString(j, a3);
             b41.h(l, "toString(this, checkRadix(radix))");
             return l;
@@ -43,11 +42,11 @@ public final class du2 {
             j3++;
         }
         StringBuilder sb = new StringBuilder();
-        a = C8590b.a(i);
+        a = kotlin.text.b.a(i);
         String l2 = Long.toString(j3, a);
         b41.h(l2, "toString(this, checkRadix(radix))");
         sb.append(l2);
-        a2 = C8590b.a(i);
+        a2 = kotlin.text.b.a(i);
         String l3 = Long.toString(j4, a2);
         b41.h(l3, "toString(this, checkRadix(radix))");
         sb.append(l3);

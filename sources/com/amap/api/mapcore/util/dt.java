@@ -32,7 +32,7 @@ public class dt implements TileProvider {
 
     private byte[] a(int i, int i2, int i3, String str) throws IOException {
         try {
-            return new C4523a(i, i2, i3, str).makeHttpRequest();
+            return new a(i, i2, i3, str).makeHttpRequest();
         } catch (Throwable unused) {
             return null;
         }
@@ -42,11 +42,11 @@ public class dt implements TileProvider {
     public final Tile getTile(int i, int i2, int i3) {
         try {
             MapConfig mapConfig = this.d;
-            byte[] a = a(i, i2, i3, mapConfig != null ? mapConfig.getMapLanguage() : "zh_cn");
-            if (a == null) {
+            byte[] a2 = a(i, i2, i3, mapConfig != null ? mapConfig.getMapLanguage() : "zh_cn");
+            if (a2 == null) {
                 return TileProvider.NO_TILE;
             }
-            return Tile.obtain(this.b, this.c, a);
+            return Tile.obtain(this.b, this.c, a2);
         } catch (IOException unused) {
             return TileProvider.NO_TILE;
         }
@@ -64,23 +64,22 @@ public class dt implements TileProvider {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.dt$a */
     /* loaded from: classes10.dex */
-    public class C4523a extends AbstractC4517dp {
+    public class a extends dp {
         private int e;
         private int f;
         private int g;
         private String h;
         private String i;
 
-        public C4523a(int i, int i2, int i3, String str) {
+        public a(int i, int i2, int i3, String str) {
             this.i = "";
             this.e = i;
             this.f = i2;
             this.g = i3;
             this.h = str;
             this.i = e();
-            setProxy(gl.a(C4640t.a));
+            setProxy(gl.a(t.a));
             setConnectionTimeout(5000);
             setSoTimeout(VerifyActivity.ALIAUTH_CLIENT_ERROR_GENERIC);
         }
@@ -88,7 +87,7 @@ public class dt implements TileProvider {
         private String a() {
             StringBuffer stringBuffer = new StringBuffer();
             stringBuffer.append("key=");
-            stringBuffer.append(C4554gc.f(C4640t.a));
+            stringBuffer.append(gc.f(t.a));
             stringBuffer.append("&channel=amapapi");
             if (!ej.a(this.e, this.f, this.g) && this.g >= 6) {
                 if (MapsInitializer.isLoadWorldGridMap()) {
@@ -119,7 +118,7 @@ public class dt implements TileProvider {
             stringBuffer3.append(stringBuffer2);
             String a2 = gf.a();
             stringBuffer3.append("&ts=" + a2);
-            stringBuffer3.append("&scode=" + gf.a(C4640t.a, a2, a));
+            stringBuffer3.append("&scode=" + gf.a(t.a, a2, a));
             return stringBuffer3.toString();
         }
 
@@ -153,7 +152,7 @@ public class dt implements TileProvider {
             return getURL();
         }
 
-        @Override // com.amap.api.mapcore.util.AbstractC4517dp, com.amap.api.mapcore.util.ii
+        @Override // com.amap.api.mapcore.util.dp, com.amap.api.mapcore.util.ii
         public Map<String, String> getParams() {
             return null;
         }
@@ -161,11 +160,11 @@ public class dt implements TileProvider {
         @Override // com.amap.api.mapcore.util.ii
         public Map<String, String> getRequestHead() {
             Hashtable hashtable = new Hashtable(16);
-            hashtable.put(IRequestConst.USER_AGENT, C4614m.c);
+            hashtable.put(IRequestConst.USER_AGENT, m.c);
             hashtable.put("Accept-Encoding", "gzip");
             hashtable.put("platinfo", String.format(Locale.US, "platform=Android&sdkversion=%s&product=%s", "7.4.0", "3dmap"));
-            hashtable.put("x-INFO", gf.a(C4640t.a));
-            hashtable.put("key", C4554gc.f(C4640t.a));
+            hashtable.put("x-INFO", gf.a(t.a));
+            hashtable.put("key", gc.f(t.a));
             hashtable.put("logversion", "2.1");
             return hashtable;
         }

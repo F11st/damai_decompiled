@@ -23,7 +23,7 @@ import tb.yt2;
 @GwtCompatible(emulated = true, serializable = true)
 /* loaded from: classes10.dex */
 public abstract class ImmutableList<E> extends ImmutableCollection<E> implements List<E>, RandomAccess {
-    private static final au2<Object> EMPTY_ITR = new C4972b(RegularImmutableList.EMPTY, 0);
+    private static final au2<Object> EMPTY_ITR = new b(RegularImmutableList.EMPTY, 0);
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
@@ -193,23 +193,22 @@ public abstract class ImmutableList<E> extends ImmutableCollection<E> implements
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableList$a */
     /* loaded from: classes10.dex */
-    public static final class C4971a<E> extends ImmutableCollection.AbstractC4967a<E> {
-        public C4971a() {
+    public static final class a<E> extends ImmutableCollection.a<E> {
+        public a() {
             this(4);
         }
 
-        @Override // com.google.common.collect.ImmutableCollection.AbstractC4968b
+        @Override // com.google.common.collect.ImmutableCollection.b
         @CanIgnoreReturnValue
         /* renamed from: h */
-        public C4971a<E> a(E e) {
+        public a<E> a(E e) {
             super.f(e);
             return this;
         }
 
         @CanIgnoreReturnValue
-        public C4971a<E> i(Iterator<? extends E> it) {
+        public a<E> i(Iterator<? extends E> it) {
             super.d(it);
             return this;
         }
@@ -220,24 +219,23 @@ public abstract class ImmutableList<E> extends ImmutableCollection<E> implements
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C4971a(int i) {
+        public a(int i) {
             super(i);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableList$b */
     /* loaded from: classes10.dex */
-    public static class C4972b<E> extends AbstractC5151a<E> {
+    public static class b<E> extends com.google.common.collect.a<E> {
         private final ImmutableList<E> c;
 
-        C4972b(ImmutableList<E> immutableList, int i) {
+        b(ImmutableList<E> immutableList, int i) {
             super(immutableList.size(), i);
             this.c = immutableList;
         }
 
-        @Override // com.google.common.collect.AbstractC5151a
+        @Override // com.google.common.collect.a
         protected E a(int i) {
             return this.c.get(i);
         }
@@ -248,18 +246,18 @@ public abstract class ImmutableList<E> extends ImmutableCollection<E> implements
         return asImmutableList(objArr, objArr.length);
     }
 
-    public static <E> C4971a<E> builder() {
-        return new C4971a<>();
+    public static <E> a<E> builder() {
+        return new a<>();
     }
 
     @Beta
-    public static <E> C4971a<E> builderWithExpectedSize(int i) {
-        C5191k.b(i, "expectedSize");
-        return new C4971a<>(i);
+    public static <E> a<E> builderWithExpectedSize(int i) {
+        k.b(i, "expectedSize");
+        return new a<>(i);
     }
 
     private static <E> ImmutableList<E> construct(Object... objArr) {
-        return asImmutableList(C5158b0.b(objArr));
+        return asImmutableList(b0.b(objArr));
     }
 
     public static <E> ImmutableList<E> copyOf(Iterable<? extends E> iterable) {
@@ -279,8 +277,8 @@ public abstract class ImmutableList<E> extends ImmutableCollection<E> implements
     }
 
     public static <E extends Comparable<? super E>> ImmutableList<E> sortedCopyOf(Iterable<? extends E> iterable) {
-        Comparable[] comparableArr = (Comparable[]) C5152a0.l(iterable, new Comparable[0]);
-        C5158b0.b(comparableArr);
+        Comparable[] comparableArr = (Comparable[]) a0.l(iterable, new Comparable[0]);
+        b0.b(comparableArr);
         Arrays.sort(comparableArr);
         return asImmutableList(comparableArr);
     }
@@ -425,7 +423,7 @@ public abstract class ImmutableList<E> extends ImmutableCollection<E> implements
         if (isEmpty()) {
             return (au2<E>) EMPTY_ITR;
         }
-        return new C4972b(this, i);
+        return new b(this, i);
     }
 
     public static <E> ImmutableList<E> copyOf(Collection<? extends E> collection) {
@@ -442,8 +440,8 @@ public abstract class ImmutableList<E> extends ImmutableCollection<E> implements
 
     public static <E> ImmutableList<E> sortedCopyOf(Comparator<? super E> comparator, Iterable<? extends E> iterable) {
         du1.p(comparator);
-        Object[] k = C5152a0.k(iterable);
-        C5158b0.b(k);
+        Object[] k = a0.k(iterable);
+        b0.b(k);
         Arrays.sort(k, comparator);
         return asImmutableList(k);
     }
@@ -468,7 +466,7 @@ public abstract class ImmutableList<E> extends ImmutableCollection<E> implements
         if (!it.hasNext()) {
             return of((Object) next);
         }
-        return new C4971a().a(next).i(it).j();
+        return new a().a(next).i(it).j();
     }
 
     public static <E> ImmutableList<E> of(E e, E e2, E e3, E e4, E e5, E e6, E e7, E e8) {

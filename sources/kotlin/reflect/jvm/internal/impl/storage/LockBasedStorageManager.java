@@ -28,13 +28,12 @@ public class LockBasedStorageManager implements StorageManager {
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
     public interface ExceptionHandlingStrategy {
-        public static final ExceptionHandlingStrategy THROW = new C8514a();
+        public static final ExceptionHandlingStrategy THROW = new a();
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager$ExceptionHandlingStrategy$a */
         /* loaded from: classes3.dex */
-        static class C8514a implements ExceptionHandlingStrategy {
-            C8514a() {
+        static class a implements ExceptionHandlingStrategy {
+            a() {
             }
 
             private static /* synthetic */ void a(int i) {
@@ -65,10 +64,9 @@ public class LockBasedStorageManager implements StorageManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager$a */
     /* loaded from: classes3.dex */
-    static class C8515a extends LockBasedStorageManager {
-        C8515a(String str, ExceptionHandlingStrategy exceptionHandlingStrategy, SimpleLock simpleLock) {
+    static class a extends LockBasedStorageManager {
+        a(String str, ExceptionHandlingStrategy exceptionHandlingStrategy, SimpleLock simpleLock) {
             super(str, exceptionHandlingStrategy, simpleLock, null);
         }
 
@@ -96,11 +94,11 @@ public class LockBasedStorageManager implements StorageManager {
 
         @Override // kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager
         @NotNull
-        protected <K, V> C8528m<V> g(@NotNull String str, K k) {
+        protected <K, V> m<V> g(@NotNull String str, K k) {
             if (str == null) {
                 a(0);
             }
-            C8528m<V> a = C8528m.a();
+            m<V> a = m.a();
             if (a == null) {
                 a(1);
             }
@@ -110,13 +108,12 @@ public class LockBasedStorageManager implements StorageManager {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager$b */
     /* loaded from: classes3.dex */
-    class C8516b<T> extends C8524i<T> {
+    class b<T> extends i<T> {
         final /* synthetic */ Object d;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        C8516b(LockBasedStorageManager lockBasedStorageManager, LockBasedStorageManager lockBasedStorageManager2, Function0 function0, Object obj) {
+        b(LockBasedStorageManager lockBasedStorageManager, LockBasedStorageManager lockBasedStorageManager2, Function0 function0, Object obj) {
             super(lockBasedStorageManager2, function0);
             this.d = obj;
         }
@@ -125,10 +122,10 @@ public class LockBasedStorageManager implements StorageManager {
             throw new IllegalStateException(String.format("@NotNull method %s.%s must not return null", "kotlin/reflect/jvm/internal/impl/storage/LockBasedStorageManager$4", "recursionDetected"));
         }
 
-        @Override // kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.C8522g
+        @Override // kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.g
         @NotNull
-        protected C8528m<T> c(boolean z) {
-            C8528m<T> d = C8528m.d(this.d);
+        protected m<T> c(boolean z) {
+            m<T> d = m.d(this.d);
             if (d == null) {
                 a(0);
             }
@@ -138,14 +135,13 @@ public class LockBasedStorageManager implements StorageManager {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager$c */
     /* loaded from: classes3.dex */
-    class C8517c<T> extends AbstractC8525j<T> {
+    class c<T> extends j<T> {
         final /* synthetic */ Function1 e;
         final /* synthetic */ Function1 f;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        C8517c(LockBasedStorageManager lockBasedStorageManager, LockBasedStorageManager lockBasedStorageManager2, Function0 function0, Function1 function1, Function1 function12) {
+        c(LockBasedStorageManager lockBasedStorageManager, LockBasedStorageManager lockBasedStorageManager2, Function0 function0, Function1 function1, Function1 function12) {
             super(lockBasedStorageManager2, function0);
             this.e = function1;
             this.f = function12;
@@ -173,25 +169,25 @@ public class LockBasedStorageManager implements StorageManager {
             }
         }
 
-        @Override // kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.C8522g
+        @Override // kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.g
         @NotNull
-        protected C8528m<T> c(boolean z) {
+        protected m<T> c(boolean z) {
             Function1 function1 = this.e;
             if (function1 == null) {
-                C8528m<T> c = super.c(z);
+                m<T> c = super.c(z);
                 if (c == null) {
                     a(0);
                 }
                 return c;
             }
-            C8528m<T> d = C8528m.d(function1.invoke(Boolean.valueOf(z)));
+            m<T> d = m.d(function1.invoke(Boolean.valueOf(z)));
             if (d == null) {
                 a(1);
             }
             return d;
         }
 
-        @Override // kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.AbstractC8523h
+        @Override // kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.h
         protected void d(@NotNull T t) {
             if (t == null) {
                 a(2);
@@ -201,10 +197,9 @@ public class LockBasedStorageManager implements StorageManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager$d */
     /* loaded from: classes3.dex */
-    private static class C8518d<K, V> extends C8519e<K, V> implements CacheWithNotNullValues<K, V> {
-        /* synthetic */ C8518d(LockBasedStorageManager lockBasedStorageManager, ConcurrentMap concurrentMap, C8515a c8515a) {
+    private static class d<K, V> extends e<K, V> implements CacheWithNotNullValues<K, V> {
+        /* synthetic */ d(LockBasedStorageManager lockBasedStorageManager, ConcurrentMap concurrentMap, a aVar) {
             this(lockBasedStorageManager, concurrentMap);
         }
 
@@ -236,7 +231,7 @@ public class LockBasedStorageManager implements StorageManager {
             }
         }
 
-        @Override // kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.C8519e, kotlin.reflect.jvm.internal.impl.storage.CacheWithNotNullValues
+        @Override // kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.e, kotlin.reflect.jvm.internal.impl.storage.CacheWithNotNullValues
         @NotNull
         public V computeIfAbsent(K k, @NotNull Function0<? extends V> function0) {
             if (function0 == null) {
@@ -250,7 +245,7 @@ public class LockBasedStorageManager implements StorageManager {
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        private C8518d(@NotNull LockBasedStorageManager lockBasedStorageManager, @NotNull ConcurrentMap<C8521f<K, V>, Object> concurrentMap) {
+        private d(@NotNull LockBasedStorageManager lockBasedStorageManager, @NotNull ConcurrentMap<f<K, V>, Object> concurrentMap) {
             super(lockBasedStorageManager, concurrentMap, null);
             if (lockBasedStorageManager == null) {
                 a(0);
@@ -262,25 +257,23 @@ public class LockBasedStorageManager implements StorageManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager$e */
     /* loaded from: classes3.dex */
-    private static class C8519e<K, V> extends C8526k<C8521f<K, V>, V> implements CacheWithNullableValues<K, V> {
+    private static class e<K, V> extends k<f<K, V>, V> implements CacheWithNullableValues<K, V> {
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager$e$a */
         /* loaded from: classes3.dex */
-        class C8520a implements Function1<C8521f<K, V>, V> {
-            C8520a() {
+        class a implements Function1<f<K, V>, V> {
+            a() {
             }
 
             @Override // kotlin.jvm.functions.Function1
             /* renamed from: a */
-            public V invoke(C8521f<K, V> c8521f) {
-                return (V) ((C8521f) c8521f).b.invoke();
+            public V invoke(f<K, V> fVar) {
+                return (V) ((f) fVar).b.invoke();
             }
         }
 
-        /* synthetic */ C8519e(LockBasedStorageManager lockBasedStorageManager, ConcurrentMap concurrentMap, C8515a c8515a) {
+        /* synthetic */ e(LockBasedStorageManager lockBasedStorageManager, ConcurrentMap concurrentMap, a aVar) {
             this(lockBasedStorageManager, concurrentMap);
         }
 
@@ -307,12 +300,12 @@ public class LockBasedStorageManager implements StorageManager {
             if (function0 == null) {
                 a(2);
             }
-            return invoke(new C8521f(k, function0));
+            return invoke(new f(k, function0));
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        private C8519e(@NotNull LockBasedStorageManager lockBasedStorageManager, @NotNull ConcurrentMap<C8521f<K, V>, Object> concurrentMap) {
-            super(lockBasedStorageManager, concurrentMap, new C8520a());
+        private e(@NotNull LockBasedStorageManager lockBasedStorageManager, @NotNull ConcurrentMap<f<K, V>, Object> concurrentMap) {
+            super(lockBasedStorageManager, concurrentMap, new a());
             if (lockBasedStorageManager == null) {
                 a(0);
             }
@@ -324,13 +317,12 @@ public class LockBasedStorageManager implements StorageManager {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager$f */
     /* loaded from: classes3.dex */
-    public static class C8521f<K, V> {
+    public static class f<K, V> {
         private final K a;
         private final Function0<? extends V> b;
 
-        public C8521f(K k, Function0<? extends V> function0) {
+        public f(K k, Function0<? extends V> function0) {
             this.a = k;
             this.b = function0;
         }
@@ -339,7 +331,7 @@ public class LockBasedStorageManager implements StorageManager {
             if (this == obj) {
                 return true;
             }
-            return obj != null && C8521f.class == obj.getClass() && this.a.equals(((C8521f) obj).a);
+            return obj != null && f.class == obj.getClass() && this.a.equals(((f) obj).a);
         }
 
         public int hashCode() {
@@ -349,15 +341,14 @@ public class LockBasedStorageManager implements StorageManager {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager$g */
     /* loaded from: classes3.dex */
-    public static class C8522g<T> implements NullableLazyValue<T> {
+    public static class g<T> implements NullableLazyValue<T> {
         private final LockBasedStorageManager a;
         private final Function0<? extends T> b;
         @Nullable
         private volatile Object c;
 
-        public C8522g(@NotNull LockBasedStorageManager lockBasedStorageManager, @NotNull Function0<? extends T> function0) {
+        public g(@NotNull LockBasedStorageManager lockBasedStorageManager, @NotNull Function0<? extends T> function0) {
             if (lockBasedStorageManager == null) {
                 a(0);
             }
@@ -400,8 +391,8 @@ public class LockBasedStorageManager implements StorageManager {
         }
 
         @NotNull
-        protected C8528m<T> c(boolean z) {
-            C8528m<T> g = this.a.g("in a lazy value", null);
+        protected m<T> c(boolean z) {
+            m<T> g = this.a.g("in a lazy value", null);
             if (g == null) {
                 a(2);
             }
@@ -420,13 +411,13 @@ public class LockBasedStorageManager implements StorageManager {
                         NotValue notValue = NotValue.COMPUTING;
                         if (obj2 == notValue) {
                             this.c = NotValue.RECURSION_WAS_DETECTED;
-                            C8528m<T> c = c(true);
+                            m<T> c = c(true);
                             if (!c.c()) {
                                 invoke = c.b();
                             }
                         }
                         if (obj2 == NotValue.RECURSION_WAS_DETECTED) {
-                            C8528m<T> c2 = c(false);
+                            m<T> c2 = c(false);
                             if (!c2.c()) {
                                 invoke = c2.b();
                             }
@@ -452,14 +443,13 @@ public class LockBasedStorageManager implements StorageManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager$h */
     /* loaded from: classes3.dex */
-    private static abstract class AbstractC8523h<T> extends C8522g<T> {
+    private static abstract class h<T> extends g<T> {
         @Nullable
-        private volatile C8530a<T> d;
+        private volatile kotlin.reflect.jvm.internal.impl.storage.a<T> d;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AbstractC8523h(@NotNull LockBasedStorageManager lockBasedStorageManager, @NotNull Function0<? extends T> function0) {
+        public h(@NotNull LockBasedStorageManager lockBasedStorageManager, @NotNull Function0<? extends T> function0) {
             super(lockBasedStorageManager, function0);
             if (lockBasedStorageManager == null) {
                 a(0);
@@ -482,9 +472,9 @@ public class LockBasedStorageManager implements StorageManager {
             throw new IllegalArgumentException(String.format("Argument for @NotNull parameter '%s' of %s.%s must not be null", objArr));
         }
 
-        @Override // kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.C8522g
+        @Override // kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.g
         protected final void b(T t) {
-            this.d = new C8530a<>(t);
+            this.d = new kotlin.reflect.jvm.internal.impl.storage.a<>(t);
             try {
                 d(t);
             } finally {
@@ -494,22 +484,21 @@ public class LockBasedStorageManager implements StorageManager {
 
         protected abstract void d(T t);
 
-        @Override // kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.C8522g, kotlin.jvm.functions.Function0
+        @Override // kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.g, kotlin.jvm.functions.Function0
         public T invoke() {
-            C8530a<T> c8530a = this.d;
-            if (c8530a != null && c8530a.b()) {
-                return c8530a.a();
+            kotlin.reflect.jvm.internal.impl.storage.a<T> aVar = this.d;
+            if (aVar != null && aVar.b()) {
+                return aVar.a();
             }
             return (T) super.invoke();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager$i */
     /* loaded from: classes3.dex */
-    private static class C8524i<T> extends C8522g<T> implements NotNullLazyValue<T> {
+    private static class i<T> extends g<T> implements NotNullLazyValue<T> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C8524i(@NotNull LockBasedStorageManager lockBasedStorageManager, @NotNull Function0<? extends T> function0) {
+        public i(@NotNull LockBasedStorageManager lockBasedStorageManager, @NotNull Function0<? extends T> function0) {
             super(lockBasedStorageManager, function0);
             if (lockBasedStorageManager == null) {
                 a(0);
@@ -543,7 +532,7 @@ public class LockBasedStorageManager implements StorageManager {
             }
         }
 
-        @Override // kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.C8522g, kotlin.jvm.functions.Function0
+        @Override // kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.g, kotlin.jvm.functions.Function0
         @NotNull
         public T invoke() {
             T t = (T) super.invoke();
@@ -555,11 +544,10 @@ public class LockBasedStorageManager implements StorageManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager$j */
     /* loaded from: classes3.dex */
-    private static abstract class AbstractC8525j<T> extends AbstractC8523h<T> implements NotNullLazyValue<T> {
+    private static abstract class j<T> extends h<T> implements NotNullLazyValue<T> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public AbstractC8525j(@NotNull LockBasedStorageManager lockBasedStorageManager, @NotNull Function0<? extends T> function0) {
+        public j(@NotNull LockBasedStorageManager lockBasedStorageManager, @NotNull Function0<? extends T> function0) {
             super(lockBasedStorageManager, function0);
             if (lockBasedStorageManager == null) {
                 a(0);
@@ -593,7 +581,7 @@ public class LockBasedStorageManager implements StorageManager {
             }
         }
 
-        @Override // kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.AbstractC8523h, kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.C8522g, kotlin.jvm.functions.Function0
+        @Override // kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.h, kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.g, kotlin.jvm.functions.Function0
         @NotNull
         public T invoke() {
             T t = (T) super.invoke();
@@ -606,14 +594,13 @@ public class LockBasedStorageManager implements StorageManager {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager$k */
     /* loaded from: classes3.dex */
-    public static class C8526k<K, V> implements MemoizedFunctionToNullable<K, V> {
+    public static class k<K, V> implements MemoizedFunctionToNullable<K, V> {
         private final LockBasedStorageManager a;
         private final ConcurrentMap<K, Object> b;
         private final Function1<? super K, ? extends V> c;
 
-        public C8526k(@NotNull LockBasedStorageManager lockBasedStorageManager, @NotNull ConcurrentMap<K, Object> concurrentMap, @NotNull Function1<? super K, ? extends V> function1) {
+        public k(@NotNull LockBasedStorageManager lockBasedStorageManager, @NotNull ConcurrentMap<K, Object> concurrentMap, @NotNull Function1<? super K, ? extends V> function1) {
             if (lockBasedStorageManager == null) {
                 a(0);
             }
@@ -667,8 +654,8 @@ public class LockBasedStorageManager implements StorageManager {
         }
 
         @NotNull
-        protected C8528m<V> c(K k, boolean z) {
-            C8528m<V> g = this.a.g("", k);
+        protected m<V> c(K k, boolean z) {
+            m<V> g = this.a.g("", k);
             if (g == null) {
                 a(3);
             }
@@ -687,14 +674,14 @@ public class LockBasedStorageManager implements StorageManager {
                     NotValue notValue = NotValue.COMPUTING;
                     if (obj2 == notValue) {
                         obj2 = NotValue.RECURSION_WAS_DETECTED;
-                        C8528m<V> c = c(k, true);
+                        m<V> c = c(k, true);
                         if (!c.c()) {
                             v = c.b();
                             return v;
                         }
                     }
                     if (obj2 == NotValue.RECURSION_WAS_DETECTED) {
-                        C8528m<V> c2 = c(k, false);
+                        m<V> c2 = c(k, false);
                         if (!c2.c()) {
                             v = c2.b();
                             return v;
@@ -727,11 +714,10 @@ public class LockBasedStorageManager implements StorageManager {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager$l */
     /* loaded from: classes3.dex */
-    public static class C8527l<K, V> extends C8526k<K, V> implements MemoizedFunctionToNotNull<K, V> {
+    public static class l<K, V> extends k<K, V> implements MemoizedFunctionToNotNull<K, V> {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C8527l(@NotNull LockBasedStorageManager lockBasedStorageManager, @NotNull ConcurrentMap<K, Object> concurrentMap, @NotNull Function1<? super K, ? extends V> function1) {
+        public l(@NotNull LockBasedStorageManager lockBasedStorageManager, @NotNull ConcurrentMap<K, Object> concurrentMap, @NotNull Function1<? super K, ? extends V> function1) {
             super(lockBasedStorageManager, concurrentMap, function1);
             if (lockBasedStorageManager == null) {
                 a(0);
@@ -770,7 +756,7 @@ public class LockBasedStorageManager implements StorageManager {
             }
         }
 
-        @Override // kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.C8526k, kotlin.jvm.functions.Function1
+        @Override // kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager.k, kotlin.jvm.functions.Function1
         @NotNull
         public V invoke(K k) {
             V v = (V) super.invoke(k);
@@ -783,25 +769,24 @@ public class LockBasedStorageManager implements StorageManager {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager$m */
     /* loaded from: classes3.dex */
-    public static class C8528m<T> {
+    public static class m<T> {
         private final T a;
         private final boolean b;
 
-        private C8528m(T t, boolean z) {
+        private m(T t, boolean z) {
             this.a = t;
             this.b = z;
         }
 
         @NotNull
-        public static <T> C8528m<T> a() {
-            return new C8528m<>(null, true);
+        public static <T> m<T> a() {
+            return new m<>(null, true);
         }
 
         @NotNull
-        public static <T> C8528m<T> d(T t) {
-            return new C8528m<>(t, false);
+        public static <T> m<T> d(T t) {
+            return new m<>(t, false);
         }
 
         public T b() {
@@ -821,10 +806,10 @@ public class LockBasedStorageManager implements StorageManager {
         String L0;
         L0 = StringsKt__StringsKt.L0(LockBasedStorageManager.class.getCanonicalName(), ".", "");
         d = L0;
-        NO_LOCKS = new C8515a("NO_LOCKS", ExceptionHandlingStrategy.THROW, le0.INSTANCE);
+        NO_LOCKS = new a("NO_LOCKS", ExceptionHandlingStrategy.THROW, le0.INSTANCE);
     }
 
-    /* synthetic */ LockBasedStorageManager(String str, ExceptionHandlingStrategy exceptionHandlingStrategy, SimpleLock simpleLock, C8515a c8515a) {
+    /* synthetic */ LockBasedStorageManager(String str, ExceptionHandlingStrategy exceptionHandlingStrategy, SimpleLock simpleLock, a aVar) {
         this(str, exceptionHandlingStrategy, simpleLock);
     }
 
@@ -871,19 +856,19 @@ public class LockBasedStorageManager implements StorageManager {
         }
         StackTraceElement[] stackTrace = t.getStackTrace();
         int length = stackTrace.length;
-        int i = -1;
-        int i2 = 0;
+        int i2 = -1;
+        int i3 = 0;
         while (true) {
-            if (i2 >= length) {
+            if (i3 >= length) {
                 break;
-            } else if (!stackTrace[i2].getClassName().startsWith(d)) {
-                i = i2;
+            } else if (!stackTrace[i3].getClassName().startsWith(d)) {
+                i2 = i3;
                 break;
             } else {
-                i2++;
+                i3++;
             }
         }
-        List subList = Arrays.asList(stackTrace).subList(i, length);
+        List subList = Arrays.asList(stackTrace).subList(i2, length);
         t.setStackTrace((StackTraceElement[]) subList.toArray(new StackTraceElement[subList.size()]));
         return t;
     }
@@ -903,13 +888,13 @@ public class LockBasedStorageManager implements StorageManager {
     @Override // kotlin.reflect.jvm.internal.impl.storage.StorageManager
     @NotNull
     public <K, V> CacheWithNotNullValues<K, V> createCacheWithNotNullValues() {
-        return new C8518d(this, d(), null);
+        return new d(this, d(), null);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.storage.StorageManager
     @NotNull
     public <K, V> CacheWithNullableValues<K, V> createCacheWithNullableValues() {
-        return new C8519e(this, d(), null);
+        return new e(this, d(), null);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.storage.StorageManager
@@ -918,7 +903,7 @@ public class LockBasedStorageManager implements StorageManager {
         if (function0 == null) {
             a(23);
         }
-        return new C8524i(this, function0);
+        return new i(this, function0);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.storage.StorageManager
@@ -930,7 +915,7 @@ public class LockBasedStorageManager implements StorageManager {
         if (function12 == null) {
             a(29);
         }
-        return new C8517c(this, this, function0, function1, function12);
+        return new c(this, this, function0, function1, function12);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.storage.StorageManager
@@ -939,11 +924,11 @@ public class LockBasedStorageManager implements StorageManager {
         if (function1 == null) {
             a(9);
         }
-        MemoizedFunctionToNotNull<K, V> e = e(function1, d());
-        if (e == null) {
+        MemoizedFunctionToNotNull<K, V> e2 = e(function1, d());
+        if (e2 == null) {
             a(10);
         }
-        return e;
+        return e2;
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.storage.StorageManager
@@ -952,11 +937,11 @@ public class LockBasedStorageManager implements StorageManager {
         if (function1 == null) {
             a(19);
         }
-        MemoizedFunctionToNullable<K, V> f = f(function1, d());
-        if (f == null) {
+        MemoizedFunctionToNullable<K, V> f2 = f(function1, d());
+        if (f2 == null) {
             a(20);
         }
-        return f;
+        return f2;
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.storage.StorageManager
@@ -965,7 +950,7 @@ public class LockBasedStorageManager implements StorageManager {
         if (function0 == null) {
             a(30);
         }
-        return new C8522g(this, function0);
+        return new g(this, function0);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.storage.StorageManager
@@ -977,7 +962,7 @@ public class LockBasedStorageManager implements StorageManager {
         if (t == null) {
             a(27);
         }
-        return new C8516b(this, this, function0, t);
+        return new b(this, this, function0, t);
     }
 
     @NotNull
@@ -988,7 +973,7 @@ public class LockBasedStorageManager implements StorageManager {
         if (concurrentMap == null) {
             a(15);
         }
-        return new C8527l(this, concurrentMap, function1);
+        return new l(this, concurrentMap, function1);
     }
 
     @NotNull
@@ -999,11 +984,11 @@ public class LockBasedStorageManager implements StorageManager {
         if (concurrentMap == null) {
             a(22);
         }
-        return new C8526k(this, concurrentMap, function1);
+        return new k(this, concurrentMap, function1);
     }
 
     @NotNull
-    protected <K, V> C8528m<V> g(@NotNull String str, K k) {
+    protected <K, V> m<V> g(@NotNull String str, K k2) {
         String str2;
         if (str == null) {
             a(35);
@@ -1011,10 +996,10 @@ public class LockBasedStorageManager implements StorageManager {
         StringBuilder sb = new StringBuilder();
         sb.append("Recursion detected ");
         sb.append(str);
-        if (k == null) {
+        if (k2 == null) {
             str2 = "";
         } else {
-            str2 = "on input: " + k;
+            str2 = "on input: " + k2;
         }
         sb.append(str2);
         sb.append(" under ");

@@ -2,7 +2,7 @@ package com.alibaba.security.biometrics.service.model.result;
 
 import com.alibaba.analytics.core.sync.UploadQueueMgr;
 import com.alibaba.security.biometrics.service.common.ABLogRecorderKeys;
-import com.alibaba.security.common.c.C3800a;
+import com.alibaba.security.common.c.a;
 import com.alimm.xadsdk.request.builder.IRequestConst;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -528,7 +528,7 @@ public class ALBiometricsResult implements Serializable {
             }
             return jSONObject.toString();
         } catch (JSONException unused) {
-            C3800a.b();
+            a.b();
             return "";
         }
     }

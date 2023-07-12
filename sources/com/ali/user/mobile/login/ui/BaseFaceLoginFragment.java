@@ -55,7 +55,7 @@ public class BaseFaceLoginFragment extends BaseHistoryFragment implements FaceLo
 
     @Override // com.ali.user.mobile.base.ui.BaseFragment
     protected int getLayoutContent() {
-        return R.C2965layout.aliuser_face_fragment;
+        return R.layout.aliuser_face_fragment;
     }
 
     @Override // com.ali.user.mobile.login.ui.BaseLoginFragment, com.ali.user.mobile.base.ui.BaseFragment, com.ali.user.mobile.login.ui.BaseLoginView

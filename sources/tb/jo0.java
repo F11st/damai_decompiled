@@ -6,10 +6,8 @@ import cn.damai.common.AppConfig;
 import cn.damai.common.nav.DMNav;
 import cn.damai.fluttercommon.DMBaseFlutterActivity;
 import cn.damai.fluttercommon.DMNFCActivity;
-import cn.damai.solid.C1768a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.idlefish.flutterboost.C5776c;
 import com.idlefish.flutterboost.FlutterBoost;
 import com.idlefish.flutterboost.FlutterBoostDelegate;
 import com.idlefish.flutterboost.containers.FlutterBoostActivity;
@@ -31,28 +29,27 @@ public class jo0 {
     private volatile boolean a = false;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.jo0$a */
     /* loaded from: classes5.dex */
-    public class C9316a implements FlutterBoostDelegate {
+    public class a implements FlutterBoostDelegate {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9316a(jo0 jo0Var) {
+        a(jo0 jo0Var) {
         }
 
         @Override // com.idlefish.flutterboost.FlutterBoostDelegate
-        public boolean popRoute(C5776c c5776c) {
+        public boolean popRoute(com.idlefish.flutterboost.c cVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-600517833")) {
-                return ((Boolean) ipChange.ipc$dispatch("-600517833", new Object[]{this, c5776c})).booleanValue();
+                return ((Boolean) ipChange.ipc$dispatch("-600517833", new Object[]{this, cVar})).booleanValue();
             }
             return false;
         }
 
         @Override // com.idlefish.flutterboost.FlutterBoostDelegate
-        public void pushFlutterRoute(C5776c c5776c) {
+        public void pushFlutterRoute(com.idlefish.flutterboost.c cVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-900168956")) {
-                ipChange.ipc$dispatch("-900168956", new Object[]{this, c5776c});
+                ipChange.ipc$dispatch("-900168956", new Object[]{this, cVar});
                 return;
             }
             Activity c = k3.b().c();
@@ -60,20 +57,20 @@ public class jo0 {
                 c = FlutterBoost.h().e();
             }
             Class cls = DMBaseFlutterActivity.class;
-            if (!TextUtils.isEmpty(c5776c.b()) && "dm_ticket_nfc".equals(c5776c.b())) {
+            if (!TextUtils.isEmpty(cVar.b()) && "dm_ticket_nfc".equals(cVar.b())) {
                 cls = DMNFCActivity.class;
             }
-            c.startActivity(new FlutterBoostActivity.C5779a(cls).a(FlutterActivityLaunchConfigs.BackgroundMode.transparent).c(false).d(c5776c.d()).e(c5776c.b()).f(c5776c.a()).b(c));
+            c.startActivity(new FlutterBoostActivity.a(cls).a(FlutterActivityLaunchConfigs.BackgroundMode.transparent).c(false).d(cVar.d()).e(cVar.b()).f(cVar.a()).b(c));
         }
 
         @Override // com.idlefish.flutterboost.FlutterBoostDelegate
-        public void pushNativeRoute(C5776c c5776c) {
+        public void pushNativeRoute(com.idlefish.flutterboost.c cVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1246254265")) {
-                ipChange.ipc$dispatch("-1246254265", new Object[]{this, c5776c});
+                ipChange.ipc$dispatch("-1246254265", new Object[]{this, cVar});
             } else if (FlutterBoost.h().e() == null) {
             } else {
-                DMNav.from(FlutterBoost.h().e()).forResult(c5776c.c()).withExtras(fo.a(c5776c.a())).toUri(c5776c.b());
+                DMNav.from(FlutterBoost.h().e()).forResult(cVar.c()).withExtras(fo.a(cVar.a())).toUri(cVar.b());
             }
         }
     }
@@ -117,18 +114,18 @@ public class jo0 {
             arrayList.add("--user-authorization-code=" + b);
             if (!AppConfig.v()) {
                 SolidRequest solidRequest = new SolidRequest();
-                solidRequest.name = C1768a.LIB_APP_SO;
+                solidRequest.name = cn.damai.solid.a.LIB_APP_SO;
                 SolidResponse checkSoFilePath = SolidServer.checkSoFilePath(solidRequest);
                 String str = "--aot-shared-library-name=" + checkSoFilePath.soFilePath;
-                cb1.c(C1768a.TAG, "flutter shellArgs lib app path : " + str);
+                cb1.c(cn.damai.solid.a.TAG, "flutter shellArgs lib app path : " + str);
                 arrayList.add(str);
             }
-            FlutterBoost.h().m(mu0.a(), new C9316a(this), new FlutterBoost.Callback() { // from class: tb.io0
+            FlutterBoost.h().m(mu0.a(), new a(this), new FlutterBoost.Callback() { // from class: tb.io0
                 @Override // com.idlefish.flutterboost.FlutterBoost.Callback
                 public final void onStart(FlutterEngine flutterEngine) {
                     jo0.g(flutterEngine);
                 }
-            }, new ao0.C8917b().g(arrayList.isEmpty() ? null : (String[]) arrayList.toArray(new String[arrayList.size()])).f());
+            }, new ao0.b().g(arrayList.isEmpty() ? null : (String[]) arrayList.toArray(new String[arrayList.size()])).f());
             this.a = true;
         }
     }
@@ -152,7 +149,7 @@ public class jo0 {
         if (AndroidInstantRuntime.support(ipChange, "-1069281529")) {
             ipChange.ipc$dispatch("-1069281529", new Object[]{this});
         } else {
-            DMNav.registerStickPreprocessor(new C9800v4());
+            DMNav.registerStickPreprocessor(new v4());
         }
     }
 }

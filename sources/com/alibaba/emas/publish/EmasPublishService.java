@@ -3,14 +3,10 @@ package com.alibaba.emas.publish;
 import android.content.Context;
 import android.util.Log;
 import androidx.annotation.Keep;
-import com.alibaba.emas.publish.channel.C3327a;
 import com.alibaba.emas.publish.channel.ChannelService;
 import com.alibaba.emas.publish.channel.accs.PublishAccsResponse;
-import com.alibaba.emas.publish.channel.mtop.C3328a;
 import com.alibaba.emas.publish.channel.mtop.PublishMtopResponse;
 import com.alibaba.emas.publish.channel.mtop.PublishMtopUpdateInfo;
-import com.alibaba.emas.publish.channel.poplayer.C3329a;
-import com.alibaba.emas.publish.channel.ut.C3330a;
 import com.alibaba.emas.publish.channel.ut.PublishUtRequest;
 import com.alibaba.fastjson.JSONObject;
 import java.util.ArrayList;
@@ -33,15 +29,14 @@ public class EmasPublishService {
     private Boolean isInit;
     private Context mContext;
     private Integer maxRegister;
-    private C3328a publishMtopService;
-    public C3329a publishPopService;
-    private C3330a publishUtService;
+    private com.alibaba.emas.publish.channel.mtop.a publishMtopService;
+    public com.alibaba.emas.publish.channel.poplayer.a publishPopService;
+    private com.alibaba.emas.publish.channel.ut.a publishUtService;
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.emas.publish.EmasPublishService$a */
     /* loaded from: classes15.dex */
-    public static class C3326a {
+    public static class a {
         private static EmasPublishService a = new EmasPublishService();
     }
 
@@ -69,7 +64,7 @@ public class EmasPublishService {
     }
 
     public static EmasPublishService getInstance() {
-        return C3326a.a;
+        return a.a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -162,10 +157,10 @@ public class EmasPublishService {
             return;
         }
         this.mContext = context;
-        this.publishMtopService = new C3328a();
-        this.publishUtService = new C3330a();
-        this.publishPopService = new C3329a();
-        this.channelService = new C3327a(context, str, str2, this.publishMtopService, this.publishUtService, bool);
+        this.publishMtopService = new com.alibaba.emas.publish.channel.mtop.a();
+        this.publishUtService = new com.alibaba.emas.publish.channel.ut.a();
+        this.publishPopService = new com.alibaba.emas.publish.channel.poplayer.a();
+        this.channelService = new com.alibaba.emas.publish.channel.a(context, str, str2, this.publishMtopService, this.publishUtService, bool);
         new Timer().schedule(new TimerTask() { // from class: com.alibaba.emas.publish.EmasPublishService.1
             @Override // java.util.TimerTask, java.lang.Runnable
             public void run() {

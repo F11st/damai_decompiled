@@ -11,9 +11,8 @@ import org.jetbrains.annotations.Nullable;
 public final class ix1 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ix1$a */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C9290a {
+    public /* synthetic */ class a {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
         public static final /* synthetic */ int[] $EnumSwitchMapping$1;
         public static final /* synthetic */ int[] $EnumSwitchMapping$2;
@@ -45,7 +44,7 @@ public final class ix1 {
     @NotNull
     public static final f70 a(@NotNull hx1 hx1Var, @Nullable ProtoBuf$Visibility protoBuf$Visibility) {
         b41.i(hx1Var, "<this>");
-        switch (protoBuf$Visibility == null ? -1 : C9290a.$EnumSwitchMapping$2[protoBuf$Visibility.ordinal()]) {
+        switch (protoBuf$Visibility == null ? -1 : a.$EnumSwitchMapping$2[protoBuf$Visibility.ordinal()]) {
             case 1:
                 f70 f70Var = e70.INTERNAL;
                 b41.h(f70Var, "INTERNAL");
@@ -80,7 +79,7 @@ public final class ix1 {
     @NotNull
     public static final CallableMemberDescriptor.Kind b(@NotNull hx1 hx1Var, @Nullable ProtoBuf$MemberKind protoBuf$MemberKind) {
         b41.i(hx1Var, "<this>");
-        int i = protoBuf$MemberKind == null ? -1 : C9290a.$EnumSwitchMapping$0[protoBuf$MemberKind.ordinal()];
+        int i = protoBuf$MemberKind == null ? -1 : a.$EnumSwitchMapping$0[protoBuf$MemberKind.ordinal()];
         if (i != 1) {
             if (i != 2) {
                 if (i != 3) {

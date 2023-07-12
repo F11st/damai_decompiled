@@ -6,8 +6,8 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
-import kotlin.C8177b;
 import kotlin.Lazy;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
@@ -48,7 +48,7 @@ public final class SubstitutingScope implements MemberScope {
         br2 j = typeSubstitutor.j();
         b41.h(j, "givenSubstitutor.substitution");
         this.b = CapturedTypeConstructorKt.f(j, false, 1, null).c();
-        b = C8177b.b(new Function0<Collection<? extends DeclarationDescriptor>>() { // from class: kotlin.reflect.jvm.internal.impl.resolve.scopes.SubstitutingScope$_allDescriptors$2
+        b = b.b(new Function0<Collection<? extends DeclarationDescriptor>>() { // from class: kotlin.reflect.jvm.internal.impl.resolve.scopes.SubstitutingScope$_allDescriptors$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -61,7 +61,7 @@ public final class SubstitutingScope implements MemberScope {
                 Collection<? extends DeclarationDescriptor> d;
                 SubstitutingScope substitutingScope = SubstitutingScope.this;
                 memberScope2 = substitutingScope.a;
-                d = substitutingScope.d(ResolutionScope.C8500a.a(memberScope2, null, null, 3, null));
+                d = substitutingScope.d(ResolutionScope.a.a(memberScope2, null, null, 3, null));
                 return d;
             }
         });
@@ -166,6 +166,6 @@ public final class SubstitutingScope implements MemberScope {
 
     @Override // kotlin.reflect.jvm.internal.impl.resolve.scopes.ResolutionScope
     public void recordLookup(@NotNull ni1 ni1Var, @NotNull LookupLocation lookupLocation) {
-        MemberScope.C8498a.a(this, ni1Var, lookupLocation);
+        MemberScope.a.a(this, ni1Var, lookupLocation);
     }
 }

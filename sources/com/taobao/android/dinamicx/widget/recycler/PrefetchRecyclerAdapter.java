@@ -7,12 +7,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import com.taobao.analysis.v3.FalcoContainerSpan;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DXRenderOptions;
 import com.taobao.android.dinamicx.DXRuntimeContext;
 import com.taobao.android.dinamicx.DinamicXEngine;
-import com.taobao.android.dinamicx.asyncrender.C6363a;
 import com.taobao.android.dinamicx.asyncrender.DXAsyncRenderCallback;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import com.taobao.android.dinamicx.widget.DXRecyclerLayout;
 import com.taobao.android.dinamicx.widget.DXTemplateWidgetNode;
@@ -34,14 +33,13 @@ import tb.zz;
 public class PrefetchRecyclerAdapter extends RecyclerAdapter {
     public static final int DEFAULT_BATCH_SIZE = Runtime.getRuntime().availableProcessors();
     protected int x;
-    protected Map<Integer, C6506c> y;
+    protected Map<Integer, c> y;
     private int z;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.PrefetchRecyclerAdapter$a */
     /* loaded from: classes11.dex */
-    class C6504a extends RecyclerView.AdapterDataObserver {
-        C6504a() {
+    class a extends RecyclerView.AdapterDataObserver {
+        a() {
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.AdapterDataObserver
@@ -82,13 +80,12 @@ public class PrefetchRecyclerAdapter extends RecyclerAdapter {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.PrefetchRecyclerAdapter$b */
     /* loaded from: classes11.dex */
-    public class C6505b implements DXAsyncRenderCallback<DXRuntimeContext> {
-        final /* synthetic */ C6506c a;
+    public class b implements DXAsyncRenderCallback<DXRuntimeContext> {
+        final /* synthetic */ c a;
 
-        C6505b(C6506c c6506c) {
-            this.a = c6506c;
+        b(c cVar) {
+            this.a = cVar;
         }
 
         @Override // com.taobao.android.dinamicx.asyncrender.DXAsyncRenderCallback
@@ -104,15 +101,14 @@ public class PrefetchRecyclerAdapter extends RecyclerAdapter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.PrefetchRecyclerAdapter$c */
     /* loaded from: classes12.dex */
-    public static class C6506c {
+    public static class c {
         int a;
         boolean b;
         boolean c;
         DXWidgetNode d;
 
-        public C6506c(int i, DXWidgetNode dXWidgetNode, DXRuntimeContext dXRuntimeContext, int i2, int i3) {
+        public c(int i, DXWidgetNode dXWidgetNode, DXRuntimeContext dXRuntimeContext, int i2, int i3) {
             this.a = i;
             this.d = dXWidgetNode;
         }
@@ -128,11 +124,11 @@ public class PrefetchRecyclerAdapter extends RecyclerAdapter {
     /* JADX INFO: Access modifiers changed from: private */
     public void O(Throwable th) {
         ry.b(th);
-        C6368e c6368e = new C6368e(WXBasicComponentType.RECYCLER);
-        C6368e.C6369a c6369a = new C6368e.C6369a("Engine", "Engine_Render", C6368e.DX_RECYCLER_PREFETCH_CRASH);
-        c6369a.e = ry.a(th);
-        c6368e.c.add(c6369a);
-        DXAppMonitor.n(c6368e);
+        e eVar = new e(WXBasicComponentType.RECYCLER);
+        e.a aVar = new e.a("Engine", "Engine_Render", e.DX_RECYCLER_PREFETCH_CRASH);
+        aVar.e = ry.a(th);
+        eVar.c.add(aVar);
+        DXAppMonitor.n(eVar);
     }
 
     protected void E(int i, int i2) {
@@ -154,16 +150,16 @@ public class PrefetchRecyclerAdapter extends RecyclerAdapter {
         }
     }
 
-    protected void G(C6506c c6506c) {
-        if (c6506c == null) {
+    protected void G(c cVar) {
+        if (cVar == null) {
             return;
         }
-        c6506c.c = true;
-        if (c6506c.b) {
+        cVar.c = true;
+        if (cVar.b) {
             return;
         }
-        DXRuntimeContext dXRuntimeContext = c6506c.d.getDXRuntimeContext();
-        C6363a k = dXRuntimeContext.getEngineContext().e().k();
+        DXRuntimeContext dXRuntimeContext = cVar.d.getDXRuntimeContext();
+        com.taobao.android.dinamicx.asyncrender.a k = dXRuntimeContext.getEngineContext().e().k();
         if (k == null) {
             return;
         }
@@ -185,16 +181,16 @@ public class PrefetchRecyclerAdapter extends RecyclerAdapter {
         return new int[]{DXWidgetNode.DXMeasureSpec.c(measuredWidth, 1073741824), DXWidgetNode.DXMeasureSpec.c(8388607, 0)};
     }
 
-    protected void I(@NonNull C6506c c6506c, boolean z, DXRuntimeContext dXRuntimeContext) {
+    protected void I(@NonNull c cVar, boolean z, DXRuntimeContext dXRuntimeContext) {
         int i;
         try {
-            c6506c.b = true;
-            this.y.remove(Integer.valueOf(c6506c.a));
-            if (!c6506c.c && dXRuntimeContext != null && (i = c6506c.a) >= 0 && i < f()) {
-                DXWidgetNode h = h(c6506c.a);
+            cVar.b = true;
+            this.y.remove(Integer.valueOf(cVar.a));
+            if (!cVar.c && dXRuntimeContext != null && (i = cVar.a) >= 0 && i < f()) {
+                DXWidgetNode h = h(cVar.a);
                 if (dXRuntimeContext.getWidgetNode() != null && h != null) {
                     dXRuntimeContext.getWidgetNode().setParentWidget(h.getParentWidget());
-                    s(c6506c.a, dXRuntimeContext.getWidgetNode());
+                    s(cVar.a, dXRuntimeContext.getWidgetNode());
                 }
             }
         } catch (Throwable th) {
@@ -209,10 +205,10 @@ public class PrefetchRecyclerAdapter extends RecyclerAdapter {
             }
             int max = Math.max(0, Math.min(f(), i2));
             for (int max2 = Math.max(0, i); max2 < max; max2++) {
-                C6506c c6506c = this.y.get(Integer.valueOf(max2));
-                if (c6506c != null) {
+                c cVar = this.y.get(Integer.valueOf(max2));
+                if (cVar != null) {
                     F(max2, true);
-                    if (c6506c.d == h(max2)) {
+                    if (cVar.d == h(max2)) {
                     }
                 }
                 DXWidgetNode h = h(max2);
@@ -229,11 +225,11 @@ public class PrefetchRecyclerAdapter extends RecyclerAdapter {
                     }
                     h.setLayoutWidth(-1);
                     h.setLayoutHeight(-2);
-                    DXRenderOptions k = new DXRenderOptions.C6359b().r(1).l(2).s(4).u(H[0]).m(H[1]).k();
+                    DXRenderOptions k = new DXRenderOptions.b().r(1).l(2).s(4).u(H[0]).m(H[1]).k();
                     if (!(h instanceof h00)) {
-                        C6506c c6506c2 = new C6506c(max2, h, e, H[0], H[1]);
-                        this.y.put(Integer.valueOf(max2), c6506c2);
-                        e2.F(e, k, null, new C6505b(c6506c2));
+                        c cVar2 = new c(max2, h, e, H[0], H[1]);
+                        this.y.put(Integer.valueOf(max2), cVar2);
+                        e2.F(e, k, null, new b(cVar2));
                     }
                 }
             }
@@ -270,7 +266,7 @@ public class PrefetchRecyclerAdapter extends RecyclerAdapter {
     }
 
     protected void N() {
-        C6363a k;
+        com.taobao.android.dinamicx.asyncrender.a k;
         for (Integer num : this.y.keySet()) {
             F(num.intValue(), false);
         }
@@ -321,8 +317,8 @@ public class PrefetchRecyclerAdapter extends RecyclerAdapter {
                 } else if (this.g.isEnableLeftGapWhenSingleColumn()) {
                     measuredWidth = (measuredWidth - this.g.getLeftGap()) - this.g.getRightGap();
                 }
-                int c = DXWidgetNode.DXMeasureSpec.c(measuredWidth, 1073741824);
-                int c2 = DXWidgetNode.DXMeasureSpec.c(8388607, 0);
+                int c2 = DXWidgetNode.DXMeasureSpec.c(measuredWidth, 1073741824);
+                int c3 = DXWidgetNode.DXMeasureSpec.c(8388607, 0);
                 K(i);
                 F(i, true);
                 h.setLayoutWidth(-1);
@@ -331,7 +327,7 @@ public class PrefetchRecyclerAdapter extends RecyclerAdapter {
                     h.updateRefreshType(0);
                     e.setRefreshType(0);
                 }
-                this.c.h(h, null, viewHolder.itemView, e, new DXRenderOptions.C6359b().l(2).s(8).u(c).m(c2).k());
+                this.c.h(h, null, viewHolder.itemView, e, new DXRenderOptions.b().l(2).s(8).u(c2).m(c3).k());
                 if (viewHolder.itemView.getLayoutParams() instanceof StaggeredGridLayoutManager.LayoutParams) {
                     if (z) {
                         ((StaggeredGridLayoutManager.LayoutParams) viewHolder.itemView.getLayoutParams()).setFullSpan(true);
@@ -352,7 +348,7 @@ public class PrefetchRecyclerAdapter extends RecyclerAdapter {
                 this.g.addAppearWidget(h);
                 View view = viewHolder.itemView;
                 if (view == null || (!(view instanceof ViewGroup) && ((ViewGroup) view).getChildCount() > 0)) {
-                    this.g.trackError(C6368e.DX_ERROR_CODE_RECYCLER_LAYOUT_ON_BINDHOLDER, "onbindViewholder返回的view是空");
+                    this.g.trackError(e.DX_ERROR_CODE_RECYCLER_LAYOUT_ON_BINDHOLDER, "onbindViewholder返回的view是空");
                     zz.o(falcoContainerSpan, "onbindViewholder返回的view是空: " + i);
                 }
                 zz.p(falcoContainerSpan, "onBindEnd", System.currentTimeMillis());
@@ -370,7 +366,7 @@ public class PrefetchRecyclerAdapter extends RecyclerAdapter {
     @Override // com.taobao.android.dinamicx.widget.recycler.BaseStickyAdapter
     public void b() {
         super.b();
-        registerAdapterDataObserver(new C6504a());
+        registerAdapterDataObserver(new a());
     }
 
     @Override // com.taobao.android.dinamicx.widget.recycler.RecyclerAdapter

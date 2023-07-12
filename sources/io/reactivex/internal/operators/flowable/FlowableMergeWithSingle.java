@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.fuseable.SimplePlainQueue;
@@ -72,7 +72,7 @@ public final class FlowableMergeWithSingle<T> extends AbstractFlowableWithUpstre
 
         MergeWithObserver(Subscriber<? super T> subscriber) {
             this.actual = subscriber;
-            int bufferSize = AbstractC8147b.bufferSize();
+            int bufferSize = b.bufferSize();
             this.prefetch = bufferSize;
             this.limit = bufferSize - (bufferSize >> 2);
         }
@@ -176,7 +176,7 @@ public final class FlowableMergeWithSingle<T> extends AbstractFlowableWithUpstre
         SimplePlainQueue<T> getOrCreateQueue() {
             SimplePlainQueue<T> simplePlainQueue = this.queue;
             if (simplePlainQueue == null) {
-                SpscArrayQueue spscArrayQueue = new SpscArrayQueue(AbstractC8147b.bufferSize());
+                SpscArrayQueue spscArrayQueue = new SpscArrayQueue(b.bufferSize());
                 this.queue = spscArrayQueue;
                 return spscArrayQueue;
             }
@@ -280,12 +280,12 @@ public final class FlowableMergeWithSingle<T> extends AbstractFlowableWithUpstre
         }
     }
 
-    public FlowableMergeWithSingle(AbstractC8147b<T> abstractC8147b, SingleSource<? extends T> singleSource) {
-        super(abstractC8147b);
+    public FlowableMergeWithSingle(b<T> bVar, SingleSource<? extends T> singleSource) {
+        super(bVar);
         this.other = singleSource;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         MergeWithObserver mergeWithObserver = new MergeWithObserver(subscriber);
         subscriber.onSubscribe(mergeWithObserver);

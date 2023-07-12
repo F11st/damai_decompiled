@@ -14,13 +14,12 @@ import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
-import kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public class cd2 extends AbstractC8316a implements SimpleFunctionDescriptor {
+public class cd2 extends kotlin.reflect.jvm.internal.impl.descriptors.impl.a implements SimpleFunctionDescriptor {
     /* JADX INFO: Access modifiers changed from: protected */
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public cd2(@NotNull DeclarationDescriptor declarationDescriptor, @Nullable SimpleFunctionDescriptor simpleFunctionDescriptor, @NotNull Annotations annotations, @NotNull ni1 ni1Var, @NotNull CallableMemberDescriptor.Kind kind, @NotNull SourceElement sourceElement) {
@@ -162,7 +161,7 @@ public class cd2 extends AbstractC8316a implements SimpleFunctionDescriptor {
         throw new IllegalStateException(format);
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a
     @NotNull
     /* renamed from: E */
     public SimpleFunctionDescriptor e(DeclarationDescriptor declarationDescriptor, Modality modality, f70 f70Var, CallableMemberDescriptor.Kind kind, boolean z) {
@@ -173,7 +172,7 @@ public class cd2 extends AbstractC8316a implements SimpleFunctionDescriptor {
         return simpleFunctionDescriptor;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, tb.u40, tb.t40, kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, tb.u40, tb.t40, kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor
     @NotNull
     /* renamed from: G */
     public SimpleFunctionDescriptor getOriginal() {
@@ -184,7 +183,7 @@ public class cd2 extends AbstractC8316a implements SimpleFunctionDescriptor {
         return simpleFunctionDescriptor;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a
     @NotNull
     /* renamed from: H */
     public cd2 l(@Nullable ReceiverParameterDescriptor receiverParameterDescriptor, @Nullable ReceiverParameterDescriptor receiverParameterDescriptor2, @NotNull List<? extends TypeParameterDescriptor> list, @NotNull List<ValueParameterDescriptor> list2, @Nullable z71 z71Var, @Nullable Modality modality, @NotNull f70 f70Var) {
@@ -222,9 +221,9 @@ public class cd2 extends AbstractC8316a implements SimpleFunctionDescriptor {
         return this;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a
     @NotNull
-    protected AbstractC8316a f(@NotNull DeclarationDescriptor declarationDescriptor, @Nullable FunctionDescriptor functionDescriptor, @NotNull CallableMemberDescriptor.Kind kind, @Nullable ni1 ni1Var, @NotNull Annotations annotations, @NotNull SourceElement sourceElement) {
+    protected kotlin.reflect.jvm.internal.impl.descriptors.impl.a f(@NotNull DeclarationDescriptor declarationDescriptor, @Nullable FunctionDescriptor functionDescriptor, @NotNull CallableMemberDescriptor.Kind kind, @Nullable ni1 ni1Var, @NotNull Annotations annotations, @NotNull SourceElement sourceElement) {
         if (declarationDescriptor == null) {
             a(19);
         }
@@ -244,7 +243,7 @@ public class cd2 extends AbstractC8316a implements SimpleFunctionDescriptor {
         return new cd2(declarationDescriptor, simpleFunctionDescriptor, annotations, ni1Var, kind, sourceElement);
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor
     @NotNull
     public FunctionDescriptor.CopyBuilder<? extends SimpleFunctionDescriptor> newCopyBuilder() {
         FunctionDescriptor.CopyBuilder newCopyBuilder = super.newCopyBuilder();

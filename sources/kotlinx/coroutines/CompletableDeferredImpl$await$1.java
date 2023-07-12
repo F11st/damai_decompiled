@@ -15,9 +15,9 @@ final class CompletableDeferredImpl$await$1 extends ContinuationImpl {
     Object L$0;
     int label;
     /* synthetic */ Object result;
-    final /* synthetic */ C8691h this$0;
+    final /* synthetic */ h this$0;
 
-    CompletableDeferredImpl$await$1(C8691h c8691h, Continuation continuation) {
+    CompletableDeferredImpl$await$1(h hVar, Continuation continuation) {
         super(continuation);
     }
 

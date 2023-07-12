@@ -38,20 +38,18 @@ public interface DiskStorage extends Closeable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.alivfssdk.fresco.cache.disk.DiskStorage$a */
     /* loaded from: classes8.dex */
-    public static class C6281a {
-        public List<C6282b> a = new ArrayList();
+    public static class a {
+        public List<b> a = new ArrayList();
         public Map<String, Integer> b = new HashMap();
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.alivfssdk.fresco.cache.disk.DiskStorage$b */
     /* loaded from: classes8.dex */
-    public static class C6282b {
+    public static class b {
         public final String a;
 
-        public C6282b(String str, String str2, float f, String str3) {
+        public b(String str, String str2, float f, String str3) {
             this.a = str2;
         }
     }
@@ -62,7 +60,7 @@ public interface DiskStorage extends Closeable {
 
     List<String> getCatalogs(String str);
 
-    C6281a getDumpInfo() throws IOException;
+    a getDumpInfo() throws IOException;
 
     Collection<Entry> getEntries() throws IOException;
 

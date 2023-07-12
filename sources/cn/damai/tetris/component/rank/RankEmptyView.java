@@ -20,12 +20,11 @@ import tb.z20;
 public class RankEmptyView extends AbsView<RankEmptyContract.Presenter> implements RankEmptyContract.View<RankEmptyContract.Presenter> {
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.rank.RankEmptyView$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1945a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1945a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -48,6 +47,6 @@ public class RankEmptyView extends AbsView<RankEmptyContract.Presenter> implemen
 
     public RankEmptyView(View view) {
         super(view);
-        view.findViewById(R$id.id_tetris_rank_change_city).setOnClickListener(new View$OnClickListenerC1945a());
+        view.findViewById(R$id.id_tetris_rank_change_city).setOnClickListener(new a());
     }
 }

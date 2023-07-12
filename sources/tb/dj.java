@@ -17,7 +17,6 @@ import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
-import kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a;
 import kotlin.reflect.jvm.internal.impl.types.TypeSubstitutor;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
@@ -25,7 +24,7 @@ import org.jetbrains.annotations.Nullable;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public class dj extends AbstractC8316a implements ClassConstructorDescriptor {
+public class dj extends kotlin.reflect.jvm.internal.impl.descriptors.impl.a implements ClassConstructorDescriptor {
     private static final ni1 E = ni1.i("<init>");
     protected final boolean D;
 
@@ -110,7 +109,7 @@ public class dj extends AbstractC8316a implements ClassConstructorDescriptor {
         return null;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a
     @NotNull
     /* renamed from: F */
     public ClassConstructorDescriptor e(DeclarationDescriptor declarationDescriptor, Modality modality, f70 f70Var, CallableMemberDescriptor.Kind kind, boolean z) {
@@ -122,7 +121,7 @@ public class dj extends AbstractC8316a implements ClassConstructorDescriptor {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a
     @NotNull
     /* renamed from: H */
     public dj f(@NotNull DeclarationDescriptor declarationDescriptor, @Nullable FunctionDescriptor functionDescriptor, @NotNull CallableMemberDescriptor.Kind kind, @Nullable ni1 ni1Var, @NotNull Annotations annotations, @NotNull SourceElement sourceElement) {
@@ -181,7 +180,7 @@ public class dj extends AbstractC8316a implements ClassConstructorDescriptor {
         return this;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor
     public <R, D> R accept(DeclarationDescriptorVisitor<R, D> declarationDescriptorVisitor, D d) {
         return declarationDescriptorVisitor.visitConstructorDescriptor(this, d);
     }
@@ -196,7 +195,7 @@ public class dj extends AbstractC8316a implements ClassConstructorDescriptor {
         return containingDeclaration;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor, kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor, kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
     @NotNull
     public Collection<? extends FunctionDescriptor> getOverriddenDescriptors() {
         Set emptySet = Collections.emptySet();
@@ -211,14 +210,14 @@ public class dj extends AbstractC8316a implements ClassConstructorDescriptor {
         return this.D;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor
     public void setOverriddenDescriptors(@NotNull Collection<? extends CallableMemberDescriptor> collection) {
         if (collection == null) {
             a(20);
         }
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor, kotlin.reflect.jvm.internal.impl.descriptors.Substitutable
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor, kotlin.reflect.jvm.internal.impl.descriptors.Substitutable
     @Nullable
     public ClassConstructorDescriptor substitute(@NotNull TypeSubstitutor typeSubstitutor) {
         if (typeSubstitutor == null) {
@@ -227,7 +226,7 @@ public class dj extends AbstractC8316a implements ClassConstructorDescriptor {
         return (ClassConstructorDescriptor) super.substitute(typeSubstitutor);
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, tb.u40, tb.t40, kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, tb.u40, tb.t40, kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor
     @NotNull
     public ClassConstructorDescriptor getOriginal() {
         ClassConstructorDescriptor classConstructorDescriptor = (ClassConstructorDescriptor) super.getOriginal();

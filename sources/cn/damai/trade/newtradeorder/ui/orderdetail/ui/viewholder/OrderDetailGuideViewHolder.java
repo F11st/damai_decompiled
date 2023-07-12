@@ -8,11 +8,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.banner.bean.PageBanner;
 import cn.damai.commonbusiness.banner.request.OrderDetailBannerRequest;
 import cn.damai.trade.R$drawable;
@@ -58,10 +57,10 @@ public class OrderDetailGuideViewHolder extends RecyclerView.ViewHolder {
             /* compiled from: Taobao */
             /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailGuideViewHolder$1$a */
             /* loaded from: classes16.dex */
-            public class View$OnClickListenerC2198a implements View.OnClickListener {
+            public class a implements View.OnClickListener {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                View$OnClickListenerC2198a() {
+                a() {
                 }
 
                 @Override // android.view.View.OnClickListener
@@ -75,7 +74,7 @@ public class OrderDetailGuideViewHolder extends RecyclerView.ViewHolder {
                     if (TextUtils.isEmpty(str)) {
                         return;
                     }
-                    C0529c e = C0529c.e();
+                    c e = c.e();
                     pp2 u = pp2.u();
                     AnonymousClass1 anonymousClass1 = AnonymousClass1.this;
                     e.x(u.y(str, str2, str));
@@ -103,13 +102,13 @@ public class OrderDetailGuideViewHolder extends RecyclerView.ViewHolder {
                 } else {
                     HashMap hashMap = new HashMap();
                     hashMap.put("titlelabel", pageBanner.schema);
-                    C0529c.e().G(OrderDetailGuideViewHolder.this.b, "bannerimg", "banners", pp2.ORDER_DETAL_PAGE, hashMap);
+                    c.e().G(OrderDetailGuideViewHolder.this.b, "bannerimg", "banners", pp2.ORDER_DETAL_PAGE, hashMap);
                     OrderDetailGuideViewHolder.this.b.setVisibility(0);
                     OrderDetailGuideViewHolder.this.c.setTag(pageBanner.schema);
-                    DMImageCreator c = C0504a.b().c(pageBanner.picUrl);
+                    DMImageCreator c = cn.damai.common.image.a.b().c(pageBanner.picUrl);
                     int i = R$drawable.uikit_default_image_bg_grey;
                     c.i(i).c(i).g(OrderDetailGuideViewHolder.this.c);
-                    OrderDetailGuideViewHolder.this.c.setOnClickListener(new View$OnClickListenerC2198a());
+                    OrderDetailGuideViewHolder.this.c.setOnClickListener(new a());
                 }
             }
         });

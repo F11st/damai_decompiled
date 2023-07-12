@@ -12,7 +12,6 @@ import com.alibaba.pictures.moimage.ImgResQuality;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import io.flutter.wpkbridge.WPKFactory;
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -166,15 +165,15 @@ public final class jg1 {
         int i2 = typedValue.type;
         if ((i2 == 1 || i2 == 3) && (charSequence = typedValue.string) != null) {
             String obj = charSequence.toString();
-            p = C8604o.p(obj, ".png", false, 2, null);
+            p = kotlin.text.o.p(obj, ".png", false, 2, null);
             if (p) {
                 return true;
             }
-            p2 = C8604o.p(obj, ".jpg", false, 2, null);
+            p2 = kotlin.text.o.p(obj, ".jpg", false, 2, null);
             if (p2) {
                 return true;
             }
-            p3 = C8604o.p(obj, ".webp", false, 2, null);
+            p3 = kotlin.text.o.p(obj, ".webp", false, 2, null);
             if (p3) {
                 return true;
             }

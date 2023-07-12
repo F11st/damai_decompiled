@@ -113,7 +113,7 @@ public class ah {
         if (!this.f || fromAndTo == null || fromAndTo.getFrom() == null || fromAndTo.getTo() == null) {
             return;
         }
-        if (this.k < C4435i.a(fromAndTo.getFrom(), fromAndTo.getTo()) / 1000.0d) {
+        if (this.k < i.a(fromAndTo.getFrom(), fromAndTo.getTo()) / 1000.0d) {
             throw new AMapException(AMapException.AMAP_OVER_DIRECTION_RANGE);
         }
     }
@@ -130,7 +130,7 @@ public class ah {
         if (this.a && list != null) {
             if (this.j >= list.size()) {
                 for (List<LatLonPoint> list2 : list) {
-                    double b = C4435i.b(list2);
+                    double b = i.b(list2);
                     if (this.q >= list2.size()) {
                         if (this.p < b) {
                             throw new AMapException(AMapException.AMAP_CLIENT_OVER_PASSAREA_MAX_AREA_EXCEPTION);
@@ -157,12 +157,12 @@ public class ah {
             LatLonPoint to = fromAndTo.getTo();
             Iterator<LatLonPoint> it = list.iterator();
             while (it.hasNext()) {
-                d += C4435i.a(from, next);
+                d += i.a(from, next);
                 from = it.next();
             }
-            a = d + C4435i.a(from, to);
+            a = d + i.a(from, to);
         } else {
-            a = C4435i.a(fromAndTo.getFrom(), fromAndTo.getTo());
+            a = i.a(fromAndTo.getFrom(), fromAndTo.getTo());
         }
         if (this.n < a / 1000.0d) {
             throw new AMapException(AMapException.AMAP_OVER_DIRECTION_RANGE);
@@ -173,7 +173,7 @@ public class ah {
         if (!this.e || fromAndTo == null || fromAndTo.getFrom() == null || fromAndTo.getTo() == null) {
             return;
         }
-        if (this.o < C4435i.a(fromAndTo.getFrom(), fromAndTo.getTo()) / 1000.0d) {
+        if (this.o < i.a(fromAndTo.getFrom(), fromAndTo.getTo()) / 1000.0d) {
             throw new AMapException(AMapException.AMAP_OVER_DIRECTION_RANGE);
         }
     }

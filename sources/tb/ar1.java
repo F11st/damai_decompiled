@@ -13,24 +13,22 @@ class ar1 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.ar1$b */
     /* loaded from: classes6.dex */
-    public static class C8923b {
+    public static class b {
         int a;
         boolean b;
 
-        private C8923b() {
+        private b() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ar1$c */
     /* loaded from: classes6.dex */
-    public static class C8924c {
+    public static class c {
         char a;
         float[] b;
 
-        C8924c(char c, float[] fArr) {
+        c(char c, float[] fArr) {
             this.a = c;
             this.b = fArr;
         }
@@ -421,18 +419,18 @@ class ar1 {
             b(path, (d21 * cos) - (d22 * sin), (d21 * sin) + (d22 * cos), d6, d8, d3, d5, radians, atan2, atan22);
         }
 
-        public static void d(C8924c[] c8924cArr, Path path) {
+        public static void d(c[] cVarArr, Path path) {
             float[] fArr = new float[6];
             char c = 'm';
-            for (C8924c c8924c : c8924cArr) {
-                a(path, fArr, c, c8924c.a, c8924c.b);
-                c = c8924c.a;
+            for (c cVar : cVarArr) {
+                a(path, fArr, c, cVar.a, cVar.b);
+                c = cVar.a;
             }
         }
     }
 
-    private static void a(List<C8924c> list, char c, float[] fArr) {
-        list.add(new C8924c(c, fArr));
+    private static void a(List<c> list, char c2, float[] fArr) {
+        list.add(new c(c2, fArr));
     }
 
     static float[] b(@NonNull float[] fArr, int i, int i2) {
@@ -443,7 +441,7 @@ class ar1 {
         return fArr2;
     }
 
-    public static C8924c[] c(String str) {
+    public static c[] c(String str) {
         if (str == null) {
             return null;
         }
@@ -462,15 +460,15 @@ class ar1 {
         if (i - i2 == 1 && i2 < str.length()) {
             a(arrayList, str.charAt(i2), new float[0]);
         }
-        return (C8924c[]) arrayList.toArray(new C8924c[arrayList.size()]);
+        return (c[]) arrayList.toArray(new c[arrayList.size()]);
     }
 
     public static Path d(String str) {
         Path path = new Path();
-        C8924c[] c = c(str);
-        if (c != null) {
+        c[] c2 = c(str);
+        if (c2 != null) {
             try {
-                C8924c.d(c, path);
+                c.d(c2, path);
                 return path;
             } catch (RuntimeException e) {
                 throw new RuntimeException("Error in parsing " + str, e);
@@ -486,7 +484,7 @@ class ar1 {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private static void e(java.lang.String r8, int r9, tb.ar1.C8923b r10) {
+    private static void e(java.lang.String r8, int r9, tb.ar1.b r10) {
         /*
             r0 = 0
             r10.b = r0
@@ -555,17 +553,17 @@ class ar1 {
         }
         try {
             float[] fArr = new float[str.length()];
-            C8923b c8923b = new C8923b();
+            b bVar = new b();
             int length = str.length();
             int i2 = 0;
             while (i < length) {
-                e(str, i, c8923b);
-                int i3 = c8923b.a;
+                e(str, i, bVar);
+                int i3 = bVar.a;
                 if (i < i3) {
                     fArr[i2] = Float.parseFloat(str.substring(i, i3));
                     i2++;
                 }
-                i = c8923b.b ? i3 : i3 + 1;
+                i = bVar.b ? i3 : i3 + 1;
             }
             return b(fArr, 0, i2);
         } catch (NumberFormatException e) {
@@ -597,9 +595,9 @@ class ar1 {
         } else {
             for (String str : list2) {
                 Path path3 = new Path();
-                C8924c[] c = c(str);
-                j(f, f2, c);
-                C8924c.d(c, path3);
+                c[] c2 = c(str);
+                j(f, f2, c2);
+                c.d(c2, path3);
                 arrayList.add(path3);
             }
         }
@@ -622,9 +620,9 @@ class ar1 {
         throw new UnsupportedOperationException("Method not decompiled: tb.ar1.i(float, float, char, float[]):void");
     }
 
-    private static void j(float f, float f2, C8924c[] c8924cArr) {
-        for (C8924c c8924c : c8924cArr) {
-            i(f, f2, c8924c.a, c8924c.b);
+    private static void j(float f, float f2, c[] cVarArr) {
+        for (c cVar : cVarArr) {
+            i(f, f2, cVar.a, cVar.b);
         }
     }
 }

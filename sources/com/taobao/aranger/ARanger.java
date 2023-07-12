@@ -16,12 +16,12 @@ import com.taobao.aranger.core.wrapper.ServiceWrapper;
 import com.taobao.aranger.exception.IPCException;
 import com.taobao.aranger.intf.IProxyRecover;
 import com.taobao.aranger.intf.ProcessStateListener;
-import com.taobao.aranger.utils.C6698a;
 import com.taobao.aranger.utils.CallbackManager;
 import com.taobao.aranger.utils.IPCRecycle;
 import com.taobao.aranger.utils.IPCUtils;
 import com.taobao.aranger.utils.ReflectUtils;
 import com.taobao.aranger.utils.TypeUtils;
+import com.taobao.aranger.utils.a;
 import java.lang.reflect.Proxy;
 import tb.go2;
 import tb.qh;
@@ -51,7 +51,7 @@ public class ARanger {
         if (TextUtils.isEmpty(str)) {
             str = serviceName.value();
         }
-        Call remoteProviderUri = Call.obtain().setVoid(true).setIsSameApp(sApplication.getPackageName().equals(componentName.getPackageName())).setServiceWrapper(serviceInterfaceClass.setServiceName(str).setType(!TextUtils.isEmpty(str2) ? 1 : 0)).setMethodWrapper(TextUtils.isEmpty(str2) ? MethodWrapper.obtain() : MethodWrapper.obtain().setMethodName(str2)).setParameterWrappers(C6698a.c(pairArr)).setRemoteProviderUri(queryContentAuthorityFromProvider);
+        Call remoteProviderUri = Call.obtain().setVoid(true).setIsSameApp(sApplication.getPackageName().equals(componentName.getPackageName())).setServiceWrapper(serviceInterfaceClass.setServiceName(str).setType(!TextUtils.isEmpty(str2) ? 1 : 0)).setMethodWrapper(TextUtils.isEmpty(str2) ? MethodWrapper.obtain() : MethodWrapper.obtain().setMethodName(str2)).setParameterWrappers(a.c(pairArr)).setRemoteProviderUri(queryContentAuthorityFromProvider);
         qh.b(queryContentAuthorityFromProvider).f(remoteProviderUri);
         return (T) getProxy(remoteProviderUri);
     }

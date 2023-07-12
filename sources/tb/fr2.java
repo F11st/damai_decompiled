@@ -27,16 +27,15 @@ public class fr2 {
     public static final fd2 DONT_CARE = kf0.p("DONT_CARE");
     public static final fd2 CANT_INFER_FUNCTION_PARAM_TYPE = kf0.j("Cannot be inferred");
     @NotNull
-    public static final fd2 NO_EXPECTED_TYPE = new C9145a("NO_EXPECTED_TYPE");
-    public static final fd2 UNIT_EXPECTED_TYPE = new C9145a("UNIT_EXPECTED_TYPE");
+    public static final fd2 NO_EXPECTED_TYPE = new a("NO_EXPECTED_TYPE");
+    public static final fd2 UNIT_EXPECTED_TYPE = new a("UNIT_EXPECTED_TYPE");
 
     /* compiled from: Taobao */
-    /* renamed from: tb.fr2$a */
     /* loaded from: classes3.dex */
-    public static class C9145a extends p60 {
+    public static class a extends p60 {
         private final String b;
 
-        public C9145a(String str) {
+        public a(String str) {
             this.b = str;
         }
 
@@ -126,7 +125,7 @@ public class fr2 {
             L69:
                 throw r9
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.fr2.C9145a.o(int):void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.fr2.a.o(int):void");
         }
 
         @Override // tb.gu2
@@ -164,7 +163,7 @@ public class fr2 {
         @Override // tb.p60
         @NotNull
         /* renamed from: p */
-        public C9145a m(@NotNull b81 b81Var) {
+        public a m(@NotNull b81 b81Var) {
             if (b81Var == null) {
                 o(3);
             }

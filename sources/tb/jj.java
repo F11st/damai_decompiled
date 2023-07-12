@@ -5,10 +5,8 @@ import com.ali.user.mobile.app.constant.UTConstant;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import kotlin.collections.C8214m;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.jvm.JvmStatic;
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
@@ -29,11 +27,11 @@ public final class jj {
         List<String> j4;
         List<String> j5;
         int i = 0;
-        j = C8214m.j('k', 'o', 't', 'l', 'i', 'n');
+        j = kotlin.collections.m.j('k', 'o', 't', 'l', 'i', 'n');
         Z = CollectionsKt___CollectionsKt.Z(j, "", null, null, 0, null, null, 62, null);
         a = Z;
         LinkedHashMap linkedHashMap = new LinkedHashMap();
-        j2 = C8214m.j("Boolean", "Z", "Char", "C", "Byte", "B", "Short", ExifInterface.LATITUDE_SOUTH, "Int", "I", "Float", UTConstant.Args.UT_SUCCESS_F, "Long", "J", "Double", "D");
+        j2 = kotlin.collections.m.j("Boolean", "Z", "Char", "C", "Byte", "B", "Short", ExifInterface.LATITUDE_SOUTH, "Int", "I", "Float", UTConstant.Args.UT_SUCCESS_F, "Long", "J", "Double", "D");
         int c = hv1.c(0, j2.size() - 1, 2);
         if (c >= 0) {
             int i2 = 0;
@@ -57,11 +55,11 @@ public final class jj {
         a(linkedHashMap, "Any", "java/lang/Object");
         a(linkedHashMap, "Nothing", "java/lang/Void");
         a(linkedHashMap, "Annotation", "java/lang/annotation/Annotation");
-        j3 = C8214m.j("String", "CharSequence", "Throwable", "Cloneable", "Number", "Comparable", "Enum");
+        j3 = kotlin.collections.m.j("String", "CharSequence", "Throwable", "Cloneable", "Number", "Comparable", "Enum");
         for (String str2 : j3) {
             a(linkedHashMap, str2, b41.r("java/lang/", str2));
         }
-        j4 = C8214m.j("Iterator", "Collection", "List", "Set", "Map", "ListIterator");
+        j4 = kotlin.collections.m.j("Iterator", "Collection", "List", "Set", "Map", "ListIterator");
         for (String str3 : j4) {
             a(linkedHashMap, b41.r("collections/", str3), b41.r("java/util/", str3));
             a(linkedHashMap, b41.r("collections/Mutable", str3), b41.r("java/util/", str3));
@@ -85,7 +83,7 @@ public final class jj {
             }
             i = i5;
         }
-        j5 = C8214m.j("Char", "Byte", "Short", "Int", "Float", "Long", "Double", "String", "Enum");
+        j5 = kotlin.collections.m.j("Char", "Byte", "Short", "Int", "Float", "Long", "Double", "String", "Enum");
         for (String str5 : j5) {
             a(linkedHashMap, b41.r(str5, ".Companion"), a + "/jvm/internal/" + str5 + "CompanionObject");
         }
@@ -108,7 +106,7 @@ public final class jj {
         if (str2 == null) {
             StringBuilder sb = new StringBuilder();
             sb.append(qb1.LEVEL_L);
-            y = C8604o.y(str, '.', '$', false, 4, null);
+            y = kotlin.text.o.y(str, '.', '$', false, 4, null);
             sb.append(y);
             sb.append(b90.TokenSEM);
             return sb.toString();

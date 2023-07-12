@@ -11,7 +11,7 @@ import com.youku.arch.v3.util.DimenUtil;
 import com.youku.arch.v3.util.DisplayUtils;
 import io.flutter.wpkbridge.WPKFactory;
 import kotlin.Metadata;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -40,12 +40,12 @@ public final class StyleUtil {
         Integer num = null;
         Object styleValue = style == null ? null : style.getStyleValue(str);
         if (styleValue instanceof String) {
-            F = C8604o.F(str, "$", false, 2, null);
+            F = o.F(str, "$", false, 2, null);
             if (F) {
                 return ColorUtil.parseColorSafely((String) styleValue);
             }
             String str2 = (String) styleValue;
-            F2 = C8604o.F(str2, "$", false, 2, null);
+            F2 = o.F(str2, "$", false, 2, null);
             if (F2) {
                 Integer colorToken = TokenManager.Companion.getInstance().getColorToken(context, str2);
                 if (colorToken != null) {
@@ -84,12 +84,12 @@ public final class StyleUtil {
         Integer num = null;
         Object styleValue = style == null ? null : style.getStyleValue(str);
         if (styleValue instanceof String) {
-            F = C8604o.F(str, "$", false, 2, null);
+            F = o.F(str, "$", false, 2, null);
             if (F) {
                 return DisplayUtils.dp2px(Integer.parseInt((String) styleValue));
             }
             String str2 = (String) styleValue;
-            F2 = C8604o.F(str2, "$", false, 2, null);
+            F2 = o.F(str2, "$", false, 2, null);
             if (F2) {
                 Integer dimenToken = TokenManager.Companion.getInstance().getDimenToken(context, str2);
                 if (dimenToken != null) {

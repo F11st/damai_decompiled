@@ -4,7 +4,6 @@ import android.app.KeyguardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -13,7 +12,7 @@ public class ak {
         try {
             return ((KeyguardManager) context.getSystemService("keyguard")).inKeyguardRestrictedInputMode();
         } catch (Exception e) {
-            AbstractC7535b.a(e);
+            com.xiaomi.channel.commonutils.logger.b.a(e);
             return false;
         }
     }

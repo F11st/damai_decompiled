@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
 import cn.damai.login.LoginManager;
@@ -86,7 +85,7 @@ public class ag1 implements View.OnClickListener {
         if (AndroidInstantRuntime.support(ipChange, "-1553290298")) {
             ipChange.ipc$dispatch("-1553290298", new Object[]{this, view});
         } else if (view.getId() == R$id.fl_vip_container) {
-            C0529c.e().x(vf1.x().j0(view.getTag() != null ? (String) view.getTag() : "0"));
+            cn.damai.common.user.c.e().x(vf1.x().j0(view.getTag() != null ? (String) view.getTag() : "0"));
             if (LoginManager.k().q()) {
                 DMNav.from(this.a).toUri(k23.j());
             } else {

@@ -5,7 +5,7 @@ import android.text.TextUtils;
 import com.alibaba.security.biometrics.ALBiometricsNavigator;
 import com.alibaba.security.biometrics.service.listener.OnRetryListener;
 import com.alibaba.security.biometrics.service.model.result.ALBiometricsResult;
-import com.alibaba.security.common.d.C3811h;
+import com.alibaba.security.common.d.h;
 import com.alibaba.security.realidentity.business.RPBusinessHeadParams;
 import com.alibaba.security.realidentity.business.bucket.BucketParams;
 import com.alibaba.security.realidentity.business.start.StartHttpResponse;
@@ -74,7 +74,7 @@ public abstract class AbsBiometricsBucketParams extends BucketParams {
             return true;
         }
         try {
-            map2 = (Map) C3811h.a(str, Map.class, false);
+            map2 = (Map) h.a(str, Map.class, false);
         } catch (Exception unused) {
         }
         if (map2 == null || map2.isEmpty() || !map2.containsKey("closeBeautyEffect")) {
@@ -155,7 +155,7 @@ public abstract class AbsBiometricsBucketParams extends BucketParams {
             return true;
         }
         try {
-            Map map2 = (Map) C3811h.a(str, Map.class, false);
+            Map map2 = (Map) h.a(str, Map.class, false);
             if (map2 == null || map2.isEmpty() || !map2.containsKey("isOpen")) {
                 return true;
             }

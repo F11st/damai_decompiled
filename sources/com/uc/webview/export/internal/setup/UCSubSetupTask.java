@@ -20,10 +20,9 @@ public class UCSubSetupTask<RETURN_TYPE extends UCSubSetupTask<RETURN_TYPE, CALL
     protected bt mUCM;
 
     /* compiled from: Taobao */
-    /* renamed from: com.uc.webview.export.internal.setup.UCSubSetupTask$a */
     /* loaded from: classes11.dex */
-    public class C7253a<CB_TYPE extends UCSubSetupTask<CB_TYPE, CB_TYPE>> implements ValueCallback<CB_TYPE> {
-        public C7253a() {
+    public class a<CB_TYPE extends UCSubSetupTask<CB_TYPE, CB_TYPE>> implements ValueCallback<CB_TYPE> {
+        public a() {
         }
 
         @Override // android.webkit.ValueCallback

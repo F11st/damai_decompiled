@@ -31,9 +31,9 @@ public final class z61 implements DeserializedContainerSource {
         this.a = t61Var;
         this.b = t61Var2;
         this.c = kotlinJvmBinaryClass;
-        GeneratedMessageLite.C8441c<ProtoBuf$Package, Integer> c8441c = JvmProtoBuf.packageModuleName;
-        b41.h(c8441c, "packageModuleName");
-        Integer num = (Integer) fx1.a(protoBuf$Package, c8441c);
+        GeneratedMessageLite.c<ProtoBuf$Package, Integer> cVar = JvmProtoBuf.packageModuleName;
+        b41.h(cVar, "packageModuleName");
+        Integer num = (Integer) fx1.a(protoBuf$Package, cVar);
         if (num == null) {
             return;
         }

@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.observable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.SequentialDisposable;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -71,12 +71,12 @@ public final class ObservableRepeat<T> extends AbstractObservableWithUpstream<T,
         }
     }
 
-    public ObservableRepeat(AbstractC8149d<T> abstractC8149d, long j) {
-        super(abstractC8149d);
+    public ObservableRepeat(d<T> dVar, long j) {
+        super(dVar);
         this.count = j;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         SequentialDisposable sequentialDisposable = new SequentialDisposable();
         observer.onSubscribe(sequentialDisposable);

@@ -82,10 +82,9 @@ public class AnimationView extends FrameLayout {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.animationkit.AnimationView$a */
     /* loaded from: classes4.dex */
-    public class C6307a implements ImageAssetDelegate {
-        C6307a() {
+    public class a implements ImageAssetDelegate {
+        a() {
         }
 
         @Override // com.airbnb.lottie.ImageAssetDelegate
@@ -95,10 +94,9 @@ public class AnimationView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.animationkit.AnimationView$b */
     /* loaded from: classes4.dex */
-    class C6308b implements FileFilter {
-        C6308b(AnimationView animationView) {
+    class b implements FileFilter {
+        b(AnimationView animationView) {
         }
 
         @Override // java.io.FileFilter
@@ -108,10 +106,9 @@ public class AnimationView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.animationkit.AnimationView$c */
     /* loaded from: classes4.dex */
-    class C6309c implements BitmapFetcher {
-        C6309c() {
+    class c implements BitmapFetcher {
+        c() {
         }
 
         @Override // com.taobao.android.animationkit.AnimationView.BitmapFetcher
@@ -122,12 +119,11 @@ public class AnimationView extends FrameLayout {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.animationkit.AnimationView$d */
     /* loaded from: classes4.dex */
-    public static class C6310d extends AnimatorListenerAdapter {
+    public static class d extends AnimatorListenerAdapter {
         WeakReference<AnimationView> a;
 
-        public C6310d(AnimationView animationView) {
+        public d(AnimationView animationView) {
             this.a = null;
             this.a = new WeakReference<>(animationView);
         }
@@ -178,7 +174,7 @@ public class AnimationView extends FrameLayout {
         this.lottieAnimationView = guardedLottieAnimationView;
         addView(guardedLottieAnimationView);
         this.loopRunnable = new LoopRunnable(this);
-        this.lottieAnimationView.addAnimatorListener(new C6310d(this));
+        this.lottieAnimationView.addAnimatorListener(new d(this));
         TypedArray obtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, R$styleable.AnimationView);
         loop(obtainStyledAttributes.getBoolean(R$styleable.AnimationView_ak_loop, false));
         setupAnimKey(obtainStyledAttributes.getInt(R$styleable.AnimationView_ak_animKey, 0));
@@ -322,7 +318,7 @@ public class AnimationView extends FrameLayout {
             if (str.endsWith(str2)) {
                 File file = new File(str);
                 if (file.isDirectory()) {
-                    File[] listFiles2 = file.listFiles(new C6308b(this));
+                    File[] listFiles2 = file.listFiles(new b(this));
                     if (listFiles2.length > 0) {
                         FileInputStream fileInputStream = null;
                         try {
@@ -340,7 +336,7 @@ public class AnimationView extends FrameLayout {
                                             for (File file3 : new File(str3).listFiles()) {
                                                 this.bitmapCache.put(file3.getName(), BitmapFactory.decodeFile(file3.getPath()));
                                             }
-                                            setBitmapFetcher(new C6309c());
+                                            setBitmapFetcher(new c());
                                         }
                                         setAnimation(jSONObject);
                                         this.lastAnimResFolder = str;
@@ -438,7 +434,7 @@ public class AnimationView extends FrameLayout {
         if (bitmapFetcher == null) {
             this.lottieAnimationView.setImageAssetDelegate(null);
         } else {
-            this.lottieAnimationView.setImageAssetDelegate(new C6307a());
+            this.lottieAnimationView.setImageAssetDelegate(new a());
         }
     }
 

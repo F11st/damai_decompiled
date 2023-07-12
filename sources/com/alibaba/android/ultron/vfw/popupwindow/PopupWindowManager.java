@@ -59,10 +59,9 @@ public class PopupWindowManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.ultron.vfw.popupwindow.PopupWindowManager$a  reason: invalid class name */
     /* loaded from: classes15.dex */
-    public class animationAnimation$AnimationListenerC3261a implements Animation.AnimationListener {
-        animationAnimation$AnimationListenerC3261a() {
+    public class a implements Animation.AnimationListener {
+        a() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -81,10 +80,9 @@ public class PopupWindowManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.ultron.vfw.popupwindow.PopupWindowManager$b */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC3262b implements View.OnClickListener {
-        View$OnClickListenerC3262b() {
+    public class b implements View.OnClickListener {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -96,10 +94,9 @@ public class PopupWindowManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.ultron.vfw.popupwindow.PopupWindowManager$c */
     /* loaded from: classes15.dex */
-    public class View$OnKeyListenerC3263c implements View.OnKeyListener {
-        View$OnKeyListenerC3263c() {
+    public class c implements View.OnKeyListener {
+        c() {
         }
 
         @Override // android.view.View.OnKeyListener
@@ -113,10 +110,9 @@ public class PopupWindowManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.ultron.vfw.popupwindow.PopupWindowManager$d */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC3264d implements View.OnClickListener {
-        View$OnClickListenerC3264d() {
+    public class d implements View.OnClickListener {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -126,9 +122,8 @@ public class PopupWindowManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.ultron.vfw.popupwindow.PopupWindowManager$e */
     /* loaded from: classes15.dex */
-    public static class C3265e {
+    public static class e {
         public static final String KEY_BOTTOM_RADIUS = "popupWindowBottomRadius";
         public static final String KEY_TOP_RADIUS = "popupWindowTopRadius";
         private float a;
@@ -169,8 +164,8 @@ public class PopupWindowManager {
     }
 
     private void f() {
-        this.j.setOnClickListener(new View$OnClickListenerC3262b());
-        this.d.setOnKeyListener(new View$OnKeyListenerC3263c());
+        this.j.setOnClickListener(new b());
+        this.d.setOnKeyListener(new c());
     }
 
     private void h() {
@@ -180,7 +175,7 @@ public class PopupWindowManager {
         AlphaAnimation alphaAnimation2 = new AlphaAnimation(1.0f, 0.0f);
         this.l = alphaAnimation2;
         alphaAnimation2.setDuration(200L);
-        this.l.setAnimationListener(new animationAnimation$AnimationListenerC3261a());
+        this.l.setAnimationListener(new a());
         TranslateAnimation translateAnimation = new TranslateAnimation(1, 0.0f, 1, 0.0f, 1, 1.0f, 1, 0.0f);
         this.m = translateAnimation;
         translateAnimation.setDuration(200L);
@@ -214,13 +209,13 @@ public class PopupWindowManager {
     }
 
     private void k() {
-        List<IDMComponent> a = this.a.a();
-        if (a != null && a.size() <= 1) {
+        List<IDMComponent> a2 = this.a.a();
+        if (a2 != null && a2.size() <= 1) {
             this.q.a(false);
         } else {
             this.q.a(true);
         }
-        this.i.setData(a);
+        this.i.setData(a2);
         this.i.notifyDataSetChanged();
     }
 
@@ -230,18 +225,18 @@ public class PopupWindowManager {
             if (linearLayout.getChildCount() > 0) {
                 this.g.removeAllViews();
             }
-            List<IDMComponent> c = this.a.c();
+            List<IDMComponent> c2 = this.a.c();
             cy2 cy2Var = (cy2) this.c.getService(cy2.class);
-            if (c == null || c.size() <= 0) {
+            if (c2 == null || c2.size() <= 0) {
                 return;
             }
-            for (IDMComponent iDMComponent : c) {
-                RecyclerViewHolder c2 = cy2Var.c(this.g, cy2Var.f(iDMComponent));
-                View view = c2.itemView;
+            for (IDMComponent iDMComponent : c2) {
+                RecyclerViewHolder c3 = cy2Var.c(this.g, cy2Var.f(iDMComponent));
+                View view = c3.itemView;
                 if (view != null) {
                     this.g.addView(view);
                 }
-                cy2Var.b(c2, iDMComponent);
+                cy2Var.b(c3, iDMComponent);
             }
         }
     }
@@ -253,17 +248,17 @@ public class PopupWindowManager {
                 this.e.removeAllViews();
             }
             cy2 cy2Var = (cy2) this.c.getService(cy2.class);
-            List<IDMComponent> d = this.a.d();
-            if (d == null || d.size() <= 0) {
+            List<IDMComponent> d2 = this.a.d();
+            if (d2 == null || d2.size() <= 0) {
                 return;
             }
-            for (IDMComponent iDMComponent : d) {
-                RecyclerViewHolder c = cy2Var.c(this.e, cy2Var.f(iDMComponent));
-                View view = c.itemView;
+            for (IDMComponent iDMComponent : d2) {
+                RecyclerViewHolder c2 = cy2Var.c(this.e, cy2Var.f(iDMComponent));
+                View view = c2.itemView;
                 if (view != null) {
                     this.e.addView(view);
                 }
-                cy2Var.b(c, iDMComponent);
+                cy2Var.b(c2, iDMComponent);
             }
         }
     }
@@ -291,7 +286,7 @@ public class PopupWindowManager {
         this.p = onCancelListener;
     }
 
-    public void q(C3265e c3265e) {
+    public void q(e eVar) {
         if (this.b == null) {
             PopupWindow popupWindow = new PopupWindow(this.c.l());
             this.b = popupWindow;
@@ -302,25 +297,25 @@ public class PopupWindowManager {
             this.b.setOutsideTouchable(true);
             this.b.setFocusable(true);
         }
-        if (c3265e != null) {
-            if (c3265e.b < 0) {
-                this.j.setBackgroundColor(c3265e.b);
+        if (eVar != null) {
+            if (eVar.b < 0) {
+                this.j.setBackgroundColor(eVar.b);
             }
-            if (c3265e.a > 0.0f && c3265e.a != s) {
+            if (eVar.a > 0.0f && eVar.a != s) {
                 FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) this.o.getLayoutParams();
-                layoutParams.height = (int) (ny2.c(this.c.l()) * c3265e.a);
+                layoutParams.height = (int) (ny2.c(this.c.l()) * eVar.a);
                 this.o.setLayoutParams(layoutParams);
             }
-            if (c3265e.e != null) {
+            if (eVar.e != null) {
                 this.h.setVisibility(0);
                 this.h.setContentDescription("关闭");
-                this.h.setImageDrawable(c3265e.e);
-                this.h.setOnClickListener(new View$OnClickListenerC3264d());
+                this.h.setImageDrawable(eVar.e);
+                this.h.setOnClickListener(new d());
             } else {
                 this.h.setVisibility(8);
             }
-            if (c3265e.d < 0) {
-                this.o.setBackgroundDrawable(ny2.b(c3265e.d, c3265e.f, c3265e.g));
+            if (eVar.d < 0) {
+                this.o.setBackgroundDrawable(ny2.b(eVar.d, eVar.f, eVar.g));
             }
         }
         this.j.setEnabled(true);
@@ -339,6 +334,6 @@ public class PopupWindowManager {
         l();
         this.j.startAnimation(this.k);
         this.o.startAnimation(this.m);
-        this.b.showAtLocation(this.d, c3265e.c, 0, 0);
+        this.b.showAtLocation(this.d, eVar.c, 0, 0);
     }
 }

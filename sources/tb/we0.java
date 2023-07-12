@@ -40,64 +40,60 @@ public class we0 extends fj {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.we0$a */
     /* loaded from: classes3.dex */
-    public class C9859a extends le1 {
+    public class a extends le1 {
         private final MemoizedFunctionToNotNull<ni1, Collection<? extends SimpleFunctionDescriptor>> a;
         private final MemoizedFunctionToNotNull<ni1, Collection<? extends PropertyDescriptor>> b;
         private final NotNullLazyValue<Collection<DeclarationDescriptor>> c;
         final /* synthetic */ we0 d;
 
         /* compiled from: Taobao */
-        /* renamed from: tb.we0$a$a */
+        /* renamed from: tb.we0$a$a  reason: collision with other inner class name */
         /* loaded from: classes3.dex */
-        class C9860a implements Function1<ni1, Collection<? extends SimpleFunctionDescriptor>> {
-            C9860a(we0 we0Var) {
+        class C0464a implements Function1<ni1, Collection<? extends SimpleFunctionDescriptor>> {
+            C0464a(we0 we0Var) {
             }
 
             @Override // kotlin.jvm.functions.Function1
             /* renamed from: a */
             public Collection<? extends SimpleFunctionDescriptor> invoke(ni1 ni1Var) {
-                return C9859a.this.f(ni1Var);
+                return a.this.f(ni1Var);
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.we0$a$b */
         /* loaded from: classes3.dex */
-        class C9861b implements Function1<ni1, Collection<? extends PropertyDescriptor>> {
-            C9861b(we0 we0Var) {
+        class b implements Function1<ni1, Collection<? extends PropertyDescriptor>> {
+            b(we0 we0Var) {
             }
 
             @Override // kotlin.jvm.functions.Function1
             /* renamed from: a */
             public Collection<? extends PropertyDescriptor> invoke(ni1 ni1Var) {
-                return C9859a.this.g(ni1Var);
+                return a.this.g(ni1Var);
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.we0$a$c */
         /* loaded from: classes3.dex */
-        class C9862c implements Function0<Collection<DeclarationDescriptor>> {
-            C9862c(we0 we0Var) {
+        class c implements Function0<Collection<DeclarationDescriptor>> {
+            c(we0 we0Var) {
             }
 
             @Override // kotlin.jvm.functions.Function0
             /* renamed from: a */
             public Collection<DeclarationDescriptor> invoke() {
-                return C9859a.this.e();
+                return a.this.e();
             }
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: tb.we0$a$d */
         /* loaded from: classes3.dex */
-        public class C9863d extends el1 {
+        public class d extends el1 {
             final /* synthetic */ Set a;
 
-            C9863d(C9859a c9859a, Set set) {
+            d(a aVar, Set set) {
                 this.a = set;
             }
 
@@ -139,14 +135,14 @@ public class we0 extends fj {
             }
         }
 
-        public C9859a(@NotNull we0 we0Var, StorageManager storageManager) {
+        public a(@NotNull we0 we0Var, StorageManager storageManager) {
             if (storageManager == null) {
                 a(0);
             }
             this.d = we0Var;
-            this.a = storageManager.createMemoizedFunction(new C9860a(we0Var));
-            this.b = storageManager.createMemoizedFunction(new C9861b(we0Var));
-            this.c = storageManager.createLazyValue(new C9862c(we0Var));
+            this.a = storageManager.createMemoizedFunction(new C0464a(we0Var));
+            this.b = storageManager.createMemoizedFunction(new b(we0Var));
+            this.c = storageManager.createLazyValue(new c(we0Var));
         }
 
         /* JADX WARN: Removed duplicated region for block: B:16:0x0022  */
@@ -179,7 +175,7 @@ public class we0 extends fj {
                 Method dump skipped, instructions count: 346
                 To view this dump change 'Code comments level' option to 'DEBUG'
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.we0.C9859a.a(int):void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.we0.a.a(int):void");
         }
 
         /* JADX INFO: Access modifiers changed from: private */
@@ -230,7 +226,7 @@ public class we0 extends fj {
                 a(11);
             }
             LinkedHashSet linkedHashSet = new LinkedHashSet();
-            OverridingUtil.DEFAULT.w(ni1Var, collection, Collections.emptySet(), this.d, new C9863d(this, linkedHashSet));
+            OverridingUtil.DEFAULT.w(ni1Var, collection, Collections.emptySet(), this.d, new d(this, linkedHashSet));
             return linkedHashSet;
         }
 
@@ -339,7 +335,7 @@ public class we0 extends fj {
         }
         this.k = annotations;
         this.h = new lj(this, Collections.emptyList(), Collections.singleton(z71Var), storageManager);
-        this.i = new C9859a(this, storageManager);
+        this.i = new a(this, storageManager);
         this.j = notNullLazyValue;
     }
 
@@ -619,11 +615,11 @@ public class we0 extends fj {
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor
     @NotNull
     public MemberScope getStaticScope() {
-        MemberScope.C8499b c8499b = MemberScope.C8499b.INSTANCE;
-        if (c8499b == null) {
+        MemberScope.b bVar = MemberScope.b.INSTANCE;
+        if (bVar == null) {
             c(15);
         }
-        return c8499b;
+        return bVar;
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor

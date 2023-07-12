@@ -179,8 +179,8 @@ public final class v1 {
         }
     }
 
-    public static u1 a() throws C5844k {
-        return new u1.C5886a("collection", "1.0", "AMap_collection_1.0").b(new String[]{"com.amap.api.collection"}).c();
+    public static u1 a() throws k {
+        return new u1.a("collection", "1.0", "AMap_collection_1.0").b(new String[]{"com.amap.api.collection"}).c();
     }
 
     public static String b(long j) {
@@ -414,9 +414,9 @@ public final class v1 {
         String str5;
         String str6;
         str3 = "";
-        String i = C5846l.i(context);
+        String i = l.i(context);
         String a2 = r1.a(i);
-        String a3 = C5846l.a(context);
+        String a3 = l.a(context);
         try {
             if (jSONObject.has("info")) {
                 str5 = jSONObject.getString("info");
@@ -546,8 +546,8 @@ public final class v1 {
         }
     }
 
-    public static u1 q() throws C5844k {
-        return new u1.C5886a("co", "1.0.0", "AMap_co_1.0.0").b(new String[]{"com.amap.co", "com.amap.opensdk.co", "com.amap.location"}).c();
+    public static u1 q() throws k {
+        return new u1.a("co", "1.0.0", "AMap_co_1.0.0").b(new String[]{"com.amap.co", "com.amap.opensdk.co", "com.amap.location"}).c();
     }
 
     public static String r(String str) {
@@ -583,7 +583,7 @@ public final class v1 {
     }
 
     public static boolean t(Context context) {
-        return C5834g.a(context);
+        return g.a(context);
     }
 
     public static byte[] u(byte[] bArr) {

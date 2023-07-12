@@ -25,8 +25,6 @@ import cn.damai.common.app.widget.DMProgressDialog;
 import cn.damai.common.askpermission.OnGrantListener;
 import cn.damai.common.net.mtop.netfit.DMMtopResultRequestListener;
 import cn.damai.common.uploader.AusResult;
-import cn.damai.common.user.C0529c;
-import cn.damai.common.util.C0535a;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.homepage.R$color;
@@ -51,7 +49,6 @@ import com.tencent.open.SocialConstants;
 import com.xiaomi.mipush.sdk.Constants;
 import java.util.ArrayList;
 import java.util.List;
-import tb.C9796v;
 import tb.cb1;
 import tb.cm2;
 import tb.ir1;
@@ -63,6 +60,7 @@ import tb.mr1;
 import tb.q11;
 import tb.q50;
 import tb.uu2;
+import tb.v;
 import tb.vf1;
 import tb.wh2;
 
@@ -99,20 +97,19 @@ public class FeedBackActivity extends SimpleBaseActivity {
     private int mReplyTime = 0;
     private int mUploadPicSize = 0;
     private List<FeedBack> mFeedBackList = new ArrayList();
-    View.OnClickListener mQuestTypeListener = new View$OnClickListenerC1374a();
-    private TextWatcher mTextWatcherListener = new C1376c();
-    private View.OnClickListener mDeleteClickListener = new View$OnClickListenerC1377d();
-    private FileUploadListener mSubmitListener = new C1378e();
-    private Handler mSubmitHandler = new HandlerC1379f();
+    View.OnClickListener mQuestTypeListener = new a();
+    private TextWatcher mTextWatcherListener = new c();
+    private View.OnClickListener mDeleteClickListener = new d();
+    private FileUploadListener mSubmitListener = new e();
+    private Handler mSubmitHandler = new f();
     private String[] picFormArray = {"jpg", "png", "jpeg", "gif", "bmp", "dib", "jfif", "tif", "tiff", "ico"};
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.FeedBackActivity$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1374a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1374a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -135,17 +132,16 @@ public class FeedBackActivity extends SimpleBaseActivity {
             FeedBackActivity.this.mFeedBackTitle = feedBack.title;
             FeedBackActivity.this.mFeedBackHit = feedBack.desc;
             FeedBackActivity.this.mContentEd.setHint(FeedBackActivity.this.mFeedBackHit);
-            C0529c.e().x(vf1.x().q0(feedBack.index));
+            cn.damai.common.user.c.e().x(vf1.x().q0(feedBack.index));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.FeedBackActivity$b */
     /* loaded from: classes6.dex */
-    public class C1375b implements OnGrantListener {
+    public class b implements OnGrantListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1375b() {
+        b() {
         }
 
         @Override // cn.damai.common.askpermission.OnGrantListener
@@ -160,12 +156,11 @@ public class FeedBackActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.FeedBackActivity$c */
     /* loaded from: classes15.dex */
-    public class C1376c implements TextWatcher {
+    public class c implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1376c() {
+        c() {
         }
 
         @Override // android.text.TextWatcher
@@ -207,12 +202,11 @@ public class FeedBackActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.FeedBackActivity$d */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1377d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1377d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -231,12 +225,11 @@ public class FeedBackActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.FeedBackActivity$e */
     /* loaded from: classes6.dex */
-    public class C1378e extends q50 {
+    public class e extends q50 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1378e() {
+        e() {
         }
 
         @Override // tb.q50, com.alibaba.pictures.uploader.FileUploadListener
@@ -261,12 +254,11 @@ public class FeedBackActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.FeedBackActivity$f */
     /* loaded from: classes15.dex */
-    public class HandlerC1379f extends Handler {
+    public class f extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC1379f() {
+        f() {
         }
 
         @Override // android.os.Handler
@@ -287,12 +279,11 @@ public class FeedBackActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.FeedBackActivity$g */
     /* loaded from: classes15.dex */
-    public class DialogInterface$OnDismissListenerC1380g implements DialogInterface.OnDismissListener {
+    public class g implements DialogInterface.OnDismissListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnDismissListenerC1380g() {
+        g() {
         }
 
         @Override // android.content.DialogInterface.OnDismissListener
@@ -321,9 +312,9 @@ public class FeedBackActivity extends SimpleBaseActivity {
         if (this.mFeedBackTitle == null) {
             this.mFeedBackTitle = "意见反馈";
         }
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
         vf1 x = vf1.x();
-        e.x(x.u(this.mFeedBackId + JSMethod.NOT_SET + this.mFeedBackTitle, str));
+        e2.x(x.u(this.mFeedBackId + JSMethod.NOT_SET + this.mFeedBackTitle, str));
     }
 
     private void clearData() {
@@ -346,13 +337,13 @@ public class FeedBackActivity extends SimpleBaseActivity {
             return;
         }
         try {
-            String m = C0535a.m();
+            String m = cn.damai.common.util.a.m();
             if (TextUtils.isEmpty(m)) {
                 return;
             }
             String str = m + "/feedback";
             this.mFilePath = str;
-            C0535a.f(str);
+            cn.damai.common.util.a.f(str);
         } catch (Exception unused) {
         }
     }
@@ -438,16 +429,16 @@ public class FeedBackActivity extends SimpleBaseActivity {
         this.mAddImageLayout.setOnClickListener(this);
         this.mSubmitBtn.setOnClickListener(this);
         this.mContentEd.addTextChangedListener(this.mTextWatcherListener);
-        String m = C0535a.m();
+        String m = cn.damai.common.util.a.m();
         if (TextUtils.isEmpty(m)) {
             return;
         }
         try {
             String str = m + "/feedback";
             this.mFilePath = str;
-            C0535a.t(str, false);
-        } catch (Exception e) {
-            e.printStackTrace();
+            cn.damai.common.util.a.t(str, false);
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 
@@ -458,12 +449,12 @@ public class FeedBackActivity extends SimpleBaseActivity {
             return;
         }
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        Display.getMetrics(((WindowManager) getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+        Display.getMetrics(((WindowManager) getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
         int i = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(displayMetrics);
         this.mScreenWidth = i;
         this.mScreenHeight = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(displayMetrics);
-        int a = (i - m62.a(this, 38.0f)) / 4;
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(a, a);
+        int a2 = (i - m62.a(this, 38.0f)) / 4;
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(a2, a2);
         this.mAddImageLayout.setLayoutParams(layoutParams);
         this.mImageLayouts.clear();
         for (int i2 = 0; i2 < 3; i2++) {
@@ -484,8 +475,8 @@ public class FeedBackActivity extends SimpleBaseActivity {
             ipChange.ipc$dispatch("1614187246", new Object[]{this});
             return;
         }
-        int e = wh2.e(this.mFeedBackList);
-        if (e > 0) {
+        int e2 = wh2.e(this.mFeedBackList);
+        if (e2 > 0) {
             this.mTvDesc.setVisibility(0);
             this.mFlowLayout.setVisibility(0);
         } else {
@@ -494,7 +485,7 @@ public class FeedBackActivity extends SimpleBaseActivity {
         }
         this.mFlowLayout.removeAllViews();
         int i = -1;
-        for (int i2 = 0; i2 < e; i2++) {
+        for (int i2 = 0; i2 < e2; i2++) {
             FeedBack feedBack = this.mFeedBackList.get(i2);
             if (!TextUtils.isEmpty(feedBack.subTitle)) {
                 i++;
@@ -548,8 +539,8 @@ public class FeedBackActivity extends SimpleBaseActivity {
                                 fileUrl = j;
                             }
                             ausResult.url = fileUrl;
-                        } catch (Exception e) {
-                            cb1.d(e);
+                        } catch (Exception e2) {
+                            cb1.d(e2);
                         }
                     }
                     this.mARupReplyData.add(ausResult);
@@ -603,12 +594,12 @@ public class FeedBackActivity extends SimpleBaseActivity {
             r0.append(r1)     // Catch: java.lang.Throwable -> L60 java.lang.Exception -> L62
             java.lang.String r1 = "/"
             r0.append(r1)     // Catch: java.lang.Throwable -> L60 java.lang.Exception -> L62
-            java.lang.String r1 = cn.damai.common.util.C0535a.k(r5)     // Catch: java.lang.Throwable -> L60 java.lang.Exception -> L62
+            java.lang.String r1 = cn.damai.common.util.a.k(r5)     // Catch: java.lang.Throwable -> L60 java.lang.Exception -> L62
             r0.append(r1)     // Catch: java.lang.Throwable -> L60 java.lang.Exception -> L62
             java.lang.String r0 = r0.toString()     // Catch: java.lang.Throwable -> L60 java.lang.Exception -> L62
-            cn.damai.common.util.C0535a.d(r0)     // Catch: java.lang.Throwable -> L60 java.lang.Exception -> L62
-            android.graphics.Bitmap r6 = cn.damai.common.util.C0535a.i(r5)     // Catch: java.lang.Throwable -> L60 java.lang.Exception -> L62
-            cn.damai.common.util.C0535a.u(r6, r0)     // Catch: java.lang.Throwable -> L60 java.lang.Exception -> L62
+            cn.damai.common.util.a.d(r0)     // Catch: java.lang.Throwable -> L60 java.lang.Exception -> L62
+            android.graphics.Bitmap r6 = cn.damai.common.util.a.i(r5)     // Catch: java.lang.Throwable -> L60 java.lang.Exception -> L62
+            cn.damai.common.util.a.u(r6, r0)     // Catch: java.lang.Throwable -> L60 java.lang.Exception -> L62
             r5 = r0
         L5a:
             if (r6 == 0) goto L69
@@ -754,11 +745,11 @@ public class FeedBackActivity extends SimpleBaseActivity {
             ipChange.ipc$dispatch("-1367945570", new Object[]{this});
             return;
         }
-        int e = wh2.e(this.mPaths);
+        int e2 = wh2.e(this.mPaths);
         for (int i = 0; i < 3; i++) {
             FrameLayout frameLayout = this.mImageLayouts.get(i);
             ImageView imageView = (ImageView) frameLayout.findViewById(R$id.image_bg);
-            if (i < e) {
+            if (i < e2) {
                 frameLayout.setVisibility(0);
                 kg1 j = kg1.q(this).j(String.format("file://%1$s", this.mPaths.get(i)));
                 int i2 = R$drawable.uikit_default_image_bg_gradient;
@@ -856,7 +847,7 @@ public class FeedBackActivity extends SimpleBaseActivity {
         }
         super.onActivityResult(i, i2, intent);
         if (i2 == -1 && i == 1000) {
-            reduceImage(C0535a.l(getApplicationContext(), intent.getData()), true);
+            reduceImage(cn.damai.common.util.a.l(getApplicationContext(), intent.getData()), true);
         }
         super.onActivityResult(i, i2, intent);
     }
@@ -888,7 +879,7 @@ public class FeedBackActivity extends SimpleBaseActivity {
         int id = view.getId();
         if (id == R$id.fl_add_image) {
             if (wh2.e(this.mPaths) < 3) {
-                ir1.b(this, false, mr1.STORAGE, "用于选取图片进行问题反馈", new C1375b());
+                ir1.b(this, false, mr1.STORAGE, "用于选取图片进行问题反馈", new b());
             } else {
                 ToastUtil.i("最多上传3张图片哟~");
             }
@@ -942,9 +933,9 @@ public class FeedBackActivity extends SimpleBaseActivity {
         } else if (isFinishing()) {
         } else {
             if (this.mDMProgressDialog == null) {
-                DMProgressDialog a = new DMProgressDialog(this.mContext).a();
-                this.mDMProgressDialog = a;
-                a.setOnDismissListener(new DialogInterface$OnDismissListenerC1380g());
+                DMProgressDialog a2 = new DMProgressDialog(this.mContext).a();
+                this.mDMProgressDialog = a2;
+                a2.setOnDismissListener(new g());
             }
             this.mDMProgressDialog.show();
             setBtnEnable(false);

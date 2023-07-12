@@ -4,7 +4,7 @@ import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import com.taobao.weex.common.WXConfig;
 import java.lang.reflect.Field;
 import java.util.Set;
-import kotlin.collections.C8203e0;
+import kotlin.collections.e0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.MutablePropertyReference1Impl;
 import kotlin.jvm.internal.PropertyReference1Impl;
@@ -16,7 +16,7 @@ import kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationDescri
 import kotlin.reflect.jvm.internal.impl.renderer.ClassifierNamePolicy;
 import kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer;
 import kotlin.reflect.jvm.internal.impl.renderer.DescriptorRendererOptions;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.a12;
@@ -80,7 +80,7 @@ public final class DescriptorRendererOptionsImpl implements DescriptorRendererOp
     private final ReadWriteProperty W;
     private boolean a;
     @NotNull
-    private final ReadWriteProperty b = W(ClassifierNamePolicy.C8473c.INSTANCE);
+    private final ReadWriteProperty b = W(ClassifierNamePolicy.c.INSTANCE);
     @NotNull
     private final ReadWriteProperty c;
     @NotNull
@@ -132,14 +132,13 @@ public final class DescriptorRendererOptionsImpl implements DescriptorRendererOp
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRendererOptionsImpl$a */
     /* loaded from: classes3.dex */
-    public static final class C8482a<T> extends om1<T> {
+    public static final class a<T> extends om1<T> {
         final /* synthetic */ Object b;
         final /* synthetic */ DescriptorRendererOptionsImpl c;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C8482a(Object obj, Object obj2, DescriptorRendererOptionsImpl descriptorRendererOptionsImpl) {
+        public a(Object obj, Object obj2, DescriptorRendererOptionsImpl descriptorRendererOptionsImpl) {
             super(obj2);
             this.b = obj;
             this.c = descriptorRendererOptionsImpl;
@@ -198,7 +197,7 @@ public final class DescriptorRendererOptionsImpl implements DescriptorRendererOp
         });
         this.z = W(bool);
         this.A = W(OverrideRenderingPolicy.RENDER_OPEN);
-        this.B = W(DescriptorRenderer.ValueParametersHandler.C8474a.INSTANCE);
+        this.B = W(DescriptorRenderer.ValueParametersHandler.a.INSTANCE);
         this.C = W(RenderingFormat.PLAIN);
         this.D = W(ParameterNameRenderingPolicy.ALL);
         this.E = W(bool2);
@@ -206,7 +205,7 @@ public final class DescriptorRendererOptionsImpl implements DescriptorRendererOp
         this.G = W(PropertyAccessorRenderingPolicy.DEBUG);
         this.H = W(bool2);
         this.I = W(bool2);
-        d = C8203e0.d();
+        d = e0.d();
         this.J = W(d);
         this.K = W(ig0.INSTANCE.a());
         this.L = W(null);
@@ -225,7 +224,7 @@ public final class DescriptorRendererOptionsImpl implements DescriptorRendererOp
 
     private final <T> ReadWriteProperty<DescriptorRendererOptionsImpl, T> W(T t) {
         o60 o60Var = o60.INSTANCE;
-        return new C8482a(t, t, this);
+        return new a(t, t, this);
     }
 
     public boolean A() {
@@ -336,7 +335,7 @@ public final class DescriptorRendererOptionsImpl implements DescriptorRendererOp
                 if (om1Var != null) {
                     String name = field.getName();
                     b41.h(name, "field.name");
-                    C8604o.F(name, "is", false, 2, null);
+                    o.F(name, "is", false, 2, null);
                     KClass b = a12.b(DescriptorRendererOptionsImpl.class);
                     String name2 = field.getName();
                     String name3 = field.getName();
@@ -421,11 +420,11 @@ public final class DescriptorRendererOptionsImpl implements DescriptorRendererOp
     }
 
     public boolean l() {
-        return DescriptorRendererOptions.C8481a.a(this);
+        return DescriptorRendererOptions.a.a(this);
     }
 
     public boolean m() {
-        return DescriptorRendererOptions.C8481a.b(this);
+        return DescriptorRendererOptions.a.b(this);
     }
 
     public boolean n() {

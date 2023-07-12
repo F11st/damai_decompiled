@@ -23,9 +23,9 @@ public class DisposableHttpTask extends Thread {
             r6 = this;
             java.lang.String r0 = "HttpCommunication.advertisement"
             super.run()
-            boolean r1 = com.youku.httpcommunication.C7926c.d()
+            boolean r1 = com.youku.httpcommunication.c.d()
             if (r1 == 0) goto L8e
-            com.youku.httpcommunication.C7926c.b()
+            com.youku.httpcommunication.c.b()
             r1 = 0
             java.net.URL r2 = new java.net.URL     // Catch: java.lang.Throwable -> L68 java.lang.Exception -> L6a
             java.lang.String r3 = r6.url     // Catch: java.lang.Throwable -> L68 java.lang.Exception -> L6a
@@ -37,7 +37,7 @@ public class DisposableHttpTask extends Thread {
             java.lang.String r4 = r6.url     // Catch: java.lang.Throwable -> L68 java.lang.Exception -> L6a
             r3.append(r4)     // Catch: java.lang.Throwable -> L68 java.lang.Exception -> L6a
             java.lang.String r3 = r3.toString()     // Catch: java.lang.Throwable -> L68 java.lang.Exception -> L6a
-            com.youku.httpcommunication.C7924a.b(r0, r3)     // Catch: java.lang.Throwable -> L68 java.lang.Exception -> L6a
+            com.youku.httpcommunication.a.b(r0, r3)     // Catch: java.lang.Throwable -> L68 java.lang.Exception -> L6a
             java.net.URLConnection r2 = r2.openConnection()     // Catch: java.lang.Throwable -> L68 java.lang.Exception -> L6a
             java.net.HttpURLConnection r2 = (java.net.HttpURLConnection) r2     // Catch: java.lang.Throwable -> L68 java.lang.Exception -> L6a
             r1 = 15000(0x3a98, float:2.102E-41)
@@ -55,7 +55,7 @@ public class DisposableHttpTask extends Thread {
             java.lang.String r1 = java.lang.String.valueOf(r1)     // Catch: java.lang.Exception -> L66 java.lang.Throwable -> L81
             r3.append(r1)     // Catch: java.lang.Exception -> L66 java.lang.Throwable -> L81
             java.lang.String r1 = r3.toString()     // Catch: java.lang.Exception -> L66 java.lang.Throwable -> L81
-            com.youku.httpcommunication.C7924a.b(r0, r1)     // Catch: java.lang.Exception -> L66 java.lang.Throwable -> L81
+            com.youku.httpcommunication.a.b(r0, r1)     // Catch: java.lang.Exception -> L66 java.lang.Throwable -> L81
             r2.disconnect()     // Catch: java.lang.Exception -> L7c
             goto L8e
         L66:
@@ -71,7 +71,7 @@ public class DisposableHttpTask extends Thread {
             r1 = r5
         L6e:
             java.lang.String r3 = "DisposableHttpTask run Exception"
-            com.youku.httpcommunication.C7924a.a(r0, r3, r1)     // Catch: java.lang.Throwable -> L81
+            com.youku.httpcommunication.a.a(r0, r3, r1)     // Catch: java.lang.Throwable -> L81
             r1.printStackTrace()     // Catch: java.lang.Throwable -> L81
             if (r2 == 0) goto L8e
             r2.disconnect()     // Catch: java.lang.Exception -> L7c

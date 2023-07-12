@@ -21,13 +21,12 @@ public class CommonTitleView extends AbsView<CommonTitleContract.Presenter> impl
     private View morell;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.common.CommonTitleView$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1799a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        View$OnClickListenerC1799a(String str) {
+        a(String str) {
             this.a = str;
         }
 
@@ -56,7 +55,7 @@ public class CommonTitleView extends AbsView<CommonTitleContract.Presenter> impl
             ipChange.ipc$dispatch("1649186881", new Object[]{this, str});
         } else if (!TextUtils.isEmpty(str)) {
             this.morell.setVisibility(0);
-            this.morell.setOnClickListener(new View$OnClickListenerC1799a(str));
+            this.morell.setOnClickListener(new a(str));
         } else {
             this.morell.setVisibility(8);
         }

@@ -29,7 +29,7 @@ import tb.df2;
 /* loaded from: classes6.dex */
 public class DropBoxHeader extends InternalAbstract implements RefreshHeader {
     protected int mAccentColor;
-    protected C6158e mBoxBody;
+    protected e mBoxBody;
     protected Drawable mDrawable1;
     protected Drawable mDrawable2;
     protected Drawable mDrawable3;
@@ -44,10 +44,9 @@ public class DropBoxHeader extends InternalAbstract implements RefreshHeader {
     protected RefreshState mState;
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.DropBoxHeader$a */
     /* loaded from: classes6.dex */
-    class C6154a implements ValueAnimator.AnimatorUpdateListener {
-        C6154a() {
+    class a implements ValueAnimator.AnimatorUpdateListener {
+        a() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -59,10 +58,9 @@ public class DropBoxHeader extends InternalAbstract implements RefreshHeader {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.DropBoxHeader$b */
     /* loaded from: classes6.dex */
-    class C6155b extends AnimatorListenerAdapter {
-        C6155b() {
+    class b extends AnimatorListenerAdapter {
+        b() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -81,10 +79,9 @@ public class DropBoxHeader extends InternalAbstract implements RefreshHeader {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.DropBoxHeader$c */
     /* loaded from: classes6.dex */
-    class C6156c implements ValueAnimator.AnimatorUpdateListener {
-        C6156c() {
+    class c implements ValueAnimator.AnimatorUpdateListener {
+        c() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -107,10 +104,9 @@ public class DropBoxHeader extends InternalAbstract implements RefreshHeader {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.DropBoxHeader$d */
     /* loaded from: classes6.dex */
-    class C6157d extends AnimatorListenerAdapter {
-        C6157d() {
+    class d extends AnimatorListenerAdapter {
+        d() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -124,9 +120,8 @@ public class DropBoxHeader extends InternalAbstract implements RefreshHeader {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.DropBoxHeader$e */
     /* loaded from: classes6.dex */
-    public static class C6158e {
+    public static class e {
         int a;
         int b;
         int c;
@@ -137,10 +132,10 @@ public class DropBoxHeader extends InternalAbstract implements RefreshHeader {
         int h;
         int i;
 
-        private C6158e() {
+        private e() {
         }
 
-        C6158e a(int i, int i2, int i3, int i4) {
+        e a(int i, int i2, int i3, int i4) {
             this.i = i3;
             int i5 = i / 2;
             this.a = i5;
@@ -158,7 +153,7 @@ public class DropBoxHeader extends InternalAbstract implements RefreshHeader {
             return this;
         }
 
-        /* synthetic */ C6158e(C6154a c6154a) {
+        /* synthetic */ e(a aVar) {
             this();
         }
     }
@@ -168,75 +163,75 @@ public class DropBoxHeader extends InternalAbstract implements RefreshHeader {
     }
 
     @NonNull
-    private C6158e generateBoxBody(int i, int i2, int i3) {
+    private e generateBoxBody(int i, int i2, int i3) {
         return this.mBoxBody.a(i, i2, i3, i3 / 2);
     }
 
     @NonNull
-    private Path generateBoxBodyPath(C6158e c6158e) {
+    private Path generateBoxBodyPath(e eVar) {
         this.mPath.reset();
-        this.mPath.moveTo(c6158e.e, c6158e.g);
-        this.mPath.lineTo(c6158e.a, c6158e.c);
-        this.mPath.lineTo(c6158e.h, c6158e.g);
+        this.mPath.moveTo(eVar.e, eVar.g);
+        this.mPath.lineTo(eVar.a, eVar.c);
+        this.mPath.lineTo(eVar.h, eVar.g);
         Path path = this.mPath;
-        int i = c6158e.h;
-        path.quadTo(i + ((c6158e.i / 2) * this.mReboundPercent), c6158e.b, i, c6158e.f);
-        this.mPath.lineTo(c6158e.a, c6158e.d);
-        this.mPath.lineTo(c6158e.e, c6158e.f);
+        int i = eVar.h;
+        path.quadTo(i + ((eVar.i / 2) * this.mReboundPercent), eVar.b, i, eVar.f);
+        this.mPath.lineTo(eVar.a, eVar.d);
+        this.mPath.lineTo(eVar.e, eVar.f);
         Path path2 = this.mPath;
-        int i2 = c6158e.e;
-        path2.quadTo(i2 - ((c6158e.i / 2) * this.mReboundPercent), c6158e.b, i2, c6158e.g);
+        int i2 = eVar.e;
+        path2.quadTo(i2 - ((eVar.i / 2) * this.mReboundPercent), eVar.b, i2, eVar.g);
         this.mPath.close();
         return this.mPath;
     }
 
     @NonNull
-    private Path generateBoxCoverPath(C6158e c6158e) {
+    private Path generateBoxCoverPath(e eVar) {
         this.mPath.reset();
-        double d = this.mReboundPercent * 1.2566370614359172d;
-        float f = ((c6158e.a - c6158e.e) * 4) / 5;
-        double d2 = 1.0471975511965976d - (d / 2.0d);
-        float sin = ((float) Math.sin(d2)) * f;
-        float cos = ((float) Math.cos(d2)) * f;
-        this.mPath.moveTo(c6158e.e, c6158e.f);
-        this.mPath.lineTo(c6158e.a, c6158e.d);
-        this.mPath.lineTo(c6158e.a - sin, c6158e.d - cos);
-        this.mPath.lineTo(c6158e.e - sin, c6158e.f - cos);
+        double d2 = this.mReboundPercent * 1.2566370614359172d;
+        float f = ((eVar.a - eVar.e) * 4) / 5;
+        double d3 = 1.0471975511965976d - (d2 / 2.0d);
+        float sin = ((float) Math.sin(d3)) * f;
+        float cos = ((float) Math.cos(d3)) * f;
+        this.mPath.moveTo(eVar.e, eVar.f);
+        this.mPath.lineTo(eVar.a, eVar.d);
+        this.mPath.lineTo(eVar.a - sin, eVar.d - cos);
+        this.mPath.lineTo(eVar.e - sin, eVar.f - cos);
         this.mPath.close();
-        double d3 = d + 1.0471975511965976d;
-        float sin2 = ((float) Math.sin(d3)) * f;
-        float cos2 = ((float) Math.cos(d3)) * f;
-        this.mPath.moveTo(c6158e.e, c6158e.f);
-        this.mPath.lineTo(c6158e.a, (c6158e.c + c6158e.d) / 2);
-        this.mPath.lineTo(c6158e.a - sin2, ((c6158e.c + c6158e.d) / 2) + cos2);
-        this.mPath.lineTo(c6158e.e - sin2, c6158e.f + cos2);
+        double d4 = d2 + 1.0471975511965976d;
+        float sin2 = ((float) Math.sin(d4)) * f;
+        float cos2 = ((float) Math.cos(d4)) * f;
+        this.mPath.moveTo(eVar.e, eVar.f);
+        this.mPath.lineTo(eVar.a, (eVar.c + eVar.d) / 2);
+        this.mPath.lineTo(eVar.a - sin2, ((eVar.c + eVar.d) / 2) + cos2);
+        this.mPath.lineTo(eVar.e - sin2, eVar.f + cos2);
         this.mPath.close();
-        float sin3 = ((float) Math.sin(d2)) * f;
-        float cos3 = ((float) Math.cos(d2)) * f;
-        this.mPath.moveTo(c6158e.h, c6158e.f);
-        this.mPath.lineTo(c6158e.a, c6158e.d);
-        this.mPath.lineTo(c6158e.a + sin3, c6158e.d - cos3);
-        this.mPath.lineTo(c6158e.h + sin3, c6158e.f - cos3);
+        float sin3 = ((float) Math.sin(d3)) * f;
+        float cos3 = ((float) Math.cos(d3)) * f;
+        this.mPath.moveTo(eVar.h, eVar.f);
+        this.mPath.lineTo(eVar.a, eVar.d);
+        this.mPath.lineTo(eVar.a + sin3, eVar.d - cos3);
+        this.mPath.lineTo(eVar.h + sin3, eVar.f - cos3);
         this.mPath.close();
-        float sin4 = ((float) Math.sin(d3)) * f;
-        float cos4 = f * ((float) Math.cos(d3));
-        this.mPath.moveTo(c6158e.h, c6158e.f);
-        this.mPath.lineTo(c6158e.a, (c6158e.c + c6158e.d) / 2);
-        this.mPath.lineTo(c6158e.a + sin4, ((c6158e.c + c6158e.d) / 2) + cos4);
-        this.mPath.lineTo(c6158e.h + sin4, c6158e.f + cos4);
+        float sin4 = ((float) Math.sin(d4)) * f;
+        float cos4 = f * ((float) Math.cos(d4));
+        this.mPath.moveTo(eVar.h, eVar.f);
+        this.mPath.lineTo(eVar.a, (eVar.c + eVar.d) / 2);
+        this.mPath.lineTo(eVar.a + sin4, ((eVar.c + eVar.d) / 2) + cos4);
+        this.mPath.lineTo(eVar.h + sin4, eVar.f + cos4);
         this.mPath.close();
         return this.mPath;
     }
 
     @NonNull
-    private Path generateClipPath(C6158e c6158e, int i) {
+    private Path generateClipPath(e eVar, int i) {
         this.mPath.reset();
-        this.mPath.lineTo(0.0f, c6158e.f);
-        this.mPath.lineTo(c6158e.e, c6158e.f);
-        this.mPath.lineTo(c6158e.a, c6158e.b);
-        this.mPath.lineTo(c6158e.h, c6158e.f);
+        this.mPath.lineTo(0.0f, eVar.f);
+        this.mPath.lineTo(eVar.e, eVar.f);
+        this.mPath.lineTo(eVar.a, eVar.b);
+        this.mPath.lineTo(eVar.h, eVar.f);
         float f = i;
-        this.mPath.lineTo(f, c6158e.f);
+        this.mPath.lineTo(f, eVar.f);
         this.mPath.lineTo(f, 0.0f);
         this.mPath.close();
         return this.mPath;
@@ -249,7 +244,7 @@ public class DropBoxHeader extends InternalAbstract implements RefreshHeader {
     @Override // android.view.ViewGroup, android.view.View
     protected void dispatchDraw(Canvas canvas) {
         int width = getWidth();
-        C6158e generateBoxBody = generateBoxBody(width, getHeight(), generateSideLength());
+        e generateBoxBody = generateBoxBody(width, getHeight(), generateSideLength());
         this.mPaint.setColor(ColorUtils.setAlphaComponent(this.mAccentColor, 150));
         canvas.drawPath(generateBoxBodyPath(generateBoxBody), this.mPaint);
         this.mPaint.setColor(this.mAccentColor);
@@ -292,14 +287,14 @@ public class DropBoxHeader extends InternalAbstract implements RefreshHeader {
         this.mReboundAnimator = ofFloat;
         ofFloat.setInterpolator(accelerateInterpolator);
         this.mReboundAnimator.setDuration(300L);
-        this.mReboundAnimator.addUpdateListener(new C6154a());
-        this.mReboundAnimator.addListener(new C6155b());
+        this.mReboundAnimator.addUpdateListener(new a());
+        this.mReboundAnimator.addListener(new b());
         ValueAnimator ofFloat2 = ValueAnimator.ofFloat(0.0f, 1.0f);
         this.mDropOutAnimator = ofFloat2;
         ofFloat2.setInterpolator(accelerateInterpolator);
         this.mDropOutAnimator.setDuration(300L);
-        this.mDropOutAnimator.addUpdateListener(new C6156c());
-        this.mDropOutAnimator.addListener(new C6157d());
+        this.mDropOutAnimator.addUpdateListener(new c());
+        this.mDropOutAnimator.addListener(new d());
     }
 
     @Override // android.view.ViewGroup, android.view.View
@@ -377,7 +372,7 @@ public class DropBoxHeader extends InternalAbstract implements RefreshHeader {
         super(context, attributeSet, i);
         this.mPath = new Path();
         this.mPaint = new Paint();
-        this.mBoxBody = new C6158e(null);
+        this.mBoxBody = new e(null);
         this.mPaint.setAntiAlias(true);
         this.mAccentColor = -9524737;
         setBackgroundColor(-14141883);

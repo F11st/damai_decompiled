@@ -7,7 +7,7 @@ import android.view.MotionEvent;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import com.youku.tinywindow.R;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -69,7 +69,7 @@ public class FloatingLayout extends FrameLayout {
     public FloatingLayout(Context context, AttributeSet attributeSet, FloatingWindowClickCallBack floatingWindowClickCallBack) {
         super(context, attributeSet);
         this.mCallback = floatingWindowClickCallBack;
-        this.mWindowManager = (WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW);
-        LayoutInflater.from(context).inflate(R.C8081layout.tinywindow_floatingwindow_root_layout, this);
+        this.mWindowManager = (WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW);
+        LayoutInflater.from(context).inflate(R.layout.tinywindow_floatingwindow_root_layout, this);
     }
 }

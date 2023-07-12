@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import com.alibaba.pictures.R$drawable;
 import com.alibaba.pictures.R$id;
 import com.alibaba.pictures.bricks.bean.WaterFlowRecommendItem;
-import com.alibaba.pictures.bricks.util.C3550a;
+import com.alibaba.pictures.bricks.util.a;
 import com.alient.onearch.adapter.view.BaseViewHolder;
 import com.alient.oneservice.image.ImageLoaderProvider;
 import com.alient.oneservice.image.ImageLoaderProviderProxy;
@@ -70,7 +70,7 @@ public class WaterFlowCouponViewHolder extends BaseViewHolder<WaterFlowRecommend
             ((ImageTicket) this.mBackGroundImg.getTag()).cancel();
         }
         this.mBackGroundImg.setImageDrawable(null);
-        String c = C3550a.c(waterFlowRecommendItem.pic, this.imageViewWidth, this.imageViewHeight);
+        String c = a.c(waterFlowRecommendItem.pic, this.imageViewWidth, this.imageViewHeight);
         ImageLoaderProvider proxy = ImageLoaderProviderProxy.getProxy();
         ImageView imageView = this.mBackGroundImg;
         int i = R$drawable.bricks_uikit_default_image_bg_gradient;

@@ -6,7 +6,6 @@ import com.taobao.android.dinamicx.DXRuntimeContext;
 import com.taobao.android.dinamicx.expression.expr_v2.DXBuiltinProvider;
 import com.taobao.android.dinamicx.expression.expr_v2.DXExprDxMethodProxy;
 import com.taobao.android.dinamicx.expression.expr_v2.DXJSMethodProxy;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Stack;
@@ -43,12 +42,12 @@ public class zy {
         return az.N(azVar.toString() + azVar2.toString());
     }
 
-    private az c(az azVar, az azVar2, hy hyVar, DXRuntimeContext dXRuntimeContext, AbstractC6375a abstractC6375a) {
+    private az c(az azVar, az azVar2, hy hyVar, DXRuntimeContext dXRuntimeContext, com.taobao.android.dinamicx.expression.parser.a aVar) {
         az[] azVarArr = {azVar, azVar2};
         ez ezVar = new ez();
         ezVar.b(hyVar);
         try {
-            return abstractC6375a.call(dXRuntimeContext, null, 2, azVarArr, ezVar);
+            return aVar.call(dXRuntimeContext, null, 2, azVarArr, ezVar);
         } catch (Throwable th) {
             az.L();
             throw new IllegalArgumentException("FunctionError: " + th.getMessage(), th);

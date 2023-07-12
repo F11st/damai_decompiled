@@ -13,7 +13,6 @@ import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.app.widget.DMDialog;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.trade.R$color;
 import cn.damai.trade.R$drawable;
@@ -28,8 +27,8 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.List;
 import org.apache.commons.lang3.time.DateUtils;
-import tb.C9826vr;
 import tb.uo1;
+import tb.vr;
 import tb.wh2;
 import tb.xr;
 
@@ -43,7 +42,7 @@ public class OrderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     private View.OnClickListener d;
     private OrderPayChooseImpl e;
     private int f;
-    private View.OnClickListener g = new View$OnClickListenerC2242a();
+    private View.OnClickListener g = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes8.dex */
@@ -87,12 +86,11 @@ public class OrderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         private View z;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.trade.newtradeorder.ui.orderlist.ui.adapter.OrderListAdapter$OrderListViewHolder$a */
         /* loaded from: classes16.dex */
-        public class View$OnClickListenerC2239a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC2239a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -112,12 +110,11 @@ public class OrderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.trade.newtradeorder.ui.orderlist.ui.adapter.OrderListAdapter$OrderListViewHolder$b */
         /* loaded from: classes16.dex */
-        public class View$OnClickListenerC2240b implements View.OnClickListener {
+        public class b implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC2240b() {
+            b() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -133,12 +130,11 @@ public class OrderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.trade.newtradeorder.ui.orderlist.ui.adapter.OrderListAdapter$OrderListViewHolder$c */
         /* loaded from: classes16.dex */
-        public class View$OnClickListenerC2241c implements View.OnClickListener {
+        public class c implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC2241c() {
+            c() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -154,7 +150,7 @@ public class OrderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
         public OrderListViewHolder(Context context) {
             super(LayoutInflater.from(context).inflate(R$layout.order_list_item, (ViewGroup) null));
-            this.J = new View$OnClickListenerC2239a();
+            this.J = new a();
             this.itemView.setLayoutParams(new RecyclerView.LayoutParams(-1, -2));
             f(this.itemView);
         }
@@ -366,12 +362,12 @@ public class OrderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                 orderListBean.index = i;
                 this.a.setVisibility(i == 0 ? 0 : 8);
                 this.c.setText(orderListBean.orderStatus);
-                if (this.d.getTag() instanceof C9826vr) {
-                    ((C9826vr) this.d.getTag()).cancel();
+                if (this.d.getTag() instanceof vr) {
+                    ((vr) this.d.getTag()).cancel();
                 }
-                DMImageCreator c = C0504a.b().c(orderListBean.projectPicUrl);
+                DMImageCreator c2 = cn.damai.common.image.a.b().c(orderListBean.projectPicUrl);
                 int i2 = R$drawable.uikit_default_image_bg_gradient;
-                this.d.setTag(c.i(i2).c(i2).g(this.d));
+                this.d.setTag(c2.i(i2).c(i2).g(this.d));
                 this.e.setText(orderListBean.projectName);
                 if (TextUtils.isEmpty(orderListBean.venueName)) {
                     orderListBean.venueName = "场馆待定";
@@ -450,12 +446,11 @@ public class OrderListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderlist.ui.adapter.OrderListAdapter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2242a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2242a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener

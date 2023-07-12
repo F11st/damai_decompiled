@@ -39,13 +39,12 @@ public class SNSBind implements SNSBindService {
     private static volatile SNSBind instance;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.bind.SNSBind$a */
     /* loaded from: classes11.dex */
-    class C6610a implements AuthCallback {
+    class a implements AuthCallback {
         final /* synthetic */ Activity a;
         final /* synthetic */ CommonCallback b;
 
-        C6610a(Activity activity, CommonCallback commonCallback) {
+        a(Activity activity, CommonCallback commonCallback) {
             this.a = activity;
             this.b = commonCallback;
         }
@@ -68,20 +67,18 @@ public class SNSBind implements SNSBindService {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.bind.SNSBind$b */
     /* loaded from: classes11.dex */
-    public class C6611b implements RpcRequestCallback {
+    public class b implements RpcRequestCallback {
         final /* synthetic */ CommonCallback a;
         final /* synthetic */ Activity b;
         final /* synthetic */ SNSSignInAccount c;
 
         /* compiled from: Taobao */
-        /* renamed from: com.taobao.android.sns4android.bind.SNSBind$b$a */
         /* loaded from: classes12.dex */
-        class DialogInterface$OnClickListenerC6612a implements DialogInterface.OnClickListener {
+        class a implements DialogInterface.OnClickListener {
             final /* synthetic */ SnsCainiaoBindResult a;
 
-            DialogInterface$OnClickListenerC6612a(SnsCainiaoBindResult snsCainiaoBindResult) {
+            a(SnsCainiaoBindResult snsCainiaoBindResult) {
                 this.a = snsCainiaoBindResult;
             }
 
@@ -89,29 +86,29 @@ public class SNSBind implements SNSBindService {
             public void onClick(DialogInterface dialogInterface, int i) {
                 ExtraBindResult extraBindResult = (ExtraBindResult) this.a.returnValue;
                 if (extraBindResult != null) {
-                    C6611b c6611b = C6611b.this;
-                    SNSSignInAccount sNSSignInAccount = c6611b.c;
+                    b bVar = b.this;
+                    SNSSignInAccount sNSSignInAccount = bVar.c;
                     sNSSignInAccount.userId = extraBindResult.bindId;
                     sNSSignInAccount.changeBindToken = extraBindResult.changeBindToken;
-                    SNSBind.this.doChangeBind(sNSSignInAccount, extraBindResult.avatar, extraBindResult.thirdNick, c6611b.a);
+                    SNSBind.this.doChangeBind(sNSSignInAccount, extraBindResult.avatar, extraBindResult.thirdNick, bVar.a);
                 }
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.taobao.android.sns4android.bind.SNSBind$b$b */
+        /* renamed from: com.taobao.android.sns4android.bind.SNSBind$b$b  reason: collision with other inner class name */
         /* loaded from: classes12.dex */
-        class DialogInterface$OnClickListenerC6613b implements DialogInterface.OnClickListener {
-            DialogInterface$OnClickListenerC6613b() {
+        class DialogInterface$OnClickListenerC0301b implements DialogInterface.OnClickListener {
+            DialogInterface$OnClickListenerC0301b() {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
             public void onClick(DialogInterface dialogInterface, int i) {
-                C6611b.this.a.onFail(701, "");
+                b.this.a.onFail(701, "");
             }
         }
 
-        C6611b(CommonCallback commonCallback, Activity activity, SNSSignInAccount sNSSignInAccount) {
+        b(CommonCallback commonCallback, Activity activity, SNSSignInAccount sNSSignInAccount) {
             this.a = commonCallback;
             this.b = activity;
             this.c = sNSSignInAccount;
@@ -152,7 +149,7 @@ public class SNSBind implements SNSBindService {
             }
             int i = snsCainiaoBindResult.code;
             if (i == 212 || i == 121106) {
-                new AlertDialog.Builder(this.b).setMessage(snsCainiaoBindResult.message).setNegativeButton("取消", new DialogInterface$OnClickListenerC6613b()).setPositiveButton("确定", new DialogInterface$OnClickListenerC6612a(snsCainiaoBindResult)).create().show();
+                new AlertDialog.Builder(this.b).setMessage(snsCainiaoBindResult.message).setNegativeButton("取消", new DialogInterface$OnClickListenerC0301b()).setPositiveButton("确定", new a(snsCainiaoBindResult)).create().show();
             } else if (i != 121104 && i != 216 && i != 203018) {
                 this.a.onFail(i, str);
             } else {
@@ -189,12 +186,11 @@ public class SNSBind implements SNSBindService {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.bind.SNSBind$c */
     /* loaded from: classes11.dex */
-    public class C6614c implements RpcRequestCallback {
+    public class c implements RpcRequestCallback {
         final /* synthetic */ CommonCallback a;
 
-        C6614c(SNSBind sNSBind, CommonCallback commonCallback) {
+        c(SNSBind sNSBind, CommonCallback commonCallback) {
             this.a = commonCallback;
         }
 
@@ -267,12 +263,11 @@ public class SNSBind implements SNSBindService {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.bind.SNSBind$d */
     /* loaded from: classes11.dex */
-    static class C6615d implements MemberCallback<String> {
+    static class d implements MemberCallback<String> {
         final /* synthetic */ String a;
 
-        C6615d(String str) {
+        d(String str) {
             this.a = str;
         }
 
@@ -311,11 +306,11 @@ public class SNSBind implements SNSBindService {
         if (activity == null || commonCallback == null) {
             return;
         }
-        SNSDataRepository.getInstance().snsBindCaiNiao(sNSSignInAccount.snsType, sNSSignInAccount.token, DataProviderFactory.getDataProvider().getAccountBindBizType(), new C6611b(commonCallback, activity, sNSSignInAccount));
+        SNSDataRepository.getInstance().snsBindCaiNiao(sNSSignInAccount.snsType, sNSSignInAccount.token, DataProviderFactory.getDataProvider().getAccountBindBizType(), new b(commonCallback, activity, sNSSignInAccount));
     }
 
     private void doCainiaoChange(SNSSignInAccount sNSSignInAccount, String str, String str2, CommonCallback commonCallback) {
-        SNSDataRepository.getInstance().snsChangeBindCaiNiao(sNSSignInAccount.snsType, sNSSignInAccount.userId, sNSSignInAccount.changeBindToken, DataProviderFactory.getDataProvider().getAccountBindBizType(), str, str2, new C6614c(this, commonCallback));
+        SNSDataRepository.getInstance().snsChangeBindCaiNiao(sNSSignInAccount.snsType, sNSSignInAccount.userId, sNSSignInAccount.changeBindToken, DataProviderFactory.getDataProvider().getAccountBindBizType(), str, str2, new c(this, commonCallback));
     }
 
     public static SNSBind getInstance() {
@@ -357,7 +352,7 @@ public class SNSBind implements SNSBindService {
             str = DataProviderFactory.getDataProvider().getEnvType() == 2 ? "https://market.wapa.taobao.com/app/vip/ucc/pages/bind_manage?env=pre" : "https://market.m.taobao.com/app/vip/ucc/pages/bind_manage?";
         }
         if (((UccService) AliMemberSDK.getService(UccService.class)).getUccDataProvider() != null) {
-            ((UccService) AliMemberSDK.getService(UccService.class)).getUccDataProvider().getUserToken("", new C6615d(str));
+            ((UccService) AliMemberSDK.getService(UccService.class)).getUccDataProvider().getUserToken("", new d(str));
         } else {
             SNSAuth.toastBusy("data provider为空");
         }
@@ -369,7 +364,7 @@ public class SNSBind implements SNSBindService {
             return;
         }
         if (sNSPlatform == SNSPlatform.PLATFORM_TAOBAO) {
-            auth(new C6610a(activity, commonCallback));
+            auth(new a(activity, commonCallback));
         } else if (sNSPlatform == SNSPlatform.PLATFORM_QQ && !BundleUtil.isAppInstalled(activity, "com.tencent.mobileqq")) {
             commonCallback.onFail(10001, "请先安装QQ");
         } else if (sNSPlatform == SNSPlatform.PLATFORM_WEIXIN && !BundleUtil.isAppInstalled(activity, "com.tencent.mm")) {

@@ -9,7 +9,6 @@ import android.graphics.Picture;
 import android.graphics.Rect;
 import androidx.annotation.NonNull;
 import androidx.collection.LongSparseArray;
-import cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.C0863b;
 import cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.model.SVGPaintData;
 import cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.model.Shape;
 import cn.damai.seat.R$raw;
@@ -42,18 +41,17 @@ public class g92 {
     private final int a;
     private final Rect b = new Rect(0, 0, 128, 128);
     private final LongSparseArray<Bitmap> c = new LongSparseArray<>();
-    private final C9167f d = new C9167f();
-    private final C9166e e = new C9166e();
-    private final C9165d f = new C9165d();
-    private final C9163b g = new C9163b();
+    private final f d = new f();
+    private final e e = new e();
+    private final d f = new d();
+    private final b g = new b();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.g92$b */
     /* loaded from: classes7.dex */
-    public static class C9163b extends AbstractC9164c {
+    public static class b extends c {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        public C9163b() {
+        public b() {
             super();
         }
 
@@ -70,9 +68,8 @@ public class g92 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.g92$c */
     /* loaded from: classes7.dex */
-    public static abstract class AbstractC9164c extends g52 {
+    public static abstract class c extends g52 {
         private static transient /* synthetic */ IpChange $ipChange;
         private static final int e = Color.parseColor("#DDE0E5");
         private static final int f = Color.parseColor("#D3D3D3");
@@ -80,7 +77,7 @@ public class g92 {
         protected int c;
         private float[] d;
 
-        private AbstractC9164c() {
+        private c() {
             this.d = new float[3];
         }
 
@@ -141,12 +138,11 @@ public class g92 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.g92$d */
     /* loaded from: classes7.dex */
-    public static final class C9165d extends AbstractC9164c {
+    public static final class d extends c {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9165d() {
+        private d() {
             super();
         }
 
@@ -164,12 +160,11 @@ public class g92 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.g92$e */
     /* loaded from: classes7.dex */
-    public static final class C9166e extends AbstractC9164c {
+    public static final class e extends c {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9166e() {
+        private e() {
             super();
         }
 
@@ -188,13 +183,12 @@ public class g92 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.g92$f */
     /* loaded from: classes7.dex */
-    public static final class C9167f extends AbstractC9164c {
+    public static final class f extends c {
         private static transient /* synthetic */ IpChange $ipChange;
         private int g;
 
-        private C9167f() {
+        private f() {
             super();
             this.g = 0;
         }
@@ -220,7 +214,7 @@ public class g92 {
             this.g = i + 1;
         }
 
-        @Override // tb.g92.AbstractC9164c
+        @Override // tb.g92.c
         public void g(int i, boolean z) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1226493567")) {
@@ -231,7 +225,7 @@ public class g92 {
             super.g(i, z);
         }
 
-        @Override // tb.g92.AbstractC9164c
+        @Override // tb.g92.c
         public void h(boolean z) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1970561627")) {
@@ -259,9 +253,9 @@ public class g92 {
             return (SVGPaintData) ipChange.ipc$dispatch("-2000060054", new Object[]{Integer.valueOf(i2)});
         }
         try {
-            return new C0863b().b(mu0.a().getResources().openRawResource(i2)).a().getSvgPaintData();
-        } catch (Exception e) {
-            e.printStackTrace();
+            return new cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.b().b(mu0.a().getResources().openRawResource(i2)).a().getSvgPaintData();
+        } catch (Exception e2) {
+            e2.printStackTrace();
             return null;
         }
     }
@@ -271,19 +265,19 @@ public class g92 {
         return AndroidInstantRuntime.support(ipChange, "-17865946") ? ((Boolean) ipChange.ipc$dispatch("-17865946", new Object[]{this})).booleanValue() : (m == null || n == null || o == null || p == null || q == null) ? false : true;
     }
 
-    private boolean f(byte b) {
+    private boolean f(byte b2) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1097977954") ? ((Boolean) ipChange.ipc$dispatch("1097977954", new Object[]{this, Byte.valueOf(b)})).booleanValue() : b == 16;
+        return AndroidInstantRuntime.support(ipChange, "1097977954") ? ((Boolean) ipChange.ipc$dispatch("1097977954", new Object[]{this, Byte.valueOf(b2)})).booleanValue() : b2 == 16;
     }
 
-    private boolean g(byte b) {
+    private boolean g(byte b2) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-589980443") ? ((Boolean) ipChange.ipc$dispatch("-589980443", new Object[]{this, Byte.valueOf(b)})).booleanValue() : b == 12 || b == 15 || b == 13;
+        return AndroidInstantRuntime.support(ipChange, "-589980443") ? ((Boolean) ipChange.ipc$dispatch("-589980443", new Object[]{this, Byte.valueOf(b2)})).booleanValue() : b2 == 12 || b2 == 15 || b2 == 13;
     }
 
-    private boolean h(byte b) {
+    private boolean h(byte b2) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1619520691") ? ((Boolean) ipChange.ipc$dispatch("1619520691", new Object[]{this, Byte.valueOf(b)})).booleanValue() : b == 11 || b == 13;
+        return AndroidInstantRuntime.support(ipChange, "1619520691") ? ((Boolean) ipChange.ipc$dispatch("1619520691", new Object[]{this, Byte.valueOf(b2)})).booleanValue() : b2 == 11 || b2 == 13;
     }
 
     private boolean j() {
@@ -291,15 +285,15 @@ public class g92 {
         return AndroidInstantRuntime.support(ipChange, "2116607359") ? ((Boolean) ipChange.ipc$dispatch("2116607359", new Object[]{this})).booleanValue() : (j == null || k == null || i == null || h == null || l == null) ? false : true;
     }
 
-    private boolean k(byte b) {
+    private boolean k(byte b2) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "663946123") ? ((Boolean) ipChange.ipc$dispatch("663946123", new Object[]{this, Byte.valueOf(b)})).booleanValue() : b == 14 || b == 15;
+        return AndroidInstantRuntime.support(ipChange, "663946123") ? ((Boolean) ipChange.ipc$dispatch("663946123", new Object[]{this, Byte.valueOf(b2)})).booleanValue() : b2 == 14 || b2 == 15;
     }
 
-    private Bitmap l(int i2, boolean z, boolean z2, boolean z3, C9165d c9165d) {
+    private Bitmap l(int i2, boolean z, boolean z2, boolean z3, d dVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-641007427")) {
-            return (Bitmap) ipChange.ipc$dispatch("-641007427", new Object[]{this, Integer.valueOf(i2), Boolean.valueOf(z), Boolean.valueOf(z2), Boolean.valueOf(z3), c9165d});
+            return (Bitmap) ipChange.ipc$dispatch("-641007427", new Object[]{this, Integer.valueOf(i2), Boolean.valueOf(z), Boolean.valueOf(z2), Boolean.valueOf(z3), dVar});
         }
         Bitmap createBitmap = Bitmap.createBitmap(128, 128, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(createBitmap);
@@ -307,7 +301,7 @@ public class g92 {
             canvas.drawPicture(q.buildPicture(this.g), this.b);
             return createBitmap;
         }
-        canvas.drawPicture(m.buildPicture(c9165d), this.b);
+        canvas.drawPicture(m.buildPicture(dVar), this.b);
         if (z) {
             canvas.drawPicture(n.buildPicture(this.g), this.b);
         }
@@ -320,34 +314,34 @@ public class g92 {
         return createBitmap;
     }
 
-    private Bitmap m(int i2, byte b, boolean z) {
+    private Bitmap m(int i2, byte b2, boolean z) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1040006550")) {
-            return (Bitmap) ipChange.ipc$dispatch("-1040006550", new Object[]{this, Integer.valueOf(i2), Byte.valueOf(b), Boolean.valueOf(z)});
+            return (Bitmap) ipChange.ipc$dispatch("-1040006550", new Object[]{this, Integer.valueOf(i2), Byte.valueOf(b2), Boolean.valueOf(z)});
         }
         if (z) {
             i2 = qk.b(76.5f, i2);
         }
-        h92 e = h92.e();
-        if (b == 15) {
-            return e.b(Color.parseColor("#e9e9e9"));
+        h92 e2 = h92.e();
+        if (b2 == 15) {
+            return e2.b(Color.parseColor("#e9e9e9"));
         }
-        if (b == 14) {
-            return e.d(Color.parseColor("#e9e9e9"));
+        if (b2 == 14) {
+            return e2.d(Color.parseColor("#e9e9e9"));
         }
-        if (h(b)) {
-            return e.c();
+        if (h(b2)) {
+            return e2.c();
         }
-        if (g(b)) {
-            return e.b(i2);
+        if (g(b2)) {
+            return e2.b(i2);
         }
-        return e.d(i2);
+        return e2.d(i2);
     }
 
-    private Bitmap n(float f, boolean z, boolean z2, boolean z3, C9167f c9167f) {
+    private Bitmap n(float f2, boolean z, boolean z2, boolean z3, f fVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1814254601")) {
-            return (Bitmap) ipChange.ipc$dispatch("1814254601", new Object[]{this, Float.valueOf(f), Boolean.valueOf(z), Boolean.valueOf(z2), Boolean.valueOf(z3), c9167f});
+            return (Bitmap) ipChange.ipc$dispatch("1814254601", new Object[]{this, Float.valueOf(f2), Boolean.valueOf(z), Boolean.valueOf(z2), Boolean.valueOf(z3), fVar});
         }
         Bitmap createBitmap = Bitmap.createBitmap(128, 128, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(createBitmap);
@@ -355,7 +349,7 @@ public class g92 {
             canvas.drawPicture(l.buildPicture(this.g), this.b);
             return createBitmap;
         }
-        canvas.drawPicture(h.buildPicture(c9167f), this.b);
+        canvas.drawPicture(h.buildPicture(fVar), this.b);
         if (z) {
             canvas.drawPicture(i.buildPicture(this.g), this.b);
         }
@@ -363,78 +357,78 @@ public class g92 {
             Picture buildPicture = j.buildPicture(this.e);
             Picture buildPicture2 = k.buildPicture(this.g);
             canvas.drawPicture(buildPicture, this.b);
-            if (f != 0.0f) {
-                canvas.rotate(-f, 64.0f, 64.0f);
+            if (f2 != 0.0f) {
+                canvas.rotate(-f2, 64.0f, 64.0f);
             }
             canvas.drawPicture(buildPicture2, this.b);
         }
         return createBitmap;
     }
 
-    private Bitmap p(Bitmap bitmap, float f) {
+    private Bitmap p(Bitmap bitmap, float f2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-2086644615")) {
-            return (Bitmap) ipChange.ipc$dispatch("-2086644615", new Object[]{this, bitmap, Float.valueOf(f)});
+            return (Bitmap) ipChange.ipc$dispatch("-2086644615", new Object[]{this, bitmap, Float.valueOf(f2)});
         }
-        if (f != 0.0f) {
+        if (f2 != 0.0f) {
             Matrix matrix = new Matrix();
             matrix.postScale(1.0f, 1.0f);
-            matrix.postRotate(f, bitmap.getWidth() / 2, bitmap.getHeight() / 2);
+            matrix.postRotate(f2, bitmap.getWidth() / 2, bitmap.getHeight() / 2);
             return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
         }
         return bitmap;
     }
 
-    public Bitmap a(int i2, float f, byte b, boolean z) {
+    public Bitmap a(int i2, float f2, byte b2, boolean z) {
         Bitmap m2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "391635636")) {
-            return (Bitmap) ipChange.ipc$dispatch("391635636", new Object[]{this, Integer.valueOf(i2), Float.valueOf(f), Byte.valueOf(b), Boolean.valueOf(z)});
+            return (Bitmap) ipChange.ipc$dispatch("391635636", new Object[]{this, Integer.valueOf(i2), Float.valueOf(f2), Byte.valueOf(b2), Boolean.valueOf(z)});
         }
-        long a = c11.a(i2, (short) f, b, z);
-        Bitmap bitmap = this.c.get(a);
+        long a2 = c11.a(i2, (short) f2, b2, z);
+        Bitmap bitmap = this.c.get(a2);
         if (bitmap == null) {
             int i3 = this.a;
             if (i3 == 3) {
-                if (k(b)) {
+                if (k(b2)) {
                     this.d.h(z);
-                    m2 = p(n(f, g(b), false, false, this.d), f);
+                    m2 = p(n(f2, g(b2), false, false, this.d), f2);
                 } else {
                     this.d.g(i2, z);
-                    m2 = p(n(f, g(b), h(b), f(b), this.d), f);
+                    m2 = p(n(f2, g(b2), h(b2), f(b2), this.d), f2);
                 }
             } else if (i3 == 1) {
-                if (k(b)) {
+                if (k(b2)) {
                     this.f.h(z);
                 } else {
                     this.f.g(i2, z);
                 }
-                m2 = l(i2, g(b), h(b), f(b), this.f);
+                m2 = l(i2, g(b2), h(b2), f(b2), this.f);
             } else {
-                m2 = m(i2, b, z);
+                m2 = m(i2, b2, z);
             }
             bitmap = m2;
             if (bitmap != null) {
-                this.c.put(a, bitmap);
+                this.c.put(a2, bitmap);
             }
         }
         return bitmap;
     }
 
-    public Bitmap b(float f) {
+    public Bitmap b(float f2) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1056527448") ? (Bitmap) ipChange.ipc$dispatch("-1056527448", new Object[]{this, Float.valueOf(f)}) : a(0, f, (byte) 16, false);
+        return AndroidInstantRuntime.support(ipChange, "-1056527448") ? (Bitmap) ipChange.ipc$dispatch("-1056527448", new Object[]{this, Float.valueOf(f2)}) : a(0, f2, (byte) 16, false);
     }
 
-    public Bitmap d(float f, byte b, boolean z) {
+    public Bitmap d(float f2, byte b2, boolean z) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1530139479")) {
-            return (Bitmap) ipChange.ipc$dispatch("-1530139479", new Object[]{this, Float.valueOf(f), Byte.valueOf(b), Boolean.valueOf(z)});
+            return (Bitmap) ipChange.ipc$dispatch("-1530139479", new Object[]{this, Float.valueOf(f2), Byte.valueOf(b2), Boolean.valueOf(z)});
         }
-        if (b != 15 && b != 14) {
-            b = 14;
+        if (b2 != 15 && b2 != 14) {
+            b2 = 14;
         }
-        return a(0, f, b, z);
+        return a(0, f2, b2, z);
     }
 
     public boolean i() {

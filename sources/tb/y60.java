@@ -8,19 +8,18 @@ import tb.z60;
 public abstract class y60 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.y60$a */
     /* loaded from: classes3.dex */
-    public static final class C9951a extends y60 {
+    public static final class a extends y60 {
         @NotNull
-        public static final C9951a INSTANCE = new C9951a();
+        public static final a INSTANCE = new a();
         private static final int a;
 
         static {
-            z60.C10015a c10015a = z60.Companion;
-            a = (~(c10015a.i() | c10015a.d())) & c10015a.b();
+            z60.a aVar = z60.Companion;
+            a = (~(aVar.i() | aVar.d())) & aVar.b();
         }
 
-        private C9951a() {
+        private a() {
         }
 
         @Override // tb.y60
@@ -30,13 +29,12 @@ public abstract class y60 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.y60$b */
     /* loaded from: classes3.dex */
-    public static final class C9952b extends y60 {
+    public static final class b extends y60 {
         @NotNull
-        public static final C9952b INSTANCE = new C9952b();
+        public static final b INSTANCE = new b();
 
-        private C9952b() {
+        private b() {
         }
 
         @Override // tb.y60

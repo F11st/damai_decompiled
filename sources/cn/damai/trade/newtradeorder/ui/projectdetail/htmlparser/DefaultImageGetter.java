@@ -8,7 +8,6 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMRoundedCornersBitmapProcessor;
 import cn.damai.trade.newtradeorder.ui.projectdetail.htmlparser.callback.ImageGetter;
@@ -30,7 +29,7 @@ public class DefaultImageGetter implements ImageGetter {
     private static Set<BitmapWorkerTask> g = new HashSet();
     private static ExecutorService h;
     private Context a;
-    private C2250e b;
+    private e b;
     private int c;
     private final int d = (int) (HtmlView.h * 2.5f);
     private String e;
@@ -79,16 +78,15 @@ public class DefaultImageGetter implements ImageGetter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.htmlparser.DefaultImageGetter$a */
     /* loaded from: classes8.dex */
-    public class C2243a implements DMImageCreator.DMImageSuccListener {
+    public class a implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageGetterCallBack a;
         final /* synthetic */ String b;
         final /* synthetic */ int c;
         final /* synthetic */ int d;
 
-        C2243a(ImageGetterCallBack imageGetterCallBack, String str, int i, int i2) {
+        a(ImageGetterCallBack imageGetterCallBack, String str, int i, int i2) {
             this.a = imageGetterCallBack;
             this.b = str;
             this.c = i;
@@ -96,12 +94,12 @@ public class DefaultImageGetter implements ImageGetter {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Drawable drawable;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "195558006")) {
-                ipChange.ipc$dispatch("195558006", new Object[]{this, c0502e});
-            } else if (c0502e == null || (drawable = c0502e.a) == null) {
+                ipChange.ipc$dispatch("195558006", new Object[]{this, eVar});
+            } else if (eVar == null || (drawable = eVar.a) == null) {
             } else {
                 Bitmap j = DefaultImageGetter.this.j(drawable);
                 ImageGetterCallBack imageGetterCallBack = this.a;
@@ -221,7 +219,7 @@ public class DefaultImageGetter implements ImageGetter {
                     e.printStackTrace();
                 }
             } else if (str.startsWith("http://") || str.startsWith("https://")) {
-                C0504a.b().c(str).k(new DMRoundedCornersBitmapProcessor(5, 0)).n(new C2243a(imageGetterCallBack, str, i, i2)).f();
+                cn.damai.common.image.a.b().c(str).k(new DMRoundedCornersBitmapProcessor(5, 0)).n(new a(imageGetterCallBack, str, i, i2)).f();
             }
         }
     }

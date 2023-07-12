@@ -16,7 +16,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.PopupWindow;
 import cn.damai.common.AppConfig;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.R$anim;
 import cn.damai.commonbusiness.R$id;
@@ -34,10 +33,10 @@ import com.android.alibaba.ip.runtime.IpChange;
 import io.flutter.wpkbridge.WPKFactory;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tb.C9796v;
 import tb.b23;
 import tb.b41;
 import tb.j23;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
@@ -54,7 +53,7 @@ public final class MemberAuthPopWindow extends PopupWindow {
     @Nullable
     private ICustomDialogEventListener eventListener;
     @NotNull
-    private HandlerC0989a handler;
+    private a handler;
     private Context mContext;
     @NotNull
     private String pageSource;
@@ -73,12 +72,11 @@ public final class MemberAuthPopWindow extends PopupWindow {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.yymember.view.MemberAuthPopWindow$a */
     /* loaded from: classes.dex */
-    public final class HandlerC0989a extends Handler {
+    public final class a extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        public HandlerC0989a() {
+        public a() {
         }
 
         @Override // android.os.Handler
@@ -166,12 +164,11 @@ public final class MemberAuthPopWindow extends PopupWindow {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.yymember.view.MemberAuthPopWindow$b  reason: invalid class name */
     /* loaded from: classes.dex */
-    public static final class animationAnimation$AnimationListenerC0990b implements Animation.AnimationListener {
+    public static final class b implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        animationAnimation$AnimationListenerC0990b() {
+        b() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -181,7 +178,7 @@ public final class MemberAuthPopWindow extends PopupWindow {
                 ipChange.ipc$dispatch("72133308", new Object[]{this, animation});
                 return;
             }
-            b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+            b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             MemberAuthPopWindow.this.callSuperDismiss();
         }
 
@@ -191,7 +188,7 @@ public final class MemberAuthPopWindow extends PopupWindow {
             if (AndroidInstantRuntime.support(ipChange, "927124280")) {
                 ipChange.ipc$dispatch("927124280", new Object[]{this, animation});
             } else {
-                b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+                b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             }
         }
 
@@ -201,18 +198,17 @@ public final class MemberAuthPopWindow extends PopupWindow {
             if (AndroidInstantRuntime.support(ipChange, "-904167659")) {
                 ipChange.ipc$dispatch("-904167659", new Object[]{this, animation});
             } else {
-                b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+                b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.yymember.view.MemberAuthPopWindow$c */
     /* loaded from: classes.dex */
-    public static final class C0991c implements MemberDamaiAuthView.IMemberPopEventListener {
+    public static final class c implements MemberDamaiAuthView.IMemberPopEventListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0991c() {
+        c() {
         }
 
         @Override // cn.damai.commonbusiness.yymember.view.MemberDamaiAuthView.IMemberPopEventListener
@@ -238,7 +234,7 @@ public final class MemberAuthPopWindow extends PopupWindow {
                 memberDamaiAuthView2 = memberDamaiAuthView3;
             }
             memberDamaiAuthView2.setVisibility(0);
-            C0529c.e().x(j23.Companion.a().h(MemberAuthPopWindow.this.pageSource, MemberDamaiAuthView.DM_AUTH_UT_MODULE, "agree"));
+            cn.damai.common.user.c.e().x(j23.Companion.a().h(MemberAuthPopWindow.this.pageSource, MemberDamaiAuthView.DM_AUTH_UT_MODULE, "agree"));
         }
 
         @Override // cn.damai.commonbusiness.yymember.view.MemberDamaiAuthView.IMemberPopEventListener
@@ -258,7 +254,7 @@ public final class MemberAuthPopWindow extends PopupWindow {
                 ipChange.ipc$dispatch("-1457289622", new Object[]{this});
                 return;
             }
-            C0529c.e().x(j23.Companion.a().h(MemberAuthPopWindow.this.pageSource, MemberDamaiAuthView.PP_AUTH_UT_MODULE, "confirm"));
+            cn.damai.common.user.c.e().x(j23.Companion.a().h(MemberAuthPopWindow.this.pageSource, MemberDamaiAuthView.PP_AUTH_UT_MODULE, "confirm"));
             MemberAuthPopWindow.this.oneKeyAuthRequest();
         }
     }
@@ -271,9 +267,9 @@ public final class MemberAuthPopWindow extends PopupWindow {
         b41.i(activity, "activity");
         this.authPPDmPre = "https://pre-wormhole.tmall.com/wh/fragment/taopiaopiao/default/mdmas";
         this.authPPDmOnline = "https://pages.taopiaopiao.com/wh/fragment/taopiaopiao/default/mdmas?wh_biz=tm&wh_ttid=pc";
-        this.handler = new HandlerC0989a();
+        this.handler = new a();
         this.pageSource = "AuthPopWindow";
-        this.popEventListener = new C0991c();
+        this.popEventListener = new c();
         init(context, view, activity);
         initData();
         View view2 = this.popView;
@@ -493,9 +489,9 @@ public final class MemberAuthPopWindow extends PopupWindow {
         }
         if (memberDamaiAuthView.getVisibility() == 0) {
             this.tppShowEndTime = System.currentTimeMillis();
-            j23.C9296a c9296a = j23.Companion;
-            c9296a.a().g(this.pageSource, this.damaiShowStartTime, this.damaiShowEndTime, MemberDamaiAuthView.DM_AUTH_UT_MODULE, "agree");
-            c9296a.a().g(this.pageSource, this.tppShowStartTime, this.tppShowEndTime, MemberDamaiAuthView.PP_AUTH_UT_MODULE, "confirm");
+            j23.a aVar = j23.Companion;
+            aVar.a().g(this.pageSource, this.damaiShowStartTime, this.damaiShowEndTime, MemberDamaiAuthView.DM_AUTH_UT_MODULE, "agree");
+            aVar.a().g(this.pageSource, this.tppShowStartTime, this.tppShowEndTime, MemberDamaiAuthView.PP_AUTH_UT_MODULE, "confirm");
         } else {
             this.damaiShowEndTime = System.currentTimeMillis();
             j23.Companion.a().g(this.pageSource, this.damaiShowStartTime, this.damaiShowEndTime, MemberDamaiAuthView.DM_AUTH_UT_MODULE, "agree");
@@ -514,7 +510,7 @@ public final class MemberAuthPopWindow extends PopupWindow {
             context = null;
         }
         Animation loadAnimation = AnimationUtils.loadAnimation(context, R$anim.push_top_out_500);
-        loadAnimation.setAnimationListener(new animationAnimation$AnimationListenerC0990b());
+        loadAnimation.setAnimationListener(new b());
         View view2 = this.popView;
         if (view2 == null) {
             b41.A("popView");

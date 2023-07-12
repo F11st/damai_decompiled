@@ -27,9 +27,8 @@ public class FlipLoadingLayout extends LoadingLayout {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.pulltorefresh.library.internal.FlipLoadingLayout$a */
     /* loaded from: classes8.dex */
-    public static /* synthetic */ class C2538a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -67,7 +66,7 @@ public class FlipLoadingLayout extends LoadingLayout {
         if (AndroidInstantRuntime.support(ipChange, "227557379")) {
             return ((Float) ipChange.ipc$dispatch("227557379", new Object[]{this})).floatValue();
         }
-        int i = C2538a.a[this.mMode.ordinal()];
+        int i = a.a[this.mMode.ordinal()];
         return i != 1 ? (i == 2 && this.mScrollDirection == PullToRefreshBase.Orientation.HORIZONTAL) ? 270.0f : 0.0f : this.mScrollDirection == PullToRefreshBase.Orientation.HORIZONTAL ? 90.0f : 180.0f;
     }
 

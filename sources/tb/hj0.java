@@ -13,7 +13,6 @@ import cn.damai.projectfilter.bean.FilterData;
 import cn.damai.projectfilter.bean.FilterGroupBean;
 import cn.damai.projectfilter.bean.FilterItemBean;
 import cn.damai.projectfilter.bean.Type;
-import cn.damai.projectfilter.floatview.AbstractC1515a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
@@ -22,22 +21,21 @@ import java.util.List;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
-public class hj0 extends AbstractC1515a<HashMap<String, List<FilterBean>>> implements View.OnClickListener {
+public class hj0 extends cn.damai.projectfilter.floatview.a<HashMap<String, List<FilterBean>>> implements View.OnClickListener {
     private static transient /* synthetic */ IpChange $ipChange;
     private final View d;
     private FilterItemBean e;
     private boolean f;
     private ViewGroup g;
-    private HashMap<String, List<C9214a>> h;
-    private HashMap<String, List<C9214a>> i;
+    private HashMap<String, List<a>> h;
+    private HashMap<String, List<a>> i;
     private HashMap<String, FilterGroupBean> j;
     private View k;
     private long l;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hj0$a */
     /* loaded from: classes6.dex */
-    public static class C9214a {
+    public static class a {
         private static transient /* synthetic */ IpChange $ipChange;
         public final String a;
         public final FilterBean b;
@@ -45,7 +43,7 @@ public class hj0 extends AbstractC1515a<HashMap<String, List<FilterBean>>> imple
         public final int d;
         public boolean e = false;
 
-        public C9214a(String str, FilterBean filterBean, TextView textView, int i) {
+        public a(String str, FilterBean filterBean, TextView textView, int i) {
             this.a = str;
             this.b = filterBean;
             this.c = textView;
@@ -81,19 +79,19 @@ public class hj0 extends AbstractC1515a<HashMap<String, List<FilterBean>>> imple
         this.k.setOnClickListener(this);
     }
 
-    private void a(String str, C9214a c9214a) {
+    private void a(String str, a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-989824372")) {
-            ipChange.ipc$dispatch("-989824372", new Object[]{this, str, c9214a});
+            ipChange.ipc$dispatch("-989824372", new Object[]{this, str, aVar});
             return;
         }
-        List<C9214a> list = this.h.get(str);
+        List<a> list = this.h.get(str);
         if (list == null) {
             list = new ArrayList<>();
             this.h.put(str, list);
         }
-        list.add(c9214a);
-        c9214a.a(true);
+        list.add(aVar);
+        aVar.a(true);
     }
 
     private void b() {
@@ -103,10 +101,10 @@ public class hj0 extends AbstractC1515a<HashMap<String, List<FilterBean>>> imple
             return;
         }
         for (String str : this.h.keySet()) {
-            List<C9214a> list = this.h.get(str);
+            List<a> list = this.h.get(str);
             if (!cb2.d(list)) {
-                for (C9214a c9214a : list) {
-                    c9214a.a(false);
+                for (a aVar : list) {
+                    aVar.a(false);
                 }
             }
         }
@@ -140,9 +138,9 @@ public class hj0 extends AbstractC1515a<HashMap<String, List<FilterBean>>> imple
                         TextView textView = (TextView) inflate2.findViewById(R$id.item_filter_text);
                         textView.setText(filterBean.name);
                         textView.setSelected(false);
-                        C9214a c9214a = new C9214a(filterGroupBean.option, filterBean, textView, i);
-                        arrayList.add(c9214a);
-                        inflate2.setTag(c9214a);
+                        a aVar = new a(filterGroupBean.option, filterBean, textView, i);
+                        arrayList.add(aVar);
+                        inflate2.setTag(aVar);
                         inflate2.setOnClickListener(this);
                         viewGroup.addView(inflate2, -2, -2);
                     }
@@ -159,29 +157,29 @@ public class hj0 extends AbstractC1515a<HashMap<String, List<FilterBean>>> imple
         }
         HashMap<String, List<FilterBean>> hashMap = new HashMap<>();
         for (String str : this.h.keySet()) {
-            List<C9214a> list = this.h.get(str);
+            List<a> list = this.h.get(str);
             if (!cb2.d(list)) {
                 ArrayList arrayList = new ArrayList();
                 hashMap.put(str, arrayList);
-                for (C9214a c9214a : list) {
-                    arrayList.add(c9214a.b);
+                for (a aVar : list) {
+                    arrayList.add(aVar.b);
                 }
             }
         }
         return hashMap;
     }
 
-    private void e(String str, C9214a c9214a) {
+    private void e(String str, a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1382375646")) {
-            ipChange.ipc$dispatch("1382375646", new Object[]{this, str, c9214a});
+            ipChange.ipc$dispatch("1382375646", new Object[]{this, str, aVar});
             return;
         }
-        List<C9214a> list = this.h.get(str);
+        List<a> list = this.h.get(str);
         if (!cb2.d(list)) {
-            list.remove(c9214a);
+            list.remove(aVar);
         }
-        c9214a.a(false);
+        aVar.a(false);
     }
 
     @Override // cn.damai.projectfilter.floatview.FloatLayer
@@ -200,11 +198,11 @@ public class hj0 extends AbstractC1515a<HashMap<String, List<FilterBean>>> imple
         }
         for (String str : hashMap.keySet()) {
             List<FilterBean> list = hashMap.get(str);
-            List<C9214a> list2 = this.i.get(str);
+            List<a> list2 = this.i.get(str);
             if (!cb2.d(list) && !cb2.d(list2)) {
-                for (C9214a c9214a : list2) {
-                    if (list.contains(c9214a.b)) {
-                        a(str, c9214a);
+                for (a aVar : list2) {
+                    if (list.contains(aVar.b)) {
+                        a(str, aVar);
                     }
                 }
             }
@@ -235,7 +233,7 @@ public class hj0 extends AbstractC1515a<HashMap<String, List<FilterBean>>> imple
 
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
-        C9214a c9214a;
+        a aVar;
         String str;
         FilterGroupBean filterGroupBean;
         IpChange ipChange = $ipChange;
@@ -254,24 +252,24 @@ public class hj0 extends AbstractC1515a<HashMap<String, List<FilterBean>>> imple
             b();
         } else if (id == R$id.item_filter_one_item_id) {
             Object tag = view.getTag();
-            if (!(tag instanceof C9214a) || (filterGroupBean = this.j.get((str = (c9214a = (C9214a) tag).a))) == null) {
+            if (!(tag instanceof a) || (filterGroupBean = this.j.get((str = (aVar = (a) tag).a))) == null) {
                 return;
             }
-            if (c9214a.e) {
-                e(str, c9214a);
+            if (aVar.e) {
+                e(str, aVar);
             } else {
                 if (filterGroupBean.isSingleSelected) {
-                    List<C9214a> list = this.h.get(str);
+                    List<a> list = this.h.get(str);
                     if (!cb2.d(list)) {
-                        for (C9214a c9214a2 : list) {
-                            c9214a2.a(false);
+                        for (a aVar2 : list) {
+                            aVar2.a(false);
                         }
                         list.clear();
                     }
                 }
-                a(str, c9214a);
+                a(str, aVar);
             }
-            getFilterUt().n(c9214a.b, c9214a.d);
+            getFilterUt().n(aVar.b, aVar.d);
         }
     }
 }

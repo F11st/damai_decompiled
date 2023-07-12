@@ -21,12 +21,12 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 import java.util.Map;
-import tb.C9548pb;
 import tb.cs;
 import tb.d23;
 import tb.ja;
 import tb.jm1;
 import tb.nb2;
+import tb.pb;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -35,12 +35,11 @@ public class BigNotePresenter extends BasePresenter<BigNoteModel, BigNoteView, B
     private TrackInfo mTrackInfo;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.discover.mvp.BigNotePresenter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1806a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1806a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -78,7 +77,7 @@ public class BigNotePresenter extends BasePresenter<BigNoteModel, BigNoteView, B
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(-1, -2);
         linearLayout.setOrientation(0);
         linearLayout.setLayoutParams(layoutParams);
-        linearLayout.addView(nb2.g(getContext().getActivity(), new View$OnClickListenerC1806a()));
+        linearLayout.addView(nb2.g(getContext().getActivity(), new a()));
         return linearLayout;
     }
 
@@ -94,8 +93,8 @@ public class BigNotePresenter extends BasePresenter<BigNoteModel, BigNoteView, B
             putMap("titlelabel", string2, map);
             putMap("usercode", string, map);
             if (z) {
-                putMap(C9548pb.PRE_CONTENT_ID, str2, map);
-                putMap(C9548pb.PRE_CONTENT_TYPE, str, map);
+                putMap(pb.PRE_CONTENT_ID, str2, map);
+                putMap(pb.PRE_CONTENT_TYPE, str, map);
             }
         }
     }
@@ -125,7 +124,7 @@ public class BigNotePresenter extends BasePresenter<BigNoteModel, BigNoteView, B
         HashMap<String, String> f = d23.f();
         f.put("item_id", str);
         f.put("content_typ", "note");
-        f.put("quanziid", getModel().getTrackInfo().getArgsMap().get(C9548pb.CNT_CONTENT_ID));
+        f.put("quanziid", getModel().getTrackInfo().getArgsMap().get(pb.CNT_CONTENT_ID));
         TrackType trackType = TrackType.click;
         String str2 = ((BigNoteModel) this.mModel).getTrackInfo().trackB;
         userTrack(trackType, null, str2, "item_" + i, "likesbtn", f, false);
@@ -139,8 +138,8 @@ public class BigNotePresenter extends BasePresenter<BigNoteModel, BigNoteView, B
             return;
         }
         HashMap<String, String> f = d23.f();
-        f.put("quanziid", getModel().getTrackInfo().getArgsMap().get(C9548pb.CNT_CONTENT_ID));
-        putMap(C9548pb.PUBLISHER_ID, str2, f);
+        f.put("quanziid", getModel().getTrackInfo().getArgsMap().get(pb.CNT_CONTENT_ID));
+        putMap(pb.PUBLISHER_ID, str2, f);
         putMap("item_id", str, f);
         TrackType trackType = TrackType.click;
         String str3 = this.mTrackInfo.trackB;
@@ -157,7 +156,7 @@ public class BigNotePresenter extends BasePresenter<BigNoteModel, BigNoteView, B
         HashMap<String, String> f = d23.f();
         f.put("content_id", noteBean.id);
         f.put("index", String.valueOf(i));
-        f.put("quanziid", getModel().getTrackInfo().getArgsMap().get(C9548pb.CNT_CONTENT_ID));
+        f.put("quanziid", getModel().getTrackInfo().getArgsMap().get(pb.CNT_CONTENT_ID));
         TrackType trackType = TrackType.expose;
         userTrack(trackType, view, "HotQuanzi", "content", "item_" + i, f, false);
     }
@@ -174,9 +173,9 @@ public class BigNotePresenter extends BasePresenter<BigNoteModel, BigNoteView, B
                 if (this.mTrackInfo.getArgsMap() != null) {
                     hashMap.putAll(this.mTrackInfo.getArgsMap());
                 }
-                putMap("quanziid", getModel().getTrackInfo().getArgsMap().get(C9548pb.CNT_CONTENT_ID), hashMap);
+                putMap("quanziid", getModel().getTrackInfo().getArgsMap().get(pb.CNT_CONTENT_ID), hashMap);
                 putMap("alg", noteBean.alg, hashMap);
-                putMap(C9548pb.PUBLISHER_ID, noteBean.baseUserDO.havanaIdStr, hashMap);
+                putMap(pb.PUBLISHER_ID, noteBean.baseUserDO.havanaIdStr, hashMap);
                 putMap("item_id", noteBean.id, hashMap);
                 putMap("index", "" + i, hashMap);
                 fillMap(false, this.mTrackInfo, hashMap, noteBean.getCardType(), noteBean.id);
@@ -201,7 +200,7 @@ public class BigNotePresenter extends BasePresenter<BigNoteModel, BigNoteView, B
         f.put("item_id", str);
         f.put("statue", z ? "0" : "1");
         f.put("content_typ", "note");
-        f.put("quanziid", getModel().getTrackInfo().getArgsMap().get(C9548pb.CNT_CONTENT_ID));
+        f.put("quanziid", getModel().getTrackInfo().getArgsMap().get(pb.CNT_CONTENT_ID));
         TrackType trackType = TrackType.click;
         String str2 = ((BigNoteModel) this.mModel).getTrackInfo().trackB;
         userTrack(trackType, null, str2, "item_" + i, "favorite", f, false);
@@ -223,7 +222,7 @@ public class BigNotePresenter extends BasePresenter<BigNoteModel, BigNoteView, B
             return;
         }
         HashMap<String, String> f = d23.f();
-        f.put("quanziid", getModel().getTrackInfo().getArgsMap().get(C9548pb.CNT_CONTENT_ID));
+        f.put("quanziid", getModel().getTrackInfo().getArgsMap().get(pb.CNT_CONTENT_ID));
         f.put("item_id", getModel().getBean().contentInfo.id);
         TrackType trackType = TrackType.click;
         String str = ((BigNoteModel) this.mModel).getTrackInfo().trackB;
@@ -249,8 +248,8 @@ public class BigNotePresenter extends BasePresenter<BigNoteModel, BigNoteView, B
             return;
         }
         HashMap<String, String> f = d23.f();
-        f.put("quanziid", getModel().getTrackInfo().getArgsMap().get(C9548pb.CNT_CONTENT_ID));
-        putMap(C9548pb.PUBLISHER_ID, str2, f);
+        f.put("quanziid", getModel().getTrackInfo().getArgsMap().get(pb.CNT_CONTENT_ID));
+        putMap(pb.PUBLISHER_ID, str2, f);
         putMap("item_id", str, f);
         TrackType trackType = TrackType.click;
         String str3 = this.mTrackInfo.trackB;

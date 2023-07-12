@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.functions.BiConsumer;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.subscriptions.DeferredScalarSubscription;
@@ -84,13 +84,13 @@ public final class FlowableCollect<T, U> extends AbstractFlowableWithUpstream<T,
         }
     }
 
-    public FlowableCollect(AbstractC8147b<T> abstractC8147b, Callable<? extends U> callable, BiConsumer<? super U, ? super T> biConsumer) {
-        super(abstractC8147b);
+    public FlowableCollect(b<T> bVar, Callable<? extends U> callable, BiConsumer<? super U, ? super T> biConsumer) {
+        super(bVar);
         this.initialSupplier = callable;
         this.collector = biConsumer;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super U> subscriber) {
         try {
             this.source.subscribe((FlowableSubscriber) new CollectSubscriber(subscriber, ObjectHelper.requireNonNull(this.initialSupplier.call(), "The initial value supplied is null"), this.collector));

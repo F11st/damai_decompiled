@@ -115,18 +115,17 @@ public class PullToRefreshAttacher {
             }
         }
 
-        /* synthetic */ AddHeaderViewRunnable(PullToRefreshAttacher pullToRefreshAttacher, C0277a c0277a) {
+        /* synthetic */ AddHeaderViewRunnable(PullToRefreshAttacher pullToRefreshAttacher, a aVar) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.abcpullrefresh.library.PullToRefreshAttacher$a */
     /* loaded from: classes.dex */
-    public class C0277a implements EnvironmentDelegate {
+    public class a implements EnvironmentDelegate {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0277a(PullToRefreshAttacher pullToRefreshAttacher) {
+        a(PullToRefreshAttacher pullToRefreshAttacher) {
         }
 
         @Override // cn.damai.baseview.abcpullrefresh.library.EnvironmentDelegate
@@ -145,24 +144,24 @@ public class PullToRefreshAttacher {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public PullToRefreshAttacher(Activity activity, C0284d c0284d) {
+    public PullToRefreshAttacher(Activity activity, d dVar) {
         if (activity != null) {
-            if (c0284d == null) {
+            if (dVar == null) {
                 pw2.d("PullToRefreshAttacher", "Given null options so using default options.");
-                c0284d = new C0284d();
+                dVar = new d();
             }
             this.e = activity;
             this.r = new WeakHashMap<>();
-            this.i = c0284d.d;
-            this.s = c0284d.e;
-            this.t = c0284d.f;
-            this.u = c0284d.g;
-            EnvironmentDelegate environmentDelegate = c0284d.a;
+            this.i = dVar.d;
+            this.s = dVar.e;
+            this.t = dVar.f;
+            this.u = dVar.g;
+            EnvironmentDelegate environmentDelegate = dVar.a;
             this.a = environmentDelegate == null ? h() : environmentDelegate;
-            lw0 lw0Var = c0284d.c;
+            lw0 lw0Var = dVar.c;
             this.b = lw0Var == null ? i() : lw0Var;
             this.h = ViewConfiguration.get(activity).getScaledTouchSlop();
-            View inflate = LayoutInflater.from(this.a.getContextForInflater(activity)).inflate(c0284d.b, (ViewGroup) activity.getWindow().getDecorView(), false);
+            View inflate = LayoutInflater.from(this.a.getContextForInflater(activity)).inflate(dVar.b, (ViewGroup) activity.getWindow().getDecorView(), false);
             this.f = inflate;
             if (inflate != null) {
                 inflate.setVisibility(4);
@@ -415,7 +414,7 @@ public class PullToRefreshAttacher {
                 return;
             }
             if (viewDelegate == null) {
-                viewDelegate = C0283c.b(view);
+                viewDelegate = c.b(view);
             }
             this.r.put(view, viewDelegate);
         }
@@ -432,12 +431,12 @@ public class PullToRefreshAttacher {
 
     protected EnvironmentDelegate h() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-178528960") ? (EnvironmentDelegate) ipChange.ipc$dispatch("-178528960", new Object[]{this}) : new C0277a(this);
+        return AndroidInstantRuntime.support(ipChange, "-178528960") ? (EnvironmentDelegate) ipChange.ipc$dispatch("-178528960", new Object[]{this}) : new a(this);
     }
 
     protected lw0 i() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1005927488") ? (lw0) ipChange.ipc$dispatch("-1005927488", new Object[]{this}) : new C0281b();
+        return AndroidInstantRuntime.support(ipChange, "-1005927488") ? (lw0) ipChange.ipc$dispatch("-1005927488", new Object[]{this}) : new b();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */

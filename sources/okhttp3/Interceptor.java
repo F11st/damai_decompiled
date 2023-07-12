@@ -18,11 +18,11 @@ public interface Interceptor {
         @Nullable
         Connection connection();
 
-        C8827q proceed(C8823o c8823o) throws IOException;
+        q proceed(o oVar) throws IOException;
 
         int readTimeoutMillis();
 
-        C8823o request();
+        o request();
 
         Chain withConnectTimeout(int i, TimeUnit timeUnit);
 
@@ -33,5 +33,5 @@ public interface Interceptor {
         int writeTimeoutMillis();
     }
 
-    C8827q intercept(Chain chain) throws IOException;
+    q intercept(Chain chain) throws IOException;
 }

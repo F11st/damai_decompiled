@@ -42,7 +42,6 @@ import cn.damai.tetris.core.BaseSection;
 import cn.damai.tetris.core.TrackInfo;
 import cn.damai.tetris.core.msg.Message;
 import cn.damai.uikit.flowlayout.FlowLayout;
-import cn.damai.uikit.image.C2497a;
 import cn.damai.uikit.nav.INavUri;
 import cn.damai.uikit.nav.NavProxy;
 import cn.damai.uikit.view.DMThemeDialog;
@@ -54,12 +53,12 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-import tb.C9175gc;
-import tb.C9548pb;
 import tb.cs;
 import tb.ed2;
 import tb.g41;
+import tb.gc;
 import tb.ja;
+import tb.pb;
 import tb.pp2;
 import tb.q60;
 import tb.rt1;
@@ -131,13 +130,12 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.ip.IpInfoPresenter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1898a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ PopupWindow a;
 
-        View$OnClickListenerC1898a(IpInfoPresenter ipInfoPresenter, PopupWindow popupWindow) {
+        a(IpInfoPresenter ipInfoPresenter, PopupWindow popupWindow) {
             this.a = popupWindow;
         }
 
@@ -153,12 +151,11 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.ip.IpInfoPresenter$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1899b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1899b() {
+        b() {
         }
 
         private int a(View view) {
@@ -192,13 +189,12 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.ip.IpInfoPresenter$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1900c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ IPInfoBean a;
 
-        View$OnClickListenerC1900c(IPInfoBean iPInfoBean) {
+        c(IPInfoBean iPInfoBean) {
             this.a = iPInfoBean;
         }
 
@@ -214,13 +210,12 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.ip.IpInfoPresenter$d */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1901d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ IPInfoBean a;
 
-        View$OnClickListenerC1901d(IPInfoBean iPInfoBean) {
+        d(IPInfoBean iPInfoBean) {
             this.a = iPInfoBean;
         }
 
@@ -239,13 +234,12 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.ip.IpInfoPresenter$e */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1902e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ IPInfoBean a;
 
-        View$OnClickListenerC1902e(IPInfoBean iPInfoBean) {
+        e(IPInfoBean iPInfoBean) {
             this.a = iPInfoBean;
         }
 
@@ -264,14 +258,13 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.ip.IpInfoPresenter$f */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1903f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ IPInfoBean a;
         final /* synthetic */ TextView b;
 
-        View$OnClickListenerC1903f(IPInfoBean iPInfoBean, TextView textView) {
+        f(IPInfoBean iPInfoBean, TextView textView) {
             this.a = iPInfoBean;
             this.b = textView;
         }
@@ -301,13 +294,12 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.ip.IpInfoPresenter$g */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1904g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ IPInfoBean a;
 
-        View$OnClickListenerC1904g(IPInfoBean iPInfoBean) {
+        g(IPInfoBean iPInfoBean) {
             this.a = iPInfoBean;
         }
 
@@ -322,8 +314,8 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
             bundle.putString(RankListFragment.KEY_RANK_ID, this.a.getRank().id);
             NavProxy.from(IpInfoPresenter.this.getContext().getActivity()).withExtras(bundle).toHost("ranking");
             HashMap hashMap = new HashMap();
-            hashMap.put(C9548pb.PRE_CONTENT_ID, this.a.getRank().id);
-            hashMap.put(C9548pb.PRE_CONTENT_TYPE, "randlist");
+            hashMap.put(pb.PRE_CONTENT_ID, this.a.getRank().id);
+            hashMap.put(pb.PRE_CONTENT_TYPE, "randlist");
             if (IpInfoPresenter.this.mTrackInfo.getArgsMap() != null) {
                 hashMap.putAll(IpInfoPresenter.this.mTrackInfo.getArgsMap());
             }
@@ -332,19 +324,17 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.ip.IpInfoPresenter$h */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1905h implements View.OnClickListener {
+    public class h implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ IPInfoBean a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.tetris.component.ip.IpInfoPresenter$h$a */
         /* loaded from: classes16.dex */
-        public class DialogInterface$OnClickListenerC1906a implements DialogInterface.OnClickListener {
+        public class a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC1906a(View$OnClickListenerC1905h view$OnClickListenerC1905h) {
+            a(h hVar) {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -358,7 +348,7 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
             }
         }
 
-        View$OnClickListenerC1905h(IPInfoBean iPInfoBean) {
+        h(IPInfoBean iPInfoBean) {
             this.a = iPInfoBean;
         }
 
@@ -371,19 +361,18 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
             }
             DMThemeDialog dMThemeDialog = new DMThemeDialog(IpInfoPresenter.this.getContext().getActivity());
             dMThemeDialog.r(DMThemeDialog.DMDialogTheme.THEME_GUARD_SUCCESS);
-            dMThemeDialog.k(this.a.ipvuvDescription).i("知道了", new DialogInterface$OnClickListenerC1906a(this)).g(false, null);
+            dMThemeDialog.k(this.a.ipvuvDescription).i("知道了", new a(this)).g(false, null);
             dMThemeDialog.show();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.ip.IpInfoPresenter$i */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1907i implements View.OnClickListener {
+    public class i implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ PopupWindow a;
 
-        View$OnClickListenerC1907i(IpInfoPresenter ipInfoPresenter, PopupWindow popupWindow) {
+        i(IpInfoPresenter ipInfoPresenter, PopupWindow popupWindow) {
             this.a = popupWindow;
         }
 
@@ -399,13 +388,12 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.ip.IpInfoPresenter$j */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1908j implements View.OnClickListener {
+    public class j implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ PopupWindow a;
 
-        View$OnClickListenerC1908j(IpInfoPresenter ipInfoPresenter, PopupWindow popupWindow) {
+        j(IpInfoPresenter ipInfoPresenter, PopupWindow popupWindow) {
             this.a = popupWindow;
         }
 
@@ -421,13 +409,12 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.ip.IpInfoPresenter$k */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1909k implements View.OnClickListener {
+    public class k implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ PopupWindow a;
 
-        View$OnClickListenerC1909k(IpInfoPresenter ipInfoPresenter, PopupWindow popupWindow) {
+        k(IpInfoPresenter ipInfoPresenter, PopupWindow popupWindow) {
             this.a = popupWindow;
         }
 
@@ -455,20 +442,20 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
             ipChange.ipc$dispatch("-1535589856", new Object[]{this, view, ipTags});
             return;
         }
-        C9175gc.a((TextView) view.findViewById(R$id.tv_ipinfo_tagleft), ipTags.getTagName());
+        gc.a((TextView) view.findViewById(R$id.tv_ipinfo_tagleft), ipTags.getTagName());
         if (ipTags.getTagCount() > 100) {
-            C9175gc.a((TextView) view.findViewById(R$id.tv_ipinfo_tagright), ipTags.getTagCount() + "");
+            gc.a((TextView) view.findViewById(R$id.tv_ipinfo_tagright), ipTags.getTagCount() + "");
             return;
         }
         view.findViewById(R$id.tv_ipinfo_tagright).setVisibility(8);
     }
 
-    private void bindPopTagItem(View view, IPInfoBean iPInfoBean, int i) {
+    private void bindPopTagItem(View view, IPInfoBean iPInfoBean, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1319437919")) {
-            ipChange.ipc$dispatch("1319437919", new Object[]{this, view, iPInfoBean, Integer.valueOf(i)});
-        } else if (i < iPInfoBean.getIpTags().size() && iPInfoBean.getIpTags().get(i) != null) {
-            bindSinglePopTagItem(view, iPInfoBean.getIpTags().get(i));
+            ipChange.ipc$dispatch("1319437919", new Object[]{this, view, iPInfoBean, Integer.valueOf(i2)});
+        } else if (i2 < iPInfoBean.getIpTags().size() && iPInfoBean.getIpTags().get(i2) != null) {
+            bindSinglePopTagItem(view, iPInfoBean.getIpTags().get(i2));
         } else {
             view.setVisibility(4);
         }
@@ -480,9 +467,9 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
             ipChange.ipc$dispatch("1877635121", new Object[]{this, view, ipTags});
             return;
         }
-        C9175gc.a((TextView) view.findViewById(R$id.ip_tags_tag_title), ipTags.getTagName());
+        gc.a((TextView) view.findViewById(R$id.ip_tags_tag_title), ipTags.getTagName());
         if (ipTags.getTagCount() > 100) {
-            C9175gc.a((TextView) view.findViewById(R$id.ip_tags_tag_count), ipTags.getTagCount() + "");
+            gc.a((TextView) view.findViewById(R$id.ip_tags_tag_count), ipTags.getTagCount() + "");
             view.findViewById(R$id.ip_tags_tag_zan).setVisibility(0);
         } else {
             view.findViewById(R$id.ip_tags_tag_count).setVisibility(8);
@@ -496,21 +483,21 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
             grayTag(view);
         }
         view.setTag(ipTags);
-        view.setOnClickListener(new View$OnClickListenerC1899b());
+        view.setOnClickListener(new b());
     }
 
-    public static String getFansNum(long j, String str) {
+    public static String getFansNum(long j2, String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1080330577")) {
-            return (String) ipChange.ipc$dispatch("-1080330577", new Object[]{Long.valueOf(j), str});
+            return (String) ipChange.ipc$dispatch("-1080330577", new Object[]{Long.valueOf(j2), str});
         }
         try {
-            if (j < 10000) {
-                return j + str;
+            if (j2 < 10000) {
+                return j2 + str;
             }
-            return (((float) (j / 1000)) / 10.0f) + "万" + str;
-        } catch (Exception e) {
-            e.printStackTrace();
+            return (((float) (j2 / 1000)) / 10.0f) + "万" + str;
+        } catch (Exception e2) {
+            e2.printStackTrace();
             return "";
         }
     }
@@ -523,10 +510,10 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
             return;
         }
         Resources resources = getContext().getActivity().getResources();
-        int i = R$color.color_9C9CA5;
-        ((TextView) view.findViewById(R$id.ip_tags_tag_count)).setTextColor(resources.getColor(i));
+        int i2 = R$color.color_9C9CA5;
+        ((TextView) view.findViewById(R$id.ip_tags_tag_count)).setTextColor(resources.getColor(i2));
         ((TextView) view.findViewById(R$id.ip_tags_tag_zan)).setTextColor(getContext().getActivity().getResources().getColor(R$color.color_3c3f44));
-        ((TextView) view.findViewById(R$id.ip_tags_tag_title)).setTextColor(getContext().getActivity().getResources().getColor(i));
+        ((TextView) view.findViewById(R$id.ip_tags_tag_title)).setTextColor(getContext().getActivity().getResources().getColor(i2));
         view.findViewById(R$id.ip_tags_tag_bg).setBackground(getContext().getActivity().getResources().getDrawable(R$drawable.bg_border_corner_15_0_r15));
     }
 
@@ -538,9 +525,9 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
             return;
         }
         Resources resources = getContext().getActivity().getResources();
-        int i = R$color.color_FF9200;
-        ((TextView) view.findViewById(R$id.ip_tags_tag_count)).setTextColor(resources.getColor(i));
-        ((TextView) view.findViewById(R$id.ip_tags_tag_zan)).setTextColor(getContext().getActivity().getResources().getColor(i));
+        int i2 = R$color.color_FF9200;
+        ((TextView) view.findViewById(R$id.ip_tags_tag_count)).setTextColor(resources.getColor(i2));
+        ((TextView) view.findViewById(R$id.ip_tags_tag_zan)).setTextColor(getContext().getActivity().getResources().getColor(i2));
         ((TextView) view.findViewById(R$id.ip_tags_tag_title)).setTextColor(getContext().getActivity().getResources().getColor(R$color.black));
         view.findViewById(R$id.ip_tags_tag_bg).setBackground(getContext().getActivity().getResources().getDrawable(R$drawable.bg_border_corner_0_r15));
     }
@@ -552,12 +539,12 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
             return;
         }
         TextView ipScore = getView().getIpScore();
-        C9175gc.a(ipScore, iPInfoBean.getItemScore() + "");
-        C9175gc.a(getView().getIpScoreDesc(), iPInfoBean.getScoreDesc());
+        gc.a(ipScore, iPInfoBean.getItemScore() + "");
+        gc.a(getView().getIpScoreDesc(), iPInfoBean.getScoreDesc());
         getView().getRatingBar().updateView((double) iPInfoBean.getItemScoreFloat());
         if (iPInfoBean.getContent() != null) {
-            C9175gc.a(getView().getUserComment(), iPInfoBean.getContent().getContent());
-            C2497a.a().loadinto(iPInfoBean.getContent().getHeadImg(), getView().getUserImg());
+            gc.a(getView().getUserComment(), iPInfoBean.getContent().getContent());
+            cn.damai.uikit.image.a.a().loadinto(iPInfoBean.getContent().getHeadImg(), getView().getUserImg());
         }
     }
 
@@ -568,13 +555,13 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
         } else if (iPInfoBean.getIpTags() != null) {
             LinearLayout linearLayout = (LinearLayout) getView().getRootView().findViewById(R$id.ipinfo_score_tags_parent);
             linearLayout.removeAllViews();
-            for (int i = 0; i < iPInfoBean.getIpTags().size(); i++) {
+            for (int i2 = 0; i2 < iPInfoBean.getIpTags().size(); i2++) {
                 View inflate = LayoutInflater.from(this.mContext.getActivity()).inflate(R$layout.layout_videoinfo_ip_tag, (ViewGroup) linearLayout, false);
                 LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) inflate.getLayoutParams();
                 layoutParams.setMargins(0, 0, q60.a(this.mContext.getActivity(), 3.0f), 0);
                 linearLayout.addView(inflate, layoutParams);
-                bindItem(inflate, iPInfoBean.getIpTags().get(i));
-                userTrackExpose(inflate, "tag_" + i);
+                bindItem(inflate, iPInfoBean.getIpTags().get(i2));
+                userTrackExpose(inflate, "tag_" + i2);
             }
         }
     }
@@ -586,9 +573,9 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
             return;
         }
         View inflate = LayoutInflater.from(this.mContext.getActivity()).inflate(R$layout.layout_popup_ip_scoretip, (ViewGroup) null);
-        PopupWindow c = new rt1(inflate, q60.a(this.mContext.getActivity(), 287.0f)).g(this.mContext.getActivity()).c();
-        inflate.setOnClickListener(new View$OnClickListenerC1907i(this, c));
-        inflate.findViewById(R$id.ip_tour_top_close).setOnClickListener(new View$OnClickListenerC1908j(this, c));
+        PopupWindow c2 = new rt1(inflate, q60.a(this.mContext.getActivity(), 287.0f)).g(this.mContext.getActivity()).c();
+        inflate.setOnClickListener(new i(this, c2));
+        inflate.findViewById(R$id.ip_tour_top_close).setOnClickListener(new j(this, c2));
         ((DamaiWebView) inflate.findViewById(R$id.mWebView)).loadUrl("https://m.damai.cn");
     }
 
@@ -600,24 +587,24 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
             return;
         }
         View inflate = LayoutInflater.from(this.mContext.getActivity()).inflate(R$layout.layout_popup_ip_tags, (ViewGroup) null);
-        int a = q60.a(this.mContext.getActivity(), 42.0f);
+        int a2 = q60.a(this.mContext.getActivity(), 42.0f);
         int size = iPInfoBean.getIpTags().size();
         this.initPraIds.clear();
         this.likedStack = new ed2(3);
-        for (int i = 0; i < size; i++) {
+        for (int i2 = 0; i2 < size; i2++) {
             View inflate2 = LayoutInflater.from(this.mContext.getActivity()).inflate(R$layout.layout_popup_ip_tag, (ViewGroup) null);
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(-2, a);
-            bindPopTagItem(inflate2, iPInfoBean, i);
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(-2, a2);
+            bindPopTagItem(inflate2, iPInfoBean, i2);
             ((FlowLayout) inflate.findViewById(R$id.ip_tags_scroll_content)).addView(inflate2, layoutParams);
         }
-        rt1 g = new rt1(inflate, (((size / 2) + 1) * a) + q60.a(this.mContext.getActivity(), 149.0f)).g(this.mContext.getActivity());
-        final PopupWindow c = g.c();
-        int f = g.f();
-        int i2 = R$id.sub_content;
-        RelativeLayout.LayoutParams layoutParams2 = (RelativeLayout.LayoutParams) inflate.findViewById(i2).getLayoutParams();
-        layoutParams2.height = f;
-        inflate.findViewById(i2).setLayoutParams(layoutParams2);
-        inflate.setOnClickListener(new View$OnClickListenerC1909k(this, c));
+        rt1 g2 = new rt1(inflate, (((size / 2) + 1) * a2) + q60.a(this.mContext.getActivity(), 149.0f)).g(this.mContext.getActivity());
+        final PopupWindow c2 = g2.c();
+        int f2 = g2.f();
+        int i3 = R$id.sub_content;
+        RelativeLayout.LayoutParams layoutParams2 = (RelativeLayout.LayoutParams) inflate.findViewById(i3).getLayoutParams();
+        layoutParams2.height = f2;
+        inflate.findViewById(i3).setLayoutParams(layoutParams2);
+        inflate.setOnClickListener(new k(this, c2));
         inflate.findViewById(R$id.ip_tags_bottombar).setOnClickListener(new View.OnClickListener() { // from class: cn.damai.tetris.component.ip.IpInfoPresenter.10
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -629,7 +616,7 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
                 } else if (IpInfoPresenter.this.likedStack.a() == null) {
                     ToastUtil.a().e(((BasePresenter) IpInfoPresenter.this).mContext.getActivity(), "请至少选择一个标签哦");
                 } else {
-                    c.dismiss();
+                    c2.dismiss();
                     final PraiseRequest praiseRequest = new PraiseRequest();
                     StringBuffer stringBuffer = new StringBuffer();
                     while (true) {
@@ -695,7 +682,7 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
                 }
             }
         });
-        inflate.findViewById(R$id.ip_tags_top_close).setOnClickListener(new View$OnClickListenerC1898a(this, c));
+        inflate.findViewById(R$id.ip_tags_top_close).setOnClickListener(new a(this, c2));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -708,9 +695,9 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
         textView.setTextColor(z ? Color.parseColor("#ff993a") : -16777216);
         textView.setText(getContext().getActivity().getResources().getString(z ? R$string.iconfont_pingfenmian_ : R$string.iconfont_pingfen_));
         View haveSeen = getView().getHaveSeen();
-        int i = R$id.ipinfo_showinfo_haveseen_text;
-        ((TextView) haveSeen.findViewById(i)).setTextColor(z ? Color.parseColor("#9c9ca5") : -16777216);
-        C9175gc.a((TextView) getView().getHaveSeen().findViewById(i), z ? "已看过" : "看过");
+        int i2 = R$id.ipinfo_showinfo_haveseen_text;
+        ((TextView) haveSeen.findViewById(i2)).setTextColor(z ? Color.parseColor("#9c9ca5") : -16777216);
+        gc.a((TextView) getView().getHaveSeen().findViewById(i2), z ? "已看过" : "看过");
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -726,9 +713,9 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
         TextView textView = (TextView) getView().getWannaSee().findViewById(R$id.ipinfo_showinfo_wannasee_text);
         textView.setText(z ? "已想看" : "想看");
         textView.setTextColor(z ? Color.parseColor("#9c9ca5") : -16777216);
-        int i = z ? R$raw.lottie_favourite_click : R$raw.lottie_favorite_cancel;
+        int i2 = z ? R$raw.lottie_favourite_click : R$raw.lottie_favorite_cancel;
         LottieAnimationView lottieAnimationView = (LottieAnimationView) getView().getWannaSee().findViewById(R$id.ipinfo_showinfo_wannasee_icon);
-        lottieAnimationView.setAnimation(i);
+        lottieAnimationView.setAnimation(i2);
         lottieAnimationView.invalidate();
         lottieAnimationView.setProgress(0.0f);
         if (z2) {
@@ -738,31 +725,31 @@ public class IpInfoPresenter extends BasePresenter<IpInfoContract.Model, IpInfoC
         }
     }
 
-    public SpannableString getFansDesc(long j, String str) {
+    public SpannableString getFansDesc(long j2, String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1067209632")) {
-            return (SpannableString) ipChange.ipc$dispatch("1067209632", new Object[]{this, Long.valueOf(j), str});
+            return (SpannableString) ipChange.ipc$dispatch("1067209632", new Object[]{this, Long.valueOf(j2), str});
         }
         try {
-            String fansNum = getFansNum(j, str);
+            String fansNum = getFansNum(j2, str);
             SpannableString spannableString = new SpannableString(fansNum);
             spannableString.setSpan(new ForegroundColorSpan(this.mContext.getActivity().getResources().getColor(R$color.color_FF993A)), 0, fansNum.indexOf(str), 17);
             return spannableString;
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
             return new SpannableString("");
         }
     }
 
     @Override // cn.damai.tetris.core.BasePresenter, cn.damai.tetris.core.msg.IMessage
-    public void onMessage(int i, Object obj) {
+    public void onMessage(int i2, Object obj) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1840397302")) {
-            ipChange.ipc$dispatch("-1840397302", new Object[]{this, Integer.valueOf(i), obj});
+            ipChange.ipc$dispatch("-1840397302", new Object[]{this, Integer.valueOf(i2), obj});
             return;
         }
-        Log.e("msggsg", "i: " + i + " , o : " + obj);
-        if (i == 10240 && (obj instanceof Pair)) {
+        Log.e("msggsg", "i: " + i2 + " , o : " + obj);
+        if (i2 == 10240 && (obj instanceof Pair)) {
             Pair pair = (Pair) obj;
             Object obj2 = pair.first;
             if ((obj2 instanceof String) && "5".equals(obj2)) {

@@ -24,9 +24,8 @@ public final class o1 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.loc.o1$a */
     /* loaded from: classes10.dex */
-    public static class C5867a {
+    public static class a {
         String a;
         String b;
         String c;
@@ -54,10 +53,10 @@ public final class o1 {
         String y;
         String z;
 
-        private C5867a() {
+        private a() {
         }
 
-        /* synthetic */ C5867a(byte b) {
+        /* synthetic */ a(byte b) {
             this();
         }
     }
@@ -65,7 +64,7 @@ public final class o1 {
     public static String a() {
         try {
             String valueOf = String.valueOf(System.currentTimeMillis());
-            String str = C5846l.d() ? "1" : "0";
+            String str = l.d() ? "1" : "0";
             int length = valueOf.length();
             return valueOf.substring(0, length - 2) + str + valueOf.substring(length - 1);
         } catch (Throwable th) {
@@ -80,7 +79,7 @@ public final class o1 {
 
     public static String c(Context context, String str, String str2) {
         try {
-            String i = C5846l.i(context);
+            String i = l.i(context);
             return r1.a(i + ":" + str.substring(0, str.length() - 3) + ":" + str2);
         } catch (Throwable th) {
             y33.e(th, "CI", "Sco");
@@ -88,8 +87,8 @@ public final class o1 {
         }
     }
 
-    private static String d(C5867a c5867a) {
-        return p1.f(j(c5867a));
+    private static String d(a aVar) {
+        return p1.f(j(aVar));
     }
 
     private static void e(ByteArrayOutputStream byteArrayOutputStream, String str) {
@@ -113,77 +112,77 @@ public final class o1 {
         return p1.b(bArr);
     }
 
-    private static C5867a h(Context context, boolean z, boolean z2) {
-        C5867a c5867a = new C5867a((byte) 0);
-        c5867a.a = C5861o.h0(context);
-        c5867a.b = C5861o.W(context);
-        String R = C5861o.R(context);
+    private static a h(Context context, boolean z, boolean z2) {
+        a aVar = new a((byte) 0);
+        aVar.a = o.h0(context);
+        aVar.b = o.W(context);
+        String R = o.R(context);
         if (R == null) {
             R = "";
         }
-        c5867a.c = R;
-        c5867a.d = C5846l.g(context);
-        c5867a.e = Build.getMODEL();
-        c5867a.f = Build.getMANUFACTURER();
-        c5867a.g = android.os.Build.DEVICE;
-        c5867a.h = C5846l.e(context);
-        c5867a.i = C5846l.h(context);
-        c5867a.j = String.valueOf(Build.VERSION.SDK_INT);
-        c5867a.k = C5861o.k0(context);
-        c5867a.l = C5861o.d0(context);
+        aVar.c = R;
+        aVar.d = l.g(context);
+        aVar.e = Build.getMODEL();
+        aVar.f = Build.getMANUFACTURER();
+        aVar.g = android.os.Build.DEVICE;
+        aVar.h = l.e(context);
+        aVar.i = l.h(context);
+        aVar.j = String.valueOf(Build.VERSION.SDK_INT);
+        aVar.k = o.k0(context);
+        aVar.l = o.d0(context);
         StringBuilder sb = new StringBuilder();
-        sb.append(C5861o.a0(context));
-        c5867a.m = sb.toString();
+        sb.append(o.a0(context));
+        aVar.m = sb.toString();
         StringBuilder sb2 = new StringBuilder();
-        sb2.append(C5861o.Z(context));
-        c5867a.n = sb2.toString();
-        c5867a.o = C5861o.a(context);
-        c5867a.p = C5861o.Y(context);
-        c5867a.q = "";
-        c5867a.r = "";
+        sb2.append(o.Z(context));
+        aVar.n = sb2.toString();
+        aVar.o = o.a(context);
+        aVar.p = o.Y(context);
+        aVar.q = "";
+        aVar.r = "";
         if (z) {
-            c5867a.s = "";
-            c5867a.t = "";
+            aVar.s = "";
+            aVar.t = "";
         } else {
-            String[] K = C5861o.K();
-            c5867a.s = K[0];
-            c5867a.t = K[1];
+            String[] K = o.K();
+            aVar.s = K[0];
+            aVar.t = K[1];
         }
-        c5867a.w = C5861o.v();
-        String w = C5861o.w(context);
+        aVar.w = o.v();
+        String w = o.w(context);
         if (TextUtils.isEmpty(w)) {
-            c5867a.x = "";
+            aVar.x = "";
         } else {
-            c5867a.x = w;
+            aVar.x = w;
         }
-        c5867a.y = "aid=" + C5861o.V(context);
+        aVar.y = "aid=" + o.V(context);
         if ((z2 && w33.e) || w33.k) {
-            String Q = C5861o.Q(context);
+            String Q = o.Q(context);
             if (!TextUtils.isEmpty(Q)) {
-                c5867a.y += "|oaid=" + Q;
+                aVar.y += "|oaid=" + Q;
             }
         }
-        String y = C5861o.y(context, ",");
+        String y = o.y(context, ",");
         if (!TextUtils.isEmpty(y)) {
-            c5867a.y += "|multiImeis=" + y;
+            aVar.y += "|multiImeis=" + y;
         }
-        String j0 = C5861o.j0(context);
+        String j0 = o.j0(context);
         if (!TextUtils.isEmpty(j0)) {
-            c5867a.y += "|meid=" + j0;
+            aVar.y += "|meid=" + j0;
         }
-        c5867a.y += "|serial=" + C5861o.T(context);
-        String C = C5861o.C();
+        aVar.y += "|serial=" + o.T(context);
+        String C = o.C();
         if (!TextUtils.isEmpty(C)) {
-            c5867a.y += "|adiuExtras=" + C;
+            aVar.y += "|adiuExtras=" + C;
         }
-        c5867a.y += "|storage=" + C5861o.N() + "|ram=" + C5861o.l0(context) + "|arch=" + C5861o.P();
+        aVar.y += "|storage=" + o.N() + "|ram=" + o.l0(context) + "|arch=" + o.P();
         String b = x33.a().b();
         if (TextUtils.isEmpty(b)) {
-            c5867a.z = "";
+            aVar.z = "";
         } else {
-            c5867a.z = b;
+            aVar.z = b;
         }
-        return c5867a;
+        return aVar;
     }
 
     private static String i(Context context) {
@@ -195,7 +194,7 @@ public final class o1 {
         }
     }
 
-    private static byte[] j(C5867a c5867a) {
+    private static byte[] j(a aVar) {
         ByteArrayOutputStream byteArrayOutputStream;
         try {
             byteArrayOutputStream = new ByteArrayOutputStream();
@@ -204,32 +203,32 @@ public final class o1 {
             byteArrayOutputStream = null;
         }
         try {
-            e(byteArrayOutputStream, c5867a.a);
-            e(byteArrayOutputStream, c5867a.b);
-            e(byteArrayOutputStream, c5867a.c);
-            e(byteArrayOutputStream, c5867a.d);
-            e(byteArrayOutputStream, c5867a.e);
-            e(byteArrayOutputStream, c5867a.f);
-            e(byteArrayOutputStream, c5867a.g);
-            e(byteArrayOutputStream, c5867a.h);
-            e(byteArrayOutputStream, c5867a.i);
-            e(byteArrayOutputStream, c5867a.j);
-            e(byteArrayOutputStream, c5867a.k);
-            e(byteArrayOutputStream, c5867a.l);
-            e(byteArrayOutputStream, c5867a.m);
-            e(byteArrayOutputStream, c5867a.n);
-            e(byteArrayOutputStream, c5867a.o);
-            e(byteArrayOutputStream, c5867a.p);
-            e(byteArrayOutputStream, c5867a.q);
-            e(byteArrayOutputStream, c5867a.r);
-            e(byteArrayOutputStream, c5867a.s);
-            e(byteArrayOutputStream, c5867a.t);
-            e(byteArrayOutputStream, c5867a.u);
-            e(byteArrayOutputStream, c5867a.v);
-            e(byteArrayOutputStream, c5867a.w);
-            e(byteArrayOutputStream, c5867a.x);
-            e(byteArrayOutputStream, c5867a.y);
-            e(byteArrayOutputStream, c5867a.z);
+            e(byteArrayOutputStream, aVar.a);
+            e(byteArrayOutputStream, aVar.b);
+            e(byteArrayOutputStream, aVar.c);
+            e(byteArrayOutputStream, aVar.d);
+            e(byteArrayOutputStream, aVar.e);
+            e(byteArrayOutputStream, aVar.f);
+            e(byteArrayOutputStream, aVar.g);
+            e(byteArrayOutputStream, aVar.h);
+            e(byteArrayOutputStream, aVar.i);
+            e(byteArrayOutputStream, aVar.j);
+            e(byteArrayOutputStream, aVar.k);
+            e(byteArrayOutputStream, aVar.l);
+            e(byteArrayOutputStream, aVar.m);
+            e(byteArrayOutputStream, aVar.n);
+            e(byteArrayOutputStream, aVar.o);
+            e(byteArrayOutputStream, aVar.p);
+            e(byteArrayOutputStream, aVar.q);
+            e(byteArrayOutputStream, aVar.r);
+            e(byteArrayOutputStream, aVar.s);
+            e(byteArrayOutputStream, aVar.t);
+            e(byteArrayOutputStream, aVar.u);
+            e(byteArrayOutputStream, aVar.v);
+            e(byteArrayOutputStream, aVar.w);
+            e(byteArrayOutputStream, aVar.x);
+            e(byteArrayOutputStream, aVar.y);
+            e(byteArrayOutputStream, aVar.z);
             byte[] k = k(v1.u(byteArrayOutputStream.toByteArray()));
             try {
                 byteArrayOutputStream.close();

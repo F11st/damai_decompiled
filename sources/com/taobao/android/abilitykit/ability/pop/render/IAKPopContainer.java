@@ -4,12 +4,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import tb.C9586q;
-import tb.C9833w;
+import tb.q;
+import tb.w;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
-public interface IAKPopContainer<PARAMS extends C9833w, ABILITY_CONTEXT extends C9586q> {
+public interface IAKPopContainer<PARAMS extends w, ABILITY_CONTEXT extends q> {
 
     /* compiled from: Taobao */
     /* loaded from: classes8.dex */

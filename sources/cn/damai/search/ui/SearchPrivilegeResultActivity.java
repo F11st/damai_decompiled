@@ -21,7 +21,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.comment.util.CommentItemMoreUtil;
 import cn.damai.comment.util.SoftInputUtils;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.search.bean.BaccountInfo;
@@ -78,7 +77,7 @@ public class SearchPrivilegeResultActivity extends DamaiBaseActivity implements 
     private boolean hasNextPage = false;
     private boolean isLoadingMore = false;
     String tipDesc = "";
-    private TextWatcher mEditTextWatch = new C1599b();
+    private TextWatcher mEditTextWatch = new b();
     private TextView.OnEditorActionListener mKeySearchListener = new TextView.OnEditorActionListener() { // from class: cn.damai.search.ui.SearchPrivilegeResultActivity.4
         private static transient /* synthetic */ IpChange $ipChange;
 
@@ -96,9 +95,9 @@ public class SearchPrivilegeResultActivity extends DamaiBaseActivity implements 
             return false;
         }
     };
-    private View.OnClickListener mOnClickListener = new View$OnClickListenerC1600c();
-    private View.OnClickListener mItemClick = new View$OnClickListenerC1601d();
-    private View.OnClickListener mThemeEvaItemClick = new View$OnClickListenerC1602e();
+    private View.OnClickListener mOnClickListener = new c();
+    private View.OnClickListener mItemClick = new d();
+    private View.OnClickListener mThemeEvaItemClick = new e();
     private int mFirstVisibleItems = 0;
     private int mFirstVisibleItemCount = 0;
     private RecyclerView.OnScrollListener mScrollListener = new RecyclerView.OnScrollListener() { // from class: cn.damai.search.ui.SearchPrivilegeResultActivity.8
@@ -127,16 +126,15 @@ public class SearchPrivilegeResultActivity extends DamaiBaseActivity implements 
             }
         }
     };
-    private View.OnTouchListener mTouchListener = new View$OnTouchListenerC1603f();
+    private View.OnTouchListener mTouchListener = new f();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchPrivilegeResultActivity$a */
     /* loaded from: classes6.dex */
-    public class C1598a implements SearchPrivilegeModel.OnCombineListener {
+    public class a implements SearchPrivilegeModel.OnCombineListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C1598a(String str) {
+        a(String str) {
             this.a = str;
         }
 
@@ -167,12 +165,11 @@ public class SearchPrivilegeResultActivity extends DamaiBaseActivity implements 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchPrivilegeResultActivity$b */
     /* loaded from: classes15.dex */
-    public class C1599b implements TextWatcher {
+    public class b implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1599b() {
+        b() {
         }
 
         @Override // android.text.TextWatcher
@@ -205,12 +202,11 @@ public class SearchPrivilegeResultActivity extends DamaiBaseActivity implements 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchPrivilegeResultActivity$c */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1600c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1600c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -250,12 +246,11 @@ public class SearchPrivilegeResultActivity extends DamaiBaseActivity implements 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchPrivilegeResultActivity$d */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1601d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1601d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -271,12 +266,11 @@ public class SearchPrivilegeResultActivity extends DamaiBaseActivity implements 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchPrivilegeResultActivity$e */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1602e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1602e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -292,12 +286,11 @@ public class SearchPrivilegeResultActivity extends DamaiBaseActivity implements 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchPrivilegeResultActivity$f */
     /* loaded from: classes15.dex */
-    public class View$OnTouchListenerC1603f implements View.OnTouchListener {
+    public class f implements View.OnTouchListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnTouchListenerC1603f() {
+        f() {
         }
 
         @Override // android.view.View.OnTouchListener
@@ -487,7 +480,7 @@ public class SearchPrivilegeResultActivity extends DamaiBaseActivity implements 
                     if (i != 14 || (baccountInfo = searchDataHolder.mAccountInfo) == null) {
                         return;
                     }
-                    C0529c.e().z(b82.C().k(baccountInfo.damaiId));
+                    cn.damai.common.user.c.e().z(b82.C().k(baccountInfo.damaiId));
                     setResultAndFinish(new ResultBean(baccountInfo.damaiId, baccountInfo.name, baccountInfo.headPic, baccountInfo.description, "2"), "", "");
                     return;
                 }
@@ -512,7 +505,7 @@ public class SearchPrivilegeResultActivity extends DamaiBaseActivity implements 
                         str7 = CommentItemMoreUtil.o(Long.valueOf(searchDataHolder.beginTime), "yyyy.MM.dd");
                     }
                     String n = CommentItemMoreUtil.n(projectItemBean.cityName, str7, projectItemBean.venueName);
-                    C0529c.e().z(b82.C().j(projectItemBean.id, projectItemBean.storeId));
+                    cn.damai.common.user.c.e().z(b82.C().j(projectItemBean.id, projectItemBean.storeId));
                     ResultBean resultBean = new ResultBean(projectItemBean.id, projectItemBean.name, projectItemBean.verticalPic, n, "3");
                     String str8 = searchDataHolder.targetId;
                     long j = searchDataHolder.beginTime;
@@ -520,13 +513,13 @@ public class SearchPrivilegeResultActivity extends DamaiBaseActivity implements 
                     return;
                 }
                 if (i == 21 && "0".equals(projectItemBean.categoryName)) {
-                    C0529c.e().z(b82.C().l(projectItemBean.id));
+                    cn.damai.common.user.c.e().z(b82.C().l(projectItemBean.id));
                 } else {
-                    C0529c.e().z(b82.C().k(projectItemBean.id));
+                    cn.damai.common.user.c.e().z(b82.C().k(projectItemBean.id));
                 }
                 setResultAndFinish(new ResultBean(projectItemBean.id, str6, projectItemBean.verticalPic, str, "1"), "", "");
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
         }
     }
@@ -591,7 +584,7 @@ public class SearchPrivilegeResultActivity extends DamaiBaseActivity implements 
         if (z2) {
             showLoading("");
         }
-        this.mModel.load(z, input, new C1598a(input));
+        this.mModel.load(z, input, new a(input));
     }
 
     private void setResultAndFinish(ResultBean resultBean, String str, String str2) {
@@ -812,7 +805,7 @@ public class SearchPrivilegeResultActivity extends DamaiBaseActivity implements 
             }
         }
         setDamaiUTKeyBuilder(b82.C().E());
-        C0529c.e().K(this);
+        cn.damai.common.user.c.e().K(this);
     }
 
     @Override // cn.damai.uikit.irecycler.OnLoadMoreListener
@@ -927,11 +920,11 @@ public class SearchPrivilegeResultActivity extends DamaiBaseActivity implements 
                 this.mDataHolderList.add(searchDataHolder4);
             }
             if (z2) {
-                C0529c.e().x(b82.C().g(getInput(), "1"));
+                cn.damai.common.user.c.e().x(b82.C().g(getInput(), "1"));
                 showEmptyView("没有找到符合条件的项目\n您可以减少筛选条件重新重试");
             } else {
                 if (z3) {
-                    C0529c.e().x(b82.C().g(getInput(), "0"));
+                    cn.damai.common.user.c.e().x(b82.C().g(getInput(), "0"));
                 }
                 hideEmptyView();
             }

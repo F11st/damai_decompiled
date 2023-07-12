@@ -25,19 +25,18 @@ public final class gq {
     private gq(Context context) {
         this.d = context.getApplicationContext();
         if (Looper.myLooper() == null) {
-            this.e = new HandlerC4570a(Looper.getMainLooper(), this);
+            this.e = new a(Looper.getMainLooper(), this);
         } else {
-            this.e = new HandlerC4570a(this);
+            this.e = new a(this);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.gq$a */
     /* loaded from: classes10.dex */
-    private static final class HandlerC4570a extends Handler {
+    private static final class a extends Handler {
         private final WeakReference<gq> a;
 
-        HandlerC4570a(gq gqVar) {
+        a(gq gqVar) {
             this.a = new WeakReference<>(gqVar);
         }
 
@@ -51,7 +50,7 @@ public final class gq {
             gqVar.a((String) obj, message.what);
         }
 
-        HandlerC4570a(Looper looper, gq gqVar) {
+        a(Looper looper, gq gqVar) {
             super(looper);
             this.a = new WeakReference<>(gqVar);
         }

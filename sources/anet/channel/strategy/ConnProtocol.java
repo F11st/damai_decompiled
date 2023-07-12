@@ -1,7 +1,7 @@
 package anet.channel.strategy;
 
 import android.text.TextUtils;
-import anet.channel.strategy.C0214b;
+import anet.channel.strategy.b;
 import com.taobao.weex.annotation.JSMethod;
 import java.io.Serializable;
 import java.util.HashMap;
@@ -45,11 +45,11 @@ public class ConnProtocol implements Serializable {
         return sb.toString();
     }
 
-    public static ConnProtocol valueOf(C0214b.C0215a c0215a) {
-        if (c0215a == null) {
+    public static ConnProtocol valueOf(b.a aVar) {
+        if (aVar == null) {
             return null;
         }
-        return valueOf(c0215a.b, c0215a.g, c0215a.h);
+        return valueOf(aVar.b, aVar.g, aVar.h);
     }
 
     public boolean equals(Object obj) {
@@ -76,11 +76,11 @@ public class ConnProtocol implements Serializable {
         return this.name;
     }
 
-    public static ConnProtocol valueOf(C0214b.C0217c c0217c) {
-        if (c0217c == null) {
+    public static ConnProtocol valueOf(b.c cVar) {
+        if (cVar == null) {
             return null;
         }
-        return valueOf(c0217c.b, c0217c.g, c0217c.h);
+        return valueOf(cVar.b, cVar.g, cVar.h);
     }
 
     @Deprecated

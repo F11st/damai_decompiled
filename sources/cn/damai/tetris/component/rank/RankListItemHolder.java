@@ -24,8 +24,8 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 import kotlin.jvm.JvmField;
-import kotlin.text.C8604o;
 import kotlin.text.StringsKt__StringsKt;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -39,7 +39,7 @@ import tb.mu0;
 public final class RankListItemHolder extends BaseViewHolder<RankItemBean> implements View.OnClickListener {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C1947a Companion = new C1947a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static HashMap<Long, Boolean> u = new HashMap<>();
     @Nullable
@@ -83,15 +83,14 @@ public final class RankListItemHolder extends BaseViewHolder<RankItemBean> imple
     private final TextView t;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.rank.RankListItemHolder$a */
     /* loaded from: classes16.dex */
-    public static final class C1947a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C1947a() {
+        private a() {
         }
 
-        public /* synthetic */ C1947a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -230,7 +229,7 @@ public final class RankListItemHolder extends BaseViewHolder<RankItemBean> imple
         } else if (i >= 10000) {
             try {
                 String valueOf = String.valueOf(((int) ((i / 10000) * 10)) / 10.0f);
-                p = C8604o.p(valueOf, "0", false, 2, null);
+                p = o.p(valueOf, "0", false, 2, null);
                 if (p) {
                     valueOf = valueOf.substring(0, valueOf.length() - 2);
                     b41.h(valueOf, "this as java.lang.String…ing(startIndex, endIndex)");

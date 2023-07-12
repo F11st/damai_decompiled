@@ -67,7 +67,7 @@ public final class ObservableDetach<T> extends AbstractObservableWithUpstream<T,
         super(observableSource);
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new DetachObserver(observer));
     }

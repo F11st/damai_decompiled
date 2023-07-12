@@ -106,7 +106,7 @@ public final class j1 {
                 return;
             }
             u();
-            g(e1.a(C5846l.j(context)));
+            g(e1.a(l.j(context)));
         } catch (Throwable th) {
             h(th, "CoreUtil", "checkUrl");
         }
@@ -213,7 +213,7 @@ public final class j1 {
     }
 
     public static void h(Throwable th, String str, String str2) {
-        if ("reportError".equals(str2) || (th instanceof C5844k)) {
+        if ("reportError".equals(str2) || (th instanceof k)) {
             return;
         }
         try {
@@ -391,7 +391,7 @@ public final class j1 {
     }
 
     public static String o(Context context) {
-        return r1.a(C5846l.i(context));
+        return r1.a(l.i(context));
     }
 
     private static byte[] p(String str) {
@@ -411,7 +411,7 @@ public final class j1 {
     public static u1 q() {
         try {
             if (m == null) {
-                m = new u1.C5886a("loc", "6.1.0", "AMAP_Location_SDK_Android 6.1.0").b(t()).a("6.1.0").c();
+                m = new u1.a("loc", "6.1.0", "AMAP_Location_SDK_Android 6.1.0").b(t()).a("6.1.0").c();
             }
         } catch (Throwable th) {
             h(th, "CoreUtil", "getSDKInfo");

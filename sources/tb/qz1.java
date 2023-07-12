@@ -24,7 +24,7 @@ public class qz1 {
         view.getLocationOnScreen(iArr);
         int width = view.getWidth();
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        Display.getMetrics(((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+        Display.getMetrics(((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
         recyclerView.smoothScrollBy((iArr[0] - (com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(displayMetrics) / 2)) + (width / 2), 0);
     }
 }

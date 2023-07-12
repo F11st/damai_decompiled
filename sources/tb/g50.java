@@ -13,7 +13,7 @@ import org.jetbrains.annotations.Nullable;
 public final class g50 implements ICacheManager {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C9156a Companion = new C9156a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static String b = "dolorescache.db";
     private static long c = 86400000;
@@ -21,12 +21,11 @@ public final class g50 implements ICacheManager {
     private final p42 a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.g50$a */
     /* loaded from: classes7.dex */
-    public static final class C9156a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9156a() {
+        private a() {
         }
 
         @NotNull
@@ -78,7 +77,7 @@ public final class g50 implements ICacheManager {
             g50.c(str);
         }
 
-        public /* synthetic */ C9156a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

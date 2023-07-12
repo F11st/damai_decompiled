@@ -32,9 +32,8 @@ public class CategoryDetailHolder extends RecyclerView.ViewHolder {
     private Context c;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.viewholder.CategoryDetailHolder$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0362a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CategoryBean a;
         final /* synthetic */ SubCategory b;
@@ -42,7 +41,7 @@ public class CategoryDetailHolder extends RecyclerView.ViewHolder {
         final /* synthetic */ CategoryEntity d;
         final /* synthetic */ View.OnClickListener e;
 
-        View$OnClickListenerC0362a(CategoryDetailHolder categoryDetailHolder, CategoryBean categoryBean, SubCategory subCategory, int i, CategoryEntity categoryEntity, View.OnClickListener onClickListener) {
+        a(CategoryDetailHolder categoryDetailHolder, CategoryBean categoryBean, SubCategory subCategory, int i, CategoryEntity categoryEntity, View.OnClickListener onClickListener) {
             this.a = categoryBean;
             this.b = subCategory;
             this.c = i;
@@ -156,7 +155,7 @@ public class CategoryDetailHolder extends RecyclerView.ViewHolder {
                         b(false, findViewById, textView, textView2);
                     }
                     i2 = i6;
-                    findViewById.setOnClickListener(new View$OnClickListenerC0362a(this, categoryBean, subCategory, i, categoryEntity, onClickListener));
+                    findViewById.setOnClickListener(new a(this, categoryBean, subCategory, i, categoryEntity, onClickListener));
                     this.b.addView(inflate);
                 }
                 i6 = i2 + 1;

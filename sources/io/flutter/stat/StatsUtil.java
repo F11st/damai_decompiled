@@ -27,7 +27,7 @@ public class StatsUtil {
     private static final boolean UC_BUILD_STATISTICS_LOG_TO_FILE = false;
     private static final SimpleDateFormat dateFormater;
     private static final String thisTimeStamp;
-    static final ArrayList<C8143stats> stats_stats = new ArrayList<>();
+    static final ArrayList<stats> stats_stats = new ArrayList<>();
     static final ArrayList<startup_perf> stats_startup_perf = new ArrayList<>();
     private static long saveToWaTimeStamp = System.currentTimeMillis();
     static final HashMap<String, Long> sCounts = new HashMap<>();
@@ -60,7 +60,7 @@ public class StatsUtil {
         public void handleMessage(Message message) {
             int i = message.what;
             if (i == 1) {
-                ((C8143stats) message.obj).appendToCachePool();
+                ((stats) message.obj).appendToCachePool();
             } else if (i == 2) {
                 ((startup_perf) message.obj).appendToCachePool();
             } else if (i != 9990) {
@@ -102,7 +102,7 @@ public class StatsUtil {
     /* JADX INFO: Access modifiers changed from: private */
     public static void saveToWa() {
         startup_perf next;
-        C8143stats next2;
+        stats next2;
         saveToWaTimeStamp = System.currentTimeMillis();
         HashMap hashMap = new HashMap();
         for (Map.Entry<String, Long> entry : sCounts.entrySet()) {
@@ -116,17 +116,17 @@ public class StatsUtil {
         }
         StatServices.WaStat("counts", hashMap);
         hashMap.clear();
-        Iterator<C8143stats> it = stats_stats.iterator();
+        Iterator<stats> it = stats_stats.iterator();
         long j = 0;
         while (it.hasNext()) {
             j += next2.length();
             StatServices.WaStat("stats", it.next().toHashMap());
         }
-        if (C8143stats.__cn > 0) {
+        if (stats.__cn > 0) {
             if (j == 0) {
-                j = C8143stats.__cl;
+                j = stats.__cl;
             }
-            StatServices.WaStat("stats", C8143stats.getStats(j).toHashMap());
+            StatServices.WaStat("stats", stats.getStats(j).toHashMap());
         }
         stats_stats.clear();
         Iterator<startup_perf> it2 = stats_startup_perf.iterator();
@@ -148,9 +148,8 @@ public class StatsUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: io.flutter.stat.StatsUtil$stats */
     /* loaded from: classes3.dex */
-    public static class C8143stats {
+    public static class stats {
         static int __cl = 0;
         static int __cn = 0;
         static int __dl = 0;
@@ -166,7 +165,7 @@ public class StatsUtil {
         public String key;
         public long len;
 
-        public C8143stats(String str, long j, long j2, long j3, long j4, long j5) {
+        public stats(String str, long j, long j2, long j3, long j4, long j5) {
             this.key = "";
             this.f1040cn = 0L;
             this.cl = 0L;
@@ -182,30 +181,30 @@ public class StatsUtil {
             this.len = j5;
         }
 
-        static C8143stats getStats(long j) {
-            C8143stats c8143stats = new C8143stats();
-            c8143stats.key = "stats";
-            c8143stats.f1040cn = __cn;
-            c8143stats.dn = __dn;
-            c8143stats.cl = __cl;
-            c8143stats.dl = __dl;
-            c8143stats.len = j;
+        static stats getStats(long j) {
+            stats statsVar = new stats();
+            statsVar.key = "stats";
+            statsVar.f1040cn = __cn;
+            statsVar.dn = __dn;
+            statsVar.cl = __cl;
+            statsVar.dl = __dl;
+            statsVar.len = j;
             __cn = 0;
             __dn = 0;
             __cl = 0;
             __dl = 0;
-            return c8143stats;
+            return statsVar;
         }
 
         public static void nativeCreate(String str, long j, long j2, long j3, long j4, long j5) {
-            new C8143stats(str, j, j2, j3, j4, j5).commit();
+            new stats(str, j, j2, j3, j4, j5).commit();
         }
 
         void appendToCachePool() {
             boolean z = true;
             __cn++;
             __cl += length();
-            ArrayList<C8143stats> arrayList = StatsUtil.stats_stats;
+            ArrayList<stats> arrayList = StatsUtil.stats_stats;
             if (arrayList.size() > 50) {
                 __dn++;
                 __dl += length();
@@ -214,7 +213,7 @@ public class StatsUtil {
                 __dl += length();
             } else {
                 if (arrayList.size() > 7) {
-                    Iterator<C8143stats> it = arrayList.iterator();
+                    Iterator<stats> it = arrayList.iterator();
                     int i = 0;
                     while (it.hasNext()) {
                         i += it.next().length();
@@ -225,18 +224,18 @@ public class StatsUtil {
                         return;
                     }
                 }
-                ArrayList<C8143stats> arrayList2 = StatsUtil.stats_stats;
+                ArrayList<stats> arrayList2 = StatsUtil.stats_stats;
                 if (arrayList2.isEmpty()) {
                     arrayList2.add(this);
                     return;
                 }
-                Iterator<C8143stats> it2 = arrayList2.iterator();
+                Iterator<stats> it2 = arrayList2.iterator();
                 while (true) {
                     if (!it2.hasNext()) {
                         z = false;
                         break;
                     }
-                    C8143stats next = it2.next();
+                    stats next = it2.next();
                     if (next.isMergeable(this)) {
                         next.merge(this);
                         break;
@@ -256,22 +255,22 @@ public class StatsUtil {
             if (this.key.length() > 16) {
                 this.key = this.key.substring(0, 16);
             }
-            C8143stats c8143stats = new C8143stats();
-            c8143stats.key = this.key;
-            c8143stats.f1040cn = this.f1040cn;
-            c8143stats.cl = this.cl;
-            c8143stats.dn = this.dn;
-            c8143stats.dl = this.dl;
-            c8143stats.len = this.len;
+            stats statsVar = new stats();
+            statsVar.key = this.key;
+            statsVar.f1040cn = this.f1040cn;
+            statsVar.cl = this.cl;
+            statsVar.dn = this.dn;
+            statsVar.dl = this.dl;
+            statsVar.len = this.len;
             Log.d(StatsUtil.TAG, "commit: " + toString());
             reset();
             Message obtainMessage = StatsHandler.getInstance().obtainMessage(1);
-            obtainMessage.obj = c8143stats;
+            obtainMessage.obj = statsVar;
             StatsHandler.getInstance().sendMessage(obtainMessage);
         }
 
-        boolean isMergeable(C8143stats c8143stats) {
-            return this.key.equals(c8143stats.key);
+        boolean isMergeable(stats statsVar) {
+            return this.key.equals(statsVar.key);
         }
 
         public boolean isValidity() {
@@ -285,13 +284,13 @@ public class StatsUtil {
             return this.__len;
         }
 
-        public void merge(C8143stats c8143stats) {
-            if (isMergeable(c8143stats)) {
-                this.f1040cn += c8143stats.f1040cn;
-                this.cl += c8143stats.cl;
-                this.dn += c8143stats.dn;
-                this.dl += c8143stats.dl;
-                this.len += c8143stats.len;
+        public void merge(stats statsVar) {
+            if (isMergeable(statsVar)) {
+                this.f1040cn += statsVar.f1040cn;
+                this.cl += statsVar.cl;
+                this.dn += statsVar.dn;
+                this.dl += statsVar.dl;
+                this.len += statsVar.len;
                 this.__len = 0;
             }
         }
@@ -321,7 +320,7 @@ public class StatsUtil {
             return "stats:{key:" + this.key + ", cn:" + String.valueOf(this.f1040cn) + ", cl:" + String.valueOf(this.cl) + ", dn:" + String.valueOf(this.dn) + ", dl:" + String.valueOf(this.dl) + ", len:" + String.valueOf(this.len) + "}";
         }
 
-        public C8143stats() {
+        public stats() {
             this.key = "";
             this.f1040cn = 0L;
             this.cl = 0L;
@@ -373,19 +372,19 @@ public class StatsUtil {
             this.route = str;
         }
 
-        static C8143stats getStats(long j) {
-            C8143stats c8143stats = new C8143stats();
-            c8143stats.key = "startup_perf";
-            c8143stats.f1040cn = __cn;
-            c8143stats.dn = __dn;
-            c8143stats.cl = __cl;
-            c8143stats.dl = __dl;
-            c8143stats.len = j;
+        static stats getStats(long j) {
+            stats statsVar = new stats();
+            statsVar.key = "startup_perf";
+            statsVar.f1040cn = __cn;
+            statsVar.dn = __dn;
+            statsVar.cl = __cl;
+            statsVar.dl = __dl;
+            statsVar.len = j;
             __cn = 0;
             __dn = 0;
             __cl = 0;
             __dl = 0;
-            return c8143stats;
+            return statsVar;
         }
 
         public static void nativeCreate(long j, long j2, long j3, long j4, long j5, long j6, long j7, long j8, String str) {

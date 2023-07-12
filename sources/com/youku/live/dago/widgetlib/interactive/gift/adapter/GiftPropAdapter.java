@@ -43,7 +43,7 @@ public class GiftPropAdapter extends MultiItemCommonAdapter<GiftPropBean> {
             @Override // com.youku.live.dago.widgetlib.interactive.gift.adapter.MultiItemTypeSupport
             public int getLayoutId(int i, GiftPropBean giftPropBean) {
                 IpChange ipChange = $ipChange;
-                return AndroidInstantRuntime.support(ipChange, "-1794131886") ? ((Integer) ipChange.ipc$dispatch("-1794131886", new Object[]{this, Integer.valueOf(i), giftPropBean})).intValue() : R.C7942layout.dago_pgc_ykl_send_prop_sel_item;
+                return AndroidInstantRuntime.support(ipChange, "-1794131886") ? ((Integer) ipChange.ipc$dispatch("-1794131886", new Object[]{this, Integer.valueOf(i), giftPropBean})).intValue() : R.layout.dago_pgc_ykl_send_prop_sel_item;
             }
         });
     }
@@ -97,7 +97,7 @@ public class GiftPropAdapter extends MultiItemCommonAdapter<GiftPropBean> {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1242335636")) {
             ipChange.ipc$dispatch("-1242335636", new Object[]{this, commonViewHolder, Integer.valueOf(i), giftPropBean});
-        } else if (commonViewHolder.getLayoutId() == R.C7942layout.dago_pgc_ykl_send_prop_sel_item) {
+        } else if (commonViewHolder.getLayoutId() == R.layout.dago_pgc_ykl_send_prop_sel_item) {
             ((PropItemView) commonViewHolder.getView(R.id.id_prop_item_view)).setData(giftPropBean);
         }
     }

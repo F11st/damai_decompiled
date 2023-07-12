@@ -1,8 +1,8 @@
 package cn.damai.ticklet.ui.activity;
 
 import android.os.Bundle;
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseModel;
+import cn.damai.common.app.base.a;
 import cn.damai.common.askpermission.OnGrantListener;
 import com.alibaba.pictures.piclocation.listener.LocateMapListener;
 import com.amap.api.location.AMapLocation;
@@ -20,18 +20,17 @@ import tb.mr1;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
-public abstract class DamaiMapBaseActivity<T extends AbstractC0470a, E extends BaseModel> extends TickletBaseActivity<T, E> implements LocationSource, LocateMapListener, AMap.OnMarkerClickListener, AMap.OnMapClickListener, AMap.OnCameraChangeListener {
+public abstract class DamaiMapBaseActivity<T extends cn.damai.common.app.base.a, E extends BaseModel> extends TickletBaseActivity<T, E> implements LocationSource, LocateMapListener, AMap.OnMarkerClickListener, AMap.OnMapClickListener, AMap.OnCameraChangeListener {
     private static transient /* synthetic */ IpChange $ipChange;
     public AMap aMap;
     public LocationSource.OnLocationChangedListener mListener = null;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.DamaiMapBaseActivity$a */
     /* loaded from: classes7.dex */
-    public class C2014a implements OnGrantListener {
+    public class a implements OnGrantListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2014a() {
+        a() {
         }
 
         @Override // cn.damai.common.askpermission.OnGrantListener
@@ -72,7 +71,7 @@ public abstract class DamaiMapBaseActivity<T extends AbstractC0470a, E extends B
         if (AndroidInstantRuntime.support(ipChange, "1101266194")) {
             ipChange.ipc$dispatch("1101266194", new Object[]{this, str});
         } else {
-            ir1.b(this, false, mr1.LOCATION, str, new C2014a());
+            ir1.b(this, false, mr1.LOCATION, str, new a());
         }
     }
 

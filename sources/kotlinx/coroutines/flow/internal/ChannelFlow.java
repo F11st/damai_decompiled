@@ -2,11 +2,10 @@ package kotlinx.coroutines.flow.internal;
 
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
 import java.util.ArrayList;
-import kotlin.collections.C8212k;
+import kotlin.collections.k;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
 import kotlin.coroutines.EmptyCoroutineContext;
-import kotlin.coroutines.intrinsics.C8233a;
 import kotlin.jvm.JvmField;
 import kotlin.jvm.functions.Function2;
 import kotlinx.coroutines.CoroutineScope;
@@ -53,7 +52,7 @@ public abstract class ChannelFlow<T> implements FusibleFlow<T> {
 
     static /* synthetic */ Object b(ChannelFlow channelFlow, FlowCollector flowCollector, Continuation continuation) {
         Object d = ro.d(new ChannelFlow$collect$2(channelFlow, flowCollector, null), continuation);
-        return d == C8233a.d() ? d : wt2.INSTANCE;
+        return d == kotlin.coroutines.intrinsics.a.d() ? d : wt2.INSTANCE;
     }
 
     private final int f() {
@@ -147,6 +146,6 @@ public abstract class ChannelFlow<T> implements FusibleFlow<T> {
         if (this.c != BufferOverflow.SUSPEND) {
             arrayList.add("onBufferOverflow=" + this.c);
         }
-        return o40.a(this) + jn1.ARRAY_START + C8212k.Z(arrayList, AVFSCacheConstants.COMMA_SEP, null, null, 0, null, null, 62, null) + jn1.ARRAY_END;
+        return o40.a(this) + jn1.ARRAY_START + k.Z(arrayList, AVFSCacheConstants.COMMA_SEP, null, null, 0, null, null, 62, null) + jn1.ARRAY_END;
     }
 }

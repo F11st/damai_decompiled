@@ -13,18 +13,18 @@ public class it {
     static boolean a = false;
     static int b = 20;
     private static int c = 20;
-    private static WeakReference<C4593in> d;
+    private static WeakReference<in> d;
 
     /* JADX INFO: Access modifiers changed from: private */
     public static void b(Context context, byte[] bArr) throws IOException {
-        C4593in a2 = iu.a(d);
+        in a2 = iu.a(d);
         iu.a(context, a2, hb.h, 1000, 307200, "2");
         if (a2.e == null) {
             a2.e = new hs();
         }
         Random random = new Random();
         try {
-            C4594io.a(Integer.toString(random.nextInt(100)) + Long.toString(System.nanoTime()), bArr, a2);
+            io.a(Integer.toString(random.nextInt(100)) + Long.toString(System.nanoTime()), bArr, a2);
         } catch (Throwable th) {
             hd.c(th, WPKFactory.CONF_SERVER_TIME, "wts");
         }
@@ -52,7 +52,7 @@ public class it {
             @Override // java.lang.Runnable
             public void run() {
                 try {
-                    C4593in a2 = iu.a(it.d);
+                    in a2 = iu.a(it.d);
                     iu.a(context, a2, hb.h, 1000, 307200, "2");
                     if (a2.g == null) {
                         a2.g = new iv(new iz(context, new iw(new ja(new jc()))));
@@ -65,7 +65,7 @@ public class it {
                         Context context2 = context;
                         a2.f = new jg(context2, a2.h, a2.i, new jd(30, a2.a, new je(context2, it.a, it.c * 1024, it.b * 1024, "staticUpdate")));
                     }
-                    C4594io.a(a2);
+                    io.a(a2);
                 } catch (Throwable th) {
                     hd.c(th, WPKFactory.CONF_SERVER_TIME, "usd");
                 }

@@ -1,15 +1,15 @@
 package io.reactivex.internal.operators.completable;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
+import io.reactivex.a;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.SequentialDisposable;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class CompletableConcatArray extends AbstractC8146a {
+public final class CompletableConcatArray extends a {
     final CompletableSource[] sources;
 
     /* compiled from: Taobao */
@@ -64,7 +64,7 @@ public final class CompletableConcatArray extends AbstractC8146a {
         this.sources = completableSourceArr;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     public void subscribeActual(CompletableObserver completableObserver) {
         ConcatInnerObserver concatInnerObserver = new ConcatInnerObserver(completableObserver, this.sources);
         completableObserver.onSubscribe(concatInnerObserver.sd);

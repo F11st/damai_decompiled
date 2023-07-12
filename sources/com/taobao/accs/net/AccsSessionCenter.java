@@ -1,7 +1,7 @@
 package com.taobao.accs.net;
 
-import anet.channel.C0162c;
 import anet.channel.Session;
+import anet.channel.c;
 import anet.channel.entity.ConnType;
 import com.taobao.accs.connection.ConnectionServiceManager;
 
@@ -10,30 +10,30 @@ import com.taobao.accs.connection.ConnectionServiceManager;
 public class AccsSessionCenter {
     private static final String TAG = "AccsSessionCenter";
 
-    public static Session get(C0162c c0162c, String str, long j) {
+    public static Session get(c cVar, String str, long j) {
         if (ConnectionServiceManager.getInstance().isCurProcessAllow2Connect()) {
-            return c0162c.h(str, j);
+            return cVar.h(str, j);
         }
         return null;
     }
 
-    public static Session getThrowsException(C0162c c0162c, String str, long j) throws Exception {
+    public static Session getThrowsException(c cVar, String str, long j) throws Exception {
         if (ConnectionServiceManager.getInstance().isCurProcessAllow2Connect()) {
-            return c0162c.r(str, j);
+            return cVar.r(str, j);
         }
         return null;
     }
 
-    public static Session get(C0162c c0162c, String str, ConnType.TypeLevel typeLevel, long j) {
+    public static Session get(c cVar, String str, ConnType.TypeLevel typeLevel, long j) {
         if (ConnectionServiceManager.getInstance().isCurProcessAllow2Connect()) {
-            return c0162c.i(str, typeLevel, j);
+            return cVar.i(str, typeLevel, j);
         }
         return null;
     }
 
-    public static Session getThrowsException(C0162c c0162c, String str, ConnType.TypeLevel typeLevel, long j) throws Exception {
+    public static Session getThrowsException(c cVar, String str, ConnType.TypeLevel typeLevel, long j) throws Exception {
         if (ConnectionServiceManager.getInstance().isCurProcessAllow2Connect()) {
-            return c0162c.s(str, typeLevel, j);
+            return cVar.s(str, typeLevel, j);
         }
         return null;
     }

@@ -78,7 +78,7 @@ public final class MaybeSubscribeOn<T> extends AbstractMaybeWithUpstream<T, T> {
         this.scheduler = scheduler;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         SubscribeOnMaybeObserver subscribeOnMaybeObserver = new SubscribeOnMaybeObserver(maybeObserver);
         maybeObserver.onSubscribe(subscribeOnMaybeObserver);

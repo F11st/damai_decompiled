@@ -48,7 +48,7 @@ public class YKActionSheet extends DialogFragment {
     /* loaded from: classes3.dex */
     class InnerDialog extends Dialog {
         public InnerDialog(@NonNull Context context) {
-            super(context, R.C8077style.YKAcitonSheetDialog);
+            super(context, R.style.YKAcitonSheetDialog);
         }
 
         @Override // android.app.Dialog
@@ -106,18 +106,18 @@ public class YKActionSheet extends DialogFragment {
         }
         if (c == 0) {
             yKTextView.setStyle(YKTextView.STYLE_1_B);
-            yKTextView.setTextColor(getResources().getColor(R.C8071color.cr_1));
+            yKTextView.setTextColor(getResources().getColor(R.color.cr_1));
         } else if (c == 1) {
             yKTextView.setStyle(YKTextView.STYLE_1_B);
-            yKTextView.setTextColor(getResources().getColor(R.C8071color.cg_3));
+            yKTextView.setTextColor(getResources().getColor(R.color.cg_3));
         } else if (c == 2) {
             yKTextView.setStyle(YKTextView.STYLE_5_B);
-            yKTextView.setTextColor(getResources().getColor(R.C8071color.ykn_primary_info));
+            yKTextView.setTextColor(getResources().getColor(R.color.ykn_primary_info));
         } else if (c != 3) {
             yKTextView.setStyle(YKTextView.STYLE_1_B);
         } else {
             yKTextView.setStyle(YKTextView.STYLE_5_C);
-            yKTextView.setTextColor(getResources().getColor(R.C8071color.ykn_primary_info));
+            yKTextView.setTextColor(getResources().getColor(R.color.ykn_primary_info));
         }
         yKTextView.setTag(Integer.valueOf(i));
         yKTextView.setText(str2);
@@ -128,7 +128,7 @@ public class YKActionSheet extends DialogFragment {
     private void addDivider() {
         View view = new View(getActivity());
         view.setLayoutParams(new LinearLayout.LayoutParams(-1, 0));
-        view.setBackgroundColor(getResources().getColor(R.C8071color.ykn_seconary_separator));
+        view.setBackgroundColor(getResources().getColor(R.color.ykn_seconary_separator));
         this.mActionList.addView(view);
     }
 
@@ -148,7 +148,7 @@ public class YKActionSheet extends DialogFragment {
         if (getActivity() == null) {
             return this.mDialog;
         }
-        View inflate = getActivity().getLayoutInflater().inflate(R.C8074layout.resource_ykactionsheet, (ViewGroup) null);
+        View inflate = getActivity().getLayoutInflater().inflate(R.layout.resource_ykactionsheet, (ViewGroup) null);
         View findViewById = inflate.findViewById(R.id.actionsheet_cancel);
         this.mCancel = findViewById;
         findViewById.setOnClickListener(new View.OnClickListener() { // from class: com.youku.resource.widget.YKActionSheet.1

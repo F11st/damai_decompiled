@@ -13,13 +13,12 @@ public final class u0 {
     private dr a;
     private dr b;
     private s63 c;
-    private C5885a d = new C5885a();
+    private a d = new a();
     private final List<dr> e = new ArrayList(3);
 
     /* compiled from: Taobao */
-    /* renamed from: com.loc.u0$a */
     /* loaded from: classes10.dex */
-    public static class C5885a {
+    public static class a {
         public byte a;
         public String b;
         public dr c;
@@ -92,9 +91,9 @@ public final class u0 {
         }
     }
 
-    private void b(C5885a c5885a) {
+    private void b(a aVar) {
         synchronized (this.e) {
-            for (dr drVar : c5885a.f) {
+            for (dr drVar : aVar.f) {
                 if (drVar != null && drVar.h) {
                     dr clone = drVar.clone();
                     clone.e = SystemClock.elapsedRealtime();
@@ -157,7 +156,7 @@ public final class u0 {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public final C5885a a(s63 s63Var, boolean z, byte b, String str, List<dr> list) {
+    public final a a(s63 s63Var, boolean z, byte b, String str, List<dr> list) {
         if (z) {
             this.d.a();
             return null;
@@ -166,12 +165,12 @@ public final class u0 {
         if (this.d.c == null) {
             return null;
         }
-        if (this.c == null || d(s63Var) || !C5885a.c(this.d.d, this.a) || !C5885a.c(this.d.e, this.b)) {
-            C5885a c5885a = this.d;
-            this.a = c5885a.d;
-            this.b = c5885a.e;
+        if (this.c == null || d(s63Var) || !a.c(this.d.d, this.a) || !a.c(this.d.e, this.b)) {
+            a aVar = this.d;
+            this.a = aVar.d;
+            this.b = aVar.e;
             this.c = s63Var;
-            o63.c(c5885a.f);
+            o63.c(aVar.f);
             b(this.d);
             return this.d;
         }

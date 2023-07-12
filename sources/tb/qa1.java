@@ -5,7 +5,6 @@ import com.ali.ha.fulltrace.dump.DumpManager;
 import com.alibaba.analytics.core.db.annotation.Column;
 import com.alibaba.analytics.core.db.annotation.Ingore;
 import com.alibaba.analytics.core.db.annotation.TableName;
-import com.alibaba.analytics.core.logbuilder.C3121a;
 import com.alibaba.analytics.core.model.LogField;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
@@ -106,7 +105,7 @@ public class qa1 extends ve0 {
         this.d = String.valueOf(System.currentTimeMillis());
         za2.a().d(str2, map);
         this.e = map.get(LogField.RESERVE3.toString());
-        d(C3121a.a(map));
+        d(com.alibaba.analytics.core.logbuilder.a.a(map));
     }
 
     public qa1(String str, String str2, String str3, String str4, String str5, Map<String, String> map) {
@@ -140,6 +139,6 @@ public class qa1 extends ve0 {
         }
         za2.a().d(str2, hashMap);
         this.e = (String) hashMap.get(LogField.RESERVE3.toString());
-        d(C3121a.a(hashMap));
+        d(com.alibaba.analytics.core.logbuilder.a.a(hashMap));
     }
 }

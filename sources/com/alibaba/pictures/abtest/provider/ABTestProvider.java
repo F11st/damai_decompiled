@@ -19,10 +19,10 @@ import java.util.Set;
 import kotlin.jvm.functions.Function1;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tb.C8889a;
-import tb.C8985c;
-import tb.C9021d;
+import tb.a;
 import tb.b41;
+import tb.c;
+import tb.d;
 import tb.dc0;
 import tb.rb0;
 import tb.wt2;
@@ -127,22 +127,22 @@ public final class ABTestProvider {
         try {
             StringBuilder sb = new StringBuilder();
             sb.append("ABTestCacheKey: ABTestExperimentData_");
-            C9021d.C9022a c9022a = C9021d.Companion;
-            String b2 = c9022a.b().b();
+            d.a aVar = d.Companion;
+            String b2 = aVar.b().b();
             if (b2 == null) {
                 b2 = "";
             }
             sb.append(b2);
-            C8985c.b(null, sb.toString(), 1, null);
+            c.b(null, sb.toString(), 1, null);
             Gson gson = new Gson();
-            C8889a c8889a = C8889a.INSTANCE;
+            a aVar2 = a.INSTANCE;
             StringBuilder sb2 = new StringBuilder();
             sb2.append(ABTestCacheKey);
-            String b3 = c9022a.b().b();
+            String b3 = aVar.b().b();
             sb2.append(b3 != null ? b3 : "");
-            return (ABTestScenarioResultList) gson.fromJson(c8889a.b(sb2.toString()), (Class<Object>) ABTestScenarioResultList.class);
+            return (ABTestScenarioResultList) gson.fromJson(aVar2.b(sb2.toString()), (Class<Object>) ABTestScenarioResultList.class);
         } catch (Exception e) {
-            C8985c.b(null, "getABAllExperimentData error=" + e, 1, null);
+            c.b(null, "getABAllExperimentData error=" + e, 1, null);
             return a;
         }
     }
@@ -194,9 +194,9 @@ public final class ABTestProvider {
             return (String) ipChange.ipc$dispatch("360756829", new Object[]{this, str, l, str2});
         }
         b = str;
-        C9021d.C9022a c9022a = C9021d.Companion;
-        if (!c9022a.b().a()) {
-            m(this, c9022a.b().c(), null, 2, null);
+        d.a aVar = d.Companion;
+        if (!aVar.b().a()) {
+            m(this, aVar.b().c(), null, 2, null);
         }
         if (str2 == null || str2.length() == 0) {
             ABTestExperiment i = i(str, l);
@@ -291,18 +291,18 @@ public final class ABTestProvider {
                     return;
                 }
                 b41.i(aBTestScenarioResultList, AdvanceSetting.NETWORK_TYPE);
-                C8985c.b(null, "request ABTestExperimentData success", 1, null);
+                c.b(null, "request ABTestExperimentData success", 1, null);
                 ABTestProvider aBTestProvider = ABTestProvider.INSTANCE;
                 ABTestProvider.a = aBTestScenarioResultList;
-                C8889a c8889a = C8889a.INSTANCE;
+                a aVar = a.INSTANCE;
                 StringBuilder sb = new StringBuilder();
                 sb.append(ABTestProvider.ABTestCacheKey);
-                String b2 = C9021d.Companion.b().b();
+                String b2 = d.Companion.b().b();
                 if (b2 == null) {
                     b2 = "";
                 }
                 sb.append(b2);
-                c8889a.c(sb.toString(), aBTestScenarioResultList);
+                aVar.c(sb.toString(), aBTestScenarioResultList);
             }
         }).doOnKTSuccessNull(new Function1<dc0<ABTestScenarioResultList>, wt2>() { // from class: com.alibaba.pictures.abtest.provider.ABTestProvider$requestABTestExperimentData$2
             private static transient /* synthetic */ IpChange $ipChange;
@@ -321,7 +321,7 @@ public final class ABTestProvider {
                     return;
                 }
                 b41.i(dc0Var, AdvanceSetting.NETWORK_TYPE);
-                C8985c.b(null, "request ABTestExperimentData is null", 1, null);
+                c.b(null, "request ABTestExperimentData is null", 1, null);
             }
         }).doOnKTFail(new Function1<dc0<ABTestScenarioResultList>, wt2>() { // from class: com.alibaba.pictures.abtest.provider.ABTestProvider$requestABTestExperimentData$3
             private static transient /* synthetic */ IpChange $ipChange;
@@ -340,7 +340,7 @@ public final class ABTestProvider {
                     return;
                 }
                 b41.i(dc0Var, AdvanceSetting.NETWORK_TYPE);
-                C8985c.b(null, "request ABTestExperimentData fail", 1, null);
+                c.b(null, "request ABTestExperimentData fail", 1, null);
             }
         });
     }
@@ -355,7 +355,7 @@ public final class ABTestProvider {
         if (!((str == null || str.length() == 0) ? true : true) && l != null) {
             ABTestExperiment i = i(str, l);
             if (i == null) {
-                C8985c.b(null, "request params abUploadInfo is null", 1, null);
+                c.b(null, "request params abUploadInfo is null", 1, null);
                 return;
             }
             ABTestUploadRequest aBTestUploadRequest = new ABTestUploadRequest();
@@ -376,7 +376,7 @@ public final class ABTestProvider {
                     if (AndroidInstantRuntime.support(ipChange2, "1206188565")) {
                         ipChange2.ipc$dispatch("1206188565", new Object[]{this, aBTestExperiment});
                     } else {
-                        C8985c.b(null, "request ABTest Upload success", 1, null);
+                        c.b(null, "request ABTest Upload success", 1, null);
                     }
                 }
             }).doOnKTSuccessNull(new Function1<dc0<ABTestExperiment>, wt2>() { // from class: com.alibaba.pictures.abtest.provider.ABTestProvider$startABTestExperiment$2
@@ -396,7 +396,7 @@ public final class ABTestProvider {
                         return;
                     }
                     b41.i(dc0Var, AdvanceSetting.NETWORK_TYPE);
-                    C8985c.b(null, "request ABTest Upload success (null)", 1, null);
+                    c.b(null, "request ABTest Upload success (null)", 1, null);
                 }
             }).doOnKTFail(new Function1<dc0<ABTestExperiment>, wt2>() { // from class: com.alibaba.pictures.abtest.provider.ABTestProvider$startABTestExperiment$3
                 private static transient /* synthetic */ IpChange $ipChange;
@@ -415,11 +415,11 @@ public final class ABTestProvider {
                         return;
                     }
                     b41.i(dc0Var, AdvanceSetting.NETWORK_TYPE);
-                    C8985c.b(null, "request ABTest Upload fail", 1, null);
+                    c.b(null, "request ABTest Upload fail", 1, null);
                 }
             });
             return;
         }
-        C8985c.b(null, "request params scenario or experimentId is null", 1, null);
+        c.b(null, "request params scenario or experimentId is null", 1, null);
     }
 }

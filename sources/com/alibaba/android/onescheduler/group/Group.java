@@ -23,23 +23,22 @@ import org.json.JSONObject;
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
 public class Group implements IGroup {
-    private static ExecutorService i = Executors.newSingleThreadExecutor(new ThreadFactoryC3237a());
+    private static ExecutorService i = Executors.newSingleThreadExecutor(new a());
     private Priority d;
     private IScheduler h;
     private int a = 1;
     private volatile boolean b = false;
     private volatile boolean c = false;
     @NonNull
-    private Queue<InnerOneTask> e = new PriorityBlockingQueue(5, new C3238b(this));
+    private Queue<InnerOneTask> e = new PriorityBlockingQueue(5, new b(this));
     @NonNull
     private List<InnerOneTask> f = new ArrayList();
     private final ReentrantLock g = new ReentrantLock();
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.onescheduler.group.Group$a */
     /* loaded from: classes5.dex */
-    static class ThreadFactoryC3237a implements ThreadFactory {
-        ThreadFactoryC3237a() {
+    static class a implements ThreadFactory {
+        a() {
         }
 
         @Override // java.util.concurrent.ThreadFactory
@@ -53,10 +52,9 @@ public class Group implements IGroup {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.onescheduler.group.Group$b */
     /* loaded from: classes5.dex */
-    class C3238b implements Comparator<InnerOneTask> {
-        C3238b(Group group) {
+    class b implements Comparator<InnerOneTask> {
+        b(Group group) {
         }
 
         @Override // java.util.Comparator
@@ -199,9 +197,9 @@ public class Group implements IGroup {
             try {
                 this.g.lock();
                 this.f.remove(innerOneTask);
-                InnerOneTask b = b();
-                if (b != null) {
-                    this.h.schedule(b);
+                InnerOneTask b2 = b();
+                if (b2 != null) {
+                    this.h.schedule(b2);
                 }
                 return;
             } finally {
@@ -235,9 +233,9 @@ public class Group implements IGroup {
         try {
             this.g.lock();
             this.f.remove(innerOneTask);
-            InnerOneTask b = b();
-            if (b != null) {
-                this.h.schedule(b);
+            InnerOneTask b2 = b();
+            if (b2 != null) {
+                this.h.schedule(b2);
             }
         } finally {
             this.g.unlock();
@@ -249,9 +247,9 @@ public class Group implements IGroup {
         this.b = false;
         try {
             this.g.lock();
-            InnerOneTask b = b();
-            if (b != null) {
-                this.h.schedule(b);
+            InnerOneTask b2 = b();
+            if (b2 != null) {
+                this.h.schedule(b2);
             }
         } finally {
             this.g.unlock();

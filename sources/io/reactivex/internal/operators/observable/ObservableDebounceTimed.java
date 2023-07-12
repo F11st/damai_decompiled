@@ -155,7 +155,7 @@ public final class ObservableDebounceTimed<T> extends AbstractObservableWithUpst
         this.scheduler = scheduler;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new DebounceTimedObserver(new ra2(observer), this.timeout, this.unit, this.scheduler.createWorker()));
     }

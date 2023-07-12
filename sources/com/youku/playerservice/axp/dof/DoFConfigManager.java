@@ -15,10 +15,10 @@ import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import okhttp3.C8823o;
-import okhttp3.C8827q;
 import okhttp3.Dns;
 import okhttp3.OkHttpClient;
+import okhttp3.o;
+import okhttp3.q;
 import tb.d01;
 import tb.jn1;
 
@@ -34,12 +34,12 @@ public class DoFConfigManager {
             return new OkHttpClient();
         }
         Log.d(TAG, "Use HttpDns");
-        OkHttpClient.C8734b c8734b = new OkHttpClient.C8734b();
-        c8734b.f(new Dns() { // from class: com.youku.playerservice.axp.dof.DoFConfigManager.1
+        OkHttpClient.b bVar = new OkHttpClient.b();
+        bVar.f(new Dns() { // from class: com.youku.playerservice.axp.dof.DoFConfigManager.1
             @Override // okhttp3.Dns
             public List<InetAddress> lookup(String str) {
                 Log.d(DoFConfigManager.TAG, "lookup:" + str);
-                ArrayList<d01.C9027a> b = d01.b(DoFConfigManager.dofConfigDomainName(), true);
+                ArrayList<d01.a> b = d01.b(DoFConfigManager.dofConfigDomainName(), true);
                 if (b != null && b.size() > 0) {
                     String b2 = b.get(0).b();
                     String d = b.get(0).d();
@@ -53,7 +53,7 @@ public class DoFConfigManager {
                 return Dns.SYSTEM.lookup(str);
             }
         });
-        return c8734b.b();
+        return bVar.b();
     }
 
     private static boolean checkDstFile(File file, String str) {
@@ -103,7 +103,7 @@ public class DoFConfigManager {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private static void downloadFile(java.io.File r12, java.lang.String r13, okhttp3.C8827q r14) {
+    private static void downloadFile(java.io.File r12, java.lang.String r13, okhttp3.q r14) {
         /*
             Method dump skipped, instructions count: 272
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -121,7 +121,7 @@ public class DoFConfigManager {
     public static String getFilePath(Context context, String str) {
         TLogUtil.playLog("getFilePath request " + str);
         try {
-            C8827q execute = buildClient().newCall(new C8823o.C8824a().k(str).c().b()).execute();
+            q execute = buildClient().newCall(new o.a().k(str).c().b()).execute();
             String g = execute.g("Content-MD5");
             TLogUtil.playLog("getFilePath ossContentMD5=" + g);
             String substring = TextUtils.isEmpty(g) ? str.substring(str.lastIndexOf("/")) : BinaryUtil.bytesToHexString(BinaryUtil.fromBase64String(g));

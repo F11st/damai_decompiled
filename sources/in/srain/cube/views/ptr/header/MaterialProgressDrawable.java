@@ -31,12 +31,12 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
     public static final int DEFAULT = 1;
     public static final int LARGE = 0;
     private static final Interpolator o = new LinearInterpolator();
-    private static final Interpolator p = new C8117d(null);
-    private static final Interpolator q = new C8119f(null);
+    private static final Interpolator p = new d(null);
+    private static final Interpolator q = new f(null);
     private static final Interpolator r = new AccelerateDecelerateInterpolator();
     private final int[] a;
     private final ArrayList<Animation> b = new ArrayList<>();
-    private final C8118e c;
+    private final e c;
     private final Drawable.Callback d;
     private float e;
     private Resources f;
@@ -77,10 +77,9 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: in.srain.cube.views.ptr.header.MaterialProgressDrawable$a */
     /* loaded from: classes3.dex */
-    class C8114a implements Drawable.Callback {
-        C8114a() {
+    class a implements Drawable.Callback {
+        a() {
         }
 
         @Override // android.graphics.drawable.Drawable.Callback
@@ -101,13 +100,12 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: in.srain.cube.views.ptr.header.MaterialProgressDrawable$b  reason: invalid class name */
     /* loaded from: classes3.dex */
-    public class animationAnimation$AnimationListenerC8115b implements Animation.AnimationListener {
-        final /* synthetic */ C8118e a;
+    public class b implements Animation.AnimationListener {
+        final /* synthetic */ e a;
 
-        animationAnimation$AnimationListenerC8115b(C8118e c8118e) {
-            this.a = c8118e;
+        b(e eVar) {
+            this.a = eVar;
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -129,13 +127,12 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: in.srain.cube.views.ptr.header.MaterialProgressDrawable$c  reason: invalid class name */
     /* loaded from: classes3.dex */
-    public class animationAnimation$AnimationListenerC8116c implements Animation.AnimationListener {
-        final /* synthetic */ C8118e a;
+    public class c implements Animation.AnimationListener {
+        final /* synthetic */ e a;
 
-        animationAnimation$AnimationListenerC8116c(C8118e c8118e) {
-            this.a = c8118e;
+        c(e eVar) {
+            this.a = eVar;
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -146,8 +143,8 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
         public void onAnimationRepeat(Animation animation) {
             this.a.B();
             this.a.k();
-            C8118e c8118e = this.a;
-            c8118e.z(c8118e.e());
+            e eVar = this.a;
+            eVar.z(eVar.e());
             MaterialProgressDrawable materialProgressDrawable = MaterialProgressDrawable.this;
             materialProgressDrawable.i = (materialProgressDrawable.i + 1.0f) % 5.0f;
         }
@@ -159,10 +156,9 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: in.srain.cube.views.ptr.header.MaterialProgressDrawable$d */
     /* loaded from: classes3.dex */
-    private static class C8117d extends AccelerateDecelerateInterpolator {
-        private C8117d() {
+    private static class d extends AccelerateDecelerateInterpolator {
+        private d() {
         }
 
         @Override // android.view.animation.AccelerateDecelerateInterpolator, android.animation.TimeInterpolator
@@ -170,16 +166,15 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
             return super.getInterpolation(Math.max(0.0f, (f - 0.5f) * 2.0f));
         }
 
-        /* synthetic */ C8117d(C8114a c8114a) {
+        /* synthetic */ d(a aVar) {
             this();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: in.srain.cube.views.ptr.header.MaterialProgressDrawable$e */
     /* loaded from: classes3.dex */
-    public static class C8118e {
+    public static class e {
         private final RectF a = new RectF();
         private final Paint b;
         private final Paint c;
@@ -204,7 +199,7 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
         private int v;
         private int w;
 
-        public C8118e(Drawable.Callback callback) {
+        public e(Drawable.Callback callback) {
             Paint paint = new Paint();
             this.b = paint;
             Paint paint2 = new Paint();
@@ -398,10 +393,9 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: in.srain.cube.views.ptr.header.MaterialProgressDrawable$f */
     /* loaded from: classes3.dex */
-    private static class C8119f extends AccelerateDecelerateInterpolator {
-        private C8119f() {
+    private static class f extends AccelerateDecelerateInterpolator {
+        private f() {
         }
 
         @Override // android.view.animation.AccelerateDecelerateInterpolator, android.animation.TimeInterpolator
@@ -409,7 +403,7 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
             return super.getInterpolation(Math.min(1.0f, f * 2.0f));
         }
 
-        /* synthetic */ C8119f(C8114a c8114a) {
+        /* synthetic */ f(a aVar) {
             this();
         }
     }
@@ -417,76 +411,76 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
     public MaterialProgressDrawable(Context context, View view) {
         int[] iArr = {-3591113, -13149199, -536002, -13327536};
         this.a = iArr;
-        C8114a c8114a = new C8114a();
-        this.d = c8114a;
+        a aVar = new a();
+        this.d = aVar;
         this.g = view;
         this.f = context.getResources();
-        C8118e c8118e = new C8118e(c8114a);
-        this.c = c8118e;
-        c8118e.u(iArr);
+        e eVar = new e(aVar);
+        this.c = eVar;
+        eVar.u(iArr);
         q(1);
         o();
     }
 
-    private void l(double d, double d2, double d3, double d4, float f, float f2) {
-        C8118e c8118e = this.c;
-        float f3 = this.f.getDisplayMetrics().density;
-        double d5 = f3;
-        this.j = d * d5;
-        this.k = d2 * d5;
-        c8118e.A(((float) d4) * f3);
-        c8118e.r(d3 * d5);
-        c8118e.t(0);
-        c8118e.o(f * f3, f2 * f3);
-        c8118e.w((int) this.j, (int) this.k);
+    private void l(double d2, double d3, double d4, double d5, float f2, float f3) {
+        e eVar = this.c;
+        float f4 = this.f.getDisplayMetrics().density;
+        double d6 = f4;
+        this.j = d2 * d6;
+        this.k = d3 * d6;
+        eVar.A(((float) d5) * f4);
+        eVar.r(d4 * d6);
+        eVar.t(0);
+        eVar.o(f2 * f4, f3 * f4);
+        eVar.w((int) this.j, (int) this.k);
         n(this.j);
     }
 
-    private void n(double d) {
+    private void n(double d2) {
         sx1.b(this.g.getContext());
-        int a = sx1.a(1.75f);
-        int a2 = sx1.a(0.0f);
-        int a3 = sx1.a(3.5f);
-        ShapeDrawable shapeDrawable = new ShapeDrawable(new OvalShadow(a3, (int) d));
+        int a2 = sx1.a(1.75f);
+        int a3 = sx1.a(0.0f);
+        int a4 = sx1.a(3.5f);
+        ShapeDrawable shapeDrawable = new ShapeDrawable(new OvalShadow(a4, (int) d2));
         this.n = shapeDrawable;
         if (Build.VERSION.SDK_INT >= 11) {
             this.g.setLayerType(1, shapeDrawable.getPaint());
         }
-        this.n.getPaint().setShadowLayer(a3, a2, a, ConfigReporter.INSTANCE_ROUTE_MASK);
+        this.n.getPaint().setShadowLayer(a4, a3, a2, ConfigReporter.INSTANCE_ROUTE_MASK);
     }
 
     private void o() {
-        final C8118e c8118e = this.c;
+        final e eVar = this.c;
         Animation animation = new Animation() { // from class: in.srain.cube.views.ptr.header.MaterialProgressDrawable.2
             @Override // android.view.animation.Animation
-            public void applyTransformation(float f, Transformation transformation) {
-                float floor = (float) (Math.floor(c8118e.h() / 0.8f) + 1.0d);
-                c8118e.z(c8118e.i() + ((c8118e.g() - c8118e.i()) * f));
-                c8118e.x(c8118e.h() + ((floor - c8118e.h()) * f));
-                c8118e.p(1.0f - f);
+            public void applyTransformation(float f2, Transformation transformation) {
+                float floor = (float) (Math.floor(eVar.h() / 0.8f) + 1.0d);
+                eVar.z(eVar.i() + ((eVar.g() - eVar.i()) * f2));
+                eVar.x(eVar.h() + ((floor - eVar.h()) * f2));
+                eVar.p(1.0f - f2);
             }
         };
         animation.setInterpolator(r);
         animation.setDuration(666L);
-        animation.setAnimationListener(new animationAnimation$AnimationListenerC8115b(c8118e));
+        animation.setAnimationListener(new b(eVar));
         Animation animation2 = new Animation() { // from class: in.srain.cube.views.ptr.header.MaterialProgressDrawable.4
             @Override // android.view.animation.Animation
-            public void applyTransformation(float f, Transformation transformation) {
-                float radians = (float) Math.toRadians(c8118e.j() / (c8118e.d() * 6.283185307179586d));
-                float g = c8118e.g();
-                float i = c8118e.i();
-                float h = c8118e.h();
-                c8118e.v(g + ((0.8f - radians) * MaterialProgressDrawable.q.getInterpolation(f)));
-                c8118e.z(i + (MaterialProgressDrawable.p.getInterpolation(f) * 0.8f));
-                c8118e.x(h + (0.25f * f));
-                MaterialProgressDrawable.this.k((f * 144.0f) + ((MaterialProgressDrawable.this.i / 5.0f) * 720.0f));
+            public void applyTransformation(float f2, Transformation transformation) {
+                float radians = (float) Math.toRadians(eVar.j() / (eVar.d() * 6.283185307179586d));
+                float g = eVar.g();
+                float i = eVar.i();
+                float h = eVar.h();
+                eVar.v(g + ((0.8f - radians) * MaterialProgressDrawable.q.getInterpolation(f2)));
+                eVar.z(i + (MaterialProgressDrawable.p.getInterpolation(f2) * 0.8f));
+                eVar.x(h + (0.25f * f2));
+                MaterialProgressDrawable.this.k((f2 * 144.0f) + ((MaterialProgressDrawable.this.i / 5.0f) * 720.0f));
             }
         };
         animation2.setRepeatCount(-1);
         animation2.setRepeatMode(1);
         animation2.setInterpolator(o);
         animation2.setDuration(1333L);
-        animation2.setAnimationListener(new animationAnimation$AnimationListenerC8116c(c8118e));
+        animation2.setAnimationListener(new c(eVar));
         this.l = animation;
         this.h = animation2;
     }
@@ -505,8 +499,8 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
         canvas.restoreToCount(save);
     }
 
-    public void g(float f) {
-        this.c.p(f);
+    public void g(float f2) {
+        this.c.p(f2);
     }
 
     @Override // android.graphics.drawable.Drawable
@@ -552,18 +546,18 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
         return false;
     }
 
-    public void j(float f) {
-        this.c.x(f);
+    public void j(float f2) {
+        this.c.x(f2);
     }
 
-    void k(float f) {
-        this.e = f;
+    void k(float f2) {
+        this.e = f2;
         invalidateSelf();
     }
 
-    public void m(float f, float f2) {
-        this.c.z(f);
-        this.c.v(f2);
+    public void m(float f2, float f3) {
+        this.c.z(f2);
+        this.c.v(f3);
     }
 
     public void p(boolean z) {

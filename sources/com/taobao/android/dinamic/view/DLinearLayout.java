@@ -4,7 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
-import com.taobao.android.dinamic.C6313b;
+import com.taobao.android.dinamic.b;
 import com.taobao.android.dinamic.property.DAttrConstant;
 import java.util.Map;
 import tb.f90;
@@ -37,7 +37,7 @@ public class DLinearLayout extends LinearLayout {
     @Override // android.widget.LinearLayout, android.view.ViewGroup
     public LinearLayout.LayoutParams generateLayoutParams(AttributeSet attributeSet) {
         LinearLayout.LayoutParams layoutParams;
-        Map<String, Object> map = C6313b.d(m80.D_LINEAR_LAYOUT).handleAttributeSet(attributeSet).b;
+        Map<String, Object> map = b.d(m80.D_LINEAR_LAYOUT).handleAttributeSet(attributeSet).b;
         int[] b = oq.b(getContext(), map);
         if (map.containsKey(DAttrConstant.LL_WEIGHT)) {
             try {

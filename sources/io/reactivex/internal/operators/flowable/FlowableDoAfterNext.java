@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.annotations.Experimental;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.b;
 import io.reactivex.functions.Consumer;
 import io.reactivex.internal.fuseable.ConditionalSubscriber;
 import io.reactivex.internal.subscribers.BasicFuseableConditionalSubscriber;
@@ -106,12 +106,12 @@ public final class FlowableDoAfterNext<T> extends AbstractFlowableWithUpstream<T
         }
     }
 
-    public FlowableDoAfterNext(AbstractC8147b<T> abstractC8147b, Consumer<? super T> consumer) {
-        super(abstractC8147b);
+    public FlowableDoAfterNext(b<T> bVar, Consumer<? super T> consumer) {
+        super(bVar);
         this.onAfterNext = consumer;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         if (subscriber instanceof ConditionalSubscriber) {
             this.source.subscribe((FlowableSubscriber) new DoAfterConditionalSubscriber((ConditionalSubscriber) subscriber, this.onAfterNext));

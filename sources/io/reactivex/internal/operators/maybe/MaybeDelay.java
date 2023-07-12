@@ -94,7 +94,7 @@ public final class MaybeDelay<T> extends AbstractMaybeWithUpstream<T, T> {
         this.scheduler = scheduler;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         this.source.subscribe(new DelayMaybeObserver(maybeObserver, this.delay, this.unit, this.scheduler));
     }

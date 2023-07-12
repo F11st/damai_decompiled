@@ -89,7 +89,7 @@ public final class ObservableCollect<T, U> extends AbstractObservableWithUpstrea
         this.collector = biConsumer;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super U> observer) {
         try {
             this.source.subscribe(new CollectObserver(observer, ObjectHelper.requireNonNull(this.initialSupplier.call(), "The initialSupplier returned a null value"), this.collector));

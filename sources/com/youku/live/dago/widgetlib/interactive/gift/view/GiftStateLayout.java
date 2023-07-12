@@ -487,7 +487,7 @@ public class GiftStateLayout extends RelativeLayout {
         super(context, attributeSet, i);
         this.mSendNum = 1L;
         this.mCoins = 0L;
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ykl_gift_coin_layout, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_ykl_gift_coin_layout, (ViewGroup) this, true);
         initView();
         setSelNum(-1L);
     }

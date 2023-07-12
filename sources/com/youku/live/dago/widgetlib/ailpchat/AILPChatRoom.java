@@ -22,8 +22,8 @@ import java.util.concurrent.TimeUnit;
 import mtopsdk.mtop.domain.BaseOutDo;
 import mtopsdk.mtop.domain.MtopResponse;
 import org.json.JSONObject;
-import tb.C9556pm;
 import tb.jn1;
+import tb.pm;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
@@ -44,7 +44,7 @@ public class AILPChatRoom extends ChatRoom {
     private boolean isBanConnect = false;
     private String mTopicId = "";
     private int mcConnectRetryTimes = 0;
-    private final String PM_PROTOCOL = C9556pm.TAG;
+    private final String PM_PROTOCOL = pm.TAG;
     private final String WS_PROTOCOL = "ws";
     private final String API_ROOMINFO = "mtop.youku.live.chatroom.info.get";
 

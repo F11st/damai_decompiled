@@ -15,10 +15,10 @@ import tb.qm;
 public final class TMCookie extends WVCookie {
     @Override // android.taobao.windvane.jsbridge.api.WVCookie, android.taobao.windvane.jsbridge.WVApiPlugin
     public boolean execute(@Nullable String str, @Nullable String str2, @Nullable WVCallBackContext wVCallBackContext) {
-        qm.C9608a c9608a = qm.Companion;
+        qm.a aVar = qm.Companion;
         IWVWebView iWVWebView = this.mWebView;
         b41.h(iWVWebView, "mWebView");
-        if (c9608a.c(iWVWebView.getUrl())) {
+        if (aVar.c(iWVWebView.getUrl())) {
             return super.execute(str, str2, wVCallBackContext);
         }
         return true;

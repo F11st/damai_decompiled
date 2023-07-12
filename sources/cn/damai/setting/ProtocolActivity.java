@@ -19,12 +19,11 @@ public class ProtocolActivity extends DamaiBaseActivity {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.ProtocolActivity$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1747a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1747a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -41,12 +40,11 @@ public class ProtocolActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.ProtocolActivity$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1748b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1748b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -63,12 +61,11 @@ public class ProtocolActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.ProtocolActivity$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1749c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1749c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -85,12 +82,11 @@ public class ProtocolActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.ProtocolActivity$d */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1750d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1750d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -149,10 +145,10 @@ public class ProtocolActivity extends DamaiBaseActivity {
             ipChange.ipc$dispatch("-1155994199", new Object[]{this});
             return;
         }
-        findViewById(R$id.rl_protocol).setOnClickListener(new View$OnClickListenerC1747a());
-        findViewById(R$id.rl_terms).setOnClickListener(new View$OnClickListenerC1748b());
-        findViewById(R$id.rl_community).setOnClickListener(new View$OnClickListenerC1749c());
-        findViewById(R$id.rl_perform_service).setOnClickListener(new View$OnClickListenerC1750d());
+        findViewById(R$id.rl_protocol).setOnClickListener(new a());
+        findViewById(R$id.rl_terms).setOnClickListener(new b());
+        findViewById(R$id.rl_community).setOnClickListener(new c());
+        findViewById(R$id.rl_perform_service).setOnClickListener(new d());
     }
 
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity

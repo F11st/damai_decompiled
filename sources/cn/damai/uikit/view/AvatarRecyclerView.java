@@ -17,7 +17,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.uikit.R$drawable;
 import cn.damai.uikit.R$id;
 import cn.damai.uikit.R$layout;
-import cn.damai.uikit.image.C2497a;
 import cn.damai.uikit.image.IImageLoader;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -185,54 +184,52 @@ public class AvatarRecyclerView extends RecyclerView implements RecyclerView.Chi
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.AvatarRecyclerView$a */
     /* loaded from: classes8.dex */
-    public static class C2563a implements AvatarBinder {
+    public static class a implements AvatarBinder {
         private static transient /* synthetic */ IpChange $ipChange;
         private Context a;
         int b;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.uikit.view.AvatarRecyclerView$a$a */
+        /* renamed from: cn.damai.uikit.view.AvatarRecyclerView$a$a  reason: collision with other inner class name */
         /* loaded from: classes8.dex */
-        public class C2564a implements IImageLoader.IImageSuccListener {
+        public class C0090a implements IImageLoader.IImageSuccListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ ImageView a;
 
-            C2564a(C2563a c2563a, ImageView imageView) {
+            C0090a(a aVar, ImageView imageView) {
                 this.a = imageView;
             }
 
             @Override // cn.damai.uikit.image.IImageLoader.IImageSuccListener
-            public void onSuccess(IImageLoader.C2496b c2496b) {
+            public void onSuccess(IImageLoader.b bVar) {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "149598042")) {
-                    ipChange.ipc$dispatch("149598042", new Object[]{this, c2496b});
+                    ipChange.ipc$dispatch("149598042", new Object[]{this, bVar});
                 } else {
-                    this.a.setImageDrawable(c2496b.a);
+                    this.a.setImageDrawable(bVar.a);
                 }
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.uikit.view.AvatarRecyclerView$a$b */
         /* loaded from: classes8.dex */
-        public class C2565b implements IImageLoader.IImageFailListener {
+        public class b implements IImageLoader.IImageFailListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C2565b(C2563a c2563a) {
+            b(a aVar) {
             }
 
             @Override // cn.damai.uikit.image.IImageLoader.IImageFailListener
-            public void onFail(IImageLoader.C2495a c2495a) {
+            public void onFail(IImageLoader.a aVar) {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "-830702781")) {
-                    ipChange.ipc$dispatch("-830702781", new Object[]{this, c2495a});
+                    ipChange.ipc$dispatch("-830702781", new Object[]{this, aVar});
                 }
             }
         }
 
-        public C2563a(Context context) {
+        public a(Context context) {
             this.a = context;
         }
 
@@ -264,7 +261,7 @@ public class AvatarRecyclerView extends RecyclerView implements RecyclerView.Chi
             if (TextUtils.isEmpty(avatarImgUrl)) {
                 return;
             }
-            C2497a.a().load(avatarImgUrl, a, a, new C2564a(this, imageView), new C2565b(this));
+            cn.damai.uikit.image.a.a().load(avatarImgUrl, a, a, new C0090a(this, imageView), new b(this));
         }
 
         @Override // cn.damai.uikit.view.AvatarRecyclerView.AvatarBinder
@@ -275,13 +272,12 @@ public class AvatarRecyclerView extends RecyclerView implements RecyclerView.Chi
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.AvatarRecyclerView$b */
     /* loaded from: classes8.dex */
-    public static class C2566b implements AvatarItem {
+    public static class b implements AvatarItem {
         private static transient /* synthetic */ IpChange $ipChange;
         private final String a;
 
-        public C2566b(String str) {
+        public b(String str) {
             this.a = str;
         }
 
@@ -335,7 +331,7 @@ public class AvatarRecyclerView extends RecyclerView implements RecyclerView.Chi
             return;
         }
         if (avatarBinder == null) {
-            avatarBinder = new C2563a(this.mContext);
+            avatarBinder = new a(this.mContext);
         }
         this.mAvatarBinder = avatarBinder;
     }
@@ -348,10 +344,10 @@ public class AvatarRecyclerView extends RecyclerView implements RecyclerView.Chi
         }
         this.height = i;
         AvatarBinder avatarBinder = this.mAvatarBinder;
-        if (avatarBinder == null || !(avatarBinder instanceof C2563a)) {
+        if (avatarBinder == null || !(avatarBinder instanceof a)) {
             return;
         }
-        ((C2563a) avatarBinder).a(i);
+        ((a) avatarBinder).a(i);
     }
 
     public AvatarRecyclerView(Context context, @Nullable AttributeSet attributeSet) {
@@ -368,7 +364,7 @@ public class AvatarRecyclerView extends RecyclerView implements RecyclerView.Chi
         super(context, attributeSet, i);
         this.height = 0;
         this.mContext = context;
-        this.mAvatarBinder = new C2563a(context);
+        this.mAvatarBinder = new a(context);
         setDrawingCacheEnabled(true);
         setChildDrawingOrderCallback(this);
         setLayoutManager(new LinearLayoutManager(context, 0, false));

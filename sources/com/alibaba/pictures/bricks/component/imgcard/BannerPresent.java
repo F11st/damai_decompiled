@@ -28,18 +28,17 @@ import tb.tq2;
 public final class BannerPresent extends AbsPresenter<GenericItem<ItemValue>, BannerModel, ImageCardView> implements BannerContract.Presenter {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3478a Companion = new C3478a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String PRE_STICKY_HEADER = "EventBus://business/";
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.imgcard.BannerPresent$a */
     /* loaded from: classes7.dex */
-    public static final class C3478a {
-        private C3478a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3478a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

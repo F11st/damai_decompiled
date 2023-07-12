@@ -30,37 +30,33 @@ public class WrapperAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.irecycler.WrapperAdapter$a */
     /* loaded from: classes7.dex */
-    static class C3592a extends RecyclerView.ViewHolder {
-        public C3592a(View view) {
+    static class a extends RecyclerView.ViewHolder {
+        public a(View view) {
             super(view);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.irecycler.WrapperAdapter$b */
     /* loaded from: classes7.dex */
-    static class C3593b extends RecyclerView.ViewHolder {
-        public C3593b(View view) {
+    static class b extends RecyclerView.ViewHolder {
+        public b(View view) {
             super(view);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.irecycler.WrapperAdapter$c */
     /* loaded from: classes7.dex */
-    static class C3594c extends RecyclerView.ViewHolder {
-        public C3594c(View view) {
+    static class c extends RecyclerView.ViewHolder {
+        public c(View view) {
             super(view);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.irecycler.WrapperAdapter$d */
     /* loaded from: classes7.dex */
-    static class C3595d extends RecyclerView.ViewHolder {
-        public C3595d(View view) {
+    static class d extends RecyclerView.ViewHolder {
+        public d(View view) {
             super(view);
         }
     }
@@ -244,16 +240,16 @@ public class WrapperAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             return (RecyclerView.ViewHolder) ipChange.ipc$dispatch("275930736", new Object[]{this, viewGroup, Integer.valueOf(i)});
         }
         if (i == Integer.MIN_VALUE) {
-            return new C3595d(this.b);
+            return new d(this.b);
         }
         if (i == -2147483647) {
-            return new C3593b(this.d);
+            return new b(this.d);
         }
         if (i == 2147483646) {
-            return new C3592a(this.e);
+            return new a(this.e);
         }
         if (i == Integer.MAX_VALUE) {
-            return new C3594c(this.c);
+            return new c(this.c);
         }
         return this.a.onCreateViewHolder(viewGroup, i);
     }

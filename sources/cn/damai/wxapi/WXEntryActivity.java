@@ -12,8 +12,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.LinearLayout;
 import cn.damai.common.AppConfig;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$string;
@@ -257,10 +257,10 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void lambda$loadImgFromUrl$0(DMImageCreator.C0501d c0501d) {
+    public /* synthetic */ void lambda$loadImgFromUrl$0(DMImageCreator.d dVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1514865419")) {
-            ipChange.ipc$dispatch("-1514865419", new Object[]{this, c0501d});
+            ipChange.ipc$dispatch("-1514865419", new Object[]{this, dVar});
             return;
         }
         share(this.way);
@@ -372,16 +372,16 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
             ipChange.ipc$dispatch("194260166", new Object[]{this, str});
         } else if (TextUtils.isEmpty(str)) {
         } else {
-            C0504a.b().c(str).n(new DMImageCreator.DMImageSuccListener() { // from class: cn.damai.wxapi.WXEntryActivity.2
+            a.b().c(str).n(new DMImageCreator.DMImageSuccListener() { // from class: cn.damai.wxapi.WXEntryActivity.2
                 private static transient /* synthetic */ IpChange $ipChange;
 
                 @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-                public void onSuccess(DMImageCreator.C0502e c0502e) {
+                public void onSuccess(DMImageCreator.e eVar) {
                     Bitmap bitmap;
                     IpChange ipChange2 = $ipChange;
                     if (AndroidInstantRuntime.support(ipChange2, "1429897897")) {
-                        ipChange2.ipc$dispatch("1429897897", new Object[]{this, c0502e});
-                    } else if (c0502e == null || (bitmap = c0502e.b) == null) {
+                        ipChange2.ipc$dispatch("1429897897", new Object[]{this, eVar});
+                    } else if (eVar == null || (bitmap = eVar.b) == null) {
                     } else {
                         WXEntryActivity wXEntryActivity = WXEntryActivity.this;
                         wXEntryActivity.bitmap = bitmap;
@@ -405,8 +405,8 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
                 }
             }).e(new DMImageCreator.DMImageFailListener() { // from class: tb.jz2
                 @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-                public final void onFail(DMImageCreator.C0501d c0501d) {
-                    WXEntryActivity.this.lambda$loadImgFromUrl$0(c0501d);
+                public final void onFail(DMImageCreator.d dVar) {
+                    WXEntryActivity.this.lambda$loadImgFromUrl$0(dVar);
                 }
             }).f();
         }

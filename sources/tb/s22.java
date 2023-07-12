@@ -61,16 +61,16 @@ public final class s22 {
                 this.a.getResources().getConfiguration().screenWidthDp = i2;
                 this.a.getResources().getConfiguration().screenHeightDp = i3;
             }
-            ResponsivePageStateCache.C3627a c3627a = ResponsivePageStateCache.Companion;
-            ResponsivePageStateCache a = c3627a.a();
+            ResponsivePageStateCache.a aVar = ResponsivePageStateCache.Companion;
+            ResponsivePageStateCache a = aVar.a();
             Activity activity = this.a;
             a.g(activity, activity.getResources().getConfiguration().orientation);
-            c3627a.a().i(this.a, i2);
-            ResponsivePageStateCache a2 = c3627a.a();
+            aVar.a().i(this.a, i2);
+            ResponsivePageStateCache a2 = aVar.a();
             Activity activity2 = this.a;
             a2.h(activity2, activity2.getResources().getConfiguration().screenHeightDp);
             g(this.a, i2, i3);
-            this.d = c3627a.a().f(this.a);
+            this.d = aVar.a().f(this.a);
             if (c80.INSTANCE.e(this.a)) {
                 return;
             }
@@ -87,10 +87,10 @@ public final class s22 {
         } else if (this.e != null && c80.g(this.a)) {
             int requestedOrientation = this.a.getRequestedOrientation();
             if (requestedOrientation == 0 || requestedOrientation == 8) {
-                ResponsivePageStateCache.C3627a c3627a = ResponsivePageStateCache.Companion;
-                float d = c3627a.a().d(this.a);
-                float c = c3627a.a().c(this.a);
-                if (Math.abs(c3627a.a().e(this.a) - d) > 80.0f || d <= ye2.b() || c > ye2.b()) {
+                ResponsivePageStateCache.a aVar = ResponsivePageStateCache.Companion;
+                float d = aVar.a().d(this.a);
+                float c = aVar.a().c(this.a);
+                if (Math.abs(aVar.a().e(this.a) - d) > 80.0f || d <= ye2.b() || c > ye2.b()) {
                     return;
                 }
                 dp1.INSTANCE.b(this.a, 1);

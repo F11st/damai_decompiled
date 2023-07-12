@@ -6,7 +6,6 @@ import com.taobao.android.dinamicx.notification.DXSignalProduce;
 import com.taobao.android.dinamicx.videoc.DXVideoControlConfig;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import tb.C9192h;
 import tb.by2;
 import tb.fy;
 import tb.zt;
@@ -34,7 +33,7 @@ public class DXEngineConfig {
     private int k;
     private zt l;
     private boolean m;
-    private C9192h n;
+    private tb.h n;
     private boolean o;
     private fy p;
     private boolean q;
@@ -56,9 +55,8 @@ public class DXEngineConfig {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.DXEngineConfig$b */
     /* loaded from: classes12.dex */
-    public static final class C6355b {
+    public static final class b {
         private String a;
         private int b;
         private int c;
@@ -70,7 +68,7 @@ public class DXEngineConfig {
         private long i;
         private String j;
         private int k;
-        private C9192h l;
+        private tb.h l;
         private zt m;
         private boolean n;
         private IDXElderTextSizeStrategy o;
@@ -81,7 +79,7 @@ public class DXEngineConfig {
         private boolean s = false;
         private boolean u = true;
 
-        public C6355b(String str) {
+        public b(String str) {
             this.a = str;
             if (!TextUtils.isEmpty(str)) {
                 this.a = str;
@@ -105,28 +103,28 @@ public class DXEngineConfig {
             return new DXEngineConfig(this.a, this);
         }
 
-        public C6355b u(int i) {
+        public b u(int i) {
             this.c = i;
             return this;
         }
 
-        public C6355b v(boolean z) {
+        public b v(boolean z) {
             this.p = z;
             return this;
         }
 
-        public C6355b w(int i) {
+        public b w(int i) {
             this.t = i;
             return this;
         }
 
-        public C6355b x(boolean z) {
+        public b x(boolean z) {
             this.h = z;
             return this;
         }
     }
 
-    public C9192h a() {
+    public tb.h a() {
         return this.n;
     }
 
@@ -203,41 +201,41 @@ public class DXEngineConfig {
     }
 
     public DXEngineConfig(@NonNull String str) {
-        this(str, new C6355b(str));
+        this(str, new b(str));
     }
 
-    private DXEngineConfig(@NonNull String str, C6355b c6355b) {
+    private DXEngineConfig(@NonNull String str, b bVar) {
         this.d = 1;
         this.q = true;
         this.t = 1;
         this.u = true;
         this.a = str;
-        this.b = c6355b.b;
-        this.c = c6355b.e;
-        this.d = c6355b.c;
-        this.e = c6355b.d;
-        this.g = c6355b.g;
-        this.h = c6355b.h;
-        this.f = c6355b.f;
-        this.i = Math.max(c6355b.i, 100L);
+        this.b = bVar.b;
+        this.c = bVar.e;
+        this.d = bVar.c;
+        this.e = bVar.d;
+        this.g = bVar.g;
+        this.h = bVar.h;
+        this.f = bVar.f;
+        this.i = Math.max(bVar.i, 100L);
         if (TextUtils.isEmpty(str)) {
             this.a = DX_DEFAULT_BIZTYPE;
         }
-        this.k = c6355b.k;
-        this.j = c6355b.j;
-        this.n = c6355b.l;
-        zt unused = c6355b.m;
-        this.m = c6355b.n;
-        if (c6355b.o != null) {
-            this.p = new fy(c6355b.o);
+        this.k = bVar.k;
+        this.j = bVar.j;
+        this.n = bVar.l;
+        zt unused = bVar.m;
+        this.m = bVar.n;
+        if (bVar.o != null) {
+            this.p = new fy(bVar.o);
         } else {
-            this.p = C6366c.b;
+            this.p = c.b;
         }
-        this.o = c6355b.p;
-        this.q = c6355b.q;
-        this.r = c6355b.r;
-        this.s = c6355b.s;
-        this.t = c6355b.t;
-        this.u = c6355b.u;
+        this.o = bVar.p;
+        this.q = bVar.q;
+        this.r = bVar.r;
+        this.s = bVar.s;
+        this.t = bVar.t;
+        this.u = bVar.u;
     }
 }

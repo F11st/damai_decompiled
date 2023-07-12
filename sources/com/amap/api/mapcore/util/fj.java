@@ -27,12 +27,11 @@ public class fj extends BaseExpandableListAdapter implements ExpandableListView.
     List<OfflineMapProvince> a = new ArrayList();
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.fj$a */
     /* loaded from: classes10.dex */
-    public final class C4544a {
+    public final class a {
         public fo a;
 
-        public C4544a() {
+        public a() {
         }
     }
 
@@ -79,22 +78,22 @@ public class fj extends BaseExpandableListAdapter implements ExpandableListView.
 
     @Override // android.widget.ExpandableListAdapter
     public View getChildView(int i, int i2, boolean z, View view, ViewGroup viewGroup) {
-        C4544a c4544a;
+        a aVar;
         if (view != null) {
-            c4544a = (C4544a) view.getTag();
+            aVar = (a) view.getTag();
         } else {
-            c4544a = new C4544a();
+            aVar = new a();
             fo foVar = new fo(this.c, this.g);
             this.d = foVar;
             foVar.a(2);
             view = this.d.a();
-            c4544a.a = this.d;
-            view.setTag(c4544a);
+            aVar.a = this.d;
+            view.setTag(aVar);
         }
         OfflineMapProvince offlineMapProvince = this.a.get(i);
         if (i2 < offlineMapProvince.getDownloadedCityList().size()) {
             final OfflineMapCity offlineMapCity = offlineMapProvince.getDownloadedCityList().get(i2);
-            c4544a.a.a(offlineMapCity);
+            aVar.a.a(offlineMapCity);
             view.setOnClickListener(new View.OnClickListener() { // from class: com.amap.api.mapcore.util.fj.1
                 @Override // android.view.View.OnClickListener
                 public void onClick(View view2) {

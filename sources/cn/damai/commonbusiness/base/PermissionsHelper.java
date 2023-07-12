@@ -32,10 +32,10 @@ public class PermissionsHelper {
         /* compiled from: Taobao */
         /* renamed from: cn.damai.commonbusiness.base.PermissionsHelper$1$a */
         /* loaded from: classes14.dex */
-        public class DialogInterface$OnClickListenerC0579a implements DialogInterface.OnClickListener {
+        public class a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC0579a() {
+            a() {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -62,7 +62,7 @@ public class PermissionsHelper {
             if (AndroidInstantRuntime.support(ipChange, "1717488064")) {
                 ipChange.ipc$dispatch("1717488064", new Object[]{this});
             } else {
-                new h4(this.val$activity).e(this.val$permissionTypeMessage).h("去设置", new DialogInterface$OnClickListenerC0579a()).f("不再提示", null).j();
+                new h4(this.val$activity).e(this.val$permissionTypeMessage).h("去设置", new a()).f("不再提示", null).j();
             }
         }
     }

@@ -10,13 +10,12 @@ import com.taobao.android.dinamicx.widget.DXRecyclerLayout;
 /* loaded from: classes11.dex */
 public class n00 implements View.OnTouchListener {
     private DXRecyclerLayout a;
-    GestureDetector b = new GestureDetector(DinamicXEngine.i(), new C9458a());
+    GestureDetector b = new GestureDetector(DinamicXEngine.i(), new a());
 
     /* compiled from: Taobao */
-    /* renamed from: tb.n00$a */
     /* loaded from: classes11.dex */
-    class C9458a extends GestureDetector.SimpleOnGestureListener {
-        C9458a() {
+    class a extends GestureDetector.SimpleOnGestureListener {
+        a() {
         }
 
         @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnGestureListener

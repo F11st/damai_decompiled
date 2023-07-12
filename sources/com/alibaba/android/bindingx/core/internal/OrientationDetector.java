@@ -22,9 +22,9 @@ import tb.bb1;
 class OrientationDetector implements SensorEventListener {
     private static OrientationDetector p;
     private static final Object q = new Object();
-    private static final Set<Integer> r = C3227o.j(15);
-    private static final Set<Integer> s = C3227o.j(11);
-    private static final Set<Integer> t = C3227o.j(1, 2);
+    private static final Set<Integer> r = o.j(15);
+    private static final Set<Integer> s = o.j(11);
+    private static final Set<Integer> t = o.j(1, 2);
     private HandlerThread a;
     private Handler b;
     private final Context c;
@@ -40,7 +40,7 @@ class OrientationDetector implements SensorEventListener {
     private boolean n;
     private final Set<Integer> i = new HashSet();
     private ArrayList<OnOrientationChangedListener> o = new ArrayList<>();
-    private final List<Set<Integer>> j = C3227o.i(r, s, t);
+    private final List<Set<Integer>> j = o.i(r, s, t);
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
@@ -158,7 +158,7 @@ class OrientationDetector implements SensorEventListener {
         }
         SensorManager sensorManager = (SensorManager) this.c.getSystemService("sensor");
         if (sensorManager != null) {
-            this.h = new C3223m(sensorManager);
+            this.h = new m(sensorManager);
         }
         return this.h;
     }

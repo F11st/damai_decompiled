@@ -3,7 +3,6 @@ package com.amap.api.col.s;
 import android.os.Build;
 import android.text.TextUtils;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
-import com.alipay.sdk.m.c.C4151a;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -203,7 +202,7 @@ public final class ch {
     }
 
     private static boolean c(cg cgVar) {
-        String b2 = b(C4151a.a);
+        String b2 = b(com.alipay.sdk.m.c.a.a);
         if (TextUtils.isEmpty(b2)) {
             return false;
         }

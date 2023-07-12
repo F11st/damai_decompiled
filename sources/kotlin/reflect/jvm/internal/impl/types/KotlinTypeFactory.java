@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.types;
 
 import java.util.List;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import kotlin.jvm.JvmOverloads;
 import kotlin.jvm.JvmStatic;
 import kotlin.jvm.functions.Function1;
@@ -36,15 +36,14 @@ public final class KotlinTypeFactory {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.types.KotlinTypeFactory$a */
     /* loaded from: classes3.dex */
-    public static final class C8538a {
+    public static final class a {
         @Nullable
         private final fd2 a;
         @Nullable
         private final TypeConstructor b;
 
-        public C8538a(@Nullable fd2 fd2Var, @Nullable TypeConstructor typeConstructor) {
+        public a(@Nullable fd2 fd2Var, @Nullable TypeConstructor typeConstructor) {
             this.a = fd2Var;
             this.b = typeConstructor;
         }
@@ -79,7 +78,7 @@ public final class KotlinTypeFactory {
     public static final fd2 b(@NotNull TypeAliasDescriptor typeAliasDescriptor, @NotNull List<? extends TypeProjection> list) {
         b41.i(typeAliasDescriptor, "<this>");
         b41.i(list, "arguments");
-        return new iq2(TypeAliasExpansionReportStrategy.C8539a.INSTANCE, false).i(jq2.Companion.a(null, typeAliasDescriptor, list), Annotations.Companion.b());
+        return new iq2(TypeAliasExpansionReportStrategy.a.INSTANCE, false).i(jq2.Companion.a(null, typeAliasDescriptor, list), Annotations.Companion.b());
     }
 
     private final MemberScope c(TypeConstructor typeConstructor, List<? extends TypeProjection> list, b81 b81Var) {
@@ -120,25 +119,25 @@ public final class KotlinTypeFactory {
         List g;
         b41.i(annotations, "annotations");
         b41.i(integerLiteralTypeConstructor, "constructor");
-        g = C8214m.g();
+        g = m.g();
         MemberScope i = kf0.i("Scope for integer literal type", true);
         b41.h(i, "createErrorScope(\"Scope …eger literal type\", true)");
         return j(annotations, integerLiteralTypeConstructor, g, z, i);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public final C8538a f(TypeConstructor typeConstructor, b81 b81Var, List<? extends TypeProjection> list) {
+    public final a f(TypeConstructor typeConstructor, b81 b81Var, List<? extends TypeProjection> list) {
         ClassifierDescriptor declarationDescriptor = typeConstructor.getDeclarationDescriptor();
         ClassifierDescriptor e = declarationDescriptor == null ? null : b81Var.e(declarationDescriptor);
         if (e == null) {
             return null;
         }
         if (e instanceof TypeAliasDescriptor) {
-            return new C8538a(b((TypeAliasDescriptor) e, list), null);
+            return new a(b((TypeAliasDescriptor) e, list), null);
         }
         TypeConstructor refine = e.getTypeConstructor().refine(b81Var);
         b41.h(refine, "descriptor.typeConstruct…refine(kotlinTypeRefiner)");
-        return new C8538a(null, refine);
+        return new a(null, refine);
     }
 
     @JvmStatic
@@ -177,20 +176,20 @@ public final class KotlinTypeFactory {
             @Override // kotlin.jvm.functions.Function1
             @Nullable
             public final fd2 invoke(@NotNull b81 b81Var2) {
-                KotlinTypeFactory.C8538a f;
+                KotlinTypeFactory.a f;
                 b41.i(b81Var2, "refiner");
                 f = KotlinTypeFactory.INSTANCE.f(TypeConstructor.this, b81Var2, list);
                 if (f == null) {
                     return null;
                 }
-                fd2 a = f.a();
-                if (a == null) {
+                fd2 a2 = f.a();
+                if (a2 == null) {
                     Annotations annotations2 = annotations;
                     TypeConstructor b = f.b();
                     b41.f(b);
                     return KotlinTypeFactory.h(annotations2, b, list, z, b81Var2);
                 }
-                return a;
+                return a2;
             }
         });
     }
@@ -209,7 +208,7 @@ public final class KotlinTypeFactory {
         b41.i(typeConstructor, "constructor");
         b41.i(list, "arguments");
         b41.i(memberScope, "memberScope");
-        C8550e c8550e = new C8550e(typeConstructor, list, z, memberScope, new Function1<b81, fd2>() { // from class: kotlin.reflect.jvm.internal.impl.types.KotlinTypeFactory$simpleTypeWithNonTrivialMemberScope$1
+        e eVar = new e(typeConstructor, list, z, memberScope, new Function1<b81, fd2>() { // from class: kotlin.reflect.jvm.internal.impl.types.KotlinTypeFactory$simpleTypeWithNonTrivialMemberScope$1
             /* JADX INFO: Access modifiers changed from: package-private */
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             /* JADX WARN: Multi-variable type inference failed */
@@ -220,23 +219,23 @@ public final class KotlinTypeFactory {
             @Override // kotlin.jvm.functions.Function1
             @Nullable
             public final fd2 invoke(@NotNull b81 b81Var) {
-                KotlinTypeFactory.C8538a f;
+                KotlinTypeFactory.a f;
                 b41.i(b81Var, "kotlinTypeRefiner");
                 f = KotlinTypeFactory.INSTANCE.f(TypeConstructor.this, b81Var, list);
                 if (f == null) {
                     return null;
                 }
-                fd2 a = f.a();
-                if (a == null) {
+                fd2 a2 = f.a();
+                if (a2 == null) {
                     Annotations annotations2 = annotations;
                     TypeConstructor b = f.b();
                     b41.f(b);
                     return KotlinTypeFactory.j(annotations2, b, list, z, memberScope);
                 }
-                return a;
+                return a2;
             }
         });
-        return annotations.isEmpty() ? c8550e : new C8543a(c8550e, annotations);
+        return annotations.isEmpty() ? eVar : new kotlin.reflect.jvm.internal.impl.types.a(eVar, annotations);
     }
 
     @JvmStatic
@@ -247,7 +246,7 @@ public final class KotlinTypeFactory {
         b41.i(list, "arguments");
         b41.i(memberScope, "memberScope");
         b41.i(function1, "refinedTypeFactory");
-        C8550e c8550e = new C8550e(typeConstructor, list, z, memberScope, function1);
-        return annotations.isEmpty() ? c8550e : new C8543a(c8550e, annotations);
+        e eVar = new e(typeConstructor, list, z, memberScope, function1);
+        return annotations.isEmpty() ? eVar : new kotlin.reflect.jvm.internal.impl.types.a(eVar, annotations);
     }
 }

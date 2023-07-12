@@ -17,12 +17,11 @@ public class RealNameAuthStatusPresenter extends RealNameAuthStatusContract.Pres
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.presenter.RealNameAuthStatusPresenter$a */
     /* loaded from: classes6.dex */
-    public class C1448a implements Action<Object> {
+    public class a implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1448a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -37,12 +36,11 @@ public class RealNameAuthStatusPresenter extends RealNameAuthStatusContract.Pres
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.presenter.RealNameAuthStatusPresenter$b */
     /* loaded from: classes6.dex */
-    public class C1449b implements Action<Object> {
+    public class b implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1449b() {
+        b() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -129,7 +127,7 @@ public class RealNameAuthStatusPresenter extends RealNameAuthStatusContract.Pres
         });
     }
 
-    @Override // cn.damai.common.app.base.AbstractC0470a
+    @Override // cn.damai.common.app.base.a
     public void onStart() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "805579341")) {
@@ -137,7 +135,7 @@ public class RealNameAuthStatusPresenter extends RealNameAuthStatusContract.Pres
             return;
         }
         super.onStart();
-        this.mDMMessage.b("auth_success", new C1448a());
-        this.mDMMessage.b("auth_verifing", new C1449b());
+        this.mDMMessage.b("auth_success", new a());
+        this.mDMMessage.b("auth_verifing", new b());
     }
 }

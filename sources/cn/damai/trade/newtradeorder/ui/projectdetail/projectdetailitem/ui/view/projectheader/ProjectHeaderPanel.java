@@ -16,9 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 import cn.damai.comment.view.DMHotDiscussView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.notice.bean.NoticeListBean;
 import cn.damai.commonbusiness.rank.RankInfo;
 import cn.damai.commonbusiness.view.DmViewPager;
@@ -64,7 +62,7 @@ import tb.yq;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
-public class ProjectHeaderPanel extends AbstractC2379a implements View.OnClickListener {
+public class ProjectHeaderPanel extends cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.a implements View.OnClickListener {
     private static transient /* synthetic */ IpChange $ipChange;
     private int A;
     private boolean B;
@@ -87,7 +85,7 @@ public class ProjectHeaderPanel extends AbstractC2379a implements View.OnClickLi
     private View n;
     private View o;
     private View p;
-    private View$OnClickListenerC2380b q;
+    private cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.b q;
     private oi2 r;
     private mi2 s;
     private DMHotDiscussView t;
@@ -99,13 +97,12 @@ public class ProjectHeaderPanel extends AbstractC2379a implements View.OnClickLi
     private int z;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.ProjectHeaderPanel$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2374a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ProjectRatingBean a;
 
-        View$OnClickListenerC2374a(ProjectRatingBean projectRatingBean) {
+        a(ProjectRatingBean projectRatingBean) {
             this.a = projectRatingBean;
         }
 
@@ -125,13 +122,12 @@ public class ProjectHeaderPanel extends AbstractC2379a implements View.OnClickLi
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.ProjectHeaderPanel$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2375b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ProjectRatingBean a;
 
-        View$OnClickListenerC2375b(ProjectRatingBean projectRatingBean) {
+        b(ProjectRatingBean projectRatingBean) {
             this.a = projectRatingBean;
         }
 
@@ -147,13 +143,12 @@ public class ProjectHeaderPanel extends AbstractC2379a implements View.OnClickLi
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.ProjectHeaderPanel$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2376c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ProjectRatingBean a;
 
-        View$OnClickListenerC2376c(ProjectRatingBean projectRatingBean) {
+        c(ProjectRatingBean projectRatingBean) {
             this.a = projectRatingBean;
         }
 
@@ -188,7 +183,7 @@ public class ProjectHeaderPanel extends AbstractC2379a implements View.OnClickLi
         this.k = this.j.findViewById(R$id.header_rank_ui);
         this.n = view.findViewById(R$id.header_market_ui);
         this.o = view.findViewById(R$id.header_want_see_ui);
-        this.q = new View$OnClickListenerC2380b(activity, j, view, onHeadClickListener);
+        this.q = new cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.b(activity, j, view, onHeadClickListener);
         this.r = new oi2(activity, j, view, onHeadClickListener);
         this.s = new mi2(activity, j, view, onHeadClickListener);
         this.w = m62.a(activity, 30.0f);
@@ -205,9 +200,9 @@ public class ProjectHeaderPanel extends AbstractC2379a implements View.OnClickLi
         try {
             this.y = this.a.getResources().getDimensionPixelSize(R$dimen.main_title_height);
             if (Build.VERSION.SDK_INT >= 23) {
-                int a = kg2.a(this.a);
-                this.A = a;
-                this.y += a;
+                int a2 = kg2.a(this.a);
+                this.A = a2;
+                this.y += a2;
             }
             this.z = this.c.getPaddingTop();
             y(this.y);
@@ -235,9 +230,9 @@ public class ProjectHeaderPanel extends AbstractC2379a implements View.OnClickLi
                 if (TextUtils.isEmpty(str2)) {
                     imageView.setImageResource(R$drawable.icon_project_marketing);
                 } else {
-                    DMImageCreator c = C0504a.b().c(str2);
+                    DMImageCreator c2 = cn.damai.common.image.a.b().c(str2);
                     int i = R$drawable.icon_project_marketing;
-                    c.i(i).c(i).g(imageView);
+                    c2.i(i).c(i).g(imageView);
                 }
                 this.n.setOnClickListener(this);
                 this.n.setVisibility(0);
@@ -338,7 +333,7 @@ public class ProjectHeaderPanel extends AbstractC2379a implements View.OnClickLi
             View findViewById2 = this.l.findViewById(R$id.tv_score_icon_tip);
             if (!TextUtils.isEmpty(projectRatingBean.commentUrl)) {
                 findViewById2.setVisibility(0);
-                findViewById.setOnClickListener(new View$OnClickListenerC2374a(projectRatingBean));
+                findViewById.setOnClickListener(new a(projectRatingBean));
             } else {
                 findViewById2.setVisibility(8);
             }
@@ -372,7 +367,7 @@ public class ProjectHeaderPanel extends AbstractC2379a implements View.OnClickLi
             if (list != null && list.size() > 0) {
                 this.m.removeAllViews();
                 findViewById3.setVisibility(0);
-                findViewById3.setOnClickListener(new View$OnClickListenerC2375b(projectRatingBean));
+                findViewById3.setOnClickListener(new b(projectRatingBean));
                 for (int i = 0; i < projectRatingBean.userRatingVOS.size(); i++) {
                     View inflate = this.a.getLayoutInflater().inflate(R$layout.header_project_socre_right_flipper_item, (ViewGroup) null);
                     ProjectRatingUserBean projectRatingUserBean = projectRatingBean.userRatingVOS.get(i);
@@ -386,7 +381,7 @@ public class ProjectHeaderPanel extends AbstractC2379a implements View.OnClickLi
                     imageView.setImageResource(i2);
                     if (!TextUtils.isEmpty(projectRatingUserBean.userImg)) {
                         imageView.setVisibility(0);
-                        C0504a.b().h(this.a).f(projectRatingUserBean.userImg, m62.a(this.a, 30.0f), m62.a(this.a, 30.0f)).i(i2).c(i2).k(new yq()).g(imageView);
+                        cn.damai.common.image.a.b().h(this.a).f(projectRatingUserBean.userImg, m62.a(this.a, 30.0f), m62.a(this.a, 30.0f)).i(i2).c(i2).k(new yq()).g(imageView);
                     }
                     TextView textView4 = (TextView) inflate.findViewById(R$id.tv_user_name);
                     if (!TextUtils.isEmpty(projectRatingUserBean.userNick)) {
@@ -408,7 +403,7 @@ public class ProjectHeaderPanel extends AbstractC2379a implements View.OnClickLi
             } else {
                 findViewById4.setVisibility(8);
             }
-            findViewById4.setOnClickListener(new View$OnClickListenerC2376c(projectRatingBean));
+            findViewById4.setOnClickListener(new c(projectRatingBean));
             View findViewById5 = this.l.findViewById(R$id.view_line);
             View findViewById6 = this.l.findViewById(R$id.view_bottom);
             RecyclerView recyclerView = (RecyclerView) this.l.findViewById(R$id.tag_layout);
@@ -602,13 +597,13 @@ public class ProjectHeaderPanel extends AbstractC2379a implements View.OnClickLi
             this.v = true;
             pp2.u().p2(this.o, String.valueOf(this.b), projectWantSeeBean.getWantNum());
             TextView textView = (TextView) this.o.findViewById(R$id.want_see_desc_tv);
-            CharSequence a = yb.a(projectWantSeeBean.getWantDesc());
-            if (!TextUtils.isEmpty(a) && a.charAt(0) == 20154) {
+            CharSequence a2 = yb.a(projectWantSeeBean.getWantDesc());
+            if (!TextUtils.isEmpty(a2) && a2.charAt(0) == 20154) {
                 textView.setTextColor(Color.parseColor("#999999"));
             } else {
                 textView.setTextColor(-16777216);
             }
-            textView.setText(a);
+            textView.setText(a2);
             DMDigitTextView dMDigitTextView = (DMDigitTextView) this.o.findViewById(R$id.want_see_number_dtv);
             Pair<String, String> wantNumPair = projectWantSeeBean.getWantNumPair();
             if (this.B) {
@@ -648,7 +643,7 @@ public class ProjectHeaderPanel extends AbstractC2379a implements View.OnClickLi
         } else if (projectRatingBean == null || cb2.d(projectRatingBean.userRatingVOS) || (viewFlipper = this.m) == null || (projectRatingUserBean = projectRatingBean.userRatingVOS.get((displayedChild = viewFlipper.getDisplayedChild()))) == null || (onHeadClickListener = this.d) == null) {
         } else {
             onHeadClickListener.onScoreCommentClick(projectRatingUserBean.content, projectRatingUserBean.userId, projectRatingUserBean.contentId);
-            C0529c.e().x(pp2.u().Y0(Long.toString(this.b), displayedChild));
+            cn.damai.common.user.c.e().x(pp2.u().Y0(Long.toString(this.b), displayedChild));
         }
     }
 
@@ -716,9 +711,9 @@ public class ProjectHeaderPanel extends AbstractC2379a implements View.OnClickLi
                             if (adapter.getItemCount() < 3) {
                                 z2 = false;
                             }
-                            adapter.a(new AvatarRecyclerView.C2566b(headImg), z2);
+                            adapter.a(new AvatarRecyclerView.b(headImg), z2);
                         } else {
-                            adapter.d(new AvatarRecyclerView.C2566b(headImg));
+                            adapter.d(new AvatarRecyclerView.b(headImg));
                         }
                     } catch (Throwable th) {
                         th.printStackTrace();
@@ -729,7 +724,7 @@ public class ProjectHeaderPanel extends AbstractC2379a implements View.OnClickLi
         }
     }
 
-    @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.AbstractC2379a
+    @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.a
     public int a() {
         IpChange ipChange = $ipChange;
         return AndroidInstantRuntime.support(ipChange, "-975434792") ? ((Integer) ipChange.ipc$dispatch("-975434792", new Object[]{this})).intValue() : R$id.project_header;
@@ -743,14 +738,14 @@ public class ProjectHeaderPanel extends AbstractC2379a implements View.OnClickLi
         } else {
             ProjectStaticDataBean staticData = projectDetailDataBean.getStaticData();
             ProjectItemDataBean item = projectDetailDataBean.getItem();
-            ProjectStaticItemBaseBean c = yb.c(staticData);
+            ProjectStaticItemBaseBean c2 = yb.c(staticData);
             p(projectDetailDataBean);
             j(projectDetailDataBean);
             this.q.f(projectDetailDataBean, this.C);
             n(staticData);
             this.s.d(item, staticData);
-            m(c);
-            this.r.d(staticData, c);
+            m(c2);
+            this.r.d(staticData, c2);
             l(staticData != null ? staticData.rating : null, projectDetailDataBean);
             i(item);
             r(projectDetailDataBean);
@@ -805,9 +800,9 @@ public class ProjectHeaderPanel extends AbstractC2379a implements View.OnClickLi
             ipChange.ipc$dispatch("1991085347", new Object[]{this});
             return;
         }
-        View$OnClickListenerC2380b view$OnClickListenerC2380b = this.q;
-        if (view$OnClickListenerC2380b != null) {
-            view$OnClickListenerC2380b.k();
+        cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.b bVar = this.q;
+        if (bVar != null) {
+            bVar.k();
         }
         ViewFlipper viewFlipper = this.e;
         if (viewFlipper != null) {

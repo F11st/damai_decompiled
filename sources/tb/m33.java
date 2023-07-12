@@ -1,16 +1,12 @@
 package tb;
 
 import androidx.annotation.NonNull;
-import com.efs.sdk.base.a.c.a.C4783c;
-import com.efs.sdk.base.a.e.InterfaceC4792c;
-import com.efs.sdk.base.a.h.b.C4801a;
-import com.efs.sdk.base.a.h.b.C4802b;
 import java.util.HashMap;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public final class m33 implements InterfaceC4792c {
-    @Override // com.efs.sdk.base.a.e.InterfaceC4792c
+public final class m33 implements com.efs.sdk.base.a.e.c {
+    @Override // com.efs.sdk.base.a.e.c
     @NonNull
     public final l01 a(j43 j43Var, boolean z) {
         l01 b;
@@ -21,7 +17,7 @@ public final class m33 implements InterfaceC4792c {
         a.g = n33Var.b;
         a.h = n33Var.a;
         a.k = j43Var.a();
-        String b2 = C4783c.a().b(false);
+        String b2 = com.efs.sdk.base.a.c.a.c.a().b(false);
         int i = j43Var.a.c;
         if (i == 0) {
             u23 c = u23.c();
@@ -34,11 +30,11 @@ public final class m33 implements InterfaceC4792c {
             }
             HashMap hashMap = new HashMap(1);
             hashMap.put("wpk-header", b3);
-            C4802b c2 = new C4802b(a2).c(hashMap);
-            C4801a c4801a = c2.a;
-            c4801a.c = bArr;
-            c4801a.g = true;
-            C4802b b4 = c2.b("type", a.h);
+            com.efs.sdk.base.a.h.b.b c2 = new com.efs.sdk.base.a.h.b.b(a2).c(hashMap);
+            com.efs.sdk.base.a.h.b.a aVar = c2.a;
+            aVar.c = bArr;
+            aVar.g = true;
+            com.efs.sdk.base.a.h.b.b b4 = c2.b("type", a.h);
             StringBuilder sb = new StringBuilder();
             sb.append(a.k);
             b = b4.b("size", sb.toString()).b("flow_limit", Boolean.toString(z2)).d(s53.d()).a().b();

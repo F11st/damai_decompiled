@@ -31,21 +31,20 @@ import tb.sm1;
 /* loaded from: classes7.dex */
 public class SeatPresenter extends SeatContract.Presenter {
     private static transient /* synthetic */ IpChange $ipChange;
-    private OnJpgSeatUiListener mUiListener = new C1685a();
+    private OnJpgSeatUiListener mUiListener = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.presenter.SeatPresenter$a */
     /* loaded from: classes7.dex */
-    public class C1685a implements OnJpgSeatUiListener {
+    public class a implements OnJpgSeatUiListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.seat.presenter.SeatPresenter$a$a */
+        /* renamed from: cn.damai.seat.presenter.SeatPresenter$a$a  reason: collision with other inner class name */
         /* loaded from: classes7.dex */
-        public class C1686a extends sm1 {
+        public class C0073a extends sm1 {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1686a() {
+            C0073a() {
             }
 
             @Override // tb.sm1
@@ -59,7 +58,7 @@ public class SeatPresenter extends SeatContract.Presenter {
             }
         }
 
-        C1685a() {
+        a() {
         }
 
         @Override // cn.damai.seat.listener.seatui.ApiType
@@ -70,7 +69,7 @@ public class SeatPresenter extends SeatContract.Presenter {
                 return;
             }
             ((SeatContract.SeatView) SeatPresenter.this.mView).showLoading(false);
-            ((SeatContract.SeatView) SeatPresenter.this.mView).showErrorView(str, str2, str3, new C1686a());
+            ((SeatContract.SeatView) SeatPresenter.this.mView).showErrorView(str, str2, str3, new C0073a());
         }
 
         @Override // cn.damai.seat.listener.seatui.OnJpgSeatUiListener
@@ -137,12 +136,11 @@ public class SeatPresenter extends SeatContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.presenter.SeatPresenter$b */
     /* loaded from: classes7.dex */
-    public class C1687b implements SimpleCallBack<String> {
+    public class b implements SimpleCallBack<String> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1687b() {
+        b() {
         }
 
         @Override // cn.damai.seat.listener.SimpleCallBack
@@ -170,12 +168,11 @@ public class SeatPresenter extends SeatContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.presenter.SeatPresenter$c */
     /* loaded from: classes7.dex */
-    public class C1688c implements SeatComputeListener {
+    public class c implements SeatComputeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1688c() {
+        c() {
         }
 
         @Override // cn.damai.seat.listener.SeatComputeListener
@@ -212,12 +209,11 @@ public class SeatPresenter extends SeatContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.presenter.SeatPresenter$d */
     /* loaded from: classes7.dex */
-    public class C1689d implements Action {
+    public class d implements Action {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1689d() {
+        d() {
         }
 
         @Override // cn.damai.seat.listener.Action
@@ -233,12 +229,11 @@ public class SeatPresenter extends SeatContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.presenter.SeatPresenter$e */
     /* loaded from: classes7.dex */
-    public class C1690e implements OnSubmitListener {
+    public class e implements OnSubmitListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1690e() {
+        e() {
         }
 
         @Override // cn.damai.seat.listener.OnSubmitListener
@@ -307,7 +302,7 @@ public class SeatPresenter extends SeatContract.Presenter {
         if (AndroidInstantRuntime.support(ipChange, "388006817")) {
             ipChange.ipc$dispatch("388006817", new Object[]{this});
         } else {
-            ((SeatContract.SeatModel) this.mModel).computeSeat(new C1688c());
+            ((SeatContract.SeatModel) this.mModel).computeSeat(new c());
         }
     }
 
@@ -331,7 +326,7 @@ public class SeatPresenter extends SeatContract.Presenter {
         }
         TbParams params = ((SeatContract.SeatModel) this.mModel).getParams();
         q92.n().g(params.itemId, params.performId);
-        ((SeatContract.SeatModel) this.mModel).submitSeat(new C1690e());
+        ((SeatContract.SeatModel) this.mModel).submitSeat(new e());
     }
 
     @Override // cn.damai.seat.contract.SeatContract.Presenter
@@ -368,7 +363,7 @@ public class SeatPresenter extends SeatContract.Presenter {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1930169967")) {
             ipChange.ipc$dispatch("1930169967", new Object[]{this, seatNew, Boolean.valueOf(z)});
-        } else if (((SeatContract.SeatModel) this.mModel).changeSeat(seatNew, z, new C1689d())) {
+        } else if (((SeatContract.SeatModel) this.mModel).changeSeat(seatNew, z, new d())) {
             if (z) {
                 q92.n().l(((SeatContract.SeatModel) this.mModel).getParams().itemId, seatNew.sid);
             }
@@ -395,7 +390,7 @@ public class SeatPresenter extends SeatContract.Presenter {
         if (AndroidInstantRuntime.support(ipChange, "-1231957872")) {
             ipChange.ipc$dispatch("-1231957872", new Object[]{this, tbParams});
         } else {
-            ((SeatContract.SeatModel) this.mModel).prepare(tbParams, new C1687b());
+            ((SeatContract.SeatModel) this.mModel).prepare(tbParams, new b());
         }
     }
 }

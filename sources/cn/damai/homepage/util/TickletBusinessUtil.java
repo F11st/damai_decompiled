@@ -6,7 +6,7 @@ import android.os.Build;
 import android.os.Handler;
 import android.widget.FrameLayout;
 import cn.damai.common.DamaiConstants;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.ticklet.listener.TickletPopListener;
 import cn.damai.commonbusiness.update.UpdateUtil;
@@ -187,7 +187,7 @@ public class TickletBusinessUtil implements TickletPopListener {
         if (AndroidInstantRuntime.support(ipChange, "-1920166403")) {
             ipChange.ipc$dispatch("-1920166403", new Object[]{this, str});
         } else {
-            C0529c.e().x(py0.I().B(str));
+            c.e().x(py0.I().B(str));
         }
     }
 
@@ -211,7 +211,7 @@ public class TickletBusinessUtil implements TickletPopListener {
             ipChange.ipc$dispatch("85426658", new Object[]{this, str});
             return;
         }
-        C0529c.e().A(py0.I().C(str), py0.CUSTOM_VIPALERTSHOW, "home");
+        c.e().A(py0.I().C(str), py0.CUSTOM_VIPALERTSHOW, "home");
         UpdateUtil.f();
     }
 }

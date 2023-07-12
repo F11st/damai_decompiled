@@ -86,8 +86,8 @@ public final class MaterialDatePicker<S> extends DialogFragment {
     @NonNull
     private static Drawable createHeaderToggleDrawable(Context context) {
         StateListDrawable stateListDrawable = new StateListDrawable();
-        stateListDrawable.addState(new int[]{16842912}, AppCompatResources.getDrawable(context, R.C4816drawable.material_ic_calendar_black_24dp));
-        stateListDrawable.addState(new int[0], AppCompatResources.getDrawable(context, R.C4816drawable.material_ic_edit_black_24dp));
+        stateListDrawable.addState(new int[]{16842912}, AppCompatResources.getDrawable(context, R.drawable.material_ic_calendar_black_24dp));
+        stateListDrawable.addState(new int[0], AppCompatResources.getDrawable(context, R.drawable.material_ic_edit_black_24dp));
         return stateListDrawable;
     }
 
@@ -280,7 +280,7 @@ public final class MaterialDatePicker<S> extends DialogFragment {
         Context context = dialog.getContext();
         this.fullscreen = isFullscreen(context);
         int resolveOrThrow = MaterialAttributes.resolveOrThrow(context, R.attr.colorSurface, MaterialDatePicker.class.getCanonicalName());
-        MaterialShapeDrawable materialShapeDrawable = new MaterialShapeDrawable(context, null, R.attr.materialCalendarStyle, R.C4819style.Widget_MaterialComponents_MaterialCalendar);
+        MaterialShapeDrawable materialShapeDrawable = new MaterialShapeDrawable(context, null, R.attr.materialCalendarStyle, R.style.Widget_MaterialComponents_MaterialCalendar);
         this.background = materialShapeDrawable;
         materialShapeDrawable.initializeElevationOverlay(context);
         this.background.setFillColor(ColorStateList.valueOf(resolveOrThrow));
@@ -291,7 +291,7 @@ public final class MaterialDatePicker<S> extends DialogFragment {
     @Override // androidx.fragment.app.Fragment
     @NonNull
     public final View onCreateView(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, @Nullable Bundle bundle) {
-        View inflate = layoutInflater.inflate(this.fullscreen ? R.C4818layout.mtrl_picker_fullscreen : R.C4818layout.mtrl_picker_dialog, viewGroup);
+        View inflate = layoutInflater.inflate(this.fullscreen ? R.layout.mtrl_picker_fullscreen : R.layout.mtrl_picker_dialog, viewGroup);
         Context context = inflate.getContext();
         if (this.fullscreen) {
             inflate.findViewById(R.id.mtrl_calendar_frame).setLayoutParams(new LinearLayout.LayoutParams(getPaddedPickerWidth(context), -2));

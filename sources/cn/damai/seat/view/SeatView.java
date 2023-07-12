@@ -147,12 +147,11 @@ public class SeatView extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.view.SeatView$a */
     /* loaded from: classes16.dex */
-    public class ScaleGestureDetector$OnScaleGestureListenerC1736a implements ScaleGestureDetector.OnScaleGestureListener {
+    public class a implements ScaleGestureDetector.OnScaleGestureListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ScaleGestureDetector$OnScaleGestureListenerC1736a() {
+        a() {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:19:0x0066  */
@@ -168,7 +167,7 @@ public class SeatView extends View {
                 Method dump skipped, instructions count: 252
                 To view this dump change 'Code comments level' option to 'DEBUG'
             */
-            throw new UnsupportedOperationException("Method not decompiled: cn.damai.seat.view.SeatView.ScaleGestureDetector$OnScaleGestureListenerC1736a.onScale(android.view.ScaleGestureDetector):boolean");
+            throw new UnsupportedOperationException("Method not decompiled: cn.damai.seat.view.SeatView.a.onScale(android.view.ScaleGestureDetector):boolean");
         }
 
         @Override // android.view.ScaleGestureDetector.OnScaleGestureListener
@@ -193,12 +192,11 @@ public class SeatView extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.view.SeatView$b */
     /* loaded from: classes16.dex */
-    public class C1737b extends GestureDetector.SimpleOnGestureListener {
+    public class b extends GestureDetector.SimpleOnGestureListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1737b() {
+        b() {
         }
 
         @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnGestureListener
@@ -279,12 +277,11 @@ public class SeatView extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.view.SeatView$c */
     /* loaded from: classes16.dex */
-    public class C1738c implements ValueAnimator.AnimatorUpdateListener {
+    public class c implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1738c() {
+        c() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -299,12 +296,11 @@ public class SeatView extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.view.SeatView$d */
     /* loaded from: classes16.dex */
-    public class C1739d implements TypeEvaluator {
+    public class d implements TypeEvaluator {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1739d(SeatView seatView) {
+        d(SeatView seatView) {
         }
 
         @Override // android.animation.TypeEvaluator
@@ -322,12 +318,11 @@ public class SeatView extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.view.SeatView$e */
     /* loaded from: classes16.dex */
-    public class C1740e implements Animator.AnimatorListener, ValueAnimator.AnimatorUpdateListener {
+    public class e implements Animator.AnimatorListener, ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1740e() {
+        e() {
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -493,8 +488,8 @@ public class SeatView extends View {
 
     private void drawSeat(Canvas canvas) {
         float f;
-        Bitmap a;
         Bitmap a2;
+        Bitmap a3;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1023887508")) {
             ipChange.ipc$dispatch("-1023887508", new Object[]{this, canvas});
@@ -546,20 +541,20 @@ public class SeatView extends View {
                     } else if (seatNew.isSelected) {
                         int i6 = seatNew.seatColor;
                         if (seatNew.packageCombinedId == 0) {
-                            a2 = this.mIconProvider.a(i6, seatNew.angle, (byte) 11, false);
+                            a3 = this.mIconProvider.a(i6, seatNew.angle, (byte) 11, false);
                         } else {
-                            a2 = this.mIconProvider.a(i6, seatNew.angle, (byte) 13, false);
+                            a3 = this.mIconProvider.a(i6, seatNew.angle, (byte) 13, false);
                         }
-                        canvas.drawBitmap(a2, this.tempMatrix, this.paint);
+                        canvas.drawBitmap(a3, this.tempMatrix, this.paint);
                         i = i6;
                     } else {
                         boolean isNeedAddAlpha = isNeedAddAlpha(seatNew);
                         if (seatNew.packageCombinedId == 0) {
-                            a = this.mIconProvider.a(seatNew.seatColor, seatNew.angle, (byte) 10, isNeedAddAlpha);
+                            a2 = this.mIconProvider.a(seatNew.seatColor, seatNew.angle, (byte) 10, isNeedAddAlpha);
                         } else {
-                            a = this.mIconProvider.a(seatNew.seatColor, seatNew.angle, (byte) 12, isNeedAddAlpha);
+                            a2 = this.mIconProvider.a(seatNew.seatColor, seatNew.angle, (byte) 12, isNeedAddAlpha);
                         }
-                        canvas.drawBitmap(a, this.tempMatrix, this.paint);
+                        canvas.drawBitmap(a2, this.tempMatrix, this.paint);
                     }
                 }
             } else {
@@ -677,9 +672,9 @@ public class SeatView extends View {
         this.mSpacing = m62.a(context, 4.0f);
         this.mVerSpacing = m62.a(context, 4.0f);
         this.mDefaultLeftRightPadding = m62.a(context, 8.0f);
-        float a = m62.a(context, 8.0f);
-        this.defaultImgW = a;
-        this.defaultImgH = a / (this.noseat.getWidth() / this.noseat.getHeight());
+        float a2 = m62.a(context, 8.0f);
+        this.defaultImgW = a2;
+        this.defaultImgH = a2 / (this.noseat.getWidth() / this.noseat.getHeight());
         this.mDefaultImgScaleX = this.defaultImgW / this.noseat.getWidth();
         this.mDefaultImgScaleY = this.defaultImgH / this.noseat.getHeight();
         int i5 = this.column;
@@ -713,16 +708,16 @@ public class SeatView extends View {
         this.minOffsetScale = (1.0f - f10) * f9;
         this.maxOffsetScale = f8 * (f10 + 1.0f);
         this.mCurrentScale = f9;
-        float a2 = m62.a(context, 4.0f);
-        float f11 = a2 / this.defaultImgW;
+        float a3 = m62.a(context, 4.0f);
+        float f11 = a3 / this.defaultImgW;
         this.mOverviewScale = f11;
-        this.mOverviewSeatHeight = a2;
-        this.mOverviewSeatWidth = a2;
+        this.mOverviewSeatHeight = a3;
+        this.mOverviewSeatWidth = a3;
         this.mOverviewSpacing = this.mSpacing * f11;
         this.mOverviewVerSpacing = this.mVerSpacing * f11;
-        float a3 = m62.a(context, 6.0f);
-        this.overviewSeatBottomVerSpacing = a3;
-        this.overviewSeatLeftRightSpacing = a3;
+        float a4 = m62.a(context, 6.0f);
+        this.overviewSeatBottomVerSpacing = a4;
+        this.overviewSeatLeftRightSpacing = a4;
         float f12 = this.mOverviewVerSpacing;
         this.overscreenOverviewVerSpacing = m62.a(context, 2.0f) + f12;
         float height = (this.row * this.mOverviewSeatHeight) + ((i2 - 1) * f12) + this.overviewSeatBottomVerSpacing + this.screenOverviewBitmap.getHeight() + this.overscreenOverviewVerSpacing;
@@ -756,7 +751,7 @@ public class SeatView extends View {
         }
         float f20 = this.mOverviewScale * f;
         this.mOverviewScale = f20;
-        float f21 = a2 * f;
+        float f21 = a3 * f;
         this.mOverviewSeatHeight = f21;
         this.mOverviewSeatWidth = f21;
         this.mOverviewSpacing = this.mSpacing * f20;
@@ -820,8 +815,8 @@ public class SeatView extends View {
             this.screenBitmap = BitmapFactory.decodeResource(resources, R$drawable.trade_seat_stage);
             this.screenOverviewBitmap = BitmapFactory.decodeResource(resources, R$drawable.trade_seat_overview_screen);
             this.unavailableSeatColor = Color.parseColor("#e9e9e9");
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 
@@ -854,9 +849,9 @@ public class SeatView extends View {
             ipChange.ipc$dispatch("-319786394", new Object[]{this, point, point2, Long.valueOf(j)});
             return;
         }
-        ValueAnimator ofObject = ValueAnimator.ofObject(new C1739d(this), point, point2);
+        ValueAnimator ofObject = ValueAnimator.ofObject(new d(this), point, point2);
         ofObject.setInterpolator(new DecelerateInterpolator());
-        ofObject.addUpdateListener(new C1738c());
+        ofObject.addUpdateListener(new c());
         ofObject.setDuration(j);
         ofObject.start();
     }
@@ -909,8 +904,8 @@ public class SeatView extends View {
                 i++;
                 translateX = f9;
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 
@@ -933,28 +928,28 @@ public class SeatView extends View {
             if (i != i3) {
                 if (i == -1) {
                     i2++;
-                    Integer b = wh2.b(seatNew.rn);
-                    this.rowNumList.add(b != null ? b + "" : "");
+                    Integer b2 = wh2.b(seatNew.rn);
+                    this.rowNumList.add(b2 != null ? b2 + "" : "");
                     this.rowNumRegionList.put(i2, this.rowNumList);
                     i = seatNew.x;
                 } else {
                     int i4 = i3 - i;
                     if (i4 == 1) {
                         i2++;
-                        Integer b2 = wh2.b(seatNew.rn);
-                        this.rowNumList.add(b2 != null ? b2 + "" : "");
+                        Integer b3 = wh2.b(seatNew.rn);
+                        this.rowNumList.add(b3 != null ? b3 + "" : "");
                     } else {
                         for (int i5 = 0; i5 < i4; i5++) {
                             i2++;
                             if (i5 == i4 - 1) {
                                 if (i4 == 2) {
                                     this.rowNumList.add("");
-                                    Integer b3 = wh2.b(seatNew.rn);
-                                    this.rowNumList.add(b3 == null ? "" : b3 + "");
-                                } else {
-                                    this.rowNumList = new ArrayList();
                                     Integer b4 = wh2.b(seatNew.rn);
                                     this.rowNumList.add(b4 == null ? "" : b4 + "");
+                                } else {
+                                    this.rowNumList = new ArrayList();
+                                    Integer b5 = wh2.b(seatNew.rn);
+                                    this.rowNumList.add(b5 == null ? "" : b5 + "");
                                     this.rowNumRegionList.put(i2, this.rowNumList);
                                 }
                             }
@@ -987,9 +982,9 @@ public class SeatView extends View {
         }
         ValueAnimator ofFloat = ValueAnimator.ofFloat(f, f2);
         ofFloat.setInterpolator(new DecelerateInterpolator());
-        C1740e c1740e = new C1740e();
-        ofFloat.addUpdateListener(c1740e);
-        ofFloat.addListener(c1740e);
+        e eVar = new e();
+        ofFloat.addUpdateListener(eVar);
+        ofFloat.addListener(eVar);
         ofFloat.setDuration(300L);
         ofFloat.start();
     }
@@ -1118,8 +1113,8 @@ public class SeatView extends View {
                 cb1.b(TAG, "OverviewDrawTime:" + (System.currentTimeMillis() - currentTimeMillis2));
             }
             cb1.b(TAG, "totalDrawTime:" + (System.currentTimeMillis() - currentTimeMillis) + " ,scale = " + getMatrixScaleX() + " ,padding = " + getCurrentLeftRightPadding() + " , seatSize = " + (this.defaultImgW * getMatrixScaleX()));
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 
@@ -1240,8 +1235,8 @@ public class SeatView extends View {
         this.rowNumList = new ArrayList();
         this.rowNumRegionList = new SparseArrayCompat<>();
         this.handler = new Handler();
-        this.scaleGestureDetector = new ScaleGestureDetector(getContext(), new ScaleGestureDetector$OnScaleGestureListenerC1736a());
-        this.gestureDetector = new GestureDetector(getContext(), new C1737b());
+        this.scaleGestureDetector = new ScaleGestureDetector(getContext(), new a());
+        this.gestureDetector = new GestureDetector(getContext(), new b());
         this.hideOverviewRunnable = new Runnable() { // from class: cn.damai.seat.view.SeatView.3
             private static transient /* synthetic */ IpChange $ipChange;
 

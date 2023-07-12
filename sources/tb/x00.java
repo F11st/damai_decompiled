@@ -15,7 +15,7 @@ public class x00 extends cz {
         return dXRuntimeContext.getRootView().getData();
     }
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
     public String getDxFunctionName() {
         return "rootData";
     }

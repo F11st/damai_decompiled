@@ -8,5 +8,5 @@ import io.reactivex.annotations.NonNull;
 /* loaded from: classes3.dex */
 public interface MaybeConverter<T, R> {
     @NonNull
-    R apply(@NonNull AbstractC8148c<T> abstractC8148c);
+    R apply(@NonNull c<T> cVar);
 }

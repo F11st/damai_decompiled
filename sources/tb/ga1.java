@@ -12,7 +12,7 @@ import org.jetbrains.annotations.Nullable;
 public class ga1 {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C9171a Companion = new C9171a(null);
+    public static final a Companion = new a(null);
     @JvmField
     public double a;
     @JvmField
@@ -34,15 +34,14 @@ public class ga1 {
     public LocationDataStatus g;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ga1$a */
     /* loaded from: classes7.dex */
-    public static final class C9171a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9171a() {
+        private a() {
         }
 
-        public /* synthetic */ C9171a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

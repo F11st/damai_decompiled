@@ -2,7 +2,6 @@ package com.xiaomi.push;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.cj;
 
 /* compiled from: Taobao */
@@ -11,11 +10,11 @@ class cl implements Runnable {
     final /* synthetic */ Context a;
 
     /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ cj.AbstractRunnableC7617a f168a;
+    final /* synthetic */ cj.a f168a;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public cl(cj.AbstractRunnableC7617a abstractRunnableC7617a, Context context) {
-        this.f168a = abstractRunnableC7617a;
+    public cl(cj.a aVar, Context context) {
+        this.f168a = aVar;
         this.a = context;
     }
 
@@ -35,7 +34,7 @@ class cl implements Runnable {
                         sQLiteDatabase.endTransaction();
                     } catch (Exception e) {
                         e = e;
-                        AbstractC7535b.a(e);
+                        com.xiaomi.channel.commonutils.logger.b.a(e);
                         this.f168a.a(this.a);
                     }
                 }
@@ -48,7 +47,7 @@ class cl implements Runnable {
                     try {
                         sQLiteDatabase.endTransaction();
                     } catch (Exception e2) {
-                        AbstractC7535b.a(e2);
+                        com.xiaomi.channel.commonutils.logger.b.a(e2);
                         this.f168a.a(this.a);
                         throw th;
                     }
@@ -61,13 +60,13 @@ class cl implements Runnable {
                 throw th;
             }
         } catch (Exception e3) {
-            AbstractC7535b.a(e3);
+            com.xiaomi.channel.commonutils.logger.b.a(e3);
             if (sQLiteDatabase != null) {
                 try {
                     sQLiteDatabase.endTransaction();
                 } catch (Exception e4) {
                     e = e4;
-                    AbstractC7535b.a(e);
+                    com.xiaomi.channel.commonutils.logger.b.a(e);
                     this.f168a.a(this.a);
                 }
             }

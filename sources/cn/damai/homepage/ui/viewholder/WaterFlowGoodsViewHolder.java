@@ -15,11 +15,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.baseview.RCRelativeLayoutView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -74,12 +72,11 @@ public class WaterFlowGoodsViewHolder extends RecyclerView.ViewHolder {
     private View.OnLongClickListener x;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.viewholder.WaterFlowGoodsViewHolder$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1195a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1195a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -95,7 +92,7 @@ public class WaterFlowGoodsViewHolder extends RecyclerView.ViewHolder {
                     return;
                 }
                 WaterFlowRecommendItem waterFlowRecommendItem = (WaterFlowRecommendItem) view.getTag();
-                C0529c e = C0529c.e();
+                cn.damai.common.user.c e = cn.damai.common.user.c.e();
                 py0 I = py0.I();
                 String str = WaterFlowGoodsViewHolder.this.q;
                 String str2 = waterFlowRecommendItem.projectId;
@@ -118,12 +115,11 @@ public class WaterFlowGoodsViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.viewholder.WaterFlowGoodsViewHolder$b */
     /* loaded from: classes14.dex */
-    public class View$OnLongClickListenerC1196b implements View.OnLongClickListener {
+    public class b implements View.OnLongClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnLongClickListenerC1196b(WaterFlowGoodsViewHolder waterFlowGoodsViewHolder) {
+        b(WaterFlowGoodsViewHolder waterFlowGoodsViewHolder) {
         }
 
         @Override // android.view.View.OnLongClickListener
@@ -137,31 +133,30 @@ public class WaterFlowGoodsViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.viewholder.WaterFlowGoodsViewHolder$c */
     /* loaded from: classes5.dex */
-    public class C1197c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ SpannableStringBuilder a;
 
-        C1197c(SpannableStringBuilder spannableStringBuilder) {
+        c(SpannableStringBuilder spannableStringBuilder) {
             this.a = spannableStringBuilder;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-849158778")) {
-                ipChange.ipc$dispatch("-849158778", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("-849158778", new Object[]{this, eVar});
             } else {
-                WaterFlowGoodsViewHolder.this.showAtmospheric(this.a, c0502e.b);
+                WaterFlowGoodsViewHolder.this.showAtmospheric(this.a, eVar.b);
             }
         }
     }
 
     public WaterFlowGoodsViewHolder(String str, Context context) {
         super(LayoutInflater.from(context).inflate(R$layout.homepage_waterflow_recommend_goodscard, (ViewGroup) null));
-        this.w = new View$OnClickListenerC1195a();
-        this.x = new View$OnLongClickListenerC1196b(this);
+        this.w = new a();
+        this.x = new b(this);
         this.q = str;
         this.a = context;
         this.b = (FrameLayout) this.itemView.findViewById(R$id.homepage_waterflow_goods_feedback_layer);
@@ -174,8 +169,8 @@ public class WaterFlowGoodsViewHolder extends RecyclerView.ViewHolder {
         this.t.setCategoryMargin(6.0f, 6.0f);
         DMLabelView labelView = this.t.getLabelView();
         if (labelView != null) {
-            float a = t60.a(context, 12.0f);
-            labelView.setCornerRadii(a, a, a, 0.0f);
+            float a2 = t60.a(context, 12.0f);
+            labelView.setCornerRadii(a2, a2, a2, 0.0f);
         }
         this.e = (DMCommonTagView) this.itemView.findViewById(R$id.homepage_waterflow_goodscard_tag);
         this.g = (TextView) this.itemView.findViewById(R$id.homepage_waterflow_goods_title);
@@ -213,8 +208,8 @@ public class WaterFlowGoodsViewHolder extends RecyclerView.ViewHolder {
         spannableStringBuilder.insert(0, "123");
         int height = bitmap.getHeight();
         int width = bitmap.getWidth();
-        int a = t60.a(this.a, 16.0f);
-        spannableStringBuilder.setSpan(new ImageSpan(this.a, a21.f(bitmap, (width * a) / height, a), 1), 0, 3, 18);
+        int a2 = t60.a(this.a, 16.0f);
+        spannableStringBuilder.setSpan(new ImageSpan(this.a, a21.f(bitmap, (width * a2) / height, a2), 1), 0, 3, 18);
         this.g.setText(spannableStringBuilder);
     }
 
@@ -266,7 +261,7 @@ public class WaterFlowGoodsViewHolder extends RecyclerView.ViewHolder {
                 try {
                     if (waterFlowRecommendItem.atmospheric) {
                         if (!wh2.j(waterFlowRecommendItem.atmosphericPic)) {
-                            C0504a.b().h(this.a).c(waterFlowRecommendItem.atmosphericPic).n(new C1197c(spannableStringBuilder)).f();
+                            cn.damai.common.image.a.b().h(this.a).c(waterFlowRecommendItem.atmosphericPic).n(new c(spannableStringBuilder)).f();
                         }
                     } else {
                         if (waterFlowRecommendItem.projectName.contains("【")) {

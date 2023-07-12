@@ -4,7 +4,7 @@ import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import java.util.Map;
 import java.util.Objects;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
+import kotlin.reflect.jvm.internal.impl.builtins.b;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.SimpleFunctionDescriptor;
 import kotlin.reflect.jvm.internal.impl.resolve.descriptorUtil.DescriptorUtilsKt;
@@ -36,7 +36,7 @@ public final class BuiltinMethodsWithDifferentJvmName extends SpecialGenericSign
 
     public final boolean j(@NotNull final SimpleFunctionDescriptor simpleFunctionDescriptor) {
         b41.i(simpleFunctionDescriptor, "functionDescriptor");
-        return AbstractC8271b.e0(simpleFunctionDescriptor) && DescriptorUtilsKt.d(simpleFunctionDescriptor, false, new Function1<CallableMemberDescriptor, Boolean>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.BuiltinMethodsWithDifferentJvmName$isBuiltinFunctionWithDifferentNameInJvm$1
+        return b.e0(simpleFunctionDescriptor) && DescriptorUtilsKt.d(simpleFunctionDescriptor, false, new Function1<CallableMemberDescriptor, Boolean>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.BuiltinMethodsWithDifferentJvmName$isBuiltinFunctionWithDifferentNameInJvm$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(1);

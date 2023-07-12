@@ -31,16 +31,15 @@ public final class TMClipBoardPlugin extends TaoMaiApiPlugin {
     @NotNull
     public static final String ACTION_SET_CLIPBOARD = "setClipboard";
     @NotNull
-    public static final C6985a Companion = new C6985a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMClipBoardPlugin$a */
     /* loaded from: classes11.dex */
-    public static final class C6985a {
-        private C6985a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C6985a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -113,8 +112,8 @@ public final class TMClipBoardPlugin extends TaoMaiApiPlugin {
     }
 
     public final boolean writeToClipBoard(@Nullable String str, @Nullable final WVCallBackContext wVCallBackContext) {
-        final JSONObject a = str != null ? kh2.a(str) : null;
-        if (a == null || a.containsKey("text")) {
+        final JSONObject a2 = str != null ? kh2.a(str) : null;
+        if (a2 == null || a2.containsKey("text")) {
             try {
                 new Handler(Looper.getMainLooper()).post(new Runnable() { // from class: com.taomai.android.h5container.api.TMClipBoardPlugin$writeToClipBoard$1
                     @Override // java.lang.Runnable
@@ -127,7 +126,7 @@ public final class TMClipBoardPlugin extends TaoMaiApiPlugin {
                         }
                         ClipboardManager clipboardManager = (ClipboardManager) systemService;
                         if (clipboardManager != null) {
-                            JSONObject jSONObject = a;
+                            JSONObject jSONObject = a2;
                             clipboardManager.setPrimaryClip(ClipData.newPlainText("taomai", jSONObject != null ? jSONObject.getString("text") : null));
                             WVCallBackContext wVCallBackContext2 = wVCallBackContext;
                             if (wVCallBackContext2 != null) {

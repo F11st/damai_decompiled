@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.category.common.listener.ShareImageCallback;
 import cn.damai.category.grab.bean.ItemBean;
 import cn.damai.common.image.DMImageCreator;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.search.bean.MarketTagBean;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -64,43 +64,41 @@ public class GrabItemHolder extends RecyclerView.ViewHolder {
     private TextView z;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.grab.ui.viewholder.GrabItemHolder$a */
     /* loaded from: classes.dex */
-    public class C0407a implements DMImageCreator.DMImageFailListener {
+    public class a implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0407a(GrabItemHolder grabItemHolder) {
+        a(GrabItemHolder grabItemHolder) {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "514448008")) {
-                ipChange.ipc$dispatch("514448008", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("514448008", new Object[]{this, dVar});
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.grab.ui.viewholder.GrabItemHolder$b */
     /* loaded from: classes.dex */
-    public class C0408b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ItemBean a;
         final /* synthetic */ ShareImageCallback b;
 
-        C0408b(ItemBean itemBean, ShareImageCallback shareImageCallback) {
+        b(ItemBean itemBean, ShareImageCallback shareImageCallback) {
             this.a = itemBean;
             this.b = shareImageCallback;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-187578851")) {
-                ipChange.ipc$dispatch("-187578851", new Object[]{this, c0502e});
-            } else if (c0502e == null || (bitmap = c0502e.b) == null) {
+                ipChange.ipc$dispatch("-187578851", new Object[]{this, eVar});
+            } else if (eVar == null || (bitmap = eVar.b) == null) {
             } else {
                 String d = j11.d(this.a.verticalPic, bitmap, GrabItemHolder.this.a);
                 ShareImageCallback shareImageCallback = this.b;
@@ -192,7 +190,7 @@ public class GrabItemHolder extends RecyclerView.ViewHolder {
         if (!TextUtils.isEmpty(str2)) {
             hashMap.put("discount_type", str2);
         }
-        C0529c e = C0529c.e();
+        c e = c.e();
         View view = this.itemView;
         e.G(view, "item_" + i, "list", ou0.GRAB_PAGE, hashMap);
     }

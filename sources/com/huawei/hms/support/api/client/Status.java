@@ -34,13 +34,12 @@ public final class Status extends Result implements Parcelable {
     public static final Status RESULT_TIMEOUT = new Status(15);
     public static final Status MessageNotFound = new Status(404);
     public static final Status CoreException = new Status(500);
-    public static final Parcelable.Creator<Status> CREATOR = new C5714a();
+    public static final Parcelable.Creator<Status> CREATOR = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.support.api.client.Status$a */
     /* loaded from: classes10.dex */
-    static class C5714a implements Parcelable.Creator {
-        C5714a() {
+    static class a implements Parcelable.Creator {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

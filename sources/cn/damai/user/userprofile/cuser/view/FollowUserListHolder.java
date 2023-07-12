@@ -14,10 +14,10 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 import java.util.List;
-import tb.C9826vr;
 import tb.kv2;
 import tb.lu2;
 import tb.t60;
+import tb.vr;
 import tb.wh2;
 import tb.yq;
 import tb.z20;
@@ -29,14 +29,13 @@ public class FollowUserListHolder extends FeedsWraperHolder {
     Activity w;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.FollowUserListHolder$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2770a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FollowFeedData a;
         final /* synthetic */ FeedMergeDataDO b;
 
-        View$OnClickListenerC2770a(FollowFeedData followFeedData, FeedMergeDataDO feedMergeDataDO) {
+        a(FollowFeedData followFeedData, FeedMergeDataDO feedMergeDataDO) {
             this.a = followFeedData;
             this.b = feedMergeDataDO;
         }
@@ -99,12 +98,12 @@ public class FollowUserListHolder extends FeedsWraperHolder {
             }
             this.itemView.findViewById(i).setLayoutParams(layoutParams);
             FollowFeedData followFeedData = list.get(size);
-            if (onCreateViewHolder.a.getTag() instanceof C9826vr) {
-                ((C9826vr) onCreateViewHolder.a.getTag()).cancel();
+            if (onCreateViewHolder.a.getTag() instanceof vr) {
+                ((vr) onCreateViewHolder.a.getTag()).cancel();
             }
             new yq(t60.a(this.w, 2.0f), this.w.getResources().getColor(R$color.color_6black));
             onCreateViewHolder.a.setAvatar(followFeedData.img + "?x-oss-process=image/resize,m_fill,h_400,w_400,limit_0");
-            onCreateViewHolder.a.setOnClickListener(new View$OnClickListenerC2770a(followFeedData, feedMergeDataDO));
+            onCreateViewHolder.a.setOnClickListener(new a(followFeedData, feedMergeDataDO));
             onCreateViewHolder.b.setText(followFeedData.name);
             if (followFeedData.vtag != 0) {
                 onCreateViewHolder.a.setAvatarVTagVisibility(0);

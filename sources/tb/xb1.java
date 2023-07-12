@@ -1,7 +1,6 @@
 package tb;
 
 import android.text.TextUtils;
-import cn.damai.common.user.C0528b;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
@@ -9,7 +8,7 @@ import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
-public class xb1 extends C0528b {
+public class xb1 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final String CUSTOM_LOGIN = "logininfo";
     public static final String LOGIN_BINDTEL_PAGE = "bindtel";
@@ -20,15 +19,14 @@ public class xb1 extends C0528b {
     public static final String REGISTER_PAGE = "register";
 
     /* compiled from: Taobao */
-    /* renamed from: tb.xb1$b */
     /* loaded from: classes5.dex */
-    private static class C9917b {
+    private static class b {
         private static final xb1 a = new xb1();
     }
 
     public static final xb1 g() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-198388379") ? (xb1) ipChange.ipc$dispatch("-198388379", new Object[0]) : C9917b.a;
+        return AndroidInstantRuntime.support(ipChange, "-198388379") ? (xb1) ipChange.ipc$dispatch("-198388379", new Object[0]) : b.a;
     }
 
     public Map<String, String> f(String str, String str2, String str3) {

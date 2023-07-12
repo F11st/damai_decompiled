@@ -19,8 +19,8 @@ public class DXPreRenderWorkTask extends DXBaseRenderWorkTask {
     public static final String TAG = "DXPreRenderWorkTask";
     private final DXAsyncRenderCallback<t00<DXRootView>> callback;
 
-    public DXPreRenderWorkTask(DXRuntimeContext dXRuntimeContext, DXRenderOptions dXRenderOptions, DXTemplateManager dXTemplateManager, C6380h c6380h, C6367d c6367d, bu buVar) {
-        this(dXRuntimeContext, dXRenderOptions, dXTemplateManager, c6380h, c6367d, buVar, null);
+    public DXPreRenderWorkTask(DXRuntimeContext dXRuntimeContext, DXRenderOptions dXRenderOptions, DXTemplateManager dXTemplateManager, h hVar, d dVar, bu buVar) {
+        this(dXRuntimeContext, dXRenderOptions, dXTemplateManager, hVar, dVar, buVar, null);
     }
 
     @Override // com.taobao.android.dinamicx.asyncrender.DXBaseRenderWorkTask, java.lang.Runnable
@@ -38,8 +38,8 @@ public class DXPreRenderWorkTask extends DXBaseRenderWorkTask {
             DXRootView dXRootView = new DXRootView(this.runtimeContext.getContext());
             dXRootView.setLayoutParams(new ViewGroup.LayoutParams(0, 0));
             dXRootView.dxTemplateItem = this.runtimeContext.getDxTemplateItem();
-            C6367d c6367d = this.engineContext;
-            if (c6367d != null && c6367d.e() != null) {
+            d dVar = this.engineContext;
+            if (dVar != null && dVar.e() != null) {
                 dXRootView.setBindingXManagerWeakReference(this.engineContext.e().n);
             }
             this.runtimeContext.rootViewWeakReference = new WeakReference<>(dXRootView);
@@ -70,7 +70,7 @@ public class DXPreRenderWorkTask extends DXBaseRenderWorkTask {
             DXRuntimeContext dXRuntimeContext = this.runtimeContext;
             if (dXRuntimeContext != null && !TextUtils.isEmpty(dXRuntimeContext.bizType)) {
                 DXRuntimeContext dXRuntimeContext2 = this.runtimeContext;
-                DXAppMonitor.q(dXRuntimeContext2.bizType, dXRuntimeContext2.getDxTemplateItem(), "AsyncRender", "Pre_Render_3.0_Crash", C6368e.V3_PRE_RENDER_CRASH, ry.a(th));
+                DXAppMonitor.q(dXRuntimeContext2.bizType, dXRuntimeContext2.getDxTemplateItem(), "AsyncRender", "Pre_Render_3.0_Crash", e.V3_PRE_RENDER_CRASH, ry.a(th));
             }
             ry.b(th);
             this.isFailed = true;
@@ -85,8 +85,8 @@ public class DXPreRenderWorkTask extends DXBaseRenderWorkTask {
         }
     }
 
-    public DXPreRenderWorkTask(DXRuntimeContext dXRuntimeContext, DXRenderOptions dXRenderOptions, DXTemplateManager dXTemplateManager, C6380h c6380h, C6367d c6367d, bu buVar, DXAsyncRenderCallback<t00<DXRootView>> dXAsyncRenderCallback) {
-        super(dXRuntimeContext, dXRenderOptions, dXTemplateManager, c6380h, c6367d, buVar);
+    public DXPreRenderWorkTask(DXRuntimeContext dXRuntimeContext, DXRenderOptions dXRenderOptions, DXTemplateManager dXTemplateManager, h hVar, d dVar, bu buVar, DXAsyncRenderCallback<t00<DXRootView>> dXAsyncRenderCallback) {
+        super(dXRuntimeContext, dXRenderOptions, dXTemplateManager, hVar, dVar, buVar);
         this.callback = dXAsyncRenderCallback;
     }
 }

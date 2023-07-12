@@ -35,20 +35,19 @@ public final class a01 implements ViewChangeNotify {
     @NotNull
     private final Runnable f;
     @NotNull
-    public static final C8891a Companion = new C8891a(null);
+    public static final a Companion = new a(null);
     private static final String g = a01.class.getSimpleName();
     private static float h = 40.0f;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.a01$a */
     /* loaded from: classes7.dex */
-    public static final class C8891a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C8891a() {
+        private a() {
         }
 
-        public /* synthetic */ C8891a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -108,11 +107,11 @@ public final class a01 implements ViewChangeNotify {
         if (this.b == null) {
             this.b = new DefaultImageGetter("", tm.Companion.a().c(), context);
         }
-        o32.C9504a c9504a = o32.Companion;
+        o32.a aVar = o32.Companion;
         String str = this.a;
         ImageGetter imageGetter = this.b;
         b41.f(imageGetter);
-        c9504a.a(str, imageGetter, new h50(onSpanClickListener), onParseFinishedListener);
+        aVar.a(str, imageGetter, new h50(onSpanClickListener), onParseFinishedListener);
     }
 
     @Override // com.alibaba.pictures.bricks.util.htmlparser.callback.ViewChangeNotify

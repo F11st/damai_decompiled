@@ -12,7 +12,7 @@ import java.util.ArrayList;
 /* loaded from: classes2.dex */
 public class ParticleField extends View {
     private static transient /* synthetic */ IpChange $ipChange;
-    private ArrayList<C7945Particle> mParticles;
+    private ArrayList<Particle> mParticles;
 
     public ParticleField(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
@@ -33,7 +33,7 @@ public class ParticleField extends View {
         }
     }
 
-    public void setParticles(ArrayList<C7945Particle> arrayList) {
+    public void setParticles(ArrayList<Particle> arrayList) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1597921900")) {
             ipChange.ipc$dispatch("-1597921900", new Object[]{this, arrayList});

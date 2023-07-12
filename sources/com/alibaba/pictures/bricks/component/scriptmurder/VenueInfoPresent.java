@@ -30,29 +30,27 @@ public final class VenueInfoPresent extends AbsPresenter<GenericItem<ItemValue>,
     @NotNull
     public static final String ACTION_MAP = "map";
     @NotNull
-    public static final C3508a Companion = new C3508a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.scriptmurder.VenueInfoPresent$a */
     /* loaded from: classes7.dex */
-    public static final class C3508a {
-        private C3508a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3508a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.scriptmurder.VenueInfoPresent$b */
     /* loaded from: classes7.dex */
-    public static final class C3509b implements VenueInfoViewHolder.OnVenueInfoListener {
+    public static final class b implements VenueInfoViewHolder.OnVenueInfoListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ GenericItem<ItemValue> a;
         final /* synthetic */ VenueInfoPresent b;
 
-        C3509b(GenericItem<ItemValue> genericItem, VenueInfoPresent venueInfoPresent) {
+        b(GenericItem<ItemValue> genericItem, VenueInfoPresent venueInfoPresent) {
             this.a = genericItem;
             this.b = venueInfoPresent;
         }
@@ -136,7 +134,7 @@ public final class VenueInfoPresent extends AbsPresenter<GenericItem<ItemValue>,
         b41.i(genericItem, "item");
         super.init((VenueInfoPresent) genericItem);
         VenueInfoViewHolder viewHolder = ((VenueInfoView) getView()).getViewHolder();
-        viewHolder.d(new C3509b(genericItem, this));
+        viewHolder.d(new b(genericItem, this));
         viewHolder.c(((VenueInfoModel) getModel()).getValue());
         HashMap hashMap = new HashMap();
         hashMap.put("value", ((VenueInfoModel) getModel()).getValue());

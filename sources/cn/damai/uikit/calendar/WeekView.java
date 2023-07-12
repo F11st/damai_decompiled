@@ -39,7 +39,7 @@ public class WeekView extends CalendarPagerView {
     }
 
     @Override // cn.damai.uikit.calendar.CalendarPagerView, android.view.ViewGroup
-    public /* bridge */ /* synthetic */ CalendarPagerView.C2481a generateLayoutParams(AttributeSet attributeSet) {
+    public /* bridge */ /* synthetic */ CalendarPagerView.a generateLayoutParams(AttributeSet attributeSet) {
         return super.generateLayoutParams(attributeSet);
     }
 

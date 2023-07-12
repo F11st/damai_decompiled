@@ -5,13 +5,12 @@ import org.jetbrains.annotations.Nullable;
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public interface SourceFile {
-    public static final SourceFile NO_SOURCE_FILE = new C8297a();
+    public static final SourceFile NO_SOURCE_FILE = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.SourceFile$a */
     /* loaded from: classes3.dex */
-    static class C8297a implements SourceFile {
-        C8297a() {
+    static class a implements SourceFile {
+        a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.descriptors.SourceFile

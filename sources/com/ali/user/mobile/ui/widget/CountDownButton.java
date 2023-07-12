@@ -34,7 +34,7 @@ public class CountDownButton extends AppCompatButton {
             if (countDownButton.mGetCodeTitleRes != 0) {
                 countDownButton.setText(countDownButton.getContext().getString(CountDownButton.this.mGetCodeTitleRes));
                 CountDownButton countDownButton2 = CountDownButton.this;
-                countDownButton2.setBackgroundDrawable(countDownButton2.getResources().getDrawable(R.C2964drawable.aliuser_btn_background_orange_round));
+                countDownButton2.setBackgroundDrawable(countDownButton2.getResources().getDrawable(R.drawable.aliuser_btn_background_orange_round));
             } else {
                 countDownButton.setText(countDownButton.getContext().getString(R.string.aliuser_signup_verification_getCode));
             }

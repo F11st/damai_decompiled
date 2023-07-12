@@ -4,7 +4,6 @@ import android.os.AsyncTask;
 import android.text.TextUtils;
 import androidx.annotation.Nullable;
 import com.taobao.android.dinamic.log.DinamicLog;
-import com.taobao.android.dinamic.tempate.manager.C6350a;
 import com.taobao.weex.annotation.JSMethod;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -24,7 +23,7 @@ public class SerialTaskManager {
     /* compiled from: Taobao */
     /* loaded from: classes12.dex */
     public static final class DownLoadTask extends AsyncTask<Void, rc0, rc0> {
-        private final C6350a a;
+        private final com.taobao.android.dinamic.tempate.manager.a a;
         LayoutFileLoadListener b;
         List<DinamicTemplate> c;
         String d;
@@ -58,9 +57,9 @@ public class SerialTaskManager {
             }
         };
 
-        public DownLoadTask(C6350a c6350a, int i) {
+        public DownLoadTask(com.taobao.android.dinamic.tempate.manager.a aVar, int i) {
             this.g = 3000L;
-            this.a = c6350a;
+            this.a = aVar;
             this.g = i;
         }
 
@@ -75,14 +74,14 @@ public class SerialTaskManager {
             return rc0Var;
         }
 
-        private C6341a h(@Nullable DinamicTemplate dinamicTemplate) {
+        private a h(@Nullable DinamicTemplate dinamicTemplate) {
             String j = j(dinamicTemplate);
             if (!TextUtils.isEmpty(j) && this.a.f(j) == null) {
-                C6341a c6341a = new C6341a();
-                c6341a.a = j;
-                c6341a.b = dinamicTemplate.templateUrl;
-                c6341a.c = dinamicTemplate;
-                return c6341a;
+                a aVar = new a();
+                aVar.a = j;
+                aVar.b = dinamicTemplate.templateUrl;
+                aVar.c = dinamicTemplate;
+                return aVar;
             }
             return null;
         }
@@ -97,7 +96,7 @@ public class SerialTaskManager {
                 HashSet hashSet = new HashSet();
                 for (DinamicTemplate dinamicTemplate : this.c) {
                     if (dinamicTemplate != null && !TextUtils.isEmpty(dinamicTemplate.templateUrl) && !TextUtils.isEmpty(dinamicTemplate.name) && !TextUtils.isEmpty(dinamicTemplate.version)) {
-                        C6341a h = h(dinamicTemplate);
+                        a h = h(dinamicTemplate);
                         if (h == null) {
                             this.m.add(dinamicTemplate);
                         } else {
@@ -117,20 +116,20 @@ public class SerialTaskManager {
                     ArrayList arrayList = new ArrayList(hashSet);
                     int size = arrayList.size();
                     for (int i = 0; i < size; i++) {
-                        C6341a c6341a = (C6341a) arrayList.get(i);
+                        a aVar = (a) arrayList.get(i);
                         try {
-                            bArr = this.a.b(c6341a.c, c6341a.a, c6341a.b, new ul2(this.d));
+                            bArr = this.a.b(aVar.c, aVar.a, aVar.b, new ul2(this.d));
                         } catch (Throwable th) {
                             DinamicLog.b("SerialTaskManager", "remote getTemplate", th);
                             bArr = null;
                         }
                         synchronized (this) {
                             if (bArr == null) {
-                                this.l.add(c6341a.c);
-                                this.j.add(c6341a.c);
+                                this.l.add(aVar.c);
+                                this.j.add(aVar.c);
                             } else {
-                                this.k.add(c6341a.c);
-                                this.i.add(c6341a.c);
+                                this.k.add(aVar.c);
+                                this.i.add(aVar.c);
                             }
                             if (i == size - 1) {
                                 this.h = true;
@@ -185,9 +184,8 @@ public class SerialTaskManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamic.tempate.SerialTaskManager$a */
     /* loaded from: classes12.dex */
-    public static final class C6341a {
+    public static final class a {
         public String a;
         public String b;
         public DinamicTemplate c;
@@ -196,10 +194,10 @@ public class SerialTaskManager {
             if (this == obj) {
                 return true;
             }
-            if (obj == null || C6341a.class != obj.getClass()) {
+            if (obj == null || a.class != obj.getClass()) {
                 return false;
             }
-            return TextUtils.equals(this.a, ((C6341a) obj).a);
+            return TextUtils.equals(this.a, ((a) obj).a);
         }
 
         public int hashCode() {

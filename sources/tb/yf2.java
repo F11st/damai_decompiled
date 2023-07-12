@@ -2,15 +2,13 @@ package tb;
 
 import android.view.View;
 import cn.damai.category.category.ui.StarFragment;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
-public class yf2 extends C0528b {
+public class yf2 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final String PAGE_STAR_ARTIST = "ace_artist";
     public static final String PAGE_STAR_FOLLOW = "ace_myfollow";
@@ -29,7 +27,7 @@ public class yf2 extends C0528b {
         hashMap.put("artist_id", str2);
         hashMap.put("status", str3);
         yf2 yf2Var = b;
-        C0529c.e().x(yf2Var.e(str4, "artist_card_" + i, StarFragment.KEY_FOLLOW, hashMap, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(yf2Var.e(str4, "artist_card_" + i, StarFragment.KEY_FOLLOW, hashMap, Boolean.FALSE));
     }
 
     public static void g(boolean z, int i, String str, String str2, String str3) {
@@ -44,7 +42,7 @@ public class yf2 extends C0528b {
         hashMap.put("item_id", str2);
         hashMap.put("titlelabel", str3);
         yf2 yf2Var = b;
-        C0529c.e().x(yf2Var.e(str4, "artist_card_" + i, "item", hashMap, Boolean.TRUE));
+        cn.damai.common.user.c.e().x(yf2Var.e(str4, "artist_card_" + i, "item", hashMap, Boolean.TRUE));
     }
 
     public static void h(boolean z, int i, String str, String str2, String str3) {
@@ -59,7 +57,7 @@ public class yf2 extends C0528b {
         hashMap.put("artist_id", str2);
         hashMap.put("titlelabel", str3);
         yf2 yf2Var = b;
-        C0529c.e().x(yf2Var.e(str4, "artist_card_" + i, "card", hashMap, Boolean.TRUE));
+        cn.damai.common.user.c.e().x(yf2Var.e(str4, "artist_card_" + i, "card", hashMap, Boolean.TRUE));
     }
 
     public static void i(boolean z, int i, int i2, String str, String str2, String str3) {
@@ -73,7 +71,7 @@ public class yf2 extends C0528b {
         hashMap.put("usercode", str);
         hashMap.put("item_id", str2);
         hashMap.put("titlelabel", str3);
-        C0529c.e().x(b.e(str4, "artist_card_" + i, "tour_item_" + i2, hashMap, Boolean.TRUE));
+        cn.damai.common.user.c.e().x(b.e(str4, "artist_card_" + i, "tour_item_" + i2, hashMap, Boolean.TRUE));
     }
 
     public static void j(boolean z, View view, int i, String str, String str2, String str3) {
@@ -87,7 +85,7 @@ public class yf2 extends C0528b {
         hashMap.put("usercode", str);
         hashMap.put("artist_id", str2);
         hashMap.put("titlelabel", str3);
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         e.G(view, "card", "artist_card_" + i, str4, hashMap);
     }
 
@@ -102,7 +100,7 @@ public class yf2 extends C0528b {
         hashMap.put("usercode", str);
         hashMap.put("item_id", str2);
         hashMap.put("titlelabel", str3);
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         e.G(view, "item", "artist_card_" + i, str4, hashMap);
     }
 }

@@ -151,8 +151,8 @@ public class AspectRatio implements Parcelable, Comparable<AspectRatio> {
         return c() - aspectRatio.c() > 0.0f ? 1 : -1;
     }
 
-    private boolean a(C3766a c3766a) {
-        int b = b(c3766a.a, c3766a.b);
-        return this.b == c3766a.a / b && this.c == c3766a.b / b;
+    private boolean a(a aVar) {
+        int b = b(aVar.a, aVar.b);
+        return this.b == aVar.a / b && this.c == aVar.b / b;
     }
 }

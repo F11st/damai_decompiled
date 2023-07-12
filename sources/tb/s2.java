@@ -33,9 +33,8 @@ public final class s2 implements IACCSConfigProvider {
     private final HashMap<String, String> g;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.s2$a */
     /* loaded from: classes6.dex */
-    public /* synthetic */ class C9672a {
+    public /* synthetic */ class a {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -86,7 +85,7 @@ public final class s2 implements IACCSConfigProvider {
             return (String) ipChange.ipc$dispatch("2035331887", new Object[]{this});
         }
         AppConfig.EnvMode g = AppConfig.g();
-        if ((g == null ? -1 : C9672a.$EnumSwitchMapping$0[g.ordinal()]) == 1) {
+        if ((g == null ? -1 : a.$EnumSwitchMapping$0[g.ordinal()]) == 1) {
             String f = AppConfig.f();
             b41.h(f, "{\n                AppCon…tDebugKey()\n            }");
             return f;
@@ -111,7 +110,7 @@ public final class s2 implements IACCSConfigProvider {
             return (String) ipChange.ipc$dispatch("-1783379088", new Object[]{this});
         }
         AppConfig.EnvMode g = AppConfig.g();
-        int i = g == null ? -1 : C9672a.$EnumSwitchMapping$0[g.ordinal()];
+        int i = g == null ? -1 : a.$EnumSwitchMapping$0[g.ordinal()];
         if (i != 1) {
             if (i != 2) {
                 return this.b;
@@ -128,9 +127,9 @@ public final class s2 implements IACCSConfigProvider {
         if (AndroidInstantRuntime.support(ipChange, "-1400767932")) {
             return (Context) ipChange.ipc$dispatch("-1400767932", new Object[]{this});
         }
-        Application a = mu0.a();
-        b41.h(a, "getApplication()");
-        return a;
+        Application a2 = mu0.a();
+        b41.h(a2, "getApplication()");
+        return a2;
     }
 
     @Override // com.alibaba.pictures.accs.IACCSConfigProvider
@@ -141,7 +140,7 @@ public final class s2 implements IACCSConfigProvider {
             return (ACCSEnvMode) ipChange.ipc$dispatch("1453437186", new Object[]{this});
         }
         AppConfig.EnvMode g = AppConfig.g();
-        int i = g == null ? -1 : C9672a.$EnumSwitchMapping$0[g.ordinal()];
+        int i = g == null ? -1 : a.$EnumSwitchMapping$0[g.ordinal()];
         if (i != 1) {
             if (i != 2) {
                 return ACCSEnvMode.RELEASE;
@@ -159,7 +158,7 @@ public final class s2 implements IACCSConfigProvider {
             return (String) ipChange.ipc$dispatch("605669545", new Object[]{this});
         }
         AppConfig.EnvMode g = AppConfig.g();
-        int i = g == null ? -1 : C9672a.$EnumSwitchMapping$0[g.ordinal()];
+        int i = g == null ? -1 : a.$EnumSwitchMapping$0[g.ordinal()];
         if (i != 1) {
             if (i != 2) {
                 return this.a;

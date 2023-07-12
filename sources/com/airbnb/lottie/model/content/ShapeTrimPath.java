@@ -1,9 +1,8 @@
 package com.airbnb.lottie.model.content;
 
 import com.airbnb.lottie.LottieDrawable;
-import com.airbnb.lottie.animation.content.C2842n;
 import com.airbnb.lottie.animation.content.Content;
-import com.airbnb.lottie.model.layer.AbstractC2872a;
+import com.airbnb.lottie.animation.content.n;
 import tb.k5;
 
 /* compiled from: Taobao */
@@ -67,8 +66,8 @@ public class ShapeTrimPath implements ContentModel {
     }
 
     @Override // com.airbnb.lottie.model.content.ContentModel
-    public Content toContent(LottieDrawable lottieDrawable, AbstractC2872a abstractC2872a) {
-        return new C2842n(abstractC2872a, this);
+    public Content toContent(LottieDrawable lottieDrawable, com.airbnb.lottie.model.layer.a aVar) {
+        return new n(aVar, this);
     }
 
     public String toString() {

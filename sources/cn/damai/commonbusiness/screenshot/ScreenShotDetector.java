@@ -53,7 +53,7 @@ public class ScreenShotDetector {
     private ContentObserver d = null;
     private boolean h = true;
     private boolean i = true;
-    Handler j = new HandlerC0797b();
+    Handler j = new b();
     private String[] k = {"_data", "date_added"};
     private String[] l = {"image/png", "image/jpeg"};
     private ScreenShotBean m = new ScreenShotBean();
@@ -72,12 +72,11 @@ public class ScreenShotDetector {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.screenshot.ScreenShotDetector$a */
     /* loaded from: classes4.dex */
-    public class C0796a extends C0798c {
+    public class a extends c {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0796a(Handler handler, Context context) {
+        a(Handler handler, Context context) {
             super(handler, context);
         }
 
@@ -96,12 +95,11 @@ public class ScreenShotDetector {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.screenshot.ScreenShotDetector$b */
     /* loaded from: classes4.dex */
-    public class HandlerC0797b extends Handler {
+    public class b extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC0797b() {
+        b() {
         }
 
         @Override // android.os.Handler
@@ -126,10 +124,9 @@ public class ScreenShotDetector {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.screenshot.ScreenShotDetector$c */
     /* loaded from: classes4.dex */
-    public static class C0798c extends ContentObserver {
-        public C0798c(Handler handler, Context context) {
+    public static class c extends ContentObserver {
+        public c(Handler handler, Context context) {
             super(handler);
             new WeakReference(context);
         }
@@ -145,8 +142,8 @@ public class ScreenShotDetector {
             if (j2.b() && this.h) {
                 return;
             }
-            final Activity a = j2.a();
-            a.runOnUiThread(new Runnable() { // from class: cn.damai.commonbusiness.screenshot.ScreenShotDetector.3
+            final Activity a2 = j2.a();
+            a2.runOnUiThread(new Runnable() { // from class: cn.damai.commonbusiness.screenshot.ScreenShotDetector.3
                 private static transient /* synthetic */ IpChange $ipChange;
 
                 @Override // java.lang.Runnable
@@ -155,7 +152,7 @@ public class ScreenShotDetector {
                     if (AndroidInstantRuntime.support(ipChange2, "-1702230841")) {
                         ipChange2.ipc$dispatch("-1702230841", new Object[]{this});
                     } else {
-                        ScreenShotDetector.this.s(a, str);
+                        ScreenShotDetector.this.s(a2, str);
                     }
                 }
             });
@@ -328,11 +325,11 @@ public class ScreenShotDetector {
             return;
         }
         r(str);
-        Activity c = k3.b().c();
-        if (c != null) {
+        Activity c2 = k3.b().c();
+        if (c2 != null) {
             IScreenShotExtraListener iScreenShotExtraListener = this.g;
             if (iScreenShotExtraListener != null) {
-                iScreenShotExtraListener.onDetected(str, c);
+                iScreenShotExtraListener.onDetected(str, c2);
             }
         } else {
             IScreenShotExtraListener iScreenShotExtraListener2 = this.g;
@@ -465,9 +462,9 @@ public class ScreenShotDetector {
         this.a.clear();
         this.e = context.getApplicationContext();
         this.c = mu0.a().getContentResolver();
-        C0796a c0796a = new C0796a(null, context);
-        this.d = c0796a;
-        this.c.registerContentObserver(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, true, c0796a);
+        a aVar = new a(null, context);
+        this.d = aVar;
+        this.c.registerContentObserver(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, true, aVar);
         this.c.registerContentObserver(MediaStore.Images.Media.INTERNAL_CONTENT_URI, true, this.d);
     }
 
@@ -515,9 +512,9 @@ public class ScreenShotDetector {
             this.m = new ScreenShotBean();
         }
         this.m.clear();
-        Activity c = k3.b().c();
-        if (c != null) {
-            String name = c.getClass().getName();
+        Activity c2 = k3.b().c();
+        if (c2 != null) {
+            String name = c2.getClass().getName();
             if (!TextUtils.isEmpty(name)) {
                 this.m.put("fromPage", name);
                 String[] split = name.split("\\.");
@@ -525,7 +522,7 @@ public class ScreenShotDetector {
                     this.m.put("module", split[2]);
                 }
             }
-            Bundle extras = c.getIntent() != null ? c.getIntent().getExtras() : null;
+            Bundle extras = c2.getIntent() != null ? c2.getIntent().getExtras() : null;
             if (extras != null && (keySet = extras.keySet()) != null) {
                 for (String str2 : keySet) {
                     Object obj = extras.get(str2);

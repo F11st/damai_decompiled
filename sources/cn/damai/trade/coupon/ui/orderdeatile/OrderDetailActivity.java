@@ -12,8 +12,8 @@ import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.trade.R$color;
@@ -47,7 +47,7 @@ import tb.pp2;
 public final class OrderDetailActivity extends SimpleBaseActivity {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C2135a Companion = new C2135a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final String ERROR_CODE_ORDER_HAS_PAY = "MAPIE98087";
     @NotNull
@@ -65,24 +65,22 @@ public final class OrderDetailActivity extends SimpleBaseActivity {
     private int mFromPage = this.FROM_ORDER_LIST;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.coupon.ui.orderdeatile.OrderDetailActivity$a */
     /* loaded from: classes16.dex */
-    public static final class C2135a {
-        private C2135a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C2135a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.coupon.ui.orderdeatile.OrderDetailActivity$b */
     /* loaded from: classes8.dex */
-    public static final class C2136b implements OrderDetailListener {
+    public static final class b implements OrderDetailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2136b() {
+        b() {
         }
 
         /* JADX INFO: Access modifiers changed from: private */
@@ -123,7 +121,7 @@ public final class OrderDetailActivity extends SimpleBaseActivity {
             dMDialog.n("确定", new DialogInterface.OnClickListener() { // from class: tb.xn1
                 @Override // android.content.DialogInterface.OnClickListener
                 public final void onClick(DialogInterface dialogInterface, int i) {
-                    OrderDetailActivity.C2136b.c(OrderDetailActivity.this, dialogInterface, i);
+                    OrderDetailActivity.b.c(OrderDetailActivity.this, dialogInterface, i);
                 }
             });
             dMDialog.show();
@@ -193,7 +191,7 @@ public final class OrderDetailActivity extends SimpleBaseActivity {
             dMDialog.n("我知道了", new DialogInterface.OnClickListener() { // from class: tb.yn1
                 @Override // android.content.DialogInterface.OnClickListener
                 public final void onClick(DialogInterface dialogInterface, int i) {
-                    OrderDetailActivity.C2136b.d(dialogInterface, i);
+                    OrderDetailActivity.b.d(dialogInterface, i);
                 }
             });
             dMDialog.show();
@@ -207,7 +205,7 @@ public final class OrderDetailActivity extends SimpleBaseActivity {
             return;
         }
         OrderDetailFragment orderDetailFragment = new OrderDetailFragment();
-        orderDetailFragment.setListener(new C2136b());
+        orderDetailFragment.setListener(new b());
         Bundle bundle = new Bundle();
         String str = this.mOrderId;
         if (str != null) {
@@ -226,8 +224,8 @@ public final class OrderDetailActivity extends SimpleBaseActivity {
             ipChange.ipc$dispatch("-429096025", new Object[]{this});
             return;
         }
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i(pp2.PROJECT_SCRIPTKILL_ORDRR_DETAILS_PAGE));
-        C0529c.e().K(this);
+        setDamaiUTKeyBuilder(new a.b().i(pp2.PROJECT_SCRIPTKILL_ORDRR_DETAILS_PAGE));
+        c.e().K(this);
     }
 
     private final void backOrderListPage() {

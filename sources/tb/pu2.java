@@ -17,7 +17,6 @@ import android.util.Log;
 import androidx.core.net.ConnectivityManagerCompat;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.alipay.sdk.m.k.C4226b;
 import com.taobao.update.datasource.UpdateDataSource;
 import com.taobao.update.datasource.local.UpdateInfo;
 import com.taobao.update.framework.UpdateRuntime;
@@ -35,10 +34,9 @@ public class pu2 {
     public static String sCurrentProcessName;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.pu2$a */
     /* loaded from: classes11.dex */
-    class C9569a implements FileFilter {
-        C9569a() {
+    class a implements FileFilter {
+        a() {
         }
 
         @Override // java.io.FileFilter
@@ -65,7 +63,7 @@ public class pu2 {
         }
         UpdateInfo updateInfo = new UpdateInfo();
         updateInfo.appVersion = getVersionName();
-        String string = jSONObject.containsKey(C4226b.l) ? jSONObject.getString(C4226b.l) : null;
+        String string = jSONObject.containsKey(com.alipay.sdk.m.k.b.l) ? jSONObject.getString(com.alipay.sdk.m.k.b.l) : null;
         if (string == null) {
             return null;
         }
@@ -153,7 +151,7 @@ public class pu2 {
 
     public static int getNumCores() {
         try {
-            File[] listFiles = new File("/sys/devices/system/cpu/").listFiles(new C9569a());
+            File[] listFiles = new File("/sys/devices/system/cpu/").listFiles(new a());
             Log.d("util", "CPU Count: " + listFiles.length);
             return listFiles.length;
         } catch (Exception e) {

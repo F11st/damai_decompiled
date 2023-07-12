@@ -4,12 +4,12 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.alibaba.fastjson.JSONObject;
-import tb.C9586q;
-import tb.C9833w;
+import tb.q;
+import tb.w;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
-public interface IAKPopRender<PARAMS extends C9833w, ABILITY_CONTEXT extends C9586q> {
+public interface IAKPopRender<PARAMS extends w, ABILITY_CONTEXT extends q> {
     public static final String BLOCK_CLOSE_EVENT_KEY = "std_pop_should_close";
     public static final String BLOCK_CLOSE_TYPE = "type";
 

@@ -3,9 +3,9 @@ package androidx.lifecycle;
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
 import kotlin.jvm.functions.Function2;
-import kotlinx.coroutines.C8658e;
 import kotlinx.coroutines.CoroutineScope;
 import kotlinx.coroutines.Job;
+import kotlinx.coroutines.e;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
 import tb.wt2;
@@ -20,18 +20,18 @@ public abstract class LifecycleCoroutineScope implements CoroutineScope {
     @NotNull
     public final Job launchWhenCreated(@NotNull Function2<? super CoroutineScope, ? super Continuation<? super wt2>, ? extends Object> function2) {
         b41.i(function2, "block");
-        return C8658e.b(this, null, null, new LifecycleCoroutineScope$launchWhenCreated$1(this, function2, null), 3, null);
+        return e.b(this, null, null, new LifecycleCoroutineScope$launchWhenCreated$1(this, function2, null), 3, null);
     }
 
     @NotNull
     public final Job launchWhenResumed(@NotNull Function2<? super CoroutineScope, ? super Continuation<? super wt2>, ? extends Object> function2) {
         b41.i(function2, "block");
-        return C8658e.b(this, null, null, new LifecycleCoroutineScope$launchWhenResumed$1(this, function2, null), 3, null);
+        return e.b(this, null, null, new LifecycleCoroutineScope$launchWhenResumed$1(this, function2, null), 3, null);
     }
 
     @NotNull
     public final Job launchWhenStarted(@NotNull Function2<? super CoroutineScope, ? super Continuation<? super wt2>, ? extends Object> function2) {
         b41.i(function2, "block");
-        return C8658e.b(this, null, null, new LifecycleCoroutineScope$launchWhenStarted$1(this, function2, null), 3, null);
+        return e.b(this, null, null, new LifecycleCoroutineScope$launchWhenStarted$1(this, function2, null), 3, null);
     }
 }

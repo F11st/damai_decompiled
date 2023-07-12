@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.Scheduler;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
@@ -221,16 +221,16 @@ public final class ObservableReplay<T> extends bn<T> implements HasUpstreamObser
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    public static final class MulticastReplay<R, U> extends AbstractC8149d<R> {
+    public static final class MulticastReplay<R, U> extends d<R> {
         private final Callable<? extends bn<U>> connectableFactory;
-        private final Function<? super AbstractC8149d<U>, ? extends ObservableSource<R>> selector;
+        private final Function<? super d<U>, ? extends ObservableSource<R>> selector;
 
-        MulticastReplay(Callable<? extends bn<U>> callable, Function<? super AbstractC8149d<U>, ? extends ObservableSource<R>> function) {
+        MulticastReplay(Callable<? extends bn<U>> callable, Function<? super d<U>, ? extends ObservableSource<R>> function) {
             this.connectableFactory = callable;
             this.selector = function;
         }
 
-        @Override // io.reactivex.AbstractC8149d
+        @Override // io.reactivex.d
         protected void subscribeActual(Observer<? super R> observer) {
             try {
                 bn bnVar = (bn) ObjectHelper.requireNonNull(this.connectableFactory.call(), "The connectableFactory returned a null ConnectableObservable");
@@ -262,11 +262,11 @@ public final class ObservableReplay<T> extends bn<T> implements HasUpstreamObser
     /* loaded from: classes3.dex */
     public static final class Replay<T> extends bn<T> {
         private final bn<T> co;
-        private final AbstractC8149d<T> observable;
+        private final d<T> observable;
 
-        Replay(bn<T> bnVar, AbstractC8149d<T> abstractC8149d) {
+        Replay(bn<T> bnVar, d<T> dVar) {
             this.co = bnVar;
-            this.observable = abstractC8149d;
+            this.observable = dVar;
         }
 
         @Override // tb.bn
@@ -274,7 +274,7 @@ public final class ObservableReplay<T> extends bn<T> implements HasUpstreamObser
             this.co.connect(consumer);
         }
 
-        @Override // io.reactivex.AbstractC8149d
+        @Override // io.reactivex.d
         protected void subscribeActual(Observer<? super T> observer) {
             this.observable.subscribe(observer);
         }
@@ -733,7 +733,7 @@ public final class ObservableReplay<T> extends bn<T> implements HasUpstreamObser
         return create(observableSource, DEFAULT_UNBOUNDED_FACTORY);
     }
 
-    public static <U, R> AbstractC8149d<R> multicastSelector(Callable<? extends bn<U>> callable, Function<? super AbstractC8149d<U>, ? extends ObservableSource<R>> function) {
+    public static <U, R> d<R> multicastSelector(Callable<? extends bn<U>> callable, Function<? super d<U>, ? extends ObservableSource<R>> function) {
         return i42.n(new MulticastReplay(callable, function));
     }
 
@@ -786,7 +786,7 @@ public final class ObservableReplay<T> extends bn<T> implements HasUpstreamObser
         return this.source;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super T> observer) {
         this.onSubscribe.subscribe(observer);
     }

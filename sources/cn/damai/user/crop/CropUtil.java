@@ -27,7 +27,7 @@ public class CropUtil {
 
     /* compiled from: Taobao */
     /* loaded from: classes9.dex */
-    public static class BackgroundJob extends MonitoredActivity.C2684a implements Runnable {
+    public static class BackgroundJob extends MonitoredActivity.a implements Runnable {
         private static transient /* synthetic */ IpChange $ipChange;
         private final MonitoredActivity activity;
         private final Runnable cleanupRunner = new Runnable() { // from class: cn.damai.user.crop.CropUtil.BackgroundJob.1
@@ -58,7 +58,7 @@ public class CropUtil {
             this.handler = handler;
         }
 
-        @Override // cn.damai.user.crop.MonitoredActivity.C2684a, cn.damai.user.crop.MonitoredActivity.LifeCycleListener
+        @Override // cn.damai.user.crop.MonitoredActivity.a, cn.damai.user.crop.MonitoredActivity.LifeCycleListener
         public void onActivityDestroyed(MonitoredActivity monitoredActivity) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1337011884")) {
@@ -69,7 +69,7 @@ public class CropUtil {
             this.handler.removeCallbacks(this.cleanupRunner);
         }
 
-        @Override // cn.damai.user.crop.MonitoredActivity.C2684a, cn.damai.user.crop.MonitoredActivity.LifeCycleListener
+        @Override // cn.damai.user.crop.MonitoredActivity.a, cn.damai.user.crop.MonitoredActivity.LifeCycleListener
         public void onActivityStarted(MonitoredActivity monitoredActivity) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-221810172")) {
@@ -79,7 +79,7 @@ public class CropUtil {
             }
         }
 
-        @Override // cn.damai.user.crop.MonitoredActivity.C2684a, cn.damai.user.crop.MonitoredActivity.LifeCycleListener
+        @Override // cn.damai.user.crop.MonitoredActivity.a, cn.damai.user.crop.MonitoredActivity.LifeCycleListener
         public void onActivityStopped(MonitoredActivity monitoredActivity) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-698481096")) {

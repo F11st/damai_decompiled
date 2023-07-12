@@ -14,15 +14,14 @@ public final class ControllerButtonEvent extends ControllerEvent {
     public static final int BUTTON_NONE = 0;
     public static final int BUTTON_VOLUME_DOWN = 6;
     public static final int BUTTON_VOLUME_UP = 5;
-    public static final Parcelable.Creator<ControllerButtonEvent> CREATOR = new C5440a();
+    public static final Parcelable.Creator<ControllerButtonEvent> CREATOR = new a();
     public int button;
     public boolean down;
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.vrcore.controller.api.ControllerButtonEvent$a */
     /* loaded from: classes10.dex */
-    class C5440a implements Parcelable.Creator<ControllerButtonEvent> {
-        C5440a() {
+    class a implements Parcelable.Creator<ControllerButtonEvent> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

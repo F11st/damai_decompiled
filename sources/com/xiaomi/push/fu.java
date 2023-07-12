@@ -1,6 +1,5 @@
 package com.xiaomi.push;
 
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.dx;
 import com.xiaomi.push.fw;
 import java.text.SimpleDateFormat;
@@ -20,8 +19,8 @@ public class fu implements gi {
     private SimpleDateFormat f392a = new SimpleDateFormat("hh:mm:ss aaa");
 
     /* renamed from: a  reason: collision with other field name */
-    private C7659a f388a = null;
-    private C7659a b = null;
+    private a f388a = null;
+    private a b = null;
 
     /* renamed from: a  reason: collision with other field name */
     private fz f390a = null;
@@ -31,9 +30,8 @@ public class fu implements gi {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.fu$a */
     /* loaded from: classes11.dex */
-    public class C7659a implements gb, gj {
+    public class a implements gb, gj {
 
         /* renamed from: a  reason: collision with other field name */
         String f393a;
@@ -41,7 +39,7 @@ public class fu implements gi {
         /* renamed from: a  reason: collision with other field name */
         private boolean f394a;
 
-        C7659a(boolean z) {
+        a(boolean z) {
             this.f394a = true;
             this.f394a = z;
             this.f393a = z ? " RCV " : " Sent ";
@@ -71,7 +69,7 @@ public class fu implements gi {
                 str = jn1.ARRAY_END_STR;
             }
             sb.append(str);
-            AbstractC7535b.c(sb.toString());
+            com.xiaomi.channel.commonutils.logger.b.c(sb.toString());
             if (flVar == null || flVar.a() != 99999) {
                 return;
             }
@@ -79,14 +77,14 @@ public class fu implements gi {
             fl flVar2 = null;
             if (!this.f394a) {
                 if ("BIND".equals(m888a)) {
-                    AbstractC7535b.m586a("build binded result for loopback.");
-                    dx.C7638d c7638d = new dx.C7638d();
-                    c7638d.a(true);
-                    c7638d.c("login success.");
-                    c7638d.b("success");
-                    c7638d.a("success");
+                    com.xiaomi.channel.commonutils.logger.b.m586a("build binded result for loopback.");
+                    dx.d dVar = new dx.d();
+                    dVar.a(true);
+                    dVar.c("login success.");
+                    dVar.b("success");
+                    dVar.a("success");
                     fl flVar3 = new fl();
-                    flVar3.a(c7638d.m852a(), (String) null);
+                    flVar3.a(dVar.m852a(), (String) null);
                     flVar3.a((short) 2);
                     flVar3.a(99999);
                     flVar3.a("BIND", (String) null);
@@ -107,7 +105,7 @@ public class fu implements gi {
                 }
             }
             if (flVar2 != null) {
-                for (Map.Entry<gb, fw.C7660a> entry : fu.this.f389a.m911a().entrySet()) {
+                for (Map.Entry<gb, fw.a> entry : fu.this.f389a.m911a().entrySet()) {
                     if (fu.this.f388a != entry.getKey()) {
                         entry.getValue().a(flVar2);
                     }
@@ -138,7 +136,7 @@ public class fu implements gi {
                 str = jn1.ARRAY_END_STR;
             }
             sb.append(str);
-            AbstractC7535b.c(sb.toString());
+            com.xiaomi.channel.commonutils.logger.b.c(sb.toString());
         }
 
         @Override // com.xiaomi.push.gj
@@ -155,14 +153,14 @@ public class fu implements gi {
     }
 
     private void a() {
-        this.f388a = new C7659a(true);
-        this.b = new C7659a(false);
+        this.f388a = new a(true);
+        this.b = new a(false);
         fw fwVar = this.f389a;
-        C7659a c7659a = this.f388a;
-        fwVar.a(c7659a, c7659a);
+        a aVar = this.f388a;
+        fwVar.a(aVar, aVar);
         fw fwVar2 = this.f389a;
-        C7659a c7659a2 = this.b;
-        fwVar2.b(c7659a2, c7659a2);
+        a aVar2 = this.b;
+        fwVar2.b(aVar2, aVar2);
         this.f390a = new fv(this);
     }
 }

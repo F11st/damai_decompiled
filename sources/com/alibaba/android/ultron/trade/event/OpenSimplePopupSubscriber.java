@@ -8,7 +8,6 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.taobao.android.ultron.common.model.IDMComponent;
-import com.taobao.android.ultron.datamodel.imp.C6661a;
 import com.taobao.android.ultron.datamodel.imp.DMComponent;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -36,12 +35,11 @@ public class OpenSimplePopupSubscriber extends ib {
     protected String l = DEFAULT_BODY_TEMPLATE_NAME;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.ultron.trade.event.OpenSimplePopupSubscriber$a */
     /* loaded from: classes6.dex */
-    class C3257a implements PopupWindowManager.OnCancelListener {
+    class a implements PopupWindowManager.OnCancelListener {
         final /* synthetic */ np2 a;
 
-        C3257a(OpenSimplePopupSubscriber openSimplePopupSubscriber, np2 np2Var) {
+        a(OpenSimplePopupSubscriber openSimplePopupSubscriber, np2 np2Var) {
             this.a = np2Var;
         }
 
@@ -65,17 +63,17 @@ public class OpenSimplePopupSubscriber extends ib {
         h30Var.h(r);
         h30Var.e(p);
         h30Var.g(q);
-        this.c.getViewManager().showPopup(h30Var, (OpenPopupWindowEventModel) null, new C3257a(this, np2Var));
+        this.c.getViewManager().showPopup(h30Var, (OpenPopupWindowEventModel) null, new a(this, np2Var));
         this.c.getTradeEventHandler().n(np2Var);
     }
 
-    protected DMComponent m(JSONObject jSONObject, C6661a c6661a, String str) {
+    protected DMComponent m(JSONObject jSONObject, com.taobao.android.ultron.datamodel.imp.a aVar, String str) {
         JSONObject jSONObject2;
         String str2;
-        if (c6661a == null || TextUtils.isEmpty(str)) {
+        if (aVar == null || TextUtils.isEmpty(str)) {
             return null;
         }
-        Iterator<JSONObject> it = c6661a.o().values().iterator();
+        Iterator<JSONObject> it = aVar.o().values().iterator();
         while (true) {
             if (!it.hasNext()) {
                 jSONObject2 = null;
@@ -103,12 +101,12 @@ public class OpenSimplePopupSubscriber extends ib {
         return new DMComponent(jSONObject, str2, jSONObject2, null);
     }
 
-    protected DMComponent n(JSONObject jSONObject, C6661a c6661a, String str) {
+    protected DMComponent n(JSONObject jSONObject, com.taobao.android.ultron.datamodel.imp.a aVar, String str) {
         String str2;
-        if (c6661a == null) {
+        if (aVar == null) {
             return null;
         }
-        JSONObject jSONObject2 = c6661a.o().get(str);
+        JSONObject jSONObject2 = aVar.o().get(str);
         if (jSONObject2 != null) {
             str2 = jSONObject2.getString("containerType");
         } else {
@@ -121,7 +119,7 @@ public class OpenSimplePopupSubscriber extends ib {
     protected DMComponent o() {
         JSONObject jSONObject = new JSONObject();
         jSONObject.put("type", "block$null$emptyBlock");
-        return n(jSONObject, (C6661a) this.d, "block$null$emptyBlock");
+        return n(jSONObject, (com.taobao.android.ultron.datamodel.imp.a) this.d, "block$null$emptyBlock");
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -170,9 +168,9 @@ public class OpenSimplePopupSubscriber extends ib {
                     jSONObject3.put("id", (Object) string2);
                 }
                 if (TextUtils.isEmpty(string3)) {
-                    dMComponent = m(jSONObject3, (C6661a) this.d, this.l);
+                    dMComponent = m(jSONObject3, (com.taobao.android.ultron.datamodel.imp.a) this.d, this.l);
                 } else {
-                    dMComponent = n(jSONObject3, (C6661a) this.d, string3);
+                    dMComponent = n(jSONObject3, (com.taobao.android.ultron.datamodel.imp.a) this.d, string3);
                 }
                 dMComponent.setParent(o);
                 o.addChild(dMComponent);
@@ -189,9 +187,9 @@ public class OpenSimplePopupSubscriber extends ib {
         jSONObject2.put("fields", (Object) jSONObject);
         jSONObject2.put("type", (Object) string);
         if (TextUtils.isEmpty(string)) {
-            n = m(jSONObject2, (C6661a) this.d, this.j);
+            n = m(jSONObject2, (com.taobao.android.ultron.datamodel.imp.a) this.d, this.j);
         } else {
-            n = n(jSONObject2, (C6661a) this.d, string);
+            n = n(jSONObject2, (com.taobao.android.ultron.datamodel.imp.a) this.d, string);
         }
         return new ArrayList<IDMComponent>(n) { // from class: com.alibaba.android.ultron.trade.event.OpenSimplePopupSubscriber.3
             final /* synthetic */ DMComponent val$footerComponent;
@@ -210,9 +208,9 @@ public class OpenSimplePopupSubscriber extends ib {
         jSONObject2.put("fields", (Object) jSONObject);
         jSONObject2.put("type", (Object) string);
         if (TextUtils.isEmpty(string)) {
-            n = m(jSONObject2, (C6661a) this.d, this.k);
+            n = m(jSONObject2, (com.taobao.android.ultron.datamodel.imp.a) this.d, this.k);
         } else {
-            n = n(jSONObject2, (C6661a) this.d, string);
+            n = n(jSONObject2, (com.taobao.android.ultron.datamodel.imp.a) this.d, string);
         }
         return new ArrayList<IDMComponent>(n) { // from class: com.alibaba.android.ultron.trade.event.OpenSimplePopupSubscriber.2
             final /* synthetic */ DMComponent val$headerComponent;

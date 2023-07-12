@@ -1,8 +1,5 @@
 package com.xiaomi.push.service;
 
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
-import com.xiaomi.push.C7613bm;
-
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class bp {
@@ -76,7 +73,7 @@ public class bp {
             if (this.f937a[1] != 0) {
                 sb.append("   S[1]!=0");
             }
-            AbstractC7535b.m586a(sb.toString());
+            com.xiaomi.channel.commonutils.logger.b.m586a(sb.toString());
         }
     }
 
@@ -91,7 +88,7 @@ public class bp {
     }
 
     public static byte[] a(String str, String str2) {
-        byte[] m701a = C7613bm.m701a(str);
+        byte[] m701a = com.xiaomi.push.bm.m701a(str);
         byte[] bytes = str2.getBytes();
         byte[] bArr = new byte[m701a.length + 1 + bytes.length];
         for (int i = 0; i < m701a.length; i++) {
@@ -105,7 +102,7 @@ public class bp {
     }
 
     public static byte[] a(byte[] bArr, String str) {
-        return a(bArr, C7613bm.m701a(str));
+        return a(bArr, com.xiaomi.push.bm.m701a(str));
     }
 
     public static byte[] a(byte[] bArr, byte[] bArr2) {

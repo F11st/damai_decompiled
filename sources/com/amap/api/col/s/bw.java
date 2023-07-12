@@ -59,7 +59,7 @@ public final class bw {
     }
 
     public static bv b() throws bj {
-        return new bv.C4400a("co", "1.0.0", "AMap_co_1.0.0").a(new String[]{"com.amap.co", "com.amap.opensdk.co", "com.amap.location"}).a();
+        return new bv.a("co", "1.0.0", "AMap_co_1.0.0").a(new String[]{"com.amap.co", "com.amap.opensdk.co", "com.amap.location"}).a();
     }
 
     public static String c(String str) {
@@ -482,7 +482,7 @@ public final class bw {
     }
 
     public static bv a() throws bj {
-        return new bv.C4400a("collection", "1.0", "AMap_collection_1.0").a(new String[]{"com.amap.api.collection"}).a();
+        return new bv.a("collection", "1.0", "AMap_collection_1.0").a(new String[]{"com.amap.api.collection"}).a();
     }
 
     public static void a(ByteArrayOutputStream byteArrayOutputStream, String str) {

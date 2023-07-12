@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import io.reactivex.FlowableSubscriber;
-import io.reactivex.disposables.C8151a;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.disposables.a;
 import io.reactivex.functions.Consumer;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -152,7 +152,7 @@ public final class FlowableRefCount<T> extends AbstractFlowableWithUpstream<T, T
     }
 
     private Disposable disconnect(jm jmVar) {
-        return C8151a.c(new DisposeTask(jmVar));
+        return a.c(new DisposeTask(jmVar));
     }
 
     private Consumer<Disposable> onSubscribe(Subscriber<? super T> subscriber, AtomicBoolean atomicBoolean) {
@@ -165,7 +165,7 @@ public final class FlowableRefCount<T> extends AbstractFlowableWithUpstream<T, T
         this.source.subscribe((FlowableSubscriber) connectionSubscriber);
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super T> subscriber) {
         boolean z;
         this.lock.lock();

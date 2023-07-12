@@ -53,10 +53,9 @@ public class InputDialog extends BaseDialog {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.widget.InputDialog$a */
     /* loaded from: classes11.dex */
-    public class View$OnClickListenerC7031a implements View.OnClickListener {
-        View$OnClickListenerC7031a() {
+    public class a implements View.OnClickListener {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -70,10 +69,9 @@ public class InputDialog extends BaseDialog {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.widget.InputDialog$b */
     /* loaded from: classes11.dex */
-    public class View$OnClickListenerC7032b implements View.OnClickListener {
-        View$OnClickListenerC7032b() {
+    public class b implements View.OnClickListener {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -105,8 +103,8 @@ public class InputDialog extends BaseDialog {
             return;
         }
         this.r.setVisibility(0);
-        this.r.setNegativeButton(this.m, new View$OnClickListenerC7031a());
-        this.r.setPositiveButton(this.l, new View$OnClickListenerC7032b());
+        this.r.setNegativeButton(this.m, new a());
+        this.r.setPositiveButton(this.l, new b());
         this.r.setButtonLayout(1);
         this.r.renderView();
     }

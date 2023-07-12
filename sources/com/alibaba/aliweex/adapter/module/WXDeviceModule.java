@@ -29,13 +29,12 @@ public class WXDeviceModule extends WXModule {
     private Hashtable<JSCallback, Long> lastUpdateTimes = new Hashtable<>();
     private HashMap datasMap = new HashMap();
     private int sensorSpeed = 3;
-    final SensorEventListener sensorEventListener = new C3047a();
+    final SensorEventListener sensorEventListener = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.module.WXDeviceModule$a */
     /* loaded from: classes15.dex */
-    class C3047a implements SensorEventListener {
-        C3047a() {
+    class a implements SensorEventListener {
+        a() {
         }
 
         @Override // android.hardware.SensorEventListener

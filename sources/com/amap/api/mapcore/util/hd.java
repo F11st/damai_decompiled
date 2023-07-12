@@ -18,11 +18,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public class hd extends C4573ha implements Thread.UncaughtExceptionHandler {
+public class hd extends ha implements Thread.UncaughtExceptionHandler {
     private static ExecutorService e;
     private static WeakReference<Context> g;
     private Context d;
-    private List<InterfaceC4574a> i;
+    private List<a> i;
     private static Set<Integer> f = Collections.synchronizedSet(new HashSet());
     private static final ThreadFactory h = new ThreadFactory() { // from class: com.amap.api.mapcore.util.hd.2
         private final AtomicInteger a = new AtomicInteger(1);
@@ -34,9 +34,8 @@ public class hd extends C4573ha implements Thread.UncaughtExceptionHandler {
     };
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.hd$a */
     /* loaded from: classes10.dex */
-    public interface InterfaceC4574a {
+    public interface a {
         void a(Thread thread, Throwable th);
     }
 
@@ -54,14 +53,14 @@ public class hd extends C4573ha implements Thread.UncaughtExceptionHandler {
                     executorService.shutdown();
                 }
                 hy.a();
-                if (C4573ha.a != null) {
+                if (ha.a != null) {
                     Thread.UncaughtExceptionHandler defaultUncaughtExceptionHandler = Thread.getDefaultUncaughtExceptionHandler();
-                    C4573ha c4573ha = C4573ha.a;
-                    if (defaultUncaughtExceptionHandler == c4573ha && (uncaughtExceptionHandler = c4573ha.b) != null) {
+                    ha haVar = ha.a;
+                    if (defaultUncaughtExceptionHandler == haVar && (uncaughtExceptionHandler = haVar.b) != null) {
                         Thread.setDefaultUncaughtExceptionHandler(uncaughtExceptionHandler);
                     }
                 }
-                C4573ha.a = null;
+                ha.a = null;
             }
         }
     }
@@ -72,9 +71,9 @@ public class hd extends C4573ha implements Thread.UncaughtExceptionHandler {
             hb.a(g.get());
             return;
         }
-        C4573ha c4573ha = C4573ha.a;
-        if (c4573ha != null) {
-            c4573ha.a();
+        ha haVar = ha.a;
+        if (haVar != null) {
+            haVar.a();
         }
     }
 
@@ -96,7 +95,7 @@ public class hd extends C4573ha implements Thread.UncaughtExceptionHandler {
     public static synchronized hd e() {
         hd hdVar;
         synchronized (hd.class) {
-            hdVar = (hd) C4573ha.a;
+            hdVar = (hd) ha.a;
         }
         return hdVar;
     }
@@ -155,17 +154,17 @@ public class hd extends C4573ha implements Thread.UncaughtExceptionHandler {
                 if (gmVar != null) {
                     if (gmVar.a() != null && !"".equals(gmVar.a())) {
                         if (!f.add(Integer.valueOf(gmVar.hashCode()))) {
-                            return (hd) C4573ha.a;
+                            return (hd) ha.a;
                         }
-                        C4573ha c4573ha = C4573ha.a;
-                        if (c4573ha == null) {
-                            C4573ha.a = new hd(context, gmVar);
+                        ha haVar = ha.a;
+                        if (haVar == null) {
+                            ha.a = new hd(context, gmVar);
                         } else {
-                            c4573ha.c = false;
+                            haVar.c = false;
                         }
-                        C4573ha c4573ha2 = C4573ha.a;
-                        c4573ha2.a(context, gmVar, c4573ha2.c);
-                        return (hd) C4573ha.a;
+                        ha haVar2 = ha.a;
+                        haVar2.a(context, gmVar, haVar2.c);
+                        return (hd) ha.a;
                     }
                     throw new gb("sdk name is invalid");
                 }
@@ -178,9 +177,9 @@ public class hd extends C4573ha implements Thread.UncaughtExceptionHandler {
 
     public static void c(Throwable th, String str, String str2) {
         try {
-            C4573ha c4573ha = C4573ha.a;
-            if (c4573ha != null) {
-                c4573ha.a(th, 1, str, str2);
+            ha haVar = ha.a;
+            if (haVar != null) {
+                haVar.a(th, 1, str, str2);
             }
         } catch (Throwable unused) {
         }
@@ -202,23 +201,23 @@ public class hd extends C4573ha implements Thread.UncaughtExceptionHandler {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.amap.api.mapcore.util.C4573ha
+    @Override // com.amap.api.mapcore.util.ha
     public void a(gm gmVar, String str, String str2) {
         he.a(gmVar, this.d, str2, str);
     }
 
     public static void b(gm gmVar, String str, String str2) {
         try {
-            C4573ha c4573ha = C4573ha.a;
-            if (c4573ha != null) {
-                c4573ha.a(gmVar, str, str2);
+            ha haVar = ha.a;
+            if (haVar != null) {
+                haVar.a(gmVar, str, str2);
             }
         } catch (Throwable unused) {
         }
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.amap.api.mapcore.util.C4573ha
+    @Override // com.amap.api.mapcore.util.ha
     public void a(Throwable th, int i, String str, String str2) {
         he.a(this.d, th, i, str, str2);
     }
@@ -228,13 +227,13 @@ public class hd extends C4573ha implements Thread.UncaughtExceptionHandler {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.amap.api.mapcore.util.C4573ha
+    @Override // com.amap.api.mapcore.util.ha
     public void a() {
         hb.a(this.d);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.amap.api.mapcore.util.C4573ha
+    @Override // com.amap.api.mapcore.util.ha
     public void a(final Context context, final gm gmVar, final boolean z) {
         try {
             ExecutorService d = d();
@@ -263,8 +262,8 @@ public class hd extends C4573ha implements Thread.UncaughtExceptionHandler {
 
     public static void a(gm gmVar, String str, String str2, String str3, String str4, String str5) {
         try {
-            if (C4573ha.a != null) {
-                C4573ha.a.a(gmVar, "path:" + str + ",type:" + str2 + ",gsid:" + str3 + ",csid:" + str4 + ",code:" + str5, "networkError");
+            if (ha.a != null) {
+                ha.a.a(gmVar, "path:" + str + ",type:" + str2 + ",gsid:" + str3 + ",csid:" + str4 + ",code:" + str5, "networkError");
             }
         } catch (Throwable unused) {
         }
@@ -279,9 +278,9 @@ public class hd extends C4573ha implements Thread.UncaughtExceptionHandler {
     private void a(Thread thread, Throwable th) {
         for (int i = 0; i < this.i.size() && i < 10; i++) {
             try {
-                InterfaceC4574a interfaceC4574a = this.i.get(i);
-                if (interfaceC4574a != null) {
-                    interfaceC4574a.a(thread, th);
+                a aVar = this.i.get(i);
+                if (aVar != null) {
+                    aVar.a(thread, th);
                 }
             } catch (Throwable unused) {
                 return;

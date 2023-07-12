@@ -67,12 +67,11 @@ public class IRecyclerView extends RecyclerView {
     int refreshHeaderLayoutRes;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.irecycler.IRecyclerView$a */
     /* loaded from: classes7.dex */
-    public class C3587a implements ValueAnimator.AnimatorUpdateListener {
+    public class a implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3587a() {
+        a() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -97,12 +96,11 @@ public class IRecyclerView extends RecyclerView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.irecycler.IRecyclerView$b */
     /* loaded from: classes7.dex */
-    public class C3588b extends uc2 {
+    public class b extends uc2 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3588b() {
+        b() {
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -155,12 +153,11 @@ public class IRecyclerView extends RecyclerView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.irecycler.IRecyclerView$c */
     /* loaded from: classes7.dex */
-    public class C3589c implements RefreshTrigger {
+    public class c implements RefreshTrigger {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3589c() {
+        c() {
         }
 
         @Override // com.alibaba.pictures.bricks.view.RefreshTrigger
@@ -825,9 +822,9 @@ public class IRecyclerView extends RecyclerView {
         this.mLastTouchX = 0;
         this.mLastTouchY = 0;
         this.mMaxDownHeight = 0;
-        this.mAnimatorUpdateListener = new C3587a();
-        this.mAnimationListener = new C3588b();
-        this.mRefreshTrigger = new C3589c();
+        this.mAnimatorUpdateListener = new a();
+        this.mAnimationListener = new b();
+        this.mRefreshTrigger = new c();
         TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R$styleable.BricksIRecyclerView, i, 0);
         try {
             boolean z = obtainStyledAttributes.getBoolean(R$styleable.BricksIRecyclerView_refreshEnabled, false);

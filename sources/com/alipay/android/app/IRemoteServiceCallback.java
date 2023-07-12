@@ -23,12 +23,11 @@ public interface IRemoteServiceCallback extends IInterface {
         public static final int TRANSACTION_startActivity = 1;
 
         /* compiled from: Taobao */
-        /* renamed from: com.alipay.android.app.IRemoteServiceCallback$Stub$a */
         /* loaded from: classes10.dex */
-        public static class C4057a implements IRemoteServiceCallback {
+        public static class a implements IRemoteServiceCallback {
             public IBinder a;
 
-            public C4057a(IBinder iBinder) {
+            public a(IBinder iBinder) {
                 this.a = iBinder;
             }
 
@@ -137,7 +136,7 @@ public interface IRemoteServiceCallback extends IInterface {
             if (queryLocalInterface != null && (queryLocalInterface instanceof IRemoteServiceCallback)) {
                 return (IRemoteServiceCallback) queryLocalInterface;
             }
-            return new C4057a(iBinder);
+            return new a(iBinder);
         }
 
         @Override // android.os.IInterface

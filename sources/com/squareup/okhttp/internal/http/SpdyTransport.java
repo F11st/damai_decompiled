@@ -19,8 +19,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 import okio.ByteString;
-import okio.C8844h;
 import okio.Sink;
+import okio.h;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -149,7 +149,7 @@ public final class SpdyTransport implements Transport {
 
     @Override // com.squareup.okhttp.internal.http.Transport
     public ResponseBody openResponseBody(Response response) throws IOException {
-        return new RealResponseBody(response.headers(), C8844h.d(this.stream.getSource()));
+        return new RealResponseBody(response.headers(), h.d(this.stream.getSource()));
     }
 
     @Override // com.squareup.okhttp.internal.http.Transport

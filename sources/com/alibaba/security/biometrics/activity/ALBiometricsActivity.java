@@ -13,11 +13,9 @@ import android.view.Window;
 import androidx.annotation.NonNull;
 import com.alibaba.security.biometrics.ALBiometricsEventListener;
 import com.alibaba.security.biometrics.ALBiometricsRuntime;
-import com.alibaba.security.biometrics.component.C3772e;
+import com.alibaba.security.biometrics.component.e;
 import com.alibaba.security.biometrics.jni.ALBiometricsJni;
 import com.alibaba.security.biometrics.jni.VersionKey;
-import com.alibaba.security.biometrics.logic.C3775a;
-import com.alibaba.security.biometrics.logic.a.C3776a;
 import com.alibaba.security.biometrics.logic.view.ALBiometricsActivityParentView;
 import com.alibaba.security.biometrics.manager.ALBiometricsManager;
 import com.alibaba.security.biometrics.service.common.GetCacheDataManager;
@@ -26,10 +24,10 @@ import com.alibaba.security.biometrics.service.model.params.ALBiometricsKeys;
 import com.alibaba.security.biometrics.service.model.params.ALBiometricsParams;
 import com.alibaba.security.biometrics.theme.ALBiometricsConfig;
 import com.alibaba.security.biometrics.transition.TransitionMode;
-import com.alibaba.security.common.c.C3800a;
-import com.alibaba.security.common.d.C3807d;
-import com.alibaba.security.common.d.C3811h;
-import com.alibaba.security.common.track.a.C3829a;
+import com.alibaba.security.common.c.a;
+import com.alibaba.security.common.d.d;
+import com.alibaba.security.common.d.h;
+import com.alibaba.security.common.track.a.a;
 import com.alibaba.security.common.track.model.TrackLog;
 import com.alibaba.security.tools.flexible.Flexible;
 import java.lang.ref.WeakReference;
@@ -67,7 +65,7 @@ public class ALBiometricsActivity extends BaseBioNavigatorActivity {
         HashMap hashMap = new HashMap();
         hashMap.put("orientation", str);
         hashMap.put("pid", String.valueOf(Process.myPid()));
-        a(TrackLog.createBioActivityEnterLog(C3811h.a((Object) hashMap), str2));
+        a(TrackLog.createBioActivityEnterLog(h.a((Object) hashMap), str2));
     }
 
     private void c(String str, String str2) {
@@ -77,10 +75,10 @@ public class ALBiometricsActivity extends BaseBioNavigatorActivity {
     @Override // android.app.Activity, android.content.ComponentCallbacks
     public void onConfigurationChanged(@NonNull Configuration configuration) {
         super.onConfigurationChanged(configuration);
-        C3800a.a(a, configuration.orientation == 1 ? "竖屏" : "横屏");
-        C3800a.a(a, "width:" + C3807d.a(this, configuration.screenWidthDp) + "\nheight:" + C3807d.a(this, configuration.screenHeightDp));
-        if (GetCacheDataManager.getInstance().getUseHwMagicWindow() && configuration.orientation == 1 && C3807d.d(this)) {
-            ((C3775a) C3772e.a(C3775a.class)).a(GlobalErrorCode.ERROR_DEVICE_HW_MAGIC_WINDOW, "EnvironmentComponent", null);
+        a.a(a, configuration.orientation == 1 ? "竖屏" : "横屏");
+        a.a(a, "width:" + d.a(this, configuration.screenWidthDp) + "\nheight:" + d.a(this, configuration.screenHeightDp));
+        if (GetCacheDataManager.getInstance().getUseHwMagicWindow() && configuration.orientation == 1 && d.d(this)) {
+            ((com.alibaba.security.biometrics.logic.a) e.a(com.alibaba.security.biometrics.logic.a.class)).a(GlobalErrorCode.ERROR_DEVICE_HW_MAGIC_WINDOW, "EnvironmentComponent", null);
         }
     }
 
@@ -88,7 +86,7 @@ public class ALBiometricsActivity extends BaseBioNavigatorActivity {
     @Override // com.alibaba.security.biometrics.activity.BaseBioNavigatorActivity, com.alibaba.security.biometrics.activity.BaseAlBioActivity, android.app.Activity
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        C3800a.a(a, "bio activity enter:" + b());
+        a.a(a, "bio activity enter:" + b());
         WeakReference<ALBiometricsEventListener> weakReference = ALBiometricsRuntime.mALBiometricsEventListener;
         this.w = weakReference != null ? weakReference.get() : null;
         Intent intent = getIntent();
@@ -102,7 +100,7 @@ public class ALBiometricsActivity extends BaseBioNavigatorActivity {
         HashMap hashMap = new HashMap();
         hashMap.put("orientation", b2);
         hashMap.put("pid", String.valueOf(Process.myPid()));
-        a(TrackLog.createBioActivityEnterLog(C3811h.a((Object) hashMap), "bio activity enter"));
+        a(TrackLog.createBioActivityEnterLog(h.a((Object) hashMap), "bio activity enter"));
         ALBiometricsEventListener aLBiometricsEventListener = this.w;
         if (aLBiometricsEventListener == null) {
             a(ALBiometricsRuntime.mALBiometricsEventListener != null ? "ALBiometricsRuntime.mALBiometricsEventListener.get() is null " : "ALBiometricsRuntime.mALBiometricsEventListener is null", a(bundle) ? "The process to restart" : "");
@@ -118,7 +116,7 @@ public class ALBiometricsActivity extends BaseBioNavigatorActivity {
         } else {
             a("ALBiometricsJni load fail", (String) null);
         }
-        C3772e.a(this, this.v, this.x, this.w);
+        e.a(this, this.v, this.x, this.w);
         ALBiometricsActivityParentView aLBiometricsActivityParentView = new ALBiometricsActivityParentView(this, this.v);
         Flexible.setContentView(this, aLBiometricsActivityParentView);
         Window window = getWindow();
@@ -127,25 +125,25 @@ public class ALBiometricsActivity extends BaseBioNavigatorActivity {
                 View decorView = window.getDecorView();
                 decorView.getClass().getMethod("setForceDarkAllowed", Boolean.TYPE).invoke(decorView, Boolean.FALSE);
             } catch (Throwable unused) {
-                C3800a.b();
+                a.b();
             }
         }
-        ((C3775a) C3772e.a(C3775a.class)).a(aLBiometricsActivityParentView);
-        C3829a.C3830a.a.a = null;
+        ((com.alibaba.security.biometrics.logic.a) e.a(com.alibaba.security.biometrics.logic.a.class)).a(aLBiometricsActivityParentView);
+        a.C0165a.a.a = null;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.alibaba.security.biometrics.activity.BaseBioNavigatorActivity, com.alibaba.security.biometrics.activity.BaseAlBioActivity, android.app.Activity
     public void onDestroy() {
         super.onDestroy();
-        C3800a.a(a, "bio activity exit");
+        com.alibaba.security.common.c.a.a(a, "bio activity exit");
         a(TrackLog.createBioActivityExitLog("bio activity exit"));
-        C3772e.c();
+        e.c();
     }
 
     @Override // android.app.Activity, android.view.KeyEvent.Callback
     public boolean onKeyDown(int i, KeyEvent keyEvent) {
-        if (C3772e.a(i, keyEvent)) {
+        if (e.a(i, keyEvent)) {
             return super.onKeyDown(i, keyEvent);
         }
         return false;
@@ -154,7 +152,7 @@ public class ALBiometricsActivity extends BaseBioNavigatorActivity {
     @Override // android.app.Activity
     protected void onPause() {
         super.onPause();
-        C3772e.b();
+        e.b();
     }
 
     @Override // android.app.Activity
@@ -163,21 +161,21 @@ public class ALBiometricsActivity extends BaseBioNavigatorActivity {
             super.onRequestPermissionsResult(i, strArr, iArr);
         } catch (Throwable unused) {
         }
-        C3776a c3776a = ((C3775a) C3772e.a(C3775a.class)).d;
-        if (c3776a == null || i != 1010) {
+        com.alibaba.security.biometrics.logic.a.a aVar = ((com.alibaba.security.biometrics.logic.a) e.a(com.alibaba.security.biometrics.logic.a.class)).d;
+        if (aVar == null || i != 1010) {
             return;
         }
         if ((iArr.length > 0 ? iArr[0] : -1) != 0) {
-            C3776a.f();
+            com.alibaba.security.biometrics.logic.a.a.f();
         } else {
-            c3776a.b(false);
+            aVar.b(false);
         }
     }
 
     @Override // android.app.Activity
     protected void onResume() {
         super.onResume();
-        C3772e.a();
+        e.a();
     }
 
     @Override // android.app.Activity
@@ -211,7 +209,7 @@ public class ALBiometricsActivity extends BaseBioNavigatorActivity {
         }
         trackLog.addTag9(VersionKey.RP_SDK_VERSION + "/3.3.0");
         trackLog.addTag10("Android");
-        C3829a.C3830a.a.a(trackLog);
-        C3829a.C3830a.a.a(false);
+        a.C0165a.a.a(trackLog);
+        a.C0165a.a.a(false);
     }
 }

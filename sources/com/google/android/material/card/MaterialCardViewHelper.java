@@ -84,7 +84,7 @@ public class MaterialCardViewHelper {
         materialShapeDrawable.initializeElevationOverlay(materialCardView.getContext());
         materialShapeDrawable.setShadowColor(-12303292);
         ShapeAppearanceModel.Builder builder = materialShapeDrawable.getShapeAppearanceModel().toBuilder();
-        TypedArray obtainStyledAttributes = materialCardView.getContext().obtainStyledAttributes(attributeSet, R.styleable.CardView, i, R.C4819style.CardView);
+        TypedArray obtainStyledAttributes = materialCardView.getContext().obtainStyledAttributes(attributeSet, R.styleable.CardView, i, R.style.CardView);
         int i3 = R.styleable.CardView_cardCornerRadius;
         if (obtainStyledAttributes.hasValue(i3)) {
             builder.setAllCornerSizes(obtainStyledAttributes.getDimension(i3, 0.0f));

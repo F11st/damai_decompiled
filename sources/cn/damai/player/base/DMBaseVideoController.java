@@ -24,12 +24,11 @@ public abstract class DMBaseVideoController extends FrameLayout {
     private String spmC;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.player.base.DMBaseVideoController$a */
     /* loaded from: classes6.dex */
-    public class C1496a implements VolumeChangeObserver.OnVolumeChangeListener {
+    public class a implements VolumeChangeObserver.OnVolumeChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1496a() {
+        a() {
         }
 
         @Override // cn.damai.player.base.VolumeChangeObserver.OnVolumeChangeListener
@@ -90,7 +89,7 @@ public abstract class DMBaseVideoController extends FrameLayout {
         this.currentVolume = ((AudioManager) context.getSystemService("audio")).getStreamVolume(3);
         VolumeChangeObserver volumeChangeObserver = new VolumeChangeObserver(context);
         this.observer = volumeChangeObserver;
-        volumeChangeObserver.d(new C1496a());
+        volumeChangeObserver.d(new a());
         this.observer.c();
     }
 

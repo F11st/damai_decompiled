@@ -8,28 +8,26 @@ import android.text.TextUtils;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class gi {
-    private volatile C4568b a = new C4568b();
+    private volatile b a = new b();
     private hr b = new hr("HttpsDecisionUtil");
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.gi$a */
     /* loaded from: classes10.dex */
-    public static class C4567a {
+    public static class a {
         static gi a = new gi();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.gi$b */
     /* loaded from: classes10.dex */
-    public static class C4568b {
+    public static class b {
         protected boolean a;
         private int b;
         private final boolean c;
         private boolean d;
 
-        private C4568b() {
+        private b() {
             this.b = 0;
             this.a = true;
             this.c = true;
@@ -76,7 +74,7 @@ public class gi {
     }
 
     public static gi a() {
-        return C4567a.a;
+        return a.a;
     }
 
     private boolean c(Context context) {
@@ -97,7 +95,7 @@ public class gi {
 
     public void a(Context context) {
         if (this.a == null) {
-            this.a = new C4568b();
+            this.a = new b();
         }
         this.a.a(c(context));
         this.a.a(context);
@@ -105,7 +103,7 @@ public class gi {
 
     public boolean b() {
         if (this.a == null) {
-            this.a = new C4568b();
+            this.a = new b();
         }
         return this.a.a();
     }
@@ -116,7 +114,7 @@ public class gi {
 
     public void a(boolean z) {
         if (this.a == null) {
-            this.a = new C4568b();
+            this.a = new b();
         }
         this.a.b(z);
     }
@@ -131,7 +129,7 @@ public class gi {
     /* JADX INFO: Access modifiers changed from: package-private */
     public void a(Context context, boolean z) {
         if (this.a == null) {
-            this.a = new C4568b();
+            this.a = new b();
         }
         b(context, z);
         this.a.a(z);

@@ -39,7 +39,7 @@ public class ge {
             goVar.a(a2);
             return a(a3.b(goVar));
         } catch (Throwable th) {
-            C4573ha.a(th, "Auth", "getAuth");
+            ha.a(th, "Auth", "getAuth");
             return true;
         }
     }
@@ -79,10 +79,10 @@ public class ge {
             }
             return a == 1;
         } catch (JSONException e2) {
-            C4573ha.a(e2, "Auth", "lData");
+            ha.a(e2, "Auth", "lData");
             return false;
         } catch (Throwable th) {
-            C4573ha.a(th, "Auth", "lData");
+            ha.a(th, "Auth", "lData");
             return false;
         }
     }
@@ -94,10 +94,10 @@ public class ge {
             hashMap.put("encode", "UTF-8");
             String a2 = gf.a();
             hashMap.put("ts", a2);
-            hashMap.put("key", C4554gc.f(context));
-            hashMap.put("scode", gf.a(context, a2, gn.d("resType=json&encode=UTF-8&key=" + C4554gc.f(context))));
+            hashMap.put("key", gc.f(context));
+            hashMap.put("scode", gf.a(context, a2, gn.d("resType=json&encode=UTF-8&key=" + gc.f(context))));
         } catch (Throwable th) {
-            C4573ha.a(th, "Auth", "gParams");
+            ha.a(th, "Auth", "gParams");
         }
         return hashMap;
     }

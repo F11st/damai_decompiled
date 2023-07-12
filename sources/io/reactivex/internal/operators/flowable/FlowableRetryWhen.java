@@ -1,6 +1,6 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
+import io.reactivex.b;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.operators.flowable.FlowableRepeatWhen;
@@ -16,7 +16,7 @@ import tb.ua2;
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class FlowableRetryWhen<T> extends AbstractFlowableWithUpstream<T, T> {
-    final Function<? super AbstractC8147b<Throwable>, ? extends Publisher<?>> handler;
+    final Function<? super b<Throwable>, ? extends Publisher<?>> handler;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -39,12 +39,12 @@ public final class FlowableRetryWhen<T> extends AbstractFlowableWithUpstream<T, 
         }
     }
 
-    public FlowableRetryWhen(AbstractC8147b<T> abstractC8147b, Function<? super AbstractC8147b<Throwable>, ? extends Publisher<?>> function) {
-        super(abstractC8147b);
+    public FlowableRetryWhen(b<T> bVar, Function<? super b<Throwable>, ? extends Publisher<?>> function) {
+        super(bVar);
         this.handler = function;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super T> subscriber) {
         ua2 ua2Var = new ua2(subscriber);
         mn0<T> a = UnicastProcessor.d(8).a();

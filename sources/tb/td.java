@@ -30,13 +30,12 @@ public class td {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: tb.td$a */
     /* loaded from: classes7.dex */
-    public static final class C9713a<T> implements BufferListener<T> {
+    public static final class a<T> implements BufferListener<T> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C9713a(String str) {
+        a(String str) {
             this.a = str;
         }
 
@@ -200,7 +199,7 @@ public class td {
             } else if (is4Preload) {
                 map.put(uniKey, bufferRequest);
                 j("state 2:无预加载任务 &&当前请求是预加载，预加载request 入池 :" + uniKey);
-                bufferRequest.doRequest(new C9713a(uniKey));
+                bufferRequest.doRequest(new a(uniKey));
             } else {
                 MainThreadListener mainThreadListener = new MainThreadListener(bufferListener);
                 vd remove = a.remove(uniKey);

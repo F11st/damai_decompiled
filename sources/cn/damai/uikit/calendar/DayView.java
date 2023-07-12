@@ -18,8 +18,8 @@ import android.util.AttributeSet;
 import android.widget.CheckedTextView;
 import androidx.annotation.NonNull;
 import cn.damai.uikit.R$drawable;
-import cn.damai.uikit.calendar.C2490a;
 import cn.damai.uikit.calendar.MaterialCalendarView;
+import cn.damai.uikit.calendar.a;
 import cn.damai.uikit.calendar.format.DayFormatter;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -181,22 +181,22 @@ public class DayView extends CheckedTextView {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public void applyFacade(C2490a c2490a) {
+    public void applyFacade(a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "202633762")) {
-            ipChange.ipc$dispatch("202633762", new Object[]{this, c2490a});
+            ipChange.ipc$dispatch("202633762", new Object[]{this, aVar});
             return;
         }
-        this.isDecoratedDisabled = c2490a.c();
+        this.isDecoratedDisabled = aVar.c();
         setEnabled();
-        setCustomBackground(c2490a.d());
-        setSelectionDrawable(c2490a.l());
-        List<C2490a.C2491a> m = c2490a.m();
+        setCustomBackground(aVar.d());
+        setSelectionDrawable(aVar.l());
+        List<a.C0088a> m = aVar.m();
         if (!m.isEmpty()) {
             String label = getLabel();
             SpannableString spannableString = new SpannableString(getLabel());
-            for (C2490a.C2491a c2491a : m) {
-                spannableString.setSpan(c2491a.a, 0, label.length(), 33);
+            for (a.C0088a c0088a : m) {
+                spannableString.setSpan(c0088a.a, 0, label.length(), 33);
             }
             setText(spannableString);
             return;

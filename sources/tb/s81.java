@@ -1,9 +1,7 @@
 package tb;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
 import java.util.Collection;
 import java.util.List;
-import kotlin.collections.C8214m;
 import kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ReceiverParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
@@ -19,19 +17,19 @@ public abstract class s81 extends LazyJavaScope {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public s81(@NotNull r81 r81Var) {
         super(r81Var, null, 2, null);
-        b41.i(r81Var, AbstractC5658c.a);
+        b41.i(r81Var, com.huawei.hms.opendevice.c.a);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaScope
     @NotNull
-    protected LazyJavaScope.C8351a A(@NotNull JavaMethod javaMethod, @NotNull List<? extends TypeParameterDescriptor> list, @NotNull z71 z71Var, @NotNull List<? extends ValueParameterDescriptor> list2) {
+    protected LazyJavaScope.a A(@NotNull JavaMethod javaMethod, @NotNull List<? extends TypeParameterDescriptor> list, @NotNull z71 z71Var, @NotNull List<? extends ValueParameterDescriptor> list2) {
         List g;
         b41.i(javaMethod, "method");
         b41.i(list, "methodTypeParameters");
         b41.i(z71Var, "returnType");
         b41.i(list2, "valueParameters");
-        g = C8214m.g();
-        return new LazyJavaScope.C8351a(z71Var, null, list2, list, false, g);
+        g = kotlin.collections.m.g();
+        return new LazyJavaScope.a(z71Var, null, list2, list, false, g);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */

@@ -30,14 +30,13 @@ public class ut0 implements IModule {
     private List<DelegateAdapter.Adapter> i;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ut0$a */
     /* loaded from: classes7.dex */
-    public class C9788a implements OnChildAttachStateChangeListener {
+    public class a implements OnChildAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ boolean a;
         final /* synthetic */ ILayer b;
 
-        C9788a(boolean z, ILayer iLayer) {
+        a(boolean z, ILayer iLayer) {
             this.a = z;
             this.b = iLayer;
         }
@@ -65,13 +64,12 @@ public class ut0 implements IModule {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ut0$b */
     /* loaded from: classes7.dex */
-    public class C9789b implements OnChildAttachStateChangeListener {
+    public class b implements OnChildAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ILayer a;
 
-        C9789b(ILayer iLayer) {
+        b(ILayer iLayer) {
             this.a = iLayer;
         }
 
@@ -288,7 +286,7 @@ public class ut0 implements IModule {
         if (AndroidInstantRuntime.support(ipChange, "542918393")) {
             ipChange.ipc$dispatch("542918393", new Object[]{this, iLayer, Boolean.valueOf(z)});
         } else {
-            removeLayer(iLayer, new C9789b(iLayer));
+            removeLayer(iLayer, new b(iLayer));
         }
     }
 
@@ -298,7 +296,7 @@ public class ut0 implements IModule {
         if (AndroidInstantRuntime.support(ipChange, "-937013969")) {
             ipChange.ipc$dispatch("-937013969", new Object[]{this, Integer.valueOf(i), iLayer, Boolean.valueOf(z)});
         } else {
-            addLayer(i, iLayer, new C9788a(z, iLayer));
+            addLayer(i, iLayer, new a(z, iLayer));
         }
     }
 }

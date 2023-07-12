@@ -40,12 +40,11 @@ public class WebViewAndroid extends WebView implements IWebView {
     private IWebViewOverride b;
 
     /* compiled from: Taobao */
-    /* renamed from: com.uc.webview.export.internal.android.WebViewAndroid$a */
     /* loaded from: classes11.dex */
-    class C7215a implements IWebView.IHitTestResult {
+    class a implements IWebView.IHitTestResult {
         private WebView.HitTestResult b;
 
-        /* synthetic */ C7215a(WebViewAndroid webViewAndroid, WebView.HitTestResult hitTestResult, byte b) {
+        /* synthetic */ a(WebViewAndroid webViewAndroid, WebView.HitTestResult hitTestResult, byte b) {
             this(hitTestResult);
         }
 
@@ -59,7 +58,7 @@ public class WebViewAndroid extends WebView implements IWebView {
             return this.b.getType();
         }
 
-        private C7215a(WebView.HitTestResult hitTestResult) {
+        private a(WebView.HitTestResult hitTestResult) {
             this.b = hitTestResult;
         }
     }
@@ -67,7 +66,7 @@ public class WebViewAndroid extends WebView implements IWebView {
     public WebViewAndroid(Context context, AttributeSet attributeSet, com.uc.webview.export.WebView webView) {
         super(context, attributeSet);
         this.a = webView;
-        setWebViewClient(new C7240t(webView, new WebViewClient()));
+        setWebViewClient(new t(webView, new WebViewClient()));
         getSettings().setSavePassword(false);
         IWaStat.WaStat.stat(IWaStat.KEY_SYSTEM_NEW_WEBVIEW_PV);
     }
@@ -90,7 +89,7 @@ public class WebViewAndroid extends WebView implements IWebView {
     public WebBackForwardList copyBackForwardListInner() {
         android.webkit.WebBackForwardList copyBackForwardList = super.copyBackForwardList();
         if (copyBackForwardList != null) {
-            return new C7223h(copyBackForwardList);
+            return new h(copyBackForwardList);
         }
         return null;
     }
@@ -111,11 +110,11 @@ public class WebViewAndroid extends WebView implements IWebView {
         if (createWebMessageChannel == null) {
             return null;
         }
-        C7233n[] c7233nArr = new C7233n[createWebMessageChannel.length];
+        n[] nVarArr = new n[createWebMessageChannel.length];
         for (int i = 0; i < createWebMessageChannel.length; i++) {
-            c7233nArr[i] = new C7233n(createWebMessageChannel[i]);
+            nVarArr[i] = new n(createWebMessageChannel[i]);
         }
-        return c7233nArr;
+        return nVarArr;
     }
 
     @Override // android.webkit.WebView, com.uc.webview.export.internal.interfaces.IWebView
@@ -170,7 +169,7 @@ public class WebViewAndroid extends WebView implements IWebView {
     public IWebView.IHitTestResult getHitTestResultInner() {
         WebView.HitTestResult hitTestResult = super.getHitTestResult();
         if (hitTestResult != null) {
-            return new C7215a(this, hitTestResult, (byte) 0);
+            return new a(this, hitTestResult, (byte) 0);
         }
         return null;
     }
@@ -182,7 +181,7 @@ public class WebViewAndroid extends WebView implements IWebView {
 
     @Override // com.uc.webview.export.internal.interfaces.IWebView
     public WebSettings getSettingsInner() {
-        return new C7235p(super.getSettings());
+        return new p(super.getSettings());
     }
 
     @Override // com.uc.webview.export.internal.interfaces.IWebView
@@ -248,16 +247,16 @@ public class WebViewAndroid extends WebView implements IWebView {
     }
 
     @Override // com.uc.webview.export.internal.interfaces.IWebView
-    public void postVisualStateCallback(long j, WebView.AbstractC7176b abstractC7176b) {
+    public void postVisualStateCallback(long j, WebView.b bVar) {
         if (Build.VERSION.SDK_INT >= 23) {
-            super.postVisualStateCallback(j, new C7239s(this, abstractC7176b));
+            super.postVisualStateCallback(j, new s(this, bVar));
         }
     }
 
     @Override // com.uc.webview.export.internal.interfaces.IWebView
     @TargetApi(23)
     public void postWebMessageInner(WebMessage webMessage, Uri uri) {
-        super.postWebMessage(new C7232m(webMessage), uri);
+        super.postWebMessage(new m(webMessage), uri);
     }
 
     @Override // android.view.View, android.view.ViewParent
@@ -276,7 +275,7 @@ public class WebViewAndroid extends WebView implements IWebView {
         if (restoreState == null) {
             return null;
         }
-        return new C7223h(restoreState);
+        return new h(restoreState);
     }
 
     @Override // com.uc.webview.export.internal.interfaces.IWebView
@@ -285,7 +284,7 @@ public class WebViewAndroid extends WebView implements IWebView {
         if (saveState == null) {
             return null;
         }
-        return new C7223h(saveState);
+        return new h(saveState);
     }
 
     @Override // com.uc.webview.export.internal.interfaces.IWebView
@@ -293,14 +292,14 @@ public class WebViewAndroid extends WebView implements IWebView {
         if (downloadListener == null) {
             super.setDownloadListener((android.webkit.DownloadListener) null);
         } else {
-            super.setDownloadListener(new C7216a(downloadListener));
+            super.setDownloadListener(new com.uc.webview.export.internal.android.a(downloadListener));
         }
     }
 
     @Override // com.uc.webview.export.internal.interfaces.IWebView
     public void setFindListener(WebView.FindListener findListener) {
         if (Build.VERSION.SDK_INT >= 16) {
-            super.setFindListener(findListener == null ? null : new C7238r(this, findListener));
+            super.setFindListener(findListener == null ? null : new r(this, findListener));
         }
     }
 
@@ -324,7 +323,7 @@ public class WebViewAndroid extends WebView implements IWebView {
         if (webChromeClient == null) {
             super.setWebChromeClient((android.webkit.WebChromeClient) null);
         } else {
-            super.setWebChromeClient(new C7225i(this.a, webChromeClient));
+            super.setWebChromeClient(new i(this.a, webChromeClient));
         }
     }
 
@@ -333,7 +332,7 @@ public class WebViewAndroid extends WebView implements IWebView {
         if (webViewClient == null) {
             webViewClient = new WebViewClient();
         }
-        setWebViewClient(new C7240t(this.a, webViewClient));
+        setWebViewClient(new t(this.a, webViewClient));
     }
 
     @Override // com.uc.webview.export.internal.interfaces.IWebView

@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.subjects.UnicastSubject;
@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableWindow<T> extends AbstractObservableWithUpstream<T, AbstractC8149d<T>> {
+public final class ObservableWindow<T> extends AbstractObservableWithUpstream<T, d<T>> {
     final int capacityHint;
     final long count;
     final long skip;
@@ -22,7 +22,7 @@ public final class ObservableWindow<T> extends AbstractObservableWithUpstream<T,
     /* loaded from: classes3.dex */
     static final class WindowExactObserver<T> extends AtomicInteger implements Observer<T>, Disposable, Runnable {
         private static final long serialVersionUID = -7481782523886138128L;
-        final Observer<? super AbstractC8149d<T>> actual;
+        final Observer<? super d<T>> actual;
         volatile boolean cancelled;
         final int capacityHint;
         final long count;
@@ -30,7 +30,7 @@ public final class ObservableWindow<T> extends AbstractObservableWithUpstream<T,
         long size;
         UnicastSubject<T> window;
 
-        WindowExactObserver(Observer<? super AbstractC8149d<T>> observer, long j, int i) {
+        WindowExactObserver(Observer<? super d<T>> observer, long j, int i) {
             this.actual = observer;
             this.count = j;
             this.capacityHint = i;
@@ -109,7 +109,7 @@ public final class ObservableWindow<T> extends AbstractObservableWithUpstream<T,
     /* loaded from: classes3.dex */
     static final class WindowSkipObserver<T> extends AtomicBoolean implements Observer<T>, Disposable, Runnable {
         private static final long serialVersionUID = 3366976432059579510L;
-        final Observer<? super AbstractC8149d<T>> actual;
+        final Observer<? super d<T>> actual;
         volatile boolean cancelled;
         final int capacityHint;
         final long count;
@@ -120,7 +120,7 @@ public final class ObservableWindow<T> extends AbstractObservableWithUpstream<T,
         final AtomicInteger wip = new AtomicInteger();
         final ArrayDeque<UnicastSubject<T>> windows = new ArrayDeque<>();
 
-        WindowSkipObserver(Observer<? super AbstractC8149d<T>> observer, long j, long j2, int i) {
+        WindowSkipObserver(Observer<? super d<T>> observer, long j, long j2, int i) {
             this.actual = observer;
             this.count = j;
             this.skip = j2;
@@ -207,8 +207,8 @@ public final class ObservableWindow<T> extends AbstractObservableWithUpstream<T,
         this.capacityHint = i;
     }
 
-    @Override // io.reactivex.AbstractC8149d
-    public void subscribeActual(Observer<? super AbstractC8149d<T>> observer) {
+    @Override // io.reactivex.d
+    public void subscribeActual(Observer<? super d<T>> observer) {
         if (this.count == this.skip) {
             this.source.subscribe(new WindowExactObserver(observer, this.count, this.capacityHint));
         } else {

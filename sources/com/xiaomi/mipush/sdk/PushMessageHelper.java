@@ -4,8 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
 import android.text.TextUtils;
-import com.xiaomi.push.C7675im;
 import com.xiaomi.push.hw;
+import com.xiaomi.push.im;
 import java.util.List;
 
 /* compiled from: Taobao */
@@ -37,24 +37,24 @@ public class PushMessageHelper {
         return miPushCommandMessage;
     }
 
-    public static MiPushMessage generateMessage(C7675im c7675im, hw hwVar, boolean z) {
+    public static MiPushMessage generateMessage(im imVar, hw hwVar, boolean z) {
         MiPushMessage miPushMessage = new MiPushMessage();
-        miPushMessage.setMessageId(c7675im.m1060a());
-        if (!TextUtils.isEmpty(c7675im.d())) {
+        miPushMessage.setMessageId(imVar.m1060a());
+        if (!TextUtils.isEmpty(imVar.d())) {
             miPushMessage.setMessageType(1);
-            miPushMessage.setAlias(c7675im.d());
-        } else if (!TextUtils.isEmpty(c7675im.c())) {
+            miPushMessage.setAlias(imVar.d());
+        } else if (!TextUtils.isEmpty(imVar.c())) {
             miPushMessage.setMessageType(2);
-            miPushMessage.setTopic(c7675im.c());
-        } else if (TextUtils.isEmpty(c7675im.f())) {
+            miPushMessage.setTopic(imVar.c());
+        } else if (TextUtils.isEmpty(imVar.f())) {
             miPushMessage.setMessageType(0);
         } else {
             miPushMessage.setMessageType(3);
-            miPushMessage.setUserAccount(c7675im.f());
+            miPushMessage.setUserAccount(imVar.f());
         }
-        miPushMessage.setCategory(c7675im.e());
-        if (c7675im.a() != null) {
-            miPushMessage.setContent(c7675im.a().c());
+        miPushMessage.setCategory(imVar.e());
+        if (imVar.a() != null) {
+            miPushMessage.setContent(imVar.a().c());
         }
         if (hwVar != null) {
             if (TextUtils.isEmpty(miPushMessage.getMessageId())) {

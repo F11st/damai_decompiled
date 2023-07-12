@@ -44,12 +44,11 @@ public class TourView extends AbsView<IItem<ItemValue>, TourContract.Model<IItem
     private float sepWidth;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.project.tour.TourView$a */
     /* loaded from: classes7.dex */
-    public class C3494a implements UserTrackInterface {
+    public class a implements UserTrackInterface {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3494a() {
+        a() {
         }
 
         @Override // com.alibaba.pictures.bricks.component.project.tour.UserTrackInterface
@@ -74,12 +73,11 @@ public class TourView extends AbsView<IItem<ItemValue>, TourContract.Model<IItem
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.project.tour.TourView$b */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC3495b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC3495b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -94,13 +92,12 @@ public class TourView extends AbsView<IItem<ItemValue>, TourContract.Model<IItem
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.project.tour.TourView$c */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC3496c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ProjectItemBean a;
 
-        View$OnClickListenerC3496c(ProjectItemBean projectItemBean) {
+        c(ProjectItemBean projectItemBean) {
             this.a = projectItemBean;
         }
 
@@ -137,8 +134,8 @@ public class TourView extends AbsView<IItem<ItemValue>, TourContract.Model<IItem
             ipChange.ipc$dispatch("633312938", new Object[]{this, list});
             return;
         }
-        int a = n91.a(list);
-        if (a > 0) {
+        int a2 = n91.a(list);
+        if (a2 > 0) {
             this.mRecyclerView.setVisibility(0);
             SearchTourItemAdapter searchTourItemAdapter = this.mTourAdapter;
             if (searchTourItemAdapter != null) {
@@ -146,7 +143,7 @@ public class TourView extends AbsView<IItem<ItemValue>, TourContract.Model<IItem
                 this.mTourAdapter.d(list);
                 this.mTourAdapter.notifyDataSetChanged();
             }
-            updateMoreData(this.mExpandState, a, 6);
+            updateMoreData(this.mExpandState, a2, 6);
             return;
         }
         this.mRecyclerView.setVisibility(8);
@@ -166,7 +163,7 @@ public class TourView extends AbsView<IItem<ItemValue>, TourContract.Model<IItem
         linearLayout.setVisibility(8);
         this.mMoreTourLine.setVisibility(8);
         this.mTvMoreText = (TextView) view.findViewById(R$id.tv_more_title);
-        this.mMoreTourLayout.setOnClickListener(new View$OnClickListenerC3495b());
+        this.mMoreTourLayout.setOnClickListener(new b());
     }
 
     private void initProjectView(Context context, View view, LayoutInflater layoutInflater) {
@@ -196,7 +193,7 @@ public class TourView extends AbsView<IItem<ItemValue>, TourContract.Model<IItem
             ((TourContract.Presenter) this.presenter).projectUserExpose();
             this.mProjectItemViewHolder.u(this.mDaojishi);
             this.mProjectItemViewHolder.l(projectItemBean, BricksProjectViewHolder.PageType.SEARCH_PAGE);
-            this.mProjectItemViewHolder.itemView.setOnClickListener(new View$OnClickListenerC3496c(projectItemBean));
+            this.mProjectItemViewHolder.itemView.setOnClickListener(new c(projectItemBean));
         }
     }
 
@@ -257,9 +254,9 @@ public class TourView extends AbsView<IItem<ItemValue>, TourContract.Model<IItem
         this.mRecyclerView = recyclerView;
         recyclerView.setLayoutManager(gridLayoutManager);
         this.mRecyclerView.setAdapter(this.mTourAdapter);
-        this.mTourAdapter.e(new C3494a());
+        this.mTourAdapter.e(new a());
         if (this.mRecyclerView.getItemDecorationCount() == 0) {
-            this.mRecyclerView.addItemDecoration(new GridItemBlankDecoration.C3492b(this.mContext).c(this.sepWidth).d(this.sepWidth).b(Color.parseColor("#ffffff")).a());
+            this.mRecyclerView.addItemDecoration(new GridItemBlankDecoration.b(this.mContext).c(this.sepWidth).d(this.sepWidth).b(Color.parseColor("#ffffff")).a());
         }
     }
 

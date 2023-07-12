@@ -74,9 +74,8 @@ public class TBImageFlowMonitor extends vj2 implements Pexode.ForcedDegradationL
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.phenix.compat.stat.TBImageFlowMonitor$a */
     /* loaded from: classes11.dex */
-    public static /* synthetic */ class C6857a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -448,13 +447,13 @@ public class TBImageFlowMonitor extends vj2 implements Pexode.ForcedDegradationL
                     str9 = "";
                 }
                 hashMap.put("hitCdnCache", str9);
-                String a = h42.a(th.getClass());
+                String a2 = h42.a(th.getClass());
                 th2 = th;
                 if (th2 instanceof DecodeException) {
-                    a = a + ":" + decodeException.getDecodedError() + "[Local?" + decodeException.isLocalUri() + ", Disk?" + decodeException.isDataFromDisk() + jn1.ARRAY_END_STR;
+                    a2 = a2 + ":" + decodeException.getDecodedError() + "[Local?" + decodeException.isLocalUri() + ", Disk?" + decodeException.isDataFromDisk() + jn1.ARRAY_END_STR;
                     Throwable cause = ((DecodeException) th2).getCause();
                     if (cause != null) {
-                        str7 = a;
+                        str7 = a2;
                         th2 = cause;
                         this.h.onNonCriticalErrorHappen(str7, th2, hashMap);
                         c = 0;
@@ -463,7 +462,7 @@ public class TBImageFlowMonitor extends vj2 implements Pexode.ForcedDegradationL
                         xt2.i(str8, "report non-critical error, details=%s, path=%s", hashMap, str6);
                     }
                 }
-                str7 = a;
+                str7 = a2;
                 this.h.onNonCriticalErrorHappen(str7, th2, hashMap);
                 c = 0;
                 c2 = 1;

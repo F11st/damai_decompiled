@@ -8,10 +8,8 @@ import android.util.Pair;
 import anet.channel.statist.RequestStatistic;
 import anet.channel.strategy.dispatch.HttpDispatcher;
 import anet.channel.util.ALog;
-import anet.channel.util.C0241c;
 import anetwork.channel.config.IRemoteConfig;
 import anetwork.channel.http.NetworkSdkSetting;
-import com.alipay.sdk.m.k.C4226b;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -372,7 +370,7 @@ public class rj1 {
                 String string = jSONObject.getString(tx0.VALUE_MODEL_DEFAULT);
                 if (!TextUtils.isEmpty(string)) {
                     Context c2 = hu0.c();
-                    Boolean j2 = C0241c.j(c2, "network_multi_path_" + string);
+                    Boolean j2 = anet.channel.util.c.j(c2, "network_multi_path_" + string);
                     if (j2 != null && j2.booleanValue()) {
                         copyOnWriteArrayList2.add(string);
                         JSONObject optJSONObject = jSONObject.optJSONObject("url");
@@ -394,7 +392,7 @@ public class rj1 {
                                 }
                             }
                         }
-                        JSONArray optJSONArray = jSONObject.optJSONArray(C4226b.l);
+                        JSONArray optJSONArray = jSONObject.optJSONArray(com.alipay.sdk.m.k.b.l);
                         if (optJSONArray != null) {
                             for (int i4 = 0; i4 < optJSONArray.length(); i4++) {
                                 String string2 = optJSONArray.getString(i4);

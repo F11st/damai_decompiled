@@ -7,9 +7,8 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.gaiax.studio.GXSocket;
 import com.alibaba.gaiax.studio.third.socket.java_websocket.framing.Framedata;
-import com.alibaba.gaiax.studio.third.socket.websocket.C3391a;
-import com.alibaba.gaiax.studio.third.socket.websocket.C3392b;
 import com.alibaba.gaiax.studio.third.socket.websocket.SocketListener;
+import com.alibaba.gaiax.studio.third.socket.websocket.b;
 import com.taobao.orange.OConstant;
 import java.nio.ByteBuffer;
 import java.util.Map;
@@ -26,7 +25,7 @@ import tb.k50;
 /* loaded from: classes6.dex */
 public final class GXSocket implements SocketListener {
     @NotNull
-    public static final C3383a Companion = new C3383a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String TAG = "[GaiaX][FastPreview]";
     private boolean a;
@@ -42,7 +41,7 @@ public final class GXSocket implements SocketListener {
     @Nullable
     private JSONObject g;
     @Nullable
-    private C3392b h;
+    private b h;
     @Nullable
     private h13 i;
     @Nullable
@@ -66,13 +65,12 @@ public final class GXSocket implements SocketListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.studio.GXSocket$a */
     /* loaded from: classes6.dex */
-    public static final class C3383a {
-        private C3383a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3383a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -105,7 +103,7 @@ public final class GXSocket implements SocketListener {
         jSONObject2.put((JSONObject) "id", str);
         jSONObject.put((JSONObject) "params", (String) jSONObject2);
         jSONObject.put((JSONObject) "id", (String) 104);
-        C3391a.f("GaiaXSocket").q(jSONObject.toJSONString());
+        com.alibaba.gaiax.studio.third.socket.websocket.a.f("GaiaXSocket").q(jSONObject.toJSONString());
     }
 
     /* JADX WARN: Removed duplicated region for block: B:15:0x0019  */
@@ -172,10 +170,10 @@ public final class GXSocket implements SocketListener {
             com.alibaba.gaiax.studio.GXClientToStudio$a r4 = com.alibaba.gaiax.studio.GXClientToStudio.Companion
             com.alibaba.gaiax.studio.GXClientToStudio r4 = r4.a()
             android.content.Context r4 = r4.j()
-            com.alibaba.gaiax.studio.third.socket.websocket.C3391a.h(r4)
+            com.alibaba.gaiax.studio.third.socket.websocket.a.h(r4)
             tb.h13 r4 = r3.i
             java.lang.String r0 = "GaiaXSocket"
-            com.alibaba.gaiax.studio.third.socket.websocket.b r4 = com.alibaba.gaiax.studio.third.socket.websocket.C3391a.g(r0, r4)
+            com.alibaba.gaiax.studio.third.socket.websocket.b r4 = com.alibaba.gaiax.studio.third.socket.websocket.a.g(r0, r4)
             r3.h = r4
             if (r4 != 0) goto L63
             goto L66
@@ -192,13 +190,13 @@ public final class GXSocket implements SocketListener {
 
     public final void c() {
         if (this.a) {
-            C3392b c3392b = this.h;
-            if (c3392b != null) {
-                c3392b.p(this);
+            b bVar = this.h;
+            if (bVar != null) {
+                bVar.p(this);
             }
-            C3392b c3392b2 = this.h;
-            if (c3392b2 != null) {
-                c3392b2.j();
+            b bVar2 = this.h;
+            if (bVar2 != null) {
+                bVar2.j();
             }
             this.h = null;
         }
@@ -232,12 +230,12 @@ public final class GXSocket implements SocketListener {
         jSONObject2.put((JSONObject) "id", str);
         jSONObject.put((JSONObject) "params", (String) jSONObject2);
         jSONObject.put((JSONObject) "id", (String) 103);
-        C3391a.f("GaiaXSocket").q(jSONObject.toJSONString());
+        com.alibaba.gaiax.studio.third.socket.websocket.a.f("GaiaXSocket").q(jSONObject.toJSONString());
     }
 
     public final void j(@NotNull JSONObject jSONObject) {
         b41.i(jSONObject, "data");
-        C3391a.f("GaiaXSocket").q(jSONObject.toJSONString());
+        com.alibaba.gaiax.studio.third.socket.websocket.a.f("GaiaXSocket").q(jSONObject.toJSONString());
     }
 
     public final void k() {
@@ -246,7 +244,7 @@ public final class GXSocket implements SocketListener {
         jSONObject.put((JSONObject) "jsonrpc", "2.0");
         jSONObject.put((JSONObject) "method", "initialize");
         jSONObject.put((JSONObject) "id", (String) 102);
-        C3391a.f("GaiaXSocket").q(jSONObject.toJSONString());
+        com.alibaba.gaiax.studio.third.socket.websocket.a.f("GaiaXSocket").q(jSONObject.toJSONString());
     }
 
     public final void l() {
@@ -255,7 +253,7 @@ public final class GXSocket implements SocketListener {
         jSONObject.put((JSONObject) "jsonrpc", "2.0");
         jSONObject.put((JSONObject) "method", "initializeManual");
         jSONObject.put((JSONObject) "id", (String) 101);
-        C3391a.f("GaiaXSocket").q(jSONObject.toJSONString());
+        com.alibaba.gaiax.studio.third.socket.websocket.a.f("GaiaXSocket").q(jSONObject.toJSONString());
     }
 
     public final void m(@Nullable GXSocketListener gXSocketListener) {
@@ -283,12 +281,12 @@ public final class GXSocket implements SocketListener {
     @Override // com.alibaba.gaiax.studio.third.socket.websocket.SocketListener
     public void onDisconnect() {
         Log.e(TAG, "onDisconnect() called");
-        C3392b c3392b = this.h;
-        if (c3392b != null) {
-            c3392b.i();
+        b bVar = this.h;
+        if (bVar != null) {
+            bVar.i();
         }
         this.h = null;
-        C3391a.i("GaiaXSocket");
+        com.alibaba.gaiax.studio.third.socket.websocket.a.i("GaiaXSocket");
         this.j = null;
         this.i = null;
         this.a = false;

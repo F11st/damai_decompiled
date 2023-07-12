@@ -48,37 +48,34 @@ public final class ShopInfoPresent extends AbsPresenter<GenericItem<ItemValue>, 
     @NotNull
     public static final String ACTION_TO_SHOP_INFO = "detail";
     @NotNull
-    public static final C3505a Companion = new C3505a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.scriptmurder.ShopInfoPresent$a */
     /* loaded from: classes7.dex */
-    public static final class C3505a {
-        private C3505a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3505a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.scriptmurder.ShopInfoPresent$b */
     /* loaded from: classes7.dex */
-    public static final class C3506b implements ShopInfoViewHolder.OnShopInfoListener {
+    public static final class b implements ShopInfoViewHolder.OnShopInfoListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ GenericItem<ItemValue> b;
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.pictures.bricks.component.scriptmurder.ShopInfoPresent$b$a */
         /* loaded from: classes7.dex */
-        public static final class C3507a implements BottomActionDialog.OnActionListener {
+        public static final class a implements BottomActionDialog.OnActionListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ Activity a;
             final /* synthetic */ Ref$ObjectRef<Action> b;
             final /* synthetic */ View c;
 
-            C3507a(Activity activity, Ref$ObjectRef<Action> ref$ObjectRef, View view) {
+            a(Activity activity, Ref$ObjectRef<Action> ref$ObjectRef, View view) {
                 this.a = activity;
                 this.b = ref$ObjectRef;
                 this.c = view;
@@ -108,7 +105,7 @@ public final class ShopInfoPresent extends AbsPresenter<GenericItem<ItemValue>, 
             }
         }
 
-        C3506b(GenericItem<ItemValue> genericItem) {
+        b(GenericItem<ItemValue> genericItem) {
             this.b = genericItem;
         }
 
@@ -202,7 +199,7 @@ public final class ShopInfoPresent extends AbsPresenter<GenericItem<ItemValue>, 
                 }
                 ArrayList<BottomAction> callActionList = z ? shopInfoBean.getCallActionList() : arrayList;
                 if (callActionList != null) {
-                    new BottomActionDialog(activity, callActionList, new C3507a(activity, ref$ObjectRef, view), 0, 8, null).show();
+                    new BottomActionDialog(activity, callActionList, new a(activity, ref$ObjectRef, view), 0, 8, null).show();
                 }
             }
         }
@@ -273,7 +270,7 @@ public final class ShopInfoPresent extends AbsPresenter<GenericItem<ItemValue>, 
         b41.i(genericItem, "item");
         super.init((ShopInfoPresent) genericItem);
         ShopInfoViewHolder viewHolder = ((ShopInfoView) getView()).getViewHolder();
-        viewHolder.l(new C3506b(genericItem));
+        viewHolder.l(new b(genericItem));
         viewHolder.k(((ShopInfoModel) getModel()).getValue());
         HashMap hashMap = new HashMap();
         hashMap.put("value", ((ShopInfoModel) getModel()).getValue());

@@ -4,10 +4,8 @@ import android.content.Context;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.scriptmurder.bean.ScriptBean;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -69,7 +67,7 @@ public final class s62 extends cp2<ScriptBean> {
             }
             getLiveUt().m(this.d, scriptBean.getId());
             this.e = scriptBean;
-            DMImageCreator f = C0504a.b().f(scriptBean.getPosterUrl(), m62.a(mu0.a(), 48.0f), m62.a(mu0.a(), 64.0f));
+            DMImageCreator f = cn.damai.common.image.a.b().f(scriptBean.getPosterUrl(), m62.a(mu0.a(), 48.0f), m62.a(mu0.a(), 64.0f));
             int i = R$drawable.store_defult_img;
             f.i(i).c(i).g(this.f);
             String des = scriptBean.getDes();
@@ -103,7 +101,7 @@ public final class s62 extends cp2<ScriptBean> {
         super.onClick(view);
         ScriptBean scriptBean = this.e;
         if (scriptBean != null) {
-            C0529c e = C0529c.e();
+            cn.damai.common.user.c e = cn.damai.common.user.c.e();
             q91 liveUt = getLiveUt();
             ScriptBean scriptBean2 = this.e;
             e.x(liveUt.E(scriptBean2 != null ? scriptBean2.getId() : null));

@@ -34,10 +34,9 @@ public class ActivityLifecycleCB {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.ut.comm.ActivityLifecycleCB$a */
     /* loaded from: classes8.dex */
-    class C3931a implements Application.ActivityLifecycleCallbacks {
-        C3931a() {
+    class a implements Application.ActivityLifecycleCallbacks {
+        a() {
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
@@ -109,6 +108,6 @@ public class ActivityLifecycleCB {
     }
 
     public void e(Application application) {
-        application.registerActivityLifecycleCallbacks(new C3931a());
+        application.registerActivityLifecycleCallbacks(new a());
     }
 }

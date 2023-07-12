@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.functions.Consumer;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import io.reactivex.internal.util.BackpressureHelper;
@@ -91,8 +91,8 @@ public final class FlowableOnBackpressureDrop<T> extends AbstractFlowableWithUps
         }
     }
 
-    public FlowableOnBackpressureDrop(AbstractC8147b<T> abstractC8147b) {
-        super(abstractC8147b);
+    public FlowableOnBackpressureDrop(b<T> bVar) {
+        super(bVar);
         this.onDrop = this;
     }
 
@@ -100,13 +100,13 @@ public final class FlowableOnBackpressureDrop<T> extends AbstractFlowableWithUps
     public void accept(T t) {
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new BackpressureDropSubscriber(subscriber, this.onDrop));
     }
 
-    public FlowableOnBackpressureDrop(AbstractC8147b<T> abstractC8147b, Consumer<? super T> consumer) {
-        super(abstractC8147b);
+    public FlowableOnBackpressureDrop(b<T> bVar, Consumer<? super T> consumer) {
+        super(bVar);
         this.onDrop = consumer;
     }
 }

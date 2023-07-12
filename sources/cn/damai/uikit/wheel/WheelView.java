@@ -54,12 +54,11 @@ public class WheelView extends View {
     private int wheelForeground;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.wheel.WheelView$a */
     /* loaded from: classes8.dex */
-    public class C2620a implements WheelScroller.ScrollingListener {
+    public class a implements WheelScroller.ScrollingListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2620a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.wheel.WheelScroller.ScrollingListener
@@ -121,12 +120,11 @@ public class WheelView extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.wheel.WheelView$b */
     /* loaded from: classes8.dex */
-    public class C2621b extends DataSetObserver {
+    public class b extends DataSetObserver {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2621b() {
+        b() {
         }
 
         @Override // android.database.DataSetObserver
@@ -165,8 +163,8 @@ public class WheelView extends View {
         this.changingListeners = new LinkedList();
         this.scrollingListeners = new LinkedList();
         this.clickingListeners = new LinkedList();
-        this.scrollingListener = new C2620a();
-        this.dataObserver = new C2621b();
+        this.scrollingListener = new a();
+        this.dataObserver = new b();
         initData(context);
     }
 
@@ -894,8 +892,8 @@ public class WheelView extends View {
         this.changingListeners = new LinkedList();
         this.scrollingListeners = new LinkedList();
         this.clickingListeners = new LinkedList();
-        this.scrollingListener = new C2620a();
-        this.dataObserver = new C2621b();
+        this.scrollingListener = new a();
+        this.dataObserver = new b();
         initData(context);
     }
 
@@ -914,8 +912,8 @@ public class WheelView extends View {
         this.changingListeners = new LinkedList();
         this.scrollingListeners = new LinkedList();
         this.clickingListeners = new LinkedList();
-        this.scrollingListener = new C2620a();
-        this.dataObserver = new C2621b();
+        this.scrollingListener = new a();
+        this.dataObserver = new b();
         initData(context);
     }
 }

@@ -3,10 +3,10 @@ package com.alibaba.pictures.bricks.channel.activity;
 import android.content.Context;
 import android.os.Bundle;
 import cn.damai.common.AppConfig;
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseModel;
+import cn.damai.common.app.base.a;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
@@ -24,10 +24,10 @@ import tb.mf;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
-public final class NewShowCalendarActivity<T extends AbstractC0470a<?, ?>, E extends BaseModel> extends DamaiBaseActivity<T, E> {
+public final class NewShowCalendarActivity<T extends cn.damai.common.app.base.a<?, ?>, E extends BaseModel> extends DamaiBaseActivity<T, E> {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3446a Companion = new C3446a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String DEFAULT_CALENDAR_H5_ONLINE_URL = "https://m.damai.cn/shows/pages/show-calendar.html";
     @NotNull
@@ -40,15 +40,14 @@ public final class NewShowCalendarActivity<T extends AbstractC0470a<?, ?>, E ext
     public static final String ORANGE_CONFIG_KEY_CALENDAR_H5 = "calendar_page_share_url";
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.channel.activity.NewShowCalendarActivity$a */
     /* loaded from: classes7.dex */
-    public static final class C3446a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3446a() {
+        private a() {
         }
 
-        public /* synthetic */ C3446a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -64,13 +63,12 @@ public final class NewShowCalendarActivity<T extends AbstractC0470a<?, ?>, E ext
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.channel.activity.NewShowCalendarActivity$b */
     /* loaded from: classes7.dex */
-    public static final class C3447b implements SimpleTitleLayout.OnBtnClickListener {
+    public static final class b implements SimpleTitleLayout.OnBtnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ NewShowCalendarActivity<T, E> a;
 
-        C3447b(NewShowCalendarActivity<T, E> newShowCalendarActivity) {
+        b(NewShowCalendarActivity<T, E> newShowCalendarActivity) {
             this.a = newShowCalendarActivity;
         }
 
@@ -140,7 +138,7 @@ public final class NewShowCalendarActivity<T extends AbstractC0470a<?, ?>, E ext
             ipChange.ipc$dispatch("1798069434", new Object[]{this});
             return;
         }
-        C0529c.e().K(this);
+        c.e().K(this);
         removeHeadTitleView();
         SimpleTitleLayout simpleTitleLayout = (SimpleTitleLayout) findViewById(R$id.channel_id_stl);
         simpleTitleLayout.enableImmersiveMode(this);
@@ -148,7 +146,7 @@ public final class NewShowCalendarActivity<T extends AbstractC0470a<?, ?>, E ext
         simpleTitleLayout.setAlpha(0.0f);
         simpleTitleLayout.switchMode(true);
         simpleTitleLayout.enableDivider(false);
-        simpleTitleLayout.setListener(new C3447b(this));
+        simpleTitleLayout.setListener(new b(this));
         NewChannelFragment newChannelFragment = new NewChannelFragment();
         Bundle bundle = new Bundle();
         Bundle extras = getIntent().getExtras();

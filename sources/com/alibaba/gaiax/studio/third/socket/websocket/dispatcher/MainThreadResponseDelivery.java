@@ -34,9 +34,8 @@ public class MainThreadResponseDelivery implements ResponseDelivery {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.studio.third.socket.websocket.dispatcher.MainThreadResponseDelivery$a */
     /* loaded from: classes6.dex */
-    public static /* synthetic */ class C3395a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -284,7 +283,7 @@ public class MainThreadResponseDelivery implements ResponseDelivery {
             try {
                 if (this.type != RUNNABLE_TYPE.NON && (list = this.mSocketListenerList) != null && !list.isEmpty() && (((runnable_type = this.type) != RUNNABLE_TYPE.CONNECT_FAILED || this.connectErrorCause != null) && ((runnable_type != RUNNABLE_TYPE.SEND_ERROR || this.errorResponse != null) && ((runnable_type != RUNNABLE_TYPE.STRING_MSG || !TextUtils.isEmpty(this.textResponse)) && (((runnable_type2 = this.type) != RUNNABLE_TYPE.BYTE_BUFFER_MSG || this.byteResponse != null) && ((runnable_type2 != RUNNABLE_TYPE.PING || this.framedataResponse != null) && (runnable_type2 != RUNNABLE_TYPE.PONG || this.framedataResponse != null))))))) {
                     synchronized (MainThreadResponseDelivery.b) {
-                        switch (C3395a.a[this.type.ordinal()]) {
+                        switch (a.a[this.type.ordinal()]) {
                             case 1:
                                 for (SocketListener socketListener : this.mSocketListenerList) {
                                     socketListener.onConnected();
@@ -340,7 +339,7 @@ public class MainThreadResponseDelivery implements ResponseDelivery {
             }
         }
 
-        /* synthetic */ CallbackRunnable(C3395a c3395a) {
+        /* synthetic */ CallbackRunnable(a aVar) {
             this();
         }
     }

@@ -25,10 +25,10 @@ public final class o40 {
             return continuation.toString();
         }
         try {
-            Result.C8174a c8174a = Result.Companion;
+            Result.a aVar = Result.Companion;
             m1271constructorimpl = Result.m1271constructorimpl(continuation + '@' + b(continuation));
         } catch (Throwable th) {
-            Result.C8174a c8174a2 = Result.Companion;
+            Result.a aVar2 = Result.Companion;
             m1271constructorimpl = Result.m1271constructorimpl(i32.a(th));
         }
         if (Result.m1274exceptionOrNullimpl(m1271constructorimpl) != null) {

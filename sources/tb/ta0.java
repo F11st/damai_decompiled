@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.address.ui.AddAddressActivity;
 import cn.damai.ultron.secondpage.phonecode.bean.DmPhoneCodeBean;
 import cn.damai.ultron.view.activity.DMUltronPayDetailBean;
@@ -39,7 +38,7 @@ public class ta0 extends ib {
         } else {
             boolean u = u(iDMComponent);
             try {
-                C0529c.e().x(kb0.u().x(this.b));
+                cn.damai.common.user.c.e().x(kb0.u().x(this.b));
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -61,7 +60,7 @@ public class ta0 extends ib {
             ipChange.ipc$dispatch("-1535720669", new Object[]{this});
             return;
         }
-        C0529c.e().x(kb0.u().g(this.b));
+        cn.damai.common.user.c.e().x(kb0.u().g(this.b));
         Bundle bundle = new Bundle();
         bundle.putInt(AddAddressActivity.KEY_OPERATION_ADDRESS, 1);
         DMNav.from(this.b).withExtras(bundle).forResult(37).toUri(NavUri.b("addaddress"));
@@ -73,7 +72,7 @@ public class ta0 extends ib {
             ipChange.ipc$dispatch("277935630", new Object[]{this, str});
             return;
         }
-        C0529c.e().x(kb0.u().D(this.b));
+        cn.damai.common.user.c.e().x(kb0.u().D(this.b));
         Bundle bundle = new Bundle();
         bundle.putString("dm_bundle_address_id", str);
         DMNav.from(this.b).withExtras(bundle).forResult(37).toUri(NavUri.b(hb0.e));
@@ -154,7 +153,7 @@ public class ta0 extends ib {
                 list = JSON.parseArray(jSONObject.getString("deliveryWayEntries"), DmDeliveryWayBean.class);
             }
             if (wh2.e(list) > 0) {
-                C0529c.e().x(kb0.u().i(this.b));
+                cn.damai.common.user.c.e().x(kb0.u().i(this.b));
                 Bundle bundle = new Bundle();
                 bundle.putParcelableArrayList("param", (ArrayList) list);
                 bundle.putString(ScriptSelectFragment.EXTRA_KEY_SELECT_ID, string);
@@ -174,7 +173,7 @@ public class ta0 extends ib {
             if (TextUtils.isEmpty(string)) {
                 return;
             }
-            C0529c.e().x(kb0.u().A(this.b));
+            cn.damai.common.user.c.e().x(kb0.u().A(this.b));
             Bundle bundle = new Bundle();
             bundle.putString("fields", string);
             DMNav.from(this.b).withExtras(bundle).toUri(NavUri.b(hb0.d));
@@ -207,7 +206,7 @@ public class ta0 extends ib {
             if (TextUtils.isEmpty(string) && TextUtils.isEmpty(string2)) {
                 return;
             }
-            C0529c.e().x(kb0.u().B(this.b));
+            cn.damai.common.user.c.e().x(kb0.u().B(this.b));
             Bundle bundle = new Bundle();
             bundle.putString("paramvalue", string);
             bundle.putString("paramvalue_unuse", string2);
@@ -228,7 +227,7 @@ public class ta0 extends ib {
             if (TextUtils.isEmpty(string3) && TextUtils.isEmpty("")) {
                 return;
             }
-            C0529c.e().x(kb0.u().B(this.b));
+            cn.damai.common.user.c.e().x(kb0.u().B(this.b));
             Bundle bundle2 = new Bundle();
             bundle2.putString("paramvalue", string3);
             bundle2.putString(ScriptSelectFragment.EXTRA_KEY_SELECT_ID, str2);

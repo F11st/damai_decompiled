@@ -50,13 +50,12 @@ public class DialogUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.util.DialogUtil$a */
     /* loaded from: classes8.dex */
-    public static final class View$OnClickListenerC2560a implements View.OnClickListener {
+    public static final class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TDialog a;
 
-        View$OnClickListenerC2560a(TDialog tDialog) {
+        a(TDialog tDialog) {
             this.a = tDialog;
         }
 
@@ -72,14 +71,13 @@ public class DialogUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.util.DialogUtil$b */
     /* loaded from: classes8.dex */
-    public static class View$OnClickListenerC2561b implements View.OnClickListener {
+    public static class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private Dialog a;
         private View.OnClickListener b;
 
-        public View$OnClickListenerC2561b(Dialog dialog, View.OnClickListener onClickListener) {
+        public b(Dialog dialog, View.OnClickListener onClickListener) {
             this.a = dialog;
             this.b = onClickListener;
         }
@@ -111,8 +109,8 @@ public class DialogUtil {
         TDialog tDialog = new TDialog(activity, R$style.translucent_dialog_style);
         tDialog.setContentView(inflate);
         tDialog.setCanceledOnTouchOutside(true);
-        int b = yr2.b(activity, bitmap.getHeight(), bitmap.getWidth());
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(b, (bitmap.getHeight() * b) / bitmap.getWidth());
+        int b2 = yr2.b(activity, bitmap.getHeight(), bitmap.getWidth());
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(b2, (bitmap.getHeight() * b2) / bitmap.getWidth());
         ImageView imageView = (ImageView) inflate.findViewById(R$id.homepage_popup_window_image);
         imageView.setLayoutParams(layoutParams);
         imageView.setImageBitmap(bitmap);
@@ -120,7 +118,7 @@ public class DialogUtil {
         if (onDialogShowTimeListener != null) {
             tDialog.g(onDialogShowTimeListener);
         }
-        ((FrameLayout) inflate.findViewById(R$id.homepage_popup_window_close_btn)).setOnClickListener(new View$OnClickListenerC2561b(tDialog, onClickListener2));
+        ((FrameLayout) inflate.findViewById(R$id.homepage_popup_window_close_btn)).setOnClickListener(new b(tDialog, onClickListener2));
         return tDialog;
     }
 
@@ -141,7 +139,7 @@ public class DialogUtil {
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(c, (c * 251) / SecExceptionCode.SEC_ERROR_DYN_STORE_UNKNOWN_ERROR);
         ImageView imageView = (ImageView) inflate.findViewById(R$id.homepage_popup_window_dna);
         imageView.setLayoutParams(layoutParams);
-        imageView.setOnClickListener(new View$OnClickListenerC2560a(tDialog));
+        imageView.setOnClickListener(new a(tDialog));
         return tDialog;
     }
 
@@ -172,15 +170,15 @@ public class DialogUtil {
         }
         memberDialogActionV2.loadHeadImg(dMAvatar, str);
         imageView.setImageBitmap(bitmap);
-        int a = DisplayMetrics.getwidthPixels(l62.c(activity)) - q60.a(activity, 100.0f);
-        int a2 = l62.a(activity, 30.0f);
+        int a2 = DisplayMetrics.getwidthPixels(l62.c(activity)) - q60.a(activity, 100.0f);
+        int a3 = l62.a(activity, 30.0f);
         int width = bitmap.getWidth();
         if (width > 0) {
-            a2 += (bitmap.getHeight() * a) / width;
+            a3 += (bitmap.getHeight() * a2) / width;
         }
-        viewGroup.setLayoutParams(new RelativeLayout.LayoutParams(a, a2));
-        imageView.setOnClickListener(new View$OnClickListenerC2561b(tDialog, memberDialogActionV2.getContentClick()));
-        frameLayout.setOnClickListener(new View$OnClickListenerC2561b(tDialog, memberDialogActionV2.getCloseClick()));
+        viewGroup.setLayoutParams(new RelativeLayout.LayoutParams(a2, a3));
+        imageView.setOnClickListener(new b(tDialog, memberDialogActionV2.getContentClick()));
+        frameLayout.setOnClickListener(new b(tDialog, memberDialogActionV2.getCloseClick()));
         tDialog.g(memberDialogActionV2);
         if (!TextUtils.isEmpty(str4)) {
             ImageView imageView2 = (ImageView) inflate.findViewById(R$id.dmg_img_gif);
@@ -202,14 +200,14 @@ public class DialogUtil {
         TDialog tDialog = new TDialog(activity, R$style.translucent_dialog_style);
         tDialog.setContentView(inflate);
         tDialog.setCanceledOnTouchOutside(false);
-        int a = DisplayMetrics.getwidthPixels(l62.c(activity)) - q60.a(activity, 100.0f);
+        int a2 = DisplayMetrics.getwidthPixels(l62.c(activity)) - q60.a(activity, 100.0f);
         int width = bitmap.getWidth();
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(a, width > 0 ? (bitmap.getHeight() * a) / width : 0);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(a2, width > 0 ? (bitmap.getHeight() * a2) / width : 0);
         ImageView imageView = (ImageView) inflate.findViewById(R$id.dmp_img);
         imageView.setLayoutParams(layoutParams);
         imageView.setImageBitmap(bitmap);
-        imageView.setOnClickListener(new View$OnClickListenerC2561b(tDialog, memberDialogAction.getContentClick()));
-        ((FrameLayout) inflate.findViewById(R$id.dmp_close)).setOnClickListener(new View$OnClickListenerC2561b(tDialog, memberDialogAction.getCloseClick()));
+        imageView.setOnClickListener(new b(tDialog, memberDialogAction.getContentClick()));
+        ((FrameLayout) inflate.findViewById(R$id.dmp_close)).setOnClickListener(new b(tDialog, memberDialogAction.getCloseClick()));
         tDialog.g(memberDialogAction);
         return tDialog;
     }

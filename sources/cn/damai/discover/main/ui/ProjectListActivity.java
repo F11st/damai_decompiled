@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
 import cn.damai.discover.main.ui.adapter.ProjectListAdapter;
@@ -16,9 +16,9 @@ import cn.damai.uikit.iconfont.DMIconFontTextView;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.List;
-import tb.C9548pb;
 import tb.kg2;
 import tb.lm2;
+import tb.pb;
 import tb.s90;
 
 /* compiled from: Taobao */
@@ -33,12 +33,11 @@ public class ProjectListActivity extends DamaiBaseActivity {
     private final lm2 mUt = new lm2();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ProjectListActivity$a */
     /* loaded from: classes5.dex */
-    public class C1026a implements ProjectListAdapter.ProjectClickListener {
+    public class a implements ProjectListAdapter.ProjectClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1026a() {
+        a() {
         }
 
         @Override // cn.damai.discover.main.ui.adapter.ProjectListAdapter.ProjectClickListener
@@ -49,17 +48,16 @@ public class ProjectListActivity extends DamaiBaseActivity {
                 return;
             }
             s90.j(ProjectListActivity.this, projectItemBean);
-            C9548pb.j(ProjectListActivity.this.mUt.A(i, projectItemBean.id, true));
+            pb.j(ProjectListActivity.this.mUt.A(i, projectItemBean.id, true));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ProjectListActivity$b */
     /* loaded from: classes5.dex */
-    public class C1027b implements ProjectListAdapter.Exposure {
+    public class b implements ProjectListAdapter.Exposure {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1027b() {
+        b() {
         }
 
         @Override // cn.damai.discover.main.ui.adapter.ProjectListAdapter.Exposure
@@ -96,9 +94,9 @@ public class ProjectListActivity extends DamaiBaseActivity {
             return;
         }
         this.mRecyclerView = (RecyclerView) findViewById(R$id.recycler_view);
-        ProjectListAdapter projectListAdapter = new ProjectListAdapter(this, new C1026a());
+        ProjectListAdapter projectListAdapter = new ProjectListAdapter(this, new a());
         this.mAdapter = projectListAdapter;
-        projectListAdapter.c(new C1027b());
+        projectListAdapter.c(new b());
         this.mRecyclerView.setLayoutManager(new LinearLayoutManager(this, 1, false));
         this.mRecyclerView.setAdapter(this.mAdapter);
         this.mAdapter.d(this.data);
@@ -176,7 +174,7 @@ public class ProjectListActivity extends DamaiBaseActivity {
             ipChange.ipc$dispatch("-509220354", new Object[]{this});
             return;
         }
-        C0529c.e().K(this);
+        c.e().K(this);
         initExtra();
         initTitleView();
         initRecyclerView();

@@ -34,12 +34,11 @@ public class w82 implements RegionSeatRequestChecker, ICombiner {
     private final int l;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.w82$a */
     /* loaded from: classes7.dex */
-    public class C9847a implements OnTListener<List<String>> {
+    public class a implements OnTListener<List<String>> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9847a() {
+        a() {
         }
 
         @Override // cn.damai.seat.listener.OnTListener
@@ -82,7 +81,7 @@ public class w82 implements RegionSeatRequestChecker, ICombiner {
             ipChange.ipc$dispatch("-1120109876", new Object[]{this});
         } else if (this.i || (seatBox = this.d) == null || (seatStateParent = this.f) == null || !this.h) {
         } else {
-            this.c.post(new SeatCombineTask(this.j, this.k, this.l, seatBox, this.e, seatStateParent, new C9847a()));
+            this.c.post(new SeatCombineTask(this.j, this.k, this.l, seatBox, this.e, seatStateParent, new a()));
         }
     }
 

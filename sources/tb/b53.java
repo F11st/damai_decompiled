@@ -2,15 +2,13 @@ package tb;
 
 import android.content.Context;
 import android.content.Intent;
-import com.heytap.mcssdk.C5462c;
-import com.heytap.mcssdk.d.InterfaceC5465d;
 import com.heytap.msp.push.mode.BaseMode;
 import java.util.ArrayList;
 import java.util.List;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public abstract class b53 implements InterfaceC5465d {
+public abstract class b53 implements com.heytap.mcssdk.d.d {
     public static List<BaseMode> a(Context context, Intent intent) {
         BaseMode a;
         if (intent == null) {
@@ -24,8 +22,8 @@ public abstract class b53 implements InterfaceC5465d {
         }
         z53.a("MessageParser--getMessageByIntent--type:" + i);
         ArrayList arrayList = new ArrayList();
-        for (InterfaceC5465d interfaceC5465d : C5462c.m().q()) {
-            if (interfaceC5465d != null && (a = interfaceC5465d.a(context, i, intent)) != null) {
+        for (com.heytap.mcssdk.d.d dVar : com.heytap.mcssdk.c.m().q()) {
+            if (dVar != null && (a = dVar.a(context, i, intent)) != null) {
                 arrayList.add(a);
             }
         }

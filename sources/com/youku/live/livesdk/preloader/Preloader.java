@@ -263,7 +263,7 @@ public class Preloader {
                 i = -1;
             }
         } else {
-            i = R.C7959drawable.dago_yklive_back_cover_place_holder;
+            i = R.drawable.dago_yklive_back_cover_place_holder;
         }
         if (context == null || i == -1) {
             return null;

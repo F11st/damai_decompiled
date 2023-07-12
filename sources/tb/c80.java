@@ -16,7 +16,6 @@ import com.android.alibaba.ip.runtime.IpChange;
 import io.flutter.wpkbridge.WPKFactory;
 import java.util.Objects;
 import kotlin.jvm.JvmStatic;
-import kotlin.text.C8604o;
 import kotlin.text.StringsKt__StringsKt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -72,7 +71,7 @@ public final class c80 {
         if (AndroidInstantRuntime.support(ipChange, "-1436284401")) {
             return ((Boolean) ipChange.ipc$dispatch("-1436284401", new Object[]{this, context})).booleanValue();
         }
-        q = C8604o.q("HONOR", Build.getMANUFACTURER(), true);
+        q = kotlin.text.o.q("HONOR", Build.getMANUFACTURER(), true);
         return q && context != null && context.getPackageManager() != null && context.getPackageManager().hasSystemFeature("com.hihonor.hardware.sensor.posture");
     }
 
@@ -128,7 +127,7 @@ public final class c80 {
         L1e:
             java.lang.String r0 = com.alibaba.wireless.security.aopsdk.replace.android.os.Build.getMANUFACTURER()
             java.lang.String r1 = "HUAWEI"
-            boolean r0 = kotlin.text.C8596g.q(r1, r0, r4)
+            boolean r0 = kotlin.text.g.q(r1, r0, r4)
             if (r0 == 0) goto Lc7
             if (r6 == 0) goto L3f
             android.content.pm.PackageManager r0 = r6.getPackageManager()
@@ -267,9 +266,9 @@ public final class c80 {
         if (AndroidInstantRuntime.support(ipChange, "665251357")) {
             return ((Boolean) ipChange.ipc$dispatch("665251357", new Object[]{this, context})).booleanValue();
         }
-        q = C8604o.q("samsung", Build.getBRAND(), true);
+        q = kotlin.text.o.q("samsung", Build.getBRAND(), true);
         if (q) {
-            q2 = C8604o.q("winner", android.os.Build.DEVICE, true);
+            q2 = kotlin.text.o.q("winner", android.os.Build.DEVICE, true);
             if (q2) {
                 return true;
             }
@@ -277,11 +276,11 @@ public final class c80 {
         String model = Build.getMODEL();
         if (!TextUtils.isEmpty(model)) {
             b41.h(model, "model");
-            F = C8604o.F(model, "SM-F9", false, 2, null);
+            F = kotlin.text.o.F(model, "SM-F9", false, 2, null);
             if (!F) {
-                F2 = C8604o.F(model, "SM-W202", false, 2, null);
+                F2 = kotlin.text.o.F(model, "SM-W202", false, 2, null);
                 if (!F2) {
-                    F3 = C8604o.F(model, "SM-W90", false, 2, null);
+                    F3 = kotlin.text.o.F(model, "SM-W90", false, 2, null);
                     if (F3) {
                     }
                 }
@@ -298,7 +297,7 @@ public final class c80 {
             return ((Double) ipChange.ipc$dispatch("-269345178", new Object[]{this, context})).doubleValue();
         }
         if (context != null) {
-            Object systemService = context.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+            Object systemService = context.getSystemService(v.ATTACH_MODE_WINDOW);
             WindowManager windowManager = systemService instanceof WindowManager ? (WindowManager) systemService : null;
             if (windowManager == null || (defaultDisplay = windowManager.getDefaultDisplay()) == null) {
                 return 0.0d;
@@ -389,7 +388,7 @@ public final class c80 {
         if (AndroidInstantRuntime.support(ipChange, "1212154795")) {
             return ((Boolean) ipChange.ipc$dispatch("1212154795", new Object[]{this})).booleanValue();
         }
-        q = C8604o.q("oppo", Build.getMANUFACTURER(), true);
+        q = kotlin.text.o.q("oppo", Build.getMANUFACTURER(), true);
         if (q) {
             try {
                 Class<?> cls = Class.forName("com.oplus.content.OplusFeatureConfigManager");
@@ -477,7 +476,7 @@ public final class c80 {
             Object invoke = cls.getMethod(gn1.TYPE_OPEN_URL_METHOD_GET, String.class).invoke(cls, "ro.build.characteristics");
             String str = invoke instanceof String ? (String) invoke : null;
             if (str != null) {
-                q = C8604o.q(str, "tablet", true);
+                q = kotlin.text.o.q(str, "tablet", true);
                 return q;
             }
             return false;
@@ -494,14 +493,14 @@ public final class c80 {
         if (AndroidInstantRuntime.support(ipChange, "-902589649")) {
             return ((Boolean) ipChange.ipc$dispatch("-902589649", new Object[]{this, context})).booleanValue();
         }
-        q = C8604o.q("vivo", Build.getMANUFACTURER(), true);
+        q = kotlin.text.o.q("vivo", Build.getMANUFACTURER(), true);
         if (q) {
             try {
                 Class<?> cls = Class.forName("android.util.FtDeviceInfo");
                 Object invoke = cls.getMethod("getDeviceType", new Class[0]).invoke(cls, new Object[0]);
                 String str = invoke instanceof String ? (String) invoke : null;
                 if (str != null) {
-                    q2 = C8604o.q(str, "foldable", true);
+                    q2 = kotlin.text.o.q(str, "foldable", true);
                     if (q2) {
                         return true;
                     }
@@ -520,14 +519,14 @@ public final class c80 {
         if (AndroidInstantRuntime.support(ipChange, "1451410258")) {
             return ((Boolean) ipChange.ipc$dispatch("1451410258", new Object[]{this})).booleanValue();
         }
-        q = C8604o.q("Xiaomi", Build.getMANUFACTURER(), true);
+        q = kotlin.text.o.q("Xiaomi", Build.getMANUFACTURER(), true);
         if (q) {
             try {
                 Class<?> cls = Class.forName("android.os.SystemProperties");
                 Object invoke = cls.getMethod(gn1.TYPE_OPEN_URL_METHOD_GET, String.class).invoke(cls, "persist.sys.muiltdisplay_type");
                 String str = invoke instanceof String ? (String) invoke : null;
                 if (str != null) {
-                    q2 = C8604o.q(str, "2", true);
+                    q2 = kotlin.text.o.q(str, "2", true);
                     return q2;
                 }
                 return false;

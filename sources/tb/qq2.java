@@ -1,8 +1,6 @@
 package tb;
 
 import java.util.Set;
-import kotlin.collections.C8205f0;
-import kotlin.collections.C8212k;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.MutabilityQualifier;
 import kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.NullabilityQualifier;
@@ -45,13 +43,13 @@ public final class qq2 {
             return t3 == null ? t4 : t3;
         }
         if (t3 != null) {
-            j = C8205f0.j(set, t3);
+            j = kotlin.collections.f0.j(set, t3);
             E0 = CollectionsKt___CollectionsKt.E0(j);
             if (E0 != null) {
                 set = E0;
             }
         }
-        return (T) C8212k.r0(set);
+        return (T) kotlin.collections.k.r0(set);
     }
 
     @Nullable

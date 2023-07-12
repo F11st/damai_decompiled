@@ -16,9 +16,8 @@ public class t20 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.t20$b */
     /* loaded from: classes11.dex */
-    public static class C9706b {
+    public static class b {
         private static final t20 a = new t20();
     }
 
@@ -31,7 +30,7 @@ public class t20 {
     }
 
     public static t20 d() {
-        return C9706b.a;
+        return b.a;
     }
 
     private void e() {

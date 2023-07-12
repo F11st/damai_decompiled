@@ -10,9 +10,9 @@ import android.media.MediaFormat;
 import android.text.TextUtils;
 import android.view.Surface;
 import com.alibaba.security.biometrics.jni.YuvEngineWrap;
-import com.alibaba.security.common.c.C3800a;
+import com.alibaba.security.common.c.a;
 import com.alibaba.security.common.track.model.TrackLog;
-import com.alibaba.security.realidentity.a.C3847g;
+import com.alibaba.security.realidentity.a.g;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
@@ -263,10 +263,10 @@ public class MediaCodeApi15CameraVideoRecorder extends BaseCameraVideoRecorder {
         try {
             LinkedBlockingQueue<byte[]> linkedBlockingQueue = this.mVideoQueue;
             if (linkedBlockingQueue != null && !linkedBlockingQueue.isEmpty()) {
-                C3800a.d("CameraVideoRecorder", "video record exception,mVideoQueue is not empty when stop recording");
+                a.d("CameraVideoRecorder", "video record exception,mVideoQueue is not empty when stop recording");
                 TrackLog recordException = TrackLog.recordException(this.mVideoQueue.isEmpty(), this.mVideoQueue.size());
-                C3847g unused = C3847g.C3848a.a;
-                C3847g.a(this.mVerifyToken, recordException);
+                g unused = g.a.a;
+                g.a(this.mVerifyToken, recordException);
             }
             this.mVEncoderEnd = true;
             this.videoEncoderLoop = false;

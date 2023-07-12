@@ -16,7 +16,7 @@ import com.alibaba.pictures.bricks.bean.HomepageMarketTagBean;
 import com.alibaba.pictures.bricks.component.home.HomeProjectItemContract;
 import com.alibaba.pictures.bricks.component.home.HomeProjectItemView;
 import com.alibaba.pictures.bricks.onearch.AbsView;
-import com.alibaba.pictures.bricks.util.C3550a;
+import com.alibaba.pictures.bricks.util.a;
 import com.alibaba.pictures.bricks.view.DMCategroyTagView;
 import com.alibaba.pictures.bricks.view.DMDigitTextView;
 import com.alibaba.pictures.bricks.view.RoundImageView;
@@ -30,7 +30,7 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.arch.v3.core.ItemValue;
 import com.youku.arch.v3.core.item.GenericItem;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -150,7 +150,7 @@ public class HomeProjectItemView extends AbsView<GenericItem<ItemValue>, HomePro
             int b = s60Var.b(context, 98);
             Context context2 = getItemView().getContext();
             b41.h(context2, "itemView.context");
-            String c = C3550a.c(str, b, s60Var.b(context2, 131));
+            String c = a.c(str, b, s60Var.b(context2, 131));
             b41.h(c, "getImageUrl(\n           …x(itemView.context, 131))");
             ImageTicket load = ImageLoaderProviderProxy.getProxy().load(c, R$drawable.bricks_uikit_default_image_bg_gradient, new IImageSuccListener() { // from class: tb.vy0
                 @Override // com.alient.oneservice.image.IImageSuccListener
@@ -288,8 +288,8 @@ public class HomeProjectItemView extends AbsView<GenericItem<ItemValue>, HomePro
             if (homeProjectItemBottomLeft.isFormatAble()) {
                 String str2 = homeProjectItemBottomLeft.value;
                 b41.h(str2, "this.value");
-                z2 = C8604o.z(str2, "<b>", "</dmtag><dmtag size=\"12\">", false, 4, null);
-                z3 = C8604o.z(z2, "</b>", "</dmtag><dmtag size=\"10\">", false, 4, null);
+                z2 = o.z(str2, "<b>", "</dmtag><dmtag size=\"12\">", false, 4, null);
+                z3 = o.z(z2, "</b>", "</dmtag><dmtag size=\"10\">", false, 4, null);
                 String str3 = "<dmtag size=\"10\">" + z3 + "</dmtag>";
                 TextView textView10 = this.mItemTagBottomLeft;
                 if (textView10 != null) {
@@ -305,7 +305,7 @@ public class HomeProjectItemView extends AbsView<GenericItem<ItemValue>, HomePro
                     if (a != null) {
                         String str6 = homeProjectItemBottomLeft.value;
                         b41.h(str6, "this.value");
-                        z = C8604o.z(str6, a, "</dmtag><dmtag size=\"12\">" + a + "</dmtag></dmtag><dmtag size=\"10\">", false, 4, null);
+                        z = o.z(str6, a, "</dmtag><dmtag size=\"12\">" + a + "</dmtag></dmtag><dmtag size=\"10\">", false, 4, null);
                         str5 = z;
                     } else {
                         str5 = null;

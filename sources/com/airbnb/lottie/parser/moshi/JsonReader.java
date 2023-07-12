@@ -6,7 +6,7 @@ import java.util.Arrays;
 import okio.Buffer;
 import okio.BufferedSource;
 import okio.ByteString;
-import okio.C8849i;
+import okio.i;
 
 /* compiled from: Taobao */
 /* loaded from: classes17.dex */
@@ -35,18 +35,17 @@ public abstract class JsonReader implements Closeable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.parser.moshi.JsonReader$a */
     /* loaded from: classes17.dex */
-    public static final class C2911a {
+    public static final class a {
         final String[] a;
-        final C8849i b;
+        final i b;
 
-        private C2911a(String[] strArr, C8849i c8849i) {
+        private a(String[] strArr, i iVar) {
             this.a = strArr;
-            this.b = c8849i;
+            this.b = iVar;
         }
 
-        public static C2911a a(String... strArr) {
+        public static a a(String... strArr) {
             try {
                 ByteString[] byteStringArr = new ByteString[strArr.length];
                 Buffer buffer = new Buffer();
@@ -55,7 +54,7 @@ public abstract class JsonReader implements Closeable {
                     buffer.readByte();
                     byteStringArr[i] = buffer.readByteString();
                 }
-                return new C2911a((String[]) strArr.clone(), C8849i.d(byteStringArr));
+                return new a((String[]) strArr.clone(), i.d(byteStringArr));
             } catch (IOException e) {
                 throw new AssertionError(e);
             }
@@ -77,7 +76,7 @@ public abstract class JsonReader implements Closeable {
     }
 
     public static JsonReader p(BufferedSource bufferedSource) {
-        return new C2922b(bufferedSource);
+        return new b(bufferedSource);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -139,7 +138,7 @@ public abstract class JsonReader implements Closeable {
     public abstract void g() throws IOException;
 
     public final String getPath() {
-        return C2921a.a(this.a, this.b, this.c, this.d);
+        return com.airbnb.lottie.parser.moshi.a.a(this.a, this.b, this.c, this.d);
     }
 
     public abstract boolean j() throws IOException;
@@ -177,7 +176,7 @@ public abstract class JsonReader implements Closeable {
         iArr3[i3] = i;
     }
 
-    public abstract int s(C2911a c2911a) throws IOException;
+    public abstract int s(a aVar) throws IOException;
 
     public abstract void t() throws IOException;
 

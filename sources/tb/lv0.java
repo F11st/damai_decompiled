@@ -23,12 +23,11 @@ public final class lv0 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.lv0$a */
     /* loaded from: classes8.dex */
-    public static final class Choreographer$FrameCallbackC9424a implements Choreographer.FrameCallback {
+    public static final class a implements Choreographer.FrameCallback {
         final /* synthetic */ CancellableContinuation a;
 
-        Choreographer$FrameCallbackC9424a(CancellableContinuation cancellableContinuation) {
+        a(CancellableContinuation cancellableContinuation) {
             this.a = cancellableContinuation;
         }
 
@@ -41,10 +40,10 @@ public final class lv0 {
     static {
         Object m1271constructorimpl;
         try {
-            Result.C8174a c8174a = Result.Companion;
+            Result.a aVar = Result.Companion;
             m1271constructorimpl = Result.m1271constructorimpl(new HandlerContext(b(Looper.getMainLooper(), true), null, 2, null));
         } catch (Throwable th) {
-            Result.C8174a c8174a2 = Result.Companion;
+            Result.a aVar2 = Result.Companion;
             m1271constructorimpl = Result.m1271constructorimpl(i32.a(th));
         }
         Main = Result.m1277isFailureimpl(m1271constructorimpl) ? null : m1271constructorimpl;
@@ -70,7 +69,7 @@ public final class lv0 {
     }
 
     private static final void c(Choreographer choreographer2, CancellableContinuation<? super Long> cancellableContinuation) {
-        choreographer2.postFrameCallback(new Choreographer$FrameCallbackC9424a(cancellableContinuation));
+        choreographer2.postFrameCallback(new a(cancellableContinuation));
     }
 
     /* JADX INFO: Access modifiers changed from: private */

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
 import com.taobao.android.dinamicx.view.DXNativeRecyclerView;
-import com.taobao.android.dinamicx.widget.recycler.stacklayoutmanager.C6534c;
 import com.taobao.android.dinamicx.widget.recycler.stacklayoutmanager.StackLayoutManager;
 import tb.b00;
 import tb.z00;
@@ -30,10 +29,9 @@ public class DXStackCardLayoutWidgetNode extends DXScrollerLayout {
     private int currentPos = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXStackCardLayoutWidgetNode$a */
     /* loaded from: classes11.dex */
-    class C6458a implements StackLayoutManager.ItemChangedListener {
-        C6458a() {
+    class a implements StackLayoutManager.ItemChangedListener {
+        a() {
         }
 
         @Override // com.taobao.android.dinamicx.widget.recycler.stacklayoutmanager.StackLayoutManager.ItemChangedListener
@@ -48,9 +46,8 @@ public class DXStackCardLayoutWidgetNode extends DXScrollerLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXStackCardLayoutWidgetNode$b */
     /* loaded from: classes11.dex */
-    public static class C6459b implements IDXBuilderWidgetNode {
+    public static class b implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(Object obj) {
             return new DXStackCardLayoutWidgetNode();
@@ -68,7 +65,7 @@ public class DXStackCardLayoutWidgetNode extends DXScrollerLayout {
         super.onBindEvent(context, view, j);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onClone(DXWidgetNode dXWidgetNode, boolean z) {
         if (dXWidgetNode == null || !(dXWidgetNode instanceof DXStackCardLayoutWidgetNode)) {
             return;
@@ -102,7 +99,7 @@ public class DXStackCardLayoutWidgetNode extends DXScrollerLayout {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onRenderView(Context context, View view) {
         super.onRenderView(context, view);
     }
@@ -121,7 +118,7 @@ public class DXStackCardLayoutWidgetNode extends DXScrollerLayout {
         }
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetIntAttribute(long j, int i) {
         if (j == -3537170322378136036L) {
             this.isInfinite = i != 0;
@@ -138,10 +135,10 @@ public class DXStackCardLayoutWidgetNode extends DXScrollerLayout {
     @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout
     public void setLayoutManager(Context context, DXScrollerLayout dXScrollerLayout, RecyclerView recyclerView) {
         if (recyclerView.getLayoutManager() == null) {
-            C6534c c6534c = new C6534c();
-            c6534c.f(z00.b(context, (float) this.lineSpace)).g(this.overlapCount).d(getOrientation() == 0 ? StackLayoutManager.ScrollOrientation.LEFT : StackLayoutManager.ScrollOrientation.TOP).a(this.isInfinite).e(this.pagingEnabled).c((float) this.minScale).b((float) this.minAlpha);
-            StackLayoutManager stackLayoutManager = new StackLayoutManager(c6534c);
-            stackLayoutManager.w(new C6458a());
+            com.taobao.android.dinamicx.widget.recycler.stacklayoutmanager.c cVar = new com.taobao.android.dinamicx.widget.recycler.stacklayoutmanager.c();
+            cVar.f(z00.b(context, (float) this.lineSpace)).g(this.overlapCount).d(getOrientation() == 0 ? StackLayoutManager.ScrollOrientation.LEFT : StackLayoutManager.ScrollOrientation.TOP).a(this.isInfinite).e(this.pagingEnabled).c((float) this.minScale).b((float) this.minAlpha);
+            StackLayoutManager stackLayoutManager = new StackLayoutManager(cVar);
+            stackLayoutManager.w(new a());
             if (recyclerView instanceof DXNativeRecyclerView) {
                 ((DXNativeRecyclerView) recyclerView).setNeedFixScrollConflict(getOrientation() == 0 ? 1 : 2);
             }

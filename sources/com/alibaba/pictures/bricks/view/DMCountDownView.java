@@ -67,13 +67,12 @@ public class DMCountDownView extends LinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.DMCountDownView$a */
     /* loaded from: classes7.dex */
-    public static class HandlerC3573a extends Handler {
+    public static class a extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
         private final WeakReference<DMCountDownView> a;
 
-        HandlerC3573a(DMCountDownView dMCountDownView) {
+        a(DMCountDownView dMCountDownView) {
             this.a = new WeakReference<>(dMCountDownView);
         }
 
@@ -161,9 +160,9 @@ public class DMCountDownView extends LinearLayout {
                     try {
                         DMCountDownView dMCountDownView = DMCountDownView.this;
                         dMCountDownView.isContinue = DMCountDownView.access$210(dMCountDownView) > 1;
-                        String[] a = DMCountDownView.this.showDayTv ? ss.a(DMCountDownView.this.timeStamp) : ss.c(DMCountDownView.this.timeStamp);
+                        String[] a2 = DMCountDownView.this.showDayTv ? ss.a(DMCountDownView.this.timeStamp) : ss.c(DMCountDownView.this.timeStamp);
                         Message obtain = Message.obtain();
-                        obtain.obj = a;
+                        obtain.obj = a2;
                         obtain.what = 101;
                         DMCountDownView.this.myHandler.sendMessage(obtain);
                         Thread.sleep(1000L);
@@ -1187,7 +1186,7 @@ public class DMCountDownView extends LinearLayout {
         this.colon = ":";
         this.mExecutorService = Executors.newSingleThreadExecutor();
         this.showDayTv = false;
-        this.myHandler = new HandlerC3573a(this);
+        this.myHandler = new a(this);
         this.lastTime = 0L;
         this.timeEnd = 0L;
         this.context = context;

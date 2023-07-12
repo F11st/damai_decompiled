@@ -4,7 +4,7 @@ import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.net.Uri;
-import com.xiaomi.mipush.sdk.C7579o;
+import com.xiaomi.mipush.sdk.o;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -16,7 +16,7 @@ public class HelpContentProvider extends ContentProvider {
 
     @Override // android.content.ContentProvider
     public String getType(Uri uri) {
-        C7579o.a(getContext(), null, uri);
+        o.a(getContext(), null, uri);
         return "success";
     }
 

@@ -25,7 +25,7 @@ import com.ali.user.open.core.model.ResultCode;
 import com.ali.user.open.core.service.UserTrackerService;
 import com.ali.user.open.core.trace.SDKLogger;
 import com.ali.user.open.core.util.CommonUtils;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
@@ -65,7 +65,7 @@ public class BaseWebViewActivity extends AppCompatActivity implements IWebViewCl
     }
 
     protected int getLayout() {
-        return R.C2970layout.member_sdk_activity_webview;
+        return R.layout.member_sdk_activity_webview;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -139,7 +139,7 @@ public class BaseWebViewActivity extends AppCompatActivity implements IWebViewCl
             Log.e(str, "height=" + height + ",width=" + width);
             if (height > width) {
                 DisplayMetrics displayMetrics = new DisplayMetrics();
-                com.alibaba.wireless.security.aopsdk.replace.android.view.Display.getMetrics(((WindowManager) getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+                com.alibaba.wireless.security.aopsdk.replace.android.view.Display.getMetrics(((WindowManager) getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
                 int i = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(displayMetrics);
                 int i2 = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(displayMetrics);
                 Log.e(str, "height=" + i2 + ",width=" + i);

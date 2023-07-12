@@ -5,10 +5,8 @@ import androidx.annotation.Nullable;
 import com.airbnb.lottie.LottieDrawable;
 import com.airbnb.lottie.animation.content.Content;
 import com.airbnb.lottie.animation.content.ModifierContent;
-import com.airbnb.lottie.animation.keyframe.C2859m;
 import com.airbnb.lottie.model.animatable.AnimatableValue;
 import com.airbnb.lottie.model.content.ContentModel;
-import com.airbnb.lottie.model.layer.AbstractC2872a;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
@@ -36,8 +34,8 @@ public class u5 implements ModifierContent, ContentModel {
         this(null, null, null, null, null, null, null, null, null);
     }
 
-    public C2859m a() {
-        return new C2859m(this);
+    public com.airbnb.lottie.animation.keyframe.m a() {
+        return new com.airbnb.lottie.animation.keyframe.m(this);
     }
 
     @Nullable
@@ -87,7 +85,7 @@ public class u5 implements ModifierContent, ContentModel {
 
     @Override // com.airbnb.lottie.model.content.ContentModel
     @Nullable
-    public Content toContent(LottieDrawable lottieDrawable, AbstractC2872a abstractC2872a) {
+    public Content toContent(LottieDrawable lottieDrawable, com.airbnb.lottie.model.layer.a aVar) {
         return null;
     }
 

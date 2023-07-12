@@ -16,20 +16,18 @@ import com.uc.webview.export.internal.interfaces.IWebStorage;
 import com.uc.webview.export.internal.interfaces.IWebView;
 import com.uc.webview.export.internal.interfaces.UCMobileWebKit;
 import com.uc.webview.export.internal.setup.UCSetupException;
-import com.uc.webview.export.internal.uc.startup.C7302b;
 import com.uc.webview.export.internal.utility.ReflectionUtil;
 import java.util.HashMap;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class CoreFactory {
-    protected static C7297a a;
+    protected static a a;
     protected static Runnable b;
 
     /* compiled from: Taobao */
-    /* renamed from: com.uc.webview.export.internal.uc.CoreFactory$a */
     /* loaded from: classes11.dex */
-    public static class C7297a {
+    public static class a {
         public final Class<?> a;
         final ReflectionUtil.BindingMethod<IGlobalSettings> b;
         final ReflectionUtil.BindingMethod<ICookieManager> c;
@@ -48,7 +46,7 @@ public class CoreFactory {
         final ReflectionUtil.BindingMethod<WebResourceResponse> p;
         final ReflectionUtil.BindingMethod<ARManager> q;
 
-        public C7297a() {
+        public a() {
             ReflectionUtil.BindingMethod<IWebView> bindingMethod;
             Class<?> a = a();
             this.a = a;
@@ -144,21 +142,21 @@ public class CoreFactory {
         return h().e.getInstance();
     }
 
-    private static synchronized C7297a h() {
-        C7297a c7297a;
+    private static synchronized a h() {
+        a aVar;
         synchronized (CoreFactory.class) {
             if (a == null) {
-                C7302b.a(145);
-                a = new C7297a();
+                com.uc.webview.export.internal.uc.startup.b.a(145);
+                a = new a();
                 Runnable runnable = b;
                 if (runnable != null) {
                     runnable.run();
                 }
-                C7302b.a(146);
+                com.uc.webview.export.internal.uc.startup.b.a(146);
             }
-            c7297a = a;
+            aVar = a;
         }
-        return c7297a;
+        return aVar;
     }
 
     @Reflection

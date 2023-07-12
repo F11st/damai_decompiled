@@ -27,13 +27,12 @@ public class TickletTransferShareView extends LinearLayout {
     TickletTransferShareItemView weChat;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletTransferShareView$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2127a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TickletTransferShareCallback a;
 
-        View$OnClickListenerC2127a(TickletTransferShareView tickletTransferShareView, TickletTransferShareCallback tickletTransferShareCallback) {
+        a(TickletTransferShareView tickletTransferShareView, TickletTransferShareCallback tickletTransferShareCallback) {
             this.a = tickletTransferShareCallback;
         }
 
@@ -49,13 +48,12 @@ public class TickletTransferShareView extends LinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletTransferShareView$b */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2128b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TickletTransferShareCallback a;
 
-        View$OnClickListenerC2128b(TickletTransferShareView tickletTransferShareView, TickletTransferShareCallback tickletTransferShareCallback) {
+        b(TickletTransferShareView tickletTransferShareView, TickletTransferShareCallback tickletTransferShareCallback) {
             this.a = tickletTransferShareCallback;
         }
 
@@ -71,13 +69,12 @@ public class TickletTransferShareView extends LinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletTransferShareView$c */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2129c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TickletTransferShareCallback a;
 
-        View$OnClickListenerC2129c(TickletTransferShareView tickletTransferShareView, TickletTransferShareCallback tickletTransferShareCallback) {
+        c(TickletTransferShareView tickletTransferShareView, TickletTransferShareCallback tickletTransferShareCallback) {
             this.a = tickletTransferShareCallback;
         }
 
@@ -118,16 +115,16 @@ public class TickletTransferShareView extends LinearLayout {
             return;
         }
         if ("1".equals(str)) {
-            this.weChat.update(true, getResources().getString(R$string.iconfont_weixin), "#62C645", "微信好友", new View$OnClickListenerC2127a(this, tickletTransferShareCallback));
+            this.weChat.update(true, getResources().getString(R$string.iconfont_weixin), "#62C645", "微信好友", new a(this, tickletTransferShareCallback));
         } else {
             this.weChat.update(false, getResources().getString(R$string.iconfont_weixin), "#6662C645", "微信好友", null);
         }
         if ("1".equals(str2)) {
-            this.alipay.update(true, getResources().getString(R$string.iconfont_zhifubao), "#029FE9", "支付宝好友", new View$OnClickListenerC2128b(this, tickletTransferShareCallback));
+            this.alipay.update(true, getResources().getString(R$string.iconfont_zhifubao), "#029FE9", "支付宝好友", new b(this, tickletTransferShareCallback));
         } else {
             this.alipay.update(false, getResources().getString(R$string.iconfont_zhifubao), "#66029FE9", "支付宝好友", null);
         }
-        this.damaiPhone.update(true, getResources().getString(R$string.iconfont_shouji), "#34C6E8", "手机号码", new View$OnClickListenerC2129c(this, tickletTransferShareCallback));
+        this.damaiPhone.update(true, getResources().getString(R$string.iconfont_shouji), "#34C6E8", "手机号码", new c(this, tickletTransferShareCallback));
     }
 
     public TickletTransferShareView(Context context, AttributeSet attributeSet) {

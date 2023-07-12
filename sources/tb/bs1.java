@@ -15,14 +15,13 @@ public class bs1 implements IPhenixLifeCycle {
     private Lock c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.bs1$b */
     /* loaded from: classes11.dex */
-    private static class C8981b {
+    private static class b {
         private static final bs1 a = new bs1();
     }
 
     public static bs1 b() {
-        return C8981b.a;
+        return b.a;
     }
 
     public void a(IPhenixLifeCycle iPhenixLifeCycle) {

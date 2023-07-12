@@ -1,9 +1,9 @@
 package anet.channel.strategy;
 
-import anet.channel.strategy.C0214b;
+import anet.channel.strategy.b;
 
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
 public interface IStrategyListener {
-    void onStrategyUpdated(C0214b.C0221g c0221g);
+    void onStrategyUpdated(b.g gVar);
 }

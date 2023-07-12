@@ -13,10 +13,9 @@ public abstract class BaseStickyAdapter extends RecyclerView.Adapter implements 
     private List<Integer> b = new ArrayList();
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.BaseStickyAdapter$a */
     /* loaded from: classes11.dex */
-    class C6503a extends RecyclerView.AdapterDataObserver {
-        C6503a() {
+    class a extends RecyclerView.AdapterDataObserver {
+        a() {
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.AdapterDataObserver
@@ -56,7 +55,7 @@ public abstract class BaseStickyAdapter extends RecyclerView.Adapter implements 
     public abstract void a(RecyclerView.ViewHolder viewHolder, int i);
 
     public void b() {
-        registerAdapterDataObserver(new C6503a());
+        registerAdapterDataObserver(new a());
     }
 
     public void c() {

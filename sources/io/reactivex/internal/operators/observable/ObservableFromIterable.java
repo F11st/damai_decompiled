@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.Observer;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.d;
 import io.reactivex.internal.disposables.EmptyDisposable;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.observers.BasicQueueDisposable;
@@ -11,7 +11,7 @@ import tb.dg0;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableFromIterable<T> extends AbstractC8149d<T> {
+public final class ObservableFromIterable<T> extends d<T> {
     final Iterable<? extends T> source;
 
     /* compiled from: Taobao */
@@ -108,7 +108,7 @@ public final class ObservableFromIterable<T> extends AbstractC8149d<T> {
         this.source = iterable;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         try {
             Iterator<? extends T> it = this.source.iterator();

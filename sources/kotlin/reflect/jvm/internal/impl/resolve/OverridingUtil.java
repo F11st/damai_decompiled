@@ -13,8 +13,8 @@ import java.util.Queue;
 import java.util.ServiceLoader;
 import java.util.Set;
 import kotlin.Pair;
-import kotlin.collections.C8212k;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.k;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
@@ -31,7 +31,6 @@ import kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ReceiverParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor;
-import kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a;
 import kotlin.reflect.jvm.internal.impl.resolve.ExternalOverridabilityCondition;
 import kotlin.reflect.jvm.internal.impl.resolve.descriptorUtil.DescriptorUtilsKt;
 import kotlin.reflect.jvm.internal.impl.types.TypeConstructor;
@@ -234,10 +233,9 @@ public class OverridingUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.resolve.OverridingUtil$a */
     /* loaded from: classes3.dex */
-    static class C8483a implements KotlinTypeChecker.TypeConstructorEquality {
-        C8483a() {
+    static class a implements KotlinTypeChecker.TypeConstructorEquality {
+        a() {
         }
 
         private static /* synthetic */ void a(int i) {
@@ -267,10 +265,9 @@ public class OverridingUtil {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* JADX INFO: Add missing generic type declarations: [D] */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.resolve.OverridingUtil$b */
     /* loaded from: classes3.dex */
-    public static class C8484b<D> implements Function2<D, D, Pair<CallableDescriptor, CallableDescriptor>> {
-        C8484b() {
+    public static class b<D> implements Function2<D, D, Pair<CallableDescriptor, CallableDescriptor>> {
+        b() {
         }
 
         /* JADX WARN: Incorrect types in method signature: (TD;TD;)Lkotlin/Pair<Lkotlin/reflect/jvm/internal/impl/descriptors/CallableDescriptor;Lkotlin/reflect/jvm/internal/impl/descriptors/CallableDescriptor;>; */
@@ -283,12 +280,11 @@ public class OverridingUtil {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.resolve.OverridingUtil$c */
     /* loaded from: classes3.dex */
-    public static class C8485c implements Function1<CallableMemberDescriptor, Boolean> {
+    public static class c implements Function1<CallableMemberDescriptor, Boolean> {
         final /* synthetic */ DeclarationDescriptor a;
 
-        C8485c(DeclarationDescriptor declarationDescriptor) {
+        c(DeclarationDescriptor declarationDescriptor) {
             this.a = declarationDescriptor;
         }
 
@@ -301,10 +297,9 @@ public class OverridingUtil {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.resolve.OverridingUtil$d */
     /* loaded from: classes3.dex */
-    public static class C8486d implements Function1<CallableMemberDescriptor, CallableDescriptor> {
-        C8486d() {
+    public static class d implements Function1<CallableMemberDescriptor, CallableDescriptor> {
+        d() {
         }
 
         @Override // kotlin.jvm.functions.Function1
@@ -316,12 +311,11 @@ public class OverridingUtil {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.resolve.OverridingUtil$e */
     /* loaded from: classes3.dex */
-    public static class C8487e implements Function1<CallableMemberDescriptor, Boolean> {
+    public static class e implements Function1<CallableMemberDescriptor, Boolean> {
         final /* synthetic */ ClassDescriptor a;
 
-        C8487e(ClassDescriptor classDescriptor) {
+        e(ClassDescriptor classDescriptor) {
             this.a = classDescriptor;
         }
 
@@ -334,10 +328,9 @@ public class OverridingUtil {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.resolve.OverridingUtil$f */
     /* loaded from: classes3.dex */
-    public static class C8488f implements Function1<CallableMemberDescriptor, CallableDescriptor> {
-        C8488f() {
+    public static class f implements Function1<CallableMemberDescriptor, CallableDescriptor> {
+        f() {
         }
 
         @Override // kotlin.jvm.functions.Function1
@@ -349,13 +342,12 @@ public class OverridingUtil {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.resolve.OverridingUtil$g */
     /* loaded from: classes3.dex */
-    public static class C8489g implements Function1<CallableMemberDescriptor, wt2> {
+    public static class g implements Function1<CallableMemberDescriptor, wt2> {
         final /* synthetic */ gp1 a;
         final /* synthetic */ CallableMemberDescriptor b;
 
-        C8489g(gp1 gp1Var, CallableMemberDescriptor callableMemberDescriptor) {
+        g(gp1 gp1Var, CallableMemberDescriptor callableMemberDescriptor) {
             this.a = gp1Var;
             this.b = callableMemberDescriptor;
         }
@@ -370,9 +362,8 @@ public class OverridingUtil {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.resolve.OverridingUtil$h */
     /* loaded from: classes3.dex */
-    public static /* synthetic */ class C8490h {
+    public static /* synthetic */ class h {
         static final /* synthetic */ int[] a;
         static final /* synthetic */ int[] b;
         static final /* synthetic */ int[] c;
@@ -435,9 +426,9 @@ public class OverridingUtil {
         List<ExternalOverridabilityCondition> A0;
         A0 = CollectionsKt___CollectionsKt.A0(ServiceLoader.load(ExternalOverridabilityCondition.class, ExternalOverridabilityCondition.class.getClassLoader()));
         c = A0;
-        C8483a c8483a = new C8483a();
-        d = c8483a;
-        DEFAULT = new OverridingUtil(c8483a, b81.C8955a.INSTANCE);
+        a aVar = new a();
+        d = aVar;
+        DEFAULT = new OverridingUtil(aVar, b81.a.INSTANCE);
     }
 
     private OverridingUtil(@NotNull KotlinTypeChecker.TypeConstructorEquality typeConstructorEquality, @NotNull b81 b81Var) {
@@ -585,22 +576,22 @@ public class OverridingUtil {
         if (callableMemberDescriptor.getVisibility() != e70.INHERITED) {
             return;
         }
-        f70 h = h(callableMemberDescriptor);
-        if (h == null) {
+        f70 h2 = h(callableMemberDescriptor);
+        if (h2 == null) {
             if (function1 != null) {
                 function1.invoke(callableMemberDescriptor);
             }
             f70Var = e70.PUBLIC;
         } else {
-            f70Var = h;
+            f70Var = h2;
         }
         if (callableMemberDescriptor instanceof bx1) {
             ((bx1) callableMemberDescriptor).u(f70Var);
             for (PropertyAccessorDescriptor propertyAccessorDescriptor : ((PropertyDescriptor) callableMemberDescriptor).getAccessors()) {
-                L(propertyAccessorDescriptor, h == null ? null : function1);
+                L(propertyAccessorDescriptor, h2 == null ? null : function1);
             }
-        } else if (callableMemberDescriptor instanceof AbstractC8316a) {
-            ((AbstractC8316a) callableMemberDescriptor).D(f70Var);
+        } else if (callableMemberDescriptor instanceof kotlin.reflect.jvm.internal.impl.descriptors.impl.a) {
+            ((kotlin.reflect.jvm.internal.impl.descriptors.impl.a) callableMemberDescriptor).D(f70Var);
         } else {
             ax1 ax1Var = (ax1) callableMemberDescriptor;
             ax1Var.i(f70Var);
@@ -621,38 +612,38 @@ public class OverridingUtil {
             a(79);
         }
         if (collection.size() == 1) {
-            H h = (H) C8212k.O(collection);
-            if (h == null) {
+            H h2 = (H) k.O(collection);
+            if (h2 == null) {
                 a(80);
             }
-            return h;
+            return h2;
         }
         ArrayList arrayList = new ArrayList(2);
         e0 = CollectionsKt___CollectionsKt.e0(collection, function1);
-        H h2 = (H) C8212k.O(collection);
-        CallableDescriptor callableDescriptor = (CallableDescriptor) function1.invoke(h2);
-        for (H h3 : collection) {
-            CallableDescriptor callableDescriptor2 = (CallableDescriptor) function1.invoke(h3);
+        H h3 = (H) k.O(collection);
+        CallableDescriptor callableDescriptor = (CallableDescriptor) function1.invoke(h3);
+        for (H h4 : collection) {
+            CallableDescriptor callableDescriptor2 = (CallableDescriptor) function1.invoke(h4);
             if (D(callableDescriptor2, e0)) {
-                arrayList.add(h3);
+                arrayList.add(h4);
             }
             if (C(callableDescriptor2, callableDescriptor) && !C(callableDescriptor, callableDescriptor2)) {
-                h2 = h3;
+                h3 = h4;
             }
         }
         if (arrayList.isEmpty()) {
-            if (h2 == null) {
+            if (h3 == null) {
                 a(81);
             }
-            return h2;
+            return h3;
         } else if (arrayList.size() == 1) {
-            H h4 = (H) C8212k.O(arrayList);
-            if (h4 == null) {
+            H h5 = (H) k.O(arrayList);
+            if (h5 == null) {
                 a(82);
             }
-            return h4;
+            return h5;
         } else {
-            H h5 = null;
+            H h6 = null;
             Iterator it = arrayList.iterator();
             while (true) {
                 if (!it.hasNext()) {
@@ -660,18 +651,18 @@ public class OverridingUtil {
                 }
                 Object next = it.next();
                 if (!dk0.b(((CallableDescriptor) function1.invoke(next)).getReturnType())) {
-                    h5 = next;
+                    h6 = next;
                     break;
                 }
             }
-            if (h5 != null) {
-                return h5;
+            if (h6 != null) {
+                return h6;
             }
-            H h6 = (H) C8212k.O(arrayList);
-            if (h6 == null) {
+            H h7 = (H) k.O(arrayList);
+            if (h7 == null) {
                 a(84);
             }
-            return h6;
+            return h7;
         }
     }
 
@@ -778,7 +769,7 @@ public class OverridingUtil {
         if (collection.size() < 2) {
             return true;
         }
-        H = CollectionsKt___CollectionsKt.H(collection, new C8485c(collection.iterator().next().getContainingDeclaration()));
+        H = CollectionsKt___CollectionsKt.H(collection, new c(collection.iterator().next().getContainingDeclaration()));
         return H;
     }
 
@@ -943,7 +934,7 @@ public class OverridingUtil {
         if (!isEmpty) {
             collection = u;
         }
-        CallableMemberDescriptor copy = ((CallableMemberDescriptor) M(collection, new C8486d())).copy(classDescriptor, o(collection, classDescriptor), isEmpty ? e70.INVISIBLE_FAKE : e70.INHERITED, CallableMemberDescriptor.Kind.FAKE_OVERRIDE, false);
+        CallableMemberDescriptor copy = ((CallableMemberDescriptor) M(collection, new d())).copy(classDescriptor, o(collection, classDescriptor), isEmpty ? e70.INVISIBLE_FAKE : e70.INHERITED, CallableMemberDescriptor.Kind.FAKE_OVERRIDE, false);
         gp1Var.d(copy, collection);
         gp1Var.a(copy);
     }
@@ -978,7 +969,7 @@ public class OverridingUtil {
         if (list2 == null) {
             a(41);
         }
-        return new Pair<>(new hk1(this.a, KotlinTypePreparator.C8547a.INSTANCE), m(list, list2));
+        return new Pair<>(new hk1(this.a, KotlinTypePreparator.a.INSTANCE), m(list, list2));
     }
 
     @NotNull
@@ -1027,7 +1018,7 @@ public class OverridingUtil {
         boolean z2 = false;
         boolean z3 = false;
         for (CallableMemberDescriptor callableMemberDescriptor : collection) {
-            int i = C8490h.c[callableMemberDescriptor.getModality().ordinal()];
+            int i = h.c[callableMemberDescriptor.getModality().ordinal()];
             if (i == 1) {
                 Modality modality = Modality.FINAL;
                 if (modality == null) {
@@ -1080,14 +1071,14 @@ public class OverridingUtil {
             a(62);
         }
         ArrayList arrayList = new ArrayList(collection.size());
-        yd2 a = yd2.a();
+        yd2 a2 = yd2.a();
         for (CallableMemberDescriptor callableMemberDescriptor2 : collection) {
             OverrideCompatibilityInfo.Result c2 = E(callableMemberDescriptor2, callableMemberDescriptor, classDescriptor).c();
             boolean J = J(callableMemberDescriptor, callableMemberDescriptor2);
-            int i = C8490h.b[c2.ordinal()];
+            int i = h.b[c2.ordinal()];
             if (i == 1) {
                 if (J) {
-                    a.add(callableMemberDescriptor2);
+                    a2.add(callableMemberDescriptor2);
                 }
                 arrayList.add(callableMemberDescriptor2);
             } else if (i == 2) {
@@ -1097,13 +1088,13 @@ public class OverridingUtil {
                 arrayList.add(callableMemberDescriptor2);
             }
         }
-        gp1Var.d(callableMemberDescriptor, a);
+        gp1Var.d(callableMemberDescriptor, a2);
         return arrayList;
     }
 
     @NotNull
-    public static <H> Collection<H> q(@NotNull H h, @NotNull Collection<H> collection, @NotNull Function1<H, CallableDescriptor> function1, @NotNull Function1<H, wt2> function12) {
-        if (h == null) {
+    public static <H> Collection<H> q(@NotNull H h2, @NotNull Collection<H> collection, @NotNull Function1<H, CallableDescriptor> function1, @NotNull Function1<H, wt2> function12) {
+        if (h2 == null) {
             a(99);
         }
         if (collection == null) {
@@ -1116,13 +1107,13 @@ public class OverridingUtil {
             a(102);
         }
         ArrayList arrayList = new ArrayList();
-        arrayList.add(h);
-        CallableDescriptor invoke = function1.invoke(h);
+        arrayList.add(h2);
+        CallableDescriptor invoke = function1.invoke(h2);
         Iterator<H> it = collection.iterator();
         while (it.hasNext()) {
             H next = it.next();
             CallableDescriptor invoke2 = function1.invoke(next);
-            if (h == next) {
+            if (h2 == next) {
                 it.remove();
             } else {
                 OverrideCompatibilityInfo.Result y = y(invoke, invoke2);
@@ -1149,7 +1140,7 @@ public class OverridingUtil {
         if (gp1Var == null) {
             a(106);
         }
-        return q(callableMemberDescriptor, queue, new C8488f(), new C8489g(gp1Var, callableMemberDescriptor));
+        return q(callableMemberDescriptor, queue, new f(), new g(gp1Var, callableMemberDescriptor));
     }
 
     @NotNull
@@ -1157,7 +1148,7 @@ public class OverridingUtil {
         if (set == null) {
             a(6);
         }
-        return t(set, !set.isEmpty() && DescriptorUtilsKt.q(DescriptorUtilsKt.l(set.iterator().next())), null, new C8484b());
+        return t(set, !set.isEmpty() && DescriptorUtilsKt.q(DescriptorUtilsKt.l(set.iterator().next())), null, new b());
     }
 
     @NotNull
@@ -1205,7 +1196,7 @@ public class OverridingUtil {
         if (collection == null) {
             a(97);
         }
-        N = CollectionsKt___CollectionsKt.N(collection, new C8487e(classDescriptor));
+        N = CollectionsKt___CollectionsKt.N(collection, new e(classDescriptor));
         if (N == null) {
             a(98);
         }
@@ -1290,9 +1281,9 @@ public class OverridingUtil {
             } else if (!callableDescriptor.getName().equals(callableDescriptor2.getName())) {
                 return OverrideCompatibilityInfo.d("Name mismatch");
             } else {
-                OverrideCompatibilityInfo e = e(callableDescriptor, callableDescriptor2);
-                if (e != null) {
-                    return e;
+                OverrideCompatibilityInfo e2 = e(callableDescriptor, callableDescriptor2);
+                if (e2 != null) {
+                    return e2;
                 }
                 return null;
             }
@@ -1361,15 +1352,15 @@ public class OverridingUtil {
         boolean z2 = G.c() == OverrideCompatibilityInfo.Result.OVERRIDABLE;
         for (ExternalOverridabilityCondition externalOverridabilityCondition : c) {
             if (externalOverridabilityCondition.getContract() != ExternalOverridabilityCondition.Contract.CONFLICTS_ONLY && (!z2 || externalOverridabilityCondition.getContract() != ExternalOverridabilityCondition.Contract.SUCCESS_ONLY)) {
-                int i = C8490h.a[externalOverridabilityCondition.isOverridable(callableDescriptor, callableDescriptor2, classDescriptor).ordinal()];
+                int i = h.a[externalOverridabilityCondition.isOverridable(callableDescriptor, callableDescriptor2, classDescriptor).ordinal()];
                 if (i == 1) {
                     z2 = true;
                 } else if (i == 2) {
-                    OverrideCompatibilityInfo b = OverrideCompatibilityInfo.b("External condition failed");
-                    if (b == null) {
+                    OverrideCompatibilityInfo b2 = OverrideCompatibilityInfo.b("External condition failed");
+                    if (b2 == null) {
                         a(22);
                     }
-                    return b;
+                    return b2;
                 } else if (i == 3) {
                     OverrideCompatibilityInfo d2 = OverrideCompatibilityInfo.d("External condition");
                     if (d2 == null) {
@@ -1382,15 +1373,15 @@ public class OverridingUtil {
         if (z2) {
             for (ExternalOverridabilityCondition externalOverridabilityCondition2 : c) {
                 if (externalOverridabilityCondition2.getContract() == ExternalOverridabilityCondition.Contract.CONFLICTS_ONLY) {
-                    int i2 = C8490h.a[externalOverridabilityCondition2.isOverridable(callableDescriptor, callableDescriptor2, classDescriptor).ordinal()];
+                    int i2 = h.a[externalOverridabilityCondition2.isOverridable(callableDescriptor, callableDescriptor2, classDescriptor).ordinal()];
                     if (i2 == 1) {
                         throw new IllegalStateException("Contract violation in " + externalOverridabilityCondition2.getClass().getName() + " condition. It's not supposed to end with success");
                     } else if (i2 == 2) {
-                        OverrideCompatibilityInfo b2 = OverrideCompatibilityInfo.b("External condition failed");
-                        if (b2 == null) {
+                        OverrideCompatibilityInfo b3 = OverrideCompatibilityInfo.b("External condition failed");
+                        if (b3 == null) {
                             a(25);
                         }
-                        return b2;
+                        return b3;
                     } else if (i2 == 3) {
                         OverrideCompatibilityInfo d3 = OverrideCompatibilityInfo.d("External condition");
                         if (d3 == null) {
@@ -1400,11 +1391,11 @@ public class OverridingUtil {
                     }
                 }
             }
-            OverrideCompatibilityInfo e = OverrideCompatibilityInfo.e();
-            if (e == null) {
+            OverrideCompatibilityInfo e2 = OverrideCompatibilityInfo.e();
+            if (e2 == null) {
                 a(27);
             }
-            return e;
+            return e2;
         }
         return G;
     }
@@ -1421,14 +1412,14 @@ public class OverridingUtil {
         if (x != null) {
             return x;
         }
-        List<z71> g = g(callableDescriptor);
-        List<z71> g2 = g(callableDescriptor2);
+        List<z71> g2 = g(callableDescriptor);
+        List<z71> g3 = g(callableDescriptor2);
         List<TypeParameterDescriptor> typeParameters = callableDescriptor.getTypeParameters();
         List<TypeParameterDescriptor> typeParameters2 = callableDescriptor2.getTypeParameters();
         int i = 0;
         if (typeParameters.size() != typeParameters2.size()) {
-            while (i < g.size()) {
-                if (!KotlinTypeChecker.DEFAULT.equalTypes(g.get(i), g2.get(i))) {
+            while (i < g2.size()) {
+                if (!KotlinTypeChecker.DEFAULT.equalTypes(g2.get(i), g3.get(i))) {
                     OverrideCompatibilityInfo d2 = OverrideCompatibilityInfo.d("Type parameter number mismatch");
                     if (d2 == null) {
                         a(31);
@@ -1437,11 +1428,11 @@ public class OverridingUtil {
                 }
                 i++;
             }
-            OverrideCompatibilityInfo b = OverrideCompatibilityInfo.b("Type parameter number mismatch");
-            if (b == null) {
+            OverrideCompatibilityInfo b2 = OverrideCompatibilityInfo.b("Type parameter number mismatch");
+            if (b2 == null) {
                 a(32);
             }
-            return b;
+            return b2;
         }
         Pair<hk1, mj> l = l(typeParameters, typeParameters2);
         for (int i2 = 0; i2 < typeParameters.size(); i2++) {
@@ -1453,8 +1444,8 @@ public class OverridingUtil {
                 return d3;
             }
         }
-        for (int i3 = 0; i3 < g.size(); i3++) {
-            if (!d(g.get(i3), g2.get(i3), l)) {
+        for (int i3 = 0; i3 < g2.size(); i3++) {
+            if (!d(g2.get(i3), g3.get(i3), l)) {
                 OverrideCompatibilityInfo d4 = OverrideCompatibilityInfo.d("Value parameter type mismatch");
                 if (d4 == null) {
                     a(34);
@@ -1463,11 +1454,11 @@ public class OverridingUtil {
             }
         }
         if ((callableDescriptor instanceof FunctionDescriptor) && (callableDescriptor2 instanceof FunctionDescriptor) && ((FunctionDescriptor) callableDescriptor).isSuspend() != ((FunctionDescriptor) callableDescriptor2).isSuspend()) {
-            OverrideCompatibilityInfo b2 = OverrideCompatibilityInfo.b("Incompatible suspendability");
-            if (b2 == null) {
+            OverrideCompatibilityInfo b3 = OverrideCompatibilityInfo.b("Incompatible suspendability");
+            if (b3 == null) {
                 a(35);
             }
-            return b2;
+            return b3;
         }
         if (z) {
             z71 returnType = callableDescriptor.getReturnType();
@@ -1477,19 +1468,19 @@ public class OverridingUtil {
                     i = 1;
                 }
                 if (i == 0 && !l.getFirst().c(l.getSecond(), returnType2.f(), returnType.f())) {
-                    OverrideCompatibilityInfo b3 = OverrideCompatibilityInfo.b("Return type mismatch");
-                    if (b3 == null) {
+                    OverrideCompatibilityInfo b4 = OverrideCompatibilityInfo.b("Return type mismatch");
+                    if (b4 == null) {
                         a(36);
                     }
-                    return b3;
+                    return b4;
                 }
             }
         }
-        OverrideCompatibilityInfo e = OverrideCompatibilityInfo.e();
-        if (e == null) {
+        OverrideCompatibilityInfo e2 = OverrideCompatibilityInfo.e();
+        if (e2 == null) {
             a(37);
         }
-        return e;
+        return e2;
     }
 
     public void w(@NotNull ni1 ni1Var, @NotNull Collection<? extends CallableMemberDescriptor> collection, @NotNull Collection<? extends CallableMemberDescriptor> collection2, @NotNull ClassDescriptor classDescriptor, @NotNull gp1 gp1Var) {

@@ -2,7 +2,6 @@ package tb;
 
 import java.util.List;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import org.jetbrains.annotations.NotNull;
 
@@ -26,8 +25,8 @@ public class y7 extends fn<List<? extends fn<?>>> {
     public z71 a(@NotNull ModuleDescriptor moduleDescriptor) {
         b41.i(moduleDescriptor, "module");
         z71 invoke = this.b.invoke(moduleDescriptor);
-        if (!AbstractC8271b.c0(invoke) && !AbstractC8271b.o0(invoke)) {
-            AbstractC8271b.B0(invoke);
+        if (!kotlin.reflect.jvm.internal.impl.builtins.b.c0(invoke) && !kotlin.reflect.jvm.internal.impl.builtins.b.o0(invoke)) {
+            kotlin.reflect.jvm.internal.impl.builtins.b.B0(invoke);
         }
         return invoke;
     }

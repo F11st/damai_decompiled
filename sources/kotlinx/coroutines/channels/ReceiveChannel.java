@@ -22,9 +22,8 @@ import tb.yw2;
 public interface ReceiveChannel<E> {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.channels.ReceiveChannel$a */
     /* loaded from: classes9.dex */
-    public static final class C8639a {
+    public static final class a {
         public static /* synthetic */ void b(ReceiveChannel receiveChannel, CancellationException cancellationException, int i, Object obj) {
             if (obj == null) {
                 if ((i & 1) != 0) {

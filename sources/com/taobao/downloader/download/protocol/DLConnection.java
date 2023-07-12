@@ -2,7 +2,7 @@ package com.taobao.downloader.download.protocol;
 
 import java.io.IOException;
 import java.net.URL;
-import tb.C9613qq;
+import tb.qq;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -23,5 +23,5 @@ public interface DLConnection {
 
     int getStatusCode() throws Exception;
 
-    void openConnection(URL url, C9613qq c9613qq) throws IOException;
+    void openConnection(URL url, qq qqVar) throws IOException;
 }

@@ -11,7 +11,7 @@ public class ReuseJSONObject extends JSONObject implements Reusable {
     public void clean() {
         for (Object obj : values()) {
             if (obj instanceof Reusable) {
-                C3316a.a().offer((Reusable) obj);
+                a.a().offer((Reusable) obj);
             }
         }
         super.clear();

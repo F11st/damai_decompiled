@@ -1,14 +1,14 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.collections.C8203e0;
-import kotlin.collections.C8214m;
+import kotlin.collections.e0;
+import kotlin.collections.m;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -50,19 +50,18 @@ public final class LazyJavaPackageScope extends s81 {
     @NotNull
     private final NullableLazyValue<Set<String>> o;
     @NotNull
-    private final MemoizedFunctionToNullable<C8346a, ClassDescriptor> p;
+    private final MemoizedFunctionToNullable<a, ClassDescriptor> p;
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaPackageScope$a */
     /* loaded from: classes3.dex */
-    public static final class C8346a {
+    public static final class a {
         @NotNull
         private final ni1 a;
         @Nullable
         private final JavaClass b;
 
-        public C8346a(@NotNull ni1 ni1Var, @Nullable JavaClass javaClass) {
+        public a(@NotNull ni1 ni1Var, @Nullable JavaClass javaClass) {
             b41.i(ni1Var, "name");
             this.a = ni1Var;
             this.b = javaClass;
@@ -79,7 +78,7 @@ public final class LazyJavaPackageScope extends s81 {
         }
 
         public boolean equals(@Nullable Object obj) {
-            return (obj instanceof C8346a) && b41.d(this.a, ((C8346a) obj).a);
+            return (obj instanceof a) && b41.d(this.a, ((a) obj).a);
         }
 
         public int hashCode() {
@@ -89,19 +88,17 @@ public final class LazyJavaPackageScope extends s81 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaPackageScope$b */
     /* loaded from: classes3.dex */
-    public static abstract class AbstractC8347b {
+    public static abstract class b {
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaPackageScope$b$a */
         /* loaded from: classes3.dex */
-        public static final class C8348a extends AbstractC8347b {
+        public static final class a extends b {
             @NotNull
             private final ClassDescriptor a;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C8348a(@NotNull ClassDescriptor classDescriptor) {
+            public a(@NotNull ClassDescriptor classDescriptor) {
                 super(null);
                 b41.i(classDescriptor, "descriptor");
                 this.a = classDescriptor;
@@ -114,33 +111,32 @@ public final class LazyJavaPackageScope extends s81 {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaPackageScope$b$b */
+        /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaPackageScope$b$b  reason: collision with other inner class name */
         /* loaded from: classes3.dex */
-        public static final class C8349b extends AbstractC8347b {
+        public static final class C0417b extends b {
             @NotNull
-            public static final C8349b INSTANCE = new C8349b();
+            public static final C0417b INSTANCE = new C0417b();
 
-            private C8349b() {
+            private C0417b() {
                 super(null);
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaPackageScope$b$c */
         /* loaded from: classes3.dex */
-        public static final class C8350c extends AbstractC8347b {
+        public static final class c extends b {
             @NotNull
-            public static final C8350c INSTANCE = new C8350c();
+            public static final c INSTANCE = new c();
 
-            private C8350c() {
+            private c() {
                 super(null);
             }
         }
 
-        private AbstractC8347b() {
+        private b() {
         }
 
-        public /* synthetic */ AbstractC8347b(k50 k50Var) {
+        public /* synthetic */ b(k50 k50Var) {
             this();
         }
     }
@@ -148,7 +144,7 @@ public final class LazyJavaPackageScope extends s81 {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public LazyJavaPackageScope(@NotNull final r81 r81Var, @NotNull JavaPackage javaPackage, @NotNull LazyJavaPackageFragment lazyJavaPackageFragment) {
         super(r81Var);
-        b41.i(r81Var, AbstractC5658c.a);
+        b41.i(r81Var, c.a);
         b41.i(javaPackage, "jPackage");
         b41.i(lazyJavaPackageFragment, "ownerDescriptor");
         this.m = javaPackage;
@@ -166,7 +162,7 @@ public final class LazyJavaPackageScope extends s81 {
                 return r81.this.a().d().knownClassNamesInPackage(this.v().getFqName());
             }
         });
-        this.p = r81Var.e().createMemoizedFunctionWithNullableValues(new Function1<C8346a, ClassDescriptor>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaPackageScope$classes$1
+        this.p = r81Var.e().createMemoizedFunctionWithNullableValues(new Function1<a, ClassDescriptor>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaPackageScope$classes$1
             /* JADX INFO: Access modifiers changed from: package-private */
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             {
@@ -175,45 +171,45 @@ public final class LazyJavaPackageScope extends s81 {
 
             @Override // kotlin.jvm.functions.Function1
             @Nullable
-            public final ClassDescriptor invoke(@NotNull LazyJavaPackageScope.C8346a c8346a) {
-                KotlinClassFinder.AbstractC8373a findKotlinClassOrContent;
-                LazyJavaPackageScope.AbstractC8347b K;
-                byte[] b;
-                b41.i(c8346a, "request");
-                hj hjVar = new hj(LazyJavaPackageScope.this.v().getFqName(), c8346a.b());
-                if (c8346a.a() != null) {
-                    findKotlinClassOrContent = r81Var.a().j().findKotlinClassOrContent(c8346a.a());
+            public final ClassDescriptor invoke(@NotNull LazyJavaPackageScope.a aVar) {
+                KotlinClassFinder.a findKotlinClassOrContent;
+                LazyJavaPackageScope.b K;
+                byte[] b2;
+                b41.i(aVar, "request");
+                hj hjVar = new hj(LazyJavaPackageScope.this.v().getFqName(), aVar.b());
+                if (aVar.a() != null) {
+                    findKotlinClassOrContent = r81Var.a().j().findKotlinClassOrContent(aVar.a());
                 } else {
                     findKotlinClassOrContent = r81Var.a().j().findKotlinClassOrContent(hjVar);
                 }
-                KotlinJvmBinaryClass a = findKotlinClassOrContent == null ? null : findKotlinClassOrContent.a();
-                hj classId = a == null ? null : a.getClassId();
+                KotlinJvmBinaryClass a2 = findKotlinClassOrContent == null ? null : findKotlinClassOrContent.a();
+                hj classId = a2 == null ? null : a2.getClassId();
                 if (classId == null || !(classId.l() || classId.k())) {
-                    K = LazyJavaPackageScope.this.K(a);
-                    if (K instanceof LazyJavaPackageScope.AbstractC8347b.C8348a) {
-                        return ((LazyJavaPackageScope.AbstractC8347b.C8348a) K).a();
+                    K = LazyJavaPackageScope.this.K(a2);
+                    if (K instanceof LazyJavaPackageScope.b.a) {
+                        return ((LazyJavaPackageScope.b.a) K).a();
                     }
-                    if (K instanceof LazyJavaPackageScope.AbstractC8347b.C8350c) {
+                    if (K instanceof LazyJavaPackageScope.b.c) {
                         return null;
                     }
-                    if (K instanceof LazyJavaPackageScope.AbstractC8347b.C8349b) {
-                        JavaClass a2 = c8346a.a();
-                        if (a2 == null) {
+                    if (K instanceof LazyJavaPackageScope.b.C0417b) {
+                        JavaClass a3 = aVar.a();
+                        if (a3 == null) {
                             JavaClassFinder d = r81Var.a().d();
                             if (findKotlinClassOrContent != null) {
-                                if (!(findKotlinClassOrContent instanceof KotlinClassFinder.AbstractC8373a.C8374a)) {
+                                if (!(findKotlinClassOrContent instanceof KotlinClassFinder.a.C0420a)) {
                                     findKotlinClassOrContent = null;
                                 }
-                                KotlinClassFinder.AbstractC8373a.C8374a c8374a = (KotlinClassFinder.AbstractC8373a.C8374a) findKotlinClassOrContent;
-                                if (c8374a != null) {
-                                    b = c8374a.b();
-                                    a2 = d.findClass(new JavaClassFinder.C8328a(hjVar, b, null, 4, null));
+                                KotlinClassFinder.a.C0420a c0420a = (KotlinClassFinder.a.C0420a) findKotlinClassOrContent;
+                                if (c0420a != null) {
+                                    b2 = c0420a.b();
+                                    a3 = d.findClass(new JavaClassFinder.a(hjVar, b2, null, 4, null));
                                 }
                             }
-                            b = null;
-                            a2 = d.findClass(new JavaClassFinder.C8328a(hjVar, b, null, 4, null));
+                            b2 = null;
+                            a3 = d.findClass(new JavaClassFinder.a(hjVar, b2, null, 4, null));
                         }
-                        JavaClass javaClass = a2;
+                        JavaClass javaClass = a3;
                         if ((javaClass == null ? null : javaClass.getLightClassOriginKind()) != LightClassOriginKind.BINARY) {
                             hp0 fqName = javaClass == null ? null : javaClass.getFqName();
                             if (fqName == null || fqName.d() || !b41.d(fqName.e(), LazyJavaPackageScope.this.v().getFqName())) {
@@ -236,7 +232,7 @@ public final class LazyJavaPackageScope extends s81 {
         if (af2.b(ni1Var)) {
             Set<String> invoke = this.o.invoke();
             if (javaClass != null || invoke == null || invoke.contains(ni1Var.b())) {
-                return this.p.invoke(new C8346a(ni1Var, javaClass));
+                return this.p.invoke(new a(ni1Var, javaClass));
             }
             return null;
         }
@@ -244,15 +240,15 @@ public final class LazyJavaPackageScope extends s81 {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public final AbstractC8347b K(KotlinJvmBinaryClass kotlinJvmBinaryClass) {
+    public final b K(KotlinJvmBinaryClass kotlinJvmBinaryClass) {
         if (kotlinJvmBinaryClass == null) {
-            return AbstractC8347b.C8349b.INSTANCE;
+            return b.C0417b.INSTANCE;
         }
         if (kotlinJvmBinaryClass.getClassHeader().c() == KotlinClassHeader.Kind.CLASS) {
             ClassDescriptor l = p().a().b().l(kotlinJvmBinaryClass);
-            return l != null ? new AbstractC8347b.C8348a(l) : AbstractC8347b.C8349b.INSTANCE;
+            return l != null ? new b.a(l) : b.C0417b.INSTANCE;
         }
-        return AbstractC8347b.C8350c.INSTANCE;
+        return b.c.INSTANCE;
     }
 
     @Nullable
@@ -284,7 +280,7 @@ public final class LazyJavaPackageScope extends s81 {
         Set<ni1> d;
         b41.i(z60Var, "kindFilter");
         if (!z60Var.a(z60.Companion.e())) {
-            d = C8203e0.d();
+            d = e0.d();
             return d;
         }
         Set<String> invoke = this.o.invoke();
@@ -315,7 +311,7 @@ public final class LazyJavaPackageScope extends s81 {
     protected Set<ni1> g(@NotNull z60 z60Var, @Nullable Function1<? super ni1, Boolean> function1) {
         Set<ni1> d;
         b41.i(z60Var, "kindFilter");
-        d = C8203e0.d();
+        d = e0.d();
         return d;
     }
 
@@ -340,7 +336,7 @@ public final class LazyJavaPackageScope extends s81 {
             r0 = r0 | r1
             boolean r5 = r5.a(r0)
             if (r5 != 0) goto L20
-            java.util.List r5 = kotlin.collections.C8212k.g()
+            java.util.List r5 = kotlin.collections.k.g()
             goto L65
         L20:
             kotlin.reflect.jvm.internal.impl.storage.NotNullLazyValue r5 = r4.o()
@@ -387,14 +383,14 @@ public final class LazyJavaPackageScope extends s81 {
         List g;
         b41.i(ni1Var, "name");
         b41.i(lookupLocation, "location");
-        g = C8214m.g();
+        g = m.g();
         return g;
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaScope
     @NotNull
     protected DeclaredMemberIndex i() {
-        return DeclaredMemberIndex.C8343a.INSTANCE;
+        return DeclaredMemberIndex.a.INSTANCE;
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaScope
@@ -408,7 +404,7 @@ public final class LazyJavaPackageScope extends s81 {
     protected Set<ni1> m(@NotNull z60 z60Var, @Nullable Function1<? super ni1, Boolean> function1) {
         Set<ni1> d;
         b41.i(z60Var, "kindFilter");
-        d = C8203e0.d();
+        d = e0.d();
         return d;
     }
 }

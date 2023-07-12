@@ -1,10 +1,9 @@
 package kotlin.reflect.jvm.internal.impl.builtins;
 
 import java.util.ServiceLoader;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
-import kotlin.collections.C8212k;
+import kotlin.collections.k;
 import kotlin.jvm.functions.Function0;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentProvider;
@@ -30,13 +29,13 @@ public interface BuiltInsLoader {
 
         static {
             Lazy<BuiltInsLoader> a2;
-            a2 = C8177b.a(LazyThreadSafetyMode.PUBLICATION, new Function0<BuiltInsLoader>() { // from class: kotlin.reflect.jvm.internal.impl.builtins.BuiltInsLoader$Companion$Instance$2
+            a2 = kotlin.b.a(LazyThreadSafetyMode.PUBLICATION, new Function0<BuiltInsLoader>() { // from class: kotlin.reflect.jvm.internal.impl.builtins.BuiltInsLoader$Companion$Instance$2
                 @Override // kotlin.jvm.functions.Function0
                 @NotNull
                 public final BuiltInsLoader invoke() {
                     ServiceLoader load = ServiceLoader.load(BuiltInsLoader.class, BuiltInsLoader.class.getClassLoader());
                     b41.h(load, "implementations");
-                    BuiltInsLoader builtInsLoader = (BuiltInsLoader) C8212k.Q(load);
+                    BuiltInsLoader builtInsLoader = (BuiltInsLoader) k.Q(load);
                     if (builtInsLoader != null) {
                         return builtInsLoader;
                     }

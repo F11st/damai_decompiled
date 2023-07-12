@@ -170,7 +170,7 @@ public final class PublishSubject<T> extends pi2<T> {
         }
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         PublishDisposable<T> publishDisposable = new PublishDisposable<>(observer, this);
         observer.onSubscribe(publishDisposable);

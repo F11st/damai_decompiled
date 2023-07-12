@@ -14,7 +14,6 @@ import androidx.core.internal.view.SupportMenu;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
 import cn.damai.common.util.ToastUtil;
@@ -74,12 +73,11 @@ public class FansRankingViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.view.FansRankingViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1976a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1976a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -96,13 +94,12 @@ public class FansRankingViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.view.FansRankingViewHolder$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1977b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FansRankingBean a;
 
-        View$OnClickListenerC1977b(FansRankingBean fansRankingBean) {
+        b(FansRankingBean fansRankingBean) {
             this.a = fansRankingBean;
         }
 
@@ -395,7 +392,7 @@ public class FansRankingViewHolder {
                 this.g.setVisibility(8);
             }
             if (LoginManager.k().q()) {
-                C0504a.b().loadinto(fansRankingBean.headPic, this.c);
+                cn.damai.common.image.a.b().loadinto(fansRankingBean.headPic, this.c);
                 this.d.setVisibility(0);
                 this.e.setVisibility(8);
                 this.d.setText(fansRankingBean.nickName);
@@ -403,7 +400,7 @@ public class FansRankingViewHolder {
                 this.d.setVisibility(8);
                 this.e.setVisibility(0);
                 this.c.setImageResource(R$drawable.mine_account_default);
-                this.s.findViewById(R$id.layout_shouhu_detail).setOnClickListener(new View$OnClickListenerC1976a());
+                this.s.findViewById(R$id.layout_shouhu_detail).setOnClickListener(new a());
             }
             if (!fansRankingBean.artistVip && fansRankingBean.button != null) {
                 this.r.setVisibility(0);
@@ -417,7 +414,7 @@ public class FansRankingViewHolder {
                 });
             } else {
                 this.r.setVisibility(8);
-                this.h.setOnClickListener(new View$OnClickListenerC1977b(fansRankingBean));
+                this.h.setOnClickListener(new b(fansRankingBean));
                 this.w.userTrackExpose(this.h, "rankdetail");
             }
             View.OnClickListener onClickListener = new View.OnClickListener() { // from class: tb.th0

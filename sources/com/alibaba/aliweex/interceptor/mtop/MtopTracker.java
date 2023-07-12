@@ -2,8 +2,8 @@ package com.alibaba.aliweex.interceptor.mtop;
 
 import android.text.TextUtils;
 import androidx.annotation.NonNull;
-import com.alibaba.aliweex.interceptor.C3093a;
 import com.alibaba.aliweex.interceptor.IWeexAnalyzerInspector;
+import com.alibaba.aliweex.interceptor.a;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.taobao.tao.remotebusiness.RemoteBusiness;
@@ -37,7 +37,7 @@ public class MtopTracker {
     private MtopTracker() {
         if (WXEnvironment.isApkDebugable()) {
             this.a = sj1.d();
-            this.b = C3093a.a();
+            this.b = a.a();
             WXLogUtils.d("MtopTracker", "Create new instance " + toString());
         }
     }
@@ -90,7 +90,7 @@ public class MtopTracker {
         }
         if (WXEnvironment.isApkDebugable() && g && (iWeexAnalyzerInspector = this.b) != null && iWeexAnalyzerInspector.isEnabled()) {
             try {
-                this.b.onResponse("mtop", new IWeexAnalyzerInspector.C3092b(str, str2, 200, null));
+                this.b.onResponse("mtop", new IWeexAnalyzerInspector.b(str, str2, 200, null));
             } catch (Exception e) {
                 WXLogUtils.e("MtopTracker", e.getMessage());
             }
@@ -124,7 +124,7 @@ public class MtopTracker {
         if (WXEnvironment.isApkDebugable() && g && (iWeexAnalyzerInspector = this.b) != null && iWeexAnalyzerInspector.isEnabled()) {
             try {
                 JSONObject parseObject = JSON.parseObject(str);
-                this.b.onResponse("mtop", new IWeexAnalyzerInspector.C3092b(parseObject.getString("api"), str, parseObject.getIntValue("code"), null));
+                this.b.onResponse("mtop", new IWeexAnalyzerInspector.b(parseObject.getString("api"), str, parseObject.getIntValue("code"), null));
             } catch (Exception e) {
                 WXLogUtils.e("MtopTracker", e.getMessage());
             }
@@ -170,7 +170,7 @@ public class MtopTracker {
         }
         if (WXEnvironment.isApkDebugable() && g && (iWeexAnalyzerInspector = this.b) != null && iWeexAnalyzerInspector.isEnabled()) {
             try {
-                this.b.onResponse("mtop", new IWeexAnalyzerInspector.C3092b(mtopResponse.getApi(), new String(mtopResponse.getBytedata()), mtopResponse.getResponseCode(), mtopResponse.getHeaderFields()));
+                this.b.onResponse("mtop", new IWeexAnalyzerInspector.b(mtopResponse.getApi(), new String(mtopResponse.getBytedata()), mtopResponse.getResponseCode(), mtopResponse.getHeaderFields()));
             } catch (Exception e) {
                 WXLogUtils.e("MtopTracker", e.getMessage());
             }
@@ -185,8 +185,8 @@ public class MtopTracker {
                 /* compiled from: Taobao */
                 /* renamed from: com.alibaba.aliweex.interceptor.mtop.MtopTracker$4$a */
                 /* loaded from: classes5.dex */
-                class C3094a extends a31 {
-                    C3094a(AnonymousClass4 anonymousClass4) {
+                class a extends a31 {
+                    a(AnonymousClass4 anonymousClass4) {
                     }
 
                     @Override // tb.z21
@@ -198,27 +198,27 @@ public class MtopTracker {
 
                 @Override // java.lang.Runnable
                 public void run() {
-                    C3094a c3094a = new C3094a(this);
-                    c3094a.h(MtopTracker.this.j());
+                    a aVar = new a(this);
+                    aVar.h(MtopTracker.this.j());
                     for (String str : jSONObject.keySet()) {
                         Object obj = jSONObject.get(str);
                         if (!"param".equals(str)) {
-                            c3094a.a(str, String.valueOf(obj));
+                            aVar.a(str, String.valueOf(obj));
                         } else {
                             Object obj2 = jSONObject.get("param");
                             if (obj2 != null && (obj2 instanceof JSONObject)) {
                                 JSONObject jSONObject2 = (JSONObject) obj2;
                                 for (String str2 : jSONObject2.keySet()) {
-                                    c3094a.a(str2, String.valueOf(jSONObject2.get(str2)));
+                                    aVar.a(str2, String.valueOf(jSONObject2.get(str2)));
                                 }
                             }
                         }
                     }
-                    c3094a.a("Content-Type", "application/json");
-                    c3094a.i(jSONObject.getString("api"));
-                    c3094a.l("WindVane");
-                    c3094a.m(TextUtils.isEmpty(jSONObject.getString("type")) ? "GET" : jSONObject.getString("type").toUpperCase());
-                    MtopTracker.this.a.h(c3094a);
+                    aVar.a("Content-Type", "application/json");
+                    aVar.i(jSONObject.getString("api"));
+                    aVar.l("WindVane");
+                    aVar.m(TextUtils.isEmpty(jSONObject.getString("type")) ? "GET" : jSONObject.getString("type").toUpperCase());
+                    MtopTracker.this.a.h(aVar);
                 }
             });
         }
@@ -231,7 +231,7 @@ public class MtopTracker {
                 if (jSONObject2 == null || jSONObject2.isEmpty()) {
                     jSONObject2 = null;
                 }
-                iWeexAnalyzerInspector2.onRequest("mtop", new IWeexAnalyzerInspector.C3091a(string, upperCase, jSONObject2));
+                iWeexAnalyzerInspector2.onRequest("mtop", new IWeexAnalyzerInspector.a(string, upperCase, jSONObject2));
             } catch (Exception e) {
                 WXLogUtils.e("MtopTracker", e.getMessage());
             }
@@ -287,7 +287,7 @@ public class MtopTracker {
         }
         if (WXEnvironment.isApkDebugable() && g && (iWeexAnalyzerInspector = this.b) != null && iWeexAnalyzerInspector.isEnabled()) {
             try {
-                this.b.onRequest("mtop", new IWeexAnalyzerInspector.C3091a(remoteBusiness.request.getApiName(), remoteBusiness.mtopProp.getMethod().getMethod(), remoteBusiness.mtopProp.getRequestHeaders()));
+                this.b.onRequest("mtop", new IWeexAnalyzerInspector.a(remoteBusiness.request.getApiName(), remoteBusiness.mtopProp.getMethod().getMethod(), remoteBusiness.mtopProp.getRequestHeaders()));
             } catch (Exception e) {
                 WXLogUtils.e("MtopTracker", e.getMessage());
             }

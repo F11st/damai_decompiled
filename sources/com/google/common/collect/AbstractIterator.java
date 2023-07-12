@@ -27,9 +27,8 @@ public abstract class AbstractIterator<T> extends yt2<T> {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.AbstractIterator$a */
     /* loaded from: classes10.dex */
-    public static /* synthetic */ class C4899a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -69,7 +68,7 @@ public abstract class AbstractIterator<T> extends yt2<T> {
     @CanIgnoreReturnValue
     public final boolean hasNext() {
         du1.w(this.a != State.FAILED);
-        int i = C4899a.a[this.a.ordinal()];
+        int i = a.a[this.a.ordinal()];
         if (i != 1) {
             if (i != 2) {
                 return c();

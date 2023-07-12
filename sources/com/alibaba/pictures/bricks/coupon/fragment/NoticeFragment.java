@@ -35,7 +35,7 @@ import tb.k50;
 public final class NoticeFragment extends Fragment {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C3513a Companion = new C3513a(null);
+    public static final a Companion = new a(null);
     @Nullable
     private View.OnClickListener mCloseListener;
     @Nullable
@@ -115,15 +115,14 @@ public final class NoticeFragment extends Fragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.coupon.fragment.NoticeFragment$a */
     /* loaded from: classes7.dex */
-    public static final class C3513a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3513a() {
+        private a() {
         }
 
-        public /* synthetic */ C3513a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

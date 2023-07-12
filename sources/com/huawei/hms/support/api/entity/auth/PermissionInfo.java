@@ -8,7 +8,7 @@ import com.huawei.hms.core.aidl.annotation.Packed;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class PermissionInfo implements Parcelable, IMessageEntity {
-    public static final Parcelable.Creator<PermissionInfo> CREATOR = new C5718a();
+    public static final Parcelable.Creator<PermissionInfo> CREATOR = new a();
     @Packed
     private String appID;
     @Packed
@@ -17,10 +17,9 @@ public class PermissionInfo implements Parcelable, IMessageEntity {
     private String permission;
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.support.api.entity.auth.PermissionInfo$a */
     /* loaded from: classes10.dex */
-    static class C5718a implements Parcelable.Creator<PermissionInfo> {
-        C5718a() {
+    static class a implements Parcelable.Creator<PermissionInfo> {
+        a() {
         }
 
         /* JADX WARN: Can't rename method to resolve collision */

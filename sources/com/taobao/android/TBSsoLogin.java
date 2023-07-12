@@ -53,15 +53,14 @@ public class TBSsoLogin {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.TBSsoLogin$a */
     /* loaded from: classes8.dex */
-    public static class AsyncTaskC6293a extends AsyncTask<Object, Void, DefaultLoginResponseData> {
+    public static class a extends AsyncTask<Object, Void, DefaultLoginResponseData> {
         final /* synthetic */ Bundle a;
         final /* synthetic */ ISsoRemoteParam b;
         final /* synthetic */ Context c;
         final /* synthetic */ DataCallback d;
 
-        AsyncTaskC6293a(Bundle bundle, ISsoRemoteParam iSsoRemoteParam, Context context, DataCallback dataCallback) {
+        a(Bundle bundle, ISsoRemoteParam iSsoRemoteParam, Context context, DataCallback dataCallback) {
             this.a = bundle;
             this.b = iSsoRemoteParam;
             this.c = context;
@@ -202,14 +201,13 @@ public class TBSsoLogin {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.TBSsoLogin$b */
     /* loaded from: classes8.dex */
-    public static class AsyncTaskC6294b extends AsyncTask<Object, Void, RpcResponse<LoginReturnData>> {
+    public static class b extends AsyncTask<Object, Void, RpcResponse<LoginReturnData>> {
         final /* synthetic */ LoginParam a;
         final /* synthetic */ DataCallback b;
         final /* synthetic */ Activity c;
 
-        AsyncTaskC6294b(LoginParam loginParam, DataCallback dataCallback, Activity activity) {
+        b(LoginParam loginParam, DataCallback dataCallback, Activity activity) {
             this.a = loginParam;
             this.b = dataCallback;
             this.c = activity;
@@ -288,11 +286,11 @@ public class TBSsoLogin {
     }
 
     public static void f(Activity activity, LoginParam loginParam, DataCallback<LoginReturnData> dataCallback) {
-        new CoordinatorWrapper().execute(new AsyncTaskC6294b(loginParam, dataCallback, activity), new Object[0]);
+        new CoordinatorWrapper().execute(new b(loginParam, dataCallback, activity), new Object[0]);
     }
 
     public static void g(Context context, Bundle bundle, ISsoRemoteParam iSsoRemoteParam, DataCallback<LoginReturnData> dataCallback) {
-        new CoordinatorWrapper().execute(new AsyncTaskC6293a(bundle, iSsoRemoteParam, context, dataCallback), new Object[0]);
+        new CoordinatorWrapper().execute(new a(bundle, iSsoRemoteParam, context, dataCallback), new Object[0]);
     }
 
     /* JADX INFO: Access modifiers changed from: private */

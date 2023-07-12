@@ -30,13 +30,13 @@ public class NineGridView extends FrameLayout {
     private static final int MAX_COUNT = 9;
     private static final String TAG = "NineGridView";
     private boolean isPrintLog;
-    private AbstractC2586a mAdapter;
+    private a mAdapter;
     private int mChildSpacingPx;
     private Path mCornerRadiusPath;
     private int mCornerRadiusPx;
     private RectF mLastRectF;
-    private C2589d mObserver;
-    private C2587b mRecycler;
+    private d mObserver;
+    private b mRecycler;
     private RectF mTempRectF;
 
     /* compiled from: Taobao */
@@ -48,9 +48,8 @@ public class NineGridView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.NineGridView$a */
     /* loaded from: classes8.dex */
-    public static abstract class AbstractC2586a<VH extends C2588c> {
+    public static abstract class a<VH extends c> {
         private static transient /* synthetic */ IpChange $ipChange;
         private ViewChangedObserver a;
 
@@ -105,27 +104,26 @@ public class NineGridView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.NineGridView$b */
     /* loaded from: classes8.dex */
-    public class C2587b {
+    public class b {
         private static transient /* synthetic */ IpChange $ipChange;
-        private final HashMap<Integer, List<C2588c>> a = new HashMap<>();
+        private final HashMap<Integer, List<c>> a = new HashMap<>();
 
-        public C2587b() {
+        public b() {
         }
 
-        public C2588c a(int i) {
+        public c a(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-106123445")) {
-                return (C2588c) ipChange.ipc$dispatch("-106123445", new Object[]{this, Integer.valueOf(i)});
+                return (c) ipChange.ipc$dispatch("-106123445", new Object[]{this, Integer.valueOf(i)});
             }
-            List<C2588c> list = this.a.get(Integer.valueOf(i));
+            List<c> list = this.a.get(Integer.valueOf(i));
             if (list == null || list.size() <= 0) {
                 return null;
             }
-            Iterator<C2588c> it = list.iterator();
+            Iterator<c> it = list.iterator();
             while (it.hasNext()) {
-                C2588c next = it.next();
+                c next = it.next();
                 if (next.a.getParent() == null) {
                     it.remove();
                     return next;
@@ -142,45 +140,43 @@ public class NineGridView extends FrameLayout {
                 return;
             }
             Object tag = view.getTag(R$id.id_nine_grid_child_tag);
-            if (tag instanceof C2588c) {
-                C2588c c2588c = (C2588c) tag;
-                List<C2588c> list = this.a.get(Integer.valueOf(c2588c.b));
+            if (tag instanceof c) {
+                c cVar = (c) tag;
+                List<c> list = this.a.get(Integer.valueOf(cVar.b));
                 if (list == null) {
                     list = new ArrayList<>(9);
-                    this.a.put(Integer.valueOf(c2588c.b), list);
+                    this.a.put(Integer.valueOf(cVar.b), list);
                 }
-                if (list.contains(c2588c)) {
+                if (list.contains(cVar)) {
                     return;
                 }
                 if (NineGridView.this.isPrintLog) {
                     NineGridView nineGridView = NineGridView.this;
-                    nineGridView.printLog("Recycler collect viewHolder hash=" + c2588c.hashCode());
+                    nineGridView.printLog("Recycler collect viewHolder hash=" + cVar.hashCode());
                 }
-                list.add(c2588c);
+                list.add(cVar);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.NineGridView$c */
     /* loaded from: classes8.dex */
-    public static class C2588c {
+    public static class c {
         public final View a;
         public int b = -1;
 
-        public C2588c(View view) {
+        public c(View view) {
             this.a = view;
             view.setTag(R$id.id_nine_grid_child_tag, this);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.NineGridView$d */
     /* loaded from: classes8.dex */
-    public class C2589d implements ViewChangedObserver {
+    public class d implements ViewChangedObserver {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        public C2589d() {
+        public d() {
         }
 
         @Override // cn.damai.uikit.view.NineGridView.ViewChangedObserver
@@ -219,27 +215,27 @@ public class NineGridView extends FrameLayout {
             return;
         }
         removeAllViews();
-        AbstractC2586a abstractC2586a = this.mAdapter;
-        if (abstractC2586a == null) {
+        a aVar = this.mAdapter;
+        if (aVar == null) {
             return;
         }
-        int min = Math.min(9, abstractC2586a.e());
+        int min = Math.min(9, aVar.e());
         for (int i = 0; i < min; i++) {
             int f = this.mAdapter.f(i);
-            C2588c a = this.mRecycler.a(f);
-            boolean z = a != null;
-            if (a == null) {
-                a = this.mAdapter.d(this, f);
+            c a2 = this.mRecycler.a(f);
+            boolean z = a2 != null;
+            if (a2 == null) {
+                a2 = this.mAdapter.d(this, f);
             }
-            if (a != null) {
-                addView(a.a);
-                this.mAdapter.b(a, i);
+            if (a2 != null) {
+                addView(a2.a);
+                this.mAdapter.b(a2, i);
             }
             if (this.isPrintLog) {
                 if (z) {
-                    printLog("NotifyDataSetChanged use cache holder pos=" + i + " hash=" + a.hashCode());
+                    printLog("NotifyDataSetChanged use cache holder pos=" + i + " hash=" + a2.hashCode());
                 } else {
-                    printLog("NotifyDataSetChanged create new viewHolder pos=" + i + " hash=" + a.hashCode());
+                    printLog("NotifyDataSetChanged create new viewHolder pos=" + i + " hash=" + a2.hashCode());
                 }
             }
         }
@@ -414,19 +410,19 @@ public class NineGridView extends FrameLayout {
         }
     }
 
-    public void setAdapter(AbstractC2586a abstractC2586a) {
+    public void setAdapter(a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1681346612")) {
-            ipChange.ipc$dispatch("-1681346612", new Object[]{this, abstractC2586a});
+            ipChange.ipc$dispatch("-1681346612", new Object[]{this, aVar});
             return;
         }
-        AbstractC2586a abstractC2586a2 = this.mAdapter;
-        if (abstractC2586a2 != null) {
-            abstractC2586a2.a(false, null);
+        a aVar2 = this.mAdapter;
+        if (aVar2 != null) {
+            aVar2.a(false, null);
         }
-        this.mAdapter = abstractC2586a;
-        if (abstractC2586a != null) {
-            abstractC2586a.a(true, this.mObserver);
+        this.mAdapter = aVar;
+        if (aVar != null) {
+            aVar.a(true, this.mObserver);
         }
         notifyDataSetChanged();
     }
@@ -444,8 +440,8 @@ public class NineGridView extends FrameLayout {
 
     public NineGridView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        this.mRecycler = new C2587b();
-        this.mObserver = new C2589d();
+        this.mRecycler = new b();
+        this.mObserver = new d();
         this.mTempRectF = new RectF();
         this.mLastRectF = new RectF();
         this.isPrintLog = false;

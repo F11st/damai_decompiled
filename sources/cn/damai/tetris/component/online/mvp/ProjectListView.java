@@ -30,12 +30,11 @@ public class ProjectListView extends AbsView<ProjectListContract.Presenter> impl
     private String mTitleName;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.online.mvp.ProjectListView$a */
     /* loaded from: classes7.dex */
-    public class C1940a implements OnItemBindListener<ProjectInfoBean> {
+    public class a implements OnItemBindListener<ProjectInfoBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1940a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -92,7 +91,7 @@ public class ProjectListView extends AbsView<ProjectListContract.Presenter> impl
             }
         });
         recyclerView.setLayoutManager(new LinearLayoutManager(mu0.a(), 0, false));
-        OnlineProListRecycleAdapter onlineProListRecycleAdapter = new OnlineProListRecycleAdapter(new C1940a());
+        OnlineProListRecycleAdapter onlineProListRecycleAdapter = new OnlineProListRecycleAdapter(new a());
         this.mAdapter = onlineProListRecycleAdapter;
         recyclerView.setAdapter(onlineProListRecycleAdapter);
     }

@@ -22,25 +22,23 @@ public class x12 {
     private final sj1 a;
     private final String b;
     private ByteArrayOutputStream c;
-    private C9899a d;
+    private a d;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.x12$b */
     /* loaded from: classes5.dex */
-    public static class C9900b extends FilterOutputStream {
+    public static class b extends FilterOutputStream {
         private static final ExecutorService b = Executors.newCachedThreadPool();
         private final Future<Void> a;
 
         /* JADX INFO: Access modifiers changed from: private */
         /* compiled from: Taobao */
-        /* renamed from: tb.x12$b$a */
         /* loaded from: classes5.dex */
-        public static class CallableC9901a implements Callable<Void> {
+        public static class a implements Callable<Void> {
             private final InputStream a;
             private final OutputStream b;
 
-            public CallableC9901a(InputStream inputStream, OutputStream outputStream) {
+            public a(InputStream inputStream, OutputStream outputStream) {
                 this.a = inputStream;
                 this.b = outputStream;
             }
@@ -50,7 +48,7 @@ public class x12 {
             public Void call() throws IOException {
                 GZIPInputStream gZIPInputStream = new GZIPInputStream(this.a);
                 try {
-                    C9900b.b(gZIPInputStream, this.b, new byte[1024]);
+                    b.b(gZIPInputStream, this.b, new byte[1024]);
                     gZIPInputStream.close();
                     this.b.close();
                     return null;
@@ -62,7 +60,7 @@ public class x12 {
             }
         }
 
-        private C9900b(OutputStream outputStream, Future<Void> future) throws IOException {
+        private b(OutputStream outputStream, Future<Void> future) throws IOException {
             super(outputStream);
             this.a = future;
         }
@@ -78,9 +76,9 @@ public class x12 {
             }
         }
 
-        public static C9900b c(OutputStream outputStream) throws IOException {
+        public static b c(OutputStream outputStream) throws IOException {
             PipedInputStream pipedInputStream = new PipedInputStream();
-            return new C9900b(new PipedOutputStream(pipedInputStream), b.submit(new CallableC9901a(pipedInputStream, outputStream)));
+            return new b(new PipedOutputStream(pipedInputStream), b.submit(new a(pipedInputStream, outputStream)));
         }
 
         private static <T> T d(Future<T> future) throws IOException {
@@ -140,14 +138,14 @@ public class x12 {
         OutputStream inflaterOutputStream;
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         if ("gzip".equals(str)) {
-            inflaterOutputStream = C9900b.c(byteArrayOutputStream);
+            inflaterOutputStream = b.c(byteArrayOutputStream);
         } else {
             inflaterOutputStream = "deflate".equals(str) ? new InflaterOutputStream(byteArrayOutputStream) : byteArrayOutputStream;
         }
-        C9899a c9899a = new C9899a(this, inflaterOutputStream);
-        this.d = c9899a;
+        a aVar = new a(this, inflaterOutputStream);
+        this.d = aVar;
         this.c = byteArrayOutputStream;
-        return c9899a;
+        return aVar;
     }
 
     public byte[] b() {
@@ -165,12 +163,11 @@ public class x12 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.x12$a */
     /* loaded from: classes5.dex */
-    private class C9899a extends FilterOutputStream {
+    private class a extends FilterOutputStream {
         private long a;
 
-        public C9899a(x12 x12Var, OutputStream outputStream) {
+        public a(x12 x12Var, OutputStream outputStream) {
             super(outputStream);
         }
 

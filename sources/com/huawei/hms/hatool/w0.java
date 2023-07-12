@@ -10,7 +10,7 @@ import android.os.UserManager;
 public class w0 {
     public static w0 c = new w0();
     public boolean a = false;
-    public Context b = AbstractC5607b.i();
+    public Context b = b.i();
 
     public static w0 b() {
         return c;

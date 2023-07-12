@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8148c;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.MaybeObserver;
+import io.reactivex.c;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import org.reactivestreams.Publisher;
@@ -11,7 +11,7 @@ import org.reactivestreams.Subscription;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableLastMaybe<T> extends AbstractC8148c<T> {
+public final class FlowableLastMaybe<T> extends c<T> {
     final Publisher<T> source;
 
     /* compiled from: Taobao */
@@ -74,7 +74,7 @@ public final class FlowableLastMaybe<T> extends AbstractC8148c<T> {
         this.source = publisher;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         this.source.subscribe(new LastSubscriber(maybeObserver));
     }

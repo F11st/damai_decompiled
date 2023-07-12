@@ -2,7 +2,6 @@ package kotlinx.coroutines.flow;
 
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function1;
@@ -51,7 +50,7 @@ final class FlowKt__ErrorsKt$onErrorCollect$2 extends SuspendLambda implements F
     @Nullable
     public final Object invokeSuspend(@NotNull Object obj) {
         Object d;
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         int i = this.label;
         if (i == 0) {
             i32.b(obj);

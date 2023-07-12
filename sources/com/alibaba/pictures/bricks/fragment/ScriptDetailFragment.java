@@ -86,7 +86,7 @@ import tb.y11;
 public final class ScriptDetailFragment extends BaseFragment implements StickyHeaderFeature {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3525a Companion = new C3525a(null);
+    public static final a Companion = new a(null);
     public static final boolean NEED_ENCODE = false;
     public static final boolean NEED_SESSION = false;
     @NotNull
@@ -417,13 +417,12 @@ public final class ScriptDetailFragment extends BaseFragment implements StickyHe
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.fragment.ScriptDetailFragment$a */
     /* loaded from: classes7.dex */
-    public static final class C3525a {
-        private C3525a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3525a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -575,10 +574,10 @@ public final class ScriptDetailFragment extends BaseFragment implements StickyHe
             return;
         }
         b41.i(scriptDetailFragment, "this$0");
-        Bitmap a = y11.a(scriptDetailFragment.getActivity(), successEvent.bitmap, 2, 20);
-        scriptDetailFragment.blurBit = a;
-        if (a != null) {
-            scriptDetailFragment.getMAppTopBg().setImageBitmap(scriptDetailFragment.getTransparentBitmap(a, 40));
+        Bitmap a2 = y11.a(scriptDetailFragment.getActivity(), successEvent.bitmap, 2, 20);
+        scriptDetailFragment.blurBit = a2;
+        if (a2 != null) {
+            scriptDetailFragment.getMAppTopBg().setImageBitmap(scriptDetailFragment.getTransparentBitmap(a2, 40));
         }
     }
 
@@ -833,10 +832,10 @@ public final class ScriptDetailFragment extends BaseFragment implements StickyHe
                 bundle.putString("imageurl", shareDO.getShareImage());
                 bundle.putString("producturl", shareDO.getShareUrl());
             }
-            ShareProxy.IShareProxy a = ShareProxy.a();
+            ShareProxy.IShareProxy a2 = ShareProxy.a();
             FragmentActivity activity = getActivity();
             FragmentActivity activity2 = getActivity();
-            a.share(activity, bundle, (activity2 == null || (window = activity2.getWindow()) == null) ? null : window.getDecorView());
+            a2.share(activity, bundle, (activity2 == null || (window = activity2.getWindow()) == null) ? null : window.getDecorView());
         }
     }
 

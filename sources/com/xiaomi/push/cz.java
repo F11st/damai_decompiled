@@ -12,10 +12,9 @@ import java.util.List;
 public abstract class cz {
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.cz$a */
     /* loaded from: classes11.dex */
-    public static class C7625a extends cy {
-        public C7625a() {
+    public static class a extends cy {
+        public a() {
             super(1);
         }
 
@@ -78,7 +77,7 @@ public abstract class cz {
     }
 
     public static String a(Context context, String str, List<bi> list) {
-        return a(context, str, list, new C7625a(), true);
+        return a(context, str, list, new a(), true);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:49:0x00a9 A[Catch: MalformedURLException -> 0x00c2, TRY_ENTER, TryCatch #4 {MalformedURLException -> 0x00c2, blocks: (B:4:0x000f, B:6:0x0016, B:8:0x0020, B:11:0x0027, B:13:0x002d, B:14:0x0030, B:15:0x0035, B:17:0x003b, B:19:0x0044, B:21:0x004c, B:49:0x00a9, B:50:0x00bb), top: B:64:0x000f }] */

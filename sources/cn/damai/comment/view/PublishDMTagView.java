@@ -15,7 +15,7 @@ import com.android.alibaba.ip.runtime.IpChange;
 import com.google.android.flexbox.FlexboxLayout;
 import io.flutter.wpkbridge.WPKFactory;
 import java.util.ArrayList;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import kotlin.jvm.JvmOverloads;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -146,7 +146,7 @@ public final class PublishDMTagView extends FlexboxLayout {
         for (Object obj : arrayList2) {
             int i3 = i2 + 1;
             if (i2 < 0) {
-                C8214m.p();
+                m.p();
             }
             final String str = (String) obj;
             Context context = getContext();

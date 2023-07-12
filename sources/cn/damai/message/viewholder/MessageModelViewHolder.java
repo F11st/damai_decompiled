@@ -42,13 +42,12 @@ public class MessageModelViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.message.viewholder.MessageModelViewHolder$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1353a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        View$OnClickListenerC1353a(int i) {
+        a(int i) {
             this.a = i;
         }
 
@@ -64,13 +63,12 @@ public class MessageModelViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.message.viewholder.MessageModelViewHolder$b */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1354b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        View$OnClickListenerC1354b(int i) {
+        b(int i) {
             this.a = i;
         }
 
@@ -174,8 +172,8 @@ public class MessageModelViewHolder extends RecyclerView.ViewHolder {
                 this.g.setTextSize(32.0f);
                 this.g.setBackgroundResource(R$drawable.bg_message_attend_reply_icon);
             }
-            this.f.setOnClickListener(new View$OnClickListenerC1353a(i));
-            this.a.setOnClickListener(new View$OnClickListenerC1354b(i));
+            this.f.setOnClickListener(new a(i));
+            this.a.setOnClickListener(new b(i));
         }
     }
 }

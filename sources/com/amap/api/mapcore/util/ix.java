@@ -16,14 +16,14 @@ import javax.crypto.NoSuchPaddingException;
 public class ix extends jb {
     private Context a;
     private String b;
-    private AbstractC4579hv e;
+    private hv e;
     private Object[] f;
 
-    public ix(Context context, jb jbVar, AbstractC4579hv abstractC4579hv, String str, Object... objArr) {
+    public ix(Context context, jb jbVar, hv hvVar, String str, Object... objArr) {
         super(jbVar);
         this.a = context;
         this.b = str;
-        this.e = abstractC4579hv;
+        this.e = hvVar;
         this.f = objArr;
     }
 

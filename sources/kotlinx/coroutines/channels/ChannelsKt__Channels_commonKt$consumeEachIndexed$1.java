@@ -34,6 +34,6 @@ public final class ChannelsKt__Channels_commonKt$consumeEachIndexed$1 extends Co
     public final Object invokeSuspend(@NotNull Object obj) {
         this.result = obj;
         this.label |= Integer.MIN_VALUE;
-        return C8648b.m(null, null, this);
+        return b.m(null, null, this);
     }
 }

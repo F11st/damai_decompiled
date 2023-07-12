@@ -11,8 +11,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
-import cn.damai.common.image.C0511b;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMImageStrategyConfig;
 import cn.damai.common.nav.DMNav;
@@ -41,19 +39,18 @@ public class TicketGuideNoticeViewHolder extends RecyclerView.ViewHolder {
     private Context g;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.robticketstrategy.viewholder.TicketGuideNoticeViewHolder$a */
     /* loaded from: classes8.dex */
-    public class C2421a implements DMImageCreator.DMImageFailListener {
+    public class a implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2421a() {
+        a() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-748408352")) {
-                ipChange.ipc$dispatch("-748408352", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-748408352", new Object[]{this, dVar});
             } else {
                 TicketGuideNoticeViewHolder.this.d.setImageResource(R$drawable.uikit_default_image_bg_grey);
             }
@@ -61,20 +58,18 @@ public class TicketGuideNoticeViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.robticketstrategy.viewholder.TicketGuideNoticeViewHolder$b */
     /* loaded from: classes8.dex */
-    public class C2422b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ProjectTickGuideNoticeBean a;
         final /* synthetic */ String b;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.robticketstrategy.viewholder.TicketGuideNoticeViewHolder$b$a */
         /* loaded from: classes16.dex */
-        public class View$OnClickListenerC2423a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC2423a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -85,38 +80,38 @@ public class TicketGuideNoticeViewHolder extends RecyclerView.ViewHolder {
                     return;
                 }
                 ArrayList<? extends Parcelable> arrayList = new ArrayList<>();
-                if (TextUtils.isEmpty(C2422b.this.a.imageUrl)) {
+                if (TextUtils.isEmpty(b.this.a.imageUrl)) {
                     return;
                 }
                 PicInfo picInfo = new PicInfo();
-                picInfo.setPicUrl(C2422b.this.a.imageUrl);
+                picInfo.setPicUrl(b.this.a.imageUrl);
                 arrayList.add(picInfo);
                 Bundle bundle = new Bundle();
-                bundle.putString("projectId", C2422b.this.b);
+                bundle.putString("projectId", b.this.b);
                 bundle.putParcelableArrayList("pic_info", arrayList);
                 bundle.putInt("position", 0);
                 DMNav.from(TicketGuideNoticeViewHolder.this.g).withExtras(bundle).toUri(cs.e());
             }
         }
 
-        C2422b(ProjectTickGuideNoticeBean projectTickGuideNoticeBean, String str) {
+        b(ProjectTickGuideNoticeBean projectTickGuideNoticeBean, String str) {
             this.a = projectTickGuideNoticeBean;
             this.b = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Drawable drawable;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "592657269")) {
-                ipChange.ipc$dispatch("592657269", new Object[]{this, c0502e});
-            } else if (c0502e == null || (drawable = c0502e.a) == null) {
+                ipChange.ipc$dispatch("592657269", new Object[]{this, eVar});
+            } else if (eVar == null || (drawable = eVar.a) == null) {
                 TicketGuideNoticeViewHolder.this.d.setImageResource(R$drawable.uikit_default_image_bg_grey);
             } else {
                 TicketGuideNoticeViewHolder ticketGuideNoticeViewHolder = TicketGuideNoticeViewHolder.this;
-                ticketGuideNoticeViewHolder.f(ticketGuideNoticeViewHolder.d, TicketGuideNoticeViewHolder.this.f, (int) (((drawable.getIntrinsicHeight() * TicketGuideNoticeViewHolder.this.f) * 1.0f) / c0502e.a.getIntrinsicWidth()));
-                TicketGuideNoticeViewHolder.this.d.setImageDrawable(c0502e.a);
-                TicketGuideNoticeViewHolder.this.d.setOnClickListener(new View$OnClickListenerC2423a());
+                ticketGuideNoticeViewHolder.f(ticketGuideNoticeViewHolder.d, TicketGuideNoticeViewHolder.this.f, (int) (((drawable.getIntrinsicHeight() * TicketGuideNoticeViewHolder.this.f) * 1.0f) / eVar.a.getIntrinsicWidth()));
+                TicketGuideNoticeViewHolder.this.d.setImageDrawable(eVar.a);
+                TicketGuideNoticeViewHolder.this.d.setOnClickListener(new a());
             }
         }
     }
@@ -160,13 +155,13 @@ public class TicketGuideNoticeViewHolder extends RecyclerView.ViewHolder {
                 this.c.setVisibility(0);
                 this.c.setText(projectTickGuideNoticeBean.desc);
             }
-            DMImageStrategyConfig b = C0511b.b(projectTickGuideNoticeBean.imageUrl, -1, -1);
-            if (b != null) {
-                b.b = false;
+            DMImageStrategyConfig b2 = cn.damai.common.image.b.b(projectTickGuideNoticeBean.imageUrl, -1, -1);
+            if (b2 != null) {
+                b2.b = false;
             }
-            DMImageCreator g = C0504a.b().g(projectTickGuideNoticeBean.imageUrl, b);
+            DMImageCreator g = cn.damai.common.image.a.b().g(projectTickGuideNoticeBean.imageUrl, b2);
             int i = R$drawable.uikit_default_image_bg_grey;
-            g.i(i).c(i).n(new C2422b(projectTickGuideNoticeBean, str)).e(new C2421a()).f();
+            g.i(i).c(i).n(new b(projectTickGuideNoticeBean, str)).e(new a()).f();
         }
     }
 }

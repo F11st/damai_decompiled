@@ -21,17 +21,16 @@ import tb.ua0;
 public class DmUltronPromotionActivityOld extends DmPopWindowBaseActivity {
     private static transient /* synthetic */ IpChange $ipChange;
     private String TAG_ID;
-    DmChooseSwitchListenerImpl<DmPromotionOptionsBean> itemClickListener = new C2652a();
+    DmChooseSwitchListenerImpl<DmPromotionOptionsBean> itemClickListener = new a();
     private List<DmPromotionOptionsBean> mPromotionBeanList;
     private String selectId;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.view.activity.DmUltronPromotionActivityOld$a */
     /* loaded from: classes9.dex */
-    public class C2652a implements DmChooseSwitchListenerImpl<DmPromotionOptionsBean> {
+    public class a implements DmChooseSwitchListenerImpl<DmPromotionOptionsBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2652a() {
+        a() {
         }
 
         @Override // cn.damai.ultron.utils.DmChooseSwitchListenerImpl

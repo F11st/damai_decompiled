@@ -20,13 +20,12 @@ import tb.b41;
 public final class TMLocation extends WVLocation {
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMLocation$a */
     /* loaded from: classes11.dex */
-    public static final class C6988a implements IPermissionListener {
+    public static final class a implements IPermissionListener {
         final /* synthetic */ WVCallBackContext b;
         final /* synthetic */ String c;
 
-        C6988a(WVCallBackContext wVCallBackContext, String str) {
+        a(WVCallBackContext wVCallBackContext, String str) {
             this.b = wVCallBackContext;
             this.c = str;
         }
@@ -67,7 +66,7 @@ public final class TMLocation extends WVLocation {
         try {
             Context context = getContext();
             b41.h(context, WPKFactory.INIT_KEY_CONTEXT);
-            new Permission(context, new PermissionModel(new String[]{"android.permission.ACCESS_FINE_LOCATION", "android.permission.ACCESS_COARSE_LOCATION"}, null, null, null)).a(new C6988a(wVCallBackContext, str)).b();
+            new Permission(context, new PermissionModel(new String[]{"android.permission.ACCESS_FINE_LOCATION", "android.permission.ACCESS_COARSE_LOCATION"}, null, null, null)).a(new a(wVCallBackContext, str)).b();
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -3,7 +3,7 @@ package androidx.lifecycle;
 import androidx.lifecycle.Lifecycle;
 import kotlin.Metadata;
 import kotlin.coroutines.CoroutineContext;
-import kotlinx.coroutines.C8658e;
+import kotlinx.coroutines.e;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
 import tb.da0;
@@ -51,6 +51,6 @@ public final class LifecycleCoroutineScopeImpl extends LifecycleCoroutineScope i
     }
 
     public final void register() {
-        C8658e.b(this, da0.c().a(), null, new LifecycleCoroutineScopeImpl$register$1(this, null), 2, null);
+        e.b(this, da0.c().a(), null, new LifecycleCoroutineScopeImpl$register$1(this, null), 2, null);
     }
 }

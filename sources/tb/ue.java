@@ -21,13 +21,12 @@ public final class ue {
     private final boolean l;
     @Nullable
     String m;
-    public static final ue FORCE_NETWORK = new C9770a().c().a();
-    public static final ue FORCE_CACHE = new C9770a().d().b(Integer.MAX_VALUE, TimeUnit.SECONDS).a();
+    public static final ue FORCE_NETWORK = new a().c().a();
+    public static final ue FORCE_CACHE = new a().d().b(Integer.MAX_VALUE, TimeUnit.SECONDS).a();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ue$a */
     /* loaded from: classes2.dex */
-    public static final class C9770a {
+    public static final class a {
         boolean a;
         boolean b;
         int c = -1;
@@ -41,7 +40,7 @@ public final class ue {
             return new ue(this);
         }
 
-        public C9770a b(int i, TimeUnit timeUnit) {
+        public a b(int i, TimeUnit timeUnit) {
             if (i >= 0) {
                 long seconds = timeUnit.toSeconds(i);
                 this.d = seconds > 2147483647L ? Integer.MAX_VALUE : (int) seconds;
@@ -50,12 +49,12 @@ public final class ue {
             throw new IllegalArgumentException("maxStale < 0: " + i);
         }
 
-        public C9770a c() {
+        public a c() {
             this.a = true;
             return this;
         }
 
-        public C9770a d() {
+        public a d() {
             this.f = true;
             return this;
         }
@@ -135,7 +134,7 @@ public final class ue {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public static tb.ue k(okhttp3.C8816l r22) {
+    public static tb.ue k(okhttp3.l r22) {
         /*
             Method dump skipped, instructions count: 333
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -184,23 +183,23 @@ public final class ue {
         if (str != null) {
             return str;
         }
-        String a = a();
-        this.m = a;
-        return a;
+        String a2 = a();
+        this.m = a2;
+        return a2;
     }
 
-    ue(C9770a c9770a) {
-        this.a = c9770a.a;
-        this.b = c9770a.b;
-        this.c = c9770a.c;
+    ue(a aVar) {
+        this.a = aVar.a;
+        this.b = aVar.b;
+        this.c = aVar.c;
         this.d = -1;
         this.e = false;
         this.f = false;
         this.g = false;
-        this.h = c9770a.d;
-        this.i = c9770a.e;
-        this.j = c9770a.f;
-        this.k = c9770a.g;
-        this.l = c9770a.h;
+        this.h = aVar.d;
+        this.i = aVar.e;
+        this.j = aVar.f;
+        this.k = aVar.g;
+        this.l = aVar.h;
     }
 }

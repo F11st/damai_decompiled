@@ -28,8 +28,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 import javax.annotation.concurrent.GuardedBy;
 import javax.annotation.concurrent.ThreadSafe;
-import tb.C9248i0;
 import tb.db2;
+import tb.i0;
 import tb.rk1;
 import tb.wh1;
 import tb.y92;
@@ -56,21 +56,20 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
     private final DiskStorage j;
     private final EntryEvictionComparatorSupplier k;
     private final CacheErrorLogger l;
-    private final C6283a m;
+    private final a m;
     private final CountDownLatch c = new CountDownLatch(1);
     private final Object n = new Object();
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     @VisibleForTesting
-    /* renamed from: com.taobao.alivfssdk.fresco.cache.disk.DiskStorageCache$a */
     /* loaded from: classes8.dex */
-    public static class C6283a {
+    public static class a {
         private boolean a = false;
         private long b = -1;
         private long c = -1;
 
-        C6283a() {
+        a() {
         }
 
         public synchronized long a() {
@@ -106,23 +105,22 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.alivfssdk.fresco.cache.disk.DiskStorageCache$b */
     /* loaded from: classes8.dex */
-    public static class C6284b {
+    public static class b {
         public final long a;
         public final long b;
         public final long c;
 
-        public C6284b(long j, long j2, long j3) {
+        public b(long j, long j2, long j3) {
             this.a = j;
             this.b = j2;
             this.c = j3;
         }
     }
 
-    public DiskStorageCache(DiskStorage diskStorage, EntryEvictionComparatorSupplier entryEvictionComparatorSupplier, C6284b c6284b, CacheEventListener cacheEventListener, CacheErrorLogger cacheErrorLogger, @Nullable DiskTrimmableRegistry diskTrimmableRegistry, final Context context, ExecutorService executorService) {
-        this.a = c6284b.b;
-        long j = c6284b.c;
+    public DiskStorageCache(DiskStorage diskStorage, EntryEvictionComparatorSupplier entryEvictionComparatorSupplier, b bVar, CacheEventListener cacheEventListener, CacheErrorLogger cacheErrorLogger, @Nullable DiskTrimmableRegistry diskTrimmableRegistry, final Context context, ExecutorService executorService) {
+        this.a = bVar.b;
+        long j = bVar.c;
         this.b = j;
         this.d = j;
         this.i = StatFsHelper.d();
@@ -130,9 +128,9 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
         this.k = entryEvictionComparatorSupplier;
         this.g = -1L;
         this.e = cacheEventListener;
-        this.h = c6284b.a;
+        this.h = bVar.a;
         this.l = cacheErrorLogger;
-        this.m = new C6283a();
+        this.m = new a();
         if (diskTrimmableRegistry != null) {
             diskTrimmableRegistry.registerDiskTrimmable(this);
         }
@@ -167,8 +165,8 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
     private void h(long j, CacheEventListener.EvictionReason evictionReason) throws IOException {
         try {
             Collection<DiskStorage.Entry> k = k(this.j.getEntries());
-            long b = this.m.b();
-            long j2 = b - j;
+            long b2 = this.m.b();
+            long j2 = b2 - j;
             int i = 0;
             long j3 = 0;
             for (DiskStorage.Entry entry : k) {
@@ -182,7 +180,7 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
                     j3 += remove;
                     CacheEventListener cacheEventListener = this.e;
                     if (cacheEventListener != null) {
-                        cacheEventListener.onEviction(new db2().h(entry.getId()).e(evictionReason).g(remove).c(b - j3).b(j));
+                        cacheEventListener.onEviction(new db2().h(entry.getId()).e(evictionReason).g(remove).c(b2 - j3).b(j));
                     }
                 }
             }
@@ -215,9 +213,9 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
         try {
             ArrayList arrayList = new ArrayList();
             if (cacheKey instanceof wh1) {
-                List<CacheKey> a = ((wh1) cacheKey).a();
-                for (int i = 0; i < a.size(); i++) {
-                    arrayList.add(p(a.get(i)));
+                List<CacheKey> a2 = ((wh1) cacheKey).a();
+                for (int i = 0; i < a2.size(); i++) {
+                    arrayList.add(p(a2.get(i)));
                 }
             } else if (cacheKey instanceof rk1) {
                 arrayList.add(g(cacheKey.toString()));
@@ -267,7 +265,7 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
                 file.delete();
             }
         } catch (Exception unused) {
-            C9248i0.e("DiskStorageCache", "Fail to delete SharedPreference from file system. ");
+            i0.e("DiskStorageCache", "Fail to delete SharedPreference from file system. ");
         }
     }
 
@@ -275,16 +273,16 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
         synchronized (this.n) {
             boolean n = n();
             s();
-            long b = this.m.b();
-            if (b > this.d && !n) {
+            long b2 = this.m.b();
+            if (b2 > this.d && !n) {
                 this.m.e();
                 n();
             }
-            if (b > this.d) {
+            if (b2 > this.d) {
                 long currentTimeMillis = System.currentTimeMillis();
                 long j = (this.d * 9) / 10;
                 h(j, CacheEventListener.EvictionReason.CACHE_FULL);
-                C9248i0.c("DiskStorageCache", "- evictAboveSize: desiredSize=" + j + ", elapsed=" + (System.currentTimeMillis() - currentTimeMillis) + "ms");
+                i0.c("DiskStorageCache", "- evictAboveSize: desiredSize=" + j + ", elapsed=" + (System.currentTimeMillis() - currentTimeMillis) + "ms");
             }
         }
     }
@@ -302,7 +300,7 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
         long currentTimeMillis2 = System.currentTimeMillis();
         o();
         long currentTimeMillis3 = System.currentTimeMillis() - currentTimeMillis2;
-        C9248i0.c("DiskStorageCache", "- maybeUpdateFileCacheSizeAndIndex: now=" + currentTimeMillis + ", elapsed=" + currentTimeMillis3 + "ms, thread=" + Thread.currentThread());
+        i0.c("DiskStorageCache", "- maybeUpdateFileCacheSizeAndIndex: now=" + currentTimeMillis + ", elapsed=" + currentTimeMillis3 + "ms, thread=" + Thread.currentThread());
         this.g = currentTimeMillis;
         return true;
     }
@@ -373,8 +371,8 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
             try {
                 this.m.e();
                 n();
-                long b = this.m.b();
-                h(b - ((long) (d * b)), CacheEventListener.EvictionReason.CACHE_MANAGER_TRIMMED);
+                long b2 = this.m.b();
+                h(b2 - ((long) (d * b2)), CacheEventListener.EvictionReason.CACHE_MANAGER_TRIMMED);
             } catch (IOException e) {
                 CacheErrorLogger cacheErrorLogger = this.l;
                 CacheErrorLogger.CacheErrorCategory cacheErrorCategory = CacheErrorLogger.CacheErrorCategory.EVICTION;
@@ -415,7 +413,7 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
             try {
                 long currentTimeMillis = System.currentTimeMillis();
                 Collection<DiskStorage.Entry> entries = this.j.getEntries();
-                long b = this.m.b();
+                long b2 = this.m.b();
                 int i = 0;
                 long j4 = 0;
                 j3 = 0;
@@ -431,7 +429,7 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
                                 j4 += remove;
                                 CacheEventListener cacheEventListener = this.e;
                                 if (cacheEventListener != null) {
-                                    cacheEventListener.onEviction(new db2().h(entry.getId()).e(CacheEventListener.EvictionReason.CONTENT_STALE).g(remove).c(b - j4));
+                                    cacheEventListener.onEviction(new db2().h(entry.getId()).e(CacheEventListener.EvictionReason.CONTENT_STALE).g(remove).c(b2 - j4));
                                 }
                             }
                         } else {
@@ -483,7 +481,7 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
     }
 
     @Override // com.taobao.alivfssdk.fresco.cache.disk.FileCache
-    public DiskStorage.C6281a getDumpInfo() throws IOException {
+    public DiskStorage.a getDumpInfo() throws IOException {
         return this.j.getDumpInfo();
     }
 
@@ -495,8 +493,8 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
     @Override // com.taobao.alivfssdk.fresco.cache.disk.FileCache
     public BinaryResource getResource(CacheKey cacheKey) {
         BinaryResource binaryResource;
-        C9248i0.c("DiskStorageCache", "- getResource: key=" + cacheKey + ", thread=" + Thread.currentThread());
-        db2 a = new db2().a(cacheKey);
+        i0.c("DiskStorageCache", "- getResource: key=" + cacheKey + ", thread=" + Thread.currentThread());
+        db2 a2 = new db2().a(cacheKey);
         try {
             synchronized (this.n) {
                 List<String> j = j(cacheKey);
@@ -504,7 +502,7 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
                 binaryResource = null;
                 for (int i = 0; i < j.size(); i++) {
                     str = j.get(i);
-                    a.h(str);
+                    a2.h(str);
                     binaryResource = this.j.getResource(str, cacheKey, cacheKey);
                     if (binaryResource != null) {
                         break;
@@ -513,13 +511,13 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
                 if (binaryResource == null) {
                     CacheEventListener cacheEventListener = this.e;
                     if (cacheEventListener != null) {
-                        cacheEventListener.onMiss(a);
+                        cacheEventListener.onMiss(a2);
                     }
                     this.f.remove(str);
                 } else {
                     CacheEventListener cacheEventListener2 = this.e;
                     if (cacheEventListener2 != null) {
-                        cacheEventListener2.onHit(a);
+                        cacheEventListener2.onHit(a2);
                     }
                     this.f.add(str);
                 }
@@ -527,10 +525,10 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
             return binaryResource;
         } catch (IOException e) {
             this.l.logError(CacheErrorLogger.CacheErrorCategory.GENERIC_IO, "DiskStorageCache", "getResource", e);
-            a.f(e);
+            a2.f(e);
             CacheEventListener cacheEventListener3 = this.e;
             if (cacheEventListener3 != null) {
-                cacheEventListener3.onReadException(a);
+                cacheEventListener3.onReadException(a2);
             }
             return null;
         }
@@ -580,35 +578,35 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
     public BinaryResource insert(CacheKey cacheKey, WriterCallback writerCallback) throws IOException {
         String i;
         long currentTimeMillis = System.currentTimeMillis();
-        db2 a = new db2().a(cacheKey);
+        db2 a2 = new db2().a(cacheKey);
         CacheEventListener cacheEventListener = this.e;
         if (cacheEventListener != null) {
-            cacheEventListener.onWriteAttempt(a);
+            cacheEventListener.onWriteAttempt(a2);
         }
         synchronized (this.n) {
             i = i(cacheKey);
         }
-        a.h(i);
+        a2.h(i);
         try {
             DiskStorage.Inserter q2 = q(i, cacheKey);
             q2.writeData(writerCallback, cacheKey, cacheKey);
             BinaryResource f = f(q2, cacheKey, i);
-            a.g(f.size()).c(this.m.b()).d(System.currentTimeMillis() - currentTimeMillis);
+            a2.g(f.size()).c(this.m.b()).d(System.currentTimeMillis() - currentTimeMillis);
             CacheEventListener cacheEventListener2 = this.e;
             if (cacheEventListener2 != null) {
-                cacheEventListener2.onWriteSuccess(a);
+                cacheEventListener2.onWriteSuccess(a2);
             }
             if (!q2.cleanUp()) {
-                C9248i0.e("DiskStorageCache", "Failed to delete temp file");
+                i0.e("DiskStorageCache", "Failed to delete temp file");
             }
             return f;
         } catch (IOException e) {
-            a.f(e);
+            a2.f(e);
             CacheEventListener cacheEventListener3 = this.e;
             if (cacheEventListener3 != null) {
-                cacheEventListener3.onWriteException(a);
+                cacheEventListener3.onWriteException(a2);
             }
-            C9248i0.e("DiskStorageCache", "Failed inserting a file into the cache", e);
+            i0.e("DiskStorageCache", "Failed inserting a file into the cache", e);
             throw e;
         }
     }
@@ -671,14 +669,14 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
                     List<String> j = j(cacheKey);
                     if (j.size() > 0) {
                         String str = j.get(0);
-                        db2 a = new db2().a(cacheKey);
-                        a.h(str);
+                        db2 a2 = new db2().a(cacheKey);
+                        a2.h(str);
                         long remove = this.j.remove(str, cacheKey);
                         this.f.remove(str);
-                        a.g(remove).c(this.m.b());
+                        a2.g(remove).c(this.m.b());
                         CacheEventListener cacheEventListener = this.e;
                         if (cacheEventListener != null) {
-                            cacheEventListener.onRemoveSuccess(a);
+                            cacheEventListener.onRemoveSuccess(a2);
                         }
                         return remove >= 0;
                     }
@@ -698,10 +696,10 @@ public class DiskStorageCache implements FileCache, DiskTrimmable {
     public void trimToMinimum() {
         synchronized (this.n) {
             n();
-            long b = this.m.b();
+            long b2 = this.m.b();
             long j = this.h;
-            if (j > 0 && b > 0 && b >= j) {
-                double d = 1.0d - (j / b);
+            if (j > 0 && b2 > 0 && b2 >= j) {
+                double d = 1.0d - (j / b2);
                 if (d > 0.02d) {
                     r(d);
                 }

@@ -1,14 +1,12 @@
 package tb;
 
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
-public class mo0 extends C0528b {
+public class mo0 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange;
     private static mo0 b;
 
@@ -28,7 +26,7 @@ public class mo0 extends C0528b {
         if (AndroidInstantRuntime.support(ipChange, "-744469817")) {
             ipChange.ipc$dispatch("-744469817", new Object[]{this, hashMap, str, str2});
         } else {
-            C0529c.e().A(hashMap, str, str2);
+            cn.damai.common.user.c.e().A(hashMap, str, str2);
         }
     }
 }

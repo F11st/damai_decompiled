@@ -2,7 +2,6 @@ package tb;
 
 import android.net.Uri;
 import android.text.TextUtils;
-import cn.damai.common.user.C0529c;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 
@@ -21,7 +20,7 @@ public class rw2 {
             if (TextUtils.isEmpty(queryParameter)) {
                 return;
             }
-            C0529c.e().H("utm", queryParameter);
+            cn.damai.common.user.c.e().H("utm", queryParameter);
         }
     }
 }

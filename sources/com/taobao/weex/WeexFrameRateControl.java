@@ -22,10 +22,9 @@ public class WeexFrameRateControl {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.WeexFrameRateControl$a */
     /* loaded from: classes11.dex */
-    class Choreographer$FrameCallbackC6947a implements Choreographer.FrameCallback {
-        Choreographer$FrameCallbackC6947a() {
+    class a implements Choreographer.FrameCallback {
+        a() {
         }
 
         @Override // android.view.Choreographer.FrameCallback
@@ -50,7 +49,7 @@ public class WeexFrameRateControl {
         this.a = new WeakReference<>(vSyncListener);
         if (Build.VERSION.SDK_INT > 15) {
             this.b = Choreographer.getInstance();
-            this.c = new Choreographer$FrameCallbackC6947a();
+            this.c = new a();
             this.d = null;
             return;
         }

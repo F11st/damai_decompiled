@@ -56,7 +56,7 @@ public final class ObservableDoAfterNext<T> extends AbstractObservableWithUpstre
         this.onAfterNext = consumer;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new DoAfterObserver(observer, this.onAfterNext));
     }

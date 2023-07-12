@@ -5,7 +5,7 @@ import anet.channel.detect.HttpStrategyDetector;
 import anet.channel.quic.Http3ConnectionDetector;
 import anet.channel.statist.StrategyStatObject;
 import anet.channel.status.NetworkStatusHelper;
-import anet.channel.strategy.C0214b;
+import anet.channel.strategy.b;
 import anet.channel.strategy.dispatch.AmdcRuntimeInfo;
 import anet.channel.strategy.utils.SerialLruCache;
 import anet.channel.util.ALog;
@@ -15,9 +15,9 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import tb.C9708t9;
 import tb.a5;
 import tb.hu0;
+import tb.t9;
 import tb.x6;
 import tb.y90;
 import tb.zh2;
@@ -54,7 +54,7 @@ public class StrategyInfoHolder implements NetworkStatusHelper.INetworkStatusCha
                     if (strategyTable.isChanged) {
                         StrategyStatObject strategyStatObject = new StrategyStatObject(1);
                         strategyStatObject.writeStrategyFileId = strategyTable.uniqueId;
-                        C0225c.f((Serializable) entry.getValue(), strategyTable.uniqueId, strategyStatObject);
+                        c.f((Serializable) entry.getValue(), strategyTable.uniqueId, strategyStatObject);
                         strategyTable.isChanged = false;
                     }
                 }
@@ -90,7 +90,7 @@ public class StrategyInfoHolder implements NetworkStatusHelper.INetworkStatusCha
 
     private String f() {
         String str;
-        File[] c = C0225c.c();
+        File[] c = c.c();
         if (c == null) {
             return this.f;
         }
@@ -118,7 +118,7 @@ public class StrategyInfoHolder implements NetworkStatusHelper.INetworkStatusCha
         str = "";
         if (networkStatus.isWifi()) {
             String k = NetworkStatusHelper.k();
-            if (C9708t9.M()) {
+            if (t9.M()) {
                 if (this.b != null && !TextUtils.isEmpty(k) && !"02:00:00:00:00:00".equals(k)) {
                     str = this.b.getUniqueIdByBssid(zh2.h(k));
                 }
@@ -148,7 +148,7 @@ public class StrategyInfoHolder implements NetworkStatusHelper.INetworkStatusCha
     /* JADX INFO: Access modifiers changed from: private */
     public void j() {
         this.g = g(this.i);
-        if (C9708t9.M() && this.i.isWifi() && this.h) {
+        if (t9.M() && this.i.isWifi() && this.h) {
             e().sendAmdcRequest(y90.a(), true);
             this.h = false;
         }
@@ -160,8 +160,8 @@ public class StrategyInfoHolder implements NetworkStatusHelper.INetworkStatusCha
 
     private void l() {
         ALog.f("awcn.StrategyInfoHolder", "restore", null, new Object[0]);
-        if (!C9708t9.n()) {
-            this.b = (StrategyConfig) C0225c.h("StrategyConfig", null);
+        if (!t9.n()) {
+            this.b = (StrategyConfig) c.h("StrategyConfig", null);
             if (this.b != null) {
                 this.b.checkInit();
                 this.b.setHolder(this);
@@ -178,9 +178,9 @@ public class StrategyInfoHolder implements NetworkStatusHelper.INetworkStatusCha
                 try {
                     ALog.f("awcn.StrategyInfoHolder", "start loading strategy files", null, new Object[0]);
                     long currentTimeMillis = System.currentTimeMillis();
-                    if (C9708t9.n()) {
+                    if (t9.n()) {
                         ALog.f("awcn.StrategyInfoHolder", "load strategy async", null, new Object[0]);
-                        StrategyConfig strategyConfig = (StrategyConfig) C0225c.h("StrategyConfig", null);
+                        StrategyConfig strategyConfig = (StrategyConfig) c.h("StrategyConfig", null);
                         if (strategyConfig != null) {
                             strategyConfig.checkInit();
                             strategyConfig.setHolder(StrategyInfoHolder.this);
@@ -194,7 +194,7 @@ public class StrategyInfoHolder implements NetworkStatusHelper.INetworkStatusCha
                             StrategyInfoHolder.this.i(str2, true);
                         }
                     }
-                    File[] c = C0225c.c();
+                    File[] c = c.c();
                     if (c == null) {
                         return;
                     }
@@ -248,7 +248,7 @@ public class StrategyInfoHolder implements NetworkStatusHelper.INetworkStatusCha
                 strategyStatObject = new StrategyStatObject(0);
                 strategyStatObject.readStrategyFileId = str;
             }
-            StrategyTable strategyTable = (StrategyTable) C0225c.h(str, strategyStatObject);
+            StrategyTable strategyTable = (StrategyTable) c.h(str, strategyStatObject);
             if (strategyTable != null) {
                 strategyTable.checkInit();
                 strategyTable.parseStrategyData();
@@ -274,27 +274,27 @@ public class StrategyInfoHolder implements NetworkStatusHelper.INetworkStatusCha
                     StrategyStatObject strategyStatObject = new StrategyStatObject(1);
                     String str = strategyTable.uniqueId;
                     strategyStatObject.writeStrategyFileId = str;
-                    C0225c.f(strategyTable, str, strategyStatObject);
+                    c.f(strategyTable, str, strategyStatObject);
                     strategyTable.isChanged = false;
                 }
             }
-            C0225c.f(this.b.createSelf(), "StrategyConfig", null);
+            c.f(this.b.createSelf(), "StrategyConfig", null);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public void n(C0214b.C0221g c0221g) {
-        int i = c0221g.f;
+    public void n(b.g gVar) {
+        int i = gVar.f;
         if (i != 0) {
-            AmdcRuntimeInfo.k(i, c0221g.g);
+            AmdcRuntimeInfo.k(i, gVar.g);
         }
-        o(c0221g.h);
-        e().update(c0221g);
-        this.b.update(c0221g);
+        o(gVar.h);
+        e().update(gVar);
+        this.b.update(gVar);
     }
 
     void o(String str) {
-        if (C9708t9.M() && this.i.isWifi()) {
+        if (t9.M() && this.i.isWifi()) {
             String str2 = "WIFI$" + str;
             if (TextUtils.isEmpty(str)) {
                 str2 = this.f;

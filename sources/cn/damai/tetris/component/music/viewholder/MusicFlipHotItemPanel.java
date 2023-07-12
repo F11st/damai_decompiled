@@ -4,7 +4,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.musicfestival.bean.MusicDispatchBean;
@@ -35,12 +34,11 @@ public class MusicFlipHotItemPanel implements View.OnClickListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.music.viewholder.MusicFlipHotItemPanel$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1933a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1933a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -65,7 +63,7 @@ public class MusicFlipHotItemPanel implements View.OnClickListener {
         RoundRadiusImageView roundRadiusImageView = new RoundRadiusImageView(mu0.a());
         this.d = roundRadiusImageView;
         roundRadiusImageView.setRoundRadius(m62.a(mu0.a(), 13.0f));
-        roundRadiusImageView.setOnClickListener(new View$OnClickListenerC1933a());
+        roundRadiusImageView.setOnClickListener(new a());
         inflate.setTag(this);
     }
 
@@ -78,7 +76,7 @@ public class MusicFlipHotItemPanel implements View.OnClickListener {
             this.f = musicDispatchBean;
             this.b.setText(musicDispatchBean.title);
             this.b.setOnClickListener(this);
-            C0504a b = C0504a.b();
+            cn.damai.common.image.a b = cn.damai.common.image.a.b();
             String str = musicDispatchBean.picUrl;
             int i = g;
             b.f(str, i, i).g(this.d);

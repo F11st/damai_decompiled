@@ -1,7 +1,6 @@
 package tb;
 
 import android.text.TextUtils;
-import com.alipay.sdk.m.l.C4232c;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,12 +17,12 @@ public class qc0 {
         List<l41> list;
         if (this.b != null && (list = this.a) != null && !list.isEmpty()) {
             if (TextUtils.isEmpty(this.b.f)) {
-                ka0.h("DownloadRequest", C4232c.j, "param fileStorePath is null");
+                ka0.h("DownloadRequest", com.alipay.sdk.m.l.c.j, "param fileStorePath is null");
                 return false;
             }
             for (l41 l41Var : this.a) {
                 if (TextUtils.isEmpty(l41Var.a)) {
-                    ka0.h("DownloadRequest", C4232c.j, "param url is null");
+                    ka0.h("DownloadRequest", com.alipay.sdk.m.l.c.j, "param url is null");
                     return false;
                 }
             }
@@ -36,7 +35,7 @@ public class qc0 {
             this.a = arrayList;
             return true;
         }
-        ka0.h("DownloadRequest", C4232c.j, "param is null");
+        ka0.h("DownloadRequest", com.alipay.sdk.m.l.c.j, "param is null");
         return false;
     }
 

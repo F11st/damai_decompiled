@@ -4,7 +4,6 @@ import java.util.Arrays;
 import kotlin.Result;
 import kotlin.Unit;
 import kotlin.coroutines.Continuation;
-import kotlinx.coroutines.flow.C8688m;
 import kotlinx.coroutines.flow.MutableStateFlow;
 import kotlinx.coroutines.flow.StateFlow;
 import org.jetbrains.annotations.NotNull;
@@ -56,7 +55,7 @@ public abstract class h2<S extends j2<?>> {
             mutableStateFlow = this.d;
         }
         if (mutableStateFlow != null) {
-            C8688m.e(mutableStateFlow, 1);
+            kotlinx.coroutines.flow.m.e(mutableStateFlow, 1);
         }
         return s;
     }
@@ -88,12 +87,12 @@ public abstract class h2<S extends j2<?>> {
         for (Continuation<Unit> continuation : b) {
             if (continuation != null) {
                 wt2 wt2Var = wt2.INSTANCE;
-                Result.C8174a c8174a = Result.Companion;
+                Result.a aVar = Result.Companion;
                 continuation.resumeWith(Result.m1271constructorimpl(wt2Var));
             }
         }
         if (mutableStateFlow != null) {
-            C8688m.e(mutableStateFlow, -1);
+            kotlinx.coroutines.flow.m.e(mutableStateFlow, -1);
         }
     }
 
@@ -109,7 +108,7 @@ public abstract class h2<S extends j2<?>> {
         synchronized (this) {
             mutableStateFlow = this.d;
             if (mutableStateFlow == null) {
-                mutableStateFlow = C8688m.a(Integer.valueOf(this.b));
+                mutableStateFlow = kotlinx.coroutines.flow.m.a(Integer.valueOf(this.b));
                 this.d = mutableStateFlow;
             }
         }

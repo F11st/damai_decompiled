@@ -12,7 +12,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.R$drawable;
@@ -26,10 +25,10 @@ import com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.List;
-import tb.C9826vr;
 import tb.m62;
 import tb.oy0;
 import tb.t60;
+import tb.vr;
 import tb.wh2;
 
 /* compiled from: Taobao */
@@ -57,12 +56,11 @@ public class HeaderVideoAdapter extends RecyclerView.Adapter<VideoItemViewHolder
         private View h;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.tetris.component.home.adapter.HeaderVideoAdapter$VideoItemViewHolder$a */
         /* loaded from: classes16.dex */
-        public class View$OnClickListenerC1846a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC1846a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -80,12 +78,11 @@ public class HeaderVideoAdapter extends RecyclerView.Adapter<VideoItemViewHolder
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.tetris.component.home.adapter.HeaderVideoAdapter$VideoItemViewHolder$b */
         /* loaded from: classes16.dex */
-        public class View$OnClickListenerC1847b implements View.OnClickListener {
+        public class b implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC1847b() {
+            b() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -103,12 +100,11 @@ public class HeaderVideoAdapter extends RecyclerView.Adapter<VideoItemViewHolder
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.tetris.component.home.adapter.HeaderVideoAdapter$VideoItemViewHolder$c */
         /* loaded from: classes16.dex */
-        public class View$OnClickListenerC1848c implements View.OnClickListener {
+        public class c implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC1848c() {
+            c() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -176,10 +172,10 @@ public class HeaderVideoAdapter extends RecyclerView.Adapter<VideoItemViewHolder
                 HeaderVideoAdapter.this.f = homePageVideoItem;
                 HeaderVideoAdapter.this.c = homePageVideoItem.index;
             }
-            if (this.b.getTag() instanceof C9826vr) {
-                ((C9826vr) this.b.getTag()).cancel();
+            if (this.b.getTag() instanceof vr) {
+                ((vr) this.b.getTag()).cancel();
             }
-            DMImageCreator f = C0504a.b().f(homePageVideoItem.projectPic, HeaderVideoAdapter.this.e, t60.a(this.a, 60.0f));
+            DMImageCreator f = cn.damai.common.image.a.b().f(homePageVideoItem.projectPic, HeaderVideoAdapter.this.e, t60.a(this.a, 60.0f));
             int i2 = R$drawable.uikit_default_image_bg_gradient;
             this.b.setTag(f.i(i2).c(i2).g(this.b));
             if (!TextUtils.isEmpty(homePageVideoItem.projectName)) {
@@ -217,15 +213,15 @@ public class HeaderVideoAdapter extends RecyclerView.Adapter<VideoItemViewHolder
             this.itemView.setTag(homePageVideoItem);
             if (HeaderVideoAdapter.this.getItemCount() > 1 && (textView = this.e) != null) {
                 textView.setTag(homePageVideoItem);
-                this.e.setOnClickListener(new View$OnClickListenerC1846a());
+                this.e.setOnClickListener(new a());
             } else {
                 View view = this.h;
                 if (view != null) {
                     view.setTag(homePageVideoItem);
-                    this.h.setOnClickListener(new View$OnClickListenerC1847b());
+                    this.h.setOnClickListener(new b());
                 }
             }
-            this.itemView.setOnClickListener(new View$OnClickListenerC1848c());
+            this.itemView.setOnClickListener(new c());
             oy0.B().M(HeaderVideoAdapter.this.d, this.b, homePageVideoItem.projectId, homePageVideoItem.index);
             if (HeaderVideoAdapter.this.getItemCount() <= 1 || this.e == null) {
                 oy0.B().N(HeaderVideoAdapter.this.d, this.h, homePageVideoItem.projectId, homePageVideoItem.index);

@@ -1,11 +1,11 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8146a;
-import io.reactivex.AbstractC8149d;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.a;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -20,7 +20,7 @@ import tb.jm;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableFlatMapCompletableCompletable<T> extends AbstractC8146a implements FuseToObservable<T> {
+public final class ObservableFlatMapCompletableCompletable<T> extends a implements FuseToObservable<T> {
     final boolean delayErrors;
     final Function<? super T, ? extends CompletableSource> mapper;
     final ObservableSource<T> source;
@@ -165,11 +165,11 @@ public final class ObservableFlatMapCompletableCompletable<T> extends AbstractC8
     }
 
     @Override // io.reactivex.internal.fuseable.FuseToObservable
-    public AbstractC8149d<T> fuseToObservable() {
+    public d<T> fuseToObservable() {
         return i42.n(new ObservableFlatMapCompletable(this.source, this.mapper, this.delayErrors));
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     protected void subscribeActual(CompletableObserver completableObserver) {
         this.source.subscribe(new FlatMapCompletableMainObserver(completableObserver, this.mapper, this.delayErrors));
     }

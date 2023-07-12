@@ -12,8 +12,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import cn.damai.member.R$drawable;
 import cn.damai.member.R$id;
 import cn.damai.member.R$layout;
@@ -42,9 +42,8 @@ public class TickletTicketActionItemView extends RelativeLayout {
     private TextView tv_send_number;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletTicketActionItemView$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2117a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ PerformOpModule a;
         final /* synthetic */ String b;
@@ -54,7 +53,7 @@ public class TickletTicketActionItemView extends RelativeLayout {
         final /* synthetic */ Activity f;
         final /* synthetic */ boolean g;
 
-        View$OnClickListenerC2117a(PerformOpModule performOpModule, String str, String str2, int i, TicketNftExtAttr ticketNftExtAttr, Activity activity, boolean z) {
+        a(PerformOpModule performOpModule, String str, String str2, int i, TicketNftExtAttr ticketNftExtAttr, Activity activity, boolean z) {
             this.a = performOpModule;
             this.b = str;
             this.c = str2;
@@ -71,18 +70,18 @@ public class TickletTicketActionItemView extends RelativeLayout {
                 ipChange.ipc$dispatch("-497994251", new Object[]{this, view});
             } else if (!"1".equals(this.a.performOpType) && !"2".equals(this.a.performOpType)) {
                 if ("5".equals(this.a.performOpType)) {
-                    C0529c e = C0529c.e();
-                    C0528b c0528b = C0528b.getInstance();
-                    e.x(c0528b.e(un2.TICKLET_DETAIL_PAGE, "nft", "skip_to_lingjing_" + this.d, new HashMap(), Boolean.TRUE));
+                    c e = c.e();
+                    b bVar = b.getInstance();
+                    e.x(bVar.e(un2.TICKLET_DETAIL_PAGE, "nft", "skip_to_lingjing_" + this.d, new HashMap(), Boolean.TRUE));
                     PerformOpModule.ExtAttr extAttr = this.a.extAttr;
                     if (extAttr == null || TextUtils.isEmpty(extAttr.targetUrl)) {
                         return;
                     }
                     DMNav.from(TickletTicketActionItemView.this.context).toUri(this.a.extAttr.targetUrl);
                 } else if ("6".equals(this.a.performOpType)) {
-                    C0529c e2 = C0529c.e();
-                    C0528b c0528b2 = C0528b.getInstance();
-                    e2.x(c0528b2.e(un2.TICKLET_DETAIL_PAGE, "nft", "showoff_" + this.d, new HashMap(), Boolean.TRUE));
+                    c e2 = c.e();
+                    b bVar2 = b.getInstance();
+                    e2.x(bVar2.e(un2.TICKLET_DETAIL_PAGE, "nft", "showoff_" + this.d, new HashMap(), Boolean.TRUE));
                     if (this.e == null || this.f == null) {
                         return;
                     }
@@ -94,9 +93,9 @@ public class TickletTicketActionItemView extends RelativeLayout {
                 }
             } else {
                 if ("1".equals(this.a.performOpType)) {
-                    C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, pp2.PROJECT_EVALUATE, "evaluatebtn", un2.k().u(this.b, this.c), Boolean.TRUE));
+                    c.e().x(b.getInstance().e(un2.TICKLET_DETAIL_PAGE, pp2.PROJECT_EVALUATE, "evaluatebtn", un2.k().u(this.b, this.c), Boolean.TRUE));
                 } else if ("2".equals(this.a.performOpType)) {
-                    C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, pp2.PROJECT_EVALUATE, "viewevaluation", un2.k().u(this.b, this.c), Boolean.TRUE));
+                    c.e().x(b.getInstance().e(un2.TICKLET_DETAIL_PAGE, pp2.PROJECT_EVALUATE, "viewevaluation", un2.k().u(this.b, this.c), Boolean.TRUE));
                 }
                 PerformOpModule.ExtAttr extAttr3 = this.a.extAttr;
                 if (extAttr3 == null || TextUtils.isEmpty(extAttr3.commentURI)) {
@@ -202,7 +201,7 @@ public class TickletTicketActionItemView extends RelativeLayout {
         py2.E(this.iconArrow, false);
         this.ivIcon.setImageResource(i);
         py2.E(this.rlSendNum, false);
-        setOnClickListener(new View$OnClickListenerC2117a(performOpModule, str, str2, i3, ticketNftExtAttr, activity, z));
+        setOnClickListener(new a(performOpModule, str, str2, i3, ticketNftExtAttr, activity, z));
     }
 
     public void update(String str, int i, int i2, boolean z, String str2, View.OnClickListener onClickListener) {

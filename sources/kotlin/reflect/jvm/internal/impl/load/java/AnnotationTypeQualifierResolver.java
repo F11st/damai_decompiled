@@ -6,9 +6,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8220r;
+import kotlin.collections.m;
+import kotlin.collections.n;
+import kotlin.collections.r;
 import kotlin.jvm.functions.Function2;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassKind;
@@ -42,14 +42,13 @@ public final class AnnotationTypeQualifierResolver {
     private final MemoizedFunctionToNullable<ClassDescriptor, AnnotationDescriptor> b;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.AnnotationTypeQualifierResolver$a */
     /* loaded from: classes3.dex */
-    public static final class C8326a {
+    public static final class a {
         @NotNull
         private final AnnotationDescriptor a;
         private final int b;
 
-        public C8326a(@NotNull AnnotationDescriptor annotationDescriptor, int i) {
+        public a(@NotNull AnnotationDescriptor annotationDescriptor, int i) {
             b41.i(annotationDescriptor, "typeQualifier");
             this.a = annotationDescriptor;
             this.b = i;
@@ -112,11 +111,11 @@ public final class AnnotationTypeQualifierResolver {
         if (fnVar instanceof y7) {
             ArrayList arrayList = new ArrayList();
             for (fn<?> fnVar2 : ((y7) fnVar).b()) {
-                C8220r.v(arrayList, d(fnVar2, function2));
+                r.v(arrayList, d(fnVar2, function2));
             }
             return arrayList;
         } else if (!(fnVar instanceof xe0)) {
-            g = C8214m.g();
+            g = m.g();
             return g;
         } else {
             AnnotationQualifierApplicabilityType[] values = AnnotationQualifierApplicabilityType.values();
@@ -133,7 +132,7 @@ public final class AnnotationTypeQualifierResolver {
                 }
                 i++;
             }
-            k = C8214m.k(annotationQualifierApplicabilityType);
+            k = m.k(annotationQualifierApplicabilityType);
             return k;
         }
     }
@@ -218,7 +217,7 @@ public final class AnnotationTypeQualifierResolver {
     public final List<String> p(String str) {
         int q;
         Set<KotlinTarget> b = JavaAnnotationTargetMapper.INSTANCE.b(str);
-        q = C8215n.q(b, 10);
+        q = n.q(b, 10);
         ArrayList arrayList = new ArrayList(q);
         for (KotlinTarget kotlinTarget : b) {
             arrayList.add(kotlinTarget.name());
@@ -227,7 +226,7 @@ public final class AnnotationTypeQualifierResolver {
     }
 
     @Nullable
-    public final C8326a h(@NotNull AnnotationDescriptor annotationDescriptor) {
+    public final a h(@NotNull AnnotationDescriptor annotationDescriptor) {
         b41.i(annotationDescriptor, "annotationDescriptor");
         ClassDescriptor f = DescriptorUtilsKt.f(annotationDescriptor);
         if (f == null) {
@@ -243,13 +242,13 @@ public final class AnnotationTypeQualifierResolver {
         Map<ni1, fn<?>> allValueArguments = findAnnotation.getAllValueArguments();
         ArrayList<AnnotationQualifierApplicabilityType> arrayList = new ArrayList();
         for (Map.Entry<ni1, fn<?>> entry : allValueArguments.entrySet()) {
-            C8220r.v(arrayList, f(entry.getValue()));
+            r.v(arrayList, f(entry.getValue()));
         }
         int i = 0;
         for (AnnotationQualifierApplicabilityType annotationQualifierApplicabilityType : arrayList) {
             i |= 1 << annotationQualifierApplicabilityType.ordinal();
         }
-        return new C8326a(annotationDescriptor, i);
+        return new a(annotationDescriptor, i);
     }
 
     @NotNull
@@ -303,7 +302,7 @@ public final class AnnotationTypeQualifierResolver {
     }
 
     @Nullable
-    public final C8326a n(@NotNull AnnotationDescriptor annotationDescriptor) {
+    public final a n(@NotNull AnnotationDescriptor annotationDescriptor) {
         AnnotationDescriptor annotationDescriptor2;
         boolean z;
         List<AnnotationQualifierApplicabilityType> g;
@@ -329,9 +328,9 @@ public final class AnnotationTypeQualifierResolver {
             if (b41.d(entry.getKey(), o61.DEFAULT_ANNOTATION_MEMBER_NAME)) {
                 g = e(value);
             } else {
-                g = C8214m.g();
+                g = m.g();
             }
-            C8220r.v(arrayList, g);
+            r.v(arrayList, g);
         }
         int i = 0;
         for (AnnotationQualifierApplicabilityType annotationQualifierApplicabilityType : arrayList) {
@@ -359,6 +358,6 @@ public final class AnnotationTypeQualifierResolver {
         if (annotationDescriptor3 == null) {
             return null;
         }
-        return new C8326a(annotationDescriptor3, i);
+        return new a(annotationDescriptor3, i);
     }
 }

@@ -12,24 +12,23 @@ public final class n63 {
     private static Object h = new Object();
     private Object e = new Object();
     private Object f = new Object();
-    private LongSparseArray<C9461a> a = new LongSparseArray<>();
-    private LongSparseArray<C9461a> b = new LongSparseArray<>();
-    private LongSparseArray<C9461a> c = new LongSparseArray<>();
-    private LongSparseArray<C9461a> d = new LongSparseArray<>();
+    private LongSparseArray<a> a = new LongSparseArray<>();
+    private LongSparseArray<a> b = new LongSparseArray<>();
+    private LongSparseArray<a> c = new LongSparseArray<>();
+    private LongSparseArray<a> d = new LongSparseArray<>();
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.n63$a */
     /* loaded from: classes10.dex */
-    public static class C9461a {
+    public static class a {
         int a;
         long b;
         boolean c;
 
-        private C9461a() {
+        private a() {
         }
 
-        /* synthetic */ C9461a(byte b) {
+        /* synthetic */ a(byte b) {
             this();
         }
     }
@@ -48,48 +47,48 @@ public final class n63 {
         return g;
     }
 
-    private static short c(LongSparseArray<C9461a> longSparseArray, long j) {
+    private static short c(LongSparseArray<a> longSparseArray, long j) {
         synchronized (longSparseArray) {
-            C9461a c9461a = longSparseArray.get(j);
-            if (c9461a == null) {
+            a aVar = longSparseArray.get(j);
+            if (aVar == null) {
                 return (short) 0;
             }
-            short max = (short) Math.max(1L, Math.min(32767L, (f() - c9461a.b) / 1000));
-            if (!c9461a.c) {
+            short max = (short) Math.max(1L, Math.min(32767L, (f() - aVar.b) / 1000));
+            if (!aVar.c) {
                 max = (short) (-max);
             }
             return max;
         }
     }
 
-    private static void e(List<com.loc.dl> list, LongSparseArray<C9461a> longSparseArray, LongSparseArray<C9461a> longSparseArray2) {
+    private static void e(List<com.loc.dl> list, LongSparseArray<a> longSparseArray, LongSparseArray<a> longSparseArray2) {
         long f = f();
         int size = longSparseArray.size();
         Iterator<com.loc.dl> it = list.iterator();
         if (size == 0) {
             while (it.hasNext()) {
                 com.loc.dl next = it.next();
-                C9461a c9461a = new C9461a((byte) 0);
-                c9461a.a = next.b();
-                c9461a.b = f;
-                c9461a.c = false;
-                longSparseArray2.put(next.a(), c9461a);
+                a aVar = new a((byte) 0);
+                aVar.a = next.b();
+                aVar.b = f;
+                aVar.c = false;
+                longSparseArray2.put(next.a(), aVar);
             }
             return;
         }
         while (it.hasNext()) {
             com.loc.dl next2 = it.next();
-            long a = next2.a();
-            C9461a c9461a2 = longSparseArray.get(a);
-            if (c9461a2 == null) {
-                c9461a2 = new C9461a((byte) 0);
-            } else if (c9461a2.a == next2.b()) {
-                longSparseArray2.put(a, c9461a2);
+            long a2 = next2.a();
+            a aVar2 = longSparseArray.get(a2);
+            if (aVar2 == null) {
+                aVar2 = new a((byte) 0);
+            } else if (aVar2.a == next2.b()) {
+                longSparseArray2.put(a2, aVar2);
             }
-            c9461a2.a = next2.b();
-            c9461a2.b = f;
-            c9461a2.c = true;
-            longSparseArray2.put(a, c9461a2);
+            aVar2.a = next2.b();
+            aVar2.b = f;
+            aVar2.c = true;
+            longSparseArray2.put(a2, aVar2);
         }
     }
 
@@ -109,7 +108,7 @@ public final class n63 {
         }
         synchronized (this.e) {
             e(list, this.a, this.b);
-            LongSparseArray<C9461a> longSparseArray = this.a;
+            LongSparseArray<a> longSparseArray = this.a;
             this.a = this.b;
             this.b = longSparseArray;
             longSparseArray.clear();
@@ -128,7 +127,7 @@ public final class n63 {
         }
         synchronized (this.f) {
             e(list, this.c, this.d);
-            LongSparseArray<C9461a> longSparseArray = this.c;
+            LongSparseArray<a> longSparseArray = this.c;
             this.c = this.d;
             this.d = longSparseArray;
             longSparseArray.clear();

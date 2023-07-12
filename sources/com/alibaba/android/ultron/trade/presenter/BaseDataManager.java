@@ -1,7 +1,6 @@
 package com.alibaba.android.ultron.trade.presenter;
 
 import android.content.Context;
-import com.alibaba.android.ultron.trade.data.request.AbstractC3246a;
 import com.alibaba.android.ultron.trade.data.request.DataInfo;
 import com.alibaba.android.ultron.trade.data.request.PageInfo;
 import com.taobao.android.ultron.common.model.IDMComponent;
@@ -18,10 +17,10 @@ import tb.vt2;
 /* loaded from: classes15.dex */
 public abstract class BaseDataManager {
     private static final String TAG = "BaseDataManager";
-    protected AbstractC3246a mAdjustRequester;
-    protected AbstractC3246a mBuildRequester;
+    protected com.alibaba.android.ultron.trade.data.request.a mAdjustRequester;
+    protected com.alibaba.android.ultron.trade.data.request.a mBuildRequester;
     protected Context mContext;
-    protected AbstractC3246a mCreateRequester;
+    protected com.alibaba.android.ultron.trade.data.request.a mCreateRequester;
     protected IDMContext mDataContext;
     protected lp2 mDataSource;
     protected IPresenter mPresenter;
@@ -54,7 +53,7 @@ public abstract class BaseDataManager {
         return this.mAdjustPageListeners;
     }
 
-    public AbstractC3246a getAdjustRequester() {
+    public com.alibaba.android.ultron.trade.data.request.a getAdjustRequester() {
         return this.mAdjustRequester;
     }
 
@@ -62,11 +61,11 @@ public abstract class BaseDataManager {
         return this.mPageListeners;
     }
 
-    public AbstractC3246a getBuildRequester() {
+    public com.alibaba.android.ultron.trade.data.request.a getBuildRequester() {
         return this.mBuildRequester;
     }
 
-    public AbstractC3246a getCreateRequester() {
+    public com.alibaba.android.ultron.trade.data.request.a getCreateRequester() {
         return this.mCreateRequester;
     }
 

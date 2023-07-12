@@ -33,7 +33,7 @@ import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.joor.C8883a;
+import org.joor.a;
 import tb.b41;
 import tb.wt2;
 
@@ -175,7 +175,7 @@ public abstract class GenericActivity extends AppCompatActivity {
                 ArrayList arrayList = new ArrayList();
                 for (DelegateConfigure.DelegatesBean delegatesBean : delegateConfigure.getDelegates()) {
                     if (delegatesBean.isEnable()) {
-                        Object f = C8883a.j(delegatesBean.getClassX()).b().f();
+                        Object f = a.j(delegatesBean.getClassX()).b().f();
                         IDelegate iDelegate = f instanceof IDelegate ? (IDelegate) f : null;
                         if (iDelegate != null) {
                             arrayList.add(iDelegate);
@@ -520,7 +520,7 @@ public abstract class GenericActivity extends AppCompatActivity {
         }
         viewPager.setPageMargin((int) viewPager.getResources().getDimension(R.dimen.page_margin));
         GradientDrawable gradientDrawable = new GradientDrawable();
-        gradientDrawable.setColor(viewPager.getResources().getColor(R.C7801color.page_margin_background));
+        gradientDrawable.setColor(viewPager.getResources().getColor(R.color.page_margin_background));
         viewPager.setPageMarginDrawable(gradientDrawable);
         BaseViewPagerAdapter initViewPageAdapter = initViewPageAdapter(getSupportFragmentManager());
         if (initViewPageAdapter == null) {

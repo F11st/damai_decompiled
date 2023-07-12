@@ -4,9 +4,9 @@ import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.m;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.resolve.descriptorUtil.DescriptorUtilsKt;
 import kotlin.reflect.jvm.internal.impl.types.TypeConstructor;
@@ -47,16 +47,14 @@ public final class TypeParameterUtilsKt {
         return new tt1(classifierDescriptorWithTypeParameters, subList, b(z71Var, containingDeclaration instanceof ClassifierDescriptorWithTypeParameters ? (ClassifierDescriptorWithTypeParameters) containingDeclaration : null, size));
     }
 
-    private static final C8300a c(TypeParameterDescriptor typeParameterDescriptor, DeclarationDescriptor declarationDescriptor, int i) {
-        return new C8300a(typeParameterDescriptor, declarationDescriptor, i);
+    private static final a c(TypeParameterDescriptor typeParameterDescriptor, DeclarationDescriptor declarationDescriptor, int i) {
+        return new a(typeParameterDescriptor, declarationDescriptor, i);
     }
 
     @NotNull
     public static final List<TypeParameterDescriptor> d(@NotNull ClassifierDescriptorWithTypeParameters classifierDescriptorWithTypeParameters) {
         Sequence z;
         Sequence o;
-        Sequence t;
-        List B;
         List<TypeParameterDescriptor> list;
         DeclarationDescriptor declarationDescriptor;
         List<TypeParameterDescriptor> m0;
@@ -83,7 +81,7 @@ public final class TypeParameterUtilsKt {
                     return Boolean.valueOf(!(declarationDescriptor2 instanceof ConstructorDescriptor));
                 }
             });
-            t = SequencesKt___SequencesKt.t(o, new Function1<DeclarationDescriptor, Sequence<? extends TypeParameterDescriptor>>() { // from class: kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterUtilsKt$computeConstructorTypeParameters$parametersFromContainingFunctions$3
+            List B = SequencesKt___SequencesKt.B(SequencesKt___SequencesKt.t(o, new Function1<DeclarationDescriptor, Sequence<? extends TypeParameterDescriptor>>() { // from class: kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterUtilsKt$computeConstructorTypeParameters$parametersFromContainingFunctions$3
                 @Override // kotlin.jvm.functions.Function1
                 @NotNull
                 public final Sequence<TypeParameterDescriptor> invoke(@NotNull DeclarationDescriptor declarationDescriptor2) {
@@ -94,8 +92,7 @@ public final class TypeParameterUtilsKt {
                     I = CollectionsKt___CollectionsKt.I(typeParameters);
                     return I;
                 }
-            });
-            B = SequencesKt___SequencesKt.B(t);
+            }));
             Iterator<DeclarationDescriptor> it = DescriptorUtilsKt.m(classifierDescriptorWithTypeParameters).iterator();
             while (true) {
                 list = null;
@@ -113,7 +110,7 @@ public final class TypeParameterUtilsKt {
                 list = typeConstructor.getParameters();
             }
             if (list == null) {
-                list = C8214m.g();
+                list = m.g();
             }
             if (B.isEmpty() && list.isEmpty()) {
                 List<TypeParameterDescriptor> declaredTypeParameters2 = classifierDescriptorWithTypeParameters.getDeclaredTypeParameters();
@@ -121,7 +118,7 @@ public final class TypeParameterUtilsKt {
                 return declaredTypeParameters2;
             }
             m0 = CollectionsKt___CollectionsKt.m0(B, list);
-            q = C8215n.q(m0, 10);
+            q = n.q(m0, 10);
             ArrayList arrayList = new ArrayList(q);
             for (TypeParameterDescriptor typeParameterDescriptor : m0) {
                 b41.h(typeParameterDescriptor, AdvanceSetting.NETWORK_TYPE);

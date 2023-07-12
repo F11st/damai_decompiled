@@ -14,16 +14,15 @@ import tb.hl2;
 /* loaded from: classes15.dex */
 public class SqliteHelper extends SQLiteOpenHelper {
     private static boolean e;
-    private static DatabaseErrorHandler f = new C3116a();
+    private static DatabaseErrorHandler f = new a();
     private AtomicInteger a;
     private SQLiteDatabase b;
     private DelayCloseDbTask c;
     private Future<?> d;
 
-    /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes15.dex */
-    public class DelayCloseDbTask implements Runnable {
+    class DelayCloseDbTask implements Runnable {
         DelayCloseDbTask() {
         }
 
@@ -39,10 +38,9 @@ public class SqliteHelper extends SQLiteOpenHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.analytics.core.db.SqliteHelper$a */
     /* loaded from: classes15.dex */
-    static class C3116a implements DatabaseErrorHandler {
-        C3116a() {
+    static class a implements DatabaseErrorHandler {
+        a() {
         }
 
         @Override // android.database.DatabaseErrorHandler

@@ -9,7 +9,7 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.huawei.hms.push.constant.RemoteMessageConst;
 import com.youku.live.messagechannel.connection.MCConnectionFlag;
-import io.reactivex.AbstractC8149d;
+import io.reactivex.d;
 import io.reactivex.functions.Function;
 import io.reactivex.functions.Predicate;
 import java.util.ArrayList;
@@ -51,7 +51,7 @@ public class MCMessage {
             final String string = jSONObject.getString(RemoteMessageConst.Notification.CHANNEL_ID);
             JSONArray jSONArray = jSONObject.getJSONArray("datas");
             if (l != null && !TextUtils.isEmpty(string) && !jSONArray.isEmpty()) {
-                return (List) AbstractC8149d.fromIterable(jSONArray).map(new Function<Object, MCMessage>() { // from class: com.youku.live.messagechannel.message.MCMessage.2
+                return (List) d.fromIterable(jSONArray).map(new Function<Object, MCMessage>() { // from class: com.youku.live.messagechannel.message.MCMessage.2
                     private static transient /* synthetic */ IpChange $ipChange;
 
                     /* JADX WARN: Can't rename method to resolve collision */

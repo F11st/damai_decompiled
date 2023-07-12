@@ -8,16 +8,15 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public final class ei extends ci implements ClosedRange<Character> {
     @NotNull
-    public static final C9100a Companion = new C9100a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ei$a */
     /* loaded from: classes3.dex */
-    public static final class C9100a {
-        private C9100a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9100a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

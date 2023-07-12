@@ -9,7 +9,6 @@ import kotlin.Metadata;
 import kotlin.PublishedApi;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.CoroutineStackFrame;
 import kotlin.jvm.JvmName;
 import kotlin.jvm.functions.Function0;
@@ -61,7 +60,7 @@ public class CancellableContinuationImpl<T> extends DispatchedTask<T> implements
         }
         this.context = continuation.getContext();
         this._decision = 0;
-        this._state = C8622b.INSTANCE;
+        this._state = b.INSTANCE;
         this._parentHandle = null;
     }
 
@@ -137,7 +136,7 @@ public class CancellableContinuationImpl<T> extends DispatchedTask<T> implements
     }
 
     private final ag makeCancelHandler(Function1<? super Throwable, wt2> function1) {
-        return function1 instanceof ag ? (ag) function1 : new C8702p(function1);
+        return function1 instanceof ag ? (ag) function1 : new p(function1);
     }
 
     private final void multipleHandlersError(Function1<? super Throwable, wt2> function1, Object obj) {
@@ -199,7 +198,7 @@ public class CancellableContinuationImpl<T> extends DispatchedTask<T> implements
                 if (!(notCompleted instanceof ag)) {
                     notCompleted = null;
                 }
-                return new C8692i(obj, (ag) notCompleted, function1, obj2, null, 16, null);
+                return new i(obj, (ag) notCompleted, function1, obj2, null, 16, null);
             }
             return obj;
         } else {
@@ -216,7 +215,7 @@ public class CancellableContinuationImpl<T> extends DispatchedTask<T> implements
         if (checkCompleted() || getParentHandle() != null || (job = (Job) this.delegate.getContext().get(Job.Key)) == null) {
             return;
         }
-        DisposableHandle e = Job.C8613a.e(job, true, false, new li(job, this), 2, null);
+        DisposableHandle e = Job.a.e(job, true, false, new li(job, this), 2, null);
         setParentHandle(e);
         if (!isCompleted() || isReusable()) {
             return;
@@ -230,12 +229,12 @@ public class CancellableContinuationImpl<T> extends DispatchedTask<T> implements
         do {
             obj3 = this._state;
             if (obj3 instanceof NotCompleted) {
-            } else if (!(obj3 instanceof C8692i) || obj2 == null) {
+            } else if (!(obj3 instanceof i) || obj2 == null) {
                 return null;
             } else {
-                C8692i c8692i = (C8692i) obj3;
-                if (c8692i.d == obj2) {
-                    if (!k40.a() || b41.d(c8692i.a, obj)) {
+                i iVar = (i) obj3;
+                if (iVar.d == obj2) {
+                    if (!k40.a() || b41.d(iVar.a, obj)) {
                         return cg.RESUME_TOKEN;
                     }
                     throw new AssertionError();
@@ -309,17 +308,17 @@ public class CancellableContinuationImpl<T> extends DispatchedTask<T> implements
                 if (obj2 instanceof am) {
                     return;
                 }
-                if (obj2 instanceof C8692i) {
-                    C8692i c8692i = (C8692i) obj2;
-                    if (!c8692i.c()) {
-                        if (_state$FU.compareAndSet(this, obj2, C8692i.b(c8692i, null, null, null, null, th, 15, null))) {
-                            c8692i.d(this, th);
+                if (obj2 instanceof i) {
+                    i iVar = (i) obj2;
+                    if (!iVar.c()) {
+                        if (_state$FU.compareAndSet(this, obj2, i.b(iVar, null, null, null, null, th, 15, null))) {
+                            iVar.d(this, th);
                             return;
                         }
                     } else {
                         throw new IllegalStateException("Must be called at most once".toString());
                     }
-                } else if (_state$FU.compareAndSet(this, obj2, new C8692i(obj2, null, null, null, th, 14, null))) {
+                } else if (_state$FU.compareAndSet(this, obj2, new i(obj2, null, null, null, th, 14, null))) {
                     return;
                 }
             } else {
@@ -391,7 +390,7 @@ public class CancellableContinuationImpl<T> extends DispatchedTask<T> implements
         Object d;
         setupCancellation();
         if (trySuspend()) {
-            d = C8234b.d();
+            d = kotlin.coroutines.intrinsics.b.d();
             return d;
         }
         Object state$kotlinx_coroutines_core = getState$kotlinx_coroutines_core();
@@ -427,7 +426,7 @@ public class CancellableContinuationImpl<T> extends DispatchedTask<T> implements
     /* JADX WARN: Multi-variable type inference failed */
     @Override // kotlinx.coroutines.DispatchedTask
     public <T> T getSuccessfulResult$kotlinx_coroutines_core(@Nullable Object obj) {
-        return obj instanceof C8692i ? (T) ((C8692i) obj).a : obj;
+        return obj instanceof i ? (T) ((i) obj).a : obj;
     }
 
     @Override // kotlinx.coroutines.CancellableContinuation
@@ -440,7 +439,7 @@ public class CancellableContinuationImpl<T> extends DispatchedTask<T> implements
         ag makeCancelHandler = makeCancelHandler(function1);
         while (true) {
             Object obj = this._state;
-            if (obj instanceof C8622b) {
+            if (obj instanceof b) {
                 if (_state$FU.compareAndSet(this, obj, makeCancelHandler)) {
                     return;
                 }
@@ -461,26 +460,26 @@ public class CancellableContinuationImpl<T> extends DispatchedTask<T> implements
                         return;
                     }
                     return;
-                } else if (obj instanceof C8692i) {
-                    C8692i c8692i = (C8692i) obj;
-                    if (c8692i.b != null) {
+                } else if (obj instanceof i) {
+                    i iVar = (i) obj;
+                    if (iVar.b != null) {
                         multipleHandlersError(function1, obj);
                     }
                     if (makeCancelHandler instanceof zb) {
                         return;
                     }
-                    if (c8692i.c()) {
-                        callCancelHandler(function1, c8692i.e);
+                    if (iVar.c()) {
+                        callCancelHandler(function1, iVar.e);
                         return;
                     } else {
-                        if (_state$FU.compareAndSet(this, obj, C8692i.b(c8692i, null, makeCancelHandler, null, null, null, 29, null))) {
+                        if (_state$FU.compareAndSet(this, obj, i.b(iVar, null, makeCancelHandler, null, null, null, 29, null))) {
                             return;
                         }
                     }
                 } else if (makeCancelHandler instanceof zb) {
                     return;
                 } else {
-                    if (_state$FU.compareAndSet(this, obj, new C8692i(obj, makeCancelHandler, null, null, null, 28, null))) {
+                    if (_state$FU.compareAndSet(this, obj, new i(obj, makeCancelHandler, null, null, null, 28, null))) {
                         return;
                     }
                 }
@@ -530,12 +529,12 @@ public class CancellableContinuationImpl<T> extends DispatchedTask<T> implements
         }
         Object obj = this._state;
         if (!k40.a() || (!(obj instanceof NotCompleted))) {
-            if ((obj instanceof C8692i) && ((C8692i) obj).d != null) {
+            if ((obj instanceof i) && ((i) obj).d != null) {
                 detachChild$kotlinx_coroutines_core();
                 return false;
             }
             this._decision = 0;
-            this._state = C8622b.INSTANCE;
+            this._state = b.INSTANCE;
             return true;
         }
         throw new AssertionError();

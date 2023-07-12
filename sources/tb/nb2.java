@@ -19,14 +19,13 @@ public class nb2 {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.nb2$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9469a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context a;
         final /* synthetic */ String b;
 
-        View$OnClickListenerC9469a(Context context, String str) {
+        a(Context context, String str) {
             this.a = context;
             this.b = str;
         }
@@ -84,7 +83,7 @@ public class nb2 {
         ShareExtendView shareExtendView = new ShareExtendView(context);
         shareExtendView.setExtendViewImage(R$drawable.share_board_copy_link_icon);
         shareExtendView.setExtendViewText("复制链接");
-        shareExtendView.setOnClickListener(new View$OnClickListenerC9469a(context, str));
+        shareExtendView.setOnClickListener(new a(context, str));
         return shareExtendView;
     }
 

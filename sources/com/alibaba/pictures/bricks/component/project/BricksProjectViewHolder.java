@@ -87,13 +87,12 @@ public class BricksProjectViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.project.BricksProjectViewHolder$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC3483a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View.OnClickListener a;
 
-        View$OnClickListenerC3483a(View.OnClickListener onClickListener) {
+        a(View.OnClickListener onClickListener) {
             this.a = onClickListener;
         }
 
@@ -120,12 +119,11 @@ public class BricksProjectViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.project.BricksProjectViewHolder$b */
     /* loaded from: classes7.dex */
-    public class View$OnAttachStateChangeListenerC3484b implements View.OnAttachStateChangeListener {
+    public class b implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC3484b() {
+        b() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -152,12 +150,11 @@ public class BricksProjectViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.project.BricksProjectViewHolder$c */
     /* loaded from: classes7.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC3485c implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class c implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC3485c() {
+        c() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -323,7 +320,7 @@ public class BricksProjectViewHolder extends RecyclerView.ViewHolder {
         this.x = view.findViewById(R$id.ll_search_bottom_div);
         TimerView timerView = (TimerView) view.findViewById(R$id.ll_timer);
         this.m = timerView;
-        timerView.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC3484b());
+        timerView.addOnAttachStateChangeListener(new b());
         this.A = (ViewGroup) view.findViewById(R$id.ll_price);
     }
 
@@ -456,7 +453,7 @@ public class BricksProjectViewHolder extends RecyclerView.ViewHolder {
             if (this.f.getVisibility() != 0 || this.f.getChildCount() <= 0) {
                 return;
             }
-            this.f.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC3485c());
+            this.f.getViewTreeObserver().addOnGlobalLayoutListener(new c());
         }
     }
 
@@ -787,7 +784,7 @@ public class BricksProjectViewHolder extends RecyclerView.ViewHolder {
         this.z = onClickListener;
         View view = this.itemView;
         if (view != null) {
-            view.setOnClickListener(new View$OnClickListenerC3483a(onClickListener));
+            view.setOnClickListener(new a(onClickListener));
         }
     }
 

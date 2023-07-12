@@ -171,7 +171,7 @@ public class Snackbar extends BaseTransientBottomBar<Snackbar> {
             if (context == null) {
                 context = findSuitableParent.getContext();
             }
-            SnackbarContentLayout snackbarContentLayout = (SnackbarContentLayout) LayoutInflater.from(context).inflate(hasSnackbarContentStyleAttrs(context) ? R.C4818layout.mtrl_layout_snackbar_include : R.C4818layout.design_layout_snackbar_include, findSuitableParent, false);
+            SnackbarContentLayout snackbarContentLayout = (SnackbarContentLayout) LayoutInflater.from(context).inflate(hasSnackbarContentStyleAttrs(context) ? R.layout.mtrl_layout_snackbar_include : R.layout.design_layout_snackbar_include, findSuitableParent, false);
             Snackbar snackbar = new Snackbar(context, findSuitableParent, snackbarContentLayout, snackbarContentLayout);
             snackbar.setText(charSequence);
             snackbar.setDuration(i);

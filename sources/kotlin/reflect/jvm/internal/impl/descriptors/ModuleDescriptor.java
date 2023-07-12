@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.descriptors;
 import java.util.Collection;
 import java.util.List;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
+import kotlin.reflect.jvm.internal.impl.builtins.b;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -16,9 +16,8 @@ import tb.zg1;
 public interface ModuleDescriptor extends DeclarationDescriptor {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor$a */
     /* loaded from: classes3.dex */
-    public static final class C8292a {
+    public static final class a {
         public static <R, D> R a(@NotNull ModuleDescriptor moduleDescriptor, @NotNull DeclarationDescriptorVisitor<R, D> declarationDescriptorVisitor, D d) {
             b41.i(moduleDescriptor, "this");
             b41.i(declarationDescriptorVisitor, "visitor");
@@ -33,7 +32,7 @@ public interface ModuleDescriptor extends DeclarationDescriptor {
     }
 
     @NotNull
-    AbstractC8271b getBuiltIns();
+    b getBuiltIns();
 
     @Nullable
     <T> T getCapability(@NotNull zg1<T> zg1Var);

@@ -9,8 +9,8 @@ import com.taobao.update.adapter.UIConfirm;
 import com.taobao.update.adapter.UIToast;
 import com.taobao.update.adapter.UserAction;
 import org.android.agoo.common.AgooConstants;
-import tb.C9444mm;
 import tb.j3;
+import tb.mm;
 import tb.nm2;
 import tb.qr2;
 import tb.sr2;
@@ -149,55 +149,55 @@ public class UpdateRuntime {
         }
     }
 
-    public static void init(Application application, C9444mm c9444mm) {
+    public static void init(Application application, mm mmVar) {
         a = application;
-        sGroup = c9444mm.group;
-        sTTid = c9444mm.ttid;
-        if (!TextUtils.isEmpty(c9444mm.appName)) {
-            sAppName = c9444mm.appName;
+        sGroup = mmVar.group;
+        sTTid = mmVar.ttid;
+        if (!TextUtils.isEmpty(mmVar.appName)) {
+            sAppName = mmVar.appName;
         } else {
             sAppName = application.getApplicationInfo().loadLabel(application.getPackageManager()).toString();
         }
         a.registerActivityLifecycleCallbacks(new j3());
         qr2.sClickbg2Exit = false;
         Class[] clsArr = new Class[1];
-        Class<vr2> cls = c9444mm.uiToastClass;
+        Class<vr2> cls = mmVar.uiToastClass;
         if (cls == null) {
             cls = vr2.class;
         }
         clsArr[0] = cls;
         wb.registerClass(clsArr);
-        Class<ur2> cls2 = c9444mm.uiSysNotifyClass;
+        Class<ur2> cls2 = mmVar.uiSysNotifyClass;
         if (cls2 == null) {
             cls2 = ur2.class;
         }
         wb.registerClass("sysnotify", cls2);
-        Class<sr2> cls3 = c9444mm.uiNotifyClass;
+        Class<sr2> cls3 = mmVar.uiNotifyClass;
         if (cls3 == null) {
             cls3 = sr2.class;
         }
         wb.registerClass(AgooConstants.MESSAGE_NOTIFICATION, cls3);
         Class[] clsArr2 = new Class[1];
-        Class<qr2> cls4 = c9444mm.uiConfirmClass;
+        Class<qr2> cls4 = mmVar.uiConfirmClass;
         if (cls4 == null) {
             cls4 = qr2.class;
         }
         clsArr2[0] = cls4;
         wb.registerClass(clsArr2);
-        Object obj = c9444mm.logImpl;
+        Object obj = mmVar.logImpl;
         if (obj == null) {
             obj = new va1();
         }
         wb.registerInstance(obj);
-        Object obj2 = c9444mm.threadExecutorImpl;
+        Object obj2 = mmVar.threadExecutorImpl;
         if (obj2 == null) {
             obj2 = new nm2();
         }
         wb.registerInstance(obj2);
-        popDialogBeforeInstall = c9444mm.popDialogBeforeInstall;
-        forceInstallAfaterDownload = c9444mm.forceInstallAfaterDownload;
-        installBundleAfterDownload = c9444mm.installBundleAfterDownload;
-        bundleUpdateMinDisk = c9444mm.bundleUpdateMinDisk;
+        popDialogBeforeInstall = mmVar.popDialogBeforeInstall;
+        forceInstallAfaterDownload = mmVar.forceInstallAfaterDownload;
+        installBundleAfterDownload = mmVar.installBundleAfterDownload;
+        bundleUpdateMinDisk = mmVar.bundleUpdateMinDisk;
         sLogoResourceId = a.getApplicationInfo().icon;
     }
 }

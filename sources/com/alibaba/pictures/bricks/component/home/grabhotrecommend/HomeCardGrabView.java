@@ -73,14 +73,13 @@ public class HomeCardGrabView extends AbsView<GenericItem<ItemValue>, HomeGrabHo
     private final TextView wanneSeetitle;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.grabhotrecommend.HomeCardGrabView$a */
     /* loaded from: classes7.dex */
-    public static final class View$OnAttachStateChangeListenerC3475a implements View.OnAttachStateChangeListener {
+    public static final class a implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ long a;
         final /* synthetic */ DMCountDownView b;
 
-        View$OnAttachStateChangeListenerC3475a(long j, DMCountDownView dMCountDownView) {
+        a(long j, DMCountDownView dMCountDownView) {
             this.a = j;
             this.b = dMCountDownView;
         }
@@ -279,7 +278,7 @@ public class HomeCardGrabView extends AbsView<GenericItem<ItemValue>, HomeGrabHo
             int i2 = this.gap;
             minuteTvSize.setMinuteColonTvPadding(i2, 0, i2, i2 * 2).setMinuteColonTvTextColor(this.textColor).setMinuteColonTvGravity(countDownViewGravity).setMinuteColonTvTextSize(s60Var.h(context, this.pointSize)).setSecondTvBackgroundColorWidthRadius(0, this.textBgCornerRadius).setSecondTvTextColor(this.textColor).setSecondTvGravity(countDownViewGravity).setSecondTvPadding(this.textMarginLeft, this.textMarginTop, this.textMarginRight, this.textMarginBottom).setSecondTvTextSize(s60Var.h(context, this.pointSize)).setSecondTvSize(b2, b3).setTimeTvFontName(this.fontName).startCountDown();
             if (viewGroup != null) {
-                viewGroup.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC3475a(b, dMCountDownView));
+                viewGroup.addOnAttachStateChangeListener(new a(b, dMCountDownView));
                 return true;
             }
             return true;

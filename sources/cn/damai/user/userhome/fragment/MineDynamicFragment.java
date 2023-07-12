@@ -15,7 +15,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.wannasee.adapter.IPublishView;
 import cn.damai.commonbusiness.wannasee.adapter.NoteFeedAdapter;
@@ -96,15 +95,14 @@ public class MineDynamicFragment extends Fragment implements IPublishView, PtrCh
     private boolean isViewCreated = false;
     private boolean isFirstPageEmpty = false;
     private gl1 mDynamicUt = new gl1();
-    private qx1 mHandler = new C2718f(this);
+    private qx1 mHandler = new f(this);
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userhome.fragment.MineDynamicFragment$a */
     /* loaded from: classes9.dex */
-    public class C2713a extends xx1 {
+    public class a extends xx1 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2713a(Activity activity, int i) {
+        a(Activity activity, int i) {
             super(activity, i);
         }
 
@@ -122,12 +120,11 @@ public class MineDynamicFragment extends Fragment implements IPublishView, PtrCh
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userhome.fragment.MineDynamicFragment$b */
     /* loaded from: classes9.dex */
-    public class C2714b extends ac {
+    public class b extends ac {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2714b(Activity activity) {
+        b(Activity activity) {
             super(activity);
         }
 
@@ -140,7 +137,7 @@ public class MineDynamicFragment extends Fragment implements IPublishView, PtrCh
                 return;
             }
             super.b(noteBean, i);
-            C0529c.e().x(iv2.j().h(MineDynamicFragment.this.mUtPageName, MineDynamicFragment.this.mCurrentLabelIndex, i, MineDynamicFragment.this.mCurrentLabelName));
+            cn.damai.common.user.c.e().x(iv2.j().h(MineDynamicFragment.this.mUtPageName, MineDynamicFragment.this.mCurrentLabelIndex, i, MineDynamicFragment.this.mCurrentLabelName));
         }
 
         @Override // cn.damai.commonbusiness.discover.viewholder.OnItemClickListener
@@ -152,17 +149,16 @@ public class MineDynamicFragment extends Fragment implements IPublishView, PtrCh
                 return;
             }
             super.c(noteBean, i);
-            C0529c.e().x(iv2.j().g(MineDynamicFragment.this.mUtPageName, MineDynamicFragment.this.mCurrentLabelIndex, i, MineDynamicFragment.this.mCurrentLabelName));
+            cn.damai.common.user.c.e().x(iv2.j().g(MineDynamicFragment.this.mUtPageName, MineDynamicFragment.this.mCurrentLabelIndex, i, MineDynamicFragment.this.mCurrentLabelName));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userhome.fragment.MineDynamicFragment$c */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2715c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2715c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -186,17 +182,16 @@ public class MineDynamicFragment extends Fragment implements IPublishView, PtrCh
             MineDynamicFragment mineDynamicFragment = MineDynamicFragment.this;
             mineDynamicFragment.mCurrentLabelType = jn1.ARRAY_START_STR + userDynamicContentBean.labelType + jn1.ARRAY_END_STR;
             MineDynamicFragment.this.request(null);
-            C0529c.e().x(iv2.j().i(MineDynamicFragment.this.mUtPageName, MineDynamicFragment.this.mCurrentLabelIndex, MineDynamicFragment.this.mCurrentLabelName));
+            cn.damai.common.user.c.e().x(iv2.j().i(MineDynamicFragment.this.mUtPageName, MineDynamicFragment.this.mCurrentLabelIndex, MineDynamicFragment.this.mCurrentLabelName));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userhome.fragment.MineDynamicFragment$d */
     /* loaded from: classes9.dex */
-    public class C2716d implements Action<Object> {
+    public class d implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2716d() {
+        d() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -211,12 +206,11 @@ public class MineDynamicFragment extends Fragment implements IPublishView, PtrCh
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userhome.fragment.MineDynamicFragment$e */
     /* loaded from: classes9.dex */
-    public class C2717e implements OnErrClickListener {
+    public class e implements OnErrClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2717e() {
+        e() {
         }
 
         @Override // cn.damai.commonbusiness.wannasee.listener.OnErrClickListener
@@ -231,12 +225,11 @@ public class MineDynamicFragment extends Fragment implements IPublishView, PtrCh
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userhome.fragment.MineDynamicFragment$f */
     /* loaded from: classes9.dex */
-    public class C2718f extends qx1 {
+    public class f extends qx1 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2718f(MineDynamicFragment mineDynamicFragment) {
+        f(MineDynamicFragment mineDynamicFragment) {
         }
 
         @Override // in.srain.cube.views.ptr.PtrHandler
@@ -249,13 +242,12 @@ public class MineDynamicFragment extends Fragment implements IPublishView, PtrCh
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userhome.fragment.MineDynamicFragment$g */
     /* loaded from: classes9.dex */
-    public class C2719g implements OnBizListener<UserDynamicBean> {
+    public class g implements OnBizListener<UserDynamicBean> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ PtrFrameLayout a;
 
-        C2719g(MineDynamicFragment mineDynamicFragment, PtrFrameLayout ptrFrameLayout) {
+        g(MineDynamicFragment mineDynamicFragment, PtrFrameLayout ptrFrameLayout) {
             this.a = ptrFrameLayout;
         }
 
@@ -393,7 +385,7 @@ public class MineDynamicFragment extends Fragment implements IPublishView, PtrCh
                 MineDynamicFragment.this.mFirstRequest = false;
             }
         };
-        this.mDMMessage.b("comment_publish_success", new C2716d());
+        this.mDMMessage.b("comment_publish_success", new d());
     }
 
     private void initView() {
@@ -423,7 +415,7 @@ public class MineDynamicFragment extends Fragment implements IPublishView, PtrCh
         this.mRlCardView.addFooterView(this.mEmptyFoot);
         UpLoadMorePanel.b(this.mRlCardView);
         Activity activity = this.mActivity;
-        NoteFeedAdapter noteFeedAdapter = new NoteFeedAdapter(activity, new s3(new C2713a(activity, 100), new C2714b(this.mActivity)));
+        NoteFeedAdapter noteFeedAdapter = new NoteFeedAdapter(activity, new s3(new a(activity, 100), new b(this.mActivity)));
         this.mMultiAdapter = noteFeedAdapter;
         this.mRlCardView.setAdapter(noteFeedAdapter);
         RefreshHeaderLayout refreshHeaderLayout = this.mRlCardView.mRefreshHeaderContainer;
@@ -508,7 +500,7 @@ public class MineDynamicFragment extends Fragment implements IPublishView, PtrCh
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         linearLayoutManager.setOrientation(0);
         this.mRvLableView.setLayoutManager(linearLayoutManager);
-        this.mLabelAdapter = new UserDynamicLabelAdapter(new View$OnClickListenerC2715c(), this.mContentLabelInfo);
+        this.mLabelAdapter = new UserDynamicLabelAdapter(new c(), this.mContentLabelInfo);
     }
 
     private void showBottomEmpty() {
@@ -561,7 +553,7 @@ public class MineDynamicFragment extends Fragment implements IPublishView, PtrCh
         }
         NestScrollErrResView nestScrollErrResView = this.mResView;
         if (nestScrollErrResView != null) {
-            nestScrollErrResView.showSmallErrorView(str, str2, new C2717e());
+            nestScrollErrResView.showSmallErrorView(str, str2, new e());
         }
     }
 
@@ -596,9 +588,9 @@ public class MineDynamicFragment extends Fragment implements IPublishView, PtrCh
             ipChange.ipc$dispatch("498509736", new Object[]{this, Integer.valueOf(i)});
             return;
         }
-        int e = wh2.e(this.mContentLabelInfo);
-        if (e > 0) {
-            for (int i2 = 0; i2 < e; i2++) {
+        int e2 = wh2.e(this.mContentLabelInfo);
+        if (e2 > 0) {
+            for (int i2 = 0; i2 < e2; i2++) {
                 if (i2 == i) {
                     this.mContentLabelInfo.get(i2).isSelect = true;
                 } else {
@@ -665,7 +657,7 @@ public class MineDynamicFragment extends Fragment implements IPublishView, PtrCh
         if (AndroidInstantRuntime.support(ipChange, "-914415987")) {
             ipChange.ipc$dispatch("-914415987", new Object[]{this, ptrFrameLayout, refreshCallBack});
         } else {
-            request(new C2719g(this, ptrFrameLayout));
+            request(new g(this, ptrFrameLayout));
         }
     }
 

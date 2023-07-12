@@ -5,15 +5,14 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8214m;
+import kotlin.b;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.l;
+import kotlin.collections.m;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
@@ -61,9 +60,8 @@ public final class IntegerLiteralTypeConstructor implements TypeConstructor {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.resolve.constants.IntegerLiteralTypeConstructor$Companion$a */
         /* loaded from: classes3.dex */
-        public /* synthetic */ class C8492a {
+        public /* synthetic */ class a {
             public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
             static {
@@ -99,7 +97,7 @@ public final class IntegerLiteralTypeConstructor implements TypeConstructor {
 
         private final fd2 c(IntegerLiteralTypeConstructor integerLiteralTypeConstructor, IntegerLiteralTypeConstructor integerLiteralTypeConstructor2, Mode mode) {
             Set V;
-            int i = C8492a.$EnumSwitchMapping$0[mode.ordinal()];
+            int i = a.$EnumSwitchMapping$0[mode.ordinal()];
             if (i == 1) {
                 V = CollectionsKt___CollectionsKt.V(integerLiteralTypeConstructor.e(), integerLiteralTypeConstructor2.e());
             } else if (i != 2) {
@@ -147,7 +145,7 @@ public final class IntegerLiteralTypeConstructor implements TypeConstructor {
     private IntegerLiteralTypeConstructor(long j, ModuleDescriptor moduleDescriptor, Set<? extends z71> set) {
         Lazy b;
         this.d = KotlinTypeFactory.e(Annotations.Companion.b(), this, false);
-        b = C8177b.b(new Function0<List<fd2>>() { // from class: kotlin.reflect.jvm.internal.impl.resolve.constants.IntegerLiteralTypeConstructor$supertypes$2
+        b = b.b(new Function0<List<fd2>>() { // from class: kotlin.reflect.jvm.internal.impl.resolve.constants.IntegerLiteralTypeConstructor$supertypes$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -164,8 +162,8 @@ public final class IntegerLiteralTypeConstructor implements TypeConstructor {
                 b41.h(defaultType, "builtIns.comparable.defaultType");
                 Variance variance = Variance.IN_VARIANCE;
                 fd2Var = IntegerLiteralTypeConstructor.this.d;
-                e = C8213l.e(new zq2(variance, fd2Var));
-                m = C8214m.m(cr2.f(defaultType, e, null, 2, null));
+                e = l.e(new zq2(variance, fd2Var));
+                m = m.m(cr2.f(defaultType, e, null, 2, null));
                 g = IntegerLiteralTypeConstructor.this.g();
                 if (!g) {
                     m.add(IntegerLiteralTypeConstructor.this.getBuiltIns().L());
@@ -225,7 +223,7 @@ public final class IntegerLiteralTypeConstructor implements TypeConstructor {
 
     @Override // kotlin.reflect.jvm.internal.impl.types.TypeConstructor
     @NotNull
-    public AbstractC8271b getBuiltIns() {
+    public kotlin.reflect.jvm.internal.impl.builtins.b getBuiltIns() {
         return this.b.getBuiltIns();
     }
 
@@ -239,7 +237,7 @@ public final class IntegerLiteralTypeConstructor implements TypeConstructor {
     @NotNull
     public List<TypeParameterDescriptor> getParameters() {
         List<TypeParameterDescriptor> g;
-        g = C8214m.g();
+        g = m.g();
         return g;
     }
 

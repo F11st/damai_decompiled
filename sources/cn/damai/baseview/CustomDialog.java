@@ -31,12 +31,11 @@ public class CustomDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.CustomDialog$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0270a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0270a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -52,12 +51,11 @@ public class CustomDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.CustomDialog$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0271b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0271b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -73,12 +71,11 @@ public class CustomDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.CustomDialog$c */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0272c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0272c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -116,9 +113,9 @@ public class CustomDialog extends Dialog {
             ipChange.ipc$dispatch("385351869", new Object[]{this, view});
             return;
         }
-        view.findViewById(R$id.tv_cancel).setOnClickListener(new View$OnClickListenerC0270a());
-        view.findViewById(R$id.tv_first).setOnClickListener(new View$OnClickListenerC0271b());
-        view.findViewById(R$id.tv_second).setOnClickListener(new View$OnClickListenerC0272c());
+        view.findViewById(R$id.tv_cancel).setOnClickListener(new a());
+        view.findViewById(R$id.tv_first).setOnClickListener(new b());
+        view.findViewById(R$id.tv_second).setOnClickListener(new c());
     }
 
     private void d() {

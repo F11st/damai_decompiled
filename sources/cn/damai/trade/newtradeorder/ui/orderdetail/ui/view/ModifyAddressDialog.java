@@ -31,13 +31,12 @@ public class ModifyAddressDialog extends Dialog {
     private TextView e;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.view.ModifyAddressDialog$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2190a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DialogInterface.OnClickListener a;
 
-        View$OnClickListenerC2190a(DialogInterface.OnClickListener onClickListener) {
+        a(DialogInterface.OnClickListener onClickListener) {
             this.a = onClickListener;
         }
 
@@ -54,13 +53,12 @@ public class ModifyAddressDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.view.ModifyAddressDialog$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2191b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DialogInterface.OnClickListener a;
 
-        View$OnClickListenerC2191b(DialogInterface.OnClickListener onClickListener) {
+        b(DialogInterface.OnClickListener onClickListener) {
             this.a = onClickListener;
         }
 
@@ -122,7 +120,7 @@ public class ModifyAddressDialog extends Dialog {
         if (AndroidInstantRuntime.support(ipChange, "-352203361")) {
             return (ModifyAddressDialog) ipChange.ipc$dispatch("-352203361", new Object[]{this, onClickListener});
         }
-        this.e.setOnClickListener(new View$OnClickListenerC2190a(onClickListener));
+        this.e.setOnClickListener(new a(onClickListener));
         return this;
     }
 
@@ -131,7 +129,7 @@ public class ModifyAddressDialog extends Dialog {
         if (AndroidInstantRuntime.support(ipChange, "-643761397")) {
             return (ModifyAddressDialog) ipChange.ipc$dispatch("-643761397", new Object[]{this, onClickListener});
         }
-        this.d.setOnClickListener(new View$OnClickListenerC2191b(onClickListener));
+        this.d.setOnClickListener(new b(onClickListener));
         return this;
     }
 

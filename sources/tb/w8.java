@@ -8,8 +8,6 @@ import com.android.alibaba.ip.runtime.IpChange;
 import java.util.Hashtable;
 import java.util.Locale;
 import java.util.regex.Pattern;
-import kotlin.text.C8590b;
-import kotlin.text.C8604o;
 import kotlin.text.StringsKt__StringsKt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -104,15 +102,15 @@ public final class w8 {
                 }
                 j++;
             }
-            E = C8604o.E(str, "right", j, false, 4, null);
+            E = kotlin.text.o.E(str, "right", j, false, 4, null);
             if (E) {
                 return 2;
             }
-            E2 = C8604o.E(str, "center", j, false, 4, null);
+            E2 = kotlin.text.o.E(str, "center", j, false, 4, null);
             if (E2) {
                 return 1;
             }
-            E3 = C8604o.E(str, "left", j, false, 4, null);
+            E3 = kotlin.text.o.E(str, "left", j, false, 4, null);
             return E3 ? 0 : -1;
         }
         return -1;
@@ -170,7 +168,7 @@ public final class w8 {
             r5 = 0
             java.lang.String r1 = "="
             r0 = r10
-            int r2 = kotlin.text.C8596g.Z(r0, r1, r2, r3, r4, r5)
+            int r2 = kotlin.text.g.Z(r0, r1, r2, r3, r4, r5)
             if (r2 >= 0) goto L4e
             return r8
         L4e:
@@ -179,7 +177,7 @@ public final class w8 {
             r5 = 0
             java.lang.String r1 = "\""
             r0 = r10
-            int r0 = kotlin.text.C8596g.Z(r0, r1, r2, r3, r4, r5)
+            int r0 = kotlin.text.g.Z(r0, r1, r2, r3, r4, r5)
             if (r0 >= 0) goto L5b
             return r8
         L5b:
@@ -273,7 +271,7 @@ public final class w8 {
             if (i2 - i == 7) {
                 String substring = str.substring(i + 1, i2);
                 b41.h(substring, "this as java.lang.String…ing(startIndex, endIndex)");
-                a2 = C8590b.a(16);
+                a2 = kotlin.text.b.a(16);
                 return Integer.parseInt(substring, a2) | (-16777216);
             }
             return 1;
@@ -431,7 +429,7 @@ public final class w8 {
             java.lang.String r1 = "="
             r0 = r10
             r2 = r11
-            int r2 = kotlin.text.C8596g.Z(r0, r1, r2, r3, r4, r5)
+            int r2 = kotlin.text.g.Z(r0, r1, r2, r3, r4, r5)
             if (r2 >= 0) goto L3f
             return r8
         L3f:
@@ -440,7 +438,7 @@ public final class w8 {
             r5 = 0
             java.lang.String r1 = "\""
             r0 = r10
-            int r0 = kotlin.text.C8596g.Z(r0, r1, r2, r3, r4, r5)
+            int r0 = kotlin.text.g.Z(r0, r1, r2, r3, r4, r5)
             if (r0 >= 0) goto L4c
             return r8
         L4c:
@@ -569,7 +567,7 @@ public final class w8 {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public final tb.vz0.C9832b m(int r23, @org.jetbrains.annotations.Nullable char[] r24, int r25) {
+    public final tb.vz0.b m(int r23, @org.jetbrains.annotations.Nullable char[] r24, int r25) {
         /*
             Method dump skipped, instructions count: 452
             To view this dump change 'Code comments level' option to 'DEBUG'

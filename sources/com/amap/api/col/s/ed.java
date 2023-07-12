@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public final class ed extends ef {
-    private static ed c = new ed(new ec.C4430a().a("amap-global-threadPool").a());
+    private static ed c = new ed(new ec.a().a("amap-global-threadPool").a());
 
     private ed(ec ecVar) {
         try {

@@ -1,7 +1,7 @@
 package cn.damai.onearch.component.banner.zoom;
 
 import android.view.View;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.onearch.component.banner.zoom.ZoomBannerContract;
 import cn.damai.tetris.component.home.widget.banner.sub.RoundRadiusImageView;
@@ -46,6 +46,6 @@ public final class ZoomBannerView extends AbsView<GenericItem<ItemValue>, ZoomBa
             return;
         }
         b41.i(str, "picUrl");
-        C0504a.b().c(str).g(this.bg);
+        a.b().c(str).g(this.bg);
     }
 }

@@ -1,16 +1,16 @@
 package io.reactivex.internal.operators.single;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleOperator;
 import io.reactivex.SingleSource;
+import io.reactivex.e;
 import io.reactivex.internal.disposables.EmptyDisposable;
 import io.reactivex.internal.functions.ObjectHelper;
 import tb.dg0;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SingleLift<T, R> extends AbstractC8152e<R> {
+public final class SingleLift<T, R> extends e<R> {
     final SingleOperator<? extends R, ? super T> onLift;
     final SingleSource<T> source;
 
@@ -19,7 +19,7 @@ public final class SingleLift<T, R> extends AbstractC8152e<R> {
         this.onLift = singleOperator;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super R> singleObserver) {
         try {
             this.source.subscribe((SingleObserver) ObjectHelper.requireNonNull(this.onLift.apply(singleObserver), "The onLift returned a null SingleObserver"));

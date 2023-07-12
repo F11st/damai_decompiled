@@ -11,5 +11,5 @@ public interface Source extends Closeable {
 
     long read(Buffer buffer, long j) throws IOException;
 
-    C8857o timeout();
+    o timeout();
 }

@@ -2,7 +2,7 @@ package com.taobao.android.dinamicx;
 
 import android.view.View;
 import androidx.annotation.Nullable;
-import com.taobao.android.dinamicx.C6368e;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -248,13 +248,13 @@ public class DXRenderPipelineFlow {
                 this.c++;
             }
         } catch (Throwable th) {
-            C6368e.C6369a c6369a = new C6368e.C6369a("Pipeline", "SIMPLE_PIPELINE_CRASH", C6368e.DX_SIMPLE_PIPELINE_CRASH);
-            c6369a.e = ry.a(th);
+            e.a aVar = new e.a("Pipeline", "SIMPLE_PIPELINE_CRASH", e.DX_SIMPLE_PIPELINE_CRASH);
+            aVar.e = ry.a(th);
             DXRuntimeContext dXRuntimeContext = this.g;
             if (dXRuntimeContext == null || dXRuntimeContext.getDxError() == null || this.g.getDxError().c == null) {
                 return;
             }
-            this.g.getDxError().c.add(c6369a);
+            this.g.getDxError().c.add(aVar);
         }
     }
 }

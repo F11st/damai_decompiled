@@ -31,9 +31,8 @@ public class DXDMScrollLayoutWidgetNode extends DXScrollerLayout {
     private String userDefineParam;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.scrollerlayout.DXDMScrollLayoutWidgetNode$a */
     /* loaded from: classes4.dex */
-    public static class C0667a implements IDXBuilderWidgetNode {
+    public static class a implements IDXBuilderWidgetNode {
         private static transient /* synthetic */ IpChange $ipChange;
 
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
@@ -61,7 +60,7 @@ public class DXDMScrollLayoutWidgetNode extends DXScrollerLayout {
         return super.getDefaultValueForIntAttr(j);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onBeforeBindChildData() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "34542282")) {
@@ -82,7 +81,7 @@ public class DXDMScrollLayoutWidgetNode extends DXScrollerLayout {
         }
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onClone(DXWidgetNode dXWidgetNode, boolean z) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "191349372")) {
@@ -122,7 +121,7 @@ public class DXDMScrollLayoutWidgetNode extends DXScrollerLayout {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onRenderView(Context context, View view) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1790186651")) {
@@ -139,7 +138,7 @@ public class DXDMScrollLayoutWidgetNode extends DXScrollerLayout {
         }
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetIntAttribute(long j, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "237970596")) {

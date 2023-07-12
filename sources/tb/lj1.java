@@ -20,20 +20,19 @@ import org.jetbrains.annotations.Nullable;
 public final class lj1 implements BannerViewBinder {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C9416a Companion = new C9416a(null);
+    public static final a Companion = new a(null);
     public static final int TYPE_NORMAL_BANNER_FRAME = 1;
     public static final int TYPE_SUPER_BANNER_FRAME = 2;
     @NotNull
     private final OnBannerListener a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.lj1$a */
     /* loaded from: classes7.dex */
-    public static final class C9416a {
-        private C9416a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9416a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

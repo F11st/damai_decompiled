@@ -13,8 +13,6 @@ import android.graphics.RectF;
 import android.os.Build;
 import android.provider.Settings;
 import androidx.annotation.Nullable;
-import com.airbnb.lottie.animation.content.C2842n;
-import com.airbnb.lottie.animation.keyframe.C2848b;
 import java.io.Closeable;
 import java.io.InterruptedIOException;
 import java.net.ProtocolException;
@@ -28,18 +26,17 @@ import javax.net.ssl.SSLException;
 /* loaded from: classes9.dex */
 public final class aw2 {
     public static final int SECOND_IN_NANOS = 1000000000;
-    private static final ThreadLocal<PathMeasure> a = new C8927a();
-    private static final ThreadLocal<Path> b = new C8928b();
-    private static final ThreadLocal<Path> c = new C8929c();
-    private static final ThreadLocal<float[]> d = new C8930d();
+    private static final ThreadLocal<PathMeasure> a = new a();
+    private static final ThreadLocal<Path> b = new b();
+    private static final ThreadLocal<Path> c = new c();
+    private static final ThreadLocal<float[]> d = new d();
     private static final float e = (float) (Math.sqrt(2.0d) / 2.0d);
     private static float f = -1.0f;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.aw2$a */
     /* loaded from: classes9.dex */
-    class C8927a extends ThreadLocal<PathMeasure> {
-        C8927a() {
+    class a extends ThreadLocal<PathMeasure> {
+        a() {
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
@@ -51,10 +48,9 @@ public final class aw2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.aw2$b */
     /* loaded from: classes9.dex */
-    class C8928b extends ThreadLocal<Path> {
-        C8928b() {
+    class b extends ThreadLocal<Path> {
+        b() {
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
@@ -66,10 +62,9 @@ public final class aw2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.aw2$c */
     /* loaded from: classes9.dex */
-    class C8929c extends ThreadLocal<Path> {
-        C8929c() {
+    class c extends ThreadLocal<Path> {
+        c() {
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
@@ -81,10 +76,9 @@ public final class aw2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.aw2$d */
     /* loaded from: classes9.dex */
-    class C8930d extends ThreadLocal<float[]> {
-        C8930d() {
+    class d extends ThreadLocal<float[]> {
+        d() {
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
@@ -147,11 +141,11 @@ public final class aw2 {
         }
     }
 
-    public static void b(Path path, @Nullable C2842n c2842n) {
-        if (c2842n == null || c2842n.f()) {
+    public static void b(Path path, @Nullable com.airbnb.lottie.animation.content.n nVar) {
+        if (nVar == null || nVar.f()) {
             return;
         }
-        a(path, ((C2848b) c2842n.d()).p() / 100.0f, ((C2848b) c2842n.b()).p() / 100.0f, ((C2848b) c2842n.c()).p() / 360.0f);
+        a(path, ((com.airbnb.lottie.animation.keyframe.b) nVar.d()).p() / 100.0f, ((com.airbnb.lottie.animation.keyframe.b) nVar.b()).p() / 100.0f, ((com.airbnb.lottie.animation.keyframe.b) nVar.c()).p() / 360.0f);
     }
 
     public static void c(Closeable closeable) {

@@ -5,7 +5,7 @@ import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
 import com.youku.media.arch.instruments.ConfigFetcher;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -34,7 +34,7 @@ public class TinyWindowUtils {
             return 0;
         }
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        WindowManager windowManager = (WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+        WindowManager windowManager = (WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW);
         if (windowManager == null || (defaultDisplay = windowManager.getDefaultDisplay()) == null) {
             return 0;
         }

@@ -2,9 +2,7 @@ package tb;
 
 import com.alibaba.analytics.utils.Logger;
 import com.alibaba.analytics.utils.UTServerAppStatusTrigger;
-import com.alibaba.appmonitor.delegate.C3309a;
 import com.alibaba.appmonitor.event.EventType;
-import com.alibaba.appmonitor.sample.C3317a;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
@@ -23,12 +21,12 @@ public class x9 implements UTServerAppStatusTrigger.UTServerAppStatusChangeCallb
         int i = 0;
         Logger.f("BackgroundTrigger", "isAppOnForeground", Boolean.valueOf(z));
         if (z) {
-            C3317a.h().p();
+            com.alibaba.appmonitor.sample.a.h().p();
             EventType[] values = EventType.values();
             int length = values.length;
             while (i < length) {
                 EventType eventType = values[i];
-                C3309a.o(eventType, eventType.getForegroundStatisticsInterval());
+                com.alibaba.appmonitor.delegate.a.o(eventType, eventType.getForegroundStatisticsInterval());
                 i++;
             }
             return;
@@ -37,10 +35,10 @@ public class x9 implements UTServerAppStatusTrigger.UTServerAppStatusChangeCallb
         int length2 = values2.length;
         while (i < length2) {
             EventType eventType2 = values2[i];
-            C3309a.o(eventType2, eventType2.getBackgroundStatisticsInterval());
+            com.alibaba.appmonitor.delegate.a.o(eventType2, eventType2.getBackgroundStatisticsInterval());
             i++;
         }
-        C3309a.p();
+        com.alibaba.appmonitor.delegate.a.p();
     }
 
     @Override // com.alibaba.analytics.utils.UTServerAppStatusTrigger.UTServerAppStatusChangeCallback

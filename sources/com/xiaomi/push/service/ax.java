@@ -8,9 +8,6 @@ import android.content.Context;
 import android.os.Build;
 import android.service.notification.StatusBarNotification;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
-import com.xiaomi.push.C7680j;
-import com.xiaomi.push.C7688m;
 import com.xiaomi.push.ho;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -109,12 +106,12 @@ public class ax {
 
     /* renamed from: a  reason: collision with other method in class */
     static void m1179a(String str) {
-        AbstractC7535b.m586a("NMHelper:" + str);
+        com.xiaomi.channel.commonutils.logger.b.m586a("NMHelper:" + str);
     }
 
     /* renamed from: a  reason: collision with other method in class */
     private static boolean m1180a() {
-        if (C7688m.m1118a() && ba.a(a).a(ho.NotificationBelongToAppSwitch.a(), true)) {
+        if (com.xiaomi.push.m.m1118a() && ba.a(a).a(ho.NotificationBelongToAppSwitch.a(), true)) {
             return f906a;
         }
         return false;
@@ -128,7 +125,7 @@ public class ax {
 
     /* renamed from: a  reason: collision with other method in class */
     private StatusBarNotification[] m1182a() {
-        if (C7688m.m1119a(m1184a())) {
+        if (com.xiaomi.push.m.m1119a(m1184a())) {
             try {
                 Object a2 = com.xiaomi.push.bk.a(f904a, "getActiveNotifications", m1184a().getPackageName());
                 if (a2 instanceof StatusBarNotification[]) {
@@ -183,7 +180,7 @@ public class ax {
 
     /* renamed from: a  reason: collision with other method in class */
     public String m1186a(String str) {
-        return TextUtils.isEmpty(str) ? b() : C7688m.m1119a(m1184a()) ? b(str) : str;
+        return TextUtils.isEmpty(str) ? b() : com.xiaomi.push.m.m1119a(m1184a()) ? b(str) : str;
     }
 
     /*  JADX ERROR: JadxRuntimeException in pass: BlockProcessor
@@ -236,7 +233,7 @@ public class ax {
             java.util.List r1 = r2.getNotificationChannels()     // Catch: java.lang.Exception -> L78
             java.lang.String r2 = "mipush_%s_%s"
         L45:
-            boolean r3 = com.xiaomi.push.C7688m.m1118a()     // Catch: java.lang.Exception -> L78
+            boolean r3 = com.xiaomi.push.m.m1118a()     // Catch: java.lang.Exception -> L78
             if (r3 == 0) goto L8d
             if (r1 == 0) goto L8d
             java.util.ArrayList r3 = new java.util.ArrayList     // Catch: java.lang.Exception -> L78
@@ -280,7 +277,7 @@ public class ax {
                 a().cancel(i);
                 return;
             }
-            int a2 = C7680j.a();
+            int a2 = com.xiaomi.push.j.a();
             String packageName = m1184a().getPackageName();
             if (Build.VERSION.SDK_INT >= 30) {
                 com.xiaomi.push.bk.b(f904a, "cancelNotificationWithTag", str, packageName, null, Integer.valueOf(i), Integer.valueOf(a2));
@@ -374,14 +371,14 @@ public class ax {
         ArrayList arrayList = null;
         try {
             if (m1180a()) {
-                int a3 = C7680j.a();
+                int a3 = com.xiaomi.push.j.a();
                 if (a3 != -1) {
                     return (List) a(com.xiaomi.push.bk.a(f904a, "getAppActiveNotifications", str, Integer.valueOf(a3)));
                 }
                 return null;
             }
             StatusBarNotification[] activeNotifications = Build.VERSION.SDK_INT >= 23 ? a2.getActiveNotifications() : m1182a();
-            boolean m1118a = C7688m.m1118a();
+            boolean m1118a = com.xiaomi.push.m.m1118a();
             if (activeNotifications == null || activeNotifications.length <= 0) {
                 return null;
             }

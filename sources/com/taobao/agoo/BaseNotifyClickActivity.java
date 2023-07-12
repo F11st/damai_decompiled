@@ -12,7 +12,7 @@ import java.util.Set;
 public class BaseNotifyClickActivity extends Activity {
     private static final String TAG = "Naccs.BaseNotifyClickActivity";
     public static Set<INotifyListener> notifyListeners;
-    private BaseNotifyClick baseNotifyClick = new C6249a();
+    private BaseNotifyClick baseNotifyClick = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes8.dex */
@@ -23,10 +23,9 @@ public class BaseNotifyClickActivity extends Activity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.agoo.BaseNotifyClickActivity$a */
     /* loaded from: classes8.dex */
-    class C6249a extends BaseNotifyClick {
-        C6249a() {
+    class a extends BaseNotifyClick {
+        a() {
         }
 
         @Override // com.taobao.agoo.BaseNotifyClick

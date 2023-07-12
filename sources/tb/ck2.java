@@ -2,12 +2,11 @@ package tb;
 
 import android.text.TextUtils;
 import com.taobao.android.dinamicx.DXRuntimeContext;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 import com.youku.live.livesdk.wkit.component.Constants;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
-public class ck2 extends AbstractC6375a {
+public class ck2 extends com.taobao.android.dinamicx.expression.parser.a {
     public static final String PARSER_TAG = "tdcolor";
 
     private Object a(Object[] objArr, DXRuntimeContext dXRuntimeContext) throws Exception {
@@ -30,7 +29,7 @@ public class ck2 extends AbstractC6375a {
         throw new RuntimeException(a);
     }
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         try {
             return a(objArr, dXRuntimeContext);

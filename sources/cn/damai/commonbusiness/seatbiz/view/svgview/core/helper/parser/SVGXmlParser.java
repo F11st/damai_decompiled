@@ -21,7 +21,6 @@ import cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.model.SVG
 import cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.model.SVGText;
 import cn.damai.commonbusiness.seatbiz.view.svgview.core.model.PointLocation;
 import com.alibaba.analytics.core.sync.UploadQueueMgr;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.autonavi.amap.mapcore.tools.GlMapUtil;
@@ -60,7 +59,7 @@ public class SVGXmlParser {
     public static class Properties {
         private static transient /* synthetic */ IpChange $ipChange;
         Attributes atts;
-        C0861e styles;
+        e styles;
 
         private int hex3Tohex6(int i) {
             IpChange ipChange = $ipChange;
@@ -104,7 +103,7 @@ public class SVGXmlParser {
             this.atts = attributes;
             String m = SVGXmlParser.m("style", attributes);
             if (m != null) {
-                this.styles = new C0861e(m);
+                this.styles = new e(m);
             } else {
                 this.styles = null;
             }
@@ -126,8 +125,8 @@ public class SVGXmlParser {
             if (AndroidInstantRuntime.support(ipChange, "674864540")) {
                 return (String) ipChange.ipc$dispatch("674864540", new Object[]{this, str});
             }
-            C0861e c0861e = this.styles;
-            String a = c0861e != null ? c0861e.a(str) : null;
+            e eVar = this.styles;
+            String a = eVar != null ? eVar.a(str) : null;
             return (a != null || (attributes = this.atts) == null) ? a : SVGXmlParser.m(str, attributes);
         }
 
@@ -159,7 +158,7 @@ public class SVGXmlParser {
 
         public Integer parseColor(String str) {
             IpChange ipChange = $ipChange;
-            return AndroidInstantRuntime.support(ipChange, "-335602966") ? (Integer) ipChange.ipc$dispatch("-335602966", new Object[]{this, str}) : C0864c.c(str);
+            return AndroidInstantRuntime.support(ipChange, "-335602966") ? (Integer) ipChange.ipc$dispatch("-335602966", new Object[]{this, str}) : cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.c.c(str);
         }
 
         private Properties() {
@@ -173,9 +172,8 @@ public class SVGXmlParser {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.SVGXmlParser$b */
     /* loaded from: classes.dex */
-    public static class C0858b {
+    public static class b {
         private static transient /* synthetic */ IpChange $ipChange;
         String a;
         String b;
@@ -194,7 +192,7 @@ public class SVGXmlParser {
         public boolean o;
         public Shader.TileMode p;
 
-        private C0858b() {
+        private b() {
             this.k = new ArrayList<>();
             this.l = new ArrayList<>();
             this.m = null;
@@ -202,58 +200,56 @@ public class SVGXmlParser {
             this.o = false;
         }
 
-        public C0858b a(C0858b c0858b) {
+        public b a(b bVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "264422268")) {
-                return (C0858b) ipChange.ipc$dispatch("264422268", new Object[]{this, c0858b});
+                return (b) ipChange.ipc$dispatch("264422268", new Object[]{this, bVar});
             }
-            C0858b c0858b2 = new C0858b();
-            c0858b2.a = c0858b.a;
-            c0858b2.b = this.a;
-            c0858b2.c = c0858b.c;
-            c0858b2.d = c0858b.d;
-            c0858b2.f = c0858b.f;
-            c0858b2.e = c0858b.e;
-            c0858b2.g = c0858b.g;
-            c0858b2.h = c0858b.h;
-            c0858b2.i = c0858b.i;
-            c0858b2.j = c0858b.j;
-            c0858b2.k = this.k;
-            c0858b2.l = this.l;
-            c0858b2.m = this.m;
-            Matrix matrix = c0858b.m;
+            b bVar2 = new b();
+            bVar2.a = bVar.a;
+            bVar2.b = this.a;
+            bVar2.c = bVar.c;
+            bVar2.d = bVar.d;
+            bVar2.f = bVar.f;
+            bVar2.e = bVar.e;
+            bVar2.g = bVar.g;
+            bVar2.h = bVar.h;
+            bVar2.i = bVar.i;
+            bVar2.j = bVar.j;
+            bVar2.k = this.k;
+            bVar2.l = this.l;
+            bVar2.m = this.m;
+            Matrix matrix = bVar.m;
             if (matrix != null) {
                 if (this.m == null) {
-                    c0858b2.m = matrix;
+                    bVar2.m = matrix;
                 } else {
                     Matrix matrix2 = new Matrix(this.m);
-                    matrix2.preConcat(c0858b.m);
-                    c0858b2.m = matrix2;
+                    matrix2.preConcat(bVar.m);
+                    bVar2.m = matrix2;
                 }
             }
-            c0858b2.o = c0858b.o;
-            c0858b2.n = c0858b.n;
-            c0858b2.p = c0858b.p;
-            return c0858b2;
+            bVar2.o = bVar.o;
+            bVar2.n = bVar.n;
+            bVar2.p = bVar.p;
+            return bVar2;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.SVGXmlParser$c */
     /* loaded from: classes.dex */
-    public static class C0859c {
+    public static class c {
         private static transient /* synthetic */ IpChange $ipChange;
         private ArrayList<Float> a;
 
-        public C0859c(ArrayList<Float> arrayList, int i) {
+        public c(ArrayList<Float> arrayList, int i) {
             this.a = arrayList;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.SVGXmlParser$d */
     /* loaded from: classes.dex */
-    public static class C0860d extends DefaultHandler {
+    public static class d extends DefaultHandler {
         private static transient /* synthetic */ IpChange $ipChange;
         private float a;
         final LinkedList<Float> b;
@@ -263,9 +259,9 @@ public class SVGXmlParser {
         final LinkedList<Paint> f;
         final LinkedList<String> g;
         final RectF h;
-        final HashMap<String, C0858b> i;
+        final HashMap<String, b> i;
         final Matrix j;
-        C0858b k;
+        b k;
         private int l;
         private boolean m;
         List<String> n;
@@ -278,7 +274,7 @@ public class SVGXmlParser {
         private StringBuilder u;
         private List<CSSStyle> v;
 
-        public C0860d() {
+        public d() {
             LinkedList<Float> linkedList = new LinkedList<>();
             this.b = linkedList;
             this.d = new LinkedList<>();
@@ -362,12 +358,12 @@ public class SVGXmlParser {
             if (string2 != null) {
                 if (string2.startsWith("url(#")) {
                     String substring = string2.substring(5, string2.length() - 1);
-                    C0858b c0858b = this.i.get(substring);
-                    Shader shader = c0858b != null ? c0858b.n : null;
+                    b bVar = this.i.get(substring);
+                    Shader shader = bVar != null ? bVar.n : null;
                     if (shader != null) {
                         this.e.setShader(shader);
-                        this.j.set(c0858b.m);
-                        if (c0858b.o && rectF != null) {
+                        this.j.set(bVar.m);
+                        if (bVar.o && rectF != null) {
                             this.j.preTranslate(rectF.left, rectF.top);
                             this.j.preScale(rectF.width(), rectF.height());
                         }
@@ -421,46 +417,46 @@ public class SVGXmlParser {
             }
         }
 
-        private C0858b e(boolean z, Attributes attributes) {
+        private b e(boolean z, Attributes attributes) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-2075496021")) {
-                return (C0858b) ipChange.ipc$dispatch("-2075496021", new Object[]{this, Boolean.valueOf(z), attributes});
+                return (b) ipChange.ipc$dispatch("-2075496021", new Object[]{this, Boolean.valueOf(z), attributes});
             }
-            C0858b c0858b = new C0858b();
-            c0858b.a = SVGXmlParser.m("id", attributes);
-            c0858b.c = z;
+            b bVar = new b();
+            bVar.a = SVGXmlParser.m("id", attributes);
+            bVar.c = z;
             if (z) {
-                c0858b.d = SVGXmlParser.k("x1", attributes, 0.0f);
-                c0858b.f = SVGXmlParser.k("x2", attributes, 1.0f);
-                c0858b.e = SVGXmlParser.k("y1", attributes, 0.0f);
-                c0858b.g = SVGXmlParser.k("y2", attributes, 0.0f);
+                bVar.d = SVGXmlParser.k("x1", attributes, 0.0f);
+                bVar.f = SVGXmlParser.k("x2", attributes, 1.0f);
+                bVar.e = SVGXmlParser.k("y1", attributes, 0.0f);
+                bVar.g = SVGXmlParser.k("y2", attributes, 0.0f);
             } else {
-                c0858b.h = SVGXmlParser.k("cx", attributes, 0.0f);
-                c0858b.i = SVGXmlParser.k("cy", attributes, 0.0f);
-                c0858b.j = SVGXmlParser.k(UploadQueueMgr.MSGTYPE_REALTIME, attributes, 0.0f);
+                bVar.h = SVGXmlParser.k("cx", attributes, 0.0f);
+                bVar.i = SVGXmlParser.k("cy", attributes, 0.0f);
+                bVar.j = SVGXmlParser.k(UploadQueueMgr.MSGTYPE_REALTIME, attributes, 0.0f);
             }
             String m = SVGXmlParser.m("gradientTransform", attributes);
             if (m != null) {
-                c0858b.m = SVGXmlParser.r(m);
+                bVar.m = SVGXmlParser.r(m);
             }
             String m2 = SVGXmlParser.m("spreadMethod", attributes);
             if (m2 == null) {
                 m2 = "pad";
             }
-            c0858b.p = m2.equals("reflect") ? Shader.TileMode.MIRROR : m2.equals("repeat") ? Shader.TileMode.REPEAT : Shader.TileMode.CLAMP;
+            bVar.p = m2.equals("reflect") ? Shader.TileMode.MIRROR : m2.equals("repeat") ? Shader.TileMode.REPEAT : Shader.TileMode.CLAMP;
             String m3 = SVGXmlParser.m("gradientUnits", attributes);
             if (m3 == null) {
                 m3 = "objectBoundingBox";
             }
-            c0858b.o = !m3.equals("userSpaceOnUse");
+            bVar.o = !m3.equals("userSpaceOnUse");
             String m4 = SVGXmlParser.m("href", attributes);
             if (m4 != null) {
                 if (m4.startsWith(Constants.TYPE_LIVE_ROOM_BG_COLOR_PREFFIX)) {
                     m4 = m4.substring(1);
                 }
-                c0858b.b = m4;
+                bVar.b = m4;
             }
-            return c0858b;
+            return bVar;
         }
 
         private boolean f(Properties properties) {
@@ -795,7 +791,7 @@ public class SVGXmlParser {
 
         @Override // org.xml.sax.helpers.DefaultHandler, org.xml.sax.ContentHandler
         public void endElement(String str, String str2, String str3) throws SAXException {
-            C0858b c0858b;
+            b bVar;
             StringBuilder sb;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-987448615")) {
@@ -851,11 +847,11 @@ public class SVGXmlParser {
                         return;
                     }
                 }
-                C0858b c0858b2 = this.k;
-                if (c0858b2.a != null) {
-                    String str4 = c0858b2.b;
-                    if (str4 != null && (c0858b = this.i.get(str4)) != null) {
-                        this.k = c0858b.a(this.k);
+                b bVar2 = this.k;
+                if (bVar2.a != null) {
+                    String str4 = bVar2.b;
+                    if (str4 != null && (bVar = this.i.get(str4)) != null) {
+                        this.k = bVar.a(this.k);
                     }
                     int size = this.k.l.size();
                     int[] iArr = new int[size];
@@ -871,17 +867,17 @@ public class SVGXmlParser {
                         cb1.b("BAD", "BAD");
                     }
                     if (str2.equals("linearGradient")) {
-                        C0858b c0858b3 = this.k;
-                        C0858b c0858b4 = this.k;
-                        c0858b3.n = new LinearGradient(c0858b4.d, c0858b4.e, c0858b4.f, c0858b4.g, iArr, fArr, c0858b4.p);
+                        b bVar3 = this.k;
+                        b bVar4 = this.k;
+                        bVar3.n = new LinearGradient(bVar4.d, bVar4.e, bVar4.f, bVar4.g, iArr, fArr, bVar4.p);
                     } else {
-                        C0858b c0858b5 = this.k;
-                        C0858b c0858b6 = this.k;
-                        c0858b5.n = new RadialGradient(c0858b6.h, c0858b6.i, c0858b6.j, iArr, fArr, c0858b6.p);
+                        b bVar5 = this.k;
+                        b bVar6 = this.k;
+                        bVar5.n = new RadialGradient(bVar6.h, bVar6.i, bVar6.j, iArr, fArr, bVar6.p);
                     }
-                    HashMap<String, C0858b> hashMap = this.i;
-                    C0858b c0858b7 = this.k;
-                    hashMap.put(c0858b7.a, c0858b7);
+                    HashMap<String, b> hashMap = this.i;
+                    b bVar7 = this.k;
+                    hashMap.put(bVar7.a, bVar7);
                 }
             }
         }
@@ -926,7 +922,7 @@ public class SVGXmlParser {
                     if (TextUtils.equals("text/css", SVGXmlParser.m("type", attributes))) {
                         this.u = new StringBuilder();
                     }
-                } else if (!this.m && str2.equals(AbstractC3893a.V)) {
+                } else if (!this.m && str2.equals(com.alibaba.security.realidentity.jsbridge.a.V)) {
                     Path i = SVGXmlParser.i(SVGXmlParser.m("d", attributes));
                     if (i != null) {
                         SVGPath sVGPath = new SVGPath();
@@ -993,7 +989,7 @@ public class SVGXmlParser {
                         this.g.add(m4);
                     }
                 } else if (!this.m && (str2.equals("polygon") || str2.equals("polyline"))) {
-                    C0859c l = SVGXmlParser.l("points", attributes);
+                    c l = SVGXmlParser.l("points", attributes);
                     if (l != null) {
                         ArrayList<Float> arrayList = l.a;
                         if (arrayList.size() > 1) {
@@ -1232,13 +1228,12 @@ public class SVGXmlParser {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.SVGXmlParser$e */
     /* loaded from: classes.dex */
-    public static class C0861e {
+    public static class e {
         private static transient /* synthetic */ IpChange $ipChange;
         HashMap<String, String> a;
 
-        public C0861e(String str) {
+        public e(String str) {
             HashMap<String, String> hashMap = new HashMap<>();
             this.a = hashMap;
             hashMap.clear();
@@ -1644,10 +1639,10 @@ public class SVGXmlParser {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static C0859c l(String str, Attributes attributes) {
+    public static c l(String str, Attributes attributes) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-382387457")) {
-            return (C0859c) ipChange.ipc$dispatch("-382387457", new Object[]{str, attributes});
+            return (c) ipChange.ipc$dispatch("-382387457", new Object[]{str, attributes});
         }
         if (str == null) {
             return null;
@@ -1692,14 +1687,14 @@ public class SVGXmlParser {
         return p(m, f);
     }
 
-    public static SVGPaintData o(InputSource inputSource, C0860d c0860d) throws SVGParseException {
+    public static SVGPaintData o(InputSource inputSource, d dVar) throws SVGParseException {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1951691981")) {
-            return (SVGPaintData) ipChange.ipc$dispatch("1951691981", new Object[]{inputSource, c0860d});
+            return (SVGPaintData) ipChange.ipc$dispatch("1951691981", new Object[]{inputSource, dVar});
         }
         try {
             XMLReader xMLReader = SAXParserFactory.newInstance().newSAXParser().getXMLReader();
-            xMLReader.setContentHandler(c0860d);
+            xMLReader.setContentHandler(dVar);
             xMLReader.setFeature("http://xml.org/sax/features/validation", false);
             if (a) {
                 try {
@@ -1709,9 +1704,9 @@ public class SVGXmlParser {
                 }
             }
             xMLReader.parse(inputSource);
-            SVGPaintData k = c0860d.k();
-            k.setSvgScale(c0860d.l());
-            k.setUnrecognizedCommandList(c0860d.m());
+            SVGPaintData k = dVar.k();
+            k.setSvgScale(dVar.l());
+            k.setUnrecognizedCommandList(dVar.m());
             return k;
         } catch (Exception e2) {
             throw new SVGParseException(e2);
@@ -1757,7 +1752,7 @@ public class SVGXmlParser {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private static cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.SVGXmlParser.C0859c q(java.lang.String r10) {
+    private static cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.SVGXmlParser.c q(java.lang.String r10) {
         /*
             com.android.alibaba.ip.runtime.IpChange r0 = cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.SVGXmlParser.$ipChange
             java.lang.String r1 = "-195581663"
@@ -1768,7 +1763,7 @@ public class SVGXmlParser {
             java.lang.Object[] r2 = new java.lang.Object[r3]
             r2[r4] = r10
             java.lang.Object r10 = r0.ipc$dispatch(r1, r2)
-            cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.SVGXmlParser$c r10 = (cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.SVGXmlParser.C0859c) r10
+            cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.SVGXmlParser$c r10 = (cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.SVGXmlParser.c) r10
             return r10
         L17:
             int r0 = r10.length()
@@ -1904,35 +1899,35 @@ public class SVGXmlParser {
             return matrix;
         }
         if (str.startsWith("matrix(")) {
-            C0859c q = q(str.substring(7));
+            c q = q(str.substring(7));
             if (q.a.size() == 6) {
                 Matrix matrix2 = new Matrix();
                 matrix2.setValues(new float[]{((Float) q.a.get(0)).floatValue(), ((Float) q.a.get(2)).floatValue(), ((Float) q.a.get(4)).floatValue(), ((Float) q.a.get(1)).floatValue(), ((Float) q.a.get(3)).floatValue(), ((Float) q.a.get(5)).floatValue(), 0.0f, 0.0f, 1.0f});
                 matrix.preConcat(matrix2);
             }
         } else if (str.startsWith("translate(")) {
-            C0859c q2 = q(str.substring(10));
+            c q2 = q(str.substring(10));
             if (q2.a.size() > 0) {
                 matrix.preTranslate(((Float) q2.a.get(0)).floatValue(), q2.a.size() > 1 ? ((Float) q2.a.get(1)).floatValue() : 0.0f);
             }
         } else if (str.startsWith("scale(")) {
-            C0859c q3 = q(str.substring(6));
+            c q3 = q(str.substring(6));
             if (q3.a.size() > 0) {
                 float floatValue = ((Float) q3.a.get(0)).floatValue();
                 matrix.preScale(floatValue, q3.a.size() > 1 ? ((Float) q3.a.get(1)).floatValue() : floatValue);
             }
         } else if (str.startsWith("skewX(")) {
-            C0859c q4 = q(str.substring(6));
+            c q4 = q(str.substring(6));
             if (q4.a.size() > 0) {
                 matrix.preSkew((float) Math.tan(((Float) q4.a.get(0)).floatValue()), 0.0f);
             }
         } else if (str.startsWith("skewY(")) {
-            C0859c q5 = q(str.substring(6));
+            c q5 = q(str.substring(6));
             if (q5.a.size() > 0) {
                 matrix.preSkew(0.0f, (float) Math.tan(((Float) q5.a.get(0)).floatValue()));
             }
         } else if (str.startsWith("rotate(")) {
-            C0859c q6 = q(str.substring(7));
+            c q6 = q(str.substring(7));
             if (q6.a.size() > 0) {
                 float floatValue2 = ((Float) q6.a.get(0)).floatValue();
                 if (q6.a.size() > 2) {

@@ -19,7 +19,7 @@ public class ProjectIntentExtraParser {
     /* loaded from: classes16.dex */
     public static class ProjectDetailExtrasData implements Parcelable {
         private static transient /* synthetic */ IpChange $ipChange;
-        public static final Parcelable.Creator<ProjectDetailExtrasData> CREATOR = new C2436a();
+        public static final Parcelable.Creator<ProjectDetailExtrasData> CREATOR = new a();
         public int backType;
         public String fromWhere;
         public boolean isFromPush;
@@ -30,12 +30,11 @@ public class ProjectIntentExtraParser {
         public RankInfo rankInfo;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.util.ProjectIntentExtraParser$ProjectDetailExtrasData$a */
         /* loaded from: classes16.dex */
-        public class C2436a implements Parcelable.Creator<ProjectDetailExtrasData> {
+        public class a implements Parcelable.Creator<ProjectDetailExtrasData> {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C2436a() {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator

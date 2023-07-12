@@ -14,7 +14,7 @@ import android.text.TextUtils;
 import com.alibaba.analytics.core.Variables;
 import com.alibaba.analytics.utils.Logger;
 import com.alibaba.wireless.security.aopsdk.replace.java.net.NetworkInterface;
-import com.alipay.sdk.m.u.C4300c;
+import com.alipay.sdk.m.u.c;
 import io.flutter.plugins.connectivity.ConnectivityBroadcastReceiver;
 import tb.hl2;
 import tb.xs2;
@@ -209,14 +209,14 @@ public class NetworkUtil {
                 WifiInfo connectionInfo = ((WifiManager) context.getSystemService("wifi")).getConnectionInfo();
                 if (connectionInfo != null) {
                     String macAddress = com.alibaba.wireless.security.aopsdk.replace.android.net.wifi.WifiInfo.getMacAddress(connectionInfo);
-                    return TextUtils.isEmpty(macAddress) ? C4300c.b : macAddress;
+                    return TextUtils.isEmpty(macAddress) ? c.b : macAddress;
                 }
-                return C4300c.b;
+                return c.b;
             } catch (Throwable unused) {
-                return C4300c.b;
+                return c.b;
             }
         }
-        return C4300c.b;
+        return c.b;
     }
 
     @TargetApi(23)
@@ -234,7 +234,7 @@ public class NetworkUtil {
             }
             return sb.toString();
         } catch (Exception unused) {
-            return C4300c.b;
+            return c.b;
         }
     }
 

@@ -10,9 +10,8 @@ import tb.b41;
 public interface Check {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.util.Check$a */
     /* loaded from: classes3.dex */
-    public static final class C8556a {
+    public static final class a {
         @Nullable
         public static String a(@NotNull Check check, @NotNull FunctionDescriptor functionDescriptor) {
             b41.i(check, "this");

@@ -1,11 +1,11 @@
 package io.reactivex.internal.operators.completable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8146a;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.a;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -24,7 +24,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class CompletableConcat extends AbstractC8146a {
+public final class CompletableConcat extends a {
     final int prefetch;
     final Publisher<? extends CompletableSource> sources;
 
@@ -176,7 +176,7 @@ public final class CompletableConcat extends AbstractC8146a {
                     }
                 }
                 if (this.prefetch == Integer.MAX_VALUE) {
-                    this.queue = new SpscLinkedArrayQueue(AbstractC8147b.bufferSize());
+                    this.queue = new SpscLinkedArrayQueue(b.bufferSize());
                 } else {
                     this.queue = new SpscArrayQueue(this.prefetch);
                 }
@@ -212,7 +212,7 @@ public final class CompletableConcat extends AbstractC8146a {
         this.prefetch = i;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     public void subscribeActual(CompletableObserver completableObserver) {
         this.sources.subscribe(new CompletableConcatSubscriber(completableObserver, this.prefetch));
     }

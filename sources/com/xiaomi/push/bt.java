@@ -7,8 +7,6 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.text.TextUtils;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
-import com.xiaomi.clientreport.manager.C7539a;
 import java.io.File;
 import java.util.Arrays;
 import java.util.List;
@@ -77,25 +75,25 @@ public class bt {
     /* renamed from: a  reason: collision with other method in class */
     public static boolean m708a(Context context, String str) {
         File file = new File(str);
-        long maxFileLength = C7539a.a(context).m591a().getMaxFileLength();
+        long maxFileLength = com.xiaomi.clientreport.manager.a.a(context).m591a().getMaxFileLength();
         if (file.exists()) {
             try {
                 if (file.length() > maxFileLength) {
                     return false;
                 }
             } catch (Exception e) {
-                AbstractC7535b.a(e);
+                com.xiaomi.channel.commonutils.logger.b.a(e);
                 return false;
             }
         } else {
-            C7594ab.m659a(file);
+            ab.m659a(file);
         }
         return true;
     }
 
     @TargetApi(9)
     public static byte[] a(String str) {
-        byte[] copyOf = Arrays.copyOf(C7613bm.m701a(str), 16);
+        byte[] copyOf = Arrays.copyOf(bm.m701a(str), 16);
         copyOf[0] = 68;
         copyOf[15] = 84;
         return copyOf;

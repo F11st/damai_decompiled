@@ -1,7 +1,7 @@
 package com.heytap.msp.push;
 
 import android.content.Context;
-import com.heytap.mcssdk.C5462c;
+import com.heytap.mcssdk.c;
 import com.heytap.msp.push.callback.ICallBackResultService;
 import com.heytap.msp.push.callback.IGetAppNotificationCallBackService;
 import com.heytap.msp.push.callback.ISetAppNotificationCallBackService;
@@ -20,7 +20,7 @@ public class HeytapPushManager {
     }
 
     public static void clearNotificationType(JSONObject jSONObject) {
-        C5462c.m().clearNotificationType(jSONObject);
+        c.m().clearNotificationType(jSONObject);
     }
 
     public static void clearNotifications() {
@@ -28,23 +28,23 @@ public class HeytapPushManager {
     }
 
     public static void clearNotifications(JSONObject jSONObject) {
-        C5462c.m().clearNotifications(jSONObject);
+        c.m().clearNotifications(jSONObject);
     }
 
     public static void disableAppNotificationSwitch(ISetAppNotificationCallBackService iSetAppNotificationCallBackService) {
-        C5462c.m().disableAppNotificationSwitch(iSetAppNotificationCallBackService);
+        c.m().disableAppNotificationSwitch(iSetAppNotificationCallBackService);
     }
 
     public static void enableAppNotificationSwitch(ISetAppNotificationCallBackService iSetAppNotificationCallBackService) {
-        C5462c.m().enableAppNotificationSwitch(iSetAppNotificationCallBackService);
+        c.m().enableAppNotificationSwitch(iSetAppNotificationCallBackService);
     }
 
     public static void getAppNotificationSwitch(IGetAppNotificationCallBackService iGetAppNotificationCallBackService) {
-        C5462c.m().getAppNotificationSwitch(iGetAppNotificationCallBackService);
+        c.m().getAppNotificationSwitch(iGetAppNotificationCallBackService);
     }
 
     public static String getMcsPackageName(Context context) {
-        return C5462c.m().o(context);
+        return c.m().o(context);
     }
 
     public static void getNotificationStatus() {
@@ -52,27 +52,27 @@ public class HeytapPushManager {
     }
 
     public static void getNotificationStatus(JSONObject jSONObject) {
-        C5462c.m().getNotificationStatus(jSONObject);
+        c.m().getNotificationStatus(jSONObject);
     }
 
     public static ICallBackResultService getPushCallback() {
-        return C5462c.m().s();
+        return c.m().s();
     }
 
     public static void getPushStatus() {
-        C5462c.m().v();
+        c.m().v();
     }
 
     public static int getPushVersionCode() {
-        return C5462c.m().w();
+        return c.m().w();
     }
 
     public static String getPushVersionName() {
-        return C5462c.m().x();
+        return c.m().x();
     }
 
     public static String getReceiveSdkAction(Context context) {
-        return C5462c.m().y(context);
+        return c.m().y(context);
     }
 
     public static void getRegister() {
@@ -80,27 +80,27 @@ public class HeytapPushManager {
     }
 
     public static void getRegister(JSONObject jSONObject) {
-        C5462c.m().getRegister(jSONObject);
+        c.m().getRegister(jSONObject);
     }
 
     public static String getRegisterID() {
-        return C5462c.m().getRegisterID();
+        return c.m().getRegisterID();
     }
 
     public static int getSDKVersionCode() {
-        return C5462c.z();
+        return c.z();
     }
 
     public static String getSDKVersionName() {
-        return C5462c.A();
+        return c.A();
     }
 
     public static void init(Context context, boolean z) {
-        C5462c.m().B(context, z);
+        c.m().B(context, z);
     }
 
     public static boolean isSupportPush(Context context) {
-        return C5462c.m().D(context);
+        return c.m().D(context);
     }
 
     public static void openNotificationSettings() {
@@ -108,7 +108,7 @@ public class HeytapPushManager {
     }
 
     public static void openNotificationSettings(JSONObject jSONObject) {
-        C5462c.m().openNotificationSettings(jSONObject);
+        c.m().openNotificationSettings(jSONObject);
     }
 
     public static void pausePush() {
@@ -116,7 +116,7 @@ public class HeytapPushManager {
     }
 
     public static void pausePush(JSONObject jSONObject) {
-        C5462c.m().pausePush(jSONObject);
+        c.m().pausePush(jSONObject);
     }
 
     public static void register(Context context, String str, String str2, ICallBackResultService iCallBackResultService) {
@@ -124,11 +124,11 @@ public class HeytapPushManager {
     }
 
     public static void register(Context context, String str, String str2, JSONObject jSONObject, ICallBackResultService iCallBackResultService) {
-        C5462c.m().register(context, str, str2, jSONObject, iCallBackResultService);
+        c.m().register(context, str, str2, jSONObject, iCallBackResultService);
     }
 
     public static void requestNotificationPermission() {
-        C5462c.m().requestNotificationPermission();
+        c.m().requestNotificationPermission();
     }
 
     public static void resumePush() {
@@ -136,11 +136,11 @@ public class HeytapPushManager {
     }
 
     public static void resumePush(JSONObject jSONObject) {
-        C5462c.m().resumePush(jSONObject);
+        c.m().resumePush(jSONObject);
     }
 
     public static void setAppKeySecret(String str, String str2) {
-        C5462c.m().F(str, str2);
+        c.m().F(str, str2);
     }
 
     public static void setNotificationType(int i) {
@@ -148,11 +148,11 @@ public class HeytapPushManager {
     }
 
     public static void setNotificationType(int i, JSONObject jSONObject) {
-        C5462c.m().setNotificationType(i, jSONObject);
+        c.m().setNotificationType(i, jSONObject);
     }
 
     public static void setPushCallback(ICallBackResultService iCallBackResultService) {
-        C5462c.m().G(iCallBackResultService);
+        c.m().G(iCallBackResultService);
     }
 
     public static void setPushTime(List<Integer> list, int i, int i2, int i3, int i4) {
@@ -160,11 +160,11 @@ public class HeytapPushManager {
     }
 
     public static void setPushTime(List<Integer> list, int i, int i2, int i3, int i4, JSONObject jSONObject) {
-        C5462c.m().setPushTime(list, i, i2, i3, i4, jSONObject);
+        c.m().setPushTime(list, i, i2, i3, i4, jSONObject);
     }
 
     public static void setRegisterID(String str) {
-        C5462c.m().setRegisterID(str);
+        c.m().setRegisterID(str);
     }
 
     public static void statisticEvent(Context context, String str, DataMessage dataMessage) {
@@ -186,10 +186,10 @@ public class HeytapPushManager {
     }
 
     public static void unRegister(Context context, String str, String str2, JSONObject jSONObject, ICallBackResultService iCallBackResultService) {
-        C5462c.m().J(context, str, str2, jSONObject, iCallBackResultService);
+        c.m().J(context, str, str2, jSONObject, iCallBackResultService);
     }
 
     public static void unRegister(JSONObject jSONObject) {
-        C5462c.m().unRegister(jSONObject);
+        c.m().unRegister(jSONObject);
     }
 }

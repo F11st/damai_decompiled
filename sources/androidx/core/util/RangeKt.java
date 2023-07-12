@@ -48,7 +48,7 @@ public final class RangeKt {
             /* JADX WARN: Incorrect types in method signature: (TT;)Z */
             @Override // kotlin.ranges.ClosedRange
             public boolean contains(@NotNull Comparable comparable) {
-                return ClosedRange.C8240a.a(this, comparable);
+                return ClosedRange.a.a(this, comparable);
             }
 
             /* JADX WARN: Incorrect return type in method signature: ()TT; */
@@ -67,7 +67,7 @@ public final class RangeKt {
 
             @Override // kotlin.ranges.ClosedRange
             public boolean isEmpty() {
-                return ClosedRange.C8240a.b(this);
+                return ClosedRange.a.b(this);
             }
         };
     }

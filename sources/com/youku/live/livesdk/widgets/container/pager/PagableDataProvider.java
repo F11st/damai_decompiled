@@ -9,7 +9,7 @@ import android.util.Base64;
 import android.util.Log;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.alipay.sdk.m.e0.C4186a;
+import com.alipay.sdk.m.e0.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.live.arch.utils.MapUtils;
@@ -91,7 +91,7 @@ public class PagableDataProvider implements PagableViewProvider.OnPagingLifecycl
             PagableDataProvider.this.requestListByTimer();
         }
     };
-    private final int timerForRequestListInterval = C4186a.a;
+    private final int timerForRequestListInterval = a.a;
     private volatile int pageSelected = 0;
     private volatile int pageVisited = 0;
     private volatile int pageTotalOffset = 0;

@@ -3,27 +3,25 @@ package tb;
 import kotlin.ExperimentalStdlibApi;
 import kotlin.SinceKotlin;
 import kotlin.WasExperimental;
-import kotlin.collections.AbstractC8186b;
 import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
 @SinceKotlin(version = "1.4")
 @WasExperimental(markerClass = {ExperimentalStdlibApi.class})
 /* loaded from: classes3.dex */
-public final class m7<E> extends AbstractC8186b<E> {
+public final class m7<E> extends kotlin.collections.b<E> {
     @NotNull
-    public static final C9432a Companion = new C9432a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final Object[] a = new Object[0];
 
     /* compiled from: Taobao */
-    /* renamed from: tb.m7$a */
     /* loaded from: classes3.dex */
-    public static final class C9432a {
-        private C9432a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9432a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

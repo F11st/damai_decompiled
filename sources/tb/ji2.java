@@ -8,14 +8,13 @@ import cn.damai.trade.R$id;
 import cn.damai.trade.R$string;
 import cn.damai.trade.newtradeorder.ui.projectdetail.common.bean.VenueBean;
 import cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.bean.StaticData;
-import cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.AbstractC2379a;
 import cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.OnHeadClickListener;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
-public class ji2 extends AbstractC2379a implements View.OnClickListener {
+public class ji2 extends cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.a implements View.OnClickListener {
     private static transient /* synthetic */ IpChange $ipChange;
     private final View e;
     private final TextView f;
@@ -34,7 +33,7 @@ public class ji2 extends AbstractC2379a implements View.OnClickListener {
         this.i = (TextView) view.findViewById(R$id.venue_distance_tv);
     }
 
-    @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.AbstractC2379a
+    @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.a
     public int a() {
         IpChange ipChange = $ipChange;
         return AndroidInstantRuntime.support(ipChange, "460897550") ? ((Integer) ipChange.ipc$dispatch("460897550", new Object[]{this})).intValue() : R$id.header_venue_ui;

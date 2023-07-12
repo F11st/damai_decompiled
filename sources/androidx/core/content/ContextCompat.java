@@ -77,7 +77,7 @@ import com.alibaba.aliweex.adapter.module.net.IWXConnection;
 import java.io.File;
 import java.util.HashMap;
 import java.util.concurrent.Executor;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
@@ -315,7 +315,7 @@ public class ContextCompat {
             hashMap.put(WallpaperManager.class, "wallpaper");
             hashMap.put(WifiP2pManager.class, "wifip2p");
             hashMap.put(WifiManager.class, "wifi");
-            hashMap.put(WindowManager.class, C9796v.ATTACH_MODE_WINDOW);
+            hashMap.put(WindowManager.class, v.ATTACH_MODE_WINDOW);
         }
 
         private LegacyServiceMapHolder() {

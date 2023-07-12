@@ -62,7 +62,7 @@ public final class FlowKt__DelayKt$fixedPeriodTicker$3 extends SuspendLambda imp
     public final java.lang.Object invokeSuspend(@org.jetbrains.annotations.NotNull java.lang.Object r8) {
         /*
             r7 = this;
-            java.lang.Object r0 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r0 = kotlin.coroutines.intrinsics.a.d()
             int r1 = r7.label
             r2 = 3
             r3 = 2
@@ -93,7 +93,7 @@ public final class FlowKt__DelayKt$fixedPeriodTicker$3 extends SuspendLambda imp
             long r5 = r7.$initialDelayMillis
             r7.L$0 = r1
             r7.label = r4
-            java.lang.Object r8 = kotlinx.coroutines.C8696j.a(r5, r7)
+            java.lang.Object r8 = kotlinx.coroutines.j.a(r5, r7)
             if (r8 != r0) goto L3c
             return r0
         L3c:
@@ -110,7 +110,7 @@ public final class FlowKt__DelayKt$fixedPeriodTicker$3 extends SuspendLambda imp
             long r4 = r8.$delayMillis
             r8.L$0 = r1
             r8.label = r2
-            java.lang.Object r4 = kotlinx.coroutines.C8696j.a(r4, r8)
+            java.lang.Object r4 = kotlinx.coroutines.j.a(r4, r8)
             if (r4 != r0) goto L3d
             return r0
         */

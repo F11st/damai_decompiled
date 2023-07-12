@@ -18,12 +18,11 @@ public class HuaweiSignInHelper extends SNSSignInAbstractHelper {
     public String SNS_TYPE = "huawei";
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.huawei.HuaweiSignInHelper$a */
     /* loaded from: classes11.dex */
-    class C6616a implements CommonDataCallback {
+    class a implements CommonDataCallback {
         final /* synthetic */ Activity a;
 
-        C6616a(Activity activity) {
+        a(Activity activity) {
             this.a = activity;
         }
 
@@ -61,7 +60,7 @@ public class HuaweiSignInHelper extends SNSSignInAbstractHelper {
     @Override // com.taobao.android.sns4android.SNSSignInAbstractHelper
     public void signIn(Activity activity) {
         if (ServiceFactory.getService(HuaweiService.class) != null) {
-            ((HuaweiService) ServiceFactory.getService(HuaweiService.class)).launchAuth(activity, new C6616a(activity));
+            ((HuaweiService) ServiceFactory.getService(HuaweiService.class)).launchAuth(activity, new a(activity));
             return;
         }
         SNSSignInListener sNSSignInListener = this.snsSignInListener;

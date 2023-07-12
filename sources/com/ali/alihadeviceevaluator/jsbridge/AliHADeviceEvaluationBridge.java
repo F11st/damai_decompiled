@@ -36,7 +36,7 @@ public class AliHADeviceEvaluationBridge extends WVApiPlugin {
                 }
                 if (!str2.contains("memory") || z2) {
                     JSONObject jSONObject = new JSONObject();
-                    k4.C9332d e = k4.d().e();
+                    k4.d e = k4.d().e();
                     jSONObject.put("jvmUsedMemory", e.d);
                     jSONObject.put("jvmTotalMemory", e.c);
                     jSONObject.put("nativeUsedMemory", e.f);
@@ -52,7 +52,7 @@ public class AliHADeviceEvaluationBridge extends WVApiPlugin {
                 }
                 if (!str2.contains("cpu") || z2) {
                     JSONObject jSONObject2 = new JSONObject();
-                    k4.C9330b b = k4.d().b();
+                    k4.b b = k4.d().b();
                     jSONObject2.put("frequency", b.b);
                     jSONObject2.put("cpuUsageOfApp", b.c);
                     jSONObject2.put("cpuUsageOfDevice", b.d);
@@ -78,7 +78,7 @@ public class AliHADeviceEvaluationBridge extends WVApiPlugin {
             if (!str2.contains("memory")) {
             }
             JSONObject jSONObject3 = new JSONObject();
-            k4.C9332d e2 = k4.d().e();
+            k4.d e2 = k4.d().e();
             jSONObject3.put("jvmUsedMemory", e2.d);
             jSONObject3.put("jvmTotalMemory", e2.c);
             jSONObject3.put("nativeUsedMemory", e2.f);
@@ -94,7 +94,7 @@ public class AliHADeviceEvaluationBridge extends WVApiPlugin {
             if (!str2.contains("cpu")) {
             }
             JSONObject jSONObject22 = new JSONObject();
-            k4.C9330b b2 = k4.d().b();
+            k4.b b2 = k4.d().b();
             jSONObject22.put("frequency", b2.b);
             jSONObject22.put("cpuUsageOfApp", b2.c);
             jSONObject22.put("cpuUsageOfDevice", b2.d);

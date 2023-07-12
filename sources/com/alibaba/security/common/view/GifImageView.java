@@ -29,14 +29,13 @@ public class GifImageView extends ImageView {
     private volatile boolean l;
     private volatile boolean m;
     private boolean n;
-    private InterfaceC3838a o;
+    private a o;
     private int p;
     private final boolean q;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.security.common.view.GifImageView$a */
     /* loaded from: classes8.dex */
-    public interface InterfaceC3838a {
+    public interface a {
         void a();
 
         void b();
@@ -53,10 +52,10 @@ public class GifImageView extends ImageView {
         setLayerType(1, null);
     }
 
-    private void a(String str, InterfaceC3838a interfaceC3838a) {
+    private void a(String str, a aVar) {
         Bitmap decodeFile;
         this.f = Movie.decodeFile(str);
-        this.o = interfaceC3838a;
+        this.o = aVar;
         d();
         if (this.f == null && (decodeFile = BitmapFactory.decodeFile(str)) != null) {
             setImageBitmap(decodeFile);

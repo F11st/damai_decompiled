@@ -28,7 +28,7 @@ public class ba {
     public be f;
     bg g;
     private Context i;
-    private InterfaceC4482a l;
+    private a l;
     private bj m;
     private bp n;
     private boolean j = true;
@@ -36,14 +36,13 @@ public class ba {
     private ExecutorService o = null;
     private ExecutorService p = null;
     private ExecutorService q = null;
-    HandlerC4483b e = null;
+    b e = null;
     bd h = null;
     private boolean r = true;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.ba$a */
     /* loaded from: classes10.dex */
-    public interface InterfaceC4482a {
+    public interface a {
         void a();
 
         void a(az azVar);
@@ -55,10 +54,9 @@ public class ba {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.ba$b */
     /* loaded from: classes10.dex */
-    public class HandlerC4483b extends Handler {
-        public HandlerC4483b(Looper looper) {
+    public class b extends Handler {
+        public b(Looper looper) {
             super(looper);
         }
 
@@ -225,10 +223,10 @@ public class ba {
     public void c(String str) {
         az i = i(str);
         if (i == null) {
-            InterfaceC4482a interfaceC4482a = this.l;
-            if (interfaceC4482a != null) {
+            a aVar = this.l;
+            if (aVar != null) {
                 try {
-                    interfaceC4482a.c(i);
+                    aVar.c(i);
                     return;
                 } catch (Throwable th) {
                     hd.c(th, "OfflineDownloadManager", "remove");
@@ -273,9 +271,9 @@ public class ba {
             }
             this.h = null;
         }
-        HandlerC4483b handlerC4483b = this.e;
-        if (handlerC4483b != null) {
-            handlerC4483b.removeCallbacksAndMessages(null);
+        b bVar = this.e;
+        if (bVar != null) {
+            bVar.removeCallbacksAndMessages(null);
             this.e = null;
         }
         bj bjVar = this.m;
@@ -368,9 +366,9 @@ public class ba {
         if (beVar != null) {
             beVar.a(azVar);
         }
-        HandlerC4483b handlerC4483b = this.e;
-        if (handlerC4483b != null) {
-            Message obtainMessage = handlerC4483b.obtainMessage();
+        b bVar = this.e;
+        if (bVar != null) {
+            Message obtainMessage = bVar.obtainMessage();
             obtainMessage.obj = azVar;
             this.e.sendMessage(obtainMessage);
         }
@@ -438,9 +436,9 @@ public class ba {
     public void a() {
         this.n = bp.a(this.i.getApplicationContext());
         h();
-        HandlerC4483b handlerC4483b = new HandlerC4483b(this.i.getMainLooper());
-        this.e = handlerC4483b;
-        this.f = new be(this.i, handlerC4483b);
+        b bVar = new b(this.i.getMainLooper());
+        this.e = bVar;
+        this.f = new be(this.i, bVar);
         this.m = bj.a(1);
         g(eq.c(this.i));
         try {
@@ -512,10 +510,10 @@ public class ba {
 
     public void a(ArrayList<bk> arrayList) {
         j();
-        InterfaceC4482a interfaceC4482a = this.l;
-        if (interfaceC4482a != null) {
+        a aVar = this.l;
+        if (aVar != null) {
             try {
-                interfaceC4482a.a();
+                aVar.a();
             } catch (Throwable th) {
                 hd.c(th, "OfflineDownloadManager", "verifyCallBack");
             }
@@ -536,9 +534,9 @@ public class ba {
     public void a(final String str) {
         try {
             if (str == null) {
-                InterfaceC4482a interfaceC4482a = this.l;
-                if (interfaceC4482a != null) {
-                    interfaceC4482a.b(null);
+                a aVar = this.l;
+                if (aVar != null) {
+                    aVar.b(null);
                     return;
                 }
                 return;
@@ -687,7 +685,7 @@ public class ba {
         }
     }
 
-    public void a(InterfaceC4482a interfaceC4482a) {
-        this.l = interfaceC4482a;
+    public void a(a aVar) {
+        this.l = aVar;
     }
 }

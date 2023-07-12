@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.collections.C8212k;
+import kotlin.collections.k;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -45,121 +45,118 @@ public final class GXSliderViewAdapter extends PagerAdapter {
     private JSONArray f;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.view.container.slider.GXSliderViewAdapter$a */
     /* loaded from: classes6.dex */
-    public static final class C3378a implements GXTemplateEngine.GXIEventListener {
+    public static final class a implements GXTemplateEngine.GXIEventListener {
         final /* synthetic */ int a;
         final /* synthetic */ GXSliderViewAdapter b;
 
-        C3378a(int i, GXSliderViewAdapter gXSliderViewAdapter) {
+        a(int i, GXSliderViewAdapter gXSliderViewAdapter) {
             this.a = i;
             this.b = gXSliderViewAdapter;
         }
 
         @Override // com.alibaba.gaiax.GXTemplateEngine.GXIEventListener
-        public void onAnimationEvent(@NotNull GXTemplateEngine.C3338b c3338b) {
+        public void onAnimationEvent(@NotNull GXTemplateEngine.b bVar) {
             GXTemplateEngine.GXIEventListener c;
-            b41.i(c3338b, "gxAnimation");
-            GXTemplateEngine.GXIEventListener.C3335a.a(this, c3338b);
-            GXTemplateEngine.C3346h p = this.b.a().p();
+            b41.i(bVar, "gxAnimation");
+            GXTemplateEngine.GXIEventListener.a.a(this, bVar);
+            GXTemplateEngine.h p = this.b.a().p();
             if (p == null || (c = p.c()) == null) {
                 return;
             }
-            c.onAnimationEvent(c3338b);
+            c.onAnimationEvent(bVar);
         }
 
         @Override // com.alibaba.gaiax.GXTemplateEngine.GXIEventListener
-        public void onGestureEvent(@NotNull GXTemplateEngine.C3342e c3342e) {
+        public void onGestureEvent(@NotNull GXTemplateEngine.e eVar) {
             GXTemplateEngine.GXIEventListener c;
-            b41.i(c3342e, "gxGesture");
-            GXTemplateEngine.GXIEventListener.C3335a.b(this, c3342e);
-            c3342e.setIndex(Integer.valueOf(this.a));
-            GXTemplateEngine.C3346h p = this.b.a().p();
+            b41.i(eVar, "gxGesture");
+            GXTemplateEngine.GXIEventListener.a.b(this, eVar);
+            eVar.setIndex(Integer.valueOf(this.a));
+            GXTemplateEngine.h p = this.b.a().p();
             if (p == null || (c = p.c()) == null) {
                 return;
             }
-            c.onGestureEvent(c3342e);
+            c.onGestureEvent(eVar);
         }
 
         @Override // com.alibaba.gaiax.GXTemplateEngine.GXIEventListener
-        public void onScrollEvent(@NotNull GXTemplateEngine.C3344g c3344g) {
+        public void onScrollEvent(@NotNull GXTemplateEngine.g gVar) {
             GXTemplateEngine.GXIEventListener c;
-            b41.i(c3344g, "gxScroll");
-            GXTemplateEngine.GXIEventListener.C3335a.c(this, c3344g);
-            GXTemplateEngine.C3346h p = this.b.a().p();
+            b41.i(gVar, "gxScroll");
+            GXTemplateEngine.GXIEventListener.a.c(this, gVar);
+            GXTemplateEngine.h p = this.b.a().p();
             if (p == null || (c = p.c()) == null) {
                 return;
             }
-            c.onScrollEvent(c3344g);
+            c.onScrollEvent(gVar);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.view.container.slider.GXSliderViewAdapter$b */
     /* loaded from: classes6.dex */
-    public static final class C3379b implements GXTemplateEngine.GXITrackListener {
+    public static final class b implements GXTemplateEngine.GXITrackListener {
         final /* synthetic */ int a;
         final /* synthetic */ GXSliderViewAdapter b;
 
-        C3379b(int i, GXSliderViewAdapter gXSliderViewAdapter) {
+        b(int i, GXSliderViewAdapter gXSliderViewAdapter) {
             this.a = i;
             this.b = gXSliderViewAdapter;
         }
 
         @Override // com.alibaba.gaiax.GXTemplateEngine.GXITrackListener
-        public void onManualClickTrackEvent(@NotNull GXTemplateEngine.C3349k c3349k) {
+        public void onManualClickTrackEvent(@NotNull GXTemplateEngine.k kVar) {
             GXTemplateEngine.GXITrackListener f;
-            b41.i(c3349k, "gxTrack");
-            c3349k.e(Integer.valueOf(this.a));
-            GXTemplateEngine.C3346h p = this.b.a().p();
+            b41.i(kVar, "gxTrack");
+            kVar.e(Integer.valueOf(this.a));
+            GXTemplateEngine.h p = this.b.a().p();
             if (p == null || (f = p.f()) == null) {
                 return;
             }
-            f.onManualClickTrackEvent(c3349k);
+            f.onManualClickTrackEvent(kVar);
         }
 
         @Override // com.alibaba.gaiax.GXTemplateEngine.GXITrackListener
-        public void onManualExposureTrackEvent(@NotNull GXTemplateEngine.C3349k c3349k) {
+        public void onManualExposureTrackEvent(@NotNull GXTemplateEngine.k kVar) {
             GXTemplateEngine.GXITrackListener f;
-            b41.i(c3349k, "gxTrack");
-            c3349k.e(Integer.valueOf(this.a));
-            GXTemplateEngine.C3346h p = this.b.a().p();
+            b41.i(kVar, "gxTrack");
+            kVar.e(Integer.valueOf(this.a));
+            GXTemplateEngine.h p = this.b.a().p();
             if (p == null || (f = p.f()) == null) {
                 return;
             }
-            f.onManualExposureTrackEvent(c3349k);
+            f.onManualExposureTrackEvent(kVar);
         }
 
         @Override // com.alibaba.gaiax.GXTemplateEngine.GXITrackListener
-        public void onTrackEvent(@NotNull GXTemplateEngine.C3349k c3349k) {
+        public void onTrackEvent(@NotNull GXTemplateEngine.k kVar) {
             GXTemplateEngine.GXITrackListener f;
-            b41.i(c3349k, "gxTrack");
-            c3349k.e(Integer.valueOf(this.a));
-            GXTemplateEngine.C3346h p = this.b.a().p();
+            b41.i(kVar, "gxTrack");
+            kVar.e(Integer.valueOf(this.a));
+            GXTemplateEngine.h p = this.b.a().p();
             if (p == null || (f = p.f()) == null) {
                 return;
             }
-            f.onTrackEvent(c3349k);
+            f.onTrackEvent(kVar);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.view.container.slider.GXSliderViewAdapter$c */
     /* loaded from: classes6.dex */
-    public static final class C3380c implements GXTemplateEngine.GXIDataListener {
-        C3380c() {
+    public static final class c implements GXTemplateEngine.GXIDataListener {
+        c() {
         }
 
         @Override // com.alibaba.gaiax.GXTemplateEngine.GXIDataListener
         @Nullable
-        public CharSequence onTextProcess(@NotNull GXTemplateEngine.C3348j c3348j) {
+        public CharSequence onTextProcess(@NotNull GXTemplateEngine.j jVar) {
             GXTemplateEngine.GXIDataListener b;
-            b41.i(c3348j, "gxTextData");
-            GXTemplateEngine.C3346h p = GXSliderViewAdapter.this.a().p();
+            b41.i(jVar, "gxTextData");
+            GXTemplateEngine.h p = GXSliderViewAdapter.this.a().p();
             if (p == null || (b = p.b()) == null) {
                 return null;
             }
-            return b.onTextProcess(c3348j);
+            return b.onTextProcess(jVar);
         }
     }
 
@@ -185,13 +182,13 @@ public final class GXSliderViewAdapter extends PagerAdapter {
         return b41.r("item_", Integer.valueOf(i));
     }
 
-    private final GXTemplateEngine.C3347i e() {
+    private final GXTemplateEngine.i e() {
         Pair pair;
-        List<Pair<GXTemplateEngine.C3347i, qs0>> c = this.b.c();
-        if (c == null || (pair = (Pair) C8212k.R(c)) == null) {
+        List<Pair<GXTemplateEngine.i, qs0>> c2 = this.b.c();
+        if (c2 == null || (pair = (Pair) k.R(c2)) == null) {
             return null;
         }
-        return (GXTemplateEngine.C3347i) pair.getFirst();
+        return (GXTemplateEngine.i) pair.getFirst();
     }
 
     @NotNull
@@ -254,63 +251,63 @@ public final class GXSliderViewAdapter extends PagerAdapter {
         View f;
         b41.i(viewGroup, "container");
         int size = this.f.size() > 0 ? i % this.f.size() : i;
-        GXTemplateEngine.C3347i e = e();
+        GXTemplateEngine.i e = e();
         if (e != null) {
             JSONObject jSONObject = this.f.getJSONObject(size);
             if (jSONObject == null) {
                 jSONObject = new JSONObject();
             }
             JSONObject jSONObject2 = jSONObject;
-            List<Pair<GXTemplateEngine.C3347i, qs0>> c = this.b.c();
-            qs0 qs0Var = (c == null || (pair = (Pair) C8212k.R(c)) == null) ? null : (qs0) pair.getSecond();
+            List<Pair<GXTemplateEngine.i, qs0>> c2 = this.b.c();
+            qs0 qs0Var = (c2 == null || (pair = (Pair) k.R(c2)) == null) ? null : (qs0) pair.getSecond();
             vr0 vr0Var = vr0.INSTANCE;
             ld2<Float> z = vr0Var.z(this.a, this.b);
-            GXTemplateEngine.C3343f c3343f = new GXTemplateEngine.C3343f(z.b(), z.a());
-            ViewPager.LayoutParams b = b(vr0Var.x(this.a, this.b, z, jSONObject2, size));
+            GXTemplateEngine.f fVar = new GXTemplateEngine.f(z.b(), z.a());
+            ViewPager.LayoutParams b2 = b(vr0Var.x(this.a, this.b, z, jSONObject2, size));
             Context context = viewGroup.getContext();
             b41.h(context, "container.context");
             GXItemContainer gXItemContainer = new GXItemContainer(context);
-            gXItemContainer.setLayoutParams(b);
+            gXItemContainer.setLayoutParams(b2);
             GXRegisterCenter.GXIExtensionContainerItemBind f2 = GXRegisterCenter.Companion.a().f();
             if (f2 != null) {
-                GXTemplateEngine.C3346h p = this.a.p();
+                GXTemplateEngine.h p = this.a.p();
                 Object e2 = p == null ? null : p.e();
-                GXTemplateEngine.C3341d c3341d = new GXTemplateEngine.C3341d();
-                c3341d.g(Integer.valueOf(size));
-                c3341d.f(jSONObject2);
-                c3341d.e(a());
-                c3341d.h(qs0Var);
+                GXTemplateEngine.d dVar = new GXTemplateEngine.d();
+                dVar.g(Integer.valueOf(size));
+                dVar.f(jSONObject2);
+                dVar.e(a());
+                dVar.h(qs0Var);
                 wt2 wt2Var = wt2.INSTANCE;
-                f2.bindViewHolder(e2, gXItemContainer, c3343f, e, c3341d);
+                f2.bindViewHolder(e2, gXItemContainer, fVar, e, dVar);
             } else {
                 if (gXItemContainer.getChildCount() != 0) {
                     f = gXItemContainer.getChildAt(0);
                 } else {
-                    GXTemplateEngine.C3337a c3337a = GXTemplateEngine.Companion;
-                    GXTemplateEngine.v(c3337a.a(), e, c3343f, null, 4, null);
-                    GXTemplateEngine a = c3337a.a();
-                    GXTemplateEngine.C3341d c3341d2 = new GXTemplateEngine.C3341d();
-                    c3341d2.g(Integer.valueOf(size));
-                    c3341d2.f(jSONObject2);
-                    c3341d2.e(a());
-                    c3341d2.h(qs0Var);
+                    GXTemplateEngine.a aVar = GXTemplateEngine.Companion;
+                    GXTemplateEngine.v(aVar.a(), e, fVar, null, 4, null);
+                    GXTemplateEngine a2 = aVar.a();
+                    GXTemplateEngine.d dVar2 = new GXTemplateEngine.d();
+                    dVar2.g(Integer.valueOf(size));
+                    dVar2.f(jSONObject2);
+                    dVar2.e(a());
+                    dVar2.h(qs0Var);
                     wt2 wt2Var2 = wt2.INSTANCE;
-                    os0 e3 = a.e(e, c3343f, c3341d2);
+                    os0 e3 = a2.e(e, fVar, dVar2);
                     if (e3 != null) {
-                        f = c3337a.a().f(e3);
+                        f = aVar.a().f(e3);
                         gXItemContainer.addView(f);
                     } else {
                         throw new IllegalArgumentException("Create GXTemplateContext fail, please check");
                     }
                 }
-                GXTemplateEngine.C3346h c3346h = new GXTemplateEngine.C3346h(jSONObject2);
-                c3346h.h(new C3378a(size, this));
-                c3346h.k(new C3379b(size, this));
-                c3346h.g(new C3380c());
+                GXTemplateEngine.h hVar = new GXTemplateEngine.h(jSONObject2);
+                hVar.h(new a(size, this));
+                hVar.k(new b(size, this));
+                hVar.g(new c());
                 if (f != null) {
-                    GXTemplateEngine.C3337a c3337a2 = GXTemplateEngine.Companion;
-                    c3337a2.a().b(f, c3346h, c3343f);
-                    c3337a2.a().c(f, c3346h, c3343f);
+                    GXTemplateEngine.a aVar2 = GXTemplateEngine.Companion;
+                    aVar2.a().b(f, hVar, fVar);
+                    aVar2.a().c(f, hVar, fVar);
                     gXItemContainer.getLayoutParams().width = f.getLayoutParams().width;
                 }
             }

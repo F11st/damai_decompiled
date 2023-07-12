@@ -132,7 +132,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
             }
         }
 
-        /* synthetic */ PageListener(PagerSlidingTabStrip pagerSlidingTabStrip, ViewTreeObserver$OnGlobalLayoutListenerC0956a viewTreeObserver$OnGlobalLayoutListenerC0956a) {
+        /* synthetic */ PageListener(PagerSlidingTabStrip pagerSlidingTabStrip, a aVar) {
             this();
         }
     }
@@ -141,16 +141,15 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
     /* loaded from: classes.dex */
     public static class SavedState extends View.BaseSavedState {
         private static transient /* synthetic */ IpChange $ipChange;
-        public static final Parcelable.Creator<SavedState> CREATOR = new C0955a();
+        public static final Parcelable.Creator<SavedState> CREATOR = new a();
         int currentPosition;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.commonbusiness.view.PagerSlidingTabStrip$SavedState$a */
         /* loaded from: classes.dex */
-        public class C0955a implements Parcelable.Creator<SavedState> {
+        public class a implements Parcelable.Creator<SavedState> {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C0955a() {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator
@@ -168,7 +167,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
             }
         }
 
-        /* synthetic */ SavedState(Parcel parcel, ViewTreeObserver$OnGlobalLayoutListenerC0956a viewTreeObserver$OnGlobalLayoutListenerC0956a) {
+        /* synthetic */ SavedState(Parcel parcel, a aVar) {
             this(parcel);
         }
 
@@ -194,12 +193,11 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.view.PagerSlidingTabStrip$a */
     /* loaded from: classes.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC0956a implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class a implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC0956a() {
+        a() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -223,13 +221,12 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.view.PagerSlidingTabStrip$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0957b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        View$OnClickListenerC0957b(int i) {
+        b(int i) {
             this.a = i;
         }
 
@@ -245,13 +242,12 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.view.PagerSlidingTabStrip$c */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0958c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        View$OnClickListenerC0958c(int i) {
+        c(int i) {
             this.a = i;
         }
 
@@ -280,7 +276,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
         ImageButton imageButton = new ImageButton(getContext());
         imageButton.setFocusable(true);
         imageButton.setImageResource(i2);
-        imageButton.setOnClickListener(new View$OnClickListenerC0958c(i));
+        imageButton.setOnClickListener(new c(i));
         this.tabsContainer.addView(imageButton);
     }
 
@@ -298,7 +294,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
         textView.setGravity(17);
         textView.setSingleLine();
         linearLayout.addView(textView);
-        linearLayout.setOnClickListener(new View$OnClickListenerC0957b(i));
+        linearLayout.setOnClickListener(new b(i));
         this.tabsContainer.addView(linearLayout);
     }
 
@@ -478,7 +474,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
         updateTabStyles();
         setTextStatus(this.pager.getCurrentItem());
         this.checkedTabWidths = false;
-        getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC0956a());
+        getViewTreeObserver().addOnGlobalLayoutListener(new a());
     }
 
     /* JADX WARN: Removed duplicated region for block: B:51:0x013d  */

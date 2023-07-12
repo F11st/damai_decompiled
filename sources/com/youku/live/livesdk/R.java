@@ -518,9 +518,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.live.livesdk.R$color */
     /* loaded from: classes12.dex */
-    public static final class C7958color {
+    public static final class color {
         public static final int abc_background_cache_hint_selector_material_dark = 0x7f06003a;
         public static final int abc_background_cache_hint_selector_material_light = 0x7f06003b;
         public static final int abc_btn_colored_borderless_text_material = 0x7f06003c;
@@ -622,7 +621,7 @@ public final class R {
         public static final int uik_dialog_bg = 0x7f06053b;
         public static final int uik_text_color = 0x7f06053e;
 
-        private C7958color() {
+        private color() {
         }
     }
 
@@ -803,9 +802,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.live.livesdk.R$drawable */
     /* loaded from: classes12.dex */
-    public static final class C7959drawable {
+    public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha = 0x7f080006;
         public static final int abc_action_bar_item_background_material = 0x7f080007;
         public static final int abc_btn_borderless_material = 0x7f080009;
@@ -921,7 +919,7 @@ public final class R {
         public static final int uik_imagesave_btn = 0x7f080f3a;
         public static final int weex_error = 0x7f080ff5;
 
-        private C7959drawable() {
+        private drawable() {
         }
     }
 
@@ -1176,9 +1174,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.live.livesdk.R$layout */
     /* loaded from: classes12.dex */
-    public static final class C7960layout {
+    public static final class layout {
         public static final int abc_action_bar_title_item = 0x7f0c0000;
         public static final int abc_action_bar_up_container = 0x7f0c0001;
         public static final int abc_action_menu_item_layout = 0x7f0c0002;
@@ -1246,7 +1243,7 @@ public final class R {
         public static final int uik_image_save_choice = 0x7f0c0802;
         public static final int uik_image_save_dialog = 0x7f0c0803;
 
-        private C7960layout() {
+        private layout() {
         }
     }
 
@@ -1294,9 +1291,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.live.livesdk.R$style */
     /* loaded from: classes12.dex */
-    public static final class C7961style {
+    public static final class style {
         public static final int AlertDialog_AppCompat = 0x7f120009;
         public static final int AlertDialog_AppCompat_Light = 0x7f12000a;
         public static final int Animation_AppCompat_Dialog = 0x7f120020;
@@ -1683,7 +1679,7 @@ public final class R {
         public static final int uik_imagesavechoice = 0x7f120574;
         public static final int uik_imagesavedialog = 0x7f120575;
 
-        private C7961style() {
+        private style() {
         }
     }
 

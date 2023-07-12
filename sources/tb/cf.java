@@ -1,7 +1,6 @@
 package tb;
 
 import com.google.common.annotations.GwtCompatible;
-import com.google.common.base.C4834e;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 
 /* compiled from: Taobao */
@@ -67,6 +66,6 @@ public final class cf {
     }
 
     public String toString() {
-        return C4834e.b(this).c("hitCount", this.a).c("missCount", this.b).c("loadSuccessCount", this.c).c("loadExceptionCount", this.d).c("totalLoadTime", this.e).c("evictionCount", this.f).toString();
+        return com.google.common.base.e.b(this).c("hitCount", this.a).c("missCount", this.b).c("loadSuccessCount", this.c).c("loadExceptionCount", this.d).c("totalLoadTime", this.e).c("evictionCount", this.f).toString();
     }
 }

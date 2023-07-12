@@ -3,7 +3,6 @@ package com.xiaomi.mipush.sdk;
 import android.content.Context;
 import android.os.SystemClock;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import java.util.Map;
 
 /* compiled from: Taobao */
@@ -15,9 +14,9 @@ public class FTOSPushHelper {
     private static volatile boolean f24a;
 
     private static void a(Context context) {
-        AbstractPushManager a2 = C7569f.a(context).a(EnumC7568e.ASSEMBLE_PUSH_FTOS);
+        AbstractPushManager a2 = f.a(context).a(e.ASSEMBLE_PUSH_FTOS);
         if (a2 != null) {
-            AbstractC7535b.m586a("ASSEMBLE_PUSH :  register fun touch os when network change!");
+            com.xiaomi.channel.commonutils.logger.b.m586a("ASSEMBLE_PUSH :  register fun touch os when network change!");
             a2.register();
         }
     }
@@ -38,7 +37,7 @@ public class FTOSPushHelper {
     }
 
     public static boolean hasNetwork(Context context) {
-        return C7572i.m652a(context);
+        return i.m652a(context);
     }
 
     public static void notifyFTOSNotificationClicked(Context context, Map<String, String> map) {
@@ -47,10 +46,10 @@ public class FTOSPushHelper {
             return;
         }
         String str = map.get("pushMsg");
-        if (TextUtils.isEmpty(str) || (a2 = C7572i.a(context)) == null) {
+        if (TextUtils.isEmpty(str) || (a2 = i.a(context)) == null) {
             return;
         }
-        MiPushMessage a3 = C7572i.a(str);
+        MiPushMessage a3 = i.a(str);
         if (a3.getExtra().containsKey("notify_effect")) {
             return;
         }
@@ -62,6 +61,6 @@ public class FTOSPushHelper {
     }
 
     public static void uploadToken(Context context, String str) {
-        C7572i.m651a(context, EnumC7568e.ASSEMBLE_PUSH_FTOS, str);
+        i.m651a(context, e.ASSEMBLE_PUSH_FTOS, str);
     }
 }

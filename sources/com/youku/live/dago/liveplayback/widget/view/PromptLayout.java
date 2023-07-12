@@ -59,7 +59,7 @@ public class PromptLayout extends RelativeLayout {
             ipChange.ipc$dispatch("1393130434", new Object[]{this});
             return;
         }
-        LayoutInflater.from(getContext()).inflate(R.C7935layout.dago_player_view_prompt, (ViewGroup) this, true);
+        LayoutInflater.from(getContext()).inflate(R.layout.dago_player_view_prompt, (ViewGroup) this, true);
         this.mPromptTv = (TextView) findViewById(R.id.f1035tv);
         this.mPromptBtn = (Button) findViewById(R.id.btn);
         this.mCoverIv = (ImageView) findViewById(R.id.iv);

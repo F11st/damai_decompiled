@@ -6,11 +6,11 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseFragment;
 import cn.damai.common.app.base.BaseModel;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.app.base.a;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.ResponseErrorPage;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -18,13 +18,13 @@ import java.util.ArrayList;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
-public abstract class DamaiBaseMvpFragment<T extends AbstractC0470a, E extends BaseModel> extends BaseFragment<T, E> implements ResponseErrorPage.ErrorRefreshListener {
+public abstract class DamaiBaseMvpFragment<T extends a, E extends BaseModel> extends BaseFragment<T, E> implements ResponseErrorPage.ErrorRefreshListener {
     private static transient /* synthetic */ IpChange $ipChange;
     public Activity mActivity;
     public DamaiBaseActivity mBaseActivity;
-    private C0525a.C0527b mBuilder;
+    private a.b mBuilder;
     protected ResponseErrorPage mErrorPage;
-    public C0525a.C0527b mUTBuilder;
+    public a.b mUTBuilder;
     public boolean isNeedOnResumeUt = true;
     public boolean isNeedOnPauseUt = true;
     public boolean isFirstShowFragment = false;
@@ -40,9 +40,9 @@ public abstract class DamaiBaseMvpFragment<T extends AbstractC0470a, E extends B
         }
     }
 
-    public C0525a.C0527b getDamaiUTKeyBuilder() {
+    public a.b getDamaiUTKeyBuilder() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1190699366") ? (C0525a.C0527b) ipChange.ipc$dispatch("-1190699366", new Object[]{this}) : this.mBuilder;
+        return AndroidInstantRuntime.support(ipChange, "-1190699366") ? (a.b) ipChange.ipc$dispatch("-1190699366", new Object[]{this}) : this.mBuilder;
     }
 
     @Override // cn.damai.common.app.base.BaseFragment, androidx.fragment.app.Fragment
@@ -68,7 +68,7 @@ public abstract class DamaiBaseMvpFragment<T extends AbstractC0470a, E extends B
             return;
         }
         if (isVisible() && !z) {
-            C0529c.e().o(this, this.mBuilder);
+            c.e().o(this, this.mBuilder);
             this.mBaseActivity.setCurrentFragment(this);
         }
         ArrayList<DamaiBaseMvpFragment> arrayList = this.mBaseActivity.fragmentList;
@@ -136,11 +136,11 @@ public abstract class DamaiBaseMvpFragment<T extends AbstractC0470a, E extends B
                 DamaiBaseMvpFragment damaiBaseMvpFragment = this.mBaseActivity.lastHandleFragment;
                 if (damaiBaseMvpFragment != null) {
                     if (damaiBaseMvpFragment.equals(this)) {
-                        C0529c.e().o(this, this.mBuilder);
+                        c.e().o(this, this.mBuilder);
                         this.mBaseActivity.lastHandleFragment = null;
                     }
                 } else {
-                    C0529c.e().o(this, this.mBuilder);
+                    c.e().o(this, this.mBuilder);
                 }
             } else {
                 this.isNeedOnResumeUt = true;
@@ -163,7 +163,7 @@ public abstract class DamaiBaseMvpFragment<T extends AbstractC0470a, E extends B
         }
         if (this.isNeedOnPauseUt && !damaiBaseActivity.isFinishing() && getUserVisibleHint()) {
             this.mBaseActivity.fragmentList.remove(this);
-            C0525a.C0527b damaiUTKeyBuilder = this.mBaseActivity.getDamaiUTKeyBuilder();
+            a.b damaiUTKeyBuilder = this.mBaseActivity.getDamaiUTKeyBuilder();
             ArrayList<DamaiBaseMvpFragment> arrayList = this.mBaseActivity.fragmentList;
             if (arrayList != null) {
                 if (arrayList.size() > 0) {
@@ -173,7 +173,7 @@ public abstract class DamaiBaseMvpFragment<T extends AbstractC0470a, E extends B
                     damaiUTKeyBuilder = this.mBaseActivity.getDamaiUTKeyBuilder();
                 }
             }
-            C0529c.e().o(this, damaiUTKeyBuilder);
+            c.e().o(this, damaiUTKeyBuilder);
         } else {
             DamaiBaseActivity damaiBaseActivity2 = this.mBaseActivity;
             if (damaiBaseActivity2 != null) {
@@ -190,16 +190,16 @@ public abstract class DamaiBaseMvpFragment<T extends AbstractC0470a, E extends B
         if (AndroidInstantRuntime.support(ipChange, "1071475210")) {
             ipChange.ipc$dispatch("1071475210", new Object[]{this});
         } else if (this.mUTBuilder != null) {
-            C0529c.e().o(this, this.mUTBuilder);
+            c.e().o(this, this.mUTBuilder);
         }
     }
 
-    public void setDamaiUTKeyBuilder(C0525a.C0527b c0527b) {
+    public void setDamaiUTKeyBuilder(a.b bVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "514256184")) {
-            ipChange.ipc$dispatch("514256184", new Object[]{this, c0527b});
+            ipChange.ipc$dispatch("514256184", new Object[]{this, bVar});
         } else {
-            this.mBuilder = c0527b;
+            this.mBuilder = bVar;
         }
     }
 
@@ -215,12 +215,12 @@ public abstract class DamaiBaseMvpFragment<T extends AbstractC0470a, E extends B
         }
     }
 
-    public void setUTBuilder(C0525a.C0527b c0527b) {
+    public void setUTBuilder(a.b bVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1505099489")) {
-            ipChange.ipc$dispatch("1505099489", new Object[]{this, c0527b});
+            ipChange.ipc$dispatch("1505099489", new Object[]{this, bVar});
         } else {
-            this.mUTBuilder = c0527b;
+            this.mUTBuilder = bVar;
         }
     }
 
@@ -241,7 +241,7 @@ public abstract class DamaiBaseMvpFragment<T extends AbstractC0470a, E extends B
             return;
         }
         if (z) {
-            C0529c.e().o(this, this.mBuilder);
+            c.e().o(this, this.mBuilder);
             this.mBaseActivity.setCurrentFragment(this);
         }
         ArrayList<DamaiBaseMvpFragment> arrayList = this.mBaseActivity.fragmentList;

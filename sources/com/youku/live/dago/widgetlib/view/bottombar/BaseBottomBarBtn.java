@@ -33,7 +33,7 @@ public abstract class BaseBottomBarBtn extends FrameLayout {
         super(context);
         this.mType = i;
         this.onBtnClickListener = onBtnClickListener;
-        setBackgroundResource(R.C7941drawable.dago_pgc_bg_bottom_btn);
+        setBackgroundResource(R.drawable.dago_pgc_bg_bottom_btn);
         setLayoutParams(getBtnLayoutParams());
         addView(getContentView());
         setOnClickListener(new CustomClickListener() { // from class: com.youku.live.dago.widgetlib.view.bottombar.BaseBottomBarBtn.1

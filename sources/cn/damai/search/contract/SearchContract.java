@@ -1,8 +1,8 @@
 package cn.damai.search.contract;
 
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseModel;
 import cn.damai.common.app.base.BaseView;
+import cn.damai.common.app.base.a;
 import cn.damai.commonbusiness.artist.ArtistFollowResultBean;
 import cn.damai.commonbusiness.search.bean.BaccountInfo;
 import cn.damai.search.bean.PageIndexParams;
@@ -23,7 +23,7 @@ public interface SearchContract {
 
     /* compiled from: Taobao */
     /* loaded from: classes6.dex */
-    public static abstract class Presenter extends AbstractC0470a<View, Model> {
+    public static abstract class Presenter extends a<View, Model> {
         public abstract void getSearchEggs(String str);
 
         public abstract void getSearchFindList();

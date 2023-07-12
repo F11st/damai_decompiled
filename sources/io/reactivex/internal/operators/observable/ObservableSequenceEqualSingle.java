@@ -1,11 +1,11 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
-import io.reactivex.AbstractC8152e;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.SingleObserver;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.functions.BiPredicate;
 import io.reactivex.internal.disposables.ArrayCompositeDisposable;
 import io.reactivex.internal.fuseable.FuseToObservable;
@@ -16,7 +16,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableSequenceEqualSingle<T> extends AbstractC8152e<Boolean> implements FuseToObservable<Boolean> {
+public final class ObservableSequenceEqualSingle<T> extends e<Boolean> implements FuseToObservable<Boolean> {
     final int bufferSize;
     final BiPredicate<? super T, ? super T> comparer;
     final ObservableSource<? extends T> first;
@@ -201,11 +201,11 @@ public final class ObservableSequenceEqualSingle<T> extends AbstractC8152e<Boole
     }
 
     @Override // io.reactivex.internal.fuseable.FuseToObservable
-    public AbstractC8149d<Boolean> fuseToObservable() {
+    public d<Boolean> fuseToObservable() {
         return i42.n(new ObservableSequenceEqual(this.first, this.second, this.comparer, this.bufferSize));
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     public void subscribeActual(SingleObserver<? super Boolean> singleObserver) {
         EqualCoordinator equalCoordinator = new EqualCoordinator(singleObserver, this.bufferSize, this.first, this.second, this.comparer);
         singleObserver.onSubscribe(equalCoordinator);

@@ -43,9 +43,9 @@ import com.youku.live.livesdk.wkit.component.Constants;
 import java.util.Iterator;
 import java.util.List;
 import org.jetbrains.annotations.NotNull;
-import tb.C9039db;
 import tb.bz1;
 import tb.cb2;
+import tb.db;
 import tb.ja;
 import tb.jn1;
 import tb.m61;
@@ -178,7 +178,7 @@ public class RankFilterPlugin extends ComponentPlugin implements RankFilterViewM
                     }
                 }
                 if (iLayer != null) {
-                    List<Node> f = new C9039db().f(baseResponse);
+                    List<Node> f = new db().f(baseResponse);
                     iLayer.clearSectionList();
                     iLayer.createSectionList(f, true);
                 }

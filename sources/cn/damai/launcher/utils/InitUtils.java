@@ -16,7 +16,7 @@ import com.alibaba.pictures.bricks.channel.DamaiComponentFilterBridgeImpl;
 import com.alibaba.pictures.dolores.config.IGlobalConfig;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import tb.C8933b;
+import tb.b;
 import tb.b5;
 import tb.cb1;
 import tb.fd;
@@ -37,9 +37,8 @@ public class InitUtils {
     private static boolean a;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.launcher.utils.InitUtils$a */
     /* loaded from: classes15.dex */
-    static /* synthetic */ class C1312a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -127,7 +126,7 @@ public class InitUtils {
                 if (AndroidInstantRuntime.support(ipChange2, "1834127675")) {
                     return (String) ipChange2.ipc$dispatch("1834127675", new Object[]{this, key, str});
                 }
-                switch (C1312a.a[key.ordinal()]) {
+                switch (a.a[key.ordinal()]) {
                     case 1:
                         return "true";
                     case 2:
@@ -185,7 +184,7 @@ public class InitUtils {
         fd.c("initLocationSDK");
         d();
         f();
-        C8933b.INSTANCE.b(mu0.a());
+        b.INSTANCE.b(mu0.a());
         gm.INSTANCE.b(new DamaiComponentFilterBridgeImpl());
         c();
         nu1.a(new PriorityTask("workerThread", mu0.a(), 1) { // from class: cn.damai.launcher.utils.InitUtils.1

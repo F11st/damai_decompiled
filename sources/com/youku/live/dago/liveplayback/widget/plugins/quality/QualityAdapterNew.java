@@ -187,11 +187,11 @@ public class QualityAdapterNew extends RecyclerView.Adapter<RecyclerView.ViewHol
                 z2 = true;
             }
             if (z) {
-                commonViewHolder.qualityTitleView.setTextAppearance(this.mContext, R.C7938style.dago_vip_list_item_title_style);
-                commonViewHolder.subTitleView.setTextAppearance(this.mContext, R.C7938style.dago_vip_list_item_subtitle_style);
+                commonViewHolder.qualityTitleView.setTextAppearance(this.mContext, R.style.dago_vip_list_item_title_style);
+                commonViewHolder.subTitleView.setTextAppearance(this.mContext, R.style.dago_vip_list_item_subtitle_style);
             } else {
-                commonViewHolder.qualityTitleView.setTextAppearance(this.mContext, R.C7938style.dago_normal_list_item_title_style);
-                commonViewHolder.subTitleView.setTextAppearance(this.mContext, R.C7938style.dago_normal_list_item_subtitle_style);
+                commonViewHolder.qualityTitleView.setTextAppearance(this.mContext, R.style.dago_normal_list_item_title_style);
+                commonViewHolder.subTitleView.setTextAppearance(this.mContext, R.style.dago_normal_list_item_subtitle_style);
             }
             commonViewHolder.titleContentView.setSelected(this.mSelection == i);
             if (z2) {
@@ -252,7 +252,7 @@ public class QualityAdapterNew extends RecyclerView.Adapter<RecyclerView.ViewHol
         if (AndroidInstantRuntime.support(ipChange, "1166990490")) {
             return (RecyclerView.ViewHolder) ipChange.ipc$dispatch("1166990490", new Object[]{this, viewGroup, Integer.valueOf(i)});
         }
-        CommonViewHolder commonViewHolder = new CommonViewHolder(this.inflater.inflate(R.C7935layout.dago_quality_item_ly, viewGroup, false));
+        CommonViewHolder commonViewHolder = new CommonViewHolder(this.inflater.inflate(R.layout.dago_quality_item_ly, viewGroup, false));
         commonViewHolder.titleContentView.setOnClickListener(this);
         commonViewHolder.qualityInfoContent.setOnClickListener(this);
         commonViewHolder.infoIconView.setOnClickListener(this);

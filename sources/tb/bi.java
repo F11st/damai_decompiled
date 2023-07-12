@@ -9,10 +9,9 @@ import com.google.common.base.Predicate;
 public abstract class bi implements Predicate<Character> {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.bi$a */
     /* loaded from: classes10.dex */
-    static abstract class AbstractC8963a extends bi {
-        AbstractC8963a() {
+    static abstract class a extends bi {
+        a() {
         }
 
         @Override // com.google.common.base.Predicate
@@ -23,13 +22,12 @@ public abstract class bi implements Predicate<Character> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.bi$b */
     /* loaded from: classes10.dex */
-    private static final class C8964b extends AbstractC8963a {
+    private static final class b extends a {
         private final char a;
         private final char b;
 
-        C8964b(char c, char c2) {
+        b(char c, char c2) {
             du1.d(c2 >= c);
             this.a = c;
             this.b = c2;
@@ -46,12 +44,11 @@ public abstract class bi implements Predicate<Character> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.bi$c */
     /* loaded from: classes10.dex */
-    private static final class C8965c extends AbstractC8963a {
+    private static final class c extends a {
         private final char a;
 
-        C8965c(char c) {
+        c(char c) {
             this.a = c;
         }
 
@@ -68,20 +65,20 @@ public abstract class bi implements Predicate<Character> {
     protected bi() {
     }
 
-    public static bi c(char c, char c2) {
-        return new C8964b(c, c2);
+    public static bi c(char c2, char c3) {
+        return new b(c2, c3);
     }
 
-    public static bi e(char c) {
-        return new C8965c(c);
+    public static bi e(char c2) {
+        return new c(c2);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static String g(char c) {
+    public static String g(char c2) {
         char[] cArr = {b90.TokenESC, 'u', 0, 0, 0, 0};
         for (int i = 0; i < 4; i++) {
-            cArr[5 - i] = "0123456789ABCDEF".charAt(c & 15);
-            c = (char) (c >> 4);
+            cArr[5 - i] = "0123456789ABCDEF".charAt(c2 & 15);
+            c2 = (char) (c2 >> 4);
         }
         return String.copyValueOf(cArr);
     }
@@ -103,5 +100,5 @@ public abstract class bi implements Predicate<Character> {
         return -1;
     }
 
-    public abstract boolean f(char c);
+    public abstract boolean f(char c2);
 }

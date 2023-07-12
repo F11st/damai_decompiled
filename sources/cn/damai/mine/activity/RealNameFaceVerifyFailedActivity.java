@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.faceverify.bean.BaseFaceVerifyBean;
@@ -52,12 +52,11 @@ public class RealNameFaceVerifyFailedActivity extends DamaiBaseActivity<RealName
     private TextView mTitle;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.RealNameFaceVerifyFailedActivity$a */
     /* loaded from: classes6.dex */
-    public class C1412a implements RPSDK.RPCompletedListener {
+    public class a implements RPSDK.RPCompletedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1412a() {
+        a() {
         }
 
         @Override // com.alibaba.security.rp.RPSDK.RPCompletedListener
@@ -72,18 +71,16 @@ public class RealNameFaceVerifyFailedActivity extends DamaiBaseActivity<RealName
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.RealNameFaceVerifyFailedActivity$b */
     /* loaded from: classes6.dex */
-    public class C1413b implements AliMeUtil.UserCodeListener {
+    public class b implements AliMeUtil.UserCodeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.mine.activity.RealNameFaceVerifyFailedActivity$b$a */
         /* loaded from: classes6.dex */
-        public class C1414a implements AliMeUtil.AliMeTokenListener {
+        public class a implements AliMeUtil.AliMeTokenListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1414a() {
+            a() {
             }
 
             @Override // cn.damai.im.AliMeUtil.AliMeTokenListener
@@ -107,7 +104,7 @@ public class RealNameFaceVerifyFailedActivity extends DamaiBaseActivity<RealName
             }
         }
 
-        C1413b() {
+        b() {
         }
 
         @Override // cn.damai.im.AliMeUtil.UserCodeListener
@@ -126,7 +123,7 @@ public class RealNameFaceVerifyFailedActivity extends DamaiBaseActivity<RealName
             if (AndroidInstantRuntime.support(ipChange, "-1252080364")) {
                 ipChange.ipc$dispatch("-1252080364", new Object[]{this, Long.valueOf(j)});
             } else {
-                AliMeUtil.e(j, AliMeUtil.FROM_REALNAME_AUTH, new C1414a());
+                AliMeUtil.e(j, AliMeUtil.FROM_REALNAME_AUTH, new a());
             }
         }
     }
@@ -355,22 +352,22 @@ public class RealNameFaceVerifyFailedActivity extends DamaiBaseActivity<RealName
             ipChange.ipc$dispatch("-1322591036", new Object[]{this, realNameVerifyBean});
         } else if (realNameVerifyBean == null || TextUtils.isEmpty(realNameVerifyBean.getVerifyToken())) {
         } else {
-            C0529c.e().x(vf1.x().s());
+            c.e().x(vf1.x().s());
             try {
                 if (mu0.a() == null) {
                     HashMap hashMap = new HashMap();
                     hashMap.put("contentlabel", "application 为null");
-                    C0529c.e().A(hashMap, "RPSDK_Application", vf1.REALNAME_VERIFYFAIL_PAGE);
+                    c.e().A(hashMap, "RPSDK_Application", vf1.REALNAME_VERIFYFAIL_PAGE);
                     return;
                 }
                 my1.a(mu0.a());
                 if (RPSDK.getContext() == null) {
                     HashMap hashMap2 = new HashMap();
                     hashMap2.put("contentlabel", "RPSDK Context 为null");
-                    C0529c.e().A(hashMap2, "RPSDK_Context", vf1.REALNAME_VERIFYFAIL_PAGE);
+                    c.e().A(hashMap2, "RPSDK_Context", vf1.REALNAME_VERIFYFAIL_PAGE);
                     return;
                 }
-                RPSDK.start(realNameVerifyBean.getVerifyToken(), this, new C1412a());
+                RPSDK.start(realNameVerifyBean.getVerifyToken(), this, new a());
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -388,7 +385,7 @@ public class RealNameFaceVerifyFailedActivity extends DamaiBaseActivity<RealName
         if (AndroidInstantRuntime.support(ipChange, "1481688880")) {
             ipChange.ipc$dispatch("1481688880", new Object[]{this});
         } else {
-            AliMeUtil.j(new C1413b());
+            AliMeUtil.j(new b());
         }
     }
 

@@ -1,6 +1,6 @@
 package cn.damai.seat.presenter;
 
-import cn.damai.common.app.base.AbstractC0470a;
+import cn.damai.common.app.base.a;
 import cn.damai.seat.contract.BaseSeatModel;
 import cn.damai.seat.contract.BaseSeatView;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -9,10 +9,10 @@ import tb.r92;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
-public abstract class BaseSeatPresenter<V extends BaseSeatView, M extends BaseSeatModel> extends AbstractC0470a<V, M> {
+public abstract class BaseSeatPresenter<V extends BaseSeatView, M extends BaseSeatModel> extends a<V, M> {
     private static transient /* synthetic */ IpChange $ipChange;
 
-    @Override // cn.damai.common.app.base.AbstractC0470a
+    @Override // cn.damai.common.app.base.a
     public void onDestroy() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "843535062")) {

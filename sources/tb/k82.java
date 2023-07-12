@@ -2,8 +2,6 @@ package tb;
 
 import androidx.annotation.NonNull;
 import cn.damai.commonbusiness.seatbiz.seat.qilin.bean.ImageData;
-import cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.AbstractC0818a;
-import cn.damai.seat.loader.request.C1674a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 
@@ -30,8 +28,8 @@ public class k82 extends oa<ImageData, j82> {
     }
 
     @Override // tb.oa
-    public AbstractC0818a<ImageData, j82> e(@NonNull kn1<j82> kn1Var) {
+    public cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.a<ImageData, j82> e(@NonNull kn1<j82> kn1Var) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "565657098") ? (AbstractC0818a) ipChange.ipc$dispatch("565657098", new Object[]{this, kn1Var}) : new C1674a(kn1Var);
+        return AndroidInstantRuntime.support(ipChange, "565657098") ? (cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.a) ipChange.ipc$dispatch("565657098", new Object[]{this, kn1Var}) : new cn.damai.seat.loader.request.a(kn1Var);
     }
 }

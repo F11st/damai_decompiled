@@ -1,20 +1,20 @@
 package com.huawei.hmf.tasks;
 
-import com.huawei.hmf.tasks.a.C5497c;
+import com.huawei.hmf.tasks.a.c;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class CancellationTokenSource {
-    private C5497c impl = new C5497c();
+    private c impl = new c();
 
     public void cancel() {
-        C5497c c5497c = this.impl;
-        if (c5497c.c) {
+        c cVar = this.impl;
+        if (cVar.c) {
             return;
         }
-        synchronized (c5497c.b) {
-            c5497c.c = true;
-            for (Runnable runnable : c5497c.a) {
+        synchronized (cVar.b) {
+            cVar.c = true;
+            for (Runnable runnable : cVar.a) {
                 runnable.run();
             }
         }

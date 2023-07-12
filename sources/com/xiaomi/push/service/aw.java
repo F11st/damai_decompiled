@@ -4,8 +4,6 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
-import com.xiaomi.push.C7594ab;
 import java.io.ByteArrayInputStream;
 import java.io.Closeable;
 import java.io.File;
@@ -19,30 +17,28 @@ public class aw {
     private static long a;
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.service.aw$a */
     /* loaded from: classes11.dex */
-    public static class C7730a {
+    public static class a {
         int a;
 
         /* renamed from: a  reason: collision with other field name */
         byte[] f902a;
 
-        public C7730a(byte[] bArr, int i) {
+        public a(byte[] bArr, int i) {
             this.f902a = bArr;
             this.a = i;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.service.aw$b */
     /* loaded from: classes11.dex */
-    public static class C7731b {
+    public static class b {
         public long a;
 
         /* renamed from: a  reason: collision with other field name */
         public Bitmap f903a;
 
-        public C7731b(Bitmap bitmap, long j) {
+        public b(Bitmap bitmap, long j) {
             this.f903a = bitmap;
             this.a = j;
         }
@@ -54,7 +50,7 @@ public class aw {
         options.inJustDecodeBounds = true;
         BitmapFactory.decodeStream(inputStream, null, options);
         if (options.outWidth == -1 || options.outHeight == -1) {
-            AbstractC7535b.m586a("decode dimension failed for bitmap.");
+            com.xiaomi.channel.commonutils.logger.b.m586a("decode dimension failed for bitmap.");
             return 1;
         }
         int round = Math.round((context.getResources().getDisplayMetrics().densityDpi / 160.0f) * 48.0f);
@@ -88,8 +84,8 @@ public class aw {
                     inputStream2 = null;
                 } catch (Throwable th) {
                     th = th;
-                    C7594ab.a((Closeable) r0);
-                    C7594ab.a(inputStream);
+                    com.xiaomi.push.ab.a((Closeable) r0);
+                    com.xiaomi.push.ab.a(inputStream);
                     throw th;
                 }
             } catch (IOException e2) {
@@ -104,14 +100,14 @@ public class aw {
                 BitmapFactory.Options options = new BitmapFactory.Options();
                 options.inSampleSize = a2;
                 Bitmap decodeStream = BitmapFactory.decodeStream(inputStream2, null, options);
-                C7594ab.a(inputStream2);
-                C7594ab.a(inputStream);
+                com.xiaomi.push.ab.a(inputStream2);
+                com.xiaomi.push.ab.a(inputStream);
                 return decodeStream;
             } catch (IOException e3) {
                 e = e3;
-                AbstractC7535b.a(e);
-                C7594ab.a(inputStream2);
-                C7594ab.a(inputStream);
+                com.xiaomi.channel.commonutils.logger.b.a(e);
+                com.xiaomi.push.ab.a(inputStream2);
+                com.xiaomi.push.ab.a(inputStream);
                 return null;
             }
         } catch (Throwable th3) {
@@ -137,7 +133,7 @@ public class aw {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private static com.xiaomi.push.service.aw.C7730a a(java.lang.String r10, boolean r11) {
+    private static com.xiaomi.push.service.aw.a a(java.lang.String r10, boolean r11) {
         /*
             Method dump skipped, instructions count: 259
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -145,15 +141,15 @@ public class aw {
         throw new UnsupportedOperationException("Method not decompiled: com.xiaomi.push.service.aw.a(java.lang.String, boolean):com.xiaomi.push.service.aw$a");
     }
 
-    public static C7731b a(Context context, String str, boolean z) {
-        C7730a a2;
+    public static b a(Context context, String str, boolean z) {
+        a a2;
         ByteArrayInputStream byteArrayInputStream = null;
-        C7731b c7731b = new C7731b(null, 0L);
-        Bitmap b = b(context, str);
+        b bVar = new b(null, 0L);
+        Bitmap b2 = b(context, str);
         try {
-            if (b != null) {
-                c7731b.f903a = b;
-                return c7731b;
+            if (b2 != null) {
+                bVar.f903a = b2;
+                return bVar;
             }
             try {
                 a2 = a(str, z);
@@ -161,10 +157,10 @@ public class aw {
                 e = e;
             }
             if (a2 == null) {
-                C7594ab.a((Closeable) null);
-                return c7731b;
+                com.xiaomi.push.ab.a((Closeable) null);
+                return bVar;
             }
-            c7731b.a = a2.a;
+            bVar.a = a2.a;
             byte[] bArr = a2.f902a;
             if (bArr != null) {
                 if (z) {
@@ -173,27 +169,27 @@ public class aw {
                         int a3 = a(context, byteArrayInputStream2);
                         BitmapFactory.Options options = new BitmapFactory.Options();
                         options.inSampleSize = a3;
-                        c7731b.f903a = BitmapFactory.decodeByteArray(bArr, 0, bArr.length, options);
+                        bVar.f903a = BitmapFactory.decodeByteArray(bArr, 0, bArr.length, options);
                         byteArrayInputStream = byteArrayInputStream2;
                     } catch (Exception e2) {
                         e = e2;
                         byteArrayInputStream = byteArrayInputStream2;
-                        AbstractC7535b.a(e);
-                        C7594ab.a(byteArrayInputStream);
-                        return c7731b;
+                        com.xiaomi.channel.commonutils.logger.b.a(e);
+                        com.xiaomi.push.ab.a(byteArrayInputStream);
+                        return bVar;
                     } catch (Throwable th) {
                         th = th;
                         byteArrayInputStream = byteArrayInputStream2;
-                        C7594ab.a(byteArrayInputStream);
+                        com.xiaomi.push.ab.a(byteArrayInputStream);
                         throw th;
                     }
                 } else {
-                    c7731b.f903a = BitmapFactory.decodeByteArray(bArr, 0, bArr.length);
+                    bVar.f903a = BitmapFactory.decodeByteArray(bArr, 0, bArr.length);
                 }
             }
             a(context, a2.f902a, str);
-            C7594ab.a(byteArrayInputStream);
-            return c7731b;
+            com.xiaomi.push.ab.a(byteArrayInputStream);
+            return bVar;
         } catch (Throwable th2) {
             th = th2;
         }
@@ -214,7 +210,7 @@ public class aw {
                         }
                     }
                 } catch (Exception e) {
-                    AbstractC7535b.a(e);
+                    com.xiaomi.channel.commonutils.logger.b.a(e);
                 }
                 a = 0L;
             }
@@ -240,7 +236,7 @@ public class aw {
         /*
             if (r6 != 0) goto L8
             java.lang.String r5 = "cannot save small icon cause bitmap is null"
-            com.xiaomi.channel.commonutils.logger.AbstractC7535b.m586a(r5)
+            com.xiaomi.channel.commonutils.logger.b.m586a(r5)
             return
         L8:
             a(r5)
@@ -274,7 +270,7 @@ public class aw {
             r3.<init>(r0)     // Catch: java.lang.Exception -> L64 java.lang.Throwable -> La9
             r3.write(r6)     // Catch: java.lang.Throwable -> L5e java.lang.Exception -> L61
             r3.flush()     // Catch: java.lang.Throwable -> L5e java.lang.Exception -> L61
-            com.xiaomi.push.C7594ab.a(r3)
+            com.xiaomi.push.ab.a(r3)
             goto L71
         L5e:
             r5 = move-exception
@@ -295,10 +291,10 @@ public class aw {
             r6 = move-exception
             r0 = r7
         L6b:
-            com.xiaomi.channel.commonutils.logger.AbstractC7535b.a(r6)     // Catch: java.lang.Throwable -> La9
-            com.xiaomi.push.C7594ab.a(r7)
+            com.xiaomi.channel.commonutils.logger.b.a(r6)     // Catch: java.lang.Throwable -> La9
+            com.xiaomi.push.ab.a(r7)
         L71:
-            com.xiaomi.push.C7594ab.a(r0)
+            com.xiaomi.push.ab.a(r0)
             long r6 = com.xiaomi.push.service.aw.a
             r3 = 0
             int r0 = (r6 > r3 ? 1 : (r6 == r3 ? 0 : -1))
@@ -323,8 +319,8 @@ public class aw {
         La9:
             r5 = move-exception
         Laa:
-            com.xiaomi.push.C7594ab.a(r7)
-            com.xiaomi.push.C7594ab.a(r0)
+            com.xiaomi.push.ab.a(r7)
+            com.xiaomi.push.ab.a(r0)
             throw r5
         */
         throw new UnsupportedOperationException("Method not decompiled: com.xiaomi.push.service.aw.a(android.content.Context, byte[], java.lang.String):void");
@@ -347,19 +343,19 @@ public class aw {
                 try {
                     bitmap2 = BitmapFactory.decodeStream(fileInputStream);
                     file.setLastModified(System.currentTimeMillis());
-                    C7594ab.a(fileInputStream);
+                    com.xiaomi.push.ab.a(fileInputStream);
                     return bitmap2;
                 } catch (Exception e) {
                     e = e;
                     Bitmap bitmap3 = bitmap2;
                     fileInputStream2 = fileInputStream;
                     bitmap = bitmap3;
-                    AbstractC7535b.a(e);
-                    C7594ab.a(fileInputStream2);
+                    com.xiaomi.channel.commonutils.logger.b.a(e);
+                    com.xiaomi.push.ab.a(fileInputStream2);
                     return bitmap;
                 } catch (Throwable th2) {
                     th = th2;
-                    C7594ab.a(fileInputStream);
+                    com.xiaomi.push.ab.a(fileInputStream);
                     throw th;
                 }
             } catch (Throwable th3) {

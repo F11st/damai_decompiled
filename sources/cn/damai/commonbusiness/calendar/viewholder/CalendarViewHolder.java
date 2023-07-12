@@ -35,14 +35,13 @@ public class CalendarViewHolder extends RecyclerView.ViewHolder {
     private TextView e;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.calendar.viewholder.CalendarViewHolder$a  reason: invalid class name */
     /* loaded from: classes14.dex */
-    public class animationAnimation$AnimationListenerC0588a implements Animation.AnimationListener {
+    public class a implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
         final /* synthetic */ ScaleAnimation b;
 
-        animationAnimation$AnimationListenerC0588a(CalendarViewHolder calendarViewHolder, View view, ScaleAnimation scaleAnimation) {
+        a(CalendarViewHolder calendarViewHolder, View view, ScaleAnimation scaleAnimation) {
             this.a = view;
             this.b = scaleAnimation;
         }
@@ -75,14 +74,13 @@ public class CalendarViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.calendar.viewholder.CalendarViewHolder$b  reason: invalid class name */
     /* loaded from: classes14.dex */
-    public class animationAnimation$AnimationListenerC0589b implements Animation.AnimationListener {
+    public class b implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
         final /* synthetic */ ScaleAnimation b;
 
-        animationAnimation$AnimationListenerC0589b(CalendarViewHolder calendarViewHolder, View view, ScaleAnimation scaleAnimation) {
+        b(CalendarViewHolder calendarViewHolder, View view, ScaleAnimation scaleAnimation) {
             this.a = view;
             this.b = scaleAnimation;
         }
@@ -141,8 +139,8 @@ public class CalendarViewHolder extends RecyclerView.ViewHolder {
         scaleAnimation3.setDuration(200L);
         scaleAnimation3.setRepeatCount(0);
         scaleAnimation3.setFillAfter(false);
-        scaleAnimation.setAnimationListener(new animationAnimation$AnimationListenerC0588a(this, view, scaleAnimation2));
-        scaleAnimation2.setAnimationListener(new animationAnimation$AnimationListenerC0589b(this, view, scaleAnimation3));
+        scaleAnimation.setAnimationListener(new a(this, view, scaleAnimation2));
+        scaleAnimation2.setAnimationListener(new b(this, view, scaleAnimation3));
         view.startAnimation(scaleAnimation);
     }
 

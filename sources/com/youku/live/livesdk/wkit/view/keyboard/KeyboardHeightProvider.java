@@ -53,7 +53,7 @@ public class KeyboardHeightProvider extends PopupWindow {
         super(activity);
         this.isVisiableForLast = false;
         this.activity = activity;
-        View inflate = ((LayoutInflater) activity.getSystemService("layout_inflater")).inflate(R.C7960layout.dago_container_popupwindow, (ViewGroup) null, false);
+        View inflate = ((LayoutInflater) activity.getSystemService("layout_inflater")).inflate(R.layout.dago_container_popupwindow, (ViewGroup) null, false);
         this.popupView = inflate;
         setContentView(inflate);
         setSoftInputMode(21);

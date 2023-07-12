@@ -23,7 +23,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.yymember.bean.MemberAuthBean;
@@ -33,8 +33,8 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import io.flutter.wpkbridge.WPKFactory;
 import kotlin.jvm.JvmOverloads;
-import kotlin.text.C8604o;
 import kotlin.text.StringsKt__StringsKt;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -50,7 +50,7 @@ import tb.wh2;
 public final class MemberDamaiAuthView extends FrameLayout {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C0992a Companion = new C0992a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String DM_AUTH = "dm_auth";
     @NotNull
@@ -91,26 +91,24 @@ public final class MemberDamaiAuthView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.yymember.view.MemberDamaiAuthView$a */
     /* loaded from: classes.dex */
-    public static final class C0992a {
-        private C0992a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C0992a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.yymember.view.MemberDamaiAuthView$b */
     /* loaded from: classes.dex */
-    public static final class C0993b extends ClickableSpan {
+    public static final class b extends ClickableSpan {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ MemberDamaiAuthView b;
 
-        C0993b(String str, MemberDamaiAuthView memberDamaiAuthView) {
+        b(String str, MemberDamaiAuthView memberDamaiAuthView) {
             this.a = str;
             this.b = memberDamaiAuthView;
         }
@@ -353,7 +351,7 @@ public final class MemberDamaiAuthView extends FrameLayout {
             if (!b41.d(PP_AUTH, memberDamaiAuthView.viewType)) {
                 str2 = DM_AUTH_UT_MODULE;
             }
-            C0529c.e().x(j23.Companion.a().h(memberDamaiAuthView.pageSource, str2, "close"));
+            c.e().x(j23.Companion.a().h(memberDamaiAuthView.pageSource, str2, "close"));
         } else if (view.getId() == R$id.tv_ll_member_pro_cancel) {
             if (b41.d(PP_AUTH, memberDamaiAuthView.viewType)) {
                 str = "refuse";
@@ -361,7 +359,7 @@ public final class MemberDamaiAuthView extends FrameLayout {
                 str = "cancel";
                 str2 = DM_AUTH_UT_MODULE;
             }
-            C0529c.e().x(j23.Companion.a().h(memberDamaiAuthView.pageSource, str2, str));
+            c.e().x(j23.Companion.a().h(memberDamaiAuthView.pageSource, str2, str));
         }
     }
 
@@ -472,7 +470,7 @@ public final class MemberDamaiAuthView extends FrameLayout {
         if (str3 != null) {
             K = StringsKt__StringsKt.K(str3, jn1.MUL, false, 2, null);
             if (K) {
-                str3 = C8604o.z(str3, jn1.MUL, "", false, 4, null);
+                str3 = o.z(str3, jn1.MUL, "", false, 4, null);
             }
             TextView textView7 = this.memberAuthTip;
             if (textView7 == null) {
@@ -550,9 +548,9 @@ public final class MemberDamaiAuthView extends FrameLayout {
                         sb3.append(protocol2.protocolName);
                     }
                     int length2 = sb3.length();
-                    C0993b c0993b = new C0993b(protocol2.protocolUrl, this);
+                    b bVar = new b(protocol2.protocolUrl, this);
                     spannableString3.setSpan(new StyleSpan(0), length, length2, 17);
-                    spannableString3.setSpan(c0993b, length, length2, 17);
+                    spannableString3.setSpan(bVar, length, length2, 17);
                 }
             }
             TextView textView9 = this.tvProContent;

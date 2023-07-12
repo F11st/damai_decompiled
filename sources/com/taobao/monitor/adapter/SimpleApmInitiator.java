@@ -9,8 +9,8 @@ import com.ali.ha.datahub.BizSubscriber;
 import com.taobao.monitor.APMLauncher;
 import com.taobao.monitor.adapter.network.TBRestSender;
 import com.taobao.monitor.impl.data.AbsWebView;
-import com.taobao.monitor.procedure.C6817d;
 import com.taobao.monitor.procedure.IProcedure;
+import com.taobao.monitor.procedure.d;
 import com.uc.webview.export.WebView;
 import java.io.Serializable;
 import java.util.HashMap;
@@ -37,10 +37,9 @@ public class SimpleApmInitiator implements Serializable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.adapter.SimpleApmInitiator$a */
     /* loaded from: classes11.dex */
-    public class C6754a extends AbsWebView {
-        C6754a(SimpleApmInitiator simpleApmInitiator) {
+    public class a extends AbsWebView {
+        a(SimpleApmInitiator simpleApmInitiator) {
         }
 
         @Override // com.taobao.monitor.impl.data.AbsWebView
@@ -69,9 +68,9 @@ public class SimpleApmInitiator implements Serializable {
     }
 
     private void initDataHub(HashMap<String, Object> hashMap) {
-        boolean a = nq1.a(hashMap.get(rj2.l), true);
-        rj2.h = a;
-        if (a) {
+        boolean a2 = nq1.a(hashMap.get(rj2.l), true);
+        rj2.h = a2;
+        if (a2) {
             b30.a().b(new BizSubscriber(this) { // from class: com.taobao.monitor.adapter.SimpleApmInitiator.1
                 private void a(Runnable runnable) {
                     if (Thread.currentThread() == Looper.getMainLooper().getThread()) {
@@ -83,23 +82,23 @@ public class SimpleApmInitiator implements Serializable {
 
                 @Override // com.ali.ha.datahub.BizSubscriber
                 public void onBizDataReadyStage() {
-                    IProcedure a2 = C6756a.a();
-                    if (a2 != null) {
-                        a2.stage("onBizDataReadyTime", ho2.a());
+                    IProcedure a3 = com.taobao.monitor.adapter.a.a();
+                    if (a3 != null) {
+                        a3.stage("onBizDataReadyTime", ho2.a());
                     }
                 }
 
                 @Override // com.ali.ha.datahub.BizSubscriber
                 public void onStage(final String str, final String str2, long j) {
-                    final long a2 = ho2.a();
+                    final long a3 = ho2.a();
                     a(new Runnable() { // from class: com.taobao.monitor.adapter.SimpleApmInitiator.1.3
                         @Override // java.lang.Runnable
                         public void run() {
-                            IProcedure a3 = C6756a.a();
-                            if (a3 != null) {
+                            IProcedure a4 = com.taobao.monitor.adapter.a.a();
+                            if (a4 != null) {
                                 HashMap hashMap2 = new HashMap();
-                                hashMap2.put(str2, Long.valueOf(a2));
-                                a3.addBizStage(str, hashMap2);
+                                hashMap2.put(str2, Long.valueOf(a3));
+                                a4.addBizStage(str, hashMap2);
                             }
                         }
                     });
@@ -113,9 +112,9 @@ public class SimpleApmInitiator implements Serializable {
                     a(new Runnable() { // from class: com.taobao.monitor.adapter.SimpleApmInitiator.1.1
                         @Override // java.lang.Runnable
                         public void run() {
-                            IProcedure a2 = C6756a.a();
-                            if (a2 != null) {
-                                a2.addBiz(str, hashMap2);
+                            IProcedure a3 = com.taobao.monitor.adapter.a.a();
+                            if (a3 != null) {
+                                a3.addBiz(str, hashMap2);
                             }
                         }
                     });
@@ -126,9 +125,9 @@ public class SimpleApmInitiator implements Serializable {
                     a(new Runnable() { // from class: com.taobao.monitor.adapter.SimpleApmInitiator.1.2
                         @Override // java.lang.Runnable
                         public void run() {
-                            IProcedure a2 = C6756a.a();
-                            if (a2 != null) {
-                                a2.addBizAbTest(str, hashMap2);
+                            IProcedure a3 = com.taobao.monitor.adapter.a.a();
+                            if (a3 != null) {
+                                a3.addBizAbTest(str, hashMap2);
                             }
                         }
                     });
@@ -139,13 +138,13 @@ public class SimpleApmInitiator implements Serializable {
                     a(new Runnable() { // from class: com.taobao.monitor.adapter.SimpleApmInitiator.1.4
                         @Override // java.lang.Runnable
                         public void run() {
-                            IProcedure a2 = C6756a.a();
-                            if (a2 != null) {
-                                a2.addProperty("bizID", str);
+                            IProcedure a3 = com.taobao.monitor.adapter.a.a();
+                            if (a3 != null) {
+                                a3.addProperty("bizID", str);
                                 if (TextUtils.isEmpty(str2)) {
                                     return;
                                 }
-                                a2.addProperty("bizCode", str2);
+                                a3.addProperty("bizCode", str2);
                             }
                         }
                     });
@@ -155,10 +154,10 @@ public class SimpleApmInitiator implements Serializable {
     }
 
     private void initLauncherProcedure() {
-        IProcedure createProcedure = tu1.b.createProcedure(dp2.a("/startup"), new C6817d.C6819b().g(false).k(true).i(false).h(null).f());
+        IProcedure createProcedure = tu1.b.createProcedure(dp2.a("/startup"), new d.b().g(false).k(true).i(false).h(null).f());
         createProcedure.begin();
         uu1.PROCEDURE_MANAGER.s(createProcedure);
-        IProcedure createProcedure2 = tu1.b.createProcedure("/APMSelf", new C6817d.C6819b().g(false).k(false).i(false).h(createProcedure).f());
+        IProcedure createProcedure2 = tu1.b.createProcedure("/APMSelf", new d.b().g(false).k(false).i(false).h(createProcedure).f());
         createProcedure2.begin();
         createProcedure2.addProperty("isMainThread", Boolean.valueOf(Looper.getMainLooper().getThread() == Thread.currentThread()));
         createProcedure2.addProperty("threadName", Thread.currentThread().getName());
@@ -176,7 +175,7 @@ public class SimpleApmInitiator implements Serializable {
 
     private void initWebView() {
         if (rj2.g) {
-            k13.INSTANCE.a(new C6754a(this));
+            k13.INSTANCE.a(new a(this));
         }
     }
 

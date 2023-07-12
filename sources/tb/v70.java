@@ -15,19 +15,18 @@ import org.json.JSONObject;
 /* loaded from: classes.dex */
 public class v70 {
     private String c;
-    private Map<String, C9810a> a = new ConcurrentHashMap();
+    private Map<String, a> a = new ConcurrentHashMap();
     private volatile long d = ConfigStorage.DEFAULT_MAX_AGE;
     private SharedPreferences b = PreferenceManager.getDefaultSharedPreferences(hu0.c());
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.v70$a */
     /* loaded from: classes.dex */
-    public static class C9810a {
+    public static class a {
         long a;
         boolean b;
 
-        C9810a() {
+        a() {
         }
     }
 
@@ -46,13 +45,13 @@ public class v70 {
             JSONArray jSONArray = new JSONArray(string);
             for (int i = 0; i < jSONArray.length(); i++) {
                 JSONObject jSONObject = (JSONObject) jSONArray.get(i);
-                C9810a c9810a = new C9810a();
+                a aVar = new a();
                 String string2 = jSONObject.getString("networkUniqueId");
-                c9810a.a = jSONObject.getLong("time");
-                c9810a.b = jSONObject.getBoolean("enable");
-                if (c(c9810a.a)) {
+                aVar.a = jSONObject.getLong("time");
+                aVar.b = jSONObject.getBoolean("enable");
+                if (c(aVar.a)) {
                     synchronized (this.a) {
-                        this.a.put(string2, c9810a);
+                        this.a.put(string2, aVar);
                     }
                 }
             }
@@ -63,9 +62,9 @@ public class v70 {
 
     public int a(String str) {
         synchronized (this.a) {
-            C9810a c9810a = this.a.get(str);
-            if (c9810a != null) {
-                return c9810a.b ? 1 : 0;
+            a aVar = this.a.get(str);
+            if (aVar != null) {
+                return aVar.b ? 1 : 0;
             }
             return -1;
         }
@@ -73,12 +72,12 @@ public class v70 {
 
     public boolean b(String str) {
         synchronized (this.a) {
-            C9810a c9810a = this.a.get(str);
+            a aVar = this.a.get(str);
             boolean z = true;
-            if (c9810a == null) {
+            if (aVar == null) {
                 return true;
             }
-            if (c(c9810a.a)) {
+            if (c(aVar.a)) {
                 z = false;
             }
             return z;
@@ -90,15 +89,15 @@ public class v70 {
     }
 
     public void e(String str, boolean z) {
-        C9810a c9810a = new C9810a();
-        c9810a.b = z;
-        c9810a.a = System.currentTimeMillis();
+        a aVar = new a();
+        aVar.b = z;
+        aVar.a = System.currentTimeMillis();
         JSONArray jSONArray = new JSONArray();
         synchronized (this.a) {
-            this.a.put(str, c9810a);
-            for (Map.Entry<String, C9810a> entry : this.a.entrySet()) {
+            this.a.put(str, aVar);
+            for (Map.Entry<String, a> entry : this.a.entrySet()) {
                 String key = entry.getKey();
-                C9810a value = entry.getValue();
+                a value = entry.getValue();
                 try {
                     JSONObject jSONObject = new JSONObject();
                     jSONObject.put("networkUniqueId", key);

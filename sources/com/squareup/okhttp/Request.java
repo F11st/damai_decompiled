@@ -1,6 +1,6 @@
 package com.squareup.okhttp;
 
-import anet.channel.request.C0193a;
+import anet.channel.request.a;
 import com.squareup.okhttp.Headers;
 import com.squareup.okhttp.internal.Platform;
 import com.squareup.okhttp.internal.Util;
@@ -52,7 +52,7 @@ public final class Request {
         }
 
         public Builder delete(RequestBody requestBody) {
-            return method(C0193a.C0196c.DELETE, requestBody);
+            return method(a.c.DELETE, requestBody);
         }
 
         public Builder get() {
@@ -60,7 +60,7 @@ public final class Request {
         }
 
         public Builder head() {
-            return method(C0193a.C0196c.HEAD, null);
+            return method(a.c.HEAD, null);
         }
 
         public Builder header(String str, String str2) {
@@ -97,7 +97,7 @@ public final class Request {
         }
 
         public Builder put(RequestBody requestBody) {
-            return method(C0193a.C0196c.PUT, requestBody);
+            return method(a.c.PUT, requestBody);
         }
 
         public Builder removeHeader(String str) {
@@ -125,7 +125,7 @@ public final class Request {
         }
 
         public Builder delete() {
-            return method(C0193a.C0196c.DELETE, null);
+            return method(a.c.DELETE, null);
         }
 
         public Builder url(URL url) {

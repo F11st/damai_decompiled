@@ -1,7 +1,6 @@
 package tb;
 
 import com.taobao.phenix.builder.Builder;
-import com.taobao.phenix.loader.network.C6862a;
 import com.taobao.phenix.loader.network.HttpLoader;
 
 /* compiled from: Taobao */
@@ -22,7 +21,7 @@ public class i01 implements Builder<HttpLoader> {
         }
         this.a = true;
         if (this.b == null) {
-            this.b = new C6862a();
+            this.b = new com.taobao.phenix.loader.network.a();
         }
         HttpLoader httpLoader = this.b;
         Integer num = this.c;

@@ -7,7 +7,7 @@ import com.autonavi.ae.gmap.maploader.Pools;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public final class Tile implements Parcelable {
-    public static final C4652b CREATOR = new C4652b();
+    public static final b CREATOR = new b();
     private static final Pools.SynchronizedPool<Tile> M_POOL = new Pools.SynchronizedPool<>(18);
     public final byte[] data;
     public final int height;

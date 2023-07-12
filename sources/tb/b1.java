@@ -14,9 +14,8 @@ public class b1 implements ViewDelegate {
     public static final Class[] SUPPORTED_VIEW_CLASSES = {AbsListView.class};
 
     /* compiled from: Taobao */
-    /* renamed from: tb.b1$a */
     /* loaded from: classes.dex */
-    public static class C8944a {
+    public static class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
         static int a(AbsListView absListView) {
@@ -38,9 +37,8 @@ public class b1 implements ViewDelegate {
 
     /* compiled from: Taobao */
     @TargetApi(11)
-    /* renamed from: tb.b1$b */
     /* loaded from: classes.dex */
-    public static class C8945b {
+    public static class b {
         private static transient /* synthetic */ IpChange $ipChange;
 
         static int a(AbsListView absListView) {
@@ -60,9 +58,9 @@ public class b1 implements ViewDelegate {
             return ((Integer) ipChange.ipc$dispatch("-1847193811", new Object[]{this, absListView})).intValue();
         }
         if (Build.VERSION.SDK_INT >= 11) {
-            return C8945b.a(absListView);
+            return b.a(absListView);
         }
-        return C8944a.a(absListView);
+        return a.a(absListView);
     }
 
     boolean b(AbsListView absListView) {
@@ -71,9 +69,9 @@ public class b1 implements ViewDelegate {
             return ((Boolean) ipChange.ipc$dispatch("1287934411", new Object[]{this, absListView})).booleanValue();
         }
         if (Build.VERSION.SDK_INT >= 11) {
-            return C8945b.b(absListView);
+            return b.b(absListView);
         }
-        return C8944a.b(absListView);
+        return a.b(absListView);
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:27:0x0071, code lost:

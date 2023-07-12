@@ -12,7 +12,6 @@ import com.uc.webview.export.WebView;
 import io.flutter.wpkbridge.WPKFactory;
 import java.lang.ref.WeakReference;
 import java.util.Objects;
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.qm;
@@ -55,9 +54,9 @@ public class cl2 extends WVUCWebViewClient {
                         activity.finish();
                         return true;
                     }
-                    qm.C9608a c9608a = qm.Companion;
+                    qm.a aVar = qm.Companion;
                     WebHistoryItem currentItem = copyBackForwardList.getCurrentItem();
-                    if (c9608a.d(currentItem != null ? currentItem.getUrl() : null) && !activity.isFinishing()) {
+                    if (aVar.d(currentItem != null ? currentItem.getUrl() : null) && !activity.isFinishing()) {
                         activity.finish();
                     }
                 }
@@ -65,7 +64,7 @@ public class cl2 extends WVUCWebViewClient {
             }
         }
         if (str != null) {
-            F = C8604o.F(str, "http", false, 2, null);
+            F = kotlin.text.o.F(str, "http", false, 2, null);
             if (!F) {
                 TaoMaiH5Container.NavHandler b2 = TaoMaiH5Container.b();
                 if (b2 == null) {

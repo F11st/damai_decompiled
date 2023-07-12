@@ -34,22 +34,21 @@ import tb.ux0;
 public final class FeedTabContainer extends VerticalTabView {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C1271a Companion = new C1271a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String STICKY_SCROLL_TOP = "STICKY_SCROLL_TOP";
     @Nullable
     private static WeakReference<View> weakTabView;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.feed.container.FeedTabContainer$a */
     /* loaded from: classes14.dex */
-    public static final class C1271a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C1271a() {
+        private a() {
         }
 
-        public /* synthetic */ C1271a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

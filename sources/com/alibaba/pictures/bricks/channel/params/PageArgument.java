@@ -11,18 +11,17 @@ import com.android.alibaba.ip.runtime.IpChange;
 /* loaded from: classes7.dex */
 public class PageArgument implements Parcelable {
     private static transient /* synthetic */ IpChange $ipChange;
-    public static final Parcelable.Creator<PageArgument> CREATOR = new C3448a();
+    public static final Parcelable.Creator<PageArgument> CREATOR = new a();
     public String args;
     public String patternName;
     public String patternVersion;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.channel.params.PageArgument$a */
     /* loaded from: classes7.dex */
-    public class C3448a implements Parcelable.Creator<PageArgument> {
+    public class a implements Parcelable.Creator<PageArgument> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3448a() {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

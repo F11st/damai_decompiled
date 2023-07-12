@@ -10,17 +10,16 @@ import com.android.alibaba.ip.runtime.IpChange;
 /* loaded from: classes7.dex */
 public class ViewPagerScroller extends Scroller {
     private static transient /* synthetic */ IpChange $ipChange;
-    private static final Interpolator sInterpolator = new animationInterpolatorC2131a();
+    private static final Interpolator sInterpolator = new a();
     private int mScrollDuration;
     public boolean noDuration;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.ViewPagerScroller$a  reason: invalid class name */
     /* loaded from: classes7.dex */
-    public class animationInterpolatorC2131a implements Interpolator {
+    public class a implements Interpolator {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        animationInterpolatorC2131a() {
+        a() {
         }
 
         @Override // android.animation.TimeInterpolator

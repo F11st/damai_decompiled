@@ -4,9 +4,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
 import com.alibaba.security.biometrics.service.model.params.ALBiometricsKeys;
-import com.sina.weibo.sdk.a.C6197b;
-import com.sina.weibo.sdk.a.C6205e;
-import com.sina.weibo.sdk.net.InterfaceC6219c;
+import com.sina.weibo.sdk.a.b;
+import com.sina.weibo.sdk.a.e;
+import com.sina.weibo.sdk.net.c;
 import com.tencent.connect.common.Constants;
 
 /* compiled from: Taobao */
@@ -38,21 +38,21 @@ public class AccessTokenHelper {
     }
 
     public static void refreshAccessToken(final Context context, String str) {
-        C6197b c6197b;
+        com.sina.weibo.sdk.a.b bVar;
         Oauth2AccessToken readAccessToken = readAccessToken(context);
         if (readAccessToken != null) {
-            C6205e c6205e = new C6205e(str, readAccessToken, new InterfaceC6219c<String>() { // from class: com.sina.weibo.sdk.auth.AccessTokenHelper.1
-                @Override // com.sina.weibo.sdk.net.InterfaceC6219c
+            e eVar = new e(str, readAccessToken, new c<String>() { // from class: com.sina.weibo.sdk.auth.AccessTokenHelper.1
+                @Override // com.sina.weibo.sdk.net.c
                 public final /* synthetic */ void a(String str2) {
                     AccessTokenHelper.writeAccessToken(context, Oauth2AccessToken.parseAccessToken(str2));
                 }
 
-                @Override // com.sina.weibo.sdk.net.InterfaceC6219c
+                @Override // com.sina.weibo.sdk.net.c
                 public final void onError(Throwable th) {
                 }
             });
-            c6197b = C6197b.C6198a.K;
-            c6197b.a(c6205e);
+            bVar = b.a.K;
+            bVar.a(eVar);
         }
     }
 

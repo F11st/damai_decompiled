@@ -29,13 +29,12 @@ public class QQSignInHelper extends SNSSignInAbstractHelper {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.qq.QQSignInHelper$a */
     /* loaded from: classes11.dex */
-    public class C6622a implements OauthCallback {
+    public class a implements OauthCallback {
         final /* synthetic */ SNSSignInListener a;
         final /* synthetic */ Activity b;
 
-        C6622a(SNSSignInListener sNSSignInListener, Activity activity) {
+        a(SNSSignInListener sNSSignInListener, Activity activity) {
             this.a = sNSSignInListener;
             this.b = activity;
         }
@@ -86,7 +85,7 @@ public class QQSignInHelper extends SNSSignInAbstractHelper {
         HashMap hashMap = new HashMap();
         hashMap.put(ParamsConstants.Key.PARAM_ONLY_AUTHCODE, "1");
         if (AliMemberSDK.getService(OauthService.class) != null) {
-            ((OauthService) AliMemberSDK.getService(OauthService.class)).oauth(activity, Site.QQ, hashMap, new C6622a(sNSSignInListener, activity));
+            ((OauthService) AliMemberSDK.getService(OauthService.class)).oauth(activity, Site.QQ, hashMap, new a(sNSSignInListener, activity));
         } else if (sNSSignInListener != null) {
             sNSSignInListener.onError(activity, SNS_TYPE, 10012, activity.getString(R.string.aliuser_SNS_platform_auth_not_init_ucc));
         }

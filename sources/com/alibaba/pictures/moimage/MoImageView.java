@@ -29,8 +29,8 @@ import kotlin.Deprecated;
 import kotlin.Metadata;
 import kotlin.jvm.JvmField;
 import kotlin.jvm.JvmOverloads;
-import kotlin.text.C8604o;
 import kotlin.text.StringsKt__StringsKt;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -51,7 +51,7 @@ import tb.wt2;
 public class MoImageView extends ImageView {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3616a Companion = new C3616a(null);
+    public static final a Companion = new a(null);
     private static final String TAG = "MoImageView";
     private long cTime;
     @Nullable
@@ -173,26 +173,24 @@ public class MoImageView extends ImageView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.moimage.MoImageView$a */
     /* loaded from: classes7.dex */
-    public static final class C3616a {
-        private C3616a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3616a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.moimage.MoImageView$b */
     /* loaded from: classes7.dex */
-    public static final class ViewTreeObserver$OnPreDrawListenerC3617b implements ViewTreeObserver.OnPreDrawListener {
+    public static final class b implements ViewTreeObserver.OnPreDrawListener {
         private static transient /* synthetic */ IpChange $ipChange;
         @NotNull
         private WeakReference<MoImageView> a;
 
-        public ViewTreeObserver$OnPreDrawListenerC3617b(@Nullable MoImageView moImageView) {
+        public b(@Nullable MoImageView moImageView) {
             this.a = new WeakReference<>(moImageView);
         }
 
@@ -309,7 +307,7 @@ public class MoImageView extends ImageView {
         if (imageViewType == imageViewType2) {
             return imageViewType2;
         }
-        p = C8604o.p(str, "gif", false, 2, null);
+        p = o.p(str, "gif", false, 2, null);
         if (p) {
             return ImageViewType.GIF;
         }
@@ -350,7 +348,7 @@ public class MoImageView extends ImageView {
         }
         ViewTreeObserver viewTreeObserver = getViewTreeObserver();
         if (this.mOnPreDrawListener == null) {
-            this.mOnPreDrawListener = new ViewTreeObserver$OnPreDrawListenerC3617b(this);
+            this.mOnPreDrawListener = new b(this);
         }
         if (viewTreeObserver != null && viewTreeObserver.isAlive()) {
             viewTreeObserver.addOnPreDrawListener(this.mOnPreDrawListener);
@@ -572,9 +570,9 @@ public class MoImageView extends ImageView {
     }
 
     @Nullable
-    public final og1.C9521a getRoundingParams() {
+    public final og1.a getRoundingParams() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1384157933") ? (og1.C9521a) ipChange.ipc$dispatch("-1384157933", new Object[]{this}) : this.viewState.q();
+        return AndroidInstantRuntime.support(ipChange, "-1384157933") ? (og1.a) ipChange.ipc$dispatch("-1384157933", new Object[]{this}) : this.viewState.q();
     }
 
     @Nullable
@@ -973,12 +971,12 @@ public class MoImageView extends ImageView {
         }
     }
 
-    public final void setRoundingParams(@Nullable og1.C9521a c9521a) {
+    public final void setRoundingParams(@Nullable og1.a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-613652515")) {
-            ipChange.ipc$dispatch("-613652515", new Object[]{this, c9521a});
-        } else if (c9521a != null) {
-            this.viewState.N(c9521a);
+            ipChange.ipc$dispatch("-613652515", new Object[]{this, aVar});
+        } else if (aVar != null) {
+            this.viewState.N(aVar);
         }
     }
 

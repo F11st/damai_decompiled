@@ -28,9 +28,8 @@ public final class ExceptionsConstuctorKt {
     private static final WeakHashMap<Class<? extends Throwable>, Function1<Throwable, Throwable>> c = new WeakHashMap<>();
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.internal.ExceptionsConstuctorKt$a */
     /* loaded from: classes11.dex */
-    public static final class C8693a<T> implements Comparator<T> {
+    public static final class a<T> implements Comparator<T> {
         @Override // java.util.Comparator
         public final int compare(T t, T t2) {
             int a;
@@ -57,10 +56,10 @@ public final class ExceptionsConstuctorKt {
                             Object m1271constructorimpl;
                             Object newInstance;
                             try {
-                                Result.C8174a c8174a = Result.Companion;
+                                Result.a aVar = Result.Companion;
                                 newInstance = constructor.newInstance(th.getMessage(), th);
                             } catch (Throwable th2) {
-                                Result.C8174a c8174a2 = Result.Companion;
+                                Result.a aVar2 = Result.Companion;
                                 m1271constructorimpl = Result.m1271constructorimpl(i32.a(th2));
                             }
                             if (newInstance != null) {
@@ -90,10 +89,10 @@ public final class ExceptionsConstuctorKt {
                         Object m1271constructorimpl;
                         Object newInstance;
                         try {
-                            Result.C8174a c8174a = Result.Companion;
+                            Result.a aVar = Result.Companion;
                             newInstance = constructor.newInstance(th);
                         } catch (Throwable th2) {
-                            Result.C8174a c8174a2 = Result.Companion;
+                            Result.a aVar2 = Result.Companion;
                             m1271constructorimpl = Result.m1271constructorimpl(i32.a(th2));
                         }
                         if (newInstance != null) {
@@ -120,10 +119,10 @@ public final class ExceptionsConstuctorKt {
                         Object m1271constructorimpl;
                         Object newInstance;
                         try {
-                            Result.C8174a c8174a = Result.Companion;
+                            Result.a aVar = Result.Companion;
                             newInstance = constructor.newInstance(th.getMessage());
                         } catch (Throwable th2) {
-                            Result.C8174a c8174a2 = Result.Companion;
+                            Result.a aVar2 = Result.Companion;
                             m1271constructorimpl = Result.m1271constructorimpl(i32.a(th2));
                         }
                         if (newInstance != null) {
@@ -153,10 +152,10 @@ public final class ExceptionsConstuctorKt {
                 Object m1271constructorimpl;
                 Object newInstance;
                 try {
-                    Result.C8174a c8174a = Result.Companion;
+                    Result.a aVar = Result.Companion;
                     newInstance = constructor.newInstance(new Object[0]);
                 } catch (Throwable th2) {
-                    Result.C8174a c8174a2 = Result.Companion;
+                    Result.a aVar2 = Result.Companion;
                     m1271constructorimpl = Result.m1271constructorimpl(i32.a(th2));
                 }
                 if (newInstance != null) {
@@ -198,10 +197,10 @@ public final class ExceptionsConstuctorKt {
         Integer m1271constructorimpl;
         s61.e(cls);
         try {
-            Result.C8174a c8174a = Result.Companion;
+            Result.a aVar = Result.Companion;
             m1271constructorimpl = Result.m1271constructorimpl(Integer.valueOf(c(cls, 0, 1, null)));
         } catch (Throwable th) {
-            Result.C8174a c8174a2 = Result.Companion;
+            Result.a aVar2 = Result.Companion;
             m1271constructorimpl = Result.m1271constructorimpl(i32.a(th));
         }
         Integer valueOf = Integer.valueOf(i);
@@ -220,10 +219,10 @@ public final class ExceptionsConstuctorKt {
         ReentrantReadWriteLock.WriteLock writeLock;
         if (e instanceof CopyableThrowable) {
             try {
-                Result.C8174a c8174a = Result.Companion;
+                Result.a aVar = Result.Companion;
                 m1271constructorimpl = Result.m1271constructorimpl(((CopyableThrowable) e).createCopy());
             } catch (Throwable th) {
-                Result.C8174a c8174a2 = Result.Companion;
+                Result.a aVar2 = Result.Companion;
                 m1271constructorimpl = Result.m1271constructorimpl(i32.a(th));
             }
             return (E) (Result.m1277isFailureimpl(m1271constructorimpl) ? null : m1271constructorimpl);
@@ -263,7 +262,7 @@ public final class ExceptionsConstuctorKt {
                     writeLock.unlock();
                 }
             }
-            P = ArraysKt___ArraysKt.P(e.getClass().getConstructors(), new C8693a());
+            P = ArraysKt___ArraysKt.P(e.getClass().getConstructors(), new a());
             Iterator it = P.iterator();
             Function1<Throwable, Throwable> function12 = null;
             while (it.hasNext() && (function12 = a((Constructor) it.next())) == null) {

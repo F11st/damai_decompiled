@@ -18,12 +18,11 @@ import tb.hh1;
 public class NeteaseAuth {
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.netease.NeteaseAuth$a */
     /* loaded from: classes11.dex */
-    static class C6620a implements EventListener {
+    static class a implements EventListener {
         final /* synthetic */ SNSSignInListener a;
 
-        C6620a(SNSSignInListener sNSSignInListener) {
+        a(SNSSignInListener sNSSignInListener) {
             this.a = sNSSignInListener;
         }
 
@@ -55,7 +54,7 @@ public class NeteaseAuth {
         if ((TextUtils.isEmpty(str) || TextUtils.isEmpty(str2)) && sNSSignInListener != null) {
             sNSSignInListener.onError(null, SNSPlatform.PLATFORM_NETEASE.getPlatform(), -1, "");
         }
-        EventBus.getDefault().registerEventListener("neteaseH5", new C6620a(sNSSignInListener));
+        EventBus.getDefault().registerEventListener("neteaseH5", new a(sNSSignInListener));
         Intent intent = new Intent();
         intent.putExtra(WebConstant.WEBURL, "https://reg.163.com/open/oauth2/authorize.do?response_type=code&client_id=" + str + "&redirect_uri=" + str2);
         intent.putExtra("redirectUri", str2);

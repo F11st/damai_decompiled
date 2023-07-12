@@ -117,7 +117,7 @@ public final class ObservableWithLatestFrom<T, U, R> extends AbstractObservableW
         this.other = observableSource2;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super R> observer) {
         ra2 ra2Var = new ra2(observer);
         WithLatestFromObserver withLatestFromObserver = new WithLatestFromObserver(ra2Var, this.combiner);

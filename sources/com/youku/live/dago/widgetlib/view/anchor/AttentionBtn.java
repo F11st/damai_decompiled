@@ -78,7 +78,7 @@ public class AttentionBtn extends FrameLayout {
             ipChange.ipc$dispatch("-1982895823", new Object[]{this, context});
             return;
         }
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_anchor_attention_btn, this);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_anchor_attention_btn, this);
         this.mAnimationView = (SVGAAnimationView) findViewById(R.id.id_attention_anim);
     }
 

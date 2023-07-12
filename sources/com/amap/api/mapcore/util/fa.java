@@ -31,8 +31,8 @@ public class fa extends LinearLayout {
         try {
             Bitmap a = eq.a(context, "maps_dav_compass_needle_large.png");
             this.c = a;
-            this.b = eq.a(a, C4614m.a * 0.8f);
-            Bitmap a2 = eq.a(this.c, C4614m.a * 0.7f);
+            this.b = eq.a(a, m.a * 0.8f);
+            Bitmap a2 = eq.a(this.c, m.a * 0.7f);
             this.c = a2;
             Bitmap bitmap = this.b;
             if (bitmap != null && a2 != null) {

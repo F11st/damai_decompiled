@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
-import io.reactivex.AbstractC8152e;
 import io.reactivex.SingleObserver;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.functions.BiPredicate;
 import io.reactivex.internal.fuseable.FuseToFlowable;
 import io.reactivex.internal.fuseable.SimpleQueue;
@@ -17,7 +17,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableSequenceEqualSingle<T> extends AbstractC8152e<Boolean> implements FuseToFlowable<Boolean> {
+public final class FlowableSequenceEqualSingle<T> extends e<Boolean> implements FuseToFlowable<Boolean> {
     final BiPredicate<? super T, ? super T> comparer;
     final Publisher<? extends T> first;
     final int prefetch;
@@ -176,11 +176,11 @@ public final class FlowableSequenceEqualSingle<T> extends AbstractC8152e<Boolean
     }
 
     @Override // io.reactivex.internal.fuseable.FuseToFlowable
-    public AbstractC8147b<Boolean> fuseToFlowable() {
+    public b<Boolean> fuseToFlowable() {
         return i42.l(new FlowableSequenceEqual(this.first, this.second, this.comparer, this.prefetch));
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     public void subscribeActual(SingleObserver<? super Boolean> singleObserver) {
         EqualCoordinator equalCoordinator = new EqualCoordinator(singleObserver, this.prefetch, this.comparer);
         singleObserver.onSubscribe(equalCoordinator);

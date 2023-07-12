@@ -6,7 +6,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.text.TextUtils;
 import androidx.annotation.Keep;
-import com.alibaba.android.umbrella.performance.C3271a;
+import com.alibaba.android.umbrella.performance.a;
 import java.lang.Thread;
 import java.util.HashMap;
 import java.util.Map;
@@ -25,32 +25,31 @@ public class UmbrellaProcessTracker {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.umbrella.performance.UmbrellaProcessTracker$a */
     /* loaded from: classes15.dex */
-    public static class HandlerC3270a extends Handler {
-        HandlerC3270a(Looper looper) {
+    public static class a extends Handler {
+        a(Looper looper) {
             super(looper);
         }
 
         @Override // android.os.Handler
         public void handleMessage(Message message) {
             super.handleMessage(message);
-            C3271a c3271a = (C3271a) message.obj;
-            int i = c3271a.a;
+            com.alibaba.android.umbrella.performance.a aVar = (com.alibaba.android.umbrella.performance.a) message.obj;
+            int i = aVar.a;
             if (i == 3) {
-                C3274b.h(c3271a);
+                b.h(aVar);
             } else if (i == 4) {
-                C3274b.i(c3271a);
+                b.i(aVar);
             } else if (i == 1) {
-                C3274b.j(c3271a);
+                b.j(aVar);
             } else if (i == 2) {
-                C3274b.g(c3271a);
+                b.g(aVar);
             } else if (i == 5) {
-                C3274b.e(c3271a);
+                b.e(aVar);
             } else if (i == 7) {
-                C3274b.k(c3271a);
+                b.k(aVar);
             } else if (i == 6) {
-                C3274b.a(c3271a);
+                b.a(aVar);
             }
         }
     }
@@ -59,28 +58,28 @@ public class UmbrellaProcessTracker {
         if (lt2.a(str) || TextUtils.isEmpty(str2) || TextUtils.isEmpty(str3) || !isContainBiz(str)) {
             return;
         }
-        sendProcessEvent(new C3271a.C3273b(str).n(6).b(str2).a(str3).j());
+        sendProcessEvent(new a.b(str).n(6).b(str2).a(str3).j());
     }
 
     public static void addArgs(String str, Map<String, String> map) {
         if (lt2.a(str) || map == null || map.size() < 1 || !isContainBiz(str)) {
             return;
         }
-        sendProcessEvent(new C3271a.C3273b(str).n(2).i(map).j());
+        sendProcessEvent(new a.b(str).n(2).i(map).j());
     }
 
     public static void addProcess(String str, jt2 jt2Var, long j) {
         if (lt2.a(str) || jt2Var == null || !isContainBiz(str)) {
             return;
         }
-        sendProcessEvent(new C3271a.C3273b(str).n(3).o(jt2Var).l(j).j());
+        sendProcessEvent(new a.b(str).n(3).o(jt2Var).l(j).j());
     }
 
     public static void addSubProcess(String str, jt2 jt2Var, String str2, long j) {
         if (lt2.a(str) || jt2Var == null || TextUtils.isEmpty(str2) || !isContainBiz(str)) {
             return;
         }
-        sendProcessEvent(new C3271a.C3273b(str).n(4).o(jt2Var).m(str2).l(j).j());
+        sendProcessEvent(new a.b(str).n(4).o(jt2Var).m(str2).l(j).j());
     }
 
     public static void commit(String str) {
@@ -88,12 +87,12 @@ public class UmbrellaProcessTracker {
             return;
         }
         removeBiz(str);
-        sendProcessEvent(new C3271a.C3273b(str, 0L).n(5).j());
+        sendProcessEvent(new a.b(str, 0L).n(5).j());
     }
 
     private static void init() {
         trackHandlerThread.start();
-        trackHandler = new HandlerC3270a(trackHandlerThread.getLooper());
+        trackHandler = new a(trackHandlerThread.getLooper());
     }
 
     private static boolean isContainBiz(String str) {
@@ -120,7 +119,7 @@ public class UmbrellaProcessTracker {
                 init();
             }
             recordBiz(str);
-            sendProcessEvent(new C3271a.C3273b(str).n(1).j());
+            sendProcessEvent(new a.b(str).n(1).j());
         }
     }
 
@@ -128,11 +127,11 @@ public class UmbrellaProcessTracker {
         sPageList.remove(str);
     }
 
-    private static void sendProcessEvent(C3271a c3271a) {
+    private static void sendProcessEvent(com.alibaba.android.umbrella.performance.a aVar) {
         Handler handler = trackHandler;
         if (handler != null) {
             Message obtainMessage = handler.obtainMessage();
-            obtainMessage.obj = c3271a;
+            obtainMessage.obj = aVar;
             trackHandler.sendMessage(obtainMessage);
         }
     }
@@ -141,7 +140,7 @@ public class UmbrellaProcessTracker {
         if (lt2.a(str) || TextUtils.isEmpty(str2) || !isContainBiz(str)) {
             return;
         }
-        sendProcessEvent(new C3271a.C3273b(str).n(7).k(str2).j());
+        sendProcessEvent(new a.b(str).n(7).k(str2).j());
     }
 
     public static void addArgs(String str, String str2, String str3) {

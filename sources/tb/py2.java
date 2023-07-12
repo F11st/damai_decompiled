@@ -15,7 +15,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMRoundedCornersBitmapProcessor;
 import cn.damai.common.nav.DMNav;
@@ -53,13 +52,12 @@ public class py2 {
     private static long b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.py2$a */
     /* loaded from: classes7.dex */
-    public class C9573a implements GenerateImageUtil.OnImageGenerateListener {
+    public class a implements GenerateImageUtil.OnImageGenerateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
 
-        C9573a(py2 py2Var, View view) {
+        a(py2 py2Var, View view) {
             this.a = view;
         }
 
@@ -86,13 +84,12 @@ public class py2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.py2$b */
     /* loaded from: classes7.dex */
-    public class C9574b implements GenerateImageUtil.OnImageGenerateListener {
+    public class b implements GenerateImageUtil.OnImageGenerateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
 
-        C9574b(py2 py2Var, View view) {
+        b(py2 py2Var, View view) {
             this.a = view;
         }
 
@@ -119,14 +116,13 @@ public class py2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.py2$c */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC9575c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ Context b;
 
-        View$OnClickListenerC9575c(String str, Context context) {
+        c(String str, Context context) {
             this.a = str;
             this.b = context;
         }
@@ -144,27 +140,26 @@ public class py2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.py2$d */
     /* loaded from: classes7.dex */
-    public class C9576d implements DMImageCreator.DMImageFailListener {
+    public class d implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
         final /* synthetic */ ImageView b;
 
-        C9576d(int i, ImageView imageView) {
+        d(int i, ImageView imageView) {
             this.a = i;
             this.b = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1935479896")) {
-                ipChange.ipc$dispatch("-1935479896", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-1935479896", new Object[]{this, dVar});
                 return;
             }
-            if (c0501d != null) {
-                String.valueOf(c0501d.a);
+            if (dVar != null) {
+                String.valueOf(dVar.a);
             }
             int i = this.a;
             if (i != -1) {
@@ -174,23 +169,22 @@ public class py2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.py2$e */
     /* loaded from: classes7.dex */
-    public class C9577e implements DMImageCreator.DMImageSuccListener {
+    public class e implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
-        C9577e(ImageView imageView) {
+        e(ImageView imageView) {
             this.a = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "717324093")) {
-                ipChange.ipc$dispatch("717324093", new Object[]{this, c0502e});
-            } else if (c0502e == null || (bitmap = c0502e.b) == null) {
+                ipChange.ipc$dispatch("717324093", new Object[]{this, eVar});
+            } else if (eVar == null || (bitmap = eVar.b) == null) {
             } else {
                 this.a.setImageBitmap(bitmap);
             }
@@ -198,27 +192,26 @@ public class py2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.py2$f */
     /* loaded from: classes7.dex */
-    public class C9578f implements DMImageCreator.DMImageFailListener {
+    public class f implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
         final /* synthetic */ ImageView b;
 
-        C9578f(int i, ImageView imageView) {
+        f(int i, ImageView imageView) {
             this.a = i;
             this.b = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1987669420")) {
-                ipChange.ipc$dispatch("1987669420", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("1987669420", new Object[]{this, dVar});
                 return;
             }
-            if (c0501d != null) {
-                String.valueOf(c0501d.a);
+            if (dVar != null) {
+                String.valueOf(dVar.a);
             }
             int i = this.a;
             if (i != -1) {
@@ -228,23 +221,22 @@ public class py2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.py2$g */
     /* loaded from: classes7.dex */
-    public class C9579g implements DMImageCreator.DMImageSuccListener {
+    public class g implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
-        C9579g(ImageView imageView) {
+        g(ImageView imageView) {
             this.a = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1714983359")) {
-                ipChange.ipc$dispatch("-1714983359", new Object[]{this, c0502e});
-            } else if (c0502e == null || (bitmap = c0502e.b) == null) {
+                ipChange.ipc$dispatch("-1714983359", new Object[]{this, eVar});
+            } else if (eVar == null || (bitmap = eVar.b) == null) {
             } else {
                 this.a.setImageBitmap(bitmap);
             }
@@ -252,48 +244,46 @@ public class py2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.py2$h */
     /* loaded from: classes7.dex */
-    public class C9580h implements DMImageCreator.DMImageFailListener {
+    public class h implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
-        C9580h(ImageView imageView) {
+        h(ImageView imageView) {
             this.a = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-345723218")) {
-                ipChange.ipc$dispatch("-345723218", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-345723218", new Object[]{this, dVar});
                 return;
             }
-            if (c0501d != null) {
-                String.valueOf(c0501d.a);
+            if (dVar != null) {
+                String.valueOf(dVar.a);
             }
             this.a.setVisibility(8);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.py2$i */
     /* loaded from: classes7.dex */
-    public class C9581i implements DMImageCreator.DMImageSuccListener {
+    public class i implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
-        C9581i(ImageView imageView) {
+        i(ImageView imageView) {
             this.a = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1363830211")) {
-                ipChange.ipc$dispatch("1363830211", new Object[]{this, c0502e});
-            } else if (c0502e == null || (bitmap = c0502e.b) == null) {
+                ipChange.ipc$dispatch("1363830211", new Object[]{this, eVar});
+            } else if (eVar == null || (bitmap = eVar.b) == null) {
             } else {
                 this.a.setVisibility(0);
                 this.a.setImageBitmap(bitmap);
@@ -304,18 +294,18 @@ public class py2 {
     private py2() {
     }
 
-    public static void A(Context context, String str, int i, String str2, LinearLayout linearLayout, int i2) {
+    public static void A(Context context, String str, int i2, String str2, LinearLayout linearLayout, int i3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "2006969353")) {
-            ipChange.ipc$dispatch("2006969353", new Object[]{context, str, Integer.valueOf(i), str2, linearLayout, Integer.valueOf(i2)});
+            ipChange.ipc$dispatch("2006969353", new Object[]{context, str, Integer.valueOf(i2), str2, linearLayout, Integer.valueOf(i3)});
             return;
         }
         linearLayout.removeAllViews();
         if (!TextUtils.isEmpty(str2)) {
             linearLayout.setVisibility(0);
             TextView textView = new TextView(context);
-            textView.setGravity(i2);
-            textView.setTextSize(1, i);
+            textView.setGravity(i3);
+            textView.setTextSize(1, i2);
             z(str, textView, "#111111", "#999999");
             textView.setText(str2);
             linearLayout.addView(textView);
@@ -372,7 +362,7 @@ public class py2 {
         if (!TextUtils.isEmpty(str4) && in2.PERFORM_CANCEL.equals(str4)) {
             H(context, textView, str, R$drawable.ticklet_perform_cancel, null);
         } else if ("1".equals(str2)) {
-            H(context, textView, str, R$drawable.ticklet_detail_change_tip_icon, new View$OnClickListenerC9575c(str3, context));
+            H(context, textView, str, R$drawable.ticklet_detail_change_tip_icon, new c(str3, context));
         } else {
             textView.setText(str);
         }
@@ -412,15 +402,15 @@ public class py2 {
         }
     }
 
-    public static void H(Context context, TextView textView, String str, int i, View.OnClickListener onClickListener) {
+    public static void H(Context context, TextView textView, String str, int i2, View.OnClickListener onClickListener) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "2113262261")) {
-            ipChange.ipc$dispatch("2113262261", new Object[]{context, textView, str, Integer.valueOf(i), onClickListener});
+            ipChange.ipc$dispatch("2113262261", new Object[]{context, textView, str, Integer.valueOf(i2), onClickListener});
         } else if (context != null) {
             if (onClickListener != null) {
                 textView.setOnClickListener(onClickListener);
             }
-            u11 u11Var = new u11(context, i);
+            u11 u11Var = new u11(context, i2);
             SpannableString spannableString = new SpannableString(AltriaXLaunchTime.SPACE + str);
             spannableString.setSpan(u11Var, 0, 1, 33);
             textView.setText(spannableString);
@@ -464,12 +454,12 @@ public class py2 {
         return false;
     }
 
-    public static void q(Context context, ImageView imageView, String str, int i) {
+    public static void q(Context context, ImageView imageView, String str, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1111646923")) {
-            ipChange.ipc$dispatch("-1111646923", new Object[]{context, imageView, str, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-1111646923", new Object[]{context, imageView, str, Integer.valueOf(i2)});
         } else {
-            C0504a.b().e(str).k(new DMRoundedCornersBitmapProcessor(t60.a(context, 6.0f), 0)).n(new C9577e(imageView)).e(new C9576d(i, imageView)).f();
+            cn.damai.common.image.a.b().e(str).k(new DMRoundedCornersBitmapProcessor(t60.a(context, 6.0f), 0)).n(new e(imageView)).e(new d(i2, imageView)).f();
         }
     }
 
@@ -478,16 +468,16 @@ public class py2 {
         if (AndroidInstantRuntime.support(ipChange, "-858904574")) {
             ipChange.ipc$dispatch("-858904574", new Object[]{imageView, str});
         } else {
-            C0504a.b().e(str).k(new DMRoundedCornersBitmapProcessor(6, 0)).n(new C9581i(imageView)).e(new C9580h(imageView)).f();
+            cn.damai.common.image.a.b().e(str).k(new DMRoundedCornersBitmapProcessor(6, 0)).n(new i(imageView)).e(new h(imageView)).f();
         }
     }
 
-    public static void s(ImageView imageView, String str, int i) {
+    public static void s(ImageView imageView, String str, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-856208575")) {
-            ipChange.ipc$dispatch("-856208575", new Object[]{imageView, str, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-856208575", new Object[]{imageView, str, Integer.valueOf(i2)});
         } else {
-            C0504a.b().e(str).k(new DMRoundedCornersBitmapProcessor(6, 0)).n(new C9579g(imageView)).e(new C9578f(i, imageView)).f();
+            cn.damai.common.image.a.b().e(str).k(new DMRoundedCornersBitmapProcessor(6, 0)).n(new g(imageView)).e(new f(i2, imageView)).f();
         }
     }
 
@@ -663,13 +653,13 @@ public class py2 {
             qRCodeColor.strokeWidth = t60.a(activity, 3.0f);
             dMShareMessage.qrCodeColor = qRCodeColor;
             GenerateImageUtil.q(activity, dMShareMessage, false);
-            GenerateImageUtil.G(new C9574b(this, view));
+            GenerateImageUtil.G(new b(this, view));
         }
     }
 
     public List<PerformTable> b(List<PerformTable> list) {
         String trim;
-        int i;
+        int i2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "2063202307")) {
             return (List) ipChange.ipc$dispatch("2063202307", new Object[]{this, list});
@@ -693,46 +683,46 @@ public class py2 {
                         performTable2.timeShowIcon = performTable2.isHistoryTicket() ? R$drawable.ticklet_perform_cancel_history : R$drawable.ticklet_perform_cancel;
                     } else if ("1".equals(performTable2.isTimeChanged)) {
                         if (performTable2.isHistoryTicket()) {
-                            i = R$drawable.ticklet_detail_change_tip_icon_history;
+                            i2 = R$drawable.ticklet_detail_change_tip_icon_history;
                         } else {
-                            i = R$drawable.ticklet_list_change_tip_icon;
+                            i2 = R$drawable.ticklet_list_change_tip_icon;
                         }
-                        performTable2.timeShowIcon = i;
+                        performTable2.timeShowIcon = i2;
                     } else {
                         performTable2.timeShowIcon = -1;
                     }
                 }
                 performTable = performTable2;
-            } catch (CloneNotSupportedException e) {
-                e.printStackTrace();
+            } catch (CloneNotSupportedException e2) {
+                e2.printStackTrace();
             }
             arrayList.add(performTable);
         }
         return arrayList;
     }
 
-    public int[] c(int i, ArrayList<String> arrayList) {
+    public int[] c(int i2, ArrayList<String> arrayList) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "688467923")) {
-            return (int[]) ipChange.ipc$dispatch("688467923", new Object[]{this, Integer.valueOf(i), arrayList});
+            return (int[]) ipChange.ipc$dispatch("688467923", new Object[]{this, Integer.valueOf(i2), arrayList});
         }
-        int[] iArr = {i, i, ColorUtil.parseColorSafely(in2.DETAIL_PAGE_DEFAULT_COLOR)};
+        int[] iArr = {i2, i2, ColorUtil.parseColorSafely(in2.DETAIL_PAGE_DEFAULT_COLOR)};
         if (arrayList != null && arrayList.size() > 0) {
-            int e = wh2.e(arrayList);
-            if (e < 2) {
+            int e2 = wh2.e(arrayList);
+            if (e2 < 2) {
                 return iArr;
             }
-            iArr = new int[e];
-            for (int i2 = 0; i2 < e; i2++) {
-                iArr[i2] = ColorUtil.parseColorSafely(arrayList.get(i2));
+            iArr = new int[e2];
+            for (int i3 = 0; i3 < e2; i3++) {
+                iArr[i3] = ColorUtil.parseColorSafely(arrayList.get(i3));
             }
         }
         return iArr;
     }
 
-    public int d(float f, int i) {
+    public int d(float f2, int i2) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-567421826") ? ((Integer) ipChange.ipc$dispatch("-567421826", new Object[]{this, Float.valueOf(f), Integer.valueOf(i)})).intValue() : (Math.min(255, Math.max(0, (int) (f * 255.0f))) << 24) + (i & 16777215);
+        return AndroidInstantRuntime.support(ipChange, "-567421826") ? ((Integer) ipChange.ipc$dispatch("-567421826", new Object[]{this, Float.valueOf(f2), Integer.valueOf(i2)})).intValue() : (Math.min(255, Math.max(0, (int) (f2 * 255.0f))) << 24) + (i2 & 16777215);
     }
 
     public void g(FrameLayout frameLayout, TextView textView, TicketExtAttr ticketExtAttr) {
@@ -755,22 +745,22 @@ public class py2 {
         return iArr.length == 2 ? new float[]{0.0f, 1.0f} : new float[]{0.0f, z ? 0.37f : 0.4f, 1.0f};
     }
 
-    public String i(Context context, DamaiBaseActivity damaiBaseActivity, int i) {
+    public String i(Context context, DamaiBaseActivity damaiBaseActivity, int i2) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1638533095") ? (String) ipChange.ipc$dispatch("1638533095", new Object[]{this, context, damaiBaseActivity, Integer.valueOf(i)}) : (context == null || damaiBaseActivity == null || damaiBaseActivity.isFinishing()) ? "" : context.getResources().getString(i);
+        return AndroidInstantRuntime.support(ipChange, "1638533095") ? (String) ipChange.ipc$dispatch("1638533095", new Object[]{this, context, damaiBaseActivity, Integer.valueOf(i2)}) : (context == null || damaiBaseActivity == null || damaiBaseActivity.isFinishing()) ? "" : context.getResources().getString(i2);
     }
 
-    public void j(Activity activity, String str, String str2, int i) {
+    public void j(Activity activity, String str, String str2, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1095152788")) {
-            ipChange.ipc$dispatch("1095152788", new Object[]{this, activity, str, str2, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("1095152788", new Object[]{this, activity, str, str2, Integer.valueOf(i2)});
         } else if (activity == null || TextUtils.isEmpty(str)) {
         } else {
             Intent intent = new Intent();
             intent.putExtra(TicketDetailExtFragment.PERFORM_ID, str);
             intent.putExtra(TicketDetailExtFragment.PRODUCT_SYSTEM_ID, str2);
             intent.setClass(activity, TickletTransferManageActivity.class);
-            activity.startActivityForResult(intent, i);
+            activity.startActivityForResult(intent, i2);
         }
     }
 
@@ -823,10 +813,10 @@ public class py2 {
         }
     }
 
-    public void o(Context context, String str, String str2, String str3, String str4, String str5, int i) {
+    public void o(Context context, String str, String str2, String str3, String str4, String str5, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1989505776")) {
-            ipChange.ipc$dispatch("1989505776", new Object[]{this, context, str, str2, str3, str4, str5, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("1989505776", new Object[]{this, context, str, str2, str3, str4, str5, Integer.valueOf(i2)});
         } else if (context == null || TextUtils.isEmpty(str)) {
         } else {
             Intent intent = new Intent();
@@ -835,7 +825,7 @@ public class py2 {
             intent.putExtra("chosenLat", str3);
             intent.putExtra("chosenLng", str4);
             intent.putExtra("venueName", str5);
-            intent.putExtra(PushConstants.CLICK_TYPE, i);
+            intent.putExtra(PushConstants.CLICK_TYPE, i2);
             intent.putExtra("from", TickletVenueActivity.TICKLET_VENUE_FROM_MAP);
             intent.setClass(context, TickletVenueActivity.class);
             context.startActivity(intent);
@@ -859,7 +849,7 @@ public class py2 {
             dMShareMessage.shareLink = str2;
             dMShareMessage.vip = z;
             GenerateImageUtil.q(activity, dMShareMessage, false);
-            GenerateImageUtil.G(new C9573a(this, view));
+            GenerateImageUtil.G(new a(this, view));
         }
     }
 

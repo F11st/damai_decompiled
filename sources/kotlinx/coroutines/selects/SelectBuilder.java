@@ -13,9 +13,8 @@ import org.jetbrains.annotations.NotNull;
 public interface SelectBuilder<R> {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.selects.SelectBuilder$a */
     /* loaded from: classes11.dex */
-    public static final class C8707a {
+    public static final class a {
         /* JADX WARN: Multi-variable type inference failed */
         public static <R, P, Q> void a(@NotNull SelectBuilder<? super R> selectBuilder, @NotNull SelectClause2<? super P, ? extends Q> selectClause2, @NotNull Function2<? super Q, ? super Continuation<? super R>, ? extends Object> function2) {
             selectBuilder.invoke(selectClause2, null, function2);

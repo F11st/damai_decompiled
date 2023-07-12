@@ -41,12 +41,11 @@ public class CouponDetailActivity extends SimpleBaseActivity {
     private boolean unbinding = false;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.CouponDetailActivity$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1365a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1365a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -62,18 +61,16 @@ public class CouponDetailActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.CouponDetailActivity$b */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1366b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.mine.activity.CouponDetailActivity$b$a */
         /* loaded from: classes15.dex */
-        public class DialogInterface$OnClickListenerC1367a implements DialogInterface.OnClickListener {
+        public class a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC1367a() {
+            a() {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -87,7 +84,7 @@ public class CouponDetailActivity extends SimpleBaseActivity {
             }
         }
 
-        View$OnClickListenerC1366b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -100,7 +97,7 @@ public class CouponDetailActivity extends SimpleBaseActivity {
                 String str = !TextUtils.isEmpty(CouponDetailActivity.this.mCoupon.cancelConfirmMsg) ? CouponDetailActivity.this.mCoupon.cancelConfirmMsg : "优惠券转成券码后，该券将从「未使用」列表消失，券码可重新兑换为优惠券。";
                 DMDialog dMDialog = new DMDialog(CouponDetailActivity.this);
                 dMDialog.q(str);
-                dMDialog.n("确定", new DialogInterface$OnClickListenerC1367a());
+                dMDialog.n("确定", new a());
                 dMDialog.i("取消", null);
                 dMDialog.show();
             }
@@ -113,8 +110,8 @@ public class CouponDetailActivity extends SimpleBaseActivity {
             ipChange.ipc$dispatch("1582308886", new Object[]{this});
             return;
         }
-        findViewById(R$id.iv_left_icon).setOnClickListener(new View$OnClickListenerC1365a());
-        this.btn_unbind.setOnClickListener(new View$OnClickListenerC1366b());
+        findViewById(R$id.iv_left_icon).setOnClickListener(new a());
+        this.btn_unbind.setOnClickListener(new b());
     }
 
     private void setExtraData() {
@@ -172,11 +169,11 @@ public class CouponDetailActivity extends SimpleBaseActivity {
             ipChange.ipc$dispatch("-1517618154", new Object[]{this});
             return;
         }
-        int a = kg2.a(this);
+        int a2 = kg2.a(this);
         View findViewById = findViewById(R$id.title_bar_space);
         if (findViewById != null) {
             if (Build.VERSION.SDK_INT >= 23) {
-                findViewById.setLayoutParams(new RelativeLayout.LayoutParams(-1, a));
+                findViewById.setLayoutParams(new RelativeLayout.LayoutParams(-1, a2));
                 kg2.f(this, true, R$color.black);
                 kg2.d(true, this);
                 return;

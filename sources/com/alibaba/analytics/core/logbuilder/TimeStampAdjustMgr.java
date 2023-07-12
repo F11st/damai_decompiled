@@ -60,7 +60,7 @@ public class TimeStampAdjustMgr {
                         str = a;
                     }
                     String str2 = TimeStampAdjustMgr.this.b + str + TimeStampAdjustMgr.this.d;
-                    q01.C9588a a2 = q01.a(1, str2, null, false);
+                    q01.a a2 = q01.a(1, str2, null, false);
                     Logger.f("TimeStampAdjustMgr", "url", str2, "response", a2);
                     if (a2 == null || a2.a == null) {
                         return;

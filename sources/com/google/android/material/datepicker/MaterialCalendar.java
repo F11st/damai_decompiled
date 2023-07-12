@@ -279,10 +279,10 @@ public final class MaterialCalendar<S> extends PickerFragment<S> {
         LayoutInflater cloneInContext = layoutInflater.cloneInContext(contextThemeWrapper);
         Month start = this.calendarConstraints.getStart();
         if (MaterialDatePicker.isFullscreen(contextThemeWrapper)) {
-            i = R.C4818layout.mtrl_calendar_vertical;
+            i = R.layout.mtrl_calendar_vertical;
             i2 = 1;
         } else {
-            i = R.C4818layout.mtrl_calendar_horizontal;
+            i = R.layout.mtrl_calendar_horizontal;
             i2 = 0;
         }
         View inflate = cloneInContext.inflate(i, viewGroup, false);

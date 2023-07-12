@@ -1,9 +1,7 @@
 package com.huawei.secure.android.common.ssl;
 
 import android.content.Context;
-import com.huawei.secure.android.common.ssl.util.C5749a;
-import com.huawei.secure.android.common.ssl.util.C5751c;
-import com.huawei.secure.android.common.ssl.util.C5755g;
+import com.huawei.secure.android.common.ssl.util.g;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.InetAddress;
@@ -45,39 +43,39 @@ public class SecureSSLSocketFactoryNew extends SSLSocketFactory {
     private void a(Socket socket) {
         boolean z;
         boolean z2 = true;
-        if (C5749a.a(this.h)) {
+        if (com.huawei.secure.android.common.ssl.util.a.a(this.h)) {
             z = false;
         } else {
-            C5755g.c(i, "set protocols");
+            g.c(i, "set protocols");
             SSLUtil.setEnabledProtocols((SSLSocket) socket, this.h);
             z = true;
         }
-        if (C5749a.a(this.g) && C5749a.a(this.f)) {
+        if (com.huawei.secure.android.common.ssl.util.a.a(this.g) && com.huawei.secure.android.common.ssl.util.a.a(this.f)) {
             z2 = false;
         } else {
-            C5755g.c(i, "set white cipher or black cipher");
+            g.c(i, "set white cipher or black cipher");
             SSLSocket sSLSocket = (SSLSocket) socket;
             SSLUtil.setEnabledProtocols(sSLSocket);
-            if (!C5749a.a(this.g)) {
+            if (!com.huawei.secure.android.common.ssl.util.a.a(this.g)) {
                 SSLUtil.setWhiteListCipherSuites(sSLSocket, this.g);
             } else {
                 SSLUtil.setBlackListCipherSuites(sSLSocket, this.f);
             }
         }
         if (!z) {
-            C5755g.c(i, "set default protocols");
+            g.c(i, "set default protocols");
             SSLUtil.setEnabledProtocols((SSLSocket) socket);
         }
         if (z2) {
             return;
         }
-        C5755g.c(i, "set default cipher suites");
+        g.c(i, "set default cipher suites");
         SSLUtil.setEnableSafeCipherSuites((SSLSocket) socket);
     }
 
     public static SecureSSLSocketFactoryNew getInstance(Context context) throws IOException, NoSuchAlgorithmException, CertificateException, KeyStoreException, IllegalAccessException, KeyManagementException, IllegalArgumentException {
         long currentTimeMillis = System.currentTimeMillis();
-        C5751c.a(context);
+        com.huawei.secure.android.common.ssl.util.c.a(context);
         if (j == null) {
             synchronized (SecureSSLSocketFactoryNew.class) {
                 if (j == null) {
@@ -89,13 +87,13 @@ public class SecureSSLSocketFactoryNew extends SSLSocketFactory {
             j.setContext(context);
         }
         String str = i;
-        C5755g.a(str, "getInstance: cost : " + (System.currentTimeMillis() - currentTimeMillis) + " ms");
+        g.a(str, "getInstance: cost : " + (System.currentTimeMillis() - currentTimeMillis) + " ms");
         return j;
     }
 
     @Override // javax.net.SocketFactory
     public Socket createSocket(String str, int i2) throws IOException {
-        C5755g.c(i, "createSocket: host , port");
+        g.c(i, "createSocket: host , port");
         Socket createSocket = this.a.getSocketFactory().createSocket(str, i2);
         if (createSocket instanceof SSLSocket) {
             a(createSocket);
@@ -183,7 +181,7 @@ public class SecureSSLSocketFactoryNew extends SSLSocketFactory {
         this.a = null;
         this.b = null;
         if (context == null) {
-            C5755g.b(i, "SecureSSLSocketFactory: context is null");
+            g.b(i, "SecureSSLSocketFactory: context is null");
             return;
         }
         setContext(context);
@@ -205,7 +203,7 @@ public class SecureSSLSocketFactoryNew extends SSLSocketFactory {
 
     @Override // javax.net.ssl.SSLSocketFactory
     public Socket createSocket(Socket socket, String str, int i2, boolean z) throws IOException {
-        C5755g.c(i, "createSocket s host port autoClose");
+        g.c(i, "createSocket s host port autoClose");
         Socket createSocket = this.a.getSocketFactory().createSocket(socket, str, i2, z);
         if (createSocket instanceof SSLSocket) {
             a(createSocket);

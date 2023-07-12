@@ -6,7 +6,7 @@ import android.view.View;
 import androidx.fragment.app.FragmentActivity;
 import cn.damai.common.AppConfig;
 import cn.damai.common.net.mtop.Util;
-import cn.damai.common.util.toastutil.C0537a;
+import cn.damai.common.util.toastutil.a;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.scriptmurder.CommonNavbarActivity;
@@ -65,7 +65,7 @@ import tb.z20;
 public final class ShopDetailFragment extends BaseFragment implements StickyHeaderFeature {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C0802a Companion = new C0802a(null);
+    public static final a Companion = new a(null);
     public static final boolean NEED_ENCODE = false;
     public static final boolean NEED_SESSION = false;
     @NotNull
@@ -196,7 +196,7 @@ public final class ShopDetailFragment extends BaseFragment implements StickyHead
                         ShopDetailFragment.this.hideLoadingDialog(activity);
                         String errorMsg = Util.getErrorMsg(iResponse.getRetCode(), iResponse.getRetMessage());
                         if (ShopDetailFragment.this.getPageLoader().getRealItemCount() > 0) {
-                            C0537a.i(activity, errorMsg);
+                            a.i(activity, errorMsg);
                         } else {
                             ShopDetailFragment.this.getPageStateManager().setState(State.FAILED);
                         }
@@ -347,13 +347,12 @@ public final class ShopDetailFragment extends BaseFragment implements StickyHead
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.scriptmurder.shopdetail.ShopDetailFragment$a */
     /* loaded from: classes4.dex */
-    public static final class C0802a {
-        private C0802a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C0802a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

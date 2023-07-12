@@ -5,9 +5,9 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 import kotlin.Pair;
-import kotlin.collections.C8201d0;
-import kotlin.collections.C8203e0;
-import kotlin.collections.C8214m;
+import kotlin.collections.d0;
+import kotlin.collections.e0;
+import kotlin.collections.m;
 import kotlin.jvm.functions.Function0;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentDescriptor;
@@ -37,7 +37,7 @@ import tb.z61;
 /* loaded from: classes3.dex */
 public final class DeserializedDescriptorResolver {
     @NotNull
-    public static final C8372a Companion = new C8372a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final Set<KotlinClassHeader.Kind> b;
     @NotNull
@@ -51,13 +51,12 @@ public final class DeserializedDescriptorResolver {
     public h70 a;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.kotlin.DeserializedDescriptorResolver$a */
     /* loaded from: classes3.dex */
-    public static final class C8372a {
-        private C8372a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8372a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -70,9 +69,9 @@ public final class DeserializedDescriptorResolver {
     static {
         Set<KotlinClassHeader.Kind> c2;
         Set<KotlinClassHeader.Kind> g;
-        c2 = C8201d0.c(KotlinClassHeader.Kind.CLASS);
+        c2 = d0.c(KotlinClassHeader.Kind.CLASS);
         b = c2;
-        g = C8203e0.g(KotlinClassHeader.Kind.FILE_FACADE, KotlinClassHeader.Kind.MULTIFILE_CLASS_PART);
+        g = e0.g(KotlinClassHeader.Kind.FILE_FACADE, KotlinClassHeader.Kind.MULTIFILE_CLASS_PART);
         c = g;
         d = new x61(1, 1, 2);
         e = new x61(1, 1, 11);
@@ -105,12 +104,12 @@ public final class DeserializedDescriptorResolver {
 
     private final String[] k(KotlinJvmBinaryClass kotlinJvmBinaryClass, Set<? extends KotlinClassHeader.Kind> set) {
         KotlinClassHeader classHeader = kotlinJvmBinaryClass.getClassHeader();
-        String[] a = classHeader.a();
-        if (a == null) {
-            a = classHeader.b();
+        String[] a2 = classHeader.a();
+        if (a2 == null) {
+            a2 = classHeader.b();
         }
-        if (a != null && set.contains(classHeader.c())) {
-            return a;
+        if (a2 != null && set.contains(classHeader.c())) {
+            return a2;
         }
         return null;
     }
@@ -148,7 +147,7 @@ public final class DeserializedDescriptorResolver {
             @NotNull
             public final Collection<? extends ni1> invoke() {
                 List g2;
-                g2 = C8214m.g();
+                g2 = m.g();
                 return g2;
             }
         });

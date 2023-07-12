@@ -47,8 +47,8 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8214m;
+import kotlin.collections.k;
+import kotlin.collections.m;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -65,7 +65,7 @@ import tb.z20;
 public final class ScriptTagPresent extends AbsPresenter<GenericItem<ItemValue>, ScriptTagModel, ScriptTagContract.View> implements ScriptTagContract.Presenter {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C1489a Companion = new C1489a(null);
+    public static final a Companion = new a(null);
     public static final boolean NEED_ENCODE = false;
     public static final boolean NEED_SESSION = false;
     @NotNull
@@ -177,13 +177,12 @@ public final class ScriptTagPresent extends AbsPresenter<GenericItem<ItemValue>,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.onearch.component.scripttag.ScriptTagPresent$a */
     /* loaded from: classes15.dex */
-    public static final class C1489a {
-        private C1489a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C1489a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -217,7 +216,7 @@ public final class ScriptTagPresent extends AbsPresenter<GenericItem<ItemValue>,
                 for (Object obj : children) {
                     int i2 = i + 1;
                     if (i < 0) {
-                        C8214m.p();
+                        m.p();
                     }
                     Node node2 = (Node) obj;
                     try {
@@ -353,9 +352,9 @@ public final class ScriptTagPresent extends AbsPresenter<GenericItem<ItemValue>,
                             if ((children2 == null || children2.isEmpty()) ? true : true) {
                                 children2 = null;
                             }
-                            if (children2 != null && (node = (Node) C8212k.b0(children2)) != null && (children = node.getChildren()) != null) {
+                            if (children2 != null && (node = (Node) k.b0(children2)) != null && (children = node.getChildren()) != null) {
                                 List<Node> list = children.isEmpty() ? null : children;
-                                if (list != null && (node2 = (Node) C8212k.b0(list)) != null) {
+                                if (list != null && (node2 = (Node) k.b0(list)) != null) {
                                     scriptTagPresent.createItems(node2);
                                 }
                             }

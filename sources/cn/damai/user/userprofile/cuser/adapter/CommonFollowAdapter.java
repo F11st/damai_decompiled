@@ -14,8 +14,8 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import cn.damai.homepage.R$color;
 import cn.damai.homepage.R$drawable;
 import cn.damai.uikit.view.DMAvatar;
@@ -29,11 +29,11 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 import java.util.List;
-import tb.C9826vr;
 import tb.cs;
 import tb.iv2;
 import tb.t60;
 import tb.u12;
+import tb.vr;
 import tb.z20;
 import tb.zq;
 
@@ -60,14 +60,13 @@ public class CommonFollowAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.adapter.CommonFollowAdapter$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2755a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CommonFavObject a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC2755a(CommonFavObject commonFavObject, int i) {
+        a(CommonFavObject commonFavObject, int i) {
             this.a = commonFavObject;
             this.b = i;
         }
@@ -121,12 +120,12 @@ public class CommonFollowAdapter extends RecyclerView.Adapter<ViewHolder> {
             return;
         }
         CommonFavObject commonFavObject = this.a.get(i);
-        if (viewHolder.a.getTag() instanceof C9826vr) {
-            ((C9826vr) viewHolder.a.getTag()).cancel();
+        if (viewHolder.a.getTag() instanceof vr) {
+            ((vr) viewHolder.a.getTag()).cancel();
         }
         new zq(0.0f, 0, t60.a(this.b, 0.5f), this.b.getResources().getColor(R$color.color_6black));
         viewHolder.a.setAvatar(commonFavObject.pic);
-        viewHolder.a.setOnClickListener(new View$OnClickListenerC2755a(commonFavObject, i));
+        viewHolder.a.setOnClickListener(new a(commonFavObject, i));
         viewHolder.b.setText(commonFavObject.name);
     }
 
@@ -189,8 +188,8 @@ public class CommonFollowAdapter extends RecyclerView.Adapter<ViewHolder> {
             hashMap.put("contentlabel", userIndexViewModel.userid);
         }
         hashMap.put("titlelabel", str);
-        C0528b c0528b = new C0528b();
-        C0529c.e().x(c0528b.e(iv2.USER_HOME_PAGE, "taste", "follow_" + i, hashMap, Boolean.TRUE));
+        b bVar = new b();
+        c.e().x(bVar.e(iv2.USER_HOME_PAGE, "taste", "follow_" + i, hashMap, Boolean.TRUE));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

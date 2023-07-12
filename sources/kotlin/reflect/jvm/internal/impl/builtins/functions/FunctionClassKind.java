@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.builtins.functions;
 
 import com.vivo.push.PushClientConstants;
 import kotlin.jvm.JvmStatic;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
+import kotlin.reflect.jvm.internal.impl.builtins.c;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -28,7 +28,7 @@ jadx.core.utils.exceptions.JadxRuntimeException: Init of enum KFunction uses ext
 public final class FunctionClassKind {
     private static final /* synthetic */ FunctionClassKind[] $VALUES;
     @NotNull
-    public static final C8279a Companion;
+    public static final a Companion;
     public static final FunctionClassKind KFunction;
     public static final FunctionClassKind KSuspendFunction;
     @NotNull
@@ -37,23 +37,22 @@ public final class FunctionClassKind {
     private final boolean isSuspendType;
     @NotNull
     private final hp0 packageFqName;
-    public static final FunctionClassKind Function = new FunctionClassKind("Function", 0, C8277c.BUILT_INS_PACKAGE_FQ_NAME, "Function", false, false);
-    public static final FunctionClassKind SuspendFunction = new FunctionClassKind("SuspendFunction", 1, C8277c.COROUTINES_PACKAGE_FQ_NAME_RELEASE, "SuspendFunction", true, false);
+    public static final FunctionClassKind Function = new FunctionClassKind("Function", 0, c.BUILT_INS_PACKAGE_FQ_NAME, "Function", false, false);
+    public static final FunctionClassKind SuspendFunction = new FunctionClassKind("SuspendFunction", 1, c.COROUTINES_PACKAGE_FQ_NAME_RELEASE, "SuspendFunction", true, false);
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.builtins.functions.FunctionClassKind$a */
     /* loaded from: classes3.dex */
-    public static final class C8279a {
+    public static final class a {
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.builtins.functions.FunctionClassKind$a$a */
+        /* renamed from: kotlin.reflect.jvm.internal.impl.builtins.functions.FunctionClassKind$a$a  reason: collision with other inner class name */
         /* loaded from: classes3.dex */
-        public static final class C8280a {
+        public static final class C0412a {
             @NotNull
             private final FunctionClassKind a;
             private final int b;
 
-            public C8280a(@NotNull FunctionClassKind functionClassKind, int i) {
+            public C0412a(@NotNull FunctionClassKind functionClassKind, int i) {
                 b41.i(functionClassKind, "kind");
                 this.a = functionClassKind;
                 this.b = i;
@@ -77,9 +76,9 @@ public final class FunctionClassKind {
                 if (this == obj) {
                     return true;
                 }
-                if (obj instanceof C8280a) {
-                    C8280a c8280a = (C8280a) obj;
-                    return this.a == c8280a.a && this.b == c8280a.b;
+                if (obj instanceof C0412a) {
+                    C0412a c0412a = (C0412a) obj;
+                    return this.a == c0412a.a && this.b == c0412a.b;
                 }
                 return false;
             }
@@ -94,10 +93,10 @@ public final class FunctionClassKind {
             }
         }
 
-        private C8279a() {
+        private a() {
         }
 
-        public /* synthetic */ C8279a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -147,7 +146,7 @@ public final class FunctionClassKind {
                 if (r6 == 0) goto L2d
                 java.lang.String r6 = r5.getClassNamePrefix()
                 r7 = 2
-                boolean r4 = kotlin.text.C8596g.F(r10, r6, r2, r7, r4)
+                boolean r4 = kotlin.text.g.F(r10, r6, r2, r7, r4)
                 if (r4 == 0) goto L2d
                 r4 = 1
                 goto L2e
@@ -163,7 +162,7 @@ public final class FunctionClassKind {
             L35:
                 return r4
             */
-            throw new UnsupportedOperationException("Method not decompiled: kotlin.reflect.jvm.internal.impl.builtins.functions.FunctionClassKind.C8279a.a(tb.hp0, java.lang.String):kotlin.reflect.jvm.internal.impl.builtins.functions.FunctionClassKind");
+            throw new UnsupportedOperationException("Method not decompiled: kotlin.reflect.jvm.internal.impl.builtins.functions.FunctionClassKind.a.a(tb.hp0, java.lang.String):kotlin.reflect.jvm.internal.impl.builtins.functions.FunctionClassKind");
         }
 
         @JvmStatic
@@ -171,7 +170,7 @@ public final class FunctionClassKind {
         public final FunctionClassKind b(@NotNull String str, @NotNull hp0 hp0Var) {
             b41.i(str, PushClientConstants.TAG_CLASS_NAME);
             b41.i(hp0Var, "packageFqName");
-            C8280a c = c(str, hp0Var);
+            C0412a c = c(str, hp0Var);
             if (c == null) {
                 return null;
             }
@@ -179,7 +178,7 @@ public final class FunctionClassKind {
         }
 
         @Nullable
-        public final C8280a c(@NotNull String str, @NotNull hp0 hp0Var) {
+        public final C0412a c(@NotNull String str, @NotNull hp0 hp0Var) {
             b41.i(str, PushClientConstants.TAG_CLASS_NAME);
             b41.i(hp0Var, "packageFqName");
             FunctionClassKind a = a(hp0Var, str);
@@ -192,7 +191,7 @@ public final class FunctionClassKind {
             if (d == null) {
                 return null;
             }
-            return new C8280a(a, d.intValue());
+            return new C0412a(a, d.intValue());
         }
     }
 
@@ -201,11 +200,11 @@ public final class FunctionClassKind {
     }
 
     static {
-        hp0 hp0Var = C8277c.KOTLIN_REFLECT_FQ_NAME;
+        hp0 hp0Var = c.KOTLIN_REFLECT_FQ_NAME;
         KFunction = new FunctionClassKind("KFunction", 2, hp0Var, "KFunction", false, true);
         KSuspendFunction = new FunctionClassKind("KSuspendFunction", 3, hp0Var, "KSuspendFunction", true, true);
         $VALUES = $values();
-        Companion = new C8279a(null);
+        Companion = new a(null);
     }
 
     private FunctionClassKind(String str, int i, hp0 hp0Var, String str2, boolean z, boolean z2) {

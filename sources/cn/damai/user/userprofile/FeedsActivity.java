@@ -3,7 +3,7 @@ package cn.damai.user.userprofile;
 import android.os.Bundle;
 import android.view.View;
 import androidx.fragment.app.FragmentTransaction;
-import cn.damai.common.user.C0525a;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -17,12 +17,11 @@ public class FeedsActivity extends SimpleBaseActivity {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.FeedsActivity$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2733a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2733a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -55,9 +54,9 @@ public class FeedsActivity extends SimpleBaseActivity {
             return;
         }
         super.onCreate(bundle);
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i("brand__evaluate"));
+        setDamaiUTKeyBuilder(new a.b().i("brand__evaluate"));
         setContentView(R$layout.activity_feeds);
-        findViewById(R$id.brand_back).setOnClickListener(new View$OnClickListenerC2733a());
+        findViewById(R$id.brand_back).setOnClickListener(new a());
         FragmentTransaction beginTransaction = getSupportFragmentManager().beginTransaction();
         if (getIntent() == null) {
             return;

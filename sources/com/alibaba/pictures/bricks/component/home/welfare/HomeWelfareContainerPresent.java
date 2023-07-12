@@ -32,7 +32,7 @@ import com.youku.arch.v3.view.render.GenericRenderConfig;
 import com.youku.middlewareservice.provider.info.AppInfoProviderProxy;
 import java.util.List;
 import java.util.Map;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -152,7 +152,7 @@ public final class HomeWelfareContainerPresent extends AbsPresenter<GenericItem<
                     for (Object obj : children) {
                         int i2 = i + 1;
                         if (i < 0) {
-                            C8214m.p();
+                            m.p();
                         }
                         Node node = (Node) obj;
                         try {

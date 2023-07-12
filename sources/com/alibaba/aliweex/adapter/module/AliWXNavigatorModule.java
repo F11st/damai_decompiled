@@ -2,7 +2,6 @@ package com.alibaba.aliweex.adapter.module;
 
 import android.view.Menu;
 import com.alibaba.aliweex.AliWXSDKInstance;
-import com.alibaba.aliweex.C3004a;
 import com.taobao.weex.WXSDKInstance;
 import com.taobao.weex.appfram.navigator.WXNavigatorModule;
 
@@ -11,7 +10,7 @@ import com.taobao.weex.appfram.navigator.WXNavigatorModule;
 public class AliWXNavigatorModule extends WXNavigatorModule {
     @Override // com.taobao.weex.common.WXModule
     public boolean onCreateOptionsMenu(Menu menu) {
-        C3004a.l().n();
+        com.alibaba.aliweex.a.l().n();
         WXSDKInstance wXSDKInstance = this.mWXSDKInstance;
         if (wXSDKInstance instanceof AliWXSDKInstance) {
             ((AliWXSDKInstance) wXSDKInstance).b();

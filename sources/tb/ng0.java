@@ -14,9 +14,8 @@ public class ng0 {
     private ThreadFactory f;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ng0$a */
     /* loaded from: classes5.dex */
-    public static class C9473a {
+    public static class a {
         private int a;
         private int b;
         private int c;
@@ -25,7 +24,7 @@ public class ng0 {
         private ThreadFactory f;
 
         @NonNull
-        public C9473a g(boolean z) {
+        public a g(boolean z) {
             this.e = z;
             return this;
         }
@@ -36,43 +35,43 @@ public class ng0 {
         }
 
         @NonNull
-        public C9473a i(int i) {
+        public a i(int i) {
             this.a = i;
             return this;
         }
 
         @NonNull
-        public C9473a j(long j) {
+        public a j(long j) {
             this.d = j;
             return this;
         }
 
         @NonNull
-        public C9473a k(int i) {
+        public a k(int i) {
             this.b = i;
             return this;
         }
 
         @NonNull
-        public C9473a l(int i) {
+        public a l(int i) {
             this.c = i;
             return this;
         }
 
         @NonNull
-        public C9473a m(ThreadFactory threadFactory) {
+        public a m(ThreadFactory threadFactory) {
             this.f = threadFactory;
             return this;
         }
     }
 
-    ng0(@NonNull C9473a c9473a) {
-        this.a = c9473a.a;
-        this.b = c9473a.b;
-        this.d = c9473a.d;
-        this.f = c9473a.f;
-        this.c = c9473a.c;
-        this.e = c9473a.e;
+    ng0(@NonNull a aVar) {
+        this.a = aVar.a;
+        this.b = aVar.b;
+        this.d = aVar.d;
+        this.f = aVar.f;
+        this.c = aVar.c;
+        this.e = aVar.e;
     }
 
     public int a() {

@@ -8,19 +8,18 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public class l31 implements Iterable<Integer>, KMappedMarker {
     @NotNull
-    public static final C9403a Companion = new C9403a(null);
+    public static final a Companion = new a(null);
     private final int a;
     private final int b;
     private final int c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.l31$a */
     /* loaded from: classes3.dex */
-    public static final class C9403a {
-        private C9403a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9403a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

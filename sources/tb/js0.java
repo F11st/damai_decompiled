@@ -20,20 +20,19 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes6.dex */
 public final class js0 {
     @NotNull
-    public static final C9319a Companion = new C9319a(null);
+    public static final a Companion = new a(null);
     @Nullable
     private Node a;
     @Nullable
     private l81 b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.js0$a */
     /* loaded from: classes6.dex */
-    public static final class C9319a {
-        private C9319a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9319a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

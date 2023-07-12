@@ -82,7 +82,7 @@ public class SendGiftButton extends RelativeLayout implements View.OnTouchListen
         }
         Context context = getContext();
         this.mContext = context;
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ykl_send_gift_layout_button, this);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_ykl_send_gift_layout_button, this);
         Button button = (Button) findViewById(R.id.sendBt);
         this.mTvSend = button;
         button.setOnTouchListener(this);
@@ -262,7 +262,7 @@ public class SendGiftButton extends RelativeLayout implements View.OnTouchListen
         layoutParams.setMargins(layoutParams.leftMargin, 0, DensityUtil.dip2px(this.mContext, 12.0f), DensityUtil.dip2px(this.mContext, 17.0f));
         this.mTvSend.setLayoutParams(layoutParams);
         this.mTvSend.setTextColor(Color.parseColor("#4dffffff"));
-        this.mTvSend.setBackgroundResource(R.C7941drawable.dago_pgc_ykl_send_gift_d_3);
+        this.mTvSend.setBackgroundResource(R.drawable.dago_pgc_ykl_send_gift_d_3);
     }
 
     public void setSendBtnSelect() {
@@ -278,8 +278,8 @@ public class SendGiftButton extends RelativeLayout implements View.OnTouchListen
             layoutParams.setMargins(layoutParams.leftMargin, DensityUtil.dip2px(this.mContext, 5.0f), 0, 0);
             this.mTvSend.setLayoutParams(layoutParams);
             this.mTvSend.setTextColor(Color.parseColor("#D9000000"));
-            this.mTvSend.setBackgroundResource(R.C7941drawable.dago_pgc_ykl_send_gift_d_1);
-            this.mTvSend.setBackgroundResource(R.C7941drawable.dago_pgc_ykl_send_gift_d_2);
+            this.mTvSend.setBackgroundResource(R.drawable.dago_pgc_ykl_send_gift_d_1);
+            this.mTvSend.setBackgroundResource(R.drawable.dago_pgc_ykl_send_gift_d_2);
             this.isSetState = true;
         }
     }

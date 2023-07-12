@@ -29,12 +29,11 @@ public class DramaWorthSeeView extends AbsView<DramaWorthSeeContract.Presenter> 
     private final int mRightSize;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.drama.mvp.DramaWorthSeeView$a */
     /* loaded from: classes7.dex */
-    public class C1822a implements OnItemBindListener<DramaV2Bean> {
+    public class a implements OnItemBindListener<DramaV2Bean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1822a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -61,13 +60,12 @@ public class DramaWorthSeeView extends AbsView<DramaWorthSeeContract.Presenter> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.drama.mvp.DramaWorthSeeView$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1823b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        View$OnClickListenerC1823b(String str) {
+        b(String str) {
             this.a = str;
         }
 
@@ -113,7 +111,7 @@ public class DramaWorthSeeView extends AbsView<DramaWorthSeeContract.Presenter> 
             }
         });
         recyclerView.setLayoutManager(new LinearLayoutManager(mu0.a(), 0, false));
-        DramaListV2RecyAdapter dramaListV2RecyAdapter = new DramaListV2RecyAdapter(new C1822a());
+        DramaListV2RecyAdapter dramaListV2RecyAdapter = new DramaListV2RecyAdapter(new a());
         this.mAdapter = dramaListV2RecyAdapter;
         recyclerView.setAdapter(dramaListV2RecyAdapter);
     }
@@ -134,7 +132,7 @@ public class DramaWorthSeeView extends AbsView<DramaWorthSeeContract.Presenter> 
                 this.mPanel.d(true);
                 this.mPanel.e("全部");
                 if (cardTitleBean.hasUrl()) {
-                    this.mPanel.a(new View$OnClickListenerC1823b(cardTitleBean.url));
+                    this.mPanel.a(new b(cardTitleBean.url));
                     return;
                 } else {
                     this.mPanel.a(null);

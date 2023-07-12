@@ -321,7 +321,7 @@ public class SmoothProgressBar extends ProgressBar {
     public SmoothProgressBar(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         if (isInEditMode()) {
-            setIndeterminateDrawable(new SmoothProgressDrawable.C0285a(context).b());
+            setIndeterminateDrawable(new SmoothProgressDrawable.a(context).b());
             return;
         }
         Resources resources = context.getResources();
@@ -355,7 +355,7 @@ public class SmoothProgressBar extends ProgressBar {
             }
         }
         int[] intArray = resourceId != 0 ? resources.getIntArray(resourceId) : null;
-        SmoothProgressDrawable.C0285a f4 = new SmoothProgressDrawable.C0285a(context).p(f).k(f2).l(f3).h(interpolator).n(integer).o(dimensionPixelSize).q(dimension).m(z).i(z2).j(z3).f(z5);
+        SmoothProgressDrawable.a f4 = new SmoothProgressDrawable.a(context).p(f).k(f2).l(f3).h(interpolator).n(integer).o(dimensionPixelSize).q(dimension).m(z).i(z2).j(z3).f(z5);
         if (drawable != null) {
             f4.a(drawable);
         }

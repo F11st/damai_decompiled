@@ -35,7 +35,7 @@ public class NfcUtil {
     private PendingIntent c;
     private boolean d;
     private ReadCallback f;
-    private CountDownTimerC2010a g;
+    private a g;
     private TriggerMode e = TriggerMode.ALWAYS;
     private int h = 60000;
 
@@ -57,10 +57,9 @@ public class NfcUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticket.nfc.NfcUtil$a */
     /* loaded from: classes16.dex */
-    private class CountDownTimerC2010a extends CountDownTimer {
-        public CountDownTimerC2010a(long j) {
+    private class a extends CountDownTimer {
+        public a(long j) {
             super(j, j);
         }
 
@@ -130,14 +129,14 @@ public class NfcUtil {
         }
     }
 
-    private void l(C2012b c2012b) {
+    private void l(b bVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1515480293")) {
-            ipChange.ipc$dispatch("-1515480293", new Object[]{this, c2012b});
-        } else if (c2012b.a) {
-            this.f.onReadSuccess(c2012b.d);
+            ipChange.ipc$dispatch("-1515480293", new Object[]{this, bVar});
+        } else if (bVar.a) {
+            this.f.onReadSuccess(bVar.d);
         } else {
-            this.f.onReadError(c2012b.c, c2012b.b);
+            this.f.onReadError(bVar.c, bVar.b);
         }
     }
 
@@ -177,9 +176,9 @@ public class NfcUtil {
             ipChange.ipc$dispatch("-998485327", new Object[]{this});
         } else if (this.e == TriggerMode.ONCE) {
             this.d = false;
-            CountDownTimerC2010a countDownTimerC2010a = this.g;
-            if (countDownTimerC2010a != null) {
-                countDownTimerC2010a.cancel();
+            a aVar = this.g;
+            if (aVar != null) {
+                aVar.cancel();
             }
         }
     }
@@ -194,10 +193,10 @@ public class NfcUtil {
         if (TextUtils.equals(intent.getAction(), "android.nfc.action.TECH_DISCOVERED")) {
             if (this.e == TriggerMode.ONCE) {
                 if (this.d) {
-                    C2012b e = C2011a.e(intent);
-                    CountDownTimerC2010a countDownTimerC2010a = this.g;
-                    if (countDownTimerC2010a != null) {
-                        countDownTimerC2010a.cancel();
+                    b e = cn.damai.ticket.nfc.a.e(intent);
+                    a aVar = this.g;
+                    if (aVar != null) {
+                        aVar.cancel();
                     }
                     this.d = false;
                     l(e);
@@ -206,14 +205,14 @@ public class NfcUtil {
                 Log.i("nfc", "once mode,not operate");
                 return;
             }
-            l(C2011a.e(intent));
+            l(cn.damai.ticket.nfc.a.e(intent));
             return;
         }
         Log.i("nfc", "not nfc ticket");
-        C2012b c2012b = new C2012b();
-        c2012b.a = false;
-        c2012b.c = 6;
-        c2012b.b = "not nfc intent";
+        b bVar = new b();
+        bVar.a = false;
+        bVar.c = 6;
+        bVar.b = "not nfc intent";
         this.f.onReadError(6, "not nfc intent");
     }
 
@@ -264,9 +263,9 @@ public class NfcUtil {
         Log.i("nfc", "startOnceRead");
         if (this.e == TriggerMode.ONCE && !this.d) {
             this.d = true;
-            CountDownTimerC2010a countDownTimerC2010a = new CountDownTimerC2010a(this.h);
-            this.g = countDownTimerC2010a;
-            countDownTimerC2010a.start();
+            a aVar = new a(this.h);
+            this.g = aVar;
+            aVar.start();
             return;
         }
         Log.i("nfc", "use startOnceRead,should set trigger mode ALWAYS");

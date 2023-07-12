@@ -2,10 +2,8 @@ package tb;
 
 import com.alibaba.analytics.core.model.LogField;
 import com.alibaba.analytics.core.store.LogStoreMgr;
-import com.alibaba.appmonitor.delegate.C3309a;
 import com.alibaba.appmonitor.event.EventType;
 import com.alibaba.appmonitor.model.UTDimensionValueSet;
-import com.alibaba.appmonitor.pool.C3316a;
 import com.alibaba.appmonitor.pool.ReuseJSONArray;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.motu.tbrest.rest.RestConstants;
@@ -21,18 +19,18 @@ public class gt2 {
             return;
         }
         LogStoreMgr.l().d(new qa1(vs2Var.a, String.valueOf(vs2Var.b), vs2Var.c, vs2Var.d, vs2Var.e, vs2Var.f));
-        C3316a.a().offer(vs2Var);
+        com.alibaba.appmonitor.pool.a.a().offer(vs2Var);
     }
 
     public static void b(UTDimensionValueSet uTDimensionValueSet, qf0 qf0Var) {
         Integer eventId = uTDimensionValueSet.getEventId();
         if (eventId != null) {
             EventType eventType = EventType.getEventType(eventId.intValue());
-            vs2 vs2Var = (vs2) C3316a.a().poll(vs2.class, new Object[0]);
+            vs2 vs2Var = (vs2) com.alibaba.appmonitor.pool.a.a().poll(vs2.class, new Object[0]);
             vs2Var.b = RestConstants.EventID.AGGREGATION_LOG;
             vs2Var.c = qf0Var.a;
             vs2Var.d = qf0Var.b;
-            vs2Var.f.putAll(C3309a.c());
+            vs2Var.f.putAll(com.alibaba.appmonitor.delegate.a.c());
             if (uTDimensionValueSet.getMap() != null) {
                 vs2Var.f.putAll(uTDimensionValueSet.getMap());
                 vs2Var.f.remove("commitDay");
@@ -40,20 +38,20 @@ public class gt2 {
             HashMap hashMap = new HashMap();
             hashMap.put("meta", p72.b());
             hashMap.put("_event_id", eventId);
-            ReuseJSONArray reuseJSONArray = (ReuseJSONArray) C3316a.a().poll(ReuseJSONArray.class, new Object[0]);
+            ReuseJSONArray reuseJSONArray = (ReuseJSONArray) com.alibaba.appmonitor.pool.a.a().poll(ReuseJSONArray.class, new Object[0]);
             reuseJSONArray.add(qf0Var.b());
-            C3316a.a().offer(qf0Var);
+            com.alibaba.appmonitor.pool.a.a().offer(qf0Var);
             hashMap.put("data", reuseJSONArray);
             vs2Var.f.put(eventType.getAggregateEventArgsKey(), JSON.toJSONString(hashMap));
             vs2Var.f.put(LogField.EVENTID.toString(), String.valueOf((int) RestConstants.EventID.AGGREGATION_LOG));
             c(vs2Var);
-            C3316a.a().offer(reuseJSONArray);
+            com.alibaba.appmonitor.pool.a.a().offer(reuseJSONArray);
         }
     }
 
     public static void c(vs2 vs2Var) {
         LogStoreMgr.l().d(new qa1(vs2Var.a, String.valueOf(vs2Var.b), vs2Var.c, vs2Var.d, vs2Var.e, vs2Var.f));
-        C3316a.a().offer(vs2Var);
+        com.alibaba.appmonitor.pool.a.a().offer(vs2Var);
     }
 
     public static void d(Map<UTDimensionValueSet, List<qf0>> map) {
@@ -66,16 +64,16 @@ public class gt2 {
             if (value.size() != 0 && (eventId = key.getEventId()) != null) {
                 EventType eventType = EventType.getEventType(eventId.intValue());
                 int i = 0;
-                vs2 vs2Var = (vs2) C3316a.a().poll(vs2.class, new Object[0]);
+                vs2 vs2Var = (vs2) com.alibaba.appmonitor.pool.a.a().poll(vs2.class, new Object[0]);
                 vs2Var.b = eventId.intValue();
-                vs2Var.f.putAll(C3309a.c());
+                vs2Var.f.putAll(com.alibaba.appmonitor.delegate.a.c());
                 if (key.getMap() != null) {
                     vs2Var.f.putAll(key.getMap());
                     vs2Var.f.remove("commitDay");
                 }
                 HashMap hashMap = new HashMap();
                 hashMap.put("meta", p72.b());
-                ReuseJSONArray reuseJSONArray = (ReuseJSONArray) C3316a.a().poll(ReuseJSONArray.class, new Object[0]);
+                ReuseJSONArray reuseJSONArray = (ReuseJSONArray) com.alibaba.appmonitor.pool.a.a().poll(ReuseJSONArray.class, new Object[0]);
                 for (qf0 qf0Var : value) {
                     reuseJSONArray.add(qf0Var.b());
                     if (i == 0) {
@@ -88,7 +86,7 @@ public class gt2 {
                         sb2.append(qf0Var.b);
                     }
                     i++;
-                    C3316a.a().offer(qf0Var);
+                    com.alibaba.appmonitor.pool.a.a().offer(qf0Var);
                 }
                 hashMap.put("data", reuseJSONArray);
                 vs2Var.f.put(eventType.getAggregateEventArgsKey(), JSON.toJSONString(hashMap));
@@ -99,9 +97,9 @@ public class gt2 {
                 vs2Var.c = sb3;
                 vs2Var.d = sb4;
                 c(vs2Var);
-                C3316a.a().offer(reuseJSONArray);
+                com.alibaba.appmonitor.pool.a.a().offer(reuseJSONArray);
             }
-            C3316a.a().offer(key);
+            com.alibaba.appmonitor.pool.a.a().offer(key);
         }
     }
 }

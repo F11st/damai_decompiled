@@ -10,7 +10,7 @@ import com.huawei.hms.activity.BridgeActivity;
 import com.huawei.hms.activity.IBridgeActivityDelegate;
 import com.huawei.hms.adapter.internal.CommonCode;
 import com.huawei.hms.adapter.sysobs.SystemManager;
-import com.huawei.hms.availableupdate.C5529a;
+import com.huawei.hms.availableupdate.a;
 import com.huawei.hms.support.log.HMSLog;
 import com.huawei.hms.update.kpms.KpmsConstant;
 import com.huawei.hms.utils.HMSPackageManager;
@@ -66,7 +66,7 @@ public class UpdateAdapter implements IBridgeActivityDelegate {
         }
         activity.getApplicationContext();
         this.a = new WeakReference<>(activity);
-        if (C5529a.b.a(b())) {
+        if (a.b.a(b())) {
             Intent intent = activity.getIntent();
             if (intent == null) {
                 c();
@@ -88,7 +88,7 @@ public class UpdateAdapter implements IBridgeActivityDelegate {
     @Override // com.huawei.hms.activity.IBridgeActivityDelegate
     public void onBridgeActivityDestroy() {
         HMSLog.i("UpdateAdapter", "onBridgeActivityDestroy");
-        C5529a.b.b(b());
+        a.b.b(b());
         this.a = null;
     }
 

@@ -16,7 +16,7 @@ import com.android.alibaba.ip.runtime.IpChange;
 public abstract class BaseDashedLine extends View {
     private static transient /* synthetic */ IpChange $ipChange;
     protected int mDashColor;
-    protected C2567a mDashEffect;
+    protected a mDashEffect;
     protected Paint mPaint;
     protected float mStrokeWidth;
 
@@ -34,7 +34,7 @@ public abstract class BaseDashedLine extends View {
         TypedArray obtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, R$styleable.DashedLine);
         this.mDashColor = obtainStyledAttributes.getColor(R$styleable.DashedLine_dashColor, 0);
         this.mStrokeWidth = obtainStyledAttributes.getDimensionPixelSize(R$styleable.DashedLine_strokeW, 0);
-        this.mDashEffect = new C2567a(this, obtainStyledAttributes.getDimensionPixelSize(R$styleable.DashedLine_dashWidth, 1), obtainStyledAttributes.getDimensionPixelSize(R$styleable.DashedLine_dashGap, 0));
+        this.mDashEffect = new a(this, obtainStyledAttributes.getDimensionPixelSize(R$styleable.DashedLine_dashWidth, 1), obtainStyledAttributes.getDimensionPixelSize(R$styleable.DashedLine_dashGap, 0));
         initAttr(obtainStyledAttributes);
         obtainStyledAttributes.recycle();
     }
@@ -96,16 +96,15 @@ public abstract class BaseDashedLine extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.BaseDashedLine$a */
     /* loaded from: classes8.dex */
-    public class C2567a {
+    public class a {
         private static transient /* synthetic */ IpChange $ipChange;
         protected int a;
         protected int b;
         protected int c;
         protected DashPathEffect d;
 
-        public C2567a(BaseDashedLine baseDashedLine, int i, int i2) {
+        public a(BaseDashedLine baseDashedLine, int i, int i2) {
             b(i, i2);
         }
 
@@ -137,7 +136,7 @@ public abstract class BaseDashedLine extends View {
             this.d = new DashPathEffect(new float[]{i, i2}, i3);
         }
 
-        public C2567a(BaseDashedLine baseDashedLine, int i, int i2, int i3) {
+        public a(BaseDashedLine baseDashedLine, int i, int i2, int i3) {
             c(i, i2, i3);
         }
     }

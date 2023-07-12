@@ -40,12 +40,11 @@ public final class PublishDMSelectView extends LinearLayout {
     private Integer selectedDmIndex;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.view.PublishDMSelectView$a */
     /* loaded from: classes4.dex */
-    public static final class C0464a implements OnItemClickListener {
+    public static final class a implements OnItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0464a() {
+        a() {
         }
 
         @Override // cn.damai.comment.view.OnItemClickListener
@@ -202,6 +201,6 @@ public final class PublishDMSelectView extends LinearLayout {
         View findViewById2 = findViewById(R$id.comment_publish_dm_tag_container);
         b41.h(findViewById2, "findViewById(R.id.commen…publish_dm_tag_container)");
         this.dmTagListView = (PublishDMTagView) findViewById2;
-        publishDMListView.setItemClickListener(new C0464a());
+        publishDMListView.setItemClickListener(new a());
     }
 }

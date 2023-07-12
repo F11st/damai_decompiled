@@ -3,8 +3,6 @@ package com.uc.webview.export.internal.setup;
 import android.content.Context;
 import android.util.Pair;
 import com.uc.webview.export.cyclone.UCCyclone;
-import com.uc.webview.export.internal.utility.C7334h;
-import com.uc.webview.export.internal.utility.C7349p;
 import io.flutter.stat.StatServices;
 import java.io.File;
 import java.util.HashMap;
@@ -53,7 +51,7 @@ public class bt {
         Object obj;
         String str;
         Pair<String, String> pair = this.coreImplModule;
-        return (pair == null || (obj = pair.first) == null || (str = (String) obj) == null) ? "nul" : str.startsWith(C7349p.a(context, "decompresses2").getAbsolutePath()) ? "dec" : str.startsWith(C7349p.a(context, "updates").getAbsolutePath()) ? "upd" : str.startsWith(C7349p.a(context, "kjlinks").getAbsolutePath()) ? "kjl" : str.startsWith(C7349p.a(context, "kjcopies").getAbsolutePath()) ? "kjc" : str.startsWith(C7349p.a(context, "repairs").getAbsolutePath()) ? "rep" : "oth";
+        return (pair == null || (obj = pair.first) == null || (str = (String) obj) == null) ? "nul" : str.startsWith(com.uc.webview.export.internal.utility.p.a(context, "decompresses2").getAbsolutePath()) ? "dec" : str.startsWith(com.uc.webview.export.internal.utility.p.a(context, "updates").getAbsolutePath()) ? "upd" : str.startsWith(com.uc.webview.export.internal.utility.p.a(context, "kjlinks").getAbsolutePath()) ? "kjl" : str.startsWith(com.uc.webview.export.internal.utility.p.a(context, "kjcopies").getAbsolutePath()) ? "kjc" : str.startsWith(com.uc.webview.export.internal.utility.p.a(context, "repairs").getAbsolutePath()) ? "rep" : "oth";
     }
 
     public Map<String, String> getFileHashs() {
@@ -73,20 +71,20 @@ public class bt {
             hashMap.put("sdk_shell", "null");
         }
         String str = this.soDirPath;
-        if (C7349p.a(str)) {
+        if (com.uc.webview.export.internal.utility.p.a(str)) {
             str = this.c.getApplicationInfo().nativeLibraryDir;
         }
         if (str != null) {
             File file3 = new File(str);
             if (file3.isDirectory()) {
-                String[][] d = C7334h.d(this.mSdkShellClassLoader);
+                String[][] d = com.uc.webview.export.internal.utility.h.d(this.mSdkShellClassLoader);
                 if (d != null) {
                     for (String[] strArr : d) {
                         String str2 = strArr[0];
-                        C7349p.d(strArr[1]);
+                        com.uc.webview.export.internal.utility.p.d(strArr[1]);
                         String str3 = strArr[2];
                         String hashFileContents = UCCyclone.hashFileContents(new File(file3, str2), UCCyclone.MessageDigestType.MD5);
-                        if (!C7349p.a(str3) && !str3.equals(hashFileContents)) {
+                        if (!com.uc.webview.export.internal.utility.p.a(str3) && !str3.equals(hashFileContents)) {
                             hashMap.put(str2, hashFileContents);
                         } else {
                             hashMap.put(str2, "ok");

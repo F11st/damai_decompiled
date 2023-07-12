@@ -238,12 +238,11 @@ public class PatchChecker implements IPatchVerifier {
 
         /* JADX INFO: Access modifiers changed from: private */
         /* compiled from: Taobao */
-        /* renamed from: com.taobao.update.instantpatch.flow.PatchChecker$ApkSignatureSchemeV2Verifier$a */
         /* loaded from: classes11.dex */
-        public static class C6936a {
+        public static class a {
             private final ByteBuffer a;
 
-            private C6936a(ByteBuffer byteBuffer, long j, long j2, long j3, ByteBuffer byteBuffer2) {
+            private a(ByteBuffer byteBuffer, long j, long j2, long j3, ByteBuffer byteBuffer2) {
                 this.a = byteBuffer;
             }
         }
@@ -340,14 +339,14 @@ public class PatchChecker implements IPatchVerifier {
             throw new SignatureNotFoundException("APK too small for APK Signing Block. ZIP Central Directory offset: " + j);
         }
 
-        private static C6936a f(RandomAccessFile randomAccessFile) throws IOException, SignatureNotFoundException {
+        private static a f(RandomAccessFile randomAccessFile) throws IOException, SignatureNotFoundException {
             Pair<ByteBuffer, Long> j = j(randomAccessFile);
             ByteBuffer byteBuffer = (ByteBuffer) j.first;
             long longValue = ((Long) j.second).longValue();
             if (!s23.isZip64EndOfCentralDirectoryLocatorPresent(randomAccessFile, longValue)) {
                 long h = h(byteBuffer, longValue);
                 Pair<ByteBuffer, Long> e = e(randomAccessFile, h);
-                return new C6936a(d((ByteBuffer) e.first), ((Long) e.second).longValue(), h, longValue, byteBuffer);
+                return new a(d((ByteBuffer) e.first), ((Long) e.second).longValue(), h, longValue, byteBuffer);
             }
             throw new SignatureNotFoundException("ZIP64 APK not supported");
         }
@@ -535,13 +534,13 @@ public class PatchChecker implements IPatchVerifier {
             }
         }
 
-        private static X509Certificate[][] r(FileDescriptor fileDescriptor, C6936a c6936a) throws SecurityException {
+        private static X509Certificate[][] r(FileDescriptor fileDescriptor, a aVar) throws SecurityException {
             HashMap hashMap = Build.VERSION.SDK_INT >= 19 ? new HashMap() : null;
             ArrayList arrayList = new ArrayList();
             try {
                 CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");
                 try {
-                    ByteBuffer k = k(c6936a.a);
+                    ByteBuffer k = k(aVar.a);
                     int i = 0;
                     while (k.hasRemaining()) {
                         i++;

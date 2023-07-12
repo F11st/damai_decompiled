@@ -52,13 +52,12 @@ public class PrivacySettingActivity extends DamaiBaseActivity {
     private final HashMap<Integer, Integer> switchRecode = new HashMap<>();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.PrivacySettingActivity$a */
     /* loaded from: classes16.dex */
-    public class C1746a extends ClickableSpan {
+    public class a extends ClickableSpan {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C1746a(String str) {
+        a(String str) {
             this.a = str;
         }
 
@@ -240,7 +239,7 @@ public class PrivacySettingActivity extends DamaiBaseActivity {
         int length2 = string.length() + str.length();
         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(str3);
         if (!TextUtils.isEmpty(str2) && !TextUtils.isEmpty(str)) {
-            spannableStringBuilder.setSpan(new C1746a(str2), length, length2, 33);
+            spannableStringBuilder.setSpan(new a(str2), length, length2, 33);
             showDnaError(false);
             this.isReturnProtocol = true;
             this.mDneCheckIcon.setClickable(true);

@@ -8,7 +8,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.alibaba.aliweex.adapter.component.WXTabbar;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.taobao.android.dinamicx.C6384k;
+import com.taobao.android.dinamicx.k;
 import com.taobao.android.dinamicx.widget.viewpager.tab.DXTabItemWidgetNode;
 import com.taobao.android.dinamicx.widget.viewpager.tab.view.DXTabItem;
 import com.taobao.android.dinamicx.widget.viewpager.tab.view.DXTabLayout;
@@ -68,7 +68,7 @@ public class DXTabHeaderLayoutWidgetNode extends DXLinearLayoutWidgetNode {
     private String relatedComponentId;
     private int selectedIndex;
     private boolean showIndicator;
-    private C6384k simpleRenderPipeline;
+    private k simpleRenderPipeline;
     private List<DXTabItem> tabItemList;
     private List<View> unSelectedView;
     private boolean enableScroll = false;
@@ -77,32 +77,31 @@ public class DXTabHeaderLayoutWidgetNode extends DXLinearLayoutWidgetNode {
     private Map<Integer, Boolean> hasSelectedMap = new HashMap();
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXTabHeaderLayoutWidgetNode$a */
     /* loaded from: classes11.dex */
-    class C6461a implements TabLayout.OnTabSelectedListener {
+    class a implements TabLayout.OnTabSelectedListener {
         final /* synthetic */ DXTabLayout a;
 
-        C6461a(DXTabLayout dXTabLayout) {
+        a(DXTabLayout dXTabLayout) {
             this.a = dXTabLayout;
         }
 
         @Override // com.taobao.android.dinamicx.widget.viewpager.tab.view.TabLayout.OnTabSelectedListener
-        public void onTabReselected(TabLayout.C6546d c6546d) {
-            int d = c6546d.d();
-            if (c6546d.b() == null || DXTabHeaderLayoutWidgetNode.this.dxViewPager == null) {
+        public void onTabReselected(TabLayout.d dVar) {
+            int d = dVar.d();
+            if (dVar.b() == null || DXTabHeaderLayoutWidgetNode.this.dxViewPager == null) {
                 return;
             }
             DXTabHeaderLayoutWidgetNode.this.dxViewPager.setCurrentItem(d, false);
         }
 
         @Override // com.taobao.android.dinamicx.widget.viewpager.tab.view.TabLayout.OnTabSelectedListener
-        public void onTabSelected(TabLayout.C6546d c6546d) {
+        public void onTabSelected(TabLayout.d dVar) {
             int i = DXTabHeaderLayoutWidgetNode.this.currentIndex;
-            int d = c6546d.d();
-            if (c6546d.b() == null) {
+            int d = dVar.d();
+            if (dVar.b() == null) {
                 return;
             }
-            ((DXTabItem) c6546d.b()).setSelected(true);
+            ((DXTabItem) dVar.b()).setSelected(true);
             DXTabHeaderLayoutWidgetNode.this.currentIndex = d;
             if (DXTabHeaderLayoutWidgetNode.this.indicatorColorMap != null) {
                 DXTabHeaderLayoutWidgetNode.this.renderIndicatorColor(this.a);
@@ -114,29 +113,28 @@ public class DXTabHeaderLayoutWidgetNode extends DXLinearLayoutWidgetNode {
                 if (!booleanValue) {
                     DXTabHeaderLayoutWidgetNode.this.hasSelectedMap.put(Integer.valueOf(d), Boolean.valueOf(!booleanValue));
                 }
-                dXTabHeaderLayoutWidgetNode.postEvent(new xz(d, i, (listData == null || listData.size() <= d) ? null : listData.getJSONObject(d), !booleanValue, c6546d.g()));
+                dXTabHeaderLayoutWidgetNode.postEvent(new xz(d, i, (listData == null || listData.size() <= d) ? null : listData.getJSONObject(d), !booleanValue, dVar.g()));
             }
         }
 
         @Override // com.taobao.android.dinamicx.widget.viewpager.tab.view.TabLayout.OnTabSelectedListener
-        public void onTabUnselected(TabLayout.C6546d c6546d) {
-            if (c6546d.b() == null) {
+        public void onTabUnselected(TabLayout.d dVar) {
+            if (dVar.b() == null) {
                 return;
             }
-            ((DXTabItem) c6546d.b()).setSelected(false);
+            ((DXTabItem) dVar.b()).setSelected(false);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXTabHeaderLayoutWidgetNode$b */
     /* loaded from: classes11.dex */
-    class C6462b implements TabLayout.OnTabClickListener {
-        C6462b() {
+    class b implements TabLayout.OnTabClickListener {
+        b() {
         }
 
         @Override // com.taobao.android.dinamicx.widget.viewpager.tab.view.TabLayout.OnTabClickListener
-        public void onTabClick(TabLayout.C6546d c6546d) {
-            int d = c6546d.d();
+        public void onTabClick(TabLayout.d dVar) {
+            int d = dVar.d();
             DXTabHeaderLayoutWidgetNode dXTabHeaderLayoutWidgetNode = DXTabHeaderLayoutWidgetNode.this;
             if (dXTabHeaderLayoutWidgetNode != null) {
                 JSONArray listData = dXTabHeaderLayoutWidgetNode.getListData();
@@ -146,9 +144,8 @@ public class DXTabHeaderLayoutWidgetNode extends DXLinearLayoutWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXTabHeaderLayoutWidgetNode$c */
     /* loaded from: classes11.dex */
-    public static class C6463c implements IDXBuilderWidgetNode {
+    public static class c implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(Object obj) {
             return new DXTabHeaderLayoutWidgetNode();
@@ -255,7 +252,7 @@ public class DXTabHeaderLayoutWidgetNode extends DXLinearLayoutWidgetNode {
         }
         int size = dXViewPager.getItemWidgetNodes().size();
         for (int i = 0; i < size; i++) {
-            TabLayout.C6546d tabAt = dXTabLayout.getTabAt(i);
+            TabLayout.d tabAt = dXTabLayout.getTabAt(i);
             if (i == this.currentIndex) {
                 if (i >= this.tabItemList.size()) {
                     break;
@@ -300,7 +297,7 @@ public class DXTabHeaderLayoutWidgetNode extends DXLinearLayoutWidgetNode {
         return super.getDefaultValueForIntAttr(j);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.IDXNodePropProvider
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.IDXNodePropProvider
     public Object getNodePropByKey(String str) {
         if (WXTabbar.SELECT_INDEX.equals(str)) {
             return Integer.valueOf(this.currentIndex);
@@ -313,7 +310,7 @@ public class DXTabHeaderLayoutWidgetNode extends DXLinearLayoutWidgetNode {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onBeforeBindChildData() {
         if (getChildren() != null && this.originItems == null) {
             ArrayList arrayList = new ArrayList();
@@ -350,7 +347,7 @@ public class DXTabHeaderLayoutWidgetNode extends DXLinearLayoutWidgetNode {
         super.onBindEvent(context, view, j);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onClone(DXWidgetNode dXWidgetNode, boolean z) {
         if (dXWidgetNode == null || !(dXWidgetNode instanceof DXTabHeaderLayoutWidgetNode)) {
             return;
@@ -405,13 +402,13 @@ public class DXTabHeaderLayoutWidgetNode extends DXLinearLayoutWidgetNode {
     @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onMeasure(int i, int i2) {
         if (this.simpleRenderPipeline == null) {
-            this.simpleRenderPipeline = new C6384k(getDXRuntimeContext().getEngineContext(), 3, UUID.randomUUID().toString());
+            this.simpleRenderPipeline = new k(getDXRuntimeContext().getEngineContext(), 3, UUID.randomUUID().toString());
         }
         super.onMeasure(i, i2);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onRenderView(Context context, View view) {
         DXWidgetNode realRootExpandWidget;
         super.onRenderView(context, view);
@@ -422,16 +419,16 @@ public class DXTabHeaderLayoutWidgetNode extends DXLinearLayoutWidgetNode {
             dXTabLayout.setViewPagerSmoothScroll(this.relatedComponentAnimated);
             renderTabItems(dXTabLayout);
             renderIndicator(dXTabLayout);
-            C6461a c6461a = new C6461a(dXTabLayout);
-            this.onTabSelectedListener = c6461a;
-            dXTabLayout.addOnTabSelectedListener(c6461a);
+            a aVar = new a(dXTabLayout);
+            this.onTabSelectedListener = aVar;
+            dXTabLayout.addOnTabSelectedListener(aVar);
             TabLayout.OnTabClickListener onTabClickListener = this.onTabClickListener;
             if (onTabClickListener != null) {
                 dXTabLayout.removeOnTabClickListener(onTabClickListener);
             }
-            C6462b c6462b = new C6462b();
-            this.onTabClickListener = c6462b;
-            dXTabLayout.addOnTabClickListener(c6462b);
+            b bVar = new b();
+            this.onTabClickListener = bVar;
+            dXTabLayout.addOnTabClickListener(bVar);
             DXViewPager dXViewPager = (DXViewPager) realRootExpandWidget.queryWidgetNodeByUserId(this.relatedComponentId);
             this.dxViewPager = dXViewPager;
             if (dXViewPager != null) {
@@ -444,7 +441,7 @@ public class DXTabHeaderLayoutWidgetNode extends DXLinearLayoutWidgetNode {
         }
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetIntAttribute(long j, int i) {
         if (j == DXTABHEADERLAYOUT_INDICATORBOTTOMGAP) {
             if (i <= 0) {
@@ -499,7 +496,7 @@ public class DXTabHeaderLayoutWidgetNode extends DXLinearLayoutWidgetNode {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetListAttribute(long j, JSONArray jSONArray) {
         if (mz.DX_PARSER_LISTDATA == j) {
             setListData(jSONArray);

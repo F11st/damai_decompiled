@@ -14,19 +14,18 @@ public abstract class AbstractExposure<ExposeKey, ExposeData> implements IExposu
     public static final int DEFAULT_CACHE_SIZE = 8;
     public static final long DEFAULT_EXPOSE_DELAY = 0;
     protected Handler a;
-    protected LruCache<ExposeKey, C6406a<ExposeData>> c;
-    protected final Map<ExposeKey, C6406a<ExposeData>> b = new HashMap();
+    protected LruCache<ExposeKey, a<ExposeData>> c;
+    protected final Map<ExposeKey, a<ExposeData>> b = new HashMap();
     protected final Map<ExposeKey, ExposeData> d = new HashMap();
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.videoc.expose.core.AbstractExposure$a */
     /* loaded from: classes12.dex */
-    public static class C6406a<ExposeData> {
+    public static class a<ExposeData> {
         ExposeData a;
         String b;
         Runnable c;
 
-        C6406a(ExposeData exposedata, String str, Runnable runnable) {
+        a(ExposeData exposedata, String str, Runnable runnable) {
             this.a = exposedata;
             this.b = str;
             this.c = runnable;
@@ -36,7 +35,7 @@ public abstract class AbstractExposure<ExposeKey, ExposeData> implements IExposu
     /* JADX INFO: Access modifiers changed from: private */
     public Map<ExposeKey, ExposeData> c() {
         HashMap hashMap = new HashMap();
-        for (Map.Entry<ExposeKey, C6406a<ExposeData>> entry : this.c.snapshot().entrySet()) {
+        for (Map.Entry<ExposeKey, a<ExposeData>> entry : this.c.snapshot().entrySet()) {
             hashMap.put(entry.getKey(), entry.getValue().a);
         }
         return hashMap;
@@ -44,7 +43,7 @@ public abstract class AbstractExposure<ExposeKey, ExposeData> implements IExposu
 
     private void g(ExposeKey exposekey, ExposeData exposedata, String str, long j) {
         if (h()) {
-            C6406a<ExposeData> remove = this.b.remove(exposekey);
+            a<ExposeData> remove = this.b.remove(exposekey);
             if (remove != null) {
                 this.a.removeCallbacks(remove.c);
             }
@@ -58,7 +57,7 @@ public abstract class AbstractExposure<ExposeKey, ExposeData> implements IExposu
 
     private void q(ExposeKey exposekey, ExposeData exposedata, String str, long j) {
         Runnable k = k(exposekey, exposedata, str);
-        this.b.put(exposekey, new C6406a<>(exposedata, str, k));
+        this.b.put(exposekey, new a<>(exposedata, str, k));
         this.a.postDelayed(k, j);
     }
 
@@ -77,14 +76,14 @@ public abstract class AbstractExposure<ExposeKey, ExposeData> implements IExposu
         if (!h() || this.c.size() == 0) {
             return;
         }
-        for (Map.Entry<ExposeKey, C6406a<ExposeData>> entry : this.c.snapshot().entrySet()) {
+        for (Map.Entry<ExposeKey, a<ExposeData>> entry : this.c.snapshot().entrySet()) {
             cancelExpose(entry.getKey(), entry.getValue().b);
         }
         this.c.evictAll();
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public LruCache<ExposeKey, C6406a<ExposeData>> d() {
+    public LruCache<ExposeKey, a<ExposeData>> d() {
         return new LruCache<>(b());
     }
 
@@ -117,7 +116,7 @@ public abstract class AbstractExposure<ExposeKey, ExposeData> implements IExposu
             return;
         }
         try {
-            for (Map.Entry<ExposeKey, C6406a<ExposeData>> entry : this.c.snapshot().entrySet()) {
+            for (Map.Entry<ExposeKey, a<ExposeData>> entry : this.c.snapshot().entrySet()) {
                 exposeAtOnce(entry.getKey(), entry.getValue().a, entry.getValue().b);
             }
         } catch (Throwable unused) {
@@ -149,7 +148,7 @@ public abstract class AbstractExposure<ExposeKey, ExposeData> implements IExposu
                 }
                 AbstractExposure abstractExposure = AbstractExposure.this;
                 if (!abstractExposure.p(exposekey, exposedata, str, abstractExposure.c())) {
-                    AbstractExposure.this.c.put(exposekey, new C6406a(exposedata, str, this));
+                    AbstractExposure.this.c.put(exposekey, new a(exposedata, str, this));
                     return;
                 }
                 AbstractExposure.this.m(exposekey, exposedata, str);
@@ -191,7 +190,7 @@ public abstract class AbstractExposure<ExposeKey, ExposeData> implements IExposu
 
     @Override // com.taobao.android.dinamicx.videoc.expose.core.IExposure
     public ExposeData removeCache(@Nullable ExposeKey exposekey, String str) {
-        C6406a<ExposeData> remove;
+        a<ExposeData> remove;
         if (h() && (remove = this.c.remove(exposekey)) != null) {
             this.a.removeCallbacks(remove.c);
             return remove.a;
@@ -228,7 +227,7 @@ public abstract class AbstractExposure<ExposeKey, ExposeData> implements IExposu
     @Override // com.taobao.android.dinamicx.videoc.expose.core.IExposure
     public void cancelExpose(@Nullable ExposeKey exposekey, String str, boolean z) {
         ExposeData removeCache = removeCache(exposekey, str);
-        C6406a<ExposeData> remove = this.b.remove(exposekey);
+        a<ExposeData> remove = this.b.remove(exposekey);
         if (remove != null) {
             this.a.removeCallbacks(remove.c);
         }

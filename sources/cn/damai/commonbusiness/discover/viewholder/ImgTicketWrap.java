@@ -4,7 +4,6 @@ import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.widget.ImageView;
 import androidx.annotation.Nullable;
-import cn.damai.uikit.image.C2497a;
 import cn.damai.uikit.image.IImageLoader;
 import com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -26,28 +25,27 @@ public class ImgTicketWrap implements IImageLoader.ImageTicket {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.discover.viewholder.ImgTicketWrap$a */
     /* loaded from: classes4.dex */
-    public class C0645a implements IImageLoader.IImageSuccListener {
+    public class a implements IImageLoader.IImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnPicRatioListener a;
         final /* synthetic */ String b;
         final /* synthetic */ ImageView c;
 
-        C0645a(OnPicRatioListener onPicRatioListener, String str, ImageView imageView) {
+        a(OnPicRatioListener onPicRatioListener, String str, ImageView imageView) {
             this.a = onPicRatioListener;
             this.b = str;
             this.c = imageView;
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageSuccListener
-        public void onSuccess(IImageLoader.C2496b c2496b) {
+        public void onSuccess(IImageLoader.b bVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1890923591")) {
-                ipChange.ipc$dispatch("-1890923591", new Object[]{this, c2496b});
+                ipChange.ipc$dispatch("-1890923591", new Object[]{this, bVar});
                 return;
             }
-            Drawable drawable = c2496b.a;
+            Drawable drawable = bVar.a;
             if (drawable != null) {
                 if (this.a != null) {
                     int intrinsicWidth = drawable.getIntrinsicWidth();
@@ -60,23 +58,22 @@ public class ImgTicketWrap implements IImageLoader.ImageTicket {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.discover.viewholder.ImgTicketWrap$b */
     /* loaded from: classes4.dex */
-    public class C0646b implements IImageLoader.IImageFailListener {
+    public class b implements IImageLoader.IImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
         final /* synthetic */ ImageView b;
 
-        C0646b(int i, ImageView imageView) {
+        b(int i, ImageView imageView) {
             this.a = i;
             this.b = imageView;
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageFailListener
-        public void onFail(IImageLoader.C2495a c2495a) {
+        public void onFail(IImageLoader.a aVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1262155038")) {
-                ipChange.ipc$dispatch("-1262155038", new Object[]{this, c2495a});
+                ipChange.ipc$dispatch("-1262155038", new Object[]{this, aVar});
                 return;
             }
             int i = this.a;
@@ -100,9 +97,9 @@ public class ImgTicketWrap implements IImageLoader.ImageTicket {
         if (i > 0) {
             imageView.setImageResource(i);
         }
-        int a = (int) (((int) (((DisplayMetrics.getwidthPixels(m62.b(mu0.a())) - (m62.a(mu0.a(), 21.0f) * 2)) - m62.a(mu0.a(), 12.0f)) / 2.0f)) * 1.3333334f);
-        int i3 = a > 800 ? 800 : a;
-        imageView.setTag(new ImgTicketWrap(C2497a.a().load(str, i3, i3, new C0645a(onPicRatioListener, str, imageView), new C0646b(i2, imageView)), str));
+        int a2 = (int) (((int) (((DisplayMetrics.getwidthPixels(m62.b(mu0.a())) - (m62.a(mu0.a(), 21.0f) * 2)) - m62.a(mu0.a(), 12.0f)) / 2.0f)) * 1.3333334f);
+        int i3 = a2 > 800 ? 800 : a2;
+        imageView.setTag(new ImgTicketWrap(cn.damai.uikit.image.a.a().load(str, i3, i3, new a(onPicRatioListener, str, imageView), new b(i2, imageView)), str));
     }
 
     public static void c(ImageView imageView, String str, int i, @Nullable OnPicRatioListener onPicRatioListener) {

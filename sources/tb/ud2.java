@@ -28,7 +28,7 @@ public class ud2 implements Choreographer.FrameCallback, ViewTreeObserver.OnScro
     private final WeakReference<Activity> b;
     private final WeakReference<pp1> c;
     private ArrayList<FrameMetrics> k;
-    private Window$OnFrameMetricsAvailableListenerC9769b o;
+    private b o;
     private boolean d = false;
     private boolean e = true;
     private long f = 0;
@@ -43,10 +43,9 @@ public class ud2 implements Choreographer.FrameCallback, ViewTreeObserver.OnScro
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
     @RequiresApi(24)
-    /* renamed from: tb.ud2$b */
     /* loaded from: classes11.dex */
-    public class Window$OnFrameMetricsAvailableListenerC9769b implements Window.OnFrameMetricsAvailableListener {
-        private Window$OnFrameMetricsAvailableListenerC9769b() {
+    public class b implements Window.OnFrameMetricsAvailableListener {
+        private b() {
         }
 
         @RequiresApi(24)
@@ -202,7 +201,7 @@ public class ud2 implements Choreographer.FrameCallback, ViewTreeObserver.OnScro
             viewTreeObserver.addOnScrollChangedListener(this);
             if (jd0.A && i >= 24) {
                 if (this.o == null) {
-                    this.o = new Window$OnFrameMetricsAvailableListenerC9769b();
+                    this.o = new b();
                 }
                 window.addOnFrameMetricsAvailableListener(this.o, fu0.e().d());
             }
@@ -211,9 +210,9 @@ public class ud2 implements Choreographer.FrameCallback, ViewTreeObserver.OnScro
     }
 
     private void c() {
-        IDispatcher b = ca0.b(C8934b0.ACTIVITY_FPS_DISPATCHER);
-        if (b instanceof FPSDispatcher) {
-            this.a = (FPSDispatcher) b;
+        IDispatcher b2 = ca0.b(b0.ACTIVITY_FPS_DISPATCHER);
+        if (b2 instanceof FPSDispatcher) {
+            this.a = (FPSDispatcher) b2;
         }
     }
 
@@ -279,14 +278,14 @@ public class ud2 implements Choreographer.FrameCallback, ViewTreeObserver.OnScro
         Activity activity;
         Window window;
         ViewTreeObserver viewTreeObserver;
-        Window$OnFrameMetricsAvailableListenerC9769b window$OnFrameMetricsAvailableListenerC9769b;
+        b bVar;
         this.d = true;
         int i = Build.VERSION.SDK_INT;
         if (i < 16 || (weakReference = this.b) == null || (activity = weakReference.get()) == null || (window = activity.getWindow()) == null) {
             return;
         }
-        if (i >= 24 && (window$OnFrameMetricsAvailableListenerC9769b = this.o) != null) {
-            window.removeOnFrameMetricsAvailableListener(window$OnFrameMetricsAvailableListenerC9769b);
+        if (i >= 24 && (bVar = this.o) != null) {
+            window.removeOnFrameMetricsAvailableListener(bVar);
         }
         Choreographer.getInstance().removeFrameCallback(this);
         View decorView = window.getDecorView();

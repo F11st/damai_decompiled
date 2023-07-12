@@ -1,12 +1,10 @@
 package com.huawei.hms.api;
 
 import android.os.Bundle;
-import com.huawei.hms.core.aidl.C5545a;
-import com.huawei.hms.core.aidl.C5546b;
-import com.huawei.hms.core.aidl.C5554e;
 import com.huawei.hms.core.aidl.IMessageEntity;
-import com.huawei.hms.core.aidl.InterfaceC5548c;
 import com.huawei.hms.core.aidl.RequestHeader;
+import com.huawei.hms.core.aidl.c;
+import com.huawei.hms.core.aidl.e;
 import com.huawei.hms.support.api.client.AidlApiClient;
 import com.huawei.hms.support.api.client.ApiClient;
 import com.huawei.hms.support.api.entity.core.CommonCode;
@@ -27,11 +25,11 @@ public class IPCTransport implements DatagramTransport {
         this.c = cls;
     }
 
-    private int a(ApiClient apiClient, InterfaceC5548c interfaceC5548c) {
+    private int a(ApiClient apiClient, c cVar) {
         if (apiClient instanceof HuaweiApiClientImpl) {
-            C5546b c5546b = new C5546b(this.a, ProtocolNegotiate.getInstance().getVersion());
-            C5554e a = C5545a.a(c5546b.c());
-            c5546b.a(a.a(this.b, new Bundle()));
+            com.huawei.hms.core.aidl.b bVar = new com.huawei.hms.core.aidl.b(this.a, ProtocolNegotiate.getInstance().getVersion());
+            e a = com.huawei.hms.core.aidl.a.a(bVar.c());
+            bVar.a(a.a(this.b, new Bundle()));
             RequestHeader requestHeader = new RequestHeader();
             requestHeader.setAppID(apiClient.getAppID());
             requestHeader.setPackageName(apiClient.getPackageName());
@@ -39,14 +37,14 @@ public class IPCTransport implements DatagramTransport {
             requestHeader.setApiNameList(((HuaweiApiClientImpl) apiClient).getApiNameList());
             requestHeader.setSessionId(apiClient.getSessionId());
             requestHeader.setApiLevel(this.d);
-            c5546b.b = a.a(requestHeader, new Bundle());
+            bVar.b = a.a(requestHeader, new Bundle());
             try {
                 HuaweiApiClientImpl huaweiApiClientImpl = (HuaweiApiClientImpl) apiClient;
                 if (huaweiApiClientImpl.getService() == null) {
                     HMSLog.e("IPCTransport", "HuaweiApiClient is not binded to service yet.");
                     return CommonCode.ErrorCode.INTERNAL_ERROR;
                 }
-                huaweiApiClientImpl.getService().a(c5546b, interfaceC5548c);
+                huaweiApiClientImpl.getService().a(bVar, cVar);
                 return 0;
             } catch (Exception e) {
                 HMSLog.e("IPCTransport", "sync call ex:" + e);
@@ -55,10 +53,10 @@ public class IPCTransport implements DatagramTransport {
         }
         if (apiClient instanceof AidlApiClient) {
             AidlApiClient aidlApiClient = (AidlApiClient) apiClient;
-            C5546b c5546b2 = new C5546b(this.a, ProtocolNegotiate.getInstance().getVersion());
-            c5546b2.a(C5545a.a(c5546b2.c()).a(this.b, new Bundle()));
+            com.huawei.hms.core.aidl.b bVar2 = new com.huawei.hms.core.aidl.b(this.a, ProtocolNegotiate.getInstance().getVersion());
+            bVar2.a(com.huawei.hms.core.aidl.a.a(bVar2.c()).a(this.b, new Bundle()));
             try {
-                aidlApiClient.getService().a(c5546b2, interfaceC5548c);
+                aidlApiClient.getService().a(bVar2, cVar);
                 return 0;
             } catch (Exception e2) {
                 HMSLog.e("IPCTransport", "sync call ex:" + e2);
@@ -68,15 +66,15 @@ public class IPCTransport implements DatagramTransport {
     }
 
     @Override // com.huawei.hms.support.api.transport.DatagramTransport
-    public final void post(ApiClient apiClient, DatagramTransport.InterfaceC5723a interfaceC5723a) {
-        send(apiClient, interfaceC5723a);
+    public final void post(ApiClient apiClient, DatagramTransport.a aVar) {
+        send(apiClient, aVar);
     }
 
     @Override // com.huawei.hms.support.api.transport.DatagramTransport
-    public final void send(ApiClient apiClient, DatagramTransport.InterfaceC5723a interfaceC5723a) {
-        int a = a(apiClient, new IPCCallback(this.c, interfaceC5723a));
+    public final void send(ApiClient apiClient, DatagramTransport.a aVar) {
+        int a = a(apiClient, new IPCCallback(this.c, aVar));
         if (a != 0) {
-            interfaceC5723a.a(a, null);
+            aVar.a(a, null);
         }
     }
 

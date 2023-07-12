@@ -5,13 +5,12 @@ import androidx.annotation.Nullable;
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
 public interface IAppPreferences {
-    public static final IAppPreferences DEFAULT = new C6671a();
+    public static final IAppPreferences DEFAULT = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.application.common.IAppPreferences$a */
     /* loaded from: classes11.dex */
-    static class C6671a implements IAppPreferences {
-        C6671a() {
+    static class a implements IAppPreferences {
+        a() {
         }
 
         @Override // com.taobao.application.common.IAppPreferences

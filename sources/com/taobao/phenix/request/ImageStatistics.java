@@ -27,7 +27,7 @@ public class ImageStatistics {
     public boolean C;
     private final boolean a;
     private boolean b;
-    private final C6866b c;
+    private final b c;
     private FromType d;
     private MimeType e;
     private int f;
@@ -69,11 +69,11 @@ public class ImageStatistics {
         }
     }
 
-    public ImageStatistics(C6866b c6866b, boolean z) {
+    public ImageStatistics(b bVar, boolean z) {
         this.d = FromType.FROM_UNKNOWN;
         this.y = false;
         this.C = false;
-        this.c = c6866b;
+        this.c = bVar;
         this.a = z;
     }
 
@@ -144,7 +144,7 @@ public class ImageStatistics {
         return this.f;
     }
 
-    public C6866b p() {
+    public b p() {
         return this.c;
     }
 
@@ -204,7 +204,7 @@ public class ImageStatistics {
         this.i = j;
     }
 
-    public ImageStatistics(C6866b c6866b) {
-        this(c6866b, false);
+    public ImageStatistics(b bVar) {
+        this(bVar, false);
     }
 }

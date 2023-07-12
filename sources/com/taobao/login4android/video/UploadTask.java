@@ -9,7 +9,6 @@ import com.ali.user.mobile.app.dataprovider.DataProviderFactory;
 import com.ali.user.mobile.log.TLogAdapter;
 import com.ali.user.mobile.utils.FileUtil;
 import com.taobao.login4android.constants.LoginEnvType;
-import com.uploader.export.C7361a;
 import com.uploader.export.ITaskListener;
 import com.uploader.export.ITaskResult;
 import com.uploader.export.IUploaderManager;
@@ -41,12 +40,11 @@ public class UploadTask {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.video.UploadTask$a */
     /* loaded from: classes11.dex */
-    class C6737a implements IUploaderTask {
+    class a implements IUploaderTask {
         final /* synthetic */ String a;
 
-        C6737a(UploadTask uploadTask, String str) {
+        a(UploadTask uploadTask, String str) {
             this.a = str;
         }
 
@@ -72,10 +70,9 @@ public class UploadTask {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.video.UploadTask$b */
     /* loaded from: classes11.dex */
-    class C6738b implements ITaskListener {
-        C6738b() {
+    class b implements ITaskListener {
+        b() {
         }
 
         @Override // com.uploader.export.ITaskListener
@@ -134,13 +131,12 @@ public class UploadTask {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.video.UploadTask$c */
     /* loaded from: classes11.dex */
-    public class C6739c extends bv2 {
+    public class c extends bv2 {
         final /* synthetic */ Context a;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        C6739c(UploadTask uploadTask, Context context, Context context2) {
+        c(UploadTask uploadTask, Context context, Context context2) {
             super(context);
             this.a = context2;
         }
@@ -189,14 +185,14 @@ public class UploadTask {
 
     private void init(Context context) {
         handler = new Handler(Looper.getMainLooper());
-        IUploaderManager a = C7361a.a();
-        this.uploaderManager = a;
-        if (a.isInitialized()) {
+        IUploaderManager a2 = com.uploader.export.a.a();
+        this.uploaderManager = a2;
+        if (a2.isInitialized()) {
             return;
         }
-        C6739c c6739c = new C6739c(this, context, context);
-        c6739c.setEnvironment(0);
-        this.uploaderManager.initialize(context, new yu2(context, c6739c));
+        c cVar = new c(this, context, context);
+        cVar.setEnvironment(0);
+        this.uploaderManager.initialize(context, new yu2(context, cVar));
     }
 
     public void setResultCallback(ResultCallback resultCallback) {
@@ -207,6 +203,6 @@ public class UploadTask {
         if (this.uploaderManager == null) {
             init(context);
         }
-        return this.uploaderManager.uploadAsync(new C6737a(this, str), new C6738b(), handler);
+        return this.uploaderManager.uploadAsync(new a(this, str), new b(), handler);
     }
 }

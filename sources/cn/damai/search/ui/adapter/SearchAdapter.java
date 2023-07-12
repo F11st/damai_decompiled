@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.search.Daojishi;
 import cn.damai.commonbusiness.search.bean.BaccountInfo;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
@@ -71,11 +71,11 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                 hashMap.put("alg", projectItemBean.alg);
             }
             if (!z) {
-                C0529c e = C0529c.e();
+                c e = c.e();
                 e.G(view, "item_" + i, "list", "search", hashMap);
                 return;
             }
-            C0529c e2 = C0529c.e();
+            c e2 = c.e();
             e2.G(view, "item_" + i, "keywordother", "search", hashMap);
         }
     }

@@ -20,7 +20,7 @@ abstract class AbstractSetMultimap<K, V> extends AbstractMapBasedMultimap<K, V> 
         super(map);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap, com.google.common.collect.ListMultimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap, com.google.common.collect.ListMultimap
     public Map<K, Collection<V>> asMap() {
         return super.asMap();
     }
@@ -29,7 +29,7 @@ abstract class AbstractSetMultimap<K, V> extends AbstractMapBasedMultimap<K, V> 
     @Override // com.google.common.collect.AbstractMapBasedMultimap
     public abstract Set<V> createCollection();
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap, com.google.common.collect.ListMultimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap, com.google.common.collect.ListMultimap
     public boolean equals(@NullableDecl Object obj) {
         return super.equals(obj);
     }
@@ -40,14 +40,14 @@ abstract class AbstractSetMultimap<K, V> extends AbstractMapBasedMultimap<K, V> 
         return get((AbstractSetMultimap<K, V>) obj);
     }
 
-    @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     public boolean put(@NullableDecl K k, @NullableDecl V v) {
         return super.put(k, v);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     public /* bridge */ /* synthetic */ Collection replaceValues(@NullableDecl Object obj, Iterable iterable) {
         return replaceValues((AbstractSetMultimap<K, V>) obj, iterable);
@@ -60,7 +60,7 @@ abstract class AbstractSetMultimap<K, V> extends AbstractMapBasedMultimap<K, V> 
 
     @Override // com.google.common.collect.AbstractMapBasedMultimap
     Collection<V> wrapCollection(K k, Collection<V> collection) {
-        return new AbstractMapBasedMultimap.C4918n(k, (Set) collection);
+        return new AbstractMapBasedMultimap.n(k, (Set) collection);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -69,7 +69,7 @@ abstract class AbstractSetMultimap<K, V> extends AbstractMapBasedMultimap<K, V> 
         return Collections.emptySet();
     }
 
-    @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.c, com.google.common.collect.Multimap
     public Set<Map.Entry<K, V>> entries() {
         return (Set) super.entries();
     }
@@ -85,7 +85,7 @@ abstract class AbstractSetMultimap<K, V> extends AbstractMapBasedMultimap<K, V> 
         return (Set) super.removeAll(obj);
     }
 
-    @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     public Set<V> replaceValues(@NullableDecl K k, Iterable<? extends V> iterable) {
         return (Set) super.replaceValues((AbstractSetMultimap<K, V>) k, (Iterable) iterable);

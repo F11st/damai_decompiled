@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.NoSuchElementException;
 import java.util.RandomAccess;
-import kotlin.collections.AbstractC8186b;
-import kotlin.collections.C8202e;
+import kotlin.collections.b;
+import kotlin.collections.e;
 import kotlin.jvm.internal.markers.KMutableListIterator;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -20,7 +20,7 @@ import tb.u1;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ListBuilder<E> extends AbstractC8186b<E> implements List<E>, RandomAccess {
+public final class ListBuilder<E> extends b<E> implements List<E>, RandomAccess {
     @NotNull
     private E[] array;
     @Nullable
@@ -32,15 +32,14 @@ public final class ListBuilder<E> extends AbstractC8186b<E> implements List<E>, 
     private final ListBuilder<E> root;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.collections.builders.ListBuilder$a */
     /* loaded from: classes3.dex */
-    private static final class C8189a<E> implements ListIterator<E>, KMutableListIterator {
+    private static final class a<E> implements ListIterator<E>, KMutableListIterator {
         @NotNull
         private final ListBuilder<E> a;
         private int b;
         private int c;
 
-        public C8189a(@NotNull ListBuilder<E> listBuilder, int i) {
+        public a(@NotNull ListBuilder<E> listBuilder, int i) {
             b41.i(listBuilder, "list");
             this.a = listBuilder;
             this.b = i;
@@ -192,7 +191,7 @@ public final class ListBuilder<E> extends AbstractC8186b<E> implements List<E>, 
     private final void insertAtInternal(int i, int i2) {
         ensureExtraCapacity(i2);
         E[] eArr = this.array;
-        C8202e.e(eArr, eArr, i + i2, i, this.offset + this.length);
+        e.e(eArr, eArr, i + i2, i, this.offset + this.length);
         this.length += i2;
     }
 
@@ -209,7 +208,7 @@ public final class ListBuilder<E> extends AbstractC8186b<E> implements List<E>, 
         }
         E[] eArr = this.array;
         E e = eArr[i];
-        C8202e.e(eArr, eArr, i, i + 1, this.offset + this.length);
+        e.e(eArr, eArr, i, i + 1, this.offset + this.length);
         k91.f(this.array, (this.offset + this.length) - 1);
         this.length--;
         return e;
@@ -221,7 +220,7 @@ public final class ListBuilder<E> extends AbstractC8186b<E> implements List<E>, 
             listBuilder.removeRangeInternal(i, i2);
         } else {
             E[] eArr = this.array;
-            C8202e.e(eArr, eArr, i, i + i2, this.length);
+            e.e(eArr, eArr, i, i + i2, this.length);
             E[] eArr2 = this.array;
             int i3 = this.length;
             k91.g(eArr2, i3 - i2, i3);
@@ -251,7 +250,7 @@ public final class ListBuilder<E> extends AbstractC8186b<E> implements List<E>, 
         }
         int i6 = i2 - i4;
         E[] eArr2 = this.array;
-        C8202e.e(eArr2, eArr2, i + i4, i2 + i, this.length);
+        e.e(eArr2, eArr2, i + i4, i2 + i, this.length);
         E[] eArr3 = this.array;
         int i7 = this.length;
         k91.g(eArr3, i7 - i6, i7);
@@ -309,7 +308,7 @@ public final class ListBuilder<E> extends AbstractC8186b<E> implements List<E>, 
         return this.array[this.offset + i];
     }
 
-    @Override // kotlin.collections.AbstractC8186b
+    @Override // kotlin.collections.b
     public int getSize() {
         return this.length;
     }
@@ -339,7 +338,7 @@ public final class ListBuilder<E> extends AbstractC8186b<E> implements List<E>, 
     @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.List
     @NotNull
     public Iterator<E> iterator() {
-        return new C8189a(this, 0);
+        return new a(this, 0);
     }
 
     @Override // java.util.AbstractList, java.util.List
@@ -355,7 +354,7 @@ public final class ListBuilder<E> extends AbstractC8186b<E> implements List<E>, 
     @Override // java.util.AbstractList, java.util.List
     @NotNull
     public ListIterator<E> listIterator() {
-        return new C8189a(this, 0);
+        return new a(this, 0);
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
@@ -376,7 +375,7 @@ public final class ListBuilder<E> extends AbstractC8186b<E> implements List<E>, 
         return retainOrRemoveAllInternal(this.offset, this.length, collection, false) > 0;
     }
 
-    @Override // kotlin.collections.AbstractC8186b
+    @Override // kotlin.collections.b
     public E removeAt(int i) {
         checkIsMutable();
         u1.Companion.a(i, this.length);
@@ -391,7 +390,7 @@ public final class ListBuilder<E> extends AbstractC8186b<E> implements List<E>, 
         return retainOrRemoveAllInternal(this.offset, this.length, collection, true) > 0;
     }
 
-    @Override // kotlin.collections.AbstractC8186b, java.util.AbstractList, java.util.List
+    @Override // kotlin.collections.b, java.util.AbstractList, java.util.List
     public E set(int i, E e) {
         checkIsMutable();
         u1.Companion.a(i, this.length);
@@ -430,7 +429,7 @@ public final class ListBuilder<E> extends AbstractC8186b<E> implements List<E>, 
         E[] eArr2 = this.array;
         b41.g(eArr2, "null cannot be cast to non-null type kotlin.Array<T of kotlin.collections.builders.ListBuilder.toArray>");
         int i3 = this.offset;
-        C8202e.e(eArr2, tArr, 0, i3, this.length + i3);
+        e.e(eArr2, tArr, 0, i3, this.length + i3);
         int length2 = tArr.length;
         int i4 = this.length;
         if (length2 > i4) {
@@ -451,10 +450,10 @@ public final class ListBuilder<E> extends AbstractC8186b<E> implements List<E>, 
     @NotNull
     public ListIterator<E> listIterator(int i) {
         u1.Companion.b(i, this.length);
-        return new C8189a(this, i);
+        return new a(this, i);
     }
 
-    @Override // kotlin.collections.AbstractC8186b, java.util.AbstractList, java.util.List
+    @Override // kotlin.collections.b, java.util.AbstractList, java.util.List
     public void add(int i, E e) {
         checkIsMutable();
         u1.Companion.b(i, this.length);
@@ -476,7 +475,7 @@ public final class ListBuilder<E> extends AbstractC8186b<E> implements List<E>, 
     public Object[] toArray() {
         E[] eArr = this.array;
         int i = this.offset;
-        Object[] h = C8202e.h(eArr, i, this.length + i);
+        Object[] h = e.h(eArr, i, this.length + i);
         b41.g(h, "null cannot be cast to non-null type kotlin.Array<kotlin.Any?>");
         return h;
     }

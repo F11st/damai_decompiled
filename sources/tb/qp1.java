@@ -8,7 +8,6 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
 import java.util.Set;
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -47,12 +46,12 @@ public final class qp1 {
             b41.h(keySet, "keySet()");
             for (String str : keySet) {
                 Object obj = bundle.get(str);
-                n = C8604o.n("patternName", str, true);
+                n = kotlin.text.o.n("patternName", str, true);
                 String str2 = null;
                 if (n) {
                     pageArgument.patternName = obj != null ? obj.toString() : null;
                 } else {
-                    q = C8604o.q("patternVersion", str, true);
+                    q = kotlin.text.o.q("patternVersion", str, true);
                     if (q) {
                         pageArgument.patternVersion = obj != null ? obj.toString() : null;
                     } else if (!a.contains(str)) {

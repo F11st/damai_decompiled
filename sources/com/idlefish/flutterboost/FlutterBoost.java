@@ -23,7 +23,7 @@ public class FlutterBoost {
     public static final int FLUTTER_APP_STATE_RESUMED = 0;
     public static final String LIFECYCLE_STATE = "lifecycleState";
     private Activity a;
-    private C5775b b;
+    private com.idlefish.flutterboost.b b;
     private boolean c;
 
     /* compiled from: Taobao */
@@ -34,14 +34,13 @@ public class FlutterBoost {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.idlefish.flutterboost.FlutterBoost$a */
     /* loaded from: classes10.dex */
-    public class C5770a implements Application.ActivityLifecycleCallbacks {
+    public class a implements Application.ActivityLifecycleCallbacks {
         private int a = 0;
         private boolean b = false;
         private boolean c;
 
-        public C5770a(boolean z) {
+        public a(boolean z) {
             this.c = false;
             this.c = z;
         }
@@ -112,18 +111,17 @@ public class FlutterBoost {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.idlefish.flutterboost.FlutterBoost$b */
     /* loaded from: classes10.dex */
-    public static class C5771b {
+    public static class b {
         static final FlutterBoost a = new FlutterBoost(null);
     }
 
-    /* synthetic */ FlutterBoost(C5774a c5774a) {
+    /* synthetic */ FlutterBoost(com.idlefish.flutterboost.a aVar) {
         this();
     }
 
     public static FlutterBoost h() {
-        return C5771b.a;
+        return b.a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -131,7 +129,7 @@ public class FlutterBoost {
     }
 
     private void n(Application application, boolean z) {
-        application.registerActivityLifecycleCallbacks(new C5770a(z));
+        application.registerActivityLifecycleCallbacks(new a(z));
     }
 
     public void d(int i) {
@@ -148,7 +146,7 @@ public class FlutterBoost {
         return FlutterEngineCache.getInstance().get(ENGINE_ID);
     }
 
-    public C5775b g() {
+    public com.idlefish.flutterboost.b g() {
         if (this.b == null) {
             FlutterEngine f = f();
             if (f != null) {
@@ -160,15 +158,15 @@ public class FlutterBoost {
         return this.b;
     }
 
-    public void j(C5776c c5776c) {
-        g().n().pushFlutterRoute(c5776c);
+    public void j(c cVar) {
+        g().n().pushFlutterRoute(cVar);
     }
 
     public void k(String str, Map<Object, Object> map) {
-        Messages.C5772a c5772a = new Messages.C5772a();
-        c5772a.h(str);
-        c5772a.g(map);
-        g().m().A(c5772a, new Messages.FlutterRouterApi.Reply() { // from class: tb.nn0
+        Messages.a aVar = new Messages.a();
+        aVar.h(str);
+        aVar.g(map);
+        g().m().A(aVar, new Messages.FlutterRouterApi.Reply() { // from class: tb.nn0
             @Override // com.idlefish.flutterboost.Messages.FlutterRouterApi.Reply
             public final void reply(Object obj) {
                 FlutterBoost.i((Void) obj);

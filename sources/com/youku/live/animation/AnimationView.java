@@ -16,8 +16,8 @@ import com.opensource.svgaplayer.SVGAVideoEntity;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import tb.C9796v;
 import tb.s42;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
@@ -32,7 +32,7 @@ public class AnimationView extends FrameLayout {
 
     public AnimationView(Context context) {
         super(context);
-        this.ANIM_TAG = C9796v.TAK_ABILITY_SHOW_POP_ANIMATION;
+        this.ANIM_TAG = v.TAK_ABILITY_SHOW_POP_ANIMATION;
         this.mLoopCount = 1;
         this.isWeex = false;
         this.useCache = false;
@@ -64,7 +64,7 @@ public class AnimationView extends FrameLayout {
                 this.mSvgaImageView = new SVGAImageView(getContext());
             }
             this.mSvgaImageView.setScaleType(ImageView.ScaleType.FIT_XY);
-            this.mSvgaImageView.setTag(C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+            this.mSvgaImageView.setTag(v.TAK_ABILITY_SHOW_POP_ANIMATION);
             this.mSvgaImageView.setLoops(this.mLoopCount);
             this.mSvgaImageView.setClearsAfterStop(true);
             addAnimationView(getWidth(), getHeight(), this.mSvgaImageView);
@@ -132,7 +132,7 @@ public class AnimationView extends FrameLayout {
                 this.mSvgaImageView = new SVGAImageView(getContext());
             }
             this.mSvgaImageView.setScaleType(ImageView.ScaleType.FIT_XY);
-            this.mSvgaImageView.setTag(C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+            this.mSvgaImageView.setTag(v.TAK_ABILITY_SHOW_POP_ANIMATION);
             this.mSvgaImageView.setLoops(this.mLoopCount);
             this.mSvgaImageView.setClearsAfterStop(true);
             addAnimationView(getWidth(), getHeight(), this.mSvgaImageView);
@@ -191,9 +191,9 @@ public class AnimationView extends FrameLayout {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "892906090")) {
             ipChange.ipc$dispatch("892906090", new Object[]{this});
-        } else if (getChildCount() == 0 || findViewWithTag(C9796v.TAK_ABILITY_SHOW_POP_ANIMATION) == null) {
+        } else if (getChildCount() == 0 || findViewWithTag(v.TAK_ABILITY_SHOW_POP_ANIMATION) == null) {
         } else {
-            View findViewWithTag = findViewWithTag(C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+            View findViewWithTag = findViewWithTag(v.TAK_ABILITY_SHOW_POP_ANIMATION);
             if (findViewWithTag instanceof SVGAImageView) {
                 ((SVGAImageView) findViewWithTag).stopAnimation(true);
             }
@@ -552,7 +552,7 @@ public class AnimationView extends FrameLayout {
 
     public AnimationView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.ANIM_TAG = C9796v.TAK_ABILITY_SHOW_POP_ANIMATION;
+        this.ANIM_TAG = v.TAK_ABILITY_SHOW_POP_ANIMATION;
         this.mLoopCount = 1;
         this.isWeex = false;
         this.useCache = false;
@@ -560,7 +560,7 @@ public class AnimationView extends FrameLayout {
 
     public AnimationView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        this.ANIM_TAG = C9796v.TAK_ABILITY_SHOW_POP_ANIMATION;
+        this.ANIM_TAG = v.TAK_ABILITY_SHOW_POP_ANIMATION;
         this.mLoopCount = 1;
         this.isWeex = false;
         this.useCache = false;

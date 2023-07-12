@@ -2,8 +2,6 @@ package tb;
 
 import com.alibaba.aliweex.adapter.module.location.ILocatable;
 import com.alimm.xadsdk.request.builder.IRequestConst;
-import com.alipay.sdk.m.l.C4232c;
-import com.alipay.sdk.m.n.C4250a;
 import com.caverock.androidsvg.SVGParser;
 import com.meizu.cloud.pushsdk.constants.PushConstants;
 import com.meizu.cloud.pushsdk.notification.model.AppIconSetting;
@@ -36,10 +34,9 @@ public class gq {
     private ArrayList<fq> h;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.gq$a */
     /* loaded from: classes5.dex */
-    public static class C9181a {
-        C9181a(URI uri, int[] iArr) {
+    public static class a {
+        a(URI uri, int[] iArr) {
         }
     }
 
@@ -143,7 +140,7 @@ public class gq {
         gqVar.h(WXBasicComponentType.DIV).q(cssProperty2, cssEnum);
         gqVar.h("dl").q(cssProperty2, cssEnum);
         gqVar.h("dt").q(cssProperty2, cssEnum);
-        gqVar.h(C4232c.c).q(cssProperty2, cssEnum);
+        gqVar.h(com.alipay.sdk.m.l.c.c).q(cssProperty2, cssEnum);
         for (int i6 = 1; i6 <= 6; i6++) {
             fq n4 = gqVar.h("h" + i6).q(CssProperty.DISPLAY, CssEnum.BLOCK).n(CssProperty.FONT_WEIGHT, 700.0f, CssUnit.NUMBER);
             CssProperty cssProperty7 = CssProperty.MARGIN_TOP;
@@ -354,7 +351,7 @@ public class gq {
         return j;
     }
 
-    public gq k(String str, URI uri, int[] iArr, String[] strArr, List<C9181a> list) {
+    public gq k(String str, URI uri, int[] iArr, String[] strArr, List<a> list) {
         int i2;
         hq hqVar = new hq(uri, str);
         boolean z = false;
@@ -413,7 +410,7 @@ public class gq {
                         int[] iArr2 = new int[iArr.length + 1];
                         System.arraycopy(iArr, 0, iArr2, 0, iArr.length);
                         iArr2[iArr.length] = i3;
-                        list.add(new C9181a(uri.resolve(str2), iArr2));
+                        list.add(new a(uri.resolve(str2), iArr2));
                     }
                     hqVar.c(false);
                     i3++;
@@ -483,7 +480,7 @@ public class gq {
                 } else {
                     switch (charAt) {
                         case '\b':
-                            sb2.append(C4250a.h);
+                            sb2.append(com.alipay.sdk.m.n.a.h);
                             break;
                         case '\t':
                             sb2.append("~=");

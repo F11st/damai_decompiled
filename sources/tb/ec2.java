@@ -25,13 +25,12 @@ public final class ec2 extends y0 {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ec2$a */
     /* loaded from: classes7.dex */
-    public static final class C9097a implements BottomActionDialog.OnActionListener {
+    public static final class a implements BottomActionDialog.OnActionListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
 
-        C9097a(Activity activity) {
+        a(Activity activity) {
             this.a = activity;
         }
 
@@ -139,7 +138,7 @@ public final class ec2 extends y0 {
             if (r3 == 0) goto Lc6
             java.lang.String r3 = r1.getMapUrl()
             if (r3 == 0) goto L89
-            boolean r3 = kotlin.text.C8596g.s(r3)
+            boolean r3 = kotlin.text.g.s(r3)
             if (r3 == 0) goto L8a
         L89:
             r9 = 1

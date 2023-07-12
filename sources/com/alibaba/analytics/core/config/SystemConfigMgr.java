@@ -23,7 +23,7 @@ public class SystemConfigMgr extends zs2 {
     private final Map<String, String> a = Collections.synchronizedMap(new HashMap());
     private final Map<String, List<IKVChangeListener>> b = Collections.synchronizedMap(new HashMap());
     private final String[] c = {"utap_system"};
-    private final Map<String, C3106a> d = new HashMap();
+    private final Map<String, a> d = new HashMap();
 
     /* compiled from: Taobao */
     /* loaded from: classes15.dex */
@@ -33,13 +33,12 @@ public class SystemConfigMgr extends zs2 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.analytics.core.config.SystemConfigMgr$a */
     /* loaded from: classes15.dex */
-    public static class C3106a {
+    public static class a {
         private int a = -1;
         private List<String> b = new ArrayList();
 
-        private C3106a() {
+        private a() {
         }
 
         private boolean b(String str) {
@@ -60,12 +59,12 @@ public class SystemConfigMgr extends zs2 {
             return false;
         }
 
-        public static C3106a c(String str) {
+        public static a c(String str) {
             try {
-                C3106a c3106a = new C3106a();
+                a aVar = new a();
                 JSONObject jSONObject = new JSONObject(str);
                 if (jSONObject.has("all_d")) {
-                    c3106a.a = jSONObject.optInt("all_d", -1);
+                    aVar.a = jSONObject.optInt("all_d", -1);
                 }
                 if (jSONObject.has("arg1")) {
                     ArrayList arrayList = new ArrayList();
@@ -75,9 +74,9 @@ public class SystemConfigMgr extends zs2 {
                             arrayList.add(jSONArray.getString(i));
                         }
                     }
-                    c3106a.b = arrayList;
+                    aVar.b = arrayList;
                 }
-                return c3106a;
+                return aVar;
             } catch (Exception e) {
                 e.printStackTrace();
                 return null;
@@ -99,11 +98,11 @@ public class SystemConfigMgr extends zs2 {
     private SystemConfigMgr() {
         try {
             if (Variables.n().k() != null) {
-                List<? extends ve0> i = Variables.n().k().i(C3110c.class, null, null, -1);
+                List<? extends ve0> i = Variables.n().k().i(c.class, null, null, -1);
                 if (i.size() > 0) {
                     Map<String, String> synchronizedMap = Collections.synchronizedMap(new HashMap(i.size()));
                     for (int i2 = 0; i2 < i.size(); i2++) {
-                        synchronizedMap.put(((C3110c) i.get(i2)).a, ((C3110c) i.get(i2)).b);
+                        synchronizedMap.put(((c) i.get(i2)).a, ((c) i.get(i2)).b);
                     }
                     m(synchronizedMap);
                 }
@@ -114,10 +113,10 @@ public class SystemConfigMgr extends zs2 {
     }
 
     private boolean d(Map<String, String> map, int i) {
-        C3106a c3106a = this.d.get(String.valueOf(i));
-        if (c3106a != null) {
+        a aVar = this.d.get(String.valueOf(i));
+        if (aVar != null) {
             LogField logField = LogField.ARG1;
-            return c3106a.a(map.containsKey(logField.toString()) ? map.get(logField.toString()) : null);
+            return aVar.a(map.containsKey(logField.toString()) ? map.get(logField.toString()) : null);
         }
         return false;
     }
@@ -146,10 +145,10 @@ public class SystemConfigMgr extends zs2 {
     private List<ve0> k(Map<String, String> map) {
         ArrayList arrayList = new ArrayList(map.size());
         for (String str : map.keySet()) {
-            C3110c c3110c = new C3110c();
-            c3110c.a = str;
-            c3110c.b = map.get(str);
-            arrayList.add(c3110c);
+            c cVar = new c();
+            cVar.a = str;
+            cVar.b = map.get(str);
+            arrayList.add(cVar);
         }
         return arrayList;
     }
@@ -172,8 +171,8 @@ public class SystemConfigMgr extends zs2 {
     }
 
     private synchronized void n(Map<String, String> map) {
-        Map<String, C3106a> map2;
-        C3106a c;
+        Map<String, a> map2;
+        a c;
         if (map != null) {
             if (map.containsKey("delay")) {
                 if ((this.a.get("delay") == null || !map.get("delay").equals(this.a.get("delay"))) && (map2 = this.d) != null) {
@@ -187,7 +186,7 @@ public class SystemConfigMgr extends zs2 {
                         while (keys.hasNext()) {
                             String next = keys.next();
                             String string = jSONObject.getString(next);
-                            if (!TextUtils.isEmpty(string) && (c = C3106a.c(string)) != null) {
+                            if (!TextUtils.isEmpty(string) && (c = a.c(string)) != null) {
                                 this.d.put(next, c);
                             }
                         }
@@ -197,7 +196,7 @@ public class SystemConfigMgr extends zs2 {
                 }
             }
         }
-        Map<String, C3106a> map3 = this.d;
+        Map<String, a> map3 = this.d;
         if (map3 != null) {
             map3.clear();
         }
@@ -212,7 +211,7 @@ public class SystemConfigMgr extends zs2 {
     public void c(String str, Map<String, String> map) {
         if ("utap_system".equalsIgnoreCase(str)) {
             m(map);
-            Variables.n().k().b(C3110c.class);
+            Variables.n().k().b(c.class);
             Variables.n().k().q(k(this.a));
         }
     }
@@ -311,7 +310,7 @@ public class SystemConfigMgr extends zs2 {
     }
 
     public synchronized boolean g() {
-        Map<String, C3106a> map = this.d;
+        Map<String, a> map = this.d;
         if (map != null) {
             if (map.size() > 0) {
                 return true;

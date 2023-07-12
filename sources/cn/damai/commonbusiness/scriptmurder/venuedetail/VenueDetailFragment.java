@@ -5,7 +5,7 @@ import android.view.View;
 import androidx.fragment.app.FragmentActivity;
 import cn.damai.common.AppConfig;
 import cn.damai.common.net.mtop.Util;
-import cn.damai.common.util.toastutil.C0537a;
+import cn.damai.common.util.toastutil.a;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.scriptmurder.CommonNavbarActivity;
@@ -63,7 +63,7 @@ import tb.z20;
 public final class VenueDetailFragment extends BaseFragment implements StickyHeaderFeature {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C0803a Companion = new C0803a(null);
+    public static final a Companion = new a(null);
     public static final boolean NEED_ENCODE = false;
     public static final boolean NEED_SESSION = false;
     @NotNull
@@ -191,7 +191,7 @@ public final class VenueDetailFragment extends BaseFragment implements StickyHea
                         VenueDetailFragment.this.hideLoadingDialog(activity);
                         String errorMsg = Util.getErrorMsg(iResponse.getRetCode(), iResponse.getRetMessage());
                         if (VenueDetailFragment.this.getPageLoader().getRealItemCount() > 0) {
-                            C0537a.i(activity, errorMsg);
+                            a.i(activity, errorMsg);
                         } else {
                             VenueDetailFragment.this.getPageStateManager().setState(State.FAILED);
                         }
@@ -340,13 +340,12 @@ public final class VenueDetailFragment extends BaseFragment implements StickyHea
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.scriptmurder.venuedetail.VenueDetailFragment$a */
     /* loaded from: classes4.dex */
-    public static final class C0803a {
-        private C0803a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C0803a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

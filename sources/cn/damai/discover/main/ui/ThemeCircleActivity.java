@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import androidx.fragment.app.FragmentTransaction;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.commonbusiness.discover.bean.ThemeRelationQueryBean;
@@ -25,9 +25,9 @@ import cn.damai.uikit.view.CircleSimpleTitleLayout;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
-import tb.C9548pb;
 import tb.d23;
 import tb.lm2;
+import tb.pb;
 import tb.r92;
 import tb.s90;
 
@@ -46,12 +46,11 @@ public class ThemeCircleActivity extends SimpleBaseActivity implements ScrollTit
     int alpha = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeCircleActivity$a */
     /* loaded from: classes5.dex */
-    public class C1061a implements CircleSimpleTitleLayout.OnBtnClickListener {
+    public class a implements CircleSimpleTitleLayout.OnBtnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1061a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.view.CircleSimpleTitleLayout.OnBtnClickListener
@@ -90,12 +89,11 @@ public class ThemeCircleActivity extends SimpleBaseActivity implements ScrollTit
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeCircleActivity$b */
     /* loaded from: classes5.dex */
-    public class C1062b implements OnBizListener<PublishStateBean> {
+    public class b implements OnBizListener<PublishStateBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1062b() {
+        b() {
         }
 
         @Override // cn.damai.commonbusiness.wannasee.listener.OnBizListener
@@ -162,7 +160,7 @@ public class ThemeCircleActivity extends SimpleBaseActivity implements ScrollTit
                     HashMap<String, String> f = d23.f();
                     f.put("type", ThemeCircleActivity.this.addCircleStatue ? "0" : "1");
                     f.put("quanziid", ThemeCircleActivity.this.fragment.themeId);
-                    C9548pb.j(ThemeCircleActivity.this.mUt.y(f));
+                    pb.j(ThemeCircleActivity.this.mUt.y(f));
                     boolean z = ThemeCircleActivity.this.addCircleStatue;
                     boolean z2 = themeRelationQueryBean.hasJoin;
                     if (z != z2) {
@@ -202,7 +200,7 @@ public class ThemeCircleActivity extends SimpleBaseActivity implements ScrollTit
         } else if (isFinishing() || this.mPublishModel == null) {
         } else {
             showPublishView(false);
-            this.mPublishModel.loadPublish(new C1062b());
+            this.mPublishModel.loadPublish(new b());
         }
     }
 
@@ -314,7 +312,7 @@ public class ThemeCircleActivity extends SimpleBaseActivity implements ScrollTit
         if (AndroidInstantRuntime.support(ipChange, "2106568454")) {
             ipChange.ipc$dispatch("2106568454", new Object[]{this, view});
         } else if (!r92.c() && view.getId() == R$id.circle_new_publish_ui) {
-            C9548pb.j(this.mUt.q());
+            pb.j(this.mUt.q());
             if (LoginManager.k().q()) {
                 PublishStateBean stateBean = this.mPublishModel.getStateBean();
                 if (stateBean == null || !stateBean.isNeedShowPublishBtn()) {
@@ -341,7 +339,7 @@ public class ThemeCircleActivity extends SimpleBaseActivity implements ScrollTit
             return;
         }
         super.onCreate(bundle);
-        C0529c.e().K(this);
+        c.e().K(this);
         hideBaseLayout();
         if (getIntent() == null || getIntent().getExtras() == null) {
             return;
@@ -360,7 +358,7 @@ public class ThemeCircleActivity extends SimpleBaseActivity implements ScrollTit
         circleSimpleTitleLayout.enableImmersiveMode(this);
         this.mTitleBar.setAlpha(this.alpha);
         this.mTitleBar.setVisibility(8);
-        this.mTitleBar.setListener(new C1061a());
+        this.mTitleBar.setListener(new a());
         initFragment();
         LoginManager.k().c(this);
     }

@@ -1,10 +1,10 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import java.util.Iterator;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
+import kotlin.reflect.jvm.internal.impl.builtins.c;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotation;
@@ -32,7 +32,7 @@ public final class LazyJavaAnnotations implements Annotations {
     private final MemoizedFunctionToNullable<JavaAnnotation, AnnotationDescriptor> d;
 
     public LazyJavaAnnotations(@NotNull r81 r81Var, @NotNull JavaAnnotationOwner javaAnnotationOwner, boolean z) {
-        b41.i(r81Var, AbstractC5658c.a);
+        b41.i(r81Var, c.a);
         b41.i(javaAnnotationOwner, "annotationOwner");
         this.a = r81Var;
         this.b = javaAnnotationOwner;
@@ -68,7 +68,7 @@ public final class LazyJavaAnnotations implements Annotations {
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations
     public boolean hasAnnotation(@NotNull hp0 hp0Var) {
-        return Annotations.C8304b.b(this, hp0Var);
+        return Annotations.b.b(this, hp0Var);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations
@@ -85,7 +85,7 @@ public final class LazyJavaAnnotations implements Annotations {
         Sequence q;
         I = CollectionsKt___CollectionsKt.I(this.b.getAnnotations());
         v = SequencesKt___SequencesKt.v(I, this.d);
-        y = SequencesKt___SequencesKt.y(v, z41.INSTANCE.a(C8277c.C8278a.deprecated, this.b, this.a));
+        y = SequencesKt___SequencesKt.y(v, z41.INSTANCE.a(c.a.deprecated, this.b, this.a));
         q = SequencesKt___SequencesKt.q(y);
         return q.iterator();
     }

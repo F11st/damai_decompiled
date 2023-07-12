@@ -37,12 +37,11 @@ public class BottomActionDialog extends Dialog implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.uikit.view.BottomActionDialog$Adapter$a */
         /* loaded from: classes8.dex */
-        public class C2568a implements OnActionListener {
+        public class a implements OnActionListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C2568a() {
+            a() {
             }
 
             @Override // cn.damai.uikit.view.BottomActionDialog.OnActionListener
@@ -76,7 +75,7 @@ public class BottomActionDialog extends Dialog implements View.OnClickListener {
         /* renamed from: b */
         public VH onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
             IpChange ipChange = $ipChange;
-            return AndroidInstantRuntime.support(ipChange, "1201490699") ? (VH) ipChange.ipc$dispatch("1201490699", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new VH(LayoutInflater.from(BottomActionDialog.this.getContext()).inflate(R$layout.dialog_item_action, viewGroup, false), new C2568a());
+            return AndroidInstantRuntime.support(ipChange, "1201490699") ? (VH) ipChange.ipc$dispatch("1201490699", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new VH(LayoutInflater.from(BottomActionDialog.this.getContext()).inflate(R$layout.dialog_item_action, viewGroup, false), new a());
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter

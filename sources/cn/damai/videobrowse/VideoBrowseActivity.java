@@ -13,7 +13,6 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.viewpager.widget.ViewPager;
 import cn.damai.common.askpermission.OnGrantListener;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.R$color;
@@ -139,12 +138,11 @@ public class VideoBrowseActivity extends DamaiBaseActivity implements ImageFragm
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.videobrowse.VideoBrowseActivity$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2782a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2782a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -159,12 +157,11 @@ public class VideoBrowseActivity extends DamaiBaseActivity implements ImageFragm
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.videobrowse.VideoBrowseActivity$b */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2783b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2783b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -181,19 +178,18 @@ public class VideoBrowseActivity extends DamaiBaseActivity implements ImageFragm
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.videobrowse.VideoBrowseActivity$c */
     /* loaded from: classes9.dex */
-    public class C2784c implements DMImageCreator.DMImageFailListener {
+    public class c implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2784c() {
+        c() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-688540361")) {
-                ipChange.ipc$dispatch("-688540361", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-688540361", new Object[]{this, dVar});
             } else {
                 ToastUtil.a().e(VideoBrowseActivity.this, "保存失败");
             }
@@ -201,21 +197,20 @@ public class VideoBrowseActivity extends DamaiBaseActivity implements ImageFragm
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.videobrowse.VideoBrowseActivity$d */
     /* loaded from: classes9.dex */
-    public class C2785d implements DMImageCreator.DMImageSuccListener {
+    public class d implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2785d() {
+        d() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1085579660")) {
-                ipChange.ipc$dispatch("1085579660", new Object[]{this, c0502e});
-            } else if (c0502e == null || (bitmap = c0502e.b) == null) {
+                ipChange.ipc$dispatch("1085579660", new Object[]{this, eVar});
+            } else if (eVar == null || (bitmap = eVar.b) == null) {
             } else {
                 VideoBrowseActivity.this.saveToLocal(bitmap);
             }
@@ -369,7 +364,7 @@ public class VideoBrowseActivity extends DamaiBaseActivity implements ImageFragm
                 VideoBrowseActivity.this.updateIntroduceContent();
             }
         };
-        this.mOnImageDownloadClickListener = new View$OnClickListenerC2783b();
+        this.mOnImageDownloadClickListener = new b();
     }
 
     private void initPosterView() {
@@ -401,7 +396,7 @@ public class VideoBrowseActivity extends DamaiBaseActivity implements ImageFragm
         this.mRvTitleBar = (RelativeLayout) findViewById(R$id.video_image_browse_title_bar);
         DMIconFontTextView dMIconFontTextView = (DMIconFontTextView) findViewById(R$id.video_image_browse_back_tv);
         this.mBackView = dMIconFontTextView;
-        dMIconFontTextView.setOnClickListener(new View$OnClickListenerC2782a());
+        dMIconFontTextView.setOnClickListener(new a());
         fixStatusBar();
     }
 
@@ -412,7 +407,7 @@ public class VideoBrowseActivity extends DamaiBaseActivity implements ImageFragm
             ipChange.ipc$dispatch("1169876688", new Object[]{this, str});
         } else if (TextUtils.isEmpty(str)) {
         } else {
-            C0504a.b().c(str).n(new C2785d()).e(new C2784c()).f();
+            cn.damai.common.image.a.b().c(str).n(new d()).e(new c()).f();
         }
     }
 

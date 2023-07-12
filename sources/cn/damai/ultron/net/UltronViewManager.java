@@ -6,8 +6,8 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.ultron.utils.DmUltronProgressDialog;
-import com.alibaba.android.ultron.trade.presenter.C3259b;
 import com.alibaba.android.ultron.trade.presenter.IPresenter;
+import com.alibaba.android.ultron.trade.presenter.b;
 import com.alibaba.android.ultron.vfw.adapter.RecyclerViewAdapter;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -15,7 +15,7 @@ import com.taobao.android.dinamicx.IDXEventHandler;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
-public class UltronViewManager extends C3259b {
+public class UltronViewManager extends b {
     private static transient /* synthetic */ IpChange $ipChange;
     protected DmUltronProgressDialog progressDialog;
 
@@ -36,7 +36,7 @@ public class UltronViewManager extends C3259b {
         }
     }
 
-    @Override // com.alibaba.android.ultron.trade.presenter.C3259b
+    @Override // com.alibaba.android.ultron.trade.presenter.b
     public void initView(LinearLayout linearLayout, @NonNull RecyclerView recyclerView, LinearLayout linearLayout2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1450840717")) {

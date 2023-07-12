@@ -1,8 +1,8 @@
 package cn.damai.ultron.net;
 
 import android.content.Context;
-import com.alibaba.android.ultron.trade.data.request.AbstractC3246a;
 import com.alibaba.android.ultron.trade.data.request.Request;
+import com.alibaba.android.ultron.trade.data.request.a;
 import com.alibaba.android.ultron.trade.presenter.BaseDataManager;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -16,7 +16,7 @@ import tb.is;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
-public class DMOrderBuildRequest extends AbstractC3246a {
+public class DMOrderBuildRequest extends a {
     private static transient /* synthetic */ IpChange $ipChange;
 
     public DMOrderBuildRequest(BaseDataManager baseDataManager, Context context, Request request) {
@@ -59,18 +59,18 @@ public class DMOrderBuildRequest extends AbstractC3246a {
                     ipChange2.ipc$dispatch("-929613937", new Object[]{this, Integer.valueOf(i), mtopResponse, obj2, iDMContext2, map});
                     return;
                 }
-                f30.b(iDMContext2, ((AbstractC3246a) DMOrderBuildRequest.this).mContext);
+                f30.b(iDMContext2, ((a) DMOrderBuildRequest.this).mContext);
                 DMOrderBuildRequest dMOrderBuildRequest = DMOrderBuildRequest.this;
-                dMOrderBuildRequest.composeComponents(((AbstractC3246a) dMOrderBuildRequest).mDataManager, iDMContext2);
+                dMOrderBuildRequest.composeComponents(((a) dMOrderBuildRequest).mDataManager, iDMContext2);
                 f1 f1Var2 = f1Var;
                 if (f1Var2 != null) {
-                    f1Var2.onSuccess(i, mtopResponse, obj2, ((AbstractC3246a) DMOrderBuildRequest.this).mDataManager.getDataContext(), map);
+                    f1Var2.onSuccess(i, mtopResponse, obj2, ((a) DMOrderBuildRequest.this).mDataManager.getDataContext(), map);
                 }
             }
         });
     }
 
-    @Override // com.alibaba.android.ultron.trade.data.request.AbstractC3246a
+    @Override // com.alibaba.android.ultron.trade.data.request.a
     public void sendRequest(f1 f1Var, IDMContext iDMContext, Object obj) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "90356765")) {

@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.banner.bean.PayAdvertBean;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
@@ -60,12 +60,11 @@ public class DmPayResultActivity extends SimpleBaseActivity implements ILoginLis
     private HashMap<String, String> orderStatusUTArgs = null;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.payresult.view.DmPayResultActivity$a */
     /* loaded from: classes9.dex */
-    public class C2623a implements Action<Bundle> {
+    public class a implements Action<Bundle> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2623a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -122,7 +121,7 @@ public class DmPayResultActivity extends SimpleBaseActivity implements ILoginLis
                 DmPayResultActivity.this.orderStatusUTArgs.put("titlelabel", str);
                 DmPayResultActivity.this.orderStatusUTArgs.put("contentlabel", str2);
                 DmPayResultActivity.this.mAdapter.d = DmPayResultActivity.this.orderStatusUTArgs;
-                C0529c.e().l(DmPayResultActivity.this, xa0.h().g(orderId, str, str2));
+                c.e().l(DmPayResultActivity.this, xa0.h().g(orderId, str, str2));
             }
         });
         this.viewModel.getBannerLiveData().observe(this, new Observer<PayAdvertBean>() { // from class: cn.damai.ultron.payresult.view.DmPayResultActivity.3
@@ -269,7 +268,7 @@ public class DmPayResultActivity extends SimpleBaseActivity implements ILoginLis
         this.viewCreater = zx2Var;
         initRecyclerView(zx2Var);
         initModel();
-        this.action = new C2623a();
+        this.action = new a();
         yr.c().e("brand_state_changed", this.action);
     }
 
@@ -293,7 +292,7 @@ public class DmPayResultActivity extends SimpleBaseActivity implements ILoginLis
         xa0 h = xa0.h();
         PaySuccessViewModel paySuccessViewModel = this.viewModel;
         setDamaiUTKeyBuilder(h.f(paySuccessViewModel != null ? paySuccessViewModel.getOrderId() : ""));
-        C0529c.e().K(this);
+        c.e().K(this);
         LoginManager.k().c(this);
     }
 

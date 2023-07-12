@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.R$drawable;
@@ -85,14 +84,14 @@ public final class mi1 extends g1<DMShareMessage> {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static final void f(OnFinishListener onFinishListener, mi1 mi1Var, DMImageCreator.C0502e c0502e) {
+    public static final void f(OnFinishListener onFinishListener, mi1 mi1Var, DMImageCreator.e eVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1407685058")) {
-            ipChange.ipc$dispatch("-1407685058", new Object[]{onFinishListener, mi1Var, c0502e});
+            ipChange.ipc$dispatch("-1407685058", new Object[]{onFinishListener, mi1Var, eVar});
             return;
         }
         b41.i(mi1Var, "this$0");
-        Bitmap bitmap = c0502e.b;
+        Bitmap bitmap = eVar.b;
         if (bitmap != null) {
             mi1Var.e.setImageBitmap(bitmap);
         }
@@ -102,10 +101,10 @@ public final class mi1 extends g1<DMShareMessage> {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static final void g(mi1 mi1Var, OnFinishListener onFinishListener, DMImageCreator.C0501d c0501d) {
+    public static final void g(mi1 mi1Var, OnFinishListener onFinishListener, DMImageCreator.d dVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1631378174")) {
-            ipChange.ipc$dispatch("1631378174", new Object[]{mi1Var, onFinishListener, c0501d});
+            ipChange.ipc$dispatch("1631378174", new Object[]{mi1Var, onFinishListener, dVar});
             return;
         }
         b41.i(mi1Var, "this$0");
@@ -142,15 +141,15 @@ public final class mi1 extends g1<DMShareMessage> {
             }
             int a = q60.a(this.a, 70.0f);
             this.j.setImageBitmap(QrcodeUtil.a(a, GenerateImageUtil.SHARE_URL + URLEncoder.encode(dMShareMessage.shareLink)));
-            C0504a.b().h(this.a).c(dMShareMessage.sharePictureUrl).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.li1
+            cn.damai.common.image.a.b().h(this.a).c(dMShareMessage.sharePictureUrl).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.li1
                 @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-                public final void onSuccess(DMImageCreator.C0502e c0502e) {
-                    mi1.f(OnFinishListener.this, this, c0502e);
+                public final void onSuccess(DMImageCreator.e eVar) {
+                    mi1.f(OnFinishListener.this, this, eVar);
                 }
             }).e(new DMImageCreator.DMImageFailListener() { // from class: tb.ki1
                 @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-                public final void onFail(DMImageCreator.C0501d c0501d) {
-                    mi1.g(mi1.this, onFinishListener, c0501d);
+                public final void onFail(DMImageCreator.d dVar) {
+                    mi1.g(mi1.this, onFinishListener, dVar);
                 }
             }).f();
         }

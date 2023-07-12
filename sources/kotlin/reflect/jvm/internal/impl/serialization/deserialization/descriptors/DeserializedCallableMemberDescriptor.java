@@ -12,13 +12,12 @@ import tb.hx2;
 public interface DeserializedCallableMemberDescriptor extends CallableMemberDescriptor, DeserializedMemberDescriptor {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedCallableMemberDescriptor$a */
     /* loaded from: classes3.dex */
-    public static final class C8511a {
+    public static final class a {
         @NotNull
         public static List<hx2> a(@NotNull DeserializedCallableMemberDescriptor deserializedCallableMemberDescriptor) {
             b41.i(deserializedCallableMemberDescriptor, "this");
-            return DeserializedMemberDescriptor.C8513a.a(deserializedCallableMemberDescriptor);
+            return DeserializedMemberDescriptor.a.a(deserializedCallableMemberDescriptor);
         }
     }
 }

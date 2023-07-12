@@ -12,9 +12,9 @@ import com.youku.gaiax.api.proxy.IProxyFeatures;
 import com.youku.gaiax.impl.GaiaXExpression;
 import com.youku.gaiax.impl.GaiaXProxy;
 import java.math.BigDecimal;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -225,7 +225,7 @@ public final class GXExtensionExpression implements GXRegisterCenter.GXIExtensio
 
     static {
         Lazy<GXExtensionExpression> b;
-        b = C8177b.b(new Function0<GXExtensionExpression>() { // from class: com.youku.gaiax.impl.register.GXExtensionExpression$Companion$instance$2
+        b = b.b(new Function0<GXExtensionExpression>() { // from class: com.youku.gaiax.impl.register.GXExtensionExpression$Companion$instance$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull

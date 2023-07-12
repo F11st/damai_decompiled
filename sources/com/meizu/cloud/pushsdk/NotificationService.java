@@ -7,12 +7,8 @@ import android.content.pm.ResolveInfo;
 import android.os.Process;
 import android.text.TextUtils;
 import com.meizu.cloud.pushinternal.DebugLogger;
-import com.meizu.cloud.pushsdk.b.b.C5922a;
-import com.meizu.cloud.pushsdk.b.b.C5926d;
 import com.meizu.cloud.pushsdk.constants.PushConstants;
-import com.meizu.cloud.pushsdk.d.C5998a;
-import com.meizu.cloud.pushsdk.handler.a.c.C6041b;
-import com.meizu.cloud.pushsdk.util.C6104d;
+import com.meizu.cloud.pushsdk.util.d;
 import java.util.List;
 
 /* compiled from: Taobao */
@@ -42,24 +38,24 @@ public class NotificationService extends IntentService {
     public void a(Intent intent) {
         String a = a(getPackageName(), intent.getAction());
         if (TextUtils.isEmpty(a)) {
-            C6104d.a(this, intent, "reflectReceiver sendbroadcast", 2005);
+            d.a(this, intent, "reflectReceiver sendbroadcast", 2005);
             DebugLogger.i("NotificationService", " reflectReceiver error: receiver for: " + intent.getAction() + " not found, package: " + getPackageName());
             intent.setPackage(getPackageName());
             sendBroadcast(intent);
             return;
         }
         try {
-            C6104d.a(this, intent, "reflectReceiver startservice", 2003);
+            d.a(this, intent, "reflectReceiver startservice", 2003);
             intent.setClassName(getPackageName(), a);
-            C5926d a2 = C5922a.a(a).a((Class<?>[]) null).a(null);
+            com.meizu.cloud.pushsdk.b.b.d a2 = com.meizu.cloud.pushsdk.b.b.a.a(a).a((Class<?>[]) null).a(null);
             if (!a2.a || a2.b == 0) {
                 return;
             }
             DebugLogger.i("NotificationService", "Reflect MzPushReceiver true");
-            C5922a.a(a2.b).a("onReceive", Context.class, Intent.class).a(a2.b, getApplicationContext(), intent);
+            com.meizu.cloud.pushsdk.b.b.a.a(a2.b).a("onReceive", Context.class, Intent.class).a(a2.b, getApplicationContext(), intent);
         } catch (Exception e) {
             DebugLogger.i("NotificationService", "reflect e: " + e);
-            C6104d.a(this, intent, e.getMessage(), 2004);
+            d.a(this, intent, e.getMessage(), 2004);
         }
     }
 
@@ -87,7 +83,7 @@ public class NotificationService extends IntentService {
                     String stringExtra2 = intent.getStringExtra(PushConstants.MZ_PUSH_CONTROL_MESSAGE);
                     DebugLogger.i("NotificationService", "control message is " + stringExtra2);
                     if (!TextUtils.isEmpty(stringExtra2)) {
-                        C5998a.a(this, new C6041b(stringExtra2, null, null).b().c());
+                        com.meizu.cloud.pushsdk.d.a.a(this, new com.meizu.cloud.pushsdk.handler.a.c.b(stringExtra2, null, null).b().c());
                     }
                     a(intent);
                     return;

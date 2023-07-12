@@ -10,7 +10,7 @@ import tb.t63;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public final class t0 extends AbstractC5872q0 {
+public final class t0 extends q0 {
     private static t0 c = new t0();
 
     private t0() {

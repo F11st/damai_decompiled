@@ -35,13 +35,12 @@ public class DFS {
 
     /* JADX INFO: Add missing generic type declarations: [N] */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.utils.DFS$a */
     /* loaded from: classes3.dex */
-    static class C8560a<N> extends AbstractC8561b<N, Boolean> {
+    static class a<N> extends b<N, Boolean> {
         final /* synthetic */ Function1 a;
         final /* synthetic */ boolean[] b;
 
-        C8560a(Function1 function1, boolean[] zArr) {
+        a(Function1 function1, boolean[] zArr) {
             this.a = function1;
             this.b = zArr;
         }
@@ -62,21 +61,19 @@ public class DFS {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.utils.DFS$b */
     /* loaded from: classes3.dex */
-    public static abstract class AbstractC8561b<N, R> implements NodeHandler<N, R> {
+    public static abstract class b<N, R> implements NodeHandler<N, R> {
         @Override // kotlin.reflect.jvm.internal.impl.utils.DFS.NodeHandler
         public void afterChildren(N n) {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.utils.DFS$c */
     /* loaded from: classes3.dex */
-    public static class C8562c<N> implements Visited<N> {
+    public static class c<N> implements Visited<N> {
         private final Set<N> a;
 
-        public C8562c() {
+        public c() {
             this(new HashSet());
         }
 
@@ -89,7 +86,7 @@ public class DFS {
             return this.a.add(n);
         }
 
-        public C8562c(@NotNull Set<N> set) {
+        public c(@NotNull Set<N> set) {
             if (set == null) {
                 a(0);
             }
@@ -187,7 +184,7 @@ public class DFS {
         if (nodeHandler == null) {
             a(6);
         }
-        return (R) c(collection, neighbors, new C8562c(), nodeHandler);
+        return (R) c(collection, neighbors, new c(), nodeHandler);
     }
 
     public static <N, R> R c(@NotNull Collection<N> collection, @NotNull Neighbors<N> neighbors, @NotNull Visited<N> visited, @NotNull NodeHandler<N, R> nodeHandler) {
@@ -240,6 +237,6 @@ public class DFS {
         if (function1 == null) {
             a(9);
         }
-        return (Boolean) b(collection, neighbors, new C8560a(function1, new boolean[1]));
+        return (Boolean) b(collection, neighbors, new a(function1, new boolean[1]));
     }
 }

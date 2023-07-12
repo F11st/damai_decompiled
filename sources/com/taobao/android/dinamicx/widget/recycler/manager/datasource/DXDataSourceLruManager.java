@@ -86,10 +86,9 @@ public class DXDataSourceLruManager implements IDXDataSourceManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.manager.datasource.DXDataSourceLruManager$a */
     /* loaded from: classes11.dex */
-    public class C6516a implements LruKeepPredicate {
-        C6516a(DXDataSourceLruManager dXDataSourceLruManager) {
+    public class a implements LruKeepPredicate {
+        a(DXDataSourceLruManager dXDataSourceLruManager) {
         }
 
         @Override // com.taobao.android.dinamicx.widget.recycler.manager.datasource.DXDataSourceLruManager.LruKeepPredicate
@@ -135,7 +134,7 @@ public class DXDataSourceLruManager implements IDXDataSourceManager {
 
     protected LruKeepPredicate c() {
         if (this.b == null) {
-            this.b = new C6516a(this);
+            this.b = new a(this);
         }
         return this.b;
     }

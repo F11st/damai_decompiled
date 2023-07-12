@@ -1,6 +1,6 @@
 package kotlin.coroutines.jvm.internal;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import com.meizu.cloud.pushsdk.notification.model.NotifyType;
 import com.taobao.weex.ui.component.WXComponent;
 import java.lang.annotation.ElementType;
@@ -18,7 +18,7 @@ import kotlin.jvm.JvmName;
 @Retention(RetentionPolicy.RUNTIME)
 /* loaded from: classes3.dex */
 public @interface DebugMetadata {
-    @JvmName(name = AbstractC5658c.a)
+    @JvmName(name = c.a)
     String c() default "";
 
     @JvmName(name = "f")

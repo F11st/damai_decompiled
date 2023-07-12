@@ -10,17 +10,16 @@ import java.util.List;
 /* loaded from: classes.dex */
 public class TicketNoteList implements Parcelable {
     private static transient /* synthetic */ IpChange $ipChange;
-    public static final Parcelable.Creator<TicketNoteList> CREATOR = new C0871a();
+    public static final Parcelable.Creator<TicketNoteList> CREATOR = new a();
     private String noteTitle;
     private List<TicketNote> ticketNoteList;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.servicenotice.TicketNoteList$a */
     /* loaded from: classes.dex */
-    public class C0871a implements Parcelable.Creator<TicketNoteList> {
+    public class a implements Parcelable.Creator<TicketNoteList> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0871a() {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

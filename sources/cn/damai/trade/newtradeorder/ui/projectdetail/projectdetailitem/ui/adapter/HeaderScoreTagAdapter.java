@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.trade.R$id;
 import cn.damai.trade.R$layout;
 import cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.bean.ProjectRatingContentLabelBean;
@@ -66,14 +66,13 @@ public class HeaderScoreTagAdapter extends RecyclerView.Adapter<ViewHolder> impl
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.adapter.HeaderScoreTagAdapter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2283a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ProjectRatingContentLabelBean a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC2283a(ProjectRatingContentLabelBean projectRatingContentLabelBean, int i) {
+        a(ProjectRatingContentLabelBean projectRatingContentLabelBean, int i) {
             this.a = projectRatingContentLabelBean;
             this.b = i;
         }
@@ -86,7 +85,7 @@ public class HeaderScoreTagAdapter extends RecyclerView.Adapter<ViewHolder> impl
             } else if (this.a == null || HeaderScoreTagAdapter.this.e == null) {
             } else {
                 HeaderScoreTagAdapter.this.e.onScoreBottomTagClick(this.a);
-                C0529c.e().x(pp2.u().Z0(Long.toString(HeaderScoreTagAdapter.this.d), this.b));
+                c.e().x(pp2.u().Z0(Long.toString(HeaderScoreTagAdapter.this.d), this.b));
             }
         }
     }
@@ -113,7 +112,7 @@ public class HeaderScoreTagAdapter extends RecyclerView.Adapter<ViewHolder> impl
         }
         ProjectRatingContentLabelBean projectRatingContentLabelBean = this.b.get(i);
         viewHolder.a(viewHolder, projectRatingContentLabelBean.labelName, i, this.b.size());
-        viewHolder.itemView.setOnClickListener(new View$OnClickListenerC2283a(projectRatingContentLabelBean, i));
+        viewHolder.itemView.setOnClickListener(new a(projectRatingContentLabelBean, i));
         pp2.u().e2(viewHolder.itemView, Long.toString(this.d), projectRatingContentLabelBean.labelName, i);
     }
 

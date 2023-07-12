@@ -3,8 +3,8 @@ package com.taobao.aranger.core.wrapper;
 import android.os.IBinder;
 import android.os.Parcel;
 import android.os.Parcelable;
-import com.taobao.aranger.utils.C6699b;
 import com.taobao.aranger.utils.TypeUtils;
+import com.taobao.aranger.utils.b;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -75,7 +75,7 @@ public class ParameterWrapper extends BaseWrapper implements Parcelable {
         if ((parcel.readByte() | 0) == 0) {
             this.mClientServiceBinder = parcel.readStrongBinder();
         }
-        this.mData = C6699b.e(getClass().getClassLoader(), parcel);
+        this.mData = b.e(getClass().getClassLoader(), parcel);
     }
 
     public ParameterWrapper setClientServiceBinder(IBinder iBinder) {
@@ -138,6 +138,6 @@ public class ParameterWrapper extends BaseWrapper implements Parcelable {
         } else {
             parcel.writeByte((byte) 1);
         }
-        C6699b.g(parcel, this.mData, i, false);
+        b.g(parcel, this.mData, i, false);
     }
 }

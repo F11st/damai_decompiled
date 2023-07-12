@@ -34,10 +34,9 @@ public class ih extends id {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.ih$a */
     /* loaded from: classes10.dex */
-    static class HandlerC4591a extends Handler {
-        /* synthetic */ HandlerC4591a(Looper looper, AnonymousClass1 anonymousClass1) {
+    static class a extends Handler {
+        /* synthetic */ a(Looper looper, AnonymousClass1 anonymousClass1) {
             this(looper);
         }
 
@@ -46,22 +45,22 @@ public class ih extends id {
             try {
                 int i = message.what;
                 if (i == 0) {
-                    ((C4592im) message.obj).b.a();
+                    ((im) message.obj).b.a();
                 } else if (i != 1) {
                 } else {
-                    C4592im c4592im = (C4592im) message.obj;
-                    c4592im.b.a(c4592im.a);
+                    im imVar = (im) message.obj;
+                    imVar.b.a(imVar.a);
                 }
             } catch (Throwable th) {
                 th.printStackTrace();
             }
         }
 
-        private HandlerC4591a(Looper looper) {
+        private a(Looper looper) {
             super(looper);
         }
 
-        public HandlerC4591a() {
+        public a() {
         }
     }
 
@@ -76,9 +75,9 @@ public class ih extends id {
             }
         }
         if (Looper.myLooper() == null) {
-            this.e = new HandlerC4591a(Looper.getMainLooper(), null);
+            this.e = new a(Looper.getMainLooper(), null);
         } else {
-            this.e = new HandlerC4591a();
+            this.e = new a();
         }
     }
 
@@ -89,16 +88,16 @@ public class ih extends id {
     public ik c(ii iiVar, boolean z) throws gb {
         ik ikVar;
         byte[] bArr;
-        int a = ig.a(2, iiVar);
+        int a2 = ig.a(2, iiVar);
         try {
-            ikVar = c(iiVar, z, a);
+            ikVar = c(iiVar, z, a2);
         } catch (gb e) {
-            if (!ig.a(a)) {
+            if (!ig.a(a2)) {
                 throw e;
             }
             ikVar = null;
         }
-        if ((ikVar == null || (bArr = ikVar.a) == null || bArr.length <= 0) && ig.a(a)) {
+        if ((ikVar == null || (bArr = ikVar.a) == null || bArr.length <= 0) && ig.a(a2)) {
             try {
                 return c(iiVar, z, 3);
             } catch (gb e2) {
@@ -135,9 +134,9 @@ public class ih extends id {
     @Override // com.amap.api.mapcore.util.id
     public byte[] b(ii iiVar) throws gb {
         try {
-            ik a = a(iiVar, false);
-            if (a != null) {
-                return a.a;
+            ik a2 = a(iiVar, false);
+            if (a2 != null) {
+                return a2.a;
             }
             return null;
         } catch (gb e) {
@@ -177,16 +176,16 @@ public class ih extends id {
 
     public Map<String, String> b(ii iiVar, boolean z) throws gb {
         Map<String, String> map;
-        int a = ig.a(2, iiVar);
+        int a2 = ig.a(2, iiVar);
         try {
-            map = b(iiVar, z, a);
+            map = b(iiVar, z, a2);
         } catch (gb e) {
-            if (!ig.a(a)) {
+            if (!ig.a(a2)) {
                 throw e;
             }
             map = null;
         }
-        if (map == null && ig.a(a)) {
+        if (map == null && ig.a(a2)) {
             try {
                 return b(iiVar, z, 3);
             } catch (gb e2) {
@@ -214,11 +213,11 @@ public class ih extends id {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void a(gb gbVar, ij ijVar) {
-        C4592im c4592im = new C4592im();
-        c4592im.a = gbVar;
-        c4592im.b = ijVar;
+        im imVar = new im();
+        imVar.a = gbVar;
+        imVar.b = ijVar;
         Message obtain = Message.obtain();
-        obtain.obj = c4592im;
+        obtain.obj = imVar;
         obtain.what = 1;
         this.e.sendMessage(obtain);
     }
@@ -242,10 +241,10 @@ public class ih extends id {
     /* JADX INFO: Access modifiers changed from: private */
     public void a(ik ikVar, ij ijVar) {
         ijVar.a(ikVar.b, ikVar.a);
-        C4592im c4592im = new C4592im();
-        c4592im.b = ijVar;
+        im imVar = new im();
+        imVar.b = ijVar;
         Message obtain = Message.obtain();
-        obtain.obj = c4592im;
+        obtain.obj = imVar;
         obtain.what = 0;
         this.e.sendMessage(obtain);
     }

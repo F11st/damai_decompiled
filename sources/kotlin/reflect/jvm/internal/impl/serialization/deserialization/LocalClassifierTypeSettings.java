@@ -9,13 +9,12 @@ import tb.fd2;
 public interface LocalClassifierTypeSettings {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.serialization.deserialization.LocalClassifierTypeSettings$a */
     /* loaded from: classes3.dex */
-    public static final class C8510a implements LocalClassifierTypeSettings {
+    public static final class a implements LocalClassifierTypeSettings {
         @NotNull
-        public static final C8510a INSTANCE = new C8510a();
+        public static final a INSTANCE = new a();
 
-        private C8510a() {
+        private a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.serialization.deserialization.LocalClassifierTypeSettings

@@ -45,14 +45,13 @@ public class SearchTourItemAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         private TextView e;
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.pictures.bricks.component.project.tour.SearchTourItemAdapter$tourItemViewHolder$a */
         /* loaded from: classes7.dex */
-        public class View$OnClickListenerC3493a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ SearchTourItem a;
             final /* synthetic */ int b;
 
-            View$OnClickListenerC3493a(SearchTourItem searchTourItem, int i) {
+            a(SearchTourItem searchTourItem, int i) {
                 this.a = searchTourItem;
                 this.b = i;
             }
@@ -122,7 +121,7 @@ public class SearchTourItemAdapter extends RecyclerView.Adapter<RecyclerView.Vie
             if (SearchTourItemAdapter.this.d != null) {
                 SearchTourItemAdapter.this.d.userTrackExpose(this.itemView, searchTourItem.itemId, i);
             }
-            this.c.setOnClickListener(new View$OnClickListenerC3493a(searchTourItem, i));
+            this.c.setOnClickListener(new a(searchTourItem, i));
         }
     }
 

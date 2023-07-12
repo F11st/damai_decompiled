@@ -23,18 +23,17 @@ import tb.qb0;
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
 public class AndroidPlatform implements Platform {
-    HashMap<URI, C6136a> a = new HashMap<>();
+    HashMap<URI, a> a = new HashMap<>();
     final Context b;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.real.android.nativehtml.android.AndroidPlatform$a */
     /* loaded from: classes5.dex */
-    public static class C6136a {
+    public static class a {
         Bitmap a;
         ArrayList<Element> b;
 
-        C6136a() {
+        a() {
         }
     }
 
@@ -44,28 +43,28 @@ public class AndroidPlatform implements Platform {
 
     public Bitmap a(Element element, final URI uri) {
         ArrayList<Element> arrayList;
-        C6136a c6136a = this.a.get(uri);
-        if (c6136a == null) {
-            c6136a = new C6136a();
-            this.a.put(uri, c6136a);
+        a aVar = this.a.get(uri);
+        if (aVar == null) {
+            aVar = new a();
+            this.a.put(uri, aVar);
             String uri2 = uri.toString();
             if (uri2.startsWith("data:")) {
                 byte[] decode = Base64.decode(uri2.substring(uri2.indexOf(",") + 1), 0);
-                c6136a.a = BitmapFactory.decodeByteArray(decode, 0, decode.length);
+                aVar.a = BitmapFactory.decodeByteArray(decode, 0, decode.length);
             } else {
                 ArrayList<Element> arrayList2 = new ArrayList<>();
-                c6136a.b = arrayList2;
+                aVar.b = arrayList2;
                 arrayList2.add(element);
-                new AsyncTask<C6136a, C6136a, Void>() { // from class: com.real.android.nativehtml.android.AndroidPlatform.1
+                new AsyncTask<a, a, Void>() { // from class: com.real.android.nativehtml.android.AndroidPlatform.1
                     /* JADX INFO: Access modifiers changed from: protected */
                     @Override // android.os.AsyncTask
                     /* renamed from: a */
-                    public Void doInBackground(C6136a... c6136aArr) {
-                        for (C6136a c6136a2 : c6136aArr) {
+                    public Void doInBackground(a... aVarArr) {
+                        for (a aVar2 : aVarArr) {
                             try {
-                                c6136a2.a = BitmapFactory.decodeStream(AndroidPlatform.this.openInputStream(uri));
-                                synchronized (c6136a2.b) {
-                                    Iterator<Element> it = c6136a2.b.iterator();
+                                aVar2.a = BitmapFactory.decodeStream(AndroidPlatform.this.openInputStream(uri));
+                                synchronized (aVar2.b) {
+                                    Iterator<Element> it = aVar2.b.iterator();
                                     while (it.hasNext()) {
                                         Element next = it.next();
                                         while (next != null && !(next instanceof View)) {
@@ -88,14 +87,14 @@ public class AndroidPlatform implements Platform {
                         }
                         return null;
                     }
-                }.execute(c6136a);
+                }.execute(aVar);
             }
-        } else if (c6136a.a == null && (arrayList = c6136a.b) != null) {
+        } else if (aVar.a == null && (arrayList = aVar.b) != null) {
             synchronized (arrayList) {
-                c6136a.b.add(element);
+                aVar.b.add(element);
             }
         }
-        return c6136a.a;
+        return aVar.a;
     }
 
     @Override // com.real.android.nativehtml.common.dom.Platform

@@ -25,7 +25,7 @@ public final class RegularContiguousSet<C extends Comparable> extends Contiguous
         final DiscreteDomain<C> domain;
         final Range<C> range;
 
-        /* synthetic */ SerializedForm(Range range, DiscreteDomain discreteDomain, C5094a c5094a) {
+        /* synthetic */ SerializedForm(Range range, DiscreteDomain discreteDomain, a aVar) {
             this(range, discreteDomain);
         }
 
@@ -41,12 +41,11 @@ public final class RegularContiguousSet<C extends Comparable> extends Contiguous
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.RegularContiguousSet$a */
     /* loaded from: classes10.dex */
-    public class C5094a extends g2<C> {
+    public class a extends g2<C> {
         final C b;
 
-        C5094a(Comparable comparable) {
+        a(Comparable comparable) {
             super(comparable);
             this.b = (C) RegularContiguousSet.this.last();
         }
@@ -64,12 +63,11 @@ public final class RegularContiguousSet<C extends Comparable> extends Contiguous
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.RegularContiguousSet$b */
     /* loaded from: classes10.dex */
-    public class C5095b extends g2<C> {
+    public class b extends g2<C> {
         final C b;
 
-        C5095b(Comparable comparable) {
+        b(Comparable comparable) {
             super(comparable);
             this.b = (C) RegularContiguousSet.this.first();
         }
@@ -115,7 +113,7 @@ public final class RegularContiguousSet<C extends Comparable> extends Contiguous
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
     public boolean containsAll(Collection<?> collection) {
-        return C5193l.b(this, collection);
+        return l.b(this, collection);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -237,7 +235,7 @@ public final class RegularContiguousSet<C extends Comparable> extends Contiguous
     @Override // com.google.common.collect.ImmutableSortedSet, java.util.NavigableSet
     @GwtIncompatible
     public yt2<C> descendingIterator() {
-        return new C5095b(last());
+        return new b(last());
     }
 
     @Override // com.google.common.collect.ImmutableSortedSet, java.util.SortedSet
@@ -252,7 +250,7 @@ public final class RegularContiguousSet<C extends Comparable> extends Contiguous
 
     @Override // com.google.common.collect.ImmutableSortedSet, com.google.common.collect.ImmutableSet, com.google.common.collect.ImmutableCollection, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set, java.util.NavigableSet, com.google.common.collect.SortedIterable
     public yt2<C> iterator() {
-        return new C5094a(first());
+        return new a(first());
     }
 
     @Override // com.google.common.collect.ImmutableSortedSet, java.util.SortedSet

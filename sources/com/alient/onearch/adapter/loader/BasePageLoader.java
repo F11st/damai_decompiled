@@ -44,7 +44,7 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentMap;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -531,7 +531,7 @@ public abstract class BasePageLoader extends PageLoader {
                 node2.setId(jSONObject.getString("layerId").hashCode());
                 node2.setChildren(new ArrayList());
                 for (String str : jSONObject.keySet()) {
-                    q = C8604o.q(str, "sections", true);
+                    q = o.q(str, "sections", true);
                     if (q) {
                         JSONArray jSONArray2 = jSONObject.getJSONArray("sections");
                         b41.h(jSONArray2, "getJSONArray(\"sections\")");
@@ -568,7 +568,7 @@ public abstract class BasePageLoader extends PageLoader {
         node.setData(new JSONObject());
         node.setChildren(new ArrayList());
         for (String str : jSONObject.keySet()) {
-            q = C8604o.q(str, "layers", true);
+            q = o.q(str, "layers", true);
             if (q) {
                 JSONArray jSONArray = jSONObject.getJSONArray("layers");
                 b41.h(jSONArray, "response.getJSONArray(\"layers\")");
@@ -613,16 +613,16 @@ public abstract class BasePageLoader extends PageLoader {
             return;
         }
         for (String str : jSONObject.keySet()) {
-            q = C8604o.q(str, "item", true);
+            q = o.q(str, "item", true);
             if (q) {
                 JSONObject jSONObject2 = jSONObject.getJSONObject("item");
                 for (String str2 : jSONObject2.keySet()) {
                     if (!jSONObject2.containsKey("list") && !jSONObject2.containsKey("result")) {
                         return;
                     }
-                    q2 = C8604o.q(str2, "list", true);
+                    q2 = o.q(str2, "list", true);
                     if (!q2) {
-                        q3 = C8604o.q(str2, "result", true);
+                        q3 = o.q(str2, "result", true);
                         if (!q3) {
                             JSONObject data = node2.getData();
                             if (data != null) {

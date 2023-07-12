@@ -35,9 +35,8 @@ public abstract class PullToRefreshAdapterViewBase<T extends AbsListView> extend
     private boolean mShowIndicator;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.pulltorefresh.library.PullToRefreshAdapterViewBase$a */
     /* loaded from: classes8.dex */
-    static /* synthetic */ class C2529a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -227,7 +226,7 @@ public abstract class PullToRefreshAdapterViewBase<T extends AbsListView> extend
         }
         super.onPullToRefresh();
         if (getShowIndicatorInternal()) {
-            int i = C2529a.a[getCurrentMode().ordinal()];
+            int i = a.a[getCurrentMode().ordinal()];
             if (i == 1) {
                 this.mIndicatorIvBottom.pullToRefresh();
             } else if (i != 2) {
@@ -261,7 +260,7 @@ public abstract class PullToRefreshAdapterViewBase<T extends AbsListView> extend
         }
         super.onReleaseToRefresh();
         if (getShowIndicatorInternal()) {
-            int i = C2529a.a[getCurrentMode().ordinal()];
+            int i = a.a[getCurrentMode().ordinal()];
             if (i == 1) {
                 this.mIndicatorIvBottom.releaseToRefresh();
             } else if (i != 2) {

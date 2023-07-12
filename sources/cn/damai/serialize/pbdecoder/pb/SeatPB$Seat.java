@@ -4,12 +4,12 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.google.protobuf.AbstractMessageLite;
 import com.google.protobuf.ByteString;
-import com.google.protobuf.C5401g;
 import com.google.protobuf.CodedInputStream;
 import com.google.protobuf.CodedOutputStream;
 import com.google.protobuf.GeneratedMessageLite;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Parser;
+import com.google.protobuf.g;
 import java.io.IOException;
 import java.util.Objects;
 
@@ -47,7 +47,7 @@ public final class SeatPB$Seat extends GeneratedMessageLite<SeatPB$Seat, Builder
     public static final class Builder extends GeneratedMessageLite.Builder<SeatPB$Seat, Builder> implements SeatPB$SeatOrBuilder {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        /* synthetic */ Builder(C1742b c1742b) {
+        /* synthetic */ Builder(b bVar) {
             this();
         }
 
@@ -812,7 +812,7 @@ public final class SeatPB$Seat extends GeneratedMessageLite<SeatPB$Seat, Builder
         if (AndroidInstantRuntime.support(ipChange, "659673856")) {
             return ipChange.ipc$dispatch("659673856", new Object[]{this, methodToInvoke, obj, obj2});
         }
-        switch (C1742b.a[methodToInvoke.ordinal()]) {
+        switch (b.a[methodToInvoke.ordinal()]) {
             case 1:
                 return new SeatPB$Seat();
             case 2:
@@ -859,11 +859,11 @@ public final class SeatPB$Seat extends GeneratedMessageLite<SeatPB$Seat, Builder
                 boolean z8 = i5 != 0;
                 int i6 = seatPB$Seat.n;
                 this.n = visitor.visitInt(z8, i5, i6 != 0, i6);
-                GeneratedMessageLite.C5383g c5383g = GeneratedMessageLite.C5383g.INSTANCE;
+                GeneratedMessageLite.g gVar = GeneratedMessageLite.g.INSTANCE;
                 return this;
             case 6:
                 CodedInputStream codedInputStream = (CodedInputStream) obj;
-                C5401g c5401g = (C5401g) obj2;
+                g gVar2 = (g) obj2;
                 while (!r2) {
                     try {
                         int v = codedInputStream.v();
@@ -924,7 +924,7 @@ public final class SeatPB$Seat extends GeneratedMessageLite<SeatPB$Seat, Builder
                 if (p == null) {
                     synchronized (SeatPB$Seat.class) {
                         if (p == null) {
-                            p = new GeneratedMessageLite.C5378b(o);
+                            p = new GeneratedMessageLite.b(o);
                         }
                     }
                 }

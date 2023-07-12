@@ -31,12 +31,11 @@ public final class WebViewLongClickHandler {
     private final WVUCWebView f;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.utils.WebViewLongClickHandler$a */
     /* loaded from: classes11.dex */
-    public static final class View$OnLongClickListenerC7022a implements View.OnLongClickListener {
+    public static final class a implements View.OnLongClickListener {
         final /* synthetic */ Context b;
 
-        View$OnLongClickListenerC7022a(Context context) {
+        a(Context context) {
             this.b = context;
         }
 
@@ -69,17 +68,15 @@ public final class WebViewLongClickHandler {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.utils.WebViewLongClickHandler$b */
     /* loaded from: classes11.dex */
-    static final class View$OnClickListenerC7023b implements View.OnClickListener {
+    static final class b implements View.OnClickListener {
 
         /* compiled from: Taobao */
-        /* renamed from: com.taomai.android.h5container.utils.WebViewLongClickHandler$b$a */
         /* loaded from: classes11.dex */
-        public static final class C7024a implements IPermissionListener {
+        public static final class a implements IPermissionListener {
             final /* synthetic */ Context b;
 
-            C7024a(Context context) {
+            a(Context context) {
                 this.b = context;
             }
 
@@ -105,7 +102,7 @@ public final class WebViewLongClickHandler {
             }
         }
 
-        View$OnClickListenerC7023b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -117,7 +114,7 @@ public final class WebViewLongClickHandler {
                     try {
                         Context _getContext = WebViewLongClickHandler.this.f._getContext();
                         b41.h(_getContext, WPKFactory.INIT_KEY_CONTEXT);
-                        new Permission(_getContext, new PermissionModel(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, null, null, null)).a(new C7024a(_getContext)).b();
+                        new Permission(_getContext, new PermissionModel(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, null, null, null)).a(new a(_getContext)).b();
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -131,10 +128,9 @@ public final class WebViewLongClickHandler {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.utils.WebViewLongClickHandler$c */
     /* loaded from: classes11.dex */
-    public static final class C7025c implements ImageTool.ImageSaveCallback {
-        C7025c() {
+    public static final class c implements ImageTool.ImageSaveCallback {
+        c() {
         }
 
         @Override // com.taomai.android.h5container.utils.ImageTool.ImageSaveCallback
@@ -155,7 +151,7 @@ public final class WebViewLongClickHandler {
         String[] strArr = new String[1];
         strArr[0] = EnvUtil.isCN() ? "保存到相册" : "Save to album";
         this.d = strArr;
-        this.e = new View$OnClickListenerC7023b();
+        this.e = new b();
     }
 
     private final void l(Runnable runnable) {
@@ -172,7 +168,7 @@ public final class WebViewLongClickHandler {
 
     /* JADX INFO: Access modifiers changed from: private */
     public final void m(Context context) {
-        ImageTool.i(context.getApplicationContext(), this.b, new C7025c());
+        ImageTool.i(context.getApplicationContext(), this.b, new c());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -210,7 +206,7 @@ public final class WebViewLongClickHandler {
     public final void k() {
         Context _getContext = this.f._getContext();
         if (_getContext != null) {
-            this.f.setOnLongClickListener(new View$OnLongClickListenerC7022a(_getContext));
+            this.f.setOnLongClickListener(new a(_getContext));
         }
     }
 }

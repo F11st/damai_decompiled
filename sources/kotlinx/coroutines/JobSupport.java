@@ -15,19 +15,16 @@ import kotlin.DeprecationLevel;
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt;
 import kotlin.coroutines.jvm.internal.CoroutineStackFrame;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
-import kotlin.sequences.C8576d;
 import kotlin.sequences.Sequence;
 import kotlinx.coroutines.Job;
 import kotlinx.coroutines.selects.SelectClause0;
 import kotlinx.coroutines.selects.SelectInstance;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tb.C9441mi;
 import tb.am;
 import tb.b41;
 import tb.b61;
@@ -42,6 +39,7 @@ import tb.k40;
 import tb.kj2;
 import tb.la1;
 import tb.ma1;
+import tb.mi;
 import tb.n23;
 import tb.n40;
 import tb.o40;
@@ -76,7 +74,7 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
         public Throwable getContinuationCancellationCause(@NotNull Job job) {
             Throwable d;
             Object state$kotlinx_coroutines_core = this.job.getState$kotlinx_coroutines_core();
-            return (!(state$kotlinx_coroutines_core instanceof C8616b) || (d = ((C8616b) state$kotlinx_coroutines_core).d()) == null) ? state$kotlinx_coroutines_core instanceof am ? ((am) state$kotlinx_coroutines_core).a : job.getCancellationException() : d;
+            return (!(state$kotlinx_coroutines_core instanceof b) || (d = ((b) state$kotlinx_coroutines_core).d()) == null) ? state$kotlinx_coroutines_core instanceof am ? ((am) state$kotlinx_coroutines_core).a : job.getCancellationException() : d;
         }
 
         @Override // kotlinx.coroutines.CancellableContinuationImpl
@@ -88,19 +86,18 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.JobSupport$a */
     /* loaded from: classes8.dex */
-    public static final class C8615a extends f61<Job> {
+    public static final class a extends f61<Job> {
         private final JobSupport e;
-        private final C8616b f;
-        private final C9441mi g;
+        private final b f;
+        private final mi g;
         private final Object h;
 
-        public C8615a(@NotNull JobSupport jobSupport, @NotNull C8616b c8616b, @NotNull C9441mi c9441mi, @Nullable Object obj) {
-            super(c9441mi.e);
+        public a(@NotNull JobSupport jobSupport, @NotNull b bVar, @NotNull mi miVar, @Nullable Object obj) {
+            super(miVar.e);
             this.e = jobSupport;
-            this.f = c8616b;
-            this.g = c9441mi;
+            this.f = bVar;
+            this.g = miVar;
             this.h = obj;
         }
 
@@ -124,16 +121,15 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.JobSupport$b */
     /* loaded from: classes8.dex */
-    public static final class C8616b implements Incomplete {
+    public static final class b implements Incomplete {
         private volatile Object _exceptionsHolder = null;
         private volatile int _isCompleting;
         private volatile Object _rootCause;
         @NotNull
         private final xk1 a;
 
-        public C8616b(@NotNull xk1 xk1Var, boolean z, @Nullable Throwable th) {
+        public b(@NotNull xk1 xk1Var, boolean z, @Nullable Throwable th) {
             this.a = xk1Var;
             this._isCompleting = z ? 1 : 0;
             this._rootCause = th;
@@ -195,7 +191,7 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
         public final boolean g() {
             kj2 kj2Var;
             Object c = c();
-            kj2Var = C8705s.d;
+            kj2Var = s.d;
             return c == kj2Var;
         }
 
@@ -228,7 +224,7 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
             if (th != null && (!b41.d(th, d))) {
                 arrayList.add(th);
             }
-            kj2Var = C8705s.d;
+            kj2Var = s.d;
             j(kj2Var);
             return arrayList;
         }
@@ -253,14 +249,13 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.JobSupport$c */
     /* loaded from: classes8.dex */
-    public static final class C8617c extends ma1.AbstractC9436c {
+    public static final class c extends ma1.c {
         final /* synthetic */ JobSupport d;
         final /* synthetic */ Object e;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C8617c(ma1 ma1Var, ma1 ma1Var2, JobSupport jobSupport, Object obj) {
+        public c(ma1 ma1Var, ma1 ma1Var2, JobSupport jobSupport, Object obj) {
             super(ma1Var2);
             this.d = jobSupport;
             this.e = obj;
@@ -278,15 +273,15 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
     }
 
     public JobSupport(boolean z) {
-        this._state = z ? C8705s.f : C8705s.e;
+        this._state = z ? s.f : s.e;
         this._parentHandle = null;
     }
 
     private final boolean addLastAtomic(Object obj, xk1 xk1Var, f61<?> f61Var) {
         int s;
-        C8617c c8617c = new C8617c(f61Var, f61Var, this, obj);
+        c cVar = new c(f61Var, f61Var, this, obj);
         do {
-            s = xk1Var.l().s(f61Var, xk1Var, c8617c);
+            s = xk1Var.l().s(f61Var, xk1Var, cVar);
             if (s == 1) {
                 return true;
             }
@@ -316,12 +311,12 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
         kj2 kj2Var2;
         do {
             Object state$kotlinx_coroutines_core = getState$kotlinx_coroutines_core();
-            if (!(state$kotlinx_coroutines_core instanceof Incomplete) || ((state$kotlinx_coroutines_core instanceof C8616b) && ((C8616b) state$kotlinx_coroutines_core).f())) {
-                kj2Var = C8705s.a;
+            if (!(state$kotlinx_coroutines_core instanceof Incomplete) || ((state$kotlinx_coroutines_core instanceof b) && ((b) state$kotlinx_coroutines_core).f())) {
+                kj2Var = s.a;
                 return kj2Var;
             }
             tryMakeCompleting = tryMakeCompleting(state$kotlinx_coroutines_core, new am(createCauseException(obj), false, 2, null));
-            kj2Var2 = C8705s.b;
+            kj2Var2 = s.b;
         } while (tryMakeCompleting == kj2Var2);
         return tryMakeCompleting;
     }
@@ -362,15 +357,15 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public final void continueCompleting(C8616b c8616b, C9441mi c9441mi, Object obj) {
+    public final void continueCompleting(b bVar, mi miVar, Object obj) {
         if (k40.a()) {
-            if (!(getState$kotlinx_coroutines_core() == c8616b)) {
+            if (!(getState$kotlinx_coroutines_core() == bVar)) {
                 throw new AssertionError();
             }
         }
-        C9441mi nextChild = nextChild(c9441mi);
-        if (nextChild == null || !tryWaitForChild(c8616b, nextChild, obj)) {
-            afterCompletion(finalizeFinishingState(c8616b, obj));
+        mi nextChild = nextChild(miVar);
+        if (nextChild == null || !tryWaitForChild(bVar, nextChild, obj)) {
+            afterCompletion(finalizeFinishingState(bVar, obj));
         }
     }
 
@@ -398,23 +393,23 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
         throw new UnsupportedOperationException("Super calls with default arguments not supported in this target, function: defaultCancellationException");
     }
 
-    private final Object finalizeFinishingState(C8616b c8616b, Object obj) {
+    private final Object finalizeFinishingState(b bVar, Object obj) {
         boolean e;
         Throwable finalRootCause;
         boolean z = true;
         if (k40.a()) {
-            if (!(getState$kotlinx_coroutines_core() == c8616b)) {
+            if (!(getState$kotlinx_coroutines_core() == bVar)) {
                 throw new AssertionError();
             }
         }
-        if (!k40.a() || (!c8616b.g())) {
-            if (!k40.a() || c8616b.f()) {
+        if (!k40.a() || (!bVar.g())) {
+            if (!k40.a() || bVar.f()) {
                 am amVar = (am) (!(obj instanceof am) ? null : obj);
                 Throwable th = amVar != null ? amVar.a : null;
-                synchronized (c8616b) {
-                    e = c8616b.e();
-                    List<Throwable> h = c8616b.h(th);
-                    finalRootCause = getFinalRootCause(c8616b, h);
+                synchronized (bVar) {
+                    e = bVar.e();
+                    List<Throwable> h = bVar.h(th);
+                    finalRootCause = getFinalRootCause(bVar, h);
                     if (finalRootCause != null) {
                         addSuppressedExceptions(finalRootCause, h);
                     }
@@ -435,9 +430,9 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
                     onCancelling(finalRootCause);
                 }
                 onCompletionInternal(obj);
-                boolean compareAndSet = _state$FU.compareAndSet(this, c8616b, C8705s.g(obj));
+                boolean compareAndSet = _state$FU.compareAndSet(this, bVar, s.g(obj));
                 if (!k40.a() || compareAndSet) {
-                    completeStateFinalization(c8616b, obj);
+                    completeStateFinalization(bVar, obj);
                     return obj;
                 }
                 throw new AssertionError();
@@ -447,10 +442,10 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
         throw new AssertionError();
     }
 
-    private final C9441mi firstChild(Incomplete incomplete) {
-        C9441mi c9441mi = (C9441mi) (!(incomplete instanceof C9441mi) ? null : incomplete);
-        if (c9441mi != null) {
-            return c9441mi;
+    private final mi firstChild(Incomplete incomplete) {
+        mi miVar = (mi) (!(incomplete instanceof mi) ? null : incomplete);
+        if (miVar != null) {
+            return miVar;
         }
         xk1 list = incomplete.getList();
         if (list != null) {
@@ -470,12 +465,12 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
         return null;
     }
 
-    private final Throwable getFinalRootCause(C8616b c8616b, List<? extends Throwable> list) {
+    private final Throwable getFinalRootCause(b bVar, List<? extends Throwable> list) {
         Object obj;
         boolean z;
         Object obj2 = null;
         if (list.isEmpty()) {
-            if (c8616b.e()) {
+            if (bVar.e()) {
                 return new JobCancellationException(cancellationExceptionMessage(), null, this);
             }
             return null;
@@ -529,7 +524,7 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
         if (list != null) {
             return list;
         }
-        if (incomplete instanceof C8698l) {
+        if (incomplete instanceof l) {
             return new xk1();
         }
         if (incomplete instanceof f61) {
@@ -540,7 +535,7 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
     }
 
     private final boolean isCancelling(Incomplete incomplete) {
-        return (incomplete instanceof C8616b) && ((C8616b) incomplete).e();
+        return (incomplete instanceof b) && ((b) incomplete).e();
     }
 
     private final boolean joinInternal() {
@@ -570,28 +565,28 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
         Throwable th = null;
         while (true) {
             Object state$kotlinx_coroutines_core = getState$kotlinx_coroutines_core();
-            if (state$kotlinx_coroutines_core instanceof C8616b) {
+            if (state$kotlinx_coroutines_core instanceof b) {
                 synchronized (state$kotlinx_coroutines_core) {
-                    if (((C8616b) state$kotlinx_coroutines_core).g()) {
-                        kj2Var2 = C8705s.c;
+                    if (((b) state$kotlinx_coroutines_core).g()) {
+                        kj2Var2 = s.c;
                         return kj2Var2;
                     }
-                    boolean e = ((C8616b) state$kotlinx_coroutines_core).e();
+                    boolean e = ((b) state$kotlinx_coroutines_core).e();
                     if (obj != null || !e) {
                         if (th == null) {
                             th = createCauseException(obj);
                         }
-                        ((C8616b) state$kotlinx_coroutines_core).a(th);
+                        ((b) state$kotlinx_coroutines_core).a(th);
                     }
-                    Throwable d = e ^ true ? ((C8616b) state$kotlinx_coroutines_core).d() : null;
+                    Throwable d = e ^ true ? ((b) state$kotlinx_coroutines_core).d() : null;
                     if (d != null) {
-                        notifyCancelling(((C8616b) state$kotlinx_coroutines_core).getList(), d);
+                        notifyCancelling(((b) state$kotlinx_coroutines_core).getList(), d);
                     }
-                    kj2Var = C8705s.a;
+                    kj2Var = s.a;
                     return kj2Var;
                 }
             } else if (!(state$kotlinx_coroutines_core instanceof Incomplete)) {
-                kj2Var3 = C8705s.c;
+                kj2Var3 = s.c;
                 return kj2Var3;
             } else {
                 if (th == null) {
@@ -600,14 +595,14 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
                 Incomplete incomplete = (Incomplete) state$kotlinx_coroutines_core;
                 if (incomplete.isActive()) {
                     if (tryMakeCancelling(incomplete, th)) {
-                        kj2Var4 = C8705s.a;
+                        kj2Var4 = s.a;
                         return kj2Var4;
                     }
                 } else {
                     Object tryMakeCompleting = tryMakeCompleting(state$kotlinx_coroutines_core, new am(th, false, 2, null));
-                    kj2Var5 = C8705s.a;
+                    kj2Var5 = s.a;
                     if (tryMakeCompleting != kj2Var5) {
-                        kj2Var6 = C8705s.b;
+                        kj2Var6 = s.b;
                         if (tryMakeCompleting != kj2Var6) {
                             return tryMakeCompleting;
                         }
@@ -631,7 +626,7 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
                 }
                 return b61Var;
             }
-            return new C8703q(this, function1);
+            return new q(this, function1);
         }
         f61<?> f61Var = function1 instanceof f61 ? function1 : null;
         if (f61Var != null) {
@@ -643,18 +638,18 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
             }
             return f61Var;
         }
-        return new C8704r(this, function1);
+        return new r(this, function1);
     }
 
-    private final C9441mi nextChild(ma1 ma1Var) {
+    private final mi nextChild(ma1 ma1Var) {
         while (ma1Var.o()) {
             ma1Var = ma1Var.l();
         }
         while (true) {
             ma1Var = ma1Var.k();
             if (!ma1Var.o()) {
-                if (ma1Var instanceof C9441mi) {
-                    return (C9441mi) ma1Var;
+                if (ma1Var instanceof mi) {
+                    return (mi) ma1Var;
                 }
                 if (ma1Var instanceof xk1) {
                     return null;
@@ -740,12 +735,12 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
 
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r1v2, types: [tb.f21] */
-    private final void promoteEmptyToNodeList(C8698l c8698l) {
+    private final void promoteEmptyToNodeList(l lVar) {
         xk1 xk1Var = new xk1();
-        if (!c8698l.isActive()) {
+        if (!lVar.isActive()) {
             xk1Var = new f21(xk1Var);
         }
-        _state$FU.compareAndSet(this, c8698l, xk1Var);
+        _state$FU.compareAndSet(this, lVar, xk1Var);
     }
 
     private final void promoteSingleToNodeList(f61<?> f61Var) {
@@ -754,14 +749,14 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
     }
 
     private final int startInternal(Object obj) {
-        C8698l c8698l;
-        if (obj instanceof C8698l) {
-            if (((C8698l) obj).isActive()) {
+        l lVar;
+        if (obj instanceof l) {
+            if (((l) obj).isActive()) {
                 return 0;
             }
             AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = _state$FU;
-            c8698l = C8705s.f;
-            if (atomicReferenceFieldUpdater.compareAndSet(this, obj, c8698l)) {
+            lVar = s.f;
+            if (atomicReferenceFieldUpdater.compareAndSet(this, obj, lVar)) {
                 onStartInternal$kotlinx_coroutines_core();
                 return 1;
             }
@@ -778,11 +773,11 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
     }
 
     private final String stateString(Object obj) {
-        if (!(obj instanceof C8616b)) {
+        if (!(obj instanceof b)) {
             return obj instanceof Incomplete ? ((Incomplete) obj).isActive() ? "Active" : "New" : obj instanceof am ? "Cancelled" : "Completed";
         }
-        C8616b c8616b = (C8616b) obj;
-        return c8616b.e() ? "Cancelling" : c8616b.f() ? "Completing" : "Active";
+        b bVar = (b) obj;
+        return bVar.e() ? "Cancelling" : bVar.f() ? "Completing" : "Active";
     }
 
     public static /* synthetic */ CancellationException toCancellationException$default(JobSupport jobSupport, Throwable th, String str, int i, Object obj) {
@@ -797,12 +792,12 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
 
     private final boolean tryFinalizeSimpleState(Incomplete incomplete, Object obj) {
         if (k40.a()) {
-            if (!((incomplete instanceof C8698l) || (incomplete instanceof f61))) {
+            if (!((incomplete instanceof l) || (incomplete instanceof f61))) {
                 throw new AssertionError();
             }
         }
         if (!k40.a() || (!(obj instanceof am))) {
-            if (_state$FU.compareAndSet(this, incomplete, C8705s.g(obj))) {
+            if (_state$FU.compareAndSet(this, incomplete, s.g(obj))) {
                 onCancelling(null);
                 onCompletionInternal(obj);
                 completeStateFinalization(incomplete, obj);
@@ -814,11 +809,11 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
     }
 
     private final boolean tryMakeCancelling(Incomplete incomplete, Throwable th) {
-        if (!k40.a() || (!(incomplete instanceof C8616b))) {
+        if (!k40.a() || (!(incomplete instanceof b))) {
             if (!k40.a() || incomplete.isActive()) {
                 xk1 orPromoteCancellingList = getOrPromoteCancellingList(incomplete);
                 if (orPromoteCancellingList != null) {
-                    if (_state$FU.compareAndSet(this, incomplete, new C8616b(orPromoteCancellingList, false, th))) {
+                    if (_state$FU.compareAndSet(this, incomplete, new b(orPromoteCancellingList, false, th))) {
                         notifyCancelling(orPromoteCancellingList, th);
                         return true;
                     }
@@ -835,13 +830,13 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
         kj2 kj2Var;
         kj2 kj2Var2;
         if (!(obj instanceof Incomplete)) {
-            kj2Var2 = C8705s.a;
+            kj2Var2 = s.a;
             return kj2Var2;
-        } else if (((obj instanceof C8698l) || (obj instanceof f61)) && !(obj instanceof C9441mi) && !(obj2 instanceof am)) {
+        } else if (((obj instanceof l) || (obj instanceof f61)) && !(obj instanceof mi) && !(obj2 instanceof am)) {
             if (tryFinalizeSimpleState((Incomplete) obj, obj2)) {
                 return obj2;
             }
-            kj2Var = C8705s.b;
+            kj2Var = s.b;
             return kj2Var;
         } else {
             return tryMakeCompletingSlowPath((Incomplete) obj, obj2);
@@ -854,48 +849,48 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
         kj2 kj2Var3;
         xk1 orPromoteCancellingList = getOrPromoteCancellingList(incomplete);
         if (orPromoteCancellingList == null) {
-            kj2Var = C8705s.b;
+            kj2Var = s.b;
             return kj2Var;
         }
-        C8616b c8616b = (C8616b) (!(incomplete instanceof C8616b) ? null : incomplete);
-        if (c8616b == null) {
-            c8616b = new C8616b(orPromoteCancellingList, false, null);
+        b bVar = (b) (!(incomplete instanceof b) ? null : incomplete);
+        if (bVar == null) {
+            bVar = new b(orPromoteCancellingList, false, null);
         }
-        synchronized (c8616b) {
-            if (c8616b.f()) {
-                kj2Var3 = C8705s.a;
+        synchronized (bVar) {
+            if (bVar.f()) {
+                kj2Var3 = s.a;
                 return kj2Var3;
             }
-            c8616b.i(true);
-            if (c8616b != incomplete && !_state$FU.compareAndSet(this, incomplete, c8616b)) {
-                kj2Var2 = C8705s.b;
+            bVar.i(true);
+            if (bVar != incomplete && !_state$FU.compareAndSet(this, incomplete, bVar)) {
+                kj2Var2 = s.b;
                 return kj2Var2;
             }
-            if (k40.a() && !(!c8616b.g())) {
+            if (k40.a() && !(!bVar.g())) {
                 throw new AssertionError();
             }
-            boolean e = c8616b.e();
+            boolean e = bVar.e();
             am amVar = (am) (!(obj instanceof am) ? null : obj);
             if (amVar != null) {
-                c8616b.a(amVar.a);
+                bVar.a(amVar.a);
             }
-            Throwable d = true ^ e ? c8616b.d() : null;
+            Throwable d = true ^ e ? bVar.d() : null;
             wt2 wt2Var = wt2.INSTANCE;
             if (d != null) {
                 notifyCancelling(orPromoteCancellingList, d);
             }
-            C9441mi firstChild = firstChild(incomplete);
-            if (firstChild != null && tryWaitForChild(c8616b, firstChild, obj)) {
-                return C8705s.COMPLETING_WAITING_CHILDREN;
+            mi firstChild = firstChild(incomplete);
+            if (firstChild != null && tryWaitForChild(bVar, firstChild, obj)) {
+                return s.COMPLETING_WAITING_CHILDREN;
             }
-            return finalizeFinishingState(c8616b, obj);
+            return finalizeFinishingState(bVar, obj);
         }
     }
 
-    private final boolean tryWaitForChild(C8616b c8616b, C9441mi c9441mi, Object obj) {
-        while (Job.C8613a.e(c9441mi.e, false, false, new C8615a(this, c8616b, c9441mi, obj), 1, null) == zk1.INSTANCE) {
-            c9441mi = nextChild(c9441mi);
-            if (c9441mi == null) {
+    private final boolean tryWaitForChild(b bVar, mi miVar, Object obj) {
+        while (Job.a.e(miVar.e, false, false, new a(this, bVar, miVar, obj), 1, null) == zk1.INSTANCE) {
+            miVar = nextChild(miVar);
+            if (miVar == null) {
                 return false;
             }
         }
@@ -909,7 +904,7 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
     @Override // kotlinx.coroutines.Job
     @NotNull
     public final ChildHandle attachChild(@NotNull ChildJob childJob) {
-        DisposableHandle e = Job.C8613a.e(this, true, false, new C9441mi(this, childJob), 2, null);
+        DisposableHandle e = Job.a.e(this, true, false, new mi(this, childJob), 2, null);
         Objects.requireNonNull(e, "null cannot be cast to non-null type kotlinx.coroutines.ChildHandle");
         return (ChildHandle) e;
     }
@@ -930,7 +925,7 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
                     }
                     throw th;
                 }
-                return C8705s.h(state$kotlinx_coroutines_core);
+                return s.h(state$kotlinx_coroutines_core);
             }
         } while (startInternal(state$kotlinx_coroutines_core) < 0);
         return awaitSuspend(continuation);
@@ -938,13 +933,13 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
 
     @Nullable
     final /* synthetic */ Object awaitSuspend(@NotNull Continuation<Object> continuation) {
-        Continuation c;
+        Continuation c2;
         Object d;
-        c = IntrinsicsKt__IntrinsicsJvmKt.c(continuation);
-        AwaitContinuation awaitContinuation = new AwaitContinuation(c, this);
-        dg.a(awaitContinuation, invokeOnCompletion(new C8719u(this, awaitContinuation)));
+        c2 = IntrinsicsKt__IntrinsicsJvmKt.c(continuation);
+        AwaitContinuation awaitContinuation = new AwaitContinuation(c2, this);
+        dg.a(awaitContinuation, invokeOnCompletion(new u(this, awaitContinuation)));
         Object result = awaitContinuation.getResult();
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         if (result == d) {
             n40.c(continuation);
         }
@@ -966,19 +961,19 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
         kj2 kj2Var;
         kj2 kj2Var2;
         kj2 kj2Var3;
-        obj2 = C8705s.a;
-        if (getOnCancelComplete$kotlinx_coroutines_core() && (obj2 = cancelMakeCompleting(obj)) == C8705s.COMPLETING_WAITING_CHILDREN) {
+        obj2 = s.a;
+        if (getOnCancelComplete$kotlinx_coroutines_core() && (obj2 = cancelMakeCompleting(obj)) == s.COMPLETING_WAITING_CHILDREN) {
             return true;
         }
-        kj2Var = C8705s.a;
+        kj2Var = s.a;
         if (obj2 == kj2Var) {
             obj2 = makeCancelling(obj);
         }
-        kj2Var2 = C8705s.a;
-        if (obj2 == kj2Var2 || obj2 == C8705s.COMPLETING_WAITING_CHILDREN) {
+        kj2Var2 = s.a;
+        if (obj2 == kj2Var2 || obj2 == s.COMPLETING_WAITING_CHILDREN) {
             return true;
         }
-        kj2Var3 = C8705s.c;
+        kj2Var3 = s.c;
         if (obj2 == kj2Var3) {
             return false;
         }
@@ -1013,21 +1008,21 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
 
     @Override // kotlin.coroutines.CoroutineContext.Element, kotlin.coroutines.CoroutineContext
     public <R> R fold(R r, @NotNull Function2<? super R, ? super CoroutineContext.Element, ? extends R> function2) {
-        return (R) Job.C8613a.c(this, r, function2);
+        return (R) Job.a.c(this, r, function2);
     }
 
     @Override // kotlin.coroutines.CoroutineContext.Element, kotlin.coroutines.CoroutineContext
     @Nullable
     public <E extends CoroutineContext.Element> E get(@NotNull CoroutineContext.Key<E> key) {
-        return (E) Job.C8613a.d(this, key);
+        return (E) Job.a.d(this, key);
     }
 
     @Override // kotlinx.coroutines.Job
     @NotNull
     public final CancellationException getCancellationException() {
         Object state$kotlinx_coroutines_core = getState$kotlinx_coroutines_core();
-        if (state$kotlinx_coroutines_core instanceof C8616b) {
-            Throwable d = ((C8616b) state$kotlinx_coroutines_core).d();
+        if (state$kotlinx_coroutines_core instanceof b) {
+            Throwable d = ((b) state$kotlinx_coroutines_core).d();
             if (d != null) {
                 CancellationException cancellationException = toCancellationException(d, o40.a(this) + " is cancelling");
                 if (cancellationException != null) {
@@ -1050,8 +1045,8 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
     public CancellationException getChildJobCancellationCause() {
         Throwable th;
         Object state$kotlinx_coroutines_core = getState$kotlinx_coroutines_core();
-        if (state$kotlinx_coroutines_core instanceof C8616b) {
-            th = ((C8616b) state$kotlinx_coroutines_core).d();
+        if (state$kotlinx_coroutines_core instanceof b) {
+            th = ((b) state$kotlinx_coroutines_core).d();
         } else if (state$kotlinx_coroutines_core instanceof am) {
             th = ((am) state$kotlinx_coroutines_core).a;
         } else if (state$kotlinx_coroutines_core instanceof Incomplete) {
@@ -1069,7 +1064,7 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
     @Override // kotlinx.coroutines.Job
     @NotNull
     public final Sequence<Job> getChildren() {
-        return C8576d.b(new JobSupport$children$1(this, null));
+        return kotlin.sequences.d.b(new JobSupport$children$1(this, null));
     }
 
     @Nullable
@@ -1077,7 +1072,7 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
         Object state$kotlinx_coroutines_core = getState$kotlinx_coroutines_core();
         if (!(state$kotlinx_coroutines_core instanceof Incomplete)) {
             if (!(state$kotlinx_coroutines_core instanceof am)) {
-                return C8705s.h(state$kotlinx_coroutines_core);
+                return s.h(state$kotlinx_coroutines_core);
             }
             throw ((am) state$kotlinx_coroutines_core).a;
         }
@@ -1087,8 +1082,8 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
     @Nullable
     protected final Throwable getCompletionCause() {
         Object state$kotlinx_coroutines_core = getState$kotlinx_coroutines_core();
-        if (state$kotlinx_coroutines_core instanceof C8616b) {
-            Throwable d = ((C8616b) state$kotlinx_coroutines_core).d();
+        if (state$kotlinx_coroutines_core instanceof b) {
+            Throwable d = ((b) state$kotlinx_coroutines_core).d();
             if (d != null) {
                 return d;
             }
@@ -1195,7 +1190,7 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
     @Override // kotlinx.coroutines.Job
     public final boolean isCancelled() {
         Object state$kotlinx_coroutines_core = getState$kotlinx_coroutines_core();
-        return (state$kotlinx_coroutines_core instanceof am) || ((state$kotlinx_coroutines_core instanceof C8616b) && ((C8616b) state$kotlinx_coroutines_core).e());
+        return (state$kotlinx_coroutines_core instanceof am) || ((state$kotlinx_coroutines_core instanceof b) && ((b) state$kotlinx_coroutines_core).e());
     }
 
     @Override // kotlinx.coroutines.Job
@@ -1220,20 +1215,20 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
             return wt2.INSTANCE;
         }
         Object joinSuspend = joinSuspend(continuation);
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         return joinSuspend == d ? joinSuspend : wt2.INSTANCE;
     }
 
     @Nullable
     final /* synthetic */ Object joinSuspend(@NotNull Continuation<? super wt2> continuation) {
-        Continuation c;
+        Continuation c2;
         Object d;
-        c = IntrinsicsKt__IntrinsicsJvmKt.c(continuation);
-        CancellableContinuationImpl cancellableContinuationImpl = new CancellableContinuationImpl(c, 1);
+        c2 = IntrinsicsKt__IntrinsicsJvmKt.c(continuation);
+        CancellableContinuationImpl cancellableContinuationImpl = new CancellableContinuationImpl(c2, 1);
         cancellableContinuationImpl.initCancellability();
-        dg.a(cancellableContinuationImpl, invokeOnCompletion(new C8720v(this, cancellableContinuationImpl)));
+        dg.a(cancellableContinuationImpl, invokeOnCompletion(new v(this, cancellableContinuationImpl)));
         Object result = cancellableContinuationImpl.getResult();
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         if (result == d) {
             n40.c(continuation);
         }
@@ -1246,14 +1241,14 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
         kj2 kj2Var2;
         do {
             tryMakeCompleting = tryMakeCompleting(getState$kotlinx_coroutines_core(), obj);
-            kj2Var = C8705s.a;
+            kj2Var = s.a;
             if (tryMakeCompleting == kj2Var) {
                 return false;
             }
-            if (tryMakeCompleting == C8705s.COMPLETING_WAITING_CHILDREN) {
+            if (tryMakeCompleting == s.COMPLETING_WAITING_CHILDREN) {
                 return true;
             }
-            kj2Var2 = C8705s.b;
+            kj2Var2 = s.b;
         } while (tryMakeCompleting == kj2Var2);
         afterCompletion(tryMakeCompleting);
         return true;
@@ -1266,9 +1261,9 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
         kj2 kj2Var2;
         do {
             tryMakeCompleting = tryMakeCompleting(getState$kotlinx_coroutines_core(), obj);
-            kj2Var = C8705s.a;
+            kj2Var = s.a;
             if (tryMakeCompleting != kj2Var) {
-                kj2Var2 = C8705s.b;
+                kj2Var2 = s.b;
             } else {
                 throw new IllegalStateException("Job " + this + " is already complete or completing, but is being completed with " + obj, getExceptionOrNull(obj));
             }
@@ -1279,7 +1274,7 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
     @Override // kotlin.coroutines.CoroutineContext.Element, kotlin.coroutines.CoroutineContext
     @NotNull
     public CoroutineContext minusKey(@NotNull CoroutineContext.Key<?> key) {
-        return Job.C8613a.f(this, key);
+        return Job.a.f(this, key);
     }
 
     @NotNull
@@ -1304,7 +1299,7 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
     @Override // kotlin.coroutines.CoroutineContext
     @NotNull
     public CoroutineContext plus(@NotNull CoroutineContext coroutineContext) {
-        return Job.C8613a.g(this, coroutineContext);
+        return Job.a.g(this, coroutineContext);
     }
 
     @Override // kotlinx.coroutines.selects.SelectClause0
@@ -1323,7 +1318,7 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
                 return;
             }
         } while (startInternal(state$kotlinx_coroutines_core) != 0);
-        selectInstance.disposeOnSelect(invokeOnCompletion(new C8722x(this, selectInstance, function1)));
+        selectInstance.disposeOnSelect(invokeOnCompletion(new x(this, selectInstance, function1)));
     }
 
     public final <T, R> void registerSelectClause1Internal$kotlinx_coroutines_core(@NotNull SelectInstance<? super R> selectInstance, @NotNull Function2<? super T, ? super Continuation<? super R>, ? extends Object> function2) {
@@ -1339,20 +1334,20 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
                         selectInstance.resumeSelectWithException(((am) state$kotlinx_coroutines_core).a);
                         return;
                     } else {
-                        st2.d(function2, C8705s.h(state$kotlinx_coroutines_core), selectInstance.getCompletion());
+                        st2.d(function2, s.h(state$kotlinx_coroutines_core), selectInstance.getCompletion());
                         return;
                     }
                 }
                 return;
             }
         } while (startInternal(state$kotlinx_coroutines_core) != 0);
-        selectInstance.disposeOnSelect(invokeOnCompletion(new C8721w(this, selectInstance, function2)));
+        selectInstance.disposeOnSelect(invokeOnCompletion(new w(this, selectInstance, function2)));
     }
 
     public final void removeNode$kotlinx_coroutines_core(@NotNull f61<?> f61Var) {
         Object state$kotlinx_coroutines_core;
         AtomicReferenceFieldUpdater atomicReferenceFieldUpdater;
-        C8698l c8698l;
+        l lVar;
         do {
             state$kotlinx_coroutines_core = getState$kotlinx_coroutines_core();
             if (!(state$kotlinx_coroutines_core instanceof f61)) {
@@ -1365,9 +1360,9 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
                 return;
             } else {
                 atomicReferenceFieldUpdater = _state$FU;
-                c8698l = C8705s.f;
+                lVar = s.f;
             }
-        } while (!atomicReferenceFieldUpdater.compareAndSet(this, state$kotlinx_coroutines_core, c8698l));
+        } while (!atomicReferenceFieldUpdater.compareAndSet(this, state$kotlinx_coroutines_core, lVar));
     }
 
     public final <T, R> void selectAwaitCompletion$kotlinx_coroutines_core(@NotNull SelectInstance<? super R> selectInstance, @NotNull Function2<? super T, ? super Continuation<? super R>, ? extends Object> function2) {
@@ -1375,7 +1370,7 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
         if (state$kotlinx_coroutines_core instanceof am) {
             selectInstance.resumeSelectWithException(((am) state$kotlinx_coroutines_core).a);
         } else {
-            eg.d(function2, C8705s.h(state$kotlinx_coroutines_core), selectInstance.getCompletion(), null, 4, null);
+            eg.d(function2, s.h(state$kotlinx_coroutines_core), selectInstance.getCompletion(), null, 4, null);
         }
     }
 
@@ -1436,9 +1431,9 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
         f61<?> f61Var = null;
         while (true) {
             Object state$kotlinx_coroutines_core = getState$kotlinx_coroutines_core();
-            if (state$kotlinx_coroutines_core instanceof C8698l) {
-                C8698l c8698l = (C8698l) state$kotlinx_coroutines_core;
-                if (c8698l.isActive()) {
+            if (state$kotlinx_coroutines_core instanceof l) {
+                l lVar = (l) state$kotlinx_coroutines_core;
+                if (lVar.isActive()) {
                     if (f61Var == null) {
                         f61Var = makeNode(function1, z);
                     }
@@ -1446,7 +1441,7 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
                         return f61Var;
                     }
                 } else {
-                    promoteEmptyToNodeList(c8698l);
+                    promoteEmptyToNodeList(lVar);
                 }
             } else if (state$kotlinx_coroutines_core instanceof Incomplete) {
                 xk1 list = ((Incomplete) state$kotlinx_coroutines_core).getList();
@@ -1455,10 +1450,10 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
                     promoteSingleToNodeList((f61) state$kotlinx_coroutines_core);
                 } else {
                     DisposableHandle disposableHandle = zk1.INSTANCE;
-                    if (z && (state$kotlinx_coroutines_core instanceof C8616b)) {
+                    if (z && (state$kotlinx_coroutines_core instanceof b)) {
                         synchronized (state$kotlinx_coroutines_core) {
-                            th = ((C8616b) state$kotlinx_coroutines_core).d();
-                            if (th == null || ((function1 instanceof C9441mi) && !((C8616b) state$kotlinx_coroutines_core).f())) {
+                            th = ((b) state$kotlinx_coroutines_core).d();
+                            if (th == null || ((function1 instanceof mi) && !((b) state$kotlinx_coroutines_core).f())) {
                                 if (f61Var == null) {
                                     f61Var = makeNode(function1, z);
                                 }
@@ -1504,7 +1499,7 @@ public class JobSupport implements ChildJob, Job, ParentJob, SelectClause0 {
     @Deprecated(level = DeprecationLevel.ERROR, message = "Operator '+' on two Job objects is meaningless. Job is a coroutine context element and `+` is a set-sum operator for coroutine contexts. The job to the right of `+` just replaces the job the left of `+`.")
     @NotNull
     public Job plus(@NotNull Job job) {
-        return Job.C8613a.h(this, job);
+        return Job.a.h(this, job);
     }
 
     @Override // kotlinx.coroutines.Job

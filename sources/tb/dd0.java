@@ -14,14 +14,13 @@ public final class dd0<T> implements Sequence<T>, DropTakeSequence<T> {
     private final int b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.dd0$a */
     /* loaded from: classes3.dex */
-    public static final class C9040a implements Iterator<T>, KMappedMarker {
+    public static final class a implements Iterator<T>, KMappedMarker {
         @NotNull
         private final Iterator<T> a;
         private int b;
 
-        C9040a(dd0<T> dd0Var) {
+        a(dd0<T> dd0Var) {
             this.a = ((dd0) dd0Var).a.iterator();
             this.b = ((dd0) dd0Var).b;
         }
@@ -72,7 +71,7 @@ public final class dd0<T> implements Sequence<T>, DropTakeSequence<T> {
     @Override // kotlin.sequences.Sequence
     @NotNull
     public Iterator<T> iterator() {
-        return new C9040a(this);
+        return new a(this);
     }
 
     @Override // kotlin.sequences.DropTakeSequence

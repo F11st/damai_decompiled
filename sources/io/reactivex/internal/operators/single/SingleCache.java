@@ -1,16 +1,16 @@
 package io.reactivex.internal.operators.single;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SingleCache<T> extends AbstractC8152e<T> implements SingleObserver<T> {
+public final class SingleCache<T> extends e<T> implements SingleObserver<T> {
     static final CacheDisposable[] EMPTY = new CacheDisposable[0];
     static final CacheDisposable[] TERMINATED = new CacheDisposable[0];
     Throwable error;
@@ -127,7 +127,7 @@ public final class SingleCache<T> extends AbstractC8152e<T> implements SingleObs
         } while (!this.observers.compareAndSet(cacheDisposableArr, cacheDisposableArr2));
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super T> singleObserver) {
         CacheDisposable<T> cacheDisposable = new CacheDisposable<>(singleObserver, this);
         singleObserver.onSubscribe(cacheDisposable);

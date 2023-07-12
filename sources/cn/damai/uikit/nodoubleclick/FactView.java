@@ -17,12 +17,11 @@ public class FactView extends View {
     private View.OnClickListener mOuterClickListener;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.nodoubleclick.FactView$a */
     /* loaded from: classes8.dex */
-    public class CountDownTimerC2527a extends CountDownTimer {
+    public class a extends CountDownTimer {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        CountDownTimerC2527a(long j, long j2) {
+        a(long j, long j2) {
             super(j, j2);
         }
 
@@ -46,12 +45,11 @@ public class FactView extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.nodoubleclick.FactView$b */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC2528b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2528b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -74,8 +72,8 @@ public class FactView extends View {
         super(context);
         this.mOuterClickListener = null;
         this.mIsSleep = false;
-        this.mClickTimer = new CountDownTimerC2527a(500L, 500L);
-        this.mInternalClick = new View$OnClickListenerC2528b();
+        this.mClickTimer = new a(500L, 500L);
+        this.mInternalClick = new b();
     }
 
     @Override // android.view.View
@@ -104,15 +102,15 @@ public class FactView extends View {
         super(context, attributeSet);
         this.mOuterClickListener = null;
         this.mIsSleep = false;
-        this.mClickTimer = new CountDownTimerC2527a(500L, 500L);
-        this.mInternalClick = new View$OnClickListenerC2528b();
+        this.mClickTimer = new a(500L, 500L);
+        this.mInternalClick = new b();
     }
 
     public FactView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         this.mOuterClickListener = null;
         this.mIsSleep = false;
-        this.mClickTimer = new CountDownTimerC2527a(500L, 500L);
-        this.mInternalClick = new View$OnClickListenerC2528b();
+        this.mClickTimer = new a(500L, 500L);
+        this.mInternalClick = new b();
     }
 }

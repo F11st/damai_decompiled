@@ -41,7 +41,7 @@ import tb.wt2;
 public final class ArtistHeaderPresent extends AbsPresenter<GenericItem<ItemValue>, ArtistHeaderModel, ArtistHeaderView> {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3598a Companion = new C3598a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String action_fansTips = "fansTips";
     @NotNull
@@ -54,26 +54,24 @@ public final class ArtistHeaderPresent extends AbsPresenter<GenericItem<ItemValu
     private ArtistHeadBean mValue;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.component.artist.ArtistHeaderPresent$a */
     /* loaded from: classes7.dex */
-    public static final class C3598a {
-        private C3598a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3598a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.component.artist.ArtistHeaderPresent$b */
     /* loaded from: classes7.dex */
-    public static final class C3599b extends ol {
+    public static final class b extends ol {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ArtistHeaderPresent e;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        C3599b(ProxyVideoView proxyVideoView, String str, ArtistHeaderPresent artistHeaderPresent, Context context) {
+        b(ProxyVideoView proxyVideoView, String str, ArtistHeaderPresent artistHeaderPresent, Context context) {
             super(context, proxyVideoView, str, "top");
             this.e = artistHeaderPresent;
         }
@@ -91,12 +89,11 @@ public final class ArtistHeaderPresent extends AbsPresenter<GenericItem<ItemValu
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.component.artist.ArtistHeaderPresent$c */
     /* loaded from: classes7.dex */
-    public static final class C3600c implements ArtistUserAction {
+    public static final class c implements ArtistUserAction {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3600c() {
+        c() {
         }
 
         @Override // com.alibaba.pictures.component.artist.ArtistUserAction
@@ -196,7 +193,7 @@ public final class ArtistHeaderPresent extends AbsPresenter<GenericItem<ItemValu
         if (recyclerView != null && videoView != null && !this.ensureAddOneTime) {
             this.ensureAddOneTime = true;
             userTrack$default(this, false, action_videoArea, videoView, false, 8, null);
-            videoView.setListener(new C3599b(videoView, str3, this, itemView.getContext()));
+            videoView.setListener(new b(videoView, str3, this, itemView.getContext()));
             videoView.setOptHelper(new MultiConditionPlayOptHelper(recyclerView, itemView, videoView));
             GenericFragment fragment3 = genericItem.getPageContext().getFragment();
             if (fragment3 != null) {
@@ -204,9 +201,8 @@ public final class ArtistHeaderPresent extends AbsPresenter<GenericItem<ItemValu
                     private static transient /* synthetic */ IpChange $ipChange;
 
                     /* compiled from: Taobao */
-                    /* renamed from: com.alibaba.pictures.component.artist.ArtistHeaderPresent$init$3$1$a */
                     /* loaded from: classes7.dex */
-                    public /* synthetic */ class C3601a {
+                    public /* synthetic */ class a {
                         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
                         static {
@@ -230,7 +226,7 @@ public final class ArtistHeaderPresent extends AbsPresenter<GenericItem<ItemValu
                         b41.i(event, "event");
                         z2 = ArtistHeaderPresent.this.isVideoMode;
                         if (z2) {
-                            int i = C3601a.$EnumSwitchMapping$0[event.ordinal()];
+                            int i = a.$EnumSwitchMapping$0[event.ordinal()];
                             if (i == 1) {
                                 videoView.autoPlay();
                             } else if (i == 2) {
@@ -244,12 +240,12 @@ public final class ArtistHeaderPresent extends AbsPresenter<GenericItem<ItemValu
                 });
             }
         }
-        ((ArtistHeaderView) getView()).bind(this.mValue, new C3600c());
-        h8.C9206a c9206a = h8.Companion;
-        h8 a = c9206a.a();
+        ((ArtistHeaderView) getView()).bind(this.mValue, new c());
+        h8.a aVar = h8.Companion;
+        h8 a2 = aVar.a();
         GenericFragment fragment4 = genericItem.getPageContext().getFragment();
         ArtistHeadBean artistHeadBean = this.mValue;
-        a.f(fragment4, (artistHeadBean == null || (artistInfo2 = artistHeadBean.artistInfo) == null) ? null : artistInfo2.id, followView, new Function1<Boolean, wt2>() { // from class: com.alibaba.pictures.component.artist.ArtistHeaderPresent$init$5
+        a2.f(fragment4, (artistHeadBean == null || (artistInfo2 = artistHeadBean.artistInfo) == null) ? null : artistInfo2.id, followView, new Function1<Boolean, wt2>() { // from class: com.alibaba.pictures.component.artist.ArtistHeaderPresent$init$5
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* JADX INFO: Access modifiers changed from: package-private */
@@ -283,13 +279,13 @@ public final class ArtistHeaderPresent extends AbsPresenter<GenericItem<ItemValu
         });
         ArtistHeadBean artistHeadBean2 = this.mValue;
         boolean z2 = !(artistHeadBean2 != null ? artistHeadBean2.isUnFollow() : true);
-        h8 a2 = c9206a.a();
+        h8 a3 = aVar.a();
         GenericFragment fragment5 = genericItem.getPageContext().getFragment();
         ArtistHeadBean artistHeadBean3 = this.mValue;
         if (artistHeadBean3 != null && (artistInfo = artistHeadBean3.artistInfo) != null) {
             str2 = artistInfo.id;
         }
-        a2.i(fragment5, str2, z2);
+        a3.i(fragment5, str2, z2);
         Action action = getViewCard().getAction(action_followBtn);
         if (action == null || (trackInfo = action.getTrackInfo()) == null) {
             return;

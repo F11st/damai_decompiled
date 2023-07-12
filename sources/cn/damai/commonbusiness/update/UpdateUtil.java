@@ -8,7 +8,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.update.datasource.UpdateDataSource;
-import com.taobao.update.datasource.local.C6922a;
+import com.taobao.update.datasource.local.a;
 import com.taobao.update.framework.UpdateRuntime;
 import com.taobao.updatecenter.hotpatch.HotPatchManager;
 import java.lang.reflect.Field;
@@ -18,9 +18,9 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
-import tb.C9444mm;
 import tb.fy1;
 import tb.l6;
+import tb.mm;
 import tb.mu0;
 import tb.r6;
 import tb.rr2;
@@ -133,7 +133,7 @@ public class UpdateUtil {
             ipChange.ipc$dispatch("-2119608653", new Object[]{context});
             return;
         }
-        C6922a.getInstance(context).clearCache();
+        a.getInstance(context).clearCache();
         UpdateRuntime.execute(new Runnable() { // from class: cn.damai.commonbusiness.update.UpdateUtil.3
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -156,17 +156,17 @@ public class UpdateUtil {
             ipChange.ipc$dispatch("832573740", new Object[0]);
             return;
         }
-        C9444mm c9444mm = new C9444mm(mu0.a());
-        c9444mm.ttid = AppConfig.p();
-        c9444mm.group = AppConfig.j();
-        c9444mm.appName = AppConfig.j();
-        c9444mm.isOutApk = false;
-        c9444mm.appName = "大麦";
-        c9444mm.logoResourceId = R$drawable.logo;
-        c9444mm.popDialogBeforeInstall = true;
-        c9444mm.threadExecutorImpl = new r6();
-        c9444mm.uiConfirmClass = rr2.class;
-        DMUpdateManager.g().i(c9444mm, false);
+        mm mmVar = new mm(mu0.a());
+        mmVar.ttid = AppConfig.p();
+        mmVar.group = AppConfig.j();
+        mmVar.appName = AppConfig.j();
+        mmVar.isOutApk = false;
+        mmVar.appName = "大麦";
+        mmVar.logoResourceId = R$drawable.logo;
+        mmVar.popDialogBeforeInstall = true;
+        mmVar.threadExecutorImpl = new r6();
+        mmVar.uiConfirmClass = rr2.class;
+        DMUpdateManager.g().i(mmVar, false);
     }
 
     public static void j(final String str) {

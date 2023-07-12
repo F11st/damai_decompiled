@@ -35,12 +35,11 @@ public class BigThemeViewHolder extends BaseViewHolder<ThemeBean> implements Vie
     private d21 n;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.discover.viewholder.BigThemeViewHolder$a */
     /* loaded from: classes14.dex */
-    public class View$OnAttachStateChangeListenerC0642a implements View.OnAttachStateChangeListener {
+    public class a implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC0642a() {
+        a() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -65,7 +64,7 @@ public class BigThemeViewHolder extends BaseViewHolder<ThemeBean> implements Vie
 
     public BigThemeViewHolder(View view, OnItemClickListener<ThemeBean> onItemClickListener) {
         super(view);
-        view.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC0642a());
+        view.addOnAttachStateChangeListener(new a());
         this.l = onItemClickListener;
         this.a = (GifCareImageView) view.findViewById(R$id.theme_img);
         this.b = (TextView) view.findViewById(R$id.theme_title);

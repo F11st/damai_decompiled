@@ -2,8 +2,6 @@ package com.xiaomi.push.service;
 
 import android.content.Context;
 import android.util.Log;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
-import com.xiaomi.push.C7787w;
 import com.xiaomi.push.ht;
 import com.xiaomi.push.ii;
 import com.xiaomi.push.service.XMPushService;
@@ -13,7 +11,7 @@ import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class cg implements XMPushService.InterfaceC7711n {
+public class cg implements XMPushService.n {
     private static Context a;
 
     /* renamed from: a  reason: collision with other field name */
@@ -46,7 +44,7 @@ public class cg implements XMPushService.InterfaceC7711n {
 
     private static void a(Context context, ii iiVar) {
         if (f962a) {
-            AbstractC7535b.b("UNDatas upload message notification:" + iiVar);
+            com.xiaomi.channel.commonutils.logger.b.b("UNDatas upload message notification:" + iiVar);
         }
         com.xiaomi.push.al.a(context).a(new ch(iiVar));
     }
@@ -63,7 +61,7 @@ public class cg implements XMPushService.InterfaceC7711n {
                         sb.append(str);
                         sb.append(":");
                         List list = (List) map.get(str);
-                        if (!C7787w.a(list)) {
+                        if (!com.xiaomi.push.w.a(list)) {
                             for (int i = 0; i < list.size(); i++) {
                                 if (i != 0) {
                                     sb.append(",");
@@ -76,7 +74,7 @@ public class cg implements XMPushService.InterfaceC7711n {
                     ii a2 = a(null, bd.a(), ht.NotificationRemoved.f497a, null);
                     a2.a("removed_reason", String.valueOf(num));
                     a2.a("all_delete_msgId_appId", sb.toString());
-                    AbstractC7535b.b("UNDatas upload all removed messages reason: " + num + " allIds: " + sb.toString());
+                    com.xiaomi.channel.commonutils.logger.b.b("UNDatas upload all removed messages reason: " + num + " allIds: " + sb.toString());
                     a(a, a2);
                 }
                 f961a.remove(num);
@@ -84,7 +82,7 @@ public class cg implements XMPushService.InterfaceC7711n {
         }
     }
 
-    @Override // com.xiaomi.push.service.XMPushService.InterfaceC7711n
+    @Override // com.xiaomi.push.service.XMPushService.n
     /* renamed from: a */
     public void mo951a() {
         Map<Integer, Map<String, List<String>>> map = f961a;

@@ -38,19 +38,18 @@ public enum CharCategory {
     FINAL_QUOTE_PUNCTUATION(30, "Pf");
     
     @NotNull
-    public static final C8581a Companion = new C8581a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final String code;
     private final int value;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.text.CharCategory$a */
     /* loaded from: classes3.dex */
-    public static final class C8581a {
-        private C8581a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8581a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

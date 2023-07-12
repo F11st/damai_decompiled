@@ -12,8 +12,8 @@ import com.youku.arch.v3.event.EventHandler;
 import com.youku.middlewareservice.provider.info.AppInfoProviderProxy;
 import java.util.HashMap;
 import java.util.Map;
-import org.joor.C8883a;
 import org.joor.ReflectException;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
@@ -127,7 +127,7 @@ public class ViewUtil {
             return ipChange.ipc$dispatch("144968400", new Object[]{classLoader, str, str2, str3, view, eventHandler, str4});
         }
         try {
-            return C8883a.k(str, classLoader).c(str2, str3, view, eventHandler, str4).f();
+            return a.k(str, classLoader).c(str2, str3, view, eventHandler, str4).f();
         } catch (ReflectException e) {
             e.printStackTrace();
             LogUtil.e("OneArch", "newInstance " + e);
@@ -141,7 +141,7 @@ public class ViewUtil {
             return ipChange.ipc$dispatch("-113199323", new Object[]{classLoader, str, str2, str3, view, eventHandler, map});
         }
         try {
-            return C8883a.k(str, classLoader).c(str2, str3, view, eventHandler, map).f();
+            return a.k(str, classLoader).c(str2, str3, view, eventHandler, map).f();
         } catch (ReflectException e) {
             LogUtil.e("ViewUtil", "newInstance " + e);
             return null;

@@ -2,7 +2,7 @@ package cn.damai.commonbusiness.pageut;
 
 import android.app.Activity;
 import androidx.viewpager.widget.ViewPager;
-import cn.damai.common.user.C0525a;
+import cn.damai.common.user.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.Map;
@@ -25,7 +25,7 @@ public class PageUtExecutor implements ViewPager.OnPageChangeListener {
     /* compiled from: Taobao */
     /* loaded from: classes14.dex */
     public interface UTKeyBuilderProvider {
-        C0525a.C0527b get(int i);
+        a.b get(int i);
     }
 
     public PageUtExecutor(Activity activity, UTKeyBuilderProvider uTKeyBuilderProvider) {
@@ -69,7 +69,7 @@ public class PageUtExecutor implements ViewPager.OnPageChangeListener {
         if (AndroidInstantRuntime.support(ipChange, "-448055434")) {
             ipChange.ipc$dispatch("-448055434", new Object[]{this, Integer.valueOf(i)});
         } else if (b()) {
-            C0726a.h(this.a, this.b.get(i));
+            a.h(this.a, this.b.get(i));
         }
     }
 }

@@ -1,18 +1,18 @@
 package kotlin.reflect.jvm.internal.impl.serialization.deserialization;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import kotlin.Pair;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8226x;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.k;
+import kotlin.collections.l;
+import kotlin.collections.m;
+import kotlin.collections.n;
+import kotlin.collections.x;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.PropertyReference1;
 import kotlin.reflect.KDeclarationContainer;
@@ -91,7 +91,7 @@ public final class MemberDeserializer {
     private final a6 b;
 
     public MemberDeserializer(@NotNull j70 j70Var) {
-        b41.i(j70Var, AbstractC5658c.a);
+        b41.i(j70Var, c.a);
         this.a = j70Var;
         this.b = new a6(j70Var.c().p(), j70Var.c().q());
     }
@@ -99,7 +99,7 @@ public final class MemberDeserializer {
     /* JADX INFO: Access modifiers changed from: private */
     public final gx1 c(DeclarationDescriptor declarationDescriptor) {
         if (declarationDescriptor instanceof PackageFragmentDescriptor) {
-            return new gx1.C9190b(((PackageFragmentDescriptor) declarationDescriptor).getFqName(), this.a.g(), this.a.j(), this.a.d());
+            return new gx1.b(((PackageFragmentDescriptor) declarationDescriptor).getFqName(), this.a.g(), this.a.j(), this.a.d());
         }
         if (declarationDescriptor instanceof DeserializedClassDescriptor) {
             return ((DeserializedClassDescriptor) declarationDescriptor).x();
@@ -129,12 +129,12 @@ public final class MemberDeserializer {
         DeserializedMemberDescriptor.CoroutinesCompatibilityMode coroutinesCompatibilityMode2;
         boolean z4;
         if (s(deserializedCallableMemberDescriptor) && !b41.d(DescriptorUtilsKt.e(deserializedCallableMemberDescriptor), ej2.KOTLIN_SUSPEND_BUILT_IN_FUNCTION_FQ_NAME)) {
-            q = C8215n.q(collection, 10);
+            q = n.q(collection, 10);
             ArrayList arrayList = new ArrayList(q);
             for (ValueParameterDescriptor valueParameterDescriptor : collection) {
                 arrayList.add(valueParameterDescriptor.getType());
             }
-            k = C8214m.k(receiverParameterDescriptor == null ? null : receiverParameterDescriptor.getType());
+            k = m.k(receiverParameterDescriptor == null ? null : receiverParameterDescriptor.getType());
             m0 = CollectionsKt___CollectionsKt.m0(arrayList, k);
             if (z71Var != null && f(z71Var)) {
                 return DeserializedMemberDescriptor.CoroutinesCompatibilityMode.INCOMPATIBLE;
@@ -165,7 +165,7 @@ public final class MemberDeserializer {
             if (z3) {
                 return DeserializedMemberDescriptor.CoroutinesCompatibilityMode.INCOMPATIBLE;
             }
-            q2 = C8215n.q(m0, 10);
+            q2 = n.q(m0, 10);
             ArrayList arrayList2 = new ArrayList(q2);
             for (z71 z71Var3 : m0) {
                 b41.h(z71Var3, "type");
@@ -192,7 +192,7 @@ public final class MemberDeserializer {
                 }
                 arrayList2.add(coroutinesCompatibilityMode2);
             }
-            DeserializedMemberDescriptor.CoroutinesCompatibilityMode coroutinesCompatibilityMode3 = (DeserializedMemberDescriptor.CoroutinesCompatibilityMode) C8212k.f0(arrayList2);
+            DeserializedMemberDescriptor.CoroutinesCompatibilityMode coroutinesCompatibilityMode3 = (DeserializedMemberDescriptor.CoroutinesCompatibilityMode) k.f0(arrayList2);
             if (coroutinesCompatibilityMode3 == null) {
                 coroutinesCompatibilityMode3 = DeserializedMemberDescriptor.CoroutinesCompatibilityMode.COMPATIBLE;
             }
@@ -274,7 +274,7 @@ public final class MemberDeserializer {
                 if (A0 != null) {
                     return A0;
                 }
-                g = C8214m.g();
+                g = m.g();
                 return g;
             }
         });
@@ -329,7 +329,7 @@ public final class MemberDeserializer {
                 if (A0 != null) {
                     return A0;
                 }
-                g = C8214m.g();
+                g = m.g();
                 return g;
             }
         });
@@ -366,7 +366,7 @@ public final class MemberDeserializer {
                 if (loadExtensionReceiverParameterAnnotations != null) {
                     return loadExtensionReceiverParameterAnnotations;
                 }
-                g = C8214m.g();
+                g = m.g();
                 return g;
             }
         });
@@ -401,7 +401,7 @@ public final class MemberDeserializer {
             List<hx2> versionRequirements = deserializedMemberDescriptor.getVersionRequirements();
             if (!(versionRequirements instanceof Collection) || !versionRequirements.isEmpty()) {
                 for (hx2 hx2Var : versionRequirements) {
-                    if (b41.d(hx2Var.b(), new hx2.C9244b(1, 3, 0, 4, null)) && hx2Var.a() == ProtoBuf$VersionRequirement.VersionKind.LANGUAGE_VERSION) {
+                    if (b41.d(hx2Var.b(), new hx2.b(1, 3, 0, 4, null)) && hx2Var.a() == ProtoBuf$VersionRequirement.VersionKind.LANGUAGE_VERSION) {
                         z = true;
                         continue;
                     } else {
@@ -433,7 +433,7 @@ public final class MemberDeserializer {
         AnnotatedCallableKind annotatedCallableKind = AnnotatedCallableKind.FUNCTION;
         l70 l70Var2 = new l70(classDescriptor, null, h(protoBuf$Constructor, flags, annotatedCallableKind), z, CallableMemberDescriptor.Kind.DECLARATION, protoBuf$Constructor, this.a.g(), this.a.j(), this.a.k(), this.a.d(), null, 1024, null);
         j70 j70Var = this.a;
-        g = C8214m.g();
+        g = m.g();
         MemberDeserializer f = j70.b(j70Var, l70Var2, g, null, null, null, null, 60, null).f();
         List<ProtoBuf$ValueParameter> valueParameterList = protoBuf$Constructor.getValueParameterList();
         b41.h(valueParameterList, "proto.valueParameterList");
@@ -501,9 +501,9 @@ public final class MemberDeserializer {
         z71 q2 = b3.i().q(jx1.j(protoBuf$Function, this.a.j()));
         Modality b4 = hx1Var.b(yj0.MODALITY.d(flags));
         f70 a = ix1.a(hx1Var, yj0.VISIBILITY.d(flags));
-        i = C8226x.i();
-        yj0.C9988b c9988b = yj0.IS_SUSPEND;
-        Boolean d = c9988b.d(flags);
+        i = x.i();
+        yj0.b bVar = yj0.IS_SUSPEND;
+        Boolean d = bVar.d(flags);
         b41.h(d, "IS_SUSPEND.get(flags)");
         l(q70Var, receiverParameterDescriptor, i2, k2, r, q2, b4, a, i, d.booleanValue());
         Boolean d2 = yj0.IS_OPERATOR.d(flags);
@@ -521,7 +521,7 @@ public final class MemberDeserializer {
         Boolean d6 = yj0.IS_TAILREC.d(flags);
         b41.h(d6, "IS_TAILREC.get(flags)");
         q70Var.C(d6.booleanValue());
-        Boolean d7 = c9988b.d(flags);
+        Boolean d7 = bVar.d(flags);
         b41.h(d7, "IS_SUSPEND.get(flags)");
         q70Var.B(d7.booleanValue());
         Boolean d8 = yj0.IS_EXPECT_FUNCTION.d(flags);
@@ -542,8 +542,8 @@ public final class MemberDeserializer {
         z71 q;
         p70 p70Var;
         ReceiverParameterDescriptor f;
-        yj0.AbstractC9990d<ProtoBuf$Modality> abstractC9990d;
-        yj0.AbstractC9990d<ProtoBuf$Visibility> abstractC9990d2;
+        yj0.d<ProtoBuf$Modality> dVar;
+        yj0.d<ProtoBuf$Visibility> dVar2;
         cx1 cx1Var;
         final p70 p70Var2;
         final ProtoBuf$Property protoBuf$Property3;
@@ -558,10 +558,10 @@ public final class MemberDeserializer {
         DeclarationDescriptor e2 = this.a.e();
         Annotations h = h(protoBuf$Property, flags, AnnotatedCallableKind.PROPERTY);
         hx1 hx1Var = hx1.INSTANCE;
-        yj0.AbstractC9990d<ProtoBuf$Modality> abstractC9990d3 = yj0.MODALITY;
-        Modality b3 = hx1Var.b(abstractC9990d3.d(flags));
-        yj0.AbstractC9990d<ProtoBuf$Visibility> abstractC9990d4 = yj0.VISIBILITY;
-        f70 a = ix1.a(hx1Var, abstractC9990d4.d(flags));
+        yj0.d<ProtoBuf$Modality> dVar3 = yj0.MODALITY;
+        Modality b3 = hx1Var.b(dVar3.d(flags));
+        yj0.d<ProtoBuf$Visibility> dVar4 = yj0.VISIBILITY;
+        f70 a = ix1.a(hx1Var, dVar4.d(flags));
         Boolean d = yj0.IS_VAR.d(flags);
         b41.h(d, "IS_VAR.get(flags)");
         boolean booleanValue = d.booleanValue();
@@ -611,7 +611,7 @@ public final class MemberDeserializer {
         p70Var.t(q2, k, i2, f);
         Boolean d8 = yj0.HAS_ANNOTATIONS.d(flags);
         b41.h(d8, "HAS_ANNOTATIONS.get(flags)");
-        int b7 = yj0.b(d8.booleanValue(), abstractC9990d4.d(flags), abstractC9990d3.d(flags), false, false, false);
+        int b7 = yj0.b(d8.booleanValue(), dVar4.d(flags), dVar3.d(flags), false, false, false);
         if (booleanValue6) {
             int getterFlags = protoBuf$Property.hasGetterFlags() ? protoBuf$Property.getGetterFlags() : b7;
             Boolean d9 = yj0.IS_NOT_DEFAULT.d(getterFlags);
@@ -626,20 +626,20 @@ public final class MemberDeserializer {
             Annotations h2 = h(protoBuf$Property2, getterFlags, AnnotatedCallableKind.PROPERTY_GETTER);
             if (booleanValue7) {
                 hx1Var2 = hx1Var2;
-                abstractC9990d = abstractC9990d3;
-                abstractC9990d2 = abstractC9990d4;
-                b2 = new cx1(p70Var, h2, hx1Var2.b(abstractC9990d3.d(getterFlags)), ix1.a(hx1Var2, abstractC9990d4.d(getterFlags)), !booleanValue7, booleanValue8, booleanValue9, p70Var.getKind(), null, SourceElement.NO_SOURCE);
+                dVar = dVar3;
+                dVar2 = dVar4;
+                b2 = new cx1(p70Var, h2, hx1Var2.b(dVar3.d(getterFlags)), ix1.a(hx1Var2, dVar4.d(getterFlags)), !booleanValue7, booleanValue8, booleanValue9, p70Var.getKind(), null, SourceElement.NO_SOURCE);
             } else {
-                abstractC9990d = abstractC9990d3;
-                abstractC9990d2 = abstractC9990d4;
+                dVar = dVar3;
+                dVar2 = dVar4;
                 b2 = x60.b(p70Var, h2);
                 b41.h(b2, "{\n                Descri…nnotations)\n            }");
             }
             b2.k(p70Var.getReturnType());
             cx1Var = b2;
         } else {
-            abstractC9990d = abstractC9990d3;
-            abstractC9990d2 = abstractC9990d4;
+            dVar = dVar3;
+            dVar2 = dVar4;
             cx1Var = null;
         }
         Boolean d12 = yj0.HAS_SETTER.d(flags);
@@ -662,15 +662,15 @@ public final class MemberDeserializer {
             Annotations h3 = h(protoBuf$Property2, i4, annotatedCallableKind);
             if (booleanValue10) {
                 hx1 hx1Var3 = hx1Var2;
-                dx1 dx1Var2 = new dx1(p70Var, h3, hx1Var3.b(abstractC9990d.d(i4)), ix1.a(hx1Var3, abstractC9990d2.d(i4)), !booleanValue10, booleanValue11, booleanValue12, p70Var.getKind(), null, SourceElement.NO_SOURCE);
-                g = C8214m.g();
+                dx1 dx1Var2 = new dx1(p70Var, h3, hx1Var3.b(dVar.d(i4)), ix1.a(hx1Var3, dVar2.d(i4)), !booleanValue10, booleanValue11, booleanValue12, p70Var.getKind(), null, SourceElement.NO_SOURCE);
+                g = m.g();
                 z = true;
                 p70Var2 = p70Var;
                 protoBuf$Property3 = protoBuf$Property2;
                 i = flags;
                 MemberDeserializer f2 = j70.b(b6, dx1Var2, g, null, null, null, null, 60, null).f();
-                e = C8213l.e(protoBuf$Property.getSetterValueParameter());
-                dx1Var2.l((ValueParameterDescriptor) C8212k.q0(f2.r(e, protoBuf$Property3, annotatedCallableKind)));
+                e = l.e(protoBuf$Property.getSetterValueParameter());
+                dx1Var2.l((ValueParameterDescriptor) k.q0(f2.r(e, protoBuf$Property3, annotatedCallableKind)));
                 dx1Var = dx1Var2;
             } else {
                 p70Var2 = p70Var;
@@ -724,17 +724,17 @@ public final class MemberDeserializer {
     public final TypeAliasDescriptor q(@NotNull ProtoBuf$TypeAlias protoBuf$TypeAlias) {
         int q;
         b41.i(protoBuf$TypeAlias, "proto");
-        Annotations.C8302a c8302a = Annotations.Companion;
+        Annotations.a aVar = Annotations.Companion;
         List<ProtoBuf$Annotation> annotationList = protoBuf$TypeAlias.getAnnotationList();
         b41.h(annotationList, "proto.annotationList");
-        q = C8215n.q(annotationList, 10);
+        q = n.q(annotationList, 10);
         ArrayList arrayList = new ArrayList(q);
         for (ProtoBuf$Annotation protoBuf$Annotation : annotationList) {
             a6 a6Var = this.b;
             b41.h(protoBuf$Annotation, AdvanceSetting.NETWORK_TYPE);
             arrayList.add(a6Var.a(protoBuf$Annotation, this.a.g()));
         }
-        r70 r70Var = new r70(this.a.h(), this.a.e(), c8302a.a(arrayList), pi1.b(this.a.g(), protoBuf$TypeAlias.getName()), ix1.a(hx1.INSTANCE, yj0.VISIBILITY.d(protoBuf$TypeAlias.getFlags())), protoBuf$TypeAlias, this.a.g(), this.a.j(), this.a.k(), this.a.d());
+        r70 r70Var = new r70(this.a.h(), this.a.e(), aVar.a(arrayList), pi1.b(this.a.g(), protoBuf$TypeAlias.getName()), ix1.a(hx1.INSTANCE, yj0.VISIBILITY.d(protoBuf$TypeAlias.getFlags())), protoBuf$TypeAlias, this.a.g(), this.a.j(), this.a.k(), this.a.d());
         j70 j70Var = this.a;
         List<ProtoBuf$TypeParameter> typeParameterList = protoBuf$TypeAlias.getTypeParameterList();
         b41.h(typeParameterList, "proto.typeParameterList");

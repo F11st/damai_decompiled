@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.b;
 import io.reactivex.internal.fuseable.QueueSubscription;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import org.reactivestreams.Subscriber;
@@ -86,11 +86,11 @@ public final class FlowableIgnoreElements<T> extends AbstractFlowableWithUpstrea
         }
     }
 
-    public FlowableIgnoreElements(AbstractC8147b<T> abstractC8147b) {
-        super(abstractC8147b);
+    public FlowableIgnoreElements(b<T> bVar) {
+        super(bVar);
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new IgnoreElementsSubscriber(subscriber));
     }

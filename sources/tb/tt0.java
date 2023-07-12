@@ -40,14 +40,13 @@ public class tt0 implements ILayer {
     private String m;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.tt0$a */
     /* loaded from: classes7.dex */
-    public class C9732a implements OnChildAttachStateChangeListener {
+    public class a implements OnChildAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ boolean a;
         final /* synthetic */ int b;
 
-        C9732a(boolean z, int i) {
+        a(boolean z, int i) {
             this.a = z;
             this.b = i;
         }
@@ -77,14 +76,13 @@ public class tt0 implements ILayer {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.tt0$b */
     /* loaded from: classes7.dex */
-    public class C9733b implements OnChildAttachStateChangeListener {
+    public class b implements OnChildAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ boolean a;
         final /* synthetic */ ISection b;
 
-        C9733b(boolean z, ISection iSection) {
+        b(boolean z, ISection iSection) {
             this.a = z;
             this.b = iSection;
         }
@@ -492,7 +490,7 @@ public class tt0 implements ILayer {
         if (AndroidInstantRuntime.support(ipChange, "1462718061")) {
             ipChange.ipc$dispatch("1462718061", new Object[]{this, iSection, Boolean.valueOf(z)});
         } else {
-            removeSection(iSection, new C9733b(z, iSection));
+            removeSection(iSection, new b(z, iSection));
         }
     }
 
@@ -502,7 +500,7 @@ public class tt0 implements ILayer {
         if (AndroidInstantRuntime.support(ipChange, "777398923")) {
             ipChange.ipc$dispatch("777398923", new Object[]{this, Integer.valueOf(i), iSection, Boolean.valueOf(z)});
         } else {
-            addSection(i, iSection, new C9732a(z, i));
+            addSection(i, iSection, new a(z, i));
         }
     }
 }

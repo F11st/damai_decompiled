@@ -17,7 +17,6 @@ import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Nullable;
-import okhttp3.internal.C8753a;
 import okhttp3.internal.NamedRunnable;
 import okhttp3.internal.http2.Http2Reader;
 import okio.Buffer;
@@ -29,9 +28,9 @@ import tb.ps1;
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
 public final class Http2Connection implements Closeable {
-    private static final ExecutorService y = new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60, TimeUnit.SECONDS, new SynchronousQueue(), C8753a.I("OkHttp Http2Connection", true));
+    private static final ExecutorService y = new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60, TimeUnit.SECONDS, new SynchronousQueue(), okhttp3.internal.a.I("OkHttp Http2Connection", true));
     final boolean a;
-    final AbstractC8785b b;
+    final b b;
     final String d;
     int e;
     int f;
@@ -40,12 +39,12 @@ public final class Http2Connection implements Closeable {
     private final ExecutorService i;
     final PushObserver j;
     long r;
-    final C8802h t;
+    final h t;
     final Socket u;
-    final C8799f v;
+    final f v;
     final ReaderRunnable w;
     final Set<Integer> x;
-    final Map<Integer, C8795e> c = new LinkedHashMap();
+    final Map<Integer, e> c = new LinkedHashMap();
     private long k = 0;
     private long l = 0;
     private long m = 0;
@@ -53,7 +52,7 @@ public final class Http2Connection implements Closeable {
     private long o = 0;
     private long p = 0;
     long q = 0;
-    C8802h s = new C8802h();
+    h s = new h();
 
     /* compiled from: Taobao */
     /* loaded from: classes2.dex */
@@ -120,8 +119,8 @@ public final class Http2Connection implements Closeable {
         public void alternateService(int i, String str, ByteString byteString, String str2, int i2, long j) {
         }
 
-        void applyAndAckSettings(boolean z, C8802h c8802h) {
-            C8795e[] c8795eArr;
+        void applyAndAckSettings(boolean z, h hVar) {
+            e[] eVarArr;
             long j;
             synchronized (Http2Connection.this.v) {
                 synchronized (Http2Connection.this) {
@@ -129,15 +128,15 @@ public final class Http2Connection implements Closeable {
                     if (z) {
                         Http2Connection.this.t.a();
                     }
-                    Http2Connection.this.t.h(c8802h);
+                    Http2Connection.this.t.h(hVar);
                     int d2 = Http2Connection.this.t.d();
-                    c8795eArr = null;
+                    eVarArr = null;
                     if (d2 == -1 || d2 == d) {
                         j = 0;
                     } else {
                         j = d2 - d;
                         if (!Http2Connection.this.c.isEmpty()) {
-                            c8795eArr = (C8795e[]) Http2Connection.this.c.values().toArray(new C8795e[Http2Connection.this.c.size()]);
+                            eVarArr = (e[]) Http2Connection.this.c.values().toArray(new e[Http2Connection.this.c.size()]);
                         }
                     }
                 }
@@ -148,10 +147,10 @@ public final class Http2Connection implements Closeable {
                     Http2Connection.this.o(e);
                 }
             }
-            if (c8795eArr != null) {
-                for (C8795e c8795e : c8795eArr) {
-                    synchronized (c8795e) {
-                        c8795e.a(j);
+            if (eVarArr != null) {
+                for (e eVar : eVarArr) {
+                    synchronized (eVar) {
+                        eVar.a(j);
                     }
                 }
             }
@@ -170,7 +169,7 @@ public final class Http2Connection implements Closeable {
                 Http2Connection.this.u(i, bufferedSource, i2, z);
                 return;
             }
-            C8795e p = Http2Connection.this.p(i);
+            e p = Http2Connection.this.p(i);
             if (p == null) {
                 Http2Connection.this.K(i, ErrorCode.PROTOCOL_ERROR);
                 long j = i2;
@@ -180,7 +179,7 @@ public final class Http2Connection implements Closeable {
             }
             p.m(bufferedSource, i2);
             if (z) {
-                p.n(C8753a.EMPTY_HEADERS, true);
+                p.n(okhttp3.internal.a.EMPTY_HEADERS, true);
             }
         }
 
@@ -206,7 +205,7 @@ public final class Http2Connection implements Closeable {
                     th = th;
                     errorCode = errorCode3;
                     Http2Connection.this.n(errorCode, errorCode3, e);
-                    C8753a.g(this.reader);
+                    okhttp3.internal.a.g(this.reader);
                     throw th;
                 }
                 try {
@@ -219,42 +218,42 @@ public final class Http2Connection implements Closeable {
                     http2Connection.n(errorCode4, errorCode4, e);
                     errorCode = http2Connection;
                     errorCode3 = this.reader;
-                    C8753a.g(errorCode3);
+                    okhttp3.internal.a.g(errorCode3);
                 }
                 errorCode3 = this.reader;
-                C8753a.g(errorCode3);
+                okhttp3.internal.a.g(errorCode3);
             } catch (Throwable th2) {
                 th = th2;
                 Http2Connection.this.n(errorCode, errorCode3, e);
-                C8753a.g(this.reader);
+                okhttp3.internal.a.g(this.reader);
                 throw th;
             }
         }
 
         @Override // okhttp3.internal.http2.Http2Reader.Handler
         public void goAway(int i, ErrorCode errorCode, ByteString byteString) {
-            C8795e[] c8795eArr;
+            e[] eVarArr;
             byteString.size();
             synchronized (Http2Connection.this) {
-                c8795eArr = (C8795e[]) Http2Connection.this.c.values().toArray(new C8795e[Http2Connection.this.c.size()]);
+                eVarArr = (e[]) Http2Connection.this.c.values().toArray(new e[Http2Connection.this.c.size()]);
                 Http2Connection.this.g = true;
             }
-            for (C8795e c8795e : c8795eArr) {
-                if (c8795e.g() > i && c8795e.j()) {
-                    c8795e.o(ErrorCode.REFUSED_STREAM);
-                    Http2Connection.this.A(c8795e.g());
+            for (e eVar : eVarArr) {
+                if (eVar.g() > i && eVar.j()) {
+                    eVar.o(ErrorCode.REFUSED_STREAM);
+                    Http2Connection.this.A(eVar.g());
                 }
             }
         }
 
         @Override // okhttp3.internal.http2.Http2Reader.Handler
-        public void headers(boolean z, int i, int i2, List<C8789a> list) {
+        public void headers(boolean z, int i, int i2, List<okhttp3.internal.http2.a> list) {
             if (Http2Connection.this.z(i)) {
                 Http2Connection.this.w(i, list, z);
                 return;
             }
             synchronized (Http2Connection.this) {
-                C8795e p = Http2Connection.this.p(i);
+                e p = Http2Connection.this.p(i);
                 if (p == null) {
                     if (Http2Connection.this.g) {
                         return;
@@ -266,20 +265,20 @@ public final class Http2Connection implements Closeable {
                     if (i % 2 == http2Connection.f % 2) {
                         return;
                     }
-                    final C8795e c8795e = new C8795e(i, Http2Connection.this, false, z, C8753a.K(list));
+                    final e eVar = new e(i, Http2Connection.this, false, z, okhttp3.internal.a.K(list));
                     Http2Connection http2Connection2 = Http2Connection.this;
                     http2Connection2.e = i;
-                    http2Connection2.c.put(Integer.valueOf(i), c8795e);
+                    http2Connection2.c.put(Integer.valueOf(i), eVar);
                     Http2Connection.y.execute(new NamedRunnable("OkHttp %s stream %d", new Object[]{Http2Connection.this.d, Integer.valueOf(i)}) { // from class: okhttp3.internal.http2.Http2Connection.ReaderRunnable.1
                         @Override // okhttp3.internal.NamedRunnable
                         public void execute() {
                             try {
-                                Http2Connection.this.b.b(c8795e);
+                                Http2Connection.this.b.b(eVar);
                             } catch (IOException e) {
                                 ps1 j = ps1.j();
                                 j.q(4, "Http2Connection.Listener failure for " + Http2Connection.this.d, e);
                                 try {
-                                    c8795e.d(ErrorCode.PROTOCOL_ERROR, e);
+                                    eVar.d(ErrorCode.PROTOCOL_ERROR, e);
                                 } catch (IOException unused) {
                                 }
                             }
@@ -287,7 +286,7 @@ public final class Http2Connection implements Closeable {
                     });
                     return;
                 }
-                p.n(C8753a.K(list), z);
+                p.n(okhttp3.internal.a.K(list), z);
             }
         }
 
@@ -320,7 +319,7 @@ public final class Http2Connection implements Closeable {
         }
 
         @Override // okhttp3.internal.http2.Http2Reader.Handler
-        public void pushPromise(int i, int i2, List<C8789a> list) {
+        public void pushPromise(int i, int i2, List<okhttp3.internal.http2.a> list) {
             Http2Connection.this.x(i2, list);
         }
 
@@ -330,19 +329,19 @@ public final class Http2Connection implements Closeable {
                 Http2Connection.this.y(i, errorCode);
                 return;
             }
-            C8795e A = Http2Connection.this.A(i);
+            e A = Http2Connection.this.A(i);
             if (A != null) {
                 A.o(errorCode);
             }
         }
 
         @Override // okhttp3.internal.http2.Http2Reader.Handler
-        public void settings(final boolean z, final C8802h c8802h) {
+        public void settings(final boolean z, final h hVar) {
             try {
                 Http2Connection.this.h.execute(new NamedRunnable("OkHttp %s ACK Settings", new Object[]{Http2Connection.this.d}) { // from class: okhttp3.internal.http2.Http2Connection.ReaderRunnable.2
                     @Override // okhttp3.internal.NamedRunnable
                     public void execute() {
-                        ReaderRunnable.this.applyAndAckSettings(z, c8802h);
+                        ReaderRunnable.this.applyAndAckSettings(z, hVar);
                     }
                 });
             } catch (RejectedExecutionException unused) {
@@ -359,7 +358,7 @@ public final class Http2Connection implements Closeable {
                 }
                 return;
             }
-            C8795e p = Http2Connection.this.p(i);
+            e p = Http2Connection.this.p(i);
             if (p != null) {
                 synchronized (p) {
                     p.a(j);
@@ -369,19 +368,18 @@ public final class Http2Connection implements Closeable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: okhttp3.internal.http2.Http2Connection$a */
     /* loaded from: classes2.dex */
-    public static class C8784a {
+    public static class a {
         Socket a;
         String b;
         BufferedSource c;
         BufferedSink d;
-        AbstractC8785b e = AbstractC8785b.REFUSE_INCOMING_STREAMS;
+        b e = b.REFUSE_INCOMING_STREAMS;
         PushObserver f = PushObserver.CANCEL;
         boolean g;
         int h;
 
-        public C8784a(boolean z) {
+        public a(boolean z) {
             this.g = z;
         }
 
@@ -389,17 +387,17 @@ public final class Http2Connection implements Closeable {
             return new Http2Connection(this);
         }
 
-        public C8784a b(AbstractC8785b abstractC8785b) {
-            this.e = abstractC8785b;
+        public a b(b bVar) {
+            this.e = bVar;
             return this;
         }
 
-        public C8784a c(int i) {
+        public a c(int i) {
             this.h = i;
             return this;
         }
 
-        public C8784a d(Socket socket, String str, BufferedSource bufferedSource, BufferedSink bufferedSink) {
+        public a d(Socket socket, String str, BufferedSource bufferedSource, BufferedSink bufferedSink) {
             this.a = socket;
             this.b = str;
             this.c = bufferedSource;
@@ -409,38 +407,36 @@ public final class Http2Connection implements Closeable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: okhttp3.internal.http2.Http2Connection$b */
     /* loaded from: classes2.dex */
-    public static abstract class AbstractC8785b {
-        public static final AbstractC8785b REFUSE_INCOMING_STREAMS = new C8786a();
+    public static abstract class b {
+        public static final b REFUSE_INCOMING_STREAMS = new a();
 
         /* compiled from: Taobao */
-        /* renamed from: okhttp3.internal.http2.Http2Connection$b$a */
         /* loaded from: classes2.dex */
-        class C8786a extends AbstractC8785b {
-            C8786a() {
+        class a extends b {
+            a() {
             }
 
-            @Override // okhttp3.internal.http2.Http2Connection.AbstractC8785b
-            public void b(C8795e c8795e) throws IOException {
-                c8795e.d(ErrorCode.REFUSED_STREAM, null);
+            @Override // okhttp3.internal.http2.Http2Connection.b
+            public void b(e eVar) throws IOException {
+                eVar.d(ErrorCode.REFUSED_STREAM, null);
             }
         }
 
         public void a(Http2Connection http2Connection) {
         }
 
-        public abstract void b(C8795e c8795e) throws IOException;
+        public abstract void b(e eVar) throws IOException;
     }
 
-    Http2Connection(C8784a c8784a) {
-        C8802h c8802h = new C8802h();
-        this.t = c8802h;
+    Http2Connection(a aVar) {
+        h hVar = new h();
+        this.t = hVar;
         this.x = new LinkedHashSet();
-        this.j = c8784a.f;
-        boolean z = c8784a.g;
+        this.j = aVar.f;
+        boolean z = aVar.g;
         this.a = z;
-        this.b = c8784a.e;
+        this.b = aVar.e;
         int i = z ? 1 : 2;
         this.f = i;
         if (z) {
@@ -449,22 +445,22 @@ public final class Http2Connection implements Closeable {
         if (z) {
             this.s.i(7, 16777216);
         }
-        String str = c8784a.b;
+        String str = aVar.b;
         this.d = str;
-        ScheduledThreadPoolExecutor scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1, C8753a.I(C8753a.q("OkHttp %s Writer", str), false));
+        ScheduledThreadPoolExecutor scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1, okhttp3.internal.a.I(okhttp3.internal.a.q("OkHttp %s Writer", str), false));
         this.h = scheduledThreadPoolExecutor;
-        if (c8784a.h != 0) {
+        if (aVar.h != 0) {
             IntervalPingRunnable intervalPingRunnable = new IntervalPingRunnable();
-            int i2 = c8784a.h;
+            int i2 = aVar.h;
             scheduledThreadPoolExecutor.scheduleAtFixedRate(intervalPingRunnable, i2, i2, TimeUnit.MILLISECONDS);
         }
-        this.i = new ThreadPoolExecutor(0, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue(), C8753a.I(C8753a.q("OkHttp %s Push Observer", str), true));
-        c8802h.i(7, 65535);
-        c8802h.i(5, 16384);
-        this.r = c8802h.d();
-        this.u = c8784a.a;
-        this.v = new C8799f(c8784a.d, z);
-        this.w = new ReaderRunnable(new Http2Reader(c8784a.c, z));
+        this.i = new ThreadPoolExecutor(0, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue(), okhttp3.internal.a.I(okhttp3.internal.a.q("OkHttp %s Push Observer", str), true));
+        hVar.i(7, 65535);
+        hVar.i(5, 16384);
+        this.r = hVar.d();
+        this.u = aVar.a;
+        this.v = new f(aVar.d, z);
+        this.w = new ReaderRunnable(new Http2Reader(aVar.c, z));
     }
 
     static /* synthetic */ long c(Http2Connection http2Connection) {
@@ -502,7 +498,7 @@ public final class Http2Connection implements Closeable {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private okhttp3.internal.http2.C8795e s(int r11, java.util.List<okhttp3.internal.http2.C8789a> r12, boolean r13) throws java.io.IOException {
+    private okhttp3.internal.http2.e s(int r11, java.util.List<okhttp3.internal.http2.a> r12, boolean r13) throws java.io.IOException {
         /*
             r10 = this;
             r6 = r13 ^ 1
@@ -594,8 +590,8 @@ public final class Http2Connection implements Closeable {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public synchronized C8795e A(int i) {
-        C8795e remove;
+    public synchronized e A(int i) {
+        e remove;
         remove = this.c.remove(Integer.valueOf(i));
         notifyAll();
         return remove;
@@ -630,7 +626,7 @@ public final class Http2Connection implements Closeable {
                     return;
                 }
                 this.g = true;
-                this.v.d(this.e, errorCode, C8753a.EMPTY_BYTE_ARRAY);
+                this.v.d(this.e, errorCode, okhttp3.internal.a.EMPTY_BYTE_ARRAY);
             }
         }
     }
@@ -744,7 +740,7 @@ public final class Http2Connection implements Closeable {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public void H(int i, boolean z, List<C8789a> list) throws IOException {
+    public void H(int i, boolean z, List<okhttp3.internal.http2.a> list) throws IOException {
         this.v.e(z, i, list);
     }
 
@@ -809,17 +805,17 @@ public final class Http2Connection implements Closeable {
             C(errorCode);
         } catch (IOException unused) {
         }
-        C8795e[] c8795eArr = null;
+        e[] eVarArr = null;
         synchronized (this) {
             if (!this.c.isEmpty()) {
-                c8795eArr = (C8795e[]) this.c.values().toArray(new C8795e[this.c.size()]);
+                eVarArr = (e[]) this.c.values().toArray(new e[this.c.size()]);
                 this.c.clear();
             }
         }
-        if (c8795eArr != null) {
-            for (C8795e c8795e : c8795eArr) {
+        if (eVarArr != null) {
+            for (e eVar : eVarArr) {
                 try {
-                    c8795e.d(errorCode2, iOException);
+                    eVar.d(errorCode2, iOException);
                 } catch (IOException unused2) {
                 }
             }
@@ -836,7 +832,7 @@ public final class Http2Connection implements Closeable {
         this.i.shutdown();
     }
 
-    synchronized C8795e p(int i) {
+    synchronized e p(int i) {
         return this.c.get(Integer.valueOf(i));
     }
 
@@ -856,7 +852,7 @@ public final class Http2Connection implements Closeable {
         return this.t.e(Integer.MAX_VALUE);
     }
 
-    public C8795e t(List<C8789a> list, boolean z) throws IOException {
+    public e t(List<okhttp3.internal.http2.a> list, boolean z) throws IOException {
         return s(0, list, z);
     }
 
@@ -888,7 +884,7 @@ public final class Http2Connection implements Closeable {
         throw new IOException(buffer.size() + " != " + i2);
     }
 
-    void w(final int i, final List<C8789a> list, final boolean z) {
+    void w(final int i, final List<okhttp3.internal.http2.a> list, final boolean z) {
         try {
             v(new NamedRunnable("OkHttp %s Push Headers[%s]", new Object[]{this.d, Integer.valueOf(i)}) { // from class: okhttp3.internal.http2.Http2Connection.5
                 @Override // okhttp3.internal.NamedRunnable
@@ -912,7 +908,7 @@ public final class Http2Connection implements Closeable {
         }
     }
 
-    void x(final int i, final List<C8789a> list) {
+    void x(final int i, final List<okhttp3.internal.http2.a> list) {
         synchronized (this) {
             if (this.x.contains(Integer.valueOf(i))) {
                 K(i, ErrorCode.PROTOCOL_ERROR);

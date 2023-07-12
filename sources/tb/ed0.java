@@ -18,19 +18,18 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes3.dex */
 public final class ed0 implements Comparable<ed0> {
     @NotNull
-    public static final C9098a Companion = new C9098a(null);
+    public static final a Companion = new a(null);
     private static final long b;
     private static final long c;
     private final long a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ed0$a */
     /* loaded from: classes3.dex */
-    public static final class C9098a {
-        private C9098a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9098a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

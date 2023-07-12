@@ -11,15 +11,14 @@ public class MonthPagerAdapter extends CalendarPagerAdapter<MonthView> {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.calendar.MonthPagerAdapter$a */
     /* loaded from: classes8.dex */
-    public static class C2488a implements DateRangeIndex {
+    public static class a implements DateRangeIndex {
         private static transient /* synthetic */ IpChange $ipChange;
         private final CalendarDay a;
         private final int b;
         private SparseArrayCompat<CalendarDay> c = new SparseArrayCompat<>();
 
-        public C2488a(@NonNull CalendarDay calendarDay, @NonNull CalendarDay calendarDay2) {
+        public a(@NonNull CalendarDay calendarDay, @NonNull CalendarDay calendarDay2) {
             this.a = CalendarDay.from(calendarDay.getYear(), calendarDay.getMonth(), 1);
             this.b = indexOf(CalendarDay.from(calendarDay2.getYear(), calendarDay2.getMonth(), 1)) + 1;
         }
@@ -82,7 +81,7 @@ public class MonthPagerAdapter extends CalendarPagerAdapter<MonthView> {
     @Override // cn.damai.uikit.calendar.CalendarPagerAdapter
     protected DateRangeIndex b(CalendarDay calendarDay, CalendarDay calendarDay2) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "2111362058") ? (DateRangeIndex) ipChange.ipc$dispatch("2111362058", new Object[]{this, calendarDay, calendarDay2}) : new C2488a(calendarDay, calendarDay2);
+        return AndroidInstantRuntime.support(ipChange, "2111362058") ? (DateRangeIndex) ipChange.ipc$dispatch("2111362058", new Object[]{this, calendarDay, calendarDay2}) : new a(calendarDay, calendarDay2);
     }
 
     @Override // cn.damai.uikit.calendar.CalendarPagerAdapter

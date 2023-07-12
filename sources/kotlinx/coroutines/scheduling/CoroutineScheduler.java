@@ -1,7 +1,7 @@
 package kotlinx.coroutines.scheduling;
 
 import android.support.v4.media.session.PlaybackStateCompat;
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
 import java.io.Closeable;
@@ -59,7 +59,7 @@ public final class CoroutineScheduler implements Closeable, Executor {
     @NotNull
     public final String g;
     private volatile long parkedWorkersStack;
-    public static final C8706a Companion = new C8706a(null);
+    public static final a Companion = new a(null);
     @JvmField
     @NotNull
     public static final kj2 NOT_IN_STACK = new kj2("NOT_IN_STACK");
@@ -79,13 +79,12 @@ public final class CoroutineScheduler implements Closeable, Executor {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.scheduling.CoroutineScheduler$a */
     /* loaded from: classes11.dex */
-    public static final class C8706a {
-        private C8706a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8706a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -124,15 +123,15 @@ public final class CoroutineScheduler implements Closeable, Executor {
     }
 
     private final int c() {
-        int a;
+        int a2;
         synchronized (this.c) {
             if (isTerminated()) {
                 return -1;
             }
             long j2 = this.controlState;
             int i2 = (int) (j2 & 2097151);
-            a = ty1.a(i2 - ((int) ((j2 & 4398044413952L) >> 21)), 0);
-            if (a >= this.d) {
+            a2 = ty1.a(i2 - ((int) ((j2 & 4398044413952L) >> 21)), 0);
+            if (a2 >= this.d) {
                 return 0;
             }
             if (i2 >= this.e) {
@@ -144,7 +143,7 @@ public final class CoroutineScheduler implements Closeable, Executor {
                 this.c.set(i3, worker);
                 if (i3 == ((int) (2097151 & i.incrementAndGet(this)))) {
                     worker.start();
-                    return a + 1;
+                    return a2 + 1;
                 }
                 throw new IllegalArgumentException("Failed requirement.".toString());
             }
@@ -231,9 +230,9 @@ public final class CoroutineScheduler implements Closeable, Executor {
     }
 
     private final boolean t(long j2) {
-        int a;
-        a = ty1.a(((int) (2097151 & j2)) - ((int) ((j2 & 4398044413952L) >> 21)), 0);
-        if (a < this.d) {
+        int a2;
+        a2 = ty1.a(((int) (2097151 & j2)) - ((int) ((j2 & 4398044413952L) >> 21)), 0);
+        if (a2 < this.d) {
             int c = c();
             if (c == 1 && this.d > 1) {
                 c();
@@ -271,14 +270,14 @@ public final class CoroutineScheduler implements Closeable, Executor {
 
     @NotNull
     public final Task d(@NotNull Runnable runnable, @NotNull TaskContext taskContext) {
-        long a = ml2.a.a();
+        long a2 = ml2.a.a();
         if (runnable instanceof Task) {
             Task task = (Task) runnable;
-            task.submissionTime = a;
+            task.submissionTime = a2;
             task.taskContext = taskContext;
             return task;
         }
-        return new TaskImpl(runnable, a, taskContext);
+        return new TaskImpl(runnable, a2, taskContext);
     }
 
     @Override // java.util.concurrent.Executor
@@ -287,9 +286,9 @@ public final class CoroutineScheduler implements Closeable, Executor {
     }
 
     public final void f(@NotNull Runnable runnable, @NotNull TaskContext taskContext, boolean z) {
-        TimeSource a = eo2.a();
-        if (a != null) {
-            a.trackTask();
+        TimeSource a2 = eo2.a();
+        if (a2 != null) {
+            a2.trackTask();
         }
         Task d = d(runnable, taskContext);
         Worker e = e();
@@ -354,13 +353,13 @@ public final class CoroutineScheduler implements Closeable, Executor {
             try {
                 Thread currentThread = Thread.currentThread();
                 currentThread.getUncaughtExceptionHandler().uncaughtException(currentThread, th);
-                TimeSource a = eo2.a();
-                if (a == null) {
+                TimeSource a2 = eo2.a();
+                if (a2 == null) {
                 }
             } finally {
-                TimeSource a2 = eo2.a();
-                if (a2 != null) {
-                    a2.unTrackTask();
+                TimeSource a3 = eo2.a();
+                if (a3 != null) {
+                    a3.unTrackTask();
                 }
             }
         }
@@ -519,7 +518,7 @@ public final class CoroutineScheduler implements Closeable, Executor {
                     arrayList.add(String.valueOf(f) + "b");
                 } else if (i8 == 3) {
                     i2++;
-                    arrayList.add(String.valueOf(f) + AbstractC5658c.a);
+                    arrayList.add(String.valueOf(f) + c.a);
                 } else if (i8 == 4) {
                     i5++;
                     if (f > 0) {

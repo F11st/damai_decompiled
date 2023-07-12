@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import com.youku.arch.v3.event.Subject;
 import java.io.ByteArrayInputStream;
@@ -13,14 +13,14 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import kotlin.collections.C8205f0;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8219q;
-import kotlin.collections.C8220r;
-import kotlin.collections.C8225w;
-import kotlin.collections.C8226x;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.f0;
+import kotlin.collections.m;
+import kotlin.collections.n;
+import kotlin.collections.q;
+import kotlin.collections.r;
+import kotlin.collections.w;
+import kotlin.collections.x;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.PropertyReference1Impl;
@@ -143,7 +143,7 @@ public abstract class DeserializedMemberScope extends le1 {
             this.n = deserializedMemberScope;
             this.a = list;
             this.b = list2;
-            this.c = deserializedMemberScope.j().c().g().getTypeAliasesAllowed() ? list3 : C8214m.g();
+            this.c = deserializedMemberScope.j().c().g().getTypeAliasesAllowed() ? list3 : m.g();
             this.d = deserializedMemberScope.j().h().createLazyValue(new Function0<List<? extends SimpleFunctionDescriptor>>() { // from class: kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedMemberScope$NoReorderImplementation$declaredFunctions$2
                 /* JADX INFO: Access modifiers changed from: package-private */
                 {
@@ -236,8 +236,8 @@ public abstract class DeserializedMemberScope extends le1 {
                     int e;
                     int a;
                     v = DeserializedMemberScope.NoReorderImplementation.this.v();
-                    q = C8215n.q(v, 10);
-                    e = C8225w.e(q);
+                    q = n.q(v, 10);
+                    e = w.e(q);
                     a = ty1.a(e, 16);
                     LinkedHashMap linkedHashMap = new LinkedHashMap(a);
                     for (Object obj : v) {
@@ -317,7 +317,7 @@ public abstract class DeserializedMemberScope extends le1 {
                     for (MessageLite messageLite : list4) {
                         linkedHashSet.add(pi1.b(deserializedMemberScope2.a.g(), ((ProtoBuf$Function) messageLite).getName()));
                     }
-                    i = C8205f0.i(linkedHashSet, deserializedMemberScope.n());
+                    i = f0.i(linkedHashSet, deserializedMemberScope.n());
                     return i;
                 }
             });
@@ -340,7 +340,7 @@ public abstract class DeserializedMemberScope extends le1 {
                     for (MessageLite messageLite : list4) {
                         linkedHashSet.add(pi1.b(deserializedMemberScope2.a.g(), ((ProtoBuf$Property) messageLite).getName()));
                     }
-                    i = C8205f0.i(linkedHashSet, deserializedMemberScope.o());
+                    i = f0.i(linkedHashSet, deserializedMemberScope.o());
                     return i;
                 }
             });
@@ -355,7 +355,7 @@ public abstract class DeserializedMemberScope extends le1 {
             Set<ni1> n = this.n.n();
             ArrayList arrayList = new ArrayList();
             for (ni1 ni1Var : n) {
-                C8220r.v(arrayList, p(ni1Var));
+                r.v(arrayList, p(ni1Var));
             }
             return arrayList;
         }
@@ -365,7 +365,7 @@ public abstract class DeserializedMemberScope extends le1 {
             Set<ni1> o2 = this.n.o();
             ArrayList arrayList = new ArrayList();
             for (ni1 ni1Var : o2) {
-                C8220r.v(arrayList, q(ni1Var));
+                r.v(arrayList, q(ni1Var));
             }
             return arrayList;
         }
@@ -511,14 +511,14 @@ public abstract class DeserializedMemberScope extends le1 {
             b41.i(ni1Var, "name");
             b41.i(lookupLocation, "location");
             if (!getFunctionNames().contains(ni1Var)) {
-                g2 = C8214m.g();
+                g2 = m.g();
                 return g2;
             }
             Collection<SimpleFunctionDescriptor> collection = y().get(ni1Var);
             if (collection != null) {
                 return collection;
             }
-            g = C8214m.g();
+            g = m.g();
             return g;
         }
 
@@ -530,14 +530,14 @@ public abstract class DeserializedMemberScope extends le1 {
             b41.i(ni1Var, "name");
             b41.i(lookupLocation, "location");
             if (!getVariableNames().contains(ni1Var)) {
-                g2 = C8214m.g();
+                g2 = m.g();
                 return g2;
             }
             Collection<PropertyDescriptor> collection = z().get(ni1Var);
             if (collection != null) {
                 return collection;
             }
-            g = C8214m.g();
+            g = m.g();
             return g;
         }
 
@@ -640,7 +640,7 @@ public abstract class DeserializedMemberScope extends le1 {
                 }
                 i = i(linkedHashMap3);
             } else {
-                i = C8226x.i();
+                i = x.i();
             }
             this.c = i;
             this.d = this.i.j().h().createMemoizedFunction(new Function1<ni1, Collection<? extends SimpleFunctionDescriptor>>() { // from class: kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedMemberScope$OptimizedImplementation$functions$1
@@ -703,7 +703,7 @@ public abstract class DeserializedMemberScope extends le1 {
                     Map map;
                     Set<? extends ni1> i2;
                     map = DeserializedMemberScope.OptimizedImplementation.this.a;
-                    i2 = C8205f0.i(map.keySet(), deserializedMemberScope4.n());
+                    i2 = f0.i(map.keySet(), deserializedMemberScope4.n());
                     return i2;
                 }
             });
@@ -722,7 +722,7 @@ public abstract class DeserializedMemberScope extends le1 {
                     Map map;
                     Set<? extends ni1> i2;
                     map = DeserializedMemberScope.OptimizedImplementation.this.b;
-                    i2 = C8205f0.i(map.keySet(), deserializedMemberScope5.o());
+                    i2 = f0.i(map.keySet(), deserializedMemberScope5.o());
                     return i2;
                 }
             });
@@ -744,7 +744,7 @@ public abstract class DeserializedMemberScope extends le1 {
                 B = SequencesKt___SequencesKt.B(i);
             }
             if (B == null) {
-                B = C8214m.g();
+                B = m.g();
             }
             ArrayList arrayList = new ArrayList(B.size());
             for (ProtoBuf$Function protoBuf$Function : B) {
@@ -778,7 +778,7 @@ public abstract class DeserializedMemberScope extends le1 {
                 B = SequencesKt___SequencesKt.B(i);
             }
             if (B == null) {
-                B = C8214m.g();
+                B = m.g();
             }
             ArrayList arrayList = new ArrayList(B.size());
             for (ProtoBuf$Property protoBuf$Property : B) {
@@ -806,7 +806,7 @@ public abstract class DeserializedMemberScope extends le1 {
         private final Map<ni1, byte[]> i(Map<ni1, ? extends Collection<? extends AbstractMessageLite>> map) {
             int e;
             int q;
-            e = C8225w.e(map.size());
+            e = w.e(map.size());
             LinkedHashMap linkedHashMap = new LinkedHashMap(e);
             Iterator<T> it = map.entrySet().iterator();
             while (it.hasNext()) {
@@ -814,7 +814,7 @@ public abstract class DeserializedMemberScope extends le1 {
                 Object key = entry.getKey();
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                 Iterable<AbstractMessageLite> iterable = (Iterable) entry.getValue();
-                q = C8215n.q(iterable, 10);
+                q = n.q(iterable, 10);
                 ArrayList arrayList = new ArrayList(q);
                 for (AbstractMessageLite abstractMessageLite : iterable) {
                     abstractMessageLite.writeDelimitedTo(byteArrayOutputStream);
@@ -841,7 +841,7 @@ public abstract class DeserializedMemberScope extends le1 {
                 }
                 ge1 ge1Var = ge1.INSTANCE;
                 b41.h(ge1Var, "INSTANCE");
-                C8219q.u(arrayList, ge1Var);
+                q.u(arrayList, ge1Var);
                 collection.addAll(arrayList);
             }
             if (z60Var.a(z60.Companion.d())) {
@@ -854,7 +854,7 @@ public abstract class DeserializedMemberScope extends le1 {
                 }
                 ge1 ge1Var2 = ge1.INSTANCE;
                 b41.h(ge1Var2, "INSTANCE");
-                C8219q.u(arrayList2, ge1Var2);
+                q.u(arrayList2, ge1Var2);
                 collection.addAll(arrayList2);
             }
         }
@@ -868,7 +868,7 @@ public abstract class DeserializedMemberScope extends le1 {
             if (getFunctionNames().contains(ni1Var)) {
                 return this.d.invoke(ni1Var);
             }
-            g = C8214m.g();
+            g = m.g();
             return g;
         }
 
@@ -881,7 +881,7 @@ public abstract class DeserializedMemberScope extends le1 {
             if (getVariableNames().contains(ni1Var)) {
                 return this.e.invoke(ni1Var);
             }
-            g = C8214m.g();
+            g = m.g();
             return g;
         }
 
@@ -913,7 +913,7 @@ public abstract class DeserializedMemberScope extends le1 {
 
     /* JADX INFO: Access modifiers changed from: protected */
     public DeserializedMemberScope(@NotNull j70 j70Var, @NotNull List<ProtoBuf$Function> list, @NotNull List<ProtoBuf$Property> list2, @NotNull List<ProtoBuf$TypeAlias> list3, @NotNull final Function0<? extends Collection<ni1>> function0) {
-        b41.i(j70Var, AbstractC5658c.a);
+        b41.i(j70Var, c.a);
         b41.i(list, "functionList");
         b41.i(list2, "propertyList");
         b41.i(list3, "typeAliasList");
@@ -954,8 +954,8 @@ public abstract class DeserializedMemberScope extends le1 {
                 }
                 Set<ni1> k = DeserializedMemberScope.this.k();
                 implementation = DeserializedMemberScope.this.b;
-                i = C8205f0.i(k, implementation.getTypeAliasNames());
-                i2 = C8205f0.i(i, m);
+                i = f0.i(k, implementation.getTypeAliasNames());
+                i2 = f0.i(i, m);
                 return i2;
             }
         });
@@ -989,12 +989,12 @@ public abstract class DeserializedMemberScope extends le1 {
         b41.i(function1, "nameFilter");
         b41.i(lookupLocation, "location");
         ArrayList arrayList = new ArrayList(0);
-        z60.C10015a c10015a = z60.Companion;
-        if (z60Var.a(c10015a.g())) {
+        z60.a aVar = z60.Companion;
+        if (z60Var.a(aVar.g())) {
             c(arrayList, function1);
         }
         this.b.addFunctionsAndPropertiesTo(arrayList, z60Var, function1, lookupLocation);
-        if (z60Var.a(c10015a.c())) {
+        if (z60Var.a(aVar.c())) {
             for (ni1 ni1Var : k()) {
                 if (function1.invoke(ni1Var).booleanValue()) {
                     kk.a(arrayList, i(ni1Var));

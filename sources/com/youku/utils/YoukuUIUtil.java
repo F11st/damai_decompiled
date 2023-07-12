@@ -32,8 +32,8 @@ import com.youku.media.arch.instruments.statistics.ConfigReporter;
 import com.youku.widget.CornerMarkDrawable;
 import com.youku.widget.TouchDelegateGroup;
 import java.lang.reflect.Method;
-import tb.C9796v;
 import tb.gn1;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -72,7 +72,7 @@ public class YoukuUIUtil {
     public static int getDeviceDefaultOrientation(Context context) {
         if (DEFAULT_ORIENTATION == 0) {
             Configuration configuration = context.getResources().getConfiguration();
-            int rotation = ((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getRotation();
+            int rotation = ((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getRotation();
             if (((rotation != 0 && rotation != 2) || configuration.orientation != 2) && ((rotation != 1 && rotation != 3) || configuration.orientation != 1)) {
                 DEFAULT_ORIENTATION = 1;
             } else {

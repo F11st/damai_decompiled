@@ -7,24 +7,22 @@ import android.widget.TextView;
 import cn.damai.commonbusiness.imagebrowse.bean.PicInfo;
 import cn.damai.trade.R$id;
 import cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.bean.StaticData;
-import cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.AbstractC2379a;
 import cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.OnHeadClickListener;
-import cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.View$OnClickListenerC2380b;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
-public class iv1 extends AbstractC2379a implements View.OnClickListener {
+public class iv1 extends cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.a implements View.OnClickListener {
     private static transient /* synthetic */ IpChange $ipChange;
     private View e;
-    private View$OnClickListenerC2380b f;
+    private cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.b f;
     private ji2 g;
 
     public iv1(Activity activity, long j, View view, OnHeadClickListener onHeadClickListener) {
         super(activity, j, view, onHeadClickListener);
         this.e = view.findViewById(R$id.book_header_show_time_ui);
-        this.f = new View$OnClickListenerC2380b(activity, j, view, onHeadClickListener);
+        this.f = new cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.b(activity, j, view, onHeadClickListener);
         this.g = new ji2(activity, j, view, onHeadClickListener);
     }
 
@@ -34,7 +32,7 @@ public class iv1 extends AbstractC2379a implements View.OnClickListener {
         return AndroidInstantRuntime.support(ipChange, "1984805199") ? (String) ipChange.ipc$dispatch("1984805199", new Object[]{this, staticData}) : (staticData == null || staticData.getItemBase() == null || staticData.getItemBase().getItemPics() == null || staticData.getItemBase().getItemPics().getItemPicList() == null || staticData.getItemBase().getItemPics().getItemPicList().isEmpty() || (picInfo = staticData.getItemBase().getItemPics().getItemPicList().get(0)) == null) ? "" : picInfo.getPicUrl();
     }
 
-    @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.AbstractC2379a
+    @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.a
     public int a() {
         IpChange ipChange = $ipChange;
         return AndroidInstantRuntime.support(ipChange, "-944310143") ? ((Integer) ipChange.ipc$dispatch("-944310143", new Object[]{this})).intValue() : R$id.project_book_header;
@@ -59,9 +57,9 @@ public class iv1 extends AbstractC2379a implements View.OnClickListener {
             ipChange.ipc$dispatch("1485108765", new Object[]{this, str, str2});
             return;
         }
-        View$OnClickListenerC2380b view$OnClickListenerC2380b = this.f;
-        if (view$OnClickListenerC2380b != null) {
-            view$OnClickListenerC2380b.g(str, str2);
+        cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.b bVar = this.f;
+        if (bVar != null) {
+            bVar.g(str, str2);
         }
     }
 

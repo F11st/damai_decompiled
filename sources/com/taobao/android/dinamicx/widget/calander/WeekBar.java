@@ -13,7 +13,7 @@ import com.taobao.android.dinamic.R$layout;
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
 public class WeekBar extends LinearLayout {
-    private C6488b mDelegate;
+    private b mDelegate;
 
     public WeekBar(Context context) {
         super(context);
@@ -38,11 +38,11 @@ public class WeekBar extends LinearLayout {
     @Override // android.widget.LinearLayout, android.view.View
     protected void onMeasure(int i, int i2) {
         int makeMeasureSpec;
-        C6488b c6488b = this.mDelegate;
-        if (c6488b != null) {
-            makeMeasureSpec = View.MeasureSpec.makeMeasureSpec(c6488b.B(), 1073741824);
+        b bVar = this.mDelegate;
+        if (bVar != null) {
+            makeMeasureSpec = View.MeasureSpec.makeMeasureSpec(bVar.B(), 1073741824);
         } else {
-            makeMeasureSpec = View.MeasureSpec.makeMeasureSpec(C6487a.c(getContext(), 40.0f), 1073741824);
+            makeMeasureSpec = View.MeasureSpec.makeMeasureSpec(a.c(getContext(), 40.0f), 1073741824);
         }
         super.onMeasure(i, makeMeasureSpec);
     }
@@ -68,11 +68,11 @@ public class WeekBar extends LinearLayout {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public void setup(C6488b c6488b) {
-        this.mDelegate = c6488b;
-        setTextSize(c6488b.G());
-        setTextColor(c6488b.F());
-        setBackgroundColor(c6488b.A());
-        setPadding(c6488b.e(), 0, c6488b.f(), 0);
+    public void setup(b bVar) {
+        this.mDelegate = bVar;
+        setTextSize(bVar.G());
+        setTextColor(bVar.F());
+        setBackgroundColor(bVar.A());
+        setPadding(bVar.e(), 0, bVar.f(), 0);
     }
 }

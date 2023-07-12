@@ -3,10 +3,10 @@ package com.alibaba.aliweex.plugin;
 /* compiled from: Taobao */
 /* loaded from: classes15.dex */
 class WorkFlow$FlowNode$3 implements Runnable {
-    final /* synthetic */ AbstractC3099b this$0;
+    final /* synthetic */ b this$0;
     final /* synthetic */ Object val$priorResult;
 
-    WorkFlow$FlowNode$3(AbstractC3099b abstractC3099b, Object obj) {
+    WorkFlow$FlowNode$3(b bVar, Object obj) {
         this.val$priorResult = obj;
     }
 

@@ -14,8 +14,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.share.ShareManager;
 import cn.damai.commonbusiness.util.Utils;
@@ -63,12 +63,11 @@ public class ESouvenirCustomActivity extends DamaiBaseActivity implements ILogin
     private int width = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.ESouvenirCustomActivity$a */
     /* loaded from: classes7.dex */
-    public class C2015a implements MyScrollView.ScrollYListener {
+    public class a implements MyScrollView.ScrollYListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2015a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.view.MyScrollView.ScrollYListener
@@ -147,7 +146,7 @@ public class ESouvenirCustomActivity extends DamaiBaseActivity implements ILogin
         }
         MyScrollView myScrollView = this.scrollView;
         if (myScrollView != null) {
-            myScrollView.setOnScrollYListener(new C2015a());
+            myScrollView.setOnScrollYListener(new a());
         }
     }
 
@@ -273,7 +272,7 @@ public class ESouvenirCustomActivity extends DamaiBaseActivity implements ILogin
             ipChange.ipc$dispatch("-1135927390", new Object[]{this});
             return;
         }
-        C0529c.e().z(un2.k().p(un2.TICKLET_DEFINE_SOUNENIR_TICKET, this.performId, "bottom"));
+        c.e().z(un2.k().p(un2.TICKLET_DEFINE_SOUNENIR_TICKET, this.performId, "bottom"));
         finish();
     }
 
@@ -297,7 +296,7 @@ public class ESouvenirCustomActivity extends DamaiBaseActivity implements ILogin
                 hashMap2.put("titlelabel", hashMap.toString());
                 hashMap2.put("perform_id", this.performId);
                 hashMap2.put("usercode", String.valueOf(z20.E()));
-                C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DEFINE_SOUNENIR_TICKET, "bottom", "share", hashMap2, Boolean.TRUE));
+                c.e().x(b.getInstance().e(un2.TICKLET_DEFINE_SOUNENIR_TICKET, "bottom", "share", hashMap2, Boolean.TRUE));
                 createPic(view, this);
             } else if (view.getId() == R$id.ticklet_sou_price) {
                 if (this.ticklet_sou_price.isCheck()) {

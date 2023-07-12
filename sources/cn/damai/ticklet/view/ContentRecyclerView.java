@@ -20,12 +20,11 @@ public class ContentRecyclerView extends RecyclerView {
     private final CompositeScrollListener compositeScrollListener;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.ContentRecyclerView$a */
     /* loaded from: classes7.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC2092a implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class a implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC2092a() {
+        a() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -60,7 +59,7 @@ public class ContentRecyclerView extends RecyclerView {
         CompositeScrollListener compositeScrollListener = new CompositeScrollListener(this, null);
         this.compositeScrollListener = compositeScrollListener;
         super.addOnScrollListener(compositeScrollListener);
-        getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC2092a());
+        getViewTreeObserver().addOnGlobalLayoutListener(new a());
     }
 
     private void throwIfNotOnMainThread() {
@@ -135,7 +134,7 @@ public class ContentRecyclerView extends RecyclerView {
             }
         }
 
-        /* synthetic */ CompositeScrollListener(ContentRecyclerView contentRecyclerView, ViewTreeObserver$OnGlobalLayoutListenerC2092a viewTreeObserver$OnGlobalLayoutListenerC2092a) {
+        /* synthetic */ CompositeScrollListener(ContentRecyclerView contentRecyclerView, a aVar) {
             this(contentRecyclerView);
         }
     }
@@ -145,7 +144,7 @@ public class ContentRecyclerView extends RecyclerView {
         CompositeScrollListener compositeScrollListener = new CompositeScrollListener(this, null);
         this.compositeScrollListener = compositeScrollListener;
         super.addOnScrollListener(compositeScrollListener);
-        getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC2092a());
+        getViewTreeObserver().addOnGlobalLayoutListener(new a());
     }
 
     public ContentRecyclerView(Context context, @Nullable AttributeSet attributeSet, int i) {
@@ -153,6 +152,6 @@ public class ContentRecyclerView extends RecyclerView {
         CompositeScrollListener compositeScrollListener = new CompositeScrollListener(this, null);
         this.compositeScrollListener = compositeScrollListener;
         super.addOnScrollListener(compositeScrollListener);
-        getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC2092a());
+        getViewTreeObserver().addOnGlobalLayoutListener(new a());
     }
 }

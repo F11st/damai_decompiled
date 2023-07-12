@@ -19,7 +19,7 @@ public class HBRAudioView extends LazyInflatedView {
     private HBRAudioPlugin mPresenter;
 
     public HBRAudioView(Context context, ILMLayerManager iLMLayerManager, String str) {
-        super(context, iLMLayerManager, str, R.C7935layout.dago_hbr_audio_view);
+        super(context, iLMLayerManager, str, R.layout.dago_hbr_audio_view);
     }
 
     @Override // com.youku.alixplugin.view.LazyInflatedView

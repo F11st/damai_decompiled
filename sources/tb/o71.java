@@ -8,14 +8,13 @@ import java.util.Comparator;
 /* loaded from: classes5.dex */
 public class o71 {
     private static o71 c = new o71();
-    private C9513c a = new C9513c();
-    private C9512b b = new C9512b();
+    private c a = new c();
+    private b b = new b();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.o71$b */
     /* loaded from: classes5.dex */
-    private class C9512b implements Comparator<String> {
-        private C9512b(o71 o71Var) {
+    private class b implements Comparator<String> {
+        private b(o71 o71Var) {
         }
 
         @Override // java.util.Comparator
@@ -29,10 +28,9 @@ public class o71 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.o71$c */
     /* loaded from: classes5.dex */
-    private class C9513c implements Comparator<String> {
-        private C9513c(o71 o71Var) {
+    private class c implements Comparator<String> {
+        private c(o71 o71Var) {
         }
 
         @Override // java.util.Comparator

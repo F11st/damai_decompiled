@@ -16,14 +16,13 @@ public class k81 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.k81$b */
     /* loaded from: classes8.dex */
-    public static class C9342b {
+    public static class b {
         private static k81 a = new k81();
     }
 
     public static k81 b() {
-        return C9342b.a;
+        return b.a;
     }
 
     public PopLayerBaseView a(Context context, String str) {

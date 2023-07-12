@@ -9,24 +9,24 @@ import tb.j82;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
-public class m82 extends kn1<j82.C9302a> {
+public class m82 extends kn1<j82.a> {
     private static transient /* synthetic */ IpChange $ipChange;
     private final long a;
     private final boolean b;
-    private final j82.C9302a c;
+    private final j82.a c;
 
     private m82(boolean z, long j, String str, RegionSeat3DVrInfo regionSeat3DVrInfo) {
         this.b = z;
         this.a = j;
-        j82.C9302a c9302a = new j82.C9302a();
-        this.c = c9302a;
+        j82.a aVar = new j82.a();
+        this.c = aVar;
         if (regionSeat3DVrInfo == null || regionSeat3DVrInfo.imgDecrypt == null) {
             return;
         }
-        c9302a.f(String.valueOf(regionSeat3DVrInfo.venueId));
-        c9302a.d(str);
-        c9302a.g(j);
-        c9302a.e(regionSeat3DVrInfo.imgDecrypt.safeToken);
+        aVar.f(String.valueOf(regionSeat3DVrInfo.venueId));
+        aVar.d(str);
+        aVar.g(j);
+        aVar.e(regionSeat3DVrInfo.imgDecrypt.safeToken);
     }
 
     @Nullable
@@ -66,8 +66,8 @@ public class m82 extends kn1<j82.C9302a> {
 
     @Override // tb.kn1
     /* renamed from: f */
-    public j82.C9302a a() {
+    public j82.a a() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1872333252") ? (j82.C9302a) ipChange.ipc$dispatch("-1872333252", new Object[]{this}) : this.c;
+        return AndroidInstantRuntime.support(ipChange, "-1872333252") ? (j82.a) ipChange.ipc$dispatch("-1872333252", new Object[]{this}) : this.c;
     }
 }

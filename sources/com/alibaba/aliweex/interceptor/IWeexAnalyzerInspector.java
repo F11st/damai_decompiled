@@ -8,14 +8,13 @@ import java.util.Map;
 public interface IWeexAnalyzerInspector {
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.interceptor.IWeexAnalyzerInspector$a */
     /* loaded from: classes15.dex */
-    public static class C3091a {
+    public static class a {
         public String a;
         public String b;
         public Map<String, String> c;
 
-        public C3091a(String str, String str2, Map<String, String> map) {
+        public a(String str, String str2, Map<String, String> map) {
             this.a = str;
             this.b = str2;
             this.c = map;
@@ -27,15 +26,14 @@ public interface IWeexAnalyzerInspector {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.interceptor.IWeexAnalyzerInspector$b */
     /* loaded from: classes15.dex */
-    public static class C3092b {
+    public static class b {
         public String a;
         public int b;
         public Map<String, List<String>> c;
         public String d;
 
-        public C3092b(String str, String str2, int i, Map<String, List<String>> map) {
+        public b(String str, String str2, int i, Map<String, List<String>> map) {
             this.d = str;
             this.a = str2;
             this.b = i;
@@ -49,7 +47,7 @@ public interface IWeexAnalyzerInspector {
 
     boolean isEnabled();
 
-    void onRequest(String str, C3091a c3091a);
+    void onRequest(String str, a aVar);
 
-    void onResponse(String str, C3092b c3092b);
+    void onResponse(String str, b bVar);
 }

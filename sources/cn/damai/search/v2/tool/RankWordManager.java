@@ -39,14 +39,13 @@ public class RankWordManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.v2.tool.RankWordManager$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1655a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ RankWordBean a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC1655a(RankWordBean rankWordBean, int i) {
+        a(RankWordBean rankWordBean, int i) {
             this.a = rankWordBean;
             this.b = i;
         }
@@ -107,7 +106,7 @@ public class RankWordManager {
         textView.setTextColor(parseColor);
         textView.setText((i + 1) + "");
         textView2.setText(rankWordBean.keyword);
-        findViewById.setOnClickListener(new View$OnClickListenerC1655a(rankWordBean, i));
+        findViewById.setOnClickListener(new a(rankWordBean, i));
         OnRankWordListener onRankWordListener = this.e;
         if (onRankWordListener != null) {
             onRankWordListener.onRankWordExpose(findViewById, rankWordBean, i);

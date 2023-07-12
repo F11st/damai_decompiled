@@ -372,7 +372,7 @@ public final class DMH5Activity extends TaoMaiH5Activity {
             tb.b41.h(r7, r0)
             r0 = 0
             java.lang.String r1 = "rotate=false"
-            boolean r7 = kotlin.text.C8596g.K(r7, r1, r5, r4, r0)
+            boolean r7 = kotlin.text.g.K(r7, r1, r5, r4, r0)
             if (r7 != 0) goto L85
             goto L86
         L85:

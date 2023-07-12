@@ -2,9 +2,9 @@ package com.huawei.secure.android.common.encrypt.aes;
 
 import android.os.Build;
 import android.text.TextUtils;
-import com.huawei.secure.android.common.encrypt.utils.C5742b;
 import com.huawei.secure.android.common.encrypt.utils.EncryptUtil;
 import com.huawei.secure.android.common.encrypt.utils.HexUtil;
+import com.huawei.secure.android.common.encrypt.utils.b;
 import java.io.UnsupportedEncodingException;
 import java.security.GeneralSecurityException;
 import java.security.spec.AlgorithmParameterSpec;
@@ -31,28 +31,28 @@ public final class AesGcm {
 
     private static byte[] a(String str, byte[] bArr, byte[] bArr2) {
         if (TextUtils.isEmpty(str)) {
-            C5742b.b(d, "encrypt 5 content is null");
+            b.b(d, "encrypt 5 content is null");
             return new byte[0];
         } else if (bArr == null) {
-            C5742b.b(d, "encrypt 5 key is null");
+            b.b(d, "encrypt 5 key is null");
             return new byte[0];
         } else if (bArr.length < 16) {
-            C5742b.b(d, "encrypt 5 key lengh is not right");
+            b.b(d, "encrypt 5 key lengh is not right");
             return new byte[0];
         } else if (bArr2 == null) {
-            C5742b.b(d, "encrypt 5 iv is null");
+            b.b(d, "encrypt 5 iv is null");
             return new byte[0];
         } else if (bArr2.length < 12) {
-            C5742b.b(d, "encrypt 5 iv lengh is not right");
+            b.b(d, "encrypt 5 iv lengh is not right");
             return new byte[0];
         } else if (!isBuildVersionHigherThan19()) {
-            C5742b.b(d, "encrypt 5 build version not higher than 19");
+            b.b(d, "encrypt 5 build version not higher than 19");
             return new byte[0];
         } else {
             try {
                 return encrypt(str.getBytes("UTF-8"), bArr, bArr2);
             } catch (UnsupportedEncodingException e2) {
-                C5742b.b(d, "GCM encrypt data error" + e2.getMessage());
+                b.b(d, "GCM encrypt data error" + e2.getMessage());
                 return new byte[0];
             }
         }
@@ -72,18 +72,18 @@ public final class AesGcm {
 
     public static String decrypt(String str, String str2) {
         if (TextUtils.isEmpty(str)) {
-            C5742b.b(d, "decrypt 1 content is null");
+            b.b(d, "decrypt 1 content is null");
             return "";
         } else if (TextUtils.isEmpty(str2)) {
-            C5742b.b(d, "decrypt 1 key is null");
+            b.b(d, "decrypt 1 key is null");
             return "";
         } else if (!isBuildVersionHigherThan19()) {
-            C5742b.b(d, "decrypt 1 build version not higher than 19");
+            b.b(d, "decrypt 1 build version not higher than 19");
             return "";
         } else {
             byte[] hexStr2ByteArray = HexUtil.hexStr2ByteArray(str2);
             if (hexStr2ByteArray.length < 16) {
-                C5742b.b(d, "decrypt 1 key length is not right");
+                b.b(d, "decrypt 1 key length is not right");
                 return "";
             }
             return decrypt(str, hexStr2ByteArray);
@@ -100,7 +100,7 @@ public final class AesGcm {
             if (indexOf >= 0) {
                 return decrypt(HexUtil.byteArray2HexStr(HexUtil.hexStr2ByteArray(c2.substring(indexOf + 1))), bArr, HexUtil.hexStr2ByteArray(c2.substring(0, indexOf)));
             }
-            C5742b.b(d, " gcm cipherText data missing colon");
+            b.b(d, " gcm cipherText data missing colon");
         }
         return "";
     }
@@ -121,24 +121,24 @@ public final class AesGcm {
             System.arraycopy(d2, a2 + 1, bArr3, 0, length);
             return decrypt(bArr3, bArr2, copyOf);
         }
-        C5742b.b(d, " gcm cipherText data missing colon");
+        b.b(d, " gcm cipherText data missing colon");
         return new byte[0];
     }
 
     public static String encrypt(String str, String str2) {
         if (TextUtils.isEmpty(str)) {
-            C5742b.b(d, "encrypt 1 content is null");
+            b.b(d, "encrypt 1 content is null");
             return "";
         } else if (TextUtils.isEmpty(str2)) {
-            C5742b.b(d, "encrypt 1 key is null");
+            b.b(d, "encrypt 1 key is null");
             return "";
         } else if (!isBuildVersionHigherThan19()) {
-            C5742b.b(d, "encrypt 1 build version not higher than 19");
+            b.b(d, "encrypt 1 build version not higher than 19");
             return "";
         } else {
             byte[] hexStr2ByteArray = HexUtil.hexStr2ByteArray(str2);
             if (hexStr2ByteArray.length < 16) {
-                C5742b.b(d, "encrypt 1 key length is not right");
+                b.b(d, "encrypt 1 key length is not right");
                 return "";
             }
             return encrypt(str, hexStr2ByteArray);
@@ -160,7 +160,7 @@ public final class AesGcm {
         if (!TextUtils.isEmpty(str) && str.length() >= 24) {
             return str.substring(0, 24);
         }
-        C5742b.b(d, "IV is invalid.");
+        b.b(d, "IV is invalid.");
         return "";
     }
 
@@ -168,23 +168,23 @@ public final class AesGcm {
         try {
             return new String(decryptWithCryptHeadReturnByte(bArr, bArr2), "UTF-8");
         } catch (UnsupportedEncodingException unused) {
-            C5742b.b(d, "UnsupportedEncodingException");
+            b.b(d, "UnsupportedEncodingException");
             return "";
         }
     }
 
     public static String decrypt(String str, byte[] bArr) {
         if (TextUtils.isEmpty(str)) {
-            C5742b.b(d, "decrypt 2 content is null");
+            b.b(d, "decrypt 2 content is null");
             return "";
         } else if (bArr == null) {
-            C5742b.b(d, "decrypt 2 key is null");
+            b.b(d, "decrypt 2 key is null");
             return "";
         } else if (bArr.length < 16) {
-            C5742b.b(d, "decrypt 2 key lengh is not right");
+            b.b(d, "decrypt 2 key lengh is not right");
             return "";
         } else if (!isBuildVersionHigherThan19()) {
-            C5742b.b(d, "decrypt 2 build version not higher than 19");
+            b.b(d, "decrypt 2 build version not higher than 19");
             return "";
         } else {
             try {
@@ -193,17 +193,17 @@ public final class AesGcm {
                 String b2 = b(str);
                 String a2 = a(str);
                 if (TextUtils.isEmpty(b2)) {
-                    C5742b.b(d, "decrypt 2 iv is null");
+                    b.b(d, "decrypt 2 iv is null");
                     return "";
                 } else if (TextUtils.isEmpty(a2)) {
-                    C5742b.b(d, "decrypt 2 encrypt content is null");
+                    b.b(d, "decrypt 2 encrypt content is null");
                     return "";
                 } else {
                     cipher.init(2, secretKeySpec, getGcmAlgorithmParams(HexUtil.hexStr2ByteArray(b2)));
                     return new String(cipher.doFinal(HexUtil.hexStr2ByteArray(a2)), "UTF-8");
                 }
             } catch (UnsupportedEncodingException | GeneralSecurityException e2) {
-                C5742b.b(d, "GCM decrypt data exception: " + e2.getMessage());
+                b.b(d, "GCM decrypt data exception: " + e2.getMessage());
                 return "";
             }
         }
@@ -211,16 +211,16 @@ public final class AesGcm {
 
     public static String encrypt(String str, byte[] bArr) {
         if (TextUtils.isEmpty(str)) {
-            C5742b.b(d, "encrypt 2 content is null");
+            b.b(d, "encrypt 2 content is null");
             return "";
         } else if (bArr == null) {
-            C5742b.b(d, "encrypt 2 key is null");
+            b.b(d, "encrypt 2 key is null");
             return "";
         } else if (bArr.length < 16) {
-            C5742b.b(d, "encrypt 2 key lengh is not right");
+            b.b(d, "encrypt 2 key lengh is not right");
             return "";
         } else if (!isBuildVersionHigherThan19()) {
-            C5742b.b(d, "encrypt 2 build version not higher than 19");
+            b.b(d, "encrypt 2 build version not higher than 19");
             return "";
         } else {
             byte[] generateSecureRandom = EncryptUtil.generateSecureRandom(12);
@@ -251,25 +251,25 @@ public final class AesGcm {
 
     public static String encrypt(String str, String str2, String str3) {
         if (TextUtils.isEmpty(str)) {
-            C5742b.b(d, "encrypt 3 content is null");
+            b.b(d, "encrypt 3 content is null");
             return "";
         } else if (TextUtils.isEmpty(str2)) {
-            C5742b.b(d, "encrypt 3 key is null");
+            b.b(d, "encrypt 3 key is null");
             return "";
         } else if (TextUtils.isEmpty(str3)) {
-            C5742b.b(d, "encrypt 3 iv is null");
+            b.b(d, "encrypt 3 iv is null");
             return "";
         } else if (!isBuildVersionHigherThan19()) {
-            C5742b.b(d, "encrypt 3 build version not higher than 19");
+            b.b(d, "encrypt 3 build version not higher than 19");
             return "";
         } else {
             byte[] hexStr2ByteArray = HexUtil.hexStr2ByteArray(str2);
             byte[] hexStr2ByteArray2 = HexUtil.hexStr2ByteArray(str3);
             if (hexStr2ByteArray.length < 16) {
-                C5742b.b(d, "encrypt 3 key length is not right");
+                b.b(d, "encrypt 3 key length is not right");
                 return "";
             } else if (hexStr2ByteArray2.length < 12) {
-                C5742b.b(d, "encrypt 3 iv length is not right");
+                b.b(d, "encrypt 3 iv length is not right");
                 return "";
             } else {
                 return encrypt(str, hexStr2ByteArray, hexStr2ByteArray2);
@@ -279,25 +279,25 @@ public final class AesGcm {
 
     public static String decrypt(String str, String str2, String str3) {
         if (TextUtils.isEmpty(str)) {
-            C5742b.b(d, "decrypt 3 content is null");
+            b.b(d, "decrypt 3 content is null");
             return "";
         } else if (TextUtils.isEmpty(str2)) {
-            C5742b.b(d, "decrypt 3 key is null");
+            b.b(d, "decrypt 3 key is null");
             return "";
         } else if (TextUtils.isEmpty(str3)) {
-            C5742b.b(d, "decrypt 3 iv is null");
+            b.b(d, "decrypt 3 iv is null");
             return "";
         } else if (!isBuildVersionHigherThan19()) {
-            C5742b.b(d, "decrypt 3 build version not higher than 19");
+            b.b(d, "decrypt 3 build version not higher than 19");
             return "";
         } else {
             byte[] hexStr2ByteArray = HexUtil.hexStr2ByteArray(str2);
             byte[] hexStr2ByteArray2 = HexUtil.hexStr2ByteArray(str3);
             if (hexStr2ByteArray.length < 16) {
-                C5742b.b(d, "decrypt 3 key length is not right");
+                b.b(d, "decrypt 3 key length is not right");
                 return "";
             } else if (hexStr2ByteArray2.length < 12) {
-                C5742b.b(d, "decrypt 3 iv length is not right");
+                b.b(d, "decrypt 3 iv length is not right");
                 return "";
             } else {
                 return decrypt(str, hexStr2ByteArray, hexStr2ByteArray2);
@@ -307,22 +307,22 @@ public final class AesGcm {
 
     public static String encrypt(String str, byte[] bArr, byte[] bArr2) {
         if (TextUtils.isEmpty(str)) {
-            C5742b.b(d, "encrypt 4 content is null");
+            b.b(d, "encrypt 4 content is null");
             return "";
         } else if (bArr == null) {
-            C5742b.b(d, "encrypt 4 key is null");
+            b.b(d, "encrypt 4 key is null");
             return "";
         } else if (bArr.length < 16) {
-            C5742b.b(d, "encrypt 4 key lengh is not right");
+            b.b(d, "encrypt 4 key lengh is not right");
             return "";
         } else if (bArr2 == null) {
-            C5742b.b(d, "encrypt 4 iv is null");
+            b.b(d, "encrypt 4 iv is null");
             return "";
         } else if (bArr2.length < 12) {
-            C5742b.b(d, "encrypt 4 iv lengh is not right");
+            b.b(d, "encrypt 4 iv lengh is not right");
             return "";
         } else if (!isBuildVersionHigherThan19()) {
-            C5742b.b(d, "encrypt 4 build version not higher than 19");
+            b.b(d, "encrypt 4 build version not higher than 19");
             return "";
         } else {
             return HexUtil.byteArray2HexStr(a(str, bArr, bArr2));
@@ -331,28 +331,28 @@ public final class AesGcm {
 
     public static String decrypt(String str, byte[] bArr, byte[] bArr2) {
         if (TextUtils.isEmpty(str)) {
-            C5742b.b(d, "decrypt 4 content is null");
+            b.b(d, "decrypt 4 content is null");
             return "";
         } else if (bArr == null) {
-            C5742b.b(d, "decrypt 4 key is null");
+            b.b(d, "decrypt 4 key is null");
             return "";
         } else if (bArr.length < 16) {
-            C5742b.b(d, "decrypt 4 key lengh is not right");
+            b.b(d, "decrypt 4 key lengh is not right");
             return "";
         } else if (bArr2 == null) {
-            C5742b.b(d, "decrypt 4 iv is null");
+            b.b(d, "decrypt 4 iv is null");
             return "";
         } else if (bArr2.length < 12) {
-            C5742b.b(d, "decrypt 4 iv lengh is not right");
+            b.b(d, "decrypt 4 iv lengh is not right");
             return "";
         } else if (!isBuildVersionHigherThan19()) {
-            C5742b.b(d, "decrypt 4 build version not higher than 19");
+            b.b(d, "decrypt 4 build version not higher than 19");
             return "";
         } else {
             try {
                 return new String(decrypt(HexUtil.hexStr2ByteArray(str), bArr, bArr2), "UTF-8");
             } catch (UnsupportedEncodingException e2) {
-                C5742b.b(d, "GCM decrypt data exception: " + e2.getMessage());
+                b.b(d, "GCM decrypt data exception: " + e2.getMessage());
                 return "";
             }
         }
@@ -360,25 +360,25 @@ public final class AesGcm {
 
     public static byte[] encrypt(byte[] bArr, byte[] bArr2, byte[] bArr3) {
         if (bArr == null) {
-            C5742b.b(d, "encrypt 6 content is null");
+            b.b(d, "encrypt 6 content is null");
             return new byte[0];
         } else if (bArr.length == 0) {
-            C5742b.b(d, "encrypt 6 content length is 0");
+            b.b(d, "encrypt 6 content length is 0");
             return new byte[0];
         } else if (bArr2 == null) {
-            C5742b.b(d, "encrypt 6 key is null");
+            b.b(d, "encrypt 6 key is null");
             return new byte[0];
         } else if (bArr2.length < 16) {
-            C5742b.b(d, "encrypt 6 key length is error");
+            b.b(d, "encrypt 6 key length is error");
             return new byte[0];
         } else if (bArr3 == null) {
-            C5742b.b(d, "encrypt 6 iv is null");
+            b.b(d, "encrypt 6 iv is null");
             return new byte[0];
         } else if (bArr3.length < 12) {
-            C5742b.b(d, "encrypt 6 iv length is error");
+            b.b(d, "encrypt 6 iv length is error");
             return new byte[0];
         } else if (!isBuildVersionHigherThan19()) {
-            C5742b.b(d, "encrypt 6 build version not higher than 19");
+            b.b(d, "encrypt 6 build version not higher than 19");
             return new byte[0];
         } else {
             try {
@@ -387,7 +387,7 @@ public final class AesGcm {
                 cipher.init(1, secretKeySpec, getGcmAlgorithmParams(bArr3));
                 return cipher.doFinal(bArr);
             } catch (GeneralSecurityException e2) {
-                C5742b.b(d, "GCM encrypt data error" + e2.getMessage());
+                b.b(d, "GCM encrypt data error" + e2.getMessage());
                 return new byte[0];
             }
         }
@@ -395,25 +395,25 @@ public final class AesGcm {
 
     public static byte[] decrypt(byte[] bArr, byte[] bArr2, byte[] bArr3) {
         if (bArr == null) {
-            C5742b.b(d, "decrypt 6 content is null");
+            b.b(d, "decrypt 6 content is null");
             return new byte[0];
         } else if (bArr.length == 0) {
-            C5742b.b(d, "decrypt 6 content length is 0");
+            b.b(d, "decrypt 6 content length is 0");
             return new byte[0];
         } else if (bArr2 == null) {
-            C5742b.b(d, "decrypt 6 key is null");
+            b.b(d, "decrypt 6 key is null");
             return new byte[0];
         } else if (bArr2.length < 16) {
-            C5742b.b(d, "decrypt 6 key length is error");
+            b.b(d, "decrypt 6 key length is error");
             return new byte[0];
         } else if (bArr3 == null) {
-            C5742b.b(d, "decrypt 6 iv is null");
+            b.b(d, "decrypt 6 iv is null");
             return new byte[0];
         } else if (bArr3.length < 12) {
-            C5742b.b(d, "decrypt 6 iv length is error");
+            b.b(d, "decrypt 6 iv length is error");
             return new byte[0];
         } else if (!isBuildVersionHigherThan19()) {
-            C5742b.b(d, "decrypt 6 build version not higher than 19");
+            b.b(d, "decrypt 6 build version not higher than 19");
             return new byte[0];
         } else {
             try {
@@ -422,7 +422,7 @@ public final class AesGcm {
                 cipher.init(2, secretKeySpec, getGcmAlgorithmParams(bArr3));
                 return cipher.doFinal(bArr);
             } catch (GeneralSecurityException e2) {
-                C5742b.b(d, "GCM decrypt data exception: " + e2.getMessage());
+                b.b(d, "GCM decrypt data exception: " + e2.getMessage());
                 return new byte[0];
             }
         }

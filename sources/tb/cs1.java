@@ -6,8 +6,6 @@ import com.alibaba.youku.webp4pexode.WebpDecoder;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.pexode.Pexode;
-import com.taobao.pexode.decoder.C6831a;
-import com.taobao.pexode.decoder.C6834d;
 import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
@@ -42,8 +40,8 @@ public final class cs1 {
         w4.a();
         ak2.a(true, true);
         ur1.o().b();
-        Pexode.i(new C6834d());
-        Pexode.i(new C6831a());
+        Pexode.i(new com.taobao.pexode.decoder.d());
+        Pexode.i(new com.taobao.pexode.decoder.a());
         Pexode.i(new WebpDecoder());
         Pexode.q(ur1.o().c().build());
         Pexode.n(application);

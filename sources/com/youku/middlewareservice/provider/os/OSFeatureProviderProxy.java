@@ -1,7 +1,7 @@
 package com.youku.middlewareservice.provider.os;
 
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -10,7 +10,7 @@ public class OSFeatureProviderProxy {
 
     public static OSFeatureProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (OSFeatureProvider) C8883a.j("com.youku.middlewareservice_impl.provider.os.OSFeatureProviderImpl").b().f();
+            sProxy = (OSFeatureProvider) a.j("com.youku.middlewareservice_impl.provider.os.OSFeatureProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -18,7 +18,7 @@ public class OSFeatureProviderProxy {
     public static void init() {
         try {
             if (sProxy == null) {
-                sProxy = (OSFeatureProvider) C8883a.j("com.youku.middlewareservice_impl.provider.os.OSFeatureProviderImpl").b().f();
+                sProxy = (OSFeatureProvider) a.j("com.youku.middlewareservice_impl.provider.os.OSFeatureProviderImpl").b().f();
             }
             sProxy.init();
         } catch (Throwable th) {

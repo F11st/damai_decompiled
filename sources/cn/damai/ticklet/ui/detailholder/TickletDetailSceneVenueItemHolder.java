@@ -11,8 +11,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import cn.damai.member.R$drawable;
 import cn.damai.member.R$id;
 import cn.damai.member.R$layout;
@@ -49,13 +47,12 @@ public class TickletDetailSceneVenueItemHolder extends RecyclerView.ViewHolder {
     LinearLayout g;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.detailholder.TickletDetailSceneVenueItemHolder$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2061a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TicketExtMapBean a;
 
-        View$OnClickListenerC2061a(TicketExtMapBean ticketExtMapBean) {
+        a(TicketExtMapBean ticketExtMapBean) {
             this.a = ticketExtMapBean;
         }
 
@@ -73,16 +70,15 @@ public class TickletDetailSceneVenueItemHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.detailholder.TickletDetailSceneVenueItemHolder$b */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2062b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ String b;
         final /* synthetic */ String c;
         final /* synthetic */ int d;
 
-        View$OnClickListenerC2062b(String str, String str2, String str3, int i) {
+        b(String str, String str2, String str3, int i) {
             this.a = str;
             this.b = str2;
             this.c = str3;
@@ -101,16 +97,15 @@ public class TickletDetailSceneVenueItemHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.detailholder.TickletDetailSceneVenueItemHolder$c */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2063c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ String b;
         final /* synthetic */ String c;
         final /* synthetic */ int d;
 
-        View$OnClickListenerC2063c(String str, String str2, String str3, int i) {
+        c(String str, String str2, String str3, int i) {
             this.a = str;
             this.b = str2;
             this.c = str3;
@@ -140,7 +135,7 @@ public class TickletDetailSceneVenueItemHolder extends RecyclerView.ViewHolder {
         }
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, -2, 1.0f);
         TickletDetailServiceItem tickletDetailServiceItem = new TickletDetailServiceItem(this.a);
-        tickletDetailServiceItem.update(str, i, new View$OnClickListenerC2062b(str2, str3, str4, i2));
+        tickletDetailServiceItem.update(str, i, new b(str2, str3, str4, i2));
         tickletDetailServiceItem.setLayoutParams(layoutParams);
         return tickletDetailServiceItem;
     }
@@ -159,22 +154,22 @@ public class TickletDetailSceneVenueItemHolder extends RecyclerView.ViewHolder {
             String projectId = ((TicketDeatilActivity) this.a).getProjectId();
             String productSystemId = ((TicketDeatilActivity) this.a).getProductSystemId();
             if (i2 == 0) {
-                C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "venue_info", "mass_transit", un2.k().t(projectId, performId), Boolean.TRUE));
+                cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "venue_info", "mass_transit", un2.k().t(projectId, performId), Boolean.TRUE));
             } else if (i2 == 1) {
-                C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "venue_info", "parking_lots", un2.k().t(projectId, performId), Boolean.TRUE));
+                cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "venue_info", "parking_lots", un2.k().t(projectId, performId), Boolean.TRUE));
             } else if (i2 == 2) {
-                C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "venue_info", "smallfoods", un2.k().t(projectId, performId), Boolean.TRUE));
+                cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "venue_info", "smallfoods", un2.k().t(projectId, performId), Boolean.TRUE));
             } else if (i2 == 3) {
-                C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "venue_info", "wc", un2.k().t(projectId, performId), Boolean.TRUE));
+                cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "venue_info", "wc", un2.k().t(projectId, performId), Boolean.TRUE));
             } else if (i2 != 4) {
                 if (i2 != 5) {
                     if (i2 == 100) {
-                        C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "venue_info", "venue_map_btn", un2.k().t(projectId, performId), Boolean.TRUE));
+                        cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "venue_info", "venue_map_btn", un2.k().t(projectId, performId), Boolean.TRUE));
                     }
                 }
-                C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "venue_info", "mall", un2.k().t(projectId, performId), Boolean.TRUE));
+                cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "venue_info", "mall", un2.k().t(projectId, performId), Boolean.TRUE));
             } else {
-                C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "venue_info", "quickshop", un2.k().t(projectId, performId), Boolean.TRUE));
+                cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "venue_info", "quickshop", un2.k().t(projectId, performId), Boolean.TRUE));
             }
             if (i2 == 100) {
                 i2 = 0;
@@ -220,7 +215,7 @@ public class TickletDetailSceneVenueItemHolder extends RecyclerView.ViewHolder {
         if (AndroidInstantRuntime.support(ipChange, "1163090114")) {
             ipChange.ipc$dispatch("1163090114", new Object[]{this, tickletDetailServiceItem, str, Integer.valueOf(i), Integer.valueOf(i2), str2, str3, str4});
         } else {
-            tickletDetailServiceItem.update(str, i, new View$OnClickListenerC2063c(str2, str3, str4, i2));
+            tickletDetailServiceItem.update(str, i, new c(str2, str3, str4, i2));
         }
     }
 
@@ -267,15 +262,15 @@ public class TickletDetailSceneVenueItemHolder extends RecyclerView.ViewHolder {
                 this.f.removeAllViews();
                 this.g.removeAllViews();
                 for (int i2 = 0; i2 < this.d.size(); i2++) {
-                    TickletDetailServiceItem b = b(this.d.get(i2).getName(), this.d.get(i2).iconFontId, this.d.get(i2).type, ticketExtMapBean.lat, ticketExtMapBean.lng, ticketExtMapBean.title);
+                    TickletDetailServiceItem b2 = b(this.d.get(i2).getName(), this.d.get(i2).iconFontId, this.d.get(i2).type, ticketExtMapBean.lat, ticketExtMapBean.lng, ticketExtMapBean.title);
                     if (i2 < this.d.size() / 2) {
-                        this.f.addView(b);
+                        this.f.addView(b2);
                     } else {
-                        this.g.addView(b);
+                        this.g.addView(b2);
                     }
                 }
             }
-            this.e.update(ticketExtMapBean, true, true, (View.OnClickListener) new View$OnClickListenerC2061a(ticketExtMapBean));
+            this.e.update(ticketExtMapBean, true, true, (View.OnClickListener) new a(ticketExtMapBean));
             return;
         }
         this.b.setVisibility(8);

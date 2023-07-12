@@ -14,14 +14,13 @@ public class HttpDateTime {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.session.cookies.HttpDateTime$a */
     /* loaded from: classes11.dex */
-    public static class C6731a {
+    public static class a {
         int a;
         int b;
         int c;
 
-        C6731a(int i, int i2, int i3) {
+        a(int i, int i2, int i3) {
             this.a = i;
             this.b = i2;
             this.c = i3;
@@ -76,7 +75,7 @@ public class HttpDateTime {
         return 11;
     }
 
-    private static C6731a getTime(String str) {
+    private static a getTime(String str) {
         int i;
         int i2;
         int i3;
@@ -88,7 +87,7 @@ public class HttpDateTime {
             i = 1;
         }
         int i4 = i + 1 + 1 + 1 + 1;
-        return new C6731a(charAt, ((str.charAt(i2) - '0') * 10) + (str.charAt(i3) - '0'), ((str.charAt(i4) - '0') * 10) + (str.charAt(i4 + 1) - '0'));
+        return new a(charAt, ((str.charAt(i2) - '0') * 10) + (str.charAt(i3) - '0'), ((str.charAt(i4) - '0') * 10) + (str.charAt(i4 + 1) - '0'));
     }
 
     private static int getYear(String str) {
@@ -109,7 +108,7 @@ public class HttpDateTime {
         int month;
         int year;
         int i;
-        C6731a c6731a;
+        a aVar;
         int i2;
         int i3;
         int i4;
@@ -118,16 +117,16 @@ public class HttpDateTime {
             i = getDate(matcher.group(1));
             month = getMonth(matcher.group(2));
             year = getYear(matcher.group(3));
-            c6731a = getTime(matcher.group(4));
+            aVar = getTime(matcher.group(4));
         } else {
             Matcher matcher2 = HTTP_DATE_ANSIC_PATTERN.matcher(str);
             if (matcher2.find()) {
                 month = getMonth(matcher2.group(1));
                 int date = getDate(matcher2.group(2));
-                C6731a time = getTime(matcher2.group(3));
+                a time = getTime(matcher2.group(3));
                 year = getYear(matcher2.group(4));
                 i = date;
-                c6731a = time;
+                aVar = time;
             } else {
                 throw new IllegalArgumentException();
             }
@@ -142,7 +141,7 @@ public class HttpDateTime {
             i4 = year;
         }
         Time time2 = new Time("UTC");
-        time2.set(c6731a.c, c6731a.b, c6731a.a, i2, i3, i4);
+        time2.set(aVar.c, aVar.b, aVar.a, i2, i3, i4);
         return time2.toMillis(false);
     }
 }

@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
@@ -16,12 +16,12 @@ import org.reactivestreams.Subscription;
 public final class FlowableConcatWithCompletable<T> extends AbstractFlowableWithUpstream<T, T> {
     final CompletableSource other;
 
-    public FlowableConcatWithCompletable(AbstractC8147b<T> abstractC8147b, CompletableSource completableSource) {
-        super(abstractC8147b);
+    public FlowableConcatWithCompletable(b<T> bVar, CompletableSource completableSource) {
+        super(bVar);
         this.other = completableSource;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new ConcatWithSubscriber(subscriber, this.other));
     }

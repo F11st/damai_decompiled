@@ -77,7 +77,7 @@ public class fx extends fv<List<TraceLocation>, List<LatLng>> implements Runnabl
 
     @Override // com.amap.api.mapcore.util.ii
     public String getURL() {
-        String str = "key=" + C4554gc.f(this.f);
+        String str = "key=" + gc.f(this.f);
         String a = gf.a();
         return "http://restapi.amap.com/v4/grasproad/driving?" + str + ("&ts=" + a) + ("&scode=" + gf.a(this.f, a, str));
     }

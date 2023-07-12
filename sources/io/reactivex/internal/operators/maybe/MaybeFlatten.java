@@ -103,7 +103,7 @@ public final class MaybeFlatten<T, R> extends AbstractMaybeWithUpstream<T, R> {
         this.mapper = function;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super R> maybeObserver) {
         this.source.subscribe(new FlatMapMaybeObserver(maybeObserver, this.mapper));
     }

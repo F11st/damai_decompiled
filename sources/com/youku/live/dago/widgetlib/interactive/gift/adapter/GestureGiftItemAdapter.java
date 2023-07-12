@@ -85,6 +85,6 @@ public class GestureGiftItemAdapter extends RecyclerView.Adapter<ViewHolder> {
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "580394389") ? (ViewHolder) ipChange.ipc$dispatch("580394389", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.C7942layout.dago_pgc_ykl_item_gift, (ViewGroup) null, false));
+        return AndroidInstantRuntime.support(ipChange, "580394389") ? (ViewHolder) ipChange.ipc$dispatch("580394389", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.dago_pgc_ykl_item_gift, (ViewGroup) null, false));
     }
 }

@@ -229,7 +229,7 @@ public class CardView extends FrameLayout {
             }
         };
         this.mCardViewDelegate = cardViewDelegate;
-        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.CardView, i, R.C0024style.CardView);
+        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.CardView, i, R.style.CardView);
         int i2 = R.styleable.CardView_cardBackgroundColor;
         if (obtainStyledAttributes.hasValue(i2)) {
             valueOf = obtainStyledAttributes.getColorStateList(i2);
@@ -240,9 +240,9 @@ public class CardView extends FrameLayout {
             float[] fArr = new float[3];
             Color.colorToHSV(color2, fArr);
             if (fArr[2] > 0.5f) {
-                color = getResources().getColor(R.C0023color.cardview_light_background);
+                color = getResources().getColor(R.color.cardview_light_background);
             } else {
-                color = getResources().getColor(R.C0023color.cardview_dark_background);
+                color = getResources().getColor(R.color.cardview_dark_background);
             }
             valueOf = ColorStateList.valueOf(color);
         }

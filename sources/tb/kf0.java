@@ -5,10 +5,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
-import kotlin.collections.C8214m;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
-import kotlin.reflect.jvm.internal.impl.builtins.C8269a;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
@@ -36,17 +33,16 @@ import org.jetbrains.annotations.Nullable;
 public class kf0 {
     private static final PropertyDescriptor d;
     private static final Set<PropertyDescriptor> e;
-    private static final ModuleDescriptor a = new C9351a();
-    private static final C9353c b = new C9353c(ni1.i("<ERROR CLASS>"));
+    private static final ModuleDescriptor a = new a();
+    private static final c b = new c(ni1.i("<ERROR CLASS>"));
     public static final fd2 ERROR_TYPE_FOR_LOOP_IN_SUPERTYPES = j("<LOOP IN SUPERTYPES>");
     private static final z71 c = j("<ERROR PROPERTY TYPE>");
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.kf0$a */
     /* loaded from: classes3.dex */
-    public static class C9351a implements ModuleDescriptor {
-        C9351a() {
+    public static class a implements ModuleDescriptor {
+        a() {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:20:0x002c  */
@@ -74,7 +70,7 @@ public class kf0 {
                 Method dump skipped, instructions count: 304
                 To view this dump change 'Code comments level' option to 'DEBUG'
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.kf0.C9351a.a(int):void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.kf0.a.a(int):void");
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor
@@ -98,8 +94,8 @@ public class kf0 {
 
         @Override // kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor
         @NotNull
-        public AbstractC8271b getBuiltIns() {
-            C8269a E0 = C8269a.E0();
+        public kotlin.reflect.jvm.internal.impl.builtins.b getBuiltIns() {
+            kotlin.reflect.jvm.internal.impl.builtins.a E0 = kotlin.reflect.jvm.internal.impl.builtins.a.E0();
             if (E0 == null) {
                 a(14);
             }
@@ -126,7 +122,7 @@ public class kf0 {
         @NotNull
         public List<ModuleDescriptor> getExpectedByModules() {
             List<ModuleDescriptor> g;
-            g = C8214m.g();
+            g = kotlin.collections.m.g();
             if (g == null) {
                 a(9);
             }
@@ -168,7 +164,7 @@ public class kf0 {
             if (function1 == null) {
                 a(3);
             }
-            g = C8214m.g();
+            g = kotlin.collections.m.g();
             if (g == null) {
                 a(4);
             }
@@ -187,14 +183,13 @@ public class kf0 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.kf0$b */
     /* loaded from: classes3.dex */
-    public static class C9352b implements TypeConstructor {
-        final /* synthetic */ C9353c a;
+    public static class b implements TypeConstructor {
+        final /* synthetic */ c a;
         final /* synthetic */ String b;
 
-        C9352b(C9353c c9353c, String str) {
-            this.a = c9353c;
+        b(c cVar, String str) {
+            this.a = cVar;
             this.b = str;
         }
 
@@ -228,8 +223,8 @@ public class kf0 {
 
         @Override // kotlin.reflect.jvm.internal.impl.types.TypeConstructor
         @NotNull
-        public AbstractC8271b getBuiltIns() {
-            C8269a E0 = C8269a.E0();
+        public kotlin.reflect.jvm.internal.impl.builtins.b getBuiltIns() {
+            kotlin.reflect.jvm.internal.impl.builtins.a E0 = kotlin.reflect.jvm.internal.impl.builtins.a.E0();
             if (E0 == null) {
                 a(2);
             }
@@ -246,7 +241,7 @@ public class kf0 {
         @NotNull
         public List<TypeParameterDescriptor> getParameters() {
             List<TypeParameterDescriptor> g;
-            g = C8214m.g();
+            g = kotlin.collections.m.g();
             if (g == null) {
                 a(0);
             }
@@ -257,7 +252,7 @@ public class kf0 {
         @NotNull
         public Collection<z71> getSupertypes() {
             List g;
-            g = C8214m.g();
+            g = kotlin.collections.m.g();
             if (g == null) {
                 a(1);
             }
@@ -285,15 +280,14 @@ public class kf0 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.kf0$c */
     /* loaded from: classes3.dex */
-    public static class C9353c extends gj {
+    public static class c extends gj {
         /* JADX WARN: Illegal instructions before constructor call */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        public C9353c(@org.jetbrains.annotations.NotNull tb.ni1 r11) {
+        public c(@org.jetbrains.annotations.NotNull tb.ni1 r11) {
             /*
                 r10 = this;
                 if (r11 != 0) goto L6
@@ -330,7 +324,7 @@ public class kf0 {
                 r10.e(r0, r1, r11)
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.kf0.C9353c.<init>(tb.ni1):void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.kf0.c.<init>(tb.ni1):void");
         }
 
         private static /* synthetic */ void c(int i) {
@@ -424,12 +418,11 @@ public class kf0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kf0$d */
     /* loaded from: classes3.dex */
-    public static class C9354d implements MemberScope {
+    public static class d implements MemberScope {
         private final String a;
 
-        /* synthetic */ C9354d(String str, C9351a c9351a) {
+        /* synthetic */ d(String str, a aVar) {
             this(str);
         }
 
@@ -659,7 +652,7 @@ public class kf0 {
             La9:
                 throw r10
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.kf0.C9354d.a(int):void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.kf0.d.a(int):void");
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.resolve.scopes.MemberScope, kotlin.reflect.jvm.internal.impl.resolve.scopes.ResolutionScope
@@ -768,7 +761,7 @@ public class kf0 {
             return "ErrorScope{" + this.a + '}';
         }
 
-        private C9354d(@NotNull String str) {
+        private d(@NotNull String str) {
             if (str == null) {
                 a(0);
             }
@@ -778,12 +771,11 @@ public class kf0 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.kf0$e */
     /* loaded from: classes3.dex */
-    public static class C9355e implements MemberScope {
+    public static class e implements MemberScope {
         private final String a;
 
-        /* synthetic */ C9355e(String str, C9351a c9351a) {
+        /* synthetic */ e(String str, a aVar) {
             this(str);
         }
 
@@ -937,7 +929,7 @@ public class kf0 {
             return "ThrowingScope{" + this.a + '}';
         }
 
-        private C9355e(@NotNull String str) {
+        private e(@NotNull String str) {
             if (str == null) {
                 a(0);
             }
@@ -946,9 +938,8 @@ public class kf0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kf0$f */
     /* loaded from: classes3.dex */
-    public static class C9356f implements TypeConstructor {
+    public static class f implements TypeConstructor {
         private final TypeParameterDescriptor a;
         private final TypeConstructor b;
 
@@ -1015,8 +1006,8 @@ public class kf0 {
 
         @Override // kotlin.reflect.jvm.internal.impl.types.TypeConstructor
         @NotNull
-        public AbstractC8271b getBuiltIns() {
-            AbstractC8271b g = DescriptorUtilsKt.g(this.a);
+        public kotlin.reflect.jvm.internal.impl.builtins.b getBuiltIns() {
+            kotlin.reflect.jvm.internal.impl.builtins.b g = DescriptorUtilsKt.g(this.a);
             if (g == null) {
                 a(4);
             }
@@ -1185,16 +1176,16 @@ public class kf0 {
         if (str == null) {
             a(1);
         }
-        return new C9353c(ni1.i("<ERROR CLASS: " + str + jn1.G));
+        return new c(ni1.i("<ERROR CLASS: " + str + jn1.G));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     @NotNull
-    public static SimpleFunctionDescriptor f(@NotNull C9354d c9354d) {
-        if (c9354d == null) {
+    public static SimpleFunctionDescriptor f(@NotNull d dVar) {
+        if (dVar == null) {
             a(5);
         }
-        if0 if0Var = new if0(b, c9354d);
+        if0 if0Var = new if0(b, dVar);
         if0Var.l(null, null, Collections.emptyList(), Collections.emptyList(), j("<ERROR FUNCTION RETURN TYPE>"), Modality.OPEN, e70.PUBLIC);
         return if0Var;
     }
@@ -1220,9 +1211,9 @@ public class kf0 {
             a(3);
         }
         if (z) {
-            return new C9355e(str, null);
+            return new e(str, null);
         }
-        return new C9354d(str, null);
+        return new d(str, null);
     }
 
     @NotNull
@@ -1251,14 +1242,14 @@ public class kf0 {
 
     /* JADX INFO: Access modifiers changed from: private */
     @NotNull
-    public static TypeConstructor m(@NotNull String str, @NotNull C9353c c9353c) {
+    public static TypeConstructor m(@NotNull String str, @NotNull c cVar) {
         if (str == null) {
             a(17);
         }
-        if (c9353c == null) {
+        if (cVar == null) {
             a(18);
         }
-        return new C9352b(c9353c, str);
+        return new b(cVar, str);
     }
 
     @NotNull
@@ -1308,10 +1299,10 @@ public class kf0 {
     }
 
     private static boolean s(@Nullable DeclarationDescriptor declarationDescriptor) {
-        return declarationDescriptor instanceof C9353c;
+        return declarationDescriptor instanceof c;
     }
 
     public static boolean t(@Nullable z71 z71Var) {
-        return z71Var != null && (z71Var.c() instanceof C9356f);
+        return z71Var != null && (z71Var.c() instanceof f);
     }
 }

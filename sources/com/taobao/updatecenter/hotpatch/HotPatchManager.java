@@ -178,19 +178,17 @@ public class HotPatchManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.updatecenter.hotpatch.HotPatchManager$a */
     /* loaded from: classes11.dex */
-    public class C6939a extends BundleLifecycleHandler {
-        C6939a(HotPatchManager hotPatchManager, Patch patch) {
+    public class a extends BundleLifecycleHandler {
+        a(HotPatchManager hotPatchManager, Patch patch) {
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.updatecenter.hotpatch.HotPatchManager$b */
     /* loaded from: classes11.dex */
-    public class AsyncTaskC6940b extends AsyncTask<Boolean, Void, Void> {
-        private AsyncTaskC6940b() {
+    public class b extends AsyncTask<Boolean, Void, Void> {
+        private b() {
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
@@ -212,9 +210,8 @@ public class HotPatchManager {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.updatecenter.hotpatch.HotPatchManager$c */
     /* loaded from: classes11.dex */
-    public static class C6941c {
+    public static class c {
         private static final HotPatchManager a = new HotPatchManager();
     }
 
@@ -299,7 +296,7 @@ public class HotPatchManager {
     }
 
     public static HotPatchManager getInstance() {
-        return C6941c.a;
+        return c.a;
     }
 
     private void initAndFix(String str, Context context) {
@@ -345,7 +342,7 @@ public class HotPatchManager {
                             this.mAndFixManager.loadPatch(str2, patch, classLoaderByBundleName);
                         } else {
                             if (!z2) {
-                                Atlas.getInstance().addBundleListener(new C6939a(this, patch));
+                                Atlas.getInstance().addBundleListener(new a(this, patch));
                             }
                             z2 = true;
                         }
@@ -825,7 +822,7 @@ public class HotPatchManager {
     @Deprecated
     public void queryNewHotPatch(boolean z) {
         if (this.mQueryAtomic.compareAndSet(false, true)) {
-            new AsyncTaskC6940b().execute(Boolean.valueOf(z));
+            new b().execute(Boolean.valueOf(z));
         }
     }
 }

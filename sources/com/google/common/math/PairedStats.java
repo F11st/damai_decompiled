@@ -2,7 +2,6 @@ package com.google.common.math;
 
 import com.google.common.annotations.Beta;
 import com.google.common.annotations.GwtIncompatible;
-import com.google.common.base.C4834e;
 import java.io.Serializable;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -67,20 +66,20 @@ public final class PairedStats implements Serializable {
         return nm1.b(this.xStats, this.yStats, Double.valueOf(this.sumOfProductsOfDeltas));
     }
 
-    public AbstractC5240d leastSquaresFit() {
+    public d leastSquaresFit() {
         du1.w(count() > 1);
         if (Double.isNaN(this.sumOfProductsOfDeltas)) {
-            return AbstractC5240d.a();
+            return d.a();
         }
         double sumOfSquaresOfDeltas = this.xStats.sumOfSquaresOfDeltas();
         if (sumOfSquaresOfDeltas > 0.0d) {
             if (this.yStats.sumOfSquaresOfDeltas() > 0.0d) {
-                return AbstractC5240d.c(this.xStats.mean(), this.yStats.mean()).a(this.sumOfProductsOfDeltas / sumOfSquaresOfDeltas);
+                return d.c(this.xStats.mean(), this.yStats.mean()).a(this.sumOfProductsOfDeltas / sumOfSquaresOfDeltas);
             }
-            return AbstractC5240d.b(this.yStats.mean());
+            return d.b(this.yStats.mean());
         }
         du1.w(this.yStats.sumOfSquaresOfDeltas() > 0.0d);
-        return AbstractC5240d.d(this.xStats.mean());
+        return d.d(this.xStats.mean());
     }
 
     public double pearsonsCorrelationCoefficient() {
@@ -119,9 +118,9 @@ public final class PairedStats implements Serializable {
 
     public String toString() {
         if (count() > 0) {
-            return C4834e.b(this).d("xStats", this.xStats).d("yStats", this.yStats).a("populationCovariance", populationCovariance()).toString();
+            return com.google.common.base.e.b(this).d("xStats", this.xStats).d("yStats", this.yStats).a("populationCovariance", populationCovariance()).toString();
         }
-        return C4834e.b(this).d("xStats", this.xStats).d("yStats", this.yStats).toString();
+        return com.google.common.base.e.b(this).d("xStats", this.xStats).d("yStats", this.yStats).toString();
     }
 
     public Stats xStats() {

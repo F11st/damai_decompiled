@@ -43,20 +43,20 @@ public final class ar0 {
         Object obj;
         GXTemplateEngine.GXIDataListener b;
         CharSequence onTextProcess;
-        GXTemplateEngine.C3346h p = os0Var.p();
+        GXTemplateEngine.h p = os0Var.p();
         if ((p == null ? null : p.b()) != null) {
             JSONObject d = qs0Var.d(jSONObject);
-            GXTemplateEngine.C3348j c3348j = new GXTemplateEngine.C3348j();
-            c3348j.m((d == null || (obj = d.get("value")) == null) ? null : obj.toString());
-            c3348j.g(view);
-            c3348j.e(str);
-            c3348j.f(os0Var.r());
-            c3348j.k(pq0Var);
-            c3348j.l(d);
-            c3348j.d(Integer.valueOf(os0Var.h()));
-            c3348j.j(qs0Var.h(jSONObject));
-            GXTemplateEngine.C3346h p2 = os0Var.p();
-            if (p2 != null && (b = p2.b()) != null && (onTextProcess = b.onTextProcess(c3348j)) != null) {
+            GXTemplateEngine.j jVar = new GXTemplateEngine.j();
+            jVar.m((d == null || (obj = d.get("value")) == null) ? null : obj.toString());
+            jVar.g(view);
+            jVar.e(str);
+            jVar.f(os0Var.r());
+            jVar.k(pq0Var);
+            jVar.l(d);
+            jVar.d(Integer.valueOf(os0Var.h()));
+            jVar.j(qs0Var.h(jSONObject));
+            GXTemplateEngine.h p2 = os0Var.p();
+            if (p2 != null && (b = p2.b()) != null && (onTextProcess = b.onTextProcess(jVar)) != null) {
                 return onTextProcess;
             }
         }
@@ -108,34 +108,34 @@ public final class ar0 {
             float d2 = l81Var.d();
             ld2<k80> V = a2.V();
             k80 a3 = V == null ? null : V.a();
-            if (qr0Var.h() == null && (a3 instanceof k80.C9339c)) {
-                k80.C9339c c9339c = (k80.C9339c) a3;
-                if (!(d2 == c9339c.b())) {
-                    d2 = c9339c.b();
+            if (qr0Var.h() == null && (a3 instanceof k80.c)) {
+                k80.c cVar = (k80.c) a3;
+                if (!(d2 == cVar.b())) {
+                    d2 = cVar.b();
                 }
             }
             if (y != null && y.intValue() != 1) {
                 if (y.intValue() == 0) {
                     b4.setFontLines(y);
                     if (e2 == 0.0f) {
-                        GXRegisterCenter.C3334b d3 = GXRegisterCenter.Companion.a().d();
+                        GXRegisterCenter.b d3 = GXRegisterCenter.Companion.a().d();
                         if (!(d3 != null && d3.g())) {
                             throw new IllegalArgumentException("If lines = 0 or lines > 1, you must set text width");
                         }
                     } else if (e2 > 0.0f) {
                         b4.measure(View.MeasureSpec.makeMeasureSpec((int) e2, Integer.MIN_VALUE), 0);
-                        ld2Var2 = new ld2<>(new k80.C9339c(e2), new k80.C9339c(b4.getMeasuredHeight()));
+                        ld2Var2 = new ld2<>(new k80.c(e2), new k80.c(b4.getMeasuredHeight()));
                     }
                 } else if (y.intValue() > 1) {
                     b4.setFontLines(y);
                     if (e2 == 0.0f) {
-                        GXRegisterCenter.C3334b d4 = GXRegisterCenter.Companion.a().d();
+                        GXRegisterCenter.b d4 = GXRegisterCenter.Companion.a().d();
                         if (!(d4 != null && d4.g())) {
                             throw new IllegalArgumentException("If lines = 0 or lines > 1, you must set text width");
                         }
                     } else if (e2 > 0.0f) {
                         b4.measure(View.MeasureSpec.makeMeasureSpec((int) e2, Integer.MIN_VALUE), 0);
-                        ld2Var2 = new ld2<>(new k80.C9339c(b4.getMeasuredWidth()), new k80.C9339c(b4.getMeasuredHeight()));
+                        ld2Var2 = new ld2<>(new k80.c(b4.getMeasuredWidth()), new k80.c(b4.getMeasuredHeight()));
                     }
                 }
             } else {
@@ -144,9 +144,9 @@ public final class ar0 {
                 float measuredWidth = b4.getMeasuredWidth();
                 float measuredHeight = b4.getMeasuredHeight();
                 ld2<k80> V2 = b2.a().V();
-                boolean z = (V2 != null ? V2.b() : null) == null || (V2.b() instanceof k80.C9337a) || (V2.b() instanceof k80.C9340d);
+                boolean z = (V2 != null ? V2.b() : null) == null || (V2.b() instanceof k80.a) || (V2.b() instanceof k80.d);
                 ld2<k80> I = b2.a().I();
-                boolean z2 = (I == null || ((I.b() instanceof k80.C9337a) && (I.b() instanceof k80.C9340d))) ? false : true;
+                boolean z2 = (I == null || ((I.b() instanceof k80.a) && (I.b() instanceof k80.d))) ? false : true;
                 if (z && z2) {
                     if (measuredWidth < e2) {
                         measuredWidth = e2;
@@ -162,14 +162,14 @@ public final class ar0 {
                 }
                 float b6 = ((N == null || (c = N.c()) == null) ? 0.0f : c.b()) + ((N == null || (b = N.b()) == null) ? 0.0f : b.b());
                 if (e2 == 0.0f) {
-                    ld2Var = new ld2<>(new k80.C9339c(measuredWidth), new k80.C9339c(measuredHeight));
+                    ld2Var = new ld2<>(new k80.c(measuredWidth), new k80.c(measuredHeight));
                 } else {
                     if (e2 == b6) {
-                        ld2Var = new ld2<>(new k80.C9339c(measuredWidth), new k80.C9339c(measuredHeight));
+                        ld2Var = new ld2<>(new k80.c(measuredWidth), new k80.c(measuredHeight));
                     } else if (measuredWidth >= e2) {
-                        ld2Var2 = new ld2<>(new k80.C9339c(e2), new k80.C9339c(measuredHeight));
+                        ld2Var2 = new ld2<>(new k80.c(e2), new k80.c(measuredHeight));
                     } else {
-                        ld2Var = new ld2<>(new k80.C9339c(measuredWidth), new k80.C9339c(measuredHeight));
+                        ld2Var = new ld2<>(new k80.c(measuredWidth), new k80.c(measuredHeight));
                     }
                 }
                 ld2Var2 = ld2Var;

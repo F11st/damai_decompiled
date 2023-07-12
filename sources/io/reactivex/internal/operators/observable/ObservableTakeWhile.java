@@ -89,7 +89,7 @@ public final class ObservableTakeWhile<T> extends AbstractObservableWithUpstream
         this.predicate = predicate;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new TakeWhileObserver(observer, this.predicate));
     }

@@ -256,7 +256,7 @@ public class ViewServer implements Runnable {
                         }
                         Method declaredMethod = ViewDebug.class.getDeclaredMethod("dispatchCommand", View.class, String.class, String.class, OutputStream.class);
                         declaredMethod.setAccessible(true);
-                        declaredMethod.invoke(null, findWindow, str, str2, new C4661b(socket.getOutputStream()));
+                        declaredMethod.invoke(null, findWindow, str, str2, new b(socket.getOutputStream()));
                         if (!socket.isOutputShutdown()) {
                             BufferedWriter bufferedWriter2 = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
                             try {
@@ -442,12 +442,11 @@ public class ViewServer implements Runnable {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.android.debug.hv.ViewServer$b */
     /* loaded from: classes10.dex */
-    public static class C4661b extends OutputStream {
+    public static class b extends OutputStream {
         private final OutputStream a;
 
-        C4661b(OutputStream outputStream) {
+        b(OutputStream outputStream) {
             this.a = outputStream;
         }
 

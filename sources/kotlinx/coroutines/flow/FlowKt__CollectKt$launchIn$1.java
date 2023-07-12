@@ -2,7 +2,6 @@ package kotlinx.coroutines.flow;
 
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function2;
@@ -45,7 +44,7 @@ final class FlowKt__CollectKt$launchIn$1 extends SuspendLambda implements Functi
     @Nullable
     public final Object invokeSuspend(@NotNull Object obj) {
         Object d;
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         int i = this.label;
         if (i == 0) {
             i32.b(obj);
@@ -53,7 +52,7 @@ final class FlowKt__CollectKt$launchIn$1 extends SuspendLambda implements Functi
             Flow flow = this.$this_launchIn;
             this.L$0 = coroutineScope;
             this.label = 1;
-            if (C8672c.e(flow, this) == d) {
+            if (c.e(flow, this) == d) {
                 return d;
             }
         } else if (i != 1) {

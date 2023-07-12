@@ -109,7 +109,7 @@ public class GestureGiftWindow extends FrameLayout {
             ipChange.ipc$dispatch("-1686877995", new Object[]{this});
             return;
         }
-        LayoutInflater.from(getContext()).inflate(R.C7942layout.dago_pgc_ykl_gesture_gift_board, this);
+        LayoutInflater.from(getContext()).inflate(R.layout.dago_pgc_ykl_gesture_gift_board, this);
         this.mRootView = findViewById(R.id.root_view);
         this.mGestureContainer = (FrameLayout) findViewById(R.id.gesture_container);
         this.mGestureIndicatorContainer = (LinearLayout) findViewById(R.id.gesture_indicator_container);
@@ -337,7 +337,7 @@ public class GestureGiftWindow extends FrameLayout {
         ArrayList arrayList = new ArrayList();
         int dip2px = DensityUtil.dip2px(AppContextUtils.getApp(), 34.0f);
         for (GiftInfoBean giftInfoBean2 : list) {
-            TUrlDrawable tUrlDrawable = new TUrlDrawable(giftInfoBean2.icon, getResources().getDrawable(R.C7941drawable.dago_pgc_default_gift));
+            TUrlDrawable tUrlDrawable = new TUrlDrawable(giftInfoBean2.icon, getResources().getDrawable(R.drawable.dago_pgc_default_gift));
             SplashScheduler.IconItem iconItem = new SplashScheduler.IconItem();
             iconItem.icon = tUrlDrawable;
             tUrlDrawable.setBounds(0, 0, dip2px, dip2px);

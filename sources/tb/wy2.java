@@ -18,11 +18,11 @@ public class wy2 implements ApplicationBackgroundChangedDispatcher.BackgroundCha
     private final Map<pp1, VisibleCalculator> d = new HashMap();
 
     public wy2() {
-        IDispatcher b = ca0.b(C8934b0.APPLICATION_BACKGROUND_CHANGED_DISPATCHER);
+        IDispatcher b = ca0.b(b0.APPLICATION_BACKGROUND_CHANGED_DISPATCHER);
         if (b instanceof ApplicationBackgroundChangedDispatcher) {
             ((ApplicationBackgroundChangedDispatcher) b).addListener(this);
         }
-        IDispatcher b2 = ca0.b(C8934b0.PAGE_LEAVE_DISPATCHER);
+        IDispatcher b2 = ca0.b(b0.PAGE_LEAVE_DISPATCHER);
         if (b2 instanceof PageLeaveDispatcher) {
             ((PageLeaveDispatcher) b2).addListener(this);
         }

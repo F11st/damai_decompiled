@@ -4,8 +4,8 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.seatbiz.seat.wolf.newtradeorder.model.region.image.RegionImageLoader;
 import cn.damai.commonbusiness.seatbiz.seat.wolf.newtradeorder.model.region.image.data.RegionImageData;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -61,16 +61,16 @@ public class JPGRegionImage implements IRegionImage {
             if (TextUtils.isEmpty(str)) {
                 onLoadRegionImageFailed(str, RegionImageData.RegionImageStatus.LOAD_FAILED, "imgUrl=null");
             } else {
-                C0504a.b().c(str).n(new DMImageCreator.DMImageSuccListener() { // from class: cn.damai.commonbusiness.seatbiz.seat.wolf.newtradeorder.model.region.image.loader.JPGRegionImage.2
+                a.b().c(str).n(new DMImageCreator.DMImageSuccListener() { // from class: cn.damai.commonbusiness.seatbiz.seat.wolf.newtradeorder.model.region.image.loader.JPGRegionImage.2
                     private static transient /* synthetic */ IpChange $ipChange;
 
                     @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-                    public void onSuccess(DMImageCreator.C0502e c0502e) {
+                    public void onSuccess(DMImageCreator.e eVar) {
                         Drawable drawable;
                         IpChange ipChange2 = $ipChange;
                         if (AndroidInstantRuntime.support(ipChange2, "-1266887595")) {
-                            ipChange2.ipc$dispatch("-1266887595", new Object[]{this, c0502e});
-                        } else if (c0502e == null || (drawable = c0502e.a) == null) {
+                            ipChange2.ipc$dispatch("-1266887595", new Object[]{this, eVar});
+                        } else if (eVar == null || (drawable = eVar.a) == null) {
                             JPGRegionImage.this.onLoadRegionImageFailed(str, RegionImageData.RegionImageStatus.LOAD_FAILED, "ImageLoader_getDrawable_failed");
                         } else {
                             try {
@@ -85,15 +85,15 @@ public class JPGRegionImage implements IRegionImage {
                     private static transient /* synthetic */ IpChange $ipChange;
 
                     @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-                    public void onFail(DMImageCreator.C0501d c0501d) {
+                    public void onFail(DMImageCreator.d dVar) {
                         IpChange ipChange2 = $ipChange;
                         if (AndroidInstantRuntime.support(ipChange2, "-2039876928")) {
-                            ipChange2.ipc$dispatch("-2039876928", new Object[]{this, c0501d});
+                            ipChange2.ipc$dispatch("-2039876928", new Object[]{this, dVar});
                             return;
                         }
                         String str2 = "ImageLoader_download_fail";
-                        if (c0501d != null) {
-                            str2 = "ImageLoader_download_failresultCode=" + c0501d.a;
+                        if (dVar != null) {
+                            str2 = "ImageLoader_download_failresultCode=" + dVar.a;
                         }
                         JPGRegionImage.this.onLoadRegionImageFailed(str, RegionImageData.RegionImageStatus.LOAD_FAILED, str2);
                     }

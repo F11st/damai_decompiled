@@ -19,7 +19,7 @@ import java.util.List;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageLite<MessageType, BuilderType>, BuilderType extends Builder<MessageType, BuilderType>> extends AbstractMessageLite<MessageType, BuilderType> {
-    protected C5417m b = C5417m.a();
+    protected m b = m.a();
     protected int c = -1;
 
     /* compiled from: Taobao */
@@ -39,7 +39,7 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
         public void copyOnWrite() {
             if (this.isBuilt) {
                 MessageType messagetype = (MessageType) this.instance.h(MethodToInvoke.NEW_MUTABLE_INSTANCE);
-                messagetype.x(C5383g.INSTANCE, this.instance);
+                messagetype.x(g.INSTANCE, this.instance);
                 this.instance = messagetype;
                 this.isBuilt = false;
             }
@@ -92,7 +92,7 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
 
         public BuilderType mergeFrom(MessageType messagetype) {
             copyOnWrite();
-            this.instance.x(C5383g.INSTANCE, messagetype);
+            this.instance.x(g.INSTANCE, messagetype);
             return this;
         }
 
@@ -105,10 +105,10 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
         }
 
         @Override // com.google.protobuf.AbstractMessageLite.Builder, com.google.protobuf.MessageLite.Builder
-        public BuilderType mergeFrom(CodedInputStream codedInputStream, C5401g c5401g) throws IOException {
+        public BuilderType mergeFrom(CodedInputStream codedInputStream, com.google.protobuf.g gVar) throws IOException {
             copyOnWrite();
             try {
-                this.instance.j(MethodToInvoke.MERGE_FROM_STREAM, codedInputStream, c5401g);
+                this.instance.j(MethodToInvoke.MERGE_FROM_STREAM, codedInputStream, gVar);
                 return this;
             } catch (RuntimeException e) {
                 if (e.getCause() instanceof IOException) {
@@ -176,7 +176,7 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.Visitor
-        public FieldSet<C5380d> visitExtensions(FieldSet<C5380d> fieldSet, FieldSet<C5380d> fieldSet2) {
+        public FieldSet<d> visitExtensions(FieldSet<d> fieldSet, FieldSet<d> fieldSet2) {
             if (fieldSet.equals(fieldSet2)) {
                 return fieldSet;
             }
@@ -216,13 +216,13 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.Visitor
-        public C5406i visitLazyMessage(C5406i c5406i, C5406i c5406i2) {
-            if (c5406i == null && c5406i2 == null) {
+        public i visitLazyMessage(i iVar, i iVar2) {
+            if (iVar == null && iVar2 == null) {
                 return null;
             }
-            if (c5406i != null && c5406i2 != null) {
-                if (c5406i.equals(c5406i2)) {
-                    return c5406i;
+            if (iVar != null && iVar2 != null) {
+                if (iVar.equals(iVar2)) {
+                    return iVar;
                 }
                 throw b;
             }
@@ -361,9 +361,9 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.Visitor
-        public C5417m visitUnknownFields(C5417m c5417m, C5417m c5417m2) {
-            if (c5417m.equals(c5417m2)) {
-                return c5417m;
+        public m visitUnknownFields(m mVar, m mVar2) {
+            if (mVar.equals(mVar2)) {
+                return mVar;
             }
             throw b;
         }
@@ -371,32 +371,32 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
-    public static abstract class ExtendableBuilder<MessageType extends AbstractC5379c<MessageType, BuilderType>, BuilderType extends ExtendableBuilder<MessageType, BuilderType>> extends Builder<MessageType, BuilderType> implements ExtendableMessageOrBuilder<MessageType, BuilderType> {
+    public static abstract class ExtendableBuilder<MessageType extends c<MessageType, BuilderType>, BuilderType extends ExtendableBuilder<MessageType, BuilderType>> extends Builder<MessageType, BuilderType> implements ExtendableMessageOrBuilder<MessageType, BuilderType> {
         protected ExtendableBuilder(MessageType messagetype) {
             super(messagetype);
             MessageType messagetype2 = this.instance;
-            ((AbstractC5379c) messagetype2).d = ((AbstractC5379c) messagetype2).d.clone();
+            ((c) messagetype2).d = ((c) messagetype2).d.clone();
         }
 
-        private void verifyExtensionContainingType(C5381e<MessageType, ?> c5381e) {
-            if (c5381e.c() != getDefaultInstanceForType()) {
+        private void verifyExtensionContainingType(e<MessageType, ?> eVar) {
+            if (eVar.c() != getDefaultInstanceForType()) {
                 throw new IllegalArgumentException("This extension is for a different message type.  Please make sure that you are not suppressing any generics type warnings.");
             }
         }
 
-        public final <Type> BuilderType addExtension(AbstractC5399e<MessageType, List<Type>> abstractC5399e, Type type) {
-            C5381e<MessageType, ?> f = GeneratedMessageLite.f(abstractC5399e);
+        public final <Type> BuilderType addExtension(com.google.protobuf.e<MessageType, List<Type>> eVar, Type type) {
+            e<MessageType, ?> f = GeneratedMessageLite.f(eVar);
             verifyExtensionContainingType(f);
             copyOnWrite();
-            ((AbstractC5379c) this.instance).d.a(f.c, f.e(type));
+            ((c) this.instance).d.a(f.c, f.e(type));
             return this;
         }
 
-        public final <Type> BuilderType clearExtension(AbstractC5399e<MessageType, ?> abstractC5399e) {
-            C5381e<MessageType, ?> f = GeneratedMessageLite.f(abstractC5399e);
+        public final <Type> BuilderType clearExtension(com.google.protobuf.e<MessageType, ?> eVar) {
+            e<MessageType, ?> f = GeneratedMessageLite.f(eVar);
             verifyExtensionContainingType(f);
             copyOnWrite();
-            ((AbstractC5379c) this.instance).d.b(f.c);
+            ((c) this.instance).d.b(f.c);
             return this;
         }
 
@@ -406,41 +406,41 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
             if (this.isBuilt) {
                 super.copyOnWrite();
                 MessageType messagetype = this.instance;
-                ((AbstractC5379c) messagetype).d = ((AbstractC5379c) messagetype).d.clone();
+                ((c) messagetype).d = ((c) messagetype).d.clone();
             }
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.ExtendableMessageOrBuilder
-        public final <Type> Type getExtension(AbstractC5399e<MessageType, Type> abstractC5399e) {
-            return (Type) ((AbstractC5379c) this.instance).getExtension(abstractC5399e);
+        public final <Type> Type getExtension(com.google.protobuf.e<MessageType, Type> eVar) {
+            return (Type) ((c) this.instance).getExtension(eVar);
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.ExtendableMessageOrBuilder
-        public final <Type> int getExtensionCount(AbstractC5399e<MessageType, List<Type>> abstractC5399e) {
-            return ((AbstractC5379c) this.instance).getExtensionCount(abstractC5399e);
+        public final <Type> int getExtensionCount(com.google.protobuf.e<MessageType, List<Type>> eVar) {
+            return ((c) this.instance).getExtensionCount(eVar);
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.ExtendableMessageOrBuilder
-        public final <Type> boolean hasExtension(AbstractC5399e<MessageType, Type> abstractC5399e) {
-            return ((AbstractC5379c) this.instance).hasExtension(abstractC5399e);
+        public final <Type> boolean hasExtension(com.google.protobuf.e<MessageType, Type> eVar) {
+            return ((c) this.instance).hasExtension(eVar);
         }
 
-        void internalSetExtensionSet(FieldSet<C5380d> fieldSet) {
+        void internalSetExtensionSet(FieldSet<d> fieldSet) {
             copyOnWrite();
-            ((AbstractC5379c) this.instance).d = fieldSet;
+            ((c) this.instance).d = fieldSet;
         }
 
-        public final <Type> BuilderType setExtension(AbstractC5399e<MessageType, Type> abstractC5399e, Type type) {
-            C5381e<MessageType, ?> f = GeneratedMessageLite.f(abstractC5399e);
+        public final <Type> BuilderType setExtension(com.google.protobuf.e<MessageType, Type> eVar, Type type) {
+            e<MessageType, ?> f = GeneratedMessageLite.f(eVar);
             verifyExtensionContainingType(f);
             copyOnWrite();
-            ((AbstractC5379c) this.instance).d.o(f.c, f.f(type));
+            ((c) this.instance).d.o(f.c, f.f(type));
             return this;
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.ExtendableMessageOrBuilder
-        public final <Type> Type getExtension(AbstractC5399e<MessageType, List<Type>> abstractC5399e, int i) {
-            return (Type) ((AbstractC5379c) this.instance).getExtension(abstractC5399e, i);
+        public final <Type> Type getExtension(com.google.protobuf.e<MessageType, List<Type>> eVar, int i) {
+            return (Type) ((c) this.instance).getExtension(eVar, i);
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.Builder, com.google.protobuf.MessageLite.Builder
@@ -448,7 +448,7 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
             if (this.isBuilt) {
                 return (MessageType) this.instance;
             }
-            ((AbstractC5379c) this.instance).d.k();
+            ((c) this.instance).d.k();
             return (MessageType) super.buildPartial();
         }
 
@@ -458,25 +458,25 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
             return (BuilderType) super.mo493clone();
         }
 
-        public final <Type> BuilderType setExtension(AbstractC5399e<MessageType, List<Type>> abstractC5399e, int i, Type type) {
-            C5381e<MessageType, ?> f = GeneratedMessageLite.f(abstractC5399e);
+        public final <Type> BuilderType setExtension(com.google.protobuf.e<MessageType, List<Type>> eVar, int i, Type type) {
+            e<MessageType, ?> f = GeneratedMessageLite.f(eVar);
             verifyExtensionContainingType(f);
             copyOnWrite();
-            ((AbstractC5379c) this.instance).d.p(f.c, i, f.e(type));
+            ((c) this.instance).d.p(f.c, i, f.e(type));
             return this;
         }
     }
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
-    public interface ExtendableMessageOrBuilder<MessageType extends AbstractC5379c<MessageType, BuilderType>, BuilderType extends ExtendableBuilder<MessageType, BuilderType>> extends MessageLiteOrBuilder {
-        <Type> Type getExtension(AbstractC5399e<MessageType, Type> abstractC5399e);
+    public interface ExtendableMessageOrBuilder<MessageType extends c<MessageType, BuilderType>, BuilderType extends ExtendableBuilder<MessageType, BuilderType>> extends MessageLiteOrBuilder {
+        <Type> Type getExtension(com.google.protobuf.e<MessageType, Type> eVar);
 
-        <Type> Type getExtension(AbstractC5399e<MessageType, List<Type>> abstractC5399e, int i);
+        <Type> Type getExtension(com.google.protobuf.e<MessageType, List<Type>> eVar, int i);
 
-        <Type> int getExtensionCount(AbstractC5399e<MessageType, List<Type>> abstractC5399e);
+        <Type> int getExtensionCount(com.google.protobuf.e<MessageType, List<Type>> eVar);
 
-        <Type> boolean hasExtension(AbstractC5399e<MessageType, Type> abstractC5399e);
+        <Type> boolean hasExtension(com.google.protobuf.e<MessageType, Type> eVar);
     }
 
     /* compiled from: Taobao */
@@ -560,7 +560,7 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
 
         Internal.DoubleList visitDoubleList(Internal.DoubleList doubleList, Internal.DoubleList doubleList2);
 
-        FieldSet<C5380d> visitExtensions(FieldSet<C5380d> fieldSet, FieldSet<C5380d> fieldSet2);
+        FieldSet<d> visitExtensions(FieldSet<d> fieldSet, FieldSet<d> fieldSet2);
 
         float visitFloat(boolean z, float f, boolean z2, float f2);
 
@@ -570,7 +570,7 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
 
         Internal.IntList visitIntList(Internal.IntList intList, Internal.IntList intList2);
 
-        C5406i visitLazyMessage(C5406i c5406i, C5406i c5406i2);
+        i visitLazyMessage(i iVar, i iVar2);
 
         <T> Internal.ProtobufList<T> visitList(Internal.ProtobufList<T> protobufList, Internal.ProtobufList<T> protobufList2);
 
@@ -604,31 +604,29 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
 
         String visitString(boolean z, String str, boolean z2, String str2);
 
-        C5417m visitUnknownFields(C5417m c5417m, C5417m c5417m2);
+        m visitUnknownFields(m mVar, m mVar2);
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.GeneratedMessageLite$b */
     /* loaded from: classes10.dex */
-    protected static class C5378b<T extends GeneratedMessageLite<T, ?>> extends AbstractC5395a<T> {
+    protected static class b<T extends GeneratedMessageLite<T, ?>> extends com.google.protobuf.a<T> {
         private T b;
 
-        public C5378b(T t) {
+        public b(T t) {
             this.b = t;
         }
 
         @Override // com.google.protobuf.Parser
         /* renamed from: z */
-        public T parsePartialFrom(CodedInputStream codedInputStream, C5401g c5401g) throws InvalidProtocolBufferException {
-            return (T) GeneratedMessageLite.u(this.b, codedInputStream, c5401g);
+        public T parsePartialFrom(CodedInputStream codedInputStream, com.google.protobuf.g gVar) throws InvalidProtocolBufferException {
+            return (T) GeneratedMessageLite.u(this.b, codedInputStream, gVar);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.GeneratedMessageLite$d */
     /* loaded from: classes10.dex */
-    public static final class C5380d implements FieldSet.FieldDescriptorLite<C5380d> {
+    public static final class d implements FieldSet.FieldDescriptorLite<d> {
         final Internal.EnumLiteMap<?> a;
         final int b;
         final WireFormat.FieldType c;
@@ -637,8 +635,8 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
 
         @Override // java.lang.Comparable
         /* renamed from: a */
-        public int compareTo(C5380d c5380d) {
-            return this.b - c5380d.b;
+        public int compareTo(d dVar) {
+            return this.b - dVar.b;
         }
 
         @Override // com.google.protobuf.FieldSet.FieldDescriptorLite
@@ -679,12 +677,11 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.GeneratedMessageLite$e */
     /* loaded from: classes10.dex */
-    public static class C5381e<ContainingType extends MessageLite, Type> extends AbstractC5399e<ContainingType, Type> {
+    public static class e<ContainingType extends MessageLite, Type> extends com.google.protobuf.e<ContainingType, Type> {
         final ContainingType a;
         final Type b;
-        final C5380d c;
+        final d c;
 
         Object b(Object obj) {
             if (this.c.isRepeated()) {
@@ -729,12 +726,11 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.GeneratedMessageLite$f */
     /* loaded from: classes10.dex */
-    public static class C5382f implements Visitor {
+    public static class f implements Visitor {
         private int a;
 
-        private C5382f() {
+        private f() {
             this.a = 0;
         }
 
@@ -769,7 +765,7 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.Visitor
-        public FieldSet<C5380d> visitExtensions(FieldSet<C5380d> fieldSet, FieldSet<C5380d> fieldSet2) {
+        public FieldSet<d> visitExtensions(FieldSet<d> fieldSet, FieldSet<d> fieldSet2) {
             this.a = (this.a * 53) + fieldSet.hashCode();
             return fieldSet;
         }
@@ -799,9 +795,9 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.Visitor
-        public C5406i visitLazyMessage(C5406i c5406i, C5406i c5406i2) {
-            this.a = (this.a * 53) + (c5406i != null ? c5406i.hashCode() : 37);
-            return c5406i;
+        public i visitLazyMessage(i iVar, i iVar2) {
+            this.a = (this.a * 53) + (iVar != null ? iVar.hashCode() : 37);
+            return iVar;
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.Visitor
@@ -909,20 +905,19 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.Visitor
-        public C5417m visitUnknownFields(C5417m c5417m, C5417m c5417m2) {
-            this.a = (this.a * 53) + c5417m.hashCode();
-            return c5417m;
+        public m visitUnknownFields(m mVar, m mVar2) {
+            this.a = (this.a * 53) + mVar.hashCode();
+            return mVar;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.GeneratedMessageLite$g */
     /* loaded from: classes10.dex */
-    public static class C5383g implements Visitor {
-        public static final C5383g INSTANCE = new C5383g();
+    public static class g implements Visitor {
+        public static final g INSTANCE = new g();
 
-        private C5383g() {
+        private g() {
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.Visitor
@@ -977,7 +972,7 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.Visitor
-        public FieldSet<C5380d> visitExtensions(FieldSet<C5380d> fieldSet, FieldSet<C5380d> fieldSet2) {
+        public FieldSet<d> visitExtensions(FieldSet<d> fieldSet, FieldSet<d> fieldSet2) {
             if (fieldSet.i()) {
                 fieldSet = fieldSet.clone();
             }
@@ -1032,14 +1027,14 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.Visitor
-        public C5406i visitLazyMessage(C5406i c5406i, C5406i c5406i2) {
-            if (c5406i2 != null) {
-                if (c5406i == null) {
-                    c5406i = new C5406i();
+        public i visitLazyMessage(i iVar, i iVar2) {
+            if (iVar2 != null) {
+                if (iVar == null) {
+                    iVar = new i();
                 }
-                c5406i.d(c5406i2);
+                iVar.d(iVar2);
             }
-            return c5406i;
+            return iVar;
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.Visitor
@@ -1124,9 +1119,9 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
 
         @Override // com.google.protobuf.GeneratedMessageLite.Visitor
         public Object visitOneofLazyMessage(boolean z, Object obj, Object obj2) {
-            C5406i c5406i = z ? (C5406i) obj : new C5406i();
-            c5406i.d((C5406i) obj2);
-            return c5406i;
+            i iVar = z ? (i) obj : new i();
+            iVar.d((i) obj2);
+            return iVar;
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.Visitor
@@ -1154,15 +1149,15 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.Visitor
-        public C5417m visitUnknownFields(C5417m c5417m, C5417m c5417m2) {
-            return c5417m2 == C5417m.a() ? c5417m : C5417m.c(c5417m, c5417m2);
+        public m visitUnknownFields(m mVar, m mVar2) {
+            return mVar2 == m.a() ? mVar : m.c(mVar, mVar2);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static <MessageType extends AbstractC5379c<MessageType, BuilderType>, BuilderType extends ExtendableBuilder<MessageType, BuilderType>, T> C5381e<MessageType, T> f(AbstractC5399e<MessageType, T> abstractC5399e) {
-        if (abstractC5399e.a()) {
-            return (C5381e) abstractC5399e;
+    public static <MessageType extends c<MessageType, BuilderType>, BuilderType extends ExtendableBuilder<MessageType, BuilderType>, T> e<MessageType, T> f(com.google.protobuf.e<MessageType, T> eVar) {
+        if (eVar.a()) {
+            return (e) eVar;
         }
         throw new IllegalArgumentException("Expected a lite extension.");
     }
@@ -1176,17 +1171,17 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
 
     /* JADX INFO: Access modifiers changed from: protected */
     public static <E> Internal.ProtobufList<E> k() {
-        return C5408k.b();
+        return k.b();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static Object o(Method method, Object obj, Object... objArr) {
         try {
             return method.invoke(obj, objArr);
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException("Couldn't use Java reflection to implement protocol message reflection.", e);
-        } catch (InvocationTargetException e2) {
-            Throwable cause = e2.getCause();
+        } catch (IllegalAccessException e2) {
+            throw new RuntimeException("Couldn't use Java reflection to implement protocol message reflection.", e2);
+        } catch (InvocationTargetException e3) {
+            Throwable cause = e3.getCause();
             if (!(cause instanceof RuntimeException)) {
                 if (cause instanceof Error) {
                     throw ((Error) cause);
@@ -1209,35 +1204,35 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
 
     /* JADX INFO: Access modifiers changed from: protected */
     public static <T extends GeneratedMessageLite<T, ?>> T t(T t, byte[] bArr) throws InvalidProtocolBufferException {
-        return (T) g(v(t, bArr, C5401g.a()));
+        return (T) g(v(t, bArr, com.google.protobuf.g.a()));
     }
 
-    static <T extends GeneratedMessageLite<T, ?>> T u(T t, CodedInputStream codedInputStream, C5401g c5401g) throws InvalidProtocolBufferException {
+    static <T extends GeneratedMessageLite<T, ?>> T u(T t, CodedInputStream codedInputStream, com.google.protobuf.g gVar) throws InvalidProtocolBufferException {
         T t2 = (T) t.h(MethodToInvoke.NEW_MUTABLE_INSTANCE);
         try {
-            t2.j(MethodToInvoke.MERGE_FROM_STREAM, codedInputStream, c5401g);
+            t2.j(MethodToInvoke.MERGE_FROM_STREAM, codedInputStream, gVar);
             t2.q();
             return t2;
-        } catch (RuntimeException e) {
-            if (e.getCause() instanceof InvalidProtocolBufferException) {
-                throw ((InvalidProtocolBufferException) e.getCause());
+        } catch (RuntimeException e2) {
+            if (e2.getCause() instanceof InvalidProtocolBufferException) {
+                throw ((InvalidProtocolBufferException) e2.getCause());
             }
-            throw e;
+            throw e2;
         }
     }
 
-    private static <T extends GeneratedMessageLite<T, ?>> T v(T t, byte[] bArr, C5401g c5401g) throws InvalidProtocolBufferException {
+    private static <T extends GeneratedMessageLite<T, ?>> T v(T t, byte[] bArr, com.google.protobuf.g gVar) throws InvalidProtocolBufferException {
         try {
-            CodedInputStream e = CodedInputStream.e(bArr);
-            T t2 = (T) u(t, e, c5401g);
+            CodedInputStream e2 = CodedInputStream.e(bArr);
+            T t2 = (T) u(t, e2, gVar);
             try {
-                e.a(0);
+                e2.a(0);
                 return t2;
-            } catch (InvalidProtocolBufferException e2) {
-                throw e2.setUnfinishedMessage(t2);
+            } catch (InvalidProtocolBufferException e3) {
+                throw e3.setUnfinishedMessage(t2);
             }
-        } catch (InvalidProtocolBufferException e3) {
-            throw e3;
+        } catch (InvalidProtocolBufferException e4) {
+            throw e4;
         }
     }
 
@@ -1268,9 +1263,9 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
 
     public int hashCode() {
         if (this.a == 0) {
-            C5382f c5382f = new C5382f();
-            x(c5382f, this);
-            this.a = c5382f.a;
+            f fVar = new f();
+            x(fVar, this);
+            this.a = fVar.a;
         }
         return this.a;
     }
@@ -1304,13 +1299,13 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
         return (MessageType) h(MethodToInvoke.GET_DEFAULT_INSTANCE);
     }
 
-    int n(C5382f c5382f) {
+    int n(f fVar) {
         if (this.a == 0) {
-            int i = c5382f.a;
-            c5382f.a = 0;
-            x(c5382f, this);
-            this.a = c5382f.a;
-            c5382f.a = i;
+            int i = fVar.a;
+            fVar.a = 0;
+            x(fVar, this);
+            this.a = fVar.a;
+            fVar.a = i;
         }
         return this.a;
     }
@@ -1328,7 +1323,7 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
     }
 
     public String toString() {
-        return C5407j.e(this, super.toString());
+        return j.e(this, super.toString());
     }
 
     @Override // com.google.protobuf.MessageLite
@@ -1345,13 +1340,12 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.GeneratedMessageLite$c */
     /* loaded from: classes10.dex */
-    public static abstract class AbstractC5379c<MessageType extends AbstractC5379c<MessageType, BuilderType>, BuilderType extends ExtendableBuilder<MessageType, BuilderType>> extends GeneratedMessageLite<MessageType, BuilderType> implements ExtendableMessageOrBuilder<MessageType, BuilderType> {
-        protected FieldSet<C5380d> d = FieldSet.n();
+    public static abstract class c<MessageType extends c<MessageType, BuilderType>, BuilderType extends ExtendableBuilder<MessageType, BuilderType>> extends GeneratedMessageLite<MessageType, BuilderType> implements ExtendableMessageOrBuilder<MessageType, BuilderType> {
+        protected FieldSet<d> d = FieldSet.n();
 
-        private void y(C5381e<MessageType, ?> c5381e) {
-            if (c5381e.c() != getDefaultInstanceForType()) {
+        private void y(e<MessageType, ?> eVar) {
+            if (eVar.c() != getDefaultInstanceForType()) {
                 throw new IllegalArgumentException("This extension is for a different message type.  Please make sure that you are not suppressing any generics type warnings.");
             }
         }
@@ -1362,8 +1356,8 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.ExtendableMessageOrBuilder
-        public final <Type> Type getExtension(AbstractC5399e<MessageType, Type> abstractC5399e) {
-            C5381e<MessageType, ?> f = GeneratedMessageLite.f(abstractC5399e);
+        public final <Type> Type getExtension(com.google.protobuf.e<MessageType, Type> eVar) {
+            e<MessageType, ?> f = GeneratedMessageLite.f(eVar);
             y(f);
             Object e = this.d.e(f.c);
             if (e == null) {
@@ -1373,15 +1367,15 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.ExtendableMessageOrBuilder
-        public final <Type> int getExtensionCount(AbstractC5399e<MessageType, List<Type>> abstractC5399e) {
-            C5381e<MessageType, ?> f = GeneratedMessageLite.f(abstractC5399e);
+        public final <Type> int getExtensionCount(com.google.protobuf.e<MessageType, List<Type>> eVar) {
+            e<MessageType, ?> f = GeneratedMessageLite.f(eVar);
             y(f);
             return this.d.g(f.c);
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.ExtendableMessageOrBuilder
-        public final <Type> boolean hasExtension(AbstractC5399e<MessageType, Type> abstractC5399e) {
-            C5381e<MessageType, ?> f = GeneratedMessageLite.f(abstractC5399e);
+        public final <Type> boolean hasExtension(com.google.protobuf.e<MessageType, Type> eVar) {
+            e<MessageType, ?> f = GeneratedMessageLite.f(eVar);
             y(f);
             return this.d.h(f.c);
         }
@@ -1411,8 +1405,8 @@ public abstract class GeneratedMessageLite<MessageType extends GeneratedMessageL
         }
 
         @Override // com.google.protobuf.GeneratedMessageLite.ExtendableMessageOrBuilder
-        public final <Type> Type getExtension(AbstractC5399e<MessageType, List<Type>> abstractC5399e, int i) {
-            C5381e<MessageType, ?> f = GeneratedMessageLite.f(abstractC5399e);
+        public final <Type> Type getExtension(com.google.protobuf.e<MessageType, List<Type>> eVar, int i) {
+            e<MessageType, ?> f = GeneratedMessageLite.f(eVar);
             y(f);
             return (Type) f.d(this.d.f(f.c, i));
         }

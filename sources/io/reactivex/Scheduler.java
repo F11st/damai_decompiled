@@ -233,7 +233,7 @@ public abstract class Scheduler {
     }
 
     @NonNull
-    public <S extends Scheduler & Disposable> S when(@NonNull Function<AbstractC8147b<AbstractC8147b<AbstractC8146a>>, AbstractC8146a> function) {
+    public <S extends Scheduler & Disposable> S when(@NonNull Function<b<b<a>>, a> function) {
         return new SchedulerWhen(function, this);
     }
 

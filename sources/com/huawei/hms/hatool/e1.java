@@ -5,7 +5,7 @@ import org.json.JSONObject;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public class e1 extends AbstractC5634n {
+public class e1 extends n {
     public String b = "";
     public String c = "";
     public String d = "";
@@ -13,7 +13,7 @@ public class e1 extends AbstractC5634n {
     public String f = "";
     public String g;
 
-    @Override // com.huawei.hms.hatool.InterfaceC5646s
+    @Override // com.huawei.hms.hatool.s
     public JSONObject a() {
         JSONObject jSONObject = new JSONObject();
         jSONObject.put("androidid", this.a);

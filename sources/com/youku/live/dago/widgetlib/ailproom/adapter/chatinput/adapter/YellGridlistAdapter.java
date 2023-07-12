@@ -113,7 +113,7 @@ public class YellGridlistAdapter extends RecyclerView.Adapter<ViewHolder> {
                 }
             });
             wr1 s = ur1.o().s(str);
-            int i3 = R.C7941drawable.dago_pgc_chat_expression_default_bg;
+            int i3 = R.drawable.dago_pgc_chat_expression_default_bg;
             s.H(i3).k(i3).y(viewHolder.yellImage);
         }
     }
@@ -121,7 +121,7 @@ public class YellGridlistAdapter extends RecyclerView.Adapter<ViewHolder> {
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-2109960265") ? (ViewHolder) ipChange.ipc$dispatch("-2109960265", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.C7942layout.dago_pgc_yell_item, (ViewGroup) null));
+        return AndroidInstantRuntime.support(ipChange, "-2109960265") ? (ViewHolder) ipChange.ipc$dispatch("-2109960265", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.dago_pgc_yell_item, (ViewGroup) null));
     }
 
     public YellGridlistAdapter(Context context, List<BaseInfoBean> list) {

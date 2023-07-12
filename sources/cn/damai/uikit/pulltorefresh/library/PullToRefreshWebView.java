@@ -16,7 +16,7 @@ import com.android.alibaba.ip.runtime.IpChange;
 /* loaded from: classes8.dex */
 public class PullToRefreshWebView extends PullToRefreshBase<WebView> {
     private static transient /* synthetic */ IpChange $ipChange;
-    private static final PullToRefreshBase.OnRefreshListener<WebView> defaultOnRefreshListener = new C2534a();
+    private static final PullToRefreshBase.OnRefreshListener<WebView> defaultOnRefreshListener = new a();
     private final WebChromeClient defaultWebChromeClient;
 
     /* compiled from: Taobao */
@@ -43,18 +43,17 @@ public class PullToRefreshWebView extends PullToRefreshBase<WebView> {
                 return ((Boolean) ipChange.ipc$dispatch("-1078893330", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4), Integer.valueOf(i5), Integer.valueOf(i6), Integer.valueOf(i7), Integer.valueOf(i8), Boolean.valueOf(z)})).booleanValue();
             }
             boolean overScrollBy = super.overScrollBy(i, i2, i3, i4, i5, i6, i7, i8, z);
-            C2536b.b(PullToRefreshWebView.this, i, i3, i2, i4, getScrollRange(), 2, 1.5f, z);
+            b.b(PullToRefreshWebView.this, i, i3, i2, i4, getScrollRange(), 2, 1.5f, z);
             return overScrollBy;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.pulltorefresh.library.PullToRefreshWebView$a */
     /* loaded from: classes8.dex */
-    public static final class C2534a implements PullToRefreshBase.OnRefreshListener<WebView> {
+    public static final class a implements PullToRefreshBase.OnRefreshListener<WebView> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2534a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.pulltorefresh.library.PullToRefreshBase.OnRefreshListener

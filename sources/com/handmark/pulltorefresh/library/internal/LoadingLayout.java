@@ -46,9 +46,8 @@ public class LoadingLayout extends LinearLayout {
     private boolean mUseIntrinisicAnimation;
 
     /* compiled from: Taobao */
-    /* renamed from: com.handmark.pulltorefresh.library.internal.LoadingLayout$a */
     /* loaded from: classes10.dex */
-    static /* synthetic */ class C5458a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -222,7 +221,7 @@ public class LoadingLayout extends LinearLayout {
         rotateAnimation.setDuration(1200L);
         rotateAnimation.setRepeatCount(-1);
         rotateAnimation.setRepeatMode(1);
-        if (C5458a.a[mode.ordinal()] != 1) {
+        if (a.a[mode.ordinal()] != 1) {
             this.mPullLabel = context.getString(R$string.pull_to_refresh_pull_label);
             this.mRefreshingLabel = context.getString(R$string.pull_to_refresh_refreshing_label);
             this.mReleaseLabel = context.getString(R$string.pull_to_refresh_release_label);

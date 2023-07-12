@@ -7,15 +7,14 @@ import kotlin.PublishedApi;
 import kotlin.Result;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt;
 import kotlin.coroutines.jvm.internal.CoroutineStackFrame;
 import kotlin.jvm.JvmField;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
-import kotlinx.coroutines.C8696j;
 import kotlinx.coroutines.DisposableHandle;
 import kotlinx.coroutines.Job;
+import kotlinx.coroutines.j;
 import kotlinx.coroutines.selects.SelectBuilder;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -53,9 +52,8 @@ public final class SelectBuilderImpl<R> extends ka1 implements SelectBuilder<R>,
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.selects.SelectBuilderImpl$a */
     /* loaded from: classes11.dex */
-    public static final class C8708a extends v8<Object> {
+    public static final class a extends v8<Object> {
         private final long b;
         @JvmField
         @NotNull
@@ -64,7 +62,7 @@ public final class SelectBuilderImpl<R> extends ka1 implements SelectBuilder<R>,
         @NotNull
         public final t8 d;
 
-        public C8708a(@NotNull SelectBuilderImpl<?> selectBuilderImpl, @NotNull t8 t8Var) {
+        public a(@NotNull SelectBuilderImpl<?> selectBuilderImpl, @NotNull t8 t8Var) {
             oa2 oa2Var;
             this.c = selectBuilderImpl;
             this.d = t8Var;
@@ -140,29 +138,27 @@ public final class SelectBuilderImpl<R> extends ka1 implements SelectBuilder<R>,
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.selects.SelectBuilderImpl$b */
     /* loaded from: classes11.dex */
-    public static final class C8709b extends ma1 {
+    public static final class b extends ma1 {
         @JvmField
         @NotNull
         public final DisposableHandle d;
 
-        public C8709b(@NotNull DisposableHandle disposableHandle) {
+        public b(@NotNull DisposableHandle disposableHandle) {
             this.d = disposableHandle;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.selects.SelectBuilderImpl$c */
     /* loaded from: classes11.dex */
-    public static final class C8710c extends cn1 {
+    public static final class c extends cn1 {
         @JvmField
         @NotNull
-        public final ma1.C9437d a;
+        public final ma1.d a;
 
-        public C8710c(@NotNull ma1.C9437d c9437d) {
-            this.a = c9437d;
+        public c(@NotNull ma1.d dVar) {
+            this.a = dVar;
         }
 
         @Override // tb.cn1
@@ -185,10 +181,9 @@ public final class SelectBuilderImpl<R> extends ka1 implements SelectBuilder<R>,
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.selects.SelectBuilderImpl$d */
     /* loaded from: classes11.dex */
-    public final class C8711d extends b61<Job> {
-        public C8711d(@NotNull Job job) {
+    public final class d extends b61<Job> {
+        public d(@NotNull Job job) {
             super(job);
         }
 
@@ -224,7 +219,7 @@ public final class SelectBuilderImpl<R> extends ka1 implements SelectBuilder<R>,
     private final void initCancellability() {
         Job job = (Job) getContext().get(Job.Key);
         if (job != null) {
-            DisposableHandle e2 = Job.C8613a.e(job, true, false, new C8711d(job), 2, null);
+            DisposableHandle e2 = Job.a.e(job, true, false, new d(job), 2, null);
             y(e2);
             if (isSelected()) {
                 e2.dispose();
@@ -241,8 +236,8 @@ public final class SelectBuilderImpl<R> extends ka1 implements SelectBuilder<R>,
         Object j = j();
         Objects.requireNonNull(j, "null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
         for (ma1 ma1Var = (ma1) j; !b41.d(ma1Var, this); ma1Var = ma1Var.k()) {
-            if (ma1Var instanceof C8709b) {
-                ((C8709b) ma1Var).d.dispose();
+            if (ma1Var instanceof b) {
+                ((b) ma1Var).d.dispose();
             }
         }
     }
@@ -257,9 +252,9 @@ public final class SelectBuilderImpl<R> extends ka1 implements SelectBuilder<R>,
 
     @Override // kotlinx.coroutines.selects.SelectInstance
     public void disposeOnSelect(@NotNull DisposableHandle disposableHandle) {
-        C8709b c8709b = new C8709b(disposableHandle);
+        b bVar = new b(disposableHandle);
         if (!isSelected()) {
-            d(c8709b);
+            d(bVar);
             if (!isSelected()) {
                 return;
             }
@@ -297,7 +292,7 @@ public final class SelectBuilderImpl<R> extends ka1 implements SelectBuilder<R>,
 
     @Override // kotlinx.coroutines.selects.SelectBuilder
     public <P, Q> void invoke(@NotNull SelectClause2<? super P, ? extends Q> selectClause2, @NotNull Function2<? super Q, ? super Continuation<? super R>, ? extends Object> function2) {
-        SelectBuilder.C8707a.a(this, selectClause2, function2);
+        SelectBuilder.a.a(this, selectClause2, function2);
     }
 
     @Override // kotlinx.coroutines.selects.SelectInstance
@@ -323,7 +318,7 @@ public final class SelectBuilderImpl<R> extends ka1 implements SelectBuilder<R>,
             }
             return;
         }
-        disposeOnSelect(C8696j.b(getContext()).invokeOnTimeout(j, new Runnable() { // from class: kotlinx.coroutines.selects.SelectBuilderImpl$onTimeout$$inlined$Runnable$1
+        disposeOnSelect(j.b(getContext()).invokeOnTimeout(j, new Runnable() { // from class: kotlinx.coroutines.selects.SelectBuilderImpl$onTimeout$$inlined$Runnable$1
             @Override // java.lang.Runnable
             public final void run() {
                 if (SelectBuilderImpl.this.trySelect()) {
@@ -336,17 +331,17 @@ public final class SelectBuilderImpl<R> extends ka1 implements SelectBuilder<R>,
     @Override // kotlinx.coroutines.selects.SelectInstance
     @Nullable
     public Object performAtomicTrySelect(@NotNull t8 t8Var) {
-        return new C8708a(this, t8Var).c(null);
+        return new a(this, t8Var).c(null);
     }
 
     @Override // kotlinx.coroutines.selects.SelectInstance
     public void resumeSelectWithException(@NotNull Throwable th) {
         Object obj;
         Object obj2;
-        Object d;
         Object d2;
+        Object d3;
         Object obj3;
-        Continuation c;
+        Continuation c2;
         if (k40.a() && !isSelected()) {
             throw new AssertionError();
         }
@@ -362,15 +357,15 @@ public final class SelectBuilderImpl<R> extends ka1 implements SelectBuilder<R>,
                     return;
                 }
             } else {
-                d = C8234b.d();
-                if (obj4 == d) {
+                d2 = kotlin.coroutines.intrinsics.b.d();
+                if (obj4 == d2) {
                     AtomicReferenceFieldUpdater atomicReferenceFieldUpdater2 = f;
-                    d2 = C8234b.d();
+                    d3 = kotlin.coroutines.intrinsics.b.d();
                     obj3 = ba2.d;
-                    if (atomicReferenceFieldUpdater2.compareAndSet(this, d2, obj3)) {
-                        c = IntrinsicsKt__IntrinsicsJvmKt.c(this.d);
-                        Result.C8174a c8174a = Result.Companion;
-                        c.resumeWith(Result.m1271constructorimpl(i32.a(th)));
+                    if (atomicReferenceFieldUpdater2.compareAndSet(this, d3, obj3)) {
+                        c2 = IntrinsicsKt__IntrinsicsJvmKt.c(this.d);
+                        Result.a aVar = Result.Companion;
+                        c2.resumeWith(Result.m1271constructorimpl(i32.a(th)));
                         return;
                     }
                 } else {
@@ -384,8 +379,8 @@ public final class SelectBuilderImpl<R> extends ka1 implements SelectBuilder<R>,
     public void resumeWith(@NotNull Object obj) {
         Object obj2;
         Object obj3;
-        Object d;
         Object d2;
+        Object d3;
         Object obj4;
         if (k40.a() && !isSelected()) {
             throw new AssertionError();
@@ -394,24 +389,24 @@ public final class SelectBuilderImpl<R> extends ka1 implements SelectBuilder<R>,
             Object obj5 = this._result;
             obj2 = ba2.c;
             if (obj5 == obj2) {
-                Object d3 = dm.d(obj, null, 1, null);
+                Object d4 = dm.d(obj, null, 1, null);
                 AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = f;
                 obj3 = ba2.c;
-                if (atomicReferenceFieldUpdater.compareAndSet(this, obj3, d3)) {
+                if (atomicReferenceFieldUpdater.compareAndSet(this, obj3, d4)) {
                     return;
                 }
             } else {
-                d = C8234b.d();
-                if (obj5 == d) {
+                d2 = kotlin.coroutines.intrinsics.b.d();
+                if (obj5 == d2) {
                     AtomicReferenceFieldUpdater atomicReferenceFieldUpdater2 = f;
-                    d2 = C8234b.d();
+                    d3 = kotlin.coroutines.intrinsics.b.d();
                     obj4 = ba2.d;
-                    if (atomicReferenceFieldUpdater2.compareAndSet(this, d2, obj4)) {
+                    if (atomicReferenceFieldUpdater2.compareAndSet(this, d3, obj4)) {
                         if (Result.m1277isFailureimpl(obj)) {
                             Continuation<R> continuation = this.d;
                             Throwable m1274exceptionOrNullimpl = Result.m1274exceptionOrNullimpl(obj);
                             b41.f(m1274exceptionOrNullimpl);
-                            Result.C8174a c8174a = Result.Companion;
+                            Result.a aVar = Result.Companion;
                             if (k40.d() && (continuation instanceof CoroutineStackFrame)) {
                                 m1274exceptionOrNullimpl = pf2.a(m1274exceptionOrNullimpl, (CoroutineStackFrame) continuation);
                             }
@@ -458,7 +453,7 @@ public final class SelectBuilderImpl<R> extends ka1 implements SelectBuilder<R>,
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public java.lang.Object trySelectOther(@org.jetbrains.annotations.Nullable tb.ma1.C9437d r4) {
+    public java.lang.Object trySelectOther(@org.jetbrains.annotations.Nullable tb.ma1.d r4) {
         /*
             r3 = this;
         L0:
@@ -493,10 +488,10 @@ public final class SelectBuilderImpl<R> extends ka1 implements SelectBuilder<R>,
             if (r1 == 0) goto L6b
             if (r4 == 0) goto L65
             tb.v8 r1 = r4.a()
-            boolean r2 = r1 instanceof kotlinx.coroutines.selects.SelectBuilderImpl.C8708a
+            boolean r2 = r1 instanceof kotlinx.coroutines.selects.SelectBuilderImpl.a
             if (r2 == 0) goto L59
             r2 = r1
-            kotlinx.coroutines.selects.SelectBuilderImpl$a r2 = (kotlinx.coroutines.selects.SelectBuilderImpl.C8708a) r2
+            kotlinx.coroutines.selects.SelectBuilderImpl$a r2 = (kotlinx.coroutines.selects.SelectBuilderImpl.a) r2
             kotlinx.coroutines.selects.SelectBuilderImpl<?> r2 = r2.c
             if (r2 == r3) goto L4d
             goto L59
@@ -537,8 +532,8 @@ public final class SelectBuilderImpl<R> extends ka1 implements SelectBuilder<R>,
         Object obj;
         Object obj2;
         Object obj3;
-        Object d;
         Object d2;
+        Object d3;
         if (!isSelected()) {
             initCancellability();
         }
@@ -547,10 +542,10 @@ public final class SelectBuilderImpl<R> extends ka1 implements SelectBuilder<R>,
         if (obj4 == obj) {
             AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = f;
             obj3 = ba2.c;
-            d = C8234b.d();
-            if (atomicReferenceFieldUpdater.compareAndSet(this, obj3, d)) {
-                d2 = C8234b.d();
-                return d2;
+            d2 = kotlin.coroutines.intrinsics.b.d();
+            if (atomicReferenceFieldUpdater.compareAndSet(this, obj3, d2)) {
+                d3 = kotlin.coroutines.intrinsics.b.d();
+                return d3;
             }
             obj4 = this._result;
         }
@@ -567,7 +562,7 @@ public final class SelectBuilderImpl<R> extends ka1 implements SelectBuilder<R>,
     @PublishedApi
     public final void x(@NotNull Throwable th) {
         if (trySelect()) {
-            Result.C8174a c8174a = Result.Companion;
+            Result.a aVar = Result.Companion;
             resumeWith(Result.m1271constructorimpl(i32.a(th)));
         } else if (th instanceof CancellationException) {
         } else {

@@ -65,16 +65,15 @@ public class InvoiceTypeViewHolder {
     private PopupWindow w;
     private InvoiceSelectAddressView x;
     private Activity y;
-    private View.OnClickListener z = new View$OnClickListenerC2192a();
+    private View.OnClickListener z = new a();
     private List<AddressBean> u = new ArrayList();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.InvoiceTypeViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2192a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2192a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -98,12 +97,11 @@ public class InvoiceTypeViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.InvoiceTypeViewHolder$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2193b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2193b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -118,12 +116,11 @@ public class InvoiceTypeViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.InvoiceTypeViewHolder$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2194c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2194c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -138,12 +135,11 @@ public class InvoiceTypeViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.InvoiceTypeViewHolder$d */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2195d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2195d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -158,12 +154,11 @@ public class InvoiceTypeViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.InvoiceTypeViewHolder$e */
     /* loaded from: classes8.dex */
-    public class C2196e implements InvoiceSelectAddressView.OnAddressItemSelectedListener {
+    public class e implements InvoiceSelectAddressView.OnAddressItemSelectedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2196e() {
+        e() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.orderdetail.ui.view.InvoiceSelectAddressView.OnAddressItemSelectedListener
@@ -341,10 +336,10 @@ public class InvoiceTypeViewHolder {
         if (this.x == null) {
             InvoiceSelectAddressView invoiceSelectAddressView = new InvoiceSelectAddressView(this.y);
             this.x = invoiceSelectAddressView;
-            invoiceSelectAddressView.setOnClickListener(new View$OnClickListenerC2193b());
-            this.x.setOnAddAddressClickListener(new View$OnClickListenerC2194c());
-            this.x.setOnCancelClickListener(new View$OnClickListenerC2195d());
-            this.x.setOnAddressItemSelectedListener(new C2196e());
+            invoiceSelectAddressView.setOnClickListener(new b());
+            this.x.setOnAddAddressClickListener(new c());
+            this.x.setOnCancelClickListener(new d());
+            this.x.setOnAddressItemSelectedListener(new e());
         }
         this.x.setOrderAddressListAndSelected(this.u, this.v);
     }
@@ -451,9 +446,9 @@ public class InvoiceTypeViewHolder {
             } else {
                 this.o.setText("");
             }
-            String a = d41.a(addressBean);
-            if (!wh2.j(a)) {
-                this.p.setText(a);
+            String a2 = d41.a(addressBean);
+            if (!wh2.j(a2)) {
+                this.p.setText(a2);
             } else {
                 this.p.setText("");
             }

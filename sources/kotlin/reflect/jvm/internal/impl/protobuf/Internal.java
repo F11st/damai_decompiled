@@ -28,7 +28,7 @@ public class Internal {
     }
 
     public static boolean a(byte[] bArr) {
-        return C8470h.e(bArr);
+        return h.e(bArr);
     }
 
     public static String b(byte[] bArr) {

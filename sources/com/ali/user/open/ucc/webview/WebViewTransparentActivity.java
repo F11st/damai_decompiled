@@ -35,7 +35,7 @@ public class WebViewTransparentActivity extends UccWebViewActivity {
         if (AliMemberSDK.getService(StatusBarService.class) != null && ((StatusBarService) AliMemberSDK.getService(StatusBarService.class)).getTransparentWebLayout() > 0) {
             return ((StatusBarService) AliMemberSDK.getService(StatusBarService.class)).getTransparentWebLayout();
         }
-        return R.C2996layout.member_sdk_ucc_pop_layout;
+        return R.layout.member_sdk_ucc_pop_layout;
     }
 
     @Override // com.ali.user.open.core.webview.BaseWebViewActivity

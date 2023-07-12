@@ -1,7 +1,7 @@
 package com.taobao.orange.sync;
 
 import android.text.TextUtils;
-import anet.channel.request.C0193a;
+import anet.channel.request.a;
 import anetwork.channel.aidl.DefaultFinishEvent;
 import anetwork.channel.interceptor.Callback;
 import anetwork.channel.interceptor.Interceptor;
@@ -28,17 +28,17 @@ public class NetworkInterceptor implements Interceptor {
     private static final String ORANGE_RES_HEADER_DIFF = "a-orange-dp";
     static final String TAG = "NetworkInterceptor";
 
-    private C0193a.C0195b addLocalEnvToBuilder(C0193a.C0195b c0195b) {
+    private a.b addLocalEnvToBuilder(a.b bVar) {
         if (GlobalOrange.indexEnvCheck) {
             if (OConstant.ENV.ONLINE == GlobalOrange.env) {
-                c0195b.I(ORANGE_LOCAL_ENV, "prod");
+                bVar.I(ORANGE_LOCAL_ENV, "prod");
             } else if (OConstant.ENV.PREPARE == GlobalOrange.env) {
-                c0195b.I(ORANGE_LOCAL_ENV, "pre");
+                bVar.I(ORANGE_LOCAL_ENV, "pre");
             } else if (OConstant.ENV.TEST == GlobalOrange.env) {
-                c0195b.I(ORANGE_LOCAL_ENV, "daily");
+                bVar.I(ORANGE_LOCAL_ENV, "daily");
             }
         }
-        return c0195b;
+        return bVar;
     }
 
     static String getOrangeFromKey(Map<String, List<String>> map, String str) {
@@ -79,8 +79,8 @@ public class NetworkInterceptor implements Interceptor {
     @Override // anetwork.channel.interceptor.Interceptor
     public Future intercept(final Interceptor.Chain chain) {
         boolean z;
-        C0193a.C0195b u;
-        C0193a request = chain.request();
+        a.b u;
+        a request = chain.request();
         Callback callback = chain.callback();
         boolean z2 = false;
         if (GlobalOrange.indexUpdMode != OConstant.UPDMODE.O_EVENT && !TextUtils.isEmpty(request.h()) && !GlobalOrange.probeHosts.isEmpty()) {
@@ -103,7 +103,7 @@ public class NetworkInterceptor implements Interceptor {
                 } else {
                     u = chain.request().u();
                 }
-                C0193a.C0195b addLocalEnvToBuilder = addLocalEnvToBuilder(u);
+                a.b addLocalEnvToBuilder = addLocalEnvToBuilder(u);
                 int i = GlobalOrange.indexDiff;
                 if (i == 1) {
                     if (!TextUtils.isEmpty(GlobalOrange.reqOrangeHeader)) {
@@ -125,7 +125,7 @@ public class NetworkInterceptor implements Interceptor {
                     request = addLocalEnvToBuilder.J();
                 }
             } else if (!TextUtils.isEmpty(GlobalOrange.reqOrangeHeader)) {
-                C0193a.C0195b addLocalEnvToBuilder2 = addLocalEnvToBuilder(chain.request().u());
+                a.b addLocalEnvToBuilder2 = addLocalEnvToBuilder(chain.request().u());
                 if (z2) {
                     request = addLocalEnvToBuilder2.K(true).I(ORANGE_REQ_HEADER, GlobalOrange.reqOrangeHeader).J();
                 } else {

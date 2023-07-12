@@ -8,19 +8,18 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes11.dex */
 public interface IKeyboardHookProvider {
     @NotNull
-    public static final C7003a Companion = C7003a.a;
+    public static final a Companion = a.a;
     @NotNull
     public static final String NAME = "KeyboardHookProvider";
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.provider.IKeyboardHookProvider$a */
     /* loaded from: classes11.dex */
-    public static final class C7003a {
+    public static final class a {
         @NotNull
         public static final String NAME = "KeyboardHookProvider";
-        static final /* synthetic */ C7003a a = new C7003a();
+        static final /* synthetic */ a a = new a();
 
-        private C7003a() {
+        private a() {
         }
     }
 

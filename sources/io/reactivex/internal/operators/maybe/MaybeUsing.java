@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8148c;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeSource;
+import io.reactivex.c;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.CompositeException;
 import io.reactivex.functions.Consumer;
@@ -17,7 +17,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeUsing<T, D> extends AbstractC8148c<T> {
+public final class MaybeUsing<T, D> extends c<T> {
     final boolean eager;
     final Consumer<? super D> resourceDisposer;
     final Callable<? extends D> resourceSupplier;
@@ -147,7 +147,7 @@ public final class MaybeUsing<T, D> extends AbstractC8148c<T> {
         this.eager = z;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         try {
             D call = this.resourceSupplier.call();

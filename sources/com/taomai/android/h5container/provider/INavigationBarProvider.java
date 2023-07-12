@@ -12,19 +12,18 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes11.dex */
 public interface INavigationBarProvider extends IContainerProvider {
     @NotNull
-    public static final C7004a Companion = C7004a.a;
+    public static final a Companion = a.a;
     @NotNull
     public static final String NAME = "NavigationBarProvider";
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.provider.INavigationBarProvider$a */
     /* loaded from: classes11.dex */
-    public static final class C7004a {
+    public static final class a {
         @NotNull
         public static final String NAME = "NavigationBarProvider";
-        static final /* synthetic */ C7004a a = new C7004a();
+        static final /* synthetic */ a a = new a();
 
-        private C7004a() {
+        private a() {
         }
     }
 

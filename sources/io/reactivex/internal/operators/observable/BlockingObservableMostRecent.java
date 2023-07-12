@@ -3,7 +3,7 @@ package io.reactivex.internal.operators.observable;
 import io.reactivex.ObservableSource;
 import io.reactivex.internal.util.ExceptionHelper;
 import io.reactivex.internal.util.NotificationLite;
-import io.reactivex.observers.AbstractC8159a;
+import io.reactivex.observers.a;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -15,7 +15,7 @@ public final class BlockingObservableMostRecent<T> implements Iterable<T> {
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class MostRecentObserver<T> extends AbstractC8159a<T> {
+    static final class MostRecentObserver<T> extends a<T> {
         volatile Object value;
 
         /* JADX INFO: Access modifiers changed from: package-private */

@@ -21,12 +21,11 @@ public class km2 {
     private Map<String, List<String>> c = new HashMap();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.km2$b */
     /* loaded from: classes6.dex */
-    private static class C9369b implements IConfiguration {
+    private static class b implements IConfiguration {
         public static final String PATH = "theme/configuration.json";
 
-        private C9369b() {
+        private b() {
         }
 
         @Override // com.alibaba.android.ultron.trade.theme.IConfiguration
@@ -43,7 +42,7 @@ public class km2 {
     public km2(Context context) {
         if (context != null) {
             this.a = context;
-            this.b = new C9369b();
+            this.b = new b();
             d();
             return;
         }
@@ -81,10 +80,10 @@ public class km2 {
     private void d() {
         IConfiguration iConfiguration = this.b;
         if (iConfiguration != null) {
-            JSONObject b = b(iConfiguration.getConfigurationPath(), this.a);
-            if (b != null) {
-                for (String str : b.keySet()) {
-                    String string = b.getString(str);
+            JSONObject b2 = b(iConfiguration.getConfigurationPath(), this.a);
+            if (b2 != null) {
+                for (String str : b2.keySet()) {
+                    String string = b2.getString(str);
                     if (!TextUtils.isEmpty(string)) {
                         f(str, string.split(SymbolExpUtil.SYMBOL_VERTICALBAR));
                     }

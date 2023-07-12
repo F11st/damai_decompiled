@@ -50,10 +50,10 @@ public class QualityPopup extends PopupBase {
             ImageView imageView = viewHolder2.mTagView;
             if (dlnaQualityInfo.name.equalsIgnoreCase(LiveManager.StreamConfig.QTY_1080P)) {
                 textView.setText("蓝光 1080P");
-                imageView.setImageResource(R.C7933drawable.dago_dlna_quality_vip);
+                imageView.setImageResource(R.drawable.dago_dlna_quality_vip);
             } else if (dlnaQualityInfo.name.startsWith("HDR")) {
                 textView.setText("HDR");
-                imageView.setImageResource(R.C7933drawable.dago_dlna_quality_vip);
+                imageView.setImageResource(R.drawable.dago_dlna_quality_vip);
             } else if (dlnaQualityInfo.name.contains("720P")) {
                 textView.setText(dlnaQualityInfo.name);
             } else {
@@ -76,7 +76,7 @@ public class QualityPopup extends PopupBase {
             if (AndroidInstantRuntime.support(ipChange, "-1740578596")) {
                 return (RecyclerView.ViewHolder) ipChange.ipc$dispatch("-1740578596", new Object[]{this, viewGroup, Integer.valueOf(i)});
             }
-            View inflate = LayoutInflater.from(QualityPopup.this.caller()).inflate(R.C7935layout.proj_picker_popup_item_tag, viewGroup, false);
+            View inflate = LayoutInflater.from(QualityPopup.this.caller()).inflate(R.layout.proj_picker_popup_item_tag, viewGroup, false);
             UiAppDef.SimpleViewHolder viewHolder = new ViewHolder(inflate);
             inflate.setOnClickListener(viewHolder);
             return viewHolder;
@@ -117,7 +117,7 @@ public class QualityPopup extends PopupBase {
     }
 
     protected View createContentView(LayoutInflater layoutInflater, ViewGroup viewGroup) {
-        return layoutInflater.inflate(R.C7935layout.proj_picker_popup_new, viewGroup);
+        return layoutInflater.inflate(R.layout.proj_picker_popup_new, viewGroup);
     }
 
     protected void onContentViewCreated(LayoutInflater layoutInflater, View view) {

@@ -4,10 +4,10 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.middlewareservice.provider.ut.UserTrackProviderProxy;
 import java.util.HashMap;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import org.jetbrains.annotations.NotNull;
@@ -209,7 +209,7 @@ public final class ArchMontiorManager {
 
     static {
         Lazy<ArchMontiorManager> a;
-        a = C8177b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<ArchMontiorManager>() { // from class: com.youku.arch.v3.util.ArchMontiorManager$Companion$instance$2
+        a = b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<ArchMontiorManager>() { // from class: com.youku.arch.v3.util.ArchMontiorManager$Companion$instance$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* JADX WARN: Can't rename method to resolve collision */

@@ -34,15 +34,14 @@ public class c41 {
     private int j;
     private Context l;
     boolean k = false;
-    private View.OnClickListener m = new View$OnClickListenerC8988a();
+    private View.OnClickListener m = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.c41$a */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC8988a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC8988a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener

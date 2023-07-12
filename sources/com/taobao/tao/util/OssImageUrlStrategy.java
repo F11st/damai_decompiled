@@ -31,9 +31,8 @@ public class OssImageUrlStrategy {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.tao.util.OssImageUrlStrategy$a */
     /* loaded from: classes11.dex */
-    public static /* synthetic */ class C6899a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -113,7 +112,7 @@ public class OssImageUrlStrategy {
             imageUrlInfo.height = imageStrategyConfig.c();
         } else if ((imageStrategyConfig.g() != ImageStrategyConfig.SizeLimitType.ALL_LIMIT || imageUrlInfo.width <= 0 || imageUrlInfo.height <= 0) && dip >= 0) {
             int taobaoCDNPatten = taobaoImageUrlStrategy.taobaoCDNPatten(dip, true, !isConfigDisabled(imageStrategyConfig.h()));
-            int i2 = C6899a.a[imageStrategyConfig.g().ordinal()];
+            int i2 = a.a[imageStrategyConfig.g().ordinal()];
             if (i2 == 1) {
                 imageUrlInfo.width = taobaoCDNPatten;
                 imageUrlInfo.height = 0;

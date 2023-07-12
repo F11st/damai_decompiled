@@ -3,7 +3,6 @@ package com.alibaba.appmonitor.delegate;
 import com.alibaba.analytics.utils.Logger;
 import com.alibaba.appmonitor.event.EventRepo;
 import com.alibaba.appmonitor.event.EventType;
-import com.alipay.sdk.m.e0.C4186a;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -23,7 +22,7 @@ public class CommitTask implements Runnable {
     private long startTime = System.currentTimeMillis();
 
     private CommitTask(int i, int i2) {
-        this.interval = C4186a.a;
+        this.interval = com.alipay.sdk.m.e0.a.a;
         this.eventId = i;
         this.interval = i2;
     }

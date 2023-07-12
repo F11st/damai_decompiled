@@ -10,9 +10,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.homepage.ui.listener.HomeTopBgListener;
 import cn.damai.tetris.core.BaseLayer;
@@ -28,7 +26,6 @@ import cn.damai.tetris.core.ut.TrackType;
 import cn.damai.tetris.listener.IsRefreshListener;
 import cn.damai.tetris.request.DrObj;
 import cn.damai.tetris.v2.common.Node;
-import cn.damai.tetris.v2.componentplugin.C2007a;
 import cn.damai.tetris.v2.componentplugin.ComponentPageUi;
 import cn.damai.tetris.v2.structure.container.IContainer;
 import cn.damai.tetris.v2.structure.layer.ILayer;
@@ -47,7 +44,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import tb.C9039db;
+import tb.db;
 import tb.ja;
 import tb.m61;
 import tb.mu0;
@@ -71,11 +68,11 @@ public abstract class AbsFragmentV3 extends AbsFragment implements ComponentPage
     public IsRefreshListener mIsRefreshListener;
     protected WrappedVirtualLayoutManager mLayoutManager;
     protected LoadMoreView mLoadMoreView;
-    protected C2007a mManager;
+    protected cn.damai.tetris.v2.componentplugin.a mManager;
     protected IContainer mPageContainer;
     protected PtrFrameLayout mRefreshLayout;
     protected int mScrollY;
-    protected Handler mHandler = new HandlerC2001b();
+    protected Handler mHandler = new b();
     private HashMap<String, SectionDataPreDealListener> preDealListenerHashMap = new HashMap<>();
 
     /* compiled from: Taobao */
@@ -85,12 +82,11 @@ public abstract class AbsFragmentV3 extends AbsFragment implements ComponentPage
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.page.AbsFragmentV3$a */
     /* loaded from: classes7.dex */
-    public class C2000a extends qx1 {
+    public class a extends qx1 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2000a() {
+        a() {
         }
 
         @Override // tb.qx1, in.srain.cube.views.ptr.PtrHandler
@@ -136,12 +132,11 @@ public abstract class AbsFragmentV3 extends AbsFragment implements ComponentPage
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.page.AbsFragmentV3$b */
     /* loaded from: classes16.dex */
-    public class HandlerC2001b extends Handler {
+    public class b extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC2001b() {
+        b() {
         }
 
         @Override // android.os.Handler
@@ -157,12 +152,11 @@ public abstract class AbsFragmentV3 extends AbsFragment implements ComponentPage
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.page.AbsFragmentV3$c */
     /* loaded from: classes7.dex */
-    public class C2002c implements IImageLoader {
+    public class c implements IImageLoader {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2002c(AbsFragmentV3 absFragmentV3) {
+        c(AbsFragmentV3 absFragmentV3) {
         }
 
         @Override // cn.damai.uikit.image.IImageLoader
@@ -180,14 +174,14 @@ public abstract class AbsFragmentV3 extends AbsFragment implements ComponentPage
             if (AndroidInstantRuntime.support(ipChange, "-1621829748")) {
                 ipChange.ipc$dispatch("-1621829748", new Object[]{this, str, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), iImageSuccListener, iImageFailListener});
             } else {
-                C0504a.b().load(str, i, i2, i3, iImageSuccListener, iImageFailListener);
+                cn.damai.common.image.a.b().load(str, i, i2, i3, iImageSuccListener, iImageFailListener);
             }
         }
 
         @Override // cn.damai.uikit.image.IImageLoader
         public IImageLoader.ImageTicket loadinto(String str, ImageView imageView) {
             IpChange ipChange = $ipChange;
-            return AndroidInstantRuntime.support(ipChange, "-963021846") ? (IImageLoader.ImageTicket) ipChange.ipc$dispatch("-963021846", new Object[]{this, str, imageView}) : C0504a.b().loadinto(str, imageView);
+            return AndroidInstantRuntime.support(ipChange, "-963021846") ? (IImageLoader.ImageTicket) ipChange.ipc$dispatch("-963021846", new Object[]{this, str, imageView}) : cn.damai.common.image.a.b().loadinto(str, imageView);
         }
 
         @Override // cn.damai.uikit.image.IImageLoader
@@ -196,30 +190,29 @@ public abstract class AbsFragmentV3 extends AbsFragment implements ComponentPage
             if (AndroidInstantRuntime.support(ipChange, "775767852")) {
                 ipChange.ipc$dispatch("775767852", new Object[]{this, str, Integer.valueOf(i), iImageSuccListener, iImageFailListener});
             } else {
-                C0504a.b().load(str, i, iImageSuccListener, iImageFailListener);
+                cn.damai.common.image.a.b().load(str, i, iImageSuccListener, iImageFailListener);
             }
         }
 
         @Override // cn.damai.uikit.image.IImageLoader
         public IImageLoader.ImageTicket loadinto(String str, ImageView imageView, int i, int i2) {
             IpChange ipChange = $ipChange;
-            return AndroidInstantRuntime.support(ipChange, "1930449162") ? (IImageLoader.ImageTicket) ipChange.ipc$dispatch("1930449162", new Object[]{this, str, imageView, Integer.valueOf(i), Integer.valueOf(i2)}) : C0504a.b().loadinto(str, imageView, i, i2);
+            return AndroidInstantRuntime.support(ipChange, "1930449162") ? (IImageLoader.ImageTicket) ipChange.ipc$dispatch("1930449162", new Object[]{this, str, imageView, Integer.valueOf(i), Integer.valueOf(i2)}) : cn.damai.common.image.a.b().loadinto(str, imageView, i, i2);
         }
 
         @Override // cn.damai.uikit.image.IImageLoader
         public IImageLoader.ImageTicket load(String str, int i, int i2, IImageLoader.IImageSuccListener iImageSuccListener, IImageLoader.IImageFailListener iImageFailListener) {
             IpChange ipChange = $ipChange;
-            return AndroidInstantRuntime.support(ipChange, "1547350556") ? (IImageLoader.ImageTicket) ipChange.ipc$dispatch("1547350556", new Object[]{this, str, Integer.valueOf(i), Integer.valueOf(i2), iImageSuccListener, iImageFailListener}) : C0504a.b().load(str, i, i2, iImageSuccListener, iImageFailListener);
+            return AndroidInstantRuntime.support(ipChange, "1547350556") ? (IImageLoader.ImageTicket) ipChange.ipc$dispatch("1547350556", new Object[]{this, str, Integer.valueOf(i), Integer.valueOf(i2), iImageSuccListener, iImageFailListener}) : cn.damai.common.image.a.b().load(str, i, i2, iImageSuccListener, iImageFailListener);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.page.AbsFragmentV3$d */
     /* loaded from: classes7.dex */
-    public class C2003d implements TrackProxy.ITrack {
+    public class d implements TrackProxy.ITrack {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2003d() {
+        d() {
         }
 
         @Override // cn.damai.tetris.core.ut.TrackProxy.ITrack
@@ -229,21 +222,21 @@ public abstract class AbsFragmentV3 extends AbsFragment implements ComponentPage
                 ipChange.ipc$dispatch("-296814542", new Object[]{this, trackType, view, str, str2, str3, map, Boolean.valueOf(z)});
                 return;
             }
-            switch (C2004e.a[trackType.ordinal()]) {
+            switch (e.a[trackType.ordinal()]) {
                 case 1:
-                    C0529c.e().x(AbsFragmentV3.this.getUTKeyBuilder(str, str2, str3, map, Boolean.valueOf(z)));
+                    cn.damai.common.user.c.e().x(AbsFragmentV3.this.getUTKeyBuilder(str, str2, str3, map, Boolean.valueOf(z)));
                     return;
                 case 2:
-                    C0529c.e().x(AbsFragmentV3.this.getUTKeyBuilder(str, str2, str3, map, Boolean.valueOf(z)));
+                    cn.damai.common.user.c.e().x(AbsFragmentV3.this.getUTKeyBuilder(str, str2, str3, map, Boolean.valueOf(z)));
                     return;
                 case 3:
-                    C0529c.e().G(view, str3, str2, str, map);
+                    cn.damai.common.user.c.e().G(view, str3, str2, str, map);
                     return;
                 case 4:
-                    C0529c.e().D(str, str2, map.get("arg1"), map.get("arg2"), map, map.get("eventId") != null ? Integer.parseInt(map.get("eventId")) : 0);
+                    cn.damai.common.user.c.e().D(str, str2, map.get("arg1"), map.get("arg2"), map, map.get("eventId") != null ? Integer.parseInt(map.get("eventId")) : 0);
                     return;
                 case 5:
-                    C0529c.e().A(map, str2, str);
+                    cn.damai.common.user.c.e().A(map, str2, str);
                     return;
                 case 6:
                     try {
@@ -260,9 +253,8 @@ public abstract class AbsFragmentV3 extends AbsFragment implements ComponentPage
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.page.AbsFragmentV3$e */
     /* loaded from: classes16.dex */
-    static /* synthetic */ class C2004e {
+    static /* synthetic */ class e {
         static final /* synthetic */ int[] a;
 
         static {
@@ -325,21 +317,21 @@ public abstract class AbsFragmentV3 extends AbsFragment implements ComponentPage
         this.mRefreshLayout.addPtrUIHandler(ptrUiHeader);
         this.mRefreshLayout.setPtrIndicator(new xj0(100, getActivity()));
         this.mRefreshLayout.setResistance(1.7f);
-        this.mRefreshLayout.setPtrHandler(new C2000a());
+        this.mRefreshLayout.setPtrHandler(new a());
         this.mRefreshLayout.disableWhenHorizontalMove(true);
         this.mRefreshLayout.addPtrUIHandler(new PtrClassicDefaultHeader(mu0.a()) { // from class: cn.damai.tetris.page.AbsFragmentV3.2
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // in.srain.cube.views.ptr.PtrClassicDefaultHeader, in.srain.cube.views.ptr.PtrUIHandler
-            public void onUIPositionChange(PtrFrameLayout ptrFrameLayout, boolean z, byte b, rx1 rx1Var) {
+            public void onUIPositionChange(PtrFrameLayout ptrFrameLayout, boolean z, byte b2, rx1 rx1Var) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "1317046009")) {
-                    ipChange2.ipc$dispatch("1317046009", new Object[]{this, ptrFrameLayout, Boolean.valueOf(z), Byte.valueOf(b), rx1Var});
+                    ipChange2.ipc$dispatch("1317046009", new Object[]{this, ptrFrameLayout, Boolean.valueOf(z), Byte.valueOf(b2), rx1Var});
                     return;
                 }
-                super.onUIPositionChange(ptrFrameLayout, z, b, rx1Var);
-                int d = rx1Var.d();
-                if (d > 0) {
+                super.onUIPositionChange(ptrFrameLayout, z, b2, rx1Var);
+                int d2 = rx1Var.d();
+                if (d2 > 0) {
                     AbsFragmentV3 absFragmentV3 = AbsFragmentV3.this;
                     absFragmentV3.mScrollY = 0;
                     absFragmentV3.mIsRefreshDown = true;
@@ -348,7 +340,7 @@ public abstract class AbsFragmentV3 extends AbsFragment implements ComponentPage
                 }
                 HomeTopBgListener homeTopBgListener = AbsFragmentV3.this.mHomeTopBgListener;
                 if (homeTopBgListener != null) {
-                    homeTopBgListener.scrollY(-d);
+                    homeTopBgListener.scrollY(-d2);
                 }
                 AbsFragmentV3 absFragmentV32 = AbsFragmentV3.this;
                 IsRefreshListener isRefreshListener = absFragmentV32.mIsRefreshListener;
@@ -381,7 +373,7 @@ public abstract class AbsFragmentV3 extends AbsFragment implements ComponentPage
         if (AndroidInstantRuntime.support(ipChange, "-294170250")) {
             ipChange.ipc$dispatch("-294170250", new Object[]{this});
         } else {
-            yl2.b(new C2002c(this), new C2003d());
+            yl2.b(new c(this), new d());
         }
     }
 
@@ -400,7 +392,7 @@ public abstract class AbsFragmentV3 extends AbsFragment implements ComponentPage
                         if (iLayer instanceof tt0) {
                             tt0 tt0Var = (tt0) iLayer;
                             if (str.equals(tt0Var.c())) {
-                                tt0Var.createSectionList(new C9039db().g(baseResponse, i), false);
+                                tt0Var.createSectionList(new db().g(baseResponse, i), false);
                                 this.mPageContainer.updateContentAdapter();
                             }
                         }
@@ -477,9 +469,9 @@ public abstract class AbsFragmentV3 extends AbsFragment implements ComponentPage
         return drObj;
     }
 
-    public C0525a.C0527b getUTKeyBuilder(String str, String str2, String str3, Map<String, String> map, Boolean bool) {
+    public a.b getUTKeyBuilder(String str, String str2, String str3, Map<String, String> map, Boolean bool) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1860135687") ? (C0525a.C0527b) ipChange.ipc$dispatch("1860135687", new Object[]{this, str, str2, str3, map, bool}) : new C0525a.C0527b().i(str).f(str2).l(str3).g(bool.booleanValue()).j(map);
+        return AndroidInstantRuntime.support(ipChange, "1860135687") ? (a.b) ipChange.ipc$dispatch("1860135687", new Object[]{this, str, str2, str3, map, bool}) : new a.b().i(str).f(str2).l(str3).g(bool.booleanValue()).j(map);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -491,9 +483,9 @@ public abstract class AbsFragmentV3 extends AbsFragment implements ComponentPage
             return;
         }
         super.hookOnLoadMore(view);
-        C2007a c2007a = this.mManager;
-        if (c2007a != null) {
-            c2007a.b(view);
+        cn.damai.tetris.v2.componentplugin.a aVar = this.mManager;
+        if (aVar != null) {
+            aVar.b(view);
         }
     }
 
@@ -506,9 +498,9 @@ public abstract class AbsFragmentV3 extends AbsFragment implements ComponentPage
             return;
         }
         super.hookOnMessage(message);
-        C2007a c2007a = this.mManager;
-        if (c2007a != null) {
-            c2007a.c(message.what, message.value);
+        cn.damai.tetris.v2.componentplugin.a aVar = this.mManager;
+        if (aVar != null) {
+            aVar.c(message.what, message.value);
         }
     }
 
@@ -589,7 +581,7 @@ public abstract class AbsFragmentV3 extends AbsFragment implements ComponentPage
         if (AndroidInstantRuntime.support(ipChange, "333660479")) {
             ipChange.ipc$dispatch("333660479", new Object[]{this, baseResponse});
         } else {
-            this.mPageContainer.addSectionList(new C9039db().f(baseResponse), true, false);
+            this.mPageContainer.addSectionList(new db().f(baseResponse), true, false);
         }
     }
 
@@ -619,12 +611,12 @@ public abstract class AbsFragmentV3 extends AbsFragment implements ComponentPage
         PtrFrameLayout ptrFrameLayout = (PtrFrameLayout) view.findViewById(R$id.refreshLayout);
         this.mRefreshLayout = ptrFrameLayout;
         ptrFrameLayout.setDescendantFocusability(393216);
-        C2007a c2007a = new C2007a(this);
-        this.mManager = c2007a;
-        nt0 nt0Var = new nt0(this.baseContext, c2007a);
+        cn.damai.tetris.v2.componentplugin.a aVar = new cn.damai.tetris.v2.componentplugin.a(this);
+        this.mManager = aVar;
+        nt0 nt0Var = new nt0(this.baseContext, aVar);
         this.mPageContainer = nt0Var;
         this.baseContext.b(nt0Var);
-        if (!new C9039db().i(xl2.DM_COMMON_LOOP_BANNER_CID)) {
+        if (!new db().i(xl2.DM_COMMON_LOOP_BANNER_CID)) {
             initTetrisProxy();
         }
         initRefreshLayout();
@@ -670,7 +662,7 @@ public abstract class AbsFragmentV3 extends AbsFragment implements ComponentPage
             linearLayout.removeAllViews();
             addBottomBarView(iteratorSections);
         }
-        setData(new C9039db().e(baseResponse));
+        setData(new db().e(baseResponse));
         if (baseResponse == null || (globalConfig = baseResponse.globalConfig) == null) {
             return;
         }

@@ -3,7 +3,7 @@ package com.amap.api.mapcore.util;
 import android.graphics.Bitmap;
 import android.opengl.GLES20;
 import com.alibaba.wireless.security.aopsdk.replace.android.graphics.Point;
-import com.amap.api.mapcore.util.C4505de;
+import com.amap.api.mapcore.util.de;
 import com.amap.api.mapcore.util.dq;
 import com.amap.api.mapcore.util.et;
 import com.amap.api.mapcore.util.eu;
@@ -26,8 +26,8 @@ import java.util.List;
 /* loaded from: classes10.dex */
 public class dc implements ITileOverlayDelegate {
     private static int h;
-    C4505de.C4512g a;
-    private C4469ab b;
+    de.g a;
+    private ab b;
     private TileProvider c;
     private Float d;
     private boolean e;
@@ -37,21 +37,21 @@ public class dc implements ITileOverlayDelegate {
     private int j;
     private int k;
     private er l;
-    private List<C4503a> m = new ArrayList();
+    private List<a> m = new ArrayList();
     private boolean n = false;
-    private C4504b o = null;
+    private b o = null;
     private String p;
     private FloatBuffer q;
 
-    public dc(TileOverlayOptions tileOverlayOptions, C4469ab c4469ab, boolean z) {
-        eu.C4534a c4534a;
+    public dc(TileOverlayOptions tileOverlayOptions, ab abVar, boolean z) {
+        eu.a aVar;
         this.f = false;
         this.i = 256;
         this.j = 256;
         this.k = -1;
         this.p = null;
         this.q = null;
-        this.b = c4469ab;
+        this.b = abVar;
         TileProvider tileProvider = tileOverlayOptions.getTileProvider();
         this.c = tileProvider;
         this.i = tileProvider.getTileWidth();
@@ -69,27 +69,27 @@ public class dc implements ITileOverlayDelegate {
         this.k = Integer.parseInt(this.p.substring(11));
         try {
             if (z) {
-                c4534a = new eu.C4534a(this.b.f(), this.p, c4469ab.a().getMapConfig().getMapLanguage());
+                aVar = new eu.a(this.b.f(), this.p, abVar.a().getMapConfig().getMapLanguage());
             } else {
-                c4534a = new eu.C4534a(this.b.f(), this.p);
+                aVar = new eu.a(this.b.f(), this.p);
             }
-            c4534a.a(tileOverlayOptions.getMemoryCacheEnabled());
+            aVar.a(tileOverlayOptions.getMemoryCacheEnabled());
             if (this.f) {
-                c4534a.i = false;
+                aVar.i = false;
             }
-            c4534a.b(tileOverlayOptions.getDiskCacheEnabled());
-            c4534a.a(tileOverlayOptions.getMemCacheSize());
-            c4534a.a(tileOverlayOptions.getDiskCacheSize());
+            aVar.b(tileOverlayOptions.getDiskCacheEnabled());
+            aVar.a(tileOverlayOptions.getMemCacheSize());
+            aVar.a(tileOverlayOptions.getDiskCacheSize());
             String diskCacheDir = tileOverlayOptions.getDiskCacheDir();
             if (diskCacheDir != null && !"".equals(diskCacheDir)) {
-                c4534a.a(diskCacheDir);
+                aVar.a(diskCacheDir);
             }
             er erVar = new er(this.b.f(), this.i, this.j);
             this.l = erVar;
             erVar.a(this.c);
-            this.l.a(c4534a);
-            this.l.a(new et.InterfaceC4533c() { // from class: com.amap.api.mapcore.util.dc.1
-                @Override // com.amap.api.mapcore.util.et.InterfaceC4533c
+            this.l.a(aVar);
+            this.l.a(new et.c() { // from class: com.amap.api.mapcore.util.dc.1
+                @Override // com.amap.api.mapcore.util.et.c
                 public void a() {
                     dc.this.g.resetRenderTimeLongLong();
                 }
@@ -105,11 +105,11 @@ public class dc implements ITileOverlayDelegate {
     }
 
     private void c() {
-        C4469ab c4469ab = this.b;
-        if (c4469ab == null || c4469ab.a() == null) {
+        ab abVar = this.b;
+        if (abVar == null || abVar.a() == null) {
             return;
         }
-        this.a = (C4505de.C4512g) this.b.a().getGLShader(0);
+        this.a = (de.g) this.b.a().getGLShader(0);
     }
 
     @Override // com.autonavi.amap.mapcore.interfaces.ITileOverlay
@@ -140,7 +140,7 @@ public class dc implements ITileOverlayDelegate {
 
     @Override // com.autonavi.base.amap.api.mapcore.overlays.ITileOverlayDelegate
     public void drawTiles() {
-        List<C4503a> list = this.m;
+        List<a> list = this.m;
         if (list != null) {
             synchronized (list) {
                 if (this.m.size() == 0) {
@@ -148,22 +148,22 @@ public class dc implements ITileOverlayDelegate {
                 }
                 int size = this.m.size();
                 for (int i = 0; i < size; i++) {
-                    C4503a c4503a = this.m.get(i);
-                    if (!c4503a.g) {
-                        IPoint iPoint = c4503a.e;
-                        Bitmap bitmap = c4503a.i;
+                    a aVar = this.m.get(i);
+                    if (!aVar.g) {
+                        IPoint iPoint = aVar.e;
+                        Bitmap bitmap = aVar.i;
                         if (bitmap != null && !bitmap.isRecycled() && iPoint != null) {
-                            int a = eq.a(c4503a.i);
-                            c4503a.f = a;
-                            if (a != 0) {
-                                c4503a.g = true;
+                            int a2 = eq.a(aVar.i);
+                            aVar.f = a2;
+                            if (a2 != 0) {
+                                aVar.g = true;
                             }
-                            c4503a.i = null;
+                            aVar.i = null;
                         }
                     }
-                    if (c4503a.g) {
-                        a(c4503a);
-                        a(c4503a.f, c4503a.h, this.q);
+                    if (aVar.g) {
+                        a(aVar);
+                        a(aVar.f, aVar.h, this.q);
                     }
                 }
             }
@@ -231,15 +231,15 @@ public class dc implements ITileOverlayDelegate {
 
     @Override // com.autonavi.base.amap.api.mapcore.overlays.ITileOverlayDelegate
     public void reLoadTexture() {
-        List<C4503a> list = this.m;
+        List<a> list = this.m;
         if (list != null) {
             synchronized (list) {
                 if (this.m.size() == 0) {
                     return;
                 }
-                for (C4503a c4503a : this.m) {
-                    c4503a.g = false;
-                    c4503a.f = 0;
+                for (a aVar : this.m) {
+                    aVar.g = false;
+                    aVar.f = 0;
                 }
             }
         }
@@ -277,21 +277,20 @@ public class dc implements ITileOverlayDelegate {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.dc$b */
     /* loaded from: classes10.dex */
-    public static class C4504b extends dq<Void, Void, List<C4503a>> {
+    public static class b extends dq<Void, Void, List<a>> {
         private int d;
         private boolean e;
         private int f;
         private int g;
         private int h;
         private WeakReference<IAMapDelegate> i;
-        private List<C4503a> j;
+        private List<a> j;
         private boolean k;
-        private WeakReference<C4469ab> l;
+        private WeakReference<ab> l;
         private WeakReference<er> m;
 
-        public C4504b(boolean z, IAMapDelegate iAMapDelegate, int i, int i2, int i3, List<C4503a> list, boolean z2, C4469ab c4469ab, er erVar) {
+        public b(boolean z, IAMapDelegate iAMapDelegate, int i, int i2, int i3, List<a> list, boolean z2, ab abVar, er erVar) {
             this.f = 256;
             this.g = 256;
             this.h = 0;
@@ -302,13 +301,13 @@ public class dc implements ITileOverlayDelegate {
             this.h = i3;
             this.j = list;
             this.k = z2;
-            this.l = new WeakReference<>(c4469ab);
+            this.l = new WeakReference<>(abVar);
             this.m = new WeakReference<>(erVar);
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
         @Override // com.amap.api.mapcore.util.dq
-        public List<C4503a> a(Void... voidArr) {
+        public List<a> a(Void... voidArr) {
             try {
                 IAMapDelegate iAMapDelegate = this.i.get();
                 if (iAMapDelegate == null) {
@@ -330,7 +329,7 @@ public class dc implements ITileOverlayDelegate {
 
         /* JADX INFO: Access modifiers changed from: protected */
         @Override // com.amap.api.mapcore.util.dq
-        public void a(List<C4503a> list) {
+        public void a(List<a> list) {
             if (list == null) {
                 return;
             }
@@ -352,7 +351,7 @@ public class dc implements ITileOverlayDelegate {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public static java.util.ArrayList<com.amap.api.mapcore.util.dc.C4503a> b(com.autonavi.base.amap.api.mapcore.IAMapDelegate r26, int r27, int r28, int r29, int r30, com.amap.api.mapcore.util.C4469ab r31, com.amap.api.mapcore.util.er r32) {
+    public static java.util.ArrayList<com.amap.api.mapcore.util.dc.a> b(com.autonavi.base.amap.api.mapcore.IAMapDelegate r26, int r27, int r28, int r29, int r30, com.amap.api.mapcore.util.ab r31, com.amap.api.mapcore.util.er r32) {
         /*
             Method dump skipped, instructions count: 631
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -360,12 +359,12 @@ public class dc implements ITileOverlayDelegate {
         throw new UnsupportedOperationException("Method not decompiled: com.amap.api.mapcore.util.dc.b(com.autonavi.base.amap.api.mapcore.IAMapDelegate, int, int, int, int, com.amap.api.mapcore.util.ab, com.amap.api.mapcore.util.er):java.util.ArrayList");
     }
 
-    private boolean a(C4503a c4503a) {
+    private boolean a(a aVar) {
         int i = this.i;
         int i2 = this.j;
-        IPoint iPoint = c4503a.e;
+        IPoint iPoint = aVar.e;
         int xVar = Point.getx(iPoint);
-        int i3 = 1 << (20 - c4503a.c);
+        int i3 = 1 << (20 - aVar.c);
         int i4 = i2 * i3;
         int yVar = Point.gety(iPoint) + i4;
         MapConfig mapConfig = this.g.getMapConfig();
@@ -374,19 +373,18 @@ public class dc implements ITileOverlayDelegate {
         double d3 = xVar + (i3 * i);
         double d4 = yVar - i4;
         float[] fArr = {(float) (d - mapConfig.getSX()), (float) (d2 - mapConfig.getSY()), 0.0f, (float) (d3 - mapConfig.getSX()), (float) (d2 - mapConfig.getSY()), 0.0f, (float) (d3 - mapConfig.getSX()), (float) (d4 - mapConfig.getSY()), 0.0f, (float) (d - mapConfig.getSX()), (float) (d4 - mapConfig.getSY()), 0.0f};
-        FloatBuffer floatBuffer = c4503a.h;
+        FloatBuffer floatBuffer = aVar.h;
         if (floatBuffer == null) {
-            c4503a.h = eq.a(fArr);
+            aVar.h = eq.a(fArr);
             return true;
         }
-        c4503a.h = eq.a(fArr, floatBuffer);
+        aVar.h = eq.a(fArr, floatBuffer);
         return true;
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.dc$a */
     /* loaded from: classes10.dex */
-    public static class C4503a implements Cloneable {
+    public static class a implements Cloneable {
         public int a;
         public int b;
         public int c;
@@ -396,13 +394,13 @@ public class dc implements ITileOverlayDelegate {
         public boolean g;
         public FloatBuffer h;
         public Bitmap i;
-        public et.C4531a j;
+        public et.a j;
         public int k;
         private IAMapDelegate l;
-        private C4469ab m;
+        private ab m;
         private er n;
 
-        public C4503a(int i, int i2, int i3, int i4, IAMapDelegate iAMapDelegate, C4469ab c4469ab, er erVar) {
+        public a(int i, int i2, int i3, int i4, IAMapDelegate iAMapDelegate, ab abVar, er erVar) {
             this.f = 0;
             this.g = false;
             this.h = null;
@@ -414,25 +412,25 @@ public class dc implements ITileOverlayDelegate {
             this.c = i3;
             this.d = i4;
             this.l = iAMapDelegate;
-            this.m = c4469ab;
+            this.m = abVar;
             this.n = erVar;
         }
 
         /* renamed from: a */
-        public C4503a clone() {
+        public a clone() {
             try {
-                C4503a c4503a = (C4503a) super.clone();
-                c4503a.a = this.a;
-                c4503a.b = this.b;
-                c4503a.c = this.c;
-                c4503a.d = this.d;
-                c4503a.e = (IPoint) this.e.clone();
-                c4503a.h = this.h.asReadOnlyBuffer();
+                a aVar = (a) super.clone();
+                aVar.a = this.a;
+                aVar.b = this.b;
+                aVar.c = this.c;
+                aVar.d = this.d;
+                aVar.e = (IPoint) this.e.clone();
+                aVar.h = this.h.asReadOnlyBuffer();
                 this.k = 0;
             } catch (CloneNotSupportedException e) {
                 e.printStackTrace();
             }
-            return new C4503a(this);
+            return new a(this);
         }
 
         public void b() {
@@ -464,9 +462,9 @@ public class dc implements ITileOverlayDelegate {
             if (this == obj) {
                 return true;
             }
-            if (obj instanceof C4503a) {
-                C4503a c4503a = (C4503a) obj;
-                return this.a == c4503a.a && this.b == c4503a.b && this.c == c4503a.c && this.d == c4503a.d;
+            if (obj instanceof a) {
+                a aVar = (a) obj;
+                return this.a == aVar.a && this.b == aVar.b && this.c == aVar.c && this.d == aVar.d;
             }
             return false;
         }
@@ -497,28 +495,28 @@ public class dc implements ITileOverlayDelegate {
             }
         }
 
-        public C4503a(C4503a c4503a) {
+        public a(a aVar) {
             this.f = 0;
             this.g = false;
             this.h = null;
             this.i = null;
             this.j = null;
             this.k = 0;
-            this.a = c4503a.a;
-            this.b = c4503a.b;
-            this.c = c4503a.c;
-            this.d = c4503a.d;
-            this.e = c4503a.e;
-            this.h = c4503a.h;
+            this.a = aVar.a;
+            this.b = aVar.b;
+            this.c = aVar.c;
+            this.d = aVar.d;
+            this.e = aVar.e;
+            this.h = aVar.h;
             this.k = 0;
-            this.m = c4503a.m;
-            this.l = c4503a.l;
-            this.n = c4503a.n;
+            this.m = aVar.m;
+            this.l = aVar.l;
+            this.n = aVar.n;
         }
     }
 
     public void a() {
-        List<C4503a> list = this.m;
+        List<a> list = this.m;
         if (list != null) {
             synchronized (list) {
                 this.m.clear();
@@ -527,9 +525,9 @@ public class dc implements ITileOverlayDelegate {
     }
 
     private void a(boolean z) {
-        C4504b c4504b = new C4504b(z, this.g, this.i, this.j, this.k, this.m, this.f, this.b, this.l);
-        this.o = c4504b;
-        c4504b.c((Object[]) new Void[0]);
+        b bVar = new b(z, this.g, this.i, this.j, this.k, this.m, this.f, this.b, this.l);
+        this.o = bVar;
+        bVar.c((Object[]) new Void[0]);
     }
 
     public void a(String str) {
@@ -548,8 +546,8 @@ public class dc implements ITileOverlayDelegate {
         if (floatBuffer == null || floatBuffer2 == null || i == 0) {
             return;
         }
-        C4505de.C4512g c4512g = this.a;
-        if (c4512g == null || c4512g.c()) {
+        de.g gVar = this.a;
+        if (gVar == null || gVar.c()) {
             c();
         }
         this.a.a();
@@ -572,27 +570,27 @@ public class dc implements ITileOverlayDelegate {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static boolean b(IAMapDelegate iAMapDelegate, List<C4503a> list, int i, boolean z, List<C4503a> list2, boolean z2, C4469ab c4469ab, er erVar) {
+    public static boolean b(IAMapDelegate iAMapDelegate, List<a> list, int i, boolean z, List<a> list2, boolean z2, ab abVar, er erVar) {
         int i2;
         boolean z3;
         if (list == null || list2 == null) {
             return false;
         }
         synchronized (list2) {
-            Iterator<C4503a> it = list2.iterator();
+            Iterator<a> it = list2.iterator();
             while (true) {
                 boolean z4 = true;
                 if (!it.hasNext()) {
                     break;
                 }
-                C4503a next = it.next();
-                Iterator<C4503a> it2 = list.iterator();
+                a next = it.next();
+                Iterator<a> it2 = list.iterator();
                 while (true) {
                     if (!it2.hasNext()) {
                         z4 = false;
                         break;
                     }
-                    C4503a next2 = it2.next();
+                    a next2 = it2.next();
                     if (next.equals(next2) && (z3 = next.g)) {
                         next2.g = z3;
                         next2.f = next.f;
@@ -610,23 +608,23 @@ public class dc implements ITileOverlayDelegate {
                     return false;
                 }
                 for (int i3 = 0; i3 < size; i3++) {
-                    C4503a c4503a = list.get(i3);
-                    if (c4503a != null) {
+                    a aVar = list.get(i3);
+                    if (aVar != null) {
                         if (z2) {
-                            if (c4469ab.a().getMapConfig().getMapLanguage().equals("zh_cn")) {
+                            if (abVar.a().getMapConfig().getMapLanguage().equals("zh_cn")) {
                                 if (MapsInitializer.isLoadWorldGridMap()) {
-                                    int i4 = c4503a.c;
+                                    int i4 = aVar.c;
                                     if (i4 >= 6) {
-                                        if (ej.a(c4503a.a, c4503a.b, i4)) {
+                                        if (ej.a(aVar.a, aVar.b, i4)) {
                                         }
                                     }
                                 }
-                            } else if (!MapsInitializer.isLoadWorldGridMap() && (i2 = c4503a.c) >= 6 && !ej.a(c4503a.a, c4503a.b, i2)) {
+                            } else if (!MapsInitializer.isLoadWorldGridMap() && (i2 = aVar.c) >= 6 && !ej.a(aVar.a, aVar.b, i2)) {
                             }
                         }
-                        list2.add(c4503a);
-                        if (!c4503a.g && erVar != null) {
-                            erVar.a(z, c4503a);
+                        list2.add(aVar);
+                        if (!aVar.g && erVar != null) {
+                            erVar.a(z, aVar);
                         }
                     }
                 }
@@ -637,8 +635,8 @@ public class dc implements ITileOverlayDelegate {
     }
 
     private void b() {
-        C4504b c4504b = this.o;
-        if (c4504b == null || c4504b.a() != dq.EnumC4522e.RUNNING) {
+        b bVar = this.o;
+        if (bVar == null || bVar.a() != dq.e.RUNNING) {
             return;
         }
         this.o.a(true);

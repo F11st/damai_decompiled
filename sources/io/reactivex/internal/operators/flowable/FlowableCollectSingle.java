@@ -1,11 +1,11 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
-import io.reactivex.AbstractC8152e;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.SingleObserver;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.functions.BiConsumer;
 import io.reactivex.internal.disposables.EmptyDisposable;
 import io.reactivex.internal.functions.ObjectHelper;
@@ -18,10 +18,10 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableCollectSingle<T, U> extends AbstractC8152e<U> implements FuseToFlowable<U> {
+public final class FlowableCollectSingle<T, U> extends e<U> implements FuseToFlowable<U> {
     final BiConsumer<? super U, ? super T> collector;
     final Callable<? extends U> initialSupplier;
-    final AbstractC8147b<T> source;
+    final b<T> source;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -94,18 +94,18 @@ public final class FlowableCollectSingle<T, U> extends AbstractC8152e<U> impleme
         }
     }
 
-    public FlowableCollectSingle(AbstractC8147b<T> abstractC8147b, Callable<? extends U> callable, BiConsumer<? super U, ? super T> biConsumer) {
-        this.source = abstractC8147b;
+    public FlowableCollectSingle(b<T> bVar, Callable<? extends U> callable, BiConsumer<? super U, ? super T> biConsumer) {
+        this.source = bVar;
         this.initialSupplier = callable;
         this.collector = biConsumer;
     }
 
     @Override // io.reactivex.internal.fuseable.FuseToFlowable
-    public AbstractC8147b<U> fuseToFlowable() {
+    public b<U> fuseToFlowable() {
         return i42.l(new FlowableCollect(this.source, this.initialSupplier, this.collector));
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super U> singleObserver) {
         try {
             this.source.subscribe((FlowableSubscriber) new CollectSubscriber(singleObserver, ObjectHelper.requireNonNull(this.initialSupplier.call(), "The initialSupplier returned a null value"), this.collector));

@@ -15,7 +15,7 @@ import tb.k50;
 /* loaded from: classes3.dex */
 public interface JavaClassFinder {
     @Nullable
-    JavaClass findClass(@NotNull C8328a c8328a);
+    JavaClass findClass(@NotNull a aVar);
 
     @Nullable
     JavaPackage findPackage(@NotNull hp0 hp0Var);
@@ -24,9 +24,8 @@ public interface JavaClassFinder {
     Set<String> knownClassNamesInPackage(@NotNull hp0 hp0Var);
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.JavaClassFinder$a */
     /* loaded from: classes3.dex */
-    public static final class C8328a {
+    public static final class a {
         @NotNull
         private final hj a;
         @Nullable
@@ -34,7 +33,7 @@ public interface JavaClassFinder {
         @Nullable
         private final JavaClass c;
 
-        public C8328a(@NotNull hj hjVar, @Nullable byte[] bArr, @Nullable JavaClass javaClass) {
+        public a(@NotNull hj hjVar, @Nullable byte[] bArr, @Nullable JavaClass javaClass) {
             b41.i(hjVar, "classId");
             this.a = hjVar;
             this.b = bArr;
@@ -50,9 +49,9 @@ public interface JavaClassFinder {
             if (this == obj) {
                 return true;
             }
-            if (obj instanceof C8328a) {
-                C8328a c8328a = (C8328a) obj;
-                return b41.d(this.a, c8328a.a) && b41.d(this.b, c8328a.b) && b41.d(this.c, c8328a.c);
+            if (obj instanceof a) {
+                a aVar = (a) obj;
+                return b41.d(this.a, aVar.a) && b41.d(this.b, aVar.b) && b41.d(this.c, aVar.c);
             }
             return false;
         }
@@ -70,7 +69,7 @@ public interface JavaClassFinder {
             return "Request(classId=" + this.a + ", previouslyFoundClassFileContent=" + Arrays.toString(this.b) + ", outerClass=" + this.c + ')';
         }
 
-        public /* synthetic */ C8328a(hj hjVar, byte[] bArr, JavaClass javaClass, int i, k50 k50Var) {
+        public /* synthetic */ a(hj hjVar, byte[] bArr, JavaClass javaClass, int i, k50 k50Var) {
             this(hjVar, (i & 2) != 0 ? null : bArr, (i & 4) != 0 ? null : javaClass);
         }
     }

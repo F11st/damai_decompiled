@@ -26,12 +26,11 @@ public class DMNFCActivity extends DMBaseFlutterActivity {
     private final NfcUtil nfcUtil = new NfcUtil();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.fluttercommon.DMNFCActivity$a */
     /* loaded from: classes5.dex */
-    public class C1101a implements NfcUtil.ReadCallback {
+    public class a implements NfcUtil.ReadCallback {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1101a() {
+        a() {
         }
 
         @Override // cn.damai.ticket.nfc.NfcUtil.ReadCallback
@@ -133,7 +132,7 @@ public class DMNFCActivity extends DMBaseFlutterActivity {
         super.onCreate(bundle);
         this.nfcUtil.n(NfcUtil.TriggerMode.ONCE);
         this.nfcUtil.m(30000);
-        this.nfcUtil.g(this, new C1101a());
+        this.nfcUtil.g(this, new a());
     }
 
     /* JADX INFO: Access modifiers changed from: protected */

@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.internal.util.ExceptionHelper;
 import io.reactivex.internal.util.NotificationLite;
-import io.reactivex.subscribers.AbstractC8172a;
+import io.reactivex.subscribers.a;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -12,11 +12,11 @@ import java.util.NoSuchElementException;
 /* loaded from: classes3.dex */
 public final class BlockingFlowableMostRecent<T> implements Iterable<T> {
     final T initialValue;
-    final AbstractC8147b<T> source;
+    final b<T> source;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class MostRecentSubscriber<T> extends AbstractC8172a<T> {
+    static final class MostRecentSubscriber<T> extends a<T> {
         volatile Object value;
 
         /* JADX INFO: Access modifiers changed from: package-private */
@@ -83,8 +83,8 @@ public final class BlockingFlowableMostRecent<T> implements Iterable<T> {
         }
     }
 
-    public BlockingFlowableMostRecent(AbstractC8147b<T> abstractC8147b, T t) {
-        this.source = abstractC8147b;
+    public BlockingFlowableMostRecent(b<T> bVar, T t) {
+        this.source = bVar;
         this.initialValue = t;
     }
 

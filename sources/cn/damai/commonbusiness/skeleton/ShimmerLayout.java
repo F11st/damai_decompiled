@@ -53,12 +53,11 @@ public class ShimmerLayout extends FrameLayout {
     private ViewTreeObserver.OnPreDrawListener startAnimationPreDrawListener;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.skeleton.ShimmerLayout$a */
     /* loaded from: classes.dex */
-    public class ViewTreeObserver$OnPreDrawListenerC0924a implements ViewTreeObserver.OnPreDrawListener {
+    public class a implements ViewTreeObserver.OnPreDrawListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ViewTreeObserver$OnPreDrawListenerC0924a() {
+        a() {
         }
 
         @Override // android.view.ViewTreeObserver.OnPreDrawListener
@@ -74,14 +73,13 @@ public class ShimmerLayout extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.skeleton.ShimmerLayout$b */
     /* loaded from: classes.dex */
-    public class C0925b implements ValueAnimator.AnimatorUpdateListener {
+    public class b implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
         final /* synthetic */ int b;
 
-        C0925b(int i, int i2) {
+        b(int i, int i2) {
             this.a = i;
             this.b = i2;
         }
@@ -240,7 +238,7 @@ public class ShimmerLayout extends FrameLayout {
         this.maskAnimator = ofInt;
         ofInt.setDuration(this.shimmerAnimationDuration);
         this.maskAnimator.setRepeatCount(-1);
-        this.maskAnimator.addUpdateListener(new C0925b(i, width2));
+        this.maskAnimator.addUpdateListener(new b(i, width2));
         return this.maskAnimator;
     }
 
@@ -408,7 +406,7 @@ public class ShimmerLayout extends FrameLayout {
         } else if (this.isAnimationStarted) {
         } else {
             if (getWidth() == 0) {
-                this.startAnimationPreDrawListener = new ViewTreeObserver$OnPreDrawListenerC0924a();
+                this.startAnimationPreDrawListener = new a();
                 getViewTreeObserver().addOnPreDrawListener(this.startAnimationPreDrawListener);
                 return;
             }

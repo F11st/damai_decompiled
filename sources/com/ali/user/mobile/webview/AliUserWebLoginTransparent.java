@@ -7,7 +7,7 @@ import com.ali.user.mobile.ui.R;
 public class AliUserWebLoginTransparent extends WebViewActivity {
     @Override // com.ali.user.mobile.webview.WebViewActivity, com.ali.user.mobile.base.ui.BaseActivity
     protected int getLayoutContent() {
-        return R.C2965layout.aliuser_login_web_trans;
+        return R.layout.aliuser_login_web_trans;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */

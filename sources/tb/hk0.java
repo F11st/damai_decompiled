@@ -21,12 +21,11 @@ public class hk0 implements FloatContainer {
     private FloatLayer d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hk0$a */
     /* loaded from: classes6.dex */
-    public class View$OnClickListenerC9223a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9223a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -46,7 +45,7 @@ public class hk0 implements FloatContainer {
         this.b = frameLayout;
         this.a.addView(frameLayout, -1, -1);
         this.b.setBackgroundColor(kh0.C_A30_000000);
-        viewGroup.setOnClickListener(new View$OnClickListenerC9223a());
+        viewGroup.setOnClickListener(new a());
     }
 
     @Override // cn.damai.projectfilter.floatcontainer.FloatContainer

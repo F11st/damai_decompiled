@@ -21,13 +21,12 @@ public class lu0 {
     public static long n = -1;
     public static long o = -1;
     public static String p = "background";
-    public static C9423a q = new C9423a();
+    public static a q = new a();
     public static int r = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.lu0$a */
     /* loaded from: classes11.dex */
-    public static class C9423a {
+    public static class a {
         HashMap<String, Boolean> a = new HashMap<>();
 
         public boolean a(String str) {

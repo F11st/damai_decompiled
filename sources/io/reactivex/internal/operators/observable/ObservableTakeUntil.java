@@ -92,7 +92,7 @@ public final class ObservableTakeUntil<T, U> extends AbstractObservableWithUpstr
         this.other = observableSource2;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         ra2 ra2Var = new ra2(observer);
         ArrayCompositeDisposable arrayCompositeDisposable = new ArrayCompositeDisposable(2);

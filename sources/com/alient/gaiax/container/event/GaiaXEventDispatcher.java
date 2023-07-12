@@ -8,10 +8,10 @@ import com.xiaomi.mipush.sdk.MiPushClient;
 import io.flutter.wpkbridge.WPKFactory;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -48,7 +48,7 @@ public final class GaiaXEventDispatcher {
 
     static {
         Lazy<GaiaXEventDispatcher> a;
-        a = C8177b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<GaiaXEventDispatcher>() { // from class: com.alient.gaiax.container.event.GaiaXEventDispatcher$Companion$instance$2
+        a = b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<GaiaXEventDispatcher>() { // from class: com.alient.gaiax.container.event.GaiaXEventDispatcher$Companion$instance$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull

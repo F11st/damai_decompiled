@@ -18,10 +18,9 @@ public class StandardRowSortedTable<R, C, V> extends StandardTable<R, C, V> impl
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.StandardRowSortedTable$b */
     /* loaded from: classes10.dex */
-    public class C5101b extends StandardTable<R, C, V>.C5119h implements SortedMap<R, Map<C, V>> {
-        private C5101b() {
+    public class b extends StandardTable<R, C, V>.h implements SortedMap<R, Map<C, V>> {
+        private b() {
             super();
         }
 
@@ -31,10 +30,10 @@ public class StandardRowSortedTable<R, C, V> extends StandardTable<R, C, V> impl
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.Maps.AbstractC5070t
+        @Override // com.google.common.collect.Maps.t
         /* renamed from: f */
         public SortedSet<R> b() {
-            return new Maps.C5064n(this);
+            return new Maps.n(this);
         }
 
         @Override // java.util.SortedMap
@@ -42,7 +41,7 @@ public class StandardRowSortedTable<R, C, V> extends StandardTable<R, C, V> impl
             return (R) StandardRowSortedTable.this.sortedBackingMap().firstKey();
         }
 
-        @Override // com.google.common.collect.Maps.AbstractC5070t, java.util.AbstractMap, java.util.Map
+        @Override // com.google.common.collect.Maps.t, java.util.AbstractMap, java.util.Map
         /* renamed from: g */
         public SortedSet<R> keySet() {
             return (SortedSet) super.keySet();
@@ -86,10 +85,10 @@ public class StandardRowSortedTable<R, C, V> extends StandardTable<R, C, V> impl
     /* JADX INFO: Access modifiers changed from: package-private */
     @Override // com.google.common.collect.StandardTable
     public SortedMap<R, Map<C, V>> createRowMap() {
-        return new C5101b();
+        return new b();
     }
 
-    @Override // com.google.common.collect.StandardTable, com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.StandardTable, com.google.common.collect.h, com.google.common.collect.Table
     public SortedSet<R> rowKeySet() {
         return (SortedSet) rowMap().keySet();
     }

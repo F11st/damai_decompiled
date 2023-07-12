@@ -36,12 +36,11 @@ public class xy2 implements View.OnClickListener {
     private int k;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.xy2$a */
     /* loaded from: classes7.dex */
-    public class C9939a implements ValueAnimator.AnimatorUpdateListener {
+    public class a implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9939a() {
+        a() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -82,7 +81,7 @@ public class xy2 implements View.OnClickListener {
         }
         if (i > 0 && z) {
             ValueAnimator ofInt = ValueAnimator.ofInt(0, i);
-            ofInt.addUpdateListener(new C9939a());
+            ofInt.addUpdateListener(new a());
             ofInt.setDuration(300L);
             ofInt.setInterpolator(new LinearInterpolator());
             ofInt.start();

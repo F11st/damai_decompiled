@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.tetris.component.home.adapter.HeaderVideoAdapter;
@@ -31,14 +30,13 @@ public class HeaderVideoViewHolder extends VideoViewHolder {
     int userIndex;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.common.HeaderVideoViewHolder$a */
     /* loaded from: classes16.dex */
-    public class C1801a implements Animator.AnimatorListener {
+    public class a implements Animator.AnimatorListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private boolean a = false;
         final /* synthetic */ List b;
 
-        C1801a(List list) {
+        a(List list) {
             this.b = list;
         }
 
@@ -104,13 +102,12 @@ public class HeaderVideoViewHolder extends VideoViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.common.HeaderVideoViewHolder$b */
     /* loaded from: classes16.dex */
-    public class C1802b implements Animator.AnimatorListener {
+    public class b implements Animator.AnimatorListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private boolean a = false;
 
-        C1802b() {
+        b() {
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -161,24 +158,23 @@ public class HeaderVideoViewHolder extends VideoViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.common.HeaderVideoViewHolder$c */
     /* loaded from: classes7.dex */
-    public class C1803c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
-        C1803c(HeaderVideoViewHolder headerVideoViewHolder, ImageView imageView) {
+        c(HeaderVideoViewHolder headerVideoViewHolder, ImageView imageView) {
             this.a = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "193376675")) {
-                ipChange.ipc$dispatch("193376675", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("193376675", new Object[]{this, eVar});
                 return;
             }
-            Bitmap bitmap = c0502e.b;
+            Bitmap bitmap = eVar.b;
             if (bitmap != null) {
                 this.a.setImageBitmap(bitmap);
             }
@@ -198,9 +194,9 @@ public class HeaderVideoViewHolder extends VideoViewHolder {
         if (AndroidInstantRuntime.support(ipChange, "844676403")) {
             return (DMImageCreator) ipChange.ipc$dispatch("844676403", new Object[]{this, str, imageView});
         }
-        int a = m62.a(mu0.a(), 35.0f);
+        int a2 = m62.a(mu0.a(), 35.0f);
         imageView.setImageBitmap(null);
-        return C0504a.b().f(str, a, a).n(new C1803c(this, imageView));
+        return cn.damai.common.image.a.b().f(str, a2, a2).n(new c(this, imageView));
     }
 
     private void rotateOnYCoordinate(View view, List<ArtistHeadBean> list) {
@@ -218,12 +214,12 @@ public class HeaderVideoViewHolder extends VideoViewHolder {
         ObjectAnimator ofFloat = ObjectAnimator.ofFloat(view, "rotationY", 0.0f, 90.0f);
         this.animatorUser = ofFloat;
         ofFloat.setDuration(500L);
-        this.animatorUser.addListener(new C1801a(list));
+        this.animatorUser.addListener(new a(list));
         this.animatorUser.start();
         ObjectAnimator ofFloat2 = ObjectAnimator.ofFloat(view, "rotationY", -90.0f, 0.0f);
         this.animator2 = ofFloat2;
         ofFloat2.setDuration(500L);
-        this.animator2.addListener(new C1802b());
+        this.animator2.addListener(new b());
     }
 
     @Override // cn.damai.tetris.component.home.viewholder.VideoViewHolder
@@ -234,8 +230,8 @@ public class HeaderVideoViewHolder extends VideoViewHolder {
             ipChange.ipc$dispatch("1258182800", new Object[]{this});
             return;
         }
-        int a = (m62.a(mu0.a(), 270.0f) - qx2.c()) - m62.a(mu0.a(), 9.0f);
-        int i = a >= 0 ? a : 0;
+        int a2 = (m62.a(mu0.a(), 270.0f) - qx2.c()) - m62.a(mu0.a(), 9.0f);
+        int i = a2 >= 0 ? a2 : 0;
         View view = this.itemView;
         if (view == null || (findViewById = view.findViewById(R$id.homepage_video_cover)) == null || findViewById.getLayoutParams() == null) {
             return;

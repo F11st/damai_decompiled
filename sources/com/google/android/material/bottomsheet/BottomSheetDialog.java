@@ -103,7 +103,7 @@ public class BottomSheetDialog extends AppCompatDialog {
 
     private FrameLayout ensureContainerAndBehavior() {
         if (this.container == null) {
-            FrameLayout frameLayout = (FrameLayout) View.inflate(getContext(), R.C4818layout.design_bottom_sheet_dialog, null);
+            FrameLayout frameLayout = (FrameLayout) View.inflate(getContext(), R.layout.design_bottom_sheet_dialog, null);
             this.container = frameLayout;
             this.coordinator = (CoordinatorLayout) frameLayout.findViewById(R.id.coordinator);
             FrameLayout frameLayout2 = (FrameLayout) this.container.findViewById(R.id.design_bottom_sheet);
@@ -122,7 +122,7 @@ public class BottomSheetDialog extends AppCompatDialog {
             if (context.getTheme().resolveAttribute(R.attr.bottomSheetDialogTheme, typedValue, true)) {
                 return typedValue.resourceId;
             }
-            return R.C4819style.Theme_Design_Light_BottomSheetDialog;
+            return R.style.Theme_Design_Light_BottomSheetDialog;
         }
         return i;
     }

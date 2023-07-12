@@ -47,7 +47,7 @@ import java.util.Map;
 /* loaded from: classes10.dex */
 public class BottomSheetBehavior<V extends View> extends CoordinatorLayout.Behavior<V> {
     private static final int CORNER_ANIMATION_DURATION = 500;
-    private static final int DEF_STYLE_RES = R.C4819style.Widget_Design_BottomSheet_Modal;
+    private static final int DEF_STYLE_RES = R.style.Widget_Design_BottomSheet_Modal;
     private static final float HIDE_FRICTION = 0.1f;
     private static final float HIDE_THRESHOLD = 0.5f;
     private static final int NO_WIDTH = -1;

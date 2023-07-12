@@ -7,7 +7,7 @@ import com.google.common.annotations.GwtIncompatible;
 @GwtIncompatible
 /* loaded from: classes10.dex */
 public interface PatternCompiler {
-    AbstractC4830b compile(String str);
+    b compile(String str);
 
     boolean isPcreLike();
 }

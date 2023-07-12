@@ -18,7 +18,7 @@ import tb.z01;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class DefaultRemoteChannel extends AbstractC6693b {
+public class DefaultRemoteChannel extends b {
     private static final String c = "DefaultRemoteChannel";
     private final ContentResolver a = ARanger.getContext().getContentResolver();
     private final Uri b;
@@ -72,12 +72,12 @@ public class DefaultRemoteChannel extends AbstractC6693b {
         }
     }
 
-    @Override // com.taobao.aranger.core.ipc.channel.AbstractC6693b
+    @Override // com.taobao.aranger.core.ipc.channel.b
     public void c() throws IPCException {
         j("connect", null, true, true);
     }
 
-    @Override // com.taobao.aranger.core.ipc.channel.AbstractC6693b
+    @Override // com.taobao.aranger.core.ipc.channel.b
     public Reply d(Call call) throws IPCException {
         Bundle bundle = new Bundle();
         bundle.putParcelable("call", call);

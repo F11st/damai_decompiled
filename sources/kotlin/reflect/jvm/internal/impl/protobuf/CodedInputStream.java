@@ -201,10 +201,10 @@ public final class CodedInputStream {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static CodedInputStream h(C8453e c8453e) {
-        CodedInputStream codedInputStream = new CodedInputStream(c8453e);
+    public static CodedInputStream h(e eVar) {
+        CodedInputStream codedInputStream = new CodedInputStream(eVar);
         try {
-            codedInputStream.j(c8453e.size());
+            codedInputStream.j(eVar.size());
             return codedInputStream;
         } catch (InvalidProtocolBufferException e) {
             throw new IllegalArgumentException(e);
@@ -437,7 +437,7 @@ public final class CodedInputStream {
             x = x(A);
             i = 0;
         }
-        if (C8470h.f(x, i, i + A)) {
+        if (h.f(x, i, i + A)) {
             return new String(x, i, A, "UTF-8");
         }
         throw InvalidProtocolBufferException.invalidUtf8();
@@ -570,11 +570,11 @@ public final class CodedInputStream {
             if (A == 0) {
                 return ByteString.EMPTY;
             }
-            return new C8453e(x(A));
+            return new e(x(A));
         }
-        ByteString c8444b = (this.b && this.h) ? new C8444b(this.a, this.e, A) : ByteString.e(this.a, i2, A);
+        ByteString bVar = (this.b && this.h) ? new b(this.a, this.e, A) : ByteString.e(this.a, i2, A);
         this.e += A;
-        return c8444b;
+        return bVar;
     }
 
     public double m() throws IOException {
@@ -597,11 +597,11 @@ public final class CodedInputStream {
         return Float.intBitsToFloat(y());
     }
 
-    public void r(int i, MessageLite.Builder builder, C8447c c8447c) throws IOException {
+    public void r(int i, MessageLite.Builder builder, c cVar) throws IOException {
         int i2 = this.k;
         if (i2 < this.l) {
             this.k = i2 + 1;
-            builder.mergeFrom(this, c8447c);
+            builder.mergeFrom(this, cVar);
             a(WireFormat.c(i, 4));
             this.k--;
             return;
@@ -617,12 +617,12 @@ public final class CodedInputStream {
         return C();
     }
 
-    public <T extends MessageLite> T u(Parser<T> parser, C8447c c8447c) throws IOException {
+    public <T extends MessageLite> T u(Parser<T> parser, c cVar) throws IOException {
         int A = A();
         if (this.k < this.l) {
             int j = j(A);
             this.k++;
-            T parsePartialFrom = parser.parsePartialFrom(this, c8447c);
+            T parsePartialFrom = parser.parsePartialFrom(this, cVar);
             a(0);
             this.k--;
             i(j);
@@ -631,12 +631,12 @@ public final class CodedInputStream {
         throw InvalidProtocolBufferException.recursionLimitExceeded();
     }
 
-    public void v(MessageLite.Builder builder, C8447c c8447c) throws IOException {
+    public void v(MessageLite.Builder builder, c cVar) throws IOException {
         int A = A();
         if (this.k < this.l) {
             int j = j(A);
             this.k++;
-            builder.mergeFrom(this, c8447c);
+            builder.mergeFrom(this, cVar);
             a(0);
             this.k--;
             i(j);
@@ -677,16 +677,16 @@ public final class CodedInputStream {
         return ((bArr[i + 7] & 255) << 56) | (bArr[i] & 255) | ((bArr[i + 1] & 255) << 8) | ((bArr[i + 2] & 255) << 16) | ((bArr[i + 3] & 255) << 24) | ((bArr[i + 4] & 255) << 32) | ((bArr[i + 5] & 255) << 40) | ((bArr[i + 6] & 255) << 48);
     }
 
-    private CodedInputStream(C8453e c8453e) {
+    private CodedInputStream(e eVar) {
         this.h = false;
         this.j = Integer.MAX_VALUE;
         this.l = 64;
         this.m = ConfigReporter.BIT_GETTER_IMP;
         this.n = null;
-        this.a = c8453e.a;
-        int y = c8453e.y();
+        this.a = eVar.a;
+        int y = eVar.y();
         this.e = y;
-        this.c = y + c8453e.size();
+        this.c = y + eVar.size();
         this.i = -this.e;
         this.f = null;
         this.b = true;

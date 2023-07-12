@@ -17,7 +17,7 @@ public class qz {
         if (activity == null) {
             return -1;
         }
-        WindowManager windowManager = (WindowManager) activity.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+        WindowManager windowManager = (WindowManager) activity.getSystemService(v.ATTACH_MODE_WINDOW);
         DisplayMetrics displayMetrics = null;
         if (Build.VERSION.SDK_INT >= 17) {
             displayMetrics = new DisplayMetrics();

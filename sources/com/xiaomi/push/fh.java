@@ -2,7 +2,6 @@ package com.xiaomi.push;
 
 import android.content.Context;
 import com.taobao.uikit.feature.features.FeatureFactory;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.bl;
 import com.xiaomi.push.jl;
 import com.xiaomi.push.service.XMPushService;
@@ -32,15 +31,14 @@ public class fh {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.fh$a */
     /* loaded from: classes11.dex */
-    public static class C7653a {
+    public static class a {
         static final fh a = new fh();
     }
 
-    private fa a(bl.C7612a c7612a) {
-        if (c7612a.f134a == 0) {
-            Object obj = c7612a.f135a;
+    private fa a(bl.a aVar) {
+        if (aVar.f134a == 0) {
+            Object obj = aVar.f135a;
             if (obj instanceof fa) {
                 return (fa) obj;
             }
@@ -48,8 +46,8 @@ public class fh {
         }
         fa m883a = m883a();
         m883a.a(ez.CHANNEL_STATS_COUNTER.a());
-        m883a.c(c7612a.f134a);
-        m883a.c(c7612a.f136a);
+        m883a.c(aVar.f134a);
+        m883a.c(aVar.f136a);
         return m883a;
     }
 
@@ -57,26 +55,26 @@ public class fh {
         ArrayList arrayList = new ArrayList();
         fb fbVar = new fb(this.f358a, arrayList);
         if (!bj.e(this.f357a.f352a)) {
-            fbVar.a(C7680j.k(this.f357a.f352a));
+            fbVar.a(j.k(this.f357a.f352a));
         }
         jn jnVar = new jn(i);
-        jf a = new jl.C7682a().a(jnVar);
+        jf a2 = new jl.a().a(jnVar);
         try {
-            fbVar.b(a);
+            fbVar.b(a2);
         } catch (iz unused) {
         }
-        LinkedList<bl.C7612a> m700a = this.f356a.m700a();
+        LinkedList<bl.a> m700a = this.f356a.m700a();
         while (m700a.size() > 0) {
             try {
-                fa a2 = a(m700a.getLast());
-                if (a2 != null) {
-                    a2.b(a);
+                fa a3 = a(m700a.getLast());
+                if (a3 != null) {
+                    a3.b(a2);
                 }
                 if (jnVar.a_() > i) {
                     break;
                 }
-                if (a2 != null) {
-                    arrayList.add(a2);
+                if (a3 != null) {
+                    arrayList.add(a3);
                 }
                 m700a.removeLast();
             } catch (iz | NoSuchElementException unused2) {
@@ -87,7 +85,7 @@ public class fh {
 
     public static fg a() {
         fg fgVar;
-        fh fhVar = C7653a.a;
+        fh fhVar = a.a;
         synchronized (fhVar) {
             fgVar = fhVar.f357a;
         }
@@ -96,7 +94,7 @@ public class fh {
 
     /* renamed from: a  reason: collision with other method in class */
     public static fh m881a() {
-        return C7653a.a;
+        return a.a;
     }
 
     /* renamed from: a  reason: collision with other method in class */
@@ -148,7 +146,7 @@ public class fh {
             this.f359a = true;
             this.f355a = System.currentTimeMillis();
             this.a = i2;
-            AbstractC7535b.c("enable dot duration = " + i2 + " start = " + this.f355a);
+            com.xiaomi.channel.commonutils.logger.b.c("enable dot duration = " + i2 + " start = " + this.f355a);
         }
     }
 

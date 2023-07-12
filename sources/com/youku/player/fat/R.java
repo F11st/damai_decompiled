@@ -15,13 +15,12 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.player.fat.R$drawable */
     /* loaded from: classes13.dex */
-    public static final class C8056drawable {
+    public static final class drawable {
         public static final int edit_bg_shape = 0x7f080769;
         public static final int tag_background = 0x7f080e42;
 
-        private C8056drawable() {
+        private drawable() {
         }
     }
 
@@ -45,25 +44,23 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.player.fat.R$layout */
     /* loaded from: classes13.dex */
-    public static final class C8057layout {
+    public static final class layout {
         public static final int edit_layout = 0x7f0c02ff;
         public static final int grid_item = 0x7f0c0369;
         public static final int pop_view = 0x7f0c063e;
 
-        private C8057layout() {
+        private layout() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.player.fat.R$raw */
     /* loaded from: classes13.dex */
-    public static final class C8058raw {
+    public static final class raw {
         public static final int for_shaders = 0x7f10006d;
         public static final int shaders = 0x7f100091;
 
-        private C8058raw() {
+        private raw() {
         }
     }
 

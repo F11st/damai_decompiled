@@ -50,7 +50,7 @@ public class AILPChatListRecyclerViewAdapter extends BaseChatListRecyclerViewAda
         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder("分享了直播，邀好友来围观\n立即分享，戳这里   ");
         this.shareString = spannableStringBuilder;
         spannableStringBuilder.setSpan(new ForegroundColorSpan(-8667649), 12, 22, 33);
-        this.shareString.setSpan(new ImageSpan(context, R.C7941drawable.dago_pgc_ailp_live_share), 22, 23, 33);
+        this.shareString.setSpan(new ImageSpan(context, R.drawable.dago_pgc_ailp_live_share), 22, 23, 33);
         HashMap hashMap = new HashMap(2);
         this.mShareMap = hashMap;
         hashMap.put("ilpType", "share");
@@ -122,10 +122,10 @@ public class AILPChatListRecyclerViewAdapter extends BaseChatListRecyclerViewAda
                 } else {
                     viewHolder.mUserName.setVisibility(8);
                 }
-                DagoImageLoader.getInstance().showCircle(this.mContext, aILPChatBean.getFace(), viewHolder.mUserIcon, R.C7941drawable.dago_pgc_ailp_gift_user_header_2x);
+                DagoImageLoader.getInstance().showCircle(this.mContext, aILPChatBean.getFace(), viewHolder.mUserIcon, R.drawable.dago_pgc_ailp_gift_user_header_2x);
                 if (!TextUtils.isEmpty(aILPChatBean.getFaceIcon())) {
                     viewHolder.mUserVipIcon.setVisibility(0);
-                    DagoImageLoader.getInstance().showCircle(this.mContext, aILPChatBean.getFaceIcon(), viewHolder.mUserVipIcon, R.C7941drawable.dago_pgc_ailp_chat_gold_icon);
+                    DagoImageLoader.getInstance().showCircle(this.mContext, aILPChatBean.getFaceIcon(), viewHolder.mUserVipIcon, R.drawable.dago_pgc_ailp_chat_gold_icon);
                 } else {
                     viewHolder.mUserVipIcon.setVisibility(8);
                 }
@@ -140,7 +140,7 @@ public class AILPChatListRecyclerViewAdapter extends BaseChatListRecyclerViewAda
         if (AndroidInstantRuntime.support(ipChange, "664587479")) {
             return (ViewHolder) ipChange.ipc$dispatch("664587479", new Object[]{this, viewGroup, Integer.valueOf(i)});
         }
-        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(R.C7942layout.dago_pgc_ailp_comment_item, viewGroup, false);
+        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.dago_pgc_ailp_comment_item, viewGroup, false);
         ViewHolder viewHolder = new ViewHolder(inflate);
         viewHolder.mChatLayout = (RelativeLayout) inflate.findViewById(R.id.chat_item_layout);
         viewHolder.mUserComment = (TextView) inflate.findViewById(R.id.tv_portrait_comment_content);

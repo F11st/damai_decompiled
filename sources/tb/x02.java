@@ -10,13 +10,12 @@ import org.jetbrains.annotations.Nullable;
 public class x02 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.x02$a */
     /* loaded from: classes3.dex */
-    public static class C9894a<T> extends AbstractC9896c<T> implements Function0<T> {
+    public static class a<T> extends c<T> implements Function0<T> {
         private final Function0<T> b;
         private volatile SoftReference<Object> c;
 
-        public C9894a(@Nullable T t, @NotNull Function0<T> function0) {
+        public a(@Nullable T t, @NotNull Function0<T> function0) {
             if (function0 == null) {
                 d(0);
             }
@@ -31,7 +30,7 @@ public class x02 {
             throw new IllegalArgumentException(String.format("Argument for @NotNull parameter '%s' of %s.%s must not be null", "initializer", "kotlin/reflect/jvm/internal/ReflectProperties$LazySoftVal", "<init>"));
         }
 
-        @Override // tb.x02.AbstractC9896c, kotlin.jvm.functions.Function0
+        @Override // tb.x02.c, kotlin.jvm.functions.Function0
         public T invoke() {
             Object obj;
             SoftReference<Object> softReference = this.c;
@@ -45,13 +44,12 @@ public class x02 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.x02$b */
     /* loaded from: classes3.dex */
-    public static class C9895b<T> extends AbstractC9896c<T> {
+    public static class b<T> extends c<T> {
         private final Function0<T> b;
         private volatile Object c;
 
-        public C9895b(@NotNull Function0<T> function0) {
+        public b(@NotNull Function0<T> function0) {
             if (function0 == null) {
                 d(0);
             }
@@ -63,7 +61,7 @@ public class x02 {
             throw new IllegalArgumentException(String.format("Argument for @NotNull parameter '%s' of %s.%s must not be null", "initializer", "kotlin/reflect/jvm/internal/ReflectProperties$LazyVal", "<init>"));
         }
 
-        @Override // tb.x02.AbstractC9896c, kotlin.jvm.functions.Function0
+        @Override // tb.x02.c, kotlin.jvm.functions.Function0
         public T invoke() {
             Object obj = this.c;
             if (obj != null) {
@@ -76,16 +74,14 @@ public class x02 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.x02$c */
     /* loaded from: classes3.dex */
-    public static abstract class AbstractC9896c<T> {
-        private static final Object a = new C9897a();
+    public static abstract class c<T> {
+        private static final Object a = new a();
 
         /* compiled from: Taobao */
-        /* renamed from: tb.x02$c$a */
         /* loaded from: classes3.dex */
-        static class C9897a {
-            C9897a() {
+        static class a {
+            a() {
             }
         }
 
@@ -121,23 +117,23 @@ public class x02 {
     }
 
     @NotNull
-    public static <T> C9895b<T> b(@NotNull Function0<T> function0) {
+    public static <T> b<T> b(@NotNull Function0<T> function0) {
         if (function0 == null) {
             a(0);
         }
-        return new C9895b<>(function0);
+        return new b<>(function0);
     }
 
     @NotNull
-    public static <T> C9894a<T> c(@Nullable T t, @NotNull Function0<T> function0) {
+    public static <T> a<T> c(@Nullable T t, @NotNull Function0<T> function0) {
         if (function0 == null) {
             a(1);
         }
-        return new C9894a<>(t, function0);
+        return new a<>(t, function0);
     }
 
     @NotNull
-    public static <T> C9894a<T> d(@NotNull Function0<T> function0) {
+    public static <T> a<T> d(@NotNull Function0<T> function0) {
         if (function0 == null) {
             a(2);
         }

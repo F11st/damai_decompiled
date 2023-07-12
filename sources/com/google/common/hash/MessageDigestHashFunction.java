@@ -11,7 +11,7 @@ import tb.du1;
 /* compiled from: Taobao */
 @Immutable
 /* loaded from: classes10.dex */
-final class MessageDigestHashFunction extends AbstractC5229b implements Serializable {
+final class MessageDigestHashFunction extends com.google.common.hash.b implements Serializable {
     private final int bytes;
     private final MessageDigest prototype;
     private final boolean supportsClone;
@@ -37,9 +37,8 @@ final class MessageDigestHashFunction extends AbstractC5229b implements Serializ
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.hash.MessageDigestHashFunction$b */
     /* loaded from: classes10.dex */
-    private static final class C5222b extends AbstractC5228a {
+    private static final class b extends com.google.common.hash.a {
         private final MessageDigest b;
         private final int c;
         private boolean d;
@@ -48,19 +47,19 @@ final class MessageDigestHashFunction extends AbstractC5229b implements Serializ
             du1.x(!this.d, "Cannot re-use a Hasher after calling hash() on it");
         }
 
-        @Override // com.google.common.hash.AbstractC5228a
+        @Override // com.google.common.hash.a
         protected void b(byte b) {
             f();
             this.b.update(b);
         }
 
-        @Override // com.google.common.hash.AbstractC5228a
+        @Override // com.google.common.hash.a
         protected void c(ByteBuffer byteBuffer) {
             f();
             this.b.update(byteBuffer);
         }
 
-        @Override // com.google.common.hash.AbstractC5228a
+        @Override // com.google.common.hash.a
         protected void e(byte[] bArr, int i, int i2) {
             f();
             this.b.update(bArr, i, i2);
@@ -76,7 +75,7 @@ final class MessageDigestHashFunction extends AbstractC5229b implements Serializ
             return HashCode.fromBytesNoCopy(Arrays.copyOf(this.b.digest(), this.c));
         }
 
-        private C5222b(MessageDigest messageDigest, int i) {
+        private b(MessageDigest messageDigest, int i) {
             this.b = messageDigest;
             this.c = i;
         }
@@ -116,11 +115,11 @@ final class MessageDigestHashFunction extends AbstractC5229b implements Serializ
     public Hasher newHasher() {
         if (this.supportsClone) {
             try {
-                return new C5222b((MessageDigest) this.prototype.clone(), this.bytes);
+                return new b((MessageDigest) this.prototype.clone(), this.bytes);
             } catch (CloneNotSupportedException unused) {
             }
         }
-        return new C5222b(getMessageDigest(this.prototype.getAlgorithm()), this.bytes);
+        return new b(getMessageDigest(this.prototype.getAlgorithm()), this.bytes);
     }
 
     public String toString() {

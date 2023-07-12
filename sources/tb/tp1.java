@@ -3,7 +3,6 @@ package tb;
 import android.net.Uri;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.poplayer.norm.IConfigAdapter;
-import com.alibaba.poplayer.trigger.AbstractC3680a;
 import com.alibaba.poplayer.trigger.Event;
 import com.alibaba.poplayer.trigger.page.PageConfigItem;
 import java.util.ArrayList;
@@ -11,15 +10,15 @@ import java.util.List;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
-public class tp1 extends AbstractC3680a<PageConfigItem> {
+public class tp1 extends com.alibaba.poplayer.trigger.a<PageConfigItem> {
     public static final String KEY_CONFIG_PAGE = "poplayer_config";
 
     public tp1(IConfigAdapter iConfigAdapter) {
-        super(iConfigAdapter, KEY_CONFIG_PAGE, AbstractC3680a.KEY_BLACK_LIST);
+        super(iConfigAdapter, KEY_CONFIG_PAGE, com.alibaba.poplayer.trigger.a.KEY_BLACK_LIST);
         dt1.a("PageConfigMgr use " + PageConfigItem.LOG);
     }
 
-    @Override // com.alibaba.poplayer.trigger.AbstractC3680a
+    @Override // com.alibaba.poplayer.trigger.a
     public vw2<PageConfigItem> h(Event event) {
         ArrayList arrayList = new ArrayList();
         for (ConfigItemType configitemtype : this.b) {
@@ -35,12 +34,12 @@ public class tp1 extends AbstractC3680a<PageConfigItem> {
         return f(event, arrayList);
     }
 
-    @Override // com.alibaba.poplayer.trigger.AbstractC3680a
+    @Override // com.alibaba.poplayer.trigger.a
     protected void p(List<PageConfigItem> list, String str, List list2) {
         gq1.A().w();
     }
 
-    @Override // com.alibaba.poplayer.trigger.AbstractC3680a
+    @Override // com.alibaba.poplayer.trigger.a
     /* renamed from: x */
     public PageConfigItem r(String str) {
         PageConfigItem pageConfigItem = (PageConfigItem) JSON.parseObject(str, PageConfigItem.class);
@@ -48,7 +47,7 @@ public class tp1 extends AbstractC3680a<PageConfigItem> {
         return pageConfigItem;
     }
 
-    @Override // com.alibaba.poplayer.trigger.AbstractC3680a
+    @Override // com.alibaba.poplayer.trigger.a
     /* renamed from: y */
     public PageConfigItem s(Event event) {
         Uri parse = Uri.parse(event.originUri);

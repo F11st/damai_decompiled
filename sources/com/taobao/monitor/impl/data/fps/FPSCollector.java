@@ -13,7 +13,7 @@ import com.taobao.monitor.impl.trace.FPSDispatcher;
 import com.taobao.monitor.impl.trace.IDispatcher;
 import com.taobao.monitor.impl.trace.WindowEventDispatcher;
 import java.lang.ref.WeakReference;
-import tb.C8934b0;
+import tb.b0;
 import tb.ca0;
 import tb.ho2;
 import tb.lu0;
@@ -57,11 +57,11 @@ public class FPSCollector implements ViewTreeObserver.OnDrawListener, WindowEven
     }
 
     private void b() {
-        IDispatcher b = ca0.b(C8934b0.ACTIVITY_FPS_DISPATCHER);
+        IDispatcher b = ca0.b(b0.ACTIVITY_FPS_DISPATCHER);
         if (b instanceof FPSDispatcher) {
             this.h = (FPSDispatcher) b;
         }
-        IDispatcher b2 = ca0.b(C8934b0.WINDOW_EVENT_DISPATCHER);
+        IDispatcher b2 = ca0.b(b0.WINDOW_EVENT_DISPATCHER);
         if (b2 instanceof WindowEventDispatcher) {
             WindowEventDispatcher windowEventDispatcher = (WindowEventDispatcher) b2;
             this.i = windowEventDispatcher;

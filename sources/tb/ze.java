@@ -11,20 +11,19 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
 public class ze {
-    private static List<C10020a> a = new ArrayList();
+    private static List<a> a = new ArrayList();
     private static final ReentrantReadWriteLock b;
     private static final ReentrantReadWriteLock.ReadLock c;
     private static final ReentrantReadWriteLock.WriteLock d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ze$a */
     /* loaded from: classes.dex */
-    private static class C10020a implements Comparable<C10020a> {
+    private static class a implements Comparable<a> {
         final Cache a;
         final CachePrediction b;
         final int c;
 
-        C10020a(Cache cache, CachePrediction cachePrediction, int i) {
+        a(Cache cache, CachePrediction cachePrediction, int i) {
             this.a = cache;
             this.b = cachePrediction;
             this.c = i;
@@ -32,8 +31,8 @@ public class ze {
 
         @Override // java.lang.Comparable
         /* renamed from: a */
-        public int compareTo(C10020a c10020a) {
-            return this.c - c10020a.c;
+        public int compareTo(a aVar) {
+            return this.c - aVar.c;
         }
     }
 
@@ -52,7 +51,7 @@ public class ze {
             if (cachePrediction != null) {
                 ReentrantReadWriteLock.WriteLock writeLock = d;
                 writeLock.lock();
-                a.add(new C10020a(cache, cachePrediction, i));
+                a.add(new a(cache, cachePrediction, i));
                 Collections.sort(a);
                 writeLock.unlock();
                 return;
@@ -66,9 +65,9 @@ public class ze {
 
     public static void b() {
         ALog.k("anet.CacheManager", "clearAllCache", null, new Object[0]);
-        for (C10020a c10020a : a) {
+        for (a aVar : a) {
             try {
-                c10020a.a.clear();
+                aVar.a.clear();
             } catch (Exception unused) {
             }
         }
@@ -91,7 +90,7 @@ public class ze {
             boolean r1 = r0.hasNext()     // Catch: java.lang.Throwable -> L29
             if (r1 == 0) goto L27
             java.lang.Object r1 = r0.next()     // Catch: java.lang.Throwable -> L29
-            tb.ze$a r1 = (tb.ze.C10020a) r1     // Catch: java.lang.Throwable -> L29
+            tb.ze$a r1 = (tb.ze.a) r1     // Catch: java.lang.Throwable -> L29
             anetwork.channel.cache.CachePrediction r2 = r1.b     // Catch: java.lang.Throwable -> L29
             boolean r2 = r2.handleCache(r3, r4)     // Catch: java.lang.Throwable -> L29
             if (r2 == 0) goto Lb

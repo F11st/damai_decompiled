@@ -30,77 +30,77 @@ public final class CertificateUtil {
         X509Certificate x509Certificate = null;
         try {
             try {
-                keyStore = KeyStore.getInstance(C5758j.e);
+                keyStore = KeyStore.getInstance(j.e);
                 inputStream = context.getAssets().open("hmsrootcas.bks");
             } catch (IOException e) {
                 e = e;
                 inputStream = null;
-                C5755g.b(a, "loadBksCA: exception : " + e.getMessage());
+                g.b(a, "loadBksCA: exception : " + e.getMessage());
                 context = inputStream;
-                AbstractC5754f.a((InputStream) context);
+                f.a((InputStream) context);
                 return x509Certificate;
             } catch (KeyStoreException e2) {
                 e = e2;
                 inputStream = null;
-                C5755g.b(a, "loadBksCA: exception : " + e.getMessage());
+                g.b(a, "loadBksCA: exception : " + e.getMessage());
                 context = inputStream;
-                AbstractC5754f.a((InputStream) context);
+                f.a((InputStream) context);
                 return x509Certificate;
             } catch (NoSuchAlgorithmException e3) {
                 e = e3;
                 inputStream = null;
-                C5755g.b(a, "loadBksCA: exception : " + e.getMessage());
+                g.b(a, "loadBksCA: exception : " + e.getMessage());
                 context = inputStream;
-                AbstractC5754f.a((InputStream) context);
+                f.a((InputStream) context);
                 return x509Certificate;
             } catch (CertificateException e4) {
                 e = e4;
                 inputStream = null;
-                C5755g.b(a, "loadBksCA: exception : " + e.getMessage());
+                g.b(a, "loadBksCA: exception : " + e.getMessage());
                 context = inputStream;
-                AbstractC5754f.a((InputStream) context);
+                f.a((InputStream) context);
                 return x509Certificate;
             } catch (Throwable th) {
                 th = th;
-                AbstractC5754f.a(inputStream2);
+                f.a(inputStream2);
                 throw th;
             }
             try {
                 inputStream.reset();
                 keyStore.load(inputStream, "".toCharArray());
-                x509Certificate = (X509Certificate) keyStore.getCertificate(C5758j.f);
+                x509Certificate = (X509Certificate) keyStore.getCertificate(j.f);
                 context = inputStream;
             } catch (IOException e5) {
                 e = e5;
-                C5755g.b(a, "loadBksCA: exception : " + e.getMessage());
+                g.b(a, "loadBksCA: exception : " + e.getMessage());
                 context = inputStream;
-                AbstractC5754f.a((InputStream) context);
+                f.a((InputStream) context);
                 return x509Certificate;
             } catch (KeyStoreException e6) {
                 e = e6;
-                C5755g.b(a, "loadBksCA: exception : " + e.getMessage());
+                g.b(a, "loadBksCA: exception : " + e.getMessage());
                 context = inputStream;
-                AbstractC5754f.a((InputStream) context);
+                f.a((InputStream) context);
                 return x509Certificate;
             } catch (NoSuchAlgorithmException e7) {
                 e = e7;
-                C5755g.b(a, "loadBksCA: exception : " + e.getMessage());
+                g.b(a, "loadBksCA: exception : " + e.getMessage());
                 context = inputStream;
-                AbstractC5754f.a((InputStream) context);
+                f.a((InputStream) context);
                 return x509Certificate;
             } catch (CertificateException e8) {
                 e = e8;
-                C5755g.b(a, "loadBksCA: exception : " + e.getMessage());
+                g.b(a, "loadBksCA: exception : " + e.getMessage());
                 context = inputStream;
-                AbstractC5754f.a((InputStream) context);
+                f.a((InputStream) context);
                 return x509Certificate;
             }
-            AbstractC5754f.a((InputStream) context);
+            f.a((InputStream) context);
             return x509Certificate;
         } catch (Throwable th2) {
             inputStream2 = context;
             th = th2;
-            AbstractC5754f.a(inputStream2);
+            f.a(inputStream2);
             throw th;
         }
     }

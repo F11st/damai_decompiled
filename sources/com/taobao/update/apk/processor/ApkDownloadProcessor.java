@@ -26,15 +26,14 @@ public class ApkDownloadProcessor implements Processor<ApkUpdateContext> {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.update.apk.processor.ApkDownloadProcessor$a */
     /* loaded from: classes11.dex */
-    public class C6916a implements DownloadListener {
+    public class a implements DownloadListener {
         int a = -1;
         final /* synthetic */ boolean b;
         final /* synthetic */ ApkUpdateContext c;
         final /* synthetic */ CountDownLatch d;
 
-        C6916a(boolean z, ApkUpdateContext apkUpdateContext, CountDownLatch countDownLatch) {
+        a(boolean z, ApkUpdateContext apkUpdateContext, CountDownLatch countDownLatch) {
             this.b = z;
             this.c = apkUpdateContext;
             this.d = countDownLatch;
@@ -136,7 +135,7 @@ public class ApkDownloadProcessor implements Processor<ApkUpdateContext> {
     }
 
     public DownloadListener getListener(CountDownLatch countDownLatch, ApkUpdateContext apkUpdateContext, boolean z) {
-        return new C6916a(z, apkUpdateContext, countDownLatch);
+        return new a(z, apkUpdateContext, countDownLatch);
     }
 
     @Override // com.taobao.update.framework.Processor

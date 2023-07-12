@@ -10,7 +10,7 @@ import android.taobao.windvane.monitor.WVMonitorService;
 import android.taobao.windvane.util.TaoLog;
 import android.text.TextUtils;
 import androidx.annotation.NonNull;
-import com.alipay.sdk.m.x.AbstractC4344c;
+import com.alipay.sdk.m.x.c;
 import com.taobao.orange.OrangeConfig;
 import com.taobao.orange.OrangeConfigListenerV1;
 import java.util.Map;
@@ -71,7 +71,7 @@ public class TBConfigListenerV1 implements OrangeConfigListenerV1 {
                 JSONObject optJSONObject = jSONArray.optJSONObject(i);
                 String optString = optJSONObject.optString("v", "");
                 String optString2 = optJSONObject.optString("v0", "");
-                String optString3 = optJSONObject.optString(AbstractC4344c.c, "");
+                String optString3 = optJSONObject.optString(c.c, "");
                 String optString4 = optJSONObject.optString("s", "");
                 String optString5 = optJSONObject.optString("e", "");
                 if (!TextUtils.isEmpty(optString) || !TextUtils.isEmpty(optString2) || !TextUtils.isEmpty(optString3)) {

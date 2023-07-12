@@ -50,9 +50,8 @@ public class ek2 extends DXTextViewWidgetNode {
     private static final int J = R$id.trade_text_watcher;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ek2$a */
     /* loaded from: classes6.dex */
-    public static class C9102a implements IDXBuilderWidgetNode {
+    public static class a implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(@Nullable Object obj) {
             return new ek2();
@@ -60,34 +59,32 @@ public class ek2 extends DXTextViewWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ek2$b */
     /* loaded from: classes6.dex */
-    public class C9103b {
+    public class b {
         private String a;
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: tb.ek2$b$a */
         /* loaded from: classes6.dex */
-        public class View$OnTouchListenerC9104a implements View.OnTouchListener {
+        public class a implements View.OnTouchListener {
             final /* synthetic */ View a;
 
             /* compiled from: Taobao */
-            /* renamed from: tb.ek2$b$a$a */
+            /* renamed from: tb.ek2$b$a$a  reason: collision with other inner class name */
             /* loaded from: classes6.dex */
-            class C9105a implements TDTextInputDialog.OnClickListener {
-                C9105a() {
+            class C0452a implements TDTextInputDialog.OnClickListener {
+                C0452a() {
                 }
 
                 @Override // com.alibaba.android.ultron.trade.dinamicx3.widget.TDTextInputDialog.OnClickListener
                 public void onClick(DialogInterface dialogInterface, CharSequence charSequence) {
-                    View$OnTouchListenerC9104a view$OnTouchListenerC9104a = View$OnTouchListenerC9104a.this;
-                    C9103b c9103b = C9103b.this;
-                    c9103b.c(view$OnTouchListenerC9104a.a, c9103b.a);
+                    a aVar = a.this;
+                    b bVar = b.this;
+                    bVar.c(aVar.a, bVar.a);
                 }
             }
 
-            View$OnTouchListenerC9104a(View view) {
+            a(View view) {
                 this.a = view;
             }
 
@@ -98,13 +95,13 @@ public class ek2 extends DXTextViewWidgetNode {
                 }
                 TDTextInputDialog tDTextInputDialog = new TDTextInputDialog(view.getContext());
                 tDTextInputDialog.h((EditText) this.a);
-                tDTextInputDialog.i(new C9105a());
+                tDTextInputDialog.i(new C0452a());
                 tDTextInputDialog.show();
                 return true;
             }
         }
 
-        public C9103b(String str) {
+        public b(String str) {
             this.a = str;
         }
 
@@ -116,14 +113,14 @@ public class ek2 extends DXTextViewWidgetNode {
                     viewGroup.setFocusable(true);
                     viewGroup.setFocusableInTouchMode(true);
                 }
-                C9106c c9106c = (C9106c) view.getTag(ek2.J);
-                if (c9106c != null) {
-                    ((EditText) view).removeTextChangedListener(c9106c);
+                c cVar = (c) view.getTag(ek2.J);
+                if (cVar != null) {
+                    ((EditText) view).removeTextChangedListener(cVar);
                 }
-                C9106c c9106c2 = new C9106c(view, this.a);
-                view.setTag(ek2.J, c9106c2);
-                ((EditText) view).addTextChangedListener(c9106c2);
-                view.setOnTouchListener(new View$OnTouchListenerC9104a(view));
+                c cVar2 = new c(view, this.a);
+                view.setTag(ek2.J, cVar2);
+                ((EditText) view).addTextChangedListener(cVar2);
+                view.setOnTouchListener(new a(view));
             }
         }
 
@@ -139,13 +136,12 @@ public class ek2 extends DXTextViewWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ek2$c */
     /* loaded from: classes6.dex */
-    public class C9106c implements TextWatcher {
+    public class c implements TextWatcher {
         private View a;
         private String b;
 
-        public C9106c(View view, String str) {
+        public c(View view, String str) {
             this.a = view;
             this.b = str;
         }
@@ -214,7 +210,7 @@ public class ek2 extends DXTextViewWidgetNode {
     public void onBindEvent(Context context, View view, long j) {
         super.onBindEvent(context, view, j);
         if (I == j) {
-            new C9103b(this.B).b(view);
+            new b(this.B).b(view);
         }
     }
 

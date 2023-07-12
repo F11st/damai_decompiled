@@ -2,10 +2,9 @@ package com.airbnb.lottie.model.content;
 
 import android.graphics.PointF;
 import com.airbnb.lottie.LottieDrawable;
-import com.airbnb.lottie.animation.content.C2836i;
 import com.airbnb.lottie.animation.content.Content;
+import com.airbnb.lottie.animation.content.i;
 import com.airbnb.lottie.model.animatable.AnimatableValue;
-import com.airbnb.lottie.model.layer.AbstractC2872a;
 import tb.k5;
 
 /* compiled from: Taobao */
@@ -99,7 +98,7 @@ public class PolystarShape implements ContentModel {
     }
 
     @Override // com.airbnb.lottie.model.content.ContentModel
-    public Content toContent(LottieDrawable lottieDrawable, AbstractC2872a abstractC2872a) {
-        return new C2836i(lottieDrawable, abstractC2872a, this);
+    public Content toContent(LottieDrawable lottieDrawable, com.airbnb.lottie.model.layer.a aVar) {
+        return new i(lottieDrawable, aVar, this);
     }
 }

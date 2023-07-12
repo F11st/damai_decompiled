@@ -6,7 +6,7 @@ import android.os.Looper;
 import android.os.Message;
 import com.huawei.hms.api.ConnectionResult;
 import com.huawei.hms.common.HuaweiApi;
-import com.huawei.hms.core.aidl.InterfaceC5551d;
+import com.huawei.hms.core.aidl.d;
 import com.huawei.hms.support.log.HMSLog;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -85,7 +85,7 @@ public class RequestManager implements Handler.Callback {
                 AnyClient client = poll.getClient();
                 if (client instanceof BaseHmsClient) {
                     BaseHmsClient baseHmsClient = (BaseHmsClient) client;
-                    baseHmsClient.setService(InterfaceC5551d.AbstractBinderC5552a.a(baseHmsClient.getAdapter().getServiceBinder()));
+                    baseHmsClient.setService(d.a.a(baseHmsClient.getAdapter().getServiceBinder()));
                     poll.onConnected();
                 }
             }

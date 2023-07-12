@@ -30,12 +30,11 @@ public class StarScroller extends RecyclerView.OnScrollListener {
     AttentionView i;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.star.StarScroller$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2706a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2706a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -50,12 +49,11 @@ public class StarScroller extends RecyclerView.OnScrollListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.star.StarScroller$b */
     /* loaded from: classes17.dex */
-    public class HandlerC2707b extends Handler {
+    public class b extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC2707b() {
+        b() {
         }
 
         @Override // android.os.Handler
@@ -74,12 +72,11 @@ public class StarScroller extends RecyclerView.OnScrollListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.star.StarScroller$c */
     /* loaded from: classes9.dex */
-    public class C2708c implements AttentionView.StateListener {
+    public class c implements AttentionView.StateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2708c() {
+        c() {
         }
 
         @Override // cn.damai.commonbusiness.view.AttentionView.StateListener
@@ -116,12 +113,12 @@ public class StarScroller extends RecyclerView.OnScrollListener {
         if (findViewById != null) {
             int i = R$id.user_call_follow_close;
             if (findViewById.findViewById(i) != null) {
-                this.h = new View$OnClickListenerC2706a();
+                this.h = new a();
                 this.b.findViewById(i).setOnClickListener(this.h);
             }
         }
         this.c = false;
-        this.d = new HandlerC2707b();
+        this.d = new b();
         jw0.a(this.g.getActivity(), (ViewGroup) this.b, this.f, 2);
     }
 
@@ -204,7 +201,7 @@ public class StarScroller extends RecyclerView.OnScrollListener {
                         if (attentionView3 != null) {
                             attentionView3.addAttentionView(this.i);
                         }
-                        this.i.setStateListener(new C2708c());
+                        this.i.setStateListener(new c());
                     }
                 } else {
                     this.b.setVisibility(8);

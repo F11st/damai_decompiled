@@ -19,12 +19,11 @@ public class j11 {
     public static final String CACHE2 = "damaitdplay/imagecache";
 
     /* compiled from: Taobao */
-    /* renamed from: tb.j11$b */
     /* loaded from: classes.dex */
-    public static class C9295b implements Comparator<File> {
+    public static class b implements Comparator<File> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9295b() {
+        private b() {
         }
 
         @Override // java.util.Comparator
@@ -48,7 +47,7 @@ public class j11 {
                 for (File file : listFiles) {
                     arrayList.add(file);
                 }
-                Collections.sort(arrayList, new C9295b());
+                Collections.sort(arrayList, new b());
                 int size = arrayList.size() - 200;
                 for (int i = 0; i < size; i++) {
                     ((File) arrayList.get(i)).delete();

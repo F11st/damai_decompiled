@@ -1,9 +1,8 @@
 package kotlin.sequences;
 
 import java.util.List;
-import kotlin.collections.C8212k;
+import kotlin.collections.k;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.RestrictedSuspendLambda;
 import kotlin.jvm.functions.Function2;
@@ -51,7 +50,7 @@ final class SequencesKt__SequencesKt$shuffled$1 extends RestrictedSuspendLambda 
         Object d;
         List C;
         pa2 pa2Var;
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         int i = this.label;
         if (i == 0) {
             i32.b(obj);
@@ -66,7 +65,7 @@ final class SequencesKt__SequencesKt$shuffled$1 extends RestrictedSuspendLambda 
         }
         while (!C.isEmpty()) {
             int nextInt = this.$random.nextInt(C.size());
-            Object y = C8212k.y(C);
+            Object y = k.y(C);
             if (nextInt < C.size()) {
                 y = C.set(nextInt, y);
             }

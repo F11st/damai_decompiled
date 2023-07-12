@@ -18,7 +18,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import cn.damai.uikit.R$color;
 import cn.damai.uikit.R$drawable;
-import cn.damai.uikit.image.C2497a;
 import cn.damai.uikit.image.IImageLoader;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -66,12 +65,11 @@ public class NineGridlayout extends ViewGroup {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.NineGridlayout$a */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC2590a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2590a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -89,12 +87,11 @@ public class NineGridlayout extends ViewGroup {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.NineGridlayout$b */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC2591b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2591b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -109,19 +106,18 @@ public class NineGridlayout extends ViewGroup {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.NineGridlayout$c */
     /* loaded from: classes8.dex */
-    public class C2592c implements IImageLoader.IImageSuccListener {
+    public class c implements IImageLoader.IImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2592c() {
+        c() {
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageSuccListener
-        public void onSuccess(IImageLoader.C2496b c2496b) {
+        public void onSuccess(IImageLoader.b bVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1536909043")) {
-                ipChange.ipc$dispatch("1536909043", new Object[]{this, c2496b});
+                ipChange.ipc$dispatch("1536909043", new Object[]{this, bVar});
             } else if (NineGridlayout.access$204(NineGridlayout.this) != NineGridlayout.this.multiImageLoadTotal || NineGridlayout.this.imageLoadFinishListener == null) {
             } else {
                 NineGridlayout.this.imageLoadFinishListener.onCompletion(true);
@@ -130,19 +126,18 @@ public class NineGridlayout extends ViewGroup {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.NineGridlayout$d */
     /* loaded from: classes8.dex */
-    public class C2593d implements IImageLoader.IImageFailListener {
+    public class d implements IImageLoader.IImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2593d() {
+        d() {
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageFailListener
-        public void onFail(IImageLoader.C2495a c2495a) {
+        public void onFail(IImageLoader.a aVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-521465444")) {
-                ipChange.ipc$dispatch("-521465444", new Object[]{this, c2495a});
+                ipChange.ipc$dispatch("-521465444", new Object[]{this, aVar});
             } else if (NineGridlayout.access$204(NineGridlayout.this) != NineGridlayout.this.multiImageLoadTotal || NineGridlayout.this.imageLoadFinishListener == null) {
             } else {
                 NineGridlayout.this.imageLoadFinishListener.onCompletion(false);
@@ -151,26 +146,25 @@ public class NineGridlayout extends ViewGroup {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.NineGridlayout$e */
     /* loaded from: classes8.dex */
-    public class C2594e implements IImageLoader.IImageSuccListener {
+    public class e implements IImageLoader.IImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ List a;
 
-        C2594e(List list) {
+        e(List list) {
             this.a = list;
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageSuccListener
-        public void onSuccess(IImageLoader.C2496b c2496b) {
+        public void onSuccess(IImageLoader.b bVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1482516145")) {
-                ipChange.ipc$dispatch("1482516145", new Object[]{this, c2496b});
+                ipChange.ipc$dispatch("1482516145", new Object[]{this, bVar});
                 return;
             }
-            Bitmap bitmap = c2496b.b;
+            Bitmap bitmap = bVar.b;
             if (bitmap != null) {
-                Log.d("getWidth", " getWidth onSuccess 222: " + c2496b.a.getIntrinsicWidth() + " , " + c2496b.a.getIntrinsicHeight());
+                Log.d("getWidth", " getWidth onSuccess 222: " + bVar.a.getIntrinsicWidth() + " , " + bVar.a.getIntrinsicHeight());
                 int[] imgWH = NineGridlayout.this.getImgWH(bitmap.getWidth(), bitmap.getHeight());
                 int i = imgWH[0];
                 int i2 = imgWH[1];
@@ -197,9 +191,9 @@ public class NineGridlayout extends ViewGroup {
                 }
                 return;
             }
-            Drawable drawable = c2496b.a;
+            Drawable drawable = bVar.a;
             if (drawable != null) {
-                int[] imgWH2 = NineGridlayout.this.getImgWH(drawable.getMinimumWidth(), c2496b.a.getMinimumHeight());
+                int[] imgWH2 = NineGridlayout.this.getImgWH(drawable.getMinimumWidth(), bVar.a.getMinimumHeight());
                 int i3 = imgWH2[0];
                 int i4 = imgWH2[1];
                 Log.d("blockW", " imgW: " + i3 + " , " + i4);
@@ -208,7 +202,7 @@ public class NineGridlayout extends ViewGroup {
                 layoutParams2.height = i4;
                 layoutParams2.width = i3;
                 NineGridlayout.this.setLayoutParams(layoutParams2);
-                NineGridlayout.this.setBackground(c2496b.a);
+                NineGridlayout.this.setBackground(bVar.a);
                 if (NineGridlayout.this.imageLoadFinishListener != null) {
                     NineGridlayout.this.imageLoadFinishListener.onCompletion(true);
                 }
@@ -217,19 +211,18 @@ public class NineGridlayout extends ViewGroup {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.NineGridlayout$f */
     /* loaded from: classes8.dex */
-    public class C2595f implements IImageLoader.IImageFailListener {
+    public class f implements IImageLoader.IImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2595f(NineGridlayout nineGridlayout) {
+        f(NineGridlayout nineGridlayout) {
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageFailListener
-        public void onFail(IImageLoader.C2495a c2495a) {
+        public void onFail(IImageLoader.a aVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-87736358")) {
-                ipChange.ipc$dispatch("-87736358", new Object[]{this, c2495a});
+                ipChange.ipc$dispatch("-87736358", new Object[]{this, aVar});
             }
         }
     }
@@ -246,8 +239,8 @@ public class NineGridlayout extends ViewGroup {
         this.childBoundClipRadius = 0;
         this.mRectF = new RectF();
         this.mTempRectF = new RectF();
-        this.imageSuccListener = new C2592c();
-        this.imageFailListener = new C2593d();
+        this.imageSuccListener = new c();
+        this.imageFailListener = new d();
     }
 
     static /* synthetic */ int access$204(NineGridlayout nineGridlayout) {
@@ -267,18 +260,18 @@ public class NineGridlayout extends ViewGroup {
             }
             this.conertip.setBackground(getResources().getDrawable(R$drawable.bg_corner_ninegrid_tip));
             this.conertip.setGravity(17);
-            int a = yr2.a(getContext(), 1.0f);
-            this.conertip.setPadding(yr2.a(getContext(), 4.0f), a, yr2.a(getContext(), 2.5f), a);
+            int a2 = yr2.a(getContext(), 1.0f);
+            this.conertip.setPadding(yr2.a(getContext(), 4.0f), a2, yr2.a(getContext(), 2.5f), a2);
             TextView textView = this.conertip;
             textView.setText(jn1.PLUS + (this.realSize - 3));
             this.conertip.setTextColor(getResources().getColor(R$color.white));
             this.conertip.setTextSize((float) yr2.a(getContext(), 3.5f));
-            int a2 = i - yr2.a(getContext(), 24.5f);
-            int a3 = i2 - yr2.a(getContext(), 16.5f);
-            int a4 = i - yr2.a(getContext(), 0.5f);
-            int a5 = i2 - yr2.a(getContext(), 0.5f);
-            this.conertip.layout(a2, a3, a4, a5);
-            Log.d("grid", " layout === : " + a2 + " , " + a3 + " , " + a4 + " , " + a5);
+            int a3 = i - yr2.a(getContext(), 24.5f);
+            int a4 = i2 - yr2.a(getContext(), 16.5f);
+            int a5 = i - yr2.a(getContext(), 0.5f);
+            int a6 = i2 - yr2.a(getContext(), 0.5f);
+            this.conertip.layout(a3, a4, a5, a6);
+            Log.d("grid", " layout === : " + a3 + " , " + a4 + " , " + a5 + " , " + a6);
             this.conertip.setVisibility(0);
         } else {
             TextView textView2 = this.conertip;
@@ -393,7 +386,7 @@ public class NineGridlayout extends ViewGroup {
         if (list.get(0) == null) {
             return;
         }
-        C2497a.a().load(list.get(0).url, R$drawable.uikit_default_image_bg_grey, new C2594e(list), new C2595f(this));
+        cn.damai.uikit.image.a.a().load(list.get(0).url, R$drawable.uikit_default_image_bg_grey, new e(list), new f(this));
     }
 
     private ClickGrayImageView generateImageView() {
@@ -403,7 +396,7 @@ public class NineGridlayout extends ViewGroup {
         }
         ClickGrayImageView clickGrayImageView = new ClickGrayImageView(getContext(), this.radius);
         clickGrayImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        clickGrayImageView.setOnClickListener(new View$OnClickListenerC2591b());
+        clickGrayImageView.setOnClickListener(new b());
         clickGrayImageView.setBackgroundColor(Color.parseColor("#f5f5f5"));
         return clickGrayImageView;
     }
@@ -428,28 +421,28 @@ public class NineGridlayout extends ViewGroup {
         int[] iArr = new int[2];
         int blockW = getBlockW(42);
         int i3 = this.totalWidth;
-        int a = yr2.a(getContext(), 184.0f);
-        int a2 = yr2.a(getContext(), 217.0f);
-        int a3 = yr2.a(getContext(), 289.0f);
+        int a2 = yr2.a(getContext(), 184.0f);
+        int a3 = yr2.a(getContext(), 217.0f);
+        int a4 = yr2.a(getContext(), 289.0f);
         Log.d("blockW", " imgW: " + i + " , " + i2);
         int i4 = this.totalWidth;
         if (i * 9 < i2 * 16) {
             if (i * 4 <= i2 * 3) {
-                i3 = a2;
-                a = a3;
+                i3 = a3;
+                a2 = a4;
             } else {
                 i3 = (int) (i4 * 0.66d);
-                a = i3;
+                a2 = i3;
             }
         }
         if (i3 < blockW) {
-            a = (a * blockW) / i3;
+            a2 = (a2 * blockW) / i3;
             i3 = blockW;
         }
-        if (a < blockW) {
-            i3 = (i3 * blockW) / a;
+        if (a2 < blockW) {
+            i3 = (i3 * blockW) / a2;
         } else {
-            blockW = a;
+            blockW = a2;
         }
         if (blockW <= i4) {
             i4 = blockW;
@@ -712,7 +705,7 @@ public class NineGridlayout extends ViewGroup {
                 this.images = null;
                 setBackgroundResource(R$drawable.uikit_default_image_bg_grey);
                 fixSingleImg(list);
-                setOnClickListener(new View$OnClickListenerC2590a());
+                setOnClickListener(new a());
                 return;
             }
             setBackground(null);
@@ -785,8 +778,8 @@ public class NineGridlayout extends ViewGroup {
         this.childBoundClipRadius = 0;
         this.mRectF = new RectF();
         this.mTempRectF = new RectF();
-        this.imageSuccListener = new C2592c();
-        this.imageFailListener = new C2593d();
+        this.imageSuccListener = new c();
+        this.imageFailListener = new d();
         Log.d("onMeasure", " NineGridlayout w: " + getMeasuredWidth());
     }
 }

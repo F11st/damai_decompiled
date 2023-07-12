@@ -38,12 +38,11 @@ public class YYMemberTabActivity extends SimpleBaseActivity {
     private boolean useNewContainer = false;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.yymember.YYMemberTabActivity$a */
     /* loaded from: classes9.dex */
-    public class C2791a implements Function2<WebView, String, wt2> {
+    public class a implements Function2<WebView, String, wt2> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2791a() {
+        a() {
         }
 
         @Override // kotlin.jvm.functions.Function2
@@ -59,12 +58,11 @@ public class YYMemberTabActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.yymember.YYMemberTabActivity$b */
     /* loaded from: classes9.dex */
-    public class C2792b implements WebViewFragment.LoadListener {
+    public class b implements WebViewFragment.LoadListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2792b() {
+        b() {
         }
 
         @Override // cn.damai.h5container.WebViewFragment.LoadListener
@@ -79,12 +77,11 @@ public class YYMemberTabActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.yymember.YYMemberTabActivity$c */
     /* loaded from: classes9.dex */
-    public class C2793c implements TabbarLayout.TabBarListener {
+    public class c implements TabbarLayout.TabBarListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2793c(YYMemberTabActivity yYMemberTabActivity) {
+        c(YYMemberTabActivity yYMemberTabActivity) {
         }
 
         @Override // cn.damai.commonbusiness.tab.TabbarLayout.TabBarListener
@@ -191,12 +188,12 @@ public class YYMemberTabActivity extends SimpleBaseActivity {
         this.mFragment.setArguments(bundle);
         Fragment fragment = this.mFragment;
         if (fragment instanceof DMH5Fragment) {
-            ((DMH5Fragment) fragment).setPageLoadFinishListener(new C2791a());
+            ((DMH5Fragment) fragment).setPageLoadFinishListener(new a());
         } else if (fragment instanceof WebViewFragment) {
-            ((WebViewFragment) fragment).setListener(new C2792b());
+            ((WebViewFragment) fragment).setListener(new b());
         }
         getSupportFragmentManager().beginTransaction().replace(R$id.yy_member_fragment_container, this.mFragment).commitAllowingStateLoss();
-        DamaiTabbarManager damaiTabbarManager = new DamaiTabbarManager(this, (TabbarLayout) findViewById(R$id.yy_member_fragment_tabbar), new C2793c(this));
+        DamaiTabbarManager damaiTabbarManager = new DamaiTabbarManager(this, (TabbarLayout) findViewById(R$id.yy_member_fragment_tabbar), new c(this));
         this.mTabBarManager = damaiTabbarManager;
         damaiTabbarManager.j(DamaiConstants.TAB_HUIYUAN);
     }

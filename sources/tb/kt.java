@@ -12,9 +12,6 @@ import com.alibaba.android.bindingx.plugin.android.NativeCallback;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.taobao.android.dinamicx.C6365b;
-import com.taobao.android.dinamicx.C6367d;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DXRootView;
 import com.taobao.android.dinamicx.DinamicXEngine;
 import com.taobao.android.dinamicx.bindingx.DXBindingXViewUpdateManager;
@@ -31,20 +28,19 @@ import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class kt extends C6365b {
+public class kt extends com.taobao.android.dinamicx.b {
     ui1 d;
     mt e;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.kt$a */
     /* loaded from: classes11.dex */
-    public class C9374a implements NativeCallback {
+    public class a implements NativeCallback {
         final /* synthetic */ nt a;
         final /* synthetic */ DXRootView b;
         final /* synthetic */ DXWidgetNode c;
 
-        C9374a(nt ntVar, DXRootView dXRootView, DXWidgetNode dXWidgetNode) {
+        a(nt ntVar, DXRootView dXRootView, DXWidgetNode dXWidgetNode) {
             this.a = ntVar;
             this.b = dXRootView;
             this.c = dXWidgetNode;
@@ -117,13 +113,13 @@ public class kt extends C6365b {
                 if (TextUtils.isEmpty(str)) {
                     str = r10.DB_NAME;
                 }
-                DXAppMonitor.q(str, null, "DX_BindingX", "DX_BindingX_Crash", C6368e.BINDINGX_BINDINGX_CALL_BACK_CRASH, ry.a(th));
+                DXAppMonitor.q(str, null, "DX_BindingX", "DX_BindingX_Crash", com.taobao.android.dinamicx.e.BINDINGX_BINDINGX_CALL_BACK_CRASH, ry.a(th));
             }
         }
     }
 
-    public kt(@NonNull C6367d c6367d) {
-        super(c6367d);
+    public kt(@NonNull com.taobao.android.dinamicx.d dVar) {
+        super(dVar);
         lt ltVar = new lt();
         DXBindingXViewUpdateManager dXBindingXViewUpdateManager = new DXBindingXViewUpdateManager();
         mt mtVar = new mt();
@@ -644,11 +640,11 @@ public class kt extends C6365b {
         if (DinamicXEngine.x()) {
             nz.m("step2.1 -->  开始进入启动动画 " + ntVar.a + "的bindAnimation阶段");
         }
-        Map<String, Object> a = this.d.a(nativeView, ntVar.k, new C9374a(ntVar, dXRootView, dXWidgetNode));
-        if (a == null || a.isEmpty()) {
+        Map<String, Object> a2 = this.d.a(nativeView, ntVar.k, new a(ntVar, dXRootView, dXWidgetNode));
+        if (a2 == null || a2.isEmpty()) {
             return;
         }
-        B(a, ntVar);
+        B(a2, ntVar);
         r(dXRootView, dXWidgetNode, ntVar);
     }
 

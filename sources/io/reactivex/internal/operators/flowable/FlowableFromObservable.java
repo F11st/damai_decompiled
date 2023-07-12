@@ -1,16 +1,16 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
-import io.reactivex.AbstractC8149d;
 import io.reactivex.Observer;
+import io.reactivex.b;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableFromObservable<T> extends AbstractC8147b<T> {
-    private final AbstractC8149d<T> upstream;
+public final class FlowableFromObservable<T> extends b<T> {
+    private final d<T> upstream;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -53,11 +53,11 @@ public final class FlowableFromObservable<T> extends AbstractC8147b<T> {
         }
     }
 
-    public FlowableFromObservable(AbstractC8149d<T> abstractC8149d) {
-        this.upstream = abstractC8149d;
+    public FlowableFromObservable(d<T> dVar) {
+        this.upstream = dVar;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.upstream.subscribe(new SubscriberObserver(subscriber));
     }

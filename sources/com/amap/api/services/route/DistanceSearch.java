@@ -3,8 +3,8 @@ package com.amap.api.services.route;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
-import com.amap.api.col.s.C4435i;
 import com.amap.api.col.s.ay;
+import com.amap.api.col.s.i;
 import com.amap.api.services.core.AMapException;
 import com.amap.api.services.core.LatLonPoint;
 import com.amap.api.services.interfaces.IDistanceSearch;
@@ -125,7 +125,7 @@ public class DistanceSearch {
             try {
                 super.clone();
             } catch (CloneNotSupportedException e) {
-                C4435i.a(e, "DistanceSearch", "DistanceQueryclone");
+                i.a(e, "DistanceSearch", "DistanceQueryclone");
             }
             DistanceQuery distanceQuery = new DistanceQuery();
             distanceQuery.setType(this.a);

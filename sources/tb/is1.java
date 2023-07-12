@@ -1,14 +1,12 @@
 package tb;
 
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
-public class is1 extends C0528b {
+public class is1 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange;
     private static is1 b;
 
@@ -31,6 +29,6 @@ public class is1 extends C0528b {
         }
         HashMap hashMap = new HashMap();
         hashMap.put("usercode", z20.E());
-        C0529c.e().x(e("select_pic", "bottom", str, hashMap, Boolean.TRUE));
+        cn.damai.common.user.c.e().x(e("select_pic", "bottom", str, hashMap, Boolean.TRUE));
     }
 }

@@ -17,7 +17,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
@@ -26,9 +25,8 @@ public final class b03 {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.b03$a */
     /* loaded from: classes5.dex */
-    public static final class C8942a implements GuideUtHelper {
+    public static final class a implements GuideUtHelper {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ws2 a;
         final /* synthetic */ b03 b;
@@ -36,7 +34,7 @@ public final class b03 {
         final /* synthetic */ Map<String, JSONObject> d;
 
         /* JADX WARN: Multi-variable type inference failed */
-        C8942a(ws2 ws2Var, b03 b03Var, String str, Map<String, ? extends JSONObject> map) {
+        a(ws2 ws2Var, b03 b03Var, String str, Map<String, ? extends JSONObject> map) {
             this.a = ws2Var;
             this.b = b03Var;
             this.c = str;
@@ -49,7 +47,7 @@ public final class b03 {
             if (AndroidInstantRuntime.support(ipChange, "244077597")) {
                 ipChange.ipc$dispatch("244077597", new Object[]{this});
             } else {
-                UTHelperPopupCallback.C4028a.a(this.a, this.b.b(this.c), this.d, false, 4, null);
+                UTHelperPopupCallback.a.a(this.a, this.b.b(this.c), this.d, false, 4, null);
             }
         }
 
@@ -69,19 +67,18 @@ public final class b03 {
             if (AndroidInstantRuntime.support(ipChange, "-971699372")) {
                 ipChange.ipc$dispatch("-971699372", new Object[]{this, Long.valueOf(j)});
             } else {
-                UTHelperPopupCallback.C4028a.b(this.a, j, this.b.b(this.c), this.d, false, 8, null);
+                UTHelperPopupCallback.a.b(this.a, j, this.b.b(this.c), this.d, false, 8, null);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.b03$b */
     /* loaded from: classes5.dex */
-    public static final class C8943b implements WantSeeGuideDialog.WantGuidePageSource {
+    public static final class b implements WantSeeGuideDialog.WantGuidePageSource {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ WantSeeActionBean a;
 
-        C8943b(WantSeeActionBean wantSeeActionBean) {
+        b(WantSeeActionBean wantSeeActionBean) {
             this.a = wantSeeActionBean;
         }
 
@@ -176,7 +173,7 @@ public final class b03 {
         }
         HashMap<String, String> f = d23.f();
         if (str != null) {
-            s = C8604o.s(str);
+            s = kotlin.text.o.s(str);
             if (!s) {
                 z = false;
             }
@@ -222,15 +219,15 @@ public final class b03 {
                 WantSeeActionBean wantSeeActionBean2 = (WantSeeActionBean) m61.d(popupItem2 != null ? popupItem2.value : null, WantSeeActionBean.class);
                 PopupDetailBean.PopupItem popupItem3 = popupDetailBean.item;
                 Object obj = (popupItem3 == null || (jSONObject = popupItem3.value) == null) ? null : jSONObject.get("action");
-                if (!g03.INSTANCE.d(baseActivity, new C8942a(ws2Var, this, str, obj instanceof Map ? obj : null), new C8943b(wantSeeActionBean)) && wantSeePosterTips.getVisibility() == 8) {
+                if (!g03.INSTANCE.d(baseActivity, new a(ws2Var, this, str, obj instanceof Map ? obj : null), new b(wantSeeActionBean)) && wantSeePosterTips.getVisibility() == 8) {
                     if (wantSeeActionBean2 != null) {
-                        WantSeeTips.AbstractC1562a.C1564b c1564b = WantSeeTips.AbstractC1562a.C1564b.INSTANCE;
-                        c1564b.p(wantSeeActionBean2.title);
-                        c1564b.o(PermissionsHelper.a(AppInfoProviderProxy.getAppContext()) ? wantSeeActionBean2.subTitleOpenNotify : wantSeeActionBean2.subTitleUnOpenNotify);
-                        c1564b.m(wantSeeActionBean2.lottie);
-                        c1564b.n(wantSeeActionBean2.jumpUrl);
+                        WantSeeTips.a.b bVar = WantSeeTips.a.b.INSTANCE;
+                        bVar.p(wantSeeActionBean2.title);
+                        bVar.o(PermissionsHelper.a(AppInfoProviderProxy.getAppContext()) ? wantSeeActionBean2.subTitleOpenNotify : wantSeeActionBean2.subTitleUnOpenNotify);
+                        bVar.m(wantSeeActionBean2.lottie);
+                        bVar.n(wantSeeActionBean2.jumpUrl);
                     }
-                    wantSeeTips.setPageSource(WantSeeTips.AbstractC1562a.C1564b.INSTANCE);
+                    wantSeeTips.setPageSource(WantSeeTips.a.b.INSTANCE);
                     wantSeeTips.showAnim();
                 }
                 return true;

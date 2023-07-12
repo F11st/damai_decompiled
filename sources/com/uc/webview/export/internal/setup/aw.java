@@ -7,9 +7,8 @@ import com.uc.webview.export.CDParamKeys;
 import com.uc.webview.export.cyclone.UCCyclone;
 import com.uc.webview.export.extension.UCCore;
 import com.uc.webview.export.internal.interfaces.IWaStat;
-import com.uc.webview.export.internal.utility.C7337j;
-import com.uc.webview.export.internal.utility.C7349p;
 import com.uc.webview.export.internal.utility.Log;
+import com.uc.webview.export.internal.utility.j;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.concurrent.Callable;
@@ -23,9 +22,8 @@ public class aw extends UCSubSetupTask<aw, aw> {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.uc.webview.export.internal.setup.aw$a */
     /* loaded from: classes11.dex */
-    public static class C7267a {
+    public static class a {
         private static long A = 0;
         private static long B = 0;
         private static long C = 0;
@@ -103,7 +101,7 @@ public class aw extends UCSubSetupTask<aw, aw> {
             J = j18 << 1;
         }
 
-        private C7267a() {
+        private a() {
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:157:0x07e6, code lost:
@@ -118,13 +116,13 @@ public class aw extends UCSubSetupTask<aw, aw> {
             com.uc.webview.export.internal.interfaces.IWaStat.WaStat.stat(com.uc.webview.export.internal.interfaces.IWaStat.SHARE_CORE_COPY_TO_SDCARD_TASK_RESULT_COPY, java.lang.Long.toString(r12));
          */
         /* JADX WARN: Code restructure failed: missing block: B:159:0x0823, code lost:
-            if (r12 != com.uc.webview.export.internal.setup.aw.C7267a.B) goto L187;
+            if (r12 != com.uc.webview.export.internal.setup.aw.a.B) goto L187;
          */
         /* JADX WARN: Code restructure failed: missing block: B:160:0x0825, code lost:
             com.uc.webview.export.internal.interfaces.IWaStat.WaStat.stat(r16);
          */
         /* JADX WARN: Code restructure failed: missing block: B:162:0x082d, code lost:
-            if (r12 != com.uc.webview.export.internal.setup.aw.C7267a.G) goto L190;
+            if (r12 != com.uc.webview.export.internal.setup.aw.a.G) goto L190;
          */
         /* JADX WARN: Code restructure failed: missing block: B:163:0x082f, code lost:
             com.uc.webview.export.internal.interfaces.IWaStat.WaStat.stat(r17);
@@ -161,10 +159,10 @@ public class aw extends UCSubSetupTask<aw, aw> {
                 Method dump skipped, instructions count: 3734
                 To view this dump change 'Code comments level' option to 'DEBUG'
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.uc.webview.export.internal.setup.aw.C7267a.a(android.content.Context, java.lang.String, int):void");
+            throw new UnsupportedOperationException("Method not decompiled: com.uc.webview.export.internal.setup.aw.a.a(android.content.Context, java.lang.String, int):void");
         }
 
-        /* synthetic */ C7267a(byte b2) {
+        /* synthetic */ a(byte b2) {
             this();
         }
 
@@ -172,7 +170,7 @@ public class aw extends UCSubSetupTask<aw, aw> {
             long j2 = q;
             try {
                 if (UCCyclone.DecFileOrign.Update != i2) {
-                    if (C7349p.f()) {
+                    if (com.uc.webview.export.internal.utility.p.f()) {
                         j2 = r;
                     } else {
                         UCMRunningInfo totalLoadedUCM = UCSetupTask.getTotalLoadedUCM();
@@ -189,11 +187,11 @@ public class aw extends UCSubSetupTask<aw, aw> {
             return j2;
         }
 
-        private static boolean a(Context context, File file, C7337j.C7338a c7338a) {
-            if (c7338a != null) {
+        private static boolean a(Context context, File file, j.a aVar) {
+            if (aVar != null) {
                 IWaStat.WaStat.stat(IWaStat.SHARE_CORE_SDK_VERSION_CONFIG, UCCore.getParam(CDParamKeys.CD_KEY_SHARE_CORE_HOST_PUSH_UCM_VERSIONS));
             }
-            return !C7349p.a(C7337j.a(context, file, UCCore.getParam(CDParamKeys.CD_KEY_SHARE_CORE_HOST_PUSH_UCM_VERSIONS), c7338a));
+            return !com.uc.webview.export.internal.utility.p.a(com.uc.webview.export.internal.utility.j.a(context, file, UCCore.getParam(CDParamKeys.CD_KEY_SHARE_CORE_HOST_PUSH_UCM_VERSIONS), aVar));
         }
 
         private static long a(Context context, File file) {
@@ -203,11 +201,11 @@ public class aw extends UCSubSetupTask<aw, aw> {
                 File[] listFiles = file.listFiles();
                 if (listFiles != null && listFiles.length != 0) {
                     for (File file2 : listFiles) {
-                        if (UCCyclone.detectZipByFileType(file2.getAbsolutePath()) && !C7337j.a(file2) && !C7337j.a(context, file2, (C7337j.C7338a) null)) {
+                        if (UCCyclone.detectZipByFileType(file2.getAbsolutePath()) && !com.uc.webview.export.internal.utility.j.a(file2) && !com.uc.webview.export.internal.utility.j.a(context, file2, (j.a) null)) {
                             file2.delete();
                             j2 = x;
                             Log.d(aw.a, ".deleteHistoryCoreFiles verifySignature failure! file: " + file2.getAbsolutePath());
-                        } else if (!a(context, file2, (C7337j.C7338a) null)) {
+                        } else if (!a(context, file2, (j.a) null)) {
                             file2.delete();
                             j2 = y;
                             Log.d(aw.a, ".deleteHistoryCoreFiles verifyCoreCompressFileVersion failure! file: " + file2.getAbsolutePath());
@@ -238,7 +236,7 @@ public class aw extends UCSubSetupTask<aw, aw> {
                 Method dump skipped, instructions count: 664
                 To view this dump change 'Code comments level' option to 'DEBUG'
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.uc.webview.export.internal.setup.aw.C7267a.a(android.content.Context, java.io.File, java.lang.String):long");
+            throw new UnsupportedOperationException("Method not decompiled: com.uc.webview.export.internal.setup.aw.a.a(android.content.Context, java.io.File, java.lang.String):long");
         }
 
         public static void a(Context context, boolean z2, boolean z3, Callable<Boolean> callable) {
@@ -258,22 +256,22 @@ public class aw extends UCSubSetupTask<aw, aw> {
                     IWaStat.WaStat.stat(IWaStat.SHARE_CORE_INVALID_UPDATE_TIMES, Integer.toString(i3));
                     IWaStat.WaStat.stat(IWaStat.SHARE_CORE_CURRENT_IS_UC_CORE, z2 ? "1" : "0");
                     IWaStat.WaStat.stat(IWaStat.SHARE_CORE_HAS_UPD_SOURCE, z3 ? "1" : "0");
-                    if (!C7337j.b(context)) {
+                    if (!com.uc.webview.export.internal.utility.j.b(context)) {
                         Log.d(aw.a, ".statDevicesHasShareCore Sdcard配置及权限校验失败");
                         return;
                     }
                     ArrayList<String> arrayList = new ArrayList();
                     arrayList.add(context.getPackageName());
                     String param = UCCore.getParam(CDParamKeys.CD_KEY_SHARE_CORE_CLIENT_SPECIAL_HOST_PKG_NAME_LIST);
-                    if (!C7349p.a(param)) {
+                    if (!com.uc.webview.export.internal.utility.p.a(param)) {
                         for (String str : param.split(CDParamKeys.CD_VALUE_STRING_SPLITER)) {
-                            if (!C7349p.a(str) && !str.equals(context.getPackageName())) {
+                            if (!com.uc.webview.export.internal.utility.p.a(str) && !str.equals(context.getPackageName())) {
                                 arrayList.add(str);
                             }
                         }
                     }
                     for (String str2 : arrayList) {
-                        File c2 = C7337j.c(str2);
+                        File c2 = com.uc.webview.export.internal.utility.j.c(str2);
                         if (!c2.exists()) {
                             Log.d(aw.a, ".statDevicesHasShareCore " + c2.getAbsolutePath() + " not exists.");
                         } else {
@@ -303,23 +301,23 @@ public class aw extends UCSubSetupTask<aw, aw> {
         Log.d(a, ".run");
         try {
             Context applicationContext = getContext().getApplicationContext();
-            if (C7349p.a((Boolean) getOption(UCCore.OPTION_ONLY_STAT_DEVICES_HAS_CORE_SHARE))) {
+            if (com.uc.webview.export.internal.utility.p.a((Boolean) getOption(UCCore.OPTION_ONLY_STAT_DEVICES_HAS_CORE_SHARE))) {
                 synchronized (b) {
-                    new C7267a((byte) 0);
-                    C7267a.a(applicationContext, C7349p.a((Boolean) getOption(UCCore.OPTION_CURRENT_IS_UC_CORE)), C7349p.a((Boolean) getOption(UCCore.OPTION_HAS_UPDATE_SOURCE)), (Callable) getOption(UCCore.OPTION_DOWNLOAD_CHECKER));
+                    new a((byte) 0);
+                    a.a(applicationContext, com.uc.webview.export.internal.utility.p.a((Boolean) getOption(UCCore.OPTION_CURRENT_IS_UC_CORE)), com.uc.webview.export.internal.utility.p.a((Boolean) getOption(UCCore.OPTION_HAS_UPDATE_SOURCE)), (Callable) getOption(UCCore.OPTION_DOWNLOAD_CHECKER));
                 }
                 return;
             }
             String param = UCCore.getParam(CDParamKeys.CD_KEY_SHARE_CORE_HOST_COMPRESSED_CORE_FILE_PATH);
             IWaStat.WaStat.stat(IWaStat.SHARE_CORE_COPY_TASK_RUN_PV);
             synchronized (b) {
-                if (!C7349p.a(param)) {
+                if (!com.uc.webview.export.internal.utility.p.a(param)) {
                     IWaStat.WaStat.stat(IWaStat.SHARE_CORE_COPY_TASK_RUN_CALL_PV);
-                    new C7267a((byte) 0);
-                    C7267a.a(applicationContext, param, UCCyclone.DecFileOrign.Other);
+                    new a((byte) 0);
+                    a.a(applicationContext, param, UCCyclone.DecFileOrign.Other);
                 }
-                new C7267a((byte) 0);
-                C7267a.a(applicationContext, C7349p.a((Boolean) getOption(UCCore.OPTION_CURRENT_IS_UC_CORE)), C7349p.a((Boolean) getOption(UCCore.OPTION_HAS_UPDATE_SOURCE)), (Callable) getOption(UCCore.OPTION_DOWNLOAD_CHECKER));
+                new a((byte) 0);
+                a.a(applicationContext, com.uc.webview.export.internal.utility.p.a((Boolean) getOption(UCCore.OPTION_CURRENT_IS_UC_CORE)), com.uc.webview.export.internal.utility.p.a((Boolean) getOption(UCCore.OPTION_HAS_UPDATE_SOURCE)), (Callable) getOption(UCCore.OPTION_DOWNLOAD_CHECKER));
             }
         } catch (Throwable th) {
             th.printStackTrace();
@@ -330,13 +328,13 @@ public class aw extends UCSubSetupTask<aw, aw> {
         String str3 = a;
         Log.d(str3, ".shareDownloadFile(" + str + AVFSCacheConstants.COMMA_SEP + str2 + jn1.BRACKET_END_STR);
         IWaStat.WaStat.stat(IWaStat.SHARE_CORE_COPY_TASK_UPD_PV);
-        if (C7349p.a(str2)) {
+        if (com.uc.webview.export.internal.utility.p.a(str2)) {
             return;
         }
         synchronized (b) {
             IWaStat.WaStat.stat(IWaStat.SHARE_CORE_COPY_TASK_UPD_CALL_PV);
-            new C7267a((byte) 0);
-            C7267a.a(context, str2, UCCyclone.DecFileOrign.Update);
+            new a((byte) 0);
+            a.a(context, str2, UCCyclone.DecFileOrign.Update);
         }
     }
 }

@@ -18,10 +18,9 @@ public class ApplicationLowMemoryDispatcher extends AbsDispatcher<LowMemoryListe
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.ApplicationLowMemoryDispatcher$a */
     /* loaded from: classes11.dex */
-    public class C6776a implements AbsDispatcher.ListenerCaller<LowMemoryListener> {
-        C6776a(ApplicationLowMemoryDispatcher applicationLowMemoryDispatcher) {
+    public class a implements AbsDispatcher.ListenerCaller<LowMemoryListener> {
+        a(ApplicationLowMemoryDispatcher applicationLowMemoryDispatcher) {
         }
 
         @Override // com.taobao.monitor.impl.trace.AbsDispatcher.ListenerCaller
@@ -36,7 +35,7 @@ public class ApplicationLowMemoryDispatcher extends AbsDispatcher<LowMemoryListe
     }
 
     public void f() {
-        c(new C6776a(this));
+        c(new a(this));
     }
 
     @Override // android.content.ComponentCallbacks

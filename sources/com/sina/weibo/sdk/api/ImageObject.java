@@ -3,7 +3,7 @@ package com.sina.weibo.sdk.api;
 import android.graphics.Bitmap;
 import android.os.Parcel;
 import android.os.Parcelable;
-import com.sina.weibo.sdk.b.C6212c;
+import com.sina.weibo.sdk.b.c;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 
@@ -50,22 +50,22 @@ public class ImageObject extends MediaObject {
         if ((bArr != null && bArr.length != 0) || ((str = this.imagePath) != null && str.length() != 0)) {
             byte[] bArr2 = this.imageData;
             if (bArr2 != null && bArr2.length > 1048576) {
-                C6212c.b(TAG, "checkArgs fail, content is too large");
+                c.b(TAG, "checkArgs fail, content is too large");
                 return false;
             }
             String str2 = this.imagePath;
             if (str2 != null && str2.length() > 512) {
-                C6212c.b(TAG, "checkArgs fail, path is invalid");
+                c.b(TAG, "checkArgs fail, path is invalid");
                 return false;
             }
             String str3 = this.imagePath;
             if (str3 == null || getFileSize(str3) <= 1048576) {
                 return true;
             }
-            C6212c.b(TAG, "checkArgs fail, image content is too large");
+            c.b(TAG, "checkArgs fail, image content is too large");
             return false;
         }
-        C6212c.b(TAG, "checkArgs fail, all arguments are null");
+        c.b(TAG, "checkArgs fail, all arguments are null");
         return false;
     }
 
@@ -81,7 +81,7 @@ public class ImageObject extends MediaObject {
             this.imageData = byteArrayOutputStream.toByteArray();
             byteArrayOutputStream.close();
         } catch (Exception e) {
-            C6212c.b(TAG, "ImageObject :" + e.getMessage());
+            c.b(TAG, "ImageObject :" + e.getMessage());
         }
     }
 

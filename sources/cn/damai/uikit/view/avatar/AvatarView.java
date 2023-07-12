@@ -14,7 +14,6 @@ import androidx.annotation.Nullable;
 import cn.damai.uikit.R$id;
 import cn.damai.uikit.R$layout;
 import cn.damai.uikit.R$styleable;
-import cn.damai.uikit.image.C2497a;
 import cn.damai.uikit.image.IImageLoader;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -36,42 +35,40 @@ public class AvatarView extends FrameLayout {
     private ImageView mYyTag;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.avatar.AvatarView$a */
     /* loaded from: classes8.dex */
-    public class C2607a implements IImageLoader.IImageSuccListener {
+    public class a implements IImageLoader.IImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C2607a(String str) {
+        a(String str) {
             this.a = str;
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageSuccListener
-        public void onSuccess(IImageLoader.C2496b c2496b) {
+        public void onSuccess(IImageLoader.b bVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1449858881")) {
-                ipChange.ipc$dispatch("-1449858881", new Object[]{this, c2496b});
+                ipChange.ipc$dispatch("-1449858881", new Object[]{this, bVar});
                 return;
             }
             AvatarView.this.mShowingAvatarUrl = this.a;
-            AvatarView.this.mRoundImg.setImageDrawable(c2496b.a);
+            AvatarView.this.mRoundImg.setImageDrawable(bVar.a);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.avatar.AvatarView$b */
     /* loaded from: classes8.dex */
-    public class C2608b implements IImageLoader.IImageFailListener {
+    public class b implements IImageLoader.IImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2608b(AvatarView avatarView) {
+        b(AvatarView avatarView) {
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageFailListener
-        public void onFail(IImageLoader.C2495a c2495a) {
+        public void onFail(IImageLoader.a aVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1678959720")) {
-                ipChange.ipc$dispatch("1678959720", new Object[]{this, c2495a});
+                ipChange.ipc$dispatch("1678959720", new Object[]{this, aVar});
             }
         }
     }
@@ -124,7 +121,7 @@ public class AvatarView extends FrameLayout {
                 }
                 Context context = getContext();
                 int viewSizePx = context != null ? this.mAvatarSize.getViewSizePx(context) : 0;
-                C2497a.a().load(str, 0, viewSizePx, viewSizePx, new C2607a(str), new C2608b(this));
+                cn.damai.uikit.image.a.a().load(str, 0, viewSizePx, viewSizePx, new a(str), new b(this));
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -50,7 +50,7 @@ public abstract class DiscreteDomain<C extends Comparable> {
         /* JADX INFO: Access modifiers changed from: package-private */
         @Override // com.google.common.collect.DiscreteDomain
         public BigInteger offset(BigInteger bigInteger, long j) {
-            C5191k.c(j, "distance");
+            k.c(j, "distance");
             return bigInteger.add(BigInteger.valueOf(j));
         }
 
@@ -105,7 +105,7 @@ public abstract class DiscreteDomain<C extends Comparable> {
         /* JADX INFO: Access modifiers changed from: package-private */
         @Override // com.google.common.collect.DiscreteDomain
         public Integer offset(Integer num, long j) {
-            C5191k.c(j, "distance");
+            k.c(j, "distance");
             return Integer.valueOf(Ints.c(num.longValue() + j));
         }
 
@@ -171,7 +171,7 @@ public abstract class DiscreteDomain<C extends Comparable> {
         /* JADX INFO: Access modifiers changed from: package-private */
         @Override // com.google.common.collect.DiscreteDomain
         public Long offset(Long l, long j) {
-            C5191k.c(j, "distance");
+            k.c(j, "distance");
             long longValue = l.longValue() + j;
             if (longValue < 0) {
                 du1.e(l.longValue() < 0, Constants.Name.OVERFLOW);

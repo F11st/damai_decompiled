@@ -22,9 +22,8 @@ class Options {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.http.Options$b */
     /* loaded from: classes11.dex */
-    public static class C6972b {
+    public static class b {
         private String a;
         private String b;
         private Map<String, String> c = new HashMap();
@@ -36,27 +35,27 @@ class Options {
             return new Options(this.a, this.b, this.c, this.d, this.e, this.f);
         }
 
-        public C6972b b(String str, String str2) {
+        public b b(String str, String str2) {
             this.c.put(str, str2);
             return this;
         }
 
-        public C6972b c(String str) {
+        public b c(String str) {
             this.d = str;
             return this;
         }
 
-        public C6972b d(String str) {
+        public b d(String str) {
             this.a = str;
             return this;
         }
 
-        public C6972b e(int i) {
+        public b e(int i) {
             this.f = i;
             return this;
         }
 
-        public C6972b f(String str) {
+        public b f(String str) {
             Type type = Type.json;
             if (type.name().equals(str)) {
                 this.e = type;
@@ -71,7 +70,7 @@ class Options {
             return this;
         }
 
-        public C6972b g(String str) {
+        public b g(String str) {
             this.b = str;
             return this;
         }

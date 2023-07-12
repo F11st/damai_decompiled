@@ -62,7 +62,7 @@ public class NdkCore {
         if (a) {
             return;
         }
-        boolean z = C6829a.b("pexcore", 2) && nativeLoadedVersionTest() == 2;
+        boolean z = a.b("pexcore", 2) && nativeLoadedVersionTest() == 2;
         a = z;
         hh0.f(Pexode.TAG, "retry load lib%s.so result=%b", "pexcore", Boolean.valueOf(z));
     }

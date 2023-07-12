@@ -15,8 +15,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.viewpager.widget.ViewPager;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.view.PagerSlidingTabStrip;
 import cn.damai.member.R$color;
@@ -101,7 +101,7 @@ public class TickletVenueActivity extends DamaiMapBaseActivity implements View.O
     private int from = 0;
     private int clickType = 0;
     private boolean isFirstEnter = true;
-    private ScrollLayout.OnScrollChangedListener mOnScrollChangedListener = new C2042a();
+    private ScrollLayout.OnScrollChangedListener mOnScrollChangedListener = new a();
     private int currentChooseIndex = -1;
 
     /* compiled from: Taobao */
@@ -156,12 +156,11 @@ public class TickletVenueActivity extends DamaiMapBaseActivity implements View.O
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TickletVenueActivity$a */
     /* loaded from: classes7.dex */
-    public class C2042a implements ScrollLayout.OnScrollChangedListener {
+    public class a implements ScrollLayout.OnScrollChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2042a() {
+        a() {
         }
 
         @Override // cn.damai.ticklet.view.ScrollLayout.OnScrollChangedListener
@@ -400,7 +399,7 @@ public class TickletVenueActivity extends DamaiMapBaseActivity implements View.O
         if (AndroidInstantRuntime.support(ipChange, "-1169266566")) {
             ipChange.ipc$dispatch("-1169266566", new Object[]{this});
         } else {
-            C0529c.e().n(this, C0528b.getInstance().b("xxxxx"));
+            c.e().n(this, b.getInstance().b("xxxxx"));
         }
     }
 

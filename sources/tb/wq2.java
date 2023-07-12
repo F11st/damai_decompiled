@@ -216,7 +216,7 @@ public class wq2 extends o2 {
         if (storageManager == null) {
             a(11);
         }
-        return j(declarationDescriptor, annotations, z, variance, ni1Var, i, sourceElement, null, SupertypeLoopChecker.C8298a.INSTANCE, storageManager);
+        return j(declarationDescriptor, annotations, z, variance, ni1Var, i, sourceElement, null, SupertypeLoopChecker.a.INSTANCE, storageManager);
     }
 
     @NotNull

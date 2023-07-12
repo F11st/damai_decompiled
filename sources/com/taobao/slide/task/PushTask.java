@@ -2,8 +2,8 @@ package com.taobao.slide.task;
 
 import android.text.TextUtils;
 import com.alibaba.fastjson.JSON;
-import com.taobao.slide.core.C6889b;
 import com.taobao.slide.core.SlideException;
+import com.taobao.slide.core.b;
 import com.taobao.slide.model.PodDO;
 import com.taobao.slide.model.PushDO;
 import com.taobao.slide.model.TraceDO;
@@ -20,12 +20,12 @@ public class PushTask implements Runnable {
     private static final String TAG = "PushTask";
     public static Set<PodDO> waitingPods;
     public static Set<String> waitingTracePod;
-    private C6889b engine;
+    private b engine;
     private String podInfo;
 
-    public PushTask(String str, C6889b c6889b) {
+    public PushTask(String str, b bVar) {
         this.podInfo = str;
-        this.engine = c6889b;
+        this.engine = bVar;
     }
 
     @Override // java.lang.Runnable
@@ -41,8 +41,8 @@ public class PushTask implements Runnable {
                         if (i == 1) {
                             PodDO podDO = (PodDO) JSON.parseObject(pushDO.payload, PodDO.class);
                             podDO.pushType = pushDO.type;
-                            C6889b c6889b = this.engine;
-                            if (c6889b != null && c6889b.d() != null) {
+                            b bVar = this.engine;
+                            if (bVar != null && bVar.d() != null) {
                                 this.engine.m(podDO);
                                 return;
                             }
@@ -60,8 +60,8 @@ public class PushTask implements Runnable {
                         if (waitingTracePod == null) {
                             waitingTracePod = new HashSet(podNames.pods);
                         }
-                        C6889b c6889b2 = this.engine;
-                        if (c6889b2 != null && c6889b2.d() != null) {
+                        b bVar2 = this.engine;
+                        if (bVar2 != null && bVar2.d() != null) {
                             this.engine.n(podNames.pods);
                             return;
                         }

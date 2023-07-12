@@ -14,26 +14,25 @@ import org.jetbrains.annotations.Nullable;
 public interface ThreadContextElement<S> extends CoroutineContext.Element {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.ThreadContextElement$a */
     /* loaded from: classes8.dex */
-    public static final class C8618a {
+    public static final class a {
         public static <S, R> R a(@NotNull ThreadContextElement<S> threadContextElement, R r, @NotNull Function2<? super R, ? super CoroutineContext.Element, ? extends R> function2) {
-            return (R) CoroutineContext.Element.C8232a.a(threadContextElement, r, function2);
+            return (R) CoroutineContext.Element.a.a(threadContextElement, r, function2);
         }
 
         @Nullable
         public static <S, E extends CoroutineContext.Element> E b(@NotNull ThreadContextElement<S> threadContextElement, @NotNull CoroutineContext.Key<E> key) {
-            return (E) CoroutineContext.Element.C8232a.b(threadContextElement, key);
+            return (E) CoroutineContext.Element.a.b(threadContextElement, key);
         }
 
         @NotNull
         public static <S> CoroutineContext c(@NotNull ThreadContextElement<S> threadContextElement, @NotNull CoroutineContext.Key<?> key) {
-            return CoroutineContext.Element.C8232a.c(threadContextElement, key);
+            return CoroutineContext.Element.a.c(threadContextElement, key);
         }
 
         @NotNull
         public static <S> CoroutineContext d(@NotNull ThreadContextElement<S> threadContextElement, @NotNull CoroutineContext coroutineContext) {
-            return CoroutineContext.Element.C8232a.d(threadContextElement, coroutineContext);
+            return CoroutineContext.Element.a.d(threadContextElement, coroutineContext);
         }
     }
 

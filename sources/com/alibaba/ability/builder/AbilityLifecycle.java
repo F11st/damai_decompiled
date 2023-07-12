@@ -18,7 +18,7 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes9.dex */
 public @interface AbilityLifecycle {
     @NotNull
-    public static final C2999a Companion = C2999a.a;
+    public static final a Companion = a.a;
 
     /* renamed from: app  reason: collision with root package name */
     public static final int f1026app = 1;
@@ -27,10 +27,9 @@ public @interface AbilityLifecycle {
     public static final int namespace = 2;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.ability.builder.AbilityLifecycle$a */
     /* loaded from: classes9.dex */
-    public static final class C2999a {
-        static final /* synthetic */ C2999a a = new C2999a();
+    public static final class a {
+        static final /* synthetic */ a a = new a();
 
         /* renamed from: app  reason: collision with root package name */
         public static final int f1027app = 1;
@@ -38,7 +37,7 @@ public @interface AbilityLifecycle {
         public static final int invoke = 4;
         public static final int namespace = 2;
 
-        private C2999a() {
+        private a() {
         }
     }
 }

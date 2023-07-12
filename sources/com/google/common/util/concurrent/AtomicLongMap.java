@@ -24,10 +24,9 @@ public final class AtomicLongMap<K> implements Serializable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.util.concurrent.AtomicLongMap$a */
     /* loaded from: classes10.dex */
-    public class C5308a implements Function<AtomicLong, Long> {
-        C5308a(AtomicLongMap atomicLongMap) {
+    public class a implements Function<AtomicLong, Long> {
+        a(AtomicLongMap atomicLongMap) {
         }
 
         @Override // com.google.common.base.Function
@@ -46,7 +45,7 @@ public final class AtomicLongMap<K> implements Serializable {
     }
 
     private Map<K, Long> createAsMap() {
-        return Collections.unmodifiableMap(Maps.D(this.map, new C5308a(this)));
+        return Collections.unmodifiableMap(Maps.D(this.map, new a(this)));
     }
 
     @CanIgnoreReturnValue

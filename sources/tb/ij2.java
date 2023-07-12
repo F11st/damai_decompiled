@@ -7,7 +7,7 @@ import com.taobao.downloader.download.protocol.DLConnection;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class ij2 {
-    private static boolean a(long j, C9613qq c9613qq) {
+    private static boolean a(long j, qq qqVar) {
         CloundConfigAdapter cloundConfigAdapter = um.j;
         if (cloundConfigAdapter == null) {
             return true;
@@ -20,18 +20,18 @@ public class ij2 {
             if (!z) {
                 return true;
             }
-            if (!c9613qq.d() && !c9613qq.e()) {
+            if (!qqVar.d() && !qqVar.e()) {
                 return true;
             }
         }
         return false;
     }
 
-    public static DLConnection b(l41 l41Var, C9613qq c9613qq) {
+    public static DLConnection b(l41 l41Var, qq qqVar) {
         if (um.l == null) {
             return new iv0();
         }
-        if (a(l41Var.b, c9613qq)) {
+        if (a(l41Var.b, qqVar)) {
             try {
                 return um.l.newInstance();
             } catch (IllegalAccessException e) {
@@ -46,12 +46,12 @@ public class ij2 {
     public static int c() {
         CloundConfigAdapter cloundConfigAdapter = um.j;
         if (cloundConfigAdapter == null) {
-            return C9613qq.f;
+            return qq.f;
         }
         String config = cloundConfigAdapter.getConfig("dl_buffersize");
         if (!TextUtils.isEmpty(config) && TextUtils.isDigitsOnly(config)) {
             return Integer.valueOf(config).intValue();
         }
-        return C9613qq.f;
+        return qq.f;
     }
 }

@@ -51,9 +51,8 @@ public class InstantPatchUpdater extends mu2 implements UpdateListener {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.update.instantpatch.InstantPatchUpdater$a */
     /* loaded from: classes11.dex */
-    public static /* synthetic */ class C6934a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -72,9 +71,8 @@ public class InstantPatchUpdater extends mu2 implements UpdateListener {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.update.instantpatch.InstantPatchUpdater$b */
     /* loaded from: classes11.dex */
-    public static class C6935b {
+    public static class b {
         private static final InstantPatchUpdater a = new InstantPatchUpdater();
     }
 
@@ -175,7 +173,7 @@ public class InstantPatchUpdater extends mu2 implements UpdateListener {
         if (TextUtils.isEmpty(string) || TextUtils.isEmpty(string2)) {
             return true;
         }
-        int i = C6934a.a[this.d.ordinal()];
+        int i = a.a[this.d.ordinal()];
         return i != 1 ? i != 2 || string.equals(this.d.name()) || !string.equals(PublishType.BETA) || Integer.valueOf(this.e).intValue() > Integer.valueOf(string2).intValue() : Integer.valueOf(this.e).intValue() > Integer.valueOf(string2).intValue();
     }
 
@@ -200,7 +198,7 @@ public class InstantPatchUpdater extends mu2 implements UpdateListener {
     }
 
     public static InstantPatchUpdater instance() {
-        return C6935b.a;
+        return b.a;
     }
 
     private void j(final String str) {

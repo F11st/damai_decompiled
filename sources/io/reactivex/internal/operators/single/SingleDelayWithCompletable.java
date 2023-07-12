@@ -1,18 +1,18 @@
 package io.reactivex.internal.operators.single;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.observers.ResumeSingleObserver;
 import java.util.concurrent.atomic.AtomicReference;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SingleDelayWithCompletable<T> extends AbstractC8152e<T> {
+public final class SingleDelayWithCompletable<T> extends e<T> {
     final CompletableSource other;
     final SingleSource<T> source;
 
@@ -61,7 +61,7 @@ public final class SingleDelayWithCompletable<T> extends AbstractC8152e<T> {
         this.other = completableSource;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super T> singleObserver) {
         this.other.subscribe(new OtherObserver(singleObserver, this.source));
     }

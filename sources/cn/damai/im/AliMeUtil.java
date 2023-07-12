@@ -65,21 +65,20 @@ public class AliMeUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.im.AliMeUtil$a */
     /* loaded from: classes5.dex */
-    public class C1272a implements UserCodeListener {
+    public class a implements UserCodeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ long b;
         final /* synthetic */ Context c;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.im.AliMeUtil$a$a */
+        /* renamed from: cn.damai.im.AliMeUtil$a$a  reason: collision with other inner class name */
         /* loaded from: classes5.dex */
-        public class C1273a implements AliMeTokenListener {
+        public class C0050a implements AliMeTokenListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1273a() {
+            C0050a() {
             }
 
             @Override // cn.damai.im.AliMeUtil.AliMeTokenListener
@@ -99,12 +98,12 @@ public class AliMeUtil {
                     ipChange.ipc$dispatch("1436629807", new Object[]{this, str});
                     return;
                 }
-                String c = AliMeUtil.c(C1272a.this.a, str);
-                AliMeUtil.b(C1272a.this.c, c + "&projectId=" + C1272a.this.b);
+                String c = AliMeUtil.c(a.this.a, str);
+                AliMeUtil.b(a.this.c, c + "&projectId=" + a.this.b);
             }
         }
 
-        C1272a(String str, long j, Context context) {
+        a(String str, long j, Context context) {
             this.a = str;
             this.b = j;
             this.c = context;
@@ -126,15 +125,14 @@ public class AliMeUtil {
             if (AndroidInstantRuntime.support(ipChange, "-1449105678")) {
                 ipChange.ipc$dispatch("-1449105678", new Object[]{this, Long.valueOf(j)});
             } else {
-                AliMeUtil.e(j, this.a, new C1273a());
+                AliMeUtil.e(j, this.a, new C0050a());
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.im.AliMeUtil$b */
     /* loaded from: classes5.dex */
-    public class C1274b implements UserCodeListener {
+    public class b implements UserCodeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ String b;
@@ -142,12 +140,11 @@ public class AliMeUtil {
         final /* synthetic */ Context d;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.im.AliMeUtil$b$a */
         /* loaded from: classes5.dex */
-        public class C1275a implements AliMeTokenListener {
+        public class a implements AliMeTokenListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1275a() {
+            a() {
             }
 
             @Override // cn.damai.im.AliMeUtil.AliMeTokenListener
@@ -166,15 +163,15 @@ public class AliMeUtil {
                 if (AndroidInstantRuntime.support(ipChange, "-908037234")) {
                     ipChange.ipc$dispatch("-908037234", new Object[]{this, str});
                 } else if (!TextUtils.isEmpty(str)) {
-                    C1274b c1274b = C1274b.this;
-                    AliMeUtil.b(C1274b.this.d, AliMeUtil.f(c1274b.a, str, c1274b.b, c1274b.c));
+                    b bVar = b.this;
+                    AliMeUtil.b(b.this.d, AliMeUtil.f(bVar.a, str, bVar.b, bVar.c));
                 } else {
                     AliMeUtil.o();
                 }
             }
         }
 
-        C1274b(String str, String str2, String str3, Context context) {
+        b(String str, String str2, String str3, Context context) {
             this.a = str;
             this.b = str2;
             this.c = str3;
@@ -197,7 +194,7 @@ public class AliMeUtil {
             if (AndroidInstantRuntime.support(ipChange, "-95795981")) {
                 ipChange.ipc$dispatch("-95795981", new Object[]{this, Long.valueOf(j)});
             } else {
-                AliMeUtil.e(j, this.a, new C1275a());
+                AliMeUtil.e(j, this.a, new a());
             }
         }
     }
@@ -383,7 +380,7 @@ public class AliMeUtil {
         if (AndroidInstantRuntime.support(ipChange, "-2046438700")) {
             ipChange.ipc$dispatch("-2046438700", new Object[]{context, str, Long.valueOf(j)});
         } else {
-            j(new C1272a(str, j, context));
+            j(new a(str, j, context));
         }
     }
 
@@ -392,7 +389,7 @@ public class AliMeUtil {
         if (AndroidInstantRuntime.support(ipChange, "544464644")) {
             ipChange.ipc$dispatch("544464644", new Object[]{context, str, str2, str3});
         } else {
-            j(new C1274b(str, str2, str3, context));
+            j(new b(str, str2, str3, context));
         }
     }
 

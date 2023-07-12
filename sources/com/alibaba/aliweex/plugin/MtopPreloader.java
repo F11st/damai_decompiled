@@ -120,14 +120,13 @@ public class MtopPreloader {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.plugin.MtopPreloader$a */
     /* loaded from: classes5.dex */
-    public static class C3097a implements MtopHandler.MtopFinshCallback {
+    public static class a implements MtopHandler.MtopFinshCallback {
         final /* synthetic */ String a;
         final /* synthetic */ WXSDKInstance b;
         final /* synthetic */ PrefetchDataCallback c;
 
-        C3097a(String str, WXSDKInstance wXSDKInstance, PrefetchDataCallback prefetchDataCallback) {
+        a(String str, WXSDKInstance wXSDKInstance, PrefetchDataCallback prefetchDataCallback) {
             this.a = str;
             this.b = wXSDKInstance;
             this.c = prefetchDataCallback;
@@ -388,6 +387,6 @@ public class MtopPreloader {
     }
 
     public static void j(WXSDKInstance wXSDKInstance, String str, String str2, PrefetchDataCallback prefetchDataCallback) {
-        MtopHandler.d(str, new C3097a(str2, wXSDKInstance, prefetchDataCallback));
+        MtopHandler.d(str, new a(str2, wXSDKInstance, prefetchDataCallback));
     }
 }

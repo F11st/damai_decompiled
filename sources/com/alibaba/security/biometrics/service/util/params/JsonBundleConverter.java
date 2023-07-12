@@ -2,7 +2,7 @@ package com.alibaba.security.biometrics.service.util.params;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.parser.Feature;
-import com.alibaba.security.common.d.C3811h;
+import com.alibaba.security.common.d.h;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
@@ -17,6 +17,6 @@ public class JsonBundleConverter extends BundleConverter {
 
     @Override // com.alibaba.security.biometrics.service.util.params.BundleConverter
     public String serialize(Object obj) {
-        return C3811h.a(obj);
+        return h.a(obj);
     }
 }

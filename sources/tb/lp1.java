@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
-import kotlin.collections.C8213l;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.reflect.jvm.internal.impl.load.kotlin.DeserializedDescriptorResolver;
 import kotlin.reflect.jvm.internal.impl.load.kotlin.KotlinJvmBinaryClass;
@@ -54,7 +53,7 @@ public final class lp1 {
                     }
                 }
             } else {
-                e = C8213l.e(t02Var);
+                e = kotlin.collections.l.e(t02Var);
             }
             ie0 ie0Var = new ie0(this.a.e().p(), h);
             ArrayList arrayList = new ArrayList();
@@ -65,8 +64,8 @@ public final class lp1 {
                 }
             }
             A0 = CollectionsKt___CollectionsKt.A0(arrayList);
-            lh.C9410a c9410a = lh.Companion;
-            MemberScope a = c9410a.a("package " + h + " (" + t02Var + ')', A0);
+            lh.a aVar = lh.Companion;
+            MemberScope a = aVar.a("package " + h + " (" + t02Var + ')', A0);
             MemberScope putIfAbsent = concurrentHashMap.putIfAbsent(classId, a);
             memberScope = putIfAbsent != null ? putIfAbsent : a;
         }

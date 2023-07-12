@@ -29,12 +29,11 @@ public interface IAlixPay extends IInterface {
         public static final int TRANSACTION_unregisterCallback = 4;
 
         /* compiled from: Taobao */
-        /* renamed from: com.alipay.android.app.IAlixPay$Stub$a */
         /* loaded from: classes10.dex */
-        public static class C4056a implements IAlixPay {
+        public static class a implements IAlixPay {
             public IBinder a;
 
-            public C4056a(IBinder iBinder) {
+            public a(IBinder iBinder) {
                 this.a = iBinder;
             }
 
@@ -230,7 +229,7 @@ public interface IAlixPay extends IInterface {
             if (queryLocalInterface != null && (queryLocalInterface instanceof IAlixPay)) {
                 return (IAlixPay) queryLocalInterface;
             }
-            return new C4056a(iBinder);
+            return new a(iBinder);
         }
 
         @Override // android.os.IInterface

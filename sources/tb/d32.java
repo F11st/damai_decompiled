@@ -35,7 +35,7 @@ public class d32 {
             }
             display = activity.getWindowManager().getDefaultDisplay();
         } else {
-            WindowManager windowManager = (WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+            WindowManager windowManager = (WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW);
             if (windowManager != null) {
                 display = windowManager.getDefaultDisplay();
             }
@@ -59,7 +59,7 @@ public class d32 {
             }
             display = activity.getWindowManager().getDefaultDisplay();
         } else {
-            WindowManager windowManager = (WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+            WindowManager windowManager = (WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW);
             if (windowManager != null) {
                 display = windowManager.getDefaultDisplay();
             }

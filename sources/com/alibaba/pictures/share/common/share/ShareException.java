@@ -19,7 +19,7 @@ public class ShareException extends RuntimeException {
     public static final int APP_UNSUPPORT_VERSION = 40502;
     public static final int AUTH_ERROR = 1002;
     @NotNull
-    public static final C3633a Companion = new C3633a(null);
+    public static final a Companion = new a(null);
     public static final int UNKNOWN_ERROR = 1003;
     public static final int USER_CANCEL = 1001;
     private static final long serialVersionUID = 475022994858770424L;
@@ -28,13 +28,12 @@ public class ShareException extends RuntimeException {
     private String statusMsg;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.share.common.share.ShareException$a */
     /* loaded from: classes8.dex */
-    public static final class C3633a {
-        private C3633a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3633a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

@@ -3,7 +3,7 @@ package com.tencent.mm.opensdk.modelbiz;
 import android.os.Bundle;
 import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.modelbase.BaseResp;
-import com.tencent.mm.opensdk.utils.C7065b;
+import com.tencent.mm.opensdk.utils.b;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -19,7 +19,7 @@ public class CreateChatroom {
 
         @Override // com.tencent.mm.opensdk.modelbase.BaseReq
         public boolean checkArgs() {
-            return !C7065b.b(this.groupId);
+            return !b.b(this.groupId);
         }
 
         @Override // com.tencent.mm.opensdk.modelbase.BaseReq

@@ -62,12 +62,11 @@ public class JSBridgeService extends WVApiPlugin {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.jsbridge.JSBridgeService$a */
     /* loaded from: classes11.dex */
-    public class C6713a implements NumAuthTokenCallback {
+    public class a implements NumAuthTokenCallback {
         final /* synthetic */ WVCallBackContext a;
 
-        C6713a(WVCallBackContext wVCallBackContext) {
+        a(WVCallBackContext wVCallBackContext) {
             this.a = wVCallBackContext;
         }
 
@@ -86,12 +85,11 @@ public class JSBridgeService extends WVApiPlugin {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.jsbridge.JSBridgeService$b */
     /* loaded from: classes11.dex */
-    public class C6714b implements CommonDataCallback {
+    public class b implements CommonDataCallback {
         final /* synthetic */ WVCallBackContext a;
 
-        C6714b(WVCallBackContext wVCallBackContext) {
+        b(WVCallBackContext wVCallBackContext) {
             this.a = wVCallBackContext;
         }
 
@@ -110,12 +108,11 @@ public class JSBridgeService extends WVApiPlugin {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.jsbridge.JSBridgeService$c */
     /* loaded from: classes11.dex */
-    public class C6715c implements CommonCallback {
+    public class c implements CommonCallback {
         final /* synthetic */ WVCallBackContext a;
 
-        C6715c(JSBridgeService jSBridgeService, WVCallBackContext wVCallBackContext) {
+        c(JSBridgeService jSBridgeService, WVCallBackContext wVCallBackContext) {
             this.a = wVCallBackContext;
         }
 
@@ -135,18 +132,16 @@ public class JSBridgeService extends WVApiPlugin {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.jsbridge.JSBridgeService$d */
     /* loaded from: classes11.dex */
-    public class C6716d implements RpcRequestCallbackWithCode {
+    public class d implements RpcRequestCallbackWithCode {
         final /* synthetic */ WVCallBackContext a;
 
         /* compiled from: Taobao */
-        /* renamed from: com.taobao.login4android.jsbridge.JSBridgeService$d$a */
         /* loaded from: classes11.dex */
-        class AsyncTaskC6717a extends AsyncTask<Object, Void, RpcResponse> {
+        class a extends AsyncTask<Object, Void, RpcResponse> {
             final /* synthetic */ String[] a;
 
-            AsyncTaskC6717a(String[] strArr) {
+            a(String[] strArr) {
                 this.a = strArr;
             }
 
@@ -164,11 +159,11 @@ public class JSBridgeService extends WVApiPlugin {
             public void onPostExecute(RpcResponse rpcResponse) {
                 WVResult wVResult = new WVResult();
                 wVResult.setResult(WVResult.SUCCESS);
-                C6716d.this.a.success(wVResult);
+                d.this.a.success(wVResult);
             }
         }
 
-        C6716d(WVCallBackContext wVCallBackContext) {
+        d(WVCallBackContext wVCallBackContext) {
             this.a = wVCallBackContext;
         }
 
@@ -188,7 +183,7 @@ public class JSBridgeService extends WVApiPlugin {
                 if (strArr == null || strArr.length <= 0) {
                     JSBridgeService.this.failCallback(this.a, "mtop response=null", "-1");
                 } else {
-                    new CoordinatorWrapper().execute(new AsyncTaskC6717a(strArr), new Object[0]);
+                    new CoordinatorWrapper().execute(new a(strArr), new Object[0]);
                 }
             }
         }
@@ -200,9 +195,8 @@ public class JSBridgeService extends WVApiPlugin {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.jsbridge.JSBridgeService$e */
     /* loaded from: classes11.dex */
-    static /* synthetic */ class C6718e {
+    static /* synthetic */ class e {
         static final /* synthetic */ int[] a;
 
         static {
@@ -330,11 +324,11 @@ public class JSBridgeService extends WVApiPlugin {
                             return;
                         }
                     }
-                } catch (Exception e) {
-                    e.printStackTrace();
+                } catch (Exception e2) {
+                    e2.printStackTrace();
                 }
-            } catch (JSONException e2) {
-                e2.printStackTrace();
+            } catch (JSONException e3) {
+                e3.printStackTrace();
             }
         }
         setErrorCallback(wVCallBackContext);
@@ -400,11 +394,11 @@ public class JSBridgeService extends WVApiPlugin {
                             return;
                         }
                     }
-                } catch (Exception e) {
-                    e.printStackTrace();
+                } catch (Exception e2) {
+                    e2.printStackTrace();
                 }
-            } catch (JSONException e2) {
-                e2.printStackTrace();
+            } catch (JSONException e3) {
+                e3.printStackTrace();
             }
         }
         setErrorCallback(wVCallBackContext);
@@ -480,9 +474,9 @@ public class JSBridgeService extends WVApiPlugin {
         if (!TextUtils.isEmpty(str)) {
             try {
                 JSONObject jSONObject = new JSONObject(str);
-                LoginController.getInstance().navByScheme(jSONObject.getString("slaveAppKey"), jSONObject.getString("packageName"), jSONObject.getString("jumpPage"), null, new C6715c(this, wVCallBackContext));
-            } catch (Exception e) {
-                e.printStackTrace();
+                LoginController.getInstance().navByScheme(jSONObject.getString("slaveAppKey"), jSONObject.getString("packageName"), jSONObject.getString("jumpPage"), null, new c(this, wVCallBackContext));
+            } catch (Exception e2) {
+                e2.printStackTrace();
                 setErrorCallback(wVCallBackContext);
             }
         } else {
@@ -503,8 +497,8 @@ public class JSBridgeService extends WVApiPlugin {
                 bundle.putString("username", (String) jSONObject.opt("username"));
                 bundle.putString(Constants.Value.PASSWORD, (String) jSONObject.opt(Constants.Value.PASSWORD));
                 Login.login(true, bundle);
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
                 setErrorCallback(wVCallBackContext);
             }
         } else {
@@ -532,9 +526,9 @@ public class JSBridgeService extends WVApiPlugin {
                 rpcRequest.addParam("umidToken", AppInfo.getInstance().getUmidToken());
                 rpcRequest.addParam("ext", str2);
                 rpcRequest.requestSite = DataProviderFactory.getDataProvider().getSite();
-                ((RpcService) ServiceFactory.getService(RpcService.class)).remoteBusiness(rpcRequest, GetThirdCookiesResponseData.class, new C6716d(wVCallBackContext));
-            } catch (Exception e) {
-                e.printStackTrace();
+                ((RpcService) ServiceFactory.getService(RpcService.class)).remoteBusiness(rpcRequest, GetThirdCookiesResponseData.class, new d(wVCallBackContext));
+            } catch (Exception e2) {
+                e2.printStackTrace();
                 setErrorCallback(wVCallBackContext);
             }
         }
@@ -548,7 +542,7 @@ public class JSBridgeService extends WVApiPlugin {
                 if (intent == null || (valueOf = LoginAction.valueOf(intent.getAction())) == null) {
                     return;
                 }
-                int i = C6718e.a[valueOf.ordinal()];
+                int i = e.a[valueOf.ordinal()];
                 if (i == 1) {
                     JSBridgeService.this.doWhenReceiveSuccess(wVCallBackContext);
                 } else if (i == 2) {
@@ -737,7 +731,7 @@ public class JSBridgeService extends WVApiPlugin {
             TLogAdapter.e(this.Tag, "Callback is null");
         } else if (!TextUtils.isEmpty(str)) {
             try {
-                Login.getLoginMaskPhone(new JSONObject(str).getInt("timeout"), new C6714b(wVCallBackContext));
+                Login.getLoginMaskPhone(new JSONObject(str).getInt("timeout"), new b(wVCallBackContext));
             } catch (Throwable unused) {
                 setErrorCallback(wVCallBackContext);
             }
@@ -753,7 +747,7 @@ public class JSBridgeService extends WVApiPlugin {
             try {
                 new JSONObject(str);
                 if (ServiceFactory.getService(NumberAuthService.class) != null) {
-                    ((NumberAuthService) ServiceFactory.getService(NumberAuthService.class)).getLoginToken("jsbridge", new C6713a(wVCallBackContext));
+                    ((NumberAuthService) ServiceFactory.getService(NumberAuthService.class)).getLoginToken("jsbridge", new a(wVCallBackContext));
                 } else {
                     failCallback(wVCallBackContext, "sdk not init or don't have auth service", "-199");
                 }
@@ -825,8 +819,8 @@ public class JSBridgeService extends WVApiPlugin {
                 WVResult wVResult = new WVResult();
                 wVResult.setResult("success !!!");
                 wVCallBackContext.success(wVResult);
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
                 setErrorCallback(wVCallBackContext);
             }
         } else {

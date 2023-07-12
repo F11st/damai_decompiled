@@ -235,7 +235,7 @@ public class DlnaPlugin extends AbsPlugin implements OnInflateListener, DlnaCont
             }
         };
         this.mPlugin = this;
-        DlnaControlPanelView dlnaControlPanelView = new DlnaControlPanelView(alixPlayerContext, alixPlayerContext.getPluginManager(viewGroup).getLayerManager(), this.mLayerId, R.C7935layout.dago_dlna_control_panel_container, alixPlayerContext.getPluginManager(viewGroup).getViewPlaceholder(this.mName));
+        DlnaControlPanelView dlnaControlPanelView = new DlnaControlPanelView(alixPlayerContext, alixPlayerContext.getPluginManager(viewGroup).getLayerManager(), this.mLayerId, R.layout.dago_dlna_control_panel_container, alixPlayerContext.getPluginManager(viewGroup).getViewPlaceholder(this.mName));
         this.mControlPanelView = dlnaControlPanelView;
         dlnaControlPanelView.setPresenter((DlnaContract.Presenter) this);
         this.mControlPanelView.setOnInflateListener(this);

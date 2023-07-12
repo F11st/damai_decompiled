@@ -170,7 +170,7 @@ public class AliUserSMSLoginVerificationFragment extends BaseLoginFragment imple
 
     @Override // com.ali.user.mobile.base.ui.BaseFragment
     protected int getLayoutContent() {
-        return R.C2965layout.aliuser_fragment_sms_login_verification;
+        return R.layout.aliuser_fragment_sms_login_verification;
     }
 
     @Override // com.ali.user.mobile.login.ui.BaseLoginFragment, com.ali.user.mobile.base.ui.BaseFragment, com.ali.user.mobile.login.ui.BaseLoginView
@@ -350,11 +350,11 @@ public class AliUserSMSLoginVerificationFragment extends BaseLoginFragment imple
     public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
         UserMobileLoginPresenter userMobileLoginPresenter = this.mPresenter;
         if (userMobileLoginPresenter != null && userMobileLoginPresenter.getLoginParam() != null && !TextUtils.isEmpty(this.mPresenter.getLoginParam().helpUrl)) {
-            menuInflater.inflate(R.C2966menu.aliuser_menu, menu);
+            menuInflater.inflate(R.menu.aliuser_menu, menu);
             try {
                 MenuItem findItem = menu.findItem(R.id.aliuser_menu_item_help);
                 SpannableString spannableString = new SpannableString(getResources().getString(R.string.aliuser_sms_need_help));
-                spannableString.setSpan(new ForegroundColorSpan(getResources().getColor(R.C2963color.aliuser_color_orange)), 0, spannableString.length(), 0);
+                spannableString.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.aliuser_color_orange)), 0, spannableString.length(), 0);
                 findItem.setTitle(spannableString);
                 return;
             } catch (Throwable th) {

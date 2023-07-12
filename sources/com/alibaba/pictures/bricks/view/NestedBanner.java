@@ -29,7 +29,7 @@ import tb.nd;
 public final class NestedBanner extends ViewPager implements Runnable {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3580a Companion = new C3580a(null);
+    public static final a Companion = new a(null);
     public static final long FLIP_TIME_MILLIS = 3000;
     private boolean isSelfAttachedToWindow;
     @NotNull
@@ -142,13 +142,12 @@ public final class NestedBanner extends ViewPager implements Runnable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.NestedBanner$a */
     /* loaded from: classes7.dex */
-    public static final class C3580a {
-        private C3580a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3580a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

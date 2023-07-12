@@ -4,7 +4,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.member.R$color;
 import cn.damai.member.R$drawable;
@@ -39,12 +39,11 @@ public class TickletScreenCapture extends DamaiBaseMvpFragment {
     private TextView tv_transfer;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.TickletScreenCapture$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2087a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2087a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -177,7 +176,7 @@ public class TickletScreenCapture extends DamaiBaseMvpFragment {
         hashMap.put("item_id", this.projectId);
         hashMap.put("screening_id", this.performId);
         hashMap.put("titlelabel", sb.toString());
-        C0529c.e().G(this.captureLayout, "alert", "screenshot", this.pageName, hashMap);
+        c.e().G(this.captureLayout, "alert", "screenshot", this.pageName, hashMap);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -244,18 +243,18 @@ public class TickletScreenCapture extends DamaiBaseMvpFragment {
             if (tickletDetailInterface != null) {
                 tickletDetailInterface.captureGoTransferManagePage();
             }
-            C0529c.e().x(un2.k().N(this.performId, this.projectId, this.pageName, "transfer"));
+            c.e().x(un2.k().N(this.performId, this.projectId, this.pageName, "transfer"));
         } else if (view.getId() == R$id.ticklet_capture_tv_souvenir) {
             if (getContext() != null) {
                 py2.f().l(getContext(), this.performId, this.productSystemId);
             }
-            C0529c.e().x(un2.k().N(this.performId, this.projectId, this.pageName, "share_ticket"));
+            c.e().x(un2.k().N(this.performId, this.projectId, this.pageName, "share_ticket"));
         } else if (view.getId() == R$id.ticklet_capture_tv_feedback) {
             TickletDetailInterface tickletDetailInterface2 = this.tickletDetailInterface;
             if (tickletDetailInterface2 != null) {
                 tickletDetailInterface2.goFeedBackPage(this.imagePath);
             }
-            C0529c.e().x(un2.k().N(this.performId, this.projectId, this.pageName, "help"));
+            c.e().x(un2.k().N(this.performId, this.projectId, this.pageName, "help"));
         }
         dissDialog();
     }

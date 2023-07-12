@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.core.internal.view.SupportMenu;
 import cn.damai.commonbusiness.seatbiz.seat.common.bean.region.RegionData;
 import cn.damai.commonbusiness.seatbiz.seat.common.bean.seat.SeatPrice;
-import cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a;
+import cn.damai.commonbusiness.seatbiz.view.render.a;
 import cn.damai.commonbusiness.seatbiz.view.svgview.core.model.PointLocation;
 import cn.damai.commonbusiness.seatbiz.view.svgview.core.model.RegionBound;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -31,7 +31,7 @@ import tb.wh2;
 
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
-public class SVGPaintData extends AbstractC0856a {
+public class SVGPaintData extends a {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final int TYPE_G = 102;
     public static final int TYPE_LINE = 103;
@@ -208,7 +208,7 @@ public class SVGPaintData extends AbstractC0856a {
         this.mRegionBounds.clear();
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a
+    @Override // cn.damai.commonbusiness.seatbiz.view.render.a
     protected String addAlpha2Color(String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "599728172")) {
@@ -315,7 +315,7 @@ public class SVGPaintData extends AbstractC0856a {
         }
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a
+    @Override // cn.damai.commonbusiness.seatbiz.view.render.a
     public Picture buildPicture(boolean z) {
         String str;
         String str2;
@@ -637,7 +637,7 @@ public class SVGPaintData extends AbstractC0856a {
         return picture;
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a
+    @Override // cn.damai.commonbusiness.seatbiz.view.render.a
     public Picture buildPictureWithColorIntercepter(List<f52> list) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "824150852")) {
@@ -849,7 +849,7 @@ public class SVGPaintData extends AbstractC0856a {
         return picture;
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a
+    @Override // cn.damai.commonbusiness.seatbiz.view.render.a
     public Picture buildPriceFilterPicture2(SeatPrice seatPrice, RegionData regionData) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-843374113")) {
@@ -934,7 +934,7 @@ public class SVGPaintData extends AbstractC0856a {
         return picture;
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a
+    @Override // cn.damai.commonbusiness.seatbiz.view.render.a
     public Picture buildRegionPicture(String str, RectF rectF, Path path) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1060623626")) {
@@ -1100,7 +1100,7 @@ public class SVGPaintData extends AbstractC0856a {
         return picture;
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a
+    @Override // cn.damai.commonbusiness.seatbiz.view.render.a
     public Picture buildStrokePicture(List<SeatPrice> list, RegionData regionData) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "469513353")) {
@@ -1267,13 +1267,13 @@ public class SVGPaintData extends AbstractC0856a {
         this.shapeList.clear();
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a
+    @Override // cn.damai.commonbusiness.seatbiz.view.render.a
     public int getRegionCount() {
         IpChange ipChange = $ipChange;
         return AndroidInstantRuntime.support(ipChange, "-1890404154") ? ((Integer) ipChange.ipc$dispatch("-1890404154", new Object[]{this})).intValue() : regionCount(this.rectList) + 0 + regionCount(this.ovalList) + regionCount(this.pathList) + regionCount(this.polygonList);
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a
+    @Override // cn.damai.commonbusiness.seatbiz.view.render.a
     public int getShapeCount() {
         IpChange ipChange = $ipChange;
         return AndroidInstantRuntime.support(ipChange, "932380129") ? ((Integer) ipChange.ipc$dispatch("932380129", new Object[]{this})).intValue() : wh2.e(this.rectList) + 0 + wh2.e(this.lineList) + wh2.e(this.ovalList) + wh2.e(this.pathList) + wh2.e(this.polygonList) + wh2.e(this.textList);
@@ -1308,13 +1308,13 @@ public class SVGPaintData extends AbstractC0856a {
         }
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a
+    @Override // cn.damai.commonbusiness.seatbiz.view.render.a
     public Picture buildPicture() {
         IpChange ipChange = $ipChange;
         return AndroidInstantRuntime.support(ipChange, "375698435") ? (Picture) ipChange.ipc$dispatch("375698435", new Object[]{this}) : buildPicture(false);
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a
+    @Override // cn.damai.commonbusiness.seatbiz.view.render.a
     public Picture buildPicture(@NonNull g52 g52Var) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1835930051")) {

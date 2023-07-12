@@ -68,12 +68,11 @@ public class PraiseView extends FrameLayout implements PraiseRequest.PraiseReque
     private boolean showAnim;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.view.PraiseView$a */
     /* loaded from: classes13.dex */
-    public class View$OnClickListenerC0462a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0462a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -93,12 +92,11 @@ public class PraiseView extends FrameLayout implements PraiseRequest.PraiseReque
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.view.PraiseView$b */
     /* loaded from: classes13.dex */
-    public class C0463b implements Animator.AnimatorListener {
+    public class b implements Animator.AnimatorListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0463b() {
+        b() {
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -155,7 +153,7 @@ public class PraiseView extends FrameLayout implements PraiseRequest.PraiseReque
         this.COMMENT_TYPE_EVALUATE_LIST = 4;
         this.COMMENT_TYPE_VEVALUATE_LIST = 5;
         this.showAnim = true;
-        this.onPraiseLayoutClickListener = new View$OnClickListenerC0462a();
+        this.onPraiseLayoutClickListener = new a();
         initDefaultValue();
         initView();
     }
@@ -221,9 +219,9 @@ public class PraiseView extends FrameLayout implements PraiseRequest.PraiseReque
             this.praiseNumber.setVisibility(4);
             this.animationView.setVisibility(0);
             this.animationView.removeAllAnimatorListeners();
-            C0463b c0463b = new C0463b();
-            this.listener = c0463b;
-            this.animationView.addAnimatorListener(c0463b);
+            b bVar = new b();
+            this.listener = bVar;
+            this.animationView.addAnimatorListener(bVar);
             this.animationView.playAnimation();
             return;
         }
@@ -551,7 +549,7 @@ public class PraiseView extends FrameLayout implements PraiseRequest.PraiseReque
         this.COMMENT_TYPE_EVALUATE_LIST = 4;
         this.COMMENT_TYPE_VEVALUATE_LIST = 5;
         this.showAnim = true;
-        this.onPraiseLayoutClickListener = new View$OnClickListenerC0462a();
+        this.onPraiseLayoutClickListener = new a();
         initDefaultValue();
         initView();
     }
@@ -579,7 +577,7 @@ public class PraiseView extends FrameLayout implements PraiseRequest.PraiseReque
         this.COMMENT_TYPE_EVALUATE_LIST = 4;
         this.COMMENT_TYPE_VEVALUATE_LIST = 5;
         this.showAnim = true;
-        this.onPraiseLayoutClickListener = new View$OnClickListenerC0462a();
+        this.onPraiseLayoutClickListener = new a();
         initDefaultValue();
         initView();
     }

@@ -7,8 +7,6 @@ import cn.damai.commonbusiness.seatbiz.seat.qilin.loader.listener.RequestListene
 import cn.damai.commonbusiness.seatbiz.seat.qilin.loader.option.ImageExtra;
 import cn.damai.commonbusiness.seatbiz.seat.qilin.loader.option.ImageOption;
 import cn.damai.commonbusiness.seatbiz.seat.qilin.loader.option.Option;
-import cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.AbstractC0818a;
-import cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.C0819b;
 import cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.SVGRequest;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -36,15 +34,15 @@ public class p11 extends oa<ImageData, l11> {
     }
 
     @Override // tb.oa
-    public AbstractC0818a<ImageData, l11> e(@NonNull kn1<l11> kn1Var) {
+    public cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.a<ImageData, l11> e(@NonNull kn1<l11> kn1Var) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1237377677")) {
-            return (AbstractC0818a) ipChange.ipc$dispatch("-1237377677", new Object[]{this, kn1Var});
+            return (cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.a) ipChange.ipc$dispatch("-1237377677", new Object[]{this, kn1Var});
         }
         if (kn1Var.a().c()) {
             return new SVGRequest(kn1Var);
         }
-        return new C0819b(kn1Var);
+        return new cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.b(kn1Var);
     }
 
     public void r(@Nullable RequestListener<ImageData, l11> requestListener, ImageOption... imageOptionArr) {

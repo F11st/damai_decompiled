@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMRoundedCornersBitmapProcessor;
 import cn.damai.homepage.R$drawable;
@@ -16,10 +15,10 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 import java.util.List;
-import tb.C9826vr;
 import tb.kv2;
 import tb.lu2;
 import tb.t60;
+import tb.vr;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
@@ -28,14 +27,13 @@ public class FollowProjListHolder extends FeedsWraperHolder {
     Activity w;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.FollowProjListHolder$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2769a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FollowFeedData a;
         final /* synthetic */ FeedMergeDataDO b;
 
-        View$OnClickListenerC2769a(FollowFeedData followFeedData, FeedMergeDataDO feedMergeDataDO) {
+        a(FollowFeedData followFeedData, FeedMergeDataDO feedMergeDataDO) {
             this.a = followFeedData;
             this.b = feedMergeDataDO;
         }
@@ -94,13 +92,13 @@ public class FollowProjListHolder extends FeedsWraperHolder {
             ((ViewGroup) this.itemView.findViewById(R$id.item_parent)).addView(onCreateViewHolder.itemView, 0);
             this.itemView.findViewById(R$id.item_scrollview).getLayoutParams().height = t60.a(this.w, 172.0f);
             FollowFeedData followFeedData = list.get(size);
-            if (onCreateViewHolder.a.getTag() instanceof C9826vr) {
-                ((C9826vr) onCreateViewHolder.a.getTag()).cancel();
+            if (onCreateViewHolder.a.getTag() instanceof vr) {
+                ((vr) onCreateViewHolder.a.getTag()).cancel();
             }
-            DMImageCreator k = C0504a.b().c(followFeedData.img).k(new DMRoundedCornersBitmapProcessor(t60.a(this.w, 3.0f), 0));
+            DMImageCreator k = cn.damai.common.image.a.b().c(followFeedData.img).k(new DMRoundedCornersBitmapProcessor(t60.a(this.w, 3.0f), 0));
             int i = R$drawable.uikit_default_image_bg_gradient;
             onCreateViewHolder.a.setTag(k.i(i).c(i).g(onCreateViewHolder.a));
-            onCreateViewHolder.a.setOnClickListener(new View$OnClickListenerC2769a(followFeedData, feedMergeDataDO));
+            onCreateViewHolder.a.setOnClickListener(new a(followFeedData, feedMergeDataDO));
             onCreateViewHolder.b.setText(followFeedData.name);
             if (6 == followFeedData.subBizType && followFeedData.viewStatus == 0) {
                 onCreateViewHolder.c.setVisibility(0);

@@ -81,12 +81,11 @@ public final class WantSeeProjectViewHolder extends RecyclerView.ViewHolder impl
     private ProjectItemBean w;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.viewholder.WantSeeProjectViewHolder$a */
     /* loaded from: classes.dex */
-    public static final class View$OnAttachStateChangeListenerC0987a implements View.OnAttachStateChangeListener {
+    public static final class a implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC0987a() {
+        a() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -180,7 +179,7 @@ public final class WantSeeProjectViewHolder extends RecyclerView.ViewHolder impl
         this.s = (WantSeeRecommendView) findViewById19;
         this.t = m62.a(this.itemView.getContext(), 76.0f);
         this.u = m62.a(this.itemView.getContext(), 102.0f);
-        this.l.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC0987a());
+        this.l.addOnAttachStateChangeListener(new a());
     }
 
     private final CharSequence f(ProjectItemBean projectItemBean) {
@@ -280,7 +279,7 @@ public final class WantSeeProjectViewHolder extends RecyclerView.ViewHolder impl
             WeakRefCountDownTimer weakRefCountDownTimer = new WeakRefCountDownTimer(countDownTimeMills, 1000L, this);
             this.l.setTag(weakRefCountDownTimer);
             weakRefCountDownTimer.start();
-            TimerView.C3490a dateResult = TimerView.getDateResult(countDownTimeMills);
+            TimerView.a dateResult = TimerView.getDateResult(countDownTimeMills);
             b41.h(dateResult, "getDateResult(countDownMsSurplus)");
             this.q.setText(dateResult.a);
             this.r.setText(dateResult.b + jn1.CONDITION_IF_MIDDLE + dateResult.c + jn1.CONDITION_IF_MIDDLE + dateResult.d);
@@ -500,7 +499,7 @@ public final class WantSeeProjectViewHolder extends RecyclerView.ViewHolder impl
             ipChange.ipc$dispatch("-1353860240", new Object[]{this, Long.valueOf(j)});
             return;
         }
-        TimerView.C3490a dateResult = TimerView.getDateResult(j);
+        TimerView.a dateResult = TimerView.getDateResult(j);
         b41.h(dateResult, "getDateResult(millisUntilFinished)");
         this.q.setText(dateResult.a);
         this.r.setText(dateResult.b + jn1.CONDITION_IF_MIDDLE + dateResult.c + jn1.CONDITION_IF_MIDDLE + dateResult.d);

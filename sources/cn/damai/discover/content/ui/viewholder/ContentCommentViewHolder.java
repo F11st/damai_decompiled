@@ -57,12 +57,11 @@ public class ContentCommentViewHolder extends cp2<ContentCommentList> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.content.ui.viewholder.ContentCommentViewHolder$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1009a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1009a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -128,16 +127,16 @@ public class ContentCommentViewHolder extends cp2<ContentCommentList> {
         TextView textView = (TextView) this.b.findViewById(R$id.live_content_detail_comment_show_all);
         this.g = textView;
         textView.setOnClickListener(this);
-        this.b.findViewById(R$id.content_detail_inner_commentinput).setOnClickListener(new View$OnClickListenerC1009a());
+        this.b.findViewById(R$id.content_detail_inner_commentinput).setOnClickListener(new a());
         Random random = new Random();
         String[] strArr = n;
         ((TextView) this.b.findViewById(R$id.content_detail_inner_input)).setText(strArr[random.nextInt(strArr.length)]);
         DMAvatar dMAvatar = (DMAvatar) this.b.findViewById(R$id.content_detail_inner_avatar);
         dMAvatar.setAvatarSize(DMAvatar.DMAvatarSize.SIZE_33x33);
         if (LoginManager.k().q()) {
-            UserData a = UserInfoUtil.a();
-            if (a != null && a.getUserBaseInfo() != null) {
-                UserBaseInfoBean userBaseInfo = a.getUserBaseInfo();
+            UserData a2 = UserInfoUtil.a();
+            if (a2 != null && a2.getUserBaseInfo() != null) {
+                UserBaseInfoBean userBaseInfo = a2.getUserBaseInfo();
                 if (userBaseInfo != null && !TextUtils.isEmpty(userBaseInfo.getHeadImg())) {
                     dMAvatar.setAvatar(userBaseInfo.getHeadImg());
                 } else {

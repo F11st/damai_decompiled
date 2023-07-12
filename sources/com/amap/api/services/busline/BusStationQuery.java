@@ -1,6 +1,6 @@
 package com.amap.api.services.busline;
 
-import com.amap.api.col.s.C4435i;
+import com.amap.api.col.s.i;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -20,7 +20,7 @@ public class BusStationQuery implements Cloneable {
     }
 
     private boolean a() {
-        return !C4435i.a(this.a);
+        return !i.a(this.a);
     }
 
     public boolean equals(Object obj) {

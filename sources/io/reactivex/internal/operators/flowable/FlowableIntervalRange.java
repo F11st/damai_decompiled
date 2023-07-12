@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.Scheduler;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -17,7 +17,7 @@ import org.reactivestreams.Subscription;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableIntervalRange extends AbstractC8147b<Long> {
+public final class FlowableIntervalRange extends b<Long> {
     final long end;
     final long initialDelay;
     final long period;
@@ -95,7 +95,7 @@ public final class FlowableIntervalRange extends AbstractC8147b<Long> {
         this.end = j2;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super Long> subscriber) {
         IntervalRangeSubscriber intervalRangeSubscriber = new IntervalRangeSubscriber(subscriber, this.start, this.end);
         subscriber.onSubscribe(intervalRangeSubscriber);

@@ -57,10 +57,9 @@ public class ay2 implements IServiceManager {
     private int x;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ay2$a */
     /* loaded from: classes6.dex */
-    class C8931a extends RecyclerView.OnScrollListener {
-        C8931a() {
+    class a extends RecyclerView.OnScrollListener {
+        a() {
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
@@ -280,7 +279,7 @@ public class ay2 implements IServiceManager {
     public void h(LinearLayout linearLayout, @NonNull RecyclerView recyclerView, LinearLayout linearLayout2) {
         this.d = linearLayout;
         this.c = recyclerView;
-        recyclerView.addOnScrollListener(new C8931a());
+        recyclerView.addOnScrollListener(new a());
         this.e = linearLayout2;
     }
 

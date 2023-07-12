@@ -6,7 +6,7 @@ import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class by extends AbstractC7282l {
+public class by extends l {
     public static final String a = by.class.getSimpleName();
     String c;
     String d;

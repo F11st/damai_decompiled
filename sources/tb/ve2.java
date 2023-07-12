@@ -4,7 +4,6 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
-import com.alibaba.emas.datalab.C3318a;
 import com.alibaba.emas.datalab.DatalabBizType;
 import com.alibaba.fastjson.JSON;
 
@@ -14,14 +13,13 @@ public class ve2 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.ve2$b */
     /* loaded from: classes6.dex */
-    public static class C9818b {
+    public static class b {
         private static ve2 a = new ve2();
     }
 
     public static ve2 b() {
-        return C9818b.a;
+        return b.a;
     }
 
     public p30 a(Context context, DatalabBizType datalabBizType, String str) {
@@ -64,12 +62,12 @@ public class ve2 {
         }
         DatalabBizType datalabBizType2 = DatalabBizType.zcache;
         if (datalabBizType.equals(datalabBizType2)) {
-            p30 a = a(context, datalabBizType2, "app.start");
-            Log.w("Datalab.SpController", "appStartEvent result is " + JSON.toJSONString(a));
-            if (a != null) {
+            p30 a2 = a(context, datalabBizType2, "app.start");
+            Log.w("Datalab.SpController", "appStartEvent result is " + JSON.toJSONString(a2));
+            if (a2 != null) {
                 try {
                     Log.w("Datalab.SpController", datalabBizType + " app start event notify");
-                    C3318a.b().b.e(a);
+                    com.alibaba.emas.datalab.a.b().b.e(a2);
                 } catch (Exception e) {
                     Log.e("Datalab.SpController", "app start event error", e);
                 }

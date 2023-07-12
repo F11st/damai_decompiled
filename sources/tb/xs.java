@@ -32,7 +32,7 @@ public class xs {
             ipChange.ipc$dispatch("-1549641308", new Object[]{this, fragmentActivity});
             return;
         }
-        IYoukuPlayer create = YoukuPlayer.create(fragmentActivity.getApplication(), new C9878ws().a(), null);
+        IYoukuPlayer create = YoukuPlayer.create(fragmentActivity.getApplication(), new ws().a(), null);
         create.setWaterMarkImageView(new bt(fragmentActivity));
         this.a = new w01(create);
         this.c = new zs();

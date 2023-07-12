@@ -57,7 +57,7 @@ public final class ObservableSwitchIfEmpty<T> extends AbstractObservableWithUpst
         this.other = observableSource2;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         SwitchIfEmptyObserver switchIfEmptyObserver = new SwitchIfEmptyObserver(observer, this.other);
         observer.onSubscribe(switchIfEmptyObserver.arbiter);

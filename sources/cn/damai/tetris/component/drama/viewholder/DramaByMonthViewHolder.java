@@ -52,12 +52,11 @@ public class DramaByMonthViewHolder extends BaseViewHolder<DramaWrapBean> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.drama.viewholder.DramaByMonthViewHolder$a */
     /* loaded from: classes7.dex */
-    public class C1830a implements OnItemClickListener<DramaMonthBean> {
+    public class a implements OnItemClickListener<DramaMonthBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1830a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemClickListener
@@ -83,12 +82,11 @@ public class DramaByMonthViewHolder extends BaseViewHolder<DramaWrapBean> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.drama.viewholder.DramaByMonthViewHolder$b */
     /* loaded from: classes7.dex */
-    public class C1831b implements OnItemBindListener<DramaV1Bean> {
+    public class b implements OnItemBindListener<DramaV1Bean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1831b() {
+        b() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -115,12 +113,11 @@ public class DramaByMonthViewHolder extends BaseViewHolder<DramaWrapBean> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.drama.viewholder.DramaByMonthViewHolder$c */
     /* loaded from: classes16.dex */
-    public class View$OnTouchListenerC1832c implements View.OnTouchListener {
+    public class c implements View.OnTouchListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnTouchListenerC1832c() {
+        c() {
         }
 
         @Override // android.view.View.OnTouchListener
@@ -135,13 +132,12 @@ public class DramaByMonthViewHolder extends BaseViewHolder<DramaWrapBean> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.drama.viewholder.DramaByMonthViewHolder$d */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1833d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        View$OnClickListenerC1833d(String str) {
+        d(String str) {
             this.a = str;
         }
 
@@ -162,21 +158,21 @@ public class DramaByMonthViewHolder extends BaseViewHolder<DramaWrapBean> {
         this.g = true;
         this.j = new HashMap<>();
         this.k = onDramaByMonthClickListener;
-        Application a = mu0.a();
-        this.b = m62.a(a, 21.0f);
-        this.a = m62.a(a, 12.0f);
+        Application a2 = mu0.a();
+        this.b = m62.a(a2, 21.0f);
+        this.a = m62.a(a2, 12.0f);
         this.f = new mg(view.findViewById(R$id.card_title_layout));
         this.l = (RecyclerView) view.findViewById(R$id.dbm_tab_recycler);
         this.e = (RecyclerView) view.findViewById(R$id.dbm_drama_recycler);
-        MonthTabAdapter monthTabAdapter = new MonthTabAdapter(new C1830a());
+        MonthTabAdapter monthTabAdapter = new MonthTabAdapter(new a());
         this.d = monthTabAdapter;
         this.l.setAdapter(monthTabAdapter);
-        this.l.setLayoutManager(new LinearLayoutManager(a, 0, false));
-        DramaListV1RecyAdapter dramaListV1RecyAdapter = new DramaListV1RecyAdapter(new C1831b());
+        this.l.setLayoutManager(new LinearLayoutManager(a2, 0, false));
+        DramaListV1RecyAdapter dramaListV1RecyAdapter = new DramaListV1RecyAdapter(new b());
         this.c = dramaListV1RecyAdapter;
         this.e.setAdapter(dramaListV1RecyAdapter);
-        this.e.setLayoutManager(new LinearLayoutManager(a, 0, false));
-        this.e.setOnTouchListener(new View$OnTouchListenerC1832c());
+        this.e.setLayoutManager(new LinearLayoutManager(a2, 0, false));
+        this.e.setOnTouchListener(new c());
         j();
         l();
     }
@@ -312,7 +308,7 @@ public class DramaByMonthViewHolder extends BaseViewHolder<DramaWrapBean> {
             CardTitleBean cardTitleBean = this.h.mTitleBean;
             this.f.h(cardTitleBean);
             if (cardTitleBean != null && cardTitleBean.hasUrl()) {
-                this.f.a(new View$OnClickListenerC1833d(cardTitleBean.url));
+                this.f.a(new d(cardTitleBean.url));
             } else {
                 this.f.a(null);
             }

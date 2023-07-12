@@ -22,8 +22,8 @@ import com.taobao.android.launcher.statistics.common.processes.AndroidAppProcess
 import com.taobao.android.launcher.statistics.common.processes.AndroidProcesses;
 import com.taobao.android.launcher.statistics.common.processes.Stat;
 import com.taobao.android.launcher.statistics.common.processes.Thread;
-import com.taobao.application.common.C6673b;
 import com.taobao.application.common.IAppPreferences;
+import com.taobao.application.common.b;
 import com.taobao.orange.ConfigCenter;
 import com.taobao.orange.model.ConfigDO;
 import com.taobao.orange.model.NameSpaceDO;
@@ -68,7 +68,7 @@ class StartupDefaultImpl extends Startup {
         hashMap.put("package_tag", LauncherRuntime.sPackageTag);
         hashMap.put("packageName", LauncherRuntime.sPackageName);
         hashMap.put("app_version", LauncherRuntime.sAppVersion);
-        IAppPreferences d = C6673b.d();
+        IAppPreferences d = b.d();
         hashMap.put("device_score", Integer.valueOf(d.getInt("oldDeviceScore", 60)));
         hashMap.put("app_status_is_full_new_install", Boolean.valueOf(d.getBoolean("isFullNewInstall", false)));
         hashMap.put("app_status_is_first_launch", Boolean.valueOf(d.getBoolean("isFirstLaunch", false)));

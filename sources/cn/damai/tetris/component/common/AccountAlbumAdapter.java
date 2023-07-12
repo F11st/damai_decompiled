@@ -14,7 +14,6 @@ import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.tetris.component.common.AccountAlbumContract;
 import cn.damai.tetris.component.common.bean.AccountBean;
-import cn.damai.uikit.image.C2497a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
@@ -23,7 +22,7 @@ import tb.t60;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
-public class AccountAlbumAdapter extends RecyclerView.Adapter<C1793b> {
+public class AccountAlbumAdapter extends RecyclerView.Adapter<b> {
     private static transient /* synthetic */ IpChange $ipChange;
     private List<AccountBean> a;
     private Context b;
@@ -31,15 +30,14 @@ public class AccountAlbumAdapter extends RecyclerView.Adapter<C1793b> {
     int[] d = {R$drawable.bg_account_item_1, R$drawable.bg_account_item_2, R$drawable.bg_account_item_3};
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.common.AccountAlbumAdapter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1792a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ AccountBean a;
         final /* synthetic */ int b;
         final /* synthetic */ HashMap c;
 
-        View$OnClickListenerC1792a(AccountBean accountBean, int i, HashMap hashMap) {
+        a(AccountBean accountBean, int i, HashMap hashMap) {
             this.a = accountBean;
             this.b = i;
             this.c = hashMap;
@@ -64,15 +62,14 @@ public class AccountAlbumAdapter extends RecyclerView.Adapter<C1793b> {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.common.AccountAlbumAdapter$b */
     /* loaded from: classes7.dex */
-    public class C1793b extends RecyclerView.ViewHolder {
+    public class b extends RecyclerView.ViewHolder {
         public ImageView a;
         public ImageView b;
         public TextView c;
         public TextView d;
 
-        public C1793b(AccountAlbumAdapter accountAlbumAdapter, View view) {
+        public b(AccountAlbumAdapter accountAlbumAdapter, View view) {
             super(view);
             this.a = (ImageView) view.findViewById(R$id.account_album_item_bg);
             this.b = (ImageView) view.findViewById(R$id.account_album_item_pic);
@@ -89,32 +86,32 @@ public class AccountAlbumAdapter extends RecyclerView.Adapter<C1793b> {
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     /* renamed from: c */
-    public void onBindViewHolder(C1793b c1793b, int i) {
+    public void onBindViewHolder(b bVar, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-976019447")) {
-            ipChange.ipc$dispatch("-976019447", new Object[]{this, c1793b, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-976019447", new Object[]{this, bVar, Integer.valueOf(i)});
             return;
         }
         if (i == 0) {
-            ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) c1793b.itemView.getLayoutParams();
+            ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) bVar.itemView.getLayoutParams();
             marginLayoutParams.setMargins(t60.a(this.b, 15.0f), 0, t60.a(this.b, 0.0f), 0);
-            c1793b.itemView.setLayoutParams(marginLayoutParams);
+            bVar.itemView.setLayoutParams(marginLayoutParams);
         } else {
-            ViewGroup.MarginLayoutParams marginLayoutParams2 = (ViewGroup.MarginLayoutParams) c1793b.itemView.getLayoutParams();
+            ViewGroup.MarginLayoutParams marginLayoutParams2 = (ViewGroup.MarginLayoutParams) bVar.itemView.getLayoutParams();
             marginLayoutParams2.setMargins(t60.a(this.b, 0.0f), 0, t60.a(this.b, 0.0f), 0);
-            c1793b.itemView.setLayoutParams(marginLayoutParams2);
+            bVar.itemView.setLayoutParams(marginLayoutParams2);
         }
         AccountBean accountBean = this.a.get(i);
         if (accountBean == null) {
             return;
         }
-        c1793b.a.setImageDrawable(this.b.getResources().getDrawable(this.d[i % 3]));
-        C2497a.a().loadinto(accountBean.getHeadPic(), c1793b.b);
-        c1793b.c.setText(accountBean.getName());
-        c1793b.d.setText(accountBean.getAdditionDescription());
+        bVar.a.setImageDrawable(this.b.getResources().getDrawable(this.d[i % 3]));
+        cn.damai.uikit.image.a.a().loadinto(accountBean.getHeadPic(), bVar.b);
+        bVar.c.setText(accountBean.getName());
+        bVar.d.setText(accountBean.getAdditionDescription());
         AccountAlbumPresenter accountAlbumPresenter = this.c;
         if (accountAlbumPresenter != null) {
-            ImageView imageView = c1793b.a;
+            ImageView imageView = bVar.a;
             accountAlbumPresenter.userTrackExpose(imageView, "artist_" + i);
         }
         HashMap hashMap = new HashMap();
@@ -130,17 +127,17 @@ public class AccountAlbumAdapter extends RecyclerView.Adapter<C1793b> {
             hashMap.put("biz_id", accountBean.getId());
             hashMap.put("biz_type", accountBean.getType());
             AccountAlbumPresenter accountAlbumPresenter3 = this.c;
-            View view = c1793b.itemView;
+            View view = bVar.itemView;
             accountAlbumPresenter3.userTrackExpose(view, "card_" + i, hashMap, true);
         }
-        c1793b.itemView.setOnClickListener(new View$OnClickListenerC1792a(accountBean, i, hashMap));
+        bVar.itemView.setOnClickListener(new a(accountBean, i, hashMap));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     /* renamed from: d */
-    public C1793b onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public b onCreateViewHolder(ViewGroup viewGroup, int i) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1762573325") ? (C1793b) ipChange.ipc$dispatch("1762573325", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new C1793b(this, LayoutInflater.from(this.b).inflate(R$layout.account_album_item, viewGroup, false));
+        return AndroidInstantRuntime.support(ipChange, "1762573325") ? (b) ipChange.ipc$dispatch("1762573325", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new b(this, LayoutInflater.from(this.b).inflate(R$layout.account_album_item, viewGroup, false));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

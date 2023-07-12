@@ -7,8 +7,6 @@ import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.LruCache;
-import com.taobao.android.dinamic.C6312a;
-import com.taobao.android.dinamic.C6313b;
 import com.taobao.android.dinamic.log.DinamicLog;
 import com.taobao.android.dinamic.tempate.DinamicTemplate;
 import com.taobao.android.dinamic.tempate.db.FileCache;
@@ -19,7 +17,7 @@ import tb.ul2;
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
 public class TemplateCache {
-    public static HttpLoader k = new C6348b();
+    public static HttpLoader k = new b();
     protected final String a;
     protected final String b;
     protected final long c;
@@ -47,10 +45,10 @@ public class TemplateCache {
 
         @Override // java.lang.Runnable
         public void run() {
-            if (C6313b.e()) {
-                DinamicLog.a(C6313b.TAG, "download template=" + this.val$template + (((float) this.val$info.b) / 1000000.0d));
+            if (com.taobao.android.dinamic.b.e()) {
+                DinamicLog.a(com.taobao.android.dinamic.b.TAG, "download template=" + this.val$template + (((float) this.val$info.b) / 1000000.0d));
             }
-            C6312a.h().d();
+            com.taobao.android.dinamic.a.h().d();
             ul2 ul2Var = this.val$info;
             String str = ul2Var.c;
             long j = ul2Var.b;
@@ -76,10 +74,10 @@ public class TemplateCache {
 
         @Override // java.lang.Runnable
         public void run() {
-            if (C6313b.e()) {
-                DinamicLog.a(C6313b.TAG, "write template=" + this.val$template + (((float) this.val$consumingTime) / 1000000.0d));
+            if (com.taobao.android.dinamic.b.e()) {
+                DinamicLog.a(com.taobao.android.dinamic.b.TAG, "write template=" + this.val$template + (((float) this.val$consumingTime) / 1000000.0d));
             }
-            C6312a.h().d();
+            com.taobao.android.dinamic.a.h().d();
             throw null;
         }
     }
@@ -92,16 +90,15 @@ public class TemplateCache {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamic.tempate.manager.TemplateCache$a */
     /* loaded from: classes12.dex */
-    public class AsyncTaskC6347a extends AsyncTask<Void, Void, Void> {
+    public class a extends AsyncTask<Void, Void, Void> {
         final /* synthetic */ String a;
         final /* synthetic */ String b;
         final /* synthetic */ byte[] c;
         final /* synthetic */ DinamicTemplate d;
         final /* synthetic */ ul2 e;
 
-        AsyncTaskC6347a(String str, String str2, byte[] bArr, DinamicTemplate dinamicTemplate, ul2 ul2Var) {
+        a(String str, String str2, byte[] bArr, DinamicTemplate dinamicTemplate, ul2 ul2Var) {
             this.a = str;
             this.b = str2;
             this.c = bArr;
@@ -138,10 +135,9 @@ public class TemplateCache {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamic.tempate.manager.TemplateCache$b */
     /* loaded from: classes11.dex */
-    static class C6348b implements HttpLoader {
-        C6348b() {
+    static class b implements HttpLoader {
+        b() {
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:44:0x0080, code lost:
@@ -257,14 +253,13 @@ public class TemplateCache {
             L89:
                 return r0
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.taobao.android.dinamic.tempate.manager.TemplateCache.C6348b.loadUrl(java.lang.String):byte[]");
+            throw new UnsupportedOperationException("Method not decompiled: com.taobao.android.dinamic.tempate.manager.TemplateCache.b.loadUrl(java.lang.String):byte[]");
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamic.tempate.manager.TemplateCache$c */
     /* loaded from: classes12.dex */
-    public static final class C6349c {
+    public static final class c {
         private Context a;
         private String b;
         private String c;
@@ -279,34 +274,34 @@ public class TemplateCache {
             throw new IllegalArgumentException();
         }
 
-        public C6349c h(Context context) {
+        public c h(Context context) {
             this.a = context;
             return this;
         }
 
-        public C6349c i(String str) {
+        public c i(String str) {
             this.c = str;
             return this;
         }
 
-        public C6349c j(long j) {
+        public c j(long j) {
             this.e = j;
             return this;
         }
 
-        public C6349c k(int i) {
+        public c k(int i) {
             this.d = i;
             return this;
         }
 
-        public C6349c l(String str) {
+        public c l(String str) {
             this.b = str;
             return this;
         }
     }
 
-    /* synthetic */ TemplateCache(C6349c c6349c, AsyncTaskC6347a asyncTaskC6347a) {
-        this(c6349c);
+    /* synthetic */ TemplateCache(c cVar, a aVar) {
+        this(cVar);
     }
 
     private File b() {
@@ -331,7 +326,7 @@ public class TemplateCache {
         if (loadUrl != null) {
             this.i.put(str, loadUrl);
             Log.d("TemplateCache", "[getTemplateById #" + str + "] get template from server.");
-            new AsyncTaskC6347a(str, str2, loadUrl, dinamicTemplate, ul2Var).executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, new Void[0]);
+            new a(str, str2, loadUrl, dinamicTemplate, ul2Var).executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, new Void[0]);
             return loadUrl;
         }
         Log.d("TemplateCache", "[getTemplateById #" + str + "] template from server is null.");
@@ -367,11 +362,11 @@ public class TemplateCache {
     }
 
     private void i(ul2 ul2Var, DinamicTemplate dinamicTemplate, boolean z) {
-        C6312a.h().d();
+        com.taobao.android.dinamic.a.h().d();
     }
 
     private void j(String str, DinamicTemplate dinamicTemplate, boolean z, long j) {
-        C6312a.h().d();
+        com.taobao.android.dinamic.a.h().d();
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:20:0x004f, code lost:
@@ -520,7 +515,7 @@ public class TemplateCache {
     public byte[] c(String str, ul2 ul2Var) throws IOException {
         byte[] bArr;
         System.currentTimeMillis();
-        FileCache.C6343b e = this.h.e(str);
+        FileCache.b e = this.h.e(str);
         if (e != null) {
             bArr = l(e.b);
             if (bArr != null && bArr.length > 0) {
@@ -565,21 +560,21 @@ public class TemplateCache {
         return k(file);
     }
 
-    private TemplateCache(C6349c c6349c) {
+    private TemplateCache(c cVar) {
         this.j = k;
-        this.a = c6349c.b;
-        Context context = c6349c.a;
+        this.a = cVar.b;
+        Context context = cVar.a;
         this.e = context;
-        String str = c6349c.c;
+        String str = cVar.c;
         this.b = str;
-        int i = c6349c.d;
+        int i = cVar.d;
         this.d = i;
-        long j = c6349c.e;
+        long j = cVar.e;
         this.c = j;
-        this.g = c6349c.f;
-        File b = b();
-        this.f = b;
+        this.g = cVar.f;
+        File b2 = b();
+        this.f = b2;
         this.i = new LruCache<>(i);
-        this.h = new FileCache(context, b, str, j);
+        this.h = new FileCache(context, b2, str, j);
     }
 }

@@ -41,8 +41,7 @@ import cn.damai.comment.util.SoftInputUtils;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
@@ -67,11 +66,11 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import tb.C9548pb;
 import tb.cb2;
 import tb.cs;
 import tb.gb;
 import tb.ih2;
+import tb.pb;
 import tb.yr2;
 import tb.z20;
 
@@ -95,13 +94,12 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
     private String spmc;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.view.DMHotDiscussView$a */
     /* loaded from: classes4.dex */
-    public class C0456a implements OnPraiseViewClickListenerNew {
+    public class a implements OnPraiseViewClickListenerNew {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ PraiseView a;
 
-        C0456a(PraiseView praiseView) {
+        a(PraiseView praiseView) {
             this.a = praiseView;
         }
 
@@ -112,7 +110,7 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
                 ipChange.ipc$dispatch("1540370558", new Object[]{this, Boolean.valueOf(z), str});
                 return;
             }
-            C0529c.e().x(new C0525a.C0527b().i(DMHotDiscussView.this.spmb).f(DMHotDiscussView.this.spmc).l("likesbtn").g(false).j(DMHotDiscussView.this.getCommonUtMap()));
+            cn.damai.common.user.c.e().x(new a.b().i(DMHotDiscussView.this.spmb).f(DMHotDiscussView.this.spmc).l("likesbtn").g(false).j(DMHotDiscussView.this.getCommonUtMap()));
             if (this.a.getPraiseInfo().isHasPraised()) {
                 DMHotDiscussView.this.mAnimView.setVisibility(0);
                 DMHotDiscussView.this.mAnimView.setAnimation("avatar/data.json");
@@ -123,12 +121,11 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.view.DMHotDiscussView$b */
     /* loaded from: classes4.dex */
-    public class C0457b implements SoftInputUtils.OnSoftKeyboardChangeListener {
+    public class b implements SoftInputUtils.OnSoftKeyboardChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0457b() {
+        b() {
         }
 
         @Override // cn.damai.comment.util.SoftInputUtils.OnSoftKeyboardChangeListener
@@ -153,12 +150,11 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.view.DMHotDiscussView$c */
     /* loaded from: classes13.dex */
-    public class C0458c implements TextWatcher {
+    public class c implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0458c() {
+        c() {
         }
 
         @Override // android.text.TextWatcher
@@ -191,12 +187,11 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.view.DMHotDiscussView$d */
     /* loaded from: classes4.dex */
-    public class C0459d implements NineImgUtil.OnClickExtraListener {
+    public class d implements NineImgUtil.OnClickExtraListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0459d(DMHotDiscussView dMHotDiscussView) {
+        d(DMHotDiscussView dMHotDiscussView) {
         }
 
         @Override // cn.damai.comment.util.NineImgUtil.OnClickExtraListener
@@ -209,9 +204,8 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.view.DMHotDiscussView$e */
     /* loaded from: classes13.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC0460e implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class e implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ boolean a;
         final /* synthetic */ TextView b;
@@ -221,7 +215,7 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
         final /* synthetic */ Context f;
         final /* synthetic */ int g;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC0460e(DMHotDiscussView dMHotDiscussView, boolean z, TextView textView, String str, String str2, int i, Context context, int i2) {
+        e(DMHotDiscussView dMHotDiscussView, boolean z, TextView textView, String str, String str2, int i, Context context, int i2) {
             this.a = z;
             this.b = textView;
             this.c = str;
@@ -281,7 +275,7 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
         hashMap.put("item_id", this.itemId);
         hashMap.put("city", z20.c());
         if (!TextUtils.isEmpty(this.cntContentId)) {
-            hashMap.put(C9548pb.CNT_CONTENT_ID, this.cntContentId);
+            hashMap.put(pb.CNT_CONTENT_ID, this.cntContentId);
             hashMap.put("quanziid", this.cntContentId);
         }
         HotDiscussBean hotDiscussBean = this.hotDiscussBean;
@@ -341,8 +335,8 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
         this.mPublishBtn = textView;
         textView.setOnClickListener(this);
         new SoftInputUtils();
-        SoftInputUtils.c((Activity) this.mContext, new C0457b());
-        this.mInput.addTextChangedListener(new C0458c());
+        SoftInputUtils.c((Activity) this.mContext, new b());
+        this.mInput.addTextChangedListener(new c());
     }
 
     private void initView(Context context) {
@@ -413,9 +407,9 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
         }
         dMAvatar.setAvatarSize(DMAvatar.DMAvatarSize.SIZE_20x20);
         if (LoginManager.k().q()) {
-            UserData a = UserInfoUtil.a();
-            if (a != null && a.getUserBaseInfo() != null) {
-                UserBaseInfoBean userBaseInfo = a.getUserBaseInfo();
+            UserData a2 = UserInfoUtil.a();
+            if (a2 != null && a2.getUserBaseInfo() != null) {
+                UserBaseInfoBean userBaseInfo = a2.getUserBaseInfo();
                 if (userBaseInfo != null && !TextUtils.isEmpty(userBaseInfo.getHeadImg())) {
                     dMAvatar.setAvatar(userBaseInfo.getHeadImg());
                 } else {
@@ -445,7 +439,7 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
         List<CommentImageInfoBean> imageDOList = commentsItemBean.getImageDOList();
         nineGridlayout.setVisibility(0);
         if (context != null) {
-            NineImgUtil.a().b(context, ((int) yr2.d(context)) - yr2.a(context, 42.0f), true, nineGridlayout, commentsItemBean, imageDOList, new C0459d(this));
+            NineImgUtil.a().b(context, ((int) yr2.d(context)) - yr2.a(context, 42.0f), true, nineGridlayout, commentsItemBean, imageDOList, new d(this));
         }
     }
 
@@ -643,7 +637,7 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
                 commentPraiseInfoBean.setPraiseCount(contentDetailItem.praiseInfo.praiseCount + "");
                 commentPraiseInfoBean.setHasPraised(contentDetailItem.praiseInfo.hasPraised);
                 praiseView.setData(commentPraiseInfoBean, contentDetailItem.sourceId);
-                praiseView.setOnPraiseLayoutClickListenerCommon(new C0456a(praiseView));
+                praiseView.setOnPraiseLayoutClickListenerCommon(new a(praiseView));
             }
             int i = R$id.comment_like_num;
             setTvStr(i, contentDetailItem.focusCount + "", "想看");
@@ -662,9 +656,9 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
             initPublishArea();
             HashMap hashMap = new HashMap();
             hashMap.put("item_id", this.itemId);
-            C0529c e = C0529c.e();
+            cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
             String str2 = this.spmc;
-            e.G(this, str2, str2, this.spmb, hashMap);
+            e2.G(this, str2, str2, this.spmb, hashMap);
         } else {
             setVisibility(8);
         }
@@ -687,7 +681,7 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
             }
             requestFollow(contentDetailItem, view, hotDiscussBean2.card);
             commonUtMap.put("status", this.foucusState ? "0" : "1");
-            C0529c.e().x(new C0525a.C0527b().i(this.spmb).f(this.spmc).l("favorite").g(false).j(commonUtMap));
+            cn.damai.common.user.c.e().x(new a.b().i(this.spmb).f(this.spmc).l("favorite").g(false).j(commonUtMap));
         } else if (view.getId() == R$id.comment_reply_layout) {
             if (!LoginManager.k().q()) {
                 LoginManager.k().v(getContext());
@@ -696,7 +690,7 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
             EditText editText = (EditText) findViewById(R$id.comment_reply_content_et);
             editText.requestFocus();
             ((InputMethodManager) editText.getContext().getSystemService("input_method")).toggleSoftInput(0, 2);
-            C0529c.e().x(new C0525a.C0527b().i(this.spmb).f(this.spmc).l(com.taobao.aranger.constant.Constants.PARAM_REPLY).g(false).j(commonUtMap));
+            cn.damai.common.user.c.e().x(new a.b().i(this.spmb).f(this.spmc).l(com.taobao.aranger.constant.Constants.PARAM_REPLY).g(false).j(commonUtMap));
         } else if (view.getId() == R$id.comment_hl_themetitle) {
             HotDiscussBean hotDiscussBean3 = this.hotDiscussBean;
             if (hotDiscussBean3 == null || hotDiscussBean3.themeInfo == null) {
@@ -705,9 +699,9 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
             Bundle bundle = new Bundle();
             bundle.putString("themeId", this.hotDiscussBean.themeInfo.id);
             DMNav.from(this.mContext).withExtras(bundle).toUri(NavUri.b(cs.DISCOVER_THEME));
-            commonUtMap.put(C9548pb.CNT_CONTENT_ID, this.hotDiscussBean.themeInfo.id);
+            commonUtMap.put(pb.CNT_CONTENT_ID, this.hotDiscussBean.themeInfo.id);
             commonUtMap.put("titlelabel", this.hotDiscussBean.themeInfo.name);
-            C0529c.e().x(new C0525a.C0527b().i(this.spmb).f(this.spmc).l("theme").g(true).j(commonUtMap));
+            cn.damai.common.user.c.e().x(new a.b().i(this.spmb).f(this.spmc).l("theme").g(true).j(commonUtMap));
         } else if (view.getId() == R$id.comment_hl_content) {
             HotDiscussBean hotDiscussBean4 = this.hotDiscussBean;
             if (hotDiscussBean4 == null || hotDiscussBean4.contentDetail == null) {
@@ -716,7 +710,7 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
             Bundle bundle2 = new Bundle();
             bundle2.putString("contentId", this.hotDiscussBean.contentDetail.contentId);
             DMNav.from(this.mContext).withExtras(bundle2).toUri(NavUri.b(cs.DISCOVER_CONTENT_DETAIL));
-            C0529c.e().x(new C0525a.C0527b().i(this.spmb).f(this.spmc).l("hot_discussion").g(true).j(commonUtMap));
+            cn.damai.common.user.c.e().x(new a.b().i(this.spmb).f(this.spmc).l("hot_discussion").g(true).j(commonUtMap));
         } else if (view.getId() != R$id.content_detail_publisher_btn || (hotDiscussBean = this.hotDiscussBean) == null || hotDiscussBean.contentDetail == null) {
         } else {
             if (!LoginManager.k().q()) {
@@ -724,7 +718,7 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
                 return;
             }
             sumbitComment(this.hotDiscussBean.contentDetail);
-            C0529c.e().x(new C0525a.C0527b().i(this.spmb).f(this.spmc).l("reply_send").g(false).j(commonUtMap));
+            cn.damai.common.user.c.e().x(new a.b().i(this.spmb).f(this.spmc).l("reply_send").g(false).j(commonUtMap));
         }
     }
 
@@ -775,8 +769,8 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
                                 if (str2 != null) {
                                     try {
                                         i = Integer.parseInt(str2);
-                                    } catch (NumberFormatException e) {
-                                        e.printStackTrace();
+                                    } catch (NumberFormatException e2) {
+                                        e2.printStackTrace();
                                     }
                                 }
                                 if (i > 0) {
@@ -787,8 +781,8 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
                             }
                             DMHotDiscussView.this.setTvStr(R$id.comment_like_num, i + "", "想看");
                         }
-                    } catch (Exception e2) {
-                        e2.printStackTrace();
+                    } catch (Exception e3) {
+                        e3.printStackTrace();
                     }
                     view.setClickable(true);
                 }
@@ -840,7 +834,7 @@ public class DMHotDiscussView extends LinearLayout implements View.OnClickListen
             ipChange.ipc$dispatch("-660289104", new Object[]{this, context, textView, Integer.valueOf(i), str, str2, Integer.valueOf(i2), Boolean.valueOf(z)});
         } else if (TextUtils.isEmpty(str)) {
         } else {
-            textView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC0460e(this, z, textView, str, str2, i, context, i2));
+            textView.getViewTreeObserver().addOnGlobalLayoutListener(new e(this, z, textView, str, str2, i, context, i2));
         }
     }
 

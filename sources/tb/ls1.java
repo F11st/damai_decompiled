@@ -9,7 +9,6 @@ import cn.damai.commonbusiness.seatbiz.seat.qilin.bean.ImageData;
 import cn.damai.commonbusiness.seatbiz.seat.qilin.bean.PriceLevel;
 import cn.damai.commonbusiness.seatbiz.seat.qilin.bean.biz.PriceInfo;
 import cn.damai.commonbusiness.seatbiz.view.model.BaseSVG;
-import cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a;
 import cn.damai.commonbusiness.seatbiz.view.svgview.core.model.PointLocation;
 import cn.damai.commonbusiness.seatbiz.view.svgview.core.model.RegionBound;
 import cn.damai.seat.bean.VenueImage;
@@ -113,8 +112,8 @@ public class ls1 implements ICombiner {
             if (regionSvg2 == null || regionSvg2.getSvgPaintData() == null || regionSvg == null || regionSvg.getSvgPaintData() == null) {
                 return;
             }
-            AbstractC0856a svgPaintData = regionSvg.getSvgPaintData();
-            AbstractC0856a svgPaintData2 = regionSvg2.getSvgPaintData();
+            cn.damai.commonbusiness.seatbiz.view.render.a svgPaintData = regionSvg.getSvgPaintData();
+            cn.damai.commonbusiness.seatbiz.view.render.a svgPaintData2 = regionSvg2.getSvgPaintData();
             if (this.c) {
                 wd2Var = a(true, null);
             } else if (!this.d.f(this.b)) {

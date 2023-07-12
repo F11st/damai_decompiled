@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import tb.C9269io;
+import tb.io;
 
 /* compiled from: Taobao */
 /* loaded from: classes16.dex */
@@ -49,13 +49,13 @@ public class OrigRegion {
                 OrigChair origChair = chairs().get(i);
                 OrigChair origChair2 = origRegion.chairs().get(i);
                 if (!origChair.equals(origChair2)) {
-                    C9269io.a("binary", "--------------------- verify: error chair -----------------------");
-                    C9269io.a("binary", "[dest] this:" + origChair.toString());
-                    C9269io.a("binary", "[ src] that:" + origChair2.toString());
+                    io.a("binary", "--------------------- verify: error chair -----------------------");
+                    io.a("binary", "[dest] this:" + origChair.toString());
+                    io.a("binary", "[ src] that:" + origChair2.toString());
                     return false;
                 }
             }
-            C9269io.a("binary", "region id:" + this.mId + "--------------------- verify: OK -----------------------");
+            io.a("binary", "region id:" + this.mId + "--------------------- verify: OK -----------------------");
             return true;
         }
         return false;

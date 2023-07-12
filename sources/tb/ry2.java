@@ -16,7 +16,7 @@ public class ry2 {
     static {
         a();
         f();
-        Display defaultDisplay = ((WindowManager) fu0.e().a().getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
+        Display defaultDisplay = ((WindowManager) fu0.e().a().getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
         screenHeight = defaultDisplay.getHeight();
         screenWidth = defaultDisplay.getWidth();
     }

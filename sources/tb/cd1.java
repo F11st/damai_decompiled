@@ -2,13 +2,12 @@ package tb;
 
 import java.util.Collection;
 import java.util.Iterator;
-import kotlin.collections.AbstractC8198c;
 import kotlin.collections.builders.MapBuilder;
 import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class cd1<E> extends AbstractC8198c<E> {
+public final class cd1<E> extends kotlin.collections.c<E> {
     @NotNull
     private final MapBuilder<E, ?> a;
 
@@ -17,7 +16,7 @@ public final class cd1<E> extends AbstractC8198c<E> {
         this.a = mapBuilder;
     }
 
-    @Override // kotlin.collections.AbstractC8198c, java.util.AbstractCollection, java.util.Collection, java.util.Set
+    @Override // kotlin.collections.c, java.util.AbstractCollection, java.util.Collection, java.util.Set
     public boolean add(E e) {
         throw new UnsupportedOperationException();
     }
@@ -38,7 +37,7 @@ public final class cd1<E> extends AbstractC8198c<E> {
         return this.a.containsKey(obj);
     }
 
-    @Override // kotlin.collections.AbstractC8198c
+    @Override // kotlin.collections.c
     public int getSize() {
         return this.a.size();
     }

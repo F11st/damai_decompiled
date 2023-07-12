@@ -12,7 +12,7 @@ import android.util.Log;
 import androidx.annotation.Keep;
 import anet.channel.status.NetworkStatusHelper;
 import com.taobao.application.common.Apm;
-import com.taobao.application.common.C6673b;
+import com.taobao.application.common.b;
 import com.taobao.orange.OrangeConfig;
 import com.taobao.tlog.adapter.AdapterForTLog;
 import com.tencent.open.apireq.BaseResp;
@@ -340,7 +340,7 @@ public class XcdnEngine {
     }
 
     private static void registerAPMListener() {
-        C6673b.a(new Apm.OnApmEventListener() { // from class: com.youku.phone.xcdnengine.XcdnEngine.3
+        b.a(new Apm.OnApmEventListener() { // from class: com.youku.phone.xcdnengine.XcdnEngine.3
             @Override // com.taobao.application.common.IApmEventListener
             public void onEvent(int i) {
                 if (i != 1) {

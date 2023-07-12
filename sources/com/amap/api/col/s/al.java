@@ -12,7 +12,7 @@ import org.json.JSONObject;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public final class al extends AbstractC4370a<String, String> {
+public final class al extends a<String, String> {
     private String k;
 
     public al(Context context, String str) {
@@ -23,10 +23,10 @@ public final class al extends AbstractC4370a<String, String> {
     private static String b(String str) throws AMapException {
         try {
             JSONObject jSONObject = new JSONObject(str);
-            String a = C4443q.a(jSONObject, "code");
-            String a2 = C4443q.a(jSONObject, "message");
+            String a = q.a(jSONObject, "code");
+            String a2 = q.a(jSONObject, "message");
             if ("1".equals(a)) {
-                return C4443q.a(jSONObject, "transfer_url");
+                return q.a(jSONObject, "transfer_url");
             }
             if (!"0".equals(a)) {
                 if (!"2".equals(a)) {
@@ -45,22 +45,22 @@ public final class al extends AbstractC4370a<String, String> {
             }
             throw new AMapException(AMapException.AMAP_SERVICE_UNKNOWN_ERROR, 0, a2);
         } catch (JSONException e) {
-            C4435i.a(e, "ShareUrlSearchHandler", "paseJSON");
+            i.a(e, "ShareUrlSearchHandler", "paseJSON");
             return null;
         }
     }
 
-    @Override // com.amap.api.col.s.AbstractC4370a
+    @Override // com.amap.api.col.s.a
     protected final /* synthetic */ String a(String str) throws AMapException {
         return b(str);
     }
 
-    @Override // com.amap.api.col.s.AbstractC4370a
+    @Override // com.amap.api.col.s.a
     protected final String a_() {
         return null;
     }
 
-    @Override // com.amap.api.col.s.AbstractC4370a, com.amap.api.col.s.df
+    @Override // com.amap.api.col.s.a, com.amap.api.col.s.df
     public final Map<String, String> e() {
         byte[] bArr;
         StringBuilder sb = new StringBuilder();
@@ -77,7 +77,7 @@ public final class al extends AbstractC4370a<String, String> {
         try {
             bArr = au.a(sb.toString().getBytes("utf-8"), "Yaynpa84IKOfasFx".getBytes("utf-8"));
         } catch (UnsupportedEncodingException e) {
-            C4435i.a(e, "ShareUrlSearchHandler", "getParams");
+            i.a(e, "ShareUrlSearchHandler", "getParams");
             bArr = null;
         }
         HashMap hashMap = new HashMap();
@@ -89,6 +89,6 @@ public final class al extends AbstractC4370a<String, String> {
 
     @Override // com.amap.api.col.s.df
     public final String h() {
-        return C4434h.f();
+        return h.f();
     }
 }

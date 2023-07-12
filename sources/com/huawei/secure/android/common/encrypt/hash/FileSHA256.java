@@ -1,9 +1,9 @@
 package com.huawei.secure.android.common.encrypt.hash;
 
 import android.text.TextUtils;
-import com.huawei.secure.android.common.encrypt.utils.C5741a;
-import com.huawei.secure.android.common.encrypt.utils.C5742b;
 import com.huawei.secure.android.common.encrypt.utils.HexUtil;
+import com.huawei.secure.android.common.encrypt.utils.a;
+import com.huawei.secure.android.common.encrypt.utils.b;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -34,7 +34,7 @@ public abstract class FileSHA256 {
         MessageDigest messageDigest;
         if (!TextUtils.isEmpty(str) && a(str)) {
             if (!a(file)) {
-                C5742b.b(c, "file is not valid");
+                b.b(c, "file is not valid");
                 return "";
             }
             InputStream inputStream = null;
@@ -51,7 +51,7 @@ public abstract class FileSHA256 {
                     fileInputStream = null;
                 } catch (Throwable th) {
                     th = th;
-                    C5741a.a(inputStream);
+                    a.a(inputStream);
                     throw th;
                 }
                 try {
@@ -66,27 +66,27 @@ public abstract class FileSHA256 {
                         z = true;
                     }
                     str2 = z ? HexUtil.byteArray2HexStr(messageDigest.digest()) : null;
-                    C5741a.a((InputStream) fileInputStream);
+                    a.a((InputStream) fileInputStream);
                 } catch (IOException e4) {
                     e = e4;
-                    C5742b.b(c, "IOException" + e.getMessage());
-                    C5741a.a((InputStream) fileInputStream);
+                    b.b(c, "IOException" + e.getMessage());
+                    a.a((InputStream) fileInputStream);
                     return str2;
                 } catch (NoSuchAlgorithmException e5) {
                     e = e5;
-                    C5742b.b(c, "NoSuchAlgorithmException" + e.getMessage());
-                    C5741a.a((InputStream) fileInputStream);
+                    b.b(c, "NoSuchAlgorithmException" + e.getMessage());
+                    a.a((InputStream) fileInputStream);
                     return str2;
                 }
                 return str2;
             } catch (Throwable th2) {
                 th = th2;
                 inputStream = "";
-                C5741a.a(inputStream);
+                a.a(inputStream);
                 throw th;
             }
         }
-        C5742b.b(c, "algorithm is empty or not safe");
+        b.b(c, "algorithm is empty or not safe");
         return "";
     }
 
@@ -111,10 +111,10 @@ public abstract class FileSHA256 {
                 }
             }
         } catch (IOException | NoSuchAlgorithmException unused) {
-            C5742b.b(c, "inputstraem exception");
+            b.b(c, "inputstraem exception");
             return "";
         } finally {
-            C5741a.a(inputStream);
+            a.a(inputStream);
         }
     }
 
@@ -122,7 +122,7 @@ public abstract class FileSHA256 {
         if (!TextUtils.isEmpty(str) && a(str2)) {
             return str.equals(fileSHAEncrypt(file, str2));
         }
-        C5742b.b(c, "hash value is null || algorithm is illegal");
+        b.b(c, "hash value is null || algorithm is illegal");
         return false;
     }
 
@@ -137,7 +137,7 @@ public abstract class FileSHA256 {
         if (!TextUtils.isEmpty(str) && a(str2)) {
             return str.equals(inputStreamSHAEncrypt(inputStream, str2));
         }
-        C5742b.b(c, "hash value is null || algorithm is illegal");
+        b.b(c, "hash value is null || algorithm is illegal");
         return false;
     }
 

@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.Scheduler;
+import io.reactivex.b;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import java.util.concurrent.atomic.AtomicBoolean;
 import org.reactivestreams.Subscriber;
@@ -85,12 +85,12 @@ public final class FlowableUnsubscribeOn<T> extends AbstractFlowableWithUpstream
         }
     }
 
-    public FlowableUnsubscribeOn(AbstractC8147b<T> abstractC8147b, Scheduler scheduler) {
-        super(abstractC8147b);
+    public FlowableUnsubscribeOn(b<T> bVar, Scheduler scheduler) {
+        super(bVar);
         this.scheduler = scheduler;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new UnsubscribeSubscriber(subscriber, this.scheduler));
     }

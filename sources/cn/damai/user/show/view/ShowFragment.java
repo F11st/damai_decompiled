@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import cn.damai.common.app.base.BaseFragment;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
 import cn.damai.commonbusiness.search.bean.SearchResultBean;
 import cn.damai.homepage.R$id;
@@ -50,15 +50,14 @@ public class ShowFragment extends BaseFragment implements OnLoadMoreListener {
     private int mPageSize = 15;
     private int mProjectSize = 0;
     private int mProjectAllSize = 0;
-    private View.OnClickListener mItemClick = new View$OnClickListenerC2701a();
+    private View.OnClickListener mItemClick = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.show.view.ShowFragment$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2701a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2701a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -85,8 +84,8 @@ public class ShowFragment extends BaseFragment implements OnLoadMoreListener {
                     hashMap.put("usercode", z20.E());
                     hashMap.put("biz_id", ShowFragment.this.mId);
                     hashMap.put("biz_type", ShowFragment.this.mType + "");
-                    C0528b c0528b = new C0528b();
-                    C0529c.e().x(c0528b.e("business_homepage", "detials", "project_list_" + intValue, hashMap, Boolean.TRUE));
+                    b bVar = new b();
+                    c.e().x(bVar.e("business_homepage", "detials", "project_list_" + intValue, hashMap, Boolean.TRUE));
                 } catch (Exception unused) {
                 }
             }

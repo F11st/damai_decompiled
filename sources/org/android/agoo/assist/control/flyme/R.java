@@ -5,13 +5,12 @@ package org.android.agoo.assist.control.flyme;
 public final class R {
 
     /* compiled from: Taobao */
-    /* renamed from: org.android.agoo.assist.control.flyme.R$drawable */
     /* loaded from: classes2.dex */
-    public static final class C8864drawable {
+    public static final class drawable {
         public static final int push_pure_close = 0x7f080c30;
         public static final int stat_sys_third_app_notify = 0x7f080e15;
 
-        private C8864drawable() {
+        private drawable() {
         }
     }
 
@@ -38,9 +37,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: org.android.agoo.assist.control.flyme.R$layout */
     /* loaded from: classes2.dex */
-    public static final class C8865layout {
+    public static final class layout {
         public static final int push_expandable_big_image_notification = 0x7f0c0688;
         public static final int push_expandable_big_text_notification = 0x7f0c0689;
         public static final int push_pure_pic_notification_f6 = 0x7f0c068a;
@@ -50,7 +48,7 @@ public final class R {
         public static final int push_pure_pic_notification_f9_275 = 0x7f0c068e;
         public static final int push_pure_pic_notification_f9_337 = 0x7f0c068f;
 
-        private C8865layout() {
+        private layout() {
         }
     }
 

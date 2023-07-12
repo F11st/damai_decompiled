@@ -85,7 +85,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected int getLayoutContent() {
-        return R.C2960layout.aliuser_activity_parent_default_content;
+        return R.layout.aliuser_activity_parent_default_content;
     }
 
     public Toolbar getToolbar() {
@@ -93,7 +93,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected int getToolbarLayout() {
-        return R.C2960layout.aliuser_toolbar;
+        return R.layout.aliuser_toolbar;
     }
 
     public void hideInputMethodPannel(View view) {
@@ -116,7 +116,7 @@ public class BaseActivity extends AppCompatActivity {
                 if (DataProviderFactory.getDataProvider().getToolbarBackIcon() > 0) {
                     setNavigationBackIcon(DataProviderFactory.getDataProvider().getToolbarBackIcon());
                 } else {
-                    setNavigationBackIcon(R.C2959drawable.aliuser_ic_actionbar_back);
+                    setNavigationBackIcon(R.drawable.aliuser_ic_actionbar_back);
                 }
             } else {
                 setNavigationCloseIcon();
@@ -270,7 +270,7 @@ public class BaseActivity extends AppCompatActivity {
             setTheme(DataProviderFactory.getDataProvider().getLoginStyle());
         } else if (this.activityIsTranslucent) {
         } else {
-            setTheme(R.C2962style.AliUserAppThemeBase);
+            setTheme(R.style.AliUserAppThemeBase);
         }
     }
 
@@ -294,7 +294,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     public void setNavigationCloseIcon() {
-        setNavigationBackIcon(R.C2959drawable.aliuser_ic_actionbar_close);
+        setNavigationBackIcon(R.drawable.aliuser_ic_actionbar_close);
     }
 
     protected void setOrientation() {
@@ -325,7 +325,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected void setupViews() {
-        setContentView(R.C2960layout.aliuser_activity_container);
+        setContentView(R.layout.aliuser_activity_container);
         ViewGroup viewGroup = (ViewGroup) findViewById(R.id.aliuser_main_content);
         this.mViewGroup = viewGroup;
         if (viewGroup != null && this.activityIsTranslucent) {
@@ -350,6 +350,6 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     public void setNavigationBackIcon() {
-        setNavigationBackIcon(R.C2959drawable.aliuser_ic_actionbar_back);
+        setNavigationBackIcon(R.drawable.aliuser_ic_actionbar_back);
     }
 }

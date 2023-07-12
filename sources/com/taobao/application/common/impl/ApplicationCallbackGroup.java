@@ -14,7 +14,7 @@ class ApplicationCallbackGroup implements Application.ActivityLifecycleCallbacks
     private final ArrayList<Application.ActivityLifecycleCallbacks> a = new ArrayList<>();
 
     private void c(Runnable runnable) {
-        C6674a.g().h(runnable);
+        a.g().h(runnable);
     }
 
     @Override // com.taobao.application.common.impl.ICallbackGroup

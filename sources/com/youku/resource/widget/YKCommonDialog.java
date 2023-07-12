@@ -70,22 +70,22 @@ public class YKCommonDialog extends Dialog implements YKDialog {
         }
         switch (c) {
             case 0:
-                setContentView(R.C8074layout.resource_ykdialog_a11);
+                setContentView(R.layout.resource_ykdialog_a11);
                 break;
             case 1:
-                setContentView(R.C8074layout.resource_ykdialog_a1);
+                setContentView(R.layout.resource_ykdialog_a1);
                 break;
             case 2:
-                setContentView(R.C8074layout.resource_ykdialog_a2);
+                setContentView(R.layout.resource_ykdialog_a2);
                 break;
             case 3:
-                setContentView(R.C8074layout.resource_ykdialog_a3);
+                setContentView(R.layout.resource_ykdialog_a3);
                 break;
             case 4:
-                setContentView(R.C8074layout.resource_ykdialog_a5);
+                setContentView(R.layout.resource_ykdialog_a5);
                 break;
             case 5:
-                setContentView(R.C8074layout.resource_ykdialog_a7);
+                setContentView(R.layout.resource_ykdialog_a7);
                 break;
         }
         if (getWindow() != null) {

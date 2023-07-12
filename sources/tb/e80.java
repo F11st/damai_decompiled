@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import anet.channel.util.C0241c;
 import cn.damai.common.util.CompliantUtUtils;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
 import com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics;
@@ -23,7 +22,7 @@ public class e80 {
 
     public static String a(Context context) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-579923896") ? (String) ipChange.ipc$dispatch("-579923896", new Object[]{context}) : C0241c.c(context);
+        return AndroidInstantRuntime.support(ipChange, "-579923896") ? (String) ipChange.ipc$dispatch("-579923896", new Object[]{context}) : anet.channel.util.c.c(context);
     }
 
     public static String b() {

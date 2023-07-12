@@ -21,7 +21,7 @@ public class ga0 {
     }
 
     public static Display b(Context context) {
-        return ((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
+        return ((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
     }
 
     public static DisplayMetrics c(Display display) {

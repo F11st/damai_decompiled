@@ -21,7 +21,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.commonbusiness.base.PermissionsHelper;
@@ -115,20 +114,20 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
         private static transient /* synthetic */ IpChange $ipChange;
 
         @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
-        public void onScrollStateChanged(RecyclerView recyclerView, int i) {
+        public void onScrollStateChanged(RecyclerView recyclerView, int i2) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1177269067")) {
-                ipChange.ipc$dispatch("-1177269067", new Object[]{this, recyclerView, Integer.valueOf(i)});
+                ipChange.ipc$dispatch("-1177269067", new Object[]{this, recyclerView, Integer.valueOf(i2)});
                 return;
             }
-            ProjectBookingRegisterFragment.this.mIsScrolled = i != 0;
+            ProjectBookingRegisterFragment.this.mIsScrolled = i2 != 0;
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
-        public void onScrolled(RecyclerView recyclerView, int i, int i2) {
+        public void onScrolled(RecyclerView recyclerView, int i2, int i3) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-678782006")) {
-                ipChange.ipc$dispatch("-678782006", new Object[]{this, recyclerView, Integer.valueOf(i), Integer.valueOf(i2)});
+                ipChange.ipc$dispatch("-678782006", new Object[]{this, recyclerView, Integer.valueOf(i2), Integer.valueOf(i3)});
                 return;
             }
             ProjectBookingRegisterFragment.this.updateTitleStyle();
@@ -137,16 +136,15 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
             }
         }
     };
-    OnHeadClickListener headClickListener = new C2259d();
+    OnHeadClickListener headClickListener = new d();
     private int titleBar2DarkHeight = m62.a(mu0.a(), 18.0f);
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.fragment.ProjectBookingRegisterFragment$a */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC2256a implements DialogInterface.OnClickListener {
+    public class a implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC2256a() {
+        a() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -156,7 +154,7 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
                 ipChange.ipc$dispatch("-689239820", new Object[]{this, dialogInterface, Integer.valueOf(i)});
                 return;
             }
-            C0529c.e().A(pp2.u().i("pdt_dtl", "1"), "selectsuggestmessage", "message");
+            cn.damai.common.user.c.e().A(pp2.u().i("pdt_dtl", "1"), "selectsuggestmessage", "message");
             Intent intent = new Intent("android.settings.APPLICATION_DETAILS_SETTINGS");
             intent.setData(Uri.parse("package:" + ProjectBookingRegisterFragment.this.mActivity.getPackageName()));
             ProjectBookingRegisterFragment.this.startActivity(intent);
@@ -164,12 +162,11 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.fragment.ProjectBookingRegisterFragment$b */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC2257b implements DialogInterface.OnClickListener {
+    public class b implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC2257b(ProjectBookingRegisterFragment projectBookingRegisterFragment) {
+        b(ProjectBookingRegisterFragment projectBookingRegisterFragment) {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -178,18 +175,17 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
             if (AndroidInstantRuntime.support(ipChange, "280341203")) {
                 ipChange.ipc$dispatch("280341203", new Object[]{this, dialogInterface, Integer.valueOf(i)});
             } else {
-                C0529c.e().A(pp2.u().i("pdt_dtl", "0"), "selectsuggestmessage", "message");
+                cn.damai.common.user.c.e().A(pp2.u().i("pdt_dtl", "0"), "selectsuggestmessage", "message");
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.fragment.ProjectBookingRegisterFragment$c */
     /* loaded from: classes8.dex */
-    public class C2258c implements AliMeUtil.OnAliMeTokenListener {
+    public class c implements AliMeUtil.OnAliMeTokenListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2258c() {
+        c() {
         }
 
         @Override // cn.damai.im.AliMeUtil.OnAliMeTokenListener
@@ -224,12 +220,11 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.fragment.ProjectBookingRegisterFragment$d */
     /* loaded from: classes8.dex */
-    public class C2259d implements OnHeadClickListener {
+    public class d implements OnHeadClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2259d() {
+        d() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.OnHeadClickListener
@@ -265,7 +260,7 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
                 ipChange.ipc$dispatch("1853473941", new Object[]{this});
                 return;
             }
-            C0529c.e().x(kv1.h().i(String.valueOf(ProjectBookingRegisterFragment.this.mProjectId), "top", "poster", false));
+            cn.damai.common.user.c.e().x(kv1.h().i(String.valueOf(ProjectBookingRegisterFragment.this.mProjectId), "top", "poster", false));
             ArrayList<PicInfo> arrayList = null;
             if (ProjectBookingRegisterFragment.this.mStaticData == null || ProjectBookingRegisterFragment.this.mStaticData.getItemBase() == null || ProjectBookingRegisterFragment.this.mStaticData.getItemBase().getItemPics() == null || ProjectBookingRegisterFragment.this.mStaticData.getItemBase().getItemPics().getItemPicList() == null || ProjectBookingRegisterFragment.this.mStaticData.getItemBase().getItemPics().getItemPicList().isEmpty()) {
                 if (ProjectBookingRegisterFragment.this.mProjectExtraData != null && TextUtils.isEmpty(ProjectBookingRegisterFragment.this.mProjectExtraData.projectImage)) {
@@ -355,7 +350,7 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
                 ipChange.ipc$dispatch("1249808526", new Object[]{this});
                 return;
             }
-            C0529c.e().x(kv1.h().i(String.valueOf(ProjectBookingRegisterFragment.this.mProjectId), ILocatable.ADDRESS, "item", true));
+            cn.damai.common.user.c.e().x(kv1.h().i(String.valueOf(ProjectBookingRegisterFragment.this.mProjectId), ILocatable.ADDRESS, "item", true));
             if (ProjectBookingRegisterFragment.this.mStaticData == null || (venue = ProjectBookingRegisterFragment.this.mStaticData.getVenue()) == null || TextUtils.isEmpty(venue.getVenueName()) || venue.getVenueName().contains(cm2.b(ProjectBookingRegisterFragment.this.mProjectDetailActivity, R$string.damai_projectdetail_tbd))) {
                 return;
             }
@@ -372,7 +367,7 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
             if (AndroidInstantRuntime.support(ipChange, "219232140")) {
                 ipChange.ipc$dispatch("219232140", new Object[]{this});
             } else if (ProjectBookingRegisterFragment.this.mStaticData != null) {
-                C0529c.e().x(kv1.h().i(String.valueOf(ProjectBookingRegisterFragment.this.mProjectId), "center", "venuenamebtn", true));
+                cn.damai.common.user.c.e().x(kv1.h().i(String.valueOf(ProjectBookingRegisterFragment.this.mProjectId), "center", "venuenamebtn", true));
                 VenueBean venue = ProjectBookingRegisterFragment.this.mStaticData.getVenue();
                 if (venue == null || TextUtils.isEmpty(venue.getVenueName()) || venue.getVenueName().contains(cm2.b(ProjectBookingRegisterFragment.this.mProjectDetailActivity, R$string.damai_projectdetail_tbd))) {
                     return;
@@ -403,12 +398,11 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.fragment.ProjectBookingRegisterFragment$e */
     /* loaded from: classes8.dex */
-    public class C2260e implements ProjectTitleBarPanel.OnUiClickListener {
+    public class e implements ProjectTitleBarPanel.OnUiClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2260e() {
+        e() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.ProjectTitleBarPanel.OnUiClickListener
@@ -455,12 +449,11 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.fragment.ProjectBookingRegisterFragment$f */
     /* loaded from: classes8.dex */
-    public class C2261f implements PullToRefreshView.OnRefreshListener {
+    public class f implements PullToRefreshView.OnRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2261f() {
+        f() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.ui.view.PullToRefreshView.OnRefreshListener
@@ -478,12 +471,11 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.fragment.ProjectBookingRegisterFragment$g */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2262g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2262g() {
+        g() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -493,18 +485,17 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
                 ipChange.ipc$dispatch("-2104673427", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(kv1.h().i(String.valueOf(ProjectBookingRegisterFragment.this.mProjectId), "bottom", "service", true));
+            cn.damai.common.user.c.e().x(kv1.h().i(String.valueOf(ProjectBookingRegisterFragment.this.mProjectId), "bottom", "service", true));
             ProjectBookingRegisterFragment.this.getAliMeTokenAndEnter();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.fragment.ProjectBookingRegisterFragment$h */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2263h implements View.OnClickListener {
+    public class h implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2263h() {
+        h() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -519,12 +510,11 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.fragment.ProjectBookingRegisterFragment$i */
     /* loaded from: classes8.dex */
-    public class C2264i implements OnExtendInfoImageItemClickListener {
+    public class i implements OnExtendInfoImageItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2264i() {
+        i() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.listeners.OnExtendInfoImageItemClickListener
@@ -553,12 +543,11 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.fragment.ProjectBookingRegisterFragment$j */
     /* loaded from: classes8.dex */
-    public class C2265j implements DMRGBUtil.OnFetchColorListener {
+    public class j implements DMRGBUtil.OnFetchColorListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2265j() {
+        j() {
         }
 
         @Override // cn.damai.commonbusiness.util.DMRGBUtil.OnFetchColorListener
@@ -573,12 +562,11 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.fragment.ProjectBookingRegisterFragment$k */
     /* loaded from: classes8.dex */
-    public class C2266k implements BuyButtonStatusHelper.OnBuyBtnClickListener {
+    public class k implements BuyButtonStatusHelper.OnBuyBtnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2266k() {
+        k() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.view.BuyButtonStatusHelper.OnBuyBtnClickListener
@@ -588,7 +576,7 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
                 ipChange.ipc$dispatch("-303774574", new Object[]{this});
                 return;
             }
-            C0529c.e().x(kv1.h().i(String.valueOf(ProjectBookingRegisterFragment.this.mProjectId), "bottom", "book_checkin", false));
+            cn.damai.common.user.c.e().x(kv1.h().i(String.valueOf(ProjectBookingRegisterFragment.this.mProjectId), "bottom", "book_checkin", false));
             ProjectBookingRegisterFragment.this.executeBookingRegisterReq();
         }
     }
@@ -619,12 +607,12 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
         }
     }
 
-    private void executeProjectFollowRequest(int i) {
+    private void executeProjectFollowRequest(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1812536254")) {
-            ipChange.ipc$dispatch("1812536254", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("1812536254", new Object[]{this, Integer.valueOf(i2)});
         } else {
-            ((ProjectBookingRegisterPresenter) this.mPresenter).updateProjectFollowRelation(i, this.mProjectId, 12);
+            ((ProjectBookingRegisterPresenter) this.mPresenter).updateProjectFollowRelation(i2, this.mProjectId, 12);
         }
     }
 
@@ -637,9 +625,9 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
         }
         String E = z20.E();
         if (isLogin() && !TextUtils.isEmpty(E)) {
-            int k = wh2.k(E);
+            int k2 = wh2.k(E);
             startProgressDialog();
-            AliMeUtil.d(k, AliMeUtil.FROM_PROJECT_DETAIL, new C2258c());
+            AliMeUtil.d(k2, AliMeUtil.FROM_PROJECT_DETAIL, new c());
             return;
         }
         startLoginActivityForResult(CaptureActivity.LOCK_SUCCESS);
@@ -652,15 +640,15 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void getProjectBookingRegisterData(int i) {
+    public void getProjectBookingRegisterData(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1787482201")) {
-            ipChange.ipc$dispatch("-1787482201", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-1787482201", new Object[]{this, Integer.valueOf(i2)});
         } else if (this.mIsLoading) {
         } else {
             this.mIsLoading = true;
             this.mProjectBookingRegisterDataManager.i();
-            ((ProjectBookingRegisterPresenter) this.mPresenter).retrieveProjectBookingRegisterData(i, String.valueOf(this.mProjectId));
+            ((ProjectBookingRegisterPresenter) this.mPresenter).retrieveProjectBookingRegisterData(i2, String.valueOf(this.mProjectId));
         }
     }
 
@@ -706,7 +694,7 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
         if (AndroidInstantRuntime.support(ipChange, "865487334")) {
             ipChange.ipc$dispatch("865487334", new Object[]{this});
         } else {
-            this.mBuyButtonStatusHelper.h(new C2266k());
+            this.mBuyButtonStatusHelper.h(new k());
         }
     }
 
@@ -721,9 +709,9 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
             ProjectIntentExtraParser.ProjectDetailExtrasData projectDetailExtrasData = (ProjectIntentExtraParser.ProjectDetailExtrasData) arguments.getParcelable("projectExtraData");
             this.mProjectExtraData = projectDetailExtrasData;
             if (projectDetailExtrasData != null) {
-                long j = projectDetailExtrasData.projectId;
-                if (j > 0) {
-                    this.mProjectId = j;
+                long j2 = projectDetailExtrasData.projectId;
+                if (j2 > 0) {
+                    this.mProjectId = j2;
                     this.mProjectDetailActivity = (ProjectDetailActivity) getActivity();
                     return;
                 }
@@ -740,7 +728,7 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
             ipChange.ipc$dispatch("-2045359593", new Object[]{this});
             return;
         }
-        ProjectTitleBarPanel projectTitleBarPanel = new ProjectTitleBarPanel(getActivity(), this.rootView.findViewById(R$id.project_book_title), new C2260e());
+        ProjectTitleBarPanel projectTitleBarPanel = new ProjectTitleBarPanel(getActivity(), this.rootView.findViewById(R$id.project_book_title), new e());
         this.mTitleBarPanel = projectTitleBarPanel;
         projectTitleBarPanel.k("商品详情");
     }
@@ -762,10 +750,10 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
             ipChange.ipc$dispatch("-902264752", new Object[]{this});
             return;
         }
-        this.mOnRefreshListener = new C2261f();
-        this.mOnCustomerServiceClickListener = new View$OnClickListenerC2262g();
-        this.mOnProjectFollowClickListener = new View$OnClickListenerC2263h();
-        this.mOnExtendInfoImageItemClickListener = new C2264i();
+        this.mOnRefreshListener = new f();
+        this.mOnCustomerServiceClickListener = new g();
+        this.mOnProjectFollowClickListener = new h();
+        this.mOnExtendInfoImageItemClickListener = new i();
     }
 
     private void initProjectDataHolderManager() {
@@ -839,14 +827,14 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void scrollToPosition(int i, int i2) {
+    public void scrollToPosition(int i2, int i3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1830964666")) {
-            ipChange.ipc$dispatch("1830964666", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2)});
+            ipChange.ipc$dispatch("1830964666", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3)});
             return;
         }
         this.mRecyclerView.dispatchTouchEvent(MotionEvent.obtain(SystemClock.uptimeMillis(), SystemClock.uptimeMillis(), 3, 0.0f, 0.0f, 0));
-        this.mLinearLayoutManager.scrollToPositionWithOffset(i, i2);
+        this.mLinearLayoutManager.scrollToPositionWithOffset(i2, i3);
     }
 
     private void setExtraData() {
@@ -875,9 +863,9 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
             return;
         }
         try {
-            DMRGBUtil.g(1.0f, bitmap, str, new C2265j());
-        } catch (Exception e) {
-            e.printStackTrace();
+            DMRGBUtil.g(1.0f, bitmap, str, new j());
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 
@@ -915,7 +903,7 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
             ipChange.ipc$dispatch("914567651", new Object[]{this});
         } else if (this.mStaticData == null) {
         } else {
-            C0529c.e().x(kv1.h().i(String.valueOf(this.mProjectId), "top", "share", false));
+            cn.damai.common.user.c.e().x(kv1.h().i(String.valueOf(this.mProjectId), "top", "share", false));
             String projectPosterUrl = getProjectPosterUrl();
             StaticData staticData = this.mStaticData;
             if (staticData == null || (itemBase = staticData.getItemBase()) == null) {
@@ -926,9 +914,9 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
                 str2 = itemBase.getCityName();
                 str = itemName;
             }
-            Bundle a = wv1.a(this.mProjectId, "https://m.damai.cn/damai/project/item.html?id=", str, "", str2, "", projectPosterUrl, "", "", "projectBooking", "chat_h5", false);
-            if (a != null) {
-                ShareManager.E().T(this.mProjectDetailActivity, a, LayoutInflater.from(getContext()).inflate(R$layout.project_booking_register_fragment_layout, (ViewGroup) null));
+            Bundle a2 = wv1.a(this.mProjectId, "https://m.damai.cn/damai/project/item.html?id=", str, "", str2, "", projectPosterUrl, "", "", "projectBooking", "chat_h5", false);
+            if (a2 != null) {
+                ShareManager.E().T(this.mProjectDetailActivity, a2, LayoutInflater.from(getContext()).inflate(R$layout.project_booking_register_fragment_layout, (ViewGroup) null));
                 ShareManager E = ShareManager.E();
                 ShareManager E2 = ShareManager.E();
                 Context context = getContext();
@@ -939,24 +927,24 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void startBrowseImageWithTextActivity(ArrayList<PicInfo> arrayList, int i) {
+    public void startBrowseImageWithTextActivity(ArrayList<PicInfo> arrayList, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-818123309")) {
-            ipChange.ipc$dispatch("-818123309", new Object[]{this, arrayList, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-818123309", new Object[]{this, arrayList, Integer.valueOf(i2)});
             return;
         }
         Bundle bundle = new Bundle();
         bundle.putParcelableArrayList("pic_info", arrayList);
-        bundle.putInt("position", i);
+        bundle.putInt("position", i2);
         DMNav.from(this.mProjectDetailActivity).withExtras(bundle).toUri(cs.e());
     }
 
-    private void startLoginActivityForResult(int i) {
+    private void startLoginActivityForResult(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "930587956")) {
-            ipChange.ipc$dispatch("930587956", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("930587956", new Object[]{this, Integer.valueOf(i2)});
         } else {
-            DMNav.from(this.mProjectDetailActivity).forResult(i).toUri(cs.f());
+            DMNav.from(this.mProjectDetailActivity).forResult(i2).toUri(cs.f());
         }
     }
 
@@ -971,9 +959,9 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
             if (this.mBuyButtonStatusHelper == null) {
                 BuyButtonStatusHelper buyButtonStatusHelper = new BuyButtonStatusHelper(this.mProjectDetailActivity, itemData, this.mProjectId, this.mFlPurchaseStatusBarContainer);
                 this.mBuyButtonStatusHelper = buyButtonStatusHelper;
-                View d = buyButtonStatusHelper.d();
-                this.mViewPurchaseStatusContent = d;
-                this.mFlPurchaseStatusBarContainer.addView(d);
+                View d2 = buyButtonStatusHelper.d();
+                this.mViewPurchaseStatusContent = d2;
+                this.mFlPurchaseStatusBarContainer.addView(d2);
                 initBuyBtnListeners();
                 this.mFlPurchaseStatusBarContainer.setVisibility(0);
                 return;
@@ -989,9 +977,9 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
             ipChange.ipc$dispatch("-1019387202", new Object[]{this});
             return;
         }
-        List<ProjectDataHolder> d = this.mProjectBookingRegisterDataManager.d(this.mStaticData);
-        if (wh2.e(d) > 0) {
-            this.mProjectBookingRegisterAdapter.b(d);
+        List<ProjectDataHolder> d2 = this.mProjectBookingRegisterDataManager.d(this.mStaticData);
+        if (wh2.e(d2) > 0) {
+            this.mProjectBookingRegisterAdapter.b(d2);
         }
     }
 
@@ -1002,15 +990,15 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
             ipChange.ipc$dispatch("1505009698", new Object[]{this});
         } else if (isLogin()) {
             if (getProjectFollowStatus()) {
-                C0529c.e().x(kv1.h().g(String.valueOf(this.mProjectId), "top", "favorite", "0"));
+                cn.damai.common.user.c.e().x(kv1.h().g(String.valueOf(this.mProjectId), "top", "favorite", "0"));
                 executeProjectFollowRequest(0);
                 return;
             }
             executeProjectFollowRequest(1);
-            C0529c.e().x(kv1.h().g(String.valueOf(this.mProjectId), "top", "favorite", "1"));
+            cn.damai.common.user.c.e().x(kv1.h().g(String.valueOf(this.mProjectId), "top", "favorite", "1"));
         } else {
             startLoginActivityForResult(4097);
-            C0529c.e().x(kv1.h().g(String.valueOf(this.mProjectId), "top", "favorite", "0"));
+            cn.damai.common.user.c.e().x(kv1.h().g(String.valueOf(this.mProjectId), "top", "favorite", "0"));
         }
     }
 
@@ -1097,10 +1085,10 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
     }
 
     @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
-    public void handleError(int i) {
+    public void handleError(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "967624548")) {
-            ipChange.ipc$dispatch("967624548", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("967624548", new Object[]{this, Integer.valueOf(i2)});
         } else {
             getProjectBookingRegisterData(1);
         }
@@ -1144,21 +1132,21 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
     }
 
     @Override // androidx.fragment.app.Fragment
-    public void onActivityResult(int i, int i2, Intent intent) {
+    public void onActivityResult(int i2, int i3, Intent intent) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1032364707")) {
-            ipChange.ipc$dispatch("-1032364707", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), intent});
+            ipChange.ipc$dispatch("-1032364707", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3), intent});
             return;
         }
-        super.onActivityResult(i, i2, intent);
-        ShareManager.E().r0(i, i2, intent);
-        if (i == 2000 && i2 == 1000) {
+        super.onActivityResult(i2, i3, intent);
+        ShareManager.E().r0(i2, i3, intent);
+        if (i2 == 2000 && i3 == 1000) {
             this.mProjectDetailActivity.finish();
-        } else if (i == 4097 && i2 == -1) {
+        } else if (i2 == 4097 && i3 == -1) {
             updateProjectFollowRelation();
-        } else if (i == 4115 && i2 == -1) {
+        } else if (i2 == 4115 && i3 == -1) {
             getAliMeTokenAndEnter();
-        } else if (i == 4116 && i2 == -1) {
+        } else if (i2 == 4116 && i3 == -1) {
             executeBookingRegisterReq();
         }
     }
@@ -1195,7 +1183,7 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
             if (projectDetailActivity == null || projectDetailActivity.isFinishing()) {
                 return;
             }
-            PermissionsHelper.c(this.mProjectDetailActivity, "未开启推送通知", false, "「设置」-「状态栏与通知」-「通知管理」", "立即开启", new DialogInterface$OnClickListenerC2256a(), "取消", new DialogInterface$OnClickListenerC2257b(this));
+            PermissionsHelper.c(this.mProjectDetailActivity, "未开启推送通知", false, "「设置」-「状态栏与通知」-「通知管理」", "立即开启", new a(), "取消", new b(this));
         }
     }
 
@@ -1219,26 +1207,26 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
     }
 
     public void onExtendInfoItemClick(View view, String str, String str2) {
-        LinkedHashMap<String, Integer> g;
+        LinkedHashMap<String, Integer> g2;
         IpChange ipChange = $ipChange;
-        int i = 0;
+        int i2 = 0;
         if (AndroidInstantRuntime.support(ipChange, "-711096171")) {
             ipChange.ipc$dispatch("-711096171", new Object[]{this, view, str, str2});
-        } else if (!TextUtils.isEmpty(str2) && (g = this.mProjectBookingRegisterDataManager.e().g()) != null) {
+        } else if (!TextUtils.isEmpty(str2) && (g2 = this.mProjectBookingRegisterDataManager.e().g()) != null) {
             try {
-                Integer num = g.get(str2);
+                Integer num = g2.get(str2);
                 if (num != null) {
-                    i = num.intValue();
+                    i2 = num.intValue();
                 }
             } catch (Exception unused) {
             }
             if (!TextUtils.isEmpty(str)) {
                 DMNav.from(this.mActivity).toUri(str);
-                C0529c.e().x(pp2.u().x0(this.mProjectId, i));
+                cn.damai.common.user.c.e().x(pp2.u().x0(this.mProjectId, i2));
                 return;
             }
             ArrayList<PicInfo> arrayList = new ArrayList<>();
-            for (Map.Entry<String, Integer> entry : g.entrySet()) {
+            for (Map.Entry<String, Integer> entry : g2.entrySet()) {
                 String key = entry.getKey();
                 if (!TextUtils.isEmpty(key)) {
                     PicInfo picInfo = new PicInfo();
@@ -1246,8 +1234,8 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
                     arrayList.add(picInfo);
                 }
             }
-            C0529c.e().x(pp2.u().x0(this.mProjectId, i));
-            startBrowseImageWithTextActivity(arrayList, i);
+            cn.damai.common.user.c.e().x(pp2.u().x0(this.mProjectId, i2));
+            startBrowseImageWithTextActivity(arrayList, i2);
         }
     }
 
@@ -1323,10 +1311,10 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
     }
 
     @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.contract.ProjectBookingRegisterContract.View
-    public void onReturnBookingRegisterDataSuccess(int i, ProjectBookingRegisterData projectBookingRegisterData) {
+    public void onReturnBookingRegisterDataSuccess(int i2, ProjectBookingRegisterData projectBookingRegisterData) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1950976386")) {
-            ipChange.ipc$dispatch("-1950976386", new Object[]{this, Integer.valueOf(i), projectBookingRegisterData});
+            ipChange.ipc$dispatch("-1950976386", new Object[]{this, Integer.valueOf(i2), projectBookingRegisterData});
             return;
         }
         this.mPullToRefreshView.onRefreshComplete();
@@ -1335,7 +1323,7 @@ public class ProjectBookingRegisterFragment extends DamaiBaseMvpFragment<Project
             return;
         }
         updateRefreshable();
-        if (i == 1 || i == 0) {
+        if (i2 == 1 || i2 == 0) {
             this.mTitleBarPanel.l(true);
         }
         this.mFlProjectContentContainer.setVisibility(8);

@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -14,7 +14,7 @@ public class LoginProviderProxy {
     public static void clearSession() {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             sProxy.clearSession();
         } catch (Throwable th) {
@@ -25,7 +25,7 @@ public class LoginProviderProxy {
     public static String getAvatarUrl() {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             return sProxy.getAvatarUrl();
         } catch (Throwable th) {
@@ -37,7 +37,7 @@ public class LoginProviderProxy {
     public static String getEcode() {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             return sProxy.getEcode();
         } catch (Throwable th) {
@@ -49,7 +49,7 @@ public class LoginProviderProxy {
     public static String getEncryptedYtId() {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             return sProxy.getEncryptedYtId();
         } catch (Throwable th) {
@@ -61,7 +61,7 @@ public class LoginProviderProxy {
     public static String getNick() {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             return sProxy.getNick();
         } catch (Throwable th) {
@@ -72,7 +72,7 @@ public class LoginProviderProxy {
 
     public static LoginProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+            sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -80,7 +80,7 @@ public class LoginProviderProxy {
     public static String getSid() {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             return sProxy.getSid();
         } catch (Throwable th) {
@@ -92,7 +92,7 @@ public class LoginProviderProxy {
     public static String getUserId() {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             return sProxy.getUserId();
         } catch (Throwable th) {
@@ -104,7 +104,7 @@ public class LoginProviderProxy {
     public static String getYid() {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             return sProxy.getYid();
         } catch (Throwable th) {
@@ -116,7 +116,7 @@ public class LoginProviderProxy {
     public static String getYoukuUid() {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             return sProxy.getYoukuUid();
         } catch (Throwable th) {
@@ -128,7 +128,7 @@ public class LoginProviderProxy {
     public static void goLogin(Context context) {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             sProxy.goLogin(context);
         } catch (Throwable th) {
@@ -139,7 +139,7 @@ public class LoginProviderProxy {
     public static void goLoginForResult(Activity activity, int i) {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             sProxy.goLoginForResult(activity, i);
         } catch (Throwable th) {
@@ -150,7 +150,7 @@ public class LoginProviderProxy {
     public static void goUserProfilePage(Activity activity, String str) {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             sProxy.goUserProfilePage(activity, str);
         } catch (Throwable th) {
@@ -161,7 +161,7 @@ public class LoginProviderProxy {
     public static LoginProvider init(Application application, LoginConfig loginConfig) {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             return sProxy.init(application, loginConfig);
         } catch (Throwable th) {
@@ -183,7 +183,7 @@ public class LoginProviderProxy {
     public static boolean isLogin() {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             return sProxy.isLogin();
         } catch (Throwable th) {
@@ -195,7 +195,7 @@ public class LoginProviderProxy {
     public static boolean isVip() {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             return sProxy.isVip();
         } catch (Throwable th) {
@@ -207,7 +207,7 @@ public class LoginProviderProxy {
     public static void logout() {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             sProxy.logout();
         } catch (Throwable th) {
@@ -218,7 +218,7 @@ public class LoginProviderProxy {
     public static void release() {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             sProxy.release();
         } catch (Throwable th) {
@@ -229,7 +229,7 @@ public class LoginProviderProxy {
     public static void goLogin(Context context, String str) {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             sProxy.goLogin(context, str);
         } catch (Throwable th) {
@@ -240,7 +240,7 @@ public class LoginProviderProxy {
     public static void goLoginForResult(Activity activity, int i, String str) {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             sProxy.goLoginForResult(activity, i, str);
         } catch (Throwable th) {
@@ -251,7 +251,7 @@ public class LoginProviderProxy {
     public static void goLogin(Context context, int i) {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.youku.middlewareservice_impl.provider.login.LoginProviderImpl").b().f();
             }
             sProxy.goLogin(context, i);
         } catch (Throwable th) {

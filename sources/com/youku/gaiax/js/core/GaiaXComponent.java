@@ -6,9 +6,9 @@ import com.youku.gaiax.js.support.GaiaXScriptBuilder;
 import com.youku.gaiax.js.utils.Aop;
 import com.youku.gaiax.js.utils.IdGenerator;
 import com.youku.gaiax.js.utils.MonitorUtils;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import org.jetbrains.annotations.NotNull;
@@ -65,7 +65,7 @@ public final class GaiaXComponent implements IComponent {
         this.templateId = str2;
         this.templateVersion = str3;
         this.script = str4;
-        b = C8177b.b(new Function0<Long>() { // from class: com.youku.gaiax.js.core.GaiaXComponent$_id$2
+        b = b.b(new Function0<Long>() { // from class: com.youku.gaiax.js.core.GaiaXComponent$_id$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull

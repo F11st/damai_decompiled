@@ -3,7 +3,7 @@ package com.taobao.android.protodb;
 import android.app.Application;
 import androidx.annotation.Keep;
 import java.io.File;
-import tb.C9121f0;
+import tb.f0;
 import tb.n71;
 
 /* compiled from: Taobao */
@@ -24,7 +24,7 @@ public class Series extends NativeBridgedObject {
     private static native long nativeOpen(String str, Config config);
 
     public static Series open(String str, Config config) {
-        Application a = C9121f0.a();
+        Application a = f0.a();
         if (a != null) {
             if (NativeBridgedObject.sNativeLibraryLoaded) {
                 long nativeOpen = nativeOpen(a.getFilesDir() + File.separator + "lsdb-series-" + str, config);

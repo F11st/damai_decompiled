@@ -8,9 +8,9 @@ import android.view.View;
 import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.airbnb.lottie.C2821a;
 import com.airbnb.lottie.LottieDrawable;
 import com.airbnb.lottie.OnCompositionLoadedListener;
+import com.airbnb.lottie.a;
 import com.youku.resource.R;
 
 /* compiled from: Taobao */
@@ -33,7 +33,7 @@ public class YKLoading extends ImageView {
     private AnimationDrawable getAnimationDrawable() {
         if (this.frameAnim == null) {
             if (getBackground() == null) {
-                setBackgroundResource(R.C8072drawable.youku_loading_space);
+                setBackgroundResource(R.drawable.youku_loading_space);
             }
             if (getBackground() instanceof AnimationDrawable) {
                 this.frameAnim = (AnimationDrawable) getBackground();
@@ -44,12 +44,12 @@ public class YKLoading extends ImageView {
 
     private LottieDrawable getLottieDrawable() {
         if (this.lottieDrawable == null) {
-            C2821a.C2823b.a(getContext(), "loading.json", new OnCompositionLoadedListener() { // from class: com.youku.resource.widget.YKLoading.1
+            a.b.a(getContext(), "loading.json", new OnCompositionLoadedListener() { // from class: com.youku.resource.widget.YKLoading.1
                 @Override // com.airbnb.lottie.OnCompositionLoadedListener
-                public void onCompositionLoaded(@Nullable C2821a c2821a) {
-                    if (c2821a != null) {
+                public void onCompositionLoaded(@Nullable a aVar) {
+                    if (aVar != null) {
                         YKLoading.this.lottieDrawable = new LottieDrawable();
-                        YKLoading.this.lottieDrawable.setComposition(c2821a);
+                        YKLoading.this.lottieDrawable.setComposition(aVar);
                         YKLoading.this.setBackgroundColor(0);
                         YKLoading yKLoading = YKLoading.this;
                         yKLoading.setImageDrawable(yKLoading.lottieDrawable);

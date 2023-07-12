@@ -27,19 +27,18 @@ public class AlipayEntryActivity extends DamaiBaseActivity implements IAPAPIEven
     private static transient /* synthetic */ IpChange $ipChange;
     private IAPApi api;
     private Bundle bundle;
-    Handler handler = new HandlerC0872a();
+    Handler handler = new a();
     private String imageurl;
     private String message;
     private String producturl;
     private String title;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.AlipayEntryActivity$a */
     /* loaded from: classes.dex */
-    public class HandlerC0872a extends Handler {
+    public class a extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC0872a() {
+        a() {
         }
 
         @Override // android.os.Handler

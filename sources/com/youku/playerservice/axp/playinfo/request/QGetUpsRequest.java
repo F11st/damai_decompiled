@@ -9,7 +9,6 @@ import com.taobao.orange.OConstant;
 import com.tencent.connect.common.Constants;
 import com.ut.device.UTDevice;
 import com.youku.alixplayer.opensdk.ups.request.UpsConstant;
-import com.youku.arch.analysis.net.C7812c;
 import com.youku.media.arch.instruments.ConfigFetcher;
 import com.youku.network.HttpIntent;
 import com.youku.playerservice.axp.PlayerConfig;
@@ -33,11 +32,10 @@ import com.youku.playerservice.axp.utils.PlayerUtil;
 import com.youku.playerservice.axp.utils.TLogUtil;
 import com.youku.playerservice.axp.utils.UpsUtil;
 import com.youku.playerservice.axp.utils.Utils;
-import com.youku.ups.data.C8085a;
-import com.youku.ups.data.C8086b;
 import com.youku.ups.data.RequestParams;
-import com.youku.ups.request.C8089c;
-import com.youku.ups.request.InterfaceC8087a;
+import com.youku.ups.data.b;
+import com.youku.ups.request.a;
+import com.youku.ups.request.c;
 import com.youku.upsplayer.ParseResult;
 import com.youku.upsplayer.data.ConnectStat;
 import com.youku.upsplayer.module.VideoCacheInfo;
@@ -59,7 +57,7 @@ public class QGetUpsRequest extends AbsPlayInfoRequest {
     private volatile boolean mIsCancel;
     private PlayParams mPlayParams;
     private final PlayerConfig mPlayerConfig;
-    private C8089c mUpsQGetRequest;
+    private c mUpsQGetRequest;
 
     /* compiled from: Taobao */
     /* renamed from: com.youku.playerservice.axp.playinfo.request.QGetUpsRequest$2  reason: invalid class name */
@@ -93,7 +91,7 @@ public class QGetUpsRequest extends AbsPlayInfoRequest {
         this.mPlayerConfig = playerConfig;
         Context context = playerConfig.getContext();
         this.mContext = context;
-        this.mUpsQGetRequest = new C8089c(context, new OkHttpTask(context, getTimeOut(), null));
+        this.mUpsQGetRequest = new c(context, new OkHttpTask(context, getTimeOut(), null));
     }
 
     private int constructDrmType() {
@@ -184,21 +182,21 @@ public class QGetUpsRequest extends AbsPlayInfoRequest {
         requestParams.put("app_ver", Utils.getVersionName(this.mContext));
         int i = AnonymousClass2.$SwitchMap$com$youku$playerservice$axp$constants$NetType[NetworkUtil.getNetType(this.mContext).ordinal()];
         requestParams.put("network", i != 1 ? (i == 2 || i == 3 || i == 4) ? UpsConstant.UPS_NETWORK_4G : UpsConstant.UPS_NETWORK_UNKOWN : "1000");
-        requestParams.put("net_status", C7812c.a().b().a() + "");
+        requestParams.put("net_status", com.youku.arch.analysis.net.c.a().b().a() + "");
         Logger.d(TAG, "播放请求前从安全保镖接口获取加密R1，将encryptR_client和key_index参数传给ups服务端");
         DrmManager.Result generateEncryptRClient = DrmManager.generateEncryptRClient(this.mContext, this.mPlayerConfig.getDrmConfig().getKeyIndex(), this.mPlayerConfig.getDrmConfig().getAuthCode());
         String str = generateEncryptRClient.encryptR;
         final String str2 = generateEncryptRClient.R1;
         requestParams.put("encryptR_client", str);
         requestParams.put("key_index", generateEncryptRClient.keyIndex);
-        this.mUpsQGetRequest.a(requestParams, createNetworkParam(), new InterfaceC8087a<List<VideoCacheInfo>>() { // from class: com.youku.playerservice.axp.playinfo.request.QGetUpsRequest.1
-            @Override // com.youku.ups.request.InterfaceC8087a
-            public void onFailure(C8085a c8085a) {
+        this.mUpsQGetRequest.a(requestParams, createNetworkParam(), new a<List<VideoCacheInfo>>() { // from class: com.youku.playerservice.axp.playinfo.request.QGetUpsRequest.1
+            @Override // com.youku.ups.request.a
+            public void onFailure(com.youku.ups.data.a aVar) {
                 PlayInfoUpsResponse playInfoUpsResponse = new PlayInfoUpsResponse(QGetUpsRequest.this.mContext, QGetUpsRequest.this.mPlayParams);
                 playInfoUpsResponse.setInfoType(PlayDefinition.PlayInfoType.UPS);
                 PlayInfoError playInfoError = new PlayInfoError();
-                playInfoError.setErrorCode(c8085a.a());
-                playInfoError.setErrorMsg(c8085a.b());
+                playInfoError.setErrorCode(aVar.a());
+                playInfoError.setErrorMsg(aVar.b());
                 playInfoUpsResponse.setError(playInfoError);
                 ArrayList arrayList = new ArrayList();
                 arrayList.add(playInfoUpsResponse);
@@ -207,13 +205,13 @@ public class QGetUpsRequest extends AbsPlayInfoRequest {
                 }
             }
 
-            @Override // com.youku.ups.request.InterfaceC8087a
-            public void onSuccess(C8086b<List<VideoCacheInfo>> c8086b, ConnectStat connectStat) {
+            @Override // com.youku.ups.request.a
+            public void onSuccess(b<List<VideoCacheInfo>> bVar, ConnectStat connectStat) {
                 if (connectStat != null) {
                     TLogUtil.playLog("qget ups url=" + connectStat.url);
                 }
                 ArrayList arrayList = new ArrayList();
-                if (c8086b == null || c8086b.a() == null) {
+                if (bVar == null || bVar.a() == null) {
                     Logger.d(QGetUpsRequest.TAG, "videoCacheInfoList = null ");
                     if (QGetUpsRequest.this.mCallback != null) {
                         QGetUpsRequest.this.mCallback.onFinished(QGetUpsRequest.this.mPlayParams, arrayList);
@@ -221,7 +219,7 @@ public class QGetUpsRequest extends AbsPlayInfoRequest {
                     }
                     return;
                 }
-                for (VideoCacheInfo videoCacheInfo : c8086b.a()) {
+                for (VideoCacheInfo videoCacheInfo : bVar.a()) {
                     if (videoCacheInfo != null) {
                         PlayInfoUpsResponse playInfoUpsResponse = new PlayInfoUpsResponse(QGetUpsRequest.this.mContext, QGetUpsRequest.this.mPlayParams);
                         playInfoUpsResponse.setInfoType(PlayDefinition.PlayInfoType.UPS);

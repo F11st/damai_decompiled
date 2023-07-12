@@ -19,12 +19,11 @@ public class NeteaseSignInHelper extends SNSSignInAbstractHelper {
     private static String mRedirectUrl;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.netease.NeteaseSignInHelper$a */
     /* loaded from: classes11.dex */
-    class C6621a implements SNSSignInListener {
+    class a implements SNSSignInListener {
         final /* synthetic */ Activity a;
 
-        C6621a(Activity activity) {
+        a(Activity activity) {
             this.a = activity;
         }
 
@@ -76,7 +75,7 @@ public class NeteaseSignInHelper extends SNSSignInAbstractHelper {
             return;
         }
         try {
-            NeteaseAuth.auth(mAppId, mRedirectUrl, new C6621a(activity));
+            NeteaseAuth.auth(mAppId, mRedirectUrl, new a(activity));
         } catch (Throwable th) {
             th.printStackTrace();
         }

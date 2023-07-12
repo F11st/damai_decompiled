@@ -16,7 +16,6 @@ import android.os.Bundle;
 import android.service.notification.StatusBarNotification;
 import android.text.TextUtils;
 import android.widget.RemoteViews;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -68,7 +67,7 @@ public abstract class es extends eq {
     }
 
     private Bitmap a() {
-        return com.xiaomi.push.service.al.a(C7667h.m940a(a(), this.f311a));
+        return com.xiaomi.push.service.al.a(h.m940a(a(), this.f311a));
     }
 
     private String c() {
@@ -81,7 +80,7 @@ public abstract class es extends eq {
     private void m864c() {
         int a = a(a().getResources(), c(), "layout", a().getPackageName());
         if (a == 0) {
-            AbstractC7535b.m586a("create RemoteViews failed, no such layout resource was found");
+            com.xiaomi.channel.commonutils.logger.b.m586a("create RemoteViews failed, no such layout resource was found");
             return;
         }
         this.f309a = new RemoteViews(a().getPackageName(), a);
@@ -227,7 +226,7 @@ public abstract class es extends eq {
             m867a().setImageViewBitmap(i, a);
             return;
         }
-        int b = C7667h.b(a(), this.f311a);
+        int b = h.b(a(), this.f311a);
         if (b != 0) {
             m867a().setImageViewResource(i, b);
         }

@@ -6,7 +6,7 @@ final class ServiceManager$EmptyServiceManagerWarning extends Throwable {
     private ServiceManager$EmptyServiceManagerWarning() {
     }
 
-    /* synthetic */ ServiceManager$EmptyServiceManagerWarning(C5361o c5361o) {
+    /* synthetic */ ServiceManager$EmptyServiceManagerWarning(o oVar) {
         this();
     }
 }

@@ -7,9 +7,6 @@ import cn.damai.tetris.v2.adpater.VDefaultAdapter;
 import cn.damai.tetris.v2.creator.ICreator;
 import cn.damai.tetris.v2.helper.StaggeredLayoutHelper;
 import com.alibaba.android.vlayout.layout.BaseLayoutHelper;
-import com.alibaba.android.vlayout.layout.C3299b;
-import com.alibaba.android.vlayout.layout.C3302c;
-import com.alibaba.android.vlayout.layout.C3308h;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.weex.common.Constants;
@@ -37,12 +34,12 @@ public class o3 implements ICreator<VBaseAdapter, Map<String, Object>> {
             i = ((Integer) map.get("span")).intValue();
         }
         List list = (List) map.get("data");
-        C3299b c3299b = new C3299b(i);
-        h(c3299b, map);
-        i(c3299b, map);
-        g(c3299b, map);
-        c3299b.setAutoExpand(false);
-        return new VDefaultAdapter(this.a).h(c3299b).f(list).g(list.size());
+        com.alibaba.android.vlayout.layout.b bVar = new com.alibaba.android.vlayout.layout.b(i);
+        h(bVar, map);
+        i(bVar, map);
+        g(bVar, map);
+        bVar.setAutoExpand(false);
+        return new VDefaultAdapter(this.a).h(bVar).f(list).g(list.size());
     }
 
     private VBaseAdapter c(Map<String, Object> map) {
@@ -51,10 +48,10 @@ public class o3 implements ICreator<VBaseAdapter, Map<String, Object>> {
             return (VBaseAdapter) ipChange.ipc$dispatch("318378019", new Object[]{this, map});
         }
         List list = (List) map.get("data");
-        C3302c c3302c = new C3302c();
-        i(c3302c, map);
-        g(c3302c, map);
-        return new VDefaultAdapter(this.a).h(c3302c).f(list).g(list.size());
+        com.alibaba.android.vlayout.layout.c cVar = new com.alibaba.android.vlayout.layout.c();
+        i(cVar, map);
+        g(cVar, map);
+        return new VDefaultAdapter(this.a).h(cVar).f(list).g(list.size());
     }
 
     private VBaseAdapter d(Map<String, Object> map) {
@@ -62,10 +59,10 @@ public class o3 implements ICreator<VBaseAdapter, Map<String, Object>> {
         if (AndroidInstantRuntime.support(ipChange, "1027159456")) {
             return (VBaseAdapter) ipChange.ipc$dispatch("1027159456", new Object[]{this, map});
         }
-        C3308h c3308h = new C3308h();
-        i(c3308h, map);
-        g(c3308h, map);
-        return new VDefaultAdapter(this.a).h(c3308h).f((List) map.get("data")).g(1);
+        com.alibaba.android.vlayout.layout.h hVar = new com.alibaba.android.vlayout.layout.h();
+        i(hVar, map);
+        g(hVar, map);
+        return new VDefaultAdapter(this.a).h(hVar).f((List) map.get("data")).g(1);
     }
 
     private VBaseAdapter e(Map<String, Object> map) {
@@ -107,9 +104,9 @@ public class o3 implements ICreator<VBaseAdapter, Map<String, Object>> {
             if (f == 0) {
                 f = this.a.getTheme().obtainStyledAttributes(R$styleable.DMComponentLayout).getDimensionPixelOffset(R$styleable.DMComponentLayout_gapH, 0);
             }
-            boolean z = baseLayoutHelper instanceof C3299b;
+            boolean z = baseLayoutHelper instanceof com.alibaba.android.vlayout.layout.b;
             if (z) {
-                ((C3299b) baseLayoutHelper).setHGap(f);
+                ((com.alibaba.android.vlayout.layout.b) baseLayoutHelper).setHGap(f);
             } else if (baseLayoutHelper instanceof StaggeredLayoutHelper) {
                 ((StaggeredLayoutHelper) baseLayoutHelper).setHGap(f);
             }
@@ -118,7 +115,7 @@ public class o3 implements ICreator<VBaseAdapter, Map<String, Object>> {
                 f2 = this.a.getTheme().obtainStyledAttributes(R$styleable.DMComponentLayout).getDimensionPixelOffset(R$styleable.DMComponentLayout_gapV, 0);
             }
             if (z) {
-                ((C3299b) baseLayoutHelper).setVGap(f2);
+                ((com.alibaba.android.vlayout.layout.b) baseLayoutHelper).setVGap(f2);
             } else if (baseLayoutHelper instanceof StaggeredLayoutHelper) {
                 ((StaggeredLayoutHelper) baseLayoutHelper).setVGap(f2);
             }

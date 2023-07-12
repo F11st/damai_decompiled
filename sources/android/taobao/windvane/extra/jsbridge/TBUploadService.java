@@ -23,10 +23,10 @@ import android.taobao.windvane.util.MimeTypeEnum;
 import android.taobao.windvane.util.TaoLog;
 import com.amap.api.maps.model.MyLocationStyle;
 import com.taobao.weex.ui.view.gesture.WXGestureType;
-import com.uploader.export.C7361a;
 import com.uploader.export.ITaskListener;
 import com.uploader.export.ITaskResult;
 import com.uploader.export.IUploaderTask;
+import com.uploader.export.a;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
@@ -66,7 +66,7 @@ public class TBUploadService extends WVUploadService implements Handler.Callback
             }
             final WVResult wVResult2 = new WVResult();
             try {
-                C7361a.a().uploadAsync(new IUploaderTask() { // from class: android.taobao.windvane.extra.jsbridge.TBUploadService.3
+                a.a().uploadAsync(new IUploaderTask() { // from class: android.taobao.windvane.extra.jsbridge.TBUploadService.3
                     @Override // com.uploader.export.IUploaderTask
                     public String getBizType() {
                         return uploadParams.bizCode;

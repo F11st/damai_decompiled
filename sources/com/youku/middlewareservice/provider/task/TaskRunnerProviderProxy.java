@@ -2,7 +2,7 @@ package com.youku.middlewareservice.provider.task;
 
 import android.util.Log;
 import java.util.concurrent.Callable;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -12,7 +12,7 @@ public class TaskRunnerProviderProxy {
     public static DependentTask createAnchorTask(String str, String str2, TaskType taskType, Priority priority) {
         try {
             if (sProxy == null) {
-                sProxy = (TaskRunnerProvider) C8883a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
+                sProxy = (TaskRunnerProvider) a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
             }
             return sProxy.createAnchorTask(str, str2, taskType, priority);
         } catch (Throwable th) {
@@ -24,7 +24,7 @@ public class TaskRunnerProviderProxy {
     public static DependentTask createDependentTask(String str, DependentTask dependentTask, String str2, TaskType taskType, Priority priority, Callable<?> callable, CallableCB<?> callableCB) {
         try {
             if (sProxy == null) {
-                sProxy = (TaskRunnerProvider) C8883a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
+                sProxy = (TaskRunnerProvider) a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
             }
             return sProxy.createDependentTask(str, dependentTask, str2, taskType, priority, callable, callableCB);
         } catch (Throwable th) {
@@ -36,7 +36,7 @@ public class TaskRunnerProviderProxy {
     public static void destroyGroup(String str) {
         try {
             if (sProxy == null) {
-                sProxy = (TaskRunnerProvider) C8883a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
+                sProxy = (TaskRunnerProvider) a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
             }
             sProxy.destroyGroup(str);
         } catch (Throwable th) {
@@ -47,7 +47,7 @@ public class TaskRunnerProviderProxy {
     public static void execute(Runnable runnable) {
         try {
             if (sProxy == null) {
-                sProxy = (TaskRunnerProvider) C8883a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
+                sProxy = (TaskRunnerProvider) a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
             }
             sProxy.execute(runnable);
         } catch (Throwable th) {
@@ -57,7 +57,7 @@ public class TaskRunnerProviderProxy {
 
     public static TaskRunnerProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (TaskRunnerProvider) C8883a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
+            sProxy = (TaskRunnerProvider) a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -65,7 +65,7 @@ public class TaskRunnerProviderProxy {
     public static void initTaskGroup(String str, int i) {
         try {
             if (sProxy == null) {
-                sProxy = (TaskRunnerProvider) C8883a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
+                sProxy = (TaskRunnerProvider) a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
             }
             sProxy.initTaskGroup(str, i);
         } catch (Throwable th) {
@@ -86,7 +86,7 @@ public class TaskRunnerProviderProxy {
     public static void pauseTasks(String str) {
         try {
             if (sProxy == null) {
-                sProxy = (TaskRunnerProvider) C8883a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
+                sProxy = (TaskRunnerProvider) a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
             }
             sProxy.pauseTasks(str);
         } catch (Throwable th) {
@@ -97,7 +97,7 @@ public class TaskRunnerProviderProxy {
     public static void resumeTasks(String str) {
         try {
             if (sProxy == null) {
-                sProxy = (TaskRunnerProvider) C8883a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
+                sProxy = (TaskRunnerProvider) a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
             }
             sProxy.resumeTasks(str);
         } catch (Throwable th) {
@@ -108,7 +108,7 @@ public class TaskRunnerProviderProxy {
     public static CommonTask runCancelableTask(String str, String str2, long j, long j2, DelayType delayType, TaskType taskType, Priority priority, Runnable runnable) {
         try {
             if (sProxy == null) {
-                sProxy = (TaskRunnerProvider) C8883a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
+                sProxy = (TaskRunnerProvider) a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
             }
             return sProxy.runCancelableTask(str, str2, j, j2, delayType, taskType, priority, runnable);
         } catch (Throwable th) {
@@ -120,7 +120,7 @@ public class TaskRunnerProviderProxy {
     public static void runDelayedTask(String str, String str2, long j, long j2, DelayType delayType, TaskType taskType, Priority priority, Callable<?> callable, CallableCB<?> callableCB) {
         try {
             if (sProxy == null) {
-                sProxy = (TaskRunnerProvider) C8883a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
+                sProxy = (TaskRunnerProvider) a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
             }
             sProxy.runDelayedTask(str, str2, j, j2, delayType, taskType, priority, callable, callableCB);
         } catch (Throwable th) {
@@ -131,7 +131,7 @@ public class TaskRunnerProviderProxy {
     public static void runDependentTasks(DependentTask dependentTask) {
         try {
             if (sProxy == null) {
-                sProxy = (TaskRunnerProvider) C8883a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
+                sProxy = (TaskRunnerProvider) a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
             }
             sProxy.runDependentTasks(dependentTask);
         } catch (Throwable th) {
@@ -142,7 +142,7 @@ public class TaskRunnerProviderProxy {
     public static void runTask(String str, String str2, TaskType taskType, Priority priority, Callable<?> callable, CallableCB<?> callableCB) {
         try {
             if (sProxy == null) {
-                sProxy = (TaskRunnerProvider) C8883a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
+                sProxy = (TaskRunnerProvider) a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
             }
             sProxy.runTask(str, str2, taskType, priority, callable, callableCB);
         } catch (Throwable th) {
@@ -153,7 +153,7 @@ public class TaskRunnerProviderProxy {
     public static DependentTask createDependentTask(String str, DependentTask dependentTask, String str2, TaskType taskType, Priority priority, Runnable runnable) {
         try {
             if (sProxy == null) {
-                sProxy = (TaskRunnerProvider) C8883a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
+                sProxy = (TaskRunnerProvider) a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
             }
             return sProxy.createDependentTask(str, dependentTask, str2, taskType, priority, runnable);
         } catch (Throwable th) {
@@ -165,7 +165,7 @@ public class TaskRunnerProviderProxy {
     public static void execute(Runnable runnable, TaskType taskType) {
         try {
             if (sProxy == null) {
-                sProxy = (TaskRunnerProvider) C8883a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
+                sProxy = (TaskRunnerProvider) a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
             }
             sProxy.execute(runnable, taskType);
         } catch (Throwable th) {
@@ -176,7 +176,7 @@ public class TaskRunnerProviderProxy {
     public static CommonTask runCancelableTask(String str, String str2, long j, long j2, DelayType delayType, TaskType taskType, Priority priority, Callable<?> callable, CallableCB<?> callableCB) {
         try {
             if (sProxy == null) {
-                sProxy = (TaskRunnerProvider) C8883a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
+                sProxy = (TaskRunnerProvider) a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
             }
             return sProxy.runCancelableTask(str, str2, j, j2, delayType, taskType, priority, callable, callableCB);
         } catch (Throwable th) {
@@ -188,7 +188,7 @@ public class TaskRunnerProviderProxy {
     public static void runDelayedTask(String str, String str2, long j, long j2, DelayType delayType, TaskType taskType, Priority priority, Runnable runnable) {
         try {
             if (sProxy == null) {
-                sProxy = (TaskRunnerProvider) C8883a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
+                sProxy = (TaskRunnerProvider) a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
             }
             sProxy.runDelayedTask(str, str2, j, j2, delayType, taskType, priority, runnable);
         } catch (Throwable th) {
@@ -199,7 +199,7 @@ public class TaskRunnerProviderProxy {
     public static void runTask(String str, String str2, TaskType taskType, Priority priority, Runnable runnable) {
         try {
             if (sProxy == null) {
-                sProxy = (TaskRunnerProvider) C8883a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
+                sProxy = (TaskRunnerProvider) a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
             }
             sProxy.runTask(str, str2, taskType, priority, runnable);
         } catch (Throwable th) {
@@ -210,7 +210,7 @@ public class TaskRunnerProviderProxy {
     public static void execute(Runnable runnable, TaskType taskType, long j) {
         try {
             if (sProxy == null) {
-                sProxy = (TaskRunnerProvider) C8883a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
+                sProxy = (TaskRunnerProvider) a.j("com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl").b().f();
             }
             sProxy.execute(runnable, taskType, j);
         } catch (Throwable th) {

@@ -20,10 +20,10 @@ import java.util.regex.Pattern;
 import okio.Buffer;
 import okio.BufferedSink;
 import okio.BufferedSource;
-import okio.C8844h;
-import okio.C8857o;
 import okio.Sink;
 import okio.Source;
+import okio.h;
+import okio.o;
 import tb.jn1;
 
 /* compiled from: Taobao */
@@ -65,8 +65,8 @@ public final class DiskLruCache implements Closeable {
         }
 
         @Override // okio.Sink
-        public C8857o timeout() {
-            return C8857o.NONE;
+        public o timeout() {
+            return o.NONE;
         }
 
         @Override // okio.Sink
@@ -390,7 +390,7 @@ public final class DiskLruCache implements Closeable {
     }
 
     private BufferedSink newJournalWriter() throws FileNotFoundException {
-        return C8844h.c(new FaultHidingSink(this.fileSystem.appendingSink(this.journalFile)) { // from class: com.squareup.okhttp.internal.DiskLruCache.2
+        return h.c(new FaultHidingSink(this.fileSystem.appendingSink(this.journalFile)) { // from class: com.squareup.okhttp.internal.DiskLruCache.2
             static final /* synthetic */ boolean $assertionsDisabled = false;
 
             @Override // com.squareup.okhttp.internal.FaultHidingSink
@@ -424,7 +424,7 @@ public final class DiskLruCache implements Closeable {
     }
 
     private void readJournal() throws IOException {
-        BufferedSource d = C8844h.d(this.fileSystem.source(this.journalFile));
+        BufferedSource d = h.d(this.fileSystem.source(this.journalFile));
         try {
             String readUtf8LineStrict = d.readUtf8LineStrict();
             String readUtf8LineStrict2 = d.readUtf8LineStrict();
@@ -500,7 +500,7 @@ public final class DiskLruCache implements Closeable {
         if (bufferedSink != null) {
             bufferedSink.close();
         }
-        BufferedSink c = C8844h.c(this.fileSystem.sink(this.journalFileTmp));
+        BufferedSink c = h.c(this.fileSystem.sink(this.journalFileTmp));
         c.writeUtf8(MAGIC).writeByte(10);
         c.writeUtf8("1").writeByte(10);
         c.writeDecimalLong(this.appVersion).writeByte(10);

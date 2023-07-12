@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.functions.ObjectHelper;
@@ -231,15 +231,15 @@ public final class FlowableConcatMapEager<T, R> extends AbstractFlowableWithUpst
         }
     }
 
-    public FlowableConcatMapEager(AbstractC8147b<T> abstractC8147b, Function<? super T, ? extends Publisher<? extends R>> function, int i, int i2, ErrorMode errorMode) {
-        super(abstractC8147b);
+    public FlowableConcatMapEager(b<T> bVar, Function<? super T, ? extends Publisher<? extends R>> function, int i, int i2, ErrorMode errorMode) {
+        super(bVar);
         this.mapper = function;
         this.maxConcurrency = i;
         this.prefetch = i2;
         this.errorMode = errorMode;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super R> subscriber) {
         this.source.subscribe((FlowableSubscriber) new ConcatMapEagerDelayErrorSubscriber(subscriber, this.mapper, this.maxConcurrency, this.prefetch, this.errorMode));
     }

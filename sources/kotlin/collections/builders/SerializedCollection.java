@@ -8,8 +8,8 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import kotlin.collections.C8201d0;
-import kotlin.collections.C8213l;
+import kotlin.collections.d0;
+import kotlin.collections.l;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
 import tb.k50;
@@ -18,7 +18,7 @@ import tb.k50;
 /* loaded from: classes3.dex */
 public final class SerializedCollection implements Externalizable {
     @NotNull
-    public static final C8196a Companion = new C8196a(null);
+    public static final a Companion = new a(null);
     private static final long serialVersionUID = 0;
     public static final int tagList = 0;
     public static final int tagSet = 1;
@@ -27,13 +27,12 @@ public final class SerializedCollection implements Externalizable {
     private final int tag;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.collections.builders.SerializedCollection$a */
     /* loaded from: classes3.dex */
-    public static final class C8196a {
-        private C8196a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8196a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -51,7 +50,7 @@ public final class SerializedCollection implements Externalizable {
     @Override // java.io.Externalizable
     public void readExternal(@NotNull ObjectInput objectInput) {
         List d;
-        Collection<?> a;
+        Collection<?> a2;
         Set b;
         b41.i(objectInput, "input");
         byte readByte = objectInput.readByte();
@@ -61,23 +60,23 @@ public final class SerializedCollection implements Externalizable {
             if (readInt >= 0) {
                 int i2 = 0;
                 if (i == 0) {
-                    d = C8213l.d(readInt);
+                    d = l.d(readInt);
                     while (i2 < readInt) {
                         d.add(objectInput.readObject());
                         i2++;
                     }
-                    a = C8213l.a(d);
+                    a2 = l.a(d);
                 } else if (i == 1) {
-                    b = C8201d0.b(readInt);
+                    b = d0.b(readInt);
                     while (i2 < readInt) {
                         b.add(objectInput.readObject());
                         i2++;
                     }
-                    a = C8201d0.a(b);
+                    a2 = d0.a(b);
                 } else {
                     throw new InvalidObjectException("Unsupported collection type tag: " + i + '.');
                 }
-                this.collection = a;
+                this.collection = a2;
                 return;
             }
             throw new InvalidObjectException("Illegal size value: " + readInt + '.');
@@ -104,7 +103,7 @@ public final class SerializedCollection implements Externalizable {
     public SerializedCollection() {
         /*
             r2 = this;
-            java.util.List r0 = kotlin.collections.C8212k.g()
+            java.util.List r0 = kotlin.collections.k.g()
             r1 = 0
             r2.<init>(r0, r1)
             return

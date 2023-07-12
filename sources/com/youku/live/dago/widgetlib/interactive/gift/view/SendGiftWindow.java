@@ -531,7 +531,7 @@ public class SendGiftWindow extends FrameLayout implements ParticleSendGiftButto
             ipChange.ipc$dispatch("392306879", new Object[]{this, context});
             return;
         }
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ykl_gift_board_layout, this);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_ykl_gift_board_layout, this);
         this.mYKLPagerTabIndicator = (YKLPagerTabIndicator) findViewById(R.id.id_pager_s_t_s);
         this.mRootView = (FrameLayout) findViewById(R.id.root_view);
         this.mGiftBoardRootView = (ViewGroup) findViewById(R.id.id_gift_board);
@@ -876,9 +876,9 @@ public class SendGiftWindow extends FrameLayout implements ParticleSendGiftButto
             ipChange.ipc$dispatch("-1601900154", new Object[]{this});
             return;
         }
-        ParticleSystem createBomShot = createBomShot(R.C7941drawable.dago_pgc_combsend_heart, 50, 50, 500);
-        ParticleSystem createBomShot2 = createBomShot(R.C7941drawable.dago_pgc_combsend_laugh, 50, 50, 500);
-        ParticleSystem createBomShot3 = createBomShot(R.C7941drawable.dago_pgc_combsend_like, 50, 50, 500);
+        ParticleSystem createBomShot = createBomShot(R.drawable.dago_pgc_combsend_heart, 50, 50, 500);
+        ParticleSystem createBomShot2 = createBomShot(R.drawable.dago_pgc_combsend_laugh, 50, 50, 500);
+        ParticleSystem createBomShot3 = createBomShot(R.drawable.dago_pgc_combsend_like, 50, 50, 500);
         if (createBomShot != null) {
             createBomShot.oneShot(this.mParticlePoint, 2);
         }

@@ -16,9 +16,8 @@ public final class oi0 {
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
     @TargetApi(14)
-    /* renamed from: tb.oi0$a */
     /* loaded from: classes11.dex */
-    public static class C9523a {
+    public static class a {
         private static final FileStorage a;
 
         static {
@@ -29,7 +28,7 @@ public final class oi0 {
 
     public static void a() {
         a.deleteInvalidFiles();
-        C9523a.a.deleteInvalidFiles();
+        a.a.deleteInvalidFiles();
     }
 
     public static File b(me2 me2Var) {
@@ -42,7 +41,7 @@ public final class oi0 {
         if (g(soFile) && f(soFile, me2Var.d())) {
             return soFile;
         }
-        File soFile2 = C9523a.a.getSoFile(me2Var);
+        File soFile2 = a.a.getSoFile(me2Var);
         if (g(soFile2)) {
             map.put(h(me2Var), soFile2);
             return soFile2;
@@ -60,7 +59,7 @@ public final class oi0 {
 
     public static File d(String str, long j) {
         File tmpFile = a.getTmpFile(str);
-        return (g(tmpFile) && f(tmpFile, j)) ? tmpFile : j(C9523a.a.getTmpFile(str));
+        return (g(tmpFile) && f(tmpFile, j)) ? tmpFile : j(a.a.getTmpFile(str));
     }
 
     public static File e(pe2 pe2Var) {
@@ -73,7 +72,7 @@ public final class oi0 {
         if (g(zipFile) && f(zipFile, pe2Var.f())) {
             return zipFile;
         }
-        File zipFile2 = C9523a.a.getZipFile(pe2Var);
+        File zipFile2 = a.a.getZipFile(pe2Var);
         if (g(zipFile2)) {
             map.put(i(pe2Var), zipFile2);
             return zipFile2;

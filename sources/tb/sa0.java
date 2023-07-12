@@ -15,15 +15,14 @@ import com.taobao.android.ultron.common.model.IDMComponent;
 /* loaded from: classes9.dex */
 public class sa0 extends j1 {
     private static transient /* synthetic */ IpChange $ipChange;
-    public static final IViewHolderCreator CREATOR = new C9689a();
+    public static final IViewHolderCreator CREATOR = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.sa0$a */
     /* loaded from: classes9.dex */
-    public static final class C9689a implements IViewHolderCreator {
+    public static final class a implements IViewHolderCreator {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9689a() {
+        a() {
         }
 
         @Override // com.alibaba.android.ultron.vfw.viewholder.IViewHolderCreator

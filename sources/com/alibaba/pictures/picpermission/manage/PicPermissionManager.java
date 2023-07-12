@@ -28,8 +28,8 @@ import kotlin.Metadata;
 import kotlin.jvm.JvmStatic;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.joor.C8883a;
-import tb.AbstractC8903ab;
+import org.joor.a;
+import tb.ab;
 import tb.b41;
 import tb.k50;
 import tb.ka;
@@ -42,12 +42,12 @@ public final class PicPermissionManager {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
     public static final Companion Companion = new Companion(null);
-    private static AbstractC8903ab defaultRationalBehavior;
+    private static ab defaultRationalBehavior;
     private static PicPermissionManager instance;
     private final WeakReference<Context> context;
     private ICustomConfig customConfig;
     @Nullable
-    private AbstractC8903ab customRationalBehavior;
+    private ab customRationalBehavior;
     @Nullable
     private ka customTipsView;
     @NotNull
@@ -118,17 +118,17 @@ public final class PicPermissionManager {
             }
         }
 
-        public final void setCustomRationalBehavior(@NotNull AbstractC8903ab abstractC8903ab) {
+        public final void setCustomRationalBehavior(@NotNull ab abVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "703535693")) {
-                ipChange.ipc$dispatch("703535693", new Object[]{this, abstractC8903ab});
+                ipChange.ipc$dispatch("703535693", new Object[]{this, abVar});
                 return;
             }
-            b41.i(abstractC8903ab, "customRationalBehavior");
+            b41.i(abVar, "customRationalBehavior");
             if (PicPermissionManager.instance != null) {
                 PicPermissionManager picPermissionManager = PicPermissionManager.instance;
                 b41.f(picPermissionManager);
-                picPermissionManager.setCustomRationalBehavior(abstractC8903ab);
+                picPermissionManager.setCustomRationalBehavior(abVar);
                 return;
             }
             throw new PicPermissionException("PicPermissionManager need init first!");
@@ -151,14 +151,14 @@ public final class PicPermissionManager {
             throw new PicPermissionException("PicPermissionManager need init first!");
         }
 
-        public final void setDefaultRationalBehavior(@NotNull AbstractC8903ab abstractC8903ab) {
+        public final void setDefaultRationalBehavior(@NotNull ab abVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "145379147")) {
-                ipChange.ipc$dispatch("145379147", new Object[]{this, abstractC8903ab});
+                ipChange.ipc$dispatch("145379147", new Object[]{this, abVar});
                 return;
             }
-            b41.i(abstractC8903ab, "customRationalBehavior");
-            PicPermissionManager.defaultRationalBehavior = abstractC8903ab;
+            b41.i(abVar, "customRationalBehavior");
+            PicPermissionManager.defaultRationalBehavior = abVar;
         }
 
         @JvmStatic
@@ -188,9 +188,9 @@ public final class PicPermissionManager {
             b41.i(str2, SocialConstants.PARAM_APP_DESC);
             if (PicPermissionManager.defaultRationalBehavior != null) {
                 if (PicPermissionManager.instance != null) {
-                    AbstractC8903ab abstractC8903ab = PicPermissionManager.defaultRationalBehavior;
-                    if (abstractC8903ab != null) {
-                        abstractC8903ab.a(str, str2);
+                    ab abVar = PicPermissionManager.defaultRationalBehavior;
+                    if (abVar != null) {
+                        abVar.a(str, str2);
                     }
                     PicPermissionManager picPermissionManager = PicPermissionManager.instance;
                     b41.f(picPermissionManager);
@@ -234,7 +234,7 @@ public final class PicPermissionManager {
         this.customUtHandler = new DefaultUtHandler();
         this.permissionRecord = new ArrayList();
         try {
-            Object f = C8883a.j("com.alibaba.nissy.PicPermissionCustomConfig").b().f();
+            Object f = a.j("com.alibaba.nissy.PicPermissionCustomConfig").b().f();
             b41.h(f, "Reflect.on(\"com.alibaba.…omConfig\").create().get()");
             ICustomConfig iCustomConfig = (ICustomConfig) f;
             this.customConfig = iCustomConfig;
@@ -249,7 +249,7 @@ public final class PicPermissionManager {
             String customUtHandler = iCustomConfig2.getCustomUtHandler();
             boolean z = true;
             if (customUtHandler.length() > 0) {
-                Object f2 = C8883a.j(customUtHandler).b().f();
+                Object f2 = a.j(customUtHandler).b().f();
                 b41.h(f2, "Reflect.on(customUt).create().get()");
                 this.customUtHandler = (IUtHandler) f2;
             }
@@ -257,7 +257,7 @@ public final class PicPermissionManager {
                 z = false;
             }
             if (z) {
-                this.customTipsView = (ka) C8883a.j(customTipsViewClassName).b().f();
+                this.customTipsView = (ka) a.j(customTipsViewClassName).b().f();
             }
         } catch (Throwable th) {
             Log.e("PicPermission", "get CustomConfig error Throwable: " + th);
@@ -341,9 +341,9 @@ public final class PicPermissionManager {
     }
 
     @Nullable
-    public final AbstractC8903ab getCustomRationalBehavior() {
+    public final ab getCustomRationalBehavior() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1826891961") ? (AbstractC8903ab) ipChange.ipc$dispatch("-1826891961", new Object[]{this}) : this.customRationalBehavior;
+        return AndroidInstantRuntime.support(ipChange, "-1826891961") ? (ab) ipChange.ipc$dispatch("-1826891961", new Object[]{this}) : this.customRationalBehavior;
     }
 
     @Nullable
@@ -487,12 +487,12 @@ public final class PicPermissionManager {
         }
     }
 
-    public final void setCustomRationalBehavior(@Nullable AbstractC8903ab abstractC8903ab) {
+    public final void setCustomRationalBehavior(@Nullable ab abVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "389862597")) {
-            ipChange.ipc$dispatch("389862597", new Object[]{this, abstractC8903ab});
+            ipChange.ipc$dispatch("389862597", new Object[]{this, abVar});
         } else {
-            this.customRationalBehavior = abstractC8903ab;
+            this.customRationalBehavior = abVar;
         }
     }
 

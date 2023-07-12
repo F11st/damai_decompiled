@@ -8,12 +8,12 @@ import com.google.common.collect.ImmutableSortedSet;
 /* loaded from: classes10.dex */
 abstract class ImmutableSortedSetFauxverideShim<E> extends ImmutableSet<E> {
     @Deprecated
-    public static <E> ImmutableSortedSet.C4995a<E> builder() {
+    public static <E> ImmutableSortedSet.a<E> builder() {
         throw new UnsupportedOperationException();
     }
 
     @Deprecated
-    public static <E> ImmutableSortedSet.C4995a<E> builderWithExpectedSize(int i) {
+    public static <E> ImmutableSortedSet.a<E> builderWithExpectedSize(int i) {
         throw new UnsupportedOperationException();
     }
 

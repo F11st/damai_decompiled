@@ -27,9 +27,8 @@ public class DXSwitchWidgetNode extends DXWidgetNode implements Cloneable {
     private boolean isInitSwitchState = false;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXSwitchWidgetNode$a */
     /* loaded from: classes11.dex */
-    public static class C6460a implements IDXBuilderWidgetNode {
+    public static class a implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(@Nullable Object obj) {
             return new DXSwitchWidgetNode();
@@ -126,9 +125,9 @@ public class DXSwitchWidgetNode extends DXWidgetNode implements Cloneable {
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onMeasure(int i, int i2) {
-        int a = DXWidgetNode.DXMeasureSpec.a(i);
-        int a2 = DXWidgetNode.DXMeasureSpec.a(i2);
-        setMeasuredDimension(a == 1073741824 ? DXWidgetNode.DXMeasureSpec.b(i) : 0, a2 == 1073741824 ? DXWidgetNode.DXMeasureSpec.b(i2) : 0);
+        int a2 = DXWidgetNode.DXMeasureSpec.a(i);
+        int a3 = DXWidgetNode.DXMeasureSpec.a(i2);
+        setMeasuredDimension(a2 == 1073741824 ? DXWidgetNode.DXMeasureSpec.b(i) : 0, a3 == 1073741824 ? DXWidgetNode.DXMeasureSpec.b(i2) : 0);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -153,9 +152,9 @@ public class DXSwitchWidgetNode extends DXWidgetNode implements Cloneable {
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetIntAttribute(long j, int i) {
-        if (C6495h.DX_PAGE_INDICATOR_ON_COLOR == j) {
+        if (h.DX_PAGE_INDICATOR_ON_COLOR == j) {
             this.onColor = i;
-        } else if (C6495h.DX_PAGE_INDICATOR_OFF_COLOR == j) {
+        } else if (h.DX_PAGE_INDICATOR_OFF_COLOR == j) {
             this.offColor = i;
         } else if (6477083193262386775L == j) {
             this.switchOn = i;

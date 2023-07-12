@@ -62,7 +62,7 @@ public abstract class GiftBaseView<T> extends LinearLayout {
             return;
         }
         setOrientation(1);
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ykl_indicator_viewpager, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_ykl_indicator_viewpager, (ViewGroup) this, true);
         this.viewPager = (ViewPager) findViewById(R.id.id_vp);
         this.indicatorLayout = (LinearLayout) findViewById(R.id.id_layout_indicator);
     }
@@ -177,9 +177,9 @@ public abstract class GiftBaseView<T> extends LinearLayout {
             layoutParams2.rightMargin = i6;
             view.setLayoutParams(layoutParams2);
             if (i == 0) {
-                view.setBackgroundResource(R.C7941drawable.dago_pgc_ykl_indicator_dot_selected);
+                view.setBackgroundResource(R.drawable.dago_pgc_ykl_indicator_dot_selected);
             } else {
-                view.setBackgroundResource(R.C7941drawable.dago_pgc_ykl_indicator_dot_normal);
+                view.setBackgroundResource(R.drawable.dago_pgc_ykl_indicator_dot_normal);
             }
             this.indicatorLayout.addView(view);
             this.dots.add(view);
@@ -199,13 +199,13 @@ public abstract class GiftBaseView<T> extends LinearLayout {
         int size = this.dots.size();
         int i2 = this.mCurrentPosition;
         if (size > i2) {
-            this.dots.get(i2).setBackgroundResource(R.C7941drawable.dago_pgc_ykl_indicator_dot_normal);
+            this.dots.get(i2).setBackgroundResource(R.drawable.dago_pgc_ykl_indicator_dot_normal);
         }
         this.mCurrentPosition = i / this.mPageSize;
         int size2 = this.dots.size();
         int i3 = this.mCurrentPosition;
         if (size2 > i3) {
-            this.dots.get(i3).setBackgroundResource(R.C7941drawable.dago_pgc_ykl_indicator_dot_selected);
+            this.dots.get(i3).setBackgroundResource(R.drawable.dago_pgc_ykl_indicator_dot_selected);
         }
         if (this.viewPager.getAdapter() != null) {
             int count = this.viewPager.getAdapter().getCount();
@@ -331,8 +331,8 @@ public abstract class GiftBaseView<T> extends LinearLayout {
                     return;
                 }
                 GiftBaseView giftBaseView = GiftBaseView.this;
-                giftBaseView.dots.get(giftBaseView.mCurrentPosition).setBackgroundResource(R.C7941drawable.dago_pgc_ykl_indicator_dot_normal);
-                GiftBaseView.this.dots.get(i2).setBackgroundResource(R.C7941drawable.dago_pgc_ykl_indicator_dot_selected);
+                giftBaseView.dots.get(giftBaseView.mCurrentPosition).setBackgroundResource(R.drawable.dago_pgc_ykl_indicator_dot_normal);
+                GiftBaseView.this.dots.get(i2).setBackgroundResource(R.drawable.dago_pgc_ykl_indicator_dot_selected);
                 GiftBaseView.this.mCurrentPosition = i2;
                 if (GiftBaseView.this.mItemClickInterface == null || GiftBaseView.this.mDataList.size() <= i2) {
                     return;

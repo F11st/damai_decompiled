@@ -1,6 +1,5 @@
 package com.amap.api.mapcore.util;
 
-import com.alipay.sdk.m.o.C4261a;
 import com.amap.api.maps.AMapException;
 import java.net.Proxy;
 import java.net.URL;
@@ -14,9 +13,8 @@ public class id {
     private static id c;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.id$a */
     /* loaded from: classes10.dex */
-    public interface InterfaceC4586a {
+    public interface a {
         URLConnection a(Proxy proxy, URL url);
     }
 
@@ -37,7 +35,7 @@ public class id {
         } catch (gb e) {
             throw e;
         } catch (Throwable th) {
-            C4573ha.a(th, "bm", C4261a.a);
+            ha.a(th, "bm", com.alipay.sdk.m.o.a.a);
             throw new gb(AMapException.ERROR_UNKNOWN);
         }
     }

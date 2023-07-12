@@ -42,13 +42,12 @@ public class UserInfoView extends LinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.content.view.UserInfoView$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1015a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DnaClickListener a;
 
-        View$OnClickListenerC1015a(UserInfoView userInfoView, DnaClickListener dnaClickListener) {
+        a(UserInfoView userInfoView, DnaClickListener dnaClickListener) {
             this.a = dnaClickListener;
         }
 
@@ -203,7 +202,7 @@ public class UserInfoView extends LinearLayout {
         if (AndroidInstantRuntime.support(ipChange, "-960488276")) {
             ipChange.ipc$dispatch("-960488276", new Object[]{this, dnaClickListener});
         } else {
-            this.llDNA.setOnClickListener(new View$OnClickListenerC1015a(this, dnaClickListener));
+            this.llDNA.setOnClickListener(new a(this, dnaClickListener));
         }
     }
 

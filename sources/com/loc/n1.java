@@ -14,7 +14,7 @@ import tb.s73;
 /* loaded from: classes10.dex */
 public final class n1 {
     static r73 g;
-    static C5842j h;
+    static j h;
     static long i;
     private Context a;
     String b = null;
@@ -41,7 +41,7 @@ public final class n1 {
     private r73 h() {
         Throwable th;
         r73 r73Var;
-        C5842j c5842j;
+        j jVar;
         byte[] h2;
         byte[] h3;
         String str = null;
@@ -50,15 +50,15 @@ public final class n1 {
         }
         b();
         try {
-            c5842j = h;
+            jVar = h;
         } catch (Throwable th2) {
             th = th2;
             r73Var = null;
         }
-        if (c5842j == null) {
+        if (jVar == null) {
             return null;
         }
-        List f = c5842j.f("_id=1", r73.class);
+        List f = jVar.f("_id=1", r73.class);
         if (f == null || f.size() <= 0) {
             r73Var = null;
         } else {
@@ -135,10 +135,10 @@ public final class n1 {
         }
         try {
             if (this.b == null) {
-                this.b = e1.b(MessageDigestAlgorithms.MD5, C5861o.h0(this.a));
+                this.b = e1.b(MessageDigestAlgorithms.MD5, o.h0(this.a));
             }
             if (h == null) {
-                h = new C5842j(this.a, C5842j.c(s73.class));
+                h = new j(this.a, j.c(s73.class));
             }
         } catch (Throwable th) {
             j1.h(th, "LastLocationManager", "<init>:DBOperation");

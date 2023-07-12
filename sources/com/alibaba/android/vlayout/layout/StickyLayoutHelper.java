@@ -5,8 +5,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
-import com.alibaba.android.vlayout.AbstractC3289a;
-import com.alibaba.android.vlayout.AbstractC3291c;
 import com.alibaba.android.vlayout.LayoutManagerHelper;
 import com.alibaba.android.vlayout.VirtualLayoutManager;
 import tb.m81;
@@ -89,7 +87,7 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private void c(com.alibaba.android.vlayout.AbstractC3291c r3, androidx.recyclerview.widget.RecyclerView.Recycler r4, int r5, int r6, com.alibaba.android.vlayout.LayoutManagerHelper r7) {
+    private void c(com.alibaba.android.vlayout.c r3, androidx.recyclerview.widget.RecyclerView.Recycler r4, int r5, int r6, com.alibaba.android.vlayout.LayoutManagerHelper r7) {
         /*
             r2 = this;
             boolean r4 = com.alibaba.android.vlayout.VirtualLayoutManager.sDebuggable
@@ -125,17 +123,17 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
             if (r0 >= r1) goto L78
             int r3 = r3.d(r6)
             com.alibaba.android.vlayout.a r4 = r7.findLayoutHelperByPosition(r0)
-            boolean r6 = r4 instanceof com.alibaba.android.vlayout.layout.C3305f
+            boolean r6 = r4 instanceof com.alibaba.android.vlayout.layout.f
             if (r6 == 0) goto L5c
-            com.alibaba.android.vlayout.layout.f r4 = (com.alibaba.android.vlayout.layout.C3305f) r4
+            com.alibaba.android.vlayout.layout.f r4 = (com.alibaba.android.vlayout.layout.f) r4
             int r4 = r4.b(r7)
         L5a:
             int r3 = r3 + r4
             goto L6c
         L5c:
-            boolean r6 = r4 instanceof com.alibaba.android.vlayout.layout.AbstractC3303d
+            boolean r6 = r4 instanceof com.alibaba.android.vlayout.layout.d
             if (r6 == 0) goto L6c
-            com.alibaba.android.vlayout.layout.d r4 = (com.alibaba.android.vlayout.layout.AbstractC3303d) r4
+            com.alibaba.android.vlayout.layout.d r4 = (com.alibaba.android.vlayout.layout.d) r4
             int r6 = r4.getMarginBottom()
             int r3 = r3 + r6
             int r4 = r4.getPaddingBottom()
@@ -162,17 +160,17 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
             if (r0 <= r1) goto Lbe
             int r3 = r3.g(r6)
             com.alibaba.android.vlayout.a r4 = r7.findLayoutHelperByPosition(r0)
-            boolean r6 = r4 instanceof com.alibaba.android.vlayout.layout.C3305f
+            boolean r6 = r4 instanceof com.alibaba.android.vlayout.layout.f
             if (r6 == 0) goto La2
-            com.alibaba.android.vlayout.layout.f r4 = (com.alibaba.android.vlayout.layout.C3305f) r4
+            com.alibaba.android.vlayout.layout.f r4 = (com.alibaba.android.vlayout.layout.f) r4
             int r4 = r4.c(r7)
         La0:
             int r3 = r3 - r4
             goto Lb2
         La2:
-            boolean r6 = r4 instanceof com.alibaba.android.vlayout.layout.AbstractC3303d
+            boolean r6 = r4 instanceof com.alibaba.android.vlayout.layout.d
             if (r6 == 0) goto Lb2
-            com.alibaba.android.vlayout.layout.d r4 = (com.alibaba.android.vlayout.layout.AbstractC3303d) r4
+            com.alibaba.android.vlayout.layout.d r4 = (com.alibaba.android.vlayout.layout.d) r4
             int r6 = r4.getMarginTop()
             int r3 = r3 - r6
             int r4 = r4.getPaddingTop()
@@ -194,7 +192,7 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
         throw new UnsupportedOperationException("Method not decompiled: com.alibaba.android.vlayout.layout.StickyLayoutHelper.c(com.alibaba.android.vlayout.c, androidx.recyclerview.widget.RecyclerView$Recycler, int, int, com.alibaba.android.vlayout.LayoutManagerHelper):void");
     }
 
-    private void d(AbstractC3291c abstractC3291c, RecyclerView.Recycler recycler, int i, int i2, LayoutManagerHelper layoutManagerHelper) {
+    private void d(com.alibaba.android.vlayout.c cVar, RecyclerView.Recycler recycler, int i, int i2, LayoutManagerHelper layoutManagerHelper) {
         int i3;
         int i4;
         int i5;
@@ -210,7 +208,7 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
         int paddingBottom;
         boolean z = this.c;
         if ((z && i2 >= this.b) || (!z && i <= this.b)) {
-            int e = abstractC3291c.e(this.e);
+            int e = cVar.e(this.e);
             int i11 = 0;
             boolean z2 = layoutManagerHelper.getOrientation() == 1;
             int f2 = z2 ? this.a.b + f(layoutManagerHelper) : this.a.a;
@@ -220,10 +218,10 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
             if (z2) {
                 if (layoutManagerHelper.isDoLayoutRTL()) {
                     f = layoutManagerHelper.getContentWidth() - layoutManagerHelper.getPaddingRight();
-                    paddingLeft = f - abstractC3291c.f(this.e);
+                    paddingLeft = f - cVar.f(this.e);
                 } else {
                     paddingLeft = layoutManagerHelper.getPaddingLeft();
-                    f = abstractC3291c.f(this.e) + paddingLeft;
+                    f = cVar.f(this.e) + paddingLeft;
                 }
                 if (this.c) {
                     i10 = layoutManagerHelper.getChildCount() - 1;
@@ -232,15 +230,15 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
                         view = layoutManagerHelper.getChildAt(i10);
                         int position = layoutManagerHelper.getPosition(view);
                         if (position < this.b) {
-                            i9 = abstractC3291c.d(view);
-                            AbstractC3289a findLayoutHelperByPosition = layoutManagerHelper.findLayoutHelperByPosition(position);
-                            if (findLayoutHelperByPosition instanceof C3305f) {
-                                paddingBottom = ((C3305f) findLayoutHelperByPosition).b(layoutManagerHelper);
+                            i9 = cVar.d(view);
+                            com.alibaba.android.vlayout.a findLayoutHelperByPosition = layoutManagerHelper.findLayoutHelperByPosition(position);
+                            if (findLayoutHelperByPosition instanceof f) {
+                                paddingBottom = ((f) findLayoutHelperByPosition).b(layoutManagerHelper);
                             } else {
-                                if (findLayoutHelperByPosition instanceof AbstractC3303d) {
-                                    AbstractC3303d abstractC3303d = (AbstractC3303d) findLayoutHelperByPosition;
-                                    i9 += abstractC3303d.getMarginBottom();
-                                    paddingBottom = abstractC3303d.getPaddingBottom();
+                                if (findLayoutHelperByPosition instanceof d) {
+                                    d dVar = (d) findLayoutHelperByPosition;
+                                    i9 += dVar.getMarginBottom();
+                                    paddingBottom = dVar.getPaddingBottom();
                                 }
                                 i8 = i9 + e;
                                 this.f = true;
@@ -264,15 +262,15 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
                         view = layoutManagerHelper.getChildAt(i14);
                         int position2 = layoutManagerHelper.getPosition(view);
                         if (position2 > this.b) {
-                            int g = abstractC3291c.g(view);
-                            AbstractC3289a findLayoutHelperByPosition2 = layoutManagerHelper.findLayoutHelperByPosition(position2);
-                            if (findLayoutHelperByPosition2 instanceof C3305f) {
-                                paddingTop = ((C3305f) findLayoutHelperByPosition2).c(layoutManagerHelper);
+                            int g = cVar.g(view);
+                            com.alibaba.android.vlayout.a findLayoutHelperByPosition2 = layoutManagerHelper.findLayoutHelperByPosition(position2);
+                            if (findLayoutHelperByPosition2 instanceof f) {
+                                paddingTop = ((f) findLayoutHelperByPosition2).c(layoutManagerHelper);
                             } else {
-                                if (findLayoutHelperByPosition2 instanceof AbstractC3303d) {
-                                    AbstractC3303d abstractC3303d2 = (AbstractC3303d) findLayoutHelperByPosition2;
-                                    g -= abstractC3303d2.getMarginTop();
-                                    paddingTop = abstractC3303d2.getPaddingTop();
+                                if (findLayoutHelperByPosition2 instanceof d) {
+                                    d dVar2 = (d) findLayoutHelperByPosition2;
+                                    g -= dVar2.getMarginTop();
+                                    paddingTop = dVar2.getPaddingTop();
                                 }
                                 i8 = g;
                                 i9 = i8 - e;
@@ -297,18 +295,18 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
                     this.f = false;
                 }
                 if (!layoutManagerHelper.getReverseLayout() && this.c) {
-                    if (i4 < abstractC3291c.k() + this.d + f2) {
+                    if (i4 < cVar.k() + this.d + f2) {
                         this.f = false;
                     }
-                } else if (i8 > (abstractC3291c.i() - this.d) - i12) {
+                } else if (i8 > (cVar.i() - this.d) - i12) {
                     this.f = false;
                 }
                 if (!this.f) {
                     if (!layoutManagerHelper.getReverseLayout() && this.c) {
-                        i4 = abstractC3291c.k() + this.d + f2;
+                        i4 = cVar.k() + this.d + f2;
                         i8 = i4 + e;
                     } else {
-                        i8 = (abstractC3291c.i() - this.d) - i12;
+                        i8 = (cVar.i() - this.d) - i12;
                         i4 = i8 - e;
                     }
                 }
@@ -317,13 +315,13 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
                 i5 = i8;
             } else {
                 int paddingTop2 = layoutManagerHelper.getPaddingTop();
-                int f3 = abstractC3291c.f(this.e) + paddingTop2;
+                int f3 = cVar.f(this.e) + paddingTop2;
                 if (this.f) {
                     if (this.c) {
                         for (int childCount = layoutManagerHelper.getChildCount() - 1; childCount >= 0; childCount--) {
                             View childAt = layoutManagerHelper.getChildAt(childCount);
                             if (layoutManagerHelper.getPosition(childAt) < this.b) {
-                                i11 = abstractC3291c.d(childAt);
+                                i11 = cVar.d(childAt);
                                 i7 = i11 + e;
                                 break;
                             }
@@ -337,7 +335,7 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
                         for (int i15 = 0; i15 < layoutManagerHelper.getChildCount(); i15++) {
                             View childAt2 = layoutManagerHelper.getChildAt(i15);
                             if (layoutManagerHelper.getPosition(childAt2) > this.b) {
-                                int g2 = abstractC3291c.g(childAt2);
+                                int g2 = cVar.g(childAt2);
                                 i11 = g2 - e;
                                 i7 = g2;
                                 break;
@@ -350,13 +348,13 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
                         i3 = i7;
                     }
                 } else if (!layoutManagerHelper.getReverseLayout() && this.c) {
-                    int k = abstractC3291c.k() + this.d + f2;
+                    int k = cVar.k() + this.d + f2;
                     i3 = e + k;
                     i4 = paddingTop2;
                     i5 = f3;
                     i6 = k;
                 } else {
-                    int i16 = (abstractC3291c.i() - this.d) - i12;
+                    int i16 = (cVar.i() - this.d) - i12;
                     i3 = i16;
                     i4 = paddingTop2;
                     i5 = f3;
@@ -390,7 +388,7 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private void e(com.alibaba.android.vlayout.AbstractC3291c r19, androidx.recyclerview.widget.RecyclerView.Recycler r20, int r21, int r22, com.alibaba.android.vlayout.LayoutManagerHelper r23) {
+    private void e(com.alibaba.android.vlayout.c r19, androidx.recyclerview.widget.RecyclerView.Recycler r20, int r21, int r22, com.alibaba.android.vlayout.LayoutManagerHelper r23) {
         /*
             Method dump skipped, instructions count: 612
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -403,8 +401,8 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
         Stackable stackable = this.i;
         int i = 0;
         if (stackable != null && stackable.enable() && (layoutManagerHelper instanceof VirtualLayoutManager)) {
-            for (AbstractC3289a abstractC3289a : ((VirtualLayoutManager) layoutManagerHelper).getLayoutHelpers()) {
-                if (abstractC3289a.isFixLayout() && abstractC3289a.getRange().e().intValue() < getRange().d().intValue() && (fixedView = abstractC3289a.getFixedView()) != null) {
+            for (com.alibaba.android.vlayout.a aVar : ((VirtualLayoutManager) layoutManagerHelper).getLayoutHelpers()) {
+                if (aVar.isFixLayout() && aVar.getRange().e().intValue() < getRange().d().intValue() && (fixedView = aVar.getFixedView()) != null) {
                     i += fixedView.getHeight();
                 }
             }
@@ -412,14 +410,14 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
         return i;
     }
 
-    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.a
     public void afterLayout(RecyclerView.Recycler recycler, RecyclerView.State state, int i, int i2, int i3, LayoutManagerHelper layoutManagerHelper) {
         int i4;
         super.afterLayout(recycler, state, i, i2, i3, layoutManagerHelper);
         if (this.b < 0) {
             return;
         }
-        AbstractC3291c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
+        com.alibaba.android.vlayout.c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
         if (!this.f && (i4 = this.b) >= i && i4 <= i2) {
             c(mainOrientationHelper, recycler, i, i2, layoutManagerHelper);
         }
@@ -453,7 +451,7 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
         }
     }
 
-    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.a
     public void beforeLayout(RecyclerView.Recycler recycler, RecyclerView.State state, LayoutManagerHelper layoutManagerHelper) {
         super.beforeLayout(recycler, state, layoutManagerHelper);
         View view = this.e;
@@ -469,7 +467,7 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
         return (this.f || this.e == null) ? false : true;
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     @Nullable
     public View getFixedView() {
         return this.e;
@@ -484,7 +482,7 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
     }
 
     @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper
-    public void layoutViews(RecyclerView.Recycler recycler, RecyclerView.State state, VirtualLayoutManager.C3287d c3287d, m81 m81Var, LayoutManagerHelper layoutManagerHelper) {
+    public void layoutViews(RecyclerView.Recycler recycler, RecyclerView.State state, VirtualLayoutManager.d dVar, m81 m81Var, LayoutManagerHelper layoutManagerHelper) {
         int paddingTop;
         int f;
         int g;
@@ -494,14 +492,14 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
         int f2;
         int i2;
         int i3;
-        if (isOutOfRange(c3287d.c())) {
+        if (isOutOfRange(dVar.c())) {
             return;
         }
         View view = this.e;
         if (view == null) {
-            view = c3287d.l(recycler);
+            view = dVar.l(recycler);
         } else {
-            c3287d.n();
+            dVar.n();
         }
         View view2 = view;
         if (view2 == null) {
@@ -510,11 +508,11 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
         }
         b(view2, layoutManagerHelper);
         boolean z = layoutManagerHelper.getOrientation() == 1;
-        AbstractC3291c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
+        com.alibaba.android.vlayout.c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
         m81Var.a = mainOrientationHelper.e(view2);
         RecyclerView.LayoutParams layoutParams = (RecyclerView.LayoutParams) view2.getLayoutParams();
         this.f = true;
-        int b = (c3287d.b() - m81Var.a) + c3287d.d();
+        int b = (dVar.b() - m81Var.a) + dVar.d();
         if (layoutManagerHelper.getOrientation() == 1) {
             if (layoutManagerHelper.isDoLayoutRTL()) {
                 f2 = (layoutManagerHelper.getContentWidth() - layoutManagerHelper.getPaddingRight()) - this.mMarginRight;
@@ -523,18 +521,18 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
                 paddingLeft = this.mMarginLeft + layoutManagerHelper.getPaddingLeft();
                 f2 = mainOrientationHelper.f(view2) + paddingLeft;
             }
-            if (c3287d.f() == -1) {
-                i2 = c3287d.g() - this.mMarginBottom;
-                i3 = c3287d.g() - m81Var.a;
+            if (dVar.f() == -1) {
+                i2 = dVar.g() - this.mMarginBottom;
+                i3 = dVar.g() - m81Var.a;
             } else if (this.c) {
-                i3 = this.mMarginTop + c3287d.g();
-                i2 = c3287d.g() + m81Var.a;
+                i3 = this.mMarginTop + dVar.g();
+                i2 = dVar.g() + m81Var.a;
             } else {
                 i2 = ((mainOrientationHelper.i() - this.mMarginBottom) - this.d) - this.a.d;
                 i3 = i2 - m81Var.a;
             }
             if (!layoutManagerHelper.getReverseLayout() && this.c) {
-                if ((b < this.d + this.a.b && c3287d.e() == -1) || i3 < this.mMarginTop + this.d + this.a.b) {
+                if ((b < this.d + this.a.b && dVar.e() == -1) || i3 < this.mMarginTop + this.d + this.a.b) {
                     this.f = false;
                     this.e = view2;
                     int k = mainOrientationHelper.k() + this.mMarginTop + this.d + this.a.b;
@@ -552,7 +550,7 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
                     paddingTop = i3;
                 }
             } else {
-                if ((b < this.d + this.a.d && c3287d.e() == 1) || i2 > this.mMarginBottom + this.d + this.a.d) {
+                if ((b < this.d + this.a.d && dVar.e() == 1) || i2 > this.mMarginBottom + this.d + this.a.d) {
                     this.f = false;
                     this.e = view2;
                     int i4 = ((mainOrientationHelper.i() - this.mMarginBottom) - this.d) - this.a.d;
@@ -569,12 +567,12 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
         } else {
             paddingTop = layoutManagerHelper.getPaddingTop();
             f = mainOrientationHelper.f(view2) + paddingTop + this.mMarginTop;
-            if (c3287d.f() == -1) {
-                g2 = c3287d.g() - this.mMarginRight;
-                g = c3287d.g() - m81Var.a;
+            if (dVar.f() == -1) {
+                g2 = dVar.g() - this.mMarginRight;
+                g = dVar.g() - m81Var.a;
             } else {
-                g = this.mMarginLeft + c3287d.g();
-                g2 = c3287d.g() + m81Var.a;
+                g = this.mMarginLeft + dVar.g();
+                g2 = dVar.g() + m81Var.a;
             }
             if (!layoutManagerHelper.getReverseLayout() && this.c) {
                 if (b < this.d + this.a.a) {
@@ -601,7 +599,7 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
             this.f = true;
         }
         if (this.f) {
-            layoutManagerHelper.addChildView(c3287d, view2);
+            layoutManagerHelper.addChildView(dVar, view2);
             handleStateOnResult(m81Var, view2);
         }
     }
@@ -617,17 +615,17 @@ public class StickyLayoutHelper extends FixAreaLayoutHelper {
         }
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public void onRangeChange(int i, int i2) {
         this.b = i;
     }
 
-    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.a
     public boolean requireLayoutView() {
         return false;
     }
 
-    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.a
     public void setItemCount(int i) {
         if (i > 0) {
             super.setItemCount(1);

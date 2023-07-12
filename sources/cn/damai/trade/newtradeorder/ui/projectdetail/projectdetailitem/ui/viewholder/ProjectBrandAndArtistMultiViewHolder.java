@@ -9,8 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.trade.R$drawable;
 import cn.damai.trade.R$id;
 import cn.damai.trade.R$layout;
@@ -46,12 +46,11 @@ public class ProjectBrandAndArtistMultiViewHolder extends RecyclerView.ViewHolde
         private String d;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectBrandAndArtistMultiViewHolder$MultiAdapter$a */
         /* loaded from: classes16.dex */
-        public class View$OnClickListenerC2388a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC2388a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -129,7 +128,7 @@ public class ProjectBrandAndArtistMultiViewHolder extends RecyclerView.ViewHolde
                 }
                 multiViewHolder.a(brandAndArtists);
                 multiViewHolder.itemView.setTag(brandAndArtists);
-                multiViewHolder.itemView.setOnClickListener(new View$OnClickListenerC2388a());
+                multiViewHolder.itemView.setOnClickListener(new a());
                 d(multiViewHolder.itemView, i, brandAndArtists);
             }
         }
@@ -176,7 +175,7 @@ public class ProjectBrandAndArtistMultiViewHolder extends RecyclerView.ViewHolde
                 ipChange.ipc$dispatch("1581548541", new Object[]{this, brandAndArtists});
             } else if (brandAndArtists == null) {
             } else {
-                DMImageCreator c = C0504a.b().h(this.a).c(brandAndArtists.picUrl);
+                DMImageCreator c = a.b().h(this.a).c(brandAndArtists.picUrl);
                 int i = R$drawable.uikit_user_default_icon;
                 c.i(i).c(i).k(new yq()).g(this.b);
                 if (!TextUtils.isEmpty(brandAndArtists.name)) {

@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8226x;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.n;
+import kotlin.collections.x;
 import kotlin.reflect.jvm.internal.calls.Caller;
 import kotlin.reflect.jvm.internal.impl.descriptors.runtime.structure.ReflectClassUtilKt;
 import org.jetbrains.annotations.NotNull;
@@ -59,14 +59,14 @@ public final class AnnotationConstructorCaller implements Caller {
         this.e = list;
         this.f = callMode;
         this.g = list2;
-        q = C8215n.q(list2, 10);
+        q = n.q(list2, 10);
         ArrayList arrayList = new ArrayList(q);
         for (Method method : list2) {
             arrayList.add(method.getGenericReturnType());
         }
         this.a = arrayList;
         List<Method> list3 = this.g;
-        q2 = C8215n.q(list3, 10);
+        q2 = n.q(list3, 10);
         ArrayList arrayList2 = new ArrayList(q2);
         for (Method method2 : list3) {
             Class<?> returnType = method2.getReturnType();
@@ -79,7 +79,7 @@ public final class AnnotationConstructorCaller implements Caller {
         }
         this.b = arrayList2;
         List<Method> list4 = this.g;
-        q3 = C8215n.q(list4, 10);
+        q3 = n.q(list4, 10);
         ArrayList arrayList3 = new ArrayList(q3);
         for (Method method3 : list4) {
             arrayList3.add(method3.getDefaultValue());
@@ -95,7 +95,7 @@ public final class AnnotationConstructorCaller implements Caller {
 
     public void a(@NotNull Object[] objArr) {
         b41.i(objArr, "args");
-        Caller.C8265a.a(this, objArr);
+        Caller.a.a(this, objArr);
     }
 
     @Nullable
@@ -128,7 +128,7 @@ public final class AnnotationConstructorCaller implements Caller {
         }
         Class<?> cls = this.d;
         H0 = CollectionsKt___CollectionsKt.H0(this.e, arrayList);
-        r = C8226x.r(H0);
+        r = x.r(H0);
         return AnnotationConstructorCallerKt.c(cls, r, this.g);
     }
 
@@ -161,7 +161,7 @@ public final class AnnotationConstructorCaller implements Caller {
             if (r12 == 0) goto L2a
             java.util.ArrayList r11 = new java.util.ArrayList
             r12 = 10
-            int r12 = kotlin.collections.C8212k.q(r8, r12)
+            int r12 = kotlin.collections.k.q(r8, r12)
             r11.<init>(r12)
             java.util.Iterator r12 = r8.iterator()
         L13:

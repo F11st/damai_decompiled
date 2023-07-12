@@ -1,7 +1,7 @@
 package com.taobao.monitor.impl.data.lifecycle;
 
 import com.taobao.application.common.IApmEventListener;
-import com.taobao.application.common.impl.C6674a;
+import com.taobao.application.common.impl.a;
 import tb.v6;
 import tb.w9;
 
@@ -17,7 +17,7 @@ class BackgroundForegroundEventImpl {
     /* JADX INFO: Access modifiers changed from: package-private */
     public BackgroundForegroundEventImpl() {
         new v6();
-        this.b = C6674a.g().b();
+        this.b = a.g().b();
         this.c = false;
         this.d = new Runnable() { // from class: com.taobao.monitor.impl.data.lifecycle.BackgroundForegroundEventImpl.1
             @Override // java.lang.Runnable
@@ -43,8 +43,8 @@ class BackgroundForegroundEventImpl {
         this.a.a(false);
         this.a.b(false);
         this.b.onEvent(2);
-        C6674a.g().getAsyncHandler().removeCallbacks(this.d);
-        C6674a.g().getAsyncHandler().removeCallbacks(this.e);
+        a.g().getAsyncHandler().removeCallbacks(this.d);
+        a.g().getAsyncHandler().removeCallbacks(this.e);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -52,7 +52,7 @@ class BackgroundForegroundEventImpl {
         this.c = true;
         this.a.a(true);
         this.b.onEvent(1);
-        C6674a.g().getAsyncHandler().postDelayed(this.d, 300000L);
-        C6674a.g().getAsyncHandler().postDelayed(this.e, 10000L);
+        a.g().getAsyncHandler().postDelayed(this.d, 300000L);
+        a.g().getAsyncHandler().postDelayed(this.e, 10000L);
     }
 }

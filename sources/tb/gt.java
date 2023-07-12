@@ -19,10 +19,9 @@ public class gt {
     private int e = -1;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.gt$a */
     /* loaded from: classes11.dex */
-    class C9186a extends AnimatorListenerAdapter {
-        C9186a() {
+    class a extends AnimatorListenerAdapter {
+        a() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -55,7 +54,7 @@ public class gt {
         }
         this.c = true;
         for (AnimatorSet animatorSet : this.a) {
-            animatorSet.addListener(new C9186a());
+            animatorSet.addListener(new a());
         }
         b();
     }

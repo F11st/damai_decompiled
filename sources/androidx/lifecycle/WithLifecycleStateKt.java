@@ -6,8 +6,8 @@ import kotlin.PublishedApi;
 import kotlin.Result;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.EmptyCoroutineContext;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt;
+import kotlin.coroutines.intrinsics.b;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlinx.coroutines.CancellableContinuation;
@@ -48,10 +48,10 @@ public final class WithLifecycleStateKt {
                     CancellableContinuation cancellableContinuation = CancellableContinuation.this;
                     Function0 function02 = function0;
                     try {
-                        Result.C8174a c8174a = Result.Companion;
+                        Result.a aVar = Result.Companion;
                         m1271constructorimpl = Result.m1271constructorimpl(function02.invoke());
                     } catch (Throwable th) {
-                        Result.C8174a c8174a2 = Result.Companion;
+                        Result.a aVar2 = Result.Companion;
                         m1271constructorimpl = Result.m1271constructorimpl(i32.a(th));
                     }
                     cancellableContinuation.resumeWith(m1271constructorimpl);
@@ -59,7 +59,7 @@ public final class WithLifecycleStateKt {
                     lifecycle.removeObserver(this);
                     CancellableContinuation cancellableContinuation2 = CancellableContinuation.this;
                     LifecycleDestroyedException lifecycleDestroyedException = new LifecycleDestroyedException();
-                    Result.C8174a c8174a3 = Result.Companion;
+                    Result.a aVar3 = Result.Companion;
                     cancellableContinuation2.resumeWith(Result.m1271constructorimpl(i32.a(lifecycleDestroyedException)));
                 }
             }
@@ -105,7 +105,7 @@ public final class WithLifecycleStateKt {
             }
         });
         Object result = cancellableContinuationImpl.getResult();
-        d = C8234b.d();
+        d = b.d();
         if (result == d) {
             n40.c(continuation);
         }

@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8148c;
 import io.reactivex.MaybeObserver;
-import io.reactivex.disposables.C8151a;
+import io.reactivex.c;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.disposables.a;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
@@ -11,7 +11,7 @@ import java.util.concurrent.TimeoutException;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeFromFuture<T> extends AbstractC8148c<T> {
+public final class MaybeFromFuture<T> extends c<T> {
     final Future<? extends T> future;
     final long timeout;
     final TimeUnit unit;
@@ -22,10 +22,10 @@ public final class MaybeFromFuture<T> extends AbstractC8148c<T> {
         this.unit = timeUnit;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         Object obj;
-        Disposable b = C8151a.b();
+        Disposable b = a.b();
         maybeObserver.onSubscribe(b);
         if (b.isDisposed()) {
             return;

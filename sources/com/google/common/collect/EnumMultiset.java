@@ -22,7 +22,7 @@ import tb.du1;
 /* compiled from: Taobao */
 @GwtCompatible(emulated = true)
 /* loaded from: classes10.dex */
-public final class EnumMultiset<E extends Enum<E>> extends AbstractC5165d<E> implements Serializable {
+public final class EnumMultiset<E extends Enum<E>> extends d<E> implements Serializable {
     @GwtIncompatible
     private static final long serialVersionUID = 0;
     private transient int[] counts;
@@ -32,15 +32,14 @@ public final class EnumMultiset<E extends Enum<E>> extends AbstractC5165d<E> imp
     private transient Class<E> type;
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.EnumMultiset$a */
     /* loaded from: classes10.dex */
-    class C4952a extends EnumMultiset<E>.AbstractC4955c<E> {
-        C4952a() {
+    class a extends EnumMultiset<E>.c<E> {
+        a() {
             super();
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.EnumMultiset.AbstractC4955c
+        @Override // com.google.common.collect.EnumMultiset.c
         /* renamed from: b */
         public E a(int i) {
             return (E) EnumMultiset.this.enumConstants[i];
@@ -49,18 +48,16 @@ public final class EnumMultiset<E extends Enum<E>> extends AbstractC5165d<E> imp
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.EnumMultiset$b */
     /* loaded from: classes10.dex */
-    public class C4953b extends EnumMultiset<E>.AbstractC4955c<Multiset.Entry<E>> {
+    public class b extends EnumMultiset<E>.c<Multiset.Entry<E>> {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.EnumMultiset$b$a */
         /* loaded from: classes10.dex */
-        public class C4954a extends Multisets.AbstractC5082b<E> {
+        public class a extends Multisets.b<E> {
             final /* synthetic */ int a;
 
-            C4954a(int i) {
+            a(int i) {
                 this.a = i;
             }
 
@@ -76,26 +73,25 @@ public final class EnumMultiset<E extends Enum<E>> extends AbstractC5165d<E> imp
             }
         }
 
-        C4953b() {
+        b() {
             super();
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.EnumMultiset.AbstractC4955c
+        @Override // com.google.common.collect.EnumMultiset.c
         /* renamed from: b */
         public Multiset.Entry<E> a(int i) {
-            return new C4954a(i);
+            return new a(i);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.EnumMultiset$c */
     /* loaded from: classes10.dex */
-    abstract class AbstractC4955c<T> implements Iterator<T> {
+    abstract class c<T> implements Iterator<T> {
         int a = 0;
         int b = -1;
 
-        AbstractC4955c() {
+        c() {
         }
 
         abstract T a(int i);
@@ -127,7 +123,7 @@ public final class EnumMultiset<E extends Enum<E>> extends AbstractC5165d<E> imp
 
         @Override // java.util.Iterator
         public void remove() {
-            C5191k.e(this.b >= 0);
+            k.e(this.b >= 0);
             if (EnumMultiset.this.counts[this.b] > 0) {
                 EnumMultiset.access$210(EnumMultiset.this);
                 EnumMultiset.this.size -= EnumMultiset.this.counts[this.b];
@@ -173,18 +169,18 @@ public final class EnumMultiset<E extends Enum<E>> extends AbstractC5165d<E> imp
         E[] enumConstants = cls.getEnumConstants();
         this.enumConstants = enumConstants;
         this.counts = new int[enumConstants.length];
-        C5174f0.f(this, objectInputStream);
+        f0.f(this, objectInputStream);
     }
 
     @GwtIncompatible
     private void writeObject(ObjectOutputStream objectOutputStream) throws IOException {
         objectOutputStream.defaultWriteObject();
         objectOutputStream.writeObject(this.type);
-        C5174f0.k(this, objectOutputStream);
+        f0.k(this, objectOutputStream);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // com.google.common.collect.AbstractC5165d, com.google.common.collect.Multiset
+    @Override // com.google.common.collect.d, com.google.common.collect.Multiset
     @CanIgnoreReturnValue
     public /* bridge */ /* synthetic */ int add(Object obj, int i) {
         return add((EnumMultiset<E>) ((Enum) obj), i);
@@ -198,14 +194,14 @@ public final class EnumMultiset<E extends Enum<E>> extends AbstractC5165d<E> imp
         throw new ClassCastException("Expected an " + this.type + " but got " + obj);
     }
 
-    @Override // com.google.common.collect.AbstractC5165d, java.util.AbstractCollection, java.util.Collection
+    @Override // com.google.common.collect.d, java.util.AbstractCollection, java.util.Collection
     public void clear() {
         Arrays.fill(this.counts, 0);
         this.size = 0L;
         this.distinctElements = 0;
     }
 
-    @Override // com.google.common.collect.AbstractC5165d, java.util.AbstractCollection, java.util.Collection, com.google.common.collect.Multiset
+    @Override // com.google.common.collect.d, java.util.AbstractCollection, java.util.Collection, com.google.common.collect.Multiset
     public /* bridge */ /* synthetic */ boolean contains(@NullableDecl Object obj) {
         return super.contains(obj);
     }
@@ -218,33 +214,33 @@ public final class EnumMultiset<E extends Enum<E>> extends AbstractC5165d<E> imp
         return this.counts[((Enum) obj).ordinal()];
     }
 
-    @Override // com.google.common.collect.AbstractC5165d
+    @Override // com.google.common.collect.d
     int distinctElements() {
         return this.distinctElements;
     }
 
-    @Override // com.google.common.collect.AbstractC5165d
+    @Override // com.google.common.collect.d
     Iterator<E> elementIterator() {
-        return new C4952a();
+        return new a();
     }
 
-    @Override // com.google.common.collect.AbstractC5165d, com.google.common.collect.Multiset
+    @Override // com.google.common.collect.d, com.google.common.collect.Multiset
     public /* bridge */ /* synthetic */ Set elementSet() {
         return super.elementSet();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    @Override // com.google.common.collect.AbstractC5165d
+    @Override // com.google.common.collect.d
     public Iterator<Multiset.Entry<E>> entryIterator() {
-        return new C4953b();
+        return new b();
     }
 
-    @Override // com.google.common.collect.AbstractC5165d, com.google.common.collect.Multiset
+    @Override // com.google.common.collect.d, com.google.common.collect.Multiset
     public /* bridge */ /* synthetic */ Set entrySet() {
         return super.entrySet();
     }
 
-    @Override // com.google.common.collect.AbstractC5165d, java.util.AbstractCollection, java.util.Collection
+    @Override // com.google.common.collect.d, java.util.AbstractCollection, java.util.Collection
     public /* bridge */ /* synthetic */ boolean isEmpty() {
         return super.isEmpty();
     }
@@ -254,14 +250,14 @@ public final class EnumMultiset<E extends Enum<E>> extends AbstractC5165d<E> imp
         return Multisets.i(this);
     }
 
-    @Override // com.google.common.collect.AbstractC5165d, com.google.common.collect.Multiset
+    @Override // com.google.common.collect.d, com.google.common.collect.Multiset
     @CanIgnoreReturnValue
     public int remove(@NullableDecl Object obj, int i) {
         if (obj == null || !isActuallyE(obj)) {
             return 0;
         }
         Enum r1 = (Enum) obj;
-        C5191k.b(i, "occurrences");
+        k.b(i, "occurrences");
         if (i == 0) {
             return count(obj);
         }
@@ -283,7 +279,7 @@ public final class EnumMultiset<E extends Enum<E>> extends AbstractC5165d<E> imp
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // com.google.common.collect.AbstractC5165d, com.google.common.collect.Multiset
+    @Override // com.google.common.collect.d, com.google.common.collect.Multiset
     @CanIgnoreReturnValue
     public /* bridge */ /* synthetic */ int setCount(Object obj, int i) {
         return setCount((EnumMultiset<E>) ((Enum) obj), i);
@@ -298,14 +294,14 @@ public final class EnumMultiset<E extends Enum<E>> extends AbstractC5165d<E> imp
         Iterator<E> it = iterable.iterator();
         du1.e(it.hasNext(), "EnumMultiset constructor passed empty Iterable");
         EnumMultiset<E> enumMultiset = new EnumMultiset<>(it.next().getDeclaringClass());
-        C5152a0.a(enumMultiset, iterable);
+        a0.a(enumMultiset, iterable);
         return enumMultiset;
     }
 
     @CanIgnoreReturnValue
     public int add(E e, int i) {
         checkIsE(e);
-        C5191k.b(i, "occurrences");
+        k.b(i, "occurrences");
         if (i == 0) {
             return count(e);
         }
@@ -325,7 +321,7 @@ public final class EnumMultiset<E extends Enum<E>> extends AbstractC5165d<E> imp
     @CanIgnoreReturnValue
     public int setCount(E e, int i) {
         checkIsE(e);
-        C5191k.b(i, AdUtConstants.XAD_UT_ARG_COUNT);
+        k.b(i, AdUtConstants.XAD_UT_ARG_COUNT);
         int ordinal = e.ordinal();
         int[] iArr = this.counts;
         int i2 = iArr[ordinal];
@@ -341,7 +337,7 @@ public final class EnumMultiset<E extends Enum<E>> extends AbstractC5165d<E> imp
 
     public static <E extends Enum<E>> EnumMultiset<E> create(Iterable<E> iterable, Class<E> cls) {
         EnumMultiset<E> create = create(cls);
-        C5152a0.a(create, iterable);
+        a0.a(create, iterable);
         return create;
     }
 }

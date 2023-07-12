@@ -46,13 +46,12 @@ public abstract class PendingResultImpl<R extends Result, T extends IMessageEnti
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.support.api.PendingResultImpl$a */
     /* loaded from: classes10.dex */
-    public class C5710a implements DatagramTransport.InterfaceC5723a {
-        C5710a() {
+    public class a implements DatagramTransport.a {
+        a() {
         }
 
-        @Override // com.huawei.hms.support.api.transport.DatagramTransport.InterfaceC5723a
+        @Override // com.huawei.hms.support.api.transport.DatagramTransport.a
         public void a(int i, IMessageEntity iMessageEntity) {
             PendingResultImpl.this.setResult(i, iMessageEntity);
             PendingResultImpl.this.countLatch.countDown();
@@ -61,16 +60,15 @@ public abstract class PendingResultImpl<R extends Result, T extends IMessageEnti
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.support.api.PendingResultImpl$b */
     /* loaded from: classes10.dex */
-    public class C5711b implements DatagramTransport.InterfaceC5723a {
+    public class b implements DatagramTransport.a {
         final /* synthetic */ AtomicBoolean a;
 
-        C5711b(AtomicBoolean atomicBoolean) {
+        b(AtomicBoolean atomicBoolean) {
             this.a = atomicBoolean;
         }
 
-        @Override // com.huawei.hms.support.api.transport.DatagramTransport.InterfaceC5723a
+        @Override // com.huawei.hms.support.api.transport.DatagramTransport.a
         public void a(int i, IMessageEntity iMessageEntity) {
             if (!this.a.get()) {
                 PendingResultImpl.this.setResult(i, iMessageEntity);
@@ -81,19 +79,18 @@ public abstract class PendingResultImpl<R extends Result, T extends IMessageEnti
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.support.api.PendingResultImpl$c */
     /* loaded from: classes10.dex */
-    public class C5712c implements DatagramTransport.InterfaceC5723a {
-        final /* synthetic */ HandlerC5713d a;
+    public class c implements DatagramTransport.a {
+        final /* synthetic */ d a;
         final /* synthetic */ ResultCallback b;
 
-        C5712c(HandlerC5713d handlerC5713d, ResultCallback resultCallback) {
-            this.a = handlerC5713d;
+        c(d dVar, ResultCallback resultCallback) {
+            this.a = dVar;
             this.b = resultCallback;
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        @Override // com.huawei.hms.support.api.transport.DatagramTransport.InterfaceC5723a
+        @Override // com.huawei.hms.support.api.transport.DatagramTransport.a
         public void a(int i, IMessageEntity iMessageEntity) {
             PendingResultImpl.this.setResult(i, iMessageEntity);
             this.a.a(this.b, PendingResultImpl.this.result);
@@ -102,10 +99,9 @@ public abstract class PendingResultImpl<R extends Result, T extends IMessageEnti
 
     /* JADX INFO: Access modifiers changed from: protected */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.support.api.PendingResultImpl$d */
     /* loaded from: classes10.dex */
-    public static class HandlerC5713d<R extends Result> extends Handler {
-        public HandlerC5713d(Looper looper) {
+    public static class d<R extends Result> extends Handler {
+        public d(Looper looper) {
             super(looper);
         }
 
@@ -253,7 +249,7 @@ public abstract class PendingResultImpl<R extends Result, T extends IMessageEnti
         if (this.isNeedReport) {
             biReportEvent(0, 1);
         }
-        this.transport.send(apiClient, new C5710a());
+        this.transport.send(apiClient, new a());
         try {
             this.countLatch.await();
         } catch (InterruptedException unused) {
@@ -318,7 +314,7 @@ public abstract class PendingResultImpl<R extends Result, T extends IMessageEnti
         if (looper == null) {
             looper = Looper.myLooper();
         }
-        HandlerC5713d handlerC5713d = new HandlerC5713d(looper);
+        d dVar = new d(looper);
         WeakReference<ApiClient> weakReference = this.api;
         if (weakReference == null) {
             HMSLog.e(TAG, "api is null");
@@ -329,13 +325,13 @@ public abstract class PendingResultImpl<R extends Result, T extends IMessageEnti
         if (!checkApiClient(apiClient)) {
             HMSLog.e(TAG, "client is invalid");
             setResult(CommonCode.ErrorCode.CLIENT_API_INVALID, null);
-            handlerC5713d.a(resultCallback, this.result);
+            dVar.a(resultCallback, this.result);
             return;
         }
         if (this.isNeedReport) {
             biReportEvent(0, 1);
         }
-        this.transport.post(apiClient, new C5712c(handlerC5713d, resultCallback));
+        this.transport.post(apiClient, new c(dVar, resultCallback));
     }
 
     @Override // com.huawei.hms.support.api.client.PendingResult
@@ -381,7 +377,7 @@ public abstract class PendingResultImpl<R extends Result, T extends IMessageEnti
         if (this.isNeedReport) {
             biReportEvent(0, 1);
         }
-        this.transport.post(apiClient, new C5711b(atomicBoolean));
+        this.transport.post(apiClient, new b(atomicBoolean));
         try {
             if (!this.countLatch.await(j, timeUnit)) {
                 atomicBoolean.set(true);

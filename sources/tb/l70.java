@@ -37,7 +37,7 @@ public final class l70 extends dj implements DeserializedCallableMemberDescripto
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // tb.dj, kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a
+    @Override // tb.dj, kotlin.reflect.jvm.internal.impl.descriptors.impl.a
     @NotNull
     /* renamed from: L */
     public l70 f(@NotNull DeclarationDescriptor declarationDescriptor, @Nullable FunctionDescriptor functionDescriptor, @NotNull CallableMemberDescriptor.Kind kind, @Nullable ni1 ni1Var, @NotNull Annotations annotations, @NotNull SourceElement sourceElement) {
@@ -95,25 +95,25 @@ public final class l70 extends dj implements DeserializedCallableMemberDescripto
     @Override // kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedMemberDescriptor
     @NotNull
     public List<hx2> getVersionRequirements() {
-        return DeserializedCallableMemberDescriptor.C8511a.a(this);
+        return DeserializedCallableMemberDescriptor.a.a(this);
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.MemberDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.MemberDescriptor
     public boolean isExternal() {
         return false;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor
     public boolean isInline() {
         return false;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor
     public boolean isSuspend() {
         return false;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor
     public boolean isTailrec() {
         return false;
     }

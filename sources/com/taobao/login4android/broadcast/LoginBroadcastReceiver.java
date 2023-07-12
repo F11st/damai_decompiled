@@ -13,9 +13,8 @@ public class LoginBroadcastReceiver extends BroadcastReceiver {
     private static final String TAG = "login.LoginBroadcastReceiver";
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.broadcast.LoginBroadcastReceiver$a */
     /* loaded from: classes11.dex */
-    static /* synthetic */ class C6712a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -58,7 +57,7 @@ public class LoginBroadcastReceiver extends BroadcastReceiver {
             if (valueOf == null) {
                 return;
             }
-            switch (C6712a.a[valueOf.ordinal()]) {
+            switch (a.a[valueOf.ordinal()]) {
                 case 1:
                 case 2:
                 case 3:

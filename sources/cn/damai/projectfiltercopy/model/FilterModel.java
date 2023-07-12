@@ -67,9 +67,8 @@ public class FilterModel implements FloatListener, BtnInfoProvider, RequestParam
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.projectfiltercopy.model.FilterModel$a */
     /* loaded from: classes15.dex */
-    public static /* synthetic */ class C1537a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -114,11 +113,11 @@ public class FilterModel implements FloatListener, BtnInfoProvider, RequestParam
         if (bb2.d(list)) {
             return null;
         }
-        List<FilterBean> a = jh0.a(list);
-        jh0.b(a, this.mCalendarBean);
-        jh0.c(a, this.mFilterMap, this.mGroupKeyInFilterBtn);
-        jh0.d(a, this.mFastGroupIdSelected);
-        return a;
+        List<FilterBean> a2 = jh0.a(list);
+        jh0.b(a2, this.mCalendarBean);
+        jh0.c(a2, this.mFilterMap, this.mGroupKeyInFilterBtn);
+        jh0.d(a2, this.mFastGroupIdSelected);
+        return a2;
     }
 
     private void createRequestParams() {
@@ -260,7 +259,7 @@ public class FilterModel implements FloatListener, BtnInfoProvider, RequestParam
         if (AndroidInstantRuntime.support(ipChange, "-1997763993")) {
             return (qd) ipChange.ipc$dispatch("-1997763993", new Object[]{this, type});
         }
-        int i = C1537a.a[type.ordinal()];
+        int i = a.a[type.ordinal()];
         if (i != 1) {
             if (i != 2) {
                 if (i != 3) {
@@ -345,15 +344,15 @@ public class FilterModel implements FloatListener, BtnInfoProvider, RequestParam
         } else {
             this.supportBtnType.add(Type.DATE_HOR_CALENDAR);
         }
-        List<Day> a = of.a(this.mCalendarEntityList, this.mYearBeanList);
+        List<Day> a2 = of.a(this.mCalendarEntityList, this.mYearBeanList);
         Day t = of.t();
-        if (!bb2.d(a)) {
-            int indexOf = a.indexOf(t);
+        if (!bb2.d(a2)) {
+            int indexOf = a2.indexOf(t);
             if (indexOf >= 0) {
-                a.get(indexOf).isToday = true;
-                this.mTotalDayList = a.subList(indexOf, a.size());
+                a2.get(indexOf).isToday = true;
+                this.mTotalDayList = a2.subList(indexOf, a2.size());
             } else {
-                this.mTotalDayList = a;
+                this.mTotalDayList = a2;
             }
         }
         this.mSelectDayList = of.j(this.mCalendarBean);
@@ -442,7 +441,7 @@ public class FilterModel implements FloatListener, BtnInfoProvider, RequestParam
             ipChange.ipc$dispatch("-487086273", new Object[]{this, type, filterData});
             return;
         }
-        int i = C1537a.a[type.ordinal()];
+        int i = a.a[type.ordinal()];
         if (i == 1) {
             this.mSortBean = filterData.mSortBean;
         } else if (i == 2) {

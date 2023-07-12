@@ -5,7 +5,6 @@ import android.text.TextUtils;
 import cn.damai.common.DamaiConstants;
 import cn.damai.common.R$string;
 import cn.damai.common.app.ShareperfenceConstants;
-import cn.damai.common.user.C0529c;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.wireless.security.sdk.SecurityGuardManager;
@@ -531,7 +530,7 @@ public class z20 implements ShareperfenceConstants {
         }
         A(ShareperfenceConstants.USER_SHAREPERFENCE, 0).edit().putString(ShareperfenceConstants.HAVANA_USERID, str).commit();
         if (TextUtils.isEmpty(str)) {
-            C0529c.e().w("havanaid");
+            cn.damai.common.user.c.e().w("havanaid");
         } else {
             l23.INSTANCE.d(str);
         }
@@ -747,7 +746,7 @@ public class z20 implements ShareperfenceConstants {
         }
         A(ShareperfenceConstants.USER_SHAREPERFENCE, 0).edit().putString(ShareperfenceConstants.USERCODE, str).commit();
         if (TextUtils.isEmpty(str)) {
-            C0529c.e().w("usercode");
+            cn.damai.common.user.c.e().w("usercode");
         }
     }
 

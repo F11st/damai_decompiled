@@ -26,7 +26,6 @@ import cn.damai.common.badge.DMBadgeListener;
 import cn.damai.common.badge.bean.BadgeNodeItem;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.homepage.R$color;
 import cn.damai.homepage.R$dimen;
 import cn.damai.homepage.R$drawable;
@@ -57,7 +56,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import kotlin.jvm.JvmOverloads;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -122,22 +121,21 @@ public final class HomePageGuideBar extends LinearLayout implements LifecycleObs
     @NotNull
     private final View statusBarSpace;
     @NotNull
-    public static final C1177a Companion = new C1177a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static List<String> SEARCH_TEXT_LIST = new ArrayList();
     @NotNull
     private static final HashMap<String, KeyWord> TEXT_MAPPING = new HashMap<>();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.view.HomePageGuideBar$a */
     /* loaded from: classes14.dex */
-    public static final class C1177a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C1177a() {
+        private a() {
         }
 
-        public /* synthetic */ C1177a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -149,14 +147,13 @@ public final class HomePageGuideBar extends LinearLayout implements LifecycleObs
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.view.HomePageGuideBar$b */
     /* loaded from: classes5.dex */
-    public static final class C1178b implements IPermissionListener {
+    public static final class b implements IPermissionListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ List<String> b;
         final /* synthetic */ Activity c;
 
-        C1178b(List<String> list, Activity activity) {
+        b(List<String> list, Activity activity) {
             this.b = list;
             this.c = activity;
         }
@@ -219,24 +216,23 @@ public final class HomePageGuideBar extends LinearLayout implements LifecycleObs
             gr1.a(context, "授权获取相机权限,用于提供扫码服务", list, false, new DialogInterface.OnClickListener() { // from class: tb.iy0
                 @Override // android.content.DialogInterface.OnClickListener
                 public final void onClick(DialogInterface dialogInterface, int i) {
-                    HomePageGuideBar.C1178b.c(activity, dialogInterface, i);
+                    HomePageGuideBar.b.c(activity, dialogInterface, i);
                 }
             }, new DialogInterface.OnClickListener() { // from class: tb.jy0
                 @Override // android.content.DialogInterface.OnClickListener
                 public final void onClick(DialogInterface dialogInterface, int i) {
-                    HomePageGuideBar.C1178b.d(dialogInterface, i);
+                    HomePageGuideBar.b.d(dialogInterface, i);
                 }
             });
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.view.HomePageGuideBar$c */
     /* loaded from: classes5.dex */
-    public static final class C1179c implements DMBadgeListener {
+    public static final class c implements DMBadgeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1179c() {
+        c() {
         }
 
         @Override // cn.damai.common.badge.DMBadgeListener
@@ -389,7 +385,7 @@ public final class HomePageGuideBar extends LinearLayout implements LifecycleObs
         PermissionModel permissionModel = new PermissionModel(strArr, null, null, "授权获取相机权限,用于提供扫码服务");
         Application application = AppInfoProviderProxy.getApplication();
         b41.h(application, "getApplication()");
-        new Permission(application, permissionModel).a(new C1178b(arrayList, activity)).b();
+        new Permission(application, permissionModel).a(new b(arrayList, activity)).b();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -465,7 +461,7 @@ public final class HomePageGuideBar extends LinearLayout implements LifecycleObs
             ipChange.ipc$dispatch("573774191", new Object[]{this, activity});
             return;
         }
-        int a = bv0.INSTANCE.a(activity);
+        int a2 = bv0.INSTANCE.a(activity);
         if (Build.VERSION.SDK_INT >= 23) {
             this.statusBarSpace.getLayoutParams().height = kg2.a(activity);
             this.statusBarSpace.setVisibility(0);
@@ -475,7 +471,7 @@ public final class HomePageGuideBar extends LinearLayout implements LifecycleObs
             kg2.f(activity, false, R$color.black);
             this.statusBarSpace.setVisibility(8);
         }
-        this.mTitleBar.getLayoutParams().height = a;
+        this.mTitleBar.getLayoutParams().height = a2;
         invalidate();
     }
 
@@ -509,9 +505,9 @@ public final class HomePageGuideBar extends LinearLayout implements LifecycleObs
         Bundle bundle = new Bundle();
         if (z) {
             bundle.putString("autowords", str);
-            C0529c.e().x(py0.I().E(str));
+            cn.damai.common.user.c.e().x(py0.I().E(str));
         } else {
-            C0529c.e().x(py0.I().F(str, keyWord));
+            cn.damai.common.user.c.e().x(py0.I().F(str, keyWord));
         }
         bundle.putString(OneArchConstants.LayoutKey.KEY_WORDS, str);
         bundle.putString(YKActionSheet.ACTION_STYLE_DESCRIBE, str);
@@ -541,10 +537,10 @@ public final class HomePageGuideBar extends LinearLayout implements LifecycleObs
             return;
         }
         b41.i(homePageGuideBar, "this$0");
-        lt1 a = lt1.Companion.a();
-        String c = z20.c();
-        b41.h(c, "getCityId()");
-        a.r(c);
+        lt1 a2 = lt1.Companion.a();
+        String c2 = z20.c();
+        b41.h(c2, "getCityId()");
+        a2.r(c2);
         homePageGuideBar.updateShowCity();
     }
 
@@ -562,7 +558,7 @@ public final class HomePageGuideBar extends LinearLayout implements LifecycleObs
             if (uqVar != null) {
                 uqVar.g(DM_MSGBOX, this.mBadgeListener);
             }
-            j = C8214m.j(DM_MSGBOX, uq.f);
+            j = m.j(DM_MSGBOX, uq.f);
             uq uqVar2 = this.mBadgManager;
             if (uqVar2 != null) {
                 uqVar2.d(j);
@@ -792,6 +788,6 @@ public final class HomePageGuideBar extends LinearLayout implements LifecycleObs
         this.mMessageTip = (TextView) findViewById13;
         initView();
         listenDMMessage();
-        this.mBadgeListener = new C1179c();
+        this.mBadgeListener = new c();
     }
 }

@@ -5,7 +5,7 @@ import android.os.Looper;
 import android.text.TextUtils;
 import com.taobao.android.dinamic.DViewGenerator;
 import com.taobao.android.dinamic.tempate.DinamicTemplate;
-import com.taobao.android.dinamicx.C6368e;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import com.taobao.android.dinamicx.template.download.DXTemplateItem;
 import java.lang.reflect.Field;
@@ -52,7 +52,7 @@ public class DPreRenderTask implements Runnable {
                 if (TextUtils.isEmpty(b) || (!b.contains(p80.ERROR_CODE_TEMPLATE_FILE_LOST) && !b.contains(p80.ERROR_CODE_TEMPLATE_NOT_FOUND))) {
                     DXTemplateItem transformTemplateToV3 = next != null ? transformTemplateToV3(next) : null;
                     String str = this.module;
-                    DXAppMonitor.q(str, transformTemplateToV3, "AsyncRender", "Pre_Render_2.0_Fail", C6368e.V2_PRE_RENDER_FAIL, "asyncCreateTemplateView fail" + j.b().b());
+                    DXAppMonitor.q(str, transformTemplateToV3, "AsyncRender", "Pre_Render_2.0_Fail", e.V2_PRE_RENDER_FAIL, "asyncCreateTemplateView fail" + j.b().b());
                 }
             }
         }
@@ -88,7 +88,7 @@ public class DPreRenderTask implements Runnable {
             }
             preRenderTemplate(new yx2(this.context));
         } catch (Throwable th) {
-            DXAppMonitor.q(r10.DB_NAME, null, "AsyncRender", "Pre_Render_2.0_Crash", C6368e.V2_PRE_RENDER_CRASH, ry.a(th));
+            DXAppMonitor.q(r10.DB_NAME, null, "AsyncRender", "Pre_Render_2.0_Crash", e.V2_PRE_RENDER_CRASH, ry.a(th));
         }
     }
 }

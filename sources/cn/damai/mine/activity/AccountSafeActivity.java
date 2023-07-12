@@ -14,7 +14,6 @@ import cn.damai.common.AppConfig;
 import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.model.CertificationInfoBean;
@@ -80,12 +79,11 @@ public class AccountSafeActivity extends DamaiBaseActivity {
     private TextView tv_real_name;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.AccountSafeActivity$a */
     /* loaded from: classes6.dex */
-    public class C1355a implements UserInfoUtil.OnUserInfoListener {
+    public class a implements UserInfoUtil.OnUserInfoListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1355a() {
+        a() {
         }
 
         @Override // cn.damai.im.UserInfoUtil.OnUserInfoListener
@@ -112,12 +110,11 @@ public class AccountSafeActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.AccountSafeActivity$b */
     /* loaded from: classes15.dex */
-    public class DialogInterface$OnClickListenerC1356b implements DialogInterface.OnClickListener {
+    public class b implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC1356b() {
+        b() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -127,18 +124,17 @@ public class AccountSafeActivity extends DamaiBaseActivity {
                 ipChange.ipc$dispatch("12256049", new Object[]{this, dialogInterface, Integer.valueOf(i)});
                 return;
             }
-            C0529c.e().x(vf1.x().l());
+            cn.damai.common.user.c.e().x(vf1.x().l());
             AccountSafeActivity.this.setTencentPermissionAndOpenAuth();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.AccountSafeActivity$c */
     /* loaded from: classes15.dex */
-    public class DialogInterface$OnClickListenerC1357c implements DialogInterface.OnClickListener {
+    public class c implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC1357c(AccountSafeActivity accountSafeActivity) {
+        c(AccountSafeActivity accountSafeActivity) {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -147,19 +143,18 @@ public class AccountSafeActivity extends DamaiBaseActivity {
             if (AndroidInstantRuntime.support(ipChange, "981837072")) {
                 ipChange.ipc$dispatch("981837072", new Object[]{this, dialogInterface, Integer.valueOf(i)});
             } else {
-                C0529c.e().x(vf1.x().k());
+                cn.damai.common.user.c.e().x(vf1.x().k());
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.AccountSafeActivity$d */
     /* loaded from: classes6.dex */
-    public class C1358d implements MemberCallback<String> {
+    public class d implements MemberCallback<String> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C1358d(String str) {
+        d(String str) {
             this.a = str;
         }
 
@@ -260,7 +255,7 @@ public class AccountSafeActivity extends DamaiBaseActivity {
             personalInfoRequest.needUserBaseInfo = "true";
             personalInfoRequest.needCertificationBaseInfo = "true";
             personalInfoRequest.canAcceptDelay = "false";
-            UserInfoUtil.b(personalInfoRequest, new C1355a());
+            UserInfoUtil.b(personalInfoRequest, new a());
         }
     }
 
@@ -396,7 +391,7 @@ public class AccountSafeActivity extends DamaiBaseActivity {
             str = DataProviderFactory.getDataProvider().getEnvType() == 2 ? "https://market.wapa.taobao.com/app/vip/ucc/pages/bind_manage?env=pre" : "https://market.m.taobao.com/app/vip/ucc/pages/bind_manage?";
         }
         if (((UccService) AliMemberSDK.getService(UccService.class)).getUccDataProvider() != null) {
-            ((UccService) AliMemberSDK.getService(UccService.class)).getUccDataProvider().getUserToken("", new C1358d(str));
+            ((UccService) AliMemberSDK.getService(UccService.class)).getUccDataProvider().getUserToken("", new d(str));
         } else {
             SNSAuth.toastBusy("data provider为空");
         }
@@ -536,22 +531,22 @@ public class AccountSafeActivity extends DamaiBaseActivity {
         }
         int id = view.getId();
         if (id == R$id.ray_bind_phone) {
-            String b = cm2.b(this, R$string.damai_usercenter_phone_number);
-            C0529c.e().x(vf1.x().g());
+            String b2 = cm2.b(this, R$string.damai_usercenter_phone_number);
+            cn.damai.common.user.c.e().x(vf1.x().g());
             if (uf1.a().c()) {
                 LoginManager.k().f(this);
             } else {
-                onClickSafetyCenter("https://msecurity.damai.cn/securityCenter-front-wap/automatic/mobile/start", b, true);
+                onClickSafetyCenter("https://msecurity.damai.cn/securityCenter-front-wap/automatic/mobile/start", b2, true);
             }
         } else if (id == R$id.ray_login_pw) {
-            C0529c.e().x(vf1.x().f());
+            cn.damai.common.user.c.e().x(vf1.x().f());
             LoginManager.k().g(this);
         } else if (id == R$id.ray_pay_pw) {
-            String b2 = cm2.b(this, R$string.damai_usercenter_pay_password);
-            C0529c.e().x(vf1.x().h());
-            onClickSafetyCenter("https://msecurity.damai.cn/securityCenter-front-wap/automatic/paypassword/start", b2, true);
+            String b3 = cm2.b(this, R$string.damai_usercenter_pay_password);
+            cn.damai.common.user.c.e().x(vf1.x().h());
+            onClickSafetyCenter("https://msecurity.damai.cn/securityCenter-front-wap/automatic/paypassword/start", b3, true);
         } else if (id == R$id.rl_real_name) {
-            C0529c.e().x(vf1.x().i());
+            cn.damai.common.user.c.e().x(vf1.x().i());
             gotoAuth();
         } else if (id == R$id.mine_title_left_icon_font_tv) {
             finish();
@@ -559,7 +554,7 @@ public class AccountSafeActivity extends DamaiBaseActivity {
             String str = view.getTag() != null ? (String) view.getTag() : null;
             if (!TextUtils.isEmpty(str)) {
                 vf1.x().m0(this.accountSettingly);
-                new DMDialog(this).v("温馨提示").q(str).h("取消", Color.parseColor("#000000"), new DialogInterface$OnClickListenerC1357c(this)).m("继续", Color.parseColor("#ff2d79"), new DialogInterface$OnClickListenerC1356b()).show();
+                new DMDialog(this).v("温馨提示").q(str).h("取消", Color.parseColor("#000000"), new c(this)).m("继续", Color.parseColor("#ff2d79"), new b()).show();
                 return;
             }
             setTencentPermissionAndOpenAuth();
@@ -572,7 +567,7 @@ public class AccountSafeActivity extends DamaiBaseActivity {
             }
             DMNav.from(this).toUri(str2);
         } else if (id == R$id.rv_max_vip) {
-            C0529c.e().x(vf1.x().m());
+            cn.damai.common.user.c.e().x(vf1.x().m());
             DMNav.from(this).toUri(k23.c());
         } else {
             super.onClick(view);
@@ -603,7 +598,7 @@ public class AccountSafeActivity extends DamaiBaseActivity {
         }
         super.onCreate(bundle);
         setDamaiUTKeyBuilder(vf1.x().j());
-        C0529c.e().K(this);
+        cn.damai.common.user.c.e().K(this);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */

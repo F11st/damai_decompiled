@@ -5,7 +5,7 @@ import android.view.View;
 import cn.damai.comment.bean.CommentSyncCircleBean;
 import cn.damai.comment.bean.CommentUserDoBean;
 import cn.damai.comment.bean.CommentsItemBean;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.evaluate.ui.item.EvaluateItemDataBinder;
 import cn.damai.evaluate.ui.item.EvaluateItemViewHolder;
@@ -32,12 +32,11 @@ public class ProjectEvaluateViewHolder extends EvaluateItemViewHolder {
     private EvaluateItemDataBinder.EvaluateItemUTReportListener J;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectEvaluateViewHolder$a */
     /* loaded from: classes8.dex */
-    public class C2393a implements EvaluateItemDataBinder.EvaluateItemUTReportListener {
+    public class a implements EvaluateItemDataBinder.EvaluateItemUTReportListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2393a() {
+        a() {
         }
 
         @Override // cn.damai.evaluate.ui.item.EvaluateItemDataBinder.EvaluateItemUTReportListener
@@ -46,7 +45,7 @@ public class ProjectEvaluateViewHolder extends EvaluateItemViewHolder {
             if (AndroidInstantRuntime.support(ipChange, "2037967769")) {
                 ipChange.ipc$dispatch("2037967769", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i), Integer.valueOf(i2)});
             } else if (ProjectEvaluateViewHolder.this.H != null) {
-                C0529c.e().x(pp2.u().u0(z20.E(), ProjectEvaluateViewHolder.this.C, ProjectEvaluateViewHolder.this.H.getCommentId(), ProjectEvaluateViewHolder.this.e(), ProjectEvaluateViewHolder.this.H.getCommentType(), ProjectEvaluateViewHolder.this.I));
+                c.e().x(pp2.u().u0(z20.E(), ProjectEvaluateViewHolder.this.C, ProjectEvaluateViewHolder.this.H.getCommentId(), ProjectEvaluateViewHolder.this.e(), ProjectEvaluateViewHolder.this.H.getCommentType(), ProjectEvaluateViewHolder.this.I));
             }
         }
 
@@ -56,7 +55,7 @@ public class ProjectEvaluateViewHolder extends EvaluateItemViewHolder {
             if (AndroidInstantRuntime.support(ipChange, "-1044528682")) {
                 ipChange.ipc$dispatch("-1044528682", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
             } else if (ProjectEvaluateViewHolder.this.H != null) {
-                C0529c.e().x(pp2.u().p0(z20.E(), ProjectEvaluateViewHolder.this.C, ProjectEvaluateViewHolder.this.H.getCommentId(), ProjectEvaluateViewHolder.this.e(), ProjectEvaluateViewHolder.this.H.getCommentType(), ProjectEvaluateViewHolder.this.I));
+                c.e().x(pp2.u().p0(z20.E(), ProjectEvaluateViewHolder.this.C, ProjectEvaluateViewHolder.this.H.getCommentId(), ProjectEvaluateViewHolder.this.e(), ProjectEvaluateViewHolder.this.H.getCommentType(), ProjectEvaluateViewHolder.this.I));
             }
         }
 
@@ -66,7 +65,7 @@ public class ProjectEvaluateViewHolder extends EvaluateItemViewHolder {
             if (AndroidInstantRuntime.support(ipChange, "-1021160506")) {
                 ipChange.ipc$dispatch("-1021160506", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
             } else if (ProjectEvaluateViewHolder.this.H != null) {
-                C0529c.e().x(pp2.u().t0(z20.E(), ProjectEvaluateViewHolder.this.C, ProjectEvaluateViewHolder.this.H.getCommentId(), ProjectEvaluateViewHolder.this.e(), ProjectEvaluateViewHolder.this.H.getCommentType(), ProjectEvaluateViewHolder.this.I));
+                c.e().x(pp2.u().t0(z20.E(), ProjectEvaluateViewHolder.this.C, ProjectEvaluateViewHolder.this.H.getCommentId(), ProjectEvaluateViewHolder.this.e(), ProjectEvaluateViewHolder.this.H.getCommentType(), ProjectEvaluateViewHolder.this.I));
             }
         }
 
@@ -76,7 +75,7 @@ public class ProjectEvaluateViewHolder extends EvaluateItemViewHolder {
             if (AndroidInstantRuntime.support(ipChange, "266220200")) {
                 ipChange.ipc$dispatch("266220200", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
             } else if (ProjectEvaluateViewHolder.this.H != null) {
-                C0529c.e().x(pp2.u().r0(z20.E(), ProjectEvaluateViewHolder.this.C, ProjectEvaluateViewHolder.this.H.getCommentId(), ProjectEvaluateViewHolder.this.e(), ProjectEvaluateViewHolder.this.H.getCommentType(), ProjectEvaluateViewHolder.this.I));
+                c.e().x(pp2.u().r0(z20.E(), ProjectEvaluateViewHolder.this.C, ProjectEvaluateViewHolder.this.H.getCommentId(), ProjectEvaluateViewHolder.this.e(), ProjectEvaluateViewHolder.this.H.getCommentType(), ProjectEvaluateViewHolder.this.I));
             }
         }
 
@@ -86,7 +85,7 @@ public class ProjectEvaluateViewHolder extends EvaluateItemViewHolder {
             if (AndroidInstantRuntime.support(ipChange, "-109511735")) {
                 ipChange.ipc$dispatch("-109511735", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
             } else if (ProjectEvaluateViewHolder.this.H != null) {
-                C0529c.e().x(pp2.u().v0(z20.E(), ProjectEvaluateViewHolder.this.C, ProjectEvaluateViewHolder.this.H.getCommentId(), ProjectEvaluateViewHolder.this.e(), ProjectEvaluateViewHolder.this.H.getCommentType(), ProjectEvaluateViewHolder.this.I));
+                c.e().x(pp2.u().v0(z20.E(), ProjectEvaluateViewHolder.this.C, ProjectEvaluateViewHolder.this.H.getCommentId(), ProjectEvaluateViewHolder.this.e(), ProjectEvaluateViewHolder.this.H.getCommentType(), ProjectEvaluateViewHolder.this.I));
             }
         }
 
@@ -98,7 +97,7 @@ public class ProjectEvaluateViewHolder extends EvaluateItemViewHolder {
                 ipChange.ipc$dispatch("-333043106", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
             } else if (ProjectEvaluateViewHolder.this.H == null || (syncCircle = ProjectEvaluateViewHolder.this.H.getSyncCircle()) == null || syncCircle.isEmpty()) {
             } else {
-                C0529c.e().x(pp2.u().o0(z20.E(), ProjectEvaluateViewHolder.this.C, ProjectEvaluateViewHolder.this.H.getCommentId(), syncCircle.get(0).getCircleId(), ProjectEvaluateViewHolder.this.e(), ProjectEvaluateViewHolder.this.H.getCommentType(), ProjectEvaluateViewHolder.this.I));
+                c.e().x(pp2.u().o0(z20.E(), ProjectEvaluateViewHolder.this.C, ProjectEvaluateViewHolder.this.H.getCommentId(), syncCircle.get(0).getCircleId(), ProjectEvaluateViewHolder.this.e(), ProjectEvaluateViewHolder.this.H.getCommentType(), ProjectEvaluateViewHolder.this.I));
             }
         }
 
@@ -108,7 +107,7 @@ public class ProjectEvaluateViewHolder extends EvaluateItemViewHolder {
             if (AndroidInstantRuntime.support(ipChange, "831949950")) {
                 ipChange.ipc$dispatch("831949950", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
             } else if (ProjectEvaluateViewHolder.this.H != null) {
-                C0529c.e().x(pp2.u().q0(z20.E(), ProjectEvaluateViewHolder.this.C, ProjectEvaluateViewHolder.this.H.getCommentId(), ProjectEvaluateViewHolder.this.e(), ProjectEvaluateViewHolder.this.H.getCommentType(), ProjectEvaluateViewHolder.this.I));
+                c.e().x(pp2.u().q0(z20.E(), ProjectEvaluateViewHolder.this.C, ProjectEvaluateViewHolder.this.H.getCommentId(), ProjectEvaluateViewHolder.this.e(), ProjectEvaluateViewHolder.this.H.getCommentType(), ProjectEvaluateViewHolder.this.I));
             }
         }
 
@@ -118,7 +117,7 @@ public class ProjectEvaluateViewHolder extends EvaluateItemViewHolder {
             if (AndroidInstantRuntime.support(ipChange, "-2033163888")) {
                 ipChange.ipc$dispatch("-2033163888", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
             } else if (ProjectEvaluateViewHolder.this.H != null) {
-                C0529c.e().x(pp2.u().w0(z20.E(), ProjectEvaluateViewHolder.this.C, ProjectEvaluateViewHolder.this.H.getCommentId(), ProjectEvaluateViewHolder.this.e(), ProjectEvaluateViewHolder.this.H.getCommentType(), ProjectEvaluateViewHolder.this.I));
+                c.e().x(pp2.u().w0(z20.E(), ProjectEvaluateViewHolder.this.C, ProjectEvaluateViewHolder.this.H.getCommentId(), ProjectEvaluateViewHolder.this.e(), ProjectEvaluateViewHolder.this.H.getCommentType(), ProjectEvaluateViewHolder.this.I));
             }
         }
     }
@@ -149,7 +148,7 @@ public class ProjectEvaluateViewHolder extends EvaluateItemViewHolder {
         if (AndroidInstantRuntime.support(ipChange, "1777157074")) {
             ipChange.ipc$dispatch("1777157074", new Object[]{this});
         } else {
-            this.J = new C2393a();
+            this.J = new a();
         }
     }
 

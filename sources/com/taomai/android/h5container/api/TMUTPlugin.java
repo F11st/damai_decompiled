@@ -13,7 +13,7 @@ import com.ut.mini.internal.UTOriginalCustomHitBuilder;
 import java.util.HashMap;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.collections.C8226x;
+import kotlin.collections.x;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -27,16 +27,15 @@ public final class TMUTPlugin extends TaoMaiApiPlugin {
     @NotNull
     public static final String ACTION_USER_TRACK = "usertrack";
     @NotNull
-    public static final C7000a Companion = new C7000a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMUTPlugin$a */
     /* loaded from: classes11.dex */
-    public static final class C7000a {
-        private C7000a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C7000a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -51,20 +50,20 @@ public final class TMUTPlugin extends TaoMaiApiPlugin {
     }
 
     public final boolean userTrack(@Nullable String str, @Nullable WVCallBackContext wVCallBackContext) {
-        JSONObject a = str != null ? kh2.a(str) : null;
-        if (a == null) {
+        JSONObject a2 = str != null ? kh2.a(str) : null;
+        if (a2 == null) {
             if (wVCallBackContext != null) {
                 wVCallBackContext.error();
             }
             return true;
         }
-        String string = a.getString("page");
-        Integer integer = a.getInteger("eventId");
-        String string2 = a.getString("arg1");
-        String string3 = a.getString("arg2");
-        String string4 = a.getString(UTDataCollectorNodeColumn.ARG3);
-        JSONObject jSONObject = a.getJSONObject("args");
-        Map t = jSONObject != null ? C8226x.t(jSONObject) : null;
+        String string = a2.getString("page");
+        Integer integer = a2.getInteger("eventId");
+        String string2 = a2.getString("arg1");
+        String string3 = a2.getString("arg2");
+        String string4 = a2.getString(UTDataCollectorNodeColumn.ARG3);
+        JSONObject jSONObject = a2.getJSONObject("args");
+        Map t = jSONObject != null ? x.t(jSONObject) : null;
         HashMap hashMap = t instanceof HashMap ? t : null;
         if (integer != null && integer.intValue() == 2101) {
             UTHitBuilders.UTControlHitBuilder uTControlHitBuilder = !(string == null || string.length() == 0) ? new UTHitBuilders.UTControlHitBuilder(string, string2) : new UTHitBuilders.UTControlHitBuilder(string2);

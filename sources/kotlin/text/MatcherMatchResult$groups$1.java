@@ -2,7 +2,6 @@ package kotlin.text;
 
 import java.util.Iterator;
 import kotlin.collections.AbstractCollection;
-import kotlin.collections.C8214m;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.jvm.functions.Function1;
 import kotlin.sequences.Sequence;
@@ -45,7 +44,7 @@ public final class MatcherMatchResult$groups$1 extends AbstractCollection<md1> i
     @Nullable
     public md1 get(int i) {
         n31 i2;
-        i2 = C8594e.i(this.a.b(), i);
+        i2 = e.i(this.a.b(), i);
         if (i2.getStart().intValue() >= 0) {
             String group = this.a.b().group(i);
             b41.h(group, "matchResult.group(index)");
@@ -65,7 +64,7 @@ public final class MatcherMatchResult$groups$1 extends AbstractCollection<md1> i
         n31 h;
         Sequence I;
         Sequence v;
-        h = C8214m.h(this);
+        h = kotlin.collections.m.h(this);
         I = CollectionsKt___CollectionsKt.I(h);
         v = SequencesKt___SequencesKt.v(I, new Function1<Integer, md1>() { // from class: kotlin.text.MatcherMatchResult$groups$1$iterator$1
             /* JADX INFO: Access modifiers changed from: package-private */

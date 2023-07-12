@@ -43,8 +43,7 @@ import cn.damai.comment.util.SoftInputUtils;
 import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.share.ShareManager;
@@ -69,7 +68,6 @@ import com.tencent.connect.common.Constants;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import tb.C9548pb;
 import tb.al;
 import tb.bl;
 import tb.cb2;
@@ -79,6 +77,7 @@ import tb.dl;
 import tb.g41;
 import tb.kg2;
 import tb.m62;
+import tb.pb;
 import tb.pf0;
 import tb.t60;
 import tb.xr;
@@ -104,7 +103,7 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
     private CommentRepertoireInfoBean mCurrentRepertoireInfoBean;
     private TextView mErrorTips;
     private LinearLayout mErrorView;
-    private HandlerC0449g mHandler;
+    private g mHandler;
     private LinearLayoutManager mLinearLayoutManager;
     private CommentsItemBean mMainCommentItemBean;
     private DMEvaluateDetailHeadView mMainEvaluateHeadCardView;
@@ -127,12 +126,11 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
     private int mVTag = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.ui.CommentDetailActivity$a */
     /* loaded from: classes13.dex */
-    public class C0443a implements TextWatcher {
+    public class a implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0443a() {
+        a() {
         }
 
         @Override // android.text.TextWatcher
@@ -168,12 +166,11 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.ui.CommentDetailActivity$b */
     /* loaded from: classes4.dex */
-    public class C0444b implements SoftInputUtils.OnSoftKeyboardChangeListener {
+    public class b implements SoftInputUtils.OnSoftKeyboardChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0444b() {
+        b() {
         }
 
         @Override // cn.damai.comment.util.SoftInputUtils.OnSoftKeyboardChangeListener
@@ -200,12 +197,11 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.ui.CommentDetailActivity$c */
     /* loaded from: classes13.dex */
-    public class View$OnTouchListenerC0445c implements View.OnTouchListener {
+    public class c implements View.OnTouchListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnTouchListenerC0445c() {
+        c() {
         }
 
         @Override // android.view.View.OnTouchListener
@@ -222,12 +218,11 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.ui.CommentDetailActivity$d */
     /* loaded from: classes13.dex */
-    public class DialogInterface$OnClickListenerC0446d implements DialogInterface.OnClickListener {
+    public class d implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC0446d(CommentDetailActivity commentDetailActivity) {
+        d(CommentDetailActivity commentDetailActivity) {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -242,13 +237,12 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.ui.CommentDetailActivity$e */
     /* loaded from: classes13.dex */
-    public class DialogInterface$OnClickListenerC0447e implements DialogInterface.OnClickListener {
+    public class e implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CommentsItemBean a;
 
-        DialogInterface$OnClickListenerC0447e(CommentsItemBean commentsItemBean) {
+        e(CommentsItemBean commentsItemBean) {
             this.a = commentsItemBean;
         }
 
@@ -265,12 +259,11 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.ui.CommentDetailActivity$f */
     /* loaded from: classes4.dex */
-    public class C0448f implements CommentItemMoreUtil.OnCommentDeleteSuccessListener {
+    public class f implements CommentItemMoreUtil.OnCommentDeleteSuccessListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0448f() {
+        f() {
         }
 
         @Override // cn.damai.comment.util.CommentItemMoreUtil.OnCommentDeleteSuccessListener
@@ -295,12 +288,11 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.ui.CommentDetailActivity$g */
     /* loaded from: classes13.dex */
-    public class HandlerC0449g extends Handler {
+    public class g extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC0449g() {
+        g() {
         }
 
         @Override // android.os.Handler
@@ -454,9 +446,9 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
         this.mSendComment.setOnClickListener(this);
         this.mReplyContent.setOnClickListener(this);
         this.mReplyContent.setPadding(t60.a(this, 15.0f), 0, t60.a(this, 5.0f), 0);
-        this.mReplyContent.addTextChangedListener(new C0443a());
-        this.mHandler = new HandlerC0449g();
-        SoftInputUtils.c(this, new C0444b());
+        this.mReplyContent.addTextChangedListener(new a());
+        this.mHandler = new g();
+        SoftInputUtils.c(this, new b());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -488,7 +480,7 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
         if (AndroidInstantRuntime.support(ipChange, "1513836319")) {
             ipChange.ipc$dispatch("1513836319", new Object[]{this});
         } else {
-            CommentItemMoreUtil.k(new C0448f());
+            CommentItemMoreUtil.k(new f());
         }
     }
 
@@ -567,7 +559,7 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
         this.irc.setRefreshHeaderView(PullToRefreshHeaderView.getInstance(this, R$color.color_ffffff));
         this.irc.getLoadMoreFooterView().setVisibility(8);
         this.irc.setAdapter(this.mCommentDetailAdapter);
-        this.irc.setOnTouchListener(new View$OnTouchListenerC0445c());
+        this.irc.setOnTouchListener(new c());
         this.irc.addOnScrollListener(new RecyclerView.OnScrollListener() { // from class: cn.damai.comment.ui.CommentDetailActivity.4
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -670,7 +662,7 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
             this.praiseRequest.a(praiseInfo != null ? praiseInfo.isHasPraised() : false, this.mMainCommentItemBean.getCommentId());
             this.praiseView.updateItemData(praiseInfo);
             this.praiseView.setData(praiseInfo);
-            C0529c.e().G(this.praiseView, "likes", "bottom", dl.EVALUATE_DETAIL_PAGE, dl.I().k(z20.E(), this.mMainCommentItemBean.getCommentId(), this.mMainCommentItemBean.getUserDO().getDamaiUserId()));
+            cn.damai.common.user.c.e().G(this.praiseView, "likes", "bottom", dl.EVALUATE_DETAIL_PAGE, dl.I().k(z20.E(), this.mMainCommentItemBean.getCommentId(), this.mMainCommentItemBean.getUserDO().getDamaiUserId()));
             return;
         }
         LoginManager.k().v(this);
@@ -718,7 +710,7 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
                 if (!TextUtils.isEmpty(getProjectId())) {
                     l.put("item_id", getProjectId());
                 }
-                C0529c.e().G(this.tvRelation, StarFragment.KEY_FOLLOW, "top", dl.EVALUATE_DETAIL_PAGE, l);
+                cn.damai.common.user.c.e().G(this.tvRelation, StarFragment.KEY_FOLLOW, "top", dl.EVALUATE_DETAIL_PAGE, l);
             }
             EvaluateUserInfoUtil.a().b(userDO, this.avatar, this.commentUserVipTag, this.userName, this.userTagView, mainComment.getItemType());
             if (TextUtils.isEmpty(mainComment.publishCityName)) {
@@ -767,7 +759,7 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
         if (commentsItemBean == null || commentsItemBean.getUserDO() == null) {
             return;
         }
-        C0529c.e().x(dl.I().w(z ? "item" : "reply_btn", commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), bl.a(commentsItemBean, this.mCurrentItems)));
+        cn.damai.common.user.c.e().x(dl.I().w(z ? "item" : "reply_btn", commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), bl.a(commentsItemBean, this.mCurrentItems)));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -888,10 +880,10 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
         hashMap.put("item_id", getProjectId());
         hashMap.put("evaluate_id", this.mMainCommentItemBean.getCommentId());
         hashMap.put("repertoire_id", getRepertoireId());
-        hashMap.put(C9548pb.PUBLISHER_ID, this.mMainCommentItemBean.getUserDO().getDamaiUserId());
-        C0525a.C0527b c0527b = new C0525a.C0527b();
-        c0527b.i(dl.EVALUATE_DETAIL_PAGE).j(hashMap);
-        C0529c.e().l(this, c0527b);
+        hashMap.put(pb.PUBLISHER_ID, this.mMainCommentItemBean.getUserDO().getDamaiUserId());
+        a.b bVar = new a.b();
+        bVar.i(dl.EVALUATE_DETAIL_PAGE).j(hashMap);
+        cn.damai.common.user.c.e().l(this, bVar);
     }
 
     private void updatePraiseView(CommentPraiseInfoBean commentPraiseInfoBean) {
@@ -909,7 +901,7 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
             ipChange.ipc$dispatch("-1741500863", new Object[]{this, commentsItemBean, str});
         } else if (commentsItemBean == null || this.mCurrentProjectInfoBean == null || commentsItemBean.getUserDO() == null) {
         } else {
-            C0529c.e().x(dl.I().m(this.isVEvaluate ? "0" : "1", z20.E(), this.mCurrentProjectInfoBean.getProjectId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getCommentType(), commentsItemBean.getTargetId(), str));
+            cn.damai.common.user.c.e().x(dl.I().m(this.isVEvaluate ? "0" : "1", z20.E(), this.mCurrentProjectInfoBean.getProjectId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getCommentType(), commentsItemBean.getTargetId(), str));
         }
     }
 
@@ -919,7 +911,7 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
             ipChange.ipc$dispatch("854309235", new Object[]{this, commentsItemBean, Integer.valueOf(i)});
         } else if (commentsItemBean == null || commentsItemBean.getUserDO() == null) {
         } else {
-            C0529c.e().x(dl.I().o(commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), i, getProjectId(), commentsItemBean.getScriptInfo() != null ? commentsItemBean.getScriptInfo().getId() : ""));
+            cn.damai.common.user.c.e().x(dl.I().o(commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), i, getProjectId(), commentsItemBean.getScriptInfo() != null ? commentsItemBean.getScriptInfo().getId() : ""));
         }
     }
 
@@ -929,7 +921,7 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
             ipChange.ipc$dispatch("-1283686927", new Object[]{this, Boolean.valueOf(z), commentsItemBean});
         } else if (commentsItemBean == null || commentsItemBean.getUserDO() == null) {
         } else {
-            C0529c.e().x(dl.I().t(z, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), bl.a(commentsItemBean, this.mCurrentItems)));
+            cn.damai.common.user.c.e().x(dl.I().t(z, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), bl.a(commentsItemBean, this.mCurrentItems)));
         }
     }
 
@@ -939,7 +931,7 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
             ipChange.ipc$dispatch("1742308887", new Object[]{this, commentsItemBean});
         } else if (commentsItemBean == null || this.mCurrentProjectInfoBean == null || commentsItemBean.getUserDO() == null) {
         } else {
-            C0529c.e().x(dl.I().y(this.isVEvaluate ? "0" : "1", z20.E(), this.mCurrentProjectInfoBean.getProjectId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getTargetId(), commentsItemBean.getCommentType()));
+            cn.damai.common.user.c.e().x(dl.I().y(this.isVEvaluate ? "0" : "1", z20.E(), this.mCurrentProjectInfoBean.getProjectId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getTargetId(), commentsItemBean.getCommentType()));
         }
     }
 
@@ -949,7 +941,7 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
             ipChange.ipc$dispatch("1711293198", new Object[]{this, commentsItemBean});
         } else if (commentsItemBean == null || this.mCurrentProjectInfoBean == null || commentsItemBean.getUserDO() == null) {
         } else {
-            C0529c.e().x(dl.I().r(this.isVEvaluate ? "0" : "1", z20.E(), this.mCurrentProjectInfoBean.getProjectId(), commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getCommentType(), this.mMainCommentItemBean.getScriptInfo() != null ? this.mMainCommentItemBean.getScriptInfo().getId() : ""));
+            cn.damai.common.user.c.e().x(dl.I().r(this.isVEvaluate ? "0" : "1", z20.E(), this.mCurrentProjectInfoBean.getProjectId(), commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getCommentType(), this.mMainCommentItemBean.getScriptInfo() != null ? this.mMainCommentItemBean.getScriptInfo().getId() : ""));
         }
     }
 
@@ -1098,7 +1090,7 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
             }
             CommentsItemBean commentsItemBean = this.mMainCommentItemBean;
             if (commentsItemBean != null && commentsItemBean.getUserDO() != null) {
-                C0529c.e().x(dl.I().p(this.mMainCommentItemBean.getCommentId(), this.mMainCommentItemBean.getUserDO().getDamaiUserId()));
+                cn.damai.common.user.c.e().x(dl.I().p(this.mMainCommentItemBean.getCommentId(), this.mMainCommentItemBean.getUserDO().getDamaiUserId()));
             }
             showSoftInputWindow();
         } else if (id == R$id.comment_publish_submit) {
@@ -1115,7 +1107,7 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
             if (commentsItemBean2 == null || commentsItemBean2.getUserDO() == null) {
                 return;
             }
-            C0529c.e().x(dl.I().v(this.mMainCommentItemBean.getCommentId(), this.mMainCommentItemBean.getUserDO().getDamaiUserId(), getProjectId(), this.mMainCommentItemBean.getScriptInfo() != null ? this.mMainCommentItemBean.getScriptInfo().getId() : ""));
+            cn.damai.common.user.c.e().x(dl.I().v(this.mMainCommentItemBean.getCommentId(), this.mMainCommentItemBean.getUserDO().getDamaiUserId(), getProjectId(), this.mMainCommentItemBean.getScriptInfo() != null ? this.mMainCommentItemBean.getScriptInfo().getId() : ""));
             relationUpdateRequest();
         } else if (id == R$id.detail_praise_layout) {
             praiseUpdateRequest();
@@ -1152,7 +1144,7 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
         }
         super.onCreate(bundle);
         setDamaiUTKeyBuilder(dl.I().h("", z20.E()));
-        C0529c.e().K(this);
+        cn.damai.common.user.c.e().K(this);
     }
 
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity
@@ -1329,7 +1321,7 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
             if (this.mMainCommentItemBean.getTextDOList() == null || this.mMainCommentItemBean.getTextDOList().size() == 0 || this.mMainCommentItemBean.getUserDO() == null) {
                 return;
             }
-            C0529c.e().x(dl.I().x(str, getProjectId(), getRepertoireId(), this.mMainCommentItemBean.getCommentId(), this.mMainCommentItemBean.getUserDO().getDamaiUserId(), this.mMainCommentItemBean.getScriptInfo() != null ? this.mMainCommentItemBean.getScriptInfo().getId() : ""));
+            cn.damai.common.user.c.e().x(dl.I().x(str, getProjectId(), getRepertoireId(), this.mMainCommentItemBean.getCommentId(), this.mMainCommentItemBean.getUserDO().getDamaiUserId(), this.mMainCommentItemBean.getScriptInfo() != null ? this.mMainCommentItemBean.getScriptInfo().getId() : ""));
             if (this.mMainCommentItemBean.getItemType() == 1 && this.mMainCommentItemBean.getStoreInfo() != null) {
                 CommentItemMoreUtil.j(this, GenerateImageUtil.TYPE_FROMWHERE_DETAILCOMMENT, cl.b(this.mMainCommentItemBean.getStoreInfo().getStoreId()), this.mMainCommentItemBean.getStoreInfo().getStoreImgUrl(), this.mMainCommentItemBean.getStoreInfo().getStoreName(), this.mMainCommentItemBean.getStoreInfo().getDes(), "", this.mMainCommentItemBean, isOwner(), R$layout.comment_detail_layout, false);
             } else if (this.mMainCommentItemBean.getItemType() == 2 && this.mMainCommentItemBean.getScriptInfo() != null) {
@@ -1417,7 +1409,7 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
             return;
         }
         if (commentsItemBean != null && this.mCurrentProjectInfoBean != null && commentsItemBean.getUserDO() != null) {
-            C0529c.e().x(dl.I().q(this.isVEvaluate ? "0" : "1", z20.E(), this.mCurrentProjectInfoBean.getProjectId(), commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getCommentType()));
+            cn.damai.common.user.c.e().x(dl.I().q(this.isVEvaluate ? "0" : "1", z20.E(), this.mCurrentProjectInfoBean.getProjectId(), commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), commentsItemBean.getCommentType()));
         }
         showSoftInputWindow();
     }
@@ -1454,19 +1446,19 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
             CommentsItemBean commentsItemBean = this.mCurrentItemBean;
             if (commentsItemBean != null && !commentsItemBean.isHideInteraction()) {
                 if (this.pageIndex == 1) {
-                    List<al> c = yk.c(commentsResultBean);
-                    addShowPublishCityTag(c);
-                    this.mCommentDetailAdapter.c(c);
+                    List<al> c2 = yk.c(commentsResultBean);
+                    addShowPublishCityTag(c2);
+                    this.mCommentDetailAdapter.c(c2);
                 } else {
-                    List<al> a = yk.a(commentsResultBean);
-                    addShowPublishCityTag(a);
-                    this.mCommentDetailAdapter.a(a);
+                    List<al> a2 = yk.a(commentsResultBean);
+                    addShowPublishCityTag(a2);
+                    this.mCommentDetailAdapter.a(a2);
                 }
             }
             resetBottom();
             refreshBottom();
             showSoftInputDelay();
-            C0529c.e().G(this.mReplyContent, "reply_btn", "bottom", dl.EVALUATE_DETAIL_PAGE, dl.I().k(z20.E(), this.mMainCommentItemBean.getCommentId(), this.mMainCommentItemBean.getUserDO().getDamaiUserId()));
+            cn.damai.common.user.c.e().G(this.mReplyContent, "reply_btn", "bottom", dl.EVALUATE_DETAIL_PAGE, dl.I().k(z20.E(), this.mMainCommentItemBean.getCommentId(), this.mMainCommentItemBean.getUserDO().getDamaiUserId()));
         }
     }
 
@@ -1506,15 +1498,15 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
             ipChange.ipc$dispatch("1161486851", new Object[]{this, commentsItemBean});
         } else if (commentsItemBean == null) {
         } else {
-            C0529c.e().x(dl.I().n(commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), bl.a(commentsItemBean, this.mCurrentItems)));
+            cn.damai.common.user.c.e().x(dl.I().n(commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), bl.a(commentsItemBean, this.mCurrentItems)));
             DMDialog dMDialog = new DMDialog(this);
             if (Constants.VIA_REPORT_TYPE_START_GROUP.equals(commentsItemBean.getCommentType())) {
                 dMDialog.p(R$string.comment_delete_tips);
             } else {
                 dMDialog.p(R$string.evaluate_delete_tips);
             }
-            dMDialog.i("取消", new DialogInterface$OnClickListenerC0446d(this));
-            dMDialog.n("确定删除", new DialogInterface$OnClickListenerC0447e(commentsItemBean));
+            dMDialog.i("取消", new d(this));
+            dMDialog.n("确定删除", new e(commentsItemBean));
             dMDialog.show();
         }
     }
@@ -1557,7 +1549,7 @@ public class CommentDetailActivity extends DamaiBaseActivity<CommentDetailPresen
             ipChange.ipc$dispatch("1889945422", new Object[]{this, Boolean.valueOf(z), commentsItemBean});
         } else if (commentsItemBean == null || commentsItemBean.getUserDO() == null) {
         } else {
-            C0529c.e().x(dl.I().s(z, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), bl.a(commentsItemBean, this.mCurrentItems), getProjectId(), commentsItemBean.getScriptInfo() != null ? commentsItemBean.getScriptInfo().getId() : ""));
+            cn.damai.common.user.c.e().x(dl.I().s(z, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), bl.a(commentsItemBean, this.mCurrentItems), getProjectId(), commentsItemBean.getScriptInfo() != null ? commentsItemBean.getScriptInfo().getId() : ""));
         }
     }
 }

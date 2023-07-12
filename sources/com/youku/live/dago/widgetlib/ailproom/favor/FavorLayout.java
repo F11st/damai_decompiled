@@ -208,16 +208,16 @@ public class FavorLayout extends View implements IFavorHandler {
         }
         ArrayList arrayList = new ArrayList();
         this.mDrawables = arrayList;
-        arrayList.add(getResources().getDrawable(R.C7941drawable.dago_pgc_ailp_like_favor_anim_1));
-        this.mDrawables.add(getResources().getDrawable(R.C7941drawable.dago_pgc_ailp_like_favor_anim_2));
-        this.mDrawables.add(getResources().getDrawable(R.C7941drawable.dago_pgc_ailp_like_favor_anim_3));
-        this.mDrawables.add(getResources().getDrawable(R.C7941drawable.dago_pgc_ailp_like_favor_anim_4));
-        this.mDrawables.add(getResources().getDrawable(R.C7941drawable.dago_pgc_ailp_like_favor_anim_5));
-        this.mDrawables.add(getResources().getDrawable(R.C7941drawable.dago_pgc_ailp_like_favor_anim_6));
-        this.mDrawables.add(getResources().getDrawable(R.C7941drawable.dago_pgc_ailp_like_favor_anim_7));
-        this.mDrawables.add(getResources().getDrawable(R.C7941drawable.dago_pgc_ailp_like_favor_anim_8));
-        this.mDrawables.add(getResources().getDrawable(R.C7941drawable.dago_pgc_ailp_like_favor_anim_9));
-        this.mDrawables.add(getResources().getDrawable(R.C7941drawable.dago_pgc_ailp_like_favor_anim_10));
+        arrayList.add(getResources().getDrawable(R.drawable.dago_pgc_ailp_like_favor_anim_1));
+        this.mDrawables.add(getResources().getDrawable(R.drawable.dago_pgc_ailp_like_favor_anim_2));
+        this.mDrawables.add(getResources().getDrawable(R.drawable.dago_pgc_ailp_like_favor_anim_3));
+        this.mDrawables.add(getResources().getDrawable(R.drawable.dago_pgc_ailp_like_favor_anim_4));
+        this.mDrawables.add(getResources().getDrawable(R.drawable.dago_pgc_ailp_like_favor_anim_5));
+        this.mDrawables.add(getResources().getDrawable(R.drawable.dago_pgc_ailp_like_favor_anim_6));
+        this.mDrawables.add(getResources().getDrawable(R.drawable.dago_pgc_ailp_like_favor_anim_7));
+        this.mDrawables.add(getResources().getDrawable(R.drawable.dago_pgc_ailp_like_favor_anim_8));
+        this.mDrawables.add(getResources().getDrawable(R.drawable.dago_pgc_ailp_like_favor_anim_9));
+        this.mDrawables.add(getResources().getDrawable(R.drawable.dago_pgc_ailp_like_favor_anim_10));
         this.interpolators = r0;
         Interpolator[] interpolatorArr = {this.line, this.acc, this.dce, this.accdec};
         this.mFavorObjects = new ArrayList();

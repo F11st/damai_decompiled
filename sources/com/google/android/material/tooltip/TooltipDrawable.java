@@ -36,7 +36,7 @@ import com.youku.uplayer.AliMediaPlayer;
 /* loaded from: classes10.dex */
 public class TooltipDrawable extends MaterialShapeDrawable implements TextDrawableHelper.TextDrawableDelegate {
     @StyleRes
-    private static final int DEFAULT_STYLE = R.C4819style.Widget_MaterialComponents_Tooltip;
+    private static final int DEFAULT_STYLE = R.style.Widget_MaterialComponents_Tooltip;
     @AttrRes
     private static final int DEFAULT_THEME_ATTR = R.attr.tooltipStyle;
     private int arrowSize;

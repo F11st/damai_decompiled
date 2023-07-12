@@ -8,12 +8,11 @@ import com.taobao.slide.stat.IBizStat;
 public class mh1 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.mh1$a */
     /* loaded from: classes11.dex */
-    static class C9440a implements IBizStat {
+    static class a implements IBizStat {
         IBizStat a;
 
-        public C9440a(IBizStat iBizStat) {
+        public a(IBizStat iBizStat) {
             this.a = null;
             this.a = iBizStat;
         }
@@ -36,6 +35,6 @@ public class mh1 {
     }
 
     public static void a(IBizStat iBizStat) {
-        new C9440a(iBizStat);
+        new a(iBizStat);
     }
 }

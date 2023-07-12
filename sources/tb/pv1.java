@@ -63,12 +63,11 @@ public class pv1 {
     private AnchorManager z;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.pv1$a */
     /* loaded from: classes8.dex */
-    public class C9570a implements AnchorManager.OnGetAnchorName {
+    public class a implements AnchorManager.OnGetAnchorName {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9570a() {
+        a() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.anchor.AnchorManager.OnGetAnchorName
@@ -77,7 +76,7 @@ public class pv1 {
             if (AndroidInstantRuntime.support(ipChange, "217401776")) {
                 return (String) ipChange.ipc$dispatch("217401776", new Object[]{this, anchorType});
             }
-            int i = C9571b.a[anchorType.ordinal()];
+            int i = b.a[anchorType.ordinal()];
             if (i != 1) {
                 if (i != 2) {
                     if (i != 3) {
@@ -92,9 +91,8 @@ public class pv1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.pv1$b */
     /* loaded from: classes8.dex */
-    static /* synthetic */ class C9571b {
+    static /* synthetic */ class b {
         static final /* synthetic */ int[] a;
 
         static {
@@ -921,7 +919,7 @@ public class pv1 {
         if (AndroidInstantRuntime.support(ipChange, "-68843539")) {
             ipChange.ipc$dispatch("-68843539", new Object[]{this});
         } else {
-            this.z = AnchorManager.g(new C9570a());
+            this.z = AnchorManager.g(new a());
         }
     }
 

@@ -10,9 +10,8 @@ public enum ScanType {
     private String value;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.qrcode.widget.ScanType$a */
     /* loaded from: classes4.dex */
-    static /* synthetic */ class C0791a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -40,7 +39,7 @@ public enum ScanType {
     }
 
     public String toBqcScanType() {
-        int i = C0791a.a[ordinal()];
+        int i = a.a[ordinal()];
         return "MA";
     }
 }

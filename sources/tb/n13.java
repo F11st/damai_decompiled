@@ -2,7 +2,6 @@ package tb;
 
 import android.os.SystemClock;
 import android.view.FrameMetrics;
-import com.taobao.application.common.C6673b;
 import com.taobao.monitor.impl.processor.AbsProcessor;
 import com.taobao.monitor.impl.trace.ApplicationBackgroundChangedDispatcher;
 import com.taobao.monitor.impl.trace.ApplicationGCDispatcher;
@@ -13,8 +12,8 @@ import com.taobao.monitor.impl.trace.ImageStageDispatcher;
 import com.taobao.monitor.impl.trace.NetworkStageDispatcher;
 import com.taobao.monitor.impl.trace.RenderDispatcher;
 import com.taobao.monitor.performance.IWXApmAdapter;
-import com.taobao.monitor.procedure.C6817d;
 import com.taobao.monitor.procedure.IProcedure;
+import com.taobao.monitor.procedure.d;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -58,15 +57,15 @@ public class n13 extends AbsProcessor implements ApplicationBackgroundChangedDis
         this.y = true;
         this.z = true;
         this.A = true;
-        C6817d f = new C6817d.C6819b().g(true).k(true).i(true).h(jd0.s ? wu1.b.getCurrentActivityProcedure() : null).f();
+        com.taobao.monitor.procedure.d f = new d.b().g(true).k(true).i(true).h(jd0.s ? wu1.b.getCurrentActivityProcedure() : null).f();
         tu1 tu1Var = tu1.b;
         this.d = tu1Var.createProcedure(dp2.a("/" + str), f);
-        this.e = a(C8934b0.WINDOW_EVENT_DISPATCHER);
-        this.f = a(C8934b0.APPLICATION_LOW_MEMORY_DISPATCHER);
-        this.g = a(C8934b0.ACTIVITY_FPS_DISPATCHER);
-        this.h = a(C8934b0.APPLICATION_GC_DISPATCHER);
-        this.i = a(C8934b0.APPLICATION_BACKGROUND_CHANGED_DISPATCHER);
-        this.j = a(C8934b0.PAGE_RENDER_DISPATCHER);
+        this.e = a(b0.WINDOW_EVENT_DISPATCHER);
+        this.f = a(b0.APPLICATION_LOW_MEMORY_DISPATCHER);
+        this.g = a(b0.ACTIVITY_FPS_DISPATCHER);
+        this.h = a(b0.APPLICATION_GC_DISPATCHER);
+        this.i = a(b0.APPLICATION_BACKGROUND_CHANGED_DISPATCHER);
+        this.j = a(b0.PAGE_RENDER_DISPATCHER);
     }
 
     @Override // com.taobao.monitor.performance.IWXApmAdapter
@@ -118,7 +117,7 @@ public class n13 extends AbsProcessor implements ApplicationBackgroundChangedDis
             this.d.addStatistic("gcCount", Integer.valueOf(this.m));
             this.d.addStatistic("fps", this.k.toString());
             this.d.addStatistic("jankCount", Integer.valueOf(this.l));
-            this.d.addProperty("deviceLevel", Integer.valueOf(C6673b.d().getInt("deviceLevel", -1)));
+            this.d.addProperty("deviceLevel", Integer.valueOf(com.taobao.application.common.b.d().getInt("deviceLevel", -1)));
             this.d.addProperty("runtimeLevel", Integer.valueOf(k4.d().f().d));
             this.d.addProperty("cpuUsageOfDevcie", Float.valueOf(k4.d().b().d));
             this.d.addProperty("memoryRuntimeLevel", Integer.valueOf(k4.d().e().k));

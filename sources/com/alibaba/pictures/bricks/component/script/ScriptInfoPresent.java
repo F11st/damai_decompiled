@@ -33,7 +33,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import kotlin.jvm.functions.Function1;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -48,7 +48,7 @@ import tb.yb1;
 public final class ScriptInfoPresent extends AbsPresenter<GenericItem<ItemValue>, ScriptInfoModel, ScriptInfoView> implements ScriptInfoContract.Present {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3497a Companion = new C3497a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String MSG_SCRIPT_BG_UPDATE = "EventBus://business/notification/msg_script_bg_update";
     @NotNull
@@ -63,13 +63,12 @@ public final class ScriptInfoPresent extends AbsPresenter<GenericItem<ItemValue>
     public TextView mWanna2SeeTv;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.script.ScriptInfoPresent$a */
     /* loaded from: classes7.dex */
-    public static final class C3497a {
-        private C3497a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3497a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -92,7 +91,7 @@ public final class ScriptInfoPresent extends AbsPresenter<GenericItem<ItemValue>
             ipChange.ipc$dispatch("562818042", new Object[]{this, str, Boolean.valueOf(z)});
             return;
         }
-        r = C8604o.r(str, "0", false, 2, null);
+        r = o.r(str, "0", false, 2, null);
         boolean z2 = !r;
         this.isCurrentUserFollowed = z2;
         if (z2) {
@@ -131,10 +130,10 @@ public final class ScriptInfoPresent extends AbsPresenter<GenericItem<ItemValue>
             return;
         }
         if (!DoloresLoginHandler.Companion.a().c()) {
-            yb1.C9955a c9955a = yb1.Companion;
+            yb1.a aVar = yb1.Companion;
             Activity activity = genericItem.getPageContext().getActivity();
             b41.g(activity, "null cannot be cast to non-null type android.content.Context");
-            c9955a.b(activity);
+            aVar.b(activity);
             return;
         }
         String id = ((ScriptInfoModel) scriptInfoPresent.getModel()).getScriptInfo().getId();

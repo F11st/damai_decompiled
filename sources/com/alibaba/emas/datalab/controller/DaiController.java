@@ -18,22 +18,20 @@ public class DaiController {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.emas.datalab.controller.DaiController$a */
     /* loaded from: classes15.dex */
-    public class C3320a implements DAICallback {
-        C3320a(DaiController daiController, Long l, Context context) {
+    public class a implements DAICallback {
+        a(DaiController daiController, Long l, Context context) {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.emas.datalab.controller.DaiController$b */
     /* loaded from: classes15.dex */
-    private static class C3321b {
+    private static class b {
         private static DaiController a = new DaiController();
     }
 
     public static DaiController a() {
-        return C3321b.a;
+        return b.a;
     }
 
     public void b(final Context context, Boolean bool, List<String> list) {
@@ -73,7 +71,7 @@ public class DaiController {
 
     public void c(Context context, Map<String, Object> map) {
         try {
-            DAI.runCompute(this.a, map, new C3320a(this, Long.valueOf(System.currentTimeMillis()), context));
+            DAI.runCompute(this.a, map, new a(this, Long.valueOf(System.currentTimeMillis()), context));
         } catch (Exception e) {
             Log.e("Datalab.Dai", "dai trigger error ", e);
             l30.c().b("dai", DatalabBizType.zcache, "500", e.getMessage());

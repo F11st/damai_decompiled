@@ -16,9 +16,8 @@ import java.net.URL;
 public final class s01 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.s01$a */
     /* loaded from: classes5.dex */
-    public static class C9670a {
+    public static class a {
         public byte[] a = null;
     }
 
@@ -26,10 +25,10 @@ public final class s01 {
         System.setProperty("http.keepAlive", "true");
     }
 
-    public C9670a a(String str) {
-        C9670a c9670a = new C9670a();
+    public a a(String str) {
+        a aVar = new a();
         if (TextUtils.isEmpty(str)) {
-            return c9670a;
+            return aVar;
         }
         try {
             HttpURLConnection httpURLConnection = (HttpURLConnection) new URL(str).openConnection();
@@ -73,7 +72,7 @@ public final class s01 {
                                     }
                                     dataInputStream2.close();
                                     if (byteArrayOutputStream.size() > 0) {
-                                        c9670a.a = byteArrayOutputStream.toByteArray();
+                                        aVar.a = byteArrayOutputStream.toByteArray();
                                     }
                                 } catch (IOException e3) {
                                     e = e3;
@@ -86,7 +85,7 @@ public final class s01 {
                                             Logger.f("HttpsUtil", e4);
                                         }
                                     }
-                                    return c9670a;
+                                    return aVar;
                                 } catch (Throwable th) {
                                     th = th;
                                     dataInputStream = dataInputStream2;
@@ -108,19 +107,19 @@ public final class s01 {
                     } catch (Exception e7) {
                         Logger.h("HttpsUtil", e7, new Object[0]);
                         System.currentTimeMillis();
-                        return c9670a;
+                        return aVar;
                     }
                 } catch (ProtocolException e8) {
                     Logger.h("HttpsUtil", e8, new Object[0]);
                 }
             }
-            return c9670a;
+            return aVar;
         } catch (MalformedURLException e9) {
             Logger.h("HttpsUtil", e9, new Object[0]);
-            return c9670a;
+            return aVar;
         } catch (IOException e10) {
             Logger.h("HttpsUtil", e10, new Object[0]);
-            return c9670a;
+            return aVar;
         }
     }
 }

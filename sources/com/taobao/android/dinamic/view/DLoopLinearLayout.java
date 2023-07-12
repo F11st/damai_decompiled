@@ -23,14 +23,13 @@ import tb.x80;
 /* loaded from: classes11.dex */
 public class DLoopLinearLayout extends DLinearLayout {
     private static final String TAG = "DLoopLinearLayout";
-    final C6352a recycledPool;
-    private Map<Integer, C6353b> templateViews;
+    final a recycledPool;
+    private Map<Integer, b> templateViews;
     private int viewTypeFlag;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamic.view.DLoopLinearLayout$a */
     /* loaded from: classes12.dex */
-    public static class C6352a {
+    public static class a {
         private SparseArray<ArrayList<View>> a = new SparseArray<>();
         private SparseIntArray b = new SparseIntArray();
 
@@ -68,15 +67,14 @@ public class DLoopLinearLayout extends DLinearLayout {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamic.view.DLoopLinearLayout$b */
     /* loaded from: classes12.dex */
-    public class C6353b {
+    public class b {
         int a;
         View b;
         String c;
         String d;
 
-        C6353b(DLoopLinearLayout dLoopLinearLayout) {
+        b(DLoopLinearLayout dLoopLinearLayout) {
         }
     }
 
@@ -84,27 +82,27 @@ public class DLoopLinearLayout extends DLinearLayout {
         super(context);
         this.viewTypeFlag = 0;
         this.templateViews = new LinkedHashMap();
-        this.recycledPool = new C6352a();
+        this.recycledPool = new a();
     }
 
     private void addViewInfo(View view) {
-        for (Map.Entry<Integer, C6353b> entry : this.templateViews.entrySet()) {
+        for (Map.Entry<Integer, b> entry : this.templateViews.entrySet()) {
             if (view == entry.getValue().b) {
                 return;
             }
         }
         x80 c = f90.c(view);
-        C6353b c6353b = new C6353b(this);
-        c6353b.b = view;
-        c6353b.a = this.viewTypeFlag;
-        c6353b.d = c.a;
+        b bVar = new b(this);
+        bVar.b = view;
+        bVar.a = this.viewTypeFlag;
+        bVar.d = c.a;
         if (c.b.containsKey("dFilter")) {
-            c6353b.c = String.valueOf(c.b.get("dFilter"));
+            bVar.c = String.valueOf(c.b.get("dFilter"));
         } else {
-            c6353b.c = c.c.get("dFilter");
+            bVar.c = c.c.get("dFilter");
         }
-        this.templateViews.put(Integer.valueOf(c6353b.a), c6353b);
-        view.setTag(a90.VIEW_TYPE_KEY, Integer.valueOf(c6353b.a));
+        this.templateViews.put(Integer.valueOf(bVar.a), bVar);
+        view.setTag(a90.VIEW_TYPE_KEY, Integer.valueOf(bVar.a));
         this.viewTypeFlag++;
     }
 
@@ -187,7 +185,7 @@ public class DLoopLinearLayout extends DLinearLayout {
                 }
             }
             DViewGenerator o = DViewGenerator.o(v80Var.c());
-            Object a = v80Var.a();
+            Object a2 = v80Var.a();
             for (int i = 0; i < list.size(); i++) {
                 v80Var.f(getBindData(list.get(i)));
                 int itemViewType = getItemViewType(v80Var);
@@ -221,7 +219,7 @@ public class DLoopLinearLayout extends DLinearLayout {
                     }
                 }
             }
-            v80Var.f(a);
+            v80Var.f(a2);
             return;
         }
         for (int childCount2 = getChildCount() - 1; childCount2 >= 0; childCount2--) {
@@ -233,15 +231,15 @@ public class DLoopLinearLayout extends DLinearLayout {
         bindChildView(v80Var, list);
     }
 
-    public Map<Integer, C6353b> cloneTemplateViews() {
+    public Map<Integer, b> cloneTemplateViews() {
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         linkedHashMap.putAll(this.templateViews);
         return linkedHashMap;
     }
 
     public int getItemViewType(v80 v80Var) {
-        for (Map.Entry<Integer, C6353b> entry : this.templateViews.entrySet()) {
-            C6353b value = entry.getValue();
+        for (Map.Entry<Integer, b> entry : this.templateViews.entrySet()) {
+            b value = entry.getValue();
             String str = value.c;
             if (str == null) {
                 if (this.templateViews.size() == 1) {
@@ -250,8 +248,8 @@ public class DLoopLinearLayout extends DLinearLayout {
             } else if ("true".equals(str)) {
                 return value.a;
             } else {
-                Object a = s80.a(value.c, value.d, v80Var);
-                if (a != null && (((a instanceof Boolean) && ((Boolean) a).booleanValue()) || ((a instanceof String) && "true".equals(a.toString())))) {
+                Object a2 = s80.a(value.c, value.d, v80Var);
+                if (a2 != null && (((a2 instanceof Boolean) && ((Boolean) a2).booleanValue()) || ((a2 instanceof String) && "true".equals(a2.toString())))) {
                     return value.a;
                 }
             }
@@ -259,7 +257,7 @@ public class DLoopLinearLayout extends DLinearLayout {
         return -1;
     }
 
-    public void setTemplateViews(Map<Integer, C6353b> map) {
+    public void setTemplateViews(Map<Integer, b> map) {
         this.templateViews = map;
     }
 
@@ -267,13 +265,13 @@ public class DLoopLinearLayout extends DLinearLayout {
         super(context, attributeSet);
         this.viewTypeFlag = 0;
         this.templateViews = new LinkedHashMap();
-        this.recycledPool = new C6352a();
+        this.recycledPool = new a();
     }
 
     public DLoopLinearLayout(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         this.viewTypeFlag = 0;
         this.templateViews = new LinkedHashMap();
-        this.recycledPool = new C6352a();
+        this.recycledPool = new a();
     }
 }

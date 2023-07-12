@@ -6,9 +6,9 @@ import java.util.Iterator;
 import java.util.List;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.jvm.functions.Function1;
-import kotlin.sequences.C8576d;
 import kotlin.sequences.Sequence;
 import kotlin.sequences.SequencesKt___SequencesKt;
+import kotlin.sequences.d;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -46,7 +46,7 @@ public final class CompositeAnnotations implements Annotations {
                 return annotations.findAnnotation(hp0.this);
             }
         });
-        return (AnnotationDescriptor) C8576d.s(w);
+        return (AnnotationDescriptor) d.s(w);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations
@@ -80,9 +80,8 @@ public final class CompositeAnnotations implements Annotations {
     @NotNull
     public Iterator<AnnotationDescriptor> iterator() {
         Sequence I;
-        Sequence t;
         I = CollectionsKt___CollectionsKt.I(this.a);
-        t = SequencesKt___SequencesKt.t(I, new Function1<Annotations, Sequence<? extends AnnotationDescriptor>>() { // from class: kotlin.reflect.jvm.internal.impl.descriptors.annotations.CompositeAnnotations$iterator$1
+        return SequencesKt___SequencesKt.t(I, new Function1<Annotations, Sequence<? extends AnnotationDescriptor>>() { // from class: kotlin.reflect.jvm.internal.impl.descriptors.annotations.CompositeAnnotations$iterator$1
             @Override // kotlin.jvm.functions.Function1
             @NotNull
             public final Sequence<AnnotationDescriptor> invoke(@NotNull Annotations annotations) {
@@ -91,8 +90,7 @@ public final class CompositeAnnotations implements Annotations {
                 I2 = CollectionsKt___CollectionsKt.I(annotations);
                 return I2;
             }
-        });
-        return t.iterator();
+        }).iterator();
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
@@ -105,7 +103,7 @@ public final class CompositeAnnotations implements Annotations {
             r1 = this;
             java.lang.String r0 = "delegates"
             tb.b41.i(r2, r0)
-            java.util.List r2 = kotlin.collections.C8202e.X(r2)
+            java.util.List r2 = kotlin.collections.e.X(r2)
             r1.<init>(r2)
             return
         */

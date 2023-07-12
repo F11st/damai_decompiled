@@ -22,13 +22,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import cn.damai.common.app.base.BaseFragment;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMRoundedCornersBitmapProcessor;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.R$anim;
 import cn.damai.commonbusiness.R$color;
@@ -220,12 +218,11 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$a */
     /* loaded from: classes.dex */
-    public class C0829a extends cj1 {
+    public class a extends cj1 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0829a(View view, View view2, NcovSkuBottomInfo ncovSkuBottomInfo) {
+        a(View view, View view2, NcovSkuBottomInfo ncovSkuBottomInfo) {
             super(view, view2, ncovSkuBottomInfo);
         }
 
@@ -259,43 +256,40 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
             } else {
                 NcovSkuFragment.this.showPriceDetailFragment();
                 if (NcovSkuFragment.this.mSelectedPerform != null) {
-                    C0529c.e().x(td2.i().k(NcovSkuFragment.this.mItemId, NcovSkuFragment.this.mSelectedPerform.performId));
+                    cn.damai.common.user.c.e().x(td2.i().k(NcovSkuFragment.this.mItemId, NcovSkuFragment.this.mSelectedPerform.performId));
                 }
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$b */
     /* loaded from: classes.dex */
-    public class C0830b implements DMImageCreator.DMImageFailListener {
+    public class b implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0830b(NcovSkuFragment ncovSkuFragment) {
+        b(NcovSkuFragment ncovSkuFragment) {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1886181631")) {
-                ipChange.ipc$dispatch("1886181631", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("1886181631", new Object[]{this, dVar});
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$c */
     /* loaded from: classes.dex */
-    public class C0831c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$c$a */
         /* loaded from: classes.dex */
-        public class C0832a implements DMRGBUtil.OnFetchColorListener {
+        public class a implements DMRGBUtil.OnFetchColorListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C0832a() {
+            a() {
             }
 
             @Override // cn.damai.commonbusiness.util.DMRGBUtil.OnFetchColorListener
@@ -312,29 +306,28 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
             }
         }
 
-        C0831c() {
+        c() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1927532372")) {
-                ipChange.ipc$dispatch("1927532372", new Object[]{this, c0502e});
-            } else if (c0502e == null || (bitmap = c0502e.b) == null) {
+                ipChange.ipc$dispatch("1927532372", new Object[]{this, eVar});
+            } else if (eVar == null || (bitmap = eVar.b) == null) {
             } else {
-                DMRGBUtil.g(1.0f, bitmap, NcovSkuFragment.this.mBasicInfoBean.mainImageUrl, new C0832a());
+                DMRGBUtil.g(1.0f, bitmap, NcovSkuFragment.this.mBasicInfoBean.mainImageUrl, new a());
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$d */
     /* loaded from: classes.dex */
-    public class DialogInterface$OnClickListenerC0833d implements DialogInterface.OnClickListener {
+    public class d implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC0833d() {
+        d() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -345,17 +338,16 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
                 return;
             }
             dialogInterface.dismiss();
-            C0529c.e().x(td2.i().t(NcovSkuFragment.this.mItemId));
+            cn.damai.common.user.c.e().x(td2.i().t(NcovSkuFragment.this.mItemId));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$e */
     /* loaded from: classes.dex */
-    public class DialogInterface$OnClickListenerC0834e implements DialogInterface.OnClickListener {
+    public class e implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC0834e() {
+        e() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -373,12 +365,11 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$f */
     /* loaded from: classes.dex */
-    public class DialogInterface$OnClickListenerC0835f implements DialogInterface.OnClickListener {
+    public class f implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC0835f() {
+        f() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -390,7 +381,7 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
             } else {
                 try {
                     z20.T("trade_push_permission_preference", "trade_push_dialog_show");
-                    C0529c.e().A(gb.g().i("pdt_dtl", "1"), "selectsuggestmessage", "message");
+                    cn.damai.common.user.c.e().A(gb.g().i("pdt_dtl", "1"), "selectsuggestmessage", "message");
                     Intent a = vl1.a(NcovSkuFragment.this.mActivity);
                     if (vl1.c(a)) {
                         NcovSkuFragment.this.startActivity(a);
@@ -406,12 +397,11 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$g */
     /* loaded from: classes.dex */
-    public class DialogInterface$OnClickListenerC0836g implements DialogInterface.OnClickListener {
+    public class g implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC0836g() {
+        g() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -426,12 +416,11 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$h */
     /* loaded from: classes.dex */
-    public class C0837h implements SeatPrepare.OnSeatPrepareListener {
+    public class h implements SeatPrepare.OnSeatPrepareListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0837h() {
+        h() {
         }
 
         @Override // cn.damai.commonbusiness.seatbiz.seat.qilin.loader.prepare.SeatPrepare.OnSeatPrepareListener
@@ -456,12 +445,11 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$i */
     /* loaded from: classes.dex */
-    public class C0838i implements NcovPromotionFragment.OnConfirmClickListener {
+    public class i implements NcovPromotionFragment.OnConfirmClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0838i() {
+        i() {
         }
 
         @Override // cn.damai.commonbusiness.seatbiz.promotion.NcovPromotionFragment.OnConfirmClickListener
@@ -476,12 +464,11 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$j */
     /* loaded from: classes.dex */
-    public class C0839j implements NcovSkuPriceDetailFragment.OnPriceDetailListener {
+    public class j implements NcovSkuPriceDetailFragment.OnPriceDetailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0839j() {
+        j() {
         }
 
         @Override // cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuPriceDetailFragment.OnPriceDetailListener
@@ -496,12 +483,11 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$k */
     /* loaded from: classes.dex */
-    public class C0840k implements ResponseErrorPage.ErrorRefreshListener {
+    public class k implements ResponseErrorPage.ErrorRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0840k() {
+        k() {
         }
 
         @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
@@ -518,12 +504,11 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$l */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0841l implements View.OnClickListener {
+    public class l implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0841l() {
+        l() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -538,12 +523,11 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$m */
     /* loaded from: classes.dex */
-    public class C0842m implements AppBarLayout.OnOffsetChangedListener {
+    public class m implements AppBarLayout.OnOffsetChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0842m() {
+        m() {
         }
 
         @Override // com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener, com.google.android.material.appbar.AppBarLayout.BaseOnOffsetChangedListener
@@ -589,12 +573,11 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$n */
     /* loaded from: classes.dex */
-    public class C0843n implements VerticalNestedScrollView.OnScrollListener {
+    public class n implements VerticalNestedScrollView.OnScrollListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0843n() {
+        n() {
         }
 
         @Override // cn.damai.commonbusiness.seatbiz.sku.qilin.widget.VerticalNestedScrollView.OnScrollListener
@@ -609,12 +592,11 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$o */
     /* loaded from: classes.dex */
-    public class C0844o extends dj1 {
+    public class o extends dj1 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0844o(View view, long j) {
+        o(View view, long j) {
             super(view, j);
         }
 
@@ -637,19 +619,17 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$p */
     /* loaded from: classes.dex */
-    public class C0845p extends fj1 {
+    public class p extends fj1 {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$p$a */
         /* loaded from: classes.dex */
-        public class View$OnClickListenerC0846a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ NoticeDetailFragment a;
 
-            View$OnClickListenerC0846a(NoticeDetailFragment noticeDetailFragment) {
+            a(NoticeDetailFragment noticeDetailFragment) {
                 this.a = noticeDetailFragment;
             }
 
@@ -669,13 +649,12 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$p$b */
         /* loaded from: classes.dex */
-        public class View$OnClickListenerC0847b implements View.OnClickListener {
+        public class b implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ NoticeDetailFragment a;
 
-            View$OnClickListenerC0847b(NoticeDetailFragment noticeDetailFragment) {
+            b(NoticeDetailFragment noticeDetailFragment) {
                 this.a = noticeDetailFragment;
             }
 
@@ -694,7 +673,7 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
             }
         }
 
-        C0845p(View view, Activity activity, long j, NcovSkuBottomInfo ncovSkuBottomInfo) {
+        p(View view, Activity activity, long j, NcovSkuBottomInfo ncovSkuBottomInfo) {
             super(view, activity, j, ncovSkuBottomInfo);
         }
 
@@ -721,24 +700,23 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
                 ipChange.ipc$dispatch("-806229598", new Object[]{this, arrayList});
                 return;
             }
-            C0529c.e().x(td2.i().j(NcovSkuFragment.this.mItemId));
+            cn.damai.common.user.c.e().x(td2.i().j(NcovSkuFragment.this.mItemId));
             NoticeDetailFragment instance = NoticeDetailFragment.instance(arrayList, NcovSkuFragment.this.mItemId + "");
-            instance.setClose(new View$OnClickListenerC0846a(instance));
+            instance.setClose(new a(instance));
             FragmentTransaction fragmentTransaction = NcovSkuFragment.this.getFragmentTransaction();
             fragmentTransaction.replace(R$id.fragment_discount, instance);
             fragmentTransaction.commitAllowingStateLoss();
             NcovSkuFragment.this.mDicountContainer.setVisibility(0);
-            NcovSkuFragment.this.mDicountContainer.setOnClickListener(new View$OnClickListenerC0847b(instance));
+            NcovSkuFragment.this.mDicountContainer.setOnClickListener(new b(instance));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment$q */
     /* loaded from: classes.dex */
-    public class C0848q extends hj1 {
+    public class q extends hj1 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0848q(Fragment fragment, View view, View view2, long j, NcovSkuBottomInfo ncovSkuBottomInfo) {
+        q(Fragment fragment, View view, View view2, long j, NcovSkuBottomInfo ncovSkuBottomInfo) {
             super(fragment, view, view2, j, ncovSkuBottomInfo);
         }
 
@@ -761,7 +739,7 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
             }
             NcovSkuFragment.this.showSeatPic(str, str2);
             if (NcovSkuFragment.this.mSelectedPerform != null) {
-                C0529c.e().x(td2.i().n(NcovSkuFragment.this.mItemId, NcovSkuFragment.this.mSelectedPerform.performId));
+                cn.damai.common.user.c.e().x(td2.i().n(NcovSkuFragment.this.mItemId, NcovSkuFragment.this.mSelectedPerform.performId));
             }
         }
 
@@ -787,7 +765,7 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
                 return;
             }
             NcovSkuFragment.this.showPromotionFragment();
-            C0529c.e().x(td2.i().m(NcovSkuFragment.this.mItemId));
+            cn.damai.common.user.c.e().x(td2.i().m(NcovSkuFragment.this.mItemId));
         }
 
         @Override // tb.hj1
@@ -844,17 +822,17 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void calculateTicketPrice(int i) {
+    public void calculateTicketPrice(int i2) {
         CalculatePriceControlBean calculatePriceControlBean;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1927013763")) {
-            ipChange.ipc$dispatch("-1927013763", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-1927013763", new Object[]{this, Integer.valueOf(i2)});
         } else if (this.mSelectedPrice == null || this.mSelectedPerform == null) {
         } else {
             startProgressDialog();
             ArrayList arrayList = new ArrayList();
             SeatCalcParams seatCalcParams = new SeatCalcParams();
-            seatCalcParams.count = i;
+            seatCalcParams.count = i2;
             seatCalcParams.priceId = this.mSelectedPrice.priceId + "";
             seatCalcParams.price = (int) (this.mSelectedPrice.dashPrice * 100.0d);
             arrayList.add(seatCalcParams);
@@ -923,7 +901,7 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
         if (this.mSelectedPerform != null) {
             stringBuffer.append(this.mSelectedPerform.performBeginDTStr + " (" + this.mSelectedPerform.performName + jn1.BRACKET_END_STR);
         }
-        C0529c.e().x(td2.i().q(this.mItemId, stringBuffer.toString()));
+        cn.damai.common.user.c.e().x(td2.i().q(this.mItemId, stringBuffer.toString()));
     }
 
     private void dengjiReuqest() {
@@ -1025,17 +1003,17 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
         return AndroidInstantRuntime.support(ipChange, "660776539") ? (SkuSaveInfo) ipChange.ipc$dispatch("660776539", new Object[]{this}) : rd2.a(this.mItemId);
     }
 
-    public static NcovSkuFragment getInstance(SkuBean skuBean, long j, String str, String str2) {
+    public static NcovSkuFragment getInstance(SkuBean skuBean, long j2, String str, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "544758102")) {
-            return (NcovSkuFragment) ipChange.ipc$dispatch("544758102", new Object[]{skuBean, Long.valueOf(j), str, str2});
+            return (NcovSkuFragment) ipChange.ipc$dispatch("544758102", new Object[]{skuBean, Long.valueOf(j2), str, str2});
         }
         NcovSkuFragment ncovSkuFragment = new NcovSkuFragment();
         Bundle bundle = new Bundle();
         if (skuBean != null) {
             bundle.putSerializable(KEY_SKU_BEAN, skuBean);
         }
-        bundle.putLong("item_id", j);
+        bundle.putLong("item_id", j2);
         if (!TextUtils.isEmpty(str)) {
             bundle.putString(KEY_PRIVILEGE_ID, str);
         }
@@ -1058,21 +1036,21 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
             return;
         }
         cacheLastSelectParams();
-        int i = this.skuBottomInfo.buyStatus;
-        if (i == 1) {
+        int i2 = this.skuBottomInfo.buyStatus;
+        if (i2 == 1) {
             buyNow();
-        } else if (i == 2) {
+        } else if (i2 == 2) {
             dengjiReuqest();
-        } else if (i == 3) {
+        } else if (i2 == 3) {
             dengjiReuqest();
-        } else if (i != 4) {
+        } else if (i2 != 4) {
         } else {
             goSeat();
         }
     }
 
     private void goSeat() {
-        int i;
+        int i2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1743812304")) {
             ipChange.ipc$dispatch("1743812304", new Object[]{this});
@@ -1085,13 +1063,13 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
             SeatPrepare seatPrepare2 = seatPrepare;
             ClickedPerform clickedPerform = new ClickedPerform(2, this.mBasicInfoBean, this.mSelectedPerform, this.mSelectedPrice, this.mPromotionBean, this.mTradeInfo);
             try {
-                i = TextUtils.isEmpty(this.mAtomSplit) ? 1 : Integer.parseInt(this.mAtomSplit);
-            } catch (Exception e) {
-                e.printStackTrace();
-                i = 1;
+                i2 = TextUtils.isEmpty(this.mAtomSplit) ? 1 : Integer.parseInt(this.mAtomSplit);
+            } catch (Exception e2) {
+                e2.printStackTrace();
+                i2 = 1;
             }
             BasicInfoBean basicInfoBean = this.mBasicInfoBean;
-            seatPrepare2.h(clickedPerform, basicInfoBean != null ? basicInfoBean.nationalStandardCityId : "", this.mPrivilegeId, i, new C0837h());
+            seatPrepare2.h(clickedPerform, basicInfoBean != null ? basicInfoBean.nationalStandardCityId : "", this.mPrivilegeId, i2, new h());
             confirmUtReport();
         }
     }
@@ -1112,9 +1090,9 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
             this.mIsShowYK = arguments.getBoolean(NcovSkuActivity.KEY_ISSHOWYK);
             this.mRemindTitle = arguments.getString(NcovSkuActivity.KEY_REMIND_TITLE);
             this.mRemindSaleTime = arguments.getLong(NcovSkuActivity.KEY_REMIND_SALE_TIME);
-            long j = arguments.getLong(NcovSkuActivity.KEY_REMIND_COUNTDOWN);
-            this.mRemindCountDown = j;
-            if (j > 600) {
+            long j2 = arguments.getLong(NcovSkuActivity.KEY_REMIND_COUNTDOWN);
+            this.mRemindCountDown = j2;
+            if (j2 > 600) {
                 this.mPageOpenTs = SystemClock.elapsedRealtime();
             }
             this.mPreloadExtra = SeatPreloadExtra.obtainExtra(arguments);
@@ -1238,7 +1216,7 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
     }
 
     private void initLayout() {
-        int i;
+        int i2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1033589149")) {
             ipChange.ipc$dispatch("-1033589149", new Object[]{this});
@@ -1255,12 +1233,12 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
         this.mHeaderImg = this.rootView.findViewById(R$id.header_image);
         this.mProjcetImage = (ImageView) this.rootView.findViewById(R$id.img_project);
         lk1 lk1Var = this.mNewSkuData;
-        if (lk1Var != null && (i = lk1Var.a) != 0) {
-            this.mHeaderImg.setBackgroundColor(i);
+        if (lk1Var != null && (i2 = lk1Var.a) != 0) {
+            this.mHeaderImg.setBackgroundColor(i2);
         }
         DMIconFontTextView dMIconFontTextView = (DMIconFontTextView) this.rootView.findViewById(R$id.title_back_btn);
         this.mBackBtn = dMIconFontTextView;
-        dMIconFontTextView.setOnClickListener(new View$OnClickListenerC0841l());
+        dMIconFontTextView.setOnClickListener(new l());
         this.mTitleTv = (TextView) this.rootView.findViewById(R$id.title_tv);
         this.mTopNormalLayout = this.rootView.findViewById(R$id.layout_top_normal);
         this.mTopSeeLayout = this.rootView.findViewById(R$id.layout_top_see);
@@ -1269,7 +1247,7 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
         this.mStartBgView = this.rootView.findViewById(R$id.layout_start_bg);
         this.mDateTitleLayout = this.rootView.findViewById(R$id.layout_date_title);
         this.mDateTipTv = (TextView) this.rootView.findViewById(R$id.tv_date_tip);
-        this.mAppBar.addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new C0842m());
+        this.mAppBar.addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new m());
         this.mSkuSimpleDateView = new NcovSkuSimpleDateView(this.rootView.findViewById(R$id.layout_simple_date)) { // from class: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment.5
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -1287,7 +1265,7 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
                     NcovSkuFragment.this.mRequestFirst = false;
                     NcovSkuFragment.this.mIsLoadCache = false;
                     NcovSkuFragment.this.requestSku();
-                    C0529c.e().x(td2.i().r(NcovSkuFragment.this.mItemId, dayEntity.dateId, dayEntity.index));
+                    cn.damai.common.user.c.e().x(td2.i().r(NcovSkuFragment.this.mItemId, dayEntity.dateId, dayEntity.index));
                 }
             }
 
@@ -1298,7 +1276,7 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
                     ipChange2.ipc$dispatch("-1321684810", new Object[]{this});
                     return;
                 }
-                C0529c.e().x(td2.i().f(NcovSkuFragment.this.mItemId));
+                cn.damai.common.user.c.e().x(td2.i().f(NcovSkuFragment.this.mItemId));
                 NcovSkuFragment.this.mAppBar.setExpanded(true, false);
                 NcovSkuFragment.this.mIsShowDateView = true;
                 NcovSkuFragment.this.mAppBar.postDelayed(new Runnable() { // from class: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuFragment.5.1
@@ -1319,21 +1297,21 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
         };
         VerticalNestedScrollView verticalNestedScrollView = (VerticalNestedScrollView) this.rootView.findViewById(R$id.preform_scrollview);
         this.mScrollView = verticalNestedScrollView;
-        verticalNestedScrollView.setOnScrollListener(new C0843n());
-        this.mSkuDateView = new C0844o(this.rootView.findViewById(R$id.layout_date), this.mItemId);
+        verticalNestedScrollView.setOnScrollListener(new n());
+        this.mSkuDateView = new o(this.rootView.findViewById(R$id.layout_date), this.mItemId);
         View view = this.rootView;
-        int i2 = R$id.layout_perform_view;
-        this.mSkuPerformLayout = (LinearLayout) view.findViewById(i2);
+        int i3 = R$id.layout_perform_view;
+        this.mSkuPerformLayout = (LinearLayout) view.findViewById(i3);
         this.mRegesiterLayout = this.rootView.findViewById(R$id.layout_register);
         this.mRegisterTipTv = (TextView) this.rootView.findViewById(R$id.tv_register_tip);
-        this.mSkuPerformView = new C0845p(this.rootView.findViewById(i2), getActivity(), this.mItemId, this.skuBottomInfo);
+        this.mSkuPerformView = new p(this.rootView.findViewById(i3), getActivity(), this.mItemId, this.skuBottomInfo);
         View view2 = this.rootView;
-        int i3 = R$id.layout_price;
-        View findViewById = view2.findViewById(i3);
+        int i4 = R$id.layout_price;
+        View findViewById = view2.findViewById(i4);
         View view3 = this.rootView;
-        int i4 = R$id.bottom_layout;
-        this.mSkuPriceView = new C0848q(this, findViewById, view3.findViewById(i4), this.mItemId, this.skuBottomInfo);
-        this.mSkuBottomView = new C0829a(this.rootView.findViewById(i4), this.rootView.findViewById(i3), this.skuBottomInfo);
+        int i5 = R$id.bottom_layout;
+        this.mSkuPriceView = new q(this, findViewById, view3.findViewById(i5), this.mItemId, this.skuBottomInfo);
+        this.mSkuBottomView = new a(this.rootView.findViewById(i5), this.rootView.findViewById(i4), this.skuBottomInfo);
         this.mPriceDetailContainer = this.rootView.findViewById(R$id.fragment_price_detail);
         this.mDicountContainer = this.rootView.findViewById(R$id.fragment_discount);
     }
@@ -1356,20 +1334,20 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
             ipChange.ipc$dispatch("1955798823", new Object[]{this});
             return;
         }
-        SkuSaveInfo a = rd2.a(this.mItemId);
-        if (a == null || m91.a(this.mSkuBean.perform.skuList) || (performBean = this.mSelectedPerform) == null || performBean.performId != a.performId) {
+        SkuSaveInfo a2 = rd2.a(this.mItemId);
+        if (a2 == null || m91.a(this.mSkuBean.perform.skuList) || (performBean = this.mSelectedPerform) == null || performBean.performId != a2.performId) {
             return;
         }
-        for (int i = 0; i < this.mSkuBean.perform.skuList.size(); i++) {
-            PriceBean priceBean = this.mSkuBean.perform.skuList.get(i);
-            int i2 = this.skuBottomInfo.pageType;
-            if (i2 == 1) {
-                if (priceBean.priceId == a.priceId && priceBean.clickable && priceBean.frontEndStatus == 1) {
+        for (int i2 = 0; i2 < this.mSkuBean.perform.skuList.size(); i2++) {
+            PriceBean priceBean = this.mSkuBean.perform.skuList.get(i2);
+            int i3 = this.skuBottomInfo.pageType;
+            if (i3 == 1) {
+                if (priceBean.priceId == a2.priceId && priceBean.clickable && priceBean.frontEndStatus == 1) {
                     this.mSelectedPrice = priceBean;
                     this.mSkuPriceView.t(priceBean);
                     return;
                 }
-            } else if (i2 == 2 && priceBean.priceId == a.priceId && priceBean.clickable) {
+            } else if (i3 == 2 && priceBean.priceId == a2.priceId && priceBean.clickable) {
                 this.mSelectedPrice = priceBean;
                 this.mSkuPriceView.t(priceBean);
                 return;
@@ -1384,13 +1362,13 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
             ipChange.ipc$dispatch("-116096084", new Object[]{this});
             return;
         }
-        SkuSaveInfo a = rd2.a(this.mItemId);
-        if (a == null) {
+        SkuSaveInfo a2 = rd2.a(this.mItemId);
+        if (a2 == null) {
             return;
         }
         this.mIsLoadCache = true;
-        this.mDateDataId = a.dataId;
-        this.mDataId = a.performId + "";
+        this.mDateDataId = a2.dataId;
+        this.mDataId = a2.performId + "";
         this.mDataType = "2";
     }
 
@@ -1401,9 +1379,9 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
             return;
         }
         viewIgnoreTagForExposure(this.mNcovPromotionFragment.getView());
-        C0529c.e().q(getActivity());
-        C0529c.e().p(this, ((NcovSkuActivity) getActivity()).mBuilder);
-        C0529c.e().b(this.exposureViewList);
+        cn.damai.common.user.c.e().q(getActivity());
+        cn.damai.common.user.c.e().p(this, ((NcovSkuActivity) getActivity()).mBuilder);
+        cn.damai.common.user.c.e().b(this.exposureViewList);
         this.exposureViewList.clear();
     }
 
@@ -1471,10 +1449,10 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
                 sb.append("initial CountDown:");
                 sb.append(this.mRemindCountDown);
                 sb.append(" passed time:");
-                long j = elapsedRealtime / 1000;
-                sb.append(j);
+                long j2 = elapsedRealtime / 1000;
+                sb.append(j2);
                 db1.a("Remind", sb.toString());
-                if (this.mRemindCountDown - j > 600) {
+                if (this.mRemindCountDown - j2 > 600) {
                     kf.a(getContext(), this.mRemindTitle, this.mRemindSaleTime, null);
                     spannableStringBuilder.append((CharSequence) "开抢前10分钟，您将收到抢票提醒");
                     spannableStringBuilder.setSpan(new ForegroundColorSpan(getResources().getColor(R$color.color_FF2869)), 14, 20, 17);
@@ -1484,7 +1462,7 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
                     dMThemeDialog.k(spannableStringBuilder);
                     dMThemeDialog.o(str);
                     dMThemeDialog.g(true, null);
-                    dMThemeDialog.i("知道了", new DialogInterface$OnClickListenerC0836g());
+                    dMThemeDialog.i("知道了", new g());
                     dMThemeDialog.show();
                 }
             }
@@ -1494,7 +1472,7 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
             dMThemeDialog2.k(spannableStringBuilder);
             dMThemeDialog2.o(str);
             dMThemeDialog2.g(true, null);
-            dMThemeDialog2.i("知道了", new DialogInterface$OnClickListenerC0836g());
+            dMThemeDialog2.i("知道了", new g());
             dMThemeDialog2.show();
         }
     }
@@ -1557,10 +1535,10 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
                         View findViewById = ((BaseFragment) NcovSkuFragment.this).rootView.findViewById(R$id.layout_price);
                         int[] iArr = new int[2];
                         findViewById.getLocationOnScreen(iArr);
-                        int i = iArr[1];
-                        int i2 = DisplayMetrics.getheightPixels(m62.b(NcovSkuFragment.this.mActivity));
-                        int a = m62.a(NcovSkuFragment.this.mActivity, 180.0f);
-                        if (i == 0 || i >= i2 - a) {
+                        int i2 = iArr[1];
+                        int i3 = DisplayMetrics.getheightPixels(m62.b(NcovSkuFragment.this.mActivity));
+                        int a2 = m62.a(NcovSkuFragment.this.mActivity, 180.0f);
+                        if (i2 == 0 || i2 >= i3 - a2) {
                             NcovSkuFragment.this.mAppBar.setExpanded(false, false);
                             NcovSkuFragment.this.mScrollView.smoothScrollTo(0, findViewById.getTop());
                         }
@@ -1645,7 +1623,7 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
         if (cj1Var != null) {
             cj1Var.f(false);
         }
-        this.mNcovSkuPriceDetailFragment = NcovSkuPriceDetailFragment.getInstance(this.mTicketCalcBean, new C0839j());
+        this.mNcovSkuPriceDetailFragment = NcovSkuPriceDetailFragment.getInstance(this.mTicketCalcBean, new j());
         FragmentTransaction fragmentTransaction = getFragmentTransaction();
         fragmentTransaction.replace(R$id.fragment_price_detail, this.mNcovSkuPriceDetailFragment);
         fragmentTransaction.commitAllowingStateLoss();
@@ -1659,13 +1637,13 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
             return;
         }
         this.mDicountContainer.setVisibility(0);
-        long j = this.mItemId;
+        long j2 = this.mItemId;
         PromotionBean promotionBean = this.mPromotionBean;
-        this.mNcovPromotionFragment = NcovPromotionFragment.instance(new PromotionDataBean("preferentialexplain", j, promotionBean.promotionGroupList, promotionBean.promotionRemark, null, null), new C0838i());
+        this.mNcovPromotionFragment = NcovPromotionFragment.instance(new PromotionDataBean("preferentialexplain", j2, promotionBean.promotionGroupList, promotionBean.promotionRemark, null, null), new i());
         FragmentTransaction fragmentTransaction = getFragmentTransaction();
         fragmentTransaction.replace(R$id.fragment_discount, this.mNcovPromotionFragment);
         fragmentTransaction.commitAllowingStateLoss();
-        C0529c.e().q(getActivity());
+        cn.damai.common.user.c.e().q(getActivity());
         this.exposureViewList = viewIgnoreTagForExposure(getActivity().getWindow().getDecorView());
     }
 
@@ -1780,8 +1758,8 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
                     this.mSkuSimpleDateView.l(0);
                 }
                 z = false;
-                for (int i = 0; i < this.mSkuBean.performCalendar.dateViews.size(); i++) {
-                    DateBean dateBean = this.mSkuBean.performCalendar.dateViews.get(i);
+                for (int i2 = 0; i2 < this.mSkuBean.performCalendar.dateViews.size(); i2++) {
+                    DateBean dateBean = this.mSkuBean.performCalendar.dateViews.get(i2);
                     if (dateBean != null && dateBean.checked && isUseChecked() && (str4 = dateBean.dateId) != null && (str5 = this.mDateDataId) != null && str4.equals(str5)) {
                         this.mSelectedDate = dateBean;
                         z = true;
@@ -1796,8 +1774,8 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
                 z2 = false;
             } else {
                 z2 = false;
-                for (int i2 = 0; i2 < this.mSkuBean.performCalendar.performViews.size(); i2++) {
-                    PerformSummaryBean performSummaryBean = this.mSkuBean.performCalendar.performViews.get(i2);
+                for (int i3 = 0; i3 < this.mSkuBean.performCalendar.performViews.size(); i3++) {
+                    PerformSummaryBean performSummaryBean = this.mSkuBean.performCalendar.performViews.get(i3);
                     if (performSummaryBean != null && performSummaryBean.checked && isUseChecked() && (str3 = this.mDataId) != null && (performBean = this.mSkuBean.perform) != null && performBean.performId == Long.parseLong(str3)) {
                         if (this.skuBottomInfo.pageType == 1) {
                             if (this.mIsLoadCache) {
@@ -1827,12 +1805,12 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
             }
             if (z) {
                 PerformBean performBean3 = this.mSelectedPerform;
-                long j = performBean3 != null ? performBean3.performId : 0L;
+                long j2 = performBean3 != null ? performBean3.performId : 0L;
                 BusinessInfo businessInfo2 = this.mSkuBean.itemAdditionalInfo;
                 ArrayList<ItemContent> subItemContentList = (businessInfo2 == null || cb2.d(businessInfo2.subItemContentList())) ? null : this.mSkuBean.itemAdditionalInfo.subItemContentList();
                 fj1 fj1Var = this.mSkuPerformView;
                 SkuBean skuBean5 = this.mSkuBean;
-                fj1Var.p(str7, skuBean5.performCalendar.performViews, skuBean5.perform, isUseChecked(), this.mIsLoadCache, j, subItemContentList);
+                fj1Var.p(str7, skuBean5.performCalendar.performViews, skuBean5.perform, isUseChecked(), this.mIsLoadCache, j2, subItemContentList);
             }
             if (this.mIsShowDate && this.mSelectedPerform != null && this.mIsFirstHideDate) {
                 this.mIsShowDateView = false;
@@ -1910,10 +1888,10 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
         stopProgressDialog();
         String str = "";
         if ((followDataBean == null || followDataBean.getStatus() != 1) && (ncovSkuBottomInfo = this.skuBottomInfo) != null) {
-            int i = ncovSkuBottomInfo.buyStatus;
-            if (i == 2) {
+            int i2 = ncovSkuBottomInfo.buyStatus;
+            if (i2 == 2) {
                 str = getString(R$string.damai_goodregesiter_out_stock_fail);
-            } else if (i == 3) {
+            } else if (i2 == 3) {
                 str = getString(R$string.damai_kaishoudengji_fail);
             }
             ToastUtil.f(str);
@@ -1924,7 +1902,7 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
             }
             Object obj = hashMap.get(this.skuBottomInfo.buyStatus + "");
             if (obj != null) {
-                new DMThemeDialog(this.mActivity).o("提交成功").k(obj.toString()).r(DMThemeDialog.DMDialogTheme.THEME_SUPPORT_WANNA).h("知道了", getResources().getColor(R$color.color_ffffff), new DialogInterface$OnClickListenerC0834e()).g(true, null).show();
+                new DMThemeDialog(this.mActivity).o("提交成功").k(obj.toString()).r(DMThemeDialog.DMDialogTheme.THEME_SUPPORT_WANNA).h("知道了", getResources().getColor(R$color.color_ffffff), new e()).g(true, null).show();
             }
         } else {
             DMThemeDialog dMThemeDialog = new DMThemeDialog(this.mActivity);
@@ -1932,7 +1910,7 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
             dMThemeDialog.k("第一时间了解到您关注的演出动态");
             dMThemeDialog.o("开启消息通知");
             dMThemeDialog.g(true, null);
-            dMThemeDialog.i("去开启", new DialogInterface$OnClickListenerC0835f());
+            dMThemeDialog.i("去开启", new f());
             dMThemeDialog.show();
         }
     }
@@ -1948,9 +1926,9 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
         if (lk1Var == null || lk1Var.a != 0 || (basicInfoBean = this.mBasicInfoBean) == null || TextUtils.isEmpty(basicInfoBean.mainImageUrl)) {
             return;
         }
-        DMImageCreator k = C0504a.b().f(this.mBasicInfoBean.mainImageUrl, ScreenUtil.dip2px(mu0.a(), 93.0f), ScreenUtil.dip2px(mu0.a(), 131.0f)).k(new DMRoundedCornersBitmapProcessor(6, 0));
-        int i = R$drawable.uikit_default_image_bg_trans_white;
-        k.i(i).c(i).n(new C0831c()).e(new C0830b(this)).f();
+        DMImageCreator k2 = cn.damai.common.image.a.b().f(this.mBasicInfoBean.mainImageUrl, ScreenUtil.dip2px(mu0.a(), 93.0f), ScreenUtil.dip2px(mu0.a(), 131.0f)).k(new DMRoundedCornersBitmapProcessor(6, 0));
+        int i2 = R$drawable.uikit_default_image_bg_trans_white;
+        k2.i(i2).c(i2).n(new c()).e(new b(this)).f();
     }
 
     private List<View> viewIgnoreTagForExposure(View view) {
@@ -1959,7 +1937,7 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
             return (List) ipChange.ipc$dispatch("-1290971803", new Object[]{this, view});
         }
         new ArrayList();
-        return C0529c.e().I(C0529c.e().d(view));
+        return cn.damai.common.user.c.e().I(cn.damai.common.user.c.e().d(view));
     }
 
     protected void adjustStatusBar() {
@@ -1968,15 +1946,15 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
             ipChange.ipc$dispatch("-669730373", new Object[]{this});
             return;
         }
-        int i = Build.VERSION.SDK_INT;
-        if (i >= 23) {
+        int i2 = Build.VERSION.SDK_INT;
+        if (i2 >= 23) {
             kg2.f(this.mActivity, true, R$color.black);
         } else {
             kg2.f(this.mActivity, false, R$color.black);
         }
         View view = this.mStatusBarSpace;
         if (view != null) {
-            if (i >= 23) {
+            if (i2 >= 23) {
                 view.getLayoutParams().height = kg2.a(this.mActivity);
                 this.mStatusBarSpace.setVisibility(0);
                 return;
@@ -1991,9 +1969,9 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
             return (FragmentTransaction) ipChange.ipc$dispatch("-1602236913", new Object[]{this});
         }
         FragmentTransaction beginTransaction = getChildFragmentManager().beginTransaction();
-        int i = R$anim.sku_ncov_in_from_bottom;
-        int i2 = R$anim.sku_ncov_out_to_bottom;
-        beginTransaction.setCustomAnimations(i, i2, i, i2);
+        int i2 = R$anim.sku_ncov_in_from_bottom;
+        int i3 = R$anim.sku_ncov_out_to_bottom;
+        beginTransaction.setCustomAnimations(i2, i3, i2, i3);
         return beginTransaction;
     }
 
@@ -2004,10 +1982,10 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
     }
 
     @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
-    public void handleError(int i) {
+    public void handleError(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-73852298")) {
-            ipChange.ipc$dispatch("-73852298", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-73852298", new Object[]{this, Integer.valueOf(i2)});
         }
     }
 
@@ -2098,7 +2076,7 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
         ResponseErrorPage responseErrorPage = new ResponseErrorPage(this.mActivity, null, null, null);
         this.page = responseErrorPage;
         responseErrorPage.mTitleView.setVisibility(8);
-        this.page.setRefreshListener(new C0840k());
+        this.page.setRefreshListener(new k());
         this.page.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
         this.mErrorView.addView(this.page);
         if (this.mSelectedPrice != null && this.mSelectedPerform != null && !this.mIsProjectDetailSkuBean && !hj1.B) {
@@ -2143,24 +2121,24 @@ public class NcovSkuFragment extends DamaiBaseMvpFragment {
         } else if (!this.mIsShowYK || rd2.b(this.mItemId)) {
         } else {
             DMThemeDialog dMThemeDialog = new DMThemeDialog(getContext());
-            dMThemeDialog.o("优酷会员免费看").r(DMThemeDialog.DMDialogTheme.THEME_YOUKU_LIVE).k("优酷会员可免费观看无需购票\n非优酷会员用户请继续选购").i("知道了", new DialogInterface$OnClickListenerC0833d()).g(false, null);
+            dMThemeDialog.o("优酷会员免费看").r(DMThemeDialog.DMDialogTheme.THEME_YOUKU_LIVE).k("优酷会员可免费观看无需购票\n非优酷会员用户请继续选购").i("知道了", new d()).g(false, null);
             dMThemeDialog.show();
             rd2.e(this.mItemId);
             td2.i().x(this.mSkuView, this.mItemId);
         }
     }
 
-    public static NcovSkuFragment getInstance(SkuBean skuBean, long j, String str, String str2, boolean z, Bundle bundle) {
+    public static NcovSkuFragment getInstance(SkuBean skuBean, long j2, String str, String str2, boolean z, Bundle bundle) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "162855254")) {
-            return (NcovSkuFragment) ipChange.ipc$dispatch("162855254", new Object[]{skuBean, Long.valueOf(j), str, str2, Boolean.valueOf(z), bundle});
+            return (NcovSkuFragment) ipChange.ipc$dispatch("162855254", new Object[]{skuBean, Long.valueOf(j2), str, str2, Boolean.valueOf(z), bundle});
         }
         NcovSkuFragment ncovSkuFragment = new NcovSkuFragment();
         Bundle bundle2 = new Bundle();
         if (skuBean != null) {
             bundle2.putSerializable(KEY_SKU_BEAN, skuBean);
         }
-        bundle2.putLong("item_id", j);
+        bundle2.putLong("item_id", j2);
         if (!TextUtils.isEmpty(str)) {
             bundle2.putString(KEY_PRIVILEGE_ID, str);
         }

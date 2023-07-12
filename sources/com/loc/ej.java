@@ -42,7 +42,7 @@ public final class ej {
     f1 e = null;
     v73 f = null;
     ArrayList<y0> g = new ArrayList<>();
-    C5824a h = null;
+    a h = null;
     AMapLocationClientOption i = new AMapLocationClientOption();
     eo j = null;
     long k = 0;
@@ -73,10 +73,9 @@ public final class ej {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.loc.ej$a */
     /* loaded from: classes10.dex */
-    public class C5824a extends BroadcastReceiver {
-        C5824a() {
+    public class a extends BroadcastReceiver {
+        a() {
         }
 
         @Override // android.content.BroadcastReceiver
@@ -117,9 +116,8 @@ public final class ej {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.loc.ej$b */
     /* loaded from: classes10.dex */
-    public static /* synthetic */ class C5825b {
+    public static /* synthetic */ class b {
         static final /* synthetic */ int[] a;
 
         static {
@@ -159,7 +157,7 @@ public final class ej {
 
     private int E() {
         int i;
-        if (this.i.getGeoLanguage() != null && (i = C5825b.a[this.i.getGeoLanguage().ordinal()]) != 1) {
+        if (this.i.getGeoLanguage() != null && (i = b.a[this.i.getGeoLanguage().ordinal()]) != 1) {
             if (i == 2) {
                 return 1;
             }
@@ -226,7 +224,7 @@ public final class ej {
     private void G() {
         try {
             if (this.h == null) {
-                this.h = new C5824a();
+                this.h = new a();
             }
             if (this.K == null) {
                 IntentFilter intentFilter = new IntentFilter();
@@ -485,12 +483,12 @@ public final class ej {
 
     public final eo a(double d, double d2) {
         try {
-            String b = this.p.b(this.a, d, d2);
-            if (b.contains("\"status\":\"1\"")) {
-                eo b2 = this.f.b(b);
-                b2.setLatitude(d);
-                b2.setLongitude(d2);
-                return b2;
+            String b2 = this.p.b(this.a, d, d2);
+            if (b2.contains("\"status\":\"1\"")) {
+                eo b3 = this.f.b(b2);
+                b3.setLatitude(d);
+                b3.setLongitude(d2);
+                return b3;
             }
             return null;
         } catch (Throwable unused) {
@@ -535,11 +533,11 @@ public final class ej {
             i = 15;
             sb = "networkLocation has been mocked!#1502";
         } else if (!TextUtils.isEmpty(this.y)) {
-            eo a = this.e.a(this.a, this.y, this.z, true, z);
-            if (m1.r(a)) {
-                y(a);
+            eo a2 = this.e.a(this.a, this.y, this.z, true, z);
+            if (m1.r(a2)) {
+                y(a2);
             }
-            return a;
+            return a2;
         } else {
             i = this.B;
             sb = this.q.toString();

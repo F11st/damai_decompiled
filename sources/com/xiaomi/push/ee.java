@@ -2,7 +2,6 @@ package com.xiaomi.push;
 
 import android.content.Context;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -106,7 +105,7 @@ public class ee implements Runnable {
                 dz.a(this.a, this.f300a, 1008, "A receive a incorrect message with incorrect package info" + optString3);
                 return;
             } catch (JSONException e) {
-                AbstractC7535b.a(e);
+                com.xiaomi.channel.commonutils.logger.b.a(e);
                 context = this.a;
                 str = this.f300a;
                 str2 = "A meet a exception when receive the message";

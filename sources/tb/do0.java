@@ -14,14 +14,13 @@ public class do0 {
     private final LinkedList<FlutterViewContainer> b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.do0$b */
     /* loaded from: classes10.dex */
-    private static class C9052b {
+    private static class b {
         static final do0 a = new do0();
     }
 
     public static do0 h() {
-        return C9052b.a;
+        return b.a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */

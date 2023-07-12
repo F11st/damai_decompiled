@@ -15,7 +15,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.member.R$color;
 import cn.damai.member.R$drawable;
@@ -71,12 +70,11 @@ public class TickletFaceBindFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.TickletFaceBindFragment$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2072a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2072a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -86,18 +84,17 @@ public class TickletFaceBindFragment extends DamaiBaseMvpFragment {
                 ipChange.ipc$dispatch("-704036277", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(un2.k().D(TickletFaceBindFragment.this.projectId, TickletFaceBindFragment.this.mPerformId, TickletFaceBindFragment.this.mTicketId, TickletFaceBindFragment.this.mTvFaceBindStatus.getText().toString()));
+            cn.damai.common.user.c.e().x(un2.k().D(TickletFaceBindFragment.this.projectId, TickletFaceBindFragment.this.mPerformId, TickletFaceBindFragment.this.mTicketId, TickletFaceBindFragment.this.mTvFaceBindStatus.getText().toString()));
             TickletFaceBindFragment.this.executeFaceBindRequest();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.TickletFaceBindFragment$b */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2073b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2073b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -112,12 +109,11 @@ public class TickletFaceBindFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.TickletFaceBindFragment$c */
     /* loaded from: classes7.dex */
-    public class C2074c implements TickletFaceToBindTicketAdapter.OnToBindFaceClickListener {
+    public class c implements TickletFaceToBindTicketAdapter.OnToBindFaceClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2074c() {
+        c() {
         }
 
         @Override // cn.damai.ticklet.ui.adapter.TickletFaceToBindTicketAdapter.OnToBindFaceClickListener
@@ -197,8 +193,8 @@ public class TickletFaceBindFragment extends DamaiBaseMvpFragment {
         try {
             Drawable drawable = getResources().getDrawable(i);
             if (drawable != null) {
-                int a = t60.a(getActivity(), 30.0f);
-                drawable.setBounds(0, 0, a, a);
+                int a2 = t60.a(getActivity(), 30.0f);
+                drawable.setBounds(0, 0, a2, a2);
                 return drawable;
             }
             return null;
@@ -222,9 +218,9 @@ public class TickletFaceBindFragment extends DamaiBaseMvpFragment {
             ipChange.ipc$dispatch("-1421940306", new Object[]{this});
             return;
         }
-        this.mOnRebindFaceClickListener = new View$OnClickListenerC2072a();
-        this.mOnCompleteClickListener = new View$OnClickListenerC2073b();
-        this.mOnToBindFaceClickListener = new C2074c();
+        this.mOnRebindFaceClickListener = new a();
+        this.mOnCompleteClickListener = new b();
+        this.mOnToBindFaceClickListener = new c();
     }
 
     private void initRecyclerView() {

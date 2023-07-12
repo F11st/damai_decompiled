@@ -19,7 +19,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
 import cn.damai.commonbusiness.search.bean.SearchResultBean;
@@ -74,7 +73,7 @@ public class SearchResultActivity extends DamaiBaseActivity<SearchResultPresente
     private int mProjectAllSize = 0;
     private String mFavourableId = "";
     private String mFavourableTitle = "";
-    private TextWatcher mEditTextWatch = new C1604a();
+    private TextWatcher mEditTextWatch = new a();
     private TextView.OnEditorActionListener mKeySearchListener = new TextView.OnEditorActionListener() { // from class: cn.damai.search.ui.SearchResultActivity.2
         private static transient /* synthetic */ IpChange $ipChange;
 
@@ -91,8 +90,8 @@ public class SearchResultActivity extends DamaiBaseActivity<SearchResultPresente
             return false;
         }
     };
-    private View.OnClickListener mOnClickListener = new View$OnClickListenerC1605b();
-    private View.OnClickListener mItemClick = new View$OnClickListenerC1606c();
+    private View.OnClickListener mOnClickListener = new b();
+    private View.OnClickListener mItemClick = new c();
     private int mFirstVisibleItems = 0;
     private int mFirstVisibleItemCount = 0;
     private RecyclerView.OnScrollListener mScrollListener = new RecyclerView.OnScrollListener() { // from class: cn.damai.search.ui.SearchResultActivity.5
@@ -121,15 +120,14 @@ public class SearchResultActivity extends DamaiBaseActivity<SearchResultPresente
             }
         }
     };
-    private View.OnTouchListener mTouchListener = new View$OnTouchListenerC1607d();
+    private View.OnTouchListener mTouchListener = new d();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchResultActivity$a */
     /* loaded from: classes15.dex */
-    public class C1604a implements TextWatcher {
+    public class a implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1604a() {
+        a() {
         }
 
         @Override // android.text.TextWatcher
@@ -166,12 +164,11 @@ public class SearchResultActivity extends DamaiBaseActivity<SearchResultPresente
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchResultActivity$b */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1605b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1605b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -200,12 +197,11 @@ public class SearchResultActivity extends DamaiBaseActivity<SearchResultPresente
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchResultActivity$c */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1606c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1606c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -222,7 +218,7 @@ public class SearchResultActivity extends DamaiBaseActivity<SearchResultPresente
                     if (intValue < 0 || intValue >= SearchResultActivity.this.mAdapter.getItemCount() || (searchDataHolder = SearchResultActivity.this.mAdapter.getData().get(intValue)) == null || searchDataHolder.mType != 0 || (projectItemBean = searchDataHolder.mProjectItem) == null) {
                         return;
                     }
-                    C0529c e = C0529c.e();
+                    cn.damai.common.user.c e = cn.damai.common.user.c.e();
                     b82 C = b82.C();
                     SearchResultActivity searchResultActivity = SearchResultActivity.this;
                     e.x(C.t(searchResultActivity.mUtAAID, projectItemBean.id, searchResultActivity.getInput(), 0, projectItemBean.alg, intValue));
@@ -240,12 +236,11 @@ public class SearchResultActivity extends DamaiBaseActivity<SearchResultPresente
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchResultActivity$d */
     /* loaded from: classes15.dex */
-    public class View$OnTouchListenerC1607d implements View.OnTouchListener {
+    public class d implements View.OnTouchListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnTouchListenerC1607d() {
+        d() {
         }
 
         @Override // android.view.View.OnTouchListener
@@ -433,9 +428,9 @@ public class SearchResultActivity extends DamaiBaseActivity<SearchResultPresente
             input = "";
         }
         String str = input;
-        double[] b = ja1.b();
-        if (b != null) {
-            ((SearchResultPresenter) this.mPresenter).getSearchList(str, this.mFavourableId, this.mPageIndex, String.valueOf(b[0]), String.valueOf(b[1]));
+        double[] b2 = ja1.b();
+        if (b2 != null) {
+            ((SearchResultPresenter) this.mPresenter).getSearchList(str, this.mFavourableId, this.mPageIndex, String.valueOf(b2[0]), String.valueOf(b2[1]));
         } else {
             ((SearchResultPresenter) this.mPresenter).getSearchList(str, this.mFavourableId, this.mPageIndex, "", "");
         }

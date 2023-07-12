@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
@@ -91,12 +91,12 @@ public final class FlowableScan<T> extends AbstractFlowableWithUpstream<T, T> {
         }
     }
 
-    public FlowableScan(AbstractC8147b<T> abstractC8147b, BiFunction<T, T, T> biFunction) {
-        super(abstractC8147b);
+    public FlowableScan(b<T> bVar, BiFunction<T, T, T> biFunction) {
+        super(bVar);
         this.accumulator = biFunction;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new ScanSubscriber(subscriber, this.accumulator));
     }

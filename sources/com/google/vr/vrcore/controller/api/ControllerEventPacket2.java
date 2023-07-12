@@ -13,15 +13,14 @@ public final class ControllerEventPacket2 extends ControllerEventPacket {
     private long timestampMillis;
     private static ArrayDeque<ControllerEventPacket2> pool = new ArrayDeque<>();
     private static Object poolLock = new Object();
-    public static final Parcelable.Creator<ControllerEventPacket2> CREATOR = new C5442a();
+    public static final Parcelable.Creator<ControllerEventPacket2> CREATOR = new a();
     private ControllerPositionEvent[] positionEvents = new ControllerPositionEvent[16];
     private ControllerBatteryEvent batteryEvent = new ControllerBatteryEvent();
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.vrcore.controller.api.ControllerEventPacket2$a */
     /* loaded from: classes10.dex */
-    class C5442a implements Parcelable.Creator<ControllerEventPacket2> {
-        C5442a() {
+    class a implements Parcelable.Creator<ControllerEventPacket2> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

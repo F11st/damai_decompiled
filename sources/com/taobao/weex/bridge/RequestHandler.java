@@ -3,13 +3,13 @@ package com.taobao.weex.bridge;
 import android.net.Uri;
 import android.text.TextUtils;
 import androidx.annotation.Keep;
-import com.taobao.weex.C6970c;
 import com.taobao.weex.WXEnvironment;
 import com.taobao.weex.WXSDKInstance;
 import com.taobao.weex.WXSDKManager;
 import com.taobao.weex.adapter.IWXHttpAdapter;
 import com.taobao.weex.base.CalledByNative;
 import com.taobao.weex.bridge.WXBridgeManager;
+import com.taobao.weex.c;
 import com.taobao.weex.common.WXErrorCode;
 import com.taobao.weex.common.WXRequest;
 import com.taobao.weex.common.WXResponse;
@@ -25,7 +25,7 @@ public class RequestHandler {
 
     /* compiled from: Taobao */
     /* loaded from: classes11.dex */
-    class OnHttpListenerInner extends C6970c {
+    class OnHttpListenerInner extends c {
         private long sNativeCallback;
 
         OnHttpListenerInner(WXSDKInstance wXSDKInstance, long j, String str) {
@@ -33,12 +33,12 @@ public class RequestHandler {
             this.sNativeCallback = j;
         }
 
-        @Override // com.taobao.weex.C6970c
+        @Override // com.taobao.weex.c
         public void onFail(WXResponse wXResponse) {
             RequestHandler.this.nativeInvokeOnFailed(this.sNativeCallback);
         }
 
-        @Override // com.taobao.weex.C6970c
+        @Override // com.taobao.weex.c
         public void onSuccess(WXResponse wXResponse) {
             final String str = new String(wXResponse.originalData);
             WXBridgeManager.BundType bundleType = WXBridgeManager.getInstance().getBundleType("", str);

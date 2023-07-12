@@ -19,10 +19,10 @@ public class ay implements IDistanceSearch {
     private DistanceSearch.OnDistanceSearchListener d;
 
     public ay(Context context) throws AMapException {
-        bu a2 = bt.a(context, C4434h.a(false));
-        if (a2.a == bt.EnumC4398c.SuccessCode) {
+        bu a2 = bt.a(context, h.a(false));
+        if (a2.a == bt.c.SuccessCode) {
             this.b = context.getApplicationContext();
-            this.c = HandlerC4447t.a();
+            this.c = t.a();
             return;
         }
         String str = a2.b;
@@ -32,11 +32,11 @@ public class ay implements IDistanceSearch {
     @Override // com.amap.api.services.interfaces.IDistanceSearch
     public DistanceResult calculateRouteDistance(DistanceSearch.DistanceQuery distanceQuery) throws AMapException {
         try {
-            C4444r.a(this.b);
+            r.a(this.b);
             if (distanceQuery != null) {
                 if (!a(distanceQuery)) {
                     DistanceSearch.DistanceQuery m228clone = distanceQuery.m228clone();
-                    DistanceResult b = new C4436j(this.b, m228clone).b();
+                    DistanceResult b = new j(this.b, m228clone).b();
                     if (b != null) {
                         b.setDistanceQuery(m228clone);
                     }
@@ -46,7 +46,7 @@ public class ay implements IDistanceSearch {
             }
             throw new AMapException("无效的参数 - IllegalArgumentException");
         } catch (AMapException e) {
-            C4435i.a(e, a, "calculateWalkRoute");
+            i.a(e, a, "calculateWalkRoute");
             throw e;
         }
     }
@@ -56,7 +56,7 @@ public class ay implements IDistanceSearch {
         ao.a().a(new Runnable() { // from class: com.amap.api.col.s.ay.1
             @Override // java.lang.Runnable
             public final void run() {
-                Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                Message obtainMessage = t.a().obtainMessage();
                 obtainMessage.what = 400;
                 obtainMessage.arg1 = 16;
                 Bundle bundle = new Bundle();

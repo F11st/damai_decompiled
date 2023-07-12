@@ -19,7 +19,6 @@ import com.amap.api.maps.offlinemap.DownLoadExpandListView;
 import com.amap.api.maps.offlinemap.OfflineMapCity;
 import com.amap.api.maps.offlinemap.OfflineMapManager;
 import com.amap.api.maps.offlinemap.OfflineMapProvince;
-import com.amap.api.offlineservice.AbstractC4659a;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -27,7 +26,7 @@ import java.util.List;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public class fq extends AbstractC4659a implements TextWatcher, View.OnTouchListener, AbsListView.OnScrollListener, OfflineMapManager.OfflineLoadedListener, OfflineMapManager.OfflineMapDownloadListener {
+public class fq extends com.amap.api.offlineservice.a implements TextWatcher, View.OnTouchListener, AbsListView.OnScrollListener, OfflineMapManager.OfflineLoadedListener, OfflineMapManager.OfflineMapDownloadListener {
     private ImageView b;
     private RelativeLayout c;
     private DownLoadExpandListView d;
@@ -128,7 +127,7 @@ public class fq extends AbstractC4659a implements TextWatcher, View.OnTouchListe
     public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
     }
 
-    @Override // com.amap.api.offlineservice.AbstractC4659a
+    @Override // com.amap.api.offlineservice.a
     public void d() {
         this.q.destroy();
     }
@@ -267,7 +266,7 @@ public class fq extends AbstractC4659a implements TextWatcher, View.OnTouchListe
         i();
     }
 
-    @Override // com.amap.api.offlineservice.AbstractC4659a
+    @Override // com.amap.api.offlineservice.a
     public void a() {
         View a = fs.a(this.a, R.array.collect_title, null);
         DownLoadExpandListView downLoadExpandListView = (DownLoadExpandListView) a.findViewById(R.dimen.USER_HEADER_HC);
@@ -339,7 +338,7 @@ public class fq extends AbstractC4659a implements TextWatcher, View.OnTouchListe
         this.d.setVisibility(8);
     }
 
-    @Override // com.amap.api.offlineservice.AbstractC4659a
+    @Override // com.amap.api.offlineservice.a
     public boolean b() {
         try {
             if (this.e.getVisibility() == 0) {
@@ -354,7 +353,7 @@ public class fq extends AbstractC4659a implements TextWatcher, View.OnTouchListe
         return super.b();
     }
 
-    @Override // com.amap.api.offlineservice.AbstractC4659a
+    @Override // com.amap.api.offlineservice.a
     public RelativeLayout c() {
         if (this.c == null) {
             this.c = (RelativeLayout) fs.a(this.a, R.array.dago_pgc_ykl_gift_combo_star_anim, null);
@@ -362,7 +361,7 @@ public class fq extends AbstractC4659a implements TextWatcher, View.OnTouchListe
         return this.c;
     }
 
-    @Override // com.amap.api.offlineservice.AbstractC4659a
+    @Override // com.amap.api.offlineservice.a
     public void a(View view) {
         try {
             int id = view.getId();

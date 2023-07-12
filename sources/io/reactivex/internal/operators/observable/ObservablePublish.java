@@ -245,7 +245,7 @@ public final class ObservablePublish<T> extends bn<T> implements HasUpstreamObse
         return this.source;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super T> observer) {
         this.onSubscribe.subscribe(observer);
     }

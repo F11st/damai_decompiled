@@ -1,6 +1,5 @@
 package tb;
 
-import cn.damai.common.user.C0529c;
 import cn.damai.user.userhome.bean.MinepublishCheckBean;
 import cn.damai.user.userhome.ut.UtForDynamic;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -17,7 +16,7 @@ public class nv2 implements UtForDynamic {
         if (AndroidInstantRuntime.support(ipChange, "1502085322")) {
             ipChange.ipc$dispatch("1502085322", new Object[]{this, minepublishCheckBean});
         } else {
-            C0529c.e().x(vf1.x().d0());
+            cn.damai.common.user.c.e().x(vf1.x().d0());
         }
     }
 }

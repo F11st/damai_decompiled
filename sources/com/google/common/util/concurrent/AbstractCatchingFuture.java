@@ -2,7 +2,7 @@ package com.google.common.util.concurrent;
 
 import com.google.common.annotations.GwtCompatible;
 import com.google.common.base.Function;
-import com.google.common.util.concurrent.AbstractC5344e;
+import com.google.common.util.concurrent.e;
 import com.google.errorprone.annotations.ForOverride;
 import java.lang.Throwable;
 import java.util.concurrent.Executor;
@@ -14,7 +14,7 @@ import tb.jn1;
 /* compiled from: Taobao */
 @GwtCompatible
 /* loaded from: classes10.dex */
-public abstract class AbstractCatchingFuture<V, X extends Throwable, F, T> extends AbstractC5344e.AbstractC5345a<V> implements Runnable {
+public abstract class AbstractCatchingFuture<V, X extends Throwable, F, T> extends e.a<V> implements Runnable {
     @NullableDecl
     Class<X> exceptionType;
     @NullableDecl
@@ -188,7 +188,7 @@ public abstract class AbstractCatchingFuture<V, X extends Throwable, F, T> exten
             r7.set(r5)
             return
         L3e:
-            boolean r1 = com.google.common.util.concurrent.C5360n.a(r4, r1)
+            boolean r1 = com.google.common.util.concurrent.n.a(r4, r1)
             if (r1 != 0) goto L48
             r7.setFuture(r0)
             return

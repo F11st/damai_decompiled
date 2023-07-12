@@ -1,6 +1,5 @@
 package tb;
 
-import com.efs.sdk.base.a.d.C4786a;
 import java.util.concurrent.atomic.AtomicInteger;
 import tb.n73;
 
@@ -16,16 +15,16 @@ public final class y53 extends w23 {
     @Override // tb.w23
     public final void a() {
         n73 n73Var;
-        if ((this.b.get() == 0 && this.c.get() == 0 && this.d.get() == 0 && this.f.get() == 0 && this.e.get() == 0) || this.a == null || !C4786a.a().d) {
+        if ((this.b.get() == 0 && this.c.get() == 0 && this.d.get() == 0 && this.f.get() == 0 && this.e.get() == 0) || this.a == null || !com.efs.sdk.base.a.d.a.a().d) {
             return;
         }
-        C4786a c4786a = this.a;
+        com.efs.sdk.base.a.d.a aVar = this.a;
         int i = this.b.get();
         int i2 = this.c.get();
         int i3 = this.d.get();
         int i4 = this.f.get();
         int i5 = this.e.get();
-        n73Var = n73.C9462a.a;
+        n73Var = n73.a.a;
         o43 o43Var = new o43("efs_core", "lf_st", n73Var.a.c);
         o43Var.a("create_cnt", Integer.valueOf(i));
         o43Var.a("cache_cnt", Integer.valueOf(i2));
@@ -37,7 +36,7 @@ public final class y53 extends w23 {
         this.d.addAndGet(i3 * (-1));
         this.f.addAndGet(i4 * (-1));
         this.e.addAndGet(i5 * (-1));
-        c4786a.b(o43Var);
+        aVar.b(o43Var);
     }
 
     public final void b() {

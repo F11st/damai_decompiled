@@ -3,8 +3,8 @@ package com.amap.api.col.s;
 import android.content.Context;
 import android.os.Message;
 import android.text.TextUtils;
-import com.amap.api.col.s.HandlerC4447t;
 import com.amap.api.col.s.bt;
+import com.amap.api.col.s.t;
 import com.amap.api.services.core.AMapException;
 import com.amap.api.services.core.LatLonPoint;
 import com.amap.api.services.interfaces.INearbySearch;
@@ -28,7 +28,7 @@ public final class bc implements INearbySearch {
     private static long e;
     private String b;
     private Context c;
-    private HandlerC4447t d;
+    private t d;
     private ExecutorService f;
     private UploadInfoCallback k;
     private TimerTask l;
@@ -39,10 +39,9 @@ public final class bc implements INearbySearch {
     private Timer j = new Timer();
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.bc$a */
     /* loaded from: classes10.dex */
-    private class C4380a extends TimerTask {
-        private C4380a() {
+    private class a extends TimerTask {
+        private a() {
         }
 
         @Override // java.util.TimerTask, java.lang.Runnable
@@ -57,24 +56,24 @@ public final class bc implements INearbySearch {
                     bc.this.d.sendMessage(obtainMessage);
                 }
             } catch (Throwable th) {
-                C4435i.a(th, "NearbySearch", "UpdateDataTask");
+                i.a(th, "NearbySearch", "UpdateDataTask");
             }
         }
 
-        /* synthetic */ C4380a(bc bcVar, byte b) {
+        /* synthetic */ a(bc bcVar, byte b) {
             this();
         }
     }
 
     public bc(Context context) throws AMapException {
-        bu a = bt.a(context, C4434h.a(false));
-        if (a.a == bt.EnumC4398c.SuccessCode) {
+        bu a2 = bt.a(context, h.a(false));
+        if (a2.a == bt.c.SuccessCode) {
             this.c = context.getApplicationContext();
-            this.d = HandlerC4447t.a();
+            this.d = t.a();
             return;
         }
-        String str = a.b;
-        throw new AMapException(str, 1, str, a.a.a());
+        String str = a2.b;
+        throw new AMapException(str, 1, str, a2.a.a());
     }
 
     @Override // com.amap.api.services.interfaces.INearbySearch
@@ -82,7 +81,7 @@ public final class bc implements INearbySearch {
         try {
             this.a.add(nearbyListener);
         } catch (Throwable th) {
-            C4435i.a(th, "NearbySearch", "addNearbyListener");
+            i.a(th, "NearbySearch", "addNearbyListener");
         }
     }
 
@@ -104,7 +103,7 @@ public final class bc implements INearbySearch {
                             }
                         } catch (AMapException e2) {
                             obtainMessage.what = e2.getErrorCode();
-                            C4435i.a(e2, "NearbySearch", "clearUserInfoAsyn");
+                            i.a(e2, "NearbySearch", "clearUserInfoAsyn");
                             if (bc.this.d == null) {
                                 return;
                             }
@@ -119,7 +118,7 @@ public final class bc implements INearbySearch {
                 }
             });
         } catch (Throwable th) {
-            C4435i.a(th, "NearbySearch", "clearUserInfoAsynThrowable");
+            i.a(th, "NearbySearch", "clearUserInfoAsynThrowable");
         }
     }
 
@@ -128,7 +127,7 @@ public final class bc implements INearbySearch {
         try {
             this.j.cancel();
         } catch (Throwable th) {
-            C4435i.a(th, "NearbySearch", "destryoy");
+            i.a(th, "NearbySearch", "destryoy");
         }
     }
 
@@ -140,22 +139,22 @@ public final class bc implements INearbySearch {
         try {
             this.a.remove(nearbyListener);
         } catch (Throwable th) {
-            C4435i.a(th, "NearbySearch", "removeNearbyListener");
+            i.a(th, "NearbySearch", "removeNearbyListener");
         }
     }
 
     @Override // com.amap.api.services.interfaces.INearbySearch
     public final NearbySearchResult searchNearbyInfo(NearbySearch.NearbyQuery nearbyQuery) throws AMapException {
         try {
-            C4444r.a(this.c);
+            r.a(this.c);
             if (a(nearbyQuery)) {
-                return new C4461v(this.c, nearbyQuery).b();
+                return new v(this.c, nearbyQuery).b();
             }
             throw new AMapException("无效的参数 - IllegalArgumentException");
         } catch (AMapException e2) {
             throw e2;
         } catch (Throwable th) {
-            C4435i.a(th, "NearbySearch", "searchNearbyInfo");
+            i.a(th, "NearbySearch", "searchNearbyInfo");
             throw new AMapException(AMapException.AMAP_CLIENT_UNKNOWN_ERROR);
         }
     }
@@ -168,19 +167,19 @@ public final class bc implements INearbySearch {
                 public final void run() {
                     Message obtainMessage = bc.this.d.obtainMessage();
                     obtainMessage.arg1 = 9;
-                    HandlerC4447t.C4453f c4453f = new HandlerC4447t.C4453f();
-                    c4453f.a = bc.this.a;
-                    obtainMessage.obj = c4453f;
+                    t.f fVar = new t.f();
+                    fVar.a = bc.this.a;
+                    obtainMessage.obj = fVar;
                     try {
                         try {
-                            c4453f.b = bc.this.searchNearbyInfo(nearbyQuery);
+                            fVar.b = bc.this.searchNearbyInfo(nearbyQuery);
                             obtainMessage.what = 1000;
                             if (bc.this.d == null) {
                                 return;
                             }
                         } catch (AMapException e2) {
                             obtainMessage.what = e2.getErrorCode();
-                            C4435i.a(e2, "NearbySearch", "searchNearbyInfoAsyn");
+                            i.a(e2, "NearbySearch", "searchNearbyInfoAsyn");
                             if (bc.this.d == null) {
                                 return;
                             }
@@ -195,7 +194,7 @@ public final class bc implements INearbySearch {
                 }
             });
         } catch (Throwable th) {
-            C4435i.a(th, "NearbySearch", "searchNearbyInfoAsynThrowable");
+            i.a(th, "NearbySearch", "searchNearbyInfoAsynThrowable");
         }
     }
 
@@ -216,11 +215,11 @@ public final class bc implements INearbySearch {
                 timerTask.cancel();
             }
             this.i = true;
-            C4380a c4380a = new C4380a(this, (byte) 0);
-            this.l = c4380a;
-            this.j.schedule(c4380a, 0L, i);
+            a aVar = new a(this, (byte) 0);
+            this.l = aVar;
+            this.j.schedule(aVar, 0L, i);
         } catch (Throwable th) {
-            C4435i.a(th, "NearbySearch", "startUploadNearbyInfoAuto");
+            i.a(th, "NearbySearch", "startUploadNearbyInfoAuto");
         }
     }
 
@@ -251,7 +250,7 @@ public final class bc implements INearbySearch {
                     obtainMessage.what = bc.this.a(uploadInfo);
                     bc.this.d.sendMessage(obtainMessage);
                 } catch (Throwable th) {
-                    C4435i.a(th, "NearbySearch", "uploadNearbyInfoAsyn");
+                    i.a(th, "NearbySearch", "uploadNearbyInfoAsyn");
                 }
             }
         });
@@ -262,8 +261,8 @@ public final class bc implements INearbySearch {
         try {
             if (!this.i) {
                 if (a(this.b)) {
-                    C4444r.a(this.c);
-                    return new C4460u(this.c, this.b).b().intValue();
+                    r.a(this.c);
+                    return new u(this.c, this.b).b().intValue();
                 }
                 throw new AMapException(AMapException.AMAP_CLIENT_USERID_ILLEGAL);
             }
@@ -276,7 +275,7 @@ public final class bc implements INearbySearch {
     /* JADX INFO: Access modifiers changed from: private */
     public int b(UploadInfo uploadInfo) {
         try {
-            C4444r.a(this.c);
+            r.a(this.c);
             if (uploadInfo == null) {
                 return 2202;
             }
@@ -293,7 +292,7 @@ public final class bc implements INearbySearch {
                 if (userID.equals(this.h)) {
                     LatLonPoint point = uploadInfo.getPoint();
                     if (point != null && !point.equals(this.g)) {
-                        new C4462w(this.c, uploadInfo).b();
+                        new w(this.c, uploadInfo).b();
                         this.g = point.copy();
                         return 1000;
                     }

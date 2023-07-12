@@ -15,12 +15,11 @@ import tb.wr1;
 public class PhenixBasedDrawableLoader implements IDrawableLoader {
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.adapter.PhenixBasedDrawableLoader$a */
     /* loaded from: classes5.dex */
-    private static class C3007a implements IPhenixListener<ui2> {
+    private static class a implements IPhenixListener<ui2> {
         private IDrawableLoader.DrawableTarget a;
 
-        C3007a(IDrawableLoader.DrawableTarget drawableTarget) {
+        a(IDrawableLoader.DrawableTarget drawableTarget) {
             this.a = drawableTarget;
         }
 
@@ -57,7 +56,7 @@ public class PhenixBasedDrawableLoader implements IDrawableLoader {
                     }
                     wr1 s = ur1.o().s(str);
                     DrawableStrategy drawableStrategy2 = drawableStrategy;
-                    s.B(null, drawableStrategy2.width, drawableStrategy2.height).F(true).Q(new C3007a(drawableTarget)).n();
+                    s.B(null, drawableStrategy2.width, drawableStrategy2.height).F(true).Q(new a(drawableTarget)).n();
                 }
             }, 0L);
         } catch (Throwable th) {

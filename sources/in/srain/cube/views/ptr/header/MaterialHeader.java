@@ -22,12 +22,11 @@ public class MaterialHeader extends View implements PtrUIHandler {
     private Animation mScaleAnimation;
 
     /* compiled from: Taobao */
-    /* renamed from: in.srain.cube.views.ptr.header.MaterialHeader$a  reason: invalid class name */
     /* loaded from: classes3.dex */
-    class animationAnimation$AnimationListenerC8113a implements Animation.AnimationListener {
+    class a implements Animation.AnimationListener {
         final /* synthetic */ PtrUIHandlerHook a;
 
-        animationAnimation$AnimationListenerC8113a(MaterialHeader materialHeader, PtrUIHandlerHook ptrUIHandlerHook) {
+        a(MaterialHeader materialHeader, PtrUIHandlerHook ptrUIHandlerHook) {
             this.a = ptrUIHandlerHook;
         }
 
@@ -145,7 +144,7 @@ public class MaterialHeader extends View implements PtrUIHandler {
             }
         };
         this.mScaleAnimation.setDuration(200L);
-        this.mScaleAnimation.setAnimationListener(new animationAnimation$AnimationListenerC8113a(this, ptrUIHandlerHook));
+        this.mScaleAnimation.setAnimationListener(new a(this, ptrUIHandlerHook));
         this.mPtrFrameLayout = ptrFrameLayout;
         ptrFrameLayout.setRefreshCompleteHook(ptrUIHandlerHook);
     }

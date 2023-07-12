@@ -5,8 +5,6 @@ import java.lang.reflect.Type;
 import java.lang.reflect.TypeVariable;
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8214m;
 import kotlin.reflect.jvm.internal.impl.descriptors.runtime.structure.ReflectJavaAnnotationOwner;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaTypeParameter;
 import org.jetbrains.annotations.NotNull;
@@ -27,14 +25,14 @@ public final class p02 extends g02 implements ReflectJavaAnnotationOwner, JavaTy
     @Nullable
     /* renamed from: a */
     public vz1 findAnnotation(@NotNull hp0 hp0Var) {
-        return ReflectJavaAnnotationOwner.C8322a.a(this, hp0Var);
+        return ReflectJavaAnnotationOwner.a.a(this, hp0Var);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotationOwner
     @NotNull
     /* renamed from: b */
     public List<vz1> getAnnotations() {
-        return ReflectJavaAnnotationOwner.C8322a.b(this);
+        return ReflectJavaAnnotationOwner.a.b(this);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaTypeParameter
@@ -48,9 +46,9 @@ public final class p02 extends g02 implements ReflectJavaAnnotationOwner, JavaTy
         for (Type type : bounds) {
             arrayList.add(new e02(type));
         }
-        e02 e02Var = (e02) C8212k.s0(arrayList);
+        e02 e02Var = (e02) kotlin.collections.k.s0(arrayList);
         if (b41.d(e02Var == null ? null : e02Var.a(), Object.class)) {
-            g = C8214m.g();
+            g = kotlin.collections.m.g();
             return g;
         }
         return arrayList;
@@ -84,7 +82,7 @@ public final class p02 extends g02 implements ReflectJavaAnnotationOwner, JavaTy
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotationOwner
     public boolean isDeprecatedInJavaDoc() {
-        return ReflectJavaAnnotationOwner.C8322a.c(this);
+        return ReflectJavaAnnotationOwner.a.c(this);
     }
 
     @NotNull

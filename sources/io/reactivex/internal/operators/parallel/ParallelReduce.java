@@ -6,7 +6,7 @@ import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.subscribers.DeferredScalarSubscriber;
 import io.reactivex.internal.subscriptions.EmptySubscription;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
-import io.reactivex.parallel.AbstractC8161a;
+import io.reactivex.parallel.a;
 import java.util.concurrent.Callable;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
@@ -15,10 +15,10 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ParallelReduce<T, R> extends AbstractC8161a<R> {
+public final class ParallelReduce<T, R> extends a<R> {
     final Callable<R> initialSupplier;
     final BiFunction<R, ? super T, R> reducer;
-    final AbstractC8161a<? extends T> source;
+    final a<? extends T> source;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -86,13 +86,13 @@ public final class ParallelReduce<T, R> extends AbstractC8161a<R> {
         }
     }
 
-    public ParallelReduce(AbstractC8161a<? extends T> abstractC8161a, Callable<R> callable, BiFunction<R, ? super T, R> biFunction) {
-        this.source = abstractC8161a;
+    public ParallelReduce(a<? extends T> aVar, Callable<R> callable, BiFunction<R, ? super T, R> biFunction) {
+        this.source = aVar;
         this.initialSupplier = callable;
         this.reducer = biFunction;
     }
 
-    @Override // io.reactivex.parallel.AbstractC8161a
+    @Override // io.reactivex.parallel.a
     public int parallelism() {
         return this.source.parallelism();
     }
@@ -103,7 +103,7 @@ public final class ParallelReduce<T, R> extends AbstractC8161a<R> {
         }
     }
 
-    @Override // io.reactivex.parallel.AbstractC8161a
+    @Override // io.reactivex.parallel.a
     public void subscribe(Subscriber<? super R>[] subscriberArr) {
         if (validate(subscriberArr)) {
             int length = subscriberArr.length;

@@ -41,16 +41,15 @@ public class BezierCircleHeader extends InternalAbstract implements RefreshHeade
     protected boolean mWavePulling;
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.BezierCircleHeader$a */
     /* loaded from: classes6.dex */
-    class C6152a implements ValueAnimator.AnimatorUpdateListener {
+    class a implements ValueAnimator.AnimatorUpdateListener {
         float b;
         final /* synthetic */ float e;
         float a = 0.0f;
         float c = 0.0f;
         int d = 0;
 
-        C6152a(float f) {
+        a(float f) {
             this.e = f;
         }
 
@@ -109,10 +108,9 @@ public class BezierCircleHeader extends InternalAbstract implements RefreshHeade
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.BezierCircleHeader$b */
     /* loaded from: classes6.dex */
-    class C6153b implements ValueAnimator.AnimatorUpdateListener {
-        C6153b() {
+    class b implements ValueAnimator.AnimatorUpdateListener {
+        b() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -289,7 +287,7 @@ public class BezierCircleHeader extends InternalAbstract implements RefreshHeade
         this.mShowBoll = false;
         this.mShowOuter = false;
         ValueAnimator ofFloat = ValueAnimator.ofFloat(0.0f, 1.0f);
-        ofFloat.addUpdateListener(new C6153b());
+        ofFloat.addUpdateListener(new b());
         ofFloat.setInterpolator(new AccelerateInterpolator());
         ofFloat.setDuration(800L);
         ofFloat.start();
@@ -313,7 +311,7 @@ public class BezierCircleHeader extends InternalAbstract implements RefreshHeade
         DecelerateInterpolator decelerateInterpolator = new DecelerateInterpolator();
         float min = Math.min(this.mWaveHeight * 0.8f, this.mHeadHeight / 2.0f);
         ValueAnimator ofFloat = ValueAnimator.ofFloat(this.mWaveHeight, 0.0f, -(1.0f * min), 0.0f, -(0.4f * min), 0.0f);
-        ofFloat.addUpdateListener(new C6152a(min));
+        ofFloat.addUpdateListener(new a(min));
         ofFloat.setInterpolator(decelerateInterpolator);
         ofFloat.setDuration(1000L);
         ofFloat.start();

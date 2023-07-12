@@ -8,8 +8,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.bean.RecentShowBean;
@@ -24,8 +24,8 @@ import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.arch.v3.IItem;
 import com.youku.arch.v3.core.ItemValue;
 import java.util.HashMap;
-import tb.C9826vr;
 import tb.t60;
+import tb.vr;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
@@ -105,10 +105,10 @@ public class RecentShowViewHolder extends BaseViewHolder<RecentShowBean> {
         } else if (recentShowBean == null) {
         } else {
             recentShowBean.position = i;
-            if (this.mRankItemImage.getTag() instanceof C9826vr) {
-                ((C9826vr) this.mRankItemImage.getTag()).cancel();
+            if (this.mRankItemImage.getTag() instanceof vr) {
+                ((vr) this.mRankItemImage.getTag()).cancel();
             }
-            DMImageCreator f = C0504a.b().f(recentShowBean.projectPic, t60.a(this.context, 98.0f), t60.a(this.mContext, 131.0f));
+            DMImageCreator f = a.b().f(recentShowBean.projectPic, t60.a(this.context, 98.0f), t60.a(this.mContext, 131.0f));
             int i2 = R$drawable.uikit_default_image_bg_gradient;
             this.mRankItemImage.setTag(f.i(i2).c(i2).g(this.mRankItemImage));
             this.mRankItemTitle.setText(recentShowBean.projectName);

@@ -2,11 +2,9 @@ package tb;
 
 import android.graphics.PointF;
 import com.airbnb.lottie.LottieDrawable;
-import com.airbnb.lottie.animation.content.C2838j;
 import com.airbnb.lottie.animation.content.Content;
 import com.airbnb.lottie.model.animatable.AnimatableValue;
 import com.airbnb.lottie.model.content.ContentModel;
-import com.airbnb.lottie.model.layer.AbstractC2872a;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
@@ -46,8 +44,8 @@ public class oz1 implements ContentModel {
     }
 
     @Override // com.airbnb.lottie.model.content.ContentModel
-    public Content toContent(LottieDrawable lottieDrawable, AbstractC2872a abstractC2872a) {
-        return new C2838j(lottieDrawable, abstractC2872a, this);
+    public Content toContent(LottieDrawable lottieDrawable, com.airbnb.lottie.model.layer.a aVar) {
+        return new com.airbnb.lottie.animation.content.j(lottieDrawable, aVar, this);
     }
 
     public String toString() {

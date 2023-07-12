@@ -13,7 +13,6 @@ import java.util.HashMap;
 import java.util.Map;
 import kotlin.Result;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -30,13 +29,12 @@ import tb.ws2;
 public final class PopupDialogKt {
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.yymidservice.popup.popupcenter.view.PopupDialogKt$a */
     /* loaded from: classes8.dex */
-    public static final class C4030a extends PictureGaiaXEventProvider {
+    public static final class a extends PictureGaiaXEventProvider {
         final /* synthetic */ PicDialog a;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        C4030a(Activity activity, PicDialog picDialog) {
+        a(Activity activity, PicDialog picDialog) {
             super(activity);
             this.a = picDialog;
         }
@@ -50,15 +48,14 @@ public final class PopupDialogKt {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.yymidservice.popup.popupcenter.view.PopupDialogKt$b */
     /* loaded from: classes8.dex */
-    public static final class DialogInterface$OnDismissListenerC4031b implements DialogInterface.OnDismissListener {
+    public static final class b implements DialogInterface.OnDismissListener {
         final /* synthetic */ PopupDetailBean a;
         final /* synthetic */ Activity b;
         final /* synthetic */ Continuation<kt1> c;
 
         /* JADX WARN: Multi-variable type inference failed */
-        DialogInterface$OnDismissListenerC4031b(PopupDetailBean popupDetailBean, Activity activity, Continuation<? super kt1> continuation) {
+        b(PopupDetailBean popupDetailBean, Activity activity, Continuation<? super kt1> continuation) {
             this.a = popupDetailBean;
             this.b = activity;
             this.c = continuation;
@@ -67,24 +64,23 @@ public final class PopupDialogKt {
         @Override // android.content.DialogInterface.OnDismissListener
         public final void onDismiss(DialogInterface dialogInterface) {
             if (this.a.needReport) {
-                lt1.C9421a c9421a = lt1.Companion;
-                c9421a.a().q(this.b, c9421a.a().e(), this.a.pkId, null);
+                lt1.a aVar = lt1.Companion;
+                aVar.a().q(this.b, aVar.a().e(), this.a.pkId, null);
             }
             Continuation<kt1> continuation = this.c;
-            Result.C8174a c8174a = Result.Companion;
-            continuation.resumeWith(Result.m1271constructorimpl(kt1.C9377c.INSTANCE));
+            Result.a aVar2 = Result.Companion;
+            continuation.resumeWith(Result.m1271constructorimpl(kt1.c.INSTANCE));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.yymidservice.popup.popupcenter.view.PopupDialogKt$c */
     /* loaded from: classes8.dex */
-    public static final class C4032c implements PicDialog.OnDialogShowTimeListener {
+    public static final class c implements PicDialog.OnDialogShowTimeListener {
         final /* synthetic */ ws2 a;
         final /* synthetic */ Map<String, JSONObject> b;
 
         /* JADX WARN: Multi-variable type inference failed */
-        C4032c(ws2 ws2Var, Map<String, ? extends JSONObject> map) {
+        c(ws2 ws2Var, Map<String, ? extends JSONObject> map) {
             this.a = ws2Var;
             this.b = map;
         }
@@ -122,7 +118,7 @@ public final class PopupDialogKt {
             r0.<init>(r7)
         L18:
             java.lang.Object r7 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 2
             r4 = 1
@@ -193,22 +189,22 @@ public final class PopupDialogKt {
     }
 
     private static final Object d(Activity activity, Continuation<? super kt1> continuation) {
-        Continuation c;
+        Continuation c2;
         Object d;
         HashMap hashMap = new HashMap();
         hashMap.put("msg", "数据不满足需求");
         String simpleName = activity.getClass().getSimpleName();
         b41.h(simpleName, "context::class.java.simpleName");
         pt1.g(simpleName, "popupDialog", "fail", hashMap);
-        c = IntrinsicsKt__IntrinsicsJvmKt.c(continuation);
-        o52 o52Var = new o52(c);
-        Result.C8174a c8174a = Result.Companion;
-        o52Var.resumeWith(Result.m1271constructorimpl(kt1.C9377c.INSTANCE));
-        Object a = o52Var.a();
-        d = C8234b.d();
-        if (a == d) {
+        c2 = IntrinsicsKt__IntrinsicsJvmKt.c(continuation);
+        o52 o52Var = new o52(c2);
+        Result.a aVar = Result.Companion;
+        o52Var.resumeWith(Result.m1271constructorimpl(kt1.c.INSTANCE));
+        Object a2 = o52Var.a();
+        d = kotlin.coroutines.intrinsics.b.d();
+        if (a2 == d) {
             n40.c(continuation);
         }
-        return a;
+        return a2;
     }
 }

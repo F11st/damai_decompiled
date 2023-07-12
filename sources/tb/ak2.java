@@ -32,7 +32,7 @@ public class ak2 implements Scheduler {
             java.lang.Object[] r4 = new java.lang.Object[r2]     // Catch: java.lang.RuntimeException -> La9
             tb.xt2.f(r1, r3, r4)     // Catch: java.lang.RuntimeException -> La9
         L1d:
-            com.taobao.application.common.IAppPreferences r3 = com.taobao.application.common.C6673b.d()     // Catch: java.lang.RuntimeException -> La9
+            com.taobao.application.common.IAppPreferences r3 = com.taobao.application.common.b.d()     // Catch: java.lang.RuntimeException -> La9
             r4 = -1
             if (r3 == 0) goto L2b
             java.lang.String r5 = "oldDeviceScore"

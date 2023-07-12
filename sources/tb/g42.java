@@ -3,8 +3,8 @@ package tb;
 import java.lang.reflect.Method;
 import kotlin.reflect.jvm.internal.JvmFunctionSignature;
 import kotlin.reflect.jvm.internal.KotlinReflectionInternalError;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
 import kotlin.reflect.jvm.internal.impl.builtins.PrimitiveType;
+import kotlin.reflect.jvm.internal.impl.builtins.c;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor;
@@ -63,8 +63,8 @@ public final class g42 {
         return b41.d(functionDescriptor.getName(), tj.Companion.a()) && functionDescriptor.getValueParameters().isEmpty();
     }
 
-    private final JvmFunctionSignature.C8250c d(FunctionDescriptor functionDescriptor) {
-        return new JvmFunctionSignature.C8250c(new w61.C9846b(e(functionDescriptor), mf1.c(functionDescriptor, false, false, 1, null)));
+    private final JvmFunctionSignature.c d(FunctionDescriptor functionDescriptor) {
+        return new JvmFunctionSignature.c(new w61.b(e(functionDescriptor), mf1.c(functionDescriptor, false, false, 1, null)));
     }
 
     private final String e(CallableMemberDescriptor callableMemberDescriptor) {
@@ -95,9 +95,9 @@ public final class g42 {
             b41.h(componentType, "klass.componentType");
             PrimitiveType a2 = a(componentType);
             if (a2 != null) {
-                return new hj(C8277c.BUILT_INS_PACKAGE_FQ_NAME, a2.getArrayTypeName());
+                return new hj(kotlin.reflect.jvm.internal.impl.builtins.c.BUILT_INS_PACKAGE_FQ_NAME, a2.getArrayTypeName());
             }
-            hj m = hj.m(C8277c.C8278a.array.l());
+            hj m = hj.m(c.a.array.l());
             b41.h(m, "ClassId.topLevel(Standar…s.FqNames.array.toSafe())");
             return m;
         } else if (b41.d(cls, Void.TYPE)) {
@@ -105,7 +105,7 @@ public final class g42 {
         } else {
             PrimitiveType a3 = a(cls);
             if (a3 != null) {
-                return new hj(C8277c.BUILT_INS_PACKAGE_FQ_NAME, a3.getTypeName());
+                return new hj(kotlin.reflect.jvm.internal.impl.builtins.c.BUILT_INS_PACKAGE_FQ_NAME, a3.getTypeName());
             }
             hj a4 = ReflectClassUtilKt.a(cls);
             if (!a4.k()) {
@@ -131,11 +131,11 @@ public final class g42 {
         if (original instanceof p70) {
             p70 p70Var = (p70) original;
             ProtoBuf$Property proto = p70Var.getProto();
-            GeneratedMessageLite.C8441c<ProtoBuf$Property, JvmProtoBuf.JvmPropertySignature> c8441c = JvmProtoBuf.propertySignature;
-            b41.h(c8441c, "JvmProtoBuf.propertySignature");
-            JvmProtoBuf.JvmPropertySignature jvmPropertySignature = (JvmProtoBuf.JvmPropertySignature) fx1.a(proto, c8441c);
+            GeneratedMessageLite.c<ProtoBuf$Property, JvmProtoBuf.JvmPropertySignature> cVar = JvmProtoBuf.propertySignature;
+            b41.h(cVar, "JvmProtoBuf.propertySignature");
+            JvmProtoBuf.JvmPropertySignature jvmPropertySignature = (JvmProtoBuf.JvmPropertySignature) fx1.a(proto, cVar);
             if (jvmPropertySignature != null) {
-                return new a71.C8900c(original, proto, jvmPropertySignature, p70Var.getNameResolver(), p70Var.getTypeTable());
+                return new a71.c(original, proto, jvmPropertySignature, p70Var.getNameResolver(), p70Var.getTypeTable());
             }
         } else if (original instanceof m51) {
             SourceElement source = ((m51) original).getSource();
@@ -145,7 +145,7 @@ public final class g42 {
             JavaSourceElement javaSourceElement = (JavaSourceElement) source;
             JavaElement javaElement = javaSourceElement != null ? javaSourceElement.getJavaElement() : null;
             if (javaElement instanceof i02) {
-                return new a71.C8898a(((i02) javaElement).d());
+                return new a71.a(((i02) javaElement).d());
             }
             if (javaElement instanceof l02) {
                 Method d = ((l02) javaElement).d();
@@ -160,22 +160,22 @@ public final class g42 {
                     javaElement2 = null;
                 }
                 l02 l02Var = (l02) javaElement2;
-                return new a71.C8899b(d, l02Var != null ? l02Var.d() : null);
+                return new a71.b(d, l02Var != null ? l02Var.d() : null);
             }
             throw new KotlinReflectionInternalError("Incorrect resolution sequence for Java field " + original + " (source = " + javaElement + ')');
         }
         PropertyGetterDescriptor getter = original.getGetter();
         b41.f(getter);
-        JvmFunctionSignature.C8250c d2 = d(getter);
+        JvmFunctionSignature.c d2 = d(getter);
         PropertySetterDescriptor setter2 = original.getSetter();
-        return new a71.C8901d(d2, setter2 != null ? d(setter2) : null);
+        return new a71.d(d2, setter2 != null ? d(setter2) : null);
     }
 
     @NotNull
     public final JvmFunctionSignature g(@NotNull FunctionDescriptor functionDescriptor) {
         Method d;
-        w61.C9846b b;
-        w61.C9846b e;
+        w61.b b;
+        w61.b e;
         b41.i(functionDescriptor, "possiblySubstitutedFunction");
         CallableMemberDescriptor L = d70.L(functionDescriptor);
         b41.h(L, "DescriptorUtils.unwrapFa…siblySubstitutedFunction)");
@@ -185,15 +185,15 @@ public final class g42 {
             DeserializedCallableMemberDescriptor deserializedCallableMemberDescriptor = (DeserializedCallableMemberDescriptor) original;
             MessageLite proto = deserializedCallableMemberDescriptor.getProto();
             if ((proto instanceof ProtoBuf$Function) && (e = b71.INSTANCE.e((ProtoBuf$Function) proto, deserializedCallableMemberDescriptor.getNameResolver(), deserializedCallableMemberDescriptor.getTypeTable())) != null) {
-                return new JvmFunctionSignature.C8250c(e);
+                return new JvmFunctionSignature.c(e);
             }
             if ((proto instanceof ProtoBuf$Constructor) && (b = b71.INSTANCE.b((ProtoBuf$Constructor) proto, deserializedCallableMemberDescriptor.getNameResolver(), deserializedCallableMemberDescriptor.getTypeTable())) != null) {
                 DeclarationDescriptor containingDeclaration = functionDescriptor.getContainingDeclaration();
                 b41.h(containingDeclaration, "possiblySubstitutedFunction.containingDeclaration");
                 if (q21.b(containingDeclaration)) {
-                    return new JvmFunctionSignature.C8250c(b);
+                    return new JvmFunctionSignature.c(b);
                 }
-                return new JvmFunctionSignature.C8249b(b);
+                return new JvmFunctionSignature.b(b);
             }
             return d(original);
         }
@@ -206,7 +206,7 @@ public final class g42 {
             JavaElement javaElement = javaSourceElement != null ? javaSourceElement.getJavaElement() : null;
             l02 l02Var = (l02) (javaElement instanceof l02 ? javaElement : null);
             if (l02Var != null && (d = l02Var.d()) != null) {
-                return new JvmFunctionSignature.C8248a(d);
+                return new JvmFunctionSignature.a(d);
             }
             throw new KotlinReflectionInternalError("Incorrect resolution sequence for Java method " + original);
         } else if (original instanceof a51) {

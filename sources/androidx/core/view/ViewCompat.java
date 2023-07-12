@@ -65,8 +65,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.WeakHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
-import tb.C9796v;
 import tb.jn1;
+import tb.v;
 
 /* compiled from: Taobao */
 @SuppressLint({"PrivateConstructorForUtilityClass"})
@@ -1033,7 +1033,7 @@ public class ViewCompat {
             return view.getDisplay();
         }
         if (isAttachedToWindow(view)) {
-            return ((WindowManager) view.getContext().getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
+            return ((WindowManager) view.getContext().getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
         }
         return null;
     }

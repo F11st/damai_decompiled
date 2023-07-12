@@ -10,7 +10,7 @@ import android.util.SparseIntArray;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import com.taobao.android.dinamicx.C6368e;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import java.util.ArrayList;
 import tb.r10;
@@ -26,14 +26,13 @@ public class DXNativePageIndicator extends LinearLayout {
     private int itemSelectedBorderWidth;
     private int itemUnSelectedBorderColor;
     private int itemUnSelectedBorderWidth;
-    final C6411a recycledPool;
+    final a recycledPool;
     private GradientDrawable selectedDrawable;
     private GradientDrawable unselectedDrawable;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.view.DXNativePageIndicator$a */
     /* loaded from: classes12.dex */
-    public static class C6411a {
+    public static class a {
         private SparseArray<ArrayList<View>> a = new SparseArray<>();
         private SparseIntArray b = new SparseIntArray();
 
@@ -72,7 +71,7 @@ public class DXNativePageIndicator extends LinearLayout {
     public DXNativePageIndicator(Context context) {
         super(context);
         this.currentIndex = -1;
-        this.recycledPool = new C6411a();
+        this.recycledPool = new a();
         this.IMAGE_VIEW_TYPE = 1;
         init();
     }
@@ -240,11 +239,11 @@ public class DXNativePageIndicator extends LinearLayout {
             if (imageView != null) {
                 imageView.setImageDrawable(this.selectedDrawable);
             } else {
-                C6368e c6368e = new C6368e(r10.DB_NAME);
-                C6368e.C6369a c6369a = new C6368e.C6369a("Render", "Render_Fltten_Crash", C6368e.DXERROR_RENDER_PAGE_INDICATOR_CRASH_ERROR);
-                c6369a.e = "this.getChildCount(): " + getChildCount() + " index: " + i + " currentIndex: " + this.currentIndex;
-                c6368e.c.add(c6369a);
-                DXAppMonitor.n(c6368e);
+                e eVar = new e(r10.DB_NAME);
+                e.a aVar = new e.a("Render", "Render_Fltten_Crash", e.DXERROR_RENDER_PAGE_INDICATOR_CRASH_ERROR);
+                aVar.e = "this.getChildCount(): " + getChildCount() + " index: " + i + " currentIndex: " + this.currentIndex;
+                eVar.c.add(aVar);
+                DXAppMonitor.n(eVar);
             }
             this.currentIndex = i;
         }
@@ -269,7 +268,7 @@ public class DXNativePageIndicator extends LinearLayout {
     public DXNativePageIndicator(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         this.currentIndex = -1;
-        this.recycledPool = new C6411a();
+        this.recycledPool = new a();
         this.IMAGE_VIEW_TYPE = 1;
         init();
     }
@@ -277,7 +276,7 @@ public class DXNativePageIndicator extends LinearLayout {
     public DXNativePageIndicator(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         this.currentIndex = -1;
-        this.recycledPool = new C6411a();
+        this.recycledPool = new a();
         this.IMAGE_VIEW_TYPE = 1;
         init();
     }

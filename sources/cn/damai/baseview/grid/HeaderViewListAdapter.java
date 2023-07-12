@@ -17,14 +17,14 @@ import java.util.Iterator;
 /* loaded from: classes.dex */
 public class HeaderViewListAdapter implements Filterable, WrapperListAdapter {
     private static transient /* synthetic */ IpChange $ipChange;
-    static final ArrayList<ExtendableListView.C0290c> EMPTY_INFO_LIST = new ArrayList<>();
+    static final ArrayList<ExtendableListView.c> EMPTY_INFO_LIST = new ArrayList<>();
     private final ListAdapter mAdapter;
     boolean mAreAllFixedViewsSelectable;
-    ArrayList<ExtendableListView.C0290c> mFooterViewInfos;
-    ArrayList<ExtendableListView.C0290c> mHeaderViewInfos;
+    ArrayList<ExtendableListView.c> mFooterViewInfos;
+    ArrayList<ExtendableListView.c> mHeaderViewInfos;
     private final boolean mIsFilterable;
 
-    public HeaderViewListAdapter(ArrayList<ExtendableListView.C0290c> arrayList, ArrayList<ExtendableListView.C0290c> arrayList2, ListAdapter listAdapter) {
+    public HeaderViewListAdapter(ArrayList<ExtendableListView.c> arrayList, ArrayList<ExtendableListView.c> arrayList2, ListAdapter listAdapter) {
         this.mAdapter = listAdapter;
         this.mIsFilterable = listAdapter instanceof Filterable;
         if (arrayList == null) {
@@ -40,13 +40,13 @@ public class HeaderViewListAdapter implements Filterable, WrapperListAdapter {
         this.mAreAllFixedViewsSelectable = areAllListInfosSelectable(this.mHeaderViewInfos) && areAllListInfosSelectable(this.mFooterViewInfos);
     }
 
-    private boolean areAllListInfosSelectable(ArrayList<ExtendableListView.C0290c> arrayList) {
+    private boolean areAllListInfosSelectable(ArrayList<ExtendableListView.c> arrayList) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "364718845")) {
             return ((Boolean) ipChange.ipc$dispatch("364718845", new Object[]{this, arrayList})).booleanValue();
         }
         if (arrayList != null) {
-            Iterator<ExtendableListView.C0290c> it = arrayList.iterator();
+            Iterator<ExtendableListView.c> it = arrayList.iterator();
             while (it.hasNext()) {
                 if (!it.next().c) {
                     return false;

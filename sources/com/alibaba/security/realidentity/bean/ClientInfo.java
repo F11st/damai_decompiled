@@ -1,10 +1,10 @@
 package com.alibaba.security.realidentity.bean;
 
 import com.alibaba.security.biometrics.jni.VersionKey;
-import com.alibaba.security.common.d.C3818l;
-import com.alibaba.security.common.d.C3823p;
-import com.alibaba.security.realidentity.a.AbstractC3840a;
-import com.alibaba.security.realidentity.a.C3847g;
+import com.alibaba.security.common.d.l;
+import com.alibaba.security.common.d.p;
+import com.alibaba.security.realidentity.a.a;
+import com.alibaba.security.realidentity.a.g;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
 import com.huawei.hms.framework.network.grs.GrsBaseInfo;
 import java.io.Serializable;
@@ -17,7 +17,7 @@ public class ClientInfo implements Serializable {
     private String appVersion;
     private long availableMemory;
     private String clientType;
-    private String cpuArch = C3823p.h();
+    private String cpuArch = p.h();
     private String faceSdkName;
     private String faceSdkVersion;
     private String livenessSdkName;
@@ -33,25 +33,25 @@ public class ClientInfo implements Serializable {
     private String versionTag;
 
     public ClientInfo() {
-        this.supportNeon = C3823p.g() ? "Yes" : "No";
+        this.supportNeon = p.g() ? "Yes" : "No";
         this.mobileModel = Build.getMODEL();
         this.manufacturer = Build.getMANUFACTURER();
         this.osName = "Android";
         this.osVersion = Build.VERSION.getRELEASE();
-        this.rpSdkName = AbstractC3840a.I;
+        this.rpSdkName = a.I;
         this.rpSdkVersion = VersionKey.RP_SDK_VERSION;
-        this.livenessSdkName = AbstractC3840a.J;
+        this.livenessSdkName = a.J;
         this.livenessSdkVersion = VersionKey.FL_SDK_VERSION;
-        this.faceSdkName = AbstractC3840a.J;
+        this.faceSdkName = a.J;
         this.faceSdkVersion = VersionKey.FL_SDK_VERSION;
         this.clientType = GrsBaseInfo.CountryCodeSource.APP;
-        if (C3847g.C3848a.a.c != null) {
-            this.appName = C3818l.b(C3847g.C3848a.a.c);
-            this.appVersion = C3818l.c(C3847g.C3848a.a.c);
-            this.appPackName = C3818l.a(C3847g.C3848a.a.c);
-            this.availableMemory = C3823p.a(C3847g.C3848a.a.c);
-            C3847g unused = C3847g.C3848a.a;
-            this.totalMemory = C3823p.i();
+        if (g.a.a.c != null) {
+            this.appName = l.b(g.a.a.c);
+            this.appVersion = l.c(g.a.a.c);
+            this.appPackName = l.a(g.a.a.c);
+            this.availableMemory = p.a(g.a.a.c);
+            g unused = g.a.a;
+            this.totalMemory = p.i();
         }
     }
 

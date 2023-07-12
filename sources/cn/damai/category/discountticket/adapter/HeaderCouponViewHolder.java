@@ -24,15 +24,14 @@ public abstract class HeaderCouponViewHolder extends DiscountTicketAdapter.BaseV
     private final TextView a;
     private final TextView b;
     private HeaderCouponBean c;
-    private List<View$OnClickListenerC0385b> d;
+    private List<b> d;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.discountticket.adapter.HeaderCouponViewHolder$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0384a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0384a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -48,9 +47,8 @@ public abstract class HeaderCouponViewHolder extends DiscountTicketAdapter.BaseV
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.discountticket.adapter.HeaderCouponViewHolder$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0385b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private View a;
         private TextView b;
@@ -59,7 +57,7 @@ public abstract class HeaderCouponViewHolder extends DiscountTicketAdapter.BaseV
         private TextView e;
         private CouponActivityBean f;
 
-        public View$OnClickListenerC0385b(View view) {
+        public b(View view) {
             this.a = view;
             this.c = (TextView) view.findViewById(R$id.item_header_coupon_price);
             this.b = (TextView) view.findViewById(R$id.item_header_coupon_desc);
@@ -118,8 +116,8 @@ public abstract class HeaderCouponViewHolder extends DiscountTicketAdapter.BaseV
         this.b = (TextView) view.findViewById(R$id.item_header_desc);
         View findViewById = view.findViewById(R$id.item_header_coupon_1);
         View findViewById2 = view.findViewById(R$id.item_header_coupon_2);
-        this.d.add(new View$OnClickListenerC0385b(findViewById));
-        this.d.add(new View$OnClickListenerC0385b(findViewById2));
+        this.d.add(new b(findViewById));
+        this.d.add(new b(findViewById2));
     }
 
     private SpannableStringBuilder g(String str) {
@@ -159,7 +157,7 @@ public abstract class HeaderCouponViewHolder extends DiscountTicketAdapter.BaseV
                 } else {
                     this.b.setText(str);
                 }
-                this.b.setOnClickListener(new View$OnClickListenerC0384a());
+                this.b.setOnClickListener(new a());
             }
         } else {
             this.b.setText((CharSequence) null);

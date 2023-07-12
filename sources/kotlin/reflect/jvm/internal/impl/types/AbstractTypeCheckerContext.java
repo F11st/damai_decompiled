@@ -33,31 +33,29 @@ public abstract class AbstractTypeCheckerContext {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext$a */
     /* loaded from: classes3.dex */
-    public static abstract class AbstractC8531a {
+    public static abstract class a {
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext$a$a */
+        /* renamed from: kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext$a$a  reason: collision with other inner class name */
         /* loaded from: classes3.dex */
-        public static abstract class AbstractC8532a extends AbstractC8531a {
-            public AbstractC8532a() {
+        public static abstract class AbstractC0430a extends a {
+            public AbstractC0430a() {
                 super(null);
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext$a$b */
         /* loaded from: classes3.dex */
-        public static final class C8533b extends AbstractC8531a {
+        public static final class b extends a {
             @NotNull
-            public static final C8533b INSTANCE = new C8533b();
+            public static final b INSTANCE = new b();
 
-            private C8533b() {
+            private b() {
                 super(null);
             }
 
-            @Override // kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext.AbstractC8531a
+            @Override // kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext.a
             @NotNull
             public SimpleTypeMarker a(@NotNull AbstractTypeCheckerContext abstractTypeCheckerContext, @NotNull KotlinTypeMarker kotlinTypeMarker) {
                 b41.i(abstractTypeCheckerContext, WPKFactory.INIT_KEY_CONTEXT);
@@ -67,17 +65,16 @@ public abstract class AbstractTypeCheckerContext {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext$a$c */
         /* loaded from: classes3.dex */
-        public static final class C8534c extends AbstractC8531a {
+        public static final class c extends a {
             @NotNull
-            public static final C8534c INSTANCE = new C8534c();
+            public static final c INSTANCE = new c();
 
-            private C8534c() {
+            private c() {
                 super(null);
             }
 
-            @Override // kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext.AbstractC8531a
+            @Override // kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext.a
             public /* bridge */ /* synthetic */ SimpleTypeMarker a(AbstractTypeCheckerContext abstractTypeCheckerContext, KotlinTypeMarker kotlinTypeMarker) {
                 return (SimpleTypeMarker) b(abstractTypeCheckerContext, kotlinTypeMarker);
             }
@@ -91,17 +88,16 @@ public abstract class AbstractTypeCheckerContext {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext$a$d */
         /* loaded from: classes3.dex */
-        public static final class C8535d extends AbstractC8531a {
+        public static final class d extends a {
             @NotNull
-            public static final C8535d INSTANCE = new C8535d();
+            public static final d INSTANCE = new d();
 
-            private C8535d() {
+            private d() {
                 super(null);
             }
 
-            @Override // kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext.AbstractC8531a
+            @Override // kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext.a
             @NotNull
             public SimpleTypeMarker a(@NotNull AbstractTypeCheckerContext abstractTypeCheckerContext, @NotNull KotlinTypeMarker kotlinTypeMarker) {
                 b41.i(abstractTypeCheckerContext, WPKFactory.INIT_KEY_CONTEXT);
@@ -110,10 +106,10 @@ public abstract class AbstractTypeCheckerContext {
             }
         }
 
-        private AbstractC8531a() {
+        private a() {
         }
 
-        public /* synthetic */ AbstractC8531a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -203,5 +199,5 @@ public abstract class AbstractTypeCheckerContext {
     public abstract KotlinTypeMarker q(@NotNull KotlinTypeMarker kotlinTypeMarker);
 
     @NotNull
-    public abstract AbstractC8531a r(@NotNull SimpleTypeMarker simpleTypeMarker);
+    public abstract a r(@NotNull SimpleTypeMarker simpleTypeMarker);
 }

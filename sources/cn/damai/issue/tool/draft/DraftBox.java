@@ -33,13 +33,12 @@ public class DraftBox implements IDraftBox, Runnable {
     private final Handler mHandler = new Handler(Looper.getMainLooper());
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.tool.draft.DraftBox$a */
     /* loaded from: classes5.dex */
-    public class C1303a implements OnDraftListener {
+    public class a implements OnDraftListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnCheckDraftListener a;
 
-        C1303a(OnCheckDraftListener onCheckDraftListener) {
+        a(OnCheckDraftListener onCheckDraftListener) {
             this.a = onCheckDraftListener;
         }
 
@@ -60,14 +59,13 @@ public class DraftBox implements IDraftBox, Runnable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.tool.draft.DraftBox$b */
     /* loaded from: classes5.dex */
-    public class C1304b implements OnDialogListener {
+    public class b implements OnDialogListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DraftBean a;
         final /* synthetic */ OnDialogListener b;
 
-        C1304b(DraftBean draftBean, OnDialogListener onDialogListener) {
+        b(DraftBean draftBean, OnDialogListener onDialogListener) {
             this.a = draftBean;
             this.b = onDialogListener;
         }
@@ -125,7 +123,7 @@ public class DraftBox implements IDraftBox, Runnable {
         if (isProviderActivityOk()) {
             DraftBean createRealTimeDraft = createRealTimeDraft();
             if (createRealTimeDraft.isValidDraft()) {
-                wc0.f(this.mDraftProvider.getDraftActivity(), new C1304b(createRealTimeDraft, onDialogListener));
+                wc0.f(this.mDraftProvider.getDraftActivity(), new b(createRealTimeDraft, onDialogListener));
                 return true;
             }
             DraftBean draftBean = this.mCurrentDraft;
@@ -146,7 +144,7 @@ public class DraftBox implements IDraftBox, Runnable {
             return;
         }
         cb1.c(TAG, "checkCacheDraft");
-        this.mDraftStore.queryAsync(this.mDraftName.getDraftMd5FileName(), new C1303a(onCheckDraftListener));
+        this.mDraftStore.queryAsync(this.mDraftName.getDraftMd5FileName(), new a(onCheckDraftListener));
     }
 
     @Override // cn.damai.issue.tool.draft.IDraftBox

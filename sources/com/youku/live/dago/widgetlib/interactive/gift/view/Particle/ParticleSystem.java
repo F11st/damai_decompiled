@@ -36,7 +36,7 @@ public class ParticleSystem {
     private static transient /* synthetic */ IpChange $ipChange = null;
     private static long TIMER_TASK_INTERVAL = 33;
     private int mActivatedParticles;
-    private final ArrayList<C7945Particle> mActiveParticles;
+    private final ArrayList<Particle> mActiveParticles;
     private ValueAnimator mAnimator;
     private long mCurrentTime;
     private float mDpToPxScale;
@@ -51,7 +51,7 @@ public class ParticleSystem {
     private List<ParticleModifier> mModifiers;
     private int[] mParentLocation;
     private ViewGroup mParentView;
-    private ArrayList<C7945Particle> mParticles;
+    private ArrayList<Particle> mParticles;
     private float mParticlesPerMillisecond;
     private Random mRandom;
     private long mTimeToLive;
@@ -102,7 +102,7 @@ public class ParticleSystem {
             ipChange.ipc$dispatch("-584135037", new Object[]{this, Long.valueOf(j)});
             return;
         }
-        C7945Particle remove = this.mParticles.remove(0);
+        Particle remove = this.mParticles.remove(0);
         remove.init();
         for (int i = 0; i < this.mInitializers.size(); i++) {
             this.mInitializers.get(i).initParticle(remove, this.mRandom);
@@ -674,7 +674,7 @@ public class ParticleSystem {
             drawable.draw(canvas);
         }
         while (i2 < this.mMaxParticles) {
-            this.mParticles.add(new C7945Particle(createBitmap));
+            this.mParticles.add(new Particle(createBitmap));
             i2++;
         }
     }
@@ -702,7 +702,7 @@ public class ParticleSystem {
     public ParticleSystem(Activity activity, int i, Bitmap bitmap, long j, int i2) {
         this((ViewGroup) activity.findViewById(i2), i, j);
         for (int i3 = 0; i3 < this.mMaxParticles; i3++) {
-            this.mParticles.add(new C7945Particle(bitmap));
+            this.mParticles.add(new Particle(bitmap));
         }
     }
 

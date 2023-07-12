@@ -80,7 +80,7 @@ public class AILPChatListYoukuAdapter extends BaseChatListAdapter<AILPChatBean> 
     @Override // com.youku.live.dago.widgetlib.ailproom.adapter.chatlist.BaseChatListAdapter
     protected View inflateLayout(Context context) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1041798207") ? (View) ipChange.ipc$dispatch("1041798207", new Object[]{this, context}) : LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ailp_chat_list, this);
+        return AndroidInstantRuntime.support(ipChange, "1041798207") ? (View) ipChange.ipc$dispatch("1041798207", new Object[]{this, context}) : LayoutInflater.from(context).inflate(R.layout.dago_pgc_ailp_chat_list, this);
     }
 
     @Override // com.youku.live.dago.widgetlib.ailproom.protocol.AILPChatListProtocol

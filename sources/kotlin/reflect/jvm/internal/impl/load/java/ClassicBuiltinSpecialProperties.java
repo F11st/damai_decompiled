@@ -4,7 +4,7 @@ import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import java.util.Collection;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
+import kotlin.reflect.jvm.internal.impl.builtins.b;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.resolve.descriptorUtil.DescriptorUtilsKt;
 import org.jetbrains.annotations.NotNull;
@@ -28,7 +28,7 @@ public final class ClassicBuiltinSpecialProperties {
         if (J && callableMemberDescriptor.getValueParameters().isEmpty()) {
             return true;
         }
-        if (AbstractC8271b.e0(callableMemberDescriptor)) {
+        if (b.e0(callableMemberDescriptor)) {
             Collection<? extends CallableMemberDescriptor> overriddenDescriptors = callableMemberDescriptor.getOverriddenDescriptors();
             b41.h(overriddenDescriptors, "overriddenDescriptors");
             if (!overriddenDescriptors.isEmpty()) {
@@ -49,7 +49,7 @@ public final class ClassicBuiltinSpecialProperties {
     public final String a(@NotNull CallableMemberDescriptor callableMemberDescriptor) {
         ni1 ni1Var;
         b41.i(callableMemberDescriptor, "<this>");
-        AbstractC8271b.e0(callableMemberDescriptor);
+        b.e0(callableMemberDescriptor);
         CallableMemberDescriptor d = DescriptorUtilsKt.d(DescriptorUtilsKt.o(callableMemberDescriptor), false, new Function1<CallableMemberDescriptor, Boolean>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.ClassicBuiltinSpecialProperties$getBuiltinSpecialPropertyGetterName$descriptor$1
             @Override // kotlin.jvm.functions.Function1
             @NotNull

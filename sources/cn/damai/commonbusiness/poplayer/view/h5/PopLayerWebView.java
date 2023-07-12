@@ -22,7 +22,7 @@ import com.alibaba.poplayer.factory.PLViewInfo;
 import com.alibaba.poplayer.factory.view.base.PopLayerBaseView;
 import com.alibaba.poplayer.trigger.BaseConfigItem;
 import com.alibaba.poplayer.utils.ConsoleLogger$Level;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.live.livesdk.wkit.component.Constants;
@@ -36,7 +36,7 @@ import tb.p40;
 import tb.t01;
 
 /* compiled from: Taobao */
-@PLViewInfo(isDefaultType = true, type = C3834a.C3837c.d)
+@PLViewInfo(isDefaultType = true, type = a.c.d)
 /* loaded from: classes4.dex */
 public class PopLayerWebView extends PopLayerBaseView<IWVWebView, t01> {
     private static transient /* synthetic */ IpChange $ipChange;
@@ -45,12 +45,11 @@ public class PopLayerWebView extends PopLayerBaseView<IWVWebView, t01> {
     private boolean mWebViewAddEnable;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.poplayer.view.h5.PopLayerWebView$a */
     /* loaded from: classes4.dex */
-    public class C0776a extends WVUCWebChromeClient {
+    public class a extends WVUCWebChromeClient {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0776a(Context context) {
+        a(Context context) {
             super(context);
         }
 
@@ -70,13 +69,12 @@ public class PopLayerWebView extends PopLayerBaseView<IWVWebView, t01> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.poplayer.view.h5.PopLayerWebView$b */
     /* loaded from: classes4.dex */
-    public class C0777b extends ClickableSpan {
+    public class b extends ClickableSpan {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ BaseConfigItem a;
 
-        C0777b(BaseConfigItem baseConfigItem) {
+        b(BaseConfigItem baseConfigItem) {
             this.a = baseConfigItem;
         }
 
@@ -128,7 +126,7 @@ public class PopLayerWebView extends PopLayerBaseView<IWVWebView, t01> {
         }
         WVUCWebView wVUCWebView = new WVUCWebView(context);
         wVUCWebView.setWebViewClient(new WVUCWebViewClient(context));
-        wVUCWebView.setWebChromeClient(new C0776a(context));
+        wVUCWebView.setWebChromeClient(new a(context));
         dt1.b("buildWebView,use default UC webview.", new Object[0]);
         return wVUCWebView;
     }
@@ -249,7 +247,7 @@ public class PopLayerWebView extends PopLayerBaseView<IWVWebView, t01> {
         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder();
         try {
             BaseConfigItem r = getPopRequest().r();
-            p40.a(spannableStringBuilder, "UUID", r.uuid, null, new C0777b(r));
+            p40.a(spannableStringBuilder, "UUID", r.uuid, null, new b(r));
             p40.a(spannableStringBuilder, "PopTimes", et1.b(r.uuid, -1) + "", null, null);
             if (getWebView() != null) {
                 p40.a(spannableStringBuilder, "URL", getWebView().getUrl(), null, null);

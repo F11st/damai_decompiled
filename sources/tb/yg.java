@@ -13,7 +13,6 @@ import cn.damai.projectfiltercopy.bean.CategoryLevelOne;
 import cn.damai.projectfiltercopy.bean.CategoryLevelTwo;
 import cn.damai.projectfiltercopy.bean.FilterData;
 import cn.damai.projectfiltercopy.bean.Type;
-import cn.damai.projectfiltercopy.floatview.AbstractC1530a;
 import cn.damai.projectfiltercopy.model.CategoryDataAssembler;
 import cn.damai.projectfiltercopy.model.CategoryUpdate;
 import cn.damai.projectfiltercopy.model.OnCategoryUpdateListener;
@@ -26,7 +25,7 @@ import org.jetbrains.annotations.Nullable;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
-public final class yg extends AbstractC1530a<CategoryDataAssembler> {
+public final class yg extends cn.damai.projectfiltercopy.floatview.a<CategoryDataAssembler> {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
     private final CategoryDataAssembler d;
@@ -41,12 +40,11 @@ public final class yg extends AbstractC1530a<CategoryDataAssembler> {
     private View i;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yg$a */
     /* loaded from: classes6.dex */
-    public static final class C9986a implements OnCategoryUpdateListener {
+    public static final class a implements OnCategoryUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9986a() {
+        a() {
         }
 
         @Override // cn.damai.projectfiltercopy.model.OnCategoryUpdateListener
@@ -67,7 +65,7 @@ public final class yg extends AbstractC1530a<CategoryDataAssembler> {
         super(context);
         b41.i(categoryDataAssembler, "mDataAssembler");
         this.d = categoryDataAssembler;
-        categoryDataAssembler.setMListener(new C9986a());
+        categoryDataAssembler.setMListener(new a());
         this.f = new CategoryMainAdapter(context, new CategoryMainAdapter.OnCategoryMainListener() { // from class: tb.sg
             @Override // cn.damai.projectfiltercopy.adapter.CategoryMainAdapter.OnCategoryMainListener
             public final void onSubClick(int i, CategoryLevelOne categoryLevelOne) {

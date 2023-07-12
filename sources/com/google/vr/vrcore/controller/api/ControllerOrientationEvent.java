@@ -6,17 +6,16 @@ import android.os.Parcelable;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public final class ControllerOrientationEvent extends ControllerEvent {
-    public static final Parcelable.Creator<ControllerOrientationEvent> CREATOR = new C5445a();
+    public static final Parcelable.Creator<ControllerOrientationEvent> CREATOR = new a();
     public float qw;
     public float qx;
     public float qy;
     public float qz;
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.vrcore.controller.api.ControllerOrientationEvent$a */
     /* loaded from: classes10.dex */
-    class C5445a implements Parcelable.Creator<ControllerOrientationEvent> {
-        C5445a() {
+    class a implements Parcelable.Creator<ControllerOrientationEvent> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

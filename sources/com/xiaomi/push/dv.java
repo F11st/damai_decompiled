@@ -14,7 +14,7 @@ import java.util.List;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class dv extends al.AbstractRunnableC7597a {
+public class dv extends al.a {
     private Context a;
 
     /* renamed from: a  reason: collision with other field name */
@@ -43,7 +43,7 @@ public class dv extends al.AbstractRunnableC7597a {
         synchronized (dq.a) {
             try {
                 File file2 = new File(this.a.getExternalFilesDir(null), "push_cdata.lock");
-                C7594ab.m659a(file2);
+                ab.m659a(file2);
                 randomAccessFile = new RandomAccessFile(file2, "rw");
                 try {
                     FileLock lock = randomAccessFile.getChannel().lock();
@@ -56,7 +56,7 @@ public class dv extends al.AbstractRunnableC7597a {
                                 if (fileInputStream.read(bArr2) != a2) {
                                     break;
                                 }
-                                byte[] a3 = C7632dp.a(a, bArr2);
+                                byte[] a3 = dp.a(a, bArr2);
                                 if (a3 != null && a3.length != 0) {
                                     hr hrVar = new hr();
                                     it.a(hrVar, a3);
@@ -71,8 +71,8 @@ public class dv extends al.AbstractRunnableC7597a {
                                     } catch (IOException unused2) {
                                     }
                                 }
-                                C7594ab.a(fileInputStream);
-                                C7594ab.a(randomAccessFile);
+                                ab.a(fileInputStream);
+                                ab.a(randomAccessFile);
                                 return arrayList;
                             } catch (Throwable th) {
                                 th = th;
@@ -83,8 +83,8 @@ public class dv extends al.AbstractRunnableC7597a {
                                     } catch (IOException unused3) {
                                     }
                                 }
-                                C7594ab.a(fileInputStream);
-                                C7594ab.a(randomAccessFile);
+                                ab.a(fileInputStream);
+                                ab.a(randomAccessFile);
                                 throw th;
                             }
                         }
@@ -94,7 +94,7 @@ public class dv extends al.AbstractRunnableC7597a {
                             } catch (IOException unused4) {
                             }
                         }
-                        C7594ab.a(fileInputStream);
+                        ab.a(fileInputStream);
                     } catch (Exception unused5) {
                         fileInputStream = null;
                     } catch (Throwable th2) {
@@ -115,7 +115,7 @@ public class dv extends al.AbstractRunnableC7597a {
                 randomAccessFile = null;
                 fileInputStream = null;
             }
-            C7594ab.a(randomAccessFile);
+            ab.a(randomAccessFile);
         }
         return arrayList;
     }
@@ -161,7 +161,7 @@ public class dv extends al.AbstractRunnableC7597a {
         return false;
     }
 
-    @Override // com.xiaomi.push.al.AbstractRunnableC7597a
+    @Override // com.xiaomi.push.al.a
     /* renamed from: a */
     public String mo706a() {
         return "1";
@@ -183,7 +183,7 @@ public class dv extends al.AbstractRunnableC7597a {
                 }
                 ic icVar = new ic();
                 icVar.a(a);
-                byte[] a2 = C7594ab.a(it.a(icVar));
+                byte[] a2 = ab.a(it.a(icVar));
                 ii iiVar = new ii("-1", false);
                 iiVar.c(ht.DataCollection.f497a);
                 iiVar.a(a2);

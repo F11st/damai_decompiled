@@ -17,11 +17,11 @@ public class GenericVirtualLayoutManager extends VirtualLayoutManager {
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
-    static class ProtectedLayoutState extends ExposeLinearLayoutManagerEx.C3282c {
+    static class ProtectedLayoutState extends ExposeLinearLayoutManagerEx.c {
         ProtectedLayoutState() {
         }
 
-        @Override // com.alibaba.android.vlayout.ExposeLinearLayoutManagerEx.C3282c
+        @Override // com.alibaba.android.vlayout.ExposeLinearLayoutManagerEx.c
         public View next(RecyclerView.Recycler recycler) {
             try {
                 return super.next(recycler);

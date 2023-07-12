@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8152e;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.SingleObserver;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import java.util.NoSuchElementException;
 import org.reactivestreams.Publisher;
@@ -12,7 +12,7 @@ import org.reactivestreams.Subscription;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableLastSingle<T> extends AbstractC8152e<T> {
+public final class FlowableLastSingle<T> extends e<T> {
     final T defaultItem;
     final Publisher<T> source;
 
@@ -84,7 +84,7 @@ public final class FlowableLastSingle<T> extends AbstractC8152e<T> {
         this.defaultItem = t;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super T> singleObserver) {
         this.source.subscribe(new LastSubscriber(singleObserver, this.defaultItem));
     }

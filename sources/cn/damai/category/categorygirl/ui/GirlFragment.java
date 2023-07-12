@@ -15,8 +15,8 @@ import cn.damai.category.category.ui.CategoryActivity;
 import cn.damai.category.categorygirl.request.SearchListRequest;
 import cn.damai.category.categorygirl.request.ShowGirlRequest;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
@@ -55,22 +55,21 @@ public class GirlFragment extends AbsFragment {
     public static final String KEY_TITLE = "title";
     Map<String, String> arg;
     private CategoryActivity mActivity;
-    private C0525a.C0527b mBuilder;
+    private a.b mBuilder;
     private CategoryRepository mData;
     private SearchAdapter mSearchAdapter;
     private String mTitle;
-    public C0525a.C0527b mUTBuilder;
+    public a.b mUTBuilder;
     private int pageIndex = 1;
     private boolean mFirstList = true;
     private String mBdian = "xiannv_tab";
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.categorygirl.ui.GirlFragment$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0369a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0369a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -93,7 +92,7 @@ public class GirlFragment extends AbsFragment {
             bundle.putString("projectName", projectItemBean.name);
             bundle.putString("projectImage", projectItemBean.verticalPic);
             qd2.a(GirlFragment.this.mActivity, projectItemBean.schema, bundle);
-            C0529c.e().x(bh.m().r(projectItemBean.pos, "仙女推荐", projectItemBean.id));
+            c.e().x(bh.m().r(projectItemBean.pos, "仙女推荐", projectItemBean.id));
         }
     }
 
@@ -288,10 +287,10 @@ public class GirlFragment extends AbsFragment {
                 categoryRepository.mXiannvBdian = str;
             }
             if (getUserVisibleHint()) {
-                C0529c.e().L(getActivity(), str);
-                C0529c.e().l(getActivity(), new C0525a.C0527b().i(str).j(this.arg));
+                c.e().L(getActivity(), str);
+                c.e().l(getActivity(), new a.b().i(str).j(this.arg));
             }
-            this.mUTBuilder = new C0525a.C0527b().i(str).j(this.arg);
+            this.mUTBuilder = new a.b().i(str).j(this.arg);
         }
     }
 
@@ -332,7 +331,7 @@ public class GirlFragment extends AbsFragment {
             trackInfo.trackD = "item_";
             trackInfo.put("titlelabel", (Object) "仙女推荐");
             this.mSearchAdapter.f(trackInfo);
-            this.mSearchAdapter.d(new View$OnClickListenerC0369a());
+            this.mSearchAdapter.d(new a());
         }
         requestProject();
     }
@@ -344,9 +343,9 @@ public class GirlFragment extends AbsFragment {
             ipChange.ipc$dispatch("793536346", new Object[]{this, Integer.valueOf(i), obj});
         } else if (i != 1) {
         } else {
-            ToastUtil a = ToastUtil.a();
+            ToastUtil a2 = ToastUtil.a();
             FragmentActivity activity = getActivity();
-            a.e(activity, "frag demo: " + obj.toString());
+            a2.e(activity, "frag demo: " + obj.toString());
         }
     }
 
@@ -389,7 +388,7 @@ public class GirlFragment extends AbsFragment {
         }
         super.onViewCreated(view, bundle);
         fetchGirlListData();
-        this.mUTBuilder = new C0525a.C0527b().i(this.mBdian);
+        this.mUTBuilder = new a.b().i(this.mBdian);
     }
 
     public void pageUtBuild() {
@@ -400,16 +399,16 @@ public class GirlFragment extends AbsFragment {
             if (this.arg == null) {
                 this.arg = new HashMap();
             }
-            C0529c.e().o(this, this.mUTBuilder.j(this.arg));
+            c.e().o(this, this.mUTBuilder.j(this.arg));
         }
     }
 
-    public void setUTBuilder(C0525a.C0527b c0527b) {
+    public void setUTBuilder(a.b bVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-115158940")) {
-            ipChange.ipc$dispatch("-115158940", new Object[]{this, c0527b});
+            ipChange.ipc$dispatch("-115158940", new Object[]{this, bVar});
         } else {
-            this.mUTBuilder = c0527b;
+            this.mUTBuilder = bVar;
         }
     }
 

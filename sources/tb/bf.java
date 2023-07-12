@@ -11,7 +11,7 @@ import org.jetbrains.annotations.Nullable;
 public class bf {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C8960a Companion = new C8960a(null);
+    public static final a Companion = new a(null);
     @Nullable
     private String a;
     private long b;
@@ -23,15 +23,14 @@ public class bf {
     private ICacheDataFilter g;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.bf$a */
     /* loaded from: classes7.dex */
-    public static final class C8960a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C8960a() {
+        private a() {
         }
 
-        public /* synthetic */ C8960a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

@@ -20,7 +20,6 @@ import com.youku.gaiax.api.data.EventParams;
 import io.flutter.wpkbridge.WPKFactory;
 import java.util.Objects;
 import java.util.concurrent.CopyOnWriteArraySet;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -50,7 +49,7 @@ import tb.zr0;
 /* loaded from: classes6.dex */
 public final class GXTemplateEngine {
     @NotNull
-    public static final C3337a Companion = new C3337a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final Lazy<GXTemplateEngine> d;
     public Context a;
@@ -77,7 +76,7 @@ public final class GXTemplateEngine {
     /* loaded from: classes6.dex */
     public interface GXIDataListener {
         @Nullable
-        CharSequence onTextProcess(@NotNull C3348j c3348j);
+        CharSequence onTextProcess(@NotNull j jVar);
     }
 
     /* compiled from: Taobao */
@@ -86,30 +85,29 @@ public final class GXTemplateEngine {
     public interface GXIEventListener {
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.GXTemplateEngine$GXIEventListener$a */
         /* loaded from: classes6.dex */
-        public static final class C3335a {
-            public static void a(@NotNull GXIEventListener gXIEventListener, @NotNull C3338b c3338b) {
+        public static final class a {
+            public static void a(@NotNull GXIEventListener gXIEventListener, @NotNull b bVar) {
                 b41.i(gXIEventListener, "this");
-                b41.i(c3338b, "gxAnimation");
+                b41.i(bVar, "gxAnimation");
             }
 
-            public static void b(@NotNull GXIEventListener gXIEventListener, @NotNull C3342e c3342e) {
+            public static void b(@NotNull GXIEventListener gXIEventListener, @NotNull e eVar) {
                 b41.i(gXIEventListener, "this");
-                b41.i(c3342e, "gxGesture");
+                b41.i(eVar, "gxGesture");
             }
 
-            public static void c(@NotNull GXIEventListener gXIEventListener, @NotNull C3344g c3344g) {
+            public static void c(@NotNull GXIEventListener gXIEventListener, @NotNull g gVar) {
                 b41.i(gXIEventListener, "this");
-                b41.i(c3344g, "gxScroll");
+                b41.i(gVar, "gxScroll");
             }
         }
 
-        void onAnimationEvent(@NotNull C3338b c3338b);
+        void onAnimationEvent(@NotNull b bVar);
 
-        void onGestureEvent(@NotNull C3342e c3342e);
+        void onGestureEvent(@NotNull e eVar);
 
-        void onScrollEvent(@NotNull C3344g c3344g);
+        void onScrollEvent(@NotNull g gVar);
     }
 
     /* compiled from: Taobao */
@@ -118,40 +116,38 @@ public final class GXTemplateEngine {
     public interface GXITrackListener {
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.GXTemplateEngine$GXITrackListener$a */
         /* loaded from: classes6.dex */
-        public static final class C3336a {
-            public static void a(@NotNull GXITrackListener gXITrackListener, @NotNull C3349k c3349k) {
+        public static final class a {
+            public static void a(@NotNull GXITrackListener gXITrackListener, @NotNull k kVar) {
                 b41.i(gXITrackListener, "this");
-                b41.i(c3349k, "gxTrack");
+                b41.i(kVar, "gxTrack");
             }
 
-            public static void b(@NotNull GXITrackListener gXITrackListener, @NotNull C3349k c3349k) {
+            public static void b(@NotNull GXITrackListener gXITrackListener, @NotNull k kVar) {
                 b41.i(gXITrackListener, "this");
-                b41.i(c3349k, "gxTrack");
+                b41.i(kVar, "gxTrack");
             }
 
-            public static void c(@NotNull GXITrackListener gXITrackListener, @NotNull C3349k c3349k) {
+            public static void c(@NotNull GXITrackListener gXITrackListener, @NotNull k kVar) {
                 b41.i(gXITrackListener, "this");
-                b41.i(c3349k, "gxTrack");
+                b41.i(kVar, "gxTrack");
             }
         }
 
-        void onManualClickTrackEvent(@NotNull C3349k c3349k);
+        void onManualClickTrackEvent(@NotNull k kVar);
 
-        void onManualExposureTrackEvent(@NotNull C3349k c3349k);
+        void onManualExposureTrackEvent(@NotNull k kVar);
 
-        void onTrackEvent(@NotNull C3349k c3349k);
+        void onTrackEvent(@NotNull k kVar);
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.GXTemplateEngine$a */
     /* loaded from: classes6.dex */
-    public static final class C3337a {
-        private C3337a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3337a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -162,11 +158,10 @@ public final class GXTemplateEngine {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.GXTemplateEngine$b */
     /* loaded from: classes6.dex */
-    public static final class C3338b {
+    public static final class b {
         @NotNull
-        public static final C3339a Companion = new C3339a(null);
+        public static final a Companion = new a(null);
         @NotNull
         public static final String STATE_END = "END";
         @NotNull
@@ -181,13 +176,12 @@ public final class GXTemplateEngine {
         private JSONObject d;
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.GXTemplateEngine$b$a */
         /* loaded from: classes6.dex */
-        public static final class C3339a {
-            private C3339a() {
+        public static final class a {
+            private a() {
             }
 
-            public /* synthetic */ C3339a(k50 k50Var) {
+            public /* synthetic */ a(k50 k50Var) {
                 this();
             }
         }
@@ -233,9 +227,8 @@ public final class GXTemplateEngine {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.GXTemplateEngine$c */
     /* loaded from: classes6.dex */
-    public static abstract class AbstractC3340c {
+    public static abstract class c {
         @Nullable
         private Integer a;
         @Nullable
@@ -266,7 +259,7 @@ public final class GXTemplateEngine {
             this.c = str;
         }
 
-        public final void f(@Nullable C3347i c3347i) {
+        public final void f(@Nullable i iVar) {
         }
 
         public final void g(@Nullable View view) {
@@ -275,9 +268,8 @@ public final class GXTemplateEngine {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.GXTemplateEngine$d */
     /* loaded from: classes6.dex */
-    public static final class C3341d {
+    public static final class d {
         @Nullable
         private Integer a;
         @Nullable
@@ -325,9 +317,8 @@ public final class GXTemplateEngine {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.GXTemplateEngine$e */
     /* loaded from: classes6.dex */
-    public static class C3342e {
+    public static class e {
         @Nullable
         private JSONObject eventParams;
         @NotNull
@@ -337,7 +328,7 @@ public final class GXTemplateEngine {
         @Nullable
         private String nodeId;
         @Nullable
-        private C3347i templateItem;
+        private i templateItem;
         @Nullable
         private View view;
 
@@ -362,7 +353,7 @@ public final class GXTemplateEngine {
         }
 
         @Nullable
-        public final C3347i getTemplateItem() {
+        public final i getTemplateItem() {
             return this.templateItem;
         }
 
@@ -388,8 +379,8 @@ public final class GXTemplateEngine {
             this.nodeId = str;
         }
 
-        public final void setTemplateItem(@Nullable C3347i c3347i) {
-            this.templateItem = c3347i;
+        public final void setTemplateItem(@Nullable i iVar) {
+            this.templateItem = iVar;
         }
 
         public final void setView(@Nullable View view) {
@@ -398,15 +389,14 @@ public final class GXTemplateEngine {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.GXTemplateEngine$f */
     /* loaded from: classes6.dex */
-    public static final class C3343f {
+    public static final class f {
         @Nullable
         private Float a;
         @Nullable
         private Float b;
 
-        public C3343f(@Nullable Float f, @Nullable Float f2) {
+        public f(@Nullable Float f, @Nullable Float f2) {
             this.a = f;
             this.b = f2;
         }
@@ -425,9 +415,9 @@ public final class GXTemplateEngine {
             if (this == obj) {
                 return true;
             }
-            if (obj instanceof C3343f) {
-                C3343f c3343f = (C3343f) obj;
-                return b41.d(this.a, c3343f.a) && b41.d(this.b, c3343f.b);
+            if (obj instanceof f) {
+                f fVar = (f) obj;
+                return b41.d(this.a, fVar.a) && b41.d(this.b, fVar.b);
             }
             return false;
         }
@@ -446,11 +436,10 @@ public final class GXTemplateEngine {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.GXTemplateEngine$g */
     /* loaded from: classes6.dex */
-    public static final class C3344g {
+    public static final class g {
         @NotNull
-        public static final C3345a Companion = new C3345a(null);
+        public static final a Companion = new a(null);
         @NotNull
         public static final String TYPE_ON_SCROLLED = "onScrolled";
         @NotNull
@@ -464,13 +453,12 @@ public final class GXTemplateEngine {
         private int e;
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.GXTemplateEngine$g$a */
         /* loaded from: classes6.dex */
-        public static final class C3345a {
-            private C3345a() {
+        public static final class a {
+            private a() {
             }
 
-            public /* synthetic */ C3345a(k50 k50Var) {
+            public /* synthetic */ a(k50 k50Var) {
                 this();
             }
         }
@@ -520,9 +508,8 @@ public final class GXTemplateEngine {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.GXTemplateEngine$h */
     /* loaded from: classes6.dex */
-    public static final class C3346h {
+    public static final class h {
         @NotNull
         private final JSONObject a;
         @Nullable
@@ -535,7 +522,7 @@ public final class GXTemplateEngine {
         @Nullable
         private GXITrackListener f;
 
-        public C3346h(@NotNull JSONObject jSONObject) {
+        public h(@NotNull JSONObject jSONObject) {
             b41.i(jSONObject, "data");
             this.a = jSONObject;
             this.c = -1;
@@ -569,7 +556,7 @@ public final class GXTemplateEngine {
             if (this == obj) {
                 return true;
             }
-            return (obj instanceof C3346h) && b41.d(this.a, ((C3346h) obj).a);
+            return (obj instanceof h) && b41.d(this.a, ((h) obj).a);
         }
 
         @Nullable
@@ -608,9 +595,8 @@ public final class GXTemplateEngine {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.GXTemplateEngine$i */
     /* loaded from: classes6.dex */
-    public static final class C3347i {
+    public static final class i {
         @NotNull
         private final Context a;
         @NotNull
@@ -623,7 +609,7 @@ public final class GXTemplateEngine {
         private String e;
         private boolean f;
 
-        public C3347i(@NotNull Context context, @NotNull String str, @NotNull String str2) {
+        public i(@NotNull Context context, @NotNull String str, @NotNull String str2) {
             b41.i(context, WPKFactory.INIT_KEY_CONTEXT);
             b41.i(str, hh1.DIMEN_BIZ);
             b41.i(str2, "templateId");
@@ -663,10 +649,10 @@ public final class GXTemplateEngine {
             if (this == obj) {
                 return true;
             }
-            if (b41.d(C3347i.class, obj == null ? null : obj.getClass())) {
+            if (b41.d(i.class, obj == null ? null : obj.getClass())) {
                 Objects.requireNonNull(obj, "null cannot be cast to non-null type com.alibaba.gaiax.GXTemplateEngine.GXTemplateItem");
-                C3347i c3347i = (C3347i) obj;
-                return b41.d(this.b, c3347i.b) && b41.d(this.c, c3347i.c);
+                i iVar = (i) obj;
+                return b41.d(this.b, iVar.b) && b41.d(this.c, iVar.c);
             }
             return false;
         }
@@ -695,9 +681,8 @@ public final class GXTemplateEngine {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.GXTemplateEngine$j */
     /* loaded from: classes6.dex */
-    public static final class C3348j extends AbstractC3340c {
+    public static final class j extends c {
         @Nullable
         private CharSequence d;
         @Nullable
@@ -729,9 +714,8 @@ public final class GXTemplateEngine {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.GXTemplateEngine$k */
     /* loaded from: classes6.dex */
-    public static final class C3349k {
+    public static final class k {
         @Nullable
         private View a;
         @Nullable
@@ -769,7 +753,7 @@ public final class GXTemplateEngine {
             this.b = str;
         }
 
-        public final void g(@Nullable C3347i c3347i) {
+        public final void g(@Nullable i iVar) {
         }
 
         public final void h(@Nullable JSONObject jSONObject) {
@@ -782,53 +766,52 @@ public final class GXTemplateEngine {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.GXTemplateEngine$l */
     /* loaded from: classes6.dex */
-    public static final class C3350l implements GXIManualExposureEventListener {
+    public static final class l implements GXIManualExposureEventListener {
         final /* synthetic */ GXIEventListener a;
         final /* synthetic */ os0 b;
 
-        C3350l(GXIEventListener gXIEventListener, os0 os0Var) {
+        l(GXIEventListener gXIEventListener, os0 os0Var) {
             this.a = gXIEventListener;
             this.b = os0Var;
         }
 
         @Override // com.alibaba.gaiax.GXTemplateEngine.GXIEventListener
-        public void onAnimationEvent(@NotNull C3338b c3338b) {
-            b41.i(c3338b, "gxAnimation");
+        public void onAnimationEvent(@NotNull b bVar) {
+            b41.i(bVar, "gxAnimation");
             GXIEventListener gXIEventListener = this.a;
             if (gXIEventListener == null) {
                 return;
             }
-            gXIEventListener.onAnimationEvent(c3338b);
+            gXIEventListener.onAnimationEvent(bVar);
         }
 
         @Override // com.alibaba.gaiax.GXTemplateEngine.GXIEventListener
-        public void onGestureEvent(@NotNull C3342e c3342e) {
-            b41.i(c3342e, "gxGesture");
+        public void onGestureEvent(@NotNull e eVar) {
+            b41.i(eVar, "gxGesture");
             GXIEventListener gXIEventListener = this.a;
             if (gXIEventListener == null) {
                 return;
             }
-            gXIEventListener.onGestureEvent(c3342e);
+            gXIEventListener.onGestureEvent(eVar);
         }
 
         @Override // com.alibaba.gaiax.GXTemplateEngine.GXIEventListener
-        public void onScrollEvent(@NotNull C3344g c3344g) {
-            b41.i(c3344g, "gxScroll");
+        public void onScrollEvent(@NotNull g gVar) {
+            b41.i(gVar, "gxScroll");
             GXIEventListener gXIEventListener = this.a;
             if (gXIEventListener != null) {
-                gXIEventListener.onScrollEvent(c3344g);
+                gXIEventListener.onScrollEvent(gVar);
             }
-            if (this.b.u() && b41.d(C3344g.TYPE_ON_SCROLL_STATE_CHANGED, c3344g.d()) && c3344g.c() == 0) {
+            if (this.b.u() && b41.d(g.TYPE_ON_SCROLL_STATE_CHANGED, gVar.d()) && gVar.c() == 0) {
                 GXContainerUtils.INSTANCE.e(this.b);
             }
         }
     }
 
     static {
-        Lazy<GXTemplateEngine> b;
-        b = C8177b.b(new Function0<GXTemplateEngine>() { // from class: com.alibaba.gaiax.GXTemplateEngine$Companion$instance$2
+        Lazy<GXTemplateEngine> b2;
+        b2 = kotlin.b.b(new Function0<GXTemplateEngine>() { // from class: com.alibaba.gaiax.GXTemplateEngine$Companion$instance$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull
@@ -836,13 +819,13 @@ public final class GXTemplateEngine {
                 return new GXTemplateEngine();
             }
         });
-        d = b;
+        d = b2;
     }
 
     public GXTemplateEngine() {
-        Lazy b;
         Lazy b2;
-        b = C8177b.b(new Function0<GXDataImpl>() { // from class: com.alibaba.gaiax.GXTemplateEngine$data$2
+        Lazy b3;
+        b2 = kotlin.b.b(new Function0<GXDataImpl>() { // from class: com.alibaba.gaiax.GXTemplateEngine$data$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -855,15 +838,15 @@ public final class GXTemplateEngine {
                 return new GXDataImpl(GXTemplateEngine.this.g());
             }
         });
-        this.b = b;
-        b2 = C8177b.b(new Function0<as0>() { // from class: com.alibaba.gaiax.GXTemplateEngine$render$2
+        this.b = b2;
+        b3 = kotlin.b.b(new Function0<as0>() { // from class: com.alibaba.gaiax.GXTemplateEngine$render$2
             @Override // kotlin.jvm.functions.Function0
             @NotNull
             public final as0 invoke() {
                 return new as0();
             }
         });
-        this.c = b2;
+        this.c = b3;
     }
 
     private final GXIAdapter n() {
@@ -878,120 +861,120 @@ public final class GXTemplateEngine {
         }
     }
 
-    private final void o(View view, C3346h c3346h, C3343f c3343f) {
-        os0 b = os0.Companion.b(view);
-        if (b != null) {
+    private final void o(View view, h hVar, f fVar) {
+        os0 b2 = os0.Companion.b(view);
+        if (b2 != null) {
             boolean z = false;
-            if (b.z()) {
+            if (b2.z()) {
                 kr0 kr0Var = kr0.INSTANCE;
                 if (kr0Var.b()) {
                     kr0Var.a("reuse root node, skip bindDataOnlyNodeTree");
                 }
-                b.K(false);
+                b2.K(false);
                 return;
             }
             kr0 kr0Var2 = kr0.INSTANCE;
             if (kr0Var2.b()) {
-                kr0Var2.a("internalBindDataOnlyNodeTree gxMeasureSize=" + c3343f + " gxTemplateItem=" + b.r());
+                kr0Var2.a("internalBindDataOnlyNodeTree gxMeasureSize=" + fVar + " gxTemplateItem=" + b2.r());
             }
-            b.R(c3346h);
-            w(b);
-            if (c3343f != null) {
-                C3343f n = b.n();
-                b.P(c3343f);
-                b.J((b41.c(n.b(), c3343f.b()) && b41.c(n.a(), c3343f.a())) ? true : true);
-                if (b.y()) {
-                    ps0.a(b);
-                    x(b);
+            b2.R(hVar);
+            w(b2);
+            if (fVar != null) {
+                f n = b2.n();
+                b2.P(fVar);
+                b2.J((b41.c(n.b(), fVar.b()) && b41.c(n.a(), fVar.a())) ? true : true);
+                if (b2.y()) {
+                    ps0.a(b2);
+                    x(b2);
                 }
             }
-            l().a(b);
+            l().a(b2);
             return;
         }
         throw new IllegalArgumentException("Not found templateContext from targetView");
     }
 
-    private final void p(View view, C3346h c3346h, C3343f c3343f) {
-        os0 b = os0.Companion.b(view);
-        if (b != null) {
-            if (c3343f != null) {
-                b.P(c3343f);
+    private final void p(View view, h hVar, f fVar) {
+        os0 b2 = os0.Companion.b(view);
+        if (b2 != null) {
+            if (fVar != null) {
+                b2.P(fVar);
             }
-            b.R(c3346h);
-            l().b(b);
-            b.J(false);
+            b2.R(hVar);
+            l().b(b2);
+            b2.J(false);
             return;
         }
         throw new IllegalArgumentException("Not found templateContext from targetView");
     }
 
-    private final os0 q(C3347i c3347i, C3343f c3343f, C3341d c3341d) {
-        os0 a = os0.Companion.a(c3347i, c3343f, h().b(c3347i), c3341d == null ? null : c3341d.d());
-        os0 a2 = c3341d != null ? c3341d.a() : null;
-        if (a2 != null) {
+    private final os0 q(i iVar, f fVar, d dVar) {
+        os0 a2 = os0.Companion.a(iVar, fVar, h().b(iVar), dVar == null ? null : dVar.d());
+        os0 a3 = dVar != null ? dVar.a() : null;
+        if (a3 != null) {
             StringBuilder sb = new StringBuilder();
-            sb.append(c3341d.c());
+            sb.append(dVar.c());
             sb.append('-');
-            JSONObject b = c3341d.b();
-            sb.append(b != null ? b.hashCode() : 0);
+            JSONObject b2 = dVar.b();
+            sb.append(b2 != null ? b2.hashCode() : 0);
             String sb2 = sb.toString();
-            if (ps0.h(a2, sb2)) {
-                a.L(ps0.i(a2, sb2));
-                a.K(true);
-                return a;
+            if (ps0.h(a3, sb2)) {
+                a2.L(ps0.i(a3, sb2));
+                a2.K(true);
+                return a2;
             }
         }
-        l().c(a);
-        return a;
+        l().c(a2);
+        return a2;
     }
 
     private final View r(os0 os0Var) {
         return l().d(os0Var);
     }
 
-    public static /* synthetic */ void v(GXTemplateEngine gXTemplateEngine, C3347i c3347i, C3343f c3343f, qs0 qs0Var, int i, Object obj) {
-        if ((i & 4) != 0) {
+    public static /* synthetic */ void v(GXTemplateEngine gXTemplateEngine, i iVar, f fVar, qs0 qs0Var, int i2, Object obj) {
+        if ((i2 & 4) != 0) {
             qs0Var = null;
         }
-        gXTemplateEngine.u(c3347i, c3343f, qs0Var);
+        gXTemplateEngine.u(iVar, fVar, qs0Var);
     }
 
     private final void w(os0 os0Var) {
-        C3346h p;
-        C3346h p2 = os0Var.p();
-        GXIEventListener c = p2 == null ? null : p2.c();
+        h p;
+        h p2 = os0Var.p();
+        GXIEventListener c2 = p2 == null ? null : p2.c();
         CopyOnWriteArraySet<GXIContainer> d2 = os0Var.d();
         boolean z = false;
         if (d2 != null && (!d2.isEmpty())) {
             z = true;
         }
-        if (!z || (c instanceof GXIManualExposureEventListener) || (p = os0Var.p()) == null) {
+        if (!z || (c2 instanceof GXIManualExposureEventListener) || (p = os0Var.p()) == null) {
             return;
         }
-        p.h(new C3350l(c, os0Var));
+        p.h(new l(c2, os0Var));
     }
 
     private final void x(os0 os0Var) {
-        qr0 j = os0Var.j();
-        if (j != null) {
+        qr0 j2 = os0Var.j();
+        if (j2 != null) {
             os0Var.C();
-            GXGlobalCache.C3417a c3417a = GXGlobalCache.Companion;
-            c3417a.a().b();
+            GXGlobalCache.a aVar = GXGlobalCache.Companion;
+            aVar.a().b();
             ld2<Float> ld2Var = new ld2<>(os0Var.n().b(), os0Var.n().a());
             vr0 vr0Var = vr0.INSTANCE;
-            vr0Var.k(j, ld2Var);
-            l81 b = j.n().b();
-            if (b == null) {
+            vr0Var.k(j2, ld2Var);
+            l81 b2 = j2.n().b();
+            if (b2 == null) {
                 return;
             }
-            c3417a.a().g(os0Var.r(), b);
-            vr0Var.a(j, b);
+            aVar.a().g(os0Var.r(), b2);
+            vr0Var.a(j2, b2);
         }
     }
 
-    public final void b(@NotNull View view, @NotNull C3346h c3346h, @Nullable C3343f c3343f) {
+    public final void b(@NotNull View view, @NotNull h hVar, @Nullable f fVar) {
         b41.i(view, "view");
-        b41.i(c3346h, "gxTemplateData");
+        b41.i(hVar, "gxTemplateData");
         kr0 kr0Var = kr0.INSTANCE;
         if (kr0Var.b()) {
             kr0Var.a("bindDataOnlyNodeTree");
@@ -1001,24 +984,24 @@ public final class GXTemplateEngine {
             if (zr0Var.b() && Build.VERSION.SDK_INT >= 18) {
                 Trace.beginSection("GX bindDataOnlyNodeTree");
             }
-            o(view, c3346h, c3343f);
+            o(view, hVar, fVar);
             if (!zr0Var.b() || Build.VERSION.SDK_INT < 18) {
                 return;
             }
             Trace.endSection();
-        } catch (Exception e) {
+        } catch (Exception e2) {
             wq0 wq0Var = wq0.INSTANCE;
             if (wq0Var.b()) {
-                wq0Var.a(e);
+                wq0Var.a(e2);
                 return;
             }
-            throw e;
+            throw e2;
         }
     }
 
-    public final void c(@NotNull View view, @NotNull C3346h c3346h, @Nullable C3343f c3343f) {
+    public final void c(@NotNull View view, @NotNull h hVar, @Nullable f fVar) {
         b41.i(view, "view");
-        b41.i(c3346h, "gxTemplateData");
+        b41.i(hVar, "gxTemplateData");
         kr0 kr0Var = kr0.INSTANCE;
         if (kr0Var.b()) {
             kr0Var.a("bindDataOnlyViewTree");
@@ -1028,18 +1011,18 @@ public final class GXTemplateEngine {
             if (zr0Var.b() && Build.VERSION.SDK_INT >= 18) {
                 Trace.beginSection("GX bindDataOnlyViewTree");
             }
-            p(view, c3346h, c3343f);
+            p(view, hVar, fVar);
             if (!zr0Var.b() || Build.VERSION.SDK_INT < 18) {
                 return;
             }
             Trace.endSection();
-        } catch (Exception e) {
+        } catch (Exception e2) {
             wq0 wq0Var = wq0.INSTANCE;
             if (wq0Var.b()) {
-                wq0Var.a(e);
+                wq0Var.a(e2);
                 return;
             }
-            throw e;
+            throw e2;
         }
     }
 
@@ -1049,9 +1032,9 @@ public final class GXTemplateEngine {
     }
 
     @Nullable
-    public final os0 e(@NotNull C3347i c3347i, @NotNull C3343f c3343f, @Nullable C3341d c3341d) {
-        b41.i(c3347i, "gxTemplateItem");
-        b41.i(c3343f, "gxMeasureSize");
+    public final os0 e(@NotNull i iVar, @NotNull f fVar, @Nullable d dVar) {
+        b41.i(iVar, "gxTemplateItem");
+        b41.i(fVar, "gxMeasureSize");
         kr0 kr0Var = kr0.INSTANCE;
         if (kr0Var.b()) {
             kr0Var.a("createViewOnlyNodeTree");
@@ -1061,18 +1044,18 @@ public final class GXTemplateEngine {
             if (zr0Var.b() && Build.VERSION.SDK_INT >= 18) {
                 Trace.beginSection("GX createViewOnlyNodeTree");
             }
-            os0 q = q(c3347i, c3343f, c3341d);
+            os0 q = q(iVar, fVar, dVar);
             if (zr0Var.b() && Build.VERSION.SDK_INT >= 18) {
                 Trace.endSection();
             }
             return q;
-        } catch (Exception e) {
+        } catch (Exception e2) {
             wq0 wq0Var = wq0.INSTANCE;
             if (wq0Var.b()) {
-                wq0Var.a(e);
+                wq0Var.a(e2);
                 return null;
             }
-            throw e;
+            throw e2;
         }
     }
 
@@ -1093,13 +1076,13 @@ public final class GXTemplateEngine {
                 Trace.endSection();
             }
             return r;
-        } catch (Exception e) {
+        } catch (Exception e2) {
             wq0 wq0Var = wq0.INSTANCE;
             if (wq0Var.b()) {
-                wq0Var.a(e);
+                wq0Var.a(e2);
                 return null;
             }
-            throw e;
+            throw e2;
         }
     }
 
@@ -1120,13 +1103,13 @@ public final class GXTemplateEngine {
 
     @Nullable
     public final qr0 i(@Nullable View view, @NotNull String str) {
-        qr0 j;
+        qr0 j2;
         b41.i(str, "id");
-        os0 b = os0.Companion.b(view);
-        if (b == null || (j = b.j()) == null) {
+        os0 b2 = os0.Companion.b(view);
+        if (b2 == null || (j2 = b2.j()) == null) {
             return null;
         }
-        return sr0.c(j, str);
+        return sr0.c(j2, str);
     }
 
     @Nullable
@@ -1139,13 +1122,13 @@ public final class GXTemplateEngine {
 
     @Nullable
     public final View k(@Nullable View view, @NotNull String str) {
-        qr0 j;
+        qr0 j2;
         b41.i(str, "id");
-        os0 b = os0.Companion.b(view);
-        if (b == null || (j = b.j()) == null) {
+        os0 b2 = os0.Companion.b(view);
+        if (b2 == null || (j2 = b2.j()) == null) {
             return null;
         }
-        return sr0.d(j, str);
+        return sr0.d(j2, str);
     }
 
     @NotNull
@@ -1159,10 +1142,10 @@ public final class GXTemplateEngine {
         Context applicationContext = context.getApplicationContext();
         b41.h(applicationContext, "context.applicationContext");
         z(applicationContext);
-        GXStyleConvert a = GXStyleConvert.Companion.a();
+        GXStyleConvert a2 = GXStyleConvert.Companion.a();
         AssetManager assets = context.getAssets();
         b41.h(assets, "context.assets");
-        a.x(assets);
+        a2.x(assets);
         GXRegisterCenter.Companion.a().y(new zq0()).F(GXTemplateInfoSource.Companion.a(), 0).G(new bq0(g()), 0).G(new cq0(g()), 1);
         GXIAdapter n = n();
         if (n != null) {
@@ -1176,13 +1159,13 @@ public final class GXTemplateEngine {
         if (view instanceof GXIViewVisibleChange) {
             ((GXIViewVisibleChange) view).onVisibleChanged(true);
         }
-        os0 b = os0.Companion.b(view);
-        if (b == null) {
+        os0 b2 = os0.Companion.b(view);
+        if (b2 == null) {
             return;
         }
-        b.D(true);
-        b.A();
-        GXContainerUtils.INSTANCE.e(b);
+        b2.D(true);
+        b2.A();
+        GXContainerUtils.INSTANCE.e(b2);
     }
 
     public final void t(@NotNull View view) {
@@ -1190,41 +1173,41 @@ public final class GXTemplateEngine {
         if (view instanceof GXIViewVisibleChange) {
             ((GXIViewVisibleChange) view).onVisibleChanged(false);
         }
-        os0 b = os0.Companion.b(view);
-        if (b == null) {
+        os0 b2 = os0.Companion.b(view);
+        if (b2 == null) {
             return;
         }
-        b.D(false);
-        GXContainerUtils.INSTANCE.f(b);
+        b2.D(false);
+        GXContainerUtils.INSTANCE.f(b2);
     }
 
-    public final void u(@NotNull C3347i c3347i, @NotNull C3343f c3343f, @Nullable qs0 qs0Var) {
-        b41.i(c3347i, "gxTemplateItem");
-        b41.i(c3343f, "gxMeasureSize");
+    public final void u(@NotNull i iVar, @NotNull f fVar, @Nullable qs0 qs0Var) {
+        b41.i(iVar, "gxTemplateItem");
+        b41.i(fVar, "gxMeasureSize");
         kr0 kr0Var = kr0.INSTANCE;
         if (kr0Var.b()) {
             kr0Var.a("prepareView");
         }
         try {
-            if (GXGlobalCache.Companion.a().e(c3347i)) {
+            if (GXGlobalCache.Companion.a().e(iVar)) {
                 return;
             }
             zr0 zr0Var = zr0.INSTANCE;
             if (zr0Var.b() && Build.VERSION.SDK_INT >= 18) {
                 Trace.beginSection("GX prepareView");
             }
-            l().e(os0.Companion.a(c3347i, c3343f, h().b(c3347i), qs0Var));
+            l().e(os0.Companion.a(iVar, fVar, h().b(iVar), qs0Var));
             if (!zr0Var.b() || Build.VERSION.SDK_INT < 18) {
                 return;
             }
             Trace.endSection();
-        } catch (Exception e) {
+        } catch (Exception e2) {
             wq0 wq0Var = wq0.INSTANCE;
             if (wq0Var.b()) {
-                wq0Var.a(e);
+                wq0Var.a(e2);
                 return;
             }
-            throw e;
+            throw e2;
         }
     }
 
@@ -1235,18 +1218,18 @@ public final class GXTemplateEngine {
             kr0Var.a("resetView");
         }
         try {
-            os0 b = os0.Companion.b(view);
-            if (b == null) {
+            os0 b2 = os0.Companion.b(view);
+            if (b2 == null) {
                 return;
             }
-            l().f(b);
-        } catch (Exception e) {
+            l().f(b2);
+        } catch (Exception e2) {
             wq0 wq0Var = wq0.INSTANCE;
             if (wq0Var.b()) {
-                wq0Var.a(e);
+                wq0Var.a(e2);
                 return;
             }
-            throw e;
+            throw e2;
         }
     }
 

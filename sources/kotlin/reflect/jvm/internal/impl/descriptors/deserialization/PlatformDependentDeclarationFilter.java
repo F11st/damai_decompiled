@@ -11,13 +11,12 @@ import tb.rs1;
 public interface PlatformDependentDeclarationFilter {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.deserialization.PlatformDependentDeclarationFilter$a */
     /* loaded from: classes3.dex */
-    public static final class C8308a implements PlatformDependentDeclarationFilter {
+    public static final class a implements PlatformDependentDeclarationFilter {
         @NotNull
-        public static final C8308a INSTANCE = new C8308a();
+        public static final a INSTANCE = new a();
 
-        private C8308a() {
+        private a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.descriptors.deserialization.PlatformDependentDeclarationFilter
@@ -29,13 +28,12 @@ public interface PlatformDependentDeclarationFilter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.deserialization.PlatformDependentDeclarationFilter$b */
     /* loaded from: classes3.dex */
-    public static final class C8309b implements PlatformDependentDeclarationFilter {
+    public static final class b implements PlatformDependentDeclarationFilter {
         @NotNull
-        public static final C8309b INSTANCE = new C8309b();
+        public static final b INSTANCE = new b();
 
-        private C8309b() {
+        private b() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.descriptors.deserialization.PlatformDependentDeclarationFilter

@@ -70,10 +70,10 @@ public class BaseKeyUtil {
                 cArr[i3] = (char) ((hexStr2ByteArray[i3] ^ hexStr2ByteArray2[i3]) ^ hexStr2ByteArray3[i3]);
             }
             if (!z) {
-                C5742b.c(a, "exportRootKey: sha1");
+                b.c(a, "exportRootKey: sha1");
                 return PBKDF2.pbkdf2(cArr, bArr, i, i2 * 8);
             }
-            C5742b.c(a, "exportRootKey: sha256");
+            b.c(a, "exportRootKey: sha256");
             return PBKDF2.pbkdf2SHA256(cArr, bArr, i, i2 * 8);
         }
         throw new IllegalArgumentException("key length must be more than 128bit.");

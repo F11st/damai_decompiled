@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.TextUtils;
 import com.taobao.aranger.core.wrapper.ParameterWrapper;
-import com.taobao.aranger.utils.C6699b;
+import com.taobao.aranger.utils.b;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -44,10 +44,10 @@ public class Reply implements Parcelable {
             this.mErrorMessage = parcel.readString();
         }
         if ((parcel.readByte() | 0) == 0) {
-            this.mFlowParameterWrappers = (ParameterWrapper[]) C6699b.e(getClass().getClassLoader(), parcel);
+            this.mFlowParameterWrappers = (ParameterWrapper[]) b.e(getClass().getClassLoader(), parcel);
         }
         this.mInvokeTime = parcel.readInt();
-        this.mResult = C6699b.e(getClass().getClassLoader(), parcel);
+        this.mResult = b.e(getClass().getClassLoader(), parcel);
     }
 
     @Override // android.os.Parcelable
@@ -115,11 +115,11 @@ public class Reply implements Parcelable {
         }
         if (this.mFlowParameterWrappers != null) {
             parcel.writeByte((byte) 0);
-            C6699b.g(parcel, this.mFlowParameterWrappers, i, true);
+            b.g(parcel, this.mFlowParameterWrappers, i, true);
         } else {
             parcel.writeByte((byte) 1);
         }
         parcel.writeInt((int) this.mInvokeTime);
-        C6699b.g(parcel, this.mResult, i, true);
+        b.g(parcel, this.mResult, i, true);
     }
 }

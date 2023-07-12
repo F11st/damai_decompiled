@@ -2,16 +2,13 @@ package anetwork.channel.unified;
 
 import android.support.v4.media.session.PlaybackStateCompat;
 import android.text.TextUtils;
-import anet.channel.C0159a;
-import anet.channel.C0162c;
 import anet.channel.NoAvailStrategyException;
 import anet.channel.RequestCb;
 import anet.channel.Session;
 import anet.channel.SessionGetCallback;
+import anet.channel.a;
 import anet.channel.entity.ENV;
-import anet.channel.fulltrace.C0179a;
 import anet.channel.monitor.BandWidthSampler;
-import anet.channel.request.C0193a;
 import anet.channel.request.Cancelable;
 import anet.channel.session.HttpSession;
 import anet.channel.statist.ExceptionStatistic;
@@ -21,7 +18,6 @@ import anet.channel.thread.ThreadPoolExecutorFactory;
 import anet.channel.util.ALog;
 import anet.channel.util.AppLifecycle;
 import anetwork.channel.aidl.DefaultFinishEvent;
-import anetwork.channel.cache.C0242a;
 import anetwork.channel.cache.Cache;
 import anetwork.channel.cookie.CookieManager;
 import anetwork.channel.http.NetworkSdkSetting;
@@ -60,7 +56,7 @@ class NetworkTask implements IUnifiedTask {
     Cache.Entry entry;
     String f_refer;
     volatile AtomicBoolean isDone;
-    C0254b rc;
+    anetwork.channel.unified.b rc;
     ByteArrayOutputStream cacheBuffer = null;
     volatile Cancelable cancelable = null;
     volatile boolean isCanceled = false;
@@ -68,25 +64,24 @@ class NetworkTask implements IUnifiedTask {
     int dataChunkIndex = 0;
     boolean isHeaderCallback = false;
     boolean isDataChuckCallback = false;
-    C0251c responseBuffer = null;
+    c responseBuffer = null;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anetwork.channel.unified.NetworkTask$a */
     /* loaded from: classes.dex */
-    public class C0249a implements SessionGetCallback {
+    public class a implements SessionGetCallback {
         final /* synthetic */ RequestStatistic a;
         final /* synthetic */ long b;
-        final /* synthetic */ C0193a c;
-        final /* synthetic */ C0162c d;
+        final /* synthetic */ anet.channel.request.a c;
+        final /* synthetic */ anet.channel.c d;
         final /* synthetic */ o01 e;
         final /* synthetic */ boolean f;
 
-        C0249a(RequestStatistic requestStatistic, long j, C0193a c0193a, C0162c c0162c, o01 o01Var, boolean z) {
+        a(RequestStatistic requestStatistic, long j, anet.channel.request.a aVar, anet.channel.c cVar, o01 o01Var, boolean z) {
             this.a = requestStatistic;
             this.b = j;
-            this.c = c0193a;
-            this.d = c0162c;
+            this.c = aVar;
+            this.d = cVar;
             this.e = o01Var;
             this.f = z;
         }
@@ -110,14 +105,13 @@ class NetworkTask implements IUnifiedTask {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anetwork.channel.unified.NetworkTask$b */
     /* loaded from: classes.dex */
-    public class C0250b implements RequestCb {
-        final /* synthetic */ C0193a a;
+    public class b implements RequestCb {
+        final /* synthetic */ anet.channel.request.a a;
         final /* synthetic */ RequestStatistic b;
 
-        C0250b(C0193a c0193a, RequestStatistic requestStatistic) {
-            this.a = c0193a;
+        b(anet.channel.request.a aVar, RequestStatistic requestStatistic) {
+            this.a = aVar;
             this.b = requestStatistic;
         }
 
@@ -138,9 +132,9 @@ class NetworkTask implements IUnifiedTask {
                 int i = networkTask2.dataChunkIndex + 1;
                 networkTask2.dataChunkIndex = i;
                 try {
-                    C0251c c0251c = networkTask2.responseBuffer;
-                    if (c0251c != null) {
-                        c0251c.c.add(heVar);
+                    c cVar = networkTask2.responseBuffer;
+                    if (cVar != null) {
+                        cVar.c.add(heVar);
                         if (this.b.recDataSize > PlaybackStateCompat.ACTION_PREPARE_FROM_URI || z) {
                             NetworkTask networkTask3 = NetworkTask.this;
                             networkTask3.dataChunkIndex = networkTask3.responseBuffer.a(networkTask3.rc.b, networkTask3.contentLength);
@@ -190,9 +184,9 @@ class NetworkTask implements IUnifiedTask {
                             NetworkTask networkTask = NetworkTask.this;
                             if (!networkTask.isHeaderCallback && !networkTask.isDataChuckCallback) {
                                 ALog.e(NetworkTask.TAG, "clear response buffer and retry", networkTask.rc.c, new Object[0]);
-                                C0251c c0251c = NetworkTask.this.responseBuffer;
-                                if (c0251c != null) {
-                                    if (!c0251c.c.isEmpty()) {
+                                c cVar = NetworkTask.this.responseBuffer;
+                                if (cVar != null) {
+                                    if (!cVar.c.isEmpty()) {
                                         i2 = 4;
                                     }
                                     requestStatistic.roaming = i2;
@@ -206,8 +200,8 @@ class NetworkTask implements IUnifiedTask {
                                 NetworkTask.this.rc.a.q();
                                 NetworkTask.this.rc.d = new AtomicBoolean();
                                 NetworkTask networkTask2 = NetworkTask.this;
-                                C0254b c0254b = networkTask2.rc;
-                                c0254b.e = new NetworkTask(c0254b, networkTask2.cache, networkTask2.entry);
+                                anetwork.channel.unified.b bVar = networkTask2.rc;
+                                bVar.e = new NetworkTask(bVar, networkTask2.cache, networkTask2.entry);
                                 if (requestStatistic.tnetErrorCode != 0) {
                                     valueOf = i + "|" + requestStatistic.protocolType + "|" + requestStatistic.tnetErrorCode;
                                     requestStatistic.tnetErrorCode = 0;
@@ -218,7 +212,7 @@ class NetworkTask implements IUnifiedTask {
                                 long currentTimeMillis = System.currentTimeMillis();
                                 requestStatistic.retryCostTime += currentTimeMillis - requestStatistic.start;
                                 requestStatistic.start = currentTimeMillis;
-                                ThreadPoolExecutorFactory.g(NetworkTask.this.rc.e, ThreadPoolExecutorFactory.C0235b.a);
+                                ThreadPoolExecutorFactory.g(NetworkTask.this.rc.e, ThreadPoolExecutorFactory.b.a);
                                 return;
                             }
                             requestStatistic.msg += ":回调后触发重试";
@@ -235,9 +229,9 @@ class NetworkTask implements IUnifiedTask {
                     }
                 }
                 NetworkTask networkTask4 = NetworkTask.this;
-                C0251c c0251c2 = networkTask4.responseBuffer;
-                if (c0251c2 != null) {
-                    c0251c2.a(networkTask4.rc.b, networkTask4.contentLength);
+                c cVar2 = networkTask4.responseBuffer;
+                if (cVar2 != null) {
+                    cVar2.a(networkTask4.rc.b, networkTask4.contentLength);
                 }
                 NetworkTask.this.rc.c();
                 requestStatistic.isDone.set(true);
@@ -288,11 +282,11 @@ class NetworkTask implements IUnifiedTask {
                             g.f();
                             NetworkTask.this.rc.a.p(g);
                             NetworkTask.this.rc.d = new AtomicBoolean();
-                            C0254b c0254b = NetworkTask.this.rc;
-                            c0254b.e = new NetworkTask(c0254b, null, null);
+                            anetwork.channel.unified.b bVar = NetworkTask.this.rc;
+                            bVar.e = new NetworkTask(bVar, null, null);
                             this.b.recordRedirect(i, g.l());
                             this.b.locationUrl = d;
-                            ThreadPoolExecutorFactory.g(NetworkTask.this.rc.e, ThreadPoolExecutorFactory.C0235b.a);
+                            ThreadPoolExecutorFactory.g(NetworkTask.this.rc.e, ThreadPoolExecutorFactory.b.a);
                             return;
                         }
                         return;
@@ -308,7 +302,7 @@ class NetworkTask implements IUnifiedTask {
                     Cache.Entry entry = networkTask.entry;
                     if (entry != null && i == 304) {
                         entry.responseHeaders.putAll(map);
-                        Cache.Entry b = C0242a.b(map);
+                        Cache.Entry b = anetwork.channel.cache.a.b(map);
                         if (b != null) {
                             long j = b.ttl;
                             Cache.Entry entry2 = NetworkTask.this.entry;
@@ -333,7 +327,7 @@ class NetworkTask implements IUnifiedTask {
                             NetworkTask.this.cache.remove(h);
                         } else {
                             NetworkTask networkTask5 = NetworkTask.this;
-                            Cache.Entry b2 = C0242a.b(map);
+                            Cache.Entry b2 = anetwork.channel.cache.a.b(map);
                             networkTask5.entry = b2;
                             if (b2 != null) {
                                 h01.j(map, "Cache-Control");
@@ -351,7 +345,7 @@ class NetworkTask implements IUnifiedTask {
                     if (!"open".equalsIgnoreCase(h01.d(map, "streaming-parser")) && rj1.D()) {
                         NetworkTask networkTask7 = NetworkTask.this;
                         if (networkTask7.contentLength <= 131072) {
-                            networkTask7.responseBuffer = new C0251c(i, map);
+                            networkTask7.responseBuffer = new c(i, map);
                             return;
                         }
                     }
@@ -365,14 +359,13 @@ class NetworkTask implements IUnifiedTask {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: anetwork.channel.unified.NetworkTask$c */
     /* loaded from: classes.dex */
-    private static class C0251c {
+    private static class c {
         int a;
         Map<String, List<String>> b;
         List<he> c = new ArrayList();
 
-        C0251c(int i, Map<String, List<String>> map) {
+        c(int i, Map<String, List<String>> map) {
             this.a = i;
             this.b = map;
         }
@@ -395,16 +388,16 @@ class NetworkTask implements IUnifiedTask {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public NetworkTask(C0254b c0254b, Cache cache, Cache.Entry entry) {
+    public NetworkTask(anetwork.channel.unified.b bVar, Cache cache, Cache.Entry entry) {
         this.cache = null;
         this.entry = null;
         this.f_refer = "other";
         this.isDone = null;
-        this.rc = c0254b;
-        this.isDone = c0254b.d;
+        this.rc = bVar;
+        this.isDone = bVar.d;
         this.cache = cache;
         this.entry = entry;
-        Map<String, String> d = c0254b.a.d();
+        Map<String, String> d = bVar.a.d();
         this.f_refer = d.get(HttpHeaderConstant.F_REFER);
         this.bizReqId = d.get("f-biz-req-id");
     }
@@ -416,23 +409,23 @@ class NetworkTask implements IUnifiedTask {
     }
 
     private void executeRequest() {
-        C0162c sessionCenter = getSessionCenter();
+        anet.channel.c sessionCenter = getSessionCenter();
         o01 e = this.rc.a.e();
-        boolean a = e.a();
+        boolean a2 = e.a();
         z12 z12Var = this.rc.a;
         RequestStatistic requestStatistic = z12Var.f;
-        C0193a b = z12Var.b();
-        if (this.rc.a.j == 1 && rj1.F() && this.rc.a.e == 0 && !a) {
-            sessionCenter.d(checkCName(e), ab2.a, 3000L, new C0249a(requestStatistic, System.currentTimeMillis(), b, sessionCenter, e, a));
+        anet.channel.request.a b2 = z12Var.b();
+        if (this.rc.a.j == 1 && rj1.F() && this.rc.a.e == 0 && !a2) {
+            sessionCenter.d(checkCName(e), ab2.a, 3000L, new a(requestStatistic, System.currentTimeMillis(), b2, sessionCenter, e, a2));
             return;
         }
-        sendRequest(tryGetHttpSession(null, sessionCenter, e, a), b);
+        sendRequest(tryGetHttpSession(null, sessionCenter, e, a2), b2);
     }
 
-    private C0162c getSessionCenter() {
+    private anet.channel.c getSessionCenter() {
         String g = this.rc.a.g("APPKEY");
         if (TextUtils.isEmpty(g)) {
-            return C0162c.k();
+            return anet.channel.c.k();
         }
         ENV env = ENV.ONLINE;
         String g2 = this.rc.a.g("ENVIRONMENT");
@@ -443,13 +436,13 @@ class NetworkTask implements IUnifiedTask {
         }
         if (env != NetworkSdkSetting.CURRENT_ENV) {
             NetworkSdkSetting.CURRENT_ENV = env;
-            C0162c.D(env);
+            anet.channel.c.D(env);
         }
-        C0159a j = C0159a.j(g, env);
+        anet.channel.a j = anet.channel.a.j(g, env);
         if (j == null) {
-            j = new C0159a.C0160a().c(g).e(env).d(this.rc.a.g("AuthCode")).a();
+            j = new a.C0009a().c(g).e(env).d(this.rc.a.g("AuthCode")).a();
         }
-        return C0162c.l(j);
+        return anet.channel.c.l(j);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:13:0x0041  */
@@ -460,7 +453,7 @@ class NetworkTask implements IUnifiedTask {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private anet.channel.request.C0193a preProcessRequest(anet.channel.request.C0193a r7) {
+    private anet.channel.request.a preProcessRequest(anet.channel.request.a r7) {
         /*
             r6 = this;
             anetwork.channel.unified.b r0 = r6.rc
@@ -505,7 +498,7 @@ class NetworkTask implements IUnifiedTask {
             r4 = 0
             int r0 = (r2 > r4 ? 1 : (r2 == r4 ? 0 : -1))
             if (r0 <= 0) goto L66
-            java.lang.String r0 = anetwork.channel.cache.C0242a.d(r2)
+            java.lang.String r0 = anetwork.channel.cache.a.d(r2)
             java.lang.String r2 = "If-Modified-Since"
             r1.I(r2, r0)
         L66:
@@ -552,23 +545,23 @@ class NetworkTask implements IUnifiedTask {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void sendRequest(Session session, C0193a c0193a) {
+    public void sendRequest(Session session, anet.channel.request.a aVar) {
         if (session == null || this.isCanceled) {
             return;
         }
-        C0193a preProcessRequest = preProcessRequest(c0193a);
+        anet.channel.request.a preProcessRequest = preProcessRequest(aVar);
         RequestStatistic requestStatistic = this.rc.a.f;
         requestStatistic.reqStart = System.currentTimeMillis();
-        C0179a.f().log(requestStatistic.span, "netReqProcessStart", null);
-        this.cancelable = session.w(preProcessRequest, new C0250b(preProcessRequest, requestStatistic));
+        anet.channel.fulltrace.a.f().log(requestStatistic.span, "netReqProcessStart", null);
+        this.cancelable = session.w(preProcessRequest, new b(preProcessRequest, requestStatistic));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public Session tryGetHttpSession(Session session, C0162c c0162c, o01 o01Var, boolean z) {
+    public Session tryGetHttpSession(Session session, anet.channel.c cVar, o01 o01Var, boolean z) {
         z12 z12Var = this.rc.a;
         RequestStatistic requestStatistic = z12Var.f;
         if (session == null && z12Var.m() && !z && !NetworkStatusHelper.o()) {
-            session = c0162c.j(o01Var, ab2.b, 0L);
+            session = cVar.j(o01Var, ab2.b, 0L);
         }
         if (session == null) {
             ALog.f(TAG, "create HttpSession with local DNS", this.rc.c, new Object[0]);
@@ -583,17 +576,17 @@ class NetworkTask implements IUnifiedTask {
 
     private Session tryGetSession() {
         Session session;
-        final C0162c sessionCenter = getSessionCenter();
+        final anet.channel.c sessionCenter = getSessionCenter();
         final o01 e = this.rc.a.e();
-        final boolean a = e.a();
+        final boolean a2 = e.a();
         z12 z12Var = this.rc.a;
         final RequestStatistic requestStatistic = z12Var.f;
-        if (z12Var.j == 1 && rj1.F() && this.rc.a.e == 0 && !a) {
+        if (z12Var.j == 1 && rj1.F() && this.rc.a.e == 0 && !a2) {
             final o01 checkCName = checkCName(e);
             try {
                 session = sessionCenter.t(checkCName, ab2.a, 0L);
             } catch (NoAvailStrategyException unused) {
-                return tryGetHttpSession(null, sessionCenter, e, a);
+                return tryGetHttpSession(null, sessionCenter, e, a2);
             } catch (Exception unused2) {
                 session = null;
             }
@@ -605,18 +598,18 @@ class NetworkTask implements IUnifiedTask {
                         Session j = sessionCenter.j(checkCName, ab2.a, 3000L);
                         requestStatistic.connWaitTime = System.currentTimeMillis() - currentTimeMillis;
                         requestStatistic.spdyRequestSend = j != null;
-                        Session tryGetHttpSession = NetworkTask.this.tryGetHttpSession(j, sessionCenter, e, a);
+                        Session tryGetHttpSession = NetworkTask.this.tryGetHttpSession(j, sessionCenter, e, a2);
                         NetworkTask networkTask = NetworkTask.this;
                         networkTask.sendRequest(tryGetHttpSession, networkTask.rc.a.b());
                     }
-                }, ThreadPoolExecutorFactory.C0235b.b);
+                }, ThreadPoolExecutorFactory.b.b);
                 return null;
             }
             ALog.f(TAG, "tryGetSession", this.rc.c, "Session", session);
             requestStatistic.spdyRequestSend = true;
             return session;
         }
-        return tryGetHttpSession(null, sessionCenter, e, a);
+        return tryGetHttpSession(null, sessionCenter, e, a2);
     }
 
     @Override // anet.channel.request.Cancelable
@@ -641,7 +634,7 @@ class NetworkTask implements IUnifiedTask {
                 ThreadPoolExecutorFactory.j(new Runnable() { // from class: anetwork.channel.unified.NetworkTask.1
                     @Override // java.lang.Runnable
                     public void run() {
-                        ThreadPoolExecutorFactory.g(NetworkTask.this, ThreadPoolExecutorFactory.C0235b.a);
+                        ThreadPoolExecutorFactory.g(NetworkTask.this, ThreadPoolExecutorFactory.b.a);
                     }
                 }, 1000L, TimeUnit.MILLISECONDS);
                 return;
@@ -655,20 +648,20 @@ class NetworkTask implements IUnifiedTask {
             requestStatistic.statusCode = -200;
             requestStatistic.msg = cf0.b(-200);
             requestStatistic.rspEnd = System.currentTimeMillis();
-            C0179a.f().log(requestStatistic.span, "netRspRecvEnd", null);
+            anet.channel.fulltrace.a.f().log(requestStatistic.span, "netRspRecvEnd", null);
             this.rc.b.onFinish(new DefaultFinishEvent(-200, (String) null, this.rc.a.b()));
         } else if (rj1.i() && hu0.i() && AppLifecycle.b > 0 && !AppLifecycle.c && System.currentTimeMillis() - AppLifecycle.b > rj1.a() && !rj1.H(this.rc.a.e()) && !rj1.l(this.rc.a.b().c()) && !this.rc.a.b().r()) {
             this.isDone.set(true);
             this.rc.c();
             if (ALog.g(2)) {
-                C0254b c0254b = this.rc;
-                ALog.f(TAG, "request forbidden in background", c0254b.c, "url", c0254b.a.e());
+                anetwork.channel.unified.b bVar = this.rc;
+                ALog.f(TAG, "request forbidden in background", bVar.c, "url", bVar.a.e());
             }
             requestStatistic.isDone.set(true);
             requestStatistic.statusCode = cf0.ERROR_REQUEST_FORBIDDEN_IN_BG;
             requestStatistic.msg = cf0.b(cf0.ERROR_REQUEST_FORBIDDEN_IN_BG);
             requestStatistic.rspEnd = System.currentTimeMillis();
-            C0179a.f().log(requestStatistic.span, "netRspRecvEnd", null);
+            anet.channel.fulltrace.a.f().log(requestStatistic.span, "netRspRecvEnd", null);
             this.rc.b.onFinish(new DefaultFinishEvent((int) cf0.ERROR_REQUEST_FORBIDDEN_IN_BG, (String) null, this.rc.a.b()));
             ExceptionStatistic exceptionStatistic = new ExceptionStatistic(cf0.ERROR_REQUEST_FORBIDDEN_IN_BG, null, "rt");
             exceptionStatistic.host = this.rc.a.e().d();
@@ -676,8 +669,8 @@ class NetworkTask implements IUnifiedTask {
             x6.b().commitStat(exceptionStatistic);
         } else {
             if (ALog.g(2)) {
-                C0254b c0254b2 = this.rc;
-                ALog.f(TAG, "exec request", c0254b2.c, "retryTimes", Integer.valueOf(c0254b2.a.e));
+                anetwork.channel.unified.b bVar2 = this.rc;
+                ALog.f(TAG, "exec request", bVar2.c, "retryTimes", Integer.valueOf(bVar2.a.e));
             }
             if (rj1.o()) {
                 executeRequest();

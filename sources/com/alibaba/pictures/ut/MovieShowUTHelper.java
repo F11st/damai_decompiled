@@ -119,10 +119,10 @@ public final class MovieShowUTHelper implements IUTPageOperation {
             java.lang.String r1 = "activity"
             r2 = 2
             r4 = 0
-            boolean r1 = kotlin.text.C8596g.p(r0, r1, r3, r2, r4)
+            boolean r1 = kotlin.text.g.p(r0, r1, r3, r2, r4)
             if (r1 != 0) goto L46
             java.lang.String r1 = "fragment"
-            boolean r1 = kotlin.text.C8596g.p(r0, r1, r3, r2, r4)
+            boolean r1 = kotlin.text.g.p(r0, r1, r3, r2, r4)
             if (r1 == 0) goto L5b
         L46:
             int r1 = r0.length()     // Catch: java.lang.Exception -> L57

@@ -42,7 +42,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Map;
-import kotlin.collections.C8212k;
+import kotlin.collections.k;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -59,7 +59,7 @@ public final class TicketDetailExtFragment extends BaseFragment {
     @NotNull
     public static final String API_NAME = "mtop.damai.wireless.ticklet2.extension.list2";
     @NotNull
-    public static final C2067a Companion = new C2067a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String LOAD_TICKET_EXT = "loadTicketExt";
     public static final boolean NEED_ENCODE = false;
@@ -185,11 +185,11 @@ public final class TicketDetailExtFragment extends BaseFragment {
                 return;
             }
             List<Node> children3 = parent.getChildren();
-            Integer valueOf = (children3 == null || (node3 = (Node) C8212k.P(children3)) == null || (children2 = node3.getChildren()) == null || (node4 = (Node) C8212k.P(children2)) == null) ? null : Integer.valueOf(node4.getType());
+            Integer valueOf = (children3 == null || (node3 = (Node) k.P(children3)) == null || (children2 = node3.getChildren()) == null || (node4 = (Node) k.P(children2)) == null) ? null : Integer.valueOf(node4.getType());
             if (valueOf != null && 7526 == valueOf.intValue()) {
                 List<Node> children4 = parent.getChildren();
-                if (children4 != null && (node2 = (Node) C8212k.P(children4)) != null && (children = node2.getChildren()) != null) {
-                    node5 = (Node) C8212k.P(children);
+                if (children4 != null && (node2 = (Node) k.P(children4)) != null && (children = node2.getChildren()) != null) {
+                    node5 = (Node) k.P(children);
                 }
                 if (node5 == null) {
                     return;
@@ -210,7 +210,7 @@ public final class TicketDetailExtFragment extends BaseFragment {
             b41.i(listIterator, "componentIterator");
             b41.i(node, "componentNode");
             List<Node> children = node.getChildren();
-            JSONObject data = (children == null || (node2 = (Node) C8212k.P(children)) == null) ? null : node2.getData();
+            JSONObject data = (children == null || (node2 = (Node) k.P(children)) == null) ? null : node2.getData();
             if ((((data == null || data.isEmpty()) ? true : true) ^ true ? data : null) != null) {
                 Node node3 = new Node();
                 node3.setId(IdGenerator.getId());
@@ -401,13 +401,12 @@ public final class TicketDetailExtFragment extends BaseFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.TicketDetailExtFragment$a */
     /* loaded from: classes7.dex */
-    public static final class C2067a {
-        private C2067a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C2067a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

@@ -5,13 +5,12 @@ import com.alibaba.fastjson.JSONArray;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.android.dinamicx.DXRuntimeContext;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 import java.util.ArrayList;
 import java.util.List;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
-public class pv extends AbstractC6375a {
+public class pv extends com.taobao.android.dinamicx.expression.parser.a {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final long DX_PARSER_DMTRANSFERARRAY = 3246970341203680996L;
 
@@ -40,7 +39,7 @@ public class pv extends AbstractC6375a {
         return arrayList;
     }
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1589517365")) {

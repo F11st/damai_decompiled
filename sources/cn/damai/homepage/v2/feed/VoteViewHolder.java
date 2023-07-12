@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import cn.damai.common.app.base.BaseActivity;
-import cn.damai.common.image.C0504a;
 import cn.damai.commonbusiness.discover.bean.VoteBean;
 import cn.damai.commonbusiness.discover.bean.VoteInfoBean;
 import cn.damai.commonbusiness.discover.viewholder.VotePanel;
@@ -38,13 +37,12 @@ public class VoteViewHolder extends BaseViewHolder<VoteInfoBean> {
     private View mVoteTagNew;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.feed.VoteViewHolder$a */
     /* loaded from: classes5.dex */
-    public class C1255a implements VotePanel.VoteActionListener {
+    public class a implements VotePanel.VoteActionListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context a;
 
-        C1255a(Context context) {
+        a(Context context) {
             this.a = context;
         }
 
@@ -130,7 +128,7 @@ public class VoteViewHolder extends BaseViewHolder<VoteInfoBean> {
 
     private VotePanel.VoteActionListener getActionListener(Context context) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "51819380") ? (VotePanel.VoteActionListener) ipChange.ipc$dispatch("51819380", new Object[]{this, context}) : new C1255a(context);
+        return AndroidInstantRuntime.support(ipChange, "51819380") ? (VotePanel.VoteActionListener) ipChange.ipc$dispatch("51819380", new Object[]{this, context}) : new a(context);
     }
 
     @Override // com.alient.onearch.adapter.view.BaseViewHolder
@@ -162,9 +160,9 @@ public class VoteViewHolder extends BaseViewHolder<VoteInfoBean> {
                 i = m62.a(mu0.a(), 37.0f);
             } else {
                 this.mTopImg.setVisibility(0);
-                int a = m62.a(mu0.a(), 82.0f);
-                C0504a.b().f(str, (DisplayMetrics.getwidthPixels(m62.b(mu0.a())) - (m62.a(mu0.a(), 21.0f) * 2)) / 2, m62.a(mu0.a(), 90.0f)).g(this.mTopImg);
-                i = a;
+                int a2 = m62.a(mu0.a(), 82.0f);
+                cn.damai.common.image.a.b().f(str, (DisplayMetrics.getwidthPixels(m62.b(mu0.a())) - (m62.a(mu0.a(), 21.0f) * 2)) / 2, m62.a(mu0.a(), 90.0f)).g(this.mTopImg);
+                i = a2;
             }
             View i2 = this.mPanel.i();
             ViewGroup.LayoutParams layoutParams = i2.getLayoutParams();

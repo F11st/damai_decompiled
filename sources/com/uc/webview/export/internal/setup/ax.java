@@ -6,7 +6,7 @@ import java.util.List;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public abstract class ax extends AbstractC7282l {
+public abstract class ax extends l {
     protected bu a;
 
     protected abstract bu a(bt btVar);

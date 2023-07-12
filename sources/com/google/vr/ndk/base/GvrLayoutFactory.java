@@ -4,9 +4,9 @@ import android.content.Context;
 import android.util.Log;
 import com.google.vr.vrcore.base.api.VrCoreNotAvailableException;
 import com.google.vr.vrcore.base.api.VrCoreUtils;
-import com.google.vr.vrcore.library.api.C5448a;
 import com.google.vr.vrcore.library.api.IGvrLayout;
 import com.google.vr.vrcore.library.api.ObjectWrapper;
+import com.google.vr.vrcore.library.api.a;
 import tb.zy2;
 
 /* compiled from: Taobao */
@@ -43,7 +43,7 @@ public class GvrLayoutFactory {
                         return null;
                     }
                     try {
-                        IGvrLayout newGvrLayout = C5448a.c(context).newGvrLayout(ObjectWrapper.wrap(C5448a.a(context)), ObjectWrapper.wrap(context));
+                        IGvrLayout newGvrLayout = a.c(context).newGvrLayout(ObjectWrapper.wrap(a.a(context)), ObjectWrapper.wrap(context));
                         if (newGvrLayout != null) {
                             Log.i("GvrLayoutFactory", "Successfully loaded GvrLayout from VrCore.");
                         } else {

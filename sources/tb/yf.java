@@ -8,7 +8,6 @@ import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
-import kotlin.collections.C8202e;
 import kotlin.reflect.jvm.internal.calls.BoundCaller;
 import kotlin.reflect.jvm.internal.calls.Caller;
 import org.jetbrains.annotations.NotNull;
@@ -18,7 +17,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public abstract class yf<M extends Member> implements Caller<M> {
     @NotNull
-    public static final C9962d Companion = new C9962d(null);
+    public static final d Companion = new d(null);
     @NotNull
     private final List<Type> a;
     @NotNull
@@ -29,9 +28,8 @@ public abstract class yf<M extends Member> implements Caller<M> {
     private final Class<?> d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yf$a */
     /* loaded from: classes3.dex */
-    public static final class C9959a extends yf<Constructor<?>> implements BoundCaller {
+    public static final class a extends yf<Constructor<?>> implements BoundCaller {
         private final Object e;
 
         /* JADX WARN: Illegal instructions before constructor call */
@@ -39,7 +37,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        public C9959a(@org.jetbrains.annotations.NotNull java.lang.reflect.Constructor<?> r8, @org.jetbrains.annotations.Nullable java.lang.Object r9) {
+        public a(@org.jetbrains.annotations.NotNull java.lang.reflect.Constructor<?> r8, @org.jetbrains.annotations.Nullable java.lang.Object r9) {
             /*
                 r7 = this;
                 java.lang.String r0 = "constructor"
@@ -60,7 +58,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
                 int r1 = r0.length
                 r2 = 1
                 int r1 = r1 - r2
-                java.lang.Object[] r0 = kotlin.collections.C8202e.h(r0, r2, r1)
+                java.lang.Object[] r0 = kotlin.collections.e.h(r0, r2, r1)
                 java.lang.String r1 = "null cannot be cast to non-null type kotlin.Array<T>"
                 java.util.Objects.requireNonNull(r0, r1)
             L2b:
@@ -74,7 +72,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
                 r7.e = r9
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.yf.C9959a.<init>(java.lang.reflect.Constructor, java.lang.Object):void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.yf.a.<init>(java.lang.reflect.Constructor, java.lang.Object):void");
         }
 
         @Override // kotlin.reflect.jvm.internal.calls.Caller
@@ -91,15 +89,14 @@ public abstract class yf<M extends Member> implements Caller<M> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yf$b */
     /* loaded from: classes3.dex */
-    public static final class C9960b extends yf<Constructor<?>> {
+    public static final class b extends yf<Constructor<?>> {
         /* JADX WARN: Illegal instructions before constructor call */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        public C9960b(@org.jetbrains.annotations.NotNull java.lang.reflect.Constructor<?> r8) {
+        public b(@org.jetbrains.annotations.NotNull java.lang.reflect.Constructor<?> r8) {
             /*
                 r7 = this;
                 java.lang.String r0 = "constructor"
@@ -119,7 +116,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
             L1f:
                 int r1 = r0.length
                 int r1 = r1 - r4
-                java.lang.Object[] r0 = kotlin.collections.C8202e.h(r0, r2, r1)
+                java.lang.Object[] r0 = kotlin.collections.e.h(r0, r2, r1)
                 java.lang.String r1 = "null cannot be cast to non-null type kotlin.Array<T>"
                 java.util.Objects.requireNonNull(r0, r1)
             L2a:
@@ -132,7 +129,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
                 r1.<init>(r2, r3, r4, r5, r6)
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.yf.C9960b.<init>(java.lang.reflect.Constructor):void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.yf.b.<init>(java.lang.reflect.Constructor):void");
         }
 
         @Override // kotlin.reflect.jvm.internal.calls.Caller
@@ -148,9 +145,8 @@ public abstract class yf<M extends Member> implements Caller<M> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yf$c */
     /* loaded from: classes3.dex */
-    public static final class C9961c extends yf<Constructor<?>> implements BoundCaller {
+    public static final class c extends yf<Constructor<?>> implements BoundCaller {
         private final Object e;
 
         /* JADX WARN: Illegal instructions before constructor call */
@@ -158,7 +154,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        public C9961c(@org.jetbrains.annotations.NotNull java.lang.reflect.Constructor<?> r8, @org.jetbrains.annotations.Nullable java.lang.Object r9) {
+        public c(@org.jetbrains.annotations.NotNull java.lang.reflect.Constructor<?> r8, @org.jetbrains.annotations.Nullable java.lang.Object r9) {
             /*
                 r7 = this;
                 java.lang.String r0 = "constructor"
@@ -177,7 +173,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
                 r7.e = r9
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.yf.C9961c.<init>(java.lang.reflect.Constructor, java.lang.Object):void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.yf.c.<init>(java.lang.reflect.Constructor, java.lang.Object):void");
         }
 
         @Override // kotlin.reflect.jvm.internal.calls.Caller
@@ -193,27 +189,25 @@ public abstract class yf<M extends Member> implements Caller<M> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yf$d */
     /* loaded from: classes3.dex */
-    public static final class C9962d {
-        private C9962d() {
+    public static final class d {
+        private d() {
         }
 
-        public /* synthetic */ C9962d(k50 k50Var) {
+        public /* synthetic */ d(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yf$e */
     /* loaded from: classes3.dex */
-    public static final class C9963e extends yf<Constructor<?>> {
+    public static final class e extends yf<Constructor<?>> {
         /* JADX WARN: Illegal instructions before constructor call */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        public C9963e(@org.jetbrains.annotations.NotNull java.lang.reflect.Constructor<?> r8) {
+        public e(@org.jetbrains.annotations.NotNull java.lang.reflect.Constructor<?> r8) {
             /*
                 r7 = this;
                 java.lang.String r0 = "constructor"
@@ -244,7 +238,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
                 r1.<init>(r2, r3, r4, r5, r6)
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.yf.C9963e.<init>(java.lang.reflect.Constructor):void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.yf.e.<init>(java.lang.reflect.Constructor):void");
         }
 
         @Override // kotlin.reflect.jvm.internal.calls.Caller
@@ -257,24 +251,22 @@ public abstract class yf<M extends Member> implements Caller<M> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yf$f */
     /* loaded from: classes3.dex */
-    public static abstract class AbstractC9964f extends yf<Field> {
+    public static abstract class f extends yf<Field> {
 
         /* compiled from: Taobao */
-        /* renamed from: tb.yf$f$a */
         /* loaded from: classes3.dex */
-        public static final class C9965a extends AbstractC9964f implements BoundCaller {
+        public static final class a extends f implements BoundCaller {
             private final Object e;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C9965a(@NotNull Field field, @Nullable Object obj) {
+            public a(@NotNull Field field, @Nullable Object obj) {
                 super(field, false, null);
                 b41.i(field, "field");
                 this.e = obj;
             }
 
-            @Override // tb.yf.AbstractC9964f, kotlin.reflect.jvm.internal.calls.Caller
+            @Override // tb.yf.f, kotlin.reflect.jvm.internal.calls.Caller
             @Nullable
             public Object call(@NotNull Object[] objArr) {
                 b41.i(objArr, "args");
@@ -284,33 +276,30 @@ public abstract class yf<M extends Member> implements Caller<M> {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.yf$f$b */
         /* loaded from: classes3.dex */
-        public static final class C9966b extends AbstractC9964f implements BoundCaller {
+        public static final class b extends f implements BoundCaller {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C9966b(@NotNull Field field) {
+            public b(@NotNull Field field) {
                 super(field, false, null);
                 b41.i(field, "field");
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.yf$f$c */
         /* loaded from: classes3.dex */
-        public static final class C9967c extends AbstractC9964f {
+        public static final class c extends f {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C9967c(@NotNull Field field) {
+            public c(@NotNull Field field) {
                 super(field, true, null);
                 b41.i(field, "field");
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.yf$f$d */
         /* loaded from: classes3.dex */
-        public static final class C9968d extends AbstractC9964f {
+        public static final class d extends f {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C9968d(@NotNull Field field) {
+            public d(@NotNull Field field) {
                 super(field, true, null);
                 b41.i(field, "field");
             }
@@ -319,22 +308,21 @@ public abstract class yf<M extends Member> implements Caller<M> {
             public void a(@NotNull Object[] objArr) {
                 b41.i(objArr, "args");
                 super.a(objArr);
-                b(C8202e.v(objArr));
+                b(kotlin.collections.e.v(objArr));
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.yf$f$e */
         /* loaded from: classes3.dex */
-        public static final class C9969e extends AbstractC9964f {
+        public static final class e extends f {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C9969e(@NotNull Field field) {
+            public e(@NotNull Field field) {
                 super(field, false, null);
                 b41.i(field, "field");
             }
         }
 
-        public /* synthetic */ AbstractC9964f(Field field, boolean z, k50 k50Var) {
+        public /* synthetic */ f(Field field, boolean z, k50 k50Var) {
             this(field, z);
         }
 
@@ -343,7 +331,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
         public Object call(@NotNull Object[] objArr) {
             b41.i(objArr, "args");
             a(objArr);
-            return getMember().get(c() != null ? C8202e.u(objArr) : null);
+            return getMember().get(c() != null ? kotlin.collections.e.u(objArr) : null);
         }
 
         /* JADX WARN: Illegal instructions before constructor call */
@@ -351,7 +339,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        private AbstractC9964f(java.lang.reflect.Field r7, boolean r8) {
+        private f(java.lang.reflect.Field r7, boolean r8) {
             /*
                 r6 = this;
                 java.lang.reflect.Type r2 = r7.getGenericType()
@@ -372,100 +360,94 @@ public abstract class yf<M extends Member> implements Caller<M> {
                 r0.<init>(r1, r2, r3, r4, r5)
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.yf.AbstractC9964f.<init>(java.lang.reflect.Field, boolean):void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.yf.f.<init>(java.lang.reflect.Field, boolean):void");
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yf$g */
     /* loaded from: classes3.dex */
-    public static abstract class AbstractC9970g extends yf<Field> {
+    public static abstract class g extends yf<Field> {
         private final boolean e;
 
         /* compiled from: Taobao */
-        /* renamed from: tb.yf$g$a */
         /* loaded from: classes3.dex */
-        public static final class C9971a extends AbstractC9970g implements BoundCaller {
+        public static final class a extends g implements BoundCaller {
             private final Object f;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C9971a(@NotNull Field field, boolean z, @Nullable Object obj) {
+            public a(@NotNull Field field, boolean z, @Nullable Object obj) {
                 super(field, z, false, null);
                 b41.i(field, "field");
                 this.f = obj;
             }
 
-            @Override // tb.yf.AbstractC9970g, kotlin.reflect.jvm.internal.calls.Caller
+            @Override // tb.yf.g, kotlin.reflect.jvm.internal.calls.Caller
             @Nullable
             public Object call(@NotNull Object[] objArr) {
                 b41.i(objArr, "args");
                 a(objArr);
-                getMember().set(this.f, C8202e.u(objArr));
+                getMember().set(this.f, kotlin.collections.e.u(objArr));
                 return wt2.INSTANCE;
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.yf$g$b */
         /* loaded from: classes3.dex */
-        public static final class C9972b extends AbstractC9970g implements BoundCaller {
+        public static final class b extends g implements BoundCaller {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C9972b(@NotNull Field field, boolean z) {
+            public b(@NotNull Field field, boolean z) {
                 super(field, z, false, null);
                 b41.i(field, "field");
             }
 
-            @Override // tb.yf.AbstractC9970g, kotlin.reflect.jvm.internal.calls.Caller
+            @Override // tb.yf.g, kotlin.reflect.jvm.internal.calls.Caller
             @Nullable
             public Object call(@NotNull Object[] objArr) {
                 b41.i(objArr, "args");
                 a(objArr);
-                getMember().set(null, C8202e.G(objArr));
+                getMember().set(null, kotlin.collections.e.G(objArr));
                 return wt2.INSTANCE;
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.yf$g$c */
         /* loaded from: classes3.dex */
-        public static final class C9973c extends AbstractC9970g {
+        public static final class c extends g {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C9973c(@NotNull Field field, boolean z) {
+            public c(@NotNull Field field, boolean z) {
                 super(field, z, true, null);
                 b41.i(field, "field");
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.yf$g$d */
         /* loaded from: classes3.dex */
-        public static final class C9974d extends AbstractC9970g {
+        public static final class d extends g {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C9974d(@NotNull Field field, boolean z) {
+            public d(@NotNull Field field, boolean z) {
                 super(field, z, true, null);
                 b41.i(field, "field");
             }
 
-            @Override // tb.yf.AbstractC9970g, tb.yf
+            @Override // tb.yf.g, tb.yf
             public void a(@NotNull Object[] objArr) {
                 b41.i(objArr, "args");
                 super.a(objArr);
-                b(C8202e.v(objArr));
+                b(kotlin.collections.e.v(objArr));
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.yf$g$e */
         /* loaded from: classes3.dex */
-        public static final class C9975e extends AbstractC9970g {
+        public static final class e extends g {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C9975e(@NotNull Field field, boolean z) {
+            public e(@NotNull Field field, boolean z) {
                 super(field, z, false, null);
                 b41.i(field, "field");
             }
         }
 
-        public /* synthetic */ AbstractC9970g(Field field, boolean z, boolean z2, k50 k50Var) {
+        public /* synthetic */ g(Field field, boolean z, boolean z2, k50 k50Var) {
             this(field, z, z2);
         }
 
@@ -473,7 +455,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
         public void a(@NotNull Object[] objArr) {
             b41.i(objArr, "args");
             super.a(objArr);
-            if (this.e && C8202e.G(objArr) == null) {
+            if (this.e && kotlin.collections.e.G(objArr) == null) {
                 throw new IllegalArgumentException("null is not allowed as a value for this property.");
             }
         }
@@ -483,7 +465,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
         public Object call(@NotNull Object[] objArr) {
             b41.i(objArr, "args");
             a(objArr);
-            getMember().set(c() != null ? C8202e.u(objArr) : null, C8202e.G(objArr));
+            getMember().set(c() != null ? kotlin.collections.e.u(objArr) : null, kotlin.collections.e.G(objArr));
             return wt2.INSTANCE;
         }
 
@@ -492,7 +474,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        private AbstractC9970g(java.lang.reflect.Field r7, boolean r8, boolean r9) {
+        private g(java.lang.reflect.Field r7, boolean r8, boolean r9) {
             /*
                 r6 = this;
                 java.lang.Class r2 = java.lang.Void.TYPE
@@ -519,24 +501,22 @@ public abstract class yf<M extends Member> implements Caller<M> {
                 r6.e = r8
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.yf.AbstractC9970g.<init>(java.lang.reflect.Field, boolean, boolean):void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.yf.g.<init>(java.lang.reflect.Field, boolean, boolean):void");
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yf$h */
     /* loaded from: classes3.dex */
-    public static abstract class AbstractC9976h extends yf<Method> {
+    public static abstract class h extends yf<Method> {
         private final boolean e;
 
         /* compiled from: Taobao */
-        /* renamed from: tb.yf$h$a */
         /* loaded from: classes3.dex */
-        public static final class C9977a extends AbstractC9976h implements BoundCaller {
+        public static final class a extends h implements BoundCaller {
             private final Object f;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C9977a(@NotNull Method method, @Nullable Object obj) {
+            public a(@NotNull Method method, @Nullable Object obj) {
                 super(method, false, null, 4, null);
                 b41.i(method, "method");
                 this.f = obj;
@@ -552,11 +532,10 @@ public abstract class yf<M extends Member> implements Caller<M> {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.yf$h$b */
         /* loaded from: classes3.dex */
-        public static final class C9978b extends AbstractC9976h implements BoundCaller {
+        public static final class b extends h implements BoundCaller {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C9978b(@NotNull Method method) {
+            public b(@NotNull Method method) {
                 super(method, false, null, 4, null);
                 b41.i(method, "method");
             }
@@ -571,9 +550,8 @@ public abstract class yf<M extends Member> implements Caller<M> {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.yf$h$c */
         /* loaded from: classes3.dex */
-        public static final class C9979c extends AbstractC9976h implements BoundCaller {
+        public static final class c extends h implements BoundCaller {
             private final Object f;
 
             /* JADX WARN: Illegal instructions before constructor call */
@@ -581,7 +559,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
                 Code decompiled incorrectly, please refer to instructions dump.
                 To view partially-correct code enable 'Show inconsistent code' option in preferences
             */
-            public C9979c(@org.jetbrains.annotations.NotNull java.lang.reflect.Method r5, @org.jetbrains.annotations.Nullable java.lang.Object r6) {
+            public c(@org.jetbrains.annotations.NotNull java.lang.reflect.Method r5, @org.jetbrains.annotations.Nullable java.lang.Object r6) {
                 /*
                     r4 = this;
                     java.lang.String r0 = "method"
@@ -597,7 +575,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
                     goto L20
                 L16:
                     int r1 = r0.length
-                    java.lang.Object[] r0 = kotlin.collections.C8202e.h(r0, r2, r1)
+                    java.lang.Object[] r0 = kotlin.collections.e.h(r0, r2, r1)
                     java.lang.String r1 = "null cannot be cast to non-null type kotlin.Array<T>"
                     java.util.Objects.requireNonNull(r0, r1)
                 L20:
@@ -607,7 +585,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
                     r4.f = r6
                     return
                 */
-                throw new UnsupportedOperationException("Method not decompiled: tb.yf.AbstractC9976h.C9979c.<init>(java.lang.reflect.Method, java.lang.Object):void");
+                throw new UnsupportedOperationException("Method not decompiled: tb.yf.h.c.<init>(java.lang.reflect.Method, java.lang.Object):void");
             }
 
             @Override // kotlin.reflect.jvm.internal.calls.Caller
@@ -623,11 +601,10 @@ public abstract class yf<M extends Member> implements Caller<M> {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.yf$h$d */
         /* loaded from: classes3.dex */
-        public static final class C9980d extends AbstractC9976h {
+        public static final class d extends h {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C9980d(@NotNull Method method) {
+            public d(@NotNull Method method) {
                 super(method, false, null, 6, null);
                 b41.i(method, "method");
             }
@@ -642,7 +619,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
                 if (objArr.length <= 1) {
                     h = new Object[0];
                 } else {
-                    h = C8202e.h(objArr, 1, objArr.length);
+                    h = kotlin.collections.e.h(objArr, 1, objArr.length);
                     Objects.requireNonNull(h, "null cannot be cast to non-null type kotlin.Array<T>");
                 }
                 return d(obj, h);
@@ -650,11 +627,10 @@ public abstract class yf<M extends Member> implements Caller<M> {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.yf$h$e */
         /* loaded from: classes3.dex */
-        public static final class C9981e extends AbstractC9976h {
+        public static final class e extends h {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C9981e(@NotNull Method method) {
+            public e(@NotNull Method method) {
                 super(method, true, null, 4, null);
                 b41.i(method, "method");
             }
@@ -665,11 +641,11 @@ public abstract class yf<M extends Member> implements Caller<M> {
                 Object[] h;
                 b41.i(objArr, "args");
                 a(objArr);
-                b(C8202e.v(objArr));
+                b(kotlin.collections.e.v(objArr));
                 if (objArr.length <= 1) {
                     h = new Object[0];
                 } else {
-                    h = C8202e.h(objArr, 1, objArr.length);
+                    h = kotlin.collections.e.h(objArr, 1, objArr.length);
                     Objects.requireNonNull(h, "null cannot be cast to non-null type kotlin.Array<T>");
                 }
                 return d(null, h);
@@ -677,11 +653,10 @@ public abstract class yf<M extends Member> implements Caller<M> {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.yf$h$f */
         /* loaded from: classes3.dex */
-        public static final class C9982f extends AbstractC9976h {
+        public static final class f extends h {
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C9982f(@NotNull Method method) {
+            public f(@NotNull Method method) {
                 super(method, false, null, 6, null);
                 b41.i(method, "method");
             }
@@ -695,7 +670,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
             }
         }
 
-        public /* synthetic */ AbstractC9976h(Method method, boolean z, Type[] typeArr, k50 k50Var) {
+        public /* synthetic */ h(Method method, boolean z, Type[] typeArr, k50 k50Var) {
             this(method, z, typeArr);
         }
 
@@ -710,7 +685,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        public /* synthetic */ AbstractC9976h(java.lang.reflect.Method r1, boolean r2, java.lang.reflect.Type[] r3, int r4, tb.k50 r5) {
+        public /* synthetic */ h(java.lang.reflect.Method r1, boolean r2, java.lang.reflect.Type[] r3, int r4, tb.k50 r5) {
             /*
                 r0 = this;
                 r5 = r4 & 2
@@ -728,7 +703,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
                 r0.<init>(r1, r2, r3)
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.yf.AbstractC9976h.<init>(java.lang.reflect.Method, boolean, java.lang.reflect.Type[], int, tb.k50):void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.yf.h.<init>(java.lang.reflect.Method, boolean, java.lang.reflect.Type[], int, tb.k50):void");
         }
 
         /* JADX WARN: Illegal instructions before constructor call */
@@ -736,7 +711,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        private AbstractC9976h(java.lang.reflect.Method r7, boolean r8, java.lang.reflect.Type[] r9) {
+        private h(java.lang.reflect.Method r7, boolean r8, java.lang.reflect.Type[] r9) {
             /*
                 r6 = this;
                 java.lang.reflect.Type r2 = r7.getGenericReturnType()
@@ -760,7 +735,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
                 r6.e = r7
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.yf.AbstractC9976h.<init>(java.lang.reflect.Method, boolean, java.lang.reflect.Type[]):void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.yf.h.<init>(java.lang.reflect.Method, boolean, java.lang.reflect.Type[]):void");
         }
     }
 
@@ -788,11 +763,11 @@ public abstract class yf<M extends Member> implements Caller<M> {
             java.lang.reflect.Type[] r2 = new java.lang.reflect.Type[r2]
             java.lang.Object[] r1 = r1.d(r2)
             java.lang.reflect.Type[] r1 = (java.lang.reflect.Type[]) r1
-            java.util.List r1 = kotlin.collections.C8212k.j(r1)
+            java.util.List r1 = kotlin.collections.k.j(r1)
             if (r1 == 0) goto L2a
             goto L2e
         L2a:
-            java.util.List r1 = kotlin.collections.C8202e.X(r4)
+            java.util.List r1 = kotlin.collections.e.X(r4)
         L2e:
             r0.a = r1
             return
@@ -802,7 +777,7 @@ public abstract class yf<M extends Member> implements Caller<M> {
 
     public void a(@NotNull Object[] objArr) {
         b41.i(objArr, "args");
-        Caller.C8265a.a(this, objArr);
+        Caller.a.a(this, objArr);
     }
 
     protected final void b(@Nullable Object obj) {

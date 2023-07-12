@@ -11,10 +11,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.category.ranksquare.bean.RankSquareListItemBean;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -45,12 +44,11 @@ public class RankSquareListViewHolder extends RecyclerView.ViewHolder {
     private Context l;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.ranksquare.ui.viewholder.RankSquareListViewHolder$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0435a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0435a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -61,7 +59,7 @@ public class RankSquareListViewHolder extends RecyclerView.ViewHolder {
                 ipChange.ipc$dispatch("-637058842", new Object[]{this, view});
             } else if (RankSquareListViewHolder.this.l == null || (rankSquareListItemBean = (RankSquareListItemBean) view.getTag()) == null) {
             } else {
-                C0529c.e().x(zy1.f().p(rankSquareListItemBean.id, rankSquareListItemBean.index));
+                c.e().x(zy1.f().p(rankSquareListItemBean.id, rankSquareListItemBean.index));
                 Bundle bundle = new Bundle();
                 bundle.putString(RepertoireDetailFragment.REPERTOIREID, rankSquareListItemBean.id);
                 DMNav.from(RankSquareListViewHolder.this.l).withExtras(bundle).toUri(NavUri.b(u12.REPERTOITE));
@@ -95,7 +93,7 @@ public class RankSquareListViewHolder extends RecyclerView.ViewHolder {
         this.g = (LinearLayout) view.findViewById(R$id.ll_price);
         this.i = (DMDigitTextView) view.findViewById(R$id.tv_money_mark_unknown);
         this.h = (TextView) view.findViewById(R$id.tv_money);
-        view.setOnClickListener(new View$OnClickListenerC0435a());
+        view.setOnClickListener(new a());
     }
 
     public void b(RankSquareListItemBean rankSquareListItemBean) {
@@ -113,7 +111,7 @@ public class RankSquareListViewHolder extends RecyclerView.ViewHolder {
             } else if (i == 2) {
                 this.d.setImageResource(R$drawable.rank_square_num_3);
             }
-            C0504a.b().f(rankSquareListItemBean.headPic, this.j, this.k).c(R$drawable.uikit_default_image_bg_gradient).g(this.c);
+            cn.damai.common.image.a.b().f(rankSquareListItemBean.headPic, this.j, this.k).c(R$drawable.uikit_default_image_bg_gradient).g(this.c);
             this.b.setVisibility(rankSquareListItemBean.showBottomLine ? 0 : 8);
             this.a.setVisibility(rankSquareListItemBean.showTopLine ? 0 : 8);
             this.e.setText(rankSquareListItemBean.name);

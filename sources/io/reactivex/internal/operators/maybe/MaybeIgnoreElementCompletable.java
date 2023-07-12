@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8146a;
-import io.reactivex.AbstractC8148c;
 import io.reactivex.CompletableObserver;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeSource;
+import io.reactivex.a;
+import io.reactivex.c;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.fuseable.FuseToMaybe;
@@ -12,7 +12,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeIgnoreElementCompletable<T> extends AbstractC8146a implements FuseToMaybe<T> {
+public final class MaybeIgnoreElementCompletable<T> extends a implements FuseToMaybe<T> {
     final MaybeSource<T> source;
 
     /* compiled from: Taobao */
@@ -68,11 +68,11 @@ public final class MaybeIgnoreElementCompletable<T> extends AbstractC8146a imple
     }
 
     @Override // io.reactivex.internal.fuseable.FuseToMaybe
-    public AbstractC8148c<T> fuseToMaybe() {
+    public c<T> fuseToMaybe() {
         return i42.m(new MaybeIgnoreElement(this.source));
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     protected void subscribeActual(CompletableObserver completableObserver) {
         this.source.subscribe(new IgnoreMaybeObserver(completableObserver));
     }

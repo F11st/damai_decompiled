@@ -7,7 +7,7 @@ import android.view.WindowManager;
 import com.alibaba.wireless.security.aopsdk.replace.android.view.Display;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
@@ -25,7 +25,7 @@ public class DensityUtil {
             return ((Integer) ipChange.ipc$dispatch("1298675053", new Object[]{context})).intValue();
         }
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        Display.getMetrics(((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+        Display.getMetrics(((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
         return com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(displayMetrics);
     }
 
@@ -35,7 +35,7 @@ public class DensityUtil {
             return ((Integer) ipChange.ipc$dispatch("-319138868", new Object[]{context})).intValue();
         }
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        Display.getMetrics(((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+        Display.getMetrics(((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
         return com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(displayMetrics);
     }
 
@@ -71,11 +71,11 @@ public class DensityUtil {
 
     public static int getWindowHeight(Context context) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-284528655") ? ((Integer) ipChange.ipc$dispatch("-284528655", new Object[]{context})).intValue() : ((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getHeight();
+        return AndroidInstantRuntime.support(ipChange, "-284528655") ? ((Integer) ipChange.ipc$dispatch("-284528655", new Object[]{context})).intValue() : ((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getHeight();
     }
 
     public static int getWindowWidth(Context context) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1062946616") ? ((Integer) ipChange.ipc$dispatch("-1062946616", new Object[]{context})).intValue() : ((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getWidth();
+        return AndroidInstantRuntime.support(ipChange, "-1062946616") ? ((Integer) ipChange.ipc$dispatch("-1062946616", new Object[]{context})).intValue() : ((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getWidth();
     }
 }

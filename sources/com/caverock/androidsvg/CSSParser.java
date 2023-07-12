@@ -1,7 +1,6 @@
 package com.caverock.androidsvg;
 
 import android.util.Log;
-import com.alipay.sdk.m.n.C4250a;
 import com.caverock.androidsvg.SVG;
 import com.caverock.androidsvg.SVGParser;
 import com.taobao.android.dinamicx.widget.DXRecyclerLayout;
@@ -62,7 +61,7 @@ public class CSSParser {
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
     public interface PseudoClass {
-        boolean matches(C4687l c4687l, SVG.AbstractC4692a0 abstractC4692a0);
+        boolean matches(l lVar, SVG.a0 a0Var);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -122,9 +121,8 @@ public class CSSParser {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.CSSParser$a */
     /* loaded from: classes10.dex */
-    public static /* synthetic */ class C4675a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
         static final /* synthetic */ int[] b;
 
@@ -246,14 +244,13 @@ public class CSSParser {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.CSSParser$b */
     /* loaded from: classes10.dex */
-    public static class C4676b {
+    public static class b {
         public final String a;
         final AttribOp b;
         public final String c;
 
-        C4676b(String str, AttribOp attribOp, String str2) {
+        b(String str, AttribOp attribOp, String str2) {
             this.a = str;
             this.b = attribOp;
             this.c = str2;
@@ -262,25 +259,23 @@ public class CSSParser {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.CSSParser$c */
     /* loaded from: classes10.dex */
-    public static class C4677c extends SVGParser.C4743g {
+    public static class c extends SVGParser.g {
 
         /* JADX INFO: Access modifiers changed from: private */
         /* compiled from: Taobao */
-        /* renamed from: com.caverock.androidsvg.CSSParser$c$a */
         /* loaded from: classes10.dex */
-        public static class C4678a {
+        public static class a {
             public int a;
             public int b;
 
-            C4678a(int i, int i2) {
+            a(int i, int i2) {
                 this.a = i;
                 this.b = i2;
             }
         }
 
-        C4677c(String str) {
+        c(String str) {
             super(str.replaceAll("(?s)/\\*.*?\\*/", ""));
         }
 
@@ -298,9 +293,9 @@ public class CSSParser {
             return i - 48;
         }
 
-        private C4678a E() throws CSSParseException {
-            C4746b c4746b;
-            C4678a c4678a;
+        private a E() throws CSSParseException {
+            com.caverock.androidsvg.b bVar;
+            a aVar;
             if (h()) {
                 return null;
             }
@@ -309,19 +304,19 @@ public class CSSParser {
                 A();
                 int i2 = 1;
                 if (g("odd")) {
-                    c4678a = new C4678a(2, 1);
+                    aVar = new a(2, 1);
                 } else {
                     if (g("even")) {
-                        c4678a = new C4678a(2, 0);
+                        aVar = new a(2, 0);
                     } else {
                         int i3 = (!f('+') && f('-')) ? -1 : 1;
-                        C4746b c = C4746b.c(this.a, this.b, this.c, false);
+                        com.caverock.androidsvg.b c = com.caverock.androidsvg.b.c(this.a, this.b, this.c, false);
                         if (c != null) {
                             this.b = c.a();
                         }
                         if (f('n') || f('N')) {
                             if (c == null) {
-                                c = new C4746b(1L, this.b);
+                                c = new com.caverock.androidsvg.b(1L, this.b);
                             }
                             A();
                             boolean f = f('+');
@@ -330,29 +325,29 @@ public class CSSParser {
                             }
                             if (f) {
                                 A();
-                                c4746b = C4746b.c(this.a, this.b, this.c, false);
-                                if (c4746b != null) {
-                                    this.b = c4746b.a();
+                                bVar = com.caverock.androidsvg.b.c(this.a, this.b, this.c, false);
+                                if (bVar != null) {
+                                    this.b = bVar.a();
                                 } else {
                                     this.b = i;
                                     return null;
                                 }
                             } else {
-                                c4746b = null;
+                                bVar = null;
                             }
                             int i4 = i2;
                             i2 = i3;
                             i3 = i4;
                         } else {
-                            c4746b = c;
+                            bVar = c;
                             c = null;
                         }
-                        c4678a = new C4678a(c == null ? 0 : i2 * c.d(), c4746b != null ? i3 * c4746b.d() : 0);
+                        aVar = new a(c == null ? 0 : i2 * c.d(), bVar != null ? i3 * bVar.d() : 0);
                     }
                 }
                 A();
                 if (f(')')) {
-                    return c4678a;
+                    return aVar;
                 }
                 this.b = i;
                 return null;
@@ -398,8 +393,8 @@ public class CSSParser {
             return null;
         }
 
-        private List<C4689n> L() throws CSSParseException {
-            List<C4690o> list;
+        private List<n> L() throws CSSParseException {
+            List<o> list;
             List<PseudoClass> list2;
             if (h()) {
                 return null;
@@ -407,7 +402,7 @@ public class CSSParser {
             int i = this.b;
             if (f('(')) {
                 A();
-                List<C4689n> M = M();
+                List<n> M = M();
                 if (M == null) {
                     this.b = i;
                     return null;
@@ -415,12 +410,12 @@ public class CSSParser {
                     this.b = i;
                     return null;
                 } else {
-                    Iterator<C4689n> it = M.iterator();
+                    Iterator<n> it = M.iterator();
                     while (it.hasNext() && (list = it.next().a) != null) {
-                        Iterator<C4690o> it2 = list.iterator();
+                        Iterator<o> it2 = list.iterator();
                         while (it2.hasNext() && (list2 = it2.next().d) != null) {
                             for (PseudoClass pseudoClass : list2) {
-                                if (pseudoClass instanceof C4681f) {
+                                if (pseudoClass instanceof f) {
                                     return null;
                                 }
                             }
@@ -433,63 +428,63 @@ public class CSSParser {
         }
 
         /* JADX INFO: Access modifiers changed from: private */
-        public List<C4689n> M() throws CSSParseException {
+        public List<n> M() throws CSSParseException {
             if (h()) {
                 return null;
             }
             ArrayList arrayList = new ArrayList(1);
-            C4689n c4689n = new C4689n(null);
-            while (!h() && N(c4689n)) {
+            n nVar = new n(null);
+            while (!h() && N(nVar)) {
                 if (z()) {
-                    arrayList.add(c4689n);
-                    c4689n = new C4689n(null);
+                    arrayList.add(nVar);
+                    nVar = new n(null);
                 }
             }
-            if (!c4689n.f()) {
-                arrayList.add(c4689n);
+            if (!nVar.f()) {
+                arrayList.add(nVar);
             }
             return arrayList;
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        private void P(C4689n c4689n, C4690o c4690o) throws CSSParseException {
-            PseudoClass c4679d;
-            C4679d c4679d2;
+        private void P(n nVar, o oVar) throws CSSParseException {
+            PseudoClass dVar;
+            d dVar2;
             String I = I();
             if (I != null) {
                 PseudoClassIdents fromString = PseudoClassIdents.fromString(I);
-                switch (C4675a.b[fromString.ordinal()]) {
+                switch (a.b[fromString.ordinal()]) {
                     case 1:
-                        c4679d = new C4679d(0, 1, true, false, null);
-                        c4689n.b();
+                        dVar = new d(0, 1, true, false, null);
+                        nVar.b();
                         break;
                     case 2:
-                        c4679d = new C4679d(0, 1, false, false, null);
-                        c4689n.b();
+                        dVar = new d(0, 1, false, false, null);
+                        nVar.b();
                         break;
                     case 3:
-                        c4679d = new C4683h(false, null);
-                        c4689n.b();
+                        dVar = new h(false, null);
+                        nVar.b();
                         break;
                     case 4:
-                        c4679d = new C4679d(0, 1, true, true, c4690o.b);
-                        c4689n.b();
+                        dVar = new d(0, 1, true, true, oVar.b);
+                        nVar.b();
                         break;
                     case 5:
-                        c4679d = new C4679d(0, 1, false, true, c4690o.b);
-                        c4689n.b();
+                        dVar = new d(0, 1, false, true, oVar.b);
+                        nVar.b();
                         break;
                     case 6:
-                        c4679d = new C4683h(true, c4690o.b);
-                        c4689n.b();
+                        dVar = new h(true, oVar.b);
+                        nVar.b();
                         break;
                     case 7:
-                        c4679d = new C4684i(null);
-                        c4689n.b();
+                        dVar = new i(null);
+                        nVar.b();
                         break;
                     case 8:
-                        c4679d = new C4680e(null);
-                        c4689n.b();
+                        dVar = new e(null);
+                        nVar.b();
                         break;
                     case 9:
                     case 10:
@@ -497,36 +492,36 @@ public class CSSParser {
                     case 12:
                         boolean z = fromString == PseudoClassIdents.nth_child || fromString == PseudoClassIdents.nth_of_type;
                         boolean z2 = fromString == PseudoClassIdents.nth_of_type || fromString == PseudoClassIdents.nth_last_of_type;
-                        C4678a E = E();
+                        a E = E();
                         if (E != null) {
-                            C4679d c4679d3 = new C4679d(E.a, E.b, z, z2, c4690o.b);
-                            c4689n.b();
-                            c4679d2 = c4679d3;
-                            c4679d = c4679d2;
+                            d dVar3 = new d(E.a, E.b, z, z2, oVar.b);
+                            nVar.b();
+                            dVar2 = dVar3;
+                            dVar = dVar2;
                             break;
                         } else {
                             throw new CSSParseException("Invalid or missing parameter section for pseudo class: " + I);
                         }
                         break;
                     case 13:
-                        List<C4689n> L = L();
+                        List<n> L = L();
                         if (L != null) {
-                            C4681f c4681f = new C4681f(L);
-                            c4689n.b = c4681f.a();
-                            c4679d2 = c4681f;
-                            c4679d = c4679d2;
+                            f fVar = new f(L);
+                            nVar.b = fVar.a();
+                            dVar2 = fVar;
+                            dVar = dVar2;
                             break;
                         } else {
                             throw new CSSParseException("Invalid or missing parameter section for pseudo class: " + I);
                         }
                     case 14:
-                        c4679d = new C4685j(null);
-                        c4689n.b();
+                        dVar = new j(null);
+                        nVar.b();
                         break;
                     case 15:
                         H();
-                        c4679d = new C4682g(I);
-                        c4689n.b();
+                        dVar = new g(I);
+                        nVar.b();
                         break;
                     case 16:
                     case 17:
@@ -537,13 +532,13 @@ public class CSSParser {
                     case 22:
                     case 23:
                     case 24:
-                        c4679d = new C4682g(I);
-                        c4689n.b();
+                        dVar = new g(I);
+                        nVar.b();
                         break;
                     default:
                         throw new CSSParseException("Unsupported pseudo class: " + I);
                 }
-                c4690o.b(c4679d);
+                oVar.b(dVar);
                 return;
             }
             throw new CSSParseException("Invalid pseudo class");
@@ -562,12 +557,12 @@ public class CSSParser {
             if ((charAt < 65 || charAt > 90) && ((charAt < 97 || charAt > 122) && charAt != 95)) {
                 i = i2;
             } else {
-                int a = a();
+                int a2 = a();
                 while (true) {
-                    if ((a < 65 || a > 90) && ((a < 97 || a > 122) && !((a >= 48 && a <= 57) || a == 45 || a == 95))) {
+                    if ((a2 < 65 || a2 > 90) && ((a2 < 97 || a2 > 122) && !((a2 >= 48 && a2 <= 57) || a2 == 45 || a2 == 95))) {
                         break;
                     }
-                    a = a();
+                    a2 = a();
                 }
                 i = this.b;
             }
@@ -682,12 +677,12 @@ public class CSSParser {
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        boolean N(com.caverock.androidsvg.CSSParser.C4689n r11) throws com.caverock.androidsvg.CSSParseException {
+        boolean N(com.caverock.androidsvg.CSSParser.n r11) throws com.caverock.androidsvg.CSSParseException {
             /*
                 Method dump skipped, instructions count: 310
                 To view this dump change 'Code comments level' option to 'DEBUG'
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.caverock.androidsvg.CSSParser.C4677c.N(com.caverock.androidsvg.CSSParser$n):boolean");
+            throw new UnsupportedOperationException("Method not decompiled: com.caverock.androidsvg.CSSParser.c.N(com.caverock.androidsvg.CSSParser$n):boolean");
         }
 
         String O() {
@@ -718,16 +713,15 @@ public class CSSParser {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.CSSParser$d */
     /* loaded from: classes10.dex */
-    public static class C4679d implements PseudoClass {
+    public static class d implements PseudoClass {
         private int a;
         private int b;
         private boolean c;
         private boolean d;
         private String e;
 
-        C4679d(int i, int i2, boolean z, boolean z2, String str) {
+        d(int i, int i2, boolean z, boolean z2, String str) {
             this.a = i;
             this.b = i2;
             this.c = z;
@@ -736,21 +730,21 @@ public class CSSParser {
         }
 
         @Override // com.caverock.androidsvg.CSSParser.PseudoClass
-        public boolean matches(C4687l c4687l, SVG.AbstractC4692a0 abstractC4692a0) {
+        public boolean matches(l lVar, SVG.a0 a0Var) {
             int i;
             int i2;
-            String a = (this.d && this.e == null) ? abstractC4692a0.a() : this.e;
-            SVG.SvgContainer svgContainer = abstractC4692a0.b;
+            String a = (this.d && this.e == null) ? a0Var.a() : this.e;
+            SVG.SvgContainer svgContainer = a0Var.b;
             if (svgContainer != null) {
-                Iterator<SVG.C4696c0> it = svgContainer.getChildren().iterator();
+                Iterator<SVG.c0> it = svgContainer.getChildren().iterator();
                 i = 0;
                 i2 = 0;
                 while (it.hasNext()) {
-                    SVG.AbstractC4692a0 abstractC4692a02 = (SVG.AbstractC4692a0) it.next();
-                    if (abstractC4692a02 == abstractC4692a0) {
+                    SVG.a0 a0Var2 = (SVG.a0) it.next();
+                    if (a0Var2 == a0Var) {
                         i = i2;
                     }
-                    if (a == null || abstractC4692a02.a().equals(a)) {
+                    if (a == null || a0Var2.a().equals(a)) {
                         i2++;
                     }
                 }
@@ -778,41 +772,39 @@ public class CSSParser {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.CSSParser$e */
     /* loaded from: classes10.dex */
-    public static class C4680e implements PseudoClass {
-        private C4680e() {
+    public static class e implements PseudoClass {
+        private e() {
         }
 
         @Override // com.caverock.androidsvg.CSSParser.PseudoClass
-        public boolean matches(C4687l c4687l, SVG.AbstractC4692a0 abstractC4692a0) {
-            return !(abstractC4692a0 instanceof SVG.SvgContainer) || ((SVG.SvgContainer) abstractC4692a0).getChildren().size() == 0;
+        public boolean matches(l lVar, SVG.a0 a0Var) {
+            return !(a0Var instanceof SVG.SvgContainer) || ((SVG.SvgContainer) a0Var).getChildren().size() == 0;
         }
 
         public String toString() {
             return DXRecyclerLayout.LOAD_MORE_EMPTY;
         }
 
-        /* synthetic */ C4680e(C4675a c4675a) {
+        /* synthetic */ e(a aVar) {
             this();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.CSSParser$f */
     /* loaded from: classes10.dex */
-    public static class C4681f implements PseudoClass {
-        private List<C4689n> a;
+    public static class f implements PseudoClass {
+        private List<n> a;
 
-        C4681f(List<C4689n> list) {
+        f(List<n> list) {
             this.a = list;
         }
 
         int a() {
             int i = Integer.MIN_VALUE;
-            for (C4689n c4689n : this.a) {
-                int i2 = c4689n.b;
+            for (n nVar : this.a) {
+                int i2 = nVar.b;
                 if (i2 > i) {
                     i = i2;
                 }
@@ -821,9 +813,9 @@ public class CSSParser {
         }
 
         @Override // com.caverock.androidsvg.CSSParser.PseudoClass
-        public boolean matches(C4687l c4687l, SVG.AbstractC4692a0 abstractC4692a0) {
-            for (C4689n c4689n : this.a) {
-                if (CSSParser.l(c4687l, c4689n, abstractC4692a0)) {
+        public boolean matches(l lVar, SVG.a0 a0Var) {
+            for (n nVar : this.a) {
+                if (CSSParser.l(lVar, nVar, a0Var)) {
                     return false;
                 }
             }
@@ -837,17 +829,16 @@ public class CSSParser {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.CSSParser$g */
     /* loaded from: classes10.dex */
-    public static class C4682g implements PseudoClass {
+    public static class g implements PseudoClass {
         private String a;
 
-        C4682g(String str) {
+        g(String str) {
             this.a = str;
         }
 
         @Override // com.caverock.androidsvg.CSSParser.PseudoClass
-        public boolean matches(C4687l c4687l, SVG.AbstractC4692a0 abstractC4692a0) {
+        public boolean matches(l lVar, SVG.a0 a0Var) {
             return false;
         }
 
@@ -858,28 +849,27 @@ public class CSSParser {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.CSSParser$h */
     /* loaded from: classes10.dex */
-    public static class C4683h implements PseudoClass {
+    public static class h implements PseudoClass {
         private boolean a;
         private String b;
 
-        public C4683h(boolean z, String str) {
+        public h(boolean z, String str) {
             this.a = z;
             this.b = str;
         }
 
         @Override // com.caverock.androidsvg.CSSParser.PseudoClass
-        public boolean matches(C4687l c4687l, SVG.AbstractC4692a0 abstractC4692a0) {
+        public boolean matches(l lVar, SVG.a0 a0Var) {
             int i;
-            String a = (this.a && this.b == null) ? abstractC4692a0.a() : this.b;
-            SVG.SvgContainer svgContainer = abstractC4692a0.b;
+            String a = (this.a && this.b == null) ? a0Var.a() : this.b;
+            SVG.SvgContainer svgContainer = a0Var.b;
             if (svgContainer != null) {
-                Iterator<SVG.C4696c0> it = svgContainer.getChildren().iterator();
+                Iterator<SVG.c0> it = svgContainer.getChildren().iterator();
                 i = 0;
                 while (it.hasNext()) {
-                    SVG.AbstractC4692a0 abstractC4692a02 = (SVG.AbstractC4692a0) it.next();
-                    if (a == null || abstractC4692a02.a().equals(a)) {
+                    SVG.a0 a0Var2 = (SVG.a0) it.next();
+                    if (a == null || a0Var2.a().equals(a)) {
                         i++;
                     }
                 }
@@ -896,61 +886,58 @@ public class CSSParser {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.CSSParser$i */
     /* loaded from: classes10.dex */
-    public static class C4684i implements PseudoClass {
-        private C4684i() {
+    public static class i implements PseudoClass {
+        private i() {
         }
 
         @Override // com.caverock.androidsvg.CSSParser.PseudoClass
-        public boolean matches(C4687l c4687l, SVG.AbstractC4692a0 abstractC4692a0) {
-            return abstractC4692a0.b == null;
+        public boolean matches(l lVar, SVG.a0 a0Var) {
+            return a0Var.b == null;
         }
 
         public String toString() {
             return "root";
         }
 
-        /* synthetic */ C4684i(C4675a c4675a) {
+        /* synthetic */ i(a aVar) {
             this();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.CSSParser$j */
     /* loaded from: classes10.dex */
-    public static class C4685j implements PseudoClass {
-        private C4685j() {
+    public static class j implements PseudoClass {
+        private j() {
         }
 
         @Override // com.caverock.androidsvg.CSSParser.PseudoClass
-        public boolean matches(C4687l c4687l, SVG.AbstractC4692a0 abstractC4692a0) {
-            return c4687l != null && abstractC4692a0 == c4687l.a;
+        public boolean matches(l lVar, SVG.a0 a0Var) {
+            return lVar != null && a0Var == lVar.a;
         }
 
         public String toString() {
             return "target";
         }
 
-        /* synthetic */ C4685j(C4675a c4675a) {
+        /* synthetic */ j(a aVar) {
             this();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.CSSParser$k */
     /* loaded from: classes10.dex */
-    public static class C4686k {
-        C4689n a;
+    public static class k {
+        n a;
         SVG.Style b;
         Source c;
 
-        C4686k(C4689n c4689n, SVG.Style style, Source source) {
+        k(n nVar, SVG.Style style, Source source) {
             this.a = null;
             this.b = null;
-            this.a = c4689n;
+            this.a = nVar;
             this.b = style;
             this.c = source;
         }
@@ -962,69 +949,67 @@ public class CSSParser {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.CSSParser$l */
     /* loaded from: classes10.dex */
-    public static class C4687l {
-        SVG.AbstractC4692a0 a;
+    public static class l {
+        SVG.a0 a;
 
         public String toString() {
-            SVG.AbstractC4692a0 abstractC4692a0 = this.a;
-            return abstractC4692a0 != null ? String.format("<%s id=\"%s\">", abstractC4692a0.a(), this.a.c) : "";
+            SVG.a0 a0Var = this.a;
+            return a0Var != null ? String.format("<%s id=\"%s\">", a0Var.a(), this.a.c) : "";
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.CSSParser$m */
     /* loaded from: classes10.dex */
-    public static class C4688m {
-        private List<C4686k> a = null;
+    public static class m {
+        private List<k> a = null;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public void a(C4686k c4686k) {
+        public void a(k kVar) {
             if (this.a == null) {
                 this.a = new ArrayList();
             }
             for (int i = 0; i < this.a.size(); i++) {
-                if (this.a.get(i).a.b > c4686k.a.b) {
-                    this.a.add(i, c4686k);
+                if (this.a.get(i).a.b > kVar.a.b) {
+                    this.a.add(i, kVar);
                     return;
                 }
             }
-            this.a.add(c4686k);
+            this.a.add(kVar);
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public void b(C4688m c4688m) {
-            if (c4688m.a == null) {
+        public void b(m mVar) {
+            if (mVar.a == null) {
                 return;
             }
             if (this.a == null) {
-                this.a = new ArrayList(c4688m.a.size());
+                this.a = new ArrayList(mVar.a.size());
             }
-            for (C4686k c4686k : c4688m.a) {
-                a(c4686k);
+            for (k kVar : mVar.a) {
+                a(kVar);
             }
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public List<C4686k> c() {
+        public List<k> c() {
             return this.a;
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
         public boolean d() {
-            List<C4686k> list = this.a;
+            List<k> list = this.a;
             return list == null || list.isEmpty();
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
         public void e(Source source) {
-            List<C4686k> list = this.a;
+            List<k> list = this.a;
             if (list == null) {
                 return;
             }
-            Iterator<C4686k> it = list.iterator();
+            Iterator<k> it = list.iterator();
             while (it.hasNext()) {
                 if (it.next().c == source) {
                     it.remove();
@@ -1034,7 +1019,7 @@ public class CSSParser {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         public int f() {
-            List<C4686k> list = this.a;
+            List<k> list = this.a;
             if (list != null) {
                 return list.size();
             }
@@ -1046,8 +1031,8 @@ public class CSSParser {
                 return "";
             }
             StringBuilder sb = new StringBuilder();
-            for (C4686k c4686k : this.a) {
-                sb.append(c4686k.toString());
+            for (k kVar : this.a) {
+                sb.append(kVar.toString());
                 sb.append('\n');
             }
             return sb.toString();
@@ -1056,15 +1041,14 @@ public class CSSParser {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.CSSParser$o */
     /* loaded from: classes10.dex */
-    public static class C4690o {
+    public static class o {
         Combinator a;
         String b;
-        List<C4676b> c = null;
+        List<b> c = null;
         List<PseudoClass> d = null;
 
-        C4690o(Combinator combinator, String str) {
+        o(Combinator combinator, String str) {
             this.a = null;
             this.b = null;
             this.a = combinator == null ? Combinator.DESCENDANT : combinator;
@@ -1075,7 +1059,7 @@ public class CSSParser {
             if (this.c == null) {
                 this.c = new ArrayList();
             }
-            this.c.add(new C4676b(str, attribOp, str2));
+            this.c.add(new b(str, attribOp, str2));
         }
 
         void b(PseudoClass pseudoClass) {
@@ -1098,21 +1082,21 @@ public class CSSParser {
                 str = jn1.MUL;
             }
             sb.append(str);
-            List<C4676b> list = this.c;
+            List<b> list = this.c;
             if (list != null) {
-                for (C4676b c4676b : list) {
+                for (b bVar : list) {
                     sb.append(jn1.ARRAY_START);
-                    sb.append(c4676b.a);
-                    int i = C4675a.a[c4676b.b.ordinal()];
+                    sb.append(bVar.a);
+                    int i = a.a[bVar.b.ordinal()];
                     if (i == 1) {
-                        sb.append(C4250a.h);
-                        sb.append(c4676b.c);
+                        sb.append(com.alipay.sdk.m.n.a.h);
+                        sb.append(bVar.c);
                     } else if (i == 2) {
                         sb.append("~=");
-                        sb.append(c4676b.c);
+                        sb.append(bVar.c);
                     } else if (i == 3) {
                         sb.append("|=");
-                        sb.append(c4676b.c);
+                        sb.append(bVar.c);
                     }
                     sb.append(jn1.ARRAY_END);
                 }
@@ -1133,30 +1117,30 @@ public class CSSParser {
         this(MediaType.screen, source);
     }
 
-    private static int a(List<SVG.SvgContainer> list, int i, SVG.AbstractC4692a0 abstractC4692a0) {
-        int i2 = 0;
-        if (i < 0) {
+    private static int a(List<SVG.SvgContainer> list, int i2, SVG.a0 a0Var) {
+        int i3 = 0;
+        if (i2 < 0) {
             return 0;
         }
-        SVG.SvgContainer svgContainer = list.get(i);
-        SVG.SvgContainer svgContainer2 = abstractC4692a0.b;
+        SVG.SvgContainer svgContainer = list.get(i2);
+        SVG.SvgContainer svgContainer2 = a0Var.b;
         if (svgContainer != svgContainer2) {
             return -1;
         }
-        for (SVG.C4696c0 c4696c0 : svgContainer2.getChildren()) {
-            if (c4696c0 == abstractC4692a0) {
-                return i2;
+        for (SVG.c0 c0Var : svgContainer2.getChildren()) {
+            if (c0Var == a0Var) {
+                return i3;
             }
-            i2++;
+            i3++;
         }
         return -1;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static boolean b(String str, MediaType mediaType) {
-        C4677c c4677c = new C4677c(str);
-        c4677c.A();
-        return c(h(c4677c), mediaType);
+        c cVar = new c(str);
+        cVar.A();
+        return c(h(cVar), mediaType);
     }
 
     private static boolean c(List<MediaType> list, MediaType mediaType) {
@@ -1171,36 +1155,36 @@ public class CSSParser {
         return false;
     }
 
-    private void e(C4688m c4688m, C4677c c4677c) throws CSSParseException {
-        String I = c4677c.I();
-        c4677c.A();
+    private void e(m mVar, c cVar) throws CSSParseException {
+        String I = cVar.I();
+        cVar.A();
         if (I != null) {
             if (!this.c && I.equals(SVGParser.XML_STYLESHEET_ATTR_MEDIA)) {
-                List<MediaType> h = h(c4677c);
-                if (c4677c.f('{')) {
-                    c4677c.A();
-                    if (c(h, this.a)) {
+                List<MediaType> h2 = h(cVar);
+                if (cVar.f('{')) {
+                    cVar.A();
+                    if (c(h2, this.a)) {
                         this.c = true;
-                        c4688m.b(j(c4677c));
+                        mVar.b(j(cVar));
                         this.c = false;
                     } else {
-                        j(c4677c);
+                        j(cVar);
                     }
-                    if (!c4677c.h() && !c4677c.f('}')) {
+                    if (!cVar.h() && !cVar.f('}')) {
                         throw new CSSParseException("Invalid @media rule: expected '}' at end of rule set");
                     }
                 } else {
                     throw new CSSParseException("Invalid @media rule: missing rule set");
                 }
             } else if (!this.c && I.equals("import")) {
-                String O = c4677c.O();
+                String O = cVar.O();
                 if (O == null) {
-                    O = c4677c.G();
+                    O = cVar.G();
                 }
                 if (O != null) {
-                    c4677c.A();
-                    h(c4677c);
-                    if (!c4677c.h() && !c4677c.f(b90.TokenSEM)) {
+                    cVar.A();
+                    h(cVar);
+                    if (!cVar.h() && !cVar.f(b90.TokenSEM)) {
                         throw new CSSParseException("Invalid @media rule: expected '}' at end of rule set");
                     }
                     SVG.g();
@@ -1209,51 +1193,51 @@ public class CSSParser {
                 }
             } else {
                 p("Ignoring @%s rule", I);
-                o(c4677c);
+                o(cVar);
             }
-            c4677c.A();
+            cVar.A();
             return;
         }
         throw new CSSParseException("Invalid '@' rule");
     }
 
     public static List<String> f(String str) {
-        C4677c c4677c = new C4677c(str);
+        c cVar = new c(str);
         ArrayList arrayList = null;
-        while (!c4677c.h()) {
-            String r = c4677c.r();
+        while (!cVar.h()) {
+            String r = cVar.r();
             if (r != null) {
                 if (arrayList == null) {
                     arrayList = new ArrayList();
                 }
                 arrayList.add(r);
-                c4677c.A();
+                cVar.A();
             }
         }
         return arrayList;
     }
 
-    private SVG.Style g(C4677c c4677c) throws CSSParseException {
+    private SVG.Style g(c cVar) throws CSSParseException {
         SVG.Style style = new SVG.Style();
         do {
-            String I = c4677c.I();
-            c4677c.A();
-            if (c4677c.f(jn1.CONDITION_IF_MIDDLE)) {
-                c4677c.A();
-                String K = c4677c.K();
+            String I = cVar.I();
+            cVar.A();
+            if (cVar.f(jn1.CONDITION_IF_MIDDLE)) {
+                cVar.A();
+                String K = cVar.K();
                 if (K != null) {
-                    c4677c.A();
-                    if (c4677c.f('!')) {
-                        c4677c.A();
-                        if ("important".equalsIgnoreCase(c4677c.F())) {
+                    cVar.A();
+                    if (cVar.f('!')) {
+                        cVar.A();
+                        if ("important".equalsIgnoreCase(cVar.F())) {
                             style.important = true;
                         }
-                        c4677c.A();
+                        cVar.A();
                     }
-                    c4677c.f(b90.TokenSEM);
+                    cVar.f(b90.TokenSEM);
                     SVGParser.S0(style, I, K);
-                    c4677c.A();
-                    if (c4677c.h()) {
+                    cVar.A();
+                    if (cVar.h()) {
                         break;
                     }
                 } else {
@@ -1262,154 +1246,154 @@ public class CSSParser {
             } else {
                 throw new CSSParseException("Expected ':'");
             }
-        } while (!c4677c.f('}'));
+        } while (!cVar.f('}'));
         return style;
     }
 
-    private static List<MediaType> h(C4677c c4677c) {
+    private static List<MediaType> h(c cVar) {
         String w;
         ArrayList arrayList = new ArrayList();
-        while (!c4677c.h() && (w = c4677c.w()) != null) {
+        while (!cVar.h() && (w = cVar.w()) != null) {
             try {
                 arrayList.add(MediaType.valueOf(w));
             } catch (IllegalArgumentException unused) {
             }
-            if (!c4677c.z()) {
+            if (!cVar.z()) {
                 break;
             }
         }
         return arrayList;
     }
 
-    private boolean i(C4688m c4688m, C4677c c4677c) throws CSSParseException {
-        List<C4689n> M = c4677c.M();
+    private boolean i(m mVar, c cVar) throws CSSParseException {
+        List<n> M = cVar.M();
         if (M == null || M.isEmpty()) {
             return false;
         }
-        if (c4677c.f('{')) {
-            c4677c.A();
-            SVG.Style g = g(c4677c);
-            c4677c.A();
-            for (C4689n c4689n : M) {
-                c4688m.a(new C4686k(c4689n, g, this.b));
+        if (cVar.f('{')) {
+            cVar.A();
+            SVG.Style g2 = g(cVar);
+            cVar.A();
+            for (n nVar : M) {
+                mVar.a(new k(nVar, g2, this.b));
             }
             return true;
         }
         throw new CSSParseException("Malformed rule block: expected '{'");
     }
 
-    private C4688m j(C4677c c4677c) {
-        C4688m c4688m = new C4688m();
-        while (!c4677c.h()) {
+    private m j(c cVar) {
+        m mVar = new m();
+        while (!cVar.h()) {
             try {
-                if (!c4677c.g("<!--") && !c4677c.g("-->")) {
-                    if (c4677c.f('@')) {
-                        e(c4688m, c4677c);
-                    } else if (!i(c4688m, c4677c)) {
+                if (!cVar.g("<!--") && !cVar.g("-->")) {
+                    if (cVar.f('@')) {
+                        e(mVar, cVar);
+                    } else if (!i(mVar, cVar)) {
                         break;
                     }
                 }
-            } catch (CSSParseException e) {
-                Log.e("CSSParser", "CSS parser terminated early due to error: " + e.getMessage());
+            } catch (CSSParseException e2) {
+                Log.e("CSSParser", "CSS parser terminated early due to error: " + e2.getMessage());
             }
         }
-        return c4688m;
+        return mVar;
     }
 
-    private static boolean k(C4687l c4687l, C4689n c4689n, int i, List<SVG.SvgContainer> list, int i2, SVG.AbstractC4692a0 abstractC4692a0) {
-        C4690o e = c4689n.e(i);
-        if (n(c4687l, e, list, i2, abstractC4692a0)) {
-            Combinator combinator = e.a;
+    private static boolean k(l lVar, n nVar, int i2, List<SVG.SvgContainer> list, int i3, SVG.a0 a0Var) {
+        o e2 = nVar.e(i2);
+        if (n(lVar, e2, list, i3, a0Var)) {
+            Combinator combinator = e2.a;
             if (combinator == Combinator.DESCENDANT) {
-                if (i == 0) {
+                if (i2 == 0) {
                     return true;
                 }
-                while (i2 >= 0) {
-                    if (m(c4687l, c4689n, i - 1, list, i2)) {
+                while (i3 >= 0) {
+                    if (m(lVar, nVar, i2 - 1, list, i3)) {
                         return true;
                     }
-                    i2--;
+                    i3--;
                 }
                 return false;
             } else if (combinator == Combinator.CHILD) {
-                return m(c4687l, c4689n, i - 1, list, i2);
+                return m(lVar, nVar, i2 - 1, list, i3);
             } else {
-                int a = a(list, i2, abstractC4692a0);
-                if (a <= 0) {
+                int a2 = a(list, i3, a0Var);
+                if (a2 <= 0) {
                     return false;
                 }
-                return k(c4687l, c4689n, i - 1, list, i2, (SVG.AbstractC4692a0) abstractC4692a0.b.getChildren().get(a - 1));
+                return k(lVar, nVar, i2 - 1, list, i3, (SVG.a0) a0Var.b.getChildren().get(a2 - 1));
             }
         }
         return false;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static boolean l(C4687l c4687l, C4689n c4689n, SVG.AbstractC4692a0 abstractC4692a0) {
-        if (c4689n.g() == 1) {
-            return n(c4687l, c4689n.e(0), null, -1, abstractC4692a0);
+    public static boolean l(l lVar, n nVar, SVG.a0 a0Var) {
+        if (nVar.g() == 1) {
+            return n(lVar, nVar.e(0), null, -1, a0Var);
         }
         ArrayList arrayList = new ArrayList();
-        for (SVG.SvgContainer svgContainer = abstractC4692a0.b; svgContainer != null; svgContainer = ((SVG.C4696c0) svgContainer).b) {
+        for (SVG.SvgContainer svgContainer = a0Var.b; svgContainer != null; svgContainer = ((SVG.c0) svgContainer).b) {
             arrayList.add(0, svgContainer);
         }
-        return k(c4687l, c4689n, c4689n.g() - 1, arrayList, arrayList.size() - 1, abstractC4692a0);
+        return k(lVar, nVar, nVar.g() - 1, arrayList, arrayList.size() - 1, a0Var);
     }
 
-    private static boolean m(C4687l c4687l, C4689n c4689n, int i, List<SVG.SvgContainer> list, int i2) {
-        C4690o e = c4689n.e(i);
-        SVG.AbstractC4692a0 abstractC4692a0 = (SVG.AbstractC4692a0) list.get(i2);
-        if (n(c4687l, e, list, i2, abstractC4692a0)) {
-            Combinator combinator = e.a;
+    private static boolean m(l lVar, n nVar, int i2, List<SVG.SvgContainer> list, int i3) {
+        o e2 = nVar.e(i2);
+        SVG.a0 a0Var = (SVG.a0) list.get(i3);
+        if (n(lVar, e2, list, i3, a0Var)) {
+            Combinator combinator = e2.a;
             if (combinator == Combinator.DESCENDANT) {
-                if (i == 0) {
+                if (i2 == 0) {
                     return true;
                 }
-                while (i2 > 0) {
-                    i2--;
-                    if (m(c4687l, c4689n, i - 1, list, i2)) {
+                while (i3 > 0) {
+                    i3--;
+                    if (m(lVar, nVar, i2 - 1, list, i3)) {
                         return true;
                     }
                 }
                 return false;
             } else if (combinator == Combinator.CHILD) {
-                return m(c4687l, c4689n, i - 1, list, i2 - 1);
+                return m(lVar, nVar, i2 - 1, list, i3 - 1);
             } else {
-                int a = a(list, i2, abstractC4692a0);
-                if (a <= 0) {
+                int a2 = a(list, i3, a0Var);
+                if (a2 <= 0) {
                     return false;
                 }
-                return k(c4687l, c4689n, i - 1, list, i2, (SVG.AbstractC4692a0) abstractC4692a0.b.getChildren().get(a - 1));
+                return k(lVar, nVar, i2 - 1, list, i3, (SVG.a0) a0Var.b.getChildren().get(a2 - 1));
             }
         }
         return false;
     }
 
-    private static boolean n(C4687l c4687l, C4690o c4690o, List<SVG.SvgContainer> list, int i, SVG.AbstractC4692a0 abstractC4692a0) {
+    private static boolean n(l lVar, o oVar, List<SVG.SvgContainer> list, int i2, SVG.a0 a0Var) {
         List<String> list2;
-        String str = c4690o.b;
-        if (str == null || str.equals(abstractC4692a0.a().toLowerCase(Locale.US))) {
-            List<C4676b> list3 = c4690o.c;
+        String str = oVar.b;
+        if (str == null || str.equals(a0Var.a().toLowerCase(Locale.US))) {
+            List<b> list3 = oVar.c;
             if (list3 != null) {
                 int size = list3.size();
-                for (int i2 = 0; i2 < size; i2++) {
-                    C4676b c4676b = c4690o.c.get(i2);
-                    String str2 = c4676b.a;
+                for (int i3 = 0; i3 < size; i3++) {
+                    b bVar = oVar.c.get(i3);
+                    String str2 = bVar.a;
                     str2.hashCode();
                     if (!str2.equals("id")) {
-                        if (!str2.equals("class") || (list2 = abstractC4692a0.g) == null || !list2.contains(c4676b.c)) {
+                        if (!str2.equals("class") || (list2 = a0Var.g) == null || !list2.contains(bVar.c)) {
                             return false;
                         }
-                    } else if (!c4676b.c.equals(abstractC4692a0.c)) {
+                    } else if (!bVar.c.equals(a0Var.c)) {
                         return false;
                     }
                 }
             }
-            List<PseudoClass> list4 = c4690o.d;
+            List<PseudoClass> list4 = oVar.d;
             if (list4 != null) {
                 int size2 = list4.size();
-                for (int i3 = 0; i3 < size2; i3++) {
-                    if (!c4690o.d.get(i3).matches(c4687l, abstractC4692a0)) {
+                for (int i4 = 0; i4 < size2; i4++) {
+                    if (!oVar.d.get(i4).matches(lVar, a0Var)) {
                         return false;
                     }
                 }
@@ -1420,16 +1404,16 @@ public class CSSParser {
         return false;
     }
 
-    private void o(C4677c c4677c) {
-        int i = 0;
-        while (!c4677c.h()) {
-            int intValue = c4677c.l().intValue();
-            if (intValue == 59 && i == 0) {
+    private void o(c cVar) {
+        int i2 = 0;
+        while (!cVar.h()) {
+            int intValue = cVar.l().intValue();
+            if (intValue == 59 && i2 == 0) {
                 return;
             }
             if (intValue == 123) {
-                i++;
-            } else if (intValue == 125 && i > 0 && i - 1 == 0) {
+                i2++;
+            } else if (intValue == 125 && i2 > 0 && i2 - 1 == 0) {
                 return;
             }
         }
@@ -1440,10 +1424,10 @@ public class CSSParser {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public C4688m d(String str) {
-        C4677c c4677c = new C4677c(str);
-        c4677c.A();
-        return j(c4677c);
+    public m d(String str) {
+        c cVar = new c(str);
+        cVar.A();
+        return j(cVar);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -1457,22 +1441,21 @@ public class CSSParser {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.CSSParser$n */
     /* loaded from: classes10.dex */
-    public static class C4689n {
-        List<C4690o> a;
+    public static class n {
+        List<o> a;
         int b;
 
-        private C4689n() {
+        private n() {
             this.a = null;
             this.b = 0;
         }
 
-        void a(C4690o c4690o) {
+        void a(o oVar) {
             if (this.a == null) {
                 this.a = new ArrayList();
             }
-            this.a.add(c4690o);
+            this.a.add(oVar);
         }
 
         void b() {
@@ -1487,17 +1470,17 @@ public class CSSParser {
             this.b += 1000000;
         }
 
-        C4690o e(int i) {
+        o e(int i) {
             return this.a.get(i);
         }
 
         boolean f() {
-            List<C4690o> list = this.a;
+            List<o> list = this.a;
             return list == null || list.isEmpty();
         }
 
         int g() {
-            List<C4690o> list = this.a;
+            List<o> list = this.a;
             if (list == null) {
                 return 0;
             }
@@ -1506,8 +1489,8 @@ public class CSSParser {
 
         public String toString() {
             StringBuilder sb = new StringBuilder();
-            for (C4690o c4690o : this.a) {
-                sb.append(c4690o);
+            for (o oVar : this.a) {
+                sb.append(oVar);
                 sb.append(' ');
             }
             sb.append(jn1.ARRAY_START);
@@ -1516,7 +1499,7 @@ public class CSSParser {
             return sb.toString();
         }
 
-        /* synthetic */ C4689n(C4675a c4675a) {
+        /* synthetic */ n(a aVar) {
             this();
         }
     }

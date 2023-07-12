@@ -16,14 +16,13 @@ public class r20 {
     private final Map<String, Map<String, Pools.Pool<DXRootView>>> b = new ConcurrentHashMap();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.r20$a */
     /* loaded from: classes11.dex */
-    private static class C9640a {
+    private static class a {
         private static final r20 a = new r20();
     }
 
     public static r20 c() {
-        return C9640a.a;
+        return a.a;
     }
 
     public static String d(DinamicTemplate dinamicTemplate) {

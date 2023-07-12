@@ -12,7 +12,7 @@ import com.google.android.material.color.MaterialColors;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class MaterialCheckBox extends AppCompatCheckBox {
-    private static final int DEF_STYLE_RES = R.C4819style.Widget_MaterialComponents_CompoundButton_CheckBox;
+    private static final int DEF_STYLE_RES = R.style.Widget_MaterialComponents_CompoundButton_CheckBox;
     private static final int[][] ENABLED_CHECKED_STATES = {new int[]{16842910, 16842912}, new int[]{16842910, -16842912}, new int[]{-16842910, 16842912}, new int[]{-16842910, -16842912}};
     @Nullable
     private ColorStateList materialThemeColorsTintList;

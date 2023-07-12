@@ -21,12 +21,12 @@ public class r12<E> extends AbstractChannel<E> {
         return true;
     }
 
-    @Override // kotlinx.coroutines.channels.AbstractC8641a
+    @Override // kotlinx.coroutines.channels.a
     protected final boolean p() {
         return true;
     }
 
-    @Override // kotlinx.coroutines.channels.AbstractC8641a
+    @Override // kotlinx.coroutines.channels.a
     protected final boolean q() {
         return true;
     }

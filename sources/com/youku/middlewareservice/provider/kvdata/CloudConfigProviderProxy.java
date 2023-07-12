@@ -1,7 +1,7 @@
 package com.youku.middlewareservice.provider.kvdata;
 
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -11,7 +11,7 @@ public class CloudConfigProviderProxy {
     public static String get(String str, String str2, String str3) {
         try {
             if (sProxy == null) {
-                sProxy = (CloudConfigProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.OrangeConfigProviderImpl").b().f();
+                sProxy = (CloudConfigProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.OrangeConfigProviderImpl").b().f();
             }
             return sProxy.get(str, str2, str3);
         } catch (Throwable th) {
@@ -22,7 +22,7 @@ public class CloudConfigProviderProxy {
 
     public static CloudConfigProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (CloudConfigProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.OrangeConfigProviderImpl").b().f();
+            sProxy = (CloudConfigProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.OrangeConfigProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -40,7 +40,7 @@ public class CloudConfigProviderProxy {
     public static int get(String str, String str2, int i) {
         try {
             if (sProxy == null) {
-                sProxy = (CloudConfigProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.OrangeConfigProviderImpl").b().f();
+                sProxy = (CloudConfigProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.OrangeConfigProviderImpl").b().f();
             }
             return sProxy.get(str, str2, i);
         } catch (Throwable th) {
@@ -52,7 +52,7 @@ public class CloudConfigProviderProxy {
     public static Integer get(String str, String str2, Integer num) {
         try {
             if (sProxy == null) {
-                sProxy = (CloudConfigProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.OrangeConfigProviderImpl").b().f();
+                sProxy = (CloudConfigProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.OrangeConfigProviderImpl").b().f();
             }
             return sProxy.get(str, str2, num);
         } catch (Throwable th) {
@@ -64,7 +64,7 @@ public class CloudConfigProviderProxy {
     public static float get(String str, String str2, float f) {
         try {
             if (sProxy == null) {
-                sProxy = (CloudConfigProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.OrangeConfigProviderImpl").b().f();
+                sProxy = (CloudConfigProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.OrangeConfigProviderImpl").b().f();
             }
             return sProxy.get(str, str2, f);
         } catch (Throwable th) {
@@ -76,7 +76,7 @@ public class CloudConfigProviderProxy {
     public static Float get(String str, String str2, Float f) {
         try {
             if (sProxy == null) {
-                sProxy = (CloudConfigProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.OrangeConfigProviderImpl").b().f();
+                sProxy = (CloudConfigProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.OrangeConfigProviderImpl").b().f();
             }
             return sProxy.get(str, str2, f);
         } catch (Throwable th) {

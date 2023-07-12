@@ -6,7 +6,6 @@ import android.view.Window;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import com.taobao.monitor.impl.data.lifecycle.FragmentLifecycle;
-import com.taobao.monitor.procedure.C6810b;
 import com.taobao.monitor.procedure.IPage;
 import java.util.HashMap;
 
@@ -28,11 +27,11 @@ public class rp1 {
     public IPage a() {
         ra je0Var;
         if (!this.a) {
-            return new C6810b();
+            return new com.taobao.monitor.procedure.b();
         }
         if (this.b == null) {
             e30.a("CustomPageBuilder", "create error: page root view is null");
-            return new C6810b();
+            return new com.taobao.monitor.procedure.b();
         }
         pp1 pp1Var = new pp1();
         pp1Var.L(this.b);

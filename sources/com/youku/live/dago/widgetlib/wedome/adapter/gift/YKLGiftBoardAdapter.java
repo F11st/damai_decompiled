@@ -135,7 +135,7 @@ public class YKLGiftBoardAdapter extends FrameLayout implements YKLGiftBoardProt
         int screenHeight = DensityUtil.getScreenHeight(context);
         int min = Math.min(screenWidth, screenHeight);
         this.mIsLandscape = screenWidth > screenHeight;
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_layout_gift_board_component, this);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_layout_gift_board_component, this);
         setClickable(true);
         setOnClickListener(new View.OnClickListener() { // from class: com.youku.live.dago.widgetlib.wedome.adapter.gift.YKLGiftBoardAdapter.1
             private static transient /* synthetic */ IpChange $ipChange;

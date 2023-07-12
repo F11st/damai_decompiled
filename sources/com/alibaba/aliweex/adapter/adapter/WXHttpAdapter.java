@@ -15,7 +15,6 @@ import android.util.Log;
 import androidx.annotation.RestrictTo;
 import anet.channel.fulltrace.IFullTraceAnalysisV3;
 import anet.channel.request.ByteArrayEntry;
-import anet.channel.request.C0193a;
 import anetwork.channel.NetworkCallBack$FinishListener;
 import anetwork.channel.NetworkCallBack$ProgressListener;
 import anetwork.channel.NetworkCallBack$ResponseCodeListener;
@@ -28,10 +27,8 @@ import anetwork.channel.interceptor.Interceptor;
 import anetwork.channel.statist.StatisticData;
 import com.ali.user.open.tbauth.TbAuthConstants;
 import com.alibaba.aliweex.AliWXSDKEngine;
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.IConfigAdapter;
 import com.alibaba.aliweex.adapter.IGodEyeStageAdapter;
-import com.alibaba.aliweex.adapter.module.net.C3063a;
 import com.alibaba.aliweex.adapter.module.net.IWXConnection;
 import com.alibaba.aliweex.interceptor.network.NetworkTracker;
 import com.alibaba.fastjson.JSON;
@@ -73,22 +70,21 @@ public class WXHttpAdapter implements IWXHttpAdapter {
     public static final String GROUP_CACHE_SWITCH = "weex_degrade_cache_switch";
     public static final String KEY_CACHE_SWITCH = "cache_switch";
     private static String b = "wx_network_ctl_android";
-    private C3009a a;
+    private a a;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.adapter.WXHttpAdapter$a */
     /* loaded from: classes5.dex */
-    public static class C3009a implements Interceptor {
+    public static class a implements Interceptor {
         private Map<String, Map<String, Object>> a = new HashMap();
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.aliweex.adapter.adapter.WXHttpAdapter$a$a */
+        /* renamed from: com.alibaba.aliweex.adapter.adapter.WXHttpAdapter$a$a  reason: collision with other inner class name */
         /* loaded from: classes5.dex */
-        class C3010a implements Callback {
+        class C0125a implements Callback {
             final /* synthetic */ Interceptor.Chain a;
 
-            C3010a(Interceptor.Chain chain) {
+            C0125a(Interceptor.Chain chain) {
                 this.a = chain;
             }
 
@@ -105,7 +101,7 @@ public class WXHttpAdapter implements IWXHttpAdapter {
             @Override // anetwork.channel.interceptor.Callback
             public void onResponseCode(int i, Map<String, List<String>> map) {
                 this.a.callback().onResponseCode(i, map);
-                Map map2 = (Map) C3009a.this.a.get(this.a.request().q());
+                Map map2 = (Map) a.this.a.get(this.a.request().q());
                 if (map2 != null) {
                     map2.put(hh1.DIMEN_BIZ, this.a.request().r.bizId);
                     map2.put("cacheTime", Long.valueOf(this.a.request().r.cacheTime));
@@ -145,19 +141,18 @@ public class WXHttpAdapter implements IWXHttpAdapter {
 
         @Override // anetwork.channel.interceptor.Interceptor
         public Future intercept(Interceptor.Chain chain) {
-            C0193a request = chain.request();
+            anet.channel.request.a request = chain.request();
             Callback callback = chain.callback();
             if ("weex".equals(chain.request().g().get(HttpHeaderConstant.F_REFER))) {
-                callback = new C3010a(chain);
+                callback = new C0125a(chain);
             }
             return chain.proceed(request, callback);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.adapter.WXHttpAdapter$b */
     /* loaded from: classes5.dex */
-    class C3011b implements NetworkCallBack$FinishListener, NetworkCallBack$ProgressListener, NetworkCallBack$ResponseCodeListener {
+    class b implements NetworkCallBack$FinishListener, NetworkCallBack$ProgressListener, NetworkCallBack$ResponseCodeListener {
         private WXResponse a;
         private IWXHttpAdapter.OnHttpListener b;
         private ByteArrayOutputStream c = new ByteArrayOutputStream();
@@ -168,7 +163,7 @@ public class WXHttpAdapter implements IWXHttpAdapter {
         private String h;
         private Map<String, String> i;
 
-        C3011b(String str, NetworkTracker networkTracker, WXResponse wXResponse, IWXHttpAdapter.OnHttpListener onHttpListener, String str2, long j, Map<String, String> map) {
+        b(String str, NetworkTracker networkTracker, WXResponse wXResponse, IWXHttpAdapter.OnHttpListener onHttpListener, String str2, long j, Map<String, String> map) {
             this.f = networkTracker;
             this.a = wXResponse;
             this.b = onHttpListener;
@@ -189,7 +184,7 @@ public class WXHttpAdapter implements IWXHttpAdapter {
                 if (networkTracker != null) {
                     networkTracker.o(this.a.errorMsg);
                 }
-                if ("true".equals(C3004a.l().c() != null ? C3004a.l().c().getConfig(WXHttpAdapter.GROUP_CACHE_SWITCH, WXHttpAdapter.KEY_CACHE_SWITCH, "false") : "false") && networkEvent$FinishEvent.getHttpCode() == 200 && !a(this.d) && this.c.size() > 0) {
+                if ("true".equals(com.alibaba.aliweex.a.l().c() != null ? com.alibaba.aliweex.a.l().c().getConfig(WXHttpAdapter.GROUP_CACHE_SWITCH, WXHttpAdapter.KEY_CACHE_SWITCH, "false") : "false") && networkEvent$FinishEvent.getHttpCode() == 200 && !a(this.d) && this.c.size() > 0) {
                     try {
                         WVMemoryCache.getInstance().addMemoryCache(this.d, this.g, this.c.toByteArray());
                     } catch (Exception unused) {
@@ -334,7 +329,7 @@ public class WXHttpAdapter implements IWXHttpAdapter {
 
     /* JADX INFO: Access modifiers changed from: private */
     public Request e(WXRequest wXRequest, WXResponse wXResponse) {
-        C3009a c3009a;
+        a aVar;
         c22 c22Var = new c22(wXRequest.url);
         c22Var.setBizId(4102);
         Map<String, String> map = wXRequest.paramMap;
@@ -364,14 +359,14 @@ public class WXHttpAdapter implements IWXHttpAdapter {
         if (!TextUtils.isEmpty(wXRequest.body)) {
             c22Var.setBodyEntry(new ByteArrayEntry(wXRequest.body.getBytes()));
         }
-        if (WXEnvironment.isApkDebugable() && (c3009a = this.a) != null) {
-            c3009a.c(wXRequest.url);
+        if (WXEnvironment.isApkDebugable() && (aVar = this.a) != null) {
+            aVar.c(wXRequest.url);
         }
         return c22Var;
     }
 
     public static String g(String str, String str2) {
-        IConfigAdapter c = C3004a.l().c();
+        IConfigAdapter c = com.alibaba.aliweex.a.l().c();
         return c != null ? c.getConfig("wx_network_ctl_android", str, str2) : str2;
     }
 
@@ -395,8 +390,8 @@ public class WXHttpAdapter implements IWXHttpAdapter {
 
     /* JADX INFO: Access modifiers changed from: private */
     public String i() {
-        IWXConnection a = C3063a.a(WXEnvironment.getApplication());
-        String networkType = a == null ? "unknown" : a.getNetworkType();
+        IWXConnection a2 = com.alibaba.aliweex.adapter.module.net.a.a(WXEnvironment.getApplication());
+        String networkType = a2 == null ? "unknown" : a2.getNetworkType();
         return ("wifi".equals(networkType) || "4g".equals(networkType) || "3g".equals(networkType) || "2g".equals(networkType)) ? networkType : "other";
     }
 
@@ -440,8 +435,8 @@ public class WXHttpAdapter implements IWXHttpAdapter {
 
     private void p(String str, String str2, WXRequest wXRequest, WXResponse wXResponse, Map<String, List<String>> map) {
         IGodEyeStageAdapter h;
-        IConfigAdapter c = C3004a.l().c();
-        if ((c == null || Boolean.valueOf(c.getConfig(oz2.WXAPM_CONFIG_GROUP, "recordRequestState", "true")).booleanValue()) && (h = C3004a.l().h()) != null) {
+        IConfigAdapter c = com.alibaba.aliweex.a.l().c();
+        if ((c == null || Boolean.valueOf(c.getConfig(oz2.WXAPM_CONFIG_GROUP, "recordRequestState", "true")).booleanValue()) && (h = com.alibaba.aliweex.a.l().h()) != null) {
             try {
                 HashMap hashMap = new HashMap();
                 if (!TextUtils.isEmpty(str2)) {
@@ -491,10 +486,10 @@ public class WXHttpAdapter implements IWXHttpAdapter {
                 if (networkTracker2 != null) {
                     networkTracker2.s(e2);
                 }
-                k60 k60Var = new k60(C3004a.l().b());
+                k60 k60Var = new k60(com.alibaba.aliweex.a.l().b());
                 WXHttpAdapter wXHttpAdapter = WXHttpAdapter.this;
                 WXRequest wXRequest2 = wXRequest;
-                k60Var.asyncSend(e2, null, null, new C3011b(wXRequest2.instanceId, networkTracker, wXResponse, onHttpListener, wXRequest2.url, System.currentTimeMillis(), wXRequest.paramMap));
+                k60Var.asyncSend(e2, null, null, new b(wXRequest2.instanceId, networkTracker, wXResponse, onHttpListener, wXRequest2.url, System.currentTimeMillis(), wXRequest.paramMap));
             }
         });
     }
@@ -581,9 +576,9 @@ public class WXHttpAdapter implements IWXHttpAdapter {
         final NetworkTracker m = WXEnvironment.isApkDebugable() ? NetworkTracker.m() : null;
         if (WXEnvironment.isApkDebugable() && this.a == null) {
             try {
-                C3009a c3009a = new C3009a();
-                this.a = c3009a;
-                v31.a(c3009a);
+                a aVar = new a();
+                this.a = aVar;
+                v31.a(aVar);
             } catch (Throwable th) {
                 th.printStackTrace();
             }

@@ -17,17 +17,17 @@ public final class jj {
     private static jj a;
     private ExecutorService b;
     private ConcurrentHashMap<jk, Future<?>> c = new ConcurrentHashMap<>();
-    private jk.InterfaceC4598a d = new jk.InterfaceC4598a() { // from class: com.amap.api.mapcore.util.jj.1
-        @Override // com.amap.api.mapcore.util.jk.InterfaceC4598a
+    private jk.a d = new jk.a() { // from class: com.amap.api.mapcore.util.jj.1
+        @Override // com.amap.api.mapcore.util.jk.a
         public void a(jk jkVar) {
         }
 
-        @Override // com.amap.api.mapcore.util.jk.InterfaceC4598a
+        @Override // com.amap.api.mapcore.util.jk.a
         public void b(jk jkVar) {
             jj.this.a(jkVar, false);
         }
 
-        @Override // com.amap.api.mapcore.util.jk.InterfaceC4598a
+        @Override // com.amap.api.mapcore.util.jk.a
         public void c(jk jkVar) {
             jj.this.a(jkVar, true);
         }

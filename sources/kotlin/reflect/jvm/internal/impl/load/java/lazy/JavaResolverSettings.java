@@ -6,26 +6,24 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes3.dex */
 public interface JavaResolverSettings {
     @NotNull
-    public static final C8340a Companion = C8340a.a;
+    public static final a Companion = a.a;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.lazy.JavaResolverSettings$a */
     /* loaded from: classes3.dex */
-    public static final class C8340a {
-        static final /* synthetic */ C8340a a = new C8340a();
+    public static final class a {
+        static final /* synthetic */ a a = new a();
 
-        private C8340a() {
+        private a() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.lazy.JavaResolverSettings$b */
     /* loaded from: classes3.dex */
-    public static final class C8341b implements JavaResolverSettings {
+    public static final class b implements JavaResolverSettings {
         @NotNull
-        public static final C8341b INSTANCE = new C8341b();
+        public static final b INSTANCE = new b();
 
-        private C8341b() {
+        private b() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.load.java.lazy.JavaResolverSettings

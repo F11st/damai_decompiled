@@ -3,8 +3,6 @@ package tb;
 import android.text.TextUtils;
 import androidx.annotation.NonNull;
 import com.alimm.xadsdk.request.builder.IRequestConst;
-import com.efs.sdk.base.a.e.InterfaceC4792c;
-import com.efs.sdk.base.a.h.b.C4802b;
 import java.util.HashMap;
 import java.util.Map;
 import mtopsdk.network.util.Constants;
@@ -12,7 +10,7 @@ import tb.n73;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public final class x63 implements InterfaceC4792c {
+public final class x63 implements com.efs.sdk.base.a.e.c {
     private static void b(l01 l01Var) {
         if (l01Var == null || TextUtils.isEmpty(l01Var.c)) {
             return;
@@ -29,13 +27,13 @@ public final class x63 implements InterfaceC4792c {
         }
     }
 
-    @Override // com.efs.sdk.base.a.e.InterfaceC4792c
+    @Override // com.efs.sdk.base.a.e.c
     @NonNull
     public final l01 a(j43 j43Var, boolean z) {
         l01 l01Var;
         n73 n73Var;
         try {
-            n73Var = n73.C9462a.a;
+            n73Var = n73.a.a;
             a53 a53Var = n73Var.a;
             String valueOf = String.valueOf(System.currentTimeMillis());
             String a = n43.a(a53Var.b + a53Var.c + valueOf + "AppChk#2014");
@@ -69,7 +67,7 @@ public final class x63 implements InterfaceC4792c {
             HashMap hashMap = new HashMap();
             hashMap.put("Content-Type", IRequestConst.CONTENT_TYPE_POST);
             hashMap.put(Constants.Protocol.CONTENT_LENGTH, String.valueOf(i));
-            C4802b c = new C4802b(sb2).c(hashMap);
+            com.efs.sdk.base.a.h.b.b c = new com.efs.sdk.base.a.h.b.b(sb2).c(hashMap);
             c.a.c = bArr;
             l01Var = c.a().b();
             b(l01Var);

@@ -5,12 +5,12 @@ import android.opengl.GLES20;
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
 class YkGLFilter$8 implements Runnable {
-    final /* synthetic */ C8020b this$0;
+    final /* synthetic */ b this$0;
     final /* synthetic */ int val$location;
     final /* synthetic */ float[] val$matrix;
 
-    YkGLFilter$8(C8020b c8020b, int i, float[] fArr) {
-        this.this$0 = c8020b;
+    YkGLFilter$8(b bVar, int i, float[] fArr) {
+        this.this$0 = bVar;
         this.val$location = i;
         this.val$matrix = fArr;
     }

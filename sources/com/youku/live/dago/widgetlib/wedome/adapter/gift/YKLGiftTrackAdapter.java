@@ -39,7 +39,7 @@ public class YKLGiftTrackAdapter extends FrameLayout implements YKLGiftTrackProt
         }
         setClipChildren(false);
         this.mContext = context;
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_layout_gift_track_component, this);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_layout_gift_track_component, this);
         this.mContainerView = (GiftTrackContainerView) findViewById(R.id.track_container);
     }
 

@@ -14,16 +14,15 @@ public class id2 {
     public l41 e;
     public jq1 f;
     public String g;
-    public C9259a h = new C9259a(this);
+    public a h = new a(this);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.id2$a */
     /* loaded from: classes11.dex */
-    public class C9259a {
+    public class a {
         private int a;
         private int b;
 
-        public C9259a(id2 id2Var) {
+        public a(id2 id2Var) {
         }
 
         public void a(boolean z) {

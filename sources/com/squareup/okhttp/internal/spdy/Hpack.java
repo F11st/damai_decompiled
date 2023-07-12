@@ -16,8 +16,8 @@ import mtopsdk.common.util.HttpHeaderConstant;
 import okio.Buffer;
 import okio.BufferedSource;
 import okio.ByteString;
-import okio.C8844h;
 import okio.Source;
+import okio.h;
 
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
@@ -49,7 +49,7 @@ public final class Hpack {
             this.nextHeaderIndex = headerArr.length - 1;
             this.headerTableSizeSetting = i;
             this.maxDynamicTableByteCount = i;
-            this.source = C8844h.d(source);
+            this.source = h.d(source);
         }
 
         private void adjustDynamicTableByteCount() {

@@ -21,30 +21,30 @@ public final class t0 {
             try {
                 FileInputStream fileInputStream2 = new FileInputStream(file);
                 try {
-                    C5641p0 c5641p0 = new C5641p0(1024);
+                    p0 p0Var = new p0(1024);
                     byte[] bArr = new byte[1024];
                     while (true) {
                         int read = fileInputStream2.read(bArr);
                         if (read == -1) {
                             break;
                         }
-                        c5641p0.a(bArr, read);
+                        p0Var.a(bArr, read);
                     }
-                    if (c5641p0.b() == 0) {
+                    if (p0Var.b() == 0) {
                         a((Closeable) fileInputStream2);
                         return "";
                     }
-                    String str = new String(c5641p0.a(), "UTF-8");
+                    String str = new String(p0Var.a(), "UTF-8");
                     a((Closeable) fileInputStream2);
                     return str;
                 } catch (FileNotFoundException unused) {
                     fileInputStream = fileInputStream2;
-                    C5653y.f("hmsSdk", "getInfoFromFile(): No files need to be read");
+                    y.f("hmsSdk", "getInfoFromFile(): No files need to be read");
                     a((Closeable) fileInputStream);
                     return "";
                 } catch (IOException unused2) {
                     fileInputStream = fileInputStream2;
-                    C5653y.f("hmsSdk", "getInfoFromFile(): stream.read or new string exception");
+                    y.f("hmsSdk", "getInfoFromFile(): stream.read or new string exception");
                     a((Closeable) fileInputStream);
                     return "";
                 } catch (Throwable th) {
@@ -82,7 +82,7 @@ public final class t0 {
             try {
                 closeable.close();
             } catch (IOException unused) {
-                C5653y.f("hmsSdk", "closeQuietly(): Exception when closing the closeable!");
+                y.f("hmsSdk", "closeQuietly(): Exception when closing the closeable!");
             }
         }
     }
@@ -100,13 +100,13 @@ public final class t0 {
                 } catch (FileNotFoundException unused) {
                     fileOutputStream2 = fileOutputStream;
                     str2 = "saveInfoToFile(): No files need to be read";
-                    C5653y.f("hmsSdk", str2);
+                    y.f("hmsSdk", str2);
                     fileOutputStream = fileOutputStream2;
                     a((Closeable) fileOutputStream);
                 } catch (IOException unused2) {
                     fileOutputStream2 = fileOutputStream;
                     str2 = "saveInfoToFile(): io exc from write info to file!";
-                    C5653y.f("hmsSdk", str2);
+                    y.f("hmsSdk", str2);
                     fileOutputStream = fileOutputStream2;
                     a((Closeable) fileOutputStream);
                 } catch (Throwable th) {
@@ -129,7 +129,7 @@ public final class t0 {
             try {
                 outputStream.close();
             } catch (IOException unused) {
-                C5653y.f("hmsSdk", "closeStream(): Exception: close OutputStream error!");
+                y.f("hmsSdk", "closeStream(): Exception: close OutputStream error!");
             }
         }
     }
@@ -138,10 +138,10 @@ public final class t0 {
         try {
             httpURLConnection.getInputStream().close();
         } catch (Exception unused) {
-            C5653y.f("hmsSdk", "closeQuietly(): Exception when connHttp.getInputStream()!,There may be no network, or no INTERNET permission");
+            y.f("hmsSdk", "closeQuietly(): Exception when connHttp.getInputStream()!,There may be no network, or no INTERNET permission");
         }
         httpURLConnection.disconnect();
-        C5653y.a("hmsSdk", " connHttp disconnect");
+        y.a("hmsSdk", " connHttp disconnect");
     }
 
     public static byte[] a(byte[] bArr) {

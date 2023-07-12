@@ -13,7 +13,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import cn.damai.baseview.RCRelativeLayoutView;
 import cn.damai.category.ranking.ui.RankListFragment;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
@@ -26,7 +25,6 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.arch.v3.IItem;
 import com.youku.arch.v3.core.ItemValue;
-import tb.C9826vr;
 import tb.cb1;
 import tb.cs;
 import tb.gi0;
@@ -34,6 +32,7 @@ import tb.nk;
 import tb.su0;
 import tb.t60;
 import tb.ux0;
+import tb.vr;
 import tb.wh2;
 
 /* compiled from: Taobao */
@@ -53,12 +52,11 @@ public class WaterFlowRankListViewHolder extends BaseViewHolder<WaterFlowRecomme
     private RCRelativeLayoutView rankListImageLayout;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.feed.WaterFlowRankListViewHolder$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1267a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1267a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -94,19 +92,18 @@ public class WaterFlowRankListViewHolder extends BaseViewHolder<WaterFlowRecomme
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.feed.WaterFlowRankListViewHolder$b */
     /* loaded from: classes5.dex */
-    public class C1268b implements DMImageCreator.DMImageFailListener {
+    public class b implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1268b() {
+        b() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "475830602")) {
-                ipChange.ipc$dispatch("475830602", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("475830602", new Object[]{this, dVar});
                 return;
             }
             WaterFlowRankListViewHolder.this.mRankListImage.setImageResource(R$drawable.uikit_default_image_bg_gradient);
@@ -115,19 +112,17 @@ public class WaterFlowRankListViewHolder extends BaseViewHolder<WaterFlowRecomme
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.feed.WaterFlowRankListViewHolder$c */
     /* loaded from: classes5.dex */
-    public class C1269c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.homepage.v2.feed.WaterFlowRankListViewHolder$c$a */
         /* loaded from: classes5.dex */
-        public class C1270a implements DMRGBUtil.OnFetchColorListener {
+        public class a implements DMRGBUtil.OnFetchColorListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1270a() {
+            a() {
             }
 
             @Override // cn.damai.commonbusiness.util.DMRGBUtil.OnFetchColorListener
@@ -141,28 +136,28 @@ public class WaterFlowRankListViewHolder extends BaseViewHolder<WaterFlowRecomme
             }
         }
 
-        C1269c(String str) {
+        c(String str) {
             this.a = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1534520159")) {
-                ipChange.ipc$dispatch("1534520159", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("1534520159", new Object[]{this, eVar});
                 return;
             }
-            WaterFlowRankListViewHolder.this.mRankListImage.setImageDrawable(c0502e.a);
-            Bitmap bitmap = c0502e.b;
+            WaterFlowRankListViewHolder.this.mRankListImage.setImageDrawable(eVar.a);
+            Bitmap bitmap = eVar.b;
             if (bitmap != null) {
-                DMRGBUtil.h(bitmap, this.a, new C1270a());
+                DMRGBUtil.h(bitmap, this.a, new a());
             }
         }
     }
 
     public WaterFlowRankListViewHolder(View view) {
         super(view);
-        this.mOnClickListener = new View$OnClickListenerC1267a();
+        this.mOnClickListener = new a();
         this.mContext = view.getContext();
         this.rankListImageLayout = (RCRelativeLayoutView) this.itemView.findViewById(R$id.homepage_waterflow_rank_image_layout);
         this.mRankListImage = (ImageView) this.itemView.findViewById(R$id.homepage_waterflow_rank_image);
@@ -181,9 +176,9 @@ public class WaterFlowRankListViewHolder extends BaseViewHolder<WaterFlowRecomme
             ipChange.ipc$dispatch("-1056483392", new Object[]{this, iItem});
             return;
         }
-        int a = gi0.INSTANCE.a(this.itemView.getContext());
-        this.imageViewWidth = a;
-        this.imageViewHeight = (int) (((a * 393) * 1.0f) / 342.0f);
+        int a2 = gi0.INSTANCE.a(this.itemView.getContext());
+        this.imageViewWidth = a2;
+        this.imageViewHeight = (int) (((a2 * 393) * 1.0f) / 342.0f);
         ViewGroup.LayoutParams layoutParams = this.rankListImageLayout.getLayoutParams();
         layoutParams.width = this.imageViewWidth;
         layoutParams.height = this.imageViewHeight;
@@ -199,11 +194,11 @@ public class WaterFlowRankListViewHolder extends BaseViewHolder<WaterFlowRecomme
         } else if (waterFlowRecommendItem == null) {
         } else {
             this.itemView.setTag(waterFlowRecommendItem);
-            if (this.mRankListImage.getTag() instanceof C9826vr) {
-                ((C9826vr) this.mRankListImage.getTag()).cancel();
+            if (this.mRankListImage.getTag() instanceof vr) {
+                ((vr) this.mRankListImage.getTag()).cancel();
             }
             String str = "5".equals(waterFlowRecommendItem.cardType) ? waterFlowRecommendItem.pic : waterFlowRecommendItem.backgroundPic;
-            this.mRankListImage.setTag(C0504a.b().f(str, this.imageViewWidth, this.imageViewHeight).n(new C1269c(str)).e(new C1268b()).f());
+            this.mRankListImage.setTag(cn.damai.common.image.a.b().f(str, this.imageViewWidth, this.imageViewHeight).n(new c(str)).e(new b()).f());
             this.mRankTopImage.setVisibility("5".equals(waterFlowRecommendItem.cardType) ? 0 : 8);
             if (wh2.j(waterFlowRecommendItem.title)) {
                 this.mRankListTitle.setVisibility(4);

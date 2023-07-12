@@ -1,7 +1,6 @@
 package tb;
 
 import com.efs.sdk.base.Constants;
-import com.efs.sdk.base.a.d.C4786a;
 import org.json.JSONObject;
 
 /* compiled from: Taobao */
@@ -15,7 +14,7 @@ public class rd0 extends e1 {
     @Override // com.efs.sdk.base.protocol.ILogProtocol
     public byte[] generate() {
         String generateString = generateString();
-        if (C4786a.a().h) {
+        if (com.efs.sdk.base.a.d.a.a().h) {
             w63.a(Constants.TAG, generateString);
         }
         return generateString.getBytes();
@@ -45,6 +44,6 @@ public class rd0 extends e1 {
     @Override // com.efs.sdk.base.protocol.ILogProtocol
     public void insertGlobal(i43 i43Var) {
         this.b.putAll(i43Var.a());
-        this.b.putAll(C4786a.a().b());
+        this.b.putAll(com.efs.sdk.base.a.d.a.a().b());
     }
 }

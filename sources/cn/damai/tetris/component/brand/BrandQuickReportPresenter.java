@@ -19,10 +19,10 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
 import java.util.HashMap;
-import tb.C9175gc;
-import tb.C9548pb;
+import tb.gc;
 import tb.ja;
 import tb.jn1;
+import tb.pb;
 import tb.z20;
 
 /* compiled from: Taobao */
@@ -33,13 +33,12 @@ public class BrandQuickReportPresenter extends BasePresenter<BrandQuickReportCon
     private TrackInfo mTrackInfo;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.brand.BrandQuickReportPresenter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1789a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ BrandQuickReportContract.Model a;
 
-        View$OnClickListenerC1789a(BrandQuickReportContract.Model model) {
+        a(BrandQuickReportContract.Model model) {
             this.a = model;
         }
 
@@ -61,14 +60,13 @@ public class BrandQuickReportPresenter extends BasePresenter<BrandQuickReportCon
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.brand.BrandQuickReportPresenter$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1790b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ContentInfo a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC1790b(ContentInfo contentInfo, int i) {
+        b(ContentInfo contentInfo, int i) {
             this.a = contentInfo;
             this.b = i;
         }
@@ -83,7 +81,7 @@ public class BrandQuickReportPresenter extends BasePresenter<BrandQuickReportCon
                 NavProxy.from(((BasePresenter) BrandQuickReportPresenter.this).mContext.getActivity()).toUri(this.a.schema);
                 HashMap hashMap = new HashMap();
                 hashMap.put("usercode", z20.E());
-                hashMap.put(C9548pb.CNT_CONTENT_ID, this.a.id);
+                hashMap.put(pb.CNT_CONTENT_ID, this.a.id);
                 if (BrandQuickReportPresenter.this.mTrackInfo != null) {
                     BrandQuickReportPresenter brandQuickReportPresenter = BrandQuickReportPresenter.this;
                     TrackType trackType = TrackType.click;
@@ -121,9 +119,9 @@ public class BrandQuickReportPresenter extends BasePresenter<BrandQuickReportCon
         if (AndroidInstantRuntime.support(ipChange, "-1274518553")) {
             ipChange.ipc$dispatch("-1274518553", new Object[]{this, textView, str});
         } else if (!TextUtils.isEmpty(str)) {
-            C9175gc.a(textView, str + "人阅读");
+            gc.a(textView, str + "人阅读");
         } else {
-            C9175gc.a(textView, "");
+            gc.a(textView, "");
         }
     }
 
@@ -159,7 +157,7 @@ public class BrandQuickReportPresenter extends BasePresenter<BrandQuickReportCon
             getView().getSpecialImg().setVideoIconSize(24.0f, 40.0f, 22.0f);
             ipvuvShow(getView().getSpecialIpvuv(), brandQuickReportContentBean.ipvuv);
             if (brandQuickReportContentBean.contentInfo != null) {
-                C9175gc.a(getView().getSpecialTitle(), brandQuickReportContentBean.contentInfo.title);
+                gc.a(getView().getSpecialTitle(), brandQuickReportContentBean.contentInfo.title);
                 onClickJump(getView().getSpecialItem(), brandQuickReportContentBean.contentInfo, 0);
             }
         }
@@ -169,7 +167,7 @@ public class BrandQuickReportPresenter extends BasePresenter<BrandQuickReportCon
             getView().getNormalItemOneImg().setVideoIconSize(14, 31, 21);
             ipvuvShow(getView().getNormalItemOneIpvuv(), brandQuickReportContentBean2.ipvuv);
             if (brandQuickReportContentBean2.contentInfo != null) {
-                C9175gc.a(getView().getNormalItemOneTitle(), brandQuickReportContentBean2.contentInfo.title);
+                gc.a(getView().getNormalItemOneTitle(), brandQuickReportContentBean2.contentInfo.title);
                 onClickJump(getView().getNormalItemOne(), brandQuickReportContentBean2.contentInfo, 1);
             }
         }
@@ -181,7 +179,7 @@ public class BrandQuickReportPresenter extends BasePresenter<BrandQuickReportCon
         getView().getNormalItemTwoImg().setVideoIconSize(14, 31, 21);
         ipvuvShow(getView().getNormalItemTwoIpvuv(), brandQuickReportContentBean3.ipvuv);
         if (brandQuickReportContentBean3.contentInfo != null) {
-            C9175gc.a(getView().getNormalItemTwoTitle(), brandQuickReportContentBean3.contentInfo.title);
+            gc.a(getView().getNormalItemTwoTitle(), brandQuickReportContentBean3.contentInfo.title);
             onClickJump(getView().getNormalItemTwo(), brandQuickReportContentBean3.contentInfo, 2);
         }
     }
@@ -191,7 +189,7 @@ public class BrandQuickReportPresenter extends BasePresenter<BrandQuickReportCon
         if (AndroidInstantRuntime.support(ipChange, "-290607960")) {
             ipChange.ipc$dispatch("-290607960", new Object[]{this, relativeLayout, contentInfo, Integer.valueOf(i)});
         } else {
-            relativeLayout.setOnClickListener(new View$OnClickListenerC1790b(contentInfo, i));
+            relativeLayout.setOnClickListener(new b(contentInfo, i));
         }
     }
 
@@ -220,7 +218,7 @@ public class BrandQuickReportPresenter extends BasePresenter<BrandQuickReportCon
             return;
         }
         this.mTrackInfo = model.getTrackInfo();
-        C9175gc.a(getView().getBrandNew(), model.getBrandNew());
+        gc.a(getView().getBrandNew(), model.getBrandNew());
         if (!TextUtils.isEmpty(model.getLatestPublishTimeStr())) {
             getView().getUpdateTimePoint().setVisibility(0);
             TextView updateTime = getView().getUpdateTime();
@@ -233,7 +231,7 @@ public class BrandQuickReportPresenter extends BasePresenter<BrandQuickReportCon
             try {
                 if (Integer.parseInt(model.getTotal()) > 3 && !TextUtils.isEmpty(model.getSchema())) {
                     getView().getLlMore().setVisibility(0);
-                    getView().getLlMore().setOnClickListener(new View$OnClickListenerC1789a(model));
+                    getView().getLlMore().setOnClickListener(new a(model));
                 } else {
                     getView().getLlMore().setVisibility(8);
                 }
@@ -246,7 +244,7 @@ public class BrandQuickReportPresenter extends BasePresenter<BrandQuickReportCon
         }
         HashMap hashMap = new HashMap();
         hashMap.put("usercode_m", z20.E());
-        hashMap.put(C9548pb.CNT_CONTENT_ID, this.idList);
+        hashMap.put(pb.CNT_CONTENT_ID, this.idList);
         userTrackExpose(getView().getBrandLayout(), "content", hashMap, false);
     }
 }

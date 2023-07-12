@@ -6,9 +6,9 @@ import com.alient.resource.token.TokenManager;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import io.flutter.wpkbridge.WPKFactory;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
@@ -19,20 +19,19 @@ import tb.k50;
 public final class DMTokenManager {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C1491a Companion = new C1491a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final Lazy<DMTokenManager> a;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.onearch.token.DMTokenManager$a */
     /* loaded from: classes15.dex */
-    public static final class C1491a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C1491a() {
+        private a() {
         }
 
-        public /* synthetic */ C1491a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -45,7 +44,7 @@ public final class DMTokenManager {
 
     static {
         Lazy<DMTokenManager> a2;
-        a2 = C8177b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<DMTokenManager>() { // from class: cn.damai.onearch.token.DMTokenManager$Companion$instance$2
+        a2 = b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<DMTokenManager>() { // from class: cn.damai.onearch.token.DMTokenManager$Companion$instance$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* JADX WARN: Can't rename method to resolve collision */

@@ -6,7 +6,7 @@ import android.text.TextUtils;
 import android.view.View;
 import androidx.fragment.app.FragmentTransaction;
 import cn.damai.category.discountticket.ui.OnErrorClickListener;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.ResponseErrorPage;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.commonbusiness.share.ShareManager;
@@ -65,7 +65,7 @@ public class RankListActivity extends SimpleBaseActivity {
         }
         super.onCreate(bundle);
         setContentView(R$layout.dm_layout_randlist_content);
-        C0529c.e().K(this);
+        c.e().K(this);
         hideBaseLayout();
         removeHeadTitleView();
         if (getIntent() == null || getIntent().getExtras() == null) {

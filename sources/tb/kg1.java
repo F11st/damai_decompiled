@@ -10,7 +10,6 @@ import com.alibaba.pictures.moimage.R$id;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.phenix.bitmap.BitmapProcessor;
-import com.taobao.phenix.bitmap.C6849b;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -23,7 +22,7 @@ import org.jetbrains.annotations.Nullable;
 public final class kg1 {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C9357a Companion = new C9357a(null);
+    public static final a Companion = new a(null);
     private Uri a;
     private og1 b;
     private Boolean c;
@@ -33,12 +32,11 @@ public final class kg1 {
     private final Context f;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kg1$a */
     /* loaded from: classes7.dex */
-    public static final class C9357a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9357a() {
+        private a() {
         }
 
         @JvmStatic
@@ -48,19 +46,18 @@ public final class kg1 {
             return AndroidInstantRuntime.support(ipChange, "-658151500") ? (kg1) ipChange.ipc$dispatch("-658151500", new Object[]{this, context}) : new kg1(context, null);
         }
 
-        public /* synthetic */ C9357a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kg1$b */
     /* loaded from: classes7.dex */
-    public static final class C9358b extends ye {
+    public static final class b extends ye {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C9358b(String str) {
+        b(String str) {
             this.a = str;
         }
 
@@ -183,7 +180,7 @@ public final class kg1 {
             og1 og1Var = this.b;
             String l = og1Var != null ? og1Var.l() : null;
             imageView.setTag(R$id.moimage_target_uri, b41.r(valueOf, l));
-            wr1 v = ur1.o().v(valueOf, new C9358b(l));
+            wr1 v = ur1.o().v(valueOf, new b(l));
             if (b41.d(this.c, Boolean.TRUE)) {
                 v.P();
             }
@@ -402,7 +399,7 @@ public final class kg1 {
             String bitmap2 = bitmap.toString();
             Iterator<BitmapProcessor> it = e.iterator();
             while (it.hasNext()) {
-                bitmap = it.next().process(bitmap2, C6849b.a(), bitmap);
+                bitmap = it.next().process(bitmap2, com.taobao.phenix.bitmap.b.a(), bitmap);
                 b41.h(bitmap, "bitmapProcessor.process(…r.getInstance(), tBitmap)");
             }
             moImageView.setImageBitmap(bitmap);

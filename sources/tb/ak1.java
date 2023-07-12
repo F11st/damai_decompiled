@@ -5,7 +5,6 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.Pair;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.types.KotlinTypeFactory;
@@ -56,7 +55,7 @@ public final class ak1 {
         List<TypeParameterDescriptor> parameters = gu2Var.c().getParameters();
         b41.h(parameters, "type.constructor.parameters");
         H0 = CollectionsKt___CollectionsKt.H0(b, parameters);
-        q = C8215n.q(H0, 10);
+        q = kotlin.collections.n.q(H0, 10);
         ArrayList arrayList = new ArrayList(q);
         for (Pair pair : H0) {
             TypeProjection typeProjection = (TypeProjection) pair.component1();
@@ -80,10 +79,10 @@ public final class ak1 {
                     b41.h(upperBounds, "type.constructor.parameters[index].upperBounds");
                     ArrayList arrayList2 = new ArrayList();
                     for (z71 z71Var : upperBounds) {
-                        arrayList2.add(KotlinTypePreparator.C8547a.INSTANCE.a(c.n(z71Var, Variance.INVARIANT).f()));
+                        arrayList2.add(KotlinTypePreparator.a.INSTANCE.a(c.n(z71Var, Variance.INVARIANT).f()));
                     }
                     if (!typeProjection2.isStarProjection() && typeProjection2.getProjectionKind() == Variance.OUT_VARIANCE) {
-                        arrayList2.add(KotlinTypePreparator.C8547a.INSTANCE.a(typeProjection2.getType().f()));
+                        arrayList2.add(KotlinTypePreparator.a.INSTANCE.a(typeProjection2.getType().f()));
                     }
                     ((zj1) typeProjection3.getType()).c().d(arrayList2);
                 }

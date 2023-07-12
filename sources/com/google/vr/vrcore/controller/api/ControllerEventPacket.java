@@ -22,13 +22,12 @@ public class ControllerEventPacket implements Parcelable {
     private ControllerTouchEvent[] touchEvents;
     private static ArrayDeque<ControllerEventPacket> pool = new ArrayDeque<>();
     private static Object poolLock = new Object();
-    public static final Parcelable.Creator<ControllerEventPacket> CREATOR = new C5441a();
+    public static final Parcelable.Creator<ControllerEventPacket> CREATOR = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.vrcore.controller.api.ControllerEventPacket$a */
     /* loaded from: classes10.dex */
-    class C5441a implements Parcelable.Creator<ControllerEventPacket> {
-        C5441a() {
+    class a implements Parcelable.Creator<ControllerEventPacket> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

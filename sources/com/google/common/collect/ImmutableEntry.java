@@ -7,7 +7,7 @@ import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 /* compiled from: Taobao */
 @GwtCompatible(serializable = true)
 /* loaded from: classes10.dex */
-class ImmutableEntry<K, V> extends AbstractC5157b<K, V> implements Serializable {
+class ImmutableEntry<K, V> extends b<K, V> implements Serializable {
     private static final long serialVersionUID = 0;
     @NullableDecl
     final K key;
@@ -20,19 +20,19 @@ class ImmutableEntry<K, V> extends AbstractC5157b<K, V> implements Serializable 
         this.value = v;
     }
 
-    @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+    @Override // com.google.common.collect.b, java.util.Map.Entry
     @NullableDecl
     public final K getKey() {
         return this.key;
     }
 
-    @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+    @Override // com.google.common.collect.b, java.util.Map.Entry
     @NullableDecl
     public final V getValue() {
         return this.value;
     }
 
-    @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+    @Override // com.google.common.collect.b, java.util.Map.Entry
     public final V setValue(V v) {
         throw new UnsupportedOperationException();
     }

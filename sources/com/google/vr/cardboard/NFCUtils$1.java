@@ -9,12 +9,12 @@ import android.util.Log;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 class NFCUtils$1 extends BroadcastReceiver {
-    final /* synthetic */ C5435d a;
+    final /* synthetic */ d a;
 
     @Override // android.content.BroadcastReceiver
     public void onReceive(Context context, Intent intent) {
         String str;
-        str = C5435d.a;
+        str = d.a;
         Log.i(str, "Got an NFC tag!");
         this.a.b((Tag) intent.getParcelableExtra("android.nfc.extra.TAG"));
     }

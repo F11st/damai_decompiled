@@ -15,7 +15,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
@@ -80,14 +79,13 @@ public class ContentBaseViewHolder extends RecyclerView.ViewHolder {
     private View t;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.content.base.ContentBaseViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1963a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ContentItemBean a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC1963a(ContentItemBean contentItemBean, int i) {
+        a(ContentItemBean contentItemBean, int i) {
             this.a = contentItemBean;
             this.b = i;
         }
@@ -109,14 +107,13 @@ public class ContentBaseViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.content.base.ContentBaseViewHolder$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1964b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ContentItemBean a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC1964b(ContentItemBean contentItemBean, int i) {
+        b(ContentItemBean contentItemBean, int i) {
             this.a = contentItemBean;
             this.b = i;
         }
@@ -138,15 +135,14 @@ public class ContentBaseViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.content.base.ContentBaseViewHolder$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1965c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ List a;
         final /* synthetic */ ContentItemBean b;
         final /* synthetic */ int c;
 
-        View$OnClickListenerC1965c(List list, ContentItemBean contentItemBean, int i) {
+        c(List list, ContentItemBean contentItemBean, int i) {
             this.a = list;
             this.b = contentItemBean;
             this.c = i;
@@ -186,14 +182,13 @@ public class ContentBaseViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.content.base.ContentBaseViewHolder$d */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1966d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ContentItemBean a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC1966d(ContentItemBean contentItemBean, int i) {
+        d(ContentItemBean contentItemBean, int i) {
             this.a = contentItemBean;
             this.b = i;
         }
@@ -215,14 +210,13 @@ public class ContentBaseViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.content.base.ContentBaseViewHolder$e */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1967e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ContentItemBean a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC1967e(ContentItemBean contentItemBean, int i) {
+        e(ContentItemBean contentItemBean, int i) {
             this.a = contentItemBean;
             this.b = i;
         }
@@ -259,12 +253,11 @@ public class ContentBaseViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.content.base.ContentBaseViewHolder$f */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1968f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1968f() {
+        f() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -400,7 +393,7 @@ public class ContentBaseViewHolder extends RecyclerView.ViewHolder {
         if (B()) {
             this.r.setVisibility(0);
         }
-        this.r.setOnClickListener(new View$OnClickListenerC1968f());
+        this.r.setOnClickListener(new f());
     }
 
     private static String p(int i) {
@@ -580,17 +573,17 @@ public class ContentBaseViewHolder extends RecyclerView.ViewHolder {
                 }
                 this.o.setRadius(t60.a(this.a, 6.0f));
                 this.o.setGap(t60.a(this.a, 3.0f));
-                int d = ((int) yr2.d(this.a)) - yr2.a(this.a, 42.0f);
+                int d2 = ((int) yr2.d(this.a)) - yr2.a(this.a, 42.0f);
                 if (images.size() == 1) {
-                    d = (d * 2) / 3;
+                    d2 = (d2 * 2) / 3;
                 }
-                this.o.setTotalWidth(d);
+                this.o.setTotalWidth(d2);
                 this.o.updateImages(arrayList);
                 if (A(contentItemBean.getCard())) {
-                    this.o.setListener(new View$OnClickListenerC1964b(contentItemBean, i));
+                    this.o.setListener(new b(contentItemBean, i));
                     return;
                 } else {
-                    this.o.setListener(new View$OnClickListenerC1965c(images, contentItemBean, i));
+                    this.o.setListener(new c(images, contentItemBean, i));
                     return;
                 }
             }
@@ -604,9 +597,9 @@ public class ContentBaseViewHolder extends RecyclerView.ViewHolder {
             ipChange.ipc$dispatch("-1572186811", new Object[]{this, contentItemBean});
             return;
         }
-        DMImageCreator c = C0504a.b().c(r(contentItemBean));
+        DMImageCreator c2 = cn.damai.common.image.a.b().c(r(contentItemBean));
         int i = R$drawable.uikit_default_image_bg_gradient;
-        c.i(i).c(i).g(this.k);
+        c2.i(i).c(i).g(this.k);
         if (contentItemBean != null && contentItemBean.getVideo() != null) {
             long videoTime = contentItemBean.getVideo().getVideoTime();
             if (videoTime > 0) {
@@ -627,50 +620,50 @@ public class ContentBaseViewHolder extends RecyclerView.ViewHolder {
             return;
         }
         String card = contentItemBean.getCard();
-        char c = 65535;
+        char c2 = 65535;
         switch (card.hashCode()) {
             case 1507424:
                 if (card.equals("1001")) {
-                    c = 0;
+                    c2 = 0;
                     break;
                 }
                 break;
             case 1507425:
                 if (card.equals(OPRUtils.OPRPhoneLevel.OPR_PHONE_LEVEL_MEDIUM)) {
-                    c = 2;
+                    c2 = 2;
                     break;
                 }
                 break;
             case 1537215:
                 if (card.equals("2001")) {
-                    c = 1;
+                    c2 = 1;
                     break;
                 }
                 break;
             case 1537216:
                 if (card.equals("2002")) {
-                    c = 3;
+                    c2 = 3;
                     break;
                 }
                 break;
             case 1537217:
                 if (card.equals("2003")) {
-                    c = 4;
+                    c2 = 4;
                     break;
                 }
                 break;
         }
-        if (c == 0) {
+        if (c2 == 0) {
             this.j.setVisibility(0);
             this.o.setVisibility(8);
             this.l.setVisibility(8);
             this.m.setVisibility(8);
-        } else if (c == 1) {
+        } else if (c2 == 1) {
             this.j.setVisibility(8);
             this.o.setVisibility(0);
             this.l.setVisibility(8);
             this.m.setVisibility(8);
-        } else if (c != 2 && c != 3) {
+        } else if (c2 != 2 && c2 != 3) {
             this.j.setVisibility(8);
             this.o.setVisibility(8);
             this.l.setVisibility(8);
@@ -799,9 +792,9 @@ public class ContentBaseViewHolder extends RecyclerView.ViewHolder {
                                     }
                                     ContentBaseViewHolder contentBaseViewHolder = ContentBaseViewHolder.this;
                                     contentBaseViewHolder.d = !contentBaseViewHolder.d;
-                                    Map<String, String> a = ao.a(ContentBaseViewHolder.this.b.getModel().getTrackInfo().getArgsMap(), contentItemBean.getContentId(), contentItemBean.getCard());
+                                    Map<String, String> a2 = ao.a(ContentBaseViewHolder.this.b.getModel().getTrackInfo().getArgsMap(), contentItemBean.getContentId(), contentItemBean.getCard());
                                     BasePresenter basePresenter2 = ContentBaseViewHolder.this.b;
-                                    basePresenter2.userTrackClick("favorite_" + i, a, true);
+                                    basePresenter2.userTrackClick("favorite_" + i, a2, true);
                                 }
                             }
                         });
@@ -854,9 +847,9 @@ public class ContentBaseViewHolder extends RecyclerView.ViewHolder {
         } else if (contentItemBean == null || contentItemBean.getVideo() == null) {
         } else {
             if (A(contentItemBean.getCard())) {
-                this.j.setOnClickListener(new View$OnClickListenerC1966d(contentItemBean, i));
+                this.j.setOnClickListener(new d(contentItemBean, i));
             } else {
-                this.j.setOnClickListener(new View$OnClickListenerC1967e(contentItemBean, i));
+                this.j.setOnClickListener(new e(contentItemBean, i));
             }
         }
     }

@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.single;
 
-import io.reactivex.AbstractC8147b;
-import io.reactivex.AbstractC8149d;
 import io.reactivex.SingleSource;
+import io.reactivex.b;
+import io.reactivex.d;
 import io.reactivex.functions.Function;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -39,7 +39,7 @@ public final class SingleInternalHelper {
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class ToFlowableIterable<T> implements Iterable<AbstractC8147b<T>> {
+    static final class ToFlowableIterable<T> implements Iterable<b<T>> {
         private final Iterable<? extends SingleSource<? extends T>> sources;
 
         ToFlowableIterable(Iterable<? extends SingleSource<? extends T>> iterable) {
@@ -47,14 +47,14 @@ public final class SingleInternalHelper {
         }
 
         @Override // java.lang.Iterable
-        public Iterator<AbstractC8147b<T>> iterator() {
+        public Iterator<b<T>> iterator() {
             return new ToFlowableIterator(this.sources.iterator());
         }
     }
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class ToFlowableIterator<T> implements Iterator<AbstractC8147b<T>> {
+    static final class ToFlowableIterator<T> implements Iterator<b<T>> {
         private final Iterator<? extends SingleSource<? extends T>> sit;
 
         ToFlowableIterator(Iterator<? extends SingleSource<? extends T>> it) {
@@ -72,7 +72,7 @@ public final class SingleInternalHelper {
         }
 
         @Override // java.util.Iterator
-        public AbstractC8147b<T> next() {
+        public b<T> next() {
             return new SingleToFlowable(this.sit.next());
         }
     }
@@ -80,11 +80,11 @@ public final class SingleInternalHelper {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    public enum ToObservable implements Function<SingleSource, AbstractC8149d> {
+    public enum ToObservable implements Function<SingleSource, d> {
         INSTANCE;
 
         @Override // io.reactivex.functions.Function
-        public AbstractC8149d apply(SingleSource singleSource) {
+        public d apply(SingleSource singleSource) {
             return new SingleToObservable(singleSource);
         }
     }
@@ -97,7 +97,7 @@ public final class SingleInternalHelper {
         return NoSuchElementCallable.INSTANCE;
     }
 
-    public static <T> Iterable<? extends AbstractC8147b<T>> iterableToFlowable(Iterable<? extends SingleSource<? extends T>> iterable) {
+    public static <T> Iterable<? extends b<T>> iterableToFlowable(Iterable<? extends SingleSource<? extends T>> iterable) {
         return new ToFlowableIterable(iterable);
     }
 
@@ -105,7 +105,7 @@ public final class SingleInternalHelper {
         return ToFlowable.INSTANCE;
     }
 
-    public static <T> Function<SingleSource<? extends T>, AbstractC8149d<? extends T>> toObservable() {
+    public static <T> Function<SingleSource<? extends T>, d<? extends T>> toObservable() {
         return ToObservable.INSTANCE;
     }
 }

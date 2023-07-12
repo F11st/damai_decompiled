@@ -3,7 +3,6 @@ package tb;
 import android.app.Application;
 import android.text.TextUtils;
 import androidx.annotation.Nullable;
-import cn.damai.common.util.C0535a;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.home.bean.HomeTabBean;
 import cn.damai.commonbusiness.tab.BottomSheetBean;
@@ -58,7 +57,7 @@ public class yy0 {
         if (AndroidInstantRuntime.support(ipChange, "-456931738")) {
             return (List) ipChange.ipc$dispatch("-456931738", new Object[0]);
         }
-        List<HomeTabBean> a = a(((HomeTabListBean) m61.a(C0535a.n(mu0.a().getResources().openRawResource(R$raw.default_home_tab)), HomeTabListBean.class)).data);
+        List<HomeTabBean> a = a(((HomeTabListBean) m61.a(cn.damai.common.util.a.n(mu0.a().getResources().openRawResource(R$raw.default_home_tab)), HomeTabListBean.class)).data);
         String str = null;
         try {
             str = JSON.toJSONString(a);
@@ -234,7 +233,7 @@ public class yy0 {
             return (BaseResponse) ipChange.ipc$dispatch("507037568", new Object[0]);
         }
         try {
-            return (BaseResponse) JSON.parseObject(C0535a.n(mu0.a().getResources().openRawResource(R$raw.default_home_cms)), BaseResponse.class);
+            return (BaseResponse) JSON.parseObject(cn.damai.common.util.a.n(mu0.a().getResources().openRawResource(R$raw.default_home_cms)), BaseResponse.class);
         } catch (Exception e) {
             e.printStackTrace();
             return null;

@@ -37,6 +37,6 @@ public final class ChannelsKt__Channels_commonKt$mapNotNullTo$3 extends Continua
     public final Object invokeSuspend(@NotNull Object obj) {
         this.result = obj;
         this.label |= Integer.MIN_VALUE;
-        return C8648b.Z(null, null, null, this);
+        return b.Z(null, null, null, this);
     }
 }

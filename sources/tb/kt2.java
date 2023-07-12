@@ -32,10 +32,9 @@ public class kt2 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.kt2$a */
     /* loaded from: classes6.dex */
-    public static class C9378a implements OrangeConfigListenerV1 {
-        C9378a() {
+    public static class a implements OrangeConfigListenerV1 {
+        a() {
         }
 
         @Override // com.taobao.orange.OrangeConfigListenerV1
@@ -220,7 +219,7 @@ public class kt2 {
         g = n(FORCE_CLOSE_PERFORMANCE_PAGE_KEY);
         h = q();
         i = C();
-        OrangeConfig.getInstance().registerListener(new String[]{ORANGE_GROUP_NAME}, new C9378a());
+        OrangeConfig.getInstance().registerListener(new String[]{ORANGE_GROUP_NAME}, new a());
     }
 
     public static boolean y() {

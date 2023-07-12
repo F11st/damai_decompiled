@@ -3,7 +3,6 @@ package tb;
 import androidx.annotation.MainThread;
 import kotlin.Result;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -28,7 +27,7 @@ public final class nt1<T> {
             System.out.println((Object) "PendingData await2");
             this.b = o52Var;
             Object a = o52Var.a();
-            d = C8234b.d();
+            d = kotlin.coroutines.intrinsics.b.d();
             if (a == d) {
                 n40.c(continuation);
             }
@@ -57,7 +56,7 @@ public final class nt1<T> {
             if (continuation == null) {
                 return;
             }
-            Result.C8174a c8174a = Result.Companion;
+            Result.a aVar = Result.Companion;
             continuation.resumeWith(Result.m1271constructorimpl(t));
             this.b = null;
         }

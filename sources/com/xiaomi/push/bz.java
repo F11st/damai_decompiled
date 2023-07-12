@@ -1,14 +1,13 @@
 package com.xiaomi.push;
 
 import android.content.Context;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.al;
 import java.lang.ref.WeakReference;
 
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class bz extends al.AbstractRunnableC7597a {
+public class bz extends al.a {
     final /* synthetic */ bx a;
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -16,7 +15,7 @@ public class bz extends al.AbstractRunnableC7597a {
         this.a = bxVar;
     }
 
-    @Override // com.xiaomi.push.al.AbstractRunnableC7597a
+    @Override // com.xiaomi.push.al.a
     /* renamed from: a */
     public String mo706a() {
         return "10054";
@@ -27,7 +26,7 @@ public class bz extends al.AbstractRunnableC7597a {
         String c;
         Context context;
         Context context2;
-        AbstractC7535b.c("exec== DbSizeControlJob");
+        com.xiaomi.channel.commonutils.logger.b.c("exec== DbSizeControlJob");
         c = this.a.c();
         context = this.a.f141a;
         cc ccVar = new cc(c, new WeakReference(context));

@@ -17,12 +17,11 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import cn.damai.common.app.widget.ProtocolDialog;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
-import cn.damai.common.util.toastutil.C0537a;
+import cn.damai.common.util.toastutil.a;
 import cn.damai.member.R$color;
 import cn.damai.member.R$dimen;
 import cn.damai.member.R$drawable;
@@ -46,7 +45,7 @@ import io.flutter.wpkbridge.WPKFactory;
 import kotlin.jvm.JvmField;
 import kotlin.jvm.JvmOverloads;
 import kotlin.jvm.functions.Function0;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.android.agoo.message.MessageService;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
@@ -67,7 +66,7 @@ import tb.z20;
 public final class TickletNFTTicketItemView extends FrameLayout {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C2107a Companion = new C2107a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String NFT_LOADING_ACTION = "NFT_LOADING_ACTION";
     @NotNull
@@ -115,13 +114,12 @@ public final class TickletNFTTicketItemView extends FrameLayout {
     private TextView ycCodeTv;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletNFTTicketItemView$a */
     /* loaded from: classes7.dex */
-    public static final class C2107a {
-        private C2107a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C2107a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -158,7 +156,7 @@ public final class TickletNFTTicketItemView extends FrameLayout {
             Context context = getContext();
             String string = getResources().getString(R$string.ticklet_nft_rule_tip);
             PerformNftExtAttr performNftExtAttr = this.mPerformData;
-            ProtocolDialog.C(context, string, Html.fromHtml((performNftExtAttr == null || (str = performNftExtAttr.nftIssueTips) == null) ? null : C8604o.z(str, StringUtils.LF, "<br/>", false, 4, null)), spannableString, getResources().getString(R$string.ticklet_transfer_cancel_button_thought), -16777216, new DialogInterface.OnClickListener() { // from class: tb.ln2
+            ProtocolDialog.C(context, string, Html.fromHtml((performNftExtAttr == null || (str = performNftExtAttr.nftIssueTips) == null) ? null : o.z(str, StringUtils.LF, "<br/>", false, 4, null)), spannableString, getResources().getString(R$string.ticklet_transfer_cancel_button_thought), -16777216, new DialogInterface.OnClickListener() { // from class: tb.ln2
                 @Override // android.content.DialogInterface.OnClickListener
                 public final void onClick(DialogInterface dialogInterface, int i) {
                     TickletNFTTicketItemView.m82decideShowDialog$lambda3(dialogInterface, i);
@@ -304,15 +302,14 @@ public final class TickletNFTTicketItemView extends FrameLayout {
                         private static transient /* synthetic */ IpChange $ipChange;
 
                         /* compiled from: Taobao */
-                        /* renamed from: cn.damai.ticklet.view.TickletNFTTicketItemView$handleNFTAction$1$listener$1$a */
                         /* loaded from: classes7.dex */
-                        public static final class C2108a implements Animator.AnimatorListener {
+                        public static final class a implements Animator.AnimatorListener {
                             private static transient /* synthetic */ IpChange $ipChange;
                             final /* synthetic */ LottieAnimationView a;
                             final /* synthetic */ TicketNftExtAttr b;
                             final /* synthetic */ TickletNFTTicketItemView c;
 
-                            C2108a(LottieAnimationView lottieAnimationView, TicketNftExtAttr ticketNftExtAttr, TickletNFTTicketItemView tickletNFTTicketItemView) {
+                            a(LottieAnimationView lottieAnimationView, TicketNftExtAttr ticketNftExtAttr, TickletNFTTicketItemView tickletNFTTicketItemView) {
                                 this.a = lottieAnimationView;
                                 this.b = ticketNftExtAttr;
                                 this.c = tickletNFTTicketItemView;
@@ -402,7 +399,7 @@ public final class TickletNFTTicketItemView extends FrameLayout {
                             b41.i(str3, "code");
                             b41.i(str4, "msg");
                             xr.c(TickletNFTTicketItemView.NFT_LOADING_ACTION, Boolean.FALSE);
-                            C0537a.i(tickletNFTTicketItemView.getContext(), str4);
+                            cn.damai.common.util.toastutil.a.i(tickletNFTTicketItemView.getContext(), str4);
                             StringBuilder sb = new StringBuilder();
                             sb.append(" performId:");
                             str5 = tickletNFTTicketItemView.mPerformId;
@@ -424,7 +421,7 @@ public final class TickletNFTTicketItemView extends FrameLayout {
                             xr.c(TickletNFTTicketItemView.NFT_LOADING_ACTION, Boolean.FALSE);
                             LottieAnimationView lottieAnimationView = (LottieAnimationView) view2.findViewById(R$id.lav_receiver_lottie);
                             lottieAnimationView.setAnimation(R$raw.ticket_receive_lottie);
-                            lottieAnimationView.addAnimatorListener(new C2108a(lottieAnimationView, ticketNftExtAttr, tickletNFTTicketItemView));
+                            lottieAnimationView.addAnimatorListener(new a(lottieAnimationView, ticketNftExtAttr, tickletNFTTicketItemView));
                             lottieAnimationView.playAnimation();
                         }
                     });
@@ -452,7 +449,7 @@ public final class TickletNFTTicketItemView extends FrameLayout {
                         ipChange2.ipc$dispatch("376751121", new Object[]{this});
                         return;
                     }
-                    TickletNFTTicketItemView.C2107a c2107a = TickletNFTTicketItemView.Companion;
+                    TickletNFTTicketItemView.a aVar = TickletNFTTicketItemView.Companion;
                     TickletNFTTicketItemView.jumpToAuth = true;
                     DMNav.from(TickletNFTTicketItemView.this.getContext()).toUri(performNftExtAttr.nftAuthUrl);
                 }
@@ -477,7 +474,7 @@ public final class TickletNFTTicketItemView extends FrameLayout {
                     if (AndroidInstantRuntime.support(ipChange2, "83348114")) {
                         ipChange2.ipc$dispatch("83348114", new Object[]{this});
                     } else {
-                        C0537a.i(TickletNFTTicketItemView.this.getContext(), performNftExtAttr.nftUserValidateMessage);
+                        a.i(TickletNFTTicketItemView.this.getContext(), performNftExtAttr.nftUserValidateMessage);
                     }
                 }
             });
@@ -549,7 +546,7 @@ public final class TickletNFTTicketItemView extends FrameLayout {
             return;
         }
         b41.i(tickletNFTTicketItemView, "this$0");
-        C0529c.e().x(un2.k().K(tickletNFTTicketItemView.mPerformId, tickletNFTTicketItemView.mProjectId, tickletNFTTicketItemView.mPosition, tickletNFTTicketItemView.mTicketStatus));
+        c.e().x(un2.k().K(tickletNFTTicketItemView.mPerformId, tickletNFTTicketItemView.mProjectId, tickletNFTTicketItemView.mPosition, tickletNFTTicketItemView.mTicketStatus));
         tickletNFTTicketItemView.decideShowDialog(new Function0<wt2>() { // from class: cn.damai.ticklet.view.TickletNFTTicketItemView$initView$1$1
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -596,7 +593,7 @@ public final class TickletNFTTicketItemView extends FrameLayout {
         b41.i(tickletNFTTicketItemView, "this$0");
         TicketNftExtAttr ticketNftExtAttr = tickletNFTTicketItemView.mNftData;
         if (ticketNftExtAttr != null) {
-            C0529c e = C0529c.e();
+            c e = c.e();
             un2 k = un2.k();
             TicketNftExtAttr ticketNftExtAttr2 = tickletNFTTicketItemView.mNftData;
             e.x(k.J(ticketNftExtAttr2 != null ? ticketNftExtAttr2.subContentType : null, tickletNFTTicketItemView.mPosition));
@@ -623,7 +620,7 @@ public final class TickletNFTTicketItemView extends FrameLayout {
         this.mNftData = ticketNftExtAttr;
         String str = ticketNftExtAttr.nftStatus;
         if (str != null) {
-            s = C8604o.s(str);
+            s = o.s(str);
             if (!s) {
                 z = false;
             }
@@ -642,7 +639,7 @@ public final class TickletNFTTicketItemView extends FrameLayout {
         }
         ImageView imageView = this.coverIv;
         if (imageView != null) {
-            C0504a.b().loadinto(ticketNftExtAttr.coverURL, imageView);
+            cn.damai.common.image.a.b().loadinto(ticketNftExtAttr.coverURL, imageView);
         }
         validShow(this.ycCodeTv, ticketNftExtAttr.acSn);
         validShow(this.titleTv, ticketNftExtAttr.title);

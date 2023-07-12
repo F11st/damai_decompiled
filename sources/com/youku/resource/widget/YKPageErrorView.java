@@ -32,7 +32,7 @@ public class YKPageErrorView extends YKErrorView {
     }
 
     private void init(Context context) {
-        View inflate = LayoutInflater.from(context).inflate(R.C8074layout.resource_ykpage_errorview, (ViewGroup) this, true);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.resource_ykpage_errorview, (ViewGroup) this, true);
         ImageView imageView = (ImageView) inflate.findViewById(R.id.error_image);
         this.error_image = imageView;
         RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) imageView.getLayoutParams();

@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.trade.R$id;
 import cn.damai.trade.R$layout;
 import cn.damai.uikit.iconfont.DMIconFontTextView;
@@ -28,14 +28,13 @@ public class OrderDetailInvoiceViewHolder extends RecyclerView.ViewHolder {
     private Context d;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailInvoiceViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2199a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ String b;
 
-        View$OnClickListenerC2199a(String str, String str2) {
+        a(String str, String str2) {
             this.a = str;
             this.b = str2;
         }
@@ -47,7 +46,7 @@ public class OrderDetailInvoiceViewHolder extends RecyclerView.ViewHolder {
                 ipChange.ipc$dispatch("-1889032107", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(pp2.u().j1(this.a, this.b));
+            c.e().x(pp2.u().j1(this.a, this.b));
             Bundle bundle = new Bundle();
             bundle.putString("orderId", this.b);
             bundle.putString("projectId", this.a);
@@ -56,14 +55,13 @@ public class OrderDetailInvoiceViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailInvoiceViewHolder$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2200b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ String b;
 
-        View$OnClickListenerC2200b(String str, String str2) {
+        b(String str, String str2) {
             this.a = str;
             this.b = str2;
         }
@@ -75,7 +73,7 @@ public class OrderDetailInvoiceViewHolder extends RecyclerView.ViewHolder {
                 ipChange.ipc$dispatch("222258262", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(pp2.u().k1(this.a, this.b));
+            c.e().x(pp2.u().k1(this.a, this.b));
             Bundle bundle = new Bundle();
             bundle.putString("orderId", this.b);
             DMNav.from(OrderDetailInvoiceViewHolder.this.d).withExtras(bundle).toUri(NavUri.b(cs.l));
@@ -108,7 +106,7 @@ public class OrderDetailInvoiceViewHolder extends RecyclerView.ViewHolder {
             this.a.setText(str3);
             this.c.setVisibility(8);
             this.itemView.setClickable(true);
-            this.itemView.setOnClickListener(new View$OnClickListenerC2199a(str2, str));
+            this.itemView.setOnClickListener(new a(str2, str));
         } else if (i == 3 || i == 4) {
             this.b.setVisibility(0);
             this.a.setVisibility(0);
@@ -116,7 +114,7 @@ public class OrderDetailInvoiceViewHolder extends RecyclerView.ViewHolder {
             this.a.setText(str3);
             this.c.setText(str4);
             this.itemView.setClickable(true);
-            this.itemView.setOnClickListener(new View$OnClickListenerC2200b(str2, str));
+            this.itemView.setOnClickListener(new b(str2, str));
         } else if (i != 5) {
         } else {
             this.b.setVisibility(8);

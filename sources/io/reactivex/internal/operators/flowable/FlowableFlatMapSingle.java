@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -211,7 +211,7 @@ public final class FlowableFlatMapSingle<T, R> extends AbstractFlowableWithUpstr
                 if (spscLinkedArrayQueue2 != null) {
                     return spscLinkedArrayQueue2;
                 }
-                spscLinkedArrayQueue = new SpscLinkedArrayQueue<>(AbstractC8147b.bufferSize());
+                spscLinkedArrayQueue = new SpscLinkedArrayQueue<>(b.bufferSize());
             } while (!this.queue.compareAndSet(null, spscLinkedArrayQueue));
             return spscLinkedArrayQueue;
         }
@@ -336,14 +336,14 @@ public final class FlowableFlatMapSingle<T, R> extends AbstractFlowableWithUpstr
         }
     }
 
-    public FlowableFlatMapSingle(AbstractC8147b<T> abstractC8147b, Function<? super T, ? extends SingleSource<? extends R>> function, boolean z, int i) {
-        super(abstractC8147b);
+    public FlowableFlatMapSingle(b<T> bVar, Function<? super T, ? extends SingleSource<? extends R>> function, boolean z, int i) {
+        super(bVar);
         this.mapper = function;
         this.delayErrors = z;
         this.maxConcurrency = i;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super R> subscriber) {
         this.source.subscribe((FlowableSubscriber) new FlatMapSingleSubscriber(subscriber, this.mapper, this.delayErrors, this.maxConcurrency));
     }

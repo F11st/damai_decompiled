@@ -17,19 +17,18 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes3.dex */
 public final class bk0 extends ak0 implements CustomTypeVariable {
     @NotNull
-    public static final C8967a Companion = new C8967a(null);
+    public static final a Companion = new a(null);
     @JvmField
     public static boolean e;
     private boolean d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.bk0$a */
     /* loaded from: classes3.dex */
-    public static final class C8967a {
-        private C8967a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8967a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

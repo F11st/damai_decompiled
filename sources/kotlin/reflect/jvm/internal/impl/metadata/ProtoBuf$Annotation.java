@@ -5,10 +5,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
-import kotlin.reflect.jvm.internal.impl.protobuf.AbstractC8443a;
 import kotlin.reflect.jvm.internal.impl.protobuf.AbstractMessageLite;
 import kotlin.reflect.jvm.internal.impl.protobuf.ByteString;
-import kotlin.reflect.jvm.internal.impl.protobuf.C8447c;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedOutputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite;
@@ -16,11 +14,12 @@ import kotlin.reflect.jvm.internal.impl.protobuf.Internal;
 import kotlin.reflect.jvm.internal.impl.protobuf.InvalidProtocolBufferException;
 import kotlin.reflect.jvm.internal.impl.protobuf.MessageLiteOrBuilder;
 import kotlin.reflect.jvm.internal.impl.protobuf.Parser;
+import kotlin.reflect.jvm.internal.impl.protobuf.c;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class ProtoBuf$Annotation extends GeneratedMessageLite implements ProtoBuf$AnnotationOrBuilder {
-    public static Parser<ProtoBuf$Annotation> PARSER = new C8391a();
+    public static Parser<ProtoBuf$Annotation> PARSER = new a();
     private static final ProtoBuf$Annotation defaultInstance;
     private List<Argument> argument_;
     private int bitField0_;
@@ -32,7 +31,7 @@ public final class ProtoBuf$Annotation extends GeneratedMessageLite implements P
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
     public static final class Argument extends GeneratedMessageLite implements ArgumentOrBuilder {
-        public static Parser<Argument> PARSER = new C8390a();
+        public static Parser<Argument> PARSER = new a();
         private static final Argument defaultInstance;
         private int bitField0_;
         private byte memoizedIsInitialized;
@@ -149,7 +148,7 @@ public final class ProtoBuf$Annotation extends GeneratedMessageLite implements P
                 Code decompiled incorrectly, please refer to instructions dump.
                 To view partially-correct code enable 'Show inconsistent code' option in preferences
             */
-            public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Annotation.Argument.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.C8447c r4) throws java.io.IOException {
+            public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Annotation.Argument.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.c r4) throws java.io.IOException {
                 /*
                     r2 = this;
                     r0 = 0
@@ -184,7 +183,7 @@ public final class ProtoBuf$Annotation extends GeneratedMessageLite implements P
         /* compiled from: Taobao */
         /* loaded from: classes3.dex */
         public static final class Value extends GeneratedMessageLite implements ValueOrBuilder {
-            public static Parser<Value> PARSER = new C8389a();
+            public static Parser<Value> PARSER = new a();
             private static final Value defaultInstance;
             private ProtoBuf$Annotation annotation_;
             private int arrayDimensionCount_;
@@ -457,7 +456,7 @@ public final class ProtoBuf$Annotation extends GeneratedMessageLite implements P
                     Code decompiled incorrectly, please refer to instructions dump.
                     To view partially-correct code enable 'Show inconsistent code' option in preferences
                 */
-                public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Annotation.Argument.Value.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.C8447c r4) throws java.io.IOException {
+                public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Annotation.Argument.Value.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.c r4) throws java.io.IOException {
                     /*
                         r2 = this;
                         r0 = 0
@@ -506,14 +505,13 @@ public final class ProtoBuf$Annotation extends GeneratedMessageLite implements P
                 ANNOTATION(11, 11),
                 ARRAY(12, 12);
                 
-                private static Internal.EnumLiteMap<Type> internalValueMap = new C8388a();
+                private static Internal.EnumLiteMap<Type> internalValueMap = new a();
                 private final int value;
 
                 /* compiled from: Taobao */
-                /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Annotation$Argument$Value$Type$a */
                 /* loaded from: classes3.dex */
-                static class C8388a implements Internal.EnumLiteMap<Type> {
-                    C8388a() {
+                static class a implements Internal.EnumLiteMap<Type> {
+                    a() {
                     }
 
                     @Override // kotlin.reflect.jvm.internal.impl.protobuf.Internal.EnumLiteMap
@@ -567,16 +565,15 @@ public final class ProtoBuf$Annotation extends GeneratedMessageLite implements P
             }
 
             /* compiled from: Taobao */
-            /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Annotation$Argument$Value$a */
             /* loaded from: classes3.dex */
-            static class C8389a extends AbstractC8443a<Value> {
-                C8389a() {
+            static class a extends kotlin.reflect.jvm.internal.impl.protobuf.a<Value> {
+                a() {
                 }
 
                 @Override // kotlin.reflect.jvm.internal.impl.protobuf.Parser
                 /* renamed from: i */
-                public Value parsePartialFrom(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
-                    return new Value(codedInputStream, c8447c);
+                public Value parsePartialFrom(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
+                    return new Value(codedInputStream, cVar);
                 }
             }
 
@@ -845,11 +842,11 @@ public final class ProtoBuf$Annotation extends GeneratedMessageLite implements P
             /* JADX WARN: Type inference failed for: r5v0 */
             /* JADX WARN: Type inference failed for: r5v1 */
             /* JADX WARN: Type inference failed for: r5v2, types: [boolean] */
-            private Value(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
+            private Value(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
                 this.memoizedIsInitialized = (byte) -1;
                 this.memoizedSerializedSize = -1;
                 initFields();
-                ByteString.C8436a n = ByteString.n();
+                ByteString.a n = ByteString.n();
                 CodedOutputStream J = CodedOutputStream.J(n, 1);
                 boolean z = false;
                 boolean z2 = false;
@@ -899,7 +896,7 @@ public final class ProtoBuf$Annotation extends GeneratedMessageLite implements P
                                         continue;
                                     case 66:
                                         Builder builder = (this.bitField0_ & 128) == 128 ? this.annotation_.toBuilder() : null;
-                                        ProtoBuf$Annotation protoBuf$Annotation = (ProtoBuf$Annotation) codedInputStream.u(ProtoBuf$Annotation.PARSER, c8447c);
+                                        ProtoBuf$Annotation protoBuf$Annotation = (ProtoBuf$Annotation) codedInputStream.u(ProtoBuf$Annotation.PARSER, cVar);
                                         this.annotation_ = protoBuf$Annotation;
                                         if (builder != null) {
                                             builder.mergeFrom(protoBuf$Annotation);
@@ -912,7 +909,7 @@ public final class ProtoBuf$Annotation extends GeneratedMessageLite implements P
                                             this.arrayElement_ = new ArrayList();
                                             z2 |= true;
                                         }
-                                        this.arrayElement_.add(codedInputStream.u(PARSER, c8447c));
+                                        this.arrayElement_.add(codedInputStream.u(PARSER, cVar));
                                         continue;
                                     case 80:
                                         this.bitField0_ |= 512;
@@ -923,7 +920,7 @@ public final class ProtoBuf$Annotation extends GeneratedMessageLite implements P
                                         this.arrayDimensionCount_ = codedInputStream.s();
                                         continue;
                                     default:
-                                        r5 = parseUnknownField(codedInputStream, J, c8447c, K);
+                                        r5 = parseUnknownField(codedInputStream, J, cVar, K);
                                         if (r5 == 0) {
                                             break;
                                         } else {
@@ -976,16 +973,15 @@ public final class ProtoBuf$Annotation extends GeneratedMessageLite implements P
         }
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Annotation$Argument$a */
         /* loaded from: classes3.dex */
-        static class C8390a extends AbstractC8443a<Argument> {
-            C8390a() {
+        static class a extends kotlin.reflect.jvm.internal.impl.protobuf.a<Argument> {
+            a() {
             }
 
             @Override // kotlin.reflect.jvm.internal.impl.protobuf.Parser
             /* renamed from: i */
-            public Argument parsePartialFrom(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
-                return new Argument(codedInputStream, c8447c);
+            public Argument parsePartialFrom(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
+                return new Argument(codedInputStream, cVar);
             }
         }
 
@@ -1112,11 +1108,11 @@ public final class ProtoBuf$Annotation extends GeneratedMessageLite implements P
             this.unknownFields = ByteString.EMPTY;
         }
 
-        private Argument(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
+        private Argument(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
             this.memoizedIsInitialized = (byte) -1;
             this.memoizedSerializedSize = -1;
             initFields();
-            ByteString.C8436a n = ByteString.n();
+            ByteString.a n = ByteString.n();
             CodedOutputStream J = CodedOutputStream.J(n, 1);
             boolean z = false;
             while (!z) {
@@ -1129,11 +1125,11 @@ public final class ProtoBuf$Annotation extends GeneratedMessageLite implements P
                                     this.bitField0_ |= 1;
                                     this.nameId_ = codedInputStream.s();
                                 } else if (K != 18) {
-                                    if (!parseUnknownField(codedInputStream, J, c8447c, K)) {
+                                    if (!parseUnknownField(codedInputStream, J, cVar, K)) {
                                     }
                                 } else {
                                     Value.Builder builder = (this.bitField0_ & 2) == 2 ? this.value_.toBuilder() : null;
-                                    Value value = (Value) codedInputStream.u(Value.PARSER, c8447c);
+                                    Value value = (Value) codedInputStream.u(Value.PARSER, cVar);
                                     this.value_ = value;
                                     if (builder != null) {
                                         builder.mergeFrom(value);
@@ -1298,7 +1294,7 @@ public final class ProtoBuf$Annotation extends GeneratedMessageLite implements P
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Annotation.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.C8447c r4) throws java.io.IOException {
+        public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Annotation.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.c r4) throws java.io.IOException {
             /*
                 r2 = this;
                 r0 = 0
@@ -1331,16 +1327,15 @@ public final class ProtoBuf$Annotation extends GeneratedMessageLite implements P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Annotation$a */
     /* loaded from: classes3.dex */
-    static class C8391a extends AbstractC8443a<ProtoBuf$Annotation> {
-        C8391a() {
+    static class a extends kotlin.reflect.jvm.internal.impl.protobuf.a<ProtoBuf$Annotation> {
+        a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.protobuf.Parser
         /* renamed from: i */
-        public ProtoBuf$Annotation parsePartialFrom(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
-            return new ProtoBuf$Annotation(codedInputStream, c8447c);
+        public ProtoBuf$Annotation parsePartialFrom(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
+            return new ProtoBuf$Annotation(codedInputStream, cVar);
         }
     }
 
@@ -1471,11 +1466,11 @@ public final class ProtoBuf$Annotation extends GeneratedMessageLite implements P
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    private ProtoBuf$Annotation(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
+    private ProtoBuf$Annotation(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
         this.memoizedIsInitialized = (byte) -1;
         this.memoizedSerializedSize = -1;
         initFields();
-        ByteString.C8436a n = ByteString.n();
+        ByteString.a n = ByteString.n();
         CodedOutputStream J = CodedOutputStream.J(n, 1);
         boolean z = false;
         boolean z2 = false;
@@ -1488,14 +1483,14 @@ public final class ProtoBuf$Annotation extends GeneratedMessageLite implements P
                             this.bitField0_ |= 1;
                             this.id_ = codedInputStream.s();
                         } else if (K != 18) {
-                            if (!parseUnknownField(codedInputStream, J, c8447c, K)) {
+                            if (!parseUnknownField(codedInputStream, J, cVar, K)) {
                             }
                         } else {
                             if (!(z2 & true)) {
                                 this.argument_ = new ArrayList();
                                 z2 |= true;
                             }
-                            this.argument_.add(codedInputStream.u(Argument.PARSER, c8447c));
+                            this.argument_.add(codedInputStream.u(Argument.PARSER, cVar));
                         }
                     }
                     z = true;

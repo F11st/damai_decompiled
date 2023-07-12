@@ -1,18 +1,18 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeSource;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.fuseable.HasUpstreamMaybeSource;
 import java.util.concurrent.atomic.AtomicReference;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeSwitchIfEmptySingle<T> extends AbstractC8152e<T> implements HasUpstreamMaybeSource<T> {
+public final class MaybeSwitchIfEmptySingle<T> extends e<T> implements HasUpstreamMaybeSource<T> {
     final SingleSource<? extends T> other;
     final MaybeSource<T> source;
 
@@ -102,7 +102,7 @@ public final class MaybeSwitchIfEmptySingle<T> extends AbstractC8152e<T> impleme
         return this.source;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super T> singleObserver) {
         this.source.subscribe(new SwitchIfEmptyMaybeObserver(singleObserver, this.other));
     }

@@ -12,12 +12,11 @@ import com.scwang.smartrefresh.layout.listener.CoordinatorLayoutListener;
 public class s70 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.s70$a */
     /* loaded from: classes7.dex */
-    static class C9676a implements AppBarLayout.OnOffsetChangedListener {
+    static class a implements AppBarLayout.OnOffsetChangedListener {
         final /* synthetic */ CoordinatorLayoutListener a;
 
-        C9676a(CoordinatorLayoutListener coordinatorLayoutListener) {
+        a(CoordinatorLayoutListener coordinatorLayoutListener) {
             this.a = coordinatorLayoutListener;
         }
 
@@ -35,7 +34,7 @@ public class s70 {
                 for (int childCount = viewGroup.getChildCount() - 1; childCount >= 0; childCount--) {
                     View childAt = viewGroup.getChildAt(childCount);
                     if (childAt instanceof AppBarLayout) {
-                        ((AppBarLayout) childAt).addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new C9676a(coordinatorLayoutListener));
+                        ((AppBarLayout) childAt).addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new a(coordinatorLayoutListener));
                     }
                 }
             }

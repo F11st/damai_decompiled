@@ -45,7 +45,7 @@ public class DagoPGCBackgroundWidget extends BaseWidget implements IDataHandler 
         }
         RelativeLayout relativeLayout = this.mContainer;
         if (relativeLayout != null) {
-            relativeLayout.setBackgroundResource(R.C7959drawable.dago_container_live_room_common_bg);
+            relativeLayout.setBackgroundResource(R.drawable.dago_container_live_room_common_bg);
         }
         ImageView imageView = this.mBottomDecorateView;
         if (imageView != null) {

@@ -14,18 +14,17 @@ import tb.w61;
 /* loaded from: classes3.dex */
 public final class ne1 {
     @NotNull
-    public static final C9470a Companion = new C9470a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final String a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ne1$a */
     /* loaded from: classes3.dex */
-    public static final class C9470a {
-        private C9470a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9470a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -41,10 +40,10 @@ public final class ne1 {
         @NotNull
         public final ne1 b(@NotNull w61 w61Var) {
             b41.i(w61Var, SocialOperation.GAME_SIGNATURE);
-            if (w61Var instanceof w61.C9846b) {
+            if (w61Var instanceof w61.b) {
                 return d(w61Var.c(), w61Var.b());
             }
-            if (w61Var instanceof w61.C9845a) {
+            if (w61Var instanceof w61.a) {
                 return a(w61Var.c(), w61Var.b());
             }
             throw new NoWhenBranchMatchedException();

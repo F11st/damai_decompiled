@@ -70,12 +70,12 @@ public class fg extends View {
                 try {
                     Bitmap decodeStream = BitmapFactory.decodeStream(open);
                     this.f = decodeStream;
-                    this.a = eq.a(decodeStream, C4614m.a);
+                    this.a = eq.a(decodeStream, m.a);
                     open.close();
                     inputStream2 = ek.a(context).open("ap1.data");
                     Bitmap decodeStream2 = BitmapFactory.decodeStream(inputStream2);
                     this.g = decodeStream2;
-                    this.b = eq.a(decodeStream2, C4614m.a);
+                    this.b = eq.a(decodeStream2, m.a);
                     inputStream2.close();
                     this.k = this.b.getWidth();
                     this.j = this.b.getHeight();
@@ -400,7 +400,7 @@ public class fg extends View {
                     Bitmap bitmap = this.c;
                     Bitmap decodeFile = BitmapFactory.decodeFile(str);
                     this.f = decodeFile;
-                    this.c = eq.a(decodeFile, C4614m.a);
+                    this.c = eq.a(decodeFile, m.a);
                     if (bitmap != null && !bitmap.isRecycled()) {
                         eq.b(bitmap);
                     }
@@ -408,7 +408,7 @@ public class fg extends View {
                     Bitmap bitmap2 = this.d;
                     Bitmap decodeFile2 = BitmapFactory.decodeFile(str);
                     this.f = decodeFile2;
-                    this.d = eq.a(decodeFile2, C4614m.a);
+                    this.d = eq.a(decodeFile2, m.a);
                     if (bitmap2 != null && !bitmap2.isRecycled()) {
                         eq.b(bitmap2);
                     }

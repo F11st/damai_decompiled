@@ -1,7 +1,7 @@
 package com.google.common.util.concurrent;
 
 import com.google.common.annotations.GwtCompatible;
-import com.google.common.util.concurrent.AbstractC5344e;
+import com.google.common.util.concurrent.e;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Executors;
 import java.util.concurrent.RunnableFuture;
@@ -13,7 +13,7 @@ import tb.jn1;
 /* compiled from: Taobao */
 @GwtCompatible
 /* loaded from: classes10.dex */
-public class TrustedListenableFutureTask<V> extends AbstractC5344e.AbstractC5345a<V> implements RunnableFuture<V> {
+public class TrustedListenableFutureTask<V> extends e.a<V> implements RunnableFuture<V> {
     private volatile InterruptibleTask<?> task;
 
     /* compiled from: Taobao */

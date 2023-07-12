@@ -5,7 +5,7 @@ import android.opengl.GLES20;
 import android.os.RemoteException;
 import android.util.Log;
 import com.alibaba.wireless.security.aopsdk.replace.android.graphics.Point;
-import com.amap.api.mapcore.util.C4505de;
+import com.amap.api.mapcore.util.de;
 import com.amap.api.maps.model.BitmapDescriptor;
 import com.amap.api.maps.model.LatLng;
 import com.amap.api.maps.model.LatLngBounds;
@@ -25,7 +25,7 @@ import java.util.List;
 /* loaded from: classes10.dex */
 public class cs implements IGroundOverlayDelegate {
     float[] a;
-    C4505de.C4508c b;
+    de.c b;
     private IAMapDelegate c;
     private BitmapDescriptor d;
     private LatLng e;
@@ -45,12 +45,12 @@ public class cs implements IGroundOverlayDelegate {
     private int s;
     private boolean t;
     private boolean u;
-    private List<C4645x> v;
-    private C4637r w;
+    private List<x> v;
+    private r w;
 
-    public cs(IAMapDelegate iAMapDelegate, C4637r c4637r) {
+    public cs(IAMapDelegate iAMapDelegate, r rVar) {
         this(iAMapDelegate);
-        this.w = c4637r;
+        this.w = rVar;
     }
 
     private void a() {
@@ -168,12 +168,12 @@ public class cs implements IGroundOverlayDelegate {
     }
 
     private void e() {
-        C4637r c4637r;
-        List<C4645x> list = this.v;
+        r rVar;
+        List<x> list = this.v;
         if (list != null) {
-            for (C4645x c4645x : list) {
-                if (c4645x != null && (c4637r = this.w) != null) {
-                    c4637r.a(c4645x);
+            for (x xVar : list) {
+                if (xVar != null && (rVar = this.w) != null) {
+                    rVar.a(xVar);
                 }
             }
             this.v.clear();
@@ -189,7 +189,7 @@ public class cs implements IGroundOverlayDelegate {
     private void g() {
         IAMapDelegate iAMapDelegate = this.c;
         if (iAMapDelegate != null) {
-            this.b = (C4505de.C4508c) iAMapDelegate.getGLShader(2);
+            this.b = (de.c) iAMapDelegate.getGLShader(2);
         }
     }
 
@@ -223,18 +223,18 @@ public class cs implements IGroundOverlayDelegate {
         Bitmap bitmap;
         try {
             remove();
-            List<C4645x> list = this.v;
+            List<x> list = this.v;
             if (list != null && list.size() > 0) {
                 for (int i = 0; i < this.v.size(); i++) {
-                    C4645x c4645x = this.v.get(i);
-                    if (c4645x != null) {
-                        C4637r c4637r = this.w;
-                        if (c4637r != null) {
-                            c4637r.a(c4645x);
+                    x xVar = this.v.get(i);
+                    if (xVar != null) {
+                        r rVar = this.w;
+                        if (rVar != null) {
+                            rVar.a(xVar);
                         }
                         IAMapDelegate iAMapDelegate = this.c;
                         if (iAMapDelegate != null) {
-                            iAMapDelegate.removeTextureItem(c4645x.p());
+                            iAMapDelegate.removeTextureItem(xVar.p());
                         }
                     }
                 }
@@ -552,38 +552,38 @@ public class cs implements IGroundOverlayDelegate {
         this.c.setRunLowFrame(false);
     }
 
-    private void a(C4645x c4645x) {
-        if (c4645x != null) {
-            this.v.add(c4645x);
-            c4645x.m();
+    private void a(x xVar) {
+        if (xVar != null) {
+            this.v.add(xVar);
+            xVar.m();
         }
     }
 
     private int a(boolean z, BitmapDescriptor bitmapDescriptor) {
-        C4645x c4645x;
+        x xVar;
         e();
         if (z) {
-            c4645x = this.w.a(bitmapDescriptor);
-            if (c4645x != null) {
-                int k = c4645x.k();
-                a(c4645x);
+            xVar = this.w.a(bitmapDescriptor);
+            if (xVar != null) {
+                int k = xVar.k();
+                a(xVar);
                 return k;
             }
         } else {
-            c4645x = null;
+            xVar = null;
         }
         int i = 0;
-        if (c4645x == null) {
-            c4645x = new C4645x(bitmapDescriptor, 0);
+        if (xVar == null) {
+            xVar = new x(bitmapDescriptor, 0);
         }
         Bitmap bitmap = bitmapDescriptor.getBitmap();
         if (bitmap != null && !bitmap.isRecycled()) {
             i = f();
-            c4645x.a(i);
+            xVar.a(i);
             if (z) {
-                this.c.addTextureItem(c4645x);
+                this.c.addTextureItem(xVar);
             }
-            a(c4645x);
+            a(xVar);
             eq.b(i, bitmap, true);
         }
         return i;
@@ -593,8 +593,8 @@ public class cs implements IGroundOverlayDelegate {
         if (floatBuffer == null || floatBuffer2 == null) {
             return;
         }
-        C4505de.C4508c c4508c = this.b;
-        if (c4508c == null || c4508c.c()) {
+        de.c cVar = this.b;
+        if (cVar == null || cVar.c()) {
             g();
         }
         this.b.a();

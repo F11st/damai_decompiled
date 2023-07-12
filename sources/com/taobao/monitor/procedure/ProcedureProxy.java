@@ -30,10 +30,9 @@ public class ProcedureProxy implements IProcedureGroup, IValueCallback {
     private final Handler b;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.procedure.ProcedureProxy$a */
     /* loaded from: classes11.dex */
-    private static class HandlerC6808a extends Handler {
-        public HandlerC6808a(Looper looper) {
+    private static class a extends Handler {
+        public a(Looper looper) {
             super(looper);
         }
 
@@ -89,7 +88,7 @@ public class ProcedureProxy implements IProcedureGroup, IValueCallback {
 
     public ProcedureProxy(ProcedureImpl procedureImpl) {
         if (procedureImpl != null) {
-            this.b = new HandlerC6808a(uu1.d().c().getLooper());
+            this.b = new a(uu1.d().c().getLooper());
             this.a = procedureImpl;
             return;
         }
@@ -226,8 +225,8 @@ public class ProcedureProxy implements IProcedureGroup, IValueCallback {
     }
 
     @Override // com.taobao.monitor.procedure.IValueCallback
-    public void callback(C6821f c6821f) {
-        this.a.callback(c6821f);
+    public void callback(f fVar) {
+        this.a.callback(fVar);
     }
 
     @Override // com.taobao.monitor.procedure.IProcedure

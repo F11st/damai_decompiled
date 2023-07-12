@@ -105,18 +105,18 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
         }
 
         @Override // com.alipay.mobile.bqcscanservice.BQCScanCallback
-        public void onCameraErrorResult(int i) {
+        public void onCameraErrorResult(int i2) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1019146233")) {
-                ipChange.ipc$dispatch("1019146233", new Object[]{this, Integer.valueOf(i)});
+                ipChange.ipc$dispatch("1019146233", new Object[]{this, Integer.valueOf(i2)});
             }
         }
 
         @Override // com.alipay.mobile.bqcscanservice.BQCScanCallback
-        public void onCameraFrameRecognized(boolean z, long j) {
+        public void onCameraFrameRecognized(boolean z, long j2) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1669219492")) {
-                ipChange.ipc$dispatch("-1669219492", new Object[]{this, Boolean.valueOf(z), Long.valueOf(j)});
+                ipChange.ipc$dispatch("-1669219492", new Object[]{this, Boolean.valueOf(z), Long.valueOf(j2)});
             }
         }
 
@@ -221,10 +221,10 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
         }
 
         @Override // com.alipay.mobile.bqcscanservice.BQCScanCallback
-        public void onParametersSetted(final long j) {
+        public void onParametersSetted(final long j2) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1487651871")) {
-                ipChange.ipc$dispatch("1487651871", new Object[]{this, Long.valueOf(j)});
+                ipChange.ipc$dispatch("1487651871", new Object[]{this, Long.valueOf(j2)});
             } else if (QRCodeActivity.this.isFinishing()) {
             } else {
                 QRCodeActivity.this.runOnUiThread(new Runnable() { // from class: cn.damai.commonbusiness.qrcode.QRCodeActivity.1.1
@@ -237,7 +237,7 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
                             ipChange2.ipc$dispatch("-2016929581", new Object[]{this});
                             return;
                         }
-                        QRCodeActivity.this.postcode = j;
+                        QRCodeActivity.this.postcode = j2;
                         QRCodeActivity.this.bqcServiceSetup = true;
                         QRCodeActivity.this.configPreviewAndRecognitionEngine();
                     }
@@ -312,8 +312,8 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
         }
     };
     private boolean mIsFlashlightOpen = false;
-    private ToolScanTopView.TopViewCallback topViewCallback = new C0781d();
-    private final MediaPlayer.OnCompletionListener beepListener = new C0780c(this);
+    private ToolScanTopView.TopViewCallback topViewCallback = new d();
+    private final MediaPlayer.OnCompletionListener beepListener = new c(this);
 
     /* compiled from: Taobao */
     /* loaded from: classes4.dex */
@@ -321,12 +321,11 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.qrcode.QRCodeActivity$a */
     /* loaded from: classes4.dex */
-    public class C0778a implements MPaasLogger.BqcLogger {
+    public class a implements MPaasLogger.BqcLogger {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0778a(QRCodeActivity qRCodeActivity) {
+        a(QRCodeActivity qRCodeActivity) {
         }
 
         @Override // com.alipay.mobile.bqcscanservice.MPaasLogger.BqcLogger
@@ -415,12 +414,11 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.qrcode.QRCodeActivity$b */
     /* loaded from: classes4.dex */
-    public class C0779b implements MaLogger.MaEngineLogger {
+    public class b implements MaLogger.MaEngineLogger {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0779b(QRCodeActivity qRCodeActivity) {
+        b(QRCodeActivity qRCodeActivity) {
         }
 
         @Override // com.alipay.ma.MaLogger.MaEngineLogger
@@ -494,12 +492,11 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.qrcode.QRCodeActivity$c */
     /* loaded from: classes4.dex */
-    public class C0780c implements MediaPlayer.OnCompletionListener {
+    public class c implements MediaPlayer.OnCompletionListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0780c(QRCodeActivity qRCodeActivity) {
+        c(QRCodeActivity qRCodeActivity) {
         }
 
         @Override // android.media.MediaPlayer.OnCompletionListener
@@ -514,12 +511,11 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.qrcode.QRCodeActivity$d */
     /* loaded from: classes4.dex */
-    public class C0781d implements ToolScanTopView.TopViewCallback {
+    public class d implements ToolScanTopView.TopViewCallback {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0781d() {
+        d() {
         }
 
         @Override // cn.damai.commonbusiness.qrcode.widget.ToolScanTopView.TopViewCallback
@@ -629,12 +625,11 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.qrcode.QRCodeActivity$e */
     /* loaded from: classes4.dex */
-    public class C0782e implements MPaasLogger.BqcLogger {
+    public class e implements MPaasLogger.BqcLogger {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0782e(QRCodeActivity qRCodeActivity) {
+        e(QRCodeActivity qRCodeActivity) {
         }
 
         @Override // com.alipay.mobile.bqcscanservice.MPaasLogger.BqcLogger
@@ -721,12 +716,11 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.qrcode.QRCodeActivity$f */
     /* loaded from: classes4.dex */
-    public class C0783f implements MaLogger.MaEngineLogger {
+    public class f implements MaLogger.MaEngineLogger {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0783f(QRCodeActivity qRCodeActivity) {
+        f(QRCodeActivity qRCodeActivity) {
         }
 
         @Override // com.alipay.ma.MaLogger.MaEngineLogger
@@ -800,12 +794,11 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.qrcode.QRCodeActivity$g */
     /* loaded from: classes4.dex */
-    public class SurfaceHolder$CallbackC0784g implements SurfaceHolder.Callback {
+    public class g implements SurfaceHolder.Callback {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        SurfaceHolder$CallbackC0784g() {
+        g() {
         }
 
         @Override // android.view.SurfaceHolder.Callback
@@ -839,12 +832,11 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.qrcode.QRCodeActivity$h */
     /* loaded from: classes4.dex */
-    public class C0785h implements MaScanCallbackWithDecodeInfoSupport {
+    public class h implements MaScanCallbackWithDecodeInfoSupport {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0785h() {
+        h() {
         }
 
         @Override // com.alipay.mobile.mascanengine.IOnMaSDKDecodeInfo
@@ -936,12 +928,11 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.qrcode.QRCodeActivity$i */
     /* loaded from: classes4.dex */
-    public class DialogInterface$OnClickListenerC0786i implements DialogInterface.OnClickListener {
+    public class i implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC0786i() {
+        i() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -956,12 +947,11 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.qrcode.QRCodeActivity$j */
     /* loaded from: classes4.dex */
-    public class DialogInterface$OnClickListenerC0787j implements DialogInterface.OnClickListener {
+    public class j implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC0787j() {
+        j() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -976,12 +966,11 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.qrcode.QRCodeActivity$k */
     /* loaded from: classes4.dex */
-    public class DialogInterface$OnClickListenerC0788k implements DialogInterface.OnClickListener {
+    public class k implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC0788k() {
+        k() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -1046,9 +1035,9 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
         }
         MPaasScanService mPaasScanService = this.bqcScanService;
         if (mPaasScanService != null) {
-            mPaasScanService.setTraceLogger(new C0778a(this));
+            mPaasScanService.setTraceLogger(new a(this));
         }
-        MaLogger.registerLogger(new C0779b(this));
+        MaLogger.registerLogger(new b(this));
     }
 
     private void initBeepSound() {
@@ -1074,8 +1063,8 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
                     this.mediaPlayer = null;
                 }
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 
@@ -1128,7 +1117,7 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
             SurfaceView surfaceView = (SurfaceView) findViewById(R$id.surfaceView);
             this.mSurfaceView = surfaceView;
             surfaceView.setVisibility(0);
-            this.mSurfaceView.getHolder().addCallback(new SurfaceHolder$CallbackC0784g());
+            this.mSurfaceView.getHolder().addCallback(new g());
         } else {
             APTextureView aPTextureView = (APTextureView) findViewById(R$id.textureView);
             this.mTextureView = aPTextureView;
@@ -1199,7 +1188,7 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
             return;
         }
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(str).setPositiveButton(getString(R$string.ok), new DialogInterface$OnClickListenerC0788k());
+        builder.setMessage(str).setPositiveButton(getString(R$string.ok), new k());
         builder.show();
     }
 
@@ -1211,15 +1200,15 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
             return;
         }
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(str).setNegativeButton("取消", new DialogInterface$OnClickListenerC0787j()).setPositiveButton("back", new DialogInterface$OnClickListenerC0786i());
+        builder.setMessage(str).setNegativeButton("取消", new j()).setPositiveButton("back", new i());
         builder.show();
     }
 
     @Override // cn.damai.common.app.base.BaseActivity
-    public void dealHeaderClick(int i) {
+    public void dealHeaderClick(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-150916454")) {
-            ipChange.ipc$dispatch("-150916454", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-150916454", new Object[]{this, Integer.valueOf(i2)});
         }
     }
 
@@ -1233,10 +1222,10 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
     }
 
     @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
-    public void handleError(int i) {
+    public void handleError(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "375685739")) {
-            ipChange.ipc$dispatch("375685739", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("375685739", new Object[]{this, Integer.valueOf(i2)});
         }
     }
 
@@ -1275,26 +1264,26 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
             return (BQCScanEngine.EngineCallback) ipChange.ipc$dispatch("669513966", new Object[]{this, scanType});
         }
         if (scanType == ScanType.SCAN_MA) {
-            return new C0785h();
+            return new h();
         }
         return null;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, android.app.Activity
-    public void onActivityResult(int i, int i2, Intent intent) {
+    public void onActivityResult(int i2, int i3, Intent intent) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1637044772")) {
-            ipChange.ipc$dispatch("1637044772", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), intent});
+            ipChange.ipc$dispatch("1637044772", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3), intent});
             return;
         }
-        super.onActivityResult(i, i2, intent);
-        if (i == 1000 && i2 == -1) {
-            String f = QrcodeUtil.f(this, intent.getData());
-            if (this.mScanTopView == null || TextUtils.isEmpty(f)) {
+        super.onActivityResult(i2, i3, intent);
+        if (i2 == 1000 && i3 == -1) {
+            String f2 = QrcodeUtil.f(this, intent.getData());
+            if (this.mScanTopView == null || TextUtils.isEmpty(f2)) {
                 return;
             }
-            this.mScanTopView.onPictureSelected(f);
+            this.mScanTopView.onPictureSelected(f2);
         }
     }
 
@@ -1321,8 +1310,8 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
                     this.mFlashLight.setText(getResources().getString(R$string.iconfont_shoudiantongkai24));
                     this.mIsFlashlightOpen = true;
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
         }
     }
@@ -1348,9 +1337,9 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
         this.mUseNewSurface = isSkiaGlOpen();
         b62.c();
         this.autoZoomOperator = new AutoZoomOperator(this);
-        MPaasScanService a = sc1.a(this);
-        this.bqcScanService = a;
-        a.serviceInit(null);
+        MPaasScanService a2 = sc1.a(this);
+        this.bqcScanService = a2;
+        a2.serviceInit(null);
         HashMap hashMap = new HashMap();
         hashMap.put(BQCCameraParam.ServicePropertyParam.USE_NEW_SURFACE, this.mUseNewSurface ? BQCCameraParam.VALUE_YES : "no");
         this.bqcScanService.setServiceParameters(hashMap);
@@ -1369,11 +1358,11 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
         this.firstAutoStarted = true;
         try {
             autoStartScan();
-        } catch (Exception e) {
-            Log.e("ToolsCaptureActivity", "autoStartScan: Exception " + e.getMessage());
+        } catch (Exception e2) {
+            Log.e("ToolsCaptureActivity", "autoStartScan: Exception " + e2.getMessage());
         }
-        MPaasLogger.registerBqcLogger(new C0782e(this));
-        MaLogger.registerLogger(new C0783f(this));
+        MPaasLogger.registerBqcLogger(new e(this));
+        MaLogger.registerLogger(new f(this));
         initViews();
     }
 
@@ -1430,34 +1419,34 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
     }
 
     @Override // androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, android.app.Activity
-    public void onRequestPermissionsResult(int i, String[] strArr, int[] iArr) {
+    public void onRequestPermissionsResult(int i2, String[] strArr, int[] iArr) {
         IpChange ipChange = $ipChange;
-        int i2 = 0;
+        int i3 = 0;
         if (AndroidInstantRuntime.support(ipChange, "-1720833749")) {
-            ipChange.ipc$dispatch("-1720833749", new Object[]{this, Integer.valueOf(i), strArr, iArr});
+            ipChange.ipc$dispatch("-1720833749", new Object[]{this, Integer.valueOf(i2), strArr, iArr});
             return;
         }
-        if (i == 1 && strArr != null && iArr != null) {
+        if (i2 == 1 && strArr != null && iArr != null) {
             while (true) {
-                if (i2 >= strArr.length || i2 >= iArr.length) {
+                if (i3 >= strArr.length || i3 >= iArr.length) {
                     break;
                 }
-                if (TextUtils.equals(strArr[i2], "android.permission.CAMERA")) {
-                    if (iArr[i2] != 0) {
+                if (TextUtils.equals(strArr[i3], "android.permission.CAMERA")) {
+                    if (iArr[i3] != 0) {
                         showPermissionDenied();
                         break;
                     }
                     this.firstAutoStarted = true;
                     try {
                         autoStartScan();
-                    } catch (Exception e) {
-                        Log.e("ToolsCaptureActivity", "autoStartScan: Exception " + e.getMessage());
+                    } catch (Exception e2) {
+                        Log.e("ToolsCaptureActivity", "autoStartScan: Exception " + e2.getMessage());
                     }
                 }
-                i2++;
+                i3++;
             }
         }
-        super.onRequestPermissionsResult(i, strArr, iArr);
+        super.onRequestPermissionsResult(i2, strArr, iArr);
     }
 
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity, cn.damai.common.app.base.BaseActivity, androidx.fragment.app.FragmentActivity, android.app.Activity
@@ -1479,8 +1468,8 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
         }
         try {
             autoStartScan();
-        } catch (Exception e) {
-            Log.e("ToolsCaptureActivity", "autoStartScan: Exception " + e.getMessage());
+        } catch (Exception e2) {
+            Log.e("ToolsCaptureActivity", "autoStartScan: Exception " + e2.getMessage());
         }
     }
 
@@ -1534,15 +1523,15 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
         return null;
     }
 
-    public void setZoom(int i) {
+    public void setZoom(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "331857152")) {
-            ipChange.ipc$dispatch("331857152", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("331857152", new Object[]{this, Integer.valueOf(i2)});
             return;
         }
         MPaasScanService mPaasScanService = this.bqcScanService;
         if (mPaasScanService != null) {
-            mPaasScanService.setZoom(i);
+            mPaasScanService.setZoom(i2);
         }
     }
 
@@ -1556,15 +1545,15 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
         }
     }
 
-    public void startContinueZoom(int i) {
+    public void startContinueZoom(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1862632583")) {
-            ipChange.ipc$dispatch("1862632583", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("1862632583", new Object[]{this, Integer.valueOf(i2)});
             return;
         }
         AutoZoomOperator autoZoomOperator = this.autoZoomOperator;
         if (autoZoomOperator != null) {
-            autoZoomOperator.f(i, 0);
+            autoZoomOperator.f(i2, 0);
         }
     }
 
@@ -1641,16 +1630,16 @@ public class QRCodeActivity extends DamaiBaseActivity implements ScanHandler.Sca
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void autoStartScan(int i) {
+    public void autoStartScan(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-787343493")) {
-            ipChange.ipc$dispatch("-787343493", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-787343493", new Object[]{this, Integer.valueOf(i2)});
             return;
         }
-        if (i == 1) {
+        if (i2 == 1) {
             CameraHandler.mConsiderContext = true;
         }
-        this.cameraScanHandler.init(this, this.bqcCallback, i);
+        this.cameraScanHandler.init(this, this.bqcCallback, i2);
         this.scanHandler.q(this, this);
         startPreview();
     }

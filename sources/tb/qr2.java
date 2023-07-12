@@ -25,13 +25,12 @@ public class qr2 implements UIConfirm {
     private boolean c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qr2$a */
     /* loaded from: classes11.dex */
-    class C9616a implements Application.ActivityLifecycleCallbacks {
+    class a implements Application.ActivityLifecycleCallbacks {
         final /* synthetic */ String a;
         final /* synthetic */ UserAction b;
 
-        C9616a(String str, UserAction userAction) {
+        a(String str, UserAction userAction) {
             this.a = str;
             this.b = userAction;
         }
@@ -51,7 +50,7 @@ public class qr2 implements UIConfirm {
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityResumed(Activity activity) {
             Log.e("UIConfirmImpl", "alertForConfirm " + activity.getComponentName().getClassName() + "onresume!");
-            if (C9444mm.blackDialogActivity.contains(activity.getClass().getName())) {
+            if (mm.blackDialogActivity.contains(activity.getClass().getName())) {
                 return;
             }
             UpdateRuntime.getContext().unregisterActivityLifecycleCallbacks(this);
@@ -73,12 +72,11 @@ public class qr2 implements UIConfirm {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.qr2$b */
     /* loaded from: classes11.dex */
-    public class View$OnClickListenerC9617b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         final /* synthetic */ UserAction a;
 
-        View$OnClickListenerC9617b(qr2 qr2Var, UserAction userAction) {
+        b(qr2 qr2Var, UserAction userAction) {
             this.a = userAction;
         }
 
@@ -90,12 +88,11 @@ public class qr2 implements UIConfirm {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.qr2$c */
     /* loaded from: classes11.dex */
-    public class View$OnClickListenerC9618c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         final /* synthetic */ UserAction a;
 
-        View$OnClickListenerC9618c(qr2 qr2Var, UserAction userAction) {
+        c(qr2 qr2Var, UserAction userAction) {
             this.a = userAction;
         }
 
@@ -107,12 +104,11 @@ public class qr2 implements UIConfirm {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.qr2$d */
     /* loaded from: classes11.dex */
-    public class DialogInterface$OnClickListenerC9619d implements DialogInterface.OnClickListener {
+    public class d implements DialogInterface.OnClickListener {
         final /* synthetic */ UserAction a;
 
-        DialogInterface$OnClickListenerC9619d(qr2 qr2Var, UserAction userAction) {
+        d(qr2 qr2Var, UserAction userAction) {
             this.a = userAction;
         }
 
@@ -124,12 +120,11 @@ public class qr2 implements UIConfirm {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.qr2$e */
     /* loaded from: classes11.dex */
-    public class DialogInterface$OnClickListenerC9620e implements DialogInterface.OnClickListener {
+    public class e implements DialogInterface.OnClickListener {
         final /* synthetic */ UserAction a;
 
-        DialogInterface$OnClickListenerC9620e(qr2 qr2Var, UserAction userAction) {
+        e(qr2 qr2Var, UserAction userAction) {
             this.a = userAction;
         }
 
@@ -153,12 +148,12 @@ public class qr2 implements UIConfirm {
         CustomDialog customDialog;
         try {
             if (!this.b && this.c) {
-                customDialog = new CustomDialog.C6927b(activity).setTitle("手机淘宝新版本更新啦,诚邀\n        你抢先体验!").setMessage(str).setNegativeButton(new DialogInterface$OnClickListenerC9620e(this, userAction)).setPositiveButton("立即参与", new DialogInterface$OnClickListenerC9619d(this, userAction)).create();
+                customDialog = new CustomDialog.b(activity).setTitle("手机淘宝新版本更新啦,诚邀\n        你抢先体验!").setMessage(str).setNegativeButton(new e(this, userAction)).setPositiveButton("立即参与", new d(this, userAction)).create();
                 customDialog.show();
             }
             Dialog dialog = new Dialog(activity, b(userAction.getTitleText(), PurchaseConstants.NORMAL_WARNING_TITLE), str, this.a);
-            dialog.addAcceptButton(b(userAction.getConfirmText(), "同意"), new View$OnClickListenerC9617b(this, userAction));
-            dialog.addCancelButton(b(userAction.getCancelText(), "拒绝"), new View$OnClickListenerC9618c(this, userAction));
+            dialog.addAcceptButton(b(userAction.getConfirmText(), "同意"), new b(this, userAction));
+            dialog.addCancelButton(b(userAction.getCancelText(), "拒绝"), new c(this, userAction));
             customDialog = dialog;
             customDialog.show();
         } catch (Throwable th) {
@@ -174,12 +169,12 @@ public class qr2 implements UIConfirm {
         }
         Log.e("UIConfirmImpl", "alertForConfirm" + UpdateRuntime.getContext());
         Activity peekTopActivity = l3.getInstance().peekTopActivity();
-        if (peekTopActivity != null && !peekTopActivity.isFinishing() && !peekTopActivity.getClass().getName().contains(GuideActivity.TAG) && !peekTopActivity.getClass().getName().toLowerCase().contains("welcome") && ((list = C9444mm.blackDialogActivity) == null || !list.contains(peekTopActivity.getClass().getName()))) {
+        if (peekTopActivity != null && !peekTopActivity.isFinishing() && !peekTopActivity.getClass().getName().contains(GuideActivity.TAG) && !peekTopActivity.getClass().getName().toLowerCase().contains("welcome") && ((list = mm.blackDialogActivity) == null || !list.contains(peekTopActivity.getClass().getName()))) {
             c(peekTopActivity, str, userAction);
             return;
         }
         Log.e("UIConfirmImpl", peekTopActivity == null ? "null" : peekTopActivity.getClass().getName());
-        UpdateRuntime.getContext().registerActivityLifecycleCallbacks(new C9616a(str, userAction));
+        UpdateRuntime.getContext().registerActivityLifecycleCallbacks(new a(str, userAction));
     }
 
     public qr2(boolean z) {

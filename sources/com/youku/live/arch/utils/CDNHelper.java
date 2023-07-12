@@ -3,7 +3,7 @@ package com.youku.live.arch.utils;
 import android.net.Uri;
 import android.text.TextUtils;
 import com.ali.user.mobile.login.model.LoginConstant;
-import com.alipay.sdk.m.u.C4318n;
+import com.alipay.sdk.m.u.n;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.autonavi.amap.mapcore.tools.GlMapUtil;
@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
 public class CDNHelper implements ICDNInterface {
     private static transient /* synthetic */ IpChange $ipChange;
     private static Pattern sTFSHadAppendPattern = Pattern.compile("((\\d+)x(\\d+))");
-    public int[] TFS_SIZE_RANGE = {16, 20, 24, 30, 32, 36, 40, 48, 50, 60, 64, 70, 72, 75, 80, 88, 90, 100, 110, 120, 125, 128, 130, 140, 142, 145, 150, 160, AliMediaPlayer.UPLAYER_PROPERTY_TYPE_PATTAYA_NEXT_SEGMENT_SPEED_CALC_COUNT, 180, AliMediaPlayer.TYPE_SUBTITLE_LIB_PATH, 196, 200, 210, 220, PlayerGuideTipsView.ANIM_DURATION_ALPHA, 234, GlMapUtil.DEVICE_DISPLAY_DPI_MEDIAN, 250, AntiShakeOrientationEventListener.SCREEN_ORIENTATION_LANDSCAPE, 284, 290, 292, 300, 310, 320, 336, 350, 360, 400, 430, 440, C4318n.g, 468, GlMapUtil.DEVICE_DISPLAY_DPI_XHIGH, 490, 540, 560, 570, 580, 600, 640, 670, LoginConstant.RESULT_WINDWANE_CLOSEW, 728, 760, 960, 970, 1200};
+    public int[] TFS_SIZE_RANGE = {16, 20, 24, 30, 32, 36, 40, 48, 50, 60, 64, 70, 72, 75, 80, 88, 90, 100, 110, 120, 125, 128, 130, 140, 142, 145, 150, 160, AliMediaPlayer.UPLAYER_PROPERTY_TYPE_PATTAYA_NEXT_SEGMENT_SPEED_CALC_COUNT, 180, AliMediaPlayer.TYPE_SUBTITLE_LIB_PATH, 196, 200, 210, 220, PlayerGuideTipsView.ANIM_DURATION_ALPHA, 234, GlMapUtil.DEVICE_DISPLAY_DPI_MEDIAN, 250, AntiShakeOrientationEventListener.SCREEN_ORIENTATION_LANDSCAPE, 284, 290, 292, 300, 310, 320, 336, 350, 360, 400, 430, 440, n.g, 468, GlMapUtil.DEVICE_DISPLAY_DPI_XHIGH, 490, 540, 560, 570, 580, 600, 640, 670, LoginConstant.RESULT_WINDWANE_CLOSEW, 728, 760, 960, 970, 1200};
     public String[] DEFAULT_TFS_DOMAINS = {"tfs.alipayobjects.com"};
     public String[] DEFAULT_OSS_DOMAINS = {"image.laifeng.com", "ykimg.alicdn.com", "m.ykimg.com", "img3.soku.com", "oss-comments.youku.com", "img2.soku.com", "global.alicdn.com", "galitv.alicdn.com", "cn-vmc-images.alicdn.com", "ykpic.alicdn.com", "liangcang-material.alicdn.com", "pgc-cdn.youku.com", "r1.ykimg.com", "img.alicdn.com"};
 

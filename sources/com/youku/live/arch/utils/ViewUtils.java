@@ -14,7 +14,7 @@ import android.view.ViewParent;
 import android.view.WindowManager;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
@@ -193,7 +193,7 @@ public class ViewUtils {
         if (AndroidInstantRuntime.support(ipChange, "-133667519")) {
             return ((Integer) ipChange.ipc$dispatch("-133667519", new Object[]{context})).intValue();
         }
-        Display defaultDisplay = ((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
+        Display defaultDisplay = ((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
         DisplayMetrics displayMetrics = new DisplayMetrics();
         try {
             Class.forName("android.view.Display").getMethod("getRealMetrics", DisplayMetrics.class).invoke(defaultDisplay, displayMetrics);
@@ -349,7 +349,7 @@ public class ViewUtils {
         if (Build.VERSION.SDK_INT < 21) {
             return false;
         }
-        WindowManager windowManager = (WindowManager) activity.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+        WindowManager windowManager = (WindowManager) activity.getSystemService(v.ATTACH_MODE_WINDOW);
         if (windowManager != null) {
             Display defaultDisplay = windowManager.getDefaultDisplay();
             Point point = new Point();

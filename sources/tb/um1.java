@@ -6,7 +6,6 @@ import com.alibaba.android.onescheduler.OneSchedulerExceptionHandler;
 import com.alibaba.android.onescheduler.TaskTracker;
 import com.alibaba.android.onescheduler.TaskType;
 import com.alibaba.android.onescheduler.group.Group;
-import com.alibaba.android.onescheduler.task.C3242a;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
@@ -16,9 +15,8 @@ public class um1 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.um1$b */
     /* loaded from: classes5.dex */
-    public static class C9782b {
+    public static class b {
         private static final um1 a = new um1();
     }
 
@@ -31,7 +29,7 @@ public class um1 {
     }
 
     public static um1 g() {
-        return C9782b.a;
+        return b.a;
     }
 
     public void a(String str, int i) {
@@ -59,8 +57,8 @@ public class um1 {
         return this.a.d(str);
     }
 
-    public C3242a h() {
-        return new C3242a();
+    public com.alibaba.android.onescheduler.task.a h() {
+        return new com.alibaba.android.onescheduler.task.a();
     }
 
     public void i(@Nullable String str) {

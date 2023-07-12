@@ -19,12 +19,12 @@ class ap extends Handler {
 
     @Override // android.os.Handler
     public void handleMessage(Message message) {
-        ao.AbstractC7600b abstractC7600b = (ao.AbstractC7600b) message.obj;
+        ao.b bVar = (ao.b) message.obj;
         int i = message.what;
         if (i == 0) {
-            abstractC7600b.a();
+            bVar.a();
         } else if (i == 1) {
-            abstractC7600b.mo765c();
+            bVar.mo765c();
         }
         super.handleMessage(message);
     }

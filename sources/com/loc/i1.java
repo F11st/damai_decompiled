@@ -6,9 +6,7 @@ import android.text.TextUtils;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
 import com.alimm.xadsdk.base.ut.AdUtConstants;
 import com.alimm.xadsdk.request.builder.IRequestConst;
-import com.alipay.sdk.m.s.C4293a;
-import com.huawei.hms.opendevice.AbstractC5658c;
-import com.loc.C5849m;
+import com.loc.m;
 import io.flutter.wpkbridge.U4WPKAdapter;
 import java.util.ArrayList;
 import org.apache.commons.lang3.time.DateUtils;
@@ -54,18 +52,17 @@ public final class i1 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.loc.i1$a */
     /* loaded from: classes10.dex */
-    public static class C5841a implements C5849m.InterfaceC5850a {
+    public static class a implements m.a {
         final /* synthetic */ Context a;
 
-        C5841a(Context context) {
+        a(Context context) {
             this.a = context;
         }
 
-        @Override // com.loc.C5849m.InterfaceC5850a
-        public final void a(C5849m.C5851b c5851b) {
-            i1.g(this.a, c5851b);
+        @Override // com.loc.m.a
+        public final void a(m.b bVar) {
+            i1.g(this.a, bVar);
         }
     }
 
@@ -143,7 +140,7 @@ public final class i1 {
             return;
         }
         a = true;
-        C5849m.e(context, j1.q(), j1.s(), new C5841a(context));
+        m.e(context, j1.q(), j1.s(), new a(context));
     }
 
     private static void b(Context context, JSONObject jSONObject, SharedPreferences.Editor editor) {
@@ -155,13 +152,13 @@ public final class i1 {
                 a83.i(editor, "13S_at", optInt);
                 p(optJSONObject, editor);
                 try {
-                    boolean t2 = C5849m.t(optJSONObject.optString("nla"), true);
+                    boolean t2 = m.t(optJSONObject.optString("nla"), true);
                     q = t2;
                     a83.k(editor, "13S_nla", t2);
                 } catch (Throwable unused) {
                 }
                 try {
-                    boolean t3 = C5849m.t(optJSONObject.optString("asw"), true);
+                    boolean t3 = m.t(optJSONObject.optString("asw"), true);
                     t = t3;
                     a83.k(editor, "asw", t3);
                 } catch (Throwable unused2) {
@@ -183,14 +180,14 @@ public final class i1 {
         }
     }
 
-    private static void c(C5849m.C5851b c5851b, SharedPreferences.Editor editor) {
+    private static void c(m.b bVar, SharedPreferences.Editor editor) {
         try {
-            C5849m.C5851b.C5852a c5852a = c5851b.c;
-            if (c5852a != null) {
-                boolean z2 = c5852a.a;
+            m.b.a aVar = bVar.c;
+            if (aVar != null) {
+                boolean z2 = aVar.a;
                 b = z2;
                 a83.k(editor, "exception", z2);
-                JSONObject jSONObject = c5852a.b;
+                JSONObject jSONObject = aVar.b;
                 if (jSONObject != null) {
                     c = jSONObject.optInt("fn", c);
                     int optInt = jSONObject.optInt("mpn", d);
@@ -201,7 +198,7 @@ public final class i1 {
                     if (d < 30) {
                         d = 30;
                     }
-                    e = C5849m.t(jSONObject.optString("igu"), false);
+                    e = m.t(jSONObject.optString("igu"), false);
                     f = jSONObject.optInt("ms", f);
                     h = jSONObject.optInt("rot", 0);
                     g = jSONObject.optInt("pms", 0);
@@ -224,12 +221,12 @@ public final class i1 {
         try {
             JSONObject optJSONObject = jSONObject.optJSONObject("11G");
             if (optJSONObject != null) {
-                boolean t2 = C5849m.t(optJSONObject.optString("able"), true);
+                boolean t2 = m.t(optJSONObject.optString("able"), true);
                 j = t2;
                 if (t2) {
-                    k = optJSONObject.optInt(AbstractC5658c.a, 300) * 1000;
+                    k = optJSONObject.optInt(com.huawei.hms.opendevice.c.a, 300) * 1000;
                 }
-                l = C5849m.t(optJSONObject.optString("fa"), false);
+                l = m.t(optJSONObject.optString("fa"), false);
                 m = Math.min(1.0d, Math.max(0.2d, optJSONObject.optDouble("ms", 0.618d)));
                 a83.k(editor, AdUtConstants.XAD_UT_ARG_CA, j);
                 a83.i(editor, IRequestConst.CT, k);
@@ -254,14 +251,14 @@ public final class i1 {
         return false;
     }
 
-    static boolean g(Context context, C5849m.C5851b c5851b) {
+    static boolean g(Context context, m.b bVar) {
         SharedPreferences.Editor editor;
         try {
             editor = a83.c(context, "pref");
             try {
-                c(c5851b, editor);
+                c(bVar, editor);
                 m(context);
-                JSONObject jSONObject = c5851b.b;
+                JSONObject jSONObject = bVar.b;
                 if (jSONObject == null) {
                     if (editor != null) {
                         try {
@@ -402,7 +399,7 @@ public final class i1 {
         } catch (Throwable th10) {
             j1.h(th10, "AuthUtil", "loadLastAbleState p10");
         }
-        C5849m.x(context);
+        m.x(context);
         try {
             String e2 = a83.e(context, "pref", "13S_mlpl", null);
             if (!TextUtils.isEmpty(e2)) {
@@ -434,10 +431,10 @@ public final class i1 {
         try {
             JSONObject jSONObject2 = jSONObject.getJSONObject("197");
             if (jSONObject2 != null) {
-                boolean t2 = C5849m.t(jSONObject2.optString("able"), false);
+                boolean t2 = m.t(jSONObject2.optString("able"), false);
                 a83.k(editor, "197a", t2);
                 if (t2) {
-                    a83.j(editor, "197dv", jSONObject2.optString(C4293a.t, ""));
+                    a83.j(editor, "197dv", jSONObject2.optString(com.alipay.sdk.m.s.a.t, ""));
                     a83.j(editor, "197tv", jSONObject2.optString("tv", ""));
                     return;
                 }
@@ -468,10 +465,10 @@ public final class i1 {
         try {
             JSONObject optJSONObject = jSONObject.optJSONObject("13J");
             if (optJSONObject != null) {
-                boolean t2 = C5849m.t(optJSONObject.optString("able"), true);
+                boolean t2 = m.t(optJSONObject.optString("able"), true);
                 n = t2;
                 if (t2) {
-                    o = optJSONObject.optInt(AbstractC5658c.a, o);
+                    o = optJSONObject.optInt(com.huawei.hms.opendevice.c.a, o);
                 }
                 a83.k(editor, "13J_able", n);
                 a83.h(editor, "13J_c", o);
@@ -490,7 +487,7 @@ public final class i1 {
             return;
         }
         try {
-            boolean t2 = C5849m.t(jSONObject.optString("re"), true);
+            boolean t2 = m.t(jSONObject.optString("re"), true);
             s = t2;
             a83.k(editor, "fr", t2);
         } catch (Throwable th) {
@@ -503,7 +500,7 @@ public final class i1 {
         try {
             JSONObject optJSONObject = jSONObject.optJSONObject("15O");
             if (optJSONObject != null) {
-                if (C5849m.t(optJSONObject.optString("able"), false) && ((optJSONArray = optJSONObject.optJSONArray("fl")) == null || optJSONArray.length() <= 0 || optJSONArray.toString().contains(Build.getMANUFACTURER()))) {
+                if (m.t(optJSONObject.optString("able"), false) && ((optJSONArray = optJSONObject.optJSONArray("fl")) == null || optJSONArray.length() <= 0 || optJSONArray.toString().contains(Build.getMANUFACTURER()))) {
                     u = optJSONObject.optInt("iv", 30) * 1000;
                 } else {
                     u = -1L;
@@ -525,10 +522,10 @@ public final class i1 {
         try {
             JSONObject jSONObject2 = jSONObject.getJSONObject("17Y");
             if (jSONObject2 != null) {
-                boolean t2 = C5849m.t(jSONObject2.optString("able"), false);
+                boolean t2 = m.t(jSONObject2.optString("able"), false);
                 C = t2;
                 a83.k(editor, "17ya", t2);
-                boolean t3 = C5849m.t(jSONObject2.optString("mup"), false);
+                boolean t3 = m.t(jSONObject2.optString("mup"), false);
                 D = t3;
                 a83.k(editor, "17ym", t3);
                 int optInt = jSONObject2.optInt("max", 20);
@@ -558,7 +555,7 @@ public final class i1 {
         try {
             JSONObject optJSONObject = jSONObject.optJSONObject("15U");
             if (optJSONObject != null) {
-                boolean t2 = C5849m.t(optJSONObject.optString("able"), true);
+                boolean t2 = m.t(optJSONObject.optString("able"), true);
                 int optInt = optJSONObject.optInt("yn", w);
                 B = optJSONObject.optLong("sysTime", B);
                 a83.k(editor, "15ua", t2);
@@ -577,7 +574,7 @@ public final class i1 {
         try {
             JSONObject optJSONObject = jSONObject.optJSONObject("17J");
             if (optJSONObject != null) {
-                boolean t2 = C5849m.t(optJSONObject.optString("able"), false);
+                boolean t2 = m.t(optJSONObject.optString("able"), false);
                 x = t2;
                 a83.k(editor, "ok9", t2);
                 if (t2) {
@@ -585,8 +582,8 @@ public final class i1 {
                     String optString2 = optJSONObject.optString("ht");
                     A = optString2;
                     a83.j(editor, "ok11", optString2);
-                    C5849m.t(optString, false);
-                    z = C5849m.t(optJSONObject.optString("nr"), false);
+                    m.t(optString, false);
+                    z = m.t(optJSONObject.optString("nr"), false);
                     String optString3 = optJSONObject.optString(U4WPKAdapter.KEY_TM);
                     if (TextUtils.isEmpty(optString3) || (parseInt = Integer.parseInt(optString3)) <= 0 || parseInt >= 20) {
                         return;

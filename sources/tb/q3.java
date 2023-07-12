@@ -8,14 +8,13 @@ public class q3 {
     private final Handler a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.q3$b */
     /* loaded from: classes11.dex */
-    private static class C9593b {
+    private static class b {
         static final q3 a = new q3();
     }
 
     public static q3 b() {
-        return C9593b.a;
+        return b.a;
     }
 
     public Handler a() {

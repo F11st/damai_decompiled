@@ -111,7 +111,7 @@ public class DagoBackBtnWidget extends BaseWidget implements ICall {
         if (this.mImageView == null) {
             this.mImageView = new ImageView(context);
         }
-        this.mImageView.setImageResource(R.C7959drawable.dago_icon_back_btn);
+        this.mImageView.setImageResource(R.drawable.dago_icon_back_btn);
         this.mImageView.setOnClickListener(new View.OnClickListener() { // from class: com.youku.live.livesdk.widgets.widget.DagoBackBtnWidget.1
             private static transient /* synthetic */ IpChange $ipChange;
 

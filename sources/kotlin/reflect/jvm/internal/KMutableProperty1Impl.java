@@ -15,16 +15,15 @@ import tb.x02;
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class KMutableProperty1Impl<T, V> extends KProperty1Impl<T, V> implements KMutableProperty1<T, V> {
-    private final x02.C9895b<C8256a<T, V>> n;
+    private final x02.b<a<T, V>> n;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.KMutableProperty1Impl$a */
     /* loaded from: classes3.dex */
-    public static final class C8256a<T, V> extends KPropertyImpl.Setter<V> implements KMutableProperty1.Setter<T, V> {
+    public static final class a<T, V> extends KPropertyImpl.Setter<V> implements KMutableProperty1.Setter<T, V> {
         @NotNull
         private final KMutableProperty1Impl<T, V> h;
 
-        public C8256a(@NotNull KMutableProperty1Impl<T, V> kMutableProperty1Impl) {
+        public a(@NotNull KMutableProperty1Impl<T, V> kMutableProperty1Impl) {
             b41.i(kMutableProperty1Impl, "property");
             this.h = kMutableProperty1Impl;
         }
@@ -36,7 +35,7 @@ public final class KMutableProperty1Impl<T, V> extends KProperty1Impl<T, V> impl
             return wt2.INSTANCE;
         }
 
-        @Override // kotlin.reflect.jvm.internal.KPropertyImpl.AbstractC8261a
+        @Override // kotlin.reflect.jvm.internal.KPropertyImpl.a
         @NotNull
         /* renamed from: o */
         public KMutableProperty1Impl<T, V> m() {
@@ -54,15 +53,15 @@ public final class KMutableProperty1Impl<T, V> extends KProperty1Impl<T, V> impl
         b41.i(kDeclarationContainerImpl, "container");
         b41.i(str, "name");
         b41.i(str2, SocialOperation.GAME_SIGNATURE);
-        x02.C9895b<C8256a<T, V>> b = x02.b(new Function0<C8256a<T, V>>() { // from class: kotlin.reflect.jvm.internal.KMutableProperty1Impl$_setter$1
+        x02.b<a<T, V>> b = x02.b(new Function0<a<T, V>>() { // from class: kotlin.reflect.jvm.internal.KMutableProperty1Impl$_setter$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
             }
 
             @Override // kotlin.jvm.functions.Function0
-            public final KMutableProperty1Impl.C8256a<T, V> invoke() {
-                return new KMutableProperty1Impl.C8256a<>(KMutableProperty1Impl.this);
+            public final KMutableProperty1Impl.a<T, V> invoke() {
+                return new KMutableProperty1Impl.a<>(KMutableProperty1Impl.this);
             }
         });
         b41.h(b, "ReflectProperties.lazy { Setter(this) }");
@@ -77,8 +76,8 @@ public final class KMutableProperty1Impl<T, V> extends KProperty1Impl<T, V> impl
     @Override // kotlin.reflect.KMutableProperty1, kotlin.reflect.KMutableProperty
     @NotNull
     /* renamed from: t */
-    public C8256a<T, V> getSetter() {
-        C8256a<T, V> invoke = this.n.invoke();
+    public a<T, V> getSetter() {
+        a<T, V> invoke = this.n.invoke();
         b41.h(invoke, "_setter()");
         return invoke;
     }
@@ -88,15 +87,15 @@ public final class KMutableProperty1Impl<T, V> extends KProperty1Impl<T, V> impl
         super(kDeclarationContainerImpl, propertyDescriptor);
         b41.i(kDeclarationContainerImpl, "container");
         b41.i(propertyDescriptor, "descriptor");
-        x02.C9895b<C8256a<T, V>> b = x02.b(new Function0<C8256a<T, V>>() { // from class: kotlin.reflect.jvm.internal.KMutableProperty1Impl$_setter$1
+        x02.b<a<T, V>> b = x02.b(new Function0<a<T, V>>() { // from class: kotlin.reflect.jvm.internal.KMutableProperty1Impl$_setter$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
             }
 
             @Override // kotlin.jvm.functions.Function0
-            public final KMutableProperty1Impl.C8256a<T, V> invoke() {
-                return new KMutableProperty1Impl.C8256a<>(KMutableProperty1Impl.this);
+            public final KMutableProperty1Impl.a<T, V> invoke() {
+                return new KMutableProperty1Impl.a<>(KMutableProperty1Impl.this);
             }
         });
         b41.h(b, "ReflectProperties.lazy { Setter(this) }");

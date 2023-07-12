@@ -28,10 +28,10 @@ import com.youku.alixplayer.model.Period;
 import com.youku.alixplayer.model.Playlist;
 import com.youku.alixplayer.model.Source;
 import com.youku.arch.beast.apas.ApasConfigure;
-import com.youku.e.C7901a;
-import com.youku.player.util.C8063c;
-import com.youku.player.util.C8064d;
+import com.youku.e.a;
 import com.youku.player.util.TLogUtilNative;
+import com.youku.player.util.c;
+import com.youku.player.util.d;
 import com.youku.vpm.constants.TableField;
 import java.io.BufferedReader;
 import java.io.File;
@@ -260,7 +260,7 @@ public class MediaPlayerProxy implements Mediaplayer {
         this.mBufferingUpdateListener = new MediaPlayer.OnBufferingUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.1
             @Override // android.media.MediaPlayer.OnBufferingUpdateListener
             public void onBufferingUpdate(MediaPlayer mediaPlayer, int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onBufferingUpdate, " + i + "% bufferred.");
+                c.a(MediaPlayerProxy.TAG, "onBufferingUpdate, " + i + "% bufferred.");
                 if (MediaPlayerProxy.this.mOuterBufferingUpdateListener != null) {
                     MediaPlayerProxy.this.mOuterBufferingUpdateListener.onBufferingUpdate(null, i);
                 }
@@ -280,7 +280,7 @@ public class MediaPlayerProxy implements Mediaplayer {
         this.mErrorListener = new MediaPlayer.OnErrorListener() { // from class: com.youku.uplayer.MediaPlayerProxy.3
             @Override // android.media.MediaPlayer.OnErrorListener
             public boolean onError(MediaPlayer mediaPlayer, int i, int i2) {
-                C8063c.b(MediaPlayerProxy.TAG, "Bug fix: Error received in MediaPlayerProxy what=" + i + " extra=" + i2);
+                c.b(MediaPlayerProxy.TAG, "Bug fix: Error received in MediaPlayerProxy what=" + i + " extra=" + i2);
                 if (MediaPlayerProxy.this.mOuterErrorListener == null || MediaPlayerProxy.this.mOuterErrorListener.onError(null, i, i2)) {
                     return true;
                 }
@@ -404,35 +404,35 @@ public class MediaPlayerProxy implements Mediaplayer {
         this.mOnCurrentPositionUpdateListener = new OnCurrentPositionUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.14
             @Override // com.youku.uplayer.OnCurrentPositionUpdateListener
             public void onCurrentPositionUpdate(int i, int i2) {
-                C8063c.a(MediaPlayerProxy.TAG, "onCurrentPositionUpdate-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onCurrentPositionUpdate-->" + i);
             }
         };
         this.mOnLodingStatusListener = new OnLoadingStatusListener() { // from class: com.youku.uplayer.MediaPlayerProxy.15
             @Override // com.youku.uplayer.OnLoadingStatusListener
             public void onEndLoading(Object obj) {
-                C8063c.a(MediaPlayerProxy.TAG, "onEndLoading-->" + obj);
+                c.a(MediaPlayerProxy.TAG, "onEndLoading-->" + obj);
             }
 
             @Override // com.youku.uplayer.OnLoadingStatusListener
             public void onStartLoading() {
-                C8063c.a(MediaPlayerProxy.TAG, "onStartLoading-->");
+                c.a(MediaPlayerProxy.TAG, "onStartLoading-->");
             }
         };
         this.mOnLodingStatusListenerNoTrack = new OnLoadingStatusListenerNoTrack() { // from class: com.youku.uplayer.MediaPlayerProxy.16
             @Override // com.youku.uplayer.OnLoadingStatusListenerNoTrack
             public void onEndLoading() {
-                C8063c.a(MediaPlayerProxy.TAG, "onEndLoading-->");
+                c.a(MediaPlayerProxy.TAG, "onEndLoading-->");
             }
 
             @Override // com.youku.uplayer.OnLoadingStatusListenerNoTrack
             public void onStartLoading() {
-                C8063c.a(MediaPlayerProxy.TAG, "onStartLoading-->");
+                c.a(MediaPlayerProxy.TAG, "onStartLoading-->");
             }
         };
         this.mOnRealVideoCompletionListener = new OnRealVideoCompletionListener() { // from class: com.youku.uplayer.MediaPlayerProxy.17
             @Override // com.youku.uplayer.OnRealVideoCompletionListener
             public void onRealVideoCompletion() {
-                C8063c.a(MediaPlayerProxy.TAG, "OnRealVideoCompletionListener -->");
+                c.a(MediaPlayerProxy.TAG, "OnRealVideoCompletionListener -->");
             }
         };
         this.mOnSliceUpdateListener = new OnSliceUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.18
@@ -447,121 +447,121 @@ public class MediaPlayerProxy implements Mediaplayer {
         this.mOnADCountListener = new OnADCountListener() { // from class: com.youku.uplayer.MediaPlayerProxy.19
             @Override // com.youku.uplayer.OnADCountListener
             public void onCountUpdate(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onCountUpdate-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onCountUpdate-->" + i);
             }
         };
         this.mOnNetworkSpeedListener = new OnNetworkSpeedListener() { // from class: com.youku.uplayer.MediaPlayerProxy.20
             @Override // com.youku.uplayer.OnNetworkSpeedListener
             public void onSpeedUpdate(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onSpeedUpdate-->" + i + "kb/s");
+                c.a(MediaPlayerProxy.TAG, "onSpeedUpdate-->" + i + "kb/s");
             }
         };
         this.mOnNetworkSpeedPerMinute = new OnNetworkSpeedPerMinute() { // from class: com.youku.uplayer.MediaPlayerProxy.21
             @Override // com.youku.uplayer.OnNetworkSpeedPerMinute
             public void onNetWorkIncome(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onNetWorkIncome-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onNetWorkIncome-->" + i);
             }
 
             @Override // com.youku.uplayer.OnNetworkSpeedPerMinute
             public void onNetWorkSpeed(Object obj) {
-                C8063c.a(MediaPlayerProxy.TAG, "onNetWorkSpeed-->" + obj);
+                c.a(MediaPlayerProxy.TAG, "onNetWorkSpeed-->" + obj);
             }
 
             @Override // com.youku.uplayer.OnNetworkSpeedPerMinute
             public void onSpeedUpdate(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onSpeedUpdate-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onSpeedUpdate-->" + i);
             }
         };
         this.mOnBufferPercentUpdateListener = new OnBufferPercentUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.22
             @Override // com.youku.uplayer.OnBufferPercentUpdateListener
             public void onPercentUpdate(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onPercentUpdate-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onPercentUpdate-->" + i);
             }
         };
         this.mOnIsInitialListener = new OnIsInitialListener() { // from class: com.youku.uplayer.MediaPlayerProxy.23
             @Override // com.youku.uplayer.OnIsInitialListener
             public void onIsInitial(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onIsInitial-->");
+                c.a(MediaPlayerProxy.TAG, "onIsInitial-->");
             }
         };
         this.mOnRealVideoStartListener = new OnRealVideoStartListener() { // from class: com.youku.uplayer.MediaPlayerProxy.24
             @Override // com.youku.uplayer.OnRealVideoStartListener
             public void onRealVideoStart() {
-                C8063c.a(MediaPlayerProxy.TAG, "onRealVideoStart-->");
+                c.a(MediaPlayerProxy.TAG, "onRealVideoStart-->");
             }
         };
         this.mOnFirstFrameListener = new OnFirstFrameListener() { // from class: com.youku.uplayer.MediaPlayerProxy.25
             @Override // com.youku.uplayer.OnFirstFrameListener
             public void onFirstFrame() {
-                C8063c.a(MediaPlayerProxy.TAG, "onFirstFrame-->");
+                c.a(MediaPlayerProxy.TAG, "onFirstFrame-->");
             }
         };
         this.mOnVideoCurrentIndexUpdateListener = new OnVideoCurrentIndexUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.26
             @Override // com.youku.uplayer.OnVideoCurrentIndexUpdateListener
             public void onVideoCurrentIndexUpdate(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onVideoCurrentIndexUpdate--> " + i);
+                c.a(MediaPlayerProxy.TAG, "onVideoCurrentIndexUpdate--> " + i);
             }
         };
         this.mOnCdnSwitchListener = new OnCdnSwitchListener() { // from class: com.youku.uplayer.MediaPlayerProxy.27
             @Override // com.youku.uplayer.OnCdnSwitchListener
             public void onCdnSwitch() {
-                C8063c.a(MediaPlayerProxy.TAG, "onCdnSwitch--> ");
+                c.a(MediaPlayerProxy.TAG, "onCdnSwitch--> ");
             }
         };
         this.mOnVideoIndexUpdateListener = new OnVideoIndexUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.28
             @Override // com.youku.uplayer.OnVideoIndexUpdateListener
             public void onVideoIndexUpdate(int i, int i2) {
-                C8063c.a(MediaPlayerProxy.TAG, "onVideoIndexUpdate--> " + i + AltriaXLaunchTime.SPACE + i2);
+                c.a(MediaPlayerProxy.TAG, "onVideoIndexUpdate--> " + i + AltriaXLaunchTime.SPACE + i2);
             }
         };
         this.mOnVideoRealIpUpdateListener = new OnVideoRealIpUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.29
             @Override // com.youku.uplayer.OnVideoRealIpUpdateListener
             public void onVideoRealIpUpdate(int i, int i2) {
-                C8063c.a(MediaPlayerProxy.TAG, "onVideoRealIpUpdate--> " + i + AltriaXLaunchTime.SPACE + i2);
+                c.a(MediaPlayerProxy.TAG, "onVideoRealIpUpdate--> " + i + AltriaXLaunchTime.SPACE + i2);
             }
         };
         this.mOnTimeoutListener = new OnTimeoutListener() { // from class: com.youku.uplayer.MediaPlayerProxy.30
             @Override // com.youku.uplayer.OnTimeoutListener
             public void onNotifyChangeVideoQuality() {
-                C8063c.a(MediaPlayerProxy.TAG, "onNotifyChangeVideoQuality--> ");
+                c.a(MediaPlayerProxy.TAG, "onNotifyChangeVideoQuality--> ");
             }
 
             @Override // com.youku.uplayer.OnTimeoutListener
             public void onTimeOut() {
-                C8063c.a(MediaPlayerProxy.TAG, "onTimeOut-->");
+                c.a(MediaPlayerProxy.TAG, "onTimeOut-->");
             }
         };
         this.mOnHwDecodeErrorListener = new OnHwDecodeErrorListener() { // from class: com.youku.uplayer.MediaPlayerProxy.31
             @Override // com.youku.uplayer.OnHwDecodeErrorListener
             public void OnHwDecodeError() {
-                C8063c.a(MediaPlayerProxy.TAG, "OnHwDecodeError-->");
+                c.a(MediaPlayerProxy.TAG, "OnHwDecodeError-->");
             }
 
             @Override // com.youku.uplayer.OnHwDecodeErrorListener
             public void onHwPlayError() {
-                C8063c.b(MediaPlayerProxy.TAG, "onHwPlayError-->");
+                c.b(MediaPlayerProxy.TAG, "onHwPlayError-->");
             }
         };
         this.mOnConnectDelayListener = new OnConnectDelayListener() { // from class: com.youku.uplayer.MediaPlayerProxy.32
             @Override // com.youku.uplayer.OnConnectDelayListener
             public void onAdConnectDelay(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onAdConnectDelay-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onAdConnectDelay-->" + i);
             }
 
             @Override // com.youku.uplayer.OnConnectDelayListener
             public void onVideoConnectDelay(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onVideoConnectDelay-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onVideoConnectDelay-->" + i);
             }
         };
         this.mOnHttp302DelayListener = new OnHttp302DelayListener() { // from class: com.youku.uplayer.MediaPlayerProxy.33
             @Override // com.youku.uplayer.OnHttp302DelayListener
             public void onAd302Delay(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onAd302Delay-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onAd302Delay-->" + i);
             }
 
             @Override // com.youku.uplayer.OnHttp302DelayListener
             public void onVideo302Delay(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onVideo302Delay-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onVideo302Delay-->" + i);
             }
         };
         this.mOnQualityChangeListener = new OnQualityChangeListener() { // from class: com.youku.uplayer.MediaPlayerProxy.34
@@ -576,20 +576,20 @@ public class MediaPlayerProxy implements Mediaplayer {
         this.mOnDropVideoFramesListener = new OnDropVideoFramesListener() { // from class: com.youku.uplayer.MediaPlayerProxy.35
             @Override // com.youku.uplayer.OnDropVideoFramesListener
             public void onDropVideoFrames(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onDropVideoFrames-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onDropVideoFrames-->" + i);
             }
         };
         this.mOnCpuUsageListener = new OnCpuUsageListener() { // from class: com.youku.uplayer.MediaPlayerProxy.36
             @Override // com.youku.uplayer.OnCpuUsageListener
             public void onCpuUsage(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onCpuUsage-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onCpuUsage-->" + i);
             }
         };
         this.mPrivateOnInfoListener = new OnInfoListener() { // from class: com.youku.uplayer.MediaPlayerProxy.37
             @Override // com.youku.uplayer.OnInfoListener
             public void onInfo(int i, int i2, int i3, Object obj, long j) {
                 String str = LogTag.TAG_PLAYER;
-                C8063c.a(str, "onInfo what: arg1: arg2:" + i3 + " object:" + obj + " nativeStartTime:" + j);
+                c.a(str, "onInfo what: arg1: arg2:" + i3 + " object:" + obj + " nativeStartTime:" + j);
             }
         };
         this.mStateChangeListener = new OnStateChangeListener() { // from class: com.youku.uplayer.MediaPlayerProxy.38
@@ -902,7 +902,7 @@ public class MediaPlayerProxy implements Mediaplayer {
                     com.youku.uplayer.MediaPlayerProxy r3 = com.youku.uplayer.MediaPlayerProxy.this
                     com.youku.uplayer.MediaPlayerProxy.access$1902(r3, r0)
                     r3 = 100
-                    com.youku.player.util.d r4 = com.youku.player.util.C8064d.a()     // Catch: java.lang.Exception -> L8e
+                    com.youku.player.util.d r4 = com.youku.player.util.d.a()     // Catch: java.lang.Exception -> L8e
                     java.lang.String r5 = "youku_player_config"
                     java.lang.String r6 = "loading_start_delay"
                     java.lang.String r0 = java.lang.String.valueOf(r3)     // Catch: java.lang.Exception -> L8e
@@ -989,7 +989,7 @@ public class MediaPlayerProxy implements Mediaplayer {
         this.mStartLoadingRunnable = new Runnable() { // from class: com.youku.uplayer.MediaPlayerProxy.45
             @Override // java.lang.Runnable
             public void run() {
-                C8063c.a(MediaPlayerProxy.TAG, "send Loading Start!");
+                c.a(MediaPlayerProxy.TAG, "send Loading Start!");
                 if (MediaPlayerProxy.this.mOnLodingStatusListener != null) {
                     MediaPlayerProxy.this.mOnLodingStatusListener.onStartLoading();
                 }
@@ -1035,7 +1035,7 @@ public class MediaPlayerProxy implements Mediaplayer {
         this.mBufferingUpdateListener = new MediaPlayer.OnBufferingUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.1
             @Override // android.media.MediaPlayer.OnBufferingUpdateListener
             public void onBufferingUpdate(MediaPlayer mediaPlayer, int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onBufferingUpdate, " + i + "% bufferred.");
+                c.a(MediaPlayerProxy.TAG, "onBufferingUpdate, " + i + "% bufferred.");
                 if (MediaPlayerProxy.this.mOuterBufferingUpdateListener != null) {
                     MediaPlayerProxy.this.mOuterBufferingUpdateListener.onBufferingUpdate(null, i);
                 }
@@ -1055,7 +1055,7 @@ public class MediaPlayerProxy implements Mediaplayer {
         this.mErrorListener = new MediaPlayer.OnErrorListener() { // from class: com.youku.uplayer.MediaPlayerProxy.3
             @Override // android.media.MediaPlayer.OnErrorListener
             public boolean onError(MediaPlayer mediaPlayer, int i, int i2) {
-                C8063c.b(MediaPlayerProxy.TAG, "Bug fix: Error received in MediaPlayerProxy what=" + i + " extra=" + i2);
+                c.b(MediaPlayerProxy.TAG, "Bug fix: Error received in MediaPlayerProxy what=" + i + " extra=" + i2);
                 if (MediaPlayerProxy.this.mOuterErrorListener == null || MediaPlayerProxy.this.mOuterErrorListener.onError(null, i, i2)) {
                     return true;
                 }
@@ -1179,35 +1179,35 @@ public class MediaPlayerProxy implements Mediaplayer {
         this.mOnCurrentPositionUpdateListener = new OnCurrentPositionUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.14
             @Override // com.youku.uplayer.OnCurrentPositionUpdateListener
             public void onCurrentPositionUpdate(int i, int i2) {
-                C8063c.a(MediaPlayerProxy.TAG, "onCurrentPositionUpdate-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onCurrentPositionUpdate-->" + i);
             }
         };
         this.mOnLodingStatusListener = new OnLoadingStatusListener() { // from class: com.youku.uplayer.MediaPlayerProxy.15
             @Override // com.youku.uplayer.OnLoadingStatusListener
             public void onEndLoading(Object obj) {
-                C8063c.a(MediaPlayerProxy.TAG, "onEndLoading-->" + obj);
+                c.a(MediaPlayerProxy.TAG, "onEndLoading-->" + obj);
             }
 
             @Override // com.youku.uplayer.OnLoadingStatusListener
             public void onStartLoading() {
-                C8063c.a(MediaPlayerProxy.TAG, "onStartLoading-->");
+                c.a(MediaPlayerProxy.TAG, "onStartLoading-->");
             }
         };
         this.mOnLodingStatusListenerNoTrack = new OnLoadingStatusListenerNoTrack() { // from class: com.youku.uplayer.MediaPlayerProxy.16
             @Override // com.youku.uplayer.OnLoadingStatusListenerNoTrack
             public void onEndLoading() {
-                C8063c.a(MediaPlayerProxy.TAG, "onEndLoading-->");
+                c.a(MediaPlayerProxy.TAG, "onEndLoading-->");
             }
 
             @Override // com.youku.uplayer.OnLoadingStatusListenerNoTrack
             public void onStartLoading() {
-                C8063c.a(MediaPlayerProxy.TAG, "onStartLoading-->");
+                c.a(MediaPlayerProxy.TAG, "onStartLoading-->");
             }
         };
         this.mOnRealVideoCompletionListener = new OnRealVideoCompletionListener() { // from class: com.youku.uplayer.MediaPlayerProxy.17
             @Override // com.youku.uplayer.OnRealVideoCompletionListener
             public void onRealVideoCompletion() {
-                C8063c.a(MediaPlayerProxy.TAG, "OnRealVideoCompletionListener -->");
+                c.a(MediaPlayerProxy.TAG, "OnRealVideoCompletionListener -->");
             }
         };
         this.mOnSliceUpdateListener = new OnSliceUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.18
@@ -1222,121 +1222,121 @@ public class MediaPlayerProxy implements Mediaplayer {
         this.mOnADCountListener = new OnADCountListener() { // from class: com.youku.uplayer.MediaPlayerProxy.19
             @Override // com.youku.uplayer.OnADCountListener
             public void onCountUpdate(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onCountUpdate-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onCountUpdate-->" + i);
             }
         };
         this.mOnNetworkSpeedListener = new OnNetworkSpeedListener() { // from class: com.youku.uplayer.MediaPlayerProxy.20
             @Override // com.youku.uplayer.OnNetworkSpeedListener
             public void onSpeedUpdate(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onSpeedUpdate-->" + i + "kb/s");
+                c.a(MediaPlayerProxy.TAG, "onSpeedUpdate-->" + i + "kb/s");
             }
         };
         this.mOnNetworkSpeedPerMinute = new OnNetworkSpeedPerMinute() { // from class: com.youku.uplayer.MediaPlayerProxy.21
             @Override // com.youku.uplayer.OnNetworkSpeedPerMinute
             public void onNetWorkIncome(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onNetWorkIncome-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onNetWorkIncome-->" + i);
             }
 
             @Override // com.youku.uplayer.OnNetworkSpeedPerMinute
             public void onNetWorkSpeed(Object obj) {
-                C8063c.a(MediaPlayerProxy.TAG, "onNetWorkSpeed-->" + obj);
+                c.a(MediaPlayerProxy.TAG, "onNetWorkSpeed-->" + obj);
             }
 
             @Override // com.youku.uplayer.OnNetworkSpeedPerMinute
             public void onSpeedUpdate(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onSpeedUpdate-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onSpeedUpdate-->" + i);
             }
         };
         this.mOnBufferPercentUpdateListener = new OnBufferPercentUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.22
             @Override // com.youku.uplayer.OnBufferPercentUpdateListener
             public void onPercentUpdate(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onPercentUpdate-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onPercentUpdate-->" + i);
             }
         };
         this.mOnIsInitialListener = new OnIsInitialListener() { // from class: com.youku.uplayer.MediaPlayerProxy.23
             @Override // com.youku.uplayer.OnIsInitialListener
             public void onIsInitial(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onIsInitial-->");
+                c.a(MediaPlayerProxy.TAG, "onIsInitial-->");
             }
         };
         this.mOnRealVideoStartListener = new OnRealVideoStartListener() { // from class: com.youku.uplayer.MediaPlayerProxy.24
             @Override // com.youku.uplayer.OnRealVideoStartListener
             public void onRealVideoStart() {
-                C8063c.a(MediaPlayerProxy.TAG, "onRealVideoStart-->");
+                c.a(MediaPlayerProxy.TAG, "onRealVideoStart-->");
             }
         };
         this.mOnFirstFrameListener = new OnFirstFrameListener() { // from class: com.youku.uplayer.MediaPlayerProxy.25
             @Override // com.youku.uplayer.OnFirstFrameListener
             public void onFirstFrame() {
-                C8063c.a(MediaPlayerProxy.TAG, "onFirstFrame-->");
+                c.a(MediaPlayerProxy.TAG, "onFirstFrame-->");
             }
         };
         this.mOnVideoCurrentIndexUpdateListener = new OnVideoCurrentIndexUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.26
             @Override // com.youku.uplayer.OnVideoCurrentIndexUpdateListener
             public void onVideoCurrentIndexUpdate(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onVideoCurrentIndexUpdate--> " + i);
+                c.a(MediaPlayerProxy.TAG, "onVideoCurrentIndexUpdate--> " + i);
             }
         };
         this.mOnCdnSwitchListener = new OnCdnSwitchListener() { // from class: com.youku.uplayer.MediaPlayerProxy.27
             @Override // com.youku.uplayer.OnCdnSwitchListener
             public void onCdnSwitch() {
-                C8063c.a(MediaPlayerProxy.TAG, "onCdnSwitch--> ");
+                c.a(MediaPlayerProxy.TAG, "onCdnSwitch--> ");
             }
         };
         this.mOnVideoIndexUpdateListener = new OnVideoIndexUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.28
             @Override // com.youku.uplayer.OnVideoIndexUpdateListener
             public void onVideoIndexUpdate(int i, int i2) {
-                C8063c.a(MediaPlayerProxy.TAG, "onVideoIndexUpdate--> " + i + AltriaXLaunchTime.SPACE + i2);
+                c.a(MediaPlayerProxy.TAG, "onVideoIndexUpdate--> " + i + AltriaXLaunchTime.SPACE + i2);
             }
         };
         this.mOnVideoRealIpUpdateListener = new OnVideoRealIpUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.29
             @Override // com.youku.uplayer.OnVideoRealIpUpdateListener
             public void onVideoRealIpUpdate(int i, int i2) {
-                C8063c.a(MediaPlayerProxy.TAG, "onVideoRealIpUpdate--> " + i + AltriaXLaunchTime.SPACE + i2);
+                c.a(MediaPlayerProxy.TAG, "onVideoRealIpUpdate--> " + i + AltriaXLaunchTime.SPACE + i2);
             }
         };
         this.mOnTimeoutListener = new OnTimeoutListener() { // from class: com.youku.uplayer.MediaPlayerProxy.30
             @Override // com.youku.uplayer.OnTimeoutListener
             public void onNotifyChangeVideoQuality() {
-                C8063c.a(MediaPlayerProxy.TAG, "onNotifyChangeVideoQuality--> ");
+                c.a(MediaPlayerProxy.TAG, "onNotifyChangeVideoQuality--> ");
             }
 
             @Override // com.youku.uplayer.OnTimeoutListener
             public void onTimeOut() {
-                C8063c.a(MediaPlayerProxy.TAG, "onTimeOut-->");
+                c.a(MediaPlayerProxy.TAG, "onTimeOut-->");
             }
         };
         this.mOnHwDecodeErrorListener = new OnHwDecodeErrorListener() { // from class: com.youku.uplayer.MediaPlayerProxy.31
             @Override // com.youku.uplayer.OnHwDecodeErrorListener
             public void OnHwDecodeError() {
-                C8063c.a(MediaPlayerProxy.TAG, "OnHwDecodeError-->");
+                c.a(MediaPlayerProxy.TAG, "OnHwDecodeError-->");
             }
 
             @Override // com.youku.uplayer.OnHwDecodeErrorListener
             public void onHwPlayError() {
-                C8063c.b(MediaPlayerProxy.TAG, "onHwPlayError-->");
+                c.b(MediaPlayerProxy.TAG, "onHwPlayError-->");
             }
         };
         this.mOnConnectDelayListener = new OnConnectDelayListener() { // from class: com.youku.uplayer.MediaPlayerProxy.32
             @Override // com.youku.uplayer.OnConnectDelayListener
             public void onAdConnectDelay(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onAdConnectDelay-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onAdConnectDelay-->" + i);
             }
 
             @Override // com.youku.uplayer.OnConnectDelayListener
             public void onVideoConnectDelay(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onVideoConnectDelay-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onVideoConnectDelay-->" + i);
             }
         };
         this.mOnHttp302DelayListener = new OnHttp302DelayListener() { // from class: com.youku.uplayer.MediaPlayerProxy.33
             @Override // com.youku.uplayer.OnHttp302DelayListener
             public void onAd302Delay(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onAd302Delay-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onAd302Delay-->" + i);
             }
 
             @Override // com.youku.uplayer.OnHttp302DelayListener
             public void onVideo302Delay(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onVideo302Delay-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onVideo302Delay-->" + i);
             }
         };
         this.mOnQualityChangeListener = new OnQualityChangeListener() { // from class: com.youku.uplayer.MediaPlayerProxy.34
@@ -1351,20 +1351,20 @@ public class MediaPlayerProxy implements Mediaplayer {
         this.mOnDropVideoFramesListener = new OnDropVideoFramesListener() { // from class: com.youku.uplayer.MediaPlayerProxy.35
             @Override // com.youku.uplayer.OnDropVideoFramesListener
             public void onDropVideoFrames(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onDropVideoFrames-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onDropVideoFrames-->" + i);
             }
         };
         this.mOnCpuUsageListener = new OnCpuUsageListener() { // from class: com.youku.uplayer.MediaPlayerProxy.36
             @Override // com.youku.uplayer.OnCpuUsageListener
             public void onCpuUsage(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onCpuUsage-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onCpuUsage-->" + i);
             }
         };
         this.mPrivateOnInfoListener = new OnInfoListener() { // from class: com.youku.uplayer.MediaPlayerProxy.37
             @Override // com.youku.uplayer.OnInfoListener
             public void onInfo(int i, int i2, int i3, Object obj, long j) {
                 String str = LogTag.TAG_PLAYER;
-                C8063c.a(str, "onInfo what: arg1: arg2:" + i3 + " object:" + obj + " nativeStartTime:" + j);
+                c.a(str, "onInfo what: arg1: arg2:" + i3 + " object:" + obj + " nativeStartTime:" + j);
             }
         };
         this.mStateChangeListener = new OnStateChangeListener() { // from class: com.youku.uplayer.MediaPlayerProxy.38
@@ -1675,7 +1675,7 @@ public class MediaPlayerProxy implements Mediaplayer {
                     com.youku.uplayer.MediaPlayerProxy r3 = com.youku.uplayer.MediaPlayerProxy.this
                     com.youku.uplayer.MediaPlayerProxy.access$1902(r3, r0)
                     r3 = 100
-                    com.youku.player.util.d r4 = com.youku.player.util.C8064d.a()     // Catch: java.lang.Exception -> L8e
+                    com.youku.player.util.d r4 = com.youku.player.util.d.a()     // Catch: java.lang.Exception -> L8e
                     java.lang.String r5 = "youku_player_config"
                     java.lang.String r6 = "loading_start_delay"
                     java.lang.String r0 = java.lang.String.valueOf(r3)     // Catch: java.lang.Exception -> L8e
@@ -1762,7 +1762,7 @@ public class MediaPlayerProxy implements Mediaplayer {
         this.mStartLoadingRunnable = new Runnable() { // from class: com.youku.uplayer.MediaPlayerProxy.45
             @Override // java.lang.Runnable
             public void run() {
-                C8063c.a(MediaPlayerProxy.TAG, "send Loading Start!");
+                c.a(MediaPlayerProxy.TAG, "send Loading Start!");
                 if (MediaPlayerProxy.this.mOnLodingStatusListener != null) {
                     MediaPlayerProxy.this.mOnLodingStatusListener.onStartLoading();
                 }
@@ -1809,7 +1809,7 @@ public class MediaPlayerProxy implements Mediaplayer {
         this.mBufferingUpdateListener = new MediaPlayer.OnBufferingUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.1
             @Override // android.media.MediaPlayer.OnBufferingUpdateListener
             public void onBufferingUpdate(MediaPlayer mediaPlayer, int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onBufferingUpdate, " + i + "% bufferred.");
+                c.a(MediaPlayerProxy.TAG, "onBufferingUpdate, " + i + "% bufferred.");
                 if (MediaPlayerProxy.this.mOuterBufferingUpdateListener != null) {
                     MediaPlayerProxy.this.mOuterBufferingUpdateListener.onBufferingUpdate(null, i);
                 }
@@ -1829,7 +1829,7 @@ public class MediaPlayerProxy implements Mediaplayer {
         this.mErrorListener = new MediaPlayer.OnErrorListener() { // from class: com.youku.uplayer.MediaPlayerProxy.3
             @Override // android.media.MediaPlayer.OnErrorListener
             public boolean onError(MediaPlayer mediaPlayer, int i, int i2) {
-                C8063c.b(MediaPlayerProxy.TAG, "Bug fix: Error received in MediaPlayerProxy what=" + i + " extra=" + i2);
+                c.b(MediaPlayerProxy.TAG, "Bug fix: Error received in MediaPlayerProxy what=" + i + " extra=" + i2);
                 if (MediaPlayerProxy.this.mOuterErrorListener == null || MediaPlayerProxy.this.mOuterErrorListener.onError(null, i, i2)) {
                     return true;
                 }
@@ -1953,35 +1953,35 @@ public class MediaPlayerProxy implements Mediaplayer {
         this.mOnCurrentPositionUpdateListener = new OnCurrentPositionUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.14
             @Override // com.youku.uplayer.OnCurrentPositionUpdateListener
             public void onCurrentPositionUpdate(int i, int i2) {
-                C8063c.a(MediaPlayerProxy.TAG, "onCurrentPositionUpdate-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onCurrentPositionUpdate-->" + i);
             }
         };
         this.mOnLodingStatusListener = new OnLoadingStatusListener() { // from class: com.youku.uplayer.MediaPlayerProxy.15
             @Override // com.youku.uplayer.OnLoadingStatusListener
             public void onEndLoading(Object obj) {
-                C8063c.a(MediaPlayerProxy.TAG, "onEndLoading-->" + obj);
+                c.a(MediaPlayerProxy.TAG, "onEndLoading-->" + obj);
             }
 
             @Override // com.youku.uplayer.OnLoadingStatusListener
             public void onStartLoading() {
-                C8063c.a(MediaPlayerProxy.TAG, "onStartLoading-->");
+                c.a(MediaPlayerProxy.TAG, "onStartLoading-->");
             }
         };
         this.mOnLodingStatusListenerNoTrack = new OnLoadingStatusListenerNoTrack() { // from class: com.youku.uplayer.MediaPlayerProxy.16
             @Override // com.youku.uplayer.OnLoadingStatusListenerNoTrack
             public void onEndLoading() {
-                C8063c.a(MediaPlayerProxy.TAG, "onEndLoading-->");
+                c.a(MediaPlayerProxy.TAG, "onEndLoading-->");
             }
 
             @Override // com.youku.uplayer.OnLoadingStatusListenerNoTrack
             public void onStartLoading() {
-                C8063c.a(MediaPlayerProxy.TAG, "onStartLoading-->");
+                c.a(MediaPlayerProxy.TAG, "onStartLoading-->");
             }
         };
         this.mOnRealVideoCompletionListener = new OnRealVideoCompletionListener() { // from class: com.youku.uplayer.MediaPlayerProxy.17
             @Override // com.youku.uplayer.OnRealVideoCompletionListener
             public void onRealVideoCompletion() {
-                C8063c.a(MediaPlayerProxy.TAG, "OnRealVideoCompletionListener -->");
+                c.a(MediaPlayerProxy.TAG, "OnRealVideoCompletionListener -->");
             }
         };
         this.mOnSliceUpdateListener = new OnSliceUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.18
@@ -1996,121 +1996,121 @@ public class MediaPlayerProxy implements Mediaplayer {
         this.mOnADCountListener = new OnADCountListener() { // from class: com.youku.uplayer.MediaPlayerProxy.19
             @Override // com.youku.uplayer.OnADCountListener
             public void onCountUpdate(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onCountUpdate-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onCountUpdate-->" + i);
             }
         };
         this.mOnNetworkSpeedListener = new OnNetworkSpeedListener() { // from class: com.youku.uplayer.MediaPlayerProxy.20
             @Override // com.youku.uplayer.OnNetworkSpeedListener
             public void onSpeedUpdate(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onSpeedUpdate-->" + i + "kb/s");
+                c.a(MediaPlayerProxy.TAG, "onSpeedUpdate-->" + i + "kb/s");
             }
         };
         this.mOnNetworkSpeedPerMinute = new OnNetworkSpeedPerMinute() { // from class: com.youku.uplayer.MediaPlayerProxy.21
             @Override // com.youku.uplayer.OnNetworkSpeedPerMinute
             public void onNetWorkIncome(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onNetWorkIncome-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onNetWorkIncome-->" + i);
             }
 
             @Override // com.youku.uplayer.OnNetworkSpeedPerMinute
             public void onNetWorkSpeed(Object obj) {
-                C8063c.a(MediaPlayerProxy.TAG, "onNetWorkSpeed-->" + obj);
+                c.a(MediaPlayerProxy.TAG, "onNetWorkSpeed-->" + obj);
             }
 
             @Override // com.youku.uplayer.OnNetworkSpeedPerMinute
             public void onSpeedUpdate(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onSpeedUpdate-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onSpeedUpdate-->" + i);
             }
         };
         this.mOnBufferPercentUpdateListener = new OnBufferPercentUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.22
             @Override // com.youku.uplayer.OnBufferPercentUpdateListener
             public void onPercentUpdate(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onPercentUpdate-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onPercentUpdate-->" + i);
             }
         };
         this.mOnIsInitialListener = new OnIsInitialListener() { // from class: com.youku.uplayer.MediaPlayerProxy.23
             @Override // com.youku.uplayer.OnIsInitialListener
             public void onIsInitial(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onIsInitial-->");
+                c.a(MediaPlayerProxy.TAG, "onIsInitial-->");
             }
         };
         this.mOnRealVideoStartListener = new OnRealVideoStartListener() { // from class: com.youku.uplayer.MediaPlayerProxy.24
             @Override // com.youku.uplayer.OnRealVideoStartListener
             public void onRealVideoStart() {
-                C8063c.a(MediaPlayerProxy.TAG, "onRealVideoStart-->");
+                c.a(MediaPlayerProxy.TAG, "onRealVideoStart-->");
             }
         };
         this.mOnFirstFrameListener = new OnFirstFrameListener() { // from class: com.youku.uplayer.MediaPlayerProxy.25
             @Override // com.youku.uplayer.OnFirstFrameListener
             public void onFirstFrame() {
-                C8063c.a(MediaPlayerProxy.TAG, "onFirstFrame-->");
+                c.a(MediaPlayerProxy.TAG, "onFirstFrame-->");
             }
         };
         this.mOnVideoCurrentIndexUpdateListener = new OnVideoCurrentIndexUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.26
             @Override // com.youku.uplayer.OnVideoCurrentIndexUpdateListener
             public void onVideoCurrentIndexUpdate(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onVideoCurrentIndexUpdate--> " + i);
+                c.a(MediaPlayerProxy.TAG, "onVideoCurrentIndexUpdate--> " + i);
             }
         };
         this.mOnCdnSwitchListener = new OnCdnSwitchListener() { // from class: com.youku.uplayer.MediaPlayerProxy.27
             @Override // com.youku.uplayer.OnCdnSwitchListener
             public void onCdnSwitch() {
-                C8063c.a(MediaPlayerProxy.TAG, "onCdnSwitch--> ");
+                c.a(MediaPlayerProxy.TAG, "onCdnSwitch--> ");
             }
         };
         this.mOnVideoIndexUpdateListener = new OnVideoIndexUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.28
             @Override // com.youku.uplayer.OnVideoIndexUpdateListener
             public void onVideoIndexUpdate(int i, int i2) {
-                C8063c.a(MediaPlayerProxy.TAG, "onVideoIndexUpdate--> " + i + AltriaXLaunchTime.SPACE + i2);
+                c.a(MediaPlayerProxy.TAG, "onVideoIndexUpdate--> " + i + AltriaXLaunchTime.SPACE + i2);
             }
         };
         this.mOnVideoRealIpUpdateListener = new OnVideoRealIpUpdateListener() { // from class: com.youku.uplayer.MediaPlayerProxy.29
             @Override // com.youku.uplayer.OnVideoRealIpUpdateListener
             public void onVideoRealIpUpdate(int i, int i2) {
-                C8063c.a(MediaPlayerProxy.TAG, "onVideoRealIpUpdate--> " + i + AltriaXLaunchTime.SPACE + i2);
+                c.a(MediaPlayerProxy.TAG, "onVideoRealIpUpdate--> " + i + AltriaXLaunchTime.SPACE + i2);
             }
         };
         this.mOnTimeoutListener = new OnTimeoutListener() { // from class: com.youku.uplayer.MediaPlayerProxy.30
             @Override // com.youku.uplayer.OnTimeoutListener
             public void onNotifyChangeVideoQuality() {
-                C8063c.a(MediaPlayerProxy.TAG, "onNotifyChangeVideoQuality--> ");
+                c.a(MediaPlayerProxy.TAG, "onNotifyChangeVideoQuality--> ");
             }
 
             @Override // com.youku.uplayer.OnTimeoutListener
             public void onTimeOut() {
-                C8063c.a(MediaPlayerProxy.TAG, "onTimeOut-->");
+                c.a(MediaPlayerProxy.TAG, "onTimeOut-->");
             }
         };
         this.mOnHwDecodeErrorListener = new OnHwDecodeErrorListener() { // from class: com.youku.uplayer.MediaPlayerProxy.31
             @Override // com.youku.uplayer.OnHwDecodeErrorListener
             public void OnHwDecodeError() {
-                C8063c.a(MediaPlayerProxy.TAG, "OnHwDecodeError-->");
+                c.a(MediaPlayerProxy.TAG, "OnHwDecodeError-->");
             }
 
             @Override // com.youku.uplayer.OnHwDecodeErrorListener
             public void onHwPlayError() {
-                C8063c.b(MediaPlayerProxy.TAG, "onHwPlayError-->");
+                c.b(MediaPlayerProxy.TAG, "onHwPlayError-->");
             }
         };
         this.mOnConnectDelayListener = new OnConnectDelayListener() { // from class: com.youku.uplayer.MediaPlayerProxy.32
             @Override // com.youku.uplayer.OnConnectDelayListener
             public void onAdConnectDelay(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onAdConnectDelay-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onAdConnectDelay-->" + i);
             }
 
             @Override // com.youku.uplayer.OnConnectDelayListener
             public void onVideoConnectDelay(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onVideoConnectDelay-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onVideoConnectDelay-->" + i);
             }
         };
         this.mOnHttp302DelayListener = new OnHttp302DelayListener() { // from class: com.youku.uplayer.MediaPlayerProxy.33
             @Override // com.youku.uplayer.OnHttp302DelayListener
             public void onAd302Delay(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onAd302Delay-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onAd302Delay-->" + i);
             }
 
             @Override // com.youku.uplayer.OnHttp302DelayListener
             public void onVideo302Delay(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onVideo302Delay-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onVideo302Delay-->" + i);
             }
         };
         this.mOnQualityChangeListener = new OnQualityChangeListener() { // from class: com.youku.uplayer.MediaPlayerProxy.34
@@ -2125,20 +2125,20 @@ public class MediaPlayerProxy implements Mediaplayer {
         this.mOnDropVideoFramesListener = new OnDropVideoFramesListener() { // from class: com.youku.uplayer.MediaPlayerProxy.35
             @Override // com.youku.uplayer.OnDropVideoFramesListener
             public void onDropVideoFrames(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onDropVideoFrames-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onDropVideoFrames-->" + i);
             }
         };
         this.mOnCpuUsageListener = new OnCpuUsageListener() { // from class: com.youku.uplayer.MediaPlayerProxy.36
             @Override // com.youku.uplayer.OnCpuUsageListener
             public void onCpuUsage(int i) {
-                C8063c.a(MediaPlayerProxy.TAG, "onCpuUsage-->" + i);
+                c.a(MediaPlayerProxy.TAG, "onCpuUsage-->" + i);
             }
         };
         this.mPrivateOnInfoListener = new OnInfoListener() { // from class: com.youku.uplayer.MediaPlayerProxy.37
             @Override // com.youku.uplayer.OnInfoListener
             public void onInfo(int i, int i2, int i3, Object obj, long j) {
                 String str = LogTag.TAG_PLAYER;
-                C8063c.a(str, "onInfo what: arg1: arg2:" + i3 + " object:" + obj + " nativeStartTime:" + j);
+                c.a(str, "onInfo what: arg1: arg2:" + i3 + " object:" + obj + " nativeStartTime:" + j);
             }
         };
         this.mStateChangeListener = new OnStateChangeListener() { // from class: com.youku.uplayer.MediaPlayerProxy.38
@@ -2449,7 +2449,7 @@ public class MediaPlayerProxy implements Mediaplayer {
                     com.youku.uplayer.MediaPlayerProxy r3 = com.youku.uplayer.MediaPlayerProxy.this
                     com.youku.uplayer.MediaPlayerProxy.access$1902(r3, r0)
                     r3 = 100
-                    com.youku.player.util.d r4 = com.youku.player.util.C8064d.a()     // Catch: java.lang.Exception -> L8e
+                    com.youku.player.util.d r4 = com.youku.player.util.d.a()     // Catch: java.lang.Exception -> L8e
                     java.lang.String r5 = "youku_player_config"
                     java.lang.String r6 = "loading_start_delay"
                     java.lang.String r0 = java.lang.String.valueOf(r3)     // Catch: java.lang.Exception -> L8e
@@ -2536,7 +2536,7 @@ public class MediaPlayerProxy implements Mediaplayer {
         this.mStartLoadingRunnable = new Runnable() { // from class: com.youku.uplayer.MediaPlayerProxy.45
             @Override // java.lang.Runnable
             public void run() {
-                C8063c.a(MediaPlayerProxy.TAG, "send Loading Start!");
+                c.a(MediaPlayerProxy.TAG, "send Loading Start!");
                 if (MediaPlayerProxy.this.mOnLodingStatusListener != null) {
                     MediaPlayerProxy.this.mOnLodingStatusListener.onStartLoading();
                 }
@@ -2618,7 +2618,7 @@ public class MediaPlayerProxy implements Mediaplayer {
             sPlayer.prepare();
             return sPlayer;
         } catch (IOException | IllegalArgumentException | SecurityException e) {
-            C8063c.a(TAG, "failed to create MediaPlayerProxy:", e);
+            c.a(TAG, "failed to create MediaPlayerProxy:", e);
             return null;
         }
     }
@@ -2627,8 +2627,8 @@ public class MediaPlayerProxy implements Mediaplayer {
         if (this.mAlixPlayer != null) {
             return;
         }
-        C8063c.a(LogTag.TAG_TIME, "createAlixPlayer");
-        AlixPlayer alixPlayer = new AlixPlayer(C7901a.a);
+        c.a(LogTag.TAG_TIME, "createAlixPlayer");
+        AlixPlayer alixPlayer = new AlixPlayer(a.a);
         this.mAlixPlayer = alixPlayer;
         alixPlayer.addOnPlayerStateListener(this.mStateChangeListener);
         this.mAlixPlayer.addOnAdEventListener(this.mInnerOnAdEventListener);
@@ -2655,7 +2655,7 @@ public class MediaPlayerProxy implements Mediaplayer {
         this.mPath = null;
         this.isFeedsMode = false;
         this.mTmpExtInfo.clear();
-        C8063c.a(TAG, isUplayerSupported() ? "UPlayer is supported." : "UPlyaer may not be supported.");
+        c.a(TAG, isUplayerSupported() ? "UPlayer is supported." : "UPlyaer may not be supported.");
     }
 
     private String createPlayList(List<String> list) {
@@ -2692,7 +2692,7 @@ public class MediaPlayerProxy implements Mediaplayer {
         } catch (Exception unused) {
             mNumCores = 1;
         }
-        C8063c.a(TAG, "NumCores=" + mNumCores);
+        c.a(TAG, "NumCores=" + mNumCores);
         return mNumCores;
     }
 
@@ -2721,7 +2721,7 @@ public class MediaPlayerProxy implements Mediaplayer {
             e.printStackTrace();
         }
         DecimalFormat decimalFormat = new DecimalFormat(PurchaseConstants.NULL_PRICE);
-        C8063c.a(TAG, "total RAM=" + decimalFormat.format((mTotalRAM / 1024.0d) / 1024.0d) + "GB");
+        c.a(TAG, "total RAM=" + decimalFormat.format((mTotalRAM / 1024.0d) / 1024.0d) + "GB");
         return mTotalRAM;
     }
 
@@ -2739,15 +2739,15 @@ public class MediaPlayerProxy implements Mediaplayer {
         boolean z2;
         String a;
         try {
-            Context context = C7901a.a;
+            Context context = a.a;
             if (context != null) {
                 ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();
                 ((ActivityManager) context.getSystemService("activity")).getMemoryInfo(memoryInfo);
-                z = memoryInfo.totalMem < ((Long.parseLong(C8064d.a().a("youku_player_config", "low_mem_limit", "1")) * 1024) * 1024) * 1024;
+                z = memoryInfo.totalMem < ((Long.parseLong(d.a().a("youku_player_config", "low_mem_limit", "1")) * 1024) * 1024) * 1024;
                 if (Build.VERSION.SDK_INT < 21) {
                     z2 = true;
-                    a = C8064d.a().a("youku_player_config", "low_mem_judge", "1");
-                    String a2 = C8064d.a().a("youku_player_config", "low_os_judge", "1");
+                    a = d.a().a("youku_player_config", "low_mem_judge", "1");
+                    String a2 = d.a().a("youku_player_config", "low_os_judge", "1");
                     if (a.equals("1") || !z) {
                         if (a2.equals("1") || !z2) {
                         }
@@ -2758,8 +2758,8 @@ public class MediaPlayerProxy implements Mediaplayer {
                 z = false;
             }
             z2 = false;
-            a = C8064d.a().a("youku_player_config", "low_mem_judge", "1");
-            String a22 = C8064d.a().a("youku_player_config", "low_os_judge", "1");
+            a = d.a().a("youku_player_config", "low_mem_judge", "1");
+            String a22 = d.a().a("youku_player_config", "low_os_judge", "1");
             if (a.equals("1")) {
             }
             return a22.equals("1") ? false : false;
@@ -3324,7 +3324,7 @@ public class MediaPlayerProxy implements Mediaplayer {
     }
 
     public int screenShotOneFrame(AssetManager assetManager, String str, int i, int i2, int i3, String str2, int i4, int i5, int i6, int i7) {
-        C8063c.a("PlayFlow", "screenShotOneFrame outPath : " + str + " , logoPath : " + str2);
+        c.a("PlayFlow", "screenShotOneFrame outPath : " + str + " , logoPath : " + str2);
         AlixPlayer alixPlayer = this.mAlixPlayer;
         if (alixPlayer != null) {
             return alixPlayer.screenShotOneFrame(assetManager, str, i, i2, i3, str2, i4, i5, i6, i7);
@@ -3348,7 +3348,7 @@ public class MediaPlayerProxy implements Mediaplayer {
     }
 
     public int setAudioCallback(AudioCallback audioCallback) {
-        if ("1".equals(C8064d.a().a("audio_callback", "enable_callback", "1"))) {
+        if ("1".equals(d.a().a("audio_callback", "enable_callback", "1"))) {
             AlixPlayer alixPlayer = this.mAlixPlayer;
             if (alixPlayer != null) {
                 alixPlayer.setAudioCallback(audioCallback);
@@ -3384,7 +3384,7 @@ public class MediaPlayerProxy implements Mediaplayer {
 
     public void setBinocularMode(boolean z) {
         if (this.mAlixPlayer != null) {
-            C8063c.a(LogTag.TAG_PLAYER, "setBinocularMode");
+            c.a(LogTag.TAG_PLAYER, "setBinocularMode");
             this.mAlixPlayer.setBinocularMode(z);
         }
     }
@@ -3420,9 +3420,9 @@ public class MediaPlayerProxy implements Mediaplayer {
         }
         this.mAlixPlayer.setConfigCenter(new ApasConfigure());
         String str2 = LogTag.TAG_PLAYER;
-        C8063c.a(str2, "AlixPlayer path :" + str);
+        c.a(str2, "AlixPlayer path :" + str);
         String str3 = LogTag.TAG_PLAYER;
-        C8063c.a(str3, "AlixPlayer useHardwareDecode:" + this.useHardwareDecode + " isHLS:" + this.isHLS);
+        c.a(str3, "AlixPlayer useHardwareDecode:" + this.useHardwareDecode + " isHLS:" + this.isHLS);
         Period period = new Period(new Source(str));
         period.addHeader("source force hardware decode", this.useHardwareDecode ? "1" : "0");
         period.addHeader("datasource_live_type", this.isHLS ? "1" : "0");
@@ -3491,7 +3491,7 @@ public class MediaPlayerProxy implements Mediaplayer {
         if (this.mAlixPlayer == null || surfaceHolder == null) {
             return;
         }
-        C8063c.a(TAG, "<********> mAlixPlayer.setDisplay(mHolder)");
+        c.a(TAG, "<********> mAlixPlayer.setDisplay(mHolder)");
         try {
             this.mAlixPlayer.setDisplay(this.mHolder.getSurface());
             this.mInnerDisplaySet = true;
@@ -3515,7 +3515,7 @@ public class MediaPlayerProxy implements Mediaplayer {
     }
 
     public void setEnhanceMode(boolean z, float f, float f2) {
-        C8063c.a("nightMode", "setEnhanceMode isEnhance :" + z + " / percent : " + f + " / ratio : " + f2);
+        c.a("nightMode", "setEnhanceMode isEnhance :" + z + " / percent : " + f + " / ratio : " + f2);
         AlixPlayer alixPlayer = this.mAlixPlayer;
         if (alixPlayer != null) {
             alixPlayer.setEnhanceMode(z, f, f2);
@@ -3783,11 +3783,11 @@ public class MediaPlayerProxy implements Mediaplayer {
         try {
             if (this.mAlixPlayer != null) {
                 String str = LogTag.TAG_PLAYER;
-                C8063c.a(str, "setPlaySpeed --> playSpeed :" + d);
+                c.a(str, "setPlaySpeed --> playSpeed :" + d);
                 this.mAlixPlayer.setPlaySpeed(d);
             }
         } catch (Exception e) {
-            C8063c.a(TAG, e);
+            c.a(TAG, e);
         }
     }
 
@@ -3874,7 +3874,7 @@ public class MediaPlayerProxy implements Mediaplayer {
         if (this.mAlixPlayer == null || surface == null) {
             return;
         }
-        C8063c.a(TAG, "<********> mAlixPlayer.setDisplay()---" + surface);
+        c.a(TAG, "<********> mAlixPlayer.setDisplay()---" + surface);
         this.mAlixPlayer.setDisplay(this.mSurface);
         this.mInnerDisplaySet = true;
     }
@@ -4006,7 +4006,7 @@ public class MediaPlayerProxy implements Mediaplayer {
     public void switchPlayerMode(int i, int i2) {
         if (this.mAlixPlayer != null) {
             String str = LogTag.TAG_PLAYER;
-            C8063c.a(str, "new switchPlayerMode --> mode :" + i + " / vrType: " + i2);
+            c.a(str, "new switchPlayerMode --> mode :" + i + " / vrType: " + i2);
             if (this.useHardwareDecode) {
                 return;
             }

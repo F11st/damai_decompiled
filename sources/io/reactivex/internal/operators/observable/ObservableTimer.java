@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.Observer;
 import io.reactivex.Scheduler;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.disposables.EmptyDisposable;
@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableTimer extends AbstractC8149d<Long> {
+public final class ObservableTimer extends d<Long> {
     final long delay;
     final Scheduler scheduler;
     final TimeUnit unit;
@@ -57,7 +57,7 @@ public final class ObservableTimer extends AbstractC8149d<Long> {
         this.scheduler = scheduler;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super Long> observer) {
         TimerObserver timerObserver = new TimerObserver(observer);
         observer.onSubscribe(timerObserver);

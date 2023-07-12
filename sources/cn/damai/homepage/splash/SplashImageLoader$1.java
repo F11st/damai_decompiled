@@ -27,7 +27,7 @@ public class SplashImageLoader$1 extends PriorityTask {
         if (AndroidInstantRuntime.support(ipChange, "504322839")) {
             ipChange.ipc$dispatch("504322839", new Object[]{this});
         } else {
-            C1160a.c(this.val$context, this.val$pic, this.val$schema);
+            a.c(this.val$context, this.val$pic, this.val$schema);
         }
     }
 }

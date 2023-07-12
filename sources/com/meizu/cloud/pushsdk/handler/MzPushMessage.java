@@ -2,8 +2,7 @@ package com.meizu.cloud.pushsdk.handler;
 
 import android.text.TextUtils;
 import com.meizu.cloud.pushinternal.DebugLogger;
-import com.meizu.cloud.pushsdk.d.f.C6032e;
-import com.meizu.cloud.pushsdk.notification.model.C6087a;
+import com.meizu.cloud.pushsdk.d.f.e;
 import java.io.Serializable;
 import java.util.Map;
 
@@ -24,7 +23,7 @@ public class MzPushMessage implements Serializable {
         mzPushMessage.setContent(messageV3.getContent());
         mzPushMessage.setTaskId(messageV3.getTaskId());
         mzPushMessage.setPushType(0);
-        mzPushMessage.setNotifyId(C6087a.b(messageV3));
+        mzPushMessage.setNotifyId(com.meizu.cloud.pushsdk.notification.model.a.b(messageV3));
         mzPushMessage.setSelfDefineContentString(selfDefineContentString(messageV3.getWebUrl(), messageV3.getParamsMap()));
         return mzPushMessage;
     }
@@ -34,7 +33,7 @@ public class MzPushMessage implements Serializable {
             if (map != null) {
                 str = map.get("sk");
                 if (TextUtils.isEmpty(str)) {
-                    str = C6032e.a((Map) map).toString();
+                    str = e.a((Map) map).toString();
                 }
             } else {
                 str = null;

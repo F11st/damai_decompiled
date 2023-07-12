@@ -4,7 +4,7 @@ import android.taobao.windvane.jsbridge.utils.WVUtils;
 import android.taobao.windvane.util.TaoLog;
 import android.taobao.windvane.webview.WVSchemeIntercepterInterface;
 import android.text.TextUtils;
-import anet.channel.strategy.C0213a;
+import anet.channel.strategy.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
@@ -13,7 +13,7 @@ public class WVSchemeProcessor implements WVSchemeIntercepterInterface {
     public String dealUrlScheme(String str) {
         try {
             if (!TextUtils.isEmpty(str) && !str.startsWith("javascript:") && !str.equals("about:blank")) {
-                String formalizeUrl = C0213a.a().getFormalizeUrl(str);
+                String formalizeUrl = a.a().getFormalizeUrl(str);
                 return TextUtils.isEmpty(formalizeUrl) ? str : formalizeUrl;
             }
             return str;

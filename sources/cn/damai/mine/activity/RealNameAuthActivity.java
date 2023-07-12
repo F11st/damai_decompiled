@@ -32,7 +32,6 @@ import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -93,7 +92,7 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
     private FrameLayout mContainer;
     private int mCurrentTypePosition;
     private h4 mCustomDialog;
-    private HandlerC1404l mHandler;
+    private l mHandler;
     private List<String> mIdTypeNames;
     private List<CertificateTypeBean.ResultBean> mIdTypes;
     private LinearLayout mRealNameAuthKefuLayout;
@@ -107,15 +106,14 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
     private final String mProtocolStr = "请您认真阅读并同意《实名须知》的全部条款，接受后可开始使用我们的服务";
     private final int mProtocolStart = 9;
     private final int mProtocolEnd = 15;
-    private WheelView.C0631b OnWheelViewListener = new C1393b();
+    private WheelView.b OnWheelViewListener = new b();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.RealNameAuthActivity$a */
     /* loaded from: classes6.dex */
-    public class C1392a extends RPEventListener {
+    public class a extends RPEventListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1392a() {
+        a() {
         }
 
         @Override // com.alibaba.security.realidentity.RPEventListener
@@ -130,15 +128,14 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.RealNameAuthActivity$b */
     /* loaded from: classes6.dex */
-    public class C1393b extends WheelView.C0631b {
+    public class b extends WheelView.b {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1393b() {
+        b() {
         }
 
-        @Override // cn.damai.commonbusiness.contacts.ui.view.WheelView.C0631b
+        @Override // cn.damai.commonbusiness.contacts.ui.view.WheelView.b
         public void a(int i, String str) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-181928372")) {
@@ -153,12 +150,11 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.RealNameAuthActivity$c */
     /* loaded from: classes15.dex */
-    public class C1394c implements TextWatcher {
+    public class c implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1394c() {
+        c() {
         }
 
         @Override // android.text.TextWatcher
@@ -189,12 +185,11 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.RealNameAuthActivity$d */
     /* loaded from: classes15.dex */
-    public class C1395d implements TextWatcher {
+    public class d implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1395d() {
+        d() {
         }
 
         @Override // android.text.TextWatcher
@@ -225,12 +220,11 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.RealNameAuthActivity$e */
     /* loaded from: classes15.dex */
-    public class View$OnFocusChangeListenerC1396e implements View.OnFocusChangeListener {
+    public class e implements View.OnFocusChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnFocusChangeListenerC1396e() {
+        e() {
         }
 
         @Override // android.view.View.OnFocusChangeListener
@@ -245,12 +239,11 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.RealNameAuthActivity$f */
     /* loaded from: classes15.dex */
-    public class C1397f extends ClickableSpan {
+    public class f extends ClickableSpan {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1397f() {
+        f() {
         }
 
         @Override // android.text.style.ClickableSpan
@@ -279,14 +272,13 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.RealNameAuthActivity$g */
     /* loaded from: classes15.dex */
-    public class DialogInterface$OnClickListenerC1398g implements DialogInterface.OnClickListener {
+    public class g implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ String b;
 
-        DialogInterface$OnClickListenerC1398g(String str, String str2) {
+        g(String str, String str2) {
             this.a = str;
             this.b = str2;
         }
@@ -299,7 +291,7 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
                 return;
             }
             RealNameAuthActivity.this.tipView.updateCheckState(true);
-            C0529c.e().x(vf1.x().T());
+            cn.damai.common.user.c.e().x(vf1.x().T());
             RealNameAuthActivity.this.mSubmitBtn.setClickable(false);
             RealNameAuthActivity realNameAuthActivity = RealNameAuthActivity.this;
             ((RealNameAuthPresenter) realNameAuthActivity.mPresenter).submitAuth(this.a, this.b, realNameAuthActivity.certTypeCode);
@@ -307,12 +299,11 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.RealNameAuthActivity$h */
     /* loaded from: classes15.dex */
-    public class DialogInterface$OnClickListenerC1399h implements DialogInterface.OnClickListener {
+    public class h implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC1399h(RealNameAuthActivity realNameAuthActivity) {
+        h(RealNameAuthActivity realNameAuthActivity) {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -325,18 +316,16 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.RealNameAuthActivity$i */
     /* loaded from: classes6.dex */
-    public class C1400i implements AliMeUtil.UserCodeListener {
+    public class i implements AliMeUtil.UserCodeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.mine.activity.RealNameAuthActivity$i$a */
         /* loaded from: classes6.dex */
-        public class C1401a implements AliMeUtil.AliMeTokenListener {
+        public class a implements AliMeUtil.AliMeTokenListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1401a() {
+            a() {
             }
 
             @Override // cn.damai.im.AliMeUtil.AliMeTokenListener
@@ -360,7 +349,7 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
             }
         }
 
-        C1400i() {
+        i() {
         }
 
         @Override // cn.damai.im.AliMeUtil.UserCodeListener
@@ -379,18 +368,17 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
             if (AndroidInstantRuntime.support(ipChange, "1313141613")) {
                 ipChange.ipc$dispatch("1313141613", new Object[]{this, Long.valueOf(j)});
             } else {
-                AliMeUtil.e(j, AliMeUtil.FROM_REALNAME_AUTH, new C1401a());
+                AliMeUtil.e(j, AliMeUtil.FROM_REALNAME_AUTH, new a());
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.RealNameAuthActivity$j */
     /* loaded from: classes15.dex */
-    public class DialogInterface$OnClickListenerC1402j implements DialogInterface.OnClickListener {
+    public class j implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC1402j() {
+        j() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -400,7 +388,7 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
                 ipChange.ipc$dispatch("-655403378", new Object[]{this, dialogInterface, Integer.valueOf(i)});
                 return;
             }
-            C0529c.e().x(vf1.x().O());
+            cn.damai.common.user.c.e().x(vf1.x().O());
             Bundle bundle = new Bundle();
             bundle.putInt(RealNameAuthErrorActivity.REALNAME_AUTH_ERROR_TAG, 1);
             bundle.putString(RealNameAuthErrorActivity.REALNAME_AUTH_ERROR_MSG, RealNameAuthActivity.this.getString(R$string.realname_auth_error_conflict));
@@ -410,12 +398,11 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.RealNameAuthActivity$k */
     /* loaded from: classes15.dex */
-    public class DialogInterface$OnClickListenerC1403k implements DialogInterface.OnClickListener {
+    public class k implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC1403k() {
+        k() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -425,19 +412,18 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
                 ipChange.ipc$dispatch("314177645", new Object[]{this, dialogInterface, Integer.valueOf(i)});
                 return;
             }
-            C0529c.e().x(vf1.x().P());
+            cn.damai.common.user.c.e().x(vf1.x().P());
             RealNameAuthActivity.this.getFaceVerifyToken(true);
             RealNameAuthActivity.this.mCustomDialog = null;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.RealNameAuthActivity$l */
     /* loaded from: classes15.dex */
-    public class HandlerC1404l extends Handler {
+    public class l extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC1404l() {
+        l() {
         }
 
         @Override // android.os.Handler
@@ -471,13 +457,12 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.RealNameAuthActivity$m */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1405m implements View.OnClickListener {
+    public class m implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private Dialog a;
 
-        public View$OnClickListenerC1405m(Dialog dialog) {
+        public m(Dialog dialog) {
             this.a = dialog;
         }
 
@@ -522,16 +507,16 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
             this.mSubmitBtn.setClickable(false);
         }
         if (!TextUtils.isEmpty(trim)) {
-            int i = cn.damai.homepage.R$id.idcard_clear_btn;
-            findViewById(i).setVisibility(0);
-            findViewById(i).setOnClickListener(this);
+            int i2 = cn.damai.homepage.R$id.idcard_clear_btn;
+            findViewById(i2).setVisibility(0);
+            findViewById(i2).setOnClickListener(this);
         } else {
             findViewById(cn.damai.homepage.R$id.idcard_clear_btn).setVisibility(8);
         }
         if (!TextUtils.isEmpty(trim2)) {
-            int i2 = cn.damai.homepage.R$id.realname_clear_btn;
-            findViewById(i2).setVisibility(0);
-            findViewById(i2).setOnClickListener(this);
+            int i3 = cn.damai.homepage.R$id.realname_clear_btn;
+            findViewById(i3).setVisibility(0);
+            findViewById(i3).setOnClickListener(this);
             return;
         }
         findViewById(cn.damai.homepage.R$id.realname_clear_btn).setVisibility(8);
@@ -544,7 +529,7 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
             return;
         }
         if (this.mHandler == null) {
-            this.mHandler = new HandlerC1404l();
+            this.mHandler = new l();
         }
         SoftInputUtils.a(this);
         this.autherFragment = new RealNameChooseAutherFragment();
@@ -565,7 +550,7 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
             return;
         }
         if (this.mHandler == null) {
-            this.mHandler = new HandlerC1404l();
+            this.mHandler = new l();
         }
         View inflate = LayoutInflater.from(this).inflate(R$layout.add_contacts_select_id_type_layout, (ViewGroup) null);
         WheelView wheelView = (WheelView) inflate.findViewById(R$id.add_contacts_idtype_list);
@@ -582,8 +567,8 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
         attributes.height = t60.a(this, 245.0f);
         window.setAttributes(attributes);
         dialog.setCanceledOnTouchOutside(true);
-        ((TextView) inflate.findViewById(R$id.add_contacts_cancel_btn)).setOnClickListener(new View$OnClickListenerC1405m(dialog));
-        ((TextView) inflate.findViewById(R$id.add_contacts_confirm_btn)).setOnClickListener(new View$OnClickListenerC1405m(dialog));
+        ((TextView) inflate.findViewById(R$id.add_contacts_cancel_btn)).setOnClickListener(new m(dialog));
+        ((TextView) inflate.findViewById(R$id.add_contacts_confirm_btn)).setOnClickListener(new m(dialog));
         dialog.show();
     }
 
@@ -593,9 +578,9 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
             ipChange.ipc$dispatch("15036943", new Object[]{this});
         } else if (this.mCustomDialog != null) {
         } else {
-            h4 d = new h4(this).h("换绑并扫脸", new DialogInterface$OnClickListenerC1403k()).f("取消", new DialogInterface$OnClickListenerC1402j()).e("您提供的信息已被其他账号绑定，扫脸认证通过后可换绑到当前账号").d(false);
-            this.mCustomDialog = d;
-            d.j();
+            h4 d2 = new h4(this).h("换绑并扫脸", new k()).f("取消", new j()).e("您提供的信息已被其他账号绑定，扫脸认证通过后可换绑到当前账号").d(false);
+            this.mCustomDialog = d2;
+            d2.j();
         }
     }
 
@@ -637,15 +622,15 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
             return (FragmentTransaction) ipChange.ipc$dispatch("437070798", new Object[]{this});
         }
         FragmentTransaction beginTransaction = getSupportFragmentManager().beginTransaction();
-        int i = R$anim.realname_slide_in_from_bottom;
-        int i2 = R$anim.realname_slide_out_from_bottom;
-        beginTransaction.setCustomAnimations(i, i2, i, i2);
+        int i2 = R$anim.realname_slide_in_from_bottom;
+        int i3 = R$anim.realname_slide_out_from_bottom;
+        beginTransaction.setCustomAnimations(i2, i3, i2, i3);
         return beginTransaction;
     }
 
-    private int getHeight(int i, int i2, int i3) {
+    private int getHeight(int i2, int i3, int i4) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1300261851") ? ((Integer) ipChange.ipc$dispatch("-1300261851", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3)})).intValue() : ((DisplayMetrics.getwidthPixels(m62.c(this)) - i3) * i2) / i;
+        return AndroidInstantRuntime.support(ipChange, "-1300261851") ? ((Integer) ipChange.ipc$dispatch("-1300261851", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4)})).intValue() : ((DisplayMetrics.getwidthPixels(m62.c(this)) - i4) * i3) / i2;
     }
 
     private void init() {
@@ -779,12 +764,12 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
         findViewById(cn.damai.homepage.R$id.realname_center_certype_layout).setOnClickListener(this);
         this.mRealNameRightText.setOnClickListener(this);
         this.mRealNameAuthKefuLayout.setOnClickListener(this);
-        this.realNameEdit.addTextChangedListener(new C1394c());
-        this.idCardEdit.addTextChangedListener(new C1395d());
-        this.idCardEdit.setOnFocusChangeListener(new View$OnFocusChangeListenerC1396e());
+        this.realNameEdit.addTextChangedListener(new c());
+        this.idCardEdit.addTextChangedListener(new d());
+        this.idCardEdit.setOnFocusChangeListener(new e());
         this.mContainer.setOnClickListener(this);
         this.mChooseAutherBtn.setOnClickListener(this);
-        this.mClickableSpan = new C1397f();
+        this.mClickableSpan = new f();
     }
 
     private void submitRealNameAuth() {
@@ -802,9 +787,9 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
             } else if (TextUtils.isEmpty(trim3)) {
                 ToastUtil.i("请选择证件类型");
             } else if (!this.tipView.getCheckState()) {
-                new DMDialog(this).s("请您认真阅读并同意《实名须知》的全部条款，接受后可开始使用我们的服务", 9, 15, this.mClickableSpan).i("不同意", new DialogInterface$OnClickListenerC1399h(this)).n("同意", new DialogInterface$OnClickListenerC1398g(trim2, trim)).show();
+                new DMDialog(this).s("请您认真阅读并同意《实名须知》的全部条款，接受后可开始使用我们的服务", 9, 15, this.mClickableSpan).i("不同意", new h(this)).n("同意", new g(trim2, trim)).show();
             } else {
-                C0529c.e().x(vf1.x().T());
+                cn.damai.common.user.c.e().x(vf1.x().T());
                 this.mSubmitBtn.setClickable(false);
                 ((RealNameAuthPresenter) this.mPresenter).submitAuth(trim2, trim, this.certTypeCode);
             }
@@ -865,10 +850,10 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
     }
 
     @Override // cn.damai.common.app.base.BaseActivity
-    public void dealHeaderClick(int i) {
+    public void dealHeaderClick(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "168969444")) {
-            ipChange.ipc$dispatch("168969444", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("168969444", new Object[]{this, Integer.valueOf(i2)});
         }
     }
 
@@ -976,19 +961,19 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
                 if (mu0.a() == null) {
                     HashMap hashMap = new HashMap();
                     hashMap.put("contentlabel", "application 为null");
-                    C0529c.e().A(hashMap, "RPSDK_Application", vf1.REALNAME_AUTH_PAGE);
+                    cn.damai.common.user.c.e().A(hashMap, "RPSDK_Application", vf1.REALNAME_AUTH_PAGE);
                     return;
                 }
                 my1.a(mu0.a());
                 if (RPSDK.getContext() == null) {
                     HashMap hashMap2 = new HashMap();
                     hashMap2.put("contentlabel", "RPSDK Context 为null");
-                    C0529c.e().A(hashMap2, "RPSDK_Context", vf1.REALNAME_AUTH_PAGE);
+                    cn.damai.common.user.c.e().A(hashMap2, "RPSDK_Context", vf1.REALNAME_AUTH_PAGE);
                     return;
                 }
-                RPVerify.start(this, realNameVerifyBean.getVerifyToken(), new C1392a());
-            } catch (Exception e) {
-                e.printStackTrace();
+                RPVerify.start(this, realNameVerifyBean.getVerifyToken(), new a());
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
         }
     }
@@ -1004,15 +989,15 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
         if (AndroidInstantRuntime.support(ipChange, "1478277371")) {
             ipChange.ipc$dispatch("1478277371", new Object[]{this});
         } else {
-            AliMeUtil.j(new C1400i());
+            AliMeUtil.j(new i());
         }
     }
 
     @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
-    public void handleError(int i) {
+    public void handleError(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1973307829")) {
-            ipChange.ipc$dispatch("1973307829", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("1973307829", new Object[]{this, Integer.valueOf(i2)});
         }
     }
 
@@ -1057,12 +1042,12 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
         } else if (id == cn.damai.homepage.R$id.realname_auth_back) {
             finish();
         } else if (id == cn.damai.homepage.R$id.realname_choose_auther) {
-            C0529c.e().x(vf1.x().W());
+            cn.damai.common.user.c.e().x(vf1.x().W());
             chooseAuther();
         } else if (id == cn.damai.homepage.R$id.popup_layer_container_flv) {
             dismissChooseAuthFragment();
         } else if (id == cn.damai.homepage.R$id.realname_right_text) {
-            C0529c.e().x(vf1.x().S());
+            cn.damai.common.user.c.e().x(vf1.x().S());
             finish();
         } else if (id == cn.damai.homepage.R$id.realname_auth_layout) {
             gotoAliMe();
@@ -1094,19 +1079,19 @@ public class RealNameAuthActivity extends DamaiBaseActivity<RealNameAuthPresente
     }
 
     @Override // androidx.appcompat.app.AppCompatActivity, android.app.Activity, android.view.KeyEvent.Callback
-    public boolean onKeyDown(int i, KeyEvent keyEvent) {
+    public boolean onKeyDown(int i2, KeyEvent keyEvent) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1042252695")) {
-            return ((Boolean) ipChange.ipc$dispatch("-1042252695", new Object[]{this, Integer.valueOf(i), keyEvent})).booleanValue();
+            return ((Boolean) ipChange.ipc$dispatch("-1042252695", new Object[]{this, Integer.valueOf(i2), keyEvent})).booleanValue();
         }
-        if (i == 4) {
+        if (i2 == 4) {
             if (getSupportFragmentManager() != null && this.autherFragment != null) {
                 dismissChooseAuthFragment();
                 return true;
             }
-            return super.onKeyDown(i, keyEvent);
+            return super.onKeyDown(i2, keyEvent);
         }
-        return super.onKeyDown(i, keyEvent);
+        return super.onKeyDown(i2, keyEvent);
     }
 
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity

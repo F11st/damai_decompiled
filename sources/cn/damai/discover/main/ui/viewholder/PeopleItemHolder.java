@@ -4,8 +4,8 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.yymember.bean.PerformFilmVipDO;
 import cn.damai.discover.content.view.LiveTopicView;
 import cn.damai.discover.content.view.UserInfoView;
@@ -110,15 +110,15 @@ public class PeopleItemHolder extends LiveViewHolder {
                 } else {
                     this.n.setVisibility(8);
                 }
-                DMImageCreator e = C0504a.b().e(followRecommendBean.contentImage.get(0));
+                DMImageCreator e = a.b().e(followRecommendBean.contentImage.get(0));
                 int i2 = R$drawable.live_common_image_default;
                 e.c(i2).g(this.k);
                 if (followRecommendBean.contentImage.size() >= 2) {
                     this.i.setVisibility(0);
-                    C0504a.b().e(followRecommendBean.contentImage.get(1)).c(i2).g(this.l);
+                    a.b().e(followRecommendBean.contentImage.get(1)).c(i2).g(this.l);
                     if (followRecommendBean.contentImage.size() >= 3) {
                         this.j.setVisibility(0);
-                        C0504a.b().e(followRecommendBean.contentImage.get(2)).c(i2).g(this.m);
+                        a.b().e(followRecommendBean.contentImage.get(2)).c(i2).g(this.m);
                     }
                 }
             }

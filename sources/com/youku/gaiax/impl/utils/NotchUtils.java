@@ -9,9 +9,9 @@ import com.youku.gaiax.api.proxy.IProxyApp;
 import com.youku.gaiax.impl.GaiaXProxy;
 import io.flutter.wpkbridge.WPKFactory;
 import java.util.Locale;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import kotlin.text.StringsKt__StringsKt;
 import org.jetbrains.annotations.NotNull;
@@ -29,7 +29,7 @@ public final class NotchUtils {
 
     static {
         Lazy b;
-        b = C8177b.b(new Function0<Boolean>() { // from class: com.youku.gaiax.impl.utils.NotchUtils$isNotch$2
+        b = b.b(new Function0<Boolean>() { // from class: com.youku.gaiax.impl.utils.NotchUtils$isNotch$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull

@@ -43,12 +43,11 @@ public class LiveActivity extends com.youku.live.livesdk.LiveActivity implements
     private String notWifiNet = "当前为非WIFI环境，请注意流量消耗";
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.live.LiveActivity$a */
     /* loaded from: classes5.dex */
-    public class C1313a implements Action<String> {
+    public class a implements Action<String> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1313a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -65,12 +64,11 @@ public class LiveActivity extends com.youku.live.livesdk.LiveActivity implements
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.live.LiveActivity$b */
     /* loaded from: classes5.dex */
-    public class C1314b implements NetworkBroadcastReceiver.OnNetworkChangeListener {
+    public class b implements NetworkBroadcastReceiver.OnNetworkChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1314b() {
+        b() {
         }
 
         @Override // cn.damai.live.util.NetworkBroadcastReceiver.OnNetworkChangeListener
@@ -122,7 +120,7 @@ public class LiveActivity extends com.youku.live.livesdk.LiveActivity implements
         }
         NetworkBroadcastReceiver networkBroadcastReceiver = new NetworkBroadcastReceiver(this);
         this.netChangeReceiver = networkBroadcastReceiver;
-        networkBroadcastReceiver.c(new C1314b());
+        networkBroadcastReceiver.c(new b());
         this.netChangeReceiver.b();
     }
 
@@ -161,20 +159,20 @@ public class LiveActivity extends com.youku.live.livesdk.LiveActivity implements
                     intent2.setData(Uri.parse(dataString + "&id=" + queryParameter));
                 }
             }
-            String b = OrangeConfigCenter.c().b(on1.LIVE_WEEX_CONFIG, "live_ttag", TTAG_DAMAI);
+            String b2 = OrangeConfigCenter.c().b(on1.LIVE_WEEX_CONFIG, "live_ttag", TTAG_DAMAI);
             Uri data2 = getIntent().getData();
             if (TextUtils.isEmpty(data2.getQueryParameter(SchemaConstants.SCHEMA_QUERY_TPL_TAG))) {
                 String stringExtra = getIntent().getStringExtra(SchemaConstants.SCHEMA_QUERY_TPL_TAG);
                 if (!TextUtils.isEmpty(stringExtra)) {
                     build = data2.buildUpon().appendQueryParameter(SchemaConstants.SCHEMA_QUERY_TPL_TAG, stringExtra).build();
                 } else {
-                    getIntent().putExtra(SchemaConstants.SCHEMA_QUERY_TPL_TAG, b);
-                    build = data2.buildUpon().appendQueryParameter(SchemaConstants.SCHEMA_QUERY_TPL_TAG, b).build();
+                    getIntent().putExtra(SchemaConstants.SCHEMA_QUERY_TPL_TAG, b2);
+                    build = data2.buildUpon().appendQueryParameter(SchemaConstants.SCHEMA_QUERY_TPL_TAG, b2).build();
                 }
                 getIntent().setData(build);
                 return;
             }
-            getIntent().putExtra(SchemaConstants.SCHEMA_QUERY_TPL_TAG, b);
+            getIntent().putExtra(SchemaConstants.SCHEMA_QUERY_TPL_TAG, b2);
         }
     }
 
@@ -288,7 +286,7 @@ public class LiveActivity extends com.youku.live.livesdk.LiveActivity implements
         if (AndroidInstantRuntime.support(ipChange, "1357742610")) {
             ipChange.ipc$dispatch("1357742610", new Object[]{this});
         } else {
-            new xr().b("weexLog", new C1313a());
+            new xr().b("weexLog", new a());
         }
     }
 }

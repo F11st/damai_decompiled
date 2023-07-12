@@ -8,7 +8,7 @@ import android.view.WindowManager;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import java.util.WeakHashMap;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
@@ -40,7 +40,7 @@ public final class DisplayManagerCompat {
         if (Build.VERSION.SDK_INT >= 17) {
             return ((DisplayManager) this.mContext.getSystemService("display")).getDisplay(i);
         }
-        Display defaultDisplay = ((WindowManager) this.mContext.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
+        Display defaultDisplay = ((WindowManager) this.mContext.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
         if (defaultDisplay.getDisplayId() == i) {
             return defaultDisplay;
         }
@@ -49,7 +49,7 @@ public final class DisplayManagerCompat {
 
     @NonNull
     public Display[] getDisplays() {
-        return Build.VERSION.SDK_INT >= 17 ? ((DisplayManager) this.mContext.getSystemService("display")).getDisplays() : new Display[]{((WindowManager) this.mContext.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay()};
+        return Build.VERSION.SDK_INT >= 17 ? ((DisplayManager) this.mContext.getSystemService("display")).getDisplays() : new Display[]{((WindowManager) this.mContext.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay()};
     }
 
     @NonNull
@@ -57,6 +57,6 @@ public final class DisplayManagerCompat {
         if (Build.VERSION.SDK_INT >= 17) {
             return ((DisplayManager) this.mContext.getSystemService("display")).getDisplays(str);
         }
-        return str == null ? new Display[0] : new Display[]{((WindowManager) this.mContext.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay()};
+        return str == null ? new Display[0] : new Display[]{((WindowManager) this.mContext.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay()};
     }
 }

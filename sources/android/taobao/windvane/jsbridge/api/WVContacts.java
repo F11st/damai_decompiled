@@ -15,7 +15,7 @@ import android.taobao.windvane.service.WVEventService;
 import android.taobao.windvane.thread.WVThreadPool;
 import android.taobao.windvane.util.TaoLog;
 import android.text.TextUtils;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
+import com.alibaba.security.realidentity.jsbridge.a;
 import java.util.List;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -207,7 +207,7 @@ public class WVContacts extends WVApiPlugin {
                 @Override // java.lang.Runnable
                 public void run() {
                     WVResult wVResult = new WVResult();
-                    wVResult.addData("msg", AbstractC3893a.al);
+                    wVResult.addData("msg", a.al);
                     wVCallBackContext.error(wVResult);
                 }
             }).execute();
@@ -227,7 +227,7 @@ public class WVContacts extends WVApiPlugin {
                 @Override // java.lang.Runnable
                 public void run() {
                     WVResult wVResult = new WVResult();
-                    wVResult.addData("msg", AbstractC3893a.al);
+                    wVResult.addData("msg", a.al);
                     wVCallBackContext.error(wVResult);
                 }
             }).execute();
@@ -260,7 +260,7 @@ public class WVContacts extends WVApiPlugin {
                 @Override // java.lang.Runnable
                 public void run() {
                     WVResult wVResult = new WVResult();
-                    wVResult.addData("msg", AbstractC3893a.al);
+                    wVResult.addData("msg", a.al);
                     wVCallBackContext.error(wVResult);
                 }
             }).execute();

@@ -2,8 +2,8 @@ package com.tencent.connect.common;
 
 import android.content.Intent;
 import com.tencent.open.log.SLog;
-import com.tencent.open.utils.C7123k;
-import com.tencent.open.utils.C7126m;
+import com.tencent.open.utils.k;
+import com.tencent.open.utils.m;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.UiError;
 import java.util.Collections;
@@ -73,7 +73,7 @@ public class UIListenerManager {
     }
 
     public IUiListener getListnerWithRequestCode(int i) {
-        String a2 = C7123k.a(i);
+        String a2 = k.a(i);
         if (a2 == null) {
             SLog.e("openSDK_LOG.UIListenerManager", "getListner action is null! rquestCode=" + i);
             return null;
@@ -94,7 +94,7 @@ public class UIListenerManager {
                 String stringExtra2 = intent.getStringExtra(Constants.KEY_RESPONSE);
                 if (stringExtra2 != null) {
                     try {
-                        iUiListener.onComplete(C7126m.d(stringExtra2));
+                        iUiListener.onComplete(m.d(stringExtra2));
                         return;
                     } catch (JSONException e) {
                         iUiListener.onError(new UiError(-4, Constants.MSG_JSON_ERROR, stringExtra2));
@@ -151,7 +151,7 @@ public class UIListenerManager {
                     String stringExtra2 = intent.getStringExtra(Constants.KEY_RESPONSE);
                     if (stringExtra2 != null) {
                         try {
-                            listnerWithRequestCode.onComplete(C7126m.d(stringExtra2));
+                            listnerWithRequestCode.onComplete(m.d(stringExtra2));
                             return true;
                         } catch (JSONException e) {
                             listnerWithRequestCode.onError(new UiError(-4, Constants.MSG_JSON_ERROR, stringExtra2));
@@ -174,7 +174,7 @@ public class UIListenerManager {
                         if (stringExtra3 != null) {
                             try {
                                 String stringExtra4 = intent.getStringExtra("message");
-                                JSONObject d = C7126m.d(stringExtra3);
+                                JSONObject d = m.d(stringExtra3);
                                 d.put("message", stringExtra4);
                                 listnerWithRequestCode.onComplete(d);
                                 return true;
@@ -194,7 +194,7 @@ public class UIListenerManager {
                     String stringExtra5 = intent.getStringExtra(Constants.KEY_RESPONSE);
                     if (stringExtra5 != null) {
                         try {
-                            listnerWithRequestCode.onComplete(C7126m.d(stringExtra5));
+                            listnerWithRequestCode.onComplete(m.d(stringExtra5));
                             return true;
                         } catch (JSONException unused2) {
                             listnerWithRequestCode.onError(new UiError(-4, Constants.MSG_JSON_ERROR, stringExtra5));
@@ -233,7 +233,7 @@ public class UIListenerManager {
 
     public Object setListenerWithRequestcode(int i, IUiListener iUiListener) {
         ApiTask put;
-        String a2 = C7123k.a(i);
+        String a2 = k.a(i);
         if (a2 == null) {
             SLog.e("openSDK_LOG.UIListenerManager", "setListener action is null! rquestCode=" + i);
             return null;
@@ -249,7 +249,7 @@ public class UIListenerManager {
 
     public Object setListnerWithAction(String str, IUiListener iUiListener) {
         ApiTask put;
-        int b = C7123k.b(str);
+        int b = k.b(str);
         if (b == -1) {
             SLog.e("openSDK_LOG.UIListenerManager", "setListnerWithAction fail, action = " + str);
             return null;

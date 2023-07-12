@@ -11,14 +11,13 @@ public class vu2 {
     private Map<String, SharedPreferences> a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.vu2$b */
     /* loaded from: classes9.dex */
-    private static class C9830b {
+    private static class b {
         private static final vu2 a = new vu2();
     }
 
     public static vu2 b() {
-        return C9830b.a;
+        return b.a;
     }
 
     public SharedPreferences a(Context context, String str) {

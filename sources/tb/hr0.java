@@ -6,7 +6,6 @@ import android.graphics.drawable.GradientDrawable;
 import android.widget.TextView;
 import com.alibaba.gaiax.template.GXStyleConvert;
 import java.util.List;
-import kotlin.collections.C8214m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -35,7 +34,7 @@ public final class hr0 {
         for (Object obj : this.b) {
             int i2 = i + 1;
             if (i < 0) {
-                C8214m.p();
+                kotlin.collections.m.p();
             }
             iArr[i] = mq0.d((mq0) obj, null, 1, null);
             i = i2;
@@ -53,7 +52,7 @@ public final class hr0 {
         for (Object obj : this.b) {
             int i2 = i + 1;
             if (i < 0) {
-                C8214m.p();
+                kotlin.collections.m.p();
             }
             iArr[i] = ((mq0) obj).c(textView.getContext());
             i = i2;

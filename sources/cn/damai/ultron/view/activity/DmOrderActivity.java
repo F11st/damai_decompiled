@@ -10,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.live.LiveActivity;
 import cn.damai.ultron.R$color;
@@ -37,8 +36,8 @@ import tb.xr;
 /* loaded from: classes9.dex */
 public class DmOrderActivity extends SimpleBaseActivity {
     private static transient /* synthetic */ IpChange $ipChange;
-    private final DmBuildRequestCallBackImp callBackImp = new C2648a();
-    DmUltronChooseListenerImpl<String> closeTicketDetailListener = new C2650c();
+    private final DmBuildRequestCallBackImp callBackImp = new a();
+    DmUltronChooseListenerImpl<String> closeTicketDetailListener = new c();
     public pa0 dmErrorViewHolder;
     DmUltronPromotionFragment fragment;
     private xr mDMMessage;
@@ -49,12 +48,11 @@ public class DmOrderActivity extends SimpleBaseActivity {
     private View statusBar;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.view.activity.DmOrderActivity$a */
     /* loaded from: classes9.dex */
-    public class C2648a implements DmBuildRequestCallBackImp {
+    public class a implements DmBuildRequestCallBackImp {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2648a() {
+        a() {
         }
 
         @Override // cn.damai.ultron.utils.DmBuildRequestCallBackImp
@@ -86,12 +84,11 @@ public class DmOrderActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.view.activity.DmOrderActivity$b */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2649b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2649b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -106,12 +103,11 @@ public class DmOrderActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.view.activity.DmOrderActivity$c */
     /* loaded from: classes9.dex */
-    public class C2650c implements DmUltronChooseListenerImpl<String> {
+    public class c implements DmUltronChooseListenerImpl<String> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2650c() {
+        c() {
         }
 
         @Override // cn.damai.ultron.utils.DmUltronChooseListenerImpl
@@ -161,7 +157,7 @@ public class DmOrderActivity extends SimpleBaseActivity {
         if (AndroidInstantRuntime.support(ipChange, "-485419572")) {
             ipChange.ipc$dispatch("-485419572", new Object[]{this});
         } else {
-            findViewById(R$id.tv_goback).setOnClickListener(new View$OnClickListenerC2649b());
+            findViewById(R$id.tv_goback).setOnClickListener(new b());
         }
     }
 
@@ -242,7 +238,7 @@ public class DmOrderActivity extends SimpleBaseActivity {
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, android.app.Activity
     public void onActivityResult(int i, int i2, Intent intent) {
-        IDMComponent a;
+        IDMComponent a2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1670987181")) {
             ipChange.ipc$dispatch("1670987181", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), intent});
@@ -250,10 +246,10 @@ public class DmOrderActivity extends SimpleBaseActivity {
         }
         super.onActivityResult(i, i2, intent);
         if (i == 36) {
-            if (intent == null || (a = fb0.a(this.mPresenter)) == null) {
+            if (intent == null || (a2 = fb0.a(this.mPresenter)) == null) {
                 return;
             }
-            this.mPresenter.getDataManager().respondToLinkage(a);
+            this.mPresenter.getDataManager().respondToLinkage(a2);
         } else if (i == 41) {
             if (i2 == -1) {
                 this.mPresenter.getTradeEventHandler().h(this.mPresenter.getTradeEventHandler().d().l(gb0.switchDeliveryWayEvent).m("data", intent));
@@ -300,7 +296,7 @@ public class DmOrderActivity extends SimpleBaseActivity {
             e.printStackTrace();
         }
         setDamaiUTKeyBuilder(kb0.u().r(j, z));
-        C0529c.e().K(this);
+        cn.damai.common.user.c.e().K(this);
         InitUltronPresenter(bundle);
         initBackEvent();
         initErrorView();

@@ -13,17 +13,17 @@ public final class ExecutionSequencer {
     /* loaded from: classes10.dex */
     class AnonymousClass4 implements Runnable {
         final /* synthetic */ ExecutionSequencer this$0;
-        final /* synthetic */ C5362p val$newFuture;
+        final /* synthetic */ p val$newFuture;
         final /* synthetic */ ListenableFuture val$oldFuture;
         final /* synthetic */ ListenableFuture val$outputFuture;
         final /* synthetic */ AtomicReference val$runningState;
         final /* synthetic */ ListenableFuture val$taskFuture;
 
-        AnonymousClass4(ExecutionSequencer executionSequencer, ListenableFuture listenableFuture, ListenableFuture listenableFuture2, AtomicReference atomicReference, C5362p c5362p, ListenableFuture listenableFuture3) {
+        AnonymousClass4(ExecutionSequencer executionSequencer, ListenableFuture listenableFuture, ListenableFuture listenableFuture2, AtomicReference atomicReference, p pVar, ListenableFuture listenableFuture3) {
             this.val$taskFuture = listenableFuture;
             this.val$outputFuture = listenableFuture2;
             this.val$runningState = atomicReference;
-            this.val$newFuture = c5362p;
+            this.val$newFuture = pVar;
             this.val$oldFuture = listenableFuture3;
         }
 

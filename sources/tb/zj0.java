@@ -19,16 +19,15 @@ public final class zj0<T, R, E> implements Sequence<E> {
     private final Function1<R, Iterator<E>> c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.zj0$a */
     /* loaded from: classes3.dex */
-    public static final class C10024a implements Iterator<E>, KMappedMarker {
+    public static final class a implements Iterator<E>, KMappedMarker {
         @NotNull
         private final Iterator<T> a;
         @Nullable
         private Iterator<? extends E> b;
         final /* synthetic */ zj0<T, R, E> c;
 
-        C10024a(zj0<T, R, E> zj0Var) {
+        a(zj0<T, R, E> zj0Var) {
             this.c = zj0Var;
             this.a = ((zj0) zj0Var).a.iterator();
         }
@@ -80,7 +79,7 @@ public final class zj0<T, R, E> implements Sequence<E> {
             L45:
                 return r1
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.zj0.C10024a.a():boolean");
+            throw new UnsupportedOperationException("Method not decompiled: tb.zj0.a.a():boolean");
         }
 
         @Override // java.util.Iterator
@@ -117,6 +116,6 @@ public final class zj0<T, R, E> implements Sequence<E> {
     @Override // kotlin.sequences.Sequence
     @NotNull
     public Iterator<E> iterator() {
-        return new C10024a(this);
+        return new a(this);
     }
 }

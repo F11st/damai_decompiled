@@ -28,23 +28,23 @@ public final class GXTrackListener implements GXTemplateEngine.GXITrackListener 
     }
 
     @Override // com.alibaba.gaiax.GXTemplateEngine.GXITrackListener
-    public void onManualClickTrackEvent(@NotNull GXTemplateEngine.C3349k c3349k) {
-        GXTemplateEngine.GXITrackListener.C3336a.a(this, c3349k);
+    public void onManualClickTrackEvent(@NotNull GXTemplateEngine.k kVar) {
+        GXTemplateEngine.GXITrackListener.a.a(this, kVar);
     }
 
     @Override // com.alibaba.gaiax.GXTemplateEngine.GXITrackListener
-    public void onManualExposureTrackEvent(@NotNull GXTemplateEngine.C3349k c3349k) {
-        GXTemplateEngine.GXITrackListener.C3336a.b(this, c3349k);
+    public void onManualExposureTrackEvent(@NotNull GXTemplateEngine.k kVar) {
+        GXTemplateEngine.GXITrackListener.a.b(this, kVar);
     }
 
     @Override // com.alibaba.gaiax.GXTemplateEngine.GXITrackListener
-    public void onTrackEvent(@NotNull GXTemplateEngine.C3349k c3349k) {
-        b41.i(c3349k, "gxTrack");
-        GXTemplateEngine.GXITrackListener.C3336a.c(this, c3349k);
-        View d = c3349k.d();
-        String b = c3349k.b();
-        Integer a = c3349k.a();
-        JSONObject c = c3349k.c();
+    public void onTrackEvent(@NotNull GXTemplateEngine.k kVar) {
+        b41.i(kVar, "gxTrack");
+        GXTemplateEngine.GXITrackListener.a.c(this, kVar);
+        View d = kVar.d();
+        String b = kVar.b();
+        Integer a = kVar.a();
+        JSONObject c = kVar.c();
         GaiaX.ITrackDelegate3 trackDelegate3 = this.context.getParams().getTrackDelegate3();
         if (trackDelegate3 == null) {
             return;

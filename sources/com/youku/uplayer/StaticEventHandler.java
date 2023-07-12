@@ -3,7 +3,7 @@ package com.youku.uplayer;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Message;
-import com.youku.player.util.C8063c;
+import com.youku.player.util.c;
 import java.lang.ref.WeakReference;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -81,8 +81,8 @@ public class StaticEventHandler {
                         StaticEventHandler.this.notifyPreloadStatusChanged(i / 10, message.obj);
                     } else if (i2 == 2) {
                         StaticEventHandler.this.notifyTurboStatusChanged(i / 10, message.arg1, message.obj);
-                    } else if (C8063c.d) {
-                        C8063c.a("StaticEventHandler", "No handler deal with status[" + message.what + jn1.ARRAY_END_STR + " ErrorCode[" + message.what + "] params[" + message.obj + jn1.ARRAY_END_STR);
+                    } else if (c.d) {
+                        c.a("StaticEventHandler", "No handler deal with status[" + message.what + jn1.ARRAY_END_STR + " ErrorCode[" + message.what + "] params[" + message.obj + jn1.ARRAY_END_STR);
                     }
                 }
             };
@@ -95,8 +95,8 @@ public class StaticEventHandler {
                 if (this.mOnPreLoadExtraListeners == null) {
                     return;
                 }
-                if (C8063c.d) {
-                    C8063c.a("StaticEventHandler", "notifyPreloadStatusChanged with status[" + i + jn1.ARRAY_END_STR + " params[" + obj + jn1.ARRAY_END_STR);
+                if (c.d) {
+                    c.a("StaticEventHandler", "notifyPreloadStatusChanged with status[" + i + jn1.ARRAY_END_STR + " params[" + obj + jn1.ARRAY_END_STR);
                 }
                 String str = (String) obj;
                 for (Map.Entry<Integer, WeakReference<OnPreLoadExtraListener>> entry : this.mOnPreLoadExtraListeners.entrySet()) {
@@ -117,8 +117,8 @@ public class StaticEventHandler {
                 if (this.mOnTurboStatusListeners == null) {
                     return;
                 }
-                if (C8063c.d) {
-                    C8063c.a("StaticEventHandler", "notifyTurboStatusChanged with status[" + i + jn1.ARRAY_END_STR + " ErrorCode[" + i2 + "] params[" + obj + jn1.ARRAY_END_STR);
+                if (c.d) {
+                    c.a("StaticEventHandler", "notifyTurboStatusChanged with status[" + i + jn1.ARRAY_END_STR + " ErrorCode[" + i2 + "] params[" + obj + jn1.ARRAY_END_STR);
                 }
                 String str = (String) obj;
                 for (Map.Entry<Integer, WeakReference<OnTurboStatusListener>> entry : this.mOnTurboStatusListeners.entrySet()) {

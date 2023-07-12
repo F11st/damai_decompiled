@@ -16,11 +16,11 @@ public abstract class VirtualLayoutAdapter<VH extends RecyclerView.ViewHolder> e
     }
 
     @NonNull
-    public List<AbstractC3289a> getLayoutHelpers() {
+    public List<a> getLayoutHelpers() {
         return this.mLayoutManager.getLayoutHelpers();
     }
 
-    public void setLayoutHelpers(List<AbstractC3289a> list) {
+    public void setLayoutHelpers(List<a> list) {
         this.mLayoutManager.setLayoutHelpers(list);
     }
 }

@@ -20,7 +20,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.taobao.android.AliLogInterface;
 import com.taobao.android.dinamic.exception.DinamicException;
 import com.taobao.android.dinamic.tempate.DTemplateManager;
-import com.taobao.android.dinamicx.C6387n;
 import com.taobao.android.dinamicx.DXRootView;
 import com.taobao.android.dinamicx.template.download.DXTemplateItem;
 import com.taobao.android.ultron.common.model.IDMComponent;
@@ -37,19 +36,18 @@ public class n90 implements IViewHolderProvider {
     public static final String KEY_FESTRUE_VERSION = "1.0";
     public static final String TAG_DINAMICX_VIEW_COMPONENT = "DinamicXComponent";
     private static final Boolean d = Boolean.FALSE;
-    private C9466c a;
+    private c a;
     private ay2 b;
     private ViewGroup c;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.n90$a */
     /* loaded from: classes6.dex */
-    public class DialogInterface$OnClickListenerC9464a implements DialogInterface.OnClickListener {
+    public class a implements DialogInterface.OnClickListener {
         final /* synthetic */ View a;
         final /* synthetic */ String b;
 
-        DialogInterface$OnClickListenerC9464a(n90 n90Var, View view, String str) {
+        a(n90 n90Var, View view, String str) {
             this.a = view;
             this.b = str;
         }
@@ -63,12 +61,11 @@ public class n90 implements IViewHolderProvider {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.n90$b */
     /* loaded from: classes6.dex */
-    public class View$OnLongClickListenerC9465b implements View.OnLongClickListener {
+    public class b implements View.OnLongClickListener {
         final /* synthetic */ Dialog a;
 
-        View$OnLongClickListenerC9465b(n90 n90Var, Dialog dialog) {
+        b(n90 n90Var, Dialog dialog) {
             this.a = dialog;
         }
 
@@ -81,16 +78,15 @@ public class n90 implements IViewHolderProvider {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.n90$c */
     /* loaded from: classes6.dex */
-    public static class C9466c {
+    public static class c {
         private ay2 a;
         private int b = 0;
         private ArrayMap<String, Integer> c = new ArrayMap<>();
         private ArrayMap<Integer, DXTemplateItem> d = new ArrayMap<>();
         private ArrayMap<Integer, ArrayList<IDMComponent>> e = new ArrayMap<>();
 
-        public C9466c(ay2 ay2Var) {
+        public c(ay2 ay2Var) {
             this.a = ay2Var;
         }
 
@@ -132,7 +128,7 @@ public class n90 implements IViewHolderProvider {
 
     public n90(ay2 ay2Var) {
         this.b = ay2Var;
-        this.a = new C9466c(ay2Var);
+        this.a = new c(ay2Var);
         DTemplateManager.q(this.b.p()).p(DTemplateManager.CacheStrategy.STRATEGY_ALLOW_VERSION_DEGRADE);
         g();
     }
@@ -152,7 +148,7 @@ public class n90 implements IViewHolderProvider {
             str2 = str;
         }
         AlertDialog.Builder title = new AlertDialog.Builder(view.getContext()).setTitle(str);
-        frameLayout.setOnLongClickListener(new View$OnLongClickListenerC9465b(this, title.setMessage("version: " + str2 + StringUtils.LF + "url: " + str3).setPositiveButton("复制URL", new DialogInterface$OnClickListenerC9464a(this, view, str3)).create()));
+        frameLayout.setOnLongClickListener(new b(this, title.setMessage("version: " + str2 + StringUtils.LF + "url: " + str3).setPositiveButton("复制URL", new a(this, view, str3)).create()));
         frameLayout.addView(view);
         return frameLayout;
     }
@@ -184,9 +180,9 @@ public class n90 implements IViewHolderProvider {
         if (d.booleanValue()) {
             String str = dXTemplateItem.name;
             long currentTimeMillis = System.currentTimeMillis() - j;
-            AliLogInterface c = o4.c();
-            if (c != null) {
-                c.logd("ultron-view-kit", "templateName: " + str + "\n create duration -------> " + currentTimeMillis);
+            AliLogInterface c2 = o4.c();
+            if (c2 != null) {
+                c2.logd("ultron-view-kit", "templateName: " + str + "\n create duration -------> " + currentTimeMillis);
             }
         }
     }
@@ -243,10 +239,10 @@ public class n90 implements IViewHolderProvider {
         try {
             JSONObject data = iDMComponent.getData();
             int modifiedCount = iDMComponent.getModifiedCount();
-            Map<String, Object> a = recyclerViewHolder.a(iDMComponent);
-            a.putAll(this.b.m());
+            Map<String, Object> a2 = recyclerViewHolder.a(iDMComponent);
+            a2.putAll(this.b.m());
             View view = recyclerViewHolder.itemView;
-            C6387n d2 = this.b.n().d();
+            com.taobao.android.dinamicx.n d2 = this.b.n().d();
             int f = z00.f();
             int e = z00.e();
             if (view instanceof DXRootView) {
@@ -255,7 +251,7 @@ public class n90 implements IViewHolderProvider {
                 dXRootView = (DXRootView) view.findViewWithTag("DXRootView");
             }
             ViewGroup viewGroup = this.c;
-            t00<DXRootView> n = d2.n(this.b.l(), data, dXRootView, viewGroup != null ? View.MeasureSpec.makeMeasureSpec(viewGroup.getWidth(), 1073741824) : f, e, a);
+            t00<DXRootView> n = d2.n(this.b.l(), data, dXRootView, viewGroup != null ? View.MeasureSpec.makeMeasureSpec(viewGroup.getWidth(), 1073741824) : f, e, a2);
             if (dXRootView != null && r40.a(this.b.l())) {
                 dXRootView.setImportantForAccessibility(1);
                 if (TextUtils.isEmpty(iDMComponent.getTag())) {
@@ -267,14 +263,14 @@ public class n90 implements IViewHolderProvider {
             }
             if (n != null && n.c()) {
                 vt2.b("DinamicXViewHolderProvider", "bindData", "error component", iDMComponent.getTag(), iDMComponent.getType(), containerInfo != null ? containerInfo.toJSONString() : "");
-                String a2 = c90.a(n.a());
-                vt2.b("DinamicXViewHolderProvider", "bindData", WXImage.ERRORDESC, a2);
+                String a3 = c90.a(n.a());
+                vt2.b("DinamicXViewHolderProvider", "bindData", WXImage.ERRORDESC, a3);
                 String k = this.b.k();
-                UmbrellaTracker.commitFailureStability(KEY_FESTRUE_COMPONT, "bindDataError", "1.0", k, null, null, "bindDataError$" + string, a2);
+                UmbrellaTracker.commitFailureStability(KEY_FESTRUE_COMPONT, "bindDataError", "1.0", k, null, null, "bindDataError$" + string, a3);
                 if (r40.a(this.b.l())) {
                     AlertDialog create = new AlertDialog.Builder(this.b.l()).create();
                     create.setTitle("模板bind错误");
-                    create.setMessage("模板： " + string + StringUtils.LF + a2);
+                    create.setMessage("模板： " + string + StringUtils.LF + a3);
                     create.show();
                 }
             }
@@ -291,12 +287,12 @@ public class n90 implements IViewHolderProvider {
     public RecyclerViewHolder createViewHolder(ViewGroup viewGroup, int i) {
         long currentTimeMillis = System.currentTimeMillis();
         this.c = viewGroup;
-        DXTemplateItem b = this.a.b(i);
-        RecyclerViewHolder e = e(viewGroup, b, this.a.a(i));
-        if (b == null) {
+        DXTemplateItem b2 = this.a.b(i);
+        RecyclerViewHolder e = e(viewGroup, b2, this.a.a(i));
+        if (b2 == null) {
             return e;
         }
-        c(currentTimeMillis, b);
+        c(currentTimeMillis, b2);
         return e;
     }
 

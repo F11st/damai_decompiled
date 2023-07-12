@@ -3,13 +3,12 @@ package kotlin.reflect.jvm.internal.impl.types.checker;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
+import kotlin.b;
+import kotlin.collections.m;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function0;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.resolve.calls.inference.CapturedTypeConstructor;
@@ -44,7 +43,7 @@ public final class NewCapturedTypeConstructor implements CapturedTypeConstructor
         this.b = function0;
         this.c = newCapturedTypeConstructor;
         this.d = typeParameterDescriptor;
-        a = C8177b.a(LazyThreadSafetyMode.PUBLICATION, new Function0<List<? extends gu2>>() { // from class: kotlin.reflect.jvm.internal.impl.types.checker.NewCapturedTypeConstructor$_supertypes$2
+        a = b.a(LazyThreadSafetyMode.PUBLICATION, new Function0<List<? extends gu2>>() { // from class: kotlin.reflect.jvm.internal.impl.types.checker.NewCapturedTypeConstructor$_supertypes$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -75,7 +74,7 @@ public final class NewCapturedTypeConstructor implements CapturedTypeConstructor
         List<gu2> g;
         List<gu2> c = c();
         if (c == null) {
-            g = C8214m.g();
+            g = m.g();
             return g;
         }
         return c;
@@ -119,7 +118,7 @@ public final class NewCapturedTypeConstructor implements CapturedTypeConstructor
                 int q;
                 List<gu2> supertypes = NewCapturedTypeConstructor.this.getSupertypes();
                 b81 b81Var2 = b81Var;
-                q = C8215n.q(supertypes, 10);
+                q = n.q(supertypes, 10);
                 ArrayList arrayList = new ArrayList(q);
                 for (gu2 gu2Var : supertypes) {
                     arrayList.add(gu2Var.h(b81Var2));
@@ -156,7 +155,7 @@ public final class NewCapturedTypeConstructor implements CapturedTypeConstructor
 
     @Override // kotlin.reflect.jvm.internal.impl.types.TypeConstructor
     @NotNull
-    public AbstractC8271b getBuiltIns() {
+    public kotlin.reflect.jvm.internal.impl.builtins.b getBuiltIns() {
         z71 type = getProjection().getType();
         b41.h(type, "projection.type");
         return TypeUtilsKt.h(type);
@@ -172,7 +171,7 @@ public final class NewCapturedTypeConstructor implements CapturedTypeConstructor
     @NotNull
     public List<TypeParameterDescriptor> getParameters() {
         List<TypeParameterDescriptor> g;
-        g = C8214m.g();
+        g = m.g();
         return g;
     }
 

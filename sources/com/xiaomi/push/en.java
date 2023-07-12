@@ -2,7 +2,6 @@ package com.xiaomi.push;
 
 import android.content.Context;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.clientreport.data.Config;
 import com.xiaomi.clientreport.data.EventClientReport;
 import com.xiaomi.clientreport.data.PerfClientReport;
@@ -14,16 +13,15 @@ import java.util.Map;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class en {
-    private static InterfaceC7647a a;
+    private static a a;
 
     /* renamed from: a  reason: collision with other field name */
     private static Map<String, ht> f303a;
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.en$a */
     /* loaded from: classes11.dex */
-    public interface InterfaceC7647a {
-        void uploader(Context context, C7672hn c7672hn);
+    public interface a {
+        void uploader(Context context, hn hnVar);
     }
 
     public static int a(int i) {
@@ -88,22 +86,22 @@ public class en {
         return a2;
     }
 
-    public static C7672hn a(Context context, String str) {
+    public static hn a(Context context, String str) {
         if (TextUtils.isEmpty(str)) {
             return null;
         }
-        C7672hn c7672hn = new C7672hn();
-        c7672hn.d("category_client_report_data");
-        c7672hn.a("push_sdk_channel");
-        c7672hn.a(1L);
-        c7672hn.b(str);
-        c7672hn.a(true);
-        c7672hn.b(System.currentTimeMillis());
-        c7672hn.g(context.getPackageName());
-        c7672hn.e("com.xiaomi.xmsf");
-        c7672hn.f(com.xiaomi.push.service.bz.a());
-        c7672hn.c("quality_support");
-        return c7672hn;
+        hn hnVar = new hn();
+        hnVar.d("category_client_report_data");
+        hnVar.a("push_sdk_channel");
+        hnVar.a(1L);
+        hnVar.b(str);
+        hnVar.a(true);
+        hnVar.b(System.currentTimeMillis());
+        hnVar.g(context.getPackageName());
+        hnVar.e("com.xiaomi.xmsf");
+        hnVar.f(com.xiaomi.push.service.bz.a());
+        hnVar.c("quality_support");
+        return hnVar;
     }
 
     /* renamed from: a  reason: collision with other method in class */
@@ -137,14 +135,14 @@ public class en {
         ClientReportClient.init(context, config, new el(context), new em(context));
     }
 
-    private static void a(Context context, C7672hn c7672hn) {
+    private static void a(Context context, hn hnVar) {
         if (m860a(context.getApplicationContext())) {
-            com.xiaomi.push.service.ca.a(context.getApplicationContext(), c7672hn);
+            com.xiaomi.push.service.ca.a(context.getApplicationContext(), hnVar);
             return;
         }
-        InterfaceC7647a interfaceC7647a = a;
-        if (interfaceC7647a != null) {
-            interfaceC7647a.uploader(context, c7672hn);
+        a aVar = a;
+        if (aVar != null) {
+            aVar.uploader(context, hnVar);
         }
     }
 
@@ -154,18 +152,18 @@ public class en {
         }
         try {
             for (String str : list) {
-                C7672hn a2 = a(context, str);
+                hn a2 = a(context, str);
                 if (!com.xiaomi.push.service.bz.a(a2, false)) {
                     a(context, a2);
                 }
             }
         } catch (Throwable th) {
-            AbstractC7535b.d(th.getMessage());
+            com.xiaomi.channel.commonutils.logger.b.d(th.getMessage());
         }
     }
 
-    public static void a(InterfaceC7647a interfaceC7647a) {
-        a = interfaceC7647a;
+    public static void a(a aVar) {
+        a = aVar;
     }
 
     /* renamed from: a  reason: collision with other method in class */

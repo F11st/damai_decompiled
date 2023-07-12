@@ -21,15 +21,15 @@ public class PingTask {
     /* compiled from: Taobao */
     @Keep
     /* loaded from: classes2.dex */
-    public class PingFuture extends AsyncTask implements Future<C8875b> {
-        private C8875b _inner_response;
+    public class PingFuture extends AsyncTask implements Future<b> {
+        private b _inner_response;
         private long native_ptr;
 
         /* JADX INFO: Access modifiers changed from: private */
         public PingFuture start(String str, int i, int i2, int i3, int i4, PingTaskWatcher pingTaskWatcher) {
-            C8875b c8875b = new C8875b(i2);
-            this._inner_response = c8875b;
-            c8875b.g(pingTaskWatcher);
+            b bVar = new b(i2);
+            this._inner_response = bVar;
+            bVar.g(pingTaskWatcher);
             this.native_ptr = PingTask.createPingTask(this, str, i, i2, i3, i4);
             return this;
         }
@@ -76,7 +76,7 @@ public class PingTask {
         }
 
         @Override // java.util.concurrent.Future
-        public C8875b get() throws InterruptedException, ExecutionException {
+        public b get() throws InterruptedException, ExecutionException {
             try {
                 return get(0L, TimeUnit.SECONDS);
             } catch (TimeoutException e) {
@@ -86,7 +86,7 @@ public class PingTask {
         }
 
         @Override // java.util.concurrent.Future
-        public C8875b get(long j, TimeUnit timeUnit) throws InterruptedException, ExecutionException, TimeoutException {
+        public b get(long j, TimeUnit timeUnit) throws InterruptedException, ExecutionException, TimeoutException {
             synchronized (this) {
                 if (!this.done) {
                     long j2 = this.native_ptr;
@@ -123,11 +123,11 @@ public class PingTask {
     /* JADX INFO: Access modifiers changed from: private */
     public static native boolean waitPingTask(long j, long j2);
 
-    public Future<C8875b> launch() {
+    public Future<b> launch() {
         return launchWith(null);
     }
 
-    public Future<C8875b> launchWith(PingTaskWatcher pingTaskWatcher) {
+    public Future<b> launchWith(PingTaskWatcher pingTaskWatcher) {
         return new PingFuture().start(this.pingIPStr, this.interval, this.maxtime, this.payload, this.ttl, pingTaskWatcher);
     }
 

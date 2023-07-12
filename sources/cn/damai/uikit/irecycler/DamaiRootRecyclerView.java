@@ -71,12 +71,11 @@ public class DamaiRootRecyclerView extends RecyclerView {
     int refreshHeaderLayoutRes;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.irecycler.DamaiRootRecyclerView$a */
     /* loaded from: classes17.dex */
-    public class C2503a implements ValueAnimator.AnimatorUpdateListener {
+    public class a implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2503a() {
+        a() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -101,12 +100,11 @@ public class DamaiRootRecyclerView extends RecyclerView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.irecycler.DamaiRootRecyclerView$b */
     /* loaded from: classes8.dex */
-    public class C2504b extends vc2 {
+    public class b extends vc2 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2504b() {
+        b() {
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -159,12 +157,11 @@ public class DamaiRootRecyclerView extends RecyclerView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.irecycler.DamaiRootRecyclerView$c */
     /* loaded from: classes8.dex */
-    public class C2505c implements RefreshTrigger {
+    public class c implements RefreshTrigger {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2505c() {
+        c() {
         }
 
         @Override // cn.damai.uikit.irecycler.RefreshTrigger
@@ -235,9 +232,8 @@ public class DamaiRootRecyclerView extends RecyclerView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.irecycler.DamaiRootRecyclerView$d */
     /* loaded from: classes17.dex */
-    static /* synthetic */ class C2506d {
+    static /* synthetic */ class d {
         static final /* synthetic */ int[] a;
 
         static {
@@ -918,9 +914,9 @@ public class DamaiRootRecyclerView extends RecyclerView {
         this.mActivePointerId = -1;
         this.mLastTouchX = 0;
         this.mLastTouchY = 0;
-        this.mAnimatorUpdateListener = new C2503a();
-        this.mAnimationListener = new C2504b();
-        this.mRefreshTrigger = new C2505c();
+        this.mAnimatorUpdateListener = new a();
+        this.mAnimationListener = new b();
+        this.mRefreshTrigger = new c();
         this.mTouchSlop = ViewConfiguration.get(context).getScaledEdgeSlop();
         this.mContext = context;
         TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R$styleable.IRecyclerView, i, 0);
@@ -969,7 +965,7 @@ public class DamaiRootRecyclerView extends RecyclerView {
         if (view == null || !(view instanceof LoadMoreView)) {
             return;
         }
-        int i = C2506d.a[status.ordinal()];
+        int i = d.a[status.ordinal()];
         if (i == 1) {
             setKeepListenLoadMore(true);
         } else if (i == 2) {

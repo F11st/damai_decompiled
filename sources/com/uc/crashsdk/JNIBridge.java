@@ -2,10 +2,6 @@ package com.uc.crashsdk;
 
 import android.os.Looper;
 import android.os.Process;
-import com.uc.crashsdk.a.C7134a;
-import com.uc.crashsdk.a.C7139f;
-import com.uc.crashsdk.a.C7140g;
-import com.uc.crashsdk.a.RunnableC7138e;
 import com.uc.crashsdk.export.LogType;
 import com.youku.danmaku.engine.danmaku.model.android.DanmakuFactory;
 import java.io.File;
@@ -15,15 +11,15 @@ import java.util.Locale;
 /* loaded from: classes11.dex */
 public class JNIBridge {
     private static int addCachedInfo(String str, String str2) {
-        return C7133a.b(str, str2);
+        return a.b(str, str2);
     }
 
     private static int addDumpFile(String str, String str2, boolean z, boolean z2, int i, boolean z3) {
-        return C7133a.a(str, str2, z, z2, i, z3);
+        return a.a(str, str2, z, z2, i, z3);
     }
 
     private static void addHeaderInfo(String str, String str2) {
-        C7133a.a(str, str2);
+        a.a(str, str2);
     }
 
     public static long cmd(int i) {
@@ -31,38 +27,38 @@ public class JNIBridge {
     }
 
     private static int createCachedInfo(String str, int i, int i2) {
-        return C7133a.a(str, i, i2);
+        return a.a(str, i, i2);
     }
 
     private static boolean generateCustomLog(String str, String str2, long j, String str3, String str4, String str5, String str6) {
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append(str);
-        return C7146e.a(stringBuffer, str2, j, C7133a.c(str3), C7133a.c(str4), C7133a.c(str5), str6);
+        return e.a(stringBuffer, str2, j, a.c(str3), a.c(str4), a.c(str5), str6);
     }
 
     protected static String getCallbackInfo(String str, boolean z) {
-        return C7133a.a(str, z);
+        return a.a(str, z);
     }
 
     private static String getDatasForClientJavaLog(int i, String str) {
         boolean equals = "$all$".equals(str);
         if (i == 1) {
             if (equals) {
-                return C7133a.h();
+                return a.h();
             }
-            return C7133a.a(str);
+            return a.a(str);
         } else if (i == 2) {
             if (equals) {
-                return C7133a.j();
+                return a.j();
             }
-            return C7133a.a(str, true);
+            return a.a(str, true);
         } else if (i == 3) {
             if (equals) {
-                return C7133a.l();
+                return a.l();
             }
-            return C7133a.b(str);
+            return a.b(str);
         } else if (i == 4) {
-            return C7146e.d(str) ? "1" : "0";
+            return e.d(str) ? "1" : "0";
         } else {
             return null;
         }
@@ -73,7 +69,7 @@ public class JNIBridge {
             thread = Looper.getMainLooper().getThread();
         }
         if (thread != null) {
-            return C7146e.a(thread.getStackTrace(), "getJavaStackTrace").toString();
+            return e.a(thread.getStackTrace(), "getJavaStackTrace").toString();
         }
         return null;
     }
@@ -123,56 +119,56 @@ public class JNIBridge {
     public static native void nativeSetForeground(boolean z);
 
     private static void onCrashLogGenerated(String str, String str2, String str3, boolean z) {
-        boolean equals = C7146e.h().equals(str2);
+        boolean equals = e.h().equals(str2);
         boolean equals2 = LogType.NATIVE_TYPE.equals(str3);
-        if (!C7146e.F()) {
+        if (!e.F()) {
             if (equals && equals2) {
                 try {
-                    C7151f.c(true);
+                    f.c(true);
                 } catch (Throwable th) {
-                    C7140g.a(th);
+                    com.uc.crashsdk.a.g.a(th);
                 }
             }
-            str = C7146e.a(str);
+            str = e.a(str);
         }
-        C7145d.a(str, str2, str3);
-        if (C7146e.F()) {
+        d.a(str, str2, str3);
+        if (e.F()) {
             return;
         }
-        if (z || (!equals && C7152g.s())) {
-            C7146e.a(false, false);
+        if (z || (!equals && g.s())) {
+            e.a(false, false);
         } else if (equals) {
-            C7146e.b(equals2);
+            e.b(equals2);
         }
     }
 
     private static void onCrashRestarting() {
-        C7145d.a(false);
-        C7143b.N();
+        d.a(false);
+        b.N();
     }
 
     private static void onKillProcess(String str, int i, int i2) {
         String str2 = "onKillProcess. SIG: " + i2;
-        if (C7146e.a()) {
-            C7134a.b("crashsdk", str2);
+        if (e.a()) {
+            com.uc.crashsdk.a.a.b("crashsdk", str2);
         } else {
-            C7134a.a("crashsdk", str2);
+            com.uc.crashsdk.a.a.a("crashsdk", str2);
         }
-        StringBuilder f = C7146e.f("onKillProcess");
+        StringBuilder f = e.f("onKillProcess");
         Locale locale = Locale.US;
-        f.insert(0, String.format(locale, "State in disk: '%s'\n", C7143b.p()));
-        f.insert(0, String.format(locale, "SIG: %d, fg: %s, exiting: %s, main process: %s, time: %s\n", Integer.valueOf(i2), Boolean.valueOf(C7143b.B()), Boolean.valueOf(C7143b.u()), Boolean.valueOf(C7143b.F()), C7146e.n()));
-        f.insert(0, String.format(locale, "Kill PID: %d (%s) by pid: %d (%s) tid: %d (%s)\n", Integer.valueOf(i), C7146e.a(i), Integer.valueOf(Process.myPid()), C7146e.a(Process.myPid()), Integer.valueOf(Process.myTid()), Thread.currentThread().getName()));
+        f.insert(0, String.format(locale, "State in disk: '%s'\n", b.p()));
+        f.insert(0, String.format(locale, "SIG: %d, fg: %s, exiting: %s, main process: %s, time: %s\n", Integer.valueOf(i2), Boolean.valueOf(b.B()), Boolean.valueOf(b.u()), Boolean.valueOf(b.F()), e.n()));
+        f.insert(0, String.format(locale, "Kill PID: %d (%s) by pid: %d (%s) tid: %d (%s)\n", Integer.valueOf(i), e.a(i), Integer.valueOf(Process.myPid()), e.a(Process.myPid()), Integer.valueOf(Process.myTid()), Thread.currentThread().getName()));
         String sb = f.toString();
-        if (C7146e.a()) {
-            C7134a.b("crashsdk", sb);
+        if (e.a()) {
+            com.uc.crashsdk.a.a.b("crashsdk", sb);
         } else {
-            C7134a.a("crashsdk", sb);
+            com.uc.crashsdk.a.a.a("crashsdk", sb);
         }
-        if (C7143b.L()) {
+        if (b.L()) {
             return;
         }
-        C7140g.a(new File(str), sb.getBytes());
+        com.uc.crashsdk.a.g.a(new File(str), sb.getBytes());
     }
 
     private static String onNativeEvent(int i, long j, Object[] objArr) {
@@ -180,43 +176,43 @@ public class JNIBridge {
             case 1:
                 return String.valueOf(Runtime.getRuntime().maxMemory());
             case 2:
-                return C7146e.d();
+                return e.d();
             case 3:
                 if (objArr != null && objArr.length == 2 && (objArr[0] instanceof String) && (objArr[1] instanceof String)) {
-                    return C7146e.a((String) objArr[0], (String) objArr[1]);
+                    return e.a((String) objArr[0], (String) objArr[1]);
                 }
                 return null;
             case 4:
-                return C7146e.g();
+                return e.g();
             case 5:
-                C7133a.a(true);
+                a.a(true);
                 break;
             case 6:
-                return C7140g.d();
+                return com.uc.crashsdk.a.g.d();
             case 7:
-                C7139f.a(2, new RunnableC7138e(102), DanmakuFactory.DEFAULT_DANMAKU_DURATION);
-                C7146e.r();
+                com.uc.crashsdk.a.f.a(2, new com.uc.crashsdk.a.e(102), DanmakuFactory.DEFAULT_DANMAKU_DURATION);
+                e.r();
                 break;
         }
         return null;
     }
 
     private static int onPreClientCustomLog(String str, String str2, boolean z) {
-        C7152g.a();
-        C7146e.a(false);
-        if (C7146e.a(str, str2, z)) {
+        g.a();
+        e.a(false);
+        if (e.a(str, str2, z)) {
             return 0;
         }
-        C7146e.b(str, str2, z);
+        e.b(str, str2, z);
         return 1;
     }
 
     private static int registerCurrentThread(String str, int i) {
-        return C7133a.a(i, str);
+        return a.a(i, str);
     }
 
     private static int registerInfoCallback(String str, int i, long j, int i2) {
-        return C7133a.a(str, i, null, j, i2);
+        return a.a(str, i, null, j, i2);
     }
 
     public static long set(int i, boolean z) {

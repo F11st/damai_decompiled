@@ -111,7 +111,7 @@ public class TaskRunnerProviderImpl implements TaskRunnerProvider {
                     hashMap.put("dumpTaskInfo", um1.g().c());
                 }
             });
-            this.mMonitorConfig = new lh1.C9413a().f();
+            this.mMonitorConfig = new lh1.a().f();
             um1.g().k(new TaskTracker() { // from class: com.youku.middlewareservice_impl.provider.task.TaskRunnerProviderImpl.2
                 @Override // com.alibaba.android.onescheduler.TaskTracker
                 public void onCanceled(OneCommonTask oneCommonTask) {

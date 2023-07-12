@@ -6,9 +6,6 @@ import com.opensource.svgaplayer.proto.FrameEntity;
 import com.opensource.svgaplayer.proto.SpriteEntity;
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -36,8 +33,8 @@ public final class d52 {
                 JSONObject optJSONObject = optJSONArray.optJSONObject(i);
                 if (optJSONObject != null) {
                     e52 e52Var = new e52(optJSONObject);
-                    if ((!e52Var.d().isEmpty()) && (sVGAVideoShapeEntity = (SVGAVideoShapeEntity) C8212k.P(e52Var.d())) != null && sVGAVideoShapeEntity.e() && arrayList.size() > 0) {
-                        e52Var.f(((e52) C8212k.b0(arrayList)).d());
+                    if ((!e52Var.d().isEmpty()) && (sVGAVideoShapeEntity = (SVGAVideoShapeEntity) kotlin.collections.k.P(e52Var.d())) != null && sVGAVideoShapeEntity.e() && arrayList.size() > 0) {
+                        e52Var.f(((e52) kotlin.collections.k.b0(arrayList)).d());
                     }
                     arrayList.add(e52Var);
                 }
@@ -65,20 +62,20 @@ public final class d52 {
         this.a = spriteEntity.imageKey;
         List<FrameEntity> list = spriteEntity.frames;
         if (list != null) {
-            q = C8215n.q(list, 10);
+            q = kotlin.collections.n.q(list, 10);
             g = new ArrayList<>(q);
             e52 e52Var = null;
             for (FrameEntity frameEntity : list) {
                 b41.e(frameEntity, AdvanceSetting.NETWORK_TYPE);
                 e52 e52Var2 = new e52(frameEntity);
-                if ((!e52Var2.d().isEmpty()) && (sVGAVideoShapeEntity = (SVGAVideoShapeEntity) C8212k.P(e52Var2.d())) != null && sVGAVideoShapeEntity.e() && e52Var != null) {
+                if ((!e52Var2.d().isEmpty()) && (sVGAVideoShapeEntity = (SVGAVideoShapeEntity) kotlin.collections.k.P(e52Var2.d())) != null && sVGAVideoShapeEntity.e() && e52Var != null) {
                     e52Var2.f(e52Var.d());
                 }
                 g.add(e52Var2);
                 e52Var = e52Var2;
             }
         } else {
-            g = C8214m.g();
+            g = kotlin.collections.m.g();
         }
         this.b = g;
     }

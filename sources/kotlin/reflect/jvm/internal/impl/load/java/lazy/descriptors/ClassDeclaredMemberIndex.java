@@ -8,10 +8,10 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8225w;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.m;
+import kotlin.collections.n;
+import kotlin.collections.w;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClass;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaField;
@@ -100,8 +100,8 @@ public class ClassDeclaredMemberIndex implements DeclaredMemberIndex {
                 arrayList.add(obj4);
             }
         }
-        q = C8215n.q(arrayList, 10);
-        e = C8225w.e(q);
+        q = n.q(arrayList, 10);
+        e = w.e(q);
         a = ty1.a(e, 16);
         LinkedHashMap linkedHashMap3 = new LinkedHashMap(a);
         for (Object obj5 : arrayList) {
@@ -124,7 +124,7 @@ public class ClassDeclaredMemberIndex implements DeclaredMemberIndex {
         b41.i(ni1Var, "name");
         List<JavaMethod> list = this.d.get(ni1Var);
         if (list == null) {
-            g = C8214m.g();
+            g = m.g();
             return g;
         }
         return list;

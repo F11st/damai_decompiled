@@ -126,10 +126,9 @@ public class WaveSwipeHeader extends InternalAbstract implements RefreshHeader {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.WaveSwipeHeader$a */
     /* loaded from: classes6.dex */
-    class C6166a implements ValueAnimator.AnimatorUpdateListener {
-        C6166a() {
+    class a implements ValueAnimator.AnimatorUpdateListener {
+        a() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -141,10 +140,9 @@ public class WaveSwipeHeader extends InternalAbstract implements RefreshHeader {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.WaveSwipeHeader$b  reason: invalid class name */
     /* loaded from: classes6.dex */
-    class animationAnimation$AnimationListenerC6167b implements Animation.AnimationListener {
-        animationAnimation$AnimationListenerC6167b() {
+    class b implements Animation.AnimationListener {
+        b() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -164,9 +162,8 @@ public class WaveSwipeHeader extends InternalAbstract implements RefreshHeader {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.WaveSwipeHeader$c */
     /* loaded from: classes6.dex */
-    static /* synthetic */ class C6168c {
+    static /* synthetic */ class c {
         static final /* synthetic */ int[] a;
 
         static {
@@ -216,7 +213,7 @@ public class WaveSwipeHeader extends InternalAbstract implements RefreshHeader {
             }
         };
         animation.setDuration(200L);
-        this.mCircleView.setAnimationListener(new animationAnimation$AnimationListenerC6167b());
+        this.mCircleView.setAnimationListener(new b());
         progressAnimationImageView.clearAnimation();
         progressAnimationImageView.startAnimation(animation);
         return 0;
@@ -285,7 +282,7 @@ public class WaveSwipeHeader extends InternalAbstract implements RefreshHeader {
         ValueAnimator ofFloat = ValueAnimator.ofFloat(0.0f, 0.0f);
         ofFloat.setDuration(500L);
         ofFloat.setInterpolator(new AccelerateDecelerateInterpolator());
-        ofFloat.addUpdateListener(new C6166a());
+        ofFloat.addUpdateListener(new a());
         ofFloat.start();
     }
 
@@ -293,7 +290,7 @@ public class WaveSwipeHeader extends InternalAbstract implements RefreshHeader {
     public void onStateChanged(@NonNull RefreshLayout refreshLayout, @NonNull RefreshState refreshState, @NonNull RefreshState refreshState2) {
         ProgressAnimationImageView progressAnimationImageView = this.mCircleView;
         this.mState = refreshState2;
-        int i = C6168c.a[refreshState2.ordinal()];
+        int i = c.a[refreshState2.ordinal()];
         if (i == 2) {
             this.mProgress.l(true);
             progressAnimationImageView.setScaleX(1.0f);

@@ -66,7 +66,7 @@ public class AILPLivePenetrateFrameLayout extends FrameLayout implements View.On
             return;
         }
         if (this.backView == null) {
-            this.backView = FrameLayout.inflate(context, R.C7942layout.dago_pgc_live_weex_layer_back, null);
+            this.backView = FrameLayout.inflate(context, R.layout.dago_pgc_live_weex_layer_back, null);
         }
         removeView(this.backView);
         addView(this.backView);

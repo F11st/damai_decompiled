@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeSource;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.fuseable.HasUpstreamMaybeSource;
@@ -11,7 +11,7 @@ import org.reactivestreams.Subscriber;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeToFlowable<T> extends AbstractC8147b<T> implements HasUpstreamMaybeSource<T> {
+public final class MaybeToFlowable<T> extends b<T> implements HasUpstreamMaybeSource<T> {
     final MaybeSource<T> source;
 
     /* compiled from: Taobao */
@@ -63,7 +63,7 @@ public final class MaybeToFlowable<T> extends AbstractC8147b<T> implements HasUp
         return this.source;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe(new MaybeToFlowableSubscriber(subscriber));
     }

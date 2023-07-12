@@ -21,7 +21,7 @@ import com.alipay.android.phone.mobilesdk.socketcraft.handshake.ServerHandshakeB
 import com.alipay.android.phone.mobilesdk.socketcraft.util.Base64;
 import com.alipay.android.phone.mobilesdk.socketcraft.util.Charsetfunctions;
 import com.alipay.android.phone.mobilesdk.socketcraft.util.WsMessageConstants;
-import com.alipay.sdk.m.n.C4250a;
+import com.alipay.sdk.m.n.a;
 import com.squareup.okhttp.internal.ws.WebSocketProtocol;
 import java.math.BigInteger;
 import java.nio.ByteBuffer;
@@ -163,7 +163,7 @@ public class Draft_10 extends Draft {
         byte b = b(framedata.getOpcode());
         boolean isFin = framedata.isFin();
         byte b2 = cu2.MAX_POWER_OF_TWO;
-        allocate.put((byte) (((byte) (isFin ? C4250a.g : 0)) | b));
+        allocate.put((byte) (((byte) (isFin ? a.g : 0)) | b));
         byte[] d = d(payloadData.remaining(), i2);
         if (i2 == 1) {
             byte b3 = d[0];

@@ -1,7 +1,6 @@
 package com.xiaomi.push;
 
 import android.content.Context;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.service.XMJobService;
 import tb.jn1;
 
@@ -10,7 +9,7 @@ import tb.jn1;
 public final class eu {
 
     /* renamed from: a  reason: collision with other field name */
-    private static InterfaceC7648a f318a;
+    private static a f318a;
 
     /* renamed from: a  reason: collision with other field name */
     private static final String f319a = XMJobService.class.getCanonicalName();
@@ -18,9 +17,8 @@ public final class eu {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.eu$a */
     /* loaded from: classes11.dex */
-    public interface InterfaceC7648a {
+    public interface a {
         void a();
 
         void a(boolean z);
@@ -34,13 +32,13 @@ public final class eu {
             if (f318a == null) {
                 return;
             }
-            AbstractC7535b.m586a("[Alarm] stop alarm.");
+            com.xiaomi.channel.commonutils.logger.b.m586a("[Alarm] stop alarm.");
             f318a.a();
         }
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:18:0x005a, code lost:
-        if (r7.equals(com.xiaomi.push.C7786v.a(r9, r6.name).getSuperclass().getCanonicalName()) != false) goto L19;
+        if (r7.equals(com.xiaomi.push.v.a(r9, r6.name).getSuperclass().getCanonicalName()) != false) goto L19;
      */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
@@ -85,7 +83,7 @@ public final class eu {
             goto L5e
         L48:
             java.lang.String r8 = r6.name     // Catch: java.lang.Exception -> L5d
-            java.lang.Class r8 = com.xiaomi.push.C7786v.a(r9, r8)     // Catch: java.lang.Exception -> L5d
+            java.lang.Class r8 = com.xiaomi.push.v.a(r9, r8)     // Catch: java.lang.Exception -> L5d
             java.lang.Class r8 = r8.getSuperclass()     // Catch: java.lang.Exception -> L5d
             java.lang.String r8 = r8.getCanonicalName()     // Catch: java.lang.Exception -> L5d
             boolean r7 = r7.equals(r8)     // Catch: java.lang.Exception -> L5d
@@ -125,10 +123,10 @@ public final class eu {
             java.lang.String r1 = r1.getMessage()
             r3.append(r1)
             java.lang.String r1 = r3.toString()
-            com.xiaomi.channel.commonutils.logger.AbstractC7535b.m586a(r1)
+            com.xiaomi.channel.commonutils.logger.b.m586a(r1)
         L96:
             if (r2 != 0) goto Lc5
-            boolean r1 = com.xiaomi.push.C7786v.m1248a(r9)
+            boolean r1 = com.xiaomi.push.v.m1248a(r9)
             if (r1 != 0) goto L9f
             goto Lc5
         L9f:
@@ -172,7 +170,7 @@ public final class eu {
             int i3 = a;
             if (i2 != i3 && i3 == 2) {
                 a();
-                f318a = new C7649ex(context);
+                f318a = new ex(context);
             }
         }
     }
@@ -180,10 +178,10 @@ public final class eu {
     public static synchronized void a(boolean z) {
         synchronized (eu.class) {
             if (f318a == null) {
-                AbstractC7535b.m586a("timer is not initialized");
+                com.xiaomi.channel.commonutils.logger.b.m586a("timer is not initialized");
                 return;
             }
-            AbstractC7535b.m586a("[Alarm] register alarm. (" + z + jn1.BRACKET_END_STR);
+            com.xiaomi.channel.commonutils.logger.b.m586a("[Alarm] register alarm. (" + z + jn1.BRACKET_END_STR);
             f318a.a(z);
         }
     }
@@ -191,11 +189,11 @@ public final class eu {
     /* renamed from: a  reason: collision with other method in class */
     public static synchronized boolean m872a() {
         synchronized (eu.class) {
-            InterfaceC7648a interfaceC7648a = f318a;
-            if (interfaceC7648a == null) {
+            a aVar = f318a;
+            if (aVar == null) {
                 return false;
             }
-            return interfaceC7648a.mo873a();
+            return aVar.mo873a();
         }
     }
 }

@@ -31,7 +31,7 @@ public final class di {
             try {
                 cwVar.a(dhVar.d);
                 byte[] b = dhVar.e.b(bArr);
-                cw.C4405a b2 = cwVar.b(str);
+                cw.a b2 = cwVar.b(str);
                 outputStream = b2.a();
                 outputStream.write(b);
                 b2.b();

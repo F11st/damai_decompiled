@@ -11,23 +11,22 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes11.dex */
 public final class qm {
     @NotNull
-    public static final C9608a Companion = new C9608a(null);
+    public static final a Companion = new a(null);
     private static Pattern a = Pattern.compile("^(http|https):.*(\\.|//)((taopiaopiao|youku|tmall|taobao|alipay|alipay-eco|shuqiread|pstatp|dushemovie|tudou|fliggy|koubei|yuekeyun|mikecrm|ankerjiedian|laiwang|xiami|alimei|dongting|goofish|alibaba|aliresearch|alibabagroup|aliexpress|alimama|aliyun|juhuasuan|dingtalk|etao|hitao|95095|alicdn|myqcloud|taohua|shuqi|azusasoft|agtcdn|kuaishou|b1yq|iqima|(public-oss\\\\\\\\.futurehotel)|diditaxi|alibaba-inc)\\.com|(damai|tb|piao|uc|5zhua|mashort|html5case\\.com|hsbc\\.com|duiba\\.com|xianshang\\.hydron\\.com|catchme\\.com)\\.cn|(alipay|alibaba|agtcdn)\\.net|(tmall)\\.hk|(ele)\\.me)(\\?|#|/|:|$)", 2);
     @Nullable
     private static Pattern b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qm$a */
     /* loaded from: classes11.dex */
-    public static final class C9608a {
+    public static final class a {
 
         /* compiled from: Taobao */
-        /* renamed from: tb.qm$a$a */
+        /* renamed from: tb.qm$a$a  reason: collision with other inner class name */
         /* loaded from: classes11.dex */
-        static final class C9609a implements OConfigListener {
-            public static final C9609a INSTANCE = new C9609a();
+        static final class C0462a implements OConfigListener {
+            public static final C0462a INSTANCE = new C0462a();
 
-            C9609a() {
+            C0462a() {
             }
 
             /* JADX WARN: Removed duplicated region for block: B:53:0x00a6  */
@@ -148,15 +147,15 @@ public final class qm {
                 Lb2:
                     return
                 */
-                throw new UnsupportedOperationException("Method not decompiled: tb.qm.C9608a.C9609a.onConfigUpdate(java.lang.String, java.util.Map):void");
+                throw new UnsupportedOperationException("Method not decompiled: tb.qm.a.C0462a.onConfigUpdate(java.lang.String, java.util.Map):void");
             }
         }
 
-        private C9608a() {
+        private a() {
         }
 
         public final void a() {
-            OrangeConfig.getInstance().registerListener(new String[]{"movie_windvane"}, C9609a.INSTANCE, true);
+            OrangeConfig.getInstance().registerListener(new String[]{"movie_windvane"}, C0462a.INSTANCE, true);
         }
 
         @Nullable
@@ -206,7 +205,7 @@ public final class qm {
             qm.b = pattern;
         }
 
-        public /* synthetic */ C9608a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

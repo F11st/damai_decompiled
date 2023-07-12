@@ -23,15 +23,14 @@ public class tf0 {
     private ITaskTools d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.tf0$b */
     /* loaded from: classes5.dex */
-    private static class C9726b {
+    private static class b {
         private static final tf0 a = new tf0();
     }
 
     @NonNull
     public static tf0 a() {
-        return C9726b.a;
+        return b.a;
     }
 
     public void b(@NonNull OneCommonTask oneCommonTask) {

@@ -19,10 +19,10 @@ public class bw1 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
 
     @Override // cn.damai.tetris.v2.convertor.IConverter
     /* renamed from: a */
-    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, C9039db c9039db) {
+    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, db dbVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1315417250")) {
-            return (List) ipChange.ipc$dispatch("-1315417250", new Object[]{this, baseResponse, baseSection, globalConfig, c9039db});
+            return (List) ipChange.ipc$dispatch("-1315417250", new Object[]{this, baseResponse, baseSection, globalConfig, dbVar});
         }
         CategoryItemListInfo a = pg.a(baseResponse);
         NodeData item = baseSection.getItem();
@@ -30,7 +30,7 @@ public class bw1 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
             item = new NodeData();
         }
         item.put("itemInfo", (Object) a);
-        Node n = c9039db.n(baseSection, globalConfig, item);
+        Node n = dbVar.n(baseSection, globalConfig, item);
         ArrayList arrayList = new ArrayList();
         if (n != null) {
             arrayList.add(n);

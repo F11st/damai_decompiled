@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -27,15 +26,14 @@ public class MessageAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.message.ui.adapter.MessageAdapter$a */
     /* loaded from: classes15.dex */
-    class C1350a {
+    class a {
         TextView a;
         TextView b;
         TextView c;
         RoundImageView d;
 
-        C1350a(MessageAdapter messageAdapter) {
+        a(MessageAdapter messageAdapter) {
         }
     }
 
@@ -60,45 +58,45 @@ public class MessageAdapter extends BaseAdapter {
     @Override // android.widget.Adapter
     public View getView(int i, View view, ViewGroup viewGroup) {
         View view2;
-        C1350a c1350a;
+        a aVar;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-2146099062")) {
             return (View) ipChange.ipc$dispatch("-2146099062", new Object[]{this, Integer.valueOf(i), view, viewGroup});
         }
         if (view == null) {
-            c1350a = new C1350a(this);
+            aVar = new a(this);
             view2 = this.mInflater.inflate(R$layout.item_msg_content_layout, (ViewGroup) null);
-            c1350a.d = (RoundImageView) view2.findViewById(R$id.iv_msg_icon);
-            c1350a.a = (TextView) view2.findViewById(R$id.tv_msg_title);
-            c1350a.b = (TextView) view2.findViewById(R$id.tv_msg_time);
-            c1350a.c = (TextView) view2.findViewById(R$id.tv_msg_content);
-            view2.setTag(c1350a);
+            aVar.d = (RoundImageView) view2.findViewById(R$id.iv_msg_icon);
+            aVar.a = (TextView) view2.findViewById(R$id.tv_msg_title);
+            aVar.b = (TextView) view2.findViewById(R$id.tv_msg_time);
+            aVar.c = (TextView) view2.findViewById(R$id.tv_msg_content);
+            view2.setTag(aVar);
         } else {
             view2 = view;
-            c1350a = (C1350a) view.getTag();
+            aVar = (a) view.getTag();
         }
         MessageItem messageItem = this.data.get(i);
         String gmtCreate = messageItem.getGmtCreate();
         String str = "";
         if (TextUtils.isEmpty(gmtCreate)) {
-            c1350a.b.setText("");
+            aVar.b.setText("");
         } else {
-            c1350a.b.setText(gmtCreate);
+            aVar.b.setText(gmtCreate);
         }
-        c1350a.a.setText(messageItem.getTitle());
-        c1350a.c.setText(messageItem.getMsgBody());
+        aVar.a.setText(messageItem.getTitle());
+        aVar.c.setText(messageItem.getMsgBody());
         if (messageItem.getActionType() != 3) {
-            DMImageCreator c = C0504a.b().c(messageItem.getImageUrl());
+            DMImageCreator c = cn.damai.common.image.a.b().c(messageItem.getImageUrl());
             int i2 = R$drawable.dm_default_logo;
-            c.i(i2).c(i2).g(c1350a.d);
+            c.i(i2).c(i2).g(aVar.d);
         } else if (!TextUtils.isEmpty(messageItem.getActionValue())) {
             try {
                 str = String.format("https://pimg.dmcdn.cn/perform/project/%s/%s_n.jpg", Integer.valueOf(Integer.valueOf(messageItem.getActionValue()).intValue() / 100), messageItem.getActionValue());
             } catch (NumberFormatException unused) {
             }
-            DMImageCreator c2 = C0504a.b().c(str);
+            DMImageCreator c2 = cn.damai.common.image.a.b().c(str);
             int i3 = R$drawable.dm_default_logo;
-            c2.i(i3).c(i3).g(c1350a.d);
+            c2.i(i3).c(i3).g(aVar.d);
         }
         return view2;
     }

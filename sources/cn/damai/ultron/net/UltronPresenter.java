@@ -3,20 +3,18 @@ package cn.damai.ultron.net;
 import android.app.Activity;
 import cn.damai.common.AppConfig;
 import cn.damai.common.net.mtop.Util;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.message.observer.Action;
 import cn.damai.ultron.utils.DmBuildRequestCallBackImp;
 import cn.damai.ultron.utils.DmUltronConstants;
 import cn.damai.ultron.utils.DmUltronRequestErrorUtils;
 import cn.damai.ultron.view.activity.DmOrderActivity;
-import com.alibaba.android.ultron.trade.data.request.AbstractC3246a;
 import com.alibaba.android.ultron.trade.event.base.ISubscriber;
-import com.alibaba.android.ultron.trade.presenter.AbstractC3258a;
+import com.alibaba.android.ultron.trade.presenter.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.android.ultron.datamodel.IDMContext;
-import com.taobao.android.ultron.datamodel.imp.C6661a;
 import com.taobao.android.ultron.datamodel.imp.DMComponent;
 import com.taobao.weex.annotation.JSMethod;
 import java.util.HashMap;
@@ -39,7 +37,7 @@ import tb.z20;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
-public class UltronPresenter extends AbstractC3258a {
+public class UltronPresenter extends a {
     private static transient /* synthetic */ IpChange $ipChange;
     private DmBuildRequestCallBackImp mBuildRequestCallBackImp;
     private UltronDataManager mDataManager;
@@ -72,7 +70,7 @@ public class UltronPresenter extends AbstractC3258a {
             hashMap.put("discount_type_id", ua0.d(getContext()));
             hashMap.put("item_id", ua0.b(getContext()) + "");
             hashMap.put("usercode", z20.E());
-            C0529c.e().A(hashMap, pp2.CUSTOM_ORDER, pp2.PROJRCT_CONFIRM_PAY);
+            c.e().A(hashMap, pp2.CUSTOM_ORDER, pp2.PROJRCT_CONFIRM_PAY);
         } catch (Exception unused) {
         }
     }
@@ -122,7 +120,7 @@ public class UltronPresenter extends AbstractC3258a {
                 UltronPresenter ultronPresenter = UltronPresenter.this;
                 ultronPresenter.rebuild(ultronPresenter.mDataManager.getDataSource());
                 UltronPresenter.this.mDataManager.setDataContext(iDMContext);
-                mb0.j(((AbstractC3258a) UltronPresenter.this).mContext, mtopResponse);
+                mb0.j(((a) UltronPresenter.this).mContext, mtopResponse);
             }
         });
     }
@@ -133,7 +131,7 @@ public class UltronPresenter extends AbstractC3258a {
             ipChange.ipc$dispatch("847679353", new Object[]{this});
             return;
         }
-        C0529c.e().x(kb0.u().n(this.mContext));
+        c.e().x(kb0.u().n(this.mContext));
         xw2 xw2Var = null;
         UltronDataManager ultronDataManager = this.mDataManager;
         if (ultronDataManager != null && ultronDataManager.getDataContext() != null) {
@@ -155,7 +153,7 @@ public class UltronPresenter extends AbstractC3258a {
             ipChange.ipc$dispatch("513444324", new Object[]{this});
             return;
         }
-        AbstractC3246a createRequester = this.mDataManager.getCreateRequester();
+        com.alibaba.android.ultron.trade.data.request.a createRequester = this.mDataManager.getCreateRequester();
         showLoading();
         createRequester.sendRequest(new f1() { // from class: cn.damai.ultron.net.UltronPresenter.7
             private static transient /* synthetic */ IpChange $ipChange;
@@ -192,8 +190,8 @@ public class UltronPresenter extends AbstractC3258a {
                     return;
                 }
                 UltronPresenter.this.dismissLoading();
-                ((AbstractC3258a) UltronPresenter.this).mTradeEventHandler.h(((AbstractC3258a) UltronPresenter.this).mTradeEventHandler.d().l(gb0.submitSuccessEvent).k(mtopResponse));
-                mb0.j(((AbstractC3258a) UltronPresenter.this).mContext, mtopResponse);
+                ((a) UltronPresenter.this).mTradeEventHandler.h(((a) UltronPresenter.this).mTradeEventHandler.d().l(gb0.submitSuccessEvent).k(mtopResponse));
+                mb0.j(((a) UltronPresenter.this).mContext, mtopResponse);
             }
         }, this.mDataManager.getDataContext(), null);
     }
@@ -214,7 +212,7 @@ public class UltronPresenter extends AbstractC3258a {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.alibaba.android.ultron.trade.presenter.AbstractC3258a
+    @Override // com.alibaba.android.ultron.trade.presenter.a
     public void initEventSubscriber() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1554472519")) {
@@ -273,9 +271,9 @@ public class UltronPresenter extends AbstractC3258a {
                         ipChange2.ipc$dispatch("-1174827143", new Object[]{this, dMComponent});
                         return;
                     }
-                    C6661a c6661a = (C6661a) UltronPresenter.this.mDataManager.getDataContext();
-                    if (c6661a != null) {
-                        Map<String, DMComponent> c = c6661a.c();
+                    com.taobao.android.ultron.datamodel.imp.a aVar = (com.taobao.android.ultron.datamodel.imp.a) UltronPresenter.this.mDataManager.getDataContext();
+                    if (aVar != null) {
+                        Map<String, DMComponent> c = aVar.c();
                         c.put(dMComponent.getTag() + JSMethod.NOT_SET + dMComponent.getId(), dMComponent);
                     }
                 }
@@ -332,7 +330,7 @@ public class UltronPresenter extends AbstractC3258a {
         }
         UltronViewManager ultronViewManager = this.mViewManager;
         if (ultronViewManager != null) {
-            ultronViewManager.v3RegisterDinamicXView(su.DXDMINPUT_DMINPUT, new su.C9700a());
+            ultronViewManager.v3RegisterDinamicXView(su.DXDMINPUT_DMINPUT, new su.a());
         }
     }
 
@@ -365,13 +363,13 @@ public class UltronPresenter extends AbstractC3258a {
         }
     }
 
-    @Override // com.alibaba.android.ultron.trade.presenter.AbstractC3258a, com.alibaba.android.ultron.trade.presenter.IPresenter
+    @Override // com.alibaba.android.ultron.trade.presenter.a, com.alibaba.android.ultron.trade.presenter.IPresenter
     public UltronDataManager getDataManager() {
         IpChange ipChange = $ipChange;
         return AndroidInstantRuntime.support(ipChange, "-83729722") ? (UltronDataManager) ipChange.ipc$dispatch("-83729722", new Object[]{this}) : this.mDataManager;
     }
 
-    @Override // com.alibaba.android.ultron.trade.presenter.AbstractC3258a, com.alibaba.android.ultron.trade.presenter.IPresenter
+    @Override // com.alibaba.android.ultron.trade.presenter.a, com.alibaba.android.ultron.trade.presenter.IPresenter
     public UltronViewManager getViewManager() {
         IpChange ipChange = $ipChange;
         return AndroidInstantRuntime.support(ipChange, "-1129329732") ? (UltronViewManager) ipChange.ipc$dispatch("-1129329732", new Object[]{this}) : this.mViewManager;

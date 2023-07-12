@@ -2,7 +2,7 @@ package com.taobao.android.dinamicx.monitor;
 
 import android.text.TextUtils;
 import androidx.annotation.NonNull;
-import com.taobao.android.dinamicx.C6368e;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.template.download.DXTemplateItem;
 import com.taobao.android.dinamicx.thread.DXMonitorRunnable;
 import com.youku.live.livesdk.model.mtop.LiveFullInfo;
@@ -55,37 +55,37 @@ public class DXUmbrellaUtil {
     /* renamed from: com.taobao.android.dinamicx.monitor.DXUmbrellaUtil$2  reason: invalid class name */
     /* loaded from: classes11.dex */
     static class AnonymousClass2 extends DXMonitorRunnable {
-        final /* synthetic */ C6368e val$error;
+        final /* synthetic */ e val$error;
         final /* synthetic */ boolean val$isSimplePipeline;
 
-        AnonymousClass2(C6368e c6368e, boolean z) {
-            this.val$error = c6368e;
+        AnonymousClass2(e eVar, boolean z) {
+            this.val$error = eVar;
             this.val$isSimplePipeline = z;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            List<C6368e.C6369a> list;
+            List<e.a> list;
             try {
-                C6368e c6368e = this.val$error;
-                if (c6368e != null && (list = c6368e.c) != null && !list.isEmpty()) {
+                e eVar = this.val$error;
+                if (eVar != null && (list = eVar.c) != null && !list.isEmpty()) {
                     int size = this.val$error.c.size();
                     int i = size - 1;
                     for (int i2 = 0; i2 < size; i2++) {
-                        C6368e.C6369a c6369a = this.val$error.c.get(i2);
-                        if (c6369a != null) {
+                        e.a aVar = this.val$error.c.get(i2);
+                        if (aVar != null) {
                             if (this.val$isSimplePipeline) {
-                                c6369a.c = "SimplePipeline" + c6369a.c;
+                                aVar.c = "SimplePipeline" + aVar.c;
                             }
                             if (i2 == i) {
-                                C6368e c6368e2 = this.val$error;
-                                DXUmbrellaUtil.n(c6368e2.a, c6368e2.b, c6369a);
-                                C6368e c6368e3 = this.val$error;
-                                DXUmbrellaUtil.j(c6368e3.a, c6368e3.b, c6369a);
+                                e eVar2 = this.val$error;
+                                DXUmbrellaUtil.n(eVar2.a, eVar2.b, aVar);
+                                e eVar3 = this.val$error;
+                                DXUmbrellaUtil.j(eVar3.a, eVar3.b, aVar);
                                 return;
                             }
-                            C6368e c6368e4 = this.val$error;
-                            DXUmbrellaUtil.n(c6368e4.a, c6368e4.b, c6369a);
+                            e eVar4 = this.val$error;
+                            DXUmbrellaUtil.n(eVar4.a, eVar4.b, aVar);
                         }
                     }
                 }
@@ -104,32 +104,32 @@ public class DXUmbrellaUtil {
         return str + "_umbrella2";
     }
 
-    private static Map<String, Object> h(DXTemplateItem dXTemplateItem, C6368e.C6369a c6369a) {
+    private static Map<String, Object> h(DXTemplateItem dXTemplateItem, e.a aVar) {
         HashMap hashMap = new HashMap();
         if (dXTemplateItem != null) {
             hashMap.put(b20.a, dXTemplateItem.name);
             hashMap.put(b20.b, Long.valueOf(dXTemplateItem.version));
             hashMap.put(b20.c, dXTemplateItem.templateUrl);
         }
-        if (c6369a != null) {
-            hashMap.put(b20.d, c6369a.b);
+        if (aVar != null) {
+            hashMap.put(b20.d, aVar.b);
         }
         return hashMap;
     }
 
-    public static void i(C6368e c6368e, boolean z) {
+    public static void i(e eVar, boolean z) {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static void j(String str, DXTemplateItem dXTemplateItem, C6368e.C6369a c6369a) {
-        if (c6369a == null) {
+    public static void j(String str, DXTemplateItem dXTemplateItem, e.a aVar) {
+        if (aVar == null) {
             return;
         }
-        String g = g(c6369a.c);
+        String g = g(aVar.c);
         m();
-        Map<String, String> l = l(str, g, c6369a.b, dXTemplateItem, c6369a.f);
-        String str2 = "" + c6369a.d;
-        String str3 = c6369a.e;
+        Map<String, String> l = l(str, g, aVar.b, dXTemplateItem, aVar.f);
+        String str2 = "" + aVar.d;
+        String str3 = aVar.e;
         if (l != null) {
             l.put("errorMsg", str3);
             l.put("errorCode", str2);
@@ -181,16 +181,16 @@ public class DXUmbrellaUtil {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static void n(String str, DXTemplateItem dXTemplateItem, C6368e.C6369a c6369a) {
-        if (c6369a == null) {
+    public static void n(String str, DXTemplateItem dXTemplateItem, e.a aVar) {
+        if (aVar == null) {
             return;
         }
-        String g = g(c6369a.c);
-        String str2 = "" + c6369a.d;
-        String str3 = c6369a.e;
-        h(dXTemplateItem, c6369a);
+        String g = g(aVar.c);
+        String str2 = "" + aVar.d;
+        String str3 = aVar.e;
+        h(dXTemplateItem, aVar);
         HashMap hashMap = new HashMap();
-        Map<String, String> l = l(str, g, c6369a.b, dXTemplateItem, c6369a.f);
+        Map<String, String> l = l(str, g, aVar.b, dXTemplateItem, aVar.f);
         if (l != null) {
             l.put("errorMsg", str3);
             l.put("errorCode", str2);

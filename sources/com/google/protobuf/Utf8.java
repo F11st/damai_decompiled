@@ -11,7 +11,7 @@ import tb.jn1;
 public final class Utf8 {
     public static final int COMPLETE = 0;
     public static final int MALFORMED = -1;
-    private static final AbstractC5391a a;
+    private static final a a;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
@@ -23,10 +23,9 @@ public final class Utf8 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.Utf8$a */
     /* loaded from: classes10.dex */
-    static abstract class AbstractC5391a {
-        AbstractC5391a() {
+    static abstract class a {
+        a() {
         }
 
         private static int f(ByteBuffer byteBuffer, int i, int i2) {
@@ -207,17 +206,16 @@ public final class Utf8 {
                 int r7 = f(r8, r9, r10)
                 return r7
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.google.protobuf.Utf8.AbstractC5391a.g(int, java.nio.ByteBuffer, int, int):int");
+            throw new UnsupportedOperationException("Method not decompiled: com.google.protobuf.Utf8.a.g(int, java.nio.ByteBuffer, int, int):int");
         }
 
         abstract int h(int i, ByteBuffer byteBuffer, int i2, int i3);
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.Utf8$b */
     /* loaded from: classes10.dex */
-    static final class C5392b extends AbstractC5391a {
-        C5392b() {
+    static final class b extends a {
+        b() {
         }
 
         private static int i(byte[] bArr, int i, int i2) {
@@ -281,7 +279,7 @@ public final class Utf8 {
         /* JADX WARN: Code restructure failed: missing block: B:12:0x001d, code lost:
             return r10 + r0;
          */
-        @Override // com.google.protobuf.Utf8.AbstractC5391a
+        @Override // com.google.protobuf.Utf8.a
         /*
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
@@ -291,7 +289,7 @@ public final class Utf8 {
                 Method dump skipped, instructions count: 254
                 To view this dump change 'Code comments level' option to 'DEBUG'
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.google.protobuf.Utf8.C5392b.a(java.lang.CharSequence, byte[], int, int):int");
+            throw new UnsupportedOperationException("Method not decompiled: com.google.protobuf.Utf8.b.a(java.lang.CharSequence, byte[], int, int):int");
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:10:0x0015, code lost:
@@ -303,7 +301,7 @@ public final class Utf8 {
         /* JADX WARN: Code restructure failed: missing block: B:52:0x007e, code lost:
             if (r8[r9] > (-65)) goto L51;
          */
-        @Override // com.google.protobuf.Utf8.AbstractC5391a
+        @Override // com.google.protobuf.Utf8.a
         /*
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
@@ -405,24 +403,23 @@ public final class Utf8 {
                 int r7 = i(r8, r9, r10)
                 return r7
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.google.protobuf.Utf8.C5392b.e(int, byte[], int, int):int");
+            throw new UnsupportedOperationException("Method not decompiled: com.google.protobuf.Utf8.b.e(int, byte[], int, int):int");
         }
 
-        @Override // com.google.protobuf.Utf8.AbstractC5391a
+        @Override // com.google.protobuf.Utf8.a
         int h(int i, ByteBuffer byteBuffer, int i2, int i3) {
             return g(i, byteBuffer, i2, i3);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.Utf8$c */
     /* loaded from: classes10.dex */
-    static final class C5393c extends AbstractC5391a {
-        C5393c() {
+    static final class c extends a {
+        c() {
         }
 
         static boolean i() {
-            return C5418n.k() && C5418n.l();
+            return n.k() && n.l();
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:22:0x0039, code lost:
@@ -448,7 +445,7 @@ public final class Utf8 {
                 r2 = 1
                 if (r10 <= 0) goto L1a
                 long r4 = r8 + r2
-                byte r1 = com.google.protobuf.C5418n.f(r8)
+                byte r1 = com.google.protobuf.n.f(r8)
                 if (r1 < 0) goto L19
                 int r10 = r10 + (-1)
                 r8 = r4
@@ -471,7 +468,7 @@ public final class Utf8 {
                 r0 = -62
                 if (r1 < r0) goto L39
                 long r2 = r2 + r8
-                byte r8 = com.google.protobuf.C5418n.f(r8)
+                byte r8 = com.google.protobuf.n.f(r8)
                 if (r8 <= r4) goto L37
                 goto L39
             L37:
@@ -489,7 +486,7 @@ public final class Utf8 {
             L46:
                 int r10 = r10 + (-2)
                 long r6 = r8 + r2
-                byte r8 = com.google.protobuf.C5418n.f(r8)
+                byte r8 = com.google.protobuf.n.f(r8)
                 if (r8 > r4) goto L63
                 r9 = -96
                 if (r1 != r0) goto L56
@@ -500,7 +497,7 @@ public final class Utf8 {
                 if (r8 >= r9) goto L63
             L5c:
                 long r2 = r2 + r6
-                byte r8 = com.google.protobuf.C5418n.f(r6)
+                byte r8 = com.google.protobuf.n.f(r6)
                 if (r8 <= r4) goto L37
             L63:
                 return r5
@@ -512,7 +509,7 @@ public final class Utf8 {
             L6c:
                 int r10 = r10 + (-3)
                 long r6 = r8 + r2
-                byte r8 = com.google.protobuf.C5418n.f(r8)
+                byte r8 = com.google.protobuf.n.f(r8)
                 if (r8 > r4) goto L8e
                 int r9 = r1 << 28
                 int r8 = r8 + 112
@@ -520,15 +517,15 @@ public final class Utf8 {
                 int r8 = r9 >> 30
                 if (r8 != 0) goto L8e
                 long r8 = r6 + r2
-                byte r0 = com.google.protobuf.C5418n.f(r6)
+                byte r0 = com.google.protobuf.n.f(r6)
                 if (r0 > r4) goto L8e
                 long r2 = r2 + r8
-                byte r8 = com.google.protobuf.C5418n.f(r8)
+                byte r8 = com.google.protobuf.n.f(r8)
                 if (r8 <= r4) goto L37
             L8e:
                 return r5
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.google.protobuf.Utf8.C5393c.j(long, int):int");
+            throw new UnsupportedOperationException("Method not decompiled: com.google.protobuf.Utf8.c.j(long, int):int");
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:22:0x0039, code lost:
@@ -554,7 +551,7 @@ public final class Utf8 {
                 r2 = 1
                 if (r11 <= 0) goto L1a
                 long r4 = r9 + r2
-                byte r1 = com.google.protobuf.C5418n.g(r8, r9)
+                byte r1 = com.google.protobuf.n.g(r8, r9)
                 if (r1 < 0) goto L19
                 int r11 = r11 + (-1)
                 r9 = r4
@@ -577,7 +574,7 @@ public final class Utf8 {
                 r0 = -62
                 if (r1 < r0) goto L39
                 long r2 = r2 + r9
-                byte r9 = com.google.protobuf.C5418n.g(r8, r9)
+                byte r9 = com.google.protobuf.n.g(r8, r9)
                 if (r9 <= r4) goto L37
                 goto L39
             L37:
@@ -595,7 +592,7 @@ public final class Utf8 {
             L46:
                 int r11 = r11 + (-2)
                 long r6 = r9 + r2
-                byte r9 = com.google.protobuf.C5418n.g(r8, r9)
+                byte r9 = com.google.protobuf.n.g(r8, r9)
                 if (r9 > r4) goto L63
                 r10 = -96
                 if (r1 != r0) goto L56
@@ -606,7 +603,7 @@ public final class Utf8 {
                 if (r9 >= r10) goto L63
             L5c:
                 long r2 = r2 + r6
-                byte r9 = com.google.protobuf.C5418n.g(r8, r6)
+                byte r9 = com.google.protobuf.n.g(r8, r6)
                 if (r9 <= r4) goto L37
             L63:
                 return r5
@@ -618,7 +615,7 @@ public final class Utf8 {
             L6c:
                 int r11 = r11 + (-3)
                 long r6 = r9 + r2
-                byte r9 = com.google.protobuf.C5418n.g(r8, r9)
+                byte r9 = com.google.protobuf.n.g(r8, r9)
                 if (r9 > r4) goto L8e
                 int r10 = r1 << 28
                 int r9 = r9 + 112
@@ -626,15 +623,15 @@ public final class Utf8 {
                 int r9 = r10 >> 30
                 if (r9 != 0) goto L8e
                 long r9 = r6 + r2
-                byte r0 = com.google.protobuf.C5418n.g(r8, r6)
+                byte r0 = com.google.protobuf.n.g(r8, r6)
                 if (r0 > r4) goto L8e
                 long r2 = r2 + r9
-                byte r9 = com.google.protobuf.C5418n.g(r8, r9)
+                byte r9 = com.google.protobuf.n.g(r8, r9)
                 if (r9 <= r4) goto L37
             L8e:
                 return r5
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.google.protobuf.Utf8.C5393c.k(byte[], long, int):int");
+            throw new UnsupportedOperationException("Method not decompiled: com.google.protobuf.Utf8.c.k(byte[], long, int):int");
         }
 
         private static int l(long j, int i) {
@@ -645,14 +642,14 @@ public final class Utf8 {
             int i3 = i2;
             while (i3 > 0) {
                 long j2 = 1 + j;
-                if (C5418n.f(j) < 0) {
+                if (n.f(j) < 0) {
                     return i2 - i3;
                 }
                 i3--;
                 j = j2;
             }
             int i4 = i - i2;
-            while (i4 >= 8 && (C5418n.h(j) & (-9187201950435737472L)) == 0) {
+            while (i4 >= 8 && (n.h(j) & (-9187201950435737472L)) == 0) {
                 j += 8;
                 i4 -= 8;
             }
@@ -667,14 +664,14 @@ public final class Utf8 {
             int i3 = i2;
             while (i3 > 0) {
                 long j2 = 1 + j;
-                if (C5418n.g(bArr, j) < 0) {
+                if (n.g(bArr, j) < 0) {
                     return i2 - i3;
                 }
                 i3--;
                 j = j2;
             }
             int i4 = i - i2;
-            while (i4 >= 8 && (C5418n.i(bArr, j) & (-9187201950435737472L)) == 0) {
+            while (i4 >= 8 && (n.i(bArr, j) & (-9187201950435737472L)) == 0) {
                 j += 8;
                 i4 -= 8;
             }
@@ -685,11 +682,11 @@ public final class Utf8 {
             if (i2 != 0) {
                 if (i2 != 1) {
                     if (i2 == 2) {
-                        return Utf8.m(i, C5418n.f(j), C5418n.f(j + 1));
+                        return Utf8.m(i, n.f(j), n.f(j + 1));
                     }
                     throw new AssertionError();
                 }
-                return Utf8.l(i, C5418n.f(j));
+                return Utf8.l(i, n.f(j));
             }
             return Utf8.k(i);
         }
@@ -698,16 +695,16 @@ public final class Utf8 {
             if (i2 != 0) {
                 if (i2 != 1) {
                     if (i2 == 2) {
-                        return Utf8.m(i, C5418n.g(bArr, j), C5418n.g(bArr, j + 1));
+                        return Utf8.m(i, n.g(bArr, j), n.g(bArr, j + 1));
                     }
                     throw new AssertionError();
                 }
-                return Utf8.l(i, C5418n.g(bArr, j));
+                return Utf8.l(i, n.g(bArr, j));
             }
             return Utf8.k(i);
         }
 
-        @Override // com.google.protobuf.Utf8.AbstractC5391a
+        @Override // com.google.protobuf.Utf8.a
         int a(CharSequence charSequence, byte[] bArr, int i, int i2) {
             char c;
             long j;
@@ -716,7 +713,7 @@ public final class Utf8 {
             long j3;
             int i3;
             char charAt;
-            long e2 = C5418n.e() + i;
+            long e2 = n.e() + i;
             long j4 = i2 + e2;
             int length = charSequence.length();
             if (length > i2 || bArr.length - i2 < i) {
@@ -729,20 +726,20 @@ public final class Utf8 {
                 if (i4 >= length || (charAt = charSequence.charAt(i4)) >= 128) {
                     break;
                 }
-                C5418n.m(bArr, e2, (byte) charAt);
+                n.m(bArr, e2, (byte) charAt);
                 i4++;
                 e2 = 1 + e2;
             }
             if (i4 == length) {
-                e = C5418n.e();
+                e = n.e();
             } else {
                 while (i4 < length) {
                     char charAt2 = charSequence.charAt(i4);
                     if (charAt2 >= c || e2 >= j4) {
                         if (charAt2 < 2048 && e2 <= j4 - 2) {
                             long j5 = e2 + j;
-                            C5418n.m(bArr, e2, (byte) ((charAt2 >>> 6) | 960));
-                            C5418n.m(bArr, j5, (byte) ((charAt2 & jn1.CONDITION_IF) | 128));
+                            n.m(bArr, e2, (byte) ((charAt2 >>> 6) | 960));
+                            n.m(bArr, j5, (byte) ((charAt2 & jn1.CONDITION_IF) | 128));
                             j2 = j5 + j;
                             j3 = j;
                         } else if ((charAt2 >= 55296 && 57343 >= charAt2) || e2 > j4 - 3) {
@@ -753,14 +750,14 @@ public final class Utf8 {
                                     if (Character.isSurrogatePair(charAt2, charAt3)) {
                                         int codePoint = Character.toCodePoint(charAt2, charAt3);
                                         long j6 = e2 + 1;
-                                        C5418n.m(bArr, e2, (byte) ((codePoint >>> 18) | GlMapUtil.DEVICE_DISPLAY_DPI_MEDIAN));
+                                        n.m(bArr, e2, (byte) ((codePoint >>> 18) | GlMapUtil.DEVICE_DISPLAY_DPI_MEDIAN));
                                         long j7 = j6 + 1;
-                                        C5418n.m(bArr, j6, (byte) (((codePoint >>> 12) & 63) | 128));
+                                        n.m(bArr, j6, (byte) (((codePoint >>> 12) & 63) | 128));
                                         long j8 = j7 + 1;
-                                        C5418n.m(bArr, j7, (byte) (((codePoint >>> 6) & 63) | 128));
+                                        n.m(bArr, j7, (byte) (((codePoint >>> 6) & 63) | 128));
                                         j3 = 1;
                                         j2 = j8 + 1;
-                                        C5418n.m(bArr, j8, (byte) ((codePoint & 63) | 128));
+                                        n.m(bArr, j8, (byte) ((codePoint & 63) | 128));
                                         i4 = i5;
                                     } else {
                                         i4 = i5;
@@ -774,10 +771,10 @@ public final class Utf8 {
                             }
                         } else {
                             long j9 = e2 + j;
-                            C5418n.m(bArr, e2, (byte) ((charAt2 >>> '\f') | GlMapUtil.DEVICE_DISPLAY_DPI_XHIGH));
+                            n.m(bArr, e2, (byte) ((charAt2 >>> '\f') | GlMapUtil.DEVICE_DISPLAY_DPI_XHIGH));
                             long j10 = j9 + j;
-                            C5418n.m(bArr, j9, (byte) (((charAt2 >>> 6) & 63) | 128));
-                            C5418n.m(bArr, j10, (byte) ((charAt2 & jn1.CONDITION_IF) | 128));
+                            n.m(bArr, j9, (byte) (((charAt2 >>> 6) & 63) | 128));
+                            n.m(bArr, j10, (byte) ((charAt2 & jn1.CONDITION_IF) | 128));
                             j2 = j10 + 1;
                             j3 = 1;
                         }
@@ -788,7 +785,7 @@ public final class Utf8 {
                         j = j11;
                     } else {
                         long j12 = e2 + j;
-                        C5418n.m(bArr, e2, (byte) charAt2);
+                        n.m(bArr, e2, (byte) charAt2);
                         j3 = j;
                         j2 = j12;
                     }
@@ -798,18 +795,18 @@ public final class Utf8 {
                     e2 = j2;
                     j = j112;
                 }
-                e = C5418n.e();
+                e = n.e();
             }
             return (int) (e2 - e);
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:35:0x0063, code lost:
-            if (com.google.protobuf.C5418n.g(r13, r2) > (-65)) goto L36;
+            if (com.google.protobuf.n.g(r13, r2) > (-65)) goto L36;
          */
         /* JADX WARN: Code restructure failed: missing block: B:58:0x00a8, code lost:
-            if (com.google.protobuf.C5418n.g(r13, r2) > (-65)) goto L56;
+            if (com.google.protobuf.n.g(r13, r2) > (-65)) goto L56;
          */
-        @Override // com.google.protobuf.Utf8.AbstractC5391a
+        @Override // com.google.protobuf.Utf8.a
         /*
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
@@ -819,16 +816,16 @@ public final class Utf8 {
                 Method dump skipped, instructions count: 214
                 To view this dump change 'Code comments level' option to 'DEBUG'
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.google.protobuf.Utf8.C5393c.e(int, byte[], int, int):int");
+            throw new UnsupportedOperationException("Method not decompiled: com.google.protobuf.Utf8.c.e(int, byte[], int, int):int");
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:35:0x0063, code lost:
-            if (com.google.protobuf.C5418n.f(r2) > (-65)) goto L36;
+            if (com.google.protobuf.n.f(r2) > (-65)) goto L36;
          */
         /* JADX WARN: Code restructure failed: missing block: B:58:0x00a8, code lost:
-            if (com.google.protobuf.C5418n.f(r2) > (-65)) goto L56;
+            if (com.google.protobuf.n.f(r2) > (-65)) goto L56;
          */
-        @Override // com.google.protobuf.Utf8.AbstractC5391a
+        @Override // com.google.protobuf.Utf8.a
         /*
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
@@ -838,12 +835,12 @@ public final class Utf8 {
                 Method dump skipped, instructions count: 217
                 To view this dump change 'Code comments level' option to 'DEBUG'
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.google.protobuf.Utf8.C5393c.h(int, java.nio.ByteBuffer, int, int):int");
+            throw new UnsupportedOperationException("Method not decompiled: com.google.protobuf.Utf8.c.h(int, java.nio.ByteBuffer, int, int):int");
         }
     }
 
     static {
-        a = C5393c.i() ? new C5393c() : new C5392b();
+        a = c.i() ? new c() : new b();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -949,18 +946,18 @@ public final class Utf8 {
 
     /* JADX INFO: Access modifiers changed from: private */
     public static int o(byte[] bArr, int i, int i2) {
-        byte b = bArr[i - 1];
+        byte b2 = bArr[i - 1];
         int i3 = i2 - i;
         if (i3 != 0) {
             if (i3 != 1) {
                 if (i3 == 2) {
-                    return m(b, bArr[i], bArr[i + 1]);
+                    return m(b2, bArr[i], bArr[i + 1]);
                 }
                 throw new AssertionError();
             }
-            return l(b, bArr[i]);
+            return l(b2, bArr[i]);
         }
-        return k(b);
+        return k(b2);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */

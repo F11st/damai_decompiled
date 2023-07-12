@@ -23,7 +23,7 @@ public class YKImageLayout extends FrameLayout {
 
     private void init(Context context) {
         setWillNotDraw(false);
-        View inflate = LayoutInflater.from(context).inflate(R.C8074layout.resource_ykimageview, (ViewGroup) this, true);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.resource_ykimageview, (ViewGroup) this, true);
         this.resource_image = (YKImageView) inflate.findViewById(R.id.resource_image);
         this.gif = (TUrlImageView) inflate.findViewById(R.id.gif);
     }

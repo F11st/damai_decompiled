@@ -51,7 +51,7 @@ public class PullToRefreshHeaderGridView extends PullToRefreshAdapterViewBase<He
         @Override // android.view.View
         protected boolean overScrollBy(int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, boolean z) {
             boolean overScrollBy = super.overScrollBy(i, i2, i3, i4, i5, i6, i7, i8, z);
-            C5456a.d(PullToRefreshHeaderGridView.this, i2, i4, z);
+            a.d(PullToRefreshHeaderGridView.this, i2, i4, z);
             return overScrollBy;
         }
     }

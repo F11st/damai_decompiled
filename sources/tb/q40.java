@@ -16,12 +16,12 @@ public class q40 {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1797967450")) {
             ipChange.ipc$dispatch("-1797967450", new Object[]{list, str});
-        } else if (C9269io.c()) {
+        } else if (io.c()) {
             String str2 = str + ":=";
             while (list.iterator().hasNext()) {
                 str2 = str2 + sh2.d(it.next()) + "|";
             }
-            C9269io.a("binary", str2);
+            io.a("binary", str2);
         }
     }
 
@@ -30,12 +30,12 @@ public class q40 {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "697579594")) {
             ipChange.ipc$dispatch("697579594", new Object[]{list, str});
-        } else if (C9269io.c()) {
+        } else if (io.c()) {
             String str2 = str + ":=";
             while (list.iterator().hasNext()) {
                 str2 = str2 + sh2.e(String.valueOf(it.next().longValue()).getBytes()) + "|";
             }
-            C9269io.a("binary", str2);
+            io.a("binary", str2);
         }
     }
 
@@ -44,12 +44,12 @@ public class q40 {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "480104799")) {
             ipChange.ipc$dispatch("480104799", new Object[]{list, str});
-        } else if (C9269io.c()) {
+        } else if (io.c()) {
             String str2 = str + ":=";
             while (list.iterator().hasNext()) {
                 str2 = str2 + it.next() + "|";
             }
-            C9269io.a("binary", str2);
+            io.a("binary", str2);
         }
     }
 
@@ -58,12 +58,12 @@ public class q40 {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "2108685610")) {
             ipChange.ipc$dispatch("2108685610", new Object[]{list, str});
-        } else if (C9269io.c()) {
+        } else if (io.c()) {
             String str2 = str + ":=";
             while (list.iterator().hasNext()) {
                 str2 = str2 + it.next() + "|";
             }
-            C9269io.a("binary", str2);
+            io.a("binary", str2);
         }
     }
 }

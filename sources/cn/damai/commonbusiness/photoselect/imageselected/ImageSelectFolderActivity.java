@@ -34,12 +34,11 @@ public class ImageSelectFolderActivity extends DamaiBaseActivity {
     private View status_bar_gap;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.ImageSelectFolderActivity$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0729a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0729a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -54,12 +53,11 @@ public class ImageSelectFolderActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.ImageSelectFolderActivity$b */
     /* loaded from: classes4.dex */
-    public class C0730b implements FolderAdapter.OnFolderSelectListener {
+    public class b implements FolderAdapter.OnFolderSelectListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0730b() {
+        b() {
         }
 
         @Override // cn.damai.commonbusiness.photoselect.imageselected.adapter.FolderAdapter.OnFolderSelectListener
@@ -118,7 +116,7 @@ public class ImageSelectFolderActivity extends DamaiBaseActivity {
         }
         this.rvFolder.setLayoutManager(new LinearLayoutManager(this));
         FolderAdapter folderAdapter = new FolderAdapter(this, this.mFolders);
-        folderAdapter.d(new C0730b());
+        folderAdapter.d(new b());
         this.rvFolder.setAdapter(folderAdapter);
     }
 
@@ -127,7 +125,7 @@ public class ImageSelectFolderActivity extends DamaiBaseActivity {
         if (AndroidInstantRuntime.support(ipChange, "219188522")) {
             ipChange.ipc$dispatch("219188522", new Object[]{this});
         } else {
-            findViewById(R$id.btn_back).setOnClickListener(new View$OnClickListenerC0729a());
+            findViewById(R$id.btn_back).setOnClickListener(new a());
         }
     }
 

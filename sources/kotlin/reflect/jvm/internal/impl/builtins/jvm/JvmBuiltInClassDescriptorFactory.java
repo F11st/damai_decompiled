@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
-import kotlin.collections.C8201d0;
-import kotlin.collections.C8203e0;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8213l;
+import kotlin.collections.d0;
+import kotlin.collections.e0;
+import kotlin.collections.k;
+import kotlin.collections.l;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.PropertyReference1Impl;
 import kotlin.reflect.KProperty;
 import kotlin.reflect.jvm.internal.impl.builtins.BuiltInsPackageFragment;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
+import kotlin.reflect.jvm.internal.impl.builtins.c;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassKind;
@@ -53,18 +53,17 @@ public final class JvmBuiltInClassDescriptorFactory implements ClassDescriptorFa
     private final NotNullLazyValue c;
     static final /* synthetic */ KProperty<Object>[] d = {a12.i(new PropertyReference1Impl(a12.b(JvmBuiltInClassDescriptorFactory.class), "cloneable", "getCloneable()Lorg/jetbrains/kotlin/descriptors/impl/ClassDescriptorImpl;"))};
     @NotNull
-    public static final C8281a Companion = new C8281a(null);
+    public static final a Companion = new a(null);
     @NotNull
-    private static final hp0 e = C8277c.BUILT_INS_PACKAGE_FQ_NAME;
+    private static final hp0 e = c.BUILT_INS_PACKAGE_FQ_NAME;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltInClassDescriptorFactory$a */
     /* loaded from: classes3.dex */
-    public static final class C8281a {
-        private C8281a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8281a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -75,7 +74,7 @@ public final class JvmBuiltInClassDescriptorFactory implements ClassDescriptorFa
     }
 
     static {
-        ip0 ip0Var = C8277c.C8278a.cloneable;
+        ip0 ip0Var = c.a.cloneable;
         ni1 i = ip0Var.i();
         b41.h(i, "cloneable.shortName()");
         f = i;
@@ -114,10 +113,10 @@ public final class JvmBuiltInClassDescriptorFactory implements ClassDescriptorFa
                 Modality modality = Modality.ABSTRACT;
                 ClassKind classKind = ClassKind.INTERFACE;
                 moduleDescriptor3 = JvmBuiltInClassDescriptorFactory.this.a;
-                e2 = C8213l.e(moduleDescriptor3.getBuiltIns().i());
+                e2 = l.e(moduleDescriptor3.getBuiltIns().i());
                 gj gjVar = new gj(declarationDescriptor, ni1Var, modality, classKind, e2, SourceElement.NO_SOURCE, false, storageManager);
                 tj tjVar = new tj(storageManager, gjVar);
-                d2 = C8203e0.d();
+                d2 = e0.d();
                 gjVar.e(tjVar, d2, null);
                 return gjVar;
             }
@@ -145,10 +144,10 @@ public final class JvmBuiltInClassDescriptorFactory implements ClassDescriptorFa
         Set c;
         b41.i(hp0Var, "packageFqName");
         if (b41.d(hp0Var, e)) {
-            c = C8201d0.c(f());
+            c = d0.c(f());
             return c;
         }
-        d2 = C8203e0.d();
+        d2 = e0.d();
         return d2;
     }
 
@@ -172,7 +171,7 @@ public final class JvmBuiltInClassDescriptorFactory implements ClassDescriptorFa
                         arrayList.add(obj);
                     }
                 }
-                return (BuiltInsPackageFragment) C8212k.P(arrayList);
+                return (BuiltInsPackageFragment) k.P(arrayList);
             }
         } : function1);
     }

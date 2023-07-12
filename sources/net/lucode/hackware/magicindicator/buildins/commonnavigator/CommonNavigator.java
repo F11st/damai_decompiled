@@ -42,10 +42,9 @@ public class CommonNavigator extends FrameLayout implements NavigatorHelper.OnNa
     private LinearLayout mTitleContainer;
 
     /* compiled from: Taobao */
-    /* renamed from: net.lucode.hackware.magicindicator.buildins.commonnavigator.CommonNavigator$a */
     /* loaded from: classes2.dex */
-    class C8725a extends DataSetObserver {
-        C8725a() {
+    class a extends DataSetObserver {
+        a() {
         }
 
         @Override // android.database.DataSetObserver
@@ -66,7 +65,7 @@ public class CommonNavigator extends FrameLayout implements NavigatorHelper.OnNa
         this.mFollowTouch = true;
         this.mReselectWhenLayout = true;
         this.mPositionDataList = new ArrayList();
-        this.mObserver = new C8725a();
+        this.mObserver = new a();
         NavigatorHelper navigatorHelper = new NavigatorHelper();
         this.mNavigatorHelper = navigatorHelper;
         navigatorHelper.k(this);
@@ -301,8 +300,8 @@ public class CommonNavigator extends FrameLayout implements NavigatorHelper.OnNa
             }
             int min = Math.min(this.mPositionDataList.size() - 1, i);
             int min2 = Math.min(this.mPositionDataList.size() - 1, i + 1);
-            float a = this.mPositionDataList.get(min).a() - (this.mScrollView.getWidth() * this.mScrollPivotX);
-            this.mScrollView.scrollTo((int) (a + (((this.mPositionDataList.get(min2).a() - (this.mScrollView.getWidth() * this.mScrollPivotX)) - a) * f)), 0);
+            float a2 = this.mPositionDataList.get(min).a() - (this.mScrollView.getWidth() * this.mScrollPivotX);
+            this.mScrollView.scrollTo((int) (a2 + (((this.mPositionDataList.get(min2).a() - (this.mScrollView.getWidth() * this.mScrollPivotX)) - a2) * f)), 0);
         }
     }
 
@@ -332,12 +331,12 @@ public class CommonNavigator extends FrameLayout implements NavigatorHelper.OnNa
         }
         st1 st1Var = this.mPositionDataList.get(Math.min(this.mPositionDataList.size() - 1, i));
         if (this.mEnablePivotScroll) {
-            float a = st1Var.a() - (this.mScrollView.getWidth() * this.mScrollPivotX);
+            float a2 = st1Var.a() - (this.mScrollView.getWidth() * this.mScrollPivotX);
             if (this.mSmoothScroll) {
-                this.mScrollView.smoothScrollTo((int) a, 0);
+                this.mScrollView.smoothScrollTo((int) a2, 0);
                 return;
             } else {
-                this.mScrollView.scrollTo((int) a, 0);
+                this.mScrollView.scrollTo((int) a2, 0);
                 return;
             }
         }

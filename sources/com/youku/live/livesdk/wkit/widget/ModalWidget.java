@@ -28,7 +28,7 @@ import com.youku.live.widgets.protocol.Orientation;
 import com.youku.live.widgets.protocol.activity.IActivityResultListener;
 import com.youku.live.widgets.protocol.activity.IActivityResumeStateChangedListener;
 import java.util.HashMap;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -119,7 +119,7 @@ public class ModalWidget extends BaseWidget implements View.OnClickListener, ISy
         if (AndroidInstantRuntime.support(ipChange, "1845372130")) {
             return ((Boolean) ipChange.ipc$dispatch("1845372130", new Object[]{this})).booleanValue();
         }
-        String string = getProps().getString(C9796v.TAK_ABILITY_SHOW_POP_ANIMATION, null);
+        String string = getProps().getString(v.TAK_ABILITY_SHOW_POP_ANIMATION, null);
         if (TextUtils.isEmpty(string)) {
             return false;
         }

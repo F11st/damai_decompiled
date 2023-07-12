@@ -10,9 +10,8 @@ public class v80 {
     private Object e;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.v80$b */
     /* loaded from: classes11.dex */
-    public static final class C9812b {
+    public static final class b {
         private String a = "default";
         private iy2 b;
         private Object c;
@@ -23,27 +22,27 @@ public class v80 {
             return new v80(this);
         }
 
-        public C9812b g(Object obj) {
+        public b g(Object obj) {
             this.e = obj;
             return this;
         }
 
-        public C9812b h(Object obj) {
+        public b h(Object obj) {
             this.c = obj;
             return this;
         }
 
-        public C9812b i(String str) {
+        public b i(String str) {
             this.a = str;
             return this;
         }
 
-        public C9812b j(Object obj) {
+        public b j(Object obj) {
             this.d = obj;
             return this;
         }
 
-        public C9812b k(iy2 iy2Var) {
+        public b k(iy2 iy2Var) {
             this.b = iy2Var;
             return this;
         }
@@ -73,12 +72,12 @@ public class v80 {
         this.e = obj;
     }
 
-    private v80(C9812b c9812b) {
+    private v80(b bVar) {
         this.a = "default";
-        this.a = c9812b.a;
-        this.e = c9812b.e;
-        this.c = c9812b.c;
-        this.d = c9812b.d;
-        this.b = c9812b.b;
+        this.a = bVar.a;
+        this.e = bVar.e;
+        this.c = bVar.c;
+        this.d = bVar.d;
+        this.b = bVar.b;
     }
 }

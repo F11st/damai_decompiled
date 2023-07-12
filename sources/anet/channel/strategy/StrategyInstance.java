@@ -6,7 +6,7 @@ import android.text.TextUtils;
 import anet.channel.entity.ConnType;
 import anet.channel.quic.Http3ConnectionDetector;
 import anet.channel.status.NetworkStatusHelper;
-import anet.channel.strategy.C0214b;
+import anet.channel.strategy.b;
 import anet.channel.strategy.dispatch.AmdcRuntimeInfo;
 import anet.channel.strategy.dispatch.HttpDispatcher;
 import anet.channel.util.ALog;
@@ -16,11 +16,11 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.concurrent.CopyOnWriteArraySet;
 import org.json.JSONObject;
-import tb.C9708t9;
 import tb.a5;
 import tb.g62;
 import tb.lw2;
 import tb.o01;
+import tb.t9;
 import tb.ym;
 import tb.z90;
 import tb.zh2;
@@ -33,20 +33,19 @@ public class StrategyInstance implements IStrategyInstance, HttpDispatcher.IDisp
     StrategyInfoHolder b = null;
     long c = 0;
     CopyOnWriteArraySet<IStrategyListener> d = new CopyOnWriteArraySet<>();
-    private IStrategyFilter e = new C0209a(this);
+    private IStrategyFilter e = new a(this);
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.strategy.StrategyInstance$a */
     /* loaded from: classes.dex */
-    class C0209a implements IStrategyFilter {
-        C0209a(StrategyInstance strategyInstance) {
+    class a implements IStrategyFilter {
+        a(StrategyInstance strategyInstance) {
         }
 
         @Override // anet.channel.strategy.IStrategyFilter
         public boolean accept(IConnStrategy iConnStrategy) {
             String str = iConnStrategy.getProtocol().protocol;
             if (!ConnType.QUIC.equals(str) && !ConnType.QUIC_PLAIN.equals(str)) {
-                boolean u = C9708t9.u();
+                boolean u = t9.u();
                 boolean j = Http3ConnectionDetector.j();
                 if (!(u && j) && (ConnType.HTTP3.equals(str) || ConnType.HTTP3_PLAIN.equals(str))) {
                     ALog.f("awcn.StrategyCenter", "http3 strategy disabled", null, "strategy", iConnStrategy);
@@ -183,10 +182,10 @@ public class StrategyInstance implements IStrategyInstance, HttpDispatcher.IDisp
         }
         try {
             ALog.f("awcn.StrategyCenter", "StrategyCenter initialize started.", null, new Object[0]);
-            C9708t9.f(context);
+            t9.f(context);
             NetworkStatusHelper.t(context);
             AmdcRuntimeInfo.g(context);
-            C0225c.e(context);
+            c.e(context);
             HttpDispatcher.f().b(this);
             this.b = StrategyInfoHolder.k();
             this.a = true;
@@ -215,16 +214,16 @@ public class StrategyInstance implements IStrategyInstance, HttpDispatcher.IDisp
             return;
         }
         ALog.c("awcn.StrategyCenter", "receive amdc event", null, new Object[0]);
-        C0214b.C0221g a = C0214b.a((JSONObject) z90Var.b);
-        if (a == null) {
+        b.g a2 = b.a((JSONObject) z90Var.b);
+        if (a2 == null) {
             return;
         }
-        this.b.n(a);
+        this.b.n(a2);
         saveData();
         Iterator<IStrategyListener> it = this.d.iterator();
         while (it.hasNext()) {
             try {
-                it.next().onStrategyUpdated(a);
+                it.next().onStrategyUpdated(a2);
             } catch (Exception e) {
                 ALog.d("awcn.StrategyCenter", "onStrategyUpdated failed", null, e, new Object[0]);
             }
@@ -259,7 +258,7 @@ public class StrategyInstance implements IStrategyInstance, HttpDispatcher.IDisp
 
     @Override // anet.channel.strategy.IStrategyInstance
     public synchronized void switchEnv() {
-        C0225c.b();
+        c.b();
         HttpDispatcher.f().i();
         StrategyInfoHolder strategyInfoHolder = this.b;
         if (strategyInfoHolder != null) {
@@ -286,7 +285,7 @@ public class StrategyInstance implements IStrategyInstance, HttpDispatcher.IDisp
                 queryByHost = this.b.c.e(cnameByHost);
             }
             if (!queryByHost.isEmpty() && iStrategyFilter != null) {
-                boolean z = !C9708t9.C() || (C9708t9.A() && this.b.e().isHostInIpv6BlackList(cnameByHost, C9708t9.d()));
+                boolean z = !t9.C() || (t9.A() && this.b.e().isHostInIpv6BlackList(cnameByHost, t9.d()));
                 ListIterator<IConnStrategy> listIterator = queryByHost.listIterator();
                 while (listIterator.hasNext()) {
                     IConnStrategy next = listIterator.next();
@@ -295,7 +294,7 @@ public class StrategyInstance implements IStrategyInstance, HttpDispatcher.IDisp
                     } else if (z && lw2.d(next.getIp())) {
                         listIterator.remove();
                     } else if (ConnType.HTTP3.equals(next.getProtocol().protocol) || ConnType.HTTP3_PLAIN.equals(next.getProtocol().protocol)) {
-                        if (C9708t9.t(cnameByHost)) {
+                        if (t9.t(cnameByHost)) {
                             ALog.e("awcn.StrategyCenter", "the host in  http3 strategy black list", null, "host", cnameByHost);
                             listIterator.remove();
                         }

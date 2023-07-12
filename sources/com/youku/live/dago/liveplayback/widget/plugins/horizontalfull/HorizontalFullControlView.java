@@ -73,7 +73,7 @@ public class HorizontalFullControlView extends LazyInflatedView implements View.
     private ViewGroup topContainer;
 
     public HorizontalFullControlView(Context context, ILMLayerManager<ViewGroup> iLMLayerManager, String str, ViewPlaceholder viewPlaceholder) {
-        super(context, iLMLayerManager, str, R.C7935layout.player_horizontal_fullscreen_plugin, viewPlaceholder);
+        super(context, iLMLayerManager, str, R.layout.player_horizontal_fullscreen_plugin, viewPlaceholder);
         this.isInTimeShift = false;
         this.mAnimationY = 0.0f;
     }
@@ -463,7 +463,7 @@ public class HorizontalFullControlView extends LazyInflatedView implements View.
         if (playType == PlayType.VOD) {
             if (playerContext.isLandVideo() && playerContext.isLandScreen()) {
                 this.mControlButton.setVisibility(0);
-                this.mControlButton.setImageResource(currentState == IAlixPlayer.State.STATE_VIDEO_STARTED ? R.C7933drawable.btn_pause_live : R.C7933drawable.btn_play_live);
+                this.mControlButton.setImageResource(currentState == IAlixPlayer.State.STATE_VIDEO_STARTED ? R.drawable.btn_pause_live : R.drawable.btn_play_live);
                 this.mLeftText.setVisibility(0);
                 this.mLeftText.setText(Utils.getFormathourTime(currentPosition));
                 this.mSeekBar.setLiveMode(false);
@@ -481,7 +481,7 @@ public class HorizontalFullControlView extends LazyInflatedView implements View.
             this.mIsTimeShift = z;
             if (z) {
                 this.mControlButton.setVisibility(0);
-                this.mControlButton.setImageResource(currentState == IAlixPlayer.State.STATE_VIDEO_STARTED ? R.C7933drawable.btn_pause_live : R.C7933drawable.btn_play_live);
+                this.mControlButton.setImageResource(currentState == IAlixPlayer.State.STATE_VIDEO_STARTED ? R.drawable.btn_pause_live : R.drawable.btn_play_live);
                 this.mLeftText.setVisibility(8);
                 this.mSeekBar.setLiveMode(true);
                 this.mSeekBar.setMax(this.mSumTime);

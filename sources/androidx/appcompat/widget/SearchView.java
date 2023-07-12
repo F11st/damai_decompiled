@@ -1325,7 +1325,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
             }
         };
         TintTypedArray obtainStyledAttributes = TintTypedArray.obtainStyledAttributes(context, attributeSet, R.styleable.SearchView, i, 0);
-        LayoutInflater.from(context).inflate(obtainStyledAttributes.getResourceId(R.styleable.SearchView_layout, R.C0013layout.abc_search_view), (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(obtainStyledAttributes.getResourceId(R.styleable.SearchView_layout, R.layout.abc_search_view), (ViewGroup) this, true);
         SearchAutoComplete searchAutoComplete = (SearchAutoComplete) findViewById(R.id.search_src_text);
         this.mSearchSrcTextView = searchAutoComplete;
         searchAutoComplete.setSearchView(this);
@@ -1354,7 +1354,7 @@ public class SearchView extends LinearLayoutCompat implements CollapsibleActionV
         imageView5.setImageDrawable(obtainStyledAttributes.getDrawable(i2));
         this.mSearchHintIcon = obtainStyledAttributes.getDrawable(R.styleable.SearchView_searchHintIcon);
         TooltipCompat.setTooltipText(imageView, getResources().getString(R.string.abc_searchview_description_search));
-        this.mSuggestionRowLayout = obtainStyledAttributes.getResourceId(R.styleable.SearchView_suggestionRowLayout, R.C0013layout.abc_search_dropdown_item_icons_2line);
+        this.mSuggestionRowLayout = obtainStyledAttributes.getResourceId(R.styleable.SearchView_suggestionRowLayout, R.layout.abc_search_dropdown_item_icons_2line);
         this.mSuggestionCommitIconResId = obtainStyledAttributes.getResourceId(R.styleable.SearchView_commitIcon, 0);
         imageView.setOnClickListener(onClickListener);
         imageView3.setOnClickListener(onClickListener);

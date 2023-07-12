@@ -4,7 +4,7 @@ import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.youku.live.dago.widgetlib.interactive.gift.view.Particle.C7945Particle;
+import com.youku.live.dago.widgetlib.interactive.gift.view.Particle.Particle;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
@@ -29,19 +29,19 @@ public class ScaleModifier implements ParticleModifier {
     }
 
     @Override // com.youku.live.dago.widgetlib.interactive.gift.view.Particle.modifiers.ParticleModifier
-    public void apply(C7945Particle c7945Particle, long j) {
+    public void apply(Particle particle, long j) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "829296754")) {
-            ipChange.ipc$dispatch("829296754", new Object[]{this, c7945Particle, Long.valueOf(j)});
+            ipChange.ipc$dispatch("829296754", new Object[]{this, particle, Long.valueOf(j)});
             return;
         }
         long j2 = this.mStartTime;
         if (j < j2) {
-            c7945Particle.mScale = this.mInitialValue;
+            particle.mScale = this.mInitialValue;
         } else if (j > this.mEndTime) {
-            c7945Particle.mScale = this.mFinalValue;
+            particle.mScale = this.mFinalValue;
         } else {
-            c7945Particle.mScale = this.mInitialValue + (this.mValueIncrement * this.mInterpolator.getInterpolation((((float) (j - j2)) * 1.0f) / ((float) this.mDuration)));
+            particle.mScale = this.mInitialValue + (this.mValueIncrement * this.mInterpolator.getInterpolation((((float) (j - j2)) * 1.0f) / ((float) this.mDuration)));
         }
     }
 

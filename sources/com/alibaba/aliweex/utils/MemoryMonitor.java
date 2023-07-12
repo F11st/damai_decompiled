@@ -58,18 +58,16 @@ public class MemoryMonitor {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.utils.MemoryMonitor$a */
     /* loaded from: classes15.dex */
-    static class C3101a implements INativeLowMemoryListener {
-        C3101a() {
+    static class a implements INativeLowMemoryListener {
+        a() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.utils.MemoryMonitor$b */
     /* loaded from: classes15.dex */
-    static class C3102b implements IJavaLowMemoryListener {
-        C3102b() {
+    static class b implements IJavaLowMemoryListener {
+        b() {
         }
     }
 
@@ -91,7 +89,7 @@ public class MemoryMonitor {
     }
 
     public static String b() {
-        k4.C9333e f;
+        k4.e f;
         if (e) {
             try {
                 k4 d2 = k4.d();
@@ -129,8 +127,8 @@ public class MemoryMonitor {
 
     public static void d() {
         try {
-            WatchmemNativeMemoryManager.instance().addNativeLowMemoryListener(new C3101a());
-            WatchmemJavaMemoryManager.instance().addJavaLowMemoryListener(new C3102b());
+            WatchmemNativeMemoryManager.instance().addNativeLowMemoryListener(new a());
+            WatchmemJavaMemoryManager.instance().addJavaLowMemoryListener(new b());
         } catch (Throwable th) {
             Log.e(c, th.getMessage());
         }

@@ -21,12 +21,11 @@ public class ContentView extends AbsView<IItem<ItemValue>, ContentContract.Model
     private final NoteViewHolder mNoteViewHolder;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.component.feed.ContentView$a */
     /* loaded from: classes6.dex */
-    public class C1572a implements OnItemClickListener<NoteBean> {
+    public class a implements OnItemClickListener<NoteBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1572a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.discover.viewholder.OnItemClickListener
@@ -61,7 +60,7 @@ public class ContentView extends AbsView<IItem<ItemValue>, ContentContract.Model
     public ContentView(View view) {
         super(view);
         ViewGroup viewGroup = (ViewGroup) view;
-        NoteViewHolder noteViewHolder = new NoteViewHolder(mu0.a(), viewGroup, new C1572a()) { // from class: cn.damai.search.component.feed.ContentView.2
+        NoteViewHolder noteViewHolder = new NoteViewHolder(mu0.a(), viewGroup, new a()) { // from class: cn.damai.search.component.feed.ContentView.2
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // cn.damai.commonbusiness.discover.viewholder.NoteViewHolder

@@ -2,7 +2,7 @@ package com.amap.api.services.busline;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import com.amap.api.col.s.C4435i;
+import com.amap.api.col.s.i;
 import com.amap.api.services.core.LatLonPoint;
 import java.util.ArrayList;
 import java.util.Date;
@@ -214,7 +214,7 @@ public class BusLineItem implements Parcelable {
     }
 
     public String toString() {
-        return this.b + " " + C4435i.a(this.j) + "-" + C4435i.a(this.k);
+        return this.b + " " + i.a(this.j) + "-" + i.a(this.k);
     }
 
     @Override // android.os.Parcelable
@@ -228,8 +228,8 @@ public class BusLineItem implements Parcelable {
         parcel.writeString(this.g);
         parcel.writeString(this.h);
         parcel.writeString(this.i);
-        parcel.writeString(C4435i.a(this.j));
-        parcel.writeString(C4435i.a(this.k));
+        parcel.writeString(i.a(this.j));
+        parcel.writeString(i.a(this.k));
         parcel.writeString(this.l);
         parcel.writeFloat(this.m);
         parcel.writeFloat(this.n);
@@ -249,8 +249,8 @@ public class BusLineItem implements Parcelable {
         this.g = parcel.readString();
         this.h = parcel.readString();
         this.i = parcel.readString();
-        this.j = C4435i.e(parcel.readString());
-        this.k = C4435i.e(parcel.readString());
+        this.j = i.e(parcel.readString());
+        this.k = i.e(parcel.readString());
         this.l = parcel.readString();
         this.m = parcel.readFloat();
         this.n = parcel.readFloat();

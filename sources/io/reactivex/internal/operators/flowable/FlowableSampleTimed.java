@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.Scheduler;
+import io.reactivex.b;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.disposables.SequentialDisposable;
@@ -157,15 +157,15 @@ public final class FlowableSampleTimed<T> extends AbstractFlowableWithUpstream<T
         }
     }
 
-    public FlowableSampleTimed(AbstractC8147b<T> abstractC8147b, long j, TimeUnit timeUnit, Scheduler scheduler, boolean z) {
-        super(abstractC8147b);
+    public FlowableSampleTimed(b<T> bVar, long j, TimeUnit timeUnit, Scheduler scheduler, boolean z) {
+        super(bVar);
         this.period = j;
         this.unit = timeUnit;
         this.scheduler = scheduler;
         this.emitLast = z;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         ua2 ua2Var = new ua2(subscriber);
         if (this.emitLast) {

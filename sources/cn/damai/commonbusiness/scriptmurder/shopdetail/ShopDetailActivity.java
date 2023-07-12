@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.fragment.app.FragmentTransaction;
-import cn.damai.common.user.C0525a;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.scriptmurder.CommonNavbarActivity;
@@ -37,7 +37,7 @@ import tb.z20;
 public class ShopDetailActivity extends CommonNavbarActivity {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C0801a Companion = new C0801a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String STORE_ID = "storeId";
     @NotNull
@@ -52,13 +52,12 @@ public class ShopDetailActivity extends CommonNavbarActivity {
     private ShopInfoBean shopInfoBean;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.scriptmurder.shopdetail.ShopDetailActivity$a */
     /* loaded from: classes4.dex */
-    public static final class C0801a {
-        private C0801a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C0801a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -166,7 +165,7 @@ public class ShopDetailActivity extends CommonNavbarActivity {
         if (intent != null && (stringExtra = intent.getStringExtra("storeId")) != null) {
             hashMap.put("store_id", stringExtra);
         }
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i("scriptkill_store").a(z20.d()).j(hashMap));
+        setDamaiUTKeyBuilder(new a.b().i("scriptkill_store").a(z20.d()).j(hashMap));
     }
 
     @NotNull

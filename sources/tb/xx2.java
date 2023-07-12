@@ -5,10 +5,8 @@ import android.text.TextUtils;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.poplayer.PopLayer;
 import com.alibaba.poplayer.norm.IConfigAdapter;
-import com.alibaba.poplayer.trigger.AbstractC3680a;
 import com.alibaba.poplayer.trigger.BaseConfigItem;
 import com.alibaba.poplayer.trigger.Event;
-import com.alibaba.poplayer.trigger.view.C3699d;
 import com.alibaba.poplayer.trigger.view.ViewConfigItem;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -19,21 +17,21 @@ import org.json.JSONObject;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
-public class xx2 extends AbstractC3680a<ViewConfigItem> {
+public class xx2 extends com.alibaba.poplayer.trigger.a<ViewConfigItem> {
     public static final String KEY_CONFIG_VIEW = "poplayer_view_config";
 
     public xx2(PopLayer popLayer, IConfigAdapter iConfigAdapter) {
-        super(iConfigAdapter, KEY_CONFIG_VIEW, AbstractC3680a.KEY_BLACK_LIST);
+        super(iConfigAdapter, KEY_CONFIG_VIEW, com.alibaba.poplayer.trigger.a.KEY_BLACK_LIST);
         dt1.a("ViewConfigMgr use " + ViewConfigItem.LOG);
     }
 
-    private boolean x(Map<String, String> map, BaseConfigItem.C3677a c3677a) {
+    private boolean x(Map<String, String> map, BaseConfigItem.a aVar) {
         JSONObject jSONObject;
         String string;
         String str;
-        if (!TextUtils.isEmpty(c3677a.c)) {
+        if (!TextUtils.isEmpty(aVar.c)) {
             try {
-                jSONObject = new JSONObject(c3677a.c);
+                jSONObject = new JSONObject(aVar.c);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -66,7 +64,7 @@ public class xx2 extends AbstractC3680a<ViewConfigItem> {
         return true;
     }
 
-    @Override // com.alibaba.poplayer.trigger.AbstractC3680a
+    @Override // com.alibaba.poplayer.trigger.a
     /* renamed from: A */
     public ViewConfigItem s(Event event) {
         Uri parse = Uri.parse(event.originUri);
@@ -79,7 +77,7 @@ public class xx2 extends AbstractC3680a<ViewConfigItem> {
         return null;
     }
 
-    @Override // com.alibaba.poplayer.trigger.AbstractC3680a
+    @Override // com.alibaba.poplayer.trigger.a
     public vw2<ViewConfigItem> h(Event event) {
         ArrayList arrayList = new ArrayList();
         for (ConfigItemType configitemtype : this.b) {
@@ -95,9 +93,9 @@ public class xx2 extends AbstractC3680a<ViewConfigItem> {
         return f(event, arrayList);
     }
 
-    @Override // com.alibaba.poplayer.trigger.AbstractC3680a
+    @Override // com.alibaba.poplayer.trigger.a
     protected void p(List<ViewConfigItem> list, String str, List<String> list2) {
-        C3699d.M().w();
+        com.alibaba.poplayer.trigger.view.d.M().w();
     }
 
     public vw2<ViewConfigItem> y(Event event, Map<String, String> map) {
@@ -115,7 +113,7 @@ public class xx2 extends AbstractC3680a<ViewConfigItem> {
         return f(event, arrayList);
     }
 
-    @Override // com.alibaba.poplayer.trigger.AbstractC3680a
+    @Override // com.alibaba.poplayer.trigger.a
     /* renamed from: z */
     public ViewConfigItem r(String str) {
         ViewConfigItem viewConfigItem = (ViewConfigItem) JSON.parseObject(str, ViewConfigItem.class);

@@ -77,7 +77,7 @@ public class LazyLoadFragment extends Fragment {
             return (View) ipChange.ipc$dispatch("68658767", new Object[]{this, layoutInflater, viewGroup, bundle});
         }
         Log.d(TAG, "onCreateView");
-        return layoutInflater.inflate(R.C7804layout.onearch_fragment_lazy_load, viewGroup, false);
+        return layoutInflater.inflate(R.layout.onearch_fragment_lazy_load, viewGroup, false);
     }
 
     @Override // androidx.fragment.app.Fragment

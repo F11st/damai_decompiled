@@ -19,7 +19,7 @@ import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.arch.v3.data.Constants;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
@@ -68,7 +68,7 @@ public class UIUtils {
             return 0;
         }
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        WindowManager windowManager = (WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+        WindowManager windowManager = (WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW);
         if (windowManager == null || (defaultDisplay = windowManager.getDefaultDisplay()) == null) {
             return 0;
         }
@@ -92,7 +92,7 @@ public class UIUtils {
         }
         char c = context.getResources().getConfiguration().orientation == 1 ? (char) 0 : (char) 1;
         if (mRealSizes[c] == null) {
-            WindowManager windowManager = (WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+            WindowManager windowManager = (WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW);
             if (windowManager == null) {
                 return getScreenHeight(context);
             }
@@ -114,7 +114,7 @@ public class UIUtils {
             return 0;
         }
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        WindowManager windowManager = (WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+        WindowManager windowManager = (WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW);
         if (windowManager == null || (defaultDisplay = windowManager.getDefaultDisplay()) == null) {
             return 0;
         }
@@ -147,7 +147,7 @@ public class UIUtils {
         mHasCheckAllScreen = true;
         mIsAllScreenDevice = false;
         if (Build.VERSION.SDK_INT >= 21 && context != null) {
-            WindowManager windowManager = (WindowManager) context.getApplicationContext().getSystemService(C9796v.ATTACH_MODE_WINDOW);
+            WindowManager windowManager = (WindowManager) context.getApplicationContext().getSystemService(v.ATTACH_MODE_WINDOW);
             if (windowManager != null) {
                 Display defaultDisplay = windowManager.getDefaultDisplay();
                 Point point = new Point();

@@ -3,29 +3,28 @@ package okhttp3.internal.io;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import okio.C8844h;
 import okio.Sink;
 import okio.Source;
+import okio.h;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
 public interface FileSystem {
-    public static final FileSystem SYSTEM = new C8803a();
+    public static final FileSystem SYSTEM = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: okhttp3.internal.io.FileSystem$a */
     /* loaded from: classes2.dex */
-    class C8803a implements FileSystem {
-        C8803a() {
+    class a implements FileSystem {
+        a() {
         }
 
         @Override // okhttp3.internal.io.FileSystem
         public Sink appendingSink(File file) throws FileNotFoundException {
             try {
-                return C8844h.a(file);
+                return h.a(file);
             } catch (FileNotFoundException unused) {
                 file.getParentFile().mkdirs();
-                return C8844h.a(file);
+                return h.a(file);
             }
         }
 
@@ -71,10 +70,10 @@ public interface FileSystem {
         @Override // okhttp3.internal.io.FileSystem
         public Sink sink(File file) throws FileNotFoundException {
             try {
-                return C8844h.f(file);
+                return h.f(file);
             } catch (FileNotFoundException unused) {
                 file.getParentFile().mkdirs();
-                return C8844h.f(file);
+                return h.f(file);
             }
         }
 
@@ -85,7 +84,7 @@ public interface FileSystem {
 
         @Override // okhttp3.internal.io.FileSystem
         public Source source(File file) throws FileNotFoundException {
-            return C8844h.j(file);
+            return h.j(file);
         }
     }
 

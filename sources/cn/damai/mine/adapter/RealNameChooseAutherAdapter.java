@@ -58,13 +58,12 @@ public class RealNameChooseAutherAdapter extends RecyclerView.Adapter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.adapter.RealNameChooseAutherAdapter$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1429a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ RealNameCustomerBean a;
 
-        View$OnClickListenerC1429a(RealNameCustomerBean realNameCustomerBean) {
+        a(RealNameCustomerBean realNameCustomerBean) {
             this.a = realNameCustomerBean;
         }
 
@@ -112,7 +111,7 @@ public class RealNameChooseAutherAdapter extends RecyclerView.Adapter {
             TextView textView = customerItemViewHolder.c;
             textView.setText(realNameCustomerBean.getIdentityTypeName() + AltriaXLaunchTime.SPACE + maskedIdentityNo);
         }
-        customerItemViewHolder.itemView.setOnClickListener(new View$OnClickListenerC1429a(realNameCustomerBean));
+        customerItemViewHolder.itemView.setOnClickListener(new a(realNameCustomerBean));
     }
 
     public void c(OnCustomerItemClickListener onCustomerItemClickListener) {

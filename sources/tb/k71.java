@@ -14,7 +14,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public final class k71 {
     @NotNull
-    public static final C9335a Companion = new C9335a(null);
+    public static final a Companion = new a(null);
     @JvmField
     @NotNull
     public static final k71 star = new k71(null, null);
@@ -24,13 +24,12 @@ public final class k71 {
     private final KType b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.k71$a */
     /* loaded from: classes3.dex */
-    public static final class C9335a {
-        private C9335a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9335a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -62,9 +61,8 @@ public final class k71 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.k71$b */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C9336b {
+    public /* synthetic */ class b {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -132,7 +130,7 @@ public final class k71 {
     @NotNull
     public String toString() {
         KVariance kVariance = this.a;
-        int i = kVariance == null ? -1 : C9336b.$EnumSwitchMapping$0[kVariance.ordinal()];
+        int i = kVariance == null ? -1 : b.$EnumSwitchMapping$0[kVariance.ordinal()];
         if (i != -1) {
             if (i != 1) {
                 if (i == 2) {

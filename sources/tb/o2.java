@@ -4,7 +4,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import kotlin.jvm.functions.Function0;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptorVisitor;
@@ -37,13 +36,12 @@ public abstract class o2 extends u40 implements TypeParameterDescriptor {
     private final StorageManager j;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.o2$a */
     /* loaded from: classes3.dex */
-    class C9496a implements Function0<TypeConstructor> {
+    class a implements Function0<TypeConstructor> {
         final /* synthetic */ StorageManager a;
         final /* synthetic */ SupertypeLoopChecker b;
 
-        C9496a(StorageManager storageManager, SupertypeLoopChecker supertypeLoopChecker) {
+        a(StorageManager storageManager, SupertypeLoopChecker supertypeLoopChecker) {
             this.a = storageManager;
             this.b = supertypeLoopChecker;
         }
@@ -51,53 +49,50 @@ public abstract class o2 extends u40 implements TypeParameterDescriptor {
         @Override // kotlin.jvm.functions.Function0
         /* renamed from: a */
         public TypeConstructor invoke() {
-            return new C9499c(o2.this, this.a, this.b);
+            return new c(o2.this, this.a, this.b);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.o2$b */
     /* loaded from: classes3.dex */
-    public class C9497b implements Function0<fd2> {
+    public class b implements Function0<fd2> {
         final /* synthetic */ ni1 a;
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: tb.o2$b$a */
         /* loaded from: classes3.dex */
-        public class C9498a implements Function0<MemberScope> {
-            C9498a() {
+        public class a implements Function0<MemberScope> {
+            a() {
             }
 
             @Override // kotlin.jvm.functions.Function0
             /* renamed from: a */
             public MemberScope invoke() {
-                return TypeIntersectionScope.c("Scope for type parameter " + C9497b.this.a.b(), o2.this.getUpperBounds());
+                return TypeIntersectionScope.c("Scope for type parameter " + b.this.a.b(), o2.this.getUpperBounds());
             }
         }
 
-        C9497b(ni1 ni1Var) {
+        b(ni1 ni1Var) {
             this.a = ni1Var;
         }
 
         @Override // kotlin.jvm.functions.Function0
         /* renamed from: a */
         public fd2 invoke() {
-            return KotlinTypeFactory.j(Annotations.Companion.b(), o2.this.getTypeConstructor(), Collections.emptyList(), false, new LazyScopeAdapter(new C9498a()));
+            return KotlinTypeFactory.j(Annotations.Companion.b(), o2.this.getTypeConstructor(), Collections.emptyList(), false, new LazyScopeAdapter(new a()));
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.o2$c */
     /* loaded from: classes3.dex */
-    public class C9499c extends AbstractTypeConstructor {
+    public class c extends AbstractTypeConstructor {
         private final SupertypeLoopChecker d;
         final /* synthetic */ o2 e;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C9499c(@NotNull o2 o2Var, StorageManager storageManager, SupertypeLoopChecker supertypeLoopChecker) {
+        public c(@NotNull o2 o2Var, StorageManager storageManager, SupertypeLoopChecker supertypeLoopChecker) {
             super(storageManager);
             if (storageManager == null) {
                 o(0);
@@ -202,8 +197,8 @@ public abstract class o2 extends u40 implements TypeParameterDescriptor {
 
         @Override // kotlin.reflect.jvm.internal.impl.types.TypeConstructor
         @NotNull
-        public AbstractC8271b getBuiltIns() {
-            AbstractC8271b g = DescriptorUtilsKt.g(this.e);
+        public kotlin.reflect.jvm.internal.impl.builtins.b getBuiltIns() {
+            kotlin.reflect.jvm.internal.impl.builtins.b g = DescriptorUtilsKt.g(this.e);
             if (g == null) {
                 o(4);
             }
@@ -302,8 +297,8 @@ public abstract class o2 extends u40 implements TypeParameterDescriptor {
         this.e = variance;
         this.f = z;
         this.g = i;
-        this.h = storageManager.createLazyValue(new C9496a(storageManager, supertypeLoopChecker));
-        this.i = storageManager.createLazyValue(new C9497b(ni1Var));
+        this.h = storageManager.createLazyValue(new a(storageManager, supertypeLoopChecker));
+        this.i = storageManager.createLazyValue(new b(ni1Var));
         this.j = storageManager;
     }
 
@@ -494,7 +489,7 @@ public abstract class o2 extends u40 implements TypeParameterDescriptor {
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor
     @NotNull
     public List<z71> getUpperBounds() {
-        List<z71> supertypes = ((C9499c) getTypeConstructor()).getSupertypes();
+        List<z71> supertypes = ((c) getTypeConstructor()).getSupertypes();
         if (supertypes == null) {
             a(8);
         }

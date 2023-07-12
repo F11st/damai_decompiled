@@ -3,11 +3,10 @@ package tb;
 import android.content.Context;
 import androidx.annotation.NonNull;
 import com.alibaba.android.bindingx.core.PlatformManager;
-import com.alibaba.android.bindingx.core.internal.AbstractC3210a;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
-public class ic extends AbstractC3210a implements PlatformManager.ScrollListener {
+public class ic extends com.alibaba.android.bindingx.core.internal.a implements PlatformManager.ScrollListener {
     private int q;
     private int r;
     private int s;
@@ -49,7 +48,7 @@ public class ic extends AbstractC3210a implements PlatformManager.ScrollListener
         return true;
     }
 
-    @Override // com.alibaba.android.bindingx.core.internal.AbstractC3210a, com.alibaba.android.bindingx.core.IEventHandler
+    @Override // com.alibaba.android.bindingx.core.internal.a, com.alibaba.android.bindingx.core.IEventHandler
     public boolean onDisable(@NonNull String str, @NonNull String str2) {
         PlatformManager.IScrollFactory f = this.h.f();
         if (f == null) {

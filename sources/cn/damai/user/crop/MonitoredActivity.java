@@ -26,9 +26,8 @@ public abstract class MonitoredActivity extends Activity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.crop.MonitoredActivity$a */
     /* loaded from: classes9.dex */
-    public static class C2684a implements LifeCycleListener {
+    public static class a implements LifeCycleListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         @Override // cn.damai.user.crop.MonitoredActivity.LifeCycleListener

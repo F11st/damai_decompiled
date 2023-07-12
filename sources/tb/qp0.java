@@ -5,11 +5,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
 import kotlin.reflect.jvm.internal.impl.builtins.functions.FunctionClassKind;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -34,11 +30,11 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public final class qp0 extends l1 {
     @NotNull
-    public static final C9610a Companion = new C9610a(null);
+    public static final a Companion = new a(null);
     @NotNull
-    private static final hj l = new hj(C8277c.BUILT_INS_PACKAGE_FQ_NAME, ni1.f("Function"));
+    private static final hj l = new hj(kotlin.reflect.jvm.internal.impl.builtins.c.BUILT_INS_PACKAGE_FQ_NAME, ni1.f("Function"));
     @NotNull
-    private static final hj m = new hj(C8277c.KOTLIN_REFLECT_FQ_NAME, ni1.f("KFunction"));
+    private static final hj m = new hj(kotlin.reflect.jvm.internal.impl.builtins.c.KOTLIN_REFLECT_FQ_NAME, ni1.f("KFunction"));
     @NotNull
     private final StorageManager e;
     @NotNull
@@ -47,34 +43,31 @@ public final class qp0 extends l1 {
     private final FunctionClassKind g;
     private final int h;
     @NotNull
-    private final C9611b i;
+    private final b i;
     @NotNull
     private final rp0 j;
     @NotNull
     private final List<TypeParameterDescriptor> k;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qp0$a */
     /* loaded from: classes3.dex */
-    public static final class C9610a {
-        private C9610a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9610a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qp0$b */
     /* loaded from: classes3.dex */
-    private final class C9611b extends m1 {
+    private final class b extends m1 {
         final /* synthetic */ qp0 d;
 
         /* compiled from: Taobao */
-        /* renamed from: tb.qp0$b$a */
         /* loaded from: classes3.dex */
-        public /* synthetic */ class C9612a {
+        public /* synthetic */ class a {
             public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
             static {
@@ -88,7 +81,7 @@ public final class qp0 extends l1 {
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C9611b(qp0 qp0Var) {
+        public b(qp0 qp0Var) {
             super(qp0Var.e);
             b41.i(qp0Var, "this$0");
             this.d = qp0Var;
@@ -103,33 +96,33 @@ public final class qp0 extends l1 {
             List A0;
             List<TypeParameterDescriptor> w0;
             int q2;
-            int i = C9612a.$EnumSwitchMapping$0[this.d.o().ordinal()];
+            int i = a.$EnumSwitchMapping$0[this.d.o().ordinal()];
             if (i == 1) {
-                e = C8213l.e(qp0.l);
+                e = kotlin.collections.l.e(qp0.l);
             } else if (i == 2) {
-                e = C8214m.j(qp0.m, new hj(C8277c.BUILT_INS_PACKAGE_FQ_NAME, FunctionClassKind.Function.numberedClassName(this.d.k())));
+                e = kotlin.collections.m.j(qp0.m, new hj(kotlin.reflect.jvm.internal.impl.builtins.c.BUILT_INS_PACKAGE_FQ_NAME, FunctionClassKind.Function.numberedClassName(this.d.k())));
             } else if (i == 3) {
-                e = C8213l.e(qp0.l);
+                e = kotlin.collections.l.e(qp0.l);
             } else if (i != 4) {
                 throw new NoWhenBranchMatchedException();
             } else {
-                e = C8214m.j(qp0.m, new hj(C8277c.COROUTINES_PACKAGE_FQ_NAME_RELEASE, FunctionClassKind.SuspendFunction.numberedClassName(this.d.k())));
+                e = kotlin.collections.m.j(qp0.m, new hj(kotlin.reflect.jvm.internal.impl.builtins.c.COROUTINES_PACKAGE_FQ_NAME_RELEASE, FunctionClassKind.SuspendFunction.numberedClassName(this.d.k())));
             }
             ModuleDescriptor containingDeclaration = this.d.f.getContainingDeclaration();
-            q = C8215n.q(e, 10);
+            q = kotlin.collections.n.q(e, 10);
             ArrayList arrayList = new ArrayList(q);
             for (hj hjVar : e) {
-                ClassDescriptor a = FindClassInModuleKt.a(containingDeclaration, hjVar);
-                if (a == null) {
+                ClassDescriptor a2 = FindClassInModuleKt.a(containingDeclaration, hjVar);
+                if (a2 == null) {
                     throw new IllegalStateException(("Built-in class " + hjVar + " not found").toString());
                 }
-                w0 = CollectionsKt___CollectionsKt.w0(getParameters(), a.getTypeConstructor().getParameters().size());
-                q2 = C8215n.q(w0, 10);
+                w0 = CollectionsKt___CollectionsKt.w0(getParameters(), a2.getTypeConstructor().getParameters().size());
+                q2 = kotlin.collections.n.q(w0, 10);
                 ArrayList arrayList2 = new ArrayList(q2);
                 for (TypeParameterDescriptor typeParameterDescriptor : w0) {
                     arrayList2.add(new zq2(typeParameterDescriptor.getDefaultType()));
                 }
-                arrayList.add(KotlinTypeFactory.g(Annotations.Companion.b(), a, arrayList2));
+                arrayList.add(KotlinTypeFactory.g(Annotations.Companion.b(), a2, arrayList2));
             }
             A0 = CollectionsKt___CollectionsKt.A0(arrayList);
             return A0;
@@ -150,7 +143,7 @@ public final class qp0 extends l1 {
         @Override // kotlin.reflect.jvm.internal.impl.types.AbstractTypeConstructor
         @NotNull
         public SupertypeLoopChecker j() {
-            return SupertypeLoopChecker.C8298a.INSTANCE;
+            return SupertypeLoopChecker.a.INSTANCE;
         }
 
         @Override // tb.m1
@@ -178,11 +171,11 @@ public final class qp0 extends l1 {
         this.f = packageFragmentDescriptor;
         this.g = functionClassKind;
         this.h = i;
-        this.i = new C9611b(this);
+        this.i = new b(this);
         this.j = new rp0(storageManager, this);
         ArrayList arrayList = new ArrayList();
         n31 n31Var = new n31(1, i);
-        q = C8215n.q(n31Var, 10);
+        q = kotlin.collections.n.q(n31Var, 10);
         ArrayList arrayList2 = new ArrayList(q);
         Iterator<Integer> it = n31Var.iterator();
         while (it.hasNext()) {
@@ -319,7 +312,7 @@ public final class qp0 extends l1 {
     /* renamed from: m */
     public List<ClassConstructorDescriptor> getConstructors() {
         List<ClassConstructorDescriptor> g;
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         return g;
     }
 
@@ -340,15 +333,15 @@ public final class qp0 extends l1 {
     /* renamed from: p */
     public List<ClassDescriptor> getSealedSubclasses() {
         List<ClassDescriptor> g;
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         return g;
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor
     @NotNull
     /* renamed from: q */
-    public MemberScope.C8499b getStaticScope() {
-        return MemberScope.C8499b.INSTANCE;
+    public MemberScope.b getStaticScope() {
+        return MemberScope.b.INSTANCE;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -367,8 +360,8 @@ public final class qp0 extends l1 {
 
     @NotNull
     public String toString() {
-        String b = getName().b();
-        b41.h(b, "name.asString()");
-        return b;
+        String b2 = getName().b();
+        b41.h(b2, "name.asString()");
+        return b2;
     }
 }

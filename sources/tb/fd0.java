@@ -1,7 +1,6 @@
 package tb;
 
 import com.alibaba.analytics.utils.Logger;
-import com.alibaba.appmonitor.pool.C3316a;
 import com.alibaba.mtl.appmonitor.model.DimensionValueSet;
 import com.alibaba.mtl.appmonitor.model.Measure;
 import com.alibaba.mtl.appmonitor.model.MeasureValue;
@@ -35,15 +34,15 @@ public class fd0 extends qf0 {
         this.g = null;
         this.k = null;
         for (MeasureValue measureValue : this.j.values()) {
-            C3316a.a().offer(measureValue);
+            com.alibaba.appmonitor.pool.a.a().offer(measureValue);
         }
         this.j.clear();
         if (this.h != null) {
-            C3316a.a().offer(this.h);
+            com.alibaba.appmonitor.pool.a.a().offer(this.h);
             this.h = null;
         }
         if (this.i != null) {
-            C3316a.a().offer(this.i);
+            com.alibaba.appmonitor.pool.a.a().offer(this.i);
             this.i = null;
         }
     }
@@ -81,10 +80,10 @@ public class fd0 extends qf0 {
         nf1 b = of1.c().b(this.a, this.b);
         this.g = b;
         if (b.a() != null) {
-            this.i = (DimensionValueSet) C3316a.a().poll(DimensionValueSet.class, new Object[0]);
+            this.i = (DimensionValueSet) com.alibaba.appmonitor.pool.a.a().poll(DimensionValueSet.class, new Object[0]);
             this.g.a().setConstantValue(this.i);
         }
-        this.h = (MeasureValueSet) C3316a.a().poll(MeasureValueSet.class, new Object[0]);
+        this.h = (MeasureValueSet) com.alibaba.appmonitor.pool.a.a().poll(MeasureValueSet.class, new Object[0]);
     }
 
     public boolean g() {
@@ -111,7 +110,7 @@ public class fd0 extends qf0 {
         if (this.j.isEmpty()) {
             this.k = Long.valueOf(currentTimeMillis);
         }
-        this.j.put(str, (MeasureValue) C3316a.a().poll(MeasureValue.class, Double.valueOf(currentTimeMillis), Double.valueOf(currentTimeMillis - this.k.longValue())));
+        this.j.put(str, (MeasureValue) com.alibaba.appmonitor.pool.a.a().poll(MeasureValue.class, Double.valueOf(currentTimeMillis), Double.valueOf(currentTimeMillis - this.k.longValue())));
         super.a(null);
     }
 }

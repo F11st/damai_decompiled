@@ -19,7 +19,7 @@ import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.taobao.android.dinamicx.C6368e;
+import com.taobao.android.dinamicx.e;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -46,7 +46,7 @@ public class CaptureActivity extends DamaiBaseActivity {
     TextView tv_cancel;
     TextView tv_ok;
     int width;
-    private final int maxFilelength = C6368e.DX_ERROR_CODE_SLIDER_LAYOUT_ITEM_COUNT_0;
+    private final int maxFilelength = e.DX_ERROR_CODE_SLIDER_LAYOUT_ITEM_COUNT_0;
     Handler mHandler = new Handler() { // from class: cn.damai.h5container.CaptureActivity.1
         private static transient /* synthetic */ IpChange $ipChange;
 

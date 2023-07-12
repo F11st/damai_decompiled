@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import androidx.fragment.app.FragmentActivity;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.videoplayer.R$color;
 import cn.damai.videoplayer.R$id;
 import cn.damai.videoplayer.R$layout;
@@ -138,7 +138,7 @@ public class DMVideoPlayerDiscoverView extends FrameLayout {
             ipChange.ipc$dispatch("-1547678921", new Object[]{this});
         } else if (this.mDataHolder.e() == null || TextUtils.isEmpty(this.mDataHolder.e().getPicUrl())) {
         } else {
-            C0504a.b().c(this.mDataHolder.e().getPicUrl()).c(R$color.color_111111).g(this.mCoverImg);
+            a.b().c(this.mDataHolder.e().getPicUrl()).c(R$color.color_111111).g(this.mCoverImg);
         }
     }
 

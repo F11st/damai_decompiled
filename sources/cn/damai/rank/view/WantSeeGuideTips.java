@@ -12,7 +12,6 @@ import android.view.animation.CycleInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.rank.view.WantSeeGuideTips;
@@ -37,12 +36,12 @@ import tb.q60;
 public final class WantSeeGuideTips extends FrameLayout {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C1545a Companion = new C1545a(null);
+    public static final a Companion = new a(null);
     private static boolean wantSeeGuideTipsShown;
     @Nullable
     private Long projectId;
     @Nullable
-    private AbstractC1546b scenesSource;
+    private b scenesSource;
     @NotNull
     private TextView subTitle;
     @Nullable
@@ -53,15 +52,14 @@ public final class WantSeeGuideTips extends FrameLayout {
     private View view;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.rank.view.WantSeeGuideTips$a */
     /* loaded from: classes15.dex */
-    public static final class C1545a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C1545a() {
+        private a() {
         }
 
-        public /* synthetic */ C1545a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -81,9 +79,8 @@ public final class WantSeeGuideTips extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.rank.view.WantSeeGuideTips$b */
     /* loaded from: classes15.dex */
-    public static abstract class AbstractC1546b {
+    public static abstract class b {
         private static transient /* synthetic */ IpChange $ipChange;
         @Nullable
         private String a;
@@ -91,32 +88,31 @@ public final class WantSeeGuideTips extends FrameLayout {
         private String b;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.rank.view.WantSeeGuideTips$b$a */
         /* loaded from: classes6.dex */
-        public static final class C1547a extends AbstractC1546b {
+        public static final class a extends b {
             private static transient /* synthetic */ IpChange $ipChange;
             @NotNull
-            public static final C1547a INSTANCE = new C1547a();
+            public static final a INSTANCE = new a();
 
-            private C1547a() {
+            private a() {
                 super(null);
             }
 
-            @Override // cn.damai.rank.view.WantSeeGuideTips.AbstractC1546b
+            @Override // cn.damai.rank.view.WantSeeGuideTips.b
             @NotNull
             public String e() {
                 IpChange ipChange = $ipChange;
                 return AndroidInstantRuntime.support(ipChange, "-1910226816") ? (String) ipChange.ipc$dispatch("-1910226816", new Object[]{this}) : "标 [想看]，以后更好查找～";
             }
 
-            @Override // cn.damai.rank.view.WantSeeGuideTips.AbstractC1546b
+            @Override // cn.damai.rank.view.WantSeeGuideTips.b
             @NotNull
             public String f() {
                 IpChange ipChange = $ipChange;
                 return AndroidInstantRuntime.support(ipChange, "652860038") ? (String) ipChange.ipc$dispatch("652860038", new Object[]{this}) : "还没做好决定？";
             }
 
-            @Override // cn.damai.rank.view.WantSeeGuideTips.AbstractC1546b
+            @Override // cn.damai.rank.view.WantSeeGuideTips.b
             public int k() {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "-838645963")) {
@@ -127,32 +123,32 @@ public final class WantSeeGuideTips extends FrameLayout {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.rank.view.WantSeeGuideTips$b$b */
+        /* renamed from: cn.damai.rank.view.WantSeeGuideTips$b$b  reason: collision with other inner class name */
         /* loaded from: classes6.dex */
-        public static final class C1548b extends AbstractC1546b {
+        public static final class C0063b extends b {
             private static transient /* synthetic */ IpChange $ipChange;
             @NotNull
-            public static final C1548b INSTANCE = new C1548b();
+            public static final C0063b INSTANCE = new C0063b();
 
-            private C1548b() {
+            private C0063b() {
                 super(null);
             }
 
-            @Override // cn.damai.rank.view.WantSeeGuideTips.AbstractC1546b
+            @Override // cn.damai.rank.view.WantSeeGuideTips.b
             @NotNull
             public String e() {
                 IpChange ipChange = $ipChange;
                 return AndroidInstantRuntime.support(ipChange, "-2062972732") ? (String) ipChange.ipc$dispatch("-2062972732", new Object[]{this}) : "标 [想看]，记录心动演出～";
             }
 
-            @Override // cn.damai.rank.view.WantSeeGuideTips.AbstractC1546b
+            @Override // cn.damai.rank.view.WantSeeGuideTips.b
             @NotNull
             public String f() {
                 IpChange ipChange = $ipChange;
                 return AndroidInstantRuntime.support(ipChange, "-902883134") ? (String) ipChange.ipc$dispatch("-902883134", new Object[]{this}) : "感觉有点心动？";
             }
 
-            @Override // cn.damai.rank.view.WantSeeGuideTips.AbstractC1546b
+            @Override // cn.damai.rank.view.WantSeeGuideTips.b
             public int k() {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "-867165319")) {
@@ -163,32 +159,31 @@ public final class WantSeeGuideTips extends FrameLayout {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.rank.view.WantSeeGuideTips$b$c */
         /* loaded from: classes6.dex */
-        public static final class C1549c extends AbstractC1546b {
+        public static final class c extends b {
             private static transient /* synthetic */ IpChange $ipChange;
             @NotNull
-            public static final C1549c INSTANCE = new C1549c();
+            public static final c INSTANCE = new c();
 
-            private C1549c() {
+            private c() {
                 super(null);
             }
 
-            @Override // cn.damai.rank.view.WantSeeGuideTips.AbstractC1546b
+            @Override // cn.damai.rank.view.WantSeeGuideTips.b
             @NotNull
             public String e() {
                 IpChange ipChange = $ipChange;
                 return AndroidInstantRuntime.support(ipChange, "-1351088601") ? (String) ipChange.ipc$dispatch("-1351088601", new Object[]{this}) : "标 [想看]，记录心动演出～";
             }
 
-            @Override // cn.damai.rank.view.WantSeeGuideTips.AbstractC1546b
+            @Override // cn.damai.rank.view.WantSeeGuideTips.b
             @NotNull
             public String f() {
                 IpChange ipChange = $ipChange;
                 return AndroidInstantRuntime.support(ipChange, "483479103") ? (String) ipChange.ipc$dispatch("483479103", new Object[]{this}) : "感觉有点心动？";
             }
 
-            @Override // cn.damai.rank.view.WantSeeGuideTips.AbstractC1546b
+            @Override // cn.damai.rank.view.WantSeeGuideTips.b
             public int k() {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "-414002724")) {
@@ -199,32 +194,31 @@ public final class WantSeeGuideTips extends FrameLayout {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.rank.view.WantSeeGuideTips$b$d */
         /* loaded from: classes6.dex */
-        public static final class C1550d extends AbstractC1546b {
+        public static final class d extends b {
             private static transient /* synthetic */ IpChange $ipChange;
             @NotNull
-            public static final C1550d INSTANCE = new C1550d();
+            public static final d INSTANCE = new d();
 
-            private C1550d() {
+            private d() {
                 super(null);
             }
 
-            @Override // cn.damai.rank.view.WantSeeGuideTips.AbstractC1546b
+            @Override // cn.damai.rank.view.WantSeeGuideTips.b
             @NotNull
             public String e() {
                 IpChange ipChange = $ipChange;
                 return AndroidInstantRuntime.support(ipChange, "615345221") ? (String) ipChange.ipc$dispatch("615345221", new Object[]{this}) : "标 [想看]，及时获取优惠信息～";
             }
 
-            @Override // cn.damai.rank.view.WantSeeGuideTips.AbstractC1546b
+            @Override // cn.damai.rank.view.WantSeeGuideTips.b
             @NotNull
             public String f() {
                 IpChange ipChange = $ipChange;
                 return AndroidInstantRuntime.support(ipChange, "189582561") ? (String) ipChange.ipc$dispatch("189582561", new Object[]{this}) : "还没做好决定？";
             }
 
-            @Override // cn.damai.rank.view.WantSeeGuideTips.AbstractC1546b
+            @Override // cn.damai.rank.view.WantSeeGuideTips.b
             public int k() {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "100610554")) {
@@ -235,18 +229,17 @@ public final class WantSeeGuideTips extends FrameLayout {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.rank.view.WantSeeGuideTips$b$e */
         /* loaded from: classes6.dex */
-        public static final class C1551e extends AbstractC1546b {
+        public static final class e extends b {
             private static transient /* synthetic */ IpChange $ipChange;
             @NotNull
-            public static final C1551e INSTANCE = new C1551e();
+            public static final e INSTANCE = new e();
 
-            private C1551e() {
+            private e() {
                 super(null);
             }
 
-            @Override // cn.damai.rank.view.WantSeeGuideTips.AbstractC1546b
+            @Override // cn.damai.rank.view.WantSeeGuideTips.b
             @NotNull
             public String e() {
                 IpChange ipChange = $ipChange;
@@ -257,7 +250,7 @@ public final class WantSeeGuideTips extends FrameLayout {
                 return g == null ? "" : g;
             }
 
-            @Override // cn.damai.rank.view.WantSeeGuideTips.AbstractC1546b
+            @Override // cn.damai.rank.view.WantSeeGuideTips.b
             @NotNull
             public String f() {
                 IpChange ipChange = $ipChange;
@@ -268,7 +261,7 @@ public final class WantSeeGuideTips extends FrameLayout {
                 return h == null ? "" : h;
             }
 
-            @Override // cn.damai.rank.view.WantSeeGuideTips.AbstractC1546b
+            @Override // cn.damai.rank.view.WantSeeGuideTips.b
             public int k() {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "-1290847232")) {
@@ -278,12 +271,12 @@ public final class WantSeeGuideTips extends FrameLayout {
             }
         }
 
-        private AbstractC1546b() {
+        private b() {
             this.a = "";
             this.b = "";
         }
 
-        public /* synthetic */ AbstractC1546b(k50 k50Var) {
+        public /* synthetic */ b(k50 k50Var) {
             this();
         }
 
@@ -350,12 +343,11 @@ public final class WantSeeGuideTips extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.rank.view.WantSeeGuideTips$c */
     /* loaded from: classes15.dex */
-    public static final class CountDownTimerC1552c extends CountDownTimer {
+    public static final class c extends CountDownTimer {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        CountDownTimerC1552c() {
+        c() {
             super(5500L, 1000L);
         }
 
@@ -380,12 +372,11 @@ public final class WantSeeGuideTips extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.rank.view.WantSeeGuideTips$d  reason: invalid class name */
     /* loaded from: classes15.dex */
-    public static final class animationAnimation$AnimationListenerC1553d implements Animation.AnimationListener {
+    public static final class d implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        animationAnimation$AnimationListenerC1553d() {
+        d() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -524,15 +515,15 @@ public final class WantSeeGuideTips extends FrameLayout {
         }
     }
 
-    private final void updateUI(AbstractC1546b abstractC1546b) {
+    private final void updateUI(b bVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1571465263")) {
-            ipChange.ipc$dispatch("1571465263", new Object[]{this, abstractC1546b});
+            ipChange.ipc$dispatch("1571465263", new Object[]{this, bVar});
             return;
         }
-        this.title.setText(abstractC1546b.f());
-        this.subTitle.setText(abstractC1546b.e());
-        this.view.setPadding(0, 0, 0, abstractC1546b.a());
+        this.title.setText(bVar.f());
+        this.subTitle.setText(bVar.e());
+        this.view.setPadding(0, 0, 0, bVar.a());
     }
 
     public final void cancel() {
@@ -559,15 +550,15 @@ public final class WantSeeGuideTips extends FrameLayout {
         }
     }
 
-    public final void setScenesSource(@NotNull AbstractC1546b abstractC1546b) {
+    public final void setScenesSource(@NotNull b bVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "666063986")) {
-            ipChange.ipc$dispatch("666063986", new Object[]{this, abstractC1546b});
+            ipChange.ipc$dispatch("666063986", new Object[]{this, bVar});
             return;
         }
-        b41.i(abstractC1546b, "scenesSource");
-        this.scenesSource = abstractC1546b;
-        updateUI(abstractC1546b);
+        b41.i(bVar, "scenesSource");
+        this.scenesSource = bVar;
+        updateUI(bVar);
     }
 
     public final void showAnim() {
@@ -585,26 +576,26 @@ public final class WantSeeGuideTips extends FrameLayout {
         translateAnimation.setDuration(500L);
         startAnimation(translateAnimation);
         this.view.setVisibility(0);
-        this.timer = new CountDownTimerC1552c().start();
-        translateAnimation.setAnimationListener(new animationAnimation$AnimationListenerC1553d());
-        AbstractC1546b abstractC1546b = this.scenesSource;
-        if (b41.d(abstractC1546b, AbstractC1546b.C1550d.INSTANCE) ? true : b41.d(abstractC1546b, AbstractC1546b.C1548b.INSTANCE) ? true : b41.d(abstractC1546b, AbstractC1546b.C1547a.INSTANCE) ? true : b41.d(abstractC1546b, AbstractC1546b.C1549c.INSTANCE)) {
+        this.timer = new c().start();
+        translateAnimation.setAnimationListener(new d());
+        b bVar = this.scenesSource;
+        if (b41.d(bVar, b.d.INSTANCE) ? true : b41.d(bVar, b.C0063b.INSTANCE) ? true : b41.d(bVar, b.a.INSTANCE) ? true : b41.d(bVar, b.c.INSTANCE)) {
             HashMap<String, String> f = d23.f();
             if (f != null) {
                 f.put("item_id", String.valueOf(this.projectId));
-                AbstractC1546b abstractC1546b2 = this.scenesSource;
-                f.put("type", String.valueOf(abstractC1546b2 != null ? Integer.valueOf(abstractC1546b2.k()) : null));
+                b bVar2 = this.scenesSource;
+                f.put("type", String.valueOf(bVar2 != null ? Integer.valueOf(bVar2.k()) : null));
                 hashMap = f;
             } else {
                 hashMap = null;
             }
-            C0529c e = C0529c.e();
-            AbstractC1546b abstractC1546b3 = this.scenesSource;
-            String d = abstractC1546b3 != null ? abstractC1546b3.d() : null;
-            AbstractC1546b abstractC1546b4 = this.scenesSource;
-            String c = abstractC1546b4 != null ? abstractC1546b4.c() : null;
-            AbstractC1546b abstractC1546b5 = this.scenesSource;
-            e.G(this, d, c, abstractC1546b5 != null ? abstractC1546b5.b() : null, hashMap);
+            cn.damai.common.user.c e = cn.damai.common.user.c.e();
+            b bVar3 = this.scenesSource;
+            String d2 = bVar3 != null ? bVar3.d() : null;
+            b bVar4 = this.scenesSource;
+            String c2 = bVar4 != null ? bVar4.c() : null;
+            b bVar5 = this.scenesSource;
+            e.G(this, d2, c2, bVar5 != null ? bVar5.b() : null, hashMap);
         }
     }
 

@@ -1,12 +1,11 @@
 package com.google.common.reflect;
 
 import com.google.common.annotations.VisibleForTesting;
-import com.google.common.base.C4832d;
 import com.google.common.base.Function;
 import com.google.common.base.Predicates;
-import com.google.common.collect.C5152a0;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.a0;
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
 import java.io.Serializable;
 import java.lang.reflect.AnnotatedElement;
@@ -36,8 +35,8 @@ import tb.yt2;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public final class Types {
-    private static final Function<Type, String> a = new C5272a();
-    private static final C4832d b = C4832d.g(AVFSCacheConstants.COMMA_SEP).i("null");
+    private static final Function<Type, String> a = new a();
+    private static final com.google.common.base.d b = com.google.common.base.d.g(AVFSCacheConstants.COMMA_SEP).i("null");
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
@@ -65,28 +64,26 @@ public final class Types {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.reflect.Types$ClassOwnership$a */
         /* loaded from: classes10.dex */
-        public class C5268a<T> {
-            C5268a() {
+        public class a<T> {
+            a() {
             }
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.reflect.Types$ClassOwnership$b */
         /* loaded from: classes10.dex */
-        public static class C5269b extends C5268a<String> {
-            C5269b() {
+        public static class b extends a<String> {
+            b() {
             }
         }
 
         private static ClassOwnership detectJvmBehavior() {
             ClassOwnership[] values;
-            new C5269b();
-            ParameterizedType parameterizedType = (ParameterizedType) C5269b.class.getGenericSuperclass();
+            new b();
+            ParameterizedType parameterizedType = (ParameterizedType) b.class.getGenericSuperclass();
             for (ClassOwnership classOwnership : values()) {
-                if (classOwnership.getOwnerType(C5268a.class) == parameterizedType.getOwnerType()) {
+                if (classOwnership.getOwnerType(a.class) == parameterizedType.getOwnerType()) {
                     return classOwnership;
                 }
             }
@@ -96,7 +93,7 @@ public final class Types {
         @NullableDecl
         abstract Class<?> getOwnerType(Class<?> cls);
 
-        /* synthetic */ ClassOwnership(C5272a c5272a) {
+        /* synthetic */ ClassOwnership(a aVar) {
             this();
         }
     }
@@ -217,18 +214,16 @@ public final class Types {
         static final JavaVersion CURRENT;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.reflect.Types$JavaVersion$a */
         /* loaded from: classes10.dex */
-        static class C5270a extends AbstractC5281c<Map.Entry<String, int[][]>> {
-            C5270a() {
+        static class a extends com.google.common.reflect.c<Map.Entry<String, int[][]>> {
+            a() {
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.reflect.Types$JavaVersion$b */
         /* loaded from: classes10.dex */
-        static class C5271b extends AbstractC5281c<int[]> {
-            C5271b() {
+        static class b extends com.google.common.reflect.c<int[]> {
+            b() {
             }
         }
 
@@ -238,12 +233,12 @@ public final class Types {
             JavaVersion javaVersion3 = JAVA8;
             JavaVersion javaVersion4 = JAVA9;
             if (AnnotatedElement.class.isAssignableFrom(TypeVariable.class)) {
-                if (new C5270a().capture().toString().contains("java.util.Map.java.util.Map")) {
+                if (new a().capture().toString().contains("java.util.Map.java.util.Map")) {
                     CURRENT = javaVersion3;
                 } else {
                     CURRENT = javaVersion4;
                 }
-            } else if (new C5271b().capture() instanceof Class) {
+            } else if (new b().capture() instanceof Class) {
                 CURRENT = javaVersion2;
             } else {
                 CURRENT = javaVersion;
@@ -262,7 +257,7 @@ public final class Types {
         }
 
         final ImmutableList<Type> usedInGenericType(Type[] typeArr) {
-            ImmutableList.C4971a builder = ImmutableList.builder();
+            ImmutableList.a builder = ImmutableList.builder();
             for (Type type : typeArr) {
                 builder.a(usedInGenericType(type));
             }
@@ -271,7 +266,7 @@ public final class Types {
 
         abstract Type usedInGenericType(Type type);
 
-        /* synthetic */ JavaVersion(C5272a c5272a) {
+        /* synthetic */ JavaVersion(a aVar) {
             this();
         }
     }
@@ -334,7 +329,7 @@ public final class Types {
             }
             sb.append(this.rawType.getName());
             sb.append('<');
-            sb.append(Types.b.c(C5152a0.n(this.argumentsList, Types.a)));
+            sb.append(Types.b.c(a0.n(this.argumentsList, Types.a)));
             sb.append('>');
             return sb.toString();
         }
@@ -395,10 +390,9 @@ public final class Types {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.reflect.Types$a */
     /* loaded from: classes10.dex */
-    static class C5272a implements Function<Type, String> {
-        C5272a() {
+    static class a implements Function<Type, String> {
+        a() {
         }
 
         @Override // com.google.common.base.Function
@@ -410,57 +404,53 @@ public final class Types {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.reflect.Types$b */
     /* loaded from: classes10.dex */
-    public static class C5273b extends AbstractC5291f {
+    public static class b extends f {
         final /* synthetic */ AtomicReference b;
 
-        C5273b(AtomicReference atomicReference) {
+        b(AtomicReference atomicReference) {
             this.b = atomicReference;
         }
 
-        @Override // com.google.common.reflect.AbstractC5291f
+        @Override // com.google.common.reflect.f
         void b(Class<?> cls) {
             this.b.set(cls.getComponentType());
         }
 
-        @Override // com.google.common.reflect.AbstractC5291f
+        @Override // com.google.common.reflect.f
         void c(GenericArrayType genericArrayType) {
             this.b.set(genericArrayType.getGenericComponentType());
         }
 
-        @Override // com.google.common.reflect.AbstractC5291f
+        @Override // com.google.common.reflect.f
         void e(TypeVariable<?> typeVariable) {
             this.b.set(Types.q(typeVariable.getBounds()));
         }
 
-        @Override // com.google.common.reflect.AbstractC5291f
+        @Override // com.google.common.reflect.f
         void f(WildcardType wildcardType) {
             this.b.set(Types.q(wildcardType.getUpperBounds()));
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.reflect.Types$c */
     /* loaded from: classes10.dex */
-    public static final class C5274c<X> {
-        static final boolean a = !C5274c.class.getTypeParameters()[0].equals(Types.l(C5274c.class, "X", new Type[0]));
+    static final class c<X> {
+        static final boolean a = !c.class.getTypeParameters()[0].equals(Types.l(c.class, "X", new Type[0]));
 
-        C5274c() {
+        c() {
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.reflect.Types$d */
     /* loaded from: classes10.dex */
-    public static final class C5275d<D extends GenericDeclaration> {
+    public static final class d<D extends GenericDeclaration> {
         private final D a;
         private final String b;
         private final ImmutableList<Type> c;
 
-        C5275d(D d, String str, Type[] typeArr) {
+        d(D d, String str, Type[] typeArr) {
             Types.g(typeArr, "bound for type variable");
             this.a = (D) du1.p(d);
             this.b = (String) du1.p(str);
@@ -476,10 +466,10 @@ public final class Types {
         }
 
         public boolean equals(Object obj) {
-            if (C5274c.a) {
-                if (obj != null && Proxy.isProxyClass(obj.getClass()) && (Proxy.getInvocationHandler(obj) instanceof C5276e)) {
-                    C5275d c5275d = ((C5276e) Proxy.getInvocationHandler(obj)).a;
-                    return this.b.equals(c5275d.b()) && this.a.equals(c5275d.a()) && this.c.equals(c5275d.c);
+            if (c.a) {
+                if (obj != null && Proxy.isProxyClass(obj.getClass()) && (Proxy.getInvocationHandler(obj) instanceof e)) {
+                    d dVar = ((e) Proxy.getInvocationHandler(obj)).a;
+                    return this.b.equals(dVar.b()) && this.a.equals(dVar.a()) && this.c.equals(dVar.c);
                 }
                 return false;
             } else if (obj instanceof TypeVariable) {
@@ -501,17 +491,16 @@ public final class Types {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.reflect.Types$e */
     /* loaded from: classes10.dex */
-    public static final class C5276e implements InvocationHandler {
+    public static final class e implements InvocationHandler {
         private static final ImmutableMap<String, Method> b;
-        private final C5275d<?> a;
+        private final d<?> a;
 
         static {
             Method[] methods;
-            ImmutableMap.C4977b builder = ImmutableMap.builder();
-            for (Method method : C5275d.class.getMethods()) {
-                if (method.getDeclaringClass().equals(C5275d.class)) {
+            ImmutableMap.b builder = ImmutableMap.builder();
+            for (Method method : d.class.getMethods()) {
+                if (method.getDeclaringClass().equals(d.class)) {
                     try {
                         method.setAccessible(true);
                     } catch (AccessControlException unused) {
@@ -522,8 +511,8 @@ public final class Types {
             b = builder.a();
         }
 
-        C5276e(C5275d<?> c5275d) {
-            this.a = c5275d;
+        e(d<?> dVar) {
+            this.a = dVar;
         }
 
         @Override // java.lang.reflect.InvocationHandler
@@ -553,7 +542,7 @@ public final class Types {
 
     /* JADX INFO: Access modifiers changed from: private */
     public static Iterable<Type> h(Iterable<Type> iterable) {
-        return C5152a0.d(iterable, Predicates.g(Predicates.d(Object.class)));
+        return a0.d(iterable, Predicates.g(Predicates.d(Object.class)));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -566,7 +555,7 @@ public final class Types {
     public static Type j(Type type) {
         du1.p(type);
         AtomicReference atomicReference = new AtomicReference();
-        new C5273b(atomicReference).a(type);
+        new b(atomicReference).a(type);
         return (Type) atomicReference.get();
     }
 
@@ -587,11 +576,11 @@ public final class Types {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static <D extends GenericDeclaration> TypeVariable<D> l(D d, String str, Type... typeArr) {
+    public static <D extends GenericDeclaration> TypeVariable<D> l(D d2, String str, Type... typeArr) {
         if (typeArr.length == 0) {
             typeArr = new Type[]{Object.class};
         }
-        return o(d, str, typeArr);
+        return o(d2, str, typeArr);
     }
 
     static ParameterizedType m(Class<?> cls, Type... typeArr) {
@@ -608,8 +597,8 @@ public final class Types {
         return new ParameterizedTypeImpl(type, cls, typeArr);
     }
 
-    private static <D extends GenericDeclaration> TypeVariable<D> o(D d, String str, Type[] typeArr) {
-        return (TypeVariable) b12.a(TypeVariable.class, new C5276e(new C5275d(d, str, typeArr)));
+    private static <D extends GenericDeclaration> TypeVariable<D> o(D d2, String str, Type[] typeArr) {
+        return (TypeVariable) b12.a(TypeVariable.class, new e(new d(d2, str, typeArr)));
     }
 
     @VisibleForTesting

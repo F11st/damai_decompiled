@@ -34,7 +34,7 @@ public class cv {
     private boolean q = false;
     private boolean r = false;
     private boolean s = false;
-    C4499a a = null;
+    a a = null;
     Animator.AnimatorListener c = new Animator.AnimatorListener() { // from class: com.amap.api.mapcore.util.cv.1
         @Override // android.animation.Animator.AnimatorListener
         public void onAnimationCancel(Animator animator) {
@@ -69,9 +69,8 @@ public class cv {
     };
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.cv$a */
     /* loaded from: classes10.dex */
-    public static class C4499a implements TypeEvaluator {
+    public static class a implements TypeEvaluator {
         @Override // android.animation.TypeEvaluator
         public Object evaluate(float f, Object obj, Object obj2) {
             LatLng latLng = (LatLng) obj;
@@ -387,11 +386,11 @@ public class cv {
             position = new LatLng(0.0d, 0.0d);
         }
         if (this.a == null) {
-            this.a = new C4499a();
+            this.a = new a();
         }
         ValueAnimator valueAnimator = this.b;
         if (valueAnimator == null) {
-            ValueAnimator ofObject = ValueAnimator.ofObject(new C4499a(), position, latLng);
+            ValueAnimator ofObject = ValueAnimator.ofObject(new a(), position, latLng);
             this.b = ofObject;
             ofObject.addListener(this.c);
             this.b.addUpdateListener(this.d);

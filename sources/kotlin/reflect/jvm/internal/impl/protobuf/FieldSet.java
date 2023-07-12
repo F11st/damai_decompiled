@@ -5,11 +5,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import kotlin.reflect.jvm.internal.impl.protobuf.C8449d;
 import kotlin.reflect.jvm.internal.impl.protobuf.FieldSet.FieldDescriptorLite;
 import kotlin.reflect.jvm.internal.impl.protobuf.Internal;
 import kotlin.reflect.jvm.internal.impl.protobuf.MessageLite;
 import kotlin.reflect.jvm.internal.impl.protobuf.WireFormat;
+import kotlin.reflect.jvm.internal.impl.protobuf.d;
 
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
@@ -18,7 +18,7 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
     private static final FieldSet d = new FieldSet(true);
     private boolean b;
     private boolean c = false;
-    private final C8462g<FieldDescriptorType, Object> a = C8462g.n(16);
+    private final g<FieldDescriptorType, Object> a = g.n(16);
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -38,9 +38,8 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.protobuf.FieldSet$a */
     /* loaded from: classes3.dex */
-    public static /* synthetic */ class C8437a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
         static final /* synthetic */ int[] b;
 
@@ -182,7 +181,7 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
     }
 
     private static int e(WireFormat.FieldType fieldType, Object obj) {
-        switch (C8437a.b[fieldType.ordinal()]) {
+        switch (a.b[fieldType.ordinal()]) {
             case 1:
                 return CodedOutputStream.g(((Double) obj).doubleValue());
             case 2:
@@ -219,8 +218,8 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
             case 16:
                 return CodedOutputStream.n((MessageLite) obj);
             case 17:
-                if (obj instanceof C8449d) {
-                    return CodedOutputStream.r((C8449d) obj);
+                if (obj instanceof d) {
+                    return CodedOutputStream.r((d) obj);
                 }
                 return CodedOutputStream.t((MessageLite) obj);
             case 18:
@@ -279,7 +278,7 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
                     if (!((MessageLite) value).isInitialized()) {
                         return false;
                     }
-                } else if (value instanceof C8449d) {
+                } else if (value instanceof d) {
                     return true;
                 } else {
                     throw new IllegalArgumentException("Wrong object type used with protocol message reflection.");
@@ -292,8 +291,8 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
     private void s(Map.Entry<FieldDescriptorType, Object> entry) {
         FieldDescriptorType key = entry.getKey();
         Object value = entry.getValue();
-        if (value instanceof C8449d) {
-            value = ((C8449d) value).e();
+        if (value instanceof d) {
+            value = ((d) value).e();
         }
         if (key.isRepeated()) {
             Object h = h(key);
@@ -321,7 +320,7 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
     }
 
     public static Object u(CodedInputStream codedInputStream, WireFormat.FieldType fieldType, boolean z) throws IOException {
-        switch (C8437a.b[fieldType.ordinal()]) {
+        switch (a.b[fieldType.ordinal()]) {
             case 1:
                 return Double.valueOf(codedInputStream.m());
             case 2:
@@ -376,7 +375,7 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
         r0 = false;
      */
     /* JADX WARN: Code restructure failed: missing block: B:8:0x001b, code lost:
-        if ((r3 instanceof kotlin.reflect.jvm.internal.impl.protobuf.C8449d) == false) goto L7;
+        if ((r3 instanceof kotlin.reflect.jvm.internal.impl.protobuf.d) == false) goto L7;
      */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
@@ -385,7 +384,7 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
     private static void w(kotlin.reflect.jvm.internal.impl.protobuf.WireFormat.FieldType r2, java.lang.Object r3) {
         /*
             java.util.Objects.requireNonNull(r3)
-            int[] r0 = kotlin.reflect.jvm.internal.impl.protobuf.FieldSet.C8437a.a
+            int[] r0 = kotlin.reflect.jvm.internal.impl.protobuf.FieldSet.a.a
             kotlin.reflect.jvm.internal.impl.protobuf.WireFormat$JavaType r2 = r2.getJavaType()
             int r2 = r2.ordinal()
             r2 = r0[r2]
@@ -408,7 +407,7 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
         L15:
             boolean r2 = r3 instanceof kotlin.reflect.jvm.internal.impl.protobuf.MessageLite
             if (r2 != 0) goto L31
-            boolean r2 = r3 instanceof kotlin.reflect.jvm.internal.impl.protobuf.C8449d
+            boolean r2 = r3 instanceof kotlin.reflect.jvm.internal.impl.protobuf.d
             if (r2 == 0) goto L30
             goto L31
         L1e:
@@ -467,7 +466,7 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
     }
 
     private static void y(CodedOutputStream codedOutputStream, WireFormat.FieldType fieldType, Object obj) throws IOException {
-        switch (C8437a.b[fieldType.ordinal()]) {
+        switch (a.b[fieldType.ordinal()]) {
             case 1:
                 codedOutputStream.R(((Double) obj).doubleValue());
                 return;
@@ -557,8 +556,8 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
             for (Object obj4 : list) {
                 x(codedOutputStream, liteType, number, obj4);
             }
-        } else if (obj instanceof C8449d) {
-            x(codedOutputStream, liteType, number, ((C8449d) obj).e());
+        } else if (obj instanceof d) {
+            x(codedOutputStream, liteType, number, ((d) obj).e());
         } else {
             x(codedOutputStream, liteType, number, obj);
         }
@@ -597,7 +596,7 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
 
     public Object h(FieldDescriptorType fielddescriptortype) {
         Object obj = this.a.get(fielddescriptortype);
-        return obj instanceof C8449d ? ((C8449d) obj).e() : obj;
+        return obj instanceof d ? ((d) obj).e() : obj;
     }
 
     public Object i(FieldDescriptorType fielddescriptortype, int i) {
@@ -657,7 +656,7 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
 
     public Iterator<Map.Entry<FieldDescriptorType, Object>> p() {
         if (this.c) {
-            return new C8449d.C8452c(this.a.entrySet().iterator());
+            return new d.c(this.a.entrySet().iterator());
         }
         return this.a.entrySet().iterator();
     }
@@ -694,7 +693,7 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
         } else {
             w(fielddescriptortype.getLiteType(), obj);
         }
-        if (obj instanceof C8449d) {
+        if (obj instanceof d) {
             this.c = true;
         }
         this.a.o(fielddescriptortype, obj);

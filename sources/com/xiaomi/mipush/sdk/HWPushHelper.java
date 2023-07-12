@@ -3,7 +3,6 @@ package com.xiaomi.mipush.sdk;
 import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.youku.danmaku.engine.danmaku.model.android.DanmakuFactory;
 import org.json.JSONObject;
 
@@ -13,19 +12,19 @@ public class HWPushHelper {
     private static boolean a;
 
     public static void convertMessage(Intent intent) {
-        C7572i.a(intent);
+        i.a(intent);
     }
 
     public static boolean hasNetwork(Context context) {
-        return C7572i.m652a(context);
+        return i.m652a(context);
     }
 
     public static boolean isHmsTokenSynced(Context context) {
-        String a2 = C7572i.a(EnumC7568e.ASSEMBLE_PUSH_HUAWEI);
+        String a2 = i.a(e.ASSEMBLE_PUSH_HUAWEI);
         if (TextUtils.isEmpty(a2)) {
             return false;
         }
-        String a3 = C7572i.a(context, a2);
+        String a3 = i.a(context, a2);
         String a4 = af.a(context).a(au.UPLOAD_HUAWEI_TOKEN);
         return (TextUtils.isEmpty(a3) || TextUtils.isEmpty(a4) || !"synced".equals(a4)) ? false : true;
     }
@@ -71,11 +70,11 @@ public class HWPushHelper {
         L2f:
             r6 = move-exception
             java.lang.String r6 = r6.toString()
-            com.xiaomi.channel.commonutils.logger.AbstractC7535b.d(r6)
+            com.xiaomi.channel.commonutils.logger.b.d(r6)
         L37:
-            com.xiaomi.mipush.sdk.PushMessageReceiver r6 = com.xiaomi.mipush.sdk.C7572i.a(r5)
+            com.xiaomi.mipush.sdk.PushMessageReceiver r6 = com.xiaomi.mipush.sdk.i.a(r5)
             if (r6 == 0) goto L51
-            com.xiaomi.mipush.sdk.MiPushMessage r0 = com.xiaomi.mipush.sdk.C7572i.a(r2)
+            com.xiaomi.mipush.sdk.MiPushMessage r0 = com.xiaomi.mipush.sdk.i.a(r2)
             java.util.Map r1 = r0.getExtra()
             java.lang.String r2 = "notify_effect"
             boolean r1 = r1.containsKey(r2)
@@ -99,23 +98,23 @@ public class HWPushHelper {
                 }
             }
         } catch (Exception e) {
-            AbstractC7535b.d(e.toString());
+            com.xiaomi.channel.commonutils.logger.b.d(e.toString());
         }
-        PushMessageReceiver a2 = C7572i.a(context);
+        PushMessageReceiver a2 = i.a(context);
         if (a2 != null) {
-            a2.onReceivePassThroughMessage(context, C7572i.a(str2));
+            a2.onReceivePassThroughMessage(context, i.a(str2));
         }
     }
 
     public static void registerHuaWeiAssemblePush(Context context) {
-        AbstractPushManager a2 = C7569f.a(context).a(EnumC7568e.ASSEMBLE_PUSH_HUAWEI);
+        AbstractPushManager a2 = f.a(context).a(e.ASSEMBLE_PUSH_HUAWEI);
         if (a2 != null) {
             a2.register();
         }
     }
 
     public static void reportError(String str, int i) {
-        C7572i.a(str, i);
+        i.a(str, i);
     }
 
     public static synchronized void setConnectTime(Context context) {
@@ -151,6 +150,6 @@ public class HWPushHelper {
     }
 
     public static void uploadToken(Context context, String str) {
-        C7572i.m651a(context, EnumC7568e.ASSEMBLE_PUSH_HUAWEI, str);
+        i.m651a(context, e.ASSEMBLE_PUSH_HUAWEI, str);
     }
 }

@@ -2,7 +2,6 @@ package com.xiaomi.push;
 
 import android.os.SystemClock;
 import android.util.Pair;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.service.XMPushService;
 import com.xiaomi.push.service.bg;
 import java.io.Reader;
@@ -49,10 +48,10 @@ public abstract class fw {
     private final Collection<fz> f402a = new CopyOnWriteArrayList();
 
     /* renamed from: a  reason: collision with other field name */
-    protected final Map<gb, C7660a> f404a = new ConcurrentHashMap();
+    protected final Map<gb, a> f404a = new ConcurrentHashMap();
 
     /* renamed from: b  reason: collision with other field name */
-    protected final Map<gb, C7660a> f407b = new ConcurrentHashMap();
+    protected final Map<gb, a> f407b = new ConcurrentHashMap();
 
     /* renamed from: a  reason: collision with other field name */
     protected gi f399a = null;
@@ -68,15 +67,14 @@ public abstract class fw {
     protected long d = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.fw$a */
     /* loaded from: classes11.dex */
-    public static class C7660a {
+    public static class a {
         private gb a;
 
         /* renamed from: a  reason: collision with other field name */
         private gj f409a;
 
-        public C7660a(gb gbVar, gj gjVar) {
+        public a(gb gbVar, gj gjVar) {
             this.a = gbVar;
             this.f409a = gjVar;
         }
@@ -99,7 +97,7 @@ public abstract class fw {
             f395a = Boolean.getBoolean("smack.debugEnabled");
         } catch (Exception unused) {
         }
-        C7662gc.m919a();
+        gc.m919a();
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -148,14 +146,14 @@ public abstract class fw {
 
     /* JADX INFO: Access modifiers changed from: protected */
     /* renamed from: a  reason: collision with other method in class */
-    public Map<gb, C7660a> m911a() {
+    public Map<gb, a> m911a() {
         return this.f404a;
     }
 
     public void a(int i, int i2, Exception exc) {
         int i3 = this.c;
         if (i != i3) {
-            AbstractC7535b.m586a(String.format("update the connection status. %1$s -> %2$s : %3$s ", a(i3), a(i), com.xiaomi.push.service.bk.a(i2)));
+            com.xiaomi.channel.commonutils.logger.b.m586a(String.format("update the connection status. %1$s -> %2$s : %3$s ", a(i3), a(i), com.xiaomi.push.service.bk.a(i2)));
         }
         if (bj.b(this.f400a)) {
             m907a(i);
@@ -163,7 +161,7 @@ public abstract class fw {
         if (i == 1) {
             this.f400a.a(10);
             if (this.c != 0) {
-                AbstractC7535b.m586a("try set connected while not connecting.");
+                com.xiaomi.channel.commonutils.logger.b.m586a("try set connected while not connecting.");
             }
             this.c = i;
             for (fz fzVar : this.f402a) {
@@ -171,7 +169,7 @@ public abstract class fw {
             }
         } else if (i == 0) {
             if (this.c != 2) {
-                AbstractC7535b.m586a("try set connecting while not disconnected.");
+                com.xiaomi.channel.commonutils.logger.b.m586a("try set connecting while not disconnected.");
             }
             this.c = i;
             for (fz fzVar2 : this.f402a) {
@@ -202,20 +200,20 @@ public abstract class fw {
 
     public void a(gb gbVar, gj gjVar) {
         Objects.requireNonNull(gbVar, "Packet listener is null.");
-        this.f404a.put(gbVar, new C7660a(gbVar, gjVar));
+        this.f404a.put(gbVar, new a(gbVar, gjVar));
     }
 
     public abstract void a(gn gnVar);
 
-    public abstract void a(bg.C7737b c7737b);
+    public abstract void a(bg.b bVar);
 
     public synchronized void a(String str) {
         if (this.c == 0) {
-            AbstractC7535b.m586a("setChallenge hash = " + bo.a(str).substring(0, 8));
+            com.xiaomi.channel.commonutils.logger.b.m586a("setChallenge hash = " + bo.a(str).substring(0, 8));
             this.f401a = str;
             a(1, 0, null);
         } else {
-            AbstractC7535b.m586a("ignore setChallenge because connection was disconnected");
+            com.xiaomi.channel.commonutils.logger.b.m586a("ignore setChallenge because connection was disconnected");
         }
     }
 
@@ -280,7 +278,7 @@ public abstract class fw {
 
     public void b(gb gbVar, gj gjVar) {
         Objects.requireNonNull(gbVar, "Packet listener is null.");
-        this.f407b.put(gbVar, new C7660a(gbVar, gjVar));
+        this.f407b.put(gbVar, new a(gbVar, gjVar));
     }
 
     public abstract void b(boolean z);

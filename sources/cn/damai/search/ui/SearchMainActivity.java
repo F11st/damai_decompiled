@@ -29,7 +29,6 @@ import cn.damai.common.OrangeConfigCenter;
 import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.artist.ArtistFollowResultBean;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
@@ -169,18 +168,18 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
             }
         }
     };
-    private View.OnFocusChangeListener mFocusListener = new View$OnFocusChangeListenerC1596i();
-    private TextWatcher mEditTextWatch = new C1597j();
+    private View.OnFocusChangeListener mFocusListener = new i();
+    private TextWatcher mEditTextWatch = new j();
     private TextView.OnEditorActionListener mKeySearchListener = new TextView.OnEditorActionListener() { // from class: cn.damai.search.ui.SearchMainActivity.9
         private static transient /* synthetic */ IpChange $ipChange;
 
         @Override // android.widget.TextView.OnEditorActionListener
-        public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+        public boolean onEditorAction(TextView textView, int i2, KeyEvent keyEvent) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1881865554")) {
-                return ((Boolean) ipChange.ipc$dispatch("1881865554", new Object[]{this, textView, Integer.valueOf(i), keyEvent})).booleanValue();
+                return ((Boolean) ipChange.ipc$dispatch("1881865554", new Object[]{this, textView, Integer.valueOf(i2), keyEvent})).booleanValue();
             }
-            if (i == 3) {
+            if (i2 == 3) {
                 String input = SearchMainActivity.this.getInput();
                 if (TextUtils.isEmpty(input)) {
                     if (TextUtils.isEmpty(SearchMainActivity.this.mKeyWords)) {
@@ -207,17 +206,16 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
             return false;
         }
     };
-    private View.OnClickListener mOnClickListener = new View$OnClickListenerC1587a();
-    private SearchListener mFlowerClickListener = new C1588b();
-    private View.OnClickListener mItemClick = new View$OnClickListenerC1590c();
+    private View.OnClickListener mOnClickListener = new a();
+    private SearchListener mFlowerClickListener = new b();
+    private View.OnClickListener mItemClick = new c();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchMainActivity$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1587a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1587a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -232,7 +230,7 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
                 SearchMainActivity.this.InputMethodHide();
                 SearchMainActivity.this.finish();
             } else if (id == R$id.ll_delete) {
-                C0529c.e().x(b82.C().q(SearchMainActivity.this.getInput()));
+                cn.damai.common.user.c.e().x(b82.C().q(SearchMainActivity.this.getInput()));
                 SearchMainActivity.this.mInputState = SearchHelper.InputState.INIT;
                 SearchMainActivity.this.mInputEdit.setText("");
                 SearchMainActivity.this.mInputEdit.setFocusable(true);
@@ -244,25 +242,23 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
                 if (SearchMainActivity.this.mRecyclerView != null && SearchMainActivity.this.mLayoutManager != null) {
                     SearchMainActivity.this.mLayoutManager.scrollToPosition(0);
                 }
-                C0529c.e().x(b82.C().z(SearchMainActivity.this.getInput()));
+                cn.damai.common.user.c.e().x(b82.C().z(SearchMainActivity.this.getInput()));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchMainActivity$b */
     /* loaded from: classes6.dex */
-    public class C1588b implements SearchListener {
+    public class b implements SearchListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private DMDialog a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.search.ui.SearchMainActivity$b$a */
         /* loaded from: classes15.dex */
-        public class DialogInterface$OnClickListenerC1589a implements DialogInterface.OnClickListener {
+        public class a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC1589a() {
+            a() {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -280,7 +276,7 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
             }
         }
 
-        C1588b() {
+        b() {
         }
 
         @Override // cn.damai.search.helper.SearchListener
@@ -292,12 +288,12 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
             }
             SearchMainActivity.this.clearFocus();
             SearchMainActivity.this.InputMethodHide();
-            C0529c.e().x(b82.C().p());
+            cn.damai.common.user.c.e().x(b82.C().p());
             DMDialog dMDialog = new DMDialog(SearchMainActivity.this);
             this.a = dMDialog;
             dMDialog.v("确认清空搜索历史？");
             this.a.i("取消", null);
-            this.a.n("确定", new DialogInterface$OnClickListenerC1589a());
+            this.a.n("确定", new a());
             this.a.show();
         }
 
@@ -317,7 +313,7 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
                 return;
             }
             String str2 = split[0];
-            C0529c.e().x(b82.C().r(str2, split.length > 1 ? split[1] : "0"));
+            cn.damai.common.user.c.e().x(b82.C().r(str2, split.length > 1 ? split[1] : "0"));
             int length = str2 != null ? str2.length() : 0;
             SearchMainActivity.this.mInputState = SearchHelper.InputState.USER_CLICK_HISTORY_WORD;
             if (length > 30) {
@@ -344,7 +340,7 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
                 }
                 int i = SearchHelper.i(SearchMainActivity.this.mInputState);
                 int i2 = R$id.search_eggs_item_index;
-                C0529c.e().x(b82.C().v("", SearchMainActivity.this.getInput(), str, view.getTag(i2) instanceof String ? (String) view.getTag(i2) : "", i));
+                cn.damai.common.user.c.e().x(b82.C().v("", SearchMainActivity.this.getInput(), str, view.getTag(i2) instanceof String ? (String) view.getTag(i2) : "", i));
                 DMNav.from(SearchMainActivity.this).toUri(str);
             }
         }
@@ -360,7 +356,7 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
             if (searchFindWord == null) {
                 return;
             }
-            C0529c.e().x(b82.C().s(searchFindWord.keyword, searchFindWord.alg, searchFindWord.reason, searchFindWord.wordType, searchFindWord.pos));
+            cn.damai.common.user.c.e().x(b82.C().s(searchFindWord.keyword, searchFindWord.alg, searchFindWord.reason, searchFindWord.wordType, searchFindWord.pos));
             int i = searchFindWord.action;
             if (i != 1) {
                 if (i != 2) {
@@ -383,12 +379,11 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchMainActivity$c */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1590c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1590c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -410,7 +405,7 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
                         SearchMainActivity.this.jumpProjectDetailPage(searchDataHolder.mProjectItem, intValue - SearchMainActivity.this.mAdapter.f());
                     } else if (i != 8) {
                         if (i == 9 && (projectItemBean = searchDataHolder.mProjectItem) != null) {
-                            C0529c.e().x(b82.C().y(projectItemBean.id, projectItemBean.name, TextUtils.isEmpty(projectItemBean.utKeyWord) ? SearchMainActivity.this.getInput() : projectItemBean.utKeyWord, SearchHelper.i(SearchMainActivity.this.mInputState), projectItemBean.alg, intValue));
+                            cn.damai.common.user.c.e().x(b82.C().y(projectItemBean.id, projectItemBean.name, TextUtils.isEmpty(projectItemBean.utKeyWord) ? SearchMainActivity.this.getInput() : projectItemBean.utKeyWord, SearchHelper.i(SearchMainActivity.this.mInputState), projectItemBean.alg, intValue));
                             qd2.b(SearchMainActivity.this, projectItemBean.schema, projectItemBean.id, projectItemBean.name, projectItemBean.verticalPic);
                         }
                     } else {
@@ -446,9 +441,8 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchMainActivity$d */
     /* loaded from: classes15.dex */
-    public static /* synthetic */ class C1591d {
+    public static /* synthetic */ class d {
         static final /* synthetic */ int[] a;
         static final /* synthetic */ int[] b;
 
@@ -509,12 +503,11 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchMainActivity$e */
     /* loaded from: classes6.dex */
-    public class C1592e implements SearchTabPanel.OnRecyclerViewListener {
+    public class e implements SearchTabPanel.OnRecyclerViewListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1592e() {
+        e() {
         }
 
         @Override // cn.damai.search.ui.customview.SearchTabPanel.OnRecyclerViewListener
@@ -546,12 +539,11 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchMainActivity$f */
     /* loaded from: classes6.dex */
-    public class C1593f implements SearchTabPanel.UtParamsProvider {
+    public class f implements SearchTabPanel.UtParamsProvider {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1593f() {
+        f() {
         }
 
         @Override // cn.damai.search.ui.customview.SearchTabPanel.UtParamsProvider
@@ -568,12 +560,11 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchMainActivity$g */
     /* loaded from: classes6.dex */
-    public class C1594g implements SearchAdapterV2.OnXItemClickListener {
+    public class g implements SearchAdapterV2.OnXItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1594g() {
+        g() {
         }
 
         @Override // cn.damai.search.ui.adapter.SearchAdapterV2.OnXItemClickListener
@@ -596,12 +587,11 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchMainActivity$h */
     /* loaded from: classes6.dex */
-    public class C1595h implements WrapperAdapter.FullSpanTypeChecker {
+    public class h implements WrapperAdapter.FullSpanTypeChecker {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1595h(SearchMainActivity searchMainActivity) {
+        h(SearchMainActivity searchMainActivity) {
         }
 
         @Override // cn.damai.uikit.irecycler.WrapperAdapter.FullSpanTypeChecker
@@ -612,12 +602,11 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchMainActivity$i */
     /* loaded from: classes15.dex */
-    public class View$OnFocusChangeListenerC1596i implements View.OnFocusChangeListener {
+    public class i implements View.OnFocusChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnFocusChangeListenerC1596i() {
+        i() {
         }
 
         @Override // android.view.View.OnFocusChangeListener
@@ -635,12 +624,11 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchMainActivity$j */
     /* loaded from: classes15.dex */
-    public class C1597j implements TextWatcher {
+    public class j implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1597j() {
+        j() {
         }
 
         @Override // android.text.TextWatcher
@@ -652,7 +640,7 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
                 if (SearchMainActivity.this.mPageState == SearchHelper.PageState.SEARCH_RESULT_PAGE) {
                     SearchMainActivity.this.mInputState = SearchHelper.InputState.USER_INPUT_WORD;
                 }
-                switch (C1591d.b[SearchMainActivity.this.mInputState.ordinal()]) {
+                switch (d.b[SearchMainActivity.this.mInputState.ordinal()]) {
                     case 1:
                     case 2:
                         SearchMainActivity.this.resetData();
@@ -770,9 +758,9 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
             ipChange.ipc$dispatch("-820334419", new Object[]{this});
             return;
         }
-        String e = SearchHelper.e(this.mContext);
-        this.mHistoryDataUt = e;
-        if (TextUtils.isEmpty(e)) {
+        String e2 = SearchHelper.e(this.mContext);
+        this.mHistoryDataUt = e2;
+        if (TextUtils.isEmpty(e2)) {
             return;
         }
         this.mHistoryData.clear();
@@ -826,13 +814,13 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
         StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, 1);
         this.mLayoutManager = staggeredGridLayoutManager;
         this.mRecyclerView.setLayoutManager(staggeredGridLayoutManager);
-        SearchAdapterV2 searchAdapterV2 = new SearchAdapterV2(this.mContext, this.mDataHolderList, this.mBAccountMap, new C1594g());
+        SearchAdapterV2 searchAdapterV2 = new SearchAdapterV2(this.mContext, this.mDataHolderList, this.mBAccountMap, new g());
         this.mAdapter = searchAdapterV2;
         searchAdapterV2.l(this.mItemClick);
         this.mAdapter.h(this.mFlowerClickListener);
         this.mRecyclerView.setAdapter(this.mAdapter);
         c21.b(this.mRecyclerView);
-        this.mRecyclerView.getWrapAdapter().c(new C1595h(this));
+        this.mRecyclerView.getWrapAdapter().c(new h(this));
         this.mRecyclerView.setRefreshEnabled(false);
         this.mRecyclerView.setLoadMoreEnabled(true);
         this.mRecyclerView.setIsAutoToDefault(false);
@@ -850,14 +838,14 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
         }
         View findViewById = findViewById(R$id.title_bar_space);
         if (Build.VERSION.SDK_INT >= 23) {
-            int a = kg2.a(this);
+            int a2 = kg2.a(this);
             if (findViewById != null) {
-                findViewById.getLayoutParams().height = a;
+                findViewById.getLayoutParams().height = a2;
                 findViewById.setVisibility(0);
             }
             kg2.f(this, true, R$color.black);
             kg2.d(true, this);
-            this.mHeadLayoutView.getLayoutParams().height = a + ScreenUtil.dip2px(this, 52.0f);
+            this.mHeadLayoutView.getLayoutParams().height = a2 + ScreenUtil.dip2px(this, 52.0f);
             return;
         }
         kg2.f(this, false, R$color.black);
@@ -924,7 +912,7 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
         } else {
             HashMap hashMap = new HashMap();
             hashMap.put("discountInfo", str);
-            C0529c.e().A(hashMap, "search", "yhtc_search_discountinfo");
+            cn.damai.common.user.c.e().A(hashMap, "search", "yhtc_search_discountinfo");
         }
     }
 
@@ -962,9 +950,9 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
             followRequest.targetId = String.valueOf(baccountInfo.damaiId);
             followRequest.targetType = String.valueOf(baccountInfo.type);
             if (this.existBrand) {
-                C0529c.e().x(b82.C().m(followRequest.targetId, followRequest.targetType, true));
+                cn.damai.common.user.c.e().x(b82.C().m(followRequest.targetId, followRequest.targetType, true));
             } else {
-                C0529c.e().x(b82.C().h(this.mUtAAID, true, followRequest.targetId, followRequest.targetType, getInput(), SearchHelper.i(this.mInputState)));
+                cn.damai.common.user.c.e().x(b82.C().h(this.mUtAAID, true, followRequest.targetId, followRequest.targetType, getInput(), SearchHelper.i(this.mInputState)));
             }
             followRequest.request(new DMMtopRequestListener<FollowDataBean>(FollowDataBean.class) { // from class: cn.damai.search.ui.SearchMainActivity.6
                 private static transient /* synthetic */ IpChange $ipChange;
@@ -1011,10 +999,10 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
             if (z) {
                 startProgressDialog();
             }
-            int i = C1591d.a[pageRequestType.ordinal()];
-            if (i == 1) {
+            int i2 = d.a[pageRequestType.ordinal()];
+            if (i2 == 1) {
                 homePageParams = this.mPageIndexParams.getHomePageParams();
-            } else if (i != 2) {
+            } else if (i2 != 2) {
                 homePageParams = this.mPageIndexParams.getProjectNextPageParams();
             } else {
                 homePageParams = this.mPageIndexParams.getNoteNextPageParams();
@@ -1161,9 +1149,9 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
         }
         List<ProjectItemBean> list2 = searchEggs.projectInfo;
         if (list2 != null && list2.size() > 0) {
-            for (int i = 0; i < searchEggs.projectInfo.size(); i++) {
+            for (int i2 = 0; i2 < searchEggs.projectInfo.size(); i2++) {
                 SearchDataHolder searchDataHolder2 = new SearchDataHolder(0);
-                searchDataHolder2.mProjectItem = searchEggs.projectInfo.get(i);
+                searchDataHolder2.mProjectItem = searchEggs.projectInfo.get(i2);
                 searchDataHolder2.isRecommendProject = false;
                 this.mDataHolderList.add(searchDataHolder2);
             }
@@ -1287,15 +1275,15 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
         }
     }
 
-    private void updateServerTime(long j) {
+    private void updateServerTime(long j2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1427591489")) {
-            ipChange.ipc$dispatch("1427591489", new Object[]{this, Long.valueOf(j)});
+            ipChange.ipc$dispatch("1427591489", new Object[]{this, Long.valueOf(j2)});
             return;
         }
         SearchAdapterV2 searchAdapterV2 = this.mAdapter;
         if (searchAdapterV2 != null) {
-            searchAdapterV2.g(j);
+            searchAdapterV2.g(j2);
         }
     }
 
@@ -1305,8 +1293,8 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
             ipChange.ipc$dispatch("-521314243", new Object[]{this, projectItemBean, list});
             return;
         }
-        int e = wh2.e(list);
-        if (e == 0) {
+        int e2 = wh2.e(list);
+        if (e2 == 0) {
             return;
         }
         this.mDataHolderList.clear();
@@ -1315,11 +1303,11 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
             searchDataHolder.mProjectItem = projectItemBean;
             this.mDataHolderList.add(searchDataHolder);
         }
-        for (int i = 0; i < e; i++) {
+        for (int i2 = 0; i2 < e2; i2++) {
             SearchDataHolder searchDataHolder2 = new SearchDataHolder(8);
-            SearchSuggest searchSuggest = list.get(i);
+            SearchSuggest searchSuggest = list.get(i2);
             searchDataHolder2.mSuggestWord = searchSuggest;
-            searchSuggest.index = i;
+            searchSuggest.index = i2;
             this.mDataHolderList.add(searchDataHolder2);
         }
         SearchAdapterV2 searchAdapterV2 = this.mAdapter;
@@ -1329,34 +1317,34 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
     }
 
     @Override // cn.damai.common.app.base.BaseActivity
-    public void dealHeaderClick(int i) {
+    public void dealHeaderClick(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1599554820")) {
-            ipChange.ipc$dispatch("1599554820", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("1599554820", new Object[]{this, Integer.valueOf(i2)});
         }
     }
 
     @Override // cn.damai.search.contract.SearchContract.View
-    public void error(String str, String str2, String str3, String str4, int i) {
+    public void error(String str, String str2, String str3, String str4, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1487929547")) {
-            ipChange.ipc$dispatch("-1487929547", new Object[]{this, str, str2, str3, str4, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-1487929547", new Object[]{this, str, str2, str3, str4, Integer.valueOf(i2)});
             return;
         }
-        this.mErrorPageType = i;
-        if (i == 0) {
+        this.mErrorPageType = i2;
+        if (i2 == 0) {
             if (this.mPageState != SearchHelper.PageState.HOT_SEARCH_PAGE) {
                 return;
             }
             updateFindAdvertView();
             b23.a(e82.a(str3, str, str2, this.mCityId), e82.SEARCH_HOT_WORD_ERROR_CODE, e82.SEARCH_HOT_WORD_ERROR_MSG);
-        } else if (i == 1) {
+        } else if (i2 == 1) {
             if (this.mPageState == SearchHelper.PageState.SEARCH_RESULT_PAGE && getInput().equals(str4)) {
                 loadErrorPage(str, str2, str3);
                 b23.a(e82.b(str3, str, str2, this.mCityId, str4), e82.SEARCH_ERROR_CODE, e82.SEARCH_ERROR_MSG);
             }
-        } else if (i != 2) {
-            if (i == 3 && this.mPageState == SearchHelper.PageState.SEARCH_SUGGEST_PAGE && str4.equals(getInput())) {
+        } else if (i2 != 2) {
+            if (i2 == 3 && this.mPageState == SearchHelper.PageState.SEARCH_SUGGEST_PAGE && str4.equals(getInput())) {
                 hideErrorView();
                 this.mDataHolderList.clear();
                 SearchAdapterV2 searchAdapterV2 = this.mAdapter;
@@ -1376,22 +1364,22 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
     }
 
     @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
-    public void handleError(int i) {
+    public void handleError(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "2091407829")) {
-            ipChange.ipc$dispatch("2091407829", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("2091407829", new Object[]{this, Integer.valueOf(i2)});
             return;
         }
-        int i2 = this.mErrorPageType;
-        if (i2 == 0) {
+        int i3 = this.mErrorPageType;
+        if (i3 == 0) {
             if (this.mGetSearchFind) {
                 updateFindAdvertView();
             } else {
                 requestSearchFind();
             }
-        } else if (i2 == 1) {
+        } else if (i3 == 1) {
             requestSearch(PageIndexParams.PageRequestType.HOME, true);
-        } else if (i2 != 2) {
+        } else if (i3 != 2) {
         } else {
             requestSearchEggs();
         }
@@ -1436,7 +1424,7 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
         }
         initIRecycleView();
         initEvent();
-        this.mTabPanel = new SearchTabPanel(radioGroup, this.mRecyclerView, new C1592e(), new C1593f());
+        this.mTabPanel = new SearchTabPanel(radioGroup, this.mRecyclerView, new e(), new f());
     }
 
     @Override // cn.damai.search.contract.SearchContract.View
@@ -1447,21 +1435,21 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
         } else if (baccountInfo == null) {
         } else {
             if (this.existBrand) {
-                C0529c.e().x(b82.C().n(this.mUtAAID, baccountInfo.damaiId, baccountInfo.type));
+                cn.damai.common.user.c.e().x(b82.C().n(this.mUtAAID, baccountInfo.damaiId, baccountInfo.type));
             } else {
-                C0529c.e().x(b82.C().i(this.mUtAAID, baccountInfo.damaiId, baccountInfo.type, getInput(), SearchHelper.i(this.mInputState)));
+                cn.damai.common.user.c.e().x(b82.C().i(this.mUtAAID, baccountInfo.damaiId, baccountInfo.type, getInput(), SearchHelper.i(this.mInputState)));
             }
             x72.a(baccountInfo, this.mContext);
         }
     }
 
-    public void jumpProjectDetailPage(ProjectItemBean projectItemBean, int i) {
+    public void jumpProjectDetailPage(ProjectItemBean projectItemBean, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-632430496")) {
-            ipChange.ipc$dispatch("-632430496", new Object[]{this, projectItemBean, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-632430496", new Object[]{this, projectItemBean, Integer.valueOf(i2)});
         } else if (projectItemBean == null) {
         } else {
-            C0529c.e().x(b82.C().t(this.mUtAAID, projectItemBean.id, getInput(), SearchHelper.i(this.mInputState), projectItemBean.alg, i));
+            cn.damai.common.user.c.e().x(b82.C().t(this.mUtAAID, projectItemBean.id, getInput(), SearchHelper.i(this.mInputState), projectItemBean.alg, i2));
             InputMethodHide();
             qd2.b(this, projectItemBean.schema, projectItemBean.id, projectItemBean.name, projectItemBean.verticalPic);
         }
@@ -1469,14 +1457,14 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, android.app.Activity
-    public void onActivityResult(int i, int i2, Intent intent) {
+    public void onActivityResult(int i2, int i3, Intent intent) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-651701234")) {
-            ipChange.ipc$dispatch("-651701234", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), intent});
+            ipChange.ipc$dispatch("-651701234", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3), intent});
             return;
         }
-        super.onActivityResult(i, i2, intent);
-        if (i == 1006 && LoginManager.k().q()) {
+        super.onActivityResult(i2, i3, intent);
+        if (i2 == 1006 && LoginManager.k().q()) {
             requestFollow(this.mLoginBAccountBean);
         }
     }
@@ -1492,7 +1480,7 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
         super.onCreate(bundle);
         initTitleStatusBar();
         setDamaiUTKeyBuilder(b82.C().F(this.mKeyWords));
-        C0529c.e().K(this);
+        cn.damai.common.user.c.e().K(this);
         loadData(true);
     }
 
@@ -1569,11 +1557,11 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
     }
 
     @Override // cn.damai.search.contract.SearchContract.View
-    public void pageRefresh(int i) {
+    public void pageRefresh(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "567132257")) {
-            ipChange.ipc$dispatch("567132257", new Object[]{this, Integer.valueOf(i)});
-        } else if (i == 1) {
+            ipChange.ipc$dispatch("567132257", new Object[]{this, Integer.valueOf(i2)});
+        } else if (i2 == 1) {
             resetData();
             resetTitleView();
             requestSearchSuggest();
@@ -1603,10 +1591,10 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
             if (searchEggs != null && (TextUtils.equals("1", searchEggs.type) || TextUtils.equals("2", searchEggs.type))) {
                 stopLoading();
                 if (this.mInputState == SearchHelper.InputState.USER_CLICK_SUGGEST_WORD && this.mClickSuggestWord != null) {
-                    C0529c e = C0529c.e();
+                    cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
                     b82 C = b82.C();
                     SearchSuggest searchSuggest = this.mClickSuggestWord;
-                    e.x(C.x(searchSuggest.keyword, searchSuggest.sugWord, searchSuggest.alg, searchSuggest.index));
+                    e2.x(C.x(searchSuggest.keyword, searchSuggest.sugWord, searchSuggest.alg, searchSuggest.index));
                 }
                 if (TextUtils.equals("1", searchEggs.type)) {
                     showSearchEggsList(searchEggs, str);
@@ -1618,10 +1606,10 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
                 }
             }
             if (this.mInputState == SearchHelper.InputState.USER_CLICK_SUGGEST_WORD && this.mClickSuggestWord != null) {
-                C0529c e2 = C0529c.e();
+                cn.damai.common.user.c e3 = cn.damai.common.user.c.e();
                 b82 C2 = b82.C();
                 SearchSuggest searchSuggest2 = this.mClickSuggestWord;
-                e2.x(C2.w(searchSuggest2.keyword, searchSuggest2.sugWord, searchSuggest2.alg, searchSuggest2.index));
+                e3.x(C2.w(searchSuggest2.keyword, searchSuggest2.sugWord, searchSuggest2.alg, searchSuggest2.index));
             }
             requestSearch(PageIndexParams.PageRequestType.HOME, false);
         }
@@ -1663,7 +1651,7 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
             if (params.isHomeRequest()) {
                 this.mUtAAID = System.currentTimeMillis() + Constants.TYPE_LIVE_ROOM_BG_COLOR_PREFFIX + str + Constants.TYPE_LIVE_ROOM_BG_COLOR_PREFFIX + UTDevice.getUtdid(this);
                 updateServerTime(searchResultBeanV2.currentTime);
-                C0529c.e().x(b82.C().K(str, String.valueOf(searchResultBeanV2.total), SearchHelper.i(this.mInputState)));
+                cn.damai.common.user.c.e().x(b82.C().K(str, String.valueOf(searchResultBeanV2.total), SearchHelper.i(this.mInputState)));
                 this.mAdapter.i(this.mUtAAID, SearchHelper.i(this.mInputState));
                 if (this.mPageIndexParams.isCanShowTabLayout()) {
                     this.mTabPanel.r();
@@ -1677,10 +1665,10 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
                 }
                 this.exitAccount = baccountInfo != null;
                 this.existBrand = wh2.e(searchResultBeanV2.brandOptimization) >= 3;
-                List<SearchDataHolder> h = SearchHelper.h(searchResultBeanV2, this.mUtAAID, str, this.mInputState);
+                List<SearchDataHolder> h2 = SearchHelper.h(searchResultBeanV2, this.mUtAAID, str, this.mInputState);
                 this.mDataHolderList.clear();
-                if (!cb2.d(h)) {
-                    this.mDataHolderList.addAll(h);
+                if (!cb2.d(h2)) {
+                    this.mDataHolderList.addAll(h2);
                 }
                 this.mAdapter.k(str);
                 this.mAdapter.notifyDataSetChanged();
@@ -1788,7 +1776,7 @@ public class SearchMainActivity extends DamaiBaseActivity<SearchPresenter, Searc
         if (AndroidInstantRuntime.support(ipChange, "-990101207")) {
             ipChange.ipc$dispatch("-990101207", new Object[]{this, searchTourUT});
         } else if (searchTourUT != null) {
-            C0529c.e().x(b82.C().L(this.mUtAAID, searchTourUT.projectId, this.mKeyWords, SearchHelper.i(this.mInputState), searchTourUT.index));
+            cn.damai.common.user.c.e().x(b82.C().L(this.mUtAAID, searchTourUT.projectId, this.mKeyWords, SearchHelper.i(this.mInputState), searchTourUT.index));
             Bundle bundle = new Bundle();
             bundle.putString(IssueConstants.ProjectID, searchTourUT.projectId);
             if (!TextUtils.isEmpty(searchTourUT.name)) {

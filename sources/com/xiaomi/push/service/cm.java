@@ -1,7 +1,5 @@
 package com.xiaomi.push.service;
 
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
-
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 class cm implements Runnable {
@@ -16,7 +14,7 @@ class cm implements Runnable {
     public void run() {
         this.a.f852a = true;
         try {
-            AbstractC7535b.m586a("try to trigger the wifi digest broadcast.");
+            com.xiaomi.channel.commonutils.logger.b.m586a("try to trigger the wifi digest broadcast.");
             Object systemService = this.a.getApplicationContext().getSystemService("MiuiWifiService");
             if (systemService != null) {
                 com.xiaomi.push.bk.b(systemService, "sendCurrentWifiDigestInfo", new Object[0]);

@@ -61,7 +61,7 @@ public final class YoukuUtil {
         } else {
             long currentTimeMillis = System.currentTimeMillis();
             if (currentTimeMillis - previousToastShow > 2000 || !str.equalsIgnoreCase(previousToastString)) {
-                View inflate = ((LayoutInflater) context.getSystemService("layout_inflater")).inflate(R.C7935layout.dago_player_toast, (ViewGroup) null);
+                View inflate = ((LayoutInflater) context.getSystemService("layout_inflater")).inflate(R.layout.dago_player_toast, (ViewGroup) null);
                 ((TextView) inflate.findViewById(R.id.toast_text)).setText(str);
                 Toast toast = new Toast(context.getApplicationContext());
                 toast.setDuration(0);

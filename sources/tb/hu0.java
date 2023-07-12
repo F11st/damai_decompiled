@@ -6,10 +6,8 @@ import android.os.Process;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import anet.channel.entity.ENV;
-import anet.channel.strategy.C0213a;
 import anet.channel.strategy.dispatch.AmdcRuntimeInfo;
 import anet.channel.util.ALog;
-import anet.channel.util.C0241c;
 import com.taobao.weex.annotation.JSMethod;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -67,7 +65,7 @@ public class hu0 {
     public static String h() {
         Context context;
         if (g == null && (context = a) != null) {
-            g = C0241c.c(context);
+            g = anet.channel.util.c.c(context);
         }
         return g;
     }
@@ -94,10 +92,10 @@ public class hu0 {
         a = context;
         if (context != null) {
             if (TextUtils.isEmpty(d)) {
-                d = C0241c.g(context, Process.myPid());
+                d = anet.channel.util.c.g(context, Process.myPid());
             }
             if (TextUtils.isEmpty(c)) {
-                c = C0241c.e(context);
+                c = anet.channel.util.c.e(context);
             }
             if (i == null) {
                 SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
@@ -145,7 +143,7 @@ public class hu0 {
         String str2 = f;
         if (str2 == null || !str2.equals(str)) {
             f = str;
-            C0213a.a().forceRefreshStrategy(y90.a());
+            anet.channel.strategy.a.a().forceRefreshStrategy(y90.a());
             SharedPreferences sharedPreferences = i;
             if (sharedPreferences != null) {
                 sharedPreferences.edit().putString("UserId", str).apply();

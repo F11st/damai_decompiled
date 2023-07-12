@@ -8,7 +8,7 @@ final class StartedLazily implements SharingStarted {
     @Override // kotlinx.coroutines.flow.SharingStarted
     @NotNull
     public Flow<SharingCommand> command(@NotNull StateFlow<Integer> stateFlow) {
-        return C8672c.r(new StartedLazily$command$1(stateFlow, null));
+        return c.r(new StartedLazily$command$1(stateFlow, null));
     }
 
     @NotNull

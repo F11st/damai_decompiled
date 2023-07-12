@@ -40,12 +40,11 @@ public class f92 extends eb {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.f92$a */
     /* loaded from: classes7.dex */
-    public class C9132a implements Comparator<SeatNew> {
+    public class a implements Comparator<SeatNew> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9132a() {
+        a() {
         }
 
         @Override // java.util.Comparator
@@ -159,7 +158,7 @@ public class f92 extends eb {
             return "";
         }
         ArrayList<SeatNew> arrayList = new ArrayList(list);
-        Collections.sort(arrayList, new C9132a());
+        Collections.sort(arrayList, new a());
         StringBuilder sb = new StringBuilder();
         for (SeatNew seatNew : arrayList) {
             sb.append(seatNew.sid);

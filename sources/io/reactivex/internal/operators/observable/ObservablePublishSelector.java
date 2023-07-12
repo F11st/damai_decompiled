@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -15,7 +15,7 @@ import tb.dg0;
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class ObservablePublishSelector<T, R> extends AbstractObservableWithUpstream<T, R> {
-    final Function<? super AbstractC8149d<T>, ? extends ObservableSource<R>> selector;
+    final Function<? super d<T>, ? extends ObservableSource<R>> selector;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -97,12 +97,12 @@ public final class ObservablePublishSelector<T, R> extends AbstractObservableWit
         }
     }
 
-    public ObservablePublishSelector(ObservableSource<T> observableSource, Function<? super AbstractC8149d<T>, ? extends ObservableSource<R>> function) {
+    public ObservablePublishSelector(ObservableSource<T> observableSource, Function<? super d<T>, ? extends ObservableSource<R>> function) {
         super(observableSource);
         this.selector = function;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super R> observer) {
         PublishSubject c = PublishSubject.c();
         try {

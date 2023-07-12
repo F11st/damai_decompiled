@@ -22,9 +22,8 @@ public class kj0 extends yc1 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.kj0$a */
     /* loaded from: classes6.dex */
-    public static /* synthetic */ class C9365a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -71,7 +70,7 @@ public class kj0 extends yc1 {
         if (AndroidInstantRuntime.support(ipChange, "-2122108973")) {
             return (String) ipChange.ipc$dispatch("-2122108973", new Object[]{this, type});
         }
-        switch (C9365a.a[type.ordinal()]) {
+        switch (a.a[type.ordinal()]) {
             case 1:
                 return "more";
             case 2:
@@ -303,8 +302,8 @@ public class kj0 extends yc1 {
         String x = x(filterBean);
         HashMap<String, String> z = z();
         z.put("titlelabel", filterBean.name);
-        ComponentFilterBridge a = gm.INSTANCE.a();
-        a.setExposureTag(view, x + i, Constants.Name.FILTER, this.a, z);
+        ComponentFilterBridge a2 = gm.INSTANCE.a();
+        a2.setExposureTag(view, x + i, Constants.Name.FILTER, this.a, z);
     }
 
     public void t(View view, Type type) {
@@ -342,7 +341,7 @@ public class kj0 extends yc1 {
         }
         HashMap<String, String> z = z();
         z.put("titlelabel", sortBean.name);
-        ComponentFilterBridge a = gm.INSTANCE.a();
-        a.reportExposureSingleCustomEvent("item_" + i, "sorttype_selector", this.a, "1.0", j, z, 2201);
+        ComponentFilterBridge a2 = gm.INSTANCE.a();
+        a2.reportExposureSingleCustomEvent("item_" + i, "sorttype_selector", this.a, "1.0", j, z, 2201);
     }
 }

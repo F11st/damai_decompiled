@@ -19,18 +19,17 @@ public final class a70 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.a70$a */
     /* loaded from: classes3.dex */
-    public static class C8896a extends el1 {
+    public static class a extends el1 {
         final /* synthetic */ ErrorReporter a;
         final /* synthetic */ Set b;
         final /* synthetic */ boolean c;
 
         /* compiled from: Taobao */
-        /* renamed from: tb.a70$a$a */
+        /* renamed from: tb.a70$a$a  reason: collision with other inner class name */
         /* loaded from: classes3.dex */
-        class C8897a implements Function1<CallableMemberDescriptor, wt2> {
-            C8897a() {
+        class C0447a implements Function1<CallableMemberDescriptor, wt2> {
+            C0447a() {
             }
 
             private static /* synthetic */ void a(int i) {
@@ -43,12 +42,12 @@ public final class a70 {
                 if (callableMemberDescriptor == null) {
                     a(0);
                 }
-                C8896a.this.a.reportCannotInferVisibility(callableMemberDescriptor);
+                a.this.a.reportCannotInferVisibility(callableMemberDescriptor);
                 return wt2.INSTANCE;
             }
         }
 
-        C8896a(ErrorReporter errorReporter, Set set, boolean z) {
+        a(ErrorReporter errorReporter, Set set, boolean z) {
             this.a = errorReporter;
             this.b = set;
             this.c = z;
@@ -83,7 +82,7 @@ public final class a70 {
             if (callableMemberDescriptor == null) {
                 f(0);
             }
-            OverridingUtil.L(callableMemberDescriptor, new C8897a());
+            OverridingUtil.L(callableMemberDescriptor, new C0447a());
             this.b.add(callableMemberDescriptor);
         }
 
@@ -232,7 +231,7 @@ public final class a70 {
             a(17);
         }
         LinkedHashSet linkedHashSet = new LinkedHashSet();
-        overridingUtil.w(ni1Var, collection, collection2, classDescriptor, new C8896a(errorReporter, linkedHashSet, z));
+        overridingUtil.w(ni1Var, collection, collection2, classDescriptor, new a(errorReporter, linkedHashSet, z));
         return linkedHashSet;
     }
 

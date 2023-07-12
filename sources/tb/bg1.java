@@ -1,7 +1,6 @@
 package tb;
 
 import android.view.View;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.model.RealNameAuthStatusBean;
 import cn.damai.user.userhome.view.usercenter.HeadUserTrackListener;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -59,7 +58,7 @@ public class bg1 implements HeadUserTrackListener {
         if (AndroidInstantRuntime.support(ipChange, "-420057807")) {
             ipChange.ipc$dispatch("-420057807", new Object[]{this});
         } else {
-            C0529c.e().x(vf1.x().H());
+            cn.damai.common.user.c.e().x(vf1.x().H());
         }
     }
 
@@ -70,7 +69,7 @@ public class bg1 implements HeadUserTrackListener {
             ipChange.ipc$dispatch("-1596887841", new Object[]{this, realNameAuthStatusBean});
         } else if (realNameAuthStatusBean == null || realNameAuthStatusBean.getAccountVerifyCode() != 1) {
         } else {
-            C0529c.e().x(vf1.x().U());
+            cn.damai.common.user.c.e().x(vf1.x().U());
         }
     }
 
@@ -80,7 +79,7 @@ public class bg1 implements HeadUserTrackListener {
         if (AndroidInstantRuntime.support(ipChange, "899521650")) {
             ipChange.ipc$dispatch("899521650", new Object[]{this, str});
         } else {
-            C0529c.e().x(vf1.x().i0(str));
+            cn.damai.common.user.c.e().x(vf1.x().i0(str));
         }
     }
 
@@ -90,7 +89,7 @@ public class bg1 implements HeadUserTrackListener {
         if (AndroidInstantRuntime.support(ipChange, "980174020")) {
             ipChange.ipc$dispatch("980174020", new Object[]{this});
         } else {
-            C0529c.e().x(vf1.x().i0(Constants.TAG_FOR_EDIT));
+            cn.damai.common.user.c.e().x(vf1.x().i0(Constants.TAG_FOR_EDIT));
         }
     }
 }

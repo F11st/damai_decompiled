@@ -2,7 +2,7 @@ package com.ut.mini.mtop;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import com.alimm.xadsdk.base.ut.AdUtConstants;
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import java.io.Serializable;
 import java.util.List;
 
@@ -15,7 +15,7 @@ class UTMtopConfig implements Serializable {
     public String method;
     @JSONField(name = "n")
     public String name;
-    @JSONField(name = AbstractC5658c.a)
+    @JSONField(name = c.a)
     public List<UTMtopPageValue> pageValueList;
     @JSONField(name = "sp")
     public String separator;

@@ -3,7 +3,6 @@ package tb;
 import cn.damai.common.app.ShareperfenceConstants;
 import com.meizu.cloud.pushsdk.constants.PushConstants;
 import java.util.Map;
-import kotlin.collections.C8223u;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -16,73 +15,67 @@ public final class ty2 {
     private static final Map<uy2, Integer> a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ty2$a */
     /* loaded from: classes3.dex */
-    public static final class C9737a extends uy2 {
+    public static final class a extends uy2 {
         @NotNull
-        public static final C9737a INSTANCE = new C9737a();
+        public static final a INSTANCE = new a();
 
-        private C9737a() {
+        private a() {
             super("inherited", false);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ty2$b */
     /* loaded from: classes3.dex */
-    public static final class C9738b extends uy2 {
+    public static final class b extends uy2 {
         @NotNull
-        public static final C9738b INSTANCE = new C9738b();
+        public static final b INSTANCE = new b();
 
-        private C9738b() {
+        private b() {
             super("internal", false);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ty2$c */
     /* loaded from: classes3.dex */
-    public static final class C9739c extends uy2 {
+    public static final class c extends uy2 {
         @NotNull
-        public static final C9739c INSTANCE = new C9739c();
+        public static final c INSTANCE = new c();
 
-        private C9739c() {
+        private c() {
             super("invisible_fake", false);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ty2$d */
     /* loaded from: classes3.dex */
-    public static final class C9740d extends uy2 {
+    public static final class d extends uy2 {
         @NotNull
-        public static final C9740d INSTANCE = new C9740d();
+        public static final d INSTANCE = new d();
 
-        private C9740d() {
+        private d() {
             super("local", false);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ty2$e */
     /* loaded from: classes3.dex */
-    public static final class C9741e extends uy2 {
+    public static final class e extends uy2 {
         @NotNull
-        public static final C9741e INSTANCE = new C9741e();
+        public static final e INSTANCE = new e();
 
-        private C9741e() {
+        private e() {
             super(PushConstants.MZ_PUSH_MESSAGE_METHOD_ACTION_PRIVATE, false);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ty2$f */
     /* loaded from: classes3.dex */
-    public static final class C9742f extends uy2 {
+    public static final class f extends uy2 {
         @NotNull
-        public static final C9742f INSTANCE = new C9742f();
+        public static final f INSTANCE = new f();
 
-        private C9742f() {
+        private f() {
             super("private_to_this", false);
         }
 
@@ -94,49 +87,46 @@ public final class ty2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ty2$g */
     /* loaded from: classes3.dex */
-    public static final class C9743g extends uy2 {
+    public static final class g extends uy2 {
         @NotNull
-        public static final C9743g INSTANCE = new C9743g();
+        public static final g INSTANCE = new g();
 
-        private C9743g() {
+        private g() {
             super("protected", true);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ty2$h */
     /* loaded from: classes3.dex */
-    public static final class C9744h extends uy2 {
+    public static final class h extends uy2 {
         @NotNull
-        public static final C9744h INSTANCE = new C9744h();
+        public static final h INSTANCE = new h();
 
-        private C9744h() {
+        private h() {
             super("public", true);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ty2$i */
     /* loaded from: classes3.dex */
-    public static final class C9745i extends uy2 {
+    public static final class i extends uy2 {
         @NotNull
-        public static final C9745i INSTANCE = new C9745i();
+        public static final i INSTANCE = new i();
 
-        private C9745i() {
+        private i() {
             super("unknown", false);
         }
     }
 
     static {
-        Map c = C8223u.c();
-        c.put(C9742f.INSTANCE, 0);
-        c.put(C9741e.INSTANCE, 0);
-        c.put(C9738b.INSTANCE, 1);
-        c.put(C9743g.INSTANCE, 1);
-        c.put(C9744h.INSTANCE, 2);
-        a = C8223u.b(c);
+        Map c2 = kotlin.collections.u.c();
+        c2.put(f.INSTANCE, 0);
+        c2.put(e.INSTANCE, 0);
+        c2.put(b.INSTANCE, 1);
+        c2.put(g.INSTANCE, 1);
+        c2.put(h.INSTANCE, 2);
+        a = kotlin.collections.u.b(c2);
     }
 
     private ty2() {
@@ -160,6 +150,6 @@ public final class ty2 {
 
     public final boolean b(@NotNull uy2 uy2Var) {
         b41.i(uy2Var, "visibility");
-        return uy2Var == C9741e.INSTANCE || uy2Var == C9742f.INSTANCE;
+        return uy2Var == e.INSTANCE || uy2Var == f.INSTANCE;
     }
 }

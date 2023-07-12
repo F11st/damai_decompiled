@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.exceptions.CompositeException;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.functions.ObjectHelper;
@@ -67,14 +67,14 @@ public final class FlowableMapNotification<T, R> extends AbstractFlowableWithUps
         }
     }
 
-    public FlowableMapNotification(AbstractC8147b<T> abstractC8147b, Function<? super T, ? extends R> function, Function<? super Throwable, ? extends R> function2, Callable<? extends R> callable) {
-        super(abstractC8147b);
+    public FlowableMapNotification(b<T> bVar, Function<? super T, ? extends R> function, Function<? super Throwable, ? extends R> function2, Callable<? extends R> callable) {
+        super(bVar);
         this.onNextMapper = function;
         this.onErrorMapper = function2;
         this.onCompleteSupplier = callable;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super R> subscriber) {
         this.source.subscribe((FlowableSubscriber) new MapNotificationSubscriber(subscriber, this.onNextMapper, this.onErrorMapper, this.onCompleteSupplier));
     }

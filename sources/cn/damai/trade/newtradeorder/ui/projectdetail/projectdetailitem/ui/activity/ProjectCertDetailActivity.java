@@ -10,10 +10,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.image.a;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.trade.R$color;
 import cn.damai.trade.R$id;
@@ -155,10 +155,10 @@ public class ProjectCertDetailActivity extends DamaiBaseActivity {
                     imageView.setLayoutParams(layoutParams);
                     imageView.setBackgroundColor(Color.parseColor("#f5f5f5"));
                     this.llCertLayout.addView(imageView);
-                    C0504a.b().c(this.approvalUrlList.get(i)).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.nv1
+                    a.b().c(this.approvalUrlList.get(i)).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.nv1
                         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-                        public final void onSuccess(DMImageCreator.C0502e c0502e) {
-                            ProjectCertDetailActivity.this.lambda$initViewData$0(a, imageView, c0502e);
+                        public final void onSuccess(DMImageCreator.e eVar) {
+                            ProjectCertDetailActivity.this.lambda$initViewData$0(a, imageView, eVar);
                         }
                     }).f();
                 }
@@ -167,18 +167,18 @@ public class ProjectCertDetailActivity extends DamaiBaseActivity {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void lambda$initViewData$0(int i, ImageView imageView, DMImageCreator.C0502e c0502e) {
+    public /* synthetic */ void lambda$initViewData$0(int i, ImageView imageView, DMImageCreator.e eVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1587556716")) {
-            ipChange.ipc$dispatch("-1587556716", new Object[]{this, Integer.valueOf(i), imageView, c0502e});
+            ipChange.ipc$dispatch("-1587556716", new Object[]{this, Integer.valueOf(i), imageView, eVar});
             return;
         }
-        Bitmap bitmap = c0502e.b;
+        Bitmap bitmap = eVar.b;
         if (bitmap != null) {
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(i, (bitmap.getHeight() * i) / c0502e.b.getWidth());
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(i, (bitmap.getHeight() * i) / eVar.b.getWidth());
             layoutParams.setMargins(0, q60.a(this, 12.0f), 0, 0);
             imageView.setLayoutParams(layoutParams);
-            imageView.setImageBitmap(c0502e.b);
+            imageView.setImageBitmap(eVar.b);
         }
     }
 
@@ -247,8 +247,8 @@ public class ProjectCertDetailActivity extends DamaiBaseActivity {
             return;
         }
         super.onCreate(bundle);
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i(IRequestConst.LICENSE));
-        C0529c.e().K(this);
+        setDamaiUTKeyBuilder(new a.b().i(IRequestConst.LICENSE));
+        c.e().K(this);
     }
 
     @Override // cn.damai.common.app.base.BaseActivity

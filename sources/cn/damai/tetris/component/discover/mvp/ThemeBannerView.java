@@ -17,12 +17,11 @@ public class ThemeBannerView extends AbsView<ThemeBannerContract.Presenter> impl
     private final ThemeBannerViewHolder mViewHolder;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.discover.mvp.ThemeBannerView$a */
     /* loaded from: classes7.dex */
-    public class C1820a implements OnItemBindListener<ThemeBannerBean> {
+    public class a implements OnItemBindListener<ThemeBannerBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1820a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -56,7 +55,7 @@ public class ThemeBannerView extends AbsView<ThemeBannerContract.Presenter> impl
 
     public ThemeBannerView(View view) {
         super(view);
-        this.mViewHolder = new ThemeBannerViewHolder(view, new C1820a());
+        this.mViewHolder = new ThemeBannerViewHolder(view, new a());
     }
 
     @Override // cn.damai.tetris.component.discover.mvp.ThemeBannerContract.View

@@ -15,7 +15,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.trade.R$color;
 import cn.damai.trade.R$drawable;
 import cn.damai.trade.R$id;
@@ -76,12 +76,11 @@ public class ProjectTimerAndStagoryView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectTimerAndStagoryView$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2364a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2364a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -91,21 +90,20 @@ public class ProjectTimerAndStagoryView extends FrameLayout {
                 ipChange.ipc$dispatch("1386342834", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(pp2.u().b2(ProjectTimerAndStagoryView.this.mProjectId));
+            c.e().x(pp2.u().b2(ProjectTimerAndStagoryView.this.mProjectId));
             ProjectTimerAndStagoryView projectTimerAndStagoryView = ProjectTimerAndStagoryView.this;
             projectTimerAndStagoryView.playAnim(projectTimerAndStagoryView.mResetAttendeesLayoutCl, 8);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectTimerAndStagoryView$b  reason: invalid class name */
     /* loaded from: classes16.dex */
-    public class animationAnimation$AnimationListenerC2365b implements Animation.AnimationListener {
+    public class b implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
         final /* synthetic */ View b;
 
-        animationAnimation$AnimationListenerC2365b(int i, View view) {
+        b(int i, View view) {
             this.a = i;
             this.b = view;
         }
@@ -221,7 +219,7 @@ public class ProjectTimerAndStagoryView extends FrameLayout {
                 ProjectTimerAndStagoryView.lambda$init$0(view);
             }
         });
-        this.mResetAttendeesCloseBtn.setOnClickListener(new View$OnClickListenerC2364a());
+        this.mResetAttendeesCloseBtn.setOnClickListener(new a());
         this.mResetAttendeesLayoutCl.setVisibility(8);
         this.mLineView = findViewById(R$id.rl_timer_stagory_line);
         LinearLayout linearLayout = (LinearLayout) findViewById(R$id.rl_timer_stagory);
@@ -270,7 +268,7 @@ public class ProjectTimerAndStagoryView extends FrameLayout {
             view.clearAnimation();
             final TranslateAnimation translateAnimation = new TranslateAnimation(2, 0.0f, 2, 0.0f, 2, i == 8 ? 0.0f : 1.0f, 2, i == 8 ? 1.0f : 0.0f);
             translateAnimation.setDuration(500L);
-            translateAnimation.setAnimationListener(new animationAnimation$AnimationListenerC2365b(i, view));
+            translateAnimation.setAnimationListener(new b(i, view));
             this.isPlaying = true;
             view.post(new Runnable() { // from class: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectTimerAndStagoryView.3
                 private static transient /* synthetic */ IpChange $ipChange;

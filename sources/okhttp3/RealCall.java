@@ -6,8 +6,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.atomic.AtomicInteger;
 import okhttp3.internal.NamedRunnable;
-import okhttp3.internal.connection.C8776i;
-import okio.C8857o;
 import tb.ps1;
 
 /* JADX INFO: Access modifiers changed from: package-private */
@@ -17,8 +15,8 @@ public final class RealCall implements Call {
     final OkHttpClient client;
     private boolean executed;
     final boolean forWebSocket;
-    final C8823o originalRequest;
-    private C8776i transmitter;
+    final o originalRequest;
+    private okhttp3.internal.connection.i transmitter;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
@@ -111,7 +109,7 @@ public final class RealCall implements Call {
             return RealCall.this.originalRequest.i().m();
         }
 
-        C8823o request() {
+        o request() {
             return RealCall.this.originalRequest;
         }
 
@@ -121,16 +119,16 @@ public final class RealCall implements Call {
         }
     }
 
-    private RealCall(OkHttpClient okHttpClient, C8823o c8823o, boolean z) {
+    private RealCall(OkHttpClient okHttpClient, o oVar, boolean z) {
         this.client = okHttpClient;
-        this.originalRequest = c8823o;
+        this.originalRequest = oVar;
         this.forWebSocket = z;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static RealCall newRealCall(OkHttpClient okHttpClient, C8823o c8823o, boolean z) {
-        RealCall realCall = new RealCall(okHttpClient, c8823o, z);
-        realCall.transmitter = new C8776i(okHttpClient, realCall);
+    public static RealCall newRealCall(OkHttpClient okHttpClient, o oVar, boolean z) {
+        RealCall realCall = new RealCall(okHttpClient, oVar, z);
+        realCall.transmitter = new okhttp3.internal.connection.i(okHttpClient, realCall);
         return realCall;
     }
 
@@ -153,7 +151,7 @@ public final class RealCall implements Call {
     }
 
     @Override // okhttp3.Call
-    public C8827q execute() throws IOException {
+    public q execute() throws IOException {
         synchronized (this) {
             if (!this.executed) {
                 this.executed = true;
@@ -176,7 +174,7 @@ public final class RealCall implements Call {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    okhttp3.C8827q getResponseWithInterceptorChain() throws java.io.IOException {
+    okhttp3.q getResponseWithInterceptorChain() throws java.io.IOException {
         /*
             r11 = this;
             java.util.ArrayList r1 = new java.util.ArrayList
@@ -237,7 +235,7 @@ public final class RealCall implements Call {
             r0.l(r1)
             return r2
         L8a:
-            okhttp3.internal.C8753a.g(r2)     // Catch: java.lang.Throwable -> L95 java.io.IOException -> L97
+            okhttp3.internal.a.g(r2)     // Catch: java.lang.Throwable -> L95 java.io.IOException -> L97
             java.io.IOException r2 = new java.io.IOException     // Catch: java.lang.Throwable -> L95 java.io.IOException -> L97
             java.lang.String r3 = "Canceled"
             r2.<init>(r3)     // Catch: java.lang.Throwable -> L95 java.io.IOException -> L97
@@ -280,12 +278,12 @@ public final class RealCall implements Call {
     }
 
     @Override // okhttp3.Call
-    public C8823o request() {
+    public o request() {
         return this.originalRequest;
     }
 
     @Override // okhttp3.Call
-    public C8857o timeout() {
+    public okio.o timeout() {
         return this.transmitter.o();
     }
 

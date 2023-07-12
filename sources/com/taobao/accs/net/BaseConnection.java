@@ -4,12 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.text.TextUtils;
-import anet.channel.C0159a;
-import anet.channel.C0162c;
+import anet.channel.a;
+import anet.channel.c;
 import anet.channel.entity.ConnType;
 import anet.channel.entity.ENV;
-import anet.channel.strategy.C0227d;
 import anet.channel.strategy.ConnProtocol;
+import anet.channel.strategy.d;
 import com.taobao.accs.ACCSManager;
 import com.taobao.accs.AccsClientConfig;
 import com.taobao.accs.AccsException;
@@ -265,16 +265,16 @@ public abstract class BaseConnection {
             int i = AccsClientConfig.mEnv;
             if (i == 2) {
                 env = ENV.TEST;
-                C0162c.D(env);
+                c.D(env);
             } else if (i == 1) {
                 env = ENV.PREPARE;
-                C0162c.D(env);
+                c.D(env);
             }
-            C0162c.z(context, new C0159a.C0160a().c(this.mAppkey).b(this.mConfig.getAppSecret()).d(this.mConfig.getAuthCode()).e(env).f(this.mConfig.getAppKey()).a());
+            c.z(context, new a.C0009a().c(this.mAppkey).b(this.mConfig.getAppSecret()).d(this.mConfig.getAuthCode()).e(env).f(this.mConfig.getAppKey()).a());
             String str = ConnType.PK_ACS;
             str = (this.mConfig.getInappPubKey() == 10 || this.mConfig.getInappPubKey() == 11) ? "open" : "open";
             ALog.i(getTag(), "init awcn register new conn protocol host:", this.mConfig.getInappHost());
-            C0227d.b().c(this.mConfig.getInappHost(), ConnProtocol.valueOf(ConnType.HTTP2, ConnType.RTT_0, str, false));
+            d.b().c(this.mConfig.getInappHost(), ConnProtocol.valueOf(ConnType.HTTP2, ConnType.RTT_0, str, false));
         } catch (Throwable th) {
             ALog.e(getTag(), "initAwcn", th, new Object[0]);
         }

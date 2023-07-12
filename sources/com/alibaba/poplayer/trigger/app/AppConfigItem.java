@@ -8,11 +8,11 @@ import java.util.ArrayList;
 public class AppConfigItem extends BaseConfigItem {
     public static String LOG = "AppConfigItem";
     public boolean autoClose = false;
-    public ArrayList<BaseConfigItem.C3677a> blackList;
-    public BaseConfigItem.C3677a pageInfo;
-    public ArrayList<BaseConfigItem.C3677a> survivalBlackList;
-    public ArrayList<BaseConfigItem.C3677a> survivalWhiteList;
-    public ArrayList<BaseConfigItem.C3677a> whiteList;
+    public ArrayList<BaseConfigItem.a> blackList;
+    public BaseConfigItem.a pageInfo;
+    public ArrayList<BaseConfigItem.a> survivalBlackList;
+    public ArrayList<BaseConfigItem.a> survivalWhiteList;
+    public ArrayList<BaseConfigItem.a> whiteList;
 
     @Override // com.alibaba.poplayer.trigger.BaseConfigItem
     public String toString() {

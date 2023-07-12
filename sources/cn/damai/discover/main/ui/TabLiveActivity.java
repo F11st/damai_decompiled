@@ -15,12 +15,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
 import cn.damai.common.DamaiConstants;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.base.ResponseErrorPage;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.commonbusiness.tab.DamaiTabbarManager;
@@ -127,16 +125,16 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
             }
         }
     };
-    protected HandlerC1041i cdnReqHandler = new HandlerC1041i(this);
+    protected i cdnReqHandler = new i(this);
 
     /* compiled from: Taobao */
     /* loaded from: classes14.dex */
     public class ReqRunnable implements Runnable {
         private static transient /* synthetic */ IpChange $ipChange;
-        private WeakReference<HandlerC1041i> reference;
+        private WeakReference<i> reference;
 
-        public ReqRunnable(HandlerC1041i handlerC1041i) {
-            this.reference = new WeakReference<>(handlerC1041i);
+        public ReqRunnable(i iVar) {
+            this.reference = new WeakReference<>(iVar);
         }
 
         @Override // java.lang.Runnable
@@ -157,13 +155,12 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.TabLiveActivity$a */
     /* loaded from: classes5.dex */
-    public class C1033a implements OnBizListener<PublishStateBean> {
+    public class a implements OnBizListener<PublishStateBean> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ boolean a;
 
-        C1033a(boolean z) {
+        a(boolean z) {
             this.a = z;
         }
 
@@ -195,12 +192,11 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.TabLiveActivity$b */
     /* loaded from: classes5.dex */
-    public class C1034b implements TabbarLayout.TabBarListener {
+    public class b implements TabbarLayout.TabBarListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1034b() {
+        b() {
         }
 
         @Override // cn.damai.commonbusiness.tab.TabbarLayout.TabBarListener
@@ -240,12 +236,11 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.TabLiveActivity$c */
     /* loaded from: classes5.dex */
-    public class C1035c extends t3 {
+    public class c extends t3 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1035c() {
+        c() {
         }
 
         @Override // tb.t3, cn.damai.login.havana.ILoginListener
@@ -270,12 +265,11 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.TabLiveActivity$d */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1036d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1036d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -285,7 +279,7 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
                 ipChange.ipc$dispatch("-619953475", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(z91.u().w());
+            cn.damai.common.user.c.e().x(z91.u().w());
             if (LoginManager.k().q()) {
                 String i = z20.i();
                 Bundle bundle = new Bundle();
@@ -298,12 +292,11 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.TabLiveActivity$e */
     /* loaded from: classes5.dex */
-    public class C1037e implements PtrHandler {
+    public class e implements PtrHandler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1037e() {
+        e() {
         }
 
         @Override // in.srain.cube.views.ptr.PtrHandler
@@ -331,12 +324,11 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.TabLiveActivity$f */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1038f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1038f() {
+        f() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -355,12 +347,11 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.TabLiveActivity$g */
     /* loaded from: classes5.dex */
-    public class C1039g implements RecommendFragment.OnOverPageListener {
+    public class g implements RecommendFragment.OnOverPageListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1039g(TabLiveActivity tabLiveActivity) {
+        g(TabLiveActivity tabLiveActivity) {
         }
 
         @Override // cn.damai.discover.main.ui.RecommendFragment.OnOverPageListener
@@ -373,12 +364,11 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.TabLiveActivity$h */
     /* loaded from: classes5.dex */
-    public class C1040h implements ResponseErrorPage.ErrorRefreshListener {
+    public class h implements ResponseErrorPage.ErrorRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1040h() {
+        h() {
         }
 
         @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
@@ -393,13 +383,12 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.TabLiveActivity$i */
     /* loaded from: classes14.dex */
-    public static class HandlerC1041i extends Handler {
+    public static class i extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
         private final WeakReference<TabLiveActivity> a;
 
-        public HandlerC1041i(TabLiveActivity tabLiveActivity) {
+        public i(TabLiveActivity tabLiveActivity) {
             this.a = new WeakReference<>(tabLiveActivity);
         }
 
@@ -448,7 +437,7 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
         if (AndroidInstantRuntime.support(ipChange, "-319226425")) {
             ipChange.ipc$dispatch("-319226425", new Object[]{this, Boolean.valueOf(z)});
         } else if (z) {
-            this.mLoginListener = new C1035c();
+            this.mLoginListener = new c();
             LoginManager.k().c(this.mLoginListener);
         } else if (this.mLoginListener != null) {
             LoginManager.k().C(this.mLoginListener);
@@ -463,9 +452,9 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
         }
         LivePagerAdapter livePagerAdapter = this.mPagerAdapter;
         if (livePagerAdapter != null) {
-            Fragment a = livePagerAdapter.a();
-            if (a instanceof PtrChildHandler) {
-                return (PtrChildHandler) a;
+            Fragment a2 = livePagerAdapter.a();
+            if (a2 instanceof PtrChildHandler) {
+                return (PtrChildHandler) a2;
             }
             return null;
         }
@@ -551,14 +540,14 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
         this.mTitleList.add(scrollTitleBean2);
         this.mTitleList.add(scrollTitleBean3);
         this.mHorScrollView.setTitle(this.mTitleList).setLineType(2).setFontColor(R$color.color_000000, R$color.color_9C9CA5).setHeight(35).setSpace(10).setFontSize(16, 18).commit();
-        this.mHorScrollView.setOnTitleClickListener(new View$OnClickListenerC1038f());
+        this.mHorScrollView.setOnTitleClickListener(new f());
         this.mHorScrollView.selectTitle(0);
         this.mSelectTitle = this.mTitleList.get(0);
         this.mViewPager = (ViewPager) findViewById(R$id.view_pager);
         FragmentManager supportFragmentManager = getSupportFragmentManager();
         this.mList.clear();
         RecommendFragment recommendFragment = new RecommendFragment();
-        recommendFragment.setOverPageListener(new C1039g(this));
+        recommendFragment.setOverPageListener(new g(this));
         Wanna2SeeFragment newInstance = Wanna2SeeFragment.newInstance();
         FollowFragment followFragment = new FollowFragment();
         this.mList.add(recommendFragment);
@@ -571,33 +560,33 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener
-            public void onPageScrollStateChanged(int i) {
+            public void onPageScrollStateChanged(int i2) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "-886678415")) {
-                    ipChange2.ipc$dispatch("-886678415", new Object[]{this, Integer.valueOf(i)});
+                    ipChange2.ipc$dispatch("-886678415", new Object[]{this, Integer.valueOf(i2)});
                 }
             }
 
             @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener
-            public void onPageScrolled(int i, float f, int i2) {
+            public void onPageScrolled(int i2, float f2, int i3) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "-1508578800")) {
-                    ipChange2.ipc$dispatch("-1508578800", new Object[]{this, Integer.valueOf(i), Float.valueOf(f), Integer.valueOf(i2)});
+                    ipChange2.ipc$dispatch("-1508578800", new Object[]{this, Integer.valueOf(i2), Float.valueOf(f2), Integer.valueOf(i3)});
                 }
             }
 
             @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener
-            public void onPageSelected(int i) {
+            public void onPageSelected(int i2) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "1982391548")) {
-                    ipChange2.ipc$dispatch("1982391548", new Object[]{this, Integer.valueOf(i)});
+                    ipChange2.ipc$dispatch("1982391548", new Object[]{this, Integer.valueOf(i2)});
                     return;
                 }
                 TabLiveActivity tabLiveActivity = TabLiveActivity.this;
-                tabLiveActivity.mSelectTitle = (ScrollTitleBean) tabLiveActivity.mTitleList.get(i);
-                TabLiveActivity.this.mHorScrollView.selectTitle(i);
+                tabLiveActivity.mSelectTitle = (ScrollTitleBean) tabLiveActivity.mTitleList.get(i2);
+                TabLiveActivity.this.mHorScrollView.selectTitle(i2);
                 if (TabLiveActivity.this.mSelectTitle != null) {
-                    C0529c.e().x(z91.u().y(TabLiveActivity.this.mSelectTitle.index, TabLiveActivity.this.mSelectTitle.name));
+                    cn.damai.common.user.c.e().x(z91.u().y(TabLiveActivity.this.mSelectTitle.index, TabLiveActivity.this.mSelectTitle.name));
                 }
             }
         });
@@ -617,7 +606,7 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
         ptrFrameLayout.addPtrUIHandler(ptrUiHeader);
         ptrFrameLayout.setPtrIndicator(new xj0(100, this));
         ptrFrameLayout.setResistance(1.7f);
-        ptrFrameLayout.setPtrHandler(new C1037e());
+        ptrFrameLayout.setPtrHandler(new e());
         ptrFrameLayout.disableWhenHorizontalMove(true);
     }
 
@@ -627,7 +616,7 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
             ipChange.ipc$dispatch("915748079", new Object[]{this});
             return;
         }
-        DamaiTabbarManager damaiTabbarManager = new DamaiTabbarManager(this, (TabbarLayout) findViewById(R$id.live_activity_bottomsheet_container), new C1034b());
+        DamaiTabbarManager damaiTabbarManager = new DamaiTabbarManager(this, (TabbarLayout) findViewById(R$id.live_activity_bottomsheet_container), new b());
         this.mTabBarManager = damaiTabbarManager;
         damaiTabbarManager.j(DamaiConstants.TAB_FIND);
     }
@@ -658,7 +647,7 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
             return;
         }
         this.mSubmitBtn.setVisibility(8);
-        this.mPublishModel.loadPublish(new C1033a(z));
+        this.mPublishModel.loadPublish(new a(z));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -684,8 +673,8 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
         if (AndroidInstantRuntime.support(ipChange, "-423319580")) {
             ipChange.ipc$dispatch("-423319580", new Object[]{this, arrayList});
         } else if (arrayList != null) {
-            for (int i = 0; i < arrayList.size(); i++) {
-                BaseLayer baseLayer = arrayList.get(i);
+            for (int i2 = 0; i2 < arrayList.size(); i2++) {
+                BaseLayer baseLayer = arrayList.get(i2);
                 if (baseLayer != null && (sections = baseLayer.getSections()) != null && sections.size() != 0) {
                     for (BaseSection baseSection : sections) {
                         if (baseSection != null && !TextUtils.isEmpty(baseSection.getComponentId())) {
@@ -735,17 +724,17 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
             ipChange.ipc$dispatch("-1493577363", new Object[]{this});
         } else if (isFinishing()) {
         } else {
-            this.mUserAvatar.setOnClickListener(new View$OnClickListenerC1036d());
+            this.mUserAvatar.setOnClickListener(new d());
             if (LoginManager.k().q()) {
-                String d = s90.d();
-                if (TextUtils.isEmpty(d)) {
+                String d2 = s90.d();
+                if (TextUtils.isEmpty(d2)) {
                     this.mUserAvatar.setBackgroundResource(R$drawable.mine_account_default_1);
                     return;
                 }
-                int a = m62.a(this, 30.0f);
-                DMImageCreator f = C0504a.b().f(d, a, a);
-                int i = R$drawable.mine_account_default_1;
-                f.i(i).c(i).g(this.mUserAvatar);
+                int a2 = m62.a(this, 30.0f);
+                DMImageCreator f2 = cn.damai.common.image.a.b().f(d2, a2, a2);
+                int i2 = R$drawable.mine_account_default_1;
+                f2.i(i2).c(i2).g(this.mUserAvatar);
                 return;
             }
             this.mUserAvatar.setBackgroundResource(R$drawable.mine_account_default_1);
@@ -812,7 +801,7 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
         onResponseError("", "", "", this.mMainView, true);
         ResponseErrorPage responseErrorPage = this.mErrorPage;
         if (responseErrorPage != null) {
-            responseErrorPage.setRefreshListener(new C1040h());
+            responseErrorPage.setRefreshListener(new h());
         }
         alarm(false);
     }
@@ -833,10 +822,10 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
         }
         if (!s90.g(baseResponse.layers)) {
             setTrackInfo(baseResponse.layers);
-            LinearLayout c = this.mViewCreator.c(baseResponse.layers, this.mHeaderView);
-            if (c != null) {
+            LinearLayout c2 = this.mViewCreator.c(baseResponse.layers, this.mHeaderView);
+            if (c2 != null) {
                 this.mHeaderView.removeAllViews();
-                this.mHeaderView.addView(c);
+                this.mHeaderView.addView(c2);
                 return;
             }
             return;
@@ -855,7 +844,7 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
             hashMap.put("current_ab", jSONArray.toJSONString());
         }
         this.mBuilder.i(str).j(hashMap);
-        C0529c.e().l(this, this.mBuilder);
+        cn.damai.common.user.c.e().l(this, this.mBuilder);
     }
 
     private static void updateTrackInfoIfNeed(BaseSection baseSection, String str, String str2) {
@@ -897,9 +886,9 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
         if (this.mSelectTitle == null || (livePagerAdapter = this.mPagerAdapter) == null) {
             return null;
         }
-        Fragment a = livePagerAdapter.a();
-        if (a instanceof RecommendFragment) {
-            return (RecommendFragment) a;
+        Fragment a2 = livePagerAdapter.a();
+        if (a2 instanceof RecommendFragment) {
+            return (RecommendFragment) a2;
         }
         return null;
     }
@@ -928,23 +917,23 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
         initTabbar();
         bindLoginListener(true);
         setDamaiUTKeyBuilder(z91.u().v(z20.E(), z20.d()));
-        C0529c.e().K(this);
+        cn.damai.common.user.c.e().K(this);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, android.app.Activity
-    public void onActivityResult(int i, int i2, Intent intent) {
+    public void onActivityResult(int i2, int i3, Intent intent) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-802970321")) {
-            ipChange.ipc$dispatch("-802970321", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), intent});
+            ipChange.ipc$dispatch("-802970321", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3), intent});
             return;
         }
-        super.onActivityResult(i, i2, intent);
-        if (i == 56) {
-            if (i2 == -1) {
+        super.onActivityResult(i2, i3, intent);
+        if (i2 == 56) {
+            if (i3 == -1) {
                 loadPublish(true);
             }
-        } else if (i == REQUEST_USER_PUBLISH && i2 == -1 && intent != null && intent.getBooleanExtra("needRefresh", false)) {
+        } else if (i2 == REQUEST_USER_PUBLISH && i3 == -1 && intent != null && intent.getBooleanExtra("needRefresh", false)) {
             showPublishSuccessAnimation();
         }
     }
@@ -976,7 +965,7 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
             } else {
                 LoginManager.k().x(this, new Intent(), 56);
             }
-            C0529c.e().x(z91.u().x());
+            cn.damai.common.user.c.e().x(z91.u().x());
         }
     }
 
@@ -1035,13 +1024,13 @@ public class TabLiveActivity extends SimpleBaseActivity implements RefreshCallBa
     }
 
     @Override // cn.damai.commonbusiness.wannasee.listener.RefreshCallBack
-    public void onRefreshSuccess(int i) {
+    public void onRefreshSuccess(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1789472845")) {
-            ipChange.ipc$dispatch("1789472845", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("1789472845", new Object[]{this, Integer.valueOf(i2)});
         } else if (isFinishing()) {
         } else {
-            this.mPtrTip.setText("为您更新了" + i + "条内容");
+            this.mPtrTip.setText("为您更新了" + i2 + "条内容");
             this.mPtrTip.clearAnimation();
             this.mPtrTip.startAnimation(AnimationUtils.loadAnimation(this, R$anim.anim_discover_refresh_tip));
         }

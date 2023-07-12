@@ -225,21 +225,21 @@ public class WXSDKManager {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public void X(C6948a c6948a) {
-        this.h = c6948a.v();
-        this.e = c6948a.x();
-        this.g = c6948a.s();
-        this.q = c6948a.C();
-        this.d = c6948a.E();
-        this.s = c6948a.D();
-        this.u = c6948a.F();
-        this.o = c6948a.y();
-        this.f = c6948a.w();
-        this.t = c6948a.r();
-        this.l = c6948a.q();
-        this.m = c6948a.z();
-        this.x = c6948a.A();
-        this.y = c6948a.t();
+    public void X(a aVar) {
+        this.h = aVar.v();
+        this.e = aVar.x();
+        this.g = aVar.s();
+        this.q = aVar.C();
+        this.d = aVar.E();
+        this.s = aVar.D();
+        this.u = aVar.F();
+        this.o = aVar.y();
+        this.f = aVar.w();
+        this.t = aVar.r();
+        this.l = aVar.q();
+        this.m = aVar.z();
+        this.x = aVar.A();
+        this.y = aVar.t();
     }
 
     public void Y(INavigator iNavigator) {

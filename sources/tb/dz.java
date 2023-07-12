@@ -5,11 +5,10 @@ import android.text.TextUtils;
 import android.util.LruCache;
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DXRuntimeContext;
 import com.taobao.android.dinamicx.DinamicXEngine;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
-import com.taobao.android.dinamicx.template.download.C6399b;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -23,21 +22,20 @@ public class dz {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.dz$a */
     /* loaded from: classes11.dex */
-    public static class C9062a {
+    public static class a {
         private static final dz a = new dz();
         private static dz b = null;
     }
 
     public static dz c() {
-        return (!DinamicXEngine.x() || C9062a.b == null) ? C9062a.a : C9062a.b;
+        return (!DinamicXEngine.x() || a.b == null) ? a.a : a.b;
     }
 
     @RestrictTo({RestrictTo.Scope.LIBRARY})
     public static void h(dz dzVar) {
-        if (C9062a.b == null) {
-            dz unused = C9062a.b = dzVar;
+        if (a.b == null) {
+            dz unused = a.b = dzVar;
         }
     }
 
@@ -70,7 +68,7 @@ public class dz {
     }
 
     public byte[] e(String str, DXRuntimeContext dXRuntimeContext) {
-        List<C6368e.C6369a> list;
+        List<e.a> list;
         byte[] bArr;
         long nanoTime = System.nanoTime();
         if (TextUtils.isEmpty(str)) {
@@ -79,7 +77,7 @@ public class dz {
         try {
             synchronized (this.a) {
                 bArr = this.a.get(str);
-                if ((bArr == null || bArr.length == 0) && (bArr = C6399b.c(str)) != null && bArr.length > 0) {
+                if ((bArr == null || bArr.length == 0) && (bArr = com.taobao.android.dinamicx.template.download.b.c(str)) != null && bArr.length > 0) {
                     this.a.put(str, bArr);
                 }
                 i("Template_Read", System.nanoTime() - nanoTime);
@@ -89,13 +87,13 @@ public class dz {
             if (dXRuntimeContext == null || dXRuntimeContext.getDxError() == null || (list = dXRuntimeContext.getDxError().c) == null) {
                 return null;
             }
-            C6368e.C6369a c6369a = new C6368e.C6369a("Template", "Template_Read", C6368e.DX_TEMPLATE_IO_READ_ERROR);
+            e.a aVar = new e.a("Template", "Template_Read", com.taobao.android.dinamicx.e.DX_TEMPLATE_IO_READ_ERROR);
             if (e instanceof FileNotFoundException) {
-                c6369a.e = "fileNotFound " + str;
+                aVar.e = "fileNotFound " + str;
             } else {
-                c6369a.e = ry.a(e);
+                aVar.e = ry.a(e);
             }
-            list.add(c6369a);
+            list.add(aVar);
             return null;
         }
     }
@@ -114,7 +112,7 @@ public class dz {
 
     public boolean g(String str, byte[] bArr) {
         long nanoTime = System.nanoTime();
-        boolean h = C6399b.h(str, bArr);
+        boolean h = com.taobao.android.dinamicx.template.download.b.h(str, bArr);
         if (h) {
             i("Template_Write", System.nanoTime() - nanoTime);
         }

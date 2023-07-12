@@ -8,5 +8,5 @@ import com.taobao.android.dinamicx.widget.DXImageWidgetNode;
 /* loaded from: classes12.dex */
 public interface IDXWebImageUrlInterface {
     @Nullable
-    String decideUrl(@NonNull String str, int i, int i2, @NonNull DXImageWidgetNode.C6440c c6440c);
+    String decideUrl(@NonNull String str, int i, int i2, @NonNull DXImageWidgetNode.c cVar);
 }

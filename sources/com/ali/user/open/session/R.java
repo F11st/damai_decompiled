@@ -272,9 +272,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.ali.user.open.session.R$color */
     /* loaded from: classes9.dex */
-    public static final class C2986color {
+    public static final class color {
         public static final int abc_background_cache_hint_selector_material_dark = 0x7f06003a;
         public static final int abc_background_cache_hint_selector_material_light = 0x7f06003b;
         public static final int abc_btn_colored_borderless_text_material = 0x7f06003c;
@@ -356,7 +355,7 @@ public final class R {
         public static final int switch_thumb_normal_material_dark = 0x7f0604c4;
         public static final int switch_thumb_normal_material_light = 0x7f0604c5;
 
-        private C2986color() {
+        private color() {
         }
     }
 
@@ -466,9 +465,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.ali.user.open.session.R$drawable */
     /* loaded from: classes9.dex */
-    public static final class C2987drawable {
+    public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha = 0x7f080006;
         public static final int abc_action_bar_item_background_material = 0x7f080007;
         public static final int abc_btn_borderless_material = 0x7f080009;
@@ -555,7 +553,7 @@ public final class R {
         public static final int notification_tile_bg = 0x7f080b28;
         public static final int notify_panel_notification_icon_bg = 0x7f080b29;
 
-        private C2987drawable() {
+        private drawable() {
         }
     }
 
@@ -693,9 +691,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.ali.user.open.session.R$layout */
     /* loaded from: classes9.dex */
-    public static final class C2988layout {
+    public static final class layout {
         public static final int abc_action_bar_title_item = 0x7f0c0000;
         public static final int abc_action_bar_up_container = 0x7f0c0001;
         public static final int abc_action_menu_item_layout = 0x7f0c0002;
@@ -744,7 +741,7 @@ public final class R {
         public static final int select_dialog_singlechoice_material = 0x7f0c072e;
         public static final int support_simple_spinner_dropdown_item = 0x7f0c0758;
 
-        private C2988layout() {
+        private layout() {
         }
     }
 
@@ -777,9 +774,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.ali.user.open.session.R$style */
     /* loaded from: classes9.dex */
-    public static final class C2989style {
+    public static final class style {
         public static final int AlertDialog_AppCompat = 0x7f120009;
         public static final int AlertDialog_AppCompat_Light = 0x7f12000a;
         public static final int AliMember_Base_AppTheme = 0x7f12000b;
@@ -1108,7 +1104,7 @@ public final class R {
         public static final int Widget_AppCompat_Toolbar = 0x7f120352;
         public static final int Widget_AppCompat_Toolbar_Button_Navigation = 0x7f120353;
 
-        private C2989style() {
+        private style() {
         }
     }
 

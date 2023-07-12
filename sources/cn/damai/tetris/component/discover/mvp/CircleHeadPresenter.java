@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
@@ -30,7 +29,6 @@ import cn.damai.tetris.core.TrackInfo;
 import cn.damai.tetris.core.msg.Message;
 import cn.damai.tetris.core.ut.TrackType;
 import cn.damai.tetris.page.AbsFragment;
-import cn.damai.uikit.image.C2497a;
 import cn.damai.uikit.image.IImageLoader;
 import cn.damai.uikit.nav.INavUri;
 import cn.damai.uikit.nav.NavProxy;
@@ -43,14 +41,14 @@ import com.youku.uplayer.AliMediaPlayer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import tb.C9175gc;
-import tb.C9548pb;
 import tb.cb2;
 import tb.cs;
 import tb.d23;
+import tb.gc;
 import tb.gh1;
 import tb.ja;
 import tb.m62;
+import tb.pb;
 import tb.t60;
 
 /* compiled from: Taobao */
@@ -63,13 +61,12 @@ public class CircleHeadPresenter extends BasePresenter<CircleHeadContract.Model,
     private String themeId;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.discover.mvp.CircleHeadPresenter$a */
     /* loaded from: classes7.dex */
-    public class C1808a implements NewSimpleTitleLayout.OnBtnClickListener {
+    public class a implements NewSimpleTitleLayout.OnBtnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CircleHeadContract.Model a;
 
-        C1808a(CircleHeadContract.Model model) {
+        a(CircleHeadContract.Model model) {
             this.a = model;
         }
 
@@ -96,13 +93,12 @@ public class CircleHeadPresenter extends BasePresenter<CircleHeadContract.Model,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.discover.mvp.CircleHeadPresenter$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1809b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CircleHeadContract.Model a;
 
-        View$OnClickListenerC1809b(CircleHeadContract.Model model) {
+        b(CircleHeadContract.Model model) {
             this.a = model;
         }
 
@@ -119,13 +115,12 @@ public class CircleHeadPresenter extends BasePresenter<CircleHeadContract.Model,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.discover.mvp.CircleHeadPresenter$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1810c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        View$OnClickListenerC1810c(String str) {
+        c(String str) {
             this.a = str;
         }
 
@@ -137,7 +132,7 @@ public class CircleHeadPresenter extends BasePresenter<CircleHeadContract.Model,
             } else if (TextUtils.isEmpty(this.a)) {
             } else {
                 HashMap<String, String> f = d23.f();
-                f.put("quanziid", CircleHeadPresenter.this.getModel().getTrackInfo().getArgsMap().get(C9548pb.CNT_CONTENT_ID));
+                f.put("quanziid", CircleHeadPresenter.this.getModel().getTrackInfo().getArgsMap().get(pb.CNT_CONTENT_ID));
                 CircleHeadPresenter circleHeadPresenter = CircleHeadPresenter.this;
                 circleHeadPresenter.userTrack(TrackType.click, null, ((CircleHeadContract.Model) ((BasePresenter) circleHeadPresenter).mModel).getTrackInfo().trackB, "top", gh1.MODULE_BANNER, f, true);
                 DMNav.from(CircleHeadPresenter.this.getContext().getActivity()).toUri(this.a);
@@ -146,29 +141,28 @@ public class CircleHeadPresenter extends BasePresenter<CircleHeadContract.Model,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.discover.mvp.CircleHeadPresenter$d */
     /* loaded from: classes7.dex */
-    public class C1811d implements IImageLoader.IImageSuccListener {
+    public class d implements IImageLoader.IImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
-        C1811d(CircleHeadPresenter circleHeadPresenter, ImageView imageView) {
+        d(CircleHeadPresenter circleHeadPresenter, ImageView imageView) {
             this.a = imageView;
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageSuccListener
-        public void onSuccess(IImageLoader.C2496b c2496b) {
+        public void onSuccess(IImageLoader.b bVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1892144031")) {
-                ipChange.ipc$dispatch("1892144031", new Object[]{this, c2496b});
+                ipChange.ipc$dispatch("1892144031", new Object[]{this, bVar});
                 return;
             }
-            Drawable drawable = c2496b.a;
+            Drawable drawable = bVar.a;
             if (drawable != null) {
                 this.a.setImageDrawable(drawable);
                 return;
             }
-            Bitmap bitmap = c2496b.b;
+            Bitmap bitmap = bVar.b;
             if (bitmap != null) {
                 this.a.setImageBitmap(bitmap);
             }
@@ -221,7 +215,7 @@ public class CircleHeadPresenter extends BasePresenter<CircleHeadContract.Model,
                     }
                     HashMap<String, String> f = d23.f();
                     f.put("type", CircleHeadPresenter.this.addCircleStatue ? "1" : "0");
-                    f.put("quanziid", CircleHeadPresenter.this.getModel().getTrackInfo().getArgsMap().get(C9548pb.CNT_CONTENT_ID));
+                    f.put("quanziid", CircleHeadPresenter.this.getModel().getTrackInfo().getArgsMap().get(pb.CNT_CONTENT_ID));
                     CircleHeadPresenter circleHeadPresenter = CircleHeadPresenter.this;
                     circleHeadPresenter.userTrack(TrackType.click, null, circleHeadPresenter.getModel().getTrackInfo().trackB, "top", "join", f, false);
                     boolean z = CircleHeadPresenter.this.addCircleStatue;
@@ -257,8 +251,8 @@ public class CircleHeadPresenter extends BasePresenter<CircleHeadContract.Model,
         if (TextUtils.isEmpty(str)) {
             return;
         }
-        C2497a.a().loadinto(str, imageView);
-        C2497a.a().load(str, 0, 0, 0, new C1811d(this, imageView), null);
+        cn.damai.uikit.image.a.a().loadinto(str, imageView);
+        cn.damai.uikit.image.a.a().load(str, 0, 0, 0, new d(this, imageView), null);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -276,7 +270,7 @@ public class CircleHeadPresenter extends BasePresenter<CircleHeadContract.Model,
             getView().getThemeJoinBtn().setBackground(gradientDrawable);
         }
         getView().getJoinIcon().setVisibility(z ? 8 : 0);
-        C9175gc.a(getView().getThemeJoinBtn(), z ? "已加入" : "     加入");
+        gc.a(getView().getThemeJoinBtn(), z ? "已加入" : "     加入");
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -286,7 +280,7 @@ public class CircleHeadPresenter extends BasePresenter<CircleHeadContract.Model,
             ipChange.ipc$dispatch("-1568130766", new Object[]{this, str, arrayList});
             return;
         }
-        C9175gc.a(getView().getThemeJoinNum(), str);
+        gc.a(getView().getThemeJoinNum(), str);
         getView().getThemeJoinNum().setTextColor(Color.parseColor(getModel().getStartColor()));
         if (arrayList != null && arrayList.size() > 0) {
             getView().getUserOverlay().setMaxAvatarCount(3);
@@ -415,14 +409,14 @@ public class CircleHeadPresenter extends BasePresenter<CircleHeadContract.Model,
         this.themeId = model.getThemeBean().id;
         getView().getTitleLayout().enableImmersiveMode(getContext().getActivity());
         getView().getTitleLayout().setAlpha(0.0f);
-        getView().getTitleLayout().setListener(new C1808a(model));
+        getView().getTitleLayout().setListener(new a(model));
         HashMap<String, String> f = d23.f();
         f.put("type", this.addCircleStatue ? "1" : "0");
         f.put("quanziid", this.themeId);
         userTrack(TrackType.expose, getView().getThemeJoinBtn(), ((CircleHeadContract.Model) this.mModel).getTrackInfo().trackB, "top", "join", f, false);
         getView().getTitleLayout().showShareBtn((this.tempModel.getShare() == null || this.tempModel.getShare().shareUrl == null) ? false : false);
         if (model.getThemeBean() != null) {
-            C9175gc.a(getView().getThemeName(), model.getThemeBean().themeName);
+            gc.a(getView().getThemeName(), model.getThemeBean().themeName);
             joinUserUpdate(model.getThemeBean().joinTotal, model.getThemeBean().joinHeadPics);
             if (TextUtils.isEmpty(model.getThemeBean().themeDesc)) {
                 getView().getThemeDesc().setVisibility(8);
@@ -433,11 +427,11 @@ public class CircleHeadPresenter extends BasePresenter<CircleHeadContract.Model,
             } else {
                 str = "简介：" + model.getThemeBean().themeDesc;
             }
-            C9175gc.a(themeDesc, str);
+            gc.a(themeDesc, str);
             boolean z2 = model.getThemeBean().hasJoin;
             this.addCircleStatue = z2;
             joinBtnStyleView(z2);
-            getView().getThemeJoinBtn().setOnClickListener(new View$OnClickListenerC1809b(model));
+            getView().getThemeJoinBtn().setOnClickListener(new b(model));
             imgShow(getView().getBgImage(), getModel().getThemeBean().colorGroup.backgroundImage, 0);
             imgShow(getView().getCircleHeadImage(), getModel().getThemeBean().headImage, R$drawable.uikit_default_image_bg_gradient);
         }
@@ -453,8 +447,8 @@ public class CircleHeadPresenter extends BasePresenter<CircleHeadContract.Model,
         String bannerUrl = getModel().getBannerUrl();
         if (!TextUtils.isEmpty(bannerPic) && !TextUtils.isEmpty(bannerUrl)) {
             getView().getBannerUi().setVisibility(0);
-            getView().getBannerImg().setOnClickListener(new View$OnClickListenerC1810c(bannerUrl));
-            C0504a.b().f(bannerPic, DisplayMetrics.getwidthPixels(m62.b(getContext().getActivity())) - (m62.a(getContext().getActivity(), 12.0f) * 2), m62.a(getContext().getActivity(), 88.0f)).g(getView().getBannerImg());
+            getView().getBannerImg().setOnClickListener(new c(bannerUrl));
+            cn.damai.common.image.a.b().f(bannerPic, DisplayMetrics.getwidthPixels(m62.b(getContext().getActivity())) - (m62.a(getContext().getActivity(), 12.0f) * 2), m62.a(getContext().getActivity(), 88.0f)).g(getView().getBannerImg());
             return;
         }
         getView().getBannerUi().setVisibility(8);

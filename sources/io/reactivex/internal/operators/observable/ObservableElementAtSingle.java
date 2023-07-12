@@ -1,11 +1,11 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
-import io.reactivex.AbstractC8152e;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.SingleObserver;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.fuseable.FuseToObservable;
 import java.util.NoSuchElementException;
@@ -13,7 +13,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableElementAtSingle<T> extends AbstractC8152e<T> implements FuseToObservable<T> {
+public final class ObservableElementAtSingle<T> extends e<T> implements FuseToObservable<T> {
     final T defaultValue;
     final long index;
     final ObservableSource<T> source;
@@ -99,11 +99,11 @@ public final class ObservableElementAtSingle<T> extends AbstractC8152e<T> implem
     }
 
     @Override // io.reactivex.internal.fuseable.FuseToObservable
-    public AbstractC8149d<T> fuseToObservable() {
+    public d<T> fuseToObservable() {
         return i42.n(new ObservableElementAt(this.source, this.index, this.defaultValue, true));
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     public void subscribeActual(SingleObserver<? super T> singleObserver) {
         this.source.subscribe(new ElementAtObserver(singleObserver, this.index, this.defaultValue));
     }

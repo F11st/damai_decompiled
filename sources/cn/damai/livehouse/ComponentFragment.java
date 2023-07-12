@@ -100,10 +100,10 @@ public class ComponentFragment extends AbsFragmentV2 {
             /* compiled from: Taobao */
             /* renamed from: cn.damai.livehouse.ComponentFragment$1$a */
             /* loaded from: classes5.dex */
-            public class C1317a implements OnErrClickListener {
+            public class a implements OnErrClickListener {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C1317a() {
+                a() {
                 }
 
                 @Override // cn.damai.tetris.v2.componentplugin.OnErrClickListener
@@ -128,7 +128,7 @@ public class ComponentFragment extends AbsFragmentV2 {
                     ComponentFragment.this.stopProgressDialog();
                 }
                 ComponentFragment.this.refreshFinish();
-                ComponentFragment.this.showErrorViewV2(str, str2, new C1317a());
+                ComponentFragment.this.showErrorViewV2(str, str2, new a());
             }
 
             @Override // cn.damai.tetris.DMMtopWarningListener
@@ -144,10 +144,10 @@ public class ComponentFragment extends AbsFragmentV2 {
                 ComponentFragment.this.hideErrorViewV2();
                 ComponentFragment.this.refreshFinish();
                 if (pg.b(baseResponse)) {
-                    CategoryItemListInfo a = pg.a(baseResponse);
-                    if (a.isCanRequestNextPage(true, 1)) {
+                    CategoryItemListInfo a2 = pg.a(baseResponse);
+                    if (a2.isCanRequestNextPage(true, 1)) {
                         ComponentFragment.this.loadMoreResetV2(true);
-                    } else if (a.hasListSize()) {
+                    } else if (a2.hasListSize()) {
                         ComponentFragment.this.showNoMoreV2();
                     } else {
                         ComponentFragment.this.showNoMoreV2("没有找到相关演出，换个筛选条件试试吧");

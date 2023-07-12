@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-final class i7 extends AbstractC9439me {
+final class i7 extends me {
     @NotNull
     private final byte[] a;
     private int b;
@@ -20,7 +20,7 @@ final class i7 extends AbstractC9439me {
         return this.b < this.a.length;
     }
 
-    @Override // tb.AbstractC9439me
+    @Override // tb.me
     public byte nextByte() {
         try {
             byte[] bArr = this.a;

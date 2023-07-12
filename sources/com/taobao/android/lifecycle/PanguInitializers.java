@@ -110,12 +110,11 @@ public abstract class PanguInitializers {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.lifecycle.PanguInitializers$a */
     /* loaded from: classes11.dex */
-    class C6553a implements PanguApplication.CrossActivityLifecycleCallback {
+    class a implements PanguApplication.CrossActivityLifecycleCallback {
         final /* synthetic */ PanguApplication a;
 
-        C6553a(PanguApplication panguApplication) {
+        a(PanguApplication panguApplication) {
             this.a = panguApplication;
         }
 
@@ -258,7 +257,7 @@ public abstract class PanguInitializers {
             }
         });
         startInitializersAnnotatedBy(Global.class);
-        panguApplication.registerCrossActivityLifecycleCallback(new C6553a(panguApplication));
+        panguApplication.registerCrossActivityLifecycleCallback(new a(panguApplication));
     }
 
     protected void startInitializersAnnotatedBy(@Nullable Class<? extends Annotation> cls) {

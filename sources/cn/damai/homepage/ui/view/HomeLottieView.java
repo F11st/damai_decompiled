@@ -8,8 +8,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import cn.damai.common.image.C0504a;
-import com.airbnb.lottie.C2821a;
+import cn.damai.common.image.a;
 import com.airbnb.lottie.ImageAssetDelegate;
 import com.airbnb.lottie.LottieAnimationView;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -118,21 +117,21 @@ public class HomeLottieView extends FrameLayout {
             ipChange.ipc$dispatch("1203604483", new Object[]{this, str});
         } else if (this.bgImageView == null || TextUtils.isEmpty(str)) {
         } else {
-            C0504a.b().c(ls.a(str)).g(this.bgImageView);
+            a.b().c(ls.a(str)).g(this.bgImageView);
         }
     }
 
-    public void setComposition(C2821a c2821a) {
+    public void setComposition(com.airbnb.lottie.a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-431969556")) {
-            ipChange.ipc$dispatch("-431969556", new Object[]{this, c2821a});
+            ipChange.ipc$dispatch("-431969556", new Object[]{this, aVar});
             return;
         }
         LottieAnimationView lottieAnimationView = this.lottieView;
         if (lottieAnimationView == null) {
             return;
         }
-        lottieAnimationView.setComposition(c2821a);
+        lottieAnimationView.setComposition(aVar);
     }
 
     public void setImageAssetDelegate(ImageAssetDelegate imageAssetDelegate) {

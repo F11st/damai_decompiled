@@ -14,7 +14,6 @@ import com.alibaba.pictures.bricks.bean.VoteBean;
 import com.alibaba.pictures.bricks.bean.VoteInfoBean;
 import com.alibaba.pictures.bricks.component.home.feed.VoteContract;
 import com.alibaba.pictures.bricks.onearch.AbsView;
-import com.alibaba.pictures.bricks.util.C3550a;
 import com.alibaba.pictures.bricks.view.DMCategroyTagView;
 import com.alibaba.pictures.bricks.view.VotePanel;
 import com.alient.oneservice.image.ImageLoaderProviderProxy;
@@ -48,14 +47,13 @@ public final class VoteView extends AbsView<GenericItem<ItemValue>, VoteModel, V
     private final View mVoteTagNew;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.feed.VoteView$a */
     /* loaded from: classes7.dex */
-    public static final class C3472a implements VotePanel.VoteActionListener {
+    public static final class a implements VotePanel.VoteActionListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context a;
         final /* synthetic */ VoteView b;
 
-        C3472a(Context context, VoteView voteView) {
+        a(Context context, VoteView voteView) {
             this.a = context;
             this.b = voteView;
         }
@@ -159,7 +157,7 @@ public final class VoteView extends AbsView<GenericItem<ItemValue>, VoteModel, V
 
     private final VotePanel.VoteActionListener getActionListener(Context context) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1586295014") ? (VotePanel.VoteActionListener) ipChange.ipc$dispatch("1586295014", new Object[]{this, context}) : new C3472a(context, this);
+        return AndroidInstantRuntime.support(ipChange, "1586295014") ? (VotePanel.VoteActionListener) ipChange.ipc$dispatch("1586295014", new Object[]{this, context}) : new a(context, this);
     }
 
     @Override // com.alibaba.pictures.bricks.component.home.feed.VoteContract.View
@@ -223,7 +221,7 @@ public final class VoteView extends AbsView<GenericItem<ItemValue>, VoteModel, V
                 b41.h(application4, "getApplication()");
                 Application application5 = AppInfoProviderProxy.getApplication();
                 b41.h(application5, "getApplication()");
-                ImageLoaderProviderProxy.loadinto(C3550a.c(str, (i2 - (s60Var2.b(application4, 21) * 2)) / 2, s60Var2.b(application5, 90)), this.mTopImg);
+                ImageLoaderProviderProxy.loadinto(com.alibaba.pictures.bricks.util.a.c(str, (i2 - (s60Var2.b(application4, 21) * 2)) / 2, s60Var2.b(application5, 90)), this.mTopImg);
             } else {
                 ImageLoaderProviderProxy.loadinto(str, this.mTopImg);
             }

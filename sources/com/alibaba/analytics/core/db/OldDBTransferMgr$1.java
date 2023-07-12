@@ -24,7 +24,7 @@ final class OldDBTransferMgr$1 implements Runnable {
     public void run() {
         String str;
         Context context = this.val$context;
-        str = C3117a.a;
+        str = a.a;
         pq pqVar = new pq(context, str);
         while (true) {
             List<? extends ve0> i = pqVar.i(qa1.class, null, "time", 100);

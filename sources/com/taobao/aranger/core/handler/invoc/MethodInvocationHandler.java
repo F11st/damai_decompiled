@@ -9,13 +9,13 @@ import com.taobao.aranger.annotation.method.oneway;
 import com.taobao.aranger.constant.Constants;
 import com.taobao.aranger.core.entity.Call;
 import com.taobao.aranger.core.entity.Reply;
-import com.taobao.aranger.core.ipc.channel.AbstractC6693b;
+import com.taobao.aranger.core.ipc.channel.b;
 import com.taobao.aranger.core.wrapper.MethodWrapper;
 import com.taobao.aranger.core.wrapper.ParameterWrapper;
 import com.taobao.aranger.core.wrapper.ServiceWrapper;
 import com.taobao.aranger.exception.IPCException;
-import com.taobao.aranger.utils.C6698a;
 import com.taobao.aranger.utils.TypeUtils;
+import com.taobao.aranger.utils.a;
 import java.lang.reflect.Method;
 import tb.qh;
 
@@ -24,7 +24,7 @@ import tb.qh;
 public class MethodInvocationHandler extends IPCInvocationHandler {
     private final ServiceWrapper b;
     private final Uri c;
-    private final AbstractC6693b d;
+    private final b d;
     private final boolean e;
 
     public MethodInvocationHandler(ServiceWrapper serviceWrapper, Uri uri, boolean z) {
@@ -37,7 +37,7 @@ public class MethodInvocationHandler extends IPCInvocationHandler {
 
     @Override // com.taobao.aranger.core.handler.invoc.IPCInvocationHandler
     public Reply a(Method method, Object[] objArr) throws IPCException {
-        ParameterWrapper[] b = C6698a.b(method, objArr);
+        ParameterWrapper[] b = a.b(method, objArr);
         MethodName methodName = (MethodName) method.getAnnotation(MethodName.class);
         return this.d.f(Call.obtain().setServiceWrapper(this.b).setParameterWrappers(b).setMethodWrapper(MethodWrapper.obtain().setMethodName(methodName == null ? method.getName() : methodName.value()).setReturnType(TypeUtils.getClassId(method.getReturnType()))).setRemoteProviderUri(this.c).setIsSameApp(this.e).setCallingPackage(ARanger.getContext().getPackageName()).setVoid(Constants.VOID.equals(method.getReturnType().getName())).setOneWay(method.getAnnotation(oneway.class) != null));
     }

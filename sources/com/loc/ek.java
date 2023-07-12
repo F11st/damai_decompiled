@@ -39,7 +39,7 @@ public final class ek implements ee {
     private Handler c;
     x0 f;
     private LocationManager g;
-    private C5826a h;
+    private a h;
     u43 i;
     private ArrayList<m53> b = new ArrayList<>();
     l73 d = null;
@@ -48,12 +48,11 @@ public final class ek implements ee {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.loc.ek$a */
     /* loaded from: classes10.dex */
-    public static class C5826a implements LocationListener {
+    public static class a implements LocationListener {
         private ek a;
 
-        C5826a(ek ekVar) {
+        a(ek ekVar) {
             this.a = ekVar;
         }
 
@@ -91,18 +90,17 @@ public final class ek implements ee {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.loc.ek$b */
     /* loaded from: classes10.dex */
-    public class C5827b extends ck {
+    public class b extends ck {
         private int b;
         private Location c;
 
-        C5827b(int i) {
+        b(int i) {
             this.b = 0;
             this.b = i;
         }
 
-        C5827b(ek ekVar, Location location) {
+        b(ek ekVar, Location location) {
             this(1);
             this.c = location;
         }
@@ -123,7 +121,7 @@ public final class ek implements ee {
                 }
                 ArrayList<y0> c = ek.this.d.c();
                 List<dr> i2 = ek.this.e.i();
-                v0.C5895a c5895a = new v0.C5895a();
+                v0.a aVar = new v0.a();
                 s63 s63Var = new s63();
                 s63Var.g = this.c.getAccuracy();
                 s63Var.d = com.alibaba.wireless.security.aopsdk.replace.android.location.Location.getAltitude(this.c);
@@ -137,20 +135,20 @@ public final class ek implements ee {
                 System.currentTimeMillis();
                 s63Var.a = this.c.getTime();
                 s63Var.h = this.c.getTime();
-                c5895a.a = s63Var;
-                c5895a.b = c;
+                aVar.a = s63Var;
+                aVar.b = c;
                 WifiInfo l = ek.this.d.l();
                 if (l != null) {
-                    c5895a.c = y0.a(l.getBSSID());
+                    aVar.c = y0.a(l.getBSSID());
                 }
-                c5895a.d = l73.E;
-                c5895a.f = this.c.getTime();
-                c5895a.g = (byte) C5861o.Z(ek.this.a);
-                c5895a.h = C5861o.e0(ek.this.a);
-                c5895a.e = ek.this.d.v();
-                c5895a.j = m1.n(ek.this.a);
-                c5895a.i = i2;
-                m53 d = x0.d(c5895a);
+                aVar.d = l73.E;
+                aVar.f = this.c.getTime();
+                aVar.g = (byte) o.Z(ek.this.a);
+                aVar.h = o.e0(ek.this.a);
+                aVar.e = ek.this.d.v();
+                aVar.j = m1.n(ek.this.a);
+                aVar.i = i2;
+                m53 d = x0.d(aVar);
                 if (d == null) {
                     return;
                 }
@@ -170,54 +168,54 @@ public final class ek implements ee {
             if (m1.f0(ek.this.a)) {
                 return;
             }
-            C5887v c5887v = null;
+            v vVar = null;
             try {
                 long unused = ek.k = System.currentTimeMillis();
                 if (ek.this.i.f.e()) {
-                    c5887v = C5887v.b(new File(ek.this.i.a), ek.this.i.b);
+                    vVar = v.b(new File(ek.this.i.a), ek.this.i.b);
                     ArrayList arrayList = new ArrayList();
                     byte[] t = ek.t();
                     if (t == null) {
                         try {
-                            c5887v.close();
+                            vVar.close();
                             return;
                         } catch (Throwable unused2) {
                             return;
                         }
                     }
-                    List k = ek.k(c5887v, ek.this.i, arrayList, t);
+                    List k = ek.k(vVar, ek.this.i, arrayList, t);
                     if (k != null && k.size() != 0) {
                         ek.this.i.f.b(true);
                         if (x0.f(v1.u(x0.h(e1.d(t), p1.h(t, x0.g(), v1.w()), k)))) {
-                            ek.m(c5887v, arrayList);
+                            ek.m(vVar, arrayList);
                         }
                     }
                     try {
-                        c5887v.close();
+                        vVar.close();
                         return;
                     } catch (Throwable unused3) {
                         return;
                     }
                 }
-                if (c5887v != null) {
+                if (vVar != null) {
                     try {
-                        c5887v.close();
+                        vVar.close();
                     } catch (Throwable unused4) {
                     }
                 }
             } catch (Throwable th) {
                 try {
                     an.m(th, "leg", "uts");
-                    if (c5887v != null) {
+                    if (vVar != null) {
                         try {
-                            c5887v.close();
+                            vVar.close();
                         } catch (Throwable unused5) {
                         }
                     }
                 } catch (Throwable th2) {
-                    if (c5887v != null) {
+                    if (vVar != null) {
                         try {
-                            c5887v.close();
+                            vVar.close();
                         } catch (Throwable unused6) {
                         }
                     }
@@ -245,13 +243,13 @@ public final class ek implements ee {
         this.a = context;
         u43 u43Var = new u43();
         this.i = u43Var;
-        C5822e0.e(this.a, u43Var, al.k, 100, 1024000, "0");
+        e0.e(this.a, u43Var, al.k, 100, 1024000, "0");
         u43 u43Var2 = this.i;
         int i = i1.F;
         boolean z = i1.D;
         int i2 = i1.E;
         u43Var2.f = new i53(context, i, "kKey", new g53(context, z, i2, i2 * 10, "carrierLocKey"));
-        this.i.e = new C5859n();
+        this.i.e = new n();
     }
 
     private static int a(byte[] bArr) {
@@ -281,7 +279,7 @@ public final class ek implements ee {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public static java.util.List<tb.m53> k(com.loc.C5887v r17, tb.u43 r18, java.util.List<java.lang.String> r19, byte[] r20) {
+    public static java.util.List<tb.m53> k(com.loc.v r17, tb.u43 r18, java.util.List<java.lang.String> r19, byte[] r20) {
         /*
             Method dump skipped, instructions count: 268
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -290,13 +288,13 @@ public final class ek implements ee {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static void m(C5887v c5887v, List<String> list) {
-        if (c5887v != null) {
+    public static void m(v vVar, List<String> list) {
+        if (vVar != null) {
             try {
                 for (String str : list) {
-                    c5887v.r(str);
+                    vVar.r(str);
                 }
-                c5887v.close();
+                vVar.close();
             } catch (Throwable th) {
                 an.m(th, "aps", "dlo");
             }
@@ -335,15 +333,15 @@ public final class ek implements ee {
                 Iterator it = arrayList2.iterator();
                 while (it.hasNext()) {
                     m53 m53Var = (m53) it.next();
-                    byte[] b = m53Var.b();
-                    if (b.length >= 10 && b.length <= 65535) {
-                        byte[] h = p1.h(i, b, v1.w());
+                    byte[] b2 = m53Var.b();
+                    if (b2.length >= 10 && b2.length <= 65535) {
+                        byte[] h = p1.h(i, b2, v1.w());
                         byteArrayOutputStream.write(q(h.length));
                         byteArrayOutputStream.write(h);
                         byteArrayOutputStream.write(n(m53Var.a()));
                     }
                 }
-                C5792b0.c(Long.toString(System.currentTimeMillis()), byteArrayOutputStream.toByteArray(), this.i);
+                b0.c(Long.toString(System.currentTimeMillis()), byteArrayOutputStream.toByteArray(), this.i);
             }
         } catch (Throwable th) {
             j1.h(th, "clm", "wtD");
@@ -376,13 +374,13 @@ public final class ek implements ee {
             return;
         }
         try {
-            C5826a c5826a = this.h;
-            if (c5826a != null && (locationManager = this.g) != null) {
-                locationManager.removeUpdates(c5826a);
+            a aVar = this.h;
+            if (aVar != null && (locationManager = this.g) != null) {
+                locationManager.removeUpdates(aVar);
             }
-            C5826a c5826a2 = this.h;
-            if (c5826a2 != null) {
-                c5826a2.a();
+            a aVar2 = this.h;
+            if (aVar2 != null) {
+                aVar2.a();
             }
             if (this.j) {
                 u();
@@ -402,7 +400,7 @@ public final class ek implements ee {
         try {
             Handler handler = this.c;
             if (handler != null) {
-                handler.post(new C5827b(this, location));
+                handler.post(new b(this, location));
             }
         } catch (Throwable th) {
             an.m(th, "cl", "olcc");
@@ -425,17 +423,17 @@ public final class ek implements ee {
                 this.g = (LocationManager) this.a.getSystemService("location");
             }
             if (this.h == null) {
-                this.h = new C5826a(this);
+                this.h = new a(this);
             }
             this.h.b(this);
-            C5826a c5826a = this.h;
-            if (c5826a != null && (locationManager = this.g) != null) {
-                com.alibaba.wireless.security.aopsdk.replace.android.location.LocationManager.requestLocationUpdates(locationManager, "passive", 1000L, -1.0f, c5826a);
+            a aVar = this.h;
+            if (aVar != null && (locationManager = this.g) != null) {
+                com.alibaba.wireless.security.aopsdk.replace.android.location.LocationManager.requestLocationUpdates(locationManager, "passive", 1000L, -1.0f, aVar);
             }
             if (this.f == null) {
-                x0 x0Var = new x0("6.1.0", C5846l.j(this.a), "S128DF1572465B890OE3F7A13167KLEI", C5846l.g(this.a), this);
+                x0 x0Var = new x0("6.1.0", l.j(this.a), "S128DF1572465B890OE3F7A13167KLEI", l.g(this.a), this);
                 this.f = x0Var;
-                x0Var.c(C5861o.h0(this.a)).i(C5861o.R(this.a)).l(C5861o.w(this.a)).m(C5861o.Q(this.a)).n(C5861o.k0(this.a)).o(C5861o.T(this.a)).p(Build.getMODEL()).q(Build.getMANUFACTURER()).r(Build.getBRAND()).a(Build.VERSION.SDK_INT).s(Build.VERSION.getRELEASE()).b(y0.a(C5861o.W(this.a))).t(C5861o.W(this.a));
+                x0Var.c(o.h0(this.a)).i(o.R(this.a)).l(o.w(this.a)).m(o.Q(this.a)).n(o.k0(this.a)).o(o.T(this.a)).p(Build.getMODEL()).q(Build.getMANUFACTURER()).r(Build.getBRAND()).a(Build.VERSION.SDK_INT).s(Build.VERSION.getRELEASE()).b(y0.a(o.W(this.a))).t(o.W(this.a));
                 x0.j();
             }
         } catch (Throwable th) {
@@ -483,7 +481,7 @@ public final class ek implements ee {
     public final void r() {
         try {
             if (!m1.f0(this.a) && System.currentTimeMillis() - k >= DateUtils.MILLIS_PER_MINUTE) {
-                C5866o0.f().d(new C5827b(2));
+                o0.f().d(new b(2));
             }
         } catch (Throwable unused) {
         }
@@ -491,7 +489,7 @@ public final class ek implements ee {
 
     public final void s() {
         try {
-            C5866o0.f().d(new C5827b(3));
+            o0.f().d(new b(3));
         } catch (Throwable unused) {
         }
     }

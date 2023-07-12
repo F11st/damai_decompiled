@@ -15,18 +15,17 @@ import tb.y51;
 public interface ReflectJavaModifierListOwner extends JavaModifierListOwner {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.runtime.structure.ReflectJavaModifierListOwner$a */
     /* loaded from: classes3.dex */
-    public static final class C8323a {
+    public static final class a {
         @NotNull
         public static uy2 a(@NotNull ReflectJavaModifierListOwner reflectJavaModifierListOwner) {
             b41.i(reflectJavaModifierListOwner, "this");
             int modifiers = reflectJavaModifierListOwner.getModifiers();
             if (Modifier.isPublic(modifiers)) {
-                return ty2.C9744h.INSTANCE;
+                return ty2.h.INSTANCE;
             }
             if (Modifier.isPrivate(modifiers)) {
-                return ty2.C9741e.INSTANCE;
+                return ty2.e.INSTANCE;
             }
             if (Modifier.isProtected(modifiers)) {
                 return Modifier.isStatic(modifiers) ? y51.INSTANCE : x51.INSTANCE;

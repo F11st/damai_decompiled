@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.trade.R$id;
 import cn.damai.trade.R$layout;
@@ -29,12 +29,11 @@ public class OrderDetailTimeViewHolder extends RecyclerView.ViewHolder {
     private Context e;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailTimeViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2226a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2226a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -50,7 +49,7 @@ public class OrderDetailTimeViewHolder extends RecyclerView.ViewHolder {
             }
             ((ClipboardManager) OrderDetailTimeViewHolder.this.e.getSystemService("clipboard")).setText(str);
             ToastUtil.i("已成功复制到剪切板");
-            C0529c.e().x(pp2.u().B(z20.E(), str));
+            c.e().x(pp2.u().B(z20.E(), str));
         }
     }
 
@@ -71,7 +70,7 @@ public class OrderDetailTimeViewHolder extends RecyclerView.ViewHolder {
         this.a = (TextView) view.findViewById(R$id.tv_order_id);
         this.b = (TextView) view.findViewById(R$id.tv_order_copy_id);
         this.c = (LinearLayout) view.findViewById(R$id.ll_order_time_container);
-        this.b.setOnClickListener(new View$OnClickListenerC2226a());
+        this.b.setOnClickListener(new a());
     }
 
     public void b(String str, String str2, String str3, String str4, String str5, String str6, String str7) {

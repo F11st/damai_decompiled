@@ -17,9 +17,8 @@ import tb.z60;
 public interface ResolutionScope {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.resolve.scopes.ResolutionScope$a */
     /* loaded from: classes3.dex */
-    public static final class C8500a {
+    public static final class a {
         /* JADX WARN: Multi-variable type inference failed */
         public static /* synthetic */ Collection a(ResolutionScope resolutionScope, z60 z60Var, Function1 function1, int i, Object obj) {
             if (obj == null) {

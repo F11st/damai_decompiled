@@ -34,9 +34,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: org.android.agoo.assist.R$color */
     /* loaded from: classes2.dex */
-    public static final class C8860color {
+    public static final class color {
         public static final int emui_color_gray_1 = 0x7f0602fb;
         public static final int emui_color_gray_10 = 0x7f0602fc;
         public static final int emui_color_gray_7 = 0x7f0602fd;
@@ -48,7 +47,7 @@ public final class R {
         public static final int secondary_text_default_material_dark = 0x7f06049a;
         public static final int secondary_text_default_material_light = 0x7f06049b;
 
-        private C8860color() {
+        private color() {
         }
     }
 
@@ -87,9 +86,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: org.android.agoo.assist.R$drawable */
     /* loaded from: classes2.dex */
-    public static final class C8861drawable {
+    public static final class drawable {
         public static final int notification_action_background = 0x7f080b1d;
         public static final int notification_bg = 0x7f080b1e;
         public static final int notification_bg_low = 0x7f080b1f;
@@ -105,7 +103,7 @@ public final class R {
         public static final int push_pure_close = 0x7f080c30;
         public static final int stat_sys_third_app_notify = 0x7f080e15;
 
-        private C8861drawable() {
+        private drawable() {
         }
     }
 
@@ -183,9 +181,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: org.android.agoo.assist.R$layout */
     /* loaded from: classes2.dex */
-    public static final class C8862layout {
+    public static final class layout {
         public static final int activity_endisable_service = 0x7f0c0036;
         public static final int hwpush_trans_activity = 0x7f0c03ce;
         public static final int notification_action = 0x7f0c05c4;
@@ -212,7 +209,7 @@ public final class R {
         public static final int push_pure_pic_notification_f9_275 = 0x7f0c068e;
         public static final int push_pure_pic_notification_f9_337 = 0x7f0c068f;
 
-        private C8862layout() {
+        private layout() {
         }
     }
 
@@ -238,9 +235,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: org.android.agoo.assist.R$style */
     /* loaded from: classes2.dex */
-    public static final class C8863style {
+    public static final class style {
         public static final int Base_Translucent = 0x7f12010d;
         public static final int TextAppearance_Compat_Notification = 0x7f12023a;
         public static final int TextAppearance_Compat_Notification_Info = 0x7f12023b;
@@ -256,7 +252,7 @@ public final class R {
         public static final int Widget_Compat_NotificationActionText = 0x7f120355;
         public static final int Widget_Support_CoordinatorLayout = 0x7f1203d9;
 
-        private C8863style() {
+        private style() {
         }
     }
 

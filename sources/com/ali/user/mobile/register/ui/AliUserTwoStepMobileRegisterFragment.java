@@ -95,7 +95,7 @@ public class AliUserTwoStepMobileRegisterFragment extends AliUserMobileRegisterF
 
     @Override // com.ali.user.mobile.register.ui.AliUserMobileRegisterFragment, com.ali.user.mobile.base.ui.BaseFragment
     protected int getLayoutContent() {
-        return R.C2965layout.aliuser_fragment_two_step_mobile_register;
+        return R.layout.aliuser_fragment_two_step_mobile_register;
     }
 
     @Override // com.ali.user.mobile.register.ui.AliUserMobileRegisterFragment, com.ali.user.mobile.base.ui.BaseFragment, com.ali.user.mobile.login.ui.BaseLoginView

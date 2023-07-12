@@ -15,14 +15,13 @@ import cn.damai.tetris.component.common.ActorAlbumContract;
 import cn.damai.tetris.component.common.bean.ActorBean;
 import cn.damai.tetris.core.AbsView;
 import cn.damai.tetris.core.BasePresenter;
-import cn.damai.uikit.image.C2497a;
 import cn.damai.uikit.view.DMLRLabelView;
 import cn.damai.user.userprofile.FeedsViewModel;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.List;
-import tb.C9175gc;
 import tb.cs;
+import tb.gc;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -31,13 +30,12 @@ public class ActorAlbumView extends AbsView<ActorAlbumContract.Presenter> implem
     private Context mContext;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.common.ActorAlbumView$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1796a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ List a;
 
-        View$OnClickListenerC1796a(List list) {
+        a(List list) {
             this.a = list;
         }
 
@@ -75,15 +73,15 @@ public class ActorAlbumView extends AbsView<ActorAlbumContract.Presenter> implem
                 ViewGroup viewGroup = (ViewGroup) getRootView().findViewById(R$id.actor_single_layout);
                 viewGroup.setVisibility(0);
                 if (list.get(0) != null) {
-                    C9175gc.a((TextView) viewGroup.findViewById(R$id.tv_artist_name), list.get(0).getName());
-                    C9175gc.a((TextView) viewGroup.findViewById(R$id.tv_artist_desc), list.get(0).getDescription());
+                    gc.a((TextView) viewGroup.findViewById(R$id.tv_artist_name), list.get(0).getName());
+                    gc.a((TextView) viewGroup.findViewById(R$id.tv_artist_desc), list.get(0).getDescription());
                     int i = R$id.tv_tag;
                     ((DMLRLabelView) viewGroup.findViewById(i)).setContent("V", list.get(0).getSubtype());
-                    C2497a.a().loadinto(list.get(0).getHeadPic(), (ImageView) viewGroup.findViewById(R$id.artist_image));
+                    cn.damai.uikit.image.a.a().loadinto(list.get(0).getHeadPic(), (ImageView) viewGroup.findViewById(R$id.artist_image));
                     if (getPresenter() != null) {
                         ((BasePresenter) getPresenter()).userTrackExpose(viewGroup.findViewById(i), "artist_0");
                     }
-                    viewGroup.setOnClickListener(new View$OnClickListenerC1796a(list));
+                    viewGroup.setOnClickListener(new a(list));
                     return;
                 }
                 return;

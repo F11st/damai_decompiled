@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.completable;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
+import io.reactivex.a;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.functions.ObjectHelper;
 import java.util.Iterator;
@@ -14,7 +14,7 @@ import tb.jm;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class CompletableMergeIterable extends AbstractC8146a {
+public final class CompletableMergeIterable extends a {
     final Iterable<? extends CompletableSource> sources;
 
     /* compiled from: Taobao */
@@ -58,7 +58,7 @@ public final class CompletableMergeIterable extends AbstractC8146a {
         this.sources = iterable;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     public void subscribeActual(CompletableObserver completableObserver) {
         jm jmVar = new jm();
         completableObserver.onSubscribe(jmVar);

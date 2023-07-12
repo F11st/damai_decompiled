@@ -1,6 +1,6 @@
 package com.tencent.mm.opensdk.diffdev;
 
-import com.tencent.mm.opensdk.diffdev.a.C7056a;
+import com.tencent.mm.opensdk.diffdev.a.a;
 import com.tencent.mm.opensdk.utils.Log;
 
 /* compiled from: Taobao */
@@ -27,7 +27,7 @@ public class DiffDevOAuthFactory {
             return null;
         } else {
             if (v1Instance == null) {
-                v1Instance = new C7056a();
+                v1Instance = new a();
             }
             return v1Instance;
         }

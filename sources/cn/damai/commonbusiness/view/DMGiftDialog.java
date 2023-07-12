@@ -32,12 +32,11 @@ public class DMGiftDialog extends Dialog {
     private DMIconFontTextView f;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.view.DMGiftDialog$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0953a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0953a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -70,9 +69,9 @@ public class DMGiftDialog extends Dialog {
         this.f = (DMIconFontTextView) inflate.findViewById(R$id.damai_theme_dialog_close_btn);
         inflate.findViewById(R$id.damai_theme_dialog_bottom_space).setLayoutParams(new LinearLayout.LayoutParams(-1, (int) (DisplayMetrics.getheightPixels(q60.b(getContext())) * 0.05d)));
         setContentView(inflate);
-        View$OnClickListenerC0953a view$OnClickListenerC0953a = new View$OnClickListenerC0953a();
-        this.e.setOnClickListener(view$OnClickListenerC0953a);
-        this.f.setOnClickListener(view$OnClickListenerC0953a);
+        a aVar = new a();
+        this.e.setOnClickListener(aVar);
+        this.f.setOnClickListener(aVar);
     }
 
     public void b(String str) {

@@ -26,7 +26,7 @@ public class it2 {
 
     private it2(Context context, String str) {
         String str2 = str + "_ultron_template_cache";
-        this.a = new rl2.C9655b().h(context.getApplicationContext()).i(str2 + ".db").l(str2).k(1).j(16777216L).g();
+        this.a = new rl2.b().h(context.getApplicationContext()).i(str2 + ".db").l(str2).k(1).j(16777216L).g();
     }
 
     public static it2 d(Context context, @NonNull String str) {

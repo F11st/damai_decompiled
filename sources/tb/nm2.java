@@ -8,12 +8,11 @@ import com.taobao.update.adapter.ThreadExecutor;
 public class nm2 implements ThreadExecutor {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.nm2$a */
     /* loaded from: classes11.dex */
-    class AsyncTaskC9476a extends AsyncTask<Void, Void, Void> {
+    class a extends AsyncTask<Void, Void, Void> {
         final /* synthetic */ Runnable a;
 
-        AsyncTaskC9476a(nm2 nm2Var, Runnable runnable) {
+        a(nm2 nm2Var, Runnable runnable) {
             this.a = runnable;
         }
 
@@ -27,13 +26,12 @@ public class nm2 implements ThreadExecutor {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.nm2$b */
     /* loaded from: classes11.dex */
-    class AsyncTaskC9477b extends AsyncTask<Void, Void, Void> {
+    class b extends AsyncTask<Void, Void, Void> {
         final /* synthetic */ int a;
         final /* synthetic */ Runnable b;
 
-        AsyncTaskC9477b(nm2 nm2Var, int i, Runnable runnable) {
+        b(nm2 nm2Var, int i, Runnable runnable) {
             this.a = i;
             this.b = runnable;
         }
@@ -54,11 +52,11 @@ public class nm2 implements ThreadExecutor {
 
     @Override // com.taobao.update.adapter.ThreadExecutor
     public void delayExecute(Runnable runnable, int i) {
-        new AsyncTaskC9477b(this, i, runnable).execute(new Void[0]);
+        new b(this, i, runnable).execute(new Void[0]);
     }
 
     @Override // com.taobao.update.adapter.ThreadExecutor
     public void execute(Runnable runnable) {
-        new AsyncTaskC9476a(this, runnable).execute(new Void[0]);
+        new a(this, runnable).execute(new Void[0]);
     }
 }

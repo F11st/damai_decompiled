@@ -18,19 +18,18 @@ import java.util.List;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
-public class CustomerListAdapter extends RecyclerView.Adapter<C1424b> {
+public class CustomerListAdapter extends RecyclerView.Adapter<b> {
     private static transient /* synthetic */ IpChange $ipChange;
     private CustomersActivity a;
     private List<CustomerBean> b;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.adapter.CustomerListAdapter$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1423a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CustomerBean a;
 
-        View$OnClickListenerC1423a(CustomerBean customerBean) {
+        a(CustomerBean customerBean) {
             this.a = customerBean;
         }
 
@@ -47,16 +46,15 @@ public class CustomerListAdapter extends RecyclerView.Adapter<C1424b> {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.adapter.CustomerListAdapter$b */
     /* loaded from: classes6.dex */
-    public class C1424b extends RecyclerView.ViewHolder {
+    public class b extends RecyclerView.ViewHolder {
         TextView a;
         TextView b;
         TextView c;
         DMIconFontTextView d;
         View e;
 
-        public C1424b(CustomerListAdapter customerListAdapter, View view) {
+        public b(CustomerListAdapter customerListAdapter, View view) {
             super(view);
             this.a = (TextView) view.findViewById(R$id.user_name);
             this.b = (TextView) view.findViewById(R$id.idTypeName);
@@ -72,45 +70,45 @@ public class CustomerListAdapter extends RecyclerView.Adapter<C1424b> {
         this.b = new ArrayList();
     }
 
-    private void d(C1424b c1424b, CustomerBean customerBean) {
+    private void d(b bVar, CustomerBean customerBean) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-606487203")) {
-            ipChange.ipc$dispatch("-606487203", new Object[]{this, c1424b, customerBean});
+            ipChange.ipc$dispatch("-606487203", new Object[]{this, bVar, customerBean});
             return;
         }
         if (!TextUtils.isEmpty(customerBean.getMaskedName())) {
-            c1424b.a.setText(customerBean.getMaskedName());
+            bVar.a.setText(customerBean.getMaskedName());
         }
         if (!TextUtils.isEmpty(customerBean.getIdentityTypeName())) {
-            c1424b.b.setText(customerBean.getIdentityTypeName());
+            bVar.b.setText(customerBean.getIdentityTypeName());
         }
         if (!TextUtils.isEmpty(customerBean.getMaskedIdentityNo())) {
-            c1424b.c.setText(customerBean.getMaskedIdentityNo());
+            bVar.c.setText(customerBean.getMaskedIdentityNo());
         }
-        c1424b.d.setOnClickListener(new View$OnClickListenerC1423a(customerBean));
+        bVar.d.setOnClickListener(new a(customerBean));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     /* renamed from: b */
-    public void onBindViewHolder(C1424b c1424b, int i) {
+    public void onBindViewHolder(b bVar, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1797472651")) {
-            ipChange.ipc$dispatch("-1797472651", new Object[]{this, c1424b, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-1797472651", new Object[]{this, bVar, Integer.valueOf(i)});
             return;
         }
-        d(c1424b, this.b.get(i));
+        d(bVar, this.b.get(i));
         if (i == getItemCount() - 1) {
-            c1424b.e.setVisibility(8);
+            bVar.e.setVisibility(8);
         } else {
-            c1424b.e.setVisibility(0);
+            bVar.e.setVisibility(0);
         }
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     /* renamed from: c */
-    public C1424b onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public b onCreateViewHolder(ViewGroup viewGroup, int i) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "126433057") ? (C1424b) ipChange.ipc$dispatch("126433057", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new C1424b(this, LayoutInflater.from(this.a).inflate(R$layout.customer_item, (ViewGroup) null));
+        return AndroidInstantRuntime.support(ipChange, "126433057") ? (b) ipChange.ipc$dispatch("126433057", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new b(this, LayoutInflater.from(this.a).inflate(R$layout.customer_item, (ViewGroup) null));
     }
 
     public List<CustomerBean> getData() {

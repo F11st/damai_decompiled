@@ -30,9 +30,8 @@ public class IndicatorLayout extends FrameLayout implements Animation.AnimationL
     private final Animation mRotateAnimation;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.pulltorefresh.library.internal.IndicatorLayout$a */
     /* loaded from: classes8.dex */
-    static /* synthetic */ class C2539a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -59,7 +58,7 @@ public class IndicatorLayout extends FrameLayout implements Animation.AnimationL
         int dimensionPixelSize = getResources().getDimensionPixelSize(R$dimen.margin_4dp);
         this.mArrowImageView.setPadding(dimensionPixelSize, dimensionPixelSize, dimensionPixelSize, dimensionPixelSize);
         addView(this.mArrowImageView);
-        if (C2539a.a[mode.ordinal()] != 1) {
+        if (a.a[mode.ordinal()] != 1) {
             i = R$anim.slide_in_from_top;
             i2 = R$anim.slide_out_to_top;
             setBackgroundResource(R$drawable.indicator_bg_top);

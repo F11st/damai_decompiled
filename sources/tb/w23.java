@@ -3,13 +3,12 @@ package tb;
 import android.os.Handler;
 import android.os.Message;
 import androidx.annotation.NonNull;
-import com.efs.sdk.base.a.d.C4786a;
 import org.apache.commons.lang3.time.DateUtils;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public abstract class w23 extends Handler {
-    public C4786a a;
+    public com.efs.sdk.base.a.d.a a;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public w23() {

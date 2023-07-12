@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.category.ranksquare.bean.RankSquareGroupItemBean;
 import cn.damai.category.ranksquare.ui.adapter.RankSquareLocalAdapter;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -29,12 +29,11 @@ public class RankSquareLocalViewHolder extends RecyclerView.ViewHolder {
     private boolean e;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.ranksquare.ui.viewholder.RankSquareLocalViewHolder$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0436a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0436a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -43,7 +42,7 @@ public class RankSquareLocalViewHolder extends RecyclerView.ViewHolder {
             if (AndroidInstantRuntime.support(ipChange, "-2069380781")) {
                 ipChange.ipc$dispatch("-2069380781", new Object[]{this, view});
             } else if (((Boolean) view.getTag()).booleanValue() && RankSquareLocalViewHolder.this.d != null) {
-                C0529c.e().x(zy1.f().m());
+                c.e().x(zy1.f().m());
                 RankSquareLocalViewHolder rankSquareLocalViewHolder = RankSquareLocalViewHolder.this;
                 rankSquareLocalViewHolder.e = !rankSquareLocalViewHolder.e;
                 RankSquareLocalViewHolder.this.d.c(RankSquareLocalViewHolder.this.e);
@@ -74,7 +73,7 @@ public class RankSquareLocalViewHolder extends RecyclerView.ViewHolder {
         this.a.setAdapter(rankSquareLocalAdapter);
         TextView textView = (TextView) view.findViewById(R$id.tv_show_more);
         this.b = textView;
-        textView.setOnClickListener(new View$OnClickListenerC0436a());
+        textView.setOnClickListener(new a());
     }
 
     /* JADX INFO: Access modifiers changed from: private */

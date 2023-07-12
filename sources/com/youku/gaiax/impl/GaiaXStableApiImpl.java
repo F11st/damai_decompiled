@@ -42,9 +42,9 @@ public final class GaiaXStableApiImpl implements IStable {
         throw new IllegalArgumentException("GaiaXProxy.instance.app?.applicationContext() not exist");
     }
 
-    private final GXTemplateInfo getTemplateInfo(GXTemplateEngine.C3347i c3347i) {
+    private final GXTemplateInfo getTemplateInfo(GXTemplateEngine.i iVar) {
         try {
-            return GXExtensionTemplateInfoSource.Companion.getInstance().getTemplateInfo(c3347i);
+            return GXExtensionTemplateInfoSource.Companion.getInstance().getTemplateInfo(iVar);
         } catch (Exception e) {
             ExceptionUtils.INSTANCE.throwExceptionOrAlarm(e);
             return null;
@@ -105,7 +105,7 @@ public final class GaiaXStableApiImpl implements IStable {
         b41.i(str, "templateBiz");
         b41.i(str2, "templateId");
         b41.i(jSONObject, "rawJson");
-        GXTemplateInfo templateInfo = getTemplateInfo(new GXTemplateEngine.C3347i(getContext(), str, str2));
+        GXTemplateInfo templateInfo = getTemplateInfo(new GXTemplateEngine.i(getContext(), str, str2));
         JSONObject l = templateInfo == null ? null : templateInfo.l(jSONObject);
         return l == null ? new JSONObject() : l;
     }
@@ -116,9 +116,9 @@ public final class GaiaXStableApiImpl implements IStable {
         b41.i(str, "templateBiz");
         b41.i(str2, "templateId");
         b41.i(jSONObject, "rawJson");
-        GXTemplateEngine.C3347i c3347i = new GXTemplateEngine.C3347i(getContext(), str, str2);
-        c3347i.g(true);
-        GXTemplateInfo templateInfo = getTemplateInfo(c3347i);
+        GXTemplateEngine.i iVar = new GXTemplateEngine.i(getContext(), str, str2);
+        iVar.g(true);
+        GXTemplateInfo templateInfo = getTemplateInfo(iVar);
         JSONObject l = templateInfo == null ? null : templateInfo.l(jSONObject);
         return l == null ? new JSONObject() : l;
     }
@@ -138,7 +138,7 @@ public final class GaiaXStableApiImpl implements IStable {
         b41.i(str, "templateBiz");
         b41.i(str2, "templateId");
         b41.i(str3, "key");
-        GXTemplateInfo templateInfo = getTemplateInfo(new GXTemplateEngine.C3347i(getContext(), str, str2));
+        GXTemplateInfo templateInfo = getTemplateInfo(new GXTemplateEngine.i(getContext(), str, str2));
         JSONObject jSONObject = null;
         if (templateInfo != null && (r = templateInfo.r()) != null) {
             jSONObject = r.getJSONObject(str3);
@@ -166,7 +166,7 @@ public final class GaiaXStableApiImpl implements IStable {
     public JSONObject getRawConfigs(@NotNull String str, @NotNull String str2) {
         b41.i(str, "templateBiz");
         b41.i(str2, "templateId");
-        GXTemplateInfo templateInfo = getTemplateInfo(new GXTemplateEngine.C3347i(getContext(), str, str2));
+        GXTemplateInfo templateInfo = getTemplateInfo(new GXTemplateEngine.i(getContext(), str, str2));
         JSONObject q = templateInfo == null ? null : templateInfo.q();
         return q == null ? new JSONObject() : q;
     }
@@ -176,9 +176,9 @@ public final class GaiaXStableApiImpl implements IStable {
     public JSONObject getRawConfigsWithAssets(@NotNull String str, @NotNull String str2) {
         b41.i(str, "templateBiz");
         b41.i(str2, "templateId");
-        GXTemplateEngine.C3347i c3347i = new GXTemplateEngine.C3347i(getContext(), str, str2);
-        c3347i.g(true);
-        GXTemplateInfo templateInfo = getTemplateInfo(c3347i);
+        GXTemplateEngine.i iVar = new GXTemplateEngine.i(getContext(), str, str2);
+        iVar.g(true);
+        GXTemplateInfo templateInfo = getTemplateInfo(iVar);
         JSONObject q = templateInfo == null ? null : templateInfo.q();
         return q == null ? new JSONObject() : q;
     }

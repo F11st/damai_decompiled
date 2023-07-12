@@ -2,9 +2,9 @@ package tb;
 
 import java.util.concurrent.locks.ReentrantLock;
 import kotlin.jvm.functions.Function1;
-import kotlinx.coroutines.channels.AbstractC8641a;
 import kotlinx.coroutines.channels.AbstractChannel;
 import kotlinx.coroutines.channels.ReceiveOrClosed;
+import kotlinx.coroutines.channels.a;
 import kotlinx.coroutines.internal.OnUndeliveredElementKt;
 import kotlinx.coroutines.internal.UndeliveredElementException;
 import kotlinx.coroutines.selects.SelectInstance;
@@ -125,7 +125,7 @@ public class xm<E> extends AbstractChannel<E> {
         }
     }
 
-    @Override // kotlinx.coroutines.channels.AbstractC8641a
+    @Override // kotlinx.coroutines.channels.a
     @NotNull
     protected String g() {
         return "(value=" + this.e + ')';
@@ -142,18 +142,18 @@ public class xm<E> extends AbstractChannel<E> {
         }
     }
 
-    @Override // kotlinx.coroutines.channels.AbstractC8641a
+    @Override // kotlinx.coroutines.channels.a
     protected final boolean p() {
         return false;
     }
 
-    @Override // kotlinx.coroutines.channels.AbstractC8641a
+    @Override // kotlinx.coroutines.channels.a
     protected final boolean q() {
         return false;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // kotlinx.coroutines.channels.AbstractC8641a
+    @Override // kotlinx.coroutines.channels.a
     @NotNull
     public Object s(E e) {
         ReceiveOrClosed<E> y;
@@ -200,7 +200,7 @@ public class xm<E> extends AbstractChannel<E> {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // kotlinx.coroutines.channels.AbstractC8641a
+    @Override // kotlinx.coroutines.channels.a
     @NotNull
     public Object t(E e, @NotNull SelectInstance<?> selectInstance) {
         ReentrantLock reentrantLock = this.d;
@@ -212,7 +212,7 @@ public class xm<E> extends AbstractChannel<E> {
             }
             if (this.e == k1.EMPTY) {
                 while (true) {
-                    AbstractC8641a.C8645d<E> e2 = e(e);
+                    a.d<E> e2 = e(e);
                     Object performAtomicTrySelect = selectInstance.performAtomicTrySelect(e2);
                     if (performAtomicTrySelect == null) {
                         ReceiveOrClosed<? super E> o = e2.o();

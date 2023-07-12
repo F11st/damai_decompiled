@@ -2,7 +2,7 @@ package cn.damai.common.util;
 
 import android.text.TextUtils;
 import androidx.core.app.NotificationCompat;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
@@ -45,7 +45,7 @@ public final class CompliantUtUtils {
         if (z) {
             return;
         }
-        C0529c.e().A(new HashMap(), "model", "device");
+        c.e().A(new HashMap(), "model", "device");
     }
 
     @JvmStatic
@@ -72,7 +72,7 @@ public final class CompliantUtUtils {
         HashMap hashMap = new HashMap();
         hashMap.put("lat", str);
         hashMap.put("lng", str2);
-        C0529c.e().A(hashMap, "location", "location");
+        c.e().A(hashMap, "location", "location");
     }
 
     @JvmStatic
@@ -98,7 +98,7 @@ public final class CompliantUtUtils {
         }
         hashMap.put("havanaid", str);
         hashMap.put("logintime", String.valueOf(currentTimeMillis));
-        C0529c.e().A(hashMap, "record", "login");
+        c.e().A(hashMap, "record", "login");
     }
 
     @JvmStatic
@@ -116,7 +116,7 @@ public final class CompliantUtUtils {
         if (z) {
             return;
         }
-        C0529c.e().A(new HashMap(), "osversion", "device");
+        c.e().A(new HashMap(), "osversion", "device");
     }
 
     @JvmStatic
@@ -132,7 +132,7 @@ public final class CompliantUtUtils {
         }
         HashMap hashMap = new HashMap();
         hashMap.put("phone", str);
-        C0529c.e().A(hashMap, "contact", NotificationCompat.CATEGORY_SOCIAL);
+        c.e().A(hashMap, "contact", NotificationCompat.CATEGORY_SOCIAL);
     }
 
     @JvmStatic

@@ -75,14 +75,13 @@ public final class VotePanel implements OnItemClickListener<VoteBean> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.VotePanel$a */
     /* loaded from: classes7.dex */
-    public static final class C3585a implements BottomListDialog.OnActionListener {
+    public static final class a implements BottomListDialog.OnActionListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ VoteBean b;
         final /* synthetic */ String c;
 
-        C3585a(VoteBean voteBean, String str) {
+        a(VoteBean voteBean, String str) {
             this.b = voteBean;
             this.c = str;
         }
@@ -134,10 +133,10 @@ public final class VotePanel implements OnItemClickListener<VoteBean> {
         } else if (i() || this.e == null) {
             this.g.showActivityLoading(true);
             if (!DoloresLoginHandler.Companion.a().c()) {
-                yb1.C9955a c9955a = yb1.Companion;
+                yb1.a aVar = yb1.Companion;
                 Context context = this.a.getContext();
                 b41.h(context, "mRoot.context");
-                c9955a.b(context);
+                aVar.b(context);
                 return;
             }
             VoteInfoBean voteInfoBean = this.e;
@@ -345,7 +344,7 @@ public final class VotePanel implements OnItemClickListener<VoteBean> {
                 b41.f(voteInfoBean2);
                 String votedItemId = voteInfoBean2.getVotedItemId();
                 b41.f(activity);
-                new BottomListDialog(activity, new C3585a(voteBean, votedItemId)).show();
+                new BottomListDialog(activity, new a(voteBean, votedItemId)).show();
                 return;
             }
             b41.f(voteBean);

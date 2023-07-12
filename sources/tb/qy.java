@@ -1,10 +1,10 @@
 package tb;
 
 import androidx.annotation.Nullable;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DXRuntimeContext;
 import com.taobao.android.dinamicx.DinamicXEngine;
 import com.taobao.android.dinamicx.IDXEventHandler;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import java.util.List;
 
@@ -19,27 +19,27 @@ public class qy extends wy {
                 if (DinamicXEngine.x()) {
                     e.printStackTrace();
                 }
-                C6368e c6368e = new C6368e(dXRuntimeContext.getBizType());
-                C6368e.C6369a c6369a = new C6368e.C6369a("ASTNode", "ASTNode_EventHandler", C6368e.DX_ERROR_CODE_AST_EVENT_EXECUTE_EXCEPTION);
-                c6368e.b = dXRuntimeContext.getDxTemplateItem();
+                com.taobao.android.dinamicx.e eVar = new com.taobao.android.dinamicx.e(dXRuntimeContext.getBizType());
+                e.a aVar = new e.a("ASTNode", "ASTNode_EventHandler", com.taobao.android.dinamicx.e.DX_ERROR_CODE_AST_EVENT_EXECUTE_EXCEPTION);
+                eVar.b = dXRuntimeContext.getDxTemplateItem();
                 if (hyVar != null) {
-                    c6369a.e = "eventId: " + hyVar.b() + " isPrepareBind: " + hyVar.c() + "  stack： " + ry.a(e);
+                    aVar.e = "eventId: " + hyVar.b() + " isPrepareBind: " + hyVar.c() + "  stack： " + ry.a(e);
                 }
-                c6368e.c.add(c6369a);
-                DXAppMonitor.n(c6368e);
+                eVar.c.add(aVar);
+                DXAppMonitor.n(eVar);
             }
             if (dXRuntimeContext.getWidgetNode() != null) {
                 IDXEventHandler eventHandlerWithId = dXRuntimeContext.getEventHandlerWithId(this.b);
                 if (eventHandlerWithId == null) {
                     if (hyVar != null && !hyVar.c()) {
-                        C6368e c6368e2 = new C6368e(dXRuntimeContext.getBizType());
+                        com.taobao.android.dinamicx.e eVar2 = new com.taobao.android.dinamicx.e(dXRuntimeContext.getBizType());
                         if (dXRuntimeContext.getDxTemplateItem() != null) {
-                            c6368e2.b = dXRuntimeContext.getDxTemplateItem();
+                            eVar2.b = dXRuntimeContext.getDxTemplateItem();
                         }
-                        C6368e.C6369a c6369a2 = new C6368e.C6369a("ASTNode", "ASTNode_EventHandler", C6368e.DX_ERROR_CODE_AST_EVENT_HANDLER_NOT_FOUND);
-                        c6369a2.e = "找不到用户注册的eventHandle  hashcode 为: " + this.b;
-                        c6368e2.c.add(c6369a2);
-                        DXAppMonitor.n(c6368e2);
+                        e.a aVar2 = new e.a("ASTNode", "ASTNode_EventHandler", com.taobao.android.dinamicx.e.DX_ERROR_CODE_AST_EVENT_HANDLER_NOT_FOUND);
+                        aVar2.e = "找不到用户注册的eventHandle  hashcode 为: " + this.b;
+                        eVar2.c.add(aVar2);
+                        DXAppMonitor.n(eVar2);
                     }
                     return null;
                 }

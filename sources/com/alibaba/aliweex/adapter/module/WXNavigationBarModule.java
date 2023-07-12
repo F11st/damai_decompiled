@@ -2,7 +2,6 @@ package com.alibaba.aliweex.adapter.module;
 
 import android.view.Menu;
 import com.alibaba.aliweex.AliWXSDKInstance;
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.adapter.INavigationBarModuleAdapter;
 import com.alibaba.fastjson.JSONObject;
 import com.taobao.weex.WXSDKInstance;
@@ -18,14 +17,13 @@ public class WXNavigationBarModule extends WXModule {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.module.WXNavigationBarModule$a */
     /* loaded from: classes15.dex */
-    public static class C3048a {
+    public static class a {
         JSONObject a;
         JSCallback b;
         JSCallback c;
 
-        public C3048a(JSONObject jSONObject, JSCallback jSCallback, JSCallback jSCallback2) {
+        public a(JSONObject jSONObject, JSCallback jSCallback, JSCallback jSCallback2) {
             this.a = jSONObject;
             this.b = jSCallback;
             this.c = jSCallback2;
@@ -33,7 +31,7 @@ public class WXNavigationBarModule extends WXModule {
     }
 
     private INavigationBarModuleAdapter getNavBarAdapter() {
-        INavigationBarModuleAdapter n = C3004a.l().n();
+        INavigationBarModuleAdapter n = com.alibaba.aliweex.a.l().n();
         WXSDKInstance wXSDKInstance = this.mWXSDKInstance;
         return wXSDKInstance instanceof AliWXSDKInstance ? ((AliWXSDKInstance) wXSDKInstance).b() : n;
     }
@@ -52,10 +50,10 @@ public class WXNavigationBarModule extends WXModule {
         jSCallback.invoke(jSONObject);
     }
 
-    private void setMenuItem(C3048a c3048a, boolean z) {
+    private void setMenuItem(a aVar, boolean z) {
         getNavBarAdapter();
-        if (c3048a != null) {
-            notSupported(c3048a.c);
+        if (aVar != null) {
+            notSupported(aVar.c);
         }
     }
 
@@ -104,12 +102,12 @@ public class WXNavigationBarModule extends WXModule {
 
     @JSMethod
     public void setLeftItem(JSONObject jSONObject, JSCallback jSCallback, JSCallback jSCallback2) {
-        setMenuItem(new C3048a(jSONObject, jSCallback, jSCallback2), true);
+        setMenuItem(new a(jSONObject, jSCallback, jSCallback2), true);
     }
 
     @JSMethod
     public void setRightItem(JSONObject jSONObject, JSCallback jSCallback, JSCallback jSCallback2) {
-        setMenuItem(new C3048a(jSONObject, jSCallback, jSCallback2), false);
+        setMenuItem(new a(jSONObject, jSCallback, jSCallback2), false);
     }
 
     @JSMethod

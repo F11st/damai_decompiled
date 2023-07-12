@@ -16,12 +16,11 @@ public abstract class SimpleBaseActivity extends DamaiBaseActivity {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.base.SimpleBaseActivity$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0580a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0580a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -120,7 +119,7 @@ public abstract class SimpleBaseActivity extends DamaiBaseActivity {
         if (AndroidInstantRuntime.support(ipChange, "-1523977809")) {
             ipChange.ipc$dispatch("-1523977809", new Object[]{this});
         } else {
-            this.base_header_left.setOnClickListener(new View$OnClickListenerC0580a());
+            this.base_header_left.setOnClickListener(new a());
         }
     }
 

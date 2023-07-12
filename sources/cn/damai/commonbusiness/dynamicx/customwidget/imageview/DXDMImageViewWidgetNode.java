@@ -44,32 +44,30 @@ public class DXDMImageViewWidgetNode extends DXWidgetNode {
     /* compiled from: Taobao */
     /* loaded from: classes14.dex */
     public interface ImageLoadListener {
-        boolean onHappen(C0662d c0662d);
+        boolean onHappen(d dVar);
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.imageview.DXDMImageViewWidgetNode$a */
     /* loaded from: classes4.dex */
-    public class C0659a implements ImageLoadListener {
+    public class a implements ImageLoadListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0659a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.dynamicx.customwidget.imageview.DXDMImageViewWidgetNode.ImageLoadListener
-        public boolean onHappen(C0662d c0662d) {
+        public boolean onHappen(d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1506825874")) {
-                return ((Boolean) ipChange.ipc$dispatch("-1506825874", new Object[]{this, c0662d})).booleanValue();
+                return ((Boolean) ipChange.ipc$dispatch("-1506825874", new Object[]{this, dVar})).booleanValue();
             }
             throw null;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.imageview.DXDMImageViewWidgetNode$b */
     /* loaded from: classes4.dex */
-    public static class C0660b implements IDXBuilderWidgetNode {
+    public static class b implements IDXBuilderWidgetNode {
         private static transient /* synthetic */ IpChange $ipChange;
 
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
@@ -80,9 +78,8 @@ public class DXDMImageViewWidgetNode extends DXWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.imageview.DXDMImageViewWidgetNode$c */
     /* loaded from: classes14.dex */
-    public static class C0661c {
+    public static class c {
         private static transient /* synthetic */ IpChange $ipChange;
         public int[] a;
         public String b;
@@ -112,21 +109,19 @@ public class DXDMImageViewWidgetNode extends DXWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.imageview.DXDMImageViewWidgetNode$d */
     /* loaded from: classes14.dex */
-    public static class C0662d {
+    public static class d {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.imageview.DXDMImageViewWidgetNode$e */
     /* loaded from: classes14.dex */
-    public static class AsyncTaskC0663e extends AsyncTask<Void, Void, Drawable> {
+    public static class e extends AsyncTask<Void, Void, Drawable> {
         private static transient /* synthetic */ IpChange $ipChange;
         private String a;
         private WeakReference<ImageView> b;
         private Context c;
 
-        public AsyncTaskC0663e(ImageView imageView, String str) {
+        public e(ImageView imageView, String str) {
             this.b = new WeakReference<>(imageView);
             this.a = str;
             this.c = imageView.getContext().getApplicationContext();
@@ -241,7 +236,7 @@ public class DXDMImageViewWidgetNode extends DXWidgetNode {
             imageView.setTag(a90.TAG_IMAGE_NAME, null);
         } else if (str.equals((String) imageView.getTag(a90.TAG_IMAGE_NAME))) {
         } else {
-            y00.q(new AsyncTaskC0663e(imageView, str), new Void[0]);
+            y00.q(new e(imageView, str), new Void[0]);
         }
     }
 
@@ -285,11 +280,11 @@ public class DXDMImageViewWidgetNode extends DXWidgetNode {
         if (AndroidInstantRuntime.support(ipChange, "1850619584")) {
             return (View) ipChange.ipc$dispatch("1850619584", new Object[]{this, context});
         }
-        IDXWebImageInterface e = DXGlobalCenter.e();
-        if (e == null) {
+        IDXWebImageInterface e2 = DXGlobalCenter.e();
+        if (e2 == null) {
             return new RoundImageView(context);
         }
-        return e.buildView(context);
+        return e2.buildView(context);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -304,20 +299,20 @@ public class DXDMImageViewWidgetNode extends DXWidgetNode {
             ipChange.ipc$dispatch("-2117468607", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3)});
             return;
         }
-        int a = DXWidgetNode.DXMeasureSpec.a(i2);
-        int a2 = DXWidgetNode.DXMeasureSpec.a(i3);
-        boolean z = a != 1073741824;
-        boolean z2 = a2 != 1073741824;
+        int a2 = DXWidgetNode.DXMeasureSpec.a(i2);
+        int a3 = DXWidgetNode.DXMeasureSpec.a(i3);
+        boolean z = a2 != 1073741824;
+        boolean z2 = a3 != 1073741824;
         if (!z && !z2) {
             i5 = DXWidgetNode.DXMeasureSpec.b(i2);
             max = DXWidgetNode.DXMeasureSpec.b(i3);
         } else {
-            double d = this.e;
-            if (d <= 0.0d) {
+            double d2 = this.e;
+            if (d2 <= 0.0d) {
                 if (!TextUtils.isEmpty(this.b)) {
-                    Double d2 = i.get(this.b);
-                    if (d2 != null) {
-                        d = d2.doubleValue();
+                    Double d3 = i.get(this.b);
+                    if (d3 != null) {
+                        d2 = d3.doubleValue();
                     }
                 } else {
                     Drawable drawable = this.d;
@@ -325,7 +320,7 @@ public class DXDMImageViewWidgetNode extends DXWidgetNode {
                         int intrinsicWidth = drawable.getIntrinsicWidth();
                         int intrinsicHeight = this.d.getIntrinsicHeight();
                         if (intrinsicHeight > 0) {
-                            d = intrinsicWidth / intrinsicHeight;
+                            d2 = intrinsicWidth / intrinsicHeight;
                         }
                     }
                 }
@@ -333,9 +328,9 @@ public class DXDMImageViewWidgetNode extends DXWidgetNode {
             if (!z || z2) {
                 if (!z && z2) {
                     int size = View.MeasureSpec.getSize(i2);
-                    if (d > 0.0d) {
+                    if (d2 > 0.0d) {
                         i6 = size;
-                        i4 = (int) (size / d);
+                        i4 = (int) (size / d2);
                     } else {
                         i6 = size;
                     }
@@ -343,8 +338,8 @@ public class DXDMImageViewWidgetNode extends DXWidgetNode {
                 i4 = 0;
             } else {
                 i4 = View.MeasureSpec.getSize(i3);
-                if (d > 0.0d) {
-                    i6 = (int) (i4 * d);
+                if (d2 > 0.0d) {
+                    i6 = (int) (i4 * d2);
                 }
             }
             int max2 = Math.max(i6, getSuggestedMinimumWidth());
@@ -363,12 +358,12 @@ public class DXDMImageViewWidgetNode extends DXWidgetNode {
         } else if (view == null || !(view instanceof RoundImageView)) {
         } else {
             RoundImageView roundImageView = (RoundImageView) view;
-            C0661c c0661c = new C0661c();
+            c cVar = new c();
             a(roundImageView, this.c);
             if (!TextUtils.isEmpty(this.b)) {
-                c0661c.h = true;
+                cVar.h = true;
                 if (getMeasuredHeight() == 0 || getMeasuredWidth() == 0) {
-                    new C0659a();
+                    new a();
                 }
             } else {
                 Drawable drawable = this.d;
@@ -378,48 +373,48 @@ public class DXDMImageViewWidgetNode extends DXWidgetNode {
                     c(roundImageView, this.f);
                 } else {
                     roundImageView.setImageDrawable(null);
-                    c0661c.h = true;
+                    cVar.h = true;
                 }
             }
             if (!TextUtils.isEmpty(this.a)) {
-                c0661c.i = true;
-                c0661c.b = this.a;
+                cVar.i = true;
+                cVar.b = this.a;
             }
             if (isNeedSetBackground()) {
-                c0661c.a = getCornerRadius() > 0 ? new int[]{getCornerRadius(), getCornerRadius(), getCornerRadius(), getCornerRadius()} : new int[]{getCornerRadiusLeftTop(), getCornerRadiusRightTop(), getCornerRadiusRightBottom(), getCornerRadiusLeftBottom()};
-                c0661c.f = true;
+                cVar.a = getCornerRadius() > 0 ? new int[]{getCornerRadius(), getCornerRadius(), getCornerRadius(), getCornerRadius()} : new int[]{getCornerRadiusLeftTop(), getCornerRadiusRightTop(), getCornerRadiusRightBottom(), getCornerRadiusLeftBottom()};
+                cVar.f = true;
             }
             if (isNeedSetBackground()) {
                 getBorderColor();
                 getBorderWidth();
-                c0661c.e = true;
-                c0661c.d = true;
+                cVar.e = true;
+                cVar.d = true;
             }
             if (getLayoutWidth() == -2 && getLayoutHeight() != -2) {
-                c0661c.g = true;
+                cVar.g = true;
             } else if (getLayoutWidth() != -2 && getLayoutHeight() == -2) {
-                c0661c.g = true;
+                cVar.g = true;
             }
-            c0661c.c = this.g;
+            cVar.c = this.g;
             if (getLayoutWidth() == getLayoutHeight() && getLayoutWidth() / 2 <= getCornerRadius()) {
-                c0661c.j = true;
+                cVar.j = true;
             }
             DMDXWebImageInterface dMDXWebImageInterface = (DMDXWebImageInterface) DXGlobalCenter.e();
             if (dMDXWebImageInterface == null) {
                 return;
             }
-            dMDXWebImageInterface.setImageWithPlaceHolder(roundImageView, this.b, c0661c);
+            dMDXWebImageInterface.setImageWithPlaceHolder(roundImageView, this.b, cVar);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.taobao.android.dinamicx.widget.DXWidgetNode
-    public void onSetDoubleAttribute(long j, double d) {
+    public void onSetDoubleAttribute(long j, double d2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1986503740")) {
-            ipChange.ipc$dispatch("1986503740", new Object[]{this, Long.valueOf(j), Double.valueOf(d)});
+            ipChange.ipc$dispatch("1986503740", new Object[]{this, Long.valueOf(j), Double.valueOf(d2)});
         } else if (7594222789952419722L == j) {
-            this.e = d;
+            this.e = d2;
         }
     }
 

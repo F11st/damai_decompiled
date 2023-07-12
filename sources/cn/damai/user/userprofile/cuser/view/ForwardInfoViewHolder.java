@@ -13,7 +13,7 @@ import cn.damai.homepage.R$id;
 import cn.damai.uikit.view.NineGridlayout;
 import cn.damai.user.userprofile.bean.DynamicFeedData;
 import cn.damai.user.userprofile.bean.FeedMergeDataDO;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
@@ -29,13 +29,12 @@ public class ForwardInfoViewHolder extends FeedsWraperHolder {
     public TextView x;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.ForwardInfoViewHolder$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2776a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DynamicFeedData a;
 
-        View$OnClickListenerC2776a(DynamicFeedData dynamicFeedData) {
+        a(DynamicFeedData dynamicFeedData) {
             this.a = dynamicFeedData;
         }
 
@@ -47,7 +46,7 @@ public class ForwardInfoViewHolder extends FeedsWraperHolder {
             } else if (this.a.requestSuccess.booleanValue() && !wh2.j(this.a.originalUrl)) {
                 Bundle bundle = new Bundle();
                 bundle.putString("url", this.a.originalUrl);
-                DMNav.from(ForwardInfoViewHolder.this.w).needLogin().withExtras(bundle).toUri(NavUri.b(C3834a.C3837c.d));
+                DMNav.from(ForwardInfoViewHolder.this.w).needLogin().withExtras(bundle).toUri(NavUri.b(a.c.d));
             }
         }
     }
@@ -94,6 +93,6 @@ public class ForwardInfoViewHolder extends FeedsWraperHolder {
         } else {
             v("内容已删除", R$id.tv_comment_text);
         }
-        this.itemView.findViewById(R$id.ll_forward).setOnClickListener(new View$OnClickListenerC2776a(dynamicFeedData));
+        this.itemView.findViewById(R$id.ll_forward).setOnClickListener(new a(dynamicFeedData));
     }
 }

@@ -21,7 +21,7 @@ import com.youku.arch.v3.core.item.GenericItem;
 import com.youku.arch.v3.event.EventHandler;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -34,13 +34,12 @@ public final class RichTextViewPresent extends AbsPresenter<GenericItem<ItemValu
     private String lastStr;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.text.RichTextViewPresent$a */
     /* loaded from: classes7.dex */
-    public static final class C3511a implements DetailInfoViewHolder.OnChangeListener {
+    public static final class a implements DetailInfoViewHolder.OnChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ GenericItem<ItemValue> b;
 
-        C3511a(GenericItem<ItemValue> genericItem) {
+        a(GenericItem<ItemValue> genericItem) {
             this.b = genericItem;
         }
 
@@ -154,7 +153,7 @@ public final class RichTextViewPresent extends AbsPresenter<GenericItem<ItemValu
         if (TextUtils.isEmpty(this.lastStr)) {
             this.lastStr = ((RichTextViewModel) getModel()).getDesc();
         } else {
-            r = C8604o.r(this.lastStr, ((RichTextViewModel) getModel()).getDesc(), false, 2, null);
+            r = o.r(this.lastStr, ((RichTextViewModel) getModel()).getDesc(), false, 2, null);
             if (r) {
                 return;
             }
@@ -168,7 +167,7 @@ public final class RichTextViewPresent extends AbsPresenter<GenericItem<ItemValu
             RecyclerView recyclerView = (RecyclerView) findViewById;
             View findViewById2 = ((RichTextViewView) getView()).getItemView().findViewById(R$id.bricks_richtext_click_more);
             b41.h(findViewById2, "view.itemView.findViewBy…icks_richtext_click_more)");
-            detailInfoViewHolder.d(desc, activity, recyclerView, (TextView) findViewById2, new C3511a(genericItem));
+            detailInfoViewHolder.d(desc, activity, recyclerView, (TextView) findViewById2, new a(genericItem));
         }
     }
 }

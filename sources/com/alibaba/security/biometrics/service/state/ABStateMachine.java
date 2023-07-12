@@ -33,15 +33,15 @@ import com.alibaba.security.biometrics.service.model.strategy.FixActionStrategy;
 import com.alibaba.security.biometrics.service.model.strategy.GroupActionStrategy;
 import com.alibaba.security.biometrics.service.util.state.IState;
 import com.alibaba.security.biometrics.service.util.state.StateMachine;
-import com.alibaba.security.common.d.C3811h;
-import com.alibaba.security.common.d.C3822o;
-import com.alibaba.security.common.d.C3823p;
+import com.alibaba.security.common.d.h;
+import com.alibaba.security.common.d.o;
+import com.alibaba.security.common.d.p;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
@@ -75,7 +75,7 @@ public class ABStateMachine extends StateMachine implements ABListenerKeys, Stat
         this.mABParams = aLBiometricsService.getParams();
         Context context = aLBiometricsService.getContext();
         this.mContext = context;
-        this.mWindowManager = (WindowManager) aLBiometricsService.getContext().getSystemService(C9796v.ATTACH_MODE_WINDOW);
+        this.mWindowManager = (WindowManager) aLBiometricsService.getContext().getSystemService(v.ATTACH_MODE_WINDOW);
         ABSensorManager aBSensorManager = new ABSensorManager(context, this);
         this.mFaceSensorManager = aBSensorManager;
         aBSensorManager.init();
@@ -144,7 +144,7 @@ public class ABStateMachine extends StateMachine implements ABListenerKeys, Stat
         HashMap hashMap = new HashMap();
         hashMap.put("detectType", ALBiometricsType.isDazzle(this.mABParams.mBiometricsType) ? "colorful" : "action");
         hashMap.put("timeout", Integer.valueOf(this.mABParams.timeout));
-        ALBiometricsJni.bhL(6, C3811h.a((Object) hashMap));
+        ALBiometricsJni.bhL(6, h.a((Object) hashMap));
         resetBioTimeOut(this.mABParams.timeout);
     }
 
@@ -405,7 +405,7 @@ public class ABStateMachine extends StateMachine implements ABListenerKeys, Stat
     }
 
     public void startDetect() {
-        if (!this.mABParams.supportX86 && C3823p.f()) {
+        if (!this.mABParams.supportX86 && p.f()) {
             this.mDetectListener.onDetectError(GlobalErrorCode.ERROR_DEVICE_NOT_SUPPORT_X86);
         } else if (this.inited || init()) {
             if (ABDetectContext.getInstance().getCurrentPhase() != ABDetectPhase.INIT) {
@@ -428,7 +428,7 @@ public class ABStateMachine extends StateMachine implements ABListenerKeys, Stat
             aLBiometricsResult.setSid(this.mABParams.sceneId);
             aLBiometricsResult.setUid(this.mABParams.uid);
             aLBiometricsResult.setQi(new ABImageResult());
-            aLBiometricsResult.setK(C3822o.a(ALBiometricsJni.generateKeyToken(this.mABParams.secToken)));
+            aLBiometricsResult.setK(o.a(ALBiometricsJni.generateKeyToken(this.mABParams.secToken)));
             aLBiometricsResult.setLid(new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date()));
             ABDetectContext.getInstance().setResult(aLBiometricsResult);
             changeDetectType(ABDetectType.AIMLESS, true, true);

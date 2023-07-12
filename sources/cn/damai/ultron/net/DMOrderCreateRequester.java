@@ -2,8 +2,8 @@ package cn.damai.ultron.net;
 
 import android.content.Context;
 import android.util.Log;
-import com.alibaba.android.ultron.trade.data.request.AbstractC3246a;
 import com.alibaba.android.ultron.trade.data.request.Request;
+import com.alibaba.android.ultron.trade.data.request.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.android.ultron.datamodel.IDMContext;
@@ -14,7 +14,7 @@ import tb.is;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
-public class DMOrderCreateRequester extends AbstractC3246a {
+public class DMOrderCreateRequester extends a {
     private static transient /* synthetic */ IpChange $ipChange;
     private Class mClazz;
 
@@ -22,7 +22,7 @@ public class DMOrderCreateRequester extends AbstractC3246a {
         super(ultronDataManager, context, request);
     }
 
-    @Override // com.alibaba.android.ultron.trade.data.request.AbstractC3246a
+    @Override // com.alibaba.android.ultron.trade.data.request.a
     public void sendRequest(final f1 f1Var, IDMContext iDMContext, Object obj) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1615351540")) {
@@ -55,10 +55,10 @@ public class DMOrderCreateRequester extends AbstractC3246a {
                     ipChange2.ipc$dispatch("-1354347586", new Object[]{this, Integer.valueOf(i), mtopResponse, obj2, iDMContext2, map});
                     return;
                 }
-                ((AbstractC3246a) DMOrderCreateRequester.this).mDataManager.setDataContext(iDMContext2);
+                ((a) DMOrderCreateRequester.this).mDataManager.setDataContext(iDMContext2);
                 f1 f1Var2 = f1Var;
                 if (f1Var2 != null) {
-                    f1Var2.onSuccess(i, mtopResponse, obj2, ((AbstractC3246a) DMOrderCreateRequester.this).mDataManager.getDataContext(), map);
+                    f1Var2.onSuccess(i, mtopResponse, obj2, ((a) DMOrderCreateRequester.this).mDataManager.getDataContext(), map);
                 }
             }
         });

@@ -213,7 +213,7 @@ public class UserVideoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         if (i == 0) {
             return new UserCardHeaderViewHolder(this.mHeaderView);
         }
-        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(R.C7942layout.dago_pgc_user_card_video_item, viewGroup, false);
+        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.dago_pgc_user_card_video_item, viewGroup, false);
         if (Build.VERSION.SDK_INT >= 21) {
             inflate.setOutlineProvider(new ViewOutlineProvider() { // from class: com.youku.live.dago.widgetlib.usercard.UserVideoAdapter.1
                 private static transient /* synthetic */ IpChange $ipChange;

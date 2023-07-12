@@ -23,13 +23,11 @@ import com.uc.webview.export.extension.SettingKeys;
 import com.uc.webview.export.extension.UCCore;
 import com.uc.webview.export.extension.UCExtension;
 import com.uc.webview.export.extension.UCSettings;
-import com.uc.webview.export.internal.android.C7217b;
-import com.uc.webview.export.internal.android.C7221f;
-import com.uc.webview.export.internal.android.C7236q;
-import com.uc.webview.export.internal.android.C7243v;
 import com.uc.webview.export.internal.android.CookieManagerAndroid;
 import com.uc.webview.export.internal.android.WebViewAndroid;
-import com.uc.webview.export.internal.cd.C7247a;
+import com.uc.webview.export.internal.android.f;
+import com.uc.webview.export.internal.android.q;
+import com.uc.webview.export.internal.android.v;
 import com.uc.webview.export.internal.interfaces.CommonDef;
 import com.uc.webview.export.internal.interfaces.ICookieManager;
 import com.uc.webview.export.internal.interfaces.IGeolocationPermissions;
@@ -41,21 +39,18 @@ import com.uc.webview.export.internal.interfaces.IWaStat;
 import com.uc.webview.export.internal.interfaces.IWebStorage;
 import com.uc.webview.export.internal.interfaces.IWebView;
 import com.uc.webview.export.internal.interfaces.UCMobileWebKit;
-import com.uc.webview.export.internal.setup.AbstractC7282l;
 import com.uc.webview.export.internal.setup.UCMRunningInfo;
 import com.uc.webview.export.internal.setup.UCSetupException;
 import com.uc.webview.export.internal.setup.UCSetupTask;
 import com.uc.webview.export.internal.setup.af;
 import com.uc.webview.export.internal.setup.ba;
 import com.uc.webview.export.internal.setup.bt;
-import com.uc.webview.export.internal.uc.C7299b;
+import com.uc.webview.export.internal.setup.l;
 import com.uc.webview.export.internal.uc.CoreFactory;
-import com.uc.webview.export.internal.uc.startup.C7302b;
-import com.uc.webview.export.internal.uc.wa.C7303a;
-import com.uc.webview.export.internal.utility.C7345n;
-import com.uc.webview.export.internal.utility.C7349p;
 import com.uc.webview.export.internal.utility.Log;
 import com.uc.webview.export.internal.utility.ReflectionUtil;
+import com.uc.webview.export.internal.utility.n;
+import com.uc.webview.export.internal.utility.p;
 import com.uc.webview.export.utility.SetupTask;
 import java.io.File;
 import java.io.IOException;
@@ -96,7 +91,7 @@ public final class SDKFactory {
     public static boolean f = false;
     private static IGlobalSettings y = null;
     private static IPreloadManager z = null;
-    private static AbstractWebViewFactory A = new C7211a((byte) 0);
+    private static AbstractWebViewFactory A = new a((byte) 0);
     public static int h = 0;
     public static boolean j = false;
     public static boolean k = false;
@@ -118,10 +113,9 @@ public final class SDKFactory {
     private static boolean F = false;
 
     /* compiled from: Taobao */
-    /* renamed from: com.uc.webview.export.internal.SDKFactory$a */
     /* loaded from: classes11.dex */
-    static class C7211a extends AbstractWebViewFactory {
-        private C7211a() {
+    static class a extends AbstractWebViewFactory {
+        private a() {
         }
 
         @Override // com.uc.webview.export.internal.AbstractWebViewFactory
@@ -144,21 +138,20 @@ public final class SDKFactory {
             return CoreFactory.createWebView(context, attributeSet);
         }
 
-        /* synthetic */ C7211a(byte b) {
+        /* synthetic */ a(byte b) {
             this();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.uc.webview.export.internal.SDKFactory$b */
     /* loaded from: classes11.dex */
-    public static class HandlerC7212b extends Handler {
+    public static class b extends Handler {
         private static final ConcurrentLinkedQueue<Runnable> a = new ConcurrentLinkedQueue<>();
         private static UCSetupException b = null;
-        private static final Runnable c = new RunnableC7246c();
+        private static final Runnable c = new c();
 
-        private HandlerC7212b(Looper looper) {
+        private b(Looper looper) {
             super(looper);
         }
 
@@ -174,7 +167,7 @@ public final class SDKFactory {
         static void a(Runnable runnable) {
             if (runnable != null) {
                 a.add(runnable);
-                new HandlerC7212b(Looper.getMainLooper()).post(c);
+                new b(Looper.getMainLooper()).post(c);
             }
             if (SDKFactory.p()) {
                 if (b == null) {
@@ -210,7 +203,7 @@ public final class SDKFactory {
     public static IMimeTypeMap e(int i2) {
         h();
         if (i2 == 2) {
-            return new C7221f();
+            return new f();
         }
         return CoreFactory.e();
     }
@@ -241,7 +234,7 @@ public final class SDKFactory {
         if (w && Looper.myLooper() == Looper.getMainLooper()) {
             return;
         }
-        if (b() && HandlerC7212b.a.isEmpty()) {
+        if (b() && b.a.isEmpty()) {
             return;
         }
         if (f && !b() && (initCallback = i) != null) {
@@ -289,7 +282,7 @@ public final class SDKFactory {
 
     public static void j() {
         IGlobalSettings f2;
-        boolean booleanValue = C7247a.c("apollo").booleanValue();
+        boolean booleanValue = com.uc.webview.export.internal.cd.a.c("apollo").booleanValue();
         Long valueOf = Long.valueOf((long) PlaybackStateCompat.ACTION_SET_REPEAT_MODE);
         if (!booleanValue) {
             a(valueOf);
@@ -370,7 +363,7 @@ public final class SDKFactory {
                 }
                 throw new UCSetupException(3013, sb.toString());
             }
-            HandlerC7212b.a((Runnable) null);
+            b.a((Runnable) null);
             if (j) {
                 UCSetupTask.resumeAll();
             }
@@ -389,7 +382,7 @@ public final class SDKFactory {
                 break;
             }
         }
-        HandlerC7212b.a((Runnable) null);
+        b.a((Runnable) null);
         synchronized (SDKFactory.class) {
             if (x == 0) {
                 if (intValue == 2) {
@@ -420,7 +413,7 @@ public final class SDKFactory {
     public static IWebView a(Context context, AttributeSet attributeSet, WebView webView, boolean z2, int[] iArr) {
         if (B) {
             B = false;
-            C7302b.a(540);
+            com.uc.webview.export.internal.uc.startup.b.a(540);
         }
         if (e == null) {
             e = context.getApplicationContext();
@@ -438,7 +431,7 @@ public final class SDKFactory {
             try {
                 if (totalLoadedUCM.coreType != 2 && !F) {
                     F = true;
-                    C7345n.a(new RunnableC7245b(context));
+                    n.a(new com.uc.webview.export.internal.b(context));
                 }
             } catch (Throwable th) {
                 th.printStackTrace();
@@ -451,7 +444,7 @@ public final class SDKFactory {
         IWaStat.WaStat.upload();
         if (C) {
             C = false;
-            C7302b.a(541);
+            com.uc.webview.export.internal.uc.startup.b.a(541);
         }
         return createWebView;
     }
@@ -470,7 +463,7 @@ public final class SDKFactory {
     public static IGeolocationPermissions d(int i2) {
         h();
         if (i2 == 2) {
-            return new C7217b();
+            return new com.uc.webview.export.internal.android.b();
         }
         return CoreFactory.c();
     }
@@ -550,7 +543,7 @@ public final class SDKFactory {
         if (E) {
             return;
         }
-        C7303a.a(context);
+        com.uc.webview.export.internal.uc.wa.a.a(context);
         E = true;
     }
 
@@ -576,9 +569,9 @@ public final class SDKFactory {
     }
 
     public static File a(Context context) {
-        File a2 = C7349p.a(context, Constants.KEY_FLAGS);
+        File a2 = p.a(context, Constants.KEY_FLAGS);
         String str = (String) UCCore.getGlobalOption(UCCore.PROCESS_PRIVATE_DATA_DIR_SUFFIX_OPTION);
-        if (C7349p.a(str)) {
+        if (p.a(str)) {
             str = "0";
         }
         return new File(a2, UCCyclone.getSourceHash("flag_new_webview") + JSMethod.NOT_SET + str);
@@ -595,27 +588,27 @@ public final class SDKFactory {
         return new UCExtension(iWebView);
     }
 
-    public static AbstractC7213a a(int i2, Context context) {
+    public static com.uc.webview.export.internal.a a(int i2, Context context) {
         if (e == null) {
             e = context.getApplicationContext();
         }
         h();
         if (i2 == 2) {
-            return new C7243v();
+            return new v();
         }
-        return new C7299b();
+        return new com.uc.webview.export.internal.uc.b();
     }
 
     public static IWebStorage a(int i2) {
         h();
         if (i2 == 2) {
-            return new C7236q();
+            return new q();
         }
         return CoreFactory.d();
     }
 
     public static void a(Runnable runnable) {
-        HandlerC7212b.a(runnable);
+        b.a(runnable);
     }
 
     public static void a(String str) {
@@ -657,7 +650,7 @@ public final class SDKFactory {
                     setupTask.start();
                 } else {
                     Log.w("SDKFactory", "initIfNeeded do not setup init");
-                    ((AbstractC7282l) ((AbstractC7282l) ((AbstractC7282l) new ba().setup("CONTEXT", (Object) context.getApplicationContext())).setup(UCCore.OPTION_HARDWARE_ACCELERATED, (Object) "true")).setup(UCCore.OPTION_VIDEO_HARDWARE_ACCELERATED, (Object) "false")).start();
+                    ((l) ((l) ((l) new ba().setup("CONTEXT", (Object) context.getApplicationContext())).setup(UCCore.OPTION_HARDWARE_ACCELERATED, (Object) "true")).setup(UCCore.OPTION_VIDEO_HARDWARE_ACCELERATED, (Object) "false")).start();
                 }
             }
         }

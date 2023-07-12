@@ -63,12 +63,11 @@ public class InvoiceAddressAdapter extends RecyclerView.Adapter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.adapter.InvoiceAddressAdapter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2185a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2185a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -120,11 +119,11 @@ public class InvoiceAddressAdapter extends RecyclerView.Adapter {
         } else {
             addressItemViewHolder.b.setText("");
         }
-        String a = d41.a(addressBean);
-        if (!wh2.j(a)) {
-            addressItemViewHolder.c.setText(a);
+        String a2 = d41.a(addressBean);
+        if (!wh2.j(a2)) {
+            addressItemViewHolder.c.setText(a2);
         } else {
-            addressItemViewHolder.c.setText(a);
+            addressItemViewHolder.c.setText(a2);
         }
         if (i == getItemCount() - 1) {
             addressItemViewHolder.d.setVisibility(8);
@@ -132,7 +131,7 @@ public class InvoiceAddressAdapter extends RecyclerView.Adapter {
             addressItemViewHolder.d.setVisibility(0);
         }
         addressItemViewHolder.itemView.setTag(Integer.valueOf(i));
-        addressItemViewHolder.itemView.setOnClickListener(new View$OnClickListenerC2185a());
+        addressItemViewHolder.itemView.setOnClickListener(new a());
     }
 
     public void e(OnAddressItemClickListener onAddressItemClickListener) {

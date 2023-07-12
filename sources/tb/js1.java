@@ -11,20 +11,19 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes8.dex */
 public final class js1 {
     @NotNull
-    public static final C9320a Companion = new C9320a(null);
+    public static final a Companion = new a(null);
     @Nullable
     private static js1 b;
     @NotNull
-    private final Map<Integer, WeakReference<AbstractC9321b>> a = new LinkedHashMap();
+    private final Map<Integer, WeakReference<b>> a = new LinkedHashMap();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.js1$a */
     /* loaded from: classes8.dex */
-    public static final class C9320a {
-        private C9320a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9320a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -41,9 +40,8 @@ public final class js1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.js1$b */
     /* loaded from: classes8.dex */
-    public static abstract class AbstractC9321b {
+    public static abstract class b {
         public boolean a(@NotNull Activity activity) {
             b41.i(activity, "activity");
             return false;
@@ -58,20 +56,20 @@ public final class js1 {
         }
     }
 
-    public final void c(@Nullable AbstractC9321b abstractC9321b) {
-        if (abstractC9321b != null) {
-            this.a.put(Integer.valueOf(abstractC9321b.hashCode()), new WeakReference<>(abstractC9321b));
+    public final void c(@Nullable b bVar) {
+        if (bVar != null) {
+            this.a.put(Integer.valueOf(bVar.hashCode()), new WeakReference<>(bVar));
         }
     }
 
     @NotNull
-    public final Map<Integer, WeakReference<AbstractC9321b>> d() {
+    public final Map<Integer, WeakReference<b>> d() {
         return this.a;
     }
 
-    public final void e(@Nullable AbstractC9321b abstractC9321b) {
-        if (abstractC9321b != null) {
-            this.a.remove(Integer.valueOf(abstractC9321b.hashCode()));
+    public final void e(@Nullable b bVar) {
+        if (bVar != null) {
+            this.a.remove(Integer.valueOf(bVar.hashCode()));
         }
     }
 }

@@ -14,7 +14,7 @@ import android.widget.FrameLayout;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.wireless.security.aopsdk.report.ReportManager;
 import com.alimm.xadsdk.request.builder.IRequestConst;
-import com.alipay.sdk.m.s.C4293a;
+import com.alipay.sdk.m.s.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.orange.OrangeConfig;
@@ -447,7 +447,7 @@ public class RoomInfoWidget extends BaseWidget implements UserListView.IClickCal
             Log.d(TAG, "initView real inflate View");
             this.mViewInited = true;
             if (this.mRoot.getChildCount() == 0) {
-                LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_room_info_layout, this.mRoot);
+                LayoutInflater.from(context).inflate(R.layout.dago_pgc_room_info_layout, this.mRoot);
             }
             this.mAnchorInfoView = (DagoAnchorInfoView) this.mRoot.findViewById(R.id.dago_anchor_info_layout);
             UserListView userListView = (UserListView) this.mRoot.findViewById(R.id.dago_header_user_list);
@@ -739,7 +739,7 @@ public class RoomInfoWidget extends BaseWidget implements UserListView.IClickCal
                 Log.d(TAG, "onMessage 关注");
                 if (this.dataTypeInt == 1) {
                     try {
-                        j = JSON.parseObject(message.data).getJSONArray("args").getJSONObject(0).getJSONObject("body").getLongValue(C4293a.u);
+                        j = JSON.parseObject(message.data).getJSONArray("args").getJSONObject(0).getJSONObject("body").getLongValue(a.u);
                     } catch (Throwable th) {
                         th.printStackTrace();
                     }

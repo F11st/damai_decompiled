@@ -14,7 +14,6 @@ import cn.damai.trade.R$string;
 import cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.bean.ProjectItemDataBean;
 import cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.bean.ProjectStaticDataBean;
 import cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.bean.StatusNotice;
-import cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.AbstractC2379a;
 import cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.OnHeadClickListener;
 import cn.damai.uikit.flowlayout.FlowLayout;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -23,7 +22,7 @@ import java.util.List;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
-public class mi2 extends AbstractC2379a implements View.OnClickListener {
+public class mi2 extends cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.a implements View.OnClickListener {
     private static transient /* synthetic */ IpChange $ipChange;
     private final View e;
     private final TextView f;
@@ -44,7 +43,7 @@ public class mi2 extends AbstractC2379a implements View.OnClickListener {
         flowLayout.setSingleLine(true);
     }
 
-    @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.AbstractC2379a
+    @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.a
     public int a() {
         IpChange ipChange = $ipChange;
         return AndroidInstantRuntime.support(ipChange, "-1101600047") ? ((Integer) ipChange.ipc$dispatch("-1101600047", new Object[]{this})).intValue() : R$id.header_service_etc_ui;

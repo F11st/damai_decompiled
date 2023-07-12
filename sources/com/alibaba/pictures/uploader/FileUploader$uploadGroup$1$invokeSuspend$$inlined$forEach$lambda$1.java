@@ -3,11 +3,11 @@ package com.alibaba.pictures.uploader;
 import com.alibaba.pictures.uploader.FileUploader;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.uploader.export.C7361a;
 import com.uploader.export.IUploaderManager;
+import com.uploader.export.a;
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
+import kotlin.coroutines.intrinsics.b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function2;
@@ -65,24 +65,24 @@ public final class FileUploader$uploadGroup$1$invokeSuspend$$inlined$forEach$lam
     @Nullable
     public final Object invokeSuspend(@NotNull Object obj) {
         Boolean bool;
-        FileUploader.HandlerC3646b handlerC3646b;
+        FileUploader.b bVar;
         qu2 qu2Var;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "2069884741")) {
             return ipChange.ipc$dispatch("2069884741", new Object[]{this, obj});
         }
-        C8234b.d();
+        b.d();
         if (this.label == 0) {
             i32.b(obj);
             String str = null;
             this.$uploadTask.a().e(su2.a(this.$uploadTask.a().a(), null));
             bool = this.this$0.this$0.h;
             if (b41.d(bool, id.a(true))) {
-                FileUploader.C3645a c3645a = FileUploader.Companion;
-                if (c3645a.f() != null) {
-                    c3645a.h("startUpLoadGroup---处理压缩原链接：" + this.$uploadTask.a().a() + "，要压缩链接=" + this.$uploadTask.a().a() + '+' + System.currentTimeMillis());
+                FileUploader.a aVar = FileUploader.Companion;
+                if (aVar.f() != null) {
+                    aVar.h("startUpLoadGroup---处理压缩原链接：" + this.$uploadTask.a().a() + "，要压缩链接=" + this.$uploadTask.a().a() + '+' + System.currentTimeMillis());
                     uu2 a = this.$uploadTask.a();
-                    IImageCompressor f = c3645a.f();
+                    IImageCompressor f = aVar.f();
                     if (f != null) {
                         String a2 = this.$uploadTask.a().a();
                         qu2Var = this.this$0.this$0.i;
@@ -90,16 +90,16 @@ public final class FileUploader$uploadGroup$1$invokeSuspend$$inlined$forEach$lam
                     }
                     a.e(str);
                     this.$uploadTask.a().k(UploadStatus.RESIZE);
-                    c3645a.h("startUpLoadGroup---处理压缩完成=" + this.$uploadTask.a().a() + '+' + System.currentTimeMillis());
+                    aVar.h("startUpLoadGroup---处理压缩完成=" + this.$uploadTask.a().a() + '+' + System.currentTimeMillis());
                 }
             }
             wu2 wu2Var = this.$uploadTask;
-            FileUploader.C3645a c3645a2 = FileUploader.Companion;
-            c3645a2.h("startUpLoadGroup---ARUS-uploadAsync=" + this.$uploadTask.a().a() + '+' + System.currentTimeMillis());
-            IUploaderManager a3 = C7361a.a();
+            FileUploader.a aVar2 = FileUploader.Companion;
+            aVar2.h("startUpLoadGroup---ARUS-uploadAsync=" + this.$uploadTask.a().a() + '+' + System.currentTimeMillis());
+            IUploaderManager a3 = a.a();
             xu2 xu2Var = new xu2(this.this$0.this$0);
-            handlerC3646b = this.this$0.this$0.j;
-            a3.uploadAsync(wu2Var, xu2Var, handlerC3646b);
+            bVar = this.this$0.this$0.j;
+            a3.uploadAsync(wu2Var, xu2Var, bVar);
             return wt2.INSTANCE;
         }
         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");

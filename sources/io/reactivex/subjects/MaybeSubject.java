@@ -1,7 +1,7 @@
 package io.reactivex.subjects;
 
-import io.reactivex.AbstractC8148c;
 import io.reactivex.MaybeObserver;
+import io.reactivex.c;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.functions.ObjectHelper;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -10,7 +10,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeSubject<T> extends AbstractC8148c<T> implements MaybeObserver<T> {
+public final class MaybeSubject<T> extends c<T> implements MaybeObserver<T> {
     static final MaybeDisposable[] e = new MaybeDisposable[0];
     static final MaybeDisposable[] f = new MaybeDisposable[0];
     T c;
@@ -139,7 +139,7 @@ public final class MaybeSubject<T> extends AbstractC8148c<T> implements MaybeObs
         }
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         MaybeDisposable<T> maybeDisposable = new MaybeDisposable<>(maybeObserver, this);
         maybeObserver.onSubscribe(maybeDisposable);

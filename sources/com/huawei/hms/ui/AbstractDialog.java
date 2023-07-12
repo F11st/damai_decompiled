@@ -24,10 +24,9 @@ public abstract class AbstractDialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.ui.AbstractDialog$a */
     /* loaded from: classes10.dex */
-    public class DialogInterface$OnClickListenerC5726a implements DialogInterface.OnClickListener {
-        public DialogInterface$OnClickListenerC5726a() {
+    public class a implements DialogInterface.OnClickListener {
+        public a() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -37,10 +36,9 @@ public abstract class AbstractDialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.ui.AbstractDialog$b */
     /* loaded from: classes10.dex */
-    public class DialogInterface$OnClickListenerC5727b implements DialogInterface.OnClickListener {
-        public DialogInterface$OnClickListenerC5727b() {
+    public class b implements DialogInterface.OnClickListener {
+        public b() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -50,10 +48,9 @@ public abstract class AbstractDialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.ui.AbstractDialog$c */
     /* loaded from: classes10.dex */
-    public class DialogInterface$OnCancelListenerC5728c implements DialogInterface.OnCancelListener {
-        public DialogInterface$OnCancelListenerC5728c() {
+    public class c implements DialogInterface.OnCancelListener {
+        public c() {
         }
 
         @Override // android.content.DialogInterface.OnCancelListener
@@ -63,10 +60,9 @@ public abstract class AbstractDialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.ui.AbstractDialog$d */
     /* loaded from: classes10.dex */
-    public class DialogInterface$OnKeyListenerC5729d implements DialogInterface.OnKeyListener {
-        public DialogInterface$OnKeyListenerC5729d() {
+    public class d implements DialogInterface.OnKeyListener {
+        public d() {
         }
 
         @Override // android.content.DialogInterface.OnKeyListener
@@ -134,11 +130,11 @@ public abstract class AbstractDialog {
         }
         String onGetPositiveButtonString = onGetPositiveButtonString(activity);
         if (onGetPositiveButtonString != null) {
-            builder.setPositiveButton(onGetPositiveButtonString, new DialogInterface$OnClickListenerC5726a());
+            builder.setPositiveButton(onGetPositiveButtonString, new a());
         }
         String onGetNegativeButtonString = onGetNegativeButtonString(activity);
         if (onGetNegativeButtonString != null) {
-            builder.setNegativeButton(onGetNegativeButtonString, new DialogInterface$OnClickListenerC5727b());
+            builder.setNegativeButton(onGetNegativeButtonString, new b());
         }
         return builder.create();
     }
@@ -172,8 +168,8 @@ public abstract class AbstractDialog {
             AlertDialog onCreateDialog = onCreateDialog(this.a);
             this.b = onCreateDialog;
             onCreateDialog.setCanceledOnTouchOutside(false);
-            this.b.setOnCancelListener(new DialogInterface$OnCancelListenerC5728c());
-            this.b.setOnKeyListener(new DialogInterface$OnKeyListenerC5729d());
+            this.b.setOnCancelListener(new c());
+            this.b.setOnKeyListener(new d());
             this.b.show();
             return;
         }

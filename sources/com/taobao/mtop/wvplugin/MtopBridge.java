@@ -35,7 +35,7 @@ class MtopBridge {
     private static AtomicBoolean c = new AtomicBoolean(false);
     private static ScheduledExecutorService d = Executors.newScheduledThreadPool(1);
     private WeakReference<MtopWVPlugin> a;
-    private Handler b = new HandlerC6822a(Looper.getMainLooper());
+    private Handler b = new a(Looper.getMainLooper());
 
     /* compiled from: Taobao */
     /* loaded from: classes11.dex */
@@ -68,23 +68,22 @@ class MtopBridge {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.mtop.wvplugin.MtopBridge$a */
     /* loaded from: classes11.dex */
-    class HandlerC6822a extends Handler {
-        HandlerC6822a(Looper looper) {
+    class a extends Handler {
+        a(Looper looper) {
             super(looper);
         }
 
         @Override // android.os.Handler
         public void handleMessage(Message message) {
-            if (message.what == 500 && (message.obj instanceof C6824b)) {
+            if (message.what == 500 && (message.obj instanceof b)) {
                 if (TBSdkLog.isLogEnable(TBSdkLog.LogEnable.DebugEnable)) {
-                    TBSdkLog.d("mtopsdk.MtopBridge", "call result, retString: " + ((C6824b) message.obj).toString());
+                    TBSdkLog.d("mtopsdk.MtopBridge", "call result, retString: " + ((b) message.obj).toString());
                 }
                 MtopWVPlugin mtopWVPlugin = (MtopWVPlugin) MtopBridge.this.a.get();
                 if (mtopWVPlugin != null) {
                     try {
-                        mtopWVPlugin.wvCallback((C6824b) message.obj);
+                        mtopWVPlugin.wvCallback((b) message.obj);
                     } catch (Exception e) {
                         TBSdkLog.e("mtopsdk.MtopBridge", "execute  plugin.wvCallback error.", e);
                     }
@@ -99,26 +98,26 @@ class MtopBridge {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void f(C6824b c6824b) {
-        if (c6824b == null) {
+    public void f(b bVar) {
+        if (bVar == null) {
             return;
         }
-        this.b.obtainMessage(500, c6824b).sendToTarget();
+        this.b.obtainMessage(500, bVar).sendToTarget();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public Map<String, Object> g(C6823a c6823a) {
+    public Map<String, Object> g(com.taobao.mtop.wvplugin.a aVar) {
         HashMap hashMap;
         JSONObject jSONObject;
         boolean z;
         String optString;
         int optInt;
         int optInt2;
-        if (c6823a == null || StringUtils.isBlank(c6823a.a)) {
+        if (aVar == null || StringUtils.isBlank(aVar.a)) {
             return null;
         }
         try {
-            jSONObject = new JSONObject(c6823a.a);
+            jSONObject = new JSONObject(aVar.a);
             hashMap = new HashMap();
         } catch (Throwable th) {
             th = th;
@@ -167,22 +166,22 @@ class MtopBridge {
             }
             hashMap.put("timeout", Integer.valueOf(i));
             hashMap.put(MtopJSBridge.MtopJSParam.EXT_HEADERS, jSONObject.optJSONObject(MtopJSBridge.MtopJSParam.EXT_HEADERS));
-            hashMap.put("user-agent", c6823a.b);
+            hashMap.put("user-agent", aVar.b);
             hashMap.put("ttid", jSONObject.optString("ttid"));
-            hashMap.put(MtopJSBridge.MtopJSParam.PAGE_URL, c6823a.c);
+            hashMap.put(MtopJSBridge.MtopJSParam.PAGE_URL, aVar.c);
             hashMap.put(MtopJSBridge.MtopJSParam.EXT_QUERYS, jSONObject.optJSONObject(MtopJSBridge.MtopJSParam.EXT_QUERYS));
             hashMap.put(MtopJSBridge.MtopJSParam.MP_HOST, jSONObject.optString(MtopJSBridge.MtopJSParam.MP_HOST));
-            hashMap.put("x-ua", c6823a.b);
+            hashMap.put("x-ua", aVar.b);
         } catch (Throwable th2) {
             th = th2;
-            TBSdkLog.e("mtopsdk.MtopBridge", "parseJSParams error.params =" + c6823a.a, th);
+            TBSdkLog.e("mtopsdk.MtopBridge", "parseJSParams error.params =" + aVar.a, th);
             return hashMap;
         }
         return hashMap;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public C6824b h(WVCallBackContext wVCallBackContext, MtopResponse mtopResponse, Map<String, Object> map) {
+    public b h(WVCallBackContext wVCallBackContext, MtopResponse mtopResponse, Map<String, Object> map) {
         if (wVCallBackContext == null) {
             TBSdkLog.e("mtopsdk.MtopBridge", "[parseResult]WVCallBackContext is null, webview may be destroyed , mtopJsParamsMap:" + map);
             return null;
@@ -190,26 +189,26 @@ class MtopBridge {
         long currentTimeMillis = System.currentTimeMillis();
         String str = map != null ? (String) map.get("api") : "";
         String str2 = map != null ? (String) map.get("v") : "";
-        C6824b c6824b = new C6824b(wVCallBackContext);
+        b bVar = new b(wVCallBackContext);
         if (mtopResponse == null) {
             TBSdkLog.e("mtopsdk.MtopBridge", "[parseResult]MP_TIME_OUT. mtopJsParamsMap:" + map);
             e(str, str2, "-1", MtopWVPlugin.TIME_OUT, null);
-            c6824b.a("code", "-1");
-            c6824b.b("ret", new JSONArray().put(MtopWVPlugin.TIME_OUT));
-            return c6824b;
+            bVar.a("code", "-1");
+            bVar.b("ret", new JSONArray().put(MtopWVPlugin.TIME_OUT));
+            return bVar;
         }
         String valueOf = String.valueOf(mtopResponse.getResponseCode());
-        c6824b.a("code", valueOf);
+        bVar.a("code", valueOf);
         if (mtopResponse.isSessionInvalid()) {
             e(str, str2, valueOf, "ERR_SID_INVALID", mtopResponse.getRetCode());
-            c6824b.b("ret", new JSONArray().put("ERR_SID_INVALID"));
-            return c6824b;
+            bVar.b("ret", new JSONArray().put("ERR_SID_INVALID"));
+            return bVar;
         }
-        c6824b.b("ret", new JSONArray().put("HY_FAILED"));
+        bVar.b("ret", new JSONArray().put("HY_FAILED"));
         try {
             if (mtopResponse.getBytedata() != null) {
                 JSONObject jSONObject = new JSONObject(new String(mtopResponse.getBytedata(), "utf-8"));
-                c6824b.e(jSONObject);
+                bVar.e(jSONObject);
                 jSONObject.put("headers", JSON.toJSONString(mtopResponse.getHeaderFields()));
                 jSONObject.put("code", valueOf);
                 jSONObject.put("isFromCache", mtopResponse.getSource() != MtopResponse.ResponseSource.NETWORK_REQUEST ? "1" : "0");
@@ -230,11 +229,11 @@ class MtopBridge {
                 }
                 e(str, str2, valueOf, mtopResponse.getRetCode(), mtopResponse.getRetCode());
             } else {
-                c6824b.a("retCode", mtopResponse.getRetCode());
+                bVar.a("retCode", mtopResponse.getRetCode());
                 e(str, str2, valueOf, "HY_FAILED", mtopResponse.getRetCode());
             }
             if (mtopResponse.isApiSuccess()) {
-                c6824b.g(true);
+                bVar.g(true);
             }
         } catch (Exception unused) {
             if (TBSdkLog.isPrintLog()) {
@@ -244,7 +243,7 @@ class MtopBridge {
         if (TBSdkLog.isLogEnable(TBSdkLog.LogEnable.DebugEnable)) {
             TBSdkLog.d("mtopsdk.MtopBridge", "parseResult cost time(ms):" + (System.currentTimeMillis() - currentTimeMillis));
         }
-        return c6824b;
+        return bVar;
     }
 
     public void e(String str, String str2, String str3, String str4, String str5) {
@@ -279,18 +278,18 @@ class MtopBridge {
         if (TBSdkLog.isLogEnable(TBSdkLog.LogEnable.DebugEnable)) {
             TBSdkLog.d("mtopsdk.MtopBridge", "MtopBridge JSParams: " + str);
         }
-        final C6823a c6823a = new C6823a(str);
+        final com.taobao.mtop.wvplugin.a aVar = new com.taobao.mtop.wvplugin.a(str);
         MtopWVPlugin mtopWVPlugin = this.a.get();
         if (mtopWVPlugin != null) {
-            c6823a.b = mtopWVPlugin.getUserAgent();
-            c6823a.c = mtopWVPlugin.getCurrentUrl();
+            aVar.b = mtopWVPlugin.getUserAgent();
+            aVar.c = mtopWVPlugin.getCurrentUrl();
         }
         d.submit(new Runnable() { // from class: com.taobao.mtop.wvplugin.MtopBridge.2
             @Override // java.lang.Runnable
             public void run() {
                 Map map;
                 try {
-                    map = MtopBridge.this.g(c6823a);
+                    map = MtopBridge.this.g(aVar);
                 } catch (Exception e) {
                     e = e;
                     map = null;
@@ -299,10 +298,10 @@ class MtopBridge {
                     if (map == null) {
                         TBSdkLog.e("mtopsdk.MtopBridge", "MtopBridge parseJSParams failed. params:" + str);
                         MtopBridge.this.e(null, null, "MtopBridge parseJSParams failed.", "HY_PARAM_ERR", null);
-                        C6824b c6824b = new C6824b(wVCallBackContext);
-                        c6824b.b("ret", new JSONArray().put("HY_PARAM_ERR"));
-                        c6824b.a("code", "MtopBridge parseJSParams failed.");
-                        MtopBridge.this.f(c6824b);
+                        b bVar = new b(wVCallBackContext);
+                        bVar.b("ret", new JSONArray().put("HY_PARAM_ERR"));
+                        bVar.a("code", "MtopBridge parseJSParams failed.");
+                        MtopBridge.this.f(bVar);
                         return;
                     }
                     MtopJSBridge.sendMtopRequest(map, new MtopBridgeListener(wVCallBackContext, map));
@@ -310,10 +309,10 @@ class MtopBridge {
                     e = e2;
                     TBSdkLog.e("mtopsdk.MtopBridge", "MtopJSBridge sendMtopRequest failed.params:" + str, e);
                     MtopBridge.this.e(map != null ? (String) map.get("api") : null, map != null ? (String) map.get("v") : null, "MtopJSBridge sendMtopRequest failed.", "HY_FAILED", null);
-                    C6824b c6824b2 = new C6824b(wVCallBackContext);
-                    c6824b2.b("ret", new JSONArray().put("HY_FAILED"));
-                    c6824b2.a("code", "MtopJSBridge sendMtopRequest failed.");
-                    MtopBridge.this.f(c6824b2);
+                    b bVar2 = new b(wVCallBackContext);
+                    bVar2.b("ret", new JSONArray().put("HY_FAILED"));
+                    bVar2.a("code", "MtopJSBridge sendMtopRequest failed.");
+                    MtopBridge.this.f(bVar2);
                 }
             }
         });

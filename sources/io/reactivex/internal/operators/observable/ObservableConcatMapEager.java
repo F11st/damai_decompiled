@@ -286,7 +286,7 @@ public final class ObservableConcatMapEager<T, R> extends AbstractObservableWith
         this.prefetch = i2;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super R> observer) {
         this.source.subscribe(new ConcatMapEagerMainObserver(observer, this.mapper, this.maxConcurrency, this.prefetch, this.errorMode));
     }

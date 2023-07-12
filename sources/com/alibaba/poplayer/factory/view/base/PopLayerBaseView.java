@@ -13,10 +13,10 @@ import com.alibaba.poplayer.R$drawable;
 import com.alibaba.poplayer.layermanager.PopRequest;
 import com.alibaba.poplayer.trigger.BaseConfigItem;
 import com.alibaba.poplayer.trigger.InternalTriggerController;
-import com.alibaba.poplayer.trigger.view.C3699d;
 import com.alibaba.poplayer.trigger.view.TrackingService;
 import com.alibaba.poplayer.trigger.view.ViewConfigItem;
 import com.alibaba.poplayer.trigger.view.ViewEvent;
+import com.alibaba.poplayer.trigger.view.d;
 import com.alibaba.poplayer.utils.ConsoleLogger$Level;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -35,7 +35,7 @@ public abstract class PopLayerBaseView<InnerView, Request extends PopRequest> ex
     protected ImageView mBtnClose;
     protected OnEventListener mEventListener;
     protected InnerView mInnerView;
-    protected List<TrackingService.C3694i> mLaunchedTasks;
+    protected List<TrackingService.i> mLaunchedTasks;
     protected Request mPopRequest;
 
     /* compiled from: Taobao */
@@ -47,10 +47,9 @@ public abstract class PopLayerBaseView<InnerView, Request extends PopRequest> ex
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayer.factory.view.base.PopLayerBaseView$a */
     /* loaded from: classes8.dex */
-    class View$OnClickListenerC3653a implements View.OnClickListener {
-        View$OnClickListenerC3653a() {
+    class a implements View.OnClickListener {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -137,7 +136,7 @@ public abstract class PopLayerBaseView<InnerView, Request extends PopRequest> ex
 
     public final void fireEventToTracks(String str, String str2, String str3) {
         dt1.b("PopLayerBaseView.fireEventToTracks:{eventName:%s,params:%s},", str2, str3);
-        Iterator<PopRequest> it = C3699d.M().K(this, str, InternalTriggerController.b((Activity) getContext())).iterator();
+        Iterator<PopRequest> it = d.M().K(this, str, InternalTriggerController.b((Activity) getContext())).iterator();
         while (it.hasNext()) {
             PopRequest next = it.next();
             if (next.i() == PopRequest.Status.SHOWING) {
@@ -153,7 +152,7 @@ public abstract class PopLayerBaseView<InnerView, Request extends PopRequest> ex
 
     /* JADX INFO: Access modifiers changed from: protected */
     public final String getAttachInfo(String str) {
-        return C3699d.M().I(getPopRequest(), str);
+        return d.M().I(getPopRequest(), str);
     }
 
     public SpannableStringBuilder getInfo() {
@@ -178,7 +177,7 @@ public abstract class PopLayerBaseView<InnerView, Request extends PopRequest> ex
             dt1.b("PopLayerBaseView.launchSelectTask error. context is empty.", new Object[0]);
             return;
         }
-        TrackingService.C3694i E = C3699d.M().E((Activity) getContext(), viewEvent, viewConfigItem, this, str, str2);
+        TrackingService.i E = d.M().E((Activity) getContext(), viewEvent, viewConfigItem, this, str, str2);
         if (E != null) {
             this.mLaunchedTasks.add(E);
         }
@@ -186,7 +185,7 @@ public abstract class PopLayerBaseView<InnerView, Request extends PopRequest> ex
 
     public final void managerSelectTask(String str, String str2) {
         dt1.b("PopLayerBaseView.managerSelectTask: taskHandle:{%s},operation:{%s}.", str, str2);
-        C3699d.M().N((Activity) getContext(), this, str, str2, null, null);
+        d.M().N((Activity) getContext(), this, str, str2, null, null);
     }
 
     public void navToUrl(String str) {
@@ -250,9 +249,9 @@ public abstract class PopLayerBaseView<InnerView, Request extends PopRequest> ex
             } else {
                 viewConfigItem.uuid = "trackMode" + ((t01) this.mPopRequest).r().uuid + optString3;
             }
-            BaseConfigItem.C3677a c3677a = new BaseConfigItem.C3677a();
-            viewConfigItem.pageInfo = c3677a;
-            c3677a.a = jSONObject2.optString("uri", null);
+            BaseConfigItem.a aVar = new BaseConfigItem.a();
+            viewConfigItem.pageInfo = aVar;
+            aVar.a = jSONObject2.optString("uri", null);
             viewConfigItem.pageInfo.c = jSONObject2.optString("paramContains", null);
             JSONObject optJSONObject = jSONObject3.optJSONObject("params");
             int i2 = length;
@@ -309,7 +308,7 @@ public abstract class PopLayerBaseView<InnerView, Request extends PopRequest> ex
             ImageView imageView = new ImageView(getContext());
             this.mBtnClose = imageView;
             imageView.setBackgroundResource(R$drawable.poplayer_close_btn);
-            this.mBtnClose.setOnClickListener(new View$OnClickListenerC3653a());
+            this.mBtnClose.setOnClickListener(new a());
             FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(80, 80);
             layoutParams.rightMargin = fw2.a(getContext(), 20);
             layoutParams.topMargin = fw2.a(getContext(), 20);

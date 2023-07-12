@@ -11,7 +11,7 @@ import tb.jn1;
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public abstract class ByteString implements Iterable<Byte> {
-    public static final ByteString EMPTY = new C8453e(new byte[0]);
+    public static final ByteString EMPTY = new e(new byte[0]);
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -50,26 +50,26 @@ public abstract class ByteString implements Iterable<Byte> {
     public static ByteString e(byte[] bArr, int i, int i2) {
         byte[] bArr2 = new byte[i2];
         System.arraycopy(bArr, i, bArr2, 0, i2);
-        return new C8453e(bArr2);
+        return new e(bArr2);
     }
 
     public static ByteString f(String str) {
         try {
-            return new C8453e(str.getBytes("UTF-8"));
+            return new e(str.getBytes("UTF-8"));
         } catch (UnsupportedEncodingException e) {
             throw new RuntimeException("UTF-8 not supported?", e);
         }
     }
 
-    public static C8436a n() {
-        return new C8436a(128);
+    public static a n() {
+        return new a(128);
     }
 
     public ByteString b(ByteString byteString) {
         int size = size();
         int size2 = byteString.size();
         if (size + size2 < 2147483647L) {
-            return C8456f.z(this, byteString);
+            return f.z(this, byteString);
         }
         StringBuilder sb = new StringBuilder(53);
         sb.append("ByteString would be too long: ");
@@ -206,9 +206,8 @@ public abstract class ByteString implements Iterable<Byte> {
     public abstract void v(OutputStream outputStream, int i, int i2) throws IOException;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.protobuf.ByteString$a */
     /* loaded from: classes3.dex */
-    public static final class C8436a extends OutputStream {
+    public static final class a extends OutputStream {
         private static final byte[] f = new byte[0];
         private final int a;
         private final ArrayList<ByteString> b;
@@ -216,7 +215,7 @@ public abstract class ByteString implements Iterable<Byte> {
         private byte[] d;
         private int e;
 
-        C8436a(int i) {
+        a(int i) {
             if (i >= 0) {
                 this.a = i;
                 this.b = new ArrayList<>();
@@ -233,7 +232,7 @@ public abstract class ByteString implements Iterable<Byte> {
         }
 
         private void b(int i) {
-            this.b.add(new C8453e(this.d));
+            this.b.add(new e(this.d));
             int length = this.c + this.d.length;
             this.c = length;
             this.d = new byte[Math.max(this.a, Math.max(i, length >>> 1))];
@@ -244,10 +243,10 @@ public abstract class ByteString implements Iterable<Byte> {
             int i = this.e;
             byte[] bArr = this.d;
             if (i >= bArr.length) {
-                this.b.add(new C8453e(this.d));
+                this.b.add(new e(this.d));
                 this.d = f;
             } else if (i > 0) {
-                this.b.add(new C8453e(a(bArr, i)));
+                this.b.add(new e(a(bArr, i)));
             }
             this.c += this.e;
             this.e = 0;

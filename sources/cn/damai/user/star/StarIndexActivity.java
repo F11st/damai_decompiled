@@ -6,8 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import androidx.fragment.app.FragmentTransaction;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.commonbusiness.share.ShareManager;
 import cn.damai.homepage.R$id;
@@ -27,12 +27,11 @@ public class StarIndexActivity extends SimpleBaseActivity implements ScrollAlpha
     int status = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.star.StarIndexActivity$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2702a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2702a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -47,12 +46,11 @@ public class StarIndexActivity extends SimpleBaseActivity implements ScrollAlpha
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.star.StarIndexActivity$b */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2703b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2703b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -200,18 +198,18 @@ public class StarIndexActivity extends SimpleBaseActivity implements ScrollAlpha
         }
         super.onCreate(bundle);
         setContentView(R$layout.mine_starindex_activity);
-        C0529c.e().K(this);
+        c.e().K(this);
         hideBaseLayout();
         setImmersionStyle();
         if (getIntent() == null || getIntent().getExtras() == null) {
             return;
         }
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i(StarIndexFragment.Default_PAGE));
+        setDamaiUTKeyBuilder(new a.b().i(StarIndexFragment.Default_PAGE));
         View findViewById = findViewById(R$id.nav_bar);
         this.navBar = findViewById;
         findViewById.setAlpha(0.0f);
-        findViewById(R$id.ll_share).setOnClickListener(new View$OnClickListenerC2702a());
-        findViewById(R$id.brand_back).setOnClickListener(new View$OnClickListenerC2703b());
+        findViewById(R$id.ll_share).setOnClickListener(new a());
+        findViewById(R$id.brand_back).setOnClickListener(new b());
         initFragment();
     }
 

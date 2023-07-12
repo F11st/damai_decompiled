@@ -20,16 +20,15 @@ public class dr {
     public static boolean a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.dr$a */
     /* loaded from: classes4.dex */
-    public static class AsyncTaskC9057a extends AsyncTask<Void, Void, Drawable> {
+    public static class a extends AsyncTask<Void, Void, Drawable> {
         private static transient /* synthetic */ IpChange $ipChange;
         private String a;
         private WeakReference<ImageView> b;
         private Context c;
         private DynamicXInit.ImgStateRecord d;
 
-        public AsyncTaskC9057a(ImageView imageView, String str, DynamicXInit.ImgStateRecord imgStateRecord) {
+        public a(ImageView imageView, String str, DynamicXInit.ImgStateRecord imgStateRecord) {
             this.b = new WeakReference<>(imageView);
             this.a = str;
             this.c = imageView.getContext().getApplicationContext();
@@ -130,7 +129,7 @@ public class dr {
                 imageView.setImageDrawable(null);
                 imageView.setTag(a90.TAG_IMAGE_NAME, null);
             } else if (imageView.getDrawable() == null || !str.equals((String) imageView.getTag(a90.TAG_IMAGE_NAME))) {
-                y00.q(new AsyncTaskC9057a(imageView, str, imgStateRecord), new Void[0]);
+                y00.q(new a(imageView, str, imgStateRecord), new Void[0]);
             }
         }
     }

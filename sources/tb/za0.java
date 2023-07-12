@@ -3,7 +3,6 @@ package tb;
 import com.alibaba.android.ultron.trade.presenter.IPresenter;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.taobao.android.ultron.datamodel.imp.C6661a;
 import com.taobao.android.ultron.datamodel.imp.DMComponent;
 
 /* compiled from: Taobao */
@@ -20,7 +19,7 @@ public class za0 extends ib {
         } else {
             DMComponent dMComponent = (DMComponent) np2Var.e("data");
             IPresenter iPresenter = this.c;
-            if (iPresenter == null || ((C6661a) iPresenter.getDataContext()) == null) {
+            if (iPresenter == null || ((com.taobao.android.ultron.datamodel.imp.a) iPresenter.getDataContext()) == null) {
                 return;
             }
             this.c.getDataManager().respondToLinkage(dMComponent);

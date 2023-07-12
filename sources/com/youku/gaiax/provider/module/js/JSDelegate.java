@@ -8,7 +8,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.alibaba.gaiax.GXTemplateEngine;
 import com.alibaba.gaiax.render.node.GXINodeEvent;
 import com.alibaba.gaiax.template.GXTemplateInfo;
-import com.alipay.sdk.m.k.C4226b;
 import com.taobao.weex.WXGlobalEventReceiver;
 import com.taobao.weex.bridge.WXBridgeManager;
 import com.youku.gaiax.GaiaX;
@@ -31,7 +30,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArraySet;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.JvmStatic;
@@ -83,7 +81,7 @@ public final class JSDelegate implements IJSDelegate {
 
     static {
         Lazy<JSDelegate> b;
-        b = C8177b.b(new Function0<JSDelegate>() { // from class: com.youku.gaiax.provider.module.js.JSDelegate$Companion$instance$2
+        b = kotlin.b.b(new Function0<JSDelegate>() { // from class: com.youku.gaiax.provider.module.js.JSDelegate$Companion$instance$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull
@@ -152,12 +150,12 @@ public final class JSDelegate implements IJSDelegate {
         if (rootView == null) {
             return;
         }
-        GXTemplateEngine.C3337a c3337a = GXTemplateEngine.Companion;
-        os0 j2 = c3337a.a().j(rootView);
+        GXTemplateEngine.a aVar = GXTemplateEngine.Companion;
+        os0 j2 = aVar.a().j(rootView);
         if (j2 == null) {
             return;
         }
-        qr0 i2 = c3337a.a().i(rootView, str);
+        qr0 i2 = aVar.a().i(rootView, str);
         if (i2 != null) {
             i2.r();
         }
@@ -638,7 +636,7 @@ public final class JSDelegate implements IJSDelegate {
                 @Override // com.youku.gaiax.js.GaiaXJS.Listener
                 public void monitor(@NotNull String str, @NotNull String str2, @NotNull String str3, @NotNull String str4, @NotNull String str5, long j, @NotNull String str6, @NotNull String str7, @NotNull String str8) {
                     b41.i(str, "scene");
-                    b41.i(str2, C4226b.l);
+                    b41.i(str2, com.alipay.sdk.m.k.b.l);
                     b41.i(str3, "id");
                     b41.i(str4, "type");
                     b41.i(str5, "state");

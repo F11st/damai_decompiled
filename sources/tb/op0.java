@@ -1,6 +1,5 @@
 package tb;
 
-import com.taobao.phenix.request.C6866b;
 import com.taobao.phenix.request.ImageFlowMonitor;
 import com.taobao.phenix.request.ImageStatistics;
 
@@ -16,7 +15,7 @@ public class op0 {
     public static String g = "bizFinish";
 
     private static String a(ImageStatistics imageStatistics) {
-        C6866b p;
+        com.taobao.phenix.request.b p;
         return (imageStatistics == null || (p = imageStatistics.p()) == null) ? "" : p.k();
     }
 

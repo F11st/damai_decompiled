@@ -4,7 +4,7 @@ import java.io.Serializable;
 import kotlin.Result;
 import kotlin.SinceKotlin;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8233a;
+import kotlin.coroutines.intrinsics.a;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -70,13 +70,13 @@ public abstract class BaseContinuationImpl implements Continuation<Object>, Coro
             try {
                 invokeSuspend = baseContinuationImpl.invokeSuspend(obj);
             } catch (Throwable th) {
-                Result.C8174a c8174a = Result.Companion;
+                Result.a aVar = Result.Companion;
                 obj = Result.m1271constructorimpl(i32.a(th));
             }
-            if (invokeSuspend == C8233a.d()) {
+            if (invokeSuspend == a.d()) {
                 return;
             }
-            Result.C8174a c8174a2 = Result.Companion;
+            Result.a aVar2 = Result.Companion;
             obj = Result.m1271constructorimpl(invokeSuspend);
             baseContinuationImpl.releaseIntercepted();
             if (!(continuation2 instanceof BaseContinuationImpl)) {

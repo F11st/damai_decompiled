@@ -2,8 +2,8 @@ package com.alibaba.mtl.appmonitor.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import com.alibaba.appmonitor.pool.C3316a;
 import com.alibaba.appmonitor.pool.Reusable;
+import com.alibaba.appmonitor.pool.a;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -68,7 +68,7 @@ public class MeasureValue implements IMerge<MeasureValue>, Reusable, Parcelable 
     }
 
     public static MeasureValue create() {
-        return (MeasureValue) C3316a.a().poll(MeasureValue.class, new Object[0]);
+        return (MeasureValue) a.a().poll(MeasureValue.class, new Object[0]);
     }
 
     private Bucket getBucket(double d) {
@@ -209,7 +209,7 @@ public class MeasureValue implements IMerge<MeasureValue>, Reusable, Parcelable 
     }
 
     public static MeasureValue create(double d) {
-        return (MeasureValue) C3316a.a().poll(MeasureValue.class, Double.valueOf(d));
+        return (MeasureValue) a.a().poll(MeasureValue.class, Double.valueOf(d));
     }
 
     @Override // com.alibaba.mtl.appmonitor.model.IMerge
@@ -234,7 +234,7 @@ public class MeasureValue implements IMerge<MeasureValue>, Reusable, Parcelable 
     }
 
     public static MeasureValue create(double d, double d2) {
-        return (MeasureValue) C3316a.a().poll(MeasureValue.class, Double.valueOf(d), Double.valueOf(d2));
+        return (MeasureValue) a.a().poll(MeasureValue.class, Double.valueOf(d), Double.valueOf(d2));
     }
 
     @Deprecated

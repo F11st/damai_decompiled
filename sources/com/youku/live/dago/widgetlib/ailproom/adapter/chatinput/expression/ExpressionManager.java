@@ -71,7 +71,7 @@ public class ExpressionManager {
             String group = matcher.group();
             if (matcher.start() >= i) {
                 try {
-                    final int parseInt = Integer.parseInt(R.C7941drawable.class.getDeclaredField(group).get(null).toString());
+                    final int parseInt = Integer.parseInt(R.drawable.class.getDeclaredField(group).get(null).toString());
                     if (parseInt != 0) {
                         DynamicDrawableSpan dynamicDrawableSpan = new DynamicDrawableSpan(0) { // from class: com.youku.live.dago.widgetlib.ailproom.adapter.chatinput.expression.ExpressionManager.2
                             private static transient /* synthetic */ IpChange $ipChange;
@@ -206,7 +206,7 @@ public class ExpressionManager {
             for (int i = 0; i < ExpressionDict.getMaxIcon(); i++) {
                 String str = i < 10 ? prefix + "00" + i : prefix + "0" + i;
                 try {
-                    drawable3 = AppContextUtils.getApp().getResources().getDrawable(getResId(str, R.C7941drawable.class));
+                    drawable3 = AppContextUtils.getApp().getResources().getDrawable(getResId(str, R.drawable.class));
                 } catch (Resources.NotFoundException unused) {
                     ((ILog) Dsl.getService(ILog.class)).e("wuxinrong", "文件 " + str + " 找不到");
                     drawable3 = null;
@@ -220,7 +220,7 @@ public class ExpressionManager {
         for (int i2 = 0; i2 < 24; i2++) {
             String str2 = i2 < 10 ? "f00" + i2 : "f0" + i2;
             try {
-                drawable2 = AppContextUtils.getApp().getResources().getDrawable(getResId(str2, R.C7941drawable.class));
+                drawable2 = AppContextUtils.getApp().getResources().getDrawable(getResId(str2, R.drawable.class));
             } catch (Resources.NotFoundException unused2) {
                 ((ILog) Dsl.getService(ILog.class)).e("wuxinrong", "文件 " + str2 + " 找不到");
                 drawable2 = null;
@@ -233,7 +233,7 @@ public class ExpressionManager {
         for (int i3 = 0; i3 < 18; i3++) {
             String str3 = i3 < 10 ? "g00" + i3 : "g0" + i3;
             try {
-                drawable = AppContextUtils.getApp().getResources().getDrawable(getResId(str3, R.C7941drawable.class));
+                drawable = AppContextUtils.getApp().getResources().getDrawable(getResId(str3, R.drawable.class));
             } catch (Resources.NotFoundException unused3) {
                 ((ILog) Dsl.getService(ILog.class)).e("wuxinrong", "文件 " + str3 + " 找不到");
                 drawable = null;
@@ -375,7 +375,7 @@ public class ExpressionManager {
             if (matcher.start() >= i) {
                 Drawable createFromPath = Drawable.createFromPath(str);
                 if (createFromPath == null) {
-                    createFromPath = convertBitmap2Drawable(BitmapFactory.decodeResource(AppContextUtils.getApp().getResources(), R.C7941drawable.dago_pgc_ic_biaoqing));
+                    createFromPath = convertBitmap2Drawable(BitmapFactory.decodeResource(AppContextUtils.getApp().getResources(), R.drawable.dago_pgc_ic_biaoqing));
                 }
                 createFromPath.setBounds(0, 0, UIUtil.dip2px(24), UIUtil.dip2px(24));
                 VerticalImageSpan verticalImageSpan = new VerticalImageSpan(createFromPath);

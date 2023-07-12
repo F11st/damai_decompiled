@@ -38,13 +38,12 @@ public class OrderDetailPickUpViewHolder extends RecyclerView.ViewHolder {
     private Context j;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailPickUpViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2202a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DmPickupAddressBean a;
 
-        View$OnClickListenerC2202a(DmPickupAddressBean dmPickupAddressBean) {
+        a(DmPickupAddressBean dmPickupAddressBean) {
             this.a = dmPickupAddressBean;
         }
 
@@ -102,7 +101,7 @@ public class OrderDetailPickUpViewHolder extends RecyclerView.ViewHolder {
         }
         this.a.setBackgroundColor(ContextCompat.getColor(this.j, R$color.white));
         if (e > 1) {
-            this.itemView.setOnClickListener(new View$OnClickListenerC2202a(dmPickupAddressBean));
+            this.itemView.setOnClickListener(new a(dmPickupAddressBean));
             this.f.setText("共" + e + "个取票点");
             this.b.setVisibility(0);
         } else {

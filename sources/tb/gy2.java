@@ -8,12 +8,11 @@ import net.lucode.hackware.magicindicator.MagicIndicator;
 public class gy2 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.gy2$a */
     /* loaded from: classes2.dex */
-    static class C9191a implements ViewPager.OnPageChangeListener {
+    static class a implements ViewPager.OnPageChangeListener {
         final /* synthetic */ MagicIndicator a;
 
-        C9191a(MagicIndicator magicIndicator) {
+        a(MagicIndicator magicIndicator) {
             this.a = magicIndicator;
         }
 
@@ -34,6 +33,6 @@ public class gy2 {
     }
 
     public static void a(MagicIndicator magicIndicator, ViewPager viewPager) {
-        viewPager.addOnPageChangeListener(new C9191a(magicIndicator));
+        viewPager.addOnPageChangeListener(new a(magicIndicator));
     }
 }

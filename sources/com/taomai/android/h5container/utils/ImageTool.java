@@ -50,13 +50,12 @@ public class ImageTool {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.utils.ImageTool$a */
     /* loaded from: classes11.dex */
-    static class C7021a extends HttpConnectListener<HttpResponse> {
+    static class a extends HttpConnectListener<HttpResponse> {
         final /* synthetic */ Context a;
         final /* synthetic */ ImageSaveCallback b;
 
-        C7021a(Context context, ImageSaveCallback imageSaveCallback) {
+        a(Context context, ImageSaveCallback imageSaveCallback) {
             this.a = context;
             this.b = imageSaveCallback;
         }
@@ -416,7 +415,7 @@ public class ImageTool {
             }
             return;
         }
-        ConnectManager.getInstance().connect(str, new C7021a(context, imageSaveCallback));
+        ConnectManager.getInstance().connect(str, new a(context, imageSaveCallback));
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:42:0x0096, code lost:

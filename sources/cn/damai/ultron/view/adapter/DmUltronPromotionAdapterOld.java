@@ -43,14 +43,13 @@ public class DmUltronPromotionAdapterOld extends RecyclerView.Adapter<DeliveryVi
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.view.adapter.DmUltronPromotionAdapterOld$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2659a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
         final /* synthetic */ DmPromotionOptionsBean b;
 
-        View$OnClickListenerC2659a(int i, DmPromotionOptionsBean dmPromotionOptionsBean) {
+        a(int i, DmPromotionOptionsBean dmPromotionOptionsBean) {
             this.a = i;
             this.b = dmPromotionOptionsBean;
         }
@@ -114,7 +113,7 @@ public class DmUltronPromotionAdapterOld extends RecyclerView.Adapter<DeliveryVi
             dmPromotionOptionsBean.checked = d(dmPromotionOptionsBean.id);
         }
         deliveryViewHolder.c.setChecked(dmPromotionOptionsBean.checked);
-        deliveryViewHolder.a.setOnClickListener(new View$OnClickListenerC2659a(i, dmPromotionOptionsBean));
+        deliveryViewHolder.a.setOnClickListener(new a(i, dmPromotionOptionsBean));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

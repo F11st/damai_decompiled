@@ -19,7 +19,6 @@ import android.os.SystemClock;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import androidx.core.view.MotionEventCompat;
-import com.alipay.sdk.m.u.C4300c;
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.DPoint;
 import com.youku.live.livesdk.wkit.component.Constants;
@@ -78,7 +77,7 @@ public final class m1 {
                 return null;
             }
             try {
-                packageInfo = context.getPackageManager().getPackageInfo(C5846l.g(context), 64);
+                packageInfo = context.getPackageManager().getPackageInfo(l.g(context), 64);
             } catch (Throwable th) {
                 j1.h(th, Utils.TAG, "getAppName part");
                 packageInfo = null;
@@ -101,7 +100,7 @@ public final class m1 {
                     sb.append(packageInfo.versionName);
                 }
             }
-            String g = C5846l.g(context);
+            String g = l.g(context);
             if (!TextUtils.isEmpty(g)) {
                 sb.append(",");
                 sb.append(g);
@@ -182,7 +181,7 @@ public final class m1 {
 
     public static NetworkInfo L(Context context) {
         try {
-            return C5861o.b0(context);
+            return o.b0(context);
         } catch (Throwable th) {
             j1.h(th, Utils.TAG, "getNetWorkInfo");
             return null;
@@ -390,11 +389,11 @@ public final class m1 {
     }
 
     public static String b0(Context context) {
-        String W = C5861o.W(context);
-        if (TextUtils.isEmpty(W) || W.equals(C4300c.b)) {
+        String W = o.W(context);
+        if (TextUtils.isEmpty(W) || W.equals(com.alipay.sdk.m.u.c.b)) {
             W = a83.d(context);
         }
-        return TextUtils.isEmpty(W) ? C4300c.b : W;
+        return TextUtils.isEmpty(W) ? com.alipay.sdk.m.u.c.b : W;
     }
 
     public static float c(AMapLocation aMapLocation, AMapLocation aMapLocation2) {
@@ -427,7 +426,7 @@ public final class m1 {
 
     public static String e0(Context context) {
         if (d == null) {
-            d = e1.b(MessageDigestAlgorithms.MD5, C5846l.g(context));
+            d = e1.b(MessageDigestAlgorithms.MD5, l.g(context));
         }
         return d;
     }
@@ -862,7 +861,7 @@ public final class m1 {
     }
 
     public static boolean s(String str) {
-        return (TextUtils.isEmpty(str) || C4300c.b.equals(str) || "02:00:00:00:00:00".equals(str) || str.contains(" :")) ? false : true;
+        return (TextUtils.isEmpty(str) || com.alipay.sdk.m.u.c.b.equals(str) || "02:00:00:00:00:00".equals(str) || str.contains(" :")) ? false : true;
     }
 
     public static boolean t(String str, String str2) {

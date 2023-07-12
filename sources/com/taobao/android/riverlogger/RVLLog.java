@@ -7,8 +7,6 @@ import android.taobao.windvane.jsbridge.WVPluginManager;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.taobao.android.riverlogger.inspector.Inspector;
-import com.taobao.android.riverlogger.remote.C6581b;
-import com.taobao.android.riverlogger.remote.C6584d;
 import com.taobao.android.riverlogger.remote.RemoteApiPlugin;
 import com.taobao.android.weex_framework.MUSEngine;
 import java.util.Iterator;
@@ -37,16 +35,16 @@ public class RVLLog {
         b = new ReentrantLock();
         c = new AtomicBoolean(false);
         d = new AtomicBoolean(false);
-        C6573d c6573d = new C6573d();
-        if (c6573d.a) {
-            concurrentLinkedQueue.add(c6573d);
+        d dVar = new d();
+        if (dVar.a) {
+            concurrentLinkedQueue.add(dVar);
         } else {
-            concurrentLinkedQueue.add(C6570b.instance);
+            concurrentLinkedQueue.add(b.instance);
         }
     }
 
-    public static C6569a a(RVLLevel rVLLevel, @NonNull String str) {
-        return new C6569a(rVLLevel, str);
+    public static a a(RVLLevel rVLLevel, @NonNull String str) {
+        return new a(rVLLevel, str);
     }
 
     private static String b(Context context) {
@@ -77,19 +75,19 @@ public class RVLLog {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static void d(C6572c c6572c) {
+    public static void d(c cVar) {
         Iterator<RVLLogInterface> it = a.iterator();
         while (it.hasNext()) {
-            it.next().log(c6572c);
+            it.next().log(cVar);
         }
     }
 
     public static void e(RVLLevel rVLLevel, @NonNull String str, @Nullable String str2) {
-        C6572c c6572c = new C6572c(rVLLevel, str);
-        c6572c.i = str2;
+        c cVar = new c(rVLLevel, str);
+        cVar.i = str2;
         Iterator<RVLLogInterface> it = a.iterator();
         while (it.hasNext()) {
-            it.next().log(c6572c);
+            it.next().log(cVar);
         }
     }
 
@@ -106,7 +104,7 @@ public class RVLLog {
             } catch (Exception | NoClassDefFoundError unused) {
             }
             try {
-                MUSEngine.registerModule("riverLogger", C6584d.class);
+                MUSEngine.registerModule("riverLogger", com.taobao.android.riverlogger.remote.d.class);
             } catch (Exception | NoClassDefFoundError unused2) {
             }
         }
@@ -115,7 +113,7 @@ public class RVLLog {
         }
         if (context != null) {
             Inspector.e("AppInfo", b(context));
-            C6581b.g(context.getSharedPreferences("RiverLogger.ServiceConfig", 0));
+            com.taobao.android.riverlogger.remote.b.g(context.getSharedPreferences("RiverLogger.ServiceConfig", 0));
         }
     }
 }

@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.disposables.EmptyDisposable;
@@ -13,7 +13,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableAmb<T> extends AbstractC8149d<T> {
+public final class ObservableAmb<T> extends d<T> {
     final ObservableSource<? extends T>[] sources;
     final Iterable<? extends ObservableSource<? extends T>> sourcesIterable;
 
@@ -147,12 +147,12 @@ public final class ObservableAmb<T> extends AbstractC8149d<T> {
         this.sourcesIterable = iterable;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         int length;
         ObservableSource<? extends T>[] observableSourceArr = this.sources;
         if (observableSourceArr == null) {
-            observableSourceArr = new AbstractC8149d[8];
+            observableSourceArr = new d[8];
             try {
                 length = 0;
                 for (ObservableSource<? extends T> observableSource : this.sourcesIterable) {

@@ -70,12 +70,11 @@ public class MultiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.adapter.MultiAdapter$a */
     /* loaded from: classes.dex */
-    public class C0963a implements OnItemClickListener<NoteBean> {
+    public class a implements OnItemClickListener<NoteBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0963a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.discover.viewholder.OnItemClickListener
@@ -107,12 +106,11 @@ public class MultiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.adapter.MultiAdapter$b */
     /* loaded from: classes.dex */
-    public class C0964b implements OnItemClickListener<ThemeBean> {
+    public class b implements OnItemClickListener<ThemeBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0964b() {
+        b() {
         }
 
         @Override // cn.damai.commonbusiness.discover.viewholder.OnItemClickListener
@@ -142,12 +140,11 @@ public class MultiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.adapter.MultiAdapter$c */
     /* loaded from: classes.dex */
-    public class C0965c implements OnItemClickListener<RankBean> {
+    public class c implements OnItemClickListener<RankBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0965c() {
+        c() {
         }
 
         @Override // cn.damai.commonbusiness.discover.viewholder.OnItemClickListener
@@ -177,12 +174,11 @@ public class MultiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.adapter.MultiAdapter$d */
     /* loaded from: classes.dex */
-    public class C0966d extends a72 {
+    public class d extends a72 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0966d(Context context) {
+        d(Context context) {
             super(context);
         }
 
@@ -214,13 +210,12 @@ public class MultiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.adapter.MultiAdapter$e */
     /* loaded from: classes.dex */
-    public class C0967e implements Function1<RecommendProjects, wt2> {
+    public class e implements Function1<RecommendProjects, wt2> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        C0967e(int i) {
+        e(int i) {
             this.a = i;
         }
 
@@ -243,9 +238,8 @@ public class MultiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.adapter.MultiAdapter$f */
     /* loaded from: classes.dex */
-    public static class C0968f implements Exposure {
+    public static class f implements Exposure {
         private static transient /* synthetic */ IpChange $ipChange;
 
         @Override // cn.damai.commonbusiness.wannasee.adapter.MultiAdapter.Exposure
@@ -274,14 +268,13 @@ public class MultiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.adapter.MultiAdapter$g */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0969g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private ProjectItemBean a;
         private int b;
 
-        public View$OnClickListenerC0969g(ProjectItemBean projectItemBean, int i) {
+        public g(ProjectItemBean projectItemBean, int i) {
             this.a = projectItemBean;
             this.b = i;
         }
@@ -468,21 +461,21 @@ public class MultiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             ProjectItemBean projectItemBean = (ProjectItemBean) obj;
             projectItemBean.pos = i;
             ((ProjectItemViewHolder) viewHolder).k(projectItemBean);
-            viewHolder.itemView.setOnClickListener(new View$OnClickListenerC0969g(projectItemBean, i));
+            viewHolder.itemView.setOnClickListener(new g(projectItemBean, i));
         } else if (obj instanceof ScriptBean) {
             ((NativeGaiaXViewHolder) viewHolder).c(m61.c(m61.e((ScriptBean) obj)), DisplayMetrics.getwidthPixels(m62.b(mu0.a())), i);
         } else if (viewHolder instanceof WantSeeRecommendViewHolder) {
             WantSeeRecommendViewHolder wantSeeRecommendViewHolder = (WantSeeRecommendViewHolder) viewHolder;
             wantSeeRecommendViewHolder.b().setOnEventListener(g());
             wantSeeRecommendViewHolder.a((RecommendProjects) obj, i);
-            wantSeeRecommendViewHolder.b().setOnRefreshSuccess(new C0967e(i));
+            wantSeeRecommendViewHolder.b().setOnRefreshSuccess(new e(i));
         } else if (viewHolder instanceof WantSeeProjectViewHolder) {
             ProjectItemBean projectItemBean2 = (ProjectItemBean) obj;
             projectItemBean2.pos = i;
             WantSeeProjectViewHolder wantSeeProjectViewHolder = (WantSeeProjectViewHolder) viewHolder;
             wantSeeProjectViewHolder.j(g());
             wantSeeProjectViewHolder.e(projectItemBean2, i);
-            viewHolder.itemView.setOnClickListener(new View$OnClickListenerC0969g(projectItemBean2, i));
+            viewHolder.itemView.setOnClickListener(new g(projectItemBean2, i));
         }
         Exposure exposure = this.d;
         if (exposure != null) {
@@ -505,9 +498,9 @@ public class MultiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         }
         switch (i) {
             case 1:
-                return new NoteViewHolder(this.a, viewGroup, new C0963a());
+                return new NoteViewHolder(this.a, viewGroup, new a());
             case 2:
-                return new ThemeViewHolder(this.a, viewGroup, new C0964b());
+                return new ThemeViewHolder(this.a, viewGroup, new b());
             case 3:
                 if (this.g) {
                     WantSeeProjectViewHolder wantSeeProjectViewHolder = new WantSeeProjectViewHolder(viewGroup);
@@ -519,12 +512,12 @@ public class MultiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                 projectItemViewHolder.itemView.setOnLongClickListener(this.c);
                 return projectItemViewHolder;
             case 4:
-                RankViewHolder rankViewHolder = new RankViewHolder(this.a, viewGroup, new C0965c());
+                RankViewHolder rankViewHolder = new RankViewHolder(this.a, viewGroup, new c());
                 rankViewHolder.itemView.setOnLongClickListener(this.c);
                 return rankViewHolder;
             case 5:
                 Context context2 = this.a;
-                return new NativeGaiaXViewHolder(context2, new C0966d(context2));
+                return new NativeGaiaXViewHolder(context2, new d(context2));
             case 6:
                 return WantSeeRecommendViewHolder.Companion.a(this.a, viewGroup);
             default:

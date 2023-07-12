@@ -24,7 +24,7 @@ public final class Multisets {
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
-    static class ImmutableEntry<E> extends AbstractC5082b<E> implements Serializable {
+    static class ImmutableEntry<E> extends b<E> implements Serializable {
         private static final long serialVersionUID = 0;
         private final int count;
         @NullableDecl
@@ -33,7 +33,7 @@ public final class Multisets {
         ImmutableEntry(@NullableDecl E e, int i) {
             this.element = e;
             this.count = i;
-            C5191k.b(i, AdUtConstants.XAD_UT_ARG_COUNT);
+            k.b(i, AdUtConstants.XAD_UT_ARG_COUNT);
         }
 
         @Override // com.google.common.collect.Multiset.Entry
@@ -54,7 +54,7 @@ public final class Multisets {
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
-    static class UnmodifiableMultiset<E> extends AbstractC5204s<E> implements Serializable {
+    static class UnmodifiableMultiset<E> extends s<E> implements Serializable {
         private static final long serialVersionUID = 0;
         final Multiset<? extends E> delegate;
         @MonotonicNonNullDecl
@@ -67,17 +67,17 @@ public final class Multisets {
             this.delegate = multiset;
         }
 
-        @Override // com.google.common.collect.AbstractC5200o, java.util.Collection, java.util.Queue
+        @Override // com.google.common.collect.o, java.util.Collection, java.util.Queue
         public boolean add(E e) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5200o, java.util.Collection
+        @Override // com.google.common.collect.o, java.util.Collection
         public boolean addAll(Collection<? extends E> collection) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5200o, java.util.Collection, java.util.Set
+        @Override // com.google.common.collect.o, java.util.Collection, java.util.Set
         public void clear() {
             throw new UnsupportedOperationException();
         }
@@ -86,7 +86,7 @@ public final class Multisets {
             return Collections.unmodifiableSet(this.delegate.elementSet());
         }
 
-        @Override // com.google.common.collect.AbstractC5204s, com.google.common.collect.Multiset
+        @Override // com.google.common.collect.s, com.google.common.collect.Multiset
         public Set<E> elementSet() {
             Set<E> set = this.elementSet;
             if (set == null) {
@@ -97,7 +97,7 @@ public final class Multisets {
             return set;
         }
 
-        @Override // com.google.common.collect.AbstractC5204s, com.google.common.collect.Multiset
+        @Override // com.google.common.collect.s, com.google.common.collect.Multiset
         public Set<Multiset.Entry<E>> entrySet() {
             Set<Multiset.Entry<E>> set = this.entrySet;
             if (set == null) {
@@ -108,48 +108,48 @@ public final class Multisets {
             return set;
         }
 
-        @Override // com.google.common.collect.AbstractC5200o, java.util.Collection, java.lang.Iterable, java.util.Set
+        @Override // com.google.common.collect.o, java.util.Collection, java.lang.Iterable, java.util.Set
         public Iterator<E> iterator() {
             return Iterators.x(this.delegate.iterator());
         }
 
-        @Override // com.google.common.collect.AbstractC5200o, java.util.Collection, java.util.Set
+        @Override // com.google.common.collect.o, java.util.Collection, java.util.Set
         public boolean remove(Object obj) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5200o, java.util.Collection, java.util.Set
+        @Override // com.google.common.collect.o, java.util.Collection, java.util.Set
         public boolean removeAll(Collection<?> collection) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5200o, java.util.Collection, java.util.Set
+        @Override // com.google.common.collect.o, java.util.Collection, java.util.Set
         public boolean retainAll(Collection<?> collection) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5204s, com.google.common.collect.Multiset
+        @Override // com.google.common.collect.s, com.google.common.collect.Multiset
         public int setCount(E e, int i) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5204s, com.google.common.collect.Multiset
+        @Override // com.google.common.collect.s, com.google.common.collect.Multiset
         public int add(E e, int i) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5204s, com.google.common.collect.Multiset
+        @Override // com.google.common.collect.s, com.google.common.collect.Multiset
         public int remove(Object obj, int i) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5204s, com.google.common.collect.Multiset
+        @Override // com.google.common.collect.s, com.google.common.collect.Multiset
         public boolean setCount(E e, int i, int i2) {
             throw new UnsupportedOperationException();
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.google.common.collect.AbstractC5204s, com.google.common.collect.AbstractC5200o, com.google.common.collect.AbstractC5205t
+        @Override // com.google.common.collect.s, com.google.common.collect.o, com.google.common.collect.t
         public Multiset<E> delegate() {
             return (Multiset<? extends E>) this.delegate;
         }
@@ -157,15 +157,14 @@ public final class Multisets {
 
     /* JADX INFO: Add missing generic type declarations: [E] */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Multisets$a */
     /* loaded from: classes10.dex */
-    static class C5081a<E> extends AbstractC5190j0<Multiset.Entry<E>, E> {
-        C5081a(Iterator it) {
+    static class a<E> extends j0<Multiset.Entry<E>, E> {
+        a(Iterator it) {
             super(it);
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.AbstractC5190j0
+        @Override // com.google.common.collect.j0
         /* renamed from: b */
         public E a(Multiset.Entry<E> entry) {
             return entry.getElement();
@@ -173,9 +172,8 @@ public final class Multisets {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Multisets$b */
     /* loaded from: classes10.dex */
-    static abstract class AbstractC5082b<E> implements Multiset.Entry<E> {
+    static abstract class b<E> implements Multiset.Entry<E> {
         @Override // com.google.common.collect.Multiset.Entry
         public boolean equals(@NullableDecl Object obj) {
             if (obj instanceof Multiset.Entry) {
@@ -203,9 +201,8 @@ public final class Multisets {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Multisets$c */
     /* loaded from: classes10.dex */
-    static abstract class AbstractC5083c<E> extends Sets.AbstractC5098a<E> {
+    static abstract class c<E> extends Sets.a<E> {
         abstract Multiset<E> a();
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
@@ -240,9 +237,8 @@ public final class Multisets {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Multisets$d */
     /* loaded from: classes10.dex */
-    static abstract class AbstractC5084d<E> extends Sets.AbstractC5098a<Multiset.Entry<E>> {
+    static abstract class d<E> extends Sets.a<Multiset.Entry<E>> {
         abstract Multiset<E> a();
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
@@ -274,9 +270,8 @@ public final class Multisets {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Multisets$e */
     /* loaded from: classes10.dex */
-    static final class C5085e<E> implements Iterator<E> {
+    static final class e<E> implements Iterator<E> {
         private final Multiset<E> a;
         private final Iterator<Multiset.Entry<E>> b;
         @MonotonicNonNullDecl
@@ -285,7 +280,7 @@ public final class Multisets {
         private int e;
         private boolean f;
 
-        C5085e(Multiset<E> multiset, Iterator<Multiset.Entry<E>> it) {
+        e(Multiset<E> multiset, Iterator<Multiset.Entry<E>> it) {
             this.a = multiset;
             this.b = it;
         }
@@ -314,7 +309,7 @@ public final class Multisets {
 
         @Override // java.util.Iterator
         public void remove() {
-            C5191k.e(this.f);
+            k.e(this.f);
             if (this.e == 1) {
                 this.b.remove();
             } else {
@@ -366,7 +361,7 @@ public final class Multisets {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static <E> Iterator<E> e(Iterator<Multiset.Entry<E>> it) {
-        return new C5081a(it);
+        return new a(it);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -388,8 +383,8 @@ public final class Multisets {
         return false;
     }
 
-    public static <E> Multiset.Entry<E> g(@NullableDecl E e, int i) {
-        return new ImmutableEntry(e, i);
+    public static <E> Multiset.Entry<E> g(@NullableDecl E e2, int i) {
+        return new ImmutableEntry(e2, i);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -402,7 +397,7 @@ public final class Multisets {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static <E> Iterator<E> i(Multiset<E> multiset) {
-        return new C5085e(multiset, multiset.entrySet().iterator());
+        return new e(multiset, multiset.entrySet().iterator());
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -432,24 +427,24 @@ public final class Multisets {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static <E> int m(Multiset<E> multiset, E e, int i) {
-        C5191k.b(i, AdUtConstants.XAD_UT_ARG_COUNT);
-        int count = multiset.count(e);
+    public static <E> int m(Multiset<E> multiset, E e2, int i) {
+        k.b(i, AdUtConstants.XAD_UT_ARG_COUNT);
+        int count = multiset.count(e2);
         int i2 = i - count;
         if (i2 > 0) {
-            multiset.add(e, i2);
+            multiset.add(e2, i2);
         } else if (i2 < 0) {
-            multiset.remove(e, -i2);
+            multiset.remove(e2, -i2);
         }
         return count;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static <E> boolean n(Multiset<E> multiset, E e, int i, int i2) {
-        C5191k.b(i, "oldCount");
-        C5191k.b(i2, "newCount");
-        if (multiset.count(e) == i) {
-            multiset.setCount(e, i2);
+    public static <E> boolean n(Multiset<E> multiset, E e2, int i, int i2) {
+        k.b(i, "oldCount");
+        k.b(i2, "newCount");
+        if (multiset.count(e2) == i) {
+            multiset.setCount(e2, i2);
             return true;
         }
         return false;

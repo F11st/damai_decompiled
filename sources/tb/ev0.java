@@ -26,9 +26,8 @@ public class ev0 {
     public static String l;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ev0$a */
     /* loaded from: classes4.dex */
-    static /* synthetic */ class C9116a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -55,7 +54,7 @@ public class ev0 {
         if (AndroidInstantRuntime.support(ipChange, "-1729250611")) {
             return (String) ipChange.ipc$dispatch("-1729250611", new Object[0]);
         }
-        if (C9116a.a[AppConfig.g().ordinal()] != 1) {
+        if (a.a[AppConfig.g().ordinal()] != 1) {
             return b + k;
         }
         return c + l;

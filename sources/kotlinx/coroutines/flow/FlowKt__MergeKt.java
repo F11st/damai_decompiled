@@ -15,13 +15,13 @@ import tb.wt2;
 /* loaded from: classes11.dex */
 public final /* synthetic */ class FlowKt__MergeKt {
     static {
-        nj2.b(C8672c.DEFAULT_CONCURRENCY_PROPERTY_NAME, 16, 1, Integer.MAX_VALUE);
+        nj2.b(c.DEFAULT_CONCURRENCY_PROPERTY_NAME, 16, 1, Integer.MAX_VALUE);
     }
 
     @ExperimentalCoroutinesApi
     @NotNull
     public static final <T, R> Flow<R> a(@NotNull Flow<? extends T> flow, @BuilderInference @NotNull Function2<? super T, ? super Continuation<? super R>, ? extends Object> function2) {
-        return C8672c.z(flow, new FlowKt__MergeKt$mapLatest$1(function2, null));
+        return c.z(flow, new FlowKt__MergeKt$mapLatest$1(function2, null));
     }
 
     @ExperimentalCoroutinesApi

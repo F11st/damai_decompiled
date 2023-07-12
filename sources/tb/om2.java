@@ -22,9 +22,8 @@ public final class om2 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.om2$a */
     /* loaded from: classes10.dex */
-    public static class ThreadFactoryC9528a implements ThreadFactory {
+    public static class a implements ThreadFactory {
         final /* synthetic */ ThreadFactory a;
         final /* synthetic */ String b;
         final /* synthetic */ AtomicLong c;
@@ -32,7 +31,7 @@ public final class om2 {
         final /* synthetic */ Integer e;
         final /* synthetic */ Thread.UncaughtExceptionHandler f;
 
-        ThreadFactoryC9528a(ThreadFactory threadFactory, String str, AtomicLong atomicLong, Boolean bool, Integer num, Thread.UncaughtExceptionHandler uncaughtExceptionHandler) {
+        a(ThreadFactory threadFactory, String str, AtomicLong atomicLong, Boolean bool, Integer num, Thread.UncaughtExceptionHandler uncaughtExceptionHandler) {
             this.a = threadFactory;
             this.b = str;
             this.c = atomicLong;
@@ -73,7 +72,7 @@ public final class om2 {
         if (threadFactory == null) {
             threadFactory = Executors.defaultThreadFactory();
         }
-        return new ThreadFactoryC9528a(threadFactory, str, str != null ? new AtomicLong(0L) : null, bool, num, uncaughtExceptionHandler);
+        return new a(threadFactory, str, str != null ? new AtomicLong(0L) : null, bool, num, uncaughtExceptionHandler);
     }
 
     /* JADX INFO: Access modifiers changed from: private */

@@ -1,18 +1,14 @@
 package tb;
 
-import anet.channel.request.C0193a;
+import anet.channel.request.a;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import java.util.TreeSet;
 import mtopsdk.network.util.Constants;
-import okhttp3.C8816l;
-import okhttp3.C8818m;
-import okhttp3.C8823o;
-import okhttp3.C8827q;
 import okhttp3.CookieJar;
-import okhttp3.internal.C8753a;
+import okhttp3.l;
 import okio.ByteString;
 
 /* compiled from: Taobao */
@@ -23,28 +19,28 @@ public final class g01 {
         ByteString.encodeUtf8("\t ,=");
     }
 
-    public static long a(C8816l c8816l) {
-        return j(c8816l.c(Constants.Protocol.CONTENT_LENGTH));
+    public static long a(okhttp3.l lVar) {
+        return j(lVar.c(Constants.Protocol.CONTENT_LENGTH));
     }
 
-    public static long b(C8827q c8827q) {
-        return a(c8827q.j());
+    public static long b(okhttp3.q qVar) {
+        return a(qVar.j());
     }
 
-    public static boolean c(C8827q c8827q) {
-        if (c8827q.q().g().equals(C0193a.C0196c.HEAD)) {
+    public static boolean c(okhttp3.q qVar) {
+        if (qVar.q().g().equals(a.c.HEAD)) {
             return false;
         }
-        int e = c8827q.e();
-        return (((e >= 100 && e < 200) || e == 204 || e == 304) && b(c8827q) == -1 && !"chunked".equalsIgnoreCase(c8827q.g("Transfer-Encoding"))) ? false : true;
+        int e = qVar.e();
+        return (((e >= 100 && e < 200) || e == 204 || e == 304) && b(qVar) == -1 && !"chunked".equalsIgnoreCase(qVar.g("Transfer-Encoding"))) ? false : true;
     }
 
-    public static boolean d(C8816l c8816l) {
-        return k(c8816l).contains(jn1.MUL);
+    public static boolean d(okhttp3.l lVar) {
+        return k(lVar).contains(jn1.MUL);
     }
 
-    public static boolean e(C8827q c8827q) {
-        return d(c8827q.j());
+    public static boolean e(okhttp3.q qVar) {
+        return d(qVar.j());
     }
 
     public static int f(String str, int i) {
@@ -62,15 +58,15 @@ public final class g01 {
         }
     }
 
-    public static void g(CookieJar cookieJar, C8818m c8818m, C8816l c8816l) {
+    public static void g(CookieJar cookieJar, okhttp3.m mVar, okhttp3.l lVar) {
         if (cookieJar == CookieJar.NO_COOKIES) {
             return;
         }
-        List<go> f = go.f(c8818m, c8816l);
+        List<go> f = go.f(mVar, lVar);
         if (f.isEmpty()) {
             return;
         }
-        cookieJar.saveFromResponse(c8818m, f);
+        cookieJar.saveFromResponse(mVar, f);
     }
 
     public static int h(String str, int i, String str2) {
@@ -99,12 +95,12 @@ public final class g01 {
         }
     }
 
-    public static Set<String> k(C8816l c8816l) {
+    public static Set<String> k(okhttp3.l lVar) {
         Set<String> emptySet = Collections.emptySet();
-        int h = c8816l.h();
+        int h = lVar.h();
         for (int i = 0; i < h; i++) {
-            if ("Vary".equalsIgnoreCase(c8816l.e(i))) {
-                String j = c8816l.j(i);
+            if ("Vary".equalsIgnoreCase(lVar.e(i))) {
+                String j = lVar.j(i);
                 if (emptySet.isEmpty()) {
                     emptySet = new TreeSet<>(String.CASE_INSENSITIVE_ORDER);
                 }
@@ -116,33 +112,33 @@ public final class g01 {
         return emptySet;
     }
 
-    private static Set<String> l(C8827q c8827q) {
-        return k(c8827q.j());
+    private static Set<String> l(okhttp3.q qVar) {
+        return k(qVar.j());
     }
 
-    public static C8816l m(C8816l c8816l, C8816l c8816l2) {
-        Set<String> k = k(c8816l2);
+    public static okhttp3.l m(okhttp3.l lVar, okhttp3.l lVar2) {
+        Set<String> k = k(lVar2);
         if (k.isEmpty()) {
-            return C8753a.EMPTY_HEADERS;
+            return okhttp3.internal.a.EMPTY_HEADERS;
         }
-        C8816l.C8817a c8817a = new C8816l.C8817a();
-        int h = c8816l.h();
+        l.a aVar = new l.a();
+        int h = lVar.h();
         for (int i = 0; i < h; i++) {
-            String e = c8816l.e(i);
+            String e = lVar.e(i);
             if (k.contains(e)) {
-                c8817a.a(e, c8816l.j(i));
+                aVar.a(e, lVar.j(i));
             }
         }
-        return c8817a.e();
+        return aVar.e();
     }
 
-    public static C8816l n(C8827q c8827q) {
-        return m(c8827q.l().q().e(), c8827q.j());
+    public static okhttp3.l n(okhttp3.q qVar) {
+        return m(qVar.l().q().e(), qVar.j());
     }
 
-    public static boolean o(C8827q c8827q, C8816l c8816l, C8823o c8823o) {
-        for (String str : l(c8827q)) {
-            if (!Objects.equals(c8816l.k(str), c8823o.d(str))) {
+    public static boolean o(okhttp3.q qVar, okhttp3.l lVar, okhttp3.o oVar) {
+        for (String str : l(qVar)) {
+            if (!Objects.equals(lVar.k(str), oVar.d(str))) {
                 return false;
             }
         }

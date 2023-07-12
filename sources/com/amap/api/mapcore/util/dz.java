@@ -5,9 +5,8 @@ package com.amap.api.mapcore.util;
 public interface dz {
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.dz$a */
     /* loaded from: classes10.dex */
-    public enum EnumC4527a {
+    public enum a {
         unknown,
         marker_default,
         marker_gps_no_sharing

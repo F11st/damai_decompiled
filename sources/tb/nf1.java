@@ -5,7 +5,6 @@ import com.alibaba.analytics.core.db.annotation.Column;
 import com.alibaba.analytics.core.db.annotation.Ingore;
 import com.alibaba.analytics.core.db.annotation.TableName;
 import com.alibaba.appmonitor.pool.Reusable;
-import com.alibaba.appmonitor.sample.C3317a;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.mtl.appmonitor.model.DimensionSet;
 import com.alibaba.mtl.appmonitor.model.DimensionValueSet;
@@ -79,7 +78,7 @@ public class nf1 extends ve0 implements Reusable {
     public synchronized boolean e() {
         boolean z;
         if (!this.f) {
-            z = C3317a.h().j(this.a, this.b);
+            z = com.alibaba.appmonitor.sample.a.h().j(this.a, this.b);
         }
         return z;
     }

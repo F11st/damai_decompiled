@@ -1,6 +1,5 @@
 package tb;
 
-import com.alibaba.android.ultron.trade.presenter.AbstractC3258a;
 import com.alibaba.android.ultron.vfw.web.IWebEventBridge;
 import com.taobao.android.ultron.common.model.IDMComponent;
 import com.taobao.vessel.base.ResultCallback;
@@ -10,10 +9,10 @@ import java.util.Map;
 /* loaded from: classes6.dex */
 public class vj implements IWebEventBridge {
     public static final String BRIDGE_TAG = "closePopup";
-    AbstractC3258a a;
+    com.alibaba.android.ultron.trade.presenter.a a;
 
-    public vj(AbstractC3258a abstractC3258a) {
-        this.a = abstractC3258a;
+    public vj(com.alibaba.android.ultron.trade.presenter.a aVar) {
+        this.a = aVar;
     }
 
     @Override // com.alibaba.android.ultron.vfw.web.IWebEventBridge

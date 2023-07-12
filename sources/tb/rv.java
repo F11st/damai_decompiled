@@ -4,14 +4,13 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
 import com.taobao.android.dinamicx.DXRuntimeContext;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class rv extends AbstractC6375a {
+public class rv extends com.taobao.android.dinamicx.expression.parser.a {
     public static final long DX_PARSER_DX_ENV = 9060459234603530L;
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         if (objArr != null && objArr.length != 0) {
             Object obj = objArr[0];
@@ -52,7 +51,7 @@ public class rv extends AbstractC6375a {
         return null;
     }
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
     public String getDxFunctionName() {
         return "dx_env";
     }

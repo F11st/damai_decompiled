@@ -36,16 +36,15 @@ public class FileProvider extends ContentProvider {
     private static final String TAG_EXTERNAL_FILES = "external-files-path";
     private static final String TAG_FILES_PATH = "files-path";
     private static final String TAG_ROOT_PATH = "root-path";
-    private InterfaceC6215a mStrategy;
+    private a mStrategy;
     private static final String[] COLUMNS = {"_display_name", "_size"};
     private static final File DEVICE_ROOT = new File("/");
-    private static HashMap<String, InterfaceC6215a> sCache = new HashMap<>();
+    private static HashMap<String, a> sCache = new HashMap<>();
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.sina.weibo.sdk.content.FileProvider$a */
     /* loaded from: classes7.dex */
-    public interface InterfaceC6215a {
+    public interface a {
         Uri a(File file);
 
         File a(Uri uri);
@@ -74,14 +73,14 @@ public class FileProvider extends ContentProvider {
         return Build.VERSION.SDK_INT >= 19 ? context.getExternalFilesDirs(null) : new File[]{context.getExternalFilesDir(null)};
     }
 
-    private static InterfaceC6215a getPathStrategy(Context context, String str) {
-        InterfaceC6215a interfaceC6215a;
+    private static a getPathStrategy(Context context, String str) {
+        a aVar;
         synchronized (sCache) {
-            interfaceC6215a = sCache.get(str);
-            if (interfaceC6215a == null) {
+            aVar = sCache.get(str);
+            if (aVar == null) {
                 try {
-                    interfaceC6215a = parsePathStrategy(context, str);
-                    sCache.put(str, interfaceC6215a);
+                    aVar = parsePathStrategy(context, str);
+                    sCache.put(str, aVar);
                 } catch (IOException e) {
                     throw new IllegalArgumentException("Failed to parse android.support.FILE_PROVIDER_PATHS meta-data", e);
                 } catch (XmlPullParserException e2) {
@@ -89,7 +88,7 @@ public class FileProvider extends ContentProvider {
                 }
             }
         }
-        return interfaceC6215a;
+        return aVar;
     }
 
     public static Uri getUriForFile(Context context, String str, File file) {
@@ -115,8 +114,8 @@ public class FileProvider extends ContentProvider {
         throw new IllegalArgumentException("Invalid mode: ".concat(String.valueOf(str)));
     }
 
-    private static InterfaceC6215a parsePathStrategy(Context context, String str) {
-        C6216b c6216b = new C6216b(str);
+    private static a parsePathStrategy(Context context, String str) {
+        b bVar = new b(str);
         XmlResourceParser loadXmlMetaData = context.getPackageManager().resolveContentProvider(str, 128).loadXmlMetaData(context.getPackageManager(), META_DATA_FILE_PROVIDER_PATHS);
         if (loadXmlMetaData == null) {
             throw new IllegalArgumentException("Missing android.support.FILE_PROVIDER_PATHS meta-data");
@@ -124,7 +123,7 @@ public class FileProvider extends ContentProvider {
         while (true) {
             int next = loadXmlMetaData.next();
             if (next == 1) {
-                return c6216b;
+                return bVar;
             }
             if (next == 2) {
                 String name = loadXmlMetaData.getName();
@@ -154,7 +153,7 @@ public class FileProvider extends ContentProvider {
                     File buildPath = buildPath(file, attributeValue2);
                     if (!TextUtils.isEmpty(attributeValue)) {
                         try {
-                            c6216b.h.put(attributeValue, buildPath.getCanonicalFile());
+                            bVar.h.put(attributeValue, buildPath.getCanonicalFile());
                         } catch (IOException e) {
                             throw new IllegalArgumentException("Failed to resolve canonical path for ".concat(String.valueOf(buildPath)), e);
                         }
@@ -188,10 +187,10 @@ public class FileProvider extends ContentProvider {
 
     @Override // android.content.ContentProvider
     public String getType(Uri uri) {
-        File a = this.mStrategy.a(uri);
-        int lastIndexOf = a.getName().lastIndexOf(46);
+        File a2 = this.mStrategy.a(uri);
+        int lastIndexOf = a2.getName().lastIndexOf(46);
         if (lastIndexOf >= 0) {
-            String mimeTypeFromExtension = MimeTypeMap.getSingleton().getMimeTypeFromExtension(a.getName().substring(lastIndexOf + 1));
+            String mimeTypeFromExtension = MimeTypeMap.getSingleton().getMimeTypeFromExtension(a2.getName().substring(lastIndexOf + 1));
             return mimeTypeFromExtension != null ? mimeTypeFromExtension : "application/octet-stream";
         }
         return "application/octet-stream";
@@ -215,7 +214,7 @@ public class FileProvider extends ContentProvider {
     @Override // android.content.ContentProvider
     public Cursor query(Uri uri, String[] strArr, String str, String[] strArr2, String str2) {
         int i;
-        File a = this.mStrategy.a(uri);
+        File a2 = this.mStrategy.a(uri);
         if (strArr == null) {
             strArr = COLUMNS;
         }
@@ -226,11 +225,11 @@ public class FileProvider extends ContentProvider {
             if ("_display_name".equals(str3)) {
                 strArr3[i2] = "_display_name";
                 i = i2 + 1;
-                objArr[i2] = a.getName();
+                objArr[i2] = a2.getName();
             } else if ("_size".equals(str3)) {
                 strArr3[i2] = "_size";
                 i = i2 + 1;
-                objArr[i2] = Long.valueOf(a.length());
+                objArr[i2] = Long.valueOf(a2.length());
             }
             i2 = i;
         }
@@ -254,17 +253,16 @@ public class FileProvider extends ContentProvider {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.sina.weibo.sdk.content.FileProvider$b */
     /* loaded from: classes7.dex */
-    public static class C6216b implements InterfaceC6215a {
+    public static class b implements a {
         private final String g;
         final HashMap<String, File> h = new HashMap<>();
 
-        public C6216b(String str) {
+        public b(String str) {
             this.g = str;
         }
 
-        @Override // com.sina.weibo.sdk.content.FileProvider.InterfaceC6215a
+        @Override // com.sina.weibo.sdk.content.FileProvider.a
         public final Uri a(File file) {
             String substring;
             try {
@@ -291,7 +289,7 @@ public class FileProvider extends ContentProvider {
             }
         }
 
-        @Override // com.sina.weibo.sdk.content.FileProvider.InterfaceC6215a
+        @Override // com.sina.weibo.sdk.content.FileProvider.a
         public final File a(Uri uri) {
             String encodedPath = uri.getEncodedPath();
             int indexOf = encodedPath.indexOf(47, 1);

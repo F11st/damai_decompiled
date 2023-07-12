@@ -25,14 +25,13 @@ public class ActivityLifeCycleDispatcher extends AbsDispatcher<IActivityLifeCycl
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.ActivityLifeCycleDispatcher$a */
     /* loaded from: classes11.dex */
-    class C6768a implements AbsDispatcher.ListenerCaller<IActivityLifeCycle> {
+    class a implements AbsDispatcher.ListenerCaller<IActivityLifeCycle> {
         final /* synthetic */ Activity a;
         final /* synthetic */ Map b;
         final /* synthetic */ long c;
 
-        C6768a(ActivityLifeCycleDispatcher activityLifeCycleDispatcher, Activity activity, Map map, long j) {
+        a(ActivityLifeCycleDispatcher activityLifeCycleDispatcher, Activity activity, Map map, long j) {
             this.a = activity;
             this.b = map;
             this.c = j;
@@ -46,13 +45,12 @@ public class ActivityLifeCycleDispatcher extends AbsDispatcher<IActivityLifeCycl
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.ActivityLifeCycleDispatcher$b */
     /* loaded from: classes11.dex */
-    class C6769b implements AbsDispatcher.ListenerCaller<IActivityLifeCycle> {
+    class b implements AbsDispatcher.ListenerCaller<IActivityLifeCycle> {
         final /* synthetic */ Activity a;
         final /* synthetic */ long b;
 
-        C6769b(ActivityLifeCycleDispatcher activityLifeCycleDispatcher, Activity activity, long j) {
+        b(ActivityLifeCycleDispatcher activityLifeCycleDispatcher, Activity activity, long j) {
             this.a = activity;
             this.b = j;
         }
@@ -65,13 +63,12 @@ public class ActivityLifeCycleDispatcher extends AbsDispatcher<IActivityLifeCycl
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.ActivityLifeCycleDispatcher$c */
     /* loaded from: classes11.dex */
-    class C6770c implements AbsDispatcher.ListenerCaller<IActivityLifeCycle> {
+    class c implements AbsDispatcher.ListenerCaller<IActivityLifeCycle> {
         final /* synthetic */ Activity a;
         final /* synthetic */ long b;
 
-        C6770c(ActivityLifeCycleDispatcher activityLifeCycleDispatcher, Activity activity, long j) {
+        c(ActivityLifeCycleDispatcher activityLifeCycleDispatcher, Activity activity, long j) {
             this.a = activity;
             this.b = j;
         }
@@ -84,13 +81,12 @@ public class ActivityLifeCycleDispatcher extends AbsDispatcher<IActivityLifeCycl
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.ActivityLifeCycleDispatcher$d */
     /* loaded from: classes11.dex */
-    class C6771d implements AbsDispatcher.ListenerCaller<IActivityLifeCycle> {
+    class d implements AbsDispatcher.ListenerCaller<IActivityLifeCycle> {
         final /* synthetic */ Activity a;
         final /* synthetic */ long b;
 
-        C6771d(ActivityLifeCycleDispatcher activityLifeCycleDispatcher, Activity activity, long j) {
+        d(ActivityLifeCycleDispatcher activityLifeCycleDispatcher, Activity activity, long j) {
             this.a = activity;
             this.b = j;
         }
@@ -103,13 +99,12 @@ public class ActivityLifeCycleDispatcher extends AbsDispatcher<IActivityLifeCycl
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.ActivityLifeCycleDispatcher$e */
     /* loaded from: classes11.dex */
-    class C6772e implements AbsDispatcher.ListenerCaller<IActivityLifeCycle> {
+    class e implements AbsDispatcher.ListenerCaller<IActivityLifeCycle> {
         final /* synthetic */ Activity a;
         final /* synthetic */ long b;
 
-        C6772e(ActivityLifeCycleDispatcher activityLifeCycleDispatcher, Activity activity, long j) {
+        e(ActivityLifeCycleDispatcher activityLifeCycleDispatcher, Activity activity, long j) {
             this.a = activity;
             this.b = j;
         }
@@ -122,13 +117,12 @@ public class ActivityLifeCycleDispatcher extends AbsDispatcher<IActivityLifeCycl
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.ActivityLifeCycleDispatcher$f */
     /* loaded from: classes11.dex */
-    class C6773f implements AbsDispatcher.ListenerCaller<IActivityLifeCycle> {
+    class f implements AbsDispatcher.ListenerCaller<IActivityLifeCycle> {
         final /* synthetic */ Activity a;
         final /* synthetic */ long b;
 
-        C6773f(ActivityLifeCycleDispatcher activityLifeCycleDispatcher, Activity activity, long j) {
+        f(ActivityLifeCycleDispatcher activityLifeCycleDispatcher, Activity activity, long j) {
             this.a = activity;
             this.b = j;
         }
@@ -141,26 +135,26 @@ public class ActivityLifeCycleDispatcher extends AbsDispatcher<IActivityLifeCycl
     }
 
     public void f(Activity activity, Map<String, Object> map, long j) {
-        c(new C6768a(this, activity, map, j));
+        c(new a(this, activity, map, j));
     }
 
     public void g(Activity activity, long j) {
-        c(new C6773f(this, activity, j));
+        c(new f(this, activity, j));
     }
 
     public void h(Activity activity, long j) {
-        c(new C6771d(this, activity, j));
+        c(new d(this, activity, j));
     }
 
     public void i(Activity activity, long j) {
-        c(new C6770c(this, activity, j));
+        c(new c(this, activity, j));
     }
 
     public void j(Activity activity, long j) {
-        c(new C6769b(this, activity, j));
+        c(new b(this, activity, j));
     }
 
     public void k(Activity activity, long j) {
-        c(new C6772e(this, activity, j));
+        c(new e(this, activity, j));
     }
 }

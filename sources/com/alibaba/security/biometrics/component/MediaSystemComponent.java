@@ -3,20 +3,18 @@ package com.alibaba.security.biometrics.component;
 import android.app.Activity;
 import android.content.Context;
 import com.alibaba.security.biometrics.ALBiometricsEventListener;
-import com.alibaba.security.biometrics.b.C3744c;
-import com.alibaba.security.biometrics.b.InterfaceC3742a;
 import com.alibaba.security.biometrics.service.model.detector.ABDetectType;
 import com.alibaba.security.biometrics.service.model.params.ALBiometricsParams;
 import com.alibaba.security.biometrics.theme.ALBiometricsConfig;
-import com.alibaba.security.common.d.C3818l;
+import com.alibaba.security.common.d.l;
 import com.taobao.weex.annotation.JSMethod;
 import java.util.Locale;
 
 /* compiled from: Taobao */
-@InterfaceC3773f
+@f
 /* loaded from: classes8.dex */
-public class MediaSystemComponent extends AbstractC3768a {
-    protected InterfaceC3742a d;
+public class MediaSystemComponent extends a {
+    protected com.alibaba.security.biometrics.b.a d;
 
     /* compiled from: Taobao */
     /* renamed from: com.alibaba.security.biometrics.component.MediaSystemComponent$1  reason: invalid class name */
@@ -98,14 +96,14 @@ public class MediaSystemComponent extends AbstractC3768a {
             if (context == null) {
                 return 0;
             }
-            return context.getResources().getIdentifier(getResourceName(this.resourceName), "raw", C3818l.a(context));
+            return context.getResources().getIdentifier(getResourceName(this.resourceName), "raw", l.a(context));
         }
     }
 
     private void a(Activity activity) {
         try {
             if (this.d == null) {
-                this.d = new C3744c(activity);
+                this.d = new com.alibaba.security.biometrics.b.c(activity);
             }
         } catch (Exception unused) {
         }
@@ -133,48 +131,48 @@ public class MediaSystemComponent extends AbstractC3768a {
         }
     }
 
-    @Override // com.alibaba.security.biometrics.component.AbstractC3768a, com.alibaba.security.biometrics.component.InterfaceC3771d
+    @Override // com.alibaba.security.biometrics.component.a, com.alibaba.security.biometrics.component.d
     public final boolean c() {
-        InterfaceC3742a interfaceC3742a = this.d;
-        if (interfaceC3742a != null) {
-            interfaceC3742a.b();
+        com.alibaba.security.biometrics.b.a aVar = this.d;
+        if (aVar != null) {
+            aVar.b();
             this.d = null;
         }
         return super.c();
     }
 
     public final void d() {
-        InterfaceC3742a interfaceC3742a = this.d;
-        if (interfaceC3742a != null) {
-            interfaceC3742a.a();
+        com.alibaba.security.biometrics.b.a aVar = this.d;
+        if (aVar != null) {
+            aVar.a();
         }
     }
 
     public final void a(boolean z) {
-        InterfaceC3742a interfaceC3742a = this.d;
-        if (interfaceC3742a != null) {
-            interfaceC3742a.a(z);
+        com.alibaba.security.biometrics.b.a aVar = this.d;
+        if (aVar != null) {
+            aVar.a(z);
         }
     }
 
-    @Override // com.alibaba.security.biometrics.component.AbstractC3768a, com.alibaba.security.biometrics.component.InterfaceC3771d
+    @Override // com.alibaba.security.biometrics.component.a, com.alibaba.security.biometrics.component.d
     public final boolean a(Activity activity, ALBiometricsParams aLBiometricsParams, ALBiometricsConfig aLBiometricsConfig, ALBiometricsEventListener aLBiometricsEventListener) {
         super.a(activity, aLBiometricsParams, aLBiometricsConfig, aLBiometricsEventListener);
         try {
             if (this.d == null) {
-                this.d = new C3744c(activity);
+                this.d = new com.alibaba.security.biometrics.b.c(activity);
             }
         } catch (Exception unused) {
         }
-        a(((AudioSettingComponent) C3772e.a(AudioSettingComponent.class)).d);
+        a(((AudioSettingComponent) e.a(AudioSettingComponent.class)).d);
         return false;
     }
 
     public final void a(ABDetectType aBDetectType) {
-        InterfaceC3742a interfaceC3742a;
+        com.alibaba.security.biometrics.b.a aVar;
         AudioType audioType;
-        InterfaceC3742a interfaceC3742a2;
-        if (aBDetectType == ABDetectType.AIMLESS || (interfaceC3742a = this.d) == null || interfaceC3742a.d()) {
+        com.alibaba.security.biometrics.b.a aVar2;
+        if (aBDetectType == ABDetectType.AIMLESS || (aVar = this.d) == null || aVar.d()) {
             return;
         }
         switch (AnonymousClass1.a[aBDetectType.ordinal()]) {
@@ -202,9 +200,9 @@ public class MediaSystemComponent extends AbstractC3768a {
                 audioType = null;
                 break;
         }
-        if (audioType == null || (interfaceC3742a2 = this.d) == null) {
+        if (audioType == null || (aVar2 = this.d) == null) {
             return;
         }
-        interfaceC3742a2.a(audioType);
+        aVar2.a(audioType);
     }
 }

@@ -25,15 +25,14 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: androidx.cardview.R$color */
     /* loaded from: classes.dex */
-    public static final class C0023color {
+    public static final class color {
         public static final int cardview_dark_background = 0x7f060118;
         public static final int cardview_light_background = 0x7f060119;
         public static final int cardview_shadow_end_color = 0x7f06011a;
         public static final int cardview_shadow_start_color = 0x7f06011b;
 
-        private C0023color() {
+        private color() {
         }
     }
 
@@ -49,15 +48,14 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: androidx.cardview.R$style */
     /* loaded from: classes.dex */
-    public static final class C0024style {
+    public static final class style {
         public static final int Base_CardView = 0x7f120035;
         public static final int CardView = 0x7f120110;
         public static final int CardView_Dark = 0x7f120111;
         public static final int CardView_Light = 0x7f120112;
 
-        private C0024style() {
+        private style() {
         }
     }
 

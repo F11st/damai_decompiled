@@ -6,9 +6,9 @@ import android.content.Context;
 import android.os.Bundle;
 import android.widget.ImageView;
 import androidx.annotation.Nullable;
-import com.airbnb.lottie.C2821a;
 import com.airbnb.lottie.LottieDrawable;
 import com.airbnb.lottie.OnCompositionLoadedListener;
+import com.airbnb.lottie.a;
 import com.baseproject.ui.R$id;
 import com.baseproject.ui.R$layout;
 import com.baseproject.ui.R$style;
@@ -76,10 +76,10 @@ public class YoukuLoading {
                 }
             };
             try {
-                C2821a.C2823b.a(context, "loading_sphere.json", new OnCompositionLoadedListener() { // from class: com.youku.widget.YoukuLoading.2
+                a.b.a(context, "loading_sphere.json", new OnCompositionLoadedListener() { // from class: com.youku.widget.YoukuLoading.2
                     @Override // com.airbnb.lottie.OnCompositionLoadedListener
-                    public void onCompositionLoaded(@Nullable C2821a c2821a) {
-                        LottieDrawable.this.setComposition(c2821a);
+                    public void onCompositionLoaded(@Nullable a aVar) {
+                        LottieDrawable.this.setComposition(aVar);
                     }
                 });
                 lottieDrawable.loop(true);

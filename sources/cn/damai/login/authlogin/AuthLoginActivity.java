@@ -10,11 +10,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -41,7 +40,7 @@ public class AuthLoginActivity extends DamaiBaseActivity {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final String KEY_INFO_NEED_AUTH = "key_info_need_auth";
     public static final String KEY_THIRD_URL = "key_third_url";
-    private View.OnClickListener mAgreementClickListener = new View$OnClickListenerC1321a();
+    private View.OnClickListener mAgreementClickListener = new a();
     private TextView mAuthAgreementView;
     private TextView mAuthButton;
     private TextView mAuthDetailView;
@@ -56,12 +55,11 @@ public class AuthLoginActivity extends DamaiBaseActivity {
     private String mThirdUrl;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.login.authlogin.AuthLoginActivity$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1321a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1321a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -70,18 +68,17 @@ public class AuthLoginActivity extends DamaiBaseActivity {
             if (AndroidInstantRuntime.support(ipChange, "2031520084")) {
                 ipChange.ipc$dispatch("2031520084", new Object[]{this, view});
             } else {
-                C0529c.e().x(AuthLoginActivity.this.mAuthUtHelper.f(AuthLoginActivity.this.mBizType));
+                c.e().x(AuthLoginActivity.this.mAuthUtHelper.f(AuthLoginActivity.this.mBizType));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.login.authlogin.AuthLoginActivity$b */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1322b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1322b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -92,7 +89,7 @@ public class AuthLoginActivity extends DamaiBaseActivity {
                 return;
             }
             AuthLoginActivity.this.requestAuthThirdPage();
-            C0529c.e().x(AuthLoginActivity.this.mAuthUtHelper.g(AuthLoginActivity.this.mBizType));
+            c.e().x(AuthLoginActivity.this.mAuthUtHelper.g(AuthLoginActivity.this.mBizType));
         }
     }
 
@@ -165,8 +162,8 @@ public class AuthLoginActivity extends DamaiBaseActivity {
             ipChange.ipc$dispatch("753713020", new Object[]{this, authInfoBean});
         } else if (authInfoBean == null) {
         } else {
-            C0504a.b().loadinto(authInfoBean.fromIconUrl, this.mAuthorizerIcon);
-            C0504a.b().loadinto(authInfoBean.toIconUrl, this.mAuthorizedIcon);
+            cn.damai.common.image.a.b().loadinto(authInfoBean.fromIconUrl, this.mAuthorizerIcon);
+            cn.damai.common.image.a.b().loadinto(authInfoBean.toIconUrl, this.mAuthorizedIcon);
             this.mAuthTitleView.setText(authInfoBean.infoTitle);
             if (!m91.a(authInfoBean.infoList)) {
                 StringBuilder sb = new StringBuilder();
@@ -203,7 +200,7 @@ public class AuthLoginActivity extends DamaiBaseActivity {
             this.mAuthAgreementView.setMovementMethod(LinkMovementMethod.getInstance());
             this.mAuthAgreementView.setLinkTextColor(Color.parseColor("#10AAFF"));
             this.mAuthAgreementView.setText(spannableStringBuilder);
-            this.mAuthButton.setOnClickListener(new View$OnClickListenerC1322b());
+            this.mAuthButton.setOnClickListener(new b());
         }
     }
 
@@ -214,7 +211,7 @@ public class AuthLoginActivity extends DamaiBaseActivity {
             ipChange.ipc$dispatch("-1652958850", new Object[]{this, Integer.valueOf(i)});
         } else if (i == 10001 || i == 10003) {
             onBackPressed();
-            C0529c.e().z(this.mAuthUtHelper.h(this.mBizType));
+            c.e().z(this.mAuthUtHelper.h(this.mBizType));
         }
     }
 

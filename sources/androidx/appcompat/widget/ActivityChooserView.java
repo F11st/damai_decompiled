@@ -135,7 +135,7 @@ public class ActivityChooserView extends ViewGroup implements ActivityChooserMod
             if (itemViewType != 0) {
                 if (itemViewType == 1) {
                     if (view == null || view.getId() != 1) {
-                        View inflate = LayoutInflater.from(ActivityChooserView.this.getContext()).inflate(R.C0013layout.abc_activity_chooser_view_list_item, viewGroup, false);
+                        View inflate = LayoutInflater.from(ActivityChooserView.this.getContext()).inflate(R.layout.abc_activity_chooser_view_list_item, viewGroup, false);
                         inflate.setId(1);
                         ((TextView) inflate.findViewById(R.id.title)).setText(ActivityChooserView.this.getContext().getString(R.string.abc_activity_chooser_view_see_all));
                         return inflate;
@@ -145,7 +145,7 @@ public class ActivityChooserView extends ViewGroup implements ActivityChooserMod
                 throw new IllegalArgumentException();
             }
             if (view == null || view.getId() != R.id.list_item) {
-                view = LayoutInflater.from(ActivityChooserView.this.getContext()).inflate(R.C0013layout.abc_activity_chooser_view_list_item, viewGroup, false);
+                view = LayoutInflater.from(ActivityChooserView.this.getContext()).inflate(R.layout.abc_activity_chooser_view_list_item, viewGroup, false);
             }
             PackageManager packageManager = ActivityChooserView.this.getContext().getPackageManager();
             ResolveInfo resolveInfo = (ResolveInfo) getItem(i);
@@ -551,7 +551,7 @@ public class ActivityChooserView extends ViewGroup implements ActivityChooserMod
         this.mInitialActivityCount = obtainStyledAttributes.getInt(R.styleable.ActivityChooserView_initialActivityCount, 4);
         Drawable drawable = obtainStyledAttributes.getDrawable(R.styleable.ActivityChooserView_expandActivityOverflowButtonDrawable);
         obtainStyledAttributes.recycle();
-        LayoutInflater.from(getContext()).inflate(R.C0013layout.abc_activity_chooser_view, (ViewGroup) this, true);
+        LayoutInflater.from(getContext()).inflate(R.layout.abc_activity_chooser_view, (ViewGroup) this, true);
         Callbacks callbacks = new Callbacks();
         this.mCallbacks = callbacks;
         View findViewById = findViewById(R.id.activity_chooser_view_content);

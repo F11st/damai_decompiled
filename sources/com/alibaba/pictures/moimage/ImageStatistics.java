@@ -5,7 +5,6 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.text.TextUtils;
 import com.ali.user.mobile.login.model.LoginConstant;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.io.Serializable;
@@ -17,7 +16,7 @@ import tb.b41;
 import tb.k50;
 
 /* compiled from: Taobao */
-@Metadata(bv = {1, 0, 3}, d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\b\n\u0002\b\u000e\n\u0002\u0010\u000b\n\u0002\b\u0015\u0018\u0000 ,2\u00020\u0001:\u0001-B\u0007¢\u0006\u0004\b*\u0010+J\u000e\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002J\b\u0010\u0007\u001a\u0004\u0018\u00010\u0006J\u0006\u0010\t\u001a\u00020\bR\u0016\u0010\u000b\u001a\u00020\n8\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u000b\u0010\fR\"\u0010\r\u001a\u00020\n8\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b\r\u0010\f\u001a\u0004\b\u000e\u0010\u000f\"\u0004\b\u0010\u0010\u0011R\u0016\u0010\u0012\u001a\u00020\b8\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u0012\u0010\u0013R\u0016\u0010\u0014\u001a\u00020\b8\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u0014\u0010\u0013R\u0016\u0010\u0015\u001a\u00020\b8\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u0015\u0010\u0013R\u0018\u0010\u0016\u001a\u0004\u0018\u00010\u00068\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u0016\u0010\u0017R\u0018\u0010\u0018\u001a\u0004\u0018\u00010\u00068\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u0018\u0010\u0017R\u0016\u0010\u001a\u001a\u00020\u00198\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u001a\u0010\u001bR\u0016\u0010\u001c\u001a\u00020\n8\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u001c\u0010\fR\u0018\u0010\u001d\u001a\u0004\u0018\u00010\u00068\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u001d\u0010\u0017R\u0016\u0010\u001e\u001a\u00020\n8\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u001e\u0010\fR\u0013\u0010!\u001a\u00020\u00068F@\u0006¢\u0006\u0006\u001a\u0004\b\u001f\u0010 R\u0013\u0010#\u001a\u00020\u00068F@\u0006¢\u0006\u0006\u001a\u0004\b\"\u0010 R\u0013\u0010%\u001a\u00020\u00068F@\u0006¢\u0006\u0006\u001a\u0004\b$\u0010 R\u0013\u0010'\u001a\u00020\u00068F@\u0006¢\u0006\u0006\u001a\u0004\b&\u0010 R\u0013\u0010)\u001a\u00020\u00068F@\u0006¢\u0006\u0006\u001a\u0004\b(\u0010 ¨\u0006."}, d2 = {"Lcom/alibaba/pictures/moimage/ImageStatistics;", "Ljava/io/Serializable;", "", "model", "Ltb/wt2;", "updatePath", "", "getPageName", "", "getTotalTime", "", "imageType", "I", "connType", "getConnType", "()I", "setConnType", "(I)V", LoginConstant.START_TIME, "J", "endTime", com.taobao.phenix.request.ImageStatistics.KEY_TOTAL_TIME, AbstractC3893a.V, "Ljava/lang/String;", "dataSource", "", "isFirstResource", "Z", "size", "pageName", "businessType", "getImgTypeName", "()Ljava/lang/String;", "imgTypeName", "getDataSourceName", "dataSourceName", "getBusinessTypeName", "businessTypeName", "getFormat", "format", "getConnTypeName", "connTypeName", "<init>", "()V", "Companion", "a", "moimage_release"}, k = 1, mv = {1, 4, 2})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\b\n\u0002\b\u000e\n\u0002\u0010\u000b\n\u0002\b\u0015\u0018\u0000 ,2\u00020\u0001:\u0001-B\u0007¢\u0006\u0004\b*\u0010+J\u000e\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002J\b\u0010\u0007\u001a\u0004\u0018\u00010\u0006J\u0006\u0010\t\u001a\u00020\bR\u0016\u0010\u000b\u001a\u00020\n8\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u000b\u0010\fR\"\u0010\r\u001a\u00020\n8\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b\r\u0010\f\u001a\u0004\b\u000e\u0010\u000f\"\u0004\b\u0010\u0010\u0011R\u0016\u0010\u0012\u001a\u00020\b8\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u0012\u0010\u0013R\u0016\u0010\u0014\u001a\u00020\b8\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u0014\u0010\u0013R\u0016\u0010\u0015\u001a\u00020\b8\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u0015\u0010\u0013R\u0018\u0010\u0016\u001a\u0004\u0018\u00010\u00068\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u0016\u0010\u0017R\u0018\u0010\u0018\u001a\u0004\u0018\u00010\u00068\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u0018\u0010\u0017R\u0016\u0010\u001a\u001a\u00020\u00198\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u001a\u0010\u001bR\u0016\u0010\u001c\u001a\u00020\n8\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u001c\u0010\fR\u0018\u0010\u001d\u001a\u0004\u0018\u00010\u00068\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u001d\u0010\u0017R\u0016\u0010\u001e\u001a\u00020\n8\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u001e\u0010\fR\u0013\u0010!\u001a\u00020\u00068F@\u0006¢\u0006\u0006\u001a\u0004\b\u001f\u0010 R\u0013\u0010#\u001a\u00020\u00068F@\u0006¢\u0006\u0006\u001a\u0004\b\"\u0010 R\u0013\u0010%\u001a\u00020\u00068F@\u0006¢\u0006\u0006\u001a\u0004\b$\u0010 R\u0013\u0010'\u001a\u00020\u00068F@\u0006¢\u0006\u0006\u001a\u0004\b&\u0010 R\u0013\u0010)\u001a\u00020\u00068F@\u0006¢\u0006\u0006\u001a\u0004\b(\u0010 ¨\u0006."}, d2 = {"Lcom/alibaba/pictures/moimage/ImageStatistics;", "Ljava/io/Serializable;", "", "model", "Ltb/wt2;", "updatePath", "", "getPageName", "", "getTotalTime", "", "imageType", "I", "connType", "getConnType", "()I", "setConnType", "(I)V", LoginConstant.START_TIME, "J", "endTime", com.taobao.phenix.request.ImageStatistics.KEY_TOTAL_TIME, com.alibaba.security.realidentity.jsbridge.a.V, "Ljava/lang/String;", "dataSource", "", "isFirstResource", "Z", "size", "pageName", "businessType", "getImgTypeName", "()Ljava/lang/String;", "imgTypeName", "getDataSourceName", "dataSourceName", "getBusinessTypeName", "businessTypeName", "getFormat", "format", "getConnTypeName", "connTypeName", "<init>", "()V", "Companion", "a", "moimage_release"}, k = 1, mv = {1, 4, 2})
 /* loaded from: classes7.dex */
 public final class ImageStatistics implements Serializable {
     private static transient /* synthetic */ IpChange $ipChange = null;
@@ -26,7 +25,7 @@ public final class ImageStatistics implements Serializable {
     public static final int BUSINESS_TYPE_NORMAL = 0;
     public static final int BUSINESS_TYPE_PRELOAD = 2;
     @NotNull
-    public static final C3609a Companion = new C3609a(null);
+    public static final a Companion = new a(null);
     public static final int IMG_TYPE_GIF = 1;
     public static final int IMG_TYPE_NORMAL = 0;
     public static final int IMG_TYPE_WEBANI = 2;
@@ -56,13 +55,12 @@ public final class ImageStatistics implements Serializable {
     public long totalTime;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.moimage.ImageStatistics$a */
     /* loaded from: classes7.dex */
-    public static final class C3609a {
-        private C3609a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3609a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

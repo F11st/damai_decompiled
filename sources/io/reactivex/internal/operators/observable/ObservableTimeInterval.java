@@ -73,7 +73,7 @@ public final class ObservableTimeInterval<T> extends AbstractObservableWithUpstr
         this.unit = timeUnit;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super io2<T>> observer) {
         this.source.subscribe(new TimeIntervalObserver(observer, this.unit, this.scheduler));
     }

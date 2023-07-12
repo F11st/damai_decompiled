@@ -1,11 +1,8 @@
 package tb;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8215n;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import kotlin.reflect.jvm.internal.impl.load.java.components.TypeUsage;
@@ -27,7 +24,7 @@ public final class t81 extends t1 {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public t81(@NotNull r81 r81Var, @NotNull JavaTypeParameter javaTypeParameter, int i, @NotNull DeclarationDescriptor declarationDescriptor) {
         super(r81Var.e(), declarationDescriptor, new LazyJavaAnnotations(r81Var, javaTypeParameter, false, 4, null), javaTypeParameter.getName(), Variance.INVARIANT, false, i, SourceElement.NO_SOURCE, r81Var.a().v());
-        b41.i(r81Var, AbstractC5658c.a);
+        b41.i(r81Var, com.huawei.hms.opendevice.c.a);
         b41.i(javaTypeParameter, "javaTypeParameter");
         b41.i(declarationDescriptor, "containingDeclaration");
         this.k = r81Var;
@@ -43,10 +40,10 @@ public final class t81 extends t1 {
             b41.h(i, "c.module.builtIns.anyType");
             fd2 I = this.k.d().getBuiltIns().I();
             b41.h(I, "c.module.builtIns.nullableAnyType");
-            e = C8213l.e(KotlinTypeFactory.d(i, I));
+            e = kotlin.collections.l.e(KotlinTypeFactory.d(i, I));
             return e;
         }
-        q = C8215n.q(upperBounds, 10);
+        q = kotlin.collections.n.q(upperBounds, 10);
         ArrayList arrayList = new ArrayList(q);
         for (JavaClassifierType javaClassifierType : upperBounds) {
             arrayList.add(this.k.g().o(javaClassifierType, u51.d(TypeUsage.COMMON, false, this, 1, null)));

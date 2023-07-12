@@ -20,8 +20,8 @@ import androidx.fragment.app.Fragment;
 import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
-import cn.damai.commonbusiness.nav.C0724a;
+import cn.damai.common.user.c;
+import cn.damai.commonbusiness.nav.a;
 import cn.damai.issue.tool.IssueConstants;
 import cn.damai.login.LoginManager;
 import cn.damai.login.havana.HavanaProxy;
@@ -64,14 +64,14 @@ public class DmWebViewClient extends cl2 {
     final Pattern ACCEPTED_URI_SCHEMA;
     Activity activity;
     Fragment fragment;
-    C0724a unSkipProcessor;
+    a unSkipProcessor;
 
     public DmWebViewClient(Fragment fragment) {
         super(fragment.getActivity());
         this.ACCEPTED_URI_SCHEMA = Pattern.compile("(?i)((?:http|https|file):\\/\\/|(?:inline|data|about|javascript):|(?:.*:.*@))(.*)");
         this.fragment = fragment;
         this.activity = fragment.getActivity();
-        this.unSkipProcessor = new C0724a();
+        this.unSkipProcessor = new a();
     }
 
     private void checkLogin() {
@@ -319,7 +319,7 @@ public class DmWebViewClient extends cl2 {
             }
             String queryParameter2 = parse.getQueryParameter("utm");
             if (!TextUtils.isEmpty(queryParameter2)) {
-                C0529c.e().H("utm", queryParameter2);
+                c.e().H("utm", queryParameter2);
             }
             if (HavanaProxy.v().B(str)) {
                 if (!LoginManager.k().q()) {

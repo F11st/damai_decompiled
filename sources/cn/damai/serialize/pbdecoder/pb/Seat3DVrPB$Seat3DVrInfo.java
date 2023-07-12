@@ -4,12 +4,12 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.google.protobuf.AbstractMessageLite;
 import com.google.protobuf.ByteString;
-import com.google.protobuf.C5401g;
 import com.google.protobuf.CodedInputStream;
 import com.google.protobuf.CodedOutputStream;
 import com.google.protobuf.GeneratedMessageLite;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Parser;
+import com.google.protobuf.g;
 import java.io.IOException;
 import java.util.Objects;
 
@@ -41,7 +41,7 @@ public final class Seat3DVrPB$Seat3DVrInfo extends GeneratedMessageLite<Seat3DVr
     public static final class Builder extends GeneratedMessageLite.Builder<Seat3DVrPB$Seat3DVrInfo, Builder> implements Seat3DVrPB$Seat3DVrInfoOrBuilder {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        /* synthetic */ Builder(C1741a c1741a) {
+        /* synthetic */ Builder(a aVar) {
             this();
         }
 
@@ -639,7 +639,7 @@ public final class Seat3DVrPB$Seat3DVrInfo extends GeneratedMessageLite<Seat3DVr
         if (AndroidInstantRuntime.support(ipChange, "261418642")) {
             return ipChange.ipc$dispatch("261418642", new Object[]{this, methodToInvoke, obj, obj2});
         }
-        switch (C1741a.a[methodToInvoke.ordinal()]) {
+        switch (a.a[methodToInvoke.ordinal()]) {
             case 1:
                 return new Seat3DVrPB$Seat3DVrInfo();
             case 2:
@@ -674,11 +674,11 @@ public final class Seat3DVrPB$Seat3DVrInfo extends GeneratedMessageLite<Seat3DVr
                 this.i = visitor.visitString(!this.i.isEmpty(), this.i, !seat3DVrPB$Seat3DVrInfo.i.isEmpty(), seat3DVrPB$Seat3DVrInfo.i);
                 this.j = visitor.visitString(!this.j.isEmpty(), this.j, !seat3DVrPB$Seat3DVrInfo.j.isEmpty(), seat3DVrPB$Seat3DVrInfo.j);
                 this.k = visitor.visitString(!this.k.isEmpty(), this.k, !seat3DVrPB$Seat3DVrInfo.k.isEmpty(), seat3DVrPB$Seat3DVrInfo.k);
-                GeneratedMessageLite.C5383g c5383g = GeneratedMessageLite.C5383g.INSTANCE;
+                GeneratedMessageLite.g gVar = GeneratedMessageLite.g.INSTANCE;
                 return this;
             case 6:
                 CodedInputStream codedInputStream = (CodedInputStream) obj;
-                C5401g c5401g = (C5401g) obj2;
+                g gVar2 = (g) obj2;
                 while (!z) {
                     try {
                         int v = codedInputStream.v();
@@ -718,7 +718,7 @@ public final class Seat3DVrPB$Seat3DVrInfo extends GeneratedMessageLite<Seat3DVr
                 if (m == null) {
                     synchronized (Seat3DVrPB$Seat3DVrInfo.class) {
                         if (m == null) {
-                            m = new GeneratedMessageLite.C5378b(l);
+                            m = new GeneratedMessageLite.b(l);
                         }
                     }
                 }

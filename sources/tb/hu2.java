@@ -34,12 +34,11 @@ public class hu2 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.hu2$a */
     /* loaded from: classes11.dex */
-    public class AsyncTaskC9239a extends AsyncTask<Void, Void, Void> {
+    public class a extends AsyncTask<Void, Void, Void> {
         final /* synthetic */ Runnable a;
 
-        AsyncTaskC9239a(hu2 hu2Var, Runnable runnable) {
+        a(hu2 hu2Var, Runnable runnable) {
             this.a = runnable;
         }
 
@@ -71,7 +70,7 @@ public class hu2 {
     }
 
     public void executeThread(Runnable runnable) {
-        new AsyncTaskC9239a(this, runnable).execute(new Void[0]);
+        new a(this, runnable).execute(new Void[0]);
     }
 
     public String getConfig(String str, String str2, String str3) {
@@ -199,7 +198,7 @@ public class hu2 {
                 return;
             }
             f = true;
-            ACCSManager.registerDataListener(context, C9798v2.SERVICE_ID, accsAbstractDataListener);
+            ACCSManager.registerDataListener(context, v2.SERVICE_ID, accsAbstractDataListener);
         }
     }
 }

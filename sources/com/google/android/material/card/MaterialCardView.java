@@ -40,7 +40,7 @@ public class MaterialCardView extends CardView implements Checkable, Shapeable {
     private static final int[] CHECKABLE_STATE_SET = {16842911};
     private static final int[] CHECKED_STATE_SET = {16842912};
     private static final int[] DRAGGED_STATE_SET = {R.attr.state_dragged};
-    private static final int DEF_STYLE_RES = R.C4819style.Widget_MaterialComponents_CardView;
+    private static final int DEF_STYLE_RES = R.style.Widget_MaterialComponents_CardView;
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */

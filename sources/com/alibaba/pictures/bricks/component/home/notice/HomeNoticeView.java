@@ -28,7 +28,7 @@ import tb.s60;
 public final class HomeNoticeView extends AbsView<GenericItem<ItemValue>, HomeNoticeModel, HomeNoticePresent> implements HomeNoticeContract.View {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3477a Companion = new C3477a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String HOMEPAGE_ANNOUNCEMENT_CONTENT = "homepage_announcement_content";
     @NotNull
@@ -46,15 +46,14 @@ public final class HomeNoticeView extends AbsView<GenericItem<ItemValue>, HomeNo
     private final SharedPreferences sp;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.notice.HomeNoticeView$a */
     /* loaded from: classes7.dex */
-    public static final class C3477a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3477a() {
+        private a() {
         }
 
-        public /* synthetic */ C3477a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

@@ -7,7 +7,7 @@ import java.util.Locale;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class ControllerListenerOptions implements Parcelable {
-    public static final Parcelable.Creator<ControllerListenerOptions> CREATOR = new C5444a();
+    public static final Parcelable.Creator<ControllerListenerOptions> CREATOR = new a();
     public boolean enableAccel;
     public boolean enableGestures;
     public boolean enableGyro;
@@ -15,10 +15,9 @@ public class ControllerListenerOptions implements Parcelable {
     public boolean enableTouch;
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.vrcore.controller.api.ControllerListenerOptions$a */
     /* loaded from: classes10.dex */
-    class C5444a implements Parcelable.Creator<ControllerListenerOptions> {
-        C5444a() {
+    class a implements Parcelable.Creator<ControllerListenerOptions> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

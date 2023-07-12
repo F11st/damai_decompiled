@@ -10,17 +10,16 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes3.dex */
 public final class xq2 implements KTypeParameter {
     @NotNull
-    public static final C9936a Companion = new C9936a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.xq2$a */
     /* loaded from: classes3.dex */
-    public static final class C9936a {
+    public static final class a {
 
         /* compiled from: Taobao */
-        /* renamed from: tb.xq2$a$a */
+        /* renamed from: tb.xq2$a$a  reason: collision with other inner class name */
         /* loaded from: classes3.dex */
-        public /* synthetic */ class C9937a {
+        public /* synthetic */ class C0465a {
             public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
             static {
@@ -32,10 +31,10 @@ public final class xq2 implements KTypeParameter {
             }
         }
 
-        private C9936a() {
+        private a() {
         }
 
-        public /* synthetic */ C9936a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -43,7 +42,7 @@ public final class xq2 implements KTypeParameter {
         public final String a(@NotNull KTypeParameter kTypeParameter) {
             b41.i(kTypeParameter, "typeParameter");
             StringBuilder sb = new StringBuilder();
-            int i = C9937a.$EnumSwitchMapping$0[kTypeParameter.getVariance().ordinal()];
+            int i = C0465a.$EnumSwitchMapping$0[kTypeParameter.getVariance().ordinal()];
             if (i == 2) {
                 sb.append("in ");
             } else if (i == 3) {

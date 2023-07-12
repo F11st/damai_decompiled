@@ -9,16 +9,15 @@ import org.jetbrains.annotations.Nullable;
 public abstract class w61 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.w61$a */
     /* loaded from: classes3.dex */
-    public static final class C9845a extends w61 {
+    public static final class a extends w61 {
         @NotNull
         private final String a;
         @NotNull
         private final String b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C9845a(@NotNull String str, @NotNull String str2) {
+        public a(@NotNull String str, @NotNull String str2) {
             super(null);
             b41.i(str, "name");
             b41.i(str2, SocialConstants.PARAM_APP_DESC);
@@ -58,9 +57,9 @@ public abstract class w61 {
             if (this == obj) {
                 return true;
             }
-            if (obj instanceof C9845a) {
-                C9845a c9845a = (C9845a) obj;
-                return b41.d(c(), c9845a.c()) && b41.d(b(), c9845a.b());
+            if (obj instanceof a) {
+                a aVar = (a) obj;
+                return b41.d(c(), aVar.c()) && b41.d(b(), aVar.b());
             }
             return false;
         }
@@ -71,16 +70,15 @@ public abstract class w61 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.w61$b */
     /* loaded from: classes3.dex */
-    public static final class C9846b extends w61 {
+    public static final class b extends w61 {
         @NotNull
         private final String a;
         @NotNull
         private final String b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C9846b(@NotNull String str, @NotNull String str2) {
+        public b(@NotNull String str, @NotNull String str2) {
             super(null);
             b41.i(str, "name");
             b41.i(str2, SocialConstants.PARAM_APP_DESC);
@@ -110,9 +108,9 @@ public abstract class w61 {
             if (this == obj) {
                 return true;
             }
-            if (obj instanceof C9846b) {
-                C9846b c9846b = (C9846b) obj;
-                return b41.d(c(), c9846b.c()) && b41.d(b(), c9846b.b());
+            if (obj instanceof b) {
+                b bVar = (b) obj;
+                return b41.d(c(), bVar.c()) && b41.d(b(), bVar.b());
             }
             return false;
         }

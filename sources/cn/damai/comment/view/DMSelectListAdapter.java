@@ -25,12 +25,11 @@ public final class DMSelectListAdapter extends RecyclerView.Adapter<PublishDMSel
     private List<DmInfo> c;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.view.DMSelectListAdapter$a */
     /* loaded from: classes4.dex */
-    public static final class C0461a implements OnItemClickListener {
+    public static final class a implements OnItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0461a() {
+        a() {
         }
 
         @Override // cn.damai.comment.view.OnItemClickListener
@@ -107,7 +106,7 @@ public final class DMSelectListAdapter extends RecyclerView.Adapter<PublishDMSel
         b41.i(viewGroup, "parent");
         View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(R$layout.view_dm_select_item_view, viewGroup, false);
         b41.h(inflate, "from(parent.context)\n   …item_view, parent, false)");
-        return new PublishDMSelectViewHolder(inflate, new C0461a());
+        return new PublishDMSelectViewHolder(inflate, new a());
     }
 
     public final void e(@Nullable List<DmInfo> list, @Nullable DmInfo dmInfo) {

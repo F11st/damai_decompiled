@@ -287,7 +287,7 @@ public final class MaterialTimePicker extends DialogFragment {
         Context context = dialog.getContext();
         int resolveOrThrow = MaterialAttributes.resolveOrThrow(context, R.attr.colorSurface, MaterialTimePicker.class.getCanonicalName());
         int i = R.attr.materialTimePickerStyle;
-        int i2 = R.C4819style.Widget_MaterialComponents_TimePicker;
+        int i2 = R.style.Widget_MaterialComponents_TimePicker;
         MaterialShapeDrawable materialShapeDrawable = new MaterialShapeDrawable(context, null, i, i2);
         TypedArray obtainStyledAttributes = context.obtainStyledAttributes(null, R.styleable.MaterialTimePicker, i, i2);
         this.clockIcon = obtainStyledAttributes.getResourceId(R.styleable.MaterialTimePicker_clockIcon, 0);
@@ -305,7 +305,7 @@ public final class MaterialTimePicker extends DialogFragment {
     @Override // androidx.fragment.app.Fragment
     @NonNull
     public final View onCreateView(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, @Nullable Bundle bundle) {
-        ViewGroup viewGroup2 = (ViewGroup) layoutInflater.inflate(R.C4818layout.material_timepicker_dialog, viewGroup);
+        ViewGroup viewGroup2 = (ViewGroup) layoutInflater.inflate(R.layout.material_timepicker_dialog, viewGroup);
         TimePickerView timePickerView = (TimePickerView) viewGroup2.findViewById(R.id.material_timepicker_view);
         this.timePickerView = timePickerView;
         timePickerView.setOnDoubleTapListener(new TimePickerView.OnDoubleTapListener() { // from class: com.google.android.material.timepicker.MaterialTimePicker.1

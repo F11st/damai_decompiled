@@ -3,13 +3,11 @@ package com.taobao.phenix.cache.memory;
 import android.graphics.Bitmap;
 import android.os.Build;
 import android.text.TextUtils;
-import com.taobao.pexode.mimetype.C6838a;
 import com.taobao.pexode.mimetype.MimeType;
 import com.taobao.phenix.bitmap.BitmapPool;
 import com.taobao.phenix.cache.LruCache;
 import com.taobao.phenix.cache.memory.StaticCachedImage;
-import com.taobao.phenix.request.C6865a;
-import com.taobao.phenix.request.C6866b;
+import com.taobao.phenix.request.b;
 import com.taobao.rxm.consume.Consumer;
 import com.taobao.rxm.produce.BaseChainProducer;
 import java.util.Iterator;
@@ -26,8 +24,8 @@ import tb.z40;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class MemoryCacheProducer extends BaseChainProducer<tq1, z40, C6865a> {
-    private static final StaticCachedImage.StaticImageRecycleListener l = new C6850a();
+public class MemoryCacheProducer extends BaseChainProducer<tq1, z40, com.taobao.phenix.request.a> {
+    private static final StaticCachedImage.StaticImageRecycleListener l = new a();
     private final LruCache<String, ef> j;
     private final LimitedQueue<String> k;
 
@@ -52,10 +50,9 @@ public class MemoryCacheProducer extends BaseChainProducer<tq1, z40, C6865a> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.phenix.cache.memory.MemoryCacheProducer$a */
     /* loaded from: classes11.dex */
-    static class C6850a implements StaticCachedImage.StaticImageRecycleListener {
-        C6850a() {
+    static class a implements StaticCachedImage.StaticImageRecycleListener {
+        a() {
         }
 
         @Override // com.taobao.phenix.cache.memory.StaticCachedImage.StaticImageRecycleListener
@@ -74,7 +71,7 @@ public class MemoryCacheProducer extends BaseChainProducer<tq1, z40, C6865a> {
         this.k = new LimitedQueue<>(1024);
     }
 
-    private void I(Consumer<tq1, C6865a> consumer) {
+    private void I(Consumer<tq1, com.taobao.phenix.request.a> consumer) {
         if (ur1.o().k() != null) {
             ur1.o().k().onStart(consumer.getContext().U());
         }
@@ -116,12 +113,12 @@ public class MemoryCacheProducer extends BaseChainProducer<tq1, z40, C6865a> {
         return M;
     }
 
-    private static ef L(C6865a c6865a, z40 z40Var, StaticCachedImage.StaticImageRecycleListener staticImageRecycleListener) {
-        C6866b G = c6865a.G();
+    private static ef L(com.taobao.phenix.request.a aVar, z40 z40Var, StaticCachedImage.StaticImageRecycleListener staticImageRecycleListener) {
+        b G = aVar.G();
         if (z40Var.f()) {
-            return new StaticCachedImage(z40Var.b(), z40Var.c(), G.j(), G.f(), G.e(), c6865a.E()).l(staticImageRecycleListener);
+            return new StaticCachedImage(z40Var.b(), z40Var.c(), G.j(), G.f(), G.e(), aVar.E()).l(staticImageRecycleListener);
         }
-        return new v5(z40Var.a(), G.j(), G.f(), G.e(), c6865a.E());
+        return new v5(z40Var.a(), G.j(), G.f(), G.e(), aVar.E());
     }
 
     private static tq1 M(ef efVar, boolean z) {
@@ -130,17 +127,17 @@ public class MemoryCacheProducer extends BaseChainProducer<tq1, z40, C6865a> {
 
     @Override // com.taobao.rxm.produce.BaseChainProducer, com.taobao.rxm.consume.ChainConsumer
     /* renamed from: H */
-    public void consumeNewResult(Consumer<tq1, C6865a> consumer, boolean z, z40 z40Var) {
+    public void consumeNewResult(Consumer<tq1, com.taobao.phenix.request.a> consumer, boolean z, z40 z40Var) {
         boolean z2;
         ef L;
-        C6865a context = consumer.getContext();
+        com.taobao.phenix.request.a context = consumer.getContext();
         boolean b0 = context.b0();
         String K = context.K();
         ef efVar = null;
         tq1 J = context.d0() ? null : J(this.j, K, b0);
         boolean z3 = J == null;
         MimeType g = z40Var.d() != null ? z40Var.d().g() : null;
-        boolean z4 = ur1.w && Build.VERSION.SDK_INT == 28 && g != null && (g.g(C6838a.WEBP) || g.g(C6838a.WEBP_A));
+        boolean z4 = ur1.w && Build.VERSION.SDK_INT == 28 && g != null && (g.g(com.taobao.pexode.mimetype.a.WEBP) || g.g(com.taobao.pexode.mimetype.a.WEBP_A));
         if (z3) {
             if (z4) {
                 L = L(context, z40Var, null);
@@ -178,8 +175,8 @@ public class MemoryCacheProducer extends BaseChainProducer<tq1, z40, C6865a> {
     }
 
     @Override // tb.jh
-    protected boolean a(Consumer<tq1, C6865a> consumer) {
-        C6865a context = consumer.getContext();
+    protected boolean a(Consumer<tq1, com.taobao.phenix.request.a> consumer) {
+        com.taobao.phenix.request.a context = consumer.getContext();
         op0.e(context.U());
         if (consumer.getContext().d0()) {
             I(consumer);

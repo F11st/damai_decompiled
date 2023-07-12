@@ -53,25 +53,25 @@ public class LotteryCountLargeView extends LinearLayout {
         }
         switch (i) {
             case 0:
-                return R.C7941drawable.large_num_0;
+                return R.drawable.large_num_0;
             case 1:
-                return R.C7941drawable.large_num_01;
+                return R.drawable.large_num_01;
             case 2:
-                return R.C7941drawable.large_num_02;
+                return R.drawable.large_num_02;
             case 3:
-                return R.C7941drawable.large_num_03;
+                return R.drawable.large_num_03;
             case 4:
-                return R.C7941drawable.large_num_04;
+                return R.drawable.large_num_04;
             case 5:
-                return R.C7941drawable.large_num_05;
+                return R.drawable.large_num_05;
             case 6:
-                return R.C7941drawable.large_num_06;
+                return R.drawable.large_num_06;
             case 7:
-                return R.C7941drawable.large_num_07;
+                return R.drawable.large_num_07;
             case 8:
-                return R.C7941drawable.large_num_08;
+                return R.drawable.large_num_08;
             case 9:
-                return R.C7941drawable.large_num_09;
+                return R.drawable.large_num_09;
             default:
                 return 0;
         }
@@ -94,7 +94,7 @@ public class LotteryCountLargeView extends LinearLayout {
             ipChange.ipc$dispatch("1115031591", new Object[]{this});
             return;
         }
-        LayoutInflater.from(this.mContext).inflate(R.C7942layout.dago_pgc_gift_lottery_count_large_layout, this);
+        LayoutInflater.from(this.mContext).inflate(R.layout.dago_pgc_gift_lottery_count_large_layout, this);
         this.mHundredDigitView = (ImageView) findViewById(R.id.hundred_digit);
         this.mTenDigitView = (ImageView) findViewById(R.id.ten_digit);
         this.mSingleDigitView = (ImageView) findViewById(R.id.single_digit);

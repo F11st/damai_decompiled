@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.Scheduler;
+import io.reactivex.b;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import java.util.concurrent.TimeUnit;
 import org.reactivestreams.Subscriber;
@@ -120,15 +120,15 @@ public final class FlowableDelay<T> extends AbstractFlowableWithUpstream<T, T> {
         }
     }
 
-    public FlowableDelay(AbstractC8147b<T> abstractC8147b, long j, TimeUnit timeUnit, Scheduler scheduler, boolean z) {
-        super(abstractC8147b);
+    public FlowableDelay(b<T> bVar, long j, TimeUnit timeUnit, Scheduler scheduler, boolean z) {
+        super(bVar);
         this.delay = j;
         this.unit = timeUnit;
         this.scheduler = scheduler;
         this.delayError = z;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new DelaySubscriber(this.delayError ? subscriber : new ua2(subscriber), this.delay, this.unit, this.scheduler.createWorker(), this.delayError));
     }

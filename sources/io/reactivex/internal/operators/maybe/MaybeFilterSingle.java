@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8148c;
 import io.reactivex.MaybeObserver;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
+import io.reactivex.c;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Predicate;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -11,7 +11,7 @@ import tb.dg0;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeFilterSingle<T> extends AbstractC8148c<T> {
+public final class MaybeFilterSingle<T> extends c<T> {
     final Predicate<? super T> predicate;
     final SingleSource<T> source;
 
@@ -72,7 +72,7 @@ public final class MaybeFilterSingle<T> extends AbstractC8148c<T> {
         this.predicate = predicate;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         this.source.subscribe(new FilterMaybeObserver(maybeObserver, this.predicate));
     }

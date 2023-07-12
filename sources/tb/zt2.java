@@ -14,13 +14,12 @@ public class zt2 extends AbstractList<String> implements RandomAccess, LazyStrin
     private final LazyStringList a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.zt2$a */
     /* loaded from: classes3.dex */
-    class C10034a implements ListIterator<String> {
+    class a implements ListIterator<String> {
         ListIterator<String> a;
         final /* synthetic */ int b;
 
-        C10034a(int i) {
+        a(int i) {
             this.b = i;
             this.a = zt2.this.a.listIterator(i);
         }
@@ -76,12 +75,11 @@ public class zt2 extends AbstractList<String> implements RandomAccess, LazyStrin
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.zt2$b */
     /* loaded from: classes3.dex */
-    class C10035b implements Iterator<String> {
+    class b implements Iterator<String> {
         Iterator<String> a;
 
-        C10035b() {
+        b() {
             this.a = zt2.this.a.iterator();
         }
 
@@ -134,12 +132,12 @@ public class zt2 extends AbstractList<String> implements RandomAccess, LazyStrin
 
     @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.List
     public Iterator<String> iterator() {
-        return new C10035b();
+        return new b();
     }
 
     @Override // java.util.AbstractList, java.util.List
     public ListIterator<String> listIterator(int i) {
-        return new C10034a(i);
+        return new a(i);
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List

@@ -22,7 +22,7 @@ import com.youku.media.arch.instruments.statistics.ConfigReporter;
 import java.io.Serializable;
 import java.util.Objects;
 import kotlin.Metadata;
-import kotlinx.coroutines.C8690g;
+import kotlinx.coroutines.g;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -193,7 +193,7 @@ public final class WeiboShareActivity extends FragmentActivity implements WbShar
         if (AndroidInstantRuntime.support(ipChange, "899211060")) {
             ipChange.ipc$dispatch("899211060", new Object[]{this});
         } else {
-            C8690g.b(LifecycleOwnerKt.getLifecycleScope(this), da0.b(), null, new WeiboShareActivity$sendMultiMessage$1(this, null), 2, null);
+            g.b(LifecycleOwnerKt.getLifecycleScope(this), da0.b(), null, new WeiboShareActivity$sendMultiMessage$1(this, null), 2, null);
         }
     }
 

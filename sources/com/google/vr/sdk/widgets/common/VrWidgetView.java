@@ -27,10 +27,10 @@ import com.google.vr.sdk.widgets.common.VrWidgetRenderer;
 import com.google.vr.widgets.common.R$id;
 import com.google.vr.widgets.common.R$layout;
 import com.youku.live.dago.liveplayback.widget.plugins.resize.AntiShakeOrientationEventListener;
-import tb.C9201h5;
-import tb.C9796v;
 import tb.az2;
+import tb.h5;
 import tb.n62;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -119,7 +119,7 @@ public abstract class VrWidgetView extends FrameLayout {
         this.isTouchTrackingEnabled = true;
         this.isTransitionViewEnabled = true;
         this.screenOnFlagHelper = new n62(this.activity);
-        Display defaultDisplay = ((WindowManager) getContext().getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
+        Display defaultDisplay = ((WindowManager) getContext().getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
         DisplayMetrics displayMetrics = new DisplayMetrics();
         this.displayMetrics = displayMetrics;
         com.alibaba.wireless.security.aopsdk.replace.android.view.Display.getRealMetrics(defaultDisplay, displayMetrics);
@@ -270,7 +270,7 @@ public abstract class VrWidgetView extends FrameLayout {
 
     private void updateStereoMode() {
         this.renderer.setStereoMode(this.displayMode == 3);
-        C9201h5.i(this.activity, this.displayMode == 3, 0);
+        h5.i(this.activity, this.displayMode == 3, 0);
         if (this.displayMode == 3) {
             this.screenOnFlagHelper.b();
         } else {

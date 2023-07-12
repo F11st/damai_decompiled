@@ -1,6 +1,6 @@
 package cn.damai.dramachannel.ui;
 
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
@@ -16,12 +16,11 @@ public class DramaCommingActivity extends DamaiBaseActivity {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.dramachannel.ui.DramaCommingActivity$a */
     /* loaded from: classes5.dex */
-    public class C1075a implements SimpleTitleLayout.OnBtnClickListener {
+    public class a implements SimpleTitleLayout.OnBtnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1075a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.view.SimpleTitleLayout.OnBtnClickListener
@@ -81,7 +80,7 @@ public class DramaCommingActivity extends DamaiBaseActivity {
             return;
         }
         setDamaiUTKeyBuilder(i40.f().g());
-        C0529c.e().K(this);
+        c.e().K(this);
         hideBaseLayout();
         SimpleTitleLayout simpleTitleLayout = (SimpleTitleLayout) findViewById(R$id.theme_title_bar);
         simpleTitleLayout.enableImmersiveMode(this);
@@ -89,7 +88,7 @@ public class DramaCommingActivity extends DamaiBaseActivity {
         simpleTitleLayout.showShareBtn(false);
         simpleTitleLayout.switchMode(true);
         simpleTitleLayout.enableDivider(false);
-        simpleTitleLayout.setListener(new C1075a());
+        simpleTitleLayout.setListener(new a());
         getSupportFragmentManager().beginTransaction().add(R$id.drama_activity_root, new DramaCommingFragment()).commitAllowingStateLoss();
     }
 

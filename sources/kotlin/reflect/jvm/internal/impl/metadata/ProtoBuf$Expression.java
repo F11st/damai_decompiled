@@ -6,21 +6,20 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Type;
-import kotlin.reflect.jvm.internal.impl.protobuf.AbstractC8443a;
 import kotlin.reflect.jvm.internal.impl.protobuf.AbstractMessageLite;
 import kotlin.reflect.jvm.internal.impl.protobuf.ByteString;
-import kotlin.reflect.jvm.internal.impl.protobuf.C8447c;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedOutputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite;
 import kotlin.reflect.jvm.internal.impl.protobuf.Internal;
 import kotlin.reflect.jvm.internal.impl.protobuf.InvalidProtocolBufferException;
 import kotlin.reflect.jvm.internal.impl.protobuf.Parser;
+import kotlin.reflect.jvm.internal.impl.protobuf.c;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class ProtoBuf$Expression extends GeneratedMessageLite implements ProtoBuf$ExpressionOrBuilder {
-    public static Parser<ProtoBuf$Expression> PARSER = new C8401a();
+    public static Parser<ProtoBuf$Expression> PARSER = new a();
     private static final ProtoBuf$Expression defaultInstance;
     private List<ProtoBuf$Expression> andArgument_;
     private int bitField0_;
@@ -254,7 +253,7 @@ public final class ProtoBuf$Expression extends GeneratedMessageLite implements P
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Expression.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.C8447c r4) throws java.io.IOException {
+        public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Expression.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.c r4) throws java.io.IOException {
             /*
                 r2 = this;
                 r0 = 0
@@ -293,14 +292,13 @@ public final class ProtoBuf$Expression extends GeneratedMessageLite implements P
         FALSE(1, 1),
         NULL(2, 2);
         
-        private static Internal.EnumLiteMap<ConstantValue> internalValueMap = new C8400a();
+        private static Internal.EnumLiteMap<ConstantValue> internalValueMap = new a();
         private final int value;
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Expression$ConstantValue$a */
         /* loaded from: classes3.dex */
-        static class C8400a implements Internal.EnumLiteMap<ConstantValue> {
-            C8400a() {
+        static class a implements Internal.EnumLiteMap<ConstantValue> {
+            a() {
             }
 
             @Override // kotlin.reflect.jvm.internal.impl.protobuf.Internal.EnumLiteMap
@@ -334,16 +332,15 @@ public final class ProtoBuf$Expression extends GeneratedMessageLite implements P
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Expression$a */
     /* loaded from: classes3.dex */
-    static class C8401a extends AbstractC8443a<ProtoBuf$Expression> {
-        C8401a() {
+    static class a extends kotlin.reflect.jvm.internal.impl.protobuf.a<ProtoBuf$Expression> {
+        a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.protobuf.Parser
         /* renamed from: i */
-        public ProtoBuf$Expression parsePartialFrom(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
-            return new ProtoBuf$Expression(codedInputStream, c8447c);
+        public ProtoBuf$Expression parsePartialFrom(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
+            return new ProtoBuf$Expression(codedInputStream, cVar);
         }
     }
 
@@ -551,11 +548,11 @@ public final class ProtoBuf$Expression extends GeneratedMessageLite implements P
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    private ProtoBuf$Expression(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
+    private ProtoBuf$Expression(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
         this.memoizedIsInitialized = (byte) -1;
         this.memoizedSerializedSize = -1;
         initFields();
-        ByteString.C8436a n = ByteString.n();
+        ByteString.a n = ByteString.n();
         CodedOutputStream J = CodedOutputStream.J(n, 1);
         boolean z = false;
         boolean z2 = false;
@@ -582,7 +579,7 @@ public final class ProtoBuf$Expression extends GeneratedMessageLite implements P
                             }
                         } else if (K == 34) {
                             ProtoBuf$Type.Builder builder = (this.bitField0_ & 8) == 8 ? this.isInstanceType_.toBuilder() : null;
-                            ProtoBuf$Type protoBuf$Type = (ProtoBuf$Type) codedInputStream.u(ProtoBuf$Type.PARSER, c8447c);
+                            ProtoBuf$Type protoBuf$Type = (ProtoBuf$Type) codedInputStream.u(ProtoBuf$Type.PARSER, cVar);
                             this.isInstanceType_ = protoBuf$Type;
                             if (builder != null) {
                                 builder.mergeFrom(protoBuf$Type);
@@ -597,16 +594,16 @@ public final class ProtoBuf$Expression extends GeneratedMessageLite implements P
                                 this.andArgument_ = new ArrayList();
                                 z2 |= true;
                             }
-                            this.andArgument_.add(codedInputStream.u(PARSER, c8447c));
+                            this.andArgument_.add(codedInputStream.u(PARSER, cVar));
                         } else if (K != 58) {
-                            if (!parseUnknownField(codedInputStream, J, c8447c, K)) {
+                            if (!parseUnknownField(codedInputStream, J, cVar, K)) {
                             }
                         } else {
                             if (!(z2 & true)) {
                                 this.orArgument_ = new ArrayList();
                                 z2 |= true;
                             }
-                            this.orArgument_.add(codedInputStream.u(PARSER, c8447c));
+                            this.orArgument_.add(codedInputStream.u(PARSER, cVar));
                         }
                     }
                     z = true;

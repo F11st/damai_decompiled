@@ -24,15 +24,14 @@ public class EvaluateUserInfoUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.util.EvaluateUserInfoUtil$a */
     /* loaded from: classes13.dex */
-    private static class C0451a {
+    private static class a {
         private static final EvaluateUserInfoUtil a = new EvaluateUserInfoUtil();
     }
 
     public static final EvaluateUserInfoUtil a() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "2112246299") ? (EvaluateUserInfoUtil) ipChange.ipc$dispatch("2112246299", new Object[0]) : C0451a.a;
+        return AndroidInstantRuntime.support(ipChange, "2112246299") ? (EvaluateUserInfoUtil) ipChange.ipc$dispatch("2112246299", new Object[0]) : a.a;
     }
 
     public void b(CommentUserDoBean commentUserDoBean, DMAvatar dMAvatar, ImageView imageView, TextView textView, UserTagView userTagView, int i) {

@@ -13,11 +13,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.search.bean.BaccountInfo;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -29,10 +28,10 @@ import cn.damai.user.userprofile.FeedsViewModel;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.List;
-import tb.C9826vr;
 import tb.b82;
 import tb.cs;
 import tb.u12;
+import tb.vr;
 import tb.wh2;
 import tb.xr;
 import tb.yq;
@@ -60,12 +59,11 @@ public class AccountMoreAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         private View.OnClickListener j;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.search.ui.adapter.AccountMoreAdapter$AccountViewHolder$a */
         /* loaded from: classes15.dex */
-        public class View$OnClickListenerC1608a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC1608a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -93,7 +91,7 @@ public class AccountMoreAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         public AccountViewHolder(AccountMoreAdapter accountMoreAdapter, Context context, LayoutInflater layoutInflater) {
             super(layoutInflater.inflate(R$layout.search_list_baccount, (ViewGroup) null));
             this.i = new StringBuilder();
-            this.j = new View$OnClickListenerC1608a();
+            this.j = new a();
             this.itemView.setLayoutParams(new RecyclerView.LayoutParams(-1, -2));
             this.a = context;
             this.b = (LinearLayout) this.itemView.findViewById(R$id.ll_account);
@@ -148,7 +146,7 @@ public class AccountMoreAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             } else if (baccountInfo == null) {
             } else {
                 SearchHelper.a = baccountInfo.index;
-                C0529c.e().x(b82.C().H(baccountInfo.damaiId));
+                c.e().x(b82.C().H(baccountInfo.damaiId));
                 if (baccountInfo.type.equals("5")) {
                     Bundle bundle = new Bundle();
                     bundle.putString(RepertoireDetailFragment.REPERTOIREID, baccountInfo.damaiId);
@@ -171,10 +169,10 @@ public class AccountMoreAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 baccountInfo.index = i;
                 this.b.setTag(baccountInfo);
                 this.h.setTag(baccountInfo);
-                if (this.c.getTag() instanceof C9826vr) {
-                    ((C9826vr) this.c.getTag()).cancel();
+                if (this.c.getTag() instanceof vr) {
+                    ((vr) this.c.getTag()).cancel();
                 }
-                DMImageCreator c = C0504a.b().h(this.a).c(baccountInfo.headPic);
+                DMImageCreator c = cn.damai.common.image.a.b().h(this.a).c(baccountInfo.headPic);
                 int i2 = R$drawable.uikit_user_default_icon;
                 this.c.setTag(c.i(i2).c(i2).k(new yq()).g(this.c));
                 this.d.setVisibility(baccountInfo.isShowVTag() ? 0 : 8);

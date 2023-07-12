@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.Scheduler;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.functions.ObjectHelper;
@@ -484,8 +484,8 @@ public final class FlowableBufferTimed<T, U extends Collection<? super T>> exten
         }
     }
 
-    public FlowableBufferTimed(AbstractC8147b<T> abstractC8147b, long j, long j2, TimeUnit timeUnit, Scheduler scheduler, Callable<U> callable, int i, boolean z) {
-        super(abstractC8147b);
+    public FlowableBufferTimed(b<T> bVar, long j, long j2, TimeUnit timeUnit, Scheduler scheduler, Callable<U> callable, int i, boolean z) {
+        super(bVar);
         this.timespan = j;
         this.timeskip = j2;
         this.unit = timeUnit;
@@ -495,7 +495,7 @@ public final class FlowableBufferTimed<T, U extends Collection<? super T>> exten
         this.restartTimerOnMaxSize = z;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super U> subscriber) {
         if (this.timespan == this.timeskip && this.maxSize == Integer.MAX_VALUE) {
             this.source.subscribe((FlowableSubscriber) new BufferExactUnboundedSubscriber(new ua2(subscriber), this.bufferSupplier, this.timespan, this.unit, this.scheduler));

@@ -61,12 +61,12 @@ public final class Multimaps {
             objectOutputStream.writeObject(backingMap());
         }
 
-        @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.AbstractC5159c
+        @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.c
         Map<K, Collection<V>> createAsMap() {
             return createMaybeNavigableAsMap();
         }
 
-        @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.AbstractC5159c
+        @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.c
         Set<K> createKeySet() {
             return createMaybeNavigableKeySet();
         }
@@ -104,7 +104,7 @@ public final class Multimaps {
             objectOutputStream.writeObject(backingMap());
         }
 
-        @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.AbstractC5159c
+        @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.c
         Map<K, Collection<V>> createAsMap() {
             return createMaybeNavigableAsMap();
         }
@@ -114,7 +114,7 @@ public final class Multimaps {
             return this.factory.get();
         }
 
-        @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.AbstractC5159c
+        @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.c
         Set<K> createKeySet() {
             return createMaybeNavigableKeySet();
         }
@@ -142,15 +142,15 @@ public final class Multimaps {
                 return wrapList(k, (List) collection, null);
             }
             if (collection instanceof NavigableSet) {
-                return new AbstractMapBasedMultimap.C4917m(k, (NavigableSet) collection, null);
+                return new AbstractMapBasedMultimap.m(k, (NavigableSet) collection, null);
             }
             if (collection instanceof SortedSet) {
-                return new AbstractMapBasedMultimap.C4919o(k, (SortedSet) collection, null);
+                return new AbstractMapBasedMultimap.o(k, (SortedSet) collection, null);
             }
             if (collection instanceof Set) {
-                return new AbstractMapBasedMultimap.C4918n(k, (Set) collection);
+                return new AbstractMapBasedMultimap.n(k, (Set) collection);
             }
-            return new AbstractMapBasedMultimap.C4913k(k, collection, null);
+            return new AbstractMapBasedMultimap.k(k, collection, null);
         }
     }
 
@@ -180,12 +180,12 @@ public final class Multimaps {
             objectOutputStream.writeObject(backingMap());
         }
 
-        @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.AbstractC5159c
+        @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.c
         Map<K, Collection<V>> createAsMap() {
             return createMaybeNavigableAsMap();
         }
 
-        @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.AbstractC5159c
+        @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.c
         Set<K> createKeySet() {
             return createMaybeNavigableKeySet();
         }
@@ -204,12 +204,12 @@ public final class Multimaps {
         @Override // com.google.common.collect.AbstractSetMultimap, com.google.common.collect.AbstractMapBasedMultimap
         Collection<V> wrapCollection(K k, Collection<V> collection) {
             if (collection instanceof NavigableSet) {
-                return new AbstractMapBasedMultimap.C4917m(k, (NavigableSet) collection, null);
+                return new AbstractMapBasedMultimap.m(k, (NavigableSet) collection, null);
             }
             if (collection instanceof SortedSet) {
-                return new AbstractMapBasedMultimap.C4919o(k, (SortedSet) collection, null);
+                return new AbstractMapBasedMultimap.o(k, (SortedSet) collection, null);
             }
-            return new AbstractMapBasedMultimap.C4918n(k, (Set) collection);
+            return new AbstractMapBasedMultimap.n(k, (Set) collection);
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
@@ -222,31 +222,30 @@ public final class Multimaps {
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
-    public static class MapMultimap<K, V> extends AbstractC5159c<K, V> implements SetMultimap<K, V>, Serializable {
+    public static class MapMultimap<K, V> extends com.google.common.collect.c<K, V> implements SetMultimap<K, V>, Serializable {
         private static final long serialVersionUID = 7845222491160860175L;
         final Map<K, V> map;
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.Multimaps$MapMultimap$a */
         /* loaded from: classes10.dex */
-        public class C5071a extends Sets.AbstractC5098a<V> {
+        public class a extends Sets.a<V> {
             final /* synthetic */ Object a;
 
             /* compiled from: Taobao */
-            /* renamed from: com.google.common.collect.Multimaps$MapMultimap$a$a */
+            /* renamed from: com.google.common.collect.Multimaps$MapMultimap$a$a  reason: collision with other inner class name */
             /* loaded from: classes10.dex */
-            class C5072a implements Iterator<V> {
+            class C0229a implements Iterator<V> {
                 int a;
 
-                C5072a() {
+                C0229a() {
                 }
 
                 @Override // java.util.Iterator
                 public boolean hasNext() {
                     if (this.a == 0) {
-                        C5071a c5071a = C5071a.this;
-                        if (MapMultimap.this.map.containsKey(c5071a.a)) {
+                        a aVar = a.this;
+                        if (MapMultimap.this.map.containsKey(aVar.a)) {
                             return true;
                         }
                     }
@@ -257,28 +256,28 @@ public final class Multimaps {
                 public V next() {
                     if (hasNext()) {
                         this.a++;
-                        C5071a c5071a = C5071a.this;
-                        return MapMultimap.this.map.get(c5071a.a);
+                        a aVar = a.this;
+                        return MapMultimap.this.map.get(aVar.a);
                     }
                     throw new NoSuchElementException();
                 }
 
                 @Override // java.util.Iterator
                 public void remove() {
-                    C5191k.e(this.a == 1);
+                    k.e(this.a == 1);
                     this.a = -1;
-                    C5071a c5071a = C5071a.this;
-                    MapMultimap.this.map.remove(c5071a.a);
+                    a aVar = a.this;
+                    MapMultimap.this.map.remove(aVar.a);
                 }
             }
 
-            C5071a(Object obj) {
+            a(Object obj) {
                 this.a = obj;
             }
 
             @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
             public Iterator<V> iterator() {
-                return new C5072a();
+                return new C0229a();
             }
 
             @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
@@ -296,7 +295,7 @@ public final class Multimaps {
             this.map.clear();
         }
 
-        @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.c, com.google.common.collect.Multimap
         public boolean containsEntry(Object obj, Object obj2) {
             return this.map.entrySet().contains(Maps.j(obj, obj2));
         }
@@ -306,37 +305,37 @@ public final class Multimaps {
             return this.map.containsKey(obj);
         }
 
-        @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.c, com.google.common.collect.Multimap
         public boolean containsValue(Object obj) {
             return this.map.containsValue(obj);
         }
 
-        @Override // com.google.common.collect.AbstractC5159c
+        @Override // com.google.common.collect.c
         Map<K, Collection<V>> createAsMap() {
-            return new C5074a(this);
+            return new a(this);
         }
 
-        @Override // com.google.common.collect.AbstractC5159c
+        @Override // com.google.common.collect.c
         Collection<Map.Entry<K, V>> createEntries() {
             throw new AssertionError("unreachable");
         }
 
-        @Override // com.google.common.collect.AbstractC5159c
+        @Override // com.google.common.collect.c
         Set<K> createKeySet() {
             return this.map.keySet();
         }
 
-        @Override // com.google.common.collect.AbstractC5159c
+        @Override // com.google.common.collect.c
         Multiset<K> createKeys() {
-            return new C5078c(this);
+            return new c(this);
         }
 
-        @Override // com.google.common.collect.AbstractC5159c
+        @Override // com.google.common.collect.c
         Collection<V> createValues() {
             return this.map.values();
         }
 
-        @Override // com.google.common.collect.AbstractC5159c
+        @Override // com.google.common.collect.c
         Iterator<Map.Entry<K, V>> entryIterator() {
             return this.map.entrySet().iterator();
         }
@@ -347,28 +346,28 @@ public final class Multimaps {
             return get((MapMultimap<K, V>) obj);
         }
 
-        @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.c, com.google.common.collect.Multimap
         public int hashCode() {
             return this.map.hashCode();
         }
 
-        @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.c, com.google.common.collect.Multimap
         public boolean put(K k, V v) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.c, com.google.common.collect.Multimap
         public boolean putAll(K k, Iterable<? extends V> iterable) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.c, com.google.common.collect.Multimap
         public boolean remove(Object obj, Object obj2) {
             return this.map.entrySet().remove(Maps.j(obj, obj2));
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.c, com.google.common.collect.Multimap
         public /* bridge */ /* synthetic */ Collection replaceValues(Object obj, Iterable iterable) {
             return replaceValues((MapMultimap<K, V>) obj, iterable);
         }
@@ -378,17 +377,17 @@ public final class Multimaps {
             return this.map.size();
         }
 
-        @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.c, com.google.common.collect.Multimap
         public Set<Map.Entry<K, V>> entries() {
             return this.map.entrySet();
         }
 
         @Override // com.google.common.collect.Multimap
         public Set<V> get(K k) {
-            return new C5071a(k);
+            return new a(k);
         }
 
-        @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.c, com.google.common.collect.Multimap
         public boolean putAll(Multimap<? extends K, ? extends V> multimap) {
             throw new UnsupportedOperationException();
         }
@@ -403,7 +402,7 @@ public final class Multimaps {
             return hashSet;
         }
 
-        @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.c, com.google.common.collect.Multimap
         public Set<V> replaceValues(K k, Iterable<? extends V> iterable) {
             throw new UnsupportedOperationException();
         }
@@ -419,33 +418,33 @@ public final class Multimaps {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.Multimap
         public /* bridge */ /* synthetic */ Collection get(Object obj) {
             return get((UnmodifiableListMultimap<K, V>) obj);
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.Multimap
         public /* bridge */ /* synthetic */ Collection replaceValues(Object obj, Iterable iterable) {
             return replaceValues((UnmodifiableListMultimap<K, V>) obj, iterable);
         }
 
-        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.Multimap
         public List<V> get(K k) {
             return Collections.unmodifiableList(delegate().get((ListMultimap<K, V>) k));
         }
 
-        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.Multimap
         public List<V> removeAll(Object obj) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.Multimap
         public List<V> replaceValues(K k, Iterable<? extends V> iterable) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.AbstractC5205t
+        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.t
         public ListMultimap<K, V> delegate() {
             return (ListMultimap) super.delegate();
         }
@@ -454,7 +453,7 @@ public final class Multimaps {
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
-    public static class UnmodifiableMultimap<K, V> extends AbstractC5203r<K, V> implements Serializable {
+    public static class UnmodifiableMultimap<K, V> extends r<K, V> implements Serializable {
         private static final long serialVersionUID = 0;
         final Multimap<K, V> delegate;
         @MonotonicNonNullDecl
@@ -469,10 +468,9 @@ public final class Multimaps {
         transient Collection<V> values;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.Multimaps$UnmodifiableMultimap$a */
         /* loaded from: classes10.dex */
-        class C5073a implements Function<Collection<V>, Collection<V>> {
-            C5073a(UnmodifiableMultimap unmodifiableMultimap) {
+        class a implements Function<Collection<V>, Collection<V>> {
+            a(UnmodifiableMultimap unmodifiableMultimap) {
             }
 
             @Override // com.google.common.base.Function
@@ -486,23 +484,23 @@ public final class Multimaps {
             this.delegate = (Multimap) du1.p(multimap);
         }
 
-        @Override // com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap, com.google.common.collect.ListMultimap
+        @Override // com.google.common.collect.r, com.google.common.collect.Multimap, com.google.common.collect.ListMultimap
         public Map<K, Collection<V>> asMap() {
             Map<K, Collection<V>> map = this.map;
             if (map == null) {
-                Map<K, Collection<V>> unmodifiableMap = Collections.unmodifiableMap(Maps.D(this.delegate.asMap(), new C5073a(this)));
+                Map<K, Collection<V>> unmodifiableMap = Collections.unmodifiableMap(Maps.D(this.delegate.asMap(), new a(this)));
                 this.map = unmodifiableMap;
                 return unmodifiableMap;
             }
             return map;
         }
 
-        @Override // com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.r, com.google.common.collect.Multimap
         public void clear() {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.r, com.google.common.collect.Multimap
         public Collection<Map.Entry<K, V>> entries() {
             Collection<Map.Entry<K, V>> collection = this.entries;
             if (collection == null) {
@@ -513,12 +511,12 @@ public final class Multimaps {
             return collection;
         }
 
-        @Override // com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.r, com.google.common.collect.Multimap
         public Collection<V> get(K k) {
             return Multimaps.e(this.delegate.get(k));
         }
 
-        @Override // com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.r, com.google.common.collect.Multimap
         public Set<K> keySet() {
             Set<K> set = this.keySet;
             if (set == null) {
@@ -529,7 +527,7 @@ public final class Multimaps {
             return set;
         }
 
-        @Override // com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.r, com.google.common.collect.Multimap
         public Multiset<K> keys() {
             Multiset<K> multiset = this.keys;
             if (multiset == null) {
@@ -540,32 +538,32 @@ public final class Multimaps {
             return multiset;
         }
 
-        @Override // com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.r, com.google.common.collect.Multimap
         public boolean put(K k, V v) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.r, com.google.common.collect.Multimap
         public boolean putAll(K k, Iterable<? extends V> iterable) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.r, com.google.common.collect.Multimap
         public boolean remove(Object obj, Object obj2) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.r, com.google.common.collect.Multimap
         public Collection<V> removeAll(Object obj) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.r, com.google.common.collect.Multimap
         public Collection<V> replaceValues(K k, Iterable<? extends V> iterable) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.r, com.google.common.collect.Multimap
         public Collection<V> values() {
             Collection<V> collection = this.values;
             if (collection == null) {
@@ -577,12 +575,12 @@ public final class Multimaps {
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.google.common.collect.AbstractC5203r, com.google.common.collect.AbstractC5205t
+        @Override // com.google.common.collect.r, com.google.common.collect.t
         public Multimap<K, V> delegate() {
             return this.delegate;
         }
 
-        @Override // com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.r, com.google.common.collect.Multimap
         public boolean putAll(Multimap<? extends K, ? extends V> multimap) {
             throw new UnsupportedOperationException();
         }
@@ -599,38 +597,38 @@ public final class Multimaps {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.Multimap
         public /* bridge */ /* synthetic */ Collection get(Object obj) {
             return get((UnmodifiableSetMultimap<K, V>) obj);
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.Multimap
         public /* bridge */ /* synthetic */ Collection replaceValues(Object obj, Iterable iterable) {
             return replaceValues((UnmodifiableSetMultimap<K, V>) obj, iterable);
         }
 
-        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.Multimap
         public Set<Map.Entry<K, V>> entries() {
             return Maps.H(delegate().entries());
         }
 
-        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.Multimap
         public Set<V> get(K k) {
             return Collections.unmodifiableSet(delegate().get((SetMultimap<K, V>) k));
         }
 
-        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.Multimap
         public Set<V> removeAll(Object obj) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.Multimap
         public Set<V> replaceValues(K k, Iterable<? extends V> iterable) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.AbstractC5205t
+        @Override // com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.t
         public SetMultimap<K, V> delegate() {
             return (SetMultimap) super.delegate();
         }
@@ -646,13 +644,13 @@ public final class Multimaps {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        @Override // com.google.common.collect.Multimaps.UnmodifiableSetMultimap, com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.Multimaps.UnmodifiableSetMultimap, com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.Multimap
         public /* bridge */ /* synthetic */ Collection get(Object obj) {
             return get((UnmodifiableSortedSetMultimap<K, V>) obj);
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        @Override // com.google.common.collect.Multimaps.UnmodifiableSetMultimap, com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.Multimaps.UnmodifiableSetMultimap, com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.Multimap
         public /* bridge */ /* synthetic */ Collection replaceValues(Object obj, Iterable iterable) {
             return replaceValues((UnmodifiableSortedSetMultimap<K, V>) obj, iterable);
         }
@@ -663,33 +661,33 @@ public final class Multimaps {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        @Override // com.google.common.collect.Multimaps.UnmodifiableSetMultimap, com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.Multimaps.UnmodifiableSetMultimap, com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.Multimap
         public /* bridge */ /* synthetic */ Set get(Object obj) {
             return get((UnmodifiableSortedSetMultimap<K, V>) obj);
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        @Override // com.google.common.collect.Multimaps.UnmodifiableSetMultimap, com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.Multimaps.UnmodifiableSetMultimap, com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.Multimap
         public /* bridge */ /* synthetic */ Set replaceValues(Object obj, Iterable iterable) {
             return replaceValues((UnmodifiableSortedSetMultimap<K, V>) obj, iterable);
         }
 
-        @Override // com.google.common.collect.Multimaps.UnmodifiableSetMultimap, com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.Multimaps.UnmodifiableSetMultimap, com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.Multimap
         public SortedSet<V> get(K k) {
             return Collections.unmodifiableSortedSet(delegate().get((SortedSetMultimap<K, V>) k));
         }
 
-        @Override // com.google.common.collect.Multimaps.UnmodifiableSetMultimap, com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.Multimaps.UnmodifiableSetMultimap, com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.Multimap
         public SortedSet<V> removeAll(Object obj) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.Multimaps.UnmodifiableSetMultimap, com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.Multimap
+        @Override // com.google.common.collect.Multimaps.UnmodifiableSetMultimap, com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.Multimap
         public SortedSet<V> replaceValues(K k, Iterable<? extends V> iterable) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.Multimaps.UnmodifiableSetMultimap, com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.AbstractC5203r, com.google.common.collect.AbstractC5205t
+        @Override // com.google.common.collect.Multimaps.UnmodifiableSetMultimap, com.google.common.collect.Multimaps.UnmodifiableMultimap, com.google.common.collect.r, com.google.common.collect.t
         public SortedSetMultimap<K, V> delegate() {
             return (SortedSetMultimap) super.delegate();
         }
@@ -697,49 +695,48 @@ public final class Multimaps {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Multimaps$a */
     /* loaded from: classes10.dex */
-    public static final class C5074a<K, V> extends Maps.AbstractC5070t<K, Collection<V>> {
+    public static final class a<K, V> extends Maps.t<K, Collection<V>> {
         @Weak
         private final Multimap<K, V> d;
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.Multimaps$a$a */
+        /* renamed from: com.google.common.collect.Multimaps$a$a  reason: collision with other inner class name */
         /* loaded from: classes10.dex */
-        public class C5075a extends Maps.AbstractC5059j<K, Collection<V>> {
+        public class C0230a extends Maps.j<K, Collection<V>> {
 
             /* compiled from: Taobao */
-            /* renamed from: com.google.common.collect.Multimaps$a$a$a */
+            /* renamed from: com.google.common.collect.Multimaps$a$a$a  reason: collision with other inner class name */
             /* loaded from: classes10.dex */
-            class C5076a implements Function<K, Collection<V>> {
-                C5076a() {
+            class C0231a implements Function<K, Collection<V>> {
+                C0231a() {
                 }
 
                 @Override // com.google.common.base.Function
                 /* renamed from: a */
                 public Collection<V> apply(K k) {
-                    return C5074a.this.d.get(k);
+                    return a.this.d.get(k);
                 }
             }
 
-            C5075a() {
+            C0230a() {
             }
 
-            @Override // com.google.common.collect.Maps.AbstractC5059j
+            @Override // com.google.common.collect.Maps.j
             Map<K, Collection<V>> a() {
-                return C5074a.this;
+                return a.this;
             }
 
             @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
             public Iterator<Map.Entry<K, Collection<V>>> iterator() {
-                return Maps.d(C5074a.this.d.keySet(), new C5076a());
+                return Maps.d(a.this.d.keySet(), new C0231a());
             }
 
-            @Override // com.google.common.collect.Maps.AbstractC5059j, java.util.AbstractCollection, java.util.Collection, java.util.Set
+            @Override // com.google.common.collect.Maps.j, java.util.AbstractCollection, java.util.Collection, java.util.Set
             public boolean remove(Object obj) {
                 if (contains(obj)) {
-                    C5074a.this.g(((Map.Entry) obj).getKey());
+                    a.this.g(((Map.Entry) obj).getKey());
                     return true;
                 }
                 return false;
@@ -747,13 +744,13 @@ public final class Multimaps {
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C5074a(Multimap<K, V> multimap) {
+        public a(Multimap<K, V> multimap) {
             this.d = (Multimap) du1.p(multimap);
         }
 
-        @Override // com.google.common.collect.Maps.AbstractC5070t
+        @Override // com.google.common.collect.Maps.t
         protected Set<Map.Entry<K, Collection<V>>> a() {
-            return new C5075a();
+            return new C0230a();
         }
 
         @Override // java.util.AbstractMap, java.util.Map
@@ -793,7 +790,7 @@ public final class Multimaps {
             return this.d.isEmpty();
         }
 
-        @Override // com.google.common.collect.Maps.AbstractC5070t, java.util.AbstractMap, java.util.Map
+        @Override // com.google.common.collect.Maps.t, java.util.AbstractMap, java.util.Map
         public Set<K> keySet() {
             return this.d.keySet();
         }
@@ -806,9 +803,8 @@ public final class Multimaps {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Multimaps$b */
     /* loaded from: classes10.dex */
-    public static abstract class AbstractC5077b<K, V> extends AbstractCollection<Map.Entry<K, V>> {
+    public static abstract class b<K, V> extends AbstractCollection<Map.Entry<K, V>> {
         abstract Multimap<K, V> a();
 
         @Override // java.util.AbstractCollection, java.util.Collection
@@ -841,25 +837,23 @@ public final class Multimaps {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Multimaps$c */
     /* loaded from: classes10.dex */
-    static class C5078c<K, V> extends AbstractC5165d<K> {
+    static class c<K, V> extends d<K> {
         @Weak
         final Multimap<K, V> a;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.Multimaps$c$a */
         /* loaded from: classes10.dex */
-        class C5079a extends AbstractC5190j0<Map.Entry<K, Collection<V>>, Multiset.Entry<K>> {
+        class a extends j0<Map.Entry<K, Collection<V>>, Multiset.Entry<K>> {
 
             /* JADX INFO: Access modifiers changed from: package-private */
             /* compiled from: Taobao */
-            /* renamed from: com.google.common.collect.Multimaps$c$a$a */
+            /* renamed from: com.google.common.collect.Multimaps$c$a$a  reason: collision with other inner class name */
             /* loaded from: classes10.dex */
-            public class C5080a extends Multisets.AbstractC5082b<K> {
+            public class C0232a extends Multisets.b<K> {
                 final /* synthetic */ Map.Entry a;
 
-                C5080a(C5079a c5079a, Map.Entry entry) {
+                C0232a(a aVar, Map.Entry entry) {
                     this.a = entry;
                 }
 
@@ -874,29 +868,29 @@ public final class Multimaps {
                 }
             }
 
-            C5079a(C5078c c5078c, Iterator it) {
+            a(c cVar, Iterator it) {
                 super(it);
             }
 
             /* JADX INFO: Access modifiers changed from: package-private */
-            @Override // com.google.common.collect.AbstractC5190j0
+            @Override // com.google.common.collect.j0
             /* renamed from: b */
             public Multiset.Entry<K> a(Map.Entry<K, Collection<V>> entry) {
-                return new C5080a(this, entry);
+                return new C0232a(this, entry);
             }
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C5078c(Multimap<K, V> multimap) {
+        public c(Multimap<K, V> multimap) {
             this.a = multimap;
         }
 
-        @Override // com.google.common.collect.AbstractC5165d, java.util.AbstractCollection, java.util.Collection
+        @Override // com.google.common.collect.d, java.util.AbstractCollection, java.util.Collection
         public void clear() {
             this.a.clear();
         }
 
-        @Override // com.google.common.collect.AbstractC5165d, java.util.AbstractCollection, java.util.Collection, com.google.common.collect.Multiset
+        @Override // com.google.common.collect.d, java.util.AbstractCollection, java.util.Collection, com.google.common.collect.Multiset
         public boolean contains(@NullableDecl Object obj) {
             return this.a.containsKey(obj);
         }
@@ -910,24 +904,24 @@ public final class Multimaps {
             return collection.size();
         }
 
-        @Override // com.google.common.collect.AbstractC5165d
+        @Override // com.google.common.collect.d
         int distinctElements() {
             return this.a.asMap().size();
         }
 
-        @Override // com.google.common.collect.AbstractC5165d
+        @Override // com.google.common.collect.d
         Iterator<K> elementIterator() {
             throw new AssertionError("should never be called");
         }
 
-        @Override // com.google.common.collect.AbstractC5165d, com.google.common.collect.Multiset
+        @Override // com.google.common.collect.d, com.google.common.collect.Multiset
         public Set<K> elementSet() {
             return this.a.keySet();
         }
 
-        @Override // com.google.common.collect.AbstractC5165d
+        @Override // com.google.common.collect.d
         Iterator<Multiset.Entry<K>> entryIterator() {
-            return new C5079a(this, this.a.asMap().entrySet().iterator());
+            return new a(this, this.a.asMap().entrySet().iterator());
         }
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, com.google.common.collect.Multiset
@@ -935,9 +929,9 @@ public final class Multimaps {
             return Maps.m(this.a.entries().iterator());
         }
 
-        @Override // com.google.common.collect.AbstractC5165d, com.google.common.collect.Multiset
+        @Override // com.google.common.collect.d, com.google.common.collect.Multiset
         public int remove(@NullableDecl Object obj, int i) {
-            C5191k.b(i, "occurrences");
+            k.b(i, "occurrences");
             if (i == 0) {
                 return count(obj);
             }
@@ -980,7 +974,7 @@ public final class Multimaps {
         if (collection instanceof Set) {
             return Maps.H((Set) collection);
         }
-        return new Maps.C5067q(Collections.unmodifiableCollection(collection));
+        return new Maps.q(Collections.unmodifiableCollection(collection));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -1027,12 +1021,12 @@ public final class Multimaps {
             objectOutputStream.writeObject(backingMap());
         }
 
-        @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.AbstractC5159c
+        @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.c
         Map<K, Collection<V>> createAsMap() {
             return createMaybeNavigableAsMap();
         }
 
-        @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.AbstractC5159c
+        @Override // com.google.common.collect.AbstractMapBasedMultimap, com.google.common.collect.c
         Set<K> createKeySet() {
             return createMaybeNavigableKeySet();
         }

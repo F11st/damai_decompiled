@@ -122,7 +122,7 @@ public final class ObservableDoOnEach<T> extends AbstractObservableWithUpstream<
         this.onAfterTerminate = action2;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new DoOnEachObserver(observer, this.onNext, this.onError, this.onComplete, this.onAfterTerminate));
     }

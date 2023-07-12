@@ -29,12 +29,11 @@ public class FeedBackListAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         private View b;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.mine.adapter.FeedBackListAdapter$FeedBackViewHolder$a */
         /* loaded from: classes15.dex */
-        public class View$OnClickListenerC1425a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC1425a(FeedBackListAdapter feedBackListAdapter) {
+            a(FeedBackListAdapter feedBackListAdapter) {
             }
 
             @Override // android.view.View.OnClickListener
@@ -53,7 +52,7 @@ public class FeedBackListAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             this.itemView.setLayoutParams(new RecyclerView.LayoutParams(-1, -2));
             this.a = (TextView) this.itemView.findViewById(R$id.tv_desc);
             this.b = this.itemView.findViewById(R$id.line);
-            this.itemView.setOnClickListener(new View$OnClickListenerC1425a(FeedBackListAdapter.this));
+            this.itemView.setOnClickListener(new a(FeedBackListAdapter.this));
         }
 
         public void a(FeedBack feedBack, boolean z) {

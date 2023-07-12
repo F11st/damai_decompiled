@@ -3,9 +3,8 @@ package com.taobao.slide.task;
 import android.content.Context;
 import android.text.TextUtils;
 import com.taobao.slide.api.SlideConfig;
-import com.taobao.slide.core.C6889b;
 import com.taobao.slide.core.SlideException;
-import com.taobao.slide.request.AbstractC6890a;
+import com.taobao.slide.core.b;
 import java.util.HashMap;
 import java.util.Map;
 import tb.m42;
@@ -20,23 +19,22 @@ public class CheckTask implements Runnable {
     private static final String VERSION_PARAM = "since";
     private static volatile long lastIndexUpdTime;
     private static String packageName;
-    private C6889b engine;
+    private b engine;
     private String utdid;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.slide.task.CheckTask$a */
     /* loaded from: classes11.dex */
-    class C6895a extends AbstractC6890a<String> {
+    class a extends com.taobao.slide.request.a<String> {
         final /* synthetic */ String i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        C6895a(CheckTask checkTask, Context context, SlideConfig slideConfig, String str, String str2, String str3, String str4) {
+        a(CheckTask checkTask, Context context, SlideConfig slideConfig, String str, String str2, String str3, String str4) {
             super(context, slideConfig, str, str2, str3);
             this.i = str4;
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.taobao.slide.request.AbstractC6891b
+        @Override // com.taobao.slide.request.b
         public Map<String, String> b() {
             HashMap hashMap = new HashMap();
             hashMap.put(CheckTask.VERSION_PARAM, this.i);
@@ -44,15 +42,15 @@ public class CheckTask implements Runnable {
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.taobao.slide.request.AbstractC6891b
+        @Override // com.taobao.slide.request.b
         /* renamed from: h */
         public String d(String str) {
             return str;
         }
     }
 
-    public CheckTask(C6889b c6889b, String str) {
-        this.engine = c6889b;
+    public CheckTask(b bVar, String str) {
+        this.engine = bVar;
         this.utdid = str;
     }
 
@@ -76,7 +74,7 @@ public class CheckTask implements Runnable {
         String f = this.engine.f();
         m42.c(TAG, "sync", "url", format, "version", f);
         try {
-            String e = new C6895a(this, this.engine.c(), this.engine.b(), this.utdid, format, null, f).e();
+            String e = new a(this, this.engine.c(), this.engine.b(), this.utdid, format, null, f).e();
             if (TextUtils.isEmpty(e)) {
                 m42.e(TAG, "sync result is empty", new Object[0]);
             } else {

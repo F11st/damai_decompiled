@@ -1,16 +1,16 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8148c;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
 import io.reactivex.MaybeObserver;
+import io.reactivex.c;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.fuseable.HasUpstreamCompletableSource;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeFromCompletable<T> extends AbstractC8148c<T> implements HasUpstreamCompletableSource {
+public final class MaybeFromCompletable<T> extends c<T> implements HasUpstreamCompletableSource {
     final CompletableSource source;
 
     /* compiled from: Taobao */
@@ -64,7 +64,7 @@ public final class MaybeFromCompletable<T> extends AbstractC8148c<T> implements 
         return this.source;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         this.source.subscribe(new FromCompletableObserver(maybeObserver));
     }

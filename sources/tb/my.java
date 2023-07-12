@@ -3,13 +3,13 @@ package tb;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class my {
-    private C9586q a;
+    private q a;
     private Object b;
     private Object c;
     private Object d;
     private hy e;
 
-    public C9586q a() {
+    public q a() {
         return this.a;
     }
 
@@ -29,8 +29,8 @@ public class my {
         return this.b;
     }
 
-    public void f(C9586q c9586q) {
-        this.a = c9586q;
+    public void f(q qVar) {
+        this.a = qVar;
     }
 
     public void g(hy hyVar) {

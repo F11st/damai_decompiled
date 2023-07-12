@@ -10,11 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SimpleItemAnimator;
 import com.alibaba.fastjson.JSONObject;
 import com.taobao.android.dinamic.R$id;
-import com.taobao.android.dinamicx.C6367d;
-import com.taobao.android.dinamicx.C6368e;
-import com.taobao.android.dinamicx.C6384k;
 import com.taobao.android.dinamicx.DXRootView;
 import com.taobao.android.dinamicx.DXRuntimeContext;
+import com.taobao.android.dinamicx.k;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import com.taobao.android.dinamicx.view.DXLinearLayoutManager;
 import com.taobao.android.dinamicx.view.DXNativeFrameLayout;
@@ -58,7 +56,7 @@ public class DXScrollerLayout extends DXScrollLayoutBase {
         DXRootView i;
         private JSONObject j;
         private JSONObject k;
-        private C6367d l;
+        private com.taobao.android.dinamicx.d l;
 
         /* JADX INFO: Access modifiers changed from: private */
         public void e() {
@@ -185,7 +183,7 @@ public class DXScrollerLayout extends DXScrollLayoutBase {
     /* compiled from: Taobao */
     /* loaded from: classes11.dex */
     public static class ScrollerAdapter extends RecyclerView.Adapter {
-        private C6384k a;
+        private k a;
         protected Context b;
         protected DXScrollerLayout d;
         protected ArrayList<DXWidgetNode> c = new ArrayList<>();
@@ -212,9 +210,9 @@ public class DXScrollerLayout extends DXScrollLayoutBase {
         @NonNull
         private DXRuntimeContext a(DXWidgetNode dXWidgetNode) {
             DXRuntimeContext cloneWithWidgetNode = dXWidgetNode.getDXRuntimeContext().cloneWithWidgetNode(dXWidgetNode);
-            C6368e c6368e = new C6368e(cloneWithWidgetNode.getBizType());
-            c6368e.b = cloneWithWidgetNode.getDxTemplateItem();
-            cloneWithWidgetNode.setDxError(c6368e);
+            com.taobao.android.dinamicx.e eVar = new com.taobao.android.dinamicx.e(cloneWithWidgetNode.getBizType());
+            eVar.b = cloneWithWidgetNode.getDxTemplateItem();
+            cloneWithWidgetNode.setDxError(eVar);
             return cloneWithWidgetNode;
         }
 
@@ -295,10 +293,10 @@ public class DXScrollerLayout extends DXScrollLayoutBase {
                 return;
             }
             DXRuntimeContext a = a(b);
-            C6384k c6384k = this.a;
+            k kVar = this.a;
             View view = viewHolder.itemView;
             DXScrollerLayout dXScrollerLayout = this.d;
-            c6384k.g(b, null, view, a, 2, 8, dXScrollerLayout.oldWidthMeasureSpec, dXScrollerLayout.oldHeightMeasureSpec, i);
+            kVar.g(b, null, view, a, 2, 8, dXScrollerLayout.oldWidthMeasureSpec, dXScrollerLayout.oldHeightMeasureSpec, i);
             if (a.hasError()) {
                 DXAppMonitor.o(a.getDxError(), true);
             }
@@ -315,11 +313,11 @@ public class DXScrollerLayout extends DXScrollLayoutBase {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             View e;
-            C6384k c6384k = this.a;
-            if (c6384k == null) {
+            k kVar = this.a;
+            if (kVar == null) {
                 e = new DXNativeFrameLayout(this.b);
             } else {
-                e = c6384k.e(this.b);
+                e = kVar.e(this.b);
             }
             return new ItemViewHolder(e);
         }
@@ -338,9 +336,8 @@ public class DXScrollerLayout extends DXScrollLayoutBase {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXScrollerLayout$a */
     /* loaded from: classes11.dex */
-    public static class C6455a implements IDXBuilderWidgetNode {
+    public static class a implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(Object obj) {
             return new DXScrollerLayout();
@@ -375,7 +372,7 @@ public class DXScrollerLayout extends DXScrollLayoutBase {
         return super.getDefaultValueForIntAttr(j);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.IDXNodePropProvider
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.IDXNodePropProvider
     public Object getNodePropByKey(String str) {
         if (Constants.Name.CONTENT_OFFSET.equals(str)) {
             return Integer.valueOf(this.contentOffset);
@@ -396,7 +393,7 @@ public class DXScrollerLayout extends DXScrollLayoutBase {
         return new ScrollListener();
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onClone(DXWidgetNode dXWidgetNode, boolean z) {
         super.onClone(dXWidgetNode, z);
         if (dXWidgetNode instanceof DXScrollerLayout) {
@@ -419,7 +416,7 @@ public class DXScrollerLayout extends DXScrollLayoutBase {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onRenderView(Context context, View view) {
         DXScrollerLayout dXScrollerLayout;
         super.onRenderView(context, view);
@@ -440,7 +437,7 @@ public class DXScrollerLayout extends DXScrollLayoutBase {
         }
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetIntAttribute(long j, int i) {
         if (j == DX_SCROLLER_LAYOUT_CONTENT_OFFSET) {
             this.contentOffset = i;

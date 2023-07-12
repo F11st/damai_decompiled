@@ -8,12 +8,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import kotlin.Pair;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8225w;
-import kotlin.collections.C8226x;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
@@ -23,7 +17,6 @@ import kotlin.reflect.jvm.internal.impl.descriptors.NotFoundClasses;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationDescriptor;
-import kotlin.reflect.jvm.internal.impl.descriptors.annotations.C8306a;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Annotation;
 import kotlin.reflect.jvm.internal.impl.metadata.deserialization.NameResolver;
 import kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializedArrayValue;
@@ -39,9 +32,8 @@ public final class a6 {
     private final NotFoundClasses b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.a6$a */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C8895a {
+    public /* synthetic */ class a {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -73,11 +65,11 @@ public final class a6 {
     private final boolean b(fn<?> fnVar, z71 z71Var, ProtoBuf$Annotation.Argument.Value value) {
         n31 h;
         ProtoBuf$Annotation.Argument.Value.Type type = value.getType();
-        int i = type == null ? -1 : C8895a.$EnumSwitchMapping$0[type.ordinal()];
+        int i = type == null ? -1 : a.$EnumSwitchMapping$0[type.ordinal()];
         if (i == 10) {
             ClassifierDescriptor declarationDescriptor = z71Var.c().getDeclarationDescriptor();
             ClassDescriptor classDescriptor = declarationDescriptor instanceof ClassDescriptor ? (ClassDescriptor) declarationDescriptor : null;
-            if (classDescriptor != null && !AbstractC8271b.j0(classDescriptor)) {
+            if (classDescriptor != null && !kotlin.reflect.jvm.internal.impl.builtins.b.j0(classDescriptor)) {
                 return false;
             }
         } else if (i != 13) {
@@ -87,7 +79,7 @@ public final class a6 {
                 z71 k = c().k(z71Var);
                 b41.h(k, "builtIns.getArrayElementType(expectedType)");
                 y7 y7Var = (y7) fnVar;
-                h = C8214m.h(y7Var.b());
+                h = kotlin.collections.m.h(y7Var.b());
                 if (!(h instanceof Collection) || !((Collection) h).isEmpty()) {
                     Iterator<Integer> it = h.iterator();
                     while (it.hasNext()) {
@@ -106,7 +98,7 @@ public final class a6 {
         return true;
     }
 
-    private final AbstractC8271b c() {
+    private final kotlin.reflect.jvm.internal.impl.builtins.b c() {
         return this.a.getBuiltIns();
     }
 
@@ -133,8 +125,8 @@ public final class a6 {
             f = null;
         }
         if (f == null) {
-            lf0.C9407a c9407a = lf0.Companion;
-            return c9407a.a("Unexpected argument value: actual type " + value.getType() + " != expected type " + z71Var);
+            lf0.a aVar = lf0.Companion;
+            return aVar.a("Unexpected argument value: actual type " + value.getType() + " != expected type " + z71Var);
         }
         return f;
     }
@@ -144,22 +136,22 @@ public final class a6 {
         Map i;
         int q;
         int e;
-        int a;
+        int a2;
         b41.i(protoBuf$Annotation, "proto");
         b41.i(nameResolver, "nameResolver");
         ClassDescriptor e2 = e(pi1.a(nameResolver, protoBuf$Annotation.getId()));
-        i = C8226x.i();
+        i = kotlin.collections.x.i();
         if (protoBuf$Annotation.getArgumentCount() != 0 && !kf0.r(e2) && d70.t(e2)) {
             Collection<ClassConstructorDescriptor> constructors = e2.getConstructors();
             b41.h(constructors, "annotationClass.constructors");
-            ClassConstructorDescriptor classConstructorDescriptor = (ClassConstructorDescriptor) C8212k.r0(constructors);
+            ClassConstructorDescriptor classConstructorDescriptor = (ClassConstructorDescriptor) kotlin.collections.k.r0(constructors);
             if (classConstructorDescriptor != null) {
                 List<ValueParameterDescriptor> valueParameters = classConstructorDescriptor.getValueParameters();
                 b41.h(valueParameters, "constructor.valueParameters");
-                q = C8215n.q(valueParameters, 10);
-                e = C8225w.e(q);
-                a = ty1.a(e, 16);
-                LinkedHashMap linkedHashMap = new LinkedHashMap(a);
+                q = kotlin.collections.n.q(valueParameters, 10);
+                e = kotlin.collections.w.e(q);
+                a2 = ty1.a(e, 16);
+                LinkedHashMap linkedHashMap = new LinkedHashMap(a2);
                 for (Object obj : valueParameters) {
                     linkedHashMap.put(((ValueParameterDescriptor) obj).getName(), obj);
                 }
@@ -173,10 +165,10 @@ public final class a6 {
                         arrayList.add(d);
                     }
                 }
-                i = C8226x.r(arrayList);
+                i = kotlin.collections.x.r(arrayList);
             }
         }
-        return new C8306a(e2.getDefaultType(), i, SourceElement.NO_SOURCE);
+        return new kotlin.reflect.jvm.internal.impl.descriptors.annotations.a(e2.getDefaultType(), i, SourceElement.NO_SOURCE);
     }
 
     @NotNull
@@ -190,7 +182,7 @@ public final class a6 {
         b41.h(d, "IS_UNSIGNED.get(value.flags)");
         boolean booleanValue = d.booleanValue();
         ProtoBuf$Annotation.Argument.Value.Type type = value.getType();
-        switch (type == null ? -1 : C8895a.$EnumSwitchMapping$0[type.ordinal()]) {
+        switch (type == null ? -1 : a.$EnumSwitchMapping$0[type.ordinal()]) {
             case 1:
                 byte intValue = (byte) value.getIntValue();
                 return booleanValue ? new or2(intValue) : new re(intValue);
@@ -238,7 +230,7 @@ public final class a6 {
             case 13:
                 List<ProtoBuf$Annotation.Argument.Value> arrayElementList = value.getArrayElementList();
                 b41.h(arrayElementList, "value.arrayElementList");
-                q = C8215n.q(arrayElementList, 10);
+                q = kotlin.collections.n.q(arrayElementList, 10);
                 ArrayList arrayList = new ArrayList(q);
                 for (ProtoBuf$Annotation.Argument.Value value2 : arrayElementList) {
                     fd2 i = c().i();

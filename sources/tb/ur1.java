@@ -6,7 +6,6 @@ import com.taobao.phenix.cache.disk.DiskCache;
 import com.taobao.phenix.chain.ImageDecodingListener;
 import com.taobao.phenix.decode.EncodedDataInspector;
 import com.taobao.phenix.loader.LocalSchemeHandler;
-import com.taobao.phenix.request.C6865a;
 import com.taobao.phenix.request.ImageFlowMonitor;
 import com.taobao.phenix.strategy.ModuleStrategySupplier;
 import com.taobao.rxm.schedule.SchedulerSupplier;
@@ -121,12 +120,12 @@ public class ur1 implements ChainBuilders {
                 D = str2;
                 C = i;
             } else {
-                C6865a c6865a = new C6865a(str2, this.n, this.r);
-                if (c6865a.G().n()) {
+                com.taobao.phenix.request.a aVar = new com.taobao.phenix.request.a(str2, this.n, this.r);
+                if (aVar.G().n()) {
                     return null;
                 }
-                D = c6865a.D();
-                C = c6865a.C();
+                D = aVar.D();
+                C = aVar.C();
             }
             l(str);
             DiskCache diskCache = diskCacheBuilder().build().get(17);

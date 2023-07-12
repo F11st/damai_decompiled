@@ -1,6 +1,5 @@
 package tb;
 
-import kotlinx.coroutines.C8724z;
 import kotlinx.coroutines.CoroutineDispatcher;
 import org.jetbrains.annotations.NotNull;
 
@@ -14,7 +13,7 @@ public final class da0 {
     private static final CoroutineDispatcher b;
 
     static {
-        C8724z c8724z = C8724z.INSTANCE;
+        kotlinx.coroutines.z zVar = kotlinx.coroutines.z.INSTANCE;
         b = e60.INSTANCE.c();
     }
 

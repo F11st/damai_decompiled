@@ -26,7 +26,7 @@ final class NavigationRailItemView extends NavigationBarItemView {
     @Override // com.google.android.material.navigation.NavigationBarItemView
     @LayoutRes
     protected int getItemLayoutResId() {
-        return R.C4818layout.mtrl_navigation_rail_item;
+        return R.layout.mtrl_navigation_rail_item;
     }
 
     @Override // android.widget.FrameLayout, android.view.View

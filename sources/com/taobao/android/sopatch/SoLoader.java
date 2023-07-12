@@ -19,17 +19,16 @@ import tb.oe2;
 /* loaded from: classes12.dex */
 public final class SoLoader {
     private static final String TAG = "SoLoader";
-    private static final Map<String, C6632a> loadedObjectMap = new HashMap();
+    private static final Map<String, a> loadedObjectMap = new HashMap();
     private static final Object DEFAULT_LOADED_OBJECT = new Object();
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sopatch.SoLoader$a */
     /* loaded from: classes12.dex */
-    public static class C6632a {
+    public static class a {
         private volatile Object a;
 
-        private C6632a() {
+        private a() {
         }
     }
 
@@ -45,22 +44,22 @@ public final class SoLoader {
         return SolidMonitor.CHECK_TYPE_LIB + str + ".so";
     }
 
-    private static C6632a getLoadedObject(String str) {
-        C6632a c6632a;
-        Map<String, C6632a> map = loadedObjectMap;
+    private static a getLoadedObject(String str) {
+        a aVar;
+        Map<String, a> map = loadedObjectMap;
         synchronized (map) {
-            c6632a = map.get(str);
-            if (c6632a == null) {
-                c6632a = new C6632a();
-                map.put(str, c6632a);
+            aVar = map.get(str);
+            if (aVar == null) {
+                aVar = new a();
+                map.put(str, aVar);
             }
         }
-        return c6632a;
+        return aVar;
     }
 
     private static void innerLoad(String str, Runnable runnable) {
         String fullLibName = getFullLibName(str);
-        C6632a loadedObject = getLoadedObject(str);
+        a loadedObject = getLoadedObject(str);
         ie2 ie2Var = null;
         if (loadedObject.a == null) {
             synchronized (loadedObjectMap) {
@@ -137,13 +136,13 @@ public final class SoLoader {
     }
 
     private static Object matchBrothersPatchMode(ie2 ie2Var, String str) {
-        C6632a c6632a;
+        a aVar;
         if (ie2Var == null) {
             return DEFAULT_LOADED_OBJECT;
         }
         for (String str2 : ie2Var.c().keySet()) {
-            if (!str.equals(str2) && (c6632a = loadedObjectMap.get(str2)) != null && c6632a.a != ie2Var) {
-                return ((c6632a.a instanceof ie2) && ((ie2) c6632a.a).b(str) == null) ? ie2Var : c6632a.a;
+            if (!str.equals(str2) && (aVar = loadedObjectMap.get(str2)) != null && aVar.a != ie2Var) {
+                return ((aVar.a instanceof ie2) && ((ie2) aVar.a).b(str) == null) ? ie2Var : aVar.a;
             }
         }
         return ie2Var;

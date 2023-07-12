@@ -10,12 +10,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.imagebrowse.bean.VideoInfo;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -56,21 +55,20 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoHoloder> {
                 return;
             }
             this.b.setText(videoItem.title);
-            DMImageCreator c = C0504a.b().c(videoItem.picUrl);
+            DMImageCreator c = cn.damai.common.image.a.b().c(videoItem.picUrl);
             int i = R$drawable.uikit_default_image_bg_gradient;
             c.i(i).c(i).g(this.a);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.VideoAdapter$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2753a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ VideoItem a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC2753a(VideoItem videoItem, int i) {
+        a(VideoItem videoItem, int i) {
             this.a = videoItem;
             this.b = i;
         }
@@ -99,8 +97,8 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoHoloder> {
                 hashMap.put("biz_id", VideoAdapter.this.a.videoRequest.artistId + "");
                 hashMap.put("biz_type", VideoAdapter.this.a.type + "");
                 hashMap.put("video_id", this.a.vid);
-                C0528b c0528b = new C0528b();
-                C0529c.e().x(c0528b.e("business_homepage", "video", "video_" + this.b, hashMap, Boolean.TRUE));
+                b bVar = new b();
+                c.e().x(bVar.e("business_homepage", "video", "video_" + this.b, hashMap, Boolean.TRUE));
             }
         }
     }
@@ -121,7 +119,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoHoloder> {
         if (videoItem != null) {
             videoHoloder.a(videoItem);
         }
-        videoHoloder.itemView.setOnClickListener(new View$OnClickListenerC2753a(videoItem, i));
+        videoHoloder.itemView.setOnClickListener(new a(videoItem, i));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

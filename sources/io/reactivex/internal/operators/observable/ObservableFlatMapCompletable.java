@@ -181,7 +181,7 @@ public final class ObservableFlatMapCompletable<T> extends AbstractObservableWit
         this.delayErrors = z;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new FlatMapCompletableMainObserver(observer, this.mapper, this.delayErrors));
     }

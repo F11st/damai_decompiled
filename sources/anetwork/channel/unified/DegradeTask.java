@@ -2,9 +2,8 @@ package anetwork.channel.unified;
 
 import android.text.TextUtils;
 import anet.channel.RequestCb;
-import anet.channel.request.C0193a;
 import anet.channel.request.Cancelable;
-import anet.channel.session.C0201a;
+import anet.channel.request.a;
 import anet.channel.statist.RequestStatistic;
 import anet.channel.util.ALog;
 import anetwork.channel.aidl.DefaultFinishEvent;
@@ -20,18 +19,17 @@ import tb.zh2;
 /* loaded from: classes.dex */
 public class DegradeTask implements IUnifiedTask {
     private static final String TAG = "anet.DegradeTask";
-    private C0254b rc;
-    private C0193a request;
+    private b rc;
+    private anet.channel.request.a request;
     private volatile boolean isCanceled = false;
     volatile Cancelable cancelable = null;
     private int contentLength = 0;
     private int dataChunkIndex = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: anetwork.channel.unified.DegradeTask$a */
     /* loaded from: classes.dex */
-    class C0247a implements RequestCb {
-        C0247a() {
+    class a implements RequestCb {
+        a() {
         }
 
         @Override // anet.channel.RequestCb
@@ -74,9 +72,9 @@ public class DegradeTask implements IUnifiedTask {
         }
     }
 
-    public DegradeTask(C0254b c0254b) {
-        this.rc = c0254b;
-        this.request = c0254b.a.b();
+    public DegradeTask(b bVar) {
+        this.rc = bVar;
+        this.request = bVar.a.b();
     }
 
     static /* synthetic */ int access$208(DegradeTask degradeTask) {
@@ -101,7 +99,7 @@ public class DegradeTask implements IUnifiedTask {
         if (this.rc.a.n()) {
             String i = CookieManager.i(this.rc.a.h());
             if (!TextUtils.isEmpty(i)) {
-                C0193a.C0195b u = this.request.u();
+                a.b u = this.request.u();
                 String str = this.request.g().get(IRequestConst.COOKIE);
                 if (!TextUtils.isEmpty(str)) {
                     i = zh2.e(str, "; ", i);
@@ -112,6 +110,6 @@ public class DegradeTask implements IUnifiedTask {
         }
         this.request.r.degraded = 2;
         this.request.r.sendBeforeTime = System.currentTimeMillis() - this.request.r.reqStart;
-        C0201a.b(this.request, new C0247a());
+        anet.channel.session.a.b(this.request, new a());
     }
 }

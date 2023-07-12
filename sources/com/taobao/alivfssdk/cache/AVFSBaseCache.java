@@ -11,12 +11,11 @@ import java.io.InputStream;
 public abstract class AVFSBaseCache implements IAVFSCache {
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.alivfssdk.cache.AVFSBaseCache$a */
     /* loaded from: classes8.dex */
-    class C6252a implements IAVFSCache.OnStreamGetCallback2 {
+    class a implements IAVFSCache.OnStreamGetCallback2 {
         final /* synthetic */ IAVFSCache.OnStreamGetCallback a;
 
-        C6252a(AVFSBaseCache aVFSBaseCache, IAVFSCache.OnStreamGetCallback onStreamGetCallback) {
+        a(AVFSBaseCache aVFSBaseCache, IAVFSCache.OnStreamGetCallback onStreamGetCallback) {
             this.a = onStreamGetCallback;
         }
 
@@ -28,12 +27,11 @@ public abstract class AVFSBaseCache implements IAVFSCache {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.alivfssdk.cache.AVFSBaseCache$b */
     /* loaded from: classes8.dex */
-    public class C6253b implements IAVFSCache.OnStreamSetCallback2 {
+    public class b implements IAVFSCache.OnStreamSetCallback2 {
         final /* synthetic */ IAVFSCache.OnStreamSetCallback a;
 
-        C6253b(AVFSBaseCache aVFSBaseCache, IAVFSCache.OnStreamSetCallback onStreamSetCallback) {
+        b(AVFSBaseCache aVFSBaseCache, IAVFSCache.OnStreamSetCallback onStreamSetCallback) {
             this.a = onStreamSetCallback;
         }
 
@@ -44,12 +42,11 @@ public abstract class AVFSBaseCache implements IAVFSCache {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.alivfssdk.cache.AVFSBaseCache$c */
     /* loaded from: classes8.dex */
-    class C6254c implements IAVFSCache.OnObjectContainedCallback2 {
+    class c implements IAVFSCache.OnObjectContainedCallback2 {
         final /* synthetic */ IAVFSCache.OnObjectContainedCallback a;
 
-        C6254c(AVFSBaseCache aVFSBaseCache, IAVFSCache.OnObjectContainedCallback onObjectContainedCallback) {
+        c(AVFSBaseCache aVFSBaseCache, IAVFSCache.OnObjectContainedCallback onObjectContainedCallback) {
             this.a = onObjectContainedCallback;
         }
 
@@ -61,12 +58,11 @@ public abstract class AVFSBaseCache implements IAVFSCache {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.alivfssdk.cache.AVFSBaseCache$d */
     /* loaded from: classes8.dex */
-    class C6255d<T> implements IAVFSCache.OnObjectGetCallback2<T> {
+    class d<T> implements IAVFSCache.OnObjectGetCallback2<T> {
         final /* synthetic */ IAVFSCache.OnObjectGetCallback a;
 
-        C6255d(AVFSBaseCache aVFSBaseCache, IAVFSCache.OnObjectGetCallback onObjectGetCallback) {
+        d(AVFSBaseCache aVFSBaseCache, IAVFSCache.OnObjectGetCallback onObjectGetCallback) {
             this.a = onObjectGetCallback;
         }
 
@@ -78,12 +74,11 @@ public abstract class AVFSBaseCache implements IAVFSCache {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.alivfssdk.cache.AVFSBaseCache$e */
     /* loaded from: classes8.dex */
-    public class C6256e implements IAVFSCache.OnObjectSetCallback2 {
+    public class e implements IAVFSCache.OnObjectSetCallback2 {
         final /* synthetic */ IAVFSCache.OnObjectSetCallback a;
 
-        C6256e(AVFSBaseCache aVFSBaseCache, IAVFSCache.OnObjectSetCallback onObjectSetCallback) {
+        e(AVFSBaseCache aVFSBaseCache, IAVFSCache.OnObjectSetCallback onObjectSetCallback) {
             this.a = onObjectSetCallback;
         }
 
@@ -94,12 +89,11 @@ public abstract class AVFSBaseCache implements IAVFSCache {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.alivfssdk.cache.AVFSBaseCache$f */
     /* loaded from: classes8.dex */
-    class C6257f implements IAVFSCache.OnObjectRemoveCallback2 {
+    class f implements IAVFSCache.OnObjectRemoveCallback2 {
         final /* synthetic */ IAVFSCache.OnObjectRemoveCallback a;
 
-        C6257f(AVFSBaseCache aVFSBaseCache, IAVFSCache.OnObjectRemoveCallback onObjectRemoveCallback) {
+        f(AVFSBaseCache aVFSBaseCache, IAVFSCache.OnObjectRemoveCallback onObjectRemoveCallback) {
             this.a = onObjectRemoveCallback;
         }
 
@@ -158,12 +152,12 @@ public abstract class AVFSBaseCache implements IAVFSCache {
 
     @Override // com.taobao.alivfssdk.cache.IAVFSCache
     public void containObjectForKey(@NonNull String str, IAVFSCache.OnObjectContainedCallback onObjectContainedCallback) {
-        containObjectForKey(str, (String) null, new C6254c(this, onObjectContainedCallback));
+        containObjectForKey(str, (String) null, new c(this, onObjectContainedCallback));
     }
 
     @Override // com.taobao.alivfssdk.cache.IAVFSCache
     public void inputStreamForKey(@NonNull String str, IAVFSCache.OnStreamGetCallback onStreamGetCallback) {
-        inputStreamForKey(str, (String) null, new C6252a(this, onStreamGetCallback));
+        inputStreamForKey(str, (String) null, new a(this, onStreamGetCallback));
     }
 
     @Override // com.taobao.alivfssdk.cache.IAVFSCache
@@ -174,7 +168,7 @@ public abstract class AVFSBaseCache implements IAVFSCache {
 
     @Override // com.taobao.alivfssdk.cache.IAVFSCache
     public void removeObjectForKey(@NonNull String str, IAVFSCache.OnObjectRemoveCallback onObjectRemoveCallback) {
-        removeObjectForKey(str, (String) null, new C6257f(this, onObjectRemoveCallback));
+        removeObjectForKey(str, (String) null, new f(this, onObjectRemoveCallback));
     }
 
     @Override // com.taobao.alivfssdk.cache.IAVFSCache
@@ -215,7 +209,7 @@ public abstract class AVFSBaseCache implements IAVFSCache {
 
     @Override // com.taobao.alivfssdk.cache.IAVFSCache
     public <T> void objectForKey(@NonNull String str, Class<T> cls, IAVFSCache.OnObjectGetCallback<T> onObjectGetCallback) {
-        objectForKey(str, (String) null, cls, new C6255d(this, onObjectGetCallback));
+        objectForKey(str, (String) null, cls, new d(this, onObjectGetCallback));
     }
 
     @Override // com.taobao.alivfssdk.cache.IAVFSCache
@@ -284,12 +278,12 @@ public abstract class AVFSBaseCache implements IAVFSCache {
 
     @Override // com.taobao.alivfssdk.cache.IAVFSCache
     public void setObjectForKey(@NonNull String str, Object obj, int i, IAVFSCache.OnObjectSetCallback onObjectSetCallback) {
-        setObjectForKey(str, (String) null, obj, new C6256e(this, onObjectSetCallback));
+        setObjectForKey(str, (String) null, obj, new e(this, onObjectSetCallback));
     }
 
     @Override // com.taobao.alivfssdk.cache.IAVFSCache
     public void setStreamForKey(@NonNull String str, @NonNull InputStream inputStream, int i, IAVFSCache.OnStreamSetCallback onStreamSetCallback) {
-        setStreamForKey(str, (String) null, inputStream, new C6253b(this, onStreamSetCallback));
+        setStreamForKey(str, (String) null, inputStream, new b(this, onStreamSetCallback));
     }
 
     @Override // com.taobao.alivfssdk.cache.IAVFSCache

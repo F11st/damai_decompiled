@@ -8,8 +8,8 @@ import android.os.Handler;
 import android.os.SystemClock;
 import android.view.MotionEvent;
 import android.view.View;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -28,17 +28,16 @@ public class ScreenFloatActivity extends Activity {
     private Handler a;
     private ScreenShotBean b;
     private Runnable d;
-    private C0525a.C0527b e;
+    private a.b e;
     private long c = 0;
-    private View.OnClickListener f = new View$OnClickListenerC0794a();
+    private View.OnClickListener f = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.screenshot.ScreenFloatActivity$a */
     /* loaded from: classes4.dex */
-    public class View$OnClickListenerC0794a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0794a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -49,7 +48,7 @@ public class ScreenFloatActivity extends Activity {
                 return;
             }
             ScreenFloatActivity.this.g();
-            C0529c.e().x(pl.j().h());
+            c.e().x(pl.j().h());
             o62.f().g();
             if (!LoginManager.k().q()) {
                 LoginManager.k().x(ScreenFloatActivity.this, new Intent(), 100001);
@@ -60,12 +59,11 @@ public class ScreenFloatActivity extends Activity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.screenshot.ScreenFloatActivity$b */
     /* loaded from: classes4.dex */
-    public class View$OnTouchListenerC0795b implements View.OnTouchListener {
+    public class b implements View.OnTouchListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnTouchListenerC0795b() {
+        b() {
         }
 
         @Override // android.view.View.OnTouchListener
@@ -146,7 +144,7 @@ public class ScreenFloatActivity extends Activity {
             }
         }
         findViewById(R$id.ll_feedback).setOnClickListener(this.f);
-        findViewById(R$id.root_rl).setOnTouchListener(new View$OnTouchListenerC0795b());
+        findViewById(R$id.root_rl).setOnTouchListener(new b());
         this.c = SystemClock.elapsedRealtime();
         e();
     }
@@ -215,7 +213,7 @@ public class ScreenFloatActivity extends Activity {
             return;
         }
         super.onPause();
-        C0529c.e().j(this, this.e);
+        c.e().j(this, this.e);
     }
 
     @Override // android.app.Activity
@@ -226,7 +224,7 @@ public class ScreenFloatActivity extends Activity {
             return;
         }
         super.onResume();
-        C0529c.e().k(this, this.e);
+        c.e().k(this, this.e);
     }
 
     @Override // android.app.Activity

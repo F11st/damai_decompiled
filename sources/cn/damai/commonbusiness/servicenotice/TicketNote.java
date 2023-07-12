@@ -9,18 +9,17 @@ import com.android.alibaba.ip.runtime.IpChange;
 /* loaded from: classes.dex */
 public class TicketNote implements Parcelable {
     private static transient /* synthetic */ IpChange $ipChange;
-    public static final Parcelable.Creator<TicketNote> CREATOR = new C0870a();
+    public static final Parcelable.Creator<TicketNote> CREATOR = new a();
     public String content;
     public String imgUrl;
     public String title;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.servicenotice.TicketNote$a */
     /* loaded from: classes.dex */
-    public class C0870a implements Parcelable.Creator<TicketNote> {
+    public class a implements Parcelable.Creator<TicketNote> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0870a() {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

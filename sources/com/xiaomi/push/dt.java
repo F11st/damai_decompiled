@@ -3,7 +3,6 @@ package com.xiaomi.push;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.al;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -14,7 +13,7 @@ import java.nio.channels.FileLock;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public abstract class dt extends al.AbstractRunnableC7597a {
+public abstract class dt extends al.a {
     protected int a;
 
     /* renamed from: a  reason: collision with other field name */
@@ -37,7 +36,7 @@ public abstract class dt extends al.AbstractRunnableC7597a {
     private static void a(Context context, hr hrVar, String str) {
         BufferedOutputStream bufferedOutputStream;
         RandomAccessFile randomAccessFile;
-        byte[] b = C7632dp.b(str, it.a(hrVar));
+        byte[] b = dp.b(str, it.a(hrVar));
         if (b == null || b.length == 0) {
             return;
         }
@@ -46,7 +45,7 @@ public abstract class dt extends al.AbstractRunnableC7597a {
             try {
                 try {
                     File file = new File(context.getExternalFilesDir(null), "push_cdata.lock");
-                    C7594ab.m659a(file);
+                    ab.m659a(file);
                     randomAccessFile = new RandomAccessFile(file, "rw");
                     try {
                         FileLock lock = randomAccessFile.getChannel().lock();
@@ -64,7 +63,7 @@ public abstract class dt extends al.AbstractRunnableC7597a {
                                     } catch (IOException unused) {
                                     }
                                 }
-                                C7594ab.a(bufferedOutputStream);
+                                ab.a(bufferedOutputStream);
                             } catch (IOException e) {
                                 e = e;
                                 fileLock = lock;
@@ -76,8 +75,8 @@ public abstract class dt extends al.AbstractRunnableC7597a {
                                         } catch (IOException unused2) {
                                         }
                                     }
-                                    C7594ab.a(bufferedOutputStream);
-                                    C7594ab.a(randomAccessFile);
+                                    ab.a(bufferedOutputStream);
+                                    ab.a(randomAccessFile);
                                 } catch (Throwable th) {
                                     th = th;
                                     if (fileLock != null && fileLock.isValid()) {
@@ -86,8 +85,8 @@ public abstract class dt extends al.AbstractRunnableC7597a {
                                         } catch (IOException unused3) {
                                         }
                                     }
-                                    C7594ab.a(bufferedOutputStream);
-                                    C7594ab.a(randomAccessFile);
+                                    ab.a(bufferedOutputStream);
+                                    ab.a(randomAccessFile);
                                     throw th;
                                 }
                             } catch (Throwable th2) {
@@ -96,8 +95,8 @@ public abstract class dt extends al.AbstractRunnableC7597a {
                                 if (fileLock != null) {
                                     fileLock.release();
                                 }
-                                C7594ab.a(bufferedOutputStream);
-                                C7594ab.a(randomAccessFile);
+                                ab.a(bufferedOutputStream);
+                                ab.a(randomAccessFile);
                                 throw th;
                             }
                         } catch (IOException e2) {
@@ -123,7 +122,7 @@ public abstract class dt extends al.AbstractRunnableC7597a {
                     bufferedOutputStream = null;
                     randomAccessFile = null;
                 }
-                C7594ab.a(randomAccessFile);
+                ab.a(randomAccessFile);
             } catch (Throwable th6) {
                 throw th6;
             }
@@ -142,7 +141,7 @@ public abstract class dt extends al.AbstractRunnableC7597a {
 
     /* renamed from: a  reason: collision with other method in class */
     protected boolean m771a() {
-        return C7632dp.a(this.f224a, String.valueOf(mo706a()), this.a);
+        return dp.a(this.f224a, String.valueOf(mo706a()), this.a);
     }
 
     public abstract String b();
@@ -164,7 +163,7 @@ public abstract class dt extends al.AbstractRunnableC7597a {
             return;
         }
         if (m771a()) {
-            AbstractC7535b.m586a("DC run job mutual: " + mo706a());
+            com.xiaomi.channel.commonutils.logger.b.m586a("DC run job mutual: " + mo706a());
             return;
         }
         dm m769a = dn.a().m769a();

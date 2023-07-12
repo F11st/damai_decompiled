@@ -11,9 +11,8 @@ import tb.hj;
 public interface JavaAnnotation extends JavaElement {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotation$a */
     /* loaded from: classes3.dex */
-    public static final class C8357a {
+    public static final class a {
         public static boolean a(@NotNull JavaAnnotation javaAnnotation) {
             b41.i(javaAnnotation, "this");
             return false;

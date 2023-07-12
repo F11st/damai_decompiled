@@ -23,9 +23,8 @@ public class fu extends DXWidgetNode {
     private int d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.fu$a */
     /* loaded from: classes4.dex */
-    public static class C9147a implements IDXBuilderWidgetNode {
+    public static class a implements IDXBuilderWidgetNode {
         private static transient /* synthetic */ IpChange $ipChange;
 
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode

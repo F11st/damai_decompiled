@@ -11,21 +11,21 @@ import java.util.HashMap;
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public final class aj extends bx.AbstractRunnableC7746a {
+public final class aj extends bx.a {
     final /* synthetic */ XMPushService a;
 
     /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ C7776t f880a;
+    final /* synthetic */ t f880a;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public aj(String str, long j, XMPushService xMPushService, C7776t c7776t) {
+    public aj(String str, long j, XMPushService xMPushService, t tVar) {
         super(str, j);
         this.a = xMPushService;
-        this.f880a = c7776t;
+        this.f880a = tVar;
     }
 
-    @Override // com.xiaomi.push.service.bx.AbstractRunnableC7746a
+    @Override // com.xiaomi.push.service.bx.a
     void a(bx bxVar) {
         com.xiaomi.push.ba a = com.xiaomi.push.ba.a(this.a);
         String a2 = bxVar.a("MSAID", "msaid");

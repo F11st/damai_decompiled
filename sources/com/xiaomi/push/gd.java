@@ -1,8 +1,6 @@
 package com.xiaomi.push;
 
 import android.os.SystemClock;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
-import com.xiaomi.push.service.C7764o;
 import com.xiaomi.push.service.XMPushService;
 import java.io.IOException;
 import java.net.Socket;
@@ -108,7 +106,7 @@ public abstract class gd extends fw {
                 return;
             }
             String mo910a = mo910a();
-            AbstractC7535b.m586a("max short conn time reached, sink down current host:" + mo910a);
+            com.xiaomi.channel.commonutils.logger.b.m586a("max short conn time reached, sink down current host:" + mo910a);
             a(mo910a, 0L, exc);
         }
         this.c = 0;
@@ -143,7 +141,7 @@ public abstract class gd extends fw {
         long elapsedRealtime = SystemClock.elapsedRealtime();
         long currentTimeMillis = System.currentTimeMillis();
         mo901a(z);
-        C7764o.a(this.b).m1225c();
+        com.xiaomi.push.service.o.a(this.b).m1225c();
         if (z) {
             return;
         }
@@ -165,7 +163,7 @@ public abstract class gd extends fw {
                 a(((fw) this).f398a);
                 return;
             }
-            AbstractC7535b.m586a("WARNING: current xmpp has connected");
+            com.xiaomi.channel.commonutils.logger.b.m586a("WARNING: current xmpp has connected");
         } catch (IOException e) {
             throw new gh(e);
         }

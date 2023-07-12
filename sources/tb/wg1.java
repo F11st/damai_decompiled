@@ -8,16 +8,15 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes3.dex */
 public abstract class wg1 implements ClassDescriptor {
     @NotNull
-    public static final C9867a Companion = new C9867a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.wg1$a */
     /* loaded from: classes3.dex */
-    public static final class C9867a {
-        private C9867a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9867a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

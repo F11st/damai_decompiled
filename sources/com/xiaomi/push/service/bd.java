@@ -1,7 +1,6 @@
 package com.xiaomi.push.service;
 
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -30,7 +29,7 @@ public class bd {
         try {
             return "BlockId_" + str.substring(8);
         } catch (Exception e) {
-            AbstractC7535b.d("Exception occurred when filtering registration packet id for log. " + e);
+            com.xiaomi.channel.commonutils.logger.b.d("Exception occurred when filtering registration packet id for log. " + e);
             return "UnexpectedId";
         }
     }

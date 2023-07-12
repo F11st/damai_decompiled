@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.baseview.RCRelativeLayoutView;
 import cn.damai.category.category.bean.CategoryBannerBean;
 import cn.damai.category.category.bean.GalleyTag;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -37,55 +36,52 @@ public class CategoryGalleyHolder extends RecyclerView.ViewHolder {
     private Context h;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.viewholder.CategoryGalleyHolder$a */
     /* loaded from: classes.dex */
-    public class C0363a implements DMImageCreator.DMImageFailListener {
+    public class a implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0363a(CategoryGalleyHolder categoryGalleyHolder) {
+        a(CategoryGalleyHolder categoryGalleyHolder) {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1690376509")) {
-                ipChange.ipc$dispatch("-1690376509", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-1690376509", new Object[]{this, dVar});
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.viewholder.CategoryGalleyHolder$b */
     /* loaded from: classes.dex */
-    public class C0364b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CategoryBannerBean a;
 
-        C0364b(df dfVar, CategoryBannerBean categoryBannerBean) {
+        b(df dfVar, CategoryBannerBean categoryBannerBean) {
             this.a = categoryBannerBean;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-377652712")) {
-                ipChange.ipc$dispatch("-377652712", new Object[]{this, c0502e});
-            } else if (c0502e != null && c0502e.b != null) {
+                ipChange.ipc$dispatch("-377652712", new Object[]{this, eVar});
+            } else if (eVar != null && eVar.b != null) {
                 throw null;
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.viewholder.CategoryGalleyHolder$c */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0365c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
         final /* synthetic */ CategoryBannerBean b;
         final /* synthetic */ View.OnClickListener c;
 
-        View$OnClickListenerC0365c(CategoryGalleyHolder categoryGalleyHolder, int i, CategoryBannerBean categoryBannerBean, View.OnClickListener onClickListener) {
+        c(CategoryGalleyHolder categoryGalleyHolder, int i, CategoryBannerBean categoryBannerBean, View.OnClickListener onClickListener) {
             this.a = i;
             this.b = categoryBannerBean;
             this.c = onClickListener;
@@ -142,7 +138,7 @@ public class CategoryGalleyHolder extends RecyclerView.ViewHolder {
             int i2 = categoryBannerBean.type;
             if (i2 == 3) {
                 this.c.setMaxHeight(ScreenUtil.dip2px(this.h, 144.0f));
-                C0504a.b().e(categoryBannerBean.pic).c(R$drawable.uikit_default_image_bg_grey).g(this.c);
+                cn.damai.common.image.a.b().e(categoryBannerBean.pic).c(R$drawable.uikit_default_image_bg_grey).g(this.c);
             } else {
                 if (i2 == 4) {
                     this.d.setVisibility(0);
@@ -153,15 +149,15 @@ public class CategoryGalleyHolder extends RecyclerView.ViewHolder {
                     this.e.getLabelView().setLabelHeight(m62.a(this.h, 21.0f));
                     this.e.getLabelView().setLabelName("1");
                     this.c.setImageResource(R$drawable.category_galley_rank_bg);
-                    C0504a.b().e(categoryBannerBean.pic).n(new C0364b(dfVar, categoryBannerBean)).e(new C0363a(this)).f();
+                    cn.damai.common.image.a.b().e(categoryBannerBean.pic).n(new b(dfVar, categoryBannerBean)).e(new a(this)).f();
                 } else {
-                    C0504a.b().e(categoryBannerBean.pic).c(R$drawable.uikit_default_image_bg_grey).g(this.c);
+                    cn.damai.common.image.a.b().e(categoryBannerBean.pic).c(R$drawable.uikit_default_image_bg_grey).g(this.c);
                 }
                 this.c.setMaxHeight(ScreenUtil.dip2px(this.h, 86.0f));
                 this.f.setText(categoryBannerBean.artistName);
                 this.g.setText(categoryBannerBean.title);
             }
-            this.itemView.setOnClickListener(new View$OnClickListenerC0365c(this, i, categoryBannerBean, onClickListener));
+            this.itemView.setOnClickListener(new c(this, i, categoryBannerBean, onClickListener));
         }
     }
 }

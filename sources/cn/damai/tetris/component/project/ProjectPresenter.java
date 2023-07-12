@@ -11,7 +11,7 @@ import cn.damai.tetris.core.ut.TrackType;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
-import tb.C9039db;
+import tb.db;
 import tb.ja;
 import tb.q60;
 import tb.qd2;
@@ -24,15 +24,14 @@ public class ProjectPresenter extends BasePresenter<ProjectContract.Model, Proje
     private TrackInfo mTrackInfo;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.project.ProjectPresenter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1943a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ProjectContract.Model a;
         final /* synthetic */ String b;
         final /* synthetic */ String c;
 
-        View$OnClickListenerC1943a(ProjectContract.Model model, String str, String str2) {
+        a(ProjectContract.Model model, String str, String str2) {
             this.a = model;
             this.b = str;
             this.c = str2;
@@ -108,8 +107,8 @@ public class ProjectPresenter extends BasePresenter<ProjectContract.Model, Proje
         this.mTrackInfo = trackInfo;
         String str2 = "";
         if (trackInfo != null) {
-            str2 = trackInfo.getString(C9039db.TRACKKEY_CATEGORY_NAME);
-            str = this.mTrackInfo.getString(C9039db.TRACKKEY_CITY);
+            str2 = trackInfo.getString(db.TRACKKEY_CATEGORY_NAME);
+            str = this.mTrackInfo.getString(db.TRACKKEY_CITY);
         } else {
             str = "";
         }
@@ -126,7 +125,7 @@ public class ProjectPresenter extends BasePresenter<ProjectContract.Model, Proje
             getView().getHolder().C();
             getView().getHolder().x(q60.a(getContext().getActivity(), 76.0f), q60.a(getContext().getActivity(), 101.0f));
         }
-        getView().getRootView().setOnClickListener(new View$OnClickListenerC1943a(model, str2, str));
+        getView().getRootView().setOnClickListener(new a(model, str2, str));
         ProjectItemBean bean = model.getBean();
         HashMap hashMap = new HashMap();
         hashMap.put("titlelabel", str2);

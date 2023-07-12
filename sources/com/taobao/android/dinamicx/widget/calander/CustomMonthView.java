@@ -85,7 +85,7 @@ public class CustomMonthView extends MonthView {
     @Override // com.taobao.android.dinamicx.widget.calander.MonthView
     protected void onDrawCalendarInfo(Canvas canvas, Calendar calendar, int i, int i2) {
         int b = z00.b(getContext(), 6.0f);
-        Calendar.C6483a calendarInfo = calendar.getCalendarInfo();
+        Calendar.a calendarInfo = calendar.getCalendarInfo();
         if (calendarInfo != null && !TextUtils.isEmpty(calendarInfo.a)) {
             if (!TextUtils.isEmpty(calendarInfo.b)) {
                 try {
@@ -176,9 +176,9 @@ public class CustomMonthView extends MonthView {
     @Override // com.taobao.android.dinamicx.widget.calander.BaseView
     public void updateStyle() {
         super.updateStyle();
-        C6488b c6488b = this.mDelegate;
-        if (c6488b != null) {
-            this.mOutRangeTextPaint.setTextSize(c6488b.l());
+        b bVar = this.mDelegate;
+        if (bVar != null) {
+            this.mOutRangeTextPaint.setTextSize(bVar.l());
             if (this.mDelegate.h() > 0) {
                 this.mCurDaySelectPaint.setTextSize(this.mDelegate.h());
                 this.mCurDayUnSelectPaint.setTextSize(this.mDelegate.h());

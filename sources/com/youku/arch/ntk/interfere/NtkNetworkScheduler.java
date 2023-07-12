@@ -46,9 +46,8 @@ public class NtkNetworkScheduler implements INetworkScheduleInterface {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.arch.ntk.interfere.NtkNetworkScheduler$a */
     /* loaded from: classes2.dex */
-    private static class C7860a {
+    private static class a {
         private static final NtkNetworkScheduler a = new NtkNetworkScheduler(null);
     }
 
@@ -63,7 +62,7 @@ public class NtkNetworkScheduler implements INetworkScheduleInterface {
 
     public static NtkNetworkScheduler a() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1845021455") ? (NtkNetworkScheduler) ipChange.ipc$dispatch("-1845021455", new Object[0]) : C7860a.a;
+        return AndroidInstantRuntime.support(ipChange, "-1845021455") ? (NtkNetworkScheduler) ipChange.ipc$dispatch("-1845021455", new Object[0]) : a.a;
     }
 
     public void a(Mode mode) {

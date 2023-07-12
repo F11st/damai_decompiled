@@ -6,7 +6,7 @@ import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public class cb extends AbstractC4517dp {
+public class cb extends dp {
     private String d;
 
     public cb(String str) {
@@ -18,7 +18,7 @@ public class cb extends AbstractC4517dp {
         return getURL();
     }
 
-    @Override // com.amap.api.mapcore.util.AbstractC4517dp, com.amap.api.mapcore.util.ii
+    @Override // com.amap.api.mapcore.util.dp, com.amap.api.mapcore.util.ii
     public Map<String, String> getParams() {
         return null;
     }

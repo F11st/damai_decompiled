@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.member.R$drawable;
 import cn.damai.member.R$id;
 import cn.damai.member.R$layout;
@@ -45,7 +45,7 @@ public class TickletSouvenirHolderView extends RelativeLayout {
         } else if (ticketSouvenirBean == null) {
         } else {
             if (!TextUtils.isEmpty(ticketSouvenirBean.nextImageUrl)) {
-                C0504a.b().e(ticketSouvenirBean.nextImageUrl).c(R$drawable.uikit_default_image_bg_grey).g(this.souvenir_placeholer_image);
+                a.b().e(ticketSouvenirBean.nextImageUrl).c(R$drawable.uikit_default_image_bg_grey).g(this.souvenir_placeholer_image);
             } else {
                 this.souvenir_placeholer_image.setImageResource(R$drawable.uikit_default_image_bg_grey);
             }

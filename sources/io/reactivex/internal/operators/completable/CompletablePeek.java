@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.completable;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
+import io.reactivex.a;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.CompositeException;
 import io.reactivex.functions.Action;
@@ -14,7 +14,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class CompletablePeek extends AbstractC8146a {
+public final class CompletablePeek extends a {
     final Action onAfterTerminate;
     final Action onComplete;
     final Action onDispose;
@@ -118,7 +118,7 @@ public final class CompletablePeek extends AbstractC8146a {
         this.onDispose = action4;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     protected void subscribeActual(CompletableObserver completableObserver) {
         this.source.subscribe(new CompletableObserverImplementation(completableObserver));
     }

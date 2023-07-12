@@ -10,32 +10,30 @@ import tb.b43;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public final class q1 {
-    private volatile C5874b a = new C5874b((byte) 0);
+    private volatile b a = new b((byte) 0);
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.loc.q1$a */
     /* loaded from: classes10.dex */
-    public static class C5873a {
+    public static class a {
         static q1 a = new q1();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.loc.q1$b */
     /* loaded from: classes10.dex */
-    public static class C5874b {
+    public static class b {
         private int a;
         protected boolean b;
         private boolean c;
 
-        private C5874b() {
+        private b() {
             this.a = 0;
             this.b = true;
             this.c = false;
         }
 
-        /* synthetic */ C5874b(byte b) {
+        /* synthetic */ b(byte b) {
             this();
         }
 
@@ -103,7 +101,7 @@ public final class q1 {
             L2f:
                 return r1
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.loc.q1.C5874b.c():boolean");
+            throw new UnsupportedOperationException("Method not decompiled: com.loc.q1.b.c():boolean");
         }
     }
 
@@ -112,7 +110,7 @@ public final class q1 {
     }
 
     public static q1 a() {
-        return C5873a.a;
+        return a.a;
     }
 
     public static String b(String str) {
@@ -136,9 +134,9 @@ public final class q1 {
     }
 
     private static void g(Context context, boolean z) {
-        SharedPreferences.Editor b = b43.b(context, "open_common");
-        b43.j(b, "a3", z);
-        b43.e(b);
+        SharedPreferences.Editor b2 = b43.b(context, "open_common");
+        b43.j(b2, "a3", z);
+        b43.e(b2);
     }
 
     private static boolean i() {
@@ -147,7 +145,7 @@ public final class q1 {
 
     public final void c(Context context) {
         if (this.a == null) {
-            this.a = new C5874b((byte) 0);
+            this.a = new b((byte) 0);
         }
         this.a.b(b43.k(context, "open_common", "a3", true));
         this.a.a(context);
@@ -157,7 +155,7 @@ public final class q1 {
     /* JADX INFO: Access modifiers changed from: package-private */
     public final void d(Context context, boolean z) {
         if (this.a == null) {
-            this.a = new C5874b((byte) 0);
+            this.a = new b((byte) 0);
         }
         g(context, z);
         this.a.b(z);
@@ -172,7 +170,7 @@ public final class q1 {
 
     public final boolean h() {
         if (this.a == null) {
-            this.a = new C5874b((byte) 0);
+            this.a = new b((byte) 0);
         }
         return this.a.c();
     }

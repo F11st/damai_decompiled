@@ -1,6 +1,5 @@
 package tb;
 
-import anet.channel.request.C0193a;
 import anet.channel.thread.ThreadPoolExecutorFactory;
 import com.youku.live.livesdk.preloader.Preloader;
 import java.util.HashMap;
@@ -27,18 +26,18 @@ public class g22 {
         a.put("png", 6);
         a.put("jpg", 6);
         a.put("do", 6);
-        a.put("zip", Integer.valueOf(ThreadPoolExecutorFactory.C0235b.c));
-        a.put("bin", Integer.valueOf(ThreadPoolExecutorFactory.C0235b.c));
-        a.put("apk", Integer.valueOf(ThreadPoolExecutorFactory.C0235b.c));
+        a.put("zip", Integer.valueOf(ThreadPoolExecutorFactory.b.c));
+        a.put("bin", Integer.valueOf(ThreadPoolExecutorFactory.b.c));
+        a.put("apk", Integer.valueOf(ThreadPoolExecutorFactory.b.c));
     }
 
-    public static int a(C0193a c0193a) {
+    public static int a(anet.channel.request.a aVar) {
         Integer num;
-        Objects.requireNonNull(c0193a, "url is null!");
-        if (c0193a.g().containsKey(HttpHeaderConstant.X_PV)) {
+        Objects.requireNonNull(aVar, "url is null!");
+        if (aVar.g().containsKey(HttpHeaderConstant.X_PV)) {
             return 1;
         }
-        String k = h01.k(c0193a.j().h());
+        String k = h01.k(aVar.j().h());
         if (k == null || (num = a.get(k)) == null) {
             return 6;
         }

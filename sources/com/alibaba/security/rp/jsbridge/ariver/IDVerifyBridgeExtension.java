@@ -27,25 +27,21 @@ import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.security.biometrics.jni.ALBiometricsJni;
 import com.alibaba.security.biometrics.jni.VersionKey;
-import com.alibaba.security.common.c.C3800a;
-import com.alibaba.security.common.d.C3801a;
-import com.alibaba.security.common.d.C3811h;
-import com.alibaba.security.common.d.C3812i;
-import com.alibaba.security.common.d.C3816j;
-import com.alibaba.security.common.track.a.C3829a;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.d.h;
+import com.alibaba.security.common.d.i;
+import com.alibaba.security.common.d.j;
+import com.alibaba.security.common.track.a.a;
 import com.alibaba.security.common.track.model.TrackLog;
+import com.alibaba.security.common.track.model.a;
 import com.alibaba.security.realidentity.RPConfig;
 import com.alibaba.security.realidentity.RPDetail;
 import com.alibaba.security.realidentity.RPEventListener;
 import com.alibaba.security.realidentity.RPResult;
 import com.alibaba.security.realidentity.RPVerify;
-import com.alibaba.security.realidentity.a.C3847g;
+import com.alibaba.security.realidentity.a.g;
 import com.alibaba.security.realidentity.activity.RPTakePhotoActivity;
 import com.alibaba.security.realidentity.bean.ClientInfo;
-import com.alibaba.security.realidentity.business.C3857a;
 import com.alibaba.security.realidentity.business.RPBusinessHeadParams;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
 import com.alibaba.security.realidentity.utils.ImageData;
 import com.uploader.export.UploaderGlobal;
 import java.io.File;
@@ -66,11 +62,11 @@ public class IDVerifyBridgeExtension implements BridgeExtension {
 
     private static void collectUsingLog(String str, String str2) {
         TrackLog createClassInvokedMonitor = TrackLog.createClassInvokedMonitor(str, str2);
-        createClassInvokedMonitor.setVerifyToken(C3847g.C3848a.a.d);
+        createClassInvokedMonitor.setVerifyToken(g.a.a.d);
         createClassInvokedMonitor.addTag9(VersionKey.RP_SDK_VERSION + "/3.3.0");
         createClassInvokedMonitor.addTag10("Android");
-        C3829a.C3830a.a.a(createClassInvokedMonitor);
-        C3829a.C3830a.a.a(false);
+        a.C0165a.a.a(createClassInvokedMonitor);
+        a.C0165a.a.a(false);
     }
 
     private String filePathToApUrl(String str, String str2) {
@@ -87,7 +83,7 @@ public class IDVerifyBridgeExtension implements BridgeExtension {
     }
 
     private String getFileMd5(String str) {
-        return str != null ? C3816j.a(new File(str)) : "";
+        return str != null ? j.a(new File(str)) : "";
     }
 
     private static String getUserName(String str) {
@@ -100,8 +96,8 @@ public class IDVerifyBridgeExtension implements BridgeExtension {
 
     private void handleTakePhotoResult(Intent intent, BridgeCallback bridgeCallback) {
         String stringExtra = intent.getStringExtra("errorMsg");
-        ArrayList parcelableArrayListExtra = intent.getParcelableArrayListExtra(AbstractC3893a.K);
-        int[] intArrayExtra = intent.getIntArrayExtra(AbstractC3893a.C);
+        ArrayList parcelableArrayListExtra = intent.getParcelableArrayListExtra(com.alibaba.security.realidentity.jsbridge.a.K);
+        int[] intArrayExtra = intent.getIntArrayExtra(com.alibaba.security.realidentity.jsbridge.a.C);
         JSONObject jSONObject = new JSONObject();
         if (intArrayExtra != null) {
             if (parcelableArrayListExtra != null) {
@@ -111,23 +107,23 @@ public class IDVerifyBridgeExtension implements BridgeExtension {
                     String str = imageData.a;
                     String str2 = imageData.c;
                     JSONObject jSONObject2 = new JSONObject();
-                    jSONObject2.put(AbstractC3893a.N, (Object) String.valueOf(imageData.b));
+                    jSONObject2.put(com.alibaba.security.realidentity.jsbridge.a.N, (Object) String.valueOf(imageData.b));
                     if (!TextUtils.isEmpty(str2)) {
-                        jSONObject2.put(AbstractC3893a.W, (Object) str2);
+                        jSONObject2.put(com.alibaba.security.realidentity.jsbridge.a.W, (Object) str2);
                     }
                     if (str != null && !"0".equals(str)) {
                         jSONObject2.put("photoPath", (Object) str);
                         String fileLocalId = getFileLocalId(str);
-                        jSONObject2.put(AbstractC3893a.r, (Object) fileLocalId);
+                        jSONObject2.put(com.alibaba.security.realidentity.jsbridge.a.r, (Object) fileLocalId);
                         String str3 = stringExtra;
                         jSONObject2.put("photoMd5", (Object) getFileMd5(str));
-                        jSONObject2.put(AbstractC3893a.Y, (Object) filePathToApUrl(str, fileLocalId));
-                        jSONObject.put(AbstractC3893a.X + imageData.b, (Object) jSONObject2);
+                        jSONObject2.put(com.alibaba.security.realidentity.jsbridge.a.Y, (Object) filePathToApUrl(str, fileLocalId));
+                        jSONObject.put(com.alibaba.security.realidentity.jsbridge.a.X + imageData.b, (Object) jSONObject2);
                         i++;
                         stringExtra = str3;
                     } else {
                         jSONObject2.put("errorMsg", (Object) LOW_MEMORY);
-                        jSONObject.put(AbstractC3893a.X + imageData.b, (Object) jSONObject2);
+                        jSONObject.put(com.alibaba.security.realidentity.jsbridge.a.X + imageData.b, (Object) jSONObject2);
                         jSONObject.put("errorCode", (Object) 1);
                         bridgeCallback.sendJSONResponse(jSONObject);
                         return;
@@ -141,15 +137,15 @@ public class IDVerifyBridgeExtension implements BridgeExtension {
                     if (i2 >= intArrayExtra.length) {
                         break;
                     } else if (intArrayExtra[i2] >= 0) {
-                        C3800a.b(TAG, String.valueOf(i2));
+                        com.alibaba.security.common.c.a.b(TAG, String.valueOf(i2));
                         JSONObject jSONObject3 = new JSONObject();
                         try {
-                            jSONObject3.put(AbstractC3893a.N, (Object) Integer.valueOf(intArrayExtra[i2]));
+                            jSONObject3.put(com.alibaba.security.realidentity.jsbridge.a.N, (Object) Integer.valueOf(intArrayExtra[i2]));
                             jSONObject3.put("errorMsg", (Object) str4);
-                            jSONObject.put(AbstractC3893a.X + intArrayExtra[i2], (Object) jSONObject3);
+                            jSONObject.put(com.alibaba.security.realidentity.jsbridge.a.X + intArrayExtra[i2], (Object) jSONObject3);
                             break;
                         } catch (JSONException e) {
-                            C3800a.d(TAG, e.getLocalizedMessage());
+                            com.alibaba.security.common.c.a.d(TAG, e.getLocalizedMessage());
                         }
                     } else {
                         i2++;
@@ -173,7 +169,7 @@ public class IDVerifyBridgeExtension implements BridgeExtension {
     }
 
     private void listenBroadcast(Context context, final String str, final BridgeCallback bridgeCallback) {
-        final C3812i a = C3812i.a(context);
+        final i a = i.a(context);
         a.a(new BroadcastReceiver() { // from class: com.alibaba.security.rp.jsbridge.ariver.IDVerifyBridgeExtension.2
             @Override // android.content.BroadcastReceiver
             public void onReceive(Context context2, Intent intent) {
@@ -265,8 +261,8 @@ public class IDVerifyBridgeExtension implements BridgeExtension {
             }
             Context context = app2.getAppContext().getContext();
             initArupUpload(context.getApplicationContext());
-            C3847g.C3848a.a.d = str;
-            C3847g.C3848a.a.g = new RPConfig.Builder().build();
+            g.a.a.d = str;
+            g.a.a.g = new RPConfig.Builder().build();
             RPBusinessHeadParams rPBusinessHeadParams = new RPBusinessHeadParams();
             RPBusinessHeadParams.IdentityInfoBean identityInfoBean = new RPBusinessHeadParams.IdentityInfoBean();
             String userName = getUserName(str2);
@@ -288,7 +284,7 @@ public class IDVerifyBridgeExtension implements BridgeExtension {
             if (str5 != null && !str5.isEmpty()) {
                 rPBusinessHeadParams.livenessConfig = str5;
             }
-            new C3857a(context, str, new RPEventListener() { // from class: com.alibaba.security.rp.jsbridge.ariver.IDVerifyBridgeExtension.1
+            new com.alibaba.security.realidentity.business.a(context, str, new RPEventListener() { // from class: com.alibaba.security.rp.jsbridge.ariver.IDVerifyBridgeExtension.1
                 @Override // com.alibaba.security.realidentity.RPEventListener
                 public void onFinish(RPResult rPResult, String str6, String str7) {
                     try {
@@ -331,12 +327,12 @@ public class IDVerifyBridgeExtension implements BridgeExtension {
                 return;
             }
             JSONObject jSONObject = new JSONObject();
-            String a = C3801a.a(ALBiometricsJni.genVersionTag(C3847g.C3848a.a.c, str));
+            String a = com.alibaba.security.common.d.a.a(ALBiometricsJni.genVersionTag(g.a.a.c, str));
             jSONObject.put("versionTag", (Object) a);
             ClientInfo clientInfo = new ClientInfo();
-            clientInfo.setClientType(AbstractC3893a.ai);
+            clientInfo.setClientType(com.alibaba.security.realidentity.jsbridge.a.ai);
             clientInfo.setVersionTag(a);
-            jSONObject.putAll(JSON.parseObject(C3811h.a(clientInfo)));
+            jSONObject.putAll(JSON.parseObject(h.a(clientInfo)));
             if (jSONObject.isEmpty()) {
                 bridgeCallback.sendBridgeResponse(new BridgeResponse.Error(104, "empty deviceInfo"));
             } else {
@@ -353,7 +349,7 @@ public class IDVerifyBridgeExtension implements BridgeExtension {
     public void rpStartByH5(@BindingNode(Page.class) Page page, @BindingParam(name = {"verifyToken"}, required = true) String str, @BindingCallback final BridgeCallback bridgeCallback) {
         String str2 = TAG;
         collectUsingLog(str2, "rpStartByH5");
-        C3800a.a(str2, ">>>>>>>>>>>> rpStartByH5: ".concat(String.valueOf(str)));
+        com.alibaba.security.common.c.a.a(str2, ">>>>>>>>>>>> rpStartByH5: ".concat(String.valueOf(str)));
         try {
             if (TextUtils.isEmpty(str)) {
                 bridgeCallback.sendBridgeResponse(new BridgeResponse.Error(102, "invalid verifyToken"));
@@ -414,8 +410,8 @@ public class IDVerifyBridgeExtension implements BridgeExtension {
             Intent intent = new Intent();
             intent.setClass(context, RPTakePhotoActivity.class);
             intent.putExtra("type", 1);
-            intent.putExtra(AbstractC3893a.B, strArr);
-            intent.putExtra(AbstractC3893a.C, iArr);
+            intent.putExtra(com.alibaba.security.realidentity.jsbridge.a.B, strArr);
+            intent.putExtra(com.alibaba.security.realidentity.jsbridge.a.C, iArr);
             intent.putExtra("fileSuffix", ".jpeg");
             startActivity(context, intent, TAG_TAKE_PHOTO, bridgeCallback);
         } catch (Throwable th) {
@@ -428,7 +424,7 @@ public class IDVerifyBridgeExtension implements BridgeExtension {
     public void rpTraceLink(@BindingNode(Page.class) Page page, @BindingParam(name = {"token"}) String str, @BindingParam(name = {"service"}) String str2, @BindingParam(name = {"method"}) String str3, @BindingParam(name = {"code"}) int i, @BindingParam(name = {"msg"}) String str4, @BindingParam(name = {"params"}) String str5, @BindingParam(name = {"result"}) String str6, @BindingParam(name = {"tags"}) List<String> list, @BindingCallback BridgeCallback bridgeCallback) {
         String str7 = TAG;
         collectUsingLog(str7, "rpTraceLink");
-        C3800a.a(str7, ">>>>>>>>>>>> rpTraceLink: ".concat(String.valueOf(str)));
+        com.alibaba.security.common.c.a.a(str7, ">>>>>>>>>>>> rpTraceLink: ".concat(String.valueOf(str)));
         try {
             TrackLog trackLog = new TrackLog();
             trackLog.setVerifyToken(str);
@@ -439,9 +435,9 @@ public class IDVerifyBridgeExtension implements BridgeExtension {
             trackLog.setResult(str6);
             trackLog.setTags(list);
             trackLog.setMsg(str4);
-            trackLog.setLayer(C3834a.C3835a.c);
-            C3847g.C3848a.a.d = str;
-            C3847g.C3848a.a.a(trackLog);
+            trackLog.setLayer(a.C0166a.c);
+            g.a.a.d = str;
+            g.a.a.a(trackLog);
             JSONObject jSONObject = new JSONObject();
             jSONObject.put("code", (Object) 0);
             jSONObject.put("message", (Object) "success");
@@ -481,7 +477,7 @@ public class IDVerifyBridgeExtension implements BridgeExtension {
 
     private void initArupUpload(Context context, int i) {
         String str = TAG;
-        C3800a.a(str, "AUS init appContext->" + context + " env->" + i);
+        com.alibaba.security.common.c.a.a(str, "AUS init appContext->" + context + " env->" + i);
         UploaderGlobal.g(context);
         av2 av2Var = new av2(context);
         av2Var.setEnvironment(i);
@@ -494,7 +490,7 @@ public class IDVerifyBridgeExtension implements BridgeExtension {
 
     protected void startActivity(Context context, Intent intent, String str, BridgeCallback bridgeCallback) {
         if (str != null) {
-            intent.putExtra(AbstractC3893a.J, str);
+            intent.putExtra(com.alibaba.security.realidentity.jsbridge.a.J, str);
         }
         if (!(context instanceof Activity)) {
             intent.addFlags(268435456);

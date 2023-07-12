@@ -13,12 +13,10 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.blur.ImageBlurHelper;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.util.DMRGBUtil;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -51,12 +49,11 @@ public class WaterFlowBrandViewHolder extends RecyclerView.ViewHolder {
     private View.OnClickListener l;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.viewholder.WaterFlowBrandViewHolder$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1186a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1186a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -67,7 +64,7 @@ public class WaterFlowBrandViewHolder extends RecyclerView.ViewHolder {
                 return;
             }
             WaterFlowRecommendItem waterFlowRecommendItem = (WaterFlowRecommendItem) view.getTag();
-            C0529c e = C0529c.e();
+            cn.damai.common.user.c e = cn.damai.common.user.c.e();
             py0 I = py0.I();
             String str = WaterFlowBrandViewHolder.this.b;
             String str2 = waterFlowRecommendItem.title;
@@ -86,19 +83,18 @@ public class WaterFlowBrandViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.viewholder.WaterFlowBrandViewHolder$b */
     /* loaded from: classes5.dex */
-    public class C1187b implements DMImageCreator.DMImageFailListener {
+    public class b implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1187b() {
+        b() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1870979042")) {
-                ipChange.ipc$dispatch("1870979042", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("1870979042", new Object[]{this, dVar});
                 return;
             }
             WaterFlowBrandViewHolder.this.c.setImageResource(R$drawable.homepage_waterflow_venues_default_bg);
@@ -107,19 +103,17 @@ public class WaterFlowBrandViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.viewholder.WaterFlowBrandViewHolder$c */
     /* loaded from: classes5.dex */
-    public class C1188c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ WaterFlowRecommendItem a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.homepage.ui.viewholder.WaterFlowBrandViewHolder$c$a */
         /* loaded from: classes5.dex */
-        public class C1189a implements DMRGBUtil.OnFetchColorListener {
+        public class a implements DMRGBUtil.OnFetchColorListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1189a() {
+            a() {
             }
 
             @Override // cn.damai.commonbusiness.util.DMRGBUtil.OnFetchColorListener
@@ -134,12 +128,11 @@ public class WaterFlowBrandViewHolder extends RecyclerView.ViewHolder {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.homepage.ui.viewholder.WaterFlowBrandViewHolder$c$b */
         /* loaded from: classes5.dex */
-        public class C1190b implements ImageBlurHelper.BlurImageCallback {
+        public class b implements ImageBlurHelper.BlurImageCallback {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1190b() {
+            b() {
             }
 
             @Override // cn.damai.common.image.blur.ImageBlurHelper.BlurImageCallback
@@ -153,29 +146,29 @@ public class WaterFlowBrandViewHolder extends RecyclerView.ViewHolder {
             }
         }
 
-        C1188c(WaterFlowRecommendItem waterFlowRecommendItem) {
+        c(WaterFlowRecommendItem waterFlowRecommendItem) {
             this.a = waterFlowRecommendItem;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "226877431")) {
-                ipChange.ipc$dispatch("226877431", new Object[]{this, c0502e});
-            } else if (c0502e == null || (bitmap = c0502e.b) == null) {
+                ipChange.ipc$dispatch("226877431", new Object[]{this, eVar});
+            } else if (eVar == null || (bitmap = eVar.b) == null) {
                 WaterFlowBrandViewHolder.this.c.setImageResource(R$drawable.homepage_waterflow_venues_default_bg);
                 WaterFlowBrandViewHolder.this.d.setImageResource(R$drawable.homepage_waterflow_venues_default_shade);
             } else {
-                DMRGBUtil.g(0.7f, bitmap, this.a.backgroundPic, new C1189a());
-                b21.c(WaterFlowBrandViewHolder.this.a, this.a.backgroundPic, c0502e.b, new C1190b());
+                DMRGBUtil.g(0.7f, bitmap, this.a.backgroundPic, new a());
+                b21.c(WaterFlowBrandViewHolder.this.a, this.a.backgroundPic, eVar.b, new b());
             }
         }
     }
 
     public WaterFlowBrandViewHolder(String str, Context context) {
         super(LayoutInflater.from(context).inflate(R$layout.homepage_waterflow_recommend_venues, (ViewGroup) null));
-        this.l = new View$OnClickListenerC1186a();
+        this.l = new a();
         this.b = str;
         this.a = context;
         this.c = (ImageView) this.itemView.findViewById(R$id.homepage_waterflow_venues_image);
@@ -190,9 +183,9 @@ public class WaterFlowBrandViewHolder extends RecyclerView.ViewHolder {
         View findViewById2 = this.itemView.findViewById(R$id.homepage_waterflow_venues_desc_bottom_dash);
         this.i = findViewById2;
         findViewById2.setLayerType(1, null);
-        int a = ((DisplayMetrics.getwidthPixels(t60.b(context)) - t60.a(context, 30.0f)) / 2) - t60.a(context, 12.0f);
-        this.j = a;
-        this.k = (int) (((a * UCNetworkDelegate.CHANGE_WEBVIEW_URL) * 1.0f) / 168.0f);
+        int a2 = ((DisplayMetrics.getwidthPixels(t60.b(context)) - t60.a(context, 30.0f)) / 2) - t60.a(context, 12.0f);
+        this.j = a2;
+        this.k = (int) (((a2 * UCNetworkDelegate.CHANGE_WEBVIEW_URL) * 1.0f) / 168.0f);
         new FrameLayout.LayoutParams(this.j, this.k);
         this.itemView.setLayoutParams(new ViewGroup.LayoutParams(-1, this.k + t60.a(context, 12.0f)));
         this.itemView.setOnClickListener(this.l);
@@ -204,8 +197,8 @@ public class WaterFlowBrandViewHolder extends RecyclerView.ViewHolder {
             ipChange.ipc$dispatch("-1749721958", new Object[]{this, waterFlowRecommendItem});
         } else if (waterFlowRecommendItem == null) {
         } else {
-            C0504a.b().f(waterFlowRecommendItem.backgroundPic, this.j, this.k).n(new C1188c(waterFlowRecommendItem)).e(new C1187b()).f();
-            DMImageCreator f = C0504a.b().f(waterFlowRecommendItem.pic, t60.a(this.a, 50.0f), t60.a(this.a, 50.0f));
+            cn.damai.common.image.a.b().f(waterFlowRecommendItem.backgroundPic, this.j, this.k).n(new c(waterFlowRecommendItem)).e(new b()).f();
+            DMImageCreator f = cn.damai.common.image.a.b().f(waterFlowRecommendItem.pic, t60.a(this.a, 50.0f), t60.a(this.a, 50.0f));
             int i = R$drawable.uikit_user_default_icon_trans_white;
             f.i(i).c(i).g(this.e);
             this.f.setText(waterFlowRecommendItem.title);

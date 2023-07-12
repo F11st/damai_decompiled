@@ -18,10 +18,9 @@ public class JSMath {
     private static ArgbEvaluator sArgbEvaluator = new ArgbEvaluator();
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$a */
     /* loaded from: classes5.dex */
-    static class C3153a implements JSFunctionInterface {
-        C3153a() {
+    static class a implements JSFunctionInterface {
+        a() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -31,10 +30,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$b */
     /* loaded from: classes5.dex */
-    static class C3154b implements JSFunctionInterface {
-        C3154b() {
+    static class b implements JSFunctionInterface {
+        b() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -44,10 +42,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$c */
     /* loaded from: classes5.dex */
-    static class C3155c implements JSFunctionInterface {
-        C3155c() {
+    static class c implements JSFunctionInterface {
+        c() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -57,10 +54,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$d */
     /* loaded from: classes5.dex */
-    static class C3156d implements JSFunctionInterface {
-        C3156d() {
+    static class d implements JSFunctionInterface {
+        d() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -70,10 +66,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$e */
     /* loaded from: classes5.dex */
-    static class C3157e implements JSFunctionInterface {
-        C3157e() {
+    static class e implements JSFunctionInterface {
+        e() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -94,10 +89,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$f */
     /* loaded from: classes5.dex */
-    static class C3158f implements JSFunctionInterface {
-        C3158f() {
+    static class f implements JSFunctionInterface {
+        f() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -107,10 +101,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$g */
     /* loaded from: classes5.dex */
-    static class C3159g implements JSFunctionInterface {
-        C3159g() {
+    static class g implements JSFunctionInterface {
+        g() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -120,10 +113,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$h */
     /* loaded from: classes5.dex */
-    static class C3160h implements JSFunctionInterface {
-        C3160h() {
+    static class h implements JSFunctionInterface {
+        h() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -133,10 +125,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$i */
     /* loaded from: classes5.dex */
-    static class C3161i implements JSFunctionInterface {
-        C3161i() {
+    static class i implements JSFunctionInterface {
+        i() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -160,10 +151,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$j */
     /* loaded from: classes5.dex */
-    static class C3162j implements JSFunctionInterface {
-        C3162j() {
+    static class j implements JSFunctionInterface {
+        j() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -187,10 +177,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$k */
     /* loaded from: classes5.dex */
-    static class C3163k implements JSFunctionInterface {
-        C3163k() {
+    static class k implements JSFunctionInterface {
+        k() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -200,10 +189,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$l */
     /* loaded from: classes5.dex */
-    static class C3164l implements JSFunctionInterface {
-        C3164l() {
+    static class l implements JSFunctionInterface {
+        l() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -216,10 +204,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$m */
     /* loaded from: classes5.dex */
-    static class C3165m implements JSFunctionInterface {
-        C3165m() {
+    static class m implements JSFunctionInterface {
+        m() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -232,10 +219,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$n */
     /* loaded from: classes5.dex */
-    static class C3166n implements JSFunctionInterface {
-        C3166n() {
+    static class n implements JSFunctionInterface {
+        n() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -247,10 +233,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$o */
     /* loaded from: classes5.dex */
-    static class C3167o implements JSFunctionInterface {
-        C3167o() {
+    static class o implements JSFunctionInterface {
+        o() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -260,10 +245,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$p */
     /* loaded from: classes5.dex */
-    static class C3168p implements JSFunctionInterface {
-        C3168p() {
+    static class p implements JSFunctionInterface {
+        p() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -273,10 +257,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$q */
     /* loaded from: classes5.dex */
-    static class C3169q implements JSFunctionInterface {
-        C3169q() {
+    static class q implements JSFunctionInterface {
+        q() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -286,10 +269,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$r */
     /* loaded from: classes5.dex */
-    static class C3170r implements JSFunctionInterface {
-        C3170r() {
+    static class r implements JSFunctionInterface {
+        r() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -299,10 +281,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$s */
     /* loaded from: classes5.dex */
-    static class C3171s implements JSFunctionInterface {
-        C3171s() {
+    static class s implements JSFunctionInterface {
+        s() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -312,10 +293,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$t */
     /* loaded from: classes5.dex */
-    static class C3172t implements JSFunctionInterface {
-        C3172t() {
+    static class t implements JSFunctionInterface {
+        t() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -325,10 +305,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$u */
     /* loaded from: classes5.dex */
-    static class C3173u implements JSFunctionInterface {
-        C3173u() {
+    static class u implements JSFunctionInterface {
+        u() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -338,10 +317,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$v */
     /* loaded from: classes5.dex */
-    static class C3174v implements JSFunctionInterface {
-        C3174v() {
+    static class v implements JSFunctionInterface {
+        v() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -351,10 +329,9 @@ public class JSMath {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.JSMath$w */
     /* loaded from: classes5.dex */
-    static class C3175w implements JSFunctionInterface {
-        C3175w() {
+    static class w implements JSFunctionInterface {
+        w() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -375,117 +352,117 @@ public class JSMath {
     }
 
     public static Object abs() {
-        return new C3156d();
+        return new d();
     }
 
     public static Object acos() {
-        return new C3171s();
+        return new s();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static void applyOrientationValuesToScope(Map<String, Object> map, double d, double d2, double d3, double d4, double d5, double d6, double d7, double d8, double d9) {
-        map.put("alpha", Double.valueOf(d));
-        map.put("beta", Double.valueOf(d2));
-        map.put("gamma", Double.valueOf(d3));
-        map.put("dalpha", Double.valueOf(d - d4));
-        map.put("dbeta", Double.valueOf(d2 - d5));
-        map.put("dgamma", Double.valueOf(d3 - d6));
-        map.put(Constants.Name.X, Double.valueOf(d7));
-        map.put(Constants.Name.Y, Double.valueOf(d8));
-        map.put("z", Double.valueOf(d9));
+    public static void applyOrientationValuesToScope(Map<String, Object> map, double d2, double d3, double d4, double d5, double d6, double d7, double d8, double d9, double d10) {
+        map.put("alpha", Double.valueOf(d2));
+        map.put("beta", Double.valueOf(d3));
+        map.put("gamma", Double.valueOf(d4));
+        map.put("dalpha", Double.valueOf(d2 - d5));
+        map.put("dbeta", Double.valueOf(d3 - d6));
+        map.put("dgamma", Double.valueOf(d4 - d7));
+        map.put(Constants.Name.X, Double.valueOf(d8));
+        map.put(Constants.Name.Y, Double.valueOf(d9));
+        map.put("z", Double.valueOf(d10));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static void applyRotationInDegreesToScope(Map<String, Object> map, double d) {
-        map.put(UploadQueueMgr.MSGTYPE_REALTIME, Double.valueOf(d));
+    public static void applyRotationInDegreesToScope(Map<String, Object> map, double d2) {
+        map.put(UploadQueueMgr.MSGTYPE_REALTIME, Double.valueOf(d2));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static void applyScaleFactorToScope(Map<String, Object> map, double d) {
-        map.put("s", Double.valueOf(d));
+    public static void applyScaleFactorToScope(Map<String, Object> map, double d2) {
+        map.put("s", Double.valueOf(d2));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static void applyScrollValuesToScope(Map<String, Object> map, double d, double d2, double d3, double d4, double d5, double d6, PlatformManager.IDeviceResolutionTranslator iDeviceResolutionTranslator) {
-        map.put(Constants.Name.X, Double.valueOf(iDeviceResolutionTranslator.nativeToWeb(d, new Object[0])));
-        map.put(Constants.Name.Y, Double.valueOf(iDeviceResolutionTranslator.nativeToWeb(d2, new Object[0])));
-        map.put("dx", Double.valueOf(iDeviceResolutionTranslator.nativeToWeb(d3, new Object[0])));
-        map.put(Constants.Name.DISTANCE_Y, Double.valueOf(iDeviceResolutionTranslator.nativeToWeb(d4, new Object[0])));
-        map.put("tdx", Double.valueOf(iDeviceResolutionTranslator.nativeToWeb(d5, new Object[0])));
-        map.put("tdy", Double.valueOf(iDeviceResolutionTranslator.nativeToWeb(d6, new Object[0])));
-        map.put("internal_x", Double.valueOf(d));
-        map.put("internal_y", Double.valueOf(d2));
+    public static void applyScrollValuesToScope(Map<String, Object> map, double d2, double d3, double d4, double d5, double d6, double d7, PlatformManager.IDeviceResolutionTranslator iDeviceResolutionTranslator) {
+        map.put(Constants.Name.X, Double.valueOf(iDeviceResolutionTranslator.nativeToWeb(d2, new Object[0])));
+        map.put(Constants.Name.Y, Double.valueOf(iDeviceResolutionTranslator.nativeToWeb(d3, new Object[0])));
+        map.put("dx", Double.valueOf(iDeviceResolutionTranslator.nativeToWeb(d4, new Object[0])));
+        map.put(Constants.Name.DISTANCE_Y, Double.valueOf(iDeviceResolutionTranslator.nativeToWeb(d5, new Object[0])));
+        map.put("tdx", Double.valueOf(iDeviceResolutionTranslator.nativeToWeb(d6, new Object[0])));
+        map.put("tdy", Double.valueOf(iDeviceResolutionTranslator.nativeToWeb(d7, new Object[0])));
+        map.put("internal_x", Double.valueOf(d2));
+        map.put("internal_y", Double.valueOf(d3));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static void applySpringValueToScope(Map<String, Object> map, double d, double d2) {
-        map.put("p", Double.valueOf(d));
-        map.put("v", Double.valueOf(d2));
+    public static void applySpringValueToScope(Map<String, Object> map, double d2, double d3) {
+        map.put("p", Double.valueOf(d2));
+        map.put("v", Double.valueOf(d3));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static void applyTimingValuesToScope(Map<String, Object> map, double d) {
-        map.put("t", Double.valueOf(d));
+    public static void applyTimingValuesToScope(Map<String, Object> map, double d2) {
+        map.put("t", Double.valueOf(d2));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static void applyXYToScope(Map<String, Object> map, double d, double d2, PlatformManager.IDeviceResolutionTranslator iDeviceResolutionTranslator) {
-        map.put(Constants.Name.X, Double.valueOf(iDeviceResolutionTranslator.nativeToWeb(d, new Object[0])));
-        map.put(Constants.Name.Y, Double.valueOf(iDeviceResolutionTranslator.nativeToWeb(d2, new Object[0])));
-        map.put("internal_x", Double.valueOf(d));
-        map.put("internal_y", Double.valueOf(d2));
+    public static void applyXYToScope(Map<String, Object> map, double d2, double d3, PlatformManager.IDeviceResolutionTranslator iDeviceResolutionTranslator) {
+        map.put(Constants.Name.X, Double.valueOf(iDeviceResolutionTranslator.nativeToWeb(d2, new Object[0])));
+        map.put(Constants.Name.Y, Double.valueOf(iDeviceResolutionTranslator.nativeToWeb(d3, new Object[0])));
+        map.put("internal_x", Double.valueOf(d2));
+        map.put("internal_y", Double.valueOf(d3));
     }
 
     public static Object asArray() {
-        return new C3167o();
+        return new o();
     }
 
     public static Object asin() {
-        return new C3170r();
+        return new r();
     }
 
     public static Object atan() {
-        return new C3172t();
+        return new t();
     }
 
     public static Object atan2() {
-        return new C3173u();
+        return new u();
     }
 
     public static Object cbrt() {
-        return new C3154b();
+        return new b();
     }
 
     public static Object ceil() {
-        return new C3158f();
+        return new f();
     }
 
     public static Object cos() {
-        return new C3168p();
+        return new p();
     }
 
     public static Object evaluateColor() {
-        return new C3166n();
+        return new n();
     }
 
     public static Object exp() {
-        return new C3175w();
+        return new w();
     }
 
     public static Object floor() {
-        return new C3159g();
+        return new g();
     }
 
     public static Object log() {
-        return new C3155c();
+        return new c();
     }
 
     public static Object max() {
-        return new C3161i();
+        return new i();
     }
 
     public static Object min() {
-        return new C3162j();
+        return new j();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -501,34 +478,34 @@ public class JSMath {
     }
 
     public static Object pow() {
-        return new C3174v();
+        return new v();
     }
 
     public static Object rgb() {
-        return new C3164l();
+        return new l();
     }
 
     public static Object rgba() {
-        return new C3165m();
+        return new m();
     }
 
     public static Object round() {
-        return new C3160h();
+        return new h();
     }
 
     public static Object sign() {
-        return new C3157e();
+        return new e();
     }
 
     public static Object sin() {
-        return new C3163k();
+        return new k();
     }
 
     public static Object sqrt() {
-        return new C3153a();
+        return new a();
     }
 
     public static Object tan() {
-        return new C3169q();
+        return new q();
     }
 }

@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.descriptors.annotations;
 
 import java.util.Iterator;
 import java.util.List;
-import kotlin.collections.C8212k;
+import kotlin.collections.k;
 import kotlin.jvm.internal.markers.KMappedMarker;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -14,21 +14,20 @@ import tb.hp0;
 /* loaded from: classes3.dex */
 public interface Annotations extends Iterable<AnnotationDescriptor>, KMappedMarker {
     @NotNull
-    public static final C8302a Companion = C8302a.a;
+    public static final a Companion = a.a;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations$a */
     /* loaded from: classes3.dex */
-    public static final class C8302a {
-        static final /* synthetic */ C8302a a = new C8302a();
+    public static final class a {
+        static final /* synthetic */ a a = new a();
         @NotNull
-        private static final Annotations b = new C8303a();
+        private static final Annotations b = new C0414a();
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations$a$a */
+        /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations$a$a  reason: collision with other inner class name */
         /* loaded from: classes3.dex */
-        public static final class C8303a implements Annotations {
-            C8303a() {
+        public static final class C0414a implements Annotations {
+            C0414a() {
             }
 
             @Nullable
@@ -44,7 +43,7 @@ public interface Annotations extends Iterable<AnnotationDescriptor>, KMappedMark
 
             @Override // kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations
             public boolean hasAnnotation(@NotNull hp0 hp0Var) {
-                return C8304b.b(this, hp0Var);
+                return b.b(this, hp0Var);
             }
 
             @Override // kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations
@@ -55,7 +54,7 @@ public interface Annotations extends Iterable<AnnotationDescriptor>, KMappedMark
             @Override // java.lang.Iterable
             @NotNull
             public Iterator<AnnotationDescriptor> iterator() {
-                return C8212k.g().iterator();
+                return k.g().iterator();
             }
 
             @NotNull
@@ -64,7 +63,7 @@ public interface Annotations extends Iterable<AnnotationDescriptor>, KMappedMark
             }
         }
 
-        private C8302a() {
+        private a() {
         }
 
         @NotNull
@@ -80,9 +79,8 @@ public interface Annotations extends Iterable<AnnotationDescriptor>, KMappedMark
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations$b */
     /* loaded from: classes3.dex */
-    public static final class C8304b {
+    public static final class b {
         @Nullable
         public static AnnotationDescriptor a(@NotNull Annotations annotations, @NotNull hp0 hp0Var) {
             AnnotationDescriptor annotationDescriptor;

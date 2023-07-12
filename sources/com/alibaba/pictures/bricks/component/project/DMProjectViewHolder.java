@@ -108,9 +108,8 @@ public final class DMProjectViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.project.DMProjectViewHolder$a */
     /* loaded from: classes7.dex */
-    public /* synthetic */ class C3486a {
+    public /* synthetic */ class a {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -130,12 +129,11 @@ public final class DMProjectViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.project.DMProjectViewHolder$b */
     /* loaded from: classes7.dex */
-    public static final class View$OnAttachStateChangeListenerC3487b implements View.OnAttachStateChangeListener {
+    public static final class b implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC3487b() {
+        b() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -172,14 +170,13 @@ public final class DMProjectViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.project.DMProjectViewHolder$c */
     /* loaded from: classes7.dex */
-    public static final class ViewTreeObserver$OnGlobalLayoutListenerC3488c implements ViewTreeObserver.OnGlobalLayoutListener {
+    public static final class c implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FlowLayout a;
         final /* synthetic */ DMProjectViewHolder b;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC3488c(FlowLayout flowLayout, DMProjectViewHolder dMProjectViewHolder) {
+        c(FlowLayout flowLayout, DMProjectViewHolder dMProjectViewHolder) {
             this.a = flowLayout;
             this.b = dMProjectViewHolder;
         }
@@ -193,7 +190,7 @@ public final class DMProjectViewHolder extends RecyclerView.ViewHolder {
         public void onGlobalLayout() {
             /*
                 r5 = this;
-                com.android.alibaba.ip.runtime.IpChange r0 = com.alibaba.pictures.bricks.component.project.DMProjectViewHolder.ViewTreeObserver$OnGlobalLayoutListenerC3488c.$ipChange
+                com.android.alibaba.ip.runtime.IpChange r0 = com.alibaba.pictures.bricks.component.project.DMProjectViewHolder.c.$ipChange
                 java.lang.String r1 = "-573291195"
                 boolean r2 = com.android.alibaba.ip.runtime.AndroidInstantRuntime.support(r0, r1)
                 r3 = 1
@@ -247,7 +244,7 @@ public final class DMProjectViewHolder extends RecyclerView.ViewHolder {
                 r0.removeOnGlobalLayoutListener(r5)
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.alibaba.pictures.bricks.component.project.DMProjectViewHolder.ViewTreeObserver$OnGlobalLayoutListenerC3488c.onGlobalLayout():void");
+            throw new UnsupportedOperationException("Method not decompiled: com.alibaba.pictures.bricks.component.project.DMProjectViewHolder.c.onGlobalLayout():void");
         }
     }
 
@@ -330,7 +327,7 @@ public final class DMProjectViewHolder extends RecyclerView.ViewHolder {
             }
             DMProjectItemBean.PosterTag posterTag = dMProjectItemBean.bottomLeft;
             DMLabelType convertType2Label = DMLabelType.convertType2Label(posterTag != null ? posterTag.type : null);
-            switch (convertType2Label == null ? -1 : C3486a.$EnumSwitchMapping$0[convertType2Label.ordinal()]) {
+            switch (convertType2Label == null ? -1 : a.$EnumSwitchMapping$0[convertType2Label.ordinal()]) {
                 case 1:
                     DMPosterView dMPosterView3 = this.b;
                     if (dMPosterView3 != null) {
@@ -549,7 +546,7 @@ public final class DMProjectViewHolder extends RecyclerView.ViewHolder {
         TimerView timerView = (TimerView) view.findViewById(R$id.dm_project_timer_view);
         this.m = timerView;
         if (timerView != null) {
-            timerView.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC3487b());
+            timerView.addOnAttachStateChangeListener(new b());
         }
         this.z = (ViewGroup) view.findViewById(R$id.ll_price);
     }
@@ -646,7 +643,7 @@ public final class DMProjectViewHolder extends RecyclerView.ViewHolder {
                     if (viewGroup != null) {
                         viewGroup.setPadding(0, 0, 0, 0);
                     }
-                    flowLayout2.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC3488c(flowLayout2, this));
+                    flowLayout2.getViewTreeObserver().addOnGlobalLayoutListener(new c(flowLayout2, this));
                 }
             }
         }

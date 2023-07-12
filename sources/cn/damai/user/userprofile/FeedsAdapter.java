@@ -29,7 +29,7 @@ import cn.damai.user.userprofile.cuser.view.ForwardArticleHolder;
 import cn.damai.user.userprofile.cuser.view.ForwardCommentViewHolder;
 import cn.damai.user.userprofile.cuser.view.ForwardInfoViewHolder;
 import cn.damai.user.userprofile.cuser.view.InfoViewHolder;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
@@ -79,14 +79,13 @@ public class FeedsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     boolean k = false;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.FeedsAdapter$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2734a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FeedMergeDataDO a;
         final /* synthetic */ RecyclerView.ViewHolder b;
 
-        View$OnClickListenerC2734a(FeedMergeDataDO feedMergeDataDO, RecyclerView.ViewHolder viewHolder) {
+        a(FeedMergeDataDO feedMergeDataDO, RecyclerView.ViewHolder viewHolder) {
             this.a = feedMergeDataDO;
             this.b = viewHolder;
         }
@@ -104,14 +103,13 @@ public class FeedsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.FeedsAdapter$b */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2735b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FeedMergeDataDO a;
         final /* synthetic */ RecyclerView.ViewHolder b;
 
-        View$OnClickListenerC2735b(FeedMergeDataDO feedMergeDataDO, RecyclerView.ViewHolder viewHolder) {
+        b(FeedMergeDataDO feedMergeDataDO, RecyclerView.ViewHolder viewHolder) {
             this.a = feedMergeDataDO;
             this.b = viewHolder;
         }
@@ -133,14 +131,13 @@ public class FeedsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.FeedsAdapter$c */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2736c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FeedMergeDataDO a;
         final /* synthetic */ RecyclerView.ViewHolder b;
 
-        View$OnClickListenerC2736c(FeedMergeDataDO feedMergeDataDO, RecyclerView.ViewHolder viewHolder) {
+        c(FeedMergeDataDO feedMergeDataDO, RecyclerView.ViewHolder viewHolder) {
             this.a = feedMergeDataDO;
             this.b = viewHolder;
         }
@@ -248,7 +245,7 @@ public class FeedsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         } else if (!wh2.j(str)) {
             Bundle bundle = new Bundle();
             bundle.putString("url", str);
-            DMNav.from(this.b).withExtras(bundle).toUri(NavUri.b(C3834a.C3837c.d));
+            DMNav.from(this.b).withExtras(bundle).toUri(NavUri.b(a.c.d));
         } else {
             Log.d("netlog", "url is null");
         }
@@ -265,12 +262,12 @@ public class FeedsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             if (getItemViewType(i) != s || feedMergeDataDO == null || (list3 = feedMergeDataDO.articleData) == null || list3.size() <= 0) {
                 return;
             }
-            viewHolder.itemView.setOnClickListener(new View$OnClickListenerC2736c(feedMergeDataDO, viewHolder));
+            viewHolder.itemView.setOnClickListener(new c(feedMergeDataDO, viewHolder));
         } else if (feedMergeDataDO != null && (list2 = feedMergeDataDO.dynamicData) != null && list2.size() > 0) {
-            viewHolder.itemView.setOnClickListener(new View$OnClickListenerC2734a(feedMergeDataDO, viewHolder));
+            viewHolder.itemView.setOnClickListener(new a(feedMergeDataDO, viewHolder));
         } else if (feedMergeDataDO == null || (list = feedMergeDataDO.watchData) == null || list.size() <= 0) {
         } else {
-            viewHolder.itemView.setOnClickListener(new View$OnClickListenerC2735b(feedMergeDataDO, viewHolder));
+            viewHolder.itemView.setOnClickListener(new b(feedMergeDataDO, viewHolder));
         }
     }
 

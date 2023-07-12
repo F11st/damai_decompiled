@@ -37,14 +37,13 @@ public class Utils {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.util.Utils$a */
     /* loaded from: classes.dex */
-    public class DialogInterface$OnClickListenerC0946a implements DialogInterface.OnClickListener {
+    public class a implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
         final /* synthetic */ boolean b;
 
-        DialogInterface$OnClickListenerC0946a(Activity activity, boolean z) {
+        a(Activity activity, boolean z) {
             this.a = activity;
             this.b = z;
         }
@@ -68,14 +67,13 @@ public class Utils {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.util.Utils$b */
     /* loaded from: classes.dex */
-    public class DialogInterface$OnClickListenerC0947b implements DialogInterface.OnClickListener {
+    public class b implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ boolean a;
         final /* synthetic */ Activity b;
 
-        DialogInterface$OnClickListenerC0947b(boolean z, Activity activity) {
+        b(boolean z, Activity activity) {
             this.a = z;
             this.b = activity;
         }
@@ -105,8 +103,8 @@ public class Utils {
         DMDialog dMDialog = new DMDialog(activity);
         dMDialog.v(cm2.b(activity, R$string.data_string_007));
         dMDialog.q(cm2.b(activity, R$string.data_string_045));
-        dMDialog.n(cm2.b(activity, R$string.Ensure), new DialogInterface$OnClickListenerC0946a(activity, z));
-        dMDialog.i(cm2.b(activity, R$string.Cancel), new DialogInterface$OnClickListenerC0947b(z, activity));
+        dMDialog.n(cm2.b(activity, R$string.Ensure), new a(activity, z));
+        dMDialog.i(cm2.b(activity, R$string.Cancel), new b(z, activity));
         dMDialog.show();
         return false;
     }

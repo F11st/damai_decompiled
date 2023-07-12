@@ -12,17 +12,16 @@ import org.jetbrains.annotations.NotNull;
 public final class tz0 implements LineBackgroundSpan {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C9746a Companion = new C9746a(null);
+    public static final a Companion = new a(null);
     private static final int a = ((Integer) Float.valueOf(a01.Companion.a() / 4)).intValue();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.tz0$a */
     /* loaded from: classes7.dex */
-    public static final class C9746a {
-        private C9746a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9746a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

@@ -14,9 +14,8 @@ public class wx2 {
 
     /* compiled from: Taobao */
     @TargetApi(16)
-    /* renamed from: tb.wx2$a */
     /* loaded from: classes8.dex */
-    public static class C9888a {
+    public static class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
         public static void a(View view, Runnable runnable) {
@@ -43,7 +42,7 @@ public class wx2 {
         if (AndroidInstantRuntime.support(ipChange, "-761765911")) {
             ipChange.ipc$dispatch("-761765911", new Object[]{view, runnable});
         } else if (Build.VERSION.SDK_INT >= 16) {
-            C9888a.a(view, runnable);
+            a.a(view, runnable);
         } else {
             view.postDelayed(runnable, 16L);
         }
@@ -54,7 +53,7 @@ public class wx2 {
         if (AndroidInstantRuntime.support(ipChange, "801612954")) {
             ipChange.ipc$dispatch("801612954", new Object[]{view, drawable});
         } else if (Build.VERSION.SDK_INT >= 16) {
-            C9888a.b(view, drawable);
+            a.b(view, drawable);
         } else {
             view.setBackgroundDrawable(drawable);
         }

@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
+import kotlin.coroutines.intrinsics.b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function2;
-import kotlinx.coroutines.C8690g;
 import kotlinx.coroutines.CoroutineScope;
+import kotlinx.coroutines.g;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -68,7 +68,7 @@ public final class FileUploader$uploadGroup$1 extends SuspendLambda implements F
         if (AndroidInstantRuntime.support(ipChange, "-364329506")) {
             return ipChange.ipc$dispatch("-364329506", new Object[]{this, obj});
         }
-        C8234b.d();
+        b.d();
         if (this.label == 0) {
             i32.b(obj);
             CoroutineScope coroutineScope = (CoroutineScope) this.L$0;
@@ -85,7 +85,7 @@ public final class FileUploader$uploadGroup$1 extends SuspendLambda implements F
             }
             arrayList = this.this$0.b;
             for (wu2 wu2Var2 : arrayList) {
-                C8690g.b(coroutineScope, null, null, new FileUploader$uploadGroup$1$invokeSuspend$$inlined$forEach$lambda$1(wu2Var2, null, this, coroutineScope), 3, null);
+                g.b(coroutineScope, null, null, new FileUploader$uploadGroup$1$invokeSuspend$$inlined$forEach$lambda$1(wu2Var2, null, this, coroutineScope), 3, null);
             }
             FileUploader.Companion.h("任务开启完毕！");
             return wt2.INSTANCE;

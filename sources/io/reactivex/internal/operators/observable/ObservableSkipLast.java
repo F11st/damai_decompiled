@@ -67,7 +67,7 @@ public final class ObservableSkipLast<T> extends AbstractObservableWithUpstream<
         this.skip = i;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new SkipLastObserver(observer, this.skip));
     }

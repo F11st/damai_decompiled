@@ -5,18 +5,18 @@ import com.uc.webview.export.internal.utility.Log;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-final class as implements ValueCallback<AbstractC7282l> {
-    final /* synthetic */ C7266ar a;
+final class as implements ValueCallback<l> {
+    final /* synthetic */ ar a;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public as(C7266ar c7266ar) {
-        this.a = c7266ar;
+    public as(ar arVar) {
+        this.a = arVar;
     }
 
     @Override // android.webkit.ValueCallback
-    public final /* synthetic */ void onReceiveValue(AbstractC7282l abstractC7282l) {
+    public final /* synthetic */ void onReceiveValue(l lVar) {
         String str;
-        str = C7266ar.c;
+        str = ar.c;
         Log.d(str, "switch callback do nothing.");
     }
 }

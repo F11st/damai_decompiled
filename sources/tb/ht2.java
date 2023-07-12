@@ -22,12 +22,11 @@ public class ht2 {
     public static AlertDialog.Builder b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ht2$a */
     /* loaded from: classes10.dex */
-    class DialogInterface$OnClickListenerC9234a implements DialogInterface.OnClickListener {
+    class a implements DialogInterface.OnClickListener {
         final /* synthetic */ Context a;
 
-        DialogInterface$OnClickListenerC9234a(Context context) {
+        a(Context context) {
             this.a = context;
         }
 
@@ -43,10 +42,9 @@ public class ht2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ht2$b */
     /* loaded from: classes10.dex */
-    class DialogInterface$OnClickListenerC9235b implements DialogInterface.OnClickListener {
-        DialogInterface$OnClickListenerC9235b() {
+    class b implements DialogInterface.OnClickListener {
+        b() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -56,12 +54,11 @@ public class ht2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ht2$c */
     /* loaded from: classes10.dex */
-    class DialogInterface$OnCancelListenerC9236c implements DialogInterface.OnCancelListener {
+    class c implements DialogInterface.OnCancelListener {
         final /* synthetic */ Runnable a;
 
-        DialogInterface$OnCancelListenerC9236c(Runnable runnable) {
+        c(Runnable runnable) {
             this.a = runnable;
         }
 
@@ -73,12 +70,11 @@ public class ht2 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.ht2$d */
     /* loaded from: classes10.dex */
-    public class DialogInterface$OnClickListenerC9237d implements DialogInterface.OnClickListener {
+    public class d implements DialogInterface.OnClickListener {
         final /* synthetic */ Context a;
 
-        DialogInterface$OnClickListenerC9237d(Context context) {
+        d(Context context) {
             this.a = context;
         }
 
@@ -137,11 +133,11 @@ public class ht2 {
     }
 
     public static AlertDialog c(Context context, int i, int i2, Runnable runnable) {
-        DialogInterface$OnClickListenerC9234a dialogInterface$OnClickListenerC9234a = new DialogInterface$OnClickListenerC9234a(context);
+        a aVar = new a(context);
         AlertDialog.Builder a2 = a(context);
-        a2.setTitle(i).setMessage(i2).setCancelable(false).setPositiveButton(R$string.dialog_button_open_help_center, dialogInterface$OnClickListenerC9234a).setNegativeButton(R$string.dialog_button_got_it, new DialogInterface$OnClickListenerC9235b());
+        a2.setTitle(i).setMessage(i2).setCancelable(false).setPositiveButton(R$string.dialog_button_open_help_center, aVar).setNegativeButton(R$string.dialog_button_got_it, new b());
         if (runnable != null) {
-            a2.setOnCancelListener(new DialogInterface$OnCancelListenerC9236c(runnable));
+            a2.setOnCancelListener(new c(runnable));
         }
         AlertDialog create = a2.create();
         create.setCanceledOnTouchOutside(false);
@@ -160,9 +156,9 @@ public class ht2 {
     }
 
     private static void e(Context context) {
-        DialogInterface$OnClickListenerC9237d dialogInterface$OnClickListenerC9237d = new DialogInterface$OnClickListenerC9237d(context);
+        d dVar = new d(context);
         AlertDialog.Builder a2 = a(context);
-        a2.setTitle(R$string.dialog_title).setMessage(R$string.dialog_message_no_cardboard).setPositiveButton(R$string.go_to_playstore_button, dialogInterface$OnClickListenerC9237d).setNegativeButton(R$string.cancel_button, (DialogInterface.OnClickListener) null);
+        a2.setTitle(R$string.dialog_title).setMessage(R$string.dialog_message_no_cardboard).setPositiveButton(R$string.go_to_playstore_button, dVar).setNegativeButton(R$string.cancel_button, (DialogInterface.OnClickListener) null);
         d(context, a2.create());
     }
 }

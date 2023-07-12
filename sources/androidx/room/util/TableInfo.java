@@ -8,7 +8,7 @@ import androidx.annotation.RestrictTo;
 import androidx.room.ColumnInfo;
 import androidx.room.Index;
 import androidx.sqlite.db.SupportSQLiteDatabase;
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import com.meizu.cloud.pushsdk.constants.PushConstants;
 import com.tencent.open.SocialConstants;
 import java.util.ArrayList;
@@ -393,7 +393,7 @@ public final class TableInfo {
             if (columnIndex != -1 && columnIndex2 != -1 && columnIndex3 != -1) {
                 HashSet hashSet = new HashSet();
                 while (query.moveToNext()) {
-                    if (AbstractC5658c.a.equals(query.getString(columnIndex2))) {
+                    if (c.a.equals(query.getString(columnIndex2))) {
                         String string = query.getString(columnIndex);
                         boolean z = true;
                         if (query.getInt(columnIndex3) != 1) {

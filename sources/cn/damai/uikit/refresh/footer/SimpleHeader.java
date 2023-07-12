@@ -34,9 +34,8 @@ public final class SimpleHeader extends InternalAbstract implements RefreshHeade
     private TextView title;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.refresh.footer.SimpleHeader$a */
     /* loaded from: classes8.dex */
-    static /* synthetic */ class C2541a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -150,7 +149,7 @@ public final class SimpleHeader extends InternalAbstract implements RefreshHeade
             ipChange.ipc$dispatch("-532686873", new Object[]{this, refreshLayout, refreshState, refreshState2});
             return;
         }
-        int i = C2541a.a[refreshState2.ordinal()];
+        int i = a.a[refreshState2.ordinal()];
         if (i == 1) {
             this.headerView.onRefresh();
             this.title.setText(this.pullDownToRefreshText);
@@ -229,29 +228,29 @@ public final class SimpleHeader extends InternalAbstract implements RefreshHeade
         if (getPaddingTop() == 0) {
             if (getPaddingBottom() == 0) {
                 int paddingLeft = getPaddingLeft();
-                int a = q60.a(context, this.mPaddingTop);
-                this.mPaddingTop = a;
+                int a2 = q60.a(context, this.mPaddingTop);
+                this.mPaddingTop = a2;
                 int paddingRight = getPaddingRight();
-                int a2 = q60.a(context, this.mPaddingBottom);
-                this.mPaddingBottom = a2;
-                setPadding(paddingLeft, a, paddingRight, a2);
+                int a3 = q60.a(context, this.mPaddingBottom);
+                this.mPaddingBottom = a3;
+                setPadding(paddingLeft, a2, paddingRight, a3);
             } else {
                 int paddingLeft2 = getPaddingLeft();
-                int a3 = q60.a(context, this.mPaddingTop);
-                this.mPaddingTop = a3;
+                int a4 = q60.a(context, this.mPaddingTop);
+                this.mPaddingTop = a4;
                 int paddingRight2 = getPaddingRight();
                 int paddingBottom = getPaddingBottom();
                 this.mPaddingBottom = paddingBottom;
-                setPadding(paddingLeft2, a3, paddingRight2, paddingBottom);
+                setPadding(paddingLeft2, a4, paddingRight2, paddingBottom);
             }
         } else if (getPaddingBottom() == 0) {
             int paddingLeft3 = getPaddingLeft();
             int paddingTop = getPaddingTop();
             this.mPaddingTop = paddingTop;
             int paddingRight3 = getPaddingRight();
-            int a4 = q60.a(context, this.mPaddingBottom);
-            this.mPaddingBottom = a4;
-            setPadding(paddingLeft3, paddingTop, paddingRight3, a4);
+            int a5 = q60.a(context, this.mPaddingBottom);
+            this.mPaddingBottom = a5;
+            setPadding(paddingLeft3, paddingTop, paddingRight3, a5);
         } else {
             this.mPaddingTop = getPaddingTop();
             this.mPaddingBottom = getPaddingBottom();

@@ -1,11 +1,11 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
-import io.reactivex.AbstractC8152e;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.SingleObserver;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.fuseable.FuseToFlowable;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import java.util.NoSuchElementException;
@@ -14,10 +14,10 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableElementAtSingle<T> extends AbstractC8152e<T> implements FuseToFlowable<T> {
+public final class FlowableElementAtSingle<T> extends e<T> implements FuseToFlowable<T> {
     final T defaultValue;
     final long index;
-    final AbstractC8147b<T> source;
+    final b<T> source;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -98,18 +98,18 @@ public final class FlowableElementAtSingle<T> extends AbstractC8152e<T> implemen
         }
     }
 
-    public FlowableElementAtSingle(AbstractC8147b<T> abstractC8147b, long j, T t) {
-        this.source = abstractC8147b;
+    public FlowableElementAtSingle(b<T> bVar, long j, T t) {
+        this.source = bVar;
         this.index = j;
         this.defaultValue = t;
     }
 
     @Override // io.reactivex.internal.fuseable.FuseToFlowable
-    public AbstractC8147b<T> fuseToFlowable() {
+    public b<T> fuseToFlowable() {
         return i42.l(new FlowableElementAt(this.source, this.index, this.defaultValue, true));
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super T> singleObserver) {
         this.source.subscribe((FlowableSubscriber) new ElementAtSubscriber(singleObserver, this.index, this.defaultValue));
     }

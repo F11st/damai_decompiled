@@ -222,8 +222,8 @@ public final class OfflineMapManager {
         ba.b = false;
         ba a = ba.a(applicationContext);
         this.b = a;
-        a.a(new ba.InterfaceC4482a() { // from class: com.amap.api.maps.offlinemap.OfflineMapManager.1
-            @Override // com.amap.api.mapcore.util.ba.InterfaceC4482a
+        a.a(new ba.a() { // from class: com.amap.api.maps.offlinemap.OfflineMapManager.1
+            @Override // com.amap.api.mapcore.util.ba.a
             public void a(final az azVar) {
                 if (OfflineMapManager.this.d == null || azVar == null) {
                     return;
@@ -240,7 +240,7 @@ public final class OfflineMapManager {
                 });
             }
 
-            @Override // com.amap.api.mapcore.util.ba.InterfaceC4482a
+            @Override // com.amap.api.mapcore.util.ba.a
             public void b(final az azVar) {
                 if (OfflineMapManager.this.d == null || azVar == null) {
                     return;
@@ -260,7 +260,7 @@ public final class OfflineMapManager {
                 });
             }
 
-            @Override // com.amap.api.mapcore.util.ba.InterfaceC4482a
+            @Override // com.amap.api.mapcore.util.ba.a
             public void c(final az azVar) {
                 if (OfflineMapManager.this.d == null || azVar == null) {
                     return;
@@ -281,7 +281,7 @@ public final class OfflineMapManager {
                 });
             }
 
-            @Override // com.amap.api.mapcore.util.ba.InterfaceC4482a
+            @Override // com.amap.api.mapcore.util.ba.a
             public void a() {
                 if (OfflineMapManager.this.e != null) {
                     OfflineMapManager.this.f.post(new Runnable() { // from class: com.amap.api.maps.offlinemap.OfflineMapManager.1.4

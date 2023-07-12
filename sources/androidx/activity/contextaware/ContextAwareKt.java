@@ -3,8 +3,8 @@ package androidx.activity.contextaware;
 import android.content.Context;
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt;
+import kotlin.coroutines.intrinsics.b;
 import kotlin.jvm.functions.Function1;
 import kotlinx.coroutines.CancellableContinuationImpl;
 import org.jetbrains.annotations.NotNull;
@@ -31,7 +31,7 @@ public final class ContextAwareKt {
         contextAware.addOnContextAvailableListener(contextAwareKt$withContextAvailable$$inlined$suspendCancellableCoroutine$lambda$1);
         cancellableContinuationImpl.invokeOnCancellation(new ContextAwareKt$withContextAvailable$$inlined$suspendCancellableCoroutine$lambda$2(contextAwareKt$withContextAvailable$$inlined$suspendCancellableCoroutine$lambda$1, contextAware, function1));
         Object result = cancellableContinuationImpl.getResult();
-        d = C8234b.d();
+        d = b.d();
         if (result == d) {
             n40.c(continuation);
             return result;
@@ -55,7 +55,7 @@ public final class ContextAwareKt {
         contextAware.addOnContextAvailableListener(contextAwareKt$withContextAvailable$$inlined$suspendCancellableCoroutine$lambda$1);
         cancellableContinuationImpl.invokeOnCancellation(new ContextAwareKt$withContextAvailable$$inlined$suspendCancellableCoroutine$lambda$2(contextAwareKt$withContextAvailable$$inlined$suspendCancellableCoroutine$lambda$1, contextAware, function1));
         Object result = cancellableContinuationImpl.getResult();
-        d = C8234b.d();
+        d = b.d();
         if (result == d) {
             n40.c(continuation);
         }

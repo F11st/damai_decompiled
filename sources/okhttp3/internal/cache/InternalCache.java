@@ -2,23 +2,23 @@ package okhttp3.internal.cache;
 
 import java.io.IOException;
 import javax.annotation.Nullable;
-import okhttp3.C8823o;
-import okhttp3.C8827q;
+import okhttp3.o;
+import okhttp3.q;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
 public interface InternalCache {
     @Nullable
-    C8827q get(C8823o c8823o) throws IOException;
+    q get(o oVar) throws IOException;
 
     @Nullable
-    CacheRequest put(C8827q c8827q) throws IOException;
+    CacheRequest put(q qVar) throws IOException;
 
-    void remove(C8823o c8823o) throws IOException;
+    void remove(o oVar) throws IOException;
 
     void trackConditionalCacheHit();
 
-    void trackResponse(C8761b c8761b);
+    void trackResponse(b bVar);
 
-    void update(C8827q c8827q, C8827q c8827q2);
+    void update(q qVar, q qVar2);
 }

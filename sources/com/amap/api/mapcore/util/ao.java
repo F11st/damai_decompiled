@@ -8,24 +8,23 @@ import com.amap.api.mapcore.util.an;
 public class ao extends an {
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.ao$a */
     /* loaded from: classes10.dex */
-    public static abstract class AbstractC4476a implements an.InterfaceC4475a {
-        @Override // com.amap.api.mapcore.util.an.InterfaceC4475a
+    public static abstract class a implements an.a {
+        @Override // com.amap.api.mapcore.util.an.a
         public boolean a(an anVar) {
             return a((ao) anVar);
         }
 
         public abstract boolean a(ao aoVar);
 
-        @Override // com.amap.api.mapcore.util.an.InterfaceC4475a
+        @Override // com.amap.api.mapcore.util.an.a
         public boolean b(an anVar) {
             return b((ao) anVar);
         }
 
         public abstract boolean b(ao aoVar);
 
-        @Override // com.amap.api.mapcore.util.an.InterfaceC4475a
+        @Override // com.amap.api.mapcore.util.an.a
         public void c(an anVar) {
             c((ao) anVar);
         }
@@ -33,8 +32,8 @@ public class ao extends an {
         public abstract void c(ao aoVar);
     }
 
-    public ao(Context context, AbstractC4476a abstractC4476a) {
-        super(context, abstractC4476a);
+    public ao(Context context, a aVar) {
+        super(context, aVar);
     }
 
     public float l() {

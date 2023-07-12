@@ -6,8 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
-import com.xiaomi.push.providers.C7692a;
 import com.youku.danmaku.engine.danmaku.model.android.DanmakuFactory;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -29,19 +27,18 @@ public class hb {
     private static final Object f447a = new Object();
 
     /* renamed from: a  reason: collision with other field name */
-    private static List<C7670a> f449a = Collections.synchronizedList(new ArrayList());
+    private static List<a> f449a = Collections.synchronizedList(new ArrayList());
 
     /* renamed from: a  reason: collision with other field name */
     private static String f448a = "";
 
     /* renamed from: a  reason: collision with other field name */
-    private static C7692a f446a = null;
+    private static com.xiaomi.push.providers.a f446a = null;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.hb$a */
     /* loaded from: classes11.dex */
-    public static class C7670a {
+    public static class a {
         public int a;
 
         /* renamed from: a  reason: collision with other field name */
@@ -57,7 +54,7 @@ public class hb {
         /* renamed from: b  reason: collision with other field name */
         public String f453b;
 
-        public C7670a(String str, long j, int i, int i2, String str2, long j2) {
+        public a(String str, long j, int i, int i2, String str2, long j2) {
             this.f451a = "";
             this.f450a = 0L;
             this.a = -1;
@@ -72,8 +69,8 @@ public class hb {
             this.f452b = j2;
         }
 
-        public boolean a(C7670a c7670a) {
-            return TextUtils.equals(c7670a.f451a, this.f451a) && TextUtils.equals(c7670a.f453b, this.f453b) && c7670a.a == this.a && c7670a.b == this.b && Math.abs(c7670a.f450a - this.f450a) <= DanmakuFactory.DEFAULT_DANMAKU_DURATION_V;
+        public boolean a(a aVar) {
+            return TextUtils.equals(aVar.f451a, this.f451a) && TextUtils.equals(aVar.f453b, this.f453b) && aVar.a == this.a && aVar.b == this.b && Math.abs(aVar.f450a - this.f450a) <= DanmakuFactory.DEFAULT_DANMAKU_DURATION_V;
         }
     }
 
@@ -104,14 +101,14 @@ public class hb {
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    private static C7692a m946a(Context context) {
-        C7692a c7692a = f446a;
-        if (c7692a != null) {
-            return c7692a;
+    private static com.xiaomi.push.providers.a m946a(Context context) {
+        com.xiaomi.push.providers.a aVar = f446a;
+        if (aVar != null) {
+            return aVar;
         }
-        C7692a c7692a2 = new C7692a(context);
-        f446a = c7692a2;
-        return c7692a2;
+        com.xiaomi.push.providers.a aVar2 = new com.xiaomi.push.providers.a(context);
+        f446a = aVar2;
+        return aVar2;
     }
 
     /* renamed from: a  reason: collision with other method in class */
@@ -137,7 +134,7 @@ public class hb {
         }
         synchronized (f447a) {
             isEmpty = f449a.isEmpty();
-            a(new C7670a(str, j2, a2, z ? 1 : 0, a2 == 0 ? m947a(context) : "", j));
+            a(new a(str, j2, a2, z ? 1 : 0, a2 == 0 ? m947a(context) : "", j));
         }
         if (isEmpty) {
             f445a.a(new hc(context), DanmakuFactory.DEFAULT_DANMAKU_DURATION_V);
@@ -148,20 +145,20 @@ public class hb {
         a(context, str, a(a(context), j, z, j2, z2), z, j2);
     }
 
-    private static void a(C7670a c7670a) {
-        for (C7670a c7670a2 : f449a) {
-            if (c7670a2.a(c7670a)) {
-                c7670a2.f452b += c7670a.f452b;
+    private static void a(a aVar) {
+        for (a aVar2 : f449a) {
+            if (aVar2.a(aVar)) {
+                aVar2.f452b += aVar.f452b;
                 return;
             }
         }
-        f449a.add(c7670a);
+        f449a.add(aVar);
     }
 
     /* renamed from: a  reason: collision with other method in class */
     public static synchronized void m950a(String str) {
         synchronized (hb.class) {
-            if (!C7688m.m1124d() && !TextUtils.isEmpty(str)) {
+            if (!m.m1124d() && !TextUtils.isEmpty(str)) {
                 f448a = str;
             }
         }
@@ -184,26 +181,26 @@ public class hb {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static void b(Context context, List<C7670a> list) {
+    public static void b(Context context, List<a> list) {
         try {
-            synchronized (C7692a.f815a) {
+            synchronized (com.xiaomi.push.providers.a.f815a) {
                 SQLiteDatabase writableDatabase = m946a(context).getWritableDatabase();
                 writableDatabase.beginTransaction();
-                for (C7670a c7670a : list) {
+                for (a aVar : list) {
                     ContentValues contentValues = new ContentValues();
-                    contentValues.put("package_name", c7670a.f451a);
-                    contentValues.put("message_ts", Long.valueOf(c7670a.f450a));
-                    contentValues.put("network_type", Integer.valueOf(c7670a.a));
-                    contentValues.put("bytes", Long.valueOf(c7670a.f452b));
-                    contentValues.put("rcv", Integer.valueOf(c7670a.b));
-                    contentValues.put("imsi", c7670a.f453b);
+                    contentValues.put("package_name", aVar.f451a);
+                    contentValues.put("message_ts", Long.valueOf(aVar.f450a));
+                    contentValues.put("network_type", Integer.valueOf(aVar.a));
+                    contentValues.put("bytes", Long.valueOf(aVar.f452b));
+                    contentValues.put("rcv", Integer.valueOf(aVar.b));
+                    contentValues.put("imsi", aVar.f453b);
                     writableDatabase.insert("traffic", null, contentValues);
                 }
                 writableDatabase.setTransactionSuccessful();
                 writableDatabase.endTransaction();
             }
         } catch (Throwable th) {
-            AbstractC7535b.a(th);
+            com.xiaomi.channel.commonutils.logger.b.a(th);
         }
     }
 }

@@ -10,7 +10,7 @@ import com.android.alibaba.ip.runtime.IpChange;
 /* loaded from: classes.dex */
 public class ServiceNote implements Parcelable {
     private static transient /* synthetic */ IpChange $ipChange;
-    public static final Parcelable.Creator<ServiceNote> CREATOR = new C0869a();
+    public static final Parcelable.Creator<ServiceNote> CREATOR = new a();
     public String imgUrl;
     public String isSupport;
     public String tagDesc;
@@ -19,12 +19,11 @@ public class ServiceNote implements Parcelable {
     public String tagType;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.servicenotice.ServiceNote$a */
     /* loaded from: classes.dex */
-    public class C0869a implements Parcelable.Creator<ServiceNote> {
+    public class a implements Parcelable.Creator<ServiceNote> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0869a() {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

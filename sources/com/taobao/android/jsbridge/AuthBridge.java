@@ -120,12 +120,11 @@ public class AuthBridge extends WVApiPlugin {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.jsbridge.AuthBridge$a */
     /* loaded from: classes11.dex */
-    public static class C6550a implements DataCallback<String> {
+    public static class a implements DataCallback<String> {
         final /* synthetic */ Activity a;
 
-        C6550a(Activity activity) {
+        a(Activity activity) {
             this.a = activity;
         }
 
@@ -146,9 +145,8 @@ public class AuthBridge extends WVApiPlugin {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.jsbridge.AuthBridge$b */
     /* loaded from: classes12.dex */
-    static /* synthetic */ class C6551b {
+    static /* synthetic */ class b {
         static final /* synthetic */ int[] a;
 
         static {
@@ -187,7 +185,7 @@ public class AuthBridge extends WVApiPlugin {
     }
 
     public static void alipayAuth(Activity activity) {
-        AlipayInfo.getInstance().getApdidToken(new C6550a(activity));
+        AlipayInfo.getInstance().getApdidToken(new a(activity));
     }
 
     private synchronized void checkIfExist(WVCallBackContext wVCallBackContext) {
@@ -262,7 +260,7 @@ public class AuthBridge extends WVApiPlugin {
                 if (loginAction == null) {
                     return;
                 }
-                int i = C6551b.a[loginAction.ordinal()];
+                int i = b.a[loginAction.ordinal()];
                 if (i == 1) {
                     AuthBridge.this.doWhenReceiveSuccess(wVCallBackContext);
                 } else if (i == 2) {

@@ -53,12 +53,11 @@ public class SeatActivity extends BaseSeatActivity<SeatPresenter, SeatModel> imp
     private FrameLayout mViewContainer;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.SeatActivity$a */
     /* loaded from: classes7.dex */
-    public class C1703a extends u82 {
+    public class a extends u82 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1703a(Activity activity, View view) {
+        a(Activity activity, View view) {
             super(activity, view);
         }
 
@@ -84,12 +83,11 @@ public class SeatActivity extends BaseSeatActivity<SeatPresenter, SeatModel> imp
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.SeatActivity$b */
     /* loaded from: classes7.dex */
-    public class C1704b implements SeatListLayerPanel.OnPanelStateListener {
+    public class b implements SeatListLayerPanel.OnPanelStateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1704b() {
+        b() {
         }
 
         @Override // cn.damai.seat.helper.SeatListLayerPanel.OnPanelStateListener
@@ -107,12 +105,11 @@ public class SeatActivity extends BaseSeatActivity<SeatPresenter, SeatModel> imp
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.SeatActivity$c */
     /* loaded from: classes7.dex */
-    public class C1705c implements OnSeatRemoveListener {
+    public class c implements OnSeatRemoveListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1705c() {
+        c() {
         }
 
         @Override // cn.damai.seat.listener.OnSeatRemoveListener
@@ -127,12 +124,11 @@ public class SeatActivity extends BaseSeatActivity<SeatPresenter, SeatModel> imp
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.SeatActivity$d */
     /* loaded from: classes7.dex */
-    public class C1706d implements SeatView.OnSeatClickListener {
+    public class d implements SeatView.OnSeatClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1706d() {
+        d() {
         }
 
         @Override // cn.damai.seat.view.SeatView.OnSeatClickListener
@@ -214,9 +210,9 @@ public class SeatActivity extends BaseSeatActivity<SeatPresenter, SeatModel> imp
         View findViewById = findViewById(R$id.seat_jpg_bottom_bar);
         View findViewById2 = findViewById(R$id.seat_select_container);
         View findViewById3 = findViewById(R$id.bottom_bar_top_divide_line);
-        this.mBottomPanel = new C1703a(this, findViewById);
-        this.mPriceDetailPopUpPanel = new SeatListLayerPanel(this, (ViewStub) findViewById(R$id.seat_selected_list_new_layer_stub), new C1704b());
-        this.mSeatListV2HolScrollPanel = new SeatListV2Panel(this, findViewById2, findViewById3, new C1705c());
+        this.mBottomPanel = new a(this, findViewById);
+        this.mPriceDetailPopUpPanel = new SeatListLayerPanel(this, (ViewStub) findViewById(R$id.seat_selected_list_new_layer_stub), new b());
+        this.mSeatListV2HolScrollPanel = new SeatListV2Panel(this, findViewById2, findViewById3, new c());
         this.mLoadingPanel = new SeatLoadingPanel((ViewStub) findViewById(R$id.loading_layer_stub));
         TbParams tbParams = (TbParams) obtainExtra();
         this.mParams = tbParams;
@@ -381,7 +377,7 @@ public class SeatActivity extends BaseSeatActivity<SeatPresenter, SeatModel> imp
             this.mSeatView.setData(seatProfile);
             this.mSeatView.setProvider(g92Var);
             this.mSeatView.init(this.mContext);
-            this.mSeatView.setListener(new C1706d());
+            this.mSeatView.setListener(new d());
             this.mViewContainer.removeAllViews();
             this.mViewContainer.addView(this.mSeatView, new FrameLayout.LayoutParams(-1, -1));
         }

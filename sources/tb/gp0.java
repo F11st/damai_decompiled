@@ -1,14 +1,13 @@
 package tb;
 
 import com.google.common.annotations.GwtCompatible;
-import com.google.common.collect.AbstractC5205t;
 import java.util.Map;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 
 /* compiled from: Taobao */
 @GwtCompatible
 /* loaded from: classes10.dex */
-public abstract class gp0<K, V> extends AbstractC5205t implements Map.Entry<K, V> {
+public abstract class gp0<K, V> extends com.google.common.collect.t implements Map.Entry<K, V> {
     protected abstract Map.Entry<K, V> a();
 
     public boolean equals(@NullableDecl Object obj) {

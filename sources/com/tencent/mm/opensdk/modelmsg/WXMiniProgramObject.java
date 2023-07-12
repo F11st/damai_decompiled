@@ -2,8 +2,8 @@ package com.tencent.mm.opensdk.modelmsg;
 
 import android.os.Bundle;
 import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
-import com.tencent.mm.opensdk.utils.C7065b;
 import com.tencent.mm.opensdk.utils.Log;
+import com.tencent.mm.opensdk.utils.b;
 import java.util.HashMap;
 
 /* compiled from: Taobao */
@@ -26,9 +26,9 @@ public class WXMiniProgramObject implements WXMediaMessage.IMediaObject {
     @Override // com.tencent.mm.opensdk.modelmsg.WXMediaMessage.IMediaObject
     public boolean checkArgs() {
         String str;
-        if (C7065b.b(this.webpageUrl)) {
+        if (b.b(this.webpageUrl)) {
             str = "webPageUrl is null";
-        } else if (C7065b.b(this.userName)) {
+        } else if (b.b(this.userName)) {
             str = "userName is null";
         } else {
             int i = this.miniprogramType;
@@ -54,7 +54,7 @@ public class WXMiniProgramObject implements WXMediaMessage.IMediaObject {
         if (this.extraInfoMap == null) {
             this.extraInfoMap = new HashMap<>();
         }
-        if (C7065b.b(str)) {
+        if (b.b(str)) {
             return;
         }
         this.extraInfoMap.put(str, str2);

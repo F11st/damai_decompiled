@@ -32,12 +32,11 @@ public class OrderDetailAddressViewHolder extends RecyclerView.ViewHolder {
     private View h;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailAddressViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2197a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2197a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -75,7 +74,7 @@ public class OrderDetailAddressViewHolder extends RecyclerView.ViewHolder {
             this.e.setText(orderDetailAddressBean.fullAddress);
             this.c.setText(orderDetailAddressBean.userName + AltriaXLaunchTime.SPACE + orderDetailAddressBean.mobilePhone);
             this.f.setVisibility(orderDetailAddressBean.modify ? 0 : 8);
-            this.f.setOnClickListener(new View$OnClickListenerC2197a());
+            this.f.setOnClickListener(new a());
             if (!TextUtils.isEmpty(orderDetailAddressBean.consigneeAddressTip)) {
                 this.h.setVisibility(0);
                 this.b.setVisibility(0);

@@ -27,17 +27,16 @@ public class SystemContactsUtil {
     /* loaded from: classes.dex */
     public static class ContactInfo implements Parcelable {
         private static transient /* synthetic */ IpChange $ipChange;
-        public static final Parcelable.Creator<ContactInfo> CREATOR = new C0945a();
+        public static final Parcelable.Creator<ContactInfo> CREATOR = new a();
         private String contactName;
         private String phoneNum;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.commonbusiness.util.SystemContactsUtil$ContactInfo$a */
         /* loaded from: classes.dex */
-        public class C0945a implements Parcelable.Creator<ContactInfo> {
+        public class a implements Parcelable.Creator<ContactInfo> {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C0945a() {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator

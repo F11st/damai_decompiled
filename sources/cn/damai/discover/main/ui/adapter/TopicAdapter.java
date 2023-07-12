@@ -28,9 +28,9 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
 import java.util.List;
-import tb.C9548pb;
 import tb.cb2;
 import tb.lm2;
+import tb.pb;
 import tb.rm1;
 
 /* compiled from: Taobao */
@@ -56,12 +56,11 @@ public class TopicAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.adapter.TopicAdapter$a */
     /* loaded from: classes5.dex */
-    public class C1067a implements OnItemClickListener<NoteBean> {
+    public class a implements OnItemClickListener<NoteBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1067a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.discover.viewholder.OnItemClickListener
@@ -93,12 +92,11 @@ public class TopicAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.adapter.TopicAdapter$b */
     /* loaded from: classes5.dex */
-    public class C1068b implements OnItemClickListener<ThemeBean> {
+    public class b implements OnItemClickListener<ThemeBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1068b() {
+        b() {
         }
 
         @Override // cn.damai.commonbusiness.discover.viewholder.OnItemClickListener
@@ -128,14 +126,13 @@ public class TopicAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.adapter.TopicAdapter$c */
     /* loaded from: classes5.dex */
-    public class C1069c implements VotePanel.VoteActionListener {
+    public class c implements VotePanel.VoteActionListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context a;
         final /* synthetic */ int b;
 
-        C1069c(Context context, int i) {
+        c(Context context, int i) {
             this.a = context;
             this.b = i;
         }
@@ -186,7 +183,7 @@ public class TopicAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             if (AndroidInstantRuntime.support(ipChange, "-1902225462")) {
                 ipChange.ipc$dispatch("-1902225462", new Object[]{this, voteInfoBean});
             } else {
-                C9548pb.j(TopicAdapter.this.f.n(voteInfoBean.id, 1));
+                pb.j(TopicAdapter.this.f.n(voteInfoBean.id, 1));
             }
         }
 
@@ -206,15 +203,14 @@ public class TopicAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             if (AndroidInstantRuntime.support(ipChange, "1389829344")) {
                 ipChange.ipc$dispatch("1389829344", new Object[]{this, voteInfoBean, voteBean, Integer.valueOf(i)});
             } else {
-                C9548pb.j(TopicAdapter.this.f.x(voteInfoBean.id, voteBean.posInVoteList, this.b));
+                pb.j(TopicAdapter.this.f.x(voteInfoBean.id, voteBean.posInVoteList, this.b));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.adapter.TopicAdapter$d */
     /* loaded from: classes5.dex */
-    public static class C1070d implements Exposure {
+    public static class d implements Exposure {
         private static transient /* synthetic */ IpChange $ipChange;
 
         @Override // cn.damai.discover.main.ui.adapter.TopicAdapter.Exposure
@@ -242,7 +238,7 @@ public class TopicAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     private VotePanel.VoteActionListener d(Context context, int i) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-948733946") ? (VotePanel.VoteActionListener) ipChange.ipc$dispatch("-948733946", new Object[]{this, context, Integer.valueOf(i)}) : new C1069c(context, i);
+        return AndroidInstantRuntime.support(ipChange, "-948733946") ? (VotePanel.VoteActionListener) ipChange.ipc$dispatch("-948733946", new Object[]{this, context, Integer.valueOf(i)}) : new c(context, i);
     }
 
     private String e(Object obj) {
@@ -377,8 +373,8 @@ public class TopicAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                 Context context2 = this.a;
                 return new VoteViewHolder(context2, viewGroup, d(context2, this.e));
             }
-            return new ThemeViewHolder(this.a, viewGroup, new C1068b());
+            return new ThemeViewHolder(this.a, viewGroup, new b());
         }
-        return new NoteViewHolder(this.a, viewGroup, new C1067a());
+        return new NoteViewHolder(this.a, viewGroup, new a());
     }
 }

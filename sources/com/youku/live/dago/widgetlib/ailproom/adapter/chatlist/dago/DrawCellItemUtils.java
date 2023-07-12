@@ -271,7 +271,7 @@ public class DrawCellItemUtils {
                         }
                         int i2 = HeaderSpan.srcSize;
                         bitmapDrawable.setBounds(0, 0, i2, i2);
-                        headerSpan.setSrcDrawable(DrawCellItemUtils.getOptimizedBitmapDrawable(bitmapDrawable, BitmapFactory.decodeResource(UIUtil.getResources(), R.C7941drawable.dago_pgc_header_default)));
+                        headerSpan.setSrcDrawable(DrawCellItemUtils.getOptimizedBitmapDrawable(bitmapDrawable, BitmapFactory.decodeResource(UIUtil.getResources(), R.drawable.dago_pgc_header_default)));
                         SpannableString spannableString = new SpannableString(DrawCellItemUtils.CONTENT_HEADER);
                         spannableString.setSpan(headerSpan, 0, 8, 17);
                         spannableStringBuilder.append((CharSequence) spannableString);
@@ -283,7 +283,7 @@ public class DrawCellItemUtils {
                 }
             });
             if (headerSpan.getSrcDrawable() == null) {
-                BitmapDrawable bitmapDrawable = (BitmapDrawable) UIUtil.getResources().getDrawable(R.C7941drawable.dago_pgc_header_default);
+                BitmapDrawable bitmapDrawable = (BitmapDrawable) UIUtil.getResources().getDrawable(R.drawable.dago_pgc_header_default);
                 bitmapDrawable.setBounds(0, 0, i, i);
                 headerSpan.setSrcDrawable(bitmapDrawable);
                 SpannableString spannableString = new SpannableString(CONTENT_HEADER);

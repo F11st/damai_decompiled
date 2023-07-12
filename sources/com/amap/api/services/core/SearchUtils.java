@@ -1,7 +1,7 @@
 package com.amap.api.services.core;
 
 import android.content.Context;
-import com.amap.api.col.s.C4435i;
+import com.amap.api.col.s.i;
 import java.security.MessageDigest;
 import java.util.Locale;
 
@@ -12,7 +12,7 @@ public class SearchUtils {
         try {
             return context.getApplicationContext().getPackageName();
         } catch (Throwable th) {
-            C4435i.a(th, "SearchUtils", "getPkgName");
+            i.a(th, "SearchUtils", "getPkgName");
             return null;
         }
     }
@@ -31,7 +31,7 @@ public class SearchUtils {
             }
             return stringBuffer.toString();
         } catch (Throwable th) {
-            C4435i.a(th, "SearchUtils", "getSHA1");
+            i.a(th, "SearchUtils", "getSHA1");
             return null;
         }
     }

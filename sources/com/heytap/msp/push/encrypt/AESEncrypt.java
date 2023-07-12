@@ -17,9 +17,9 @@ public class AESEncrypt {
 
     public static String decrypt(String str, String str2) {
         String[] split = str2.split(IV_CONNECT);
-        byte[] b = C5469a.b(split[0]);
-        byte[] b2 = C5469a.b(split[1]);
-        SecretKeySpec secretKeySpec = new SecretKeySpec(C5469a.b(str), "AES");
+        byte[] b = a.b(split[0]);
+        byte[] b2 = a.b(split[1]);
+        SecretKeySpec secretKeySpec = new SecretKeySpec(a.b(str), "AES");
         Cipher cipher = Cipher.getInstance(TRANSFORMATION);
         cipher.init(2, secretKeySpec, new IvParameterSpec(b2));
         return new String(cipher.doFinal(b));
@@ -35,17 +35,17 @@ public class AESEncrypt {
     }
 
     public static String encrypt(String str, String str2) {
-        SecretKeySpec secretKeySpec = new SecretKeySpec(C5469a.b(str), "AES");
+        SecretKeySpec secretKeySpec = new SecretKeySpec(a.b(str), "AES");
         Cipher cipher = Cipher.getInstance(TRANSFORMATION);
         cipher.init(1, secretKeySpec);
-        String d = C5469a.d(cipher.getIV());
-        String d2 = C5469a.d(cipher.doFinal(str2.getBytes()));
+        String d = a.d(cipher.getIV());
+        String d2 = a.d(cipher.doFinal(str2.getBytes()));
         return d2 + IV_CONNECT + d;
     }
 
     public static String genKey() {
         KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
         keyGenerator.init(256);
-        return C5469a.d(keyGenerator.generateKey().getEncoded());
+        return a.d(keyGenerator.generateKey().getEncoded());
     }
 }

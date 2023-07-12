@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.Scheduler;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -14,7 +14,7 @@ import org.reactivestreams.Subscription;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableTimer extends AbstractC8147b<Long> {
+public final class FlowableTimer extends b<Long> {
     final long delay;
     final Scheduler scheduler;
     final TimeUnit unit;
@@ -67,7 +67,7 @@ public final class FlowableTimer extends AbstractC8147b<Long> {
         this.scheduler = scheduler;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super Long> subscriber) {
         TimerSubscriber timerSubscriber = new TimerSubscriber(subscriber);
         subscriber.onSubscribe(timerSubscriber);

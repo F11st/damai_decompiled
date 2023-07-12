@@ -197,7 +197,7 @@ class TimePickerView extends ConstraintLayout implements TimePickerControls {
                 }
             }
         };
-        LayoutInflater.from(context).inflate(R.C4818layout.material_timepicker, this);
+        LayoutInflater.from(context).inflate(R.layout.material_timepicker, this);
         this.clockFace = (ClockFaceView) findViewById(R.id.material_clock_face);
         MaterialButtonToggleGroup materialButtonToggleGroup = (MaterialButtonToggleGroup) findViewById(R.id.material_clock_period_toggle);
         this.toggle = materialButtonToggleGroup;

@@ -15,7 +15,7 @@ final class WebSocketReader {
     private final Buffer d = new Buffer();
     private final Buffer e = new Buffer();
     private final byte[] f;
-    private final Buffer.C8836c g;
+    private final Buffer.c g;
 
     /* compiled from: Taobao */
     /* loaded from: classes2.dex */
@@ -39,6 +39,6 @@ final class WebSocketReader {
         this.b = bufferedSource;
         this.c = frameCallback;
         this.f = z ? null : new byte[4];
-        this.g = z ? null : new Buffer.C8836c();
+        this.g = z ? null : new Buffer.c();
     }
 }

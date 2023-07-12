@@ -16,8 +16,8 @@ import tb.pb0;
 @Keep
 /* loaded from: classes2.dex */
 final class ChannelProxy {
-    private static C8726a celluarManager;
-    private static C8726a extManager;
+    private static a celluarManager;
+    private static a extManager;
 
     ChannelProxy() {
     }
@@ -39,11 +39,11 @@ final class ChannelProxy {
     public static synchronized void closeSocketFd(String str, int i) {
         synchronized (ChannelProxy.class) {
             if (Build.VERSION.SDK_INT >= 21) {
-                C8726a c8726a = celluarManager;
-                boolean c = c8726a != null ? c8726a.c(i) : false;
-                C8726a c8726a2 = extManager;
-                if (c8726a2 != null && !c) {
-                    c8726a2.c(i);
+                a aVar = celluarManager;
+                boolean c = aVar != null ? aVar.c(i) : false;
+                a aVar2 = extManager;
+                if (aVar2 != null && !c) {
+                    aVar2.c(i);
                 }
             }
         }
@@ -64,7 +64,7 @@ final class ChannelProxy {
     }
 
     public static String getConfigFilePath() {
-        return Build.VERSION.SDK_INT >= 21 ? C8726a.g(getContext()) : "/sdcard/ntk.cfg";
+        return Build.VERSION.SDK_INT >= 21 ? a.g(getContext()) : "/sdcard/ntk.cfg";
     }
 
     @Nullable
@@ -85,7 +85,7 @@ final class ChannelProxy {
     }
 
     @RequiresApi(api = 21)
-    private static synchronized C8726a getManagerForType(String str) {
+    private static synchronized a getManagerForType(String str) {
         synchronized (ChannelProxy.class) {
             if (str.equals("ext")) {
                 if (extManager == null) {
@@ -94,7 +94,7 @@ final class ChannelProxy {
                 return extManager;
             }
             if (celluarManager == null) {
-                celluarManager = new C8726a();
+                celluarManager = new a();
             }
             return celluarManager;
         }

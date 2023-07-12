@@ -11,7 +11,7 @@ import com.taomai.android.h5container.TaoMaiH5Container;
 import io.flutter.wpkbridge.WPKFactory;
 import java.util.Objects;
 import kotlin.Metadata;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.Nullable;
 import tb.qm;
 
@@ -41,9 +41,9 @@ public class TaoMaiWebClient extends WVWebViewClient {
                         activity.finish();
                         return true;
                     }
-                    qm.C9608a c9608a = qm.Companion;
+                    qm.a aVar = qm.Companion;
                     WebHistoryItem currentItem = copyBackForwardList.getCurrentItem();
-                    if (c9608a.d(currentItem != null ? currentItem.getUrl() : null) && !activity.isFinishing()) {
+                    if (aVar.d(currentItem != null ? currentItem.getUrl() : null) && !activity.isFinishing()) {
                         activity.finish();
                     }
                 }
@@ -51,7 +51,7 @@ public class TaoMaiWebClient extends WVWebViewClient {
             }
         }
         if (str != null) {
-            F = C8604o.F(str, "http", false, 2, null);
+            F = o.F(str, "http", false, 2, null);
             if (!F) {
                 TaoMaiH5Container.NavHandler b2 = TaoMaiH5Container.b();
                 if (b2 == null) {

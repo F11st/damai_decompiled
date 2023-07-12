@@ -34,13 +34,12 @@ public class HorizontalHeadAdapter extends RecyclerView.Adapter<ViewHolder> {
         private View c;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.category.calendar.ui.adapter.HorizontalHeadAdapter$ViewHolder$a */
         /* loaded from: classes.dex */
-        public class View$OnClickListenerC0316a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ CalendarPerformEntity a;
 
-            View$OnClickListenerC0316a(CalendarPerformEntity calendarPerformEntity) {
+            a(CalendarPerformEntity calendarPerformEntity) {
                 this.a = calendarPerformEntity;
             }
 
@@ -90,7 +89,7 @@ public class HorizontalHeadAdapter extends RecyclerView.Adapter<ViewHolder> {
                     this.a.setTextColor(HorizontalHeadAdapter.this.a.getResources().getColor(R$color.color_000000));
                 }
                 this.a.setText(calendarPerformEntity.name);
-                this.itemView.setOnClickListener(new View$OnClickListenerC0316a(calendarPerformEntity));
+                this.itemView.setOnClickListener(new a(calendarPerformEntity));
             }
         }
     }

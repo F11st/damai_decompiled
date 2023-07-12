@@ -2,8 +2,8 @@ package com.alibaba.security.biometrics.service.model.params;
 
 import android.os.Bundle;
 import com.alibaba.security.biometrics.service.util.params.ParamsHelper;
-import com.alibaba.security.common.c.C3800a;
-import com.alibaba.security.common.d.C3822o;
+import com.alibaba.security.common.c.a;
+import com.alibaba.security.common.d.o;
 import mtopsdk.common.util.SymbolExpUtil;
 
 /* compiled from: Taobao */
@@ -40,7 +40,7 @@ public class ABParamsHelper extends ParamsHelper<ALBiometricsParams> implements 
                 }
                 setParam("strategy", iArr);
             } catch (Throwable unused) {
-                C3800a.b();
+                a.b();
             }
         }
         int i4 = biometricsConfig.lessImageMode;
@@ -83,9 +83,9 @@ public class ABParamsHelper extends ParamsHelper<ALBiometricsParams> implements 
         String str3 = (str2 == null && (str2 = biometricsConfig.recognizeTemplateFeature) == null) ? null : str2;
         if (str3 != null) {
             try {
-                setParam(ALBiometricsKeys.KEY_FACE_RECOGNIZE_TARGET_DATA, C3822o.a(str3));
+                setParam(ALBiometricsKeys.KEY_FACE_RECOGNIZE_TARGET_DATA, o.a(str3));
             } catch (Throwable unused2) {
-                C3800a.b();
+                a.b();
             }
         }
         int i12 = biometricsConfig.displayWaitingView;
@@ -118,7 +118,7 @@ public class ABParamsHelper extends ParamsHelper<ALBiometricsParams> implements 
                 }
                 setParam("strategyWhileCheckFail", iArr2);
             } catch (Throwable unused3) {
-                C3800a.b();
+                a.b();
             }
         }
         int i17 = biometricsConfig.bgDetectTimeIntervals;
@@ -140,17 +140,17 @@ public class ABParamsHelper extends ParamsHelper<ALBiometricsParams> implements 
         String str5 = biometricsConfig.licenseData;
         if (str5 != null) {
             try {
-                setParam(ALBiometricsKeys.KEY_LICENSE_DATA, C3822o.a(str5));
+                setParam(ALBiometricsKeys.KEY_LICENSE_DATA, o.a(str5));
             } catch (Throwable unused4) {
-                C3800a.b();
+                a.b();
             }
         }
         String str6 = biometricsConfig.licenseTimeData;
         if (str6 != null) {
             try {
-                setParam(ALBiometricsKeys.KEY_LICENSE_TIME_DATA, C3822o.a(str6));
+                setParam(ALBiometricsKeys.KEY_LICENSE_TIME_DATA, o.a(str6));
             } catch (Throwable unused5) {
-                C3800a.b();
+                a.b();
             }
         }
     }

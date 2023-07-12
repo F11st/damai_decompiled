@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.Scheduler;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
@@ -39,7 +39,7 @@ public final class FlowableReplay<T> extends an<T> implements HasUpstreamPublish
     final Callable<? extends ReplayBuffer<T>> bufferFactory;
     final AtomicReference<ReplaySubscriber<T>> current;
     final Publisher<T> onSubscribe;
-    final AbstractC8147b<T> source;
+    final b<T> source;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -221,11 +221,11 @@ public final class FlowableReplay<T> extends an<T> implements HasUpstreamPublish
     /* loaded from: classes3.dex */
     public static final class ConnectableFlowableReplay<T> extends an<T> {
         private final an<T> co;
-        private final AbstractC8147b<T> observable;
+        private final b<T> observable;
 
-        ConnectableFlowableReplay(an<T> anVar, AbstractC8147b<T> abstractC8147b) {
+        ConnectableFlowableReplay(an<T> anVar, b<T> bVar) {
             this.co = anVar;
-            this.observable = abstractC8147b;
+            this.observable = bVar;
         }
 
         @Override // tb.an
@@ -233,7 +233,7 @@ public final class FlowableReplay<T> extends an<T> implements HasUpstreamPublish
             this.co.connect(consumer);
         }
 
-        @Override // io.reactivex.AbstractC8147b
+        @Override // io.reactivex.b
         protected void subscribeActual(Subscriber<? super T> subscriber) {
             this.observable.subscribe(subscriber);
         }
@@ -320,7 +320,7 @@ public final class FlowableReplay<T> extends an<T> implements HasUpstreamPublish
     /* loaded from: classes3.dex */
     public static final class MultiCastPublisher<R, U> implements Publisher<R> {
         private final Callable<? extends an<U>> connectableFactory;
-        private final Function<? super AbstractC8147b<U>, ? extends Publisher<R>> selector;
+        private final Function<? super b<U>, ? extends Publisher<R>> selector;
 
         /* compiled from: Taobao */
         /* loaded from: classes3.dex */
@@ -337,7 +337,7 @@ public final class FlowableReplay<T> extends an<T> implements HasUpstreamPublish
             }
         }
 
-        MultiCastPublisher(Callable<? extends an<U>> callable, Function<? super AbstractC8147b<U>, ? extends Publisher<R>> function) {
+        MultiCastPublisher(Callable<? extends an<U>> callable, Function<? super b<U>, ? extends Publisher<R>> function) {
             this.connectableFactory = callable;
             this.selector = function;
         }
@@ -876,26 +876,26 @@ public final class FlowableReplay<T> extends an<T> implements HasUpstreamPublish
         }
     }
 
-    private FlowableReplay(Publisher<T> publisher, AbstractC8147b<T> abstractC8147b, AtomicReference<ReplaySubscriber<T>> atomicReference, Callable<? extends ReplayBuffer<T>> callable) {
+    private FlowableReplay(Publisher<T> publisher, b<T> bVar, AtomicReference<ReplaySubscriber<T>> atomicReference, Callable<? extends ReplayBuffer<T>> callable) {
         this.onSubscribe = publisher;
-        this.source = abstractC8147b;
+        this.source = bVar;
         this.current = atomicReference;
         this.bufferFactory = callable;
     }
 
-    public static <T> an<T> create(AbstractC8147b<T> abstractC8147b, int i) {
+    public static <T> an<T> create(b<T> bVar, int i) {
         if (i == Integer.MAX_VALUE) {
-            return createFrom(abstractC8147b);
+            return createFrom(bVar);
         }
-        return create(abstractC8147b, new ReplayBufferTask(i));
+        return create(bVar, new ReplayBufferTask(i));
     }
 
-    public static <T> an<T> createFrom(AbstractC8147b<? extends T> abstractC8147b) {
-        return create(abstractC8147b, DEFAULT_UNBOUNDED_FACTORY);
+    public static <T> an<T> createFrom(b<? extends T> bVar) {
+        return create(bVar, DEFAULT_UNBOUNDED_FACTORY);
     }
 
-    public static <U, R> AbstractC8147b<R> multicastSelector(Callable<? extends an<U>> callable, Function<? super AbstractC8147b<U>, ? extends Publisher<R>> function) {
-        return AbstractC8147b.unsafeCreate(new MultiCastPublisher(callable, function));
+    public static <U, R> b<R> multicastSelector(Callable<? extends an<U>> callable, Function<? super b<U>, ? extends Publisher<R>> function) {
+        return b.unsafeCreate(new MultiCastPublisher(callable, function));
     }
 
     public static <T> an<T> observeOn(an<T> anVar, Scheduler scheduler) {
@@ -951,21 +951,21 @@ public final class FlowableReplay<T> extends an<T> implements HasUpstreamPublish
         return this.source;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.onSubscribe.subscribe(subscriber);
     }
 
-    public static <T> an<T> create(AbstractC8147b<T> abstractC8147b, long j, TimeUnit timeUnit, Scheduler scheduler) {
-        return create(abstractC8147b, j, timeUnit, scheduler, Integer.MAX_VALUE);
+    public static <T> an<T> create(b<T> bVar, long j, TimeUnit timeUnit, Scheduler scheduler) {
+        return create(bVar, j, timeUnit, scheduler, Integer.MAX_VALUE);
     }
 
-    public static <T> an<T> create(AbstractC8147b<T> abstractC8147b, long j, TimeUnit timeUnit, Scheduler scheduler, int i) {
-        return create(abstractC8147b, new ScheduledReplayBufferTask(i, j, timeUnit, scheduler));
+    public static <T> an<T> create(b<T> bVar, long j, TimeUnit timeUnit, Scheduler scheduler, int i) {
+        return create(bVar, new ScheduledReplayBufferTask(i, j, timeUnit, scheduler));
     }
 
-    static <T> an<T> create(AbstractC8147b<T> abstractC8147b, Callable<? extends ReplayBuffer<T>> callable) {
+    static <T> an<T> create(b<T> bVar, Callable<? extends ReplayBuffer<T>> callable) {
         AtomicReference atomicReference = new AtomicReference();
-        return i42.q(new FlowableReplay(new ReplayPublisher(atomicReference, callable), abstractC8147b, atomicReference, callable));
+        return i42.q(new FlowableReplay(new ReplayPublisher(atomicReference, callable), bVar, atomicReference, callable));
     }
 }

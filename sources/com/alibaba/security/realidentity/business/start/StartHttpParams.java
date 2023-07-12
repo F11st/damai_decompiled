@@ -3,18 +3,17 @@ package com.alibaba.security.realidentity.business.start;
 import android.text.TextUtils;
 import com.alibaba.security.biometrics.service.constants.GlobalErrorCode;
 import com.alibaba.security.biometrics.service.model.result.SensorInfo;
-import com.alibaba.security.common.d.C3811h;
+import com.alibaba.security.common.d.h;
 import com.alibaba.security.realidentity.RPConfig;
 import com.alibaba.security.realidentity.RPResult;
-import com.alibaba.security.realidentity.a.C3847g;
-import com.alibaba.security.realidentity.business.C3873c;
+import com.alibaba.security.realidentity.a.g;
 import com.alibaba.security.realidentity.business.bucket.BucketParams;
+import com.alibaba.security.realidentity.business.c;
 import com.alibaba.security.realidentity.business.start.model.StartExtraInfo;
 import com.alibaba.security.realidentity.business.start.model.StepItem;
 import com.alibaba.security.realidentity.http.base.BusinessHttpWrapper;
 import com.alibaba.security.realidentity.http.base.BusinessRequest;
 import com.alibaba.security.realidentity.http.model.HttpResponse;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
 import java.util.HashMap;
 
 /* compiled from: Taobao */
@@ -28,8 +27,8 @@ public class StartHttpParams extends AbsStartHttpParams {
         StartHttpRequest startHttpRequest = new StartHttpRequest(this.mVerifyToken);
         if (this.sensorInfo != null) {
             HashMap hashMap = new HashMap();
-            hashMap.put(AbstractC3893a.ae, this.sensorInfo);
-            startHttpRequest.setExtendMap(C3811h.a((Object) hashMap));
+            hashMap.put(com.alibaba.security.realidentity.jsbridge.a.ae, this.sensorInfo);
+            startHttpRequest.setExtendMap(h.a((Object) hashMap));
         }
         return new BusinessHttpWrapper(StartHttpResponse.class, new BusinessRequest(StartHttpRequest.class, startHttpRequest));
     }
@@ -39,7 +38,7 @@ public class StartHttpParams extends AbsStartHttpParams {
     }
 
     @Override // com.alibaba.security.realidentity.business.bucket.BucketParams
-    public boolean onDelivering(C3873c c3873c) {
+    public boolean onDelivering(c cVar) {
         return true;
     }
 
@@ -62,7 +61,7 @@ public class StartHttpParams extends AbsStartHttpParams {
         if (!TextUtils.isEmpty(str) && str.equals("InvalidTimeStamp.Expired")) {
             return new BucketParams.ErrorCode(RPResult.AUDIT_NOT, "-10413", "invalid_timestamp_expired", GlobalErrorCode.ERROR_INVALID_TIMESTAMP_EXPIRED);
         }
-        return new BucketParams.ErrorCode(RPResult.AUDIT_NOT, "-10300", C3811h.a(this.mStartHttpResponse), GlobalErrorCode.ERROR_ONLINE_NET_ERROR);
+        return new BucketParams.ErrorCode(RPResult.AUDIT_NOT, "-10300", h.a(this.mStartHttpResponse), GlobalErrorCode.ERROR_ONLINE_NET_ERROR);
     }
 
     public void setSensorInfo(SensorInfo sensorInfo) {
@@ -89,7 +88,7 @@ public class StartHttpParams extends AbsStartHttpParams {
             if (extraInfoBean != null) {
                 this.mLivenessConfig = extraInfoBean.livenessConfig;
             }
-            RPConfig b = C3847g.C3848a.a.b();
+            RPConfig b = g.a.a.b();
             if (b != null && b.getBiometricsConfig() != null) {
                 this.mShowResult = b.getBiometricsConfig().isNeedFailResultPage();
             }

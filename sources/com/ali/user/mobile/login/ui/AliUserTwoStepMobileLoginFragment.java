@@ -31,7 +31,7 @@ public class AliUserTwoStepMobileLoginFragment extends AliUserMobileLoginFragmen
 
     @Override // com.ali.user.mobile.login.ui.AliUserMobileLoginFragment, com.ali.user.mobile.base.ui.BaseFragment
     protected int getLayoutContent() {
-        return R.C2965layout.aliuser_fragment_two_step_mobile_login;
+        return R.layout.aliuser_fragment_two_step_mobile_login;
     }
 
     public void goToSMSVerificationPage(Intent intent) {

@@ -3,7 +3,7 @@ package anet.channel.strategy;
 import android.text.TextUtils;
 import anet.channel.entity.ConnType;
 import anet.channel.status.NetworkStatusHelper;
-import anet.channel.strategy.C0214b;
+import anet.channel.strategy.b;
 import anet.channel.strategy.dispatch.AmdcRuntimeInfo;
 import anet.channel.strategy.dispatch.HttpDispatcher;
 import anet.channel.strategy.utils.SerialLruCache;
@@ -19,9 +19,9 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
 import me.ele.altriax.launcher.real.time.data.biz.BizTime;
-import tb.C9708t9;
 import tb.hu0;
 import tb.lw2;
+import tb.t9;
 import tb.ym;
 
 /* JADX INFO: Access modifiers changed from: package-private */
@@ -39,8 +39,8 @@ public class StrategyTable implements Serializable {
     Map<String, Long> ipv6BlackList;
     protected transient boolean isChanged = false;
     protected String uniqueId;
-    private static transient boolean isStrategyUpgrade = C9708t9.N();
-    protected static Comparator<StrategyCollection> comparator = new C0212a();
+    private static transient boolean isStrategyUpgrade = t9.N();
+    protected static Comparator<StrategyCollection> comparator = new a();
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
@@ -69,10 +69,9 @@ public class StrategyTable implements Serializable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.strategy.StrategyTable$a */
     /* loaded from: classes.dex */
-    static class C0212a implements Comparator<StrategyCollection> {
-        C0212a() {
+    static class a implements Comparator<StrategyCollection> {
+        a() {
         }
 
         @Override // java.util.Comparator
@@ -148,48 +147,48 @@ public class StrategyTable implements Serializable {
         sendAmdcRequest(treeSet);
     }
 
-    private void updateDns(C0214b.C0221g c0221g) {
+    private void updateDns(b.g gVar) {
         String str;
-        C0214b.C0218d[] c0218dArr = c0221g.c;
-        if (c0218dArr == null) {
+        b.d[] dVarArr = gVar.c;
+        if (dVarArr == null) {
             return;
         }
         synchronized (this.hostStrategyMap) {
-            for (C0214b.C0218d c0218d : c0218dArr) {
-                if (c0218d != null && (str = c0218d.a) != null) {
-                    if (c0218d.f) {
+            for (b.d dVar : dVarArr) {
+                if (dVar != null && (str = dVar.a) != null) {
+                    if (dVar.f) {
                         this.hostStrategyMap.remove(str);
                     } else {
                         StrategyCollection strategyCollection = this.hostStrategyMap.get(str);
                         if (strategyCollection == null) {
-                            strategyCollection = new StrategyCollection(c0218d.a);
-                            this.hostStrategyMap.put(c0218d.a, strategyCollection);
+                            strategyCollection = new StrategyCollection(dVar.a);
+                            this.hostStrategyMap.put(dVar.a, strategyCollection);
                         }
-                        strategyCollection.updateStrategy(c0218d);
+                        strategyCollection.updateStrategy(dVar);
                     }
                 }
             }
         }
     }
 
-    private void updateDnsInfo(C0214b.C0221g c0221g) {
+    private void updateDnsInfo(b.g gVar) {
         String str;
-        C0214b.C0219e[] c0219eArr = c0221g.b;
-        if (c0219eArr == null) {
+        b.e[] eVarArr = gVar.b;
+        if (eVarArr == null) {
             return;
         }
         synchronized (this.hostStrategyMap) {
-            for (C0214b.C0219e c0219e : c0219eArr) {
-                if (c0219e != null && (str = c0219e.a) != null) {
-                    if (c0219e.j) {
+            for (b.e eVar : eVarArr) {
+                if (eVar != null && (str = eVar.a) != null) {
+                    if (eVar.j) {
                         this.hostStrategyMap.remove(str);
                     } else {
                         StrategyCollection strategyCollection = this.hostStrategyMap.get(str);
                         if (strategyCollection == null) {
-                            strategyCollection = new StrategyCollection(c0219e.a);
-                            this.hostStrategyMap.put(c0219e.a, strategyCollection);
+                            strategyCollection = new StrategyCollection(eVar.a);
+                            this.hostStrategyMap.put(eVar.a, strategyCollection);
                         }
-                        strategyCollection.update(c0219e);
+                        strategyCollection.update(eVar);
                     }
                 }
             }
@@ -315,15 +314,15 @@ public class StrategyTable implements Serializable {
         return Collections.EMPTY_LIST;
     }
 
-    public void update(C0214b.C0221g c0221g) {
+    public void update(b.g gVar) {
         ALog.f(TAG, "update strategyTable with httpDns response", this.uniqueId, new Object[0]);
         try {
-            this.clientIp = c0221g.a;
-            this.configVersion = c0221g.e;
+            this.clientIp = gVar.a;
+            this.configVersion = gVar.e;
             if (isStrategyUpgrade) {
-                updateDns(c0221g);
+                updateDns(gVar);
             } else {
-                updateDnsInfo(c0221g);
+                updateDnsInfo(gVar);
             }
         } catch (Throwable th) {
             ALog.d(TAG, "fail to update strategyTable", this.uniqueId, th, new Object[0]);
@@ -372,8 +371,8 @@ public class StrategyTable implements Serializable {
             ALog.f(TAG, "app in background or no network", this.uniqueId, new Object[0]);
             return;
         }
-        int a = AmdcRuntimeInfo.a();
-        if (a == 3) {
+        int a2 = AmdcRuntimeInfo.a();
+        if (a2 == 3) {
             return;
         }
         long currentTimeMillis = System.currentTimeMillis();
@@ -390,7 +389,7 @@ public class StrategyTable implements Serializable {
                 }
             }
         }
-        if (a == 0) {
+        if (a2 == 0) {
             fillUpdateHosts(set);
         }
         HttpDispatcher.f().h(set, this.configVersion);

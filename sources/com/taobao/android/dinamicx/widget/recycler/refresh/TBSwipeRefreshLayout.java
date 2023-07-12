@@ -132,10 +132,9 @@ public class TBSwipeRefreshLayout extends ViewGroup {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.refresh.TBSwipeRefreshLayout$a */
     /* loaded from: classes12.dex */
-    class C6521a implements Animator.AnimatorListener {
-        C6521a() {
+    class a implements Animator.AnimatorListener {
+        a() {
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -171,10 +170,9 @@ public class TBSwipeRefreshLayout extends ViewGroup {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.refresh.TBSwipeRefreshLayout$b */
     /* loaded from: classes12.dex */
-    public class C6522b implements Animator.AnimatorListener {
-        C6522b() {
+    public class b implements Animator.AnimatorListener {
+        b() {
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -197,10 +195,9 @@ public class TBSwipeRefreshLayout extends ViewGroup {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.refresh.TBSwipeRefreshLayout$c */
     /* loaded from: classes12.dex */
-    public class C6523c implements ValueAnimator.AnimatorUpdateListener {
-        C6523c() {
+    public class c implements ValueAnimator.AnimatorUpdateListener {
+        c() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -212,12 +209,11 @@ public class TBSwipeRefreshLayout extends ViewGroup {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.refresh.TBSwipeRefreshLayout$d */
     /* loaded from: classes12.dex */
-    public class C6524d extends AnimatorListenerAdapter {
+    public class d extends AnimatorListenerAdapter {
         final /* synthetic */ int a;
 
-        C6524d(int i) {
+        d(int i) {
             this.a = i;
         }
 
@@ -236,10 +232,9 @@ public class TBSwipeRefreshLayout extends ViewGroup {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.refresh.TBSwipeRefreshLayout$e */
     /* loaded from: classes12.dex */
-    public class C6525e implements ValueAnimator.AnimatorUpdateListener {
-        C6525e() {
+    public class e implements ValueAnimator.AnimatorUpdateListener {
+        e() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -250,10 +245,9 @@ public class TBSwipeRefreshLayout extends ViewGroup {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.refresh.TBSwipeRefreshLayout$f */
     /* loaded from: classes12.dex */
-    public class C6526f implements ValueAnimator.AnimatorUpdateListener {
-        C6526f() {
+    public class f implements ValueAnimator.AnimatorUpdateListener {
+        f() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -270,12 +264,11 @@ public class TBSwipeRefreshLayout extends ViewGroup {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.refresh.TBSwipeRefreshLayout$g */
     /* loaded from: classes12.dex */
-    public class C6527g implements ValueAnimator.AnimatorUpdateListener {
+    public class g implements ValueAnimator.AnimatorUpdateListener {
         final /* synthetic */ ValueAnimator a;
 
-        C6527g(ValueAnimator valueAnimator) {
+        g(ValueAnimator valueAnimator) {
             this.a = valueAnimator;
         }
 
@@ -293,7 +286,7 @@ public class TBSwipeRefreshLayout extends ViewGroup {
         this.mFrom = i;
         new ValueAnimator();
         ValueAnimator ofInt = ValueAnimator.ofInt(this.mFrom, 0);
-        ofInt.addUpdateListener(new C6527g(ofInt));
+        ofInt.addUpdateListener(new g(ofInt));
         ofInt.setDuration(300L);
         ofInt.setInterpolator(this.mDecelerateInterpolator);
         if (animatorListener != null) {
@@ -317,7 +310,7 @@ public class TBSwipeRefreshLayout extends ViewGroup {
         if (animatorListener != null) {
             ofInt.addListener(animatorListener);
         }
-        ofInt.addUpdateListener(new C6525e());
+        ofInt.addUpdateListener(new e());
         ofInt.setDuration(300L);
         ofInt.setInterpolator(this.mDecelerateInterpolator);
         ofInt.start();
@@ -326,7 +319,7 @@ public class TBSwipeRefreshLayout extends ViewGroup {
     private void animateOffsetToStartPosition(int i, Animator.AnimatorListener animatorListener) {
         this.mFrom = i;
         ValueAnimator ofInt = ValueAnimator.ofInt(i, this.mOriginalOffsetTop);
-        ofInt.addUpdateListener(new C6526f());
+        ofInt.addUpdateListener(new f());
         ofInt.setDuration(300L);
         ofInt.setInterpolator(this.mDecelerateInterpolator);
         if (animatorListener != null) {
@@ -339,8 +332,8 @@ public class TBSwipeRefreshLayout extends ViewGroup {
     private void animatorFooterToBottom(int i, int i2) {
         ValueAnimator ofInt = ValueAnimator.ofInt(i, i2);
         ofInt.setDuration(150L);
-        ofInt.addUpdateListener(new C6523c());
-        ofInt.addListener(new C6524d(i2));
+        ofInt.addUpdateListener(new c());
+        ofInt.addListener(new d(i2));
         ofInt.setInterpolator(this.mDecelerateInterpolator);
         ofInt.start();
     }
@@ -389,11 +382,11 @@ public class TBSwipeRefreshLayout extends ViewGroup {
                         int i4 = this.mPreActivePointerId;
                         int i5 = this.mActivePointerId;
                         if (i4 == i5) {
-                            float f = y;
-                            float f2 = this.mLastMotionY;
-                            i2 = (int) (this.mDistance + (f - f2));
+                            float f2 = y;
+                            float f3 = this.mLastMotionY;
+                            i2 = (int) (this.mDistance + (f2 - f3));
                             this.mPreDistance = i2;
-                            this.mPrePositionY = (int) (this.mPositionY + (f - f2));
+                            this.mPrePositionY = (int) (this.mPositionY + (f2 - f3));
                         } else {
                             int i6 = this.mPreDistance;
                             int i7 = (int) (i6 + (y - this.mLastMotionY));
@@ -417,11 +410,11 @@ public class TBSwipeRefreshLayout extends ViewGroup {
                         if (i10 > 0) {
                             min = Math.min(min, i10);
                         }
-                        float f3 = (min * 1.0f) / this.mTotalDragDistance;
-                        if (f3 < 0.0f) {
+                        float f4 = (min * 1.0f) / this.mTotalDragDistance;
+                        if (f4 < 0.0f) {
                             return false;
                         }
-                        float min2 = Math.min(1.0f, Math.abs(f3));
+                        float min2 = Math.min(1.0f, Math.abs(f4));
                         if (min < this.mTotalDragDistance) {
                             this.mHeaderView.changeToState(TBAbsRefreshHeader.RefreshState.PULL_TO_REFRESH);
                         } else if (this.mSecondFloorEnabled) {
@@ -436,8 +429,8 @@ public class TBSwipeRefreshLayout extends ViewGroup {
                         this.mHeaderView.setProgress(min2);
                         updateHeaderPosition(min - (this.mCurrentTargetOffsetTop - this.mOriginalOffsetTop));
                     }
-                } catch (IllegalArgumentException e) {
-                    e.printStackTrace();
+                } catch (IllegalArgumentException e2) {
+                    e2.printStackTrace();
                 }
             } else if (i != 3) {
                 if (i == 5) {
@@ -463,7 +456,7 @@ public class TBSwipeRefreshLayout extends ViewGroup {
         this.mIsBeingDragged = false;
         if (this.mHeaderView.getCurrentState() == TBAbsRefreshHeader.RefreshState.PREPARE_TO_SECOND_FLOOR && this.mSecondFloorEnabled) {
             this.mHeaderView.changeToState(TBAbsRefreshHeader.RefreshState.SECOND_FLOOR_START);
-            animateOffsetToBottomPosition(this.mCurrentTargetOffsetTop, new C6522b());
+            animateOffsetToBottomPosition(this.mCurrentTargetOffsetTop, new b());
         } else if (this.mHeaderView.getCurrentState() == TBAbsRefreshHeader.RefreshState.RELEASE_TO_REFRESH) {
             setRefreshing(true, true);
         } else {
@@ -1001,12 +994,12 @@ public class TBSwipeRefreshLayout extends ViewGroup {
     }
 
     public void setDistanceToRefresh(int i) {
-        float f = i;
-        float f2 = this.mDensity;
-        if (((int) (f * f2)) < this.mHeaderViewHeight) {
+        float f2 = i;
+        float f3 = this.mDensity;
+        if (((int) (f2 * f3)) < this.mHeaderViewHeight) {
             return;
         }
-        int i2 = (int) (f * f2);
+        int i2 = (int) (f2 * f3);
         this.mTotalDragDistance = i2;
         int i3 = this.mSecondFloorDistance - i2;
         int i4 = MIN_GAP_DISTANCE_TO_SECOND_FLOOR;
@@ -1016,18 +1009,18 @@ public class TBSwipeRefreshLayout extends ViewGroup {
     }
 
     public void setDistanceToSecondFloor(int i) {
-        float f = i;
-        float f2 = this.mDensity;
-        if (((int) (f * f2)) - this.mTotalDragDistance < MIN_GAP_DISTANCE_TO_SECOND_FLOOR) {
+        float f2 = i;
+        float f3 = this.mDensity;
+        if (((int) (f2 * f3)) - this.mTotalDragDistance < MIN_GAP_DISTANCE_TO_SECOND_FLOOR) {
             Log.e(TAG, "Distance to second floor must be more than 50dp longer than distance to refresh");
         } else {
-            this.mSecondFloorDistance = (int) (f * f2);
+            this.mSecondFloorDistance = (int) (f2 * f3);
         }
     }
 
-    public void setDragRate(float f) {
-        if (f > 0.0f && f < 1.0f) {
-            this.mDragRate = f;
+    public void setDragRate(float f2) {
+        if (f2 > 0.0f && f2 < 1.0f) {
+            this.mDragRate = f2;
         } else {
             Log.e(TAG, "Drag rate must be larger than 0 and smaller than 1!");
         }
@@ -1047,12 +1040,12 @@ public class TBSwipeRefreshLayout extends ViewGroup {
     }
 
     public void setFooterViewHeight(int i) {
-        float f = i;
-        float f2 = this.mDensity;
-        if (((int) (f * f2)) > this.mMaxPushDistance) {
-            this.mMaxPushDistance = (int) (f * f2);
+        float f2 = i;
+        float f3 = this.mDensity;
+        if (((int) (f2 * f3)) > this.mMaxPushDistance) {
+            this.mMaxPushDistance = (int) (f2 * f3);
         }
-        this.mFooterViewHeight = (int) (f * f2);
+        this.mFooterViewHeight = (int) (f2 * f3);
     }
 
     public void setHeaderView(TBAbsRefreshHeader tBAbsRefreshHeader) {
@@ -1069,13 +1062,13 @@ public class TBSwipeRefreshLayout extends ViewGroup {
     }
 
     public void setHeaderViewHeight(int i) {
-        float f = i;
-        float f2 = this.mDensity;
-        if (((int) (f * f2)) < this.mRefreshOffset) {
+        float f2 = i;
+        float f3 = this.mDensity;
+        if (((int) (f2 * f3)) < this.mRefreshOffset) {
             Log.d(TAG, "HeaderView height cannot be smaller than refresh offset.");
             return;
         }
-        int i2 = (int) (f * f2);
+        int i2 = (int) (f2 * f3);
         this.mHeaderViewHeight = i2;
         if (this.mTotalDragDistance < i2) {
             this.mTotalDragDistance = i2;
@@ -1106,12 +1099,12 @@ public class TBSwipeRefreshLayout extends ViewGroup {
     }
 
     public void setMaxPushDistance(int i) {
-        float f = i;
-        float f2 = this.mDensity;
-        if (((int) (f * f2)) < this.mFooterViewHeight) {
+        float f2 = i;
+        float f3 = this.mDensity;
+        if (((int) (f2 * f3)) < this.mFooterViewHeight) {
             Log.e(TAG, "Max push distance must be larger than footer view height!");
         } else {
-            this.mMaxPushDistance = (int) (f * f2);
+            this.mMaxPushDistance = (int) (f2 * f3);
         }
     }
 
@@ -1184,7 +1177,7 @@ public class TBSwipeRefreshLayout extends ViewGroup {
         this.mPreActivePointerId = -1;
         this.mContentHeight = -1;
         this.mNavigationBarHeight = -1;
-        this.mRefreshListener = new C6521a();
+        this.mRefreshListener = new a();
         setWillNotDraw(false);
         DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
         this.mDisplayMetrics = displayMetrics;
@@ -1235,9 +1228,9 @@ public class TBSwipeRefreshLayout extends ViewGroup {
 
     public void setRefreshOffset(int i, boolean z) {
         if (z) {
-            int d = qz.d(getContext());
-            this.mRefreshOffset = ((int) (i * getResources().getDisplayMetrics().density)) + d;
-            this.mHeaderViewHeight += d;
+            int d2 = qz.d(getContext());
+            this.mRefreshOffset = ((int) (i * getResources().getDisplayMetrics().density)) + d2;
+            this.mHeaderViewHeight += d2;
         } else {
             this.mRefreshOffset = (int) (i * getResources().getDisplayMetrics().density);
         }

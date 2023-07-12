@@ -17,45 +17,43 @@ import java.util.Iterator;
 public class TabLayout extends FrameLayout {
     private OnTabSelectedListener mOnTabSelectedListener;
     private LinearLayout mRootView;
-    private C3026b mSelectedTab;
+    private b mSelectedTab;
     private View.OnClickListener mTabClickListener;
     private WXTabbar mTabbar;
-    private final ArrayList<C3026b> mTabs;
+    private final ArrayList<b> mTabs;
 
     /* compiled from: Taobao */
     /* loaded from: classes15.dex */
     public interface OnTabSelectedListener {
-        void onTabReselected(C3026b c3026b);
+        void onTabReselected(b bVar);
 
-        void onTabSelected(C3026b c3026b);
+        void onTabSelected(b bVar);
 
-        void onTabUnselected(C3026b c3026b);
+        void onTabUnselected(b bVar);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.component.TabLayout$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC3025a implements View.OnClickListener {
-        View$OnClickListenerC3025a(TabLayout tabLayout) {
+    public class a implements View.OnClickListener {
+        a(TabLayout tabLayout) {
         }
 
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
-            ((C3026b) view.getTag()).d();
+            ((b) view.getTag()).d();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.component.TabLayout$b */
     /* loaded from: classes15.dex */
-    public static final class C3026b {
+    public static final class b {
         public static final int INVALID_POSITION = -1;
         private int a = -1;
         private View b;
         private final TabLayout c;
 
-        C3026b(TabLayout tabLayout) {
+        b(TabLayout tabLayout) {
             this.c = tabLayout;
         }
 
@@ -74,7 +72,7 @@ public class TabLayout extends FrameLayout {
         }
 
         @NonNull
-        public C3026b e(@Nullable View view) {
+        public b e(@Nullable View view) {
             this.b = view;
             int i = this.a;
             if (i >= 0) {
@@ -95,20 +93,20 @@ public class TabLayout extends FrameLayout {
         init(context);
     }
 
-    private void addTabView(C3026b c3026b, boolean z) {
-        View b = c3026b.b();
+    private void addTabView(b bVar, boolean z) {
+        View b2 = bVar.b();
         if (this.mTabClickListener == null) {
-            this.mTabClickListener = new View$OnClickListenerC3025a(this);
+            this.mTabClickListener = new a(this);
         }
-        if (b != null) {
+        if (b2 != null) {
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(-2, (int) this.mTabbar.getLayoutHeight());
             layoutParams.weight = 1.0f;
-            b.setTag(c3026b);
-            b.setLayoutParams(layoutParams);
-            b.setOnClickListener(this.mTabClickListener);
-            this.mRootView.addView(b);
+            b2.setTag(bVar);
+            b2.setLayoutParams(layoutParams);
+            b2.setOnClickListener(this.mTabClickListener);
+            this.mRootView.addView(b2);
             if (z) {
-                b.setSelected(true);
+                b2.setSelected(true);
             }
         }
     }
@@ -126,24 +124,24 @@ public class TabLayout extends FrameLayout {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void updateTab(int i) {
-        View b;
+        View b2;
         ViewParent parent;
-        C3026b tabAt = getTabAt(i);
-        if (tabAt == null || (b = tabAt.b()) == null || (parent = b.getParent()) == this) {
+        b tabAt = getTabAt(i);
+        if (tabAt == null || (b2 = tabAt.b()) == null || (parent = b2.getParent()) == this) {
             return;
         }
         if (parent != null) {
-            ((ViewGroup) parent).removeView(b);
+            ((ViewGroup) parent).removeView(b2);
         }
-        addView(b);
+        addView(b2);
     }
 
-    public void addTab(@NonNull C3026b c3026b, boolean z) {
-        if (c3026b.c == this) {
-            addTabView(c3026b, z);
+    public void addTab(@NonNull b bVar, boolean z) {
+        if (bVar.c == this) {
+            addTabView(bVar, z);
             int size = this.mTabs.size();
-            c3026b.f(this.mTabs.size());
-            this.mTabs.add(size, c3026b);
+            bVar.f(this.mTabs.size());
+            this.mTabs.add(size, bVar);
             int size2 = this.mTabs.size();
             while (true) {
                 size++;
@@ -153,7 +151,7 @@ public class TabLayout extends FrameLayout {
                 this.mTabs.get(size).f(size);
             }
             if (z) {
-                c3026b.d();
+                bVar.d();
                 return;
             }
             return;
@@ -162,25 +160,25 @@ public class TabLayout extends FrameLayout {
     }
 
     public int getSelectedTabPosition() {
-        C3026b c3026b = this.mSelectedTab;
-        if (c3026b != null) {
-            return c3026b.c();
+        b bVar = this.mSelectedTab;
+        if (bVar != null) {
+            return bVar.c();
         }
         return -1;
     }
 
     @Nullable
-    public C3026b getTabAt(int i) {
+    public b getTabAt(int i) {
         return this.mTabs.get(i);
     }
 
     @NonNull
-    public C3026b newTab() {
-        return new C3026b(this);
+    public b newTab() {
+        return new b(this);
     }
 
     public void removeAllTabs() {
-        Iterator<C3026b> it = this.mTabs.iterator();
+        Iterator<b> it = this.mTabs.iterator();
         while (it.hasNext()) {
             it.next().f(-1);
             it.remove();
@@ -188,26 +186,26 @@ public class TabLayout extends FrameLayout {
         this.mSelectedTab = null;
     }
 
-    void selectTab(C3026b c3026b) {
+    void selectTab(b bVar) {
         OnTabSelectedListener onTabSelectedListener;
         OnTabSelectedListener onTabSelectedListener2;
         OnTabSelectedListener onTabSelectedListener3;
-        C3026b c3026b2 = this.mSelectedTab;
-        if (c3026b2 == c3026b) {
-            if (c3026b2 == null || (onTabSelectedListener3 = this.mOnTabSelectedListener) == null) {
+        b bVar2 = this.mSelectedTab;
+        if (bVar2 == bVar) {
+            if (bVar2 == null || (onTabSelectedListener3 = this.mOnTabSelectedListener) == null) {
                 return;
             }
-            onTabSelectedListener3.onTabReselected(c3026b2);
+            onTabSelectedListener3.onTabReselected(bVar2);
             return;
         }
-        if (c3026b2 != null && (onTabSelectedListener2 = this.mOnTabSelectedListener) != null) {
-            onTabSelectedListener2.onTabUnselected(c3026b2);
+        if (bVar2 != null && (onTabSelectedListener2 = this.mOnTabSelectedListener) != null) {
+            onTabSelectedListener2.onTabUnselected(bVar2);
         }
-        this.mSelectedTab = c3026b;
-        if (c3026b == null || (onTabSelectedListener = this.mOnTabSelectedListener) == null) {
+        this.mSelectedTab = bVar;
+        if (bVar == null || (onTabSelectedListener = this.mOnTabSelectedListener) == null) {
             return;
         }
-        onTabSelectedListener.onTabSelected(c3026b);
+        onTabSelectedListener.onTabSelected(bVar);
     }
 
     @Override // android.view.View
@@ -229,11 +227,11 @@ public class TabLayout extends FrameLayout {
         layoutParams.height = (int) this.mTabbar.getLayoutHeight();
         this.mRootView.setLayoutParams(layoutParams);
         for (int i = 0; i < this.mTabs.size(); i++) {
-            View b = this.mTabs.get(i).b();
-            if (b != null) {
-                ViewGroup.LayoutParams layoutParams2 = b.getLayoutParams();
+            View b2 = this.mTabs.get(i).b();
+            if (b2 != null) {
+                ViewGroup.LayoutParams layoutParams2 = b2.getLayoutParams();
                 layoutParams2.height = (int) this.mTabbar.getLayoutHeight();
-                b.setLayoutParams(layoutParams2);
+                b2.setLayoutParams(layoutParams2);
             }
         }
     }

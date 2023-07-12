@@ -10,7 +10,7 @@ import android.util.Log;
 import android.view.Surface;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
-import com.alipay.sdk.m.e0.C4186a;
+import com.alipay.sdk.m.e0.a;
 import com.youku.alixplayer.AlixPlayerConfig;
 import com.youku.alixplayer.IAlixPlayer;
 import com.youku.alixplayer.alirtc.OnAlixRtcInfoListener;
@@ -765,7 +765,7 @@ public class AndroidXPlayer extends AbsAlixPlayer implements OnStateChangeListen
         } catch (NumberFormatException unused2) {
         }
         if (BUFFER_START_TIMEOUT < 0) {
-            BUFFER_START_TIMEOUT = C4186a.a;
+            BUFFER_START_TIMEOUT = a.a;
         }
         Log.d(TAG, "set buffer start timeout:" + BUFFER_START_TIMEOUT);
     }

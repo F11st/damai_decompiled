@@ -78,7 +78,7 @@ public final class ObservableSkipWhile<T> extends AbstractObservableWithUpstream
         this.predicate = predicate;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new SkipWhileObserver(observer, this.predicate));
     }

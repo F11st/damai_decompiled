@@ -41,11 +41,11 @@ public class PagerIndicator extends HorizontalScrollView {
     private OnDoubleClickTabListener onDoubleClickTabListener;
     private ViewPager.OnPageChangeListener onPageChangeListener;
     private final PageChangedListener pageChangedListener;
-    private final ViewTreeObserver$OnGlobalLayoutListenerC2501c setSelectedTabListener;
+    private final c setSelectedTabListener;
     private Drawable slidingBlockDrawable;
     private boolean start;
-    private final View$OnClickListenerC2502d tabViewClickListener;
-    private final View$OnTouchListenerC2500b tabViewDoubleClickGestureDetector;
+    private final d tabViewClickListener;
+    private final b tabViewDoubleClickGestureDetector;
     private TabViewFactory tabViewFactory;
     private List<View> tabViews;
     private ViewGroup tabsLayout;
@@ -122,14 +122,13 @@ public class PagerIndicator extends HorizontalScrollView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.indicator.PagerIndicator$b */
     /* loaded from: classes17.dex */
-    public class View$OnTouchListenerC2500b extends GestureDetector.SimpleOnGestureListener implements View.OnTouchListener {
+    public class b extends GestureDetector.SimpleOnGestureListener implements View.OnTouchListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private GestureDetector a;
         private View b;
 
-        public View$OnTouchListenerC2500b(Context context) {
+        public b(Context context) {
             GestureDetector gestureDetector = new GestureDetector(context, this);
             this.a = gestureDetector;
             gestureDetector.setOnDoubleTapListener(this);
@@ -162,12 +161,11 @@ public class PagerIndicator extends HorizontalScrollView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.indicator.PagerIndicator$c */
     /* loaded from: classes17.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC2501c implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class c implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private ViewTreeObserver$OnGlobalLayoutListenerC2501c() {
+        private c() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -197,12 +195,11 @@ public class PagerIndicator extends HorizontalScrollView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.indicator.PagerIndicator$d */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2502d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private View$OnClickListenerC2502d() {
+        private d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -651,9 +648,9 @@ public class PagerIndicator extends HorizontalScrollView {
         this.bottomLineColor = -1;
         this.bottomLineHeight = -1;
         this.pageChangedListener = new PageChangedListener();
-        this.tabViewClickListener = new View$OnClickListenerC2502d();
-        ViewTreeObserver$OnGlobalLayoutListenerC2501c viewTreeObserver$OnGlobalLayoutListenerC2501c = new ViewTreeObserver$OnGlobalLayoutListenerC2501c();
-        this.setSelectedTabListener = viewTreeObserver$OnGlobalLayoutListenerC2501c;
+        this.tabViewClickListener = new d();
+        c cVar = new c();
+        this.setSelectedTabListener = cVar;
         setHorizontalScrollBarEnabled(false);
         removeAllViews();
         if (attributeSet != null && (obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R$styleable.PagerIndicator)) != null) {
@@ -665,7 +662,7 @@ public class PagerIndicator extends HorizontalScrollView {
             this.bottomLineHeight = (int) obtainStyledAttributes.getDimension(R$styleable.PagerIndicator_pi_bottomLineHeight, -1.0f);
             obtainStyledAttributes.recycle();
         }
-        this.tabViewDoubleClickGestureDetector = new View$OnTouchListenerC2500b(context);
-        getViewTreeObserver().addOnGlobalLayoutListener(viewTreeObserver$OnGlobalLayoutListenerC2501c);
+        this.tabViewDoubleClickGestureDetector = new b(context);
+        getViewTreeObserver().addOnGlobalLayoutListener(cVar);
     }
 }

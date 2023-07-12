@@ -93,7 +93,7 @@ public final class ObservableTake<T> extends AbstractObservableWithUpstream<T, T
         this.limit = j;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new TakeObserver(observer, this.limit));
     }

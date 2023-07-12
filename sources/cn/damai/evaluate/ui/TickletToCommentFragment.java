@@ -19,12 +19,11 @@ import cn.damai.comment.bean.CommentTextDoBean;
 import cn.damai.comment.bean.CommentUserDoBean;
 import cn.damai.comment.bean.CommentsItemBean;
 import cn.damai.comment.bean.CommentsResultBean;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0525a;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.evaluate.adapter.TickletToEvaluateAdapter;
 import cn.damai.evaluate.request.CommentListRequest;
@@ -35,7 +34,7 @@ import cn.damai.uikit.irecycler.IRecyclerView;
 import cn.damai.uikit.irecycler.OnLoadMoreListener;
 import cn.damai.uikit.irecycler.OnRefreshListener;
 import cn.damai.uikit.irecycler.widget.PullToRefreshHeaderView;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -62,12 +61,11 @@ public class TickletToCommentFragment extends DamaiBaseMvpFragment implements On
     private TickletToEvaluateAdapter mTickletToEvaluateAdapter;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.ui.TickletToCommentFragment$a */
     /* loaded from: classes5.dex */
-    public class C1084a implements Action<Object> {
+    public class a implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1084a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -82,13 +80,12 @@ public class TickletToCommentFragment extends DamaiBaseMvpFragment implements On
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.ui.TickletToCommentFragment$b */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1085b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ToEvaListResponse a;
 
-        View$OnClickListenerC1085b(ToEvaListResponse toEvaListResponse) {
+        b(ToEvaListResponse toEvaListResponse) {
             this.a = toEvaListResponse;
         }
 
@@ -101,25 +98,24 @@ public class TickletToCommentFragment extends DamaiBaseMvpFragment implements On
             } else {
                 Bundle bundle = new Bundle();
                 bundle.putString("url", this.a.commentGiftLink);
-                DMNav.from(TickletToCommentFragment.this.mActivity).withExtras(bundle).toUri(NavUri.b(C3834a.C3837c.d));
+                DMNav.from(TickletToCommentFragment.this.mActivity).withExtras(bundle).toUri(NavUri.b(a.c.d));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.ui.TickletToCommentFragment$c */
     /* loaded from: classes5.dex */
-    public class C1086c implements DMImageCreator.DMImageFailListener {
+    public class c implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1086c() {
+        c() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "423118759")) {
-                ipChange.ipc$dispatch("423118759", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("423118759", new Object[]{this, dVar});
             } else {
                 TickletToCommentFragment.this.imgeGift.setVisibility(8);
             }
@@ -127,24 +123,23 @@ public class TickletToCommentFragment extends DamaiBaseMvpFragment implements On
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.ui.TickletToCommentFragment$d */
     /* loaded from: classes5.dex */
-    public class C1087d implements DMImageCreator.DMImageSuccListener {
+    public class d implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1087d() {
+        d() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1141137412")) {
-                ipChange.ipc$dispatch("-1141137412", new Object[]{this, c0502e});
-            } else if (c0502e == null || c0502e.b == null) {
+                ipChange.ipc$dispatch("-1141137412", new Object[]{this, eVar});
+            } else if (eVar == null || eVar.b == null) {
                 TickletToCommentFragment.this.imgeGift.setVisibility(8);
             } else {
                 TickletToCommentFragment.this.imgeGift.setVisibility(0);
-                TickletToCommentFragment.this.imgeGift.setImageBitmap(c0502e.b);
+                TickletToCommentFragment.this.imgeGift.setImageBitmap(eVar.b);
                 TickletToCommentFragment.this.isImageLoadSuccess = true;
             }
         }
@@ -250,7 +245,7 @@ public class TickletToCommentFragment extends DamaiBaseMvpFragment implements On
         if (AndroidInstantRuntime.support(ipChange, "-768431280")) {
             ipChange.ipc$dispatch("-768431280", new Object[]{this, str});
         } else {
-            C0504a.b().e(str).n(new C1087d()).e(new C1086c()).f();
+            cn.damai.common.image.a.b().e(str).n(new d()).e(new c()).f();
         }
     }
 
@@ -297,7 +292,7 @@ public class TickletToCommentFragment extends DamaiBaseMvpFragment implements On
         if (AndroidInstantRuntime.support(ipChange, "-1289701513")) {
             ipChange.ipc$dispatch("-1289701513", new Object[]{this});
         } else {
-            this.mDMMessage.b("comment_publish_success", new C1084a());
+            this.mDMMessage.b("comment_publish_success", new a());
         }
     }
 
@@ -321,7 +316,7 @@ public class TickletToCommentFragment extends DamaiBaseMvpFragment implements On
             TextView textView = (TextView) inflate.findViewById(R$id.ticklet_comment_content);
             CommentUserDoBean userDO = commentsItemBean.getUserDO();
             if (userDO != null && !TextUtils.isEmpty(userDO.getHeaderImage())) {
-                C0504a.b().c(userDO.getHeaderImage()).g(imageView);
+                cn.damai.common.image.a.b().c(userDO.getHeaderImage()).g(imageView);
             }
             List<CommentTextDoBean> textDOList = commentsItemBean.getTextDOList();
             if (textDOList != null && textDOList.size() > 0 && (commentTextDoBean = textDOList.get(0)) != null && !TextUtils.isEmpty(commentTextDoBean.getValue())) {
@@ -365,7 +360,7 @@ public class TickletToCommentFragment extends DamaiBaseMvpFragment implements On
             }
             giftImageLoad(toEvaListResponse.commentGiftIcon);
             ((RelativeLayout.LayoutParams) this.imgeGift.getLayoutParams()).bottomMargin = (DisplayMetrics.getheightPixels(t60.b(this.mActivity)) * 40) / 100;
-            this.imgeGift.setOnClickListener(new View$OnClickListenerC1085b(toEvaListResponse));
+            this.imgeGift.setOnClickListener(new b(toEvaListResponse));
             return;
         }
         this.isHttpRequestFinish = true;
@@ -431,7 +426,7 @@ public class TickletToCommentFragment extends DamaiBaseMvpFragment implements On
         if (this.mActivity == null) {
             this.mActivity = getActivity();
         }
-        setDamaiUTKeyBuilder(new C0525a.C0527b().j(new HashMap()).i(un2.TICKLET_MYCOMMENT_LIST_PAGE));
+        setDamaiUTKeyBuilder(new a.b().j(new HashMap()).i(un2.TICKLET_MYCOMMENT_LIST_PAGE));
         initPageView();
         initIRecyclerView();
         fetchToCommentListData();

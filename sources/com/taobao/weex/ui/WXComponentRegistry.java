@@ -1,8 +1,8 @@
 package com.taobao.weex.ui;
 
 import android.text.TextUtils;
-import com.taobao.weex.C6967b;
 import com.taobao.weex.WXSDKManager;
+import com.taobao.weex.b;
 import com.taobao.weex.bridge.WXBridgeManager;
 import com.taobao.weex.common.WXException;
 import com.taobao.weex.utils.WXLogUtils;
@@ -95,7 +95,7 @@ public class WXComponentRegistry {
         synchronized (WXComponentRegistry.class) {
             if (iFComponentHolder != null) {
                 if (!TextUtils.isEmpty(str)) {
-                    C6967b.b().g(str, iFComponentHolder, map);
+                    b.b().g(str, iFComponentHolder, map);
                     if (RegisterCache.getInstance().cacheComponent(str, iFComponentHolder, map)) {
                         return true;
                     }

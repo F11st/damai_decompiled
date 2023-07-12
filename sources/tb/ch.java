@@ -30,13 +30,12 @@ public class ch {
     private static List<CategoryNewTitleBean> a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ch$a */
     /* loaded from: classes.dex */
-    public class C9004a implements Animator.AnimatorListener {
+    public class a implements Animator.AnimatorListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
 
-        C9004a(View view) {
+        a(View view) {
             this.a = view;
         }
 
@@ -76,13 +75,12 @@ public class ch {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ch$b */
     /* loaded from: classes.dex */
-    public class C9005b implements Animator.AnimatorListener {
+    public class b implements Animator.AnimatorListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
 
-        C9005b(View view) {
+        b(View view) {
             this.a = view;
         }
 
@@ -218,7 +216,7 @@ public class ch {
             return;
         }
         ObjectAnimator ofFloat = ObjectAnimator.ofFloat(view, "translationY", i, -i);
-        ofFloat.addListener(new C9004a(view));
+        ofFloat.addListener(new a(view));
         ofFloat.setDuration(1000L);
         ofFloat.start();
     }
@@ -231,7 +229,7 @@ public class ch {
             return;
         }
         ObjectAnimator ofFloat = ObjectAnimator.ofFloat(view, "translationY", -i, i);
-        ofFloat.addListener(new C9005b(view));
+        ofFloat.addListener(new b(view));
         ofFloat.setDuration(1000L);
         ofFloat.start();
     }

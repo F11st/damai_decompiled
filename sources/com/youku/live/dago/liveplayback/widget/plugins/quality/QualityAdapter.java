@@ -91,11 +91,11 @@ public class QualityAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             }
             Quality quality = this.mList.get(i);
             myViewHolder.item_txt.setVisibility(0);
-            myViewHolder.item_txt.setTextAppearance(this.mContext, R.C7938style.dago_player_list_item_textview_style);
+            myViewHolder.item_txt.setTextAppearance(this.mContext, R.style.dago_player_list_item_textview_style);
             myViewHolder.item_img.setVisibility(8);
             if (quality.quality == 6) {
-                myViewHolder.item_txt.setTextAppearance(this.mContext, R.C7938style.dago_vip_list_item_textview_style);
-                myViewHolder.item_img.setImageResource(R.C7933drawable.quality_vip_icon_3x);
+                myViewHolder.item_txt.setTextAppearance(this.mContext, R.style.dago_vip_list_item_textview_style);
+                myViewHolder.item_img.setImageResource(R.drawable.quality_vip_icon_3x);
                 myViewHolder.item_img.setVisibility(0);
             }
             myViewHolder.item_txt.setText(quality.selectionName);
@@ -127,7 +127,7 @@ public class QualityAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         if (AndroidInstantRuntime.support(ipChange, "1513607788")) {
             return (RecyclerView.ViewHolder) ipChange.ipc$dispatch("1513607788", new Object[]{this, viewGroup, Integer.valueOf(i)});
         }
-        MyViewHolder myViewHolder = new MyViewHolder(this.inflater.inflate(R.C7935layout.dago_language_quality_item, viewGroup, false));
+        MyViewHolder myViewHolder = new MyViewHolder(this.inflater.inflate(R.layout.dago_language_quality_item, viewGroup, false));
         myViewHolder.itemView.setOnClickListener(this);
         return myViewHolder;
     }

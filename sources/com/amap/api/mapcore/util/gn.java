@@ -59,7 +59,7 @@ public class gn {
     }
 
     public static gm b() throws gb {
-        return new gm.C4569a("co", "1.0.0", "AMap_co_1.0.0").a(new String[]{"com.amap.co", "com.amap.opensdk.co", "com.amap.location"}).a();
+        return new gm.a("co", "1.0.0", "AMap_co_1.0.0").a(new String[]{"com.amap.co", "com.amap.opensdk.co", "com.amap.location"}).a();
     }
 
     public static String c(String str) {
@@ -69,7 +69,7 @@ public class gn {
     public static String d(String str) {
         try {
         } catch (Throwable th) {
-            C4573ha.a(th, "ut", "sPa");
+            ha.a(th, "ut", "sPa");
         }
         if (TextUtils.isEmpty(str)) {
             return "";
@@ -93,7 +93,7 @@ public class gn {
         try {
             return g(bArr);
         } catch (Throwable th) {
-            C4573ha.a(th, "ut", ConnType.H2S);
+            ha.a(th, "ut", ConnType.H2S);
             return null;
         }
     }
@@ -194,7 +194,7 @@ public class gn {
         L2b:
             r0 = move-exception
             java.lang.String r4 = "gct"
-            com.amap.api.mapcore.util.C4573ha.a(r0, r1, r4)
+            com.amap.api.mapcore.util.ha.a(r0, r1, r4)
         L31:
             java.lang.String r0 = ""
         L33:
@@ -244,7 +244,7 @@ public class gn {
         L9a:
             r7 = move-exception
             java.lang.String r2 = "gct_p"
-            com.amap.api.mapcore.util.C4573ha.a(r7, r1, r2)
+            com.amap.api.mapcore.util.ha.a(r7, r1, r2)
         La0:
             boolean r7 = android.text.TextUtils.isEmpty(r0)
             if (r7 == 0) goto Laa
@@ -269,7 +269,7 @@ public class gn {
             }
             return bArr2;
         } catch (Throwable th) {
-            C4573ha.a(th, "ut", "gIV");
+            ha.a(th, "ut", "gIV");
             return new byte[16];
         }
     }
@@ -333,7 +333,7 @@ public class gn {
                 }
             }
         } catch (Throwable th) {
-            C4573ha.a(th, "ut", "abP");
+            ha.a(th, "ut", "abP");
         }
         return stringBuffer.toString();
     }
@@ -408,7 +408,7 @@ public class gn {
         try {
             return h(bArr);
         } catch (Throwable th) {
-            C4573ha.a(th, "ut", "gZp");
+            ha.a(th, "ut", "gZp");
             return new byte[0];
         }
     }
@@ -425,7 +425,7 @@ public class gn {
         if (bArr != null) {
             try {
             } catch (Throwable th) {
-                C4573ha.a(th, "ut", "zp2");
+                ha.a(th, "ut", "zp2");
             }
             if (bArr.length != 0) {
                 try {
@@ -441,18 +441,18 @@ public class gn {
                             try {
                                 zipOutputStream.close();
                             } catch (Throwable th2) {
-                                C4573ha.a(th2, "ut", "zp1");
+                                ha.a(th2, "ut", "zp1");
                             }
                             byteArrayOutputStream.close();
                         } catch (Throwable th3) {
                             th = th3;
                             try {
-                                C4573ha.a(th, "ut", "zp");
+                                ha.a(th, "ut", "zp");
                                 if (zipOutputStream != null) {
                                     try {
                                         zipOutputStream.close();
                                     } catch (Throwable th4) {
-                                        C4573ha.a(th4, "ut", "zp1");
+                                        ha.a(th4, "ut", "zp1");
                                     }
                                 }
                                 if (byteArrayOutputStream != null) {
@@ -464,14 +464,14 @@ public class gn {
                                     try {
                                         zipOutputStream.close();
                                     } catch (Throwable th6) {
-                                        C4573ha.a(th6, "ut", "zp1");
+                                        ha.a(th6, "ut", "zp1");
                                     }
                                 }
                                 if (byteArrayOutputStream != null) {
                                     try {
                                         byteArrayOutputStream.close();
                                     } catch (Throwable th7) {
-                                        C4573ha.a(th7, "ut", "zp2");
+                                        ha.a(th7, "ut", "zp2");
                                     }
                                 }
                                 throw th5;
@@ -517,7 +517,7 @@ public class gn {
     }
 
     public static gm a() throws gb {
-        return new gm.C4569a("collection", "1.0", "AMap_collection_1.0").a(new String[]{"com.amap.api.collection"}).a();
+        return new gm.a("collection", "1.0", "AMap_collection_1.0").a(new String[]{"com.amap.api.collection"}).a();
     }
 
     public static void a(ByteArrayOutputStream byteArrayOutputStream, String str) {
@@ -569,7 +569,7 @@ public class gn {
                 byteArrayOutputStream.write(bArr, 0, 255);
             }
         } catch (IOException e) {
-            C4573ha.a(e, "ut", "wFie");
+            ha.a(e, "ut", "wFie");
         }
     }
 
@@ -677,9 +677,9 @@ public class gn {
         String str4;
         String str5;
         str3 = "";
-        String e = C4554gc.e(context);
+        String e = gc.e(context);
         String b2 = gk.b(e);
-        String a2 = C4554gc.a(context);
+        String a2 = gc.a(context);
         try {
             if (jSONObject.has("info")) {
                 str5 = jSONObject.getString("info");

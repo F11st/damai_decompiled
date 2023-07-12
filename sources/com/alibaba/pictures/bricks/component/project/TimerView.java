@@ -47,15 +47,14 @@ public class TimerView extends LinearLayout implements WeakRefCountDownTimer.OnT
     protected long sec;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.project.TimerView$a */
     /* loaded from: classes7.dex */
-    public static class C3490a {
+    public static class a {
         public final String a;
         public final String b;
         public final String c;
         public final String d;
 
-        public C3490a(String str, String str2, String str3, String str4) {
+        public a(String str, String str2, String str3, String str4) {
             this.a = str;
             this.b = str2;
             this.c = str3;
@@ -79,16 +78,16 @@ public class TimerView extends LinearLayout implements WeakRefCountDownTimer.OnT
     }
 
     @NonNull
-    public static C3490a getDateResult(long j) {
+    public static a getDateResult(long j) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "800211614")) {
-            return (C3490a) ipChange.ipc$dispatch("800211614", new Object[]{Long.valueOf(j)});
+            return (a) ipChange.ipc$dispatch("800211614", new Object[]{Long.valueOf(j)});
         }
         long j2 = j / 86400000;
         long j3 = j % 86400000;
         long j4 = j3 / 3600000;
         long j5 = j3 % 3600000;
-        return new C3490a(getConcatText(j2), getConcatText(j4), getConcatText(j5 / 60000), getConcatText((j5 % 60000) / 1000));
+        return new a(getConcatText(j2), getConcatText(j4), getConcatText(j5 / 60000), getConcatText((j5 % 60000) / 1000));
     }
 
     public LinearLayout getTimerLayout() {
@@ -219,7 +218,7 @@ public class TimerView extends LinearLayout implements WeakRefCountDownTimer.OnT
             ipChange.ipc$dispatch("1025851077", new Object[]{this, Long.valueOf(j)});
             return;
         }
-        C3490a dateResult = getDateResult(j);
+        a dateResult = getDateResult(j);
         this.mTimeDay.setText(dateResult.a);
         this.mTimeHour.setText(dateResult.b);
         this.mTimeMin.setText(dateResult.c);

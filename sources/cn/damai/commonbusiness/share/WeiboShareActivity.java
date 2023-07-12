@@ -8,7 +8,6 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Toast;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$layout;
@@ -47,12 +46,11 @@ public class WeiboShareActivity extends Activity implements WbShareCallback {
     private IWBAPI h;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.WeiboShareActivity$a */
     /* loaded from: classes.dex */
-    public class C0893a implements WbAuthListener {
+    public class a implements WbAuthListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0893a() {
+        a() {
         }
 
         @Override // com.sina.weibo.sdk.auth.WbAuthListener
@@ -87,19 +85,18 @@ public class WeiboShareActivity extends Activity implements WbShareCallback {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.WeiboShareActivity$b */
     /* loaded from: classes.dex */
-    public class C0894b implements DMImageCreator.DMImageFailListener {
+    public class b implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0894b() {
+        b() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "15425477")) {
-                ipChange.ipc$dispatch("15425477", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("15425477", new Object[]{this, dVar});
             } else {
                 WeiboShareActivity.this.j(null);
             }
@@ -107,21 +104,20 @@ public class WeiboShareActivity extends Activity implements WbShareCallback {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.WeiboShareActivity$c */
     /* loaded from: classes.dex */
-    public class C0895c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0895c() {
+        c() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1711822438")) {
-                ipChange.ipc$dispatch("-1711822438", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("-1711822438", new Object[]{this, eVar});
             } else {
-                WeiboShareActivity.this.j(c0502e.b);
+                WeiboShareActivity.this.j(eVar.b);
             }
         }
     }
@@ -317,7 +313,7 @@ public class WeiboShareActivity extends Activity implements WbShareCallback {
         if (AndroidInstantRuntime.support(ipChange, "-63772333")) {
             ipChange.ipc$dispatch("-63772333", new Object[]{this});
         } else {
-            C0504a.b().h(this).c(this.c).n(new C0895c()).e(new C0894b()).f();
+            cn.damai.common.image.a.b().h(this).c(this.c).n(new c()).e(new b()).f();
         }
     }
 
@@ -326,7 +322,7 @@ public class WeiboShareActivity extends Activity implements WbShareCallback {
         if (AndroidInstantRuntime.support(ipChange, "-1336877492")) {
             ipChange.ipc$dispatch("-1336877492", new Object[]{this});
         } else {
-            this.h.authorize(this, new C0893a());
+            this.h.authorize(this, new a());
         }
     }
 

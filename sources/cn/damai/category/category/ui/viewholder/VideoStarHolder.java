@@ -35,12 +35,11 @@ public class VideoStarHolder extends RecyclerView.ViewHolder {
     private ScoreStarDigitView i;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.viewholder.VideoStarHolder$a */
     /* loaded from: classes.dex */
-    public class C0366a implements OnBannerListener {
+    public class a implements OnBannerListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0366a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.banner.listener.OnBannerListener
@@ -86,7 +85,7 @@ public class VideoStarHolder extends RecyclerView.ViewHolder {
         this.c.setViewPagerLayoutParams(new RelativeLayout.LayoutParams(-1, -1));
         this.c.isAutoPlay(false);
         this.c.setIndicatorGravity(5);
-        this.c.setOnBannerListener(new C0366a());
+        this.c.setOnBannerListener(new a());
         this.c.start();
     }
 

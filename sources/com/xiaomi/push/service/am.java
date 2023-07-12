@@ -4,7 +4,7 @@ import com.xiaomi.push.al;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-final class am extends al.AbstractRunnableC7597a {
+final class am extends al.a {
     final /* synthetic */ int a;
 
     /* renamed from: a  reason: collision with other field name */
@@ -20,7 +20,7 @@ final class am extends al.AbstractRunnableC7597a {
         this.a = i;
     }
 
-    @Override // com.xiaomi.push.al.AbstractRunnableC7597a
+    @Override // com.xiaomi.push.al.a
     /* renamed from: a */
     public String mo706a() {
         return this.f890a;

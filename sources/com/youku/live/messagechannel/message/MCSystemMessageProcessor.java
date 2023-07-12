@@ -7,9 +7,9 @@ import com.youku.live.messagechannel.report.MCMarkMessage;
 import com.youku.live.messagechannel.report.MCMarkMessageManager;
 import com.youku.live.messagechannel.utils.MyLog;
 import com.youku.live.messagechannel.utils.ServerTimeEstimater;
-import io.reactivex.AbstractC8149d;
+import io.reactivex.d;
 import io.reactivex.functions.Consumer;
-import io.reactivex.schedulers.C8162a;
+import io.reactivex.schedulers.a;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -87,7 +87,7 @@ public class MCSystemMessageProcessor {
         if (AndroidInstantRuntime.support(ipChange, "-1009710158")) {
             ipChange.ipc$dispatch("-1009710158", new Object[]{this, mCMessage});
         } else {
-            AbstractC8149d.just(mCMessage).subscribeOn(C8162a.a()).subscribe(this.systemMessageConsumer);
+            d.just(mCMessage).subscribeOn(a.a()).subscribe(this.systemMessageConsumer);
         }
     }
 }

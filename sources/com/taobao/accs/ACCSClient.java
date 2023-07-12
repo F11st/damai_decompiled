@@ -2,7 +2,7 @@ package com.taobao.accs;
 
 import android.content.Context;
 import android.text.TextUtils;
-import anet.channel.C0162c;
+import anet.channel.c;
 import anet.channel.entity.ENV;
 import com.taobao.accs.ACCSManager;
 import com.taobao.accs.AccsClientConfig;
@@ -92,9 +92,9 @@ public class ACCSClient {
                 Utils.clearAgooBindCache(context);
                 Utils.killService(context);
                 if (i == 2) {
-                    C0162c.D(ENV.TEST);
+                    c.D(ENV.TEST);
                 } else if (i == 1) {
-                    C0162c.D(ENV.PREPARE);
+                    c.D(ENV.PREPARE);
                 }
                 for (Map.Entry<String, ACCSClient> entry : mACCSClients.entrySet()) {
                     try {

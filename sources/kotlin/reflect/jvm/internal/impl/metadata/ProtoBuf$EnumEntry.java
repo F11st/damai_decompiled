@@ -1,20 +1,19 @@
 package kotlin.reflect.jvm.internal.impl.metadata;
 
 import java.io.IOException;
-import kotlin.reflect.jvm.internal.impl.protobuf.AbstractC8443a;
 import kotlin.reflect.jvm.internal.impl.protobuf.AbstractMessageLite;
 import kotlin.reflect.jvm.internal.impl.protobuf.ByteString;
-import kotlin.reflect.jvm.internal.impl.protobuf.C8447c;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedOutputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite;
 import kotlin.reflect.jvm.internal.impl.protobuf.InvalidProtocolBufferException;
 import kotlin.reflect.jvm.internal.impl.protobuf.Parser;
+import kotlin.reflect.jvm.internal.impl.protobuf.c;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class ProtoBuf$EnumEntry extends GeneratedMessageLite.ExtendableMessage<ProtoBuf$EnumEntry> implements ProtoBuf$EnumEntryOrBuilder {
-    public static Parser<ProtoBuf$EnumEntry> PARSER = new C8399a();
+    public static Parser<ProtoBuf$EnumEntry> PARSER = new a();
     private static final ProtoBuf$EnumEntry defaultInstance;
     private int bitField0_;
     private byte memoizedIsInitialized;
@@ -100,7 +99,7 @@ public final class ProtoBuf$EnumEntry extends GeneratedMessageLite.ExtendableMes
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$EnumEntry.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.C8447c r4) throws java.io.IOException {
+        public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$EnumEntry.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.c r4) throws java.io.IOException {
             /*
                 r2 = this;
                 r0 = 0
@@ -133,16 +132,15 @@ public final class ProtoBuf$EnumEntry extends GeneratedMessageLite.ExtendableMes
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$EnumEntry$a */
     /* loaded from: classes3.dex */
-    static class C8399a extends AbstractC8443a<ProtoBuf$EnumEntry> {
-        C8399a() {
+    static class a extends kotlin.reflect.jvm.internal.impl.protobuf.a<ProtoBuf$EnumEntry> {
+        a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.protobuf.Parser
         /* renamed from: i */
-        public ProtoBuf$EnumEntry parsePartialFrom(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
-            return new ProtoBuf$EnumEntry(codedInputStream, c8447c);
+        public ProtoBuf$EnumEntry parsePartialFrom(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
+            return new ProtoBuf$EnumEntry(codedInputStream, cVar);
         }
     }
 
@@ -208,7 +206,7 @@ public final class ProtoBuf$EnumEntry extends GeneratedMessageLite.ExtendableMes
     @Override // kotlin.reflect.jvm.internal.impl.protobuf.MessageLite
     public void writeTo(CodedOutputStream codedOutputStream) throws IOException {
         getSerializedSize();
-        GeneratedMessageLite.ExtendableMessage<MessageType>.C8438a newExtensionWriter = newExtensionWriter();
+        GeneratedMessageLite.ExtendableMessage<MessageType>.a newExtensionWriter = newExtensionWriter();
         if ((this.bitField0_ & 1) == 1) {
             codedOutputStream.a0(1, this.name_);
         }
@@ -248,11 +246,11 @@ public final class ProtoBuf$EnumEntry extends GeneratedMessageLite.ExtendableMes
         this.unknownFields = ByteString.EMPTY;
     }
 
-    private ProtoBuf$EnumEntry(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
+    private ProtoBuf$EnumEntry(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
         this.memoizedIsInitialized = (byte) -1;
         this.memoizedSerializedSize = -1;
         initFields();
-        ByteString.C8436a n = ByteString.n();
+        ByteString.a n = ByteString.n();
         CodedOutputStream J = CodedOutputStream.J(n, 1);
         boolean z = false;
         while (!z) {
@@ -261,7 +259,7 @@ public final class ProtoBuf$EnumEntry extends GeneratedMessageLite.ExtendableMes
                     int K = codedInputStream.K();
                     if (K != 0) {
                         if (K != 8) {
-                            if (!parseUnknownField(codedInputStream, J, c8447c, K)) {
+                            if (!parseUnknownField(codedInputStream, J, cVar, K)) {
                             }
                         } else {
                             this.bitField0_ |= 1;

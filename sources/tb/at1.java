@@ -16,20 +16,19 @@ import org.jetbrains.annotations.Nullable;
 public final class at1 implements BitmapProcessor {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C8926a Companion = new C8926a(null);
+    public static final a Companion = new a(null);
     public static final int PAINT_FLAGS = 6;
     private final int a;
     private final int b;
     private PointF c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.at1$a */
     /* loaded from: classes7.dex */
-    public static final class C8926a {
-        private C8926a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8926a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -117,11 +116,11 @@ public final class at1 implements BitmapProcessor {
         b41.i(bitmap, "toTransform");
         Bitmap bitmap2 = bitmapSupplier.get(this.a, this.b, bitmap.getConfig() != null ? bitmap.getConfig() : Bitmap.Config.ARGB_8888);
         b41.h(bitmap2, "bitmapSupplier.get(outWi… Bitmap.Config.ARGB_8888)");
-        Bitmap a = a(bitmap2, bitmap, this.a, this.b);
-        b41.f(a);
-        if (bitmap2 != null && (!b41.d(bitmap2, a))) {
+        Bitmap a2 = a(bitmap2, bitmap, this.a, this.b);
+        b41.f(a2);
+        if (bitmap2 != null && (!b41.d(bitmap2, a2))) {
             bitmap2.recycle();
         }
-        return a;
+        return a2;
     }
 }

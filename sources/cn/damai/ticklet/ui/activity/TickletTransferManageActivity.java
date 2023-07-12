@@ -28,8 +28,6 @@ import cn.damai.common.DamaiConstants;
 import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.app.widget.ProtocolDialog;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.share.AlipayEntryActivity;
 import cn.damai.commonbusiness.util.Utils;
@@ -118,7 +116,7 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
     private ArrayList<TickletTransferManagerListExtra> allowTransfer = new ArrayList<>();
     private ArrayList<TickletTransferManagerListExtra> outTransfer = new ArrayList<>();
     private ArrayList<TickletTransferManagerListExtra> runningTransfer = new ArrayList<>();
-    Handler handler = new HandlerC2040h();
+    Handler handler = new h();
     private String transferType = null;
     private String acceptPerson = " ";
 
@@ -185,12 +183,11 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TickletTransferManageActivity$a */
     /* loaded from: classes7.dex */
-    public class DialogInterface$OnClickListenerC2033a implements DialogInterface.OnClickListener {
+    public class a implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC2033a(TickletTransferManageActivity tickletTransferManageActivity) {
+        a(TickletTransferManageActivity tickletTransferManageActivity) {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -205,12 +202,11 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TickletTransferManageActivity$b */
     /* loaded from: classes7.dex */
-    public class DialogInterface$OnClickListenerC2034b implements DialogInterface.OnClickListener {
+    public class b implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC2034b() {
+        b() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -227,12 +223,11 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TickletTransferManageActivity$c */
     /* loaded from: classes7.dex */
-    public class DialogInterface$OnClickListenerC2035c implements DialogInterface.OnClickListener {
+    public class c implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC2035c() {
+        c() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -242,18 +237,17 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
                 ipChange.ipc$dispatch("-752771256", new Object[]{this, dialogInterface, Integer.valueOf(i)});
                 return;
             }
-            C0529c.e().x(un2.k().P("bottom", "canceltransferbtn", TickletTransferManageActivity.this.performId, TickletTransferManageActivity.this.acceptPerson, false));
+            cn.damai.common.user.c.e().x(un2.k().P("bottom", "canceltransferbtn", TickletTransferManageActivity.this.performId, TickletTransferManageActivity.this.acceptPerson, false));
             dialogInterface.dismiss();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TickletTransferManageActivity$d */
     /* loaded from: classes7.dex */
-    public class C2036d implements ProtocolDialog.OnConfirmListener {
+    public class d implements ProtocolDialog.OnConfirmListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2036d() {
+        d() {
         }
 
         @Override // cn.damai.common.app.widget.ProtocolDialog.OnConfirmListener
@@ -262,7 +256,7 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
             if (AndroidInstantRuntime.support(ipChange, "287291874")) {
                 ipChange.ipc$dispatch("287291874", new Object[]{this, Boolean.valueOf(z), dialogInterface});
             } else if (z) {
-                C0529c.e().x(un2.k().P("bottom", "submittransferbtn", TickletTransferManageActivity.this.performId, TickletTransferManageActivity.this.acceptPerson, false));
+                cn.damai.common.user.c.e().x(un2.k().P("bottom", "submittransferbtn", TickletTransferManageActivity.this.performId, TickletTransferManageActivity.this.acceptPerson, false));
                 if ("1".equals(TickletTransferManageActivity.this.transferType) || "2".equals(TickletTransferManageActivity.this.transferType)) {
                     TickletTransferManageActivity.this.thirdTransferConirm();
                 } else {
@@ -277,12 +271,11 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TickletTransferManageActivity$e */
     /* loaded from: classes7.dex */
-    public class C2037e implements TextWatcher {
+    public class e implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2037e() {
+        e() {
         }
 
         @Override // android.text.TextWatcher
@@ -313,12 +306,11 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TickletTransferManageActivity$f */
     /* loaded from: classes7.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC2038f implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class f implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC2038f() {
+        f() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -350,13 +342,12 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TickletTransferManageActivity$g */
     /* loaded from: classes7.dex */
-    public class DialogInterface$OnClickListenerC2039g implements DialogInterface.OnClickListener {
+    public class g implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        DialogInterface$OnClickListenerC2039g(String str) {
+        g(String str) {
             this.a = str;
         }
 
@@ -372,12 +363,11 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TickletTransferManageActivity$h */
     /* loaded from: classes7.dex */
-    public class HandlerC2040h extends Handler {
+    public class h extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC2040h() {
+        h() {
         }
 
         @Override // android.os.Handler
@@ -398,12 +388,11 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TickletTransferManageActivity$i */
     /* loaded from: classes7.dex */
-    public class C2041i implements TickletTransferShareCallback {
+    public class i implements TickletTransferShareCallback {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2041i() {
+        i() {
         }
 
         @Override // cn.damai.ticklet.inteface.TickletTransferShareCallback
@@ -416,7 +405,7 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
             TickletTransferManageActivity.this.transferType = "2";
             TickletTransferManageActivity tickletTransferManageActivity = TickletTransferManageActivity.this;
             tickletTransferManageActivity.transferTypeDeal("1".equals(((TickletTransferManagerListExtra) tickletTransferManageActivity.getCheckedTransferInfo().get(0)).isBindCert), TickletTransferManageActivity.this.getResources().getString(R$string.ticklet_transfer_alipay_friend));
-            C0529c e = C0529c.e();
+            cn.damai.common.user.c e = cn.damai.common.user.c.e();
             un2 k = un2.k();
             e.x(k.Q("bottom", "transfer_item_" + String.valueOf(1), TickletTransferManageActivity.this.performId, "支付宝", false));
         }
@@ -433,7 +422,7 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
             if (TickletTransferManageActivity.this.mapAppWindow != null) {
                 TickletTransferManageActivity.this.mapAppWindow.callSuperDismiss();
             }
-            C0529c e = C0529c.e();
+            cn.damai.common.user.c e = cn.damai.common.user.c.e();
             un2 k = un2.k();
             e.x(k.Q("bottom", "transfer_item_" + String.valueOf(2), TickletTransferManageActivity.this.performId, "手机", false));
         }
@@ -448,7 +437,7 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
             TickletTransferManageActivity.this.transferType = "1";
             TickletTransferManageActivity tickletTransferManageActivity = TickletTransferManageActivity.this;
             tickletTransferManageActivity.transferTypeDeal("1".equals(((TickletTransferManagerListExtra) tickletTransferManageActivity.getCheckedTransferInfo().get(0)).isBindCert), TickletTransferManageActivity.this.getResources().getString(R$string.ticklet_transfer_weixin_friend));
-            C0529c e = C0529c.e();
+            cn.damai.common.user.c e = cn.damai.common.user.c.e();
             un2 k = un2.k();
             e.x(k.Q("bottom", "transfer_item_" + String.valueOf(0), TickletTransferManageActivity.this.performId, "微信", false));
         }
@@ -513,7 +502,7 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
             return;
         }
         DMDialog dMDialog = new DMDialog(this);
-        dMDialog.v(getResources().getString(R$string.ticklet_transfer_cardId_share_tip)).q(getResources().getString(R$string.ticklet_transfer_cardId_share_content, str)).n(getString(R$string.ticklet_transfer_phone_share), new DialogInterface$OnClickListenerC2034b()).i(getString(R$string.ticklet_know), new DialogInterface$OnClickListenerC2033a(this));
+        dMDialog.v(getResources().getString(R$string.ticklet_transfer_cardId_share_tip)).q(getResources().getString(R$string.ticklet_transfer_cardId_share_content, str)).n(getString(R$string.ticklet_transfer_phone_share), new b()).i(getString(R$string.ticklet_know), new a(this));
         dMDialog.b(false);
         dMDialog.show();
     }
@@ -652,19 +641,19 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
                 this.transferDatas.add(this.transferAllows);
                 this.transferDatas.add(this.mDividerDataHolder);
                 if (this.transferAllows.a().size() > 0 && this.defalutChoose) {
-                    int i = 0;
+                    int i2 = 0;
                     while (true) {
-                        if (i >= this.transferAllows.a().size()) {
-                            i = -1;
+                        if (i2 >= this.transferAllows.a().size()) {
+                            i2 = -1;
                             break;
-                        } else if (!"1".equals(this.transferAllows.a().get(i).topLimitFlag)) {
+                        } else if (!"1".equals(this.transferAllows.a().get(i2).topLimitFlag)) {
                             break;
                         } else {
-                            i++;
+                            i2++;
                         }
                     }
-                    if (i != -1 && this.transferAllows.a().get(i) != null) {
-                        this.transferAllows.a().get(i).isCheck = true;
+                    if (i2 != -1 && this.transferAllows.a().get(i2) != null) {
+                        this.transferAllows.a().get(i2).isCheck = true;
                         this.defalutChoose = false;
                     }
                 }
@@ -920,7 +909,7 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
         tickletTransferConfirmDialogView.setData(getCheckedTransferInfo().size(), this.acceptPerson, text);
         SpannableString spannableString = new SpannableString(getResources().getString(R$string.ticklet_detail_ticket_rule_tip));
         spannableString.setSpan(new ForegroundColorSpan(getResources().getColor(R$color.color_ff2d79)), 0, spannableString.length(), 33);
-        ProtocolDialog C = ProtocolDialog.C(this, string, null, spannableString, getResources().getString(R$string.ticklet_transfer_cancel_button_thought), -16777216, new DialogInterface$OnClickListenerC2035c(), getString(R$string.ticklet_transfer_ticket_agree), Color.parseColor("#ff2d79"), new C2036d(), null);
+        ProtocolDialog C = ProtocolDialog.C(this, string, null, spannableString, getResources().getString(R$string.ticklet_transfer_cancel_button_thought), -16777216, new c(), getString(R$string.ticklet_transfer_ticket_agree), Color.parseColor("#ff2d79"), new d(), null);
         C.u(tickletTransferConfirmDialogView);
         C.show();
     }
@@ -1022,7 +1011,7 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
             return;
         }
         String trim = this.etTransferPhone.getText().toString().trim();
-        C0529c.e().x(un2.k().P("bottom", "submittransfer", this.performId, trim, false));
+        cn.damai.common.user.c.e().x(un2.k().P("bottom", "submittransfer", this.performId, trim, false));
         if (TextUtils.isEmpty(trim)) {
             ToastUtil.h(R$string.ticklet_transfer_phone_tip);
         } else if (getCheckedTransferInfo().size() == 0) {
@@ -1078,32 +1067,32 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
     }
 
     @Override // cn.damai.ticklet.inteface.TickletTransferCallback
-    public void callCancelTransfer(String str, int i, String str2) {
+    public void callCancelTransfer(String str, int i2, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "336774821")) {
-            ipChange.ipc$dispatch("336774821", new Object[]{this, str, Integer.valueOf(i), str2});
+            ipChange.ipc$dispatch("336774821", new Object[]{this, str, Integer.valueOf(i2), str2});
             return;
         }
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
         un2 k = un2.k();
-        e.x(k.P("list", "canceltransfer_" + String.valueOf(i), this.performId, str2, false));
+        e2.x(k.P("list", "canceltransfer_" + String.valueOf(i2), this.performId, str2, false));
         DMDialog dMDialog = new DMDialog(this);
         Resources resources = getResources();
-        int i2 = R$string.ticklet_transfer_cancel_title;
-        dMDialog.v(resources.getString(i2)).q(getResources().getString(R$string.ticklet_transfer_cancel_message_tip)).m(getResources().getString(i2), Color.parseColor("#111111"), new DialogInterface$OnClickListenerC2039g(str)).h(getResources().getString(R$string.ticklet_transfer_cancel_button_thought), Color.parseColor("#111111"), null);
+        int i3 = R$string.ticklet_transfer_cancel_title;
+        dMDialog.v(resources.getString(i3)).q(getResources().getString(R$string.ticklet_transfer_cancel_message_tip)).m(getResources().getString(i3), Color.parseColor("#111111"), new g(str)).h(getResources().getString(R$string.ticklet_transfer_cancel_button_thought), Color.parseColor("#111111"), null);
         dMDialog.show();
     }
 
     @Override // cn.damai.ticklet.inteface.TickletTransferCallback
-    public void chooseUpdateView(int i) {
+    public void chooseUpdateView(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1280491353")) {
-            ipChange.ipc$dispatch("-1280491353", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-1280491353", new Object[]{this, Integer.valueOf(i2)});
             return;
         }
         HashMap hashMap = new HashMap();
         hashMap.put("screening_id", this.performId);
-        TickletTransferManagerListExtra tickletTransferManagerListExtra = this.allowTransfer.get(i);
+        TickletTransferManagerListExtra tickletTransferManagerListExtra = this.allowTransfer.get(i2);
         if (tickletTransferManagerListExtra.isCheck) {
             tickletTransferManagerListExtra.isCheck = false;
             hashMap.put("status", "0");
@@ -1114,16 +1103,16 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
             tickletTransferManagerListExtra.isCheck = true;
             hashMap.put("status", "1");
         }
-        C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_TRANSFER_MANAGER_PAGE, "to_transfer", "select_ticket", hashMap, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(un2.TICKLET_TRANSFER_MANAGER_PAGE, "to_transfer", "select_ticket", hashMap, Boolean.FALSE));
         this.adapterManage.a();
         confirmButtonState();
     }
 
     @Override // cn.damai.ticklet.ui.activity.TickletBaseActivity, cn.damai.common.app.base.BaseActivity
-    public void dealHeaderClick(int i) {
+    public void dealHeaderClick(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-314948951")) {
-            ipChange.ipc$dispatch("-314948951", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-314948951", new Object[]{this, Integer.valueOf(i2)});
         }
     }
 
@@ -1148,10 +1137,10 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
     }
 
     @Override // cn.damai.ticklet.ui.activity.TickletBaseActivity, cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
-    public void handleError(int i) {
+    public void handleError(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1695412730")) {
-            ipChange.ipc$dispatch("1695412730", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("1695412730", new Object[]{this, Integer.valueOf(i2)});
         } else {
             onRefresh();
         }
@@ -1192,20 +1181,20 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
         this.ticklet_sponsor_transfer_phone_confirm.getEventTv().setTextSize(1, 14.0f);
         this.ticklet_sponsor_transfer_phone_confirm.update(getResources().getString(R$string.ticklet_transfer_phone_share_action));
         this.etTransferPhone.setFilters(new InputFilter[]{new InputFilter.LengthFilter(11)});
-        this.etTransferPhone.addTextChangedListener(new C2037e());
-        this.ticklet_transfer_ll_inputphone_layout.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC2038f());
+        this.etTransferPhone.addTextChangedListener(new e());
+        this.ticklet_transfer_ll_inputphone_layout.getViewTreeObserver().addOnGlobalLayoutListener(new f());
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, android.app.Activity
-    public void onActivityResult(int i, int i2, Intent intent) {
+    public void onActivityResult(int i2, int i3, Intent intent) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-10986125")) {
-            ipChange.ipc$dispatch("-10986125", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), intent});
+            ipChange.ipc$dispatch("-10986125", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3), intent});
             return;
         }
-        super.onActivityResult(i, i2, intent);
-        if (i2 == -1 && i == 100) {
+        super.onActivityResult(i2, i3, intent);
+        if (i3 == -1 && i2 == 100) {
             onRefresh();
         }
     }
@@ -1221,9 +1210,9 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
             }
             TickletTransferShareView tickletTransferShareView = new TickletTransferShareView(this);
             this.mapAppWindow = new TickletAnimWindow(this, this.ticklet_transfer_manager_list, tickletTransferShareView, this);
-            C2041i c2041i = new C2041i();
+            i iVar = new i();
             TickletTransferDataResult tickletTransferDataResult = this.transferDataResult;
-            tickletTransferShareView.initData(tickletTransferDataResult.wechatSwitch, tickletTransferDataResult.alipaySwitch, c2041i);
+            tickletTransferShareView.initData(tickletTransferDataResult.wechatSwitch, tickletTransferDataResult.alipaySwitch, iVar);
             this.mapAppWindow.show();
         } else if (view.getId() == R$id.ticklet_iv_left_icon) {
             onBackPresss();
@@ -1277,15 +1266,15 @@ public class TickletTransferManageActivity extends TickletBaseActivity implement
     }
 
     @Override // androidx.appcompat.app.AppCompatActivity, android.app.Activity, android.view.KeyEvent.Callback
-    public boolean onKeyDown(int i, KeyEvent keyEvent) {
+    public boolean onKeyDown(int i2, KeyEvent keyEvent) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "576004420")) {
-            return ((Boolean) ipChange.ipc$dispatch("576004420", new Object[]{this, Integer.valueOf(i), keyEvent})).booleanValue();
+            return ((Boolean) ipChange.ipc$dispatch("576004420", new Object[]{this, Integer.valueOf(i2), keyEvent})).booleanValue();
         }
-        if (i == 4) {
+        if (i2 == 4) {
             onBackPresss();
         }
-        return super.onKeyDown(i, keyEvent);
+        return super.onKeyDown(i2, keyEvent);
     }
 
     @Override // cn.damai.ticklet.ui.activity.TickletBaseActivity, cn.damai.commonbusiness.base.DamaiBaseActivity

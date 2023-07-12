@@ -9,8 +9,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-import kotlin.C8177b;
 import kotlin.Lazy;
+import kotlin.b;
 import kotlin.jvm.JvmStatic;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
@@ -30,7 +30,7 @@ public final class MegaUtils {
         Lazy b2;
         Lazy b3;
         Lazy b4;
-        b2 = C8177b.b(new Function0<ThreadPoolExecutor>() { // from class: com.alibaba.ability.MegaUtils$sThreadPool$2
+        b2 = b.b(new Function0<ThreadPoolExecutor>() { // from class: com.alibaba.ability.MegaUtils$sThreadPool$2
             @Override // kotlin.jvm.functions.Function0
             @NotNull
             public final ThreadPoolExecutor invoke() {
@@ -38,7 +38,7 @@ public final class MegaUtils {
             }
         });
         a = b2;
-        b3 = C8177b.b(new Function0<MegaScheduler>() { // from class: com.alibaba.ability.MegaUtils$sMegaSchedule$2
+        b3 = b.b(new Function0<MegaScheduler>() { // from class: com.alibaba.ability.MegaUtils$sMegaSchedule$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull
@@ -47,7 +47,7 @@ public final class MegaUtils {
             }
         });
         b = b3;
-        b4 = C8177b.b(new Function0<Handler>() { // from class: com.alibaba.ability.MegaUtils$sHandler$2
+        b4 = b.b(new Function0<Handler>() { // from class: com.alibaba.ability.MegaUtils$sHandler$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull

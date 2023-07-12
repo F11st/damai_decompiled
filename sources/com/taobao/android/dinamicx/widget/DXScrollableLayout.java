@@ -88,12 +88,11 @@ public class DXScrollableLayout extends DXScrollerLayout implements IDXScrollabl
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.taobao.android.dinamicx.widget.DXScrollableLayout$ScrollerAdapterUpgrade$a */
         /* loaded from: classes11.dex */
-        public class C6452a extends GridLayoutManager.SpanSizeLookup {
+        public class a extends GridLayoutManager.SpanSizeLookup {
             final /* synthetic */ DXGridLayoutManager a;
 
-            C6452a(DXGridLayoutManager dXGridLayoutManager) {
+            a(DXGridLayoutManager dXGridLayoutManager) {
                 this.a = dXGridLayoutManager;
             }
 
@@ -107,10 +106,9 @@ public class DXScrollableLayout extends DXScrollerLayout implements IDXScrollabl
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.taobao.android.dinamicx.widget.DXScrollableLayout$ScrollerAdapterUpgrade$b */
         /* loaded from: classes12.dex */
-        class View$OnClickListenerC6453b implements View.OnClickListener {
-            View$OnClickListenerC6453b() {
+        class b implements View.OnClickListener {
+            b() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -127,10 +125,10 @@ public class DXScrollableLayout extends DXScrollerLayout implements IDXScrollabl
             this.p = "亲，已经到底了哦";
             this.q = 1;
             this.r = 3;
-            View a = e10.a(context, R$layout.dx_scrollable_load_more_bottom);
-            this.l = (TextView) a.findViewById(R$id.scrollable_loadmore_tv);
-            this.m = (ProgressBar) a.findViewById(R$id.scrollable_loadmore_progressbar);
-            k(a);
+            View a2 = e10.a(context, R$layout.dx_scrollable_load_more_bottom);
+            this.l = (TextView) a2.findViewById(R$id.scrollable_loadmore_tv);
+            this.m = (ProgressBar) a2.findViewById(R$id.scrollable_loadmore_progressbar);
+            k(a2);
         }
 
         private void k(View view) {
@@ -222,14 +220,14 @@ public class DXScrollableLayout extends DXScrollerLayout implements IDXScrollabl
             if (this.i == null) {
                 this.i = new RelativeLayout(this.b);
             }
-            ViewHolder a = ViewHolder.a(this.i);
-            this.i.setOnClickListener(new View$OnClickListenerC6453b());
-            return a;
+            ViewHolder a2 = ViewHolder.a(this.i);
+            this.i.setOnClickListener(new b());
+            return a2;
         }
 
         public void r(DXGridLayoutManager dXGridLayoutManager) {
             this.k = dXGridLayoutManager;
-            dXGridLayoutManager.setSpanSizeLookup(new C6452a(dXGridLayoutManager));
+            dXGridLayoutManager.setSpanSizeLookup(new a(dXGridLayoutManager));
         }
 
         public void s(String str) {
@@ -268,9 +266,8 @@ public class DXScrollableLayout extends DXScrollerLayout implements IDXScrollabl
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXScrollableLayout$a */
     /* loaded from: classes11.dex */
-    public static class C6454a implements IDXBuilderWidgetNode {
+    public static class a implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(Object obj) {
             return new DXScrollableLayout();
@@ -330,7 +327,7 @@ public class DXScrollableLayout extends DXScrollerLayout implements IDXScrollabl
         return this.loadMoreNoMoreDataText;
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onBeforeBindChildData() {
         this.originChildren = new ArrayList();
         if (getChildren() != null && getChildren().size() > 0) {
@@ -341,7 +338,7 @@ public class DXScrollableLayout extends DXScrollerLayout implements IDXScrollabl
         super.onBeforeBindChildData();
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onClone(DXWidgetNode dXWidgetNode, boolean z) {
         if (dXWidgetNode == null || !(dXWidgetNode instanceof DXScrollableLayout)) {
             return;
@@ -436,7 +433,7 @@ public class DXScrollableLayout extends DXScrollerLayout implements IDXScrollabl
         postOnLoadMoreEvent();
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXScrollerLayout, com.taobao.android.dinamicx.widget.DXScrollLayoutBase, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetIntAttribute(long j, int i) {
         if (j == 4480460401770252962L) {
             if (i <= 0) {

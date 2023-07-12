@@ -21,8 +21,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
-import com.airbnb.lottie.model.layer.C2875b;
-import com.airbnb.lottie.parser.C2929s;
+import com.airbnb.lottie.parser.s;
 import com.airbnb.lottie.utils.LottieValueAnimator;
 import com.airbnb.lottie.value.SimpleLottieValueCallback;
 import java.lang.annotation.Retention;
@@ -51,9 +50,9 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
     public static final int REVERSE = 2;
     private int alpha;
     private final LottieValueAnimator animator;
-    private C2821a composition;
+    private com.airbnb.lottie.a composition;
     @Nullable
-    private C2875b compositionLayer;
+    private com.airbnb.lottie.model.layer.b compositionLayer;
     private boolean enableMergePaths;
     @Nullable
     zo0 fontAssetDelegate;
@@ -86,7 +85,7 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
     /* compiled from: Taobao */
     /* loaded from: classes17.dex */
     public interface LazyCompositionTask {
-        void run(C2821a c2821a);
+        void run(com.airbnb.lottie.a aVar);
     }
 
     /* compiled from: Taobao */
@@ -97,143 +96,135 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieDrawable$a */
     /* loaded from: classes9.dex */
-    public class C2803a implements LazyCompositionTask {
+    public class a implements LazyCompositionTask {
         final /* synthetic */ String a;
 
-        C2803a(String str) {
+        a(String str) {
             this.a = str;
         }
 
         @Override // com.airbnb.lottie.LottieDrawable.LazyCompositionTask
-        public void run(C2821a c2821a) {
+        public void run(com.airbnb.lottie.a aVar) {
             LottieDrawable.this.setMinAndMaxFrame(this.a);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieDrawable$b */
     /* loaded from: classes9.dex */
-    public class C2804b implements LazyCompositionTask {
+    public class b implements LazyCompositionTask {
         final /* synthetic */ String a;
         final /* synthetic */ String b;
         final /* synthetic */ boolean c;
 
-        C2804b(String str, String str2, boolean z) {
+        b(String str, String str2, boolean z) {
             this.a = str;
             this.b = str2;
             this.c = z;
         }
 
         @Override // com.airbnb.lottie.LottieDrawable.LazyCompositionTask
-        public void run(C2821a c2821a) {
+        public void run(com.airbnb.lottie.a aVar) {
             LottieDrawable.this.setMinAndMaxFrame(this.a, this.b, this.c);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieDrawable$c */
     /* loaded from: classes9.dex */
-    public class C2805c implements LazyCompositionTask {
+    public class c implements LazyCompositionTask {
         final /* synthetic */ int a;
         final /* synthetic */ int b;
 
-        C2805c(int i, int i2) {
+        c(int i, int i2) {
             this.a = i;
             this.b = i2;
         }
 
         @Override // com.airbnb.lottie.LottieDrawable.LazyCompositionTask
-        public void run(C2821a c2821a) {
+        public void run(com.airbnb.lottie.a aVar) {
             LottieDrawable.this.setMinAndMaxFrame(this.a, this.b);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieDrawable$d */
     /* loaded from: classes9.dex */
-    public class C2806d implements LazyCompositionTask {
+    public class d implements LazyCompositionTask {
         final /* synthetic */ float a;
         final /* synthetic */ float b;
 
-        C2806d(float f, float f2) {
+        d(float f, float f2) {
             this.a = f;
             this.b = f2;
         }
 
         @Override // com.airbnb.lottie.LottieDrawable.LazyCompositionTask
-        public void run(C2821a c2821a) {
+        public void run(com.airbnb.lottie.a aVar) {
             LottieDrawable.this.setMinAndMaxProgress(this.a, this.b);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieDrawable$e */
     /* loaded from: classes9.dex */
-    public class C2807e implements LazyCompositionTask {
+    public class e implements LazyCompositionTask {
         final /* synthetic */ int a;
 
-        C2807e(int i) {
+        e(int i) {
             this.a = i;
         }
 
         @Override // com.airbnb.lottie.LottieDrawable.LazyCompositionTask
-        public void run(C2821a c2821a) {
+        public void run(com.airbnb.lottie.a aVar) {
             LottieDrawable.this.setFrame(this.a);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieDrawable$f */
     /* loaded from: classes9.dex */
-    public class C2808f implements LazyCompositionTask {
+    public class f implements LazyCompositionTask {
         final /* synthetic */ float a;
 
-        C2808f(float f) {
+        f(float f) {
             this.a = f;
         }
 
         @Override // com.airbnb.lottie.LottieDrawable.LazyCompositionTask
-        public void run(C2821a c2821a) {
+        public void run(com.airbnb.lottie.a aVar) {
             LottieDrawable.this.setProgress(this.a);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieDrawable$g */
     /* loaded from: classes9.dex */
-    public class C2809g implements LazyCompositionTask {
+    public class g implements LazyCompositionTask {
         final /* synthetic */ s71 a;
         final /* synthetic */ Object b;
         final /* synthetic */ lc1 c;
 
-        C2809g(s71 s71Var, Object obj, lc1 lc1Var) {
+        g(s71 s71Var, Object obj, lc1 lc1Var) {
             this.a = s71Var;
             this.b = obj;
             this.c = lc1Var;
         }
 
         @Override // com.airbnb.lottie.LottieDrawable.LazyCompositionTask
-        public void run(C2821a c2821a) {
+        public void run(com.airbnb.lottie.a aVar) {
             LottieDrawable.this.addValueCallback(this.a, (s71) this.b, (lc1<s71>) this.c);
         }
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieDrawable$h */
     /* loaded from: classes9.dex */
-    class C2810h<T> extends lc1<T> {
+    class h<T> extends lc1<T> {
         final /* synthetic */ SimpleLottieValueCallback c;
 
-        C2810h(LottieDrawable lottieDrawable, SimpleLottieValueCallback simpleLottieValueCallback) {
+        h(LottieDrawable lottieDrawable, SimpleLottieValueCallback simpleLottieValueCallback) {
             this.c = simpleLottieValueCallback;
         }
 
@@ -244,10 +235,9 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieDrawable$i */
     /* loaded from: classes17.dex */
-    class C2811i implements ValueAnimator.AnimatorUpdateListener {
-        C2811i() {
+    class i implements ValueAnimator.AnimatorUpdateListener {
+        i() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -260,130 +250,122 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieDrawable$j */
     /* loaded from: classes9.dex */
-    public class C2812j implements LazyCompositionTask {
-        C2812j() {
+    public class j implements LazyCompositionTask {
+        j() {
         }
 
         @Override // com.airbnb.lottie.LottieDrawable.LazyCompositionTask
-        public void run(C2821a c2821a) {
+        public void run(com.airbnb.lottie.a aVar) {
             LottieDrawable.this.playAnimation();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieDrawable$k */
     /* loaded from: classes9.dex */
-    public class C2813k implements LazyCompositionTask {
-        C2813k() {
+    public class k implements LazyCompositionTask {
+        k() {
         }
 
         @Override // com.airbnb.lottie.LottieDrawable.LazyCompositionTask
-        public void run(C2821a c2821a) {
+        public void run(com.airbnb.lottie.a aVar) {
             LottieDrawable.this.resumeAnimation();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieDrawable$l */
     /* loaded from: classes9.dex */
-    public class C2814l implements LazyCompositionTask {
+    public class l implements LazyCompositionTask {
         final /* synthetic */ int a;
 
-        C2814l(int i) {
+        l(int i) {
             this.a = i;
         }
 
         @Override // com.airbnb.lottie.LottieDrawable.LazyCompositionTask
-        public void run(C2821a c2821a) {
+        public void run(com.airbnb.lottie.a aVar) {
             LottieDrawable.this.setMinFrame(this.a);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieDrawable$m */
     /* loaded from: classes9.dex */
-    public class C2815m implements LazyCompositionTask {
+    public class m implements LazyCompositionTask {
         final /* synthetic */ float a;
 
-        C2815m(float f) {
+        m(float f) {
             this.a = f;
         }
 
         @Override // com.airbnb.lottie.LottieDrawable.LazyCompositionTask
-        public void run(C2821a c2821a) {
+        public void run(com.airbnb.lottie.a aVar) {
             LottieDrawable.this.setMinProgress(this.a);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieDrawable$n */
     /* loaded from: classes9.dex */
-    public class C2816n implements LazyCompositionTask {
+    public class n implements LazyCompositionTask {
         final /* synthetic */ int a;
 
-        C2816n(int i) {
+        n(int i) {
             this.a = i;
         }
 
         @Override // com.airbnb.lottie.LottieDrawable.LazyCompositionTask
-        public void run(C2821a c2821a) {
+        public void run(com.airbnb.lottie.a aVar) {
             LottieDrawable.this.setMaxFrame(this.a);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieDrawable$o */
     /* loaded from: classes9.dex */
-    public class C2817o implements LazyCompositionTask {
+    public class o implements LazyCompositionTask {
         final /* synthetic */ float a;
 
-        C2817o(float f) {
+        o(float f) {
             this.a = f;
         }
 
         @Override // com.airbnb.lottie.LottieDrawable.LazyCompositionTask
-        public void run(C2821a c2821a) {
+        public void run(com.airbnb.lottie.a aVar) {
             LottieDrawable.this.setMaxProgress(this.a);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieDrawable$p */
     /* loaded from: classes9.dex */
-    public class C2818p implements LazyCompositionTask {
+    public class p implements LazyCompositionTask {
         final /* synthetic */ String a;
 
-        C2818p(String str) {
+        p(String str) {
             this.a = str;
         }
 
         @Override // com.airbnb.lottie.LottieDrawable.LazyCompositionTask
-        public void run(C2821a c2821a) {
+        public void run(com.airbnb.lottie.a aVar) {
             LottieDrawable.this.setMinFrame(this.a);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieDrawable$q */
     /* loaded from: classes9.dex */
-    public class C2819q implements LazyCompositionTask {
+    public class q implements LazyCompositionTask {
         final /* synthetic */ String a;
 
-        C2819q(String str) {
+        q(String str) {
             this.a = str;
         }
 
         @Override // com.airbnb.lottie.LottieDrawable.LazyCompositionTask
-        public void run(C2821a c2821a) {
+        public void run(com.airbnb.lottie.a aVar) {
             LottieDrawable.this.setMaxFrame(this.a);
         }
     }
@@ -396,12 +378,12 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
         this.ignoreSystemAnimationsDisabled = false;
         this.safeMode = false;
         this.lazyCompositionTasks = new ArrayList<>();
-        C2811i c2811i = new C2811i();
-        this.progressUpdateListener = c2811i;
+        i iVar = new i();
+        this.progressUpdateListener = iVar;
         this.alpha = 255;
         this.isExtraScaleEnabled = true;
         this.isDirty = false;
-        lottieValueAnimator.addUpdateListener(c2811i);
+        lottieValueAnimator.addUpdateListener(iVar);
     }
 
     private boolean animationsEnabled() {
@@ -413,15 +395,15 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
     }
 
     private boolean boundsMatchesCompositionAspectRatio() {
-        C2821a c2821a = this.composition;
-        return c2821a == null || getBounds().isEmpty() || aspectRatio(getBounds()) == aspectRatio(c2821a.b());
+        com.airbnb.lottie.a aVar = this.composition;
+        return aVar == null || getBounds().isEmpty() || aspectRatio(getBounds()) == aspectRatio(aVar.b());
     }
 
     private void buildCompositionLayer() {
-        C2875b c2875b = new C2875b(this, C2929s.a(this.composition), this.composition.j(), this.composition);
-        this.compositionLayer = c2875b;
+        com.airbnb.lottie.model.layer.b bVar = new com.airbnb.lottie.model.layer.b(this, s.a(this.composition), this.composition.j(), this.composition);
+        this.compositionLayer = bVar;
         if (this.outlineMasksAndMattes) {
-            c2875b.z(true);
+            bVar.z(true);
         }
     }
 
@@ -434,69 +416,69 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
     }
 
     private void drawWithNewAspectRatio(Canvas canvas) {
-        float f;
+        float f2;
         if (this.compositionLayer == null) {
             return;
         }
-        int i = -1;
+        int i2 = -1;
         Rect bounds = getBounds();
         float width = com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.width(bounds) / com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.width(this.composition.b());
         float height = com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.height(bounds) / com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.height(this.composition.b());
         if (this.isExtraScaleEnabled) {
             float min = Math.min(width, height);
             if (min < 1.0f) {
-                f = 1.0f / min;
-                width /= f;
-                height /= f;
+                f2 = 1.0f / min;
+                width /= f2;
+                height /= f2;
             } else {
-                f = 1.0f;
+                f2 = 1.0f;
             }
-            if (f > 1.0f) {
-                i = canvas.save();
+            if (f2 > 1.0f) {
+                i2 = canvas.save();
                 float width2 = com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.width(bounds) / 2.0f;
                 float height2 = com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.height(bounds) / 2.0f;
-                float f2 = width2 * min;
-                float f3 = min * height2;
-                canvas.translate(width2 - f2, height2 - f3);
-                canvas.scale(f, f, f2, f3);
+                float f3 = width2 * min;
+                float f4 = min * height2;
+                canvas.translate(width2 - f3, height2 - f4);
+                canvas.scale(f2, f2, f3, f4);
             }
         }
         this.matrix.reset();
         this.matrix.preScale(width, height);
         this.compositionLayer.draw(canvas, this.matrix, this.alpha);
-        if (i > 0) {
-            canvas.restoreToCount(i);
+        if (i2 > 0) {
+            canvas.restoreToCount(i2);
         }
     }
 
     private void drawWithOriginalAspectRatio(Canvas canvas) {
-        float f;
+        float f2;
         if (this.compositionLayer == null) {
             return;
         }
-        float f2 = this.scale;
+        float f3 = this.scale;
         float maxScale = getMaxScale(canvas);
-        if (f2 > maxScale) {
-            f = this.scale / maxScale;
+        if (f3 > maxScale) {
+            f2 = this.scale / maxScale;
         } else {
-            maxScale = f2;
-            f = 1.0f;
+            maxScale = f3;
+            f2 = 1.0f;
         }
-        int i = -1;
-        if (f > 1.0f) {
-            i = canvas.save();
+        int i2 = -1;
+        if (f2 > 1.0f) {
+            i2 = canvas.save();
             float width = com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.width(this.composition.b()) / 2.0f;
             float height = com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.height(this.composition.b()) / 2.0f;
-            float f3 = width * maxScale;
-            float f4 = height * maxScale;
-            canvas.translate((getScale() * width) - f3, (getScale() * height) - f4);
-            canvas.scale(f, f, f3, f4);
+            float f4 = width * maxScale;
+            float f5 = height * maxScale;
+            canvas.translate((getScale() * width) - f4, (getScale() * height) - f5);
+            canvas.scale(f2, f2, f4, f5);
         }
         this.matrix.reset();
         this.matrix.preScale(maxScale, maxScale);
         this.compositionLayer.draw(canvas, this.matrix, this.alpha);
-        if (i > 0) {
-            canvas.restoreToCount(i);
+        if (i2 > 0) {
+            canvas.restoreToCount(i2);
         }
     }
 
@@ -555,20 +537,20 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
     }
 
     public <T> void addValueCallback(s71 s71Var, T t, lc1<T> lc1Var) {
-        C2875b c2875b = this.compositionLayer;
-        if (c2875b == null) {
-            this.lazyCompositionTasks.add(new C2809g(s71Var, t, lc1Var));
+        com.airbnb.lottie.model.layer.b bVar = this.compositionLayer;
+        if (bVar == null) {
+            this.lazyCompositionTasks.add(new g(s71Var, t, lc1Var));
             return;
         }
         boolean z = true;
         if (s71Var == s71.COMPOSITION) {
-            c2875b.addValueCallback(t, lc1Var);
+            bVar.addValueCallback(t, lc1Var);
         } else if (s71Var.d() != null) {
             s71Var.d().addValueCallback(t, lc1Var);
         } else {
             List<s71> resolveKeyPath = resolveKeyPath(s71Var);
-            for (int i = 0; i < resolveKeyPath.size(); i++) {
-                resolveKeyPath.get(i).d().addValueCallback(t, lc1Var);
+            for (int i2 = 0; i2 < resolveKeyPath.size(); i2++) {
+                resolveKeyPath.get(i2).d().addValueCallback(t, lc1Var);
             }
             z = true ^ resolveKeyPath.isEmpty();
         }
@@ -631,7 +613,7 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
         return this.alpha;
     }
 
-    public C2821a getComposition() {
+    public com.airbnb.lottie.a getComposition() {
         return this.composition;
     }
 
@@ -655,20 +637,20 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
 
     @Override // android.graphics.drawable.Drawable
     public int getIntrinsicHeight() {
-        C2821a c2821a = this.composition;
-        if (c2821a == null) {
+        com.airbnb.lottie.a aVar = this.composition;
+        if (aVar == null) {
             return -1;
         }
-        return (int) (com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.height(c2821a.b()) * getScale());
+        return (int) (com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.height(aVar.b()) * getScale());
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getIntrinsicWidth() {
-        C2821a c2821a = this.composition;
-        if (c2821a == null) {
+        com.airbnb.lottie.a aVar = this.composition;
+        if (aVar == null) {
             return -1;
         }
-        return (int) (com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.width(c2821a.b()) * getScale());
+        return (int) (com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.width(aVar.b()) * getScale());
     }
 
     public float getMaxFrame() {
@@ -686,9 +668,9 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
 
     @Nullable
     public PerformanceTracker getPerformanceTracker() {
-        C2821a c2821a = this.composition;
-        if (c2821a != null) {
-            return c2821a.m();
+        com.airbnb.lottie.a aVar = this.composition;
+        if (aVar != null) {
+            return aVar.m();
         }
         return null;
     }
@@ -729,13 +711,13 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
     }
 
     public boolean hasMasks() {
-        C2875b c2875b = this.compositionLayer;
-        return c2875b != null && c2875b.E();
+        com.airbnb.lottie.model.layer.b bVar = this.compositionLayer;
+        return bVar != null && bVar.E();
     }
 
     public boolean hasMatte() {
-        C2875b c2875b = this.compositionLayer;
-        return c2875b != null && c2875b.F();
+        com.airbnb.lottie.model.layer.b bVar = this.compositionLayer;
+        return bVar != null && bVar.F();
     }
 
     @Override // android.graphics.drawable.Drawable.Callback
@@ -797,7 +779,7 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
     @MainThread
     public void playAnimation() {
         if (this.compositionLayer == null) {
-            this.lazyCompositionTasks.add(new C2812j());
+            this.lazyCompositionTasks.add(new j());
             return;
         }
         if (animationsEnabled() || getRepeatCount() == 0) {
@@ -845,7 +827,7 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
     @MainThread
     public void resumeAnimation() {
         if (this.compositionLayer == null) {
-            this.lazyCompositionTasks.add(new C2813k());
+            this.lazyCompositionTasks.add(new k());
             return;
         }
         if (animationsEnabled() || getRepeatCount() == 0) {
@@ -863,17 +845,17 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
     }
 
     @Override // android.graphics.drawable.Drawable.Callback
-    public void scheduleDrawable(@NonNull Drawable drawable, @NonNull Runnable runnable, long j) {
+    public void scheduleDrawable(@NonNull Drawable drawable, @NonNull Runnable runnable, long j2) {
         Drawable.Callback callback = getCallback();
         if (callback == null) {
             return;
         }
-        callback.scheduleDrawable(this, runnable, j);
+        callback.scheduleDrawable(this, runnable, j2);
     }
 
     @Override // android.graphics.drawable.Drawable
-    public void setAlpha(@IntRange(from = 0, to = 255) int i) {
-        this.alpha = i;
+    public void setAlpha(@IntRange(from = 0, to = 255) int i2) {
+        this.alpha = i2;
         invalidateSelf();
     }
 
@@ -886,27 +868,27 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
         kb1.c("Use addColorFilter instead.");
     }
 
-    public boolean setComposition(C2821a c2821a) {
-        if (this.composition == c2821a) {
+    public boolean setComposition(com.airbnb.lottie.a aVar) {
+        if (this.composition == aVar) {
             return false;
         }
         this.isDirty = false;
         clearComposition();
-        this.composition = c2821a;
+        this.composition = aVar;
         buildCompositionLayer();
-        this.animator.setComposition(c2821a);
+        this.animator.setComposition(aVar);
         setProgress(this.animator.getAnimatedFraction());
         setScale(this.scale);
         Iterator it = new ArrayList(this.lazyCompositionTasks).iterator();
         while (it.hasNext()) {
             LazyCompositionTask lazyCompositionTask = (LazyCompositionTask) it.next();
             if (lazyCompositionTask != null) {
-                lazyCompositionTask.run(c2821a);
+                lazyCompositionTask.run(aVar);
             }
             it.remove();
         }
         this.lazyCompositionTasks.clear();
-        c2821a.u(this.performanceTrackingEnabled);
+        aVar.u(this.performanceTrackingEnabled);
         Drawable.Callback callback = getCallback();
         if (callback instanceof ImageView) {
             ImageView imageView = (ImageView) callback;
@@ -924,11 +906,11 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
         }
     }
 
-    public void setFrame(int i) {
+    public void setFrame(int i2) {
         if (this.composition == null) {
-            this.lazyCompositionTasks.add(new C2807e(i));
+            this.lazyCompositionTasks.add(new e(i2));
         } else {
-            this.animator.setFrame(i);
+            this.animator.setFrame(i2);
         }
     }
 
@@ -953,61 +935,61 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
         this.imageAssetsFolder = str;
     }
 
-    public void setMaxFrame(int i) {
+    public void setMaxFrame(int i2) {
         if (this.composition == null) {
-            this.lazyCompositionTasks.add(new C2816n(i));
+            this.lazyCompositionTasks.add(new n(i2));
         } else {
-            this.animator.setMaxFrame(i + 0.99f);
+            this.animator.setMaxFrame(i2 + 0.99f);
         }
     }
 
-    public void setMaxProgress(@FloatRange(from = 0.0d, to = 1.0d) float f) {
-        C2821a c2821a = this.composition;
-        if (c2821a == null) {
-            this.lazyCompositionTasks.add(new C2817o(f));
+    public void setMaxProgress(@FloatRange(from = 0.0d, to = 1.0d) float f2) {
+        com.airbnb.lottie.a aVar = this.composition;
+        if (aVar == null) {
+            this.lazyCompositionTasks.add(new o(f2));
         } else {
-            setMaxFrame((int) eg1.k(c2821a.o(), this.composition.f(), f));
+            setMaxFrame((int) eg1.k(aVar.o(), this.composition.f(), f2));
         }
     }
 
     public void setMinAndMaxFrame(String str) {
-        C2821a c2821a = this.composition;
-        if (c2821a == null) {
-            this.lazyCompositionTasks.add(new C2803a(str));
+        com.airbnb.lottie.a aVar = this.composition;
+        if (aVar == null) {
+            this.lazyCompositionTasks.add(new a(str));
             return;
         }
-        hd1 k = c2821a.k(str);
-        if (k != null) {
-            int i = (int) k.b;
-            setMinAndMaxFrame(i, ((int) k.c) + i);
+        hd1 k2 = aVar.k(str);
+        if (k2 != null) {
+            int i2 = (int) k2.b;
+            setMinAndMaxFrame(i2, ((int) k2.c) + i2);
             return;
         }
         throw new IllegalArgumentException("Cannot find marker with name " + str + ".");
     }
 
-    public void setMinAndMaxProgress(@FloatRange(from = 0.0d, to = 1.0d) float f, @FloatRange(from = 0.0d, to = 1.0d) float f2) {
-        C2821a c2821a = this.composition;
-        if (c2821a == null) {
-            this.lazyCompositionTasks.add(new C2806d(f, f2));
+    public void setMinAndMaxProgress(@FloatRange(from = 0.0d, to = 1.0d) float f2, @FloatRange(from = 0.0d, to = 1.0d) float f3) {
+        com.airbnb.lottie.a aVar = this.composition;
+        if (aVar == null) {
+            this.lazyCompositionTasks.add(new d(f2, f3));
         } else {
-            setMinAndMaxFrame((int) eg1.k(c2821a.o(), this.composition.f(), f), (int) eg1.k(this.composition.o(), this.composition.f(), f2));
+            setMinAndMaxFrame((int) eg1.k(aVar.o(), this.composition.f(), f2), (int) eg1.k(this.composition.o(), this.composition.f(), f3));
         }
     }
 
-    public void setMinFrame(int i) {
+    public void setMinFrame(int i2) {
         if (this.composition == null) {
-            this.lazyCompositionTasks.add(new C2814l(i));
+            this.lazyCompositionTasks.add(new l(i2));
         } else {
-            this.animator.setMinFrame(i);
+            this.animator.setMinFrame(i2);
         }
     }
 
-    public void setMinProgress(float f) {
-        C2821a c2821a = this.composition;
-        if (c2821a == null) {
-            this.lazyCompositionTasks.add(new C2815m(f));
+    public void setMinProgress(float f2) {
+        com.airbnb.lottie.a aVar = this.composition;
+        if (aVar == null) {
+            this.lazyCompositionTasks.add(new m(f2));
         } else {
-            setMinFrame((int) eg1.k(c2821a.o(), this.composition.f(), f));
+            setMinFrame((int) eg1.k(aVar.o(), this.composition.f(), f2));
         }
     }
 
@@ -1016,48 +998,48 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
             return;
         }
         this.outlineMasksAndMattes = z;
-        C2875b c2875b = this.compositionLayer;
-        if (c2875b != null) {
-            c2875b.z(z);
+        com.airbnb.lottie.model.layer.b bVar = this.compositionLayer;
+        if (bVar != null) {
+            bVar.z(z);
         }
     }
 
     public void setPerformanceTrackingEnabled(boolean z) {
         this.performanceTrackingEnabled = z;
-        C2821a c2821a = this.composition;
-        if (c2821a != null) {
-            c2821a.u(z);
+        com.airbnb.lottie.a aVar = this.composition;
+        if (aVar != null) {
+            aVar.u(z);
         }
     }
 
-    public void setProgress(@FloatRange(from = 0.0d, to = 1.0d) float f) {
+    public void setProgress(@FloatRange(from = 0.0d, to = 1.0d) float f2) {
         if (this.composition == null) {
-            this.lazyCompositionTasks.add(new C2808f(f));
+            this.lazyCompositionTasks.add(new f(f2));
             return;
         }
         f81.a("Drawable#setProgress");
-        this.animator.setFrame(eg1.k(this.composition.o(), this.composition.f(), f));
+        this.animator.setFrame(eg1.k(this.composition.o(), this.composition.f(), f2));
         f81.b("Drawable#setProgress");
     }
 
-    public void setRepeatCount(int i) {
-        this.animator.setRepeatCount(i);
+    public void setRepeatCount(int i2) {
+        this.animator.setRepeatCount(i2);
     }
 
-    public void setRepeatMode(int i) {
-        this.animator.setRepeatMode(i);
+    public void setRepeatMode(int i2) {
+        this.animator.setRepeatMode(i2);
     }
 
     public void setSafeMode(boolean z) {
         this.safeMode = z;
     }
 
-    public void setScale(float f) {
-        this.scale = f;
+    public void setScale(float f2) {
+        this.scale = f2;
     }
 
-    public void setSpeed(float f) {
-        this.animator.setSpeed(f);
+    public void setSpeed(float f2) {
+        this.animator.setSpeed(f2);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -1100,9 +1082,9 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
             kb1.c("Cannot update bitmap. Most likely the drawable is not added to a View which prevents Lottie from getting a Context.");
             return null;
         }
-        Bitmap e = imageAssetManager.e(str, bitmap);
+        Bitmap e2 = imageAssetManager.e(str, bitmap);
         invalidateSelf();
-        return e;
+        return e2;
     }
 
     public boolean useTextGlyphs() {
@@ -1124,45 +1106,45 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
     }
 
     public void setMaxFrame(String str) {
-        C2821a c2821a = this.composition;
-        if (c2821a == null) {
-            this.lazyCompositionTasks.add(new C2819q(str));
+        com.airbnb.lottie.a aVar = this.composition;
+        if (aVar == null) {
+            this.lazyCompositionTasks.add(new q(str));
             return;
         }
-        hd1 k = c2821a.k(str);
-        if (k != null) {
-            setMaxFrame((int) (k.b + k.c));
+        hd1 k2 = aVar.k(str);
+        if (k2 != null) {
+            setMaxFrame((int) (k2.b + k2.c));
             return;
         }
         throw new IllegalArgumentException("Cannot find marker with name " + str + ".");
     }
 
     public void setMinFrame(String str) {
-        C2821a c2821a = this.composition;
-        if (c2821a == null) {
-            this.lazyCompositionTasks.add(new C2818p(str));
+        com.airbnb.lottie.a aVar = this.composition;
+        if (aVar == null) {
+            this.lazyCompositionTasks.add(new p(str));
             return;
         }
-        hd1 k = c2821a.k(str);
-        if (k != null) {
-            setMinFrame((int) k.b);
+        hd1 k2 = aVar.k(str);
+        if (k2 != null) {
+            setMinFrame((int) k2.b);
             return;
         }
         throw new IllegalArgumentException("Cannot find marker with name " + str + ".");
     }
 
     public void setMinAndMaxFrame(String str, String str2, boolean z) {
-        C2821a c2821a = this.composition;
-        if (c2821a == null) {
-            this.lazyCompositionTasks.add(new C2804b(str, str2, z));
+        com.airbnb.lottie.a aVar = this.composition;
+        if (aVar == null) {
+            this.lazyCompositionTasks.add(new b(str, str2, z));
             return;
         }
-        hd1 k = c2821a.k(str);
-        if (k != null) {
-            int i = (int) k.b;
-            hd1 k2 = this.composition.k(str2);
-            if (k2 != null) {
-                setMinAndMaxFrame(i, (int) (k2.b + (z ? 1.0f : 0.0f)));
+        hd1 k2 = aVar.k(str);
+        if (k2 != null) {
+            int i2 = (int) k2.b;
+            hd1 k3 = this.composition.k(str2);
+            if (k3 != null) {
+                setMinAndMaxFrame(i2, (int) (k3.b + (z ? 1.0f : 0.0f)));
                 return;
             }
             throw new IllegalArgumentException("Cannot find marker with name " + str2 + ".");
@@ -1171,14 +1153,14 @@ public class LottieDrawable extends Drawable implements Animatable, Drawable.Cal
     }
 
     public <T> void addValueCallback(s71 s71Var, T t, SimpleLottieValueCallback<T> simpleLottieValueCallback) {
-        addValueCallback(s71Var, (s71) t, (lc1<s71>) new C2810h(this, simpleLottieValueCallback));
+        addValueCallback(s71Var, (s71) t, (lc1<s71>) new h(this, simpleLottieValueCallback));
     }
 
-    public void setMinAndMaxFrame(int i, int i2) {
+    public void setMinAndMaxFrame(int i2, int i3) {
         if (this.composition == null) {
-            this.lazyCompositionTasks.add(new C2805c(i, i2));
+            this.lazyCompositionTasks.add(new c(i2, i3));
         } else {
-            this.animator.setMinAndMaxFrames(i, i2 + 0.99f);
+            this.animator.setMinAndMaxFrames(i2, i3 + 0.99f);
         }
     }
 }

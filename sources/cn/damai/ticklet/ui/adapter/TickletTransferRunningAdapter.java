@@ -47,14 +47,13 @@ public class TickletTransferRunningAdapter extends RecyclerView.Adapter<ViewHold
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.adapter.TickletTransferRunningAdapter$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2053a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TickletTransferManagerListExtra a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC2053a(TickletTransferManagerListExtra tickletTransferManagerListExtra, int i) {
+        a(TickletTransferManagerListExtra tickletTransferManagerListExtra, int i) {
             this.a = tickletTransferManagerListExtra;
             this.b = i;
         }
@@ -120,7 +119,7 @@ public class TickletTransferRunningAdapter extends RecyclerView.Adapter<ViewHold
         } else {
             py2.E(viewHolder.g, false);
         }
-        viewHolder.d.setOnClickListener(new View$OnClickListenerC2053a(tickletTransferManagerListExtra, i));
+        viewHolder.d.setOnClickListener(new a(tickletTransferManagerListExtra, i));
         if (i != this.a.size() - 1) {
             viewHolder.i.setVisibility(0);
         } else {

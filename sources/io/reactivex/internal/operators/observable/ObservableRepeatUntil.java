@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.BooleanSupplier;
 import io.reactivex.internal.disposables.SequentialDisposable;
@@ -70,12 +70,12 @@ public final class ObservableRepeatUntil<T> extends AbstractObservableWithUpstre
         }
     }
 
-    public ObservableRepeatUntil(AbstractC8149d<T> abstractC8149d, BooleanSupplier booleanSupplier) {
-        super(abstractC8149d);
+    public ObservableRepeatUntil(d<T> dVar, BooleanSupplier booleanSupplier) {
+        super(dVar);
         this.until = booleanSupplier;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         SequentialDisposable sequentialDisposable = new SequentialDisposable();
         observer.onSubscribe(sequentialDisposable);

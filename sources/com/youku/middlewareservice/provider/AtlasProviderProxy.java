@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 import java.lang.reflect.Field;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -14,7 +14,7 @@ public class AtlasProviderProxy {
     public static void clearActivityStack() {
         try {
             if (sProxy == null) {
-                sProxy = (AtlasProvider) C8883a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
+                sProxy = (AtlasProvider) a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
             }
             sProxy.clearActivityStack();
         } catch (Throwable th) {
@@ -25,7 +25,7 @@ public class AtlasProviderProxy {
     public static Field findField(Object obj, String str) throws NoSuchFieldException {
         try {
             if (sProxy == null) {
-                sProxy = (AtlasProvider) C8883a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
+                sProxy = (AtlasProvider) a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
             }
             return sProxy.findField(obj, str);
         } catch (Throwable th) {
@@ -37,7 +37,7 @@ public class AtlasProviderProxy {
     public static ClassLoader getBundleClassLoader(String str) {
         try {
             if (sProxy == null) {
-                sProxy = (AtlasProvider) C8883a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
+                sProxy = (AtlasProvider) a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
             }
             return sProxy.getBundleClassLoader(str);
         } catch (Throwable th) {
@@ -48,7 +48,7 @@ public class AtlasProviderProxy {
 
     public static AtlasProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (AtlasProvider) C8883a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
+            sProxy = (AtlasProvider) a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -66,7 +66,7 @@ public class AtlasProviderProxy {
     public static boolean isActivityStackEmpty() {
         try {
             if (sProxy == null) {
-                sProxy = (AtlasProvider) C8883a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
+                sProxy = (AtlasProvider) a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
             }
             return sProxy.isActivityStackEmpty();
         } catch (Throwable th) {
@@ -78,7 +78,7 @@ public class AtlasProviderProxy {
     public static void load(String str, Runnable runnable, Runnable runnable2, Runnable runnable3) {
         try {
             if (sProxy == null) {
-                sProxy = (AtlasProvider) C8883a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
+                sProxy = (AtlasProvider) a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
             }
             sProxy.load(str, runnable, runnable2, runnable3);
         } catch (Throwable th) {
@@ -89,7 +89,7 @@ public class AtlasProviderProxy {
     public static Class<?> loadClass(String str, String str2) {
         try {
             if (sProxy == null) {
-                sProxy = (AtlasProvider) C8883a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
+                sProxy = (AtlasProvider) a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
             }
             return sProxy.loadClass(str, str2);
         } catch (Throwable th) {
@@ -101,7 +101,7 @@ public class AtlasProviderProxy {
     public static Activity peekTopActivity() {
         try {
             if (sProxy == null) {
-                sProxy = (AtlasProvider) C8883a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
+                sProxy = (AtlasProvider) a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
             }
             return sProxy.peekTopActivity();
         } catch (Throwable th) {
@@ -113,7 +113,7 @@ public class AtlasProviderProxy {
     public static void pushToActivityStack(Activity activity) {
         try {
             if (sProxy == null) {
-                sProxy = (AtlasProvider) C8883a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
+                sProxy = (AtlasProvider) a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
             }
             sProxy.pushToActivityStack(activity);
         } catch (Throwable th) {
@@ -124,7 +124,7 @@ public class AtlasProviderProxy {
     public static void updateResources(Context context, String str) {
         try {
             if (sProxy == null) {
-                sProxy = (AtlasProvider) C8883a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
+                sProxy = (AtlasProvider) a.j("com.youku.middlewareservice_impl.provider.AtlasProviderImpl").b().f();
             }
             sProxy.updateResources(context, str);
         } catch (Throwable th) {

@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.category.ranking.ui.RankListFragment;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
 import cn.damai.uikit.tag.DMPeopleSeeTagView;
@@ -31,12 +31,11 @@ public class RankSquareTitleViewHolder extends RecyclerView.ViewHolder {
     private int f;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.ranksquare.ui.viewholder.RankSquareTitleViewHolder$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0437a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0437a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -47,7 +46,7 @@ public class RankSquareTitleViewHolder extends RecyclerView.ViewHolder {
                 return;
             }
             long longValue = ((Long) view.getTag()).longValue();
-            C0529c.e().x(zy1.f().o());
+            c.e().x(zy1.f().o());
             if (RankSquareTitleViewHolder.this.f != 4 && RankSquareTitleViewHolder.this.f != 5) {
                 if (RankSquareTitleViewHolder.this.f != 3) {
                     if (RankSquareTitleViewHolder.this.f == 2) {
@@ -86,7 +85,7 @@ public class RankSquareTitleViewHolder extends RecyclerView.ViewHolder {
         this.b = (TextView) view.findViewById(R$id.tv_name);
         this.c = (TextView) view.findViewById(R$id.tv_subtitle);
         this.d = (DMPeopleSeeTagView) view.findViewById(R$id.tv_fans_count);
-        view.setOnClickListener(new View$OnClickListenerC0437a());
+        view.setOnClickListener(new a());
     }
 
     public void c(String str, String str2, int i, long j, int i2, int i3) {

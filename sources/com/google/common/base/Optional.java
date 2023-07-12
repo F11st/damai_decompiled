@@ -15,19 +15,18 @@ public abstract class Optional<T> implements Serializable {
     private static final long serialVersionUID = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.base.Optional$a */
     /* loaded from: classes10.dex */
-    static class C4826a implements Iterable<T> {
+    static class a implements Iterable<T> {
         final /* synthetic */ Iterable a;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.base.Optional$a$a */
+        /* renamed from: com.google.common.base.Optional$a$a  reason: collision with other inner class name */
         /* loaded from: classes10.dex */
-        class C4827a extends AbstractIterator<T> {
+        class C0226a extends AbstractIterator<T> {
             private final Iterator<? extends Optional<? extends T>> c;
 
-            C4827a() {
-                this.c = (Iterator) du1.p(C4826a.this.a.iterator());
+            C0226a() {
+                this.c = (Iterator) du1.p(a.this.a.iterator());
             }
 
             @Override // com.google.common.base.AbstractIterator
@@ -42,13 +41,13 @@ public abstract class Optional<T> implements Serializable {
             }
         }
 
-        C4826a(Iterable iterable) {
+        a(Iterable iterable) {
             this.a = iterable;
         }
 
         @Override // java.lang.Iterable
         public Iterator<T> iterator() {
-            return new C4827a();
+            return new C0226a();
         }
     }
 
@@ -67,7 +66,7 @@ public abstract class Optional<T> implements Serializable {
     @Beta
     public static <T> Iterable<T> presentInstances(Iterable<? extends Optional<? extends T>> iterable) {
         du1.p(iterable);
-        return new C4826a(iterable);
+        return new a(iterable);
     }
 
     public abstract Set<T> asSet();

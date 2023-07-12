@@ -25,9 +25,8 @@ public class DashedLine extends BaseDashedLine {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.DashedLine$a */
     /* loaded from: classes8.dex */
-    static /* synthetic */ class C2582a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -102,7 +101,7 @@ public class DashedLine extends BaseDashedLine {
             ipChange.ipc$dispatch("-46882678", new Object[]{this, orientation});
             return;
         }
-        int i = C2582a.a[orientation.ordinal()];
+        int i = a.a[orientation.ordinal()];
         if (i == 1) {
             this.mOrientation = 0;
         } else if (i != 2) {

@@ -156,7 +156,7 @@ public class a51 extends dj implements JavaCallableMemberDescriptor {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // tb.dj, kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a
+    @Override // tb.dj, kotlin.reflect.jvm.internal.impl.descriptors.impl.a
     @NotNull
     /* renamed from: N */
     public a51 f(@NotNull DeclarationDescriptor declarationDescriptor, @Nullable FunctionDescriptor functionDescriptor, @NotNull CallableMemberDescriptor.Kind kind, @Nullable ni1 ni1Var, @NotNull Annotations annotations, @NotNull SourceElement sourceElement) {
@@ -199,22 +199,22 @@ public class a51 extends dj implements JavaCallableMemberDescriptor {
         return f;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
     public boolean hasSynthesizedParameterNames() {
         return this.G.booleanValue();
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a
     public boolean k() {
         return this.F.booleanValue();
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a
     public void s(boolean z) {
         this.F = Boolean.valueOf(z);
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a
     public void t(boolean z) {
         this.G = Boolean.valueOf(z);
     }

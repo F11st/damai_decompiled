@@ -4,22 +4,21 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.SystemClock;
 import android.text.TextUtils;
-import anet.channel.C0162c;
 import anet.channel.DataFrameCb;
 import anet.channel.IAuth;
 import anet.channel.ISessionListener;
 import anet.channel.RequestCb;
 import anet.channel.Session;
+import anet.channel.c;
 import anet.channel.entity.ConnType;
 import anet.channel.entity.EventCb;
 import anet.channel.heartbeat.IHeartbeat;
-import anet.channel.request.C0193a;
+import anet.channel.request.a;
 import anet.channel.session.TnetSpdySession;
 import anet.channel.statist.RequestStatistic;
-import anet.channel.strategy.C0227d;
 import anet.channel.strategy.ConnProtocol;
+import anet.channel.strategy.d;
 import com.alipay.android.phone.mobilesdk.socketcraft.monitor.MonitorItemConstants;
-import com.huawei.hms.opendevice.AbstractC5658c;
 import com.huawei.hms.support.api.entity.core.CommonCode;
 import com.huawei.hms.support.hianalytics.HiAnalyticsConstant;
 import com.taobao.accs.ACCSManager;
@@ -70,9 +69,9 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.lang3.time.DateUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
-import tb.C9708t9;
 import tb.he;
 import tb.sf0;
+import tb.t9;
 import tb.x6;
 import tb.xa2;
 
@@ -159,7 +158,7 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
             ALog.e(this.TAG, "auth", "utdid", UtilityImpl.getDeviceId(this.connection.mContext), "hash", Integer.valueOf(hashCode()), "URL", this.authUrl);
             connectionMonitor.authUrlGenerated();
             final int i = BaseConnection.state;
-            final C0193a J = new C0193a.C0195b().Z(this.authUrl).J();
+            final a J = new a.b().Z(this.authUrl).J();
             session.w(J, new RequestCb() { // from class: com.taobao.accs.net.InAppConnection.Auth.2
                 @Override // anet.channel.RequestCb
                 public void onDataReceive(he heVar, boolean z) {
@@ -212,7 +211,7 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
         public void auth(final Session session, final IAuth.AuthCallback authCallback) {
             if (OrangeAdapter.isRegIdSwitchEnable(this.connection.mContext) && OrangeAdapter.isRegIdNotExists(this.connection.mContext)) {
                 BaseConnection baseConnection = this.connection;
-                session.w(new C0193a.C0195b().Z(baseConnection.buildCreateRegIdUrl("https://" + this.host + "/")).J(), new RequestCb() { // from class: com.taobao.accs.net.InAppConnection.Auth.1
+                session.w(new a.b().Z(baseConnection.buildCreateRegIdUrl("https://" + this.host + "/")).J(), new RequestCb() { // from class: com.taobao.accs.net.InAppConnection.Auth.1
                     @Override // anet.channel.RequestCb
                     public void onDataReceive(he heVar, boolean z) {
                     }
@@ -296,7 +295,7 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
         this.sessionListener = new ISessionListener() { // from class: com.taobao.accs.net.InAppConnection.3
             private void innerConnChanged(Context context2, boolean z) {
                 if (z) {
-                    C9708t9.U(10000);
+                    t9.U(10000);
                     long unused = InAppConnection.lastReceiveTimeInMill = InAppConnection.lastOnlineTimeInMill = SystemClock.elapsedRealtime();
                     Collection<Message> unhandledMessages = InAppConnection.this.mMessageHandler.getUnhandledMessages();
                     List<String> upRetryServiceIds = OrangeAdapter.getUpRetryServiceIds(context2);
@@ -322,8 +321,8 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
 
             private void onConnectionChangedImpl(Context context2, boolean z, Intent intent) {
                 boolean z2 = true;
-                if (OrangeAdapter.isChannelModeEnable() && UtilityImpl.isMainProcessAlive(InAppConnection.this.mContext) && !C9708t9.L()) {
-                    C9708t9.z0(true);
+                if (OrangeAdapter.isChannelModeEnable() && UtilityImpl.isMainProcessAlive(InAppConnection.this.mContext) && !t9.L()) {
+                    t9.z0(true);
                 } else {
                     z2 = false;
                 }
@@ -341,7 +340,7 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
                     return;
                 }
                 ALog.e(InAppConnection.this.getTag(), "onConnectionChanged not allow to notify", new Object[0]);
-                C0162c.m(InAppConnection.this.mConfig.getAppKey()).E(InAppConnection.this.sessionListener);
+                c.m(InAppConnection.this.mConfig.getAppKey()).E(InAppConnection.this.sessionListener);
             }
 
             @Override // anet.channel.ISessionListener
@@ -412,7 +411,7 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
                 Intent intent = new Intent(Constants.ACTION_SENDMESSAGE_INMAIN);
                 intent.setClassName(this.mContext.getPackageName(), AdapterUtilityImpl.msgService);
                 intent.putExtra(WXComponent.PROP_FS_MATCH_PARENT, message);
-                intent.putExtra(AbstractC5658c.a, z);
+                intent.putExtra(com.huawei.hms.opendevice.c.a, z);
                 IntentDispatch.dispatchIntent(this.mContext, intent);
                 return false;
             } else if (UtilityImpl.isMainProcess(this.mContext)) {
@@ -514,7 +513,7 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
             ALog.e(getTag(), "notifyConnectionChanged2Main", new Object[0]);
             Intent intent = new Intent(Constants.ACTION_CHANNEL_CONNECTION_CHANGED);
             intent.setClassName(context.getPackageName(), AdapterUtilityImpl.msgService);
-            intent.putExtra(AbstractC5658c.a, z);
+            intent.putExtra(com.huawei.hms.opendevice.c.a, z);
             IntentDispatch.dispatchIntent(context, intent);
         }
     }
@@ -576,7 +575,7 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
         ALog.e(getTag(), "close", new Object[0]);
         try {
             if (ConnectionServiceManager.getInstance().isEnabled(this.mContext)) {
-                C0162c.m(this.mConfig.getAppKey()).E(this.sessionListener);
+                c.m(this.mConfig.getAppKey()).E(this.sessionListener);
             }
         } catch (Exception e) {
             ALog.e(getTag(), "close error", e, new Object[0]);
@@ -603,10 +602,10 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
             }
             super.initAwcn(context);
             if (OrangeAdapter.isChannelModeEnable() && !UtilityImpl.isMainProcessAlive(context)) {
-                C9708t9.z0(false);
+                t9.z0(false);
             }
             ALog.e(getTag(), "register accs session listener", new Object[0]);
-            C0162c.m(this.mConfig.getAppKey()).A(this.sessionListener);
+            c.m(this.mConfig.getAppKey()).A(this.sessionListener);
             String inappHost = this.mConfig.getInappHost();
             if (isKeepAlive() && this.mConfig.isKeepalive()) {
                 z = true;
@@ -616,9 +615,9 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
             }
             if ((OrangeAdapter.isChannelModeEnable() && !UtilityImpl.isMainProcess(context)) || ConnectionServiceManager.getInstance().isAllWeather()) {
                 ALog.e(getTag(), "AwcnConfig.setAccsSessionCreateForbiddenInBg(false)", new Object[0]);
-                C9708t9.V(false);
+                t9.V(false);
             }
-            registerSessionInfo(C0162c.m(this.mConfig.getAppKey()), inappHost, z);
+            registerSessionInfo(c.m(this.mConfig.getAppKey()), inappHost, z);
             this.mAwcnInited = true;
             ALog.e(getTag(), "initAwcn success!", new Object[0]);
         } catch (Throwable th) {
@@ -769,7 +768,7 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
         Session session;
         try {
             Message removeUnhandledMessage = this.mMessageHandler.removeUnhandledMessage(str);
-            if (removeUnhandledMessage != null && removeUnhandledMessage.host != null && (session = AccsSessionCenter.get(C0162c.m(this.mConfig.getAppKey()), removeUnhandledMessage.host.toString(), 0L)) != null) {
+            if (removeUnhandledMessage != null && removeUnhandledMessage.host != null && (session = AccsSessionCenter.get(c.m(this.mConfig.getAppKey()), removeUnhandledMessage.host.toString(), 0L)) != null) {
                 if (z) {
                     ALog.e(getTag(), "close session by time out", new Object[0]);
                     session.c(true);
@@ -791,8 +790,8 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
                     try {
                         String inappHost = ABAdapter.isFeatureOpened(Constants.AB.KEY_INAPP_PING) ? InAppConnection.this.mConfig.getInappHost() : InAppConnection.this.getHost(null);
                         InAppConnection inAppConnection = InAppConnection.this;
-                        inAppConnection.registerSessionInfo(C0162c.m(inAppConnection.mConfig.getAppKey()), inappHost, InAppConnection.this.mConfig.isKeepalive());
-                        Session session = AccsSessionCenter.get(C0162c.m(InAppConnection.this.mConfig.getAppKey()), InAppConnection.this.getHost(null), ConnType.TypeLevel.SPDY, 0L);
+                        inAppConnection.registerSessionInfo(c.m(inAppConnection.mConfig.getAppKey()), inappHost, InAppConnection.this.mConfig.isKeepalive());
+                        Session session = AccsSessionCenter.get(c.m(InAppConnection.this.mConfig.getAppKey()), InAppConnection.this.getHost(null), ConnType.TypeLevel.SPDY, 0L);
                         if (session != null) {
                             ALog.e(InAppConnection.this.getTag(), "try session ping", new Object[0]);
                             int pingTimeout = InAppConnection.this.mConfig.getPingTimeout();
@@ -814,10 +813,10 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
     public void reConnect() {
         try {
             if (isConnected()) {
-                Session session = AccsSessionCenter.get(C0162c.m(this.mConfig.getAppKey()), getHost(null), 0L);
+                Session session = AccsSessionCenter.get(c.m(this.mConfig.getAppKey()), getHost(null), 0L);
                 ALog.e(getTag(), "reConnecting", "appkey", this.mConfig.getAppKey(), "host", this.mConfig.getInappHost(), Preloader.KEY_SESSION, session);
                 if (session != null) {
-                    C9708t9.U(0);
+                    t9.U(0);
                     session.c(true);
                 }
             }
@@ -826,7 +825,7 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
         }
     }
 
-    public void registerSessionInfo(C0162c c0162c, String str, boolean z) {
+    public void registerSessionInfo(c cVar, String str, boolean z) {
         if (!ConnectionServiceManager.getInstance().isCurProcessAllow2Connect()) {
             ALog.e(getTag(), "current process is not allowed to connect", new Object[0]);
         } else if (this.mSessionRegistered.contains(str)) {
@@ -838,8 +837,8 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
             } else {
                 this.smartHeartbeat = null;
             }
-            c0162c.C(xa2.a(str, z, true, new Auth(this, str), ABAdapter.isFeatureOpened(Constants.AB.KEY_ACCS_HEARTBEAT) ? this.heartbeatWrapper : this.smartHeartbeat, this));
-            c0162c.B(str, this.mConfig.getInappPubKey());
+            cVar.C(xa2.a(str, z, true, new Auth(this, str), ABAdapter.isFeatureOpened(Constants.AB.KEY_ACCS_HEARTBEAT) ? this.heartbeatWrapper : this.smartHeartbeat, this));
+            cVar.B(str, this.mConfig.getInappPubKey());
             this.mSessionRegistered.add(str);
             ALog.i(getTag(), "registerSessionInfo", "host", str);
         }
@@ -953,7 +952,7 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
 
     public void unRegisterSessionInfo() {
         String inappHost = this.mConfig.getInappHost();
-        C0162c m = C0162c.m(this.mConfig.getAppKey());
+        c m = c.m(this.mConfig.getAppKey());
         if (m == null) {
             ALog.w(getTag(), "updateConfig not need update", new Object[0]);
             return;
@@ -990,7 +989,7 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
             try {
                 ALog.w(getTag(), "updateConfig", "old", this.mConfig, "new", accsClientConfig);
                 String inappHost = accsClientConfig.getInappHost();
-                C0162c m = C0162c.m(this.mConfig.getAppKey());
+                c m = c.m(this.mConfig.getAppKey());
                 if (m == null) {
                     ALog.w(getTag(), "updateConfig not need update", new Object[0]);
                     return;
@@ -1005,7 +1004,7 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
                 String str = ConnType.PK_ACS;
                 str = (this.mConfig.getInappPubKey() == 10 || this.mConfig.getInappPubKey() == 11) ? "open" : "open";
                 ALog.i(getTag(), "update config register new conn protocol host:", this.mConfig.getInappHost());
-                C0227d.b().c(this.mConfig.getInappHost(), ConnProtocol.valueOf(ConnType.HTTP2, ConnType.RTT_0, str, false));
+                d.b().c(this.mConfig.getInappHost(), ConnProtocol.valueOf(ConnType.HTTP2, ConnType.RTT_0, str, false));
                 if (!isKeepAlive() || !this.mConfig.isKeepalive()) {
                     ALog.i(getTag(), "updateConfig close keepalive", new Object[0]);
                     z = false;
@@ -1046,7 +1045,7 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
         this.sessionListener = new ISessionListener() { // from class: com.taobao.accs.net.InAppConnection.3
             private void innerConnChanged(Context context2, boolean z) {
                 if (z) {
-                    C9708t9.U(10000);
+                    t9.U(10000);
                     long unused = InAppConnection.lastReceiveTimeInMill = InAppConnection.lastOnlineTimeInMill = SystemClock.elapsedRealtime();
                     Collection<Message> unhandledMessages = InAppConnection.this.mMessageHandler.getUnhandledMessages();
                     List<String> upRetryServiceIds = OrangeAdapter.getUpRetryServiceIds(context2);
@@ -1072,8 +1071,8 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
 
             private void onConnectionChangedImpl(Context context2, boolean z, Intent intent) {
                 boolean z2 = true;
-                if (OrangeAdapter.isChannelModeEnable() && UtilityImpl.isMainProcessAlive(InAppConnection.this.mContext) && !C9708t9.L()) {
-                    C9708t9.z0(true);
+                if (OrangeAdapter.isChannelModeEnable() && UtilityImpl.isMainProcessAlive(InAppConnection.this.mContext) && !t9.L()) {
+                    t9.z0(true);
                 } else {
                     z2 = false;
                 }
@@ -1091,7 +1090,7 @@ public class InAppConnection extends BaseConnection implements DataFrameCb {
                     return;
                 }
                 ALog.e(InAppConnection.this.getTag(), "onConnectionChanged not allow to notify", new Object[0]);
-                C0162c.m(InAppConnection.this.mConfig.getAppKey()).E(InAppConnection.this.sessionListener);
+                c.m(InAppConnection.this.mConfig.getAppKey()).E(InAppConnection.this.sessionListener);
             }
 
             @Override // anet.channel.ISessionListener

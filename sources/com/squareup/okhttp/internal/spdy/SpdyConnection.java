@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 import okio.Buffer;
 import okio.BufferedSource;
 import okio.ByteString;
-import okio.C8844h;
+import okio.h;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -149,7 +149,7 @@ public final class SpdyConnection implements Closeable {
             try {
                 try {
                     SpdyConnection spdyConnection = SpdyConnection.this;
-                    FrameReader newReader = spdyConnection.variant.newReader(C8844h.d(C8844h.m(spdyConnection.socket)), SpdyConnection.this.client);
+                    FrameReader newReader = spdyConnection.variant.newReader(h.d(h.m(spdyConnection.socket)), SpdyConnection.this.client);
                     this.frameReader = newReader;
                     if (!SpdyConnection.this.client) {
                         newReader.readConnectionPreface();
@@ -690,7 +690,7 @@ public final class SpdyConnection implements Closeable {
         }
         this.bytesLeftInWriteWindow = settings2.getInitialWindowSize(65536);
         this.socket = builder.socket;
-        this.frameWriter = this.variant.newWriter(C8844h.c(C8844h.i(builder.socket)), z);
+        this.frameWriter = this.variant.newWriter(h.c(h.i(builder.socket)), z);
         Reader reader = new Reader();
         this.readerRunnable = reader;
         new Thread(reader).start();

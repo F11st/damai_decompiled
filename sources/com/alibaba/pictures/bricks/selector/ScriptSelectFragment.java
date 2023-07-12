@@ -36,12 +36,11 @@ import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.youku.arch.v3.util.DensityUtil;
 import com.youku.arch.v3.util.DisplayUtils;
 import java.util.ArrayList;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.text.C8604o;
 import kotlin.text.StringsKt__StringsKt;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -55,7 +54,7 @@ import tb.wt2;
 public final class ScriptSelectFragment extends BricksBaseFragment implements OnEventListener, OnLoadMoreListener {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3540a Companion = new C3540a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String EVENT_ID_ITEM_SELECT = "scriptItemSelect";
     @NotNull
@@ -87,15 +86,14 @@ public final class ScriptSelectFragment extends BricksBaseFragment implements On
     private String targetId;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.selector.ScriptSelectFragment$a */
     /* loaded from: classes7.dex */
-    public static final class C3540a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3540a() {
+        private a() {
         }
 
-        public /* synthetic */ C3540a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -111,12 +109,11 @@ public final class ScriptSelectFragment extends BricksBaseFragment implements On
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.selector.ScriptSelectFragment$b */
     /* loaded from: classes7.dex */
-    public static final class C3541b implements TextWatcher {
+    public static final class b implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3541b() {
+        b() {
         }
 
         @Override // android.text.TextWatcher
@@ -156,12 +153,11 @@ public final class ScriptSelectFragment extends BricksBaseFragment implements On
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.selector.ScriptSelectFragment$c */
     /* loaded from: classes7.dex */
-    public static final class C3542c implements BricksBaseFragment.IClickListener {
+    public static final class c implements BricksBaseFragment.IClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3542c() {
+        c() {
         }
 
         @Override // com.alibaba.pictures.bricks.base.BricksBaseFragment.IClickListener
@@ -184,10 +180,10 @@ public final class ScriptSelectFragment extends BricksBaseFragment implements On
     }
 
     public ScriptSelectFragment() {
-        Lazy b;
         Lazy b2;
         Lazy b3;
-        b = C8177b.b(new Function0<ScriptSelectAdapter>() { // from class: com.alibaba.pictures.bricks.selector.ScriptSelectFragment$adapter$2
+        Lazy b4;
+        b2 = kotlin.b.b(new Function0<ScriptSelectAdapter>() { // from class: com.alibaba.pictures.bricks.selector.ScriptSelectFragment$adapter$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* JADX INFO: Access modifiers changed from: package-private */
@@ -208,8 +204,8 @@ public final class ScriptSelectFragment extends BricksBaseFragment implements On
                 return new ScriptSelectAdapter(i, ScriptSelectFragment.this);
             }
         });
-        this.adapter$delegate = b;
-        b2 = C8177b.b(new Function0<InputMethodManager>() { // from class: com.alibaba.pictures.bricks.selector.ScriptSelectFragment$inputMethodManager$2
+        this.adapter$delegate = b2;
+        b3 = kotlin.b.b(new Function0<InputMethodManager>() { // from class: com.alibaba.pictures.bricks.selector.ScriptSelectFragment$inputMethodManager$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* JADX INFO: Access modifiers changed from: package-private */
@@ -233,8 +229,8 @@ public final class ScriptSelectFragment extends BricksBaseFragment implements On
                 return null;
             }
         });
-        this.inputMethodManager$delegate = b2;
-        b3 = C8177b.b(new Function0<String>() { // from class: com.alibaba.pictures.bricks.selector.ScriptSelectFragment$selectId$2
+        this.inputMethodManager$delegate = b3;
+        b4 = kotlin.b.b(new Function0<String>() { // from class: com.alibaba.pictures.bricks.selector.ScriptSelectFragment$selectId$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* JADX INFO: Access modifiers changed from: package-private */
@@ -256,7 +252,7 @@ public final class ScriptSelectFragment extends BricksBaseFragment implements On
                 return null;
             }
         });
-        this.selectId$delegate = b3;
+        this.selectId$delegate = b4;
         this.pageNum = 1;
     }
 
@@ -345,7 +341,7 @@ public final class ScriptSelectFragment extends BricksBaseFragment implements On
             b41.A("inputEditText");
             editText2 = null;
         }
-        editText2.addTextChangedListener(new C3541b());
+        editText2.addTextChangedListener(new b());
         EditText editText3 = this.inputEditText;
         if (editText3 == null) {
             b41.A("inputEditText");
@@ -699,7 +695,7 @@ public final class ScriptSelectFragment extends BricksBaseFragment implements On
                         ScriptSelectFragment scriptSelectFragment2 = this;
                         String keyword = scriptSelectRequest.getKeyword();
                         if (keyword != null) {
-                            s = C8604o.s(keyword);
+                            s = o.s(keyword);
                             if (!s) {
                                 z2 = false;
                                 scriptSelectFragment2.showEmpty(true ^ z2);
@@ -731,13 +727,12 @@ public final class ScriptSelectFragment extends BricksBaseFragment implements On
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* compiled from: Taobao */
-            /* renamed from: com.alibaba.pictures.bricks.selector.ScriptSelectFragment$requestSearch$2$a */
             /* loaded from: classes7.dex */
-            public static final class C3543a implements BricksBaseFragment.IClickListener {
+            public static final class a implements BricksBaseFragment.IClickListener {
                 private static transient /* synthetic */ IpChange $ipChange;
                 final /* synthetic */ ScriptSelectFragment a;
 
-                C3543a(ScriptSelectFragment scriptSelectFragment) {
+                a(ScriptSelectFragment scriptSelectFragment) {
                     this.a = scriptSelectFragment;
                 }
 
@@ -795,7 +790,7 @@ public final class ScriptSelectFragment extends BricksBaseFragment implements On
                     } else {
                         smartRefreshLayout2 = r3;
                     }
-                    scriptSelectFragment.showErrorView(str2, valueOf, smartRefreshLayout2, new C3543a(this));
+                    scriptSelectFragment.showErrorView(str2, valueOf, smartRefreshLayout2, new a(this));
                     return;
                 }
                 smartRefreshLayout = this.refreshLayout;
@@ -855,7 +850,7 @@ public final class ScriptSelectFragment extends BricksBaseFragment implements On
         } else {
             viewGroup = viewGroup3;
         }
-        showErrorView(3, str, "", viewGroup, false, false, true, new C3542c());
+        showErrorView(3, str, "", viewGroup, false, false, true, new c());
     }
 
     private final void showSoftInput() {
@@ -886,7 +881,7 @@ public final class ScriptSelectFragment extends BricksBaseFragment implements On
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:10:0x0028, code lost:
-        r5 = kotlin.text.C8603n.i(r5);
+        r5 = kotlin.text.n.i(r5);
      */
     @Override // androidx.fragment.app.Fragment
     /*
@@ -915,7 +910,7 @@ public final class ScriptSelectFragment extends BricksBaseFragment implements On
             java.lang.String r0 = "pageType"
             java.lang.String r5 = r5.getString(r0)
             if (r5 == 0) goto L32
-            java.lang.Integer r5 = kotlin.text.C8596g.i(r5)
+            java.lang.Integer r5 = kotlin.text.g.i(r5)
             if (r5 == 0) goto L32
             int r3 = r5.intValue()
         L32:

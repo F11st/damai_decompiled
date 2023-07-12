@@ -1,6 +1,6 @@
 package cn.damai.pay.alipay;
 
-import com.alipay.sdk.m.u.C4316l;
+import com.alipay.sdk.m.u.l;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 
@@ -16,14 +16,14 @@ public class Result2 {
         String[] split;
         try {
             for (String str2 : str.split(";")) {
-                if (str2.startsWith(C4316l.a)) {
-                    this.resultStatus = gatValue(str2, C4316l.a);
+                if (str2.startsWith(l.a)) {
+                    this.resultStatus = gatValue(str2, l.a);
                 }
                 if (str2.startsWith("result")) {
                     this.result = gatValue(str2, "result");
                 }
-                if (str2.startsWith(C4316l.b)) {
-                    this.memo = gatValue(str2, C4316l.b);
+                if (str2.startsWith(l.b)) {
+                    this.memo = gatValue(str2, l.b);
                 }
             }
         } catch (Exception e) {

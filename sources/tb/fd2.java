@@ -2,13 +2,11 @@ package tb;
 
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
 import java.util.Iterator;
-import kotlin.collections.C8212k;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
 import kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer;
 import kotlin.reflect.jvm.internal.impl.types.model.SimpleTypeMarker;
 import kotlin.reflect.jvm.internal.impl.types.model.TypeArgumentListMarker;
-import kotlin.text.C8596g;
 import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
@@ -29,11 +27,11 @@ public abstract class fd2 extends gu2 implements SimpleTypeMarker, TypeArgumentL
         StringBuilder sb = new StringBuilder();
         Iterator<AnnotationDescriptor> it = getAnnotations().iterator();
         while (it.hasNext()) {
-            C8596g.g(sb, jn1.ARRAY_START_STR, DescriptorRenderer.c(DescriptorRenderer.DEBUG_TEXT, it.next(), null, 2, null), "] ");
+            kotlin.text.g.g(sb, jn1.ARRAY_START_STR, DescriptorRenderer.c(DescriptorRenderer.DEBUG_TEXT, it.next(), null, 2, null), "] ");
         }
         sb.append(c());
         if (!b().isEmpty()) {
-            C8212k.X(b(), sb, AVFSCacheConstants.COMMA_SEP, jn1.L, jn1.G, 0, null, null, 112, null);
+            kotlin.collections.k.X(b(), sb, AVFSCacheConstants.COMMA_SEP, jn1.L, jn1.G, 0, null, null, 112, null);
         }
         if (d()) {
             sb.append("?");

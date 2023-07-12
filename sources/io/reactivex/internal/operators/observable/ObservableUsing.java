@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.CompositeException;
 import io.reactivex.functions.Consumer;
@@ -17,7 +17,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableUsing<T, D> extends AbstractC8149d<T> {
+public final class ObservableUsing<T, D> extends d<T> {
     final Consumer<? super D> disposer;
     final boolean eager;
     final Callable<? extends D> resourceSupplier;
@@ -124,7 +124,7 @@ public final class ObservableUsing<T, D> extends AbstractC8149d<T> {
         this.eager = z;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         try {
             D call = this.resourceSupplier.call();

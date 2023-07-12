@@ -6,7 +6,6 @@ import android.text.TextUtils;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.poplayer.norm.IConfigAdapter;
-import com.alibaba.poplayer.trigger.AbstractC3680a;
 import com.alibaba.poplayer.trigger.BaseConfigItem;
 import com.alibaba.poplayer.trigger.Event;
 import com.alibaba.poplayer.trigger.app.AppConfigItem;
@@ -19,22 +18,22 @@ import org.json.JSONObject;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
-public class p6 extends AbstractC3680a<AppConfigItem> {
+public class p6 extends com.alibaba.poplayer.trigger.a<AppConfigItem> {
     public static final String KEY_CONFIG_APP = "poplayer_app_config";
     public static final String KEY_CONFIG_WHITE_LIST = "poplayer_app_white_list";
     @Monitor.TargetField(name = ip1.MONITOR_WHITELIST)
     protected List<String> i;
 
     public p6(IConfigAdapter iConfigAdapter) {
-        super(iConfigAdapter, KEY_CONFIG_APP, AbstractC3680a.KEY_BLACK_LIST);
+        super(iConfigAdapter, KEY_CONFIG_APP, com.alibaba.poplayer.trigger.a.KEY_BLACK_LIST);
         this.i = new ArrayList();
         dt1.a("AppConfigMgr use " + AppConfigItem.LOG);
     }
 
-    private boolean z(Event event, List<BaseConfigItem.C3677a> list) {
+    private boolean z(Event event, List<BaseConfigItem.a> list) {
         if (list != null && !list.isEmpty()) {
-            for (BaseConfigItem.C3677a c3677a : list) {
-                if (n(event, c3677a) && e(event, c3677a)) {
+            for (BaseConfigItem.a aVar : list) {
+                if (n(event, aVar) && e(event, aVar)) {
                     return true;
                 }
             }
@@ -43,7 +42,7 @@ public class p6 extends AbstractC3680a<AppConfigItem> {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.alibaba.poplayer.trigger.AbstractC3680a
+    @Override // com.alibaba.poplayer.trigger.a
     /* renamed from: A */
     public AppConfigItem r(String str) {
         String[] strArr;
@@ -53,7 +52,7 @@ public class p6 extends AbstractC3680a<AppConfigItem> {
                 dt1.b("App parseConfig error. survivalBlackList and survivalWhiteList exist at the same time", new Object[0]);
                 return null;
             }
-            BaseConfigItem.C3677a t = t(str, appConfigItem.uuid);
+            BaseConfigItem.a t = t(str, appConfigItem.uuid);
             appConfigItem.pageInfo = t;
             if (!TextUtils.isEmpty(t.a) || (!((strArr = appConfigItem.pageInfo.b) == null || strArr.length == 0) || appConfigItem.whiteList == null || appConfigItem.blackList == null)) {
                 return appConfigItem;
@@ -65,7 +64,7 @@ public class p6 extends AbstractC3680a<AppConfigItem> {
         }
     }
 
-    @Override // com.alibaba.poplayer.trigger.AbstractC3680a
+    @Override // com.alibaba.poplayer.trigger.a
     /* renamed from: B */
     public AppConfigItem s(Event event) {
         JSONObject u = u(Uri.parse(event.originUri));
@@ -85,21 +84,21 @@ public class p6 extends AbstractC3680a<AppConfigItem> {
         AppConfigItem appConfigItem = (AppConfigItem) JSON.parseObject(u.toString(), AppConfigItem.class);
         try {
             if (!TextUtils.isEmpty(u.optString("array_whiteList"))) {
-                appConfigItem.whiteList = (ArrayList) JSON.parseArray((String) u.get("array_whiteList"), BaseConfigItem.C3677a.class);
+                appConfigItem.whiteList = (ArrayList) JSON.parseArray((String) u.get("array_whiteList"), BaseConfigItem.a.class);
             }
             if (!TextUtils.isEmpty(u.optString("array_blackList"))) {
-                appConfigItem.blackList = (ArrayList) JSON.parseArray((String) u.get("array_blackList"), BaseConfigItem.C3677a.class);
+                appConfigItem.blackList = (ArrayList) JSON.parseArray((String) u.get("array_blackList"), BaseConfigItem.a.class);
             }
             if (!TextUtils.isEmpty(u.optString("array_survivalWhiteList"))) {
-                appConfigItem.survivalWhiteList = (ArrayList) JSON.parseArray((String) u.get("array_survivalWhiteList"), BaseConfigItem.C3677a.class);
+                appConfigItem.survivalWhiteList = (ArrayList) JSON.parseArray((String) u.get("array_survivalWhiteList"), BaseConfigItem.a.class);
             }
             if (!TextUtils.isEmpty(u.optString("array_survivalBlackList"))) {
-                appConfigItem.survivalBlackList = (ArrayList) JSON.parseArray((String) u.get("array_survivalBlackList"), BaseConfigItem.C3677a.class);
+                appConfigItem.survivalBlackList = (ArrayList) JSON.parseArray((String) u.get("array_survivalBlackList"), BaseConfigItem.a.class);
             }
         } catch (Throwable th2) {
             th2.printStackTrace();
         }
-        ArrayList<BaseConfigItem.C3677a> arrayList = appConfigItem.blackList;
+        ArrayList<BaseConfigItem.a> arrayList = appConfigItem.blackList;
         if ((arrayList != null && arrayList != null) || (appConfigItem.survivalWhiteList != null && appConfigItem.survivalBlackList != null)) {
             dt1.b("App parseConfig error. whitelist and blacklist exist at the same time", new Object[0]);
             return null;
@@ -108,23 +107,23 @@ public class p6 extends AbstractC3680a<AppConfigItem> {
         return appConfigItem;
     }
 
-    @Override // com.alibaba.poplayer.trigger.AbstractC3680a
+    @Override // com.alibaba.poplayer.trigger.a
     public vw2<AppConfigItem> h(Event event) {
         return x(event, "");
     }
 
-    @Override // com.alibaba.poplayer.trigger.AbstractC3680a
+    @Override // com.alibaba.poplayer.trigger.a
     protected void p(List<AppConfigItem> list, String str, List<String> list2) {
         d7.A().w();
     }
 
-    @Override // com.alibaba.poplayer.trigger.AbstractC3680a
+    @Override // com.alibaba.poplayer.trigger.a
     protected void v(IConfigAdapter iConfigAdapter, Context context) {
         try {
             String configItemByKey = iConfigAdapter.getConfigItemByKey(context, KEY_CONFIG_WHITE_LIST);
             dt1.b("App white List :{%s}.", configItemByKey);
             synchronized (this.i) {
-                this.i = AbstractC3680a.l(configItemByKey) ? new ArrayList<>() : Arrays.asList(configItemByKey.split(","));
+                this.i = com.alibaba.poplayer.trigger.a.l(configItemByKey) ? new ArrayList<>() : Arrays.asList(configItemByKey.split(","));
             }
         } catch (Throwable unused) {
         }
@@ -230,7 +229,7 @@ public class p6 extends AbstractC3680a<AppConfigItem> {
     }
 
     public boolean y(AppConfigItem appConfigItem, Event event) {
-        ArrayList<BaseConfigItem.C3677a> arrayList = appConfigItem.survivalWhiteList;
+        ArrayList<BaseConfigItem.a> arrayList = appConfigItem.survivalWhiteList;
         if (arrayList != null) {
             return z(event, arrayList);
         }

@@ -26,7 +26,7 @@ public final class j70 {
     @NotNull
     private final ix2 e;
     @NotNull
-    private final AbstractC9135fc f;
+    private final fc f;
     @Nullable
     private final DeserializedContainerSource g;
     @NotNull
@@ -34,27 +34,27 @@ public final class j70 {
     @NotNull
     private final MemberDeserializer i;
 
-    public j70(@NotNull h70 h70Var, @NotNull NameResolver nameResolver, @NotNull DeclarationDescriptor declarationDescriptor, @NotNull er2 er2Var, @NotNull ix2 ix2Var, @NotNull AbstractC9135fc abstractC9135fc, @Nullable DeserializedContainerSource deserializedContainerSource, @Nullable TypeDeserializer typeDeserializer, @NotNull List<ProtoBuf$TypeParameter> list) {
+    public j70(@NotNull h70 h70Var, @NotNull NameResolver nameResolver, @NotNull DeclarationDescriptor declarationDescriptor, @NotNull er2 er2Var, @NotNull ix2 ix2Var, @NotNull fc fcVar, @Nullable DeserializedContainerSource deserializedContainerSource, @Nullable TypeDeserializer typeDeserializer, @NotNull List<ProtoBuf$TypeParameter> list) {
         String presentableString;
         b41.i(h70Var, Constants.COMPONENT);
         b41.i(nameResolver, "nameResolver");
         b41.i(declarationDescriptor, "containingDeclaration");
         b41.i(er2Var, "typeTable");
         b41.i(ix2Var, "versionRequirementTable");
-        b41.i(abstractC9135fc, "metadataVersion");
+        b41.i(fcVar, "metadataVersion");
         b41.i(list, "typeParameters");
         this.a = h70Var;
         this.b = nameResolver;
         this.c = declarationDescriptor;
         this.d = er2Var;
         this.e = ix2Var;
-        this.f = abstractC9135fc;
+        this.f = fcVar;
         this.g = deserializedContainerSource;
         this.h = new TypeDeserializer(this, typeDeserializer, list, "Deserializer for \"" + declarationDescriptor.getName() + jn1.QUOTE, (deserializedContainerSource == null || (presentableString = deserializedContainerSource.getPresentableString()) == null) ? "[container not found]" : presentableString, false, 32, null);
         this.i = new MemberDeserializer(this);
     }
 
-    public static /* synthetic */ j70 b(j70 j70Var, DeclarationDescriptor declarationDescriptor, List list, NameResolver nameResolver, er2 er2Var, ix2 ix2Var, AbstractC9135fc abstractC9135fc, int i, Object obj) {
+    public static /* synthetic */ j70 b(j70 j70Var, DeclarationDescriptor declarationDescriptor, List list, NameResolver nameResolver, er2 er2Var, ix2 ix2Var, fc fcVar, int i, Object obj) {
         if ((i & 4) != 0) {
             nameResolver = j70Var.b;
         }
@@ -68,25 +68,25 @@ public final class j70 {
         }
         ix2 ix2Var2 = ix2Var;
         if ((i & 32) != 0) {
-            abstractC9135fc = j70Var.f;
+            fcVar = j70Var.f;
         }
-        return j70Var.a(declarationDescriptor, list, nameResolver2, er2Var2, ix2Var2, abstractC9135fc);
+        return j70Var.a(declarationDescriptor, list, nameResolver2, er2Var2, ix2Var2, fcVar);
     }
 
     @NotNull
-    public final j70 a(@NotNull DeclarationDescriptor declarationDescriptor, @NotNull List<ProtoBuf$TypeParameter> list, @NotNull NameResolver nameResolver, @NotNull er2 er2Var, @NotNull ix2 ix2Var, @NotNull AbstractC9135fc abstractC9135fc) {
+    public final j70 a(@NotNull DeclarationDescriptor declarationDescriptor, @NotNull List<ProtoBuf$TypeParameter> list, @NotNull NameResolver nameResolver, @NotNull er2 er2Var, @NotNull ix2 ix2Var, @NotNull fc fcVar) {
         b41.i(declarationDescriptor, "descriptor");
         b41.i(list, "typeParameterProtos");
         b41.i(nameResolver, "nameResolver");
         b41.i(er2Var, "typeTable");
         ix2 ix2Var2 = ix2Var;
         b41.i(ix2Var2, "versionRequirementTable");
-        b41.i(abstractC9135fc, "metadataVersion");
+        b41.i(fcVar, "metadataVersion");
         h70 h70Var = this.a;
-        if (!jx2.b(abstractC9135fc)) {
+        if (!jx2.b(fcVar)) {
             ix2Var2 = this.e;
         }
-        return new j70(h70Var, nameResolver, declarationDescriptor, er2Var, ix2Var2, abstractC9135fc, this.g, this.h, list);
+        return new j70(h70Var, nameResolver, declarationDescriptor, er2Var, ix2Var2, fcVar, this.g, this.h, list);
     }
 
     @NotNull

@@ -47,9 +47,8 @@ public class HnOrderInvoiceTitleHolder implements View.OnClickListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.hn.HnOrderInvoiceTitleHolder$a */
     /* loaded from: classes16.dex */
-    public static class C2227a {
+    public static class a {
         public HnInvoiceTitleType a;
         public String b;
         public String c;
@@ -91,25 +90,25 @@ public class HnOrderInvoiceTitleHolder implements View.OnClickListener {
     }
 
     @Nullable
-    public C2227a b() {
+    public a b() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1693448468")) {
-            return (C2227a) ipChange.ipc$dispatch("1693448468", new Object[]{this});
+            return (a) ipChange.ipc$dispatch("1693448468", new Object[]{this});
         }
         if (this.i == null) {
             return null;
         }
-        C2227a c2227a = new C2227a();
+        a aVar = new a();
         HnInvoiceTitleType hnInvoiceTitleType = this.i;
-        c2227a.a = hnInvoiceTitleType;
+        aVar.a = hnInvoiceTitleType;
         if ("1".equals(hnInvoiceTitleType.invoiceTitleType)) {
-            c2227a.d = this.e.getText().toString();
-            c2227a.e = this.g.getText().toString();
+            aVar.d = this.e.getText().toString();
+            aVar.e = this.g.getText().toString();
         } else {
-            c2227a.b = this.e.getText().toString();
-            c2227a.c = this.g.getText().toString();
+            aVar.b = this.e.getText().toString();
+            aVar.c = this.g.getText().toString();
         }
-        return c2227a;
+        return aVar;
     }
 
     public void d(OnSelectedContractsListener onSelectedContractsListener) {

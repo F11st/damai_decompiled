@@ -58,14 +58,13 @@ public abstract class FunGameView<T extends FunGameView> extends FunGameBase {
     protected int status;
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.fungame.FunGameView$a */
     /* loaded from: classes6.dex */
-    class C6169a extends AnimatorListenerAdapter {
+    class a extends AnimatorListenerAdapter {
         final /* synthetic */ View a;
         final /* synthetic */ View b;
         final /* synthetic */ View c;
 
-        C6169a(View view, View view2, View view3) {
+        a(View view, View view2, View view3) {
             this.a = view;
             this.b = view2;
             this.c = view3;
@@ -81,9 +80,8 @@ public abstract class FunGameView<T extends FunGameView> extends FunGameBase {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.fungame.FunGameView$b */
     /* loaded from: classes6.dex */
-    static /* synthetic */ class C6170b {
+    static /* synthetic */ class b {
         static final /* synthetic */ int[] a;
 
         static {
@@ -295,7 +293,7 @@ public abstract class FunGameView<T extends FunGameView> extends FunGameBase {
         View view = this.mShadowView;
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.play(ObjectAnimator.ofFloat(textView, "translationY", textView.getTranslationY(), -this.mHalfHeaderHeight)).with(ObjectAnimator.ofFloat(textView2, "translationY", textView2.getTranslationY(), this.mHalfHeaderHeight)).with(ObjectAnimator.ofFloat(view, "alpha", view.getAlpha(), 0.0f));
-        animatorSet.addListener(new C6169a(textView, textView2, view));
+        animatorSet.addListener(new a(textView, textView2, view));
         animatorSet.setDuration(800L);
         animatorSet.setStartDelay(200L);
         animatorSet.start();
@@ -304,7 +302,7 @@ public abstract class FunGameView<T extends FunGameView> extends FunGameBase {
     @Override // com.scwang.smartrefresh.header.fungame.FunGameBase, com.scwang.smartrefresh.layout.internal.InternalAbstract, com.scwang.smartrefresh.layout.listener.OnStateChangedListener
     public void onStateChanged(@NonNull RefreshLayout refreshLayout, @NonNull RefreshState refreshState, @NonNull RefreshState refreshState2) {
         super.onStateChanged(refreshLayout, refreshState, refreshState2);
-        int i = C6170b.a[refreshState2.ordinal()];
+        int i = b.a[refreshState2.ordinal()];
         if (i == 1) {
             this.mMaskViewTop.setText(this.mMaskTextTopPull);
         } else if (i != 2) {

@@ -1,6 +1,5 @@
 package kotlin.collections.builders;
 
-import com.alipay.sdk.m.n.C4250a;
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
 import com.taobao.weex.ui.component.WXComponent;
 import java.io.NotSerializableException;
@@ -11,7 +10,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Set;
-import kotlin.collections.C8202e;
 import kotlin.jvm.internal.markers.KMutableIterator;
 import kotlin.jvm.internal.markers.KMutableMap;
 import org.jetbrains.annotations.NotNull;
@@ -31,7 +29,7 @@ import tb.ry1;
 /* loaded from: classes3.dex */
 public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutableMap {
     @NotNull
-    private static final C8190a Companion = new C8190a(null);
+    private static final a Companion = new a(null);
     @Deprecated
     private static final int INITIAL_CAPACITY = 8;
     @Deprecated
@@ -62,13 +60,12 @@ public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutable
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.collections.builders.MapBuilder$a */
     /* loaded from: classes3.dex */
-    public static final class C8190a {
-        private C8190a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8190a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -84,11 +81,10 @@ public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutable
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.collections.builders.MapBuilder$b */
     /* loaded from: classes3.dex */
-    public static final class C8191b<K, V> extends C8193d<K, V> implements Iterator<Map.Entry<K, V>>, KMutableIterator {
+    public static final class b<K, V> extends d<K, V> implements Iterator<Map.Entry<K, V>>, KMutableIterator {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C8191b(@NotNull MapBuilder<K, V> mapBuilder) {
+        public b(@NotNull MapBuilder<K, V> mapBuilder) {
             super(mapBuilder);
             b41.i(mapBuilder, "map");
         }
@@ -96,14 +92,14 @@ public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutable
         @Override // java.util.Iterator
         @NotNull
         /* renamed from: g */
-        public C8192c<K, V> next() {
+        public c<K, V> next() {
             if (a() < ((MapBuilder) c()).length) {
                 int a = a();
                 e(a + 1);
                 f(a);
-                C8192c<K, V> c8192c = new C8192c<>(c(), b());
+                c<K, V> cVar = new c<>(c(), b());
                 d();
-                return c8192c;
+                return cVar;
             }
             throw new NoSuchElementException();
         }
@@ -120,7 +116,7 @@ public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutable
                 } else {
                     sb.append(obj);
                 }
-                sb.append(C4250a.h);
+                sb.append(com.alipay.sdk.m.n.a.h);
                 Object[] objArr = ((MapBuilder) c()).valuesArray;
                 b41.f(objArr);
                 Object obj2 = objArr[b()];
@@ -154,14 +150,13 @@ public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutable
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.collections.builders.MapBuilder$c */
     /* loaded from: classes3.dex */
-    public static final class C8192c<K, V> implements Map.Entry<K, V>, KMutableMap.Entry {
+    public static final class c<K, V> implements Map.Entry<K, V>, KMutableMap.Entry {
         @NotNull
         private final MapBuilder<K, V> a;
         private final int b;
 
-        public C8192c(@NotNull MapBuilder<K, V> mapBuilder, int i) {
+        public c(@NotNull MapBuilder<K, V> mapBuilder, int i) {
             b41.i(mapBuilder, "map");
             this.a = mapBuilder;
             this.b = i;
@@ -212,22 +207,21 @@ public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutable
         public String toString() {
             StringBuilder sb = new StringBuilder();
             sb.append(getKey());
-            sb.append(C4250a.h);
+            sb.append(com.alipay.sdk.m.n.a.h);
             sb.append(getValue());
             return sb.toString();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.collections.builders.MapBuilder$d */
     /* loaded from: classes3.dex */
-    public static class C8193d<K, V> {
+    public static class d<K, V> {
         @NotNull
         private final MapBuilder<K, V> a;
         private int b;
         private int c;
 
-        public C8193d(@NotNull MapBuilder<K, V> mapBuilder) {
+        public d(@NotNull MapBuilder<K, V> mapBuilder) {
             b41.i(mapBuilder, "map");
             this.a = mapBuilder;
             this.c = -1;
@@ -282,11 +276,10 @@ public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutable
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.collections.builders.MapBuilder$e */
     /* loaded from: classes3.dex */
-    public static final class C8194e<K, V> extends C8193d<K, V> implements Iterator<K>, KMutableIterator {
+    public static final class e<K, V> extends d<K, V> implements Iterator<K>, KMutableIterator {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C8194e(@NotNull MapBuilder<K, V> mapBuilder) {
+        public e(@NotNull MapBuilder<K, V> mapBuilder) {
             super(mapBuilder);
             b41.i(mapBuilder, "map");
         }
@@ -306,11 +299,10 @@ public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutable
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.collections.builders.MapBuilder$f */
     /* loaded from: classes3.dex */
-    public static final class C8195f<K, V> extends C8193d<K, V> implements Iterator<V>, KMutableIterator {
+    public static final class f<K, V> extends d<K, V> implements Iterator<V>, KMutableIterator {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C8195f(@NotNull MapBuilder<K, V> mapBuilder) {
+        public f(@NotNull MapBuilder<K, V> mapBuilder) {
             super(mapBuilder);
             b41.i(mapBuilder, "map");
         }
@@ -396,9 +388,9 @@ public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutable
                 int[] copyOf = Arrays.copyOf(this.presenceArray, i);
                 b41.h(copyOf, "copyOf(this, newSize)");
                 this.presenceArray = copyOf;
-                int c = Companion.c(i);
-                if (c > getHashSize()) {
-                    rehash(c);
+                int c2 = Companion.c(i);
+                if (c2 > getHashSize()) {
+                    rehash(c2);
                     return;
                 }
                 return;
@@ -523,7 +515,7 @@ public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutable
             this.hashArray = new int[i];
             this.hashShift = Companion.d(i);
         } else {
-            C8202e.i(this.hashArray, 0, 0, getHashSize());
+            kotlin.collections.e.i(this.hashArray, 0, 0, getHashSize());
         }
         while (i2 < this.length) {
             int i3 = i2 + 1;
@@ -535,7 +527,7 @@ public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutable
     }
 
     private final void removeHashAt(int i) {
-        int d = ry1.d(this.maxProbeDistance * 2, getHashSize() / 2);
+        int d2 = ry1.d(this.maxProbeDistance * 2, getHashSize() / 2);
         int i2 = 0;
         int i3 = i;
         do {
@@ -559,12 +551,12 @@ public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutable
                     this.hashArray[i3] = i4;
                     this.presenceArray[i5] = i3;
                 }
-                d--;
+                d2--;
             }
             i3 = i;
             i2 = 0;
-            d--;
-        } while (d >= 0);
+            d2--;
+        } while (d2 >= 0);
         this.hashArray[i3] = -1;
     }
 
@@ -587,7 +579,7 @@ public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutable
         checkIsMutable$kotlin_stdlib();
         while (true) {
             int hash = hash(k);
-            int d = ry1.d(this.maxProbeDistance * 2, getHashSize() / 2);
+            int d2 = ry1.d(this.maxProbeDistance * 2, getHashSize() / 2);
             int i = 0;
             while (true) {
                 int i2 = this.hashArray[hash];
@@ -611,7 +603,7 @@ public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutable
                     return -i2;
                 } else {
                     i++;
-                    if (i > d) {
+                    if (i > d2) {
                         rehash(getHashSize() * 2);
                         break;
                     }
@@ -695,8 +687,8 @@ public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutable
     }
 
     @NotNull
-    public final C8191b<K, V> entriesIterator$kotlin_stdlib() {
-        return new C8191b<>(this);
+    public final b<K, V> entriesIterator$kotlin_stdlib() {
+        return new b<>(this);
     }
 
     @Override // java.util.Map
@@ -761,7 +753,7 @@ public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutable
 
     @Override // java.util.Map
     public int hashCode() {
-        C8191b<K, V> entriesIterator$kotlin_stdlib = entriesIterator$kotlin_stdlib();
+        b<K, V> entriesIterator$kotlin_stdlib = entriesIterator$kotlin_stdlib();
         int i = 0;
         while (entriesIterator$kotlin_stdlib.hasNext()) {
             i += entriesIterator$kotlin_stdlib.i();
@@ -784,8 +776,8 @@ public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutable
     }
 
     @NotNull
-    public final C8194e<K, V> keysIterator$kotlin_stdlib() {
-        return new C8194e<>(this);
+    public final e<K, V> keysIterator$kotlin_stdlib() {
+        return new e<>(this);
     }
 
     @Override // java.util.Map
@@ -871,7 +863,7 @@ public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutable
     public String toString() {
         StringBuilder sb = new StringBuilder((size() * 3) + 2);
         sb.append(jn1.BLOCK_START_STR);
-        C8191b<K, V> entriesIterator$kotlin_stdlib = entriesIterator$kotlin_stdlib();
+        b<K, V> entriesIterator$kotlin_stdlib = entriesIterator$kotlin_stdlib();
         int i = 0;
         while (entriesIterator$kotlin_stdlib.hasNext()) {
             if (i > 0) {
@@ -892,8 +884,8 @@ public final class MapBuilder<K, V> implements Map<K, V>, Serializable, KMutable
     }
 
     @NotNull
-    public final C8195f<K, V> valuesIterator$kotlin_stdlib() {
-        return new C8195f<>(this);
+    public final f<K, V> valuesIterator$kotlin_stdlib() {
+        return new f<>(this);
     }
 
     public MapBuilder() {

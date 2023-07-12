@@ -116,7 +116,7 @@ public class AliUserOneKeyRegisterFragment extends BaseFragment implements View.
 
     @Override // com.ali.user.mobile.base.ui.BaseFragment
     protected int getLayoutContent() {
-        return R.C2965layout.aliuser_fragment_onekey_register;
+        return R.layout.aliuser_fragment_onekey_register;
     }
 
     @Override // com.ali.user.mobile.base.ui.BaseFragment, com.ali.user.mobile.login.ui.BaseLoginView

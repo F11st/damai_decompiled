@@ -2,7 +2,7 @@ package com.alibaba.security.tools.flexible;
 
 import android.content.Context;
 import android.util.DisplayMetrics;
-import com.alibaba.security.common.c.C3800a;
+import com.alibaba.security.common.c.a;
 import com.alibaba.security.tools.flexible.component.GradientDrawableComp;
 import com.alibaba.security.tools.flexible.component.IFlexibleComp;
 import com.alibaba.security.tools.flexible.component.PaddingComp;
@@ -105,7 +105,7 @@ public class FlexibleComponent {
             }
             return i4;
         }
-        C3800a.e(TAG, "Found design value **" + i + "** is invalid. Have u forgot it?");
+        a.e(TAG, "Found design value **" + i + "** is invalid. Have u forgot it?");
         return i3;
     }
 
@@ -117,7 +117,7 @@ public class FlexibleComponent {
             }
             return f2;
         }
-        C3800a.e(TAG, "Found design value **" + i + "** is invalid. Have u forgot it?");
+        a.e(TAG, "Found design value **" + i + "** is invalid. Have u forgot it?");
         return f;
     }
 }

@@ -10,16 +10,15 @@ public class gp extends gn {
     private int a;
 
     /* renamed from: a  reason: collision with other field name */
-    private EnumC7664a f433a;
+    private a f433a;
 
     /* renamed from: a  reason: collision with other field name */
-    private EnumC7665b f434a;
+    private b f434a;
     private String b;
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.gp$a */
     /* loaded from: classes11.dex */
-    public enum EnumC7664a {
+    public enum a {
         chat,
         available,
         away,
@@ -28,9 +27,8 @@ public class gp extends gn {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.gp$b */
     /* loaded from: classes11.dex */
-    public enum EnumC7665b {
+    public enum b {
         available,
         unavailable,
         subscribe,
@@ -43,12 +41,12 @@ public class gp extends gn {
 
     public gp(Bundle bundle) {
         super(bundle);
-        this.f434a = EnumC7665b.available;
+        this.f434a = b.available;
         this.b = null;
         this.a = Integer.MIN_VALUE;
         this.f433a = null;
         if (bundle.containsKey("ext_pres_type")) {
-            this.f434a = EnumC7665b.valueOf(bundle.getString("ext_pres_type"));
+            this.f434a = b.valueOf(bundle.getString("ext_pres_type"));
         }
         if (bundle.containsKey("ext_pres_status")) {
             this.b = bundle.getString("ext_pres_status");
@@ -57,38 +55,38 @@ public class gp extends gn {
             this.a = bundle.getInt("ext_pres_prio");
         }
         if (bundle.containsKey("ext_pres_mode")) {
-            this.f433a = EnumC7664a.valueOf(bundle.getString("ext_pres_mode"));
+            this.f433a = a.valueOf(bundle.getString("ext_pres_mode"));
         }
     }
 
-    public gp(EnumC7665b enumC7665b) {
-        this.f434a = EnumC7665b.available;
+    public gp(b bVar) {
+        this.f434a = b.available;
         this.b = null;
         this.a = Integer.MIN_VALUE;
         this.f433a = null;
-        a(enumC7665b);
+        a(bVar);
     }
 
     @Override // com.xiaomi.push.gn
     public Bundle a() {
-        Bundle a = super.a();
-        EnumC7665b enumC7665b = this.f434a;
-        if (enumC7665b != null) {
-            a.putString("ext_pres_type", enumC7665b.toString());
+        Bundle a2 = super.a();
+        b bVar = this.f434a;
+        if (bVar != null) {
+            a2.putString("ext_pres_type", bVar.toString());
         }
         String str = this.b;
         if (str != null) {
-            a.putString("ext_pres_status", str);
+            a2.putString("ext_pres_status", str);
         }
         int i = this.a;
         if (i != Integer.MIN_VALUE) {
-            a.putInt("ext_pres_prio", i);
+            a2.putInt("ext_pres_prio", i);
         }
-        EnumC7664a enumC7664a = this.f433a;
-        if (enumC7664a != null && enumC7664a != EnumC7664a.available) {
-            a.putString("ext_pres_mode", enumC7664a.toString());
+        a aVar = this.f433a;
+        if (aVar != null && aVar != a.available) {
+            a2.putString("ext_pres_mode", aVar.toString());
         }
-        return a;
+        return a2;
     }
 
     @Override // com.xiaomi.push.gn
@@ -137,8 +135,8 @@ public class gp extends gn {
             sb.append(this.a);
             sb.append("</priority>");
         }
-        EnumC7664a enumC7664a = this.f433a;
-        if (enumC7664a != null && enumC7664a != EnumC7664a.available) {
+        a aVar = this.f433a;
+        if (aVar != null && aVar != a.available) {
             sb.append("<show>");
             sb.append(this.f433a);
             sb.append("</show>");
@@ -160,13 +158,13 @@ public class gp extends gn {
         throw new IllegalArgumentException("Priority value " + i + " is not valid. Valid range is -128 through 128.");
     }
 
-    public void a(EnumC7664a enumC7664a) {
-        this.f433a = enumC7664a;
+    public void a(a aVar) {
+        this.f433a = aVar;
     }
 
-    public void a(EnumC7665b enumC7665b) {
-        Objects.requireNonNull(enumC7665b, "Type cannot be null");
-        this.f434a = enumC7665b;
+    public void a(b bVar) {
+        Objects.requireNonNull(bVar, "Type cannot be null");
+        this.f434a = bVar;
     }
 
     public void a(String str) {

@@ -35,7 +35,6 @@ import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.R$anim;
 import cn.damai.commonbusiness.R$color;
@@ -107,7 +106,7 @@ public class AddContactsActivity extends DamaiBaseActivity {
     private DMIconFontTextView mIvClearContactName;
     private DMIconFontTextView mIvClearRenewalNum;
     private TextView mNameTv;
-    private C0626n mNormalTransform;
+    private n mNormalTransform;
     private View.OnClickListener mOnClearContactIdCardNumClickListener;
     private View.OnClickListener mOnClearContactNameClickListener;
     private View.OnClickListener mOnClearRenewalNumClickListener;
@@ -117,7 +116,7 @@ public class AddContactsActivity extends DamaiBaseActivity {
     private TextView mRenewalNumberTv;
     private DMLabelView mSaveBtn;
     private TextView mTitle;
-    private C0627o mUpperCaseTransform;
+    private o mUpperCaseTransform;
     private String mUserName;
     private WindowManager mWindowManager;
     private RealNameTipView notice;
@@ -126,19 +125,18 @@ public class AddContactsActivity extends DamaiBaseActivity {
     private final int mProtocolStart = 9;
     private final int mProtocolEnd = 15;
     private long doubleCheckExposureStr = 0;
-    private DialogInterface.OnClickListener mDialogOnClickListener = new DialogInterface$OnClickListenerC0614b();
-    private Handler mHandler = new HandlerC0615c();
-    private WheelView.C0631b OnWheelViewListener = new C0616d();
-    private View.OnTouchListener mOnTouchListener = new View$OnTouchListenerC0617e();
+    private DialogInterface.OnClickListener mDialogOnClickListener = new b();
+    private Handler mHandler = new c();
+    private WheelView.b OnWheelViewListener = new d();
+    private View.OnTouchListener mOnTouchListener = new e();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.ui.activity.AddContactsActivity$a */
     /* loaded from: classes14.dex */
-    public class DialogInterface$OnClickListenerC0613a implements DialogInterface.OnClickListener {
+    public class a implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        DialogInterface$OnClickListenerC0613a(AddContactsActivity addContactsActivity, String str) {
+        a(AddContactsActivity addContactsActivity, String str) {
             this.a = str;
         }
 
@@ -148,18 +146,17 @@ public class AddContactsActivity extends DamaiBaseActivity {
             if (AndroidInstantRuntime.support(ipChange, "1737167689")) {
                 ipChange.ipc$dispatch("1737167689", new Object[]{this, dialogInterface, Integer.valueOf(i)});
             } else {
-                C0529c.e().x(kn.j().h(this.a));
+                cn.damai.common.user.c.e().x(kn.j().h(this.a));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.ui.activity.AddContactsActivity$b */
     /* loaded from: classes14.dex */
-    public class DialogInterface$OnClickListenerC0614b implements DialogInterface.OnClickListener {
+    public class b implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC0614b() {
+        b() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -177,12 +174,11 @@ public class AddContactsActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.ui.activity.AddContactsActivity$c */
     /* loaded from: classes14.dex */
-    public class HandlerC0615c extends Handler {
+    public class c extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC0615c() {
+        c() {
         }
 
         @Override // android.os.Handler
@@ -205,15 +201,14 @@ public class AddContactsActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.ui.activity.AddContactsActivity$d */
     /* loaded from: classes4.dex */
-    public class C0616d extends WheelView.C0631b {
+    public class d extends WheelView.b {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0616d() {
+        d() {
         }
 
-        @Override // cn.damai.commonbusiness.contacts.ui.view.WheelView.C0631b
+        @Override // cn.damai.commonbusiness.contacts.ui.view.WheelView.b
         public void a(int i, String str) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1416192270")) {
@@ -228,12 +223,11 @@ public class AddContactsActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.ui.activity.AddContactsActivity$e */
     /* loaded from: classes14.dex */
-    public class View$OnTouchListenerC0617e implements View.OnTouchListener {
+    public class e implements View.OnTouchListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnTouchListenerC0617e() {
+        e() {
         }
 
         @Override // android.view.View.OnTouchListener
@@ -251,12 +245,11 @@ public class AddContactsActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.ui.activity.AddContactsActivity$f */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0618f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0618f() {
+        f() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -271,12 +264,11 @@ public class AddContactsActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.ui.activity.AddContactsActivity$g */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0619g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0619g() {
+        g() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -291,12 +283,11 @@ public class AddContactsActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.ui.activity.AddContactsActivity$h */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0620h implements View.OnClickListener {
+    public class h implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0620h() {
+        h() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -311,12 +302,11 @@ public class AddContactsActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.ui.activity.AddContactsActivity$i */
     /* loaded from: classes14.dex */
-    public class C0621i implements TextWatcher {
+    public class i implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0621i() {
+        i() {
         }
 
         @Override // android.text.TextWatcher
@@ -349,12 +339,11 @@ public class AddContactsActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.ui.activity.AddContactsActivity$j */
     /* loaded from: classes14.dex */
-    public class C0622j implements TextWatcher {
+    public class j implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0622j() {
+        j() {
         }
 
         @Override // android.text.TextWatcher
@@ -387,12 +376,11 @@ public class AddContactsActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.ui.activity.AddContactsActivity$k */
     /* loaded from: classes14.dex */
-    public class C0623k implements TextWatcher {
+    public class k implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0623k() {
+        k() {
         }
 
         @Override // android.text.TextWatcher
@@ -425,12 +413,11 @@ public class AddContactsActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.ui.activity.AddContactsActivity$l */
     /* loaded from: classes14.dex */
-    public class C0624l extends ClickableSpan {
+    public class l extends ClickableSpan {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0624l() {
+        l() {
         }
 
         @Override // android.text.style.ClickableSpan
@@ -459,13 +446,12 @@ public class AddContactsActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.ui.activity.AddContactsActivity$m */
     /* loaded from: classes14.dex */
-    public class DialogInterface$OnClickListenerC0625m implements DialogInterface.OnClickListener {
+    public class m implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        DialogInterface$OnClickListenerC0625m(String str) {
+        m(String str) {
             this.a = str;
         }
 
@@ -476,20 +462,19 @@ public class AddContactsActivity extends DamaiBaseActivity {
                 ipChange.ipc$dispatch("1003641833", new Object[]{this, dialogInterface, Integer.valueOf(i)});
                 return;
             }
-            C0529c.e().x(kn.j().i(this.a));
+            cn.damai.common.user.c.e().x(kn.j().i(this.a));
             kn.f(System.currentTimeMillis() - AddContactsActivity.this.doubleCheckExposureStr, this.a);
             AddContactsActivity.this.requestAddCustomer(this.a);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.ui.activity.AddContactsActivity$n */
     /* loaded from: classes14.dex */
-    public class C0626n extends ReplacementTransformationMethod {
+    public class n extends ReplacementTransformationMethod {
         private static transient /* synthetic */ IpChange $ipChange;
         private char[] a = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', YKUpsConvert.CHAR_A, 'B', 'C', qb1.LEVEL_D, qb1.LEVEL_E, YKUpsConvert.CHAR_F, 'G', 'H', qb1.LEVEL_I, 'J', 'K', qb1.LEVEL_L, 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', qb1.LEVEL_V, qb1.LEVEL_W, 'X', 'Y', 'Z'};
 
-        C0626n(AddContactsActivity addContactsActivity) {
+        n(AddContactsActivity addContactsActivity) {
         }
 
         @Override // android.text.method.ReplacementTransformationMethod
@@ -506,14 +491,13 @@ public class AddContactsActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.ui.activity.AddContactsActivity$o */
     /* loaded from: classes14.dex */
-    public class C0627o extends ReplacementTransformationMethod {
+    public class o extends ReplacementTransformationMethod {
         private static transient /* synthetic */ IpChange $ipChange;
         private char[] a = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
         private char[] b = {YKUpsConvert.CHAR_A, 'B', 'C', qb1.LEVEL_D, qb1.LEVEL_E, YKUpsConvert.CHAR_F, 'G', 'H', qb1.LEVEL_I, 'J', 'K', qb1.LEVEL_L, 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', qb1.LEVEL_V, qb1.LEVEL_W, 'X', 'Y', 'Z'};
 
-        C0627o(AddContactsActivity addContactsActivity) {
+        o(AddContactsActivity addContactsActivity) {
         }
 
         @Override // android.text.method.ReplacementTransformationMethod
@@ -530,13 +514,12 @@ public class AddContactsActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.contacts.ui.activity.AddContactsActivity$p */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0628p implements View.OnClickListener {
+    public class p implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private Dialog a;
 
-        public View$OnClickListenerC0628p(Dialog dialog) {
+        public p(Dialog dialog) {
             this.a = dialog;
         }
 
@@ -565,29 +548,29 @@ public class AddContactsActivity extends DamaiBaseActivity {
         }
     }
 
-    private List<AddContactDoubleCheckView.C0629a> getCurrentInput() {
+    private List<AddContactDoubleCheckView.a> getCurrentInput() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1913688260")) {
             return (List) ipChange.ipc$dispatch("1913688260", new Object[]{this});
         }
         ArrayList arrayList = new ArrayList();
-        AddContactDoubleCheckView.C0629a c0629a = new AddContactDoubleCheckView.C0629a();
-        c0629a.b(this.mNameTv.getText().toString());
-        c0629a.a(this.mInputUserName.getText().toString());
-        arrayList.add(c0629a);
-        AddContactDoubleCheckView.C0629a c0629a2 = new AddContactDoubleCheckView.C0629a();
-        c0629a2.b(getString(R$string.add_contacts_id_card_type_tetxt));
-        c0629a2.a(this.mIdTypeBtn.getText().toString());
-        arrayList.add(c0629a2);
-        AddContactDoubleCheckView.C0629a c0629a3 = new AddContactDoubleCheckView.C0629a();
-        c0629a3.b(this.mIdCardNumberTv.getText().toString());
-        c0629a3.a(this.mInputUserIdNumber.getText().toString());
-        arrayList.add(c0629a3);
+        AddContactDoubleCheckView.a aVar = new AddContactDoubleCheckView.a();
+        aVar.b(this.mNameTv.getText().toString());
+        aVar.a(this.mInputUserName.getText().toString());
+        arrayList.add(aVar);
+        AddContactDoubleCheckView.a aVar2 = new AddContactDoubleCheckView.a();
+        aVar2.b(getString(R$string.add_contacts_id_card_type_tetxt));
+        aVar2.a(this.mIdTypeBtn.getText().toString());
+        arrayList.add(aVar2);
+        AddContactDoubleCheckView.a aVar3 = new AddContactDoubleCheckView.a();
+        aVar3.b(this.mIdCardNumberTv.getText().toString());
+        aVar3.a(this.mInputUserIdNumber.getText().toString());
+        arrayList.add(aVar3);
         if (this.mAddContactsRenewalLayout.getVisibility() == 0) {
-            AddContactDoubleCheckView.C0629a c0629a4 = new AddContactDoubleCheckView.C0629a();
-            c0629a4.b(this.mRenewalNumberTv.getText().toString());
-            c0629a4.a(this.mInputRenewalNumber.getText().toString());
-            arrayList.add(c0629a4);
+            AddContactDoubleCheckView.a aVar4 = new AddContactDoubleCheckView.a();
+            aVar4.b(this.mRenewalNumberTv.getText().toString());
+            aVar4.a(this.mInputRenewalNumber.getText().toString());
+            arrayList.add(aVar4);
         }
         return arrayList;
     }
@@ -610,13 +593,13 @@ public class AddContactsActivity extends DamaiBaseActivity {
             ipChange.ipc$dispatch("253080731", new Object[]{this});
             return;
         }
-        this.mOnClearContactNameClickListener = new View$OnClickListenerC0618f();
-        this.mOnClearContactIdCardNumClickListener = new View$OnClickListenerC0619g();
-        this.mOnClearRenewalNumClickListener = new View$OnClickListenerC0620h();
-        this.mContactNameTextWatcher = new C0621i();
-        this.mContactIdCardNumTextWatcher = new C0622j();
-        this.mContactRenewalNumTextWatcher = new C0623k();
-        this.mClickableSpan = new C0624l();
+        this.mOnClearContactNameClickListener = new f();
+        this.mOnClearContactIdCardNumClickListener = new g();
+        this.mOnClearRenewalNumClickListener = new h();
+        this.mContactNameTextWatcher = new i();
+        this.mContactIdCardNumTextWatcher = new j();
+        this.mContactRenewalNumTextWatcher = new k();
+        this.mClickableSpan = new l();
     }
 
     private void requestAddContacts() {
@@ -700,8 +683,8 @@ public class AddContactsActivity extends DamaiBaseActivity {
         }
         QueryCardTypeRequest queryCardTypeRequest = new QueryCardTypeRequest();
         ArrayList arrayList = new ArrayList();
-        for (int i = 0; i < this.mDatas.size(); i++) {
-            arrayList.add(String.valueOf(this.mDatas.get(i).id));
+        for (int i2 = 0; i2 < this.mDatas.size(); i2++) {
+            arrayList.add(String.valueOf(this.mDatas.get(i2).id));
         }
         if (arrayList.size() > 0) {
             queryCardTypeRequest.needReturnTypeList = arrayList;
@@ -733,8 +716,8 @@ public class AddContactsActivity extends DamaiBaseActivity {
                 addContactsActivity.onResponseSuccess(addContactsActivity.mContainer);
                 AddContactsActivity.this.dialogTipInfo = queryCardTypeBean.getTipInfo();
                 AddContactsActivity.this.mCardTypeInfo = queryCardTypeBean.getCustomerTypeList();
-                for (int i2 = 0; i2 < wh2.e(AddContactsActivity.this.mCardTypeInfo); i2++) {
-                    AddContactsActivity.this.mIdTypeNames.add(((CustomerType) AddContactsActivity.this.mCardTypeInfo.get(i2)).getIdentityName());
+                for (int i3 = 0; i3 < wh2.e(AddContactsActivity.this.mCardTypeInfo); i3++) {
+                    AddContactsActivity.this.mIdTypeNames.add(((CustomerType) AddContactsActivity.this.mCardTypeInfo.get(i3)).getIdentityName());
                 }
                 if (AddContactsActivity.this.mCardTypeInfo != null && AddContactsActivity.this.mCardTypeInfo.size() > 0) {
                     AddContactsActivity addContactsActivity2 = AddContactsActivity.this;
@@ -755,8 +738,8 @@ public class AddContactsActivity extends DamaiBaseActivity {
         this.mIvClearContactIdCardNum.setOnClickListener(this.mOnClearContactIdCardNumClickListener);
         this.mIvClearRenewalNum.setOnClickListener(this.mOnClearRenewalNumClickListener);
         this.mInputUserName.addTextChangedListener(this.mContactNameTextWatcher);
-        this.mUpperCaseTransform = new C0627o(this);
-        this.mNormalTransform = new C0626n(this);
+        this.mUpperCaseTransform = new o(this);
+        this.mNormalTransform = new n(this);
         this.mInputRenewalNumber.addTextChangedListener(this.mContactRenewalNumTextWatcher);
         this.mInputUserIdNumber.addTextChangedListener(this.mContactIdCardNumTextWatcher);
     }
@@ -770,7 +753,7 @@ public class AddContactsActivity extends DamaiBaseActivity {
         } else {
             AddContactDoubleCheckView addContactDoubleCheckView = new AddContactDoubleCheckView(this);
             addContactDoubleCheckView.setData(getCurrentInput());
-            new DMDialog(this).r(this.dialogTipInfo, Color.parseColor("#353535"), 12.0f).t(GravityCompat.START).y(addContactDoubleCheckView).e(t60.a(this, 18.0f)).i("修改", new DialogInterface$OnClickListenerC0613a(this, str)).n(PurchaseConstants.CONFIRM, new DialogInterface$OnClickListenerC0625m(str)).show();
+            new DMDialog(this).r(this.dialogTipInfo, Color.parseColor("#353535"), 12.0f).t(GravityCompat.START).y(addContactDoubleCheckView).e(t60.a(this, 18.0f)).i("修改", new a(this, str)).n(PurchaseConstants.CONFIRM, new m(str)).show();
             this.doubleCheckExposureStr = System.currentTimeMillis();
         }
     }
@@ -839,9 +822,9 @@ public class AddContactsActivity extends DamaiBaseActivity {
                 }
             }
         } else {
-            DMDialog n = new DMDialog(this).o(false).q(getTipText(str2)).n("知道了", this.mDialogOnClickListener);
-            this.mErrorTipDialog = n;
-            n.show();
+            DMDialog n2 = new DMDialog(this).o(false).q(getTipText(str2)).n("知道了", this.mDialogOnClickListener);
+            this.mErrorTipDialog = n2;
+            n2.show();
         }
         if (str.equals("FAIL_BIZ_UC_5016") || str.equals("FAIL_BIZ_UC_400") || str.equals("FAIL_BIZ_UC_5039")) {
             return;
@@ -850,10 +833,10 @@ public class AddContactsActivity extends DamaiBaseActivity {
     }
 
     @Override // cn.damai.common.app.base.BaseActivity
-    public void dealHeaderClick(int i) {
+    public void dealHeaderClick(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-933118232")) {
-            ipChange.ipc$dispatch("-933118232", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-933118232", new Object[]{this, Integer.valueOf(i2)});
         }
     }
 
@@ -873,20 +856,20 @@ public class AddContactsActivity extends DamaiBaseActivity {
         }
         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(str);
         int length = str.length();
-        for (int i = 0; i < length; i++) {
-            char charAt = str.charAt(i);
+        for (int i2 = 0; i2 < length; i2++) {
+            char charAt = str.charAt(i2);
             if (charAt >= '0' && charAt <= '9') {
-                spannableStringBuilder.setSpan(new ForegroundColorSpan(getResources().getColor(R$color.main_color)), i, i + 1, 33);
+                spannableStringBuilder.setSpan(new ForegroundColorSpan(getResources().getColor(R$color.main_color)), i2, i2 + 1, 33);
             }
         }
         return spannableStringBuilder;
     }
 
     @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
-    public void handleError(int i) {
+    public void handleError(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "866346425")) {
-            ipChange.ipc$dispatch("866346425", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("866346425", new Object[]{this, Integer.valueOf(i2)});
         } else {
             requestCardType();
         }
@@ -976,7 +959,7 @@ public class AddContactsActivity extends DamaiBaseActivity {
             finish();
         } else if (id == R$id.add_contacts_save_btn) {
             if (this.mIdTypeBtn.getTag() != null) {
-                C0529c.e().x(kn.j().g(String.valueOf(((CustomerType) this.mIdTypeBtn.getTag()).getIdentityCode())));
+                cn.damai.common.user.c.e().x(kn.j().g(String.valueOf(((CustomerType) this.mIdTypeBtn.getTag()).getIdentityCode())));
                 if (LoginManager.k().q()) {
                     requestAddContacts();
                 } else {
@@ -1000,17 +983,17 @@ public class AddContactsActivity extends DamaiBaseActivity {
     }
 
     @Override // androidx.appcompat.app.AppCompatActivity, android.app.Activity, android.view.KeyEvent.Callback
-    public boolean onKeyDown(int i, KeyEvent keyEvent) {
+    public boolean onKeyDown(int i2, KeyEvent keyEvent) {
         DMDialog dMDialog;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "595315429")) {
-            return ((Boolean) ipChange.ipc$dispatch("595315429", new Object[]{this, Integer.valueOf(i), keyEvent})).booleanValue();
+            return ((Boolean) ipChange.ipc$dispatch("595315429", new Object[]{this, Integer.valueOf(i2), keyEvent})).booleanValue();
         }
-        if (i == 4 && (((dMDialog = this.mErrorTipDialog) != null && dMDialog.isShowing()) || this.mProgressBarIsShowing)) {
+        if (i2 == 4 && (((dMDialog = this.mErrorTipDialog) != null && dMDialog.isShowing()) || this.mProgressBarIsShowing)) {
             hideProgressBar();
             return true;
         }
-        return super.onKeyDown(i, keyEvent);
+        return super.onKeyDown(i2, keyEvent);
     }
 
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity
@@ -1074,8 +1057,8 @@ public class AddContactsActivity extends DamaiBaseActivity {
         attributes.height = t60.a(this, 245.0f);
         window.setAttributes(attributes);
         dialog.setCanceledOnTouchOutside(true);
-        ((TextView) inflate.findViewById(R$id.add_contacts_cancel_btn)).setOnClickListener(new View$OnClickListenerC0628p(dialog));
-        ((TextView) inflate.findViewById(R$id.add_contacts_confirm_btn)).setOnClickListener(new View$OnClickListenerC0628p(dialog));
+        ((TextView) inflate.findViewById(R$id.add_contacts_cancel_btn)).setOnClickListener(new p(dialog));
+        ((TextView) inflate.findViewById(R$id.add_contacts_confirm_btn)).setOnClickListener(new p(dialog));
         if (this.mIdTypeNames.size() > 0) {
             dialog.show();
         }

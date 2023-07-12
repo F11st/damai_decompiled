@@ -32,9 +32,8 @@ public final class GridViewAdapter extends BaseAdapter {
     private final Context context;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.share.common.ui.adapter.GridViewAdapter$a */
     /* loaded from: classes8.dex */
-    public static final class C3640a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
         @Nullable
         private ImageView a;
@@ -109,22 +108,22 @@ public final class GridViewAdapter extends BaseAdapter {
         if (AndroidInstantRuntime.support(ipChange, "1114625446")) {
             return (View) ipChange.ipc$dispatch("1114625446", new Object[]{this, Integer.valueOf(i), view, viewGroup});
         }
-        C3640a c3640a = new C3640a();
+        a aVar = new a();
         if (view == null) {
             view = LayoutInflater.from(this.context).inflate(R$layout.share_channel_item, (ViewGroup) null);
-            c3640a.c((ImageView) view.findViewById(R$id.share_channel_icon));
-            c3640a.d((TextView) view.findViewById(R$id.share_channel_name));
-            view.setTag(c3640a);
+            aVar.c((ImageView) view.findViewById(R$id.share_channel_icon));
+            aVar.d((TextView) view.findViewById(R$id.share_channel_name));
+            view.setTag(aVar);
         } else {
             Object tag = view.getTag();
             Objects.requireNonNull(tag, "null cannot be cast to non-null type com.alibaba.pictures.share.common.ui.adapter.GridViewAdapter.ShareChannelItem");
-            c3640a = (C3640a) tag;
+            aVar = (a) tag;
         }
-        ImageView a = c3640a.a();
-        if (a != null) {
-            a.setImageResource(getItem(i).a());
+        ImageView a2 = aVar.a();
+        if (a2 != null) {
+            a2.setImageResource(getItem(i).a());
         }
-        TextView b = c3640a.b();
+        TextView b = aVar.b();
         if (b != null) {
             b.setText(getItem(i).c());
         }

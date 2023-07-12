@@ -5,7 +5,7 @@ import android.content.Context;
 import android.taobao.windvane.jsbridge.WVCallBackContext;
 import android.text.TextUtils;
 import cn.damai.wxapi.ShareUtil;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.tencent.open.SocialConstants;
@@ -95,7 +95,7 @@ public class ActionWxShare extends DMBridgeAction {
             return;
         }
         qw2.d("aa", "weixin share click");
-        ShareUtil shareUtil = new ShareUtil((Activity) this.contextReference, C3834a.C3837c.d);
+        ShareUtil shareUtil = new ShareUtil((Activity) this.contextReference, a.c.d);
         shareUtil.initShareData(str, str2, str3, str4, "");
         shareUtil.shareByWchart(i);
     }

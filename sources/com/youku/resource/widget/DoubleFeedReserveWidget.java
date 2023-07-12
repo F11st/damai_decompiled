@@ -273,7 +273,7 @@ public class DoubleFeedReserveWidget extends View implements ICssSetter2 {
         float f4 = descFontMetrics.bottom;
         descBaseline = ((height / 2) + ((f4 - descFontMetrics.top) / 2.0f)) - f4;
         initIconRect();
-        mBgColor = getResources().getColor(R.C8071color.ykn_primary_fill_color);
+        mBgColor = getResources().getColor(R.color.ykn_primary_fill_color);
     }
 
     private TextPaint initTitlePaint() {

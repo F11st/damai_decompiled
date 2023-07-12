@@ -32,12 +32,12 @@ public interface CoroutineContext {
                     if (minusKey == emptyCoroutineContext) {
                         return element;
                     }
-                    ContinuationInterceptor.C8231b c8231b = ContinuationInterceptor.Key;
-                    ContinuationInterceptor continuationInterceptor = (ContinuationInterceptor) minusKey.get(c8231b);
+                    ContinuationInterceptor.b bVar = ContinuationInterceptor.Key;
+                    ContinuationInterceptor continuationInterceptor = (ContinuationInterceptor) minusKey.get(bVar);
                     if (continuationInterceptor == null) {
                         combinedContext = new CombinedContext(minusKey, element);
                     } else {
-                        CoroutineContext minusKey2 = minusKey.minusKey(c8231b);
+                        CoroutineContext minusKey2 = minusKey.minusKey(bVar);
                         if (minusKey2 == emptyCoroutineContext) {
                             return new CombinedContext(element, continuationInterceptor);
                         }
@@ -54,9 +54,8 @@ public interface CoroutineContext {
     public interface Element extends CoroutineContext {
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.coroutines.CoroutineContext$Element$a */
         /* loaded from: classes3.dex */
-        public static final class C8232a {
+        public static final class a {
             public static <R> R a(@NotNull Element element, R r, @NotNull Function2<? super R, ? super Element, ? extends R> function2) {
                 b41.i(function2, "operation");
                 return function2.invoke(r, element);

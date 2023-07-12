@@ -4,12 +4,12 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
 import com.alibaba.fastjson.JSON;
-import com.taobao.slide.core.C6889b;
 import com.taobao.slide.core.SlideException;
 import com.taobao.slide.core.SlideReceiver;
+import com.taobao.slide.core.b;
 import com.taobao.slide.model.AppDO;
 import com.taobao.slide.model.AppUpdateDO;
-import com.taobao.slide.request.AbstractC6892c;
+import com.taobao.slide.request.c;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import tb.hh1;
@@ -27,7 +27,7 @@ public class UpdateTask implements Runnable {
     private static final String KEY_VER = "ver";
     private static final String TAG = "UpdateTask";
     private static Handler handler;
-    private C6889b engine;
+    private b engine;
     private Boolean fromGateWay;
     private Boolean isJson;
     private String updateInfo;
@@ -35,23 +35,22 @@ public class UpdateTask implements Runnable {
     private static AtomicBoolean isUpdateAllow = new AtomicBoolean(true);
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.slide.task.UpdateTask$a */
     /* loaded from: classes11.dex */
-    class C6896a extends AbstractC6892c<AppDO> {
-        C6896a(UpdateTask updateTask, Context context, String str, String str2) {
+    class a extends c<AppDO> {
+        a(UpdateTask updateTask, Context context, String str, String str2) {
             super(context, str, str2);
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.taobao.slide.request.AbstractC6891b
+        @Override // com.taobao.slide.request.b
         /* renamed from: f */
         public AppDO d(String str) {
             return (AppDO) JSON.parseObject(str, AppDO.class);
         }
     }
 
-    public UpdateTask(C6889b c6889b, boolean z, boolean z2, String str) {
-        this.engine = c6889b;
+    public UpdateTask(b bVar, boolean z, boolean z2, String str) {
+        this.engine = bVar;
         this.isJson = Boolean.valueOf(z);
         this.updateInfo = str;
         this.fromGateWay = Boolean.valueOf(z2);
@@ -117,7 +116,7 @@ public class UpdateTask implements Runnable {
                     if (parse.isValid()) {
                         m42.g(TAG, "run", "result", parse);
                         try {
-                            AppDO e2 = new C6896a(this, this.engine.c(), parse.url, parse.dig).e();
+                            AppDO e2 = new a(this, this.engine.c(), parse.url, parse.dig).e();
                             if (e2 != null && e2.isValid()) {
                                 if (this.engine.b().getAppKey().equals(e2.f1032app)) {
                                     if (parse.ver.equals(e2.version)) {

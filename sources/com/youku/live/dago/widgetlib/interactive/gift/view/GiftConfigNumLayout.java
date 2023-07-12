@@ -29,7 +29,7 @@ public class GiftConfigNumLayout extends LinearLayout {
         super(context, attributeSet, i);
         this.giftNumBeanArrayList = new ArrayList<>();
         setOrientation(1);
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ykl_gift_config_layout, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_ykl_gift_config_layout, (ViewGroup) this, true);
         this.gridView = (NoScrollGridView) findViewById(R.id.id_gv);
     }
 }

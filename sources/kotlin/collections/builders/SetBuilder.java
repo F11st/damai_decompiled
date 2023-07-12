@@ -4,13 +4,13 @@ import java.io.NotSerializableException;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Set;
-import kotlin.collections.AbstractC8198c;
+import kotlin.collections.c;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SetBuilder<E> extends AbstractC8198c<E> implements Set<E> {
+public final class SetBuilder<E> extends c<E> implements Set<E> {
     @NotNull
     private final MapBuilder<E, ?> backing;
 
@@ -26,7 +26,7 @@ public final class SetBuilder<E> extends AbstractC8198c<E> implements Set<E> {
         throw new NotSerializableException("The set cannot be serialized while it is being built.");
     }
 
-    @Override // kotlin.collections.AbstractC8198c, java.util.AbstractCollection, java.util.Collection, java.util.Set
+    @Override // kotlin.collections.c, java.util.AbstractCollection, java.util.Collection, java.util.Set
     public boolean add(E e) {
         return this.backing.addKey$kotlin_stdlib(e) >= 0;
     }
@@ -54,7 +54,7 @@ public final class SetBuilder<E> extends AbstractC8198c<E> implements Set<E> {
         return this.backing.containsKey(obj);
     }
 
-    @Override // kotlin.collections.AbstractC8198c
+    @Override // kotlin.collections.c
     public int getSize() {
         return this.backing.size();
     }

@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMRoundedCornersBitmapProcessor;
 import cn.damai.common.nav.DMNav;
@@ -13,7 +12,7 @@ import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
 import cn.damai.user.userprofile.bean.DynamicFeedData;
 import cn.damai.user.userprofile.bean.FeedMergeDataDO;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.List;
@@ -27,13 +26,12 @@ public class ForwardArticleHolder extends FeedsWraperHolder {
     Activity w;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.ForwardArticleHolder$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2772a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DynamicFeedData a;
 
-        View$OnClickListenerC2772a(DynamicFeedData dynamicFeedData) {
+        a(DynamicFeedData dynamicFeedData) {
             this.a = dynamicFeedData;
         }
 
@@ -46,19 +44,18 @@ public class ForwardArticleHolder extends FeedsWraperHolder {
             } else {
                 Bundle bundle = new Bundle();
                 bundle.putString("url", this.a.url);
-                DMNav.from(ForwardArticleHolder.this.w).needLogin().withExtras(bundle).toUri(NavUri.b(C3834a.C3837c.d));
+                DMNav.from(ForwardArticleHolder.this.w).needLogin().withExtras(bundle).toUri(NavUri.b(a.c.d));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.ForwardArticleHolder$b */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2773b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DynamicFeedData a;
 
-        View$OnClickListenerC2773b(DynamicFeedData dynamicFeedData) {
+        b(DynamicFeedData dynamicFeedData) {
             this.a = dynamicFeedData;
         }
 
@@ -71,7 +68,7 @@ public class ForwardArticleHolder extends FeedsWraperHolder {
             } else {
                 Bundle bundle = new Bundle();
                 bundle.putString("url", this.a.originalUrl);
-                DMNav.from(ForwardArticleHolder.this.w).needLogin().withExtras(bundle).toUri(NavUri.b(C3834a.C3837c.d));
+                DMNav.from(ForwardArticleHolder.this.w).needLogin().withExtras(bundle).toUri(NavUri.b(a.c.d));
             }
         }
     }
@@ -98,12 +95,12 @@ public class ForwardArticleHolder extends FeedsWraperHolder {
             ImageView imageView = (ImageView) this.itemView.findViewById(R$id.user_feeds_article_img);
             List<String> list2 = dynamicFeedData.forwardImgs;
             if (list2 != null && list2.size() > 0) {
-                DMImageCreator k = C0504a.b().c(dynamicFeedData.forwardImgs.get(0)).k(new DMRoundedCornersBitmapProcessor(t60.a(this.w, 3.0f), 0));
+                DMImageCreator k = cn.damai.common.image.a.b().c(dynamicFeedData.forwardImgs.get(0)).k(new DMRoundedCornersBitmapProcessor(t60.a(this.w, 3.0f), 0));
                 int i2 = R$drawable.uikit_default_image_bg_grey;
                 k.i(i2).c(i2).g(imageView);
             }
-            this.itemView.findViewById(i).setOnClickListener(new View$OnClickListenerC2772a(dynamicFeedData));
-            this.itemView.findViewById(R$id.rl_content_wrapper).setOnClickListener(new View$OnClickListenerC2773b(dynamicFeedData));
+            this.itemView.findViewById(i).setOnClickListener(new a(dynamicFeedData));
+            this.itemView.findViewById(R$id.rl_content_wrapper).setOnClickListener(new b(dynamicFeedData));
         }
     }
 }

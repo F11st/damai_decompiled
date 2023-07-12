@@ -33,17 +33,16 @@ public class RemoteChannel {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.riverlogger.remote.RemoteChannel$a */
     /* loaded from: classes11.dex */
-    public class C6579a implements WebSocketCallback {
-        C6579a() {
+    public class a implements WebSocketCallback {
+        a() {
         }
 
         @Override // com.taobao.android.riverlogger.remote.WebSocketCallback
         public void onSocketClose(int i, String str) {
             RemoteChannel.this.h(Integer.valueOf(i), str);
             if (i == 4040) {
-                C6581b.b();
+                b.b();
             }
             RemoteChannel.this.d = null;
         }
@@ -69,7 +68,7 @@ public class RemoteChannel {
 
     private RVLWebSocketClient f() {
         if (this.d == null) {
-            RVLWebSocketClient rVLWebSocketClient = new RVLWebSocketClient(URI.create(this.a), new C6579a());
+            RVLWebSocketClient rVLWebSocketClient = new RVLWebSocketClient(URI.create(this.a), new a());
             this.d = rVLWebSocketClient;
             rVLWebSocketClient.connect();
         }

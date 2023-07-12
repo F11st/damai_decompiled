@@ -25,19 +25,18 @@ public final class by {
     private by(Context context) {
         this.d = context.getApplicationContext();
         if (Looper.myLooper() == null) {
-            this.e = new HandlerC4401a(Looper.getMainLooper(), this);
+            this.e = new a(Looper.getMainLooper(), this);
         } else {
-            this.e = new HandlerC4401a(this);
+            this.e = new a(this);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.by$a */
     /* loaded from: classes10.dex */
-    private static final class HandlerC4401a extends Handler {
+    private static final class a extends Handler {
         private final WeakReference<by> a;
 
-        HandlerC4401a(by byVar) {
+        a(by byVar) {
             this.a = new WeakReference<>(byVar);
         }
 
@@ -51,7 +50,7 @@ public final class by {
             byVar.a((String) obj, message.what);
         }
 
-        HandlerC4401a(Looper looper, by byVar) {
+        a(Looper looper, by byVar) {
             super(looper);
             this.a = new WeakReference<>(byVar);
         }

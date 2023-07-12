@@ -30,7 +30,7 @@ import tb.k50;
 public final class LocateQueueManager {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C3618a Companion = new C3618a(null);
+    public static final a Companion = new a(null);
     private static boolean i = true;
     @Nullable
     private static LocateQueueManager j;
@@ -45,12 +45,11 @@ public final class LocateQueueManager {
     private LocationRequestDelegate h;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.piclocation.LocateQueueManager$a */
     /* loaded from: classes7.dex */
-    public static final class C3618a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3618a() {
+        private a() {
         }
 
         @Nullable
@@ -65,19 +64,18 @@ public final class LocateQueueManager {
             return LocateQueueManager.j;
         }
 
-        public /* synthetic */ C3618a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.piclocation.LocateQueueManager$b */
     /* loaded from: classes7.dex */
-    public static final class C3619b implements RegionRequestHandler {
+    public static final class b implements RegionRequestHandler {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ga1 b;
 
-        C3619b(ga1 ga1Var) {
+        b(ga1 ga1Var) {
             this.b = ga1Var;
         }
 
@@ -111,12 +109,11 @@ public final class LocateQueueManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.piclocation.LocateQueueManager$c */
     /* loaded from: classes7.dex */
-    public static final class HandlerC3620c extends Handler {
+    public static final class c extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC3620c(Looper looper) {
+        c(Looper looper) {
             super(looper);
         }
 
@@ -164,7 +161,7 @@ public final class LocateQueueManager {
         this.c = new ArrayList(4);
         this.d = new ArrayList(4);
         this.f = true;
-        this.g = new HandlerC3620c(Looper.getMainLooper());
+        this.g = new c(Looper.getMainLooper());
     }
 
     private final void j(ga1 ga1Var) {
@@ -175,7 +172,7 @@ public final class LocateQueueManager {
             if (this.a.compareAndSet(false, true)) {
                 LocationRequestDelegate locationRequestDelegate = this.h;
                 b41.f(locationRequestDelegate);
-                locationRequestDelegate.requestRegionData(ga1Var, new C3619b(ga1Var));
+                locationRequestDelegate.requestRegionData(ga1Var, new b(ga1Var));
             }
         } else {
             ga1Var.c = "";

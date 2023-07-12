@@ -29,9 +29,8 @@ public class gm {
     private String[] l;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.gm$a */
     /* loaded from: classes10.dex */
-    public static class C4569a {
+    public static class a {
         private String a;
         private String b;
         private String c;
@@ -40,21 +39,21 @@ public class gm {
         private String f = Point.STANDARD;
         private String[] g = null;
 
-        public C4569a(String str, String str2, String str3) {
+        public a(String str, String str2, String str3) {
             this.a = str2;
             this.b = str2;
             this.d = str3;
             this.c = str;
         }
 
-        public C4569a a(String[] strArr) {
+        public a a(String[] strArr) {
             if (strArr != null) {
                 this.g = (String[]) strArr.clone();
             }
             return this;
         }
 
-        public C4569a a(String str) {
+        public a a(String str) {
             this.b = str;
             return this;
         }
@@ -152,16 +151,16 @@ public class gm {
         return this.j;
     }
 
-    private gm(C4569a c4569a) {
+    private gm(a aVar) {
         this.c = 1;
         this.l = null;
-        this.g = c4569a.a;
-        this.h = c4569a.b;
-        this.j = c4569a.c;
-        this.i = c4569a.d;
-        this.c = c4569a.e ? 1 : 0;
-        this.k = c4569a.f;
-        this.l = c4569a.g;
+        this.g = aVar.a;
+        this.h = aVar.b;
+        this.j = aVar.c;
+        this.i = aVar.d;
+        this.c = aVar.e ? 1 : 0;
+        this.k = aVar.f;
+        this.l = aVar.g;
         this.b = gn.b(this.h);
         this.a = gn.b(this.j);
         this.d = gn.b(this.i);

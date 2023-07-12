@@ -33,7 +33,7 @@ import java.util.Vector;
 public final class SharedPreferencesNewImpl implements SharedPreferences {
     private final LinkedHashMap<String, Object> a;
     private final ArrayList<SharedPreferences.OnSharedPreferenceChangeListener> b;
-    private FileObserverC3235e c;
+    private e c;
     private boolean d;
     private File e;
     private String f;
@@ -74,9 +74,8 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.newsharedpreferences.SharedPreferencesNewImpl$a */
     /* loaded from: classes5.dex */
-    public static class C3231a {
+    public static class a {
         public static float a(byte[] bArr) {
             return ByteBuffer.wrap(bArr).getFloat();
         }
@@ -88,9 +87,8 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.newsharedpreferences.SharedPreferencesNewImpl$b */
     /* loaded from: classes5.dex */
-    public static class C3232b {
+    public static class b {
         public static int a(byte[] bArr) {
             return ByteBuffer.wrap(bArr).getInt();
         }
@@ -102,9 +100,8 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.newsharedpreferences.SharedPreferencesNewImpl$c */
     /* loaded from: classes5.dex */
-    public static class C3233c {
+    public static class c {
         public static long a(byte[] bArr) {
             return ByteBuffer.wrap(bArr).getLong();
         }
@@ -115,13 +112,12 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.newsharedpreferences.SharedPreferencesNewImpl$d */
     /* loaded from: classes5.dex */
-    public final class SharedPreferences$EditorC3234d implements SharedPreferences.Editor {
+    public final class d implements SharedPreferences.Editor {
         private HashMap<String, Object> a = new HashMap<>();
         private boolean b;
 
-        public SharedPreferences$EditorC3234d() {
+        public d() {
         }
 
         boolean a() {
@@ -215,10 +211,9 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.newsharedpreferences.SharedPreferencesNewImpl$e */
     /* loaded from: classes5.dex */
-    private final class FileObserverC3235e extends FileObserver {
-        public FileObserverC3235e(String str, int i) {
+    private final class e extends FileObserver {
+        public e(String str, int i) {
             super(str, i);
         }
 
@@ -242,7 +237,7 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
         String str;
         long length;
         RandomAccessFile randomAccessFile;
-        int a;
+        int a2;
         Closeable closeable = null;
         byte[] bArr2 = null;
         boolean z = true;
@@ -251,7 +246,7 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
             try {
                 byte[] bArr3 = new byte[4];
                 randomAccessFile.read(bArr3, 0, 4);
-                a = C3232b.a(bArr3);
+                a2 = b.a(bArr3);
             } catch (Throwable th) {
                 th = th;
                 bArr = bArr2;
@@ -261,8 +256,8 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                     L(closeable);
                     try {
                         z = H(bArr, false);
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                    } catch (Exception e2) {
+                        e2.printStackTrace();
                     }
                     onSharedPreferenceErrorListener = this.p;
                     if (onSharedPreferenceErrorListener != null) {
@@ -275,8 +270,8 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                     L(closeable);
                     try {
                         z = H(bArr, false);
-                    } catch (Exception e2) {
-                        e2.printStackTrace();
+                    } catch (Exception e3) {
+                        e3.printStackTrace();
                     }
                     OnSharedPreferenceErrorListener onSharedPreferenceErrorListener2 = this.p;
                     if (onSharedPreferenceErrorListener2 != null) {
@@ -289,30 +284,30 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
             th = th3;
             bArr = null;
         }
-        if (a <= 10) {
+        if (a2 <= 10) {
             L(randomAccessFile);
             try {
                 H(null, false);
-            } catch (Exception e3) {
-                e3.printStackTrace();
+            } catch (Exception e4) {
+                e4.printStackTrace();
             }
             return false;
         }
-        if (a > Integer.MAX_VALUE) {
-            a = Integer.MAX_VALUE;
+        if (a2 > Integer.MAX_VALUE) {
+            a2 = Integer.MAX_VALUE;
         }
-        if (a > randomAccessFile.length()) {
-            a = (int) randomAccessFile.length();
+        if (a2 > randomAccessFile.length()) {
+            a2 = (int) randomAccessFile.length();
         }
-        int i = a - 10;
+        int i = a2 - 10;
         bArr2 = new byte[i];
         randomAccessFile.seek(10L);
         randomAccessFile.read(bArr2);
         L(randomAccessFile);
         try {
             z = H(bArr2, false);
-        } catch (Exception e4) {
-            e4.printStackTrace();
+        } catch (Exception e5) {
+            e5.printStackTrace();
         }
         onSharedPreferenceErrorListener = this.p;
         if (onSharedPreferenceErrorListener != null) {
@@ -344,14 +339,14 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
             while (fileLock == null) {
                 try {
                     fileLock = this.h.tryLock();
-                } catch (Exception e) {
-                    e.printStackTrace();
+                } catch (Exception e2) {
+                    e2.printStackTrace();
                 }
                 if (fileLock == null) {
                     try {
                         Thread.sleep(100L);
-                    } catch (Exception e2) {
-                        e2.printStackTrace();
+                    } catch (Exception e3) {
+                        e3.printStackTrace();
                     }
                 }
                 if (SystemClock.elapsedRealtime() - elapsedRealtime > 10000) {
@@ -362,8 +357,8 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
         }
         try {
             return fileChannel.tryLock();
-        } catch (Exception e3) {
-            e3.printStackTrace();
+        } catch (Exception e4) {
+            e4.printStackTrace();
             return null;
         }
     }
@@ -372,17 +367,17 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
         if (editor == null) {
             return false;
         }
-        SharedPreferences$EditorC3234d sharedPreferences$EditorC3234d = (SharedPreferences$EditorC3234d) editor;
-        boolean a = sharedPreferences$EditorC3234d.a();
-        if (a) {
+        d dVar = (d) editor;
+        boolean a2 = dVar.a();
+        if (a2) {
             map.clear();
         }
-        HashMap<String, Object> b = sharedPreferences$EditorC3234d.b();
-        if (b.size() == 0) {
-            return a;
+        HashMap<String, Object> b2 = dVar.b();
+        if (b2.size() == 0) {
+            return a2;
         }
         synchronized (editor) {
-            for (Map.Entry<String, Object> entry : b.entrySet()) {
+            for (Map.Entry<String, Object> entry : b2.entrySet()) {
                 String key = entry.getKey();
                 Object value = entry.getValue();
                 if (value == null) {
@@ -430,15 +425,15 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
             intValue = Integer.MAX_VALUE;
         }
         byte[] bArr = new byte[intValue];
-        byte[] b = C3232b.b(intValue);
-        System.arraycopy(b, 0, bArr, 0, b.length);
-        int length = b.length + 0;
-        bArr[length] = r(b);
+        byte[] b2 = b.b(intValue);
+        System.arraycopy(b2, 0, bArr, 0, b2.length);
+        int length = b2.length + 0;
+        bArr[length] = r(b2);
         int i = length + 1;
-        byte[] b2 = C3232b.b(w());
-        System.arraycopy(b2, 0, bArr, i, b2.length);
-        int length2 = i + b2.length;
-        bArr[length2] = r(b2);
+        byte[] b3 = b.b(w());
+        System.arraycopy(b3, 0, bArr, i, b3.length);
+        int length2 = i + b3.length;
+        bArr[length2] = r(b3);
         int i2 = length2 + 1;
         byte[][] bArr2 = (byte[][]) q.second;
         int length3 = bArr2.length;
@@ -515,8 +510,8 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                 if (p > this.i.capacity()) {
                     j(p + 1024);
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
         }
     }
@@ -548,8 +543,8 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
         if (closeable != null) {
             try {
                 closeable.close();
-            } catch (IOException e) {
-                e.printStackTrace();
+            } catch (IOException e2) {
+                e2.printStackTrace();
             }
         }
     }
@@ -589,8 +584,8 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                     if (this.o.size() <= 0) {
                         try {
                             C.release();
-                        } catch (IOException e) {
-                            e.printStackTrace();
+                        } catch (IOException e2) {
+                            e2.printStackTrace();
                         }
                         return;
                     }
@@ -598,8 +593,8 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                     l();
                     try {
                         C.release();
-                    } catch (IOException e2) {
-                        e2.printStackTrace();
+                    } catch (IOException e3) {
+                        e3.printStackTrace();
                     }
                 }
             } else {
@@ -664,8 +659,8 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
         int position = mappedByteBuffer != null ? mappedByteBuffer.position() : 0;
         try {
             this.i = this.h.map(FileChannel.MapMode.READ_WRITE, 0L, i);
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
         MappedByteBuffer mappedByteBuffer2 = this.i;
         if (mappedByteBuffer2 != null) {
@@ -718,11 +713,11 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
     }
 
     private byte n(byte[] bArr) {
-        byte b = 0;
-        for (byte b2 : bArr) {
-            b = (byte) (b ^ b2);
+        byte b2 = 0;
+        for (byte b3 : bArr) {
+            b2 = (byte) (b2 ^ b3);
         }
-        return b;
+        return b2;
     }
 
     private byte[] o(Object obj) {
@@ -740,13 +735,13 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                     bArr[0] = (byte) i;
                     return bArr;
                 } else if (obj instanceof Float) {
-                    return C3231a.b(((Float) obj).floatValue());
+                    return a.b(((Float) obj).floatValue());
                 } else {
                     if (obj instanceof Integer) {
-                        return C3232b.b(((Integer) obj).intValue());
+                        return b.b(((Integer) obj).intValue());
                     }
                     if (obj instanceof Long) {
-                        return C3233c.b(((Long) obj).longValue());
+                        return c.b(((Long) obj).longValue());
                     }
                     return null;
                 }
@@ -766,14 +761,14 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
             this.i.position(0);
             byte[] bArr = new byte[4];
             J(this.i, bArr);
-            int a = C3232b.a(bArr);
+            int a2 = b.a(bArr);
             this.i.position(4);
-            byte b = this.i.get();
-            if ((b == 18 || b == r(bArr)) && a >= 0) {
-                if (a > Integer.MAX_VALUE) {
-                    a = Integer.MAX_VALUE;
+            byte b2 = this.i.get();
+            if ((b2 == 18 || b2 == r(bArr)) && a2 >= 0) {
+                if (a2 > Integer.MAX_VALUE) {
+                    a2 = Integer.MAX_VALUE;
                 }
-                return a;
+                return a2;
             }
             OnSharedPreferenceErrorListener onSharedPreferenceErrorListener = this.p;
             if (onSharedPreferenceErrorListener != null) {
@@ -802,18 +797,18 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
             Object value = entry.getValue();
             if (str != null && str.trim().length() > 0 && value != null) {
                 byte[] bytes = str.getBytes();
-                byte[] b = C3232b.b(bytes.length);
-                bArr[i2] = b;
+                byte[] b2 = b.b(bytes.length);
+                bArr[i2] = b2;
                 bArr[i2 + 1] = bytes;
-                int length = i + b.length + bytes.length;
+                int length = i + b2.length + bytes.length;
                 byte[] o = o(value);
-                byte[] b2 = C3232b.b(o.length);
-                bArr[i2 + 2] = b2;
+                byte[] b3 = b.b(o.length);
+                bArr[i2 + 2] = b3;
                 bArr[i2 + 3] = o;
                 byte[] bArr2 = new byte[1];
                 bArr2[0] = (byte) u(value);
                 bArr[i2 + 4] = bArr2;
-                i = length + b2.length + o.length + 1;
+                i = length + b3.length + o.length + 1;
                 i2 += 5;
             }
         }
@@ -839,13 +834,13 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                 }
                 return Boolean.valueOf(z);
             } else if (i == 2) {
-                return Float.valueOf(C3231a.a(bArr));
+                return Float.valueOf(a.a(bArr));
             } else {
                 if (i == 1) {
-                    return Integer.valueOf(C3232b.a(bArr));
+                    return Integer.valueOf(b.a(bArr));
                 }
                 if (i == 3) {
-                    return Long.valueOf(C3233c.a(bArr));
+                    return Long.valueOf(c.a(bArr));
                 }
                 return null;
             }
@@ -881,14 +876,14 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
             throw new Exception("length string's finish mark missing");
         }
         int i5 = i4 + 1;
-        int a = C3232b.a(bArr2);
-        if (a >= 0 && (i2 = i5 + a) < bArr.length && a <= Integer.MAX_VALUE) {
+        int a2 = b.a(bArr2);
+        if (a2 >= 0 && (i2 = i5 + a2) < bArr.length && a2 <= Integer.MAX_VALUE) {
             byte[] bArr3 = null;
-            if (a == 0) {
+            if (a2 == 0) {
                 i3 = i5 + 1;
             } else {
-                bArr3 = new byte[a];
-                System.arraycopy(bArr, i5, bArr3, 0, a);
+                bArr3 = new byte[a2];
+                System.arraycopy(bArr, i5, bArr3, 0, a2);
                 if (bArr[i2] != 18 && bArr[i2] != r(bArr3)) {
                     throw new Exception("Stored bytes' finish mark missing");
                 }
@@ -926,11 +921,11 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                     y();
                 }
                 return z;
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
                 OnSharedPreferenceErrorListener onSharedPreferenceErrorListener2 = this.p;
                 if (onSharedPreferenceErrorListener2 != null) {
-                    onSharedPreferenceErrorListener2.onError(this.e.getAbsolutePath() + " " + e.getCause(), 10, -1L);
+                    onSharedPreferenceErrorListener2.onError(this.e.getAbsolutePath() + " " + e2.getCause(), 10, -1L);
                     return false;
                 }
                 return false;
@@ -942,12 +937,12 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
     private void y() {
         if (this.i != null) {
             byte[] bArr = new byte[10];
-            byte[] b = C3232b.b(0);
-            System.arraycopy(b, 0, bArr, 0, 4);
-            bArr[4] = r(b);
-            byte[] b2 = C3232b.b(0);
-            System.arraycopy(b2, 0, bArr, 5, 4);
-            bArr[9] = r(b2);
+            byte[] b2 = b.b(0);
+            System.arraycopy(b2, 0, bArr, 0, 4);
+            bArr[4] = r(b2);
+            byte[] b3 = b.b(0);
+            System.arraycopy(b3, 0, bArr, 5, 4);
+            bArr[9] = r(b3);
             this.i.position(0);
             this.i.put(bArr);
         }
@@ -972,8 +967,8 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                 if (p <= 10) {
                     try {
                         z2 = H(null, true);
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                    } catch (Exception e2) {
+                        e2.printStackTrace();
                     }
                     if (!z2 || this.g < 0) {
                         A();
@@ -982,8 +977,8 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                         try {
                             C.release();
                             return;
-                        } catch (Exception e2) {
-                            e2.printStackTrace();
+                        } catch (Exception e3) {
+                            e3.printStackTrace();
                             return;
                         }
                     }
@@ -1000,8 +995,8 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                 }
                 try {
                     z2 = H(bArr, true);
-                } catch (Exception e3) {
-                    e3.printStackTrace();
+                } catch (Exception e4) {
+                    e4.printStackTrace();
                 }
                 if (!z2 || (bArr == null && this.g < 0)) {
                     A();
@@ -1010,8 +1005,8 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                     try {
                         C.release();
                         return;
-                    } catch (Exception e4) {
-                        e4.printStackTrace();
+                    } catch (Exception e5) {
+                        e5.printStackTrace();
                         return;
                     }
                 }
@@ -1019,8 +1014,8 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
             }
             try {
                 z2 = H(null, true);
-            } catch (Exception e5) {
-                e5.printStackTrace();
+            } catch (Exception e6) {
+                e6.printStackTrace();
             }
             if (!z2 || this.g < 0) {
                 A();
@@ -1028,15 +1023,15 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
             if (C != null) {
                 try {
                     C.release();
-                } catch (Exception e6) {
-                    e6.printStackTrace();
+                } catch (Exception e7) {
+                    e7.printStackTrace();
                 }
             }
         } catch (Throwable th) {
             try {
                 z2 = H(bArr, true);
-            } catch (Exception e7) {
-                e7.printStackTrace();
+            } catch (Exception e8) {
+                e8.printStackTrace();
             }
             if (!z2 || (bArr == null && this.g < 0)) {
                 A();
@@ -1044,8 +1039,8 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
             if (C != null) {
                 try {
                     C.release();
-                } catch (Exception e8) {
-                    e8.printStackTrace();
+                } catch (Exception e9) {
+                    e9.printStackTrace();
                 }
             }
             throw th;
@@ -1065,7 +1060,7 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
     @Override // android.content.SharedPreferences
     public SharedPreferences.Editor edit() {
         k();
-        return new SharedPreferences$EditorC3234d();
+        return new d();
     }
 
     @Override // android.content.SharedPreferences
@@ -1088,7 +1083,7 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                     if (bool != null) {
                         z = bool.booleanValue();
                     }
-                } catch (ClassCastException e) {
+                } catch (ClassCastException e2) {
                     OnSharedPreferenceErrorListener onSharedPreferenceErrorListener = this.p;
                     if (onSharedPreferenceErrorListener != null) {
                         StringBuilder sb = new StringBuilder();
@@ -1096,7 +1091,7 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                         sb.append(file != null ? file.getAbsolutePath() : null);
                         sb.append(Constants.TYPE_LIVE_ROOM_BG_COLOR_PREFFIX);
                         sb.append(str);
-                        sb.append(e);
+                        sb.append(e2);
                         String sb2 = sb.toString();
                         File file2 = this.e;
                         onSharedPreferenceErrorListener.onError(sb2, 13, file2 != null ? file2.length() : 0L);
@@ -1120,7 +1115,7 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                     if (f2 != null) {
                         f = f2.floatValue();
                     }
-                } catch (ClassCastException e) {
+                } catch (ClassCastException e2) {
                     OnSharedPreferenceErrorListener onSharedPreferenceErrorListener = this.p;
                     if (onSharedPreferenceErrorListener != null) {
                         StringBuilder sb = new StringBuilder();
@@ -1128,7 +1123,7 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                         sb.append(file != null ? file.getAbsolutePath() : null);
                         sb.append(Constants.TYPE_LIVE_ROOM_BG_COLOR_PREFFIX);
                         sb.append(str);
-                        sb.append(e);
+                        sb.append(e2);
                         String sb2 = sb.toString();
                         File file2 = this.e;
                         onSharedPreferenceErrorListener.onError(sb2, 13, file2 != null ? file2.length() : 0L);
@@ -1152,7 +1147,7 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                     if (num != null) {
                         i = num.intValue();
                     }
-                } catch (ClassCastException e) {
+                } catch (ClassCastException e2) {
                     OnSharedPreferenceErrorListener onSharedPreferenceErrorListener = this.p;
                     if (onSharedPreferenceErrorListener != null) {
                         StringBuilder sb = new StringBuilder();
@@ -1160,7 +1155,7 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                         sb.append(file != null ? file.getAbsolutePath() : null);
                         sb.append(Constants.TYPE_LIVE_ROOM_BG_COLOR_PREFFIX);
                         sb.append(str);
-                        sb.append(e);
+                        sb.append(e2);
                         String sb2 = sb.toString();
                         File file2 = this.e;
                         onSharedPreferenceErrorListener.onError(sb2, 13, file2 != null ? file2.length() : 0L);
@@ -1184,7 +1179,7 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                     if (l != null) {
                         j = l.longValue();
                     }
-                } catch (ClassCastException e) {
+                } catch (ClassCastException e2) {
                     OnSharedPreferenceErrorListener onSharedPreferenceErrorListener = this.p;
                     if (onSharedPreferenceErrorListener != null) {
                         StringBuilder sb = new StringBuilder();
@@ -1192,7 +1187,7 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                         sb.append(file != null ? file.getAbsolutePath() : null);
                         sb.append(Constants.TYPE_LIVE_ROOM_BG_COLOR_PREFFIX);
                         sb.append(str);
-                        sb.append(e);
+                        sb.append(e2);
                         String sb2 = sb.toString();
                         File file2 = this.e;
                         onSharedPreferenceErrorListener.onError(sb2, 13, file2 != null ? file2.length() : 0L);
@@ -1216,7 +1211,7 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                     if (str3 != null) {
                         str2 = str3;
                     }
-                } catch (ClassCastException e) {
+                } catch (ClassCastException e2) {
                     OnSharedPreferenceErrorListener onSharedPreferenceErrorListener = this.p;
                     if (onSharedPreferenceErrorListener != null) {
                         StringBuilder sb = new StringBuilder();
@@ -1224,7 +1219,7 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                         sb.append(file != null ? file.getAbsolutePath() : null);
                         sb.append(Constants.TYPE_LIVE_ROOM_BG_COLOR_PREFFIX);
                         sb.append(str);
-                        sb.append(e);
+                        sb.append(e2);
                         String sb2 = sb.toString();
                         File file2 = this.e;
                         onSharedPreferenceErrorListener.onError(sb2, 13, file2 != null ? file2.length() : 0L);
@@ -1243,17 +1238,17 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
         throw new RuntimeException("putStringSet is not supported!");
     }
 
-    boolean m(byte b) {
-        return b == 4 || b == 2 || b == 1 || b == 3 || b == 5;
+    boolean m(byte b2) {
+        return b2 == 4 || b2 == 2 || b2 == 1 || b2 == 3 || b2 == 5;
     }
 
     @Override // android.content.SharedPreferences
     public void registerOnSharedPreferenceChangeListener(SharedPreferences.OnSharedPreferenceChangeListener onSharedPreferenceChangeListener) {
         if (onSharedPreferenceChangeListener != null) {
             this.b.add(onSharedPreferenceChangeListener);
-            FileObserverC3235e fileObserverC3235e = this.c;
-            if (fileObserverC3235e != null) {
-                fileObserverC3235e.startWatching();
+            e eVar = this.c;
+            if (eVar != null) {
+                eVar.startWatching();
             }
         }
     }
@@ -1268,11 +1263,11 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
             this.i.position(5);
             byte[] bArr = new byte[4];
             J(this.i, bArr);
-            int a = C3232b.a(bArr);
+            int a2 = b.a(bArr);
             this.i.position(9);
-            byte b = this.i.get();
-            if ((b == 18 || b == r(bArr)) && a >= 0) {
-                return a;
+            byte b2 = this.i.get();
+            if ((b2 == 18 || b2 == r(bArr)) && a2 >= 0) {
+                return a2;
             }
             int i = this.t + 1;
             this.t = i;
@@ -1338,12 +1333,12 @@ public final class SharedPreferencesNewImpl implements SharedPreferences {
                     if (!file2.exists()) {
                         file2.createNewFile();
                     }
-                } catch (Exception e) {
-                    e.printStackTrace();
+                } catch (Exception e2) {
+                    e2.printStackTrace();
                 }
                 SharedPreferencesNewImpl sharedPreferencesNewImpl = SharedPreferencesNewImpl.this;
                 SharedPreferencesNewImpl sharedPreferencesNewImpl2 = SharedPreferencesNewImpl.this;
-                sharedPreferencesNewImpl.c = new FileObserverC3235e(sharedPreferencesNewImpl2.f, 2);
+                sharedPreferencesNewImpl.c = new e(sharedPreferencesNewImpl2.f, 2);
                 if (SharedPreferencesNewImpl.this.b.size() > 0) {
                     SharedPreferencesNewImpl.this.c.startWatching();
                 }

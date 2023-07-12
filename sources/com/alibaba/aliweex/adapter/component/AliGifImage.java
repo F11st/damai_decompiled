@@ -14,9 +14,8 @@ import java.lang.reflect.InvocationTargetException;
 public class AliGifImage extends AliWXImage {
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.component.AliGifImage$a */
     /* loaded from: classes5.dex */
-    public static class C3023a implements ComponentCreator {
+    public static class a implements ComponentCreator {
         @Override // com.taobao.weex.ui.ComponentCreator
         /* renamed from: a */
         public AliGifImage createInstance(WXSDKInstance wXSDKInstance, WXVContainer wXVContainer, BasicComponentData basicComponentData) throws IllegalAccessException, InvocationTargetException, InstantiationException {

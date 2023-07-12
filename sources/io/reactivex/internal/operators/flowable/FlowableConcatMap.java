@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.fuseable.QueueSubscription;
@@ -501,8 +501,8 @@ public final class FlowableConcatMap<T, R> extends AbstractFlowableWithUpstream<
         }
     }
 
-    public FlowableConcatMap(AbstractC8147b<T> abstractC8147b, Function<? super T, ? extends Publisher<? extends R>> function, int i, ErrorMode errorMode) {
-        super(abstractC8147b);
+    public FlowableConcatMap(b<T> bVar, Function<? super T, ? extends Publisher<? extends R>> function, int i, ErrorMode errorMode) {
+        super(bVar);
         this.mapper = function;
         this.prefetch = i;
         this.errorMode = errorMode;
@@ -519,7 +519,7 @@ public final class FlowableConcatMap<T, R> extends AbstractFlowableWithUpstream<
         return new ConcatMapDelayed(subscriber, function, i, false);
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super R> subscriber) {
         if (FlowableScalarXMap.tryScalarXMapSubscribe(this.source, subscriber, this.mapper)) {
             return;

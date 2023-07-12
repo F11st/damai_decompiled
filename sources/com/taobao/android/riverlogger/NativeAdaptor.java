@@ -1,7 +1,6 @@
 package com.taobao.android.riverlogger;
 
 import androidx.annotation.Keep;
-import com.taobao.android.riverlogger.remote.C6581b;
 import com.taobao.android.riverlogger.remote.RemoteChannel;
 
 /* compiled from: Taobao */
@@ -16,20 +15,20 @@ class NativeAdaptor {
     }
 
     static void logInfo(int i, String str, String str2, String str3, String str4, String str5, String str6, long j, String str7) {
-        C6572c c6572c = new C6572c(RVLLevel.valueOf(i), str);
-        c6572c.j = true;
-        c6572c.c = str2;
-        c6572c.d = str3;
-        c6572c.e = str4;
-        c6572c.f = str5;
-        c6572c.g = str6;
-        c6572c.h = j;
-        c6572c.i = str7;
-        RVLLog.d(c6572c);
+        c cVar = new c(RVLLevel.valueOf(i), str);
+        cVar.j = true;
+        cVar.c = str2;
+        cVar.d = str3;
+        cVar.e = str4;
+        cVar.f = str5;
+        cVar.g = str6;
+        cVar.h = j;
+        cVar.i = str7;
+        RVLLog.d(cVar);
     }
 
     static void sendMessage(String str) {
-        RemoteChannel c = C6581b.c();
+        RemoteChannel c = com.taobao.android.riverlogger.remote.b.c();
         if (c != null) {
             c.j(str);
         }

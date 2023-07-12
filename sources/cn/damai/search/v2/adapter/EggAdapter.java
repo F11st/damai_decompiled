@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.search.Daojishi;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
 import cn.damai.commonbusiness.search.viewholder.ProjectItemViewHolder;
@@ -44,12 +44,11 @@ public class EggAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.v2.adapter.EggAdapter$a */
     /* loaded from: classes6.dex */
-    public class C1640a implements SearchTipViewHolder.OnLoadMoreClick {
+    public class a implements SearchTipViewHolder.OnLoadMoreClick {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1640a(EggAdapter eggAdapter) {
+        a(EggAdapter eggAdapter) {
         }
 
         @Override // cn.damai.search.ui.viewholder.SearchTipViewHolder.OnLoadMoreClick
@@ -62,16 +61,15 @@ public class EggAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.v2.adapter.EggAdapter$b */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1641b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ SearchEggs a;
         final /* synthetic */ ProjectItemViewHolder b;
         final /* synthetic */ ProjectItemBean c;
         final /* synthetic */ int d;
 
-        View$OnClickListenerC1641b(SearchEggs searchEggs, ProjectItemViewHolder projectItemViewHolder, ProjectItemBean projectItemBean, int i) {
+        b(SearchEggs searchEggs, ProjectItemViewHolder projectItemViewHolder, ProjectItemBean projectItemBean, int i) {
             this.a = searchEggs;
             this.b = projectItemViewHolder;
             this.c = projectItemBean;
@@ -106,11 +104,11 @@ public class EggAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 hashMap.put("alg", projectItemBean.alg);
             }
             if (!z) {
-                C0529c e = C0529c.e();
+                c e = c.e();
                 e.G(view, "item_" + i, "list", "search", hashMap);
                 return;
             }
-            C0529c e2 = C0529c.e();
+            c e2 = c.e();
             e2.G(view, "item_" + i, "keywordother", "search", hashMap);
         }
     }
@@ -192,7 +190,7 @@ public class EggAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         SearchEggs searchEggs = searchDataHolder.mSearchEggs;
         projectItemViewHolder.u(this.f);
         projectItemViewHolder.l(projectItemBean, BricksProjectViewHolder.PageType.SEARCH_PAGE);
-        projectItemViewHolder.itemView.setOnClickListener(new View$OnClickListenerC1641b(searchEggs, projectItemViewHolder, projectItemBean, i));
+        projectItemViewHolder.itemView.setOnClickListener(new b(searchEggs, projectItemViewHolder, projectItemBean, i));
         OnProjectClickListener onProjectClickListener = this.d;
         if (onProjectClickListener != null) {
             onProjectClickListener.onProjectExpose(projectItemViewHolder.itemView, projectItemBean, i);
@@ -217,7 +215,7 @@ public class EggAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 searchEggRecommendViewHolderV2.f(this.c);
                 return searchEggRecommendViewHolderV2;
             }
-            return new SearchTipViewHolder(this.b, from, new C1640a(this));
+            return new SearchTipViewHolder(this.b, from, new a(this));
         }
         return new ProjectItemViewHolder(this.b, from);
     }

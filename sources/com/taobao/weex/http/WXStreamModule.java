@@ -2,7 +2,7 @@ package com.taobao.weex.http;
 
 import android.net.Uri;
 import android.text.TextUtils;
-import anet.channel.request.C0193a;
+import anet.channel.request.a;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
@@ -47,12 +47,11 @@ public class WXStreamModule extends WXModule {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.http.WXStreamModule$a */
     /* loaded from: classes11.dex */
-    public class C6973a implements ResponseCallback {
+    public class a implements ResponseCallback {
         final /* synthetic */ String a;
 
-        C6973a(String str) {
+        a(String str) {
             this.a = str;
         }
 
@@ -77,14 +76,13 @@ public class WXStreamModule extends WXModule {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.http.WXStreamModule$b */
     /* loaded from: classes11.dex */
-    public class C6974b implements ResponseCallback {
+    public class b implements ResponseCallback {
         final /* synthetic */ JSCallback a;
         final /* synthetic */ Options b;
         final /* synthetic */ String c;
 
-        C6974b(JSCallback jSCallback, Options options, String str) {
+        b(JSCallback jSCallback, Options options, String str) {
             this.a = jSCallback;
             this.b = options;
             this.c = str;
@@ -129,15 +127,14 @@ public class WXStreamModule extends WXModule {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.http.WXStreamModule$c */
     /* loaded from: classes11.dex */
-    public static class C6975c implements IWXHttpAdapter.OnHttpListener {
+    public static class c implements IWXHttpAdapter.OnHttpListener {
         private ResponseCallback a;
         private JSCallback b;
         private Map<String, Object> c;
         private Map<String, String> d;
 
-        /* synthetic */ C6975c(ResponseCallback responseCallback, JSCallback jSCallback, C6973a c6973a) {
+        /* synthetic */ c(ResponseCallback responseCallback, JSCallback jSCallback, a aVar) {
             this(responseCallback, jSCallback);
         }
 
@@ -207,7 +204,7 @@ public class WXStreamModule extends WXModule {
         public void onHttpUploadProgress(int i) {
         }
 
-        private C6975c(ResponseCallback responseCallback, JSCallback jSCallback) {
+        private c(ResponseCallback responseCallback, JSCallback jSCallback) {
             this.c = new HashMap();
             this.a = responseCallback;
             this.b = jSCallback;
@@ -218,18 +215,18 @@ public class WXStreamModule extends WXModule {
         this(null);
     }
 
-    private void extractHeaders(JSONObject jSONObject, Options.C6972b c6972b) {
-        String a = nz2.a(WXEnvironment.getApplication(), WXEnvironment.getConfig());
+    private void extractHeaders(JSONObject jSONObject, Options.b bVar) {
+        String a2 = nz2.a(WXEnvironment.getApplication(), WXEnvironment.getConfig());
         if (jSONObject != null) {
             for (String str : jSONObject.keySet()) {
                 if (str.equals("user-agent")) {
-                    a = jSONObject.getString(str);
+                    a2 = jSONObject.getString(str);
                 } else {
-                    c6972b.b(str, jSONObject.getString(str));
+                    bVar.b(str, jSONObject.getString(str));
                 }
             }
         }
-        c6972b.b("user-agent", a);
+        bVar.b("user-agent", a2);
     }
 
     static String getHeader(Map<String, String> map, String str) {
@@ -280,7 +277,7 @@ public class WXStreamModule extends WXModule {
             iWXHttpAdapter = WXSDKManager.v().n();
         }
         if (iWXHttpAdapter != null) {
-            iWXHttpAdapter.sendRequest(wXRequest, new C6975c(responseCallback, jSCallback, null));
+            iWXHttpAdapter.sendRequest(wXRequest, new c(responseCallback, jSCallback, null));
         } else {
             WXLogUtils.e("WXStreamModule", "No HttpAdapter found,request failed.");
         }
@@ -320,13 +317,13 @@ public class WXStreamModule extends WXModule {
         if (string != null) {
             string = string.toUpperCase(Locale.ROOT);
         }
-        Options.C6972b c6972b = new Options.C6972b();
-        if (!"GET".equals(string) && !"POST".equals(string) && !C0193a.C0196c.PUT.equals(string) && !C0193a.C0196c.DELETE.equals(string) && !C0193a.C0196c.HEAD.equals(string) && !"PATCH".equals(string)) {
+        Options.b bVar = new Options.b();
+        if (!"GET".equals(string) && !"POST".equals(string) && !a.c.PUT.equals(string) && !a.c.DELETE.equals(string) && !a.c.HEAD.equals(string) && !"PATCH".equals(string)) {
             string = "GET";
         }
-        Options.C6972b e = c6972b.d(string).g(string2).c(string3).e(intValue);
+        Options.b e = bVar.d(string).g(string2).c(string3).e(intValue);
         extractHeaders(jSONObject2, e);
-        sendRequest(e.a(), new C6973a(str), null, this.mWXSDKInstance.getInstanceId(), this.mWXSDKInstance.getBundleUrl());
+        sendRequest(e.a(), new a(str), null, this.mWXSDKInstance.getInstanceId(), this.mWXSDKInstance.getBundleUrl());
     }
 
     public WXStreamModule(IWXHttpAdapter iWXHttpAdapter) {
@@ -360,13 +357,13 @@ public class WXStreamModule extends WXModule {
         if (string != null) {
             string = string.toUpperCase(Locale.ROOT);
         }
-        Options.C6972b c6972b = new Options.C6972b();
-        if (!"GET".equals(string) && !"POST".equals(string) && !C0193a.C0196c.PUT.equals(string) && !C0193a.C0196c.DELETE.equals(string) && !C0193a.C0196c.HEAD.equals(string) && !"PATCH".equals(string)) {
+        Options.b bVar = new Options.b();
+        if (!"GET".equals(string) && !"POST".equals(string) && !a.c.PUT.equals(string) && !a.c.DELETE.equals(string) && !a.c.HEAD.equals(string) && !"PATCH".equals(string)) {
             string = "GET";
         }
-        Options.C6972b e = c6972b.d(string).g(string2).c(string3).f(string4).e(intValue);
+        Options.b e = bVar.d(string).g(string2).c(string3).f(string4).e(intValue);
         extractHeaders(jSONObject2, e);
-        Options a = e.a();
-        sendRequest(a, new C6974b(jSCallback, a, str), jSCallback2, str, str2);
+        Options a2 = e.a();
+        sendRequest(a2, new b(jSCallback, a2, str), jSCallback2, str, str2);
     }
 }

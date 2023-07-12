@@ -59,11 +59,11 @@ public class p90 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
 
     @Override // cn.damai.tetris.v2.convertor.IConverter
     /* renamed from: b */
-    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, C9039db c9039db) {
+    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, db dbVar) {
         JSONArray jSONArray;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1241612939")) {
-            return (List) ipChange.ipc$dispatch("1241612939", new Object[]{this, baseResponse, baseSection, globalConfig, c9039db});
+            return (List) ipChange.ipc$dispatch("1241612939", new Object[]{this, baseResponse, baseSection, globalConfig, dbVar});
         }
         ArrayList arrayList = new ArrayList();
         NodeData item = baseSection.getItem();
@@ -79,7 +79,7 @@ public class p90 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
                         JSONObject jSONObject2 = jSONObject.getJSONObject("data");
                         c(jSONObject2, f);
                         baseSection.setItem(jSONObject2);
-                        List<Node> l = c9039db.l(baseSection, globalConfig);
+                        List<Node> l = dbVar.l(baseSection, globalConfig);
                         if (l != null) {
                             arrayList.addAll(l);
                         }
@@ -88,21 +88,21 @@ public class p90 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
                         JSONObject jSONObject3 = jSONObject.getJSONObject("data");
                         c(jSONObject3, f);
                         baseSection.setItem(jSONObject3);
-                        List<Node> l2 = c9039db.l(baseSection, globalConfig);
+                        List<Node> l2 = dbVar.l(baseSection, globalConfig);
                         if (l2 != null) {
                             arrayList.addAll(l2);
                         }
                     } else if (TextUtils.equals("4", string)) {
                         baseSection.setComponentId(xl2.PROJECT_C_ID);
                         baseSection.setItem(jSONObject.getJSONObject("data"));
-                        List<Node> l3 = c9039db.l(baseSection, globalConfig);
+                        List<Node> l3 = dbVar.l(baseSection, globalConfig);
                         if (l3 != null) {
                             arrayList.addAll(l3);
                         }
                     } else if (TextUtils.equals("5", string)) {
                         baseSection.setComponentId(xl2.VOTE_C_ID);
                         baseSection.setItem(jSONObject.getJSONObject("data"));
-                        List<Node> l4 = c9039db.l(baseSection, globalConfig);
+                        List<Node> l4 = dbVar.l(baseSection, globalConfig);
                         if (l4 != null) {
                             arrayList.addAll(l4);
                         }

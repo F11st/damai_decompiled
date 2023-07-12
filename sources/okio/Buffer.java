@@ -31,14 +31,13 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
     private static final byte[] DIGITS = {48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 97, 98, 99, 100, 101, 102};
     static final int REPLACEMENT_CHARACTER = 65533;
     @Nullable
-    C8855m head;
+    m head;
     long size;
 
     /* compiled from: Taobao */
-    /* renamed from: okio.Buffer$a */
     /* loaded from: classes2.dex */
-    class C8834a extends OutputStream {
-        C8834a() {
+    class a extends OutputStream {
+        a() {
         }
 
         @Override // java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
@@ -65,10 +64,9 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
     }
 
     /* compiled from: Taobao */
-    /* renamed from: okio.Buffer$b */
     /* loaded from: classes2.dex */
-    class C8835b extends InputStream {
-        C8835b() {
+    class b extends InputStream {
+        b() {
         }
 
         @Override // java.io.InputStream
@@ -100,12 +98,11 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
     }
 
     /* compiled from: Taobao */
-    /* renamed from: okio.Buffer$c */
     /* loaded from: classes2.dex */
-    public static final class C8836c implements Closeable {
+    public static final class c implements Closeable {
         public Buffer a;
         public boolean b;
-        private C8855m c;
+        private m c;
         public byte[] e;
         public long d = -1;
         public int f = -1;
@@ -130,53 +127,53 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
                 if (j <= j2) {
                     if (i != 0 && j != j2) {
                         long j3 = 0;
-                        C8855m c8855m = buffer.head;
-                        C8855m c8855m2 = this.c;
-                        if (c8855m2 != null) {
-                            long j4 = this.d - (this.f - c8855m2.b);
+                        m mVar = buffer.head;
+                        m mVar2 = this.c;
+                        if (mVar2 != null) {
+                            long j4 = this.d - (this.f - mVar2.b);
                             if (j4 > j) {
                                 j2 = j4;
-                                c8855m2 = c8855m;
-                                c8855m = c8855m2;
+                                mVar2 = mVar;
+                                mVar = mVar2;
                             } else {
                                 j3 = j4;
                             }
                         } else {
-                            c8855m2 = c8855m;
+                            mVar2 = mVar;
                         }
                         if (j2 - j > j - j3) {
                             while (true) {
-                                int i2 = c8855m2.c;
-                                int i3 = c8855m2.b;
+                                int i2 = mVar2.c;
+                                int i3 = mVar2.b;
                                 if (j < (i2 - i3) + j3) {
                                     break;
                                 }
                                 j3 += i2 - i3;
-                                c8855m2 = c8855m2.f;
+                                mVar2 = mVar2.f;
                             }
                         } else {
                             while (j2 > j) {
-                                c8855m = c8855m.g;
-                                j2 -= c8855m.c - c8855m.b;
+                                mVar = mVar.g;
+                                j2 -= mVar.c - mVar.b;
                             }
-                            c8855m2 = c8855m;
+                            mVar2 = mVar;
                             j3 = j2;
                         }
-                        if (this.b && c8855m2.d) {
-                            C8855m f = c8855m2.f();
+                        if (this.b && mVar2.d) {
+                            m f = mVar2.f();
                             Buffer buffer2 = this.a;
-                            if (buffer2.head == c8855m2) {
+                            if (buffer2.head == mVar2) {
                                 buffer2.head = f;
                             }
-                            c8855m2 = c8855m2.c(f);
-                            c8855m2.g.b();
+                            mVar2 = mVar2.c(f);
+                            mVar2.g.b();
                         }
-                        this.c = c8855m2;
+                        this.c = mVar2;
                         this.d = j;
-                        this.e = c8855m2.a;
-                        int i4 = c8855m2.b + ((int) (j - j3));
+                        this.e = mVar2.a;
+                        int i4 = mVar2.b + ((int) (j - j3));
                         this.f = i4;
-                        int i5 = c8855m2.c;
+                        int i5 = mVar2.c;
                         this.g = i5;
                         return i5 - i4;
                     }
@@ -209,20 +206,20 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
     private ByteString digest(String str) {
         try {
             MessageDigest messageDigest = MessageDigest.getInstance(str);
-            C8855m c8855m = this.head;
-            if (c8855m != null) {
-                byte[] bArr = c8855m.a;
-                int i = c8855m.b;
-                messageDigest.update(bArr, i, c8855m.c - i);
-                C8855m c8855m2 = this.head;
+            m mVar = this.head;
+            if (mVar != null) {
+                byte[] bArr = mVar.a;
+                int i = mVar.b;
+                messageDigest.update(bArr, i, mVar.c - i);
+                m mVar2 = this.head;
                 while (true) {
-                    c8855m2 = c8855m2.f;
-                    if (c8855m2 == this.head) {
+                    mVar2 = mVar2.f;
+                    if (mVar2 == this.head) {
                         break;
                     }
-                    byte[] bArr2 = c8855m2.a;
-                    int i2 = c8855m2.b;
-                    messageDigest.update(bArr2, i2, c8855m2.c - i2);
+                    byte[] bArr2 = mVar2.a;
+                    int i2 = mVar2.b;
+                    messageDigest.update(bArr2, i2, mVar2.c - i2);
                 }
             }
             return ByteString.of(messageDigest.digest());
@@ -235,20 +232,20 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
         try {
             Mac mac = Mac.getInstance(str);
             mac.init(new SecretKeySpec(byteString.toByteArray(), str));
-            C8855m c8855m = this.head;
-            if (c8855m != null) {
-                byte[] bArr = c8855m.a;
-                int i = c8855m.b;
-                mac.update(bArr, i, c8855m.c - i);
-                C8855m c8855m2 = this.head;
+            m mVar = this.head;
+            if (mVar != null) {
+                byte[] bArr = mVar.a;
+                int i = mVar.b;
+                mac.update(bArr, i, mVar.c - i);
+                m mVar2 = this.head;
                 while (true) {
-                    c8855m2 = c8855m2.f;
-                    if (c8855m2 == this.head) {
+                    mVar2 = mVar2.f;
+                    if (mVar2 == this.head) {
                         break;
                     }
-                    byte[] bArr2 = c8855m2.a;
-                    int i2 = c8855m2.b;
-                    mac.update(bArr2, i2, c8855m2.c - i2);
+                    byte[] bArr2 = mVar2.a;
+                    int i2 = mVar2.b;
+                    mac.update(bArr2, i2, mVar2.c - i2);
                 }
             }
             return ByteString.of(mac.doFinal());
@@ -281,9 +278,9 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
         if (j == 0) {
             return 0L;
         }
-        C8855m c8855m = this.head.g;
-        int i = c8855m.c;
-        return (i >= 8192 || !c8855m.e) ? j : j - (i - c8855m.b);
+        m mVar = this.head.g;
+        int i = mVar.c;
+        return (i >= 8192 || !mVar.e) ? j : j - (i - mVar.b);
     }
 
     public final Buffer copyTo(OutputStream outputStream) throws IOException {
@@ -314,30 +311,30 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
             if (j == 0) {
                 return true;
             }
-            C8855m c8855m = this.head;
-            C8855m c8855m2 = buffer.head;
-            int i = c8855m.b;
-            int i2 = c8855m2.b;
+            m mVar = this.head;
+            m mVar2 = buffer.head;
+            int i = mVar.b;
+            int i2 = mVar2.b;
             while (j2 < this.size) {
-                long min = Math.min(c8855m.c - i, c8855m2.c - i2);
+                long min = Math.min(mVar.c - i, mVar2.c - i2);
                 int i3 = 0;
                 while (i3 < min) {
                     int i4 = i + 1;
                     int i5 = i2 + 1;
-                    if (c8855m.a[i] != c8855m2.a[i2]) {
+                    if (mVar.a[i] != mVar2.a[i2]) {
                         return false;
                     }
                     i3++;
                     i = i4;
                     i2 = i5;
                 }
-                if (i == c8855m.c) {
-                    c8855m = c8855m.f;
-                    i = c8855m.b;
+                if (i == mVar.c) {
+                    mVar = mVar.f;
+                    i = mVar.b;
                 }
-                if (i2 == c8855m2.c) {
-                    c8855m2 = c8855m2.f;
-                    i2 = c8855m2.b;
+                if (i2 == mVar2.c) {
+                    mVar2 = mVar2.f;
+                    i2 = mVar2.b;
                 }
                 j2 += min;
             }
@@ -362,46 +359,46 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
 
     public final byte getByte(long j) {
         int i;
-        C8859p.b(this.size, j, 1L);
+        p.b(this.size, j, 1L);
         long j2 = this.size;
         if (j2 - j > j) {
-            C8855m c8855m = this.head;
+            m mVar = this.head;
             while (true) {
-                int i2 = c8855m.c;
-                int i3 = c8855m.b;
+                int i2 = mVar.c;
+                int i3 = mVar.b;
                 long j3 = i2 - i3;
                 if (j < j3) {
-                    return c8855m.a[i3 + ((int) j)];
+                    return mVar.a[i3 + ((int) j)];
                 }
                 j -= j3;
-                c8855m = c8855m.f;
+                mVar = mVar.f;
             }
         } else {
             long j4 = j - j2;
-            C8855m c8855m2 = this.head;
+            m mVar2 = this.head;
             do {
-                c8855m2 = c8855m2.g;
-                int i4 = c8855m2.c;
-                i = c8855m2.b;
+                mVar2 = mVar2.g;
+                int i4 = mVar2.c;
+                i = mVar2.b;
                 j4 += i4 - i;
             } while (j4 < 0);
-            return c8855m2.a[i + ((int) j4)];
+            return mVar2.a[i + ((int) j4)];
         }
     }
 
     public int hashCode() {
-        C8855m c8855m = this.head;
-        if (c8855m == null) {
+        m mVar = this.head;
+        if (mVar == null) {
             return 0;
         }
         int i = 1;
         do {
-            int i2 = c8855m.c;
-            for (int i3 = c8855m.b; i3 < i2; i3++) {
-                i = (i * 31) + c8855m.a[i3];
+            int i2 = mVar.c;
+            for (int i3 = mVar.b; i3 < i2; i3++) {
+                i = (i * 31) + mVar.a[i3];
             }
-            c8855m = c8855m.f;
-        } while (c8855m != this.head);
+            mVar = mVar.f;
+        } while (mVar != this.head);
         return i;
     }
 
@@ -418,8 +415,8 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
     }
 
     @Override // okio.BufferedSource
-    public long indexOf(byte b) {
-        return indexOf(b, 0L, AbsPerformance.LONG_NIL);
+    public long indexOf(byte b2) {
+        return indexOf(b2, 0L, AbsPerformance.LONG_NIL);
     }
 
     @Override // okio.BufferedSource
@@ -429,7 +426,7 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
 
     @Override // okio.BufferedSource
     public InputStream inputStream() {
-        return new C8835b();
+        return new b();
     }
 
     @Override // java.nio.channels.Channel
@@ -443,12 +440,12 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
 
     @Override // okio.BufferedSink
     public OutputStream outputStream() {
-        return new C8834a();
+        return new a();
     }
 
     @Override // okio.BufferedSource
     public BufferedSource peek() {
-        return C8844h.d(new C8850j(this));
+        return h.d(new j(this));
     }
 
     @Override // okio.BufferedSource
@@ -470,27 +467,27 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
         return j;
     }
 
-    public final C8836c readAndWriteUnsafe() {
-        return readAndWriteUnsafe(new C8836c());
+    public final c readAndWriteUnsafe() {
+        return readAndWriteUnsafe(new c());
     }
 
     @Override // okio.BufferedSource
     public byte readByte() {
         long j = this.size;
         if (j != 0) {
-            C8855m c8855m = this.head;
-            int i = c8855m.b;
-            int i2 = c8855m.c;
+            m mVar = this.head;
+            int i = mVar.b;
+            int i2 = mVar.c;
             int i3 = i + 1;
-            byte b = c8855m.a[i];
+            byte b2 = mVar.a[i];
             this.size = j - 1;
             if (i3 == i2) {
-                this.head = c8855m.b();
-                C8856n.a(c8855m);
+                this.head = mVar.b();
+                n.a(mVar);
             } else {
-                c8855m.b = i3;
+                mVar.b = i3;
             }
-            return b;
+            return b2;
         }
         throw new IllegalStateException("size == 0");
     }
@@ -628,7 +625,7 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
             if (r12 != r13) goto La9
             okio.m r1 = r10.b()
             r0.head = r1
-            okio.C8856n.a(r10)
+            okio.n.a(r10)
             goto Lab
         La9:
             r10.b = r12
@@ -771,7 +768,7 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
             if (r8 != r9) goto L9d
             okio.m r7 = r6.b()
             r15.head = r7
-            okio.C8856n.a(r6)
+            okio.n.a(r6)
             goto L9f
         L9d:
             r6.b = r8
@@ -798,13 +795,13 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
     public int readInt() {
         long j = this.size;
         if (j >= 4) {
-            C8855m c8855m = this.head;
-            int i = c8855m.b;
-            int i2 = c8855m.c;
+            m mVar = this.head;
+            int i = mVar.b;
+            int i2 = mVar.c;
             if (i2 - i < 4) {
                 return ((readByte() & 255) << 24) | ((readByte() & 255) << 16) | ((readByte() & 255) << 8) | (readByte() & 255);
             }
-            byte[] bArr = c8855m.a;
+            byte[] bArr = mVar.a;
             int i3 = i + 1;
             int i4 = i3 + 1;
             int i5 = ((bArr[i] & 255) << 24) | ((bArr[i3] & 255) << 16);
@@ -814,10 +811,10 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
             int i9 = i7 | (bArr[i6] & 255);
             this.size = j - 4;
             if (i8 == i2) {
-                this.head = c8855m.b();
-                C8856n.a(c8855m);
+                this.head = mVar.b();
+                n.a(mVar);
             } else {
-                c8855m.b = i8;
+                mVar.b = i8;
             }
             return i9;
         }
@@ -826,20 +823,20 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
 
     @Override // okio.BufferedSource
     public int readIntLe() {
-        return C8859p.c(readInt());
+        return p.c(readInt());
     }
 
     @Override // okio.BufferedSource
     public long readLong() {
         long j = this.size;
         if (j >= 8) {
-            C8855m c8855m = this.head;
-            int i = c8855m.b;
-            int i2 = c8855m.c;
+            m mVar = this.head;
+            int i = mVar.b;
+            int i2 = mVar.c;
             if (i2 - i < 8) {
                 return ((readInt() & 4294967295L) << 32) | (4294967295L & readInt());
             }
-            byte[] bArr = c8855m.a;
+            byte[] bArr = mVar.a;
             int i3 = i + 1;
             int i4 = i3 + 1;
             long j2 = (bArr[i3] & 255) << 48;
@@ -852,10 +849,10 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
             long j3 = j2 | ((bArr[i] & 255) << 56) | ((bArr[i4] & 255) << 40) | ((bArr[i5] & 255) << 32) | ((bArr[i6] & 255) << 24) | ((bArr[i7] & 255) << 16) | ((bArr[i8] & 255) << 8) | (bArr[i9] & 255);
             this.size = j - 8;
             if (i10 == i2) {
-                this.head = c8855m.b();
-                C8856n.a(c8855m);
+                this.head = mVar.b();
+                n.a(mVar);
             } else {
-                c8855m.b = i10;
+                mVar.b = i10;
             }
             return j3;
         }
@@ -864,29 +861,29 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
 
     @Override // okio.BufferedSource
     public long readLongLe() {
-        return C8859p.d(readLong());
+        return p.d(readLong());
     }
 
     @Override // okio.BufferedSource
     public short readShort() {
         long j = this.size;
         if (j >= 2) {
-            C8855m c8855m = this.head;
-            int i = c8855m.b;
-            int i2 = c8855m.c;
+            m mVar = this.head;
+            int i = mVar.b;
+            int i2 = mVar.c;
             if (i2 - i < 2) {
                 return (short) (((readByte() & 255) << 8) | (readByte() & 255));
             }
-            byte[] bArr = c8855m.a;
+            byte[] bArr = mVar.a;
             int i3 = i + 1;
             int i4 = i3 + 1;
             int i5 = ((bArr[i] & 255) << 8) | (bArr[i3] & 255);
             this.size = j - 2;
             if (i4 == i2) {
-                this.head = c8855m.b();
-                C8856n.a(c8855m);
+                this.head = mVar.b();
+                n.a(mVar);
             } else {
-                c8855m.b = i4;
+                mVar.b = i4;
             }
             return (short) i5;
         }
@@ -895,7 +892,7 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
 
     @Override // okio.BufferedSource
     public short readShortLe() {
-        return C8859p.e(readShort());
+        return p.e(readShort());
     }
 
     @Override // okio.BufferedSource
@@ -907,14 +904,14 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
         }
     }
 
-    public final C8836c readUnsafe() {
-        return readUnsafe(new C8836c());
+    public final c readUnsafe() {
+        return readUnsafe(new c());
     }
 
     @Override // okio.BufferedSource
     public String readUtf8() {
         try {
-            return readString(this.size, C8859p.UTF_8);
+            return readString(this.size, p.UTF_8);
         } catch (EOFException e) {
             throw new AssertionError(e);
         }
@@ -926,24 +923,24 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
         int i2;
         int i3;
         if (this.size != 0) {
-            byte b = getByte(0L);
-            if ((b & cu2.MAX_POWER_OF_TWO) == 0) {
-                i = b & m8.DEL;
+            byte b2 = getByte(0L);
+            if ((b2 & cu2.MAX_POWER_OF_TWO) == 0) {
+                i = b2 & m8.DEL;
                 i2 = 1;
                 i3 = 0;
-            } else if ((b & 224) == 192) {
-                i = b & 31;
+            } else if ((b2 & 224) == 192) {
+                i = b2 & 31;
                 i2 = 2;
                 i3 = 128;
-            } else if ((b & 240) == 224) {
-                i = b & 15;
+            } else if ((b2 & 240) == 224) {
+                i = b2 & 15;
                 i2 = 3;
                 i3 = 2048;
-            } else if ((b & 248) != 240) {
+            } else if ((b2 & 248) != 240) {
                 skip(1L);
                 return REPLACEMENT_CHARACTER;
             } else {
-                i = b & 7;
+                i = b2 & 7;
                 i2 = 4;
                 i3 = 65536;
             }
@@ -951,17 +948,17 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
             if (this.size >= j) {
                 for (int i4 = 1; i4 < i2; i4++) {
                     long j2 = i4;
-                    byte b2 = getByte(j2);
-                    if ((b2 & 192) != 128) {
+                    byte b3 = getByte(j2);
+                    if ((b3 & 192) != 128) {
                         skip(j2);
                         return REPLACEMENT_CHARACTER;
                     }
-                    i = (i << 6) | (b2 & 63);
+                    i = (i << 6) | (b3 & 63);
                 }
                 skip(j);
                 return i > 1114111 ? REPLACEMENT_CHARACTER : ((i < 55296 || i > 57343) && i >= i3) ? i : REPLACEMENT_CHARACTER;
             }
-            throw new EOFException("size < " + i2 + ": " + this.size + " (to read code point prefixed 0x" + Integer.toHexString(b) + jn1.BRACKET_END_STR);
+            throw new EOFException("size < " + i2 + ": " + this.size + " (to read code point prefixed 0x" + Integer.toHexString(b2) + jn1.BRACKET_END_STR);
         }
         throw new EOFException();
     }
@@ -1002,26 +999,26 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
             return Collections.emptyList();
         }
         ArrayList arrayList = new ArrayList();
-        C8855m c8855m = this.head;
-        arrayList.add(Integer.valueOf(c8855m.c - c8855m.b));
-        C8855m c8855m2 = this.head;
+        m mVar = this.head;
+        arrayList.add(Integer.valueOf(mVar.c - mVar.b));
+        m mVar2 = this.head;
         while (true) {
-            c8855m2 = c8855m2.f;
-            if (c8855m2 == this.head) {
+            mVar2 = mVar2.f;
+            if (mVar2 == this.head) {
                 return arrayList;
             }
-            arrayList.add(Integer.valueOf(c8855m2.c - c8855m2.b));
+            arrayList.add(Integer.valueOf(mVar2.c - mVar2.b));
         }
     }
 
     @Override // okio.BufferedSource
-    public int select(C8849i c8849i) {
-        int selectPrefix = selectPrefix(c8849i, false);
+    public int select(i iVar) {
+        int selectPrefix = selectPrefix(iVar, false);
         if (selectPrefix == -1) {
             return -1;
         }
         try {
-            skip(c8849i.a[selectPrefix].size());
+            skip(iVar.a[selectPrefix].size());
             return selectPrefix;
         } catch (EOFException unused) {
             throw new AssertionError();
@@ -1042,7 +1039,7 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public int selectPrefix(okio.C8849i r18, boolean r19) {
+    public int selectPrefix(okio.i r18, boolean r19) {
         /*
             Method dump skipped, instructions count: 162
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -1068,19 +1065,19 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
 
     @Override // okio.BufferedSource
     public void skip(long j) throws EOFException {
-        C8855m c8855m;
+        m mVar;
         while (j > 0) {
             if (this.head != null) {
-                int min = (int) Math.min(j, c8855m.c - c8855m.b);
+                int min = (int) Math.min(j, mVar.c - mVar.b);
                 long j2 = min;
                 this.size -= j2;
                 j -= j2;
-                C8855m c8855m2 = this.head;
-                int i = c8855m2.b + min;
-                c8855m2.b = i;
-                if (i == c8855m2.c) {
-                    this.head = c8855m2.b();
-                    C8856n.a(c8855m2);
+                m mVar2 = this.head;
+                int i = mVar2.b + min;
+                mVar2.b = i;
+                if (i == mVar2.c) {
+                    this.head = mVar2.b();
+                    n.a(mVar2);
                 }
             } else {
                 throw new EOFException();
@@ -1097,8 +1094,8 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
     }
 
     @Override // okio.Sink
-    public C8857o timeout() {
-        return C8857o.NONE;
+    public o timeout() {
+        return o.NONE;
     }
 
     public String toString() {
@@ -1106,18 +1103,18 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public C8855m writableSegment(int i) {
+    public m writableSegment(int i) {
         if (i >= 1 && i <= 8192) {
-            C8855m c8855m = this.head;
-            if (c8855m == null) {
-                C8855m b = C8856n.b();
-                this.head = b;
-                b.g = b;
-                b.f = b;
-                return b;
+            m mVar = this.head;
+            if (mVar == null) {
+                m b2 = n.b();
+                this.head = b2;
+                b2.g = b2;
+                b2.f = b2;
+                return b2;
             }
-            C8855m c8855m2 = c8855m.g;
-            return (c8855m2.c + i > 8192 || !c8855m2.e) ? c8855m2.c(C8856n.b()) : c8855m2;
+            m mVar2 = mVar.g;
+            return (mVar2.c + i > 8192 || !mVar2.e) ? mVar2.c(n.b()) : mVar2;
         }
         throw new IllegalArgumentException();
     }
@@ -1146,15 +1143,15 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
         if (this.size == 0) {
             return buffer;
         }
-        C8855m d = this.head.d();
+        m d = this.head.d();
         buffer.head = d;
         d.g = d;
         d.f = d;
-        C8855m c8855m = this.head;
+        m mVar = this.head;
         while (true) {
-            c8855m = c8855m.f;
-            if (c8855m != this.head) {
-                buffer.head.g.c(c8855m.d());
+            mVar = mVar.f;
+            if (mVar != this.head) {
+                buffer.head.g.c(mVar.d());
             } else {
                 buffer.size = this.size;
                 return buffer;
@@ -1165,25 +1162,25 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
     public final Buffer copyTo(OutputStream outputStream, long j, long j2) throws IOException {
         int i;
         if (outputStream != null) {
-            C8859p.b(this.size, j, j2);
+            p.b(this.size, j, j2);
             if (j2 == 0) {
                 return this;
             }
-            C8855m c8855m = this.head;
+            m mVar = this.head;
             while (true) {
-                int i2 = c8855m.c;
-                int i3 = c8855m.b;
+                int i2 = mVar.c;
+                int i3 = mVar.b;
                 if (j < i2 - i3) {
                     break;
                 }
                 j -= i2 - i3;
-                c8855m = c8855m.f;
+                mVar = mVar.f;
             }
             while (j2 > 0) {
-                int min = (int) Math.min(c8855m.c - i, j2);
-                outputStream.write(c8855m.a, (int) (c8855m.b + j), min);
+                int min = (int) Math.min(mVar.c - i, j2);
+                outputStream.write(mVar.a, (int) (mVar.b + j), min);
                 j2 -= min;
-                c8855m = c8855m.f;
+                mVar = mVar.f;
                 j = 0;
             }
             return this;
@@ -1192,8 +1189,8 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
     }
 
     @Override // okio.BufferedSource
-    public long indexOf(byte b, long j) {
-        return indexOf(b, j, AbsPerformance.LONG_NIL);
+    public long indexOf(byte b2, long j) {
+        return indexOf(b2, j, AbsPerformance.LONG_NIL);
     }
 
     @Override // okio.BufferedSource
@@ -1202,65 +1199,65 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
         int i2;
         long j2 = 0;
         if (j >= 0) {
-            C8855m c8855m = this.head;
-            if (c8855m == null) {
+            m mVar = this.head;
+            if (mVar == null) {
                 return -1L;
             }
             long j3 = this.size;
             if (j3 - j < j) {
                 while (j3 > j) {
-                    c8855m = c8855m.g;
-                    j3 -= c8855m.c - c8855m.b;
+                    mVar = mVar.g;
+                    j3 -= mVar.c - mVar.b;
                 }
             } else {
                 while (true) {
-                    long j4 = (c8855m.c - c8855m.b) + j2;
+                    long j4 = (mVar.c - mVar.b) + j2;
                     if (j4 >= j) {
                         break;
                     }
-                    c8855m = c8855m.f;
+                    mVar = mVar.f;
                     j2 = j4;
                 }
                 j3 = j2;
             }
             if (byteString.size() == 2) {
-                byte b = byteString.getByte(0);
-                byte b2 = byteString.getByte(1);
+                byte b2 = byteString.getByte(0);
+                byte b3 = byteString.getByte(1);
                 while (j3 < this.size) {
-                    byte[] bArr = c8855m.a;
-                    i = (int) ((c8855m.b + j) - j3);
-                    int i3 = c8855m.c;
+                    byte[] bArr = mVar.a;
+                    i = (int) ((mVar.b + j) - j3);
+                    int i3 = mVar.c;
                     while (i < i3) {
-                        byte b3 = bArr[i];
-                        if (b3 == b || b3 == b2) {
-                            i2 = c8855m.b;
+                        byte b4 = bArr[i];
+                        if (b4 == b2 || b4 == b3) {
+                            i2 = mVar.b;
                             return (i - i2) + j3;
                         }
                         i++;
                     }
-                    j3 += c8855m.c - c8855m.b;
-                    c8855m = c8855m.f;
+                    j3 += mVar.c - mVar.b;
+                    mVar = mVar.f;
                     j = j3;
                 }
                 return -1L;
             }
             byte[] internalArray = byteString.internalArray();
             while (j3 < this.size) {
-                byte[] bArr2 = c8855m.a;
-                i = (int) ((c8855m.b + j) - j3);
-                int i4 = c8855m.c;
+                byte[] bArr2 = mVar.a;
+                i = (int) ((mVar.b + j) - j3);
+                int i4 = mVar.c;
                 while (i < i4) {
-                    byte b4 = bArr2[i];
-                    for (byte b5 : internalArray) {
-                        if (b4 == b5) {
-                            i2 = c8855m.b;
+                    byte b5 = bArr2[i];
+                    for (byte b6 : internalArray) {
+                        if (b5 == b6) {
+                            i2 = mVar.b;
                             return (i - i2) + j3;
                         }
                     }
                     i++;
                 }
-                j3 += c8855m.c - c8855m.b;
-                c8855m = c8855m.f;
+                j3 += mVar.c - mVar.b;
+                mVar = mVar.f;
                 j = j3;
             }
             return -1L;
@@ -1283,28 +1280,28 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
 
     @Override // okio.BufferedSource
     public int read(byte[] bArr, int i, int i2) {
-        C8859p.b(bArr.length, i, i2);
-        C8855m c8855m = this.head;
-        if (c8855m == null) {
+        p.b(bArr.length, i, i2);
+        m mVar = this.head;
+        if (mVar == null) {
             return -1;
         }
-        int min = Math.min(i2, c8855m.c - c8855m.b);
-        System.arraycopy(c8855m.a, c8855m.b, bArr, i, min);
-        int i3 = c8855m.b + min;
-        c8855m.b = i3;
+        int min = Math.min(i2, mVar.c - mVar.b);
+        System.arraycopy(mVar.a, mVar.b, bArr, i, min);
+        int i3 = mVar.b + min;
+        mVar.b = i3;
         this.size -= min;
-        if (i3 == c8855m.c) {
-            this.head = c8855m.b();
-            C8856n.a(c8855m);
+        if (i3 == mVar.c) {
+            this.head = mVar.b();
+            n.a(mVar);
         }
         return min;
     }
 
-    public final C8836c readAndWriteUnsafe(C8836c c8836c) {
-        if (c8836c.a == null) {
-            c8836c.a = this;
-            c8836c.b = true;
-            return c8836c;
+    public final c readAndWriteUnsafe(c cVar) {
+        if (cVar.a == null) {
+            cVar.a = this;
+            cVar.b = true;
+            return cVar;
         }
         throw new IllegalStateException("already attached to a buffer");
     }
@@ -1322,11 +1319,11 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
         throw new IllegalArgumentException("byteCount < 0: " + j);
     }
 
-    public final C8836c readUnsafe(C8836c c8836c) {
-        if (c8836c.a == null) {
-            c8836c.a = this;
-            c8836c.b = false;
-            return c8836c;
+    public final c readUnsafe(c cVar) {
+        if (cVar.a == null) {
+            cVar.a = this;
+            cVar.b = false;
+            return cVar;
         }
         throw new IllegalStateException("already attached to a buffer");
     }
@@ -1354,7 +1351,7 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
 
     @Override // okio.BufferedSink
     public Buffer writeByte(int i) {
-        C8855m writableSegment = writableSegment(1);
+        m writableSegment = writableSegment(1);
         byte[] bArr = writableSegment.a;
         int i2 = writableSegment.c;
         writableSegment.c = i2 + 1;
@@ -1390,7 +1387,7 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
         if (z) {
             i2++;
         }
-        C8855m writableSegment = writableSegment(i2);
+        m writableSegment = writableSegment(i2);
         byte[] bArr = writableSegment.a;
         int i3 = writableSegment.c + i2;
         while (j != 0) {
@@ -1412,7 +1409,7 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
             return writeByte(48);
         }
         int numberOfTrailingZeros = (Long.numberOfTrailingZeros(Long.highestOneBit(j)) / 4) + 1;
-        C8855m writableSegment = writableSegment(numberOfTrailingZeros);
+        m writableSegment = writableSegment(numberOfTrailingZeros);
         byte[] bArr = writableSegment.a;
         int i = writableSegment.c;
         for (int i2 = (i + numberOfTrailingZeros) - 1; i2 >= i; i2--) {
@@ -1426,7 +1423,7 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
 
     @Override // okio.BufferedSink
     public Buffer writeInt(int i) {
-        C8855m writableSegment = writableSegment(4);
+        m writableSegment = writableSegment(4);
         byte[] bArr = writableSegment.a;
         int i2 = writableSegment.c;
         int i3 = i2 + 1;
@@ -1443,12 +1440,12 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
 
     @Override // okio.BufferedSink
     public Buffer writeIntLe(int i) {
-        return writeInt(C8859p.c(i));
+        return writeInt(p.c(i));
     }
 
     @Override // okio.BufferedSink
     public Buffer writeLong(long j) {
-        C8855m writableSegment = writableSegment(8);
+        m writableSegment = writableSegment(8);
         byte[] bArr = writableSegment.a;
         int i = writableSegment.c;
         int i2 = i + 1;
@@ -1473,12 +1470,12 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
 
     @Override // okio.BufferedSink
     public Buffer writeLongLe(long j) {
-        return writeLong(C8859p.d(j));
+        return writeLong(p.d(j));
     }
 
     @Override // okio.BufferedSink
     public Buffer writeShort(int i) {
-        C8855m writableSegment = writableSegment(2);
+        m writableSegment = writableSegment(2);
         byte[] bArr = writableSegment.a;
         int i2 = writableSegment.c;
         int i3 = i2 + 1;
@@ -1491,26 +1488,26 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
 
     @Override // okio.BufferedSink
     public Buffer writeShortLe(int i) {
-        return writeShort((int) C8859p.e((short) i));
+        return writeShort((int) p.e((short) i));
     }
 
     public final Buffer writeTo(OutputStream outputStream, long j) throws IOException {
         if (outputStream != null) {
-            C8859p.b(this.size, 0L, j);
-            C8855m c8855m = this.head;
+            p.b(this.size, 0L, j);
+            m mVar = this.head;
             while (j > 0) {
-                int min = (int) Math.min(j, c8855m.c - c8855m.b);
-                outputStream.write(c8855m.a, c8855m.b, min);
-                int i = c8855m.b + min;
-                c8855m.b = i;
+                int min = (int) Math.min(j, mVar.c - mVar.b);
+                outputStream.write(mVar.a, mVar.b, min);
+                int i = mVar.b + min;
+                mVar.b = i;
                 long j2 = min;
                 this.size -= j2;
                 j -= j2;
-                if (i == c8855m.c) {
-                    C8855m b = c8855m.b();
-                    this.head = b;
-                    C8856n.a(c8855m);
-                    c8855m = b;
+                if (i == mVar.c) {
+                    m b2 = mVar.b();
+                    this.head = b2;
+                    n.a(mVar);
+                    mVar = b2;
                 }
             }
             return this;
@@ -1545,42 +1542,42 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
     }
 
     @Override // okio.BufferedSource
-    public long indexOf(byte b, long j, long j2) {
-        C8855m c8855m;
+    public long indexOf(byte b2, long j, long j2) {
+        m mVar;
         long j3 = 0;
         if (j >= 0 && j2 >= j) {
             long j4 = this.size;
             long j5 = j2 > j4 ? j4 : j2;
-            if (j == j5 || (c8855m = this.head) == null) {
+            if (j == j5 || (mVar = this.head) == null) {
                 return -1L;
             }
             if (j4 - j < j) {
                 while (j4 > j) {
-                    c8855m = c8855m.g;
-                    j4 -= c8855m.c - c8855m.b;
+                    mVar = mVar.g;
+                    j4 -= mVar.c - mVar.b;
                 }
             } else {
                 while (true) {
-                    long j6 = (c8855m.c - c8855m.b) + j3;
+                    long j6 = (mVar.c - mVar.b) + j3;
                     if (j6 >= j) {
                         break;
                     }
-                    c8855m = c8855m.f;
+                    mVar = mVar.f;
                     j3 = j6;
                 }
                 j4 = j3;
             }
             long j7 = j;
             while (j4 < j5) {
-                byte[] bArr = c8855m.a;
-                int min = (int) Math.min(c8855m.c, (c8855m.b + j5) - j4);
-                for (int i = (int) ((c8855m.b + j7) - j4); i < min; i++) {
-                    if (bArr[i] == b) {
-                        return (i - c8855m.b) + j4;
+                byte[] bArr = mVar.a;
+                int min = (int) Math.min(mVar.c, (mVar.b + j5) - j4);
+                for (int i = (int) ((mVar.b + j7) - j4); i < min; i++) {
+                    if (bArr[i] == b2) {
+                        return (i - mVar.b) + j4;
                     }
                 }
-                j4 += c8855m.c - c8855m.b;
-                c8855m = c8855m.f;
+                j4 += mVar.c - mVar.b;
+                mVar = mVar.f;
                 j7 = j4;
             }
             return -1L;
@@ -1590,7 +1587,7 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
 
     @Override // okio.BufferedSource
     public byte[] readByteArray(long j) throws EOFException {
-        C8859p.b(this.size, 0L, j);
+        p.b(this.size, 0L, j);
         if (j <= 2147483647L) {
             byte[] bArr = new byte[(int) j];
             readFully(bArr);
@@ -1601,25 +1598,25 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
 
     @Override // okio.BufferedSource
     public String readString(long j, Charset charset) throws EOFException {
-        C8859p.b(this.size, 0L, j);
+        p.b(this.size, 0L, j);
         if (charset != null) {
             if (j > 2147483647L) {
                 throw new IllegalArgumentException("byteCount > Integer.MAX_VALUE: " + j);
             } else if (j == 0) {
                 return "";
             } else {
-                C8855m c8855m = this.head;
-                int i = c8855m.b;
-                if (i + j > c8855m.c) {
+                m mVar = this.head;
+                int i = mVar.b;
+                if (i + j > mVar.c) {
                     return new String(readByteArray(j), charset);
                 }
-                String str = new String(c8855m.a, i, (int) j, charset);
-                int i2 = (int) (c8855m.b + j);
-                c8855m.b = i2;
+                String str = new String(mVar.a, i, (int) j, charset);
+                int i2 = (int) (mVar.b + j);
+                mVar.b = i2;
                 this.size -= j;
-                if (i2 == c8855m.c) {
-                    this.head = c8855m.b();
-                    C8856n.a(c8855m);
+                if (i2 == mVar.c) {
+                    this.head = mVar.b();
+                    n.a(mVar);
                 }
                 return str;
             }
@@ -1629,7 +1626,7 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
 
     @Override // okio.BufferedSource
     public String readUtf8(long j) throws EOFException {
-        return readString(j, C8859p.UTF_8);
+        return readString(j, p.UTF_8);
     }
 
     @Override // okio.BufferedSink
@@ -1650,7 +1647,7 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
             if (j <= 0 && !z) {
                 return;
             }
-            C8855m writableSegment = writableSegment(1);
+            m writableSegment = writableSegment(1);
             int read = inputStream.read(writableSegment.a, writableSegment.c, (int) Math.min(j, 8192 - writableSegment.c));
             if (read == -1) {
                 if (!z) {
@@ -1704,7 +1701,7 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
             } else if (i2 >= i) {
                 if (i2 <= str.length()) {
                     if (charset != null) {
-                        if (charset.equals(C8859p.UTF_8)) {
+                        if (charset.equals(p.UTF_8)) {
                             return writeUtf8(str, i, i2);
                         }
                         byte[] bytes = str.substring(i, i2).getBytes(charset);
@@ -1732,7 +1729,7 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
                 while (i < i2) {
                     char charAt = str.charAt(i);
                     if (charAt < 128) {
-                        C8855m writableSegment = writableSegment(1);
+                        m writableSegment = writableSegment(1);
                         byte[] bArr = writableSegment.a;
                         int i3 = writableSegment.c - i;
                         int min = Math.min(i2, 8192 - i3);
@@ -1785,16 +1782,16 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
         throw new IllegalArgumentException("string == null");
     }
 
-    private boolean rangeEquals(C8855m c8855m, int i, ByteString byteString, int i2, int i3) {
-        int i4 = c8855m.c;
-        byte[] bArr = c8855m.a;
+    private boolean rangeEquals(m mVar, int i, ByteString byteString, int i2, int i3) {
+        int i4 = mVar.c;
+        byte[] bArr = mVar.a;
         while (i2 < i3) {
             if (i == i4) {
-                c8855m = c8855m.f;
-                byte[] bArr2 = c8855m.a;
+                mVar = mVar.f;
+                byte[] bArr2 = mVar.a;
                 bArr = bArr2;
-                i = c8855m.b;
-                i4 = c8855m.c;
+                i = mVar.b;
+                i4 = mVar.c;
             }
             if (bArr[i] != byteString.getByte(i2)) {
                 return false;
@@ -1829,10 +1826,10 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
     public Buffer write(byte[] bArr, int i, int i2) {
         if (bArr != null) {
             long j = i2;
-            C8859p.b(bArr.length, i, j);
+            p.b(bArr.length, i, j);
             int i3 = i2 + i;
             while (i < i3) {
-                C8855m writableSegment = writableSegment(1);
+                m writableSegment = writableSegment(1);
                 int min = Math.min(i3 - i, 8192 - writableSegment.c);
                 System.arraycopy(bArr, i, writableSegment.a, writableSegment.c, min);
                 i += min;
@@ -1846,36 +1843,36 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
 
     public final Buffer copyTo(Buffer buffer, long j, long j2) {
         if (buffer != null) {
-            C8859p.b(this.size, j, j2);
+            p.b(this.size, j, j2);
             if (j2 == 0) {
                 return this;
             }
             buffer.size += j2;
-            C8855m c8855m = this.head;
+            m mVar = this.head;
             while (true) {
-                int i = c8855m.c;
-                int i2 = c8855m.b;
+                int i = mVar.c;
+                int i2 = mVar.b;
                 if (j < i - i2) {
                     break;
                 }
                 j -= i - i2;
-                c8855m = c8855m.f;
+                mVar = mVar.f;
             }
             while (j2 > 0) {
-                C8855m d = c8855m.d();
+                m d = mVar.d();
                 int i3 = (int) (d.b + j);
                 d.b = i3;
                 d.c = Math.min(i3 + ((int) j2), d.c);
-                C8855m c8855m2 = buffer.head;
-                if (c8855m2 == null) {
+                m mVar2 = buffer.head;
+                if (mVar2 == null) {
                     d.g = d;
                     d.f = d;
                     buffer.head = d;
                 } else {
-                    c8855m2.g.c(d);
+                    mVar2.g.c(d);
                 }
                 j2 -= d.c - d.b;
-                c8855m = c8855m.f;
+                mVar = mVar.f;
                 j = 0;
             }
             return this;
@@ -1885,18 +1882,18 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
 
     @Override // java.nio.channels.ReadableByteChannel
     public int read(ByteBuffer byteBuffer) throws IOException {
-        C8855m c8855m = this.head;
-        if (c8855m == null) {
+        m mVar = this.head;
+        if (mVar == null) {
             return -1;
         }
-        int min = Math.min(byteBuffer.remaining(), c8855m.c - c8855m.b);
-        byteBuffer.put(c8855m.a, c8855m.b, min);
-        int i = c8855m.b + min;
-        c8855m.b = i;
+        int min = Math.min(byteBuffer.remaining(), mVar.c - mVar.b);
+        byteBuffer.put(mVar.a, mVar.b, min);
+        int i = mVar.b + min;
+        mVar.b = i;
         this.size -= min;
-        if (i == c8855m.c) {
-            this.head = c8855m.b();
-            C8856n.a(c8855m);
+        if (i == mVar.c) {
+            this.head = mVar.b();
+            n.a(mVar);
         }
         return min;
     }
@@ -1907,7 +1904,7 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
             int remaining = byteBuffer.remaining();
             int i = remaining;
             while (i > 0) {
-                C8855m writableSegment = writableSegment(1);
+                m writableSegment = writableSegment(1);
                 int min = Math.min(i, 8192 - writableSegment.c);
                 byteBuffer.get(writableSegment.a, writableSegment.c, min);
                 i -= min;
@@ -1930,43 +1927,43 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
         if (byteString.size() != 0) {
             long j2 = 0;
             if (j >= 0) {
-                C8855m c8855m = this.head;
+                m mVar = this.head;
                 long j3 = -1;
-                if (c8855m == null) {
+                if (mVar == null) {
                     return -1L;
                 }
                 long j4 = this.size;
                 if (j4 - j < j) {
                     while (j4 > j) {
-                        c8855m = c8855m.g;
-                        j4 -= c8855m.c - c8855m.b;
+                        mVar = mVar.g;
+                        j4 -= mVar.c - mVar.b;
                     }
                 } else {
                     while (true) {
-                        long j5 = (c8855m.c - c8855m.b) + j2;
+                        long j5 = (mVar.c - mVar.b) + j2;
                         if (j5 >= j) {
                             break;
                         }
-                        c8855m = c8855m.f;
+                        mVar = mVar.f;
                         j2 = j5;
                     }
                     j4 = j2;
                 }
-                byte b = byteString.getByte(0);
+                byte b2 = byteString.getByte(0);
                 int size = byteString.size();
                 long j6 = 1 + (this.size - size);
                 long j7 = j;
-                C8855m c8855m2 = c8855m;
+                m mVar2 = mVar;
                 long j8 = j4;
                 while (j8 < j6) {
-                    byte[] bArr2 = c8855m2.a;
-                    int min = (int) Math.min(c8855m2.c, (c8855m2.b + j6) - j8);
-                    int i = (int) ((c8855m2.b + j7) - j8);
+                    byte[] bArr2 = mVar2.a;
+                    int min = (int) Math.min(mVar2.c, (mVar2.b + j6) - j8);
+                    int i = (int) ((mVar2.b + j7) - j8);
                     while (i < min) {
-                        if (bArr2[i] == b) {
+                        if (bArr2[i] == b2) {
                             bArr = bArr2;
-                            if (rangeEquals(c8855m2, i + 1, byteString, 1, size)) {
-                                return (i - c8855m2.b) + j8;
+                            if (rangeEquals(mVar2, i + 1, byteString, 1, size)) {
+                                return (i - mVar2.b) + j8;
                             }
                         } else {
                             bArr = bArr2;
@@ -1974,8 +1971,8 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
                         i++;
                         bArr2 = bArr;
                     }
-                    j8 += c8855m2.c - c8855m2.b;
-                    c8855m2 = c8855m2.f;
+                    j8 += mVar2.c - mVar2.b;
+                    mVar2 = mVar2.f;
                     j7 = j8;
                     j3 = -1;
                 }
@@ -2023,32 +2020,32 @@ public final class Buffer implements Cloneable, ByteChannel, BufferedSink, Buffe
             throw new IllegalArgumentException("source == null");
         }
         if (buffer != this) {
-            C8859p.b(buffer.size, 0L, j);
+            p.b(buffer.size, 0L, j);
             while (j > 0) {
-                C8855m c8855m = buffer.head;
-                if (j < c8855m.c - c8855m.b) {
-                    C8855m c8855m2 = this.head;
-                    C8855m c8855m3 = c8855m2 != null ? c8855m2.g : null;
-                    if (c8855m3 != null && c8855m3.e) {
-                        if ((c8855m3.c + j) - (c8855m3.d ? 0 : c8855m3.b) <= PlaybackStateCompat.ACTION_PLAY_FROM_URI) {
-                            c8855m.g(c8855m3, (int) j);
+                m mVar = buffer.head;
+                if (j < mVar.c - mVar.b) {
+                    m mVar2 = this.head;
+                    m mVar3 = mVar2 != null ? mVar2.g : null;
+                    if (mVar3 != null && mVar3.e) {
+                        if ((mVar3.c + j) - (mVar3.d ? 0 : mVar3.b) <= PlaybackStateCompat.ACTION_PLAY_FROM_URI) {
+                            mVar.g(mVar3, (int) j);
                             buffer.size -= j;
                             this.size += j;
                             return;
                         }
                     }
-                    buffer.head = c8855m.e((int) j);
+                    buffer.head = mVar.e((int) j);
                 }
-                C8855m c8855m4 = buffer.head;
-                long j2 = c8855m4.c - c8855m4.b;
-                buffer.head = c8855m4.b();
-                C8855m c8855m5 = this.head;
-                if (c8855m5 == null) {
-                    this.head = c8855m4;
-                    c8855m4.g = c8855m4;
-                    c8855m4.f = c8855m4;
+                m mVar4 = buffer.head;
+                long j2 = mVar4.c - mVar4.b;
+                buffer.head = mVar4.b();
+                m mVar5 = this.head;
+                if (mVar5 == null) {
+                    this.head = mVar4;
+                    mVar4.g = mVar4;
+                    mVar4.f = mVar4;
                 } else {
-                    c8855m5.g.c(c8855m4).a();
+                    mVar5.g.c(mVar4).a();
                 }
                 buffer.size -= j2;
                 this.size += j2;

@@ -6,10 +6,9 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.text.TextUtils;
 import android.util.Base64;
-import com.alipay.sdk.m.k.C4218a;
-import com.alipay.sdk.m.k.C4226b;
-import com.alipay.sdk.m.s.C4293a;
-import com.alipay.sdk.m.u.C4316l;
+import com.alipay.sdk.m.k.b;
+import com.alipay.sdk.m.s.a;
+import com.alipay.sdk.m.u.l;
 import com.taobao.weex.ui.module.WXModalUIModule;
 import com.youku.live.livesdk.preloader.Preloader;
 import java.util.Iterator;
@@ -19,22 +18,21 @@ import org.json.JSONObject;
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
 public class AlipayResultActivity extends Activity {
-    public static final ConcurrentHashMap<String, InterfaceC4122a> a = new ConcurrentHashMap<>();
+    public static final ConcurrentHashMap<String, a> a = new ConcurrentHashMap<>();
 
     /* compiled from: Taobao */
-    /* renamed from: com.alipay.sdk.app.AlipayResultActivity$a */
     /* loaded from: classes12.dex */
-    public interface InterfaceC4122a {
+    public interface a {
         void a(int i, String str, String str2);
     }
 
     private void a(String str, Bundle bundle) {
-        InterfaceC4122a remove = a.remove(str);
+        a remove = a.remove(str);
         if (remove == null) {
             return;
         }
         try {
-            remove.a(bundle.getInt("endCode"), bundle.getString(C4316l.b), bundle.getString("result"));
+            remove.a(bundle.getInt("endCode"), bundle.getString(l.b), bundle.getString("result"));
         } finally {
             finish();
         }
@@ -51,12 +49,12 @@ public class AlipayResultActivity extends Activity {
             String stringExtra = intent.getStringExtra(Preloader.KEY_SESSION);
             Bundle bundleExtra = intent.getBundleExtra("result");
             String stringExtra2 = intent.getStringExtra("scene");
-            C4293a a2 = C4293a.C4294a.a(stringExtra);
+            com.alipay.sdk.m.s.a a2 = a.C0200a.a(stringExtra);
             if (a2 == null) {
                 finish();
                 return;
             }
-            C4218a.a(a2, C4226b.l, "BSPSession", stringExtra + "|" + SystemClock.elapsedRealtime());
+            com.alipay.sdk.m.k.a.a(a2, b.l, "BSPSession", stringExtra + "|" + SystemClock.elapsedRealtime());
             if (TextUtils.equals("mqpSchemePay", stringExtra2)) {
                 a(stringExtra, bundleExtra);
                 return;
@@ -66,7 +64,7 @@ public class AlipayResultActivity extends Activity {
                     JSONObject jSONObject2 = new JSONObject(new String(Base64.decode(intent.getData().getQuery(), 2), "UTF-8"));
                     jSONObject = jSONObject2.getJSONObject("result");
                     stringExtra = jSONObject2.getString(Preloader.KEY_SESSION);
-                    C4218a.a(a2, C4226b.l, "BSPUriSession", stringExtra);
+                    com.alipay.sdk.m.k.a.a(a2, b.l, "BSPUriSession", stringExtra);
                     bundle2 = new Bundle();
                 } catch (Throwable th2) {
                     th = th2;
@@ -81,23 +79,23 @@ public class AlipayResultActivity extends Activity {
                 } catch (Throwable th3) {
                     th = th3;
                     bundleExtra = bundle2;
-                    C4218a.a(a2, C4226b.l, "BSPResEx", th);
-                    C4218a.a(a2, C4226b.l, C4226b.s0, th);
+                    com.alipay.sdk.m.k.a.a(a2, b.l, "BSPResEx", th);
+                    com.alipay.sdk.m.k.a.a(a2, b.l, b.s0, th);
                     if (TextUtils.isEmpty(stringExtra)) {
                     }
-                    C4218a.b(this, a2, "", a2.d);
+                    com.alipay.sdk.m.k.a.b(this, a2, "", a2.d);
                     finish();
                 }
             }
             if (TextUtils.isEmpty(stringExtra) && bundleExtra != null) {
-                C4218a.a(a2, C4226b.l, C4226b.V, "" + SystemClock.elapsedRealtime());
-                C4218a.a(a2, C4226b.l, C4226b.W, bundleExtra.getInt("endCode", -1) + "|" + bundleExtra.getString(C4316l.b, "-"));
+                com.alipay.sdk.m.k.a.a(a2, b.l, b.V, "" + SystemClock.elapsedRealtime());
+                com.alipay.sdk.m.k.a.a(a2, b.l, b.W, bundleExtra.getInt("endCode", -1) + "|" + bundleExtra.getString(l.b, "-"));
                 OpenAuthTask.a(stringExtra, 9000, WXModalUIModule.OK, bundleExtra);
-                C4218a.b(this, a2, "", a2.d);
+                com.alipay.sdk.m.k.a.b(this, a2, "", a2.d);
                 finish();
                 return;
             }
-            C4218a.b(this, a2, "", a2.d);
+            com.alipay.sdk.m.k.a.b(this, a2, "", a2.d);
             finish();
         } catch (Throwable unused) {
             finish();

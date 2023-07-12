@@ -26,13 +26,12 @@ public final class gl2 {
     private static ThreadPoolExecutor f;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.gl2$a */
     /* loaded from: classes8.dex */
-    public static final class ThreadFactoryC9179a implements ThreadFactory {
+    public static final class a implements ThreadFactory {
         private static transient /* synthetic */ IpChange $ipChange;
         private final AtomicInteger a = new AtomicInteger(1);
 
-        ThreadFactoryC9179a() {
+        a() {
         }
 
         @Override // java.util.concurrent.ThreadFactory
@@ -52,7 +51,7 @@ public final class gl2 {
         a = availableProcessors;
         b = Math.max(2, Math.min(availableProcessors - 1, 4));
         c = (availableProcessors * 2) + 1;
-        d = new ThreadFactoryC9179a();
+        d = new a();
         e = new LinkedBlockingQueue(512);
     }
 

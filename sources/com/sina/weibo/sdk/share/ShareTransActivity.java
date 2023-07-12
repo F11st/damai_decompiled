@@ -12,12 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
-import com.sina.weibo.sdk.C6195a;
 import com.sina.weibo.sdk.api.WeiboMultiMessage;
-import com.sina.weibo.sdk.b.C6209a;
-import com.sina.weibo.sdk.b.C6212c;
-import com.sina.weibo.sdk.b.C6213d;
-import com.sina.weibo.sdk.b.C6214e;
+import com.sina.weibo.sdk.b.a;
 import java.util.ArrayList;
 
 /* compiled from: Taobao */
@@ -25,7 +21,7 @@ import java.util.ArrayList;
 public class ShareTransActivity extends BaseActivity {
     private Intent t;
     private FrameLayout u;
-    private AsyncTaskC6230d v;
+    private d v;
     private String w;
     private Handler x = new Handler(Looper.getMainLooper()) { // from class: com.sina.weibo.sdk.share.ShareTransActivity.1
         @Override // android.os.Handler
@@ -61,7 +57,7 @@ public class ShareTransActivity extends BaseActivity {
         for (Integer num : arrayList) {
             flags &= ~num.intValue();
         }
-        C6212c.a("WBShareTag", "clear flags: " + binaryString + "->" + Integer.toBinaryString(flags));
+        com.sina.weibo.sdk.b.c.a("WBShareTag", "clear flags: " + binaryString + "->" + Integer.toBinaryString(flags));
         intent.setFlags(flags);
     }
 
@@ -91,7 +87,7 @@ public class ShareTransActivity extends BaseActivity {
     @Override // android.app.Activity
     protected void onActivityResult(int i, int i2, Intent intent) {
         super.onActivityResult(i, i2, intent);
-        C6212c.a("WBShareTag", "onActivityResult. Means share result coming!");
+        com.sina.weibo.sdk.b.c.a("WBShareTag", "onActivityResult. Means share result coming!");
         Handler handler = this.x;
         if (handler != null) {
             if (i2 == -1) {
@@ -109,7 +105,7 @@ public class ShareTransActivity extends BaseActivity {
     public void onCreate(Bundle bundle) {
         View progressBar;
         super.onCreate(bundle);
-        C6212c.a("WBShareTag", "start share activity.");
+        com.sina.weibo.sdk.b.c.a("WBShareTag", "start share activity.");
         Intent intent = getIntent();
         this.t = intent;
         if (intent == null) {
@@ -129,7 +125,7 @@ public class ShareTransActivity extends BaseActivity {
             this.u.addView(progressBar, layoutParams);
             this.u.setBackgroundColor(855638016);
             setContentView(this.u);
-            C6212c.a("WBShareTag", "prepare wb resource.");
+            com.sina.weibo.sdk.b.c.a("WBShareTag", "prepare wb resource.");
             Bundle extras = this.t.getExtras();
             if (extras == null) {
                 finish();
@@ -141,38 +137,38 @@ public class ShareTransActivity extends BaseActivity {
                 a(weiboMultiMessage);
                 return;
             }
-            AsyncTaskC6230d asyncTaskC6230d = this.v;
-            if (asyncTaskC6230d != null) {
-                asyncTaskC6230d.cancel(true);
+            d dVar = this.v;
+            if (dVar != null) {
+                dVar.cancel(true);
             }
-            AsyncTaskC6230d asyncTaskC6230d2 = new AsyncTaskC6230d(this, new InterfaceC6228b() { // from class: com.sina.weibo.sdk.share.ShareTransActivity.2
-                @Override // com.sina.weibo.sdk.share.InterfaceC6228b
-                public final void a(C6229c c6229c) {
+            d dVar2 = new d(this, new b() { // from class: com.sina.weibo.sdk.share.ShareTransActivity.2
+                @Override // com.sina.weibo.sdk.share.b
+                public final void a(c cVar) {
                     ShareTransActivity.this.u.setVisibility(4);
-                    if (c6229c != null) {
-                        if (c6229c.z) {
-                            ShareTransActivity.this.a(c6229c.A);
+                    if (cVar != null) {
+                        if (cVar.z) {
+                            ShareTransActivity.this.a(cVar.A);
                             return;
-                        } else if (TextUtils.isEmpty(c6229c.errorMessage)) {
+                        } else if (TextUtils.isEmpty(cVar.errorMessage)) {
                             ShareTransActivity.this.c("Trans resource fail.");
                             return;
                         } else {
-                            ShareTransActivity.this.c(c6229c.errorMessage);
+                            ShareTransActivity.this.c(cVar.errorMessage);
                             return;
                         }
                     }
                     ShareTransActivity.this.c("Trans result is null.");
                 }
             });
-            this.v = asyncTaskC6230d2;
-            asyncTaskC6230d2.execute(weiboMultiMessage);
+            this.v = dVar2;
+            dVar2.execute(weiboMultiMessage);
         }
     }
 
     @Override // android.app.Activity
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        C6212c.a("WBShareTag", "start share activity again. Means share result coming!");
+        com.sina.weibo.sdk.b.c.a("WBShareTag", "start share activity again. Means share result coming!");
         int intExtra = intent.getIntExtra("start_flag", -1);
         if (intExtra == 1001) {
             return;
@@ -206,30 +202,30 @@ public class ShareTransActivity extends BaseActivity {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void a(WeiboMultiMessage weiboMultiMessage) {
-        C6212c.a("WBShareTag", "start wb composer");
+        com.sina.weibo.sdk.b.c.a("WBShareTag", "start wb composer");
         try {
             this.t.putExtra("start_flag", 1002);
-            String f = C6213d.f(String.valueOf((Math.random() * 10000.0d) + System.currentTimeMillis()));
+            String f = com.sina.weibo.sdk.b.d.f(String.valueOf((Math.random() * 10000.0d) + System.currentTimeMillis()));
             this.w = f;
             this.t.putExtra("share_back_flag", f);
             this.t.putExtra("share_flag_for_new_version", 1);
             Bundle extras = this.t.getExtras();
             Intent intent = new Intent("com.sina.weibo.sdk.action.ACTION_WEIBO_ACTIVITY");
-            C6209a.C6210a c = C6209a.c(this);
+            a.C0273a c = com.sina.weibo.sdk.b.a.c(this);
             if (c != null) {
                 intent.setPackage(c.packageName);
             }
             intent.putExtras(weiboMultiMessage.writeToBundle(extras));
             intent.putExtra("_weibo_sdkVersion", "0041005000");
             intent.putExtra("_weibo_appPackage", getPackageName());
-            intent.putExtra("_weibo_appKey", C6195a.a().getAppKey());
+            intent.putExtra("_weibo_appKey", com.sina.weibo.sdk.a.a().getAppKey());
             intent.putExtra("_weibo_flag", 538116905);
-            intent.putExtra("_weibo_sign", C6213d.f(C6214e.b(this, getPackageName())));
+            intent.putExtra("_weibo_sign", com.sina.weibo.sdk.b.d.f(com.sina.weibo.sdk.b.e.b(this, getPackageName())));
             String stringExtra = this.t.getStringExtra("start_web_activity");
             if (!TextUtils.isEmpty(stringExtra) && "com.sina.weibo.sdk.web.WebActivity".equals(stringExtra)) {
                 intent.setClassName(this, stringExtra);
                 startActivityForResult(intent, 10001);
-            } else if (C6195a.a(this)) {
+            } else if (com.sina.weibo.sdk.a.a(this)) {
                 if (c != null) {
                     intent.setPackage(c.packageName);
                 }
@@ -238,7 +234,7 @@ public class ShareTransActivity extends BaseActivity {
                 c("Start weibo client's composer fail. And Weibo client is not installed.");
             }
         } catch (Throwable th) {
-            C6212c.b("WBShareTag", "start wb composer fail," + th.getMessage());
+            com.sina.weibo.sdk.b.c.b("WBShareTag", "start wb composer fail," + th.getMessage());
             c("Start weibo client's composer fail. " + th.getMessage());
         }
     }

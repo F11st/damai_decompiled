@@ -1,10 +1,7 @@
 package tb;
 
 import android.text.TextUtils;
-import com.taobao.android.dinamic.C6313b;
-import com.taobao.android.dinamic.expression.parser.C6324a;
 import com.taobao.android.dinamic.expression.parser.DinamicDataParser;
-import com.taobao.android.dinamic.expressionv2.C6337g;
 import com.taobao.android.dinamic.log.DinamicLog;
 
 /* compiled from: Taobao */
@@ -16,7 +13,7 @@ public class s80 {
         Object obj = null;
         if (v80Var != null && v80Var.d() != null && str != null) {
             if (str.startsWith(m80.DINAMIC_PREFIX_AT)) {
-                return C6337g.g(str, str2, v80Var);
+                return com.taobao.android.dinamic.expressionv2.g.g(str, str2, v80Var);
             }
             char[] charArray = str.toCharArray();
             StringBuffer stringBuffer = new StringBuffer();
@@ -33,7 +30,7 @@ public class s80 {
                 } else {
                     if ('{' == c && z) {
                         str3 = stringBuffer3.toString();
-                        if (C6324a.a(str3)) {
+                        if (com.taobao.android.dinamic.expression.parser.a.a(str3)) {
                             z = false;
                             z2 = true;
                         } else {
@@ -44,12 +41,12 @@ public class s80 {
                         if (TextUtils.isEmpty(stringBuffer4)) {
                             obj = v80Var.d();
                         } else {
-                            DinamicDataParser b = C6324a.b(str3);
+                            DinamicDataParser b = com.taobao.android.dinamic.expression.parser.a.b(str3);
                             if (b != null) {
                                 try {
                                     obj = b.parser(stringBuffer4, v80Var);
                                 } catch (Throwable th) {
-                                    if (C6313b.e()) {
+                                    if (com.taobao.android.dinamic.b.e()) {
                                         DinamicLog.i("DinamicExpresstion", th, "parse express failed, parser=", b.getClass().getName());
                                     }
                                     v80Var.e().b().a(p80.ERROR_CODE_TEMPLATE_PARSER_EXCEPTION, str2);

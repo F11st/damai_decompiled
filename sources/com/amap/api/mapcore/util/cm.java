@@ -7,7 +7,7 @@ public class cm extends cc {
         super(i, azVar);
     }
 
-    @Override // com.amap.api.mapcore.util.AbstractC4497cd
+    @Override // com.amap.api.mapcore.util.cd
     public void a(int i) {
         b(this.b.b(i));
         az azVar = this.b;
@@ -15,7 +15,7 @@ public class cm extends cc {
         this.b.c().h();
     }
 
-    @Override // com.amap.api.mapcore.util.AbstractC4497cd
+    @Override // com.amap.api.mapcore.util.cd
     public void c() {
         b(this.b.c);
         az azVar = this.b;
@@ -23,7 +23,7 @@ public class cm extends cc {
         this.b.c().h();
     }
 
-    @Override // com.amap.api.mapcore.util.AbstractC4497cd
+    @Override // com.amap.api.mapcore.util.cd
     public void e() {
         b(this.b.d);
         az azVar = this.b;

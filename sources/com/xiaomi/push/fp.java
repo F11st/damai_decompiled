@@ -22,52 +22,48 @@ public class fp {
     private byte[] b;
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.fp$a */
     /* loaded from: classes11.dex */
-    public static class C7655a {
-        public static final C7657c a = new C7657c();
+    public static class a {
+        public static final c a = new c();
 
         /* renamed from: a  reason: collision with other field name */
-        public static final C7658d f384a = new C7658d();
+        public static final d f384a = new d();
 
         public static byte[] a(byte[] bArr) {
             return a(bArr, f384a);
         }
 
-        public static byte[] a(byte[] bArr, InterfaceC7656b interfaceC7656b) {
+        public static byte[] a(byte[] bArr, b bVar) {
             if (fp.m899a(bArr)) {
                 fp a2 = fp.a(bArr);
-                return (a2.f381a == 0 || a2.f381a != interfaceC7656b.a()) ? a2.b : interfaceC7656b.a(a2.b, a2.f382a);
+                return (a2.f381a == 0 || a2.f381a != bVar.a()) ? a2.b : bVar.a(a2.b, a2.f382a);
             }
             return bArr;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.fp$b */
     /* loaded from: classes11.dex */
-    public interface InterfaceC7656b {
+    public interface b {
         byte a();
 
         byte[] a(byte[] bArr, int i);
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.fp$c */
     /* loaded from: classes11.dex */
-    public static final class C7657c {
+    public static final class c {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.fp$d */
     /* loaded from: classes11.dex */
-    public static final class C7658d implements InterfaceC7656b {
-        @Override // com.xiaomi.push.fp.InterfaceC7656b
+    public static final class d implements b {
+        @Override // com.xiaomi.push.fp.b
         public byte a() {
             return (byte) 2;
         }
 
-        @Override // com.xiaomi.push.fp.InterfaceC7656b
+        @Override // com.xiaomi.push.fp.b
         public byte[] a(byte[] bArr, int i) {
             GZIPInputStream gZIPInputStream;
             GZIPInputStream gZIPInputStream2 = null;
@@ -108,24 +104,24 @@ public class fp {
         }
     }
 
-    protected fp(byte b, int i, byte[] bArr) {
-        this((short) 1, b, i, bArr);
+    protected fp(byte b2, int i, byte[] bArr) {
+        this((short) 1, b2, i, bArr);
     }
 
-    protected fp(short s, byte b, int i, byte[] bArr) {
+    protected fp(short s, byte b2, int i, byte[] bArr) {
         this.f383a = (short) 1;
         this.f383a = s;
-        this.f381a = b;
+        this.f381a = b2;
         this.f382a = i;
         this.b = bArr;
     }
 
-    public static fp a(byte b, int i, byte[] bArr) {
-        return new fp(b, i, bArr);
+    public static fp a(byte b2, int i, byte[] bArr) {
+        return new fp(b2, i, bArr);
     }
 
-    public static fp a(short s, byte b, int i, byte[] bArr) {
-        return new fp(s, b, i, bArr);
+    public static fp a(short s, byte b2, int i, byte[] bArr) {
+        return new fp(s, b2, i, bArr);
     }
 
     public static fp a(byte[] bArr) {
@@ -133,11 +129,11 @@ public class fp {
             ByteBuffer order = ByteBuffer.wrap(bArr).order(ByteOrder.BIG_ENDIAN);
             order.getInt();
             short s = order.getShort();
-            byte b = order.get();
+            byte b2 = order.get();
             int i = order.getInt();
             byte[] bArr2 = new byte[order.getInt()];
             order.get(bArr2);
-            return a(s, b, i, bArr2);
+            return a(s, b2, i, bArr2);
         }
         return a((byte) 0, bArr.length, bArr);
     }

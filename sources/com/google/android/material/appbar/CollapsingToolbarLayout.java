@@ -46,7 +46,7 @@ import java.lang.annotation.RetentionPolicy;
 /* loaded from: classes10.dex */
 public class CollapsingToolbarLayout extends FrameLayout {
     private static final int DEFAULT_SCRIM_ANIMATION_DURATION = 600;
-    private static final int DEF_STYLE_RES = R.C4819style.Widget_Design_CollapsingToolbar;
+    private static final int DEF_STYLE_RES = R.style.Widget_Design_CollapsingToolbar;
     public static final int TITLE_COLLAPSE_MODE_FADE = 1;
     public static final int TITLE_COLLAPSE_MODE_SCALE = 0;
     @NonNull

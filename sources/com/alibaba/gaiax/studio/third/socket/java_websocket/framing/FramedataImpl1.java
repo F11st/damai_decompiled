@@ -19,9 +19,8 @@ public abstract class FramedataImpl1 implements Framedata {
     private boolean rsv3 = false;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.studio.third.socket.java_websocket.framing.FramedataImpl1$a */
     /* loaded from: classes6.dex */
-    static /* synthetic */ class C3386a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -60,7 +59,7 @@ public abstract class FramedataImpl1 implements Framedata {
 
     public static FramedataImpl1 get(Opcode opcode) {
         if (opcode != null) {
-            switch (C3386a.a[opcode.ordinal()]) {
+            switch (a.a[opcode.ordinal()]) {
                 case 1:
                     return new PingFrame();
                 case 2:

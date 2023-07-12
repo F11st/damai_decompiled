@@ -14,7 +14,6 @@ import com.alibaba.gaiax.template.GXIExpression;
 import com.alibaba.gaiax.template.GXTemplateInfo;
 import com.taobao.weex.common.Constants;
 import io.flutter.wpkbridge.WPKFactory;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -37,7 +36,7 @@ import tb.us0;
 /* loaded from: classes6.dex */
 public final class GXRegisterCenter {
     @NotNull
-    public static final C3333a Companion = new C3333a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final Lazy<GXRegisterCenter> q;
     @Nullable
@@ -63,7 +62,7 @@ public final class GXRegisterCenter {
     @Nullable
     private GXIExtensionException k;
     @Nullable
-    private C3334b l;
+    private b l;
     @Nullable
     private GXIExtensionNodeEvent m;
     @Nullable
@@ -77,7 +76,7 @@ public final class GXRegisterCenter {
     @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\bf\u0018\u00002\u00020\u0001J\u0010\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H&¨\u0006\u0006"}, d2 = {"Lcom/alibaba/gaiax/GXRegisterCenter$GXIExtensionBizMap;", "", "Lcom/alibaba/gaiax/GXTemplateEngine$i;", "item", "Ltb/wt2;", "convert", "GaiaX"}, k = 1, mv = {1, 5, 1})
     /* loaded from: classes15.dex */
     public interface GXIExtensionBizMap {
-        void convert(@NotNull GXTemplateEngine.C3347i c3347i);
+        void convert(@NotNull GXTemplateEngine.i iVar);
     }
 
     /* compiled from: Taobao */
@@ -100,7 +99,7 @@ public final class GXRegisterCenter {
     /* loaded from: classes15.dex */
     public interface GXIExtensionContainerItemBind {
         @Nullable
-        Object bindViewHolder(@Nullable Object obj, @NotNull ViewGroup viewGroup, @NotNull GXTemplateEngine.C3343f c3343f, @NotNull GXTemplateEngine.C3347i c3347i, @NotNull GXTemplateEngine.C3341d c3341d);
+        Object bindViewHolder(@Nullable Object obj, @NotNull ViewGroup viewGroup, @NotNull GXTemplateEngine.f fVar, @NotNull GXTemplateEngine.i iVar, @NotNull GXTemplateEngine.d dVar);
     }
 
     /* compiled from: Taobao */
@@ -117,9 +116,8 @@ public final class GXRegisterCenter {
     public interface GXIExtensionDynamicProperty {
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.GXRegisterCenter$GXIExtensionDynamicProperty$a */
         /* loaded from: classes15.dex */
-        public static final class C3331a {
+        public static final class a {
             @NotNull
             private final String a;
             @NotNull
@@ -129,7 +127,7 @@ public final class GXRegisterCenter {
             @Nullable
             private ls0 d;
 
-            public C3331a(@NotNull String str, @NotNull Object obj) {
+            public a(@NotNull String str, @NotNull Object obj) {
                 b41.i(str, "propertyName");
                 b41.i(obj, "value");
                 this.a = str;
@@ -164,9 +162,9 @@ public final class GXRegisterCenter {
                 if (this == obj) {
                     return true;
                 }
-                if (obj instanceof C3331a) {
-                    C3331a c3331a = (C3331a) obj;
-                    return b41.d(this.a, c3331a.a) && b41.d(this.b, c3331a.b);
+                if (obj instanceof a) {
+                    a aVar = (a) obj;
+                    return b41.d(this.a, aVar.a) && b41.d(this.b, aVar.b);
                 }
                 return false;
             }
@@ -189,7 +187,7 @@ public final class GXRegisterCenter {
         }
 
         @Nullable
-        Object convert(@NotNull C3331a c3331a);
+        Object convert(@NotNull a aVar);
     }
 
     /* compiled from: Taobao */
@@ -276,15 +274,14 @@ public final class GXRegisterCenter {
     public interface GXIExtensionStaticProperty {
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.GXRegisterCenter$GXIExtensionStaticProperty$a */
         /* loaded from: classes15.dex */
-        public static final class C3332a {
+        public static final class a {
             @NotNull
             private final String a;
             @NotNull
             private final Object b;
 
-            public C3332a(@NotNull String str, @NotNull Object obj) {
+            public a(@NotNull String str, @NotNull Object obj) {
                 b41.i(str, "propertyName");
                 b41.i(obj, "value");
                 this.a = str;
@@ -305,9 +302,9 @@ public final class GXRegisterCenter {
                 if (this == obj) {
                     return true;
                 }
-                if (obj instanceof C3332a) {
-                    C3332a c3332a = (C3332a) obj;
-                    return b41.d(this.a, c3332a.a) && b41.d(this.b, c3332a.b);
+                if (obj instanceof a) {
+                    a aVar = (a) obj;
+                    return b41.d(this.a, aVar.a) && b41.d(this.b, aVar.b);
                 }
                 return false;
             }
@@ -323,7 +320,7 @@ public final class GXRegisterCenter {
         }
 
         @Nullable
-        Object convert(@NotNull C3332a c3332a);
+        Object convert(@NotNull a aVar);
     }
 
     /* compiled from: Taobao */
@@ -331,7 +328,7 @@ public final class GXRegisterCenter {
     /* loaded from: classes15.dex */
     public interface GXIExtensionTemplateInfoSource {
         @Nullable
-        GXTemplateInfo getTemplateInfo(@NotNull GXTemplateEngine.C3347i c3347i);
+        GXTemplateInfo getTemplateInfo(@NotNull GXTemplateEngine.i iVar);
     }
 
     /* compiled from: Taobao */
@@ -339,17 +336,16 @@ public final class GXRegisterCenter {
     /* loaded from: classes15.dex */
     public interface GXIExtensionTemplateSource {
         @Nullable
-        ns0 getTemplate(@NotNull GXTemplateEngine.C3347i c3347i);
+        ns0 getTemplate(@NotNull GXTemplateEngine.i iVar);
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.GXRegisterCenter$a */
     /* loaded from: classes15.dex */
-    public static final class C3333a {
-        private C3333a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3333a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -360,9 +356,8 @@ public final class GXRegisterCenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.GXRegisterCenter$b */
     /* loaded from: classes15.dex */
-    public static final class C3334b {
+    public static final class b {
         private boolean a;
         private boolean b;
         private boolean c;
@@ -438,8 +433,8 @@ public final class GXRegisterCenter {
     }
 
     static {
-        Lazy<GXRegisterCenter> b;
-        b = C8177b.b(new Function0<GXRegisterCenter>() { // from class: com.alibaba.gaiax.GXRegisterCenter$Companion$instance$2
+        Lazy<GXRegisterCenter> b2;
+        b2 = kotlin.b.b(new Function0<GXRegisterCenter>() { // from class: com.alibaba.gaiax.GXRegisterCenter$Companion$instance$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull
@@ -447,7 +442,7 @@ public final class GXRegisterCenter {
                 return new GXRegisterCenter();
             }
         });
-        q = b;
+        q = b2;
     }
 
     @NotNull
@@ -518,7 +513,7 @@ public final class GXRegisterCenter {
     }
 
     @Nullable
-    public final C3334b d() {
+    public final b d() {
         return this.l;
     }
 
@@ -595,9 +590,9 @@ public final class GXRegisterCenter {
     }
 
     @NotNull
-    public final GXRegisterCenter s(@NotNull C3334b c3334b) {
-        b41.i(c3334b, "extensionCompatibility");
-        this.l = c3334b;
+    public final GXRegisterCenter s(@NotNull b bVar) {
+        b41.i(bVar, "extensionCompatibility");
+        this.l = bVar;
         return this;
     }
 

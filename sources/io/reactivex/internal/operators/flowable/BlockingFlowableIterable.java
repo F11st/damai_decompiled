@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.internal.queue.SpscArrayQueue;
@@ -20,7 +20,7 @@ import org.reactivestreams.Subscription;
 /* loaded from: classes3.dex */
 public final class BlockingFlowableIterable<T> implements Iterable<T> {
     final int bufferSize;
-    final AbstractC8147b<T> source;
+    final b<T> source;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -155,8 +155,8 @@ public final class BlockingFlowableIterable<T> implements Iterable<T> {
         }
     }
 
-    public BlockingFlowableIterable(AbstractC8147b<T> abstractC8147b, int i) {
-        this.source = abstractC8147b;
+    public BlockingFlowableIterable(b<T> bVar, int i) {
+        this.source = bVar;
         this.bufferSize = i;
     }
 

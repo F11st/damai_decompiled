@@ -12,7 +12,6 @@ import androidx.viewpager.widget.ViewPager;
 import cn.damai.common.app.base.BaseFragment;
 import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.commonbusiness.bean.FollowEvent;
@@ -75,12 +74,11 @@ public class UserHomeFragment extends DamaiBaseMvpFragment {
     boolean myself = false;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userhome.fragment.UserHomeFragment$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2720a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2720a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -98,12 +96,11 @@ public class UserHomeFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userhome.fragment.UserHomeFragment$b */
     /* loaded from: classes9.dex */
-    public class C2721b implements Action<Object> {
+    public class b implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2721b() {
+        b() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -124,12 +121,11 @@ public class UserHomeFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userhome.fragment.UserHomeFragment$c */
     /* loaded from: classes9.dex */
-    public class C2722c implements AppBarLayout.OnOffsetChangedListener {
+    public class c implements AppBarLayout.OnOffsetChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2722c() {
+        c() {
         }
 
         @Override // com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener, com.google.android.material.appbar.AppBarLayout.BaseOnOffsetChangedListener
@@ -155,19 +151,17 @@ public class UserHomeFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userhome.fragment.UserHomeFragment$d */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2723d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ AttentionView a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.user.userhome.fragment.UserHomeFragment$d$a */
         /* loaded from: classes17.dex */
-        public class DialogInterface$OnClickListenerC2724a implements DialogInterface.OnClickListener {
+        public class a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC2724a(View$OnClickListenerC2723d view$OnClickListenerC2723d) {
+            a(d dVar) {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -182,12 +176,11 @@ public class UserHomeFragment extends DamaiBaseMvpFragment {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.user.userhome.fragment.UserHomeFragment$d$b */
         /* loaded from: classes17.dex */
-        public class DialogInterface$OnClickListenerC2725b implements DialogInterface.OnClickListener {
+        public class b implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC2725b() {
+            b() {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -202,7 +195,7 @@ public class UserHomeFragment extends DamaiBaseMvpFragment {
             }
         }
 
-        View$OnClickListenerC2723d(AttentionView attentionView) {
+        d(AttentionView attentionView) {
             this.a = attentionView;
         }
 
@@ -231,18 +224,17 @@ public class UserHomeFragment extends DamaiBaseMvpFragment {
             }
             DMDialog dMDialog = new DMDialog(activity);
             dMDialog.o(false).q("确认不在关注TA了？");
-            dMDialog.i("取消", new DialogInterface$OnClickListenerC2724a(this));
-            dMDialog.n(PurchaseConstants.CONFIRM, new DialogInterface$OnClickListenerC2725b()).show();
+            dMDialog.i("取消", new a(this));
+            dMDialog.n(PurchaseConstants.CONFIRM, new b()).show();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userhome.fragment.UserHomeFragment$e */
     /* loaded from: classes9.dex */
-    public class C2726e implements PtrHandler {
+    public class e implements PtrHandler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2726e() {
+        e() {
         }
 
         @Override // in.srain.cube.views.ptr.PtrHandler
@@ -271,12 +263,11 @@ public class UserHomeFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userhome.fragment.UserHomeFragment$f */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2727f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2727f() {
+        f() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -313,9 +304,9 @@ public class UserHomeFragment extends DamaiBaseMvpFragment {
         }
         UserHomePagerAdapter userHomePagerAdapter = this.mPagerAdapter;
         if (userHomePagerAdapter != null) {
-            Fragment a = userHomePagerAdapter.a();
-            if (a instanceof PtrChildHandler) {
-                return (PtrChildHandler) a;
+            Fragment a2 = userHomePagerAdapter.a();
+            if (a2 instanceof PtrChildHandler) {
+                return (PtrChildHandler) a2;
             }
             return null;
         }
@@ -357,7 +348,7 @@ public class UserHomeFragment extends DamaiBaseMvpFragment {
         ptrFrameLayout.addPtrUIHandler(ptrUiHeader);
         ptrFrameLayout.setPtrIndicator(new xj0(150, getContext()));
         ptrFrameLayout.setResistance(1.7f);
-        ptrFrameLayout.setPtrHandler(new C2726e());
+        ptrFrameLayout.setPtrHandler(new e());
         ptrFrameLayout.disableWhenHorizontalMove(true);
     }
 
@@ -370,22 +361,22 @@ public class UserHomeFragment extends DamaiBaseMvpFragment {
         this.mUserInfoHeight = t60.a(getActivity(), 88.0f);
         UserHomeTitleView userHomeTitleView = (UserHomeTitleView) this.rootView.findViewById(R$id.ll_user_center_title);
         this.mTitleView = userHomeTitleView;
-        userHomeTitleView.setBackListener(new View$OnClickListenerC2720a());
-        this.mDMMessage.b(FollowEvent.LIVE_FOLLOW_EVENT, new C2721b());
+        userHomeTitleView.setBackListener(new a());
+        this.mDMMessage.b(FollowEvent.LIVE_FOLLOW_EVENT, new b());
         this.mTitleBarHeight = this.mTitleView.getTitleHeight();
         this.rootView.findViewById(R$id.layout_toolbar).setMinimumHeight(this.mTitleBarHeight);
         AppBarLayout appBarLayout = (AppBarLayout) this.rootView.findViewById(R$id.appbar);
         this.mAppBar = appBarLayout;
-        appBarLayout.addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new C2722c());
+        appBarLayout.addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new c());
         initPtr();
         AttentionView attentionView = this.mTitleView.getAttentionView();
         cn.damai.commonbusiness.view.AttentionView attentionView2 = this.mHeaderPanel.getAttentionView();
-        View$OnClickListenerC2723d view$OnClickListenerC2723d = new View$OnClickListenerC2723d(attentionView);
+        d dVar = new d(attentionView);
         if (attentionView2 != null) {
             attentionView.addAttentionView(attentionView2);
-            attentionView2.setOnAttentionClickDelegate(view$OnClickListenerC2723d);
+            attentionView2.setOnAttentionClickDelegate(dVar);
         }
-        attentionView.setOnAttentionClickDelegate(view$OnClickListenerC2723d);
+        attentionView.setOnAttentionClickDelegate(dVar);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -411,7 +402,7 @@ public class UserHomeFragment extends DamaiBaseMvpFragment {
             z2 = false;
         }
         this.mHorScrollView.setTitle(this.mTitleList).setLineType(2).setFontColor(R$color.color_000000, R$color.color_333333).setHeight(35).setSpace(10).setFontSize(16, 18).setLineShow(z2).commit();
-        this.mHorScrollView.setOnTitleClickListener(new View$OnClickListenerC2727f());
+        this.mHorScrollView.setOnTitleClickListener(new f());
         this.mHorScrollView.selectTitle(0);
         this.mSelectTitle = this.mTitleList.get(0);
         ArrayList arrayList2 = new ArrayList();
@@ -443,10 +434,10 @@ public class UserHomeFragment extends DamaiBaseMvpFragment {
             }
 
             @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener
-            public void onPageScrolled(int i, float f, int i2) {
+            public void onPageScrolled(int i, float f2, int i2) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "221182426")) {
-                    ipChange2.ipc$dispatch("221182426", new Object[]{this, Integer.valueOf(i), Float.valueOf(f), Integer.valueOf(i2)});
+                    ipChange2.ipc$dispatch("221182426", new Object[]{this, Integer.valueOf(i), Float.valueOf(f2), Integer.valueOf(i2)});
                 }
             }
 
@@ -461,7 +452,7 @@ public class UserHomeFragment extends DamaiBaseMvpFragment {
                 UserHomeFragment userHomeFragment = UserHomeFragment.this;
                 userHomeFragment.mSelectTitle = (ScrollTitleBean) userHomeFragment.mTitleList.get(i);
                 if (UserHomeFragment.this.mSelectTitle != null) {
-                    C0529c.e().x(iv2.j().l(UserHomeFragment.this.mSelectTitle.index, UserHomeFragment.this.mSelectTitle.name));
+                    cn.damai.common.user.c.e().x(iv2.j().l(UserHomeFragment.this.mSelectTitle.index, UserHomeFragment.this.mSelectTitle.name));
                 }
             }
         });

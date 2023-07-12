@@ -7,7 +7,6 @@ import android.os.Build;
 import android.provider.MediaStore;
 import android.view.View;
 import android.view.ViewGroup;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import io.flutter.wpkbridge.WPKFactory;
@@ -88,7 +87,7 @@ public final class q11 {
             return (Uri) ipChange.ipc$dispatch("-934450812", new Object[]{this, context, str});
         }
         b41.i(context, WPKFactory.INIT_KEY_CONTEXT);
-        b41.i(str, AbstractC3893a.V);
+        b41.i(str, com.alibaba.security.realidentity.jsbridge.a.V);
         Cursor query = context.getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, new String[]{"_id"}, "_data=? ", new String[]{str}, null);
         if (query == null || !query.moveToFirst()) {
             return null;
@@ -189,7 +188,7 @@ public final class q11 {
             goto L70
         L42:
             java.lang.String[] r14 = tb.q11.a     // Catch: java.lang.Exception -> L71
-            int r14 = kotlin.collections.C8202e.B(r14, r5)     // Catch: java.lang.Exception -> L71
+            int r14 = kotlin.collections.e.B(r14, r5)     // Catch: java.lang.Exception -> L71
             if (r14 < 0) goto L7b
             java.lang.String[] r1 = tb.q11.b     // Catch: java.lang.Exception -> L71
             int r2 = r1.length     // Catch: java.lang.Exception -> L71
@@ -201,7 +200,7 @@ public final class q11 {
             r11 = 6
             r12 = 0
             r7 = r15
-            int r14 = kotlin.text.C8596g.Z(r7, r8, r9, r10, r11, r12)     // Catch: java.lang.Exception -> L71
+            int r14 = kotlin.text.g.Z(r7, r8, r9, r10, r11, r12)     // Catch: java.lang.Exception -> L71
             if (r14 <= 0) goto L67
             java.lang.String r15 = r15.substring(r3, r14)     // Catch: java.lang.Exception -> L71
             java.lang.String r14 = "(this as java.lang.Strin…ing(startIndex, endIndex)"
@@ -211,7 +210,7 @@ public final class q11 {
             r7 = 0
             r8 = 4
             r9 = 0
-            java.lang.String r14 = kotlin.text.C8596g.B(r4, r5, r6, r7, r8, r9)     // Catch: java.lang.Exception -> L71
+            java.lang.String r14 = kotlin.text.g.B(r4, r5, r6, r7, r8, r9)     // Catch: java.lang.Exception -> L71
             return r14
         L70:
             return r0

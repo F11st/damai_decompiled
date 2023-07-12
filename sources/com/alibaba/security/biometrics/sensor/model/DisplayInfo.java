@@ -11,7 +11,7 @@ public class DisplayInfo implements Serializable {
     private int displayId;
     private int height;
     private int modeID;
-    private List<C3797a> modes;
+    private List<a> modes;
     private int rotation;
     private float scaleDensity;
     private int state;
@@ -21,9 +21,8 @@ public class DisplayInfo implements Serializable {
     private float ydip;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.security.biometrics.sensor.model.DisplayInfo$a */
     /* loaded from: classes8.dex */
-    public static class C3797a {
+    public static class a {
         public float a;
         public int b;
         public int c;
@@ -82,7 +81,7 @@ public class DisplayInfo implements Serializable {
         return this.modeID;
     }
 
-    public List<C3797a> getModes() {
+    public List<a> getModes() {
         return this.modes;
     }
 
@@ -134,7 +133,7 @@ public class DisplayInfo implements Serializable {
         this.modeID = i;
     }
 
-    public void setModes(List<C3797a> list) {
+    public void setModes(List<a> list) {
         this.modes = list;
     }
 

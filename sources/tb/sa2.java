@@ -140,7 +140,7 @@ public final class sa2<T> extends mn0<T> {
         b();
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.a.subscribe(subscriber);
     }

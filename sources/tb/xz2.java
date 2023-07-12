@@ -3,7 +3,6 @@ package tb;
 import android.net.Uri;
 import android.taobao.windvane.config.WVServerConfig;
 import android.text.TextUtils;
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.IConfigAdapter;
 import com.taobao.weex.WXSDKInstance;
 import com.taobao.weex.performance.WXInstanceApm;
@@ -72,7 +71,7 @@ public class xz2 {
     public static void d(WXSDKInstance wXSDKInstance, String str) {
         WXInstanceApm apmForInstance;
         IConfigAdapter c;
-        if (wXSDKInstance == null || TextUtils.isEmpty(str) || (apmForInstance = wXSDKInstance.getApmForInstance()) == null || (c = C3004a.l().c()) == null) {
+        if (wXSDKInstance == null || TextUtils.isEmpty(str) || (apmForInstance = wXSDKInstance.getApmForInstance()) == null || (c = com.alibaba.aliweex.a.l().c()) == null) {
             return;
         }
         if (!"true".equals(c.getConfig("android_weex_ext_config", "enableReportUnsafeUrl", "true"))) {

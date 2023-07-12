@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 import com.taobao.android.dinamic.dinamic.DinamicViewAdvancedConstructor;
 import com.taobao.android.dinamic.property.DAttrConstant;
-import com.taobao.android.dinamicx.C6366c;
+import com.taobao.android.dinamicx.c;
 import com.taobao.weex.common.Constants;
 import com.youku.arch.v3.data.Constants;
 import java.util.ArrayList;
@@ -62,7 +62,7 @@ public class DTextViewConstructor extends DinamicViewAdvancedConstructor {
             setText(textView, (String) map.get(DAttrConstant.TV_TEXT));
         }
         if (arrayList.contains(DAttrConstant.TV_TEXT_SIZE)) {
-            if (C6366c.g(v80Var.c())) {
+            if (c.g(v80Var.c())) {
                 if (map.containsKey(DAttrConstant.TV_TEXT_SIZE_ENABLE_STRATEGY) ? im1.b((String) map.get(DAttrConstant.TV_TEXT_SIZE_ENABLE_STRATEGY)) : true) {
                     setElderTextSize(textView, (String) map.get(DAttrConstant.TV_TEXT_SIZE));
                 } else {
@@ -102,7 +102,7 @@ public class DTextViewConstructor extends DinamicViewAdvancedConstructor {
     }
 
     public void setElderTextSize(TextView textView, String str) {
-        int a = (int) C6366c.a(p62.b(textView.getContext(), str, -1));
+        int a = (int) c.a(p62.b(textView.getContext(), str, -1));
         if (a == -1) {
             textView.setTextSize(1, 18.0f);
         } else {

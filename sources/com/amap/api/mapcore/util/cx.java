@@ -23,15 +23,15 @@ import java.util.List;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class cx implements IParticleLatyer, IOverlayDelegate {
-    private C4505de e;
-    private C4637r f;
+    private de e;
+    private r f;
     private String i;
     private BitmapDescriptor j;
     private long d = 0;
     private boolean g = true;
     private float h = 1.0f;
     private boolean k = false;
-    private List<C4645x> l = new ArrayList();
+    private List<x> l = new ArrayList();
     private int m = 0;
     private ParticleOverlayOptions n = new ParticleOverlayOptions();
     private boolean o = false;
@@ -44,8 +44,8 @@ public class cx implements IParticleLatyer, IOverlayDelegate {
     private float[] s = new float[16];
     private float[] t = new float[16];
 
-    public cx(C4637r c4637r) {
-        this.f = c4637r;
+    public cx(r rVar) {
+        this.f = rVar;
         try {
             this.i = getId();
         } catch (RemoteException e) {
@@ -55,12 +55,12 @@ public class cx implements IParticleLatyer, IOverlayDelegate {
     }
 
     private void b() {
-        C4637r c4637r;
-        List<C4645x> list = this.l;
+        r rVar;
+        List<x> list = this.l;
         if (list != null) {
-            for (C4645x c4645x : list) {
-                if (c4645x != null && (c4637r = this.f) != null) {
-                    c4637r.a(c4645x);
+            for (x xVar : list) {
+                if (xVar != null && (rVar = this.f) != null) {
+                    rVar.a(xVar);
                 }
             }
             this.l.clear();
@@ -133,17 +133,17 @@ public class cx implements IParticleLatyer, IOverlayDelegate {
     @Override // com.autonavi.amap.api.mapcore.overlays.IParticleLatyer, com.autonavi.amap.mapcore.interfaces.IOverlay
     public void destroy() {
         Bitmap bitmap;
-        List<C4645x> list = this.l;
+        List<x> list = this.l;
         if (list != null && list.size() > 0) {
             for (int i = 0; i < this.l.size(); i++) {
-                C4645x c4645x = this.l.get(i);
-                if (c4645x != null) {
-                    C4637r c4637r = this.f;
-                    if (c4637r != null) {
-                        c4637r.a(c4645x);
+                x xVar = this.l.get(i);
+                if (xVar != null) {
+                    r rVar = this.f;
+                    if (rVar != null) {
+                        rVar.a(xVar);
                     }
                     if (this.f.g() != null) {
-                        this.f.g().removeTextureItem(c4645x.p());
+                        this.f.g().removeTextureItem(xVar.p());
                     }
                 }
             }
@@ -164,7 +164,7 @@ public class cx implements IParticleLatyer, IOverlayDelegate {
     public void draw(MapConfig mapConfig) throws RemoteException {
         float f;
         float f2;
-        C4505de c4505de;
+        de deVar;
         if (this.e == null) {
             this.e = this.f.b();
         }
@@ -174,8 +174,8 @@ public class cx implements IParticleLatyer, IOverlayDelegate {
         if (this.d == 0) {
             long nativeCreate = AMapNativeParticleSystem.nativeCreate();
             this.d = nativeCreate;
-            if (nativeCreate != 0 && (c4505de = this.e) != null) {
-                AMapNativeParticleSystem.nativeSetGLShaderManager(nativeCreate, c4505de.a());
+            if (nativeCreate != 0 && (deVar = this.e) != null) {
+                AMapNativeParticleSystem.nativeSetGLShaderManager(nativeCreate, deVar.a());
             }
         }
         if (this.d != 0) {
@@ -191,9 +191,9 @@ public class cx implements IParticleLatyer, IOverlayDelegate {
                 return;
             }
             AMapNativeParticleSystem.nativeSetTextureId(this.d, a);
-            C4637r c4637r = this.f;
-            if (c4637r != null) {
-                c4637r.a(false);
+            r rVar = this.f;
+            if (rVar != null) {
+                rVar.a(false);
             }
             if (this.b != mapConfig.getMapWidth() || this.c != mapConfig.getMapHeight()) {
                 this.b = mapConfig.getMapWidth();
@@ -503,38 +503,38 @@ public class cx implements IParticleLatyer, IOverlayDelegate {
         return this.m;
     }
 
-    private void a(C4645x c4645x) {
-        if (c4645x != null) {
-            this.l.add(c4645x);
-            c4645x.m();
+    private void a(x xVar) {
+        if (xVar != null) {
+            this.l.add(xVar);
+            xVar.m();
         }
     }
 
     private int a(boolean z, BitmapDescriptor bitmapDescriptor) {
-        C4645x c4645x;
+        x xVar;
         b();
         if (z) {
-            c4645x = this.f.a(bitmapDescriptor);
-            if (c4645x != null) {
-                int k = c4645x.k();
-                a(c4645x);
+            xVar = this.f.a(bitmapDescriptor);
+            if (xVar != null) {
+                int k = xVar.k();
+                a(xVar);
                 return k;
             }
         } else {
-            c4645x = null;
+            xVar = null;
         }
         int i = 0;
-        if (c4645x == null) {
-            c4645x = new C4645x(bitmapDescriptor, 0);
+        if (xVar == null) {
+            xVar = new x(bitmapDescriptor, 0);
         }
         Bitmap bitmap = bitmapDescriptor.getBitmap();
         if (bitmap != null && !bitmap.isRecycled()) {
             i = c();
-            c4645x.a(i);
+            xVar.a(i);
             if (z) {
-                this.f.g().addTextureItem(c4645x);
+                this.f.g().addTextureItem(xVar);
             }
-            a(c4645x);
+            a(xVar);
             eq.b(i, bitmap, true);
         }
         return i;

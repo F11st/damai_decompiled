@@ -2,7 +2,6 @@ package com.xiaomi.push;
 
 import android.os.Build;
 import android.system.Os;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import java.io.File;
 
 /* compiled from: Taobao */
@@ -16,7 +15,7 @@ public class cp {
                 }
                 return 0L;
             } catch (Exception e) {
-                AbstractC7535b.a(e);
+                com.xiaomi.channel.commonutils.logger.b.a(e);
                 return 0L;
             }
         }

@@ -2,7 +2,7 @@ package com.youku.middlewareservice.provider.location;
 
 import android.util.Log;
 import com.youku.middlewareservice.provider.location.AppLocationProvider;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -11,7 +11,7 @@ public class AppLocationProviderProxy {
 
     public static AppLocationProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (AppLocationProvider) C8883a.j("com.youku.middlewareservice_impl.provider.location.AmapLocationProviderImpl").b().f();
+            sProxy = (AppLocationProvider) a.j("com.youku.middlewareservice_impl.provider.location.AmapLocationProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -29,7 +29,7 @@ public class AppLocationProviderProxy {
     public static void startLocate(AppLocationProvider.OnLocationChangedListener onLocationChangedListener) {
         try {
             if (sProxy == null) {
-                sProxy = (AppLocationProvider) C8883a.j("com.youku.middlewareservice_impl.provider.location.AmapLocationProviderImpl").b().f();
+                sProxy = (AppLocationProvider) a.j("com.youku.middlewareservice_impl.provider.location.AmapLocationProviderImpl").b().f();
             }
             sProxy.startLocate(onLocationChangedListener);
         } catch (Throwable th) {

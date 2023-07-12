@@ -16,7 +16,7 @@ public abstract class u0 {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat(str, Locale.getDefault());
             return simpleDateFormat.parse(simpleDateFormat.format(Long.valueOf(j))).getTime();
         } catch (ParseException unused) {
-            C5653y.f("hmsSdk/stringUtil", "getMillisOfDate(): Time conversion Exception !");
+            y.f("hmsSdk/stringUtil", "getMillisOfDate(): Time conversion Exception !");
             return 0L;
         }
     }

@@ -3,8 +3,6 @@ package tb;
 import android.app.Activity;
 import android.content.Context;
 import androidx.fragment.app.FragmentActivity;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import cn.damai.user.userprofile.bean.ArticleFeedData;
 import cn.damai.user.userprofile.bean.CommentFeedData;
 import cn.damai.user.userprofile.bean.DynamicFeedData;
@@ -112,7 +110,7 @@ public class kv2 {
             if (str == null) {
                 str = iv2.USER_HOME_PAGE;
             }
-            C0529c.e().x(new C0528b().e(str, str2, str3, hashMap, Boolean.valueOf(z)));
+            cn.damai.common.user.c.e().x(new cn.damai.common.user.b().e(str, str2, str3, hashMap, Boolean.valueOf(z)));
         }
     }
 
@@ -147,7 +145,7 @@ public class kv2 {
         } else if (i != 1) {
             this.a = "business_homepage";
         }
-        C0529c.e().L(activity, this.a);
+        cn.damai.common.user.c.e().L(activity, this.a);
     }
 
     public void g(String str, String str2, String str3, boolean z) {
@@ -187,6 +185,6 @@ public class kv2 {
         if (map2 != null) {
             hashMap.putAll(map2);
         }
-        C0529c.e().x(new C0528b().e(str, str2, str3, hashMap, Boolean.valueOf(z)));
+        cn.damai.common.user.c.e().x(new cn.damai.common.user.b().e(str, str2, str3, hashMap, Boolean.valueOf(z)));
     }
 }

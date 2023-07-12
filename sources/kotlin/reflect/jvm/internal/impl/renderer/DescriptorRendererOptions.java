@@ -10,9 +10,8 @@ import tb.hp0;
 public interface DescriptorRendererOptions {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRendererOptions$a */
     /* loaded from: classes3.dex */
-    public static final class C8481a {
+    public static final class a {
         public static boolean a(@NotNull DescriptorRendererOptions descriptorRendererOptions) {
             b41.i(descriptorRendererOptions, "this");
             return descriptorRendererOptions.getAnnotationArgumentsRenderingPolicy().getIncludeAnnotationArguments();

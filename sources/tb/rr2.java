@@ -22,13 +22,12 @@ public class rr2 implements UIConfirm {
     public static boolean c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.rr2$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9663a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ UserAction a;
 
-        View$OnClickListenerC9663a(rr2 rr2Var, UserAction userAction) {
+        a(rr2 rr2Var, UserAction userAction) {
             this.a = userAction;
         }
 
@@ -48,14 +47,13 @@ public class rr2 implements UIConfirm {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.rr2$b */
     /* loaded from: classes.dex */
-    public class DialogInterface$OnClickListenerC9664b implements DialogInterface.OnClickListener {
+    public class b implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ UserAction b;
 
-        DialogInterface$OnClickListenerC9664b(rr2 rr2Var, String str, UserAction userAction) {
+        b(rr2 rr2Var, String str, UserAction userAction) {
             this.a = str;
             this.b = userAction;
         }
@@ -113,7 +111,7 @@ public class rr2 implements UIConfirm {
             String confirmText = !TextUtils.isEmpty(userAction.getConfirmText()) ? userAction.getConfirmText() : "马上升级";
             DMThemeDialog dMThemeDialog = new DMThemeDialog(context);
             a = dMThemeDialog;
-            dMThemeDialog.o("升级提示").k(str).r(DMThemeDialog.DMDialogTheme.THEME_SYS_UPDATE).i(confirmText, new DialogInterface$OnClickListenerC9664b(this, confirmText, userAction)).g(true, new View$OnClickListenerC9663a(this, userAction)).f(false).l(3).show();
+            dMThemeDialog.o("升级提示").k(str).r(DMThemeDialog.DMDialogTheme.THEME_SYS_UPDATE).i(confirmText, new b(this, confirmText, userAction)).g(true, new a(this, userAction)).f(false).l(3).show();
         }
     }
 

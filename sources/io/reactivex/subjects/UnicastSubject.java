@@ -1,9 +1,9 @@
 package io.reactivex.subjects;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.Observer;
 import io.reactivex.annotations.CheckReturnValue;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.EmptyDisposable;
 import io.reactivex.internal.functions.ObjectHelper;
@@ -93,7 +93,7 @@ public final class UnicastSubject<T> extends pi2<T> {
 
     @CheckReturnValue
     public static <T> UnicastSubject<T> b() {
-        return new UnicastSubject<>(AbstractC8149d.bufferSize(), true);
+        return new UnicastSubject<>(d.bufferSize(), true);
     }
 
     @CheckReturnValue
@@ -252,7 +252,7 @@ public final class UnicastSubject<T> extends pi2<T> {
         }
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super T> observer) {
         if (!this.h.get() && this.h.compareAndSet(false, true)) {
             observer.onSubscribe(this.i);

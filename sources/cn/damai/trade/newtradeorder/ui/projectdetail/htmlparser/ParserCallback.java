@@ -11,5 +11,5 @@ public interface ParserCallback {
 
     void startDocument(int i);
 
-    void startElement(C2247c c2247c);
+    void startElement(c cVar);
 }

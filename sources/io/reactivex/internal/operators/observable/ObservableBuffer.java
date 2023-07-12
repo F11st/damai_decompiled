@@ -189,7 +189,7 @@ public final class ObservableBuffer<T, U extends Collection<? super T>> extends 
         this.bufferSupplier = callable;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super U> observer) {
         int i = this.skip;
         int i2 = this.count;

@@ -3,7 +3,6 @@ package com.ali.ha.fulltrace.dump;
 import android.app.Application;
 import android.content.Context;
 import android.text.TextUtils;
-import com.ali.ha.fulltrace.C2940a;
 import com.ali.ha.fulltrace.IReportEvent;
 import com.ali.ha.fulltrace.IReportRawByteEvent;
 import java.io.File;
@@ -55,9 +54,8 @@ public class DumpManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.ali.ha.fulltrace.dump.DumpManager$a */
     /* loaded from: classes17.dex */
-    private static final class C2941a {
+    private static final class a {
         private static final DumpManager a = new DumpManager(null);
     }
 
@@ -82,7 +80,7 @@ public class DumpManager {
     public native void appendNoBody(short s, long j);
 
     public static final DumpManager c() {
-        return C2941a.a;
+        return a.a;
     }
 
     public static String d(Context context) {
@@ -90,7 +88,7 @@ public class DumpManager {
         if (TextUtils.isEmpty(replace)) {
             return "";
         }
-        return C2940a.c(context, LOG_PATH + File.separator + replace);
+        return com.ali.ha.fulltrace.a.c(context, LOG_PATH + File.separator + replace);
     }
 
     public static String e(Context context) {
@@ -98,7 +96,7 @@ public class DumpManager {
         if (TextUtils.isEmpty(replace)) {
             return "";
         }
-        return C2940a.b(context, LOG_PATH + File.separator + replace);
+        return com.ali.ha.fulltrace.a.b(context, LOG_PATH + File.separator + replace);
     }
 
     private native boolean init(String str, String str2, HashMap<String, String> hashMap, HashMap<String, String> hashMap2, HashMap<String, String> hashMap3);
@@ -114,7 +112,7 @@ public class DumpManager {
             lb1.b(TAG, "initing, but so was loaded failed!");
             return;
         }
-        HashMap<String, String> a = kx1.a();
+        HashMap<String, String> a2 = kx1.a();
         String e = e(application);
         String d = d(application);
         c = System.currentTimeMillis();
@@ -124,7 +122,7 @@ public class DumpManager {
         sb.append(str);
         sb.append(c);
         String sb2 = sb.toString();
-        if (init(sb2, e + str + c, hashMap, hashMap2, a)) {
+        if (init(sb2, e + str + c, hashMap, hashMap2, a2)) {
             return;
         }
         b = (byte) 2;

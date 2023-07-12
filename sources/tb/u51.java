@@ -1,7 +1,6 @@
 package tb;
 
 import com.taobao.weex.ui.component.richtext.node.RichTextNode;
-import kotlin.collections.C8201d0;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.load.java.components.TypeUsage;
 import kotlin.reflect.jvm.internal.impl.types.StarProjectionImpl;
@@ -32,7 +31,7 @@ public final class u51 {
     @NotNull
     public static final q51 c(@NotNull TypeUsage typeUsage, boolean z, @Nullable TypeParameterDescriptor typeParameterDescriptor) {
         b41.i(typeUsage, "<this>");
-        return new q51(typeUsage, null, z, typeParameterDescriptor == null ? null : C8201d0.c(typeParameterDescriptor), null, 18, null);
+        return new q51(typeUsage, null, z, typeParameterDescriptor == null ? null : kotlin.collections.d0.c(typeParameterDescriptor), null, 18, null);
     }
 
     public static /* synthetic */ q51 d(TypeUsage typeUsage, boolean z, TypeParameterDescriptor typeParameterDescriptor, int i, Object obj) {

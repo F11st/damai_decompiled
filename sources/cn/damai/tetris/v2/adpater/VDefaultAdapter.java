@@ -43,12 +43,11 @@ public class VDefaultAdapter<T extends ISection> extends VBaseAdapter<T, VBaseVi
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.v2.adpater.VDefaultAdapter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2006a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2006a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -93,8 +92,8 @@ public class VDefaultAdapter<T extends ISection> extends VBaseAdapter<T, VBaseVi
             b2 = "#1d1d2f";
         }
         viewGroup.findViewById(R$id.tetris_layer_gap_bg).setBackgroundColor(Color.parseColor(b2));
-        float a = zl2.a(this.a, 12.0f);
-        float[] fArr = {a, a, a, a, 0.0f, 0.0f, 0.0f, 0.0f};
+        float a2 = zl2.a(this.a, 12.0f);
+        float[] fArr = {a2, a2, a2, a2, 0.0f, 0.0f, 0.0f, 0.0f};
         int parseColor = Color.parseColor(b);
         GradientDrawable gradientDrawable = new GradientDrawable();
         gradientDrawable.setColor(parseColor);
@@ -129,7 +128,7 @@ public class VDefaultAdapter<T extends ISection> extends VBaseAdapter<T, VBaseVi
         }
         List<T> list = this.d;
         if (list != null && list.size() > 0) {
-            textView.setOnClickListener(new View$OnClickListenerC2006a());
+            textView.setOnClickListener(new a());
         }
         if (textView != null) {
             if (viewGroup2 == null) {
@@ -240,7 +239,7 @@ public class VDefaultAdapter<T extends ISection> extends VBaseAdapter<T, VBaseVi
             return (VBaseViewHolder) ipChange.ipc$dispatch("469199830", new Object[]{this, viewGroup, Integer.valueOf(i)});
         }
         jb1.a("VDefaultAdapter", "onCreateViewHolder for viewType : " + i);
-        GaiaXTemplateInfo a = ht0.a(i);
+        GaiaXTemplateInfo a2 = ht0.a(i);
         DXTemplateItem e = m90.e(i);
         DinamicXEngine dXEngine = this.b.getDXEngine();
         if (dXEngine != null && e != null) {
@@ -250,21 +249,21 @@ public class VDefaultAdapter<T extends ISection> extends VBaseAdapter<T, VBaseVi
                 return new VDinamicXViewHolder(this.b, f.a, e);
             }
             vDefaultViewHolder = new VDinamicXViewHolder(this.b, q, e);
-        } else if (a != null) {
+        } else if (a2 != null) {
             return o(viewGroup);
         } else {
-            ComponentConfig a2 = om.c(this.a).a(i);
-            if (a2 == null) {
+            ComponentConfig a3 = om.c(this.a).a(i);
+            if (a3 == null) {
                 jb1.a("VDefaultAdapter", "No Config for viewType : " + i);
                 return new VDefaultViewHolder(this.b, new View(this.a), null);
             }
-            View inflate = LayoutInflater.from(this.a).inflate(this.a.getResources().getIdentifier(a2.layoutXml, "layout", this.a.getPackageName()), viewGroup, false);
+            View inflate = LayoutInflater.from(this.a).inflate(this.a.getResources().getIdentifier(a3.layoutXml, "layout", this.a.getPackageName()), viewGroup, false);
             ViewGroup q2 = q(viewGroup, inflate, i);
             jb1.a("KEY_STYLE_INFO", i + " , : " + q2);
             if (q2 == null) {
-                return new VDefaultViewHolder(c(), inflate, a2);
+                return new VDefaultViewHolder(c(), inflate, a3);
             }
-            vDefaultViewHolder = new VDefaultViewHolder(c(), q2, a2);
+            vDefaultViewHolder = new VDefaultViewHolder(c(), q2, a3);
         }
         return vDefaultViewHolder;
     }

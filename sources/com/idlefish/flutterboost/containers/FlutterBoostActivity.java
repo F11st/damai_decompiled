@@ -33,13 +33,12 @@ public class FlutterBoostActivity extends FlutterActivity implements FlutterView
     private PlatformPlugin platformPlugin;
     private LifecycleStage stage;
     private final String who = UUID.randomUUID().toString();
-    private final C5780a textureHooker = new C5780a();
+    private final com.idlefish.flutterboost.containers.a textureHooker = new com.idlefish.flutterboost.containers.a();
     private boolean isAttached = false;
 
     /* compiled from: Taobao */
-    /* renamed from: com.idlefish.flutterboost.containers.FlutterBoostActivity$a */
     /* loaded from: classes10.dex */
-    public static class C5779a {
+    public static class a {
         private final Class<? extends FlutterBoostActivity> a;
         private boolean b = false;
         private String c = FlutterActivityLaunchConfigs.BackgroundMode.opaque.name();
@@ -47,11 +46,11 @@ public class FlutterBoostActivity extends FlutterActivity implements FlutterView
         private HashMap<String, Object> e;
         private String f;
 
-        public C5779a(Class<? extends FlutterBoostActivity> cls) {
+        public a(Class<? extends FlutterBoostActivity> cls) {
             this.a = cls;
         }
 
-        public C5779a a(FlutterActivityLaunchConfigs.BackgroundMode backgroundMode) {
+        public a a(FlutterActivityLaunchConfigs.BackgroundMode backgroundMode) {
             this.c = backgroundMode.name();
             return this;
         }
@@ -65,22 +64,22 @@ public class FlutterBoostActivity extends FlutterActivity implements FlutterView
             return putExtra.putExtra("unique_id", str);
         }
 
-        public C5779a c(boolean z) {
+        public a c(boolean z) {
             this.b = z;
             return this;
         }
 
-        public C5779a d(String str) {
+        public a d(String str) {
             this.f = str;
             return this;
         }
 
-        public C5779a e(String str) {
+        public a e(String str) {
             this.d = str;
             return this;
         }
 
-        public C5779a f(Map<String, Object> map) {
+        public a f(Map<String, Object> map) {
             this.e = map instanceof HashMap ? (HashMap) map : new HashMap<>(map);
             return this;
         }

@@ -270,10 +270,10 @@ public class GenericHeaderView extends AbsView<GenericItem<ItemValue>, GenericHe
             return;
         }
         imageView.setVisibility(0);
-        kg1.C9357a c9357a = kg1.Companion;
+        kg1.a aVar = kg1.Companion;
         Context context = getView().getContext();
         b41.h(context, "view.context");
-        c9357a.a(context).j(str).g(imageView);
+        aVar.a(context).j(str).g(imageView);
     }
 
     @Override // com.alient.onearch.adapter.component.header.GenericHeaderContract.View

@@ -3,7 +3,6 @@ package com.google.common.collect;
 import com.google.common.annotations.GwtCompatible;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Function;
-import com.google.common.math.C5238c;
 import com.google.common.primitives.Ints;
 import java.io.Serializable;
 import java.math.RoundingMode;
@@ -46,7 +45,7 @@ public final class Lists {
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
         public int size() {
-            return C5238c.f(this.rest.length, 1);
+            return com.google.common.math.c.f(this.rest.length, 1);
         }
     }
 
@@ -108,15 +107,14 @@ public final class Lists {
         final Function<? super F, ? extends T> function;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.Lists$TransformingRandomAccessList$a */
         /* loaded from: classes10.dex */
-        class C5019a extends AbstractC5192k0<F, T> {
-            C5019a(ListIterator listIterator) {
+        class a extends k0<F, T> {
+            a(ListIterator listIterator) {
                 super(listIterator);
             }
 
             /* JADX INFO: Access modifiers changed from: package-private */
-            @Override // com.google.common.collect.AbstractC5190j0
+            @Override // com.google.common.collect.j0
             public T a(F f) {
                 return TransformingRandomAccessList.this.function.apply(f);
             }
@@ -149,7 +147,7 @@ public final class Lists {
 
         @Override // java.util.AbstractList, java.util.List
         public ListIterator<T> listIterator(int i) {
-            return new C5019a(this.fromList.listIterator(i));
+            return new a(this.fromList.listIterator(i));
         }
 
         @Override // java.util.AbstractList, java.util.List
@@ -171,15 +169,14 @@ public final class Lists {
         final Function<? super F, ? extends T> function;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.Lists$TransformingSequentialList$a */
         /* loaded from: classes10.dex */
-        class C5020a extends AbstractC5192k0<F, T> {
-            C5020a(ListIterator listIterator) {
+        class a extends k0<F, T> {
+            a(ListIterator listIterator) {
                 super(listIterator);
             }
 
             /* JADX INFO: Access modifiers changed from: package-private */
-            @Override // com.google.common.collect.AbstractC5190j0
+            @Override // com.google.common.collect.j0
             public T a(F f) {
                 return TransformingSequentialList.this.function.apply(f);
             }
@@ -197,7 +194,7 @@ public final class Lists {
 
         @Override // java.util.AbstractSequentialList, java.util.AbstractList, java.util.List
         public ListIterator<T> listIterator(int i) {
-            return new C5020a(this.fromList.listIterator(i));
+            return new a(this.fromList.listIterator(i));
         }
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
@@ -236,18 +233,17 @@ public final class Lists {
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
         public int size() {
-            return C5238c.f(this.rest.length, 2);
+            return com.google.common.math.c.f(this.rest.length, 2);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Lists$a */
     /* loaded from: classes10.dex */
-    private static class C5021a<T> extends AbstractList<List<T>> {
+    private static class a<T> extends AbstractList<List<T>> {
         final List<T> a;
         final int b;
 
-        C5021a(List<T> list, int i) {
+        a(List<T> list, int i) {
             this.a = list;
             this.b = i;
         }
@@ -268,15 +264,14 @@ public final class Lists {
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
         public int size() {
-            return C5238c.b(this.a.size(), this.b, RoundingMode.CEILING);
+            return com.google.common.math.c.b(this.a.size(), this.b, RoundingMode.CEILING);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Lists$b */
     /* loaded from: classes10.dex */
-    private static class C5022b<T> extends C5021a<T> implements RandomAccess {
-        C5022b(List<T> list, int i) {
+    private static class b<T> extends a<T> implements RandomAccess {
+        b(List<T> list, int i) {
             super(list, i);
         }
     }
@@ -291,7 +286,7 @@ public final class Lists {
 
     @VisibleForTesting
     static int c(int i) {
-        C5191k.b(i, "arraySize");
+        k.b(i, "arraySize");
         return Ints.j(i + 5 + (i / 10));
     }
 
@@ -394,7 +389,7 @@ public final class Lists {
     public static <E> ArrayList<E> j(Iterable<? extends E> iterable) {
         du1.p(iterable);
         if (iterable instanceof Collection) {
-            return new ArrayList<>(C5193l.a(iterable));
+            return new ArrayList<>(l.a(iterable));
         }
         return k(iterable.iterator());
     }
@@ -408,7 +403,7 @@ public final class Lists {
 
     @GwtCompatible(serializable = true)
     public static <E> ArrayList<E> l(int i) {
-        C5191k.b(i, "initialArraySize");
+        k.b(i, "initialArraySize");
         return new ArrayList<>(i);
     }
 
@@ -420,7 +415,7 @@ public final class Lists {
     public static <T> List<List<T>> n(List<T> list, int i) {
         du1.p(list);
         du1.d(i > 0);
-        return list instanceof RandomAccess ? new C5022b(list, i) : new C5021a(list, i);
+        return list instanceof RandomAccess ? new b(list, i) : new a(list, i);
     }
 
     public static <F, T> List<T> o(List<F> list, Function<? super F, ? extends T> function) {

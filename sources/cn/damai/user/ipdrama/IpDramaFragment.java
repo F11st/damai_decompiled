@@ -11,8 +11,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.homepage.R$layout;
 import cn.damai.tetris.DMMtopWarningListener;
 import cn.damai.tetris.core.BaseLayer;
@@ -44,7 +44,7 @@ public class IpDramaFragment extends AbsFragmentV2 {
     private static transient /* synthetic */ IpChange $ipChange;
     DrObj drObj;
     String ipId;
-    C0525a.C0527b mUTBuilder;
+    a.b mUTBuilder;
     OnAlphaChangeListener onAlphaChangeListener;
     int pageIndex = 1;
     ViewGroup rootView;
@@ -58,12 +58,11 @@ public class IpDramaFragment extends AbsFragmentV2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.ipdrama.IpDramaFragment$a */
     /* loaded from: classes9.dex */
-    public class C2691a implements AbsFragmentV2.SectionDataPreDealListener {
+    public class a implements AbsFragmentV2.SectionDataPreDealListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2691a(IpDramaFragment ipDramaFragment) {
+        a(IpDramaFragment ipDramaFragment) {
         }
 
         @Override // cn.damai.tetris.page.AbsFragmentV2.SectionDataPreDealListener
@@ -122,7 +121,7 @@ public class IpDramaFragment extends AbsFragmentV2 {
         ViewGroup viewGroup2 = (ViewGroup) layoutInflater.inflate(R$layout.fragment_layout_ipdrama, viewGroup, false);
         this.rootView = viewGroup2;
         this.rootView.addView(super.onCreateView(layoutInflater, viewGroup2, bundle), 0);
-        this.mUTBuilder = new C0525a.C0527b().i("repertoire_ip");
+        this.mUTBuilder = new a.b().i("repertoire_ip");
         return this.rootView;
     }
 
@@ -156,7 +155,7 @@ public class IpDramaFragment extends AbsFragmentV2 {
             return;
         }
         super.onPause();
-        C0529c.e().q(getActivity());
+        c.e().q(getActivity());
     }
 
     @Override // cn.damai.tetris.page.AbsFragment, cn.damai.uikit.irecycler.OnRefreshListener
@@ -180,7 +179,7 @@ public class IpDramaFragment extends AbsFragmentV2 {
             return;
         }
         super.onResume();
-        C0529c.e().o(this, this.mUTBuilder);
+        c.e().o(this, this.mUTBuilder);
     }
 
     @Override // cn.damai.tetris.page.AbsFragmentV2, cn.damai.tetris.page.AbsFragment, androidx.fragment.app.Fragment
@@ -194,7 +193,7 @@ public class IpDramaFragment extends AbsFragmentV2 {
         enableDividerLine(false);
         if (getArguments() != null && !TextUtils.isEmpty(getArguments().getString("id"))) {
             this.ipId = getArguments().getString("id");
-            addPreDealListener(xl2.DM_COMMON_LOOP_BANNER_CID, new C2691a(this));
+            addPreDealListener(xl2.DM_COMMON_LOOP_BANNER_CID, new a(this));
             request();
             this.topBarH = q60.a(getActivity(), 100.0f);
             this.mRecyclerView.scrollToPosition(0);
@@ -269,7 +268,7 @@ public class IpDramaFragment extends AbsFragmentV2 {
                 hashMap.put("repertoire_id", IpDramaFragment.this.ipId);
                 baseResponse.globalConfig.putBuzUTMap(hashMap);
                 if (baseResponse.globalConfig != null) {
-                    IpDramaFragment.this.mUTBuilder = new C0525a.C0527b().i(baseResponse.globalConfig.pageName);
+                    IpDramaFragment.this.mUTBuilder = new a.b().i(baseResponse.globalConfig.pageName);
                 }
                 IpDramaFragment.this.updateB(baseResponse);
                 ArrayList<BaseLayer> arrayList = baseResponse.layers;

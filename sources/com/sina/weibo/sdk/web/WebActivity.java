@@ -16,26 +16,21 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.sina.weibo.sdk.b.C6214e;
-import com.sina.weibo.sdk.web.a.AbstractC6234b;
-import com.sina.weibo.sdk.web.a.C6233a;
-import com.sina.weibo.sdk.web.a.C6235c;
-import com.sina.weibo.sdk.web.a.C6236d;
-import com.sina.weibo.sdk.web.b.AbstractC6238b;
-import com.sina.weibo.sdk.web.b.C6237a;
-import com.sina.weibo.sdk.web.b.C6240c;
-import com.sina.weibo.sdk.web.b.C6241d;
+import com.sina.weibo.sdk.b.e;
+import com.sina.weibo.sdk.web.b.b;
+import com.sina.weibo.sdk.web.b.c;
+import com.sina.weibo.sdk.web.b.d;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
-public class WebActivity extends Activity implements InterfaceC6232a {
+public class WebActivity extends Activity implements a {
     private LinearLayout am;
     private TextView an;
     private TextView ao;
     private WebView ap;
     private ProgressBar aq;
-    private AbstractC6238b ar;
-    private AbstractC6234b as;
+    private b ar;
+    private com.sina.weibo.sdk.web.a.b as;
     private String at;
 
     static /* synthetic */ void d(WebActivity webActivity) {
@@ -79,23 +74,23 @@ public class WebActivity extends Activity implements InterfaceC6232a {
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(-2, -2);
         RelativeLayout.LayoutParams layoutParams2 = new RelativeLayout.LayoutParams(-2, -2);
         layoutParams.addRule(15);
-        this.an.setPadding(C6214e.a(10, this), 0, C6214e.a(10, this), 0);
+        this.an.setPadding(e.a(10, this), 0, e.a(10, this), 0);
         layoutParams2.addRule(13);
         relativeLayout2.addView(this.an, layoutParams);
         relativeLayout2.addView(this.ao, layoutParams2);
-        relativeLayout.addView(relativeLayout2, new RelativeLayout.LayoutParams(-1, C6214e.a(55, this)));
+        relativeLayout.addView(relativeLayout2, new RelativeLayout.LayoutParams(-1, e.a(55, this)));
         this.ap = new WebView(getApplicationContext());
         RelativeLayout.LayoutParams layoutParams3 = new RelativeLayout.LayoutParams(-1, -1);
-        layoutParams3.topMargin = C6214e.a(55, this);
+        layoutParams3.topMargin = e.a(55, this);
         relativeLayout.addView(this.ap, layoutParams3);
         this.aq = new ProgressBar(this);
-        RelativeLayout.LayoutParams layoutParams4 = new RelativeLayout.LayoutParams(-1, C6214e.a(3, this));
-        layoutParams4.topMargin = C6214e.a(55, this);
+        RelativeLayout.LayoutParams layoutParams4 = new RelativeLayout.LayoutParams(-1, e.a(3, this));
+        layoutParams4.topMargin = e.a(55, this);
         relativeLayout.addView(this.aq, layoutParams4);
         View view = new View(this);
         view.setBackgroundResource(getResources().getIdentifier("weibosdk_common_shadow_top", "drawable", getPackageName()));
-        RelativeLayout.LayoutParams layoutParams5 = new RelativeLayout.LayoutParams(-1, C6214e.a(3, this));
-        layoutParams5.topMargin = C6214e.a(55, this);
+        RelativeLayout.LayoutParams layoutParams5 = new RelativeLayout.LayoutParams(-1, e.a(3, this));
+        layoutParams5.topMargin = e.a(55, this);
         relativeLayout.addView(view, layoutParams5);
         LinearLayout linearLayout = new LinearLayout(this);
         this.am = linearLayout;
@@ -107,14 +102,14 @@ public class WebActivity extends Activity implements InterfaceC6232a {
         textView3.setTextSize(14.0f);
         textView3.setTextColor(-4342339);
         LinearLayout.LayoutParams layoutParams6 = new LinearLayout.LayoutParams(-2, -2);
-        layoutParams6.topMargin = C6214e.a(18, this);
-        layoutParams6.bottomMargin = C6214e.a(20, this);
+        layoutParams6.topMargin = e.a(18, this);
+        layoutParams6.bottomMargin = e.a(20, this);
         this.am.addView(textView3, layoutParams6);
         textView3.setText("网络出错啦，请点击按钮重新加载");
         Button button = new Button(this);
         button.setTextSize(16.0f);
         button.setTextColor(-8882056);
-        LinearLayout.LayoutParams layoutParams7 = new LinearLayout.LayoutParams(C6214e.a(142, this), C6214e.a(46, this));
+        LinearLayout.LayoutParams layoutParams7 = new LinearLayout.LayoutParams(e.a(142, this), e.a(46, this));
         layoutParams7.gravity = 17;
         this.am.addView(button, layoutParams7);
         button.setBackgroundResource(getResources().getIdentifier("retry_btn_selector", "drawable", getPackageName()));
@@ -165,22 +160,22 @@ public class WebActivity extends Activity implements InterfaceC6232a {
         }
         if (intExtra == 1) {
             this.at = "微博分享";
-            this.ar = new C6241d(this);
-            this.as = new C6236d(this, this, this.ar);
+            this.ar = new d(this);
+            this.as = new com.sina.weibo.sdk.web.a.d(this, this, this.ar);
         } else if (intExtra == 2) {
             this.at = "微博登录";
-            this.ar = new C6237a();
-            this.as = new C6233a(this, this, this.ar);
+            this.ar = new com.sina.weibo.sdk.web.b.a();
+            this.as = new com.sina.weibo.sdk.web.a.a(this, this, this.ar);
         } else if (intExtra == 3) {
-            this.ar = new C6240c();
-            this.as = new C6235c(this, this.ar);
+            this.ar = new c();
+            this.as = new com.sina.weibo.sdk.web.a.c(this, this.ar);
         }
         this.ap.setWebViewClient(this.as);
         this.ar.readFromBundle(extras);
         WebSettings settings = this.ap.getSettings();
         settings.setSavePassword(false);
         settings.setAllowContentAccess(false);
-        settings.setUserAgentString(C6214e.o());
+        settings.setUserAgentString(e.o());
         settings.setAllowFileAccess(false);
         settings.setJavaScriptEnabled(true);
         settings.setGeolocationEnabled(false);
@@ -196,8 +191,8 @@ public class WebActivity extends Activity implements InterfaceC6232a {
             settings.setMixedContentMode(2);
         }
         if (this.ar.t()) {
-            this.ar.a(new AbstractC6238b.InterfaceC6239a() { // from class: com.sina.weibo.sdk.web.WebActivity.1
-                @Override // com.sina.weibo.sdk.web.b.AbstractC6238b.InterfaceC6239a
+            this.ar.a(new b.a() { // from class: com.sina.weibo.sdk.web.WebActivity.1
+                @Override // com.sina.weibo.sdk.web.b.b.a
                 public final void onComplete() {
                     String url = WebActivity.this.ar.getUrl();
                     if (TextUtils.isEmpty(url) || !WebActivity.j(url)) {
@@ -206,7 +201,7 @@ public class WebActivity extends Activity implements InterfaceC6232a {
                     WebActivity.this.ap.loadUrl(url);
                 }
 
-                @Override // com.sina.weibo.sdk.web.b.AbstractC6238b.InterfaceC6239a
+                @Override // com.sina.weibo.sdk.web.b.b.a
                 public final void onError(String str) {
                     WebActivity.this.as.p(str);
                 }
@@ -237,13 +232,13 @@ public class WebActivity extends Activity implements InterfaceC6232a {
         return super.onKeyDown(i, keyEvent);
     }
 
-    @Override // com.sina.weibo.sdk.web.InterfaceC6232a
+    @Override // com.sina.weibo.sdk.web.a
     public final void p() {
         this.am.setVisibility(0);
         this.ap.setVisibility(8);
     }
 
-    @Override // com.sina.weibo.sdk.web.InterfaceC6232a
+    @Override // com.sina.weibo.sdk.web.a
     public final void q() {
         finish();
     }

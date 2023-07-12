@@ -1,7 +1,6 @@
 package tb;
 
 import com.google.common.annotations.GwtCompatible;
-import com.google.common.base.C4843h;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import java.util.Objects;
 import org.checkerframework.checker.nullness.compatqual.NonNullDecl;
@@ -13,26 +12,26 @@ import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 public final class du1 {
     public static void A(boolean z, @NullableDecl String str, @NullableDecl Object obj) {
         if (!z) {
-            throw new IllegalStateException(C4843h.b(str, obj));
+            throw new IllegalStateException(com.google.common.base.h.b(str, obj));
         }
     }
 
     private static String a(int i, int i2, @NullableDecl String str) {
         if (i < 0) {
-            return C4843h.b("%s (%s) must not be negative", str, Integer.valueOf(i));
+            return com.google.common.base.h.b("%s (%s) must not be negative", str, Integer.valueOf(i));
         }
         if (i2 >= 0) {
-            return C4843h.b("%s (%s) must be less than size (%s)", str, Integer.valueOf(i), Integer.valueOf(i2));
+            return com.google.common.base.h.b("%s (%s) must be less than size (%s)", str, Integer.valueOf(i), Integer.valueOf(i2));
         }
         throw new IllegalArgumentException("negative size: " + i2);
     }
 
     private static String b(int i, int i2, @NullableDecl String str) {
         if (i < 0) {
-            return C4843h.b("%s (%s) must not be negative", str, Integer.valueOf(i));
+            return com.google.common.base.h.b("%s (%s) must not be negative", str, Integer.valueOf(i));
         }
         if (i2 >= 0) {
-            return C4843h.b("%s (%s) must not be greater than size (%s)", str, Integer.valueOf(i), Integer.valueOf(i2));
+            return com.google.common.base.h.b("%s (%s) must not be greater than size (%s)", str, Integer.valueOf(i), Integer.valueOf(i2));
         }
         throw new IllegalArgumentException("negative size: " + i2);
     }
@@ -41,7 +40,7 @@ public final class du1 {
         if (i < 0 || i > i3) {
             return b(i, i3, "start index");
         }
-        return (i2 < 0 || i2 > i3) ? b(i2, i3, "end index") : C4843h.b("end index (%s) must not be less than start index (%s)", Integer.valueOf(i2), Integer.valueOf(i));
+        return (i2 < 0 || i2 > i3) ? b(i2, i3, "end index") : com.google.common.base.h.b("end index (%s) must not be less than start index (%s)", Integer.valueOf(i2), Integer.valueOf(i));
     }
 
     public static void d(boolean z) {
@@ -58,49 +57,49 @@ public final class du1 {
 
     public static void f(boolean z, @NullableDecl String str, int i) {
         if (!z) {
-            throw new IllegalArgumentException(C4843h.b(str, Integer.valueOf(i)));
+            throw new IllegalArgumentException(com.google.common.base.h.b(str, Integer.valueOf(i)));
         }
     }
 
     public static void g(boolean z, @NullableDecl String str, int i, int i2) {
         if (!z) {
-            throw new IllegalArgumentException(C4843h.b(str, Integer.valueOf(i), Integer.valueOf(i2)));
+            throw new IllegalArgumentException(com.google.common.base.h.b(str, Integer.valueOf(i), Integer.valueOf(i2)));
         }
     }
 
     public static void h(boolean z, @NullableDecl String str, long j) {
         if (!z) {
-            throw new IllegalArgumentException(C4843h.b(str, Long.valueOf(j)));
+            throw new IllegalArgumentException(com.google.common.base.h.b(str, Long.valueOf(j)));
         }
     }
 
     public static void i(boolean z, @NullableDecl String str, long j, long j2) {
         if (!z) {
-            throw new IllegalArgumentException(C4843h.b(str, Long.valueOf(j), Long.valueOf(j2)));
+            throw new IllegalArgumentException(com.google.common.base.h.b(str, Long.valueOf(j), Long.valueOf(j2)));
         }
     }
 
     public static void j(boolean z, @NullableDecl String str, long j, @NullableDecl Object obj) {
         if (!z) {
-            throw new IllegalArgumentException(C4843h.b(str, Long.valueOf(j), obj));
+            throw new IllegalArgumentException(com.google.common.base.h.b(str, Long.valueOf(j), obj));
         }
     }
 
     public static void k(boolean z, @NullableDecl String str, @NullableDecl Object obj) {
         if (!z) {
-            throw new IllegalArgumentException(C4843h.b(str, obj));
+            throw new IllegalArgumentException(com.google.common.base.h.b(str, obj));
         }
     }
 
     public static void l(boolean z, @NullableDecl String str, @NullableDecl Object obj, @NullableDecl Object obj2) {
         if (!z) {
-            throw new IllegalArgumentException(C4843h.b(str, obj, obj2));
+            throw new IllegalArgumentException(com.google.common.base.h.b(str, obj, obj2));
         }
     }
 
     public static void m(boolean z, @NullableDecl String str, @NullableDecl Object obj, @NullableDecl Object obj2, @NullableDecl Object obj3, @NullableDecl Object obj4) {
         if (!z) {
-            throw new IllegalArgumentException(C4843h.b(str, obj, obj2, obj3, obj4));
+            throw new IllegalArgumentException(com.google.common.base.h.b(str, obj, obj2, obj3, obj4));
         }
     }
 
@@ -139,7 +138,7 @@ public final class du1 {
         if (t != null) {
             return t;
         }
-        throw new NullPointerException(C4843h.b(str, obj));
+        throw new NullPointerException(com.google.common.base.h.b(str, obj));
     }
 
     @CanIgnoreReturnValue
@@ -148,7 +147,7 @@ public final class du1 {
         if (t != null) {
             return t;
         }
-        throw new NullPointerException(C4843h.b(str, obj, obj2));
+        throw new NullPointerException(com.google.common.base.h.b(str, obj, obj2));
     }
 
     @CanIgnoreReturnValue
@@ -184,13 +183,13 @@ public final class du1 {
 
     public static void y(boolean z, @NullableDecl String str, int i) {
         if (!z) {
-            throw new IllegalStateException(C4843h.b(str, Integer.valueOf(i)));
+            throw new IllegalStateException(com.google.common.base.h.b(str, Integer.valueOf(i)));
         }
     }
 
     public static void z(boolean z, @NullableDecl String str, long j) {
         if (!z) {
-            throw new IllegalStateException(C4843h.b(str, Long.valueOf(j)));
+            throw new IllegalStateException(com.google.common.base.h.b(str, Long.valueOf(j)));
         }
     }
 }

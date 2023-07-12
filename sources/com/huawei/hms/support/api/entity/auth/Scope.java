@@ -8,14 +8,13 @@ import com.huawei.hms.core.aidl.IMessageEntity;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class Scope implements Parcelable, IMessageEntity {
-    public static final Parcelable.Creator<Scope> CREATOR = new C5719a();
+    public static final Parcelable.Creator<Scope> CREATOR = new a();
     private String mScopeUri;
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.support.api.entity.auth.Scope$a */
     /* loaded from: classes10.dex */
-    static class C5719a implements Parcelable.Creator<Scope> {
-        C5719a() {
+    static class a implements Parcelable.Creator<Scope> {
+        a() {
         }
 
         /* JADX WARN: Can't rename method to resolve collision */

@@ -61,7 +61,7 @@ public class RegionSeatView extends View {
     public static boolean isShowSvgRegionBound;
     private float bestRegionImageWidth;
     private float bigVenueInitRegionImageWidth;
-    private C1724c drawSeat;
+    private c drawSeat;
     private Runnable hideOverviewRunnable;
     private boolean isDrawOverview;
     private boolean isFirstDraw;
@@ -156,12 +156,11 @@ public class RegionSeatView extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.view.RegionSeatView$a */
     /* loaded from: classes16.dex */
-    public class C1722a extends AnimatorListenerAdapter {
+    public class a extends AnimatorListenerAdapter {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1722a() {
+        a() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -177,12 +176,11 @@ public class RegionSeatView extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.view.RegionSeatView$b */
     /* loaded from: classes16.dex */
-    public class C1723b extends AnimatorListenerAdapter {
+    public class b extends AnimatorListenerAdapter {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1723b() {
+        b() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -197,9 +195,8 @@ public class RegionSeatView extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.view.RegionSeatView$c */
     /* loaded from: classes16.dex */
-    public class C1724c {
+    public class c {
         private static transient /* synthetic */ IpChange $ipChange;
         float a = 0.0f;
         float b = 0.0f;
@@ -209,7 +206,7 @@ public class RegionSeatView extends View {
         int f = 20;
         int g = 24;
 
-        C1724c() {
+        c() {
         }
 
         public void a(float f) {
@@ -228,12 +225,11 @@ public class RegionSeatView extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.view.RegionSeatView$d */
     /* loaded from: classes16.dex */
-    public class C1725d implements ValueAnimator.AnimatorUpdateListener {
+    public class d implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1725d() {
+        d() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -243,18 +239,17 @@ public class RegionSeatView extends View {
                 ipChange.ipc$dispatch("-1624042624", new Object[]{this, valueAnimator});
                 return;
             }
-            C1727f c1727f = (C1727f) valueAnimator.getAnimatedValue();
-            RegionSeatView.this.scrollView(c1727f.a, c1727f.b);
+            f fVar = (f) valueAnimator.getAnimatedValue();
+            RegionSeatView.this.scrollView(fVar.a, fVar.b);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.view.RegionSeatView$e */
     /* loaded from: classes16.dex */
-    public class C1726e implements TypeEvaluator {
+    public class e implements TypeEvaluator {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1726e() {
+        e() {
         }
 
         @Override // android.animation.TypeEvaluator
@@ -263,26 +258,25 @@ public class RegionSeatView extends View {
             if (AndroidInstantRuntime.support(ipChange, "1398956461")) {
                 return ipChange.ipc$dispatch("1398956461", new Object[]{this, Float.valueOf(f), obj, obj2});
             }
-            C1727f c1727f = (C1727f) obj;
-            C1727f c1727f2 = (C1727f) obj2;
-            float f2 = c1727f.a;
-            float f3 = f2 + ((c1727f2.a - f2) * f);
-            float f4 = c1727f.b;
-            float f5 = c1727f.c;
-            return new C1727f(RegionSeatView.this, f3, f4 + ((c1727f2.b - f4) * f), f5 + (f * (c1727f2.c - f5)));
+            f fVar = (f) obj;
+            f fVar2 = (f) obj2;
+            float f2 = fVar.a;
+            float f3 = f2 + ((fVar2.a - f2) * f);
+            float f4 = fVar.b;
+            float f5 = fVar.c;
+            return new f(RegionSeatView.this, f3, f4 + ((fVar2.b - f4) * f), f5 + (f * (fVar2.c - f5)));
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.view.RegionSeatView$f */
     /* loaded from: classes16.dex */
-    public class C1727f {
+    public class f {
         public float a;
         public float b;
         public float c;
 
-        C1727f(RegionSeatView regionSeatView, float f, float f2, float f3) {
+        f(RegionSeatView regionSeatView, float f, float f2, float f3) {
             this.a = f;
             this.b = f2;
             this.c = f3;
@@ -290,12 +284,11 @@ public class RegionSeatView extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.view.RegionSeatView$g */
     /* loaded from: classes16.dex */
-    public class C1728g implements ValueAnimator.AnimatorUpdateListener {
+    public class g implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1728g() {
+        g() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -305,10 +298,10 @@ public class RegionSeatView extends View {
                 ipChange.ipc$dispatch("1696637339", new Object[]{this, valueAnimator});
                 return;
             }
-            C1727f c1727f = (C1727f) valueAnimator.getAnimatedValue();
-            RegionSeatView.this.drawSeat.c = c1727f.a;
-            RegionSeatView.this.drawSeat.d = c1727f.b;
-            RegionSeatView.this.drawSeat.a(c1727f.c);
+            f fVar = (f) valueAnimator.getAnimatedValue();
+            RegionSeatView.this.drawSeat.c = fVar.a;
+            RegionSeatView.this.drawSeat.d = fVar.b;
+            RegionSeatView.this.drawSeat.a(fVar.c);
             RegionSeatView.this.invalidate();
         }
     }
@@ -316,7 +309,7 @@ public class RegionSeatView extends View {
     public RegionSeatView(Context context, RegionData regionData, g92 g92Var, TbParams tbParams) {
         super(context);
         this.mHandler = new Handler();
-        this.drawSeat = new C1724c();
+        this.drawSeat = new c();
         this.viewWidth = 0;
         this.viewHeight = 0;
         this.mSvgScale = 1.0f;
@@ -356,62 +349,62 @@ public class RegionSeatView extends View {
     }
 
     private void autoScale(MotionEvent motionEvent) {
-        float f;
+        float f2;
         float y;
         float y2;
-        float f2;
         float f3;
+        float f4;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1463967186")) {
             ipChange.ipc$dispatch("-1463967186", new Object[]{this, motionEvent});
             return;
         }
-        C1724c c1724c = this.drawSeat;
-        float f4 = c1724c.c;
-        float f5 = c1724c.d;
-        float f6 = c1724c.a;
-        float f7 = this.isSmallVenueStyle ? this.bestRegionImageWidth : this.mBigVenueScale36Width;
-        if (f6 < f7) {
-            f = f7 / f6;
-            f4 = motionEvent.getX() - ((motionEvent.getX() - f4) * f);
+        c cVar = this.drawSeat;
+        float f5 = cVar.c;
+        float f6 = cVar.d;
+        float f7 = cVar.a;
+        float f8 = this.isSmallVenueStyle ? this.bestRegionImageWidth : this.mBigVenueScale36Width;
+        if (f7 < f8) {
+            f2 = f8 / f7;
+            f5 = motionEvent.getX() - ((motionEvent.getX() - f5) * f2);
             y = motionEvent.getY();
             y2 = motionEvent.getY();
         } else {
-            f7 = this.maxRegionImageWidth;
-            if (f6 < f7) {
-                f = f7 / f6;
-                f4 = motionEvent.getX() - ((motionEvent.getX() - f4) * f);
+            f8 = this.maxRegionImageWidth;
+            if (f7 < f8) {
+                f2 = f8 / f7;
+                f5 = motionEvent.getX() - ((motionEvent.getX() - f5) * f2);
                 y = motionEvent.getY();
                 y2 = motionEvent.getY();
             }
             float x = motionEvent.getX();
             float y3 = motionEvent.getY();
-            f2 = (this.viewWidth / 2) - x;
-            f3 = (this.viewHeight / 2) - y3;
-            C1724c c1724c2 = this.drawSeat;
-            C1727f c1727f = new C1727f(this, c1724c2.c, c1724c2.d, c1724c2.a);
-            if (Math.abs(f2) <= this.mClickScaleOffset || Math.abs(f3) > this.mClickScaleOffset || Math.abs(f6 - this.drawSeat.a) > 0.0f) {
-                zoomAnimate(c1727f, new C1727f(this, f4 + f2, f5 + f3, f6));
+            f3 = (this.viewWidth / 2) - x;
+            f4 = (this.viewHeight / 2) - y3;
+            c cVar2 = this.drawSeat;
+            f fVar = new f(this, cVar2.c, cVar2.d, cVar2.a);
+            if (Math.abs(f3) <= this.mClickScaleOffset || Math.abs(f4) > this.mClickScaleOffset || Math.abs(f7 - this.drawSeat.a) > 0.0f) {
+                zoomAnimate(fVar, new f(this, f5 + f3, f6 + f4, f7));
             }
             return;
         }
-        f5 = y - ((y2 - f5) * f);
-        f6 = f7;
+        f6 = y - ((y2 - f6) * f2);
+        f7 = f8;
         float x2 = motionEvent.getX();
         float y32 = motionEvent.getY();
-        f2 = (this.viewWidth / 2) - x2;
-        f3 = (this.viewHeight / 2) - y32;
-        C1724c c1724c22 = this.drawSeat;
-        C1727f c1727f2 = new C1727f(this, c1724c22.c, c1724c22.d, c1724c22.a);
-        if (Math.abs(f2) <= this.mClickScaleOffset) {
+        f3 = (this.viewWidth / 2) - x2;
+        f4 = (this.viewHeight / 2) - y32;
+        c cVar22 = this.drawSeat;
+        f fVar2 = new f(this, cVar22.c, cVar22.d, cVar22.a);
+        if (Math.abs(f3) <= this.mClickScaleOffset) {
         }
-        zoomAnimate(c1727f2, new C1727f(this, f4 + f2, f5 + f3, f6));
+        zoomAnimate(fVar2, new f(this, f5 + f3, f6 + f4, f7));
     }
 
-    private void click(float f, float f2) {
+    private void click(float f2, float f3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "865825292")) {
-            ipChange.ipc$dispatch("865825292", new Object[]{this, Float.valueOf(f), Float.valueOf(f2)});
+            ipChange.ipc$dispatch("865825292", new Object[]{this, Float.valueOf(f2), Float.valueOf(f3)});
             return;
         }
         try {
@@ -429,11 +422,11 @@ public class RegionSeatView extends View {
                                 break;
                             }
                             SeatNew seatNew = valueAt.get(i2);
-                            float f3 = seatNew.currentY;
+                            float f4 = seatNew.currentY;
                             int i3 = this.drawSeat.g;
-                            if (f2 >= f3 - (i3 / 2) && f2 <= f3 + (i3 / 2)) {
-                                float f4 = seatNew.currentX;
-                                if (f >= f4 - (i3 / 2) && f <= f4 + (i3 / 2)) {
+                            if (f3 >= f4 - (i3 / 2) && f3 <= f4 + (i3 / 2)) {
+                                float f5 = seatNew.currentX;
+                                if (f2 >= f5 - (i3 / 2) && f2 <= f5 + (i3 / 2)) {
                                     if (seatNew.isSelected) {
                                         this.mListener.onSeatSelectChanged(seatNew, false);
                                     } else if (seatNew.state == 2) {
@@ -457,8 +450,8 @@ public class RegionSeatView extends View {
                 }
                 this.mHandler.postDelayed(this.hideOverviewRunnable, 500L);
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 
@@ -470,25 +463,25 @@ public class RegionSeatView extends View {
         }
         fArr[0] = 0.0f;
         fArr[1] = 0.0f;
-        C1724c c1724c = this.drawSeat;
-        if (c1724c != null) {
-            float f = c1724c.a;
-            if (f > 0.0f) {
-                float f2 = c1724c.c;
-                float f3 = f + f2;
-                float f4 = c1724c.d;
-                float f5 = c1724c.b + f4;
-                if ((f2 > 0.0f || f3 < ((float) this.viewWidth)) && (f2 < 0.0f || f3 > ((float) this.viewWidth))) {
-                    boolean z = (f / 2.0f) + f2 > ((float) this.viewWidth) / 2.0f;
-                    float min = Math.min(Math.abs(f2), Math.abs(f3 - this.viewWidth));
+        c cVar = this.drawSeat;
+        if (cVar != null) {
+            float f2 = cVar.a;
+            if (f2 > 0.0f) {
+                float f3 = cVar.c;
+                float f4 = f2 + f3;
+                float f5 = cVar.d;
+                float f6 = cVar.b + f5;
+                if ((f3 > 0.0f || f4 < ((float) this.viewWidth)) && (f3 < 0.0f || f4 > ((float) this.viewWidth))) {
+                    boolean z = (f2 / 2.0f) + f3 > ((float) this.viewWidth) / 2.0f;
+                    float min = Math.min(Math.abs(f3), Math.abs(f4 - this.viewWidth));
                     if (z) {
                         min = -min;
                     }
                     fArr[0] = min;
                 }
-                if ((f4 > 0.0f || f5 < ((float) this.viewHeight)) && (f4 < 0.0f || f5 > ((float) this.viewHeight))) {
-                    boolean z2 = (this.drawSeat.b / 2.0f) + f4 > ((float) this.viewHeight) / 2.0f;
-                    float min2 = Math.min(Math.abs(f4), Math.abs(f5 - this.viewHeight));
+                if ((f5 > 0.0f || f6 < ((float) this.viewHeight)) && (f5 < 0.0f || f6 > ((float) this.viewHeight))) {
+                    boolean z2 = (this.drawSeat.b / 2.0f) + f5 > ((float) this.viewHeight) / 2.0f;
+                    float min2 = Math.min(Math.abs(f5), Math.abs(f6 - this.viewHeight));
                     if (z2) {
                         min2 = -min2;
                     }
@@ -498,43 +491,43 @@ public class RegionSeatView extends View {
         }
     }
 
-    private void flingAnimate(float f, float f2) {
+    private void flingAnimate(float f2, float f3) {
         float max;
         float max2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1828560335")) {
-            ipChange.ipc$dispatch("-1828560335", new Object[]{this, Float.valueOf(f), Float.valueOf(f2)});
+            ipChange.ipc$dispatch("-1828560335", new Object[]{this, Float.valueOf(f2), Float.valueOf(f3)});
             return;
         }
-        float f3 = f * 1.2f;
         float f4 = f2 * 1.2f;
-        C1724c c1724c = this.drawSeat;
-        C1727f c1727f = new C1727f(this, c1724c.c, c1724c.d, c1724c.a);
-        C1724c c1724c2 = this.drawSeat;
-        float f5 = 400;
-        float f6 = c1724c2.c + ((f3 / 1000.0f) * f5 * 0.5f);
-        float f7 = c1724c2.d + ((f4 / 1000.0f) * f5 * 0.5f);
-        if (f3 > 0.0f) {
-            float f8 = c1724c2.a;
-            int i = this.viewWidth;
-            max = f8 > ((float) i) ? Math.min(f6, 0.0f) : Math.min(f6, i - f8);
-        } else {
-            float f9 = c1724c2.a;
-            int i2 = this.viewWidth;
-            max = f9 > ((float) i2) ? Math.max(f6, i2 - f9) : Math.max(0.0f, f6);
-        }
+        float f5 = f3 * 1.2f;
+        c cVar = this.drawSeat;
+        f fVar = new f(this, cVar.c, cVar.d, cVar.a);
+        c cVar2 = this.drawSeat;
+        float f6 = 400;
+        float f7 = cVar2.c + ((f4 / 1000.0f) * f6 * 0.5f);
+        float f8 = cVar2.d + ((f5 / 1000.0f) * f6 * 0.5f);
         if (f4 > 0.0f) {
-            float f10 = this.drawSeat.b;
-            int i3 = this.viewHeight;
-            max2 = f10 > ((float) i3) ? Math.min(f7, 0.0f) : Math.min(f7, i3 - f10);
+            float f9 = cVar2.a;
+            int i = this.viewWidth;
+            max = f9 > ((float) i) ? Math.min(f7, 0.0f) : Math.min(f7, i - f9);
         } else {
-            float f11 = this.drawSeat.b;
-            int i4 = this.viewHeight;
-            max2 = f11 > ((float) i4) ? Math.max(f7, i4 - f11) : Math.max(f7, 0.0f);
+            float f10 = cVar2.a;
+            int i2 = this.viewWidth;
+            max = f10 > ((float) i2) ? Math.max(f7, i2 - f10) : Math.max(0.0f, f7);
         }
-        ValueAnimator ofObject = ValueAnimator.ofObject(new C1726e(), c1727f, new C1727f(this, max, max2, this.drawSeat.a));
+        if (f5 > 0.0f) {
+            float f11 = this.drawSeat.b;
+            int i3 = this.viewHeight;
+            max2 = f11 > ((float) i3) ? Math.min(f8, 0.0f) : Math.min(f8, i3 - f11);
+        } else {
+            float f12 = this.drawSeat.b;
+            int i4 = this.viewHeight;
+            max2 = f12 > ((float) i4) ? Math.max(f8, i4 - f12) : Math.max(f8, 0.0f);
+        }
+        ValueAnimator ofObject = ValueAnimator.ofObject(new e(), fVar, new f(this, max, max2, this.drawSeat.a));
         ofObject.setInterpolator(new DecelerateInterpolator());
-        ofObject.addUpdateListener(new C1725d());
+        ofObject.addUpdateListener(new d());
         ofObject.setDuration(400);
         ofObject.start();
     }
@@ -596,8 +589,8 @@ public class RegionSeatView extends View {
         float dip2px = ScreenUtil.dip2px(this.mContext, 6.0f);
         this.overviewCanvas.drawRoundRect(new RectF(0.0f, 0.0f, this.rectW, this.rectH), dip2px, dip2px, this.overviewPaint);
         RectF rectF = this.mOverviewRect;
-        float f = this.overviewSpacing;
-        rectF.set(f, f, this.rectW - f, this.rectH - f);
+        float f2 = this.overviewSpacing;
+        rectF.set(f2, f2, this.rectW - f2, this.rectH - f2);
         this.overviewCanvas.drawPicture(picture, this.mOverviewRect);
         return this.overviewBitmap;
     }
@@ -715,47 +708,47 @@ public class RegionSeatView extends View {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void scrollView(float f, float f2) {
+    public void scrollView(float f2, float f3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1864411492")) {
-            ipChange.ipc$dispatch("1864411492", new Object[]{this, Float.valueOf(f), Float.valueOf(f2)});
+            ipChange.ipc$dispatch("1864411492", new Object[]{this, Float.valueOf(f2), Float.valueOf(f3)});
             return;
         }
         int i = this.viewWidth;
-        if (f > i / 2) {
+        if (f2 > i / 2) {
             this.drawSeat.c = i / 2;
         } else {
-            C1724c c1724c = this.drawSeat;
-            float f3 = c1724c.a;
-            if (f + f3 < i / 2) {
-                c1724c.c = (i / 2) - f3;
+            c cVar = this.drawSeat;
+            float f4 = cVar.a;
+            if (f2 + f4 < i / 2) {
+                cVar.c = (i / 2) - f4;
             } else {
-                c1724c.c = f;
+                cVar.c = f2;
             }
         }
         int i2 = this.viewHeight;
-        if (f2 > i2 / 2) {
+        if (f3 > i2 / 2) {
             this.drawSeat.d = i2 / 2;
         } else {
-            C1724c c1724c2 = this.drawSeat;
-            float f4 = c1724c2.b;
-            if (f2 + f4 < i2 / 2) {
-                c1724c2.d = (i2 / 2) - f4;
+            c cVar2 = this.drawSeat;
+            float f5 = cVar2.b;
+            if (f3 + f5 < i2 / 2) {
+                cVar2.d = (i2 / 2) - f5;
             } else {
-                c1724c2.d = f2;
+                cVar2.d = f3;
             }
         }
         invalidate();
     }
 
-    private float spacing(float f, float f2, float f3, float f4) {
+    private float spacing(float f2, float f3, float f4, float f5) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-746433503")) {
-            return ((Float) ipChange.ipc$dispatch("-746433503", new Object[]{this, Float.valueOf(f), Float.valueOf(f2), Float.valueOf(f3), Float.valueOf(f4)})).floatValue();
+            return ((Float) ipChange.ipc$dispatch("-746433503", new Object[]{this, Float.valueOf(f2), Float.valueOf(f3), Float.valueOf(f4), Float.valueOf(f5)})).floatValue();
         }
-        float f5 = f3 - f;
         float f6 = f4 - f2;
-        return (float) Math.sqrt((f5 * f5) + (f6 * f6));
+        float f7 = f5 - f3;
+        return (float) Math.sqrt((f6 * f6) + (f7 * f7));
     }
 
     private void testDrawSvgLocation(Canvas canvas) {
@@ -765,10 +758,10 @@ public class RegionSeatView extends View {
             return;
         }
         Rect rect = this.mBackgroundRect;
-        C1724c c1724c = this.drawSeat;
-        float f = c1724c.c;
-        float f2 = c1724c.d;
-        rect.set((int) f, (int) f2, (int) (f + c1724c.a), (int) (f2 + c1724c.b));
+        c cVar = this.drawSeat;
+        float f2 = cVar.c;
+        float f3 = cVar.d;
+        rect.set((int) f2, (int) f3, (int) (f2 + cVar.a), (int) (f3 + cVar.b));
         canvas.drawRect(this.mBackgroundRect, this.mPaintJust4Test);
         if (!cb2.d(this.mLocationPics4Test)) {
             for (Picture picture : this.mLocationPics4Test) {
@@ -778,28 +771,28 @@ public class RegionSeatView extends View {
             for (List<PointLocation> list : this.mSvgRegionLocations) {
                 Path path = new Path();
                 int size = list.size();
-                float f3 = 0.0f;
-                String str = null;
                 float f4 = 0.0f;
+                String str = null;
+                float f5 = 0.0f;
                 int i = 0;
                 while (i < size) {
                     PointLocation pointLocation = list.get(i);
                     String str2 = pointLocation.id;
-                    float f5 = pointLocation.x;
-                    float f6 = this.mSvgScale;
-                    float f7 = f5 * f6;
-                    float f8 = pointLocation.y * f6;
+                    float f6 = pointLocation.x;
+                    float f7 = this.mSvgScale;
+                    float f8 = f6 * f7;
+                    float f9 = pointLocation.y * f7;
                     if (i == 0) {
-                        path.moveTo(f7, f8);
+                        path.moveTo(f8, f9);
+                        f5 = f9;
                         f4 = f8;
-                        f3 = f7;
                     } else {
-                        path.lineTo(f7, f8);
+                        path.lineTo(f8, f9);
                     }
                     i++;
                     str = str2;
                 }
-                path.lineTo(f3, f4);
+                path.lineTo(f4, f5);
                 path.close();
                 Picture picture2 = new Picture();
                 Canvas beginRecording = picture2.beginRecording((int) this.regionImageWidth, (int) this.regionImageHeight);
@@ -812,29 +805,29 @@ public class RegionSeatView extends View {
         }
     }
 
-    private void zoom(float f, float f2, float f3) {
+    private void zoom(float f2, float f3, float f4) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-224831971")) {
-            ipChange.ipc$dispatch("-224831971", new Object[]{this, Float.valueOf(f), Float.valueOf(f2), Float.valueOf(f3)});
+            ipChange.ipc$dispatch("-224831971", new Object[]{this, Float.valueOf(f2), Float.valueOf(f3), Float.valueOf(f4)});
             return;
         }
-        float f4 = (this.viewWidth / 2.0f) - f;
-        float f5 = (this.viewHeight / 2.0f) - f2;
-        C1724c c1724c = this.drawSeat;
-        float f6 = c1724c.c;
-        float f7 = f3 - 1.0f;
-        float f8 = ((f6 - f) * f7) + f6 + f4;
-        float f9 = c1724c.d;
-        float f10 = c1724c.a;
-        zoomAnimate(new C1727f(this, f6, f9, f10), new C1727f(this, f8, ((f9 - f2) * f7) + f9 + f5, f3 * f10), new C1722a());
+        float f5 = (this.viewWidth / 2.0f) - f2;
+        float f6 = (this.viewHeight / 2.0f) - f3;
+        c cVar = this.drawSeat;
+        float f7 = cVar.c;
+        float f8 = f4 - 1.0f;
+        float f9 = ((f7 - f2) * f8) + f7 + f5;
+        float f10 = cVar.d;
+        float f11 = cVar.a;
+        zoomAnimate(new f(this, f7, f10, f11), new f(this, f9, ((f10 - f3) * f8) + f10 + f6, f4 * f11), new a());
     }
 
-    private void zoomAnimate(C1727f c1727f, C1727f c1727f2) {
+    private void zoomAnimate(f fVar, f fVar2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1399996646")) {
-            ipChange.ipc$dispatch("-1399996646", new Object[]{this, c1727f, c1727f2});
+            ipChange.ipc$dispatch("-1399996646", new Object[]{this, fVar, fVar2});
         } else {
-            zoomAnimate(c1727f, c1727f2, null);
+            zoomAnimate(fVar, fVar2, null);
         }
     }
 
@@ -853,30 +846,30 @@ public class RegionSeatView extends View {
             ipChange.ipc$dispatch("727875852", new Object[]{this, canvas});
             return;
         }
-        C1724c c1724c = this.drawSeat;
-        float f = c1724c.a;
-        float f2 = f / (this.rectW - (this.overviewSpacing * 2.0f));
-        float f3 = this.redBorderLeftBoundary;
-        float f4 = c1724c.c;
-        float f5 = f3 - (f4 / f2);
-        if (f5 >= f3) {
-            f3 = f5;
+        c cVar = this.drawSeat;
+        float f2 = cVar.a;
+        float f3 = f2 / (this.rectW - (this.overviewSpacing * 2.0f));
+        float f4 = this.redBorderLeftBoundary;
+        float f5 = cVar.c;
+        float f6 = f4 - (f5 / f3);
+        if (f6 >= f4) {
+            f4 = f6;
         }
-        int i = (int) (f4 + f);
+        int i = (int) (f5 + f2);
         int i2 = this.viewWidth;
-        float f6 = this.redBorderRightBoundary - ((i > i2 ? i - i2 : 0) / f2);
-        float f7 = this.redBorderTopBoundary;
-        float f8 = c1724c.d;
-        float f9 = f7 - (f8 / f2);
-        if (f9 >= f7) {
-            f7 = f9;
+        float f7 = this.redBorderRightBoundary - ((i > i2 ? i - i2 : 0) / f3);
+        float f8 = this.redBorderTopBoundary;
+        float f9 = cVar.d;
+        float f10 = f8 - (f9 / f3);
+        if (f10 >= f8) {
+            f8 = f10;
         }
-        int i3 = (int) (f8 + c1724c.b);
-        float height = this.redBorderBottomBoundary - ((i3 > getHeight() ? i3 - getHeight() : 0) / f2);
-        if (f3 >= f6) {
-            f3 = f6 - this.redBorderPaint.getStrokeWidth();
+        int i3 = (int) (f9 + cVar.b);
+        float height = this.redBorderBottomBoundary - ((i3 > getHeight() ? i3 - getHeight() : 0) / f3);
+        if (f4 >= f7) {
+            f4 = f7 - this.redBorderPaint.getStrokeWidth();
         }
-        canvas.drawRect(f3, height <= f7 ? height - this.redBorderPaint.getStrokeWidth() : f7, f6, height, this.redBorderPaint);
+        canvas.drawRect(f4, height <= f8 ? height - this.redBorderPaint.getStrokeWidth() : f8, f7, height, this.redBorderPaint);
     }
 
     public List<String> getCurrentRegionIdsInScreen() {
@@ -889,24 +882,24 @@ public class RegionSeatView extends View {
         if (arrayMap == null || arrayMap.isEmpty() || this.mSvgRegionLocations == null) {
             return arrayList;
         }
-        float f = ((this.drawSeat.a * 1.0f) / this.regionImageWidth) * this.mSvgScale;
+        float f2 = ((this.drawSeat.a * 1.0f) / this.regionImageWidth) * this.mSvgScale;
         for (int i = 0; i < this.mSvgRegionLocations.size(); i++) {
             List<PointLocation> list = this.mSvgRegionLocations.get(i);
             if (list != null && !list.isEmpty() && !TextUtils.isEmpty(list.get(0).id) && list.size() >= 2) {
                 RectF rectF = list.get(0).rectF;
-                C1724c c1724c = this.drawSeat;
-                float f2 = c1724c.c;
-                float f3 = (rectF.left * f) + f2;
-                float f4 = c1724c.d;
-                float f5 = (rectF.top * f) + f4;
-                float f6 = (rectF.right * f) + f2;
-                float f7 = (rectF.bottom * f) + f4;
+                c cVar = this.drawSeat;
+                float f3 = cVar.c;
+                float f4 = (rectF.left * f2) + f3;
+                float f5 = cVar.d;
+                float f6 = (rectF.top * f2) + f5;
+                float f7 = (rectF.right * f2) + f3;
+                float f8 = (rectF.bottom * f2) + f5;
                 int i2 = this.viewHeight + this.seatViewPaddingBottom;
-                if ((f3 >= 0.0f || f6 >= 0.0f) && (f5 >= 0.0f || f7 >= 0.0f)) {
+                if ((f4 >= 0.0f || f7 >= 0.0f) && (f6 >= 0.0f || f8 >= 0.0f)) {
                     int i3 = this.viewWidth;
-                    if (f3 <= i3 || f6 <= i3) {
-                        float f8 = i2;
-                        if (f5 <= f8 || f7 <= f8) {
+                    if (f4 <= i3 || f7 <= i3) {
+                        float f9 = i2;
+                        if (f6 <= f9 || f8 <= f9) {
                             arrayList.add(this.mRegionVid2IdMap.get(list.get(0).id));
                         }
                     }
@@ -923,18 +916,18 @@ public class RegionSeatView extends View {
         }
         float x = motionEvent.getX();
         float y = motionEvent.getY();
-        C1724c c1724c = this.drawSeat;
-        float f = x - c1724c.c;
-        float f2 = c1724c.e;
-        float f3 = this.mSvgScale;
-        float f4 = f / (f2 * f3);
-        float f5 = (y - c1724c.d) / (f2 * f3);
+        c cVar = this.drawSeat;
+        float f2 = x - cVar.c;
+        float f3 = cVar.e;
+        float f4 = this.mSvgScale;
+        float f5 = f2 / (f3 * f4);
+        float f6 = (y - cVar.d) / (f3 * f4);
         if (cb2.d(this.mRegionBounds)) {
             return null;
         }
         for (int i = 0; i < this.mRegionBounds.size(); i++) {
             RegionBound regionBound = this.mRegionBounds.get(i);
-            if (regionBound.isPoint(f4, f5)) {
+            if (regionBound.isPoint(f5, f6)) {
                 return regionBound;
             }
         }
@@ -977,9 +970,9 @@ public class RegionSeatView extends View {
         this.unavailableSeatColor = Color.parseColor("#e9e9e9");
         this.mInScreenSeatData = new ArrayMap<>();
         this.mClickScaleOffset = m62.a(this.mContext, 25.0f);
-        bb c = hsVar.c(this.mRegionData);
-        if (c != null) {
-            this.mRegionVid2IdMap = c.c(this.mRegionData);
+        bb c2 = hsVar.c(this.mRegionData);
+        if (c2 != null) {
+            this.mRegionVid2IdMap = c2.c(this.mRegionData);
         }
         ViewConfiguration viewConfiguration = ViewConfiguration.get(this.mContext);
         int scaledTouchSlop = viewConfiguration.getScaledTouchSlop();
@@ -1035,7 +1028,7 @@ public class RegionSeatView extends View {
 
     @Override // android.view.View
     public boolean onTouchEvent(MotionEvent motionEvent) {
-        RectF a;
+        RectF a2;
         VelocityTracker velocityTracker;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1107014283")) {
@@ -1054,10 +1047,10 @@ public class RegionSeatView extends View {
                 float y = motionEvent.getY();
                 this.mLastFocusY = y;
                 this.mDownY = y;
-                C1724c c1724c = this.drawSeat;
-                this.mDLeft = c1724c.c;
-                this.mDTop = c1724c.d;
-                this.mDWidth = c1724c.a;
+                c cVar = this.drawSeat;
+                this.mDLeft = cVar.c;
+                this.mDTop = cVar.d;
+                this.mDWidth = cVar.a;
             }
             this.mAlwaysInTapRegion = true;
             this.mHandler.removeCallbacks(this.hideOverviewRunnable);
@@ -1070,11 +1063,11 @@ public class RegionSeatView extends View {
                     click(motionEvent.getX(), motionEvent.getY());
                 } else if (this.drawSeat.a < this.minRegionImageDrawSeatWidth && !cb2.d(this.mRegionBounds) && this.regions != null) {
                     RegionBound pointRegionBound = getPointRegionBound(motionEvent);
-                    if (pointRegionBound != null && f92.y(this.regions, pointRegionBound.regionVid) && (a = h12.a(pointRegionBound.pointBounds)) != null) {
-                        translate2SVGScaledRegionRectF(a);
-                        float computeScaleZoom2Region = computeScaleZoom2Region(a);
-                        translate2ViewRegionRectF(a);
-                        zoom(a.centerX(), a.centerY(), (this.regionImageWidth * computeScaleZoom2Region) / this.drawSeat.a);
+                    if (pointRegionBound != null && f92.y(this.regions, pointRegionBound.regionVid) && (a2 = h12.a(pointRegionBound.pointBounds)) != null) {
+                        translate2SVGScaledRegionRectF(a2);
+                        float computeScaleZoom2Region = computeScaleZoom2Region(a2);
+                        translate2ViewRegionRectF(a2);
+                        zoom(a2.centerX(), a2.centerY(), (this.regionImageWidth * computeScaleZoom2Region) / this.drawSeat.a);
                     }
                 } else {
                     if (needAutoScale()) {
@@ -1095,10 +1088,10 @@ public class RegionSeatView extends View {
                         flingAnimate(xVelocity, yVelocity);
                     }
                 } else {
-                    C1724c c1724c2 = this.drawSeat;
-                    C1727f c1727f = new C1727f(this, c1724c2.c, c1724c2.d, c1724c2.a);
-                    C1724c c1724c3 = this.drawSeat;
-                    zoomAnimate(c1727f, new C1727f(this, c1724c3.c + fArr[0], c1724c3.d + fArr[1], c1724c3.a));
+                    c cVar2 = this.drawSeat;
+                    f fVar = new f(this, cVar2.c, cVar2.d, cVar2.a);
+                    c cVar3 = this.drawSeat;
+                    zoomAnimate(fVar, new f(this, cVar3.c + fArr[0], cVar3.d + fArr[1], cVar3.a));
                 }
                 this.mHandler.postDelayed(this.hideOverviewRunnable, 500L);
             }
@@ -1119,22 +1112,22 @@ public class RegionSeatView extends View {
         } else if (motionEvent.getPointerCount() == 1 && !this.mScaling) {
             float x2 = motionEvent.getX();
             float y2 = motionEvent.getY();
-            float f = x2 - this.mDownX;
-            float f2 = y2 - this.mDownY;
-            float f3 = this.mLastFocusX - x2;
-            float f4 = this.mLastFocusY - y2;
+            float f2 = x2 - this.mDownX;
+            float f3 = y2 - this.mDownY;
+            float f4 = this.mLastFocusX - x2;
+            float f5 = this.mLastFocusY - y2;
             if (!this.isDrawOverview) {
-                this.isDrawOverview = Math.abs(f) >= ((float) this.mTouchSlop) || Math.abs(f2) >= ((float) this.mTouchSlop);
+                this.isDrawOverview = Math.abs(f2) >= ((float) this.mTouchSlop) || Math.abs(f3) >= ((float) this.mTouchSlop);
             }
             if (this.mAlwaysInTapRegion) {
-                if (((int) ((f * f) + (f2 * f2))) > this.mTouchSlopSquare) {
-                    scrollView(f + this.mDLeft, f2 + this.mDTop);
+                if (((int) ((f2 * f2) + (f3 * f3))) > this.mTouchSlopSquare) {
+                    scrollView(f2 + this.mDLeft, f3 + this.mDTop);
                     this.mLastFocusX = x2;
                     this.mLastFocusY = y2;
                     this.mAlwaysInTapRegion = false;
                 }
-            } else if (Math.abs(f3) >= 1.0f || Math.abs(f4) >= 1.0f) {
-                scrollView(f + this.mDLeft, f2 + this.mDTop);
+            } else if (Math.abs(f4) >= 1.0f || Math.abs(f5) >= 1.0f) {
+                scrollView(f2 + this.mDLeft, f3 + this.mDTop);
                 this.mLastFocusX = x2;
                 this.mLastFocusY = y2;
             }
@@ -1151,21 +1144,21 @@ public class RegionSeatView extends View {
             float x4 = motionEvent.getX(1);
             float y4 = motionEvent.getY(1);
             float spacing = spacing(x3, y3, x4, y4);
-            float f5 = (x3 + x4) * 0.5f;
-            float f6 = (y3 + y4) * 0.5f;
-            C1724c c1724c4 = this.drawSeat;
-            float f7 = c1724c4.c;
-            float f8 = c1724c4.d;
-            float f9 = c1724c4.a;
-            float f10 = c1724c4.b;
-            float f11 = this.mDWidth * (spacing / this.mScaleDistance);
-            if (f11 > this.maxRegionImageWidth || f11 <= this.minRegionImageWidth) {
+            float f6 = (x3 + x4) * 0.5f;
+            float f7 = (y3 + y4) * 0.5f;
+            c cVar4 = this.drawSeat;
+            float f8 = cVar4.c;
+            float f9 = cVar4.d;
+            float f10 = cVar4.a;
+            float f11 = cVar4.b;
+            float f12 = this.mDWidth * (spacing / this.mScaleDistance);
+            if (f12 > this.maxRegionImageWidth || f12 <= this.minRegionImageWidth) {
                 return true;
             }
-            c1724c4.a(f11);
-            C1724c c1724c5 = this.drawSeat;
-            c1724c5.c = f5 - (c1724c5.a * ((f5 - f7) / f9));
-            c1724c5.d = f6 - (c1724c5.b * ((f6 - f8) / f10));
+            cVar4.a(f12);
+            c cVar5 = this.drawSeat;
+            cVar5.c = f6 - (cVar5.a * ((f6 - f8) / f10));
+            cVar5.d = f7 - (cVar5.b * ((f7 - f9) / f11));
             invalidate();
         }
         return true;
@@ -1281,16 +1274,16 @@ public class RegionSeatView extends View {
         }
     }
 
-    public void setSvgScale(float f) {
+    public void setSvgScale(float f2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "886004148")) {
-            ipChange.ipc$dispatch("886004148", new Object[]{this, Float.valueOf(f)});
+            ipChange.ipc$dispatch("886004148", new Object[]{this, Float.valueOf(f2)});
             return;
         }
-        if (f <= 0.0f) {
-            f = 1.0f;
+        if (f2 <= 0.0f) {
+            f2 = 1.0f;
         }
-        this.mSvgScale = f;
+        this.mSvgScale = f2;
     }
 
     public void translate2SVGScaledRegionRectF(RectF rectF) {
@@ -1299,12 +1292,12 @@ public class RegionSeatView extends View {
             ipChange.ipc$dispatch("-906873741", new Object[]{this, rectF});
             return;
         }
-        float f = rectF.left;
-        float f2 = this.mSvgScale;
-        rectF.left = f * f2;
-        rectF.right *= f2;
-        rectF.top *= f2;
-        rectF.bottom *= f2;
+        float f2 = rectF.left;
+        float f3 = this.mSvgScale;
+        rectF.left = f2 * f3;
+        rectF.right *= f3;
+        rectF.top *= f3;
+        rectF.bottom *= f3;
     }
 
     public void translate2ViewRegionRectF(RectF rectF) {
@@ -1313,33 +1306,33 @@ public class RegionSeatView extends View {
             ipChange.ipc$dispatch("955220704", new Object[]{this, rectF});
             return;
         }
-        float f = rectF.left;
-        C1724c c1724c = this.drawSeat;
-        float f2 = c1724c.e;
-        float f3 = c1724c.c;
-        rectF.left = (f * f2) + f3;
-        rectF.right = (rectF.right * f2) + f3;
-        float f4 = c1724c.d;
-        rectF.top = (rectF.top * f2) + f4;
-        rectF.bottom = (rectF.bottom * f2) + f4;
+        float f2 = rectF.left;
+        c cVar = this.drawSeat;
+        float f3 = cVar.e;
+        float f4 = cVar.c;
+        rectF.left = (f2 * f3) + f4;
+        rectF.right = (rectF.right * f3) + f4;
+        float f5 = cVar.d;
+        rectF.top = (rectF.top * f3) + f5;
+        rectF.bottom = (rectF.bottom * f3) + f5;
     }
 
     public boolean zoom2AdaptSeatPrice() {
-        C1724c c1724c;
+        c cVar;
         ArrayMap<String, List<SeatNew>> allRegion;
         HashSet<Long> hashSet;
-        float f;
+        float f2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "855089111")) {
             return ((Boolean) ipChange.ipc$dispatch("855089111", new Object[]{this})).booleanValue();
         }
-        if (!this.isSmallVenueStyle || (c1724c = this.drawSeat) == null || c1724c.a <= 0.0f || this.viewWidth <= 0 || this.viewHeight <= 0 || this.mSelectPrice == null || (allRegion = getAllRegion()) == null) {
+        if (!this.isSmallVenueStyle || (cVar = this.drawSeat) == null || cVar.a <= 0.0f || this.viewWidth <= 0 || this.viewHeight <= 0 || this.mSelectPrice == null || (allRegion = getAllRegion()) == null) {
             return false;
         }
-        float f2 = Float.MIN_VALUE;
         float f3 = Float.MIN_VALUE;
-        float f4 = Float.MAX_VALUE;
+        float f4 = Float.MIN_VALUE;
         float f5 = Float.MAX_VALUE;
+        float f6 = Float.MAX_VALUE;
         boolean z = false;
         int i = 0;
         for (int i2 = 0; i2 < allRegion.size(); i2++) {
@@ -1355,32 +1348,32 @@ public class RegionSeatView extends View {
                     hashSet = new HashSet<>();
                 }
                 for (SeatNew seatNew : valueAt) {
-                    float f6 = f3;
+                    float f7 = f4;
                     long j = seatNew.isPackaged ? seatNew.packagedPriceIndexId : seatNew.priceLevel;
                     if (seatNew.state == n92.SEAT_STATUS_AVAILABLE.shortValue() && hashSet.contains(Long.valueOf(j))) {
                         i++;
-                        C1724c c1724c2 = this.drawSeat;
-                        float f7 = c1724c2.e;
-                        float f8 = (seatNew.x * f7) + c1724c2.c;
-                        float f9 = (seatNew.y * f7) + c1724c2.d;
+                        c cVar2 = this.drawSeat;
+                        float f8 = cVar2.e;
+                        float f9 = (seatNew.x * f8) + cVar2.c;
+                        float f10 = (seatNew.y * f8) + cVar2.d;
                         if (z) {
-                            float min = Math.min(f8, f4);
-                            float max = Math.max(f8, f2);
-                            float min2 = Math.min(f9, f5);
-                            f2 = max;
-                            f8 = min;
-                            f = Math.max(f9, f6);
-                            f9 = min2;
+                            float min = Math.min(f9, f5);
+                            float max = Math.max(f9, f3);
+                            float min2 = Math.min(f10, f6);
+                            f3 = max;
+                            f9 = min;
+                            f2 = Math.max(f10, f7);
+                            f10 = min2;
                         } else {
-                            f2 = f8;
-                            f = f9;
+                            f3 = f9;
+                            f2 = f10;
                         }
-                        f4 = f8;
                         f5 = f9;
+                        f6 = f10;
                         z = true;
-                        f3 = f;
+                        f4 = f2;
                     } else {
-                        f3 = f6;
+                        f4 = f7;
                     }
                     if (i > 10) {
                         return false;
@@ -1391,31 +1384,31 @@ public class RegionSeatView extends View {
         if (!z || i > 10) {
             return false;
         }
-        C1724c c1724c3 = this.drawSeat;
-        int i3 = c1724c3.g;
-        float f10 = (f2 - f4) + i3;
+        c cVar3 = this.drawSeat;
+        int i3 = cVar3.g;
         float f11 = (f3 - f5) + i3;
+        float f12 = (f4 - f6) + i3;
         int i4 = this.viewWidth;
-        float f12 = i4 / 2.0f;
+        float f13 = i4 / 2.0f;
         int i5 = this.viewHeight;
-        float f13 = i5 / 2.0f;
-        float f14 = f13 - ((f5 + f3) / 2.0f);
-        float f15 = c1724c3.c + (f12 - ((f2 + f4) / 2.0f));
-        float f16 = c1724c3.d + f14;
-        float f17 = 1.0f;
-        if (f10 > 0.0f && f11 > 0.0f) {
-            f17 = f10 / f11 < ((float) i4) / ((float) i5) ? i5 / f11 : i4 / f10;
-            if (f10 < i4 && f11 < i5) {
-                f17 = Math.min(f17, this.maxRegionImageWidth / c1724c3.a);
+        float f14 = i5 / 2.0f;
+        float f15 = f14 - ((f6 + f4) / 2.0f);
+        float f16 = cVar3.c + (f13 - ((f3 + f5) / 2.0f));
+        float f17 = cVar3.d + f15;
+        float f18 = 1.0f;
+        if (f11 > 0.0f && f12 > 0.0f) {
+            f18 = f11 / f12 < ((float) i4) / ((float) i5) ? i5 / f12 : i4 / f11;
+            if (f11 < i4 && f12 < i5) {
+                f18 = Math.min(f18, this.maxRegionImageWidth / cVar3.a);
             }
         }
-        float f18 = f13 - ((f13 - f16) * f17);
-        C1724c c1724c4 = this.drawSeat;
-        float f19 = c1724c4.a;
-        C1727f c1727f = new C1727f(this, c1724c4.c, c1724c4.d, f19);
-        C1727f c1727f2 = new C1727f(this, f12 - ((f12 - f15) * f17), f18, f17 * f19);
+        float f19 = f14 - ((f14 - f17) * f18);
+        c cVar4 = this.drawSeat;
+        float f20 = cVar4.a;
+        f fVar = new f(this, cVar4.c, cVar4.d, f20);
+        f fVar2 = new f(this, f13 - ((f13 - f16) * f18), f19, f18 * f20);
         this.isDrawOverview = true;
-        zoomAnimate(c1727f, c1727f2, new C1723b());
+        zoomAnimate(fVar, fVar2, new b());
         return true;
     }
 
@@ -1425,25 +1418,25 @@ public class RegionSeatView extends View {
             ipChange.ipc$dispatch("1389265758", new Object[]{this});
             return;
         }
-        C1724c c1724c = this.drawSeat;
-        if (c1724c != null) {
-            float f = c1724c.a;
-            if (f <= 0.0f || this.regionImageWidth <= 0.0f || this.viewWidth <= 0 || this.viewHeight <= 0) {
+        c cVar = this.drawSeat;
+        if (cVar != null) {
+            float f2 = cVar.a;
+            if (f2 <= 0.0f || this.regionImageWidth <= 0.0f || this.viewWidth <= 0 || this.viewHeight <= 0) {
                 return;
             }
             if (this.isSmallVenueStyle) {
-                C1727f c1727f = new C1727f(this, c1724c.c, c1724c.d, f);
-                float f2 = this.minRegionImageWidth;
-                float f3 = this.viewHeight;
+                f fVar = new f(this, cVar.c, cVar.d, f2);
+                float f3 = this.minRegionImageWidth;
+                float f4 = this.viewHeight;
                 this.isDrawOverview = false;
-                zoomAnimate(c1727f, new C1727f(this, (this.viewWidth - f2) / 2.0f, (f3 - ((this.regionImageHeight / this.regionImageWidth) * f2)) / 2.0f, f2));
+                zoomAnimate(fVar, new f(this, (this.viewWidth - f3) / 2.0f, (f4 - ((this.regionImageHeight / this.regionImageWidth) * f3)) / 2.0f, f3));
                 return;
             }
-            C1727f c1727f2 = new C1727f(this, c1724c.c, c1724c.d, f);
-            float f4 = this.bigVenueInitRegionImageWidth;
-            C1727f c1727f3 = new C1727f(this, (this.viewWidth - f4) / 2.0f, (this.viewHeight - ((this.regionImageHeight / this.regionImageWidth) * f4)) / 2.0f, f4);
+            f fVar2 = new f(this, cVar.c, cVar.d, f2);
+            float f5 = this.bigVenueInitRegionImageWidth;
+            f fVar3 = new f(this, (this.viewWidth - f5) / 2.0f, (this.viewHeight - ((this.regionImageHeight / this.regionImageWidth) * f5)) / 2.0f, f5);
             this.isDrawOverview = false;
-            zoomAnimate(c1727f2, c1727f3);
+            zoomAnimate(fVar2, fVar3);
         }
     }
 
@@ -1464,15 +1457,15 @@ public class RegionSeatView extends View {
         }
     }
 
-    private void zoomAnimate(C1727f c1727f, C1727f c1727f2, Animator.AnimatorListener animatorListener) {
+    private void zoomAnimate(f fVar, f fVar2, Animator.AnimatorListener animatorListener) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1462066138")) {
-            ipChange.ipc$dispatch("1462066138", new Object[]{this, c1727f, c1727f2, animatorListener});
+            ipChange.ipc$dispatch("1462066138", new Object[]{this, fVar, fVar2, animatorListener});
             return;
         }
-        ValueAnimator ofObject = ValueAnimator.ofObject(new C1726e(), c1727f, c1727f2);
+        ValueAnimator ofObject = ValueAnimator.ofObject(new e(), fVar, fVar2);
         ofObject.setInterpolator(new DecelerateInterpolator());
-        ofObject.addUpdateListener(new C1728g());
+        ofObject.addUpdateListener(new g());
         if (animatorListener != null) {
             ofObject.addListener(animatorListener);
         }

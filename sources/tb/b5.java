@@ -5,16 +5,13 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.text.TextUtils;
 import android.util.Pair;
-import anet.channel.util.C0241c;
 import cn.damai.common.AppConfig;
 import cn.damai.common.R$string;
-import cn.damai.common.user.C0529c;
 import com.alibaba.motu.tbrest.SendService;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.android.tlog.protocol.Constants;
 import com.taobao.application.common.Apm;
-import com.taobao.application.common.C6673b;
 import com.taobao.monitor.adapter.OtherAppApmInitiator;
 import com.taobao.monitor.impl.common.PageVisibleAlgorithm;
 import com.ut.mini.IUTApplication;
@@ -33,12 +30,11 @@ public class b5 {
     private static Pair<String, Long> a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.b5$a */
     /* loaded from: classes4.dex */
-    public class C8950a implements IUTApplication {
+    public class a implements IUTApplication {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C8950a() {
+        a() {
         }
 
         @Override // com.ut.mini.IUTApplication
@@ -94,12 +90,11 @@ public class b5 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.b5$b */
     /* loaded from: classes4.dex */
-    public class C8951b implements Apm.OnAppLaunchListener {
+    public class b implements Apm.OnAppLaunchListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C8951b() {
+        b() {
         }
 
         @Override // com.taobao.application.common.IAppLaunchListener
@@ -112,7 +107,7 @@ public class b5 {
             String str = i == 0 ? PolymerizationMonitor.COLD : "hot";
             String str2 = i2 != 0 ? i2 != 1 ? i2 != 2 ? i2 != 3 ? i2 != 4 ? "" : "completed" : "ski_interactive" : "interactive" : "visible" : "draw_start";
             if (TextUtils.equals(str2, "completed")) {
-                long j = C6673b.d().getLong("startProcessSystemTime", -1L);
+                long j = com.taobao.application.common.b.d().getLong("startProcessSystemTime", -1L);
                 cb1.c("ApmLog", "Apm LaunchChanged type:" + str + " status:" + str2 + " cost:" + (System.currentTimeMillis() - j) + "ms");
                 return;
             }
@@ -121,12 +116,11 @@ public class b5 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.b5$c */
     /* loaded from: classes4.dex */
-    public class C8952c implements Apm.OnApmEventListener {
+    public class c implements Apm.OnApmEventListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C8952c() {
+        c() {
         }
 
         @Override // com.taobao.application.common.IApmEventListener
@@ -146,12 +140,11 @@ public class b5 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.b5$d */
     /* loaded from: classes4.dex */
-    public class C8953d implements Apm.OnPageListener {
+    public class d implements Apm.OnPageListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C8953d() {
+        d() {
         }
 
         @Override // com.taobao.application.common.IPageListener
@@ -191,12 +184,12 @@ public class b5 {
         } else if (z) {
             SendService sendService = SendService.getInstance();
             Context applicationContext = application.getApplicationContext();
-            String b = AppConfig.b();
-            String c = AppConfig.c();
+            String b2 = AppConfig.b();
+            String c2 = AppConfig.c();
             String q = AppConfig.q();
             Resources resources = application.getApplicationContext().getResources();
             int i = R$string.ttid;
-            sendService.init(applicationContext, b, c, q, resources.getString(i), z20.E());
+            sendService.init(applicationContext, b2, c2, q, resources.getString(i), z20.E());
             jd0.j = true;
             rj2.f = false;
             jd0.p = true;
@@ -206,7 +199,7 @@ public class b5 {
                 pb1.e(true);
             }
             HashMap hashMap = new HashMap();
-            hashMap.put("deviceId", C0241c.c(application.getApplicationContext()));
+            hashMap.put("deviceId", anet.channel.util.c.c(application.getApplicationContext()));
             hashMap.put("onlineAppKey", AppConfig.c());
             hashMap.put("appVersion", AppConfig.q());
             hashMap.put(Constants.KEY_APP_BUILD, "");
@@ -244,13 +237,13 @@ public class b5 {
             UTTeamWork.getInstance().setHostPort4TnetIpv6(context, "v6-adashx.ut.hzshudian.com", 443);
             UTTeamWork.getInstance().setHostPort4Tnet(context, "adashx.ut.hzshudian.com", 443);
             UTTeamWork.getInstance().setHost4Https(context, "h-adashx.ut.hzshudian.com");
-            UTAnalytics.getInstance().setAppApplicationInstance(mu0.a(), new C8950a());
+            UTAnalytics.getInstance().setAppApplicationInstance(mu0.a(), new a());
             UTAnalytics.getInstance().turnOffAutoPageTrack();
             if (!TextUtils.isEmpty(z20.i())) {
-                C0529c.e().H("havanaid", z20.i());
+                cn.damai.common.user.c.e().H("havanaid", z20.i());
             }
             if (!TextUtils.isEmpty(z20.E())) {
-                C0529c.e().H("usercode", z20.E());
+                cn.damai.common.user.c.e().H("usercode", z20.E());
             }
             c();
             e();
@@ -263,9 +256,9 @@ public class b5 {
         if (AndroidInstantRuntime.support(ipChange, "-1298730162")) {
             ipChange.ipc$dispatch("-1298730162", new Object[0]);
         } else if (AppConfig.v()) {
-            C6673b.b(new C8951b());
-            C6673b.a(new C8952c());
-            C6673b.c(new C8953d());
+            com.taobao.application.common.b.b(new b());
+            com.taobao.application.common.b.a(new c());
+            com.taobao.application.common.b.c(new d());
         }
     }
 }

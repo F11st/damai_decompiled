@@ -14,7 +14,7 @@ import tb.k50;
 public final class OrientationListener extends OrientationEventListener {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3626a Companion = new C3626a(null);
+    public static final a Companion = new a(null);
     public static final int ORIENTATION_LANDSCAPE = 1002;
     public static final int ORIENTATION_PORTRAIT = 1001;
     public static final int ORIENTATION_REVERSE_LANDSCAPE = 1003;
@@ -38,13 +38,12 @@ public final class OrientationListener extends OrientationEventListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.responsive.page.orientation.OrientationListener$a */
     /* loaded from: classes7.dex */
-    public static final class C3626a {
-        private C3626a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3626a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

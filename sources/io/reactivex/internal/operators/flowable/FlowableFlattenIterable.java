@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.b;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.functions.ObjectHelper;
@@ -231,18 +231,18 @@ public final class FlowableFlattenIterable<T, R> extends AbstractFlowableWithUps
         }
     }
 
-    public FlowableFlattenIterable(AbstractC8147b<T> abstractC8147b, Function<? super T, ? extends Iterable<? extends R>> function, int i) {
-        super(abstractC8147b);
+    public FlowableFlattenIterable(b<T> bVar, Function<? super T, ? extends Iterable<? extends R>> function, int i) {
+        super(bVar);
         this.mapper = function;
         this.prefetch = i;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super R> subscriber) {
-        AbstractC8147b<T> abstractC8147b = this.source;
-        if (abstractC8147b instanceof Callable) {
+        b<T> bVar = this.source;
+        if (bVar instanceof Callable) {
             try {
-                Object call = ((Callable) abstractC8147b).call();
+                Object call = ((Callable) bVar).call();
                 if (call == null) {
                     EmptySubscription.complete(subscriber);
                     return;
@@ -261,6 +261,6 @@ public final class FlowableFlattenIterable<T, R> extends AbstractFlowableWithUps
                 return;
             }
         }
-        abstractC8147b.subscribe((FlowableSubscriber) new FlattenIterableSubscriber(subscriber, this.mapper, this.prefetch));
+        bVar.subscribe((FlowableSubscriber) new FlattenIterableSubscriber(subscriber, this.mapper, this.prefetch));
     }
 }

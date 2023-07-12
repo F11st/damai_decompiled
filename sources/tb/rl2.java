@@ -22,13 +22,12 @@ public class rl2 {
     protected FileCache f;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.rl2$a */
     /* loaded from: classes11.dex */
-    class AsyncTaskC9654a extends AsyncTask<Void, Void, Void> {
+    class a extends AsyncTask<Void, Void, Void> {
         final /* synthetic */ String a;
         final /* synthetic */ byte[] b;
 
-        AsyncTaskC9654a(String str, byte[] bArr) {
+        a(String str, byte[] bArr) {
             this.a = str;
             this.b = bArr;
         }
@@ -57,9 +56,8 @@ public class rl2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.rl2$b */
     /* loaded from: classes11.dex */
-    public static final class C9655b {
+    public static final class b {
         private Context a;
         private String b;
         private String c;
@@ -74,34 +72,34 @@ public class rl2 {
             throw new IllegalArgumentException();
         }
 
-        public C9655b h(Context context) {
+        public b h(Context context) {
             this.a = context;
             return this;
         }
 
-        public C9655b i(String str) {
+        public b i(String str) {
             this.c = str;
             return this;
         }
 
-        public C9655b j(long j) {
+        public b j(long j) {
             this.e = j;
             return this;
         }
 
-        public C9655b k(int i) {
+        public b k(int i) {
             this.d = i;
             return this;
         }
 
-        public C9655b l(String str) {
+        public b l(String str) {
             this.b = str;
             return this;
         }
     }
 
-    /* synthetic */ rl2(C9655b c9655b, AsyncTaskC9654a asyncTaskC9654a) {
-        this(c9655b);
+    /* synthetic */ rl2(b bVar, a aVar) {
+        this(bVar);
     }
 
     private File b() {
@@ -278,7 +276,7 @@ public class rl2 {
     }
 
     public byte[] d(String str) {
-        FileCache.C6655b f = this.f.f(str);
+        FileCache.b f = this.f.f(str);
         if (f != null) {
             byte[] h = h(f.c);
             if (h == null || h.length <= 0) {
@@ -292,10 +290,10 @@ public class rl2 {
 
     public List<String> f() {
         ArrayList arrayList = new ArrayList();
-        List<FileCache.C6655b> c = this.f.c();
+        List<FileCache.b> c = this.f.c();
         if (c != null && c.size() != 0) {
-            for (FileCache.C6655b c6655b : c) {
-                arrayList.add(c6655b.b);
+            for (FileCache.b bVar : c) {
+                arrayList.add(bVar.b);
             }
         }
         return arrayList;
@@ -315,21 +313,21 @@ public class rl2 {
             Log.d("TemplateCache", "[getTemplateById #" + str + "] template from server is null.");
             return;
         }
-        new AsyncTaskC9654a(str, bArr).executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, new Void[0]);
+        new a(str, bArr).executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, new Void[0]);
     }
 
-    private rl2(C9655b c9655b) {
-        this.a = c9655b.b;
-        Context context = c9655b.a;
+    private rl2(b bVar) {
+        this.a = bVar.b;
+        Context context = bVar.a;
         this.d = context;
-        String str = c9655b.c;
+        String str = bVar.c;
         this.b = str;
-        int unused = c9655b.d;
-        long j = c9655b.e;
+        int unused = bVar.d;
+        long j = bVar.e;
         this.c = j;
-        boolean unused2 = c9655b.f;
-        File b = b();
-        this.e = b;
-        this.f = new FileCache(context, b, str, j);
+        boolean unused2 = bVar.f;
+        File b2 = b();
+        this.e = b2;
+        this.f = new FileCache(context, b2, str, j);
     }
 }

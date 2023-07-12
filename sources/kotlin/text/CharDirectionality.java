@@ -2,9 +2,8 @@ package kotlin.text;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-import kotlin.C8177b;
 import kotlin.Lazy;
-import kotlin.collections.C8225w;
+import kotlin.collections.w;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import tb.k50;
@@ -35,32 +34,31 @@ public enum CharDirectionality {
     POP_DIRECTIONAL_FORMAT(18);
     
     @NotNull
-    public static final C8582a Companion = new C8582a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final Lazy<Map<Integer, CharDirectionality>> directionalityMap$delegate;
     private final int value;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.text.CharDirectionality$a */
     /* loaded from: classes3.dex */
-    public static final class C8582a {
-        private C8582a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8582a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     static {
         Lazy<Map<Integer, CharDirectionality>> b;
-        b = C8177b.b(new Function0<Map<Integer, ? extends CharDirectionality>>() { // from class: kotlin.text.CharDirectionality$Companion$directionalityMap$2
+        b = kotlin.b.b(new Function0<Map<Integer, ? extends CharDirectionality>>() { // from class: kotlin.text.CharDirectionality$Companion$directionalityMap$2
             @Override // kotlin.jvm.functions.Function0
             @NotNull
             public final Map<Integer, ? extends CharDirectionality> invoke() {
                 int e;
                 CharDirectionality[] values = CharDirectionality.values();
-                e = C8225w.e(values.length);
+                e = w.e(values.length);
                 LinkedHashMap linkedHashMap = new LinkedHashMap(ry1.a(e, 16));
                 for (CharDirectionality charDirectionality : values) {
                     linkedHashMap.put(Integer.valueOf(charDirectionality.getValue()), charDirectionality);

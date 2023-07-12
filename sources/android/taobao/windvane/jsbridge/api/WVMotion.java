@@ -16,7 +16,7 @@ import android.taobao.windvane.jsbridge.api.ShakeListener;
 import android.taobao.windvane.runtimepermission.PermissionProposer;
 import android.taobao.windvane.util.TaoLog;
 import android.text.TextUtils;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
+import com.alibaba.security.realidentity.jsbridge.a;
 import java.net.URLDecoder;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -159,7 +159,7 @@ public class WVMotion extends WVApiPlugin implements Handler.Callback {
                     @Override // java.lang.Runnable
                     public void run() {
                         WVResult wVResult = new WVResult();
-                        wVResult.addData("msg", AbstractC3893a.al);
+                        wVResult.addData("msg", a.al);
                         wVCallBackContext.error(wVResult);
                     }
                 }).execute();

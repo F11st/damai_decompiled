@@ -8,13 +8,12 @@ import tb.b41;
 public interface LookupTracker {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.incremental.components.LookupTracker$a */
     /* loaded from: classes3.dex */
-    public static final class C8324a implements LookupTracker {
+    public static final class a implements LookupTracker {
         @NotNull
-        public static final C8324a INSTANCE = new C8324a();
+        public static final a INSTANCE = new a();
 
-        private C8324a() {
+        private a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.incremental.components.LookupTracker

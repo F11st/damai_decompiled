@@ -16,24 +16,24 @@ public class v0 {
     @TargetApi(9)
     public static String a(String str) {
         if (TextUtils.isEmpty(str)) {
-            C5653y.c("hmsSdk", "url is null");
+            y.c("hmsSdk", "url is null");
             return str;
         }
         try {
             if (URLUtil.isNetworkUrl(str) && !str.toLowerCase(Locale.US).startsWith("http:")) {
                 return new URI(str).getHost();
             }
-            C5653y.b("hmsSdk", "url don't starts with https");
+            y.b("hmsSdk", "url don't starts with https");
             return null;
         } catch (URISyntaxException e) {
-            C5653y.b("hmsSdk", "getHostByURI error : " + e.getMessage());
+            y.b("hmsSdk", "getHostByURI error : " + e.getMessage());
             return null;
         }
     }
 
     public static String a(String str, int i) {
         if (TextUtils.isEmpty(str) || i <= 0) {
-            C5653y.c("hmsSdk", "url is null");
+            y.c("hmsSdk", "url is null");
             return str;
         }
         String[] split = str.split("\\.");
@@ -75,7 +75,7 @@ public class v0 {
                         message = e.getMessage();
                         sb.append(message);
                         str3 = sb.toString();
-                        C5653y.b("hmsSdk", str3);
+                        y.b("hmsSdk", str3);
                         return false;
                     } catch (Exception e2) {
                         sb = new StringBuilder();
@@ -83,7 +83,7 @@ public class v0 {
                         message = e2.getMessage();
                         sb.append(message);
                         str3 = sb.toString();
-                        C5653y.b("hmsSdk", str3);
+                        y.b("hmsSdk", str3);
                         return false;
                     }
                 }
@@ -91,7 +91,7 @@ public class v0 {
             }
             str3 = "get urlLastNStr is null";
         }
-        C5653y.b("hmsSdk", str3);
+        y.b("hmsSdk", str3);
         return false;
     }
 

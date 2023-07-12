@@ -3,7 +3,6 @@ package tb;
 import android.text.TextUtils;
 import com.alibaba.analytics.core.model.LogField;
 import com.alibaba.analytics.core.store.LogStoreMgr;
-import com.alibaba.analytics.core.sync.C3133e;
 import com.alibaba.analytics.utils.Logger;
 import com.alibaba.motu.tbrest.rest.RestConstants;
 import java.util.Map;
@@ -35,7 +34,7 @@ public class za1 {
             if (i > 0) {
                 Logger.f("", "topicId", Integer.valueOf(i));
                 qa1Var.e(i);
-                C3133e.h().f(qa1Var);
+                com.alibaba.analytics.core.sync.e.h().f(qa1Var);
             }
             if (z) {
                 LogStoreMgr.l().e(qa1Var);

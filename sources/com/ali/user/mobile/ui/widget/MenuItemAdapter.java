@@ -47,7 +47,7 @@ public class MenuItemAdapter extends BaseAdapter {
             LayoutInflater layoutInflater = this.layoutInflater;
             int i2 = this.layoutId;
             if (i2 <= 0) {
-                i2 = R.C2965layout.aliuser_menu_item;
+                i2 = R.layout.aliuser_menu_item;
             }
             view = layoutInflater.inflate(i2, (ViewGroup) null);
         }

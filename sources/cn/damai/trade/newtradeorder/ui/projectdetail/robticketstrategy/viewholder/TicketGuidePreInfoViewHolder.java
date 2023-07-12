@@ -12,7 +12,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.trade.R$color;
 import cn.damai.trade.R$drawable;
 import cn.damai.trade.R$id;
@@ -40,14 +40,13 @@ public class TicketGuidePreInfoViewHolder extends RecyclerView.ViewHolder {
     private Context h;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.robticketstrategy.viewholder.TicketGuidePreInfoViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2424a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ boolean b;
 
-        View$OnClickListenerC2424a(String str, boolean z) {
+        a(String str, boolean z) {
             this.a = str;
             this.b = z;
         }
@@ -59,7 +58,7 @@ public class TicketGuidePreInfoViewHolder extends RecyclerView.ViewHolder {
                 ipChange.ipc$dispatch("1954133771", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(pp2.u().z2(this.a));
+            c.e().x(pp2.u().z2(this.a));
             Bundle bundle = new Bundle();
             bundle.putBoolean("visEmail", this.b);
             bundle.putString("projectId", this.a);
@@ -91,7 +90,7 @@ public class TicketGuidePreInfoViewHolder extends RecyclerView.ViewHolder {
         this.e.setVisibility(8);
         this.f.setTextColor(ContextCompat.getColor(this.h, R$color.white));
         this.f.setText("填写");
-        this.f.setOnClickListener(new View$OnClickListenerC2424a(str, z));
+        this.f.setOnClickListener(new a(str, z));
     }
 
     private void d(List<String> list) {

@@ -11,9 +11,9 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import cn.damai.comment.bean.StoreInfo;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMRoundedCornersBitmapProcessor;
+import cn.damai.common.image.a;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
@@ -57,16 +57,16 @@ public final class EvaluateScriptMurderShopView extends RelativeLayout {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: bindData$lambda-0  reason: not valid java name */
-    public static final void m22bindData$lambda0(EvaluateScriptMurderShopView evaluateScriptMurderShopView, Function1 function1, DMImageCreator.C0502e c0502e) {
+    public static final void m22bindData$lambda0(EvaluateScriptMurderShopView evaluateScriptMurderShopView, Function1 function1, DMImageCreator.e eVar) {
         int parseColor;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1660549692")) {
-            ipChange.ipc$dispatch("1660549692", new Object[]{evaluateScriptMurderShopView, function1, c0502e});
+            ipChange.ipc$dispatch("1660549692", new Object[]{evaluateScriptMurderShopView, function1, eVar});
             return;
         }
         b41.i(evaluateScriptMurderShopView, "this$0");
         b41.i(function1, "$callback");
-        Bitmap bitmap = c0502e.b;
+        Bitmap bitmap = eVar.b;
         if (bitmap == null) {
             cb1.a("bitmap is null");
             ToastUtil.a().e(evaluateScriptMurderShopView.getContext(), "图片生成失败");
@@ -84,10 +84,10 @@ public final class EvaluateScriptMurderShopView extends RelativeLayout {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: bindData$lambda-1  reason: not valid java name */
-    public static final void m23bindData$lambda1(EvaluateScriptMurderShopView evaluateScriptMurderShopView, Function1 function1, DMImageCreator.C0501d c0501d) {
+    public static final void m23bindData$lambda1(EvaluateScriptMurderShopView evaluateScriptMurderShopView, Function1 function1, DMImageCreator.d dVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-122872606")) {
-            ipChange.ipc$dispatch("-122872606", new Object[]{evaluateScriptMurderShopView, function1, c0501d});
+            ipChange.ipc$dispatch("-122872606", new Object[]{evaluateScriptMurderShopView, function1, dVar});
             return;
         }
         b41.i(evaluateScriptMurderShopView, "this$0");
@@ -110,15 +110,15 @@ public final class EvaluateScriptMurderShopView extends RelativeLayout {
         }
         this.shopNameTv.setText(storeInfo.getStoreName());
         this.shopSubTitleTv.setText(storeInfo.getDes());
-        C0504a.b().h(getContext()).c(storeInfo.getStoreImgUrl()).k(new DMRoundedCornersBitmapProcessor(t60.a(getContext(), 6.0f), 0)).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.nf0
+        a.b().h(getContext()).c(storeInfo.getStoreImgUrl()).k(new DMRoundedCornersBitmapProcessor(t60.a(getContext(), 6.0f), 0)).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.nf0
             @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-            public final void onSuccess(DMImageCreator.C0502e c0502e) {
-                EvaluateScriptMurderShopView.m22bindData$lambda0(EvaluateScriptMurderShopView.this, function1, c0502e);
+            public final void onSuccess(DMImageCreator.e eVar) {
+                EvaluateScriptMurderShopView.m22bindData$lambda0(EvaluateScriptMurderShopView.this, function1, eVar);
             }
         }).e(new DMImageCreator.DMImageFailListener() { // from class: tb.mf0
             @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-            public final void onFail(DMImageCreator.C0501d c0501d) {
-                EvaluateScriptMurderShopView.m23bindData$lambda1(EvaluateScriptMurderShopView.this, function1, c0501d);
+            public final void onFail(DMImageCreator.d dVar) {
+                EvaluateScriptMurderShopView.m23bindData$lambda1(EvaluateScriptMurderShopView.this, function1, dVar);
             }
         }).f();
     }

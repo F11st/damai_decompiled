@@ -6,10 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.text.TextUtils;
-import com.alipay.sdk.m.j.C4212b;
-import com.alipay.sdk.m.k.C4218a;
-import com.alipay.sdk.m.k.C4226b;
-import com.alipay.sdk.m.s.C4293a;
+import com.alipay.sdk.m.k.b;
+import com.alipay.sdk.m.s.a;
 import java.util.concurrent.ConcurrentHashMap;
 
 /* compiled from: Taobao */
@@ -19,51 +17,50 @@ public class APayEntranceActivity extends Activity {
     public static final String e = "ap_target_packagename";
     public static final String f = "ap_session";
     public static final String g = "ap_local_info";
-    public static final ConcurrentHashMap<String, InterfaceC4121a> h = new ConcurrentHashMap<>();
+    public static final ConcurrentHashMap<String, a> h = new ConcurrentHashMap<>();
     public String a;
     public String b;
-    public C4293a c;
+    public com.alipay.sdk.m.s.a c;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alipay.sdk.app.APayEntranceActivity$a */
     /* loaded from: classes12.dex */
-    public interface InterfaceC4121a {
+    public interface a {
         void a(String str);
     }
 
     @Override // android.app.Activity
     public void finish() {
         String str = this.b;
-        C4293a c4293a = this.c;
-        C4218a.a(c4293a, C4226b.l, "BSAFinish", str + "|" + TextUtils.isEmpty(this.a));
+        com.alipay.sdk.m.s.a aVar = this.c;
+        com.alipay.sdk.m.k.a.a(aVar, b.l, "BSAFinish", str + "|" + TextUtils.isEmpty(this.a));
         if (TextUtils.isEmpty(this.a)) {
-            this.a = C4212b.a();
-            C4293a c4293a2 = this.c;
-            if (c4293a2 != null) {
-                c4293a2.b(true);
+            this.a = com.alipay.sdk.m.j.b.a();
+            com.alipay.sdk.m.s.a aVar2 = this.c;
+            if (aVar2 != null) {
+                aVar2.b(true);
             }
         }
         if (str != null) {
-            InterfaceC4121a remove = h.remove(str);
+            a remove = h.remove(str);
             if (remove != null) {
                 remove.a(this.a);
             } else {
-                C4293a c4293a3 = this.c;
-                C4218a.b(c4293a3, "wr", "refNull", "session=" + str);
+                com.alipay.sdk.m.s.a aVar3 = this.c;
+                com.alipay.sdk.m.k.a.b(aVar3, "wr", "refNull", "session=" + str);
             }
         }
         try {
             super.finish();
         } catch (Throwable th) {
-            C4218a.a(this.c, "wr", "APStartFinish", th);
+            com.alipay.sdk.m.k.a.a(this.c, "wr", "APStartFinish", th);
         }
     }
 
     @Override // android.app.Activity
     public void onActivityResult(int i, int i2, Intent intent) {
         super.onActivityResult(i, i2, intent);
-        C4293a c4293a = this.c;
-        C4218a.a(c4293a, C4226b.l, "BSAOnAR", this.b + "|" + i + "," + i2);
+        com.alipay.sdk.m.s.a aVar = this.c;
+        com.alipay.sdk.m.k.a.a(aVar, b.l, "BSAOnAR", this.b + "|" + i + "," + i2);
         if (i == 1000) {
             if (intent != null) {
                 try {
@@ -89,9 +86,9 @@ public class APayEntranceActivity extends Activity {
             this.b = extras.getString(f);
             String string3 = extras.getString(g, "{}");
             if (!TextUtils.isEmpty(this.b)) {
-                C4293a a = C4293a.C4294a.a(this.b);
-                this.c = a;
-                C4218a.a(a, C4226b.l, "BSAEntryCreate", this.b + "|" + SystemClock.elapsedRealtime());
+                com.alipay.sdk.m.s.a a2 = a.C0200a.a(this.b);
+                this.c = a2;
+                com.alipay.sdk.m.k.a.a(a2, b.l, "BSAEntryCreate", this.b + "|" + SystemClock.elapsedRealtime());
             }
             Intent intent = new Intent();
             intent.putExtra("order_info", string);
@@ -100,13 +97,13 @@ public class APayEntranceActivity extends Activity {
             try {
                 startActivityForResult(intent, 1000);
             } catch (Throwable th) {
-                C4218a.a(this.c, "wr", "APStartEx", th);
+                com.alipay.sdk.m.k.a.a(this.c, "wr", "APStartEx", th);
                 finish();
             }
             if (this.c != null) {
                 Context applicationContext = getApplicationContext();
-                C4293a c4293a = this.c;
-                C4218a.a(applicationContext, c4293a, string, c4293a.d);
+                com.alipay.sdk.m.s.a aVar = this.c;
+                com.alipay.sdk.m.k.a.a(applicationContext, aVar, string, aVar.d);
                 this.c.a(true);
             }
         } catch (Throwable unused) {

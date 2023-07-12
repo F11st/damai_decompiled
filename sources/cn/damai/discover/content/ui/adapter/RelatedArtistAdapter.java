@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.discover.content.bean.RelatedBrandOrArtist;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -25,7 +24,7 @@ public class RelatedArtistAdapter extends RecyclerView.Adapter<RelatedArtistView
     private Context a;
     private OnRelatedItemClickListener b;
     private List<RelatedBrandOrArtist> d = new ArrayList();
-    private OnRelatedItemClickListener c = new C1003a();
+    private OnRelatedItemClickListener c = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes14.dex */
@@ -72,12 +71,11 @@ public class RelatedArtistAdapter extends RecyclerView.Adapter<RelatedArtistView
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.content.ui.adapter.RelatedArtistAdapter$a */
     /* loaded from: classes5.dex */
-    public class C1003a implements OnRelatedItemClickListener {
+    public class a implements OnRelatedItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1003a() {
+        a() {
         }
 
         @Override // cn.damai.discover.content.ui.adapter.RelatedArtistAdapter.OnRelatedItemClickListener
@@ -109,7 +107,7 @@ public class RelatedArtistAdapter extends RecyclerView.Adapter<RelatedArtistView
             if (wh2.j(relatedBrandOrArtist.headPic)) {
                 relatedArtistViewHolder.b.setImageBitmap(null);
             } else {
-                C0504a.b().c(relatedBrandOrArtist.headPic).g(relatedArtistViewHolder.b);
+                cn.damai.common.image.a.b().c(relatedBrandOrArtist.headPic).g(relatedArtistViewHolder.b);
             }
         }
     }

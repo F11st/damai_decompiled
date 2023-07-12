@@ -1,7 +1,6 @@
 package com.xiaomi.push;
 
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.dx;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -16,7 +15,7 @@ public class fl {
     int f362a;
 
     /* renamed from: a  reason: collision with other field name */
-    private dx.C7635a f363a;
+    private dx.a f363a;
 
     /* renamed from: a  reason: collision with other field name */
     public com.xiaomi.push.service.ao f364a;
@@ -40,16 +39,16 @@ public class fl {
         this.f367b = f361a;
         this.f365a = null;
         this.f364a = null;
-        this.f363a = new dx.C7635a();
+        this.f363a = new dx.a();
         this.f362a = 1;
     }
 
-    fl(dx.C7635a c7635a, short s, byte[] bArr) {
+    fl(dx.a aVar, short s, byte[] bArr) {
         this.f366a = (short) 2;
         this.f367b = f361a;
         this.f365a = null;
         this.f364a = null;
-        this.f363a = c7635a;
+        this.f363a = aVar;
         this.f366a = s;
         this.f367b = bArr;
         this.f362a = 2;
@@ -62,7 +61,7 @@ public class fl {
         try {
             i = Integer.parseInt(gnVar.k());
         } catch (Exception e) {
-            AbstractC7535b.m586a("Blob parse chid err " + e.getMessage());
+            com.xiaomi.channel.commonutils.logger.b.m586a("Blob parse chid err " + e.getMessage());
             i = 1;
         }
         flVar.a(i);
@@ -79,7 +78,7 @@ public class fl {
                 flVar.a("SECMSG", (String) null);
             }
         } catch (UnsupportedEncodingException e2) {
-            AbstractC7535b.m586a("Blob setPayload err： " + e2.getMessage());
+            com.xiaomi.channel.commonutils.logger.b.m586a("Blob setPayload err： " + e2.getMessage());
         }
         return flVar;
     }
@@ -91,14 +90,14 @@ public class fl {
             short s = slice.getShort(0);
             short s2 = slice.getShort(2);
             int i = slice.getInt(4);
-            dx.C7635a c7635a = new dx.C7635a();
-            c7635a.a(slice.array(), slice.arrayOffset() + 8, (int) s2);
+            dx.a aVar = new dx.a();
+            aVar.a(slice.array(), slice.arrayOffset() + 8, (int) s2);
             byte[] bArr = new byte[i];
             slice.position(s2 + 8);
             slice.get(bArr, 0, i);
-            return new fl(c7635a, s, bArr);
+            return new fl(aVar, s, bArr);
         } catch (Exception e) {
-            AbstractC7535b.m586a("read Blob err :" + e.getMessage());
+            com.xiaomi.channel.commonutils.logger.b.m586a("read Blob err :" + e.getMessage());
             throw new IOException("Malformed Input");
         }
     }
@@ -211,7 +210,7 @@ public class fl {
         if (this.f363a.e() == 0) {
             return fm.a(this, this.f367b);
         }
-        AbstractC7535b.m586a("unknow cipher = " + this.f363a.e());
+        com.xiaomi.channel.commonutils.logger.b.m586a("unknow cipher = " + this.f363a.e());
         return fm.a(this, this.f367b);
     }
 
@@ -257,7 +256,7 @@ public class fl {
             this.f363a.a(substring);
             this.f363a.b(substring2);
         } catch (Exception e) {
-            AbstractC7535b.m586a("Blob parse user err " + e.getMessage());
+            com.xiaomi.channel.commonutils.logger.b.m586a("Blob parse user err " + e.getMessage());
         }
     }
 

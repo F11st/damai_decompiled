@@ -8,7 +8,7 @@ import cn.damai.tetris.core.BaseNode;
 import cn.damai.tetris.core.NodeData;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import tb.C9039db;
+import tb.db;
 import tb.m61;
 
 /* compiled from: Taobao */
@@ -52,12 +52,12 @@ public class ProjectModel extends AbsModel implements ProjectContract.Model {
             return;
         }
         NodeData item = baseNode.getItem();
-        this.bean = (ProjectItemBean) m61.d(item.getJSONObject(C9039db.KEY_PROJECT), ProjectItemBean.class);
-        if (item.getJSONObject(C9039db.KEY_DAOJISHI) != null) {
-            this.daojishi = (Daojishi) m61.d(item.getJSONObject(C9039db.KEY_DAOJISHI), Daojishi.class);
+        this.bean = (ProjectItemBean) m61.d(item.getJSONObject(db.KEY_PROJECT), ProjectItemBean.class);
+        if (item.getJSONObject(db.KEY_DAOJISHI) != null) {
+            this.daojishi = (Daojishi) m61.d(item.getJSONObject(db.KEY_DAOJISHI), Daojishi.class);
         }
-        if (item.getBoolean(C9039db.KEY_SHOW_DIS) != null) {
-            this.showDis = item.getBoolean(C9039db.KEY_SHOW_DIS).booleanValue();
+        if (item.getBoolean(db.KEY_SHOW_DIS) != null) {
+            this.showDis = item.getBoolean(db.KEY_SHOW_DIS).booleanValue();
         }
         this.index = baseNode.getOffset();
     }

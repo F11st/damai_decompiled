@@ -29,13 +29,12 @@ public class ForwardCommentViewHolder extends FeedsWraperHolder {
     public TextView y;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.ForwardCommentViewHolder$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2774a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DynamicFeedData a;
 
-        View$OnClickListenerC2774a(DynamicFeedData dynamicFeedData) {
+        a(DynamicFeedData dynamicFeedData) {
             this.a = dynamicFeedData;
         }
 
@@ -53,13 +52,12 @@ public class ForwardCommentViewHolder extends FeedsWraperHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.ForwardCommentViewHolder$b */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2775b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DynamicFeedData a;
 
-        View$OnClickListenerC2775b(DynamicFeedData dynamicFeedData) {
+        b(DynamicFeedData dynamicFeedData) {
             this.a = dynamicFeedData;
         }
 

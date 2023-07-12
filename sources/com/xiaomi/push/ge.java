@@ -1,11 +1,10 @@
 package com.xiaomi.push;
 
-import com.xiaomi.push.service.C7764o;
 import com.xiaomi.push.service.XMPushService;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-class ge extends XMPushService.AbstractC7707j {
+class ge extends XMPushService.j {
     final /* synthetic */ long a;
 
     /* renamed from: a  reason: collision with other field name */
@@ -21,20 +20,20 @@ class ge extends XMPushService.AbstractC7707j {
         this.b = j2;
     }
 
-    @Override // com.xiaomi.push.service.XMPushService.AbstractC7707j
+    @Override // com.xiaomi.push.service.XMPushService.j
     /* renamed from: a */
     public String mo1157a() {
         return "check the ping-pong." + this.b;
     }
 
-    @Override // com.xiaomi.push.service.XMPushService.AbstractC7707j
+    @Override // com.xiaomi.push.service.XMPushService.j
     /* renamed from: a */
     public void mo878a() {
         Thread.yield();
         if (!this.f417a.m915c() || this.f417a.a(this.a)) {
             return;
         }
-        C7764o.a(this.f417a.b).m1224b();
+        com.xiaomi.push.service.o.a(this.f417a.b).m1224b();
         this.f417a.b.a(22, (Exception) null);
     }
 }

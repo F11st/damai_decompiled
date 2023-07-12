@@ -35,9 +35,9 @@ import tb.w92;
 
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
-public class SVGRequest extends AbstractC0818a<ImageData, l11> {
+public class SVGRequest extends cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.a<ImageData, l11> {
     private static transient /* synthetic */ IpChange $ipChange;
-    private List<WeakReference<C0816a>> b;
+    private List<WeakReference<a>> b;
     private jh1 c;
 
     /* compiled from: Taobao */
@@ -64,7 +64,7 @@ public class SVGRequest extends AbstractC0818a<ImageData, l11> {
             if (j52Var == null) {
                 return;
             }
-            SVGRequest.this.b.add(new WeakReference(new C0816a(new MtopBBCAreaInfoRequest(j52Var.g, j52Var.h, j52Var.d, cr.c()).request(new DMMtopResultRequestListener<RegionDataNew>(RegionDataNew.class) { // from class: cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.SVGRequest.DownLoadListener.1
+            SVGRequest.this.b.add(new WeakReference(new a(new MtopBBCAreaInfoRequest(j52Var.g, j52Var.h, j52Var.d, cr.c()).request(new DMMtopResultRequestListener<RegionDataNew>(RegionDataNew.class) { // from class: cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.SVGRequest.DownLoadListener.1
                 private static transient /* synthetic */ IpChange $ipChange;
 
                 @Override // cn.damai.common.net.mtop.netfit.DMMtopResultRequestListener
@@ -89,7 +89,7 @@ public class SVGRequest extends AbstractC0818a<ImageData, l11> {
                         String str = regionDataNew.seatQuYu.seatSvgImg;
                         Application a = mu0.a();
                         DownLoadListener downLoadListener = DownLoadListener.this;
-                        SVGRequest.this.b.add(new WeakReference(new C0816a(NetApi.a(a, str, new DownLoadListener(str, downLoadListener.a, null)))));
+                        SVGRequest.this.b.add(new WeakReference(new a(NetApi.a(a, str, new DownLoadListener(str, downLoadListener.a, null)))));
                     }
                 }
             }))));
@@ -101,7 +101,7 @@ public class SVGRequest extends AbstractC0818a<ImageData, l11> {
                 ipChange.ipc$dispatch("-1566514176", new Object[]{this, str, str2});
                 return;
             }
-            u01.C9751a a = u01.a(this.b.h);
+            u01.a a = u01.a(this.b.h);
             if (a != null) {
                 String str3 = a.c ? v92.SEAT_SVG_PAY_FIRST_PREFIX : v92.SEAT_SVG_NORMAL_PREFIX;
                 w92.d(str2, a.a + "", a.b + "", str3 + str);
@@ -109,13 +109,13 @@ public class SVGRequest extends AbstractC0818a<ImageData, l11> {
         }
 
         @NonNull
-        private C0817b f(@NonNull String str) {
+        private b f(@NonNull String str) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-484537193")) {
-                return (C0817b) ipChange.ipc$dispatch("-484537193", new Object[]{this, str});
+                return (b) ipChange.ipc$dispatch("-484537193", new Object[]{this, str});
             }
-            C0817b c0817b = new C0817b();
-            c0817b.a = false;
+            b bVar = new b();
+            bVar.a = false;
             if (this.b.b()) {
                 try {
                     j52 j52Var = this.b;
@@ -123,23 +123,23 @@ public class SVGRequest extends AbstractC0818a<ImageData, l11> {
                     if (SvgDecrypt.d(a, this.b.c)) {
                         String b = SvgDecrypt.b(str, a);
                         if (SvgDecrypt.d(b, this.b.e)) {
-                            c0817b.a = true;
-                            c0817b.b = b;
+                            bVar.a = true;
+                            bVar.b = b;
                         } else {
-                            c0817b.c = v92.SEAT_SVG_DECRYPT_MD5_DIFF_MSG;
+                            bVar.c = v92.SEAT_SVG_DECRYPT_MD5_DIFF_MSG;
                         }
                     } else {
-                        c0817b.c = v92.SEAT_SVG_DECRYPT_KEY_MD5_DIFF_MSG;
+                        bVar.c = v92.SEAT_SVG_DECRYPT_KEY_MD5_DIFF_MSG;
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
-                    c0817b.a = false;
-                    c0817b.c = e.getMessage();
+                    bVar.a = false;
+                    bVar.c = e.getMessage();
                 }
             } else {
-                c0817b.c = this.b.a();
+                bVar.c = this.b.a();
             }
-            return c0817b;
+            return bVar;
         }
 
         @Override // cn.damai.commonbusiness.seatbiz.seat.qilin.support.download.OnDownLoadListener
@@ -154,7 +154,7 @@ public class SVGRequest extends AbstractC0818a<ImageData, l11> {
                 SVGRequest.this.c.c(jh1.TYPE_SVG_DOWNLOAD, bArr.length);
                 j52 j52Var = this.b;
                 if (j52Var != null && j52Var.c()) {
-                    C0817b f = f(str);
+                    b f = f(str);
                     if (f.a) {
                         str = f.b;
                     } else {
@@ -218,9 +218,8 @@ public class SVGRequest extends AbstractC0818a<ImageData, l11> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.SVGRequest$b */
     /* loaded from: classes.dex */
-    public static class C0817b {
+    public static class b {
         public boolean a;
         public String b;
         public String c;
@@ -232,22 +231,22 @@ public class SVGRequest extends AbstractC0818a<ImageData, l11> {
         this.c = new jh1();
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.AbstractC0818a
+    @Override // cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.a
     protected void b() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-524108024")) {
             ipChange.ipc$dispatch("-524108024", new Object[]{this});
         } else if (!cb2.d(this.b)) {
-            for (WeakReference<C0816a> weakReference : this.b) {
-                C0816a c0816a = weakReference.get();
-                if (c0816a != null) {
-                    c0816a.a();
+            for (WeakReference<a> weakReference : this.b) {
+                a aVar = weakReference.get();
+                if (aVar != null) {
+                    aVar.a();
                 }
             }
         }
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.AbstractC0818a
+    @Override // cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.a
     public void d(@NonNull RequestListener<ImageData, l11> requestListener) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "294750038")) {
@@ -257,18 +256,17 @@ public class SVGRequest extends AbstractC0818a<ImageData, l11> {
         this.c.i();
         String d = this.a.d();
         l11 l11Var = (l11) this.a.a();
-        this.b.add(new WeakReference<>(new C0816a(NetApi.a(mu0.a(), d, new DownLoadListener(d, requestListener, l11Var.b() ? null : l11Var.a())))));
+        this.b.add(new WeakReference<>(new a(NetApi.a(mu0.a(), d, new DownLoadListener(d, requestListener, l11Var.b() ? null : l11Var.a())))));
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.SVGRequest$a */
     /* loaded from: classes.dex */
-    public static class C0816a {
+    public static class a {
         private static transient /* synthetic */ IpChange $ipChange;
         MtopBusiness a;
         Future b;
 
-        public C0816a(MtopBusiness mtopBusiness) {
+        public a(MtopBusiness mtopBusiness) {
             this.a = mtopBusiness;
         }
 
@@ -293,7 +291,7 @@ public class SVGRequest extends AbstractC0818a<ImageData, l11> {
             }
         }
 
-        public C0816a(Future future) {
+        public a(Future future) {
             this.b = future;
         }
     }

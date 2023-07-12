@@ -136,7 +136,7 @@ public class FloatingActionButton extends ImageButton {
             }
         }
 
-        /* synthetic */ AbsListViewScrollDetectorImpl(FloatingActionButton floatingActionButton, ViewTreeObserver$OnPreDrawListenerC2137a viewTreeObserver$OnPreDrawListenerC2137a) {
+        /* synthetic */ AbsListViewScrollDetectorImpl(FloatingActionButton floatingActionButton, a aVar) {
             this();
         }
     }
@@ -213,14 +213,13 @@ public class FloatingActionButton extends ImageButton {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.fab.FloatingActionButton$a */
     /* loaded from: classes16.dex */
-    public class ViewTreeObserver$OnPreDrawListenerC2137a implements ViewTreeObserver.OnPreDrawListener {
+    public class a implements ViewTreeObserver.OnPreDrawListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ boolean a;
         final /* synthetic */ boolean b;
 
-        ViewTreeObserver$OnPreDrawListenerC2137a(boolean z, boolean z2) {
+        a(boolean z, boolean z2) {
             this.a = z;
             this.b = z2;
         }
@@ -241,14 +240,13 @@ public class FloatingActionButton extends ImageButton {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.fab.FloatingActionButton$b */
     /* loaded from: classes8.dex */
-    public class C2138b extends AbstractC2139a {
+    public class b extends cn.damai.trade.fab.a {
         private static transient /* synthetic */ IpChange $ipChange;
         private ScrollDirectionListener c;
         private ObservableScrollView.OnScrollChangedListener d;
 
-        private C2138b() {
+        private b() {
         }
 
         /* JADX INFO: Access modifiers changed from: private */
@@ -261,7 +259,7 @@ public class FloatingActionButton extends ImageButton {
             }
         }
 
-        @Override // cn.damai.trade.fab.AbstractC2139a
+        @Override // cn.damai.trade.fab.a
         public void a() {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "2842036")) {
@@ -275,7 +273,7 @@ public class FloatingActionButton extends ImageButton {
             }
         }
 
-        @Override // cn.damai.trade.fab.AbstractC2139a
+        @Override // cn.damai.trade.fab.a
         public void b() {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "2031294811")) {
@@ -298,7 +296,7 @@ public class FloatingActionButton extends ImageButton {
             }
         }
 
-        @Override // cn.damai.trade.fab.AbstractC2139a, cn.damai.trade.fab.ObservableScrollView.OnScrollChangedListener
+        @Override // cn.damai.trade.fab.a, cn.damai.trade.fab.ObservableScrollView.OnScrollChangedListener
         public void onScrollChanged(ScrollView scrollView, int i, int i2, int i3, int i4) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1751926428")) {
@@ -312,7 +310,7 @@ public class FloatingActionButton extends ImageButton {
             super.onScrollChanged(scrollView, i, i2, i3, i4);
         }
 
-        /* synthetic */ C2138b(FloatingActionButton floatingActionButton, ViewTreeObserver$OnPreDrawListenerC2137a viewTreeObserver$OnPreDrawListenerC2137a) {
+        /* synthetic */ b(FloatingActionButton floatingActionButton, a aVar) {
             this();
         }
     }
@@ -480,7 +478,7 @@ public class FloatingActionButton extends ImageButton {
             if (height == 0 && !z3) {
                 ViewTreeObserver viewTreeObserver = getViewTreeObserver();
                 if (viewTreeObserver.isAlive()) {
-                    viewTreeObserver.addOnPreDrawListener(new ViewTreeObserver$OnPreDrawListenerC2137a(z, z2));
+                    viewTreeObserver.addOnPreDrawListener(new a(z, z2));
                     return;
                 }
             }
@@ -711,11 +709,11 @@ public class FloatingActionButton extends ImageButton {
             ipChange.ipc$dispatch("-977123336", new Object[]{this, observableScrollView, scrollDirectionListener, onScrollChangedListener});
             return;
         }
-        C2138b c2138b = new C2138b(this, null);
-        c2138b.f(scrollDirectionListener);
-        c2138b.e(onScrollChangedListener);
-        c2138b.c(this.mScrollThreshold);
-        observableScrollView.setOnScrollChangedListener(c2138b);
+        b bVar = new b(this, null);
+        bVar.f(scrollDirectionListener);
+        bVar.e(onScrollChangedListener);
+        bVar.c(this.mScrollThreshold);
+        observableScrollView.setOnScrollChangedListener(bVar);
     }
 
     public FloatingActionButton(Context context, AttributeSet attributeSet, int i) {

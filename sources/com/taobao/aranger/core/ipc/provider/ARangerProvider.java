@@ -21,7 +21,7 @@ import com.taobao.aranger.ARanger;
 import com.taobao.aranger.constant.Constants;
 import com.taobao.aranger.core.entity.Call;
 import com.taobao.aranger.core.entity.Reply;
-import com.taobao.aranger.core.handler.reply.C6691b;
+import com.taobao.aranger.core.handler.reply.b;
 import com.taobao.aranger.exception.IPCException;
 import com.taobao.aranger.intf.IRemoteService;
 import com.taobao.aranger.utils.IPCUtils;
@@ -256,7 +256,7 @@ public class ARangerProvider extends ContentProvider implements IRemoteService {
     @Override // com.taobao.aranger.intf.IRemoteService
     public Reply sendCall(Call call) {
         try {
-            return C6691b.a(call).handleReply();
+            return b.a(call).handleReply();
         } catch (Exception e) {
             z01.c(TAG, "[sendCall][handleReply]", e, new Object[0]);
             if (e instanceof IPCException) {

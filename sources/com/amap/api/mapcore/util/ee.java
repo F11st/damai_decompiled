@@ -8,21 +8,20 @@ import java.nio.ShortBuffer;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public class ee extends AbstractC4538ex<C4529a> {
-    private C4529a b;
+public class ee extends ex<a> {
+    private a b;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.ee$a */
     /* loaded from: classes10.dex */
-    public static final class C4529a extends ey<C4529a> {
+    public static final class a extends ey<a> {
         ByteBuffer a;
         ShortBuffer b;
         FloatBuffer c;
         IntBuffer d;
         int e;
 
-        C4529a() {
+        a() {
         }
 
         void a(int i) {
@@ -38,44 +37,44 @@ public class ee extends AbstractC4538ex<C4529a> {
     }
 
     /* JADX WARN: Type inference failed for: r1v0, types: [T extends com.amap.api.mapcore.util.ey<T>, T extends com.amap.api.mapcore.util.ey<?>] */
-    public C4529a a(int i) {
-        C4529a c4529a = (C4529a) this.a;
-        if (c4529a == null) {
-            c4529a = new C4529a();
+    public a a(int i) {
+        a aVar = (a) this.a;
+        if (aVar == null) {
+            aVar = new a();
         } else {
-            this.a = c4529a.f;
-            c4529a.f = null;
+            this.a = aVar.f;
+            aVar.f = null;
         }
-        if (c4529a.e < i) {
-            c4529a.a(i);
+        if (aVar.e < i) {
+            aVar.a(i);
         }
-        this.b = (C4529a) ey.a(this.b, c4529a);
-        return c4529a;
+        this.b = (a) ey.a(this.b, aVar);
+        return aVar;
     }
 
     public ShortBuffer b(int i) {
-        C4529a a = a(i * 2);
-        ShortBuffer shortBuffer = a.b;
+        a a2 = a(i * 2);
+        ShortBuffer shortBuffer = a2.b;
         if (shortBuffer == null) {
-            a.a.clear();
-            a.b = a.a.asShortBuffer();
+            a2.a.clear();
+            a2.b = a2.a.asShortBuffer();
         } else {
             shortBuffer.clear();
         }
-        return a.b;
+        return a2.b;
     }
 
     public FloatBuffer c(int i) {
-        C4529a a = a(i * 4);
-        FloatBuffer floatBuffer = a.c;
+        a a2 = a(i * 4);
+        FloatBuffer floatBuffer = a2.c;
         if (floatBuffer == null) {
-            a.a.clear();
-            a.c = a.a.asFloatBuffer();
+            a2.a.clear();
+            a2.c = a2.a.asFloatBuffer();
         } else {
             floatBuffer.clear();
         }
-        a.c.clear();
-        return a.c;
+        a2.c.clear();
+        return a2.c;
     }
 
     public void a() {

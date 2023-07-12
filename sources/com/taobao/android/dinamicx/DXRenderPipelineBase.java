@@ -7,7 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class DXRenderPipelineBase extends C6365b {
+public class DXRenderPipelineBase extends b {
     public static final int DXPIPELINE_STAGE_DIFF = 6;
     public static final int DXPIPELINE_STAGE_END = 8;
     public static final int DXPIPELINE_STAGE_FLATTEN = 5;
@@ -26,8 +26,8 @@ public class DXRenderPipelineBase extends C6365b {
     public @interface DXPipelineStage {
     }
 
-    public DXRenderPipelineBase(@NonNull C6367d c6367d) {
-        super(c6367d);
+    public DXRenderPipelineBase(@NonNull d dVar) {
+        super(dVar);
     }
 
     public int c(DXWidgetNode dXWidgetNode, int i) {
@@ -54,8 +54,8 @@ public class DXRenderPipelineBase extends C6365b {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public DXRenderPipelineBase(@NonNull C6367d c6367d, int i, String str) {
-        super(c6367d);
+    public DXRenderPipelineBase(@NonNull d dVar, int i, String str) {
+        super(dVar);
         this.d = str;
     }
 }

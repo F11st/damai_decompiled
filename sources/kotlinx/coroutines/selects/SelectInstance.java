@@ -30,5 +30,5 @@ public interface SelectInstance<R> {
     boolean trySelect();
 
     @Nullable
-    Object trySelectOther(@Nullable ma1.C9437d c9437d);
+    Object trySelectOther(@Nullable ma1.d dVar);
 }

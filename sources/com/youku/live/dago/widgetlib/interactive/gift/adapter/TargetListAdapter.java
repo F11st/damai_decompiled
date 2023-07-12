@@ -156,10 +156,10 @@ public class TargetListAdapter extends RecyclerView.Adapter<TargetItemHolder> im
             return;
         }
         if (i == this.mSelectedPosition) {
-            targetItemHolder.root.setBackgroundResource(R.C7941drawable.dago_pgc_ykl_target_item_bg_selected);
+            targetItemHolder.root.setBackgroundResource(R.drawable.dago_pgc_ykl_target_item_bg_selected);
             targetItemHolder.name.setTextColor(Color.parseColor("#f9f9f9"));
         } else {
-            targetItemHolder.root.setBackgroundResource(R.C7941drawable.dago_pgc_ykl_target_item_bg);
+            targetItemHolder.root.setBackgroundResource(R.drawable.dago_pgc_ykl_target_item_bg);
             targetItemHolder.name.setTextColor(Color.parseColor("#66f9f9f9"));
         }
         if (TextUtils.isEmpty(giftTargetInfoBean.icon)) {
@@ -174,7 +174,7 @@ public class TargetListAdapter extends RecyclerView.Adapter<TargetItemHolder> im
                 layoutParams2.leftMargin = DensityUtil.dip2px(this.mContext, 5.0f);
             }
             targetItemHolder.targetAvatar.setVisibility(0);
-            DagoImageLoader.getInstance().showCircle(this.mContext, giftTargetInfoBean.icon, targetItemHolder.targetAvatar, R.C7941drawable.dago_pgc_ykl_gift_board_bg);
+            DagoImageLoader.getInstance().showCircle(this.mContext, giftTargetInfoBean.icon, targetItemHolder.targetAvatar, R.drawable.dago_pgc_ykl_gift_board_bg);
         }
         targetItemHolder.name.setText(giftTargetInfoBean.name);
         targetItemHolder.root.setTag(Integer.valueOf(i));
@@ -184,7 +184,7 @@ public class TargetListAdapter extends RecyclerView.Adapter<TargetItemHolder> im
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public TargetItemHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-2042615560") ? (TargetItemHolder) ipChange.ipc$dispatch("-2042615560", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new TargetItemHolder(LayoutInflater.from(this.mContext).inflate(R.C7942layout.dago_pgc_ykl_target_item, viewGroup, false));
+        return AndroidInstantRuntime.support(ipChange, "-2042615560") ? (TargetItemHolder) ipChange.ipc$dispatch("-2042615560", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new TargetItemHolder(LayoutInflater.from(this.mContext).inflate(R.layout.dago_pgc_ykl_target_item, viewGroup, false));
     }
 
     public TargetListAdapter(Context context, List<GiftTargetInfoBean> list) {

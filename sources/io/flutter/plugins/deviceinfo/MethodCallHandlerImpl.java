@@ -5,7 +5,7 @@ import android.content.ContentResolver;
 import android.content.pm.FeatureInfo;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
 import com.alibaba.wireless.security.aopsdk.replace.android.provider.Settings;
 import com.alimm.xadsdk.request.builder.IRequestConst;
@@ -53,7 +53,7 @@ class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
                     String model = Build.getMODEL();
                     if (!model.contains("google_sdk") && !model.contains("Emulator") && !model.contains("Android SDK built for x86") && !Build.getMANUFACTURER().contains("Genymotion")) {
                         String product = Build.getPRODUCT();
-                        if (!product.contains("sdk_google") && !product.contains("google_sdk") && !product.contains(C3834a.C3835a.a) && !product.contains("sdk_x86") && !product.contains("vbox86p") && !product.contains("emulator") && !product.contains("simulator")) {
+                        if (!product.contains("sdk_google") && !product.contains("google_sdk") && !product.contains(a.C0166a.a) && !product.contains("sdk_x86") && !product.contains("vbox86p") && !product.contains("emulator") && !product.contains("simulator")) {
                             return false;
                         }
                     }

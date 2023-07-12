@@ -3,7 +3,7 @@ package com.youku.playerservice.axp.cache.task;
 import android.content.Context;
 import android.text.TextUtils;
 import com.alibaba.fastjson.JSON;
-import com.youku.a.C7792a;
+import com.youku.a.a;
 import com.youku.alixplayer.IAlixPlayer;
 import com.youku.android.liveservice.bean.BizType;
 import com.youku.android.liveservice.bean.LivePlayControl;
@@ -270,7 +270,7 @@ public class PlayerCacheTask extends CacheTask {
             iInternalCachePreloadCallback2.onResult(this.mKey, this.mPreloadParams, CachePreloadResult.AXPCachePreloadStatus.AXPCACHEPRELOADSTATUS_FAIL_NOPLAYID_PLAYER, null);
             return null;
         }
-        IAlixPlayer a = C7792a.a(this.mContext).a(str);
+        IAlixPlayer a = a.a(this.mContext).a(str);
         if (a != null && a.getCurrentState() != IAlixPlayer.State.STATE_IDLE && a.getCurrentState() != IAlixPlayer.State.STATE_RELEASED && a.getCurrentState() != IAlixPlayer.State.STATE_STOPPED && a.getCurrentState() != IAlixPlayer.State.STATE_ERROR && a.getCurrentState() != IAlixPlayer.State.STATE_SOURCE_FAILED && (iInternalCachePreloadCallback = this.mInternalCallback) != null) {
             iInternalCachePreloadCallback.onResult(this.mKey, this.mPreloadParams, CachePreloadResult.AXPCachePreloadStatus.AXPCACHEPRELOADSTATUS_FAIL_EXISTS_PLAYER, null);
             return null;

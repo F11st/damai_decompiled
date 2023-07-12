@@ -3,8 +3,8 @@ package cn.damai.evaluate.contract;
 import cn.damai.comment.bean.CommentPerformInfoBean;
 import cn.damai.comment.bean.CommentsResultBean;
 import cn.damai.comment.bean.EvaluateParams;
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseModel;
+import cn.damai.common.app.base.a;
 import cn.damai.commonbusiness.base.BaseDamaiView;
 import java.util.List;
 import tb.al;
@@ -20,7 +20,7 @@ public interface EvaluateListContract {
 
     /* compiled from: Taobao */
     /* loaded from: classes5.dex */
-    public static abstract class Presenter extends AbstractC0470a<View, Model> {
+    public static abstract class Presenter extends a<View, Model> {
         public abstract void create();
 
         public abstract void initExtras(EvaluateParams evaluateParams);

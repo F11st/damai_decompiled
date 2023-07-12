@@ -1,17 +1,17 @@
 package io.reactivex.internal.operators.single;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.Scheduler;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.disposables.SequentialDisposable;
 import java.util.concurrent.atomic.AtomicReference;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SingleSubscribeOn<T> extends AbstractC8152e<T> {
+public final class SingleSubscribeOn<T> extends e<T> {
     final Scheduler scheduler;
     final SingleSource<? extends T> source;
 
@@ -65,7 +65,7 @@ public final class SingleSubscribeOn<T> extends AbstractC8152e<T> {
         this.scheduler = scheduler;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super T> singleObserver) {
         SubscribeOnObserver subscribeOnObserver = new SubscribeOnObserver(singleObserver, this.source);
         singleObserver.onSubscribe(subscribeOnObserver);

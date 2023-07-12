@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8146a;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.CompletableObserver;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.a;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.fuseable.FuseToFlowable;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
@@ -13,8 +13,8 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableIgnoreElementsCompletable<T> extends AbstractC8146a implements FuseToFlowable<T> {
-    final AbstractC8147b<T> source;
+public final class FlowableIgnoreElementsCompletable<T> extends a implements FuseToFlowable<T> {
+    final b<T> source;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -63,16 +63,16 @@ public final class FlowableIgnoreElementsCompletable<T> extends AbstractC8146a i
         }
     }
 
-    public FlowableIgnoreElementsCompletable(AbstractC8147b<T> abstractC8147b) {
-        this.source = abstractC8147b;
+    public FlowableIgnoreElementsCompletable(b<T> bVar) {
+        this.source = bVar;
     }
 
     @Override // io.reactivex.internal.fuseable.FuseToFlowable
-    public AbstractC8147b<T> fuseToFlowable() {
+    public b<T> fuseToFlowable() {
         return i42.l(new FlowableIgnoreElements(this.source));
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     protected void subscribeActual(CompletableObserver completableObserver) {
         this.source.subscribe((FlowableSubscriber) new IgnoreElementsSubscriber(completableObserver));
     }

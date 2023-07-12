@@ -4,7 +4,7 @@ import android.graphics.Bitmap;
 import android.opengl.GLES20;
 import android.opengl.GLUtils;
 import android.util.Log;
-import com.amap.api.mapcore.util.C4505de;
+import com.amap.api.mapcore.util.de;
 import com.amap.api.maps.model.BitmapDescriptor;
 import com.youku.alixplayer.MsgID;
 import java.nio.ByteBuffer;
@@ -20,8 +20,8 @@ public class at {
     private BitmapDescriptor g;
     private FloatBuffer h;
     private ShortBuffer i;
-    private C4505de.C4506a k;
-    private C4505de l;
+    private de.a k;
+    private de l;
     private boolean e = false;
     private boolean f = false;
     private int j = 0;
@@ -97,15 +97,15 @@ public class at {
 
     private void f() {
         try {
-            C4505de c4505de = this.l;
-            if (c4505de != null) {
-                this.k = (C4505de.C4506a) c4505de.a(4);
+            de deVar = this.l;
+            if (deVar != null) {
+                this.k = (de.a) deVar.a(4);
             }
         } catch (Throwable unused) {
             a = 1;
-            C4505de c4505de2 = this.l;
-            if (c4505de2 != null) {
-                this.k = (C4505de.C4506a) c4505de2.a(4);
+            de deVar2 = this.l;
+            if (deVar2 != null) {
+                this.k = (de.a) deVar2.a(4);
             }
         }
     }
@@ -189,8 +189,8 @@ public class at {
         if (this.j == 0) {
             return;
         }
-        C4505de.C4506a c4506a = this.k;
-        if (c4506a == null || c4506a.c()) {
+        de.a aVar = this.k;
+        if (aVar == null || aVar.c()) {
             f();
         }
         e();
@@ -219,8 +219,8 @@ public class at {
         GLES20.glUseProgram(0);
     }
 
-    public void a(C4505de c4505de) {
-        this.l = c4505de;
+    public void a(de deVar) {
+        this.l = deVar;
     }
 
     public static synchronized void a(String str) {

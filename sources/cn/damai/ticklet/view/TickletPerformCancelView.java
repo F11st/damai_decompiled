@@ -13,14 +13,14 @@ import android.widget.TextView;
 import androidx.annotation.RequiresApi;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.member.R$drawable;
 import cn.damai.member.R$id;
 import cn.damai.member.R$layout;
 import cn.damai.member.R$string;
 import cn.damai.ticklet.inteface.TickletPerformCallBack;
 import cn.damai.uikit.iconfont.DMIconFontTextView;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
@@ -45,12 +45,11 @@ public class TickletPerformCancelView extends LinearLayout {
     String transferBackUrl;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletPerformCancelView$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2110a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2110a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -60,7 +59,7 @@ public class TickletPerformCancelView extends LinearLayout {
                 ipChange.ipc$dispatch("-1333330445", new Object[]{this, view});
                 return;
             }
-            C0529c e = C0529c.e();
+            c e = c.e();
             un2 k = un2.k();
             TickletPerformCancelView tickletPerformCancelView = TickletPerformCancelView.this;
             e.x(k.o(un2.TICKLET_DETAIL_PAGE, tickletPerformCancelView.performId, tickletPerformCancelView.projectId, "trans_refund_manage", "open", false));
@@ -79,12 +78,11 @@ public class TickletPerformCancelView extends LinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletPerformCancelView$b */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2111b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2111b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -94,14 +92,14 @@ public class TickletPerformCancelView extends LinearLayout {
                 ipChange.ipc$dispatch("777959924", new Object[]{this, view});
             } else if (TextUtils.isEmpty(TickletPerformCancelView.this.transferBackUrl)) {
             } else {
-                C0529c e = C0529c.e();
+                c e = c.e();
                 un2 k = un2.k();
                 TickletPerformCancelView tickletPerformCancelView = TickletPerformCancelView.this;
                 e.x(k.o(un2.TICKLET_DETAIL_PAGE, tickletPerformCancelView.performId, tickletPerformCancelView.projectId, "trans_refund_manage", "details", true));
                 TickletPerformCancelView.this.close();
                 Bundle bundle = new Bundle();
                 bundle.putString("url", TickletPerformCancelView.this.transferBackUrl);
-                DMNav.from(TickletPerformCancelView.this.context).withExtras(bundle).forResult(1001).toUri(NavUri.b(C3834a.C3837c.d));
+                DMNav.from(TickletPerformCancelView.this.context).withExtras(bundle).forResult(1001).toUri(NavUri.b(a.c.d));
             }
         }
     }
@@ -140,8 +138,8 @@ public class TickletPerformCancelView extends LinearLayout {
         this.ticklet_perform_tip = (TextView) this.partent.findViewById(R$id.ticklet_perform_tip);
         this.action = (TextView) this.partent.findViewById(R$id.ticklet_perform_action);
         ns.b(this.ticklet_perform_head, Color.parseColor("#00000000"), t60.a(this.context, 4.0f), Color.parseColor("#1A000000"), t60.a(this.context, 15.0f), 0, t60.a(this.context, 15.0f));
-        this.ticklet_perform_arrow.setOnClickListener(new View$OnClickListenerC2110a());
-        this.action.setOnClickListener(new View$OnClickListenerC2111b());
+        this.ticklet_perform_arrow.setOnClickListener(new a());
+        this.action.setOnClickListener(new b());
         setOnClickListener(null);
     }
 
@@ -170,7 +168,7 @@ public class TickletPerformCancelView extends LinearLayout {
             HashMap hashMap = new HashMap();
             hashMap.put("item_id", str4);
             hashMap.put("screening_id", str3);
-            C0529c.e().G(this.action, "details", "trans_refund_manage", un2.TICKLET_DETAIL_PAGE, hashMap);
+            c.e().G(this.action, "details", "trans_refund_manage", un2.TICKLET_DETAIL_PAGE, hashMap);
         }
     }
 

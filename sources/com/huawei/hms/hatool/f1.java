@@ -5,10 +5,10 @@ import org.json.JSONObject;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public class f1 extends AbstractC5636o {
+public class f1 extends o {
     public String g = "";
 
-    @Override // com.huawei.hms.hatool.InterfaceC5646s
+    @Override // com.huawei.hms.hatool.s
     public JSONObject a() {
         JSONObject jSONObject = new JSONObject();
         jSONObject.put(IRequestConst.PROTOCOL_VERSION, "1");

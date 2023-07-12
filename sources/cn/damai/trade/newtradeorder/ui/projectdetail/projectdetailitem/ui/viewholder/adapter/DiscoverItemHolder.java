@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.trade.R$drawable;
 import cn.damai.trade.R$id;
 import cn.damai.trade.R$layout;
@@ -60,7 +60,7 @@ public class DiscoverItemHolder extends RecyclerView.ViewHolder {
         ImageView imageView = this.c;
         int i3 = R$drawable.uikit_default_image_bg_grey;
         imageView.setImageResource(i3);
-        C0504a.b().e(inFieldCommentsBean.picUrl).c(i3).g(this.c);
+        a.b().e(inFieldCommentsBean.picUrl).c(i3).g(this.c);
         if (inFieldCommentsBean.isTypeGROUP()) {
             this.h.setVisibility(8);
             this.g.setText("攻略中提到了本演出");
@@ -70,7 +70,7 @@ public class DiscoverItemHolder extends RecyclerView.ViewHolder {
             ImageView imageView2 = this.f;
             int i4 = R$drawable.uikit_user_default_icon_trans_white;
             imageView2.setImageResource(i4);
-            C0504a.b().e(inFieldCommentsBean.userPic).c(i4).g(this.f);
+            a.b().e(inFieldCommentsBean.userPic).c(i4).g(this.f);
             this.g.setText(inFieldCommentsBean.nickName);
             if (!TextUtils.isEmpty(inFieldCommentsBean.showVideoIcon) && inFieldCommentsBean.showVideoIcon.equals("true")) {
                 this.d.setVisibility(0);

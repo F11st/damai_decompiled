@@ -11,7 +11,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.discover.bean.CircleCard;
@@ -48,7 +48,7 @@ public class CircleGroupViewHolder extends BaseViewHolder<CircleCard> implements
         }
         ArrayList arrayList = new ArrayList();
         for (String str : list) {
-            arrayList.add(new AvatarRecyclerView.C2566b(str));
+            arrayList.add(new AvatarRecyclerView.b(str));
             i2++;
             if (i2 >= i) {
                 break;
@@ -97,12 +97,12 @@ public class CircleGroupViewHolder extends BaseViewHolder<CircleCard> implements
                     int a2 = i2 == 0 ? t60.a(this.itemView.getContext(), 9.0f) : 0;
                     int i3 = R$id.circle_card_img_item_img;
                     ((FrameLayout.LayoutParams) inflate.findViewById(i3).getLayoutParams()).setMargins(a2, 0, a, 0);
-                    C0504a.b().c(str).g((ImageView) inflate.findViewById(i3));
+                    a.b().c(str).g((ImageView) inflate.findViewById(i3));
                     i2++;
                 }
             }
             if (!TextUtils.isEmpty(circleCard.backgroundImg)) {
-                C0504a.b().c(circleCard.backgroundImg).g((ImageView) this.itemView.findViewById(R$id.homepage_waterflow_coupon_image));
+                a.b().c(circleCard.backgroundImg).g((ImageView) this.itemView.findViewById(R$id.homepage_waterflow_coupon_image));
             }
             OnItemClickListener<CircleCard> onItemClickListener = this.a;
             if (onItemClickListener == null || (circleCard2 = this.b) == null) {

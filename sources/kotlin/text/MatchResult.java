@@ -11,23 +11,21 @@ import tb.n31;
 public interface MatchResult {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.text.MatchResult$a */
     /* loaded from: classes3.dex */
-    public static final class C8583a {
+    public static final class a {
         @NotNull
-        public static C8584b a(@NotNull MatchResult matchResult) {
-            return new C8584b(matchResult);
+        public static b a(@NotNull MatchResult matchResult) {
+            return new b(matchResult);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.text.MatchResult$b */
     /* loaded from: classes3.dex */
-    public static final class C8584b {
+    public static final class b {
         @NotNull
         private final MatchResult a;
 
-        public C8584b(@NotNull MatchResult matchResult) {
+        public b(@NotNull MatchResult matchResult) {
             b41.i(matchResult, "match");
             this.a = matchResult;
         }
@@ -39,7 +37,7 @@ public interface MatchResult {
     }
 
     @NotNull
-    C8584b getDestructured();
+    b getDestructured();
 
     @NotNull
     List<String> getGroupValues();

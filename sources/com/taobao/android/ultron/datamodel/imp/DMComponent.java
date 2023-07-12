@@ -5,7 +5,6 @@ import androidx.collection.ArrayMap;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.alipay.sdk.m.l.C4232c;
 import com.taobao.android.ultron.common.model.IDMComponent;
 import com.taobao.android.ultron.common.model.IDMEvent;
 import com.taobao.android.ultron.common.model.LinkageType;
@@ -311,7 +310,7 @@ public class DMComponent implements IDMComponent, Serializable, Cloneable {
         }
         xw2 xw2Var = new xw2();
         JSONObject jSONObject2 = this.mData;
-        if (jSONObject2 == null || (jSONObject = jSONObject2.getJSONObject(C4232c.j)) == null) {
+        if (jSONObject2 == null || (jSONObject = jSONObject2.getJSONObject(com.alipay.sdk.m.l.c.j)) == null) {
             return xw2Var;
         }
         JSONArray jSONArray = jSONObject.getJSONArray("fields");

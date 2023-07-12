@@ -15,18 +15,17 @@ import org.jetbrains.annotations.Nullable;
 public final class vs extends UTPlugin {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C9827a Companion = new C9827a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.vs$a */
     /* loaded from: classes4.dex */
-    public static final class C9827a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9827a() {
+        private a() {
         }
 
-        public /* synthetic */ C9827a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -104,7 +103,7 @@ public final class vs extends UTPlugin {
         L59:
             java.lang.String r1 = "市"
             r2 = 0
-            boolean r1 = kotlin.text.C8596g.p(r9, r1, r6, r4, r2)     // Catch: java.lang.Exception -> L85
+            boolean r1 = kotlin.text.g.p(r9, r1, r6, r4, r2)     // Catch: java.lang.Exception -> L85
             if (r1 == 0) goto L89
             int r1 = r9.length()     // Catch: java.lang.Exception -> L85
             if (r1 <= r5) goto L89

@@ -1,8 +1,6 @@
 package tb;
 
 import java.util.List;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8214m;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$VersionRequirement;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$VersionRequirementTable;
 import org.jetbrains.annotations.NotNull;
@@ -12,20 +10,19 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public final class ix2 {
     @NotNull
-    public static final C9291a Companion = new C9291a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final ix2 b;
     @NotNull
     private final List<ProtoBuf$VersionRequirement> a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ix2$a */
     /* loaded from: classes3.dex */
-    public static final class C9291a {
-        private C9291a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9291a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -48,7 +45,7 @@ public final class ix2 {
 
     static {
         List g;
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         b = new ix2(g);
     }
 
@@ -62,6 +59,6 @@ public final class ix2 {
 
     @Nullable
     public final ProtoBuf$VersionRequirement b(int i) {
-        return (ProtoBuf$VersionRequirement) C8212k.S(this.a, i);
+        return (ProtoBuf$VersionRequirement) kotlin.collections.k.S(this.a, i);
     }
 }

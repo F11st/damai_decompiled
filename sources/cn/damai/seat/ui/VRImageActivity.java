@@ -9,10 +9,8 @@ import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.blur.ImageBlurHelper;
-import cn.damai.common.util.toastutil.C0537a;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.seatbiz.seat.common.bean.region.RegionSeat3DVrInfo;
 import cn.damai.commonbusiness.seatbiz.seat.qilin.bean.ImageData;
@@ -66,12 +64,11 @@ public class VRImageActivity extends DamaiBaseActivity {
     private long mXorPerformId;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.VRImageActivity$a */
     /* loaded from: classes7.dex */
-    public class C1715a extends VrPanoramaEventListener {
+    public class a extends VrPanoramaEventListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1715a() {
+        a() {
         }
 
         @Override // com.google.vr.sdk.widgets.common.VrEventListener
@@ -119,41 +116,39 @@ public class VRImageActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.VRImageActivity$b */
     /* loaded from: classes7.dex */
-    public class C1716b implements DMImageCreator.DMImageFailListener {
+    public class b implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1716b(VRImageActivity vRImageActivity) {
+        b(VRImageActivity vRImageActivity) {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1072294328")) {
-                ipChange.ipc$dispatch("-1072294328", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-1072294328", new Object[]{this, dVar});
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.VRImageActivity$c */
     /* loaded from: classes7.dex */
-    public class C1717c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C1717c(String str) {
+        c(String str) {
             this.a = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1852689955")) {
-                ipChange.ipc$dispatch("-1852689955", new Object[]{this, c0502e});
-            } else if (c0502e == null || (bitmap = c0502e.b) == null) {
+                ipChange.ipc$dispatch("-1852689955", new Object[]{this, eVar});
+            } else if (eVar == null || (bitmap = eVar.b) == null) {
             } else {
                 VRImageActivity.this.mPreloadView.setImageBitmap(ImageBlurHelper.f(VRImageActivity.this, this.a, bitmap, 10));
             }
@@ -161,13 +156,12 @@ public class VRImageActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.VRImageActivity$d */
     /* loaded from: classes7.dex */
-    public class C1718d implements RequestListener<ImageData, j82> {
+    public class d implements RequestListener<ImageData, j82> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C1718d(String str) {
+        d(String str) {
             this.a = str;
         }
 
@@ -196,21 +190,20 @@ public class VRImageActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.VRImageActivity$e */
     /* loaded from: classes7.dex */
-    public class C1719e implements DMImageCreator.DMImageFailListener {
+    public class e implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C1719e(String str) {
+        e(String str) {
             this.a = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-277415989")) {
-                ipChange.ipc$dispatch("-277415989", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-277415989", new Object[]{this, dVar});
             } else {
                 VRImageActivity.this.showError(this.a);
             }
@@ -218,23 +211,22 @@ public class VRImageActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.VRImageActivity$f */
     /* loaded from: classes7.dex */
-    public class C1720f implements DMImageCreator.DMImageSuccListener {
+    public class f implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C1720f(String str) {
+        f(String str) {
             this.a = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "618046752")) {
-                ipChange.ipc$dispatch("618046752", new Object[]{this, c0502e});
-            } else if (c0502e == null || (bitmap = c0502e.b) == null) {
+                ipChange.ipc$dispatch("618046752", new Object[]{this, eVar});
+            } else if (eVar == null || (bitmap = eVar.b) == null) {
                 VRImageActivity.this.showError(this.a);
             } else {
                 VRImageActivity.this.mVRView.loadImageFromBitmap(bitmap, VRImageActivity.this.mVRViewOptions);
@@ -243,12 +235,11 @@ public class VRImageActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.VRImageActivity$g */
     /* loaded from: classes16.dex */
-    public class C1721g implements ValueAnimator.AnimatorUpdateListener {
+    public class g implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1721g() {
+        g() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -274,7 +265,7 @@ public class VRImageActivity extends DamaiBaseActivity {
         ValueAnimator ofFloat = ValueAnimator.ofFloat(1.0f, 0.0f);
         ofFloat.setDuration(600L);
         ofFloat.setInterpolator(new DecelerateInterpolator());
-        ofFloat.addUpdateListener(new C1721g());
+        ofFloat.addUpdateListener(new g());
         ofFloat.start();
     }
 
@@ -314,7 +305,7 @@ public class VRImageActivity extends DamaiBaseActivity {
         this.mVRView.setInfoButtonEnabled(false);
         this.mVRView.setStereoModeButtonEnabled(false);
         this.mVRView.setFullscreenButtonEnabled(false);
-        this.mVRView.setEventListener((VrPanoramaEventListener) new C1715a());
+        this.mVRView.setEventListener((VrPanoramaEventListener) new a());
         VrPanoramaView.Options options = new VrPanoramaView.Options();
         this.mVRViewOptions = options;
         options.inputType = 1;
@@ -326,14 +317,14 @@ public class VRImageActivity extends DamaiBaseActivity {
             ipChange.ipc$dispatch("297604877", new Object[]{this, str});
         } else if (!TextUtils.isEmpty(str) && this.mVRView != null) {
             if (u92.b().d()) {
-                k82.r().h(n82.g(true, this.mXorPerformId, this.mCityId, this.mSeatId, this.mFloorId, str, this.mVrImggeHash, this.mRegionSeat3DVrInfo, true), new C1718d(str));
+                k82.r().h(n82.g(true, this.mXorPerformId, this.mCityId, this.mSeatId, this.mFloorId, str, this.mVrImggeHash, this.mRegionSeat3DVrInfo, true), new d(str));
                 return;
             }
-            DMImageCreator c = C0504a.b().c(str);
+            DMImageCreator c2 = cn.damai.common.image.a.b().c(str);
             int i = R$drawable.bg_border_corner_6_solid_f5f5f5;
-            c.i(i).c(i).n(new C1720f(str)).e(new C1719e(str)).f();
+            c2.i(i).c(i).n(new f(str)).e(new e(str)).f();
         } else {
-            C0537a.i(this, "VR 参数异常");
+            cn.damai.common.util.toastutil.a.i(this, "VR 参数异常");
         }
     }
 
@@ -343,9 +334,9 @@ public class VRImageActivity extends DamaiBaseActivity {
             ipChange.ipc$dispatch("-691769782", new Object[]{this, str});
             return;
         }
-        DMImageCreator c = C0504a.b().c(str);
+        DMImageCreator c2 = cn.damai.common.image.a.b().c(str);
         int i = R$drawable.bg_border_corner_6_solid_f5f5f5;
-        c.i(i).c(i).n(new C1717c(str)).e(new C1716b(this)).f();
+        c2.i(i).c(i).n(new c(str)).e(new b(this)).f();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -412,7 +403,7 @@ public class VRImageActivity extends DamaiBaseActivity {
         try {
             initVRView();
         } catch (Throwable th) {
-            C0537a.i(this, "VR系统参数异常");
+            cn.damai.common.util.toastutil.a.i(this, "VR系统参数异常");
             th.printStackTrace();
         }
         Intent intent = getIntent();
@@ -430,7 +421,7 @@ public class VRImageActivity extends DamaiBaseActivity {
             load360Image(this.mVrImageUrl);
         } catch (Throwable th2) {
             th2.printStackTrace();
-            C0537a.i(this, "VR系统参数异常");
+            cn.damai.common.util.toastutil.a.i(this, "VR系统参数异常");
         }
     }
 

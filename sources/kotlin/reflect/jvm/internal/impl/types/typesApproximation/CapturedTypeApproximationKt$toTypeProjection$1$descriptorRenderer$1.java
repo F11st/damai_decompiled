@@ -26,6 +26,6 @@ final class CapturedTypeApproximationKt$toTypeProjection$1$descriptorRenderer$1 
     /* renamed from: invoke  reason: avoid collision after fix types in other method */
     public final void invoke2(@NotNull DescriptorRendererOptions descriptorRendererOptions) {
         b41.i(descriptorRendererOptions, "$this$withOptions");
-        descriptorRendererOptions.setClassifierNamePolicy(ClassifierNamePolicy.C8471a.INSTANCE);
+        descriptorRendererOptions.setClassifierNamePolicy(ClassifierNamePolicy.a.INSTANCE);
     }
 }

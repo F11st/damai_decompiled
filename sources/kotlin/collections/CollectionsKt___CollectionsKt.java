@@ -18,7 +18,6 @@ import kotlin.SinceKotlin;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.sequences.Sequence;
-import kotlin.text.C8597h;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -29,15 +28,14 @@ import tb.ty1;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public class CollectionsKt___CollectionsKt extends C8222t {
+public class CollectionsKt___CollectionsKt extends t {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.collections.CollectionsKt___CollectionsKt$a */
     /* loaded from: classes3.dex */
-    public static final class C8182a<T> implements Sequence<T> {
+    public static final class a<T> implements Sequence<T> {
         final /* synthetic */ Iterable a;
 
-        public C8182a(Iterable iterable) {
+        public a(Iterable iterable) {
             this.a = iterable;
         }
 
@@ -59,17 +57,17 @@ public class CollectionsKt___CollectionsKt extends C8222t {
             Collection collection = (Collection) iterable;
             int size = collection.size();
             if (size == 0) {
-                g = C8214m.g();
+                g = m.g();
                 return g;
             } else if (size != 1) {
                 C0 = C0(collection);
                 return C0;
             } else {
-                e = C8213l.e(iterable instanceof List ? ((List) iterable).get(0) : iterable.iterator().next());
+                e = l.e(iterable instanceof List ? ((List) iterable).get(0) : iterable.iterator().next());
                 return e;
             }
         }
-        n = C8214m.n(B0(iterable));
+        n = m.n(B0(iterable));
         return n;
     }
 
@@ -106,17 +104,17 @@ public class CollectionsKt___CollectionsKt extends C8222t {
             Collection collection = (Collection) iterable;
             int size = collection.size();
             if (size == 0) {
-                d = C8203e0.d();
+                d = e0.d();
                 return d;
             } else if (size != 1) {
-                e = C8225w.e(collection.size());
+                e = w.e(collection.size());
                 return (Set) x0(iterable, new LinkedHashSet(e));
             } else {
-                c = C8201d0.c(iterable instanceof List ? ((List) iterable).get(0) : iterable.iterator().next());
+                c = d0.c(iterable instanceof List ? ((List) iterable).get(0) : iterable.iterator().next());
                 return c;
             }
         }
-        return C8203e0.f((Set) x0(iterable, new LinkedHashSet()));
+        return e0.f((Set) x0(iterable, new LinkedHashSet()));
     }
 
     @NotNull
@@ -125,7 +123,7 @@ public class CollectionsKt___CollectionsKt extends C8222t {
         b41.i(iterable, "<this>");
         b41.i(iterable2, "other");
         D0 = D0(iterable);
-        C8220r.v(D0, iterable2);
+        r.v(D0, iterable2);
         return D0;
     }
 
@@ -171,8 +169,8 @@ public class CollectionsKt___CollectionsKt extends C8222t {
         b41.i(iterable2, "other");
         Iterator<? extends T> it = iterable.iterator();
         Iterator<? extends R> it2 = iterable2.iterator();
-        q = C8215n.q(iterable, 10);
-        q2 = C8215n.q(iterable2, 10);
+        q = n.q(iterable, 10);
+        q2 = n.q(iterable2, 10);
         ArrayList arrayList = new ArrayList(Math.min(q, q2));
         while (it.hasNext() && it2.hasNext()) {
             arrayList.add(hq2.a(it.next(), it2.next()));
@@ -183,7 +181,7 @@ public class CollectionsKt___CollectionsKt extends C8222t {
     @NotNull
     public static <T> Sequence<T> I(@NotNull Iterable<? extends T> iterable) {
         b41.i(iterable, "<this>");
-        return new C8182a(iterable);
+        return new a(iterable);
     }
 
     public static <T> boolean J(@NotNull Iterable<? extends T> iterable, T t) {
@@ -223,10 +221,10 @@ public class CollectionsKt___CollectionsKt extends C8222t {
                 Collection collection = (Collection) iterable;
                 int size = collection.size() - i;
                 if (size <= 0) {
-                    g = C8214m.g();
+                    g = m.g();
                     return g;
                 } else if (size == 1) {
-                    e = C8213l.e(C8212k.a0(iterable));
+                    e = l.e(k.a0(iterable));
                     return e;
                 } else {
                     arrayList = new ArrayList(size);
@@ -256,19 +254,19 @@ public class CollectionsKt___CollectionsKt extends C8222t {
                     i2++;
                 }
             }
-            n = C8214m.n(arrayList);
+            n = m.n(arrayList);
             return n;
         }
     }
 
     @NotNull
     public static <T> List<T> M(@NotNull List<? extends T> list, int i) {
-        int a;
+        int a2;
         List<T> v0;
         b41.i(list, "<this>");
         if (i >= 0) {
-            a = ty1.a(list.size() - i, 0);
-            v0 = v0(list, a);
+            a2 = ty1.a(list.size() - i, 0);
+            v0 = v0(list, a2);
             return v0;
         }
         throw new IllegalArgumentException(("Requested element count " + i + " is less than zero.").toString());
@@ -292,7 +290,7 @@ public class CollectionsKt___CollectionsKt extends C8222t {
     public static <T> T O(@NotNull Iterable<? extends T> iterable) {
         b41.i(iterable, "<this>");
         if (iterable instanceof List) {
-            return (T) C8212k.P((List) iterable);
+            return (T) k.P((List) iterable);
         }
         Iterator<? extends T> it = iterable.iterator();
         if (it.hasNext()) {
@@ -340,7 +338,7 @@ public class CollectionsKt___CollectionsKt extends C8222t {
         int i2;
         b41.i(list, "<this>");
         if (i >= 0) {
-            i2 = C8214m.i(list);
+            i2 = m.i(list);
             if (i <= i2) {
                 return list.get(i);
             }
@@ -356,7 +354,7 @@ public class CollectionsKt___CollectionsKt extends C8222t {
         int i = 0;
         for (T t2 : iterable) {
             if (i < 0) {
-                C8214m.p();
+                m.p();
             }
             if (b41.d(t, t2)) {
                 return i;
@@ -377,35 +375,35 @@ public class CollectionsKt___CollectionsKt extends C8222t {
         b41.i(iterable, "<this>");
         b41.i(iterable2, "other");
         D0 = D0(iterable);
-        C8220r.A(D0, iterable2);
+        r.A(D0, iterable2);
         return D0;
     }
 
     @NotNull
-    public static final <T, A extends Appendable> A W(@NotNull Iterable<? extends T> iterable, @NotNull A a, @NotNull CharSequence charSequence, @NotNull CharSequence charSequence2, @NotNull CharSequence charSequence3, int i, @NotNull CharSequence charSequence4, @Nullable Function1<? super T, ? extends CharSequence> function1) {
+    public static final <T, A extends Appendable> A W(@NotNull Iterable<? extends T> iterable, @NotNull A a2, @NotNull CharSequence charSequence, @NotNull CharSequence charSequence2, @NotNull CharSequence charSequence3, int i, @NotNull CharSequence charSequence4, @Nullable Function1<? super T, ? extends CharSequence> function1) {
         b41.i(iterable, "<this>");
-        b41.i(a, "buffer");
+        b41.i(a2, "buffer");
         b41.i(charSequence, "separator");
         b41.i(charSequence2, Constants.Name.PREFIX);
         b41.i(charSequence3, "postfix");
         b41.i(charSequence4, "truncated");
-        a.append(charSequence2);
+        a2.append(charSequence2);
         int i2 = 0;
         for (T t : iterable) {
             i2++;
             if (i2 > 1) {
-                a.append(charSequence);
+                a2.append(charSequence);
             }
             if (i >= 0 && i2 > i) {
                 break;
             }
-            C8597h.a(a, t, function1);
+            kotlin.text.h.a(a2, t, function1);
         }
         if (i >= 0 && i2 > i) {
-            a.append(charSequence4);
+            a2.append(charSequence4);
         }
-        a.append(charSequence3);
-        return a;
+        a2.append(charSequence3);
+        return a2;
     }
 
     public static /* synthetic */ Appendable X(Iterable iterable, Appendable appendable, CharSequence charSequence, CharSequence charSequence2, CharSequence charSequence3, int i, CharSequence charSequence4, Function1 function1, int i2, Object obj) {
@@ -446,7 +444,7 @@ public class CollectionsKt___CollectionsKt extends C8222t {
     public static <T> T a0(@NotNull Iterable<? extends T> iterable) {
         b41.i(iterable, "<this>");
         if (iterable instanceof List) {
-            return (T) C8212k.b0((List) iterable);
+            return (T) k.b0((List) iterable);
         }
         Iterator<? extends T> it = iterable.iterator();
         if (it.hasNext()) {
@@ -463,7 +461,7 @@ public class CollectionsKt___CollectionsKt extends C8222t {
         int i;
         b41.i(list, "<this>");
         if (!list.isEmpty()) {
-            i = C8214m.i(list);
+            i = m.i(list);
             return list.get(i);
         }
         throw new NoSuchElementException("List is empty.");
@@ -504,7 +502,7 @@ public class CollectionsKt___CollectionsKt extends C8222t {
         int q;
         b41.i(iterable, "<this>");
         b41.i(function1, "transform");
-        q = C8215n.q(iterable, 10);
+        q = n.q(iterable, 10);
         ArrayList arrayList = new ArrayList(q);
         Iterator<? extends T> it = iterable.iterator();
         while (it.hasNext()) {
@@ -593,7 +591,7 @@ public class CollectionsKt___CollectionsKt extends C8222t {
     public static <T> List<T> j0(@NotNull Iterable<? extends T> iterable, T t) {
         int q;
         b41.i(iterable, "<this>");
-        q = C8215n.q(iterable, 10);
+        q = n.q(iterable, 10);
         ArrayList arrayList = new ArrayList(q);
         boolean z = false;
         for (T t2 : iterable) {
@@ -619,8 +617,8 @@ public class CollectionsKt___CollectionsKt extends C8222t {
             return m0;
         }
         ArrayList arrayList = new ArrayList();
-        C8220r.v(arrayList, iterable);
-        C8220r.v(arrayList, iterable2);
+        r.v(arrayList, iterable);
+        r.v(arrayList, iterable2);
         return arrayList;
     }
 
@@ -633,7 +631,7 @@ public class CollectionsKt___CollectionsKt extends C8222t {
             return n0;
         }
         ArrayList arrayList = new ArrayList();
-        C8220r.v(arrayList, iterable);
+        r.v(arrayList, iterable);
         arrayList.add(t);
         return arrayList;
     }
@@ -650,7 +648,7 @@ public class CollectionsKt___CollectionsKt extends C8222t {
             return arrayList;
         }
         ArrayList arrayList2 = new ArrayList(collection);
-        C8220r.v(arrayList2, iterable);
+        r.v(arrayList2, iterable);
         return arrayList2;
     }
 
@@ -672,14 +670,14 @@ public class CollectionsKt___CollectionsKt extends C8222t {
             return A0;
         }
         List<T> B0 = B0(iterable);
-        C8222t.G(B0);
+        t.G(B0);
         return B0;
     }
 
     public static <T> T p0(@NotNull Iterable<? extends T> iterable) {
         b41.i(iterable, "<this>");
         if (iterable instanceof List) {
-            return (T) C8212k.q0((List) iterable);
+            return (T) k.q0((List) iterable);
         }
         Iterator<? extends T> it = iterable.iterator();
         if (it.hasNext()) {
@@ -749,12 +747,12 @@ public class CollectionsKt___CollectionsKt extends C8222t {
             b41.g(array, "null cannot be cast to non-null type kotlin.Array<T of kotlin.collections.ArraysKt__ArraysJVMKt.toTypedArray>");
             b41.g(array, "null cannot be cast to non-null type kotlin.Array<T of kotlin.collections.CollectionsKt___CollectionsKt.sorted>");
             Comparable[] comparableArr = (Comparable[]) array;
-            C8207h.l(comparableArr);
-            d = C8207h.d(comparableArr);
+            h.l(comparableArr);
+            d = h.d(comparableArr);
             return d;
         }
         List<T> B0 = B0(iterable);
-        C8219q.t(B0);
+        q.t(B0);
         return B0;
     }
 
@@ -774,12 +772,12 @@ public class CollectionsKt___CollectionsKt extends C8222t {
             Object[] array = collection.toArray(new Object[0]);
             b41.g(array, "null cannot be cast to non-null type kotlin.Array<T of kotlin.collections.ArraysKt__ArraysJVMKt.toTypedArray>");
             b41.g(array, "null cannot be cast to non-null type kotlin.Array<T of kotlin.collections.CollectionsKt___CollectionsKt.sortedWith>");
-            C8207h.m(array, comparator);
-            d = C8207h.d(array);
+            h.m(array, comparator);
+            d = h.d(array);
             return d;
         }
         List<T> B0 = B0(iterable);
-        C8219q.u(B0, comparator);
+        q.u(B0, comparator);
         return B0;
     }
 
@@ -794,7 +792,7 @@ public class CollectionsKt___CollectionsKt extends C8222t {
         if (!(i >= 0)) {
             throw new IllegalArgumentException(("Requested element count " + i + " is less than zero.").toString());
         } else if (i == 0) {
-            g = C8214m.g();
+            g = m.g();
             return g;
         } else {
             if (iterable instanceof Collection) {
@@ -802,7 +800,7 @@ public class CollectionsKt___CollectionsKt extends C8222t {
                     A0 = A0(iterable);
                     return A0;
                 } else if (i == 1) {
-                    e = C8213l.e(C8212k.O(iterable));
+                    e = l.e(k.O(iterable));
                     return e;
                 }
             }
@@ -814,7 +812,7 @@ public class CollectionsKt___CollectionsKt extends C8222t {
                     break;
                 }
             }
-            n = C8214m.n(arrayList);
+            n = m.n(arrayList);
             return n;
         }
     }
@@ -828,7 +826,7 @@ public class CollectionsKt___CollectionsKt extends C8222t {
         if (!(i >= 0)) {
             throw new IllegalArgumentException(("Requested element count " + i + " is less than zero.").toString());
         } else if (i == 0) {
-            g = C8214m.g();
+            g = m.g();
             return g;
         } else {
             int size = list.size();
@@ -836,7 +834,7 @@ public class CollectionsKt___CollectionsKt extends C8222t {
                 A0 = A0(list);
                 return A0;
             } else if (i == 1) {
-                e = C8213l.e(C8212k.b0(list));
+                e = l.e(k.b0(list));
                 return e;
             } else {
                 ArrayList arrayList = new ArrayList(i);
@@ -870,8 +868,8 @@ public class CollectionsKt___CollectionsKt extends C8222t {
         int q;
         int e;
         b41.i(iterable, "<this>");
-        q = C8215n.q(iterable, 12);
-        e = C8225w.e(q);
+        q = n.q(iterable, 12);
+        e = w.e(q);
         return (HashSet) x0(iterable, new HashSet(e));
     }
 

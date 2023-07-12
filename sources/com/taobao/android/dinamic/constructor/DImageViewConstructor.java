@@ -39,13 +39,12 @@ public class DImageViewConstructor extends DinamicViewAdvancedConstructor {
     public interface DXWebImageInterface {
         ImageView buildView(Context context);
 
-        void setImage(ImageView imageView, String str, C6318a c6318a);
+        void setImage(ImageView imageView, String str, a aVar);
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamic.constructor.DImageViewConstructor$a */
     /* loaded from: classes12.dex */
-    public static class C6318a {
+    public static class a {
         public float a;
         private boolean b;
         private boolean c;
@@ -60,14 +59,13 @@ public class DImageViewConstructor extends DinamicViewAdvancedConstructor {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamic.constructor.DImageViewConstructor$b */
     /* loaded from: classes12.dex */
-    public static class AsyncTaskC6319b extends AsyncTask<Void, Void, Drawable> {
+    public static class b extends AsyncTask<Void, Void, Drawable> {
         private String a;
         private WeakReference<ImageView> b;
         private Context c;
 
-        public AsyncTaskC6319b(ImageView imageView, String str) {
+        public b(ImageView imageView, String str) {
             this.b = new WeakReference<>(imageView);
             this.a = str;
             this.c = imageView.getContext().getApplicationContext();
@@ -122,10 +120,10 @@ public class DImageViewConstructor extends DinamicViewAdvancedConstructor {
         }
     }
 
-    private void setImage(ImageView imageView, String str, C6318a c6318a) {
+    private void setImage(ImageView imageView, String str, a aVar) {
         DXWebImageInterface dXWebImageInterface = this.dxWebImageInterface;
         if (dXWebImageInterface != null) {
-            dXWebImageInterface.setImage(imageView, str, c6318a);
+            dXWebImageInterface.setImage(imageView, str, aVar);
         }
     }
 
@@ -142,7 +140,7 @@ public class DImageViewConstructor extends DinamicViewAdvancedConstructor {
         return dXWebImageInterface.buildView(context);
     }
 
-    protected void setAspectRatio(ImageView imageView, String str, String str2, String str3, C6318a c6318a) {
+    protected void setAspectRatio(ImageView imageView, String str, String str2, String str3, a aVar) {
         boolean z = !TextUtils.equals(str, DAttrConstant.MATCH_CONTENT) && TextUtils.equals(str2, DAttrConstant.MATCH_CONTENT);
         if (z || (TextUtils.equals(str, DAttrConstant.MATCH_CONTENT) && !TextUtils.equals(str2, DAttrConstant.MATCH_CONTENT))) {
             double d = -1.0d;
@@ -154,14 +152,14 @@ public class DImageViewConstructor extends DinamicViewAdvancedConstructor {
             }
             if (z) {
                 if (d > 0.0d) {
-                    c6318a.a = (float) (1.0d / d);
-                    c6318a.g = true;
+                    aVar.a = (float) (1.0d / d);
+                    aVar.g = true;
                 } else if (imageView.getLayoutParams() != null) {
                     imageView.getLayoutParams().height = 0;
                 }
             } else if (d > 0.0d) {
-                c6318a.a = (float) d;
-                c6318a.g = true;
+                aVar.a = (float) d;
+                aVar.g = true;
             } else if (imageView.getLayoutParams() != null) {
                 imageView.getLayoutParams().width = 0;
             }
@@ -183,37 +181,37 @@ public class DImageViewConstructor extends DinamicViewAdvancedConstructor {
         }
         String str = (String) map.get(DAttrConstant.VIEW_WIDTH);
         String str2 = (String) map.get(DAttrConstant.VIEW_HEIGHT);
-        C6318a c6318a = new C6318a();
+        a aVar = new a();
         v80Var.c();
         if (TextUtils.equals(str, DAttrConstant.MATCH_CONTENT) && !TextUtils.equals(str2, DAttrConstant.MATCH_CONTENT)) {
-            c6318a.e = true;
+            aVar.e = true;
             imageView.setAdjustViewBounds(true);
         } else if (!TextUtils.equals(str, DAttrConstant.MATCH_CONTENT) && TextUtils.equals(str2, DAttrConstant.MATCH_CONTENT)) {
-            c6318a.e = true;
+            aVar.e = true;
             imageView.setAdjustViewBounds(true);
         }
         if (arrayList.contains(IMAGEVIEW_ASPECT_RATIO)) {
-            setAspectRatio(imageView, str, str2, (String) map.get(IMAGEVIEW_ASPECT_RATIO), c6318a);
-            if (c6318a.g()) {
+            setAspectRatio(imageView, str, str2, (String) map.get(IMAGEVIEW_ASPECT_RATIO), aVar);
+            if (aVar.g()) {
                 setImageScaleType(imageView, (String) map.get("dScaleType"));
             }
         }
         if (arrayList.contains(DAttrConstant.VIEW_CORNER_RADIUS)) {
             String str3 = (String) map.get(DAttrConstant.VIEW_CORNER_RADIUS);
-            c6318a.d = true;
+            aVar.d = true;
         }
         if (arrayList.contains(DAttrConstant.VIEW_BORDER_COLOR)) {
             String str4 = (String) map.get(DAttrConstant.VIEW_BORDER_COLOR);
-            c6318a.b = true;
+            aVar.b = true;
         }
         if (arrayList.contains(DAttrConstant.VIEW_BORDER_WIDTH)) {
             String str5 = (String) map.get(DAttrConstant.VIEW_BORDER_WIDTH);
-            c6318a.c = true;
+            aVar.c = true;
         }
         if (arrayList.contains("dImageUrl")) {
-            c6318a.f = true;
+            aVar.f = true;
         }
-        setImage(imageView, (String) map.get("dImageUrl"), c6318a);
+        setImage(imageView, (String) map.get("dImageUrl"), aVar);
     }
 
     @Override // com.taobao.android.dinamic.dinamic.DinamicViewAdvancedConstructor
@@ -246,7 +244,7 @@ public class DImageViewConstructor extends DinamicViewAdvancedConstructor {
             imageView.setTag(a90.TAG_IMAGE_NAME, null);
         } else if (str.equals((String) imageView.getTag(a90.TAG_IMAGE_NAME))) {
         } else {
-            new AsyncTaskC6319b(imageView, str).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+            new b(imageView, str).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
         }
     }
 }

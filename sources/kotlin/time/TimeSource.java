@@ -9,15 +9,14 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes3.dex */
 public interface TimeSource {
     @NotNull
-    public static final C8607a Companion = C8607a.a;
+    public static final a Companion = a.a;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.time.TimeSource$a */
     /* loaded from: classes3.dex */
-    public static final class C8607a {
-        static final /* synthetic */ C8607a a = new C8607a();
+    public static final class a {
+        static final /* synthetic */ a a = new a();
 
-        private C8607a() {
+        private a() {
         }
     }
 

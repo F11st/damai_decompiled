@@ -1,6 +1,5 @@
 package tb;
 
-import anet.channel.strategy.C0213a;
 import anet.channel.strategy.IConnStrategy;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,12 +9,11 @@ import java.util.List;
 public class d01 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.d01$a */
     /* loaded from: classes.dex */
-    public static final class C9027a {
+    public static final class a {
         final IConnStrategy a;
 
-        C9027a(IConnStrategy iConnStrategy) {
+        a(IConnStrategy iConnStrategy) {
             this.a = iConnStrategy;
         }
 
@@ -41,19 +39,19 @@ public class d01 {
         }
     }
 
-    public static ArrayList<C9027a> a(String str) {
+    public static ArrayList<a> a(String str) {
         return b(str, true);
     }
 
-    public static ArrayList<C9027a> b(String str, boolean z) {
-        List<IConnStrategy> connStrategyListByHost = C0213a.a().getConnStrategyListByHost(str);
+    public static ArrayList<a> b(String str, boolean z) {
+        List<IConnStrategy> connStrategyListByHost = anet.channel.strategy.a.a().getConnStrategyListByHost(str);
         if (connStrategyListByHost.isEmpty()) {
             return null;
         }
-        ArrayList<C9027a> arrayList = new ArrayList<>(connStrategyListByHost.size());
+        ArrayList<a> arrayList = new ArrayList<>(connStrategyListByHost.size());
         for (IConnStrategy iConnStrategy : connStrategyListByHost) {
             if (z || iConnStrategy.getIpSource() != 1) {
-                arrayList.add(new C9027a(iConnStrategy));
+                arrayList.add(new a(iConnStrategy));
             }
         }
         return arrayList;

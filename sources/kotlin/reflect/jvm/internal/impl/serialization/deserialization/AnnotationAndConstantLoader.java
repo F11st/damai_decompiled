@@ -20,7 +20,7 @@ public interface AnnotationAndConstantLoader<A, C> {
     List<A> loadCallableAnnotations(@NotNull gx1 gx1Var, @NotNull MessageLite messageLite, @NotNull AnnotatedCallableKind annotatedCallableKind);
 
     @NotNull
-    List<A> loadClassAnnotations(@NotNull gx1.C9189a c9189a);
+    List<A> loadClassAnnotations(@NotNull gx1.a aVar);
 
     @NotNull
     List<A> loadEnumEntryAnnotations(@NotNull gx1 gx1Var, @NotNull ProtoBuf$EnumEntry protoBuf$EnumEntry);

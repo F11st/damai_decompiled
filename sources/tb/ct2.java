@@ -17,17 +17,16 @@ public class ct2 extends zs2 {
     private static ct2 d;
     private int a;
     private Random b;
-    private Map<String, C9017b> c;
+    private Map<String, b> c;
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.ct2$b */
     /* loaded from: classes5.dex */
-    public static class C9017b {
+    public static class b {
         private int a;
         private Map<String, Integer> b;
 
-        private C9017b() {
+        private b() {
             this.a = 0;
             this.b = new HashMap();
         }
@@ -58,13 +57,12 @@ public class ct2 extends zs2 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.ct2$c */
     /* loaded from: classes5.dex */
-    public static class C9018c {
+    public static class c {
         private boolean a;
         private boolean b;
 
-        private C9018c() {
+        private c() {
             this.a = false;
             this.b = false;
         }
@@ -108,24 +106,24 @@ public class ct2 extends zs2 {
         return d;
     }
 
-    private C9018c e(int i, String str, int i2) {
+    private c e(int i, String str, int i2) {
         String valueOf = String.valueOf(i);
-        C9018c c9018c = new C9018c();
+        c cVar = new c();
         if (this.c.containsKey(valueOf)) {
-            c9018c.c(true);
-            c9018c.d(this.c.get(valueOf).c(str, i2));
-            return c9018c;
+            cVar.c(true);
+            cVar.d(this.c.get(valueOf).c(str, i2));
+            return cVar;
         }
-        c9018c.d(false);
-        return c9018c;
+        cVar.d(false);
+        return cVar;
     }
 
-    private static C9017b h(String str) {
+    private static b h(String str) {
         try {
-            C9017b c9017b = new C9017b();
+            b bVar = new b();
             JSONObject jSONObject = new JSONObject(str);
             if (jSONObject.has("cp")) {
-                c9017b.a = jSONObject.optInt("cp");
+                bVar.a = jSONObject.optInt("cp");
             }
             if (jSONObject.has("arg1")) {
                 HashMap hashMap = new HashMap();
@@ -137,9 +135,9 @@ public class ct2 extends zs2 {
                         hashMap.put(next, Integer.valueOf(Integer.parseInt(optJSONObject.optString(next))));
                     }
                 }
-                c9017b.b = hashMap;
+                bVar.b = hashMap;
             }
-            return c9017b;
+            return bVar;
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -158,7 +156,7 @@ public class ct2 extends zs2 {
 
     @Override // tb.zs2
     public synchronized void c(String str, Map<String, String> map) {
-        C9017b h;
+        b h;
         this.c.clear();
         for (String str2 : map.keySet()) {
             String str3 = map.get(str2);
@@ -181,35 +179,35 @@ public class ct2 extends zs2 {
         } else {
             i2 = this.a;
         }
-        C9018c e = e(i, str, i2);
+        c e = e(i, str, i2);
         if (e.a()) {
             return true;
         }
         if (e.b()) {
             return false;
         }
-        C9018c e2 = e(i - (i % 10), str, i2);
+        c e2 = e(i - (i % 10), str, i2);
         if (e2.a()) {
             return true;
         }
         if (e2.b()) {
             return false;
         }
-        C9018c e3 = e(i - (i % 100), str, i2);
+        c e3 = e(i - (i % 100), str, i2);
         if (e3.a()) {
             return true;
         }
         if (e3.b()) {
             return false;
         }
-        C9018c e4 = e(i - (i % 1000), str, i2);
+        c e4 = e(i - (i % 1000), str, i2);
         if (e4.a()) {
             return true;
         }
         if (e4.b()) {
             return false;
         }
-        C9018c e5 = e(-1, str, i2);
+        c e5 = e(-1, str, i2);
         if (e5.a()) {
             return true;
         }

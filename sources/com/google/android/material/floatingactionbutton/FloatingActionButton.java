@@ -57,7 +57,7 @@ import java.util.List;
 /* loaded from: classes10.dex */
 public class FloatingActionButton extends VisibilityAwareImageButton implements CoordinatorLayout.AttachedBehavior, TintableBackgroundView, TintableImageSourceView, ExpandableTransformationWidget, Shapeable {
     private static final int AUTO_MINI_LARGEST_SCREEN_WIDTH = 470;
-    private static final int DEF_STYLE_RES = R.C4819style.Widget_Design_FloatingActionButton;
+    private static final int DEF_STYLE_RES = R.style.Widget_Design_FloatingActionButton;
     private static final String EXPANDABLE_WIDGET_HELPER_KEY = "expandableWidgetHelper";
     private static final String LOG_TAG = "FloatingActionButton";
     public static final int NO_CUSTOM_SIZE = 0;

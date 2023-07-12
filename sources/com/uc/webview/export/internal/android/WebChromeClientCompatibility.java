@@ -15,12 +15,11 @@ public class WebChromeClientCompatibility extends WebChromeClient {
     protected com.uc.webview.export.WebChromeClient b;
 
     /* compiled from: Taobao */
-    /* renamed from: com.uc.webview.export.internal.android.WebChromeClientCompatibility$a */
     /* loaded from: classes11.dex */
-    class C7214a extends WebChromeClient.FileChooserParams {
+    class a extends WebChromeClient.FileChooserParams {
         private WebChromeClient.FileChooserParams b;
 
-        C7214a(WebChromeClient.FileChooserParams fileChooserParams) {
+        a(WebChromeClient.FileChooserParams fileChooserParams) {
             this.b = fileChooserParams;
         }
 
@@ -58,6 +57,6 @@ public class WebChromeClientCompatibility extends WebChromeClient {
     @Override // android.webkit.WebChromeClient
     @Jni
     public boolean onShowFileChooser(android.webkit.WebView webView, ValueCallback<Uri[]> valueCallback, WebChromeClient.FileChooserParams fileChooserParams) {
-        return this.b.onShowFileChooser(this.a, valueCallback, fileChooserParams == null ? null : new C7214a(fileChooserParams));
+        return this.b.onShowFileChooser(this.a, valueCallback, fileChooserParams == null ? null : new a(fileChooserParams));
     }
 }

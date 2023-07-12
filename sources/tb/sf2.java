@@ -9,18 +9,17 @@ import org.jetbrains.annotations.NotNull;
 public final class sf2<BizResponse> implements IRemoteDataTransformer<BizResponse> {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C9692a Companion = new C9692a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String TAG = "StandardDataTransformer";
 
     /* compiled from: Taobao */
-    /* renamed from: tb.sf2$a */
     /* loaded from: classes7.dex */
-    public static final class C9692a {
-        private C9692a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9692a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

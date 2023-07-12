@@ -399,7 +399,7 @@ public class WebViewActivity extends BaseActivity {
 
     @Override // com.ali.user.mobile.base.ui.BaseActivity
     protected int getLayoutContent() {
-        return R.C2965layout.aliuser_activity_webview;
+        return R.layout.aliuser_activity_webview;
     }
 
     protected void goConsumeIV(final VerifyParam verifyParam) {
@@ -556,7 +556,7 @@ public class WebViewActivity extends BaseActivity {
     @Override // android.app.Activity
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.clear();
-        getMenuInflater().inflate(R.C2966menu.aliuser_menu, menu);
+        getMenuInflater().inflate(R.menu.aliuser_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 

@@ -10,7 +10,6 @@ import cn.damai.commonbusiness.R$id;
 import cn.damai.tetris.component.girl.bean.ProjectViewModel;
 import cn.damai.tetris.component.girl.bean.StepBean;
 import cn.damai.tetris.core.AbsView;
-import cn.damai.uikit.image.C2497a;
 import cn.damai.uikit.view.DMPosterView;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -29,13 +28,13 @@ public class ColumnView extends AbsView<ColumnContract$Presenter> implements Col
     private Context context;
     private View mAllBtnLayout;
     private ImageView mBackImage;
-    private View$OnClickListenerC1845b mItem1;
-    private View$OnClickListenerC1845b mItem2;
-    private View$OnClickListenerC1845b mItem3;
-    private View$OnClickListenerC1845b mItem4;
-    private View$OnClickListenerC1845b mItem5;
-    private View$OnClickListenerC1845b mItem6;
-    private List<View$OnClickListenerC1845b> mItemUIs;
+    private b mItem1;
+    private b mItem2;
+    private b mItem3;
+    private b mItem4;
+    private b mItem5;
+    private b mItem6;
+    private List<b> mItemUIs;
     private View mRow2Layout;
     private TextView mSubTitleTv;
     private TextView mTitleTv;
@@ -43,14 +42,13 @@ public class ColumnView extends AbsView<ColumnContract$Presenter> implements Col
     private int pic_width;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.girl.mvp.ColumnView$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1844a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ StepBean a;
         final /* synthetic */ String b;
 
-        View$OnClickListenerC1844a(StepBean stepBean, String str) {
+        a(StepBean stepBean, String str) {
             this.a = stepBean;
             this.b = str;
         }
@@ -67,9 +65,8 @@ public class ColumnView extends AbsView<ColumnContract$Presenter> implements Col
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.girl.mvp.ColumnView$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1845b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         View a;
         private TextView b;
@@ -83,7 +80,7 @@ public class ColumnView extends AbsView<ColumnContract$Presenter> implements Col
         private String j;
         private String k;
 
-        public View$OnClickListenerC1845b(View view) {
+        public b(View view) {
             this.a = view;
             this.g = (DMPosterView) view.findViewById(R$id.item_poster);
             this.b = (TextView) this.a.findViewById(R$id.item_title);
@@ -174,12 +171,12 @@ public class ColumnView extends AbsView<ColumnContract$Presenter> implements Col
         this.mSubTitleTv = (TextView) getView().findViewById(R$id.tv_subtitle);
         this.mBackImage = (ImageView) getView().findViewById(R$id.image_back);
         this.mAllBtnLayout = getView().findViewById(R$id.layout_all);
-        this.mItem1 = new View$OnClickListenerC1845b(getView().findViewById(R$id.item_1_layout));
-        this.mItem2 = new View$OnClickListenerC1845b(getView().findViewById(R$id.item_2_layout));
-        this.mItem3 = new View$OnClickListenerC1845b(getView().findViewById(R$id.item_3_layout));
-        this.mItem4 = new View$OnClickListenerC1845b(getView().findViewById(R$id.item_4_layout));
-        this.mItem5 = new View$OnClickListenerC1845b(getView().findViewById(R$id.item_5_layout));
-        this.mItem6 = new View$OnClickListenerC1845b(getView().findViewById(R$id.item_6_layout));
+        this.mItem1 = new b(getView().findViewById(R$id.item_1_layout));
+        this.mItem2 = new b(getView().findViewById(R$id.item_2_layout));
+        this.mItem3 = new b(getView().findViewById(R$id.item_3_layout));
+        this.mItem4 = new b(getView().findViewById(R$id.item_4_layout));
+        this.mItem5 = new b(getView().findViewById(R$id.item_5_layout));
+        this.mItem6 = new b(getView().findViewById(R$id.item_6_layout));
         this.mRow2Layout = getView().findViewById(R$id.layout_row2);
     }
 
@@ -203,7 +200,7 @@ public class ColumnView extends AbsView<ColumnContract$Presenter> implements Col
             ipChange.ipc$dispatch("814076842", new Object[]{this, stepBean, str, columnContract$Model});
         } else if (stepBean != null && th2.b(stepBean.contentList) >= 3) {
             getView().setVisibility(0);
-            C2497a.a().loadinto(columnContract$Model.getStyleValue("backPic"), this.mBackImage);
+            cn.damai.uikit.image.a.a().loadinto(columnContract$Model.getStyleValue("backPic"), this.mBackImage);
             this.mTitleTv.setText(columnContract$Model.getStyleValue("title"));
             this.mSubTitleTv.setText(columnContract$Model.getStyleValue("subTitle"));
             this.mItemUIs.clear();
@@ -213,7 +210,7 @@ public class ColumnView extends AbsView<ColumnContract$Presenter> implements Col
             List<ProjectViewModel> list = stepBean.contentList;
             if (!TextUtils.isEmpty(columnContract$Model.getStyleValue("showAll")) && "true".equals(columnContract$Model.getStyleValue("showAll"))) {
                 this.mAllBtnLayout.setVisibility(0);
-                this.mAllBtnLayout.setOnClickListener(new View$OnClickListenerC1844a(stepBean, str));
+                this.mAllBtnLayout.setOnClickListener(new a(stepBean, str));
             } else {
                 this.mAllBtnLayout.setVisibility(8);
             }

@@ -9,8 +9,8 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import io.flutter.wpkbridge.WPKFactory;
 import java.util.LinkedHashMap;
-import kotlin.C8177b;
 import kotlin.Lazy;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -29,7 +29,7 @@ public final class PrivacyDoubleListDelegate {
 
     static {
         Lazy b2;
-        b2 = C8177b.b(new Function0<Boolean>() { // from class: cn.damai.launcher.PrivacyDoubleListDelegate$isOpen$2
+        b2 = b.b(new Function0<Boolean>() { // from class: cn.damai.launcher.PrivacyDoubleListDelegate$isOpen$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* JADX WARN: Can't rename method to resolve collision */

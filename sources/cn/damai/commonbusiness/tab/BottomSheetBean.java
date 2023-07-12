@@ -10,7 +10,7 @@ import java.util.List;
 /* loaded from: classes.dex */
 public class BottomSheetBean implements Parcelable {
     private static transient /* synthetic */ IpChange $ipChange;
-    public static final Parcelable.Creator<BottomSheetBean> CREATOR = new C0928a();
+    public static final Parcelable.Creator<BottomSheetBean> CREATOR = new a();
     public String backgroundPic;
     public String color;
     public List<Result> content;
@@ -19,7 +19,7 @@ public class BottomSheetBean implements Parcelable {
     /* loaded from: classes.dex */
     public static class Result implements Parcelable {
         private static transient /* synthetic */ IpChange $ipChange;
-        public static final Parcelable.Creator<Result> CREATOR = new C0927a();
+        public static final Parcelable.Creator<Result> CREATOR = new a();
         public int _pos_;
         public String checkBgPic;
         public String checkedPic;
@@ -36,12 +36,11 @@ public class BottomSheetBean implements Parcelable {
         public String url;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.commonbusiness.tab.BottomSheetBean$Result$a */
         /* loaded from: classes.dex */
-        public class C0927a implements Parcelable.Creator<Result> {
+        public class a implements Parcelable.Creator<Result> {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C0927a() {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator
@@ -111,12 +110,11 @@ public class BottomSheetBean implements Parcelable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.tab.BottomSheetBean$a */
     /* loaded from: classes.dex */
-    public class C0928a implements Parcelable.Creator<BottomSheetBean> {
+    public class a implements Parcelable.Creator<BottomSheetBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0928a() {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

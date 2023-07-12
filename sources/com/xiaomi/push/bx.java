@@ -18,7 +18,7 @@ public class bx {
     private cm f143a;
 
     /* renamed from: a  reason: collision with other field name */
-    private InterfaceC7622cn f144a;
+    private cn f144a;
     private String e;
     private String f;
 
@@ -33,9 +33,9 @@ public class bx {
     private final String d = "check_time";
 
     /* renamed from: a  reason: collision with other field name */
-    private al.AbstractRunnableC7597a f142a = new by(this);
-    private al.AbstractRunnableC7597a b = new bz(this);
-    private al.AbstractRunnableC7597a c = new ca(this);
+    private al.a f142a = new by(this);
+    private al.a b = new bz(this);
+    private al.a c = new ca(this);
 
     private bx(Context context) {
         this.f141a = context;
@@ -60,7 +60,7 @@ public class bx {
     public void b(String str) {
         SharedPreferences.Editor edit = this.f141a.getSharedPreferences("push_stat_sp", 0).edit();
         edit.putLong(str, System.currentTimeMillis());
-        C7784t.a(edit);
+        t.a(edit);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -73,13 +73,13 @@ public class bx {
         return this.e;
     }
 
-    public void a(cj.AbstractRunnableC7617a abstractRunnableC7617a) {
-        cj.a(this.f141a).a(abstractRunnableC7617a);
+    public void a(cj.a aVar) {
+        cj.a(this.f141a).a(aVar);
     }
 
-    public void a(C7672hn c7672hn) {
-        if (a() && com.xiaomi.push.service.bz.a(c7672hn.e())) {
-            a(cg.a(this.f141a, c(), c7672hn));
+    public void a(hn hnVar) {
+        if (a() && com.xiaomi.push.service.bz.a(hnVar.e())) {
+            a(cg.a(this.f141a, c(), hnVar));
         }
     }
 

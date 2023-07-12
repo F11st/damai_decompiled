@@ -24,7 +24,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SimpleItemAnimator;
 import cn.damai.common.askpermission.OnGrantListener;
-import cn.damai.common.user.C0525a;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
@@ -85,12 +85,11 @@ public class ImageSelectorActivity extends DamaiBaseActivity {
     private String type;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.ImageSelectorActivity$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0731a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0731a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -105,12 +104,11 @@ public class ImageSelectorActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.ImageSelectorActivity$b */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0732b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0732b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -127,12 +125,11 @@ public class ImageSelectorActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.ImageSelectorActivity$c */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0733c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0733c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -147,12 +144,11 @@ public class ImageSelectorActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.ImageSelectorActivity$d */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0734d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0734d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -168,12 +164,11 @@ public class ImageSelectorActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.ImageSelectorActivity$e */
     /* loaded from: classes4.dex */
-    public class C0735e implements ImageAdapter.OnImageSelectListener {
+    public class e implements ImageAdapter.OnImageSelectListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0735e() {
+        e() {
         }
 
         @Override // cn.damai.commonbusiness.photoselect.imageselected.adapter.ImageAdapter.OnImageSelectListener
@@ -188,12 +183,11 @@ public class ImageSelectorActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.ImageSelectorActivity$f */
     /* loaded from: classes4.dex */
-    public class C0736f implements ImageAdapter.OnItemClickListener {
+    public class f implements ImageAdapter.OnItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0736f() {
+        f() {
         }
 
         @Override // cn.damai.commonbusiness.photoselect.imageselected.adapter.ImageAdapter.OnItemClickListener
@@ -211,12 +205,11 @@ public class ImageSelectorActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.ImageSelectorActivity$g */
     /* loaded from: classes4.dex */
-    public class C0737g implements OnGrantListener {
+    public class g implements OnGrantListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0737g() {
+        g() {
         }
 
         @Override // cn.damai.common.askpermission.OnGrantListener
@@ -242,12 +235,11 @@ public class ImageSelectorActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.ImageSelectorActivity$h */
     /* loaded from: classes4.dex */
-    public class C0738h implements OnGrantListener {
+    public class h implements OnGrantListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0738h() {
+        h() {
         }
 
         @Override // cn.damai.common.askpermission.OnGrantListener
@@ -270,7 +262,7 @@ public class ImageSelectorActivity extends DamaiBaseActivity {
             if (ir1.i(strArr)) {
                 loadDataForSdCard();
             } else {
-                ir1.d(this, false, strArr, "该相册需要赋予访问存储的权限，请到“设置”>“应用”>“权限”中配置权限。", new C0738h());
+                ir1.d(this, false, strArr, "该相册需要赋予访问存储的权限，请到“设置”>“应用”>“权限”中配置权限。", new h());
             }
         }
     }
@@ -319,8 +311,8 @@ public class ImageSelectorActivity extends DamaiBaseActivity {
         if (arrayList != null && !arrayList.isEmpty()) {
             setFolder(this.mFolders.get(0));
         }
-        this.mAdapter.u(new C0735e());
-        this.mAdapter.v(new C0736f());
+        this.mAdapter.u(new e());
+        this.mAdapter.v(new f());
     }
 
     private void initListener() {
@@ -329,10 +321,10 @@ public class ImageSelectorActivity extends DamaiBaseActivity {
             ipChange.ipc$dispatch("-466663873", new Object[]{this});
             return;
         }
-        findViewById(R$id.btn_back).setOnClickListener(new View$OnClickListenerC0731a());
-        this.btnPreview.setOnClickListener(new View$OnClickListenerC0732b());
-        this.btnConfirm.setOnClickListener(new View$OnClickListenerC0733c());
-        findViewById(R$id.btn_folder).setOnClickListener(new View$OnClickListenerC0734d());
+        findViewById(R$id.btn_back).setOnClickListener(new a());
+        this.btnPreview.setOnClickListener(new b());
+        this.btnConfirm.setOnClickListener(new c());
+        findViewById(R$id.btn_folder).setOnClickListener(new d());
         this.rvImage.addOnScrollListener(new RecyclerView.OnScrollListener(this) { // from class: cn.damai.commonbusiness.photoselect.imageselected.ImageSelectorActivity.5
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -458,10 +450,10 @@ public class ImageSelectorActivity extends DamaiBaseActivity {
                         if (arrayList2 == null || arrayList2.size() <= 0 || arrayList.get(0) == null) {
                             return;
                         }
-                        ArrayList<Image> b = ((vo0) arrayList.get(0)).b();
-                        if (b != null && b.size() > 0 && ImageSelectorActivity.this.mAdapter != null) {
+                        ArrayList<Image> b2 = ((vo0) arrayList.get(0)).b();
+                        if (b2 != null && b2.size() > 0 && ImageSelectorActivity.this.mAdapter != null) {
                             ImageSelectorActivity.this.rvImage.scrollToPosition(0);
-                            ImageSelectorActivity.this.mAdapter.q(b);
+                            ImageSelectorActivity.this.mAdapter.q(b2);
                         }
                         ImageSelectorActivity.this.setSelectImage();
                     }
@@ -504,8 +496,8 @@ public class ImageSelectorActivity extends DamaiBaseActivity {
             bitmap.compress(Bitmap.CompressFormat.JPEG, 80, openOutputStream);
             openOutputStream.flush();
             openOutputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
         return insert;
     }
@@ -708,8 +700,8 @@ public class ImageSelectorActivity extends DamaiBaseActivity {
                     saveAppDCIMFils(BitmapFactory.decodeFile(this.mTempFile.getAbsolutePath()), this.mFileName);
                 }
                 loadImageForSDCard(true);
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
         }
     }
@@ -768,7 +760,7 @@ public class ImageSelectorActivity extends DamaiBaseActivity {
             this.btn_folder.setVisibility(0);
             this.bottomBar.setVisibility(0);
         }
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i("select_pic"));
+        setDamaiUTKeyBuilder(new a.b().i("select_pic"));
     }
 
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity
@@ -806,7 +798,7 @@ public class ImageSelectorActivity extends DamaiBaseActivity {
         if (AndroidInstantRuntime.support(ipChange, "-1711682124")) {
             ipChange.ipc$dispatch("-1711682124", new Object[]{this});
         } else {
-            ir1.b(this, false, mr1.CAMERA, "用于选取、上传、发布及分享图片/视频", new C0737g());
+            ir1.b(this, false, mr1.CAMERA, "用于选取、上传、发布及分享图片/视频", new g());
         }
     }
 

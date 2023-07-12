@@ -6,5 +6,5 @@ import io.reactivex.annotations.NonNull;
 /* loaded from: classes3.dex */
 public interface MaybeTransformer<Upstream, Downstream> {
     @NonNull
-    MaybeSource<Downstream> apply(@NonNull AbstractC8148c<Upstream> abstractC8148c);
+    MaybeSource<Downstream> apply(@NonNull c<Upstream> cVar);
 }

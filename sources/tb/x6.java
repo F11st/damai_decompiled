@@ -6,16 +6,15 @@ import anet.channel.statist.StatObject;
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
 public class x6 {
-    private static volatile IAppMonitor a = new C9908a(null);
+    private static volatile IAppMonitor a = new a(null);
     private static volatile IAppMonitor b = null;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.x6$a */
     /* loaded from: classes.dex */
-    static class C9908a implements IAppMonitor {
+    static class a implements IAppMonitor {
         IAppMonitor a;
 
-        C9908a(IAppMonitor iAppMonitor) {
+        a(IAppMonitor iAppMonitor) {
             this.a = null;
             this.a = iAppMonitor;
         }
@@ -67,6 +66,6 @@ public class x6 {
     }
 
     public static void d(IAppMonitor iAppMonitor) {
-        a = new C9908a(iAppMonitor);
+        a = new a(iAppMonitor);
     }
 }

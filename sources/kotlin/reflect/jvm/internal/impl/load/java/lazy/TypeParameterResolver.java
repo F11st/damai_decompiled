@@ -11,13 +11,12 @@ import tb.b41;
 public interface TypeParameterResolver {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.lazy.TypeParameterResolver$a */
     /* loaded from: classes3.dex */
-    public static final class C8342a implements TypeParameterResolver {
+    public static final class a implements TypeParameterResolver {
         @NotNull
-        public static final C8342a INSTANCE = new C8342a();
+        public static final a INSTANCE = new a();
 
-        private C8342a() {
+        private a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.load.java.lazy.TypeParameterResolver

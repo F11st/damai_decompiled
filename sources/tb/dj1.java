@@ -4,7 +4,6 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.view.View;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.seatbiz.sku.qilin.bean.CalendarBean;
 import cn.damai.commonbusiness.seatbiz.sku.qilin.bean.DateBean;
@@ -36,12 +35,11 @@ public class dj1 {
     private List<DateBean> j;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.dj1$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9047a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9047a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -61,7 +59,7 @@ public class dj1 {
             }
             dj1.this.f(monthEntity.index);
             dj1.this.c.g(monthEntity.index);
-            C0529c e = C0529c.e();
+            cn.damai.common.user.c e = cn.damai.common.user.c.e();
             td2 i = td2.i();
             long j = dj1.this.g;
             e.x(i.s(j, monthEntity.month + "", monthEntity.index));
@@ -69,12 +67,11 @@ public class dj1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.dj1$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9048b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9048b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -90,7 +87,7 @@ public class dj1 {
                     DateBean dateBean = (DateBean) dj1.this.j.get(i);
                     if (dateBean != null && !TextUtils.isEmpty(dateBean.dateId) && !TextUtils.isEmpty(dayEntity.dateId) && dateBean.dateId.equals(dayEntity.dateId)) {
                         dj1.this.h(dateBean);
-                        C0529c.e().x(td2.i().r(dj1.this.g, dayEntity.dateId, i));
+                        cn.damai.common.user.c.e().x(td2.i().r(dj1.this.g, dayEntity.dateId, i));
                     }
                 }
             }
@@ -126,7 +123,7 @@ public class dj1 {
         if (AndroidInstantRuntime.support(ipChange, "-1022911491")) {
             ipChange.ipc$dispatch("-1022911491", new Object[]{this, Integer.valueOf(i)});
         } else if (wh2.e(this.f) != 0 && this.f.size() > i) {
-            this.d.initMonth(this.f.get(i), new View$OnClickListenerC9048b());
+            this.d.initMonth(this.f.get(i), new b());
         }
     }
 
@@ -140,7 +137,7 @@ public class dj1 {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.e);
         linearLayoutManager.setOrientation(0);
         this.b.setLayoutManager(linearLayoutManager);
-        HorizontalCanlendarAdapter horizontalCanlendarAdapter = new HorizontalCanlendarAdapter(this.e, new View$OnClickListenerC9047a());
+        HorizontalCanlendarAdapter horizontalCanlendarAdapter = new HorizontalCanlendarAdapter(this.e, new a());
         this.c = horizontalCanlendarAdapter;
         this.b.setAdapter(horizontalCanlendarAdapter);
         this.b.addItemDecoration(new SpaceItemDecoration(ScreenUtil.dip2px(this.e, 7.5f)));

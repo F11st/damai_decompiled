@@ -56,10 +56,10 @@ public class EventOverviewFragment extends Fragment {
     /* compiled from: Taobao */
     /* loaded from: classes11.dex */
     private class PerfListAdapter extends RecyclerView.Adapter<ItemHolder> {
-        private wz2.C9890a rootEvent;
+        private wz2.a rootEvent;
 
-        public PerfListAdapter(wz2.C9890a c9890a) {
-            this.rootEvent = c9890a;
+        public PerfListAdapter(wz2.a aVar) {
+            this.rootEvent = aVar;
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
@@ -69,7 +69,7 @@ public class EventOverviewFragment extends Fragment {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public void onBindViewHolder(final ItemHolder itemHolder, int i) {
-            final wz2.C9890a valueAt = this.rootEvent.m.valueAt(i);
+            final wz2.a valueAt = this.rootEvent.m.valueAt(i);
             itemHolder.itemView.setOnClickListener(new View.OnClickListener() { // from class: com.taobao.weex.devtools.toolbox.EventOverviewFragment.PerfListAdapter.1
                 @Override // android.view.View.OnClickListener
                 public void onClick(View view) {
@@ -85,9 +85,9 @@ public class EventOverviewFragment extends Fragment {
                 itemHolder.info.setVisibility(0);
             }
             long j = valueAt.e;
-            wz2.C9890a c9890a = this.rootEvent;
-            if (j < c9890a.e) {
-                c9890a.e = j;
+            wz2.a aVar = this.rootEvent;
+            if (j < aVar.e) {
+                aVar.e = j;
             }
             itemHolder.actionName.setText(valueAt.a);
             TextView textView = itemHolder.actionDuration;

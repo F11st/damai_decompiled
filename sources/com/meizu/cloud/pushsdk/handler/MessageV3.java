@@ -5,7 +5,7 @@ import android.os.Parcelable;
 import android.text.TextUtils;
 import com.meizu.cloud.pushinternal.DebugLogger;
 import com.meizu.cloud.pushsdk.constants.PushConstants;
-import com.meizu.cloud.pushsdk.d.f.C6032e;
+import com.meizu.cloud.pushsdk.d.f.e;
 import com.meizu.cloud.pushsdk.notification.MPushMessage;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSettingEx;
@@ -149,7 +149,7 @@ public class MessageV3 implements Parcelable {
             }
         }
         messageV3.setParamsMap(mPushMessage.getParams());
-        String jSONObject = C6032e.a((Map) mPushMessage.getExtra()).toString();
+        String jSONObject = e.a((Map) mPushMessage.getExtra()).toString();
         DebugLogger.e(TAG, "MessageV2 extra json is " + jSONObject);
         if (!TextUtils.isEmpty(jSONObject)) {
             messageV3.setNotificationMessage(jSONObject);

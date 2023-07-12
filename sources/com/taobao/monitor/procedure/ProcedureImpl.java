@@ -2,7 +2,7 @@ package com.taobao.monitor.procedure;
 
 import android.text.TextUtils;
 import com.ali.user.mobile.login.model.LoginConstant;
-import com.taobao.monitor.procedure.C6817d;
+import com.taobao.monitor.procedure.d;
 import com.youku.live.livesdk.preloader.Preloader;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -21,7 +21,7 @@ public class ProcedureImpl implements IProcedureGroup, IValueCallback {
     private String a;
     private final String b;
     private final IProcedure c;
-    private final C6821f d;
+    private final f d;
     private Status e;
     private final List<IProcedure> f;
     private IProcedureLifeCycle g;
@@ -31,13 +31,13 @@ public class ProcedureImpl implements IProcedureGroup, IValueCallback {
     /* compiled from: Taobao */
     /* loaded from: classes11.dex */
     public interface IProcedureLifeCycle {
-        void begin(C6821f c6821f);
+        void begin(f fVar);
 
-        void end(C6821f c6821f);
+        void end(f fVar);
 
-        void event(C6821f c6821f, rf0 rf0Var);
+        void event(f fVar, rf0 rf0Var);
 
-        void stage(C6821f c6821f, qf2 qf2Var);
+        void stage(f fVar, qf2 qf2Var);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -60,13 +60,13 @@ public class ProcedureImpl implements IProcedureGroup, IValueCallback {
         this.c = iProcedure;
         this.h = z;
         this.f = new LinkedList();
-        C6821f c6821f = new C6821f(str, z, z2);
-        this.d = c6821f;
+        f fVar = new f(str, z, z2);
+        this.d = fVar;
         if (iProcedure != null) {
-            c6821f.d("parentSession", iProcedure.topicSession());
+            fVar.d("parentSession", iProcedure.topicSession());
         }
-        c6821f.d(Preloader.KEY_SESSION, valueOf);
-        c6821f.e(valueOf);
+        fVar.d(Preloader.KEY_SESSION, valueOf);
+        fVar.e(valueOf);
         this.i = new HashMap();
     }
 
@@ -139,7 +139,7 @@ public class ProcedureImpl implements IProcedureGroup, IValueCallback {
     public IProcedure b(String str, String str2, Map<String, Object> map, long j2, String str3, boolean z) {
         Long l = this.i.get(str);
         if (l != null && !TextUtils.isEmpty(str) && this.f != null && isAlive()) {
-            C6817d f = new C6817d.C6819b().g(false).k(false).i(false).h(this).f();
+            d f = new d.b().g(false).k(false).i(false).h(this).f();
             tu1 tu1Var = tu1.b;
             IProcedure createProcedure = tu1Var.createProcedure("/" + str, f);
             createProcedure.begin();
@@ -190,9 +190,9 @@ public class ProcedureImpl implements IProcedureGroup, IValueCallback {
     }
 
     @Override // com.taobao.monitor.procedure.IValueCallback
-    public void callback(C6821f c6821f) {
+    public void callback(f fVar) {
         if (isAlive()) {
-            this.d.g(c6821f);
+            this.d.g(fVar);
         }
     }
 
@@ -201,7 +201,7 @@ public class ProcedureImpl implements IProcedureGroup, IValueCallback {
         return this;
     }
 
-    public C6821f e() {
+    public f e() {
         return this.d;
     }
 
@@ -224,7 +224,7 @@ public class ProcedureImpl implements IProcedureGroup, IValueCallback {
         return this;
     }
 
-    protected C6821f f() {
+    protected f f() {
         return this.d.t();
     }
 

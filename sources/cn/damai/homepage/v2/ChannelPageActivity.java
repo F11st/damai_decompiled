@@ -6,11 +6,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import cn.damai.common.AppConfig;
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseModel;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
-import cn.damai.commonbusiness.pageut.C0726a;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
 import cn.damai.homepage.bean.TabExtra;
@@ -25,10 +23,10 @@ import tb.m61;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
-public final class ChannelPageActivity extends DamaiBaseActivity<AbstractC0470a<Object, Object>, BaseModel> {
+public final class ChannelPageActivity extends DamaiBaseActivity<cn.damai.common.app.base.a<Object, Object>, BaseModel> {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C1251a Companion = new C1251a(null);
+    public static final a Companion = new a(null);
     private static final int LOGIN_RESULT = 1008;
     @Nullable
     private ChannelPageTabFragment mChannelTabFragment;
@@ -38,13 +36,12 @@ public final class ChannelPageActivity extends DamaiBaseActivity<AbstractC0470a<
     private TabExtra mTabExtra;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.ChannelPageActivity$a */
     /* loaded from: classes14.dex */
-    public static final class C1251a {
-        private C1251a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C1251a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -122,8 +119,8 @@ public final class ChannelPageActivity extends DamaiBaseActivity<AbstractC0470a<
             return;
         }
         super.onCreate(bundle);
-        C0726a.i(this);
-        C0529c.e().K(this);
+        cn.damai.commonbusiness.pageut.a.i(this);
+        c.e().K(this);
         initBundle();
         Bundle bundle2 = new Bundle();
         TabExtra tabExtra = this.mTabExtra;
@@ -148,7 +145,7 @@ public final class ChannelPageActivity extends DamaiBaseActivity<AbstractC0470a<
             return;
         }
         super.onDestroy();
-        C0726a.j(this);
+        cn.damai.commonbusiness.pageut.a.j(this);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -184,7 +181,7 @@ public final class ChannelPageActivity extends DamaiBaseActivity<AbstractC0470a<
             return;
         }
         super.onPause();
-        C0726a.a(this);
+        cn.damai.commonbusiness.pageut.a.a(this);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -196,7 +193,7 @@ public final class ChannelPageActivity extends DamaiBaseActivity<AbstractC0470a<
             return;
         }
         super.onResume();
-        C0726a.b(this);
+        cn.damai.commonbusiness.pageut.a.b(this);
     }
 
     @Override // cn.damai.common.app.base.BaseActivity

@@ -12,7 +12,7 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class PullToRefreshWebView extends PullToRefreshBase<WebView> {
-    private static final PullToRefreshBase.OnRefreshListener<WebView> defaultOnRefreshListener = new C5455a();
+    private static final PullToRefreshBase.OnRefreshListener<WebView> defaultOnRefreshListener = new a();
     private final WebChromeClient defaultWebChromeClient;
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -34,16 +34,15 @@ public class PullToRefreshWebView extends PullToRefreshBase<WebView> {
         @Override // android.view.View
         protected boolean overScrollBy(int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, boolean z) {
             boolean overScrollBy = super.overScrollBy(i, i2, i3, i4, i5, i6, i7, i8, z);
-            C5456a.b(PullToRefreshWebView.this, i2, i4, getScrollRange(), 2, 1.5f, z);
+            com.handmark.pulltorefresh.library.a.b(PullToRefreshWebView.this, i2, i4, getScrollRange(), 2, 1.5f, z);
             return overScrollBy;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.handmark.pulltorefresh.library.PullToRefreshWebView$a */
     /* loaded from: classes10.dex */
-    static class C5455a implements PullToRefreshBase.OnRefreshListener<WebView> {
-        C5455a() {
+    static class a implements PullToRefreshBase.OnRefreshListener<WebView> {
+        a() {
         }
 
         @Override // com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener

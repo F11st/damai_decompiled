@@ -96,7 +96,7 @@ public final class Predicates {
         private static final long serialVersionUID = 0;
 
         ContainsPatternFromStringPredicate(String str) {
-            super(C4838f.a(str));
+            super(f.a(str));
         }
 
         @Override // com.google.common.base.Predicates.ContainsPatternPredicate
@@ -110,10 +110,10 @@ public final class Predicates {
     /* loaded from: classes10.dex */
     private static class ContainsPatternPredicate implements Predicate<CharSequence>, Serializable {
         private static final long serialVersionUID = 0;
-        final AbstractC4830b pattern;
+        final b pattern;
 
-        ContainsPatternPredicate(AbstractC4830b abstractC4830b) {
-            this.pattern = (AbstractC4830b) du1.p(abstractC4830b);
+        ContainsPatternPredicate(b bVar) {
+            this.pattern = (b) du1.p(bVar);
         }
 
         @Override // com.google.common.base.Predicate
@@ -130,8 +130,8 @@ public final class Predicates {
         }
 
         public String toString() {
-            String c4836b = C4834e.b(this.pattern).d("pattern", this.pattern.pattern()).b("pattern.flags", this.pattern.flags()).toString();
-            return "Predicates.contains(" + c4836b + jn1.BRACKET_END_STR;
+            String bVar = e.b(this.pattern).d("pattern", this.pattern.pattern()).b("pattern.flags", this.pattern.flags()).toString();
+            return "Predicates.contains(" + bVar + jn1.BRACKET_END_STR;
         }
 
         @Override // com.google.common.base.Predicate

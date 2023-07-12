@@ -23,13 +23,12 @@ public class RenderDispatcher extends AbsDispatcher<PageRenderStandard> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.RenderDispatcher$a */
     /* loaded from: classes11.dex */
-    class C6798a implements AbsDispatcher.ListenerCaller<PageRenderStandard> {
+    class a implements AbsDispatcher.ListenerCaller<PageRenderStandard> {
         final /* synthetic */ pp1 a;
         final /* synthetic */ long b;
 
-        C6798a(RenderDispatcher renderDispatcher, pp1 pp1Var, long j) {
+        a(RenderDispatcher renderDispatcher, pp1 pp1Var, long j) {
             this.a = pp1Var;
             this.b = j;
         }
@@ -42,14 +41,13 @@ public class RenderDispatcher extends AbsDispatcher<PageRenderStandard> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.RenderDispatcher$b */
     /* loaded from: classes11.dex */
-    class C6799b implements AbsDispatcher.ListenerCaller<PageRenderStandard> {
+    class b implements AbsDispatcher.ListenerCaller<PageRenderStandard> {
         final /* synthetic */ pp1 a;
         final /* synthetic */ float b;
         final /* synthetic */ long c;
 
-        C6799b(RenderDispatcher renderDispatcher, pp1 pp1Var, float f, long j) {
+        b(RenderDispatcher renderDispatcher, pp1 pp1Var, float f, long j) {
             this.a = pp1Var;
             this.b = f;
             this.c = j;
@@ -63,13 +61,12 @@ public class RenderDispatcher extends AbsDispatcher<PageRenderStandard> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.RenderDispatcher$c */
     /* loaded from: classes11.dex */
-    class C6800c implements AbsDispatcher.ListenerCaller<PageRenderStandard> {
+    class c implements AbsDispatcher.ListenerCaller<PageRenderStandard> {
         final /* synthetic */ pp1 a;
         final /* synthetic */ long b;
 
-        C6800c(RenderDispatcher renderDispatcher, pp1 pp1Var, long j) {
+        c(RenderDispatcher renderDispatcher, pp1 pp1Var, long j) {
             this.a = pp1Var;
             this.b = j;
         }
@@ -82,13 +79,12 @@ public class RenderDispatcher extends AbsDispatcher<PageRenderStandard> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.RenderDispatcher$d */
     /* loaded from: classes11.dex */
-    class C6801d implements AbsDispatcher.ListenerCaller<PageRenderStandard> {
+    class d implements AbsDispatcher.ListenerCaller<PageRenderStandard> {
         final /* synthetic */ pp1 a;
         final /* synthetic */ long b;
 
-        C6801d(RenderDispatcher renderDispatcher, pp1 pp1Var, long j) {
+        d(RenderDispatcher renderDispatcher, pp1 pp1Var, long j) {
             this.a = pp1Var;
             this.b = j;
         }
@@ -101,13 +97,12 @@ public class RenderDispatcher extends AbsDispatcher<PageRenderStandard> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.RenderDispatcher$e */
     /* loaded from: classes11.dex */
-    class C6802e implements AbsDispatcher.ListenerCaller<PageRenderStandard> {
+    class e implements AbsDispatcher.ListenerCaller<PageRenderStandard> {
         final /* synthetic */ pp1 a;
         final /* synthetic */ int b;
 
-        C6802e(RenderDispatcher renderDispatcher, pp1 pp1Var, int i) {
+        e(RenderDispatcher renderDispatcher, pp1 pp1Var, int i) {
             this.a = pp1Var;
             this.b = i;
         }
@@ -121,26 +116,26 @@ public class RenderDispatcher extends AbsDispatcher<PageRenderStandard> {
 
     @UnsafeMethod
     public void f(pp1 pp1Var, long j) {
-        c(new C6801d(this, pp1Var, j));
+        c(new d(this, pp1Var, j));
     }
 
     @UnsafeMethod
     public void g(pp1 pp1Var, int i) {
-        c(new C6802e(this, pp1Var, i));
+        c(new e(this, pp1Var, i));
     }
 
     @UnsafeMethod
     public void h(pp1 pp1Var, float f, long j) {
-        c(new C6799b(this, pp1Var, f, j));
+        c(new b(this, pp1Var, f, j));
     }
 
     @UnsafeMethod
     public void i(pp1 pp1Var, long j) {
-        c(new C6798a(this, pp1Var, j));
+        c(new a(this, pp1Var, j));
     }
 
     @UnsafeMethod
     public void j(pp1 pp1Var, long j) {
-        c(new C6800c(this, pp1Var, j));
+        c(new c(this, pp1Var, j));
     }
 }

@@ -23,7 +23,7 @@ public class YKCardErrorView extends YKErrorView implements YKCustomizedView {
 
     @Override // com.youku.resource.widget.YKCustomizedView
     public void init(Context context, AttributeSet attributeSet) {
-        View inflate = LayoutInflater.from(context).inflate(R.C8074layout.resource_ykcard_errorview, (ViewGroup) this, true);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.resource_ykcard_errorview, (ViewGroup) this, true);
         this.error_image = (ImageView) inflate.findViewById(R.id.error_image);
         this.error_text = (TextView) inflate.findViewById(R.id.error_text);
         RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) this.error_image.getLayoutParams();

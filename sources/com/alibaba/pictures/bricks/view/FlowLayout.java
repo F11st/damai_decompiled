@@ -28,7 +28,7 @@ public class FlowLayout extends ViewGroup {
     public static final int LAYOUT_DIRECTION_RTL = 1;
     public static final int VERTICAL = 1;
     private final LayoutConfiguration config;
-    protected List<C3586a> lines;
+    protected List<a> lines;
     private int showLineLimit;
     private boolean singleLine;
 
@@ -40,13 +40,13 @@ public class FlowLayout extends ViewGroup {
         this.config = new LayoutConfiguration(context, null);
     }
 
-    private void applyGravityToLine(C3586a c3586a) {
+    private void applyGravityToLine(a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-200900728")) {
-            ipChange.ipc$dispatch("-200900728", new Object[]{this, c3586a});
+            ipChange.ipc$dispatch("-200900728", new Object[]{this, aVar});
             return;
         }
-        List<View> j = c3586a.j();
+        List<View> j = aVar.j();
         int size = j.size();
         if (size <= 0) {
             return;
@@ -56,7 +56,7 @@ public class FlowLayout extends ViewGroup {
             f += getWeight((LayoutParams) j.get(i).getLayoutParams());
         }
         LayoutParams layoutParams = (LayoutParams) j.get(size - 1).getLayoutParams();
-        int f2 = c3586a.f() - (layoutParams.f() + layoutParams.d());
+        int f2 = aVar.f() - (layoutParams.f() + layoutParams.d());
         int i2 = 0;
         for (int i3 = 0; i3 < size; i3++) {
             LayoutParams layoutParams2 = (LayoutParams) j.get(i3).getLayoutParams();
@@ -69,7 +69,7 @@ public class FlowLayout extends ViewGroup {
             rect.top = 0;
             rect.left = i2;
             rect.right = f3 + round + i2;
-            rect.bottom = c3586a.i();
+            rect.bottom = aVar.i();
             Rect rect2 = new Rect();
             Gravity.apply(gravity, f3, i4, rect, rect2);
             i2 += round;
@@ -80,7 +80,7 @@ public class FlowLayout extends ViewGroup {
         }
     }
 
-    private void applyGravityToLines(List<C3586a> list, int i, int i2) {
+    private void applyGravityToLines(List<a> list, int i, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1734001276")) {
             ipChange.ipc$dispatch("1734001276", new Object[]{this, list, Integer.valueOf(i), Integer.valueOf(i2)});
@@ -90,15 +90,15 @@ public class FlowLayout extends ViewGroup {
         if (size <= 0) {
             return;
         }
-        C3586a c3586a = list.get(size - 1);
-        int i3 = i2 - (c3586a.i() + c3586a.h());
+        a aVar = list.get(size - 1);
+        int i3 = i2 - (aVar.i() + aVar.h());
         int i4 = 0;
         for (int i5 = 0; i5 < size; i5++) {
-            C3586a c3586a2 = list.get(i5);
+            a aVar2 = list.get(i5);
             int gravity = getGravity();
             int round = Math.round((i3 * 1) / size);
-            int f = c3586a2.f();
-            int i6 = c3586a2.i();
+            int f = aVar2.f();
+            int i6 = aVar2.i();
             Rect rect = new Rect();
             rect.top = i4;
             rect.left = 0;
@@ -107,35 +107,35 @@ public class FlowLayout extends ViewGroup {
             Rect rect2 = new Rect();
             Gravity.apply(gravity, f, i6, rect, rect2);
             i4 += round;
-            c3586a2.a(rect2.left);
-            c3586a2.b(rect2.top);
-            c3586a2.k(com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.width(rect2));
-            c3586a2.l(com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.height(rect2));
+            aVar2.a(rect2.left);
+            aVar2.b(rect2.top);
+            aVar2.k(com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.width(rect2));
+            aVar2.l(com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.height(rect2));
         }
     }
 
-    private void applyPositionsToViews(C3586a c3586a) {
+    private void applyPositionsToViews(a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-972381476")) {
-            ipChange.ipc$dispatch("-972381476", new Object[]{this, c3586a});
+            ipChange.ipc$dispatch("-972381476", new Object[]{this, aVar});
             return;
         }
-        List<View> j = c3586a.j();
+        List<View> j = aVar.j();
         int size = j.size();
         for (int i = 0; i < size; i++) {
             View view = j.get(i);
             LayoutParams layoutParams = (LayoutParams) view.getLayoutParams();
             if (this.config.c() == 0) {
-                layoutParams.o(getPaddingLeft() + c3586a.g() + layoutParams.d(), getPaddingTop() + c3586a.h() + layoutParams.e());
+                layoutParams.o(getPaddingLeft() + aVar.g() + layoutParams.d(), getPaddingTop() + aVar.h() + layoutParams.e());
                 view.measure(View.MeasureSpec.makeMeasureSpec(layoutParams.f(), 1073741824), View.MeasureSpec.makeMeasureSpec(layoutParams.i(), 1073741824));
             } else {
-                layoutParams.o(getPaddingLeft() + c3586a.h() + layoutParams.e(), getPaddingTop() + c3586a.g() + layoutParams.d());
+                layoutParams.o(getPaddingLeft() + aVar.h() + layoutParams.e(), getPaddingTop() + aVar.g() + layoutParams.d());
                 view.measure(View.MeasureSpec.makeMeasureSpec(layoutParams.i(), 1073741824), View.MeasureSpec.makeMeasureSpec(layoutParams.f(), 1073741824));
             }
         }
     }
 
-    private void calculateLinesAndChildPosition(List<C3586a> list) {
+    private void calculateLinesAndChildPosition(List<a> list) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1078884283")) {
             ipChange.ipc$dispatch("-1078884283", new Object[]{this, list});
@@ -144,10 +144,10 @@ public class FlowLayout extends ViewGroup {
         int size = list.size();
         int i = 0;
         for (int i2 = 0; i2 < size; i2++) {
-            C3586a c3586a = list.get(i2);
-            c3586a.b(i);
-            i += c3586a.i();
-            List<View> j = c3586a.j();
+            a aVar = list.get(i2);
+            aVar.b(i);
+            i += aVar.i();
+            List<View> j = aVar.j();
             int size2 = j.size();
             int i3 = 0;
             for (int i4 = 0; i4 < size2; i4++) {
@@ -336,8 +336,8 @@ public class FlowLayout extends ViewGroup {
         }
         this.config.c();
         this.lines.clear();
-        C3586a c3586a = new C3586a(i5, this.config);
-        this.lines.add(c3586a);
+        a aVar = new a(i5, this.config);
+        this.lines.add(aVar);
         int childCount = getChildCount();
         int i6 = 0;
         while (true) {
@@ -356,23 +356,23 @@ public class FlowLayout extends ViewGroup {
                     layoutParams.n(childAt.getMeasuredHeight());
                     layoutParams.p(childAt.getMeasuredWidth());
                 }
-                boolean z = layoutParams.a || !(mode == 0 || c3586a.e(childAt));
+                boolean z = layoutParams.a || !(mode == 0 || aVar.e(childAt));
                 if ((this.singleLine || this.showLineLimit <= this.lines.size()) && z) {
                     childAt.setVisibility(8);
                     break;
                 }
                 if (z) {
-                    c3586a = new C3586a(i5, this.config);
+                    aVar = new a(i5, this.config);
                     if (this.config.c() == 1 && this.config.b() == 1) {
-                        this.lines.add(0, c3586a);
+                        this.lines.add(0, aVar);
                     } else {
-                        this.lines.add(c3586a);
+                        this.lines.add(aVar);
                     }
                 }
                 if (this.config.c() == 0 && this.config.b() == 1) {
-                    c3586a.c(0, childAt);
+                    aVar.c(0, childAt);
                 }
-                c3586a.d(childAt);
+                aVar.d(childAt);
             }
             i6++;
         }
@@ -382,12 +382,12 @@ public class FlowLayout extends ViewGroup {
         for (int i8 = 0; i8 < size3; i8++) {
             i7 = Math.max(i7, this.lines.get(i8).f());
         }
-        int h = c3586a.h() + c3586a.i();
+        int h = aVar.h() + aVar.i();
         applyGravityToLines(this.lines, findSize(mode, i5, i7), findSize(mode2, size, h));
         for (int i9 = 0; i9 < size3; i9++) {
-            C3586a c3586a2 = this.lines.get(i9);
-            applyGravityToLine(c3586a2);
-            applyPositionsToViews(c3586a2);
+            a aVar2 = this.lines.get(i9);
+            applyGravityToLine(aVar2);
+            applyPositionsToViews(aVar2);
         }
         int paddingLeft = getPaddingLeft() + getPaddingRight();
         int paddingBottom = getPaddingBottom() + getPaddingTop();

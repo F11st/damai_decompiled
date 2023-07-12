@@ -53,9 +53,8 @@ public class PlatformManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.PlatformManager$b */
     /* loaded from: classes5.dex */
-    public static class C3151b {
+    public static class b {
         private IDeviceResolutionTranslator a;
         private IViewFinder b;
         private IViewUpdater c;
@@ -70,22 +69,22 @@ public class PlatformManager {
             return platformManager;
         }
 
-        public C3151b b(@NonNull IDeviceResolutionTranslator iDeviceResolutionTranslator) {
+        public b b(@NonNull IDeviceResolutionTranslator iDeviceResolutionTranslator) {
             this.a = iDeviceResolutionTranslator;
             return this;
         }
 
-        public C3151b c(@Nullable IScrollFactory iScrollFactory) {
+        public b c(@Nullable IScrollFactory iScrollFactory) {
             this.d = iScrollFactory;
             return this;
         }
 
-        public C3151b d(@NonNull IViewFinder iViewFinder) {
+        public b d(@NonNull IViewFinder iViewFinder) {
             this.b = iViewFinder;
             return this;
         }
 
-        public C3151b e(@NonNull IViewUpdater iViewUpdater) {
+        public b e(@NonNull IViewUpdater iViewUpdater) {
             this.c = iViewUpdater;
             return this;
         }

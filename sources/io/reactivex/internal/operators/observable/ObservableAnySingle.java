@@ -1,11 +1,11 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
-import io.reactivex.AbstractC8152e;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.SingleObserver;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.functions.Predicate;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.fuseable.FuseToObservable;
@@ -14,7 +14,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableAnySingle<T> extends AbstractC8152e<Boolean> implements FuseToObservable<Boolean> {
+public final class ObservableAnySingle<T> extends e<Boolean> implements FuseToObservable<Boolean> {
     final Predicate<? super T> predicate;
     final ObservableSource<T> source;
 
@@ -93,11 +93,11 @@ public final class ObservableAnySingle<T> extends AbstractC8152e<Boolean> implem
     }
 
     @Override // io.reactivex.internal.fuseable.FuseToObservable
-    public AbstractC8149d<Boolean> fuseToObservable() {
+    public d<Boolean> fuseToObservable() {
         return i42.n(new ObservableAny(this.source, this.predicate));
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super Boolean> singleObserver) {
         this.source.subscribe(new AnyObserver(singleObserver, this.predicate));
     }

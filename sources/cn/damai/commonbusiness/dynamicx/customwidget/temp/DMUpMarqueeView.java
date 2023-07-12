@@ -25,14 +25,13 @@ public class DMUpMarqueeView extends ViewFlipper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.temp.DMUpMarqueeView$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0672a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
         final /* synthetic */ List b;
 
-        View$OnClickListenerC0672a(int i, List list) {
+        a(int i, List list) {
             this.a = i;
             this.b = list;
         }
@@ -80,7 +79,7 @@ public class DMUpMarqueeView extends ViewFlipper {
         } else if (list != null && list.size() != 0) {
             removeAllViews();
             for (int i = 0; i < list.size(); i++) {
-                list.get(i).setOnClickListener(new View$OnClickListenerC0672a(i, list));
+                list.get(i).setOnClickListener(new a(i, list));
                 ViewGroup viewGroup = (ViewGroup) list.get(i).getParent();
                 if (viewGroup != null) {
                     viewGroup.removeAllViews();

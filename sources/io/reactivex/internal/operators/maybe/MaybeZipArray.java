@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8148c;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeSource;
+import io.reactivex.c;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -15,7 +15,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeZipArray<T, R> extends AbstractC8148c<R> {
+public final class MaybeZipArray<T, R> extends c<R> {
     final MaybeSource<? extends T>[] sources;
     final Function<? super Object[], ? extends R> zipper;
 
@@ -155,7 +155,7 @@ public final class MaybeZipArray<T, R> extends AbstractC8148c<R> {
         this.zipper = function;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super R> maybeObserver) {
         MaybeSource<? extends T>[] maybeSourceArr = this.sources;
         int length = maybeSourceArr.length;

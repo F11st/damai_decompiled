@@ -77,7 +77,7 @@ public class PickRotateTipsView extends PopupWindow implements View.OnClickListe
             ipChange.ipc$dispatch("760597205", new Object[]{this, context});
             return;
         }
-        View inflate = LayoutInflater.from(context).inflate(R.C7935layout.dago_pick_rotate_tips, (ViewGroup) null);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.dago_pick_rotate_tips, (ViewGroup) null);
         inflate.measure(0, 0);
         setContentView(inflate);
         setWidth(-1);

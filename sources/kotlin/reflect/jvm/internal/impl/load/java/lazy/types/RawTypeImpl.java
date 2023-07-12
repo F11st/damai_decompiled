@@ -8,8 +8,8 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.Pair;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
@@ -50,7 +50,7 @@ public final class RawTypeImpl extends ak0 implements RawType {
     private static final List<String> q(DescriptorRenderer descriptorRenderer, z71 z71Var) {
         int q;
         List<TypeProjection> b = z71Var.b();
-        q = C8215n.q(b, 10);
+        q = n.q(b, 10);
         ArrayList arrayList = new ArrayList(q);
         for (TypeProjection typeProjection : b) {
             arrayList.add(descriptorRenderer.h(typeProjection));

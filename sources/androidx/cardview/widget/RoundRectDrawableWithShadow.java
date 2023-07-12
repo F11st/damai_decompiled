@@ -46,8 +46,8 @@ class RoundRectDrawableWithShadow extends Drawable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public RoundRectDrawableWithShadow(Resources resources, ColorStateList colorStateList, float f, float f2, float f3) {
-        this.mShadowStartColor = resources.getColor(R.C0023color.cardview_shadow_start_color);
-        this.mShadowEndColor = resources.getColor(R.C0023color.cardview_shadow_end_color);
+        this.mShadowStartColor = resources.getColor(R.color.cardview_shadow_start_color);
+        this.mShadowEndColor = resources.getColor(R.color.cardview_shadow_end_color);
         this.mInsetShadow = resources.getDimensionPixelSize(R.dimen.cardview_compat_inset_shadow);
         setBackground(colorStateList);
         Paint paint = new Paint(5);

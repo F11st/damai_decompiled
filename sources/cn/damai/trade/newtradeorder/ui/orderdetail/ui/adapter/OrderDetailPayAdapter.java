@@ -12,9 +12,8 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.trade.R$color;
 import cn.damai.trade.R$drawable;
 import cn.damai.trade.R$id;
@@ -27,8 +26,8 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 import java.util.List;
-import tb.C9826vr;
 import tb.pp2;
+import tb.vr;
 import tb.wh2;
 import tb.z20;
 
@@ -40,7 +39,7 @@ public class OrderDetailPayAdapter extends RecyclerView.Adapter<PayViewHolder> {
     private Context b;
     private OrderDetailPayViewModel c;
     private String d;
-    private View.OnClickListener e = new View$OnClickListenerC2186a();
+    private View.OnClickListener e = new a();
     DMIconFontTextView f;
     OrderDetailPayInfo g;
 
@@ -67,12 +66,11 @@ public class OrderDetailPayAdapter extends RecyclerView.Adapter<PayViewHolder> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.adapter.OrderDetailPayAdapter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2186a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2186a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -87,7 +85,7 @@ public class OrderDetailPayAdapter extends RecyclerView.Adapter<PayViewHolder> {
                 return;
             }
             if (OrderDetailPayAdapter.this.c.isCoupon()) {
-                C0529c.e().x(pp2.u().r(orderDetailPayInfo.payName, orderDetailPayInfo.mDemoIndex, OrderDetailPayAdapter.this.c.getProjectId(), OrderDetailPayAdapter.this.c.getOrderId()));
+                c.e().x(pp2.u().r(orderDetailPayInfo.payName, orderDetailPayInfo.mDemoIndex, OrderDetailPayAdapter.this.c.getProjectId(), OrderDetailPayAdapter.this.c.getOrderId()));
             }
             OrderDetailPayInfo orderDetailPayInfo2 = OrderDetailPayAdapter.this.g;
             if (orderDetailPayInfo2 != null) {
@@ -146,7 +144,7 @@ public class OrderDetailPayAdapter extends RecyclerView.Adapter<PayViewHolder> {
         hashMap.put("orderid", str);
         hashMap.put("item_id", str3);
         hashMap.put("titlelabel", str2);
-        C0529c e = C0529c.e();
+        c e = c.e();
         e.G(view, "bottom", "pay_" + i, pp2.PROJECT_SCRIPTKILL_ORDRR_DETAILS_PAGE, hashMap);
     }
 
@@ -161,7 +159,7 @@ public class OrderDetailPayAdapter extends RecyclerView.Adapter<PayViewHolder> {
         hashMap.put("orderid", str);
         hashMap.put("titlelabel", str2);
         hashMap.put("discount_name", str3);
-        C0529c e = C0529c.e();
+        c e = c.e();
         e.G(view, "item_" + i, "order_info", pp2.ORDER_DETAL_PAGE, hashMap);
     }
 
@@ -188,10 +186,10 @@ public class OrderDetailPayAdapter extends RecyclerView.Adapter<PayViewHolder> {
         if (orderDetailPayInfo == null) {
             return;
         }
-        if (payViewHolder.b.getTag() instanceof C9826vr) {
-            ((C9826vr) payViewHolder.b.getTag()).cancel();
+        if (payViewHolder.b.getTag() instanceof vr) {
+            ((vr) payViewHolder.b.getTag()).cancel();
         }
-        DMImageCreator c = C0504a.b().c(orderDetailPayInfo.iconUrl);
+        DMImageCreator c = cn.damai.common.image.a.b().c(orderDetailPayInfo.iconUrl);
         int i2 = R$drawable.uikit_user_default_icon;
         payViewHolder.b.setTag(c.i(i2).c(i2).g(payViewHolder.b));
         if (this.c.isCoupon()) {

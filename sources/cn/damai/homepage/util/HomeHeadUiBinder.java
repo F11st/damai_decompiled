@@ -23,7 +23,7 @@ import com.youku.arch.v3.event.RefreshEvent;
 import com.youku.kubus.Event;
 import java.util.HashMap;
 import java.util.Map;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -125,13 +125,13 @@ public final class HomeHeadUiBinder extends RecyclerView.OnScrollListener {
             }
         } else if (stateAtmo == null || (state = stateAtmo.getState()) == null) {
         } else {
-            State.C3462a c3462a = State.Companion;
-            z = (!c3462a.a(state) || (c = r8.INSTANCE.c()) == -10000 || c < -50) ? false : false;
+            State.a aVar = State.Companion;
+            z = (!aVar.a(state) || (c = r8.INSTANCE.c()) == -10000 || c < -50) ? false : false;
             HomePageGuideBar homePageGuideBar2 = this.b;
             if (homePageGuideBar2 != null && !b41.d(homePageGuideBar2.isInTransBgState(), Boolean.valueOf(z))) {
                 homePageGuideBar2.showTransBg(z);
             }
-            if (!c3462a.a(state)) {
+            if (!aVar.a(state)) {
                 int a = AttachFrameLayout.Companion.a();
                 if (a == -10000 || (i = -a) < 0) {
                     i = 0;
@@ -243,7 +243,7 @@ public final class HomeHeadUiBinder extends RecyclerView.OnScrollListener {
                     Object obj7 = ((Map) obj).get("newState");
                     if (obj7 instanceof RefreshState) {
                         j(this, "refresh state " + ((RefreshState) obj7).name(), null, 2, null);
-                        F = C8604o.F(((RefreshState) obj7).name(), "PullDown", false, 2, null);
+                        F = o.F(((RefreshState) obj7).name(), "PullDown", false, 2, null);
                         if (F) {
                             this.i = true;
                             View view2 = this.e;

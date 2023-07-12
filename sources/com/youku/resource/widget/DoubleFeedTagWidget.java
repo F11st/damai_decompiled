@@ -202,7 +202,7 @@ public class DoubleFeedTagWidget extends View implements ICssSetter2 {
         height = i;
         baseline = (i / 2) + f3;
         initIconRect();
-        mBgColor = getResources().getColor(R.C8071color.ykn_primary_fill_color);
+        mBgColor = getResources().getColor(R.color.ykn_primary_fill_color);
     }
 
     private TextPaint initTitlePaint() {
@@ -217,17 +217,17 @@ public class DoubleFeedTagWidget extends View implements ICssSetter2 {
     }
 
     private void initValues(@NonNull Context context, AttributeSet attributeSet) {
-        if (sDefaultTitleTextSize <= 0 || sDefaultTitleTextColor != getResources().getColor(R.C8071color.ykn_primary_info)) {
+        if (sDefaultTitleTextSize <= 0 || sDefaultTitleTextColor != getResources().getColor(R.color.ykn_primary_info)) {
             Resources resources = context.getResources();
             int i = R.dimen.resource_size_12;
             sDefaultTitleTextSize = resources.getDimensionPixelSize(i);
-            sDefaultTitleTextColor = resources.getColor(R.C8071color.ykn_primary_info);
+            sDefaultTitleTextColor = resources.getColor(R.color.ykn_primary_info);
             sDefaultPadding = resources.getDimensionPixelOffset(i);
             int dimensionPixelSize = resources.getDimensionPixelSize(R.dimen.resource_size_21);
             imageHeight = dimensionPixelSize;
             imageWidth = dimensionPixelSize;
             textXOffset = resources.getDimensionPixelSize(R.dimen.resource_size_24);
-            arrowDrawable = getResources().getDrawable(R.C8072drawable.double_feed_tag_arrow);
+            arrowDrawable = getResources().getDrawable(R.drawable.double_feed_tag_arrow);
         }
     }
 

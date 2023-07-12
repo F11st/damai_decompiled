@@ -20,36 +20,34 @@ import tb.du1;
 /* compiled from: Taobao */
 @GwtCompatible(emulated = true)
 /* loaded from: classes10.dex */
-public abstract class AbstractMapBasedMultiset<E> extends AbstractC5165d<E> implements Serializable {
+public abstract class AbstractMapBasedMultiset<E> extends d<E> implements Serializable {
     @GwtIncompatible
     private static final long serialVersionUID = 0;
-    transient C5163c0<E> backingMap;
+    transient c0<E> backingMap;
     transient long size;
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.AbstractMapBasedMultiset$a */
     /* loaded from: classes10.dex */
-    class C4920a extends AbstractMapBasedMultiset<E>.AbstractC4922c<E> {
-        C4920a() {
+    class a extends AbstractMapBasedMultiset<E>.c<E> {
+        a() {
             super();
         }
 
-        @Override // com.google.common.collect.AbstractMapBasedMultiset.AbstractC4922c
+        @Override // com.google.common.collect.AbstractMapBasedMultiset.c
         E b(int i) {
             return AbstractMapBasedMultiset.this.backingMap.i(i);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.AbstractMapBasedMultiset$b */
     /* loaded from: classes10.dex */
-    class C4921b extends AbstractMapBasedMultiset<E>.AbstractC4922c<Multiset.Entry<E>> {
-        C4921b() {
+    class b extends AbstractMapBasedMultiset<E>.c<Multiset.Entry<E>> {
+        b() {
             super();
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.AbstractMapBasedMultiset.AbstractC4922c
+        @Override // com.google.common.collect.AbstractMapBasedMultiset.c
         /* renamed from: c */
         public Multiset.Entry<E> b(int i) {
             return AbstractMapBasedMultiset.this.backingMap.g(i);
@@ -57,14 +55,13 @@ public abstract class AbstractMapBasedMultiset<E> extends AbstractC5165d<E> impl
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.AbstractMapBasedMultiset$c */
     /* loaded from: classes10.dex */
-    abstract class AbstractC4922c<T> implements Iterator<T> {
+    abstract class c<T> implements Iterator<T> {
         int a;
         int b = -1;
         int c;
 
-        AbstractC4922c() {
+        c() {
             this.a = AbstractMapBasedMultiset.this.backingMap.e();
             this.c = AbstractMapBasedMultiset.this.backingMap.d;
         }
@@ -99,7 +96,7 @@ public abstract class AbstractMapBasedMultiset<E> extends AbstractC5165d<E> impl
         public void remove() {
             AbstractMapBasedMultiset abstractMapBasedMultiset;
             a();
-            C5191k.e(this.b != -1);
+            k.e(this.b != -1);
             AbstractMapBasedMultiset.this.size -= abstractMapBasedMultiset.backingMap.x(this.b);
             this.a = AbstractMapBasedMultiset.this.backingMap.t(this.a, this.b);
             this.b = -1;
@@ -115,18 +112,18 @@ public abstract class AbstractMapBasedMultiset<E> extends AbstractC5165d<E> impl
     @GwtIncompatible
     private void readObject(ObjectInputStream objectInputStream) throws IOException, ClassNotFoundException {
         objectInputStream.defaultReadObject();
-        int h = C5174f0.h(objectInputStream);
+        int h = f0.h(objectInputStream);
         init(3);
-        C5174f0.g(this, objectInputStream, h);
+        f0.g(this, objectInputStream, h);
     }
 
     @GwtIncompatible
     private void writeObject(ObjectOutputStream objectOutputStream) throws IOException {
         objectOutputStream.defaultWriteObject();
-        C5174f0.k(this, objectOutputStream);
+        f0.k(this, objectOutputStream);
     }
 
-    @Override // com.google.common.collect.AbstractC5165d, com.google.common.collect.Multiset
+    @Override // com.google.common.collect.d, com.google.common.collect.Multiset
     @CanIgnoreReturnValue
     public final int add(@NullableDecl E e, int i) {
         if (i == 0) {
@@ -158,7 +155,7 @@ public abstract class AbstractMapBasedMultiset<E> extends AbstractC5165d<E> impl
         }
     }
 
-    @Override // com.google.common.collect.AbstractC5165d, java.util.AbstractCollection, java.util.Collection
+    @Override // com.google.common.collect.d, java.util.AbstractCollection, java.util.Collection
     public final void clear() {
         this.backingMap.a();
         this.size = 0L;
@@ -169,20 +166,19 @@ public abstract class AbstractMapBasedMultiset<E> extends AbstractC5165d<E> impl
         return this.backingMap.f(obj);
     }
 
-    @Override // com.google.common.collect.AbstractC5165d
+    @Override // com.google.common.collect.d
     final int distinctElements() {
         return this.backingMap.C();
     }
 
-    @Override // com.google.common.collect.AbstractC5165d
+    @Override // com.google.common.collect.d
     final Iterator<E> elementIterator() {
-        return new C4920a();
+        return new a();
     }
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    @Override // com.google.common.collect.AbstractC5165d
-    public final Iterator<Multiset.Entry<E>> entryIterator() {
-        return new C4921b();
+    @Override // com.google.common.collect.d
+    final Iterator<Multiset.Entry<E>> entryIterator() {
+        return new b();
     }
 
     abstract void init(int i);
@@ -192,7 +188,7 @@ public abstract class AbstractMapBasedMultiset<E> extends AbstractC5165d<E> impl
         return Multisets.i(this);
     }
 
-    @Override // com.google.common.collect.AbstractC5165d, com.google.common.collect.Multiset
+    @Override // com.google.common.collect.d, com.google.common.collect.Multiset
     @CanIgnoreReturnValue
     public final int remove(@NullableDecl Object obj, int i) {
         if (i == 0) {
@@ -214,12 +210,12 @@ public abstract class AbstractMapBasedMultiset<E> extends AbstractC5165d<E> impl
         return k;
     }
 
-    @Override // com.google.common.collect.AbstractC5165d, com.google.common.collect.Multiset
+    @Override // com.google.common.collect.d, com.google.common.collect.Multiset
     @CanIgnoreReturnValue
     public final int setCount(@NullableDecl E e, int i) {
-        C5191k.b(i, AdUtConstants.XAD_UT_ARG_COUNT);
-        C5163c0<E> c5163c0 = this.backingMap;
-        int v = i == 0 ? c5163c0.v(e) : c5163c0.u(e, i);
+        k.b(i, AdUtConstants.XAD_UT_ARG_COUNT);
+        c0<E> c0Var = this.backingMap;
+        int v = i == 0 ? c0Var.v(e) : c0Var.u(e, i);
         this.size += i - v;
         return v;
     }
@@ -229,10 +225,10 @@ public abstract class AbstractMapBasedMultiset<E> extends AbstractC5165d<E> impl
         return Ints.j(this.size);
     }
 
-    @Override // com.google.common.collect.AbstractC5165d, com.google.common.collect.Multiset
+    @Override // com.google.common.collect.d, com.google.common.collect.Multiset
     public final boolean setCount(@NullableDecl E e, int i, int i2) {
-        C5191k.b(i, "oldCount");
-        C5191k.b(i2, "newCount");
+        k.b(i, "oldCount");
+        k.b(i2, "newCount");
         int m = this.backingMap.m(e);
         if (m == -1) {
             if (i != 0) {

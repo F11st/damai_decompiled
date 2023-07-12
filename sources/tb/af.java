@@ -13,20 +13,19 @@ public final class af implements Comparable<af> {
     public static final int CACHE_CACHE_VALID = 1;
     public static final int CACHE_NO_CACHE = 0;
     @NotNull
-    public static final C8910a Companion = new C8910a(null);
+    public static final a Companion = new a(null);
     private int a;
     private long b;
     @Nullable
     private String c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.af$a */
     /* loaded from: classes7.dex */
-    public static final class C8910a {
-        private C8910a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8910a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

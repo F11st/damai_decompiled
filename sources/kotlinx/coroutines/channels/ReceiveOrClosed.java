@@ -17,5 +17,5 @@ public interface ReceiveOrClosed<E> {
     Object getOfferResult();
 
     @Nullable
-    kj2 tryResumeReceive(E e, @Nullable ma1.C9437d c9437d);
+    kj2 tryResumeReceive(E e, @Nullable ma1.d dVar);
 }

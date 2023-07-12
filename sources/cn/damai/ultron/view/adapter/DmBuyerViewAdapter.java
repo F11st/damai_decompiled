@@ -10,7 +10,7 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.ultron.R$id;
 import cn.damai.ultron.R$layout;
@@ -59,13 +59,12 @@ public class DmBuyerViewAdapter extends RecyclerView.Adapter<PurchaseViewHolder>
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.view.adapter.DmBuyerViewAdapter$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2656a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ PurchaseViewHolder a;
 
-        View$OnClickListenerC2656a(DmBuyerViewAdapter dmBuyerViewAdapter, PurchaseViewHolder purchaseViewHolder) {
+        a(DmBuyerViewAdapter dmBuyerViewAdapter, PurchaseViewHolder purchaseViewHolder) {
             this.a = purchaseViewHolder;
         }
 
@@ -82,12 +81,11 @@ public class DmBuyerViewAdapter extends RecyclerView.Adapter<PurchaseViewHolder>
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.view.adapter.DmBuyerViewAdapter$b */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2657b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2657b(DmBuyerViewAdapter dmBuyerViewAdapter) {
+        b(DmBuyerViewAdapter dmBuyerViewAdapter) {
         }
 
         @Override // android.view.View.OnClickListener
@@ -131,7 +129,7 @@ public class DmBuyerViewAdapter extends RecyclerView.Adapter<PurchaseViewHolder>
             } else if (this.g.containsKey(dmViewerBean.viewerId)) {
                 this.g.remove(dmViewerBean.viewerId);
             }
-            purchaseViewHolder.a.setOnClickListener(new View$OnClickListenerC2656a(this, purchaseViewHolder));
+            purchaseViewHolder.a.setOnClickListener(new a(this, purchaseViewHolder));
             purchaseViewHolder.b.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() { // from class: cn.damai.ultron.view.adapter.DmBuyerViewAdapter.2
                 private static transient /* synthetic */ IpChange $ipChange;
 
@@ -153,7 +151,7 @@ public class DmBuyerViewAdapter extends RecyclerView.Adapter<PurchaseViewHolder>
                             }
                         }
                     } else if (DmBuyerViewAdapter.this.g.size() <= DmBuyerViewAdapter.this.f - 1) {
-                        C0529c.e().x(kb0.u().p(DmBuyerViewAdapter.this.a, i, z));
+                        c.e().x(kb0.u().p(DmBuyerViewAdapter.this.a, i, z));
                         DmViewerBean dmViewerBean3 = dmViewerBean;
                         dmViewerBean3.isUsed = "true";
                         DmBuyerViewAdapter.this.g.put(dmViewerBean3.viewerId, dmViewerBean3);
@@ -187,7 +185,7 @@ public class DmBuyerViewAdapter extends RecyclerView.Adapter<PurchaseViewHolder>
             } else if (this.g.containsKey(dmViewerBean.viewerId)) {
                 this.g.remove(dmViewerBean.viewerId);
             }
-            purchaseViewHolder.a.setOnClickListener(new View$OnClickListenerC2657b(this));
+            purchaseViewHolder.a.setOnClickListener(new b(this));
         }
         if (this.g.size() == this.f) {
             this.d.g(this.g);

@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.internal.subscriptions.EmptySubscription;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -99,12 +99,12 @@ public final class FlowableTake<T> extends AbstractFlowableWithUpstream<T, T> {
         }
     }
 
-    public FlowableTake(AbstractC8147b<T> abstractC8147b, long j) {
-        super(abstractC8147b);
+    public FlowableTake(b<T> bVar, long j) {
+        super(bVar);
         this.limit = j;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new TakeSubscriber(subscriber, this.limit));
     }

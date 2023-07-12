@@ -14,9 +14,8 @@ public final class zr {
     public static final zr INSTANCE = new zr();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.zr$a */
     /* loaded from: classes4.dex */
-    public static final class C10032a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
         @Nullable
         private String a;
@@ -39,10 +38,10 @@ public final class zr {
         private boolean j;
 
         @NotNull
-        public final C10032a a(@Nullable String str) {
+        public final a a(@Nullable String str) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1996708533")) {
-                return (C10032a) ipChange.ipc$dispatch("-1996708533", new Object[]{this, str});
+                return (a) ipChange.ipc$dispatch("-1996708533", new Object[]{this, str});
             }
             this.a = str;
             return this;
@@ -61,7 +60,7 @@ public final class zr {
         public final void b() {
             /*
                 r5 = this;
-                com.android.alibaba.ip.runtime.IpChange r0 = tb.zr.C10032a.$ipChange
+                com.android.alibaba.ip.runtime.IpChange r0 = tb.zr.a.$ipChange
                 java.lang.String r1 = "472031520"
                 boolean r2 = com.android.alibaba.ip.runtime.AndroidInstantRuntime.support(r0, r1)
                 if (r2 == 0) goto L14
@@ -137,84 +136,84 @@ public final class zr {
             La3:
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.zr.C10032a.b():void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.zr.a.b():void");
         }
 
         @NotNull
-        public final C10032a c(@Nullable String str) {
+        public final a c(@Nullable String str) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-331536101")) {
-                return (C10032a) ipChange.ipc$dispatch("-331536101", new Object[]{this, str});
+                return (a) ipChange.ipc$dispatch("-331536101", new Object[]{this, str});
             }
             this.e = str;
             return this;
         }
 
         @NotNull
-        public final C10032a d(@Nullable String str) {
+        public final a d(@Nullable String str) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1719962779")) {
-                return (C10032a) ipChange.ipc$dispatch("1719962779", new Object[]{this, str});
+                return (a) ipChange.ipc$dispatch("1719962779", new Object[]{this, str});
             }
             this.f = str;
             return this;
         }
 
         @NotNull
-        public final C10032a e(@Nullable Map<String, String> map) {
+        public final a e(@Nullable Map<String, String> map) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-974690911")) {
-                return (C10032a) ipChange.ipc$dispatch("-974690911", new Object[]{this, map});
+                return (a) ipChange.ipc$dispatch("-974690911", new Object[]{this, map});
             }
             this.g = map;
             return this;
         }
 
         @NotNull
-        public final C10032a f(boolean z) {
+        public final a f(boolean z) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1718514345")) {
-                return (C10032a) ipChange.ipc$dispatch("1718514345", new Object[]{this, Boolean.valueOf(z)});
+                return (a) ipChange.ipc$dispatch("1718514345", new Object[]{this, Boolean.valueOf(z)});
             }
             this.j = z;
             return this;
         }
 
         @NotNull
-        public final C10032a g(@Nullable String str) {
+        public final a g(@Nullable String str) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "728906157")) {
-                return (C10032a) ipChange.ipc$dispatch("728906157", new Object[]{this, str});
+                return (a) ipChange.ipc$dispatch("728906157", new Object[]{this, str});
             }
             this.d = str;
             return this;
         }
 
         @NotNull
-        public final C10032a h(@Nullable String str) {
+        public final a h(@Nullable String str) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1040452033")) {
-                return (C10032a) ipChange.ipc$dispatch("1040452033", new Object[]{this, str});
+                return (a) ipChange.ipc$dispatch("1040452033", new Object[]{this, str});
             }
             this.h = str;
             return this;
         }
 
         @NotNull
-        public final C10032a i(@Nullable String str) {
+        public final a i(@Nullable String str) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1027414422")) {
-                return (C10032a) ipChange.ipc$dispatch("-1027414422", new Object[]{this, str});
+                return (a) ipChange.ipc$dispatch("-1027414422", new Object[]{this, str});
             }
             this.i = str;
             return this;
         }
 
         @NotNull
-        public final C10032a j(@Nullable String str) {
+        public final a j(@Nullable String str) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "717991540")) {
-                return (C10032a) ipChange.ipc$dispatch("717991540", new Object[]{this, str});
+                return (a) ipChange.ipc$dispatch("717991540", new Object[]{this, str});
             }
             this.b = str;
             return this;
@@ -225,8 +224,8 @@ public final class zr {
     }
 
     @NotNull
-    public final C10032a a() {
+    public final a a() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1375842605") ? (C10032a) ipChange.ipc$dispatch("-1375842605", new Object[]{this}) : new C10032a();
+        return AndroidInstantRuntime.support(ipChange, "-1375842605") ? (a) ipChange.ipc$dispatch("-1375842605", new Object[]{this}) : new a();
     }
 }

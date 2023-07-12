@@ -32,25 +32,25 @@ public class BigGiftNumLayout extends LinearLayout {
         }
         switch (ParseUtils.parse2Int(str)) {
             case 0:
-                return R.C7941drawable.dago_pgc_frameanim_count_num0;
+                return R.drawable.dago_pgc_frameanim_count_num0;
             case 1:
-                return R.C7941drawable.dago_pgc_frameanim_count_num1;
+                return R.drawable.dago_pgc_frameanim_count_num1;
             case 2:
-                return R.C7941drawable.dago_pgc_frameanim_count_num2;
+                return R.drawable.dago_pgc_frameanim_count_num2;
             case 3:
-                return R.C7941drawable.dago_pgc_frameanim_count_num3;
+                return R.drawable.dago_pgc_frameanim_count_num3;
             case 4:
-                return R.C7941drawable.dago_pgc_frameanim_count_num4;
+                return R.drawable.dago_pgc_frameanim_count_num4;
             case 5:
-                return R.C7941drawable.dago_pgc_frameanim_count_num5;
+                return R.drawable.dago_pgc_frameanim_count_num5;
             case 6:
-                return R.C7941drawable.dago_pgc_frameanim_count_num6;
+                return R.drawable.dago_pgc_frameanim_count_num6;
             case 7:
-                return R.C7941drawable.dago_pgc_frameanim_count_num7;
+                return R.drawable.dago_pgc_frameanim_count_num7;
             case 8:
-                return R.C7941drawable.dago_pgc_frameanim_count_num8;
+                return R.drawable.dago_pgc_frameanim_count_num8;
             case 9:
-                return R.C7941drawable.dago_pgc_frameanim_count_num9;
+                return R.drawable.dago_pgc_frameanim_count_num9;
             default:
                 return -1;
         }
@@ -87,7 +87,7 @@ public class BigGiftNumLayout extends LinearLayout {
     public BigGiftNumLayout(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         setOrientation(0);
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_big_gift_num_layout, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_big_gift_num_layout, (ViewGroup) this, true);
         this.mNumGroup = (LinearLayout) findViewById(R.id.id_num_group);
     }
 }

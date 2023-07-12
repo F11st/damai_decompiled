@@ -28,7 +28,7 @@ public class HeaderSpan extends ReplacementSpan {
         }
         BitmapDrawable bitmapDrawable = this.mSrcDrawable;
         if (bitmapDrawable == null || bitmapDrawable.getBitmap() == null || this.mSrcDrawable.getBitmap().isRecycled()) {
-            this.mSrcDrawable = (BitmapDrawable) AppContextUtils.getApp().getResources().getDrawable(R.C7941drawable.dago_pgc_header_default);
+            this.mSrcDrawable = (BitmapDrawable) AppContextUtils.getApp().getResources().getDrawable(R.drawable.dago_pgc_header_default);
         }
         BitmapDrawable bitmapDrawable2 = this.mSrcDrawable;
         int i6 = (int) f;

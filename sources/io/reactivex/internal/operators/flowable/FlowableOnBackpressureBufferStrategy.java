@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.BackpressureOverflowStrategy;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.functions.Action;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
@@ -320,14 +320,14 @@ public final class FlowableOnBackpressureBufferStrategy<T> extends AbstractFlowa
         }
     }
 
-    public FlowableOnBackpressureBufferStrategy(AbstractC8147b<T> abstractC8147b, long j, Action action, BackpressureOverflowStrategy backpressureOverflowStrategy) {
-        super(abstractC8147b);
+    public FlowableOnBackpressureBufferStrategy(b<T> bVar, long j, Action action, BackpressureOverflowStrategy backpressureOverflowStrategy) {
+        super(bVar);
         this.bufferSize = j;
         this.onOverflow = action;
         this.strategy = backpressureOverflowStrategy;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new OnBackpressureBufferStrategySubscriber(subscriber, this.onOverflow, this.strategy, this.bufferSize));
     }

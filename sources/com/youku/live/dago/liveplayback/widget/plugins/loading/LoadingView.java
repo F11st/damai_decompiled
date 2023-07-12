@@ -27,7 +27,7 @@ public class LoadingView extends LazyInflatedView {
     private TextView mTextView;
 
     public LoadingView(Context context, ILMLayerManager<ViewGroup> iLMLayerManager, String str) {
-        super(context, iLMLayerManager, str, R.C7935layout.dago_loading_view);
+        super(context, iLMLayerManager, str, R.layout.dago_loading_view);
         this.mHandler = new Handler(Looper.getMainLooper());
         this.mStartLoadingRunnable = new Runnable() { // from class: com.youku.live.dago.liveplayback.widget.plugins.loading.LoadingView.1
             private static transient /* synthetic */ IpChange $ipChange;

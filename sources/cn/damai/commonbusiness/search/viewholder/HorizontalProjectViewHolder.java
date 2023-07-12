@@ -6,8 +6,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
@@ -46,7 +46,7 @@ public class HorizontalProjectViewHolder extends RecyclerView.ViewHolder {
         } else {
             e(this.c, "价格待定");
         }
-        DMImageCreator c = C0504a.b().c(str4);
+        DMImageCreator c = a.b().c(str4);
         int i = R$drawable.uikit_default_image_bg_gradient;
         c.i(i).c(i).g(this.d);
     }

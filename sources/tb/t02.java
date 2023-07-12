@@ -2,9 +2,7 @@ package tb;
 
 import kotlin.reflect.jvm.internal.impl.descriptors.runtime.structure.ReflectClassUtilKt;
 import kotlin.reflect.jvm.internal.impl.load.kotlin.KotlinJvmBinaryClass;
-import kotlin.reflect.jvm.internal.impl.load.kotlin.header.C8379a;
 import kotlin.reflect.jvm.internal.impl.load.kotlin.header.KotlinClassHeader;
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -12,29 +10,28 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public final class t02 implements KotlinJvmBinaryClass {
     @NotNull
-    public static final C9704a Factory = new C9704a(null);
+    public static final a Factory = new a(null);
     @NotNull
     private final Class<?> a;
     @NotNull
     private final KotlinClassHeader b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.t02$a */
     /* loaded from: classes3.dex */
-    public static final class C9704a {
-        private C9704a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9704a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
         @Nullable
         public final t02 a(@NotNull Class<?> cls) {
             b41.i(cls, "klass");
-            C8379a c8379a = new C8379a();
-            uz1.INSTANCE.b(cls, c8379a);
-            KotlinClassHeader i = c8379a.i();
+            kotlin.reflect.jvm.internal.impl.load.kotlin.header.a aVar = new kotlin.reflect.jvm.internal.impl.load.kotlin.header.a();
+            uz1.INSTANCE.b(cls, aVar);
+            KotlinClassHeader i = aVar.i();
             if (i == null) {
                 return null;
             }
@@ -78,7 +75,7 @@ public final class t02 implements KotlinJvmBinaryClass {
         String y;
         String name = this.a.getName();
         b41.h(name, "klass.name");
-        y = C8604o.y(name, '.', r10.DIR, false, 4, null);
+        y = kotlin.text.o.y(name, '.', r10.DIR, false, 4, null);
         return b41.r(y, ".class");
     }
 

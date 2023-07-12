@@ -13,7 +13,6 @@ import android.os.SystemClock;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import androidx.core.view.MotionEventCompat;
-import com.alipay.sdk.m.u.C4300c;
 import com.youku.playerservice.axp.utils.Utils;
 import java.util.Random;
 import org.json.JSONObject;
@@ -81,7 +80,7 @@ public final class kc {
     }
 
     public static boolean a(String str) {
-        return (TextUtils.isEmpty(str) || C4300c.b.equals(str) || str.contains(" :")) ? false : true;
+        return (TextUtils.isEmpty(str) || com.alipay.sdk.m.u.c.b.equals(str) || str.contains(" :")) ? false : true;
     }
 
     public static boolean a(JSONObject jSONObject, String str) {
@@ -198,7 +197,7 @@ public final class kc {
                 return null;
             }
             try {
-                packageInfo = context.getPackageManager().getPackageInfo(C4554gc.c(context), 64);
+                packageInfo = context.getPackageManager().getPackageInfo(gc.c(context), 64);
             } catch (Throwable th) {
                 jy.a(th, Utils.TAG, "getAppName part");
                 packageInfo = null;
@@ -221,7 +220,7 @@ public final class kc {
                     sb.append(packageInfo.versionName);
                 }
             }
-            String c2 = C4554gc.c(context);
+            String c2 = gc.c(context);
             if (!TextUtils.isEmpty(c2)) {
                 sb.append(",");
                 sb.append(c2);
@@ -358,8 +357,8 @@ public final class kc {
     public static String d(Context context) {
         String n = gg.n(context);
         boolean isEmpty = TextUtils.isEmpty(n);
-        String str = C4300c.b;
-        if (isEmpty || n.equals(C4300c.b)) {
+        String str = com.alipay.sdk.m.u.c.b;
+        if (isEmpty || n.equals(com.alipay.sdk.m.u.c.b)) {
             n = kb.a(context);
         }
         if (!TextUtils.isEmpty(n)) {

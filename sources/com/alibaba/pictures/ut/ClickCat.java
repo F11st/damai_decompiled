@@ -7,8 +7,8 @@ import com.ut.mini.UTAnalytics;
 import com.ut.mini.UTHitBuilders;
 import java.util.HashMap;
 import java.util.Map;
-import kotlin.C8177b;
 import kotlin.Lazy;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -31,14 +31,13 @@ public final class ClickCat {
     private final View h;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.ut.ClickCat$a */
     /* loaded from: classes8.dex */
-    public static final class C3647a extends View.AccessibilityDelegate {
+    public static final class a extends View.AccessibilityDelegate {
         private static transient /* synthetic */ IpChange $ipChange;
         @NotNull
         private ClickCat a;
 
-        public C3647a(@NotNull ClickCat clickCat) {
+        public a(@NotNull ClickCat clickCat) {
             b41.i(clickCat, "clickCat");
             this.a = clickCat;
         }
@@ -133,7 +132,7 @@ public final class ClickCat {
     public ClickCat(@Nullable View view) {
         Lazy b;
         this.h = view;
-        b = C8177b.b(new Function0<HashMap<String, String>>() { // from class: com.alibaba.pictures.ut.ClickCat$params$2
+        b = b.b(new Function0<HashMap<String, String>>() { // from class: com.alibaba.pictures.ut.ClickCat$params$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // kotlin.jvm.functions.Function0
@@ -158,16 +157,16 @@ public final class ClickCat {
             ipChange.ipc$dispatch("1247353219", new Object[]{this});
             return;
         }
-        C3647a c3647a = new C3647a(this);
+        a aVar = new a(this);
         View view = this.h;
         if (view == null) {
-            c3647a.a();
+            aVar.a();
             return;
         }
         if (!view.isClickable()) {
             this.h.setClickable(true);
         }
-        this.h.setAccessibilityDelegate(c3647a);
+        this.h.setAccessibilityDelegate(aVar);
     }
 
     @NotNull

@@ -21,9 +21,8 @@ public class gf {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.gf$a */
     /* loaded from: classes10.dex */
-    public static class C4564a {
+    public static class a {
         String a;
         String b;
         String c;
@@ -50,16 +49,16 @@ public class gf {
         String x;
         String y;
 
-        private C4564a() {
+        private a() {
         }
     }
 
     public static String a(Context context, String str, String str2) {
         try {
-            String e = C4554gc.e(context);
+            String e = gc.e(context);
             return gk.b(e + ":" + str.substring(0, str.length() - 3) + ":" + str2);
         } catch (Throwable th) {
-            C4573ha.a(th, "CI", "Sco");
+            ha.a(th, "CI", "Sco");
             return null;
         }
     }
@@ -73,9 +72,9 @@ public class gf {
         if (bArr.length > 117) {
             byte[] bArr2 = new byte[117];
             System.arraycopy(bArr, 0, bArr2, 0, 117);
-            byte[] a = gh.a(bArr2, d);
+            byte[] a2 = gh.a(bArr2, d);
             byte[] bArr3 = new byte[(bArr.length + 128) - 117];
-            System.arraycopy(a, 0, bArr3, 0, 128);
+            System.arraycopy(a2, 0, bArr3, 0, 128);
             System.arraycopy(bArr, 117, bArr3, 128, bArr.length - 117);
             return bArr3;
         }
@@ -85,28 +84,28 @@ public class gf {
     public static String a() {
         try {
             String valueOf = String.valueOf(System.currentTimeMillis());
-            String str = C4554gc.a() ? "1" : "0";
+            String str = gc.a() ? "1" : "0";
             int length = valueOf.length();
             return valueOf.substring(0, length - 2) + str + valueOf.substring(length - 1);
         } catch (Throwable th) {
-            C4573ha.a(th, "CI", "TS");
+            ha.a(th, "CI", "TS");
             return null;
         }
     }
 
     public static String a(Context context) {
         try {
-            C4564a c4564a = new C4564a();
-            c4564a.d = C4554gc.c(context);
-            c4564a.i = C4554gc.d(context);
-            return a(context, c4564a);
+            a aVar = new a();
+            aVar.d = gc.c(context);
+            aVar.i = gc.d(context);
+            return a(context, aVar);
         } catch (Throwable th) {
-            C4573ha.a(th, "CI", "IX");
+            ha.a(th, "CI", "IX");
             return null;
         }
     }
 
-    private static byte[] b(Context context, C4564a c4564a) {
+    private static byte[] b(Context context, a aVar) {
         ByteArrayOutputStream byteArrayOutputStream;
         try {
             byteArrayOutputStream = new ByteArrayOutputStream();
@@ -115,42 +114,42 @@ public class gf {
             byteArrayOutputStream = null;
         }
         try {
-            a(byteArrayOutputStream, c4564a.a);
-            a(byteArrayOutputStream, c4564a.b);
-            a(byteArrayOutputStream, c4564a.c);
-            a(byteArrayOutputStream, c4564a.d);
-            a(byteArrayOutputStream, c4564a.e);
-            a(byteArrayOutputStream, c4564a.f);
-            a(byteArrayOutputStream, c4564a.g);
-            a(byteArrayOutputStream, c4564a.h);
-            a(byteArrayOutputStream, c4564a.i);
-            a(byteArrayOutputStream, c4564a.j);
-            a(byteArrayOutputStream, c4564a.k);
-            a(byteArrayOutputStream, c4564a.l);
-            a(byteArrayOutputStream, c4564a.m);
-            a(byteArrayOutputStream, c4564a.n);
-            a(byteArrayOutputStream, c4564a.o);
-            a(byteArrayOutputStream, c4564a.p);
-            a(byteArrayOutputStream, c4564a.q);
-            a(byteArrayOutputStream, c4564a.r);
-            a(byteArrayOutputStream, c4564a.s);
-            a(byteArrayOutputStream, c4564a.t);
-            a(byteArrayOutputStream, c4564a.u);
-            a(byteArrayOutputStream, c4564a.v);
-            a(byteArrayOutputStream, c4564a.w);
-            a(byteArrayOutputStream, c4564a.x);
-            a(byteArrayOutputStream, c4564a.y);
-            byte[] a = a(context, byteArrayOutputStream);
+            a(byteArrayOutputStream, aVar.a);
+            a(byteArrayOutputStream, aVar.b);
+            a(byteArrayOutputStream, aVar.c);
+            a(byteArrayOutputStream, aVar.d);
+            a(byteArrayOutputStream, aVar.e);
+            a(byteArrayOutputStream, aVar.f);
+            a(byteArrayOutputStream, aVar.g);
+            a(byteArrayOutputStream, aVar.h);
+            a(byteArrayOutputStream, aVar.i);
+            a(byteArrayOutputStream, aVar.j);
+            a(byteArrayOutputStream, aVar.k);
+            a(byteArrayOutputStream, aVar.l);
+            a(byteArrayOutputStream, aVar.m);
+            a(byteArrayOutputStream, aVar.n);
+            a(byteArrayOutputStream, aVar.o);
+            a(byteArrayOutputStream, aVar.p);
+            a(byteArrayOutputStream, aVar.q);
+            a(byteArrayOutputStream, aVar.r);
+            a(byteArrayOutputStream, aVar.s);
+            a(byteArrayOutputStream, aVar.t);
+            a(byteArrayOutputStream, aVar.u);
+            a(byteArrayOutputStream, aVar.v);
+            a(byteArrayOutputStream, aVar.w);
+            a(byteArrayOutputStream, aVar.x);
+            a(byteArrayOutputStream, aVar.y);
+            byte[] a2 = a(context, byteArrayOutputStream);
             try {
                 byteArrayOutputStream.close();
             } catch (Throwable th2) {
                 th2.printStackTrace();
             }
-            return a;
+            return a2;
         } catch (Throwable th3) {
             th = th3;
             try {
-                C4573ha.a(th, "CI", "gzx");
+                ha.a(th, "CI", "gzx");
                 return null;
             } finally {
                 if (byteArrayOutputStream != null) {
@@ -172,7 +171,7 @@ public class gf {
         try {
             return b(context, b(context, z, z2));
         } catch (Throwable th) {
-            C4573ha.a(th, "CI", "gz");
+            ha.a(th, "CI", "gz");
             return null;
         }
     }
@@ -181,13 +180,13 @@ public class gf {
         try {
             return a(context, b(context, false, z));
         } catch (Throwable th) {
-            C4573ha.a(th, "CI", "gCXi");
+            ha.a(th, "CI", "gCXi");
             return null;
         }
     }
 
-    private static String a(Context context, C4564a c4564a) {
-        return gh.b(b(context, c4564a));
+    private static String a(Context context, a aVar) {
+        return gh.b(b(context, aVar));
     }
 
     private static byte[] a(Context context, ByteArrayOutputStream byteArrayOutputStream) throws CertificateException, NoSuchAlgorithmException, IOException, BadPaddingException, IllegalBlockSizeException, NoSuchPaddingException, InvalidKeyException, InvalidKeySpecException {
@@ -202,74 +201,74 @@ public class gf {
         }
     }
 
-    private static C4564a b(Context context, boolean z, boolean z2) {
-        C4564a c4564a = new C4564a();
-        c4564a.a = gg.w(context);
-        c4564a.b = gg.n(context);
+    private static a b(Context context, boolean z, boolean z2) {
+        a aVar = new a();
+        aVar.a = gg.w(context);
+        aVar.b = gg.n(context);
         String i = gg.i(context);
         if (i == null) {
             i = "";
         }
-        c4564a.c = i;
-        c4564a.d = C4554gc.c(context);
-        c4564a.e = Build.getMODEL();
-        c4564a.f = Build.getMANUFACTURER();
-        c4564a.g = android.os.Build.DEVICE;
-        c4564a.h = C4554gc.b(context);
-        c4564a.i = C4554gc.d(context);
-        c4564a.j = String.valueOf(Build.VERSION.SDK_INT);
-        c4564a.k = gg.y(context);
-        c4564a.l = gg.u(context);
-        c4564a.m = gg.r(context) + "";
-        c4564a.n = gg.q(context) + "";
-        c4564a.o = gg.A(context);
-        c4564a.p = gg.p(context);
+        aVar.c = i;
+        aVar.d = gc.c(context);
+        aVar.e = Build.getMODEL();
+        aVar.f = Build.getMANUFACTURER();
+        aVar.g = android.os.Build.DEVICE;
+        aVar.h = gc.b(context);
+        aVar.i = gc.d(context);
+        aVar.j = String.valueOf(Build.VERSION.SDK_INT);
+        aVar.k = gg.y(context);
+        aVar.l = gg.u(context);
+        aVar.m = gg.r(context) + "";
+        aVar.n = gg.q(context) + "";
+        aVar.o = gg.A(context);
+        aVar.p = gg.p(context);
         if (z) {
-            c4564a.q = "";
+            aVar.q = "";
         } else {
-            c4564a.q = gg.m(context);
+            aVar.q = gg.m(context);
         }
         if (z) {
-            c4564a.r = "";
+            aVar.r = "";
         } else {
-            c4564a.r = gg.l(context);
+            aVar.r = gg.l(context);
         }
         if (z) {
-            c4564a.s = "";
-            c4564a.t = "";
+            aVar.s = "";
+            aVar.t = "";
         } else {
             String[] o = gg.o(context);
-            c4564a.s = o[0];
-            c4564a.t = o[1];
+            aVar.s = o[0];
+            aVar.t = o[1];
         }
-        c4564a.w = gg.a();
+        aVar.w = gg.a();
         String b = gg.b(context);
         if (!TextUtils.isEmpty(b)) {
-            c4564a.x = b;
+            aVar.x = b;
         } else {
-            c4564a.x = "";
+            aVar.x = "";
         }
-        c4564a.y = "aid=" + gg.k(context);
+        aVar.y = "aid=" + gg.k(context);
         if ((z2 && gy.e) || gy.f) {
             String h = gg.h(context);
             if (!TextUtils.isEmpty(h)) {
-                c4564a.y += "|oaid=" + h;
+                aVar.y += "|oaid=" + h;
             }
         }
-        String a = gg.a(context, ",", true);
-        if (!TextUtils.isEmpty(a)) {
-            c4564a.y += "|multiImeis=" + a;
+        String a2 = gg.a(context, ",", true);
+        if (!TextUtils.isEmpty(a2)) {
+            aVar.y += "|multiImeis=" + a2;
         }
         String x = gg.x(context);
         if (!TextUtils.isEmpty(x)) {
-            c4564a.y += "|meid=" + x;
+            aVar.y += "|meid=" + x;
         }
-        c4564a.y += "|serial=" + gg.j(context);
-        String a2 = gg.a(context);
-        if (!TextUtils.isEmpty(a2)) {
-            c4564a.y += "|adiuExtras=" + a2;
+        aVar.y += "|serial=" + gg.j(context);
+        String a3 = gg.a(context);
+        if (!TextUtils.isEmpty(a3)) {
+            aVar.y += "|adiuExtras=" + a3;
         }
-        c4564a.y += "|storage=" + gg.d() + "|ram=" + gg.z(context) + "|arch=" + gg.e();
-        return c4564a;
+        aVar.y += "|storage=" + gg.d() + "|ram=" + gg.z(context) + "|arch=" + gg.e();
+        return aVar;
     }
 }

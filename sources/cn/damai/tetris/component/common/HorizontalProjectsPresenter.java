@@ -28,12 +28,11 @@ public class HorizontalProjectsPresenter extends BasePresenter<HorizontalProject
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.common.HorizontalProjectsPresenter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1804a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1804a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -90,7 +89,7 @@ public class HorizontalProjectsPresenter extends BasePresenter<HorizontalProject
             horizontalRecyclerView.removeItemDecorationAt(0);
         }
         horizontalRecyclerView.addItemDecoration(new LeftSpaceItemDecoration(t60.a(getContext().getActivity(), 13.0f)));
-        HorizontalProjectAdapter horizontalProjectAdapter = new HorizontalProjectAdapter(getContext().getActivity(), new View$OnClickListenerC1804a());
+        HorizontalProjectAdapter horizontalProjectAdapter = new HorizontalProjectAdapter(getContext().getActivity(), new a());
         horizontalRecyclerView.setAdapter(horizontalProjectAdapter);
         horizontalProjectAdapter.c(getModel().getData());
     }

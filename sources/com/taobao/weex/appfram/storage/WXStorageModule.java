@@ -15,12 +15,11 @@ public class WXStorageModule extends WXSDKEngine.DestroyableModule implements IW
     IWXStorageAdapter mStorageAdapter;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.appfram.storage.WXStorageModule$a */
     /* loaded from: classes11.dex */
-    class C6959a implements IWXStorageAdapter.OnResultReceivedListener {
+    class a implements IWXStorageAdapter.OnResultReceivedListener {
         final /* synthetic */ JSCallback a;
 
-        C6959a(WXStorageModule wXStorageModule, JSCallback jSCallback) {
+        a(WXStorageModule wXStorageModule, JSCallback jSCallback) {
             this.a = jSCallback;
         }
 
@@ -34,12 +33,11 @@ public class WXStorageModule extends WXSDKEngine.DestroyableModule implements IW
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.appfram.storage.WXStorageModule$b */
     /* loaded from: classes11.dex */
-    class C6960b implements IWXStorageAdapter.OnResultReceivedListener {
+    class b implements IWXStorageAdapter.OnResultReceivedListener {
         final /* synthetic */ JSCallback a;
 
-        C6960b(WXStorageModule wXStorageModule, JSCallback jSCallback) {
+        b(WXStorageModule wXStorageModule, JSCallback jSCallback) {
             this.a = jSCallback;
         }
 
@@ -53,12 +51,11 @@ public class WXStorageModule extends WXSDKEngine.DestroyableModule implements IW
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.appfram.storage.WXStorageModule$c */
     /* loaded from: classes11.dex */
-    class C6961c implements IWXStorageAdapter.OnResultReceivedListener {
+    class c implements IWXStorageAdapter.OnResultReceivedListener {
         final /* synthetic */ JSCallback a;
 
-        C6961c(WXStorageModule wXStorageModule, JSCallback jSCallback) {
+        c(WXStorageModule wXStorageModule, JSCallback jSCallback) {
             this.a = jSCallback;
         }
 
@@ -72,12 +69,11 @@ public class WXStorageModule extends WXSDKEngine.DestroyableModule implements IW
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.appfram.storage.WXStorageModule$d */
     /* loaded from: classes11.dex */
-    class C6962d implements IWXStorageAdapter.OnResultReceivedListener {
+    class d implements IWXStorageAdapter.OnResultReceivedListener {
         final /* synthetic */ JSCallback a;
 
-        C6962d(WXStorageModule wXStorageModule, JSCallback jSCallback) {
+        d(WXStorageModule wXStorageModule, JSCallback jSCallback) {
             this.a = jSCallback;
         }
 
@@ -91,12 +87,11 @@ public class WXStorageModule extends WXSDKEngine.DestroyableModule implements IW
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.appfram.storage.WXStorageModule$e */
     /* loaded from: classes11.dex */
-    class C6963e implements IWXStorageAdapter.OnResultReceivedListener {
+    class e implements IWXStorageAdapter.OnResultReceivedListener {
         final /* synthetic */ JSCallback a;
 
-        C6963e(WXStorageModule wXStorageModule, JSCallback jSCallback) {
+        e(WXStorageModule wXStorageModule, JSCallback jSCallback) {
             this.a = jSCallback;
         }
 
@@ -110,12 +105,11 @@ public class WXStorageModule extends WXSDKEngine.DestroyableModule implements IW
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.appfram.storage.WXStorageModule$f */
     /* loaded from: classes11.dex */
-    class C6964f implements IWXStorageAdapter.OnResultReceivedListener {
+    class f implements IWXStorageAdapter.OnResultReceivedListener {
         final /* synthetic */ JSCallback a;
 
-        C6964f(WXStorageModule wXStorageModule, JSCallback jSCallback) {
+        f(WXStorageModule wXStorageModule, JSCallback jSCallback) {
             this.a = jSCallback;
         }
 
@@ -153,7 +147,7 @@ public class WXStorageModule extends WXSDKEngine.DestroyableModule implements IW
         if (ability == null) {
             vg2.e(jSCallback);
         } else {
-            ability.getAllKeys(new C6963e(this, jSCallback));
+            ability.getAllKeys(new e(this, jSCallback));
         }
     }
 
@@ -168,7 +162,7 @@ public class WXStorageModule extends WXSDKEngine.DestroyableModule implements IW
         if (ability == null) {
             vg2.e(jSCallback);
         } else {
-            ability.getItem(str, new C6960b(this, jSCallback));
+            ability.getItem(str, new b(this, jSCallback));
         }
     }
 
@@ -179,7 +173,7 @@ public class WXStorageModule extends WXSDKEngine.DestroyableModule implements IW
         if (ability == null) {
             vg2.e(jSCallback);
         } else {
-            ability.length(new C6962d(this, jSCallback));
+            ability.length(new d(this, jSCallback));
         }
     }
 
@@ -194,7 +188,7 @@ public class WXStorageModule extends WXSDKEngine.DestroyableModule implements IW
         if (ability == null) {
             vg2.e(jSCallback);
         } else {
-            ability.removeItem(str, new C6961c(this, jSCallback));
+            ability.removeItem(str, new c(this, jSCallback));
         }
     }
 
@@ -207,7 +201,7 @@ public class WXStorageModule extends WXSDKEngine.DestroyableModule implements IW
                 vg2.e(jSCallback);
                 return;
             } else {
-                ability.setItem(str, str2, new C6959a(this, jSCallback));
+                ability.setItem(str, str2, new a(this, jSCallback));
                 return;
             }
         }
@@ -223,7 +217,7 @@ public class WXStorageModule extends WXSDKEngine.DestroyableModule implements IW
                 vg2.e(jSCallback);
                 return;
             } else {
-                ability.setItemPersistent(str, str2, new C6964f(this, jSCallback));
+                ability.setItemPersistent(str, str2, new f(this, jSCallback));
                 return;
             }
         }

@@ -16,9 +16,8 @@ public class DXTabItemWidgetNode extends DXLinearLayoutWidgetNode {
     private boolean selected = false;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.viewpager.tab.DXTabItemWidgetNode$a */
     /* loaded from: classes11.dex */
-    public static class C6540a implements IDXBuilderWidgetNode {
+    public static class a implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(Object obj) {
             return new DXTabItemWidgetNode();
@@ -40,7 +39,7 @@ public class DXTabItemWidgetNode extends DXLinearLayoutWidgetNode {
         super.onBindEvent(context, view, j);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onClone(DXWidgetNode dXWidgetNode, boolean z) {
         if (dXWidgetNode == null || !(dXWidgetNode instanceof DXTabItemWidgetNode)) {
             return;
@@ -68,12 +67,12 @@ public class DXTabItemWidgetNode extends DXLinearLayoutWidgetNode {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onRenderView(Context context, View view) {
         super.onRenderView(context, view);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetIntAttribute(long j, int i) {
         if (j == 6456471229575806289L) {
             this.selected = i == 1;

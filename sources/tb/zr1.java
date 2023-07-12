@@ -5,7 +5,6 @@ import com.taobao.phenix.chain.ImageDecodingListener;
 import com.taobao.phenix.chain.PhenixProduceListener;
 import com.taobao.phenix.intf.event.IPhenixListener;
 import com.taobao.phenix.loader.network.HttpCodeResponseException;
-import com.taobao.phenix.request.C6865a;
 import com.taobao.phenix.request.ImageFlowMonitor;
 import com.taobao.phenix.request.ImageStatistics;
 import com.taobao.rxm.consume.BaseConsumer;
@@ -18,17 +17,17 @@ import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class zr1 extends BaseConsumer<tq1, C6865a> {
+public class zr1 extends BaseConsumer<tq1, com.taobao.phenix.request.a> {
     private final wr1 e;
     private final ImageFlowMonitor f;
     private final SchedulerSupplier g;
 
-    public zr1(C6865a c6865a, wr1 wr1Var, ImageFlowMonitor imageFlowMonitor, SchedulerSupplier schedulerSupplier, ImageDecodingListener imageDecodingListener) {
-        super(c6865a);
+    public zr1(com.taobao.phenix.request.a aVar, wr1 wr1Var, ImageFlowMonitor imageFlowMonitor, SchedulerSupplier schedulerSupplier, ImageDecodingListener imageDecodingListener) {
+        super(aVar);
         this.e = wr1Var;
         this.f = imageFlowMonitor;
         this.g = schedulerSupplier;
-        c6865a.p(new PhenixProduceListener(c6865a, wr1Var.s(), imageDecodingListener));
+        aVar.p(new PhenixProduceListener(aVar, wr1Var.s(), imageDecodingListener));
     }
 
     private void l(long j) {
@@ -114,7 +113,7 @@ public class zr1 extends BaseConsumer<tq1, C6865a> {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private boolean n(com.taobao.phenix.request.C6865a r7, java.lang.Throwable r8) {
+    private boolean n(com.taobao.phenix.request.a r7, java.lang.Throwable r8) {
         /*
             r6 = this;
             boolean r0 = r7.c0()
@@ -138,7 +137,7 @@ public class zr1 extends BaseConsumer<tq1, C6865a> {
             r3 = r8
             com.taobao.phenix.decode.DecodeException r3 = (com.taobao.phenix.decode.DecodeException) r3
             tb.a22 r4 = r6.getContext()
-            com.taobao.phenix.request.a r4 = (com.taobao.phenix.request.C6865a) r4
+            com.taobao.phenix.request.a r4 = (com.taobao.phenix.request.a) r4
             com.taobao.phenix.request.b r4 = r4.G()
             boolean r5 = r3.isDataFromDisk()
             if (r5 == 0) goto L4e
@@ -171,7 +170,7 @@ public class zr1 extends BaseConsumer<tq1, C6865a> {
     }
 
     @Override // com.taobao.rxm.consume.BaseConsumer, com.taobao.rxm.consume.Consumer
-    public Consumer<tq1, C6865a> consumeOn(Scheduler scheduler) {
+    public Consumer<tq1, com.taobao.phenix.request.a> consumeOn(Scheduler scheduler) {
         super.consumeOn(scheduler);
         ProducerListener g = getContext().g();
         if (g != null) {
@@ -199,7 +198,7 @@ public class zr1 extends BaseConsumer<tq1, C6865a> {
 
     @Override // com.taobao.rxm.consume.BaseConsumer
     protected void f(Throwable th) {
-        C6865a context = getContext();
+        com.taobao.phenix.request.a context = getContext();
         if (n(context, th)) {
             return;
         }

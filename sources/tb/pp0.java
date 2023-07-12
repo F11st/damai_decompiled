@@ -9,14 +9,13 @@ public class pp0 {
     private final Handler a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.pp0$b */
     /* loaded from: classes9.dex */
-    private static class C9562b {
+    private static class b {
         static final pp0 a = new pp0();
     }
 
     public static pp0 a() {
-        return C9562b.a;
+        return b.a;
     }
 
     public Handler b() {

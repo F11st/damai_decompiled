@@ -7,7 +7,6 @@ import android.widget.ListView;
 import android.widget.ScrollView;
 import cn.damai.baseview.PullScrollView;
 import cn.damai.baseview.abcpullrefresh.actionbarcompat.PullToRefreshLayout;
-import cn.damai.baseview.abcpullrefresh.library.C0278a;
 import cn.damai.baseview.abcpullrefresh.library.listeners.OnLoadMoreListener;
 import cn.damai.baseview.abcpullrefresh.library.listeners.OnRefreshListener;
 import cn.damai.baseview.pull.lib.PullUpLoadRefresh;
@@ -24,7 +23,7 @@ public class w2 {
         if (AndroidInstantRuntime.support(ipChange, "676182465")) {
             return (w2) ipChange.ipc$dispatch("676182465", new Object[]{this, activity, pullToRefreshLayout, view, onRefreshListener});
         }
-        C0278a.a(activity).d(view).b(onRefreshListener).c(pullToRefreshLayout);
+        cn.damai.baseview.abcpullrefresh.library.a.a(activity).d(view).b(onRefreshListener).c(pullToRefreshLayout);
         return this;
     }
 

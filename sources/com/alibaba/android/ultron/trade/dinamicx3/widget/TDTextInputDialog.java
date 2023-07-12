@@ -31,10 +31,9 @@ public class TDTextInputDialog extends AlertDialog {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.ultron.trade.dinamicx3.widget.TDTextInputDialog$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC3255a implements View.OnClickListener {
-        View$OnClickListenerC3255a() {
+    public class a implements View.OnClickListener {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -51,10 +50,9 @@ public class TDTextInputDialog extends AlertDialog {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.ultron.trade.dinamicx3.widget.TDTextInputDialog$b */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC3256b implements View.OnClickListener {
-        View$OnClickListenerC3256b() {
+    public class b implements View.OnClickListener {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -111,8 +109,8 @@ public class TDTextInputDialog extends AlertDialog {
     private void f(Context context) {
         setContentView(R$layout.trade_text_input);
         this.b = (EditText) findViewById(R$id.et_input);
-        findViewById(R$id.tv_cancel).setOnClickListener(new View$OnClickListenerC3255a());
-        findViewById(R$id.tv_confirm).setOnClickListener(new View$OnClickListenerC3256b());
+        findViewById(R$id.tv_cancel).setOnClickListener(new a());
+        findViewById(R$id.tv_confirm).setOnClickListener(new b());
     }
 
     private void g() {

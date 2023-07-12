@@ -4,8 +4,6 @@ import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
-import com.xiaomi.push.service.C7761l;
 
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
@@ -34,7 +32,7 @@ public class ej implements eg {
             } else {
                 dz.a(context, d, 1008, "argument error");
             }
-        } else if (!C7761l.a(context, m853a, b)) {
+        } else if (!com.xiaomi.push.service.l.a(context, m853a, b)) {
             dz.a(context, d, 1003, "B is not ready");
         } else {
             dz.a(context, d, 1002, "B is ready");
@@ -53,7 +51,7 @@ public class ej implements eg {
                     dz.a(context, d, 1006, "The job is finished");
                 }
             } catch (Exception e) {
-                AbstractC7535b.a(e);
+                com.xiaomi.channel.commonutils.logger.b.a(e);
                 dz.a(context, d, 1008, "A meet a exception when help B's service");
             }
         }

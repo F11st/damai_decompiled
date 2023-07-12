@@ -11,7 +11,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
@@ -76,12 +75,11 @@ public class StarTourViewHolder extends CommonViewHolder {
     private View starTourCardLayout;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.viewholder.StarTourViewHolder$a */
     /* loaded from: classes7.dex */
-    public class C1864a implements StarTourTabAdapter.OnTabItemClickListener {
+    public class a implements StarTourTabAdapter.OnTabItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1864a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.home.adapter.StarTourTabAdapter.OnTabItemClickListener
@@ -109,12 +107,11 @@ public class StarTourViewHolder extends CommonViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.viewholder.StarTourViewHolder$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1865b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1865b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -161,8 +158,8 @@ public class StarTourViewHolder extends CommonViewHolder {
     public StarTourViewHolder(View view) {
         super(view);
         this.mData = new ArrayList();
-        this.mOnTabItemClickListener = new C1864a();
-        this.mOnClickListener = new View$OnClickListenerC1865b();
+        this.mOnTabItemClickListener = new a();
+        this.mOnClickListener = new b();
         this.mContext = mu0.a();
         this.mModuleTitle = (TextView) this.itemView.findViewById(R$id.homepage_module_title_label);
         this.mMoreTitle = (TextView) this.itemView.findViewById(R$id.homepage_module_title_more_text);
@@ -213,7 +210,7 @@ public class StarTourViewHolder extends CommonViewHolder {
             ipChange.ipc$dispatch("453582152", new Object[]{this, homeStarTourItem});
         } else if (homeStarTourItem != null) {
             this.mStarLayout.setTag(homeStarTourItem);
-            DMImageCreator c = C0504a.b().c(homeStarTourItem.artistHeadPic);
+            DMImageCreator c = cn.damai.common.image.a.b().c(homeStarTourItem.artistHeadPic);
             int i = R$drawable.uikit_user_default_icon;
             c.i(i).c(i).g(this.mStarAvatar);
             this.mStarName.setText(homeStarTourItem.artistName);

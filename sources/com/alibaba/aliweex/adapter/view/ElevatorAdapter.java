@@ -24,13 +24,12 @@ public class ElevatorAdapter extends BaseAdapter {
     private String normalColor = "#333333";
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.view.ElevatorAdapter$a */
     /* loaded from: classes15.dex */
-    public class C3071a {
+    public class a {
         TextView a;
         ImageView b;
 
-        public C3071a(ElevatorAdapter elevatorAdapter) {
+        public a(ElevatorAdapter elevatorAdapter) {
         }
     }
 
@@ -53,28 +52,28 @@ public class ElevatorAdapter extends BaseAdapter {
 
     @Override // android.widget.Adapter
     public View getView(int i, View view, ViewGroup viewGroup) {
-        C3071a c3071a;
+        a aVar;
         ud0 item = getItem(i);
         if (view == null) {
             view = LayoutInflater.from(this.context).inflate(this.resourceId, (ViewGroup) null);
             view.setLayoutParams(new AbsListView.LayoutParams(-2, -1));
-            c3071a = new C3071a(this);
-            c3071a.a = (TextView) view.findViewById(R$id.loc_text);
-            c3071a.b = (ImageView) view.findViewById(R$id.loc_icon);
-            view.setTag(c3071a);
+            aVar = new a(this);
+            aVar.a = (TextView) view.findViewById(R$id.loc_text);
+            aVar.b = (ImageView) view.findViewById(R$id.loc_icon);
+            view.setTag(aVar);
         } else {
-            c3071a = (C3071a) view.getTag();
+            aVar = (a) view.getTag();
         }
-        c3071a.a.setText(item.d());
+        aVar.a.setText(item.d());
         if (item.b()) {
-            c3071a.a.setTextColor(Color.parseColor(this.selectedColor));
+            aVar.a.setTextColor(Color.parseColor(this.selectedColor));
         } else {
-            c3071a.a.setTextColor(Color.parseColor(this.normalColor));
+            aVar.a.setTextColor(Color.parseColor(this.normalColor));
         }
         if (item.c()) {
-            c3071a.b.setVisibility(0);
+            aVar.b.setVisibility(0);
         } else {
-            c3071a.b.setVisibility(4);
+            aVar.b.setVisibility(4);
         }
         return view;
     }

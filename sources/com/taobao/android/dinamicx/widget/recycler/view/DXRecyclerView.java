@@ -4,11 +4,11 @@ import android.content.Context;
 import android.util.AttributeSet;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
-import com.taobao.android.dinamicx.C6368e;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import com.taobao.android.dinamicx.widget.DXRecyclerLayout;
 import com.taobao.android.dinamicx.widget.recycler.RecyclerAdapter;
-import com.taobao.android.dinamicx.widget.recycler.expose.C6513b;
+import com.taobao.android.dinamicx.widget.recycler.expose.b;
 import java.util.ArrayList;
 import java.util.Iterator;
 import tb.nz;
@@ -17,7 +17,7 @@ import tb.ry;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class DXRecyclerView extends RecyclerView {
-    C6513b exposeHelper;
+    b exposeHelper;
     ArrayList<RecyclerView.OnScrollListener> mExtraScrollerListeners;
 
     public DXRecyclerView(Context context) {
@@ -42,7 +42,7 @@ public class DXRecyclerView extends RecyclerView {
         }
     }
 
-    public C6513b getExposeHelper() {
+    public b getExposeHelper() {
         return this.exposeHelper;
     }
 
@@ -72,9 +72,9 @@ public class DXRecyclerView extends RecyclerView {
         DXRecyclerLayout j;
         try {
             super.onLayout(z, i, i2, i3, i4);
-            C6513b c6513b = this.exposeHelper;
-            if (c6513b != null) {
-                c6513b.d();
+            b bVar = this.exposeHelper;
+            if (bVar != null) {
+                bVar.d();
             }
         } catch (Throwable th) {
             ry.b(th);
@@ -85,11 +85,11 @@ public class DXRecyclerView extends RecyclerView {
                     str = j.getDXRuntimeContext().getBizType();
                     str2 = j.getUserId();
                 }
-                C6368e c6368e = new C6368e(str);
-                C6368e.C6369a c6369a = new C6368e.C6369a("native", "native_crash", C6368e.DX_NATIVE_CRASH_14);
-                c6369a.e = "userId： " + str2 + " stack： " + ry.a(th);
-                c6368e.c.add(c6369a);
-                DXAppMonitor.n(c6368e);
+                e eVar = new e(str);
+                e.a aVar = new e.a("native", "native_crash", e.DX_NATIVE_CRASH_14);
+                aVar.e = "userId： " + str2 + " stack： " + ry.a(th);
+                eVar.c.add(aVar);
+                DXAppMonitor.n(eVar);
             } catch (Throwable unused) {
                 ry.b(th);
             }
@@ -115,8 +115,8 @@ public class DXRecyclerView extends RecyclerView {
         }
     }
 
-    public void setExposeHelper(C6513b c6513b) {
-        this.exposeHelper = c6513b;
+    public void setExposeHelper(b bVar) {
+        this.exposeHelper = bVar;
     }
 
     public DXRecyclerView(Context context, @Nullable AttributeSet attributeSet) {

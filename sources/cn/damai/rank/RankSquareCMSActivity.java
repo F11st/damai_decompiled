@@ -6,8 +6,7 @@ import android.text.TextUtils;
 import android.view.View;
 import androidx.annotation.NonNull;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
@@ -32,11 +31,11 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 import java.util.Map;
-import tb.C9548pb;
 import tb.bz1;
 import tb.cs;
 import tb.d23;
 import tb.g03;
+import tb.pb;
 import tb.w81;
 import tb.z20;
 
@@ -56,12 +55,11 @@ public class RankSquareCMSActivity extends DamaiBaseActivity {
     private WantSeeTips wantSeeTips;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.rank.RankSquareCMSActivity$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1540a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1540a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -79,12 +77,11 @@ public class RankSquareCMSActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.rank.RankSquareCMSActivity$b */
     /* loaded from: classes6.dex */
-    public class C1541b implements SimpleTitleLayout.OnBtnClickListener {
+    public class b implements SimpleTitleLayout.OnBtnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1541b() {
+        b() {
         }
 
         @Override // cn.damai.uikit.view.SimpleTitleLayout.OnBtnClickListener
@@ -107,12 +104,11 @@ public class RankSquareCMSActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.rank.RankSquareCMSActivity$c */
     /* loaded from: classes6.dex */
-    public class C1542c implements ComponentFragment.OnCompFragmentListener {
+    public class c implements ComponentFragment.OnCompFragmentListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1542c() {
+        c() {
         }
 
         @Override // cn.damai.livehouse.ComponentFragment.OnCompFragmentListener
@@ -144,20 +140,18 @@ public class RankSquareCMSActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.rank.RankSquareCMSActivity$d */
     /* loaded from: classes6.dex */
-    public class C1543d implements ComponentFragment.OnWantSeeListener {
+    public class d implements ComponentFragment.OnWantSeeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ComponentFragment a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.rank.RankSquareCMSActivity$d$a */
         /* loaded from: classes6.dex */
-        public class C1544a implements GuideUtProvider {
+        public class a implements GuideUtProvider {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ FollowDataBean a;
 
-            C1544a(FollowDataBean followDataBean) {
+            a(FollowDataBean followDataBean) {
                 this.a = followDataBean;
             }
 
@@ -181,7 +175,7 @@ public class RankSquareCMSActivity extends DamaiBaseActivity {
                     RankItemBean rankItemBean = this.a.tempRank;
                     if (rankItemBean != null) {
                         String str = null;
-                        IContainer pageContainer = C1543d.this.a.getPageContainer();
+                        IContainer pageContainer = d.this.a.getPageContainer();
                         if (pageContainer != null && (rankFilterValue = (RankFilterValue) pageContainer.getContainerValue(ValueKey.KEY_RANK_SQUARE_FILTER_INFO, new RankFilterTarget())) != null) {
                             str = rankFilterValue.weiDuTabName;
                         }
@@ -189,7 +183,7 @@ public class RankSquareCMSActivity extends DamaiBaseActivity {
                             hashMap.put("titlelabel", str);
                         }
                         hashMap.put("item_id", rankItemBean.id + "");
-                        hashMap.put(C9548pb.CNT_CONTENT_ID, rankItemBean.rankId);
+                        hashMap.put(pb.CNT_CONTENT_ID, rankItemBean.rankId);
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -212,7 +206,7 @@ public class RankSquareCMSActivity extends DamaiBaseActivity {
             }
         }
 
-        C1543d(ComponentFragment componentFragment) {
+        d(ComponentFragment componentFragment) {
             this.a = componentFragment;
         }
 
@@ -221,7 +215,7 @@ public class RankSquareCMSActivity extends DamaiBaseActivity {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1562856916")) {
                 ipChange.ipc$dispatch("1562856916", new Object[]{this, followDataBean});
-            } else if (g03.INSTANCE.e(RankSquareCMSActivity.this, new C1544a(followDataBean)) || RankSquareCMSActivity.this.wantSeeTips == null) {
+            } else if (g03.INSTANCE.e(RankSquareCMSActivity.this, new a(followDataBean)) || RankSquareCMSActivity.this.wantSeeTips == null) {
             } else {
                 RankSquareCMSActivity.this.wantSeeTips.showAnim();
             }
@@ -275,18 +269,18 @@ public class RankSquareCMSActivity extends DamaiBaseActivity {
         intent.removeExtra("cityId");
         intent.removeExtra(PRESET_CITY_NAME);
         intent.removeExtra("categoryId");
-        C0529c.e().K(this);
+        cn.damai.common.user.c.e().K(this);
         HashMap hashMap = new HashMap();
         d23.a(hashMap);
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i("ranklist_square").j(hashMap));
+        setDamaiUTKeyBuilder(new a.b().i("ranklist_square").j(hashMap));
         removeHeadTitleView();
-        w81 w81Var = new w81(this, new View$OnClickListenerC1540a());
+        w81 w81Var = new w81(this, new a());
         w81Var.a(this.mCityName);
         bz1.Instance.a(w81Var.getLeftView(), this.mCityName);
         this.mStlLayout = (SimpleTitleLayout) findViewById(R$id.id_rank_square_stl);
         WantSeeTips wantSeeTips = (WantSeeTips) findViewById(R$id.want_see_tips_rank_square);
         this.wantSeeTips = wantSeeTips;
-        wantSeeTips.setPageSource(WantSeeTips.AbstractC1562a.C1570h.INSTANCE);
+        wantSeeTips.setPageSource(WantSeeTips.a.h.INSTANCE);
         this.mStlLayout.addLeftActionView(w81Var);
         this.mStlLayout.setTitle("大麦演出榜");
         this.mStlLayout.switchMode(true);
@@ -294,7 +288,7 @@ public class RankSquareCMSActivity extends DamaiBaseActivity {
         this.mStlLayout.showShareBtn(false);
         this.mStlLayout.enableDivider(false);
         this.mStlLayout.enableImmersiveMode(this);
-        this.mStlLayout.setListener(new C1541b());
+        this.mStlLayout.setListener(new b());
         ComponentFragment componentFragment = new ComponentFragment();
         componentFragment.setScrollListener(new TitleModeChangeListener() { // from class: cn.damai.rank.RankSquareCMSActivity.3
             private static transient /* synthetic */ IpChange $ipChange;
@@ -311,8 +305,8 @@ public class RankSquareCMSActivity extends DamaiBaseActivity {
                 }
             }
         });
-        componentFragment.setLifeListener(new C1542c());
-        componentFragment.setWantSeeListener(new C1543d(componentFragment));
+        componentFragment.setLifeListener(new c());
+        componentFragment.setWantSeeListener(new d(componentFragment));
         getSupportFragmentManager().beginTransaction().add(R$id.id_rank_square_container, componentFragment).commitAllowingStateLoss();
     }
 

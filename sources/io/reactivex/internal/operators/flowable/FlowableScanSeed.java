@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.fuseable.SimplePlainQueue;
@@ -181,16 +181,16 @@ public final class FlowableScanSeed<T, R> extends AbstractFlowableWithUpstream<T
         }
     }
 
-    public FlowableScanSeed(AbstractC8147b<T> abstractC8147b, Callable<R> callable, BiFunction<R, ? super T, R> biFunction) {
-        super(abstractC8147b);
+    public FlowableScanSeed(b<T> bVar, Callable<R> callable, BiFunction<R, ? super T, R> biFunction) {
+        super(bVar);
         this.accumulator = biFunction;
         this.seedSupplier = callable;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super R> subscriber) {
         try {
-            this.source.subscribe((FlowableSubscriber) new ScanSeedSubscriber(subscriber, this.accumulator, ObjectHelper.requireNonNull(this.seedSupplier.call(), "The seed supplied is null"), AbstractC8147b.bufferSize()));
+            this.source.subscribe((FlowableSubscriber) new ScanSeedSubscriber(subscriber, this.accumulator, ObjectHelper.requireNonNull(this.seedSupplier.call(), "The seed supplied is null"), b.bufferSize()));
         } catch (Throwable th) {
             dg0.b(th);
             EmptySubscription.error(th, subscriber);

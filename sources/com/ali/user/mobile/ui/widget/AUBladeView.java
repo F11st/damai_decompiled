@@ -62,7 +62,7 @@ public class AUBladeView extends View {
     }
 
     private void initPop(Context context) {
-        View inflate = LayoutInflater.from(context).inflate(R.C2965layout.aliuser_letter_popupwindow, (ViewGroup) null);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.aliuser_letter_popupwindow, (ViewGroup) null);
         this.mPopupWindow = new PopupWindow(inflate, -2, -2);
         this.mPopupText = (TextView) inflate.findViewById(R.id.letterText);
         this.mPopupWindow.setFocusable(true);
@@ -128,7 +128,7 @@ public class AUBladeView extends View {
                 this.paint.setTextSize(getResources().getDimension(R.dimen.aliuser_textsize_smallest));
             }
             if (i == this.choose) {
-                this.paint.setColor(getResources().getColor(R.C2963color.aliuser_region_chosen_color));
+                this.paint.setColor(getResources().getColor(R.color.aliuser_region_chosen_color));
             }
             canvas.drawText(this.b[i], (width / 2) - (this.paint.measureText(this.b[i]) / 2.0f), (length * i) + length, this.paint);
             this.paint.reset();

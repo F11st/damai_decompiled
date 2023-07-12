@@ -11,10 +11,9 @@ import java.io.FileFilter;
 public class h42 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.h42$a */
     /* loaded from: classes11.dex */
-    static class C9200a implements FileFilter {
-        C9200a() {
+    static class a implements FileFilter {
+        a() {
         }
 
         @Override // java.io.FileFilter
@@ -33,7 +32,7 @@ public class h42 {
     }
 
     static {
-        new C9200a();
+        new a();
     }
 
     public static String a(Class cls) {

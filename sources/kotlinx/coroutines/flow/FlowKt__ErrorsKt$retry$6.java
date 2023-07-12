@@ -2,7 +2,6 @@ package kotlinx.coroutines.flow;
 
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function1;
@@ -49,7 +48,7 @@ final class FlowKt__ErrorsKt$retry$6 extends SuspendLambda implements Function4<
     @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
     @Nullable
     public final Object invokeSuspend(@NotNull Object obj) {
-        C8234b.d();
+        kotlin.coroutines.intrinsics.b.d();
         if (this.label == 0) {
             i32.b(obj);
             return id.a(((Boolean) this.$predicate.invoke(this.p$0)).booleanValue() && this.p$1 < ((long) this.$retries));

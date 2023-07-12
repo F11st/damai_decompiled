@@ -31,7 +31,7 @@ import tb.vt2;
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
 public class ParseResponseHelper {
-    private C6661a a;
+    private com.taobao.android.ultron.datamodel.imp.a a;
     private boolean b = false;
     private Map<String, Object> c = new HashMap();
     private AsyncTask<Void, Void, ve> d;
@@ -51,15 +51,14 @@ public class ParseResponseHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.ultron.datamodel.imp.ParseResponseHelper$a */
     /* loaded from: classes12.dex */
-    class AsyncTaskC6660a extends AsyncTask<Void, Void, ve> {
+    class a extends AsyncTask<Void, Void, ve> {
         final /* synthetic */ JSONObject a;
         final /* synthetic */ JSONArray b;
         final /* synthetic */ it2 c;
         final /* synthetic */ String d;
 
-        AsyncTaskC6660a(JSONObject jSONObject, JSONArray jSONArray, it2 it2Var, String str) {
+        a(JSONObject jSONObject, JSONArray jSONArray, it2 it2Var, String str) {
             this.a = jSONObject;
             this.b = jSONArray;
             this.c = it2Var;
@@ -81,8 +80,8 @@ public class ParseResponseHelper {
         }
     }
 
-    public ParseResponseHelper(C6661a c6661a) {
-        this.a = c6661a;
+    public ParseResponseHelper(com.taobao.android.ultron.datamodel.imp.a aVar) {
+        this.a = aVar;
     }
 
     private String e(String str, Map<String, JSONObject> map) {
@@ -152,7 +151,7 @@ public class ParseResponseHelper {
                         if (entry != null && (key = entry.getKey()) != null) {
                             Object value = entry.getValue();
                             if (value instanceof JSONObject) {
-                                if (h && (d = C6663c.d(key)) != null && d.length == 2) {
+                                if (h && (d = c.d(key)) != null && d.length == 2) {
                                     jSONObject.put("tag", (Object) d[0]);
                                     jSONObject.put("id", (Object) d[1]);
                                 }
@@ -228,21 +227,21 @@ public class ParseResponseHelper {
 
     public void k(JSONObject jSONObject, ve veVar) {
         vt2.b("ParseResponseHelper", "parseDataWithCache");
-        C6661a c6661a = this.a;
-        if (c6661a == null || jSONObject == null) {
+        com.taobao.android.ultron.datamodel.imp.a aVar = this.a;
+        if (aVar == null || jSONObject == null) {
             return;
         }
-        C6662b g = c6661a.g();
+        b g = aVar.g();
         if (g == null) {
-            g = new C6662b(this.a.o);
+            g = new b(this.a.o);
             this.a.A(g);
         }
         if (veVar != null) {
-            Map<String, DMComponent> a = veVar.a();
+            Map<String, DMComponent> a2 = veVar.a();
             List<kd0> c = veVar.c();
             Map<String, JSONObject> b = veVar.b();
-            if (a != null) {
-                this.a.c().putAll(a);
+            if (a2 != null) {
+                this.a.c().putAll(a2);
                 this.a.J("data");
             }
             if (c != null) {
@@ -328,13 +327,13 @@ public class ParseResponseHelper {
 
     public void r(JSONObject jSONObject) {
         co2.e("ParseResponse", "start");
-        C6661a c6661a = this.a;
-        if (c6661a == null || jSONObject == null) {
+        com.taobao.android.ultron.datamodel.imp.a aVar = this.a;
+        if (aVar == null || jSONObject == null) {
             return;
         }
-        C6662b g = c6661a.g();
+        b g = aVar.g();
         if (g == null) {
-            g = new C6662b(this.a.o);
+            g = new b(this.a.o);
             this.a.A(g);
         }
         JSONObject jSONObject2 = jSONObject.getJSONObject("data");
@@ -446,9 +445,9 @@ public class ParseResponseHelper {
         if (z2) {
             this.e = d.c(str2);
             if (this.e == null) {
-                AsyncTaskC6660a asyncTaskC6660a = new AsyncTaskC6660a(jSONObject, jSONArray, d, str2);
-                this.d = asyncTaskC6660a;
-                asyncTaskC6660a.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+                a aVar = new a(jSONObject, jSONArray, d, str2);
+                this.d = aVar;
+                aVar.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
             }
         }
     }

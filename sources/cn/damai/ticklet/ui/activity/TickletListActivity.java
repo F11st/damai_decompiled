@@ -11,7 +11,7 @@ import androidx.fragment.app.FragmentTransaction;
 import cn.damai.common.DamaiConstants;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.tab.DamaiTabbarManager;
 import cn.damai.commonbusiness.tab.TabItem;
@@ -37,12 +37,11 @@ public class TickletListActivity extends DamaiBaseActivity {
     private FragmentTransaction transaction;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TickletListActivity$a */
     /* loaded from: classes7.dex */
-    public class C2031a implements WebViewFragment.LoadListener {
+    public class a implements WebViewFragment.LoadListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2031a() {
+        a() {
         }
 
         @Override // cn.damai.h5container.WebViewFragment.LoadListener
@@ -57,12 +56,11 @@ public class TickletListActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TickletListActivity$b */
     /* loaded from: classes7.dex */
-    public class C2032b implements TabbarLayout.TabBarListener {
+    public class b implements TabbarLayout.TabBarListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2032b(TickletListActivity tickletListActivity) {
+        b(TickletListActivity tickletListActivity) {
         }
 
         @Override // cn.damai.commonbusiness.tab.TabbarLayout.TabBarListener
@@ -117,7 +115,7 @@ public class TickletListActivity extends DamaiBaseActivity {
             ipChange.ipc$dispatch("-1156188671", new Object[]{this});
             return;
         }
-        DamaiTabbarManager damaiTabbarManager = new DamaiTabbarManager(this, (TabbarLayout) findViewById(R$id.ticklet_tabbar_container), new C2032b(this));
+        DamaiTabbarManager damaiTabbarManager = new DamaiTabbarManager(this, (TabbarLayout) findViewById(R$id.ticklet_tabbar_container), new b(this));
         this.mDMTabBarManager = damaiTabbarManager;
         damaiTabbarManager.j(DamaiConstants.TAB_MEMBER);
     }
@@ -135,7 +133,7 @@ public class TickletListActivity extends DamaiBaseActivity {
             WebViewFragment webViewFragment = new WebViewFragment();
             this.downH5Fragment = webViewFragment;
             webViewFragment.setArguments(bundle);
-            this.downH5Fragment.setListener(new C2031a());
+            this.downH5Fragment.setListener(new a());
             getSupportFragmentManager().beginTransaction().replace(R$id.ticklet_list_main_container, this.downH5Fragment).commitAllowingStateLoss();
             return;
         }
@@ -234,7 +232,7 @@ public class TickletListActivity extends DamaiBaseActivity {
             return;
         }
         super.onCreate(bundle);
-        C0529c.e().K(this);
+        c.e().K(this);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */

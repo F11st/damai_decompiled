@@ -1,8 +1,6 @@
 package tb;
 
 import java.util.List;
-import kotlin.collections.C8214m;
-import kotlin.text.C8604o;
 import kotlin.text.StringsKt__StringsKt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -17,7 +15,7 @@ public final class zw1 {
         String b = ni1Var.b();
         b41.h(b, "name.asString()");
         if (n61.b(b)) {
-            k = C8214m.k(b(ni1Var));
+            k = kotlin.collections.m.k(b(ni1Var));
             return k;
         } else if (n61.c(b)) {
             return f(ni1Var);
@@ -49,7 +47,7 @@ public final class zw1 {
         String d = ni1Var.d();
         b41.h(d, "methodName.identifier");
         boolean z2 = false;
-        F = C8604o.F(d, str, false, 2, null);
+        F = kotlin.text.o.F(d, str, false, 2, null);
         if (F && d.length() != str.length()) {
             char charAt = d.charAt(str.length());
             if ('a' <= charAt && charAt <= 'z') {
@@ -89,7 +87,7 @@ public final class zw1 {
     public static final List<ni1> f(@NotNull ni1 ni1Var) {
         List<ni1> l;
         b41.i(ni1Var, "methodName");
-        l = C8214m.l(c(ni1Var, false), c(ni1Var, true));
+        l = kotlin.collections.m.l(c(ni1Var, false), c(ni1Var, true));
         return l;
     }
 }

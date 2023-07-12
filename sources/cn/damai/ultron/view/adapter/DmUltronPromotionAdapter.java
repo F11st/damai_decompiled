@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.ultron.R$drawable;
 import cn.damai.ultron.R$id;
 import cn.damai.ultron.R$layout;
@@ -52,14 +52,13 @@ public class DmUltronPromotionAdapter extends RecyclerView.Adapter<CouponViewHol
         private LinearLayout m;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.ultron.view.adapter.DmUltronPromotionAdapter$CouponViewHolder$a */
         /* loaded from: classes17.dex */
-        public class View$OnClickListenerC2658a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ DmPromotionOptionsBean a;
             final /* synthetic */ int b;
 
-            View$OnClickListenerC2658a(DmPromotionOptionsBean dmPromotionOptionsBean, int i) {
+            a(DmPromotionOptionsBean dmPromotionOptionsBean, int i) {
                 this.a = dmPromotionOptionsBean;
                 this.b = i;
             }
@@ -121,7 +120,7 @@ public class DmUltronPromotionAdapter extends RecyclerView.Adapter<CouponViewHol
                 this.i.setBackgroundResource(R$drawable.radio_unselected_big);
             }
             if (dmPromotionOptionsBean.valid) {
-                this.a.setOnClickListener(new View$OnClickListenerC2658a(dmPromotionOptionsBean, i));
+                this.a.setOnClickListener(new a(dmPromotionOptionsBean, i));
             } else {
                 this.a.setOnClickListener(null);
             }
@@ -177,7 +176,7 @@ public class DmUltronPromotionAdapter extends RecyclerView.Adapter<CouponViewHol
             HashMap hashMap = new HashMap();
             hashMap.put("item_id", String.valueOf(ua0.b(DmUltronPromotionAdapter.this.b)));
             hashMap.put("coupon_id", dmPromotionOptionsBean.selectedId);
-            C0529c e = C0529c.e();
+            c e = c.e();
             View view = this.itemView;
             e.G(view, "item_" + (i - (!dmPromotionOptionsBean.valid ? 1 : 0)), "couponlayer", "confirm", hashMap);
         }

@@ -31,9 +31,9 @@ public class PopLayerDebugActivity extends Activity {
         try {
             String queryParameter = getIntent().getData().getQueryParameter("windvane");
             if (queryParameter == null) {
-                C3705a.f(new String[0]);
+                a.f(new String[0]);
             } else {
-                C3705a.f(queryParameter.split(","));
+                a.f(queryParameter.split(","));
             }
             TextView textView2 = this.a;
             textView2.append("Start monitoring WVPlugins:" + queryParameter + StringUtils.LF);

@@ -17,13 +17,13 @@ import tb.jn1;
 /* loaded from: classes10.dex */
 public abstract class AbstractExecutionThreadService implements Service {
     private static final Logger b = Logger.getLogger(AbstractExecutionThreadService.class.getName());
-    private final Service a = new AbstractC5327c() { // from class: com.google.common.util.concurrent.AbstractExecutionThreadService.1
+    private final Service a = new c() { // from class: com.google.common.util.concurrent.AbstractExecutionThreadService.1
 
         /* compiled from: Taobao */
         /* renamed from: com.google.common.util.concurrent.AbstractExecutionThreadService$1$a */
         /* loaded from: classes10.dex */
-        class C5292a implements Supplier<String> {
-            C5292a() {
+        class a implements Supplier<String> {
+            a() {
             }
 
             @Override // com.google.common.base.Supplier
@@ -33,9 +33,9 @@ public abstract class AbstractExecutionThreadService implements Service {
             }
         }
 
-        @Override // com.google.common.util.concurrent.AbstractC5327c
+        @Override // com.google.common.util.concurrent.c
         protected final void e() {
-            MoreExecutors.g(AbstractExecutionThreadService.this.b(), new C5292a()).execute(new Runnable() { // from class: com.google.common.util.concurrent.AbstractExecutionThreadService.1.2
+            MoreExecutors.g(AbstractExecutionThreadService.this.b(), new a()).execute(new Runnable() { // from class: com.google.common.util.concurrent.AbstractExecutionThreadService.1.2
                 @Override // java.lang.Runnable
                 public void run() {
                     try {
@@ -53,7 +53,7 @@ public abstract class AbstractExecutionThreadService implements Service {
             });
         }
 
-        @Override // com.google.common.util.concurrent.AbstractC5327c
+        @Override // com.google.common.util.concurrent.c
         protected void f() {
             AbstractExecutionThreadService.this.g();
         }
@@ -65,10 +65,9 @@ public abstract class AbstractExecutionThreadService implements Service {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.util.concurrent.AbstractExecutionThreadService$a */
     /* loaded from: classes10.dex */
-    public class ExecutorC5293a implements Executor {
-        ExecutorC5293a() {
+    public class a implements Executor {
+        a() {
         }
 
         @Override // java.util.concurrent.Executor
@@ -85,8 +84,8 @@ public abstract class AbstractExecutionThreadService implements Service {
     }
 
     @Override // com.google.common.util.concurrent.Service
-    public final void addListener(Service.AbstractC5323b abstractC5323b, Executor executor) {
-        this.a.addListener(abstractC5323b, executor);
+    public final void addListener(Service.b bVar, Executor executor) {
+        this.a.addListener(bVar, executor);
     }
 
     @Override // com.google.common.util.concurrent.Service
@@ -100,7 +99,7 @@ public abstract class AbstractExecutionThreadService implements Service {
     }
 
     protected Executor b() {
-        return new ExecutorC5293a();
+        return new a();
     }
 
     protected abstract void c() throws Exception;

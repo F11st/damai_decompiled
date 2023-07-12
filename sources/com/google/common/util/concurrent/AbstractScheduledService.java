@@ -23,25 +23,24 @@ import tb.jn1;
 /* loaded from: classes10.dex */
 public abstract class AbstractScheduledService implements Service {
     private static final Logger b = Logger.getLogger(AbstractScheduledService.class.getName());
-    private final AbstractC5327c a = new ServiceDelegate(this, null);
+    private final com.google.common.util.concurrent.c a = new ServiceDelegate(this, null);
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.util.concurrent.AbstractScheduledService$a */
     /* loaded from: classes10.dex */
-    public class C5305a extends Service.AbstractC5323b {
+    public class a extends Service.b {
         final /* synthetic */ ScheduledExecutorService a;
 
-        C5305a(AbstractScheduledService abstractScheduledService, ScheduledExecutorService scheduledExecutorService) {
+        a(AbstractScheduledService abstractScheduledService, ScheduledExecutorService scheduledExecutorService) {
             this.a = scheduledExecutorService;
         }
 
-        @Override // com.google.common.util.concurrent.Service.AbstractC5323b
+        @Override // com.google.common.util.concurrent.Service.b
         public void a(Service.State state, Throwable th) {
             this.a.shutdown();
         }
 
-        @Override // com.google.common.util.concurrent.Service.AbstractC5323b
+        @Override // com.google.common.util.concurrent.Service.b
         public void e(Service.State state) {
             this.a.shutdown();
         }
@@ -49,10 +48,9 @@ public abstract class AbstractScheduledService implements Service {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.util.concurrent.AbstractScheduledService$b */
     /* loaded from: classes10.dex */
-    public class ThreadFactoryC5306b implements ThreadFactory {
-        ThreadFactoryC5306b() {
+    public class b implements ThreadFactory {
+        b() {
         }
 
         @Override // java.util.concurrent.ThreadFactory
@@ -62,17 +60,16 @@ public abstract class AbstractScheduledService implements Service {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.util.concurrent.AbstractScheduledService$c */
     /* loaded from: classes10.dex */
-    public static abstract class AbstractC5307c {
+    public static abstract class c {
     }
 
     protected AbstractScheduledService() {
     }
 
     @Override // com.google.common.util.concurrent.Service
-    public final void addListener(Service.AbstractC5323b abstractC5323b, Executor executor) {
-        this.a.addListener(abstractC5323b, executor);
+    public final void addListener(Service.b bVar, Executor executor) {
+        this.a.addListener(bVar, executor);
     }
 
     @Override // com.google.common.util.concurrent.Service
@@ -86,14 +83,14 @@ public abstract class AbstractScheduledService implements Service {
     }
 
     protected ScheduledExecutorService c() {
-        ScheduledExecutorService newSingleThreadScheduledExecutor = Executors.newSingleThreadScheduledExecutor(new ThreadFactoryC5306b());
-        addListener(new C5305a(this, newSingleThreadScheduledExecutor), MoreExecutors.a());
+        ScheduledExecutorService newSingleThreadScheduledExecutor = Executors.newSingleThreadScheduledExecutor(new b());
+        addListener(new a(this, newSingleThreadScheduledExecutor), MoreExecutors.a());
         return newSingleThreadScheduledExecutor;
     }
 
     protected abstract void d() throws Exception;
 
-    protected abstract AbstractC5307c e();
+    protected abstract c e();
 
     protected String f() {
         return AbstractScheduledService.class.getSimpleName();
@@ -151,7 +148,7 @@ public abstract class AbstractScheduledService implements Service {
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
-    public final class ServiceDelegate extends AbstractC5327c {
+    public final class ServiceDelegate extends com.google.common.util.concurrent.c {
         @MonotonicNonNullDecl
         private volatile Future<?> p;
         @MonotonicNonNullDecl
@@ -182,10 +179,9 @@ public abstract class AbstractScheduledService implements Service {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.util.concurrent.AbstractScheduledService$ServiceDelegate$a */
         /* loaded from: classes10.dex */
-        class C5304a implements Supplier<String> {
-            C5304a() {
+        class a implements Supplier<String> {
+            a() {
             }
 
             @Override // com.google.common.base.Supplier
@@ -200,9 +196,9 @@ public abstract class AbstractScheduledService implements Service {
             this.s = new Task();
         }
 
-        @Override // com.google.common.util.concurrent.AbstractC5327c
+        @Override // com.google.common.util.concurrent.c
         protected final void e() {
-            this.q = MoreExecutors.h(AbstractScheduledService.this.c(), new C5304a());
+            this.q = MoreExecutors.h(AbstractScheduledService.this.c(), new a());
             this.q.execute(new Runnable() { // from class: com.google.common.util.concurrent.AbstractScheduledService.ServiceDelegate.2
                 @Override // java.lang.Runnable
                 public void run() {
@@ -210,7 +206,7 @@ public abstract class AbstractScheduledService implements Service {
                     try {
                         AbstractScheduledService.this.h();
                         AbstractScheduledService.this.e();
-                        AbstractC5327c unused = AbstractScheduledService.this.a;
+                        com.google.common.util.concurrent.c unused = AbstractScheduledService.this.a;
                         ScheduledExecutorService unused2 = ServiceDelegate.this.q;
                         Runnable unused3 = ServiceDelegate.this.s;
                         throw null;
@@ -228,7 +224,7 @@ public abstract class AbstractScheduledService implements Service {
             });
         }
 
-        @Override // com.google.common.util.concurrent.AbstractC5327c
+        @Override // com.google.common.util.concurrent.c
         protected final void f() {
             this.p.cancel(false);
             this.q.execute(new Runnable() { // from class: com.google.common.util.concurrent.AbstractScheduledService.ServiceDelegate.3
@@ -254,7 +250,7 @@ public abstract class AbstractScheduledService implements Service {
             return AbstractScheduledService.this.toString();
         }
 
-        /* synthetic */ ServiceDelegate(AbstractScheduledService abstractScheduledService, C5305a c5305a) {
+        /* synthetic */ ServiceDelegate(AbstractScheduledService abstractScheduledService, a aVar) {
             this();
         }
     }

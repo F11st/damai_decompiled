@@ -22,12 +22,11 @@ public class MusicFestivalView extends AbsView<MusicFestivalContract.Presenter> 
     private MusicFestivalViewHolder mViewHolder;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.music.mvp.MusicFestivalView$a */
     /* loaded from: classes7.dex */
-    public class C1926a implements MusicFestivalViewHolder.OnUtEventListener {
+    public class a implements MusicFestivalViewHolder.OnUtEventListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1926a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.music.viewholder.MusicFestivalViewHolder.OnUtEventListener
@@ -98,7 +97,7 @@ public class MusicFestivalView extends AbsView<MusicFestivalContract.Presenter> 
 
     public MusicFestivalView(View view) {
         super(view);
-        this.mViewHolder = new MusicFestivalViewHolder(view, new C1926a());
+        this.mViewHolder = new MusicFestivalViewHolder(view, new a());
     }
 
     @Override // cn.damai.tetris.component.music.mvp.MusicFestivalContract.View

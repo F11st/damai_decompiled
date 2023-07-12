@@ -24,10 +24,9 @@ public class er implements IDownloader {
     public static final Uri CONTENT_URI = Uri.parse("content://downloads/my_downloads");
 
     /* compiled from: Taobao */
-    /* renamed from: tb.er$a */
     /* loaded from: classes11.dex */
-    class C9110a extends ContentObserver {
-        C9110a(Handler handler) {
+    class a extends ContentObserver {
+        a(Handler handler) {
             super(handler);
         }
 
@@ -125,10 +124,10 @@ public class er implements IDownloader {
             request.setTitle(id2Var.f.h);
             request.setDescription(id2Var.f.i);
         }
-        String a = id2Var.a();
-        request.setDestinationUri(Uri.fromFile(new File(id2Var.g + "/" + a)));
+        String a2 = id2Var.a();
+        request.setDestinationUri(Uri.fromFile(new File(id2Var.g + "/" + a2)));
         id2 id2Var2 = this.d;
-        id2Var2.d = id2Var.g + "/" + a;
+        id2Var2.d = id2Var.g + "/" + a2;
         if (!id2Var.f.j) {
             request.setVisibleInDownloadsUi(false);
             if (c()) {
@@ -148,7 +147,7 @@ public class er implements IDownloader {
             return;
         }
         this.a = e.enqueue(request);
-        this.b = new C9110a(null);
+        this.b = new a(null);
         um.a.getContentResolver().registerContentObserver(CONTENT_URI, true, this.b);
     }
 

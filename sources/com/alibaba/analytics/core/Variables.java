@@ -3,14 +3,14 @@ package com.alibaba.analytics.core;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
-import com.alibaba.analytics.core.config.AbstractC3111d;
-import com.alibaba.analytics.core.config.C3109b;
 import com.alibaba.analytics.core.config.SystemConfigMgr;
+import com.alibaba.analytics.core.config.b;
+import com.alibaba.analytics.core.config.d;
 import com.alibaba.analytics.core.model.LogField;
-import com.alibaba.analytics.core.sync.C3135g;
 import com.alibaba.analytics.core.sync.UploadMode;
+import com.alibaba.analytics.core.sync.g;
 import com.alibaba.analytics.utils.Logger;
-import com.alibaba.appmonitor.delegate.C3309a;
+import com.alibaba.appmonitor.delegate.a;
 import com.ut.mini.UTAnalyticsDelegate;
 import com.ut.mini.core.sign.IUTRequestAuthentication;
 import java.io.UnsupportedEncodingException;
@@ -45,7 +45,7 @@ public class Variables {
     private boolean p = false;
     private volatile boolean q = false;
     private pq r = null;
-    private AbstractC3111d s = null;
+    private d s = null;
     private volatile String t = null;
     private volatile boolean u = false;
     private String v = "";
@@ -87,7 +87,7 @@ public class Variables {
         Logger.d();
         if ("0".equalsIgnoreCase(SystemConfigMgr.i().h("real_time_debug"))) {
             Logger.v("Variables", "Server Config turn off RealTimeDebug Mode!");
-        } else if (C3109b.a()) {
+        } else if (b.a()) {
             Logger.v("Variables", "Server Config(disable_ut_debug) turn off RealTimeDebug Mode!");
         } else if (map != null && map.containsKey("debug_api_url") && map.containsKey("debug_key")) {
             String str = map.get("debug_key");
@@ -99,7 +99,7 @@ public class Variables {
                 V();
             }
             T(true);
-            C3135g.p().t(UploadMode.REALTIME);
+            g.p().t(UploadMode.REALTIME);
         }
     }
 
@@ -375,7 +375,7 @@ public class Variables {
 
     public synchronized void V() {
         this.p = true;
-        C3309a.a = true;
+        a.a = true;
     }
 
     public void W(boolean z) {
@@ -435,7 +435,7 @@ public class Variables {
         return this.e;
     }
 
-    public AbstractC3111d i() {
+    public d i() {
         return this.s;
     }
 
@@ -452,7 +452,7 @@ public class Variables {
     }
 
     public synchronized boolean m() {
-        if (C3109b.a()) {
+        if (b.a()) {
             return false;
         }
         return this.p;
@@ -469,7 +469,7 @@ public class Variables {
     public void p0() {
         P();
         U(null);
-        C3135g.p().t(UploadMode.INTERVAL);
+        g.p().t(UploadMode.INTERVAL);
         j0(null);
         this.u = false;
     }

@@ -1,7 +1,7 @@
 package com.youku.middlewareservice.provider.json;
 
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -11,7 +11,7 @@ public class JsonProviderProxy {
     public static <T> T fromJson(String str, Class<T> cls) {
         try {
             if (sProxy == null) {
-                sProxy = (JsonProvider) C8883a.j("com.youku.middlewareservice_impl.provider.json.JsonProviderImpl").b().f();
+                sProxy = (JsonProvider) a.j("com.youku.middlewareservice_impl.provider.json.JsonProviderImpl").b().f();
             }
             return (T) sProxy.fromJson(str, cls);
         } catch (Throwable th) {
@@ -22,7 +22,7 @@ public class JsonProviderProxy {
 
     public static JsonProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (JsonProvider) C8883a.j("com.youku.middlewareservice_impl.provider.json.JsonProviderImpl").b().f();
+            sProxy = (JsonProvider) a.j("com.youku.middlewareservice_impl.provider.json.JsonProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -40,7 +40,7 @@ public class JsonProviderProxy {
     public static <T> T parseObject(String str, Class<T> cls) {
         try {
             if (sProxy == null) {
-                sProxy = (JsonProvider) C8883a.j("com.youku.middlewareservice_impl.provider.json.JsonProviderImpl").b().f();
+                sProxy = (JsonProvider) a.j("com.youku.middlewareservice_impl.provider.json.JsonProviderImpl").b().f();
             }
             return (T) sProxy.parseObject(str, cls);
         } catch (Throwable th) {
@@ -52,7 +52,7 @@ public class JsonProviderProxy {
     public static String toJSONString(Object obj) {
         try {
             if (sProxy == null) {
-                sProxy = (JsonProvider) C8883a.j("com.youku.middlewareservice_impl.provider.json.JsonProviderImpl").b().f();
+                sProxy = (JsonProvider) a.j("com.youku.middlewareservice_impl.provider.json.JsonProviderImpl").b().f();
             }
             return sProxy.toJSONString(obj);
         } catch (Throwable th) {
@@ -64,7 +64,7 @@ public class JsonProviderProxy {
     public static String toJson(Object obj) {
         try {
             if (sProxy == null) {
-                sProxy = (JsonProvider) C8883a.j("com.youku.middlewareservice_impl.provider.json.JsonProviderImpl").b().f();
+                sProxy = (JsonProvider) a.j("com.youku.middlewareservice_impl.provider.json.JsonProviderImpl").b().f();
             }
             return sProxy.toJson(obj);
         } catch (Throwable th) {

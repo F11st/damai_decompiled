@@ -1,11 +1,11 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
-import io.reactivex.AbstractC8152e;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.SingleObserver;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.disposables.EmptyDisposable;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.fuseable.FuseToFlowable;
@@ -19,9 +19,9 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableToListSingle<T, U extends Collection<? super T>> extends AbstractC8152e<U> implements FuseToFlowable<U> {
+public final class FlowableToListSingle<T, U extends Collection<? super T>> extends e<U> implements FuseToFlowable<U> {
     final Callable<U> collectionSupplier;
-    final AbstractC8147b<T> source;
+    final b<T> source;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -74,16 +74,16 @@ public final class FlowableToListSingle<T, U extends Collection<? super T>> exte
         }
     }
 
-    public FlowableToListSingle(AbstractC8147b<T> abstractC8147b) {
-        this(abstractC8147b, ArrayListSupplier.asCallable());
+    public FlowableToListSingle(b<T> bVar) {
+        this(bVar, ArrayListSupplier.asCallable());
     }
 
     @Override // io.reactivex.internal.fuseable.FuseToFlowable
-    public AbstractC8147b<U> fuseToFlowable() {
+    public b<U> fuseToFlowable() {
         return i42.l(new FlowableToList(this.source, this.collectionSupplier));
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super U> singleObserver) {
         try {
             this.source.subscribe((FlowableSubscriber) new ToListSubscriber(singleObserver, (Collection) ObjectHelper.requireNonNull(this.collectionSupplier.call(), "The collectionSupplier returned a null collection. Null values are generally not allowed in 2.x operators and sources.")));
@@ -93,8 +93,8 @@ public final class FlowableToListSingle<T, U extends Collection<? super T>> exte
         }
     }
 
-    public FlowableToListSingle(AbstractC8147b<T> abstractC8147b, Callable<U> callable) {
-        this.source = abstractC8147b;
+    public FlowableToListSingle(b<T> bVar, Callable<U> callable) {
+        this.source = bVar;
         this.collectionSupplier = callable;
     }
 }

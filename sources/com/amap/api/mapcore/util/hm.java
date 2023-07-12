@@ -11,9 +11,8 @@ public class hm {
     private volatile int b = -1;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.hm$a */
     /* loaded from: classes10.dex */
-    static class C4575a {
+    static class a {
         public static Map<String, hm> a = new HashMap();
     }
 
@@ -22,10 +21,10 @@ public class hm {
     }
 
     public static hm a(gm gmVar) {
-        if (C4575a.a.get(gmVar.a()) == null) {
-            C4575a.a.put(gmVar.a(), new hm(gmVar));
+        if (a.a.get(gmVar.a()) == null) {
+            a.a.put(gmVar.a(), new hm(gmVar));
         }
-        return C4575a.a.get(gmVar.a());
+        return a.a.get(gmVar.a());
     }
 
     public boolean b(Context context) {

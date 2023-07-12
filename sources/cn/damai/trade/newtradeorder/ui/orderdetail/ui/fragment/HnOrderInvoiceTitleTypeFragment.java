@@ -25,7 +25,7 @@ public class HnOrderInvoiceTitleTypeFragment extends DamaiBaseMvpFragment {
     private Context mContext;
     private List<HnInvoiceTitleType> mInvoiceTitleTypeList;
     private LinearLayout mInvoiceTitleViewContainer;
-    private View$OnClickListenerC2187a mOnInvoiceItemClickListener;
+    private a mOnInvoiceItemClickListener;
     private HnInvoiceTitleType mSelectedHnInvoiceTitleType;
 
     /* compiled from: Taobao */
@@ -35,12 +35,11 @@ public class HnOrderInvoiceTitleTypeFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.fragment.HnOrderInvoiceTitleTypeFragment$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2187a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        public View$OnClickListenerC2187a() {
+        public a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -73,7 +72,7 @@ public class HnOrderInvoiceTitleTypeFragment extends DamaiBaseMvpFragment {
             return;
         }
         LayoutInflater from = LayoutInflater.from(context);
-        this.mOnInvoiceItemClickListener = new View$OnClickListenerC2187a();
+        this.mOnInvoiceItemClickListener = new a();
         int size = this.mInvoiceTitleTypeList.size();
         for (int i = 0; i < size; i++) {
             HnInvoiceTitleType hnInvoiceTitleType = this.mInvoiceTitleTypeList.get(i);

@@ -4,7 +4,6 @@ import android.app.Application;
 import android.text.TextUtils;
 import android.util.Log;
 import com.alibaba.aliweex.AliWXSDKEngine;
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.IConfigAdapter;
 import com.alibaba.aliweex.adapter.IGodEyeStageAdapter;
 import com.alibaba.aliweex.adapter.adapter.IFeedBackCallBack;
@@ -28,7 +27,7 @@ import org.apache.commons.lang3.StringUtils;
 public class mz2 implements IWXJSExceptionAdapter {
     public static String a() {
         try {
-            Application b = C3004a.l().b();
+            Application b = com.alibaba.aliweex.a.l().b();
             return b == null ? "" : b.getPackageManager().getPackageInfo(b.getPackageName(), 0).versionName;
         } catch (Exception e) {
             WXLogUtils.e("WXExceptionAdapter getAppVersionName Exception: ", e);
@@ -48,7 +47,7 @@ public class mz2 implements IWXJSExceptionAdapter {
                 d = 10.0d;
             }
         }
-        IConfigAdapter c = C3004a.l().c();
+        IConfigAdapter c = com.alibaba.aliweex.a.l().c();
         if (c != null) {
             try {
                 d = Double.valueOf(c.getConfig(oz2.WXAPM_CONFIG_GROUP, str, String.valueOf(d))).doubleValue();
@@ -158,11 +157,11 @@ public class mz2 implements IWXJSExceptionAdapter {
                 } catch (Throwable unused) {
                 }
                 bizErrorModule.exceptionArgs = hashMap2;
-                if (b("god_eye_stage_data") && errCode != WXErrorCode.WX_ERROR_WHITE_SCREEN && (h = C3004a.l().h()) != null) {
+                if (b("god_eye_stage_data") && errCode != WXErrorCode.WX_ERROR_WHITE_SCREEN && (h = com.alibaba.aliweex.a.l().h()) != null) {
                     h.onException("exception_weex_check", bizErrorModule.exceptionArg1, hashMap2);
                 }
                 bizErrorModule.thread = Thread.currentThread();
-                BizErrorReporter.getInstance().send(C3004a.l().b(), bizErrorModule);
+                BizErrorReporter.getInstance().send(com.alibaba.aliweex.a.l().b(), bizErrorModule);
                 Log.i("weex js err", "js err end");
                 if (errCode.getErrorGroup() != WXErrorCode.ErrorGroup.JS || y == null) {
                     return;

@@ -106,7 +106,7 @@ public class DagoInputBoxDialog extends Dialog implements DialogInterface.OnKeyL
     }
 
     public DagoInputBoxDialog(@NonNull Context context, Map<String, Object> map) {
-        super(context, R.C7944style.dago_pgc_InputBoxDialogStyle);
+        super(context, R.style.dago_pgc_InputBoxDialogStyle);
         this.mOrientation = 1;
         this.offset = 0;
         this.mTopic = "";
@@ -202,7 +202,7 @@ public class DagoInputBoxDialog extends Dialog implements DialogInterface.OnKeyL
             ipChange.ipc$dispatch("-369644519", new Object[]{this});
             return;
         }
-        this.mExpressionBtn.setImageResource(R.C7941drawable.dago_pgc_ic_biaoqing);
+        this.mExpressionBtn.setImageResource(R.drawable.dago_pgc_ic_biaoqing);
         this.mExpressionPanel.setVisibility(4);
     }
 
@@ -388,7 +388,7 @@ public class DagoInputBoxDialog extends Dialog implements DialogInterface.OnKeyL
                 window.setFlags(2048, 2048);
             }
             window.setBackgroundDrawable(new ColorDrawable(0));
-            window.setWindowAnimations(R.C7944style.dago_pgc_InputDialogAnimations);
+            window.setWindowAnimations(R.style.dago_pgc_InputDialogAnimations);
         }
     }
 
@@ -496,7 +496,7 @@ public class DagoInputBoxDialog extends Dialog implements DialogInterface.OnKeyL
         gradientDrawable.setColors(iArr);
         StateListDrawable stateListDrawable = new StateListDrawable();
         stateListDrawable.addState(new int[]{16842910}, gradientDrawable);
-        stateListDrawable.addState(new int[]{-16842910}, UIUtil.getResources().getDrawable(R.C7941drawable.dago_pgc_background_chat_none));
+        stateListDrawable.addState(new int[]{-16842910}, UIUtil.getResources().getDrawable(R.drawable.dago_pgc_background_chat_none));
         TextView textView = this.mSendBtn;
         if (textView != null) {
             textView.setMaxLines(1);
@@ -510,7 +510,7 @@ public class DagoInputBoxDialog extends Dialog implements DialogInterface.OnKeyL
             ipChange.ipc$dispatch("252498196", new Object[]{this});
             return;
         }
-        this.mExpressionBtn.setImageResource(R.C7941drawable.dago_pgc_ic_jianpan);
+        this.mExpressionBtn.setImageResource(R.drawable.dago_pgc_ic_jianpan);
         this.mExpressionPanel.setVisibility(0);
         DagoInputBoxUtils.hideKeyboard(this.mInputEditText);
         UIUtil.postDelayed(new Runnable() { // from class: com.youku.live.dago.widgetlib.ailproom.adapter.chatinput.DagoInputBoxDialog.5
@@ -711,7 +711,7 @@ public class DagoInputBoxDialog extends Dialog implements DialogInterface.OnKeyL
             return;
         }
         super.onCreate(bundle);
-        setContentView(R.C7942layout.dago_pgc_view_inputbox);
+        setContentView(R.layout.dago_pgc_view_inputbox);
         initView();
         setDiffModelPanelHeight();
         setRootViewOrientation();

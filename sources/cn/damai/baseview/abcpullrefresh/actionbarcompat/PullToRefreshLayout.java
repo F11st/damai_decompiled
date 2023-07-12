@@ -3,8 +3,8 @@ package cn.damai.baseview.abcpullrefresh.actionbarcompat;
 import android.app.Activity;
 import android.content.Context;
 import android.util.AttributeSet;
-import cn.damai.baseview.abcpullrefresh.library.C0284d;
 import cn.damai.baseview.abcpullrefresh.library.PullToRefreshAttacher;
+import cn.damai.baseview.abcpullrefresh.library.d;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 
@@ -19,9 +19,9 @@ public class PullToRefreshLayout extends cn.damai.baseview.abcpullrefresh.librar
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // cn.damai.baseview.abcpullrefresh.library.PullToRefreshLayout
-    public PullToRefreshAttacher createPullToRefreshAttacher(Activity activity, C0284d c0284d) {
+    public PullToRefreshAttacher createPullToRefreshAttacher(Activity activity, d dVar) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1501682505") ? (PullToRefreshAttacher) ipChange.ipc$dispatch("1501682505", new Object[]{this, activity, c0284d}) : new C0275a(activity, c0284d);
+        return AndroidInstantRuntime.support(ipChange, "1501682505") ? (PullToRefreshAttacher) ipChange.ipc$dispatch("1501682505", new Object[]{this, activity, dVar}) : new a(activity, dVar);
     }
 
     public PullToRefreshLayout(Context context, AttributeSet attributeSet) {

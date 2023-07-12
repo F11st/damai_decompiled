@@ -20,7 +20,6 @@ import cn.damai.common.AppConfig;
 import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.seatbiz.seat.common.bean.seat.SeatNew;
 import cn.damai.commonbusiness.seatbiz.seat.qilin.bean.PriceLevel;
 import cn.damai.commonbusiness.seatbiz.seat.qilin.bean.TbParams;
@@ -83,12 +82,11 @@ public class TSeatActivity extends BaseSeatActivity<TSeatPresenter, TSeatModel2>
     private long start;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.TSeatActivity$a */
     /* loaded from: classes7.dex */
-    public class C1707a extends u82 {
+    public class a extends u82 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1707a(Activity activity, View view) {
+        a(Activity activity, View view) {
             super(activity, view);
         }
 
@@ -114,12 +112,11 @@ public class TSeatActivity extends BaseSeatActivity<TSeatPresenter, TSeatModel2>
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.TSeatActivity$b */
     /* loaded from: classes7.dex */
-    public class C1708b implements SeatListLayerPanel.OnPanelStateListener {
+    public class b implements SeatListLayerPanel.OnPanelStateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1708b() {
+        b() {
         }
 
         @Override // cn.damai.seat.helper.SeatListLayerPanel.OnPanelStateListener
@@ -130,19 +127,18 @@ public class TSeatActivity extends BaseSeatActivity<TSeatPresenter, TSeatModel2>
                 return;
             }
             if (z) {
-                C0529c.e().x(o92.l().n(TSeatActivity.this.mParams.itemId + "", TSeatActivity.this.mParams.performId + ""));
+                cn.damai.common.user.c.e().x(o92.l().n(TSeatActivity.this.mParams.itemId + "", TSeatActivity.this.mParams.performId + ""));
             }
             TSeatActivity.this.mBottomPanel.d(!z);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.TSeatActivity$c */
     /* loaded from: classes7.dex */
-    public class C1709c implements OnSeatRemoveListener {
+    public class c implements OnSeatRemoveListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1709c() {
+        c() {
         }
 
         @Override // cn.damai.seat.listener.OnSeatRemoveListener
@@ -157,12 +153,11 @@ public class TSeatActivity extends BaseSeatActivity<TSeatPresenter, TSeatModel2>
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.TSeatActivity$d */
     /* loaded from: classes7.dex */
-    public class C1710d extends SeatVrTipPanel {
+    public class d extends SeatVrTipPanel {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1710d(Activity activity, View view) {
+        d(Activity activity, View view) {
             super(activity, view);
         }
 
@@ -174,19 +169,18 @@ public class TSeatActivity extends BaseSeatActivity<TSeatPresenter, TSeatModel2>
                 return;
             }
             if (TSeatActivity.this.mParams != null) {
-                C0529c.e().x(o92.l().k(TSeatActivity.this.mParams.itemId + "", TSeatActivity.this.mParams.performId + ""));
+                cn.damai.common.user.c.e().x(o92.l().k(TSeatActivity.this.mParams.itemId + "", TSeatActivity.this.mParams.performId + ""));
             }
             ((TSeatPresenter) TSeatActivity.this.mPresenter).onVRInfoClick();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.TSeatActivity$e */
     /* loaded from: classes7.dex */
-    public class C1711e implements SeatVrTipPanel.VrThumbViewEventListener {
+    public class e implements SeatVrTipPanel.VrThumbViewEventListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1711e() {
+        e() {
         }
 
         @Override // cn.damai.seat.helper.SeatVrTipPanel.VrThumbViewEventListener
@@ -209,18 +203,16 @@ public class TSeatActivity extends BaseSeatActivity<TSeatPresenter, TSeatModel2>
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.TSeatActivity$f */
     /* loaded from: classes7.dex */
-    public class C1712f implements RegionSeatView.OnSeatViewListener {
+    public class f implements RegionSeatView.OnSeatViewListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.seat.ui.TSeatActivity$f$a */
         /* loaded from: classes16.dex */
-        public class C1713a extends AnimatorListenerAdapter {
+        public class a extends AnimatorListenerAdapter {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1713a() {
+            a() {
             }
 
             @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -236,7 +228,7 @@ public class TSeatActivity extends BaseSeatActivity<TSeatPresenter, TSeatModel2>
             }
         }
 
-        C1712f() {
+        f() {
         }
 
         @Override // cn.damai.seat.view.RegionSeatView.OnSeatViewListener
@@ -270,7 +262,7 @@ public class TSeatActivity extends BaseSeatActivity<TSeatPresenter, TSeatModel2>
                 TSeatActivity.this.mBack2VenueBtn.setVisibility(0);
                 TSeatActivity.this.mBack2VenueTag.setVisibility(4);
                 TSeatActivity.this.mBack2VenueText.setVisibility(4);
-                AnimatorHelper.b(TSeatActivity.this.mBack2VenueBtn, i, dip2px, i2, dip2px2, new C1713a());
+                AnimatorHelper.b(TSeatActivity.this.mBack2VenueBtn, i, dip2px, i2, dip2px2, new a());
             } else {
                 TSeatActivity.this.mBack2VenueBtn.setVisibility(8);
             }
@@ -288,12 +280,11 @@ public class TSeatActivity extends BaseSeatActivity<TSeatPresenter, TSeatModel2>
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.TSeatActivity$g */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC1714g implements DialogInterface.OnClickListener {
+    public class g implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC1714g() {
+        g() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -347,15 +338,15 @@ public class TSeatActivity extends BaseSeatActivity<TSeatPresenter, TSeatModel2>
             textView.setOnClickListener(this);
             boolean z = RegionSeatView.isShowSvgRegionBound;
             TbParams tbParams = this.mParams;
-            boolean c = t92.c(tbParams == null ? 0L : tbParams.itemId, true);
-            boolean g = td.g(td.BUFFER_GROUP_1);
+            boolean c2 = t92.c(tbParams == null ? 0L : tbParams.itemId, true);
+            boolean g2 = td.g(td.BUFFER_GROUP_1);
             textView.setVisibility(0);
             StringBuilder sb = new StringBuilder();
             sb.append("bound-");
             sb.append(z ? "1" : "0");
             sb.append(" hw-");
-            sb.append(c ? "1" : "0");
-            sb.append(g ? " apipre-1" : " apipre-0");
+            sb.append(c2 ? "1" : "0");
+            sb.append(g2 ? " apipre-1" : " apipre-0");
             textView.setText(sb.toString());
         }
     }
@@ -417,14 +408,14 @@ public class TSeatActivity extends BaseSeatActivity<TSeatPresenter, TSeatModel2>
         View findViewById = findViewById(R$id.seat_jpg_bottom_bar);
         View findViewById2 = findViewById(R$id.seat_select_container);
         View findViewById3 = findViewById(R$id.bottom_bar_top_divide_line);
-        this.mBottomPanel = new C1707a(this, findViewById);
-        this.mPriceDetailPopUpPanel = new SeatListLayerPanel(this, (ViewStub) findViewById(R$id.seat_selected_list_new_layer_stub), new C1708b());
-        this.mSeatListV2HolScrollPanel = new SeatListV2Panel(this, findViewById2, findViewById3, new C1709c());
+        this.mBottomPanel = new a(this, findViewById);
+        this.mPriceDetailPopUpPanel = new SeatListLayerPanel(this, (ViewStub) findViewById(R$id.seat_selected_list_new_layer_stub), new b());
+        this.mSeatListV2HolScrollPanel = new SeatListV2Panel(this, findViewById2, findViewById3, new c());
         this.mDiffRowPanel = new d92(this, (ViewStub) findViewById(R$id.diff_row_tip_stub));
         this.mLoadingPanel = new SeatLoadingPanel((ViewStub) findViewById(R$id.loading_layer_stub));
-        C1710d c1710d = new C1710d(this, findViewById(R$id.layout_vr_thumb));
-        this.mVRTipPanel = c1710d;
-        c1710d.l(new C1711e());
+        d dVar = new d(this, findViewById(R$id.layout_vr_thumb));
+        this.mVRTipPanel = dVar;
+        dVar.l(new e());
         this.mParams = (TbParams) obtainExtra();
         showTestViewInDebugMode();
         TbParams tbParams = this.mParams;
@@ -479,7 +470,7 @@ public class TSeatActivity extends BaseSeatActivity<TSeatPresenter, TSeatModel2>
         } else if (id == R$id.zw_back_2_venue_tv) {
             this.mBack2VenueBtn.setVisibility(8);
             if (this.mSeatView != null) {
-                C0529c.e().x(o92.l().j(this.mParams.itemId + "", this.mParams.performId + ""));
+                cn.damai.common.user.c.e().x(o92.l().j(this.mParams.itemId + "", this.mParams.performId + ""));
                 this.mSeatView.zoom2FullViewMode();
             }
         } else if (id == R$id.seat_test) {
@@ -622,7 +613,7 @@ public class TSeatActivity extends BaseSeatActivity<TSeatPresenter, TSeatModel2>
         if (this.mSeatView == null) {
             RegionSeatView regionSeatView = new RegionSeatView(this, s92Var.i, s92Var.h, this.mParams);
             this.mSeatView = regionSeatView;
-            regionSeatView.setListener(new C1712f());
+            regionSeatView.setListener(new f());
             this.mViewContainer.addView(this.mSeatView, new ViewGroup.LayoutParams(-1, -1));
         }
         this.mSeatView.setTag(ViewToken.APM_VIEW_TOKEN, ViewToken.APM_VIEW_VALID);
@@ -654,7 +645,7 @@ public class TSeatActivity extends BaseSeatActivity<TSeatPresenter, TSeatModel2>
             ipChange.ipc$dispatch("-318439971", new Object[]{this, str});
         } else if (isFinishing()) {
         } else {
-            new DMDialog(this).o(false).q(str).n(getString(R$string.confirm), new DialogInterface$OnClickListenerC1714g()).show();
+            new DMDialog(this).o(false).q(str).n(getString(R$string.confirm), new g()).show();
         }
     }
 

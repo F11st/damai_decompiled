@@ -35,12 +35,11 @@ public class DMCommentSubItemView extends LinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.view.DMCommentSubItemView$a */
     /* loaded from: classes4.dex */
-    public class C0455a implements DMRatingBar.OnStarChangeListener {
+    public class a implements DMRatingBar.OnStarChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0455a() {
+        a() {
         }
 
         @Override // com.alibaba.pictures.bricks.view.DMRatingBar.OnStarChangeListener
@@ -69,7 +68,7 @@ public class DMCommentSubItemView extends LinearLayout {
 
     public DMCommentSubItemView(Context context) {
         super(context);
-        this.mOnStarChangeListener = new C0455a();
+        this.mOnStarChangeListener = new a();
         this.mContext = context;
         initView();
     }

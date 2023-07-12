@@ -3,7 +3,6 @@ package tb;
 import android.net.Uri;
 import android.taobao.windvane.config.WVServerConfig;
 import android.text.TextUtils;
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.IConfigAdapter;
 import com.taobao.weex.utils.WXLogUtils;
 
@@ -76,7 +75,7 @@ public class ev2 {
     }
 
     public static boolean d(String str) {
-        IConfigAdapter c = C3004a.l().c();
+        IConfigAdapter c = com.alibaba.aliweex.a.l().c();
         if (c != null) {
             boolean booleanValue = Boolean.valueOf(c.getConfig(CONFIG_GROUP_URL_CHECK_SWITCH, CONFIG_KEY_IS_CHECK, "")).booleanValue();
             boolean booleanValue2 = Boolean.valueOf(c.getConfig(CONFIG_GROUP_URL_CHECK_SWITCH, CONFIG_KEY_IS_RENDER, "")).booleanValue();
@@ -111,7 +110,7 @@ public class ev2 {
             WXLogUtils.d("urlHost is empty");
             return false;
         }
-        IConfigAdapter c = C3004a.l().c();
+        IConfigAdapter c = com.alibaba.aliweex.a.l().c();
         if (c == null) {
             return false;
         }
@@ -139,7 +138,7 @@ public class ev2 {
         } catch (Throwable th) {
             WXLogUtils.e(WXLogUtils.getStackTrace(th));
         }
-        if (TextUtils.isEmpty(str) || (c = C3004a.l().c()) == null) {
+        if (TextUtils.isEmpty(str) || (c = com.alibaba.aliweex.a.l().c()) == null) {
             return false;
         }
         String config = c.getConfig(CONFIG_GROUP_WEEX_WHITE_SCHEME_GROUP, CONFIG_KEY_WEEX_WHITE_SCHEME, "");
@@ -175,7 +174,7 @@ public class ev2 {
         } catch (Throwable th) {
             WXLogUtils.e(WXLogUtils.getStackTrace(th));
         }
-        if (TextUtils.isEmpty(str) || (c = C3004a.l().c()) == null) {
+        if (TextUtils.isEmpty(str) || (c = com.alibaba.aliweex.a.l().c()) == null) {
             return false;
         }
         String config = c.getConfig(CONFIG_GROUP_WEEX_WHITEURL_GROUP, CONFIG_KEY_WEEX_WHITEURL, "*.m.taobao.com,xilivr.ewszjk.m.jaeapp.com,luckygiftphp.ewszjk.m.jaeapp.com,xuan.ews.m.jaeapp.com");
@@ -191,7 +190,7 @@ public class ev2 {
     }
 
     public static boolean h(String str) {
-        IConfigAdapter c = C3004a.l().c();
+        IConfigAdapter c = com.alibaba.aliweex.a.l().c();
         if (c != null) {
             boolean booleanValue = Boolean.valueOf(c.getConfig(CONFIG_GROUP_URL_CHECK_SWITCH, CONFIG_KEY_IS_CHECK, "")).booleanValue();
             boolean booleanValue2 = Boolean.valueOf(c.getConfig(CONFIG_GROUP_URL_CHECK_SWITCH, CONFIG_KEY_IS_RENDER, "")).booleanValue();

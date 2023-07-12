@@ -7,16 +7,15 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.widget.Toast;
-import com.tencent.connect.C7035a;
 import com.tencent.connect.auth.QQToken;
 import com.tencent.connect.common.BaseApi;
 import com.tencent.connect.common.Constants;
 import com.tencent.connect.common.UIListenerManager;
-import com.tencent.open.b.C7084e;
+import com.tencent.open.b.e;
 import com.tencent.open.log.SLog;
-import com.tencent.open.utils.C7119g;
-import com.tencent.open.utils.C7123k;
-import com.tencent.open.utils.C7126m;
+import com.tencent.open.utils.g;
+import com.tencent.open.utils.k;
+import com.tencent.open.utils.m;
 import com.tencent.tauth.IUiListener;
 
 /* compiled from: Taobao */
@@ -36,7 +35,7 @@ public class QQAvatar extends BaseApi {
     }
 
     public void setAvatar(Activity activity, Uri uri, IUiListener iUiListener, int i) {
-        if (C7035a.a("QQAvatar", iUiListener)) {
+        if (com.tencent.connect.a.a("QQAvatar", iUiListener)) {
             return;
         }
         IUiListener iUiListener2 = this.a;
@@ -54,14 +53,14 @@ public class QQAvatar extends BaseApi {
         Intent a = a(activity);
         if (a(a)) {
             a(activity, bundle, a);
-            C7084e.a().a(this.c.getOpenId(), this.c.getAppId(), Constants.VIA_SET_AVATAR, "12", "18", "0");
+            e.a().a(this.c.getOpenId(), this.c.getAppId(), Constants.VIA_SET_AVATAR, "12", "18", "0");
             return;
         }
-        C7084e.a().a(this.c.getOpenId(), this.c.getAppId(), Constants.VIA_SET_AVATAR, "12", "18", "1");
+        e.a().a(this.c.getOpenId(), this.c.getAppId(), Constants.VIA_SET_AVATAR, "12", "18", "1");
     }
 
     public void setAvatarByQQ(Activity activity, Uri uri, IUiListener iUiListener) {
-        if (C7035a.a("QQAvatar", iUiListener)) {
+        if (com.tencent.connect.a.a("QQAvatar", iUiListener)) {
             return;
         }
         IUiListener iUiListener2 = this.a;
@@ -69,18 +68,18 @@ public class QQAvatar extends BaseApi {
             iUiListener2.onCancel();
         }
         this.a = iUiListener;
-        if (!C7123k.b(activity)) {
+        if (!k.b(activity)) {
             Toast.makeText(activity.getApplicationContext(), "当前手机未安装QQ，请安装最新版QQ后再试。", 1).show();
-        } else if (C7123k.c(activity, "8.0.0") < 0) {
+        } else if (k.c(activity, "8.0.0") < 0) {
             Toast.makeText(activity.getApplicationContext(), "当前手机QQ版本过低，不支持设置头像功能。", 1).show();
         } else {
-            String a = C7126m.a(activity);
+            String a = m.a(activity);
             StringBuffer stringBuffer = new StringBuffer("mqqapi://profile/sdk_avatar_edit?");
             if (!TextUtils.isEmpty(a)) {
                 if (a.length() > 20) {
                     a = a.substring(0, 20) + "...";
                 }
-                stringBuffer.append("&app_name=" + Base64.encodeToString(C7126m.j(a), 2));
+                stringBuffer.append("&app_name=" + Base64.encodeToString(m.j(a), 2));
             }
             String appId = this.c.getAppId();
             String openId = this.c.getOpenId();
@@ -88,21 +87,21 @@ public class QQAvatar extends BaseApi {
                 stringBuffer.append("&share_id=" + appId);
             }
             if (!TextUtils.isEmpty(openId)) {
-                stringBuffer.append("&open_id=" + Base64.encodeToString(C7126m.j(openId), 2));
+                stringBuffer.append("&open_id=" + Base64.encodeToString(m.j(openId), 2));
             }
-            String b = C7126m.b(activity, uri);
+            String b = m.b(activity, uri);
             if (!TextUtils.isEmpty(b)) {
                 try {
                     activity.grantUriPermission("com.tencent.mobileqq", uri, 3);
-                    stringBuffer.append("&set_uri=" + Base64.encodeToString(C7126m.j(uri.toString()), 2));
+                    stringBuffer.append("&set_uri=" + Base64.encodeToString(m.j(uri.toString()), 2));
                 } catch (Exception e) {
                     SLog.e("QQAvatar", "Exception", e);
                 }
             }
             if (!TextUtils.isEmpty(b)) {
-                stringBuffer.append("&set_path=" + Base64.encodeToString(C7126m.j(b), 2));
+                stringBuffer.append("&set_path=" + Base64.encodeToString(m.j(b), 2));
             }
-            stringBuffer.append("&sdk_version=" + Base64.encodeToString(C7126m.j(Constants.SDK_VERSION), 2));
+            stringBuffer.append("&sdk_version=" + Base64.encodeToString(m.j(Constants.SDK_VERSION), 2));
             SLog.v("QQAVATAR", "-->set avatar, url: " + stringBuffer.toString());
             Intent intent = new Intent("android.intent.action.VIEW");
             intent.setPackage("com.tencent.mobileqq");
@@ -117,7 +116,7 @@ public class QQAvatar extends BaseApi {
     }
 
     public void setDynamicAvatar(Activity activity, Uri uri, IUiListener iUiListener) {
-        if (C7035a.a("QQAvatar", iUiListener)) {
+        if (com.tencent.connect.a.a("QQAvatar", iUiListener)) {
             return;
         }
         IUiListener iUiListener2 = this.a;
@@ -125,18 +124,18 @@ public class QQAvatar extends BaseApi {
             iUiListener2.onCancel();
         }
         this.a = iUiListener;
-        if (!C7123k.b(activity)) {
+        if (!k.b(activity)) {
             Toast.makeText(activity.getApplicationContext(), "当前手机未安装QQ，请安装最新版QQ后再试。", 1).show();
-        } else if (C7123k.c(activity, "8.0.5") < 0) {
+        } else if (k.c(activity, "8.0.5") < 0) {
             Toast.makeText(activity.getApplicationContext(), "当前手机QQ版本过低，不支持设置头像功能。", 1).show();
         } else {
-            String a = C7126m.a(activity);
+            String a = m.a(activity);
             StringBuffer stringBuffer = new StringBuffer("mqqapi://profile/sdk_dynamic_avatar_edit?");
             if (!TextUtils.isEmpty(a)) {
                 if (a.length() > 20) {
                     a = a.substring(0, 20) + "...";
                 }
-                stringBuffer.append("&app_name=" + Base64.encodeToString(C7126m.j(a), 2));
+                stringBuffer.append("&app_name=" + Base64.encodeToString(m.j(a), 2));
             }
             String appId = this.c.getAppId();
             String openId = this.c.getOpenId();
@@ -144,22 +143,22 @@ public class QQAvatar extends BaseApi {
                 stringBuffer.append("&share_id=" + appId);
             }
             if (!TextUtils.isEmpty(openId)) {
-                stringBuffer.append("&open_id=" + Base64.encodeToString(C7126m.j(openId), 2));
+                stringBuffer.append("&open_id=" + Base64.encodeToString(m.j(openId), 2));
             }
-            String b = C7126m.b(activity, uri);
+            String b = m.b(activity, uri);
             if (!TextUtils.isEmpty(b)) {
                 try {
                     activity.grantUriPermission("com.tencent.mobileqq", uri, 3);
                     stringBuffer.append("&video_uri=");
-                    stringBuffer.append(Base64.encodeToString(C7126m.j(uri.toString()), 2));
+                    stringBuffer.append(Base64.encodeToString(m.j(uri.toString()), 2));
                 } catch (Exception e) {
                     SLog.e("QQAvatar", "Exception", e);
                 }
             }
             if (!TextUtils.isEmpty(b)) {
-                stringBuffer.append("&video_path=" + Base64.encodeToString(C7126m.j(b), 2));
+                stringBuffer.append("&video_path=" + Base64.encodeToString(m.j(b), 2));
             }
-            stringBuffer.append("&sdk_version=" + Base64.encodeToString(C7126m.j(Constants.SDK_VERSION), 2));
+            stringBuffer.append("&sdk_version=" + Base64.encodeToString(m.j(Constants.SDK_VERSION), 2));
             SLog.v("QQAVATAR", "-->set dynamic avatar, url: " + stringBuffer.toString());
             Intent intent = new Intent("android.intent.action.VIEW");
             intent.setPackage("com.tencent.mobileqq");
@@ -195,7 +194,7 @@ public class QQAvatar extends BaseApi {
             }
             bundle.putString("platform", "androidqz");
             try {
-                bundle.putString(Constants.PARAM_PLATFORM_ID, C7119g.a().getSharedPreferences(Constants.PREFERENCE_PF, 0).getString(Constants.PARAM_PLATFORM_ID, Constants.DEFAULT_PF));
+                bundle.putString(Constants.PARAM_PLATFORM_ID, g.a().getSharedPreferences(Constants.PREFERENCE_PF, 0).getString(Constants.PARAM_PLATFORM_ID, Constants.DEFAULT_PF));
             } catch (Exception e) {
                 e.printStackTrace();
                 bundle.putString(Constants.PARAM_PLATFORM_ID, Constants.DEFAULT_PF);

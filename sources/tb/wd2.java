@@ -14,12 +14,11 @@ public class wd2 extends g52 {
     private final List<f52> b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.wd2$a */
     /* loaded from: classes.dex */
-    public class C9857a extends f52 {
+    public class a extends f52 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9857a(wd2 wd2Var) {
+        a(wd2 wd2Var) {
         }
 
         @Override // tb.f52
@@ -42,12 +41,11 @@ public class wd2 extends g52 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.wd2$b */
     /* loaded from: classes.dex */
-    public class C9858b extends f52 {
+    public class b extends f52 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9858b(wd2 wd2Var) {
+        b(wd2 wd2Var) {
         }
 
         @Override // tb.f52
@@ -72,12 +70,12 @@ public class wd2 extends g52 {
     public wd2() {
         ArrayList arrayList = new ArrayList();
         this.b = arrayList;
-        C9857a c9857a = new C9857a(this);
-        c9857a.c();
-        C9858b c9858b = new C9858b(this);
-        c9858b.c();
-        arrayList.add(c9857a);
-        arrayList.add(c9858b);
+        a aVar = new a(this);
+        aVar.c();
+        b bVar = new b(this);
+        bVar.c();
+        arrayList.add(aVar);
+        arrayList.add(bVar);
     }
 
     private int f(int i) {

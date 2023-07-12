@@ -1,6 +1,5 @@
 package com.xiaomi.push.service;
 
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.service.bx;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -19,11 +18,11 @@ class by implements Runnable {
         ConcurrentHashMap concurrentHashMap;
         try {
             concurrentHashMap = this.a.f950a;
-            for (bx.AbstractRunnableC7746a abstractRunnableC7746a : concurrentHashMap.values()) {
-                abstractRunnableC7746a.run();
+            for (bx.a aVar : concurrentHashMap.values()) {
+                aVar.run();
             }
         } catch (Exception e) {
-            AbstractC7535b.m586a("Sync job exception :" + e.getMessage());
+            com.xiaomi.channel.commonutils.logger.b.m586a("Sync job exception :" + e.getMessage());
         }
         this.a.f951a = false;
     }

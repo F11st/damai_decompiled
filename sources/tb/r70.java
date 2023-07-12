@@ -189,7 +189,7 @@ public final class r70 extends AbstractTypeAliasDescriptor implements Deserializ
     @Override // kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedMemberDescriptor
     @NotNull
     public List<hx2> getVersionRequirements() {
-        return DeserializedMemberDescriptor.C8513a.a(this);
+        return DeserializedMemberDescriptor.a.a(this);
     }
 
     @NotNull

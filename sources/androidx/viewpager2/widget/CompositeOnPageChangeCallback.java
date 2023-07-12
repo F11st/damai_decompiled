@@ -7,10 +7,9 @@ import java.util.ArrayList;
 import java.util.ConcurrentModificationException;
 import java.util.List;
 
-/* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
-public final class CompositeOnPageChangeCallback extends ViewPager2.OnPageChangeCallback {
+final class CompositeOnPageChangeCallback extends ViewPager2.OnPageChangeCallback {
     @NonNull
     private final List<ViewPager2.OnPageChangeCallback> mCallbacks;
 

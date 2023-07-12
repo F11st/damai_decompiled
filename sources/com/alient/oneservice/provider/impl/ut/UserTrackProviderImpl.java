@@ -3,8 +3,8 @@ package com.alient.oneservice.provider.impl.ut;
 import android.text.TextUtils;
 import android.view.View;
 import cn.damai.common.DamaiConstants;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import com.alibaba.pictures.ut.DogCat;
 import com.alient.oneservice.ut.TrackInfo;
 import com.alient.oneservice.ut.UserTrackProvider;
@@ -42,7 +42,7 @@ public final class UserTrackProviderImpl implements UserTrackProvider {
         if (this.isUTDogCatSwitchOn) {
             DogCat.INSTANCE.i(view).q(trackInfo.getSpmb()).w(trackInfo.getSpmb(), trackInfo.getSpmc(), trackInfo.getSpmd()).s(hashMap).k();
         } else {
-            C0529c.e().G(view, trackInfo.getSpmd(), trackInfo.getSpmc(), trackInfo.getSpmb(), hashMap);
+            c.e().G(view, trackInfo.getSpmd(), trackInfo.getSpmc(), trackInfo.getSpmb(), hashMap);
         }
     }
 
@@ -50,8 +50,8 @@ public final class UserTrackProviderImpl implements UserTrackProvider {
     public void expose(String str, TrackInfo trackInfo) {
     }
 
-    public C0525a.C0527b getUTKeyBuilder(String str, String str2, String str3, Map<String, String> map, Boolean bool) {
-        return new C0525a.C0527b().i(str).f(str2).l(str3).g(bool.booleanValue()).j(map);
+    public a.b getUTKeyBuilder(String str, String str2, String str3, Map<String, String> map, Boolean bool) {
+        return new a.b().i(str).f(str2).l(str3).g(bool.booleanValue()).j(map);
     }
 
     @Override // com.alient.oneservice.ut.UserTrackProvider
@@ -62,7 +62,7 @@ public final class UserTrackProviderImpl implements UserTrackProvider {
         if (this.isUTDogCatSwitchOn) {
             DogCat.INSTANCE.g().c(str).d(map).b(str2).a();
         } else {
-            C0529c.e().A(map, str2, str);
+            c.e().A(map, str2, str);
         }
     }
 
@@ -73,14 +73,14 @@ public final class UserTrackProviderImpl implements UserTrackProvider {
         }
         if ("2201".equals(str)) {
             try {
-                C0529c.e().C(str4, str3, str2, "1.0", Long.parseLong(str5), map, Integer.parseInt(str));
+                c.e().C(str4, str3, str2, "1.0", Long.parseLong(str5), map, Integer.parseInt(str));
                 return;
             } catch (Exception e) {
                 e.printStackTrace();
                 return;
             }
         }
-        C0529c.e().D(str2, str3, str4, str5, map, Integer.parseInt(str));
+        c.e().D(str2, str3, str4, str5, map, Integer.parseInt(str));
     }
 
     @Override // com.alient.oneservice.ut.UserTrackProvider
@@ -106,7 +106,7 @@ public final class UserTrackProviderImpl implements UserTrackProvider {
             DogCat.INSTANCE.d().m(z).n(trackInfo.getSpmb()).q(trackInfo.getSpmb(), trackInfo.getSpmc(), trackInfo.getSpmd()).o(hashMap).j();
             return;
         }
-        C0529c.e().x(getUTKeyBuilder(trackInfo.getSpmb(), trackInfo.getSpmc(), trackInfo.getSpmd(), hashMap, Boolean.valueOf(z)));
+        c.e().x(getUTKeyBuilder(trackInfo.getSpmb(), trackInfo.getSpmc(), trackInfo.getSpmd(), hashMap, Boolean.valueOf(z)));
     }
 
     @Override // com.alient.oneservice.ut.UserTrackProvider

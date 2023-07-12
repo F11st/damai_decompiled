@@ -1,7 +1,6 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.MissingBackpressureException;
@@ -10,7 +9,7 @@ import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import io.reactivex.internal.util.BackpressureHelper;
-import io.reactivex.subscribers.AbstractC8173b;
+import io.reactivex.subscribers.b;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicReference;
@@ -40,7 +39,7 @@ public final class FlowableDebounce<T, U> extends AbstractFlowableWithUpstream<T
 
         /* compiled from: Taobao */
         /* loaded from: classes3.dex */
-        static final class DebounceInnerSubscriber<T, U> extends AbstractC8173b<U> {
+        static final class DebounceInnerSubscriber<T, U> extends b<U> {
             boolean done;
             final long index;
             final AtomicBoolean once = new AtomicBoolean();
@@ -174,12 +173,12 @@ public final class FlowableDebounce<T, U> extends AbstractFlowableWithUpstream<T
         }
     }
 
-    public FlowableDebounce(AbstractC8147b<T> abstractC8147b, Function<? super T, ? extends Publisher<U>> function) {
-        super(abstractC8147b);
+    public FlowableDebounce(io.reactivex.b<T> bVar, Function<? super T, ? extends Publisher<U>> function) {
+        super(bVar);
         this.debounceSelector = function;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new DebounceSubscriber(new ua2(subscriber), this.debounceSelector));
     }

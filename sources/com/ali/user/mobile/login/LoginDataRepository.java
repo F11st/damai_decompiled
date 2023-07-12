@@ -17,7 +17,7 @@ import com.ali.user.mobile.security.SecurityGuardManagerWraper;
 import com.ali.user.mobile.service.RpcService;
 import com.ali.user.mobile.service.ServiceFactory;
 import com.alibaba.fastjson.JSON;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
+import com.alibaba.security.realidentity.jsbridge.a;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -134,7 +134,7 @@ public class LoginDataRepository {
         HashMap hashMap = new HashMap();
         hashMap.put("apiVersion", "2.0");
         rpcRequest.addParam("ext", JSON.toJSONString(hashMap));
-        rpcRequest.addParam(AbstractC3893a.I, JSON.toJSONString(touristLoginRequest));
+        rpcRequest.addParam(a.I, JSON.toJSONString(touristLoginRequest));
         rpcRequest.addParam("riskControlInfo", JSON.toJSONString(SecurityGuardManagerWraper.buildWSecurityData()));
         ((RpcService) ServiceFactory.getService(RpcService.class)).remoteBusiness(rpcRequest, DefaultLoginResponseData.class, rpcRequestCallback);
     }

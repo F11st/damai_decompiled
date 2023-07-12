@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import cn.damai.common.user.C0529c;
 import cn.damai.trade.R$drawable;
 import cn.damai.trade.R$id;
 import cn.damai.trade.R$layout;
@@ -73,19 +72,18 @@ public class ProjectItemStatusHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectItemStatusHelper$a */
     /* loaded from: classes8.dex */
-    public static class C2352a implements OnBuyBtnUTListener {
+    public static class a implements OnBuyBtnUTListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private long a;
 
-        private C2352a(long j) {
+        private a(long j) {
             this.a = j;
         }
 
         public static OnBuyBtnUTListener a(long j) {
             IpChange ipChange = $ipChange;
-            return AndroidInstantRuntime.support(ipChange, "1772466206") ? (OnBuyBtnUTListener) ipChange.ipc$dispatch("1772466206", new Object[]{Long.valueOf(j)}) : new C2352a(j);
+            return AndroidInstantRuntime.support(ipChange, "1772466206") ? (OnBuyBtnUTListener) ipChange.ipc$dispatch("1772466206", new Object[]{Long.valueOf(j)}) : new a(j);
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectItemStatusHelper.OnBuyBtnUTListener
@@ -95,9 +93,9 @@ public class ProjectItemStatusHelper {
                 ipChange.ipc$dispatch("-1591450016", new Object[]{this, Boolean.valueOf(z), Integer.valueOf(i)});
             } else if (i == 300) {
                 if (z) {
-                    C0529c.e().x(pp2.u().K0(this.a));
+                    cn.damai.common.user.c.e().x(pp2.u().K0(this.a));
                 } else {
-                    C0529c.e().x(pp2.u().j0(this.a));
+                    cn.damai.common.user.c.e().x(pp2.u().j0(this.a));
                 }
             }
         }
@@ -108,7 +106,7 @@ public class ProjectItemStatusHelper {
             if (AndroidInstantRuntime.support(ipChange, "-1815086365")) {
                 ipChange.ipc$dispatch("-1815086365", new Object[]{this});
             } else {
-                C0529c.e().x(pp2.u().M0(this.a));
+                cn.damai.common.user.c.e().x(pp2.u().M0(this.a));
             }
         }
 
@@ -118,9 +116,9 @@ public class ProjectItemStatusHelper {
             if (AndroidInstantRuntime.support(ipChange, "-1385587549")) {
                 ipChange.ipc$dispatch("-1385587549", new Object[]{this, Integer.valueOf(i)});
             } else if (i == 300) {
-                C0529c.e().x(pp2.u().H0(this.a));
+                cn.damai.common.user.c.e().x(pp2.u().H0(this.a));
             } else if (i == 200) {
-                C0529c.e().x(pp2.u().J0(this.a));
+                cn.damai.common.user.c.e().x(pp2.u().J0(this.a));
             }
         }
 
@@ -130,11 +128,11 @@ public class ProjectItemStatusHelper {
             if (AndroidInstantRuntime.support(ipChange, "-1765023246")) {
                 ipChange.ipc$dispatch("-1765023246", new Object[]{this, Integer.valueOf(i)});
             } else if (i == 600) {
-                C0529c.e().x(pp2.u().z0(String.valueOf(this.a), "bottom", "onsale_checkin"));
+                cn.damai.common.user.c.e().x(pp2.u().z0(String.valueOf(this.a), "bottom", "onsale_checkin"));
             } else if (i == 601) {
-                C0529c.e().x(pp2.u().z0(String.valueOf(this.a), "bottom", "stock_checkin"));
+                cn.damai.common.user.c.e().x(pp2.u().z0(String.valueOf(this.a), "bottom", "stock_checkin"));
             } else if (i == 500) {
-                C0529c.e().x(pp2.u().z0(String.valueOf(this.a), "bottom", "rightawayreserve"));
+                cn.damai.common.user.c.e().x(pp2.u().z0(String.valueOf(this.a), "bottom", "rightawayreserve"));
             }
         }
 
@@ -144,19 +142,18 @@ public class ProjectItemStatusHelper {
             if (AndroidInstantRuntime.support(ipChange, "-1535540488")) {
                 ipChange.ipc$dispatch("-1535540488", new Object[]{this});
             } else {
-                C0529c.e().x(pp2.u().h(this.a));
+                cn.damai.common.user.c.e().x(pp2.u().h(this.a));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectItemStatusHelper$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2353b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private int a;
 
-        public View$OnClickListenerC2353b(int i) {
+        public b(int i) {
             this.a = i;
         }
 
@@ -175,13 +172,12 @@ public class ProjectItemStatusHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectItemStatusHelper$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2354c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private int a;
 
-        public View$OnClickListenerC2354c(int i) {
+        public c(int i) {
             this.a = i;
         }
 
@@ -200,13 +196,12 @@ public class ProjectItemStatusHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectItemStatusHelper$d */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2355d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private int a;
 
-        public View$OnClickListenerC2355d(int i) {
+        public d(int i) {
             this.a = i;
         }
 
@@ -225,12 +220,11 @@ public class ProjectItemStatusHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectItemStatusHelper$e */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2356e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2356e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -248,12 +242,11 @@ public class ProjectItemStatusHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectItemStatusHelper$f */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2357f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2357f() {
+        f() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -268,13 +261,12 @@ public class ProjectItemStatusHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectItemStatusHelper$g */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2358g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private boolean a;
 
-        public View$OnClickListenerC2358g(boolean z) {
+        public g(boolean z) {
             this.a = z;
         }
 
@@ -390,13 +382,13 @@ public class ProjectItemStatusHelper {
         } else if (i == 100) {
             p(str, "该渠道不支持购买", str2, false, null);
         } else if (i == 106) {
-            p(str, "即将开售", str2, true, new View$OnClickListenerC2358g(false));
+            p(str, "即将开售", str2, true, new g(false));
         } else if (i == 204) {
-            this.a.setOnClickListener(new View$OnClickListenerC2353b(300));
+            this.a.setOnClickListener(new b(300));
             q(g(str, "立即购买"), true);
             pp2.u().G1(this.b, this.e);
         } else if (i == 206) {
-            this.a.setOnClickListener(new View$OnClickListenerC2356e());
+            this.a.setOnClickListener(new e());
             q(g(str, "选座购买"), true);
             pp2.u().g2(this.b, this.e);
         } else if (i == 401) {
@@ -404,36 +396,36 @@ public class ProjectItemStatusHelper {
             n();
         } else if (i == 216) {
             this.j = true;
-            this.a.setOnClickListener(new View$OnClickListenerC2353b(300));
+            this.a.setOnClickListener(new b(300));
             e(g(str, "立即购买"));
         } else if (i == 217) {
             this.j = true;
-            this.a.setOnClickListener(new View$OnClickListenerC2356e());
+            this.a.setOnClickListener(new e());
             e(g(str, "选座购买"));
         } else if (i == 223) {
             d(g(str, "立即购买"));
         } else if (i == 224) {
             d(g(str, "选座购买"));
         } else if (i == 230) {
-            this.a.setOnClickListener(new View$OnClickListenerC2354c(300));
+            this.a.setOnClickListener(new c(300));
             e(g(str, "立即购买"));
         } else if (i == 231) {
-            this.a.setOnClickListener(new View$OnClickListenerC2354c(200));
+            this.a.setOnClickListener(new c(200));
             e(g(str, "选座购买"));
         } else if (i == 303) {
             p(str, "已下架", str2, false, null);
         } else if (i != 304) {
             switch (i) {
                 case 90:
-                    p(str, "开售登记", str2, true, new View$OnClickListenerC2355d(600));
+                    p(str, "开售登记", str2, true, new d(600));
                     pp2.u().K1(this.b, this.e);
                     return;
                 case 91:
-                    p(str, "缺货登记", str2, true, new View$OnClickListenerC2355d(601));
+                    p(str, "缺货登记", str2, true, new d(601));
                     pp2.u().k2(this.b, this.e);
                     return;
                 case 92:
-                    p(str, "售罄", str2, false, new View$OnClickListenerC2357f());
+                    p(str, "售罄", str2, false, new f());
                     return;
                 default:
                     p(str, "暂不可售", str2, false, null);

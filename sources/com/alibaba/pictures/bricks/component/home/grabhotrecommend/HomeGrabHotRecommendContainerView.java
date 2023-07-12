@@ -45,12 +45,12 @@ import java.util.HashMap;
 import java.util.List;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tb.C9796v;
 import tb.ap2;
 import tb.b41;
 import tb.bb2;
 import tb.ou0;
 import tb.s60;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -68,13 +68,12 @@ public final class HomeGrabHotRecommendContainerView extends LoopBannerView impl
     private final ImageView titleIcon;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.grabhotrecommend.HomeGrabHotRecommendContainerView$a  reason: invalid class name */
     /* loaded from: classes7.dex */
-    public static final class animationAnimation$AnimationListenerC3476a implements Animation.AnimationListener {
+    public static final class a implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Animation b;
 
-        animationAnimation$AnimationListenerC3476a(Animation animation) {
+        a(Animation animation) {
             this.b = animation;
         }
 
@@ -86,7 +85,7 @@ public final class HomeGrabHotRecommendContainerView extends LoopBannerView impl
                 ipChange.ipc$dispatch("-2125390653", new Object[]{this, animation});
                 return;
             }
-            b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+            b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             View currentView = HomeGrabHotRecommendContainerView.this.marqueeView.getCurrentView();
             View findViewById = currentView.findViewById(R$id.home_grab_content_text);
             b41.h(findViewById, "currentView.findViewById…d.home_grab_content_text)");
@@ -129,7 +128,7 @@ public final class HomeGrabHotRecommendContainerView extends LoopBannerView impl
             if (AndroidInstantRuntime.support(ipChange, "-1617672239")) {
                 ipChange.ipc$dispatch("-1617672239", new Object[]{this, animation});
             } else {
-                b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+                b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             }
         }
 
@@ -139,7 +138,7 @@ public final class HomeGrabHotRecommendContainerView extends LoopBannerView impl
             if (AndroidInstantRuntime.support(ipChange, "399215452")) {
                 ipChange.ipc$dispatch("399215452", new Object[]{this, animation});
             } else {
-                b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+                b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             }
         }
     }
@@ -281,7 +280,7 @@ public final class HomeGrabHotRecommendContainerView extends LoopBannerView impl
         b41.h(loadAnimation, "loadAnimation(itemView.c…R.anim.bricks_scale_boom)");
         Animation inAnimation = this.marqueeView.getInAnimation();
         if (inAnimation != null) {
-            inAnimation.setAnimationListener(new animationAnimation$AnimationListenerC3476a(loadAnimation));
+            inAnimation.setAnimationListener(new a(loadAnimation));
         }
     }
 

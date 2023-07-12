@@ -23,8 +23,8 @@ public final class x0 {
         q63.b(eeVar);
     }
 
-    public static m53 d(v0.C5895a c5895a) {
-        return v0.a().b(c5895a);
+    public static m53 d(v0.a aVar) {
+        return v0.a().b(aVar);
     }
 
     public static void e(List<dr> list) {

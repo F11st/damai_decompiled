@@ -91,7 +91,7 @@ public final class ObservableMapNotification<T, R> extends AbstractObservableWit
         this.onCompleteSupplier = callable;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super ObservableSource<? extends R>> observer) {
         this.source.subscribe(new MapNotificationObserver(observer, this.onNextMapper, this.onErrorMapper, this.onCompleteSupplier));
     }

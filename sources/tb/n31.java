@@ -8,18 +8,17 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public final class n31 extends l31 implements ClosedRange<Integer> {
     @NotNull
-    public static final C9460a Companion = new C9460a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final n31 d = new n31(1, 0);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.n31$a */
     /* loaded from: classes3.dex */
-    public static final class C9460a {
-        private C9460a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9460a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

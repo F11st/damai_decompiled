@@ -17,13 +17,13 @@ public class g32 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
 
     @Override // cn.damai.tetris.v2.convertor.IConverter
     /* renamed from: a */
-    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, C9039db c9039db) {
+    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, db dbVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-940266358")) {
-            return (List) ipChange.ipc$dispatch("-940266358", new Object[]{this, baseResponse, baseSection, globalConfig, c9039db});
+            return (List) ipChange.ipc$dispatch("-940266358", new Object[]{this, baseResponse, baseSection, globalConfig, dbVar});
         }
         ArrayList arrayList = new ArrayList();
-        Node n = c9039db.n(baseSection, globalConfig, baseSection.getItem());
+        Node n = dbVar.n(baseSection, globalConfig, baseSection.getItem());
         if (n != null) {
             arrayList.add(n);
         }

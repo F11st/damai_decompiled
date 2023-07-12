@@ -26,12 +26,11 @@ public final class HandlerContext extends kv0 {
     private final boolean d;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.android.HandlerContext$a */
     /* loaded from: classes8.dex */
-    public static final class C8621a implements DisposableHandle {
+    public static final class a implements DisposableHandle {
         final /* synthetic */ Runnable b;
 
-        C8621a(Runnable runnable) {
+        a(Runnable runnable) {
             this.b = runnable;
         }
 
@@ -83,7 +82,7 @@ public final class HandlerContext extends kv0 {
         Handler handler = this.b;
         e = ty1.e(j, hd0.MAX_MILLIS);
         handler.postDelayed(runnable, e);
-        return new C8621a(runnable);
+        return new a(runnable);
     }
 
     @Override // kotlinx.coroutines.CoroutineDispatcher

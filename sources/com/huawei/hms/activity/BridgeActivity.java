@@ -32,12 +32,11 @@ public class BridgeActivity extends Activity {
     public IBridgeActivityDelegate a;
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.activity.BridgeActivity$a */
     /* loaded from: classes10.dex */
-    public class View$OnApplyWindowInsetsListenerC5507a implements View.OnApplyWindowInsetsListener {
+    public class a implements View.OnApplyWindowInsetsListener {
         public final /* synthetic */ ViewGroup a;
 
-        public View$OnApplyWindowInsetsListenerC5507a(BridgeActivity bridgeActivity, ViewGroup viewGroup) {
+        public a(BridgeActivity bridgeActivity, ViewGroup viewGroup) {
             this.a = viewGroup;
         }
 
@@ -235,7 +234,7 @@ public class BridgeActivity extends Activity {
                 HMSLog.e("BridgeActivity", "An exception occurred while reading: setDisplaySideMode" + e.getMessage());
             }
             if (Build.VERSION.SDK_INT >= 20) {
-                getWindow().getDecorView().setOnApplyWindowInsetsListener(new View$OnApplyWindowInsetsListenerC5507a(this, viewGroup));
+                getWindow().getDecorView().setOnApplyWindowInsetsListener(new a(this, viewGroup));
                 return;
             }
             return;

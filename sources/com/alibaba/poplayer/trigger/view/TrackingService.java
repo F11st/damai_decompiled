@@ -33,41 +33,40 @@ public class TrackingService {
     public static final String TASK_OPER_REMOVE_ALL_LAUNCHED = "removeAllLaunchedByView";
     public static final String TASK_OPER_STOP = "stop";
     public static final String TASK_OPER_STOP_WITH_ID = "stopWithId";
-    private static C3698c f = new C3698c();
-    private static C3697b g = new C3697b();
-    private static final ISOTaskMatcher h = new C3687b();
-    private static final ISOTaskMatcher i = new C3688c();
-    private static final ISOTaskMatcher j = new C3689d();
-    private static final ISOTaskMatcher k = new C3690e();
-    private static final ISOTaskMatcher l = new C3691f();
-    private static final ISOTaskMatcher m = new C3692g();
+    private static com.alibaba.poplayer.trigger.view.c f = new com.alibaba.poplayer.trigger.view.c();
+    private static com.alibaba.poplayer.trigger.view.b g = new com.alibaba.poplayer.trigger.view.b();
+    private static final ISOTaskMatcher h = new b();
+    private static final ISOTaskMatcher i = new c();
+    private static final ISOTaskMatcher j = new d();
+    private static final ISOTaskMatcher k = new e();
+    private static final ISOTaskMatcher l = new f();
+    private static final ISOTaskMatcher m = new g();
     private boolean b;
     private final WeakReference<Activity> d;
-    private final C3695a<C3694i> a = new C3695a<>();
-    private final ViewTreeObserver.OnPreDrawListener e = new ViewTreeObserver$OnPreDrawListenerC3686a();
+    private final com.alibaba.poplayer.trigger.view.a<i> a = new com.alibaba.poplayer.trigger.view.a<>();
+    private final ViewTreeObserver.OnPreDrawListener e = new a();
     private boolean c = true;
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
     /* loaded from: classes8.dex */
     public interface ISOTaskMatcher {
-        boolean match(View view, ViewConfigItem viewConfigItem, C3694i c3694i, Object... objArr);
+        boolean match(View view, ViewConfigItem viewConfigItem, i iVar, Object... objArr);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes8.dex */
     public interface OnSTaskInvokeListener {
-        void OnTargetViewAdded(View view, C3694i c3694i);
+        void OnTargetViewAdded(View view, i iVar);
 
-        void OnTargetViewRemoved(View view, C3694i c3694i, boolean z);
+        void OnTargetViewRemoved(View view, i iVar, boolean z);
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayer.trigger.view.TrackingService$a */
     /* loaded from: classes8.dex */
-    class ViewTreeObserver$OnPreDrawListenerC3686a implements ViewTreeObserver.OnPreDrawListener {
-        ViewTreeObserver$OnPreDrawListenerC3686a() {
+    class a implements ViewTreeObserver.OnPreDrawListener {
+        a() {
         }
 
         @Override // android.view.ViewTreeObserver.OnPreDrawListener
@@ -81,106 +80,99 @@ public class TrackingService {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayer.trigger.view.TrackingService$b */
     /* loaded from: classes8.dex */
-    static class C3687b implements ISOTaskMatcher {
-        C3687b() {
+    static class b implements ISOTaskMatcher {
+        b() {
         }
 
         @Override // com.alibaba.poplayer.trigger.view.TrackingService.ISOTaskMatcher
-        public boolean match(View view, ViewConfigItem viewConfigItem, C3694i c3694i, Object... objArr) {
-            View view2 = c3694i.l;
+        public boolean match(View view, ViewConfigItem viewConfigItem, i iVar, Object... objArr) {
+            View view2 = iVar.l;
             return view2 != null && view2 == view;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayer.trigger.view.TrackingService$c */
     /* loaded from: classes8.dex */
-    static class C3688c implements ISOTaskMatcher {
-        C3688c() {
+    static class c implements ISOTaskMatcher {
+        c() {
         }
 
         @Override // com.alibaba.poplayer.trigger.view.TrackingService.ISOTaskMatcher
-        public boolean match(View view, ViewConfigItem viewConfigItem, C3694i c3694i, Object... objArr) {
+        public boolean match(View view, ViewConfigItem viewConfigItem, i iVar, Object... objArr) {
             if (objArr == null || objArr.length < 2) {
                 return false;
             }
             String str = (String) objArr[0];
             String str2 = (String) objArr[1];
-            View view2 = c3694i.l;
-            return view2 != null && view2 == view && c3694i.a.equals(str) && c3694i.f.equals(str2);
+            View view2 = iVar.l;
+            return view2 != null && view2 == view && iVar.a.equals(str) && iVar.f.equals(str2);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayer.trigger.view.TrackingService$d */
     /* loaded from: classes8.dex */
-    static class C3689d implements ISOTaskMatcher {
-        C3689d() {
+    static class d implements ISOTaskMatcher {
+        d() {
         }
 
         @Override // com.alibaba.poplayer.trigger.view.TrackingService.ISOTaskMatcher
-        public boolean match(View view, ViewConfigItem viewConfigItem, C3694i c3694i, Object... objArr) {
+        public boolean match(View view, ViewConfigItem viewConfigItem, i iVar, Object... objArr) {
             if (objArr == null || objArr.length == 0) {
                 return false;
             }
             String str = (String) objArr[0];
-            View view2 = c3694i.l;
-            return view2 != null && view2 == view && c3694i.b.equals(str) && !c3694i.f();
+            View view2 = iVar.l;
+            return view2 != null && view2 == view && iVar.b.equals(str) && !iVar.f();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayer.trigger.view.TrackingService$e */
     /* loaded from: classes8.dex */
-    static class C3690e implements ISOTaskMatcher {
-        C3690e() {
+    static class e implements ISOTaskMatcher {
+        e() {
         }
 
         @Override // com.alibaba.poplayer.trigger.view.TrackingService.ISOTaskMatcher
-        public boolean match(View view, ViewConfigItem viewConfigItem, C3694i c3694i, Object... objArr) {
-            return viewConfigItem == c3694i.j;
+        public boolean match(View view, ViewConfigItem viewConfigItem, i iVar, Object... objArr) {
+            return viewConfigItem == iVar.j;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayer.trigger.view.TrackingService$f */
     /* loaded from: classes8.dex */
-    static class C3691f implements ISOTaskMatcher {
-        C3691f() {
+    static class f implements ISOTaskMatcher {
+        f() {
         }
 
         @Override // com.alibaba.poplayer.trigger.view.TrackingService.ISOTaskMatcher
-        public boolean match(View view, ViewConfigItem viewConfigItem, C3694i c3694i, Object... objArr) {
+        public boolean match(View view, ViewConfigItem viewConfigItem, i iVar, Object... objArr) {
             if (objArr == null || objArr.length == 0) {
                 return false;
             }
-            return view == c3694i.l && ((String) objArr[0]).equals(c3694i.i.uri);
+            return view == iVar.l && ((String) objArr[0]).equals(iVar.i.uri);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayer.trigger.view.TrackingService$g */
     /* loaded from: classes8.dex */
-    static class C3692g implements ISOTaskMatcher {
-        C3692g() {
+    static class g implements ISOTaskMatcher {
+        g() {
         }
 
         @Override // com.alibaba.poplayer.trigger.view.TrackingService.ISOTaskMatcher
-        public boolean match(View view, ViewConfigItem viewConfigItem, C3694i c3694i, Object... objArr) {
+        public boolean match(View view, ViewConfigItem viewConfigItem, i iVar, Object... objArr) {
             if (objArr == null || objArr.length == 0) {
                 return false;
             }
-            return c3694i.o.equals((String) objArr[0]);
+            return iVar.o.equals((String) objArr[0]);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayer.trigger.view.TrackingService$h */
     /* loaded from: classes8.dex */
-    public class C3693h extends C3694i {
-        public C3693h(TrackingService trackingService, String str, View view, String str2, String str3, String str4, boolean z, boolean z2, String str5, ViewEvent viewEvent, ViewConfigItem viewConfigItem, OnSTaskInvokeListener onSTaskInvokeListener) {
+    public class h extends i {
+        public h(TrackingService trackingService, String str, View view, String str2, String str3, String str4, boolean z, boolean z2, String str5, ViewEvent viewEvent, ViewConfigItem viewConfigItem, OnSTaskInvokeListener onSTaskInvokeListener) {
             super(str, view, str2, str3, str4, z, z2, str5, viewEvent, viewConfigItem, onSTaskInvokeListener);
             this.h = 1;
             SparseArray<WeakReference<View>> sparseArray = new SparseArray<>();
@@ -189,21 +181,20 @@ public class TrackingService {
             onSTaskInvokeListener.OnTargetViewAdded(view, this);
         }
 
-        @Override // com.alibaba.poplayer.trigger.view.TrackingService.C3694i
+        @Override // com.alibaba.poplayer.trigger.view.TrackingService.i
         boolean g(boolean z) {
             return z;
         }
 
-        @Override // com.alibaba.poplayer.trigger.view.TrackingService.C3694i
+        @Override // com.alibaba.poplayer.trigger.view.TrackingService.i
         public boolean h() {
             return true;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayer.trigger.view.TrackingService$i */
     /* loaded from: classes8.dex */
-    public class C3694i {
+    public class i {
         public String a;
         public final String b;
         public final String c;
@@ -220,7 +211,7 @@ public class TrackingService {
         public final String o = String.valueOf(System.currentTimeMillis());
         protected SparseArray<WeakReference<View>> g = new SparseArray<>();
 
-        public C3694i(String str, View view, String str2, String str3, String str4, boolean z, boolean z2, String str5, ViewEvent viewEvent, ViewConfigItem viewConfigItem, OnSTaskInvokeListener onSTaskInvokeListener) {
+        public i(String str, View view, String str2, String str3, String str4, boolean z, boolean z2, String str5, ViewEvent viewEvent, ViewConfigItem viewConfigItem, OnSTaskInvokeListener onSTaskInvokeListener) {
             this.m = str;
             this.l = view;
             this.b = str3;
@@ -412,20 +403,20 @@ public class TrackingService {
             dt1.b("%s.end error,touch activity is empty.", TAG);
             return false;
         }
-        ViewGroup e = fw2.e(h2);
-        if (e == null) {
+        ViewGroup e2 = fw2.e(h2);
+        if (e2 == null) {
             return false;
         }
         this.b = false;
-        e.getViewTreeObserver().removeOnPreDrawListener(this.e);
+        e2.getViewTreeObserver().removeOnPreDrawListener(this.e);
         dt1.b("%s.end,mPendingTasks keep count:{%s}.", TAG, Integer.valueOf(this.a.e()));
         return true;
     }
 
     private boolean i(String str, String str2, ViewEvent viewEvent, ViewConfigItem viewConfigItem) {
         try {
-            for (C3694i c3694i : this.a.f().b()) {
-                if (!TextUtils.isEmpty(str) && str.contains(c3694i.a) && !TextUtils.isEmpty(str2) && str2.equals(c3694i.f) && !TextUtils.isEmpty(c3694i.i.uri) && c3694i.i.uri.equals(viewEvent.uri) && !TextUtils.isEmpty(c3694i.j.uuid) && c3694i.j.uuid.equals(viewConfigItem.uuid)) {
+            for (i iVar : this.a.f().b()) {
+                if (!TextUtils.isEmpty(str) && str.contains(iVar.a) && !TextUtils.isEmpty(str2) && str2.equals(iVar.f) && !TextUtils.isEmpty(iVar.i.uri) && iVar.i.uri.equals(viewEvent.uri) && !TextUtils.isEmpty(iVar.j.uuid) && iVar.j.uuid.equals(viewConfigItem.uuid)) {
                     return true;
                 }
             }
@@ -446,10 +437,10 @@ public class TrackingService {
     /* JADX INFO: Access modifiers changed from: private */
     public void m(ISOTaskMatcher iSOTaskMatcher, View view, ViewConfigItem viewConfigItem, Object... objArr) {
         try {
-            for (C3694i c3694i : this.a.f().b()) {
-                if (iSOTaskMatcher.match(view, viewConfigItem, c3694i, objArr)) {
-                    c3694i.b();
-                    this.a.d(c3694i);
+            for (i iVar : this.a.f().b()) {
+                if (iSOTaskMatcher.match(view, viewConfigItem, iVar, objArr)) {
+                    iVar.b();
+                    this.a.d(iVar);
                 }
             }
         } finally {
@@ -459,9 +450,9 @@ public class TrackingService {
 
     private void n() {
         try {
-            for (C3694i c3694i : this.a.f().b()) {
-                if (!c3694i.g(c3694i.h())) {
-                    this.a.d(c3694i);
+            for (i iVar : this.a.f().b()) {
+                if (!iVar.g(iVar.h())) {
+                    this.a.d(iVar);
                 }
             }
         } finally {
@@ -469,16 +460,16 @@ public class TrackingService {
         }
     }
 
-    private void p(C3694i c3694i, boolean z) {
+    private void p(i iVar, boolean z) {
         dt1.b("scheduleSOTask.immediate{%s}", Boolean.valueOf(z));
         if (z) {
-            if (c3694i.g(c3694i.h())) {
-                this.a.a(c3694i);
+            if (iVar.g(iVar.h())) {
+                this.a.a(iVar);
                 return;
             }
             return;
         }
-        this.a.a(c3694i);
+        this.a.a(iVar);
     }
 
     public Activity h() {
@@ -489,10 +480,10 @@ public class TrackingService {
         this.c = false;
         g();
         try {
-            for (C3694i c3694i : this.a.f().b()) {
-                if (!c3694i.j.embed) {
-                    c3694i.b();
-                    this.a.d(c3694i);
+            for (i iVar : this.a.f().b()) {
+                if (!iVar.j.embed) {
+                    iVar.b();
+                    this.a.d(iVar);
                 }
             }
             this.a.b();
@@ -518,22 +509,22 @@ public class TrackingService {
         }
     }
 
-    public C3694i o(String str, View view, String str2, String str3, String str4, boolean z, boolean z2, String str5, ViewEvent viewEvent, ViewConfigItem viewConfigItem, OnSTaskInvokeListener onSTaskInvokeListener, boolean z3) throws JSONException {
-        C3694i c3694i;
+    public i o(String str, View view, String str2, String str3, String str4, boolean z, boolean z2, String str5, ViewEvent viewEvent, ViewConfigItem viewConfigItem, OnSTaskInvokeListener onSTaskInvokeListener, boolean z3) throws JSONException {
+        i iVar;
         if (i(str2, str5, viewEvent, viewConfigItem)) {
             dt1.b("%s.scheduleSTask.but already contains.", TAG);
             return null;
         }
         if (TextUtils.isEmpty(str2) && view != null) {
-            c3694i = new C3693h(this, str, view, str2, str3, str4, z, z2, str5, viewEvent, viewConfigItem, onSTaskInvokeListener);
+            iVar = new h(this, str, view, str2, str3, str4, z, z2, str5, viewEvent, viewConfigItem, onSTaskInvokeListener);
         } else {
-            c3694i = new C3694i(str, view, str2, str3, str4, z, z2, str5, viewEvent, viewConfigItem, onSTaskInvokeListener);
+            iVar = new i(str, view, str2, str3, str4, z, z2, str5, viewEvent, viewConfigItem, onSTaskInvokeListener);
         }
-        p(c3694i, z3);
+        p(iVar, z3);
         if (this.c) {
             f();
         }
-        return c3694i;
+        return iVar;
     }
 
     public void q() {

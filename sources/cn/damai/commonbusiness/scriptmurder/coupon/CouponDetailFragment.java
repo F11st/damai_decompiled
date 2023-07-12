@@ -7,7 +7,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.AppConfig;
 import cn.damai.common.net.mtop.Util;
-import cn.damai.common.util.toastutil.C0537a;
+import cn.damai.common.util.toastutil.a;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.scriptmurder.bean.GaiaXEventTelephone;
@@ -77,7 +77,7 @@ public final class CouponDetailFragment extends BaseFragment implements StickyHe
     @NotNull
     public static final String COUPON_ID = "couponId";
     @NotNull
-    public static final C0800a Companion = new C0800a(null);
+    public static final a Companion = new a(null);
     public static final boolean NEED_ENCODE = false;
     public static final boolean NEED_SESSION = false;
     @NotNull
@@ -263,7 +263,7 @@ public final class CouponDetailFragment extends BaseFragment implements StickyHe
                         couponDetailFragment2.hideLoadingDialog(couponDetailFragment2.getActivity());
                         String errorMsg = Util.getErrorMsg(iResponse.getRetCode(), iResponse.getRetMessage());
                         if (CouponDetailFragment.this.getPageLoader().getRealItemCount() > 0) {
-                            C0537a.i(activity, errorMsg);
+                            a.i(activity, errorMsg);
                         } else {
                             CouponDetailFragment.this.getPageStateManager().setState(State.FAILED);
                         }
@@ -402,13 +402,12 @@ public final class CouponDetailFragment extends BaseFragment implements StickyHe
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.scriptmurder.coupon.CouponDetailFragment$a */
     /* loaded from: classes4.dex */
-    public static final class C0800a {
-        private C0800a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C0800a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

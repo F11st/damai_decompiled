@@ -33,7 +33,7 @@ public class WXWindVaneModule extends WXModule implements Destroyable {
     private static Map<String, MtopTracker> sMtopRequests = new HashMap();
     private WVPluginEntryManager mEntryManager = null;
     private a03 mIWVWebView = null;
-    private C3049a mEventListener = new C3049a();
+    private a mEventListener = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes15.dex */
@@ -52,12 +52,11 @@ public class WXWindVaneModule extends WXModule implements Destroyable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.module.WXWindVaneModule$a */
     /* loaded from: classes5.dex */
-    static class C3049a implements WVEventListener {
+    static class a implements WVEventListener {
         private WXSDKInstance a;
 
-        C3049a() {
+        a() {
         }
 
         public void a() {
@@ -120,9 +119,9 @@ public class WXWindVaneModule extends WXModule implements Destroyable {
             this.mIWVWebView = new a03(this.mWXSDKInstance);
             this.mEntryManager = new WVPluginEntryManager(this.mWXSDKInstance.getContext(), this.mIWVWebView);
         }
-        C3049a c3049a = this.mEventListener;
-        if (c3049a != null) {
-            c3049a.b(this.mWXSDKInstance);
+        a aVar = this.mEventListener;
+        if (aVar != null) {
+            aVar.b(this.mWXSDKInstance);
         }
         WVCallMethodContext wVCallMethodContext = new WVCallMethodContext();
         JSONObject parseObject = JSON.parseObject(str);
@@ -137,11 +136,11 @@ public class WXWindVaneModule extends WXModule implements Destroyable {
                 String instanceId = this.mWXSDKInstance.getInstanceId();
                 d.i(instanceId, "windvineMtopCall forCallBack:" + str2);
                 z = true;
-                WVJsBridge.getInstance().exCallMethod(this.mEntryManager, wVCallMethodContext, new C3050a(this.mWXSDKInstance.getInstanceId(), str2, false, z), new C3050a(this.mWXSDKInstance.getInstanceId(), str2, false, z));
+                WVJsBridge.getInstance().exCallMethod(this.mEntryManager, wVCallMethodContext, new com.alibaba.aliweex.adapter.module.a(this.mWXSDKInstance.getInstanceId(), str2, false, z), new com.alibaba.aliweex.adapter.module.a(this.mWXSDKInstance.getInstanceId(), str2, false, z));
             }
         }
         z = false;
-        WVJsBridge.getInstance().exCallMethod(this.mEntryManager, wVCallMethodContext, new C3050a(this.mWXSDKInstance.getInstanceId(), str2, false, z), new C3050a(this.mWXSDKInstance.getInstanceId(), str2, false, z));
+        WVJsBridge.getInstance().exCallMethod(this.mEntryManager, wVCallMethodContext, new com.alibaba.aliweex.adapter.module.a(this.mWXSDKInstance.getInstanceId(), str2, false, z), new com.alibaba.aliweex.adapter.module.a(this.mWXSDKInstance.getInstanceId(), str2, false, z));
     }
 
     @JSMethod
@@ -154,9 +153,9 @@ public class WXWindVaneModule extends WXModule implements Destroyable {
             this.mIWVWebView = new a03(this.mWXSDKInstance);
             this.mEntryManager = new WVPluginEntryManager(this.mWXSDKInstance.getContext(), this.mIWVWebView);
         }
-        C3049a c3049a = this.mEventListener;
-        if (c3049a != null) {
-            c3049a.b(this.mWXSDKInstance);
+        a aVar = this.mEventListener;
+        if (aVar != null) {
+            aVar.b(this.mWXSDKInstance);
         }
         WVCallMethodContext wVCallMethodContext = new WVCallMethodContext();
         try {
@@ -170,7 +169,7 @@ public class WXWindVaneModule extends WXModule implements Destroyable {
                 wVCallMethodContext.objectName = str.substring(0, str.indexOf("."));
                 wVCallMethodContext.methodName = str.substring(str.indexOf(".") + 1);
                 wVCallMethodContext.params = str2;
-                WVJsBridge.getInstance().exCallMethod(this.mEntryManager, wVCallMethodContext, new C3050a(this.mWXSDKInstance.getInstanceId(), str4, true, false), new C3050a(this.mWXSDKInstance.getInstanceId(), str3, true, false));
+                WVJsBridge.getInstance().exCallMethod(this.mEntryManager, wVCallMethodContext, new com.alibaba.aliweex.adapter.module.a(this.mWXSDKInstance.getInstanceId(), str4, true, false), new com.alibaba.aliweex.adapter.module.a(this.mWXSDKInstance.getInstanceId(), str3, true, false));
             }
         } catch (Throwable th) {
             WXLogUtils.w("Invalid param", th);
@@ -180,9 +179,9 @@ public class WXWindVaneModule extends WXModule implements Destroyable {
 
     @Override // com.taobao.weex.common.Destroyable
     public void destroy() {
-        C3049a c3049a = this.mEventListener;
-        if (c3049a != null) {
-            c3049a.a();
+        a aVar = this.mEventListener;
+        if (aVar != null) {
+            aVar.a();
             WVEventService.getInstance().removeEventListener(this.mEventListener);
         }
         a03 a03Var = this.mIWVWebView;

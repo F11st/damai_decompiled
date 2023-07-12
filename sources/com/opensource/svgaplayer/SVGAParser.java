@@ -341,7 +341,7 @@ public final class SVGAParser {
             java.lang.String r5 = "/"
             r6 = 2
             r7 = 0
-            boolean r4 = kotlin.text.C8596g.K(r4, r5, r1, r6, r7)     // Catch: java.lang.Throwable -> L68 java.lang.Exception -> L6b
+            boolean r4 = kotlin.text.g.K(r4, r5, r1, r6, r7)     // Catch: java.lang.Throwable -> L68 java.lang.Exception -> L6b
             if (r4 == 0) goto L28
             goto L13
         L28:

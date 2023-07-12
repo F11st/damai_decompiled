@@ -67,7 +67,7 @@ public class WXEnvironment {
     private static boolean isApkDebug = false;
     public static boolean isPerf = false;
     public static volatile boolean isWsFixMode = false;
-    private static C6942a mWXDefaultSettings = null;
+    private static a mWXDefaultSettings = null;
     private static boolean openDebugLog = false;
     private static Map<String, String> options = null;
     public static Application sApplication = null;
@@ -96,13 +96,12 @@ public class WXEnvironment {
     public static volatile boolean sUseRunTimeApi;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.WXEnvironment$a */
     /* loaded from: classes11.dex */
-    public static class C6942a {
+    public static class a {
         private String a = "weex_default_settings";
         private SharedPreferences b;
 
-        public C6942a(Application application) {
+        public a(Application application) {
             this.b = null;
             if (application != null) {
                 this.b = application.getSharedPreferences("weex_default_settings", 0);
@@ -391,7 +390,7 @@ public class WXEnvironment {
 
     public static synchronized String getDefaultSettingValue(String str, String str2) {
         synchronized (WXEnvironment.class) {
-            C6942a wXDefaultSettings = getWXDefaultSettings();
+            a wXDefaultSettings = getWXDefaultSettings();
             if (wXDefaultSettings != null && !TextUtils.isEmpty(str)) {
                 return wXDefaultSettings.a(str, str2);
             }
@@ -500,15 +499,15 @@ public class WXEnvironment {
         return LIB_LD_PATH;
     }
 
-    public static synchronized C6942a getWXDefaultSettings() {
-        C6942a c6942a;
+    public static synchronized a getWXDefaultSettings() {
+        a aVar;
         synchronized (WXEnvironment.class) {
             if (mWXDefaultSettings == null && getApplication() != null) {
-                mWXDefaultSettings = new C6942a(getApplication());
+                mWXDefaultSettings = new a(getApplication());
             }
-            c6942a = mWXDefaultSettings;
+            aVar = mWXDefaultSettings;
         }
-        return c6942a;
+        return aVar;
     }
 
     public static boolean isApkDebugable() {
@@ -608,7 +607,7 @@ public class WXEnvironment {
 
     public static synchronized void writeDefaultSettingsValue(String str, String str2) {
         synchronized (WXEnvironment.class) {
-            C6942a wXDefaultSettings = getWXDefaultSettings();
+            a wXDefaultSettings = getWXDefaultSettings();
             if (wXDefaultSettings != null && !TextUtils.isEmpty(str) && !TextUtils.isEmpty(str2)) {
                 wXDefaultSettings.b(str, str2);
             }

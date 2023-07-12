@@ -5,12 +5,11 @@ import android.media.MediaCodec;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import com.alibaba.security.common.c.C3800a;
-import com.alibaba.security.common.d.C3808e;
-import com.alibaba.security.common.d.C3816j;
-import com.alibaba.security.common.e.InterfaceC3826a;
-import com.alibaba.security.common.e.InterfaceC3827b;
-import com.alibaba.security.common.e.InterfaceC3828c;
+import com.alibaba.security.common.d.e;
+import com.alibaba.security.common.d.j;
+import com.alibaba.security.common.e.a;
+import com.alibaba.security.common.e.b;
+import com.alibaba.security.common.e.c;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -19,7 +18,7 @@ import java.nio.ByteBuffer;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
-public abstract class BaseCameraVideoRecorder implements InterfaceC3826a {
+public abstract class BaseCameraVideoRecorder implements a {
     protected static final int FRAME_RATE = 30;
     protected static final int IFRAME_INTERVAL = 1;
     private static final int MSG_FINISH = 1;
@@ -37,14 +36,14 @@ public abstract class BaseCameraVideoRecorder implements InterfaceC3826a {
 
     /* compiled from: Taobao */
     /* loaded from: classes8.dex */
-    class CameraVideoRecorderImpl implements InterfaceC3827b {
-        private final InterfaceC3827b mOnCameraVideoReorderListener;
+    class CameraVideoRecorderImpl implements b {
+        private final b mOnCameraVideoReorderListener;
 
-        public CameraVideoRecorderImpl(InterfaceC3827b interfaceC3827b) {
-            this.mOnCameraVideoReorderListener = interfaceC3827b;
+        public CameraVideoRecorderImpl(b bVar) {
+            this.mOnCameraVideoReorderListener = bVar;
         }
 
-        @Override // com.alibaba.security.common.e.InterfaceC3827b
+        @Override // com.alibaba.security.common.e.b
         public void onFinish(String str, int i) {
             VideoMsg videoMsg = new VideoMsg();
             videoMsg.listener = this.mOnCameraVideoReorderListener;
@@ -90,7 +89,7 @@ public abstract class BaseCameraVideoRecorder implements InterfaceC3826a {
     /* compiled from: Taobao */
     /* loaded from: classes8.dex */
     public class VideoMsg {
-        public InterfaceC3827b listener;
+        public b listener;
         public String path;
         public int rotate;
 
@@ -111,9 +110,9 @@ public abstract class BaseCameraVideoRecorder implements InterfaceC3826a {
     }
 
     private void doCallback(VideoMsg videoMsg) {
-        InterfaceC3827b interfaceC3827b = videoMsg.listener;
-        if (interfaceC3827b != null) {
-            interfaceC3827b.onFinish(videoMsg.path, videoMsg.rotate);
+        b bVar = videoMsg.listener;
+        if (bVar != null) {
+            bVar.onFinish(videoMsg.path, videoMsg.rotate);
         }
     }
 
@@ -151,12 +150,12 @@ public abstract class BaseCameraVideoRecorder implements InterfaceC3826a {
     protected abstract void doRelease(boolean z);
 
     protected String getSaveVideoPath() {
-        String str = this.mContext.getExternalCacheDir().toString() + "/" + (C3816j.a("video_" + System.currentTimeMillis() + (Math.random() * 10000.0d)) + ".mp4");
-        C3800a.a(TAG, "视频存储路径：".concat(String.valueOf(str)));
+        String str = this.mContext.getExternalCacheDir().toString() + "/" + (j.a("video_" + System.currentTimeMillis() + (Math.random() * 10000.0d)) + ".mp4");
+        com.alibaba.security.common.c.a.a(TAG, "视频存储路径：".concat(String.valueOf(str)));
         return str;
     }
 
-    @Override // com.alibaba.security.common.e.InterfaceC3826a
+    @Override // com.alibaba.security.common.e.a
     public void init(int i, int i2, int i3, int i4, String str) {
         if (this.mInitSuccess) {
             return;
@@ -177,20 +176,20 @@ public abstract class BaseCameraVideoRecorder implements InterfaceC3826a {
         this.mInitSuccess = doInit(i, i2, i3, i4, str);
     }
 
-    @Override // com.alibaba.security.common.e.InterfaceC3826a
+    @Override // com.alibaba.security.common.e.a
     public void record(byte[] bArr) {
         if (!this.mInitSuccess) {
-            C3800a.e(TAG, "record video fail because init fail");
+            com.alibaba.security.common.c.a.e(TAG, "record video fail because init fail");
         } else {
             doRecord(bArr, this.mWidth, this.mHeight);
         }
     }
 
-    @Override // com.alibaba.security.common.e.InterfaceC3826a
-    public void release(InterfaceC3827b interfaceC3827b, boolean z) {
+    @Override // com.alibaba.security.common.e.a
+    public void release(b bVar, boolean z) {
         doRelease(z);
         this.mInitSuccess = false;
-        new CameraVideoRecorderImpl(interfaceC3827b).onFinish(this.mVideoSavePath, this.mRotate);
+        new CameraVideoRecorderImpl(bVar).onFinish(this.mVideoSavePath, this.mRotate);
         BufferedOutputStream bufferedOutputStream = this.mVOutputStream;
         if (bufferedOutputStream != null) {
             try {
@@ -200,7 +199,7 @@ public abstract class BaseCameraVideoRecorder implements InterfaceC3826a {
             }
         }
         if (z) {
-            C3808e.b(this.mVideoSavePath);
+            e.b(this.mVideoSavePath);
         }
     }
 
@@ -215,7 +214,7 @@ public abstract class BaseCameraVideoRecorder implements InterfaceC3826a {
         }
     }
 
-    @Override // com.alibaba.security.common.e.InterfaceC3826a
-    public void setOnH264EncoderListener(InterfaceC3828c interfaceC3828c) {
+    @Override // com.alibaba.security.common.e.a
+    public void setOnH264EncoderListener(c cVar) {
     }
 }

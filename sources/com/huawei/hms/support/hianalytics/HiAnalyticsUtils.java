@@ -5,9 +5,7 @@ import android.text.TextUtils;
 import com.huawei.hianalytics.process.HiAnalyticsManager;
 import com.huawei.hianalytics.util.HiAnalyticTools;
 import com.huawei.hms.hatool.HmsHiAnalyticsUtils;
-import com.huawei.hms.stats.C5706a;
-import com.huawei.hms.stats.C5707b;
-import com.huawei.hms.stats.C5708c;
+import com.huawei.hms.stats.c;
 import com.huawei.hms.support.log.HMSLog;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -19,7 +17,7 @@ public class HiAnalyticsUtils {
     public static final Object d = new Object();
     public static HiAnalyticsUtils e;
     public int a = 0;
-    public boolean b = C5708c.a();
+    public boolean b = c.a();
 
     public static LinkedHashMap<String, String> a(Map<String, String> map) {
         LinkedHashMap<String, String> linkedHashMap = new LinkedHashMap<>();
@@ -70,7 +68,7 @@ public class HiAnalyticsUtils {
     }
 
     public boolean hasError(Context context) {
-        return C5706a.c(context);
+        return com.huawei.hms.stats.a.c(context);
     }
 
     public void onBuoyEvent(Context context, String str, String str2) {
@@ -88,8 +86,8 @@ public class HiAnalyticsUtils {
             HmsHiAnalyticsUtils.onEvent(0, str, a(map));
             HmsHiAnalyticsUtils.onEvent(1, str, a(map));
         } else {
-            C5707b.a(context, 0, str, a(map));
-            C5707b.a(context, 1, str, a(map));
+            com.huawei.hms.stats.b.a(context, 0, str, a(map));
+            com.huawei.hms.stats.b.a(context, 1, str, a(map));
         }
         a(context);
     }
@@ -101,7 +99,7 @@ public class HiAnalyticsUtils {
         if (!this.b) {
             HmsHiAnalyticsUtils.onEvent(context, str, str2);
         } else {
-            C5707b.a(context, str, str2);
+            com.huawei.hms.stats.b.a(context, str, str2);
         }
     }
 
@@ -113,8 +111,8 @@ public class HiAnalyticsUtils {
             HmsHiAnalyticsUtils.onEvent(0, str, a(map));
             HmsHiAnalyticsUtils.onEvent(1, str, a(map));
         } else {
-            C5707b.a(context, 0, str, a(map));
-            C5707b.a(context, 1, str, a(map));
+            com.huawei.hms.stats.b.a(context, 0, str, a(map));
+            com.huawei.hms.stats.b.a(context, 1, str, a(map));
         }
         a(context);
     }
@@ -129,10 +127,10 @@ public class HiAnalyticsUtils {
             HmsHiAnalyticsUtils.onReport();
             return;
         }
-        C5707b.a(context, 0, str, a(map));
-        C5707b.a(context, 1, str, a(map));
-        C5707b.a(context, 0);
-        C5707b.a(context, 1);
+        com.huawei.hms.stats.b.a(context, 0, str, a(map));
+        com.huawei.hms.stats.b.a(context, 1, str, a(map));
+        com.huawei.hms.stats.b.a(context, 0);
+        com.huawei.hms.stats.b.a(context, 1);
     }
 
     public void enableLog() {
@@ -154,8 +152,8 @@ public class HiAnalyticsUtils {
                 if (!this.b) {
                     HmsHiAnalyticsUtils.onReport();
                 } else {
-                    C5707b.a(context, 0);
-                    C5707b.a(context, 1);
+                    com.huawei.hms.stats.b.a(context, 0);
+                    com.huawei.hms.stats.b.a(context, 1);
                 }
             }
         }
@@ -172,7 +170,7 @@ public class HiAnalyticsUtils {
             if (!this.b) {
                 HmsHiAnalyticsUtils.onEvent(i, str, a(map));
             } else {
-                C5707b.a(context, i, str, a(map));
+                com.huawei.hms.stats.b.a(context, i, str, a(map));
             }
             a(context);
         }
@@ -191,8 +189,8 @@ public class HiAnalyticsUtils {
                 HmsHiAnalyticsUtils.onReport();
                 return;
             }
-            C5707b.a(context, i, str, a(map));
-            C5707b.a(context, i);
+            com.huawei.hms.stats.b.a(context, i, str, a(map));
+            com.huawei.hms.stats.b.a(context, i);
         }
     }
 }

@@ -8,5 +8,5 @@ import io.reactivex.annotations.NonNull;
 /* loaded from: classes3.dex */
 public interface ParallelTransformer<Upstream, Downstream> {
     @NonNull
-    AbstractC8161a<Downstream> apply(@NonNull AbstractC8161a<Upstream> abstractC8161a);
+    a<Downstream> apply(@NonNull a<Upstream> aVar);
 }

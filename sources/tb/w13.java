@@ -5,7 +5,6 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.annotation.JSONField;
-import com.alipay.sdk.m.n.C4250a;
 import com.taobao.weex.utils.WXLogUtils;
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
@@ -34,9 +33,8 @@ public class w13 {
     private static LruCache<String, Boolean> f;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.w13$b */
     /* loaded from: classes11.dex */
-    private static final class C9843b {
+    private static final class b {
         private static final ThreadLocal<byte[]> d = new ThreadLocal<>();
         private static final ThreadLocal<ArrayList> e = new ThreadLocal<>();
         private byte[] a;
@@ -329,7 +327,7 @@ public class w13 {
         }
 
         private final void p(int i) {
-            while ((i & C4250a.g) != 0) {
+            while ((i & com.alipay.sdk.m.n.a.g) != 0) {
                 byte[] bArr = this.a;
                 int i2 = this.b;
                 bArr[i2] = (byte) ((i & 127) | 128);
@@ -375,7 +373,7 @@ public class w13 {
             p((i >> 31) ^ (i << 1));
         }
 
-        private C9843b() {
+        private b() {
             ThreadLocal<byte[]> threadLocal = d;
             byte[] bArr = threadLocal.get();
             this.a = bArr;
@@ -396,9 +394,8 @@ public class w13 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.w13$c */
     /* loaded from: classes11.dex */
-    private static final class C9844c {
+    private static final class c {
         private int a;
         private byte[] b;
         private char[] c;
@@ -608,7 +605,7 @@ public class w13 {
             return (m & Integer.MIN_VALUE) ^ ((((m << 31) >> 31) ^ m) >> 1);
         }
 
-        private C9844c(byte[] bArr) {
+        private c(byte[] bArr) {
             this.a = 0;
             this.b = bArr;
             char[] cArr = (char[]) w13.b.get();
@@ -678,9 +675,9 @@ public class w13 {
             return null;
         }
         try {
-            C9844c c9844c = new C9844c(bArr);
-            Object d2 = c9844c.d();
-            c9844c.c();
+            c cVar = new c(bArr);
+            Object d2 = cVar.d();
+            cVar.c();
             return d2;
         } catch (Exception e2) {
             WXLogUtils.e("parseWson", e2);
@@ -692,9 +689,9 @@ public class w13 {
         if (obj == null) {
             return null;
         }
-        C9843b c9843b = new C9843b();
-        byte[] f2 = c9843b.f(obj);
-        c9843b.c();
+        b bVar = new b();
+        byte[] f2 = bVar.f(obj);
+        bVar.c();
         return f2;
     }
 }

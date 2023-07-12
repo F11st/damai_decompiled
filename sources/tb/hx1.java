@@ -19,9 +19,8 @@ public final class hx1 {
     public static final hx1 INSTANCE = new hx1();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hx1$a */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C9241a {
+    public /* synthetic */ class a {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
         public static final /* synthetic */ int[] $EnumSwitchMapping$1;
         public static final /* synthetic */ int[] $EnumSwitchMapping$2;
@@ -93,7 +92,7 @@ public final class hx1 {
 
     @NotNull
     public final ClassKind a(@Nullable ProtoBuf$Class.Kind kind) {
-        switch (kind == null ? -1 : C9241a.$EnumSwitchMapping$3[kind.ordinal()]) {
+        switch (kind == null ? -1 : a.$EnumSwitchMapping$3[kind.ordinal()]) {
             case 1:
                 return ClassKind.CLASS;
             case 2:
@@ -114,7 +113,7 @@ public final class hx1 {
 
     @NotNull
     public final Modality b(@Nullable ProtoBuf$Modality protoBuf$Modality) {
-        int i = protoBuf$Modality == null ? -1 : C9241a.$EnumSwitchMapping$0[protoBuf$Modality.ordinal()];
+        int i = protoBuf$Modality == null ? -1 : a.$EnumSwitchMapping$0[protoBuf$Modality.ordinal()];
         if (i != 1) {
             if (i != 2) {
                 if (i != 3) {
@@ -133,7 +132,7 @@ public final class hx1 {
     @NotNull
     public final Variance c(@NotNull ProtoBuf$Type.Argument.Projection projection) {
         b41.i(projection, "projection");
-        int i = C9241a.$EnumSwitchMapping$6[projection.ordinal()];
+        int i = a.$EnumSwitchMapping$6[projection.ordinal()];
         if (i != 1) {
             if (i != 2) {
                 if (i != 3) {
@@ -152,7 +151,7 @@ public final class hx1 {
     @NotNull
     public final Variance d(@NotNull ProtoBuf$TypeParameter.Variance variance) {
         b41.i(variance, "variance");
-        int i = C9241a.$EnumSwitchMapping$5[variance.ordinal()];
+        int i = a.$EnumSwitchMapping$5[variance.ordinal()];
         if (i != 1) {
             if (i != 2) {
                 if (i == 3) {

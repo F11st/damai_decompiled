@@ -79,7 +79,7 @@ public class RemoteMessage implements Parcelable {
                     }
                     jSONObject4.put(RemoteMessageConst.MSGID, this.a.getString(RemoteMessageConst.MSGID));
                     jSONObject3.put(RemoteMessageConst.MessageBody.MSG_CONTENT, jSONObject4);
-                    bundle.putByteArray(RemoteMessageConst.MSGBODY, jSONObject3.toString().getBytes(C5705x.a));
+                    bundle.putByteArray(RemoteMessageConst.MSGBODY, jSONObject3.toString().getBytes(x.a));
                     bundle.putString("to", this.a.getString("to"));
                     bundle.putString("message_type", this.a.getString("message_type"));
                     return new RemoteMessage(bundle);
@@ -184,7 +184,7 @@ public class RemoteMessage implements Parcelable {
         public final String y;
         public final String z;
 
-        public /* synthetic */ Notification(Bundle bundle, C5681b c5681b) {
+        public /* synthetic */ Notification(Bundle bundle, b bVar) {
             this(bundle);
         }
 
@@ -413,7 +413,7 @@ public class RemoteMessage implements Parcelable {
         hashMap5.put(RemoteMessageConst.Notification.CLICK_ACTION, "");
         hashMap5.put(RemoteMessageConst.Notification.INTENT_URI, "");
         hashMap5.put("url", "");
-        CREATOR = new C5681b();
+        CREATOR = new b();
     }
 
     public RemoteMessage(Bundle bundle) {
@@ -422,7 +422,7 @@ public class RemoteMessage implements Parcelable {
 
     public static JSONObject b(Bundle bundle) {
         try {
-            return new JSONObject(AbstractC5704w.a(bundle.getByteArray(RemoteMessageConst.MSGBODY)));
+            return new JSONObject(w.a(bundle.getByteArray(RemoteMessageConst.MSGBODY)));
         } catch (JSONException unused) {
             HMSLog.w("RemoteMessage", "JSONException:parse message body failed.");
             return null;
@@ -453,8 +453,8 @@ public class RemoteMessage implements Parcelable {
         JSONObject d2 = d(a2);
         JSONObject b3 = b(d2);
         JSONObject c2 = c(d2);
-        if (bundle.getInt(RemoteMessageConst.INPUT_TYPE) == 1 && AbstractC5698s.a(a2, d2, string)) {
-            bundle2.putString("data", AbstractC5704w.a(bundle.getByteArray(RemoteMessageConst.MSGBODY)));
+        if (bundle.getInt(RemoteMessageConst.INPUT_TYPE) == 1 && s.a(a2, d2, string)) {
+            bundle2.putString("data", w.a(bundle.getByteArray(RemoteMessageConst.MSGBODY)));
             return bundle2;
         }
         String string2 = bundle.getString("to");

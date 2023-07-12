@@ -69,7 +69,7 @@ public class GuideFragment extends BaseFragment implements View.OnClickListener 
 
     @Override // com.ali.user.mobile.base.ui.BaseFragment
     protected int getLayoutContent() {
-        return R.C6645layout.ali_user_sso_guide_activity;
+        return R.layout.ali_user_sso_guide_activity;
     }
 
     @Override // com.ali.user.mobile.base.ui.BaseFragment, com.ali.user.mobile.login.ui.BaseLoginView

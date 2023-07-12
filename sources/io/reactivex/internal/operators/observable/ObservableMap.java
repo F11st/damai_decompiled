@@ -59,7 +59,7 @@ public final class ObservableMap<T, U> extends AbstractObservableWithUpstream<T,
         this.function = function;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super U> observer) {
         this.source.subscribe(new MapObserver(observer, this.function));
     }

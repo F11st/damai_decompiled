@@ -15,11 +15,11 @@ import com.youku.live.messagechannel.utils.MCThreadPool;
 import com.youku.live.messagechannel.utils.MyLog;
 import com.youku.live.messagechannel.utils.ServerTimeEstimater;
 import com.youku.live.messagechannel.utils.UTEvent;
-import io.reactivex.AbstractC8149d;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Predicate;
-import io.reactivex.schedulers.C8162a;
+import io.reactivex.schedulers.a;
 import java.io.Closeable;
 import java.util.HashMap;
 import java.util.List;
@@ -85,7 +85,7 @@ public class MCMessageProcessor implements Closeable {
         OrangeConfig orangeConfig3 = OrangeConfig.getInstance();
         OrangeConfKey.KeyInfo keyInfo3 = OrangeConfKey.closeMemCache;
         this.closeMemCacheSwitch = orangeConfig3.getConfig(OrangeConfKey.Group.android_youku_messagechannel, keyInfo3.name, keyInfo3.def);
-        this.mcMessageDownstreamDisposable = this.mcMessageDownstream.getObservable().subscribeOn(C8162a.a()).filter(new Predicate<MCMessage>() { // from class: com.youku.live.messagechannel.message.MCMessageProcessor.2
+        this.mcMessageDownstreamDisposable = this.mcMessageDownstream.getObservable().subscribeOn(a.a()).filter(new Predicate<MCMessage>() { // from class: com.youku.live.messagechannel.message.MCMessageProcessor.2
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // io.reactivex.functions.Predicate
@@ -245,7 +245,7 @@ public class MCMessageProcessor implements Closeable {
         if (AndroidInstantRuntime.support(ipChange, "-1056586038")) {
             ipChange.ipc$dispatch("-1056586038", new Object[]{this, list});
         } else {
-            AbstractC8149d.fromIterable(list).subscribe(this.mcMessageDownstream);
+            d.fromIterable(list).subscribe(this.mcMessageDownstream);
         }
     }
 }

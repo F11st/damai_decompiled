@@ -1,6 +1,6 @@
 package com.amap.api.col.s;
 
-import com.amap.api.col.s.C4373ae;
+import com.amap.api.col.s.ae;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -13,9 +13,9 @@ public class af {
     private long b = 86400;
     private int c = 10;
     private long d = 0;
-    private final LinkedHashMap<C4373ae.C4375b, Object> e = new LinkedHashMap<>();
+    private final LinkedHashMap<ae.b, Object> e = new LinkedHashMap<>();
     private final Object f = new Object();
-    private final LinkedHashMap<C4373ae.C4375b, Object> g = new LinkedHashMap<>();
+    private final LinkedHashMap<ae.b, Object> g = new LinkedHashMap<>();
     private final Object h = new Object();
     private ArrayList<String> i = new ArrayList<>();
 
@@ -35,35 +35,35 @@ public class af {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public Object b(LinkedHashMap<C4373ae.C4375b, Object> linkedHashMap, C4373ae.C4375b c4375b) {
-        if (linkedHashMap == null || c4375b == null) {
+    public Object b(LinkedHashMap<ae.b, Object> linkedHashMap, ae.b bVar) {
+        if (linkedHashMap == null || bVar == null) {
             return null;
         }
-        return linkedHashMap.get(c4375b);
+        return linkedHashMap.get(bVar);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public Object c(LinkedHashMap<C4373ae.C4375b, Object> linkedHashMap, C4373ae.C4375b c4375b) {
-        if (linkedHashMap == null || c4375b == null) {
+    public Object c(LinkedHashMap<ae.b, Object> linkedHashMap, ae.b bVar) {
+        if (linkedHashMap == null || bVar == null) {
             return null;
         }
-        return linkedHashMap.remove(c4375b);
+        return linkedHashMap.remove(bVar);
     }
 
-    private void b(C4373ae.C4375b c4375b, Object obj) {
+    private void b(ae.b bVar, Object obj) {
         synchronized (this.f) {
             a();
             b();
-            this.e.put(c4375b, obj);
+            this.e.put(bVar, obj);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public boolean a(LinkedHashMap<C4373ae.C4375b, Object> linkedHashMap, C4373ae.C4375b c4375b) {
-        if (linkedHashMap == null || c4375b == null) {
+    public boolean a(LinkedHashMap<ae.b, Object> linkedHashMap, ae.b bVar) {
+        if (linkedHashMap == null || bVar == null) {
             return false;
         }
-        return linkedHashMap.containsKey(c4375b);
+        return linkedHashMap.containsKey(bVar);
     }
 
     private void b() {
@@ -74,16 +74,16 @@ public class af {
         }
     }
 
-    public final C4373ae.C4376c a(C4373ae.C4375b c4375b) {
-        if (this.a && c4375b != null && b(c4375b)) {
+    public final ae.c a(ae.b bVar) {
+        if (this.a && bVar != null && b(bVar)) {
             b();
             synchronized (this.f) {
-                if (a(this.e, c4375b)) {
-                    return new C4373ae.C4376c(b(this.e, c4375b), true);
+                if (a(this.e, bVar)) {
+                    return new ae.c(b(this.e, bVar), true);
                 }
                 synchronized (this.h) {
-                    if (a(this.g, c4375b)) {
-                        while (!a(this.e, c4375b) && a(this.g, c4375b)) {
+                    if (a(this.g, bVar)) {
+                        while (!a(this.e, bVar) && a(this.g, bVar)) {
                             try {
                                 this.h.wait(1000L);
                             } catch (InterruptedException e) {
@@ -91,21 +91,21 @@ public class af {
                             }
                         }
                     } else {
-                        this.g.put(c4375b, null);
+                        this.g.put(bVar, null);
                     }
                 }
-                return new C4373ae.C4376c(b(this.e, c4375b), false);
+                return new ae.c(b(this.e, bVar), false);
             }
         }
         return null;
     }
 
-    public final boolean b(C4373ae.C4375b c4375b) {
-        if (c4375b != null && c4375b.a != null) {
+    public final boolean b(ae.b bVar) {
+        if (bVar != null && bVar.a != null) {
             Iterator<String> it = this.i.iterator();
             while (it.hasNext()) {
                 String next = it.next();
-                if (next != null && c4375b.a.contains(next)) {
+                if (next != null && bVar.a.contains(next)) {
                     return true;
                 }
             }
@@ -113,11 +113,11 @@ public class af {
         return false;
     }
 
-    public final void a(C4373ae.C4375b c4375b, Object obj) {
-        if (this.a && c4375b != null && b(c4375b)) {
-            b(c4375b, obj);
+    public final void a(ae.b bVar, Object obj) {
+        if (this.a && bVar != null && b(bVar)) {
+            b(bVar, obj);
             synchronized (this.h) {
-                c(this.g, c4375b);
+                c(this.g, bVar);
                 this.h.notify();
             }
         }
@@ -128,26 +128,26 @@ public class af {
         if (size <= 0 || size < this.c) {
             return;
         }
-        C4373ae.C4375b c4375b = null;
-        Iterator<C4373ae.C4375b> it = this.e.keySet().iterator();
+        ae.b bVar = null;
+        Iterator<ae.b> it = this.e.keySet().iterator();
         while (true) {
             if (!it.hasNext()) {
                 break;
             }
-            C4373ae.C4375b next = it.next();
+            ae.b next = it.next();
             if (next != null) {
-                c4375b = next;
+                bVar = next;
                 break;
             }
         }
-        c(this.e, c4375b);
+        c(this.e, bVar);
     }
 
-    public void a(C4373ae.C4374a c4374a) {
-        if (c4374a != null) {
-            this.a = c4374a.a();
-            this.b = c4374a.b();
-            this.c = c4374a.c();
+    public void a(ae.a aVar) {
+        if (aVar != null) {
+            this.a = aVar.a();
+            this.b = aVar.b();
+            this.c = aVar.c();
         }
     }
 }

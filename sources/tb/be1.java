@@ -7,7 +7,6 @@ import android.content.res.Configuration;
 import android.os.Build;
 import com.taobao.phenix.builder.Builder;
 import com.taobao.phenix.cache.LruCache;
-import com.taobao.phenix.cache.memory.C6851a;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -21,12 +20,11 @@ public class be1 implements Builder<LruCache<String, ef>> {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.be1$a */
     /* loaded from: classes11.dex */
-    public class ComponentCallbacks2C8959a implements ComponentCallbacks2 {
+    public class a implements ComponentCallbacks2 {
         final /* synthetic */ LruCache a;
 
-        ComponentCallbacks2C8959a(LruCache lruCache) {
+        a(LruCache lruCache) {
             this.a = lruCache;
         }
 
@@ -40,14 +38,14 @@ public class be1 implements Builder<LruCache<String, ef>> {
 
         @Override // android.content.ComponentCallbacks2
         public void onTrimMemory(int i) {
-            xt2.a(C6851a.TAG, "ComponentCallbacks2 onTrimMemory, level=%d", Integer.valueOf(i));
+            xt2.a(com.taobao.phenix.cache.memory.a.TAG, "ComponentCallbacks2 onTrimMemory, level=%d", Integer.valueOf(i));
             if (i >= 60) {
                 this.a.clear();
-                xt2.i(C6851a.TAG, "clear all at TRIM_MEMORY_MODERATE", new Object[0]);
+                xt2.i(com.taobao.phenix.cache.memory.a.TAG, "clear all at TRIM_MEMORY_MODERATE", new Object[0]);
             } else if (i >= 40) {
                 int size = this.a.size() / 2;
                 this.a.trimTo(size);
-                xt2.i(C6851a.TAG, "trim to size=%d at TRIM_MEMORY_BACKGROUND", Integer.valueOf(size));
+                xt2.i(com.taobao.phenix.cache.memory.a.TAG, "trim to size=%d at TRIM_MEMORY_BACKGROUND", Integer.valueOf(size));
             }
         }
     }
@@ -67,9 +65,9 @@ public class be1 implements Builder<LruCache<String, ef>> {
 
     private LruCache<String, ef> d(LruCache<String, ef> lruCache) {
         if (Build.VERSION.SDK_INT >= 14) {
-            ComponentCallbacks2C8959a componentCallbacks2C8959a = new ComponentCallbacks2C8959a(lruCache);
-            this.f = componentCallbacks2C8959a;
-            this.c.registerComponentCallbacks(componentCallbacks2C8959a);
+            a aVar = new a(lruCache);
+            this.f = aVar;
+            this.c.registerComponentCallbacks(aVar);
         }
         return lruCache;
     }
@@ -103,9 +101,9 @@ public class be1 implements Builder<LruCache<String, ef>> {
         if (this.e == null) {
             this.e = Float.valueOf(0.2f);
         }
-        C6851a c6851a = new C6851a(this.d.intValue(), this.e.floatValue());
-        this.b = c6851a;
-        return d(c6851a);
+        com.taobao.phenix.cache.memory.a aVar = new com.taobao.phenix.cache.memory.a(this.d.intValue(), this.e.floatValue());
+        this.b = aVar;
+        return d(aVar);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */

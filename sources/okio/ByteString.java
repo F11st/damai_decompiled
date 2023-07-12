@@ -58,7 +58,7 @@ public class ByteString implements Serializable, Comparable<ByteString> {
     @Nullable
     public static ByteString decodeBase64(String str) {
         if (str != null) {
-            byte[] a = C8837a.a(str);
+            byte[] a = a.a(str);
             if (a != null) {
                 return new ByteString(a);
             }
@@ -117,7 +117,7 @@ public class ByteString implements Serializable, Comparable<ByteString> {
 
     public static ByteString encodeUtf8(String str) {
         if (str != null) {
-            ByteString byteString = new ByteString(str.getBytes(C8859p.UTF_8));
+            ByteString byteString = new ByteString(str.getBytes(p.UTF_8));
             byteString.utf8 = str;
             return byteString;
         }
@@ -185,11 +185,11 @@ public class ByteString implements Serializable, Comparable<ByteString> {
     }
 
     public String base64() {
-        return C8837a.b(this.data);
+        return a.b(this.data);
     }
 
     public String base64Url() {
-        return C8837a.d(this.data);
+        return a.d(this.data);
     }
 
     public final boolean endsWith(ByteString byteString) {
@@ -377,7 +377,7 @@ public class ByteString implements Serializable, Comparable<ByteString> {
         if (str != null) {
             return str;
         }
-        String str2 = new String(this.data, C8859p.UTF_8);
+        String str2 = new String(this.data, p.UTF_8);
         this.utf8 = str2;
         return str2;
     }
@@ -423,7 +423,7 @@ public class ByteString implements Serializable, Comparable<ByteString> {
     public boolean rangeEquals(int i, byte[] bArr, int i2, int i3) {
         if (i >= 0) {
             byte[] bArr2 = this.data;
-            if (i <= bArr2.length - i3 && i2 >= 0 && i2 <= bArr.length - i3 && C8859p.a(bArr2, i, bArr, i2, i3)) {
+            if (i <= bArr2.length - i3 && i2 >= 0 && i2 <= bArr.length - i3 && p.a(bArr2, i, bArr, i2, i3)) {
                 return true;
             }
         }
@@ -456,7 +456,7 @@ public class ByteString implements Serializable, Comparable<ByteString> {
 
     public static ByteString of(byte[] bArr, int i, int i2) {
         if (bArr != null) {
-            C8859p.b(bArr.length, i, i2);
+            p.b(bArr.length, i, i2);
             byte[] bArr2 = new byte[i2];
             System.arraycopy(bArr, i, bArr2, 0, i2);
             return new ByteString(bArr2);
@@ -481,7 +481,7 @@ public class ByteString implements Serializable, Comparable<ByteString> {
     public int indexOf(byte[] bArr, int i) {
         int length = this.data.length - bArr.length;
         for (int max = Math.max(i, 0); max <= length; max++) {
-            if (C8859p.a(this.data, max, bArr, 0, bArr.length)) {
+            if (p.a(this.data, max, bArr, 0, bArr.length)) {
                 return max;
             }
         }
@@ -490,7 +490,7 @@ public class ByteString implements Serializable, Comparable<ByteString> {
 
     public int lastIndexOf(byte[] bArr, int i) {
         for (int min = Math.min(i, this.data.length - bArr.length); min >= 0; min--) {
-            if (C8859p.a(this.data, min, bArr, 0, bArr.length)) {
+            if (p.a(this.data, min, bArr, 0, bArr.length)) {
                 return min;
             }
         }

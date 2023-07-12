@@ -7,8 +7,7 @@ import android.os.Looper;
 import android.os.MessageQueue;
 import android.os.Process;
 import android.os.SystemClock;
-import com.taobao.application.common.C6672a;
-import com.taobao.monitor.impl.common.C6760a;
+import com.taobao.application.common.a;
 import com.taobao.monitor.impl.common.ThreadSwitcher;
 import com.taobao.monitor.impl.data.lifecycle.ActivityLifecycle;
 import com.taobao.monitor.impl.processor.launcher.LauncherProcessor;
@@ -16,7 +15,6 @@ import com.taobao.monitor.impl.trace.ActivityLifeCycleDispatcher;
 import com.taobao.monitor.impl.trace.ApplicationBackgroundChangedDispatcher;
 import com.taobao.monitor.impl.trace.ApplicationGCDispatcher;
 import com.taobao.monitor.impl.trace.ApplicationLowMemoryDispatcher;
-import com.taobao.monitor.impl.trace.C6805a;
 import com.taobao.monitor.impl.trace.CustomPageLifecycleDispatcher;
 import com.taobao.monitor.impl.trace.FPSDispatcher;
 import com.taobao.monitor.impl.trace.FragmentLifecycleDispatcher;
@@ -29,9 +27,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Observer;
-import tb.C8890a0;
-import tb.C8934b0;
+import tb.a0;
 import tb.as1;
+import tb.b0;
 import tb.bs1;
 import tb.bv1;
 import tb.ca0;
@@ -78,31 +76,31 @@ public class APMLauncher {
         f();
         b.add(l(application));
         j(b);
-        C6672a.a();
+        a.a();
     }
 
     private static void h() {
-        ca0.a(C8934b0.APPLICATION_LOW_MEMORY_DISPATCHER, new ApplicationLowMemoryDispatcher());
-        ca0.a(C8934b0.APPLICATION_GC_DISPATCHER, new ApplicationGCDispatcher());
-        ca0.a(C8934b0.APPLICATION_BACKGROUND_CHANGED_DISPATCHER, new ApplicationBackgroundChangedDispatcher());
+        ca0.a(b0.APPLICATION_LOW_MEMORY_DISPATCHER, new ApplicationLowMemoryDispatcher());
+        ca0.a(b0.APPLICATION_GC_DISPATCHER, new ApplicationGCDispatcher());
+        ca0.a(b0.APPLICATION_BACKGROUND_CHANGED_DISPATCHER, new ApplicationBackgroundChangedDispatcher());
         FPSDispatcher fPSDispatcher = new FPSDispatcher();
-        ca0.a(C8934b0.ACTIVITY_FPS_DISPATCHER, fPSDispatcher);
+        ca0.a(b0.ACTIVITY_FPS_DISPATCHER, fPSDispatcher);
         ThreadSwitcher.a().e(fPSDispatcher);
-        ca0.a(C8934b0.WINDOW_EVENT_DISPATCHER, new WindowEventDispatcher());
-        ca0.a(C8934b0.PAGE_RENDER_DISPATCHER, new RenderDispatcher());
-        ca0.a(C8934b0.PAGE_LEAVE_DISPATCHER, new PageLeaveDispatcher());
+        ca0.a(b0.WINDOW_EVENT_DISPATCHER, new WindowEventDispatcher());
+        ca0.a(b0.PAGE_RENDER_DISPATCHER, new RenderDispatcher());
+        ca0.a(b0.PAGE_LEAVE_DISPATCHER, new PageLeaveDispatcher());
         ActivityLifeCycleDispatcher activityLifeCycleDispatcher = new ActivityLifeCycleDispatcher();
         activityLifeCycleDispatcher.addListener(new i81());
-        ca0.a(C8934b0.ACTIVITY_LIFECYCLE_DISPATCHER, activityLifeCycleDispatcher);
-        ca0.a(C8934b0.FRAGMENT_LIFECYCLE_DISPATCHER, new FragmentLifecycleDispatcher());
-        ca0.a(C8934b0.FRAGMENT_LIFECYCLE_FUNCTION_DISPATCHER, new C6805a());
+        ca0.a(b0.ACTIVITY_LIFECYCLE_DISPATCHER, activityLifeCycleDispatcher);
+        ca0.a(b0.FRAGMENT_LIFECYCLE_DISPATCHER, new FragmentLifecycleDispatcher());
+        ca0.a(b0.FRAGMENT_LIFECYCLE_FUNCTION_DISPATCHER, new com.taobao.monitor.impl.trace.a());
         CustomPageLifecycleDispatcher customPageLifecycleDispatcher = new CustomPageLifecycleDispatcher();
         customPageLifecycleDispatcher.addListener(new yp1());
         customPageLifecycleDispatcher.addListener(new wy2());
-        ca0.a(C8934b0.CUSTOM_PAGE_LIFECYCLE_DISPATCHER, customPageLifecycleDispatcher);
-        ca0.a(C8934b0.IMAGE_STAGE_DISPATCHER, new ImageStageDispatcher());
+        ca0.a(b0.CUSTOM_PAGE_LIFECYCLE_DISPATCHER, customPageLifecycleDispatcher);
+        ca0.a(b0.IMAGE_STAGE_DISPATCHER, new ImageStageDispatcher());
         bs1.b().a(new as1());
-        ca0.a(C8934b0.NETWORK_STAGE_DISPATCHER, new NetworkStageDispatcher());
+        ca0.a(b0.NETWORK_STAGE_DISPATCHER, new NetworkStageDispatcher());
         uj1.a().c(new tj1());
         rh1.a().c(new tj1());
     }
@@ -116,7 +114,7 @@ public class APMLauncher {
             q(new Runnable() { // from class: com.taobao.monitor.APMLauncher.2
                 @Override // java.lang.Runnable
                 public void run() {
-                    C6760a.a(list);
+                    com.taobao.monitor.impl.common.a.a(list);
                 }
             });
         }
@@ -128,8 +126,8 @@ public class APMLauncher {
             /* compiled from: Taobao */
             /* renamed from: com.taobao.monitor.APMLauncher$1$a */
             /* loaded from: classes11.dex */
-            class C6749a implements MessageQueue.IdleHandler {
-                C6749a(AnonymousClass1 anonymousClass1) {
+            class a implements MessageQueue.IdleHandler {
+                a(AnonymousClass1 anonymousClass1) {
                 }
 
                 @Override // android.os.MessageQueue.IdleHandler
@@ -147,7 +145,7 @@ public class APMLauncher {
             @Override // java.lang.Runnable
             public void run() {
                 Looper.getMainLooper();
-                Looper.myQueue().addIdleHandler(new C6749a(this));
+                Looper.myQueue().addIdleHandler(new a(this));
             }
         }, 3000L);
     }
@@ -265,7 +263,7 @@ public class APMLauncher {
             if (r5 == 0) goto Ld7
             r3.apply()
         Ld7:
-            long r6 = tb.v6.C9808a.a()
+            long r6 = tb.v6.a.a()
             tb.lu0.k = r6
             tb.v6 r6 = com.taobao.monitor.APMLauncher.c
             boolean r7 = tb.lu0.d
@@ -307,7 +305,7 @@ public class APMLauncher {
     /* JADX INFO: Access modifiers changed from: private */
     public static void p() {
         if (jd0.f) {
-            C8890a0.a().b(new l13());
+            a0.a().b(new l13());
         }
     }
 

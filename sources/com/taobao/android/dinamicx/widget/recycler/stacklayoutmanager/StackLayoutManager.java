@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 /* loaded from: classes11.dex */
 public class StackLayoutManager extends RecyclerView.LayoutManager {
     private final ScrollOrientation a;
-    private final C6532b b;
-    private final C6531a c;
+    private final com.taobao.android.dinamicx.widget.recycler.stacklayoutmanager.b b;
+    private final com.taobao.android.dinamicx.widget.recycler.stacklayoutmanager.a c;
     private final int d;
     private int e;
     private boolean f;
@@ -35,19 +35,18 @@ public class StackLayoutManager extends RecyclerView.LayoutManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.stacklayoutmanager.StackLayoutManager$a */
     /* loaded from: classes11.dex */
-    class C6528a extends RecyclerView.OnFlingListener {
+    class a extends RecyclerView.OnFlingListener {
         final /* synthetic */ RecyclerView a;
 
-        C6528a(RecyclerView recyclerView) {
+        a(RecyclerView recyclerView) {
             this.a = recyclerView;
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.OnFlingListener
         public boolean onFling(int i, int i2) {
             if (StackLayoutManager.this.g) {
-                int i3 = C6530c.a[StackLayoutManager.this.a.ordinal()];
+                int i3 = c.a[StackLayoutManager.this.a.ordinal()];
                 if (i3 == 1 || i3 == 3) {
                     if (i > 0) {
                         StackLayoutManager.this.h = ScrollOrientation.LEFT;
@@ -78,12 +77,11 @@ public class StackLayoutManager extends RecyclerView.LayoutManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.stacklayoutmanager.StackLayoutManager$b */
     /* loaded from: classes11.dex */
-    class C6529b extends RecyclerView.OnScrollListener {
+    class b extends RecyclerView.OnScrollListener {
         final /* synthetic */ RecyclerView a;
 
-        C6529b(RecyclerView recyclerView) {
+        b(RecyclerView recyclerView) {
             this.a = recyclerView;
         }
 
@@ -110,9 +108,8 @@ public class StackLayoutManager extends RecyclerView.LayoutManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.stacklayoutmanager.StackLayoutManager$c */
     /* loaded from: classes12.dex */
-    public static /* synthetic */ class C6530c {
+    public static /* synthetic */ class c {
         static final /* synthetic */ int[] a;
 
         static {
@@ -137,8 +134,8 @@ public class StackLayoutManager extends RecyclerView.LayoutManager {
         }
     }
 
-    public StackLayoutManager(C6534c c6534c) {
-        this(c6534c.a, c6534c.b, c6534c.c, c6534c.d, c6534c.e, c6534c.f, c6534c.g);
+    public StackLayoutManager(com.taobao.android.dinamicx.widget.recycler.stacklayoutmanager.c cVar) {
+        this(cVar.a, cVar.b, cVar.c, cVar.d, cVar.e, cVar.f, cVar.g);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -163,7 +160,7 @@ public class StackLayoutManager extends RecyclerView.LayoutManager {
         /*
             r5 = this;
             com.taobao.android.dinamicx.widget.recycler.stacklayoutmanager.StackLayoutManager$ScrollOrientation r0 = r5.h
-            int[] r1 = com.taobao.android.dinamicx.widget.recycler.stacklayoutmanager.StackLayoutManager.C6530c.a
+            int[] r1 = com.taobao.android.dinamicx.widget.recycler.stacklayoutmanager.StackLayoutManager.c.a
             com.taobao.android.dinamicx.widget.recycler.stacklayoutmanager.StackLayoutManager$ScrollOrientation r2 = r5.a
             int r2 = r2.ordinal()
             r1 = r1[r2]
@@ -235,7 +232,7 @@ public class StackLayoutManager extends RecyclerView.LayoutManager {
         if (getWidth() == 0 || getHeight() == 0) {
             return 0;
         }
-        int i = C6530c.a[this.a.ordinal()];
+        int i = c.a[this.a.ordinal()];
         if (i == 1) {
             floor = Math.floor((this.e * 1.0d) / getWidth());
         } else if (i != 2) {
@@ -265,7 +262,7 @@ public class StackLayoutManager extends RecyclerView.LayoutManager {
         int width;
         int itemCount;
         int width2;
-        int i2 = C6530c.a[this.a.ordinal()];
+        int i2 = c.a[this.a.ordinal()];
         if (i2 == 1) {
             width = getWidth();
         } else if (i2 != 2) {
@@ -284,7 +281,7 @@ public class StackLayoutManager extends RecyclerView.LayoutManager {
     }
 
     private int p(int i) {
-        int i2 = C6530c.a[this.a.ordinal()];
+        int i2 = c.a[this.a.ordinal()];
         if (i2 == 1 || i2 == 3) {
             return Math.max(Math.min(getWidth() * (getItemCount() - 1) * (this.i ? 500 : 1), i), 0);
         }
@@ -373,7 +370,7 @@ public class StackLayoutManager extends RecyclerView.LayoutManager {
 
     private void v(int i, RecyclerView recyclerView, Boolean bool) {
         int o = o(i);
-        int i2 = C6530c.a[this.a.ordinal()];
+        int i2 = c.a[this.a.ordinal()];
         if (i2 != 1 && i2 != 3) {
             if (bool.booleanValue()) {
                 recyclerView.smoothScrollBy(0, o - this.e);
@@ -420,7 +417,7 @@ public class StackLayoutManager extends RecyclerView.LayoutManager {
         if (getWidth() == 0 || getHeight() == 0) {
             return 0.0f;
         }
-        int i = C6530c.a[this.a.ordinal()];
+        int i = c.a[this.a.ordinal()];
         if (i == 1) {
             width = (this.e % getWidth()) * 1.0f;
             width2 = getWidth();
@@ -447,17 +444,17 @@ public class StackLayoutManager extends RecyclerView.LayoutManager {
     @Override // androidx.recyclerview.widget.RecyclerView.LayoutManager
     public void onAttachedToWindow(RecyclerView recyclerView) {
         super.onAttachedToWindow(recyclerView);
-        recyclerView.setOnFlingListener(new C6528a(recyclerView));
-        recyclerView.addOnScrollListener(new C6529b(recyclerView));
+        recyclerView.setOnFlingListener(new a(recyclerView));
+        recyclerView.addOnScrollListener(new b(recyclerView));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.LayoutManager
     public void onLayoutChildren(RecyclerView.Recycler recycler, RecyclerView.State state) {
-        C6532b c6532b = this.b;
-        if (c6532b == null) {
+        com.taobao.android.dinamicx.widget.recycler.stacklayoutmanager.b bVar = this.b;
+        if (bVar == null) {
             return;
         }
-        c6532b.g();
+        bVar.g();
         removeAndRecycleAllViews(recycler);
         if (getItemCount() > 0) {
             this.e = p(this.e);
@@ -473,9 +470,9 @@ public class StackLayoutManager extends RecyclerView.LayoutManager {
     @Override // androidx.recyclerview.widget.RecyclerView.LayoutManager
     public void requestLayout() {
         super.requestLayout();
-        C6532b c6532b = this.b;
-        if (c6532b != null) {
-            c6532b.g();
+        com.taobao.android.dinamicx.widget.recycler.stacklayoutmanager.b bVar = this.b;
+        if (bVar != null) {
+            bVar.g();
         }
     }
 
@@ -522,9 +519,9 @@ public class StackLayoutManager extends RecyclerView.LayoutManager {
         this.d = i;
         this.i = z2 && (scrollOrientation == ScrollOrientation.LEFT || scrollOrientation == ScrollOrientation.TOP);
         this.g = z;
-        this.b = new C6532b(scrollOrientation, i, f);
-        this.c = new C6531a(scrollOrientation, i, f2, f3);
-        int i2 = C6530c.a[scrollOrientation.ordinal()];
+        this.b = new com.taobao.android.dinamicx.widget.recycler.stacklayoutmanager.b(scrollOrientation, i, f);
+        this.c = new com.taobao.android.dinamicx.widget.recycler.stacklayoutmanager.a(scrollOrientation, i, f2, f3);
+        int i2 = c.a[scrollOrientation.ordinal()];
         if (i2 != 1 && i2 != 2) {
             this.e = Integer.MAX_VALUE;
         } else {

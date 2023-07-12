@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.observable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.CompositeException;
 import io.reactivex.functions.Predicate;
@@ -86,13 +86,13 @@ public final class ObservableRetryPredicate<T> extends AbstractObservableWithUps
         }
     }
 
-    public ObservableRetryPredicate(AbstractC8149d<T> abstractC8149d, long j, Predicate<? super Throwable> predicate) {
-        super(abstractC8149d);
+    public ObservableRetryPredicate(d<T> dVar, long j, Predicate<? super Throwable> predicate) {
+        super(dVar);
         this.predicate = predicate;
         this.count = j;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         SequentialDisposable sequentialDisposable = new SequentialDisposable();
         observer.onSubscribe(sequentialDisposable);

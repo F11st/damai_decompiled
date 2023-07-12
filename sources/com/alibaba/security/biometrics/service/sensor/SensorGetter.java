@@ -9,7 +9,7 @@ import android.hardware.SensorManager;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
-import com.alibaba.security.common.c.C3800a;
+import com.alibaba.security.common.c.a;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadFactory;
@@ -99,9 +99,9 @@ public class SensorGetter implements SensorEventListener {
                                     try {
                                         try {
                                             fArr[0] = sensorEvent.values[0];
-                                            C3800a.b(SensorGetter.TAG, "name:" + sensorEvent.sensor.getName() + "\tvalue:" + sensorEvent.values[0] + "\tcost:" + (System.currentTimeMillis() - currentTimeMillis));
+                                            a.b(SensorGetter.TAG, "name:" + sensorEvent.sensor.getName() + "\tvalue:" + sensorEvent.values[0] + "\tcost:" + (System.currentTimeMillis() - currentTimeMillis));
                                         } catch (Exception unused) {
-                                            C3800a.b();
+                                            a.b();
                                         }
                                     } finally {
                                         countDownLatch.countDown();
@@ -116,7 +116,7 @@ public class SensorGetter implements SensorEventListener {
                             try {
                                 countDownLatch.await(500L, TimeUnit.MILLISECONDS);
                             } catch (Exception unused) {
-                                C3800a.b();
+                                a.b();
                             }
                             SensorGetter.this.mUiHandler.post(new Runnable() { // from class: com.alibaba.security.biometrics.service.sensor.SensorGetter.2.2
                                 @Override // java.lang.Runnable
@@ -133,7 +133,7 @@ public class SensorGetter implements SensorEventListener {
                         sensorCallback.onGetSensorValue(-1.0f);
                         return;
                     }
-                    C3800a.d(SensorGetter.TAG, "sensorCallback is null");
+                    a.d(SensorGetter.TAG, "sensorCallback is null");
                 }
             });
         }
@@ -169,7 +169,7 @@ public class SensorGetter implements SensorEventListener {
                 this.mProximityValue = sensorEvent.values[0];
             }
         } catch (Exception unused) {
-            C3800a.b();
+            a.b();
         }
     }
 

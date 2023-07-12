@@ -37,14 +37,13 @@ public class DMProtocolDialogTextItemView extends FrameLayout {
     private View.OnClickListener onClickListener;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.DMProtocolDialogTextItemView$a */
     /* loaded from: classes8.dex */
-    public class C2577a extends ClickableSpan {
+    public class a extends ClickableSpan {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ String b;
 
-        C2577a(String str, String str2) {
+        a(String str, String str2) {
             this.a = str;
             this.b = str2;
         }
@@ -131,7 +130,7 @@ public class DMProtocolDialogTextItemView extends FrameLayout {
             int length = str.length();
             int length2 = str.length() + str5.length();
             SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(str + str5);
-            spannableStringBuilder.setSpan(new C2577a(str4, str2), length, length2, 33);
+            spannableStringBuilder.setSpan(new a(str4, str2), length, length2, 33);
             this.mTvContent.setMovementMethod(LinkMovementMethod.getInstance());
             this.mTvContent.setText(spannableStringBuilder);
             this.mTvContent.setHighlightColor(Color.parseColor("#00000000"));
@@ -189,8 +188,8 @@ public class DMProtocolDialogTextItemView extends FrameLayout {
             });
         } else {
             this.mTvContent.setMaxLines(1);
-            int a = q60.a(this.mContent, 24.5f);
-            this.mTvContent.setPadding(a, 0, a, 0);
+            int a2 = q60.a(this.mContent, 24.5f);
+            this.mTvContent.setPadding(a2, 0, a2, 0);
         }
         this.mProtocolLink = str5;
         setContent(str, str2, str3, str4);

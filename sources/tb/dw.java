@@ -1,21 +1,19 @@
 package tb;
 
-import com.taobao.android.dinamicx.C6366c;
 import com.taobao.android.dinamicx.DXRuntimeContext;
 import com.taobao.android.dinamicx.DinamicXEngine;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 import com.taobao.android.dinamicx.monitor.DXFontSize;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class dw extends AbstractC6375a {
+public class dw extends com.taobao.android.dinamicx.expression.parser.a {
     public static final long DX_PARSER_SIZEBYFACTOR = 7983029549530032097L;
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         if (objArr != null && objArr.length != 0) {
-            if (C6366c.f() && objArr.length == 1 && objArr[0] != null) {
-                return Integer.valueOf(z00.m(DinamicXEngine.i(), C6366c.c(z00.j(DinamicXEngine.i(), String.valueOf(objArr[0]), 0))));
+            if (com.taobao.android.dinamicx.c.f() && objArr.length == 1 && objArr[0] != null) {
+                return Integer.valueOf(z00.m(DinamicXEngine.i(), com.taobao.android.dinamicx.c.c(z00.j(DinamicXEngine.i(), String.valueOf(objArr[0]), 0))));
             }
             DXFontSize b = DXFontSize.b();
             if (objArr.length == 1 && (objArr[0] instanceof Number)) {
@@ -40,7 +38,7 @@ public class dw extends AbstractC6375a {
         return null;
     }
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
     public String getDxFunctionName() {
         return m80.SIZE_BY_FACTOR;
     }

@@ -11,15 +11,15 @@ public class a20 {
         return this.a;
     }
 
-    public boolean b(String str, int i, C9787ut c9787ut) {
+    public boolean b(String str, int i, ut utVar) {
         boolean z;
-        if (c9787ut.j(i)) {
+        if (utVar.j(i)) {
             z = true;
         } else {
             z = false;
             Log.e("UiCodeLoader_TMTEST", "seekBy error:" + i);
         }
-        this.a = c9787ut.c();
+        this.a = utVar.c();
         return z;
     }
 }

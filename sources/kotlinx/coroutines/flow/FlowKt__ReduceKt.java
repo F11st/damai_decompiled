@@ -16,12 +16,11 @@ public final /* synthetic */ class FlowKt__ReduceKt {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.flow.FlowKt__ReduceKt$a */
     /* loaded from: classes11.dex */
-    public static final class C8664a<T> implements FlowCollector<T> {
+    public static final class a<T> implements FlowCollector<T> {
         final /* synthetic */ Ref$ObjectRef a;
 
-        public C8664a(Ref$ObjectRef ref$ObjectRef) {
+        public a(Ref$ObjectRef ref$ObjectRef) {
             this.a = ref$ObjectRef;
         }
 
@@ -39,12 +38,11 @@ public final /* synthetic */ class FlowKt__ReduceKt {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.flow.FlowKt__ReduceKt$b */
     /* loaded from: classes11.dex */
-    public static final class C8665b<T> implements FlowCollector<T> {
+    public static final class b<T> implements FlowCollector<T> {
         final /* synthetic */ Ref$ObjectRef a;
 
-        public C8665b(Ref$ObjectRef ref$ObjectRef) {
+        public b(Ref$ObjectRef ref$ObjectRef) {
             this.a = ref$ObjectRef;
         }
 
@@ -62,12 +60,11 @@ public final /* synthetic */ class FlowKt__ReduceKt {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.flow.FlowKt__ReduceKt$c */
     /* loaded from: classes11.dex */
-    public static final class C8666c<T> implements FlowCollector<T> {
+    public static final class c<T> implements FlowCollector<T> {
         final /* synthetic */ Ref$ObjectRef a;
 
-        public C8666c(Ref$ObjectRef ref$ObjectRef) {
+        public c(Ref$ObjectRef ref$ObjectRef) {
             this.a = ref$ObjectRef;
         }
 
@@ -86,12 +83,11 @@ public final /* synthetic */ class FlowKt__ReduceKt {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.flow.FlowKt__ReduceKt$d */
     /* loaded from: classes11.dex */
-    public static final class C8667d<T> implements FlowCollector<T> {
+    public static final class d<T> implements FlowCollector<T> {
         final /* synthetic */ Ref$ObjectRef a;
 
-        public C8667d(Ref$ObjectRef ref$ObjectRef) {
+        public d(Ref$ObjectRef ref$ObjectRef) {
             this.a = ref$ObjectRef;
         }
 
@@ -144,13 +140,13 @@ public final /* synthetic */ class FlowKt__ReduceKt {
             r0.<init>(r5)
         L18:
             java.lang.Object r5 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L43
             if (r2 != r3) goto L3b
             java.lang.Object r4 = r0.L$3
-            kotlinx.coroutines.flow.FlowKt__ReduceKt$a r4 = (kotlinx.coroutines.flow.FlowKt__ReduceKt.C8664a) r4
+            kotlinx.coroutines.flow.FlowKt__ReduceKt$a r4 = (kotlinx.coroutines.flow.FlowKt__ReduceKt.a) r4
             java.lang.Object r1 = r0.L$2
             kotlinx.coroutines.flow.Flow r1 = (kotlinx.coroutines.flow.Flow) r1
             java.lang.Object r1 = r0.L$1
@@ -234,7 +230,7 @@ public final /* synthetic */ class FlowKt__ReduceKt {
             r0.<init>(r6)
         L18:
             java.lang.Object r6 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L47
@@ -332,13 +328,13 @@ public final /* synthetic */ class FlowKt__ReduceKt {
             r0.<init>(r5)
         L18:
             java.lang.Object r5 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L43
             if (r2 != r3) goto L3b
             java.lang.Object r4 = r0.L$3
-            kotlinx.coroutines.flow.FlowKt__ReduceKt$b r4 = (kotlinx.coroutines.flow.FlowKt__ReduceKt.C8665b) r4
+            kotlinx.coroutines.flow.FlowKt__ReduceKt$b r4 = (kotlinx.coroutines.flow.FlowKt__ReduceKt.b) r4
             java.lang.Object r1 = r0.L$2
             kotlinx.coroutines.flow.Flow r1 = (kotlinx.coroutines.flow.Flow) r1
             java.lang.Object r1 = r0.L$1
@@ -413,7 +409,7 @@ public final /* synthetic */ class FlowKt__ReduceKt {
             r0.<init>(r6)
         L18:
             java.lang.Object r6 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L47
@@ -498,7 +494,7 @@ public final /* synthetic */ class FlowKt__ReduceKt {
             r0.<init>(r7)
         L18:
             java.lang.Object r7 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L41
@@ -571,7 +567,7 @@ public final /* synthetic */ class FlowKt__ReduceKt {
             r0.<init>(r6)
         L18:
             java.lang.Object r6 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L41
@@ -650,7 +646,7 @@ public final /* synthetic */ class FlowKt__ReduceKt {
             r0.<init>(r5)
         L18:
             java.lang.Object r5 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L3d
@@ -726,13 +722,13 @@ public final /* synthetic */ class FlowKt__ReduceKt {
             r0.<init>(r5)
         L18:
             java.lang.Object r5 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L43
             if (r2 != r3) goto L3b
             java.lang.Object r4 = r0.L$3
-            kotlinx.coroutines.flow.FlowKt__ReduceKt$d r4 = (kotlinx.coroutines.flow.FlowKt__ReduceKt.C8667d) r4
+            kotlinx.coroutines.flow.FlowKt__ReduceKt$d r4 = (kotlinx.coroutines.flow.FlowKt__ReduceKt.d) r4
             java.lang.Object r1 = r0.L$2
             kotlinx.coroutines.flow.Flow r1 = (kotlinx.coroutines.flow.Flow) r1
             java.lang.Object r1 = r0.L$1

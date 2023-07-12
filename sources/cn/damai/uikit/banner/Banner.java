@@ -87,13 +87,12 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.uikit.banner.Banner$BannerPagerAdapter$a */
         /* loaded from: classes17.dex */
-        public class View$OnClickListenerC2472a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ int a;
 
-            View$OnClickListenerC2472a(int i) {
+            a(int i) {
                 this.a = i;
             }
 
@@ -110,13 +109,12 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.uikit.banner.Banner$BannerPagerAdapter$b */
         /* loaded from: classes17.dex */
-        public class View$OnClickListenerC2473b implements View.OnClickListener {
+        public class b implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ int a;
 
-            View$OnClickListenerC2473b(int i) {
+            b(int i) {
                 this.a = i;
             }
 
@@ -159,10 +157,10 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
             viewGroup.addView((View) Banner.this.imageViews.get(i));
             View view = (View) Banner.this.imageViews.get(i);
             if (Banner.this.bannerListener != null) {
-                view.setOnClickListener(new View$OnClickListenerC2472a(i));
+                view.setOnClickListener(new a(i));
             }
             if (Banner.this.listener != null) {
-                view.setOnClickListener(new View$OnClickListenerC2473b(i));
+                view.setOnClickListener(new b(i));
             }
             return view;
         }

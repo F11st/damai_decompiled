@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.b;
 import io.reactivex.exceptions.CompositeException;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
@@ -270,15 +270,15 @@ public final class FlowableDoOnEach<T> extends AbstractFlowableWithUpstream<T, T
         }
     }
 
-    public FlowableDoOnEach(AbstractC8147b<T> abstractC8147b, Consumer<? super T> consumer, Consumer<? super Throwable> consumer2, Action action, Action action2) {
-        super(abstractC8147b);
+    public FlowableDoOnEach(b<T> bVar, Consumer<? super T> consumer, Consumer<? super Throwable> consumer2, Action action, Action action2) {
+        super(bVar);
         this.onNext = consumer;
         this.onError = consumer2;
         this.onComplete = action;
         this.onAfterTerminate = action2;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         if (subscriber instanceof ConditionalSubscriber) {
             this.source.subscribe((FlowableSubscriber) new DoOnEachConditionalSubscriber((ConditionalSubscriber) subscriber, this.onNext, this.onError, this.onComplete, this.onAfterTerminate));

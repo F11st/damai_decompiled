@@ -85,12 +85,11 @@ public class ScrollLayout extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.ScrollLayout$a */
     /* loaded from: classes7.dex */
-    public class C2093a extends GestureDetector.SimpleOnGestureListener {
+    public class a extends GestureDetector.SimpleOnGestureListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2093a() {
+        a() {
         }
 
         @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnGestureListener
@@ -127,9 +126,8 @@ public class ScrollLayout extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.ScrollLayout$b */
     /* loaded from: classes7.dex */
-    static /* synthetic */ class C2094b {
+    static /* synthetic */ class b {
         static final /* synthetic */ int[] a;
 
         static {
@@ -152,8 +150,8 @@ public class ScrollLayout extends FrameLayout {
 
     public ScrollLayout(Context context) {
         super(context);
-        C2093a c2093a = new C2093a();
-        this.gestureListener = c2093a;
+        a aVar = new a();
+        this.gestureListener = aVar;
         this.associatedListViewListener = new AbsListView.OnScrollListener() { // from class: cn.damai.ticklet.view.ScrollLayout.2
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -218,7 +216,7 @@ public class ScrollLayout extends FrameLayout {
         } else {
             this.scroller = new Scroller(getContext());
         }
-        this.gestureDetector = new GestureDetector(getContext(), c2093a);
+        this.gestureDetector = new GestureDetector(getContext(), aVar);
     }
 
     private void completeMove() {
@@ -396,7 +394,7 @@ public class ScrollLayout extends FrameLayout {
         if (AndroidInstantRuntime.support(ipChange, "-721739003")) {
             return (Status) ipChange.ipc$dispatch("-721739003", new Object[]{this});
         }
-        int i = C2094b.a[this.currentInnerStatus.ordinal()];
+        int i = b.a[this.currentInnerStatus.ordinal()];
         if (i != 1) {
             if (i != 2) {
                 if (i != 3) {
@@ -777,8 +775,8 @@ public class ScrollLayout extends FrameLayout {
 
     public ScrollLayout(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        C2093a c2093a = new C2093a();
-        this.gestureListener = c2093a;
+        a aVar = new a();
+        this.gestureListener = aVar;
         this.associatedListViewListener = new AbsListView.OnScrollListener() { // from class: cn.damai.ticklet.view.ScrollLayout.2
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -843,14 +841,14 @@ public class ScrollLayout extends FrameLayout {
         } else {
             this.scroller = new Scroller(getContext());
         }
-        this.gestureDetector = new GestureDetector(getContext(), c2093a);
+        this.gestureDetector = new GestureDetector(getContext(), aVar);
         initFromAttributes(context, attributeSet);
     }
 
     public ScrollLayout(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        C2093a c2093a = new C2093a();
-        this.gestureListener = c2093a;
+        a aVar = new a();
+        this.gestureListener = aVar;
         this.associatedListViewListener = new AbsListView.OnScrollListener() { // from class: cn.damai.ticklet.view.ScrollLayout.2
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -915,7 +913,7 @@ public class ScrollLayout extends FrameLayout {
         } else {
             this.scroller = new Scroller(getContext());
         }
-        this.gestureDetector = new GestureDetector(getContext(), c2093a);
+        this.gestureDetector = new GestureDetector(getContext(), aVar);
         initFromAttributes(context, attributeSet);
     }
 }

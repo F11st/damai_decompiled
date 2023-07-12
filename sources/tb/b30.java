@@ -9,25 +9,23 @@ public class b30 {
     private BizSubscriber a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.b30$b */
     /* loaded from: classes9.dex */
-    private static final class C8947b {
+    private static final class b {
         public static final b30 sInstance = new b30();
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.b30$c */
     /* loaded from: classes9.dex */
-    private static class C8948c {
+    private static class c {
         private BizSubscriber a;
 
-        private C8948c(BizSubscriber bizSubscriber) {
+        private c(BizSubscriber bizSubscriber) {
             this.a = bizSubscriber;
         }
     }
 
     public static final b30 a() {
-        return C8947b.sInstance;
+        return b.sInstance;
     }
 
     private HashMap<String, String> d(HashMap<String, String> hashMap) {
@@ -47,7 +45,7 @@ public class b30 {
     public void b(BizSubscriber bizSubscriber) {
         if (this.a == null) {
             this.a = bizSubscriber;
-            new C8948c(bizSubscriber);
+            new c(bizSubscriber);
         }
     }
 

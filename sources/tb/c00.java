@@ -1,14 +1,12 @@
 package tb;
 
 import com.taobao.android.dinamicx.DXRuntimeContext;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
-import com.taobao.android.dinamicx.widget.C6493f;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
 import java.util.StringTokenizer;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class c00 extends AbstractC6375a {
+public class c00 extends com.taobao.android.dinamicx.expression.parser.a {
     public static final long DX_PARSER_PARENTSUBDATA = -1943779674642760869L;
 
     private Object a(DXRuntimeContext dXRuntimeContext) {
@@ -17,11 +15,11 @@ public class c00 extends AbstractC6375a {
         if (dXRuntimeContext == null || (widgetNode = dXRuntimeContext.getWidgetNode()) == null || (parentWidget = widgetNode.getParentWidget()) == null) {
             return null;
         }
-        C6493f c6493f = (C6493f) parentWidget;
-        if (c6493f.isHandleListData()) {
-            return c6493f.getDXRuntimeContext().getSubData();
+        com.taobao.android.dinamicx.widget.f fVar = (com.taobao.android.dinamicx.widget.f) parentWidget;
+        if (fVar.isHandleListData()) {
+            return fVar.getDXRuntimeContext().getSubData();
         }
-        return a(c6493f.getDXRuntimeContext());
+        return a(fVar.getDXRuntimeContext());
     }
 
     private Object b(DXRuntimeContext dXRuntimeContext, Object obj, String str) {
@@ -31,7 +29,7 @@ public class c00 extends AbstractC6375a {
         return cy.a(dXRuntimeContext, obj, str);
     }
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         Object a = a(dXRuntimeContext);
         if (a == null) {
@@ -53,7 +51,7 @@ public class c00 extends AbstractC6375a {
         return a;
     }
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
     public String getDxFunctionName() {
         return "parentSubdata";
     }

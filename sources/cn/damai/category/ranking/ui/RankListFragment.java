@@ -20,14 +20,11 @@ import androidx.annotation.Nullable;
 import cn.damai.category.category.request.FollowRequest;
 import cn.damai.category.discountticket.ui.OnErrorClickListener;
 import cn.damai.category.ranking.bean.RankListHeader;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.search.bean.FollowDataBean;
 import cn.damai.commonbusiness.share.ShareManager;
@@ -63,11 +60,11 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import tb.C9548pb;
 import tb.g03;
 import tb.j11;
 import tb.kg2;
 import tb.m62;
+import tb.pb;
 import tb.rx1;
 import tb.xj0;
 import tb.z20;
@@ -109,24 +106,23 @@ public class RankListFragment extends AbsFragmentV2 {
     RankListHeader headerBean = null;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.ranking.ui.RankListFragment$a */
     /* loaded from: classes.dex */
-    public class C0422a implements DMImageCreator.DMImageSuccListener {
+    public class a implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0422a() {
+        a() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1124723081")) {
-                ipChange.ipc$dispatch("1124723081", new Object[]{this, c0502e});
-            } else if (c0502e == null || c0502e.b == null) {
+                ipChange.ipc$dispatch("1124723081", new Object[]{this, eVar});
+            } else if (eVar == null || eVar.b == null) {
             } else {
                 try {
                     RankListFragment rankListFragment = RankListFragment.this;
-                    rankListFragment.mShareBitmapUrl = j11.d(rankListFragment.mShareImageUrl, c0502e.b, RankListFragment.this.baseActivity);
+                    rankListFragment.mShareBitmapUrl = j11.d(rankListFragment.mShareImageUrl, eVar.b, RankListFragment.this.baseActivity);
                 } catch (Exception unused) {
                 }
             }
@@ -134,13 +130,12 @@ public class RankListFragment extends AbsFragmentV2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.ranking.ui.RankListFragment$b */
     /* loaded from: classes.dex */
-    public class C0423b implements GuideUtProvider {
+    public class b implements GuideUtProvider {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ RankItemBean a;
 
-        C0423b(RankItemBean rankItemBean) {
+        b(RankItemBean rankItemBean) {
             this.a = rankItemBean;
         }
 
@@ -162,7 +157,7 @@ public class RankListFragment extends AbsFragmentV2 {
             if (this.a != null) {
                 hashMap.put("item_id", this.a.id + "");
                 hashMap.put("titlelabel", this.a.rankName);
-                hashMap.put(C9548pb.CNT_CONTENT_ID, this.a.rankId);
+                hashMap.put(pb.CNT_CONTENT_ID, this.a.rankId);
             }
             return hashMap;
         }
@@ -183,12 +178,11 @@ public class RankListFragment extends AbsFragmentV2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.ranking.ui.RankListFragment$c */
     /* loaded from: classes.dex */
-    public class CountDownTimerC0424c extends CountDownTimer {
+    public class c extends CountDownTimer {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        CountDownTimerC0424c(long j, long j2) {
+        c(long j, long j2) {
             super(j, j2);
         }
 
@@ -212,12 +206,11 @@ public class RankListFragment extends AbsFragmentV2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.ranking.ui.RankListFragment$d */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0425d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0425d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -233,12 +226,11 @@ public class RankListFragment extends AbsFragmentV2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.ranking.ui.RankListFragment$e */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0426e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0426e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -253,12 +245,11 @@ public class RankListFragment extends AbsFragmentV2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.ranking.ui.RankListFragment$f */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0427f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0427f() {
+        f() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -273,12 +264,11 @@ public class RankListFragment extends AbsFragmentV2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.ranking.ui.RankListFragment$g */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0428g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0428g() {
+        g() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -288,9 +278,9 @@ public class RankListFragment extends AbsFragmentV2 {
                 ipChange.ipc$dispatch("-1255459900", new Object[]{this, view});
                 return;
             }
-            C0528b c0528b = C0528b.getInstance();
+            cn.damai.common.user.b bVar = cn.damai.common.user.b.getInstance();
             RankListFragment rankListFragment = RankListFragment.this;
-            C0529c.e().x(c0528b.e(rankListFragment.spmB, "top", "share", rankListFragment.getUtMap(), Boolean.FALSE));
+            cn.damai.common.user.c.e().x(bVar.e(rankListFragment.spmB, "top", "share", rankListFragment.getUtMap(), Boolean.FALSE));
             Bundle bundle = new Bundle();
             bundle.putString("title", ((Object) RankListFragment.this.mTopTitleTv.getText()) + "");
             bundle.putString("projectName", ((Object) RankListFragment.this.mTopTitleTv.getText()) + "");
@@ -313,12 +303,11 @@ public class RankListFragment extends AbsFragmentV2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.ranking.ui.RankListFragment$h */
     /* loaded from: classes.dex */
-    public class C0429h implements PtrHandler {
+    public class h implements PtrHandler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0429h() {
+        h() {
         }
 
         @Override // in.srain.cube.views.ptr.PtrHandler
@@ -339,12 +328,11 @@ public class RankListFragment extends AbsFragmentV2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.ranking.ui.RankListFragment$i */
     /* loaded from: classes.dex */
-    public class C0430i implements AppBarLayout.OnOffsetChangedListener {
+    public class i implements AppBarLayout.OnOffsetChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0430i() {
+        i() {
         }
 
         @Override // com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener, com.google.android.material.appbar.AppBarLayout.BaseOnOffsetChangedListener
@@ -392,19 +380,18 @@ public class RankListFragment extends AbsFragmentV2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.ranking.ui.RankListFragment$j */
     /* loaded from: classes.dex */
-    public class C0431j implements DMImageCreator.DMImageFailListener {
+    public class j implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0431j(RankListFragment rankListFragment) {
+        j(RankListFragment rankListFragment) {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "414434683")) {
-                ipChange.ipc$dispatch("414434683", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("414434683", new Object[]{this, dVar});
             }
         }
     }
@@ -420,14 +407,14 @@ public class RankListFragment extends AbsFragmentV2 {
             this.mShareBtn.setVisibility(8);
         } else {
             this.mShareBtn.setVisibility(0);
-            C0529c.e().G(this.mShareBtn, "share", "top", this.spmB, getUtMap());
+            cn.damai.common.user.c.e().G(this.mShareBtn, "share", "top", this.spmB, getUtMap());
         }
         this.mShareUrl = rankListHeader.shareUrl;
         List<RankItemBean> list = rankListHeader.list;
         if (list == null || (rankItemBean = list.get(0)) == null) {
             return;
         }
-        C0504a.b().f(rankItemBean.headPic, m62.a(this.baseActivity, 111.0f), m62.a(this.baseActivity, 148.0f)).n(new C0422a()).e(new C0431j(this)).f();
+        cn.damai.common.image.a.b().f(rankItemBean.headPic, m62.a(this.baseActivity, 111.0f), m62.a(this.baseActivity, 148.0f)).n(new a()).e(new j(this)).f();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -439,7 +426,7 @@ public class RankListFragment extends AbsFragmentV2 {
         }
         HashMap hashMap = new HashMap();
         hashMap.put("usercode", z20.E());
-        hashMap.put(C9548pb.CNT_CONTENT_ID, this.mId);
+        hashMap.put(pb.CNT_CONTENT_ID, this.mId);
         String str = this.mCityId;
         if (str != null) {
             hashMap.put("city", str);
@@ -450,7 +437,7 @@ public class RankListFragment extends AbsFragmentV2 {
         if (rankListHeader != null) {
             hashMap.put("titlelabel", rankListHeader.name);
         }
-        hashMap.put(C9548pb.CNT_CONTENT_TYPE, "ranklist");
+        hashMap.put(pb.CNT_CONTENT_TYPE, "ranklist");
         return hashMap;
     }
 
@@ -489,38 +476,38 @@ public class RankListFragment extends AbsFragmentV2 {
         View findViewById = findViewById(R$id.tv_collect_tip);
         this.mCollectTipIcon = findViewById;
         findViewById.setVisibility(8);
-        this.mMoreRank.setOnClickListener(new View$OnClickListenerC0425d());
-        this.mWannaSee.setOnClickListener(new View$OnClickListenerC0426e());
-        this.mBackBtn.setOnClickListener(new View$OnClickListenerC0427f());
-        this.mShareBtn.setOnClickListener(new View$OnClickListenerC0428g());
+        this.mMoreRank.setOnClickListener(new d());
+        this.mWannaSee.setOnClickListener(new e());
+        this.mBackBtn.setOnClickListener(new f());
+        this.mShareBtn.setOnClickListener(new g());
         PtrUiHeader ptrUiHeader = new PtrUiHeader(this.baseActivity);
         this.mPtr.setHeaderView(ptrUiHeader);
         this.mPtr.addPtrUIHandler(ptrUiHeader);
         this.mPtr.setPtrIndicator(new xj0(100, this.baseActivity));
         this.mPtr.setResistance(1.7f);
-        this.mPtr.setPtrHandler(new C0429h());
+        this.mPtr.setPtrHandler(new h());
         this.mPtr.addPtrUIHandler(new PtrClassicDefaultHeader(this.baseActivity) { // from class: cn.damai.category.ranking.ui.RankListFragment.6
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // in.srain.cube.views.ptr.PtrClassicDefaultHeader, in.srain.cube.views.ptr.PtrUIHandler
-            public void onUIPositionChange(PtrFrameLayout ptrFrameLayout, boolean z, byte b, rx1 rx1Var) {
+            public void onUIPositionChange(PtrFrameLayout ptrFrameLayout, boolean z, byte b2, rx1 rx1Var) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "-1665701679")) {
-                    ipChange2.ipc$dispatch("-1665701679", new Object[]{this, ptrFrameLayout, Boolean.valueOf(z), Byte.valueOf(b), rx1Var});
+                    ipChange2.ipc$dispatch("-1665701679", new Object[]{this, ptrFrameLayout, Boolean.valueOf(z), Byte.valueOf(b2), rx1Var});
                     return;
                 }
-                super.onUIPositionChange(ptrFrameLayout, z, b, rx1Var);
-                int d = rx1Var.d();
+                super.onUIPositionChange(ptrFrameLayout, z, b2, rx1Var);
+                int d2 = rx1Var.d();
                 ViewGroup.LayoutParams layoutParams = RankListFragment.this.mBgImg.getLayoutParams();
-                int a = m62.a(getContext(), 215.0f);
-                int abs = Math.abs(d) + a;
+                int a2 = m62.a(getContext(), 215.0f);
+                int abs = Math.abs(d2) + a2;
                 layoutParams.height = abs;
                 RankListFragment.this.mBgImg.setPivotX(RankListFragment.this.mBgImg.getWidth() / 2.0f);
-                RankListFragment.this.mBgImg.setScaleX(abs / a);
+                RankListFragment.this.mBgImg.setScaleX(abs / a2);
                 RankListFragment.this.mBgImg.setLayoutParams(layoutParams);
             }
         });
-        this.mAppBar.addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new C0430i());
+        this.mAppBar.addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new i());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -546,7 +533,7 @@ public class RankListFragment extends AbsFragmentV2 {
             ipChange.ipc$dispatch("734186028", new Object[]{this});
             return;
         }
-        C0529c.e().x(C0528b.getInstance().e(this.spmB, "top", "more", getUtMap(), Boolean.FALSE));
+        cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(this.spmB, "top", "more", getUtMap(), Boolean.FALSE));
         RankListHeader rankListHeader = this.headerBean;
         if (rankListHeader != null && !TextUtils.isEmpty(rankListHeader.categoryId)) {
             DMNav from = DMNav.from(getActivity());
@@ -571,10 +558,10 @@ public class RankListFragment extends AbsFragmentV2 {
             /* compiled from: Taobao */
             /* renamed from: cn.damai.category.ranking.ui.RankListFragment$8$a */
             /* loaded from: classes.dex */
-            public class C0420a implements OnErrorClickListener {
+            public class a implements OnErrorClickListener {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C0420a() {
+                a() {
                 }
 
                 @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
@@ -592,10 +579,10 @@ public class RankListFragment extends AbsFragmentV2 {
             /* compiled from: Taobao */
             /* renamed from: cn.damai.category.ranking.ui.RankListFragment$8$b */
             /* loaded from: classes.dex */
-            public class C0421b implements OnErrorClickListener {
+            public class b implements OnErrorClickListener {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C0421b() {
+                b() {
                 }
 
                 @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
@@ -620,7 +607,7 @@ public class RankListFragment extends AbsFragmentV2 {
                 RankListFragment.this.stopProgressDialog();
                 RankListFragment.this.mPtr.refreshComplete();
                 ((AbsFragment) RankListFragment.this).mRecyclerView.setRefreshing(false);
-                RankListFragment.this.showErrorView(str, str2, null, new C0421b());
+                RankListFragment.this.showErrorView(str, str2, null, new b());
             }
 
             @Override // cn.damai.tetris.DMMtopWarningListener
@@ -648,7 +635,7 @@ public class RankListFragment extends AbsFragmentV2 {
                     RankListFragment.this.setData(baseResponse);
                     return;
                 }
-                RankListFragment.this.showErrorView(null, null, null, new C0420a());
+                RankListFragment.this.showErrorView(null, null, null, new a());
             }
         };
         this.dmlistener = dMMtopWarningListener;
@@ -678,8 +665,8 @@ public class RankListFragment extends AbsFragmentV2 {
             if (baseSection != null && "dm_list_header_ranking".equals(baseSection.getComponentId())) {
                 try {
                     this.headerBean = (RankListHeader) JSON.parseObject(baseSection.getItem().toJSONString(), RankListHeader.class);
-                } catch (Exception e) {
-                    e.printStackTrace();
+                } catch (Exception e2) {
+                    e2.printStackTrace();
                 }
             } else if (baseSection != null && "dm_list_card_ranking".equals(baseSection.getComponentId())) {
                 try {
@@ -689,8 +676,8 @@ public class RankListFragment extends AbsFragmentV2 {
                         if (jSONObject != null) {
                             this.mShareImageUrl = jSONObject.getString("headPic");
                         }
-                        for (int i = 0; i < jSONArray.size(); i++) {
-                            JSONObject jSONObject2 = (JSONObject) jSONArray.get(i);
+                        for (int i2 = 0; i2 < jSONArray.size(); i2++) {
+                            JSONObject jSONObject2 = (JSONObject) jSONArray.get(i2);
                             if (jSONObject2 != null) {
                                 jSONObject2.put(KEY_RANK_ID, (Object) this.mId);
                                 jSONObject2.put("rankName", (Object) this.headerBean.name);
@@ -698,8 +685,8 @@ public class RankListFragment extends AbsFragmentV2 {
                         }
                         baseSection.setItem(parseObject);
                     }
-                } catch (Exception e2) {
-                    e2.printStackTrace();
+                } catch (Exception e3) {
+                    e3.printStackTrace();
                 }
             }
         }
@@ -713,7 +700,7 @@ public class RankListFragment extends AbsFragmentV2 {
         }
         cancelCountDown();
         if (this.mTimeCountDown == null) {
-            this.mTimeCountDown = new CountDownTimerC0424c(3000L, 3000L);
+            this.mTimeCountDown = new c(3000L, 3000L);
         }
         this.mTimeCountDown.start();
     }
@@ -730,8 +717,8 @@ public class RankListFragment extends AbsFragmentV2 {
                 hashMap.put("current_ab", jSONArray.toJSONString());
             }
             if (getUserVisibleHint()) {
-                C0529c.e().L(getActivity(), str);
-                C0529c.e().l(getActivity(), new C0525a.C0527b().i(str).j(hashMap));
+                cn.damai.common.user.c.e().L(getActivity(), str);
+                cn.damai.common.user.c.e().l(getActivity(), new a.b().i(str).j(hashMap));
             }
         }
     }
@@ -757,12 +744,12 @@ public class RankListFragment extends AbsFragmentV2 {
         if (rankListHeader == null) {
             return;
         }
-        int i = rankListHeader.type;
-        if (i == 99) {
+        int i2 = rankListHeader.type;
+        if (i2 == 99) {
             this.mBgImg.setImageResource(R$drawable.ranklist_header_bg_repro);
-        } else if (i == 2) {
+        } else if (i2 == 2) {
             this.mBgImg.setImageResource(R$drawable.ranklist_header_bg_new);
-        } else if (i == 3) {
+        } else if (i2 == 3) {
             this.mBgImg.setImageResource(R$drawable.ranklist_header_bg_hiscore);
         } else {
             this.mBgImg.setImageResource(R$drawable.ranklist_header_bg_top);
@@ -777,16 +764,16 @@ public class RankListFragment extends AbsFragmentV2 {
             str = !TextUtils.isEmpty(this.headerBean.updateDesc) ? this.headerBean.updateDesc : "";
         }
         this.mDescTv.setText(str);
-        int i2 = this.headerBean.followStatus;
-        this.followStatus = i2;
-        if (i2 == 1) {
+        int i3 = this.headerBean.followStatus;
+        this.followStatus = i3;
+        if (i3 == 1) {
             this.mWannaSee.setText("已想看");
         } else {
             this.mWannaSee.setText("想看");
             visCollectTip(TextUtils.isEmpty(this.headerBean.shareUrl));
         }
-        C0529c.e().G(this.mWannaSee, "favorite", "top", this.spmB, getUtMap());
-        C0529c.e().G(this.mMainView, "more", "top", this.spmB, getUtMap());
+        cn.damai.common.user.c.e().G(this.mWannaSee, "favorite", "top", this.spmB, getUtMap());
+        cn.damai.common.user.c.e().G(this.mMainView, "more", "top", this.spmB, getUtMap());
         getShareData(this.headerBean);
     }
 
@@ -815,14 +802,14 @@ public class RankListFragment extends AbsFragmentV2 {
             return;
         }
         View findViewById = findViewById(R$id.title_bar_space);
-        int i = Build.VERSION.SDK_INT;
-        if (i >= 23) {
+        int i2 = Build.VERSION.SDK_INT;
+        if (i2 >= 23) {
             kg2.f(this.baseActivity, true, R$color.black);
         } else {
             kg2.f(this.baseActivity, false, R$color.black);
         }
         if (findViewById != null) {
-            if (i >= 23) {
+            if (i2 >= 23) {
                 findViewById.getLayoutParams().height = kg2.a(this.baseActivity);
                 this.mAppBar.getLayoutParams().height = (m62.a(this.baseActivity, 180.0f) - m62.a(this.baseActivity, 44.0f)) - kg2.a(this.baseActivity);
                 findViewById.setVisibility(0);
@@ -845,16 +832,16 @@ public class RankListFragment extends AbsFragmentV2 {
         }
     }
 
-    public <T extends View> T findViewById(@IdRes int i) {
+    public <T extends View> T findViewById(@IdRes int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1453284270")) {
-            return (T) ipChange.ipc$dispatch("-1453284270", new Object[]{this, Integer.valueOf(i)});
+            return (T) ipChange.ipc$dispatch("-1453284270", new Object[]{this, Integer.valueOf(i2)});
         }
         ViewGroup viewGroup = this.rootView;
         if (viewGroup == null) {
             return null;
         }
-        return (T) viewGroup.findViewById(i);
+        return (T) viewGroup.findViewById(i2);
     }
 
     @Override // cn.damai.tetris.page.AbsFragment
@@ -889,27 +876,27 @@ public class RankListFragment extends AbsFragmentV2 {
         loadData();
         HashMap hashMap = new HashMap();
         hashMap.put("usercode", z20.E());
-        hashMap.put(C9548pb.CNT_CONTENT_ID, this.mId);
+        hashMap.put(pb.CNT_CONTENT_ID, this.mId);
         String str = this.mCityId;
         if (str != null) {
             hashMap.put("city", str);
         } else {
             hashMap.put("city", z20.c());
         }
-        hashMap.put(C9548pb.CNT_CONTENT_TYPE, "ranklist");
-        this.baseActivity.setDamaiUTKeyBuilder(new C0525a.C0527b().j(hashMap).i("ranklist"));
+        hashMap.put(pb.CNT_CONTENT_TYPE, "ranklist");
+        this.baseActivity.setDamaiUTKeyBuilder(new a.b().j(hashMap).i("ranklist"));
     }
 
     @Override // cn.damai.tetris.page.AbsFragment, androidx.fragment.app.Fragment
-    public void onActivityResult(int i, int i2, Intent intent) {
+    public void onActivityResult(int i2, int i3, Intent intent) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "743348149")) {
-            ipChange.ipc$dispatch("743348149", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), intent});
+            ipChange.ipc$dispatch("743348149", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3), intent});
             return;
         }
-        super.onActivityResult(i, i2, intent);
-        ShareManager.E().r0(i, i2, intent);
-        if (i == 4097 && i2 == -1 && getActivity() != null) {
+        super.onActivityResult(i2, i3, intent);
+        ShareManager.E().r0(i2, i3, intent);
+        if (i2 == 4097 && i3 == -1 && getActivity() != null) {
             Bundle bundle = new Bundle();
             bundle.putString(KEY_RANK_ID, this.mId);
             bundle.putString("cityId", this.mCityId);
@@ -930,8 +917,8 @@ public class RankListFragment extends AbsFragmentV2 {
         try {
             this.mId = getArguments().getString(KEY_RANK_ID);
             this.mCityId = getArguments().getString("cityId");
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
+        } catch (NumberFormatException e2) {
+            e2.printStackTrace();
         }
         return layoutInflater.inflate(R$layout.rank_activity, viewGroup, false);
     }
@@ -956,14 +943,14 @@ public class RankListFragment extends AbsFragmentV2 {
     }
 
     @Override // cn.damai.tetris.page.AbsFragment, cn.damai.tetris.core.msg.IMessage
-    public void onMessage(int i, Object obj) {
+    public void onMessage(int i2, Object obj) {
         WantSeeTips wantSeeTips;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "118183552")) {
-            ipChange.ipc$dispatch("118183552", new Object[]{this, Integer.valueOf(i), obj});
-        } else if (i == 24 && (obj instanceof FollowDataBean)) {
-            this.wantSeeTips.setPageSource(WantSeeTips.AbstractC1562a.C1568f.INSTANCE);
-            if (g03.INSTANCE.e(this.baseActivity, new C0423b(((FollowDataBean) obj).tempRank)) || (wantSeeTips = this.wantSeeTips) == null) {
+            ipChange.ipc$dispatch("118183552", new Object[]{this, Integer.valueOf(i2), obj});
+        } else if (i2 == 24 && (obj instanceof FollowDataBean)) {
+            this.wantSeeTips.setPageSource(WantSeeTips.a.f.INSTANCE);
+            if (g03.INSTANCE.e(this.baseActivity, new b(((FollowDataBean) obj).tempRank)) || (wantSeeTips = this.wantSeeTips) == null) {
                 return;
             }
             wantSeeTips.showAnim();
@@ -997,7 +984,7 @@ public class RankListFragment extends AbsFragmentV2 {
             ipChange.ipc$dispatch("1803917355", new Object[]{this, view});
             return;
         }
-        C0529c.e().x(C0528b.getInstance().e(this.spmB, "top", "favorite", getUtMap(), Boolean.FALSE));
+        cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(this.spmB, "top", "favorite", getUtMap(), Boolean.FALSE));
         view.setClickable(false);
         FollowRequest followRequest = new FollowRequest();
         followRequest.operateType = this.followStatus == 1 ? "0" : "1";
@@ -1009,10 +996,10 @@ public class RankListFragment extends AbsFragmentV2 {
             /* compiled from: Taobao */
             /* renamed from: cn.damai.category.ranking.ui.RankListFragment$12$a */
             /* loaded from: classes.dex */
-            public class C0419a implements GuideUtProvider {
+            public class a implements GuideUtProvider {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C0419a() {
+                a() {
                 }
 
                 @Override // cn.damai.wantsee.GuideUtProvider
@@ -1035,7 +1022,7 @@ public class RankListFragment extends AbsFragmentV2 {
                         hashMap.put("titlelabel", RankListFragment.this.headerBean.name);
                     }
                     if (!TextUtils.isEmpty(RankListFragment.this.mId)) {
-                        hashMap.put(C9548pb.CNT_CONTENT_ID, RankListFragment.this.mId);
+                        hashMap.put(pb.CNT_CONTENT_ID, RankListFragment.this.mId);
                     }
                     return hashMap;
                 }
@@ -1077,8 +1064,8 @@ public class RankListFragment extends AbsFragmentV2 {
                     RankListFragment.this.followStatus = followDataBean.getStatus();
                     if (followDataBean.getStatus() == 1) {
                         ((TextView) view).setText("已想看");
-                        RankListFragment.this.wantSeeTips.setPageSource(WantSeeTips.AbstractC1562a.C1569g.INSTANCE);
-                        if (g03.INSTANCE.e(RankListFragment.this.baseActivity, new C0419a()) || RankListFragment.this.wantSeeTips == null) {
+                        RankListFragment.this.wantSeeTips.setPageSource(WantSeeTips.a.g.INSTANCE);
+                        if (g03.INSTANCE.e(RankListFragment.this.baseActivity, new a()) || RankListFragment.this.wantSeeTips == null) {
                             return;
                         }
                         RankListFragment.this.wantSeeTips.showAnim();

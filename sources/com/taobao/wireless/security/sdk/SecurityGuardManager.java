@@ -7,8 +7,8 @@ import com.taobao.wireless.security.sdk.datacollection.IDataCollectionComponent;
 import com.taobao.wireless.security.sdk.dynamicdataencrypt.IDynamicDataEncryptComponent;
 import com.taobao.wireless.security.sdk.dynamicdatastore.IDynamicDataStoreComponent;
 import com.taobao.wireless.security.sdk.indiekit.IIndieKitComponent;
-import com.taobao.wireless.security.sdk.initialize.C6979a;
 import com.taobao.wireless.security.sdk.initialize.IInitializeComponent;
+import com.taobao.wireless.security.sdk.initialize.a;
 import com.taobao.wireless.security.sdk.nocaptcha.INoCaptchaComponent;
 import com.taobao.wireless.security.sdk.pkgvaliditycheck.IPkgValidityCheckComponent;
 import com.taobao.wireless.security.sdk.rootdetect.IRootDetectComponent;
@@ -55,7 +55,7 @@ public class SecurityGuardManager {
         if (c == null) {
             synchronized (d) {
                 if (c == null) {
-                    c = new C6979a();
+                    c = new a();
                 }
             }
         }

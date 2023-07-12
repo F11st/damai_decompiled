@@ -20,13 +20,12 @@ public abstract class ErrorResultImpl<R extends Result> extends PendingResult<R>
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.support.api.ErrorResultImpl$a */
     /* loaded from: classes10.dex */
-    public class RunnableC5709a implements Runnable {
+    public class a implements Runnable {
         final /* synthetic */ ResultCallback a;
         final /* synthetic */ ErrorResultImpl b;
 
-        RunnableC5709a(ResultCallback resultCallback, ErrorResultImpl errorResultImpl) {
+        a(ResultCallback resultCallback, ErrorResultImpl errorResultImpl) {
             this.a = resultCallback;
             this.b = errorResultImpl;
         }
@@ -63,7 +62,7 @@ public abstract class ErrorResultImpl<R extends Result> extends PendingResult<R>
         if (looper == null) {
             looper = Looper.myLooper();
         }
-        new Handler(looper).post(new RunnableC5709a(resultCallback, errorResultImpl));
+        new Handler(looper).post(new a(resultCallback, errorResultImpl));
     }
 
     @Override // com.huawei.hms.support.api.client.PendingResult

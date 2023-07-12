@@ -3,10 +3,10 @@ package com.autonavi.base.amap.mapcore.maploader;
 import android.content.Context;
 import android.text.TextUtils;
 import com.alimm.xadsdk.request.builder.IRequestConst;
-import com.amap.api.mapcore.util.AbstractC4517dp;
-import com.amap.api.mapcore.util.C4554gc;
 import com.amap.api.mapcore.util.Cif;
+import com.amap.api.mapcore.util.dp;
 import com.amap.api.mapcore.util.eq;
+import com.amap.api.mapcore.util.gc;
 import com.amap.api.mapcore.util.gf;
 import com.amap.api.mapcore.util.gg;
 import com.amap.api.mapcore.util.gm;
@@ -24,7 +24,7 @@ import java.util.UUID;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public class AMapLoader implements Cif.InterfaceC4587a {
+public class AMapLoader implements Cif.a {
     private static final int GET_METHOD = 0;
     private static final String NETWORK_RESPONSE_CODE_STRING = "网络异常状态码：";
     private static String mDiu;
@@ -49,7 +49,7 @@ public class AMapLoader implements Cif.InterfaceC4587a {
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
-    public static class AMapGridDownloadRequest extends AbstractC4517dp {
+    public static class AMapGridDownloadRequest extends dp {
         private final Context mContext;
         private byte[] postEntityBytes;
         private String sUrl;
@@ -71,7 +71,7 @@ public class AMapLoader implements Cif.InterfaceC4587a {
             return eq.a(getURL());
         }
 
-        @Override // com.amap.api.mapcore.util.AbstractC4517dp, com.amap.api.mapcore.util.ii
+        @Override // com.amap.api.mapcore.util.dp, com.amap.api.mapcore.util.ii
         public Map<String, String> getParams() {
             return null;
         }
@@ -80,7 +80,7 @@ public class AMapLoader implements Cif.InterfaceC4587a {
         public Map<String, String> getRequestHead() {
             gm e = eq.e();
             String b = e != null ? e.b() : null;
-            String f = C4554gc.f(this.mContext);
+            String f = gc.f(this.mContext);
             try {
                 f = URLEncoder.encode(f, "UTF-8");
             } catch (Throwable unused) {
@@ -120,7 +120,7 @@ public class AMapLoader implements Cif.InterfaceC4587a {
 
     private String generateQueryString(Context context, String str) {
         StringBuffer stringBuffer = new StringBuffer(str);
-        String f = C4554gc.f(this.mGLMapEngine.getContext());
+        String f = gc.f(this.mGLMapEngine.getContext());
         try {
             f = URLEncoder.encode(f, "UTF-8");
         } catch (Throwable unused) {
@@ -246,7 +246,7 @@ public class AMapLoader implements Cif.InterfaceC4587a {
         return stringBuffer.toString();
     }
 
-    @Override // com.amap.api.mapcore.util.Cif.InterfaceC4587a
+    @Override // com.amap.api.mapcore.util.Cif.a
     public void onDownload(byte[] bArr, long j) {
         GLMapEngine gLMapEngine;
         ADataRequestParam aDataRequestParam;
@@ -256,7 +256,7 @@ public class AMapLoader implements Cif.InterfaceC4587a {
         gLMapEngine.receiveNetData(this.mEngineID, aDataRequestParam.handler, bArr, bArr.length);
     }
 
-    @Override // com.amap.api.mapcore.util.Cif.InterfaceC4587a
+    @Override // com.amap.api.mapcore.util.Cif.a
     public void onException(Throwable th) {
         ADataRequestParam aDataRequestParam;
         ADataRequestParam aDataRequestParam2;
@@ -277,7 +277,7 @@ public class AMapLoader implements Cif.InterfaceC4587a {
         hd.c(th, "AMapLoader", "download onException");
     }
 
-    @Override // com.amap.api.mapcore.util.Cif.InterfaceC4587a
+    @Override // com.amap.api.mapcore.util.Cif.a
     public void onFinish() {
         ADataRequestParam aDataRequestParam;
         GLMapEngine gLMapEngine = this.mGLMapEngine;
@@ -287,7 +287,7 @@ public class AMapLoader implements Cif.InterfaceC4587a {
         gLMapEngine.finishDownLoad(this.mEngineID, aDataRequestParam.handler);
     }
 
-    @Override // com.amap.api.mapcore.util.Cif.InterfaceC4587a
+    @Override // com.amap.api.mapcore.util.Cif.a
     public void onStop() {
         ADataRequestParam aDataRequestParam;
         GLMapEngine gLMapEngine = this.mGLMapEngine;

@@ -7,9 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import com.taobao.monitor.annotation.UnsafeMethod;
-import com.taobao.monitor.network.C6807a;
-import com.taobao.monitor.procedure.C6815c;
-import com.taobao.monitor.procedure.C6821f;
 import com.taobao.monitor.procedure.IPage;
 import com.taobao.monitor.procedure.IPageManager;
 import com.taobao.monitor.procedure.IProcedure;
@@ -43,8 +40,8 @@ public class dq1 implements IPageManager, IProcedureManager {
         this.d = iProcedure;
     }
 
-    private C6821f a(IProcedure iProcedure, String str) {
-        C6821f g = g(iProcedure);
+    private com.taobao.monitor.procedure.f a(IProcedure iProcedure, String str) {
+        com.taobao.monitor.procedure.f g = g(iProcedure);
         if (g == null || g.m().get("H5_URL") == null || TextUtils.isEmpty(g.m().get("H5_URL").toString()) || !c(str, g.m().get("H5_URL").toString())) {
             if (g == null || g.m().get("schemaUrl") == null || TextUtils.isEmpty(g.m().get("schemaUrl").toString()) || !c(str, g.m().get("schemaUrl").toString())) {
                 return null;
@@ -115,28 +112,28 @@ public class dq1 implements IPageManager, IProcedureManager {
         return hashMap;
     }
 
-    private void m(IProcedure iProcedure, C6821f c6821f) {
-        if (iProcedure == null || c6821f == null || g(iProcedure) == null) {
+    private void m(IProcedure iProcedure, com.taobao.monitor.procedure.f fVar) {
+        if (iProcedure == null || fVar == null || g(iProcedure) == null) {
             return;
         }
         for (qf2 qf2Var : g(iProcedure).q()) {
             if ("phaPageNavigationStart".equals(qf2Var.a())) {
-                c6821f.q().add(new qf2(qf2Var.a(), qf2Var.b()));
+                fVar.q().add(new qf2(qf2Var.a(), qf2Var.b()));
             }
             if ("phaStartTime".equals(qf2Var.a())) {
-                c6821f.q().add(new qf2(qf2Var.a(), qf2Var.b()));
+                fVar.q().add(new qf2(qf2Var.a(), qf2Var.b()));
             }
             if ("phaManifestFinishLoad".equals(qf2Var.a())) {
-                c6821f.q().add(new qf2(qf2Var.a(), qf2Var.b()));
+                fVar.q().add(new qf2(qf2Var.a(), qf2Var.b()));
             }
             if ("phaPageCreateStart".equals(qf2Var.a())) {
-                c6821f.q().add(new qf2(qf2Var.a(), qf2Var.b()));
+                fVar.q().add(new qf2(qf2Var.a(), qf2Var.b()));
             }
             if ("phaStartTime".equals(qf2Var.a())) {
-                c6821f.q().add(new qf2(qf2Var.a(), qf2Var.b()));
+                fVar.q().add(new qf2(qf2Var.a(), qf2Var.b()));
             }
             if ("navStartTime".equals(qf2Var.a())) {
-                c6821f.q().add(new qf2(qf2Var.a(), qf2Var.b()));
+                fVar.q().add(new qf2(qf2Var.a(), qf2Var.b()));
             }
         }
     }
@@ -157,28 +154,28 @@ public class dq1 implements IPageManager, IProcedureManager {
     }
 
     public String f(String str) {
-        C6821f a;
-        C6821f a2;
+        com.taobao.monitor.procedure.f a;
+        com.taobao.monitor.procedure.f a2;
         for (Map.Entry<Fragment, IPage> entry : this.f.entrySet()) {
             IPage value = entry.getValue();
             if (value != null && (a2 = a(this.g.get(value), str)) != null) {
                 m(d(entry.getKey()), a2);
-                return C6807a.a(a2);
+                return com.taobao.monitor.network.a.a(a2);
             }
         }
-        C6821f a3 = a(this.b, str);
+        com.taobao.monitor.procedure.f a3 = a(this.b, str);
         if (a3 != null) {
-            return C6807a.a(a3);
+            return com.taobao.monitor.network.a.a(a3);
         }
         for (IPage iPage : this.f.values()) {
             if (iPage != null && (a = a(this.g.get(iPage), str)) != null) {
-                return C6807a.a(a);
+                return com.taobao.monitor.network.a.a(a);
             }
         }
         return "";
     }
 
-    public C6821f g(IProcedure iProcedure) {
+    public com.taobao.monitor.procedure.f g(IProcedure iProcedure) {
         if (iProcedure instanceof ProcedureProxy) {
             return ((ProcedureImpl) ((ProcedureProxy) iProcedure).c()).e();
         }
@@ -311,7 +308,7 @@ public class dq1 implements IPageManager, IProcedureManager {
                 continue;
             }
         } while (view != null);
-        return new C6815c(arrayList);
+        return new com.taobao.monitor.procedure.c(arrayList);
     }
 
     @Override // com.taobao.monitor.procedure.IProcedureManager

@@ -22,7 +22,7 @@ public class MultiToast {
             ipChange.ipc$dispatch("-738145471", new Object[]{context, str});
             return;
         }
-        View inflate = LayoutInflater.from(context).inflate(R.C7935layout.dago_player_toast, (ViewGroup) null);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.dago_player_toast, (ViewGroup) null);
         ((TextView) inflate.findViewById(R.id.toast_text)).setText(str);
         Toast toast = new Toast(context.getApplicationContext());
         toast.setDuration(0);

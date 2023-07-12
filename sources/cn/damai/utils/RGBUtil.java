@@ -18,7 +18,7 @@ import tb.uh2;
 /* loaded from: classes17.dex */
 public class RGBUtil {
     private static transient /* synthetic */ IpChange $ipChange;
-    private static HandlerC2781a a = new HandlerC2781a();
+    private static a a = new a();
     private static HashMap<String, Integer> b = new HashMap<>();
 
     /* compiled from: Taobao */
@@ -75,10 +75,9 @@ public class RGBUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.utils.RGBUtil$a */
     /* loaded from: classes17.dex */
-    public static class HandlerC2781a extends Handler {
-        public HandlerC2781a() {
+    public static class a extends Handler {
+        public a() {
             super(Looper.getMainLooper());
         }
     }

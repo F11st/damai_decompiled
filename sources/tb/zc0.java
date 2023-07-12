@@ -5,11 +5,9 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.discover.content.bean.ContentTour;
 import cn.damai.discover.content.bean.TwoTuple;
 import cn.damai.discover.content.net.IpInfoWrap;
@@ -38,13 +36,12 @@ public class zc0 extends cp2<TwoTuple<String, IpInfoWrap>> implements OnItemBind
     private View j;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.zc0$a */
     /* loaded from: classes5.dex */
-    public class View$OnClickListenerC10019a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DramaV1Bean a;
 
-        View$OnClickListenerC10019a(DramaV1Bean dramaV1Bean) {
+        a(DramaV1Bean dramaV1Bean) {
             this.a = dramaV1Bean;
         }
 
@@ -66,7 +63,7 @@ public class zc0 extends cp2<TwoTuple<String, IpInfoWrap>> implements OnItemBind
                     DMNav.from(zc0.this.a).withExtras(bundle).toUri(NavUri.b(u12.REPERTOITE));
                     i = 0;
                 }
-                C0529c.e().x(zc0.this.getLiveUt().A(i, str));
+                cn.damai.common.user.c.e().x(zc0.this.getLiveUt().A(i, str));
             }
         }
     }
@@ -125,10 +122,10 @@ public class zc0 extends cp2<TwoTuple<String, IpInfoWrap>> implements OnItemBind
                 } else {
                     this.g.setVisibility(8);
                 }
-                DMImageCreator f = C0504a.b().f(dramaV1Bean.pic, m62.a(mu0.a(), 48.0f), m62.a(mu0.a(), 64.0f));
+                DMImageCreator f = cn.damai.common.image.a.b().f(dramaV1Bean.pic, m62.a(mu0.a(), 48.0f), m62.a(mu0.a(), 64.0f));
                 int i = R$drawable.uikit_default_image_bg_gradient;
                 f.i(i).c(i).g(this.d);
-                this.j.setOnClickListener(new View$OnClickListenerC10019a(dramaV1Bean));
+                this.j.setOnClickListener(new a(dramaV1Bean));
             } else {
                 this.j.setVisibility(8);
             }
@@ -147,7 +144,7 @@ public class zc0 extends cp2<TwoTuple<String, IpInfoWrap>> implements OnItemBind
             ipChange.ipc$dispatch("238491096", new Object[]{this, contentRelatedTourListItem, Integer.valueOf(i)});
         } else if (this.a == null) {
         } else {
-            C0529c.e().x(getLiveUt().L(contentRelatedTourListItem.itemId, i));
+            cn.damai.common.user.c.e().x(getLiveUt().L(contentRelatedTourListItem.itemId, i));
             Bundle bundle = new Bundle();
             bundle.putString("id", contentRelatedTourListItem.itemId);
             qd2.a(this.a, contentRelatedTourListItem.schema, bundle);

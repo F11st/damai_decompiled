@@ -58,15 +58,14 @@ public class OrderInvoiceActivity extends DamaiBaseActivity<OrderInvoicePresente
     private String mSelectDeliveryType;
     private String payId;
     private String mErrorCode = "SUCCESS";
-    private View.OnClickListener mClickListener = new View$OnClickListenerC2181a();
+    private View.OnClickListener mClickListener = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderInvoiceActivity$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2181a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2181a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener

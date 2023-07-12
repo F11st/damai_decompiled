@@ -9,13 +9,12 @@ import tb.b41;
 public interface JavaClassesTracker {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.JavaClassesTracker$a */
     /* loaded from: classes3.dex */
-    public static final class C8329a implements JavaClassesTracker {
+    public static final class a implements JavaClassesTracker {
         @NotNull
-        public static final C8329a INSTANCE = new C8329a();
+        public static final a INSTANCE = new a();
 
-        private C8329a() {
+        private a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.load.java.JavaClassesTracker

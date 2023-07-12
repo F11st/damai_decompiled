@@ -2,7 +2,7 @@ package anetwork.channel.aidl;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import anet.channel.request.C0193a;
+import anet.channel.request.a;
 import anet.channel.statist.RequestStatistic;
 import anetwork.channel.NetworkEvent$FinishEvent;
 import anetwork.channel.statist.StatisticData;
@@ -28,7 +28,7 @@ public class DefaultFinishEvent implements Parcelable, NetworkEvent$FinishEvent 
     int code;
     Object context;
     String desc;
-    public final C0193a request;
+    public final a request;
     public final RequestStatistic rs;
     StatisticData statisticData;
 
@@ -93,15 +93,15 @@ public class DefaultFinishEvent implements Parcelable, NetworkEvent$FinishEvent 
         this(i, str, null, requestStatistic);
     }
 
-    public DefaultFinishEvent(int i, String str, C0193a c0193a) {
-        this(i, str, c0193a, c0193a != null ? c0193a.r : null);
+    public DefaultFinishEvent(int i, String str, a aVar) {
+        this(i, str, aVar, aVar != null ? aVar.r : null);
     }
 
-    private DefaultFinishEvent(int i, String str, C0193a c0193a, RequestStatistic requestStatistic) {
+    private DefaultFinishEvent(int i, String str, a aVar, RequestStatistic requestStatistic) {
         this.statisticData = new StatisticData();
         this.code = i;
         this.desc = str == null ? cf0.b(i) : str;
-        this.request = c0193a;
+        this.request = aVar;
         this.rs = requestStatistic;
     }
 }

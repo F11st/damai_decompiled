@@ -22,7 +22,7 @@ final class StringsKt__IndentKt$prependIndent$1 extends Lambda implements Functi
     public final String invoke(@NotNull String str) {
         boolean s;
         b41.i(str, AdvanceSetting.NETWORK_TYPE);
-        s = C8604o.s(str);
+        s = o.s(str);
         if (s) {
             return str.length() < this.$indent.length() ? this.$indent : str;
         }

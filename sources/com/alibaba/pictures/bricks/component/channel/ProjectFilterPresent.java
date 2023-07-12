@@ -29,7 +29,7 @@ import com.youku.arch.v3.event.EventHandler;
 import com.youku.arch.v3.page.GenericFragment;
 import com.youku.arch.v3.style.Style;
 import java.util.List;
-import kotlin.collections.C8212k;
+import kotlin.collections.k;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.ap2;
@@ -48,12 +48,11 @@ public final class ProjectFilterPresent extends AbsPresenter<GenericItem<ItemVal
     private FilterViewManager mViewManager;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.channel.ProjectFilterPresent$a */
     /* loaded from: classes7.dex */
-    public static final class C3454a implements FilterBtnAction {
+    public static final class a implements FilterBtnAction {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3454a() {
+        a() {
         }
 
         @Override // cn.damai.projectfiltercopy.listener.FilterBtnAction
@@ -141,7 +140,7 @@ public final class ProjectFilterPresent extends AbsPresenter<GenericItem<ItemVal
         if (bb2.d(components)) {
             return;
         }
-        Object b0 = C8212k.b0(components);
+        Object b0 = k.b0(components);
         ProjectListComponent projectListComponent = b0 instanceof ProjectListComponent ? (ProjectListComponent) b0 : null;
         if (projectListComponent != null) {
             projectListComponent.refresh();
@@ -196,7 +195,7 @@ public final class ProjectFilterPresent extends AbsPresenter<GenericItem<ItemVal
                     ProjectFilterPresent.m114init$lambda4$lambda2(GenericItem.this);
                 }
             });
-            filterViewManager.m(new C3454a());
+            filterViewManager.m(new a());
             View itemView = ((ProjectFilterView) getView()).getItemView();
             ViewGroup viewGroup = itemView instanceof ViewGroup ? (ViewGroup) itemView : null;
             if (viewGroup != null) {

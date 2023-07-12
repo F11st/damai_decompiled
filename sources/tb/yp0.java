@@ -8,7 +8,6 @@ import com.alibaba.gaiax.analyze.GXAnalyze;
 import com.alibaba.gaiax.template.GXIExpression;
 import com.taobao.android.dinamicx.monitor.DXTraceUtil;
 import java.math.BigDecimal;
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -16,17 +15,16 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes6.dex */
 public final class yp0 implements GXIExpression {
     @NotNull
-    public static final C9995b Companion = new C9995b(null);
+    public static final b Companion = new b(null);
     @NotNull
     private static final GXAnalyze b;
     @NotNull
     private final Object a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yp0$a */
     /* loaded from: classes6.dex */
-    public static final class C9994a implements GXAnalyze.IComputeExtend {
-        C9994a() {
+    public static final class a implements GXAnalyze.IComputeExtend {
+        a() {
         }
 
         @Override // com.alibaba.gaiax.analyze.GXAnalyze.IComputeExtend
@@ -97,13 +95,12 @@ public final class yp0 implements GXIExpression {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yp0$b */
     /* loaded from: classes6.dex */
-    public static final class C9995b {
-        private C9995b() {
+    public static final class b {
+        private b() {
         }
 
-        public /* synthetic */ C9995b(k50 k50Var) {
+        public /* synthetic */ b(k50 k50Var) {
             this();
         }
 
@@ -115,11 +112,11 @@ public final class yp0 implements GXIExpression {
             ts0 h = companion.h(jArr[0]);
             if (h instanceof ks0) {
                 String b = ((ks0) h).b();
-                q = C8604o.q("isAndroid", b, true);
+                q = kotlin.text.o.q("isAndroid", b, true);
                 if (q) {
                     return companion.createValueBool(true);
                 }
-                q2 = C8604o.q("isiOS", b, true);
+                q2 = kotlin.text.o.q("isiOS", b, true);
                 if (q2) {
                     return companion.createValueBool(false);
                 }
@@ -162,7 +159,7 @@ public final class yp0 implements GXIExpression {
     static {
         GXAnalyze gXAnalyze = new GXAnalyze();
         b = gXAnalyze;
-        gXAnalyze.initComputeExtend(new C9994a());
+        gXAnalyze.initComputeExtend(new a());
     }
 
     public yp0(@NotNull Object obj) {

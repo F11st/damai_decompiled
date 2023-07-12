@@ -30,7 +30,7 @@ import tb.xe;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
-public class ImageAdapter extends RecyclerView.Adapter<C0757e> {
+public class ImageAdapter extends RecyclerView.Adapter<e> {
     private static transient /* synthetic */ IpChange $ipChange;
     private Activity a;
     private ArrayList<Image> b;
@@ -54,14 +54,13 @@ public class ImageAdapter extends RecyclerView.Adapter<C0757e> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.adapter.ImageAdapter$a */
     /* loaded from: classes4.dex */
-    public class C0753a implements ImageTask.Listener {
+    public class a implements ImageTask.Listener {
         private static transient /* synthetic */ IpChange $ipChange;
-        final /* synthetic */ C0757e a;
+        final /* synthetic */ e a;
 
-        C0753a(ImageAdapter imageAdapter, C0757e c0757e) {
-            this.a = c0757e;
+        a(ImageAdapter imageAdapter, e eVar) {
+            this.a = eVar;
         }
 
         @Override // cn.damai.commonbusiness.photoselect.imageselected.utils.ImageTask.Listener
@@ -76,14 +75,13 @@ public class ImageAdapter extends RecyclerView.Adapter<C0757e> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.adapter.ImageAdapter$b */
     /* loaded from: classes4.dex */
-    public class C0754b implements ImageTask2.Listener {
+    public class b implements ImageTask2.Listener {
         private static transient /* synthetic */ IpChange $ipChange;
-        final /* synthetic */ C0757e a;
+        final /* synthetic */ e a;
 
-        C0754b(ImageAdapter imageAdapter, C0757e c0757e) {
-            this.a = c0757e;
+        b(ImageAdapter imageAdapter, e eVar) {
+            this.a = eVar;
         }
 
         @Override // cn.damai.commonbusiness.photoselect.imageselected.utils.ImageTask2.Listener
@@ -98,17 +96,16 @@ public class ImageAdapter extends RecyclerView.Adapter<C0757e> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.adapter.ImageAdapter$c */
     /* loaded from: classes4.dex */
-    public class View$OnClickListenerC0755c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Image a;
-        final /* synthetic */ C0757e b;
+        final /* synthetic */ e b;
         final /* synthetic */ int c;
 
-        View$OnClickListenerC0755c(Image image, C0757e c0757e, int i) {
+        c(Image image, e eVar, int i) {
             this.a = image;
-            this.b = c0757e;
+            this.b = eVar;
             this.c = i;
         }
 
@@ -147,16 +144,15 @@ public class ImageAdapter extends RecyclerView.Adapter<C0757e> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.adapter.ImageAdapter$d */
     /* loaded from: classes4.dex */
-    public class View$OnClickListenerC0756d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Image a;
-        final /* synthetic */ C0757e b;
+        final /* synthetic */ e b;
 
-        View$OnClickListenerC0756d(Image image, C0757e c0757e) {
+        d(Image image, e eVar) {
             this.a = image;
-            this.b = c0757e;
+            this.b = eVar;
         }
 
         @Override // android.view.View.OnClickListener
@@ -175,16 +171,15 @@ public class ImageAdapter extends RecyclerView.Adapter<C0757e> {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.adapter.ImageAdapter$e */
     /* loaded from: classes4.dex */
-    public static class C0757e extends RecyclerView.ViewHolder {
+    public static class e extends RecyclerView.ViewHolder {
         ImageView a;
         TextView b;
         TextView c;
         TextView d;
         ImageView e;
 
-        public C0757e(View view) {
+        public e(View view) {
             super(view);
             this.a = (ImageView) view.findViewById(R$id.iv_image);
             this.d = (TextView) view.findViewById(R$id.iv_select);
@@ -268,20 +263,20 @@ public class ImageAdapter extends RecyclerView.Adapter<C0757e> {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void t(C0757e c0757e, boolean z, int i, boolean z2, Image image) {
+    public void t(e eVar, boolean z, int i, boolean z2, Image image) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "2371255")) {
-            ipChange.ipc$dispatch("2371255", new Object[]{this, c0757e, Boolean.valueOf(z), Integer.valueOf(i), Boolean.valueOf(z2), image});
+            ipChange.ipc$dispatch("2371255", new Object[]{this, eVar, Boolean.valueOf(z), Integer.valueOf(i), Boolean.valueOf(z2), image});
         } else if (z) {
-            c0757e.d.setBackgroundResource(R$drawable.circle_ff2869_oval);
-            TextView textView = c0757e.d;
+            eVar.d.setBackgroundResource(R$drawable.circle_ff2869_oval);
+            TextView textView = eVar.d;
             textView.setText(image.getShowNum() + "");
-            c0757e.e.setAlpha(0.5f);
+            eVar.e.setAlpha(0.5f);
             cb1.c("ImageAdapter", "click选中位置=" + i + " 设置顺序数字=" + image.getShowNum());
         } else {
-            c0757e.d.setBackgroundResource(R$drawable.circle_per60_white_oval);
-            c0757e.d.setText("");
-            c0757e.e.setAlpha(0.2f);
+            eVar.d.setBackgroundResource(R$drawable.circle_per60_white_oval);
+            eVar.d.setText("");
+            eVar.e.setAlpha(0.2f);
             int showNum = image.getShowNum();
             image.setShowNum(0);
             if (z2) {
@@ -330,93 +325,93 @@ public class ImageAdapter extends RecyclerView.Adapter<C0757e> {
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     /* renamed from: n */
-    public void onBindViewHolder(C0757e c0757e, int i) {
+    public void onBindViewHolder(e eVar, int i) {
         Bitmap bitmap;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "921127647")) {
-            ipChange.ipc$dispatch("921127647", new Object[]{this, c0757e, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("921127647", new Object[]{this, eVar, Integer.valueOf(i)});
             return;
         }
         Image image = this.b.get(i);
         if ("3".equals(image.getType())) {
-            c0757e.a.setImageResource(R$drawable.take_picture_bg);
+            eVar.a.setImageResource(R$drawable.take_picture_bg);
         } else {
             if ("2".equals(image.getType())) {
-                if (c0757e.a.getTag() instanceof ImageTask) {
-                    ((ImageTask) c0757e.a.getTag()).cancel(true);
+                if (eVar.a.getTag() instanceof ImageTask) {
+                    ((ImageTask) eVar.a.getTag()).cancel(true);
                 }
-                c0757e.a.setImageResource(R$drawable.uikit_default_image_rightangle_bg_grey);
+                eVar.a.setImageResource(R$drawable.uikit_default_image_rightangle_bg_grey);
                 int i2 = Build.VERSION.SDK_INT;
                 bitmap = i2 >= 12 ? xe.a.get(image.getPath()) : null;
                 if (bitmap != null) {
-                    c0757e.a.setImageBitmap(bitmap);
+                    eVar.a.setImageBitmap(bitmap);
                 } else if (i2 >= 3) {
-                    ImageTask imageTask = new ImageTask(this.a, new C0753a(this, c0757e));
+                    ImageTask imageTask = new ImageTask(this.a, new a(this, eVar));
                     imageTask.execute(image.getPath(), image.getName());
-                    c0757e.a.setTag(imageTask);
+                    eVar.a.setTag(imageTask);
                 }
             } else {
-                if (c0757e.a.getTag() instanceof ImageTask2) {
-                    ((ImageTask2) c0757e.a.getTag()).cancel(true);
+                if (eVar.a.getTag() instanceof ImageTask2) {
+                    ((ImageTask2) eVar.a.getTag()).cancel(true);
                 }
-                c0757e.a.setImageDrawable(this.a.getResources().getDrawable(R$drawable.uikit_default_image_rightangle_bg_grey));
+                eVar.a.setImageDrawable(this.a.getResources().getDrawable(R$drawable.uikit_default_image_rightangle_bg_grey));
                 Log.d("xxtag", "sLruCache getBitmap pos :" + i + " : url " + image.getPath());
                 bitmap = Build.VERSION.SDK_INT >= 12 ? xe.a.get(image.getPath()) : null;
                 if (bitmap == null) {
-                    ImageTask2 imageTask2 = new ImageTask2(this.a, true, c0757e.a, new C0754b(this, c0757e));
+                    ImageTask2 imageTask2 = new ImageTask2(this.a, true, eVar.a, new b(this, eVar));
                     imageTask2.execute(image.getPath());
-                    c0757e.a.setTag(imageTask2);
+                    eVar.a.setTag(imageTask2);
                 } else {
-                    c0757e.a.setImageBitmap(bitmap);
+                    eVar.a.setImageBitmap(bitmap);
                 }
             }
         }
         if ("2".equals(image.getType())) {
-            if (c0757e.c.getVisibility() == 8) {
-                c0757e.c.setVisibility(0);
+            if (eVar.c.getVisibility() == 8) {
+                eVar.c.setVisibility(0);
             }
-            if (c0757e.b.getVisibility() == 8) {
-                c0757e.b.setVisibility(0);
+            if (eVar.b.getVisibility() == 8) {
+                eVar.b.setVisibility(0);
             }
-            c0757e.c.setText(image.getDurationShow());
-            c0757e.b.setText(image.getSizeShow());
+            eVar.c.setText(image.getDurationShow());
+            eVar.b.setText(image.getSizeShow());
         } else {
-            if (c0757e.c.getVisibility() == 0) {
-                c0757e.c.setVisibility(8);
+            if (eVar.c.getVisibility() == 0) {
+                eVar.c.setVisibility(8);
             }
-            if (c0757e.b.getVisibility() == 0) {
-                c0757e.b.setVisibility(8);
+            if (eVar.b.getVisibility() == 0) {
+                eVar.b.setVisibility(8);
             }
         }
-        t(c0757e, i(image), i, true, image);
+        t(eVar, i(image), i, true, image);
         if (!"2".equals(image.getType()) && !"3".equals(image.getType())) {
-            c0757e.d.setVisibility(0);
-            c0757e.d.setOnClickListener(new View$OnClickListenerC0755c(image, c0757e, i));
+            eVar.d.setVisibility(0);
+            eVar.d.setOnClickListener(new c(image, eVar, i));
         } else {
-            c0757e.d.setVisibility(8);
+            eVar.d.setVisibility(8);
         }
-        c0757e.itemView.setOnClickListener(new View$OnClickListenerC0756d(image, c0757e));
+        eVar.itemView.setOnClickListener(new d(image, eVar));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     /* renamed from: o */
-    public void onBindViewHolder(C0757e c0757e, int i, List<Object> list) {
+    public void onBindViewHolder(e eVar, int i, List<Object> list) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1845872176")) {
-            ipChange.ipc$dispatch("-1845872176", new Object[]{this, c0757e, Integer.valueOf(i), list});
+            ipChange.ipc$dispatch("-1845872176", new Object[]{this, eVar, Integer.valueOf(i), list});
         } else if (list.isEmpty()) {
-            onBindViewHolder(c0757e, i);
+            onBindViewHolder(eVar, i);
         } else {
-            TextView textView = c0757e.d;
+            TextView textView = eVar.d;
             textView.setText(this.b.get(i).getShowNum() + "");
         }
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     /* renamed from: p */
-    public C0757e onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public e onCreateViewHolder(ViewGroup viewGroup, int i) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "699947191") ? (C0757e) ipChange.ipc$dispatch("699947191", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new C0757e(this.c.inflate(R$layout.adapter_images_item, viewGroup, false));
+        return AndroidInstantRuntime.support(ipChange, "699947191") ? (e) ipChange.ipc$dispatch("699947191", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new e(this.c.inflate(R$layout.adapter_images_item, viewGroup, false));
     }
 
     public void q(ArrayList<Image> arrayList) {
@@ -426,8 +421,8 @@ public class ImageAdapter extends RecyclerView.Adapter<C0757e> {
             return;
         }
         this.b = arrayList;
-        int e = wh2.e(arrayList);
-        for (int i = 0; i < e; i++) {
+        int e2 = wh2.e(arrayList);
+        for (int i = 0; i < e2; i++) {
             Image image = this.b.get(i);
             if (image == null || TextUtils.isEmpty(image.getPath())) {
                 this.b.remove(image);

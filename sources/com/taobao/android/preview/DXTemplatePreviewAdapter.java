@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.taobao.android.dinamicx.C6387n;
 import com.taobao.android.dinamicx.DXRootView;
+import com.taobao.android.dinamicx.n;
 import com.taobao.android.dinamicx.template.download.DXTemplateItem;
 import com.youku.arch.v3.data.Constants;
 import java.util.HashMap;
@@ -24,7 +24,7 @@ import tb.t00;
 public class DXTemplatePreviewAdapter extends RecyclerView.Adapter<PreviewViewHolder> {
     private JSONArray a;
     private RecyclerView b;
-    C6387n c;
+    n c;
     Context d;
     private int e = 0;
     private HashMap<Integer, Integer> f = new HashMap<>();
@@ -33,26 +33,25 @@ public class DXTemplatePreviewAdapter extends RecyclerView.Adapter<PreviewViewHo
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.preview.DXTemplatePreviewAdapter$a */
     /* loaded from: classes11.dex */
-    public class C6561a extends DXRootView.AbstractC6360a {
+    public class a extends DXRootView.a {
         final /* synthetic */ DXRootView a;
 
-        C6561a(DXRootView dXRootView) {
+        a(DXRootView dXRootView) {
             this.a = dXRootView;
         }
 
-        @Override // com.taobao.android.dinamicx.DXRootView.AbstractC6360a
+        @Override // com.taobao.android.dinamicx.DXRootView.a
         protected void c(DXRootView dXRootView) {
             DXTemplatePreviewAdapter.this.c.g().B(dXRootView);
         }
 
-        @Override // com.taobao.android.dinamicx.DXRootView.AbstractC6360a
+        @Override // com.taobao.android.dinamicx.DXRootView.a
         protected void d(DXRootView dXRootView) {
             DXTemplatePreviewAdapter.this.c.g().C(dXRootView);
         }
 
-        @Override // com.taobao.android.dinamicx.DXRootView.AbstractC6360a
+        @Override // com.taobao.android.dinamicx.DXRootView.a
         protected void i(@NonNull View view, int i) {
             if (i == 0) {
                 DXTemplatePreviewAdapter.this.c.g().B(this.a);
@@ -61,7 +60,7 @@ public class DXTemplatePreviewAdapter extends RecyclerView.Adapter<PreviewViewHo
             }
         }
 
-        @Override // com.taobao.android.dinamicx.DXRootView.AbstractC6360a
+        @Override // com.taobao.android.dinamicx.DXRootView.a
         protected void j(DXRootView dXRootView, int i) {
             if (i == 0) {
                 DXTemplatePreviewAdapter.this.c.g().B(dXRootView);
@@ -71,11 +70,11 @@ public class DXTemplatePreviewAdapter extends RecyclerView.Adapter<PreviewViewHo
         }
     }
 
-    public DXTemplatePreviewAdapter(Context context, JSONArray jSONArray, RecyclerView recyclerView, C6387n c6387n) {
+    public DXTemplatePreviewAdapter(Context context, JSONArray jSONArray, RecyclerView recyclerView, n nVar) {
         JSONArray jSONArray2 = new JSONArray();
         this.a = jSONArray2;
         jSONArray2.addAll(jSONArray);
-        this.c = c6387n;
+        this.c = nVar;
         this.b = recyclerView;
         this.d = context;
         a();
@@ -136,7 +135,7 @@ public class DXTemplatePreviewAdapter extends RecyclerView.Adapter<PreviewViewHo
     }
 
     private void g(DXRootView dXRootView) {
-        this.c.g().I(dXRootView, new C6561a(dXRootView));
+        this.c.g().I(dXRootView, new a(dXRootView));
     }
 
     public boolean b() {

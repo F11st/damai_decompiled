@@ -30,14 +30,13 @@ public final class NativeGaiaXViewHolder extends RecyclerView.ViewHolder impleme
     private GaiaX.Params b;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.gaiaxholder.NativeGaiaXViewHolder$a */
     /* loaded from: classes7.dex */
-    public static final class C3526a implements GaiaX.IEventDelegate {
+    public static final class a implements GaiaX.IEventDelegate {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ JSONObject b;
         final /* synthetic */ int c;
 
-        C3526a(JSONObject jSONObject, int i) {
+        a(JSONObject jSONObject, int i) {
             this.b = jSONObject;
             this.c = i;
         }
@@ -55,14 +54,13 @@ public final class NativeGaiaXViewHolder extends RecyclerView.ViewHolder impleme
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.gaiaxholder.NativeGaiaXViewHolder$b */
     /* loaded from: classes7.dex */
-    public static final class C3527b implements GaiaX.ITrackDelegate3 {
+    public static final class b implements GaiaX.ITrackDelegate3 {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ JSONObject b;
         final /* synthetic */ int c;
 
-        C3527b(JSONObject jSONObject, int i) {
+        b(JSONObject jSONObject, int i) {
             this.b = jSONObject;
             this.c = i;
         }
@@ -80,12 +78,11 @@ public final class NativeGaiaXViewHolder extends RecyclerView.ViewHolder impleme
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.gaiaxholder.NativeGaiaXViewHolder$c */
     /* loaded from: classes7.dex */
-    public static final class C3528c implements GaiaX.IStatusDelegate {
+    public static final class c implements GaiaX.IStatusDelegate {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3528c() {
+        c() {
         }
 
         @Override // com.youku.gaiax.GaiaX.IStatusDelegate
@@ -129,9 +126,9 @@ public final class NativeGaiaXViewHolder extends RecyclerView.ViewHolder impleme
         GaiaX.Params params = this.b;
         if (params != null) {
             params.setMessage(this);
-            params.setEventDelegate(new C3526a(jSONObject, i));
-            params.setTrackDelegate3(new C3527b(jSONObject, i));
-            params.setStatusDelegate(new C3528c());
+            params.setEventDelegate(new a(jSONObject, i));
+            params.setTrackDelegate3(new b(jSONObject, i));
+            params.setStatusDelegate(new c());
             GaiaX.Companion.getInstance().bindView(params);
             xi1 xi1Var = this.a;
             View view = this.itemView;

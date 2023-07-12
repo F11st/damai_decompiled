@@ -34,7 +34,7 @@ public class PopImageLayout extends RelativeLayout {
         }
         setClipToPadding(false);
         setClipChildren(false);
-        View inflate = LayoutInflater.from(context).inflate(R.C7942layout.dago_player_interact_pop_image_layout, this);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.dago_player_interact_pop_image_layout, this);
         this.view = inflate;
         this.popImage = (ImageView) inflate.findViewById(R.id.dago_pop_image);
         this.pointView = this.view.findViewById(R.id.dago_pop_point);

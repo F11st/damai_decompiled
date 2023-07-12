@@ -7,7 +7,7 @@ import java.util.List;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class MiPushCommandMessage implements PushMessageHandler.InterfaceC7557a {
+public class MiPushCommandMessage implements PushMessageHandler.a {
     private static final String KEY_AUTO_MARK_PKGS = "autoMarkPkgs";
     private static final String KEY_CATEGORY = "category";
     private static final String KEY_COMMAND = "command";

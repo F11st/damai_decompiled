@@ -8,7 +8,7 @@ import com.huawei.hms.aaid.task.PushClient;
 import com.huawei.hms.common.ApiException;
 import com.huawei.hms.common.internal.ResponseErrorCode;
 import com.huawei.hms.common.internal.TaskApiCall;
-import com.huawei.hms.push.C5687h;
+import com.huawei.hms.push.h;
 import com.huawei.hms.push.utils.PushBiUtil;
 import com.huawei.hms.support.api.client.Status;
 import com.huawei.hms.support.log.HMSLog;
@@ -37,7 +37,7 @@ public class SendUpStreamTask extends TaskApiCall<PushClient, BaseVoidTask> {
         } else {
             bundle.putString("message_type", "send_error");
         }
-        if (new C5687h().a(pushClient.getContext(), bundle, intent)) {
+        if (new h().a(pushClient.getContext(), bundle, intent)) {
             HMSLog.i("SendUpStreamTask", "receive upstream, start service success");
             PushBiUtil.reportExit(pushClient.getContext(), getUri(), responseErrorCode);
             return;

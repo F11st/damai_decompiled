@@ -14,10 +14,10 @@ public class dv1<E> extends mh<E> implements ProducerScope<E> {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // kotlinx.coroutines.AbstractC8619a
+    @Override // kotlinx.coroutines.a
     /* renamed from: f */
     public void onCompleted(@NotNull wt2 wt2Var) {
-        SendChannel.C8640a.a(a(), null, 1, null);
+        SendChannel.a.a(a(), null, 1, null);
     }
 
     @Override // kotlinx.coroutines.channels.ProducerScope
@@ -25,12 +25,12 @@ public class dv1<E> extends mh<E> implements ProducerScope<E> {
         return getChannel();
     }
 
-    @Override // kotlinx.coroutines.AbstractC8619a, kotlinx.coroutines.JobSupport, kotlinx.coroutines.Job
+    @Override // kotlinx.coroutines.a, kotlinx.coroutines.JobSupport, kotlinx.coroutines.Job
     public boolean isActive() {
         return super.isActive();
     }
 
-    @Override // kotlinx.coroutines.AbstractC8619a
+    @Override // kotlinx.coroutines.a
     protected void onCancelled(@NotNull Throwable th, boolean z) {
         if (a().close(th) || z) {
             return;

@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes3.dex */
 public final class cs2 implements Comparable<cs2> {
     @NotNull
-    public static final C9014a Companion = new C9014a(null);
+    public static final a Companion = new a(null);
     public static final long MAX_VALUE = -1;
     public static final long MIN_VALUE = 0;
     public static final int SIZE_BITS = 64;
@@ -22,13 +22,12 @@ public final class cs2 implements Comparable<cs2> {
     private final long a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.cs2$a */
     /* loaded from: classes3.dex */
-    public static final class C9014a {
-        private C9014a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9014a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

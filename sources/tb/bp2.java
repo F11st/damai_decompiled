@@ -12,7 +12,6 @@ import android.widget.TextView;
 import cn.damai.category.common.listener.ShareImageCallback;
 import cn.damai.category.grab.bean.ItemBean;
 import cn.damai.category.grab.ui.GrabActivity;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.util.DMRGBUtil;
 import cn.damai.homepage.R$color;
@@ -66,21 +65,20 @@ public class bp2 {
     private TextView z;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.bp2$a */
     /* loaded from: classes.dex */
-    public class C8972a implements DMImageCreator.DMImageFailListener {
+    public class a implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ItemBean a;
 
-        C8972a(ItemBean itemBean) {
+        a(ItemBean itemBean) {
             this.a = itemBean;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "978232163")) {
-                ipChange.ipc$dispatch("978232163", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("978232163", new Object[]{this, dVar});
             } else {
                 bp2.this.h(this.a);
             }
@@ -88,23 +86,22 @@ public class bp2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.bp2$b */
     /* loaded from: classes.dex */
-    public class C8973b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ItemBean a;
 
-        C8973b(ItemBean itemBean) {
+        b(ItemBean itemBean) {
             this.a = itemBean;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-457883976")) {
-                ipChange.ipc$dispatch("-457883976", new Object[]{this, c0502e});
-            } else if (c0502e == null || (bitmap = c0502e.b) == null) {
+                ipChange.ipc$dispatch("-457883976", new Object[]{this, eVar});
+            } else if (eVar == null || (bitmap = eVar.b) == null) {
                 bp2.this.h(this.a);
             } else {
                 String d = j11.d(this.a.verticalPic, bitmap, bp2.this.a);
@@ -112,8 +109,8 @@ public class bp2 {
                     bp2.this.F.callback(this.a.verticalPic, d);
                 }
                 if (this.a.group == 1) {
-                    Bitmap b = b21.b(bp2.this.a, this.a.verticalPic, c0502e.b, 20);
-                    int e = DMRGBUtil.e(0.7f, c0502e.b);
+                    Bitmap b = b21.b(bp2.this.a, this.a.verticalPic, eVar.b, 20);
+                    int e = DMRGBUtil.e(0.7f, eVar.b);
                     if (b != null) {
                         bp2.this.f.setImageBitmap(b);
                         bp2.this.g.setVisibility(0);
@@ -216,7 +213,7 @@ public class bp2 {
             }
             this.c.setText(itemBean.groupTip);
             this.g.setVisibility(8);
-            C0504a.b().f(itemBean.verticalPic, m62.a(this.a, 111.0f), m62.a(this.a, 148.0f)).n(new C8973b(itemBean)).e(new C8972a(itemBean)).f();
+            cn.damai.common.image.a.b().f(itemBean.verticalPic, m62.a(this.a, 111.0f), m62.a(this.a, 148.0f)).n(new b(itemBean)).e(new a(itemBean)).f();
             this.i.setText(itemBean.name);
             this.j.setText(itemBean.showTime);
             if (TextUtils.isEmpty(itemBean.venueName)) {

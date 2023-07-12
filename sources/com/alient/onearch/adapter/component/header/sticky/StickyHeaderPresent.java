@@ -12,8 +12,8 @@ import android.view.ViewParent;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.alibaba.android.ultron.trade.event.OpenSimplePopupSubscriber;
-import com.alibaba.android.vlayout.AbstractC3289a;
 import com.alibaba.android.vlayout.DelegateAdapter;
+import com.alibaba.android.vlayout.a;
 import com.alibaba.android.vlayout.layout.StickyLayoutHelper;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -64,7 +64,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Objects;
 import kotlin.Metadata;
-import kotlin.collections.C8212k;
+import kotlin.collections.k;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -104,7 +104,7 @@ public class StickyHeaderPresent extends AbsPresenter<GenericItem<ItemValue>, St
     }
 
     /* compiled from: Taobao */
-    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\b\b\u0086\u0004\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0011\u0010\u0012J\u0018\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u0004H\u0016J \u0010\n\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\b\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\u0004H\u0016R\"\u0010\f\u001a\u00020\u000b8\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b\f\u0010\r\u001a\u0004\b\f\u0010\u000e\"\u0004\b\u000f\u0010\u0010¨\u0006\u0013"}, d2 = {"Lcom/alient/onearch/adapter/component/header/sticky/StickyHeaderPresent$StickyScrollListener;", "Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;", "Landroidx/recyclerview/widget/RecyclerView;", "recyclerView", "", "newState", "Ltb/wt2;", GXTemplateEngine.C3344g.TYPE_ON_SCROLL_STATE_CHANGED, "dx", Constants.Name.DISTANCE_Y, GXTemplateEngine.C3344g.TYPE_ON_SCROLLED, "", "isTabClickScroll", "Z", "()Z", "setTabClickScroll", "(Z)V", "<init>", "(Lcom/alient/onearch/adapter/component/header/sticky/StickyHeaderPresent;)V", "onearch-adapter_release"}, k = 1, mv = {1, 5, 1})
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\b\b\u0086\u0004\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0011\u0010\u0012J\u0018\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u0004H\u0016J \u0010\n\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\b\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\u0004H\u0016R\"\u0010\f\u001a\u00020\u000b8\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b\f\u0010\r\u001a\u0004\b\f\u0010\u000e\"\u0004\b\u000f\u0010\u0010¨\u0006\u0013"}, d2 = {"Lcom/alient/onearch/adapter/component/header/sticky/StickyHeaderPresent$StickyScrollListener;", "Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;", "Landroidx/recyclerview/widget/RecyclerView;", "recyclerView", "", "newState", "Ltb/wt2;", GXTemplateEngine.g.TYPE_ON_SCROLL_STATE_CHANGED, "dx", Constants.Name.DISTANCE_Y, GXTemplateEngine.g.TYPE_ON_SCROLLED, "", "isTabClickScroll", "Z", "()Z", "setTabClickScroll", "(Z)V", "<init>", "(Lcom/alient/onearch/adapter/component/header/sticky/StickyHeaderPresent;)V", "onearch-adapter_release"}, k = 1, mv = {1, 5, 1})
     /* loaded from: classes10.dex */
     public final class StickyScrollListener extends RecyclerView.OnScrollListener {
         private boolean isTabClickScroll;
@@ -328,8 +328,8 @@ public class StickyHeaderPresent extends AbsPresenter<GenericItem<ItemValue>, St
     }
 
     public void fixLastComponentBackground() {
-        IModule iModule = (IModule) C8212k.b0(((GenericItem) getItem()).getComponent().getContainer().getCurrentModules());
-        IComponent iComponent = (IComponent) C8212k.b0(iModule.getComponents());
+        IModule iModule = (IModule) k.b0(((GenericItem) getItem()).getComponent().getContainer().getCurrentModules());
+        IComponent iComponent = (IComponent) k.b0(iModule.getComponents());
         JSONObject data = iComponent.getProperty().getData();
         if (data == null || data.isEmpty()) {
             VBaseAdapter<IItem<ItemValue>, VBaseHolder<IItem<ItemValue>, GenericRenderConfig>> adapter = iModule.getComponents().get(iComponent.getIndex() - 1).getAdapter();
@@ -709,7 +709,7 @@ public class StickyHeaderPresent extends AbsPresenter<GenericItem<ItemValue>, St
             this.stickyScrollListener = stickyScrollListener;
         }
         VBaseAdapter<IItem<ItemValue>, VBaseHolder<IItem<ItemValue>, GenericRenderConfig>> adapter = genericItem.getComponent().getAdapter();
-        AbstractC3289a layoutHelper = adapter == null ? null : adapter.getLayoutHelper();
+        a layoutHelper = adapter == null ? null : adapter.getLayoutHelper();
         StickyLayoutHelper stickyLayoutHelper = layoutHelper instanceof StickyLayoutHelper ? (StickyLayoutHelper) layoutHelper : null;
         if (stickyLayoutHelper != null) {
             stickyLayoutHelper.i(this);

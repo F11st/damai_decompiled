@@ -16,7 +16,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.member.R$color;
 import cn.damai.member.R$id;
@@ -65,12 +65,11 @@ public class TicketSouvenirFragment extends DamaiBaseMvpFragment {
     private TextView openTimeDesc;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.TicketSouvenirFragment$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2068a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2068a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -85,12 +84,11 @@ public class TicketSouvenirFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.TicketSouvenirFragment$b */
     /* loaded from: classes7.dex */
-    public class C2069b implements TickletDialogShowFragment.OnClickCloseListener {
+    public class b implements TickletDialogShowFragment.OnClickCloseListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2069b() {
+        b() {
         }
 
         @Override // cn.damai.ticklet.ui.fragment.TickletDialogShowFragment.OnClickCloseListener
@@ -210,7 +208,7 @@ public class TicketSouvenirFragment extends DamaiBaseMvpFragment {
         this.mTvTitleRightBtn = textView;
         textView.setVisibility(8);
         this.mTvTitle.setText(R$string.ticklet_souvenir_title);
-        this.mViewTitleBack.setOnClickListener(new View$OnClickListenerC2068a());
+        this.mViewTitleBack.setOnClickListener(new a());
         setImmersionStyle();
     }
 
@@ -256,7 +254,7 @@ public class TicketSouvenirFragment extends DamaiBaseMvpFragment {
         if (AndroidInstantRuntime.support(ipChange, "42402619")) {
             ipChange.ipc$dispatch("42402619", new Object[]{this, str, str2, Boolean.valueOf(z)});
         } else {
-            C0529c.e().x(un2.k().c(un2.TICKLET_SOUVENIR, str, str2, Boolean.valueOf(z)));
+            c.e().x(un2.k().c(un2.TICKLET_SOUVENIR, str, str2, Boolean.valueOf(z)));
         }
     }
 
@@ -505,7 +503,7 @@ public class TicketSouvenirFragment extends DamaiBaseMvpFragment {
             this.mTicketShowLayout.setVisibility(0);
             TickletDialogShowFragment tickletDialogShowFragment = TickletDialogShowFragment.getInstance(ticketDeatilResult.getPerformId(), null, ticketDeatilResult, TickletDialogShowFragment.SHOW_TICKLET_FROM_SOUVENIR);
             this.mTicketShowFragment = tickletDialogShowFragment;
-            tickletDialogShowFragment.setOnClickCloseListener(new C2069b());
+            tickletDialogShowFragment.setOnClickCloseListener(new b());
             getChildFragmentManager().beginTransaction().replace(R$id.ticket_souvenir_fg_container, this.mTicketShowFragment).commitAllowingStateLoss();
         }
     }

@@ -56,7 +56,7 @@ class DaysOfWeekAdapter extends BaseAdapter {
     public View getView(int i, @Nullable View view, @NonNull ViewGroup viewGroup) {
         TextView textView = (TextView) view;
         if (view == null) {
-            textView = (TextView) LayoutInflater.from(viewGroup.getContext()).inflate(R.C4818layout.mtrl_calendar_day_of_week, viewGroup, false);
+            textView = (TextView) LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.mtrl_calendar_day_of_week, viewGroup, false);
         }
         this.calendar.set(7, positionToDayOfWeek(i));
         textView.setText(this.calendar.getDisplayName(7, CALENDAR_DAY_STYLE, textView.getResources().getConfiguration().locale));

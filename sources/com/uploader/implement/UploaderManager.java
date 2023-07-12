@@ -14,25 +14,22 @@ import com.uploader.export.ITaskListener;
 import com.uploader.export.IUploaderDependency;
 import com.uploader.export.IUploaderManager;
 import com.uploader.export.IUploaderTask;
-import com.uploader.implement.a.C7376i;
-import com.uploader.implement.a.InterfaceC7372d;
-import com.uploader.implement.a.InterfaceC7375g;
-import com.uploader.implement.b.a.C7382b;
-import com.uploader.implement.d.C7405c;
-import com.uploader.implement.d.InterfaceC7404b;
+import com.uploader.implement.a.d;
+import com.uploader.implement.a.g;
+import com.uploader.implement.a.i;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import tb.l33;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class UploaderManager implements IUploaderManager, InterfaceC7372d {
+public class UploaderManager implements IUploaderManager, d {
     private int a;
-    private ArrayList<C7376i> b;
+    private ArrayList<i> b;
     private ArrayList<Pair<Integer, String>> c;
-    private SparseArray<ArrayList<Pair<C7376i, InterfaceC7404b>>> d;
-    private ArrayList<Pair<C7376i, InterfaceC7404b>> e;
-    private C7382b f;
+    private SparseArray<ArrayList<Pair<i, com.uploader.implement.d.b>>> d;
+    private ArrayList<Pair<i, com.uploader.implement.d.b>> e;
+    private com.uploader.implement.b.a.b f;
     private BroadcastReceiver g;
     private volatile Handler h;
     private volatile boolean i;
@@ -40,20 +37,19 @@ public class UploaderManager implements IUploaderManager, InterfaceC7372d {
     private boolean k;
     private String l;
     private final int m;
-    private C7399c n;
+    private c n;
     private final byte[] o;
     private final int p;
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.uploader.implement.UploaderManager$a */
     /* loaded from: classes11.dex */
-    public static class RunnableC7362a implements Runnable {
+    public static class a implements Runnable {
         final UploaderManager a;
         final int b;
         final Object[] c;
 
-        RunnableC7362a(int i, @NonNull UploaderManager uploaderManager, Object... objArr) {
+        a(int i, @NonNull UploaderManager uploaderManager, Object... objArr) {
             this.b = i;
             this.a = uploaderManager;
             this.c = objArr;
@@ -71,7 +67,7 @@ public class UploaderManager implements IUploaderManager, InterfaceC7372d {
             } else if (i == 3) {
                 this.a.b();
             } else if (i == 4) {
-                this.a.i((InterfaceC7375g) this.c[0]);
+                this.a.i((g) this.c[0]);
             } else if (i != 5) {
             } else {
                 this.a.j();
@@ -81,12 +77,11 @@ public class UploaderManager implements IUploaderManager, InterfaceC7372d {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.uploader.implement.UploaderManager$b */
     /* loaded from: classes11.dex */
-    public static class C7363b extends BroadcastReceiver {
+    public static class b extends BroadcastReceiver {
         private final WeakReference<UploaderManager> a;
 
-        C7363b(UploaderManager uploaderManager) {
+        b(UploaderManager uploaderManager) {
             this.a = new WeakReference<>(uploaderManager);
         }
 
@@ -136,23 +131,23 @@ public class UploaderManager implements IUploaderManager, InterfaceC7372d {
         return ((Integer) this.c.get(size).first).intValue();
     }
 
-    private void f(C7376i c7376i, @Nullable ArrayList<Pair<C7376i, InterfaceC7404b>> arrayList) {
-        int G = c7376i.G();
+    private void f(i iVar, @Nullable ArrayList<Pair<i, com.uploader.implement.d.b>> arrayList) {
+        int G = iVar.G();
         if (this.f == null) {
-            this.f = new C7382b(this.n, this.h.getLooper());
+            this.f = new com.uploader.implement.b.a.b(this.n, this.h.getLooper());
         }
-        C7405c c7405c = new C7405c(this.n, this.f, this.h.getLooper());
+        com.uploader.implement.d.c cVar = new com.uploader.implement.d.c(this.n, this.f, this.h.getLooper());
         if (arrayList == null) {
             arrayList = new ArrayList<>(2);
             this.d.append(G, arrayList);
         }
-        Pair<C7376i, InterfaceC7404b> create = Pair.create(c7376i, c7405c);
+        Pair<i, com.uploader.implement.d.b> create = Pair.create(iVar, cVar);
         arrayList.add(create);
         this.e.add(create);
-        c7376i.h(this);
-        c7376i.m(c7405c);
-        if (C7364a.d(4)) {
-            C7364a.a(4, "UploaderManager", this.m + " startAction task:" + c7376i.F().hashCode());
+        iVar.h(this);
+        iVar.m(cVar);
+        if (com.uploader.implement.a.d(4)) {
+            com.uploader.implement.a.a(4, "UploaderManager", this.m + " startAction task:" + iVar.F().hashCode());
         }
     }
 
@@ -161,8 +156,8 @@ public class UploaderManager implements IUploaderManager, InterfaceC7372d {
         if (handler != null) {
             return handler;
         }
-        if (C7364a.d(2)) {
-            C7364a.a(2, "UploaderManager", this.m + " doRetrieve and register");
+        if (com.uploader.implement.a.d(2)) {
+            com.uploader.implement.a.a(2, "UploaderManager", this.m + " doRetrieve and register");
         }
         HandlerThread handlerThread = new HandlerThread("[aus]");
         handlerThread.start();
@@ -176,10 +171,10 @@ public class UploaderManager implements IUploaderManager, InterfaceC7372d {
         String str;
         boolean z;
         boolean equals;
-        NetworkInfo b = l33.b(this.n.c.getApplicationContext());
-        if (b != null) {
-            z = b.isConnected();
-            str = b.getExtraInfo();
+        NetworkInfo b2 = l33.b(this.n.c.getApplicationContext());
+        if (b2 != null) {
+            z = b2.isConnected();
+            str = b2.getExtraInfo();
         } else {
             str = null;
             z = false;
@@ -197,16 +192,16 @@ public class UploaderManager implements IUploaderManager, InterfaceC7372d {
             }
             z3 = true ^ equals;
         }
-        if (C7364a.d(8)) {
-            C7364a.a(8, "UploaderManager", this.m + " doNetworkChanged, extraInfo(new|old):" + str + "|" + str2 + " isConnected(new|old):" + z + "|" + z2 + " changed:" + z3);
+        if (com.uploader.implement.a.d(8)) {
+            com.uploader.implement.a.a(8, "UploaderManager", this.m + " doNetworkChanged, extraInfo(new|old):" + str + "|" + str2 + " isConnected(new|old):" + z + "|" + z2 + " changed:" + z3);
         }
         if (z3) {
             this.k = z;
             this.l = str;
             if (!z) {
-                C7382b c7382b = this.f;
-                if (c7382b != null) {
-                    c7382b.e();
+                com.uploader.implement.b.a.b bVar = this.f;
+                if (bVar != null) {
+                    bVar.e();
                     return;
                 }
                 return;
@@ -214,13 +209,13 @@ public class UploaderManager implements IUploaderManager, InterfaceC7372d {
             int size = this.e.size();
             int i = 0;
             for (int i2 = 0; i2 < size; i2++) {
-                Pair<C7376i, InterfaceC7404b> pair = this.e.get(i2);
-                ((C7376i) pair.first).m((InterfaceC7404b) pair.second);
+                Pair<i, com.uploader.implement.d.b> pair = this.e.get(i2);
+                ((i) pair.first).m((com.uploader.implement.d.b) pair.second);
                 i++;
             }
             int l = l();
-            if (C7364a.d(2)) {
-                C7364a.a(2, "UploaderManager", this.m + " restartedCount:" + i + " suppliedCount:" + l);
+            if (com.uploader.implement.a.d(2)) {
+                com.uploader.implement.a.a(2, "UploaderManager", this.m + " restartedCount:" + i + " suppliedCount:" + l);
             }
         }
     }
@@ -232,29 +227,29 @@ public class UploaderManager implements IUploaderManager, InterfaceC7372d {
             if (handler == null) {
                 return;
             }
-            handler.post(new RunnableC7362a(5, this, new Object[0]));
+            handler.post(new a(5, this, new Object[0]));
         }
     }
 
     private int l() {
         int i = 0;
         for (int size = this.b.size() - 1; size >= 0; size--) {
-            C7376i c7376i = this.b.get(size);
-            ArrayList<Pair<C7376i, InterfaceC7404b>> arrayList = this.d.get(c7376i.G());
+            i iVar = this.b.get(size);
+            ArrayList<Pair<i, com.uploader.implement.d.b>> arrayList = this.d.get(iVar.G());
             if (arrayList == null) {
                 if (this.d.size() < 2) {
                     this.b.remove(size);
-                    f(c7376i, arrayList);
+                    f(iVar, arrayList);
                     i++;
                 }
             } else if (arrayList.size() < 2) {
                 this.b.remove(size);
-                f(c7376i, arrayList);
+                f(iVar, arrayList);
                 i++;
             }
         }
-        if (C7364a.d(2)) {
-            C7364a.a(2, "UploaderManager", this.m + " suppliedCount:" + i);
+        if (com.uploader.implement.a.d(2)) {
+            com.uploader.implement.a.a(2, "UploaderManager", this.m + " suppliedCount:" + i);
         }
         return i;
     }
@@ -271,8 +266,8 @@ public class UploaderManager implements IUploaderManager, InterfaceC7372d {
                 try {
                     applicationContext.unregisterReceiver(broadcastReceiver);
                 } catch (Exception e) {
-                    if (C7364a.d(16)) {
-                        C7364a.b(16, "UploaderManager", "doClean unregisterReceiver", e);
+                    if (com.uploader.implement.a.d(16)) {
+                        com.uploader.implement.a.b(16, "UploaderManager", "doClean unregisterReceiver", e);
                     }
                 }
             } finally {
@@ -287,19 +282,19 @@ public class UploaderManager implements IUploaderManager, InterfaceC7372d {
         this.e.trimToSize();
         this.c.trimToSize();
         this.b.trimToSize();
-        C7382b c7382b = this.f;
-        if (c7382b != null) {
-            c7382b.e();
+        com.uploader.implement.b.a.b bVar = this.f;
+        if (bVar != null) {
+            bVar.e();
             this.f = null;
         }
-        if (C7364a.d(2)) {
-            C7364a.a(2, "UploaderManager", this.m + " doClean and release");
+        if (com.uploader.implement.a.d(2)) {
+            com.uploader.implement.a.a(2, "UploaderManager", this.m + " doClean and release");
         }
     }
 
     void c(IUploaderTask iUploaderTask) {
         boolean z;
-        int a = a(iUploaderTask.getBizType());
+        int a2 = a(iUploaderTask.getBizType());
         int size = this.b.size() - 1;
         while (true) {
             if (size < 0) {
@@ -314,22 +309,22 @@ public class UploaderManager implements IUploaderManager, InterfaceC7372d {
             }
         }
         if (z) {
-            if (C7364a.d(4)) {
-                C7364a.a(4, "UploaderManager", this.m + " doCancel cancel waiting task:" + iUploaderTask);
+            if (com.uploader.implement.a.d(4)) {
+                com.uploader.implement.a.a(4, "UploaderManager", this.m + " doCancel cancel waiting task:" + iUploaderTask);
                 return;
             }
             return;
         }
-        ArrayList<Pair<C7376i, InterfaceC7404b>> arrayList = this.d.get(a);
+        ArrayList<Pair<i, com.uploader.implement.d.b>> arrayList = this.d.get(a2);
         if (arrayList == null) {
             return;
         }
         for (int size2 = arrayList.size() - 1; size2 >= 0; size2--) {
-            if (((C7376i) arrayList.get(size2).first).F().equals(iUploaderTask)) {
-                Pair<C7376i, InterfaceC7404b> pair = arrayList.get(size2);
-                ((C7376i) pair.first).p((InterfaceC7404b) pair.second);
-                if (C7364a.d(4)) {
-                    C7364a.a(4, "UploaderManager", this.m + " doCancel cancel concurrent task:" + iUploaderTask);
+            if (((i) arrayList.get(size2).first).F().equals(iUploaderTask)) {
+                Pair<i, com.uploader.implement.d.b> pair = arrayList.get(size2);
+                ((i) pair.first).p((com.uploader.implement.d.b) pair.second);
+                if (com.uploader.implement.a.d(4)) {
+                    com.uploader.implement.a.a(4, "UploaderManager", this.m + " doCancel cancel concurrent task:" + iUploaderTask);
                     return;
                 }
                 return;
@@ -341,15 +336,15 @@ public class UploaderManager implements IUploaderManager, InterfaceC7372d {
     public boolean cancelAsync(@NonNull IUploaderTask iUploaderTask) {
         boolean z = false;
         if (iUploaderTask == null) {
-            if (C7364a.d(8)) {
-                C7364a.a(8, "UploaderManager", this.m + " cancelAsync fail,task null");
+            if (com.uploader.implement.a.d(8)) {
+                com.uploader.implement.a.a(8, "UploaderManager", this.m + " cancelAsync fail,task null");
             }
             return false;
         } else if (this.i) {
             synchronized (this.o) {
                 if (this.i) {
                     Handler handler = this.h;
-                    if (handler != null && handler.post(new RunnableC7362a(2, this, iUploaderTask))) {
+                    if (handler != null && handler.post(new a(2, this, iUploaderTask))) {
                         z = true;
                     }
                     return z;
@@ -375,14 +370,14 @@ public class UploaderManager implements IUploaderManager, InterfaceC7372d {
         throw new UnsupportedOperationException("Method not decompiled: com.uploader.implement.UploaderManager.d(com.uploader.export.IUploaderTask, com.uploader.export.ITaskListener, android.os.Handler):void");
     }
 
-    void i(InterfaceC7375g interfaceC7375g) {
+    void i(g gVar) {
         boolean z;
-        C7376i c7376i = (C7376i) interfaceC7375g;
-        int G = c7376i.G();
-        ArrayList<Pair<C7376i, InterfaceC7404b>> arrayList = this.d.get(G);
+        i iVar = (i) gVar;
+        int G = iVar.G();
+        ArrayList<Pair<i, com.uploader.implement.d.b>> arrayList = this.d.get(G);
         if (arrayList == null) {
-            if (C7364a.d(8)) {
-                C7364a.a(8, "UploaderManager", this.m + " doFinish no concurrent");
+            if (com.uploader.implement.a.d(8)) {
+                com.uploader.implement.a.a(8, "UploaderManager", this.m + " doFinish no concurrent");
                 return;
             }
             return;
@@ -393,27 +388,27 @@ public class UploaderManager implements IUploaderManager, InterfaceC7372d {
             if (size < 0) {
                 z = false;
                 break;
-            } else if (((C7376i) arrayList.get(size).first).equals(c7376i)) {
+            } else if (((i) arrayList.get(size).first).equals(iVar)) {
                 z = this.e.remove(arrayList.remove(size));
                 break;
             }
         }
         if (!z) {
-            if (C7364a.d(8)) {
-                C7364a.a(8, "UploaderManager", this.m + " doFinish !removed");
+            if (com.uploader.implement.a.d(8)) {
+                com.uploader.implement.a.a(8, "UploaderManager", this.m + " doFinish !removed");
                 return;
             }
             return;
         }
         if (arrayList.size() == 0) {
             this.d.remove(G);
-            if (C7364a.d(4)) {
-                C7364a.a(4, "UploaderManager", this.m + " onFinish remove concurrent task:" + c7376i.F().hashCode());
+            if (com.uploader.implement.a.d(4)) {
+                com.uploader.implement.a.a(4, "UploaderManager", this.m + " onFinish remove concurrent task:" + iVar.F().hashCode());
             }
         }
         if (!l33.a(this.n.c.getApplicationContext())) {
-            if (C7364a.d(8)) {
-                C7364a.a(8, "UploaderManager", this.m + " doFinish no network");
+            if (com.uploader.implement.a.d(8)) {
+                com.uploader.implement.a.a(8, "UploaderManager", this.m + " doFinish no network");
                 return;
             }
             return;
@@ -422,50 +417,50 @@ public class UploaderManager implements IUploaderManager, InterfaceC7372d {
         if (this.d.size() == 0 && this.b.size() == 0) {
             synchronized (this.o) {
                 Handler handler = this.h;
-                if (C7364a.d(8)) {
-                    C7364a.a(8, "UploaderManager", this.m + " start count down:90000");
+                if (com.uploader.implement.a.d(8)) {
+                    com.uploader.implement.a.a(8, "UploaderManager", this.m + " start count down:90000");
                 }
                 if (handler == null) {
                     return;
                 }
-                RunnableC7362a runnableC7362a = new RunnableC7362a(3, this, new Object[0]);
-                this.j = runnableC7362a;
-                handler.postDelayed(runnableC7362a, 90000L);
+                a aVar = new a(3, this, new Object[0]);
+                this.j = aVar;
+                handler.postDelayed(aVar, 90000L);
             }
-        } else if (C7364a.d(8)) {
-            C7364a.a(8, "UploaderManager", this.m + " doFinish has more data");
+        } else if (com.uploader.implement.a.d(8)) {
+            com.uploader.implement.a.a(8, "UploaderManager", this.m + " doFinish has more data");
         }
     }
 
     @Override // com.uploader.export.IUploaderManager
     public boolean initialize(@NonNull Context context, @NonNull IUploaderDependency iUploaderDependency) {
         if (context == null) {
-            if (C7364a.d(16)) {
-                C7364a.a(16, "UploaderManager", this.m + " initialize fail, context null");
+            if (com.uploader.implement.a.d(16)) {
+                com.uploader.implement.a.a(16, "UploaderManager", this.m + " initialize fail, context null");
             }
             return false;
         } else if (this.i) {
-            if (C7364a.d(4)) {
-                C7364a.a(4, "UploaderManager", this.m + " initialize, is initialized !");
+            if (com.uploader.implement.a.d(4)) {
+                com.uploader.implement.a.a(4, "UploaderManager", this.m + " initialize, is initialized !");
             }
             return false;
         } else {
             synchronized (this.o) {
                 if (this.i) {
-                    if (C7364a.d(4)) {
-                        C7364a.a(4, "UploaderManager", this.m + " initialize, is initialized !");
+                    if (com.uploader.implement.a.d(4)) {
+                        com.uploader.implement.a.a(4, "UploaderManager", this.m + " initialize, is initialized !");
                     }
                     return false;
                 } else if (this.p != iUploaderDependency.getEnvironment().getInstanceType()) {
-                    if (C7364a.d(16)) {
-                        C7364a.a(16, "UploaderManager", this.m + " initialize, FAILED! environment not equals instance in instanceType");
+                    if (com.uploader.implement.a.d(16)) {
+                        com.uploader.implement.a.a(16, "UploaderManager", this.m + " initialize, FAILED! environment not equals instance in instanceType");
                     }
                     return false;
                 } else {
-                    this.n = new C7399c(context, iUploaderDependency);
+                    this.n = new c(context, iUploaderDependency);
                     this.i = true;
-                    if (C7364a.d(4)) {
-                        C7364a.a(4, "UploaderManager", this.m + " initialize !!!");
+                    if (com.uploader.implement.a.d(4)) {
+                        com.uploader.implement.a.a(4, "UploaderManager", this.m + " initialize !!!");
                     }
                     return true;
                 }
@@ -481,14 +476,14 @@ public class UploaderManager implements IUploaderManager, InterfaceC7372d {
     @Override // com.uploader.export.IUploaderManager
     public boolean uploadAsync(@NonNull IUploaderTask iUploaderTask, @NonNull ITaskListener iTaskListener, Handler handler) {
         if (iUploaderTask == null) {
-            if (C7364a.d(8)) {
-                C7364a.a(8, "UploaderManager", this.m + " uploadAsync fail,task null");
+            if (com.uploader.implement.a.d(8)) {
+                com.uploader.implement.a.a(8, "UploaderManager", this.m + " uploadAsync fail,task null");
             }
             return false;
         }
         synchronized (this.o) {
             if (this.i) {
-                return g().post(new RunnableC7362a(1, this, iUploaderTask, iTaskListener, handler));
+                return g().post(new a(1, this, iUploaderTask, iTaskListener, handler));
             }
             return false;
         }
@@ -506,14 +501,14 @@ public class UploaderManager implements IUploaderManager, InterfaceC7372d {
         this.p = i;
     }
 
-    @Override // com.uploader.implement.a.InterfaceC7372d
-    public void a(InterfaceC7375g interfaceC7375g) {
+    @Override // com.uploader.implement.a.d
+    public void a(g gVar) {
         synchronized (this.o) {
             Handler handler = this.h;
             if (handler == null) {
                 return;
             }
-            handler.post(new RunnableC7362a(4, this, interfaceC7375g));
+            handler.post(new a(4, this, gVar));
         }
     }
 }

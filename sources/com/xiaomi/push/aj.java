@@ -18,12 +18,12 @@ public class aj {
     public static boolean a(Context context, String str, long j) {
         RandomAccessFile randomAccessFile;
         ?? r2 = 23;
-        if (Build.VERSION.SDK_INT < 23 || C7667h.c(context, "android.permission.WRITE_EXTERNAL_STORAGE")) {
+        if (Build.VERSION.SDK_INT < 23 || h.c(context, "android.permission.WRITE_EXTERNAL_STORAGE")) {
             FileLock fileLock = null;
             try {
                 try {
                     File file = new File(new File(context.getExternalFilesDir(null), "/.vdevdir/"), "lcfp.lock");
-                    C7594ab.m659a(file);
+                    ab.m659a(file);
                     randomAccessFile = new RandomAccessFile(file, "rw");
                 } catch (IOException e) {
                     e = e;
@@ -37,7 +37,7 @@ public class aj {
                         } catch (IOException unused) {
                         }
                     }
-                    C7594ab.a((Closeable) r2);
+                    ab.a((Closeable) r2);
                     throw th;
                 }
                 try {
@@ -49,7 +49,7 @@ public class aj {
                         } catch (IOException unused2) {
                         }
                     }
-                    C7594ab.a(randomAccessFile);
+                    ab.a(randomAccessFile);
                     return b;
                 } catch (IOException e2) {
                     e = e2;
@@ -60,7 +60,7 @@ public class aj {
                         } catch (IOException unused3) {
                         }
                     }
-                    C7594ab.a(randomAccessFile);
+                    ab.a(randomAccessFile);
                     return true;
                 }
             } catch (Throwable th2) {
@@ -68,7 +68,7 @@ public class aj {
                 if (0 != 0 && fileLock.isValid()) {
                     fileLock.release();
                 }
-                C7594ab.a((Closeable) r2);
+                ab.a((Closeable) r2);
                 throw th;
             }
         }

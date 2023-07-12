@@ -1,7 +1,6 @@
 package com.alibaba.security.realidentity.business.upload;
 
 import com.alibaba.fastjson.annotation.JSONField;
-import com.alibaba.security.realidentity.a.AbstractC3840a;
 import com.alibaba.security.realidentity.http.annotation.Api;
 import com.alibaba.security.realidentity.http.annotation.Body;
 import com.alibaba.security.realidentity.http.model.HttpMethod;
@@ -29,9 +28,9 @@ public class UploadResultRequest extends HttpRequest {
     /* compiled from: Taobao */
     /* loaded from: classes8.dex */
     public static class Data implements Serializable {
-        @JSONField(name = AbstractC3840a.K)
+        @JSONField(name = com.alibaba.security.realidentity.a.a.K)
         public String bigImagePath;
-        @JSONField(name = AbstractC3840a.L)
+        @JSONField(name = com.alibaba.security.realidentity.a.a.L)
         public String bigSmallLocalPath;
         @JSONField(name = "refImage")
         public String bigSmallPath;
@@ -45,7 +44,7 @@ public class UploadResultRequest extends HttpRequest {
         public String idCardAuthData;
         @JSONField(name = "isGaze")
         public boolean isGaze;
-        @JSONField(name = AbstractC3840a.N)
+        @JSONField(name = com.alibaba.security.realidentity.a.a.N)
         public String originalImage;
         @JSONField(name = "processDetail")
         public String processDetail;
@@ -93,21 +92,19 @@ public class UploadResultRequest extends HttpRequest {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.security.realidentity.business.upload.UploadResultRequest$a */
     /* loaded from: classes8.dex */
-    public static class C3878a {
+    public static class a {
         @JSONField(name = "url")
         public String a;
         @JSONField(name = "videoExtra")
-        public C3879b b;
+        public b b;
         @JSONField(name = "videoHash")
         public String c;
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.security.realidentity.business.upload.UploadResultRequest$b */
     /* loaded from: classes8.dex */
-    public static class C3879b {
+    public static class b {
         @JSONField(name = "conf")
         public Object a;
         @JSONField(name = WXConfig.osName)

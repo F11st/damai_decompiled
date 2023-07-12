@@ -57,7 +57,7 @@ public final class EnumBiMap<K extends Enum<K>, V extends Enum<V>> extends Abstr
         this.keyType = (Class) objectInputStream.readObject();
         this.valueType = (Class) objectInputStream.readObject();
         setDelegates(new EnumMap(this.keyType), new EnumMap(this.valueType));
-        C5174f0.b(this, objectInputStream);
+        f0.b(this, objectInputStream);
     }
 
     @GwtIncompatible
@@ -65,7 +65,7 @@ public final class EnumBiMap<K extends Enum<K>, V extends Enum<V>> extends Abstr
         objectOutputStream.defaultWriteObject();
         objectOutputStream.writeObject(this.keyType);
         objectOutputStream.writeObject(this.valueType);
-        C5174f0.i(this, objectOutputStream);
+        f0.i(this, objectOutputStream);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -80,17 +80,17 @@ public final class EnumBiMap<K extends Enum<K>, V extends Enum<V>> extends Abstr
         return checkValue((EnumBiMap<K, V>) ((Enum) obj));
     }
 
-    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.AbstractC5202q, java.util.Map
+    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.q, java.util.Map
     public /* bridge */ /* synthetic */ void clear() {
         super.clear();
     }
 
-    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.AbstractC5202q, java.util.Map
+    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.q, java.util.Map
     public /* bridge */ /* synthetic */ boolean containsValue(@NullableDecl Object obj) {
         return super.containsValue(obj);
     }
 
-    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.AbstractC5202q, java.util.Map
+    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.q, java.util.Map
     public /* bridge */ /* synthetic */ Set entrySet() {
         return super.entrySet();
     }
@@ -100,7 +100,7 @@ public final class EnumBiMap<K extends Enum<K>, V extends Enum<V>> extends Abstr
         return super.inverse();
     }
 
-    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.AbstractC5202q, java.util.Map
+    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.q, java.util.Map
     public /* bridge */ /* synthetic */ Set keySet() {
         return super.keySet();
     }
@@ -109,7 +109,7 @@ public final class EnumBiMap<K extends Enum<K>, V extends Enum<V>> extends Abstr
         return this.keyType;
     }
 
-    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.AbstractC5202q, java.util.Map, com.google.common.collect.BiMap
+    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.q, java.util.Map, com.google.common.collect.BiMap
     public /* bridge */ /* synthetic */ void putAll(Map map) {
         super.putAll(map);
     }
@@ -118,7 +118,7 @@ public final class EnumBiMap<K extends Enum<K>, V extends Enum<V>> extends Abstr
         return this.valueType;
     }
 
-    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.AbstractC5202q, java.util.Map
+    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.q, java.util.Map
     public /* bridge */ /* synthetic */ Set values() {
         return super.values();
     }

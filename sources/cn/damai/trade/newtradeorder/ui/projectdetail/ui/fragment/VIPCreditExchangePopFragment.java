@@ -16,8 +16,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.GravityCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
@@ -51,7 +51,7 @@ import tb.wt2;
 public final class VIPCreditExchangePopFragment extends DamaiBaseMvpFragment<VIPCreditExchangePresenter, VIPCreditExchangeContract.Model> implements VIPCreditExchangeContract.View {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C2433a Companion = new C2433a(null);
+    public static final a Companion = new a(null);
     @Nullable
     private VIPCreditExchangeAdapter adapter;
     @Nullable
@@ -122,15 +122,14 @@ public final class VIPCreditExchangePopFragment extends DamaiBaseMvpFragment<VIP
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.ui.fragment.VIPCreditExchangePopFragment$a */
     /* loaded from: classes16.dex */
-    public static final class C2433a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C2433a() {
+        private a() {
         }
 
-        public /* synthetic */ C2433a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -338,7 +337,7 @@ public final class VIPCreditExchangePopFragment extends DamaiBaseMvpFragment<VIP
                 textView19.setTextColor(parseColor2);
             }
         }
-        C0529c e = C0529c.e();
+        c e = c.e();
         View view4 = this.creditExchangeView;
         HashMap hashMap = new HashMap();
         ProjectMemberPrompt projectMemberPrompt14 = this.data;
@@ -372,8 +371,8 @@ public final class VIPCreditExchangePopFragment extends DamaiBaseMvpFragment<VIP
             return;
         }
         b41.i(vIPCreditExchangePopFragment, "this$0");
-        C0529c e = C0529c.e();
-        C0525a.C0527b g = new C0525a.C0527b().i(gb.PROJECT_PAGE).f("preemption_layer").l("exchangebtn").g(false);
+        c e = c.e();
+        a.b g = new a.b().i(gb.PROJECT_PAGE).f("preemption_layer").l("exchangebtn").g(false);
         HashMap hashMap = new HashMap();
         ProjectMemberPrompt projectMemberPrompt = vIPCreditExchangePopFragment.data;
         hashMap.put("is_exclusivepurchase", projectMemberPrompt != null && projectMemberPrompt.isSpecialBuy() ? "1" : "0");

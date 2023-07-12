@@ -57,7 +57,7 @@ import java.util.TimerTask;
 import kotlin.jvm.JvmField;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -108,7 +108,7 @@ public final class OrderDetailFragment extends BricksBaseFragment {
     @Nullable
     private OrderDetail mData;
     @Nullable
-    private HandlerC3516b mTimeHandler;
+    private b mTimeHandler;
     @Nullable
     private Timer mTimer;
     @Nullable
@@ -140,20 +140,19 @@ public final class OrderDetailFragment extends BricksBaseFragment {
     @Nullable
     private TextView useTv;
     @NotNull
-    public static final C3515a Companion = new C3515a(null);
+    public static final a Companion = new a(null);
     @JvmField
     public static boolean isOnResumeRefresh = true;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.coupon.order.OrderDetailFragment$a */
     /* loaded from: classes7.dex */
-    public static final class C3515a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3515a() {
+        private a() {
         }
 
-        public /* synthetic */ C3515a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -180,14 +179,13 @@ public final class OrderDetailFragment extends BricksBaseFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.coupon.order.OrderDetailFragment$b */
     /* loaded from: classes7.dex */
-    public static final class HandlerC3516b extends Handler {
+    public static final class b extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
         @NotNull
         private WeakReference<OrderDetailFragment> a;
 
-        public HandlerC3516b(@NotNull WeakReference<OrderDetailFragment> weakReference) {
+        public b(@NotNull WeakReference<OrderDetailFragment> weakReference) {
             b41.i(weakReference, "reference");
             this.a = weakReference;
         }
@@ -228,12 +226,11 @@ public final class OrderDetailFragment extends BricksBaseFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.coupon.order.OrderDetailFragment$c */
     /* loaded from: classes7.dex */
-    public static final class C3517c implements OnItemListener<CouponRuleBean> {
+    public static final class c implements OnItemListener<CouponRuleBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3517c() {
+        c() {
         }
 
         /* JADX INFO: Access modifiers changed from: private */
@@ -256,17 +253,17 @@ public final class OrderDetailFragment extends BricksBaseFragment {
                 return;
             }
             b41.i(couponRuleBean, "bean");
-            NoticeFragment.C3513a c3513a = NoticeFragment.Companion;
+            NoticeFragment.a aVar = NoticeFragment.Companion;
             FragmentManager childFragmentManager = OrderDetailFragment.this.getChildFragmentManager();
             b41.h(childFragmentManager, "childFragmentManager");
-            NoticeFragment d = c3513a.d(childFragmentManager, R$id.id_container_order_detail, couponRuleBean.getOrderInfo());
+            NoticeFragment d = aVar.d(childFragmentManager, R$id.id_container_order_detail, couponRuleBean.getOrderInfo());
             if (d != null) {
                 final OrderDetailFragment orderDetailFragment = OrderDetailFragment.this;
                 orderDetailFragment.setShowNoticeFragment(d);
                 d.setMCloseListener(new View.OnClickListener() { // from class: tb.ko1
                     @Override // android.view.View.OnClickListener
                     public final void onClick(View view) {
-                        OrderDetailFragment.C3517c.c(OrderDetailFragment.this, view);
+                        OrderDetailFragment.c.c(OrderDetailFragment.this, view);
                     }
                 });
             }
@@ -286,12 +283,11 @@ public final class OrderDetailFragment extends BricksBaseFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.coupon.order.OrderDetailFragment$d */
     /* loaded from: classes7.dex */
-    public static final class C3518d implements OnItemListener<Notice> {
+    public static final class d implements OnItemListener<Notice> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3518d() {
+        d() {
         }
 
         /* JADX INFO: Access modifiers changed from: private */
@@ -314,17 +310,17 @@ public final class OrderDetailFragment extends BricksBaseFragment {
                 return;
             }
             b41.i(notice, "bean");
-            NoticeFragment.C3513a c3513a = NoticeFragment.Companion;
+            NoticeFragment.a aVar = NoticeFragment.Companion;
             FragmentManager childFragmentManager = OrderDetailFragment.this.getChildFragmentManager();
             b41.h(childFragmentManager, "childFragmentManager");
-            NoticeFragment c = c3513a.c(childFragmentManager, R$id.id_container_order_detail, notice);
+            NoticeFragment c = aVar.c(childFragmentManager, R$id.id_container_order_detail, notice);
             if (c != null) {
                 final OrderDetailFragment orderDetailFragment = OrderDetailFragment.this;
                 orderDetailFragment.setShowNoticeFragment(c);
                 c.setMCloseListener(new View.OnClickListener() { // from class: tb.lo1
                     @Override // android.view.View.OnClickListener
                     public final void onClick(View view) {
-                        OrderDetailFragment.C3518d.c(OrderDetailFragment.this, view);
+                        OrderDetailFragment.d.c(OrderDetailFragment.this, view);
                     }
                 });
             }
@@ -344,12 +340,11 @@ public final class OrderDetailFragment extends BricksBaseFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.coupon.order.OrderDetailFragment$e */
     /* loaded from: classes7.dex */
-    public static final class C3519e implements AppBarLayout.OnOffsetChangedListener {
+    public static final class e implements AppBarLayout.OnOffsetChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3519e() {
+        e() {
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:16:0x003b, code lost:
@@ -363,7 +358,7 @@ public final class OrderDetailFragment extends BricksBaseFragment {
         public void onOffsetChanged(@org.jetbrains.annotations.Nullable com.google.android.material.appbar.AppBarLayout r6, int r7) {
             /*
                 r5 = this;
-                com.android.alibaba.ip.runtime.IpChange r0 = com.alibaba.pictures.bricks.coupon.order.OrderDetailFragment.C3519e.$ipChange
+                com.android.alibaba.ip.runtime.IpChange r0 = com.alibaba.pictures.bricks.coupon.order.OrderDetailFragment.e.$ipChange
                 java.lang.String r1 = "2090090328"
                 boolean r2 = com.android.alibaba.ip.runtime.AndroidInstantRuntime.support(r0, r1)
                 r3 = 1
@@ -405,7 +400,7 @@ public final class OrderDetailFragment extends BricksBaseFragment {
             L42:
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.alibaba.pictures.bricks.coupon.order.OrderDetailFragment.C3519e.onOffsetChanged(com.google.android.material.appbar.AppBarLayout, int):void");
+            throw new UnsupportedOperationException("Method not decompiled: com.alibaba.pictures.bricks.coupon.order.OrderDetailFragment.e.onOffsetChanged(com.google.android.material.appbar.AppBarLayout, int):void");
         }
     }
 
@@ -910,8 +905,8 @@ public final class OrderDetailFragment extends BricksBaseFragment {
         final FragmentActivity activity = getActivity();
         if (activity != null) {
             OrderDetailAdapter orderDetailAdapter = new OrderDetailAdapter(activity);
-            orderDetailAdapter.e(new C3517c());
-            orderDetailAdapter.d(new C3518d());
+            orderDetailAdapter.e(new c());
+            orderDetailAdapter.d(new d());
             orderDetailAdapter.b(this);
             this.adapter = orderDetailAdapter;
             RecyclerView recyclerView = this.irc;
@@ -964,7 +959,7 @@ public final class OrderDetailFragment extends BricksBaseFragment {
             View view3 = this.rootView;
             AppBarLayout appBarLayout = view3 != null ? (AppBarLayout) view3.findViewById(R$id.appbar_layout) : null;
             if (appBarLayout != null) {
-                appBarLayout.addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new C3519e());
+                appBarLayout.addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new e());
             }
             RecyclerView recyclerView3 = this.irc;
             if (recyclerView3 != null) {
@@ -1220,7 +1215,7 @@ public final class OrderDetailFragment extends BricksBaseFragment {
         String string = arguments != null ? arguments.getString("orderId") : null;
         this.orderId = string;
         if (string != null) {
-            C8604o.s(string);
+            o.s(string);
         }
     }
 
@@ -1268,7 +1263,7 @@ public final class OrderDetailFragment extends BricksBaseFragment {
         stopTimer();
         showLoading(new String[0]);
         if (DoloresLoginHandler.Companion.a().c()) {
-            rb0.C9647a c9647a = rb0.Companion;
+            rb0.a aVar = rb0.Companion;
             CouponOrderDetailRequest couponOrderDetailRequest = new CouponOrderDetailRequest();
             couponOrderDetailRequest.setOrderId(this.orderId);
             ia1 ia1Var = ia1.INSTANCE;
@@ -1276,7 +1271,7 @@ public final class OrderDetailFragment extends BricksBaseFragment {
             couponOrderDetailRequest.setLatitude(String.valueOf(lastKnownLocation != null ? Double.valueOf(lastKnownLocation.getLatitude()) : null));
             AMapLocation lastKnownLocation2 = ia1Var.c().getLastKnownLocation();
             couponOrderDetailRequest.setLongitude(String.valueOf(lastKnownLocation2 != null ? Double.valueOf(lastKnownLocation2.getLongitude()) : null));
-            c9647a.b(couponOrderDetailRequest).c(getContext()).a().doOnKTSuccess(new Function1<OrderDetail, wt2>() { // from class: com.alibaba.pictures.bricks.coupon.order.OrderDetailFragment$refresh$2
+            aVar.b(couponOrderDetailRequest).c(getContext()).a().doOnKTSuccess(new Function1<OrderDetail, wt2>() { // from class: com.alibaba.pictures.bricks.coupon.order.OrderDetailFragment$refresh$2
                 private static transient /* synthetic */ IpChange $ipChange;
 
                 /* JADX INFO: Access modifiers changed from: package-private */
@@ -1423,13 +1418,12 @@ public final class OrderDetailFragment extends BricksBaseFragment {
                 private static transient /* synthetic */ IpChange $ipChange;
 
                 /* compiled from: Taobao */
-                /* renamed from: com.alibaba.pictures.bricks.coupon.order.OrderDetailFragment$refresh$3$a */
                 /* loaded from: classes7.dex */
-                public static final class C3520a implements BricksBaseFragment.IClickListener {
+                public static final class a implements BricksBaseFragment.IClickListener {
                     private static transient /* synthetic */ IpChange $ipChange;
                     final /* synthetic */ OrderDetailFragment a;
 
-                    C3520a(OrderDetailFragment orderDetailFragment) {
+                    a(OrderDetailFragment orderDetailFragment) {
                         this.a = orderDetailFragment;
                     }
 
@@ -1468,13 +1462,13 @@ public final class OrderDetailFragment extends BricksBaseFragment {
                     ViewGroup viewGroup = rootView != null ? (ViewGroup) rootView.findViewById(R$id.ll_page) : null;
                     String str = new CouponOrderDetailRequest().API_NAME;
                     String valueOf = String.valueOf(dc0Var.b());
-                    String d = dc0Var.d();
-                    z13.a(z13.b(str, "券订单详情接口", valueOf, d, "itemId: " + OrderDetailFragment.this.getItemId() + "  orderId：" + OrderDetailFragment.this.getOrderId()), "-4422", "券订单详情渲染错误");
+                    String d2 = dc0Var.d();
+                    z13.a(z13.b(str, "券订单详情接口", valueOf, d2, "itemId: " + OrderDetailFragment.this.getItemId() + "  orderId：" + OrderDetailFragment.this.getOrderId()), "-4422", "券订单详情渲染错误");
                     if (viewGroup != null) {
                         OrderDetailFragment orderDetailFragment = OrderDetailFragment.this;
-                        String e = dc0Var.e();
-                        if (e != null && (f = dc0Var.f()) != null) {
-                            orderDetailFragment.showErrorView(1, f, e, viewGroup, true, false, true, new C3520a(orderDetailFragment));
+                        String e2 = dc0Var.e();
+                        if (e2 != null && (f = dc0Var.f()) != null) {
+                            orderDetailFragment.showErrorView(1, f, e2, viewGroup, true, false, true, new a(orderDetailFragment));
                         }
                     }
                     LogUtil.e(dc0Var.f(), new Object[0]);
@@ -1723,7 +1717,7 @@ public final class OrderDetailFragment extends BricksBaseFragment {
         }
         if (this.mTimer == null) {
             this.mTimer = new Timer();
-            this.mTimeHandler = new HandlerC3516b(new WeakReference(this));
+            this.mTimeHandler = new b(new WeakReference(this));
         }
         if (this.mTimerTask == null) {
             TimerTask timerTask = new TimerTask() { // from class: com.alibaba.pictures.bricks.coupon.order.OrderDetailFragment$startTimer$1
@@ -1731,15 +1725,15 @@ public final class OrderDetailFragment extends BricksBaseFragment {
 
                 @Override // java.util.TimerTask, java.lang.Runnable
                 public void run() {
-                    OrderDetailFragment.HandlerC3516b handlerC3516b;
+                    OrderDetailFragment.b bVar;
                     IpChange ipChange2 = $ipChange;
                     if (AndroidInstantRuntime.support(ipChange2, "6145111")) {
                         ipChange2.ipc$dispatch("6145111", new Object[]{this});
                         return;
                     }
-                    handlerC3516b = OrderDetailFragment.this.mTimeHandler;
-                    if (handlerC3516b != null) {
-                        handlerC3516b.sendEmptyMessage(i);
+                    bVar = OrderDetailFragment.this.mTimeHandler;
+                    if (bVar != null) {
+                        bVar.sendEmptyMessage(i);
                     }
                 }
             };

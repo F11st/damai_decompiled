@@ -21,7 +21,7 @@ public class hz implements iu<hz, Object>, Serializable, Cloneable {
     public hy f555a;
 
     /* renamed from: a  reason: collision with other field name */
-    public C7675im f556a;
+    public im f556a;
 
     /* renamed from: a  reason: collision with other field name */
     public String f557a;
@@ -361,9 +361,9 @@ public class hz implements iu<hz, Object>, Serializable, Cloneable {
                     break;
                 case 8:
                     if (b2 == 12) {
-                        C7675im c7675im = new C7675im();
-                        this.f556a = c7675im;
-                        c7675im.a(jfVar);
+                        im imVar = new im();
+                        this.f556a = imVar;
+                        imVar.a(jfVar);
                         continue;
                         jfVar.g();
                     }
@@ -882,11 +882,11 @@ public class hz implements iu<hz, Object>, Serializable, Cloneable {
         if (h()) {
             sb.append(AVFSCacheConstants.COMMA_SEP);
             sb.append("request:");
-            C7675im c7675im = this.f556a;
-            if (c7675im == null) {
+            im imVar = this.f556a;
+            if (imVar == null) {
                 sb.append("null");
             } else {
-                sb.append(c7675im);
+                sb.append(imVar);
             }
         }
         if (i()) {

@@ -9,9 +9,9 @@ import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function2;
 import kotlin.text.StringsKt__StringsKt;
@@ -29,7 +29,7 @@ import tb.wt2;
 public final class PrefetchManager {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3608a Companion = new C3608a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String TAG = "MtopPrefetch";
     @NotNull
@@ -39,22 +39,21 @@ public final class PrefetchManager {
     private String b;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.dolores.prefetch.PrefetchManager$a */
     /* loaded from: classes7.dex */
-    public static final class C3608a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3608a() {
+        private a() {
         }
 
-        public /* synthetic */ C3608a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     static {
-        Lazy a;
-        a = C8177b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<PrefetchManager>() { // from class: com.alibaba.pictures.dolores.prefetch.PrefetchManager$Companion$instance$2
+        Lazy a2;
+        a2 = b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<PrefetchManager>() { // from class: com.alibaba.pictures.dolores.prefetch.PrefetchManager$Companion$instance$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* JADX WARN: Can't rename method to resolve collision */
@@ -65,12 +64,12 @@ public final class PrefetchManager {
                 return AndroidInstantRuntime.support(ipChange, "-2076621659") ? (PrefetchManager) ipChange.ipc$dispatch("-2076621659", new Object[]{this}) : new PrefetchManager();
             }
         });
-        c = a;
+        c = a2;
     }
 
     public PrefetchManager() {
         Lazy b;
-        b = C8177b.b(new Function0<HashMap<String, PrefetchPageMo>>() { // from class: com.alibaba.pictures.dolores.prefetch.PrefetchManager$pageList$2
+        b = b.b(new Function0<HashMap<String, PrefetchPageMo>>() { // from class: com.alibaba.pictures.dolores.prefetch.PrefetchManager$pageList$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // kotlin.jvm.functions.Function0
@@ -90,7 +89,7 @@ public final class PrefetchManager {
 
     /* JADX INFO: Access modifiers changed from: private */
     public final void c(String str, Bundle bundle) {
-        rb0 a;
+        rb0 a2;
         boolean K;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-546039429")) {
@@ -102,8 +101,8 @@ public final class PrefetchManager {
         }
         String str2 = this.b;
         if (str2 == null) {
-            IGlobalConfig a2 = sb0.Companion.a();
-            str2 = a2 != null ? a2.getGlobalConfig(IGlobalConfig.Key.PREFETCH_BLACK_LIST, null) : null;
+            IGlobalConfig a3 = sb0.Companion.a();
+            str2 = a3 != null ? a3.getGlobalConfig(IGlobalConfig.Key.PREFETCH_BLACK_LIST, null) : null;
         }
         if (str2 != null) {
             K = StringsKt__StringsKt.K(str2, str, false, 2, null);
@@ -130,8 +129,8 @@ public final class PrefetchManager {
                 } else {
                     DoloresRequest build = prefetchRequestBuilder.build(bundle);
                     spduLog.Logd(TAG, "数据预加载开始加载" + str + " request:" + build);
-                    if (build != null && (a = bc0.a(build)) != null) {
-                        rb0.e(a, prefetchPageMo.getExpireTime(), null, 2, null);
+                    if (build != null && (a2 = bc0.a(build)) != null) {
+                        rb0.e(a2, prefetchPageMo.getExpireTime(), null, 2, null);
                     }
                 }
             }

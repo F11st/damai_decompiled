@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.single;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -19,7 +19,7 @@ import tb.dg0;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SingleFlatMapIterableFlowable<T, R> extends AbstractC8147b<R> {
+public final class SingleFlatMapIterableFlowable<T, R> extends b<R> {
     final Function<? super T, ? extends Iterable<? extends R>> mapper;
     final SingleSource<T> source;
 
@@ -209,7 +209,7 @@ public final class SingleFlatMapIterableFlowable<T, R> extends AbstractC8147b<R>
         this.mapper = function;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super R> subscriber) {
         this.source.subscribe(new FlatMapIterableObserver(subscriber, this.mapper));
     }

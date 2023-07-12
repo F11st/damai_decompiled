@@ -1,7 +1,7 @@
 package anet.channel.strategy;
 
 import anet.channel.statist.PolicyVersionStat;
-import anet.channel.strategy.C0214b;
+import anet.channel.strategy.b;
 import anet.channel.strategy.dispatch.AmdcRuntimeInfo;
 import anet.channel.util.ALog;
 import java.io.Serializable;
@@ -11,8 +11,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import org.apache.commons.lang3.time.DateUtils;
-import tb.C9708t9;
 import tb.jn1;
+import tb.t9;
 import tb.x6;
 import tb.y90;
 import tb.ym;
@@ -27,7 +27,7 @@ public class StrategyCollection implements Serializable {
     private static final int UPDATE_MODE_LAZY = 2;
     private static final int UPDATE_MODE_ONCE = 3;
     private static final int UPDATE_MODE_PRE = 1;
-    private static transient boolean isStrategyUpgrade = C9708t9.N();
+    private static transient boolean isStrategyUpgrade = t9.N();
     private static final long serialVersionUID = 1454976454894208229L;
     Map<String, Boolean> abStrategy;
     volatile String cname;
@@ -119,7 +119,7 @@ public class StrategyCollection implements Serializable {
                 if (!ymVar.a && this.strategyEntity.shouldRefresh()) {
                     long currentTimeMillis = System.currentTimeMillis();
                     if (currentTimeMillis - this.lastAmdcRequestSend > DateUtils.MILLIS_PER_MINUTE) {
-                        C0213a.a().forceRefreshStrategy(this.host);
+                        a.a().forceRefreshStrategy(this.host);
                         this.lastAmdcRequestSend = currentTimeMillis;
                     }
                 }
@@ -131,7 +131,7 @@ public class StrategyCollection implements Serializable {
                 if (!ymVar.a && this.strategyList.shouldRefresh()) {
                     long currentTimeMillis2 = System.currentTimeMillis();
                     if (currentTimeMillis2 - this.lastAmdcRequestSend > DateUtils.MILLIS_PER_MINUTE) {
-                        C0213a.a().forceRefreshStrategy(this.host);
+                        a.a().forceRefreshStrategy(this.host);
                         this.lastAmdcRequestSend = currentTimeMillis2;
                     }
                 }
@@ -215,77 +215,77 @@ public class StrategyCollection implements Serializable {
         return sb.toString();
     }
 
-    public synchronized void update(C0214b.C0219e c0219e) {
-        C0214b.C0224j[] c0224jArr;
-        C0214b.C0215a[] c0215aArr;
-        this.ttl = System.currentTimeMillis() + (c0219e.b * 1000);
-        if (!c0219e.a.equalsIgnoreCase(this.host)) {
-            ALog.e(TAG, "update error!", null, "host", this.host, "dnsInfo.host", c0219e.a);
+    public synchronized void update(b.e eVar) {
+        b.j[] jVarArr;
+        b.a[] aVarArr;
+        this.ttl = System.currentTimeMillis() + (eVar.b * 1000);
+        if (!eVar.a.equalsIgnoreCase(this.host)) {
+            ALog.e(TAG, "update error!", null, "host", this.host, "dnsInfo.host", eVar.a);
             return;
         }
         int i = this.version;
-        int i2 = c0219e.l;
+        int i2 = eVar.l;
         if (i != i2) {
             this.version = i2;
             PolicyVersionStat policyVersionStat = new PolicyVersionStat(this.host, i2);
             policyVersionStat.reportType = 1;
             x6.b().commitStat(policyVersionStat);
         }
-        this.cname = c0219e.d;
-        HashMap<String, Boolean> hashMap = c0219e.n;
+        this.cname = eVar.d;
+        HashMap<String, Boolean> hashMap = eVar.n;
         if (hashMap != null && hashMap.size() > 0) {
             if (this.abStrategy == null) {
                 this.abStrategy = new ConcurrentHashMap();
             }
-            this.abStrategy.putAll(c0219e.n);
+            this.abStrategy.putAll(eVar.n);
         }
-        if (isSupportUpdateMode(c0219e.o)) {
-            this.updateMode = c0219e.o;
+        if (isSupportUpdateMode(eVar.o)) {
+            this.updateMode = eVar.o;
         }
         this.isUpdated = true;
-        String[] strArr = c0219e.f;
-        if ((strArr != null && strArr.length != 0 && (c0215aArr = c0219e.h) != null && c0215aArr.length != 0) || ((c0224jArr = c0219e.i) != null && c0224jArr.length != 0)) {
+        String[] strArr = eVar.f;
+        if ((strArr != null && strArr.length != 0 && (aVarArr = eVar.h) != null && aVarArr.length != 0) || ((jVarArr = eVar.i) != null && jVarArr.length != 0)) {
             if (this.strategyList == null) {
                 this.strategyList = new StrategyList();
             }
-            this.strategyList.update(c0219e);
+            this.strategyList.update(eVar);
             return;
         }
         this.strategyList = null;
     }
 
-    public synchronized void updateStrategy(C0214b.C0218d c0218d) {
-        this.ttl = System.currentTimeMillis() + (c0218d.b * 1000);
-        if (!c0218d.a.equalsIgnoreCase(this.host)) {
-            ALog.e(TAG, "update error!", null, "host", this.host, "dnsInfo.host", c0218d.a);
+    public synchronized void updateStrategy(b.d dVar) {
+        this.ttl = System.currentTimeMillis() + (dVar.b * 1000);
+        if (!dVar.a.equalsIgnoreCase(this.host)) {
+            ALog.e(TAG, "update error!", null, "host", this.host, "dnsInfo.host", dVar.a);
             return;
         }
         int i = this.version;
-        int i2 = c0218d.h;
+        int i2 = dVar.h;
         if (i != i2) {
             this.version = i2;
             PolicyVersionStat policyVersionStat = new PolicyVersionStat(this.host, i2);
             policyVersionStat.reportType = 1;
             x6.b().commitStat(policyVersionStat);
         }
-        this.cname = c0218d.d;
-        HashMap<String, Boolean> hashMap = c0218d.j;
+        this.cname = dVar.d;
+        HashMap<String, Boolean> hashMap = dVar.j;
         if (hashMap != null && hashMap.size() > 0) {
             if (this.abStrategy == null) {
                 this.abStrategy = new ConcurrentHashMap();
             }
-            this.abStrategy.putAll(c0218d.j);
+            this.abStrategy.putAll(dVar.j);
         }
-        if (isSupportUpdateMode(c0218d.l)) {
-            this.updateMode = c0218d.l;
+        if (isSupportUpdateMode(dVar.l)) {
+            this.updateMode = dVar.l;
         }
         this.isUpdated = true;
-        C0214b.C0223i[] c0223iArr = c0218d.k;
-        if (c0223iArr != null && c0223iArr.length != 0) {
+        b.i[] iVarArr = dVar.k;
+        if (iVarArr != null && iVarArr.length != 0) {
             if (this.strategyEntity == null) {
                 this.strategyEntity = new StrategyEntity();
             }
-            this.strategyEntity.update(c0218d);
+            this.strategyEntity.update(dVar);
             return;
         }
         this.strategyEntity = null;

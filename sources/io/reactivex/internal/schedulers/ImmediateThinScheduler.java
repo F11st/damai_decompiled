@@ -2,8 +2,8 @@ package io.reactivex.internal.schedulers;
 
 import io.reactivex.Scheduler;
 import io.reactivex.annotations.NonNull;
-import io.reactivex.disposables.C8151a;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.disposables.a;
 import java.util.concurrent.TimeUnit;
 
 /* compiled from: Taobao */
@@ -14,7 +14,7 @@ public final class ImmediateThinScheduler extends Scheduler {
     static final Scheduler.Worker WORKER = new ImmediateThinWorker();
 
     static {
-        Disposable b = C8151a.b();
+        Disposable b = a.b();
         DISPOSED = b;
         b.dispose();
     }

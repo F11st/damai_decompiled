@@ -16,12 +16,11 @@ public class ExpandTextView extends AbsView<ExpandTextContract.Presenter> implem
     TextView expBtn;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.common.ExpandTextView$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1800a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1800a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -44,7 +43,7 @@ public class ExpandTextView extends AbsView<ExpandTextContract.Presenter> implem
         this.content = (TextView) view.findViewById(R$id.common_exptext_content);
         TextView textView = (TextView) view.findViewById(R$id.common_exptext_btn);
         this.expBtn = textView;
-        textView.setOnClickListener(new View$OnClickListenerC1800a());
+        textView.setOnClickListener(new a());
     }
 
     @Override // cn.damai.tetris.component.common.ExpandTextContract.View

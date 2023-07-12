@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.dynamicx.customwidget.scrollerlayout.DMItemDividerDecoration;
 import cn.damai.discover.content.bean.RelatedBrandOrArtist;
 import cn.damai.discover.content.bean.TwoTuple;
@@ -47,9 +46,9 @@ public class vn extends cp2<TwoTuple<ContentCard, ArtistBrandWrap>> implements R
             Bundle bundle = new Bundle();
             if (relatedBrandOrArtist.type == 4) {
                 bundle.putString("brandid", String.valueOf(relatedBrandOrArtist.damaiId));
-                C0529c.e().x(getLiveUt().u());
+                cn.damai.common.user.c.e().x(getLiveUt().u());
             } else {
-                C0529c.e().x(getLiveUt().p(i));
+                cn.damai.common.user.c.e().x(getLiveUt().p(i));
                 bundle.putString("artistid", String.valueOf(relatedBrandOrArtist.damaiId));
             }
             DMNav.from(this.a).withExtras(bundle).toUri(NavUri.b(cs.ARTISTID_THEME));

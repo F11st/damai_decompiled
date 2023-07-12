@@ -12,8 +12,8 @@ import okio.ByteString;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public final class Transform extends Message<Transform, C6134a> {
-    public static final ProtoAdapter<Transform> ADAPTER = new C6135b();
+public final class Transform extends Message<Transform, a> {
+    public static final ProtoAdapter<Transform> ADAPTER = new b();
     public static final Float DEFAULT_A;
     public static final Float DEFAULT_B;
     public static final Float DEFAULT_C;
@@ -35,9 +35,8 @@ public final class Transform extends Message<Transform, C6134a> {
     public final Float ty;
 
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.proto.Transform$a */
     /* loaded from: classes10.dex */
-    public static final class C6134a extends Message.Builder<Transform, C6134a> {
+    public static final class a extends Message.Builder<Transform, a> {
         public Float a;
         public Float b;
         public Float c;
@@ -45,12 +44,12 @@ public final class Transform extends Message<Transform, C6134a> {
         public Float e;
         public Float f;
 
-        public C6134a a(Float f) {
+        public a a(Float f) {
             this.a = f;
             return this;
         }
 
-        public C6134a b(Float f) {
+        public a b(Float f) {
             this.b = f;
             return this;
         }
@@ -61,70 +60,69 @@ public final class Transform extends Message<Transform, C6134a> {
             return new Transform(this.a, this.b, this.c, this.d, this.e, this.f, super.buildUnknownFields());
         }
 
-        public C6134a d(Float f) {
+        public a d(Float f) {
             this.c = f;
             return this;
         }
 
-        public C6134a e(Float f) {
+        public a e(Float f) {
             this.d = f;
             return this;
         }
 
-        public C6134a f(Float f) {
+        public a f(Float f) {
             this.e = f;
             return this;
         }
 
-        public C6134a g(Float f) {
+        public a g(Float f) {
             this.f = f;
             return this;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.proto.Transform$b */
     /* loaded from: classes10.dex */
-    private static final class C6135b extends ProtoAdapter<Transform> {
-        C6135b() {
+    private static final class b extends ProtoAdapter<Transform> {
+        b() {
             super(FieldEncoding.LENGTH_DELIMITED, Transform.class);
         }
 
         @Override // com.youku.squareup.wire.ProtoAdapter
         /* renamed from: a */
         public Transform decode(ProtoReader protoReader) throws IOException {
-            C6134a c6134a = new C6134a();
+            a aVar = new a();
             long beginMessage = protoReader.beginMessage();
             while (true) {
                 int nextTag = protoReader.nextTag();
                 if (nextTag != -1) {
                     switch (nextTag) {
                         case 1:
-                            c6134a.a(ProtoAdapter.FLOAT.decode(protoReader));
+                            aVar.a(ProtoAdapter.FLOAT.decode(protoReader));
                             break;
                         case 2:
-                            c6134a.b(ProtoAdapter.FLOAT.decode(protoReader));
+                            aVar.b(ProtoAdapter.FLOAT.decode(protoReader));
                             break;
                         case 3:
-                            c6134a.d(ProtoAdapter.FLOAT.decode(protoReader));
+                            aVar.d(ProtoAdapter.FLOAT.decode(protoReader));
                             break;
                         case 4:
-                            c6134a.e(ProtoAdapter.FLOAT.decode(protoReader));
+                            aVar.e(ProtoAdapter.FLOAT.decode(protoReader));
                             break;
                         case 5:
-                            c6134a.f(ProtoAdapter.FLOAT.decode(protoReader));
+                            aVar.f(ProtoAdapter.FLOAT.decode(protoReader));
                             break;
                         case 6:
-                            c6134a.g(ProtoAdapter.FLOAT.decode(protoReader));
+                            aVar.g(ProtoAdapter.FLOAT.decode(protoReader));
                             break;
                         default:
                             FieldEncoding peekFieldEncoding = protoReader.peekFieldEncoding();
-                            c6134a.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
+                            aVar.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
                             break;
                     }
                 } else {
                     protoReader.endMessage(beginMessage);
-                    return c6134a.build();
+                    return aVar.build();
                 }
             }
         }
@@ -277,15 +275,15 @@ public final class Transform extends Message<Transform, C6134a> {
 
     @Override // com.youku.squareup.wire.Message
     /* renamed from: newBuilder */
-    public Message.Builder<Transform, C6134a> newBuilder2() {
-        C6134a c6134a = new C6134a();
-        c6134a.a = this.a;
-        c6134a.b = this.b;
-        c6134a.c = this.c;
-        c6134a.d = this.d;
-        c6134a.e = this.tx;
-        c6134a.f = this.ty;
-        c6134a.addUnknownFields(unknownFields());
-        return c6134a;
+    public Message.Builder<Transform, a> newBuilder2() {
+        a aVar = new a();
+        aVar.a = this.a;
+        aVar.b = this.b;
+        aVar.c = this.c;
+        aVar.d = this.d;
+        aVar.e = this.tx;
+        aVar.f = this.ty;
+        aVar.addUnknownFields(unknownFields());
+        return aVar;
     }
 }

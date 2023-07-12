@@ -8,7 +8,7 @@ class az {
     static int a;
 
     public static au a(Context context) {
-        if (C7688m.m1118a()) {
+        if (m.m1118a()) {
             a = 1;
             return new ay(context);
         } else if (as.a(context)) {

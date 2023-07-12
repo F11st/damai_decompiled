@@ -1,7 +1,7 @@
 package com.youku.middlewareservice.provider.darkmode;
 
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -11,7 +11,7 @@ public class DarkModeProviderProxy {
     public static String getDarkModeStatus() {
         try {
             if (sProxy == null) {
-                sProxy = (DarkModeProvider) C8883a.j("com.youku.middlewareservice_impl.provider.darkmode.DarkModeProviderImpl").b().f();
+                sProxy = (DarkModeProvider) a.j("com.youku.middlewareservice_impl.provider.darkmode.DarkModeProviderImpl").b().f();
             }
             return sProxy.getDarkModeStatus();
         } catch (Throwable th) {
@@ -22,7 +22,7 @@ public class DarkModeProviderProxy {
 
     public static DarkModeProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (DarkModeProvider) C8883a.j("com.youku.middlewareservice_impl.provider.darkmode.DarkModeProviderImpl").b().f();
+            sProxy = (DarkModeProvider) a.j("com.youku.middlewareservice_impl.provider.darkmode.DarkModeProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -40,7 +40,7 @@ public class DarkModeProviderProxy {
     public static boolean isDarkMode() {
         try {
             if (sProxy == null) {
-                sProxy = (DarkModeProvider) C8883a.j("com.youku.middlewareservice_impl.provider.darkmode.DarkModeProviderImpl").b().f();
+                sProxy = (DarkModeProvider) a.j("com.youku.middlewareservice_impl.provider.darkmode.DarkModeProviderImpl").b().f();
             }
             return sProxy.isDarkMode();
         } catch (Throwable th) {
@@ -52,7 +52,7 @@ public class DarkModeProviderProxy {
     public static void onConfigureChanged() {
         try {
             if (sProxy == null) {
-                sProxy = (DarkModeProvider) C8883a.j("com.youku.middlewareservice_impl.provider.darkmode.DarkModeProviderImpl").b().f();
+                sProxy = (DarkModeProvider) a.j("com.youku.middlewareservice_impl.provider.darkmode.DarkModeProviderImpl").b().f();
             }
             sProxy.onConfigureChanged();
         } catch (Throwable th) {
@@ -63,7 +63,7 @@ public class DarkModeProviderProxy {
     public static boolean showdDarkmodeSwitch() {
         try {
             if (sProxy == null) {
-                sProxy = (DarkModeProvider) C8883a.j("com.youku.middlewareservice_impl.provider.darkmode.DarkModeProviderImpl").b().f();
+                sProxy = (DarkModeProvider) a.j("com.youku.middlewareservice_impl.provider.darkmode.DarkModeProviderImpl").b().f();
             }
             return sProxy.showdDarkmodeSwitch();
         } catch (Throwable th) {

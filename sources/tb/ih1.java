@@ -1,7 +1,6 @@
 package tb;
 
 import android.text.TextUtils;
-import cn.damai.solid.C1768a;
 import cn.damai.solid.util.Constant;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -16,9 +15,8 @@ public class ih1 implements IMonitor {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ih1$a */
     /* loaded from: classes7.dex */
-    static /* synthetic */ class C9262a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -42,13 +40,13 @@ public class ih1 implements IMonitor {
             ipChange.ipc$dispatch("64385523", new Object[]{this, stage, map});
             return;
         }
-        C1768a.f("reportStageResult stageName " + stage.name());
+        cn.damai.solid.a.f("reportStageResult stageName " + stage.name());
         try {
-            int i = C9262a.a[stage.ordinal()];
+            int i = a.a[stage.ordinal()];
             if (i == 1) {
                 String str = map.get(SolidMonitor.Params.LIB_NAME);
                 se2.e(str);
-                C1768a.f("SOLID_LIB_START_DOWNLOAD start libName=" + str);
+                cn.damai.solid.a.f("SOLID_LIB_START_DOWNLOAD start libName=" + str);
             } else if (i != 2) {
             } else {
                 String str2 = map.get(SolidMonitor.Params.SUCCESS);
@@ -67,7 +65,7 @@ public class ih1 implements IMonitor {
                     }
                     se2.c(Constant.CODE_XCDN_DOWNLOAD_FAIL, str4, hashMap);
                 }
-                C1768a.f("SOLID_LIB_DOWNLOAD end libName=" + str3 + " status=" + str2);
+                cn.damai.solid.a.f("SOLID_LIB_DOWNLOAD end libName=" + str3 + " status=" + str2);
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,7 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.descriptors;
 
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
-import java.util.List;
 import kotlin.jvm.functions.Function1;
 import kotlin.sequences.Sequence;
 import kotlin.sequences.SequencesKt__SequencesKt;
@@ -42,9 +41,7 @@ public final class FindClassInModuleKt {
 
     @NotNull
     public static final ClassDescriptor c(@NotNull ModuleDescriptor moduleDescriptor, @NotNull hj hjVar, @NotNull NotFoundClasses notFoundClasses) {
-        Sequence h;
         Sequence v;
-        List<Integer> B;
         b41.i(moduleDescriptor, "<this>");
         b41.i(hjVar, "classId");
         b41.i(notFoundClasses, "notFoundClasses");
@@ -52,8 +49,7 @@ public final class FindClassInModuleKt {
         if (a != null) {
             return a;
         }
-        h = SequencesKt__SequencesKt.h(hjVar, FindClassInModuleKt$findNonGenericClassAcrossDependencies$typeParametersCount$1.INSTANCE);
-        v = SequencesKt___SequencesKt.v(h, new Function1<hj, Integer>() { // from class: kotlin.reflect.jvm.internal.impl.descriptors.FindClassInModuleKt$findNonGenericClassAcrossDependencies$typeParametersCount$2
+        v = SequencesKt___SequencesKt.v(SequencesKt__SequencesKt.h(hjVar, FindClassInModuleKt$findNonGenericClassAcrossDependencies$typeParametersCount$1.INSTANCE), new Function1<hj, Integer>() { // from class: kotlin.reflect.jvm.internal.impl.descriptors.FindClassInModuleKt$findNonGenericClassAcrossDependencies$typeParametersCount$2
             @Override // kotlin.jvm.functions.Function1
             @NotNull
             public final Integer invoke(@NotNull hj hjVar2) {
@@ -61,8 +57,7 @@ public final class FindClassInModuleKt {
                 return 0;
             }
         });
-        B = SequencesKt___SequencesKt.B(v);
-        return notFoundClasses.d(hjVar, B);
+        return notFoundClasses.d(hjVar, SequencesKt___SequencesKt.B(v));
     }
 
     @Nullable

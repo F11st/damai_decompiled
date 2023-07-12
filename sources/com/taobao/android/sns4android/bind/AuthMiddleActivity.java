@@ -26,10 +26,9 @@ public class AuthMiddleActivity extends Activity {
     LinearLayout hiddenLayout;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.bind.AuthMiddleActivity$a */
     /* loaded from: classes12.dex */
-    class View$OnClickListenerC6603a implements View.OnClickListener {
-        View$OnClickListenerC6603a() {
+    class a implements View.OnClickListener {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -97,7 +96,7 @@ public class AuthMiddleActivity extends Activity {
         this.hiddenLayout = linearLayout;
         linearLayout.setLayoutParams(new ViewGroup.LayoutParams(-1, -1));
         setContentView(this.hiddenLayout);
-        this.hiddenLayout.setOnClickListener(new View$OnClickListenerC6603a());
+        this.hiddenLayout.setOnClickListener(new a());
         this.hiddenLayout.setClickable(false);
         this.hiddenLayout.setLongClickable(false);
         SNSBindContext.setActivity(this);

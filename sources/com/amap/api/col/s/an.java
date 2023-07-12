@@ -20,7 +20,7 @@ public final class an {
                 dm.a(a, context);
             }
         } catch (Throwable th) {
-            C4435i.a(th, "StatisticsUtil", "recordResponseAction");
+            i.a(th, "StatisticsUtil", "recordResponseAction");
         }
     }
 
@@ -28,7 +28,7 @@ public final class an {
         try {
             return jn1.BLOCK_START_STR + "\"RequestPath\":\"" + str + "\",\"ResponseTime\":" + j + ",\"Success\":" + z + "}";
         } catch (Throwable th) {
-            C4435i.a(th, "StatisticsUtil", "generateNetWorkResponseStatisticsEntity");
+            i.a(th, "StatisticsUtil", "generateNetWorkResponseStatisticsEntity");
             return null;
         }
     }
@@ -40,7 +40,7 @@ public final class an {
             if (a2 == null || a2.length() <= 0) {
                 return;
             }
-            cl.a(C4434h.a(true), str, errorType, str2, a2);
+            cl.a(h.a(true), str, errorType, str2, a2);
         }
     }
 
@@ -70,7 +70,7 @@ public final class an {
                 dm.a(dlVar, context);
             }
         } catch (Throwable th) {
-            C4435i.a(th, "StatisticsUtil", "recordResponseAction");
+            i.a(th, "StatisticsUtil", "recordResponseAction");
         }
     }
 
@@ -88,7 +88,7 @@ public final class an {
             }
             return jn1.BLOCK_START_STR + "\"RequestPath\":\"" + str + "\",\"RequestParm\":\"" + str2 + "\",\"IsCacheRequest\":" + z + "}";
         } catch (Throwable th) {
-            C4435i.a(th, "StatisticsUtil", "generateNetWorkResponseStatisticsEntity");
+            i.a(th, "StatisticsUtil", "generateNetWorkResponseStatisticsEntity");
             return null;
         }
     }

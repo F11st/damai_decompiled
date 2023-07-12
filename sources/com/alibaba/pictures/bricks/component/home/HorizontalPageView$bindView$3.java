@@ -4,7 +4,7 @@ import com.alibaba.wireless.security.SecExceptionCode;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
+import kotlin.coroutines.intrinsics.b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function2;
@@ -62,7 +62,7 @@ public final class HorizontalPageView$bindView$3 extends SuspendLambda implement
             if (AndroidInstantRuntime.support(ipChange, "210873429")) {
                 return ipChange.ipc$dispatch("210873429", new Object[]{this, obj});
             }
-            C8234b.d();
+            b.d();
             if (this.label == 0) {
                 i32.b(obj);
                 this.this$0.getRecyclerView().smoothScrollBy(this.$scrllor.element, 0, null, 1500);
@@ -110,7 +110,7 @@ public final class HorizontalPageView$bindView$3 extends SuspendLambda implement
             if (AndroidInstantRuntime.support(ipChange, "904266134")) {
                 return ipChange.ipc$dispatch("904266134", new Object[]{this, obj});
             }
-            C8234b.d();
+            b.d();
             if (this.label == 0) {
                 i32.b(obj);
                 this.this$0.getRecyclerView().smoothScrollBy(-this.$scrllor.element, 0, null, 1500);
@@ -166,7 +166,7 @@ public final class HorizontalPageView$bindView$3 extends SuspendLambda implement
             java.lang.Object r11 = r0.ipc$dispatch(r1, r2)
             return r11
         L18:
-            java.lang.Object r0 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r0 = kotlin.coroutines.intrinsics.a.d()
             int r1 = r10.label
             r2 = 0
             r6 = 4
@@ -198,7 +198,7 @@ public final class HorizontalPageView$bindView$3 extends SuspendLambda implement
             r11.b(r5)
             r8 = 3000(0xbb8, double:1.482E-320)
             r10.label = r5
-            java.lang.Object r11 = kotlinx.coroutines.C8696j.a(r8, r10)
+            java.lang.Object r11 = kotlinx.coroutines.j.a(r8, r10)
             if (r11 != r0) goto L56
             return r0
         L56:
@@ -208,13 +208,13 @@ public final class HorizontalPageView$bindView$3 extends SuspendLambda implement
             kotlin.jvm.internal.Ref$IntRef r9 = r10.$scrllor
             r1.<init>(r8, r9, r2)
             r10.label = r4
-            java.lang.Object r11 = kotlinx.coroutines.C8658e.e(r11, r1, r10)
+            java.lang.Object r11 = kotlinx.coroutines.e.e(r11, r1, r10)
             if (r11 != r0) goto L6c
             return r0
         L6c:
             r8 = 2000(0x7d0, double:9.88E-321)
             r10.label = r7
-            java.lang.Object r11 = kotlinx.coroutines.C8696j.a(r8, r10)
+            java.lang.Object r11 = kotlinx.coroutines.j.a(r8, r10)
             if (r11 != r0) goto L77
             return r0
         L77:
@@ -224,7 +224,7 @@ public final class HorizontalPageView$bindView$3 extends SuspendLambda implement
             kotlin.jvm.internal.Ref$IntRef r7 = r10.$scrllor
             r1.<init>(r4, r7, r2)
             r10.label = r6
-            java.lang.Object r11 = kotlinx.coroutines.C8658e.e(r11, r1, r10)
+            java.lang.Object r11 = kotlinx.coroutines.e.e(r11, r1, r10)
             if (r11 != r0) goto L8d
             return r0
         L8d:

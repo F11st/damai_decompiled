@@ -22,11 +22,11 @@ import tb.vg2;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class DefaultWXStorage implements IWXStorageAdapter {
-    private C6965a a;
+    private a a;
     private ExecutorService b;
 
     public DefaultWXStorage(Context context) {
-        this.a = new C6965a(context);
+        this.a = new a(context);
     }
 
     private void g(@Nullable Runnable runnable) {
@@ -70,7 +70,7 @@ public class DefaultWXStorage implements IWXStorageAdapter {
         try {
             if (query.moveToNext()) {
                 ContentValues contentValues = new ContentValues();
-                contentValues.put("timestamp", C6965a.d.format(new Date()));
+                contentValues.put("timestamp", a.d.format(new Date()));
                 int update = this.a.getDatabase().update("default_wx_storage", contentValues, "key= ?", new String[]{str});
                 StringBuilder sb = new StringBuilder();
                 sb.append("update timestamp ");
@@ -140,7 +140,7 @@ public class DefaultWXStorage implements IWXStorageAdapter {
         }
         WXLogUtils.d("weex_storage", "set k-v to storage(key:" + str + ",value:" + str2 + ",isPersistent:" + z + ",allowRetry:" + z2 + jn1.BRACKET_END_STR);
         SQLiteStatement sQLiteStatement = null;
-        String format = C6965a.d.format(new Date());
+        String format = a.d.format(new Date());
         try {
             try {
                 sQLiteStatement = database.compileStatement("INSERT OR REPLACE INTO default_wx_storage VALUES (?,?,?,?);");

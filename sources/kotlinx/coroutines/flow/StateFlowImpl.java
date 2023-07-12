@@ -1,7 +1,6 @@
 package kotlinx.coroutines.flow;
 
 import java.util.List;
-import kotlin.collections.C8213l;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
 import kotlinx.coroutines.channels.BufferOverflow;
@@ -17,7 +16,7 @@ import tb.wt2;
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public final class StateFlowImpl<T> extends h2<C8689n> implements MutableStateFlow<T>, CancellableFlow<T>, FusibleFlow<T> {
+public final class StateFlowImpl<T> extends h2<n> implements MutableStateFlow<T>, CancellableFlow<T>, FusibleFlow<T> {
     private volatile Object _state;
     private int e;
 
@@ -27,7 +26,7 @@ public final class StateFlowImpl<T> extends h2<C8689n> implements MutableStateFl
 
     private final boolean h(Object obj, Object obj2) {
         int i;
-        C8689n[] e;
+        n[] e;
         e();
         synchronized (this) {
             Object obj3 = this._state;
@@ -42,13 +41,13 @@ public final class StateFlowImpl<T> extends h2<C8689n> implements MutableStateFl
             if ((i2 & 1) == 0) {
                 int i3 = i2 + 1;
                 this.e = i3;
-                C8689n[] e2 = e();
+                n[] e2 = e();
                 wt2 wt2Var = wt2.INSTANCE;
                 while (true) {
                     if (e2 != null) {
-                        for (C8689n c8689n : e2) {
-                            if (c8689n != null) {
-                                c8689n.f();
+                        for (n nVar : e2) {
+                            if (nVar != null) {
+                                nVar.f();
                             }
                         }
                     }
@@ -121,29 +120,29 @@ public final class StateFlowImpl<T> extends h2<C8689n> implements MutableStateFl
     @Override // tb.h2
     @NotNull
     /* renamed from: f */
-    public C8689n b() {
-        return new C8689n();
+    public n b() {
+        return new n();
     }
 
     @Override // kotlinx.coroutines.flow.internal.FusibleFlow
     @NotNull
     public Flow<T> fuse(@NotNull CoroutineContext coroutineContext, int i, @NotNull BufferOverflow bufferOverflow) {
-        return C8688m.d(this, coroutineContext, i, bufferOverflow);
+        return m.d(this, coroutineContext, i, bufferOverflow);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // tb.h2
     @NotNull
     /* renamed from: g */
-    public C8689n[] c(int i) {
-        return new C8689n[i];
+    public n[] c(int i) {
+        return new n[i];
     }
 
     @Override // kotlinx.coroutines.flow.SharedFlow
     @NotNull
     public List<T> getReplayCache() {
         List<T> e;
-        e = C8213l.e(getValue());
+        e = kotlin.collections.l.e(getValue());
         return e;
     }
 

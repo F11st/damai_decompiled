@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.load.java;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import kotlin.jvm.JvmName;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
+import kotlin.reflect.jvm.internal.impl.builtins.b;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -49,7 +49,7 @@ public final class SpecialBuiltinMembers {
     }
 
     private static final CallableMemberDescriptor c(CallableMemberDescriptor callableMemberDescriptor) {
-        if (AbstractC8271b.e0(callableMemberDescriptor)) {
+        if (b.e0(callableMemberDescriptor)) {
             return d(callableMemberDescriptor);
         }
         return null;
@@ -98,7 +98,7 @@ public final class SpecialBuiltinMembers {
                     @NotNull
                     public final Boolean invoke(@NotNull CallableMemberDescriptor callableMemberDescriptor) {
                         b41.i(callableMemberDescriptor, AdvanceSetting.NETWORK_TYPE);
-                        return Boolean.valueOf(AbstractC8271b.e0(callableMemberDescriptor) && BuiltinMethodsWithSpecialGenericSignature.m(callableMemberDescriptor) != null);
+                        return Boolean.valueOf(b.e0(callableMemberDescriptor) && BuiltinMethodsWithSpecialGenericSignature.m(callableMemberDescriptor) != null);
                     }
                 }, 1, null);
             }
@@ -119,7 +119,7 @@ public final class SpecialBuiltinMembers {
             }
             if (!(s instanceof JavaClassDescriptor)) {
                 if (mq2.b(s.getDefaultType(), defaultType) != null) {
-                    return !AbstractC8271b.e0(s);
+                    return !b.e0(s);
                 }
             }
             s = d70.s(s);
@@ -133,6 +133,6 @@ public final class SpecialBuiltinMembers {
 
     public static final boolean h(@NotNull CallableMemberDescriptor callableMemberDescriptor) {
         b41.i(callableMemberDescriptor, "<this>");
-        return g(callableMemberDescriptor) || AbstractC8271b.e0(callableMemberDescriptor);
+        return g(callableMemberDescriptor) || b.e0(callableMemberDescriptor);
     }
 }

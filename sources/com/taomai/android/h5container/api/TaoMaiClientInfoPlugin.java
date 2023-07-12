@@ -23,16 +23,15 @@ public final class TaoMaiClientInfoPlugin extends TaoMaiApiPlugin {
     @NotNull
     public static final String BRIDGE_NAME = "TMClient";
     @NotNull
-    public static final C7001a Companion = new C7001a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TaoMaiClientInfoPlugin$a */
     /* loaded from: classes11.dex */
-    public static final class C7001a {
-        private C7001a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C7001a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

@@ -8,7 +8,7 @@ import io.reactivex.internal.queue.SpscArrayQueue;
 import io.reactivex.internal.schedulers.SchedulerMultiWorkerSupport;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import io.reactivex.internal.util.BackpressureHelper;
-import io.reactivex.parallel.AbstractC8161a;
+import io.reactivex.parallel.a;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 import org.reactivestreams.Subscriber;
@@ -17,10 +17,10 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ParallelRunOn<T> extends AbstractC8161a<T> {
+public final class ParallelRunOn<T> extends a<T> {
     final int prefetch;
     final Scheduler scheduler;
-    final AbstractC8161a<? extends T> source;
+    final a<? extends T> source;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -528,8 +528,8 @@ public final class ParallelRunOn<T> extends AbstractC8161a<T> {
         }
     }
 
-    public ParallelRunOn(AbstractC8161a<? extends T> abstractC8161a, Scheduler scheduler, int i) {
-        this.source = abstractC8161a;
+    public ParallelRunOn(a<? extends T> aVar, Scheduler scheduler, int i) {
+        this.source = aVar;
         this.scheduler = scheduler;
         this.prefetch = i;
     }
@@ -544,12 +544,12 @@ public final class ParallelRunOn<T> extends AbstractC8161a<T> {
         }
     }
 
-    @Override // io.reactivex.parallel.AbstractC8161a
+    @Override // io.reactivex.parallel.a
     public int parallelism() {
         return this.source.parallelism();
     }
 
-    @Override // io.reactivex.parallel.AbstractC8161a
+    @Override // io.reactivex.parallel.a
     public void subscribe(Subscriber<? super T>[] subscriberArr) {
         if (validate(subscriberArr)) {
             int length = subscriberArr.length;

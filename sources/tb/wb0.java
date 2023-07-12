@@ -1,7 +1,6 @@
 package tb;
 
 import com.alibaba.pictures.dolores.DoloresKernel;
-import com.alibaba.pictures.dolores.business.C3604a;
 import com.alibaba.pictures.dolores.business.IRequestInterceptor;
 import com.alibaba.pictures.dolores.request.DoloresRequest;
 import com.alibaba.pictures.dolores.response.BizResponseType;
@@ -22,7 +21,7 @@ public final class wb0<BizResponse> extends DoloresKernel<BizResponse> {
     private DoloresRequest<BizResponse> t;
     @Nullable
     private IRemoteDataTransformer<BizResponse> u;
-    private C3604a v;
+    private com.alibaba.pictures.dolores.business.a v;
 
     private final void M(int i, String str, String str2, String str3, String str4, String str5) {
         IpChange ipChange = $ipChange;
@@ -48,8 +47,8 @@ public final class wb0<BizResponse> extends DoloresKernel<BizResponse> {
             return (p01) ipChange.ipc$dispatch("1624581519", new Object[]{this});
         }
         C("httpUrlRequest:begin");
-        C3604a c3604a = this.v;
-        p01 i = c3604a != null ? c3604a.i() : null;
+        com.alibaba.pictures.dolores.business.a aVar = this.v;
+        p01 i = aVar != null ? aVar.i() : null;
         C("httpUrlRequest:end");
         return i;
     }
@@ -66,23 +65,23 @@ public final class wb0<BizResponse> extends DoloresKernel<BizResponse> {
             q.onRequestConfig(this, m());
         }
         if (m() instanceof na) {
-            C3604a c3604a = new C3604a();
+            com.alibaba.pictures.dolores.business.a aVar = new com.alibaba.pictures.dolores.business.a();
             DoloresRequest<BizResponse> m = m();
             Objects.requireNonNull(m, "null cannot be cast to non-null type com.alibaba.pictures.request.BaseHttpRequest<BizResponse>");
-            c3604a.h((na) m);
+            aVar.h((na) m);
             y12 p = p();
             if (p != null) {
                 Boolean f = p.f();
                 Boolean bool = Boolean.TRUE;
                 if (!b41.d(f, bool) && !b41.d(w(), bool)) {
-                    c3604a.e(ReqProtocolEnum.HTTP);
+                    aVar.e(ReqProtocolEnum.HTTP);
                 } else {
-                    c3604a.e(ReqProtocolEnum.HTTP_SECURE);
+                    aVar.e(ReqProtocolEnum.HTTP_SECURE);
                 }
                 if (!b41.d(p.h(), bool) && !b41.d(v(), bool)) {
-                    c3604a.g(ReqMethodEnum.POST);
+                    aVar.g(ReqMethodEnum.POST);
                 } else {
-                    c3604a.g(ReqMethodEnum.GET);
+                    aVar.g(ReqMethodEnum.GET);
                 }
                 Map<String, String> a = p.a();
                 if (a != null) {
@@ -90,13 +89,13 @@ public final class wb0<BizResponse> extends DoloresKernel<BizResponse> {
                         a = null;
                     }
                     if (a != null) {
-                        c3604a.c(a);
+                        aVar.c(a);
                     }
                 }
                 J(p.e());
             }
             wt2 wt2Var = wt2.INSTANCE;
-            this.v = c3604a;
+            this.v = aVar;
         }
     }
 
@@ -204,9 +203,9 @@ public final class wb0<BizResponse> extends DoloresKernel<BizResponse> {
         if (AndroidInstantRuntime.support(ipChange, "1308013116")) {
             return ((Boolean) ipChange.ipc$dispatch("1308013116", new Object[]{this, Boolean.valueOf(z)})).booleanValue();
         }
-        C3604a c3604a = this.v;
-        if (c3604a != null) {
-            c3604a.a();
+        com.alibaba.pictures.dolores.business.a aVar = this.v;
+        if (aVar != null) {
+            aVar.a();
         }
         return super.d(z);
     }

@@ -51,12 +51,11 @@ public class WXPickersModule extends WXModule {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.appfram.pickers.WXPickersModule$a */
     /* loaded from: classes11.dex */
-    public class C6955a implements DatePickerImpl.OnPickListener {
+    public class a implements DatePickerImpl.OnPickListener {
         final /* synthetic */ JSCallback a;
 
-        C6955a(WXPickersModule wXPickersModule, JSCallback jSCallback) {
+        a(WXPickersModule wXPickersModule, JSCallback jSCallback) {
             this.a = jSCallback;
         }
 
@@ -78,12 +77,11 @@ public class WXPickersModule extends WXModule {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.appfram.pickers.WXPickersModule$b */
     /* loaded from: classes11.dex */
-    public class C6956b implements DatePickerImpl.OnPickListener {
+    public class b implements DatePickerImpl.OnPickListener {
         final /* synthetic */ JSCallback a;
 
-        C6956b(WXPickersModule wXPickersModule, JSCallback jSCallback) {
+        b(WXPickersModule wXPickersModule, JSCallback jSCallback) {
             this.a = jSCallback;
         }
 
@@ -105,12 +103,11 @@ public class WXPickersModule extends WXModule {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.appfram.pickers.WXPickersModule$c */
     /* loaded from: classes11.dex */
-    public class DialogInterface$OnClickListenerC6957c implements DialogInterface.OnClickListener {
+    public class c implements DialogInterface.OnClickListener {
         final /* synthetic */ JSCallback a;
 
-        DialogInterface$OnClickListenerC6957c(WXPickersModule wXPickersModule, JSCallback jSCallback) {
+        c(WXPickersModule wXPickersModule, JSCallback jSCallback) {
             this.a = jSCallback;
         }
 
@@ -125,12 +122,11 @@ public class WXPickersModule extends WXModule {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.appfram.pickers.WXPickersModule$d */
     /* loaded from: classes11.dex */
-    public class DialogInterface$OnClickListenerC6958d implements DialogInterface.OnClickListener {
+    public class d implements DialogInterface.OnClickListener {
         final /* synthetic */ JSCallback a;
 
-        DialogInterface$OnClickListenerC6958d(JSCallback jSCallback) {
+        d(JSCallback jSCallback) {
             this.a = jSCallback;
         }
 
@@ -173,11 +169,11 @@ public class WXPickersModule extends WXModule {
     }
 
     private void performPickDate(Map<String, Object> map, JSCallback jSCallback) {
-        DatePickerImpl.c(this.mWXSDKInstance.getContext(), (String) getOption(map, "value", ""), (String) getOption(map, "max", ""), (String) getOption(map, "min", ""), new C6956b(this, jSCallback), map);
+        DatePickerImpl.c(this.mWXSDKInstance.getContext(), (String) getOption(map, "value", ""), (String) getOption(map, "max", ""), (String) getOption(map, "min", ""), new b(this, jSCallback), map);
     }
 
     private void performPickTime(Map<String, Object> map, JSCallback jSCallback) {
-        DatePickerImpl.d(this.mWXSDKInstance.getContext(), (String) getOption(map, "value", ""), new C6955a(this, jSCallback), map);
+        DatePickerImpl.d(this.mWXSDKInstance.getContext(), (String) getOption(map, "value", ""), new a(this, jSCallback), map);
     }
 
     private void performSinglePick(List<String> list, final Map<String, Object> map, JSCallback jSCallback) {
@@ -205,7 +201,7 @@ public class WXPickersModule extends WXModule {
                 return view2;
             }
         };
-        final AlertDialog create = new AlertDialog.Builder(this.mWXSDKInstance.getContext()).setAdapter(arrayAdapter, null).setPositiveButton(17039370, new DialogInterface$OnClickListenerC6958d(jSCallback)).setNegativeButton(17039360, new DialogInterface$OnClickListenerC6957c(this, jSCallback)).setCustomTitle(makeTitleView(this.mWXSDKInstance.getContext(), map)).create();
+        final AlertDialog create = new AlertDialog.Builder(this.mWXSDKInstance.getContext()).setAdapter(arrayAdapter, null).setPositiveButton(17039370, new d(jSCallback)).setNegativeButton(17039360, new c(this, jSCallback)).setCustomTitle(makeTitleView(this.mWXSDKInstance.getContext(), map)).create();
         if (Build.VERSION.SDK_INT >= 21) {
             create.create();
         }

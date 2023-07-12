@@ -29,16 +29,15 @@ public final class ScopesHolderForClass<T extends MemberScope> {
     private final NotNullLazyValue d;
     static final /* synthetic */ KProperty<Object>[] e = {a12.i(new PropertyReference1Impl(a12.b(ScopesHolderForClass.class), "scopeForOwnerModule", "getScopeForOwnerModule()Lorg/jetbrains/kotlin/resolve/scopes/MemberScope;"))};
     @NotNull
-    public static final C8295a Companion = new C8295a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.ScopesHolderForClass$a */
     /* loaded from: classes3.dex */
-    public static final class C8295a {
-        private C8295a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8295a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

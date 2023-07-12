@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -19,8 +19,8 @@ import cn.damai.tetris.component.drama.viewholder.OnItemBindListener;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.List;
-import tb.C9826vr;
 import tb.m62;
+import tb.vr;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
@@ -64,17 +64,17 @@ public class ThemeRankAdapter extends RecyclerView.Adapter<RankVh> {
             } else {
                 this.h.setImageResource(R$drawable.icon_rank_head_default);
                 Object tag = this.h.getTag();
-                if (tag instanceof C9826vr) {
-                    ((C9826vr) tag).cancel();
+                if (tag instanceof vr) {
+                    ((vr) tag).cancel();
                 }
-                C9826vr c9826vr = null;
+                vr vrVar = null;
                 String str = rankUserBean.headPic;
                 if (!TextUtils.isEmpty(str)) {
-                    C0504a b = C0504a.b();
+                    a b = a.b();
                     int i2 = this.i;
-                    c9826vr = b.f(str, i2, i2).g(this.h);
+                    vrVar = b.f(str, i2, i2).g(this.h);
                 }
-                this.h.setTag(c9826vr);
+                this.h.setTag(vrVar);
                 this.e.setVisibility(rankUserBean.isCurrentLoginUser ? 0 : 8);
                 this.d.setText(rankUserBean.nickName);
                 this.g.setImageResource(rankUserBean.getMaskDrawableRid());

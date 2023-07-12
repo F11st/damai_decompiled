@@ -15,7 +15,6 @@ import com.android.alibaba.ip.runtime.IpChange;
 import com.huawei.hms.support.api.entity.core.CommonCode;
 import io.flutter.wpkbridge.WPKFactory;
 import java.util.List;
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -38,7 +37,7 @@ public final class ap2 {
      */
     /* JADX WARN: Code restructure failed: missing block: B:18:0x0047, code lost:
         r2 = (java.lang.String) r13.next();
-        r3 = kotlin.text.C8604o.F(r2, "tel:", false, 2, null);
+        r3 = kotlin.text.o.F(r2, "tel:", false, 2, null);
      */
     /* JADX WARN: Code restructure failed: missing block: B:19:0x0053, code lost:
         if (r3 == false) goto L25;
@@ -87,7 +86,7 @@ public final class ap2 {
             r10 = 6
             r11 = 0
             r6 = r13
-            java.util.List r13 = kotlin.text.C8596g.t0(r6, r7, r8, r9, r10, r11)     // Catch: java.lang.Exception -> L6f
+            java.util.List r13 = kotlin.text.g.t0(r6, r7, r8, r9, r10, r11)     // Catch: java.lang.Exception -> L6f
             if (r13 == 0) goto L36
             boolean r1 = r13.isEmpty()     // Catch: java.lang.Exception -> L6f
             if (r1 == 0) goto L35
@@ -105,7 +104,7 @@ public final class ap2 {
             java.lang.Object r2 = r13.next()     // Catch: java.lang.Exception -> L6f
             java.lang.String r2 = (java.lang.String) r2     // Catch: java.lang.Exception -> L6f
             java.lang.String r3 = "tel:"
-            boolean r3 = kotlin.text.C8596g.F(r2, r3, r5, r4, r0)     // Catch: java.lang.Exception -> L6f
+            boolean r3 = kotlin.text.g.F(r2, r3, r5, r4, r0)     // Catch: java.lang.Exception -> L6f
             if (r3 == 0) goto L64
             r3 = 4
             int r6 = r2.length()     // Catch: java.lang.Exception -> L6f
@@ -216,12 +215,12 @@ public final class ap2 {
             ipChange.ipc$dispatch("-130251895", new Object[]{this, activity, str});
         } else if (activity == null || activity.isFinishing() || str == null) {
         } else {
-            s = C8604o.s(str);
+            s = kotlin.text.o.s(str);
             if (s) {
                 return;
             }
             try {
-                F = C8604o.F(str, "tel", false, 2, null);
+                F = kotlin.text.o.F(str, "tel", false, 2, null);
                 if (F) {
                     parse = Uri.parse(str);
                 } else {

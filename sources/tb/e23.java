@@ -18,7 +18,6 @@ import java.security.MessageDigest;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Future;
-import kotlin.text.C8604o;
 import mtopsdk.mtop.util.ErrorConstant;
 import org.apache.commons.codec.digest.MessageDigestAlgorithms;
 import org.jetbrains.annotations.NotNull;
@@ -29,18 +28,17 @@ import org.jetbrains.annotations.Nullable;
 public final class e23 implements HttpLoader {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C9067a Companion = new C9067a(null);
+    public static final a Companion = new a(null);
     private XcdnEngine a;
     private final qh1 b;
     private final Context c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.e23$a */
     /* loaded from: classes7.dex */
-    public static final class C9067a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9067a() {
+        private a() {
         }
 
         /* JADX INFO: Access modifiers changed from: private */
@@ -80,20 +78,19 @@ public final class e23 implements HttpLoader {
             }
         }
 
-        public /* synthetic */ C9067a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.e23$b */
     /* loaded from: classes7.dex */
-    public static final class C9068b implements XcdnEngine.Callback {
+    public static final class b implements XcdnEngine.Callback {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String b;
         final /* synthetic */ HttpLoader.FinishCallback c;
 
-        C9068b(String str, HttpLoader.FinishCallback finishCallback) {
+        b(String str, HttpLoader.FinishCallback finishCallback) {
             this.b = str;
             this.c = finishCallback;
         }
@@ -135,7 +132,7 @@ public final class e23 implements HttpLoader {
         if (AndroidInstantRuntime.support(ipChange, "258994239")) {
             return ((Boolean) ipChange.ipc$dispatch("258994239", new Object[]{this, str})).booleanValue();
         }
-        F = C8604o.F(str, "http", false, 2, null);
+        F = kotlin.text.o.F(str, "http", false, 2, null);
         return F;
     }
 
@@ -174,7 +171,7 @@ public final class e23 implements HttpLoader {
         String sb2 = sb.toString();
         XcdnEngine xcdnEngine = this.a;
         b41.f(xcdnEngine);
-        long xcdnDownload = xcdnEngine.xcdnDownload(str, sb2, hashMap, new C9068b(sb2, finishCallback));
+        long xcdnDownload = xcdnEngine.xcdnDownload(str, sb2, hashMap, new b(sb2, finishCallback));
         if (xcdnDownload < 0) {
             finishCallback.onError(new HttpCodeResponseException((int) xcdnDownload));
             return null;

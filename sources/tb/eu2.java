@@ -4,10 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.Set;
-import kotlin.collections.C8226x;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.jvm.JvmStatic;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
 import kotlin.reflect.jvm.internal.impl.builtins.UnsignedArrayType;
 import kotlin.reflect.jvm.internal.impl.builtins.UnsignedType;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
@@ -48,7 +46,7 @@ public final class eu2 {
         CollectionsKt___CollectionsKt.E0(arrayList2);
         b = new HashMap<>();
         c = new HashMap<>();
-        C8226x.k(hq2.a(UnsignedArrayType.UBYTEARRAY, ni1.f("ubyteArrayOf")), hq2.a(UnsignedArrayType.USHORTARRAY, ni1.f("ushortArrayOf")), hq2.a(UnsignedArrayType.UINTARRAY, ni1.f("uintArrayOf")), hq2.a(UnsignedArrayType.ULONGARRAY, ni1.f("ulongArrayOf")));
+        kotlin.collections.x.k(hq2.a(UnsignedArrayType.UBYTEARRAY, ni1.f("ubyteArrayOf")), hq2.a(UnsignedArrayType.USHORTARRAY, ni1.f("ushortArrayOf")), hq2.a(UnsignedArrayType.UINTARRAY, ni1.f("uintArrayOf")), hq2.a(UnsignedArrayType.ULONGARRAY, ni1.f("ulongArrayOf")));
         UnsignedType[] values3 = UnsignedType.values();
         LinkedHashSet linkedHashSet = new LinkedHashSet();
         for (UnsignedType unsignedType2 : values3) {
@@ -92,6 +90,6 @@ public final class eu2 {
     public final boolean c(@NotNull DeclarationDescriptor declarationDescriptor) {
         b41.i(declarationDescriptor, "descriptor");
         DeclarationDescriptor containingDeclaration = declarationDescriptor.getContainingDeclaration();
-        return (containingDeclaration instanceof PackageFragmentDescriptor) && b41.d(((PackageFragmentDescriptor) containingDeclaration).getFqName(), C8277c.BUILT_INS_PACKAGE_FQ_NAME) && a.contains(declarationDescriptor.getName());
+        return (containingDeclaration instanceof PackageFragmentDescriptor) && b41.d(((PackageFragmentDescriptor) containingDeclaration).getFqName(), kotlin.reflect.jvm.internal.impl.builtins.c.BUILT_INS_PACKAGE_FQ_NAME) && a.contains(declarationDescriptor.getName());
     }
 }

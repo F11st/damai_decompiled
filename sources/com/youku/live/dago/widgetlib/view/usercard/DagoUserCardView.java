@@ -229,7 +229,7 @@ public class DagoUserCardView extends FrameLayout implements View.OnClickListene
             ipChange.ipc$dispatch("-1604489315", new Object[]{this});
             return;
         }
-        LayoutInflater.from(getContext()).inflate(R.C7942layout.dago_pgc_user_card_layout, this);
+        LayoutInflater.from(getContext()).inflate(R.layout.dago_pgc_user_card_layout, this);
         this.mIvAvatar = (ImageView) findViewById(R.id.iv_anchor_avatar);
         this.mLayoutWrapper = (LinearLayout) findViewById(R.id.layout_dago_user_card_wapper);
         if (WidgetSDKEngine.getOrientation() == Orientation.ORIENTATION_LANDSCAPE && Build.VERSION.SDK_INT >= 21) {
@@ -263,7 +263,7 @@ public class DagoUserCardView extends FrameLayout implements View.OnClickListene
         this.mBtnLiveManageSmall.setOnClickListener(this);
         this.mAvatarBg = (FrameLayout) findViewById(R.id.layout_user_card_avatar_bg);
         this.mIvYoukuTag = (ImageView) findViewById(R.id.iv_user_card_youku_tag);
-        View inflate = LayoutInflater.from(getContext()).inflate(R.C7942layout.dago_pgc_user_card_videos_header, (ViewGroup) null, false);
+        View inflate = LayoutInflater.from(getContext()).inflate(R.layout.dago_pgc_user_card_videos_header, (ViewGroup) null, false);
         this.mBtnHeaderView = inflate;
         inflate.setBackgroundColor(-1);
         this.mTvID = (TextView) this.mBtnHeaderView.findViewById(R.id.tv_dago_user_card_anchor_id);
@@ -390,14 +390,14 @@ public class DagoUserCardView extends FrameLayout implements View.OnClickListene
         UserCardInfo userCardInfo = this.mUserCardInfo;
         if (userCardInfo != null) {
             if (userCardInfo.localType == 0) {
-                this.mImgPrivateChat.setImageResource(R.C7941drawable.dago_pgc_user_card_private_chat_btn_icon);
+                this.mImgPrivateChat.setImageResource(R.drawable.dago_pgc_user_card_private_chat_btn_icon);
                 return;
             } else {
-                this.mImgPrivateChat.setImageResource(R.C7941drawable.dago_pgc_user_card_private_chat_btn_icon_no_click);
+                this.mImgPrivateChat.setImageResource(R.drawable.dago_pgc_user_card_private_chat_btn_icon_no_click);
                 return;
             }
         }
-        this.mImgPrivateChat.setImageResource(R.C7941drawable.dago_pgc_user_card_private_chat_btn_icon_no_click);
+        this.mImgPrivateChat.setImageResource(R.drawable.dago_pgc_user_card_private_chat_btn_icon_no_click);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -478,14 +478,14 @@ public class DagoUserCardView extends FrameLayout implements View.OnClickListene
         UserCardInfo userCardInfo = this.mUserCardInfo;
         if (userCardInfo != null) {
             if (userCardInfo.localType == 0) {
-                this.mImgHome.setImageResource(R.C7941drawable.dago_pgc_user_card_home_btn_icon);
+                this.mImgHome.setImageResource(R.drawable.dago_pgc_user_card_home_btn_icon);
                 return;
             } else {
-                this.mImgHome.setImageResource(R.C7941drawable.dago_pgc_user_card_home_btn_icon_no_click);
+                this.mImgHome.setImageResource(R.drawable.dago_pgc_user_card_home_btn_icon_no_click);
                 return;
             }
         }
-        this.mImgHome.setImageResource(R.C7941drawable.dago_pgc_user_card_home_btn_icon_no_click);
+        this.mImgHome.setImageResource(R.drawable.dago_pgc_user_card_home_btn_icon_no_click);
     }
 
     private void updatePrivateChatRedPoint() {
@@ -778,15 +778,15 @@ public class DagoUserCardView extends FrameLayout implements View.OnClickListene
                 if (i2 == 2) {
                     this.mIvGender.setVisibility(8);
                 } else if (i2 == 0) {
-                    this.mIvGender.setImageResource(R.C7941drawable.dago_pgc_user_card_female_icon);
+                    this.mIvGender.setImageResource(R.drawable.dago_pgc_user_card_female_icon);
                     this.mIvGender.setVisibility(0);
                 } else {
-                    this.mIvGender.setImageResource(R.C7941drawable.dago_pgc_user_card_male_icon);
+                    this.mIvGender.setImageResource(R.drawable.dago_pgc_user_card_male_icon);
                     this.mIvGender.setVisibility(0);
                 }
                 this.mIvLevel.setVisibility(0);
             } else if (i == 2) {
-                this.mIvAvatar.setImageResource(R.C7941drawable.dago_user_card_visitor_img);
+                this.mIvAvatar.setImageResource(R.drawable.dago_user_card_visitor_img);
                 this.mTvID.setText("");
                 this.mTvName.setText(userCardInfo.nickName);
                 this.mTvIntroduction.setText("");
@@ -794,34 +794,34 @@ public class DagoUserCardView extends FrameLayout implements View.OnClickListene
                 this.mIvLevel.setVisibility(8);
             }
             if (userCardInfo.isPugc == 1) {
-                this.mAvatarBg.setBackgroundResource(R.C7941drawable.dago_pgc_user_card_anchor_avatar_tag_circle);
+                this.mAvatarBg.setBackgroundResource(R.drawable.dago_pgc_user_card_anchor_avatar_tag_circle);
                 this.mIvYoukuTag.setVisibility(0);
             } else {
-                this.mAvatarBg.setBackgroundResource(R.C7941drawable.dago_pgc_user_card_anchor_avatar_bg);
+                this.mAvatarBg.setBackgroundResource(R.drawable.dago_pgc_user_card_anchor_avatar_bg);
                 this.mIvYoukuTag.setVisibility(8);
             }
-            int i3 = R.C7941drawable.dago_user_card_userlevel_normal;
+            int i3 = R.drawable.dago_user_card_userlevel_normal;
             switch (userCardInfo.userLevel) {
                 case 1:
-                    i3 = R.C7941drawable.dago_user_card_userlevel_1;
+                    i3 = R.drawable.dago_user_card_userlevel_1;
                     break;
                 case 2:
-                    i3 = R.C7941drawable.dago_user_card_userlevel_2;
+                    i3 = R.drawable.dago_user_card_userlevel_2;
                     break;
                 case 3:
-                    i3 = R.C7941drawable.dago_user_card_userlevel_3;
+                    i3 = R.drawable.dago_user_card_userlevel_3;
                     break;
                 case 4:
-                    i3 = R.C7941drawable.dago_user_card_userlevel_4;
+                    i3 = R.drawable.dago_user_card_userlevel_4;
                     break;
                 case 5:
-                    i3 = R.C7941drawable.dago_user_card_userlevel_5;
+                    i3 = R.drawable.dago_user_card_userlevel_5;
                     break;
                 case 6:
-                    i3 = R.C7941drawable.dago_user_card_userlevel_6;
+                    i3 = R.drawable.dago_user_card_userlevel_6;
                     break;
                 case 7:
-                    i3 = R.C7941drawable.dago_user_card_userlevel_7;
+                    i3 = R.drawable.dago_user_card_userlevel_7;
                     break;
             }
             this.mIvLevel.setImageResource(i3);

@@ -15,5 +15,5 @@ public interface Monitor {
 
     void monitorSuccess(String str, String str2, String str3);
 
-    void stat(nh1.C9474a c9474a, String str);
+    void stat(nh1.a aVar, String str);
 }

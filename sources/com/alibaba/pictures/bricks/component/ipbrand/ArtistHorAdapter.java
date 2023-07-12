@@ -41,14 +41,13 @@ public class ArtistHorAdapter extends RecyclerView.Adapter<IpDramaBrandArtistHor
         private DMPosterView e;
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.pictures.bricks.component.ipbrand.ArtistHorAdapter$IpDramaBrandArtistHorViewHolder$a */
         /* loaded from: classes7.dex */
-        public class View$OnClickListenerC3479a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ BaccountInfo a;
             final /* synthetic */ int b;
 
-            View$OnClickListenerC3479a(BaccountInfo baccountInfo, int i) {
+            a(BaccountInfo baccountInfo, int i) {
                 this.a = baccountInfo;
                 this.b = i;
             }
@@ -114,7 +113,7 @@ public class ArtistHorAdapter extends RecyclerView.Adapter<IpDramaBrandArtistHor
                 if (ArtistHorAdapter.this.c != null) {
                     ArtistHorAdapter.this.c.userTrackExpose(this.itemView, baccountInfo.damaiId, i);
                 }
-                this.itemView.setOnClickListener(new View$OnClickListenerC3479a(baccountInfo, i));
+                this.itemView.setOnClickListener(new a(baccountInfo, i));
             }
         }
 

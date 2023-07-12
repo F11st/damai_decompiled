@@ -14,7 +14,7 @@ import tb.k50;
 /* loaded from: classes3.dex */
 public final class SafePublicationLazyImpl<T> implements Lazy<T>, Serializable {
     @NotNull
-    public static final C8175a Companion = new C8175a(null);
+    public static final a Companion = new a(null);
     private static final AtomicReferenceFieldUpdater<SafePublicationLazyImpl<?>, Object> valueUpdater = AtomicReferenceFieldUpdater.newUpdater(SafePublicationLazyImpl.class, Object.class, "_value");
     @Nullable
     private volatile Object _value;
@@ -26,13 +26,12 @@ public final class SafePublicationLazyImpl<T> implements Lazy<T>, Serializable {
     private volatile Function0<? extends T> initializer;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.SafePublicationLazyImpl$a */
     /* loaded from: classes3.dex */
-    public static final class C8175a {
-        private C8175a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8175a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

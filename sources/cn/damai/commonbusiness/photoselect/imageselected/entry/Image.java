@@ -15,7 +15,7 @@ public class Image implements Parcelable {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final String ADD_IMAGE = "1";
     public static final String ADD_VIDEO = "2";
-    public static final Parcelable.Creator<Image> CREATOR = new C0760a();
+    public static final Parcelable.Creator<Image> CREATOR = new a();
     public static final String TAKE_PICTURE = "3";
     private long addDate;
     private String bucketId;
@@ -38,12 +38,11 @@ public class Image implements Parcelable {
     public Uri uri;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.entry.Image$a */
     /* loaded from: classes4.dex */
-    public class C0760a implements Parcelable.Creator<Image> {
+    public class a implements Parcelable.Creator<Image> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0760a() {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

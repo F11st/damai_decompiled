@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import androidx.annotation.Nullable;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
-import cn.damai.common.util.toastutil.C0537a;
 import cn.damai.commonbusiness.seatbiz.promotion.bean.PromotionDataBean;
 import cn.damai.commonbusiness.seatbiz.seat.common.bean.region.RegionData;
 import cn.damai.commonbusiness.seatbiz.seat.common.bean.region.RegionSeatData;
@@ -46,15 +44,14 @@ import tb.sm1;
 /* loaded from: classes7.dex */
 public class TSeatPresenter extends TbSeatContract.Presenter {
     private static transient /* synthetic */ IpChange $ipChange;
-    private OnSeatUiListener mSeatUiListener = new C1692b();
+    private OnSeatUiListener mSeatUiListener = new b();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.presenter.TSeatPresenter$a */
     /* loaded from: classes7.dex */
-    public class C1691a implements Action<Object> {
+    public class a implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1691a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -69,18 +66,16 @@ public class TSeatPresenter extends TbSeatContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.presenter.TSeatPresenter$b */
     /* loaded from: classes7.dex */
-    public class C1692b implements OnSeatUiListener {
+    public class b implements OnSeatUiListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.seat.presenter.TSeatPresenter$b$a */
         /* loaded from: classes7.dex */
-        public class C1693a extends sm1 {
+        public class a extends sm1 {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1693a() {
+            a() {
             }
 
             @Override // tb.sm1
@@ -94,7 +89,7 @@ public class TSeatPresenter extends TbSeatContract.Presenter {
             }
         }
 
-        C1692b() {
+        b() {
         }
 
         @Override // cn.damai.seat.listener.seatui.ApiType
@@ -110,7 +105,7 @@ public class TSeatPresenter extends TbSeatContract.Presenter {
                 str2 = "麦麦开小差了，请稍后重试哦";
                 ((TbSeatContract.TbSeatView) TSeatPresenter.this.mView).showErrorTips("麦麦开小差了，请稍后重试哦");
             }
-            ((TbSeatContract.TbSeatView) TSeatPresenter.this.mView).showErrorView(str, str2, str3, new C1693a());
+            ((TbSeatContract.TbSeatView) TSeatPresenter.this.mView).showErrorView(str, str2, str3, new a());
         }
 
         @Override // cn.damai.seat.listener.seatui.OnSeatUiListener
@@ -182,12 +177,11 @@ public class TSeatPresenter extends TbSeatContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.presenter.TSeatPresenter$c */
     /* loaded from: classes7.dex */
-    public class C1694c implements SimpleCallBack<RegionData> {
+    public class c implements SimpleCallBack<RegionData> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1694c() {
+        c() {
         }
 
         @Override // cn.damai.seat.listener.SimpleCallBack
@@ -214,12 +208,11 @@ public class TSeatPresenter extends TbSeatContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.presenter.TSeatPresenter$d */
     /* loaded from: classes7.dex */
-    public class C1695d implements SeatComputeListener {
+    public class d implements SeatComputeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1695d() {
+        d() {
         }
 
         @Override // cn.damai.seat.listener.SeatComputeListener
@@ -256,12 +249,11 @@ public class TSeatPresenter extends TbSeatContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.presenter.TSeatPresenter$e */
     /* loaded from: classes7.dex */
-    public class C1696e implements cn.damai.seat.listener.Action {
+    public class e implements cn.damai.seat.listener.Action {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1696e() {
+        e() {
         }
 
         @Override // cn.damai.seat.listener.Action
@@ -277,12 +269,11 @@ public class TSeatPresenter extends TbSeatContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.presenter.TSeatPresenter$f */
     /* loaded from: classes7.dex */
-    public class C1697f implements OnSubmitListener {
+    public class f implements OnSubmitListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1697f() {
+        f() {
         }
 
         @Override // cn.damai.seat.listener.OnSubmitListener
@@ -395,7 +386,7 @@ public class TSeatPresenter extends TbSeatContract.Presenter {
         if (AndroidInstantRuntime.support(ipChange, "407023601")) {
             ipChange.ipc$dispatch("407023601", new Object[]{this});
         } else {
-            ((TbSeatContract.TbSeatModel) this.mModel).computeSeat(new C1695d());
+            ((TbSeatContract.TbSeatModel) this.mModel).computeSeat(new d());
         }
     }
 
@@ -445,8 +436,8 @@ public class TSeatPresenter extends TbSeatContract.Presenter {
             return;
         }
         TbParams params = ((TbSeatContract.TbSeatModel) this.mModel).getParams();
-        C0529c.e().x(o92.l().q(params.itemId + "", params.performId + ""));
-        ((TbSeatContract.TbSeatModel) this.mModel).submitSeat(new C1697f());
+        cn.damai.common.user.c.e().x(o92.l().q(params.itemId + "", params.performId + ""));
+        ((TbSeatContract.TbSeatModel) this.mModel).submitSeat(new f());
     }
 
     @Override // cn.damai.seat.contract.TbSeatContract.Presenter
@@ -458,10 +449,10 @@ public class TSeatPresenter extends TbSeatContract.Presenter {
         }
         if (priceLevel != null) {
             long j = ((TbSeatContract.TbSeatModel) this.mModel).getParams().itemId;
-            C0529c e = C0529c.e();
+            cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
             o92 l = o92.l();
             String valueOf = String.valueOf(priceLevel.originalPrice());
-            e.x(l.p(j, i, valueOf, priceLevel.getPriceType() + ""));
+            e2.x(l.p(j, i, valueOf, priceLevel.getPriceType() + ""));
         }
         ((TbSeatContract.TbSeatModel) this.mModel).changePrice(priceLevel, i);
         ((TbSeatContract.TbSeatView) this.mView).showPriceChanged(((TbSeatContract.TbSeatModel) this.mModel).getSelectPrice(), ((TbSeatContract.TbSeatModel) this.mModel).getPriceFilterPic());
@@ -489,7 +480,7 @@ public class TSeatPresenter extends TbSeatContract.Presenter {
             ipChange.ipc$dispatch("205688511", new Object[]{this, seatNew, Boolean.valueOf(z)});
             return;
         }
-        if (((TbSeatContract.TbSeatModel) this.mModel).changeSeat(seatNew, z, new C1696e())) {
+        if (((TbSeatContract.TbSeatModel) this.mModel).changeSeat(seatNew, z, new e())) {
             ((TbSeatContract.TbSeatView) this.mView).showDiffRowView(((TbSeatContract.TbSeatModel) this.mModel).shouldShowDiffRowTip());
             updateBottomBar();
             ((TbSeatContract.TbSeatView) this.mView).invalidateSeatView();
@@ -500,14 +491,14 @@ public class TSeatPresenter extends TbSeatContract.Presenter {
         if (seatNew != null) {
             TbParams params = ((TbSeatContract.TbSeatModel) this.mModel).getParams();
             if (z) {
-                C0529c.e().x(o92.l().r(params.itemId, seatNew.sid + ""));
+                cn.damai.common.user.c.e().x(o92.l().r(params.itemId, seatNew.sid + ""));
                 return;
             }
-            C0529c.e().x(o92.l().o(params.itemId + "", params.performId + "", seatNew.sid + ""));
+            cn.damai.common.user.c.e().x(o92.l().o(params.itemId + "", params.performId + "", seatNew.sid + ""));
         }
     }
 
-    @Override // cn.damai.common.app.base.AbstractC0470a
+    @Override // cn.damai.common.app.base.a
     public void onStart() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1179320883")) {
@@ -515,7 +506,7 @@ public class TSeatPresenter extends TbSeatContract.Presenter {
             return;
         }
         super.onStart();
-        this.mDMMessage.b("seat_vr_data_bind", new C1691a());
+        this.mDMMessage.b("seat_vr_data_bind", new a());
     }
 
     @Override // cn.damai.seat.contract.TbSeatContract.Presenter
@@ -533,7 +524,7 @@ public class TSeatPresenter extends TbSeatContract.Presenter {
             }
             String img = staticSeat3DVrInfo.getImg();
             if (TextUtils.isEmpty(img)) {
-                C0537a.i(this.mContext, "VR 参数异常");
+                cn.damai.common.util.toastutil.a.i(this.mContext, "VR 参数异常");
                 return;
             }
             TbParams params = ((TbSeatContract.TbSeatModel) this.mModel).getParams();
@@ -566,7 +557,7 @@ public class TSeatPresenter extends TbSeatContract.Presenter {
         if (AndroidInstantRuntime.support(ipChange, "-1389617952")) {
             ipChange.ipc$dispatch("-1389617952", new Object[]{this, tbParams});
         } else {
-            ((TbSeatContract.TbSeatModel) this.mModel).prepare(tbParams, new C1694c());
+            ((TbSeatContract.TbSeatModel) this.mModel).prepare(tbParams, new c());
         }
     }
 }

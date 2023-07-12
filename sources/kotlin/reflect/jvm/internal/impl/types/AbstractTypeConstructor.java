@@ -3,15 +3,13 @@ package kotlin.reflect.jvm.internal.impl.types;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import java.util.Collection;
 import java.util.List;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8214m;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.l;
+import kotlin.collections.m;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.SupertypeLoopChecker;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
@@ -32,7 +30,7 @@ import tb.z71;
 /* loaded from: classes3.dex */
 public abstract class AbstractTypeConstructor extends pj {
     @NotNull
-    private final NotNullLazyValue<C8536a> b;
+    private final NotNullLazyValue<a> b;
     private final boolean c;
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -51,7 +49,7 @@ public abstract class AbstractTypeConstructor extends pj {
             b41.i(b81Var, "kotlinTypeRefiner");
             this.c = abstractTypeConstructor;
             this.a = b81Var;
-            a = C8177b.a(LazyThreadSafetyMode.PUBLICATION, new Function0<List<? extends z71>>() { // from class: kotlin.reflect.jvm.internal.impl.types.AbstractTypeConstructor$ModuleViewTypeConstructor$refinedSupertypes$2
+            a = kotlin.b.a(LazyThreadSafetyMode.PUBLICATION, new Function0<List<? extends z71>>() { // from class: kotlin.reflect.jvm.internal.impl.types.AbstractTypeConstructor$ModuleViewTypeConstructor$refinedSupertypes$2
                 /* JADX INFO: Access modifiers changed from: package-private */
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
                 {
@@ -86,8 +84,8 @@ public abstract class AbstractTypeConstructor extends pj {
 
         @Override // kotlin.reflect.jvm.internal.impl.types.TypeConstructor
         @NotNull
-        public AbstractC8271b getBuiltIns() {
-            AbstractC8271b builtIns = this.c.getBuiltIns();
+        public kotlin.reflect.jvm.internal.impl.builtins.b getBuiltIns() {
+            kotlin.reflect.jvm.internal.impl.builtins.b builtIns = this.c.getBuiltIns();
             b41.h(builtIns, "this@AbstractTypeConstructor.builtIns");
             return builtIns;
         }
@@ -130,20 +128,19 @@ public abstract class AbstractTypeConstructor extends pj {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.types.AbstractTypeConstructor$a */
     /* loaded from: classes3.dex */
-    public static final class C8536a {
+    public static final class a {
         @NotNull
         private final Collection<z71> a;
         @NotNull
         private List<? extends z71> b;
 
         /* JADX WARN: Multi-variable type inference failed */
-        public C8536a(@NotNull Collection<? extends z71> collection) {
+        public a(@NotNull Collection<? extends z71> collection) {
             List<? extends z71> e;
             b41.i(collection, "allSupertypes");
             this.a = collection;
-            e = C8213l.e(kf0.ERROR_TYPE_FOR_LOOP_IN_SUPERTYPES);
+            e = l.e(kf0.ERROR_TYPE_FOR_LOOP_IN_SUPERTYPES);
             this.b = e;
         }
 
@@ -165,7 +162,7 @@ public abstract class AbstractTypeConstructor extends pj {
 
     public AbstractTypeConstructor(@NotNull StorageManager storageManager) {
         b41.i(storageManager, "storageManager");
-        this.b = storageManager.createLazyValueWithPostCompute(new Function0<C8536a>() { // from class: kotlin.reflect.jvm.internal.impl.types.AbstractTypeConstructor$supertypes$1
+        this.b = storageManager.createLazyValueWithPostCompute(new Function0<a>() { // from class: kotlin.reflect.jvm.internal.impl.types.AbstractTypeConstructor$supertypes$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -173,39 +170,39 @@ public abstract class AbstractTypeConstructor extends pj {
 
             @Override // kotlin.jvm.functions.Function0
             @NotNull
-            public final AbstractTypeConstructor.C8536a invoke() {
-                return new AbstractTypeConstructor.C8536a(AbstractTypeConstructor.this.f());
+            public final AbstractTypeConstructor.a invoke() {
+                return new AbstractTypeConstructor.a(AbstractTypeConstructor.this.f());
             }
-        }, new Function1<Boolean, C8536a>() { // from class: kotlin.reflect.jvm.internal.impl.types.AbstractTypeConstructor$supertypes$2
+        }, new Function1<Boolean, a>() { // from class: kotlin.reflect.jvm.internal.impl.types.AbstractTypeConstructor$supertypes$2
             @Override // kotlin.jvm.functions.Function1
-            public /* bridge */ /* synthetic */ AbstractTypeConstructor.C8536a invoke(Boolean bool) {
+            public /* bridge */ /* synthetic */ AbstractTypeConstructor.a invoke(Boolean bool) {
                 return invoke(bool.booleanValue());
             }
 
             @NotNull
-            public final AbstractTypeConstructor.C8536a invoke(boolean z) {
+            public final AbstractTypeConstructor.a invoke(boolean z) {
                 List e;
-                e = C8213l.e(kf0.ERROR_TYPE_FOR_LOOP_IN_SUPERTYPES);
-                return new AbstractTypeConstructor.C8536a(e);
+                e = l.e(kf0.ERROR_TYPE_FOR_LOOP_IN_SUPERTYPES);
+                return new AbstractTypeConstructor.a(e);
             }
-        }, new Function1<C8536a, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.types.AbstractTypeConstructor$supertypes$3
+        }, new Function1<a, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.types.AbstractTypeConstructor$supertypes$3
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(1);
             }
 
             @Override // kotlin.jvm.functions.Function1
-            public /* bridge */ /* synthetic */ wt2 invoke(AbstractTypeConstructor.C8536a c8536a) {
-                invoke2(c8536a);
+            public /* bridge */ /* synthetic */ wt2 invoke(AbstractTypeConstructor.a aVar) {
+                invoke2(aVar);
                 return wt2.INSTANCE;
             }
 
             /* renamed from: invoke  reason: avoid collision after fix types in other method */
-            public final void invoke2(@NotNull AbstractTypeConstructor.C8536a c8536a) {
-                b41.i(c8536a, "supertypes");
+            public final void invoke2(@NotNull AbstractTypeConstructor.a aVar) {
+                b41.i(aVar, "supertypes");
                 SupertypeLoopChecker j = AbstractTypeConstructor.this.j();
                 AbstractTypeConstructor abstractTypeConstructor = AbstractTypeConstructor.this;
-                Collection<z71> a = c8536a.a();
+                Collection<z71> a2 = aVar.a();
                 final AbstractTypeConstructor abstractTypeConstructor2 = AbstractTypeConstructor.this;
                 Function1<TypeConstructor, Iterable<? extends z71>> function1 = new Function1<TypeConstructor, Iterable<? extends z71>>() { // from class: kotlin.reflect.jvm.internal.impl.types.AbstractTypeConstructor$supertypes$3$resultWithoutCycles$1
                     /* JADX INFO: Access modifiers changed from: package-private */
@@ -223,7 +220,7 @@ public abstract class AbstractTypeConstructor extends pj {
                     }
                 };
                 final AbstractTypeConstructor abstractTypeConstructor3 = AbstractTypeConstructor.this;
-                Collection<z71> findLoopsInSupertypesAndDisconnect = j.findLoopsInSupertypesAndDisconnect(abstractTypeConstructor, a, function1, new Function1<z71, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.types.AbstractTypeConstructor$supertypes$3$resultWithoutCycles$2
+                Collection<z71> findLoopsInSupertypesAndDisconnect = j.findLoopsInSupertypesAndDisconnect(abstractTypeConstructor, a2, function1, new Function1<z71, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.types.AbstractTypeConstructor$supertypes$3$resultWithoutCycles$2
                     /* JADX INFO: Access modifiers changed from: package-private */
                     {
                         super(1);
@@ -243,9 +240,9 @@ public abstract class AbstractTypeConstructor extends pj {
                 });
                 if (findLoopsInSupertypesAndDisconnect.isEmpty()) {
                     z71 g = AbstractTypeConstructor.this.g();
-                    findLoopsInSupertypesAndDisconnect = g == null ? null : C8213l.e(g);
+                    findLoopsInSupertypesAndDisconnect = g == null ? null : l.e(g);
                     if (findLoopsInSupertypesAndDisconnect == null) {
-                        findLoopsInSupertypesAndDisconnect = C8214m.g();
+                        findLoopsInSupertypesAndDisconnect = m.g();
                     }
                 }
                 if (AbstractTypeConstructor.this.i()) {
@@ -289,7 +286,7 @@ public abstract class AbstractTypeConstructor extends pj {
                 if (list == null) {
                     list = CollectionsKt___CollectionsKt.A0(findLoopsInSupertypesAndDisconnect);
                 }
-                c8536a.c(abstractTypeConstructor6.l(list));
+                aVar.c(abstractTypeConstructor6.l(list));
             }
         });
     }
@@ -319,7 +316,7 @@ public abstract class AbstractTypeConstructor extends pj {
     @NotNull
     protected Collection<z71> h(boolean z) {
         List g;
-        g = C8214m.g();
+        g = m.g();
         return g;
     }
 

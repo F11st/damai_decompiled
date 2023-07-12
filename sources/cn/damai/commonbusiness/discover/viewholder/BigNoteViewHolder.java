@@ -85,12 +85,11 @@ public class BigNoteViewHolder extends BaseViewHolder<NoteBean> implements View.
     private View z;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.discover.viewholder.BigNoteViewHolder$a */
     /* loaded from: classes4.dex */
-    public class C0638a implements OnItemBindListener<GridBean> {
+    public class a implements OnItemBindListener<GridBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0638a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -115,13 +114,12 @@ public class BigNoteViewHolder extends BaseViewHolder<NoteBean> implements View.
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.discover.viewholder.BigNoteViewHolder$b */
     /* loaded from: classes4.dex */
-    public class C0639b implements OnPraiseViewClickListenerNew {
+    public class b implements OnPraiseViewClickListenerNew {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        C0639b(int i) {
+        b(int i) {
             this.a = i;
         }
 
@@ -137,13 +135,12 @@ public class BigNoteViewHolder extends BaseViewHolder<NoteBean> implements View.
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.discover.viewholder.BigNoteViewHolder$c */
     /* loaded from: classes4.dex */
-    public class C0640c implements UserInfoView.DnaClickListener {
+    public class c implements UserInfoView.DnaClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C0640c(String str) {
+        c(String str) {
             this.a = str;
         }
 
@@ -166,12 +163,11 @@ public class BigNoteViewHolder extends BaseViewHolder<NoteBean> implements View.
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.discover.viewholder.BigNoteViewHolder$d */
     /* loaded from: classes4.dex */
-    public class C0641d implements BottomActionDialog.OnActionListener {
+    public class d implements BottomActionDialog.OnActionListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0641d() {
+        d() {
         }
 
         @Override // cn.damai.uikit.view.BottomActionDialog.OnActionListener
@@ -197,7 +193,7 @@ public class BigNoteViewHolder extends BaseViewHolder<NoteBean> implements View.
         this.b = (ImageView) view.findViewById(R$id.iv_selected);
         this.c = (TextView) view.findViewById(R$id.note_s1_title);
         this.d = (NineGridView) view.findViewById(R$id.comment_hl_content_pics_v2);
-        qk1 qk1Var = new qk1(mu0.a(), new C0638a());
+        qk1 qk1Var = new qk1(mu0.a(), new a());
         this.e = qk1Var;
         this.d.setAdapter(qk1Var);
         this.d.enableLog(AppConfig.v());
@@ -320,7 +316,7 @@ public class BigNoteViewHolder extends BaseViewHolder<NoteBean> implements View.
             ipChange.ipc$dispatch("-1087148011", new Object[]{this, Boolean.valueOf(z), str, str2, str3});
         } else if (z) {
             this.a.setDna(true, str + "%");
-            this.a.setDnaClickListener(new C0640c(str2));
+            this.a.setDnaClickListener(new c(str2));
         } else {
             this.a.setDna(false, null);
         }
@@ -391,7 +387,7 @@ public class BigNoteViewHolder extends BaseViewHolder<NoteBean> implements View.
         commentPraiseInfoBean.setPraiseCount(noteBean.praiseInfo.praiseCount + "");
         commentPraiseInfoBean.setHasPraised(noteBean.praiseInfo.hasPraised);
         this.i.setData(commentPraiseInfoBean, noteBean.sourceId);
-        this.i.setOnPraiseLayoutClickListenerCommon(new C0639b(i));
+        this.i.setOnPraiseLayoutClickListenerCommon(new b(i));
         if (this.u) {
             this.j.setVisibility(8);
         } else {
@@ -438,10 +434,10 @@ public class BigNoteViewHolder extends BaseViewHolder<NoteBean> implements View.
             return;
         }
         int computePosition2NextPage = nineJumpBean.computePosition2NextPage(i);
-        NineImgUtil a = NineImgUtil.a();
+        NineImgUtil a2 = NineImgUtil.a();
         Context context = this.r;
         NineJumpBean nineJumpBean2 = this.v;
-        a.d(context, 0L, nineJumpBean2.videoInfoList, nineJumpBean2.picInfoList, computePosition2NextPage);
+        a2.d(context, 0L, nineJumpBean2.videoInfoList, nineJumpBean2.picInfoList, computePosition2NextPage);
     }
 
     public List<BottomActionDialog.Action> j() {
@@ -581,7 +577,7 @@ public class BigNoteViewHolder extends BaseViewHolder<NoteBean> implements View.
                 if (cb2.d(j) || this.r == null) {
                     return;
                 }
-                new BottomActionDialog(this.r, new C0641d(), j).show();
+                new BottomActionDialog(this.r, new d(), j).show();
             } else {
                 OnItemClickListener<NoteBean> onItemClickListener = this.o;
                 if (onItemClickListener == null || (noteBean = this.p) == null) {

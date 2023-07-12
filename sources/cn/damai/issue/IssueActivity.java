@@ -10,7 +10,7 @@ import androidx.fragment.app.FragmentTransaction;
 import cn.damai.comment.R$color;
 import cn.damai.comment.R$id;
 import cn.damai.comment.R$layout;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.login.LoginManager;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -114,7 +114,7 @@ public class IssueActivity extends SimpleBaseActivity {
         this.issueFragment.setArguments(getIntent().getExtras());
         beginTransaction.replace(i, this.issueFragment);
         beginTransaction.commitAllowingStateLoss();
-        C0529c.e().K(this);
+        c.e().K(this);
     }
 
     @Override // cn.damai.common.app.base.BaseActivity

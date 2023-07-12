@@ -1,7 +1,7 @@
 package tb;
 
 import android.text.TextUtils;
-import com.taobao.android.dinamicx.C6368e;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import com.taobao.android.dinamicx.notification.DXSignalProduce;
 import com.taobao.android.dinamicx.widget.event.IDXControlEventListener;
@@ -48,11 +48,11 @@ public class bu implements DXSignalProduce.SignalReceiver {
                 }
             } catch (Throwable th) {
                 ry.b(th);
-                C6368e c6368e = new C6368e(r10.DB_NAME);
-                C6368e.C6369a c6369a = new C6368e.C6369a("ControlEventCenter", "ControlEventCenter_Exception", C6368e.DX_ERROR_CODE_CONTROL_EVENT_CENTER_EXCEPTION_CRASH);
-                c6369a.e = ry.a(th);
-                c6368e.c.add(c6369a);
-                DXAppMonitor.n(c6368e);
+                com.taobao.android.dinamicx.e eVar = new com.taobao.android.dinamicx.e(r10.DB_NAME);
+                e.a aVar = new e.a("ControlEventCenter", "ControlEventCenter_Exception", com.taobao.android.dinamicx.e.DX_ERROR_CODE_CONTROL_EVENT_CENTER_EXCEPTION_CRASH);
+                aVar.e = ry.a(th);
+                eVar.c.add(aVar);
+                DXAppMonitor.n(eVar);
                 return;
             }
         }

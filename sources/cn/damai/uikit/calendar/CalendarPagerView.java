@@ -29,7 +29,7 @@ public abstract class CalendarPagerView extends ViewGroup implements View.OnClic
     protected final Collection<DayCategoryView> dayCategoryViews;
     protected final Collection<DayLabelView> dayLabelViews;
     protected final Collection<DayView> dayViews;
-    protected final ArrayList<C2492b> decoratorResults;
+    protected final ArrayList<b> decoratorResults;
     private int firstDayOfWeek;
     private CalendarDay firstViewDay;
     private CalendarDay maxDate;
@@ -41,10 +41,9 @@ public abstract class CalendarPagerView extends ViewGroup implements View.OnClic
 
     /* JADX INFO: Access modifiers changed from: protected */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.calendar.CalendarPagerView$a */
     /* loaded from: classes17.dex */
-    public static class C2481a extends ViewGroup.MarginLayoutParams {
-        public C2481a() {
+    public static class a extends ViewGroup.MarginLayoutParams {
+        public a() {
             super(-2, -2);
         }
     }
@@ -129,7 +128,7 @@ public abstract class CalendarPagerView extends ViewGroup implements View.OnClic
     @Override // android.view.ViewGroup
     protected boolean checkLayoutParams(ViewGroup.LayoutParams layoutParams) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1748982899") ? ((Boolean) ipChange.ipc$dispatch("-1748982899", new Object[]{this, layoutParams})).booleanValue() : layoutParams instanceof C2481a;
+        return AndroidInstantRuntime.support(ipChange, "-1748982899") ? ((Boolean) ipChange.ipc$dispatch("-1748982899", new Object[]{this, layoutParams})).booleanValue() : layoutParams instanceof a;
     }
 
     protected int getFirstDayOfWeek() {
@@ -151,17 +150,17 @@ public abstract class CalendarPagerView extends ViewGroup implements View.OnClic
             ipChange.ipc$dispatch("-1460521365", new Object[]{this});
             return;
         }
-        C2490a c2490a = new C2490a();
+        cn.damai.uikit.calendar.a aVar = new cn.damai.uikit.calendar.a();
         for (DayView dayView : this.dayViews) {
-            c2490a.q();
-            Iterator<C2492b> it = this.decoratorResults.iterator();
+            aVar.q();
+            Iterator<b> it = this.decoratorResults.iterator();
             while (it.hasNext()) {
-                C2492b next = it.next();
+                b next = it.next();
                 if (next.a.shouldDecorate(dayView.getDate())) {
-                    next.b.a(c2490a);
+                    next.b.a(aVar);
                 }
             }
-            dayView.applyFacade(c2490a);
+            dayView.applyFacade(aVar);
         }
     }
 
@@ -290,7 +289,7 @@ public abstract class CalendarPagerView extends ViewGroup implements View.OnClic
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public void setDayViewDecorators(List<C2492b> list) {
+    public void setDayViewDecorators(List<b> list) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1883224952")) {
             ipChange.ipc$dispatch("1883224952", new Object[]{this, list});
@@ -416,20 +415,20 @@ public abstract class CalendarPagerView extends ViewGroup implements View.OnClic
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.view.ViewGroup
-    public C2481a generateDefaultLayoutParams() {
+    public a generateDefaultLayoutParams() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-425442014") ? (C2481a) ipChange.ipc$dispatch("-425442014", new Object[]{this}) : new C2481a();
+        return AndroidInstantRuntime.support(ipChange, "-425442014") ? (a) ipChange.ipc$dispatch("-425442014", new Object[]{this}) : new a();
     }
 
     @Override // android.view.ViewGroup
-    public C2481a generateLayoutParams(AttributeSet attributeSet) {
+    public a generateLayoutParams(AttributeSet attributeSet) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1176140707") ? (C2481a) ipChange.ipc$dispatch("-1176140707", new Object[]{this, attributeSet}) : new C2481a();
+        return AndroidInstantRuntime.support(ipChange, "-1176140707") ? (a) ipChange.ipc$dispatch("-1176140707", new Object[]{this, attributeSet}) : new a();
     }
 
     @Override // android.view.ViewGroup
     protected ViewGroup.LayoutParams generateLayoutParams(ViewGroup.LayoutParams layoutParams) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-99690799") ? (ViewGroup.LayoutParams) ipChange.ipc$dispatch("-99690799", new Object[]{this, layoutParams}) : new C2481a();
+        return AndroidInstantRuntime.support(ipChange, "-99690799") ? (ViewGroup.LayoutParams) ipChange.ipc$dispatch("-99690799", new Object[]{this, layoutParams}) : new a();
     }
 }

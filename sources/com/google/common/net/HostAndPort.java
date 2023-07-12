@@ -2,7 +2,7 @@ package com.google.common.net;
 
 import com.google.common.annotations.Beta;
 import com.google.common.annotations.GwtCompatible;
-import com.google.common.base.C4843h;
+import com.google.common.base.h;
 import com.google.errorprone.annotations.Immutable;
 import java.io.Serializable;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
@@ -63,7 +63,7 @@ public final class HostAndPort implements Serializable {
             str2 = null;
             str3 = str;
         }
-        if (!C4843h.a(str2)) {
+        if (!h.a(str2)) {
             du1.k(!str2.startsWith(jn1.PLUS), "Unparseable port number: %s", str);
             try {
                 i = Integer.parseInt(str2);

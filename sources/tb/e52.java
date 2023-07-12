@@ -1,8 +1,6 @@
 package tb;
 
 import android.graphics.Matrix;
-import com.alipay.sdk.m.s.C4293a;
-import com.huawei.hms.opendevice.AbstractC5658c;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import com.opensource.svgaplayer.SVGAVideoShapeEntity;
 import com.opensource.svgaplayer.proto.FrameEntity;
@@ -12,8 +10,6 @@ import com.opensource.svgaplayer.proto.Transform;
 import com.taobao.weex.common.Constants;
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -41,7 +37,7 @@ public final class e52 {
         b41.j(jSONObject, "obj");
         e52Var.b = new z42(0.0d, 0.0d, 0.0d, 0.0d);
         e52Var.c = new Matrix();
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         e52Var.e = g;
         e52Var.a = jSONObject.optDouble("alpha", 0.0d);
         JSONObject optJSONObject = jSONObject.optJSONObject("layout");
@@ -52,10 +48,10 @@ public final class e52 {
         if (optJSONObject2 != null) {
             double optDouble = optJSONObject2.optDouble("a", 1.0d);
             double optDouble2 = optJSONObject2.optDouble("b", 0.0d);
-            double optDouble3 = optJSONObject2.optDouble(AbstractC5658c.a, 0.0d);
+            double optDouble3 = optJSONObject2.optDouble(com.huawei.hms.opendevice.c.a, 0.0d);
             double optDouble4 = optJSONObject2.optDouble("d", 1.0d);
             double optDouble5 = optJSONObject2.optDouble("tx", 0.0d);
-            double optDouble6 = optJSONObject2.optDouble(C4293a.s, 0.0d);
+            double optDouble6 = optJSONObject2.optDouble(com.alipay.sdk.m.s.a.s, 0.0d);
             float f = (float) optDouble3;
             z = true;
             float f2 = (float) 0.0d;
@@ -123,7 +119,7 @@ public final class e52 {
         b41.j(frameEntity, "obj");
         this.b = new z42(0.0d, 0.0d, 0.0d, 0.0d);
         this.c = new Matrix();
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         this.e = g;
         this.a = frameEntity.alpha != null ? f.floatValue() : 0.0f;
         Layout layout = frameEntity.layout;
@@ -169,7 +165,7 @@ public final class e52 {
             }
         }
         List<ShapeEntity> list = frameEntity.shapes;
-        q = C8215n.q(list, 10);
+        q = kotlin.collections.n.q(list, 10);
         ArrayList arrayList = new ArrayList(q);
         for (ShapeEntity shapeEntity : list) {
             b41.e(shapeEntity, AdvanceSetting.NETWORK_TYPE);

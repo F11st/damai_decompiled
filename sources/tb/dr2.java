@@ -10,9 +10,8 @@ import org.jetbrains.annotations.NotNull;
 public final class dr2 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.dr2$a */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C9058a {
+    public /* synthetic */ class a {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -27,7 +26,7 @@ public final class dr2 {
     @NotNull
     public static final TypeVariance a(@NotNull Variance variance) {
         b41.i(variance, "<this>");
-        int i = C9058a.$EnumSwitchMapping$0[variance.ordinal()];
+        int i = a.$EnumSwitchMapping$0[variance.ordinal()];
         if (i != 1) {
             if (i != 2) {
                 if (i == 3) {

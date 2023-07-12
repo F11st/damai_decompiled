@@ -27,7 +27,6 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import cn.damai.common.DamaiConstants;
 import com.alibaba.fastjson.JSONObject;
-import com.alipay.sdk.m.x.C4345d;
 import com.huawei.hms.push.constant.RemoteMessageConst;
 import com.taobao.android.tlog.protocol.Constants;
 import com.taobao.weex.bridge.WXBridgeManager;
@@ -50,15 +49,14 @@ import com.tencent.open.SocialConstants;
 import com.uc.webview.export.extension.UCCore;
 import com.uc.webview.export.media.MessageID;
 import com.youku.arch.v3.event.Subject;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.functions.Function3;
 import kotlin.jvm.functions.Function4;
-import kotlin.text.C8604o;
 import kotlin.text.StringsKt__StringsKt;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.al2;
@@ -70,7 +68,7 @@ import tb.mo2;
 import tb.wt2;
 
 /* compiled from: Taobao */
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000æ\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b#\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\b\u000b\b\u0016\u0018\u00002\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u00042\u00020\u0005B\t¢\u0006\u0006\bÀ\u0001\u0010Á\u0001J\b\u0010\u0007\u001a\u00020\u0006H\u0002J\b\u0010\b\u001a\u00020\u0006H\u0002J\b\u0010\t\u001a\u00020\u0006H\u0002J\b\u0010\n\u001a\u00020\u0006H\u0002J\b\u0010\u000b\u001a\u00020\u0006H\u0002J\b\u0010\f\u001a\u00020\u0006H\u0002J\b\u0010\r\u001a\u00020\u0006H\u0002J\b\u0010\u000e\u001a\u00020\u0006H\u0002J\u0012\u0010\u0011\u001a\u00020\u00062\b\u0010\u0010\u001a\u0004\u0018\u00010\u000fH\u0002J\b\u0010\u0012\u001a\u00020\u0006H\u0002J\u001a\u0010\u0017\u001a\u00020\u00062\b\u0010\u0014\u001a\u0004\u0018\u00010\u00132\u0006\u0010\u0016\u001a\u00020\u0015H\u0002J\u0012\u0010\u001a\u001a\u00020\u00062\b\u0010\u0019\u001a\u0004\u0018\u00010\u0018H\u0016J&\u0010 \u001a\u0004\u0018\u00010\u001f2\u0006\u0010\u001c\u001a\u00020\u001b2\b\u0010\u001e\u001a\u0004\u0018\u00010\u001d2\b\u0010\u0019\u001a\u0004\u0018\u00010\u0018H\u0016J\u0012\u0010!\u001a\u00020\u00062\b\u0010\u0019\u001a\u0004\u0018\u00010\u0018H\u0016J\u0010\u0010#\u001a\u00020\u00062\u0006\u0010\"\u001a\u00020\u0015H\u0016J\u0010\u0010%\u001a\u00020\u00062\u0006\u0010$\u001a\u00020\u0015H\u0016J\b\u0010&\u001a\u00020\u0006H\u0016J\b\u0010'\u001a\u00020\u0006H\u0016J\b\u0010(\u001a\u00020\u0006H\u0016J\u0012\u0010*\u001a\u00020\u00062\b\u0010)\u001a\u0004\u0018\u00010\u0018H\u0016J\"\u00100\u001a\u00020\u00062\u0006\u0010,\u001a\u00020+2\u0006\u0010-\u001a\u00020+2\b\u0010/\u001a\u0004\u0018\u00010.H\u0016J\b\u00101\u001a\u00020\u0006H\u0016J\b\u00102\u001a\u00020\u0006H\u0016J\u001a\u00103\u001a\u00020\u001f2\u0006\u0010\u001c\u001a\u00020\u001b2\b\u0010\u001e\u001a\u0004\u0018\u00010\u001dH\u0016J\b\u00104\u001a\u00020\u0006H\u0016J\u0010\u00105\u001a\u00020\u00062\u0006\u0010\"\u001a\u00020\u0015H\u0016J\u0006\u00106\u001a\u00020\u0006J\u0006\u00107\u001a\u00020\u0006J\u000e\u00109\u001a\u00020\u00062\u0006\u00108\u001a\u00020\u0015J\u000e\u0010;\u001a\u00020\u00062\u0006\u0010:\u001a\u00020\u001fJ\b\u0010<\u001a\u00020\u0006H\u0016J\u000e\u0010>\u001a\u00020\u00062\u0006\u0010=\u001a\u00020+J\u0006\u0010?\u001a\u00020\u0006J\u0006\u0010@\u001a\u00020\u0006J\u0006\u0010A\u001a\u00020\u0006J\u000e\u0010C\u001a\u00020\u00062\u0006\u0010B\u001a\u00020\u000fJ\b\u0010D\u001a\u00020\u0006H\u0016J\u0010\u0010F\u001a\u00020\u00062\u0006\u0010E\u001a\u00020\u0015H\u0016J\b\u0010G\u001a\u00020\u0015H\u0016J\b\u0010H\u001a\u00020\u0015H\u0016J\u001c\u0010J\u001a\u00020\u00062\b\u0010I\u001a\u0004\u0018\u00010\u000f2\b\u0010/\u001a\u0004\u0018\u00010\u000fH\u0016J\u001c\u0010L\u001a\u00020\u00062\b\u0010K\u001a\u0004\u0018\u00010\u000f2\b\u0010/\u001a\u0004\u0018\u00010\u000fH\u0016J\u0012\u0010M\u001a\u00020\u00062\b\u0010\u0010\u001a\u0004\u0018\u00010\u000fH\u0016J\b\u0010N\u001a\u00020\u0006H\u0016J\b\u0010O\u001a\u00020\u0006H\u0016J\b\u0010P\u001a\u00020\u0006H\u0016J\b\u0010Q\u001a\u00020\u0006H\u0016J\u001a\u0010V\u001a\u00020\u00062\b\u0010S\u001a\u0004\u0018\u00010R2\u0006\u0010U\u001a\u00020TH\u0016J\b\u0010W\u001a\u00020\u0006H\u0016J\b\u0010X\u001a\u00020\u0006H\u0016J\b\u0010Y\u001a\u00020\u0006H\u0016J\u0012\u0010[\u001a\u00020\u00062\b\u0010Z\u001a\u0004\u0018\u00010\u000fH\u0016J\u0012\u0010]\u001a\u00020\u00062\b\u0010\\\u001a\u0004\u0018\u00010\u000fH\u0016J\u001c\u0010a\u001a\u00020\u00062\b\u0010^\u001a\u0004\u0018\u00010\u001f2\b\u0010`\u001a\u0004\u0018\u00010_H\u0016J\u000e\u0010c\u001a\u00020\u00062\u0006\u0010b\u001a\u00020\u0015Ro\u0010j\u001aO\u0012\u0015\u0012\u0013\u0018\u00010e¢\u0006\f\bf\u0012\b\bg\u0012\u0004\b\b(^\u0012\u0015\u0012\u0013\u0018\u00010\u000f¢\u0006\f\bf\u0012\b\bg\u0012\u0004\b\b(B\u0012\u0015\u0012\u0013\u0018\u00010h¢\u0006\f\bf\u0012\b\bg\u0012\u0004\b\b(i\u0012\u0004\u0012\u00020\u0006\u0018\u00010d8\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\bj\u0010k\u001a\u0004\bl\u0010m\"\u0004\bn\u0010oRX\u0010q\u001a8\u0012\u0015\u0012\u0013\u0018\u00010e¢\u0006\f\bf\u0012\b\bg\u0012\u0004\b\b(^\u0012\u0015\u0012\u0013\u0018\u00010\u000f¢\u0006\f\bf\u0012\b\bg\u0012\u0004\b\b(B\u0012\u0004\u0012\u00020\u0006\u0018\u00010p8\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\bq\u0010r\u001a\u0004\bs\u0010t\"\u0004\bu\u0010vR\u0085\u0001\u0010{\u001ad\u0012\u0015\u0012\u0013\u0018\u00010e¢\u0006\f\bf\u0012\b\bg\u0012\u0004\b\b(^\u0012\u0013\u0012\u00110+¢\u0006\f\bf\u0012\b\bg\u0012\u0004\b\b(x\u0012\u0015\u0012\u0013\u0018\u00010\u000f¢\u0006\f\bf\u0012\b\bg\u0012\u0004\b\b(y\u0012\u0015\u0012\u0013\u0018\u00010\u000f¢\u0006\f\bf\u0012\b\bg\u0012\u0004\b\b(z\u0012\u0004\u0012\u00020\u0006\u0018\u00010w8\u0006@\u0006X\u0086\u000e¢\u0006\u0013\n\u0004\b{\u0010|\u001a\u0004\b}\u0010~\"\u0005\b\u007f\u0010\u0080\u0001R*\u0010\u0082\u0001\u001a\u00030\u0081\u00018\u0006@\u0006X\u0086.¢\u0006\u0018\n\u0006\b\u0082\u0001\u0010\u0083\u0001\u001a\u0006\b\u0084\u0001\u0010\u0085\u0001\"\u0006\b\u0086\u0001\u0010\u0087\u0001R*\u0010\u0089\u0001\u001a\u00030\u0088\u00018\u0006@\u0006X\u0086.¢\u0006\u0018\n\u0006\b\u0089\u0001\u0010\u008a\u0001\u001a\u0006\b\u008b\u0001\u0010\u008c\u0001\"\u0006\b\u008d\u0001\u0010\u008e\u0001R0\u0010\u0091\u0001\u001a\u0005\u0018\u00010\u008f\u00012\n\u0010\u0090\u0001\u001a\u0005\u0018\u00010\u008f\u00018\u0006@BX\u0086\u000e¢\u0006\u0010\n\u0006\b\u0091\u0001\u0010\u0092\u0001\u001a\u0006\b\u0093\u0001\u0010\u0094\u0001R\u001b\u0010\u0095\u0001\u001a\u0004\u0018\u00010\u001d8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0095\u0001\u0010\u0096\u0001R\u001a\u0010\u0098\u0001\u001a\u00030\u0097\u00018\u0002@\u0002X\u0082.¢\u0006\b\n\u0006\b\u0098\u0001\u0010\u0099\u0001R\u001a\u0010\u009b\u0001\u001a\u00030\u009a\u00018\u0002@\u0002X\u0082.¢\u0006\b\n\u0006\b\u009b\u0001\u0010\u009c\u0001R\u0019\u0010\u009d\u0001\u001a\u00020\u00158\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u009d\u0001\u0010\u009e\u0001R\u0019\u0010B\u001a\u0004\u0018\u00010\u000f8\u0002@\u0002X\u0082\u000e¢\u0006\u0007\n\u0005\bB\u0010\u009f\u0001R\u0019\u0010 \u0001\u001a\u00020\u00158\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b \u0001\u0010\u009e\u0001R\u0019\u0010\u0010\u001a\u0004\u0018\u00010\u000f8\u0002@\u0002X\u0082\u000e¢\u0006\u0007\n\u0005\b\u0010\u0010\u009f\u0001R\u0019\u0010¡\u0001\u001a\u00020\u00158\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b¡\u0001\u0010\u009e\u0001R\u0019\u0010¢\u0001\u001a\u00020\u00158\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b¢\u0001\u0010\u009e\u0001R\u0019\u0010£\u0001\u001a\u00020\u00158\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b£\u0001\u0010\u009e\u0001R\u0019\u0010¤\u0001\u001a\u00020\u00158\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b¤\u0001\u0010\u009e\u0001R\u001b\u0010¥\u0001\u001a\u0004\u0018\u00010\u001d8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b¥\u0001\u0010\u0096\u0001R*\u0010¦\u0001\u001a\u00020\u00152\u0007\u0010\u0090\u0001\u001a\u00020\u00158\u0006@BX\u0086\u000e¢\u0006\u0010\n\u0006\b¦\u0001\u0010\u009e\u0001\u001a\u0006\b¦\u0001\u0010§\u0001R#\u0010\u00ad\u0001\u001a\u00030¨\u00018B@\u0002X\u0082\u0084\u0002¢\u0006\u0010\n\u0006\b©\u0001\u0010ª\u0001\u001a\u0006\b«\u0001\u0010¬\u0001R,\u0010¯\u0001\u001a\u0005\u0018\u00010®\u00018\u0006@\u0006X\u0086\u000e¢\u0006\u0018\n\u0006\b¯\u0001\u0010°\u0001\u001a\u0006\b±\u0001\u0010²\u0001\"\u0006\b³\u0001\u0010´\u0001R*\u0010¸\u0001\u001a\u0013\u0012\f\u0012\n\u0012\u0005\u0012\u00030·\u00010¶\u0001\u0018\u00010µ\u00018\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b¸\u0001\u0010¹\u0001R\u001b\u0010º\u0001\u001a\u0004\u0018\u00010_8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\bº\u0001\u0010»\u0001R\u001b\u0010¼\u0001\u001a\u0004\u0018\u00010+8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b¼\u0001\u0010½\u0001R\u001b\u0010¾\u0001\u001a\u0004\u0018\u00010\u001f8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b¾\u0001\u0010¿\u0001¨\u0006Â\u0001"}, d2 = {"Lcom/taomai/android/h5container/ui/TaoMaiH5Fragment;", "Landroidx/fragment/app/Fragment;", "Lcom/taomai/android/h5container/provider/IKeyboardHookProvider;", "Lcom/taomai/android/h5container/provider/IH5EventDispatcher;", "Lcom/taomai/android/h5container/provider/INavigationBarProvider;", "Lcom/taomai/android/h5container/utils/ActivityStackManager$IActivityStackBackEvent;", "Ltb/wt2;", "registerProvider4Bridge", "parseArguments", "showEmptyOrErrorView", "hideEmptyOrErrorView", "showLoading", "hideLoading", "notifyH5BackPressed", "loadInitUrl", "", "title", "setTitleIfNeed", "resetTitleStatus", "Landroid/app/Activity;", "activity", "", "fullscreen", "setCustomFullscreen", "Landroid/os/Bundle;", "savedInstanceState", "onCreate", "Landroid/view/LayoutInflater;", "inflater", "Landroid/view/ViewGroup;", "container", "Landroid/view/View;", "onCreateView", Constants.AndroidJointPointKey.LIFECYCLE_KEY_ACTIVITY_CREATED, "isVisibleToUser", "setUserVisibleHint", "hidden", "onHiddenChanged", "onResume", MessageID.onPause, "onDestroy", "args", "setArguments", "", "requestCode", "resultCode", "Landroid/content/Intent;", "data", "onActivityResult", "pageAppear", "pageDisappear", "createView", "handleOnActivityCreated", "handleUserVisibleHint", TMNavigationBarPlugin.ACTION_SHOW_TITLE_BAR, TMNavigationBarPlugin.ACTION_HIDE_TITLE_BAR, "enable", "setEnableProgress", "root", "initView", "setupWebView", "progress", UCCore.EVENT_UPDATE_PROGRESS, "notifyProgressEnd", "showProgressIfEnable", "reload", "url", "loadUrl", C4345d.p, "enableHook", "setHookBackKey", "isBackHooked", "onBackPressed", "type", WXBridgeManager.METHOD_FIRE_EVENT, "eventName", "fireGlobalEvent", "setWebTitle", "showWebTitle", "hideWebTitle", "showWebOptionMenu", "hideWebOptionMenu", "Lcom/alibaba/fastjson/JSONObject;", "menu", "Landroid/view/View$OnClickListener;", "listener", "setWebOptionMenu", "showWebTitleBackBtn", "hideWebTitleBackBtn", "enableHookBackBtn", "transparentTitle", TMNavigationBarPlugin.ACTION_SET_TRANSPARENT_TITLE, "jsonData", "onPageBackResult", "view", "Landroid/webkit/WebChromeClient$CustomViewCallback;", WXBridgeManager.METHOD_CALLBACK, "showCustomView", "fromSystem", "hideCustomView", "Lkotlin/Function3;", "Landroid/webkit/WebView;", "Lkotlin/ParameterName;", "name", "Landroid/graphics/Bitmap;", "favicon", "pageLoadStartListener", "Lkotlin/jvm/functions/Function3;", "getPageLoadStartListener", "()Lkotlin/jvm/functions/Function3;", "setPageLoadStartListener", "(Lkotlin/jvm/functions/Function3;)V", "Lkotlin/Function2;", "pageLoadFinishListener", "Lkotlin/jvm/functions/Function2;", "getPageLoadFinishListener", "()Lkotlin/jvm/functions/Function2;", "setPageLoadFinishListener", "(Lkotlin/jvm/functions/Function2;)V", "Lkotlin/Function4;", "errorCode", SocialConstants.PARAM_COMMENT, "failingUrl", "pageLoadErrorListener", "Lkotlin/jvm/functions/Function4;", "getPageLoadErrorListener", "()Lkotlin/jvm/functions/Function4;", "setPageLoadErrorListener", "(Lkotlin/jvm/functions/Function4;)V", "Lcom/taomai/android/h5container/widget/H5ToolBar;", "toolbar", "Lcom/taomai/android/h5container/widget/H5ToolBar;", "getToolbar", "()Lcom/taomai/android/h5container/widget/H5ToolBar;", "setToolbar", "(Lcom/taomai/android/h5container/widget/H5ToolBar;)V", "Lcom/taomai/android/h5container/widget/TitleBar;", "titleBar", "Lcom/taomai/android/h5container/widget/TitleBar;", "getTitleBar", "()Lcom/taomai/android/h5container/widget/TitleBar;", "setTitleBar", "(Lcom/taomai/android/h5container/widget/TitleBar;)V", "Lcom/taomai/android/h5container/webview/TaoMaiWebView;", "<set-?>", "webView", "Lcom/taomai/android/h5container/webview/TaoMaiWebView;", "getWebView", "()Lcom/taomai/android/h5container/webview/TaoMaiWebView;", "webContainer", "Landroid/view/ViewGroup;", "Lcom/taomai/android/h5container/widget/H5Progress;", "h5ProgressView", "Lcom/taomai/android/h5container/widget/H5Progress;", "Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;", "refreshLayout", "Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;", "enableProgressBar", "Z", "Ljava/lang/String;", "hookBackEvent", "needHideTitleBar", "readTitle", "hasSetTitleFromBridge", "hasSetTransparentTitleFromBridge", "videoPlayerContainer", "isLoadSuccess", "()Z", "Landroid/os/Handler;", "handler$delegate", "Lkotlin/Lazy;", "getHandler", "()Landroid/os/Handler;", "handler", "Landroid/view/ViewParent;", "scrollableViewParent", "Landroid/view/ViewParent;", "getScrollableViewParent", "()Landroid/view/ViewParent;", "setScrollableViewParent", "(Landroid/view/ViewParent;)V", "Landroid/webkit/ValueCallback;", "", "Landroid/net/Uri;", "filePathCallback", "Landroid/webkit/ValueCallback;", "mCallBack", "Landroid/webkit/WebChromeClient$CustomViewCallback;", "originalVisibility", "Ljava/lang/Integer;", "mCustomView", "Landroid/view/View;", "<init>", "()V", "h5container_release"}, k = 1, mv = {1, 4, 2})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000æ\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b#\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\b\u000b\b\u0016\u0018\u00002\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u00042\u00020\u0005B\t¢\u0006\u0006\bÀ\u0001\u0010Á\u0001J\b\u0010\u0007\u001a\u00020\u0006H\u0002J\b\u0010\b\u001a\u00020\u0006H\u0002J\b\u0010\t\u001a\u00020\u0006H\u0002J\b\u0010\n\u001a\u00020\u0006H\u0002J\b\u0010\u000b\u001a\u00020\u0006H\u0002J\b\u0010\f\u001a\u00020\u0006H\u0002J\b\u0010\r\u001a\u00020\u0006H\u0002J\b\u0010\u000e\u001a\u00020\u0006H\u0002J\u0012\u0010\u0011\u001a\u00020\u00062\b\u0010\u0010\u001a\u0004\u0018\u00010\u000fH\u0002J\b\u0010\u0012\u001a\u00020\u0006H\u0002J\u001a\u0010\u0017\u001a\u00020\u00062\b\u0010\u0014\u001a\u0004\u0018\u00010\u00132\u0006\u0010\u0016\u001a\u00020\u0015H\u0002J\u0012\u0010\u001a\u001a\u00020\u00062\b\u0010\u0019\u001a\u0004\u0018\u00010\u0018H\u0016J&\u0010 \u001a\u0004\u0018\u00010\u001f2\u0006\u0010\u001c\u001a\u00020\u001b2\b\u0010\u001e\u001a\u0004\u0018\u00010\u001d2\b\u0010\u0019\u001a\u0004\u0018\u00010\u0018H\u0016J\u0012\u0010!\u001a\u00020\u00062\b\u0010\u0019\u001a\u0004\u0018\u00010\u0018H\u0016J\u0010\u0010#\u001a\u00020\u00062\u0006\u0010\"\u001a\u00020\u0015H\u0016J\u0010\u0010%\u001a\u00020\u00062\u0006\u0010$\u001a\u00020\u0015H\u0016J\b\u0010&\u001a\u00020\u0006H\u0016J\b\u0010'\u001a\u00020\u0006H\u0016J\b\u0010(\u001a\u00020\u0006H\u0016J\u0012\u0010*\u001a\u00020\u00062\b\u0010)\u001a\u0004\u0018\u00010\u0018H\u0016J\"\u00100\u001a\u00020\u00062\u0006\u0010,\u001a\u00020+2\u0006\u0010-\u001a\u00020+2\b\u0010/\u001a\u0004\u0018\u00010.H\u0016J\b\u00101\u001a\u00020\u0006H\u0016J\b\u00102\u001a\u00020\u0006H\u0016J\u001a\u00103\u001a\u00020\u001f2\u0006\u0010\u001c\u001a\u00020\u001b2\b\u0010\u001e\u001a\u0004\u0018\u00010\u001dH\u0016J\b\u00104\u001a\u00020\u0006H\u0016J\u0010\u00105\u001a\u00020\u00062\u0006\u0010\"\u001a\u00020\u0015H\u0016J\u0006\u00106\u001a\u00020\u0006J\u0006\u00107\u001a\u00020\u0006J\u000e\u00109\u001a\u00020\u00062\u0006\u00108\u001a\u00020\u0015J\u000e\u0010;\u001a\u00020\u00062\u0006\u0010:\u001a\u00020\u001fJ\b\u0010<\u001a\u00020\u0006H\u0016J\u000e\u0010>\u001a\u00020\u00062\u0006\u0010=\u001a\u00020+J\u0006\u0010?\u001a\u00020\u0006J\u0006\u0010@\u001a\u00020\u0006J\u0006\u0010A\u001a\u00020\u0006J\u000e\u0010C\u001a\u00020\u00062\u0006\u0010B\u001a\u00020\u000fJ\b\u0010D\u001a\u00020\u0006H\u0016J\u0010\u0010F\u001a\u00020\u00062\u0006\u0010E\u001a\u00020\u0015H\u0016J\b\u0010G\u001a\u00020\u0015H\u0016J\b\u0010H\u001a\u00020\u0015H\u0016J\u001c\u0010J\u001a\u00020\u00062\b\u0010I\u001a\u0004\u0018\u00010\u000f2\b\u0010/\u001a\u0004\u0018\u00010\u000fH\u0016J\u001c\u0010L\u001a\u00020\u00062\b\u0010K\u001a\u0004\u0018\u00010\u000f2\b\u0010/\u001a\u0004\u0018\u00010\u000fH\u0016J\u0012\u0010M\u001a\u00020\u00062\b\u0010\u0010\u001a\u0004\u0018\u00010\u000fH\u0016J\b\u0010N\u001a\u00020\u0006H\u0016J\b\u0010O\u001a\u00020\u0006H\u0016J\b\u0010P\u001a\u00020\u0006H\u0016J\b\u0010Q\u001a\u00020\u0006H\u0016J\u001a\u0010V\u001a\u00020\u00062\b\u0010S\u001a\u0004\u0018\u00010R2\u0006\u0010U\u001a\u00020TH\u0016J\b\u0010W\u001a\u00020\u0006H\u0016J\b\u0010X\u001a\u00020\u0006H\u0016J\b\u0010Y\u001a\u00020\u0006H\u0016J\u0012\u0010[\u001a\u00020\u00062\b\u0010Z\u001a\u0004\u0018\u00010\u000fH\u0016J\u0012\u0010]\u001a\u00020\u00062\b\u0010\\\u001a\u0004\u0018\u00010\u000fH\u0016J\u001c\u0010a\u001a\u00020\u00062\b\u0010^\u001a\u0004\u0018\u00010\u001f2\b\u0010`\u001a\u0004\u0018\u00010_H\u0016J\u000e\u0010c\u001a\u00020\u00062\u0006\u0010b\u001a\u00020\u0015Ro\u0010j\u001aO\u0012\u0015\u0012\u0013\u0018\u00010e¢\u0006\f\bf\u0012\b\bg\u0012\u0004\b\b(^\u0012\u0015\u0012\u0013\u0018\u00010\u000f¢\u0006\f\bf\u0012\b\bg\u0012\u0004\b\b(B\u0012\u0015\u0012\u0013\u0018\u00010h¢\u0006\f\bf\u0012\b\bg\u0012\u0004\b\b(i\u0012\u0004\u0012\u00020\u0006\u0018\u00010d8\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\bj\u0010k\u001a\u0004\bl\u0010m\"\u0004\bn\u0010oRX\u0010q\u001a8\u0012\u0015\u0012\u0013\u0018\u00010e¢\u0006\f\bf\u0012\b\bg\u0012\u0004\b\b(^\u0012\u0015\u0012\u0013\u0018\u00010\u000f¢\u0006\f\bf\u0012\b\bg\u0012\u0004\b\b(B\u0012\u0004\u0012\u00020\u0006\u0018\u00010p8\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\bq\u0010r\u001a\u0004\bs\u0010t\"\u0004\bu\u0010vR\u0085\u0001\u0010{\u001ad\u0012\u0015\u0012\u0013\u0018\u00010e¢\u0006\f\bf\u0012\b\bg\u0012\u0004\b\b(^\u0012\u0013\u0012\u00110+¢\u0006\f\bf\u0012\b\bg\u0012\u0004\b\b(x\u0012\u0015\u0012\u0013\u0018\u00010\u000f¢\u0006\f\bf\u0012\b\bg\u0012\u0004\b\b(y\u0012\u0015\u0012\u0013\u0018\u00010\u000f¢\u0006\f\bf\u0012\b\bg\u0012\u0004\b\b(z\u0012\u0004\u0012\u00020\u0006\u0018\u00010w8\u0006@\u0006X\u0086\u000e¢\u0006\u0013\n\u0004\b{\u0010|\u001a\u0004\b}\u0010~\"\u0005\b\u007f\u0010\u0080\u0001R*\u0010\u0082\u0001\u001a\u00030\u0081\u00018\u0006@\u0006X\u0086.¢\u0006\u0018\n\u0006\b\u0082\u0001\u0010\u0083\u0001\u001a\u0006\b\u0084\u0001\u0010\u0085\u0001\"\u0006\b\u0086\u0001\u0010\u0087\u0001R*\u0010\u0089\u0001\u001a\u00030\u0088\u00018\u0006@\u0006X\u0086.¢\u0006\u0018\n\u0006\b\u0089\u0001\u0010\u008a\u0001\u001a\u0006\b\u008b\u0001\u0010\u008c\u0001\"\u0006\b\u008d\u0001\u0010\u008e\u0001R0\u0010\u0091\u0001\u001a\u0005\u0018\u00010\u008f\u00012\n\u0010\u0090\u0001\u001a\u0005\u0018\u00010\u008f\u00018\u0006@BX\u0086\u000e¢\u0006\u0010\n\u0006\b\u0091\u0001\u0010\u0092\u0001\u001a\u0006\b\u0093\u0001\u0010\u0094\u0001R\u001b\u0010\u0095\u0001\u001a\u0004\u0018\u00010\u001d8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0095\u0001\u0010\u0096\u0001R\u001a\u0010\u0098\u0001\u001a\u00030\u0097\u00018\u0002@\u0002X\u0082.¢\u0006\b\n\u0006\b\u0098\u0001\u0010\u0099\u0001R\u001a\u0010\u009b\u0001\u001a\u00030\u009a\u00018\u0002@\u0002X\u0082.¢\u0006\b\n\u0006\b\u009b\u0001\u0010\u009c\u0001R\u0019\u0010\u009d\u0001\u001a\u00020\u00158\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u009d\u0001\u0010\u009e\u0001R\u0019\u0010B\u001a\u0004\u0018\u00010\u000f8\u0002@\u0002X\u0082\u000e¢\u0006\u0007\n\u0005\bB\u0010\u009f\u0001R\u0019\u0010 \u0001\u001a\u00020\u00158\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b \u0001\u0010\u009e\u0001R\u0019\u0010\u0010\u001a\u0004\u0018\u00010\u000f8\u0002@\u0002X\u0082\u000e¢\u0006\u0007\n\u0005\b\u0010\u0010\u009f\u0001R\u0019\u0010¡\u0001\u001a\u00020\u00158\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b¡\u0001\u0010\u009e\u0001R\u0019\u0010¢\u0001\u001a\u00020\u00158\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b¢\u0001\u0010\u009e\u0001R\u0019\u0010£\u0001\u001a\u00020\u00158\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b£\u0001\u0010\u009e\u0001R\u0019\u0010¤\u0001\u001a\u00020\u00158\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b¤\u0001\u0010\u009e\u0001R\u001b\u0010¥\u0001\u001a\u0004\u0018\u00010\u001d8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b¥\u0001\u0010\u0096\u0001R*\u0010¦\u0001\u001a\u00020\u00152\u0007\u0010\u0090\u0001\u001a\u00020\u00158\u0006@BX\u0086\u000e¢\u0006\u0010\n\u0006\b¦\u0001\u0010\u009e\u0001\u001a\u0006\b¦\u0001\u0010§\u0001R#\u0010\u00ad\u0001\u001a\u00030¨\u00018B@\u0002X\u0082\u0084\u0002¢\u0006\u0010\n\u0006\b©\u0001\u0010ª\u0001\u001a\u0006\b«\u0001\u0010¬\u0001R,\u0010¯\u0001\u001a\u0005\u0018\u00010®\u00018\u0006@\u0006X\u0086\u000e¢\u0006\u0018\n\u0006\b¯\u0001\u0010°\u0001\u001a\u0006\b±\u0001\u0010²\u0001\"\u0006\b³\u0001\u0010´\u0001R*\u0010¸\u0001\u001a\u0013\u0012\f\u0012\n\u0012\u0005\u0012\u00030·\u00010¶\u0001\u0018\u00010µ\u00018\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b¸\u0001\u0010¹\u0001R\u001b\u0010º\u0001\u001a\u0004\u0018\u00010_8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\bº\u0001\u0010»\u0001R\u001b\u0010¼\u0001\u001a\u0004\u0018\u00010+8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b¼\u0001\u0010½\u0001R\u001b\u0010¾\u0001\u001a\u0004\u0018\u00010\u001f8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b¾\u0001\u0010¿\u0001¨\u0006Â\u0001"}, d2 = {"Lcom/taomai/android/h5container/ui/TaoMaiH5Fragment;", "Landroidx/fragment/app/Fragment;", "Lcom/taomai/android/h5container/provider/IKeyboardHookProvider;", "Lcom/taomai/android/h5container/provider/IH5EventDispatcher;", "Lcom/taomai/android/h5container/provider/INavigationBarProvider;", "Lcom/taomai/android/h5container/utils/ActivityStackManager$IActivityStackBackEvent;", "Ltb/wt2;", "registerProvider4Bridge", "parseArguments", "showEmptyOrErrorView", "hideEmptyOrErrorView", "showLoading", "hideLoading", "notifyH5BackPressed", "loadInitUrl", "", "title", "setTitleIfNeed", "resetTitleStatus", "Landroid/app/Activity;", "activity", "", "fullscreen", "setCustomFullscreen", "Landroid/os/Bundle;", "savedInstanceState", "onCreate", "Landroid/view/LayoutInflater;", "inflater", "Landroid/view/ViewGroup;", "container", "Landroid/view/View;", "onCreateView", Constants.AndroidJointPointKey.LIFECYCLE_KEY_ACTIVITY_CREATED, "isVisibleToUser", "setUserVisibleHint", "hidden", "onHiddenChanged", "onResume", MessageID.onPause, "onDestroy", "args", "setArguments", "", "requestCode", "resultCode", "Landroid/content/Intent;", "data", "onActivityResult", "pageAppear", "pageDisappear", "createView", "handleOnActivityCreated", "handleUserVisibleHint", TMNavigationBarPlugin.ACTION_SHOW_TITLE_BAR, TMNavigationBarPlugin.ACTION_HIDE_TITLE_BAR, "enable", "setEnableProgress", "root", "initView", "setupWebView", "progress", UCCore.EVENT_UPDATE_PROGRESS, "notifyProgressEnd", "showProgressIfEnable", "reload", "url", "loadUrl", com.alipay.sdk.m.x.d.p, "enableHook", "setHookBackKey", "isBackHooked", "onBackPressed", "type", WXBridgeManager.METHOD_FIRE_EVENT, "eventName", "fireGlobalEvent", "setWebTitle", "showWebTitle", "hideWebTitle", "showWebOptionMenu", "hideWebOptionMenu", "Lcom/alibaba/fastjson/JSONObject;", "menu", "Landroid/view/View$OnClickListener;", "listener", "setWebOptionMenu", "showWebTitleBackBtn", "hideWebTitleBackBtn", "enableHookBackBtn", "transparentTitle", TMNavigationBarPlugin.ACTION_SET_TRANSPARENT_TITLE, "jsonData", "onPageBackResult", "view", "Landroid/webkit/WebChromeClient$CustomViewCallback;", WXBridgeManager.METHOD_CALLBACK, "showCustomView", "fromSystem", "hideCustomView", "Lkotlin/Function3;", "Landroid/webkit/WebView;", "Lkotlin/ParameterName;", "name", "Landroid/graphics/Bitmap;", "favicon", "pageLoadStartListener", "Lkotlin/jvm/functions/Function3;", "getPageLoadStartListener", "()Lkotlin/jvm/functions/Function3;", "setPageLoadStartListener", "(Lkotlin/jvm/functions/Function3;)V", "Lkotlin/Function2;", "pageLoadFinishListener", "Lkotlin/jvm/functions/Function2;", "getPageLoadFinishListener", "()Lkotlin/jvm/functions/Function2;", "setPageLoadFinishListener", "(Lkotlin/jvm/functions/Function2;)V", "Lkotlin/Function4;", "errorCode", SocialConstants.PARAM_COMMENT, "failingUrl", "pageLoadErrorListener", "Lkotlin/jvm/functions/Function4;", "getPageLoadErrorListener", "()Lkotlin/jvm/functions/Function4;", "setPageLoadErrorListener", "(Lkotlin/jvm/functions/Function4;)V", "Lcom/taomai/android/h5container/widget/H5ToolBar;", "toolbar", "Lcom/taomai/android/h5container/widget/H5ToolBar;", "getToolbar", "()Lcom/taomai/android/h5container/widget/H5ToolBar;", "setToolbar", "(Lcom/taomai/android/h5container/widget/H5ToolBar;)V", "Lcom/taomai/android/h5container/widget/TitleBar;", "titleBar", "Lcom/taomai/android/h5container/widget/TitleBar;", "getTitleBar", "()Lcom/taomai/android/h5container/widget/TitleBar;", "setTitleBar", "(Lcom/taomai/android/h5container/widget/TitleBar;)V", "Lcom/taomai/android/h5container/webview/TaoMaiWebView;", "<set-?>", "webView", "Lcom/taomai/android/h5container/webview/TaoMaiWebView;", "getWebView", "()Lcom/taomai/android/h5container/webview/TaoMaiWebView;", "webContainer", "Landroid/view/ViewGroup;", "Lcom/taomai/android/h5container/widget/H5Progress;", "h5ProgressView", "Lcom/taomai/android/h5container/widget/H5Progress;", "Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;", "refreshLayout", "Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;", "enableProgressBar", "Z", "Ljava/lang/String;", "hookBackEvent", "needHideTitleBar", "readTitle", "hasSetTitleFromBridge", "hasSetTransparentTitleFromBridge", "videoPlayerContainer", "isLoadSuccess", "()Z", "Landroid/os/Handler;", "handler$delegate", "Lkotlin/Lazy;", "getHandler", "()Landroid/os/Handler;", "handler", "Landroid/view/ViewParent;", "scrollableViewParent", "Landroid/view/ViewParent;", "getScrollableViewParent", "()Landroid/view/ViewParent;", "setScrollableViewParent", "(Landroid/view/ViewParent;)V", "Landroid/webkit/ValueCallback;", "", "Landroid/net/Uri;", "filePathCallback", "Landroid/webkit/ValueCallback;", "mCallBack", "Landroid/webkit/WebChromeClient$CustomViewCallback;", "originalVisibility", "Ljava/lang/Integer;", "mCustomView", "Landroid/view/View;", "<init>", "()V", "h5container_release"}, k = 1, mv = {1, 4, 2})
 /* loaded from: classes11.dex */
 public class TaoMaiH5Fragment extends Fragment implements IH5EventDispatcher, IKeyboardHookProvider, INavigationBarProvider, ActivityStackManager.IActivityStackBackEvent {
     private ValueCallback<Uri[]> filePathCallback;
@@ -107,10 +105,9 @@ public class TaoMaiH5Fragment extends Fragment implements IH5EventDispatcher, IK
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.ui.TaoMaiH5Fragment$a */
     /* loaded from: classes11.dex */
-    public static final class View$OnClickListenerC7005a implements View.OnClickListener {
-        View$OnClickListenerC7005a() {
+    public static final class a implements View.OnClickListener {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -124,10 +121,9 @@ public class TaoMaiH5Fragment extends Fragment implements IH5EventDispatcher, IK
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.ui.TaoMaiH5Fragment$b */
     /* loaded from: classes11.dex */
-    public static final class C7006b implements SwipeRefreshLayout.OnRefreshListener {
-        C7006b() {
+    public static final class b implements SwipeRefreshLayout.OnRefreshListener {
+        b() {
         }
 
         @Override // androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
@@ -138,10 +134,9 @@ public class TaoMaiH5Fragment extends Fragment implements IH5EventDispatcher, IK
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.ui.TaoMaiH5Fragment$c */
     /* loaded from: classes11.dex */
-    public static final class C7007c implements SwipeRefreshLayout.OnChildScrollUpCallback {
-        C7007c() {
+    public static final class c implements SwipeRefreshLayout.OnChildScrollUpCallback {
+        c() {
         }
 
         @Override // androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnChildScrollUpCallback
@@ -161,10 +156,9 @@ public class TaoMaiH5Fragment extends Fragment implements IH5EventDispatcher, IK
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.ui.TaoMaiH5Fragment$d */
     /* loaded from: classes11.dex */
-    public static final class C7008d implements H5Progress.ProgressNotifier {
-        C7008d() {
+    public static final class d implements H5Progress.ProgressNotifier {
+        d() {
         }
 
         @Override // com.taomai.android.h5container.widget.H5Progress.ProgressNotifier
@@ -178,13 +172,12 @@ public class TaoMaiH5Fragment extends Fragment implements IH5EventDispatcher, IK
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.ui.TaoMaiH5Fragment$e */
     /* loaded from: classes11.dex */
-    static final class View$OnClickListenerC7009e implements View.OnClickListener {
+    static final class e implements View.OnClickListener {
         final /* synthetic */ JSONObject b;
         final /* synthetic */ View.OnClickListener c;
 
-        View$OnClickListenerC7009e(JSONObject jSONObject, View.OnClickListener onClickListener) {
+        e(JSONObject jSONObject, View.OnClickListener onClickListener) {
             this.b = jSONObject;
             this.c = onClickListener;
         }
@@ -198,10 +191,9 @@ public class TaoMaiH5Fragment extends Fragment implements IH5EventDispatcher, IK
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.ui.TaoMaiH5Fragment$f */
     /* loaded from: classes11.dex */
-    public static final class View$OnClickListenerC7010f implements View.OnClickListener {
-        View$OnClickListenerC7010f() {
+    public static final class f implements View.OnClickListener {
+        f() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -214,8 +206,8 @@ public class TaoMaiH5Fragment extends Fragment implements IH5EventDispatcher, IK
     }
 
     public TaoMaiH5Fragment() {
-        Lazy b;
-        b = C8177b.b(new Function0<Handler>() { // from class: com.taomai.android.h5container.ui.TaoMaiH5Fragment$handler$2
+        Lazy b2;
+        b2 = kotlin.b.b(new Function0<Handler>() { // from class: com.taomai.android.h5container.ui.TaoMaiH5Fragment$handler$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull
@@ -223,7 +215,7 @@ public class TaoMaiH5Fragment extends Fragment implements IH5EventDispatcher, IK
                 return new Handler(Looper.getMainLooper());
             }
         });
-        this.handler$delegate = b;
+        this.handler$delegate = b2;
     }
 
     public static final /* synthetic */ H5Progress access$getH5ProgressView$p(TaoMaiH5Fragment taoMaiH5Fragment) {
@@ -491,8 +483,8 @@ public class TaoMaiH5Fragment extends Fragment implements IH5EventDispatcher, IK
                     if (customViewCallback != null) {
                         customViewCallback.onCustomViewHidden();
                     }
-                } catch (Exception e) {
-                    e.printStackTrace();
+                } catch (Exception e2) {
+                    e2.printStackTrace();
                     return;
                 }
             }
@@ -593,7 +585,7 @@ public class TaoMaiH5Fragment extends Fragment implements IH5EventDispatcher, IK
         if (titleBar4 == null) {
             b41.A("titleBar");
         }
-        titleBar4.setLeftButtonListener(new View$OnClickListenerC7005a());
+        titleBar4.setLeftButtonListener(new a());
         String str = this.title;
         if (str != null) {
             TitleBar titleBar5 = this.titleBar;
@@ -615,18 +607,18 @@ public class TaoMaiH5Fragment extends Fragment implements IH5EventDispatcher, IK
             b41.A("refreshLayout");
         }
         Bundle arguments = getArguments();
-        q = C8604o.q("YES", arguments != null ? arguments.getString("pullRefresh") : null, true);
+        q = o.q("YES", arguments != null ? arguments.getString("pullRefresh") : null, true);
         swipeRefreshLayout2.setEnabled(q);
         SwipeRefreshLayout swipeRefreshLayout3 = this.refreshLayout;
         if (swipeRefreshLayout3 == null) {
             b41.A("refreshLayout");
         }
-        swipeRefreshLayout3.setOnRefreshListener(new C7006b());
+        swipeRefreshLayout3.setOnRefreshListener(new b());
         SwipeRefreshLayout swipeRefreshLayout4 = this.refreshLayout;
         if (swipeRefreshLayout4 == null) {
             b41.A("refreshLayout");
         }
-        swipeRefreshLayout4.setOnChildScrollUpCallback(new C7007c());
+        swipeRefreshLayout4.setOnChildScrollUpCallback(new c());
         this.webView = (TaoMaiWebView) view.findViewById(R$id.webview);
         this.webContainer = (ViewGroup) view.findViewById(R$id.web_container);
         View findViewById4 = view.findViewById(R$id.horizontal_progress);
@@ -636,7 +628,7 @@ public class TaoMaiH5Fragment extends Fragment implements IH5EventDispatcher, IK
         if (h5Progress == null) {
             b41.A("h5ProgressView");
         }
-        h5Progress.setNotifier(new C7008d());
+        h5Progress.setNotifier(new d());
         H5ToolBar h5ToolBar2 = this.toolbar;
         if (h5ToolBar2 == null) {
             b41.A("toolbar");
@@ -738,7 +730,7 @@ public class TaoMaiH5Fragment extends Fragment implements IH5EventDispatcher, IK
             android.webkit.ValueCallback<android.net.Uri[]> r7 = r6.filePathCallback
             if (r7 == 0) goto L6a
             if (r9 == 0) goto L66
-            java.util.List r8 = kotlin.collections.C8202e.s(r9)
+            java.util.List r8 = kotlin.collections.e.s(r9)
             if (r8 == 0) goto L66
             android.net.Uri[] r9 = new android.net.Uri[r0]
             java.lang.Object[] r8 = r8.toArray(r9)
@@ -801,8 +793,8 @@ public class TaoMaiH5Fragment extends Fragment implements IH5EventDispatcher, IK
         this.webView = null;
         try {
             super.onDestroy();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 
@@ -992,7 +984,7 @@ public class TaoMaiH5Fragment extends Fragment implements IH5EventDispatcher, IK
         if (titleBar4 == null) {
             b41.A("titleBar");
         }
-        titleBar4.setRightButtonListener(new View$OnClickListenerC7009e(jSONObject, onClickListener));
+        titleBar4.setRightButtonListener(new e(jSONObject, onClickListener));
         if (string3 == null || string3.length() == 0) {
             imageView.setVisibility(8);
         } else {
@@ -1207,9 +1199,9 @@ public class TaoMaiH5Fragment extends Fragment implements IH5EventDispatcher, IK
                     str = TaoMaiH5Fragment.this.url;
                     if (b41.d(uri, str)) {
                         String valueOf = String.valueOf(webResourceResponse != null ? Integer.valueOf(webResourceResponse.getStatusCode()) : null);
-                        F = C8604o.F(valueOf, "4", false, 2, null);
+                        F = o.F(valueOf, "4", false, 2, null);
                         if (!F) {
-                            F2 = C8604o.F(valueOf, "5", false, 2, null);
+                            F2 = o.F(valueOf, "5", false, 2, null);
                             if (!F2) {
                                 return;
                             }
@@ -1226,7 +1218,7 @@ public class TaoMaiH5Fragment extends Fragment implements IH5EventDispatcher, IK
         }
         TaoMaiWebView taoMaiWebView5 = this.webView;
         if (taoMaiWebView5 != null && (wvUIModel = taoMaiWebView5.getWvUIModel()) != null && (errorView = wvUIModel.getErrorView()) != null) {
-            errorView.setOnClickListener(new View$OnClickListenerC7010f());
+            errorView.setOnClickListener(new f());
         }
         if (Build.VERSION.SDK_INT <= 21 || (taoMaiWebView = this.webView) == null || (settings = taoMaiWebView.getSettings()) == null) {
             return;
@@ -1267,8 +1259,8 @@ public class TaoMaiH5Fragment extends Fragment implements IH5EventDispatcher, IK
                 }
                 setCustomFullscreen(activity, true);
                 activity.setRequestedOrientation(6);
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
         }
     }

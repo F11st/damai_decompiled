@@ -13,7 +13,7 @@ public final class vq2 {
     @NotNull
     public static final vq2 CLASS_DECLARATION;
     @NotNull
-    public static final C9824a Companion = new C9824a(null);
+    public static final a Companion = new a(null);
     @JvmField
     @NotNull
     public static final vq2 DEFAULT;
@@ -53,21 +53,19 @@ public final class vq2 {
     private final boolean j;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.vq2$a */
     /* loaded from: classes3.dex */
-    public static final class C9824a {
-        private C9824a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9824a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.vq2$b */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C9825b {
+    public /* synthetic */ class b {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -129,7 +127,7 @@ public final class vq2 {
     public final vq2 f(@NotNull Variance variance, boolean z) {
         b41.i(variance, "effectiveVariance");
         if (!z || !this.c) {
-            int i = C9825b.$EnumSwitchMapping$0[variance.ordinal()];
+            int i = b.$EnumSwitchMapping$0[variance.ordinal()];
             if (i == 1) {
                 vq2 vq2Var = this.h;
                 if (vq2Var != null) {

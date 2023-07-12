@@ -63,7 +63,7 @@ public class GrsApi {
 
     @Deprecated
     public static CountryCodeBean getCountryCode(Context context, boolean z) {
-        return C5557a.a(context, z);
+        return a.a(context, z);
     }
 
     @Deprecated

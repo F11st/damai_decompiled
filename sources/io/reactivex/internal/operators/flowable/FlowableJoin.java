@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.functions.Function;
@@ -49,7 +49,7 @@ public final class FlowableJoin<TLeft, TRight, TLeftEnd, TRightEnd, R> extends A
         static final Integer RIGHT_CLOSE = 4;
         final AtomicLong requested = new AtomicLong();
         final jm disposables = new jm();
-        final SpscLinkedArrayQueue<Object> queue = new SpscLinkedArrayQueue<>(AbstractC8147b.bufferSize());
+        final SpscLinkedArrayQueue<Object> queue = new SpscLinkedArrayQueue<>(b.bufferSize());
         final Map<Integer, TLeft> lefts = new LinkedHashMap();
         final Map<Integer, TRight> rights = new LinkedHashMap();
         final AtomicReference<Throwable> error = new AtomicReference<>();
@@ -274,15 +274,15 @@ public final class FlowableJoin<TLeft, TRight, TLeftEnd, TRightEnd, R> extends A
         }
     }
 
-    public FlowableJoin(AbstractC8147b<TLeft> abstractC8147b, Publisher<? extends TRight> publisher, Function<? super TLeft, ? extends Publisher<TLeftEnd>> function, Function<? super TRight, ? extends Publisher<TRightEnd>> function2, BiFunction<? super TLeft, ? super TRight, ? extends R> biFunction) {
-        super(abstractC8147b);
+    public FlowableJoin(b<TLeft> bVar, Publisher<? extends TRight> publisher, Function<? super TLeft, ? extends Publisher<TLeftEnd>> function, Function<? super TRight, ? extends Publisher<TRightEnd>> function2, BiFunction<? super TLeft, ? super TRight, ? extends R> biFunction) {
+        super(bVar);
         this.other = publisher;
         this.leftEnd = function;
         this.rightEnd = function2;
         this.resultSelector = biFunction;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super R> subscriber) {
         JoinSubscription joinSubscription = new JoinSubscription(subscriber, this.leftEnd, this.rightEnd, this.resultSelector);
         subscriber.onSubscribe(joinSubscription);

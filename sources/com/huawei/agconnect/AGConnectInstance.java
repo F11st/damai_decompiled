@@ -2,34 +2,34 @@ package com.huawei.agconnect;
 
 import android.content.Context;
 import android.util.Log;
-import com.huawei.agconnect.core.a.C5481a;
+import com.huawei.agconnect.core.a.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public abstract class AGConnectInstance {
     public static AGConnectInstance buildInstance(AGConnectOptions aGConnectOptions) {
-        return C5481a.a(aGConnectOptions);
+        return a.a(aGConnectOptions);
     }
 
     public static AGConnectInstance getInstance() {
-        return C5481a.a();
+        return a.a();
     }
 
     public static AGConnectInstance getInstance(String str) {
-        return C5481a.a(str);
+        return a.a(str);
     }
 
     public static synchronized void initialize(Context context) {
         synchronized (AGConnectInstance.class) {
             Log.i("AGConnectInstance", "AGConnectInstance#initialize");
-            C5481a.a(context);
+            a.a(context);
         }
     }
 
     public static synchronized void initialize(Context context, AGConnectOptionsBuilder aGConnectOptionsBuilder) {
         synchronized (AGConnectInstance.class) {
             Log.i("AGConnectInstance", "AGConnectInstance#initialize with options");
-            C5481a.a(context, aGConnectOptionsBuilder);
+            a.a(context, aGConnectOptionsBuilder);
         }
     }
 

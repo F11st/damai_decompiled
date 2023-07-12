@@ -36,7 +36,7 @@ public final class i1 {
                     jSONObject.put(entry.getKey(), entry.getValue());
                 }
             } catch (JSONException unused) {
-                C5653y.b("hmsSdk", "Exception occured when transferring bundle to json");
+                y.b("hmsSdk", "Exception occured when transferring bundle to json");
             }
         }
         return jSONObject;
@@ -48,25 +48,25 @@ public final class i1 {
                 return;
             }
             this.a = context;
-            C5623h0.a().a(context);
+            h0.a().a(context);
         }
     }
 
     public void a(String str, int i) {
-        C5623h0.a().a(str, i);
+        h0.a().a(str, i);
     }
 
     public void a(String str, int i, String str2, LinkedHashMap<String, String> linkedHashMap) {
-        C5623h0.a().a(str, i, str2, a(linkedHashMap));
+        h0.a().a(str, i, str2, a(linkedHashMap));
     }
 
     public void a(String str, Context context, String str2, String str3) {
         JSONObject jSONObject = new JSONObject();
         try {
             jSONObject.put("_constants", str3);
-            C5623h0.a().a(str, 0, str2, jSONObject);
+            h0.a().a(str, 0, str2, jSONObject);
         } catch (JSONException unused) {
-            C5653y.f("hmsSdk", "onEvent():JSON structure Exception!");
+            y.f("hmsSdk", "onEvent():JSON structure Exception!");
         }
     }
 }

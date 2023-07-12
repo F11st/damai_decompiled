@@ -45,10 +45,9 @@ public class DXNestedScrollerView extends FrameLayout implements NestedScrolling
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.nested.DXNestedScrollerView$a */
     /* loaded from: classes11.dex */
-    class C6517a extends RecyclerView.OnScrollListener {
-        C6517a() {
+    class a extends RecyclerView.OnScrollListener {
+        a() {
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
@@ -368,7 +367,7 @@ public class DXNestedScrollerView extends FrameLayout implements NestedScrolling
     public void setRoot(ViewGroup viewGroup) {
         RecyclerView recyclerView = (RecyclerView) viewGroup;
         this.mRootList = recyclerView;
-        recyclerView.addOnScrollListener(new C6517a());
+        recyclerView.addOnScrollListener(new a());
     }
 
     public void setStickyHeight(int i) {

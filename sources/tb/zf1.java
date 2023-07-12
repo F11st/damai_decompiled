@@ -12,11 +12,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import cn.damai.common.OrangeConfigCenter;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -54,15 +52,14 @@ public class zf1 implements View.OnClickListener {
     private DMIconFontTextView o;
     private UserCenterDynamicMenu p;
     private boolean q = true;
-    private View.OnClickListener r = new View$OnClickListenerC10021a();
+    private View.OnClickListener r = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.zf1$a */
     /* loaded from: classes6.dex */
-    public class View$OnClickListenerC10021a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC10021a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -161,7 +158,7 @@ public class zf1 implements View.OnClickListener {
                     String queryParameter = parse.getQueryParameter("scm");
                     List<UserCenterDynamicMenu.DynamicMenuItem> itemList = this.p.getItemList();
                     if (wh2.e(itemList) > 0) {
-                        C0529c.e().x(vf1.x().q(queryParameter, targetUrl, itemList.indexOf(dynamicMenuItem) + 4));
+                        cn.damai.common.user.c.e().x(vf1.x().q(queryParameter, targetUrl, itemList.indexOf(dynamicMenuItem) + 4));
                     }
                 }
             } catch (Exception e) {
@@ -175,7 +172,7 @@ public class zf1 implements View.OnClickListener {
         if (AndroidInstantRuntime.support(ipChange, "-262692096")) {
             ipChange.ipc$dispatch("-262692096", new Object[]{this, str, Integer.valueOf(i)});
         } else {
-            C0529c.e().x(vf1.x().q("", str, i));
+            cn.damai.common.user.c.e().x(vf1.x().q("", str, i));
         }
     }
 
@@ -346,7 +343,7 @@ public class zf1 implements View.OnClickListener {
             this.q = z;
             r(z);
             t();
-            C0529c.e().x(vf1.x().r());
+            cn.damai.common.user.c.e().x(vf1.x().r());
         }
     }
 
@@ -422,7 +419,7 @@ public class zf1 implements View.OnClickListener {
                 ((TextView) relativeLayout.findViewById(R$id.tv_title)).setText(dynamicMenuItem.getTitle());
                 ImageView imageView = (ImageView) relativeLayout.findViewById(R$id.iv_icon);
                 if (!TextUtils.isEmpty(dynamicMenuItem.getIconUrl())) {
-                    DMImageCreator c2 = C0504a.b().c(dynamicMenuItem.getIconUrl());
+                    DMImageCreator c2 = cn.damai.common.image.a.b().c(dynamicMenuItem.getIconUrl());
                     int i2 = R$drawable.user_center_dynamic_menu_bg;
                     c2.i(i2).c(i2).g(imageView);
                 } else {
@@ -454,19 +451,19 @@ public class zf1 implements View.OnClickListener {
             ipChange.ipc$dispatch("2077173688", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2)});
             return;
         }
-        String a = wf1.a(i);
-        String a2 = wf1.a(i2);
-        if (i > 0 && !TextUtils.isEmpty(a)) {
+        String a2 = wf1.a(i);
+        String a3 = wf1.a(i2);
+        if (i > 0 && !TextUtils.isEmpty(a2)) {
             this.g.setVisibility(0);
-            this.g.setText(a);
+            this.g.setText(a2);
             this.f.setTag(String.valueOf(i));
         } else {
             this.g.setVisibility(8);
             this.f.setTag("0");
         }
-        if (i2 > 0 && !TextUtils.isEmpty(a2)) {
+        if (i2 > 0 && !TextUtils.isEmpty(a3)) {
             this.j.setVisibility(0);
-            this.j.setText(a2);
+            this.j.setText(a3);
             this.i.setTag(String.valueOf(i2));
             return;
         }

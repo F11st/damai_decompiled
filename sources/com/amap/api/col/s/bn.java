@@ -21,9 +21,8 @@ public final class bn {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.bn$a */
     /* loaded from: classes10.dex */
-    public static class C4390a {
+    public static class a {
         String a;
         String b;
         String c;
@@ -51,10 +50,10 @@ public final class bn {
         String y;
         String z;
 
-        private C4390a() {
+        private a() {
         }
 
-        /* synthetic */ C4390a(byte b) {
+        /* synthetic */ a(byte b) {
             this();
         }
     }
@@ -83,9 +82,9 @@ public final class bn {
         if (bArr.length > 117) {
             byte[] bArr2 = new byte[117];
             System.arraycopy(bArr, 0, bArr2, 0, 117);
-            byte[] a = bp.a(bArr2, d);
+            byte[] a2 = bp.a(bArr2, d);
             byte[] bArr3 = new byte[(bArr.length + 128) - 117];
-            System.arraycopy(a, 0, bArr3, 0, 128);
+            System.arraycopy(a2, 0, bArr3, 0, 128);
             System.arraycopy(bArr, 117, bArr3, 128, bArr.length - 117);
             return bArr3;
         }
@@ -117,7 +116,7 @@ public final class bn {
         }
     }
 
-    private static byte[] b(C4390a c4390a) {
+    private static byte[] b(a aVar) {
         ByteArrayOutputStream byteArrayOutputStream;
         try {
             byteArrayOutputStream = new ByteArrayOutputStream();
@@ -126,32 +125,32 @@ public final class bn {
             byteArrayOutputStream = null;
         }
         try {
-            a(byteArrayOutputStream, c4390a.a);
-            a(byteArrayOutputStream, c4390a.b);
-            a(byteArrayOutputStream, c4390a.c);
-            a(byteArrayOutputStream, c4390a.d);
-            a(byteArrayOutputStream, c4390a.e);
-            a(byteArrayOutputStream, c4390a.f);
-            a(byteArrayOutputStream, c4390a.g);
-            a(byteArrayOutputStream, c4390a.h);
-            a(byteArrayOutputStream, c4390a.i);
-            a(byteArrayOutputStream, c4390a.j);
-            a(byteArrayOutputStream, c4390a.k);
-            a(byteArrayOutputStream, c4390a.l);
-            a(byteArrayOutputStream, c4390a.m);
-            a(byteArrayOutputStream, c4390a.n);
-            a(byteArrayOutputStream, c4390a.o);
-            a(byteArrayOutputStream, c4390a.p);
-            a(byteArrayOutputStream, c4390a.q);
-            a(byteArrayOutputStream, c4390a.r);
-            a(byteArrayOutputStream, c4390a.s);
-            a(byteArrayOutputStream, c4390a.t);
-            a(byteArrayOutputStream, c4390a.u);
-            a(byteArrayOutputStream, c4390a.v);
-            a(byteArrayOutputStream, c4390a.w);
-            a(byteArrayOutputStream, c4390a.x);
-            a(byteArrayOutputStream, c4390a.y);
-            a(byteArrayOutputStream, c4390a.z);
+            a(byteArrayOutputStream, aVar.a);
+            a(byteArrayOutputStream, aVar.b);
+            a(byteArrayOutputStream, aVar.c);
+            a(byteArrayOutputStream, aVar.d);
+            a(byteArrayOutputStream, aVar.e);
+            a(byteArrayOutputStream, aVar.f);
+            a(byteArrayOutputStream, aVar.g);
+            a(byteArrayOutputStream, aVar.h);
+            a(byteArrayOutputStream, aVar.i);
+            a(byteArrayOutputStream, aVar.j);
+            a(byteArrayOutputStream, aVar.k);
+            a(byteArrayOutputStream, aVar.l);
+            a(byteArrayOutputStream, aVar.m);
+            a(byteArrayOutputStream, aVar.n);
+            a(byteArrayOutputStream, aVar.o);
+            a(byteArrayOutputStream, aVar.p);
+            a(byteArrayOutputStream, aVar.q);
+            a(byteArrayOutputStream, aVar.r);
+            a(byteArrayOutputStream, aVar.s);
+            a(byteArrayOutputStream, aVar.t);
+            a(byteArrayOutputStream, aVar.u);
+            a(byteArrayOutputStream, aVar.v);
+            a(byteArrayOutputStream, aVar.w);
+            a(byteArrayOutputStream, aVar.x);
+            a(byteArrayOutputStream, aVar.y);
+            a(byteArrayOutputStream, aVar.z);
             byte[] b = b(bw.b(byteArrayOutputStream.toByteArray()));
             try {
                 byteArrayOutputStream.close();
@@ -180,8 +179,8 @@ public final class bn {
         return b(context);
     }
 
-    private static String a(C4390a c4390a) {
-        return bp.b(b(c4390a));
+    private static String a(a aVar) {
+        return bp.b(b(aVar));
     }
 
     private static void a(ByteArrayOutputStream byteArrayOutputStream, String str) {
@@ -192,71 +191,71 @@ public final class bn {
         }
     }
 
-    private static C4390a b(Context context, boolean z) {
-        C4390a c4390a = new C4390a((byte) 0);
-        c4390a.a = bo.r(context);
-        c4390a.b = bo.k(context);
+    private static a b(Context context, boolean z) {
+        a aVar = new a((byte) 0);
+        aVar.a = bo.r(context);
+        aVar.b = bo.k(context);
         String h = bo.h(context);
         if (h == null) {
             h = "";
         }
-        c4390a.c = h;
-        c4390a.d = bk.c(context);
-        c4390a.e = Build.getMODEL();
-        c4390a.f = Build.getMANUFACTURER();
-        c4390a.g = android.os.Build.DEVICE;
-        c4390a.h = bk.b(context);
-        c4390a.i = bk.d(context);
-        c4390a.j = String.valueOf(Build.VERSION.SDK_INT);
-        c4390a.k = bo.t(context);
-        c4390a.l = bo.o(context);
+        aVar.c = h;
+        aVar.d = bk.c(context);
+        aVar.e = Build.getMODEL();
+        aVar.f = Build.getMANUFACTURER();
+        aVar.g = android.os.Build.DEVICE;
+        aVar.h = bk.b(context);
+        aVar.i = bk.d(context);
+        aVar.j = String.valueOf(Build.VERSION.SDK_INT);
+        aVar.k = bo.t(context);
+        aVar.l = bo.o(context);
         StringBuilder sb = new StringBuilder();
         sb.append(bo.n(context));
-        c4390a.m = sb.toString();
+        aVar.m = sb.toString();
         StringBuilder sb2 = new StringBuilder();
         sb2.append(bo.m(context));
-        c4390a.n = sb2.toString();
-        c4390a.o = bo.v(context);
-        c4390a.p = bo.l(context);
-        c4390a.q = "";
-        c4390a.r = "";
+        aVar.n = sb2.toString();
+        aVar.o = bo.v(context);
+        aVar.p = bo.l(context);
+        aVar.q = "";
+        aVar.r = "";
         String[] d = bo.d();
-        c4390a.s = d[0];
-        c4390a.t = d[1];
-        c4390a.w = bo.a();
-        String a = bo.a(context);
-        if (!TextUtils.isEmpty(a)) {
-            c4390a.x = a;
+        aVar.s = d[0];
+        aVar.t = d[1];
+        aVar.w = bo.a();
+        String a2 = bo.a(context);
+        if (!TextUtils.isEmpty(a2)) {
+            aVar.x = a2;
         } else {
-            c4390a.x = "";
+            aVar.x = "";
         }
-        c4390a.y = "aid=" + bo.j(context);
+        aVar.y = "aid=" + bo.j(context);
         if ((z && cf.d) || cf.e) {
             String g = bo.g(context);
             if (!TextUtils.isEmpty(g)) {
-                c4390a.y += "|oaid=" + g;
+                aVar.y += "|oaid=" + g;
             }
         }
-        String a2 = bo.a(context, ",");
-        if (!TextUtils.isEmpty(a2)) {
-            c4390a.y += "|multiImeis=" + a2;
+        String a3 = bo.a(context, ",");
+        if (!TextUtils.isEmpty(a3)) {
+            aVar.y += "|multiImeis=" + a3;
         }
         String s = bo.s(context);
         if (!TextUtils.isEmpty(s)) {
-            c4390a.y += "|meid=" + s;
+            aVar.y += "|meid=" + s;
         }
-        c4390a.y += "|serial=" + bo.i(context);
+        aVar.y += "|serial=" + bo.i(context);
         String b = bo.b();
         if (!TextUtils.isEmpty(b)) {
-            c4390a.y += "|adiuExtras=" + b;
+            aVar.y += "|adiuExtras=" + b;
         }
-        c4390a.y += "|storage=" + bo.e() + "|ram=" + bo.u(context) + "|arch=" + bo.f();
+        aVar.y += "|storage=" + bo.e() + "|ram=" + bo.u(context) + "|arch=" + bo.f();
         String b2 = ch.a().b();
         if (!TextUtils.isEmpty(b2)) {
-            c4390a.z = b2;
+            aVar.z = b2;
         } else {
-            c4390a.z = "";
+            aVar.z = "";
         }
-        return c4390a;
+        return aVar;
     }
 }

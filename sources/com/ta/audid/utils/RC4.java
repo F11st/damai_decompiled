@@ -7,32 +7,31 @@ public class RC4 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.ta.audid.utils.RC4$b */
     /* loaded from: classes7.dex */
-    public static class C6246b {
+    public static class b {
         public int[] a;
         public int b;
         public int c;
 
-        private C6246b() {
+        private b() {
             this.a = new int[256];
         }
     }
 
-    private static C6246b prepareKey(String str) {
+    private static b prepareKey(String str) {
         if (str != null) {
-            C6246b c6246b = new C6246b();
+            b bVar = new b();
             for (int i = 0; i < 256; i++) {
-                c6246b.a[i] = i;
+                bVar.a[i] = i;
             }
-            c6246b.b = 0;
-            c6246b.c = 0;
+            bVar.b = 0;
+            bVar.c = 0;
             int i2 = 0;
             int i3 = 0;
             for (int i4 = 0; i4 < 256; i4++) {
                 try {
                     char charAt = str.charAt(i2);
-                    int[] iArr = c6246b.a;
+                    int[] iArr = bVar.a;
                     i3 = ((charAt + iArr[i4]) + i3) % 256;
                     int i5 = iArr[i4];
                     iArr[i4] = iArr[i3];
@@ -42,36 +41,36 @@ public class RC4 {
                     return null;
                 }
             }
-            return c6246b;
+            return bVar;
         }
         return null;
     }
 
     public static byte[] rc4(byte[] bArr) {
-        C6246b prepareKey;
+        b prepareKey;
         if (bArr == null || (prepareKey = prepareKey(RC4_PK)) == null) {
             return null;
         }
         return rc4(bArr, prepareKey);
     }
 
-    private static byte[] rc4(byte[] bArr, C6246b c6246b) {
-        if (bArr == null || c6246b == null) {
+    private static byte[] rc4(byte[] bArr, b bVar) {
+        if (bArr == null || bVar == null) {
             return null;
         }
-        int i = c6246b.b;
-        int i2 = c6246b.c;
+        int i = bVar.b;
+        int i2 = bVar.c;
         for (int i3 = 0; i3 < bArr.length; i3++) {
             i = (i + 1) % 256;
-            int[] iArr = c6246b.a;
+            int[] iArr = bVar.a;
             i2 = (iArr[i] + i2) % 256;
             int i4 = iArr[i];
             iArr[i] = iArr[i2];
             iArr[i2] = i4;
             bArr[i3] = (byte) (iArr[(iArr[i] + iArr[i2]) % 256] ^ bArr[i3]);
         }
-        c6246b.b = i;
-        c6246b.c = i2;
+        bVar.b = i;
+        bVar.c = i2;
         return bArr;
     }
 }

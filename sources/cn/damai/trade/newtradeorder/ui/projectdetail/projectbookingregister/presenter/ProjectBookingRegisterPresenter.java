@@ -15,13 +15,12 @@ public class ProjectBookingRegisterPresenter extends ProjectBookingRegisterContr
     private ProjectBookingRegisterRepository mBookingRegisterRepository = new ProjectBookingRegisterRepository();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.presenter.ProjectBookingRegisterPresenter$a */
     /* loaded from: classes8.dex */
-    public class C2253a extends w12<ProjectBookingRegisterData> {
+    public class a extends w12<ProjectBookingRegisterData> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        C2253a(int i) {
+        a(int i) {
             this.a = i;
         }
 
@@ -50,12 +49,11 @@ public class ProjectBookingRegisterPresenter extends ProjectBookingRegisterContr
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.presenter.ProjectBookingRegisterPresenter$b */
     /* loaded from: classes8.dex */
-    public class C2254b extends w12<FollowDataBean> {
+    public class b extends w12<FollowDataBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2254b() {
+        b() {
         }
 
         @Override // tb.w12
@@ -81,12 +79,11 @@ public class ProjectBookingRegisterPresenter extends ProjectBookingRegisterContr
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.presenter.ProjectBookingRegisterPresenter$c */
     /* loaded from: classes8.dex */
-    public class C2255c extends w12<FollowDataBean> {
+    public class c extends w12<FollowDataBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2255c() {
+        c() {
         }
 
         @Override // tb.w12
@@ -117,7 +114,7 @@ public class ProjectBookingRegisterPresenter extends ProjectBookingRegisterContr
         if (AndroidInstantRuntime.support(ipChange, "-1250124861")) {
             ipChange.ipc$dispatch("-1250124861", new Object[]{this, Integer.valueOf(i), Long.valueOf(j), Integer.valueOf(i2)});
         } else {
-            this.mBookingRegisterRepository.updateFollowRelation(i, j, i2, new C2255c());
+            this.mBookingRegisterRepository.updateFollowRelation(i, j, i2, new c());
         }
     }
 
@@ -127,7 +124,7 @@ public class ProjectBookingRegisterPresenter extends ProjectBookingRegisterContr
         if (AndroidInstantRuntime.support(ipChange, "-1205834150")) {
             ipChange.ipc$dispatch("-1205834150", new Object[]{this, Integer.valueOf(i), str});
         } else {
-            this.mBookingRegisterRepository.retrieveProjectBookingRegisterData(str, new C2253a(i));
+            this.mBookingRegisterRepository.retrieveProjectBookingRegisterData(str, new a(i));
         }
     }
 
@@ -137,7 +134,7 @@ public class ProjectBookingRegisterPresenter extends ProjectBookingRegisterContr
         if (AndroidInstantRuntime.support(ipChange, "542464913")) {
             ipChange.ipc$dispatch("542464913", new Object[]{this, Integer.valueOf(i), Long.valueOf(j), Integer.valueOf(i2)});
         } else {
-            this.mBookingRegisterRepository.updateFollowRelation(i, j, i2, new C2254b());
+            this.mBookingRegisterRepository.updateFollowRelation(i, j, i2, new b());
         }
     }
 }

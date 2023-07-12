@@ -28,7 +28,6 @@ import com.taobao.uikit.image.R;
 import com.taobao.uikit.utils.UIKITLog;
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
-import tb.C9796v;
 import tb.ce1;
 import tb.ds1;
 import tb.h42;
@@ -38,6 +37,7 @@ import tb.p22;
 import tb.tq1;
 import tb.ui2;
 import tb.ur1;
+import tb.v;
 import tb.wr1;
 
 /* compiled from: Taobao */
@@ -212,7 +212,7 @@ public class ImageLoadFeature extends AbsFeature<ImageView> implements LayoutCal
                 }
                 HashMap hashMap = new HashMap();
                 hashMap.put("intermediate", Boolean.valueOf(i));
-                hashMap.put(C9796v.TAK_ABILITY_SHOW_POP_ANIMATION, Boolean.valueOf(z2));
+                hashMap.put(v.TAK_ABILITY_SHOW_POP_ANIMATION, Boolean.valueOf(z2));
                 hashMap.put("time", Long.valueOf(System.currentTimeMillis()));
                 TBImageLifeCycleMonitor a = TBImageLifeCycleMonitor.a();
                 wr1 wr1Var = this.mCreator;

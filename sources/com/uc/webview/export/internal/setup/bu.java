@@ -1,9 +1,7 @@
 package com.uc.webview.export.internal.setup;
 
 import android.webkit.ValueCallback;
-import com.uc.webview.export.internal.setup.C7257ae;
-import com.uc.webview.export.internal.uc.startup.C7302b;
-import com.uc.webview.export.internal.utility.C7345n;
+import com.uc.webview.export.internal.setup.ae;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.concurrent.Callable;
@@ -14,7 +12,7 @@ public abstract class bu {
     static final Object g = new Object();
     protected bt e;
     protected UCSubSetupTask f;
-    HashSet<C7257ae.EnumC7259b> h = new HashSet<>();
+    HashSet<ae.b> h = new HashSet<>();
 
     public bu(UCSubSetupTask uCSubSetupTask, bt btVar) {
         this.e = btVar;
@@ -23,15 +21,15 @@ public abstract class bu {
 
     /* JADX INFO: Access modifiers changed from: protected */
     public static int d() {
-        return C7257ae.C7261d.b;
+        return ae.d.b;
     }
 
-    public final void a(int i, C7257ae.EnumC7259b enumC7259b, Callable<?> callable, ValueCallback<Object> valueCallback) {
-        if (C7257ae.a().a(i, enumC7259b, callable, valueCallback) == null || i == C7257ae.C7261d.b) {
+    public final void a(int i, ae.b bVar, Callable<?> callable, ValueCallback<Object> valueCallback) {
+        if (ae.a().a(i, bVar, callable, valueCallback) == null || i == ae.d.b) {
             return;
         }
         synchronized (g) {
-            this.h.add(enumC7259b);
+            this.h.add(bVar);
         }
     }
 
@@ -43,8 +41,8 @@ public abstract class bu {
     }
 
     public final void c() {
-        C7302b.a(298);
-        C7345n.a();
+        com.uc.webview.export.internal.uc.startup.b.a(298);
+        com.uc.webview.export.internal.utility.n.a();
         if (a()) {
             return;
         }
@@ -56,9 +54,9 @@ public abstract class bu {
             if (this.h.isEmpty()) {
                 return;
             }
-            Iterator<C7257ae.EnumC7259b> it = this.h.iterator();
+            Iterator<ae.b> it = this.h.iterator();
             while (it.hasNext()) {
-                C7257ae.a().a(it.next());
+                ae.a().a(it.next());
             }
             this.h.clear();
         }

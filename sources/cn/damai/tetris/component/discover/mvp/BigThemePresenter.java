@@ -12,9 +12,9 @@ import cn.damai.uikit.nav.NavProxy;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
-import tb.C9548pb;
 import tb.cs;
 import tb.ja;
+import tb.pb;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -45,7 +45,7 @@ public class BigThemePresenter extends BasePresenter<BigThemeModel, BigThemeView
             NotePresenter.putMap("alg", themeBean.alg, hashMap);
             NotePresenter.putMap("topic_id", themeBean.id, hashMap);
             NotePresenter.putMap("index", i + "", hashMap);
-            NotePresenter.putMap("quanziid", getModel().getTrackInfo().getArgsMap().get(C9548pb.CNT_CONTENT_ID), hashMap);
+            NotePresenter.putMap("quanziid", getModel().getTrackInfo().getArgsMap().get(pb.CNT_CONTENT_ID), hashMap);
             NotePresenter.fillMap(false, this.mTrackInfo, hashMap, themeBean.getCardType(), themeBean.id);
             userTrack(TrackType.click, view.getRootView(), this.mTrackInfo.trackB, "recommend", "theme", hashMap, true);
         }

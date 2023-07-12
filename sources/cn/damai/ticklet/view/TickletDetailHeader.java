@@ -12,8 +12,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import cn.damai.member.R$color;
 import cn.damai.member.R$id;
 import cn.damai.member.R$layout;
@@ -118,7 +118,7 @@ public class TickletDetailHeader extends LinearLayout implements View.OnClickLis
         } else if (id != R$id.ticklet_rule_text_url || this.context == null || this.deatilResult.getPerformNftExtAttr() == null) {
         } else {
             String str = this.deatilResult.getPerformNftExtAttr().nftRuleUrl;
-            C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "top", "nft_rule", new HashMap(), Boolean.TRUE));
+            c.e().x(b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "top", "nft_rule", new HashMap(), Boolean.TRUE));
             if (TextUtils.isEmpty(str)) {
                 return;
             }

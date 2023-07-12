@@ -17,9 +17,8 @@ public final class xk2<T> implements Sequence<T> {
     private final Function1<T, Boolean> b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.xk2$a */
     /* loaded from: classes3.dex */
-    public static final class C9932a implements Iterator<T>, KMappedMarker {
+    public static final class a implements Iterator<T>, KMappedMarker {
         @NotNull
         private final Iterator<T> a;
         private int b = -1;
@@ -27,7 +26,7 @@ public final class xk2<T> implements Sequence<T> {
         private T c;
         final /* synthetic */ xk2<T> d;
 
-        C9932a(xk2<T> xk2Var) {
+        a(xk2<T> xk2Var) {
             this.d = xk2Var;
             this.a = ((xk2) xk2Var).a.iterator();
         }
@@ -83,6 +82,6 @@ public final class xk2<T> implements Sequence<T> {
     @Override // kotlin.sequences.Sequence
     @NotNull
     public Iterator<T> iterator() {
-        return new C9932a(this);
+        return new a(this);
     }
 }

@@ -18,12 +18,12 @@ class ci implements gb {
     @Override // com.xiaomi.push.gb
     public void a(fl flVar) {
         XMPushService xMPushService = this.a;
-        xMPushService.a(new XMPushService.C7701d(flVar));
+        xMPushService.a(new XMPushService.d(flVar));
     }
 
     @Override // com.xiaomi.push.gb
     public void a(gn gnVar) {
         XMPushService xMPushService = this.a;
-        xMPushService.a(new XMPushService.C7710m(gnVar));
+        xMPushService.a(new XMPushService.m(gnVar));
     }
 }

@@ -8,7 +8,6 @@ import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
 import kotlin.internal.LowPriorityInOverloadResolution;
 import kotlin.jvm.functions.Function1;
-import kotlinx.coroutines.AbstractC8619a;
 import kotlinx.coroutines.ExperimentalCoroutinesApi;
 import kotlinx.coroutines.InternalCoroutinesApi;
 import kotlinx.coroutines.JobCancellationException;
@@ -24,7 +23,7 @@ import org.jetbrains.annotations.Nullable;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
-public class mh<E> extends AbstractC8619a<wt2> implements Channel<E> {
+public class mh<E> extends kotlinx.coroutines.a<wt2> implements Channel<E> {
     @NotNull
     private final Channel<E> a;
 

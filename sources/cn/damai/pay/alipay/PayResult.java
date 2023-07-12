@@ -1,7 +1,7 @@
 package cn.damai.pay.alipay;
 
 import android.text.TextUtils;
-import com.alipay.sdk.m.u.C4316l;
+import com.alipay.sdk.m.u.l;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.Map;
@@ -19,11 +19,11 @@ public class PayResult {
             return;
         }
         for (String str : map.keySet()) {
-            if (TextUtils.equals(str, C4316l.a)) {
+            if (TextUtils.equals(str, l.a)) {
                 this.resultStatus = map.get(str);
             } else if (TextUtils.equals(str, "result")) {
                 this.result = map.get(str);
-            } else if (TextUtils.equals(str, C4316l.b)) {
+            } else if (TextUtils.equals(str, l.b)) {
                 this.memo = map.get(str);
             }
         }

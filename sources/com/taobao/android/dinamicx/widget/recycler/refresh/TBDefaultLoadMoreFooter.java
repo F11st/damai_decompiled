@@ -24,9 +24,8 @@ public class TBDefaultLoadMoreFooter extends TBLoadMoreFooter {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.refresh.TBDefaultLoadMoreFooter$a */
     /* loaded from: classes12.dex */
-    public static /* synthetic */ class C6519a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -103,7 +102,7 @@ public class TBDefaultLoadMoreFooter extends TBLoadMoreFooter {
             onPushLoadMoreListener.onLoadMoreStateChanged(loadMoreState2, loadMoreState);
         }
         this.mState = loadMoreState;
-        int i = C6519a.a[loadMoreState.ordinal()];
+        int i = a.a[loadMoreState.ordinal()];
         if (i == 1) {
             this.mProgressbar.stopLoadingAnimation();
             this.mProgressbar.setVisibility(8);

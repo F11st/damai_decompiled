@@ -15,7 +15,7 @@ public class ja {
     private final ByteArrayOutputStream f793a;
 
     public ja() {
-        this(new jb.C7681a());
+        this(new jb.a());
     }
 
     public ja(jh jhVar) {

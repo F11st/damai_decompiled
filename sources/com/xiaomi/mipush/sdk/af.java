@@ -15,7 +15,7 @@ public class af {
     private Context f39a;
 
     /* renamed from: a  reason: collision with other field name */
-    private List<C7590x> f40a = new ArrayList();
+    private List<x> f40a = new ArrayList();
 
     private af(Context context) {
         Context applicationContext = context.getApplicationContext();
@@ -38,12 +38,12 @@ public class af {
 
     public int a(String str) {
         synchronized (this.f40a) {
-            C7590x c7590x = new C7590x();
-            c7590x.f80a = str;
-            if (this.f40a.contains(c7590x)) {
-                for (C7590x c7590x2 : this.f40a) {
-                    if (c7590x2.equals(c7590x)) {
-                        return c7590x2.a;
+            x xVar = new x();
+            xVar.f80a = str;
+            if (this.f40a.contains(xVar)) {
+                for (x xVar2 : this.f40a) {
+                    if (xVar2.equals(xVar)) {
+                        return xVar2.a;
                     }
                 }
             }
@@ -63,54 +63,54 @@ public class af {
     /* renamed from: a  reason: collision with other method in class */
     public void m607a(String str) {
         synchronized (this.f40a) {
-            C7590x c7590x = new C7590x();
-            c7590x.a = 0;
-            c7590x.f80a = str;
-            if (this.f40a.contains(c7590x)) {
-                this.f40a.remove(c7590x);
+            x xVar = new x();
+            xVar.a = 0;
+            xVar.f80a = str;
+            if (this.f40a.contains(xVar)) {
+                this.f40a.remove(xVar);
             }
-            this.f40a.add(c7590x);
+            this.f40a.add(xVar);
         }
     }
 
     /* renamed from: a  reason: collision with other method in class */
     public boolean m608a(String str) {
         synchronized (this.f40a) {
-            C7590x c7590x = new C7590x();
-            c7590x.f80a = str;
-            return this.f40a.contains(c7590x);
+            x xVar = new x();
+            xVar.f80a = str;
+            return this.f40a.contains(xVar);
         }
     }
 
     public void b(String str) {
         synchronized (this.f40a) {
-            C7590x c7590x = new C7590x();
-            c7590x.f80a = str;
-            if (this.f40a.contains(c7590x)) {
-                Iterator<C7590x> it = this.f40a.iterator();
+            x xVar = new x();
+            xVar.f80a = str;
+            if (this.f40a.contains(xVar)) {
+                Iterator<x> it = this.f40a.iterator();
                 while (true) {
                     if (!it.hasNext()) {
                         break;
                     }
-                    C7590x next = it.next();
-                    if (c7590x.equals(next)) {
-                        c7590x = next;
+                    x next = it.next();
+                    if (xVar.equals(next)) {
+                        xVar = next;
                         break;
                     }
                 }
             }
-            c7590x.a++;
-            this.f40a.remove(c7590x);
-            this.f40a.add(c7590x);
+            xVar.a++;
+            this.f40a.remove(xVar);
+            this.f40a.add(xVar);
         }
     }
 
     public void c(String str) {
         synchronized (this.f40a) {
-            C7590x c7590x = new C7590x();
-            c7590x.f80a = str;
-            if (this.f40a.contains(c7590x)) {
-                this.f40a.remove(c7590x);
+            x xVar = new x();
+            xVar.f80a = str;
+            if (this.f40a.contains(xVar)) {
+                this.f40a.remove(xVar);
             }
         }
     }

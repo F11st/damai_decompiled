@@ -88,7 +88,7 @@ public final class ObservableDistinctUntilChanged<T, K> extends AbstractObservab
         this.comparer = biPredicate;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new DistinctUntilChangedObserver(observer, this.keySelector, this.comparer));
     }

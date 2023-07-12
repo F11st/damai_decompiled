@@ -42,19 +42,17 @@ public class TBSpeed {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.speed.TBSpeed$a */
     /* loaded from: classes11.dex */
-    public static class C6636a extends TypeReference<Map<String, Boolean>> {
-        C6636a() {
+    public static class a extends TypeReference<Map<String, Boolean>> {
+        a() {
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.speed.TBSpeed$b */
     /* loaded from: classes11.dex */
-    public static class C6637b implements OConfigListener {
-        C6637b() {
+    public static class b implements OConfigListener {
+        b() {
         }
 
         @Override // com.taobao.orange.OConfigListener
@@ -184,7 +182,7 @@ public class TBSpeed {
                 f = true;
                 return;
             }
-            h = (Map) JSON.parseObject(c2, new C6636a(), new Feature[0]);
+            h = (Map) JSON.parseObject(c2, new a(), new Feature[0]);
             f = true;
         }
     }
@@ -207,7 +205,7 @@ public class TBSpeed {
     private static void f() {
         try {
             if (a == null) {
-                a = new C6637b();
+                a = new b();
                 boolean z = true;
                 OrangeConfig.getInstance().registerListener(new String[]{"taobao_speed"}, a, true);
                 Map<String, String> configs = OrangeConfig.getInstance().getConfigs("taobao_speed");

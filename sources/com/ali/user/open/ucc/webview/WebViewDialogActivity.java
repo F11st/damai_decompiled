@@ -50,7 +50,7 @@ public class WebViewDialogActivity extends UccWebViewActivity {
         if (AliMemberSDK.getService(StatusBarService.class) != null && ((StatusBarService) AliMemberSDK.getService(StatusBarService.class)).getWebDialogLayout() > 0) {
             return ((StatusBarService) AliMemberSDK.getService(StatusBarService.class)).getWebDialogLayout();
         }
-        return R.C2996layout.member_sdk_ucc_dialog_layout;
+        return R.layout.member_sdk_ucc_dialog_layout;
     }
 
     @Override // com.ali.user.open.core.webview.BaseWebViewActivity

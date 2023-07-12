@@ -15,12 +15,11 @@ import java.util.Map;
 /* loaded from: classes10.dex */
 public class fz {
     private static volatile fz b;
-    private Map<String, C4552a> a;
+    private Map<String, a> a;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.fz$a */
     /* loaded from: classes10.dex */
-    class C4552a {
+    class a {
         private int b;
         private int c;
         private int e;
@@ -29,7 +28,7 @@ public class fz {
         private int f = 0;
         private List<LatLng> h = new ArrayList();
 
-        public C4552a(int i, int i2, int i3, HashMap<Integer, List<LatLng>> hashMap) {
+        public a(int i, int i2, int i3, HashMap<Integer, List<LatLng>> hashMap) {
             this.b = 0;
             this.c = 0;
             this.e = 0;
@@ -102,21 +101,21 @@ public class fz {
     }
 
     public synchronized void a(String str, int i, List<LatLng> list) {
-        Map<String, C4552a> map = this.a;
+        Map<String, a> map = this.a;
         if (map != null) {
             map.get(str).a().put(Integer.valueOf(i), list);
         }
     }
 
     public synchronized void a(String str, int i, int i2, int i3) {
-        Map<String, C4552a> map = this.a;
+        Map<String, a> map = this.a;
         if (map != null) {
-            map.put(str, new C4552a(i, i2, i3, new HashMap(16)));
+            map.put(str, new a(i, i2, i3, new HashMap(16)));
         }
     }
 
-    public synchronized C4552a a(String str) {
-        Map<String, C4552a> map = this.a;
+    public synchronized a a(String str) {
+        Map<String, a> map = this.a;
         if (map != null) {
             return map.get(str);
         }

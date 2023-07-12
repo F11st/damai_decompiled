@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.search.Daojishi;
 import cn.damai.commonbusiness.search.bean.SearchTourBean;
 import cn.damai.commonbusiness.search.bean.SearchTourItem;
@@ -55,12 +55,11 @@ public class SearchHeadTourViewHolder extends RecyclerView.ViewHolder {
     private String m;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.viewholder.SearchHeadTourViewHolder$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1626a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1626a(SearchHeadTourViewHolder searchHeadTourViewHolder) {
+        a(SearchHeadTourViewHolder searchHeadTourViewHolder) {
         }
 
         @Override // android.view.View.OnClickListener
@@ -84,12 +83,11 @@ public class SearchHeadTourViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.viewholder.SearchHeadTourViewHolder$b */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1627b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1627b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -103,7 +101,7 @@ public class SearchHeadTourViewHolder extends RecyclerView.ViewHolder {
             if (intValue < 0) {
                 return;
             }
-            C0529c.e().x(b82.C().M(SearchHeadTourViewHolder.this.m));
+            c.e().x(b82.C().M(SearchHeadTourViewHolder.this.m));
             SearchHeadTourViewHolder searchHeadTourViewHolder = SearchHeadTourViewHolder.this;
             searchHeadTourViewHolder.h = !searchHeadTourViewHolder.h;
             SearchHeadTourViewHolder searchHeadTourViewHolder2 = SearchHeadTourViewHolder.this;
@@ -119,7 +117,7 @@ public class SearchHeadTourViewHolder extends RecyclerView.ViewHolder {
 
     public SearchHeadTourViewHolder(Context context, View view, Daojishi daojishi) {
         super(view);
-        this.j = new View$OnClickListenerC1626a(this);
+        this.j = new a(this);
         this.g = context;
         m62.a(context, 9.0f);
         m62.a(context, 1.0f);
@@ -142,7 +140,7 @@ public class SearchHeadTourViewHolder extends RecyclerView.ViewHolder {
         linearLayout.setVisibility(8);
         this.d.setVisibility(8);
         this.f = (TextView) view.findViewById(R$id.tv_more_title);
-        this.e.setOnClickListener(new View$OnClickListenerC1627b());
+        this.e.setOnClickListener(new b());
     }
 
     private void h(Context context, LayoutInflater layoutInflater, Daojishi daojishi) {
@@ -254,7 +252,7 @@ public class SearchHeadTourViewHolder extends RecyclerView.ViewHolder {
         recyclerView.setLayoutManager(gridLayoutManager);
         this.b.setAdapter(this.c);
         if (this.b.getItemDecorationCount() == 0) {
-            this.b.addItemDecoration(new GridItemDecoration.C1616b(this.g).c(1.0f).d(1.0f).b(Color.parseColor("#1A000000")).a());
+            this.b.addItemDecoration(new GridItemDecoration.b(this.g).c(1.0f).d(1.0f).b(Color.parseColor("#1A000000")).a());
         }
     }
 

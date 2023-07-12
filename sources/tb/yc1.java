@@ -40,12 +40,12 @@ public class yc1 {
         }
     }
 
-    public kc.C9346b b(String str, String str2, String str3, Map<String, String> map, Boolean bool) {
+    public kc.b b(String str, String str2, String str3, Map<String, String> map, Boolean bool) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "787554902")) {
-            return (kc.C9346b) ipChange.ipc$dispatch("787554902", new Object[]{this, str, str2, str3, map, bool});
+            return (kc.b) ipChange.ipc$dispatch("787554902", new Object[]{this, str, str2, str3, map, bool});
         }
         a(map);
-        return new kc.C9346b().c(str).a(str2).e(str3).b(bool.booleanValue()).d(map);
+        return new kc.b().c(str).a(str2).e(str3).b(bool.booleanValue()).d(map);
     }
 }

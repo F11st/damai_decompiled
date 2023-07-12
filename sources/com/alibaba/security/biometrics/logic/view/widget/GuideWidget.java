@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.alibaba.security.biometrics.R;
 import com.alibaba.security.biometrics.logic.view.ALBiometricsActivityParentView;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
@@ -56,9 +56,9 @@ public class GuideWidget extends AbsGuideWidget {
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
                 GuideWidget.this.setVisibility(8);
-                ALBiometricsActivityParentView.InterfaceC3778a interfaceC3778a = GuideWidget.this.a;
-                if (interfaceC3778a != null) {
-                    interfaceC3778a.d();
+                ALBiometricsActivityParentView.a aVar = GuideWidget.this.a;
+                if (aVar != null) {
+                    aVar.d();
                 }
             }
         });
@@ -67,12 +67,12 @@ public class GuideWidget extends AbsGuideWidget {
 
     @Override // com.alibaba.security.biometrics.logic.view.widget.BaseWidget
     protected final void b() {
-        C3788b.a(this.d, d("titleText"));
-        C3788b.a(this.f, d("messageText"));
-        C3788b.a(this.h, d("messageText"));
-        C3788b.a(this.g, d("markMessageText"));
-        C3788b.a(this.i, c("mainButton"));
-        C3788b.a(this.j, d("privacyTipText"));
+        b.a(this.d, d("titleText"));
+        b.a(this.f, d("messageText"));
+        b.a(this.h, d("messageText"));
+        b.a(this.g, d("markMessageText"));
+        b.a(this.i, c("mainButton"));
+        b.a(this.j, d("privacyTipText"));
     }
 
     @Override // com.alibaba.security.biometrics.logic.view.widget.BaseWidget
@@ -81,7 +81,7 @@ public class GuideWidget extends AbsGuideWidget {
 
     @Override // com.alibaba.security.biometrics.logic.view.widget.BaseWidget
     protected String getSkinParentKey() {
-        return C3834a.C3836b.m;
+        return a.b.m;
     }
 
     public GuideWidget(Context context, AttributeSet attributeSet) {
@@ -92,7 +92,7 @@ public class GuideWidget extends AbsGuideWidget {
         super(context, attributeSet, i);
     }
 
-    @Override // com.alibaba.security.biometrics.logic.view.widget.BaseWidget, com.alibaba.security.biometrics.logic.view.widget.InterfaceC3789c
+    @Override // com.alibaba.security.biometrics.logic.view.widget.BaseWidget, com.alibaba.security.biometrics.logic.view.widget.c
     public final void a(String... strArr) {
         String str = strArr.length > 0 ? strArr[0] : null;
         if (!TextUtils.isEmpty(str)) {

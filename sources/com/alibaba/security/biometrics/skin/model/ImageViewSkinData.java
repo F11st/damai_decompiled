@@ -2,13 +2,13 @@ package com.alibaba.security.biometrics.skin.model;
 
 import android.graphics.Bitmap;
 import com.alibaba.security.biometrics.skin.interfaces.ISkinParse;
-import com.alibaba.security.common.b.a.InterfaceC3799a;
+import com.alibaba.security.common.b.a.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
 public class ImageViewSkinData extends BaseSkinData {
     private String src;
-    @InterfaceC3799a(d = false)
+    @a(d = false)
     private Bitmap srcImageBitmap;
 
     public String getSrc() {

@@ -40,7 +40,7 @@ import tb.wt2;
 public final class WantSeeRecommendView extends LinearLayout {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C0986a Event = new C0986a(null);
+    public static final a Event = new a(null);
     public static final int TYPE_FOLLOW_CLICK = 3;
     public static final int TYPE_FOLLOW_SUCCESS = 4;
     public static final int TYPE_ITEM_CLICK = 2;
@@ -56,13 +56,12 @@ public final class WantSeeRecommendView extends LinearLayout {
     private final TextView titleTv;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.view.WantSeeRecommendView$a */
     /* loaded from: classes.dex */
-    public static final class C0986a {
-        private C0986a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C0986a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

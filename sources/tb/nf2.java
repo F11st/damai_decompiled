@@ -16,9 +16,8 @@ public final class nf2 {
     private List<t71> b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.nf2$a */
     /* loaded from: classes4.dex */
-    static /* synthetic */ class C9472a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -80,21 +79,21 @@ public final class nf2 {
         SQLiteStatement compileStatement = sQLiteDatabase.compileStatement(this.a);
         if (this.b != null) {
             for (int i = 1; i < this.b.size() + 1; i++) {
-                Object a = wk.a(this.b.get(i - 1).b);
-                if (a == null) {
+                Object a2 = wk.a(this.b.get(i - 1).b);
+                if (a2 == null) {
                     compileStatement.bindNull(i);
                 } else {
-                    int i2 = C9472a.a[tk.a(a.getClass()).getColumnDbType().ordinal()];
+                    int i2 = a.a[tk.a(a2.getClass()).getColumnDbType().ordinal()];
                     if (i2 == 1) {
-                        compileStatement.bindLong(i, ((Number) a).longValue());
+                        compileStatement.bindLong(i, ((Number) a2).longValue());
                     } else if (i2 == 2) {
-                        compileStatement.bindDouble(i, ((Number) a).doubleValue());
+                        compileStatement.bindDouble(i, ((Number) a2).doubleValue());
                     } else if (i2 == 3) {
-                        compileStatement.bindString(i, a.toString());
+                        compileStatement.bindString(i, a2.toString());
                     } else if (i2 != 4) {
                         compileStatement.bindNull(i);
                     } else {
-                        compileStatement.bindBlob(i, (byte[]) a);
+                        compileStatement.bindBlob(i, (byte[]) a2);
                     }
                 }
             }
@@ -111,8 +110,8 @@ public final class nf2 {
         if (list != null) {
             String[] strArr = new String[list.size()];
             for (int i = 0; i < this.b.size(); i++) {
-                Object a = wk.a(this.b.get(i).b);
-                strArr[i] = a == null ? null : a.toString();
+                Object a2 = wk.a(this.b.get(i).b);
+                strArr[i] = a2 == null ? null : a2.toString();
             }
             return strArr;
         }

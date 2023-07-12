@@ -2,7 +2,6 @@ package kotlinx.coroutines.flow.internal;
 
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.jvm.functions.Function2;
 import kotlinx.coroutines.flow.FlowCollector;
 import kotlinx.coroutines.internal.ThreadContextKt;
@@ -28,8 +27,8 @@ public final class UndispatchedContextCollector<T> implements FlowCollector<T> {
     @Nullable
     public Object emit(T t, @NotNull Continuation<? super wt2> continuation) {
         Object d;
-        Object b = C8682a.b(this.c, t, this.a, this.b, continuation);
-        d = C8234b.d();
+        Object b = a.b(this.c, t, this.a, this.b, continuation);
+        d = kotlin.coroutines.intrinsics.b.d();
         return b == d ? b : wt2.INSTANCE;
     }
 }

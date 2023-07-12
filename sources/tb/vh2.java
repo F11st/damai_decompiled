@@ -6,7 +6,6 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.Formatter;
 import java.util.Locale;
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -248,7 +247,7 @@ public final class vh2 {
         String a = INSTANCE.a(str);
         if (!TextUtils.isEmpty(a)) {
             if (a != null) {
-                str6 = C8604o.z(str, a, "</dmtag><dmtag size=\"" + str2 + "\" color=\"" + str3 + "\">" + a + "</dmtag><dmtag size=\"" + str4 + "\" color=\"" + str5 + "\">", false, 4, null);
+                str6 = kotlin.text.o.z(str, a, "</dmtag><dmtag size=\"" + str2 + "\" color=\"" + str3 + "\">" + a + "</dmtag><dmtag size=\"" + str4 + "\" color=\"" + str5 + "\">", false, 4, null);
             } else {
                 str6 = null;
             }

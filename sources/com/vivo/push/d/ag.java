@@ -1,7 +1,5 @@
 package com.vivo.push.d;
 
-import com.vivo.push.AbstractC7496o;
-
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public final class ag {
@@ -11,7 +9,7 @@ public final class ag {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public static com.vivo.push.AbstractRunnableC7491l a(com.vivo.push.AbstractC7496o r2) {
+    public static com.vivo.push.l a(com.vivo.push.o r2) {
         /*
             int r0 = r2.b()
             r1 = 20
@@ -139,51 +137,51 @@ public final class ag {
         throw new UnsupportedOperationException("Method not decompiled: com.vivo.push.d.ag.a(com.vivo.push.o):com.vivo.push.l");
     }
 
-    public static AbstractC7480z b(AbstractC7496o abstractC7496o) {
-        AbstractC7480z afVar;
-        int b = abstractC7496o.b();
+    public static z b(com.vivo.push.o oVar) {
+        z afVar;
+        int b = oVar.b();
         if (b == 20) {
-            afVar = new af(abstractC7496o);
+            afVar = new af(oVar);
         } else if (b != 2016) {
             switch (b) {
                 case 1:
-                    afVar = new aa(abstractC7496o);
+                    afVar = new aa(oVar);
                     break;
                 case 2:
-                    afVar = new C7461h(abstractC7496o);
+                    afVar = new h(oVar);
                     break;
                 case 3:
-                    afVar = new C7469p(abstractC7496o);
+                    afVar = new p(oVar);
                     break;
                 case 4:
-                    afVar = new C7471r(abstractC7496o);
+                    afVar = new r(oVar);
                     break;
                 case 5:
-                    afVar = new C7475u(abstractC7496o);
+                    afVar = new u(oVar);
                     break;
                 case 6:
-                    afVar = new C7478x(abstractC7496o);
+                    afVar = new x(oVar);
                     break;
                 case 7:
-                    afVar = new C7467n(abstractC7496o);
+                    afVar = new n(oVar);
                     break;
                 case 8:
-                    afVar = new C7465l(abstractC7496o);
+                    afVar = new l(oVar);
                     break;
                 case 9:
-                    afVar = new C7460g(abstractC7496o);
+                    afVar = new g(oVar);
                     break;
                 case 10:
-                    afVar = new C7457d(abstractC7496o);
+                    afVar = new d(oVar);
                     break;
                 case 11:
-                    afVar = new C7453ad(abstractC7496o);
+                    afVar = new ad(oVar);
                     break;
                 default:
                     return null;
             }
         } else {
-            afVar = new C7464k(abstractC7496o);
+            afVar = new k(oVar);
         }
         return afVar;
     }

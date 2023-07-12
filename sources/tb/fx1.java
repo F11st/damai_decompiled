@@ -10,22 +10,22 @@ import org.jetbrains.annotations.Nullable;
 public final class fx1 {
     /* JADX WARN: Multi-variable type inference failed */
     @Nullable
-    public static final <M extends GeneratedMessageLite.ExtendableMessage<M>, T> T a(@NotNull GeneratedMessageLite.ExtendableMessage<M> extendableMessage, @NotNull GeneratedMessageLite.C8441c<M, T> c8441c) {
+    public static final <M extends GeneratedMessageLite.ExtendableMessage<M>, T> T a(@NotNull GeneratedMessageLite.ExtendableMessage<M> extendableMessage, @NotNull GeneratedMessageLite.c<M, T> cVar) {
         b41.i(extendableMessage, "<this>");
-        b41.i(c8441c, "extension");
-        if (extendableMessage.hasExtension(c8441c)) {
-            return (T) extendableMessage.getExtension(c8441c);
+        b41.i(cVar, "extension");
+        if (extendableMessage.hasExtension(cVar)) {
+            return (T) extendableMessage.getExtension(cVar);
         }
         return null;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     @Nullable
-    public static final <M extends GeneratedMessageLite.ExtendableMessage<M>, T> T b(@NotNull GeneratedMessageLite.ExtendableMessage<M> extendableMessage, @NotNull GeneratedMessageLite.C8441c<M, List<T>> c8441c, int i) {
+    public static final <M extends GeneratedMessageLite.ExtendableMessage<M>, T> T b(@NotNull GeneratedMessageLite.ExtendableMessage<M> extendableMessage, @NotNull GeneratedMessageLite.c<M, List<T>> cVar, int i) {
         b41.i(extendableMessage, "<this>");
-        b41.i(c8441c, "extension");
-        if (i < extendableMessage.getExtensionCount(c8441c)) {
-            return (T) extendableMessage.getExtension(c8441c, i);
+        b41.i(cVar, "extension");
+        if (i < extendableMessage.getExtensionCount(cVar)) {
+            return (T) extendableMessage.getExtension(cVar, i);
         }
         return null;
     }

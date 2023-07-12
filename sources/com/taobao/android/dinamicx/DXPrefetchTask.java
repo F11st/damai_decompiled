@@ -9,8 +9,8 @@ import tb.bu;
 public class DXPrefetchTask extends DXBaseRenderWorkTask {
     private final DXAsyncRenderCallback<Void> callback;
 
-    public DXPrefetchTask(DXRuntimeContext dXRuntimeContext, DXRenderOptions dXRenderOptions, DXTemplateManager dXTemplateManager, C6380h c6380h, C6367d c6367d, bu buVar) {
-        this(dXRuntimeContext, dXRenderOptions, dXTemplateManager, c6380h, c6367d, buVar, null);
+    public DXPrefetchTask(DXRuntimeContext dXRuntimeContext, DXRenderOptions dXRenderOptions, DXTemplateManager dXTemplateManager, h hVar, d dVar, bu buVar) {
+        this(dXRuntimeContext, dXRenderOptions, dXTemplateManager, hVar, dVar, buVar, null);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:12:0x0056 A[Catch: all -> 0x00c4, TryCatch #0 {all -> 0x00c4, blocks: (B:3:0x0004, B:5:0x000e, B:10:0x0037, B:12:0x0056, B:14:0x0071, B:16:0x0077, B:17:0x00a6, B:19:0x00aa, B:21:0x00b2, B:22:0x00bb, B:9:0x001f), top: B:29:0x0004 }] */
@@ -129,8 +129,8 @@ public class DXPrefetchTask extends DXBaseRenderWorkTask {
         throw new UnsupportedOperationException("Method not decompiled: com.taobao.android.dinamicx.DXPrefetchTask.run():void");
     }
 
-    public DXPrefetchTask(DXRuntimeContext dXRuntimeContext, DXRenderOptions dXRenderOptions, DXTemplateManager dXTemplateManager, C6380h c6380h, C6367d c6367d, bu buVar, DXAsyncRenderCallback<Void> dXAsyncRenderCallback) {
-        super(dXRuntimeContext, dXRenderOptions, dXTemplateManager, c6380h, c6367d, buVar);
+    public DXPrefetchTask(DXRuntimeContext dXRuntimeContext, DXRenderOptions dXRenderOptions, DXTemplateManager dXTemplateManager, h hVar, d dVar, bu buVar, DXAsyncRenderCallback<Void> dXAsyncRenderCallback) {
+        super(dXRuntimeContext, dXRenderOptions, dXTemplateManager, hVar, dVar, buVar);
         this.callback = dXAsyncRenderCallback;
     }
 }

@@ -37,9 +37,8 @@ public final class Range<C extends Comparable> extends RangeGwtSerializationDepe
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Range$a */
     /* loaded from: classes10.dex */
-    static /* synthetic */ class C5091a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -57,12 +56,11 @@ public final class Range<C extends Comparable> extends RangeGwtSerializationDepe
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Range$b */
     /* loaded from: classes10.dex */
-    static class C5092b implements Function<Range, Cut> {
-        static final C5092b a = new C5092b();
+    static class b implements Function<Range, Cut> {
+        static final b a = new b();
 
-        C5092b() {
+        b() {
         }
 
         @Override // com.google.common.base.Function
@@ -73,12 +71,11 @@ public final class Range<C extends Comparable> extends RangeGwtSerializationDepe
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Range$c */
     /* loaded from: classes10.dex */
-    static class C5093c implements Function<Range, Cut> {
-        static final C5093c a = new C5093c();
+    static class c implements Function<Range, Cut> {
+        static final c a = new c();
 
-        C5093c() {
+        c() {
         }
 
         @Override // com.google.common.base.Function
@@ -100,24 +97,24 @@ public final class Range<C extends Comparable> extends RangeGwtSerializationDepe
         return (Range<C>) ALL;
     }
 
-    public static <C extends Comparable<?>> Range<C> atLeast(C c) {
-        return create(Cut.belowValue(c), Cut.aboveAll());
+    public static <C extends Comparable<?>> Range<C> atLeast(C c2) {
+        return create(Cut.belowValue(c2), Cut.aboveAll());
     }
 
-    public static <C extends Comparable<?>> Range<C> atMost(C c) {
-        return create(Cut.belowAll(), Cut.aboveValue(c));
+    public static <C extends Comparable<?>> Range<C> atMost(C c2) {
+        return create(Cut.belowAll(), Cut.aboveValue(c2));
     }
 
     private static <T> SortedSet<T> cast(Iterable<T> iterable) {
         return (SortedSet) iterable;
     }
 
-    public static <C extends Comparable<?>> Range<C> closed(C c, C c2) {
-        return create(Cut.belowValue(c), Cut.aboveValue(c2));
+    public static <C extends Comparable<?>> Range<C> closed(C c2, C c3) {
+        return create(Cut.belowValue(c2), Cut.aboveValue(c3));
     }
 
-    public static <C extends Comparable<?>> Range<C> closedOpen(C c, C c2) {
-        return create(Cut.belowValue(c), Cut.belowValue(c2));
+    public static <C extends Comparable<?>> Range<C> closedOpen(C c2, C c3) {
+        return create(Cut.belowValue(c2), Cut.belowValue(c3));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -130,15 +127,15 @@ public final class Range<C extends Comparable> extends RangeGwtSerializationDepe
         return new Range<>(cut, cut2);
     }
 
-    public static <C extends Comparable<?>> Range<C> downTo(C c, BoundType boundType) {
-        int i = C5091a.a[boundType.ordinal()];
+    public static <C extends Comparable<?>> Range<C> downTo(C c2, BoundType boundType) {
+        int i = a.a[boundType.ordinal()];
         if (i != 1) {
             if (i == 2) {
-                return atLeast(c);
+                return atLeast(c2);
             }
             throw new AssertionError();
         }
-        return greaterThan(c);
+        return greaterThan(c2);
     }
 
     public static <C extends Comparable<?>> Range<C> encloseAll(Iterable<C> iterable) {
@@ -161,32 +158,32 @@ public final class Range<C extends Comparable> extends RangeGwtSerializationDepe
         return closed(comparable, comparable2);
     }
 
-    public static <C extends Comparable<?>> Range<C> greaterThan(C c) {
-        return create(Cut.aboveValue(c), Cut.aboveAll());
+    public static <C extends Comparable<?>> Range<C> greaterThan(C c2) {
+        return create(Cut.aboveValue(c2), Cut.aboveAll());
     }
 
-    public static <C extends Comparable<?>> Range<C> lessThan(C c) {
-        return create(Cut.belowAll(), Cut.belowValue(c));
+    public static <C extends Comparable<?>> Range<C> lessThan(C c2) {
+        return create(Cut.belowAll(), Cut.belowValue(c2));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static <C extends Comparable<?>> Function<Range<C>, Cut<C>> lowerBoundFn() {
-        return C5092b.a;
+        return b.a;
     }
 
-    public static <C extends Comparable<?>> Range<C> open(C c, C c2) {
-        return create(Cut.aboveValue(c), Cut.belowValue(c2));
+    public static <C extends Comparable<?>> Range<C> open(C c2, C c3) {
+        return create(Cut.aboveValue(c2), Cut.belowValue(c3));
     }
 
-    public static <C extends Comparable<?>> Range<C> openClosed(C c, C c2) {
-        return create(Cut.aboveValue(c), Cut.aboveValue(c2));
+    public static <C extends Comparable<?>> Range<C> openClosed(C c2, C c3) {
+        return create(Cut.aboveValue(c2), Cut.aboveValue(c3));
     }
 
-    public static <C extends Comparable<?>> Range<C> range(C c, BoundType boundType, C c2, BoundType boundType2) {
+    public static <C extends Comparable<?>> Range<C> range(C c2, BoundType boundType, C c3, BoundType boundType2) {
         du1.p(boundType);
         du1.p(boundType2);
         BoundType boundType3 = BoundType.OPEN;
-        return create(boundType == boundType3 ? Cut.aboveValue(c) : Cut.belowValue(c), boundType2 == boundType3 ? Cut.belowValue(c2) : Cut.aboveValue(c2));
+        return create(boundType == boundType3 ? Cut.aboveValue(c2) : Cut.belowValue(c2), boundType2 == boundType3 ? Cut.belowValue(c3) : Cut.aboveValue(c3));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -194,24 +191,24 @@ public final class Range<C extends Comparable> extends RangeGwtSerializationDepe
         return (Ordering<Range<C>>) RangeLexOrdering.INSTANCE;
     }
 
-    public static <C extends Comparable<?>> Range<C> singleton(C c) {
-        return closed(c, c);
+    public static <C extends Comparable<?>> Range<C> singleton(C c2) {
+        return closed(c2, c2);
     }
 
-    public static <C extends Comparable<?>> Range<C> upTo(C c, BoundType boundType) {
-        int i = C5091a.a[boundType.ordinal()];
+    public static <C extends Comparable<?>> Range<C> upTo(C c2, BoundType boundType) {
+        int i = a.a[boundType.ordinal()];
         if (i != 1) {
             if (i == 2) {
-                return atMost(c);
+                return atMost(c2);
             }
             throw new AssertionError();
         }
-        return lessThan(c);
+        return lessThan(c2);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static <C extends Comparable<?>> Function<Range<C>, Cut<C>> upperBoundFn() {
-        return C5093c.a;
+        return c.a;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -228,14 +225,14 @@ public final class Range<C extends Comparable> extends RangeGwtSerializationDepe
         return (canonical == this.lowerBound && canonical2 == this.upperBound) ? this : create(canonical, canonical2);
     }
 
-    public boolean contains(C c) {
-        du1.p(c);
-        return this.lowerBound.isLessThan(c) && !this.upperBound.isLessThan(c);
+    public boolean contains(C c2) {
+        du1.p(c2);
+        return this.lowerBound.isLessThan(c2) && !this.upperBound.isLessThan(c2);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public boolean containsAll(Iterable<? extends C> iterable) {
-        if (C5152a0.i(iterable)) {
+        if (a0.i(iterable)) {
             return true;
         }
         if (iterable instanceof SortedSet) {
@@ -245,8 +242,8 @@ public final class Range<C extends Comparable> extends RangeGwtSerializationDepe
                 return contains((Comparable) cast.first()) && contains((Comparable) cast.last());
             }
         }
-        for (C c : iterable) {
-            if (!contains(c)) {
+        for (C c2 : iterable) {
+            if (!contains(c2)) {
                 return false;
             }
         }
@@ -352,7 +349,7 @@ public final class Range<C extends Comparable> extends RangeGwtSerializationDepe
     }
 
     @Deprecated
-    public boolean apply(C c) {
-        return contains(c);
+    public boolean apply(C c2) {
+        return contains(c2);
     }
 }

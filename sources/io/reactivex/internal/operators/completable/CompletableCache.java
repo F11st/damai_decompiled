@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.completable;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
+import io.reactivex.a;
 import io.reactivex.annotations.Experimental;
 import io.reactivex.disposables.Disposable;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicReference;
 /* compiled from: Taobao */
 @Experimental
 /* loaded from: classes3.dex */
-public final class CompletableCache extends AbstractC8146a implements CompletableObserver {
+public final class CompletableCache extends a implements CompletableObserver {
     static final InnerCompletableCache[] EMPTY = new InnerCompletableCache[0];
     static final InnerCompletableCache[] TERMINATED = new InnerCompletableCache[0];
     Throwable error;
@@ -123,7 +123,7 @@ public final class CompletableCache extends AbstractC8146a implements Completabl
         } while (!this.observers.compareAndSet(innerCompletableCacheArr, innerCompletableCacheArr2));
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     protected void subscribeActual(CompletableObserver completableObserver) {
         InnerCompletableCache innerCompletableCache = new InnerCompletableCache(completableObserver);
         completableObserver.onSubscribe(innerCompletableCache);

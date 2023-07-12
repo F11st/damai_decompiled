@@ -5,7 +5,6 @@ import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Picture;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
 import com.caverock.androidsvg.CSSParser;
 import com.youku.arch.solid.monitor.SolidMonitor;
 import com.youku.live.livesdk.wkit.component.Constants;
@@ -27,10 +26,10 @@ import tb.jn1;
 public class SVG {
     private static h52 e = null;
     private static boolean f = true;
-    private C4730w a = null;
+    private w a = null;
     private float b = 96.0f;
-    private CSSParser.C4688m c = new CSSParser.C4688m();
-    private Map<String, AbstractC4692a0> d = new HashMap();
+    private CSSParser.m c = new CSSParser.m();
+    private Map<String, a0> d = new HashMap();
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
@@ -96,26 +95,26 @@ public class SVG {
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public float floatValueX(C4749e c4749e) {
-            switch (C4691a.a[this.unit.ordinal()]) {
+        public float floatValueX(com.caverock.androidsvg.e eVar) {
+            switch (a.a[this.unit.ordinal()]) {
                 case 1:
                     return this.value;
                 case 2:
-                    return this.value * c4749e.Y();
+                    return this.value * eVar.Y();
                 case 3:
-                    return this.value * c4749e.Z();
+                    return this.value * eVar.Z();
                 case 4:
-                    return this.value * c4749e.b0();
+                    return this.value * eVar.b0();
                 case 5:
-                    return (this.value * c4749e.b0()) / 2.54f;
+                    return (this.value * eVar.b0()) / 2.54f;
                 case 6:
-                    return (this.value * c4749e.b0()) / 25.4f;
+                    return (this.value * eVar.b0()) / 25.4f;
                 case 7:
-                    return (this.value * c4749e.b0()) / 72.0f;
+                    return (this.value * eVar.b0()) / 72.0f;
                 case 8:
-                    return (this.value * c4749e.b0()) / 6.0f;
+                    return (this.value * eVar.b0()) / 6.0f;
                 case 9:
-                    C4693b a0 = c4749e.a0();
+                    b a0 = eVar.a0();
                     if (a0 == null) {
                         return this.value;
                     }
@@ -126,15 +125,15 @@ public class SVG {
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public float floatValueY(C4749e c4749e) {
+        public float floatValueY(com.caverock.androidsvg.e eVar) {
             if (this.unit == Unit.percent) {
-                C4693b a0 = c4749e.a0();
+                b a0 = eVar.a0();
                 if (a0 == null) {
                     return this.value;
                 }
                 return (this.value * a0.d) / 100.0f;
             }
-            return floatValueX(c4749e);
+            return floatValueX(eVar);
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
@@ -152,9 +151,9 @@ public class SVG {
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public float floatValue(C4749e c4749e) {
+        public float floatValue(com.caverock.androidsvg.e eVar) {
             if (this.unit == Unit.percent) {
-                C4693b a0 = c4749e.a0();
+                b a0 = eVar.a0();
                 if (a0 == null) {
                     return this.value;
                 }
@@ -165,7 +164,7 @@ public class SVG {
                 }
                 return (this.value * ((float) (Math.sqrt((f * f) + (f2 * f2)) / 1.414213562373095d))) / 100.0f;
             }
-            return floatValueX(c4749e);
+            return floatValueX(eVar);
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
@@ -175,16 +174,16 @@ public class SVG {
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public float floatValue(C4749e c4749e, float f) {
+        public float floatValue(com.caverock.androidsvg.e eVar, float f) {
             if (this.unit == Unit.percent) {
                 return (this.value * f) / 100.0f;
             }
-            return floatValueX(c4749e);
+            return floatValueX(eVar);
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
         public float floatValue(float f) {
-            int i = C4691a.a[this.unit.ordinal()];
+            int i = a.a[this.unit.ordinal()];
             if (i != 1) {
                 switch (i) {
                     case 4:
@@ -251,7 +250,7 @@ public class SVG {
         static final int FONT_WEIGHT_BOLDER = 1;
         static final int FONT_WEIGHT_LIGHTER = -1;
         static final int FONT_WEIGHT_NORMAL = 400;
-        C4695c clip;
+        c clip;
         String clipPath;
         FillRule clipRule;
         Colour color;
@@ -473,9 +472,9 @@ public class SVG {
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
     public interface SvgContainer {
-        void addChild(C4696c0 c4696c0) throws SVGParseException;
+        void addChild(c0 c0Var) throws SVGParseException;
 
-        List<C4696c0> getChildren();
+        List<c0> getChildren();
     }
 
     /* compiled from: Taobao */
@@ -515,9 +514,8 @@ public class SVG {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$a */
     /* loaded from: classes10.dex */
-    public static /* synthetic */ class C4691a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -564,16 +562,15 @@ public class SVG {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$a0 */
     /* loaded from: classes10.dex */
-    public static abstract class AbstractC4692a0 extends C4696c0 {
+    public static abstract class a0 extends c0 {
         String c = null;
         Boolean d = null;
         Style e = null;
         Style f = null;
         List<String> g = null;
 
-        AbstractC4692a0() {
+        a0() {
         }
 
         public String toString() {
@@ -582,31 +579,29 @@ public class SVG {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$b0 */
     /* loaded from: classes10.dex */
-    static class C4694b0 extends AbstractC4705h {
+    static class b0 extends h {
         Length m;
         Length n;
         Length o;
         Length p;
 
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         String a() {
             return "linearGradient";
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$c */
     /* loaded from: classes10.dex */
-    static class C4695c {
+    static class c {
         Length a;
         Length b;
         Length c;
         Length d;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C4695c(Length length, Length length2, Length length3, Length length4) {
+        public c(Length length, Length length2, Length length3, Length length4) {
             this.a = length;
             this.b = length2;
             this.c = length3;
@@ -616,13 +611,12 @@ public class SVG {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$c0 */
     /* loaded from: classes10.dex */
-    public static class C4696c0 {
+    public static class c0 {
         SVG a;
         SvgContainer b;
 
-        C4696c0() {
+        c0() {
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
@@ -632,15 +626,14 @@ public class SVG {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$d */
     /* loaded from: classes10.dex */
-    static class C4697d extends AbstractC4707i {
+    static class d extends i {
         Length o;
         Length p;
         Length q;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return "circle";
         }
@@ -648,31 +641,28 @@ public class SVG {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$d0 */
     /* loaded from: classes10.dex */
-    public static abstract class AbstractC4698d0 extends AbstractC4731x {
+    public static abstract class d0 extends x {
         PreserveAspectRatio n = null;
 
-        AbstractC4698d0() {
+        d0() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$e */
     /* loaded from: classes10.dex */
-    static class C4699e extends C4709j implements NotDirectlyRendered {
+    static class e extends j implements NotDirectlyRendered {
         Boolean o;
 
-        @Override // com.caverock.androidsvg.SVG.C4709j, com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.j, com.caverock.androidsvg.SVG.c0
         String a() {
             return "clipPath";
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$e0 */
     /* loaded from: classes10.dex */
-    static class C4700e0 extends AbstractC4705h {
+    static class e0 extends h {
         Length m;
         Length n;
         Length o;
@@ -680,17 +670,16 @@ public class SVG {
         Length q;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return "radialGradient";
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$f */
     /* loaded from: classes10.dex */
-    static class C4701f extends C4709j implements NotDirectlyRendered {
-        @Override // com.caverock.androidsvg.SVG.C4709j, com.caverock.androidsvg.SVG.C4696c0
+    static class f extends j implements NotDirectlyRendered {
+        @Override // com.caverock.androidsvg.SVG.j, com.caverock.androidsvg.SVG.c0
         String a() {
             return "defs";
         }
@@ -698,87 +687,81 @@ public class SVG {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$f0 */
     /* loaded from: classes10.dex */
-    public static abstract class AbstractC4702f0 extends AbstractC4698d0 {
-        C4693b o;
+    public static abstract class f0 extends d0 {
+        b o;
 
-        AbstractC4702f0() {
+        f0() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$g */
     /* loaded from: classes10.dex */
-    static class C4703g extends AbstractC4707i {
+    static class g extends i {
         Length o;
         Length p;
         Length q;
         Length r;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return "ellipse";
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$g0 */
     /* loaded from: classes10.dex */
-    static class C4704g0 extends C4709j {
-        @Override // com.caverock.androidsvg.SVG.C4709j, com.caverock.androidsvg.SVG.C4696c0
+    static class g0 extends j {
+        @Override // com.caverock.androidsvg.SVG.j, com.caverock.androidsvg.SVG.c0
         String a() {
             return "switch";
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$h */
     /* loaded from: classes10.dex */
-    static abstract class AbstractC4705h extends AbstractC4692a0 implements SvgContainer {
-        List<C4696c0> h = new ArrayList();
+    static abstract class h extends a0 implements SvgContainer {
+        List<c0> h = new ArrayList();
         Boolean i;
         Matrix j;
         GradientSpread k;
         String l;
 
-        AbstractC4705h() {
+        h() {
         }
 
         @Override // com.caverock.androidsvg.SVG.SvgContainer
-        public void addChild(C4696c0 c4696c0) throws SVGParseException {
-            if (c4696c0 instanceof C4729v) {
-                this.h.add(c4696c0);
+        public void addChild(c0 c0Var) throws SVGParseException {
+            if (c0Var instanceof v) {
+                this.h.add(c0Var);
                 return;
             }
-            throw new SVGParseException("Gradient elements cannot contain " + c4696c0 + " elements.");
+            throw new SVGParseException("Gradient elements cannot contain " + c0Var + " elements.");
         }
 
         @Override // com.caverock.androidsvg.SVG.SvgContainer
-        public List<C4696c0> getChildren() {
+        public List<c0> getChildren() {
             return this.h;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$h0 */
     /* loaded from: classes10.dex */
-    static class C4706h0 extends AbstractC4702f0 implements NotDirectlyRendered {
+    static class h0 extends f0 implements NotDirectlyRendered {
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return "symbol";
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$i */
     /* loaded from: classes10.dex */
-    static abstract class AbstractC4707i extends AbstractC4732y implements HasTransform {
+    static abstract class i extends y implements HasTransform {
         Matrix n;
 
-        AbstractC4707i() {
+        i() {
         }
 
         @Override // com.caverock.androidsvg.SVG.HasTransform
@@ -788,14 +771,13 @@ public class SVG {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$i0 */
     /* loaded from: classes10.dex */
-    static class C4708i0 extends AbstractC4714l0 implements TextChild {
+    static class i0 extends l0 implements TextChild {
         String n;
         private TextRoot o;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return "tref";
         }
@@ -812,13 +794,12 @@ public class SVG {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$j */
     /* loaded from: classes10.dex */
-    static class C4709j extends AbstractC4731x implements HasTransform {
+    static class j extends x implements HasTransform {
         Matrix n;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return SolidMonitor.CHECK_TYPE_GROUP;
         }
@@ -830,13 +811,12 @@ public class SVG {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$j0 */
     /* loaded from: classes10.dex */
-    static class C4710j0 extends AbstractC4718n0 implements TextChild {
+    static class j0 extends n0 implements TextChild {
         private TextRoot r;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return "tspan";
         }
@@ -853,9 +833,8 @@ public class SVG {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$k */
     /* loaded from: classes10.dex */
-    static class C4711k extends AbstractC4698d0 implements HasTransform {
+    static class k extends d0 implements HasTransform {
         String o;
         Length p;
         Length q;
@@ -864,7 +843,7 @@ public class SVG {
         Matrix t;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return "image";
         }
@@ -876,13 +855,12 @@ public class SVG {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$k0 */
     /* loaded from: classes10.dex */
-    static class C4712k0 extends AbstractC4718n0 implements HasTransform, TextRoot {
+    static class k0 extends n0 implements HasTransform, TextRoot {
         Matrix r;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return "text";
         }
@@ -894,42 +872,39 @@ public class SVG {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$l */
     /* loaded from: classes10.dex */
-    static class C4713l extends AbstractC4707i {
+    static class l extends i {
         Length o;
         Length p;
         Length q;
         Length r;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return "line";
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$l0 */
     /* loaded from: classes10.dex */
-    static abstract class AbstractC4714l0 extends AbstractC4731x {
-        AbstractC4714l0() {
+    static abstract class l0 extends x {
+        l0() {
         }
 
-        @Override // com.caverock.androidsvg.SVG.AbstractC4731x, com.caverock.androidsvg.SVG.SvgContainer
-        public void addChild(C4696c0 c4696c0) throws SVGParseException {
-            if (c4696c0 instanceof TextChild) {
-                this.i.add(c4696c0);
+        @Override // com.caverock.androidsvg.SVG.x, com.caverock.androidsvg.SVG.SvgContainer
+        public void addChild(c0 c0Var) throws SVGParseException {
+            if (c0Var instanceof TextChild) {
+                this.i.add(c0Var);
                 return;
             }
-            throw new SVGParseException("Text content elements cannot contain " + c4696c0 + " elements.");
+            throw new SVGParseException("Text content elements cannot contain " + c0Var + " elements.");
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$m */
     /* loaded from: classes10.dex */
-    static class C4715m extends AbstractC4702f0 implements NotDirectlyRendered {
+    static class m extends f0 implements NotDirectlyRendered {
         boolean p;
         Length q;
         Length r;
@@ -938,22 +913,21 @@ public class SVG {
         Float u;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return "marker";
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$m0 */
     /* loaded from: classes10.dex */
-    static class C4716m0 extends AbstractC4714l0 implements TextChild {
+    static class m0 extends l0 implements TextChild {
         String n;
         Length o;
         private TextRoot p;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return "textPath";
         }
@@ -970,9 +944,8 @@ public class SVG {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$n */
     /* loaded from: classes10.dex */
-    static class C4717n extends AbstractC4731x implements NotDirectlyRendered {
+    static class n extends x implements NotDirectlyRendered {
         Boolean n;
         Boolean o;
         Length p;
@@ -981,48 +954,45 @@ public class SVG {
         Length s;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return "mask";
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$n0 */
     /* loaded from: classes10.dex */
-    static abstract class AbstractC4718n0 extends AbstractC4714l0 {
+    static abstract class n0 extends l0 {
         List<Length> n;
         List<Length> o;
         List<Length> p;
         List<Length> q;
 
-        AbstractC4718n0() {
+        n0() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$o */
     /* loaded from: classes10.dex */
-    static class C4719o extends AbstractC4707i {
-        C4721p o;
+    static class o extends i {
+        p o;
         Float p;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
-            return AbstractC3893a.V;
+            return com.alibaba.security.realidentity.jsbridge.a.V;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$o0 */
     /* loaded from: classes10.dex */
-    static class C4720o0 extends C4696c0 implements TextChild {
+    static class o0 extends c0 implements TextChild {
         String c;
         private TextRoot d;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C4720o0(String str) {
+        public o0(String str) {
             this.c = str;
         }
 
@@ -1042,9 +1012,8 @@ public class SVG {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$p */
     /* loaded from: classes10.dex */
-    static class C4721p implements PathInterface {
+    static class p implements PathInterface {
         private int b = 0;
         private int d = 0;
         private byte[] a = new byte[8];
@@ -1236,9 +1205,8 @@ public class SVG {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$p0 */
     /* loaded from: classes10.dex */
-    static class C4722p0 extends C4709j {
+    static class p0 extends j {
         String o;
         Length p;
         Length q;
@@ -1246,16 +1214,15 @@ public class SVG {
         Length s;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4709j, com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.j, com.caverock.androidsvg.SVG.c0
         public String a() {
             return "use";
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$q */
     /* loaded from: classes10.dex */
-    static class C4723q extends AbstractC4702f0 implements NotDirectlyRendered {
+    static class q extends f0 implements NotDirectlyRendered {
         Boolean p;
         Boolean q;
         Matrix r;
@@ -1266,7 +1233,7 @@ public class SVG {
         String w;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return "pattern";
         }
@@ -1274,44 +1241,40 @@ public class SVG {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$q0 */
     /* loaded from: classes10.dex */
-    public static class C4724q0 extends AbstractC4702f0 implements NotDirectlyRendered {
+    public static class q0 extends f0 implements NotDirectlyRendered {
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return "view";
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$r */
     /* loaded from: classes10.dex */
-    static class C4725r extends AbstractC4707i {
+    static class r extends i {
         float[] o;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return "polyline";
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$s */
     /* loaded from: classes10.dex */
-    static class C4726s extends C4725r {
+    static class s extends r {
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4725r, com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.r, com.caverock.androidsvg.SVG.c0
         public String a() {
             return "polygon";
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$t */
     /* loaded from: classes10.dex */
-    static class C4727t extends AbstractC4707i {
+    static class t extends i {
         Length o;
         Length p;
         Length q;
@@ -1320,59 +1283,56 @@ public class SVG {
         Length t;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return "rect";
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$u */
     /* loaded from: classes10.dex */
-    static class C4728u extends AbstractC4692a0 implements SvgContainer {
+    static class u extends a0 implements SvgContainer {
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return "solidColor";
         }
 
         @Override // com.caverock.androidsvg.SVG.SvgContainer
-        public void addChild(C4696c0 c4696c0) {
+        public void addChild(c0 c0Var) {
         }
 
         @Override // com.caverock.androidsvg.SVG.SvgContainer
-        public List<C4696c0> getChildren() {
+        public List<c0> getChildren() {
             return Collections.emptyList();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$v */
     /* loaded from: classes10.dex */
-    static class C4729v extends AbstractC4692a0 implements SvgContainer {
+    static class v extends a0 implements SvgContainer {
         Float h;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return "stop";
         }
 
         @Override // com.caverock.androidsvg.SVG.SvgContainer
-        public void addChild(C4696c0 c4696c0) {
+        public void addChild(c0 c0Var) {
         }
 
         @Override // com.caverock.androidsvg.SVG.SvgContainer
-        public List<C4696c0> getChildren() {
+        public List<c0> getChildren() {
             return Collections.emptyList();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$w */
     /* loaded from: classes10.dex */
-    public static class C4730w extends AbstractC4702f0 {
+    public static class w extends f0 {
         Length p;
         Length q;
         Length r;
@@ -1380,31 +1340,30 @@ public class SVG {
         public String t;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.caverock.androidsvg.SVG.C4696c0
+        @Override // com.caverock.androidsvg.SVG.c0
         public String a() {
             return "svg";
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$x */
     /* loaded from: classes10.dex */
-    static abstract class AbstractC4731x extends AbstractC4733z implements SvgConditional, SvgContainer {
-        List<C4696c0> i = new ArrayList();
+    static abstract class x extends z implements SvgConditional, SvgContainer {
+        List<c0> i = new ArrayList();
         Set<String> j = null;
         String k = null;
         Set<String> l = null;
         Set<String> m = null;
 
-        AbstractC4731x() {
+        x() {
         }
 
-        public void addChild(C4696c0 c4696c0) throws SVGParseException {
-            this.i.add(c4696c0);
+        public void addChild(c0 c0Var) throws SVGParseException {
+            this.i.add(c0Var);
         }
 
         @Override // com.caverock.androidsvg.SVG.SvgContainer
-        public List<C4696c0> getChildren() {
+        public List<c0> getChildren() {
             return this.i;
         }
 
@@ -1459,16 +1418,15 @@ public class SVG {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$y */
     /* loaded from: classes10.dex */
-    static abstract class AbstractC4732y extends AbstractC4733z implements SvgConditional {
+    static abstract class y extends z implements SvgConditional {
         Set<String> i = null;
         String j = null;
         Set<String> k = null;
         Set<String> l = null;
         Set<String> m = null;
 
-        AbstractC4732y() {
+        y() {
         }
 
         @Override // com.caverock.androidsvg.SVG.SvgConditional
@@ -1523,12 +1481,11 @@ public class SVG {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$z */
     /* loaded from: classes10.dex */
-    static abstract class AbstractC4733z extends AbstractC4692a0 {
-        C4693b h = null;
+    static abstract class z extends a0 {
+        b h = null;
 
-        AbstractC4733z() {
+        z() {
         }
     }
 
@@ -1541,19 +1498,19 @@ public class SVG {
         return str.replace("\\\n", "").replace("\\A", StringUtils.LF);
     }
 
-    private AbstractC4692a0 e(SvgContainer svgContainer, String str) {
-        AbstractC4692a0 e2;
-        AbstractC4692a0 abstractC4692a0 = (AbstractC4692a0) svgContainer;
-        if (str.equals(abstractC4692a0.c)) {
-            return abstractC4692a0;
+    private a0 e(SvgContainer svgContainer, String str) {
+        a0 e2;
+        a0 a0Var = (a0) svgContainer;
+        if (str.equals(a0Var.c)) {
+            return a0Var;
         }
-        for (C4696c0 c4696c0 : svgContainer.getChildren()) {
-            if (c4696c0 instanceof AbstractC4692a0) {
-                AbstractC4692a0 abstractC4692a02 = (AbstractC4692a0) c4696c0;
-                if (str.equals(abstractC4692a02.c)) {
-                    return abstractC4692a02;
+        for (c0 c0Var : svgContainer.getChildren()) {
+            if (c0Var instanceof a0) {
+                a0 a0Var2 = (a0) c0Var;
+                if (str.equals(a0Var2.c)) {
+                    return a0Var2;
                 }
-                if ((c4696c0 instanceof SvgContainer) && (e2 = e((SvgContainer) c4696c0, str)) != null) {
+                if ((c0Var instanceof SvgContainer) && (e2 = e((SvgContainer) c0Var, str)) != null) {
                     return e2;
                 }
             }
@@ -1570,13 +1527,13 @@ public class SVG {
         return new SVGParser().z(inputStream, f);
     }
 
-    public static SVG i(Context context, int i) throws SVGParseException {
-        return j(context.getResources(), i);
+    public static SVG i(Context context, int i2) throws SVGParseException {
+        return j(context.getResources(), i2);
     }
 
-    public static SVG j(Resources resources, int i) throws SVGParseException {
+    public static SVG j(Resources resources, int i2) throws SVGParseException {
         SVGParser sVGParser = new SVGParser();
-        InputStream openRawResource = resources.openRawResource(i);
+        InputStream openRawResource = resources.openRawResource(i2);
         try {
             return sVGParser.z(openRawResource, f);
         } finally {
@@ -1592,8 +1549,8 @@ public class SVG {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public void a(CSSParser.C4688m c4688m) {
-        this.c.b(c4688m);
+    public void a(CSSParser.m mVar) {
+        this.c.b(mVar);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -1602,12 +1559,12 @@ public class SVG {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public List<CSSParser.C4686k> d() {
+    public List<CSSParser.k> d() {
         return this.c.c();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public AbstractC4692a0 f(String str) {
+    public a0 f(String str) {
         if (str == null || str.length() == 0) {
             return null;
         }
@@ -1617,13 +1574,13 @@ public class SVG {
         if (this.d.containsKey(str)) {
             return this.d.get(str);
         }
-        AbstractC4692a0 e2 = e(this.a, str);
+        a0 e2 = e(this.a, str);
         this.d.put(str, e2);
         return e2;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public C4730w l() {
+    public w l() {
         return this.a;
     }
 
@@ -1632,70 +1589,70 @@ public class SVG {
         return !this.c.d();
     }
 
-    public Picture n(int i, int i2, C4748d c4748d) {
+    public Picture n(int i2, int i3, com.caverock.androidsvg.d dVar) {
         Picture picture = new Picture();
-        Canvas beginRecording = picture.beginRecording(i, i2);
-        if (c4748d == null || c4748d.f == null) {
-            c4748d = c4748d == null ? new C4748d() : new C4748d(c4748d);
-            c4748d.h(0.0f, 0.0f, i, i2);
+        Canvas beginRecording = picture.beginRecording(i2, i3);
+        if (dVar == null || dVar.f == null) {
+            dVar = dVar == null ? new com.caverock.androidsvg.d() : new com.caverock.androidsvg.d(dVar);
+            dVar.h(0.0f, 0.0f, i2, i3);
         }
-        new C4749e(beginRecording, this.b).O0(this, c4748d);
+        new com.caverock.androidsvg.e(beginRecording, this.b).O0(this, dVar);
         picture.endRecording();
         return picture;
     }
 
-    public Picture o(C4748d c4748d) {
-        C4693b c4693b;
+    public Picture o(com.caverock.androidsvg.d dVar) {
+        b bVar;
         Length length;
-        if (c4748d != null && c4748d.f()) {
-            c4693b = c4748d.d;
+        if (dVar != null && dVar.f()) {
+            bVar = dVar.d;
         } else {
-            C4730w c4730w = this.a;
-            c4693b = c4730w != null ? c4730w.o : null;
+            w wVar = this.a;
+            bVar = wVar != null ? wVar.o : null;
         }
-        if (c4748d != null && c4748d.g()) {
-            return n((int) Math.ceil(c4748d.f.b()), (int) Math.ceil(c4748d.f.c()), c4748d);
+        if (dVar != null && dVar.g()) {
+            return n((int) Math.ceil(dVar.f.b()), (int) Math.ceil(dVar.f.c()), dVar);
         }
-        C4730w c4730w2 = this.a;
-        Length length2 = c4730w2.r;
+        w wVar2 = this.a;
+        Length length2 = wVar2.r;
         if (length2 != null) {
             Unit unit = length2.unit;
             Unit unit2 = Unit.percent;
-            if (unit != unit2 && (length = c4730w2.s) != null && length.unit != unit2) {
-                return n((int) Math.ceil(length2.floatValue(this.b)), (int) Math.ceil(this.a.s.floatValue(this.b)), c4748d);
+            if (unit != unit2 && (length = wVar2.s) != null && length.unit != unit2) {
+                return n((int) Math.ceil(length2.floatValue(this.b)), (int) Math.ceil(this.a.s.floatValue(this.b)), dVar);
             }
         }
-        if (length2 != null && c4693b != null) {
+        if (length2 != null && bVar != null) {
             float floatValue = length2.floatValue(this.b);
-            return n((int) Math.ceil(floatValue), (int) Math.ceil((c4693b.d * floatValue) / c4693b.c), c4748d);
+            return n((int) Math.ceil(floatValue), (int) Math.ceil((bVar.d * floatValue) / bVar.c), dVar);
         }
-        Length length3 = c4730w2.s;
-        if (length3 != null && c4693b != null) {
+        Length length3 = wVar2.s;
+        if (length3 != null && bVar != null) {
             float floatValue2 = length3.floatValue(this.b);
-            return n((int) Math.ceil((c4693b.c * floatValue2) / c4693b.d), (int) Math.ceil(floatValue2), c4748d);
+            return n((int) Math.ceil((bVar.c * floatValue2) / bVar.d), (int) Math.ceil(floatValue2), dVar);
         }
-        if (c4693b != null) {
-            float f2 = c4693b.c;
+        if (bVar != null) {
+            float f2 = bVar.c;
             if (f2 > 0.0f) {
-                float f3 = c4693b.d;
+                float f3 = bVar.d;
                 if (f3 > 0.0f) {
-                    return n((int) f2, (int) f3, c4748d);
+                    return n((int) f2, (int) f3, dVar);
                 }
             }
         }
-        return n(512, 512, c4748d);
+        return n(512, 512, dVar);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public C4696c0 p(String str) {
+    public c0 p(String str) {
         if (str == null) {
             return null;
         }
-        String c = c(str);
-        if (c.length() <= 1 || !c.startsWith(Constants.TYPE_LIVE_ROOM_BG_COLOR_PREFFIX)) {
+        String c2 = c(str);
+        if (c2.length() <= 1 || !c2.startsWith(Constants.TYPE_LIVE_ROOM_BG_COLOR_PREFFIX)) {
             return null;
         }
-        return f(c.substring(1));
+        return f(c2.substring(1));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -1703,8 +1660,8 @@ public class SVG {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public void r(C4730w c4730w) {
-        this.a = c4730w;
+    public void r(w wVar) {
+        this.a = wVar;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -1713,16 +1670,15 @@ public class SVG {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVG$b */
     /* loaded from: classes10.dex */
-    public static class C4693b {
+    public static class b {
         float a;
         float b;
         float c;
         float d;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C4693b(float f, float f2, float f3, float f4) {
+        public b(float f, float f2, float f3, float f4) {
             this.a = f;
             this.b = f2;
             this.c = f3;
@@ -1730,8 +1686,8 @@ public class SVG {
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public static C4693b a(float f, float f2, float f3, float f4) {
-            return new C4693b(f, f2, f3 - f, f4 - f2);
+        public static b a(float f, float f2, float f3, float f4) {
+            return new b(f, f2, f3 - f, f4 - f2);
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
@@ -1745,20 +1701,20 @@ public class SVG {
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public void d(C4693b c4693b) {
-            float f = c4693b.a;
+        public void d(b bVar) {
+            float f = bVar.a;
             if (f < this.a) {
                 this.a = f;
             }
-            float f2 = c4693b.b;
+            float f2 = bVar.b;
             if (f2 < this.b) {
                 this.b = f2;
             }
-            if (c4693b.b() > b()) {
-                this.c = c4693b.b() - this.a;
+            if (bVar.b() > b()) {
+                this.c = bVar.b() - this.a;
             }
-            if (c4693b.c() > c()) {
-                this.d = c4693b.c() - this.b;
+            if (bVar.c() > c()) {
+                this.d = bVar.c() - this.b;
             }
         }
 
@@ -1767,11 +1723,11 @@ public class SVG {
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C4693b(C4693b c4693b) {
-            this.a = c4693b.a;
-            this.b = c4693b.b;
-            this.c = c4693b.c;
-            this.d = c4693b.d;
+        public b(b bVar) {
+            this.a = bVar.a;
+            this.b = bVar.b;
+            this.c = bVar.c;
+            this.d = bVar.d;
         }
     }
 }

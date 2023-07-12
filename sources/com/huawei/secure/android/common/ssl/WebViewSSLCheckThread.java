@@ -4,8 +4,8 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.webkit.SslErrorHandler;
 import com.huawei.secure.android.common.ssl.hostname.StrictHostnameVerifier;
-import com.huawei.secure.android.common.ssl.util.AbstractC5754f;
-import com.huawei.secure.android.common.ssl.util.C5755g;
+import com.huawei.secure.android.common.ssl.util.f;
+import com.huawei.secure.android.common.ssl.util.g;
 import java.io.IOException;
 import java.io.Reader;
 import java.net.URI;
@@ -20,10 +20,10 @@ import java.security.cert.CertificateException;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLSocketFactory;
-import okhttp3.C8823o;
-import okhttp3.C8827q;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
+import okhttp3.o;
+import okhttp3.q;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.conn.scheme.PlainSocketFactory;
@@ -58,15 +58,14 @@ public class WebViewSSLCheckThread extends Thread {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.secure.android.common.ssl.WebViewSSLCheckThread$a */
     /* loaded from: classes10.dex */
-    public static class C5743a implements okhttp3.Callback {
+    public static class a implements okhttp3.Callback {
         final /* synthetic */ Callback a;
         final /* synthetic */ Context b;
         final /* synthetic */ String c;
         final /* synthetic */ SslErrorHandler d;
 
-        C5743a(Callback callback, Context context, String str, SslErrorHandler sslErrorHandler) {
+        a(Callback callback, Context context, String str, SslErrorHandler sslErrorHandler) {
             this.a = callback;
             this.b = context;
             this.c = str;
@@ -76,7 +75,7 @@ public class WebViewSSLCheckThread extends Thread {
         @Override // okhttp3.Callback
         public void onFailure(Call call, IOException iOException) {
             String str = WebViewSSLCheckThread.i;
-            C5755g.b(str, "onFailure , IO Exception : " + iOException.getMessage());
+            g.b(str, "onFailure , IO Exception : " + iOException.getMessage());
             Callback callback = this.a;
             if (callback != null) {
                 callback.onCancel(this.b, this.c);
@@ -86,8 +85,8 @@ public class WebViewSSLCheckThread extends Thread {
         }
 
         @Override // okhttp3.Callback
-        public void onResponse(Call call, C8827q c8827q) throws IOException {
-            C5755g.b(WebViewSSLCheckThread.i, "onResponse . proceed");
+        public void onResponse(Call call, q qVar) throws IOException {
+            g.b(WebViewSSLCheckThread.i, "onResponse . proceed");
             Callback callback = this.a;
             if (callback != null) {
                 callback.onProceed(this.b, this.c);
@@ -102,18 +101,18 @@ public class WebViewSSLCheckThread extends Thread {
 
     private void b() {
         String str = i;
-        C5755g.c(str, "callbackCancel: ");
+        g.c(str, "callbackCancel: ");
         Callback callback = this.g;
         if (callback != null) {
             callback.onCancel(this.h, this.f);
         } else if (this.e != null) {
-            C5755g.c(str, "callbackCancel 2: ");
+            g.c(str, "callbackCancel 2: ");
             this.e.cancel();
         }
     }
 
     private void c() {
-        C5755g.c(i, "callbackProceed: ");
+        g.c(i, "callbackProceed: ");
         Callback callback = this.g;
         if (callback != null) {
             callback.onProceed(this.h, this.f);
@@ -190,23 +189,23 @@ public class WebViewSSLCheckThread extends Thread {
                             HttpGet httpGet = new HttpGet();
                             httpGet.setURI(new URI(this.f));
                             HttpResponse execute = defaultHttpClient.execute(httpGet);
-                            C5755g.c(i, "status code is : " + execute.getStatusLine().getStatusCode());
-                            AbstractC5754f.a((Reader) null);
+                            g.c(i, "status code is : " + execute.getStatusLine().getStatusCode());
+                            f.a((Reader) null);
                             c();
                             return;
                         } catch (Exception e2) {
-                            C5755g.b(i, "run: exception : " + e2.getMessage());
+                            g.b(i, "run: exception : " + e2.getMessage());
                             b();
-                            AbstractC5754f.a((Reader) null);
+                            f.a((Reader) null);
                             return;
                         }
                     }
                 } catch (Throwable th) {
-                    AbstractC5754f.a((Reader) null);
+                    f.a((Reader) null);
                     throw th;
                 }
             }
-            C5755g.b(i, "sslErrorHandler or url is null");
+            g.b(i, "sslErrorHandler or url is null");
             b();
             return;
         }
@@ -228,7 +227,7 @@ public class WebViewSSLCheckThread extends Thread {
                                 httpsURLConnection2 = httpsURLConnection;
                             } catch (Exception e3) {
                                 e = e3;
-                                C5755g.b(i, "exception : " + e.getMessage());
+                                g.b(i, "exception : " + e.getMessage());
                                 b();
                                 if (httpsURLConnection != null) {
                                     httpsURLConnection.disconnect();
@@ -297,35 +296,35 @@ public class WebViewSSLCheckThread extends Thread {
         setSslErrorHandler(sslErrorHandler);
         setUrl(str);
         setContext(context);
-        setSslSocketFactory(new SecureSSLSocketFactoryNew(new C5746c(context)));
+        setSslSocketFactory(new SecureSSLSocketFactoryNew(new c(context)));
         setHostnameVerifier(new StrictHostnameVerifier());
         try {
-            setApacheSSLSocketFactory(new SecureApacheSSLSocketFactory((KeyStore) null, new C5746c(context)));
+            setApacheSSLSocketFactory(new SecureApacheSSLSocketFactory((KeyStore) null, new c(context)));
         } catch (UnrecoverableKeyException e) {
             String str2 = i;
-            C5755g.b(str2, "WebViewSSLCheckThread: UnrecoverableKeyException : " + e.getMessage());
+            g.b(str2, "WebViewSSLCheckThread: UnrecoverableKeyException : " + e.getMessage());
         }
         setApacheHostnameVerifier(SecureApacheSSLSocketFactory.STRICT_HOSTNAME_VERIFIER);
     }
 
     public static void checkServerCertificateWithOK(SslErrorHandler sslErrorHandler, String str, Context context, Callback callback) {
         if (sslErrorHandler != null && !TextUtils.isEmpty(str) && context != null) {
-            OkHttpClient.C8734b c8734b = new OkHttpClient.C8734b();
+            OkHttpClient.b bVar = new OkHttpClient.b();
             try {
-                SecureSSLSocketFactoryNew secureSSLSocketFactoryNew = new SecureSSLSocketFactoryNew(new C5746c(context));
+                SecureSSLSocketFactoryNew secureSSLSocketFactoryNew = new SecureSSLSocketFactoryNew(new c(context));
                 secureSSLSocketFactoryNew.setContext(context);
-                c8734b.m(secureSSLSocketFactoryNew, new C5746c(context));
-                c8734b.i(new StrictHostnameVerifier());
-                c8734b.b().newCall(new C8823o.C8824a().k(str).b()).enqueue(new C5743a(callback, context, str, sslErrorHandler));
+                bVar.m(secureSSLSocketFactoryNew, new c(context));
+                bVar.i(new StrictHostnameVerifier());
+                bVar.b().newCall(new o.a().k(str).b()).enqueue(new a(callback, context, str, sslErrorHandler));
                 return;
             } catch (Exception e) {
                 String str2 = i;
-                C5755g.b(str2, "checkServerCertificateWithOK: exception : " + e.getMessage());
+                g.b(str2, "checkServerCertificateWithOK: exception : " + e.getMessage());
                 sslErrorHandler.cancel();
                 return;
             }
         }
-        C5755g.b(i, "checkServerCertificateWithOK: handler or url or context is null");
+        g.b(i, "checkServerCertificateWithOK: handler or url or context is null");
     }
 
     @Deprecated

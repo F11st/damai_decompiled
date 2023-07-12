@@ -13,14 +13,13 @@ public class l30 {
     AtomicBoolean a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.l30$b */
     /* loaded from: classes6.dex */
-    private static class C9402b {
+    private static class b {
         private static l30 a = new l30();
     }
 
     public static l30 c() {
-        return C9402b.a;
+        return b.a;
     }
 
     public void a(String str, DatalabBizType datalabBizType, Set<String> set) {

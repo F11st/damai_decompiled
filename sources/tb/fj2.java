@@ -2,11 +2,7 @@ package tb;
 
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassKind;
 import kotlin.reflect.jvm.internal.impl.descriptors.Modality;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
@@ -36,9 +32,9 @@ public final class fj2 {
         List<TypeParameterDescriptor> e2;
         ModuleDescriptor q = kf0.q();
         b41.h(q, "getErrorModule()");
-        ie0 ie0Var = new ie0(q, C8277c.COROUTINES_PACKAGE_FQ_NAME_EXPERIMENTAL);
+        ie0 ie0Var = new ie0(q, kotlin.reflect.jvm.internal.impl.builtins.c.COROUTINES_PACKAGE_FQ_NAME_EXPERIMENTAL);
         ClassKind classKind = ClassKind.INTERFACE;
-        ni1 g = C8277c.CONTINUATION_INTERFACE_FQ_NAME_EXPERIMENTAL.g();
+        ni1 g = kotlin.reflect.jvm.internal.impl.builtins.c.CONTINUATION_INTERFACE_FQ_NAME_EXPERIMENTAL.g();
         SourceElement sourceElement = SourceElement.NO_SOURCE;
         StorageManager storageManager = LockBasedStorageManager.NO_LOCKS;
         di1 di1Var = new di1(ie0Var, classKind, false, false, g, sourceElement, storageManager);
@@ -46,19 +42,19 @@ public final class fj2 {
         di1Var.g(modality);
         f70 f70Var = e70.PUBLIC;
         di1Var.i(f70Var);
-        Annotations.C8302a c8302a = Annotations.Companion;
-        Annotations b2 = c8302a.b();
+        Annotations.a aVar = Annotations.Companion;
+        Annotations b2 = aVar.b();
         Variance variance = Variance.IN_VARIANCE;
-        e = C8213l.e(wq2.l(di1Var, b2, false, variance, ni1.f("T"), 0, storageManager));
+        e = kotlin.collections.l.e(wq2.l(di1Var, b2, false, variance, ni1.f("T"), 0, storageManager));
         di1Var.h(e);
         di1Var.e();
         a = di1Var;
         ModuleDescriptor q2 = kf0.q();
         b41.h(q2, "getErrorModule()");
-        di1 di1Var2 = new di1(new ie0(q2, C8277c.COROUTINES_PACKAGE_FQ_NAME_RELEASE), classKind, false, false, C8277c.CONTINUATION_INTERFACE_FQ_NAME_RELEASE.g(), sourceElement, storageManager);
+        di1 di1Var2 = new di1(new ie0(q2, kotlin.reflect.jvm.internal.impl.builtins.c.COROUTINES_PACKAGE_FQ_NAME_RELEASE), classKind, false, false, kotlin.reflect.jvm.internal.impl.builtins.c.CONTINUATION_INTERFACE_FQ_NAME_RELEASE.g(), sourceElement, storageManager);
         di1Var2.g(modality);
         di1Var2.i(f70Var);
-        e2 = C8213l.e(wq2.l(di1Var2, c8302a.b(), false, variance, ni1.f("T"), 0, storageManager));
+        e2 = kotlin.collections.l.e(wq2.l(di1Var2, aVar.b(), false, variance, ni1.f("T"), 0, storageManager));
         di1Var2.h(e2);
         di1Var2.e();
         b = di1Var2;
@@ -66,9 +62,9 @@ public final class fj2 {
 
     public static final boolean a(@Nullable hp0 hp0Var, boolean z) {
         if (z) {
-            return b41.d(hp0Var, C8277c.CONTINUATION_INTERFACE_FQ_NAME_RELEASE);
+            return b41.d(hp0Var, kotlin.reflect.jvm.internal.impl.builtins.c.CONTINUATION_INTERFACE_FQ_NAME_RELEASE);
         }
-        return b41.d(hp0Var, C8277c.CONTINUATION_INTERFACE_FQ_NAME_EXPERIMENTAL);
+        return b41.d(hp0Var, kotlin.reflect.jvm.internal.impl.builtins.c.CONTINUATION_INTERFACE_FQ_NAME_EXPERIMENTAL);
     }
 
     @NotNull
@@ -79,11 +75,11 @@ public final class fj2 {
         List n0;
         b41.i(z71Var, "suspendFunType");
         up0.o(z71Var);
-        AbstractC8271b h = TypeUtilsKt.h(z71Var);
+        kotlin.reflect.jvm.internal.impl.builtins.b h = TypeUtilsKt.h(z71Var);
         Annotations annotations = z71Var.getAnnotations();
         z71 h2 = up0.h(z71Var);
         List<TypeProjection> j = up0.j(z71Var);
-        q = C8215n.q(j, 10);
+        q = kotlin.collections.n.q(j, 10);
         ArrayList arrayList = new ArrayList(q);
         for (TypeProjection typeProjection : j) {
             arrayList.add(typeProjection.getType());
@@ -96,7 +92,7 @@ public final class fj2 {
         }
         TypeConstructor typeConstructor2 = typeConstructor;
         b41.h(typeConstructor2, "if (isReleaseCoroutines)…ERIMENTAL.typeConstructor");
-        e = C8213l.e(TypeUtilsKt.a(up0.i(z71Var)));
+        e = kotlin.collections.l.e(TypeUtilsKt.a(up0.i(z71Var)));
         n0 = CollectionsKt___CollectionsKt.n0(arrayList, KotlinTypeFactory.i(b2, typeConstructor2, e, false, null, 16, null));
         fd2 I = TypeUtilsKt.h(z71Var).I();
         b41.h(I, "suspendFunType.builtIns.nullableAnyType");

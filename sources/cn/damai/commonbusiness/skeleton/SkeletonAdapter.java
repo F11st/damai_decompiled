@@ -19,10 +19,9 @@ public class SkeletonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     private int f;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.skeleton.SkeletonAdapter$a */
     /* loaded from: classes.dex */
-    class C0926a extends RecyclerView.ViewHolder {
-        C0926a(SkeletonAdapter skeletonAdapter, View view) {
+    class a extends RecyclerView.ViewHolder {
+        a(SkeletonAdapter skeletonAdapter, View view) {
             super(view);
         }
     }
@@ -57,6 +56,6 @@ public class SkeletonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         if (this.d) {
             return new ShimmerViewHolder(from, viewGroup, this.b);
         }
-        return new C0926a(this, from.inflate(this.b, viewGroup, false));
+        return new a(this, from.inflate(this.b, viewGroup, false));
     }
 }

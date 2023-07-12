@@ -11,7 +11,7 @@ public class iy {
     private final jo f788a;
 
     public iy() {
-        this(new jb.C7681a());
+        this(new jb.a());
     }
 
     public iy(jh jhVar) {

@@ -57,7 +57,7 @@ public class GiftTrackBoxView extends RelativeLayout {
         this.isShowed = false;
         this.mAnimTextColor = "#ffd862";
         this.currentNum = 0;
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ykl_gift_trackbox_layout, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_ykl_gift_trackbox_layout, (ViewGroup) this, true);
         this.mGiftTrackBean = giftTrackBean;
         this.mSpanBuilder = new SpannableStringBuilder();
         this.mSizeSpan = new AbsoluteSizeSpan(20, true);
@@ -332,13 +332,13 @@ public class GiftTrackBoxView extends RelativeLayout {
         if (i >= 100) {
             if (this.currentNum < 100) {
                 this.currentNum = i;
-                this.mLayoutGift.setBackgroundResource(R.C7941drawable.dago_pgc_ykl_gift_trackbox_100_bg);
+                this.mLayoutGift.setBackgroundResource(R.drawable.dago_pgc_ykl_gift_trackbox_100_bg);
                 showLightAnim();
                 this.mShiningImage.setVisibility(0);
             }
         } else if (this.currentNum == 0) {
             this.currentNum = i;
-            this.mLayoutGift.setBackgroundResource(R.C7941drawable.dago_pgc_ykl_gift_trackbox_1_bg);
+            this.mLayoutGift.setBackgroundResource(R.drawable.dago_pgc_ykl_gift_trackbox_1_bg);
             this.mShiningImage.setVisibility(8);
         }
     }

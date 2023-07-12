@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.exceptions.CompositeException;
 import io.reactivex.internal.subscriptions.SubscriptionArbiter;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ import org.reactivestreams.Subscription;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableConcatArray<T> extends AbstractC8147b<T> {
+public final class FlowableConcatArray<T> extends b<T> {
     final boolean delayError;
     final Publisher<? extends T>[] sources;
 
@@ -117,7 +117,7 @@ public final class FlowableConcatArray<T> extends AbstractC8147b<T> {
         this.delayError = z;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         ConcatArraySubscriber concatArraySubscriber = new ConcatArraySubscriber(this.sources, this.delayError, subscriber);
         subscriber.onSubscribe(concatArraySubscriber);

@@ -3,7 +3,6 @@ package tb;
 import android.text.TextUtils;
 import com.alibaba.analytics.core.Variables;
 import com.alibaba.analytics.core.config.SystemConfigMgr;
-import com.alibaba.analytics.core.sync.C3134f;
 import com.alibaba.analytics.utils.Logger;
 import com.ta.audid.Constants;
 import com.taobao.weex.annotation.JSMethod;
@@ -85,7 +84,7 @@ public class w52 implements SystemConfigMgr.IKVChangeListener {
         this.f = c(SystemConfigMgr.i().h("amdc_sip_fail_count"), 2);
         this.g = c(SystemConfigMgr.i().h("amdc_sip_fail_count_all"), 2);
         this.a = c(SystemConfigMgr.i().h("upload_count"), 3);
-        C3134f.i().e(this.a);
+        com.alibaba.analytics.core.sync.f.i().e(this.a);
         SystemConfigMgr.i().l("amdc_sip_sample", this);
         SystemConfigMgr.i().l("sip_fail_count", this);
         SystemConfigMgr.i().l("amdc_sip_fail_count", this);
@@ -121,7 +120,7 @@ public class w52 implements SystemConfigMgr.IKVChangeListener {
         }
         if ("upload_count".equalsIgnoreCase(str)) {
             this.a = c(str2, 3);
-            C3134f.i().e(this.a);
+            com.alibaba.analytics.core.sync.f.i().e(this.a);
         }
     }
 }

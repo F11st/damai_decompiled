@@ -27,9 +27,8 @@ public class SSLSocketChannel implements WrappedByteChannel, ByteChannel {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.studio.third.socket.java_websocket.SSLSocketChannel$a */
     /* loaded from: classes6.dex */
-    public static /* synthetic */ class C3384a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
         static final /* synthetic */ int[] b;
 
@@ -122,7 +121,7 @@ public class SSLSocketChannel implements WrappedByteChannel, ByteChannel {
         SSLEngineResult.HandshakeStatus handshakeStatus2 = this.engine.getHandshakeStatus();
         boolean z = false;
         while (!z) {
-            int i = C3384a.b[handshakeStatus2.ordinal()];
+            int i = a.b[handshakeStatus2.ordinal()];
             if (i != 1) {
                 if (i != 2) {
                     if (i == 3) {
@@ -130,7 +129,7 @@ public class SSLSocketChannel implements WrappedByteChannel, ByteChannel {
                         try {
                             SSLEngineResult wrap = this.engine.wrap(this.myAppData, this.myNetData);
                             handshakeStatus = wrap.getHandshakeStatus();
-                            int i2 = C3384a.a[wrap.getStatus().ordinal()];
+                            int i2 = a.a[wrap.getStatus().ordinal()];
                             if (i2 == 1) {
                                 this.myNetData.flip();
                                 while (this.myNetData.hasRemaining()) {
@@ -187,7 +186,7 @@ public class SSLSocketChannel implements WrappedByteChannel, ByteChannel {
                         SSLEngineResult unwrap = this.engine.unwrap(this.peerNetData, this.peerAppData);
                         this.peerNetData.compact();
                         handshakeStatus = unwrap.getHandshakeStatus();
-                        int i3 = C3384a.a[unwrap.getStatus().ordinal()];
+                        int i3 = a.a[unwrap.getStatus().ordinal()];
                         if (i3 != 1) {
                             if (i3 == 2) {
                                 this.peerNetData = handleBufferUnderflow(this.peerNetData);
@@ -300,7 +299,7 @@ public class SSLSocketChannel implements WrappedByteChannel, ByteChannel {
                 this.peerAppData.compact();
                 try {
                     SSLEngineResult unwrap = this.engine.unwrap(this.peerNetData, this.peerAppData);
-                    int i = C3384a.a[unwrap.getStatus().ordinal()];
+                    int i = a.a[unwrap.getStatus().ordinal()];
                     if (i == 1) {
                         this.peerAppData.flip();
                         return ByteBufferUtils.transferByteBuffer(this.peerAppData, byteBuffer);
@@ -339,7 +338,7 @@ public class SSLSocketChannel implements WrappedByteChannel, ByteChannel {
         while (byteBuffer.hasRemaining()) {
             this.myNetData.clear();
             SSLEngineResult wrap = this.engine.wrap(byteBuffer, this.myNetData);
-            int i2 = C3384a.a[wrap.getStatus().ordinal()];
+            int i2 = a.a[wrap.getStatus().ordinal()];
             if (i2 == 1) {
                 this.myNetData.flip();
                 while (this.myNetData.hasRemaining()) {

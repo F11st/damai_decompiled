@@ -8,55 +8,53 @@ import tb.b41;
 public interface DeserializationConfiguration {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializationConfiguration$a */
     /* loaded from: classes3.dex */
-    public static final class C8506a implements DeserializationConfiguration {
+    public static final class a implements DeserializationConfiguration {
         @NotNull
-        public static final C8506a INSTANCE = new C8506a();
+        public static final a INSTANCE = new a();
 
-        private C8506a() {
+        private a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializationConfiguration
         public boolean getAllowUnstableDependencies() {
-            return C8507b.a(this);
+            return b.a(this);
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializationConfiguration
         public boolean getPreserveDeclarationsOrdering() {
-            return C8507b.b(this);
+            return b.b(this);
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializationConfiguration
         public boolean getReleaseCoroutines() {
-            return C8507b.c(this);
+            return b.c(this);
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializationConfiguration
         public boolean getReportErrorsOnPreReleaseDependencies() {
-            return C8507b.d(this);
+            return b.d(this);
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializationConfiguration
         public boolean getSkipMetadataVersionCheck() {
-            return C8507b.e(this);
+            return b.e(this);
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializationConfiguration
         public boolean getSkipPrereleaseCheck() {
-            return C8507b.f(this);
+            return b.f(this);
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializationConfiguration
         public boolean getTypeAliasesAllowed() {
-            return C8507b.g(this);
+            return b.g(this);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializationConfiguration$b */
     /* loaded from: classes3.dex */
-    public static final class C8507b {
+    public static final class b {
         public static boolean a(@NotNull DeserializationConfiguration deserializationConfiguration) {
             b41.i(deserializationConfiguration, "this");
             return false;

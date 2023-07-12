@@ -27,8 +27,8 @@ public class Messages {
             this.a = binaryMessenger;
         }
 
-        public void A(C5772a c5772a, final Reply<Void> reply) {
-            new BasicMessageChannel(this.a, "dev.flutter.pigeon.FlutterRouterApi.sendEventToFlutter", new StandardMessageCodec()).send(c5772a.k(), new BasicMessageChannel.Reply() { // from class: tb.af1
+        public void A(a aVar, final Reply<Void> reply) {
+            new BasicMessageChannel(this.a, "dev.flutter.pigeon.FlutterRouterApi.sendEventToFlutter", new StandardMessageCodec()).send(aVar.k(), new BasicMessageChannel.Reply() { // from class: tb.af1
                 @Override // io.flutter.plugin.common.BasicMessageChannel.Reply
                 public final void reply(Object obj) {
                     Messages.FlutterRouterApi.Reply.this.reply(null);
@@ -45,8 +45,8 @@ public class Messages {
             });
         }
 
-        public void t(C5772a c5772a, final Reply<Void> reply) {
-            new BasicMessageChannel(this.a, "dev.flutter.pigeon.FlutterRouterApi.onBackground", new StandardMessageCodec()).send(c5772a.k(), new BasicMessageChannel.Reply() { // from class: tb.ze1
+        public void t(a aVar, final Reply<Void> reply) {
+            new BasicMessageChannel(this.a, "dev.flutter.pigeon.FlutterRouterApi.onBackground", new StandardMessageCodec()).send(aVar.k(), new BasicMessageChannel.Reply() { // from class: tb.ze1
                 @Override // io.flutter.plugin.common.BasicMessageChannel.Reply
                 public final void reply(Object obj) {
                     Messages.FlutterRouterApi.Reply.this.reply(null);
@@ -54,8 +54,8 @@ public class Messages {
             });
         }
 
-        public void u(C5772a c5772a, final Reply<Void> reply) {
-            new BasicMessageChannel(this.a, "dev.flutter.pigeon.FlutterRouterApi.onContainerHide", new StandardMessageCodec()).send(c5772a.k(), new BasicMessageChannel.Reply() { // from class: tb.bf1
+        public void u(a aVar, final Reply<Void> reply) {
+            new BasicMessageChannel(this.a, "dev.flutter.pigeon.FlutterRouterApi.onContainerHide", new StandardMessageCodec()).send(aVar.k(), new BasicMessageChannel.Reply() { // from class: tb.bf1
                 @Override // io.flutter.plugin.common.BasicMessageChannel.Reply
                 public final void reply(Object obj) {
                     Messages.FlutterRouterApi.Reply.this.reply(null);
@@ -63,8 +63,8 @@ public class Messages {
             });
         }
 
-        public void v(C5772a c5772a, final Reply<Void> reply) {
-            new BasicMessageChannel(this.a, "dev.flutter.pigeon.FlutterRouterApi.onContainerShow", new StandardMessageCodec()).send(c5772a.k(), new BasicMessageChannel.Reply() { // from class: tb.ve1
+        public void v(a aVar, final Reply<Void> reply) {
+            new BasicMessageChannel(this.a, "dev.flutter.pigeon.FlutterRouterApi.onContainerShow", new StandardMessageCodec()).send(aVar.k(), new BasicMessageChannel.Reply() { // from class: tb.ve1
                 @Override // io.flutter.plugin.common.BasicMessageChannel.Reply
                 public final void reply(Object obj) {
                     Messages.FlutterRouterApi.Reply.this.reply(null);
@@ -72,8 +72,8 @@ public class Messages {
             });
         }
 
-        public void w(C5772a c5772a, final Reply<Void> reply) {
-            new BasicMessageChannel(this.a, "dev.flutter.pigeon.FlutterRouterApi.onForeground", new StandardMessageCodec()).send(c5772a.k(), new BasicMessageChannel.Reply() { // from class: tb.cf1
+        public void w(a aVar, final Reply<Void> reply) {
+            new BasicMessageChannel(this.a, "dev.flutter.pigeon.FlutterRouterApi.onForeground", new StandardMessageCodec()).send(aVar.k(), new BasicMessageChannel.Reply() { // from class: tb.cf1
                 @Override // io.flutter.plugin.common.BasicMessageChannel.Reply
                 public final void reply(Object obj) {
                     Messages.FlutterRouterApi.Reply.this.reply(null);
@@ -81,8 +81,8 @@ public class Messages {
             });
         }
 
-        public void x(C5772a c5772a, final Reply<Void> reply) {
-            new BasicMessageChannel(this.a, "dev.flutter.pigeon.FlutterRouterApi.onNativeResult", new StandardMessageCodec()).send(c5772a.k(), new BasicMessageChannel.Reply() { // from class: tb.xe1
+        public void x(a aVar, final Reply<Void> reply) {
+            new BasicMessageChannel(this.a, "dev.flutter.pigeon.FlutterRouterApi.onNativeResult", new StandardMessageCodec()).send(aVar.k(), new BasicMessageChannel.Reply() { // from class: tb.xe1
                 @Override // io.flutter.plugin.common.BasicMessageChannel.Reply
                 public final void reply(Object obj) {
                     Messages.FlutterRouterApi.Reply.this.reply(null);
@@ -90,8 +90,8 @@ public class Messages {
             });
         }
 
-        public void y(C5772a c5772a, final Reply<Void> reply) {
-            new BasicMessageChannel(this.a, "dev.flutter.pigeon.FlutterRouterApi.pushRoute", new StandardMessageCodec()).send(c5772a.k(), new BasicMessageChannel.Reply() { // from class: tb.ue1
+        public void y(a aVar, final Reply<Void> reply) {
+            new BasicMessageChannel(this.a, "dev.flutter.pigeon.FlutterRouterApi.pushRoute", new StandardMessageCodec()).send(aVar.k(), new BasicMessageChannel.Reply() { // from class: tb.ue1
                 @Override // io.flutter.plugin.common.BasicMessageChannel.Reply
                 public final void reply(Object obj) {
                     Messages.FlutterRouterApi.Reply.this.reply(null);
@@ -99,8 +99,8 @@ public class Messages {
             });
         }
 
-        public void z(C5772a c5772a, final Reply<Void> reply) {
-            new BasicMessageChannel(this.a, "dev.flutter.pigeon.FlutterRouterApi.removeRoute", new StandardMessageCodec()).send(c5772a.k(), new BasicMessageChannel.Reply() { // from class: tb.ye1
+        public void z(a aVar, final Reply<Void> reply) {
+            new BasicMessageChannel(this.a, "dev.flutter.pigeon.FlutterRouterApi.removeRoute", new StandardMessageCodec()).send(aVar.k(), new BasicMessageChannel.Reply() { // from class: tb.ye1
                 @Override // io.flutter.plugin.common.BasicMessageChannel.Reply
                 public final void reply(Object obj) {
                     Messages.FlutterRouterApi.Reply.this.reply(null);
@@ -112,17 +112,17 @@ public class Messages {
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
     public interface NativeRouterApi {
-        C5773b getStackFromHost();
+        b getStackFromHost();
 
-        void popRoute(C5772a c5772a, Result<Void> result);
+        void popRoute(a aVar, Result<Void> result);
 
-        void pushFlutterRoute(C5772a c5772a);
+        void pushFlutterRoute(a aVar);
 
-        void pushNativeRoute(C5772a c5772a);
+        void pushNativeRoute(a aVar);
 
-        void saveStackToHost(C5773b c5773b);
+        void saveStackToHost(b bVar);
 
-        void sendEventToNative(C5772a c5772a);
+        void sendEventToNative(a aVar);
     }
 
     /* compiled from: Taobao */
@@ -132,9 +132,8 @@ public class Messages {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.idlefish.flutterboost.Messages$a */
     /* loaded from: classes10.dex */
-    public static class C5772a {
+    public static class a {
         private String a;
         private String b;
         private Map<Object, Object> c;
@@ -142,14 +141,14 @@ public class Messages {
         private String e;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public static C5772a a(Map<String, Object> map) {
-            C5772a c5772a = new C5772a();
-            c5772a.a = (String) map.get("pageName");
-            c5772a.b = (String) map.get("uniqueId");
-            c5772a.c = (Map) map.get("arguments");
-            c5772a.d = (Boolean) map.get("opaque");
-            c5772a.e = (String) map.get("key");
-            return c5772a;
+        public static a a(Map<String, Object> map) {
+            a aVar = new a();
+            aVar.a = (String) map.get("pageName");
+            aVar.b = (String) map.get("uniqueId");
+            aVar.c = (Map) map.get("arguments");
+            aVar.d = (Boolean) map.get("opaque");
+            aVar.e = (String) map.get("key");
+            return aVar;
         }
 
         public Map<Object, Object> b() {
@@ -200,18 +199,17 @@ public class Messages {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.idlefish.flutterboost.Messages$b */
     /* loaded from: classes10.dex */
-    public static class C5773b {
+    public static class b {
         private List<Object> a;
         private Map<Object, Object> b;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public static C5773b a(Map<String, Object> map) {
-            C5773b c5773b = new C5773b();
-            c5773b.a = (List) map.get("containers");
-            c5773b.b = (Map) map.get("routes");
-            return c5773b;
+        public static b a(Map<String, Object> map) {
+            b bVar = new b();
+            bVar.a = (List) map.get("containers");
+            bVar.b = (Map) map.get("routes");
+            return bVar;
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */

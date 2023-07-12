@@ -24,12 +24,11 @@ public class AugmentedLayer extends AbsoluteLayout {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayer.layermanager.view.AugmentedLayer$b */
     /* loaded from: classes8.dex */
-    public static class C3667b {
+    public static class b {
         private final WeakReference<View> a;
 
-        private C3667b(View view) {
+        private b(View view) {
             this.a = new WeakReference<>(view);
         }
     }
@@ -42,7 +41,7 @@ public class AugmentedLayer extends AbsoluteLayout {
 
     private void bindTargetView(View view, Canvas canvas) {
         view.getLocationOnScreen(this.mTmpLocation);
-        canvas.setTag(R$id.poplayer_augmentedview_record_tag_id, new C3667b(view));
+        canvas.setTag(R$id.poplayer_augmentedview_record_tag_id, new b(view));
         int[] iArr = new int[2];
         getLocationOnScreen(iArr);
         dt1.b("AugmentedLayer: myLocation[0] = " + iArr[0] + " myLocation[1] = " + iArr[1], new Object[0]);
@@ -102,7 +101,7 @@ public class AugmentedLayer extends AbsoluteLayout {
             View childAt = getChildAt(i);
             if (childAt instanceof Canvas) {
                 Canvas canvas = (Canvas) childAt;
-                View view = (View) fw2.c(((C3667b) canvas.getTag(R$id.poplayer_augmentedview_record_tag_id)).a);
+                View view = (View) fw2.c(((b) canvas.getTag(R$id.poplayer_augmentedview_record_tag_id)).a);
                 if (!((view != null && view.getVisibility() == 0 && fw2.g(view) && fw2.f(view)) ? false : true)) {
                     view.getLocationOnScreen(this.mTmpLocation);
                     int x = (int) canvas.getX();

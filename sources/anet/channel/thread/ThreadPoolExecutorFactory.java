@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
 public class ThreadPoolExecutorFactory {
-    private static ScheduledThreadPoolExecutor a = new ScheduledThreadPoolExecutor(1, new ThreadFactoryC0234a("AWCN Scheduler"));
+    private static ScheduledThreadPoolExecutor a = new ScheduledThreadPoolExecutor(1, new a("AWCN Scheduler"));
     private static ThreadPoolExecutor b;
     private static ThreadPoolExecutor c;
     private static ThreadPoolExecutor d;
@@ -54,13 +54,12 @@ public class ThreadPoolExecutorFactory {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.thread.ThreadPoolExecutorFactory$a */
     /* loaded from: classes.dex */
-    private static class ThreadFactoryC0234a implements ThreadFactory {
+    private static class a implements ThreadFactory {
         AtomicInteger a = new AtomicInteger(0);
         String b;
 
-        ThreadFactoryC0234a(String str) {
+        a(String str) {
             this.b = str;
         }
 
@@ -74,9 +73,8 @@ public class ThreadPoolExecutorFactory {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.thread.ThreadPoolExecutorFactory$b */
     /* loaded from: classes.dex */
-    public static class C0235b {
+    public static class b {
         public static int a = 0;
         public static int b = 1;
         public static int c = 9;
@@ -84,15 +82,15 @@ public class ThreadPoolExecutorFactory {
 
     static {
         TimeUnit timeUnit = TimeUnit.SECONDS;
-        b = new ThreadPoolExecutor(2, 2, 60L, timeUnit, new LinkedBlockingDeque(), new ThreadFactoryC0234a("AWCN Worker(H)"));
-        c = new PriorityExecutor(16, 16, 60L, timeUnit, new PriorityBlockingQueue(), new ThreadFactoryC0234a("AWCN Worker(M)"));
-        d = new ThreadPoolExecutor(2, 2, 60L, timeUnit, new LinkedBlockingDeque(), new ThreadFactoryC0234a("AWCN Worker(L)"));
-        e = new ThreadPoolExecutor(32, 32, 60L, timeUnit, new LinkedBlockingDeque(), new ThreadFactoryC0234a("AWCN Worker(Backup)"));
-        f = new ThreadPoolExecutor(1, 1, 30L, timeUnit, new LinkedBlockingDeque(), new ThreadFactoryC0234a("AWCN Detector"));
-        g = new ThreadPoolExecutor(1, 1, 30L, timeUnit, new LinkedBlockingDeque(), new ThreadFactoryC0234a("AWCN HR"));
-        h = new ThreadPoolExecutor(1, 1, 30L, timeUnit, new LinkedBlockingDeque(), new ThreadFactoryC0234a("AWCN Cookie"));
-        i = new ThreadPoolExecutor(1, 1, 30L, timeUnit, new LinkedBlockingDeque(), new ThreadFactoryC0234a("AWCN Monitor"));
-        j = new ThreadPoolExecutor(1, 1, 60L, timeUnit, new LinkedBlockingDeque(), new ThreadFactoryC0234a("AWCN Callback"));
+        b = new ThreadPoolExecutor(2, 2, 60L, timeUnit, new LinkedBlockingDeque(), new a("AWCN Worker(H)"));
+        c = new PriorityExecutor(16, 16, 60L, timeUnit, new PriorityBlockingQueue(), new a("AWCN Worker(M)"));
+        d = new ThreadPoolExecutor(2, 2, 60L, timeUnit, new LinkedBlockingDeque(), new a("AWCN Worker(L)"));
+        e = new ThreadPoolExecutor(32, 32, 60L, timeUnit, new LinkedBlockingDeque(), new a("AWCN Worker(Backup)"));
+        f = new ThreadPoolExecutor(1, 1, 30L, timeUnit, new LinkedBlockingDeque(), new a("AWCN Detector"));
+        g = new ThreadPoolExecutor(1, 1, 30L, timeUnit, new LinkedBlockingDeque(), new a("AWCN HR"));
+        h = new ThreadPoolExecutor(1, 1, 30L, timeUnit, new LinkedBlockingDeque(), new a("AWCN Cookie"));
+        i = new ThreadPoolExecutor(1, 1, 30L, timeUnit, new LinkedBlockingDeque(), new a("AWCN Monitor"));
+        j = new ThreadPoolExecutor(1, 1, 60L, timeUnit, new LinkedBlockingDeque(), new a("AWCN Callback"));
         b.allowCoreThreadTimeOut(true);
         c.allowCoreThreadTimeOut(true);
         d.allowCoreThreadTimeOut(true);
@@ -138,13 +136,13 @@ public class ThreadPoolExecutorFactory {
         if (ALog.g(1)) {
             ALog.c("awcn.ThreadPoolExecutorFactory", "submit priority task", null, "priority", Integer.valueOf(i2));
         }
-        if (i2 < C0235b.a || i2 > C0235b.c) {
-            i2 = C0235b.c;
+        if (i2 < b.a || i2 > b.c) {
+            i2 = b.c;
         }
-        if (i2 == C0235b.a) {
+        if (i2 == b.a) {
             return b.submit(runnable);
         }
-        if (i2 == C0235b.c) {
+        if (i2 == b.c) {
             return d.submit(runnable);
         }
         return c.submit(new ComparableTask(runnable, i2));

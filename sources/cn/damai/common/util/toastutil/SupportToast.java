@@ -8,12 +8,12 @@ import com.android.alibaba.ip.runtime.IpChange;
 /* loaded from: classes4.dex */
 public final class SupportToast extends BaseToast {
     private static transient /* synthetic */ IpChange $ipChange;
-    private final HandlerC0540c mToastHelper;
+    private final c mToastHelper;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public SupportToast(Application application) {
         super(application);
-        this.mToastHelper = new HandlerC0540c(this, application);
+        this.mToastHelper = new c(this, application);
     }
 
     @Override // android.widget.Toast

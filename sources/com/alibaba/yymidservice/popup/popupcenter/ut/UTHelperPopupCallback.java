@@ -11,9 +11,8 @@ import org.jetbrains.annotations.Nullable;
 public interface UTHelperPopupCallback {
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.yymidservice.popup.popupcenter.ut.UTHelperPopupCallback$a */
     /* loaded from: classes8.dex */
-    public static final class C4028a {
+    public static final class a {
         public static /* synthetic */ void a(UTHelperPopupCallback uTHelperPopupCallback, HashMap hashMap, Map map, boolean z, int i, Object obj) {
             if (obj != null) {
                 throw new UnsupportedOperationException("Super calls with default arguments not supported in this target, function: closeUt");

@@ -29,13 +29,12 @@ public class WeiboSignInHelper extends SNSSignInAbstractHelper {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.weibo.WeiboSignInHelper$a */
     /* loaded from: classes11.dex */
-    public class C6629a implements OauthCallback {
+    public class a implements OauthCallback {
         final /* synthetic */ SNSSignInListener a;
         final /* synthetic */ Activity b;
 
-        C6629a(SNSSignInListener sNSSignInListener, Activity activity) {
+        a(SNSSignInListener sNSSignInListener, Activity activity) {
             this.a = sNSSignInListener;
             this.b = activity;
         }
@@ -87,7 +86,7 @@ public class WeiboSignInHelper extends SNSSignInAbstractHelper {
         HashMap hashMap = new HashMap();
         hashMap.put(ParamsConstants.Key.PARAM_ONLY_AUTHCODE, "1");
         if (AliMemberSDK.getService(OauthService.class) != null) {
-            ((OauthService) AliMemberSDK.getService(OauthService.class)).oauth(activity, Site.WEIBO, hashMap, new C6629a(sNSSignInListener, activity));
+            ((OauthService) AliMemberSDK.getService(OauthService.class)).oauth(activity, Site.WEIBO, hashMap, new a(sNSSignInListener, activity));
         }
     }
 

@@ -5,7 +5,7 @@ import com.alibaba.security.biometrics.service.common.ABLogRecorder;
 import com.alibaba.security.biometrics.service.model.ALBiometricsType;
 import com.alibaba.security.biometrics.service.model.params.ALBiometricsParams;
 import com.alibaba.security.biometrics.service.state.ABStateMachine;
-import com.alibaba.security.common.d.C3811h;
+import com.alibaba.security.common.d.h;
 import com.alibaba.security.common.track.model.TrackLog;
 import java.util.HashMap;
 
@@ -27,7 +27,7 @@ public class ALBiometricsService {
     private String algoStartParams() {
         HashMap hashMap = new HashMap();
         hashMap.put("detectType", ALBiometricsType.isDazzle(this.mALBiometricsParams.mBiometricsType) ? "colorful" : "action");
-        return C3811h.a((Object) hashMap);
+        return h.a((Object) hashMap);
     }
 
     private void init(Context context, ALBiometricsParams aLBiometricsParams, ALBiometricsServiceEventListener aLBiometricsServiceEventListener) {

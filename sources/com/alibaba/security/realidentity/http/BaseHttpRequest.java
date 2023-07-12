@@ -2,27 +2,26 @@ package com.alibaba.security.realidentity.http;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import com.alibaba.security.biometrics.jni.ALBiometricsJni;
-import com.alibaba.security.common.d.C3801a;
-import com.alibaba.security.common.d.C3811h;
-import com.alibaba.security.realidentity.a.C3847g;
+import com.alibaba.security.common.d.h;
+import com.alibaba.security.realidentity.a.g;
 import com.alibaba.security.realidentity.bean.ClientInfo;
 import com.alibaba.security.realidentity.http.model.HttpRequest;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
+import com.alibaba.security.realidentity.jsbridge.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
 public class BaseHttpRequest extends HttpRequest {
-    @JSONField(name = AbstractC3893a.f)
+    @JSONField(name = a.f)
     private String clientInfo;
-    @JSONField(name = AbstractC3893a.d)
+    @JSONField(name = a.d)
     private String verifyToken;
 
     public BaseHttpRequest(String str) {
         this.verifyToken = str;
-        String a = C3801a.a(ALBiometricsJni.genVersionTag(C3847g.C3848a.a.c, str));
+        String a = com.alibaba.security.common.d.a.a(ALBiometricsJni.genVersionTag(g.a.a.c, str));
         ClientInfo clientInfo = new ClientInfo();
         clientInfo.setVersionTag(a);
-        this.clientInfo = C3811h.a(clientInfo);
+        this.clientInfo = h.a(clientInfo);
     }
 
     public String getClientInfo() {

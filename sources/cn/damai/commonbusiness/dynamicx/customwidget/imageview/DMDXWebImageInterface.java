@@ -7,5 +7,5 @@ import com.taobao.android.dinamicx.widget.IDXWebImageInterface;
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
 public interface DMDXWebImageInterface extends IDXWebImageInterface {
-    void setImageWithPlaceHolder(ImageView imageView, String str, DXDMImageViewWidgetNode.C0661c c0661c);
+    void setImageWithPlaceHolder(ImageView imageView, String str, DXDMImageViewWidgetNode.c cVar);
 }

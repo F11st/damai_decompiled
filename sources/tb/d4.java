@@ -34,7 +34,7 @@ public final class d4 implements IAgooServiceDelegate {
             if (TextUtils.isEmpty(str3)) {
                 return;
             }
-            new PushSwitcher.C1539a(context).d(PushSwitcher.PushChannel.AGOO).c(str).b(str3).a().d();
+            new PushSwitcher.a(context).d(PushSwitcher.PushChannel.AGOO).c(str).b(str3).a().d();
         } catch (Throwable th) {
             Log.w(this.a, th);
         }

@@ -11,8 +11,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 import kotlin.Pair;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8214m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.k80;
@@ -43,7 +41,7 @@ public final class vr0 {
             for (Object obj : d) {
                 int i2 = i + 1;
                 if (i < 0) {
-                    C8214m.p();
+                    kotlin.collections.m.p();
                 }
                 INSTANCE.b((qr0) obj, l81Var.c().get(i));
                 i = i2;
@@ -66,7 +64,7 @@ public final class vr0 {
             for (Object obj : d) {
                 int i2 = i + 1;
                 if (i < 0) {
-                    C8214m.p();
+                    kotlin.collections.m.p();
                 }
                 INSTANCE.c((qr0) obj, l81Var.c().get(i));
                 i = i2;
@@ -84,7 +82,7 @@ public final class vr0 {
                     int max = Math.max(1, (int) Math.ceil((jSONArray.size() * 1.0f) / c.a(os0Var)));
                     float d = (l81Var.d() * max) + (c.i() * (max - 1));
                     Rect k = qr0Var.k();
-                    return new ld2<>(new k80.C9339c((l81Var.e() - k.left) - k.right), new k80.C9339c(d + k.top + k.bottom));
+                    return new ld2<>(new k80.c((l81Var.e() - k.left) - k.right), new k80.c(d + k.top + k.bottom));
                 }
                 c.m();
                 return null;
@@ -96,8 +94,8 @@ public final class vr0 {
 
     private final l81 e(os0 os0Var, qr0 qr0Var, JSONObject jSONObject, int i) {
         Pair pair;
-        List<Pair<GXTemplateEngine.C3347i, qs0>> c = qr0Var.c();
-        if (c == null || c.isEmpty() || (pair = (Pair) C8212k.R(c)) == null) {
+        List<Pair<GXTemplateEngine.i, qs0>> c = qr0Var.c();
+        if (c == null || c.isEmpty() || (pair = (Pair) kotlin.collections.k.R(c)) == null) {
             return null;
         }
         StringBuilder sb = new StringBuilder();
@@ -106,16 +104,16 @@ public final class vr0 {
         sb.append(jSONObject.hashCode());
         String sb2 = sb.toString();
         ld2<Float> g = g(os0Var, qr0Var);
-        GXTemplateEngine.C3347i c3347i = (GXTemplateEngine.C3347i) pair.getFirst();
+        GXTemplateEngine.i iVar = (GXTemplateEngine.i) pair.getFirst();
         qs0 qs0Var = (qs0) pair.getSecond();
         if (os0Var.g() == null) {
-            os0Var.H(f(os0Var, g, c3347i, qs0Var, jSONObject, sb2));
+            os0Var.H(f(os0Var, g, iVar, qs0Var, jSONObject, sb2));
         }
         return os0Var.g();
     }
 
-    private final l81 f(os0 os0Var, ld2<Float> ld2Var, GXTemplateEngine.C3347i c3347i, qs0 qs0Var, JSONObject jSONObject, String str) {
-        return i(os0Var, c3347i, new GXTemplateEngine.C3343f(ld2Var.b(), ld2Var.a()), new GXTemplateEngine.C3346h(jSONObject), qs0Var, str);
+    private final l81 f(os0 os0Var, ld2<Float> ld2Var, GXTemplateEngine.i iVar, qs0 qs0Var, JSONObject jSONObject, String str) {
+        return i(os0Var, iVar, new GXTemplateEngine.f(ld2Var.b(), ld2Var.a()), new GXTemplateEngine.h(jSONObject), qs0Var, str);
     }
 
     private final ld2<Float> g(os0 os0Var, qr0 qr0Var) {
@@ -145,15 +143,15 @@ public final class vr0 {
         throw new IllegalArgumentException("Want to computeItemViewPort, but config is null");
     }
 
-    private final l81 i(os0 os0Var, GXTemplateEngine.C3347i c3347i, GXTemplateEngine.C3343f c3343f, GXTemplateEngine.C3346h c3346h, qs0 qs0Var, String str) {
-        GXTemplateEngine.C3337a c3337a = GXTemplateEngine.Companion;
-        os0 a = os0.Companion.a(c3347i, c3343f, c3337a.a().h().b(c3347i), qs0Var);
-        if (!GXGlobalCache.Companion.a().e(c3347i)) {
-            c3337a.a().l().e(a);
+    private final l81 i(os0 os0Var, GXTemplateEngine.i iVar, GXTemplateEngine.f fVar, GXTemplateEngine.h hVar, qs0 qs0Var, String str) {
+        GXTemplateEngine.a aVar = GXTemplateEngine.Companion;
+        os0 a = os0.Companion.a(iVar, fVar, aVar.a().h().b(iVar), qs0Var);
+        if (!GXGlobalCache.Companion.a().e(iVar)) {
+            aVar.a().l().e(a);
         }
-        a.R(c3346h);
-        qr0 c = c3337a.a().l().c(a);
-        c3337a.a().l().a(a);
+        a.R(hVar);
+        qr0 c = aVar.a().l().c(a);
+        aVar.a().l().a(a);
         ps0.f(os0Var);
         ps0.k(os0Var, str, c);
         return c.h();
@@ -164,11 +162,11 @@ public final class vr0 {
             fs0 h = qr0Var.o().i().h();
             if (h != null) {
                 if (h.j()) {
-                    return new ld2<>(new k80.C9339c(l81Var.e()), new k80.C9339c(l81Var.d()));
+                    return new ld2<>(new k80.c(l81Var.e()), new k80.c(l81Var.d()));
                 }
                 if (h.k()) {
                     int max = Math.max(1, (int) Math.ceil(jSONArray.size() * 1.0f));
-                    return new ld2<>(new k80.C9339c(l81Var.e()), new k80.C9339c((l81Var.d() * max) + (h.h() * (max - 1))));
+                    return new ld2<>(new k80.c(l81Var.e()), new k80.c((l81Var.d() * max) + (h.h() * (max - 1))));
                 }
                 return null;
             }
@@ -178,13 +176,13 @@ public final class vr0 {
     }
 
     private final l81 q(os0 os0Var, qr0 qr0Var, int i, JSONObject jSONObject) {
-        List<Pair<GXTemplateEngine.C3347i, qs0>> c = qr0Var.c();
+        List<Pair<GXTemplateEngine.i, qs0>> c = qr0Var.c();
         if (c == null || c.isEmpty()) {
             return null;
         }
         ld2<Float> o = o(os0Var, qr0Var);
         if (c.size() == 1) {
-            Pair pair = (Pair) C8212k.R(c);
+            Pair pair = (Pair) kotlin.collections.k.R(c);
             if (pair == null) {
                 return null;
             }
@@ -194,7 +192,7 @@ public final class vr0 {
             sb.append('-');
             sb.append(jSONObject.hashCode());
             String sb2 = sb.toString();
-            t(os0Var, jSONObject, o, (GXTemplateEngine.C3347i) pair.getFirst(), qs0Var, sb2);
+            t(os0Var, jSONObject, o, (GXTemplateEngine.i) pair.getFirst(), qs0Var, sb2);
             return ps0.b(os0Var, sb2);
         }
         StringBuilder sb3 = new StringBuilder();
@@ -206,11 +204,11 @@ public final class vr0 {
         return ps0.b(os0Var, sb4);
     }
 
-    private final l81 r(os0 os0Var, ld2<Float> ld2Var, GXTemplateEngine.C3347i c3347i, qs0 qs0Var, JSONObject jSONObject, String str) {
-        return i(os0Var, c3347i, new GXTemplateEngine.C3343f(ld2Var.b(), ld2Var.a()), new GXTemplateEngine.C3346h(jSONObject), qs0Var, str);
+    private final l81 r(os0 os0Var, ld2<Float> ld2Var, GXTemplateEngine.i iVar, qs0 qs0Var, JSONObject jSONObject, String str) {
+        return i(os0Var, iVar, new GXTemplateEngine.f(ld2Var.b(), ld2Var.a()), new GXTemplateEngine.h(jSONObject), qs0Var, str);
     }
 
-    private final void s(os0 os0Var, qr0 qr0Var, List<Pair<GXTemplateEngine.C3347i, qs0>> list, JSONObject jSONObject, ld2<Float> ld2Var, String str) {
+    private final void s(os0 os0Var, qr0 qr0Var, List<Pair<GXTemplateEngine.i, qs0>> list, JSONObject jSONObject, ld2<Float> ld2Var, String str) {
         Object obj;
         qr0Var.o().C();
         JSONObject h = qr0Var.o().h(jSONObject);
@@ -223,7 +221,7 @@ public final class vr0 {
                     break;
                 }
                 obj = it.next();
-                if (b41.d(((GXTemplateEngine.C3347i) ((Pair) obj).getFirst()).d(), g)) {
+                if (b41.d(((GXTemplateEngine.i) ((Pair) obj).getFirst()).d(), g)) {
                     break;
                 }
             }
@@ -231,14 +229,14 @@ public final class vr0 {
             if (pair == null) {
                 return;
             }
-            INSTANCE.t(os0Var, jSONObject, ld2Var, (GXTemplateEngine.C3347i) pair.getFirst(), (qs0) pair.getSecond(), str);
+            INSTANCE.t(os0Var, jSONObject, ld2Var, (GXTemplateEngine.i) pair.getFirst(), (qs0) pair.getSecond(), str);
         }
     }
 
-    private final void t(os0 os0Var, JSONObject jSONObject, ld2<Float> ld2Var, GXTemplateEngine.C3347i c3347i, qs0 qs0Var, String str) {
+    private final void t(os0 os0Var, JSONObject jSONObject, ld2<Float> ld2Var, GXTemplateEngine.i iVar, qs0 qs0Var, String str) {
         l81 r;
         ps0.e(os0Var);
-        if (ps0.g(os0Var, str) || (r = r(os0Var, ld2Var, c3347i, qs0Var, jSONObject, str)) == null) {
+        if (ps0.g(os0Var, str) || (r = r(os0Var, ld2Var, iVar, qs0Var, jSONObject, str)) == null) {
             return;
         }
         ps0.j(os0Var, str, r);
@@ -266,13 +264,13 @@ public final class vr0 {
 
     private final ld2<k80> w(l81 l81Var) {
         if (l81Var != null) {
-            return new ld2<>(new k80.C9339c(l81Var.e()), new k80.C9339c(l81Var.d()));
+            return new ld2<>(new k80.c(l81Var.e()), new k80.c(l81Var.d()));
         }
         return null;
     }
 
-    private final l81 y(os0 os0Var, ld2<Float> ld2Var, GXTemplateEngine.C3347i c3347i, qs0 qs0Var, JSONObject jSONObject, String str) {
-        return i(os0Var, c3347i, new GXTemplateEngine.C3343f(ld2Var.b(), ld2Var.a()), new GXTemplateEngine.C3346h(jSONObject), qs0Var, str);
+    private final l81 y(os0 os0Var, ld2<Float> ld2Var, GXTemplateEngine.i iVar, qs0 qs0Var, JSONObject jSONObject, String str) {
+        return i(os0Var, iVar, new GXTemplateEngine.f(ld2Var.b(), ld2Var.a()), new GXTemplateEngine.h(jSONObject), qs0Var, str);
     }
 
     @Nullable
@@ -281,11 +279,11 @@ public final class vr0 {
         b41.i(os0Var, "gxTemplateContext");
         b41.i(qr0Var, "gxNode");
         b41.i(jSONArray, "gxContainerData");
-        List<Pair<GXTemplateEngine.C3347i, qs0>> c = qr0Var.c();
-        if (c == null || c.isEmpty() || (pair = (Pair) C8212k.R(c)) == null) {
+        List<Pair<GXTemplateEngine.i, qs0>> c = qr0Var.c();
+        if (c == null || c.isEmpty() || (pair = (Pair) kotlin.collections.k.R(c)) == null) {
             return null;
         }
-        Object R = C8212k.R(jSONArray);
+        Object R = kotlin.collections.k.R(jSONArray);
         JSONObject jSONObject = R instanceof JSONObject ? (JSONObject) R : null;
         if (jSONObject == null) {
             jSONObject = new JSONObject();
@@ -297,10 +295,10 @@ public final class vr0 {
         sb.append(jSONObject2.hashCode());
         String sb2 = sb.toString();
         ld2<Float> z = z(os0Var, qr0Var);
-        GXTemplateEngine.C3347i c3347i = (GXTemplateEngine.C3347i) pair.getFirst();
+        GXTemplateEngine.i iVar = (GXTemplateEngine.i) pair.getFirst();
         qs0 qs0Var = (qs0) pair.getSecond();
         if (os0Var.o() == null) {
-            os0Var.Q(y(os0Var, z, c3347i, qs0Var, jSONObject2, sb2));
+            os0Var.Q(y(os0Var, z, iVar, qs0Var, jSONObject2, sb2));
         }
         return w(os0Var.o());
     }
@@ -317,7 +315,7 @@ public final class vr0 {
         for (Object obj : d) {
             int i2 = i + 1;
             if (i < 0) {
-                C8214m.p();
+                kotlin.collections.m.p();
             }
             INSTANCE.a((qr0) obj, l81Var.c().get(i));
             i = i2;
@@ -330,11 +328,11 @@ public final class vr0 {
         b41.i(os0Var, "gxTemplateContext");
         b41.i(qr0Var, "gxNode");
         b41.i(jSONArray, "gxContainerData");
-        List<Pair<GXTemplateEngine.C3347i, qs0>> c = qr0Var.c();
-        if (c == null || c.isEmpty() || (pair = (Pair) C8212k.R(c)) == null) {
+        List<Pair<GXTemplateEngine.i, qs0>> c = qr0Var.c();
+        if (c == null || c.isEmpty() || (pair = (Pair) kotlin.collections.k.R(c)) == null) {
             return null;
         }
-        Object R = C8212k.R(jSONArray);
+        Object R = kotlin.collections.k.R(jSONArray);
         JSONObject jSONObject = R instanceof JSONObject ? (JSONObject) R : null;
         if (jSONObject == null) {
             jSONObject = new JSONObject();
@@ -346,10 +344,10 @@ public final class vr0 {
         sb.append(jSONObject2.hashCode());
         String sb2 = sb.toString();
         ld2<Float> g = g(os0Var, qr0Var);
-        GXTemplateEngine.C3347i c3347i = (GXTemplateEngine.C3347i) pair.getFirst();
+        GXTemplateEngine.i iVar = (GXTemplateEngine.i) pair.getFirst();
         qs0 qs0Var = (qs0) pair.getSecond();
         if (os0Var.g() == null) {
-            os0Var.H(f(os0Var, g, c3347i, qs0Var, jSONObject2, sb2));
+            os0Var.H(f(os0Var, g, iVar, qs0Var, jSONObject2, sb2));
         }
         return d(os0Var, qr0Var, os0Var.g(), jSONArray);
     }
@@ -377,16 +375,16 @@ public final class vr0 {
     }
 
     @Nullable
-    public final l81 l(@NotNull os0 os0Var, @NotNull ld2<Float> ld2Var, @NotNull GXTemplateEngine.C3347i c3347i, @Nullable qs0 qs0Var, @NotNull JSONObject jSONObject, int i) {
+    public final l81 l(@NotNull os0 os0Var, @NotNull ld2<Float> ld2Var, @NotNull GXTemplateEngine.i iVar, @Nullable qs0 qs0Var, @NotNull JSONObject jSONObject, int i) {
         b41.i(os0Var, "gxTemplateContext");
         b41.i(ld2Var, "itemViewPort");
-        b41.i(c3347i, "gxItemTemplateItem");
+        b41.i(iVar, "gxItemTemplateItem");
         b41.i(jSONObject, "itemData");
         StringBuilder sb = new StringBuilder();
         sb.append(i);
         sb.append('-');
         sb.append(jSONObject.hashCode());
-        return i(os0Var, c3347i, new GXTemplateEngine.C3343f(ld2Var.b(), ld2Var.a()), new GXTemplateEngine.C3346h(jSONObject), qs0Var, sb.toString());
+        return i(os0Var, iVar, new GXTemplateEngine.f(ld2Var.b(), ld2Var.a()), new GXTemplateEngine.h(jSONObject), qs0Var, sb.toString());
     }
 
     @NotNull
@@ -471,7 +469,7 @@ public final class vr0 {
         b41.i(os0Var, "gxTemplateContext");
         b41.i(qr0Var, "gxNode");
         b41.i(jSONArray, "gxContainerData");
-        List<Pair<GXTemplateEngine.C3347i, qs0>> c = qr0Var.c();
+        List<Pair<GXTemplateEngine.i, qs0>> c = qr0Var.c();
         if (c == null || c.isEmpty()) {
             return null;
         }
@@ -479,21 +477,21 @@ public final class vr0 {
         char c2 = '-';
         String str = "null cannot be cast to non-null type com.alibaba.fastjson.JSONObject";
         if (c.size() == 1) {
-            Pair pair = (Pair) C8212k.R(c);
+            Pair pair = (Pair) kotlin.collections.k.R(c);
             if (pair == null) {
                 return null;
             }
-            GXTemplateEngine.C3347i c3347i = (GXTemplateEngine.C3347i) pair.getFirst();
+            GXTemplateEngine.i iVar = (GXTemplateEngine.i) pair.getFirst();
             qs0 qs0Var = (qs0) pair.getSecond();
-            GXGlobalCache.C3417a c3417a = GXGlobalCache.Companion;
-            if (c3417a.a().f(c3347i)) {
-                return p(qr0Var, c3417a.a().d(c3347i), jSONArray);
+            GXGlobalCache.a aVar = GXGlobalCache.Companion;
+            if (aVar.a().f(iVar)) {
+                return p(qr0Var, aVar.a().d(iVar), jSONArray);
             }
             int i = 0;
             for (Object obj : jSONArray) {
                 int i2 = i + 1;
                 if (i < 0) {
-                    C8214m.p();
+                    kotlin.collections.m.p();
                 }
                 Objects.requireNonNull(obj, "null cannot be cast to non-null type com.alibaba.fastjson.JSONObject");
                 JSONObject jSONObject = (JSONObject) obj;
@@ -501,14 +499,14 @@ public final class vr0 {
                 sb.append(i);
                 sb.append('-');
                 sb.append(jSONObject.hashCode());
-                INSTANCE.t(os0Var, jSONObject, u, c3347i, qs0Var, sb.toString());
+                INSTANCE.t(os0Var, jSONObject, u, iVar, qs0Var, sb.toString());
                 i = i2;
             }
             l81 c3 = ps0.c(os0Var);
             l81 d = ps0.d(os0Var);
             if (c3 != null && d != null) {
                 if ((c3.d() == d.d() ? 1 : 0) != 0) {
-                    GXGlobalCache.Companion.a().h(c3347i, c3);
+                    GXGlobalCache.Companion.a().h(iVar, c3);
                 }
             }
             return p(qr0Var, c3, jSONArray);
@@ -516,7 +514,7 @@ public final class vr0 {
         for (Object obj2 : jSONArray) {
             int i3 = r3 + 1;
             if (r3 < 0) {
-                C8214m.p();
+                kotlin.collections.m.p();
             }
             Objects.requireNonNull(obj2, str);
             JSONObject jSONObject2 = (JSONObject) obj2;
@@ -539,8 +537,8 @@ public final class vr0 {
         b41.i(qr0Var, "gxNode");
         b41.i(ld2Var, "itemViewPort");
         b41.i(jSONObject, "itemData");
-        List<Pair<GXTemplateEngine.C3347i, qs0>> c = qr0Var.c();
-        if (c == null || c.isEmpty() || (pair = (Pair) C8212k.R(c)) == null) {
+        List<Pair<GXTemplateEngine.i, qs0>> c = qr0Var.c();
+        if (c == null || c.isEmpty() || (pair = (Pair) kotlin.collections.k.R(c)) == null) {
             return null;
         }
         StringBuilder sb = new StringBuilder();
@@ -548,10 +546,10 @@ public final class vr0 {
         sb.append('-');
         sb.append(jSONObject.hashCode());
         String sb2 = sb.toString();
-        GXTemplateEngine.C3347i c3347i = (GXTemplateEngine.C3347i) pair.getFirst();
+        GXTemplateEngine.i iVar = (GXTemplateEngine.i) pair.getFirst();
         qs0 qs0Var = (qs0) pair.getSecond();
         if (os0Var.o() == null) {
-            os0Var.Q(y(os0Var, ld2Var, c3347i, qs0Var, jSONObject, sb2));
+            os0Var.Q(y(os0Var, ld2Var, iVar, qs0Var, jSONObject, sb2));
         }
         return os0Var.o();
     }
@@ -562,10 +560,10 @@ public final class vr0 {
         b41.i(qr0Var, "gxNode");
         ld2<k80> V = qr0Var.o().b().a().V();
         k80 b = V == null ? null : V.b();
-        if (b instanceof k80.C9339c) {
+        if (b instanceof k80.c) {
             Float b2 = os0Var.n().b();
             if (b2 != null) {
-                return new ld2<>(Float.valueOf(b2.floatValue() * ((k80.C9339c) b).b()), null);
+                return new ld2<>(Float.valueOf(b2.floatValue() * ((k80.c) b).b()), null);
             }
         } else {
             Float b3 = os0Var.n().b();

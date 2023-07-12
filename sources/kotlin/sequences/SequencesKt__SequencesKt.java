@@ -8,24 +8,23 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tb.C9268in;
 import tb.b41;
+import tb.in;
 import tb.up2;
 import tb.zj0;
 
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public class SequencesKt__SequencesKt extends C8579f {
+public class SequencesKt__SequencesKt extends f {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.sequences.SequencesKt__SequencesKt$a */
     /* loaded from: classes3.dex */
-    public static final class C8570a<T> implements Sequence<T> {
+    public static final class a<T> implements Sequence<T> {
         final /* synthetic */ Iterator a;
 
-        public C8570a(Iterator it) {
+        public a(Iterator it) {
             this.a = it;
         }
 
@@ -39,19 +38,19 @@ public class SequencesKt__SequencesKt extends C8579f {
     @NotNull
     public static <T> Sequence<T> c(@NotNull Iterator<? extends T> it) {
         b41.i(it, "<this>");
-        return d(new C8570a(it));
+        return d(new a(it));
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     @NotNull
     public static final <T> Sequence<T> d(@NotNull Sequence<? extends T> sequence) {
         b41.i(sequence, "<this>");
-        return sequence instanceof C9268in ? sequence : new C9268in(sequence);
+        return sequence instanceof in ? sequence : new in(sequence);
     }
 
     @NotNull
     public static <T> Sequence<T> e() {
-        return C8572a.INSTANCE;
+        return kotlin.sequences.a.INSTANCE;
     }
 
     @NotNull
@@ -88,9 +87,9 @@ public class SequencesKt__SequencesKt extends C8579f {
     public static <T> Sequence<T> h(@Nullable final T t, @NotNull Function1<? super T, ? extends T> function1) {
         b41.i(function1, "nextFunction");
         if (t == null) {
-            return C8572a.INSTANCE;
+            return kotlin.sequences.a.INSTANCE;
         }
-        return new C8573b(new Function0<T>() { // from class: kotlin.sequences.SequencesKt__SequencesKt$generateSequence$2
+        return new b(new Function0<T>() { // from class: kotlin.sequences.SequencesKt__SequencesKt$generateSequence$2
             /* JADX INFO: Access modifiers changed from: package-private */
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             {
@@ -108,7 +107,7 @@ public class SequencesKt__SequencesKt extends C8579f {
     @NotNull
     public static <T> Sequence<T> i(@NotNull final Function0<? extends T> function0) {
         b41.i(function0, "nextFunction");
-        return d(new C8573b(function0, new Function1<T, T>() { // from class: kotlin.sequences.SequencesKt__SequencesKt$generateSequence$1
+        return d(new b(function0, new Function1<T, T>() { // from class: kotlin.sequences.SequencesKt__SequencesKt$generateSequence$1
             /* JADX INFO: Access modifiers changed from: package-private */
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             /* JADX WARN: Multi-variable type inference failed */
@@ -129,7 +128,7 @@ public class SequencesKt__SequencesKt extends C8579f {
     public static <T> Sequence<T> j(@NotNull Function0<? extends T> function0, @NotNull Function1<? super T, ? extends T> function1) {
         b41.i(function0, "seedFunction");
         b41.i(function1, "nextFunction");
-        return new C8573b(function0, function1);
+        return new b(function0, function1);
     }
 
     @NotNull

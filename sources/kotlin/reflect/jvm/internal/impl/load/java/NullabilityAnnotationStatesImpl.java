@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.load.java;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import java.util.Map;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.name.C8433a;
+import kotlin.reflect.jvm.internal.impl.name.a;
 import kotlin.reflect.jvm.internal.impl.storage.LockBasedStorageManager;
 import kotlin.reflect.jvm.internal.impl.storage.MemoizedFunctionToNullable;
 import org.jetbrains.annotations.NotNull;
@@ -41,7 +41,7 @@ public final class NullabilityAnnotationStatesImpl<T> implements NullabilityAnno
             @Nullable
             public final T invoke(hp0 hp0Var) {
                 b41.h(hp0Var, AdvanceSetting.NETWORK_TYPE);
-                return (T) C8433a.a(hp0Var, this.this$0.a());
+                return (T) a.a(hp0Var, this.this$0.a());
             }
         });
         b41.h(createMemoizedFunctionWithNullableValues, "storageManager.createMem…cificFqname(states)\n    }");

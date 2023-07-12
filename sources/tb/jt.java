@@ -3,7 +3,6 @@ package tb;
 import android.text.TextUtils;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.taobao.android.dinamicx.AbstractC6362a;
 import com.taobao.android.dinamicx.DXRootView;
 import com.taobao.android.dinamicx.DXRuntimeContext;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
@@ -11,7 +10,7 @@ import java.util.HashMap;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class jt extends AbstractC6362a {
+public class jt extends com.taobao.android.dinamicx.a {
     public static final long DX_EVENT_BINDINGX = 1454898448112604731L;
 
     void a(JSONObject jSONObject, Object[] objArr) {
@@ -54,7 +53,7 @@ public class jt extends AbstractC6362a {
         }
     }
 
-    @Override // com.taobao.android.dinamicx.AbstractC6362a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
+    @Override // com.taobao.android.dinamicx.a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
     public String getDxFunctionName() {
         return "bindingX";
     }

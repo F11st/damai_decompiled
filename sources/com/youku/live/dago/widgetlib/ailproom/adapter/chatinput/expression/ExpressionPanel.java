@@ -42,15 +42,15 @@ public class ExpressionPanel extends FrameLayout {
             ipChange.ipc$dispatch("1591482031", new Object[]{this, context});
             return;
         }
-        View.inflate(getContext(), R.C7942layout.dago_pgc_expression, this);
+        View.inflate(getContext(), R.layout.dago_pgc_expression, this);
         this.mExpresstionViewpager = (ViewPager) findViewById(R.id.lf_expresstionViewpager);
         this.mExpressionContainer = (LinearLayout) findViewById(R.id.lf_expressionContainer);
         this.mExpressionIndicatorFirst = (ImageView) findViewById(R.id.expression_page_indicator_first);
         this.mExpressionIndicatorSecond = (ImageView) findViewById(R.id.expression_page_indicator_second);
         this.mExpressionIndicatorThird = (ImageView) findViewById(R.id.expression_page_indicator_third);
-        this.mExpressionIndicatorFirst.setBackgroundResource(R.C7941drawable.dago_pgc_indicator_black);
+        this.mExpressionIndicatorFirst.setBackgroundResource(R.drawable.dago_pgc_indicator_black);
         ImageView imageView = this.mExpressionIndicatorSecond;
-        int i = R.C7941drawable.dago_pgc_indicator_write;
+        int i = R.drawable.dago_pgc_indicator_write;
         imageView.setBackgroundResource(i);
         this.mExpressionIndicatorThird.setBackgroundResource(i);
         this.mExpressionIndicatorThird.setVisibility(ExpressionDict.isNewExpression() ? 0 : 8);
@@ -89,23 +89,23 @@ public class ExpressionPanel extends FrameLayout {
                 if (AndroidInstantRuntime.support(ipChange2, "-401544079")) {
                     ipChange2.ipc$dispatch("-401544079", new Object[]{this, Integer.valueOf(i)});
                 } else if (i == 0) {
-                    ExpressionPanel.this.mExpressionIndicatorFirst.setBackgroundResource(R.C7941drawable.dago_pgc_indicator_black);
+                    ExpressionPanel.this.mExpressionIndicatorFirst.setBackgroundResource(R.drawable.dago_pgc_indicator_black);
                     ImageView imageView = ExpressionPanel.this.mExpressionIndicatorSecond;
-                    int i2 = R.C7941drawable.dago_pgc_indicator_write;
+                    int i2 = R.drawable.dago_pgc_indicator_write;
                     imageView.setBackgroundResource(i2);
                     ExpressionPanel.this.mExpressionIndicatorThird.setBackgroundResource(i2);
                 } else if (1 == i) {
                     ImageView imageView2 = ExpressionPanel.this.mExpressionIndicatorFirst;
-                    int i3 = R.C7941drawable.dago_pgc_indicator_write;
+                    int i3 = R.drawable.dago_pgc_indicator_write;
                     imageView2.setBackgroundResource(i3);
-                    ExpressionPanel.this.mExpressionIndicatorSecond.setBackgroundResource(R.C7941drawable.dago_pgc_indicator_black);
+                    ExpressionPanel.this.mExpressionIndicatorSecond.setBackgroundResource(R.drawable.dago_pgc_indicator_black);
                     ExpressionPanel.this.mExpressionIndicatorThird.setBackgroundResource(i3);
                 } else {
                     ImageView imageView3 = ExpressionPanel.this.mExpressionIndicatorFirst;
-                    int i4 = R.C7941drawable.dago_pgc_indicator_write;
+                    int i4 = R.drawable.dago_pgc_indicator_write;
                     imageView3.setBackgroundResource(i4);
                     ExpressionPanel.this.mExpressionIndicatorSecond.setBackgroundResource(i4);
-                    ExpressionPanel.this.mExpressionIndicatorThird.setBackgroundResource(R.C7941drawable.dago_pgc_indicator_black);
+                    ExpressionPanel.this.mExpressionIndicatorThird.setBackgroundResource(R.drawable.dago_pgc_indicator_black);
                 }
             }
         });
@@ -115,7 +115,7 @@ public class ExpressionPanel extends FrameLayout {
             maxIcon++;
         }
         for (int i = 0; i < maxIcon; i++) {
-            PagerExpressionNormal pagerExpressionNormal = (PagerExpressionNormal) View.inflate(context, R.C7942layout.dago_pgc_pager_expression, null);
+            PagerExpressionNormal pagerExpressionNormal = (PagerExpressionNormal) View.inflate(context, R.layout.dago_pgc_pager_expression, null);
             if (i == maxIcon - 1) {
                 pagerExpressionNormal.init(((i * 3) * 8) - i, ExpressionDict.getMaxIcon(), this.mExpressionListener);
             } else if (i == 0) {

@@ -37,9 +37,8 @@ public final class UnsignedLongs {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.primitives.UnsignedLongs$a */
     /* loaded from: classes10.dex */
-    private static final class C5255a {
+    private static final class a {
         static final long[] a = new long[37];
         static final int[] b = new int[37];
         static final int[] c = new int[37];
@@ -90,12 +89,12 @@ public final class UnsignedLongs {
         du1.p(str);
         if (str.length() != 0) {
             if (i >= 2 && i <= 36) {
-                int i2 = C5255a.c[i] - 1;
+                int i2 = a.c[i] - 1;
                 long j = 0;
                 for (int i3 = 0; i3 < str.length(); i3++) {
                     int digit = Character.digit(str.charAt(i3), i);
                     if (digit != -1) {
-                        if (i3 > i2 && C5255a.a(j, digit, i)) {
+                        if (i3 > i2 && a.a(j, digit, i)) {
                             throw new NumberFormatException("Too large for unsigned long: " + str);
                         }
                         j = (j * i) + digit;

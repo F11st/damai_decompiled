@@ -10,10 +10,8 @@ import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.RequiresApi;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.search.bean.BaccountInfo;
-import cn.damai.commonbusiness.util.AbstractC0950c;
 import cn.damai.commonbusiness.util.Bitmap12ColorHex;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -34,15 +32,14 @@ public class s72 {
     private View g;
     private ValueAnimator h;
     private int i = R$drawable.bg_b_card_purple_default_3;
-    private View.OnClickListener j = new View$OnClickListenerC9682e(this);
+    private View.OnClickListener j = new e(this);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.s72$a */
     /* loaded from: classes6.dex */
-    public class View$OnAttachStateChangeListenerC9677a implements View.OnAttachStateChangeListener {
+    public class a implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC9677a() {
+        a() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -67,12 +64,11 @@ public class s72 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.s72$b */
     /* loaded from: classes6.dex */
-    public class C9678b implements ValueAnimator.AnimatorUpdateListener {
+    public class b implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9678b() {
+        b() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -104,19 +100,18 @@ public class s72 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.s72$c */
     /* loaded from: classes6.dex */
-    public class C9679c implements DMImageCreator.DMImageFailListener {
+    public class c implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9679c() {
+        c() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-451095436")) {
-                ipChange.ipc$dispatch("-451095436", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-451095436", new Object[]{this, dVar});
             } else {
                 s72.this.d.setImageResource(s72.this.i);
             }
@@ -124,22 +119,20 @@ public class s72 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.s72$d */
     /* loaded from: classes6.dex */
-    public class C9680d implements DMImageCreator.DMImageSuccListener {
+    public class d implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
         /* compiled from: Taobao */
-        /* renamed from: tb.s72$d$a */
         /* loaded from: classes6.dex */
-        public class C9681a extends AbstractC0950c {
+        public class a extends cn.damai.commonbusiness.util.c {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C9681a() {
+            a() {
             }
 
-            @Override // cn.damai.commonbusiness.util.AbstractC0950c
+            @Override // cn.damai.commonbusiness.util.c
             public void a(int i) {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "1669212296")) {
@@ -150,36 +143,35 @@ public class s72 {
             }
         }
 
-        C9680d(String str) {
+        d(String str) {
             this.a = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1369743113")) {
-                ipChange.ipc$dispatch("1369743113", new Object[]{this, c0502e});
-            } else if (c0502e != null) {
-                if (c0502e.a != null) {
-                    s72.this.c.setImageDrawable(c0502e.a);
+                ipChange.ipc$dispatch("1369743113", new Object[]{this, eVar});
+            } else if (eVar != null) {
+                if (eVar.a != null) {
+                    s72.this.c.setImageDrawable(eVar.a);
                 }
-                Bitmap bitmap = c0502e.b;
+                Bitmap bitmap = eVar.b;
                 if (bitmap == null || bitmap.isRecycled()) {
                     s72.this.d.setImageResource(s72.this.i);
                 } else {
-                    Bitmap12ColorHex.e().f(bitmap, this.a, new C9681a());
+                    Bitmap12ColorHex.e().f(bitmap, this.a, new a());
                 }
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.s72$e */
     /* loaded from: classes6.dex */
-    public class View$OnClickListenerC9682e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9682e(s72 s72Var) {
+        e(s72 s72Var) {
         }
 
         @Override // android.view.View.OnClickListener
@@ -212,7 +204,7 @@ public class s72 {
         if (isShown) {
             h(true);
         }
-        this.g.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC9677a());
+        this.g.addOnAttachStateChangeListener(new a());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -235,7 +227,7 @@ public class s72 {
             this.h.setInterpolator(new LinearInterpolator());
             this.h.setRepeatMode(1);
             this.h.setRepeatCount(-1);
-            this.h.addUpdateListener(new C9678b());
+            this.h.addUpdateListener(new b());
             this.h.start();
         }
     }
@@ -253,16 +245,16 @@ public class s72 {
         this.b.setText(str2);
         this.b.setTextSize(1, str2.length() <= 8 ? 22 : 18);
         this.a.setText(SearchHelper.d(baccountInfo));
-        C9826vr c9826vr = null;
+        vr vrVar = null;
         if (equals) {
             str = baccountInfo.backgroundPic;
         } else {
             str = !equals2 ? baccountInfo.headPic : null;
         }
-        int a = m62.a(mu0.a(), 112.0f);
+        int a2 = m62.a(mu0.a(), 112.0f);
         Object tag = this.c.getTag();
-        if (tag instanceof C9826vr) {
-            ((C9826vr) tag).cancel();
+        if (tag instanceof vr) {
+            ((vr) tag).cancel();
         }
         if (TextUtils.isEmpty(str)) {
             this.d.setImageResource(this.i);
@@ -270,9 +262,9 @@ public class s72 {
         } else {
             this.c.setVisibility(0);
             this.c.setImageDrawable(null);
-            c9826vr = C0504a.b().f(str, a, a).n(new C9680d(str)).e(new C9679c()).f();
+            vrVar = cn.damai.common.image.a.b().f(str, a2, a2).n(new d(str)).e(new c()).f();
         }
-        this.c.setTag(c9826vr);
+        this.c.setTag(vrVar);
         this.d.setTag(baccountInfo);
         this.d.setOnClickListener(this.j);
     }

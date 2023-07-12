@@ -6,7 +6,7 @@ import com.alibaba.poplayer.trigger.BaseConfigItem;
 /* loaded from: classes8.dex */
 public class PageConfigItem extends BaseConfigItem {
     public static String LOG = "PageConfigItem";
-    public BaseConfigItem.C3677a pageInfo;
+    public BaseConfigItem.a pageInfo;
 
     @Override // com.alibaba.poplayer.trigger.BaseConfigItem
     public String toString() {

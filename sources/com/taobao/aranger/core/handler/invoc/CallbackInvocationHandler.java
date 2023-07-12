@@ -6,10 +6,9 @@ import com.taobao.aranger.annotation.method.oneway;
 import com.taobao.aranger.constant.Constants;
 import com.taobao.aranger.core.entity.Callback;
 import com.taobao.aranger.core.entity.Reply;
-import com.taobao.aranger.core.ipc.channel.AbstractC6692a;
+import com.taobao.aranger.core.ipc.channel.a;
 import com.taobao.aranger.core.wrapper.MethodWrapper;
 import com.taobao.aranger.exception.IPCException;
-import com.taobao.aranger.utils.C6698a;
 import com.taobao.aranger.utils.TypeUtils;
 import java.lang.reflect.Method;
 import tb.qh;
@@ -19,7 +18,7 @@ import tb.qh;
 public class CallbackInvocationHandler extends IPCInvocationHandler {
     private final String b;
     private final int c;
-    private final AbstractC6692a d;
+    private final a d;
 
     public CallbackInvocationHandler(IBinder iBinder, String str, int i) {
         this.b = str;
@@ -29,7 +28,7 @@ public class CallbackInvocationHandler extends IPCInvocationHandler {
 
     @Override // com.taobao.aranger.core.handler.invoc.IPCInvocationHandler
     public Reply a(Method method, Object[] objArr) throws IPCException {
-        return this.d.c(Callback.obtain().setParameterWrappers(C6698a.b(method, objArr)).setMethodWrapper(MethodWrapper.obtain().setMethodName(method.getName()).setReturnType(TypeUtils.getClassId(method.getReturnType()))).setKey(this.b).setVoid(Constants.VOID.equals(method.getReturnType().getName())).setOneWay(method.getAnnotation(oneway.class) != null));
+        return this.d.c(Callback.obtain().setParameterWrappers(com.taobao.aranger.utils.a.b(method, objArr)).setMethodWrapper(MethodWrapper.obtain().setMethodName(method.getName()).setReturnType(TypeUtils.getClassId(method.getReturnType()))).setKey(this.b).setVoid(Constants.VOID.equals(method.getReturnType().getName())).setOneWay(method.getAnnotation(oneway.class) != null));
     }
 
     public boolean equals(Object obj) {

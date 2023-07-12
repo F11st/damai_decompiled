@@ -9,5 +9,5 @@ public interface ITracingAdapter {
 
     void enable();
 
-    void submitTracingEvent(wz2.C9890a c9890a);
+    void submitTracingEvent(wz2.a aVar);
 }

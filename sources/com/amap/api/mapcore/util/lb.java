@@ -61,10 +61,9 @@ public final class lb {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     @SuppressLint({"NewApi"})
-    /* renamed from: com.amap.api.mapcore.util.lb$a */
     /* loaded from: classes10.dex */
-    public class C4612a extends TelephonyManager.CellInfoCallback {
-        C4612a() {
+    public class a extends TelephonyManager.CellInfoCallback {
+        a() {
         }
 
         @Override // android.telephony.TelephonyManager.CellInfoCallback
@@ -83,10 +82,9 @@ public final class lb {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.lb$b */
     /* loaded from: classes10.dex */
-    public class C4613b extends PhoneStateListener {
-        C4613b() {
+    public class b extends PhoneStateListener {
+        b() {
         }
 
         @Override // android.telephony.PhoneStateListener
@@ -177,8 +175,8 @@ public final class lb {
             return null;
         }
         try {
-            Object a = ka.a(obj, str, objArr);
-            cellLocation = a != null ? (CellLocation) a : null;
+            Object a2 = ka.a(obj, str, objArr);
+            cellLocation = a2 != null ? (CellLocation) a2 : null;
         } catch (Throwable unused) {
         }
         if (b(cellLocation)) {
@@ -278,33 +276,33 @@ public final class lb {
             CellIdentityCdma cellIdentity = cellInfoCdma.getCellIdentity();
             if (cellIdentity.getSystemId() > 0 && cellIdentity.getNetworkId() >= 0 && cellIdentity.getBasestationId() >= 0) {
                 CellIdentityCdma cellIdentity2 = cellInfoCdma.getCellIdentity();
-                String[] a = kc.a(this.d);
+                String[] a2 = kc.a(this.d);
                 try {
-                    i = Integer.parseInt(a[0]);
+                    i = Integer.parseInt(a2[0]);
                     try {
-                        i3 = Integer.parseInt(a[1]);
+                        i3 = Integer.parseInt(a2[1]);
                         i2 = i;
                     } catch (Throwable unused) {
                         i2 = i;
                         i3 = 0;
-                        la a2 = a(2, z, i2, i3, 0, 0, cellInfoCdma.getCellSignalStrength().getCdmaDbm());
-                        a2.g = cellIdentity2.getSystemId();
-                        a2.h = cellIdentity2.getNetworkId();
-                        a2.i = cellIdentity2.getBasestationId();
-                        a2.e = cellIdentity2.getLatitude();
-                        a2.f = cellIdentity2.getLongitude();
-                        return a2;
+                        la a3 = a(2, z, i2, i3, 0, 0, cellInfoCdma.getCellSignalStrength().getCdmaDbm());
+                        a3.g = cellIdentity2.getSystemId();
+                        a3.h = cellIdentity2.getNetworkId();
+                        a3.i = cellIdentity2.getBasestationId();
+                        a3.e = cellIdentity2.getLatitude();
+                        a3.f = cellIdentity2.getLongitude();
+                        return a3;
                     }
                 } catch (Throwable unused2) {
                     i = 0;
                 }
-                la a22 = a(2, z, i2, i3, 0, 0, cellInfoCdma.getCellSignalStrength().getCdmaDbm());
-                a22.g = cellIdentity2.getSystemId();
-                a22.h = cellIdentity2.getNetworkId();
-                a22.i = cellIdentity2.getBasestationId();
-                a22.e = cellIdentity2.getLatitude();
-                a22.f = cellIdentity2.getLongitude();
-                return a22;
+                la a32 = a(2, z, i2, i3, 0, 0, cellInfoCdma.getCellSignalStrength().getCdmaDbm());
+                a32.g = cellIdentity2.getSystemId();
+                a32.h = cellIdentity2.getNetworkId();
+                a32.i = cellIdentity2.getBasestationId();
+                a32.e = cellIdentity2.getLatitude();
+                a32.f = cellIdentity2.getLongitude();
+                return a32;
             }
         }
         return null;
@@ -325,9 +323,9 @@ public final class lb {
         if (cellInfoLte != null && cellInfoLte.getCellIdentity() != null) {
             CellIdentityLte cellIdentity = cellInfoLte.getCellIdentity();
             if (c(cellIdentity.getTac()) && d(cellIdentity.getCi())) {
-                la a = a(3, z, cellIdentity.getMcc(), cellIdentity.getMnc(), cellIdentity.getTac(), cellIdentity.getCi(), cellInfoLte.getCellSignalStrength().getDbm());
-                a.o = cellIdentity.getPci();
-                return a;
+                la a2 = a(3, z, cellIdentity.getMcc(), cellIdentity.getMnc(), cellIdentity.getTac(), cellIdentity.getCi(), cellInfoLte.getCellSignalStrength().getDbm());
+                a2.o = cellIdentity.getPci();
+                return a2;
             }
         }
         return null;
@@ -337,9 +335,9 @@ public final class lb {
         if (cellInfoWcdma != null && cellInfoWcdma.getCellIdentity() != null) {
             CellIdentityWcdma cellIdentity = cellInfoWcdma.getCellIdentity();
             if (c(cellIdentity.getLac()) && d(cellIdentity.getCid())) {
-                la a = a(4, z, cellIdentity.getMcc(), cellIdentity.getMnc(), cellIdentity.getLac(), cellIdentity.getCid(), cellInfoWcdma.getCellSignalStrength().getDbm());
-                a.o = cellIdentity.getPsc();
-                return a;
+                la a2 = a(4, z, cellIdentity.getMcc(), cellIdentity.getMnc(), cellIdentity.getLac(), cellIdentity.getCid(), cellInfoWcdma.getCellSignalStrength().getDbm());
+                a2.o = cellIdentity.getPsc();
+                return a2;
             }
         }
         return null;
@@ -372,7 +370,7 @@ public final class lb {
     }
 
     private synchronized void a(CellLocation cellLocation, String[] strArr, boolean z) {
-        la a;
+        la a2;
         if (cellLocation != null) {
             if (this.d != null) {
                 this.b.clear();
@@ -383,8 +381,8 @@ public final class lb {
                         List<NeighboringCellInfo> list = (List) ka.a(this.d, "getNeighboringCellInfo", new Object[0]);
                         if (list != null && !list.isEmpty()) {
                             for (NeighboringCellInfo neighboringCellInfo : list) {
-                                if (neighboringCellInfo != null && a(neighboringCellInfo.getLac(), neighboringCellInfo.getCid()) && (a = a(neighboringCellInfo, strArr)) != null && !this.b.contains(a)) {
-                                    this.b.add(a);
+                                if (neighboringCellInfo != null && a(neighboringCellInfo.getLac(), neighboringCellInfo.getCid()) && (a2 = a(neighboringCellInfo, strArr)) != null && !this.b.contains(a2)) {
+                                    this.b.add(a2);
                                 }
                             }
                         }
@@ -528,11 +526,11 @@ public final class lb {
     }
 
     private boolean b(CellLocation cellLocation) {
-        boolean a = a(cellLocation);
-        if (!a) {
+        boolean a2 = a(cellLocation);
+        if (!a2) {
             this.a = 0;
         }
-        return a;
+        return a2;
     }
 
     private int c(CellLocation cellLocation) {
@@ -565,7 +563,7 @@ public final class lb {
     }
 
     private void k() {
-        Object a;
+        Object a2;
         TelephonyManager telephonyManager = this.d;
         if (telephonyManager == null) {
             return;
@@ -583,11 +581,11 @@ public final class lb {
             int w = w();
             this.r = w;
             if (w != 1) {
-                a = kc.a(w != 2 ? this.l : this.l, "phone2");
+                a2 = kc.a(w != 2 ? this.l : this.l, "phone2");
             } else {
-                a = kc.a(this.l, "phone_msim");
+                a2 = kc.a(this.l, "phone_msim");
             }
-            this.q = a;
+            this.q = a2;
         } catch (Throwable unused) {
         }
         hd.d().submit(new Runnable() { // from class: com.amap.api.mapcore.util.lb.1
@@ -605,7 +603,7 @@ public final class lb {
     /* JADX INFO: Access modifiers changed from: private */
     public void l() {
         int i;
-        this.h = new C4613b();
+        this.h = new b();
         try {
             i = ka.b("android.telephony.PhoneStateListener", "LISTEN_SIGNAL_STRENGTHS");
         } catch (Throwable unused) {
@@ -669,7 +667,7 @@ public final class lb {
         if (!this.j && this.d != null) {
             if (Build.VERSION.SDK_INT >= 29 && this.l.getApplicationInfo().targetSdkVersion >= 29) {
                 if (this.t == null) {
-                    this.t = new C4612a();
+                    this.t = new a();
                 }
                 this.d.requestCellInfoUpdate(hd.d(), this.t);
             }
@@ -708,14 +706,14 @@ public final class lb {
 
     /* JADX INFO: Access modifiers changed from: private */
     public synchronized void r() {
-        String[] a = kc.a(this.d);
+        String[] a2 = kc.a(this.d);
         int c = c(this.f);
         if (c == 1) {
-            a(this.f, a, false);
+            a(this.f, a2, false);
             return;
         }
         if (c == 2) {
-            b(this.f, a);
+            b(this.f, a2);
         }
     }
 
@@ -740,8 +738,8 @@ public final class lb {
         if (b(m)) {
             return m;
         }
-        CellLocation a = a(telephonyManager, "getCellLocationExt", 1);
-        return a != null ? a : a(telephonyManager, "getCellLocationGemini", 1);
+        CellLocation a2 = a(telephonyManager, "getCellLocationExt", 1);
+        return a2 != null ? a2 : a(telephonyManager, "getCellLocationGemini", 1);
     }
 
     private CellLocation t() {
@@ -757,17 +755,17 @@ public final class lb {
             Class<?> u = u();
             if (u.isInstance(obj)) {
                 Object cast = u.cast(obj);
-                CellLocation a = a(cast, "getCellLocation", new Object[0]);
-                if (a != null) {
-                    return a;
-                }
-                CellLocation a2 = a(cast, "getCellLocation", 1);
+                CellLocation a2 = a(cast, "getCellLocation", new Object[0]);
                 if (a2 != null) {
                     return a2;
                 }
-                CellLocation a3 = a(cast, "getCellLocationGemini", 1);
+                CellLocation a3 = a(cast, "getCellLocation", 1);
                 if (a3 != null) {
                     return a3;
+                }
+                CellLocation a4 = a(cast, "getCellLocationGemini", 1);
+                if (a4 != null) {
+                    return a4;
                 }
                 cellLocation = a(cast, "getAllCellInfo", 1);
                 if (cellLocation != null) {

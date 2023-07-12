@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -12,16 +12,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import kotlin.Pair;
-import kotlin.collections.C8205f0;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8220r;
-import kotlin.collections.C8225w;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.f0;
+import kotlin.collections.k;
+import kotlin.collections.m;
+import kotlin.collections.n;
+import kotlin.collections.r;
+import kotlin.collections.w;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
+import kotlin.reflect.jvm.internal.impl.builtins.b;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -133,7 +133,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
     public final Collection<SimpleFunctionDescriptor> A0(ni1 ni1Var) {
         int q;
         Collection<JavaMethod> findMethodsByName = r().invoke().findMethodsByName(ni1Var);
-        q = C8215n.q(findMethodsByName, 10);
+        q = n.q(findMethodsByName, 10);
         ArrayList arrayList = new ArrayList(q);
         for (JavaMethod javaMethod : findMethodsByName) {
             arrayList.add(B(javaMethod));
@@ -200,7 +200,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
             return;
         }
         m0 = CollectionsKt___CollectionsKt.m0(collection, d);
-        q = C8215n.q(d, 10);
+        q = n.q(d, 10);
         ArrayList arrayList = new ArrayList(q);
         for (SimpleFunctionDescriptor simpleFunctionDescriptor : d) {
             SimpleFunctionDescriptor simpleFunctionDescriptor2 = (SimpleFunctionDescriptor) SpecialBuiltinMembers.e(simpleFunctionDescriptor);
@@ -238,7 +238,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
     }
 
     private final void R(ni1 ni1Var, Collection<PropertyDescriptor> collection) {
-        JavaMethod javaMethod = (JavaMethod) C8212k.r0(r().invoke().findMethodsByName(ni1Var));
+        JavaMethod javaMethod = (JavaMethod) k.r0(r().invoke().findMethodsByName(ni1Var));
         if (javaMethod == null) {
             return;
         }
@@ -272,7 +272,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         List list = (List) pair2.component1();
         List<JavaMethod> list2 = (List) pair2.component2();
         list.size();
-        JavaMethod javaMethod = (JavaMethod) C8212k.R(list);
+        JavaMethod javaMethod = (JavaMethod) k.R(list);
         if (javaMethod != null) {
             JavaType returnType = javaMethod.getReturnType();
             if (returnType instanceof JavaArrayType) {
@@ -377,7 +377,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         FunctionDescriptor.CopyBuilder<? extends SimpleFunctionDescriptor> newCopyBuilder = simpleFunctionDescriptor.newCopyBuilder();
         List<ValueParameterDescriptor> valueParameters = functionDescriptor.getValueParameters();
         b41.h(valueParameters, "overridden.valueParameters");
-        q = C8215n.q(valueParameters, 10);
+        q = n.q(valueParameters, 10);
         ArrayList arrayList = new ArrayList(q);
         for (ValueParameterDescriptor valueParameterDescriptor : valueParameters) {
             z71 type = valueParameterDescriptor.getType();
@@ -412,7 +412,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
             h51 h51Var = new h51(v(), m0, simpleFunctionDescriptor, propertyDescriptor);
             z71 returnType = m0.getReturnType();
             b41.f(returnType);
-            g = C8214m.g();
+            g = m.g();
             h51Var.t(returnType, g, s(), null);
             cx1 h = x60.h(h51Var, m0.getAnnotations(), false, false, false, m0.getSource());
             h.h(m0);
@@ -421,7 +421,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
             if (simpleFunctionDescriptor != null) {
                 List<ValueParameterDescriptor> valueParameters = simpleFunctionDescriptor.getValueParameters();
                 b41.h(valueParameters, "setterMethod.valueParameters");
-                ValueParameterDescriptor valueParameterDescriptor = (ValueParameterDescriptor) C8212k.R(valueParameters);
+                ValueParameterDescriptor valueParameterDescriptor = (ValueParameterDescriptor) k.R(valueParameters);
                 if (valueParameterDescriptor != null) {
                     dx1Var = x60.k(h51Var, simpleFunctionDescriptor.getAnnotations(), valueParameterDescriptor.getAnnotations(), false, false, false, simpleFunctionDescriptor.getVisibility(), simpleFunctionDescriptor.getSource());
                     dx1Var.h(simpleFunctionDescriptor);
@@ -443,7 +443,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         b41.h(b, "createDefaultGetter(prop…iptor, Annotations.EMPTY)");
         v.n(b, null);
         z71 j = z71Var == null ? j(javaMethod, ContextKt.f(p(), v, javaMethod, 0, 4, null)) : z71Var;
-        g = C8214m.g();
+        g = m.g();
         v.t(j, g, s(), null);
         b.k(j);
         return v;
@@ -495,7 +495,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
             java.util.List r0 = r6.getValueParameters()
             java.lang.String r1 = "valueParameters"
             tb.b41.h(r0, r1)
-            java.lang.Object r0 = kotlin.collections.C8212k.d0(r0)
+            java.lang.Object r0 = kotlin.collections.k.d0(r0)
             kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor r0 = (kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor) r0
             r2 = 0
             if (r0 != 0) goto L14
@@ -540,7 +540,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
             java.util.List r6 = r6.getValueParameters()
             tb.b41.h(r6, r1)
             r1 = 1
-            java.util.List r6 = kotlin.collections.C8212k.M(r6, r1)
+            java.util.List r6 = kotlin.collections.k.M(r6, r1)
             kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor$CopyBuilder r6 = r2.setValueParameters(r6)
             tb.z71 r0 = r0.getType()
             java.util.List r0 = r0.b()
@@ -586,10 +586,10 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
 
     private final boolean i0(SimpleFunctionDescriptor simpleFunctionDescriptor) {
         boolean z;
-        SpecialGenericSignatures.C8333a c8333a = SpecialGenericSignatures.Companion;
+        SpecialGenericSignatures.a aVar = SpecialGenericSignatures.Companion;
         ni1 name = simpleFunctionDescriptor.getName();
         b41.h(name, "name");
-        List<ni1> b = c8333a.b(name);
+        List<ni1> b = aVar.b(name);
         if (!(b instanceof Collection) || !b.isEmpty()) {
             for (ni1 ni1Var : b) {
                 Set<SimpleFunctionDescriptor> q0 = q0(ni1Var);
@@ -707,11 +707,11 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
                 break;
             }
             SimpleFunctionDescriptor simpleFunctionDescriptor2 = (SimpleFunctionDescriptor) it.next();
-            if (simpleFunctionDescriptor2.getValueParameters().size() == 1 && (returnType = simpleFunctionDescriptor2.getReturnType()) != null && AbstractC8271b.A0(returnType)) {
+            if (simpleFunctionDescriptor2.getValueParameters().size() == 1 && (returnType = simpleFunctionDescriptor2.getReturnType()) != null && b.A0(returnType)) {
                 KotlinTypeChecker kotlinTypeChecker = KotlinTypeChecker.DEFAULT;
                 List<ValueParameterDescriptor> valueParameters = simpleFunctionDescriptor2.getValueParameters();
                 b41.h(valueParameters, "descriptor.valueParameters");
-                if (kotlinTypeChecker.equalTypes(((ValueParameterDescriptor) C8212k.q0(valueParameters)).getType(), propertyDescriptor.getType())) {
+                if (kotlinTypeChecker.equalTypes(((ValueParameterDescriptor) k.q0(valueParameters)).getType(), propertyDescriptor.getType())) {
                     simpleFunctionDescriptor = simpleFunctionDescriptor2;
                     continue;
                 } else {
@@ -737,7 +737,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         Collection<z71> U = U();
         LinkedHashSet linkedHashSet = new LinkedHashSet();
         for (z71 z71Var : U) {
-            C8220r.v(linkedHashSet, z71Var.getMemberScope().getContributedFunctions(ni1Var, NoLookupLocation.WHEN_GET_SUPER_MEMBERS));
+            r.v(linkedHashSet, z71Var.getMemberScope().getContributedFunctions(ni1Var, NoLookupLocation.WHEN_GET_SUPER_MEMBERS));
         }
         return linkedHashSet;
     }
@@ -749,12 +749,12 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         ArrayList arrayList = new ArrayList();
         for (z71 z71Var : U) {
             Collection<? extends PropertyDescriptor> contributedVariables = z71Var.getMemberScope().getContributedVariables(ni1Var, NoLookupLocation.WHEN_GET_SUPER_MEMBERS);
-            q = C8215n.q(contributedVariables, 10);
+            q = n.q(contributedVariables, 10);
             ArrayList arrayList2 = new ArrayList(q);
             for (PropertyDescriptor propertyDescriptor : contributedVariables) {
                 arrayList2.add(propertyDescriptor);
             }
-            C8220r.v(arrayList, arrayList2);
+            r.v(arrayList, arrayList2);
         }
         E0 = CollectionsKt___CollectionsKt.E0(arrayList);
         return E0;
@@ -915,11 +915,11 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         a51 M = a51.M(v, q81.a(p(), javaConstructor), false, p().a().t().source(javaConstructor));
         b41.h(M, "createJavaConstructor(\n …ce(constructor)\n        )");
         r81 e = ContextKt.e(p(), M, javaConstructor, v.getDeclaredTypeParameters().size());
-        LazyJavaScope.C8352b D = D(e, M, javaConstructor.getValueParameters());
+        LazyJavaScope.b D = D(e, M, javaConstructor.getValueParameters());
         List<TypeParameterDescriptor> declaredTypeParameters = v.getDeclaredTypeParameters();
         b41.h(declaredTypeParameters, "classDescriptor.declaredTypeParameters");
         List<JavaTypeParameter> typeParameters = javaConstructor.getTypeParameters();
-        q = C8215n.q(typeParameters, 10);
+        q = n.q(typeParameters, 10);
         ArrayList arrayList = new ArrayList(q);
         for (JavaTypeParameter javaTypeParameter : typeParameters) {
             TypeParameterDescriptor resolveTypeParameter = e.f().resolveTypeParameter(javaTypeParameter);
@@ -942,8 +942,8 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         b41.h(J, "createJavaMethod(\n      …omponent), true\n        )");
         z71 o = p().g().o(javaRecordComponent.getType(), u51.d(TypeUsage.COMMON, false, null, 2, null));
         ReceiverParameterDescriptor s = s();
-        g = C8214m.g();
-        g2 = C8214m.g();
+        g = m.g();
+        g2 = m.g();
         J.I(null, s, g, g2, o, Modality.Companion.a(false, false, true), e70.PUBLIC, null);
         J.M(false, false);
         p().a().h().recordMethod(javaRecordComponent, J);
@@ -952,12 +952,12 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaScope
     @NotNull
-    protected LazyJavaScope.C8351a A(@NotNull JavaMethod javaMethod, @NotNull List<? extends TypeParameterDescriptor> list, @NotNull z71 z71Var, @NotNull List<? extends ValueParameterDescriptor> list2) {
+    protected LazyJavaScope.a A(@NotNull JavaMethod javaMethod, @NotNull List<? extends TypeParameterDescriptor> list, @NotNull z71 z71Var, @NotNull List<? extends ValueParameterDescriptor> list2) {
         b41.i(javaMethod, "method");
         b41.i(list, "methodTypeParameters");
         b41.i(z71Var, "returnType");
         b41.i(list2, "valueParameters");
-        SignaturePropagator.C8338b resolvePropagatedSignature = p().a().s().resolvePropagatedSignature(javaMethod, v(), z71Var, null, list2, list);
+        SignaturePropagator.b resolvePropagatedSignature = p().a().s().resolvePropagatedSignature(javaMethod, v(), z71Var, null, list2, list);
         b41.h(resolvePropagatedSignature, "c.components.signaturePr…dTypeParameters\n        )");
         z71 d = resolvePropagatedSignature.d();
         b41.h(d, "propagated.returnType");
@@ -969,7 +969,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         boolean g = resolvePropagatedSignature.g();
         List<String> b = resolvePropagatedSignature.b();
         b41.h(b, "propagated.errors");
-        return new LazyJavaScope.C8351a(d, c, f, e, g, b);
+        return new LazyJavaScope.a(d, c, f, e, g, b);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -982,7 +982,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         b41.h(supertypes, "ownerDescriptor.typeConstructor.supertypes");
         LinkedHashSet<ni1> linkedHashSet = new LinkedHashSet<>();
         for (z71 z71Var : supertypes) {
-            C8220r.v(linkedHashSet, z71Var.getMemberScope().getFunctionNames());
+            r.v(linkedHashSet, z71Var.getMemberScope().getFunctionNames());
         }
         linkedHashSet.addAll(r().invoke().getMethodNames());
         linkedHashSet.addAll(r().invoke().getRecordComponentNames());
@@ -1012,7 +1012,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
     public Set<ni1> e(@NotNull z60 z60Var, @Nullable Function1<? super ni1, Boolean> function1) {
         Set<ni1> i;
         b41.i(z60Var, "kindFilter");
-        i = C8205f0.i(this.q.invoke(), this.r.invoke().keySet());
+        i = f0.i(this.q.invoke(), this.r.invoke().keySet());
         return i;
     }
 
@@ -1103,7 +1103,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
             }
         }
         yd2 a = yd2.Companion.a();
-        g = C8214m.g();
+        g = m.g();
         Collection<? extends SimpleFunctionDescriptor> d = a70.d(ni1Var, q0, g, v(), ErrorReporter.DO_NOTHING, p().a().k().getOverridingUtil());
         b41.h(d, "resolveOverridesForNonSt….overridingUtil\n        )");
         P(ni1Var, collection, d, collection, new LazyJavaClassMemberScope$computeNonDeclaredFunctions$3(this));
@@ -1132,9 +1132,9 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         if (s0.isEmpty()) {
             return;
         }
-        yd2.C9957b c9957b = yd2.Companion;
-        yd2 a = c9957b.a();
-        yd2 a2 = c9957b.a();
+        yd2.b bVar = yd2.Companion;
+        yd2 a = bVar.a();
+        yd2 a2 = bVar.a();
         Q(s0, collection, a, new Function1<ni1, Collection<? extends SimpleFunctionDescriptor>>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaClassMemberScope$computeNonDeclaredProperties$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
@@ -1150,7 +1150,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
                 return A0;
             }
         });
-        h = C8205f0.h(s0, a);
+        h = f0.h(s0, a);
         Q(h, a2, null, new Function1<ni1, Collection<? extends SimpleFunctionDescriptor>>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaClassMemberScope$computeNonDeclaredProperties$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
@@ -1166,7 +1166,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
                 return B0;
             }
         });
-        i = C8205f0.i(s0, a2);
+        i = f0.i(s0, a2);
         Collection<? extends PropertyDescriptor> d = a70.d(ni1Var, i, collection, v(), p().a().c(), p().a().k().getOverridingUtil());
         b41.h(d, "resolveOverridesForNonSt…rridingUtil\n            )");
         collection.addAll(d);
@@ -1184,7 +1184,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
         Collection<z71> supertypes = v().getTypeConstructor().getSupertypes();
         b41.h(supertypes, "ownerDescriptor.typeConstructor.supertypes");
         for (z71 z71Var : supertypes) {
-            C8220r.v(linkedHashSet, z71Var.getMemberScope().getVariableNames());
+            r.v(linkedHashSet, z71Var.getMemberScope().getVariableNames());
         }
         return linkedHashSet;
     }
@@ -1234,7 +1234,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public LazyJavaClassMemberScope(@NotNull final r81 r81Var, @NotNull ClassDescriptor classDescriptor, @NotNull JavaClass javaClass, boolean z, @Nullable LazyJavaClassMemberScope lazyJavaClassMemberScope) {
         super(r81Var, lazyJavaClassMemberScope);
-        b41.i(r81Var, AbstractC5658c.a);
+        b41.i(r81Var, c.a);
         b41.i(classDescriptor, "ownerDescriptor");
         b41.i(javaClass, "jClass");
         this.m = classDescriptor;
@@ -1295,7 +1295,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
                 ArrayList arrayList2 = arrayList;
                 if (isEmpty) {
                     W = lazyJavaClassMemberScope2.W();
-                    k = C8214m.k(W);
+                    k = m.k(W);
                     arrayList2 = k;
                 }
                 A0 = CollectionsKt___CollectionsKt.A0(r.e(r81Var2, arrayList2));
@@ -1339,8 +1339,8 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
                         arrayList.add(obj);
                     }
                 }
-                q = C8215n.q(arrayList, 10);
-                e = C8225w.e(q);
+                q = n.q(arrayList, 10);
+                e = w.e(q);
                 a = ty1.a(e, 16);
                 LinkedHashMap linkedHashMap = new LinkedHashMap(a);
                 for (Object obj2 : arrayList) {
@@ -1380,7 +1380,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
                             @NotNull
                             public final Set<? extends ni1> invoke() {
                                 Set<? extends ni1> i;
-                                i = C8205f0.i(LazyJavaClassMemberScope.this.getFunctionNames(), LazyJavaClassMemberScope.this.getVariableNames());
+                                i = f0.i(LazyJavaClassMemberScope.this.getFunctionNames(), LazyJavaClassMemberScope.this.getVariableNames());
                                 return i;
                             }
                         }), q81.a(r81Var, javaField), r81Var.a().t().source(javaField));
@@ -1393,7 +1393,7 @@ public final class LazyJavaClassMemberScope extends LazyJavaScope {
                 hj d2 = h.d(ni1Var);
                 b41.h(d2, "ownerDescriptor.classId!…createNestedClassId(name)");
                 javaClass2 = LazyJavaClassMemberScope.this.n;
-                JavaClass findClass = d.findClass(new JavaClassFinder.C8328a(d2, null, javaClass2, 2, null));
+                JavaClass findClass = d.findClass(new JavaClassFinder.a(d2, null, javaClass2, 2, null));
                 if (findClass == null) {
                     return null;
                 }

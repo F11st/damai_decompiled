@@ -39,13 +39,12 @@ public final class ShareInit {
     public static final ShareInit INSTANCE = new ShareInit();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.ShareInit$a */
     /* loaded from: classes.dex */
-    public static final class C0873a implements DownloadImgListener<Bitmap> {
+    public static final class a implements DownloadImgListener<Bitmap> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ShareManager.IDownloadImage.IDownloadListener a;
 
-        C0873a(ShareManager.IDownloadImage.IDownloadListener iDownloadListener) {
+        a(ShareManager.IDownloadImage.IDownloadListener iDownloadListener) {
             this.a = iDownloadListener;
         }
 
@@ -83,7 +82,7 @@ public final class ShareInit {
             return;
         }
         b41.i(iDownloadListener, "iDownloadListener");
-        MoImageDownloader.g(MoImageDownloader.Companion.a(), str, null, null, 6, null).c(new C0873a(iDownloadListener));
+        MoImageDownloader.g(MoImageDownloader.Companion.a(), str, null, null, 6, null).c(new a(iDownloadListener));
     }
 
     public final void b(@NotNull final Application application) {
@@ -93,25 +92,24 @@ public final class ShareInit {
             return;
         }
         b41.i(application, "application");
-        com.alibaba.pictures.share.ShareManager.INSTANCE.d(application, new Function1<ShareManager.C3629a, wt2>() { // from class: cn.damai.commonbusiness.share.ShareInit$init$1
+        com.alibaba.pictures.share.ShareManager.INSTANCE.d(application, new Function1<ShareManager.a, wt2>() { // from class: cn.damai.commonbusiness.share.ShareInit$init$1
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* compiled from: Taobao */
-            /* renamed from: cn.damai.commonbusiness.share.ShareInit$init$1$a */
             /* loaded from: classes.dex */
-            public static final class C0874a implements ShareManager.IApplyPermission {
+            public static final class a implements ShareManager.IApplyPermission {
                 private static transient /* synthetic */ IpChange $ipChange;
                 final /* synthetic */ Application a;
 
                 /* compiled from: Taobao */
-                /* renamed from: cn.damai.commonbusiness.share.ShareInit$init$1$a$a */
+                /* renamed from: cn.damai.commonbusiness.share.ShareInit$init$1$a$a  reason: collision with other inner class name */
                 /* loaded from: classes.dex */
-                public static final class C0875a implements IPermissionListener {
+                public static final class C0039a implements IPermissionListener {
                     private static transient /* synthetic */ IpChange $ipChange;
                     final /* synthetic */ ShareManager.IApplyPermission.IPermissionListener a;
                     final /* synthetic */ Activity b;
 
-                    C0875a(ShareManager.IApplyPermission.IPermissionListener iPermissionListener, Activity activity) {
+                    C0039a(ShareManager.IApplyPermission.IPermissionListener iPermissionListener, Activity activity) {
                         this.a = iPermissionListener;
                         this.b = activity;
                     }
@@ -223,7 +221,7 @@ public final class ShareInit {
                             */
                         /*
                             this = this;
-                            com.android.alibaba.ip.runtime.IpChange r0 = cn.damai.commonbusiness.share.ShareInit$init$1.C0874a.C0875a.$ipChange
+                            com.android.alibaba.ip.runtime.IpChange r0 = cn.damai.commonbusiness.share.ShareInit$init$1.a.C0039a.$ipChange
                             java.lang.String r1 = "-1998028063"
                             boolean r2 = com.android.alibaba.ip.runtime.AndroidInstantRuntime.support(r0, r1)
                             if (r2 == 0) goto L17
@@ -242,7 +240,7 @@ public final class ShareInit {
                             if (r1 != 0) goto L21
                             return
                         L21:
-                            java.util.List r3 = kotlin.collections.C8202e.g0(r8)
+                            java.util.List r3 = kotlin.collections.e.g0(r8)
                             r4 = 0
                             android.app.Activity r8 = r7.b
                             tb.qb2 r5 = new tb.qb2
@@ -252,11 +250,11 @@ public final class ShareInit {
                             tb.gr1.a(r1, r2, r3, r4, r5, r6)
                             return
                         */
-                        throw new UnsupportedOperationException("Method not decompiled: cn.damai.commonbusiness.share.ShareInit$init$1.C0874a.C0875a.onShowRationale(java.lang.String[]):void");
+                        throw new UnsupportedOperationException("Method not decompiled: cn.damai.commonbusiness.share.ShareInit$init$1.a.C0039a.onShowRationale(java.lang.String[]):void");
                     }
                 }
 
-                C0874a(Application application) {
+                a(Application application) {
                     this.a = application;
                 }
 
@@ -271,17 +269,16 @@ public final class ShareInit {
                     PermissionModel permissionModel = new PermissionModel(new String[]{"android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"}, "存储权限说明", Integer.valueOf(R$drawable.permission_store_pic), "授权获取存储权限，用于为您保存图片至本地");
                     LinkedList linkedList = new LinkedList();
                     linkedList.add(permissionModel);
-                    new Permission(this.a, linkedList).a(new C0875a(iPermissionListener, activity)).b();
+                    new Permission(this.a, linkedList).a(new C0039a(iPermissionListener, activity)).b();
                 }
             }
 
             /* compiled from: Taobao */
-            /* renamed from: cn.damai.commonbusiness.share.ShareInit$init$1$b */
             /* loaded from: classes.dex */
-            public static final class C0876b implements ShareManager.IShareMenu {
+            public static final class b implements ShareManager.IShareMenu {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C0876b() {
+                b() {
                 }
 
                 @Override // com.alibaba.pictures.share.ShareManager.IShareMenu
@@ -296,12 +293,11 @@ public final class ShareInit {
             }
 
             /* compiled from: Taobao */
-            /* renamed from: cn.damai.commonbusiness.share.ShareInit$init$1$c */
             /* loaded from: classes.dex */
-            public static final class C0877c implements ShareManager.IOrangeConfig {
+            public static final class c implements ShareManager.IOrangeConfig {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C0877c() {
+                c() {
                 }
 
                 @Override // com.alibaba.pictures.share.ShareManager.IOrangeConfig
@@ -313,12 +309,11 @@ public final class ShareInit {
             }
 
             /* compiled from: Taobao */
-            /* renamed from: cn.damai.commonbusiness.share.ShareInit$init$1$d */
             /* loaded from: classes.dex */
-            public static final class C0878d implements ShareManager.IReport {
+            public static final class d implements ShareManager.IReport {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C0878d() {
+                d() {
                 }
 
                 @Override // com.alibaba.pictures.share.ShareManager.IReport
@@ -334,12 +329,11 @@ public final class ShareInit {
             }
 
             /* compiled from: Taobao */
-            /* renamed from: cn.damai.commonbusiness.share.ShareInit$init$1$e */
             /* loaded from: classes.dex */
-            public static final class C0879e implements ShareManager.IShareMonitor {
+            public static final class e implements ShareManager.IShareMonitor {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C0879e() {
+                e() {
                 }
 
                 @Override // com.alibaba.pictures.share.ShareManager.IShareMonitor
@@ -354,12 +348,11 @@ public final class ShareInit {
             }
 
             /* compiled from: Taobao */
-            /* renamed from: cn.damai.commonbusiness.share.ShareInit$init$1$f */
             /* loaded from: classes.dex */
-            public static final class C0880f implements ShareManager.IToast {
+            public static final class f implements ShareManager.IToast {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C0880f() {
+                f() {
                 }
 
                 @Override // com.alibaba.pictures.share.ShareManager.IToast
@@ -374,12 +367,11 @@ public final class ShareInit {
             }
 
             /* compiled from: Taobao */
-            /* renamed from: cn.damai.commonbusiness.share.ShareInit$init$1$g */
             /* loaded from: classes.dex */
-            public static final class C0881g implements ShareManager.IDogCat {
+            public static final class g implements ShareManager.IDogCat {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C0881g() {
+                g() {
                 }
 
                 @Override // com.alibaba.pictures.share.ShareManager.IDogCat
@@ -445,12 +437,11 @@ public final class ShareInit {
             }
 
             /* compiled from: Taobao */
-            /* renamed from: cn.damai.commonbusiness.share.ShareInit$init$1$h */
             /* loaded from: classes.dex */
-            public static final class C0882h implements ShareManager.IDownloadImage {
+            public static final class h implements ShareManager.IDownloadImage {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C0882h() {
+                h() {
                 }
 
                 @Override // com.alibaba.pictures.share.ShareManager.IDownloadImage
@@ -483,48 +474,48 @@ public final class ShareInit {
             }
 
             @Override // kotlin.jvm.functions.Function1
-            public /* bridge */ /* synthetic */ wt2 invoke(ShareManager.C3629a c3629a) {
-                invoke2(c3629a);
+            public /* bridge */ /* synthetic */ wt2 invoke(ShareManager.a aVar) {
+                invoke2(aVar);
                 return wt2.INSTANCE;
             }
 
             /* renamed from: invoke  reason: avoid collision after fix types in other method */
-            public final void invoke2(@NotNull ShareManager.C3629a c3629a) {
+            public final void invoke2(@NotNull ShareManager.a aVar) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "903527688")) {
-                    ipChange2.ipc$dispatch("903527688", new Object[]{this, c3629a});
+                    ipChange2.ipc$dispatch("903527688", new Object[]{this, aVar});
                     return;
                 }
-                b41.i(c3629a, "$this$init");
-                c3629a.D(2);
-                c3629a.C("大麦");
-                c3629a.B(Integer.valueOf(R$drawable.damai_small_logo));
-                c3629a.G(AppConfig.v());
-                c3629a.F(mm2.c().a());
-                String h = mm2.c().h();
-                if (h == null) {
-                    h = "";
+                b41.i(aVar, "$this$init");
+                aVar.D(2);
+                aVar.C("大麦");
+                aVar.B(Integer.valueOf(R$drawable.damai_small_logo));
+                aVar.G(AppConfig.v());
+                aVar.F(mm2.c().a());
+                String h2 = mm2.c().h();
+                if (h2 == null) {
+                    h2 = "";
                 }
-                c3629a.Q(h);
-                c3629a.R(mm2.d);
-                String f = mm2.c().f();
-                if (f == null) {
-                    f = "";
+                aVar.Q(h2);
+                aVar.R(mm2.d);
+                String f2 = mm2.c().f();
+                if (f2 == null) {
+                    f2 = "";
                 }
-                c3629a.M(f);
+                aVar.M(f2);
                 String k = mm2.c().k();
-                c3629a.S(k != null ? k : "");
-                c3629a.T("/pages/home/index?url=");
-                c3629a.A("2015092200310865");
-                c3629a.I(application.getPackageName() + ".interactProvider");
-                c3629a.E(new C0874a(application));
-                c3629a.O(new C0876b());
-                c3629a.L(new C0877c());
-                c3629a.N(new C0878d());
-                c3629a.P(new C0879e());
-                c3629a.K(new C0880f());
-                c3629a.J(new C0881g());
-                c3629a.H(new C0882h());
+                aVar.S(k != null ? k : "");
+                aVar.T("/pages/home/index?url=");
+                aVar.A("2015092200310865");
+                aVar.I(application.getPackageName() + ".interactProvider");
+                aVar.E(new a(application));
+                aVar.O(new b());
+                aVar.L(new c());
+                aVar.N(new d());
+                aVar.P(new e());
+                aVar.K(new f());
+                aVar.J(new g());
+                aVar.H(new h());
             }
         });
     }

@@ -2,9 +2,9 @@ package cn.damai.launcher.ut;
 
 import android.text.TextUtils;
 import android.view.View;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import cn.damai.launcher.splash.api.SplashResponse;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -15,7 +15,7 @@ import tb.z20;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
-public class LauncherUTHelper extends C0528b {
+public class LauncherUTHelper extends b {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final String EVENT_SPLASH_ADS_NOT_SHOW = "event_splash_ads_not_show";
     public static final String EVENT_SPLASH_ADS_SHOW = "event_splash_ads_show";
@@ -40,7 +40,7 @@ public class LauncherUTHelper extends C0528b {
                     hashMap.put("dispatch_id", splashResponse.comboDispatchId);
                 }
             }
-            C0529c.e().G(view, BaseCellItem.TYPE_BUTTON, "bottom", "welcome", hashMap);
+            c.e().G(view, BaseCellItem.TYPE_BUTTON, "bottom", "welcome", hashMap);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -57,15 +57,15 @@ public class LauncherUTHelper extends C0528b {
         return b;
     }
 
-    public C0525a.C0527b g(String str) {
+    public a.b g(String str) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "144019292") ? (C0525a.C0527b) ipChange.ipc$dispatch("144019292", new Object[]{this, str}) : b(str);
+        return AndroidInstantRuntime.support(ipChange, "144019292") ? (a.b) ipChange.ipc$dispatch("144019292", new Object[]{this, str}) : b(str);
     }
 
-    public C0525a.C0527b h(SplashResponse splashResponse, String str, String str2) {
+    public a.b h(SplashResponse splashResponse, String str, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "151940271")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("151940271", new Object[]{this, splashResponse, str, str2});
+            return (a.b) ipChange.ipc$dispatch("151940271", new Object[]{this, splashResponse, str, str2});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("city", str + "市");
@@ -96,7 +96,7 @@ public class LauncherUTHelper extends C0528b {
         if (!wh2.j(str2)) {
             hashMap.put("schema", str2);
         }
-        C0529c.e().A(hashMap, EVENT_SPLASH_ADS_SHOW, "welcome");
+        c.e().A(hashMap, EVENT_SPLASH_ADS_SHOW, "welcome");
     }
 
     public void j(String str, String str2) {
@@ -113,6 +113,6 @@ public class LauncherUTHelper extends C0528b {
         if (!wh2.j(str2)) {
             hashMap.put("schema", str2);
         }
-        C0529c.e().A(hashMap, EVENT_SPLASH_ADS_NOT_SHOW, "welcome");
+        c.e().A(hashMap, EVENT_SPLASH_ADS_NOT_SHOW, "welcome");
     }
 }

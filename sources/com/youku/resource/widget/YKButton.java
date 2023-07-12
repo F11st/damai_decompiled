@@ -205,7 +205,7 @@ public class YKButton extends AppCompatButton implements YKCustomizedView {
             case '\f':
             case '\r':
                 Resources resources = getResources();
-                int i = R.C8071color.cb_1;
+                int i = R.color.cb_1;
                 int color = resources.getColor(i);
                 int colorIntWithAlpha = ColorConfigureManager.getInstance().getColorIntWithAlpha(StaticColorDefine.CB_1, 30);
                 Resources resources2 = getResources();
@@ -219,7 +219,7 @@ public class YKButton extends AppCompatButton implements YKCustomizedView {
                 break;
             case 1:
                 Resources resources4 = getResources();
-                int i4 = R.C8071color.ykn_personal_center_vipcard;
+                int i4 = R.color.ykn_personal_center_vipcard;
                 int color2 = resources4.getColor(i4);
                 int color3 = getResources().getColor(i4);
                 Resources resources5 = getResources();
@@ -237,9 +237,9 @@ public class YKButton extends AppCompatButton implements YKCustomizedView {
             case 16:
                 GradientDrawable.Orientation orientation = GradientDrawable.Orientation.LEFT_RIGHT;
                 Resources resources7 = getResources();
-                int i7 = R.C8071color.gra_r_1_f;
+                int i7 = R.color.gra_r_1_f;
                 Resources resources8 = getResources();
-                int i8 = R.C8071color.gra_r_1_t;
+                int i8 = R.color.gra_r_1_t;
                 int[] iArr = {resources7.getColor(i7), resources8.getColor(i8)};
                 Resources resources9 = getResources();
                 int i9 = R.dimen.button_large_h;
@@ -263,10 +263,10 @@ public class YKButton extends AppCompatButton implements YKCustomizedView {
             case 11:
             case 17:
                 Resources resources12 = getResources();
-                int i12 = R.C8071color.cg_6;
+                int i12 = R.color.cg_6;
                 int color4 = resources12.getColor(i12);
                 Resources resources13 = getResources();
-                int i13 = R.C8071color.ykn_tertiary_info;
+                int i13 = R.color.ykn_tertiary_info;
                 int color5 = resources13.getColor(i13);
                 Resources resources14 = getResources();
                 int i14 = R.dimen.button_stroke_width;
@@ -278,7 +278,7 @@ public class YKButton extends AppCompatButton implements YKCustomizedView {
                 break;
             case 5:
                 Resources resources16 = getResources();
-                int i16 = R.C8072drawable.yk_button_gradient;
+                int i16 = R.drawable.yk_button_gradient;
                 drawable3 = resources16.getDrawable(i16);
                 Resources resources17 = getResources();
                 int i17 = R.dimen.button_large_h;
@@ -291,7 +291,7 @@ public class YKButton extends AppCompatButton implements YKCustomizedView {
             case 7:
             case 18:
                 Resources resources18 = getResources();
-                int i18 = R.C8071color.cw_1;
+                int i18 = R.color.cw_1;
                 int color6 = resources18.getColor(i18);
                 int color7 = getResources().getColor(i18);
                 Resources resources19 = getResources();
@@ -304,7 +304,7 @@ public class YKButton extends AppCompatButton implements YKCustomizedView {
                 break;
             case 14:
                 Resources resources21 = getResources();
-                int i21 = R.C8071color.cy_3;
+                int i21 = R.color.cy_3;
                 int color8 = resources21.getColor(i21);
                 Resources resources22 = getResources();
                 int i22 = R.dimen.button_large_h;
@@ -324,7 +324,7 @@ public class YKButton extends AppCompatButton implements YKCustomizedView {
             case 21:
             case 22:
                 Resources resources24 = getResources();
-                int i24 = R.C8071color.cb_1;
+                int i24 = R.color.cb_1;
                 int color9 = resources24.getColor(i24);
                 Resources resources25 = getResources();
                 int i25 = R.dimen.button_large_h;
@@ -334,9 +334,9 @@ public class YKButton extends AppCompatButton implements YKCustomizedView {
             case 20:
                 GradientDrawable.Orientation orientation3 = GradientDrawable.Orientation.TL_BR;
                 Resources resources26 = getResources();
-                int i26 = R.C8071color.gra_b_1_f;
+                int i26 = R.color.gra_b_1_f;
                 Resources resources27 = getResources();
-                int i27 = R.C8071color.gra_b_1_t;
+                int i27 = R.color.gra_b_1_t;
                 int[] iArr3 = {resources26.getColor(i26), resources27.getColor(i27)};
                 Resources resources28 = getResources();
                 int i28 = R.dimen.button_large_h;
@@ -350,7 +350,7 @@ public class YKButton extends AppCompatButton implements YKCustomizedView {
         }
         Drawable newDrawable = drawable3 != null ? drawable3.getConstantState().newDrawable() : null;
         if (newDrawable != null && this.pressedMask) {
-            newDrawable.setColorFilter(getResources().getColor(R.C8071color.mask_cd_1), PorterDuff.Mode.OVERLAY);
+            newDrawable.setColorFilter(getResources().getColor(R.color.mask_cd_1), PorterDuff.Mode.OVERLAY);
         }
         int[][] iArr4 = states;
         stateListDrawable.addState(iArr4[0], newDrawable);
@@ -672,43 +672,43 @@ public class YKButton extends AppCompatButton implements YKCustomizedView {
                 case 0:
                 case '\f':
                 case '\r':
-                    defaultColor = getResources().getColor(R.C8071color.cb_1);
+                    defaultColor = getResources().getColor(R.color.cb_1);
                     break;
                 case 1:
-                    defaultColor = getResources().getColor(R.C8071color.ykn_personal_center_vipcard);
+                    defaultColor = getResources().getColor(R.color.ykn_personal_center_vipcard);
                     break;
                 case 2:
                 case '\b':
                 case '\n':
                 case 16:
-                    defaultColor = getResources().getColor(R.C8071color.cw_1);
+                    defaultColor = getResources().getColor(R.color.cw_1);
                     break;
                 case 3:
-                    defaultColor = getResources().getColor(R.C8071color.cb_1);
+                    defaultColor = getResources().getColor(R.color.cb_1);
                     break;
                 case 4:
                 case '\t':
                 case 11:
                 case 17:
-                    defaultColor = getResources().getColor(R.C8071color.ykn_tertiary_info);
+                    defaultColor = getResources().getColor(R.color.ykn_tertiary_info);
                     break;
                 case 5:
-                    defaultColor = getResources().getColor(R.C8071color.cw_1);
+                    defaultColor = getResources().getColor(R.color.cw_1);
                     break;
                 case 6:
                 case 7:
                 case 18:
-                    defaultColor = getResources().getColor(R.C8071color.cw_1);
+                    defaultColor = getResources().getColor(R.color.cw_1);
                     break;
                 case 14:
                 case 19:
                 case 20:
                 case 21:
                 case 22:
-                    defaultColor = getResources().getColor(R.C8071color.cw_1);
+                    defaultColor = getResources().getColor(R.color.cw_1);
                     break;
                 case 15:
-                    defaultColor = getResources().getColor(R.C8071color.cv_2);
+                    defaultColor = getResources().getColor(R.color.cv_2);
                     break;
             }
         }

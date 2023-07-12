@@ -2,7 +2,6 @@ package tb;
 
 import kotlin.BuilderInference;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.jvm.functions.Function2;
 import kotlinx.coroutines.CoroutineScope;
 import org.jetbrains.annotations.NotNull;
@@ -16,7 +15,7 @@ public final class nk0 {
         Object d;
         lk0 lk0Var = new lk0(continuation.getContext(), continuation);
         Object e = st2.e(lk0Var, lk0Var, function2);
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         if (e == d) {
             n40.c(continuation);
         }

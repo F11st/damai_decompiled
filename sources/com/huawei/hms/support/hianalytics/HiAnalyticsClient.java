@@ -8,7 +8,7 @@ import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public class HiAnalyticsClient extends C5724a {
+public class HiAnalyticsClient extends a {
     @Deprecated
     public static String reportEntry(Context context, String str) {
         return reportEntry(context, str, Util.getAppId(context), 0);
@@ -28,7 +28,7 @@ public class HiAnalyticsClient extends C5724a {
 
     public static String reportEntry(Context context, String str, String str2, int i) {
         String id = TransactionIdCreater.getId(str2, str);
-        Map<String, String> mapForBi = C5724a.getMapForBi(context, str);
+        Map<String, String> mapForBi = a.getMapForBi(context, str);
         mapForBi.put("appid", str2);
         mapForBi.put(HiAnalyticsConstant.HaKey.BI_KEY_TRANSID, id);
         mapForBi.put("direction", "req");
@@ -39,7 +39,7 @@ public class HiAnalyticsClient extends C5724a {
     }
 
     public static void reportExit(Context context, String str, String str2, String str3, int i, int i2, int i3) {
-        Map<String, String> mapForBi = C5724a.getMapForBi(context, str);
+        Map<String, String> mapForBi = a.getMapForBi(context, str);
         mapForBi.put("appid", str3);
         mapForBi.put(HiAnalyticsConstant.HaKey.BI_KEY_TRANSID, str2);
         mapForBi.put("direction", HiAnalyticsConstant.Direction.RESPONSE);

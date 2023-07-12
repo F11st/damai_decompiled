@@ -13,10 +13,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import cn.damai.common.DamaiConstants;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ACache;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
@@ -48,7 +46,7 @@ import tb.z20;
 /* loaded from: classes7.dex */
 public class SettingActivity extends DamaiBaseActivity {
     private static transient /* synthetic */ IpChange $ipChange;
-    Handler handler = new HandlerC1759i();
+    Handler handler = new i();
     private RelativeLayout ll_push;
     private TextView logout_btn;
     private FrameLayout mFlBottomBtnContainer;
@@ -68,12 +66,11 @@ public class SettingActivity extends DamaiBaseActivity {
     private long usercode;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.SettingActivity$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1751a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1751a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -83,7 +80,7 @@ public class SettingActivity extends DamaiBaseActivity {
                 ipChange.ipc$dispatch("-3852948", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(gb2.g().q());
+            cn.damai.common.user.c.e().x(gb2.g().q());
             String str = "https://help.damai.cn/helpPageH5Catalog.htm";
             cb1.b("SettingActivity", "helpCenterUrl = " + str);
             DMNav.from(SettingActivity.this.mainActivity).toUri(str);
@@ -91,12 +88,11 @@ public class SettingActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.SettingActivity$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1752b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1752b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -111,12 +107,11 @@ public class SettingActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.SettingActivity$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1753c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1753c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -126,7 +121,7 @@ public class SettingActivity extends DamaiBaseActivity {
                 ipChange.ipc$dispatch("-76239506", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(gb2.g().k());
+            cn.damai.common.user.c.e().x(gb2.g().k());
             Intent intent = new Intent();
             intent.setClass(SettingActivity.this.mainActivity, AboutActivity.class);
             SettingActivity.this.startActivity(intent);
@@ -134,12 +129,11 @@ public class SettingActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.SettingActivity$d */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1754d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1754d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -149,7 +143,7 @@ public class SettingActivity extends DamaiBaseActivity {
                 ipChange.ipc$dispatch("2035050863", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(gb2.g().o());
+            cn.damai.common.user.c.e().x(gb2.g().o());
             try {
                 SettingActivity.this.startActivity(new Intent("android.intent.action.DIAL", Uri.parse("tel:10103721")));
             } catch (Exception e) {
@@ -160,12 +154,11 @@ public class SettingActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.SettingActivity$e */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1755e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1755e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -180,12 +173,11 @@ public class SettingActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.SettingActivity$f */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1756f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1756f() {
+        f() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -195,18 +187,17 @@ public class SettingActivity extends DamaiBaseActivity {
                 ipChange.ipc$dispatch("1962664305", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(gb2.g().p());
+            cn.damai.common.user.c.e().x(gb2.g().p());
             SettingActivity.this.jumpToFaqActivity();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.SettingActivity$g */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1757g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1757g() {
+        g() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -221,12 +212,11 @@ public class SettingActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.SettingActivity$h */
     /* loaded from: classes7.dex */
-    public class C1758h implements LogoutDialog.OnDialogClickListener {
+    public class h implements LogoutDialog.OnDialogClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1758h() {
+        h() {
         }
 
         @Override // cn.damai.mine.view.LogoutDialog.OnDialogClickListener
@@ -253,19 +243,18 @@ public class SettingActivity extends DamaiBaseActivity {
                 return;
             }
             LoginManager.k().u();
-            C0529c.e().x(gb2.g().r());
+            cn.damai.common.user.c.e().x(gb2.g().r());
             SettingActivity.this.logoutDM();
             DamaiCookieManager.getInstance().resetAll();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.SettingActivity$i */
     /* loaded from: classes16.dex */
-    public class HandlerC1759i extends Handler {
+    public class i extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC1759i() {
+        i() {
         }
 
         @Override // android.os.Handler
@@ -292,12 +281,11 @@ public class SettingActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.SettingActivity$j */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1760j implements View.OnClickListener {
+    public class j implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1760j() {
+        j() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -312,12 +300,11 @@ public class SettingActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.SettingActivity$k */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1761k implements View.OnClickListener {
+    public class k implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1761k() {
+        k() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -332,12 +319,11 @@ public class SettingActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.SettingActivity$l */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1762l implements View.OnClickListener {
+    public class l implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1762l() {
+        l() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -352,12 +338,11 @@ public class SettingActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.SettingActivity$m */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1763m implements View.OnClickListener {
+    public class m implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1763m() {
+        m() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -372,12 +357,11 @@ public class SettingActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.SettingActivity$n */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1764n implements View.OnClickListener {
+    public class n implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1764n() {
+        n() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -387,18 +371,17 @@ public class SettingActivity extends DamaiBaseActivity {
                 ipChange.ipc$dispatch("1786434045", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(gb2.g().l());
+            cn.damai.common.user.c.e().x(gb2.g().l());
             SettingActivity.this.turnAccountSafe();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.SettingActivity$o */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1765o implements View.OnClickListener {
+    public class o implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1765o(SettingActivity settingActivity) {
+        o(SettingActivity settingActivity) {
         }
 
         @Override // android.view.View.OnClickListener
@@ -408,18 +391,17 @@ public class SettingActivity extends DamaiBaseActivity {
                 ipChange.ipc$dispatch("1714047487", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(gb2.g().m());
+            cn.damai.common.user.c.e().x(gb2.g().m());
             UpdateUtil.d();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.SettingActivity$p */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1766p implements View.OnClickListener {
+    public class p implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1766p() {
+        p() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -441,7 +423,7 @@ public class SettingActivity extends DamaiBaseActivity {
             return;
         }
         LogoutDialog logoutDialog = new LogoutDialog(this, R$style.custom_dialog_style);
-        logoutDialog.e(new C1758h());
+        logoutDialog.e(new h());
         logoutDialog.show();
     }
 
@@ -519,10 +501,10 @@ public class SettingActivity extends DamaiBaseActivity {
         this.tv_cache_size = (TextView) findViewById(R$id.tv_cache_size);
         this.mFlBottomBtnContainer = (FrameLayout) findViewById(R$id.setting_bottom_btn_container_fl);
         this.logout_btn = (TextView) findViewById(R$id.logout_btn);
-        findViewById(R$id.mine_setting_privacy_summary).setOnClickListener(new View$OnClickListenerC1760j());
-        findViewById(R$id.rl_person_information_share_list).setOnClickListener(new View$OnClickListenerC1761k());
-        findViewById(R$id.rl_person_information_collect_list).setOnClickListener(new View$OnClickListenerC1762l());
-        findViewById(R$id.rl_system_permission).setOnClickListener(new View$OnClickListenerC1763m());
+        findViewById(R$id.mine_setting_privacy_summary).setOnClickListener(new j());
+        findViewById(R$id.rl_person_information_share_list).setOnClickListener(new k());
+        findViewById(R$id.rl_person_information_collect_list).setOnClickListener(new l());
+        findViewById(R$id.rl_system_permission).setOnClickListener(new m());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -531,7 +513,7 @@ public class SettingActivity extends DamaiBaseActivity {
         if (AndroidInstantRuntime.support(ipChange, "1080071086")) {
             ipChange.ipc$dispatch("1080071086", new Object[]{this});
         } else if (LoginManager.k().q()) {
-            C0529c.e().x(gb2.g().s());
+            cn.damai.common.user.c.e().x(gb2.g().s());
             DMNav.from(this).toUri(NavUri.b(cs.MESSAGE_PUSH_SETTING));
         } else {
             LoginManager.k().x(this.mainActivity, new Intent(), 1611);
@@ -585,8 +567,8 @@ public class SettingActivity extends DamaiBaseActivity {
         PassportManager.getInstance().logout();
         try {
             new TencentUtil(this.mainActivity).qqLogout();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
         z20.b0(false);
         this.mFlBottomBtnContainer.setVisibility(8);
@@ -598,8 +580,8 @@ public class SettingActivity extends DamaiBaseActivity {
             intent.setPackage("cn.damai");
             intent.putExtra("type", 4);
             sendBroadcast(intent);
-        } catch (Exception e2) {
-            p3.a("damai_member", "member_service_start", "exit", e2.getMessage());
+        } catch (Exception e3) {
+            p3.a("damai_member", "member_service_start", "exit", e3.getMessage());
         }
         gotoHomeMainActivity();
         setResult(-1);
@@ -631,11 +613,11 @@ public class SettingActivity extends DamaiBaseActivity {
     }
 
     @Override // cn.damai.common.app.base.BaseActivity
-    public void dealHeaderClick(int i) {
+    public void dealHeaderClick(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "953306146")) {
-            ipChange.ipc$dispatch("953306146", new Object[]{this, Integer.valueOf(i)});
-        } else if (i == 10003) {
+            ipChange.ipc$dispatch("953306146", new Object[]{this, Integer.valueOf(i2)});
+        } else if (i2 == 10003) {
             finish();
         }
     }
@@ -647,10 +629,10 @@ public class SettingActivity extends DamaiBaseActivity {
     }
 
     @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
-    public void handleError(int i) {
+    public void handleError(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1167040499")) {
-            ipChange.ipc$dispatch("1167040499", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("1167040499", new Object[]{this, Integer.valueOf(i2)});
         }
     }
 
@@ -679,21 +661,21 @@ public class SettingActivity extends DamaiBaseActivity {
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, android.app.Activity
-    public void onActivityResult(int i, int i2, Intent intent) {
+    public void onActivityResult(int i2, int i3, Intent intent) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1842876844")) {
-            ipChange.ipc$dispatch("1842876844", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), intent});
+            ipChange.ipc$dispatch("1842876844", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3), intent});
             return;
         }
-        super.onActivityResult(i, i2, intent);
-        if (i2 == -1) {
-            if (i == 1610) {
+        super.onActivityResult(i2, i3, intent);
+        if (i3 == -1) {
+            if (i2 == 1610) {
                 turnAccountSafe();
-            } else if (i == 1800) {
+            } else if (i2 == 1800) {
                 jumpToFaqActivity();
-            } else if (i == 1801) {
+            } else if (i2 == 1801) {
                 jumpToInformationCollectH5();
-            } else if (i == 1611) {
+            } else if (i2 == 1611) {
                 jumpMessagePushPage();
             }
         }
@@ -725,17 +707,17 @@ public class SettingActivity extends DamaiBaseActivity {
     }
 
     @Override // androidx.appcompat.app.AppCompatActivity, android.app.Activity, android.view.KeyEvent.Callback
-    public boolean onKeyDown(int i, KeyEvent keyEvent) {
+    public boolean onKeyDown(int i2, KeyEvent keyEvent) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-2086397717")) {
-            return ((Boolean) ipChange.ipc$dispatch("-2086397717", new Object[]{this, Integer.valueOf(i), keyEvent})).booleanValue();
+            return ((Boolean) ipChange.ipc$dispatch("-2086397717", new Object[]{this, Integer.valueOf(i2), keyEvent})).booleanValue();
         }
-        if (i == 4) {
+        if (i2 == 4) {
             setResult(-1);
             finish();
             return true;
         }
-        return super.onKeyDown(i, keyEvent);
+        return super.onKeyDown(i2, keyEvent);
     }
 
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity
@@ -776,7 +758,7 @@ public class SettingActivity extends DamaiBaseActivity {
             ipChange.ipc$dispatch("1525862947", new Object[]{this});
             return;
         }
-        this.rl_account_safe.setOnClickListener(new View$OnClickListenerC1764n());
+        this.rl_account_safe.setOnClickListener(new n());
         this.rl_clear.setOnClickListener(new View.OnClickListener() { // from class: cn.damai.setting.SettingActivity.7
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -796,23 +778,23 @@ public class SettingActivity extends DamaiBaseActivity {
                                 ipChange3.ipc$dispatch("1495041669", new Object[]{this});
                                 return;
                             }
-                            C0529c.e().x(gb2.g().n());
-                            C0504a.b().a();
+                            cn.damai.common.user.c.e().x(gb2.g().n());
+                            cn.damai.common.image.a.b().a();
                             SettingActivity.this.handler.sendEmptyMessage(0);
                         }
                     }.start();
                 }
             }
         });
-        this.rl_update.setOnClickListener(new View$OnClickListenerC1765o(this));
-        this.ll_push.setOnClickListener(new View$OnClickListenerC1766p());
-        this.rl_help.setOnClickListener(new View$OnClickListenerC1751a());
-        this.rl_protocol.setOnClickListener(new View$OnClickListenerC1752b());
-        this.rl_about.setOnClickListener(new View$OnClickListenerC1753c());
-        this.rl_phone.setOnClickListener(new View$OnClickListenerC1754d());
-        this.logout_btn.setOnClickListener(new View$OnClickListenerC1755e());
-        this.mLvFeedback.setOnClickListener(new View$OnClickListenerC1756f());
-        this.mPrivacyRl.setOnClickListener(new View$OnClickListenerC1757g());
+        this.rl_update.setOnClickListener(new o(this));
+        this.ll_push.setOnClickListener(new p());
+        this.rl_help.setOnClickListener(new a());
+        this.rl_protocol.setOnClickListener(new b());
+        this.rl_about.setOnClickListener(new c());
+        this.rl_phone.setOnClickListener(new d());
+        this.logout_btn.setOnClickListener(new e());
+        this.mLvFeedback.setOnClickListener(new f());
+        this.mPrivacyRl.setOnClickListener(new g());
     }
 
     @Override // cn.damai.common.app.base.BaseActivity

@@ -22,12 +22,11 @@ public class MyListView extends ListView {
     private float yLast;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.MyListView$a */
     /* loaded from: classes8.dex */
-    public class C2585a extends GestureDetector.SimpleOnGestureListener {
+    public class a extends GestureDetector.SimpleOnGestureListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2585a(MyListView myListView) {
+        a(MyListView myListView) {
         }
 
         @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnGestureListener
@@ -42,7 +41,7 @@ public class MyListView extends ListView {
         super(context, attributeSet);
         this.mLastAct = -1;
         this.mIntercept = false;
-        this.mGestureDetector = new GestureDetector(new C2585a(this));
+        this.mGestureDetector = new GestureDetector(new a(this));
         setOverScrollMode(2);
     }
 
@@ -108,7 +107,7 @@ public class MyListView extends ListView {
         this.mLastAct = -1;
         this.mIntercept = false;
         setOverScrollMode(2);
-        this.mGestureDetector = new GestureDetector(new C2585a(this));
+        this.mGestureDetector = new GestureDetector(new a(this));
         setFadingEdgeLength(0);
     }
 }

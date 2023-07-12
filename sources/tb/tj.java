@@ -1,8 +1,6 @@
 package tb;
 
 import java.util.List;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8214m;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor;
@@ -21,18 +19,17 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes3.dex */
 public final class tj extends GivenFunctionsMemberScope {
     @NotNull
-    public static final C9727a Companion = new C9727a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final ni1 d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.tj$a */
     /* loaded from: classes3.dex */
-    public static final class C9727a {
-        private C9727a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9727a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -64,10 +61,10 @@ public final class tj extends GivenFunctionsMemberScope {
         List<FunctionDescriptor> e;
         cd2 F = cd2.F(e(), Annotations.Companion.b(), d, CallableMemberDescriptor.Kind.DECLARATION, SourceElement.NO_SOURCE);
         ReceiverParameterDescriptor thisAsReceiverParameter = e().getThisAsReceiverParameter();
-        g = C8214m.g();
-        g2 = C8214m.g();
+        g = kotlin.collections.m.g();
+        g2 = kotlin.collections.m.g();
         F.l(null, thisAsReceiverParameter, g, g2, DescriptorUtilsKt.g(e()).i(), Modality.OPEN, e70.PROTECTED);
-        e = C8213l.e(F);
+        e = kotlin.collections.l.e(F);
         return e;
     }
 }

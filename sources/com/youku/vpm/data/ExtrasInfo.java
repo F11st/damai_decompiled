@@ -10,7 +10,7 @@ import com.youku.vpm.param.CustomParams;
 import com.youku.vpm.track.Track;
 import com.youku.vpm.utils.TrackUtil;
 import java.util.Map;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -78,7 +78,7 @@ public class ExtrasInfo extends ExtraMap {
             put("fvvDownloadStatus", vpmInfo.getString("fvvDownloadStatus", null));
             put("fvvpreload", vpmInfo.getString("fvvpreload", null));
             put("startPointHistory", vpmInfo.getString("startPointHistory", null));
-            put(C9796v.TAK_ABILITY_SHOW_POP_BACKGROUND_MODE, vpmInfo.getString(C9796v.TAK_ABILITY_SHOW_POP_BACKGROUND_MODE, null));
+            put(v.TAK_ABILITY_SHOW_POP_BACKGROUND_MODE, vpmInfo.getString(v.TAK_ABILITY_SHOW_POP_BACKGROUND_MODE, null));
         }
         put(IS_AROUSE, vpmInfo.getString(IS_AROUSE, null));
         put(PLAY_FIRST, vpmInfo.getString(PLAY_FIRST, null));

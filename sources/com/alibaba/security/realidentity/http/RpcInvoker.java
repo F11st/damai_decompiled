@@ -1,10 +1,9 @@
 package com.alibaba.security.realidentity.http;
 
 import android.content.Context;
-import com.alibaba.security.common.c.C3800a;
 import com.alibaba.security.common.track.model.TrackLog;
-import com.alibaba.security.realidentity.a.AbstractC3840a;
-import com.alibaba.security.realidentity.a.C3847g;
+import com.alibaba.security.realidentity.a.a;
+import com.alibaba.security.realidentity.a.g;
 import com.alibaba.security.realidentity.http.base.Request;
 import com.alibaba.security.realidentity.http.base.RetrofitHttpCallback;
 import java.io.IOException;
@@ -31,7 +30,7 @@ public class RpcInvoker extends AbsRPCInvoker {
         mtopRequest.setApiName(str);
         mtopRequest.setVersion(str2);
         mtopRequest.setData(str3);
-        MtopBuilder build = mtopInstance.build(mtopRequest, AbstractC3840a.I);
+        MtopBuilder build = mtopInstance.build(mtopRequest, a.I);
         if (z) {
             build.useWua();
         }
@@ -45,7 +44,7 @@ public class RpcInvoker extends AbsRPCInvoker {
         mtopRequest.setApiName(str);
         mtopRequest.setVersion(str2);
         mtopRequest.setData(str3);
-        MtopBuilder build = mtopInstance.build(mtopRequest, AbstractC3840a.I);
+        MtopBuilder build = mtopInstance.build(mtopRequest, a.I);
         if (z) {
             build.useWua();
         }
@@ -86,15 +85,15 @@ public class RpcInvoker extends AbsRPCInvoker {
         final String path = request.path();
         String body = request.body();
         final long currentTimeMillis = System.currentTimeMillis();
-        if (C3847g.C3848a.a.c != null) {
-            callMtopAsync(C3847g.C3848a.a.c, path, "1.0", true, body, new MtopCallback.MtopFinishListener() { // from class: com.alibaba.security.realidentity.http.RpcInvoker.1
+        if (g.a.a.c != null) {
+            callMtopAsync(g.a.a.c, path, "1.0", true, body, new MtopCallback.MtopFinishListener() { // from class: com.alibaba.security.realidentity.http.RpcInvoker.1
                 @Override // mtopsdk.mtop.common.MtopCallback.MtopFinishListener
                 public void onFinished(MtopFinishEvent mtopFinishEvent, Object obj) {
                     MtopResponse mtopResponse = mtopFinishEvent.mtopResponse;
                     long currentTimeMillis2 = System.currentTimeMillis() - currentTimeMillis;
-                    C3800a.a(RpcInvoker.TAG, "api:" + path + "\tcost time:" + currentTimeMillis2);
+                    com.alibaba.security.common.c.a.a(RpcInvoker.TAG, "api:" + path + "\tcost time:" + currentTimeMillis2);
                     if (RpcInvoker.isWhite(path)) {
-                        C3847g.C3848a.a.a(TrackLog.createNetWorkCostMonitor(path, currentTimeMillis2, mtopResponse == null ? "" : mtopResponse.getRetCode()));
+                        g.a.a.a(TrackLog.createNetWorkCostMonitor(path, currentTimeMillis2, mtopResponse == null ? "" : mtopResponse.getRetCode()));
                     }
                     if (mtopResponse == null) {
                         retrofitHttpCallback.onFailure(new IOException("response is null"));
@@ -117,7 +116,7 @@ public class RpcInvoker extends AbsRPCInvoker {
         mtopRequest.setApiName(str);
         mtopRequest.setVersion(str2);
         mtopRequest.setData(ReflectUtil.converMapToDataStr(map));
-        MtopBuilder build = mtopInstance.build(mtopRequest, AbstractC3840a.I);
+        MtopBuilder build = mtopInstance.build(mtopRequest, a.I);
         if (z) {
             build.useWua();
         }
@@ -130,7 +129,7 @@ public class RpcInvoker extends AbsRPCInvoker {
         mtopRequest.setApiName(str);
         mtopRequest.setVersion(str2);
         mtopRequest.setData(ReflectUtil.converMapToDataStr(map));
-        MtopBuilder build = mtopInstance.build(mtopRequest, AbstractC3840a.I);
+        MtopBuilder build = mtopInstance.build(mtopRequest, a.I);
         if (z) {
             build.useWua();
         }

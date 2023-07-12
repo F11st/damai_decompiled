@@ -152,13 +152,13 @@ public class PlayerGuideTipsView extends FrameLayout {
     }
 
     private void initView() {
-        LayoutInflater.from(getContext()).inflate(R.C8074layout.resource_yk_guide_tips_layout, this);
+        LayoutInflater.from(getContext()).inflate(R.layout.resource_yk_guide_tips_layout, this);
         this.mHolderView = (ViewGroup) findViewById(R.id.v_tips_root_holder);
         this.mAnimView = findViewById(R.id.v_anim_bg);
         this.mTipsView = (TextView) findViewById(R.id.tv_tips);
         this.mHolderView.bringChildToFront(findViewById(R.id.ll_tips_holder));
-        this.mTriangleTop = BitmapFactory.decodeResource(getResources(), R.C8072drawable.yk_guide_tips_triangle_top);
-        this.mTriangleBottom = BitmapFactory.decodeResource(getResources(), R.C8072drawable.yk_guide_tips_triangle_bottom);
+        this.mTriangleTop = BitmapFactory.decodeResource(getResources(), R.drawable.yk_guide_tips_triangle_top);
+        this.mTriangleBottom = BitmapFactory.decodeResource(getResources(), R.drawable.yk_guide_tips_triangle_bottom);
         Paint paint = new Paint(1);
         this.mPaint = paint;
         paint.setStyle(Paint.Style.FILL);

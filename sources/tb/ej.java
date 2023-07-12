@@ -14,18 +14,18 @@ public final class ej {
     @NotNull
     private final ProtoBuf$Class b;
     @NotNull
-    private final AbstractC9135fc c;
+    private final fc c;
     @NotNull
     private final SourceElement d;
 
-    public ej(@NotNull NameResolver nameResolver, @NotNull ProtoBuf$Class protoBuf$Class, @NotNull AbstractC9135fc abstractC9135fc, @NotNull SourceElement sourceElement) {
+    public ej(@NotNull NameResolver nameResolver, @NotNull ProtoBuf$Class protoBuf$Class, @NotNull fc fcVar, @NotNull SourceElement sourceElement) {
         b41.i(nameResolver, "nameResolver");
         b41.i(protoBuf$Class, "classProto");
-        b41.i(abstractC9135fc, "metadataVersion");
+        b41.i(fcVar, "metadataVersion");
         b41.i(sourceElement, "sourceElement");
         this.a = nameResolver;
         this.b = protoBuf$Class;
-        this.c = abstractC9135fc;
+        this.c = fcVar;
         this.d = sourceElement;
     }
 
@@ -40,7 +40,7 @@ public final class ej {
     }
 
     @NotNull
-    public final AbstractC9135fc c() {
+    public final fc c() {
         return this.c;
     }
 

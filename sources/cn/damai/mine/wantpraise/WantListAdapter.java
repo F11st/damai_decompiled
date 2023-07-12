@@ -47,15 +47,14 @@ public class WantListAdapter extends RecyclerView.Adapter<ViewHolder> implements
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.wantpraise.WantListAdapter$a */
     /* loaded from: classes6.dex */
-    public class C1477a extends PictureGaiaXEventProvider {
+    public class a extends PictureGaiaXEventProvider {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ WantSeePraiseD a;
         final /* synthetic */ int b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        C1477a(Context context, WantSeePraiseD wantSeePraiseD, int i) {
+        a(Context context, WantSeePraiseD wantSeePraiseD, int i) {
             super(context);
             this.a = wantSeePraiseD;
             this.b = i;
@@ -119,7 +118,7 @@ public class WantListAdapter extends RecyclerView.Adapter<ViewHolder> implements
         GaiaXBuilder gaiaXBuilder = new GaiaXBuilder();
         FrameLayout frameLayout = viewHolder.a;
         Context context = this.a;
-        gaiaXBuilder.renderGaiaXSimple(frameLayout, context, "damai_wantsee_cell", jSONObject, ScreenUtils.INSTANCE.getScreenWidthPx(context) - t60.a(this.a, 24.0f), i, new C1477a(this.a, wantSeePraiseD, i), false, false);
+        gaiaXBuilder.renderGaiaXSimple(frameLayout, context, "damai_wantsee_cell", jSONObject, ScreenUtils.INSTANCE.getScreenWidthPx(context) - t60.a(this.a, 24.0f), i, new a(this.a, wantSeePraiseD, i), false, false);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

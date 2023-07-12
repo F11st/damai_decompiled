@@ -4,7 +4,7 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.text.TextUtils;
 import android.webkit.JavascriptInterface;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import com.alibaba.ut.IWebView;
 import com.taobao.weex.bridge.WXBridgeManager;
 import org.json.JSONException;
@@ -140,7 +140,7 @@ public class JsBridge {
     @JavascriptInterface
     public String UTEnv() {
         IWebView iWebView = this.a;
-        return iWebView == null ? "default" : iWebView instanceof qj2 ? C3834a.C3837c.d : iWebView instanceof pr2 ? "ucwebview" : "iwebview";
+        return iWebView == null ? "default" : iWebView instanceof qj2 ? a.c.d : iWebView instanceof pr2 ? "ucwebview" : "iwebview";
     }
 
     @JavascriptInterface

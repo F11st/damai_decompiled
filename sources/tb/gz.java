@@ -2,16 +2,15 @@ package tb;
 
 import android.text.TextUtils;
 import com.taobao.android.dinamicx.DXRuntimeContext;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
 import com.taobao.android.dinamicx.widget.IDXNodePropProvider;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class gz extends AbstractC6375a {
+public class gz extends com.taobao.android.dinamicx.expression.parser.a {
     public static final long DX_PARSER_GETWIDGETPROPERTYVALUE = 1720632590440773916L;
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         DXWidgetNode widgetNode;
         Object nodePropByKey;
@@ -33,7 +32,7 @@ public class gz extends AbstractC6375a {
         return ((queryWidgetNodeByUserId instanceof IDXNodePropProvider) && (nodePropByKey = ((IDXNodePropProvider) queryWidgetNodeByUserId).getNodePropByKey(str2)) != null) ? nodePropByKey : obj3;
     }
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
     public String getDxFunctionName() {
         return "getWidgetPropertyValue";
     }

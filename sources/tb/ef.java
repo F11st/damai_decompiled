@@ -1,7 +1,6 @@
 package tb;
 
 import android.content.res.Resources;
-import com.taobao.phenix.cache.memory.C6851a;
 import com.taobao.phenix.cache.memory.ReleasableReferenceListener;
 import java.util.HashSet;
 import java.util.Set;
@@ -41,7 +40,7 @@ public abstract class ef implements ReleasableReferenceListener {
             Integer valueOf = Integer.valueOf(tq1Var.hashCode());
             if (set.contains(valueOf)) {
                 this.g = true;
-                xt2.i(C6851a.TAG_RECYCLE, "references dirty now(last releasable drawable same with the hash is lost), refer=%d, image=%s, drawable=%s", Integer.valueOf(this.h.size()), this, tq1Var);
+                xt2.i(com.taobao.phenix.cache.memory.a.TAG_RECYCLE, "references dirty now(last releasable drawable same with the hash is lost), refer=%d, image=%s, drawable=%s", Integer.valueOf(this.h.size()), this, tq1Var);
             } else {
                 this.h.add(valueOf);
                 ((m12) tq1Var).c(this);
@@ -85,7 +84,7 @@ public abstract class ef implements ReleasableReferenceListener {
             g();
         }
         this.e = z;
-        xt2.a(C6851a.TAG_RECYCLE, "release from cache, result=%b, isDirty=%b, refer=%d, image=%s", Boolean.valueOf(z), Boolean.valueOf(this.g), Integer.valueOf(this.h.size()), this);
+        xt2.a(com.taobao.phenix.cache.memory.a.TAG_RECYCLE, "release from cache, result=%b, isDirty=%b, refer=%d, image=%s", Boolean.valueOf(z), Boolean.valueOf(this.g), Integer.valueOf(this.h.size()), this);
         h();
     }
 
@@ -101,7 +100,7 @@ public abstract class ef implements ReleasableReferenceListener {
         this.g = true;
         m12Var.c(null);
         this.h.remove(Integer.valueOf(m12Var.hashCode()));
-        xt2.a(C6851a.TAG_RECYCLE, "image reference downgraded to passable, isDirty=%b, refer=%d, image=%s, drawable=%s", Boolean.valueOf(this.g), Integer.valueOf(this.h.size()), this, m12Var);
+        xt2.a(com.taobao.phenix.cache.memory.a.TAG_RECYCLE, "image reference downgraded to passable, isDirty=%b, refer=%d, image=%s, drawable=%s", Boolean.valueOf(this.g), Integer.valueOf(this.h.size()), this, m12Var);
     }
 
     @Override // com.taobao.phenix.cache.memory.ReleasableReferenceListener
@@ -110,7 +109,7 @@ public abstract class ef implements ReleasableReferenceListener {
             return;
         }
         this.h.remove(Integer.valueOf(m12Var.hashCode()));
-        xt2.a(C6851a.TAG_RECYCLE, "image reference released, isDirty=%b, refer=%d, image=%s, drawable=%s", Boolean.valueOf(this.g), Integer.valueOf(this.h.size()), this, m12Var);
+        xt2.a(com.taobao.phenix.cache.memory.a.TAG_RECYCLE, "image reference released, isDirty=%b, refer=%d, image=%s, drawable=%s", Boolean.valueOf(this.g), Integer.valueOf(this.h.size()), this, m12Var);
         h();
     }
 

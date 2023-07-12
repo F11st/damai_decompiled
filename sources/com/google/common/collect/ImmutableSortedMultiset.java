@@ -5,7 +5,6 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMultiset;
 import com.google.common.collect.Multiset;
-import com.google.common.math.C5238c;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import com.google.errorprone.annotations.concurrent.LazyInit;
 import java.io.Serializable;
@@ -46,18 +45,17 @@ public abstract class ImmutableSortedMultiset<E> extends ImmutableSortedMultiset
 
         Object readResolve() {
             int length = this.elements.length;
-            C4994a c4994a = new C4994a(this.comparator);
+            a aVar = new a(this.comparator);
             for (int i = 0; i < length; i++) {
-                c4994a.j(this.elements[i], this.counts[i]);
+                aVar.j(this.elements[i], this.counts[i]);
             }
-            return c4994a.k();
+            return aVar.k();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableSortedMultiset$a */
     /* loaded from: classes10.dex */
-    public static class C4994a<E> extends ImmutableMultiset.C4984b<E> {
+    public static class a<E> extends ImmutableMultiset.b<E> {
         private final Comparator<? super E> d;
         @VisibleForTesting
         E[] e;
@@ -65,7 +63,7 @@ public abstract class ImmutableSortedMultiset<E> extends ImmutableSortedMultiset
         private int g;
         private boolean h;
 
-        public C4994a(Comparator<? super E> comparator) {
+        public a(Comparator<? super E> comparator) {
             super(true);
             this.d = (Comparator) du1.p(comparator);
             this.e = (E[]) new Object[4];
@@ -91,7 +89,7 @@ public abstract class ImmutableSortedMultiset<E> extends ImmutableSortedMultiset
                 int i4 = i2 * 4;
                 int i5 = this.g;
                 if (i4 > i5 * 3) {
-                    eArr = (E[]) Arrays.copyOf(eArr, C5238c.f(i5, (i5 / 2) + 1));
+                    eArr = (E[]) Arrays.copyOf(eArr, com.google.common.math.c.f(i5, (i5 / 2) + 1));
                 }
             }
             int[] iArr = new int[eArr.length];
@@ -144,27 +142,27 @@ public abstract class ImmutableSortedMultiset<E> extends ImmutableSortedMultiset
             this.h = false;
         }
 
-        @Override // com.google.common.collect.ImmutableMultiset.C4984b
+        @Override // com.google.common.collect.ImmutableMultiset.b
         @CanIgnoreReturnValue
         /* renamed from: m */
-        public C4994a<E> f(E e) {
+        public a<E> f(E e) {
             return j(e, 1);
         }
 
-        @Override // com.google.common.collect.ImmutableMultiset.C4984b
+        @Override // com.google.common.collect.ImmutableMultiset.b
         @CanIgnoreReturnValue
         /* renamed from: n */
-        public C4994a<E> g(E... eArr) {
+        public a<E> g(E... eArr) {
             for (E e : eArr) {
                 f(e);
             }
             return this;
         }
 
-        @Override // com.google.common.collect.ImmutableMultiset.C4984b
+        @Override // com.google.common.collect.ImmutableMultiset.b
         @CanIgnoreReturnValue
         /* renamed from: o */
-        public C4994a<E> h(Iterable<? extends E> iterable) {
+        public a<E> h(Iterable<? extends E> iterable) {
             if (iterable instanceof Multiset) {
                 for (Multiset.Entry<E> entry : ((Multiset) iterable).entrySet()) {
                     j(entry.getElement(), entry.getCount());
@@ -177,22 +175,22 @@ public abstract class ImmutableSortedMultiset<E> extends ImmutableSortedMultiset
             return this;
         }
 
-        @Override // com.google.common.collect.ImmutableMultiset.C4984b
+        @Override // com.google.common.collect.ImmutableMultiset.b
         @CanIgnoreReturnValue
         /* renamed from: p */
-        public C4994a<E> i(Iterator<? extends E> it) {
+        public a<E> i(Iterator<? extends E> it) {
             while (it.hasNext()) {
                 f(it.next());
             }
             return this;
         }
 
-        @Override // com.google.common.collect.ImmutableMultiset.C4984b
+        @Override // com.google.common.collect.ImmutableMultiset.b
         @CanIgnoreReturnValue
         /* renamed from: q */
-        public C4994a<E> j(E e, int i) {
+        public a<E> j(E e, int i) {
             du1.p(e);
-            C5191k.b(i, "occurrences");
+            k.b(i, "occurrences");
             if (i == 0) {
                 return this;
             }
@@ -205,7 +203,7 @@ public abstract class ImmutableSortedMultiset<E> extends ImmutableSortedMultiset
             return this;
         }
 
-        @Override // com.google.common.collect.ImmutableMultiset.C4984b
+        @Override // com.google.common.collect.ImmutableMultiset.b
         /* renamed from: r */
         public ImmutableSortedMultiset<E> k() {
             t();
@@ -239,16 +237,16 @@ public abstract class ImmutableSortedMultiset<E> extends ImmutableSortedMultiset
         if (collection.isEmpty()) {
             return emptyMultiset(comparator);
         }
-        ImmutableList.C4971a c4971a = new ImmutableList.C4971a(collection.size());
+        ImmutableList.a aVar = new ImmutableList.a(collection.size());
         long[] jArr = new long[collection.size() + 1];
         int i = 0;
         for (Multiset.Entry<E> entry : collection) {
-            c4971a.a(entry.getElement());
+            aVar.a(entry.getElement());
             int i2 = i + 1;
             jArr[i2] = jArr[i] + entry.getCount();
             i = i2;
         }
-        return new RegularImmutableSortedMultiset(new RegularImmutableSortedSet(c4971a.j(), comparator), jArr, 0, collection.size());
+        return new RegularImmutableSortedMultiset(new RegularImmutableSortedSet(aVar.j(), comparator), jArr, 0, collection.size());
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -259,20 +257,20 @@ public abstract class ImmutableSortedMultiset<E> extends ImmutableSortedMultiset
         return new RegularImmutableSortedMultiset(comparator);
     }
 
-    public static <E extends Comparable<?>> C4994a<E> naturalOrder() {
-        return new C4994a<>(Ordering.natural());
+    public static <E extends Comparable<?>> a<E> naturalOrder() {
+        return new a<>(Ordering.natural());
     }
 
     public static <E> ImmutableSortedMultiset<E> of() {
         return (ImmutableSortedMultiset<E>) RegularImmutableSortedMultiset.NATURAL_EMPTY_MULTISET;
     }
 
-    public static <E> C4994a<E> orderedBy(Comparator<E> comparator) {
-        return new C4994a<>(comparator);
+    public static <E> a<E> orderedBy(Comparator<E> comparator) {
+        return new a<>(comparator);
     }
 
-    public static <E extends Comparable<?>> C4994a<E> reverseOrder() {
-        return new C4994a<>(Ordering.natural().reverse());
+    public static <E extends Comparable<?>> a<E> reverseOrder() {
+        return new a<>(Ordering.natural().reverse());
     }
 
     @Override // com.google.common.collect.SortedMultiset, com.google.common.collect.SortedIterable
@@ -358,7 +356,7 @@ public abstract class ImmutableSortedMultiset<E> extends ImmutableSortedMultiset
 
     public static <E> ImmutableSortedMultiset<E> copyOf(Comparator<? super E> comparator, Iterator<? extends E> it) {
         du1.p(comparator);
-        return new C4994a(comparator).i(it).k();
+        return new a(comparator).i(it).k();
     }
 
     /* JADX WARN: Incorrect types in method signature: <E::Ljava/lang/Comparable<-TE;>;>(TE;TE;TE;)Lcom/google/common/collect/ImmutableSortedMultiset<TE;>; */
@@ -378,7 +376,7 @@ public abstract class ImmutableSortedMultiset<E> extends ImmutableSortedMultiset
                 return immutableSortedMultiset.isPartialView() ? copyOfSortedEntries(comparator, immutableSortedMultiset.entrySet().asList()) : immutableSortedMultiset;
             }
         }
-        return new C4994a(comparator).h(iterable).k();
+        return new a(comparator).h(iterable).k();
     }
 
     /* JADX WARN: Incorrect types in method signature: <E::Ljava/lang/Comparable<-TE;>;>(TE;TE;TE;TE;TE;)Lcom/google/common/collect/ImmutableSortedMultiset<TE;>; */

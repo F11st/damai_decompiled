@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.discover.bean.CircleBean;
@@ -63,7 +63,7 @@ public class CircleCardViewHolder extends BaseViewHolderV2<CircleBean> implement
             }
             this.c.setText(TextUtils.isEmpty(circleBean.name) ? "" : circleBean.name);
             this.d.setText(TextUtils.isEmpty(circleBean.dynamicEffect) ? "" : circleBean.dynamicEffect);
-            C0504a b = C0504a.b();
+            a b = a.b();
             String str = circleBean.headImage;
             int i2 = this.h;
             b.f(str, i2, i2).g(this.f);

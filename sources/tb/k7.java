@@ -2,12 +2,11 @@ package tb;
 
 import java.util.concurrent.locks.ReentrantLock;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.collections.C8207h;
 import kotlin.jvm.functions.Function1;
-import kotlinx.coroutines.channels.AbstractC8641a;
 import kotlinx.coroutines.channels.AbstractChannel;
 import kotlinx.coroutines.channels.BufferOverflow;
 import kotlinx.coroutines.channels.ReceiveOrClosed;
+import kotlinx.coroutines.channels.a;
 import kotlinx.coroutines.internal.OnUndeliveredElementKt;
 import kotlinx.coroutines.internal.UndeliveredElementException;
 import kotlinx.coroutines.selects.SelectInstance;
@@ -31,7 +30,7 @@ public class k7<E> extends AbstractChannel<E> {
         if (i >= 1) {
             this.d = new ReentrantLock();
             Object[] objArr = new Object[Math.min(i, 8)];
-            C8207h.k(objArr, k1.EMPTY, 0, 0, 6, null);
+            kotlin.collections.h.k(objArr, k1.EMPTY, 0, 0, 6, null);
             wt2 wt2Var = wt2.INSTANCE;
             this.e = objArr;
             this.size = 0;
@@ -68,7 +67,7 @@ public class k7<E> extends AbstractChannel<E> {
                 Object[] objArr3 = this.e;
                 objArr2[i2] = objArr3[(this.f + i2) % objArr3.length];
             }
-            C8207h.j(objArr2, k1.EMPTY, i, min);
+            kotlin.collections.h.j(objArr2, k1.EMPTY, i, min);
             this.e = objArr2;
             this.f = 0;
         }
@@ -341,7 +340,7 @@ public class k7<E> extends AbstractChannel<E> {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // kotlinx.coroutines.channels.AbstractC8641a
+    @Override // kotlinx.coroutines.channels.a
     @Nullable
     public Object f(@NotNull ha2 ha2Var) {
         ReentrantLock reentrantLock = this.d;
@@ -353,7 +352,7 @@ public class k7<E> extends AbstractChannel<E> {
         }
     }
 
-    @Override // kotlinx.coroutines.channels.AbstractC8641a
+    @Override // kotlinx.coroutines.channels.a
     @NotNull
     protected String g() {
         return "(buffer:capacity=" + this.g + ",size=" + this.size + ')';
@@ -381,7 +380,7 @@ public class k7<E> extends AbstractChannel<E> {
         }
     }
 
-    @Override // kotlinx.coroutines.channels.AbstractC8641a, kotlinx.coroutines.channels.SendChannel
+    @Override // kotlinx.coroutines.channels.a, kotlinx.coroutines.channels.SendChannel
     public boolean isFull() {
         ReentrantLock reentrantLock = this.d;
         reentrantLock.lock();
@@ -392,18 +391,18 @@ public class k7<E> extends AbstractChannel<E> {
         }
     }
 
-    @Override // kotlinx.coroutines.channels.AbstractC8641a
+    @Override // kotlinx.coroutines.channels.a
     protected final boolean p() {
         return false;
     }
 
-    @Override // kotlinx.coroutines.channels.AbstractC8641a
+    @Override // kotlinx.coroutines.channels.a
     protected final boolean q() {
         return this.size == this.g && this.h == BufferOverflow.SUSPEND;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // kotlinx.coroutines.channels.AbstractC8641a
+    @Override // kotlinx.coroutines.channels.a
     @NotNull
     public Object s(E e) {
         ReceiveOrClosed<E> y;
@@ -454,7 +453,7 @@ public class k7<E> extends AbstractChannel<E> {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // kotlinx.coroutines.channels.AbstractC8641a
+    @Override // kotlinx.coroutines.channels.a
     @NotNull
     public Object t(E e, @NotNull SelectInstance<?> selectInstance) {
         ReentrantLock reentrantLock = this.d;
@@ -471,7 +470,7 @@ public class k7<E> extends AbstractChannel<E> {
             }
             if (i == 0) {
                 while (true) {
-                    AbstractC8641a.C8645d<E> e2 = e(e);
+                    a.d<E> e2 = e(e);
                     Object performAtomicTrySelect = selectInstance.performAtomicTrySelect(e2);
                     if (performAtomicTrySelect == null) {
                         this.size = i;

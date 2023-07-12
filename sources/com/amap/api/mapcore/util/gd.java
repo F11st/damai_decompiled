@@ -40,23 +40,22 @@ public class gd {
     public static String b = "";
     private static Context c = null;
     private static volatile boolean d = true;
-    private static Vector<C4563c> e = new Vector<>();
+    private static Vector<c> e = new Vector<>();
     private static Map<String, Integer> f = new HashMap();
     private static String g = null;
     private static long h = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.gd$a */
     /* loaded from: classes10.dex */
-    public static class C4555a {
+    public static class a {
         @Deprecated
-        public C4558c A;
-        public C4558c B;
-        public C4557b C;
-        public C4557b D;
-        public C4557b E;
-        public C4557b F;
-        public C4561f G;
+        public c A;
+        public c B;
+        public b C;
+        public b D;
+        public b E;
+        public b F;
+        public f G;
         private boolean H;
         public String a;
         public int b = -1;
@@ -101,23 +100,22 @@ public class gd {
         @Deprecated
         public JSONObject v;
         public JSONObject w;
-        public C4556a x;
-        public C4559d y;
-        public C4560e z;
+        public C0215a x;
+        public d y;
+        public e z;
 
         /* compiled from: Taobao */
-        /* renamed from: com.amap.api.mapcore.util.gd$a$a */
+        /* renamed from: com.amap.api.mapcore.util.gd$a$a  reason: collision with other inner class name */
         /* loaded from: classes10.dex */
-        public static class C4556a {
+        public static class C0215a {
             public boolean a;
             public boolean b;
             public JSONObject c;
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.amap.api.mapcore.util.gd$a$b */
         /* loaded from: classes10.dex */
-        public static class C4557b {
+        public static class b {
             public boolean a;
             public String b;
             public String c;
@@ -126,33 +124,29 @@ public class gd {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.amap.api.mapcore.util.gd$a$c */
         /* loaded from: classes10.dex */
-        public static class C4558c {
+        public static class c {
             public String a;
             public String b;
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.amap.api.mapcore.util.gd$a$d */
         /* loaded from: classes10.dex */
-        public static class C4559d {
+        public static class d {
             public String a;
             public String b;
             public String c;
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.amap.api.mapcore.util.gd$a$e */
         /* loaded from: classes10.dex */
-        public static class C4560e {
+        public static class e {
             public boolean a;
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.amap.api.mapcore.util.gd$a$f */
         /* loaded from: classes10.dex */
-        public static class C4561f {
+        public static class f {
             public boolean a;
             public boolean b;
             public boolean c;
@@ -164,14 +158,13 @@ public class gd {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.gd$b */
     /* loaded from: classes10.dex */
-    public static class C4562b extends ie {
+    public static class b extends ie {
         private String f;
         private Map<String, String> g;
         private boolean h;
 
-        C4562b(Context context, gm gmVar, String str, Map<String, String> map) {
+        b(Context context, gm gmVar, String str, Map<String, String> map) {
             super(context, gmVar);
             this.f = str;
             this.g = map;
@@ -236,14 +229,13 @@ public class gd {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.gd$c */
     /* loaded from: classes10.dex */
-    public static class C4563c {
+    public static class c {
         private String a;
         private String b;
         private AtomicInteger c;
 
-        public C4563c(String str, String str2, int i) {
+        public c(String str, String str2, int i) {
             this.a = str;
             this.b = str2;
             this.c = new AtomicInteger(i);
@@ -273,13 +265,13 @@ public class gd {
             return atomicInteger.get();
         }
 
-        public static C4563c b(String str) {
+        public static c b(String str) {
             if (TextUtils.isEmpty(str)) {
                 return null;
             }
             try {
                 JSONObject jSONObject = new JSONObject(str);
-                return new C4563c(jSONObject.optString("a"), jSONObject.optString("f"), jSONObject.optInt("h"));
+                return new c(jSONObject.optString("a"), jSONObject.optString("f"), jSONObject.optInt("h"));
             } catch (Throwable unused) {
                 return null;
             }
@@ -287,7 +279,7 @@ public class gd {
     }
 
     public static void a(Context context, String str) {
-        C4554gc.a(context, str);
+        gc.a(context, str);
     }
 
     private static void b(Context context, JSONObject jSONObject) {
@@ -320,7 +312,7 @@ public class gd {
     }
 
     private static void e() {
-        C4563c b2 = b(c, "IPV6_CONFIG_NAME");
+        c b2 = b(c, "IPV6_CONFIG_NAME");
         String a2 = gn.a(System.currentTimeMillis(), "yyyyMMdd");
         if (!a2.equals(b2.b)) {
             b2.a(a2);
@@ -387,15 +379,15 @@ public class gd {
                 }
             }
         } catch (Throwable th) {
-            C4573ha.a(th, "at", "ipstack");
+            ha.a(th, "at", "ipstack");
         }
     }
 
-    public static C4555a a(Context context, gm gmVar, String str, Map<String, String> map) {
+    public static a a(Context context, gm gmVar, String str, Map<String, String> map) {
         return a(context, gmVar, str, map, false);
     }
 
-    public static C4555a a(Context context, gm gmVar, String str, Map<String, String> map, boolean z) {
+    public static a a(Context context, gm gmVar, String str, Map<String, String> map, boolean z) {
         return a(context, gmVar, str, map, z, "DEF_ID");
     }
 
@@ -411,7 +403,7 @@ public class gd {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public static com.amap.api.mapcore.util.gd.C4555a a(android.content.Context r16, com.amap.api.mapcore.util.gm r17, java.lang.String r18, java.util.Map<java.lang.String, java.lang.String> r19, boolean r20, java.lang.String r21) {
+    public static com.amap.api.mapcore.util.gd.a a(android.content.Context r16, com.amap.api.mapcore.util.gm r17, java.lang.String r18, java.util.Map<java.lang.String, java.lang.String> r19, boolean r20, java.lang.String r21) {
         /*
             Method dump skipped, instructions count: 403
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -426,19 +418,19 @@ public class gd {
         d = new hr("IPV6_CONFIG_NAME").b(context, "k", true);
     }
 
-    private static synchronized C4563c b(Context context, String str) {
+    private static synchronized c b(Context context, String str) {
         synchronized (gd.class) {
-            C4563c a2 = a(str);
+            c a2 = a(str);
             if (a2 != null) {
                 return a2;
             }
             if (context == null) {
                 return null;
             }
-            C4563c b2 = C4563c.b(new hr(str).a(context, "i"));
+            c b2 = c.b(new hr(str).a(context, "i"));
             String a3 = gn.a(System.currentTimeMillis(), "yyyyMMdd");
             if (b2 == null) {
-                b2 = new C4563c("IPV6_CONFIG_NAME", a3, 0);
+                b2 = new c("IPV6_CONFIG_NAME", a3, 0);
             }
             if (!a3.equals(b2.b)) {
                 b2.a(a3);
@@ -449,72 +441,72 @@ public class gd {
         }
     }
 
-    private static void a(Context context, String str, C4555a c4555a, JSONObject jSONObject) throws JSONException {
-        C4555a.C4556a c4556a = new C4555a.C4556a();
-        c4556a.a = false;
-        c4556a.b = false;
-        c4555a.x = c4556a;
+    private static void a(Context context, String str, a aVar, JSONObject jSONObject) throws JSONException {
+        a.C0215a c0215a = new a.C0215a();
+        c0215a.a = false;
+        c0215a.b = false;
+        aVar.x = c0215a;
         try {
             String[] split = str.split(";");
             if (split != null && split.length > 0) {
                 for (String str2 : split) {
                     if (jSONObject.has(str2)) {
-                        c4555a.w.putOpt(str2, jSONObject.get(str2));
+                        aVar.w.putOpt(str2, jSONObject.get(str2));
                     }
                 }
             }
         } catch (Throwable th) {
-            C4573ha.a(th, "at", "co");
+            ha.a(th, "at", "co");
         }
         if (gn.a(jSONObject, "16H")) {
-            c4555a.H = a(jSONObject.getJSONObject("16H").optString("able"), false);
+            aVar.H = a(jSONObject.getJSONObject("16H").optString("able"), false);
         }
         if (gn.a(jSONObject, "11K")) {
             try {
                 JSONObject jSONObject2 = jSONObject.getJSONObject("11K");
-                c4556a.a = a(jSONObject2.getString("able"), false);
+                c0215a.a = a(jSONObject2.getString("able"), false);
                 if (jSONObject2.has("off")) {
-                    c4556a.c = jSONObject2.getJSONObject("off");
+                    c0215a.c = jSONObject2.getJSONObject("off");
                 }
             } catch (Throwable th2) {
-                C4573ha.a(th2, "AuthConfigManager", "loadException");
+                ha.a(th2, "AuthConfigManager", "loadException");
             }
         }
         if (gn.a(jSONObject, "001")) {
             JSONObject jSONObject3 = jSONObject.getJSONObject("001");
-            C4555a.C4559d c4559d = new C4555a.C4559d();
-            a(jSONObject3, c4559d);
-            c4555a.y = c4559d;
+            a.d dVar = new a.d();
+            a(jSONObject3, dVar);
+            aVar.y = dVar;
         }
         if (gn.a(jSONObject, "002")) {
             JSONObject jSONObject4 = jSONObject.getJSONObject("002");
-            C4555a.C4558c c4558c = new C4555a.C4558c();
-            a(jSONObject4, c4558c);
-            c4555a.A = c4558c;
+            a.c cVar = new a.c();
+            a(jSONObject4, cVar);
+            aVar.A = cVar;
         }
         if (gn.a(jSONObject, "14S")) {
             JSONObject jSONObject5 = jSONObject.getJSONObject("14S");
-            C4555a.C4558c c4558c2 = new C4555a.C4558c();
-            a(jSONObject5, c4558c2);
-            c4555a.B = c4558c2;
+            a.c cVar2 = new a.c();
+            a(jSONObject5, cVar2);
+            aVar.B = cVar2;
         }
-        a(c4555a, jSONObject);
+        a(aVar, jSONObject);
         if (gn.a(jSONObject, "14Z")) {
             JSONObject jSONObject6 = jSONObject.getJSONObject("14Z");
-            C4555a.C4561f c4561f = new C4555a.C4561f();
-            a(jSONObject6, c4561f);
-            c4555a.G = c4561f;
+            a.f fVar = new a.f();
+            a(jSONObject6, fVar);
+            aVar.G = fVar;
         }
         if (gn.a(jSONObject, "151")) {
             JSONObject jSONObject7 = jSONObject.getJSONObject("151");
-            C4555a.C4560e c4560e = new C4555a.C4560e();
-            a(jSONObject7, c4560e);
-            c4555a.z = c4560e;
+            a.e eVar = new a.e();
+            a(jSONObject7, eVar);
+            aVar.z = eVar;
         }
         if (gn.a(jSONObject, "17S")) {
             b(context, jSONObject.getJSONObject("17S"));
         }
-        a(c4555a, jSONObject);
+        a(aVar, jSONObject);
     }
 
     private static String a(byte[] bArr) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException {
@@ -590,27 +582,27 @@ public class gd {
         return (jSONObject == null || !jSONObject.has(str) || jSONObject.getString(str).equals("[]")) ? "" : jSONObject.optString(str);
     }
 
-    private static void a(JSONObject jSONObject, C4555a.C4557b c4557b) {
-        if (c4557b != null) {
+    private static void a(JSONObject jSONObject, a.b bVar) {
+        if (bVar != null) {
             try {
                 String a2 = a(jSONObject, WXComponent.PROP_FS_MATCH_PARENT);
                 String a3 = a(jSONObject, IRequestConst.U);
                 String a4 = a(jSONObject, "v");
                 String a5 = a(jSONObject, "able");
                 String a6 = a(jSONObject, "on");
-                c4557b.c = a2;
-                c4557b.b = a3;
-                c4557b.d = a4;
-                c4557b.a = a(a5, false);
-                c4557b.e = a(a6, true);
+                bVar.c = a2;
+                bVar.b = a3;
+                bVar.d = a4;
+                bVar.a = a(a5, false);
+                bVar.e = a(a6, true);
             } catch (Throwable th) {
-                C4573ha.a(th, "at", "pe");
+                ha.a(th, "at", "pe");
             }
         }
     }
 
-    private static void a(JSONObject jSONObject, C4555a.C4561f c4561f) {
-        if (c4561f != null) {
+    private static void a(JSONObject jSONObject, a.f fVar) {
+        if (fVar != null) {
             try {
                 String a2 = a(jSONObject, "md5");
                 String a3 = a(jSONObject, "md5info");
@@ -618,140 +610,140 @@ public class gd {
                 String a5 = a(jSONObject, "able");
                 String a6 = a(jSONObject, "on");
                 String a7 = a(jSONObject, "mobileable");
-                c4561f.e = a2;
-                c4561f.f = a3;
-                c4561f.d = a4;
-                c4561f.a = a(a5, false);
-                c4561f.b = a(a6, false);
-                c4561f.c = a(a7, false);
+                fVar.e = a2;
+                fVar.f = a3;
+                fVar.d = a4;
+                fVar.a = a(a5, false);
+                fVar.b = a(a6, false);
+                fVar.c = a(a7, false);
             } catch (Throwable th) {
-                C4573ha.a(th, "at", "pes");
+                ha.a(th, "at", "pes");
             }
         }
     }
 
-    private static void a(JSONObject jSONObject, C4555a.C4558c c4558c) {
+    private static void a(JSONObject jSONObject, a.c cVar) {
         if (jSONObject != null) {
             try {
                 String a2 = a(jSONObject, "md5");
                 String a3 = a(jSONObject, "url");
-                c4558c.b = a2;
-                c4558c.a = a3;
+                cVar.b = a2;
+                cVar.a = a3;
             } catch (Throwable th) {
-                C4573ha.a(th, "at", "psc");
+                ha.a(th, "at", "psc");
             }
         }
     }
 
-    private static void a(JSONObject jSONObject, C4555a.C4559d c4559d) {
+    private static void a(JSONObject jSONObject, a.d dVar) {
         if (jSONObject != null) {
             try {
                 String a2 = a(jSONObject, "md5");
                 String a3 = a(jSONObject, "url");
                 String a4 = a(jSONObject, "sdkversion");
                 if (!TextUtils.isEmpty(a2) && !TextUtils.isEmpty(a3) && !TextUtils.isEmpty(a4)) {
-                    c4559d.a = a3;
-                    c4559d.b = a2;
-                    c4559d.c = a4;
+                    dVar.a = a3;
+                    dVar.b = a2;
+                    dVar.c = a4;
                 }
             } catch (Throwable th) {
-                C4573ha.a(th, "at", "psu");
+                ha.a(th, "at", "psu");
             }
         }
     }
 
-    private static void a(JSONObject jSONObject, C4555a.C4560e c4560e) {
-        if (c4560e == null || jSONObject == null) {
+    private static void a(JSONObject jSONObject, a.e eVar) {
+        if (eVar == null || jSONObject == null) {
             return;
         }
-        c4560e.a = a(jSONObject.optString("able"), false);
+        eVar.a = a(jSONObject.optString("able"), false);
     }
 
-    private static void a(C4555a c4555a, JSONObject jSONObject) {
+    private static void a(a aVar, JSONObject jSONObject) {
         try {
             if (gn.a(jSONObject, "11B")) {
-                c4555a.h = jSONObject.getJSONObject("11B");
+                aVar.h = jSONObject.getJSONObject("11B");
             }
             if (gn.a(jSONObject, "11C")) {
-                c4555a.k = jSONObject.getJSONObject("11C");
+                aVar.k = jSONObject.getJSONObject("11C");
             }
             if (gn.a(jSONObject, "11I")) {
-                c4555a.l = jSONObject.getJSONObject("11I");
+                aVar.l = jSONObject.getJSONObject("11I");
             }
             if (gn.a(jSONObject, "11H")) {
-                c4555a.m = jSONObject.getJSONObject("11H");
+                aVar.m = jSONObject.getJSONObject("11H");
             }
             if (gn.a(jSONObject, "11E")) {
-                c4555a.n = jSONObject.getJSONObject("11E");
+                aVar.n = jSONObject.getJSONObject("11E");
             }
             if (gn.a(jSONObject, "11F")) {
-                c4555a.o = jSONObject.getJSONObject("11F");
+                aVar.o = jSONObject.getJSONObject("11F");
             }
             if (gn.a(jSONObject, "13A")) {
-                c4555a.q = jSONObject.getJSONObject("13A");
+                aVar.q = jSONObject.getJSONObject("13A");
             }
             if (gn.a(jSONObject, "13J")) {
-                c4555a.i = jSONObject.getJSONObject("13J");
+                aVar.i = jSONObject.getJSONObject("13J");
             }
             if (gn.a(jSONObject, "11G")) {
-                c4555a.p = jSONObject.getJSONObject("11G");
+                aVar.p = jSONObject.getJSONObject("11G");
             }
             if (gn.a(jSONObject, "006")) {
-                c4555a.r = jSONObject.getJSONObject("006");
+                aVar.r = jSONObject.getJSONObject("006");
             }
             if (gn.a(jSONObject, "010")) {
-                c4555a.s = jSONObject.getJSONObject("010");
+                aVar.s = jSONObject.getJSONObject("010");
             }
             if (gn.a(jSONObject, "11Z")) {
                 JSONObject jSONObject2 = jSONObject.getJSONObject("11Z");
-                C4555a.C4557b c4557b = new C4555a.C4557b();
-                a(jSONObject2, c4557b);
-                c4555a.C = c4557b;
+                a.b bVar = new a.b();
+                a(jSONObject2, bVar);
+                aVar.C = bVar;
             }
             if (gn.a(jSONObject, "135")) {
-                c4555a.j = jSONObject.getJSONObject("135");
+                aVar.j = jSONObject.getJSONObject("135");
             }
             if (gn.a(jSONObject, "13S")) {
-                c4555a.g = jSONObject.getJSONObject("13S");
+                aVar.g = jSONObject.getJSONObject("13S");
             }
             if (gn.a(jSONObject, "121")) {
                 JSONObject jSONObject3 = jSONObject.getJSONObject("121");
-                C4555a.C4557b c4557b2 = new C4555a.C4557b();
-                a(jSONObject3, c4557b2);
-                c4555a.D = c4557b2;
+                a.b bVar2 = new a.b();
+                a(jSONObject3, bVar2);
+                aVar.D = bVar2;
             }
             if (gn.a(jSONObject, "122")) {
                 JSONObject jSONObject4 = jSONObject.getJSONObject("122");
-                C4555a.C4557b c4557b3 = new C4555a.C4557b();
-                a(jSONObject4, c4557b3);
-                c4555a.E = c4557b3;
+                a.b bVar3 = new a.b();
+                a(jSONObject4, bVar3);
+                aVar.E = bVar3;
             }
             if (gn.a(jSONObject, "123")) {
                 JSONObject jSONObject5 = jSONObject.getJSONObject("123");
-                C4555a.C4557b c4557b4 = new C4555a.C4557b();
-                a(jSONObject5, c4557b4);
-                c4555a.F = c4557b4;
+                a.b bVar4 = new a.b();
+                a(jSONObject5, bVar4);
+                aVar.F = bVar4;
             }
             if (gn.a(jSONObject, "011")) {
-                c4555a.c = jSONObject.getJSONObject("011");
+                aVar.c = jSONObject.getJSONObject("011");
             }
             if (gn.a(jSONObject, "012")) {
-                c4555a.d = jSONObject.getJSONObject("012");
+                aVar.d = jSONObject.getJSONObject("012");
             }
             if (gn.a(jSONObject, "013")) {
-                c4555a.e = jSONObject.getJSONObject("013");
+                aVar.e = jSONObject.getJSONObject("013");
             }
             if (gn.a(jSONObject, "014")) {
-                c4555a.f = jSONObject.getJSONObject("014");
+                aVar.f = jSONObject.getJSONObject("014");
             }
             if (gn.a(jSONObject, "145")) {
-                c4555a.t = jSONObject.getJSONObject("145");
+                aVar.t = jSONObject.getJSONObject("145");
             }
             if (gn.a(jSONObject, "14B")) {
-                c4555a.u = jSONObject.getJSONObject("14B");
+                aVar.u = jSONObject.getJSONObject("14B");
             }
             if (gn.a(jSONObject, "14D")) {
-                c4555a.v = jSONObject.getJSONObject("14D");
+                aVar.v = jSONObject.getJSONObject("14D");
             }
         } catch (Throwable th) {
             hd.c(th, "at", "pe");
@@ -759,7 +751,7 @@ public class gd {
     }
 
     public static boolean a() {
-        C4563c b2;
+        c b2;
         if (c != null) {
             b();
             if (!d()) {
@@ -793,25 +785,25 @@ public class gd {
         new hr("IPV6_CONFIG_NAME").a(context, "k", z);
     }
 
-    private static void a(Context context, C4563c c4563c) {
-        if (c4563c == null || TextUtils.isEmpty(c4563c.a)) {
+    private static void a(Context context, c cVar) {
+        if (cVar == null || TextUtils.isEmpty(cVar.a)) {
             return;
         }
-        String b2 = c4563c.b();
+        String b2 = cVar.b();
         if (TextUtils.isEmpty(b2) || context == null) {
             return;
         }
         new hr("IPV6_CONFIG_NAME").a(context, "i", b2);
     }
 
-    private static C4563c a(String str) {
+    private static c a(String str) {
         if (TextUtils.isEmpty(str)) {
             return null;
         }
         for (int i = 0; i < e.size(); i++) {
-            C4563c c4563c = e.get(i);
-            if (c4563c != null && str.equals(c4563c.a)) {
-                return c4563c;
+            c cVar = e.get(i);
+            if (cVar != null && str.equals(cVar.a)) {
+                return cVar;
             }
         }
         return null;

@@ -176,9 +176,8 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.handmark.pulltorefresh.library.PullToRefreshBase$a */
     /* loaded from: classes10.dex */
-    public static /* synthetic */ class C5453a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -255,7 +254,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
     }
 
     private boolean isReadyForPull() {
-        int i = C5453a.a[this.mMode.ordinal()];
+        int i = a.a[this.mMode.ordinal()];
         if (i != 1) {
             if (i != 2) {
                 if (i != 3) {
@@ -287,7 +286,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
     private void pullEvent() {
         int round;
         int i;
-        int[] iArr = C5453a.a;
+        int[] iArr = a.a;
         if (iArr[this.mCurrentMode.ordinal()] != 1) {
             round = Math.round(Math.min(this.mInitialMotionY - this.mLastMotionY, 0.0f) / FRICTION);
             i = this.mHeaderHeight;
@@ -329,7 +328,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
             measureView(this.mFooterLayout);
             this.mFooterHeight = this.mFooterLayout.getMeasuredHeight();
         }
-        int i = C5453a.a[this.mMode.ordinal()];
+        int i = a.a[this.mMode.ordinal()];
         if (i != 1) {
             if (i != 3) {
                 if (i != 4) {
@@ -447,7 +446,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
 
     @Override // com.handmark.pulltorefresh.library.IPullToRefresh
     public final boolean isPullToRefreshOverScrollEnabled() {
-        return Build.VERSION.SDK_INT >= 9 && this.mOverScrollEnabled && C5456a.a(this.mRefreshableView);
+        return Build.VERSION.SDK_INT >= 9 && this.mOverScrollEnabled && com.handmark.pulltorefresh.library.a.a(this.mRefreshableView);
     }
 
     protected abstract boolean isReadyForPullDown();
@@ -526,7 +525,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
 
     /* JADX INFO: Access modifiers changed from: protected */
     public void onPullToRefresh() {
-        int i = C5453a.a[this.mCurrentMode.ordinal()];
+        int i = a.a[this.mCurrentMode.ordinal()];
         if (i == 1) {
             this.mFooterLayout.pullToRefresh();
         } else if (i != 2) {
@@ -544,7 +543,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
 
     /* JADX INFO: Access modifiers changed from: protected */
     public void onReleaseToRefresh() {
-        int i = C5453a.a[this.mCurrentMode.ordinal()];
+        int i = a.a[this.mCurrentMode.ordinal()];
         if (i == 1) {
             this.mFooterLayout.releaseToRefresh();
         } else if (i != 2) {

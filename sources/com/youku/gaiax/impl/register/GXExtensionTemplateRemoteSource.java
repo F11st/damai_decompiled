@@ -38,11 +38,11 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArraySet;
-import kotlin.C8177b;
 import kotlin.Deprecated;
 import kotlin.Lazy;
 import kotlin.Metadata;
-import kotlin.collections.C8212k;
+import kotlin.b;
+import kotlin.collections.k;
 import kotlin.jvm.functions.Function0;
 import org.apache.commons.net.SocketClient;
 import org.jetbrains.annotations.NotNull;
@@ -99,7 +99,7 @@ public class GXExtensionTemplateRemoteSource implements GXRegisterCenter.GXIExte
 
     static {
         Lazy<GXExtensionTemplateRemoteSource> b;
-        b = C8177b.b(new Function0<GXExtensionTemplateRemoteSource>() { // from class: com.youku.gaiax.impl.register.GXExtensionTemplateRemoteSource$Companion$instance$2
+        b = b.b(new Function0<GXExtensionTemplateRemoteSource>() { // from class: com.youku.gaiax.impl.register.GXExtensionTemplateRemoteSource$Companion$instance$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull
@@ -380,7 +380,7 @@ public class GXExtensionTemplateRemoteSource implements GXRegisterCenter.GXIExte
                                 it = it2;
                                 str = str2;
                                 List<IGaiaXRemoteTemplateEntity> templateEntityWithStatusAndAppVersion = getTemplateEntityWithStatusAndAppVersion(iGaiaXRemoteTemplateEntity.getTemplateId(), iGaiaXRemoteTemplateEntity.getTemplateBiz(), onlineStatus, gaiaXRemoteSourceUtils.getAppVersion(), platform);
-                                IGaiaXRemoteTemplateEntity iGaiaXRemoteTemplateEntity2 = templateEntityWithStatusAndAppVersion == null ? null : (IGaiaXRemoteTemplateEntity) C8212k.R(templateEntityWithStatusAndAppVersion);
+                                IGaiaXRemoteTemplateEntity iGaiaXRemoteTemplateEntity2 = templateEntityWithStatusAndAppVersion == null ? null : (IGaiaXRemoteTemplateEntity) k.R(templateEntityWithStatusAndAppVersion);
                                 if (iGaiaXRemoteTemplateEntity2 != null) {
                                     ns0 createTemplateFromBinary = createTemplateFromBinary(iGaiaXRemoteTemplateEntity2);
                                     addTemplateToCache(createTemplateFromBinary);
@@ -575,7 +575,7 @@ public class GXExtensionTemplateRemoteSource implements GXRegisterCenter.GXIExte
         String g2 = yq0.g(jSONObject, "scene.sceneId");
         String g3 = yq0.g(jSONObject, "status");
         List<IGaiaXRemoteTemplateEntity> templateEntityWithStatus = getTemplateEntityWithStatus(g, d, g2, g3);
-        IGaiaXRemoteTemplateEntity iGaiaXRemoteTemplateEntity = templateEntityWithStatus == null ? null : (IGaiaXRemoteTemplateEntity) C8212k.R(templateEntityWithStatus);
+        IGaiaXRemoteTemplateEntity iGaiaXRemoteTemplateEntity = templateEntityWithStatus == null ? null : (IGaiaXRemoteTemplateEntity) k.R(templateEntityWithStatus);
         if (iGaiaXRemoteTemplateEntity == null || !new File(iGaiaXRemoteTemplateEntity.getLocalPath()).exists()) {
             String writeToSD = GaiaXRemoteCacheUtils.INSTANCE.writeToSD(yq0.g(jSONObject, "templateFileData"));
             String g4 = yq0.g(jSONObject, SocialConstants.PARAM_APP_DESC);
@@ -709,7 +709,7 @@ public class GXExtensionTemplateRemoteSource implements GXRegisterCenter.GXIExte
         JSONObject jSONObject = new JSONObject();
         GaiaXRemoteSourceUtils gaiaXRemoteSourceUtils = GaiaXRemoteSourceUtils.INSTANCE;
         List<IGaiaXRemoteTemplateEntity> templateEntityWithStatusAndAppVersion = getTemplateEntityWithStatusAndAppVersion(str2, str, gaiaXRemoteSourceUtils.getOnlineStatus(), gaiaXRemoteSourceUtils.getAppVersion(), gaiaXRemoteSourceUtils.getPlatform());
-        IGaiaXRemoteTemplateEntity iGaiaXRemoteTemplateEntity = templateEntityWithStatusAndAppVersion == null ? null : (IGaiaXRemoteTemplateEntity) C8212k.R(templateEntityWithStatusAndAppVersion);
+        IGaiaXRemoteTemplateEntity iGaiaXRemoteTemplateEntity = templateEntityWithStatusAndAppVersion == null ? null : (IGaiaXRemoteTemplateEntity) k.R(templateEntityWithStatusAndAppVersion);
         if (iGaiaXRemoteTemplateEntity == null) {
             return new JSONObject();
         }
@@ -756,11 +756,11 @@ public class GXExtensionTemplateRemoteSource implements GXRegisterCenter.GXIExte
 
     @Override // com.alibaba.gaiax.GXRegisterCenter.GXIExtensionTemplateSource
     @Nullable
-    public ns0 getTemplate(@NotNull GXTemplateEngine.C3347i c3347i) {
-        b41.i(c3347i, "gxTemplateItem");
-        String b = c3347i.b();
+    public ns0 getTemplate(@NotNull GXTemplateEngine.i iVar) {
+        b41.i(iVar, "gxTemplateItem");
+        String b = iVar.b();
         if (b.length() == 0) {
-            b = c3347i.a();
+            b = iVar.a();
         }
         CopyOnWriteArraySet<ns0> copyOnWriteArraySet = this.remoteTemplateCache.get(b);
         Object obj = null;
@@ -769,7 +769,7 @@ public class GXExtensionTemplateRemoteSource implements GXRegisterCenter.GXIExte
         }
         ArrayList arrayList = new ArrayList();
         for (Object obj2 : copyOnWriteArraySet) {
-            if (b41.d(((ns0) obj2).d(), c3347i.d())) {
+            if (b41.d(((ns0) obj2).d(), iVar.d())) {
                 arrayList.add(obj2);
             }
         }

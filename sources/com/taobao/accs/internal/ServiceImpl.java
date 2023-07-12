@@ -261,7 +261,7 @@ public class ServiceImpl extends ElectionServiceImpl {
         }
         initUt();
         onPingIpp(this.mContext);
-        UTMini.getInstance().commitEvent(66001, GXTemplateEngine.C3338b.STATE_START, UtilityImpl.getProxy(), "PROXY");
+        UTMini.getInstance().commitEvent(66001, GXTemplateEngine.b.STATE_START, UtilityImpl.getProxy(), "PROXY");
         long serviceAliveTime = UtilityImpl.getServiceAliveTime(this.mContext);
         ALog.d(TAG, "getServiceAliveTime", "aliveTime", Long.valueOf(serviceAliveTime));
         if (serviceAliveTime > 20000) {

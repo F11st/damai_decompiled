@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.trade.R$drawable;
@@ -34,13 +33,12 @@ public class OrderDetailPriceViewHolder extends RecyclerView.ViewHolder {
     private Context f;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailPriceViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2203a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OrderDetailAmountDetail a;
 
-        View$OnClickListenerC2203a(OrderDetailAmountDetail orderDetailAmountDetail) {
+        a(OrderDetailAmountDetail orderDetailAmountDetail) {
             this.a = orderDetailAmountDetail;
         }
 
@@ -56,13 +54,12 @@ public class OrderDetailPriceViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailPriceViewHolder$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2204b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OrderDetailAmountDetail a;
 
-        View$OnClickListenerC2204b(OrderDetailAmountDetail orderDetailAmountDetail) {
+        b(OrderDetailAmountDetail orderDetailAmountDetail) {
             this.a = orderDetailAmountDetail;
         }
 
@@ -117,14 +114,14 @@ public class OrderDetailPriceViewHolder extends RecyclerView.ViewHolder {
         }
         if (!TextUtils.isEmpty(orderDetailAmountDetail.icon)) {
             imageView.setVisibility(0);
-            DMImageCreator c = C0504a.b().c(orderDetailAmountDetail.icon);
+            DMImageCreator c = cn.damai.common.image.a.b().c(orderDetailAmountDetail.icon);
             int i = R$drawable.commonbusiness_help_gray_icon;
             c.i(i).c(i).g(imageView);
         } else {
             imageView.setVisibility(8);
         }
-        textView.setOnClickListener(new View$OnClickListenerC2203a(orderDetailAmountDetail));
-        imageView.setOnClickListener(new View$OnClickListenerC2204b(orderDetailAmountDetail));
+        textView.setOnClickListener(new a(orderDetailAmountDetail));
+        imageView.setOnClickListener(new b(orderDetailAmountDetail));
     }
 
     public void b(OrderDetailPricesInfo orderDetailPricesInfo, List<OrderDetailAmountDetail> list) {

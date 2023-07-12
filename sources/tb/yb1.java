@@ -15,18 +15,17 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes7.dex */
 public final class yb1 {
     @NotNull
-    public static final C9955a Companion = new C9955a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yb1$a */
     /* loaded from: classes7.dex */
-    public static final class C9955a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9955a() {
+        private a() {
         }
 
-        public /* synthetic */ C9955a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

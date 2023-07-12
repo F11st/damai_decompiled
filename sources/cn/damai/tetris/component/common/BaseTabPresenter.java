@@ -32,14 +32,13 @@ public class BaseTabPresenter extends BasePresenter<BaseTabContract$Model, BaseT
     private List<ScrollTitleBean> tabs;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.common.BaseTabPresenter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1797a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ BaseTabResultItem.BaseTabBtn a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC1797a(BaseTabResultItem.BaseTabBtn baseTabBtn, int i) {
+        a(BaseTabResultItem.BaseTabBtn baseTabBtn, int i) {
             this.a = baseTabBtn;
             this.b = i;
         }
@@ -60,12 +59,11 @@ public class BaseTabPresenter extends BasePresenter<BaseTabContract$Model, BaseT
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.common.BaseTabPresenter$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1798b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1798b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -130,7 +128,7 @@ public class BaseTabPresenter extends BasePresenter<BaseTabContract$Model, BaseT
                 BaseTabPresenter.this.setRightConerBtn(BaseTabPresenter.this.getModel().getTabLists().get(i), i);
             }
         };
-        this.mOnTabItemClickListener = new View$OnClickListenerC1798b();
+        this.mOnTabItemClickListener = new b();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -144,7 +142,7 @@ public class BaseTabPresenter extends BasePresenter<BaseTabContract$Model, BaseT
         if (list != null && list.size() > 0 && baseTabResultItem.tabMores.get(0) != null && baseTabResultItem.tabMores.get(0).isValid()) {
             BaseTabResultItem.BaseTabBtn baseTabBtn = baseTabResultItem.tabMores.get(0);
             getView().getModuleTitleMoreTextView().setText(baseTabBtn.btnName);
-            getView().getModuleTitleMoreLayout().setOnClickListener(new View$OnClickListenerC1797a(baseTabBtn, i));
+            getView().getModuleTitleMoreLayout().setOnClickListener(new a(baseTabBtn, i));
             getView().getModuleTitleMoreLayout().setVisibility(0);
             return;
         }

@@ -21,12 +21,11 @@ public class PullToRefreshScrollView extends PullToRefreshBase<MyScrollView> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.pull.lib.PullToRefreshScrollView$a */
     /* loaded from: classes.dex */
-    public class C0296a implements PullToRefreshBase.OnRefreshListener {
+    public class a implements PullToRefreshBase.OnRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0296a() {
+        a() {
         }
 
         @Override // cn.damai.baseview.pull.lib.PullToRefreshBase.OnRefreshListener
@@ -42,9 +41,9 @@ public class PullToRefreshScrollView extends PullToRefreshBase<MyScrollView> {
 
     public PullToRefreshScrollView(Context context) {
         super(context);
-        C0296a c0296a = new C0296a();
-        this.defaultOnRefreshListener = c0296a;
-        setOnRefreshListener(c0296a);
+        a aVar = new a();
+        this.defaultOnRefreshListener = aVar;
+        setOnRefreshListener(aVar);
     }
 
     @Override // cn.damai.baseview.pull.lib.PullToRefreshBase
@@ -86,15 +85,15 @@ public class PullToRefreshScrollView extends PullToRefreshBase<MyScrollView> {
 
     public PullToRefreshScrollView(Context context, int i) {
         super(context, i);
-        C0296a c0296a = new C0296a();
-        this.defaultOnRefreshListener = c0296a;
-        setOnRefreshListener(c0296a);
+        a aVar = new a();
+        this.defaultOnRefreshListener = aVar;
+        setOnRefreshListener(aVar);
     }
 
     public PullToRefreshScrollView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        C0296a c0296a = new C0296a();
-        this.defaultOnRefreshListener = c0296a;
-        setOnRefreshListener(c0296a);
+        a aVar = new a();
+        this.defaultOnRefreshListener = aVar;
+        setOnRefreshListener(aVar);
     }
 }

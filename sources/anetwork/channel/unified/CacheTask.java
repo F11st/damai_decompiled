@@ -1,7 +1,5 @@
 package anetwork.channel.unified;
 
-import anet.channel.fulltrace.C0179a;
-import anet.channel.request.C0193a;
 import anet.channel.statist.RequestStatistic;
 import anet.channel.util.ALog;
 import anetwork.channel.aidl.DefaultFinishEvent;
@@ -17,12 +15,12 @@ public class CacheTask implements IUnifiedTask {
     private static final String TAG = "anet.CacheTask";
     private Cache cache;
     private volatile boolean isCanceled = false;
-    private C0254b rc;
+    private b rc;
 
-    public CacheTask(C0254b c0254b, Cache cache) {
+    public CacheTask(b bVar, Cache cache) {
         this.rc = null;
         this.cache = null;
-        this.rc = c0254b;
+        this.rc = bVar;
         this.cache = cache;
     }
 
@@ -43,7 +41,7 @@ public class CacheTask implements IUnifiedTask {
         RequestStatistic requestStatistic = z12Var.f;
         if (this.cache != null) {
             String h = z12Var.h();
-            C0193a b = this.rc.a.b();
+            anet.channel.request.a b = this.rc.a.b();
             String str = b.g().get("Cache-Control");
             boolean equals2 = "no-store".equals(str);
             long currentTimeMillis = System.currentTimeMillis();
@@ -78,11 +76,11 @@ public class CacheTask implements IUnifiedTask {
                     requestStatistic.msg = "SUCCESS";
                     requestStatistic.protocolType = "cache";
                     requestStatistic.rspEnd = currentTimeMillis2;
-                    C0179a.f().log(requestStatistic.span, "netRspRecvEnd", null);
+                    anet.channel.fulltrace.a.f().log(requestStatistic.span, "netRspRecvEnd", null);
                     requestStatistic.processTime = currentTimeMillis2 - requestStatistic.start;
                     if (ALog.g(2)) {
-                        C0254b c0254b = this.rc;
-                        ALog.f(TAG, "hit fresh cache", c0254b.c, "URL", c0254b.a.e().n());
+                        b bVar = this.rc;
+                        ALog.f(TAG, "hit fresh cache", bVar.c, "URL", bVar.a.e().n());
                     }
                     this.rc.b.onResponseCode(200, entry.responseHeaders);
                     Callback callback = this.rc.b;

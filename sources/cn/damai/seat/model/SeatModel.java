@@ -20,7 +20,7 @@ import cn.damai.seat.bean.UtStatus;
 import cn.damai.seat.bean.biz.CompressSeatStatus;
 import cn.damai.seat.bean.biz.SeatDynamic;
 import cn.damai.seat.contract.SeatContract;
-import cn.damai.seat.helper.C1667b;
+import cn.damai.seat.helper.b;
 import cn.damai.seat.listener.Action;
 import cn.damai.seat.listener.OnSubmitListener;
 import cn.damai.seat.listener.RegionSeatRequestChecker;
@@ -63,7 +63,7 @@ public class SeatModel extends SeatModelImpl implements SeatContract.SeatModel, 
     private RegionData mRegionData;
     private String mRegionId;
     private SeatProfile mSeat;
-    private C1667b mSeatBasket;
+    private b mSeatBasket;
     private w82 mSeatCombiner;
     private h61 mUiListener = new h61();
 
@@ -198,9 +198,9 @@ public class SeatModel extends SeatModelImpl implements SeatContract.SeatModel, 
                 r.q(this.mOption);
                 r.b(this.mOption);
             }
-            C1667b c1667b = this.mSeatBasket;
-            if (c1667b != null) {
-                c1667b.A();
+            b bVar = this.mSeatBasket;
+            if (bVar != null) {
+                bVar.A();
             }
         }
         w82 w82Var = this.mSeatCombiner;
@@ -243,7 +243,7 @@ public class SeatModel extends SeatModelImpl implements SeatContract.SeatModel, 
         if (regionData != null && regionData.checkBaseValid() && this.mRegion != null) {
             this.mRegionId = this.mRegion.id + "";
             newIconProvider(3);
-            C1667b a = tbParams.isOpenSeatDirect() ? ub.a(tbParams.basketNo, this.mParams) : ub.b(this.mParams);
+            b a = tbParams.isOpenSeatDirect() ? ub.a(tbParams.basketNo, this.mParams) : ub.b(this.mParams);
             this.mSeatBasket = a;
             RegionData regionData2 = this.mRegionData;
             ArrayList<Region> arrayList = regionData2.ri.regionList;

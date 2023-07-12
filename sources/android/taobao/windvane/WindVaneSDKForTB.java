@@ -26,8 +26,8 @@ import android.taobao.windvane.util.TaoLog;
 import android.taobao.windvane.webview.WVSchemeInterceptService;
 import com.alibaba.motu.crashreporter.MotuCrashReporter;
 import com.taobao.application.common.Apm;
-import com.taobao.application.common.C6673b;
 import com.taobao.application.common.IAppPreferences;
+import com.taobao.application.common.b;
 import java.util.concurrent.atomic.AtomicBoolean;
 import tb.ts2;
 
@@ -85,8 +85,8 @@ public class WindVaneSDKForTB {
             MotuCrashReporter.getInstance().setCrashCaughtListener(new ts2());
             try {
                 WVEventService.getInstance().addEventListener(new OrangeRegisterEventLister(context), WVEventService.WV_FORWARD_EVENT);
-                final IAppPreferences d = C6673b.d();
-                C6673b.a(new Apm.OnApmEventListener() { // from class: android.taobao.windvane.WindVaneSDKForTB.1
+                final IAppPreferences d = b.d();
+                b.a(new Apm.OnApmEventListener() { // from class: android.taobao.windvane.WindVaneSDKForTB.1
                     @Override // com.taobao.application.common.IApmEventListener
                     public void onEvent(int i2) {
                         boolean unused = WindVaneSDKForTB.isForeground = IAppPreferences.this.getBoolean("isInBackground", false);

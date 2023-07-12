@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0525a;
+import cn.damai.common.user.a;
 import cn.damai.homepage.R$id;
 import cn.damai.tetris.DMMtopWarningListener;
 import cn.damai.tetris.component.star.content.base.bean.ContentFreeRootBean;
@@ -43,7 +43,7 @@ public class StarSecondFragment extends AbsFragmentV2 implements View.OnClickLis
     private boolean mCanLoadMore;
     private DrObj mDrObj;
     private ContentFreeRootBean mFreeBean;
-    public C0525a.C0527b mUTBuilder;
+    public a.b mUTBuilder;
     private ContentFreeRootBean mVipBean;
     ViewGroup navBar;
     ViewGroup parent;
@@ -383,7 +383,7 @@ public class StarSecondFragment extends AbsFragmentV2 implements View.OnClickLis
         hashMap.put(l8.KEY_ARTIST_ID, this.mArtistId + "");
         baseResponse.globalConfig.putBuzUTMap(hashMap);
         if (baseResponse.globalConfig != null) {
-            this.mUTBuilder = new C0525a.C0527b().i(baseResponse.globalConfig.pageName);
+            this.mUTBuilder = new a.b().i(baseResponse.globalConfig.pageName);
         }
         updateB(baseResponse);
     }

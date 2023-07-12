@@ -124,7 +124,7 @@ public class gr {
     /* JADX WARN: Multi-variable type inference failed */
     public static byte[] b(byte[] bArr, int i, int i2, int i3) throws IOException {
         ByteArrayOutputStream byteArrayOutputStream;
-        C4571a c4571a;
+        a aVar;
         GZIPOutputStream gZIPOutputStream;
         Objects.requireNonNull(bArr, "Cannot serialize a null array.");
         if (i < 0) {
@@ -138,26 +138,26 @@ public class gr {
                 try {
                     byteArrayOutputStream = new ByteArrayOutputStream();
                     try {
-                        c4571a = new C4571a(byteArrayOutputStream, i3 | 1);
+                        aVar = new a(byteArrayOutputStream, i3 | 1);
                     } catch (IOException e2) {
                         e = e2;
-                        c4571a = null;
+                        aVar = null;
                         gZIPOutputStream = null;
                     } catch (Throwable th) {
                         th = th;
-                        c4571a = null;
+                        aVar = null;
                     }
                 } catch (IOException e3) {
                     e = e3;
-                    c4571a = null;
+                    aVar = null;
                     gZIPOutputStream = null;
                 } catch (Throwable th2) {
                     th = th2;
                     byteArrayOutputStream = 0;
-                    c4571a = null;
+                    aVar = null;
                 }
                 try {
-                    gZIPOutputStream = new GZIPOutputStream(c4571a);
+                    gZIPOutputStream = new GZIPOutputStream(aVar);
                     try {
                         gZIPOutputStream.write(bArr, i, i2);
                         gZIPOutputStream.close();
@@ -166,7 +166,7 @@ public class gr {
                         } catch (Exception unused) {
                         }
                         try {
-                            c4571a.close();
+                            aVar.close();
                         } catch (Exception unused2) {
                         }
                         try {
@@ -188,7 +188,7 @@ public class gr {
                             } catch (Exception unused4) {
                             }
                             try {
-                                c4571a.close();
+                                aVar.close();
                             } catch (Exception unused5) {
                             }
                             try {
@@ -201,7 +201,7 @@ public class gr {
                         th = th4;
                         gZIPOutputStream2 = gZIPOutputStream;
                         gZIPOutputStream2.close();
-                        c4571a.close();
+                        aVar.close();
                         byteArrayOutputStream.close();
                         throw th;
                     }
@@ -211,7 +211,7 @@ public class gr {
                 } catch (Throwable th5) {
                     th = th5;
                     gZIPOutputStream2.close();
-                    c4571a.close();
+                    aVar.close();
                     byteArrayOutputStream.close();
                     throw th;
                 }
@@ -276,9 +276,8 @@ public class gr {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.gr$a */
     /* loaded from: classes10.dex */
-    public static class C4571a extends FilterOutputStream {
+    public static class a extends FilterOutputStream {
         private boolean a;
         private int b;
         private byte[] c;
@@ -290,7 +289,7 @@ public class gr {
         private int i;
         private byte[] j;
 
-        public C4571a(OutputStream outputStream, int i) {
+        public a(OutputStream outputStream, int i) {
             super(outputStream);
             this.f = (i & 8) != 0;
             boolean z = (i & 1) != 0;

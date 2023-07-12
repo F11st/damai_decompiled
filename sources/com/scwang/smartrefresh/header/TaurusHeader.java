@@ -75,9 +75,8 @@ public class TaurusHeader extends InternalAbstract implements RefreshHeader {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.TaurusHeader$a */
     /* loaded from: classes6.dex */
-    public static /* synthetic */ class C6163a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -107,7 +106,7 @@ public class TaurusHeader extends InternalAbstract implements RefreshHeader {
     }
 
     private boolean checkCurrentAnimationPart(AnimationPart animationPart) {
-        int i = C6163a.a[animationPart.ordinal()];
+        int i = a.a[animationPart.ordinal()];
         return i != 1 ? (i == 2 || i == 3) ? this.mLoadingAnimationTime < ((float) getAnimationTimePart(animationPart)) : i == 4 && this.mLoadingAnimationTime > ((float) getAnimationTimePart(AnimationPart.THIRD)) : this.mLoadingAnimationTime < ((float) getAnimationTimePart(AnimationPart.FOURTH));
     }
 
@@ -336,7 +335,7 @@ public class TaurusHeader extends InternalAbstract implements RefreshHeader {
     private float getAnimationPartValue(AnimationPart animationPart) {
         float f;
         float animationTimePart;
-        int i = C6163a.a[animationPart.ordinal()];
+        int i = a.a[animationPart.ordinal()];
         if (i != 1) {
             if (i == 2) {
                 AnimationPart animationPart2 = AnimationPart.FOURTH;
@@ -357,7 +356,7 @@ public class TaurusHeader extends InternalAbstract implements RefreshHeader {
     }
 
     private int getAnimationTimePart(AnimationPart animationPart) {
-        int i = C6163a.a[animationPart.ordinal()];
+        int i = a.a[animationPart.ordinal()];
         if (i != 2) {
             if (i != 3) {
                 return i != 4 ? 0 : 20;

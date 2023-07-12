@@ -9,7 +9,7 @@ import com.android.alibaba.ip.runtime.IpChange;
 /* loaded from: classes13.dex */
 public class SoFileInfo implements Parcelable {
     private static transient /* synthetic */ IpChange $ipChange;
-    public static final Parcelable.Creator<SoFileInfo> CREATOR = new C0521a();
+    public static final Parcelable.Creator<SoFileInfo> CREATOR = new a();
     private int downType;
     private String fileMD5;
     private boolean force;
@@ -29,12 +29,11 @@ public class SoFileInfo implements Parcelable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.soloader.SoFileInfo$a */
     /* loaded from: classes13.dex */
-    public class C0521a implements Parcelable.Creator<SoFileInfo> {
+    public class a implements Parcelable.Creator<SoFileInfo> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0521a() {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

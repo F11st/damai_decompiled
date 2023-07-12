@@ -30,11 +30,11 @@ public final class kn {
         try {
             if (cls != null) {
                 String str2 = (String) ka.a(cls, "getVersion", (Object[]) null, (Class<?>[]) null);
-                a2 = new gm.C4569a("3dmap", str2, "AMAP_SDK_Android_Map_" + str2).a(b).a();
+                a2 = new gm.a("3dmap", str2, "AMAP_SDK_Android_Map_" + str2).a(b).a();
             } else {
                 cls = Class.forName("com.amap.api.maps2d.MapsInitializer");
                 String str3 = (String) ka.a(cls, "getVersion", (Object[]) null, (Class<?>[]) null);
-                a2 = new gm.C4569a("2dmap", str3, "AMAP_SDK_Android_2DMap_" + str3).a(c).a();
+                a2 = new gm.a("2dmap", str3, "AMAP_SDK_Android_2DMap_" + str3).a(c).a();
             }
             a = a2;
         } catch (Throwable unused2) {
@@ -48,7 +48,7 @@ public final class kn {
             if (cls2 != null) {
                 try {
                     String str4 = (String) ka.a(cls2, "getVersion", (Object[]) null, (Class<?>[]) null);
-                    a = new gm.C4569a(AgooConstants.MESSAGE_TRACE, str4, "AMAP_TRACE_Android_" + str4).a(d).a();
+                    a = new gm.a(AgooConstants.MESSAGE_TRACE, str4, "AMAP_TRACE_Android_" + str4).a(d).a();
                 } catch (Throwable unused4) {
                 }
             }

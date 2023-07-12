@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.screenshot.ScreenShotDetector;
 import cn.damai.homepage.R$id;
@@ -125,7 +125,7 @@ public class MyFeedBackListActivity extends DamaiBaseActivity<MyFeedBackListPres
         if (myFeedBackDO == null) {
             return;
         }
-        C0529c.e().x(vf1.x().k0(myFeedBackDO.index));
+        c.e().x(vf1.x().k0(myFeedBackDO.index));
         Bundle bundle = new Bundle();
         bundle.putString("feedbackId", myFeedBackDO.feedBackId);
         DMNav.from(this).withExtras(bundle).toUri(NavUri.b("my_feed_back_detail"));

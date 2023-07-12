@@ -2,8 +2,8 @@ package com.google.common.collect;
 
 import com.google.common.annotations.GwtCompatible;
 import com.google.common.annotations.GwtIncompatible;
-import com.google.common.base.C4834e;
 import com.google.common.base.Equivalence;
+import com.google.common.base.e;
 import com.google.common.collect.MapMakerInternalMap;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import java.util.concurrent.ConcurrentHashMap;
@@ -61,17 +61,17 @@ public final class MapMaker {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public Equivalence<Object> d() {
-        return (Equivalence) C4834e.a(this.f, e().defaultEquivalence());
+        return (Equivalence) com.google.common.base.e.a(this.f, e().defaultEquivalence());
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public MapMakerInternalMap.Strength e() {
-        return (MapMakerInternalMap.Strength) C4834e.a(this.d, MapMakerInternalMap.Strength.STRONG);
+        return (MapMakerInternalMap.Strength) com.google.common.base.e.a(this.d, MapMakerInternalMap.Strength.STRONG);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public MapMakerInternalMap.Strength f() {
-        return (MapMakerInternalMap.Strength) C4834e.a(this.e, MapMakerInternalMap.Strength.STRONG);
+        return (MapMakerInternalMap.Strength) com.google.common.base.e.a(this.e, MapMakerInternalMap.Strength.STRONG);
     }
 
     @CanIgnoreReturnValue
@@ -130,7 +130,7 @@ public final class MapMaker {
     }
 
     public String toString() {
-        C4834e.C4836b b = C4834e.b(this);
+        e.b b = com.google.common.base.e.b(this);
         int i = this.b;
         if (i != -1) {
             b.b("initialCapacity", i);

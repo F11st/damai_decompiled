@@ -218,7 +218,7 @@ public class GiftNumSelectView extends LinearLayout {
         this.mGiftNumData = new ArrayList();
         this.isLocked = false;
         this.mContext = context;
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ykl_gift_num_select_layout, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_ykl_gift_num_select_layout, (ViewGroup) this, true);
         this.mNumListView = (RecyclerView) findViewById(R.id.num_list);
         this.mNumListView.setLayoutManager(new LinearLayoutManager(context));
         this.mNumListLayout = (LinearLayout) findViewById(R.id.num_list_layout);

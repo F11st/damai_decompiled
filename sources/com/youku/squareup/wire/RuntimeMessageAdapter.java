@@ -1,6 +1,6 @@
 package com.youku.squareup.wire;
 
-import com.alipay.sdk.m.n.C4250a;
+import com.alipay.sdk.m.n.a;
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
 import com.youku.squareup.wire.Message;
 import com.youku.squareup.wire.Message.Builder;
@@ -182,7 +182,7 @@ final class RuntimeMessageAdapter<M extends Message<M, B>, B extends Message.Bui
             if (obj != null) {
                 sb.append(AVFSCacheConstants.COMMA_SEP);
                 sb.append(fieldBinding.name);
-                sb.append(C4250a.h);
+                sb.append(a.h);
                 if (fieldBinding.redacted) {
                     obj = REDACTED;
                 }

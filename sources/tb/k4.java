@@ -20,17 +20,16 @@ public class k4 {
     public static final int MEDIUM_DEVICE = 1;
     private Context a;
     private Handler b;
-    private volatile C9331c c;
-    private volatile C9330b d;
+    private volatile c c;
+    private volatile b d;
     private volatile AliHACPUTracker e;
-    private volatile C9332d f;
+    private volatile d f;
     private volatile l4 g;
-    private volatile C9333e h;
+    private volatile e h;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.k4$b */
     /* loaded from: classes9.dex */
-    public class C9330b {
+    public class b {
         public int e;
         public int a = 0;
         public float b = 0.0f;
@@ -39,28 +38,26 @@ public class k4 {
         public int f = -1;
         public int g = -1;
 
-        public C9330b(k4 k4Var) {
+        public b(k4 k4Var) {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.k4$c */
     /* loaded from: classes9.dex */
-    public class C9331c {
+    public class c {
         public float a = 0.0f;
         public int b = 0;
         public int c = 0;
         public String d = "0";
         public int e = -1;
 
-        public C9331c(k4 k4Var) {
+        public c(k4 k4Var) {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.k4$d */
     /* loaded from: classes9.dex */
-    public class C9332d {
+    public class d {
         public long a;
         public long b;
         public long c;
@@ -73,27 +70,25 @@ public class k4 {
         public int j = -1;
         public int k = -1;
 
-        public C9332d(k4 k4Var) {
+        public d(k4 k4Var) {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.k4$e */
     /* loaded from: classes9.dex */
-    public class C9333e {
+    public class e {
         public int b;
         public int c;
         public int a = -1;
         public int d = -1;
 
-        public C9333e(k4 k4Var) {
+        public e(k4 k4Var) {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.k4$f */
     /* loaded from: classes9.dex */
-    private static class C9334f {
+    private static class f {
         private static k4 a = new k4();
     }
 
@@ -116,12 +111,12 @@ public class k4 {
     }
 
     public static k4 d() {
-        return C9334f.a;
+        return f.a;
     }
 
-    public C9330b b() {
+    public b b() {
         if (this.a == null) {
-            return new C9330b(this);
+            return new b(this);
         }
         if (this.d == null) {
             i4 i4Var = new i4();
@@ -129,7 +124,7 @@ public class k4 {
             if (this.e == null) {
                 this.e = new AliHACPUTracker(Process.myPid(), this.b);
             }
-            this.d = new C9330b(this);
+            this.d = new b(this);
             this.d.a = i4Var.a;
             this.d.b = i4Var.c;
             this.d.e = i4Var.e;
@@ -141,16 +136,16 @@ public class k4 {
         return this.d;
     }
 
-    public C9331c c() {
+    public c c() {
         if (this.a == null) {
-            return new C9331c(this);
+            return new c(this);
         }
         if (this.c == null) {
-            j4 a = j4.a(this.a);
-            this.c = new C9331c(this);
-            this.c.a = a.a;
-            this.c.c = a.c;
-            this.c.b = a.b;
+            j4 a2 = j4.a(this.a);
+            this.c = new c(this);
+            this.c.a = a2.a;
+            this.c.c = a2.c;
+            this.c.b = a2.b;
             m4 m4Var = new m4();
             m4Var.a(this.a);
             this.c.d = String.valueOf(m4Var.a);
@@ -159,30 +154,30 @@ public class k4 {
         return this.c;
     }
 
-    public C9332d e() {
+    public d e() {
         if (this.a == null) {
-            return new C9332d(this);
+            return new d(this);
         }
         if (this.f == null) {
-            this.f = new C9332d(this);
+            this.f = new d(this);
             this.g = new l4();
         }
         try {
-            long[] a = this.g.a();
-            this.f.a = a[0];
-            this.f.b = a[1];
-            long[] b = this.g.b();
-            this.f.c = b[0];
-            this.f.d = b[1];
-            int i = b[0] != 0 ? (int) ((b[1] * 100.0d) / b[0]) : -1;
-            long[] c = this.g.c();
-            this.f.e = c[0];
-            this.f.f = c[1];
-            int i2 = c[0] != 0 ? (int) ((c[1] * 100.0d) / c[0]) : -1;
-            long[] f = this.g.f(this.a, Process.myPid());
-            this.f.g = f[0];
-            this.f.h = f[1];
-            this.f.i = f[2];
+            long[] a2 = this.g.a();
+            this.f.a = a2[0];
+            this.f.b = a2[1];
+            long[] b2 = this.g.b();
+            this.f.c = b2[0];
+            this.f.d = b2[1];
+            int i = b2[0] != 0 ? (int) ((b2[1] * 100.0d) / b2[0]) : -1;
+            long[] c2 = this.g.c();
+            this.f.e = c2[0];
+            this.f.f = c2[1];
+            int i2 = c2[0] != 0 ? (int) ((c2[1] * 100.0d) / c2[0]) : -1;
+            long[] f2 = this.g.f(this.a, Process.myPid());
+            this.f.g = f2[0];
+            this.f.h = f2[1];
+            this.f.i = f2[2];
             this.f.j = a((int) this.f.a, HttpRequest.DEFAULT_MAX_LENGTH, 2621440);
             this.f.k = Math.round((a(100 - i, 70, 50, 30) + a(100 - i2, 60, 40, 20)) / 2.0f);
         } catch (Throwable th) {
@@ -192,12 +187,12 @@ public class k4 {
     }
 
     @Deprecated
-    public C9333e f() {
+    public e f() {
         if (this.a == null) {
-            return new C9333e(this);
+            return new e(this);
         }
         if (this.h == null) {
-            this.h = new C9333e(this);
+            this.h = new e(this);
             if (this.f == null) {
                 e();
             }

@@ -10,16 +10,16 @@ import android.os.Message;
 import android.text.TextUtils;
 import androidx.fragment.app.Fragment;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
-import com.tencent.connect.auth.C7048c;
 import com.tencent.connect.auth.QQToken;
+import com.tencent.connect.auth.c;
 import com.tencent.connect.common.Constants;
 import com.tencent.open.TDialog;
 import com.tencent.open.log.SLog;
-import com.tencent.open.utils.C7117f;
-import com.tencent.open.utils.C7119g;
-import com.tencent.open.utils.C7123k;
-import com.tencent.open.utils.C7126m;
 import com.tencent.open.utils.HttpUtils;
+import com.tencent.open.utils.f;
+import com.tencent.open.utils.g;
+import com.tencent.open.utils.k;
+import com.tencent.open.utils.m;
 import com.tencent.tauth.IRequestListener;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.UiError;
@@ -38,7 +38,7 @@ public abstract class BaseApi {
     public static String installChannel;
     public static boolean isOEM;
     public static String registerChannel;
-    protected C7048c b;
+    protected c b;
     protected QQToken c;
 
     /* compiled from: Taobao */
@@ -49,7 +49,7 @@ public abstract class BaseApi {
 
         public TempRequestListener(IUiListener iUiListener) {
             this.b = iUiListener;
-            this.c = new Handler(C7119g.a().getMainLooper()) { // from class: com.tencent.connect.common.BaseApi.TempRequestListener.1
+            this.c = new Handler(g.a().getMainLooper()) { // from class: com.tencent.connect.common.BaseApi.TempRequestListener.1
                 @Override // android.os.Handler
                 public void handleMessage(Message message) {
                     if (message.what == 0) {
@@ -126,8 +126,8 @@ public abstract class BaseApi {
         }
     }
 
-    public BaseApi(C7048c c7048c, QQToken qQToken) {
-        this.b = c7048c;
+    public BaseApi(c cVar, QQToken qQToken) {
+        this.b = cVar;
         this.c = qQToken;
     }
 
@@ -136,7 +136,7 @@ public abstract class BaseApi {
         Bundle bundle = new Bundle();
         bundle.putString("format", Preloader.KEY_JSON);
         bundle.putString("status_os", Build.VERSION.getRELEASE());
-        bundle.putString("status_machine", C7117f.a().c(C7119g.a()));
+        bundle.putString("status_machine", f.a().c(g.a()));
         bundle.putString("status_version", Build.VERSION.SDK);
         bundle.putString("sdkv", Constants.SDK_VERSION);
         bundle.putString("sdkp", "a");
@@ -146,7 +146,7 @@ public abstract class BaseApi {
             bundle.putString("oauth_consumer_key", this.c.getAppId());
             bundle.putString("openid", this.c.getOpenId());
         }
-        SharedPreferences sharedPreferences = C7119g.a().getSharedPreferences(Constants.PREFERENCE_PF, 0);
+        SharedPreferences sharedPreferences = g.a().getSharedPreferences(Constants.PREFERENCE_PF, 0);
         if (isOEM) {
             bundle.putString(Constants.PARAM_PLATFORM_ID, "desktop_m_qq-" + installChannel + "-android-" + registerChannel + "-" + businessId);
         } else {
@@ -168,7 +168,7 @@ public abstract class BaseApi {
             bundle.putString("hopenid", openId);
         }
         bundle.putString("platform", "androidqz");
-        SharedPreferences sharedPreferences = C7119g.a().getSharedPreferences(Constants.PREFERENCE_PF, 0);
+        SharedPreferences sharedPreferences = g.a().getSharedPreferences(Constants.PREFERENCE_PF, 0);
         if (isOEM) {
             bundle.putString(Constants.PARAM_PLATFORM_ID, "desktop_m_qq-" + installChannel + "-android-" + registerChannel + "-" + businessId);
         } else {
@@ -183,18 +183,18 @@ public abstract class BaseApi {
     /* JADX INFO: Access modifiers changed from: protected */
     public Intent c() {
         Intent intent = new Intent();
-        if (C7126m.c(C7119g.a())) {
+        if (m.c(g.a())) {
             intent.setClassName(Constants.PACKAGE_QQ_PAD, "com.tencent.open.agent.AgentActivity");
-            if (C7123k.c(C7119g.a(), intent)) {
+            if (k.c(g.a(), intent)) {
                 return intent;
             }
         }
         intent.setClassName("com.tencent.mobileqq", "com.tencent.open.agent.AgentActivity");
-        if (C7123k.c(C7119g.a(), intent)) {
+        if (k.c(g.a(), intent)) {
             return intent;
         }
         intent.setClassName(Constants.PACKAGE_TIM, "com.tencent.open.agent.AgentActivity");
-        if (C7123k.c(C7119g.a(), intent)) {
+        if (k.c(g.a(), intent)) {
             return intent;
         }
         return null;
@@ -232,18 +232,18 @@ public abstract class BaseApi {
 
     protected Intent b(String str) {
         Intent intent = new Intent();
-        if (C7126m.c(C7119g.a())) {
+        if (m.c(g.a())) {
             intent.setClassName(Constants.PACKAGE_QQ_PAD, str);
-            if (C7123k.a(C7119g.a(), intent)) {
+            if (k.a(g.a(), intent)) {
                 return intent;
             }
         }
         intent.setClassName("com.tencent.mobileqq", str);
-        if (C7123k.a(C7119g.a(), intent)) {
+        if (k.a(g.a(), intent)) {
             return intent;
         }
         intent.setClassName(Constants.PACKAGE_TIM, str);
-        if (C7123k.a(C7119g.a(), intent)) {
+        if (k.a(g.a(), intent)) {
             return intent;
         }
         return null;
@@ -265,16 +265,16 @@ public abstract class BaseApi {
             a(sb, "app_id", appId);
         }
         if (!TextUtils.isEmpty(openId)) {
-            a(sb, Constants.JumpUrlConstants.URL_KEY_OPENID, C7126m.k(openId));
+            a(sb, Constants.JumpUrlConstants.URL_KEY_OPENID, m.k(openId));
         }
-        String a = C7126m.a(activity);
+        String a = m.a(activity);
         if (!TextUtils.isEmpty(a)) {
             if (a.length() > 20) {
                 a = a.substring(0, 20) + "...";
             }
-            a(sb, "app_name", C7126m.k(a));
+            a(sb, "app_name", m.k(a));
         }
-        a(sb, "sdk_version", C7126m.k(Constants.SDK_VERSION));
+        a(sb, "sdk_version", m.k(Constants.SDK_VERSION));
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -282,7 +282,7 @@ public abstract class BaseApi {
         sb.append("&");
         sb.append(str);
         sb.append("=");
-        sb.append(C7126m.f(str2));
+        sb.append(m.f(str2));
     }
 
     private Intent a(Activity activity, Intent intent, Map<String, Object> map) {
@@ -344,7 +344,7 @@ public abstract class BaseApi {
     /* JADX INFO: Access modifiers changed from: protected */
     public boolean a(Intent intent) {
         if (intent != null) {
-            return C7123k.b(C7119g.a(), intent);
+            return k.b(g.a(), intent);
         }
         return false;
     }

@@ -1,8 +1,8 @@
 package anet.channel.statist;
 
 import anet.channel.status.NetworkStatusHelper;
-import anet.channel.strategy.C0214b;
 import anet.channel.strategy.ConnProtocol;
+import anet.channel.strategy.b;
 import anet.channel.util.Inet64Util;
 
 /* compiled from: Taobao */
@@ -46,11 +46,11 @@ public class HorseRaceStat extends StatObject {
     @Dimension
     public volatile int ipStackType = Inet64Util.n();
 
-    public HorseRaceStat(String str, C0214b.C0224j c0224j) {
+    public HorseRaceStat(String str, b.j jVar) {
         this.host = str;
-        this.ip = c0224j.a;
-        this.port = c0224j.b.a;
-        this.protocol = ConnProtocol.valueOf(c0224j.b).name;
-        this.path = c0224j.c;
+        this.ip = jVar.a;
+        this.port = jVar.b.a;
+        this.protocol = ConnProtocol.valueOf(jVar.b).name;
+        this.path = jVar.c;
     }
 }

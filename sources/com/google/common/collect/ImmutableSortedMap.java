@@ -39,18 +39,17 @@ public final class ImmutableSortedMap<K, V> extends ImmutableSortedMapFauxveride
 
         @Override // com.google.common.collect.ImmutableMap.SerializedForm
         Object readResolve() {
-            return createMap(new C4993b(this.comparator));
+            return createMap(new b(this.comparator));
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableSortedMap$a */
     /* loaded from: classes10.dex */
-    public static class C4992a implements Comparator<Map.Entry<K, V>> {
+    public static class a implements Comparator<Map.Entry<K, V>> {
         final /* synthetic */ Comparator a;
 
-        C4992a(Comparator comparator) {
+        a(Comparator comparator) {
             this.a = comparator;
         }
 
@@ -62,27 +61,26 @@ public final class ImmutableSortedMap<K, V> extends ImmutableSortedMapFauxveride
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableSortedMap$b */
     /* loaded from: classes10.dex */
-    public static class C4993b<K, V> extends ImmutableMap.C4977b<K, V> {
+    public static class b<K, V> extends ImmutableMap.b<K, V> {
         private transient Object[] e;
         private transient Object[] f;
         private final Comparator<? super K> g;
 
-        public C4993b(Comparator<? super K> comparator) {
+        public b(Comparator<? super K> comparator) {
             this(comparator, 4);
         }
 
         private void b(int i) {
             Object[] objArr = this.e;
             if (i > objArr.length) {
-                int e = ImmutableCollection.AbstractC4968b.e(objArr.length, i);
+                int e = ImmutableCollection.b.e(objArr.length, i);
                 this.e = Arrays.copyOf(this.e, e);
                 this.f = Arrays.copyOf(this.f, e);
             }
         }
 
-        @Override // com.google.common.collect.ImmutableMap.C4977b
+        @Override // com.google.common.collect.ImmutableMap.b
         /* renamed from: h */
         public ImmutableSortedMap<K, V> a() {
             int i;
@@ -107,12 +105,12 @@ public final class ImmutableSortedMap<K, V> extends ImmutableSortedMapFauxveride
             return ImmutableSortedMap.emptyMap(this.g);
         }
 
-        @Override // com.google.common.collect.ImmutableMap.C4977b
+        @Override // com.google.common.collect.ImmutableMap.b
         @CanIgnoreReturnValue
         /* renamed from: i */
-        public C4993b<K, V> c(K k, V v) {
+        public b<K, V> c(K k, V v) {
             b(this.c + 1);
-            C5191k.a(k, v);
+            k.a(k, v);
             Object[] objArr = this.e;
             int i = this.c;
             objArr[i] = k;
@@ -121,32 +119,32 @@ public final class ImmutableSortedMap<K, V> extends ImmutableSortedMapFauxveride
             return this;
         }
 
-        @Override // com.google.common.collect.ImmutableMap.C4977b
+        @Override // com.google.common.collect.ImmutableMap.b
         @CanIgnoreReturnValue
         /* renamed from: j */
-        public C4993b<K, V> d(Map.Entry<? extends K, ? extends V> entry) {
+        public b<K, V> d(Map.Entry<? extends K, ? extends V> entry) {
             super.d(entry);
             return this;
         }
 
-        @Override // com.google.common.collect.ImmutableMap.C4977b
+        @Override // com.google.common.collect.ImmutableMap.b
         @CanIgnoreReturnValue
         @Beta
         /* renamed from: k */
-        public C4993b<K, V> e(Iterable<? extends Map.Entry<? extends K, ? extends V>> iterable) {
+        public b<K, V> e(Iterable<? extends Map.Entry<? extends K, ? extends V>> iterable) {
             super.e(iterable);
             return this;
         }
 
-        @Override // com.google.common.collect.ImmutableMap.C4977b
+        @Override // com.google.common.collect.ImmutableMap.b
         @CanIgnoreReturnValue
         /* renamed from: l */
-        public C4993b<K, V> f(Map<? extends K, ? extends V> map) {
+        public b<K, V> f(Map<? extends K, ? extends V> map) {
             super.f(map);
             return this;
         }
 
-        private C4993b(Comparator<? super K> comparator, int i) {
+        private b(Comparator<? super K> comparator, int i) {
             this.g = (Comparator) du1.p(comparator);
             this.e = new Object[i];
             this.f = new Object[i];
@@ -205,7 +203,7 @@ public final class ImmutableSortedMap<K, V> extends ImmutableSortedMapFauxveride
     }
 
     private static <K, V> ImmutableSortedMap<K, V> fromEntries(Comparator<? super K> comparator, boolean z, Iterable<? extends Map.Entry<? extends K, ? extends V>> iterable) {
-        Map.Entry[] entryArr = (Map.Entry[]) C5152a0.l(iterable, ImmutableMap.EMPTY_ENTRY_ARRAY);
+        Map.Entry[] entryArr = (Map.Entry[]) a0.l(iterable, ImmutableMap.EMPTY_ENTRY_ARRAY);
         return fromEntries(comparator, z, entryArr, entryArr.length);
     }
 
@@ -219,8 +217,8 @@ public final class ImmutableSortedMap<K, V> extends ImmutableSortedMapFauxveride
         return new ImmutableSortedMap<>(this.keySet.getSubSet(i, i2), this.valueList.subList(i, i2));
     }
 
-    public static <K extends Comparable<?>, V> C4993b<K, V> naturalOrder() {
-        return new C4993b<>(Ordering.natural());
+    public static <K extends Comparable<?>, V> b<K, V> naturalOrder() {
+        return new b<>(Ordering.natural());
     }
 
     public static <K, V> ImmutableSortedMap<K, V> of() {
@@ -231,12 +229,12 @@ public final class ImmutableSortedMap<K, V> extends ImmutableSortedMapFauxveride
         return fromEntries(Ordering.natural(), false, entryArr, entryArr.length);
     }
 
-    public static <K, V> C4993b<K, V> orderedBy(Comparator<K> comparator) {
-        return new C4993b<>(comparator);
+    public static <K, V> b<K, V> orderedBy(Comparator<K> comparator) {
+        return new b<>(comparator);
     }
 
-    public static <K extends Comparable<?>, V> C4993b<K, V> reverseOrder() {
-        return new C4993b<>(Ordering.natural().reverse());
+    public static <K extends Comparable<?>, V> b<K, V> reverseOrder() {
+        return new b<>(Ordering.natural().reverse());
     }
 
     @Override // java.util.NavigableMap
@@ -482,21 +480,21 @@ public final class ImmutableSortedMap<K, V> extends ImmutableSortedMapFauxveride
                     for (int i2 = 0; i2 < i; i2++) {
                         K key = entryArr[i2].getKey();
                         V value = entryArr[i2].getValue();
-                        C5191k.a(key, value);
+                        k.a(key, value);
                         objArr[i2] = key;
                         objArr2[i2] = value;
                     }
                 } else {
-                    Arrays.sort(entryArr, 0, i, new C4992a(comparator));
+                    Arrays.sort(entryArr, 0, i, new a(comparator));
                     Object key2 = entryArr[0].getKey();
                     objArr[0] = key2;
                     objArr2[0] = entryArr[0].getValue();
-                    C5191k.a(objArr[0], objArr2[0]);
+                    k.a(objArr[0], objArr2[0]);
                     int i3 = 1;
                     while (i3 < i) {
                         Object key3 = entryArr[i3].getKey();
                         V value2 = entryArr[i3].getValue();
-                        C5191k.a(key3, value2);
+                        k.a(key3, value2);
                         objArr[i3] = key3;
                         objArr2[i3] = value2;
                         ImmutableMap.checkNoConflict(comparator.compare(key2, key3) != 0, "key", entryArr[i3 - 1], entryArr[i3]);

@@ -32,7 +32,7 @@ import java.util.Arrays;
 /* loaded from: classes10.dex */
 public abstract class BaseProgressIndicator<S extends BaseProgressIndicatorSpec> extends ProgressBar {
     static final float DEFAULT_OPACITY = 0.2f;
-    static final int DEF_STYLE_RES = R.C4819style.Widget_MaterialComponents_ProgressIndicator;
+    static final int DEF_STYLE_RES = R.style.Widget_MaterialComponents_ProgressIndicator;
     public static final int HIDE_INWARD = 2;
     public static final int HIDE_NONE = 0;
     public static final int HIDE_OUTWARD = 1;

@@ -8,7 +8,6 @@ import anetwork.channel.NetworkCallBack$ResponseCodeListener;
 import anetwork.channel.NetworkEvent$FinishEvent;
 import anetwork.channel.aidl.ParcelableInputStream;
 import anetwork.channel.statist.StatisticData;
-import com.taobao.phenix.compat.mtop.C6856a;
 import com.taobao.phenix.compat.mtop.MtopCertificateException;
 import com.taobao.phenix.compat.mtop.MtopConnectTimeoutException;
 import com.taobao.phenix.compat.mtop.MtopIndifferentException;
@@ -111,7 +110,7 @@ public class sh1 implements NetworkCallBack$FinishListener, NetworkCallBack$Inpu
         if (this.c || parcelableInputStream == null) {
             return;
         }
-        C6856a c6856a = new C6856a(parcelableInputStream);
+        com.taobao.phenix.compat.mtop.a aVar = new com.taobao.phenix.compat.mtop.a(parcelableInputStream);
         try {
             i = parcelableInputStream.length();
         } catch (RemoteException unused) {
@@ -122,10 +121,10 @@ public class sh1 implements NetworkCallBack$FinishListener, NetworkCallBack$Inpu
         } catch (RemoteException unused2) {
             xt2.c("Network", "%s get content length from stream failed", qh1.MTOP_PREFIX);
             this.c = true;
-            this.a.onFinished(new p22(c6856a, i));
+            this.a.onFinished(new p22(aVar, i));
         }
         this.c = true;
-        this.a.onFinished(new p22(c6856a, i));
+        this.a.onFinished(new p22(aVar, i));
     }
 
     @Override // anetwork.channel.NetworkCallBack$ResponseCodeListener

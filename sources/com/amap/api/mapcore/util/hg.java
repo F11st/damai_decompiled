@@ -61,7 +61,7 @@ public class hg {
                 this.b = this.a.getWritableDatabase();
             }
         } catch (Throwable th) {
-            C4573ha.a(th, "dbs", "gwd");
+            ha.a(th, "dbs", "gwd");
         }
         return this.b;
     }
@@ -211,7 +211,7 @@ public class hg {
                         this.b.close();
                         this.b = null;
                     } catch (Throwable th) {
-                        C4573ha.a(th, "dbs", "ild");
+                        ha.a(th, "dbs", "ild");
                     }
                 }
             }
@@ -242,7 +242,7 @@ public class hg {
             } catch (Throwable th2) {
                 th = th2;
                 if (!z) {
-                    C4573ha.a(th, "dbs", "sld");
+                    ha.a(th, "dbs", "sld");
                 }
                 if (cursor != null) {
                     cursor.close();
@@ -258,7 +258,7 @@ public class hg {
                     if (!z) {
                         str2 = "dbs";
                         str3 = "sld";
-                        C4573ha.a(th, str2, str3);
+                        ha.a(th, str2, str3);
                     }
                 }
                 return arrayList;
@@ -291,7 +291,7 @@ public class hg {
                 if (!z) {
                     str2 = "dbs";
                     str3 = "sld";
-                    C4573ha.a(th, str2, str3);
+                    ha.a(th, str2, str3);
                 }
             }
             return arrayList;
@@ -402,7 +402,7 @@ public class hg {
             }
         } catch (Throwable th) {
             if (!z) {
-                C4573ha.a(th, "dbs", "grd");
+                ha.a(th, "dbs", "grd");
             } else {
                 th.printStackTrace();
             }

@@ -22,7 +22,7 @@ public class gp extends wi1 {
     @NotNull
     public static final String BIZ_ID = "damai";
     @NotNull
-    public static final C9180a Companion = new C9180a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String GAIAX_COUPON_PAYRESULT_NATIVE_URL = "nativeUrl";
     @NotNull
@@ -31,13 +31,12 @@ public class gp extends wi1 {
     public static final String VERSION = "1";
 
     /* compiled from: Taobao */
-    /* renamed from: tb.gp$a */
     /* loaded from: classes7.dex */
-    public static final class C9180a {
-        private C9180a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9180a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

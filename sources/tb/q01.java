@@ -9,9 +9,8 @@ public final class q01 {
     public static final int MAX_READ_CONNECTION_STREAM_TIME_OUT = 60000;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.q01$a */
     /* loaded from: classes5.dex */
-    public static class C9588a {
+    public static class a {
         public byte[] a = null;
     }
 
@@ -29,7 +28,7 @@ public final class q01 {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public static tb.q01.C9588a a(int r16, java.lang.String r17, java.util.Map<java.lang.String, java.lang.Object> r18, boolean r19) {
+    public static tb.q01.a a(int r16, java.lang.String r17, java.util.Map<java.lang.String, java.lang.Object> r18, boolean r19) {
         /*
             Method dump skipped, instructions count: 559
             To view this dump change 'Code comments level' option to 'DEBUG'

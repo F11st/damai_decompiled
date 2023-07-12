@@ -34,7 +34,7 @@ import tb.wh2;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
-public class SeatPriceListPanel extends C1666a {
+public class SeatPriceListPanel extends a {
     private static transient /* synthetic */ IpChange $ipChange;
     private View b;
     private HorizontalScrollView c;

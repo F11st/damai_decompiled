@@ -12,7 +12,7 @@ public class mq implements IPage.PageRenderStandard {
 
     public mq(pp1 pp1Var) {
         this.a = pp1Var;
-        IDispatcher a = C8934b0.a(C8934b0.PAGE_RENDER_DISPATCHER);
+        IDispatcher a = b0.a(b0.PAGE_RENDER_DISPATCHER);
         if (a instanceof RenderDispatcher) {
             this.b = (RenderDispatcher) a;
         }

@@ -28,12 +28,11 @@ public final class bp1 {
     private OrientationListener.OrientationChangeCallback e;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.bp1$a */
     /* loaded from: classes7.dex */
-    public static final class C8970a implements OrientationListener.OrientationChangeCallback {
+    public static final class a implements OrientationListener.OrientationChangeCallback {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C8970a() {
+        a() {
         }
 
         @Override // com.alibaba.pictures.responsive.page.orientation.OrientationListener.OrientationChangeCallback
@@ -113,12 +112,11 @@ public final class bp1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.bp1$b */
     /* loaded from: classes7.dex */
-    public static final class C8971b extends ContentObserver {
+    public static final class b extends ContentObserver {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C8971b(Handler handler) {
+        b(Handler handler) {
             super(handler);
         }
 
@@ -141,7 +139,7 @@ public final class bp1 {
         public void onChange(boolean r6) {
             /*
                 r5 = this;
-                com.android.alibaba.ip.runtime.IpChange r0 = tb.bp1.C8971b.$ipChange
+                com.android.alibaba.ip.runtime.IpChange r0 = tb.bp1.b.$ipChange
                 java.lang.String r1 = "-478515197"
                 boolean r2 = com.android.alibaba.ip.runtime.AndroidInstantRuntime.support(r0, r1)
                 r3 = 1
@@ -193,7 +191,7 @@ public final class bp1 {
             L52:
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.bp1.C8971b.onChange(boolean):void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.bp1.b.onChange(boolean):void");
         }
     }
 
@@ -202,14 +200,14 @@ public final class bp1 {
         this.a = activity;
         Handler handler = new Handler();
         this.c = handler;
-        C8971b c8971b = new C8971b(handler);
-        this.d = c8971b;
-        this.e = new C8970a();
+        b bVar = new b(handler);
+        this.d = bVar;
+        this.e = new a();
         OrientationListener orientationListener = new OrientationListener(activity, this.e);
         orientationListener.b();
         wt2 wt2Var = wt2.INSTANCE;
         this.b = orientationListener;
-        activity.getContentResolver().registerContentObserver(Settings.System.getUriFor("accelerometer_rotation"), false, c8971b);
+        activity.getContentResolver().registerContentObserver(Settings.System.getUriFor("accelerometer_rotation"), false, bVar);
     }
 
     /* JADX INFO: Access modifiers changed from: private */

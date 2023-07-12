@@ -4,7 +4,7 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import androidx.fragment.app.FragmentTransaction;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
@@ -39,12 +39,11 @@ public class NcovSkuActivity extends SimpleBaseActivity {
     private SkuBean mSkuBean;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuActivity$a */
     /* loaded from: classes.dex */
-    public class C0828a implements Action<Object> {
+    public class a implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0828a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -108,8 +107,8 @@ public class NcovSkuActivity extends SimpleBaseActivity {
         beginTransaction.replace(R$id.sku_contanier, this.mFragment);
         beginTransaction.commitAllowingStateLoss();
         setDamaiUTKeyBuilder(td2.i().l(this.mItemId));
-        C0529c.e().K(this);
-        this.mDMMessage.b(MESSAGE_CLOSE, new C0828a());
+        c.e().K(this);
+        this.mDMMessage.b(MESSAGE_CLOSE, new a());
     }
 
     @Override // androidx.appcompat.app.AppCompatActivity, android.app.Activity, android.view.KeyEvent.Callback

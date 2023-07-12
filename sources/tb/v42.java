@@ -3,7 +3,6 @@ package tb;
 import android.graphics.Path;
 import java.util.Set;
 import java.util.StringTokenizer;
-import kotlin.text.C8604o;
 import kotlin.text.StringsKt__StringsKt;
 import org.jetbrains.annotations.NotNull;
 
@@ -17,7 +16,7 @@ public final class v42 {
         boolean K;
         b41.j(str, "originValue");
         K = StringsKt__StringsKt.K(str, ",", false, 2, null);
-        this.a = K ? C8604o.z(str, ",", " ", false, 4, null) : str;
+        this.a = K ? kotlin.text.o.z(str, ",", " ", false, 4, null) : str;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:37:0x008e  */

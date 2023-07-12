@@ -15,7 +15,6 @@ import cn.damai.commonbusiness.city.util.CityLocationUtil;
 import cn.damai.projectfilter.bean.FilterData;
 import cn.damai.projectfilter.bean.SortBean;
 import cn.damai.projectfilter.bean.Type;
-import cn.damai.projectfilter.floatview.AbstractC1515a;
 import com.alibaba.pictures.picpermission.Permission;
 import com.alibaba.pictures.picpermission.custom.IPermissionListener;
 import com.alibaba.pictures.picpermission.manage.PermissionModel;
@@ -27,27 +26,26 @@ import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
-public class te2 extends AbstractC1515a<SortBean> implements View.OnClickListener {
+public class te2 extends cn.damai.projectfilter.floatview.a<SortBean> implements View.OnClickListener {
     private static transient /* synthetic */ IpChange $ipChange;
     private final ViewGroup d;
     private TextView e;
     private long f;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.te2$a */
     /* loaded from: classes6.dex */
-    public class C9721a implements IPermissionListener {
+    public class a implements IPermissionListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ SortBean a;
         final /* synthetic */ Activity b;
 
         /* compiled from: Taobao */
-        /* renamed from: tb.te2$a$a */
+        /* renamed from: tb.te2$a$a  reason: collision with other inner class name */
         /* loaded from: classes6.dex */
-        public class C9722a implements CityLocationUtil.LocaltionListener {
+        public class C0463a implements CityLocationUtil.LocaltionListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C9722a(C9721a c9721a) {
+            C0463a(a aVar) {
             }
 
             @Override // cn.damai.commonbusiness.city.util.CityLocationUtil.LocaltionListener
@@ -68,12 +66,11 @@ public class te2 extends AbstractC1515a<SortBean> implements View.OnClickListene
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.te2$a$b */
         /* loaded from: classes6.dex */
-        public class DialogInterface$OnClickListenerC9723b implements DialogInterface.OnClickListener {
+        public class b implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC9723b() {
+            b() {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -84,17 +81,16 @@ public class te2 extends AbstractC1515a<SortBean> implements View.OnClickListene
                     return;
                 }
                 dialogInterface.dismiss();
-                kr1.f(C9721a.this.b);
+                kr1.f(a.this.b);
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.te2$a$c */
         /* loaded from: classes6.dex */
-        public class DialogInterface$OnClickListenerC9724c implements DialogInterface.OnClickListener {
+        public class c implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC9724c(C9721a c9721a) {
+            c(a aVar) {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -108,7 +104,7 @@ public class te2 extends AbstractC1515a<SortBean> implements View.OnClickListene
             }
         }
 
-        C9721a(SortBean sortBean, Activity activity) {
+        a(SortBean sortBean, Activity activity) {
             this.a = sortBean;
             this.b = activity;
         }
@@ -128,7 +124,7 @@ public class te2 extends AbstractC1515a<SortBean> implements View.OnClickListene
                 ipChange.ipc$dispatch("1999307385", new Object[]{this});
                 return;
             }
-            CityLocationUtil cityLocationUtil = new CityLocationUtil(mu0.a(), new C9722a(this));
+            CityLocationUtil cityLocationUtil = new CityLocationUtil(mu0.a(), new C0463a(this));
             cityLocationUtil.p(true);
             cityLocationUtil.n();
             te2.this.getListener().onFloatCall(te2.this.getType(), new FilterData(this.a));
@@ -140,7 +136,7 @@ public class te2 extends AbstractC1515a<SortBean> implements View.OnClickListene
             if (AndroidInstantRuntime.support(ipChange, "-363705324")) {
                 ipChange.ipc$dispatch("-363705324", new Object[]{this, strArr});
             } else {
-                gr1.a(this.b, "获取你所在城市的演出赛事信息，帮助你找到附近的演出赛事", Arrays.asList(strArr), false, new DialogInterface$OnClickListenerC9723b(), new DialogInterface$OnClickListenerC9724c(this));
+                gr1.a(this.b, "获取你所在城市的演出赛事信息，帮助你找到附近的演出赛事", Arrays.asList(strArr), false, new b(), new c(this));
             }
         }
     }
@@ -150,7 +146,7 @@ public class te2 extends AbstractC1515a<SortBean> implements View.OnClickListene
         ViewGroup viewGroup = (ViewGroup) LayoutInflater.from(this.a).inflate(R$layout.item_filter_sort_float, (ViewGroup) null);
         this.d = viewGroup;
         viewGroup.setLayoutParams(new ViewGroup.LayoutParams(-1, -2));
-        int a = m62.a(context, 46.0f);
+        int a2 = m62.a(context, 46.0f);
         if (cb2.d(list)) {
             return;
         }
@@ -168,7 +164,7 @@ public class te2 extends AbstractC1515a<SortBean> implements View.OnClickListene
             if (sortBean.isLocationSort()) {
                 this.e = textView;
             }
-            this.d.addView(textView, -1, a);
+            this.d.addView(textView, -1, a2);
         }
     }
 
@@ -186,7 +182,7 @@ public class te2 extends AbstractC1515a<SortBean> implements View.OnClickListene
         if (activity == null || activity.isFinishing()) {
             return;
         }
-        new Permission(activity, new PermissionModel(mr1.LOCATION, "位置权限使用说明", Integer.valueOf(R$drawable.permission_location_icon), "用于为你提供所在城市演出和场馆信息及帮助你找到附近的演出")).a(new C9721a(sortBean, activity)).b();
+        new Permission(activity, new PermissionModel(mr1.LOCATION, "位置权限使用说明", Integer.valueOf(R$drawable.permission_location_icon), "用于为你提供所在城市演出和场馆信息及帮助你找到附近的演出")).a(new a(sortBean, activity)).b();
     }
 
     private void c() {

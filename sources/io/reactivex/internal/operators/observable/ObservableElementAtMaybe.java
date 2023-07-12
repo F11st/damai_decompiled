@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8148c;
-import io.reactivex.AbstractC8149d;
 import io.reactivex.MaybeObserver;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.c;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.fuseable.FuseToObservable;
@@ -12,7 +12,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableElementAtMaybe<T> extends AbstractC8148c<T> implements FuseToObservable<T> {
+public final class ObservableElementAtMaybe<T> extends c<T> implements FuseToObservable<T> {
     final long index;
     final ObservableSource<T> source;
 
@@ -89,11 +89,11 @@ public final class ObservableElementAtMaybe<T> extends AbstractC8148c<T> impleme
     }
 
     @Override // io.reactivex.internal.fuseable.FuseToObservable
-    public AbstractC8149d<T> fuseToObservable() {
+    public d<T> fuseToObservable() {
         return i42.n(new ObservableElementAt(this.source, this.index, null, false));
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     public void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         this.source.subscribe(new ElementAtObserver(maybeObserver, this.index));
     }

@@ -52,16 +52,16 @@ public class LottieAnimationView extends AppCompatImageView {
     private int buildDrawingCacheDepth;
     private boolean cacheComposition;
     @Nullable
-    private C2821a composition;
+    private com.airbnb.lottie.a composition;
     @Nullable
-    private LottieTask<C2821a> compositionTask;
+    private LottieTask<com.airbnb.lottie.a> compositionTask;
     @Nullable
     private LottieListener<Throwable> failureListener;
     @DrawableRes
     private int fallbackResource;
     private boolean ignoreUnschedule;
     private boolean isInitialized;
-    private final LottieListener<C2821a> loadedListener;
+    private final LottieListener<com.airbnb.lottie.a> loadedListener;
     private final LottieDrawable lottieDrawable;
     private final Set<LottieOnCompositionLoadedListener> lottieOnCompositionLoadedListeners;
     private boolean playAnimationWhenShown;
@@ -70,13 +70,13 @@ public class LottieAnimationView extends AppCompatImageView {
     private boolean wasAnimatingWhenNotShown;
     private final LottieListener<Throwable> wrappedFailureListener;
     private static final String TAG = LottieAnimationView.class.getSimpleName();
-    private static final LottieListener<Throwable> DEFAULT_FAILURE_LISTENER = new C2796a();
+    private static final LottieListener<Throwable> DEFAULT_FAILURE_LISTENER = new a();
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
     /* loaded from: classes17.dex */
     public static class SavedState extends View.BaseSavedState {
-        public static final Parcelable.Creator<SavedState> CREATOR = new C2795a();
+        public static final Parcelable.Creator<SavedState> CREATOR = new a();
         String animationName;
         int animationResId;
         String imageAssetsFolder;
@@ -86,10 +86,9 @@ public class LottieAnimationView extends AppCompatImageView {
         int repeatMode;
 
         /* compiled from: Taobao */
-        /* renamed from: com.airbnb.lottie.LottieAnimationView$SavedState$a */
         /* loaded from: classes17.dex */
-        class C2795a implements Parcelable.Creator<SavedState> {
-            C2795a() {
+        class a implements Parcelable.Creator<SavedState> {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator
@@ -105,7 +104,7 @@ public class LottieAnimationView extends AppCompatImageView {
             }
         }
 
-        /* synthetic */ SavedState(Parcel parcel, C2796a c2796a) {
+        /* synthetic */ SavedState(Parcel parcel, a aVar) {
             this(parcel);
         }
 
@@ -137,10 +136,9 @@ public class LottieAnimationView extends AppCompatImageView {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieAnimationView$a */
     /* loaded from: classes9.dex */
-    public class C2796a implements LottieListener<Throwable> {
-        C2796a() {
+    public class a implements LottieListener<Throwable> {
+        a() {
         }
 
         @Override // com.airbnb.lottie.LottieListener
@@ -155,24 +153,22 @@ public class LottieAnimationView extends AppCompatImageView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieAnimationView$b */
     /* loaded from: classes9.dex */
-    class C2797b implements LottieListener<C2821a> {
-        C2797b() {
+    class b implements LottieListener<com.airbnb.lottie.a> {
+        b() {
         }
 
         @Override // com.airbnb.lottie.LottieListener
         /* renamed from: a */
-        public void onResult(C2821a c2821a) {
-            LottieAnimationView.this.setComposition(c2821a);
+        public void onResult(com.airbnb.lottie.a aVar) {
+            LottieAnimationView.this.setComposition(aVar);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieAnimationView$c */
     /* loaded from: classes9.dex */
-    class C2798c implements LottieListener<Throwable> {
-        C2798c() {
+    class c implements LottieListener<Throwable> {
+        c() {
         }
 
         @Override // com.airbnb.lottie.LottieListener
@@ -188,48 +184,45 @@ public class LottieAnimationView extends AppCompatImageView {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieAnimationView$d */
     /* loaded from: classes17.dex */
-    public class CallableC2799d implements Callable<kc1<C2821a>> {
+    public class d implements Callable<kc1<com.airbnb.lottie.a>> {
         final /* synthetic */ int a;
 
-        CallableC2799d(int i) {
+        d(int i) {
             this.a = i;
         }
 
         @Override // java.util.concurrent.Callable
         /* renamed from: a */
-        public kc1<C2821a> call() {
-            return LottieAnimationView.this.cacheComposition ? C2861b.q(LottieAnimationView.this.getContext(), this.a) : C2861b.r(LottieAnimationView.this.getContext(), this.a, null);
+        public kc1<com.airbnb.lottie.a> call() {
+            return LottieAnimationView.this.cacheComposition ? com.airbnb.lottie.b.q(LottieAnimationView.this.getContext(), this.a) : com.airbnb.lottie.b.r(LottieAnimationView.this.getContext(), this.a, null);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieAnimationView$e */
     /* loaded from: classes17.dex */
-    public class CallableC2800e implements Callable<kc1<C2821a>> {
+    public class e implements Callable<kc1<com.airbnb.lottie.a>> {
         final /* synthetic */ String a;
 
-        CallableC2800e(String str) {
+        e(String str) {
             this.a = str;
         }
 
         @Override // java.util.concurrent.Callable
         /* renamed from: a */
-        public kc1<C2821a> call() {
-            return LottieAnimationView.this.cacheComposition ? C2861b.f(LottieAnimationView.this.getContext(), this.a) : C2861b.g(LottieAnimationView.this.getContext(), this.a, null);
+        public kc1<com.airbnb.lottie.a> call() {
+            return LottieAnimationView.this.cacheComposition ? com.airbnb.lottie.b.f(LottieAnimationView.this.getContext(), this.a) : com.airbnb.lottie.b.g(LottieAnimationView.this.getContext(), this.a, null);
         }
     }
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieAnimationView$f */
     /* loaded from: classes9.dex */
-    class C2801f<T> extends lc1<T> {
+    class f<T> extends lc1<T> {
         final /* synthetic */ SimpleLottieValueCallback c;
 
-        C2801f(LottieAnimationView lottieAnimationView, SimpleLottieValueCallback simpleLottieValueCallback) {
+        f(LottieAnimationView lottieAnimationView, SimpleLottieValueCallback simpleLottieValueCallback) {
             this.c = simpleLottieValueCallback;
         }
 
@@ -241,9 +234,8 @@ public class LottieAnimationView extends AppCompatImageView {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.LottieAnimationView$g */
     /* loaded from: classes17.dex */
-    public static /* synthetic */ class C2802g {
+    public static /* synthetic */ class g {
         static final /* synthetic */ int[] a;
 
         static {
@@ -266,8 +258,8 @@ public class LottieAnimationView extends AppCompatImageView {
 
     public LottieAnimationView(Context context) {
         super(context);
-        this.loadedListener = new C2797b();
-        this.wrappedFailureListener = new C2798c();
+        this.loadedListener = new b();
+        this.wrappedFailureListener = new c();
         this.fallbackResource = 0;
         this.lottieDrawable = new LottieDrawable();
         this.playAnimationWhenShown = false;
@@ -283,7 +275,7 @@ public class LottieAnimationView extends AppCompatImageView {
     }
 
     private void cancelLoaderTask() {
-        LottieTask<C2821a> lottieTask = this.compositionTask;
+        LottieTask<com.airbnb.lottie.a> lottieTask = this.compositionTask;
         if (lottieTask != null) {
             lottieTask.k(this.loadedListener);
             this.compositionTask.j(this.wrappedFailureListener);
@@ -305,7 +297,7 @@ public class LottieAnimationView extends AppCompatImageView {
     private void enableOrDisableHardwareLayer() {
         /*
             r5 = this;
-            int[] r0 = com.airbnb.lottie.LottieAnimationView.C2802g.a
+            int[] r0 = com.airbnb.lottie.LottieAnimationView.g.a
             com.airbnb.lottie.RenderMode r1 = r5.renderMode
             int r1 = r1.ordinal()
             r0 = r0[r1]
@@ -361,18 +353,18 @@ public class LottieAnimationView extends AppCompatImageView {
         throw new UnsupportedOperationException("Method not decompiled: com.airbnb.lottie.LottieAnimationView.enableOrDisableHardwareLayer():void");
     }
 
-    private LottieTask<C2821a> fromAssets(String str) {
+    private LottieTask<com.airbnb.lottie.a> fromAssets(String str) {
         if (isInEditMode()) {
-            return new LottieTask<>(new CallableC2800e(str), true);
+            return new LottieTask<>(new e(str), true);
         }
-        return this.cacheComposition ? C2861b.d(getContext(), str) : C2861b.e(getContext(), str, null);
+        return this.cacheComposition ? com.airbnb.lottie.b.d(getContext(), str) : com.airbnb.lottie.b.e(getContext(), str, null);
     }
 
-    private LottieTask<C2821a> fromRawRes(@RawRes int i) {
+    private LottieTask<com.airbnb.lottie.a> fromRawRes(@RawRes int i) {
         if (isInEditMode()) {
-            return new LottieTask<>(new CallableC2799d(i), true);
+            return new LottieTask<>(new d(i), true);
         }
-        return this.cacheComposition ? C2861b.o(getContext(), i) : C2861b.p(getContext(), i, null);
+        return this.cacheComposition ? com.airbnb.lottie.b.o(getContext(), i) : com.airbnb.lottie.b.p(getContext(), i, null);
     }
 
     private void init(@Nullable AttributeSet attributeSet, @AttrRes int i) {
@@ -448,7 +440,7 @@ public class LottieAnimationView extends AppCompatImageView {
         this.isInitialized = true;
     }
 
-    private void setCompositionTask(LottieTask<C2821a> lottieTask) {
+    private void setCompositionTask(LottieTask<com.airbnb.lottie.a> lottieTask) {
         clearComposition();
         cancelLoaderTask();
         this.compositionTask = lottieTask.f(this.loadedListener).e(this.wrappedFailureListener);
@@ -477,9 +469,9 @@ public class LottieAnimationView extends AppCompatImageView {
     }
 
     public boolean addLottieOnCompositionLoadedListener(@NonNull LottieOnCompositionLoadedListener lottieOnCompositionLoadedListener) {
-        C2821a c2821a = this.composition;
-        if (c2821a != null) {
-            lottieOnCompositionLoadedListener.onCompositionLoaded(c2821a);
+        com.airbnb.lottie.a aVar = this.composition;
+        if (aVar != null) {
+            lottieOnCompositionLoadedListener.onCompositionLoaded(aVar);
         }
         return this.lottieOnCompositionLoadedListeners.add(lottieOnCompositionLoadedListener);
     }
@@ -518,14 +510,14 @@ public class LottieAnimationView extends AppCompatImageView {
     }
 
     @Nullable
-    public C2821a getComposition() {
+    public com.airbnb.lottie.a getComposition() {
         return this.composition;
     }
 
     public long getDuration() {
-        C2821a c2821a = this.composition;
-        if (c2821a != null) {
-            return c2821a.d();
+        com.airbnb.lottie.a aVar = this.composition;
+        if (aVar != null) {
+            return aVar.d();
         }
         return 0L;
     }
@@ -765,7 +757,7 @@ public class LottieAnimationView extends AppCompatImageView {
     }
 
     public void setAnimationFromUrl(String str) {
-        setCompositionTask(this.cacheComposition ? C2861b.s(getContext(), str) : C2861b.t(getContext(), str, null));
+        setCompositionTask(this.cacheComposition ? com.airbnb.lottie.b.s(getContext(), str) : com.airbnb.lottie.b.t(getContext(), str, null));
     }
 
     public void setApplyingOpacityToLayersEnabled(boolean z) {
@@ -776,15 +768,15 @@ public class LottieAnimationView extends AppCompatImageView {
         this.cacheComposition = z;
     }
 
-    public void setComposition(@NonNull C2821a c2821a) {
+    public void setComposition(@NonNull com.airbnb.lottie.a aVar) {
         if (f81.a) {
             String str = TAG;
-            Log.v(str, "Set Composition \n" + c2821a);
+            Log.v(str, "Set Composition \n" + aVar);
         }
         this.lottieDrawable.setCallback(this);
-        this.composition = c2821a;
+        this.composition = aVar;
         this.ignoreUnschedule = true;
-        boolean composition = this.lottieDrawable.setComposition(c2821a);
+        boolean composition = this.lottieDrawable.setComposition(aVar);
         this.ignoreUnschedule = false;
         enableOrDisableHardwareLayer();
         if (getDrawable() != this.lottieDrawable || composition) {
@@ -794,7 +786,7 @@ public class LottieAnimationView extends AppCompatImageView {
             onVisibilityChanged(this, getVisibility());
             requestLayout();
             for (LottieOnCompositionLoadedListener lottieOnCompositionLoadedListener : this.lottieOnCompositionLoadedListeners) {
-                lottieOnCompositionLoadedListener.onCompositionLoaded(c2821a);
+                lottieOnCompositionLoadedListener.onCompositionLoaded(aVar);
             }
         }
     }
@@ -849,24 +841,24 @@ public class LottieAnimationView extends AppCompatImageView {
         this.lottieDrawable.setMaxFrame(i);
     }
 
-    public void setMaxProgress(@FloatRange(from = 0.0d, to = 1.0d) float f) {
-        this.lottieDrawable.setMaxProgress(f);
+    public void setMaxProgress(@FloatRange(from = 0.0d, to = 1.0d) float f2) {
+        this.lottieDrawable.setMaxProgress(f2);
     }
 
     public void setMinAndMaxFrame(String str) {
         this.lottieDrawable.setMinAndMaxFrame(str);
     }
 
-    public void setMinAndMaxProgress(@FloatRange(from = 0.0d, to = 1.0d) float f, @FloatRange(from = 0.0d, to = 1.0d) float f2) {
-        this.lottieDrawable.setMinAndMaxProgress(f, f2);
+    public void setMinAndMaxProgress(@FloatRange(from = 0.0d, to = 1.0d) float f2, @FloatRange(from = 0.0d, to = 1.0d) float f3) {
+        this.lottieDrawable.setMinAndMaxProgress(f2, f3);
     }
 
     public void setMinFrame(int i) {
         this.lottieDrawable.setMinFrame(i);
     }
 
-    public void setMinProgress(float f) {
-        this.lottieDrawable.setMinProgress(f);
+    public void setMinProgress(float f2) {
+        this.lottieDrawable.setMinProgress(f2);
     }
 
     public void setOutlineMasksAndMattes(boolean z) {
@@ -877,8 +869,8 @@ public class LottieAnimationView extends AppCompatImageView {
         this.lottieDrawable.setPerformanceTrackingEnabled(z);
     }
 
-    public void setProgress(@FloatRange(from = 0.0d, to = 1.0d) float f) {
-        this.lottieDrawable.setProgress(f);
+    public void setProgress(@FloatRange(from = 0.0d, to = 1.0d) float f2) {
+        this.lottieDrawable.setProgress(f2);
     }
 
     public void setRenderMode(RenderMode renderMode) {
@@ -898,15 +890,15 @@ public class LottieAnimationView extends AppCompatImageView {
         this.lottieDrawable.setSafeMode(z);
     }
 
-    public void setScale(float f) {
-        this.lottieDrawable.setScale(f);
+    public void setScale(float f2) {
+        this.lottieDrawable.setScale(f2);
         if (getDrawable() == this.lottieDrawable) {
             setLottieDrawable();
         }
     }
 
-    public void setSpeed(float f) {
-        this.lottieDrawable.setSpeed(f);
+    public void setSpeed(float f2) {
+        this.lottieDrawable.setSpeed(f2);
     }
 
     public void setTextDelegate(am2 am2Var) {
@@ -933,7 +925,7 @@ public class LottieAnimationView extends AppCompatImageView {
     }
 
     public <T> void addValueCallback(s71 s71Var, T t, SimpleLottieValueCallback<T> simpleLottieValueCallback) {
-        this.lottieDrawable.addValueCallback(s71Var, (s71) t, (lc1<s71>) new C2801f(this, simpleLottieValueCallback));
+        this.lottieDrawable.addValueCallback(s71Var, (s71) t, (lc1<s71>) new f(this, simpleLottieValueCallback));
     }
 
     public void setAnimationFromJson(String str, @Nullable String str2) {
@@ -963,17 +955,17 @@ public class LottieAnimationView extends AppCompatImageView {
     }
 
     public void setAnimationFromUrl(String str, @Nullable String str2) {
-        setCompositionTask(C2861b.t(getContext(), str, str2));
+        setCompositionTask(com.airbnb.lottie.b.t(getContext(), str, str2));
     }
 
     public void setAnimation(InputStream inputStream, @Nullable String str) {
-        setCompositionTask(C2861b.h(inputStream, str));
+        setCompositionTask(com.airbnb.lottie.b.h(inputStream, str));
     }
 
     public LottieAnimationView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.loadedListener = new C2797b();
-        this.wrappedFailureListener = new C2798c();
+        this.loadedListener = new b();
+        this.wrappedFailureListener = new c();
         this.fallbackResource = 0;
         this.lottieDrawable = new LottieDrawable();
         this.playAnimationWhenShown = false;
@@ -990,8 +982,8 @@ public class LottieAnimationView extends AppCompatImageView {
 
     public LottieAnimationView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        this.loadedListener = new C2797b();
-        this.wrappedFailureListener = new C2798c();
+        this.loadedListener = new b();
+        this.wrappedFailureListener = new c();
         this.fallbackResource = 0;
         this.lottieDrawable = new LottieDrawable();
         this.playAnimationWhenShown = false;

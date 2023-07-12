@@ -7,17 +7,16 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
-import kotlin.collections.C8203e0;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
+import kotlin.collections.e0;
+import kotlin.collections.k;
+import kotlin.collections.l;
+import kotlin.collections.m;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.PropertyReference1Impl;
 import kotlin.jvm.internal.Ref$ObjectRef;
 import kotlin.reflect.KProperty;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor;
@@ -104,9 +103,8 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltInsCustomizer$a */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C8284a {
+    public /* synthetic */ class a {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -120,27 +118,25 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltInsCustomizer$b */
     /* loaded from: classes3.dex */
-    public static final class C8285b extends jp1 {
-        C8285b(ModuleDescriptor moduleDescriptor, hp0 hp0Var) {
+    public static final class b extends jp1 {
+        b(ModuleDescriptor moduleDescriptor, hp0 hp0Var) {
             super(moduleDescriptor, hp0Var);
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentDescriptor
         @NotNull
         /* renamed from: d */
-        public MemberScope.C8499b getMemberScope() {
-            return MemberScope.C8499b.INSTANCE;
+        public MemberScope.b getMemberScope() {
+            return MemberScope.b.INSTANCE;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltInsCustomizer$c */
     /* loaded from: classes3.dex */
-    public static final class C8286c<N> implements DFS.Neighbors {
-        C8286c() {
+    public static final class c<N> implements DFS.Neighbors {
+        c() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.utils.DFS.Neighbors
@@ -165,13 +161,12 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltInsCustomizer$d */
     /* loaded from: classes3.dex */
-    public static final class C8287d extends DFS.AbstractC8561b<ClassDescriptor, JDKMemberStatus> {
+    public static final class d extends DFS.b<ClassDescriptor, JDKMemberStatus> {
         final /* synthetic */ String a;
         final /* synthetic */ Ref$ObjectRef<JDKMemberStatus> b;
 
-        C8287d(String str, Ref$ObjectRef<JDKMemberStatus> ref$ObjectRef) {
+        d(String str, Ref$ObjectRef<JDKMemberStatus> ref$ObjectRef) {
             this.a = str;
             this.b = ref$ObjectRef;
         }
@@ -206,12 +201,11 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltInsCustomizer$e */
     /* loaded from: classes3.dex */
-    public static final class C8288e<N> implements DFS.Neighbors {
-        public static final C8288e<N> INSTANCE = new C8288e<>();
+    public static final class e<N> implements DFS.Neighbors {
+        public static final e<N> INSTANCE = new e<>();
 
-        C8288e() {
+        e() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.utils.DFS.Neighbors
@@ -222,7 +216,7 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
         }
     }
 
-    public JvmBuiltInsCustomizer(@NotNull ModuleDescriptor moduleDescriptor, @NotNull final StorageManager storageManager, @NotNull Function0<JvmBuiltIns.C8282a> function0) {
+    public JvmBuiltInsCustomizer(@NotNull ModuleDescriptor moduleDescriptor, @NotNull final StorageManager storageManager, @NotNull Function0<JvmBuiltIns.a> function0) {
         b41.i(moduleDescriptor, "moduleDescriptor");
         b41.i(storageManager, "storageManager");
         b41.i(function0, "settingsComputation");
@@ -240,14 +234,14 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
             @Override // kotlin.jvm.functions.Function0
             @NotNull
             public final fd2 invoke() {
-                JvmBuiltIns.C8282a n;
-                JvmBuiltIns.C8282a n2;
+                JvmBuiltIns.a n;
+                JvmBuiltIns.a n2;
                 n = JvmBuiltInsCustomizer.this.n();
-                ModuleDescriptor a = n.a();
-                hj a2 = JvmBuiltInClassDescriptorFactory.Companion.a();
+                ModuleDescriptor a2 = n.a();
+                hj a3 = JvmBuiltInClassDescriptorFactory.Companion.a();
                 StorageManager storageManager2 = storageManager;
                 n2 = JvmBuiltInsCustomizer.this.n();
-                return FindClassInModuleKt.c(a, a2, new NotFoundClasses(storageManager2, n2.a())).getDefaultType();
+                return FindClassInModuleKt.c(a2, a3, new NotFoundClasses(storageManager2, n2.a())).getDefaultType();
             }
         });
         this.f = storageManager.createCacheWithNotNullValues();
@@ -261,12 +255,12 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
             @NotNull
             public final Annotations invoke() {
                 ModuleDescriptor moduleDescriptor2;
-                List<? extends AnnotationDescriptor> e;
+                List<? extends AnnotationDescriptor> e2;
                 moduleDescriptor2 = JvmBuiltInsCustomizer.this.a;
-                AnnotationDescriptor b = AnnotationUtilKt.b(moduleDescriptor2.getBuiltIns(), "This member is not fully supported by Kotlin compiler, so it may be absent or have different signature in next major version", null, null, 6, null);
-                Annotations.C8302a c8302a = Annotations.Companion;
-                e = C8213l.e(b);
-                return c8302a.a(e);
+                AnnotationDescriptor b2 = AnnotationUtilKt.b(moduleDescriptor2.getBuiltIns(), "This member is not fully supported by Kotlin compiler, so it may be absent or have different signature in next major version", null, null, 6, null);
+                Annotations.a aVar = Annotations.Companion;
+                e2 = l.e(b2);
+                return aVar.a(e2);
             }
         });
     }
@@ -283,10 +277,10 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
     }
 
     private final z71 f(StorageManager storageManager) {
-        List e;
-        Set<ClassConstructorDescriptor> d;
-        C8285b c8285b = new C8285b(this.a, new hp0("java.io"));
-        e = C8213l.e(new LazyWrappedType(storageManager, new Function0<z71>() { // from class: kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltInsCustomizer$createMockJavaIoSerializableType$superTypes$1
+        List e2;
+        Set<ClassConstructorDescriptor> d2;
+        b bVar = new b(this.a, new hp0("java.io"));
+        e2 = l.e(new LazyWrappedType(storageManager, new Function0<z71>() { // from class: kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltInsCustomizer$createMockJavaIoSerializableType$superTypes$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -302,10 +296,10 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
                 return i;
             }
         }));
-        gj gjVar = new gj(c8285b, ni1.f("Serializable"), Modality.ABSTRACT, ClassKind.INTERFACE, e, SourceElement.NO_SOURCE, false, storageManager);
-        MemberScope.C8499b c8499b = MemberScope.C8499b.INSTANCE;
-        d = C8203e0.d();
-        gjVar.e(c8499b, d, null);
+        gj gjVar = new gj(bVar, ni1.f("Serializable"), Modality.ABSTRACT, ClassKind.INTERFACE, e2, SourceElement.NO_SOURCE, false, storageManager);
+        MemberScope.b bVar2 = MemberScope.b.INSTANCE;
+        d2 = e0.d();
+        gjVar.e(bVar2, d2, null);
         fd2 defaultType = gjVar.getDefaultType();
         b41.h(defaultType, "mockSerializableClass.defaultType");
         return defaultType;
@@ -323,24 +317,24 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
             r9 = this;
             kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaClassDescriptor r0 = r9.k(r10)
             if (r0 != 0) goto Lb
-            java.util.List r10 = kotlin.collections.C8212k.g()
+            java.util.List r10 = kotlin.collections.k.g()
             return r10
         Lb:
             tb.p51 r1 = r9.b
             tb.hp0 r2 = kotlin.reflect.jvm.internal.impl.resolve.descriptorUtil.DescriptorUtilsKt.i(r0)
-            kotlin.reflect.jvm.internal.impl.builtins.jvm.a$a r3 = kotlin.reflect.jvm.internal.impl.builtins.jvm.C8289a.Companion
+            kotlin.reflect.jvm.internal.impl.builtins.jvm.a$a r3 = kotlin.reflect.jvm.internal.impl.builtins.jvm.a.Companion
             kotlin.reflect.jvm.internal.impl.builtins.b r3 = r3.a()
             java.util.Collection r1 = r1.i(r2, r3)
-            java.lang.Object r2 = kotlin.collections.C8212k.c0(r1)
+            java.lang.Object r2 = kotlin.collections.k.c0(r1)
             kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor r2 = (kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor) r2
             if (r2 != 0) goto L28
-            java.util.List r10 = kotlin.collections.C8212k.g()
+            java.util.List r10 = kotlin.collections.k.g()
             return r10
         L28:
             tb.yd2$b r3 = tb.yd2.Companion
             java.util.ArrayList r4 = new java.util.ArrayList
             r5 = 10
-            int r5 = kotlin.collections.C8212k.q(r1, r5)
+            int r5 = kotlin.collections.k.q(r1, r5)
             r4.<init>(r5)
             java.util.Iterator r1 = r1.iterator()
         L39:
@@ -389,7 +383,7 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
             if (r4 != 0) goto La4
             goto L97
         La4:
-            boolean r4 = kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b.i0(r3)
+            boolean r4 = kotlin.reflect.jvm.internal.impl.builtins.b.i0(r3)
             if (r4 == 0) goto Lab
             goto L97
         Lab:
@@ -441,17 +435,17 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
 
     /* JADX INFO: Access modifiers changed from: private */
     public final LazyJavaClassDescriptor k(ClassDescriptor classDescriptor) {
-        if (!AbstractC8271b.a0(classDescriptor) && AbstractC8271b.z0(classDescriptor)) {
+        if (!kotlin.reflect.jvm.internal.impl.builtins.b.a0(classDescriptor) && kotlin.reflect.jvm.internal.impl.builtins.b.z0(classDescriptor)) {
             ip0 j = DescriptorUtilsKt.j(classDescriptor);
             if (j.f()) {
                 hj o = o51.INSTANCE.o(j);
-                hp0 b = o == null ? null : o.b();
-                if (b == null) {
+                hp0 b2 = o == null ? null : o.b();
+                if (b2 == null) {
                     return null;
                 }
-                ClassDescriptor c = c70.c(n().a(), b, NoLookupLocation.FROM_BUILTINS);
-                if (c instanceof LazyJavaClassDescriptor) {
-                    return (LazyJavaClassDescriptor) c;
+                ClassDescriptor c2 = c70.c(n().a(), b2, NoLookupLocation.FROM_BUILTINS);
+                if (c2 instanceof LazyJavaClassDescriptor) {
+                    return (LazyJavaClassDescriptor) c2;
                 }
                 return null;
             }
@@ -461,13 +455,13 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
     }
 
     private final JDKMemberStatus l(FunctionDescriptor functionDescriptor) {
-        List e;
-        String c = mf1.c(functionDescriptor, false, false, 3, null);
+        List e2;
+        String c2 = mf1.c(functionDescriptor, false, false, 3, null);
         Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
-        e = C8213l.e((ClassDescriptor) functionDescriptor.getContainingDeclaration());
-        Object b = DFS.b(e, new C8286c(), new C8287d(c, ref$ObjectRef));
-        b41.h(b, "private fun FunctionDesc…ERED\n            })\n    }");
-        return (JDKMemberStatus) b;
+        e2 = l.e((ClassDescriptor) functionDescriptor.getContainingDeclaration());
+        Object b2 = DFS.b(e2, new c(), new d(c2, ref$ObjectRef));
+        b41.h(b2, "private fun FunctionDesc…ERED\n            })\n    }");
+        return (JDKMemberStatus) b2;
     }
 
     private final Annotations m() {
@@ -475,18 +469,18 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public final JvmBuiltIns.C8282a n() {
-        return (JvmBuiltIns.C8282a) tg2.a(this.c, this, h[0]);
+    public final JvmBuiltIns.a n() {
+        return (JvmBuiltIns.a) tg2.a(this.c, this, h[0]);
     }
 
     private final boolean o(SimpleFunctionDescriptor simpleFunctionDescriptor, boolean z) {
-        List e;
-        String c = mf1.c(simpleFunctionDescriptor, false, false, 3, null);
-        if (z ^ r61.INSTANCE.f().contains(lf1.a(SignatureBuildingComponents.INSTANCE, (ClassDescriptor) simpleFunctionDescriptor.getContainingDeclaration(), c))) {
+        List e2;
+        String c2 = mf1.c(simpleFunctionDescriptor, false, false, 3, null);
+        if (z ^ r61.INSTANCE.f().contains(lf1.a(SignatureBuildingComponents.INSTANCE, (ClassDescriptor) simpleFunctionDescriptor.getContainingDeclaration(), c2))) {
             return true;
         }
-        e = C8213l.e(simpleFunctionDescriptor);
-        Boolean e2 = DFS.e(e, C8288e.INSTANCE, new Function1<CallableMemberDescriptor, Boolean>() { // from class: kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltInsCustomizer$isMutabilityViolation$2
+        e2 = l.e(simpleFunctionDescriptor);
+        Boolean e3 = DFS.e(e2, e.INSTANCE, new Function1<CallableMemberDescriptor, Boolean>() { // from class: kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltInsCustomizer$isMutabilityViolation$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(1);
@@ -507,15 +501,15 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
                 return Boolean.valueOf(z2);
             }
         });
-        b41.h(e2, "private fun SimpleFuncti…scriptor)\n        }\n    }");
-        return e2.booleanValue();
+        b41.h(e3, "private fun SimpleFuncti…scriptor)\n        }\n    }");
+        return e3.booleanValue();
     }
 
     private final boolean p(ConstructorDescriptor constructorDescriptor, ClassDescriptor classDescriptor) {
         if (constructorDescriptor.getValueParameters().size() == 1) {
             List<ValueParameterDescriptor> valueParameters = constructorDescriptor.getValueParameters();
             b41.h(valueParameters, "valueParameters");
-            ClassifierDescriptor declarationDescriptor = ((ValueParameterDescriptor) C8212k.q0(valueParameters)).getType().c().getDeclarationDescriptor();
+            ClassifierDescriptor declarationDescriptor = ((ValueParameterDescriptor) k.q0(valueParameters)).getType().c().getDeclarationDescriptor();
             if (b41.d(declarationDescriptor == null ? null : DescriptorUtilsKt.j(declarationDescriptor), DescriptorUtilsKt.j(classDescriptor))) {
                 return true;
             }
@@ -535,15 +529,15 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
         if (classDescriptor.getKind() == ClassKind.CLASS && n().b()) {
             LazyJavaClassDescriptor k = k(classDescriptor);
             if (k == null) {
-                g3 = C8214m.g();
+                g3 = m.g();
                 return g3;
             }
-            ClassDescriptor h2 = p51.h(this.b, DescriptorUtilsKt.i(k), C8289a.Companion.a(), null, 4, null);
+            ClassDescriptor h2 = p51.h(this.b, DescriptorUtilsKt.i(k), kotlin.reflect.jvm.internal.impl.builtins.jvm.a.Companion.a(), null, 4, null);
             if (h2 == null) {
-                g2 = C8214m.g();
+                g2 = m.g();
                 return g2;
             }
-            TypeSubstitutor c = gd1.a(h2, k).c();
+            TypeSubstitutor c2 = gd1.a(h2, k).c();
             List<ClassConstructorDescriptor> constructors = k.getConstructors();
             ArrayList<ClassConstructorDescriptor> arrayList = new ArrayList();
             Iterator<T> it = constructors.iterator();
@@ -560,14 +554,14 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
                     if (!constructors2.isEmpty()) {
                         for (ClassConstructorDescriptor classConstructorDescriptor2 : constructors2) {
                             b41.h(classConstructorDescriptor2, AdvanceSetting.NETWORK_TYPE);
-                            if (i(classConstructorDescriptor2, c, classConstructorDescriptor)) {
+                            if (i(classConstructorDescriptor2, c2, classConstructorDescriptor)) {
                                 z = false;
                                 break;
                             }
                         }
                     }
                     z = true;
-                    if (z && !p(classConstructorDescriptor, classDescriptor) && !AbstractC8271b.i0(classConstructorDescriptor) && !r61.INSTANCE.d().contains(lf1.a(SignatureBuildingComponents.INSTANCE, k, mf1.c(classConstructorDescriptor, false, false, 3, null)))) {
+                    if (z && !p(classConstructorDescriptor, classDescriptor) && !kotlin.reflect.jvm.internal.impl.builtins.b.i0(classConstructorDescriptor) && !r61.INSTANCE.d().contains(lf1.a(SignatureBuildingComponents.INSTANCE, k, mf1.c(classConstructorDescriptor, false, false, 3, null)))) {
                         z2 = true;
                     }
                 }
@@ -575,14 +569,14 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
                     arrayList.add(next);
                 }
             }
-            q = C8215n.q(arrayList, 10);
+            q = n.q(arrayList, 10);
             ArrayList arrayList2 = new ArrayList(q);
             for (ClassConstructorDescriptor classConstructorDescriptor3 : arrayList) {
                 FunctionDescriptor.CopyBuilder<? extends FunctionDescriptor> newCopyBuilder = classConstructorDescriptor3.newCopyBuilder();
                 newCopyBuilder.setOwner(classDescriptor);
                 newCopyBuilder.setReturnType(classDescriptor.getDefaultType());
                 newCopyBuilder.setPreserveSourceElement();
-                newCopyBuilder.setSubstitution(c.j());
+                newCopyBuilder.setSubstitution(c2.j());
                 if (!r61.INSTANCE.g().contains(lf1.a(SignatureBuildingComponents.INSTANCE, k, mf1.c(classConstructorDescriptor3, false, false, 3, null)))) {
                     newCopyBuilder.setAdditionalAnnotations(m());
                 }
@@ -592,7 +586,7 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
             }
             return arrayList2;
         }
-        g = C8214m.g();
+        g = m.g();
         return g;
     }
 
@@ -617,7 +611,7 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
     @NotNull
     public Collection<z71> getSupertypes(@NotNull ClassDescriptor classDescriptor) {
         List g;
-        List e;
+        List e2;
         List j;
         b41.i(classDescriptor, "classDescriptor");
         ip0 j2 = DescriptorUtilsKt.j(classDescriptor);
@@ -625,13 +619,13 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
         if (r61Var.i(j2)) {
             fd2 h2 = h();
             b41.h(h2, "cloneableType");
-            j = C8214m.j(h2, this.d);
+            j = m.j(h2, this.d);
             return j;
         } else if (r61Var.j(j2)) {
-            e = C8213l.e(this.d);
-            return e;
+            e2 = l.e(this.d);
+            return e2;
         } else {
-            g = C8214m.g();
+            g = m.g();
             return g;
         }
     }
@@ -643,14 +637,14 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
         LazyJavaClassDescriptor k = k(classDescriptor);
         if (k != null && simpleFunctionDescriptor.getAnnotations().hasAnnotation(rs1.a())) {
             if (n().b()) {
-                String c = mf1.c(simpleFunctionDescriptor, false, false, 3, null);
+                String c2 = mf1.c(simpleFunctionDescriptor, false, false, 3, null);
                 LazyJavaClassMemberScope unsubstitutedMemberScope = k.getUnsubstitutedMemberScope();
                 ni1 name = simpleFunctionDescriptor.getName();
                 b41.h(name, "functionDescriptor.name");
                 Collection<SimpleFunctionDescriptor> contributedFunctions = unsubstitutedMemberScope.getContributedFunctions(name, NoLookupLocation.FROM_BUILTINS);
                 if (!(contributedFunctions instanceof Collection) || !contributedFunctions.isEmpty()) {
                     for (SimpleFunctionDescriptor simpleFunctionDescriptor2 : contributedFunctions) {
-                        if (b41.d(mf1.c(simpleFunctionDescriptor2, false, false, 3, null), c)) {
+                        if (b41.d(mf1.c(simpleFunctionDescriptor2, false, false, 3, null), c2)) {
                             return true;
                         }
                     }
@@ -666,13 +660,13 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
     @NotNull
     /* renamed from: j */
     public Set<ni1> getFunctionsNames(@NotNull ClassDescriptor classDescriptor) {
-        Set<ni1> d;
-        LazyJavaClassMemberScope unsubstitutedMemberScope;
         Set<ni1> d2;
+        LazyJavaClassMemberScope unsubstitutedMemberScope;
+        Set<ni1> d3;
         b41.i(classDescriptor, "classDescriptor");
         if (!n().b()) {
-            d2 = C8203e0.d();
-            return d2;
+            d3 = e0.d();
+            return d3;
         }
         LazyJavaClassDescriptor k = k(classDescriptor);
         Set<ni1> set = null;
@@ -680,8 +674,8 @@ public final class JvmBuiltInsCustomizer implements AdditionalClassPartsProvider
             set = unsubstitutedMemberScope.getFunctionNames();
         }
         if (set == null) {
-            d = C8203e0.d();
-            return d;
+            d2 = e0.d();
+            return d2;
         }
         return set;
     }

@@ -37,7 +37,7 @@ public final class LifecycleController {
                 b41.h(lifecycle2, "source.lifecycle");
                 if (lifecycle2.getCurrentState() == Lifecycle.State.DESTROYED) {
                     LifecycleController lifecycleController = LifecycleController.this;
-                    Job.C8613a.b(job, null, 1, null);
+                    Job.a.b(job, null, 1, null);
                     lifecycleController.finish();
                     return;
                 }
@@ -56,7 +56,7 @@ public final class LifecycleController {
         };
         this.observer = lifecycleEventObserver;
         if (lifecycle.getCurrentState() == Lifecycle.State.DESTROYED) {
-            Job.C8613a.b(job, null, 1, null);
+            Job.a.b(job, null, 1, null);
             finish();
             return;
         }
@@ -65,7 +65,7 @@ public final class LifecycleController {
 
     /* JADX INFO: Access modifiers changed from: private */
     public final void handleDestroy(Job job) {
-        Job.C8613a.b(job, null, 1, null);
+        Job.a.b(job, null, 1, null);
         finish();
     }
 

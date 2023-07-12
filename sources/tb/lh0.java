@@ -26,12 +26,11 @@ public final class lh0 implements OnFagActionListener {
     private BricksBaseFragment b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.lh0$a */
     /* loaded from: classes7.dex */
-    public static final class C9411a implements OnAliMeListener {
+    public static final class a implements OnAliMeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9411a() {
+        a() {
         }
 
         @Override // com.alibaba.pictures.bricks.alime.OnAliMeListener
@@ -62,12 +61,11 @@ public final class lh0 implements OnFagActionListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.lh0$b */
     /* loaded from: classes7.dex */
-    public static final class C9412b implements OnAliMeListener {
+    public static final class b implements OnAliMeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9412b() {
+        b() {
         }
 
         @Override // com.alibaba.pictures.bricks.alime.OnAliMeListener
@@ -127,9 +125,9 @@ public final class lh0 implements OnFagActionListener {
         if (bricksBaseFragment != null) {
             bricksBaseFragment.showLoadingDialog(new String[0]);
         }
-        IAliMeCouponFaq a = p4.INSTANCE.a();
-        if (a != null) {
-            a.openAliMe4Fag(this.a, itemId, orderId, new C9411a());
+        IAliMeCouponFaq a2 = p4.INSTANCE.a();
+        if (a2 != null) {
+            a2.openAliMe4Fag(this.a, itemId, orderId, new a());
         }
     }
 
@@ -170,11 +168,11 @@ public final class lh0 implements OnFagActionListener {
         if (bricksBaseFragment != null) {
             bricksBaseFragment.showLoadingDialog(new String[0]);
         }
-        IAliMeCouponFaq a = p4.INSTANCE.a();
-        if (a != null) {
+        IAliMeCouponFaq a2 = p4.INSTANCE.a();
+        if (a2 != null) {
             Context context = this.a;
             b41.f(str2);
-            a.openAliMe4SingleFaq(context, str2, orderId, str, new C9412b());
+            a2.openAliMe4SingleFaq(context, str2, orderId, str, new b());
         }
     }
 

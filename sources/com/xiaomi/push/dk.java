@@ -63,7 +63,7 @@ public class dk implements Runnable {
             list4.add(new Pair(String.format("%1$s %2$s %3$s ", simpleDateFormat2.format(new Date()), str4, "flush " + size + " lines logs."), null));
         }
         try {
-            if (C7595ad.d()) {
+            if (ad.d()) {
                 this.a.m767a();
                 return;
             }

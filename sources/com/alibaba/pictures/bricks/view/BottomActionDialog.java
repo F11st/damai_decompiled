@@ -21,7 +21,7 @@ import com.alibaba.pictures.bricks.view.BottomActionDialog;
 import com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import io.flutter.wpkbridge.WPKFactory;
 import java.util.ArrayList;
@@ -232,7 +232,7 @@ public final class BottomActionDialog extends Dialog implements View.OnClickList
                     ipChange.ipc$dispatch("-238074604", new Object[]{this, canvas, recyclerView2, state});
                     return;
                 }
-                b41.i(canvas, AbstractC5658c.a);
+                b41.i(canvas, c.a);
                 b41.i(recyclerView2, "parent");
                 b41.i(state, "state");
                 super.onDrawOver(canvas, recyclerView2, state);

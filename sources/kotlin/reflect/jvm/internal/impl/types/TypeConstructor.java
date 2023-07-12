@@ -2,7 +2,6 @@ package kotlin.reflect.jvm.internal.impl.types;
 
 import java.util.Collection;
 import java.util.List;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.types.model.TypeConstructorMarker;
@@ -15,7 +14,7 @@ import tb.z71;
 /* loaded from: classes3.dex */
 public interface TypeConstructor extends TypeConstructorMarker {
     @NotNull
-    AbstractC8271b getBuiltIns();
+    kotlin.reflect.jvm.internal.impl.builtins.b getBuiltIns();
 
     @Nullable
     ClassifierDescriptor getDeclarationDescriptor();

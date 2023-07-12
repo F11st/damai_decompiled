@@ -3,8 +3,8 @@ package com.youku.live.dsl.config;
 import android.content.Context;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.taobao.application.common.C6673b;
 import com.taobao.application.common.IAppPreferences;
+import com.taobao.application.common.b;
 import java.util.Arrays;
 import java.util.List;
 import tb.mu0;
@@ -20,7 +20,7 @@ public class IDynamicConfigImp implements IDynamicConfig {
         if (AndroidInstantRuntime.support(ipChange, "406729569")) {
             return (String) ipChange.ipc$dispatch("406729569", new Object[]{this});
         }
-        IAppPreferences d = C6673b.d();
+        IAppPreferences d = b.d();
         int i = d != null ? d.getInt("oldDeviceScore", -1) : -1;
         if (i == -1 && (applicationContext = mu0.a().getApplicationContext()) != null) {
             i = applicationContext.getSharedPreferences("device_score", 0).getInt("device_score", -1);

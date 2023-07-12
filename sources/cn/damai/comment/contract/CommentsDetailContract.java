@@ -2,8 +2,8 @@ package cn.damai.comment.contract;
 
 import cn.damai.comment.bean.CommentBaseBean;
 import cn.damai.comment.bean.CommentsResultBean;
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseModel;
+import cn.damai.common.app.base.a;
 import cn.damai.commonbusiness.base.BaseDamaiView;
 import java.util.Map;
 
@@ -18,7 +18,7 @@ public interface CommentsDetailContract {
 
     /* compiled from: Taobao */
     /* loaded from: classes4.dex */
-    public static abstract class Presenter extends AbstractC0470a<View, Model> {
+    public static abstract class Presenter extends a<View, Model> {
         public abstract void deleteComment(Map<String, String> map);
 
         public abstract void getCommentDetailList(Map<String, String> map);

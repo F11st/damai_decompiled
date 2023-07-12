@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.b;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.subscribers.BasicFuseableSubscriber;
@@ -101,13 +101,13 @@ public final class FlowableDistinct<T, K> extends AbstractFlowableWithUpstream<T
         }
     }
 
-    public FlowableDistinct(AbstractC8147b<T> abstractC8147b, Function<? super T, K> function, Callable<? extends Collection<? super K>> callable) {
-        super(abstractC8147b);
+    public FlowableDistinct(b<T> bVar, Function<? super T, K> function, Callable<? extends Collection<? super K>> callable) {
+        super(bVar);
         this.keySelector = function;
         this.collectionSupplier = callable;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         try {
             this.source.subscribe((FlowableSubscriber) new DistinctSubscriber(subscriber, this.keySelector, (Collection) ObjectHelper.requireNonNull(this.collectionSupplier.call(), "The collectionSupplier returned a null collection. Null values are generally not allowed in 2.x operators and sources.")));

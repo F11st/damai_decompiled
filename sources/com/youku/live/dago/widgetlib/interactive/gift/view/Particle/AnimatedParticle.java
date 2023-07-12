@@ -7,7 +7,7 @@ import com.android.alibaba.ip.runtime.IpChange;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
-public class AnimatedParticle extends C7945Particle {
+public class AnimatedParticle extends Particle {
     private static transient /* synthetic */ IpChange $ipChange;
     private AnimationDrawable mAnimationDrawable;
     private int mTotalTime;
@@ -21,7 +21,7 @@ public class AnimatedParticle extends C7945Particle {
         }
     }
 
-    @Override // com.youku.live.dago.widgetlib.interactive.gift.view.Particle.C7945Particle
+    @Override // com.youku.live.dago.widgetlib.interactive.gift.view.Particle.Particle
     public boolean update(long j) {
         IpChange ipChange = $ipChange;
         int i = 0;

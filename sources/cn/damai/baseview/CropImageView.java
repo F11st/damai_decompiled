@@ -52,12 +52,11 @@ public class CropImageView extends ImageView {
     float y2;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.CropImageView$a */
     /* loaded from: classes.dex */
-    public class View$OnTouchListenerC0267a implements View.OnTouchListener {
+    public class a implements View.OnTouchListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnTouchListenerC0267a() {
+        a() {
         }
 
         @Override // android.view.View.OnTouchListener
@@ -88,12 +87,11 @@ public class CropImageView extends ImageView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.CropImageView$b */
     /* loaded from: classes.dex */
-    public class C0268b extends GestureDetector.SimpleOnGestureListener {
+    public class b extends GestureDetector.SimpleOnGestureListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C0268b() {
+        private b() {
         }
 
         @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnGestureListener
@@ -128,18 +126,17 @@ public class CropImageView extends ImageView {
             return true;
         }
 
-        /* synthetic */ C0268b(CropImageView cropImageView, View$OnTouchListenerC0267a view$OnTouchListenerC0267a) {
+        /* synthetic */ b(CropImageView cropImageView, a aVar) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.CropImageView$c */
     /* loaded from: classes.dex */
-    public class C0269c extends ScaleGestureDetector.SimpleOnScaleGestureListener {
+    public class c extends ScaleGestureDetector.SimpleOnScaleGestureListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C0269c() {
+        private c() {
         }
 
         @Override // android.view.ScaleGestureDetector.SimpleOnScaleGestureListener, android.view.ScaleGestureDetector.OnScaleGestureListener
@@ -196,7 +193,7 @@ public class CropImageView extends ImageView {
             return true;
         }
 
-        /* synthetic */ C0269c(CropImageView cropImageView, View$OnTouchListenerC0267a view$OnTouchListenerC0267a) {
+        /* synthetic */ c(CropImageView cropImageView, a aVar) {
             this();
         }
     }
@@ -298,14 +295,14 @@ public class CropImageView extends ImageView {
         this.blackPaint = paint5;
         paint5.setColor(-16777216);
         this.background = this.blackPaint;
-        this.mScaleDetector = new ScaleGestureDetector(context, new C0269c(this, null));
-        this.mGestureDetector = new GestureDetector(context, new C0268b(this, null));
+        this.mScaleDetector = new ScaleGestureDetector(context, new c(this, null));
+        this.mGestureDetector = new GestureDetector(context, new b(this, null));
         Matrix matrix = new Matrix();
         this.matrix = matrix;
         this.m = new float[9];
         setImageMatrix(matrix);
         setScaleType(ImageView.ScaleType.MATRIX);
-        setOnTouchListener(new View$OnTouchListenerC0267a());
+        setOnTouchListener(new a());
     }
 
     /* JADX INFO: Access modifiers changed from: private */

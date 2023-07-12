@@ -37,7 +37,7 @@ final class ImmutableEnumSet<E extends Enum<E>> extends ImmutableSet<E> {
             if (size != 1) {
                 return new ImmutableEnumSet(enumSet);
             }
-            return ImmutableSet.of(C5152a0.h(enumSet));
+            return ImmutableSet.of(a0.h(enumSet));
         }
         return ImmutableSet.of();
     }

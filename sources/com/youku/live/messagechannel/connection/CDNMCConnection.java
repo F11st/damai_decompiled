@@ -23,9 +23,9 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import mtopsdk.common.util.HttpHeaderConstant;
-import okhttp3.C8827q;
 import okhttp3.Call;
 import okhttp3.Callback;
+import okhttp3.q;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -77,12 +77,12 @@ public class CDNMCConnection extends AbstractMCConnection {
                     }
 
                     @Override // okhttp3.Callback
-                    public void onResponse(Call call, C8827q c8827q) {
+                    public void onResponse(Call call, q qVar) {
                         IpChange ipChange2 = $ipChange;
                         if (AndroidInstantRuntime.support(ipChange2, "106585728")) {
-                            ipChange2.ipc$dispatch("106585728", new Object[]{this, call, c8827q});
-                        } else if (c8827q != null && c8827q.isSuccessful()) {
-                            if (c8827q.l() == null || c8827q.l().e() != 304) {
+                            ipChange2.ipc$dispatch("106585728", new Object[]{this, call, qVar});
+                        } else if (qVar != null && qVar.isSuccessful()) {
+                            if (qVar.l() == null || qVar.l().e() != 304) {
                                 MyLog.d(CDNMCConnection.this.TAG, "CDN pull success, begin to process response", CDNMCConnection.this.appIdAndChannelString());
                                 if (CDNMCConnection.this.getConnectionState() == MCConnectionState.OPENING) {
                                     CDNMCConnection.this.setConnectionState(MCConnectionState.OPEN);
@@ -93,15 +93,15 @@ public class CDNMCConnection extends AbstractMCConnection {
                                         iMCConnectionEventCallback.onEvent(mCConnectionEvent, mCConnectionEvent.getMsg(), null);
                                     }
                                 }
-                                if (c8827q.j() == null || c8827q.a() == null) {
+                                if (qVar.j() == null || qVar.a() == null) {
                                     MyLog.e(CDNMCConnection.this.TAG, "CDN pull response headers or body is null", CDNMCConnection.this.appIdAndChannelString());
                                     return;
                                 }
-                                long time = new Date(c8827q.j().c(HttpHeaderConstant.DATE)).getTime();
+                                long time = new Date(qVar.j().c(HttpHeaderConstant.DATE)).getTime();
                                 try {
                                     try {
-                                        String k = c8827q.a().k();
-                                        c8827q.a().close();
+                                        String k = qVar.a().k();
+                                        qVar.a().close();
                                         if (TextUtils.isEmpty(k)) {
                                             MyLog.e(CDNMCConnection.this.TAG, "CDN pull body is empty", CDNMCConnection.this.appIdAndChannelString());
                                             return;
@@ -164,18 +164,18 @@ public class CDNMCConnection extends AbstractMCConnection {
                                     } catch (IOException e2) {
                                         String str2 = CDNMCConnection.this.TAG;
                                         MyLog.e(str2, "CDN pull body get error" + CDNMCConnection.this.appIdAndChannelString(), e2);
-                                        c8827q.a().close();
+                                        qVar.a().close();
                                         return;
                                     }
                                 } catch (Throwable th) {
-                                    c8827q.a().close();
+                                    qVar.a().close();
                                     throw th;
                                 }
                             }
                             MyLog.d(CDNMCConnection.this.TAG, "CDN pull response not modified, not need to process", CDNMCConnection.this.appIdAndChannelString());
-                        } else if (c8827q == null || c8827q.isSuccessful()) {
+                        } else if (qVar == null || qVar.isSuccessful()) {
                         } else {
-                            MyLog.e(CDNMCConnection.this.TAG, "CDN pull response fail, code:", Integer.valueOf(c8827q.e()), ", msg:", c8827q.k());
+                            MyLog.e(CDNMCConnection.this.TAG, "CDN pull response fail, code:", Integer.valueOf(qVar.e()), ", msg:", qVar.k());
                         }
                     }
                 });

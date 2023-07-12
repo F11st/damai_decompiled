@@ -94,7 +94,7 @@ public class CombSendView extends FrameLayout {
         }
         Context context = getContext();
         this.mContext = context;
-        View.inflate(context, R.C7942layout.dago_pgc_combsend, this);
+        View.inflate(context, R.layout.dago_pgc_combsend, this);
         this.mCombSendBtn = (Button) findViewById(R.id.comb_send_btn);
         this.mRotateView = (ImageView) findViewById(R.id.comb_loading_view);
         Animation loadAnimation = AnimationUtils.loadAnimation(this.mContext, R.anim.dago_pgc_combsend_progress);

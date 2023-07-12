@@ -34,7 +34,7 @@ public class BaseErrorView implements View.OnClickListener, View.OnLayoutChangeL
     public BaseErrorView(Context context, BaseErrorPlugin baseErrorPlugin) {
         this.mContext = context;
         this.mPlugin = baseErrorPlugin;
-        View inflate = LayoutInflater.from(context).inflate(R.C7935layout.dago_player_template1, (ViewGroup) null);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.dago_player_template1, (ViewGroup) null);
         this.mHolderView = inflate;
         this.mContent = inflate.findViewById(R.id.content);
         this.mHolderView.setVisibility(8);

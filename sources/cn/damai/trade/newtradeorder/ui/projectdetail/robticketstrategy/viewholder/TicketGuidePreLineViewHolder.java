@@ -13,7 +13,6 @@ import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.calendar.remind.CalendarsResolver;
 import cn.damai.commonbusiness.update.UpdateUtil;
@@ -59,13 +58,12 @@ public class TicketGuidePreLineViewHolder extends RecyclerView.ViewHolder {
     private CalendarsResolver.RemindMeListener n;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.robticketstrategy.viewholder.TicketGuidePreLineViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2425a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        View$OnClickListenerC2425a(TicketGuidePreLineViewHolder ticketGuidePreLineViewHolder, String str) {
+        a(TicketGuidePreLineViewHolder ticketGuidePreLineViewHolder, String str) {
             this.a = str;
         }
 
@@ -76,19 +74,18 @@ public class TicketGuidePreLineViewHolder extends RecyclerView.ViewHolder {
                 ipChange.ipc$dispatch("-1746161327", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(pp2.u().F2(this.a));
+            cn.damai.common.user.c.e().x(pp2.u().F2(this.a));
             UpdateUtil.d();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.robticketstrategy.viewholder.TicketGuidePreLineViewHolder$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2426b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        View$OnClickListenerC2426b(String str) {
+        b(String str) {
             this.a = str;
         }
 
@@ -99,19 +96,18 @@ public class TicketGuidePreLineViewHolder extends RecyclerView.ViewHolder {
                 ipChange.ipc$dispatch("365129042", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(pp2.u().D2(this.a));
+            cn.damai.common.user.c.e().x(pp2.u().D2(this.a));
             LoginManager.k().w(TicketGuidePreLineViewHolder.this.i, new Intent());
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.robticketstrategy.viewholder.TicketGuidePreLineViewHolder$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2427c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ProjectTickGuidePreBean a;
 
-        View$OnClickListenerC2427c(ProjectTickGuidePreBean projectTickGuidePreBean) {
+        c(ProjectTickGuidePreBean projectTickGuidePreBean) {
             this.a = projectTickGuidePreBean;
         }
 
@@ -122,7 +118,7 @@ public class TicketGuidePreLineViewHolder extends RecyclerView.ViewHolder {
                 ipChange.ipc$dispatch("292742484", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(pp2.u().E2(this.a.projectId));
+            cn.damai.common.user.c.e().x(pp2.u().E2(this.a.projectId));
             Activity activity = TicketGuidePreLineViewHolder.this.i;
             ProjectTickGuidePreBean projectTickGuidePreBean = this.a;
             qv1.e(activity, projectTickGuidePreBean.calendarRemindTitle, projectTickGuidePreBean.sellStartTime, TicketGuidePreLineViewHolder.this.n);
@@ -130,12 +126,11 @@ public class TicketGuidePreLineViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.robticketstrategy.viewholder.TicketGuidePreLineViewHolder$d */
     /* loaded from: classes8.dex */
-    public class C2428d implements CalendarsResolver.RemindMeListener {
+    public class d implements CalendarsResolver.RemindMeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2428d() {
+        d() {
         }
 
         @Override // cn.damai.commonbusiness.calendar.remind.CalendarsResolver.RemindMeListener
@@ -163,7 +158,7 @@ public class TicketGuidePreLineViewHolder extends RecyclerView.ViewHolder {
 
     public TicketGuidePreLineViewHolder(Activity activity) {
         super(LayoutInflater.from(activity).inflate(R$layout.layout_ticket_guide_pre_line, (ViewGroup) null, false));
-        this.n = new C2428d();
+        this.n = new d();
         this.itemView.setLayoutParams(new RecyclerView.LayoutParams(-1, -2));
         this.i = activity;
         this.a = (DMIconFontTextView) this.itemView.findViewById(R$id.icon_guide);
@@ -245,11 +240,11 @@ public class TicketGuidePreLineViewHolder extends RecyclerView.ViewHolder {
             ipChange.ipc$dispatch("83017188", new Object[]{this, str});
             return;
         }
-        String a = hw1.a();
-        if (a != null) {
-            if ("true".equals(a)) {
+        String a2 = hw1.a();
+        if (a2 != null) {
+            if ("true".equals(a2)) {
                 g("升级");
-                this.d.setOnClickListener(new View$OnClickListenerC2425a(this, str));
+                this.d.setOnClickListener(new a(this, str));
                 return;
             }
             h("最新版");
@@ -264,7 +259,7 @@ public class TicketGuidePreLineViewHolder extends RecyclerView.ViewHolder {
             ipChange.ipc$dispatch("-1506751949", new Object[]{this, str});
         } else if (!LoginManager.k().q()) {
             g("登录");
-            this.d.setOnClickListener(new View$OnClickListenerC2426b(str));
+            this.d.setOnClickListener(new b(str));
         } else {
             g("去检查");
             this.d.setOnClickListener(new View.OnClickListener(this) { // from class: cn.damai.trade.newtradeorder.ui.projectdetail.robticketstrategy.viewholder.TicketGuidePreLineViewHolder.3
@@ -277,7 +272,7 @@ public class TicketGuidePreLineViewHolder extends RecyclerView.ViewHolder {
                         ipChange2.ipc$dispatch("-1818547885", new Object[]{this, view});
                         return;
                     }
-                    C0529c.e().x(pp2.u().D2(str));
+                    cn.damai.common.user.c.e().x(pp2.u().D2(str));
                     new LoginCheckRequest().request(new DMMtopRequestListener<LoginBean>(LoginBean.class) { // from class: cn.damai.trade.newtradeorder.ui.projectdetail.robticketstrategy.viewholder.TicketGuidePreLineViewHolder.3.1
                         private static transient /* synthetic */ IpChange $ipChange;
 
@@ -353,7 +348,7 @@ public class TicketGuidePreLineViewHolder extends RecyclerView.ViewHolder {
             } else {
                 g("设置");
             }
-            this.d.setOnClickListener(new View$OnClickListenerC2427c(projectTickGuidePreBean));
+            this.d.setOnClickListener(new c(projectTickGuidePreBean));
         }
     }
 
@@ -366,14 +361,14 @@ public class TicketGuidePreLineViewHolder extends RecyclerView.ViewHolder {
             this.a.setText(gn2.b().d(projectTickGuidePreBean.name));
             this.b.setText(projectTickGuidePreBean.title);
             this.c.setText(projectTickGuidePreBean.desc);
-            int c = gn2.b().c(projectTickGuidePreBean.name);
-            if (1 == c) {
+            int c2 = gn2.b().c(projectTickGuidePreBean.name);
+            if (1 == c2) {
                 i(projectTickGuidePreBean.projectId);
-            } else if (2 == c) {
+            } else if (2 == c2) {
                 j(projectTickGuidePreBean.projectId);
-            } else if (3 == c) {
+            } else if (3 == c2) {
                 k();
-            } else if (4 == c) {
+            } else if (4 == c2) {
                 l(projectTickGuidePreBean);
             }
             f(i);

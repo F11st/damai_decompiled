@@ -31,7 +31,7 @@ public final class pa1<E> {
     private AtomicReferenceArray b;
     private final int c;
     private final boolean d;
-    public static final C9546a Companion = new C9546a(null);
+    public static final a Companion = new a(null);
     @JvmField
     @NotNull
     public static final kj2 REMOVE_FROZEN = new kj2("REMOVE_FROZEN");
@@ -39,10 +39,9 @@ public final class pa1<E> {
     private static final AtomicLongFieldUpdater f = AtomicLongFieldUpdater.newUpdater(pa1.class, "_state");
 
     /* compiled from: Taobao */
-    /* renamed from: tb.pa1$a */
     /* loaded from: classes11.dex */
-    public static final class C9546a {
-        private C9546a() {
+    public static final class a {
+        private a() {
         }
 
         public final int a(long j) {
@@ -61,19 +60,18 @@ public final class pa1<E> {
             return j & (~j2);
         }
 
-        public /* synthetic */ C9546a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.pa1$b */
     /* loaded from: classes11.dex */
-    public static final class C9547b {
+    public static final class b {
         @JvmField
         public final int a;
 
-        public C9547b(int i) {
+        public b(int i) {
             this.a = i;
         }
     }
@@ -102,7 +100,7 @@ public final class pa1<E> {
             if ((i & i3) != (i2 & i3)) {
                 Object obj = this.b.get(i3 & i);
                 if (obj == null) {
-                    obj = new C9547b(i);
+                    obj = new b(i);
                 }
                 pa1Var.b.set(pa1Var.a & i, obj);
                 i++;
@@ -125,7 +123,7 @@ public final class pa1<E> {
 
     private final pa1<E> e(int i, E e2) {
         Object obj = this.b.get(this.a & i);
-        if ((obj instanceof C9547b) && ((C9547b) obj).a == i) {
+        if ((obj instanceof b) && ((b) obj).a == i) {
             this.b.set(i & this.a, e2);
             return this;
         }
@@ -147,11 +145,11 @@ public final class pa1<E> {
 
     private final pa1<E> k(int i, int i2) {
         long j;
-        C9546a c9546a;
+        a aVar;
         int i3;
         do {
             j = this._state;
-            c9546a = Companion;
+            aVar = Companion;
             i3 = (int) ((HEAD_MASK & j) >> 0);
             if (k40.a()) {
                 if (!(i3 == i)) {
@@ -161,7 +159,7 @@ public final class pa1<E> {
             if ((1152921504606846976L & j) != 0) {
                 return i();
             }
-        } while (!f.compareAndSet(this, j, c9546a.b(j, i2)));
+        } while (!f.compareAndSet(this, j, aVar.b(j, i2)));
         this.b.set(this.a & i3, null);
         return null;
     }
@@ -290,7 +288,7 @@ public final class pa1<E> {
             if ((1152921504606846976L & j) != 0) {
                 return REMOVE_FROZEN;
             }
-            C9546a c9546a = Companion;
+            a aVar = Companion;
             int i = (int) ((HEAD_MASK & j) >> 0);
             int i2 = (int) ((TAIL_MASK & j) >> 30);
             int i3 = this.a;
@@ -302,11 +300,11 @@ public final class pa1<E> {
                 if (this.d) {
                     return null;
                 }
-            } else if (obj instanceof C9547b) {
+            } else if (obj instanceof b) {
                 return null;
             } else {
                 int i4 = (i + 1) & MAX_CAPACITY_MASK;
-                if (f.compareAndSet(this, j, c9546a.b(j, i4))) {
+                if (f.compareAndSet(this, j, aVar.b(j, i4))) {
                     this.b.set(this.a & i, null);
                     return obj;
                 } else if (this.d) {

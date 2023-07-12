@@ -7,7 +7,7 @@ import com.alibaba.analytics.core.model.LogField;
 import com.alibaba.analytics.core.network.NetworkUtil;
 import com.alibaba.analytics.utils.Logger;
 import com.alibaba.appmonitor.model.UTDimensionValueSet;
-import com.alibaba.appmonitor.pool.C3316a;
+import com.alibaba.appmonitor.pool.a;
 import com.alibaba.mtl.appmonitor.model.DimensionValueSet;
 import com.alibaba.mtl.appmonitor.model.MeasureValueSet;
 import com.alimm.xadsdk.base.expose.RetryMonitorDbHelper;
@@ -20,7 +20,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
-import tb.C9823vo;
 import tb.bg2;
 import tb.f4;
 import tb.fd0;
@@ -30,6 +29,7 @@ import tb.nf1;
 import tb.of1;
 import tb.pf1;
 import tb.qf0;
+import tb.vo;
 import tb.yh2;
 
 /* compiled from: Taobao */
@@ -54,7 +54,7 @@ public class EventRepo {
     }
 
     private UTDimensionValueSet p(int i, Long l, String str, String str2) {
-        UTDimensionValueSet uTDimensionValueSet = (UTDimensionValueSet) C3316a.a().poll(UTDimensionValueSet.class, new Object[0]);
+        UTDimensionValueSet uTDimensionValueSet = (UTDimensionValueSet) a.a().poll(UTDimensionValueSet.class, new Object[0]);
         if (!TextUtils.isEmpty(str) && !TextUtils.isEmpty(str2)) {
             uTDimensionValueSet.setValue(LogField.ACCESS.toString(), str);
             uTDimensionValueSet.setValue(LogField.ACCESS_SUBTYPE.toString(), str2);
@@ -93,7 +93,7 @@ public class EventRepo {
             synchronized (this.b) {
                 pf1Var = this.b.get(uTDimensionValueSet);
                 if (pf1Var == null) {
-                    pf1Var = (pf1) C3316a.a().poll(pf1.class, new Object[0]);
+                    pf1Var = (pf1) a.a().poll(pf1.class, new Object[0]);
                     this.b.put(uTDimensionValueSet, pf1Var);
                     Logger.f("EventRepo", "put in Map utDimensionValues", uTDimensionValueSet);
                 }
@@ -141,7 +141,7 @@ public class EventRepo {
             f4Var.c(str4, str5);
         }
         if (Variables.n().G()) {
-            f4 f4Var2 = (f4) C3316a.a().poll(f4.class, Integer.valueOf(i), str, str2, str3);
+            f4 f4Var2 = (f4) a.a().poll(f4.class, Integer.valueOf(i), str, str2, str3);
             f4Var2.d(l);
             f4Var2.c(str4, str5);
             gt2.b(p, f4Var2);
@@ -160,7 +160,7 @@ public class EventRepo {
             f4Var.e(l);
         }
         if (Variables.n().G()) {
-            f4 f4Var2 = (f4) C3316a.a().poll(f4.class, Integer.valueOf(i), str, str2, str3);
+            f4 f4Var2 = (f4) a.a().poll(f4.class, Integer.valueOf(i), str, str2, str3);
             f4Var2.e(l);
             gt2.b(p, f4Var2);
         }
@@ -182,7 +182,7 @@ public class EventRepo {
                 synchronized (fd0.class) {
                     fd0Var = this.a.get(str);
                     if (fd0Var == null) {
-                        fd0Var = (fd0) C3316a.a().poll(fd0.class, num, str2, str3);
+                        fd0Var = (fd0) a.a().poll(fd0.class, num, str2, str3);
                         this.a.put(str, fd0Var);
                     }
                 }
@@ -211,7 +211,7 @@ public class EventRepo {
         synchronized (fd0.class) {
             fd0Var = this.a.get(str);
             if (fd0Var == null) {
-                fd0Var = (fd0) C3316a.a().poll(fd0.class, num, str2, str3);
+                fd0Var = (fd0) a.a().poll(fd0.class, num, str2, str3);
                 this.a.put(str, fd0Var);
             }
         }
@@ -237,7 +237,7 @@ public class EventRepo {
                 bg2Var.d(dimensionValueSet, measureValueSet);
             }
             if (Variables.n().G()) {
-                bg2 bg2Var2 = (bg2) C3316a.a().poll(bg2.class, Integer.valueOf(i), str, str2);
+                bg2 bg2Var2 = (bg2) a.a().poll(bg2.class, Integer.valueOf(i), str, str2);
                 bg2Var2.d(dimensionValueSet, measureValueSet);
                 gt2.b(p, bg2Var2);
             }
@@ -253,14 +253,14 @@ public class EventRepo {
 
     public void m(int i, String str, String str2, String str3, double d, Long l, String str4, String str5) {
         UTDimensionValueSet p = p(i, l, str4, str5);
-        C9823vo c9823vo = (C9823vo) r(p, str, str2, str3, C9823vo.class);
-        if (c9823vo != null) {
-            c9823vo.c(d, l);
+        vo voVar = (vo) r(p, str, str2, str3, vo.class);
+        if (voVar != null) {
+            voVar.c(d, l);
         }
         if (Variables.n().G()) {
-            C9823vo c9823vo2 = (C9823vo) C3316a.a().poll(C9823vo.class, Integer.valueOf(i), str, str2, str3);
-            c9823vo2.c(d, l);
-            gt2.b(p, c9823vo2);
+            vo voVar2 = (vo) a.a().poll(vo.class, Integer.valueOf(i), str, str2, str3);
+            voVar2.c(d, l);
+            gt2.b(p, voVar2);
         }
         g(EventType.getEventType(i), this.d);
     }
@@ -282,7 +282,7 @@ public class EventRepo {
             v(fd0Var.a, fd0Var.b);
         }
         j(fd0Var.d, fd0Var.a, fd0Var.b, fd0Var.f(), fd0Var.e());
-        C3316a.a().offer(fd0Var);
+        a.a().offer(fd0Var);
     }
 
     public Map<UTDimensionValueSet, List<qf0>> u(int i) {

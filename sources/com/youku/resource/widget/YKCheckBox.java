@@ -15,7 +15,7 @@ public class YKCheckBox extends AppCompatCheckBox implements YKCustomizedView {
 
     @Override // com.youku.resource.widget.YKCustomizedView
     public void init(Context context, AttributeSet attributeSet) {
-        setButtonDrawable(R.C8072drawable.checkbox_style);
+        setButtonDrawable(R.drawable.checkbox_style);
     }
 
     public YKCheckBox(Context context, AttributeSet attributeSet) {

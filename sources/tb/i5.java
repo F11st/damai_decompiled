@@ -19,8 +19,6 @@ import javax.net.ssl.SSLPeerUnverifiedException;
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.X509TrustManager;
 import okhttp3.Protocol;
-import okhttp3.internal.C8753a;
-import okhttp3.internal.tls.AbstractC8805b;
 import okhttp3.internal.tls.TrustRootIndex;
 
 /* JADX INFO: Access modifiers changed from: package-private */
@@ -32,21 +30,20 @@ public class i5 extends ps1 {
     private final Method e;
     private final Method f;
     private final Method g;
-    private final C9252b h = C9252b.b();
+    private final b h = b.b();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.i5$a */
     /* loaded from: classes2.dex */
-    static final class C9251a extends AbstractC8805b {
+    static final class a extends okhttp3.internal.tls.b {
         private final Object a;
         private final Method b;
 
-        C9251a(Object obj, Method method) {
+        a(Object obj, Method method) {
             this.a = obj;
             this.b = method;
         }
 
-        @Override // okhttp3.internal.tls.AbstractC8805b
+        @Override // okhttp3.internal.tls.b
         public List<Certificate> a(List<Certificate> list, String str) throws SSLPeerUnverifiedException {
             try {
                 return (List) this.b.invoke(this.a, (X509Certificate[]) list.toArray(new X509Certificate[list.size()]), "RSA", str);
@@ -60,7 +57,7 @@ public class i5 extends ps1 {
         }
 
         public boolean equals(Object obj) {
-            return obj instanceof C9251a;
+            return obj instanceof a;
         }
 
         public int hashCode() {
@@ -69,20 +66,19 @@ public class i5 extends ps1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.i5$b */
     /* loaded from: classes2.dex */
-    static final class C9252b {
+    static final class b {
         private final Method a;
         private final Method b;
         private final Method c;
 
-        C9252b(Method method, Method method2, Method method3) {
+        b(Method method, Method method2, Method method3) {
             this.a = method;
             this.b = method2;
             this.c = method3;
         }
 
-        static C9252b b() {
+        static b b() {
             Method method;
             Method method2;
             Method method3 = null;
@@ -96,7 +92,7 @@ public class i5 extends ps1 {
                 method = null;
                 method2 = null;
             }
-            return new C9252b(method3, method2, method);
+            return new b(method3, method2, method);
         }
 
         Object a(String str) {
@@ -126,13 +122,12 @@ public class i5 extends ps1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.i5$c */
     /* loaded from: classes2.dex */
-    static final class C9253c implements TrustRootIndex {
+    static final class c implements TrustRootIndex {
         private final X509TrustManager a;
         private final Method b;
 
-        C9253c(X509TrustManager x509TrustManager, Method method) {
+        c(X509TrustManager x509TrustManager, Method method) {
             this.b = method;
             this.a = x509TrustManager;
         }
@@ -141,9 +136,9 @@ public class i5 extends ps1 {
             if (obj == this) {
                 return true;
             }
-            if (obj instanceof C9253c) {
-                C9253c c9253c = (C9253c) obj;
-                return this.a.equals(c9253c.a) && this.b.equals(c9253c.b);
+            if (obj instanceof c) {
+                c cVar = (c) obj;
+                return this.a.equals(cVar.a) && this.b.equals(cVar.b);
             }
             return false;
         }
@@ -223,10 +218,10 @@ public class i5 extends ps1 {
     }
 
     @Override // tb.ps1
-    public AbstractC8805b c(X509TrustManager x509TrustManager) {
+    public okhttp3.internal.tls.b c(X509TrustManager x509TrustManager) {
         try {
             Class<?> cls = Class.forName("android.net.http.X509TrustManagerExtensions");
-            return new C9251a(cls.getConstructor(X509TrustManager.class).newInstance(x509TrustManager), cls.getMethod("checkServerTrusted", X509Certificate[].class, String.class, String.class));
+            return new a(cls.getConstructor(X509TrustManager.class).newInstance(x509TrustManager), cls.getMethod("checkServerTrusted", X509Certificate[].class, String.class, String.class));
         } catch (Exception unused) {
             return super.c(x509TrustManager);
         }
@@ -237,7 +232,7 @@ public class i5 extends ps1 {
         try {
             Method declaredMethod = x509TrustManager.getClass().getDeclaredMethod("findTrustAnchorByIssuerAndSignature", X509Certificate.class);
             declaredMethod.setAccessible(true);
-            return new C9253c(x509TrustManager, declaredMethod);
+            return new c(x509TrustManager, declaredMethod);
         } catch (NoSuchMethodException unused) {
             return super.d(x509TrustManager);
         }
@@ -263,7 +258,7 @@ public class i5 extends ps1 {
         try {
             socket.connect(inetSocketAddress, i);
         } catch (AssertionError e) {
-            if (!C8753a.A(e)) {
+            if (!okhttp3.internal.a.A(e)) {
                 throw e;
             }
             throw new IOException(e);

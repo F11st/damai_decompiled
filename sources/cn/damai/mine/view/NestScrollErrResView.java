@@ -26,13 +26,12 @@ public class NestScrollErrResView extends NestedScrollView {
     public int state;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.view.NestScrollErrResView$a */
     /* loaded from: classes6.dex */
-    public class C1473a implements ResponseErrorPage.ErrorRefreshListener {
+    public class a implements ResponseErrorPage.ErrorRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnErrClickListener a;
 
-        C1473a(NestScrollErrResView nestScrollErrResView, OnErrClickListener onErrClickListener) {
+        a(NestScrollErrResView nestScrollErrResView, OnErrClickListener onErrClickListener) {
             this.a = onErrClickListener;
         }
 
@@ -60,7 +59,7 @@ public class NestScrollErrResView extends NestedScrollView {
         } else if (responseErrorPage != null) {
             responseErrorPage.hideTitle();
             if (onErrClickListener != null) {
-                responseErrorPage.setRefreshListener(new C1473a(this, onErrClickListener));
+                responseErrorPage.setRefreshListener(new a(this, onErrClickListener));
             }
             this.mPageContainer.removeAllViews();
             responseErrorPage.setLayoutParams(new FrameLayout.LayoutParams(-1, -1));

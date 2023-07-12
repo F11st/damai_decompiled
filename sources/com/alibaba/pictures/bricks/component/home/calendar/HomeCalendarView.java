@@ -26,9 +26,9 @@ import java.util.ArrayList;
 import java.util.List;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tb.C9796v;
 import tb.b41;
 import tb.s60;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -47,13 +47,12 @@ public final class HomeCalendarView extends AbsView<GenericItem<ItemValue>, Home
     private final ImageView titleIv;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.calendar.HomeCalendarView$a */
     /* loaded from: classes7.dex */
-    public static final class C3468a implements DMUpMarqueeView.OnItemClickListener {
+    public static final class a implements DMUpMarqueeView.OnItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ HomeCalendarBean b;
 
-        C3468a(HomeCalendarBean homeCalendarBean) {
+        a(HomeCalendarBean homeCalendarBean) {
             this.b = homeCalendarBean;
         }
 
@@ -69,12 +68,11 @@ public final class HomeCalendarView extends AbsView<GenericItem<ItemValue>, Home
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.calendar.HomeCalendarView$b  reason: invalid class name */
     /* loaded from: classes7.dex */
-    public static final class animationAnimation$AnimationListenerC3469b implements Animation.AnimationListener {
+    public static final class b implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        animationAnimation$AnimationListenerC3469b() {
+        b() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -83,7 +81,7 @@ public final class HomeCalendarView extends AbsView<GenericItem<ItemValue>, Home
             if (AndroidInstantRuntime.support(ipChange, "-1162238141")) {
                 ipChange.ipc$dispatch("-1162238141", new Object[]{this, animation});
             } else {
-                b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+                b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             }
         }
 
@@ -93,7 +91,7 @@ public final class HomeCalendarView extends AbsView<GenericItem<ItemValue>, Home
             if (AndroidInstantRuntime.support(ipChange, "1277275473")) {
                 ipChange.ipc$dispatch("1277275473", new Object[]{this, animation});
             } else {
-                b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+                b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             }
         }
 
@@ -104,7 +102,7 @@ public final class HomeCalendarView extends AbsView<GenericItem<ItemValue>, Home
                 ipChange.ipc$dispatch("-1724156452", new Object[]{this, animation});
                 return;
             }
-            b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+            b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             View currentView = HomeCalendarView.this.marqueeView.getCurrentView();
             View findViewById = currentView.findViewById(R$id.home_calender_content_text);
             b41.h(findViewById, "currentView.findViewById…me_calender_content_text)");
@@ -158,10 +156,10 @@ public final class HomeCalendarView extends AbsView<GenericItem<ItemValue>, Home
         ViewGroup.LayoutParams layoutParams = this.itemView.getLayoutParams();
         Context context2 = this.itemView.getContext();
         b41.h(context2, "itemView.context");
-        int b = i - s60Var.b(context2, 18);
+        int b2 = i - s60Var.b(context2, 18);
         Context context3 = this.itemView.getContext();
         b41.h(context3, "itemView.context");
-        layoutParams.width = (b - s60Var.b(context3, 12)) / 3;
+        layoutParams.width = (b2 - s60Var.b(context3, 12)) / 3;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -211,7 +209,7 @@ public final class HomeCalendarView extends AbsView<GenericItem<ItemValue>, Home
                 HomeCalendarView.m133bindView$lambda1(HomeCalendarView.this, homeCalendarBean, view);
             }
         });
-        this.marqueeView.setOnItemClickListener(new C3468a(homeCalendarBean));
+        this.marqueeView.setOnItemClickListener(new a(homeCalendarBean));
         this.marqueeView.setFlipInterval(3000);
         this.marqueeView.setAnimationDuration(500L);
         ArrayList arrayList = new ArrayList();
@@ -226,7 +224,7 @@ public final class HomeCalendarView extends AbsView<GenericItem<ItemValue>, Home
         this.marqueeView.setItems(arrayList);
         Animation inAnimation = this.marqueeView.getInAnimation();
         if (inAnimation != null) {
-            inAnimation.setAnimationListener(new animationAnimation$AnimationListenerC3469b());
+            inAnimation.setAnimationListener(new b());
         }
     }
 

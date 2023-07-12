@@ -17,13 +17,12 @@ public abstract class gx1 {
     private final SourceElement c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.gx1$a */
     /* loaded from: classes3.dex */
-    public static final class C9189a extends gx1 {
+    public static final class a extends gx1 {
         @NotNull
         private final ProtoBuf$Class d;
         @Nullable
-        private final C9189a e;
+        private final a e;
         @NotNull
         private final hj f;
         @NotNull
@@ -31,13 +30,13 @@ public abstract class gx1 {
         private final boolean h;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C9189a(@NotNull ProtoBuf$Class protoBuf$Class, @NotNull NameResolver nameResolver, @NotNull er2 er2Var, @Nullable SourceElement sourceElement, @Nullable C9189a c9189a) {
+        public a(@NotNull ProtoBuf$Class protoBuf$Class, @NotNull NameResolver nameResolver, @NotNull er2 er2Var, @Nullable SourceElement sourceElement, @Nullable a aVar) {
             super(nameResolver, er2Var, sourceElement, null);
             b41.i(protoBuf$Class, "classProto");
             b41.i(nameResolver, "nameResolver");
             b41.i(er2Var, "typeTable");
             this.d = protoBuf$Class;
-            this.e = c9189a;
+            this.e = aVar;
             this.f = pi1.a(nameResolver, protoBuf$Class.getFqName());
             ProtoBuf$Class.Kind d = yj0.CLASS_KIND.d(protoBuf$Class.getFlags());
             this.g = d == null ? ProtoBuf$Class.Kind.CLASS : d;
@@ -70,7 +69,7 @@ public abstract class gx1 {
         }
 
         @Nullable
-        public final C9189a h() {
+        public final a h() {
             return this.e;
         }
 
@@ -80,14 +79,13 @@ public abstract class gx1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.gx1$b */
     /* loaded from: classes3.dex */
-    public static final class C9190b extends gx1 {
+    public static final class b extends gx1 {
         @NotNull
         private final hp0 d;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C9190b(@NotNull hp0 hp0Var, @NotNull NameResolver nameResolver, @NotNull er2 er2Var, @Nullable SourceElement sourceElement) {
+        public b(@NotNull hp0 hp0Var, @NotNull NameResolver nameResolver, @NotNull er2 er2Var, @Nullable SourceElement sourceElement) {
             super(nameResolver, er2Var, sourceElement, null);
             b41.i(hp0Var, "fqName");
             b41.i(nameResolver, "nameResolver");

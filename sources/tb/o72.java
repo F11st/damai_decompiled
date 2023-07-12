@@ -41,9 +41,8 @@ public class o72 {
     private boolean r = true;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.o72$a  reason: invalid class name */
     /* loaded from: classes.dex */
-    public static class animationInterpolatorC9514a implements Interpolator {
+    public static class a implements Interpolator {
         private static transient /* synthetic */ IpChange $ipChange;
         private static final float a;
         private static final float b;
@@ -54,7 +53,7 @@ public class o72 {
             b = 1.0f - (a2 * a(1.0f));
         }
 
-        animationInterpolatorC9514a() {
+        a() {
         }
 
         private static float a(float f) {
@@ -124,7 +123,7 @@ public class o72 {
 
     public o72(Context context, Interpolator interpolator, boolean z) {
         if (interpolator == null) {
-            this.a = new animationInterpolatorC9514a();
+            this.a = new a();
         } else {
             this.a = interpolator;
         }

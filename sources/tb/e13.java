@@ -9,14 +9,13 @@ public class e13 {
     private Set<String> a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.e13$b */
     /* loaded from: classes11.dex */
-    private static final class C9066b {
+    private static final class b {
         private static final e13 a = new e13();
     }
 
     public static e13 b() {
-        return C9066b.a;
+        return b.a;
     }
 
     public void a(String str) {

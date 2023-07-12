@@ -5,12 +5,11 @@ import android.text.TextUtils;
 import android.util.Pair;
 import anet.channel.RequestCb;
 import anet.channel.detect.NetworkDetector;
-import anet.channel.request.C0193a;
+import anet.channel.request.a;
 import anet.channel.session.HttpSession;
 import anet.channel.statist.NetworkDiagnosticStat;
 import anet.channel.statist.RequestStatistic;
 import anet.channel.status.NetworkStatusHelper;
-import anet.channel.strategy.C0213a;
 import anet.channel.strategy.IConnStrategy;
 import anet.channel.thread.ThreadPoolExecutorFactory;
 import anet.channel.util.ALog;
@@ -29,19 +28,17 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import mtopsdk.mtop.intf.MtopUnitStrategy;
-import org.android.netutil.C8874a;
-import org.android.netutil.C8875b;
 import org.android.netutil.NetUtils;
 import org.android.netutil.PingTask;
 import org.android.spdy.SpdyAgent;
 import org.android.spdy.SpdySessionKind;
 import org.android.spdy.SpdyVersion;
 import org.json.JSONException;
-import tb.C9708t9;
 import tb.he;
 import tb.hu0;
 import tb.jn1;
 import tb.o01;
+import tb.t9;
 import tb.x6;
 import tb.y90;
 import tb.zm;
@@ -114,15 +111,14 @@ public class ExceptionDetector {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.detect.ExceptionDetector$a */
     /* loaded from: classes.dex */
-    public class C0166a implements RequestCb {
+    public class a implements RequestCb {
         final /* synthetic */ long a;
         final /* synthetic */ JSONObject b;
         final /* synthetic */ String c;
         final /* synthetic */ CountDownLatch d;
 
-        C0166a(ExceptionDetector exceptionDetector, long j, JSONObject jSONObject, String str, CountDownLatch countDownLatch) {
+        a(ExceptionDetector exceptionDetector, long j, JSONObject jSONObject, String str, CountDownLatch countDownLatch) {
             this.a = j;
             this.b = jSONObject;
             this.c = str;
@@ -150,19 +146,18 @@ public class ExceptionDetector {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.detect.ExceptionDetector$b */
     /* loaded from: classes.dex */
-    public class C0167b {
+    public class b {
         String a;
         String b;
         String c;
         long d;
-        Future<C8875b> e;
-        Future<C8875b> f;
-        Future<C8875b> g;
-        Future<C8875b> h;
+        Future<org.android.netutil.b> e;
+        Future<org.android.netutil.b> f;
+        Future<org.android.netutil.b> g;
+        Future<org.android.netutil.b> h;
 
-        private C0167b(ExceptionDetector exceptionDetector) {
+        private b(ExceptionDetector exceptionDetector) {
         }
     }
 
@@ -185,16 +180,16 @@ public class ExceptionDetector {
         int i2 = 0;
         while (i2 < i) {
             i2++;
-            C8875b c8875b = null;
+            org.android.netutil.b bVar = null;
             try {
-                c8875b = new PingTask(str, 0, 1, 0, i2).launch().get();
+                bVar = new PingTask(str, 0, 1, 0, i2).launch().get();
             } catch (Exception unused) {
             }
             StringBuilder sb = new StringBuilder();
-            if (c8875b != null) {
-                String c = c8875b.c();
-                double d = c8875b.e()[0].a;
-                int b = c8875b.b();
+            if (bVar != null) {
+                String c = bVar.c();
+                double d = bVar.e()[0].a;
+                int b2 = bVar.b();
                 if (TextUtils.isEmpty(c)) {
                     c = jn1.MUL;
                 }
@@ -203,7 +198,7 @@ public class ExceptionDetector {
                 sb.append(",rtt=");
                 sb.append(d);
                 sb.append(",errCode=");
-                sb.append(b);
+                sb.append(b2);
             }
             arrayList.add(sb.toString());
         }
@@ -218,12 +213,12 @@ public class ExceptionDetector {
         return exceptionDetector.u(networkStatus);
     }
 
-    static /* synthetic */ C0167b e(ExceptionDetector exceptionDetector, String str, String str2) {
+    static /* synthetic */ b e(ExceptionDetector exceptionDetector, String str, String str2) {
         return exceptionDetector.p(str, str2);
     }
 
-    static /* synthetic */ JSONObject f(ExceptionDetector exceptionDetector, C0167b c0167b) {
-        return exceptionDetector.x(c0167b);
+    static /* synthetic */ JSONObject f(ExceptionDetector exceptionDetector, b bVar) {
+        return exceptionDetector.x(bVar);
     }
 
     static /* synthetic */ JSONObject g(ExceptionDetector exceptionDetector) {
@@ -239,32 +234,32 @@ public class ExceptionDetector {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public C0167b p(String str, String str2) {
-        C0167b c0167b = new C0167b();
-        c0167b.a = str;
+    public b p(String str, String str2) {
+        b bVar = new b();
+        bVar.a = str;
         try {
             long currentTimeMillis = System.currentTimeMillis();
-            c0167b.b = InetAddress.getByName(str).getHostAddress();
-            c0167b.d = System.currentTimeMillis() - currentTimeMillis;
+            bVar.b = InetAddress.getByName(str).getHostAddress();
+            bVar.d = System.currentTimeMillis() - currentTimeMillis;
         } catch (UnknownHostException unused) {
         }
         if (!TextUtils.isEmpty(str2)) {
-            c0167b.c = str2;
+            bVar.c = str2;
         } else {
-            List<IConnStrategy> connStrategyListByHost = C0213a.a().getConnStrategyListByHost(str);
+            List<IConnStrategy> connStrategyListByHost = anet.channel.strategy.a.a().getConnStrategyListByHost(str);
             if (connStrategyListByHost != null && !connStrategyListByHost.isEmpty()) {
-                c0167b.c = connStrategyListByHost.get(0).getIp();
+                bVar.c = connStrategyListByHost.get(0).getIp();
             }
         }
-        String str3 = !TextUtils.isEmpty(c0167b.c) ? c0167b.c : c0167b.b;
+        String str3 = !TextUtils.isEmpty(bVar.c) ? bVar.c : bVar.b;
         if (!TextUtils.isEmpty(str3)) {
             String str4 = str3;
-            c0167b.e = new PingTask(str4, 1000, 3, 0, 0).launch();
-            c0167b.f = new PingTask(str4, 1000, 3, 972, 0).launch();
-            c0167b.g = new PingTask(str4, 1000, 3, 1172, 0).launch();
-            c0167b.h = new PingTask(str4, 1000, 3, 1432, 0).launch();
+            bVar.e = new PingTask(str4, 1000, 3, 0, 0).launch();
+            bVar.f = new PingTask(str4, 1000, 3, 972, 0).launch();
+            bVar.g = new PingTask(str4, 1000, 3, 1172, 0).launch();
+            bVar.h = new PingTask(str4, 1000, 3, 1432, 0).launch();
         }
-        return c0167b;
+        return bVar;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -275,9 +270,9 @@ public class ExceptionDetector {
         NetworkStatusHelper.NetworkStatus i = NetworkStatusHelper.i();
         jSONObject.put("networkInfo", (Object) v(i));
         jSONObject.put("localDetect", (Object) u(i));
-        C0167b p = p(MtopUnitStrategy.GUIDE_ONLINE_DOMAIN, this.b);
-        C0167b p2 = p("gw.alicdn.com", this.d);
-        C0167b p3 = p("msgacs.m.taobao.com", this.c);
+        b p = p(MtopUnitStrategy.GUIDE_ONLINE_DOMAIN, this.b);
+        b p2 = p("gw.alicdn.com", this.d);
+        b p3 = p("msgacs.m.taobao.com", this.c);
         JSONArray jSONArray = new JSONArray();
         jSONArray.add(x(p));
         jSONArray.add(x(p2));
@@ -305,7 +300,7 @@ public class ExceptionDetector {
     /* JADX INFO: Access modifiers changed from: private */
     public JSONObject u(NetworkStatusHelper.NetworkStatus networkStatus) {
         String defaultGateway = networkStatus.isWifi() ? NetUtils.getDefaultGateway("114.114.114.114") : NetUtils.getPreferNextHop("114.114.114.114", 2);
-        Future<C8875b> launch = TextUtils.isEmpty(defaultGateway) ? null : new PingTask(defaultGateway, 1000, 3, 0, 0).launch();
+        Future<org.android.netutil.b> launch = TextUtils.isEmpty(defaultGateway) ? null : new PingTask(defaultGateway, 1000, 3, 0, 0).launch();
         JSONObject jSONObject = new JSONObject();
         jSONObject.put("nextHop", (Object) defaultGateway);
         jSONObject.put("ping", (Object) w(1, launch));
@@ -331,22 +326,22 @@ public class ExceptionDetector {
         return jSONObject;
     }
 
-    private JSONObject w(int i, Future<C8875b> future) {
-        C8874a[] e;
+    private JSONObject w(int i, Future<org.android.netutil.b> future) {
+        org.android.netutil.a[] e;
         JSONObject jSONObject = new JSONObject();
         if (future == null) {
             return jSONObject;
         }
-        C8875b c8875b = null;
+        org.android.netutil.b bVar = null;
         try {
-            c8875b = future.get();
+            bVar = future.get();
         } catch (Exception unused) {
         }
-        if (c8875b == null) {
+        if (bVar == null) {
             return jSONObject;
         }
-        jSONObject.put("errCode", Integer.valueOf(c8875b.b()));
-        int f = c8875b.f();
+        jSONObject.put("errCode", Integer.valueOf(bVar.b()));
+        int f = bVar.f();
         if (f > 0) {
             if (i == 2) {
                 this.e = Math.max(this.e, 1000);
@@ -358,11 +353,11 @@ public class ExceptionDetector {
         }
         jSONObject.put("successCnt", Integer.valueOf(f));
         JSONArray jSONArray = new JSONArray();
-        for (C8874a c8874a : c8875b.e()) {
+        for (org.android.netutil.a aVar : bVar.e()) {
             JSONObject jSONObject2 = new JSONObject();
-            jSONObject2.put("seq", (Object) Integer.valueOf(c8874a.b));
-            jSONObject2.put("hop", (Object) Integer.valueOf(c8874a.c));
-            jSONObject2.put("rtt", (Object) Double.valueOf(c8874a.a));
+            jSONObject2.put("seq", (Object) Integer.valueOf(aVar.b));
+            jSONObject2.put("hop", (Object) Integer.valueOf(aVar.c));
+            jSONObject2.put("rtt", (Object) Double.valueOf(aVar.a));
             jSONArray.add(jSONObject2);
         }
         jSONObject.put("pingCnt", Integer.valueOf(jSONArray.size()));
@@ -371,19 +366,19 @@ public class ExceptionDetector {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public JSONObject x(C0167b c0167b) {
+    public JSONObject x(b bVar) {
         JSONObject jSONObject = new JSONObject();
-        if (c0167b != null && c0167b.e != null) {
-            jSONObject.put("host", (Object) c0167b.a);
-            jSONObject.put("currentIp", (Object) c0167b.c);
-            jSONObject.put("localIp", (Object) c0167b.b);
-            jSONObject.put("dnsTime", (Object) Long.valueOf(c0167b.d));
-            jSONObject.put("ping", (Object) w(1, c0167b.e));
-            jSONObject.put("MTU1000", (Object) w(2, c0167b.f));
-            jSONObject.put("MTU1200", (Object) w(3, c0167b.g));
-            jSONObject.put("MTU1460", (Object) w(4, c0167b.h));
-            if (MtopUnitStrategy.GUIDE_ONLINE_DOMAIN.equals(c0167b.a)) {
-                ArrayList<String> C = C(!TextUtils.isEmpty(c0167b.c) ? c0167b.c : c0167b.b, 5);
+        if (bVar != null && bVar.e != null) {
+            jSONObject.put("host", (Object) bVar.a);
+            jSONObject.put("currentIp", (Object) bVar.c);
+            jSONObject.put("localIp", (Object) bVar.b);
+            jSONObject.put("dnsTime", (Object) Long.valueOf(bVar.d));
+            jSONObject.put("ping", (Object) w(1, bVar.e));
+            jSONObject.put("MTU1000", (Object) w(2, bVar.f));
+            jSONObject.put("MTU1200", (Object) w(3, bVar.g));
+            jSONObject.put("MTU1460", (Object) w(4, bVar.h));
+            if (MtopUnitStrategy.GUIDE_ONLINE_DOMAIN.equals(bVar.a)) {
+                ArrayList<String> C = C(!TextUtils.isEmpty(bVar.c) ? bVar.c : bVar.b, 5);
                 JSONObject jSONObject2 = new JSONObject();
                 int i = 0;
                 while (i < C.size()) {
@@ -405,7 +400,7 @@ public class ExceptionDetector {
             return jSONObject;
         }
         CountDownLatch countDownLatch = new CountDownLatch(1);
-        new HttpSession(hu0.c(), new zm(g.d(), "exceptionDetect", null)).w(new C0193a.C0195b().a0(g).R("GET").J(), new C0166a(this, System.currentTimeMillis(), jSONObject, str, countDownLatch));
+        new HttpSession(hu0.c(), new zm(g.d(), "exceptionDetect", null)).w(new a.b().a0(g).R("GET").J(), new a(this, System.currentTimeMillis(), jSONObject, str, countDownLatch));
         try {
             countDownLatch.await(20000L, TimeUnit.MILLISECONDS);
         } catch (Exception unused) {
@@ -458,7 +453,7 @@ public class ExceptionDetector {
     }
 
     public void q(final RequestStatistic requestStatistic) {
-        if (!C9708t9.J()) {
+        if (!t9.J()) {
             ALog.f("anet.ExceptionDetector", "exception detect closed.", null, new Object[0]);
         } else {
             ThreadPoolExecutorFactory.e(new Runnable() { // from class: anet.channel.detect.ExceptionDetector.2

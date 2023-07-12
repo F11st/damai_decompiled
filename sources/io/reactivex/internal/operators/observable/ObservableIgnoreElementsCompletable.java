@@ -1,17 +1,17 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8146a;
-import io.reactivex.AbstractC8149d;
 import io.reactivex.CompletableObserver;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.a;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.fuseable.FuseToObservable;
 import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableIgnoreElementsCompletable<T> extends AbstractC8146a implements FuseToObservable<T> {
+public final class ObservableIgnoreElementsCompletable<T> extends a implements FuseToObservable<T> {
     final ObservableSource<T> source;
 
     /* compiled from: Taobao */
@@ -60,11 +60,11 @@ public final class ObservableIgnoreElementsCompletable<T> extends AbstractC8146a
     }
 
     @Override // io.reactivex.internal.fuseable.FuseToObservable
-    public AbstractC8149d<T> fuseToObservable() {
+    public d<T> fuseToObservable() {
         return i42.n(new ObservableIgnoreElements(this.source));
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     public void subscribeActual(CompletableObserver completableObserver) {
         this.source.subscribe(new IgnoreObservable(completableObserver));
     }

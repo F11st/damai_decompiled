@@ -3,7 +3,6 @@ package tb;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.discover.main.bean.FollowPeopleBean;
 import cn.damai.homepage.R$drawable;
@@ -53,12 +52,12 @@ public class wo0 {
             this.b.setVisibility(0);
             if (followPeopleBean.userDataList.size() >= 1) {
                 this.c.setVisibility(0);
-                DMImageCreator e = C0504a.b().e(followPeopleBean.userDataList.get(0).headImg);
+                DMImageCreator e = cn.damai.common.image.a.b().e(followPeopleBean.userDataList.get(0).headImg);
                 int i = R$drawable.live_common_round_image_default;
                 e.c(i).g(this.c);
                 if (followPeopleBean.userDataList.size() >= 2) {
                     this.d.setVisibility(0);
-                    C0504a.b().e(followPeopleBean.userDataList.get(1).headImg).c(i).g(this.d);
+                    cn.damai.common.image.a.b().e(followPeopleBean.userDataList.get(1).headImg).c(i).g(this.d);
                 }
             }
         }

@@ -27,7 +27,7 @@ public class DMMultiView extends LazyInflatedView implements View.OnClickListene
     private DMMultiViewPlugin mPresenter;
 
     public DMMultiView(AlixPlayerContext alixPlayerContext, ILMLayerManager<ViewGroup> iLMLayerManager, String str) {
-        super(alixPlayerContext.getContext(), iLMLayerManager, str, R.C7935layout.dm_multi_view_plugin);
+        super(alixPlayerContext.getContext(), iLMLayerManager, str, R.layout.dm_multi_view_plugin);
         this.mHandler = new Handler(Looper.getMainLooper());
     }
 
@@ -86,7 +86,7 @@ public class DMMultiView extends LazyInflatedView implements View.OnClickListene
         if (AndroidInstantRuntime.support(ipChange, "-788773433")) {
             ipChange.ipc$dispatch("-788773433", new Object[]{this, configuration});
         } else if (isInflated()) {
-            this.mBtnScreenChange.setImageResource(configuration.orientation == 2 ? R.C7933drawable.dago_multi_smallscreen : R.C7933drawable.dago_multi_fullscreen);
+            this.mBtnScreenChange.setImageResource(configuration.orientation == 2 ? R.drawable.dago_multi_smallscreen : R.drawable.dago_multi_fullscreen);
             double[] wHFor16bi9 = MultiGridViewUtil.getWHFor16bi9(this.mContext);
             FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams((int) wHFor16bi9[0], (int) wHFor16bi9[1]);
             layoutParams.gravity = 17;

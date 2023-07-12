@@ -62,14 +62,13 @@ public class BubbleDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.app.widget.BubbleDialog$a */
     /* loaded from: classes13.dex */
-    public class View$OnTouchListenerC0471a implements View.OnTouchListener {
+    public class a implements View.OnTouchListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ WindowManager.LayoutParams a;
         final /* synthetic */ int b;
 
-        View$OnTouchListenerC0471a(WindowManager.LayoutParams layoutParams, int i) {
+        a(WindowManager.LayoutParams layoutParams, int i) {
             this.a = layoutParams;
             this.b = i;
         }
@@ -96,14 +95,13 @@ public class BubbleDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.app.widget.BubbleDialog$b */
     /* loaded from: classes13.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC0472b implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class b implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
         int a;
         int b;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC0472b() {
+        b() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -121,12 +119,11 @@ public class BubbleDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.app.widget.BubbleDialog$c */
     /* loaded from: classes4.dex */
-    public class C0473c implements BubbleLayout.OnClickEdgeListener {
+    public class c implements BubbleLayout.OnClickEdgeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0473c() {
+        c() {
         }
 
         @Override // cn.damai.common.app.widget.BubbleLayout.OnClickEdgeListener
@@ -142,9 +139,8 @@ public class BubbleDialog extends Dialog {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.app.widget.BubbleDialog$d */
     /* loaded from: classes13.dex */
-    public static /* synthetic */ class C0474d {
+    public static /* synthetic */ class d {
         static final /* synthetic */ int[] a;
         static final /* synthetic */ int[] b;
 
@@ -199,7 +195,7 @@ public class BubbleDialog extends Dialog {
         WindowManager.LayoutParams attributes = window.getAttributes();
         int i = DisplayMetrics.getwidthPixels(q60.b(getContext()));
         this.i = q60.c(getContext());
-        getWindow().getDecorView().setOnTouchListener(new View$OnTouchListenerC0471a(attributes, i));
+        getWindow().getDecorView().setOnTouchListener(new a(attributes, i));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -261,7 +257,7 @@ public class BubbleDialog extends Dialog {
                         if (position == null) {
                             return;
                         }
-                        int i = C0474d.a[position.ordinal()];
+                        int i = d.a[position.ordinal()];
                         if (i != 1) {
                             if (i != 2) {
                                 if (i != 3) {
@@ -287,7 +283,7 @@ public class BubbleDialog extends Dialog {
                 }
                 Auto auto = this.o;
                 if (auto != null) {
-                    int i2 = C0474d.b[auto.ordinal()];
+                    int i2 = d.b[auto.ordinal()];
                     if (i2 == 2) {
                         this.m = iArr2[1] > iArr2[3] ? Position.TOP : Position.BOTTOM;
                         return;
@@ -322,7 +318,7 @@ public class BubbleDialog extends Dialog {
             ipChange.ipc$dispatch("2080848612", new Object[]{this});
             return;
         }
-        int i = C0474d.a[this.m.ordinal()];
+        int i = d.a[this.m.ordinal()];
         if (i == 1) {
             this.a.setLook(BubbleLayout.Look.RIGHT);
         } else if (i == 2) {
@@ -430,9 +426,9 @@ public class BubbleDialog extends Dialog {
         m();
         this.a.measure(0, 0);
         f();
-        this.t = new ViewTreeObserver$OnGlobalLayoutListenerC0472b();
+        this.t = new b();
         this.a.getViewTreeObserver().addOnGlobalLayoutListener(this.t);
-        this.a.setOnClickEdgeListener(new C0473c());
+        this.a.setOnClickEdgeListener(new c());
     }
 
     @Override // android.app.Dialog, android.view.KeyEvent.Callback

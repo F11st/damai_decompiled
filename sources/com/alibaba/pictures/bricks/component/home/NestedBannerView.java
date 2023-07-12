@@ -68,12 +68,11 @@ public final class NestedBannerView extends AbsView<GenericItem<ItemValue>, Nest
     private final ArrayList<NestedBannerBean> mTotalList;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.NestedBannerView$a */
     /* loaded from: classes7.dex */
-    public static final class View$OnAttachStateChangeListenerC3457a implements View.OnAttachStateChangeListener {
+    public static final class a implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC3457a() {
+        a() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -111,12 +110,11 @@ public final class NestedBannerView extends AbsView<GenericItem<ItemValue>, Nest
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.NestedBannerView$b */
     /* loaded from: classes7.dex */
-    public static final class C3458b implements OnBannerListener {
+    public static final class b implements OnBannerListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3458b() {
+        b() {
         }
 
         @Override // com.alibaba.pictures.bricks.component.home.OnBannerListener
@@ -151,12 +149,11 @@ public final class NestedBannerView extends AbsView<GenericItem<ItemValue>, Nest
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.NestedBannerView$c */
     /* loaded from: classes7.dex */
-    public static final class C3459c implements BannerAttachedAutoPlayCondition {
+    public static final class c implements BannerAttachedAutoPlayCondition {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3459c() {
+        c() {
         }
 
         @Override // com.alibaba.pictures.bricks.view.BannerAttachedAutoPlayCondition
@@ -174,14 +171,13 @@ public final class NestedBannerView extends AbsView<GenericItem<ItemValue>, Nest
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.NestedBannerView$d */
     /* loaded from: classes7.dex */
-    public static final class C3460d extends AnimatorListenerAdapter {
+    public static final class d extends AnimatorListenerAdapter {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Function1<Boolean, wt2> a;
 
         /* JADX WARN: Multi-variable type inference failed */
-        C3460d(Function1<? super Boolean, wt2> function1) {
+        d(Function1<? super Boolean, wt2> function1) {
             this.a = function1;
         }
 
@@ -221,9 +217,9 @@ public final class NestedBannerView extends AbsView<GenericItem<ItemValue>, Nest
         Context context4 = view.getContext();
         b41.h(context4, "itemView.context");
         this.mContext = context4;
-        view.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC3457a());
-        nestedBanner.setViewBinder(new lj1(new C3458b()));
-        nestedBanner.setAutoPlayCondition(new C3459c());
+        view.addOnAttachStateChangeListener(new a());
+        nestedBanner.setViewBinder(new lj1(new b()));
+        nestedBanner.setAutoPlayCondition(new c());
         b41.h(nestedBannerIndicatorView, "mIndicator");
         nestedBanner.setViewIndicator(nestedBannerIndicatorView);
     }
@@ -264,7 +260,7 @@ public final class NestedBannerView extends AbsView<GenericItem<ItemValue>, Nest
                 ValueAnimator ofInt = ValueAnimator.ofInt(i2, i);
                 this.mCollapseAnimator = ofInt;
                 ofInt.setDuration(150L);
-                ofInt.addListener(new C3460d(function1));
+                ofInt.addListener(new d(function1));
                 ofInt.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: tb.kj1
                     @Override // android.animation.ValueAnimator.AnimatorUpdateListener
                     public final void onAnimationUpdate(ValueAnimator valueAnimator) {
@@ -313,9 +309,9 @@ public final class NestedBannerView extends AbsView<GenericItem<ItemValue>, Nest
         if (this.isLargeScreen || this.mSuperList.isEmpty()) {
             return false;
         }
-        Object c = ap2.INSTANCE.c(this.mCurList, this.mBanner.getCurrentItem());
-        if (c instanceof NestedBannerBean) {
-            return ((NestedBannerBean) c).isSuperFrameBanner();
+        Object c2 = ap2.INSTANCE.c(this.mCurList, this.mBanner.getCurrentItem());
+        if (c2 instanceof NestedBannerBean) {
+            return ((NestedBannerBean) c2).isSuperFrameBanner();
         }
         return false;
     }
@@ -393,7 +389,7 @@ public final class NestedBannerView extends AbsView<GenericItem<ItemValue>, Nest
 
     /* JADX INFO: Access modifiers changed from: private */
     public final void showBannerView(boolean z) {
-        Object c;
+        Object c2;
         int U;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-2107844509")) {
@@ -406,12 +402,12 @@ public final class NestedBannerView extends AbsView<GenericItem<ItemValue>, Nest
         ArrayList<NestedBannerBean> arrayList2 = z ? this.mSuperList : this.mTotalList;
         this.mCurList = arrayList2;
         this.mBanner.forceUpdate(arrayList2);
-        if (arrayList == null || this.mCurList == null || (c = ap2.INSTANCE.c(arrayList, currentItem)) == null) {
+        if (arrayList == null || this.mCurList == null || (c2 = ap2.INSTANCE.c(arrayList, currentItem)) == null) {
             return;
         }
         ArrayList<NestedBannerBean> arrayList3 = this.mCurList;
         b41.f(arrayList3);
-        U = CollectionsKt___CollectionsKt.U(arrayList3, c);
+        U = CollectionsKt___CollectionsKt.U(arrayList3, c2);
         if (U >= 0) {
             this.mBanner.setCurrentItem(U, false);
         }
@@ -486,7 +482,7 @@ public final class NestedBannerView extends AbsView<GenericItem<ItemValue>, Nest
     @Override // com.alibaba.pictures.bricks.view.NestedListener
     public void dispatchNestedPreScroll(int i, int i2, @Nullable int[] iArr) {
         ViewGroup.LayoutParams layoutParams;
-        int a;
+        int a2;
         IpChange ipChange = $ipChange;
         int i3 = 0;
         if (AndroidInstantRuntime.support(ipChange, "-260306726")) {
@@ -500,10 +496,10 @@ public final class NestedBannerView extends AbsView<GenericItem<ItemValue>, Nest
                     if (!this.isInSuperFrameState) {
                         showBannerView(true);
                     }
-                    a = ty1.d(this.mMaxHeight, i2 + i4);
-                    layoutParams.height = a;
+                    a2 = ty1.d(this.mMaxHeight, i2 + i4);
+                    layoutParams.height = a2;
                     this.mBannerContainer.requestLayout();
-                    i3 = a - i4;
+                    i3 = a2 - i4;
                 }
                 if (iArr == null && iArr.length == 2) {
                     iArr[1] = i3;
@@ -512,10 +508,10 @@ public final class NestedBannerView extends AbsView<GenericItem<ItemValue>, Nest
             } else {
                 int i5 = this.mMinHeight;
                 if (i4 > i5) {
-                    a = ty1.a(i5, i2 + i4);
-                    layoutParams.height = a;
+                    a2 = ty1.a(i5, i2 + i4);
+                    layoutParams.height = a2;
                     this.mBannerContainer.requestLayout();
-                    i3 = a - i4;
+                    i3 = a2 - i4;
                 }
                 if (iArr == null) {
                 }

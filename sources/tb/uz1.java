@@ -7,9 +7,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Objects;
 import java.util.Set;
-import kotlin.collections.C8202e;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
 import kotlin.reflect.jvm.internal.impl.builtins.PrimitiveType;
+import kotlin.reflect.jvm.internal.impl.builtins.c;
 import kotlin.reflect.jvm.internal.impl.descriptors.runtime.structure.ReflectClassUtilKt;
 import kotlin.reflect.jvm.internal.impl.load.kotlin.KotlinJvmBinaryClass;
 import kotlin.reflect.jvm.internal.impl.resolve.jvm.JvmPrimitiveType;
@@ -34,7 +33,7 @@ public final class uz1 {
         }
         if (cls.isPrimitive()) {
             if (b41.d(cls, Void.TYPE)) {
-                hj m = hj.m(C8277c.C8278a.unit.l());
+                hj m = hj.m(c.a.unit.l());
                 b41.h(m, "topLevel(StandardNames.FqNames.unit.toSafe())");
                 return new ij(m, i);
             }
@@ -260,7 +259,7 @@ public final class uz1 {
             } else if (Annotation.class.isAssignableFrom(cls)) {
                 Class<?>[] interfaces = cls.getInterfaces();
                 b41.h(interfaces, "clazz.interfaces");
-                Class<?> cls2 = (Class) C8202e.L(interfaces);
+                Class<?> cls2 = (Class) kotlin.collections.e.L(interfaces);
                 b41.h(cls2, "annotationClass");
                 KotlinJvmBinaryClass.AnnotationArgumentVisitor visitAnnotation = annotationArgumentVisitor.visitAnnotation(ni1Var, ReflectClassUtilKt.a(cls2));
                 if (visitAnnotation == null) {

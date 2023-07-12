@@ -28,7 +28,7 @@ public final class ProjectDataHolder implements Serializable {
     private int commentPosition;
     private int commentTotalNum;
     private List<String> commonProblems;
-    private HtmlParserManager.C2244a convertedItem;
+    private HtmlParserManager.a convertedItem;
     private int convertedItemPosition;
     private int convertedItemSize;
     private SpannableString discussionContent;
@@ -58,7 +58,7 @@ public final class ProjectDataHolder implements Serializable {
     private int richType;
     private String sectionTitleContent;
     private int sectionTitleType;
-    private List<HtmlParserManager.C2244a> shrinkConvertedItem;
+    private List<HtmlParserManager.a> shrinkConvertedItem;
     private int shrinkRichType;
     private int subTitlePosition;
     private TicketNote ticketNote;
@@ -101,9 +101,9 @@ public final class ProjectDataHolder implements Serializable {
         return AndroidInstantRuntime.support(ipChange, "-1955036124") ? (List) ipChange.ipc$dispatch("-1955036124", new Object[]{this}) : this.commonProblems;
     }
 
-    public HtmlParserManager.C2244a getConvertedItem() {
+    public HtmlParserManager.a getConvertedItem() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-672116114") ? (HtmlParserManager.C2244a) ipChange.ipc$dispatch("-672116114", new Object[]{this}) : this.convertedItem;
+        return AndroidInstantRuntime.support(ipChange, "-672116114") ? (HtmlParserManager.a) ipChange.ipc$dispatch("-672116114", new Object[]{this}) : this.convertedItem;
     }
 
     public int getConvertedItemPosition() {
@@ -211,7 +211,7 @@ public final class ProjectDataHolder implements Serializable {
         return AndroidInstantRuntime.support(ipChange, "1934700072") ? ((Integer) ipChange.ipc$dispatch("1934700072", new Object[]{this})).intValue() : this.sectionTitleType;
     }
 
-    public List<HtmlParserManager.C2244a> getShrinkConvertedItem() {
+    public List<HtmlParserManager.a> getShrinkConvertedItem() {
         IpChange ipChange = $ipChange;
         return AndroidInstantRuntime.support(ipChange, "-2135698341") ? (List) ipChange.ipc$dispatch("-2135698341", new Object[]{this}) : this.shrinkConvertedItem;
     }
@@ -325,12 +325,12 @@ public final class ProjectDataHolder implements Serializable {
         }
     }
 
-    public void setConvertedItem(HtmlParserManager.C2244a c2244a) {
+    public void setConvertedItem(HtmlParserManager.a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "601282122")) {
-            ipChange.ipc$dispatch("601282122", new Object[]{this, c2244a});
+            ipChange.ipc$dispatch("601282122", new Object[]{this, aVar});
         } else {
-            this.convertedItem = c2244a;
+            this.convertedItem = aVar;
         }
     }
 
@@ -550,7 +550,7 @@ public final class ProjectDataHolder implements Serializable {
         }
     }
 
-    public void setShrinkConvertedItem(List<HtmlParserManager.C2244a> list) {
+    public void setShrinkConvertedItem(List<HtmlParserManager.a> list) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "134402409")) {
             ipChange.ipc$dispatch("134402409", new Object[]{this, list});

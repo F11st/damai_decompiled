@@ -2,10 +2,9 @@ package tb;
 
 import android.content.Context;
 import android.text.TextUtils;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DinamicXEngine;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
-import com.taobao.android.dinamicx.template.db.C6394b;
 import com.taobao.android.dinamicx.template.download.DXTemplateItem;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -13,17 +12,16 @@ import java.util.LinkedList;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class o10 {
-    private volatile C6394b a;
+    private volatile com.taobao.android.dinamicx.template.db.b a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.o10$b */
     /* loaded from: classes11.dex */
-    private static class C9492b {
+    private static class b {
         private static final o10 a = new o10();
     }
 
     public static o10 b() {
-        return C9492b.a;
+        return b.a;
     }
 
     private boolean f() {
@@ -31,20 +29,20 @@ public class o10 {
             c(DinamicXEngine.i(), r10.DB_NAME);
         }
         if (this.a == null) {
-            g("DB_Open", C6368e.DX_DB_NULL, "dXDataBaseHelper == null");
+            g("DB_Open", com.taobao.android.dinamicx.e.DX_DB_NULL, "dXDataBaseHelper == null");
             return false;
         }
         return true;
     }
 
     private void g(String str, int i, String str2) {
-        C6368e c6368e = new C6368e("DinamicX_db");
-        C6368e.C6369a c6369a = new C6368e.C6369a("DB", str, i);
-        c6369a.e = str2;
+        com.taobao.android.dinamicx.e eVar = new com.taobao.android.dinamicx.e("DinamicX_db");
+        e.a aVar = new e.a("DB", str, i);
+        aVar.e = str2;
         ArrayList arrayList = new ArrayList();
-        c6368e.c = arrayList;
-        arrayList.add(c6369a);
-        DXAppMonitor.n(c6368e);
+        eVar.c = arrayList;
+        arrayList.add(aVar);
+        DXAppMonitor.n(eVar);
     }
 
     private void h(String str, String str2, DXTemplateItem dXTemplateItem, long j) {
@@ -63,7 +61,7 @@ public class o10 {
         if (context != null) {
             if (!TextUtils.isEmpty(str)) {
                 if (this.a == null) {
-                    this.a = new C6394b(context, str);
+                    this.a = new com.taobao.android.dinamicx.template.db.b(context, str);
                 }
             }
         }

@@ -145,7 +145,7 @@ public class TabLayout extends HorizontalScrollView {
     boolean unboundedRipple;
     @Nullable
     ViewPager viewPager;
-    private static final int DEF_STYLE_RES = R.C4819style.Widget_Design_TabLayout;
+    private static final int DEF_STYLE_RES = R.style.Widget_Design_TabLayout;
     private static final Pools.Pool<Tab> tabPool = new Pools.SynchronizedPool(16);
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -609,7 +609,7 @@ public class TabLayout extends HorizontalScrollView {
             } else {
                 frameLayout = this;
             }
-            ImageView imageView = (ImageView) LayoutInflater.from(getContext()).inflate(R.C4818layout.design_layout_tab_icon, (ViewGroup) frameLayout, false);
+            ImageView imageView = (ImageView) LayoutInflater.from(getContext()).inflate(R.layout.design_layout_tab_icon, (ViewGroup) frameLayout, false);
             this.iconView = imageView;
             frameLayout.addView(imageView, 0);
         }
@@ -623,7 +623,7 @@ public class TabLayout extends HorizontalScrollView {
             } else {
                 frameLayout = this;
             }
-            TextView textView = (TextView) LayoutInflater.from(getContext()).inflate(R.C4818layout.design_layout_tab_text, (ViewGroup) frameLayout, false);
+            TextView textView = (TextView) LayoutInflater.from(getContext()).inflate(R.layout.design_layout_tab_text, (ViewGroup) frameLayout, false);
             this.textView = textView;
             frameLayout.addView(textView);
         }

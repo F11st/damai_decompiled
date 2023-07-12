@@ -4,7 +4,6 @@ import java.util.Objects;
 import kotlin.Result;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
-import kotlinx.coroutines.AbstractC8699m;
 import kotlinx.coroutines.CoroutineDispatcher;
 import kotlinx.coroutines.DispatchedTask;
 import kotlinx.coroutines.internal.DispatchedContinuation;
@@ -55,10 +54,10 @@ public final class ba0 {
         Object takeState$kotlinx_coroutines_core = dispatchedTask.takeState$kotlinx_coroutines_core();
         Throwable exceptionalResult$kotlinx_coroutines_core = dispatchedTask.getExceptionalResult$kotlinx_coroutines_core(takeState$kotlinx_coroutines_core);
         if (exceptionalResult$kotlinx_coroutines_core != null) {
-            Result.C8174a c8174a = Result.Companion;
+            Result.a aVar = Result.Companion;
             successfulResult$kotlinx_coroutines_core = i32.a(exceptionalResult$kotlinx_coroutines_core);
         } else {
-            Result.C8174a c8174a2 = Result.Companion;
+            Result.a aVar2 = Result.Companion;
             successfulResult$kotlinx_coroutines_core = dispatchedTask.getSuccessfulResult$kotlinx_coroutines_core(takeState$kotlinx_coroutines_core);
         }
         Object m1271constructorimpl = Result.m1271constructorimpl(successfulResult$kotlinx_coroutines_core);
@@ -79,7 +78,7 @@ public final class ba0 {
     }
 
     private static final void e(DispatchedTask<?> dispatchedTask) {
-        AbstractC8699m b = pm2.INSTANCE.b();
+        kotlinx.coroutines.m b = pm2.INSTANCE.b();
         if (b.isUnconfinedLoopActive()) {
             b.dispatchUnconfined(dispatchedTask);
             return;

@@ -33,10 +33,9 @@ public class FlyRefreshHeader extends FalsifyHeader {
     protected MountainSceneView mSceneView;
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.FlyRefreshHeader$a */
     /* loaded from: classes6.dex */
-    class C6159a implements ValueAnimator.AnimatorUpdateListener {
-        C6159a() {
+    class a implements ValueAnimator.AnimatorUpdateListener {
+        a() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -47,10 +46,9 @@ public class FlyRefreshHeader extends FalsifyHeader {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.FlyRefreshHeader$b */
     /* loaded from: classes6.dex */
-    public class C6160b extends AnimatorListenerAdapter {
-        C6160b() {
+    public class b extends AnimatorListenerAdapter {
+        b() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -64,12 +62,11 @@ public class FlyRefreshHeader extends FalsifyHeader {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.FlyRefreshHeader$c */
     /* loaded from: classes6.dex */
-    public class C6161c extends AnimatorListenerAdapter {
+    public class c extends AnimatorListenerAdapter {
         final /* synthetic */ AnimatorListenerAdapter a;
 
-        C6161c(AnimatorListenerAdapter animatorListenerAdapter) {
+        c(AnimatorListenerAdapter animatorListenerAdapter) {
             this.a = animatorListenerAdapter;
         }
 
@@ -156,7 +153,7 @@ public class FlyRefreshHeader extends FalsifyHeader {
         if (f > 0.0f) {
             ValueAnimator ofFloat = ValueAnimator.ofFloat(f, 0.0f);
             ofFloat.setDuration(300L);
-            ofFloat.addUpdateListener(new C6159a());
+            ofFloat.addUpdateListener(new a());
             ofFloat.start();
             this.mCurrentPercent = 0.0f;
         }
@@ -233,13 +230,13 @@ public class FlyRefreshHeader extends FalsifyHeader {
         float[] fArr = {view5.getScaleX(), 0.9f};
         View view6 = this.mFlyView;
         animatorSet2.playTogether(ofFloat, ofFloat2, ofFloat3, ofFloat4, ObjectAnimator.ofFloat(view5, "scaleX", fArr), ObjectAnimator.ofFloat(view6, "scaleY", view6.getScaleY(), 0.9f));
-        animatorSet2.addListener(new C6160b());
+        animatorSet2.addListener(new b());
         AnimatorSet animatorSet3 = new AnimatorSet();
         animatorSet3.setDuration(800L);
         animatorSet3.setInterpolator(new DecelerateInterpolator());
         animatorSet3.playTogether(ObjectAnimator.ofFloat(this.mFlyView, "translationX", f, 0.0f), ObjectAnimator.ofFloat(this.mFlyView, "translationY", f2, 0.0f), ObjectAnimator.ofFloat(this.mFlyView, "rotationX", 30.0f, 0.0f), ObjectAnimator.ofFloat(this.mFlyView, "scaleX", 0.9f, 1.0f), ObjectAnimator.ofFloat(this.mFlyView, "scaleY", 0.9f, 1.0f));
         animatorSet3.setStartDelay(100L);
-        animatorSet3.addListener(new C6161c(animatorListenerAdapter));
+        animatorSet3.addListener(new c(animatorListenerAdapter));
         AnimatorSet animatorSet4 = new AnimatorSet();
         this.mFlyAnimator = animatorSet4;
         animatorSet4.playSequentially(animatorSet2, animatorSet3);

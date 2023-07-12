@@ -3,7 +3,7 @@ package com.sina.weibo.sdk.auth;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
-import com.sina.weibo.sdk.b.C6214e;
+import com.sina.weibo.sdk.b.e;
 import java.io.Serializable;
 
 /* compiled from: Taobao */
@@ -33,7 +33,7 @@ public final class AuthInfo implements Parcelable, Serializable {
         this.scope = str3;
         String packageName = context.getPackageName();
         this.package_name = packageName;
-        this.hash = C6214e.b(context, packageName);
+        this.hash = e.b(context, packageName);
     }
 
     @Override // android.os.Parcelable

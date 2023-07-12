@@ -10,20 +10,19 @@ import tb.k50;
 /* loaded from: classes3.dex */
 final class PlatformRandom extends c2 implements Serializable {
     @NotNull
-    private static final C8238a Companion = new C8238a(null);
+    private static final a Companion = new a(null);
     @Deprecated
     private static final long serialVersionUID = 0;
     @NotNull
     private final java.util.Random impl;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.random.PlatformRandom$a */
     /* loaded from: classes3.dex */
-    private static final class C8238a {
-        private C8238a() {
+    private static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8238a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

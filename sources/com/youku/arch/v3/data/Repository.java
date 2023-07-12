@@ -8,10 +8,10 @@ import com.youku.arch.v3.io.IRequest;
 import com.youku.arch.v3.io.IResponse;
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -67,7 +67,7 @@ public final class Repository {
 
     static {
         Lazy<Repository> a;
-        a = C8177b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<Repository>() { // from class: com.youku.arch.v3.data.Repository$Companion$instance$2
+        a = b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<Repository>() { // from class: com.youku.arch.v3.data.Repository$Companion$instance$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* JADX WARN: Can't rename method to resolve collision */

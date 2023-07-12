@@ -53,11 +53,11 @@ public class uy1 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
 
     @Override // cn.damai.tetris.v2.convertor.IConverter
     /* renamed from: b */
-    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, C9039db c9039db) {
+    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, db dbVar) {
         JSONArray jSONArray;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1031851160")) {
-            return (List) ipChange.ipc$dispatch("-1031851160", new Object[]{this, baseResponse, baseSection, globalConfig, c9039db});
+            return (List) ipChange.ipc$dispatch("-1031851160", new Object[]{this, baseResponse, baseSection, globalConfig, dbVar});
         }
         ArrayList arrayList = new ArrayList();
         NodeData item = baseSection.getItem();
@@ -76,7 +76,7 @@ public class uy1 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
                     jSONObject.put("rankName", (Object) string2);
                     baseSection.setComponentId(xl2.RANK_PROJECT_C_ID);
                     baseSection.setItem(jSONObject);
-                    List<Node> l = c9039db.l(baseSection, globalConfig);
+                    List<Node> l = dbVar.l(baseSection, globalConfig);
                     if (l != null) {
                         arrayList.addAll(l);
                     }

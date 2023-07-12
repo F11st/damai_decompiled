@@ -15,10 +15,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.concurrent.ConcurrentHashMap;
-import tb.C9708t9;
 import tb.a5;
 import tb.ab2;
 import tb.lw2;
+import tb.t9;
 import tb.y90;
 import tb.ym;
 
@@ -31,10 +31,9 @@ public class LocalDnsStrategyTable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.strategy.LocalDnsStrategyTable$a */
     /* loaded from: classes.dex */
-    public class C0206a implements Comparator<IPConnStrategy> {
-        C0206a(LocalDnsStrategyTable localDnsStrategyTable) {
+    public class a implements Comparator<IPConnStrategy> {
+        a(LocalDnsStrategyTable localDnsStrategyTable) {
         }
 
         @Override // java.util.Comparator
@@ -50,14 +49,14 @@ public class LocalDnsStrategyTable {
         if (list == null || list.isEmpty()) {
             list = new LinkedList<>();
         }
-        ConnProtocol a = C0227d.b().a(str);
-        if (a != null) {
-            list.add(IPConnStrategy.create(str2, !c(a) ? 80 : 443, a, 0, 0, 1, SmartHeartbeatImpl.FOREGROUND_INTERVAL));
+        ConnProtocol a2 = d.b().a(str);
+        if (a2 != null) {
+            list.add(IPConnStrategy.create(str2, !c(a2) ? 80 : 443, a2, 0, 0, 1, SmartHeartbeatImpl.FOREGROUND_INTERVAL));
         }
         list.add(IPConnStrategy.create(str2, 80, ConnProtocol.HTTP, 0, 0, 0, 0));
         list.add(IPConnStrategy.create(str2, 443, ConnProtocol.HTTPS, 0, 0, 0, 0));
-        if (C9708t9.z()) {
-            Collections.sort(list, new C0206a(this));
+        if (t9.z()) {
+            Collections.sort(list, new a(this));
         }
         this.a.put(str, list);
     }

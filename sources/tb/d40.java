@@ -3,7 +3,6 @@ package tb;
 import android.database.Cursor;
 import android.text.TextUtils;
 import cn.damai.common.db.DbManager;
-import cn.damai.common.db.db.sqlite.C0497a;
 import cn.damai.common.db.ex.DbException;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -24,7 +23,7 @@ public abstract class d40 implements DbManager {
         } else {
             synchronized (tk2.class) {
                 if (!tk2Var.j()) {
-                    execNonQuery(C0497a.a(tk2Var));
+                    execNonQuery(cn.damai.common.db.db.sqlite.a.a(tk2Var));
                     String g = tk2Var.g();
                     if (!TextUtils.isEmpty(g)) {
                         execNonQuery(g);

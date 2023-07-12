@@ -8,5 +8,5 @@ import io.reactivex.annotations.NonNull;
 /* loaded from: classes3.dex */
 public interface ParallelFlowableConverter<T, R> {
     @NonNull
-    R apply(@NonNull AbstractC8161a<T> abstractC8161a);
+    R apply(@NonNull a<T> aVar);
 }

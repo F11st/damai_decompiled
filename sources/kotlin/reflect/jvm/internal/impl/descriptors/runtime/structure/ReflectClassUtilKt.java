@@ -13,9 +13,9 @@ import java.util.List;
 import java.util.Map;
 import kotlin.Function;
 import kotlin.collections.ArraysKt___ArraysKt;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8226x;
+import kotlin.collections.m;
+import kotlin.collections.n;
+import kotlin.collections.x;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function10;
@@ -40,9 +40,10 @@ import kotlin.jvm.functions.Function7;
 import kotlin.jvm.functions.Function8;
 import kotlin.jvm.functions.Function9;
 import kotlin.reflect.KClass;
-import kotlin.sequences.C8576d;
 import kotlin.sequences.Sequence;
-import kotlin.text.C8604o;
+import kotlin.sequences.SequencesKt__SequencesKt;
+import kotlin.sequences.SequencesKt___SequencesKt;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.a12;
@@ -78,39 +79,39 @@ public final class ReflectClassUtilKt {
         int q3;
         Map<Class<? extends Function<?>>, Integer> r3;
         int i = 0;
-        j = C8214m.j(a12.b(Boolean.TYPE), a12.b(Byte.TYPE), a12.b(Character.TYPE), a12.b(Double.TYPE), a12.b(Float.TYPE), a12.b(Integer.TYPE), a12.b(Long.TYPE), a12.b(Short.TYPE));
+        j = m.j(a12.b(Boolean.TYPE), a12.b(Byte.TYPE), a12.b(Character.TYPE), a12.b(Double.TYPE), a12.b(Float.TYPE), a12.b(Integer.TYPE), a12.b(Long.TYPE), a12.b(Short.TYPE));
         a = j;
-        q = C8215n.q(j, 10);
+        q = n.q(j, 10);
         ArrayList arrayList = new ArrayList(q);
         Iterator<T> it = j.iterator();
         while (it.hasNext()) {
             KClass kClass = (KClass) it.next();
             arrayList.add(hq2.a(s61.c(kClass), s61.d(kClass)));
         }
-        r = C8226x.r(arrayList);
+        r = x.r(arrayList);
         b = r;
         List<KClass<? extends Object>> list = a;
-        q2 = C8215n.q(list, 10);
+        q2 = n.q(list, 10);
         ArrayList arrayList2 = new ArrayList(q2);
         Iterator<T> it2 = list.iterator();
         while (it2.hasNext()) {
             KClass kClass2 = (KClass) it2.next();
             arrayList2.add(hq2.a(s61.d(kClass2), s61.c(kClass2)));
         }
-        r2 = C8226x.r(arrayList2);
+        r2 = x.r(arrayList2);
         c = r2;
-        j2 = C8214m.j(Function0.class, Function1.class, Function2.class, Function3.class, Function4.class, Function5.class, Function6.class, Function7.class, Function8.class, Function9.class, Function10.class, Function11.class, Function12.class, Function13.class, Function14.class, Function15.class, Function16.class, Function17.class, Function18.class, Function19.class, Function20.class, Function21.class, Function22.class);
-        q3 = C8215n.q(j2, 10);
+        j2 = m.j(Function0.class, Function1.class, Function2.class, Function3.class, Function4.class, Function5.class, Function6.class, Function7.class, Function8.class, Function9.class, Function10.class, Function11.class, Function12.class, Function13.class, Function14.class, Function15.class, Function16.class, Function17.class, Function18.class, Function19.class, Function20.class, Function21.class, Function22.class);
+        q3 = n.q(j2, 10);
         ArrayList arrayList3 = new ArrayList(q3);
         for (Object obj : j2) {
             int i2 = i + 1;
             if (i < 0) {
-                C8214m.p();
+                m.p();
             }
             arrayList3.add(hq2.a((Class) obj, Integer.valueOf(i)));
             i = i2;
         }
-        r3 = C8226x.r(arrayList3);
+        r3 = x.r(arrayList3);
         d = r3;
     }
 
@@ -198,14 +199,14 @@ public final class ReflectClassUtilKt {
         } else if (cls.isArray()) {
             String name2 = cls.getName();
             b41.h(name2, "name");
-            y2 = C8604o.y(name2, '.', r10.DIR, false, 4, null);
+            y2 = o.y(name2, '.', r10.DIR, false, 4, null);
             return y2;
         } else {
             StringBuilder sb = new StringBuilder();
             sb.append(qb1.LEVEL_L);
             String name3 = cls.getName();
             b41.h(name3, "name");
-            y = C8604o.y(name3, '.', r10.DIR, false, 4, null);
+            y = o.y(name3, '.', r10.DIR, false, 4, null);
             sb.append(y);
             sb.append(b90.TokenSEM);
             return sb.toString();
@@ -224,7 +225,7 @@ public final class ReflectClassUtilKt {
         List<Type> g;
         b41.i(type, "<this>");
         if (!(type instanceof ParameterizedType)) {
-            g = C8214m.g();
+            g = m.g();
             return g;
         }
         ParameterizedType parameterizedType = (ParameterizedType) type;
@@ -234,7 +235,7 @@ public final class ReflectClassUtilKt {
             X = ArraysKt___ArraysKt.X(actualTypeArguments);
             return X;
         }
-        return C8576d.B(C8576d.t(C8576d.h(type, new Function1<ParameterizedType, ParameterizedType>() { // from class: kotlin.reflect.jvm.internal.impl.descriptors.runtime.structure.ReflectClassUtilKt$parameterizedTypeArguments$1
+        return SequencesKt___SequencesKt.B(SequencesKt___SequencesKt.t(SequencesKt__SequencesKt.h(type, new Function1<ParameterizedType, ParameterizedType>() { // from class: kotlin.reflect.jvm.internal.impl.descriptors.runtime.structure.ReflectClassUtilKt$parameterizedTypeArguments$1
             @Override // kotlin.jvm.functions.Function1
             @Nullable
             public final ParameterizedType invoke(@NotNull ParameterizedType parameterizedType2) {

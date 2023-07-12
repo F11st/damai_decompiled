@@ -6,9 +6,9 @@ import anet.channel.strategy.IConnStrategy;
 import anet.channel.util.Inet64Util;
 import com.youku.live.livesdk.preloader.Preloader;
 import org.json.JSONObject;
-import tb.C9708t9;
 import tb.g4;
 import tb.hu0;
+import tb.t9;
 import tb.zm;
 
 /* compiled from: Taobao */
@@ -139,13 +139,13 @@ public class SessionStatistic extends StatObject {
         this.retryTimes = zmVar.d;
         maxRetryTime = zmVar.e;
         int i = Http3ConnectionDetector.i();
-        boolean u = C9708t9.u();
-        this.xqcConnEnv = "http3OrangeEnable=" + u + "-http3Detect=" + i + "-http3ABEnable=" + C9708t9.r();
+        boolean u = t9.u();
+        this.xqcConnEnv = "http3OrangeEnable=" + u + "-http3Detect=" + i + "-http3ABEnable=" + t9.r();
         this.isBg = hu0.i() ? "bg" : "fg";
         this.ipStackType = Inet64Util.n();
         this.netSpeed = BandWidthSampler.f().h();
-        this.isComplexEnable = C9708t9.p();
-        this.isTicketStore = C9708t9.P();
+        this.isComplexEnable = t9.p();
+        this.isTicketStore = t9.P();
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:9:0x001b, code lost:

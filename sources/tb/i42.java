@@ -1,10 +1,5 @@
 package tb;
 
-import io.reactivex.AbstractC8146a;
-import io.reactivex.AbstractC8147b;
-import io.reactivex.AbstractC8148c;
-import io.reactivex.AbstractC8149d;
-import io.reactivex.AbstractC8152e;
 import io.reactivex.CompletableObserver;
 import io.reactivex.MaybeObserver;
 import io.reactivex.Observer;
@@ -23,7 +18,6 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.util.ExceptionHelper;
-import io.reactivex.parallel.AbstractC8161a;
 import java.util.concurrent.Callable;
 import org.reactivestreams.Subscriber;
 
@@ -47,45 +41,45 @@ public final class i42 {
     @Nullable
     static volatile Function<? super Scheduler, ? extends Scheduler> h;
     @Nullable
-    static volatile Function<? super AbstractC8147b, ? extends AbstractC8147b> i;
+    static volatile Function<? super io.reactivex.b, ? extends io.reactivex.b> i;
     @Nullable
     static volatile Function<? super an, ? extends an> j;
     @Nullable
-    static volatile Function<? super AbstractC8149d, ? extends AbstractC8149d> k;
+    static volatile Function<? super io.reactivex.d, ? extends io.reactivex.d> k;
     @Nullable
     static volatile Function<? super bn, ? extends bn> l;
     @Nullable
-    static volatile Function<? super AbstractC8148c, ? extends AbstractC8148c> m;
+    static volatile Function<? super io.reactivex.c, ? extends io.reactivex.c> m;
     @Nullable
-    static volatile Function<? super AbstractC8152e, ? extends AbstractC8152e> n;
+    static volatile Function<? super io.reactivex.e, ? extends io.reactivex.e> n;
     @Nullable
-    static volatile Function<? super AbstractC8146a, ? extends AbstractC8146a> o;
+    static volatile Function<? super io.reactivex.a, ? extends io.reactivex.a> o;
     @Nullable
-    static volatile Function<? super AbstractC8161a, ? extends AbstractC8161a> p;
+    static volatile Function<? super io.reactivex.parallel.a, ? extends io.reactivex.parallel.a> p;
     @Nullable
-    static volatile BiFunction<? super AbstractC8147b, ? super Subscriber, ? extends Subscriber> q;
+    static volatile BiFunction<? super io.reactivex.b, ? super Subscriber, ? extends Subscriber> q;
     @Nullable
-    static volatile BiFunction<? super AbstractC8148c, ? super MaybeObserver, ? extends MaybeObserver> r;
+    static volatile BiFunction<? super io.reactivex.c, ? super MaybeObserver, ? extends MaybeObserver> r;
     @Nullable
-    static volatile BiFunction<? super AbstractC8149d, ? super Observer, ? extends Observer> s;
+    static volatile BiFunction<? super io.reactivex.d, ? super Observer, ? extends Observer> s;
     @Nullable
-    static volatile BiFunction<? super AbstractC8152e, ? super SingleObserver, ? extends SingleObserver> t;
+    static volatile BiFunction<? super io.reactivex.e, ? super SingleObserver, ? extends SingleObserver> t;
     @Nullable
-    static volatile BiFunction<? super AbstractC8146a, ? super CompletableObserver, ? extends CompletableObserver> u;
+    static volatile BiFunction<? super io.reactivex.a, ? super CompletableObserver, ? extends CompletableObserver> u;
     @Nullable
     static volatile BooleanSupplier v;
     static volatile boolean w;
 
     @NonNull
-    public static <T> SingleObserver<? super T> A(@NonNull AbstractC8152e<T> abstractC8152e, @NonNull SingleObserver<? super T> singleObserver) {
-        BiFunction<? super AbstractC8152e, ? super SingleObserver, ? extends SingleObserver> biFunction = t;
-        return biFunction != null ? (SingleObserver) a(biFunction, abstractC8152e, singleObserver) : singleObserver;
+    public static <T> SingleObserver<? super T> A(@NonNull io.reactivex.e<T> eVar, @NonNull SingleObserver<? super T> singleObserver) {
+        BiFunction<? super io.reactivex.e, ? super SingleObserver, ? extends SingleObserver> biFunction = t;
+        return biFunction != null ? (SingleObserver) a(biFunction, eVar, singleObserver) : singleObserver;
     }
 
     @NonNull
-    public static <T> Subscriber<? super T> B(@NonNull AbstractC8147b<T> abstractC8147b, @NonNull Subscriber<? super T> subscriber) {
-        BiFunction<? super AbstractC8147b, ? super Subscriber, ? extends Subscriber> biFunction = q;
-        return biFunction != null ? (Subscriber) a(biFunction, abstractC8147b, subscriber) : subscriber;
+    public static <T> Subscriber<? super T> B(@NonNull io.reactivex.b<T> bVar, @NonNull Subscriber<? super T> subscriber) {
+        BiFunction<? super io.reactivex.b, ? super Subscriber, ? extends Subscriber> biFunction = q;
+        return biFunction != null ? (Subscriber) a(biFunction, bVar, subscriber) : subscriber;
     }
 
     static void C(@NonNull Throwable th) {
@@ -174,40 +168,40 @@ public final class i42 {
     }
 
     @NonNull
-    public static AbstractC8146a k(@NonNull AbstractC8146a abstractC8146a) {
-        Function<? super AbstractC8146a, ? extends AbstractC8146a> function = o;
-        return function != null ? (AbstractC8146a) b(function, abstractC8146a) : abstractC8146a;
+    public static io.reactivex.a k(@NonNull io.reactivex.a aVar) {
+        Function<? super io.reactivex.a, ? extends io.reactivex.a> function = o;
+        return function != null ? (io.reactivex.a) b(function, aVar) : aVar;
     }
 
     @NonNull
-    public static <T> AbstractC8147b<T> l(@NonNull AbstractC8147b<T> abstractC8147b) {
-        Function<? super AbstractC8147b, ? extends AbstractC8147b> function = i;
-        return function != null ? (AbstractC8147b) b(function, abstractC8147b) : abstractC8147b;
+    public static <T> io.reactivex.b<T> l(@NonNull io.reactivex.b<T> bVar) {
+        Function<? super io.reactivex.b, ? extends io.reactivex.b> function = i;
+        return function != null ? (io.reactivex.b) b(function, bVar) : bVar;
     }
 
     @NonNull
-    public static <T> AbstractC8148c<T> m(@NonNull AbstractC8148c<T> abstractC8148c) {
-        Function<? super AbstractC8148c, ? extends AbstractC8148c> function = m;
-        return function != null ? (AbstractC8148c) b(function, abstractC8148c) : abstractC8148c;
+    public static <T> io.reactivex.c<T> m(@NonNull io.reactivex.c<T> cVar) {
+        Function<? super io.reactivex.c, ? extends io.reactivex.c> function = m;
+        return function != null ? (io.reactivex.c) b(function, cVar) : cVar;
     }
 
     @NonNull
-    public static <T> AbstractC8149d<T> n(@NonNull AbstractC8149d<T> abstractC8149d) {
-        Function<? super AbstractC8149d, ? extends AbstractC8149d> function = k;
-        return function != null ? (AbstractC8149d) b(function, abstractC8149d) : abstractC8149d;
+    public static <T> io.reactivex.d<T> n(@NonNull io.reactivex.d<T> dVar) {
+        Function<? super io.reactivex.d, ? extends io.reactivex.d> function = k;
+        return function != null ? (io.reactivex.d) b(function, dVar) : dVar;
     }
 
     @NonNull
-    public static <T> AbstractC8152e<T> o(@NonNull AbstractC8152e<T> abstractC8152e) {
-        Function<? super AbstractC8152e, ? extends AbstractC8152e> function = n;
-        return function != null ? (AbstractC8152e) b(function, abstractC8152e) : abstractC8152e;
+    public static <T> io.reactivex.e<T> o(@NonNull io.reactivex.e<T> eVar) {
+        Function<? super io.reactivex.e, ? extends io.reactivex.e> function = n;
+        return function != null ? (io.reactivex.e) b(function, eVar) : eVar;
     }
 
     @Beta
     @NonNull
-    public static <T> AbstractC8161a<T> p(@NonNull AbstractC8161a<T> abstractC8161a) {
-        Function<? super AbstractC8161a, ? extends AbstractC8161a> function = p;
-        return function != null ? (AbstractC8161a) b(function, abstractC8161a) : abstractC8161a;
+    public static <T> io.reactivex.parallel.a<T> p(@NonNull io.reactivex.parallel.a<T> aVar) {
+        Function<? super io.reactivex.parallel.a, ? extends io.reactivex.parallel.a> function = p;
+        return function != null ? (io.reactivex.parallel.a) b(function, aVar) : aVar;
     }
 
     @NonNull
@@ -274,20 +268,20 @@ public final class i42 {
     }
 
     @NonNull
-    public static CompletableObserver x(@NonNull AbstractC8146a abstractC8146a, @NonNull CompletableObserver completableObserver) {
-        BiFunction<? super AbstractC8146a, ? super CompletableObserver, ? extends CompletableObserver> biFunction = u;
-        return biFunction != null ? (CompletableObserver) a(biFunction, abstractC8146a, completableObserver) : completableObserver;
+    public static CompletableObserver x(@NonNull io.reactivex.a aVar, @NonNull CompletableObserver completableObserver) {
+        BiFunction<? super io.reactivex.a, ? super CompletableObserver, ? extends CompletableObserver> biFunction = u;
+        return biFunction != null ? (CompletableObserver) a(biFunction, aVar, completableObserver) : completableObserver;
     }
 
     @NonNull
-    public static <T> MaybeObserver<? super T> y(@NonNull AbstractC8148c<T> abstractC8148c, @NonNull MaybeObserver<? super T> maybeObserver) {
-        BiFunction<? super AbstractC8148c, ? super MaybeObserver, ? extends MaybeObserver> biFunction = r;
-        return biFunction != null ? (MaybeObserver) a(biFunction, abstractC8148c, maybeObserver) : maybeObserver;
+    public static <T> MaybeObserver<? super T> y(@NonNull io.reactivex.c<T> cVar, @NonNull MaybeObserver<? super T> maybeObserver) {
+        BiFunction<? super io.reactivex.c, ? super MaybeObserver, ? extends MaybeObserver> biFunction = r;
+        return biFunction != null ? (MaybeObserver) a(biFunction, cVar, maybeObserver) : maybeObserver;
     }
 
     @NonNull
-    public static <T> Observer<? super T> z(@NonNull AbstractC8149d<T> abstractC8149d, @NonNull Observer<? super T> observer) {
-        BiFunction<? super AbstractC8149d, ? super Observer, ? extends Observer> biFunction = s;
-        return biFunction != null ? (Observer) a(biFunction, abstractC8149d, observer) : observer;
+    public static <T> Observer<? super T> z(@NonNull io.reactivex.d<T> dVar, @NonNull Observer<? super T> observer) {
+        BiFunction<? super io.reactivex.d, ? super Observer, ? extends Observer> biFunction = s;
+        return biFunction != null ? (Observer) a(biFunction, dVar, observer) : observer;
     }
 }

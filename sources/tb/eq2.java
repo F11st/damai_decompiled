@@ -11,7 +11,6 @@ import androidx.core.graphics.ColorUtils;
 import com.taomai.android.h5container.webview.TaoMaiUCWebView;
 import com.taomai.android.h5container.widget.H5ToolBar;
 import com.taomai.android.h5container.widget.TitleBar;
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -19,7 +18,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes11.dex */
 public final class eq2 {
     @NotNull
-    public static final C9108a Companion = new C9108a(null);
+    public static final a Companion = new a(null);
     private final TitleBar a;
     private String b;
     private boolean c;
@@ -36,23 +35,21 @@ public final class eq2 {
     private final TaoMaiUCWebView m;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.eq2$a */
     /* loaded from: classes11.dex */
-    public static final class C9108a {
-        private C9108a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9108a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.eq2$b */
     /* loaded from: classes11.dex */
-    public static final class View$OnScrollChangeListenerC9109b implements View.OnScrollChangeListener {
-        View$OnScrollChangeListenerC9109b() {
+    public static final class b implements View.OnScrollChangeListener {
+        b() {
         }
 
         @Override // android.view.View.OnScrollChangeListener
@@ -217,7 +214,7 @@ public final class eq2 {
         if (!TextUtils.equals(str, "auto") || Build.VERSION.SDK_INT < 23) {
             return;
         }
-        this.m.setOnScrollChangeListener(new View$OnScrollChangeListenerC9109b());
+        this.m.setOnScrollChangeListener(new b());
     }
 
     public final void j(@Nullable String str) {
@@ -237,8 +234,8 @@ public final class eq2 {
         }
         if (this.c) {
             if (b41.d(this.b, "auto")) {
-                String b = dv0Var.b(this.m.getUrl(), "scrollDistance");
-                int parseInt = b != null ? Integer.parseInt(b) : 255;
+                String b2 = dv0Var.b(this.m.getUrl(), "scrollDistance");
+                int parseInt = b2 != null ? Integer.parseInt(b2) : 255;
                 this.d = parseInt;
                 int i = parseInt / 255;
                 if (i == 0) {
@@ -249,7 +246,7 @@ public final class eq2 {
                 k(parseInt, i, false);
                 q(-1, this.e, false);
                 this.h = this.m.realScrollY();
-                C8604o.q("YES", dv0Var.b(this.m.getUrl(), "transparentTitleTextAuto"), true);
+                kotlin.text.o.q("YES", dv0Var.b(this.m.getUrl(), "transparentTitleTextAuto"), true);
             } else {
                 this.g = 0.0f;
                 if (!this.j) {

@@ -9,21 +9,20 @@ import org.jetbrains.annotations.NotNull;
 public final class tm {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C9728a Companion = new C9728a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static tm b = new tm();
     private int a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.tm$a */
     /* loaded from: classes7.dex */
-    public static final class C9728a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9728a() {
+        private a() {
         }
 
-        public /* synthetic */ C9728a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -36,7 +35,7 @@ public final class tm {
             if (tm.b == null) {
                 synchronized (tm.class) {
                     if (tm.b == null) {
-                        C9728a c9728a = tm.Companion;
+                        a aVar = tm.Companion;
                         tm.b = new tm(null);
                     }
                     wt2 wt2Var = wt2.INSTANCE;

@@ -80,7 +80,7 @@ public abstract class Converter<A, B> implements Function<A, B> {
         private final Function<? super B, ? extends A> backwardFunction;
         private final Function<? super A, ? extends B> forwardFunction;
 
-        /* synthetic */ FunctionBasedConverter(Function function, Function function2, C4822a c4822a) {
+        /* synthetic */ FunctionBasedConverter(Function function, Function function2, a aVar) {
             this(function, function2);
         }
 
@@ -210,19 +210,18 @@ public abstract class Converter<A, B> implements Function<A, B> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.base.Converter$a */
     /* loaded from: classes10.dex */
-    class C4822a implements Iterable<B> {
+    class a implements Iterable<B> {
         final /* synthetic */ Iterable a;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.base.Converter$a$a */
+        /* renamed from: com.google.common.base.Converter$a$a  reason: collision with other inner class name */
         /* loaded from: classes10.dex */
-        class C4823a implements Iterator<B> {
+        class C0225a implements Iterator<B> {
             private final Iterator<? extends A> a;
 
-            C4823a() {
-                this.a = C4822a.this.a.iterator();
+            C0225a() {
+                this.a = a.this.a.iterator();
             }
 
             @Override // java.util.Iterator
@@ -241,13 +240,13 @@ public abstract class Converter<A, B> implements Function<A, B> {
             }
         }
 
-        C4822a(Iterable iterable) {
+        a(Iterable iterable) {
             this.a = iterable;
         }
 
         @Override // java.lang.Iterable
         public Iterator<B> iterator() {
-            return new C4823a();
+            return new C0225a();
         }
     }
 
@@ -272,20 +271,20 @@ public abstract class Converter<A, B> implements Function<A, B> {
     @CanIgnoreReturnValue
     @NullableDecl
     @Deprecated
-    public final B apply(@NullableDecl A a) {
-        return convert(a);
+    public final B apply(@NullableDecl A a2) {
+        return convert(a2);
     }
 
     @CanIgnoreReturnValue
     @NullableDecl
-    public final B convert(@NullableDecl A a) {
-        return correctedDoForward(a);
+    public final B convert(@NullableDecl A a2) {
+        return correctedDoForward(a2);
     }
 
     @CanIgnoreReturnValue
     public Iterable<B> convertAll(Iterable<? extends A> iterable) {
         du1.q(iterable, "fromIterable");
-        return new C4822a(iterable);
+        return new a(iterable);
     }
 
     @NullableDecl
@@ -300,14 +299,14 @@ public abstract class Converter<A, B> implements Function<A, B> {
     }
 
     @NullableDecl
-    B correctedDoForward(@NullableDecl A a) {
+    B correctedDoForward(@NullableDecl A a2) {
         if (this.handleNullAutomatically) {
-            if (a == null) {
+            if (a2 == null) {
                 return null;
             }
-            return (B) du1.p(doForward(a));
+            return (B) du1.p(doForward(a2));
         }
-        return doForward(a);
+        return doForward(a2);
     }
 
     <C> Converter<A, C> doAndThen(Converter<B, C> converter) {
@@ -318,7 +317,7 @@ public abstract class Converter<A, B> implements Function<A, B> {
     protected abstract A doBackward(B b);
 
     @ForOverride
-    protected abstract B doForward(A a);
+    protected abstract B doForward(A a2);
 
     @Override // com.google.common.base.Function
     public boolean equals(@NullableDecl Object obj) {

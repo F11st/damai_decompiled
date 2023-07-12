@@ -69,7 +69,7 @@ public class gh {
         try {
             return d(bArr);
         } catch (Throwable th) {
-            C4573ha.a(th, "er", "e64");
+            ha.a(th, "er", "e64");
             return null;
         }
     }
@@ -231,7 +231,7 @@ public class gh {
         try {
             return b(bArr, bArr2);
         } catch (Throwable th) {
-            C4573ha.a(th, "er", "asEn");
+            ha.a(th, "er", "asEn");
             return null;
         }
     }

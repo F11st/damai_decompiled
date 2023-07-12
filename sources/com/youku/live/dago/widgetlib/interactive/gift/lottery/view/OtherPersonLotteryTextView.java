@@ -28,7 +28,7 @@ public class OtherPersonLotteryTextView extends LinearLayout {
             ipChange.ipc$dispatch("2061094801", new Object[]{this});
             return;
         }
-        LayoutInflater.from(this.mContext).inflate(R.C7942layout.dago_pgc_gift_lottery_other_person_text_layout, this);
+        LayoutInflater.from(this.mContext).inflate(R.layout.dago_pgc_gift_lottery_other_person_text_layout, this);
         this.mLotteryTimeView = (TextView) findViewById(R.id.lottery_times_text);
     }
 

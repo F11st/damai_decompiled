@@ -39,7 +39,7 @@ public class TopTipView extends LazyInflatedView implements TopTipContract.View 
     private View.OnTouchListener onSpanTextViewTouchListener;
 
     public TopTipView(AlixPlayerContext alixPlayerContext, ILMLayerManager<ViewGroup> iLMLayerManager, String str, ViewPlaceholder viewPlaceholder) {
-        super(alixPlayerContext, iLMLayerManager, str, R.C7935layout.dago_plugin_toptip_view, viewPlaceholder);
+        super(alixPlayerContext, iLMLayerManager, str, R.layout.dago_plugin_toptip_view, viewPlaceholder);
         this.mEnableTipBg = true;
         this.onSpanTextViewTouchListener = new View.OnTouchListener() { // from class: com.youku.live.dago.liveplayback.widget.plugins.toptip.TopTipView.1
             private static transient /* synthetic */ IpChange $ipChange;
@@ -200,7 +200,7 @@ public class TopTipView extends LazyInflatedView implements TopTipContract.View 
             }
             int i = topTipInfo.style;
             if (i == 4) {
-                this.mTopTipBgImg.setImageResource(R.C7933drawable.dago_toptip_vip_backround);
+                this.mTopTipBgImg.setImageResource(R.drawable.dago_toptip_vip_backround);
                 this.mTopTipBgImg.setVisibility(0);
                 String charSequence = topTipInfo.text.toString();
                 if (!TextUtils.isEmpty(charSequence) && !charSequence.contains("</font>")) {
@@ -209,14 +209,14 @@ public class TopTipView extends LazyInflatedView implements TopTipContract.View 
             } else if (i == 5) {
                 this.mTopTipBgImg.setImageResource(0);
                 this.mTopTipBgImg.setVisibility(8);
-                this.mToptipContent.setTextColor(getContext().getResources().getColor(R.C7932color.zpd_subscribe_tip_color));
+                this.mToptipContent.setTextColor(getContext().getResources().getColor(R.color.zpd_subscribe_tip_color));
                 float px2sp = Utils.px2sp(getContext(), getContext().getResources().getDimension(R.dimen.dago_player_28px));
                 if (topTipInfo.textSize > 0) {
                     px2sp = Utils.px2sp(getContext(), topTipInfo.textSize);
                 }
                 this.mToptipContent.setTextSize(px2sp);
             } else if (i == 6) {
-                this.mTopTipBgImg.setImageResource(R.C7933drawable.dago_toptip_custom_backround);
+                this.mTopTipBgImg.setImageResource(R.drawable.dago_toptip_custom_backround);
                 this.mTopTipBgImg.setVisibility(0);
             }
             this.mToptipContent.setText(topTipInfo.text);
@@ -231,7 +231,7 @@ public class TopTipView extends LazyInflatedView implements TopTipContract.View 
                 layoutParams2.height = UIUtils.dp2px(100.0f);
                 this.mToptipContainer.setLayoutParams(layoutParams2);
                 if (this.mEnableTipBg) {
-                    this.mToptipContainer.setBackgroundResource(R.C7933drawable.fullscreen_topmask);
+                    this.mToptipContainer.setBackgroundResource(R.drawable.fullscreen_topmask);
                 } else {
                     this.mToptipContainer.setBackgroundResource(0);
                 }

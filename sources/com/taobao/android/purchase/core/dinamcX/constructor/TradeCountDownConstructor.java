@@ -26,10 +26,9 @@ public class TradeCountDownConstructor extends DTextViewConstructor {
     public static final String VIEW_TAG = "TradeCountDownTimer";
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.purchase.core.dinamcX.constructor.TradeCountDownConstructor$b */
     /* loaded from: classes11.dex */
-    private static class C6564b extends q80 {
-        private C6564b() {
+    private static class b extends q80 {
+        private b() {
         }
 
         @Override // tb.q80
@@ -47,27 +46,26 @@ public class TradeCountDownConstructor extends DTextViewConstructor {
                 return;
             }
             if (map.containsKey("onClick") && (view instanceof CountDownTextView)) {
-                view.setOnClickListener(new View$OnClickListenerC6565c(this, v80Var, x80Var, (CountDownTextView) view));
+                view.setOnClickListener(new c(this, v80Var, x80Var, (CountDownTextView) view));
             }
             if (map.containsKey("onFinish") && (view instanceof CountDownTextView)) {
-                ((CountDownTextView) view).setOnFinishListener(new C6566d(this, v80Var, x80Var, view));
+                ((CountDownTextView) view).setOnFinishListener(new d(this, v80Var, x80Var, view));
             }
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.purchase.core.dinamcX.constructor.TradeCountDownConstructor$c */
     /* loaded from: classes12.dex */
-    public static class View$OnClickListenerC6565c implements View.OnClickListener {
-        private C6564b a;
+    public static class c implements View.OnClickListener {
+        private b a;
         private v80 b;
         private x80 c;
         private CountDownTextView d;
         private String e;
 
-        public View$OnClickListenerC6565c(C6564b c6564b, v80 v80Var, x80 x80Var, CountDownTextView countDownTextView) {
-            this.a = c6564b;
+        public c(b bVar, v80 v80Var, x80 x80Var, CountDownTextView countDownTextView) {
+            this.a = bVar;
             this.b = v80Var;
             this.c = x80Var;
             this.d = countDownTextView;
@@ -89,17 +87,16 @@ public class TradeCountDownConstructor extends DTextViewConstructor {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.purchase.core.dinamcX.constructor.TradeCountDownConstructor$d */
     /* loaded from: classes11.dex */
-    public static class C6566d implements CountDownTextView.OnFinishListener {
-        private C6564b a;
+    public static class d implements CountDownTextView.OnFinishListener {
+        private b a;
         private v80 b;
         private x80 c;
         private View d;
         private String e;
 
-        public C6566d(C6564b c6564b, v80 v80Var, x80 x80Var, View view) {
-            this.a = c6564b;
+        public d(b bVar, v80 v80Var, x80 x80Var, View view) {
+            this.a = bVar;
             this.b = v80Var;
             this.c = x80Var;
             this.d = view;
@@ -157,7 +154,7 @@ public class TradeCountDownConstructor extends DTextViewConstructor {
 
     @Override // com.taobao.android.dinamic.dinamic.DinamicViewAdvancedConstructor
     public void setEvents(View view, v80 v80Var) {
-        new C6564b().b(view, v80Var);
+        new b().b(view, v80Var);
     }
 
     @Override // com.taobao.android.dinamic.constructor.DTextViewConstructor

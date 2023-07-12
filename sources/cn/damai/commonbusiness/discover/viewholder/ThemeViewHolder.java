@@ -49,12 +49,11 @@ public class ThemeViewHolder extends BaseViewHolder<ThemeBean> implements View.O
     private d21 s;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.discover.viewholder.ThemeViewHolder$a */
     /* loaded from: classes14.dex */
-    public class View$OnAttachStateChangeListenerC0650a implements View.OnAttachStateChangeListener {
+    public class a implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC0650a() {
+        a() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -147,9 +146,9 @@ public class ThemeViewHolder extends BaseViewHolder<ThemeBean> implements View.O
         } else {
             this.c.setText(ih2.b(context, R$drawable.icon_theme_title_prefix, themeBean.name));
         }
-        String a = ih2.a(themeBean.contentCount, themeBean.ipvuv);
+        String a2 = ih2.a(themeBean.contentCount, themeBean.ipvuv);
         this.d.setTextColor(Color.parseColor("#99FFFFFF"));
-        this.d.setText(a);
+        this.d.setText(a2);
         this.e.setVisibility(themeBean.hasPrize() ? 0 : 8);
         this.itemView.setOnClickListener(this);
     }
@@ -172,7 +171,7 @@ public class ThemeViewHolder extends BaseViewHolder<ThemeBean> implements View.O
     public ThemeViewHolder(View view, OnItemClickListener<ThemeBean> onItemClickListener) {
         super(view);
         this.p = new int[]{Color.parseColor("#00000000"), Color.parseColor("#0a000000"), Color.parseColor("#1c000000"), Color.parseColor("#35000000"), Color.parseColor("#54000000"), Color.parseColor("#75000000"), Color.parseColor("#99000000"), Color.parseColor("#bc000000"), Color.parseColor("#dd000000"), Color.parseColor("#ff000000")};
-        view.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC0650a());
+        view.addOnAttachStateChangeListener(new a());
         this.q = onItemClickListener;
         this.b = (GifCareImageView) view.findViewById(R$id.theme_img);
         this.c = (TextView) view.findViewById(R$id.theme_title);

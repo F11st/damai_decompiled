@@ -40,12 +40,12 @@ public class NetUtils {
     }
 
     public static String getPreferNextHop(String str, int i) {
-        Future<C8875b> launch = new PingTask(str, 0, 1, 0, i).launch();
+        Future<b> launch = new PingTask(str, 0, 1, 0, i).launch();
         if (launch != null) {
             try {
-                C8875b c8875b = launch.get();
-                if (c8875b != null) {
-                    return c8875b.c();
+                b bVar = launch.get();
+                if (bVar != null) {
+                    return bVar.c();
                 }
                 return null;
             } catch (Exception e) {

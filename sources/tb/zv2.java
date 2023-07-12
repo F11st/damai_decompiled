@@ -11,7 +11,6 @@ import java.util.Objects;
 import java.util.Set;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.Pair;
-import kotlin.collections.C8226x;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.FunctionReference;
 import kotlin.jvm.internal.PropertyReference;
@@ -43,7 +42,6 @@ import kotlin.reflect.jvm.internal.impl.metadata.deserialization.NameResolver;
 import kotlin.reflect.jvm.internal.impl.protobuf.MessageLite;
 import kotlin.reflect.jvm.internal.impl.resolve.descriptorUtil.DescriptorUtilsKt;
 import kotlin.reflect.jvm.internal.impl.serialization.deserialization.MemberDeserializer;
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.f42;
@@ -125,8 +123,8 @@ public final class zv2 {
             Annotation annotation = null;
             if (source instanceof tz1) {
                 annotation = ((tz1) source).a();
-            } else if (source instanceof f42.C9125a) {
-                g02 javaElement = ((f42.C9125a) source).getJavaElement();
+            } else if (source instanceof f42.a) {
+                g02 javaElement = ((f42.a) source).getJavaElement();
                 if (!(javaElement instanceof vz1)) {
                     javaElement = null;
                 }
@@ -187,13 +185,13 @@ public final class zv2 {
     }
 
     @Nullable
-    public static final <M extends MessageLite, D extends CallableDescriptor> D h(@NotNull Class<?> cls, @NotNull M m, @NotNull NameResolver nameResolver, @NotNull er2 er2Var, @NotNull AbstractC9135fc abstractC9135fc, @NotNull Function2<? super MemberDeserializer, ? super M, ? extends D> function2) {
+    public static final <M extends MessageLite, D extends CallableDescriptor> D h(@NotNull Class<?> cls, @NotNull M m, @NotNull NameResolver nameResolver, @NotNull er2 er2Var, @NotNull fc fcVar, @NotNull Function2<? super MemberDeserializer, ? super M, ? extends D> function2) {
         List<ProtoBuf$TypeParameter> typeParameterList;
         b41.i(cls, "moduleAnchor");
         b41.i(m, "proto");
         b41.i(nameResolver, "nameResolver");
         b41.i(er2Var, "typeTable");
-        b41.i(abstractC9135fc, "metadataVersion");
+        b41.i(fcVar, "metadataVersion");
         b41.i(function2, "createDescriptor");
         d42 a2 = yg1.a(cls);
         if (m instanceof ProtoBuf$Function) {
@@ -208,7 +206,7 @@ public final class zv2 {
         ModuleDescriptor b = a2.b();
         ix2 b2 = ix2.Companion.b();
         b41.h(list, "typeParameters");
-        return function2.invoke(new MemberDeserializer(new j70(a3, nameResolver, b, er2Var, b2, abstractC9135fc, null, null, list)), m);
+        return function2.invoke(new MemberDeserializer(new j70(a3, nameResolver, b, er2Var, b2, fcVar, null, null, list)), m);
     }
 
     @Nullable
@@ -292,12 +290,12 @@ public final class zv2 {
         StringBuilder sb = new StringBuilder();
         sb.append(str);
         sb.append('.');
-        y = C8604o.y(str2, '.', '$', false, 4, null);
+        y = kotlin.text.o.y(str2, '.', '$', false, 4, null);
         sb.append(y);
         String sb2 = sb.toString();
         if (i > 0) {
             StringBuilder sb3 = new StringBuilder();
-            v = C8604o.v(jn1.ARRAY_START_STR, i);
+            v = kotlin.text.o.v(jn1.ARRAY_START_STR, i);
             sb3.append(v);
             sb3.append(qb1.LEVEL_L);
             sb3.append(sb2);
@@ -351,7 +349,7 @@ public final class zv2 {
                     arrayList.add(a2);
                 }
             }
-            r = C8226x.r(arrayList);
+            r = kotlin.collections.x.r(arrayList);
             return (Annotation) AnnotationConstructorCallerKt.d(p, r, null, 4, null);
         }
         return null;
@@ -366,8 +364,8 @@ public final class zv2 {
             KotlinJvmBinaryClass a2 = ((y71) source).a();
             Objects.requireNonNull(a2, "null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.runtime.components.ReflectKotlinClass");
             return ((t02) a2).a();
-        } else if (source instanceof f42.C9125a) {
-            g02 javaElement = ((f42.C9125a) source).getJavaElement();
+        } else if (source instanceof f42.a) {
+            g02 javaElement = ((f42.a) source).getJavaElement();
             Objects.requireNonNull(javaElement, "null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.runtime.structure.ReflectJavaClass");
             return ((ReflectJavaClass) javaElement).getElement();
         } else {
@@ -413,12 +411,12 @@ public final class zv2 {
             }
             return null;
         } else if (fnVar instanceof g71) {
-            g71.AbstractC9159b b2 = ((g71) fnVar).b();
-            if (b2 instanceof g71.AbstractC9159b.C9161b) {
-                g71.AbstractC9159b.C9161b c9161b = (g71.AbstractC9159b.C9161b) b2;
-                return m(classLoader, c9161b.b(), c9161b.a());
-            } else if (b2 instanceof g71.AbstractC9159b.C9160a) {
-                ClassifierDescriptor declarationDescriptor = ((g71.AbstractC9159b.C9160a) b2).a().c().getDeclarationDescriptor();
+            g71.b b2 = ((g71) fnVar).b();
+            if (b2 instanceof g71.b.C0453b) {
+                g71.b.C0453b c0453b = (g71.b.C0453b) b2;
+                return m(classLoader, c0453b.b(), c0453b.a());
+            } else if (b2 instanceof g71.b.a) {
+                ClassifierDescriptor declarationDescriptor = ((g71.b.a) b2).a().c().getDeclarationDescriptor();
                 if (!(declarationDescriptor instanceof ClassDescriptor)) {
                     declarationDescriptor = null;
                 }

@@ -12,10 +12,10 @@ import com.youku.arch.v3.io.IResponse;
 import com.youku.arch.v3.util.LogUtil;
 import com.youku.middlewareservice.provider.info.AppInfoProviderProxy;
 import io.flutter.wpkbridge.WPKFactory;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.JvmOverloads;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
@@ -60,7 +60,7 @@ public final class LocalDataSource implements IDataSource {
 
     static {
         Lazy<LocalDataSource> a;
-        a = C8177b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<LocalDataSource>() { // from class: com.youku.arch.v3.data.local.LocalDataSource$Companion$instance$2
+        a = b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<LocalDataSource>() { // from class: com.youku.arch.v3.data.local.LocalDataSource$Companion$instance$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* JADX WARN: Can't rename method to resolve collision */

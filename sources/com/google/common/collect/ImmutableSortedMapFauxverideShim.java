@@ -8,12 +8,12 @@ import com.google.common.collect.ImmutableSortedMap;
 /* loaded from: classes10.dex */
 abstract class ImmutableSortedMapFauxverideShim<K, V> extends ImmutableMap<K, V> {
     @Deprecated
-    public static <K, V> ImmutableSortedMap.C4993b<K, V> builder() {
+    public static <K, V> ImmutableSortedMap.b<K, V> builder() {
         throw new UnsupportedOperationException();
     }
 
     @Deprecated
-    public static <K, V> ImmutableSortedMap.C4993b<K, V> builderWithExpectedSize(int i) {
+    public static <K, V> ImmutableSortedMap.b<K, V> builderWithExpectedSize(int i) {
         throw new UnsupportedOperationException();
     }
 

@@ -12,11 +12,11 @@ import mtopsdk.network.util.Constants;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public class bu implements Cif.InterfaceC4587a {
+public class bu implements Cif.a {
     bv a;
     long d;
     bp f;
-    InterfaceC4486a h;
+    a h;
     private Context i;
     private ca j;
     private String k;
@@ -29,20 +29,18 @@ public class bu implements Cif.InterfaceC4587a {
     private boolean n = false;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.bu$a */
     /* loaded from: classes10.dex */
-    public interface InterfaceC4486a {
+    public interface a {
         void c();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.bu$b */
     /* loaded from: classes10.dex */
-    public static class C4487b extends AbstractC4517dp {
+    public static class b extends dp {
         private final String d;
 
-        public C4487b(String str) {
+        public b(String str) {
             this.d = str;
         }
 
@@ -98,7 +96,7 @@ public class bu implements Cif.InterfaceC4587a {
             } catch (IOException unused) {
                 ca caVar = this.j;
                 if (caVar != null) {
-                    caVar.a(ca.EnumC4496a.file_io_exception);
+                    caVar.a(ca.a.file_io_exception);
                     return;
                 }
                 return;
@@ -134,7 +132,7 @@ public class bu implements Cif.InterfaceC4587a {
     private long g() throws IOException {
         Map<String, String> map;
         try {
-            map = ih.b().b(new C4487b(this.a.a()), MapsInitializer.getProtocol() == 2);
+            map = ih.b().b(new b(this.a.a()), MapsInitializer.getProtocol() == 2);
         } catch (gb e) {
             e.printStackTrace();
             map = null;
@@ -171,7 +169,7 @@ public class bu implements Cif.InterfaceC4587a {
                 if (ge.a != 1) {
                     ca caVar = this.j;
                     if (caVar != null) {
-                        caVar.a(ca.EnumC4496a.amap_exception);
+                        caVar.a(ca.a.amap_exception);
                         return;
                     }
                     return;
@@ -205,18 +203,18 @@ public class bu implements Cif.InterfaceC4587a {
             }
             ca caVar3 = this.j;
             if (caVar3 != null) {
-                caVar3.a(ca.EnumC4496a.network_exception);
+                caVar3.a(ca.a.network_exception);
             }
         } catch (AMapException e) {
             hd.c(e, "SiteFileFetch", "download");
             ca caVar4 = this.j;
             if (caVar4 != null) {
-                caVar4.a(ca.EnumC4496a.amap_exception);
+                caVar4.a(ca.a.amap_exception);
             }
         } catch (IOException unused) {
             ca caVar5 = this.j;
             if (caVar5 != null) {
-                caVar5.a(ca.EnumC4496a.file_io_exception);
+                caVar5.a(ca.a.file_io_exception);
             }
         }
     }
@@ -228,7 +226,7 @@ public class bu implements Cif.InterfaceC4587a {
         }
     }
 
-    @Override // com.amap.api.mapcore.util.Cif.InterfaceC4587a
+    @Override // com.amap.api.mapcore.util.Cif.a
     public void onDownload(byte[] bArr, long j) {
         try {
             this.m.a(bArr);
@@ -239,7 +237,7 @@ public class bu implements Cif.InterfaceC4587a {
             hd.c(e, "fileAccessI", "fileAccessI.write(byte[] data)");
             ca caVar = this.j;
             if (caVar != null) {
-                caVar.a(ca.EnumC4496a.file_io_exception);
+                caVar.a(ca.a.file_io_exception);
             }
             il ilVar = this.l;
             if (ilVar != null) {
@@ -248,14 +246,14 @@ public class bu implements Cif.InterfaceC4587a {
         }
     }
 
-    @Override // com.amap.api.mapcore.util.Cif.InterfaceC4587a
+    @Override // com.amap.api.mapcore.util.Cif.a
     public void onException(Throwable th) {
         bq bqVar;
         this.n = true;
         b();
         ca caVar = this.j;
         if (caVar != null) {
-            caVar.a(ca.EnumC4496a.network_exception);
+            caVar.a(ca.a.network_exception);
         }
         if ((th instanceof IOException) || (bqVar = this.m) == null) {
             return;
@@ -263,7 +261,7 @@ public class bu implements Cif.InterfaceC4587a {
         bqVar.a();
     }
 
-    @Override // com.amap.api.mapcore.util.Cif.InterfaceC4587a
+    @Override // com.amap.api.mapcore.util.Cif.a
     public void onFinish() {
         h();
         ca caVar = this.j;
@@ -274,13 +272,13 @@ public class bu implements Cif.InterfaceC4587a {
         if (bqVar != null) {
             bqVar.a();
         }
-        InterfaceC4486a interfaceC4486a = this.h;
-        if (interfaceC4486a != null) {
-            interfaceC4486a.c();
+        a aVar = this.h;
+        if (aVar != null) {
+            aVar.c();
         }
     }
 
-    @Override // com.amap.api.mapcore.util.Cif.InterfaceC4587a
+    @Override // com.amap.api.mapcore.util.Cif.a
     public void onStop() {
         if (this.n) {
             return;
@@ -302,7 +300,7 @@ public class bu implements Cif.InterfaceC4587a {
         this.g = System.currentTimeMillis();
     }
 
-    public void a(InterfaceC4486a interfaceC4486a) {
-        this.h = interfaceC4486a;
+    public void a(a aVar) {
+        this.h = aVar;
     }
 }

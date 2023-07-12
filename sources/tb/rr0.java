@@ -17,16 +17,15 @@ import org.jetbrains.annotations.NotNull;
 public final class rr0 implements GXINodeEvent {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.rr0$a */
     /* loaded from: classes6.dex */
-    static final class View$OnClickListenerC9661a implements View.OnClickListener {
+    static final class a implements View.OnClickListener {
         final /* synthetic */ os0 a;
         final /* synthetic */ qr0 b;
         final /* synthetic */ JSONObject c;
         final /* synthetic */ String d;
         final /* synthetic */ Object e;
 
-        View$OnClickListenerC9661a(os0 os0Var, qr0 qr0Var, JSONObject jSONObject, String str, Object obj) {
+        a(os0 os0Var, qr0 qr0Var, JSONObject jSONObject, String str, Object obj) {
             this.a = os0Var;
             this.b = qr0Var;
             this.c = jSONObject;
@@ -39,22 +38,22 @@ public final class rr0 implements GXINodeEvent {
             GXIExpression a;
             GXTemplateEngine.GXITrackListener f;
             GXTemplateEngine.GXIEventListener c;
-            GXTemplateEngine.C3346h p = this.a.p();
+            GXTemplateEngine.h p = this.a.p();
             if (p != null && (c = p.c()) != null) {
-                GXTemplateEngine.C3342e c3342e = new GXTemplateEngine.C3342e();
+                GXTemplateEngine.e eVar = new GXTemplateEngine.e();
                 String str = this.d;
                 qr0 qr0Var = this.b;
                 Object obj = this.e;
                 os0 os0Var = this.a;
-                c3342e.setGestureType(str);
-                c3342e.setView(qr0Var.q());
+                eVar.setGestureType(str);
+                eVar.setView(qr0Var.q());
                 b41.h(obj, "eventData");
-                c3342e.setEventParams((JSONObject) obj);
-                c3342e.setNodeId(qr0Var.o().i().d());
-                c3342e.setTemplateItem(os0Var.r());
-                c3342e.setIndex(-1);
+                eVar.setEventParams((JSONObject) obj);
+                eVar.setNodeId(qr0Var.o().i().d());
+                eVar.setTemplateItem(os0Var.r());
+                eVar.setIndex(-1);
                 wt2 wt2Var = wt2.INSTANCE;
-                c.onGestureEvent(c3342e);
+                c.onGestureEvent(eVar);
             }
             ss0 l = this.b.o().l();
             Object value = (l == null || (a = l.a()) == null) ? null : a.value(this.c);
@@ -64,32 +63,31 @@ public final class rr0 implements GXINodeEvent {
             }
             os0 os0Var2 = this.a;
             qr0 qr0Var2 = this.b;
-            GXTemplateEngine.C3346h p2 = os0Var2.p();
+            GXTemplateEngine.h p2 = os0Var2.p();
             if (p2 == null || (f = p2.f()) == null) {
                 return;
             }
-            GXTemplateEngine.C3349k c3349k = new GXTemplateEngine.C3349k();
-            c3349k.i(qr0Var2.q());
-            c3349k.h(jSONObject);
-            c3349k.f(qr0Var2.o().i().d());
-            c3349k.g(os0Var2.r());
-            c3349k.e(-1);
+            GXTemplateEngine.k kVar = new GXTemplateEngine.k();
+            kVar.i(qr0Var2.q());
+            kVar.h(jSONObject);
+            kVar.f(qr0Var2.o().i().d());
+            kVar.g(os0Var2.r());
+            kVar.e(-1);
             wt2 wt2Var2 = wt2.INSTANCE;
-            f.onManualClickTrackEvent(c3349k);
+            f.onManualClickTrackEvent(kVar);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.rr0$b */
     /* loaded from: classes6.dex */
-    static final class View$OnLongClickListenerC9662b implements View.OnLongClickListener {
+    static final class b implements View.OnLongClickListener {
         final /* synthetic */ os0 a;
         final /* synthetic */ qr0 b;
         final /* synthetic */ JSONObject c;
         final /* synthetic */ String d;
         final /* synthetic */ Object e;
 
-        View$OnLongClickListenerC9662b(os0 os0Var, qr0 qr0Var, JSONObject jSONObject, String str, Object obj) {
+        b(os0 os0Var, qr0 qr0Var, JSONObject jSONObject, String str, Object obj) {
             this.a = os0Var;
             this.b = qr0Var;
             this.c = jSONObject;
@@ -102,22 +100,22 @@ public final class rr0 implements GXINodeEvent {
             GXIExpression a;
             GXTemplateEngine.GXITrackListener f;
             GXTemplateEngine.GXIEventListener c;
-            GXTemplateEngine.C3346h p = this.a.p();
+            GXTemplateEngine.h p = this.a.p();
             if (p != null && (c = p.c()) != null) {
-                GXTemplateEngine.C3342e c3342e = new GXTemplateEngine.C3342e();
+                GXTemplateEngine.e eVar = new GXTemplateEngine.e();
                 String str = this.d;
                 qr0 qr0Var = this.b;
                 Object obj = this.e;
                 os0 os0Var = this.a;
-                c3342e.setGestureType(str);
-                c3342e.setView(qr0Var.q());
+                eVar.setGestureType(str);
+                eVar.setView(qr0Var.q());
                 b41.h(obj, "eventData");
-                c3342e.setEventParams((JSONObject) obj);
-                c3342e.setNodeId(qr0Var.o().i().d());
-                c3342e.setTemplateItem(os0Var.r());
-                c3342e.setIndex(-1);
+                eVar.setEventParams((JSONObject) obj);
+                eVar.setNodeId(qr0Var.o().i().d());
+                eVar.setTemplateItem(os0Var.r());
+                eVar.setIndex(-1);
                 wt2 wt2Var = wt2.INSTANCE;
-                c.onGestureEvent(c3342e);
+                c.onGestureEvent(eVar);
             }
             ss0 l = this.b.o().l();
             Object value = (l == null || (a = l.a()) == null) ? null : a.value(this.c);
@@ -127,18 +125,18 @@ public final class rr0 implements GXINodeEvent {
             }
             os0 os0Var2 = this.a;
             qr0 qr0Var2 = this.b;
-            GXTemplateEngine.C3346h p2 = os0Var2.p();
+            GXTemplateEngine.h p2 = os0Var2.p();
             if (p2 == null || (f = p2.f()) == null) {
                 return true;
             }
-            GXTemplateEngine.C3349k c3349k = new GXTemplateEngine.C3349k();
-            c3349k.i(qr0Var2.q());
-            c3349k.h(jSONObject);
-            c3349k.f(qr0Var2.o().i().d());
-            c3349k.g(os0Var2.r());
-            c3349k.e(-1);
+            GXTemplateEngine.k kVar = new GXTemplateEngine.k();
+            kVar.i(qr0Var2.q());
+            kVar.h(jSONObject);
+            kVar.f(qr0Var2.o().i().d());
+            kVar.g(os0Var2.r());
+            kVar.e(-1);
             wt2 wt2Var2 = wt2.INSTANCE;
-            f.onManualClickTrackEvent(c3349k);
+            f.onManualClickTrackEvent(kVar);
             return true;
         }
     }
@@ -176,12 +174,12 @@ public final class rr0 implements GXINodeEvent {
                 if (b41.d(str, EventParams.CLICK_TYPE_TAP)) {
                     View q = qr0Var.q();
                     if (q != null) {
-                        q.setOnClickListener(new View$OnClickListenerC9661a(os0Var, qr0Var, jSONObject, str, next));
+                        q.setOnClickListener(new a(os0Var, qr0Var, jSONObject, str, next));
                     }
                 } else if (b41.d(str, "longpress")) {
                     View q2 = qr0Var.q();
                     if (q2 != null) {
-                        q2.setOnLongClickListener(new View$OnLongClickListenerC9662b(os0Var, qr0Var, jSONObject, str, next));
+                        q2.setOnLongClickListener(new b(os0Var, qr0Var, jSONObject, str, next));
                     }
                 } else {
                     Log.e("[GaiaX]", b41.r("unknown event type ", str));

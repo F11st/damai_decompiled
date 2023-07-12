@@ -6,7 +6,7 @@ import cn.damai.tetris.component.drama.bean.FilterMainBean;
 import cn.damai.tetris.component.drama.bean.FilterTagBean;
 import cn.damai.tetris.component.drama.mvp.FilterContract;
 import cn.damai.tetris.component.drama.viewholder.FilterViewHolder;
-import cn.damai.tetris.componentplugin.C1985a;
+import cn.damai.tetris.componentplugin.a;
 import cn.damai.tetris.core.AbsView;
 import cn.damai.tetris.core.msg.Message;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -22,12 +22,11 @@ public class FilterView extends AbsView<FilterContract.Presenter> implements Fil
     private FilterViewHolder viewHolder;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.drama.mvp.FilterView$a */
     /* loaded from: classes7.dex */
-    public class C1824a implements FilterViewHolder.OnItemExposeListener {
+    public class a implements FilterViewHolder.OnItemExposeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1824a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.FilterViewHolder.OnItemExposeListener
@@ -61,7 +60,7 @@ public class FilterView extends AbsView<FilterContract.Presenter> implements Fil
         super(view);
         FilterViewHolder filterViewHolder = new FilterViewHolder(view, null);
         this.viewHolder = filterViewHolder;
-        filterViewHolder.l(new C1824a());
+        filterViewHolder.l(new a());
     }
 
     @Override // cn.damai.tetris.component.drama.mvp.FilterContract.View
@@ -73,8 +72,8 @@ public class FilterView extends AbsView<FilterContract.Presenter> implements Fil
         }
         ja context = getContext();
         if (context != null) {
-            this.viewHolder.m(new C1985a.C1986a(context));
-            xr.c(context.a(), new Message(2050, new C1985a(this.viewHolder)));
+            this.viewHolder.m(new a.C0080a(context));
+            xr.c(context.a(), new Message(2050, new cn.damai.tetris.componentplugin.a(this.viewHolder)));
         }
         this.viewHolder.a(filterBean, i);
     }

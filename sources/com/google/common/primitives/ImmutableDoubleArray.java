@@ -111,13 +111,12 @@ public final class ImmutableDoubleArray implements Serializable {
 
     /* compiled from: Taobao */
     @CanIgnoreReturnValue
-    /* renamed from: com.google.common.primitives.ImmutableDoubleArray$b */
     /* loaded from: classes10.dex */
-    public static final class C5249b {
+    public static final class b {
         private double[] a;
         private int b = 0;
 
-        C5249b(int i) {
+        b(int i) {
             this.a = new double[i];
         }
 
@@ -145,7 +144,7 @@ public final class ImmutableDoubleArray implements Serializable {
             throw new AssertionError("cannot store more than MAX_VALUE elements");
         }
 
-        public C5249b a(double d) {
+        public b a(double d) {
             e(1);
             double[] dArr = this.a;
             int i = this.b;
@@ -154,7 +153,7 @@ public final class ImmutableDoubleArray implements Serializable {
             return this;
         }
 
-        public C5249b b(Iterable<Double> iterable) {
+        public b b(Iterable<Double> iterable) {
             if (iterable instanceof Collection) {
                 return c((Collection) iterable);
             }
@@ -164,7 +163,7 @@ public final class ImmutableDoubleArray implements Serializable {
             return this;
         }
 
-        public C5249b c(Collection<Double> collection) {
+        public b c(Collection<Double> collection) {
             e(collection.size());
             for (Double d : collection) {
                 double[] dArr = this.a;
@@ -186,9 +185,9 @@ public final class ImmutableDoubleArray implements Serializable {
         return Double.doubleToLongBits(d) == Double.doubleToLongBits(d2);
     }
 
-    public static C5249b builder(int i) {
+    public static b builder(int i) {
         du1.f(i >= 0, "Invalid initialCapacity: %s", i);
-        return new C5249b(i);
+        return new b(i);
     }
 
     public static ImmutableDoubleArray copyOf(double[] dArr) {
@@ -333,8 +332,8 @@ public final class ImmutableDoubleArray implements Serializable {
         this.end = i2;
     }
 
-    public static C5249b builder() {
-        return new C5249b(10);
+    public static b builder() {
+        return new b(10);
     }
 
     public static ImmutableDoubleArray copyOf(Collection<Double> collection) {

@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$raw;
 import cn.damai.commonbusiness.imagebrowse.bean.VideoInfo;
@@ -85,12 +84,11 @@ public class HeaderView extends AbsView<HeaderContract$Presenter> implements Hea
     private DMVideoPlayer mVideoPlayerView;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.online.mvp.HeaderView$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1936a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1936a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -106,12 +104,11 @@ public class HeaderView extends AbsView<HeaderContract$Presenter> implements Hea
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.online.mvp.HeaderView$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1937b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1937b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -127,12 +124,11 @@ public class HeaderView extends AbsView<HeaderContract$Presenter> implements Hea
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.online.mvp.HeaderView$c */
     /* loaded from: classes16.dex */
-    public class View$OnAttachStateChangeListenerC1938c implements View.OnAttachStateChangeListener {
+    public class c implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC1938c() {
+        c() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -159,12 +155,11 @@ public class HeaderView extends AbsView<HeaderContract$Presenter> implements Hea
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.online.mvp.HeaderView$d */
     /* loaded from: classes16.dex */
-    public class View$OnAttachStateChangeListenerC1939d implements View.OnAttachStateChangeListener {
+    public class d implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC1939d() {
+        d() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -243,10 +238,10 @@ public class HeaderView extends AbsView<HeaderContract$Presenter> implements Hea
         this.mShengyuFenTipTv = (TextView) view.findViewById(R$id.tv_shengyu_fen_tip);
         this.mTitleTv = (TextView) view.findViewById(R$id.tv_title);
         this.mBuyBtn = (TextView) view.findViewById(R$id.btn_buy);
-        this.mHeaderView.setOnClickListener(new View$OnClickListenerC1936a());
-        this.mController.setOnClickListener(new View$OnClickListenerC1937b());
-        this.mDaojishiLayout.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC1938c());
-        this.mShengyuLayout.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC1939d());
+        this.mHeaderView.setOnClickListener(new a());
+        this.mController.setOnClickListener(new b());
+        this.mDaojishiLayout.addOnAttachStateChangeListener(new c());
+        this.mShengyuLayout.addOnAttachStateChangeListener(new d());
     }
 
     private String getConcatText(long j) {
@@ -447,7 +442,7 @@ public class HeaderView extends AbsView<HeaderContract$Presenter> implements Hea
         } else {
             this.mBean = artistBean;
             this.mSchemaUrl = artistBean.jumpUrl;
-            C0504a.b().h(mu0.a()).e(this.mBean.contentPic).g(this.mBgImageView);
+            cn.damai.common.image.a.b().h(mu0.a()).e(this.mBean.contentPic).g(this.mBgImageView);
             if (!TextUtils.isEmpty(this.mBean.vid)) {
                 if (yj1.b(this.mContext) == NetworkType.NETWORK_WIFI) {
                     this.mVideoIconView.setVisibility(8);

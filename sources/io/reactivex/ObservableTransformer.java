@@ -6,5 +6,5 @@ import io.reactivex.annotations.NonNull;
 /* loaded from: classes3.dex */
 public interface ObservableTransformer<Upstream, Downstream> {
     @NonNull
-    ObservableSource<Downstream> apply(@NonNull AbstractC8149d<Upstream> abstractC8149d);
+    ObservableSource<Downstream> apply(@NonNull d<Upstream> dVar);
 }

@@ -1,9 +1,8 @@
 package tb;
 
-import anet.channel.request.C0193a;
+import anet.channel.request.a;
 import anet.channel.statist.RequestStatistic;
 import anet.channel.util.ALog;
-import anet.channel.util.C0241c;
 import anetwork.channel.aidl.ParcelableRequest;
 import com.alimm.xadsdk.request.builder.IRequestConst;
 import java.util.HashMap;
@@ -15,7 +14,7 @@ import mtopsdk.common.util.HttpHeaderConstant;
 /* loaded from: classes.dex */
 public class z12 {
     private ParcelableRequest a;
-    private C0193a b;
+    private anet.channel.request.a b;
     private int d;
     public RequestStatistic f;
     public final int g;
@@ -36,9 +35,9 @@ public class z12 {
             this.k = z;
             this.i = na2.a(parcelableRequest.seqNo, i == 0 ? "HTTP" : "DGRD");
             int i2 = parcelableRequest.connectTimeout;
-            this.g = i2 <= 0 ? (int) (C0241c.f() * 12000.0f) : i2;
+            this.g = i2 <= 0 ? (int) (anet.channel.util.c.f() * 12000.0f) : i2;
             int i3 = parcelableRequest.readTimeout;
-            this.h = i3 <= 0 ? (int) (C0241c.f() * 12000.0f) : i3;
+            this.h = i3 <= 0 ? (int) (anet.channel.util.c.f() * 12000.0f) : i3;
             int i4 = parcelableRequest.retryTime;
             this.d = (i4 < 0 || i4 > 3) ? 2 : 2;
             o01 k = k();
@@ -54,8 +53,8 @@ public class z12 {
         throw new IllegalArgumentException("request is null");
     }
 
-    private C0193a a(o01 o01Var) {
-        C0193a.C0195b W = new C0193a.C0195b().a0(o01Var).R(this.a.method).M(this.a.bodyEntry).T(this.h).O(this.g).U(this.a.allowRedirect).V(this.c).L(this.a.bizId).X(this.i).W(this.f);
+    private anet.channel.request.a a(o01 o01Var) {
+        a.b W = new a.b().a0(o01Var).R(this.a.method).M(this.a.bodyEntry).T(this.h).O(this.g).U(this.a.allowRedirect).V(this.c).L(this.a.bizId).X(this.i).W(this.f);
         W.S(this.a.params);
         String str = this.a.charset;
         if (str != null) {
@@ -103,7 +102,7 @@ public class z12 {
         throw new IllegalArgumentException("url is invalid. url=" + this.a.url);
     }
 
-    public C0193a b() {
+    public anet.channel.request.a b() {
         return this.b;
     }
 
@@ -164,8 +163,8 @@ public class z12 {
         this.f.retryTimes = i;
     }
 
-    public void r(C0193a c0193a) {
-        this.b = c0193a;
+    public void r(anet.channel.request.a aVar) {
+        this.b = aVar;
     }
 
     public boolean s() {

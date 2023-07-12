@@ -5,10 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.Pair;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.resolve.calls.inference.CapturedTypeConstructor;
 import kotlin.reflect.jvm.internal.impl.resolve.calls.inference.CapturedTypeConstructorKt;
@@ -38,9 +37,8 @@ import tb.zq2;
 public final class CapturedTypeApproximationKt {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.types.typesApproximation.CapturedTypeApproximationKt$a */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C8553a {
+    public /* synthetic */ class a {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -53,10 +51,9 @@ public final class CapturedTypeApproximationKt {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.types.typesApproximation.CapturedTypeApproximationKt$b */
     /* loaded from: classes3.dex */
-    public static final class C8554b extends oq2 {
-        C8554b() {
+    public static final class b extends oq2 {
+        b() {
         }
 
         @Override // tb.oq2
@@ -80,53 +77,53 @@ public final class CapturedTypeApproximationKt {
         Object e;
         b41.i(z71Var, "type");
         if (dk0.b(z71Var)) {
-            f7<z71> a = a(dk0.c(z71Var));
-            f7<z71> a2 = a(dk0.d(z71Var));
-            return new f7<>(gr2.b(KotlinTypeFactory.d(dk0.c(a.c()), dk0.d(a2.c())), z71Var), gr2.b(KotlinTypeFactory.d(dk0.c(a.d()), dk0.d(a2.d())), z71Var));
+            f7<z71> a2 = a(dk0.c(z71Var));
+            f7<z71> a3 = a(dk0.d(z71Var));
+            return new f7<>(gr2.b(KotlinTypeFactory.d(dk0.c(a2.c()), dk0.d(a3.c())), z71Var), gr2.b(KotlinTypeFactory.d(dk0.c(a2.d()), dk0.d(a3.d())), z71Var));
         }
         TypeConstructor c = z71Var.c();
         if (CapturedTypeConstructorKt.d(z71Var)) {
             TypeProjection projection = ((CapturedTypeConstructor) c).getProjection();
             z71 type = projection.getType();
             b41.h(type, "typeProjection.type");
-            z71 b = b(type, z71Var);
-            int i = C8553a.$EnumSwitchMapping$0[projection.getProjectionKind().ordinal()];
+            z71 b2 = b(type, z71Var);
+            int i = a.$EnumSwitchMapping$0[projection.getProjectionKind().ordinal()];
             if (i == 2) {
                 fd2 I = TypeUtilsKt.h(z71Var).I();
                 b41.h(I, "type.builtIns.nullableAnyType");
-                return new f7<>(b, I);
+                return new f7<>(b2, I);
             } else if (i == 3) {
                 fd2 H = TypeUtilsKt.h(z71Var).H();
                 b41.h(H, "type.builtIns.nothingType");
-                return new f7<>(b(H, z71Var), b);
+                return new f7<>(b(H, z71Var), b2);
             } else {
                 throw new AssertionError(b41.r("Only nontrivial projections should have been captured, not: ", projection));
             }
         } else if (!z71Var.b().isEmpty() && z71Var.b().size() == c.getParameters().size()) {
-            ArrayList<C8555a> arrayList = new ArrayList();
+            ArrayList<kotlin.reflect.jvm.internal.impl.types.typesApproximation.a> arrayList = new ArrayList();
             ArrayList arrayList2 = new ArrayList();
-            List<TypeProjection> b2 = z71Var.b();
+            List<TypeProjection> b3 = z71Var.b();
             List<TypeParameterDescriptor> parameters = c.getParameters();
             b41.h(parameters, "typeConstructor.parameters");
-            H0 = CollectionsKt___CollectionsKt.H0(b2, parameters);
+            H0 = CollectionsKt___CollectionsKt.H0(b3, parameters);
             for (Pair pair : H0) {
                 TypeProjection typeProjection = (TypeProjection) pair.component1();
                 TypeParameterDescriptor typeParameterDescriptor = (TypeParameterDescriptor) pair.component2();
                 b41.h(typeParameterDescriptor, "typeParameter");
-                C8555a g = g(typeProjection, typeParameterDescriptor);
+                kotlin.reflect.jvm.internal.impl.types.typesApproximation.a g = g(typeProjection, typeParameterDescriptor);
                 if (typeProjection.isStarProjection()) {
                     arrayList.add(g);
                     arrayList2.add(g);
                 } else {
-                    f7<C8555a> d = d(g);
+                    f7<kotlin.reflect.jvm.internal.impl.types.typesApproximation.a> d = d(g);
                     arrayList.add(d.a());
                     arrayList2.add(d.b());
                 }
             }
             boolean z = true;
             if (!arrayList.isEmpty()) {
-                for (C8555a c8555a : arrayList) {
-                    if (!c8555a.d()) {
+                for (kotlin.reflect.jvm.internal.impl.types.typesApproximation.a aVar : arrayList) {
+                    if (!aVar.d()) {
                         break;
                     }
                 }
@@ -180,71 +177,71 @@ public final class CapturedTypeApproximationKt {
         return typeProjection;
     }
 
-    private static final f7<C8555a> d(C8555a c8555a) {
-        f7<z71> a = a(c8555a.a());
-        f7<z71> a2 = a(c8555a.b());
-        return new f7<>(new C8555a(c8555a.c(), a.b(), a2.a()), new C8555a(c8555a.c(), a.a(), a2.b()));
+    private static final f7<kotlin.reflect.jvm.internal.impl.types.typesApproximation.a> d(kotlin.reflect.jvm.internal.impl.types.typesApproximation.a aVar) {
+        f7<z71> a2 = a(aVar.a());
+        f7<z71> a3 = a(aVar.b());
+        return new f7<>(new kotlin.reflect.jvm.internal.impl.types.typesApproximation.a(aVar.c(), a2.b(), a3.a()), new kotlin.reflect.jvm.internal.impl.types.typesApproximation.a(aVar.c(), a2.a(), a3.b()));
     }
 
-    private static final z71 e(z71 z71Var, List<C8555a> list) {
+    private static final z71 e(z71 z71Var, List<kotlin.reflect.jvm.internal.impl.types.typesApproximation.a> list) {
         int q;
         z71Var.b().size();
         list.size();
-        q = C8215n.q(list, 10);
+        q = n.q(list, 10);
         ArrayList arrayList = new ArrayList(q);
-        for (C8555a c8555a : list) {
-            arrayList.add(h(c8555a));
+        for (kotlin.reflect.jvm.internal.impl.types.typesApproximation.a aVar : list) {
+            arrayList.add(h(aVar));
         }
         return cr2.e(z71Var, arrayList, null, null, 6, null);
     }
 
     private static final TypeProjection f(TypeProjection typeProjection) {
-        TypeSubstitutor g = TypeSubstitutor.g(new C8554b());
+        TypeSubstitutor g = TypeSubstitutor.g(new b());
         b41.h(g, "create(object : TypeCons…ojection\n        }\n    })");
         return g.t(typeProjection);
     }
 
-    private static final C8555a g(TypeProjection typeProjection, TypeParameterDescriptor typeParameterDescriptor) {
-        int i = C8553a.$EnumSwitchMapping$0[TypeSubstitutor.c(typeParameterDescriptor.getVariance(), typeProjection).ordinal()];
+    private static final kotlin.reflect.jvm.internal.impl.types.typesApproximation.a g(TypeProjection typeProjection, TypeParameterDescriptor typeParameterDescriptor) {
+        int i = a.$EnumSwitchMapping$0[TypeSubstitutor.c(typeParameterDescriptor.getVariance(), typeProjection).ordinal()];
         if (i == 1) {
             z71 type = typeProjection.getType();
             b41.h(type, "type");
             z71 type2 = typeProjection.getType();
             b41.h(type2, "type");
-            return new C8555a(typeParameterDescriptor, type, type2);
+            return new kotlin.reflect.jvm.internal.impl.types.typesApproximation.a(typeParameterDescriptor, type, type2);
         } else if (i == 2) {
             z71 type3 = typeProjection.getType();
             b41.h(type3, "type");
             fd2 I = DescriptorUtilsKt.g(typeParameterDescriptor).I();
             b41.h(I, "typeParameter.builtIns.nullableAnyType");
-            return new C8555a(typeParameterDescriptor, type3, I);
+            return new kotlin.reflect.jvm.internal.impl.types.typesApproximation.a(typeParameterDescriptor, type3, I);
         } else if (i == 3) {
             fd2 H = DescriptorUtilsKt.g(typeParameterDescriptor).H();
             b41.h(H, "typeParameter.builtIns.nothingType");
             z71 type4 = typeProjection.getType();
             b41.h(type4, "type");
-            return new C8555a(typeParameterDescriptor, H, type4);
+            return new kotlin.reflect.jvm.internal.impl.types.typesApproximation.a(typeParameterDescriptor, H, type4);
         } else {
             throw new NoWhenBranchMatchedException();
         }
     }
 
-    private static final TypeProjection h(C8555a c8555a) {
-        c8555a.d();
-        if (!b41.d(c8555a.a(), c8555a.b())) {
-            Variance variance = c8555a.c().getVariance();
+    private static final TypeProjection h(kotlin.reflect.jvm.internal.impl.types.typesApproximation.a aVar) {
+        aVar.d();
+        if (!b41.d(aVar.a(), aVar.b())) {
+            Variance variance = aVar.c().getVariance();
             Variance variance2 = Variance.IN_VARIANCE;
             if (variance != variance2) {
-                if (!AbstractC8271b.l0(c8555a.a()) || c8555a.c().getVariance() == variance2) {
-                    return AbstractC8271b.n0(c8555a.b()) ? new zq2(i(c8555a, variance2), c8555a.a()) : new zq2(i(c8555a, Variance.OUT_VARIANCE), c8555a.b());
+                if (!kotlin.reflect.jvm.internal.impl.builtins.b.l0(aVar.a()) || aVar.c().getVariance() == variance2) {
+                    return kotlin.reflect.jvm.internal.impl.builtins.b.n0(aVar.b()) ? new zq2(i(aVar, variance2), aVar.a()) : new zq2(i(aVar, Variance.OUT_VARIANCE), aVar.b());
                 }
-                return new zq2(i(c8555a, Variance.OUT_VARIANCE), c8555a.b());
+                return new zq2(i(aVar, Variance.OUT_VARIANCE), aVar.b());
             }
         }
-        return new zq2(c8555a.a());
+        return new zq2(aVar.a());
     }
 
-    private static final Variance i(C8555a c8555a, Variance variance) {
-        return variance == c8555a.c().getVariance() ? Variance.INVARIANT : variance;
+    private static final Variance i(kotlin.reflect.jvm.internal.impl.types.typesApproximation.a aVar, Variance variance) {
+        return variance == aVar.c().getVariance() ? Variance.INVARIANT : variance;
     }
 }

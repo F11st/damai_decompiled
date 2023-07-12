@@ -32,7 +32,7 @@ import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import java.util.List;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -50,7 +50,7 @@ import tb.z13;
 public final class CouponOrderConfirmFragment extends BricksBaseFragment implements OnEventListener {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3532a Companion = new C3532a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String EVENT_PAY_TYPE = "pay_type";
     @NotNull
@@ -81,13 +81,12 @@ public final class CouponOrderConfirmFragment extends BricksBaseFragment impleme
     private String skuId;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.orderconfirm.CouponOrderConfirmFragment$a */
     /* loaded from: classes7.dex */
-    public static final class C3532a {
-        private C3532a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3532a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -359,12 +358,12 @@ public final class CouponOrderConfirmFragment extends BricksBaseFragment impleme
         }
         showLoading("");
         if (DoloresLoginHandler.Companion.a().c()) {
-            rb0.C9647a c9647a = rb0.Companion;
+            rb0.a aVar = rb0.Companion;
             CouponOrderRenderRequest couponOrderRenderRequest = new CouponOrderRenderRequest();
             couponOrderRenderRequest.setItemId(this.itemId);
             couponOrderRenderRequest.setSkuId(this.skuId);
             couponOrderRenderRequest.setBuyAmount(this.buyAmount);
-            c9647a.b(couponOrderRenderRequest).c(getContext()).a().doOnKTSuccess(new Function1<CouponOrderRenderBean, wt2>() { // from class: com.alibaba.pictures.bricks.orderconfirm.CouponOrderConfirmFragment$requestOrderRender$2
+            aVar.b(couponOrderRenderRequest).c(getContext()).a().doOnKTSuccess(new Function1<CouponOrderRenderBean, wt2>() { // from class: com.alibaba.pictures.bricks.orderconfirm.CouponOrderConfirmFragment$requestOrderRender$2
                 private static transient /* synthetic */ IpChange $ipChange;
 
                 /* JADX INFO: Access modifiers changed from: package-private */
@@ -402,13 +401,12 @@ public final class CouponOrderConfirmFragment extends BricksBaseFragment impleme
                 private static transient /* synthetic */ IpChange $ipChange;
 
                 /* compiled from: Taobao */
-                /* renamed from: com.alibaba.pictures.bricks.orderconfirm.CouponOrderConfirmFragment$requestOrderRender$3$a */
                 /* loaded from: classes7.dex */
-                public static final class C3533a implements BricksBaseFragment.IClickListener {
+                public static final class a implements BricksBaseFragment.IClickListener {
                     private static transient /* synthetic */ IpChange $ipChange;
                     final /* synthetic */ CouponOrderConfirmFragment a;
 
-                    C3533a(CouponOrderConfirmFragment couponOrderConfirmFragment) {
+                    a(CouponOrderConfirmFragment couponOrderConfirmFragment) {
                         this.a = couponOrderConfirmFragment;
                     }
 
@@ -560,7 +558,7 @@ public final class CouponOrderConfirmFragment extends BricksBaseFragment impleme
                 b41.i(dc0Var, AdvanceSetting.NETWORK_TYPE);
                 String e = dc0Var.e();
                 if (e != null) {
-                    D = C8604o.D(e, "DM_", true);
+                    D = o.D(e, "DM_", true);
                     if (D) {
                         z = true;
                     }
@@ -784,7 +782,7 @@ public final class CouponOrderConfirmFragment extends BricksBaseFragment impleme
         this.skuId = arguments2 != null ? arguments2.getString(SKU_ID) : null;
         String str2 = this.itemId;
         if (str2 != null) {
-            s = C8604o.s(str2);
+            s = o.s(str2);
             if (!s) {
                 z = false;
             }
@@ -792,7 +790,7 @@ public final class CouponOrderConfirmFragment extends BricksBaseFragment impleme
         if (z || (str = this.skuId) == null) {
             return;
         }
-        C8604o.s(str);
+        o.s(str);
     }
 
     @Override // androidx.fragment.app.Fragment

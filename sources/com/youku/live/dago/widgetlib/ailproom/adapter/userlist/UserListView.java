@@ -30,7 +30,7 @@ import mtopsdk.mtop.domain.MtopResponse;
 import org.android.agoo.message.MessageService;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import tb.C9225hn;
+import tb.hn;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
@@ -66,7 +66,7 @@ public class UserListView extends LinearLayout {
             ipChange.ipc$dispatch("-1317406509", new Object[]{this, context});
         } else if (this.mRecyclerView != null) {
         } else {
-            View inflate = LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_user_list_item_layout, (ViewGroup) this, true);
+            View inflate = LayoutInflater.from(context).inflate(R.layout.dago_pgc_user_list_item_layout, (ViewGroup) this, true);
             this.mRecyclerView = (RecyclerView) inflate.findViewById(R.id.user_list_rv);
             this.mUserCountText = (TextView) inflate.findViewById(R.id.user_count_online);
             LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
@@ -254,7 +254,7 @@ public class UserListView extends LinearLayout {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "2113211348")) {
             ipChange.ipc$dispatch("2113211348", new Object[]{this, str});
-        } else if (C9225hn.SDK_TYPE.equals(str)) {
+        } else if (hn.SDK_TYPE.equals(str)) {
             RecyclerView recyclerView = this.mRecyclerView;
             if (recyclerView != null) {
                 recyclerView.setVisibility(8);

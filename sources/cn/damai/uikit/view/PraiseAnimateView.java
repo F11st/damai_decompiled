@@ -22,12 +22,11 @@ public class PraiseAnimateView extends LottieAnimationView {
     public Animator.AnimatorListener mClicklistener;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.PraiseAnimateView$a */
     /* loaded from: classes8.dex */
-    public class C2599a implements Animator.AnimatorListener {
+    public class a implements Animator.AnimatorListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2599a() {
+        a() {
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -67,12 +66,11 @@ public class PraiseAnimateView extends LottieAnimationView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.PraiseAnimateView$b */
     /* loaded from: classes8.dex */
-    public class C2600b implements Animator.AnimatorListener {
+    public class b implements Animator.AnimatorListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2600b() {
+        b() {
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -113,8 +111,8 @@ public class PraiseAnimateView extends LottieAnimationView {
 
     public PraiseAnimateView(Context context) {
         super(context);
-        this.mClicklistener = new C2599a();
-        this.mCancellistener = new C2600b();
+        this.mClicklistener = new a();
+        this.mCancellistener = new b();
     }
 
     public void playCancelAnimate() {
@@ -151,13 +149,13 @@ public class PraiseAnimateView extends LottieAnimationView {
 
     public PraiseAnimateView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.mClicklistener = new C2599a();
-        this.mCancellistener = new C2600b();
+        this.mClicklistener = new a();
+        this.mCancellistener = new b();
     }
 
     public PraiseAnimateView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        this.mClicklistener = new C2599a();
-        this.mCancellistener = new C2600b();
+        this.mClicklistener = new a();
+        this.mCancellistener = new b();
     }
 }

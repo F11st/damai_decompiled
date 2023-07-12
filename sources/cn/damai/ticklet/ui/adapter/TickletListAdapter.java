@@ -19,8 +19,6 @@ import cn.damai.comment.util.CommentItemMoreUtil;
 import cn.damai.common.AppConfig;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.member.R$color;
 import cn.damai.member.R$drawable;
@@ -63,13 +61,12 @@ public class TickletListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     private List<PerformTable> b = new ArrayList();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.adapter.TickletListAdapter$a */
     /* loaded from: classes7.dex */
-    public class View$OnAttachStateChangeListenerC2047a implements View.OnAttachStateChangeListener {
+    public class a implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ RecyclerView.ViewHolder a;
 
-        View$OnAttachStateChangeListenerC2047a(TickletListAdapter tickletListAdapter, RecyclerView.ViewHolder viewHolder) {
+        a(TickletListAdapter tickletListAdapter, RecyclerView.ViewHolder viewHolder) {
             this.a = viewHolder;
         }
 
@@ -81,8 +78,8 @@ public class TickletListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 return;
             }
             RecyclerView.ViewHolder viewHolder = this.a;
-            if ((viewHolder instanceof C2051e) && ((C2051e) viewHolder).h != null && ((C2051e) viewHolder).h.getVisibility() == 0) {
-                ((C2051e) this.a).h.playAnimation();
+            if ((viewHolder instanceof e) && ((e) viewHolder).h != null && ((e) viewHolder).h.getVisibility() == 0) {
+                ((e) this.a).h.playAnimation();
             }
         }
 
@@ -94,21 +91,20 @@ public class TickletListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 return;
             }
             RecyclerView.ViewHolder viewHolder = this.a;
-            if ((viewHolder instanceof C2051e) && ((C2051e) viewHolder).h != null && ((C2051e) viewHolder).h.getVisibility() == 0) {
-                ((C2051e) this.a).h.pauseAnimation();
+            if ((viewHolder instanceof e) && ((e) viewHolder).h != null && ((e) viewHolder).h.getVisibility() == 0) {
+                ((e) this.a).h.pauseAnimation();
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.adapter.TickletListAdapter$b */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2048b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ PerformTable a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC2048b(PerformTable performTable, int i) {
+        b(PerformTable performTable, int i) {
             this.a = performTable;
             this.b = i;
         }
@@ -137,16 +133,15 @@ public class TickletListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.adapter.TickletListAdapter$c */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2049c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ PerformOpModule a;
         final /* synthetic */ int b;
         final /* synthetic */ Map c;
         final /* synthetic */ PerformTable d;
 
-        View$OnClickListenerC2049c(PerformOpModule performOpModule, int i, Map map, PerformTable performTable) {
+        c(PerformOpModule performOpModule, int i, Map map, PerformTable performTable) {
             this.a = performOpModule;
             this.b = i;
             this.c = map;
@@ -159,26 +154,26 @@ public class TickletListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             if (AndroidInstantRuntime.support(ipChange, "62883895")) {
                 ipChange.ipc$dispatch("62883895", new Object[]{this, view});
             } else if ("4".equals(this.a.performOpType)) {
-                C0529c e = C0529c.e();
-                C0528b c0528b = C0528b.getInstance();
-                e.x(c0528b.e(un2.TICKLET_LIST_PAGE, "list", "souvenir_ticket_" + this.b, this.c, Boolean.TRUE));
+                cn.damai.common.user.c e = cn.damai.common.user.c.e();
+                cn.damai.common.user.b bVar = cn.damai.common.user.b.getInstance();
+                e.x(bVar.e(un2.TICKLET_LIST_PAGE, "list", "souvenir_ticket_" + this.b, this.c, Boolean.TRUE));
                 py2 f = py2.f();
                 Context context = TickletListAdapter.this.a;
                 PerformTable performTable = this.d;
                 f.m(context, performTable.performId, performTable.productSystemId, performTable.isLivePerform() && this.d.isMaiLive(), this.d.getProjectImage(), this.d.getProjectId(), this.d.getProjectName(), x30.h(Long.valueOf(this.d.startTimeByLong), "yyyy.MM.dd | HH:mm"), this.d.liveH5Url, "", true);
             } else if ("3".equals(this.a.performOpType)) {
-                C0529c e2 = C0529c.e();
-                C0528b c0528b2 = C0528b.getInstance();
-                e2.x(c0528b2.e(un2.TICKLET_LIST_PAGE, "list", "transfer_ticket_" + this.b, this.c, Boolean.TRUE));
+                cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
+                cn.damai.common.user.b bVar2 = cn.damai.common.user.b.getInstance();
+                e2.x(bVar2.e(un2.TICKLET_LIST_PAGE, "list", "transfer_ticket_" + this.b, this.c, Boolean.TRUE));
                 PerformTable performTable2 = this.d;
                 py2.f().j((DamaiBaseActivity) TickletListAdapter.this.a, performTable2.performId, performTable2.productSystemId, 100);
             } else if ("1".equals(this.a.performOpType)) {
-                C0529c.e().x(un2.k().x(this.b, this.d.getItemId(), this.d.getPerformId()));
+                cn.damai.common.user.c.e().x(un2.k().x(this.b, this.d.getItemId(), this.d.getPerformId()));
                 TickletListAdapter tickletListAdapter = TickletListAdapter.this;
                 PerformTable performTable3 = this.d;
                 tickletListAdapter.g(performTable3, performTable3.getItemId());
             } else if ("2".equals(this.a.performOpType)) {
-                C0529c.e().x(un2.k().v(this.b, this.d.getItemId(), this.d.getPerformId()));
+                cn.damai.common.user.c.e().x(un2.k().v(this.b, this.d.getItemId(), this.d.getPerformId()));
                 Bundle bundle = new Bundle();
                 bundle.putString("projectId", this.d.getItemId());
                 bundle.putBoolean(EvaluateParams.OPEN_QUERY_STORE_INFO, true);
@@ -188,12 +183,11 @@ public class TickletListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.adapter.TickletListAdapter$d */
     /* loaded from: classes7.dex */
-    class C2050d extends RecyclerView.ViewHolder {
+    class d extends RecyclerView.ViewHolder {
         View a;
 
-        public C2050d(TickletListAdapter tickletListAdapter, View view) {
+        public d(TickletListAdapter tickletListAdapter, View view) {
             super(view);
             this.a = view;
             TextView textView = (TextView) view.findViewById(R$id.ticklet_perform_history_sep_tip_text);
@@ -202,9 +196,8 @@ public class TickletListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.adapter.TickletListAdapter$e */
     /* loaded from: classes7.dex */
-    public class C2051e extends RecyclerView.ViewHolder {
+    public class e extends RecyclerView.ViewHolder {
         View a;
         TextView b;
         TextView c;
@@ -224,7 +217,7 @@ public class TickletListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         LinearLayout q;
         FlowLayout r;
 
-        public C2051e(TickletListAdapter tickletListAdapter, View view) {
+        public e(TickletListAdapter tickletListAdapter, View view) {
             super(view);
             this.a = view;
             this.e = (RelativeLayout) view.findViewById(R$id.ticklet_perform_item_view);
@@ -332,7 +325,7 @@ public class TickletListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private void i(cn.damai.ticklet.ui.adapter.TickletListAdapter.C2051e r18, cn.damai.ticklet.bean.PerformTable r19, int r20) {
+    private void i(cn.damai.ticklet.ui.adapter.TickletListAdapter.e r18, cn.damai.ticklet.bean.PerformTable r19, int r20) {
         /*
             Method dump skipped, instructions count: 1144
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -360,7 +353,7 @@ public class TickletListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             ipChange.ipc$dispatch("-1127305059", new Object[]{this, textView, Integer.valueOf(i), Integer.valueOf(i2), performOpModule, performTable});
             return;
         }
-        int a = t60.a(this.a, 6.0f);
+        int a2 = t60.a(this.a, 6.0f);
         textView.setBackgroundResource(j(performTable.isHistoryTicket()));
         textView.setText(performOpModule.performOpDesc);
         Map<String, String> t = un2.k().t(performTable.getProjectId(), performTable.performId);
@@ -371,11 +364,11 @@ public class TickletListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         } else {
             this.e = performOpModule.performOpDesc + JSMethod.NOT_SET + performOpModule.performOpType;
         }
-        C0529c.e().G(textView, this.e, "list", un2.TICKLET_LIST_PAGE, t);
-        textView.setOnClickListener(new View$OnClickListenerC2049c(performOpModule, i, t, performTable));
+        cn.damai.common.user.c.e().G(textView, this.e, "list", un2.TICKLET_LIST_PAGE, t);
+        textView.setOnClickListener(new c(performOpModule, i, t, performTable));
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(t60.a(this.a, 65.0f), t60.a(this.a, 32.0f));
         if (i2 > 0) {
-            layoutParams.setMargins(a, 0, 0, 0);
+            layoutParams.setMargins(a2, 0, 0, 0);
         }
         textView.setGravity(17);
         textView.setLayoutParams(layoutParams);
@@ -445,7 +438,7 @@ public class TickletListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             }
             PerformTable performTable = this.b.get(i);
             if (performTable.sepType == 0) {
-                i((C2051e) viewHolder, performTable, i);
+                i((e) viewHolder, performTable, i);
             }
             try {
                 if (Build.VERSION.SDK_INT >= 12) {
@@ -453,9 +446,9 @@ public class TickletListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                         View view = viewHolder.itemView;
                         view.removeOnAttachStateChangeListener((View.OnAttachStateChangeListener) view.getTag());
                     }
-                    View$OnAttachStateChangeListenerC2047a view$OnAttachStateChangeListenerC2047a = new View$OnAttachStateChangeListenerC2047a(this, viewHolder);
-                    viewHolder.itemView.addOnAttachStateChangeListener(view$OnAttachStateChangeListenerC2047a);
-                    viewHolder.itemView.setTag(view$OnAttachStateChangeListenerC2047a);
+                    a aVar = new a(this, viewHolder);
+                    viewHolder.itemView.addOnAttachStateChangeListener(aVar);
+                    viewHolder.itemView.setTag(aVar);
                 }
             } catch (Exception unused) {
             }
@@ -473,9 +466,9 @@ public class TickletListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             if (i != 1) {
                 return null;
             }
-            return new C2050d(this, LayoutInflater.from(this.a).inflate(R$layout.ticklet_perform_item_history_tips_item, viewGroup, false));
+            return new d(this, LayoutInflater.from(this.a).inflate(R$layout.ticklet_perform_item_history_tips_item, viewGroup, false));
         }
-        return new C2051e(this, LayoutInflater.from(this.a).inflate(R$layout.ticklet_tickletlist_item_layout, viewGroup, false));
+        return new e(this, LayoutInflater.from(this.a).inflate(R$layout.ticklet_tickletlist_item_layout, viewGroup, false));
     }
 
     public void setData(List<PerformTable> list) {

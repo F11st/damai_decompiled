@@ -13,11 +13,10 @@ public class r41 extends q41 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.r41$a */
     /* loaded from: classes3.dex */
-    public static final class C9641a {
+    public static final class a {
         @NotNull
-        public static final C9641a INSTANCE = new C9641a();
+        public static final a INSTANCE = new a();
         @JvmField
         @Nullable
         public static final Integer sdkVersion;
@@ -27,7 +26,7 @@ public class r41 extends q41 {
             /*
                 tb.r41$a r0 = new tb.r41$a
                 r0.<init>()
-                tb.r41.C9641a.INSTANCE = r0
+                tb.r41.a.INSTANCE = r0
                 r0 = 0
                 java.lang.String r1 = "android.os.Build$VERSION"
                 java.lang.Class r1 = java.lang.Class.forName(r1)     // Catch: java.lang.Throwable -> L1f
@@ -52,18 +51,18 @@ public class r41 extends q41 {
                 if (r2 == 0) goto L2e
                 r0 = r1
             L2e:
-                tb.r41.C9641a.sdkVersion = r0
+                tb.r41.a.sdkVersion = r0
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.r41.C9641a.<clinit>():void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.r41.a.<clinit>():void");
         }
 
-        private C9641a() {
+        private a() {
         }
     }
 
     private final boolean d(int i) {
-        Integer num = C9641a.sdkVersion;
+        Integer num = a.sdkVersion;
         return num == null || num.intValue() >= i;
     }
 

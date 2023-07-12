@@ -7,9 +7,9 @@ import androidx.annotation.Nullable;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
 import com.alimm.xadsdk.base.ut.AdUtConstants;
 import com.alimm.xadsdk.request.builder.IRequestConst;
-import com.taobao.application.common.C6673b;
+import com.taobao.application.common.b;
 import com.youku.alixplayer.opensdk.ups.request.UpsConstant;
-import com.youku.arch.analysis.net.C7812c;
+import com.youku.arch.analysis.net.c;
 import com.youku.playerservice.axp.PlayerConfig;
 import com.youku.playerservice.axp.constants.NetType;
 import com.youku.playerservice.axp.drm.ProvisionAuthenticator;
@@ -108,7 +108,7 @@ public class UpsUtil {
 
     public static void addUpsParams(Context context, Map<String, String> map, PlayParams playParams) {
         if (Utils.isYoukuOrHuaweiBaipai(context)) {
-            map.put("net_status", C7812c.a().b().a() + "");
+            map.put("net_status", c.a().b().a() + "");
             map.put("preferClarity", String.valueOf(playParams.getPlayIdParams().getRequestQuality().getUpsCode()));
             map.put("last_clarity", QualityUtil.getLastQuality(context) + "");
             map.put("clarity_chg_ts", QualityUtil.getLastQualityChangeTs(context) + "");
@@ -129,7 +129,7 @@ public class UpsUtil {
     }
 
     private static int getDeviceScore(Context context) {
-        return C6673b.d().getInt("oldDeviceScore", context.getApplicationContext().getSharedPreferences("device_score", 0).getInt("device_score", -1));
+        return b.d().getInt("oldDeviceScore", context.getApplicationContext().getSharedPreferences("device_score", 0).getInt("device_score", -1));
     }
 
     private static String getMediaType() {

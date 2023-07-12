@@ -17,7 +17,6 @@ import cn.damai.uikit.R$drawable;
 import cn.damai.uikit.R$id;
 import cn.damai.uikit.R$layout;
 import cn.damai.uikit.banner.BannerScroller;
-import cn.damai.uikit.image.C2497a;
 import cn.damai.uikit.image.IImageLoader;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -103,7 +102,7 @@ public class XBanner extends ViewPager {
             }
             BannerItem bannerItem = this.b.get(size);
             XBanner.this.mViewCreator.bindItemView(bannerItem, acquire, size);
-            acquire.setTag(new C2479b(bannerItem, size));
+            acquire.setTag(new b(bannerItem, size));
             acquire.setOnClickListener(this);
             viewGroup.addView(acquire);
             return acquire;
@@ -123,11 +122,11 @@ public class XBanner extends ViewPager {
                 return;
             }
             Object tag = view.getTag();
-            if (!(tag instanceof C2479b) || XBanner.this.mClickListener == null) {
+            if (!(tag instanceof b) || XBanner.this.mClickListener == null) {
                 return;
             }
-            C2479b c2479b = (C2479b) tag;
-            XBanner.this.mClickListener.onBannerClick(c2479b.a, c2479b.b);
+            b bVar = (b) tag;
+            XBanner.this.mClickListener.onBannerClick(bVar.a, bVar.b);
         }
 
         @Override // androidx.viewpager.widget.PagerAdapter
@@ -170,49 +169,47 @@ public class XBanner extends ViewPager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.banner.sub.XBanner$a */
     /* loaded from: classes8.dex */
-    public static class C2476a implements BannerItemViewCreator {
+    public static class a implements BannerItemViewCreator {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.uikit.banner.sub.XBanner$a$a */
+        /* renamed from: cn.damai.uikit.banner.sub.XBanner$a$a  reason: collision with other inner class name */
         /* loaded from: classes8.dex */
-        public class C2477a implements IImageLoader.IImageSuccListener {
+        public class C0087a implements IImageLoader.IImageSuccListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ ImageView a;
 
-            C2477a(C2476a c2476a, ImageView imageView) {
+            C0087a(a aVar, ImageView imageView) {
                 this.a = imageView;
             }
 
             @Override // cn.damai.uikit.image.IImageLoader.IImageSuccListener
-            public void onSuccess(IImageLoader.C2496b c2496b) {
+            public void onSuccess(IImageLoader.b bVar) {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "1113900712")) {
-                    ipChange.ipc$dispatch("1113900712", new Object[]{this, c2496b});
+                    ipChange.ipc$dispatch("1113900712", new Object[]{this, bVar});
                 } else {
-                    this.a.setImageDrawable(c2496b.a);
+                    this.a.setImageDrawable(bVar.a);
                 }
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.uikit.banner.sub.XBanner$a$b */
         /* loaded from: classes8.dex */
-        public class C2478b implements IImageLoader.IImageFailListener {
+        public class b implements IImageLoader.IImageFailListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ ImageView a;
 
-            C2478b(C2476a c2476a, ImageView imageView) {
+            b(a aVar, ImageView imageView) {
                 this.a = imageView;
             }
 
             @Override // cn.damai.uikit.image.IImageLoader.IImageFailListener
-            public void onFail(IImageLoader.C2495a c2495a) {
+            public void onFail(IImageLoader.a aVar) {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "-705321711")) {
-                    ipChange.ipc$dispatch("-705321711", new Object[]{this, c2495a});
+                    ipChange.ipc$dispatch("-705321711", new Object[]{this, aVar});
                 } else {
                     this.a.setImageResource(R$drawable.uikit_default_image_bg_grey);
                 }
@@ -227,7 +224,7 @@ public class XBanner extends ViewPager {
                 return;
             }
             ImageView imageView = (ImageView) view.findViewById(R$id.banner_img);
-            C2497a.a().load(bannerItem.bannerPicUrl(), R$drawable.uikit_default_image_bg_grey, 0, 0, new C2477a(this, imageView), new C2478b(this, imageView));
+            cn.damai.uikit.image.a.a().load(bannerItem.bannerPicUrl(), R$drawable.uikit_default_image_bg_grey, 0, 0, new C0087a(this, imageView), new b(this, imageView));
         }
 
         @Override // cn.damai.uikit.banner.sub.XBanner.BannerItemViewCreator
@@ -238,13 +235,12 @@ public class XBanner extends ViewPager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.banner.sub.XBanner$b */
     /* loaded from: classes17.dex */
-    public static class C2479b {
+    public static class b {
         public final BannerItem a;
         public final int b;
 
-        public C2479b(BannerItem bannerItem, int i) {
+        public b(BannerItem bannerItem, int i) {
             this.a = bannerItem;
             this.b = i;
         }
@@ -431,7 +427,7 @@ public class XBanner extends ViewPager {
             return;
         }
         if (bannerItemViewCreator == null) {
-            bannerItemViewCreator = new C2476a();
+            bannerItemViewCreator = new a();
         }
         this.mViewCreator = bannerItemViewCreator;
     }
@@ -496,7 +492,7 @@ public class XBanner extends ViewPager {
         };
         this.isFlipping = false;
         this.isAttachedToWindow = false;
-        this.mViewCreator = new C2476a();
+        this.mViewCreator = new a();
         init(context, attributeSet);
     }
 }

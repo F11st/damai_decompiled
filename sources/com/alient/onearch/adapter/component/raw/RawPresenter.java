@@ -36,7 +36,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -214,7 +214,7 @@ public class RawPresenter<M extends IContract.Model<GenericItem<ItemValue>>, V e
         for (Object obj : children) {
             int i2 = i + 1;
             if (i < 0) {
-                C8214m.p();
+                m.p();
             }
             createChildComponent((Node) obj, i);
             showComponentsInView(this.componentViewHolders);

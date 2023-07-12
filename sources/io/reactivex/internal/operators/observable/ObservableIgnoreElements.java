@@ -53,7 +53,7 @@ public final class ObservableIgnoreElements<T> extends AbstractObservableWithUps
         super(observableSource);
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new IgnoreObservable(observer));
     }

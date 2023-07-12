@@ -9,9 +9,8 @@ import com.real.android.nativehtml.common.css.CssProperty;
 import com.real.android.nativehtml.common.dom.ContentType;
 import com.real.android.nativehtml.common.dom.Element;
 import com.real.android.nativehtml.common.dom.HtmlCollection;
-import com.real.android.nativehtml.common.layout.C6147a;
-import com.real.android.nativehtml.common.layout.C6150c;
 import com.real.android.nativehtml.common.layout.Layout;
+import com.real.android.nativehtml.common.layout.c;
 import tb.bi2;
 import tb.fq;
 import tb.qb0;
@@ -28,9 +27,9 @@ public class AndroidContainerElement extends AbstractAndroidComponentElement imp
     private Layout getLayout() {
         if (this.layout == null) {
             if (getLocalName().equals("table")) {
-                this.layout = new C6150c();
+                this.layout = new c();
             } else {
-                this.layout = new C6147a();
+                this.layout = new com.real.android.nativehtml.common.layout.a();
             }
         }
         return this.layout;
@@ -91,7 +90,7 @@ public class AndroidContainerElement extends AbstractAndroidComponentElement imp
                 }
                 int i3 = i + 1;
                 String a2 = bi2.a(f, i);
-                C6140a.f(computedStyle, a, this.paint);
+                a.f(computedStyle, a, this.paint);
                 this.paint.getFontMetrics(fontMetrics);
                 float g = computedStyle.g(CssProperty.BORDER_TOP_WIDTH, 0.0f) + computedStyle.g(CssProperty.PADDING_TOP, 0.0f);
                 canvas.drawText(a2, (childAt.getX() + ((computedStyle.g(CssProperty.BORDER_LEFT_WIDTH, 0.0f) + computedStyle.g(CssProperty.PADDING_LEFT, 0.0f)) * a)) - this.paint.measureText(a2), (childAt.getY() + (g * a)) - fontMetrics.top, this.paint);

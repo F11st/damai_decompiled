@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
 import kotlin.reflect.jvm.internal.impl.descriptors.runtime.structure.ReflectClassUtilKt;
 import kotlin.reflect.jvm.internal.impl.descriptors.runtime.structure.ReflectJavaClass;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotation;
@@ -63,7 +61,7 @@ public final class e02 extends o02 implements JavaClassifierType {
     @NotNull
     public Collection<JavaAnnotation> getAnnotations() {
         List g;
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         return g;
     }
 
@@ -90,11 +88,11 @@ public final class e02 extends o02 implements JavaClassifierType {
     public List<JavaType> getTypeArguments() {
         int q;
         List<Type> d = ReflectClassUtilKt.d(a());
-        o02.C9490a c9490a = o02.Factory;
-        q = C8215n.q(d, 10);
+        o02.a aVar = o02.Factory;
+        q = kotlin.collections.n.q(d, 10);
         ArrayList arrayList = new ArrayList(q);
         for (Type type : d) {
-            arrayList.add(c9490a.a(type));
+            arrayList.add(aVar.a(type));
         }
         return arrayList;
     }

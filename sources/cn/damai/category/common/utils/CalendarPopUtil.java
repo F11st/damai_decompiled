@@ -61,12 +61,11 @@ public class CalendarPopUtil {
     public int v = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.common.utils.CalendarPopUtil$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0375a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0375a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -84,12 +83,11 @@ public class CalendarPopUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.common.utils.CalendarPopUtil$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0376b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0376b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -113,12 +111,11 @@ public class CalendarPopUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.common.utils.CalendarPopUtil$c */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0377c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0377c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -133,12 +130,11 @@ public class CalendarPopUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.common.utils.CalendarPopUtil$d */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0378d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0378d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -153,12 +149,11 @@ public class CalendarPopUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.common.utils.CalendarPopUtil$e */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0379e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0379e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -173,12 +168,11 @@ public class CalendarPopUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.common.utils.CalendarPopUtil$f */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0380f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0380f() {
+        f() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -231,7 +225,7 @@ public class CalendarPopUtil {
         IRecyclerView iRecyclerView = (IRecyclerView) this.c.findViewById(R$id.pop_irc);
         this.i = iRecyclerView;
         iRecyclerView.setLayoutManager(new WrapLinearLayoutManager(this.a));
-        CalendarListAdapter calendarListAdapter = new CalendarListAdapter(this.a, new View$OnClickListenerC0376b());
+        CalendarListAdapter calendarListAdapter = new CalendarListAdapter(this.a, new b());
         this.n = calendarListAdapter;
         this.i.setAdapter(calendarListAdapter);
         this.i.setRefreshEnabled(false);
@@ -269,10 +263,10 @@ public class CalendarPopUtil {
             this.f = (TextView) this.d.findViewById(R$id.tv_time2);
             this.g = (TextView) this.d.findViewById(R$id.tv_time3);
             this.h = (TextView) this.d.findViewById(R$id.tv_time4);
-            this.e.setOnClickListener(new View$OnClickListenerC0377c());
-            this.f.setOnClickListener(new View$OnClickListenerC0378d());
-            this.g.setOnClickListener(new View$OnClickListenerC0379e());
-            this.h.setOnClickListener(new View$OnClickListenerC0380f());
+            this.e.setOnClickListener(new c());
+            this.f.setOnClickListener(new d());
+            this.g.setOnClickListener(new e());
+            this.h.setOnClickListener(new f());
             r();
             return;
         }
@@ -491,7 +485,7 @@ public class CalendarPopUtil {
             return;
         }
         this.b.setVisibility(0);
-        this.b.setOnClickListener(new View$OnClickListenerC0375a());
+        this.b.setOnClickListener(new a());
         this.c.setVisibility(0);
         if (z) {
             this.q.d(350);

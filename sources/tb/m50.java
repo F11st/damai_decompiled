@@ -344,13 +344,13 @@ public class m50 implements IDownloader {
                 return false;
             }
         } else {
-            fp1.C9143a c9143a = this.b.e;
+            fp1.a aVar = this.b.e;
             StringBuilder sb = new StringBuilder();
             sb.append("savedataParam:");
             sb.append(dLInputStream == null);
             sb.append("|");
             sb.append(randomAccessFile == null);
-            c9143a.a(-19, 0, sb.toString());
+            aVar.a(-19, 0, sb.toString());
             return false;
         }
     }
@@ -391,9 +391,9 @@ public class m50 implements IDownloader {
                 }
             } else if (!e(id2Var.e.b)) {
                 fp1 fp1Var2 = this.b;
-                fp1.C9143a c9143a = fp1Var2.e;
-                c9143a.a = false;
-                c9143a.f = -21;
+                fp1.a aVar = fp1Var2.e;
+                aVar.a = false;
+                aVar.f = -21;
                 w21 w21Var2 = this.a;
                 jq1 jq1Var = w21Var2.b.f;
                 jq1Var.l = 0;

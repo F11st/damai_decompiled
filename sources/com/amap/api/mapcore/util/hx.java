@@ -11,16 +11,16 @@ import javax.crypto.NoSuchPaddingException;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public class hx extends AbstractC4579hv {
+public class hx extends hv {
     public hx() {
     }
 
-    @Override // com.amap.api.mapcore.util.AbstractC4579hv
+    @Override // com.amap.api.mapcore.util.hv
     protected byte[] a(byte[] bArr) throws CertificateException, NoSuchAlgorithmException, IOException, BadPaddingException, IllegalBlockSizeException, NoSuchPaddingException, InvalidKeyException, InvalidKeySpecException {
         return gh.a(bArr);
     }
 
-    public hx(AbstractC4579hv abstractC4579hv) {
-        super(abstractC4579hv);
+    public hx(hv hvVar) {
+        super(hvVar);
     }
 }

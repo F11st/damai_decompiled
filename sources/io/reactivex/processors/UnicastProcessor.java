@@ -1,9 +1,9 @@
 package io.reactivex.processors;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.annotations.CheckReturnValue;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.b;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.queue.SpscLinkedArrayQueue;
 import io.reactivex.internal.subscriptions.BasicIntQueueSubscription;
@@ -96,7 +96,7 @@ public final class UnicastProcessor<T> extends mn0<T> {
 
     @CheckReturnValue
     public static <T> UnicastProcessor<T> c() {
-        return new UnicastProcessor<>(AbstractC8147b.bufferSize());
+        return new UnicastProcessor<>(b.bufferSize());
     }
 
     @CheckReturnValue
@@ -282,7 +282,7 @@ public final class UnicastProcessor<T> extends mn0<T> {
         }
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         if (!this.h.get() && this.h.compareAndSet(false, true)) {
             subscriber.onSubscribe(this.i);

@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.Log;
 import com.youku.middlewareservice.provider.antitheftchain.AntiTheftChainProvider;
 import java.util.HashMap;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -14,7 +14,7 @@ public class AntiTheftChainProviderProxy {
     public static String getAntiTheftChainKey(AntiTheftChainProvider.AntiTheftChainClientType antiTheftChainClientType, String str, String str2, Context context, HashMap hashMap) {
         try {
             if (sProxy == null) {
-                sProxy = (AntiTheftChainProvider) C8883a.j("com.youku.middlewareservice_impl.provider.antitheftchain.AntiTheftChainProviderImpl").b().f();
+                sProxy = (AntiTheftChainProvider) a.j("com.youku.middlewareservice_impl.provider.antitheftchain.AntiTheftChainProviderImpl").b().f();
             }
             return sProxy.getAntiTheftChainKey(antiTheftChainClientType, str, str2, context, hashMap);
         } catch (Throwable th) {
@@ -25,7 +25,7 @@ public class AntiTheftChainProviderProxy {
 
     public static AntiTheftChainProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (AntiTheftChainProvider) C8883a.j("com.youku.middlewareservice_impl.provider.antitheftchain.AntiTheftChainProviderImpl").b().f();
+            sProxy = (AntiTheftChainProvider) a.j("com.youku.middlewareservice_impl.provider.antitheftchain.AntiTheftChainProviderImpl").b().f();
         }
         return sProxy;
     }

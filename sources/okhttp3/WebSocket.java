@@ -11,7 +11,7 @@ public interface WebSocket {
     /* compiled from: Taobao */
     /* loaded from: classes2.dex */
     public interface Factory {
-        WebSocket newWebSocket(C8823o c8823o, g13 g13Var);
+        WebSocket newWebSocket(o oVar, g13 g13Var);
     }
 
     void cancel();
@@ -20,7 +20,7 @@ public interface WebSocket {
 
     long queueSize();
 
-    C8823o request();
+    o request();
 
     boolean send(String str);
 

@@ -1,9 +1,7 @@
 package tb;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
 import java.util.Map;
-import kotlin.collections.C8226x;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
+import kotlin.reflect.jvm.internal.impl.builtins.c;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationDescriptor;
 import kotlin.reflect.jvm.internal.impl.load.java.components.JavaAnnotationDescriptor;
 import kotlin.reflect.jvm.internal.impl.load.java.components.JavaDeprecatedAnnotationDescriptor;
@@ -43,17 +41,17 @@ public final class z41 {
         ni1 f3 = ni1.f("value");
         b41.h(f3, "identifier(\"value\")");
         c = f3;
-        hp0 hp0Var = C8277c.C8278a.target;
+        hp0 hp0Var = c.a.target;
         hp0 hp0Var2 = o61.TARGET_ANNOTATION;
-        hp0 hp0Var3 = C8277c.C8278a.retention;
+        hp0 hp0Var3 = c.a.retention;
         hp0 hp0Var4 = o61.RETENTION_ANNOTATION;
-        hp0 hp0Var5 = C8277c.C8278a.repeatable;
+        hp0 hp0Var5 = c.a.repeatable;
         hp0 hp0Var6 = o61.REPEATABLE_ANNOTATION;
-        hp0 hp0Var7 = C8277c.C8278a.mustBeDocumented;
+        hp0 hp0Var7 = c.a.mustBeDocumented;
         hp0 hp0Var8 = o61.DOCUMENTED_ANNOTATION;
-        l = C8226x.l(hq2.a(hp0Var, hp0Var2), hq2.a(hp0Var3, hp0Var4), hq2.a(hp0Var5, hp0Var6), hq2.a(hp0Var7, hp0Var8));
+        l = kotlin.collections.x.l(hq2.a(hp0Var, hp0Var2), hq2.a(hp0Var3, hp0Var4), hq2.a(hp0Var5, hp0Var6), hq2.a(hp0Var7, hp0Var8));
         d = l;
-        l2 = C8226x.l(hq2.a(hp0Var2, hp0Var), hq2.a(hp0Var4, hp0Var3), hq2.a(o61.DEPRECATED_ANNOTATION, C8277c.C8278a.deprecated), hq2.a(hp0Var6, hp0Var5), hq2.a(hp0Var8, hp0Var7));
+        l2 = kotlin.collections.x.l(hq2.a(hp0Var2, hp0Var), hq2.a(hp0Var4, hp0Var3), hq2.a(o61.DEPRECATED_ANNOTATION, c.a.deprecated), hq2.a(hp0Var6, hp0Var5), hq2.a(hp0Var8, hp0Var7));
         e = l2;
     }
 
@@ -72,8 +70,8 @@ public final class z41 {
         JavaAnnotation findAnnotation;
         b41.i(hp0Var, "kotlinName");
         b41.i(javaAnnotationOwner, "annotationOwner");
-        b41.i(r81Var, AbstractC5658c.a);
-        if (b41.d(hp0Var, C8277c.C8278a.deprecated)) {
+        b41.i(r81Var, com.huawei.hms.opendevice.c.a);
+        if (b41.d(hp0Var, c.a.deprecated)) {
             hp0 hp0Var2 = o61.DEPRECATED_ANNOTATION;
             b41.h(hp0Var2, "DEPRECATED_ANNOTATION");
             JavaAnnotation findAnnotation2 = javaAnnotationOwner.findAnnotation(hp0Var2);
@@ -106,7 +104,7 @@ public final class z41 {
     @Nullable
     public final AnnotationDescriptor e(@NotNull JavaAnnotation javaAnnotation, @NotNull r81 r81Var, boolean z) {
         b41.i(javaAnnotation, "annotation");
-        b41.i(r81Var, AbstractC5658c.a);
+        b41.i(r81Var, com.huawei.hms.opendevice.c.a);
         hj classId = javaAnnotation.getClassId();
         if (b41.d(classId, hj.m(o61.TARGET_ANNOTATION))) {
             return new JavaTargetAnnotationDescriptor(javaAnnotation, r81Var);
@@ -115,10 +113,10 @@ public final class z41 {
             return new JavaRetentionAnnotationDescriptor(javaAnnotation, r81Var);
         }
         if (b41.d(classId, hj.m(o61.REPEATABLE_ANNOTATION))) {
-            return new JavaAnnotationDescriptor(r81Var, javaAnnotation, C8277c.C8278a.repeatable);
+            return new JavaAnnotationDescriptor(r81Var, javaAnnotation, c.a.repeatable);
         }
         if (b41.d(classId, hj.m(o61.DOCUMENTED_ANNOTATION))) {
-            return new JavaAnnotationDescriptor(r81Var, javaAnnotation, C8277c.C8278a.mustBeDocumented);
+            return new JavaAnnotationDescriptor(r81Var, javaAnnotation, c.a.mustBeDocumented);
         }
         if (b41.d(classId, hj.m(o61.DEPRECATED_ANNOTATION))) {
             return null;

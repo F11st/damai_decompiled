@@ -6,7 +6,7 @@ import com.xiaomi.push.al;
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class am extends al.RunnableC7598b {
+public class am extends al.b {
     final /* synthetic */ al a;
 
     /* renamed from: a  reason: collision with other field name */
@@ -17,20 +17,20 @@ public class am extends al.RunnableC7598b {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public am(al alVar, al.AbstractRunnableC7597a abstractRunnableC7597a, boolean z, String str) {
-        super(abstractRunnableC7597a);
+    public am(al alVar, al.a aVar, boolean z, String str) {
+        super(aVar);
         this.a = alVar;
         this.f92a = z;
         this.f91a = str;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    @Override // com.xiaomi.push.al.RunnableC7598b
+    @Override // com.xiaomi.push.al.b
     public void a() {
         super.a();
     }
 
-    @Override // com.xiaomi.push.al.RunnableC7598b
+    @Override // com.xiaomi.push.al.b
     void b() {
         SharedPreferences sharedPreferences;
         if (this.f92a) {

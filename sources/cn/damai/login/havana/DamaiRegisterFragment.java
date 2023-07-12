@@ -32,12 +32,11 @@ public class DamaiRegisterFragment extends AliUserMobileRegisterFragment {
     private LinearLayout rootView;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.login.havana.DamaiRegisterFragment$a */
     /* loaded from: classes15.dex */
-    public class C1330a implements TextWatcher {
+    public class a implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1330a() {
+        a() {
         }
 
         @Override // android.text.TextWatcher
@@ -68,12 +67,11 @@ public class DamaiRegisterFragment extends AliUserMobileRegisterFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.login.havana.DamaiRegisterFragment$b */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1331b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1331b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -114,8 +112,8 @@ public class DamaiRegisterFragment extends AliUserMobileRegisterFragment {
             this.mAttachedActivity.getToolbar().setNavigationIcon(R$drawable.icon_back_black_normal);
         }
         this.mSendSMSCodeBtn.setTextColor(getResources().getColor(R$color.main_color_disable_state));
-        this.mMobileET.addTextChangedListener(new C1330a());
-        this.mRegBtn.setOnClickListener(new View$OnClickListenerC1331b());
+        this.mMobileET.addTextChangedListener(new a());
+        this.mRegBtn.setOnClickListener(new b());
         this.mProtocolCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() { // from class: cn.damai.login.havana.DamaiRegisterFragment.3
             private static transient /* synthetic */ IpChange $ipChange;
 

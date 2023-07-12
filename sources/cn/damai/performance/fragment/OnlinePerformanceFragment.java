@@ -41,12 +41,11 @@ public class OnlinePerformanceFragment extends AbsFragmentV2 implements OnCityCh
     private HomeTopBgListener mTopBgListener;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.performance.fragment.OnlinePerformanceFragment$a */
     /* loaded from: classes6.dex */
-    public class C1493a implements Action<Object> {
+    public class a implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1493a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -371,7 +370,7 @@ public class OnlinePerformanceFragment extends AbsFragmentV2 implements OnCityCh
         }
         super.onViewCreated(view, bundle);
         this.isViewCreated = true;
-        this.mDMMessage.b("refreshData", new C1493a());
+        this.mDMMessage.b("refreshData", new a());
         enableDividerLine(false);
         enableRefresh();
         addScrollListener();
@@ -397,10 +396,10 @@ public class OnlinePerformanceFragment extends AbsFragmentV2 implements OnCityCh
             /* compiled from: Taobao */
             /* renamed from: cn.damai.performance.fragment.OnlinePerformanceFragment$2$a */
             /* loaded from: classes6.dex */
-            public class C1492a implements OnErrClickListener {
+            public class a implements OnErrClickListener {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C1492a() {
+                a() {
                 }
 
                 @Override // cn.damai.tetris.v2.componentplugin.OnErrClickListener
@@ -425,7 +424,7 @@ public class OnlinePerformanceFragment extends AbsFragmentV2 implements OnCityCh
                     OnlinePerformanceFragment.this.stopProgressDialog();
                 }
                 OnlinePerformanceFragment.this.refreshFinish();
-                OnlinePerformanceFragment.this.showErrorViewV2(str, str2, new C1492a());
+                OnlinePerformanceFragment.this.showErrorViewV2(str, str2, new a());
             }
 
             @Override // cn.damai.tetris.DMMtopWarningListener

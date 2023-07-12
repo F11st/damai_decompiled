@@ -29,6 +29,6 @@ public final class FlowKt__CollectionKt$toCollection$1 extends ContinuationImpl 
     public final Object invokeSuspend(@NotNull Object obj) {
         this.result = obj;
         this.label |= Integer.MIN_VALUE;
-        return C8672c.y(null, null, this);
+        return c.y(null, null, this);
     }
 }

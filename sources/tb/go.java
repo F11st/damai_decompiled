@@ -1,7 +1,6 @@
 package tb;
 
 import android.taobao.windvane.connect.HttpConnector;
-import com.alipay.sdk.m.n.C4250a;
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,9 +11,6 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.annotation.Nullable;
-import okhttp3.C8816l;
-import okhttp3.C8818m;
-import okhttp3.internal.C8753a;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
@@ -60,7 +56,7 @@ public final class go {
         if (str.equals(str2)) {
             return true;
         }
-        return str.endsWith(str2) && str.charAt((str.length() - str2.length()) - 1) == '.' && !C8753a.M(str);
+        return str.endsWith(str2) && str.charAt((str.length() - str2.length()) - 1) == '.' && !okhttp3.internal.a.M(str);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:58:0x00ed  */
@@ -71,7 +67,7 @@ public final class go {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    static tb.go d(long r23, okhttp3.C8818m r25, java.lang.String r26) {
+    static tb.go d(long r23, okhttp3.m r25, java.lang.String r26) {
         /*
             Method dump skipped, instructions count: 311
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -80,16 +76,16 @@ public final class go {
     }
 
     @Nullable
-    public static go e(C8818m c8818m, String str) {
-        return d(System.currentTimeMillis(), c8818m, str);
+    public static go e(okhttp3.m mVar, String str) {
+        return d(System.currentTimeMillis(), mVar, str);
     }
 
-    public static List<go> f(C8818m c8818m, C8816l c8816l) {
-        List<String> k2 = c8816l.k(HttpConnector.SET_COOKIE);
+    public static List<go> f(okhttp3.m mVar, okhttp3.l lVar) {
+        List<String> k2 = lVar.k(HttpConnector.SET_COOKIE);
         int size = k2.size();
         ArrayList arrayList = null;
         for (int i = 0; i < size; i++) {
-            go e = e(c8818m, k2.get(i));
+            go e = e(mVar, k2.get(i));
             if (e != null) {
                 if (arrayList == null) {
                     arrayList = new ArrayList();
@@ -108,7 +104,7 @@ public final class go {
             if (str.startsWith(".")) {
                 str = str.substring(1);
             }
-            String d = C8753a.d(str);
+            String d = okhttp3.internal.a.d(str);
             if (d != null) {
                 return d;
             }
@@ -166,7 +162,7 @@ public final class go {
                     throw new IllegalArgumentException();
                 }
                 if (i8 >= 0 && i8 <= 59) {
-                    GregorianCalendar gregorianCalendar = new GregorianCalendar(C8753a.UTC);
+                    GregorianCalendar gregorianCalendar = new GregorianCalendar(okhttp3.internal.a.UTC);
                     gregorianCalendar.setLenient(false);
                     gregorianCalendar.set(1, i3);
                     gregorianCalendar.set(2, i6 - 1);
@@ -222,7 +218,7 @@ public final class go {
     String j(boolean z) {
         StringBuilder sb = new StringBuilder();
         sb.append(this.a);
-        sb.append(C4250a.h);
+        sb.append(com.alipay.sdk.m.n.a.h);
         sb.append(this.b);
         if (this.h) {
             if (this.c == Long.MIN_VALUE) {

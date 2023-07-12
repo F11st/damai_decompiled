@@ -25,12 +25,11 @@ public class VenueView extends AbsView<IItem<ItemValue>, VenueContract.Model<IIt
     private final TextView performanceCount;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.venue.VenueView$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC3512a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC3512a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -53,7 +52,7 @@ public class VenueView extends AbsView<IItem<ItemValue>, VenueContract.Model<IIt
         this.performance = view.findViewById(R$id.performance);
         this.performanceCount = (TextView) view.findViewById(R$id.performance_count);
         this.performanceContent = (TextView) view.findViewById(R$id.performance_content);
-        view.setOnClickListener(new View$OnClickListenerC3512a());
+        view.setOnClickListener(new a());
     }
 
     @Override // com.alibaba.pictures.bricks.component.venue.VenueContract.View

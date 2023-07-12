@@ -12,14 +12,13 @@ import org.json.JSONObject;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class jh2 implements Transfer<String, ge2> {
-    private final C9313c a = new C9313c();
+    private final c a = new c();
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.jh2$b */
     /* loaded from: classes11.dex */
-    public static class C9312b implements Transfer<JSONArray, List<me2>> {
-        private C9312b() {
+    public static class b implements Transfer<JSONArray, List<me2>> {
+        private b() {
         }
 
         @Override // com.taobao.android.sopatch.transfer.Transfer
@@ -62,13 +61,12 @@ public class jh2 implements Transfer<String, ge2> {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.jh2$c */
     /* loaded from: classes11.dex */
-    public static class C9313c implements Transfer<JSONArray, List<pe2>> {
-        private C9312b a;
+    public static class c implements Transfer<JSONArray, List<pe2>> {
+        private b a;
 
-        private C9313c() {
-            this.a = new C9312b();
+        private c() {
+            this.a = new b();
         }
 
         @Override // com.taobao.android.sopatch.transfer.Transfer
@@ -129,8 +127,8 @@ public class jh2 implements Transfer<String, ge2> {
             jSONObject.put("beta", ge2Var.c());
             jSONObject.put("priority", ge2Var.f());
             jSONObject.put("type", ge2Var.j());
-            List<pe2> b = ge2Var.b();
-            if (b != null && b.size() > 0) {
+            List<pe2> b2 = ge2Var.b();
+            if (b2 != null && b2.size() > 0) {
                 jSONObject.put("solist", this.a.antiTransfer(ge2Var.b()));
             }
             jSONObject.put("md5", ge2Var.d());

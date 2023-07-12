@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -50,12 +50,11 @@ public class WaterFlowRecommendGoodsCardViewHolder extends RecyclerView.ViewHold
     private View.OnClickListener o;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.viewholder.WaterFlowRecommendGoodsCardViewHolder$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1634a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1634a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -67,7 +66,7 @@ public class WaterFlowRecommendGoodsCardViewHolder extends RecyclerView.ViewHold
             }
             ProjectItemBean projectItemBean = (ProjectItemBean) view.getTag();
             if (projectItemBean != null) {
-                C0529c.e().x(b82.C().u(WaterFlowRecommendGoodsCardViewHolder.this.l, projectItemBean.id, null, WaterFlowRecommendGoodsCardViewHolder.this.m, WaterFlowRecommendGoodsCardViewHolder.this.n, projectItemBean.alg));
+                c.e().x(b82.C().u(WaterFlowRecommendGoodsCardViewHolder.this.l, projectItemBean.id, null, WaterFlowRecommendGoodsCardViewHolder.this.m, WaterFlowRecommendGoodsCardViewHolder.this.n, projectItemBean.alg));
                 qd2.b(WaterFlowRecommendGoodsCardViewHolder.this.a, projectItemBean.schema, projectItemBean.id, projectItemBean.name, projectItemBean.verticalPic);
             }
         }
@@ -75,13 +74,13 @@ public class WaterFlowRecommendGoodsCardViewHolder extends RecyclerView.ViewHold
 
     public WaterFlowRecommendGoodsCardViewHolder(Context context) {
         super(LayoutInflater.from(context).inflate(R$layout.waterflow_recommend_goodscard, (ViewGroup) null));
-        this.o = new View$OnClickListenerC1634a();
+        this.o = new a();
         this.itemView.setLayoutParams(new RecyclerView.LayoutParams(-1, -2));
         this.a = context;
         if (context != null) {
-            int a = (DisplayMetrics.getwidthPixels(q60.b(context)) - q60.a(context, 54.0f)) / 2;
-            this.j = a;
-            this.k = (int) (((a * 224) * 1.0f) / 168.0f);
+            int a2 = (DisplayMetrics.getwidthPixels(q60.b(context)) - q60.a(context, 54.0f)) / 2;
+            this.j = a2;
+            this.k = (int) (((a2 * 224) * 1.0f) / 168.0f);
         }
         e();
     }
@@ -99,8 +98,8 @@ public class WaterFlowRecommendGoodsCardViewHolder extends RecyclerView.ViewHold
         this.b.setCategoryMargin(6.0f, 6.0f);
         DMLabelView labelView = this.b.getLabelView();
         if (labelView != null) {
-            float a = q60.a(this.a, 12.0f);
-            labelView.setCornerRadii(a, a, a, 0.0f);
+            float a2 = q60.a(this.a, 12.0f);
+            labelView.setCornerRadii(a2, a2, a2, 0.0f);
         }
         this.c = (TextView) this.itemView.findViewById(R$id.recommend_goods_title);
         this.d = (TextView) this.itemView.findViewById(R$id.recommend_goods_time);

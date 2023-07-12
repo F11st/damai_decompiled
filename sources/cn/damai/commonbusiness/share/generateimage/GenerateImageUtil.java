@@ -20,7 +20,6 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import cn.damai.common.app.widget.DMProgressDialog;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMRoundedCornersBitmapProcessor;
 import cn.damai.common.image.luban.Luban;
@@ -94,21 +93,20 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$a */
     /* loaded from: classes.dex */
-    public class C0900a implements DMImageCreator.DMImageFailListener {
+    public class a implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
 
-        C0900a(Activity activity) {
+        a(Activity activity) {
             this.a = activity;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "901790613")) {
-                ipChange.ipc$dispatch("901790613", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("901790613", new Object[]{this, dVar});
                 return;
             }
             GenerateImageUtil.I(this.a);
@@ -120,9 +118,8 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$b */
     /* loaded from: classes.dex */
-    public class C0901b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
         final /* synthetic */ ImageView b;
@@ -131,7 +128,7 @@ public class GenerateImageUtil {
         final /* synthetic */ View e;
         final /* synthetic */ ScrollView f;
 
-        C0901b(Activity activity, ImageView imageView, DMShareMessage dMShareMessage, ImageView imageView2, View view, ScrollView scrollView) {
+        b(Activity activity, ImageView imageView, DMShareMessage dMShareMessage, ImageView imageView2, View view, ScrollView scrollView) {
             this.a = activity;
             this.b = imageView;
             this.c = dMShareMessage;
@@ -141,13 +138,13 @@ public class GenerateImageUtil {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-812881558")) {
-                ipChange.ipc$dispatch("-812881558", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("-812881558", new Object[]{this, eVar});
                 return;
             }
-            Bitmap bitmap = c0502e.b;
+            Bitmap bitmap = eVar.b;
             if (bitmap == null) {
                 GenerateImageUtil.I(this.a);
                 cb1.a("bitmap is null");
@@ -173,21 +170,20 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$c */
     /* loaded from: classes.dex */
-    public class C0902c implements DMImageCreator.DMImageFailListener {
+    public class c implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
 
-        C0902c(Activity activity) {
+        c(Activity activity) {
             this.a = activity;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1431602025")) {
-                ipChange.ipc$dispatch("-1431602025", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-1431602025", new Object[]{this, dVar});
                 return;
             }
             GenerateImageUtil.I(this.a);
@@ -199,9 +195,8 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$d */
     /* loaded from: classes.dex */
-    public class C0903d implements DMImageCreator.DMImageSuccListener {
+    public class d implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
         final /* synthetic */ ImageView b;
@@ -210,7 +205,7 @@ public class GenerateImageUtil {
         final /* synthetic */ ScrollView e;
         final /* synthetic */ DMShareMessage f;
 
-        C0903d(Activity activity, ImageView imageView, ImageView imageView2, View view, ScrollView scrollView, DMShareMessage dMShareMessage) {
+        d(Activity activity, ImageView imageView, ImageView imageView2, View view, ScrollView scrollView, DMShareMessage dMShareMessage) {
             this.a = activity;
             this.b = imageView;
             this.c = imageView2;
@@ -220,13 +215,13 @@ public class GenerateImageUtil {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-2029035284")) {
-                ipChange.ipc$dispatch("-2029035284", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("-2029035284", new Object[]{this, eVar});
                 return;
             }
-            Bitmap bitmap = c0502e.b;
+            Bitmap bitmap = eVar.b;
             if (bitmap == null) {
                 GenerateImageUtil.I(this.a);
                 cb1.a("bitmap is null");
@@ -247,15 +242,14 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$e */
     /* loaded from: classes.dex */
-    public class C0904e implements OnFinishListener {
+    public class e implements OnFinishListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
         final /* synthetic */ mi1 b;
         final /* synthetic */ DMShareMessage c;
 
-        C0904e(Activity activity, mi1 mi1Var, DMShareMessage dMShareMessage) {
+        e(Activity activity, mi1 mi1Var, DMShareMessage dMShareMessage) {
             this.a = activity;
             this.b = mi1Var;
             this.c = dMShareMessage;
@@ -286,15 +280,14 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$f */
     /* loaded from: classes.dex */
-    public class C0905f implements OnFinishListener {
+    public class f implements OnFinishListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
         final /* synthetic */ EvaluateShareViewHolder b;
         final /* synthetic */ DMShareMessage c;
 
-        C0905f(Activity activity, EvaluateShareViewHolder evaluateShareViewHolder, DMShareMessage dMShareMessage) {
+        f(Activity activity, EvaluateShareViewHolder evaluateShareViewHolder, DMShareMessage dMShareMessage) {
             this.a = activity;
             this.b = evaluateShareViewHolder;
             this.c = dMShareMessage;
@@ -325,9 +318,8 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$g */
     /* loaded from: classes.dex */
-    public class C0906g implements DMImageCreator.DMImageFailListener {
+    public class g implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
         final /* synthetic */ RelativeLayout b;
@@ -335,7 +327,7 @@ public class GenerateImageUtil {
         final /* synthetic */ ScrollView d;
         final /* synthetic */ DMShareMessage e;
 
-        C0906g(Activity activity, RelativeLayout relativeLayout, View view, ScrollView scrollView, DMShareMessage dMShareMessage) {
+        g(Activity activity, RelativeLayout relativeLayout, View view, ScrollView scrollView, DMShareMessage dMShareMessage) {
             this.a = activity;
             this.b = relativeLayout;
             this.c = view;
@@ -344,10 +336,10 @@ public class GenerateImageUtil {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1008541666")) {
-                ipChange.ipc$dispatch("-1008541666", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-1008541666", new Object[]{this, dVar});
                 return;
             }
             GenerateImageUtil.I(this.a);
@@ -357,21 +349,20 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$h */
     /* loaded from: classes.dex */
-    public class C0907h implements DMImageCreator.DMImageFailListener {
+    public class h implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
 
-        C0907h(Activity activity) {
+        h(Activity activity) {
             this.a = activity;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "676602195")) {
-                ipChange.ipc$dispatch("676602195", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("676602195", new Object[]{this, dVar});
                 return;
             }
             GenerateImageUtil.I(this.a);
@@ -383,9 +374,8 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$i */
     /* loaded from: classes.dex */
-    public class C0908i implements DMImageCreator.DMImageSuccListener {
+    public class i implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
         final /* synthetic */ RelativeLayout b;
@@ -393,7 +383,7 @@ public class GenerateImageUtil {
         final /* synthetic */ ScrollView d;
         final /* synthetic */ DMShareMessage e;
 
-        C0908i(Activity activity, RelativeLayout relativeLayout, View view, ScrollView scrollView, DMShareMessage dMShareMessage) {
+        i(Activity activity, RelativeLayout relativeLayout, View view, ScrollView scrollView, DMShareMessage dMShareMessage) {
             this.a = activity;
             this.b = relativeLayout;
             this.c = view;
@@ -402,13 +392,13 @@ public class GenerateImageUtil {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1875318264")) {
-                ipChange.ipc$dispatch("-1875318264", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("-1875318264", new Object[]{this, eVar});
                 return;
             }
-            Bitmap bitmap = c0502e.b;
+            Bitmap bitmap = eVar.b;
             if (bitmap == null) {
                 GenerateImageUtil.I(this.a);
                 this.b.setBackgroundResource(R$drawable.fassion_share_bg);
@@ -425,21 +415,20 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$j */
     /* loaded from: classes.dex */
-    public class C0909j implements DMImageCreator.DMImageFailListener {
+    public class j implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
 
-        C0909j(Activity activity) {
+        j(Activity activity) {
             this.a = activity;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-2072753227")) {
-                ipChange.ipc$dispatch("-2072753227", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-2072753227", new Object[]{this, dVar});
                 return;
             }
             GenerateImageUtil.I(this.a);
@@ -451,9 +440,8 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$k */
     /* loaded from: classes.dex */
-    public class C0910k implements DMImageCreator.DMImageSuccListener {
+    public class k implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
         final /* synthetic */ ImageView b;
@@ -462,7 +450,7 @@ public class GenerateImageUtil {
         final /* synthetic */ View e;
         final /* synthetic */ ScrollView f;
 
-        C0910k(Activity activity, ImageView imageView, DMShareMessage dMShareMessage, ImageView imageView2, View view, ScrollView scrollView) {
+        k(Activity activity, ImageView imageView, DMShareMessage dMShareMessage, ImageView imageView2, View view, ScrollView scrollView) {
             this.a = activity;
             this.b = imageView;
             this.c = dMShareMessage;
@@ -472,13 +460,13 @@ public class GenerateImageUtil {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1203495306")) {
-                ipChange.ipc$dispatch("1203495306", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("1203495306", new Object[]{this, eVar});
                 return;
             }
-            Bitmap bitmap = c0502e.b;
+            Bitmap bitmap = eVar.b;
             if (bitmap == null) {
                 GenerateImageUtil.I(this.a);
                 cb1.a("bitmap is null");
@@ -504,15 +492,14 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$l */
     /* loaded from: classes.dex */
-    public class C0911l implements OnCompressListener {
+    public class l implements OnCompressListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DMShareMessage a;
         final /* synthetic */ String b;
         final /* synthetic */ Activity c;
 
-        C0911l(DMShareMessage dMShareMessage, String str, Activity activity) {
+        l(DMShareMessage dMShareMessage, String str, Activity activity) {
             this.a = dMShareMessage;
             this.b = str;
             this.c = activity;
@@ -589,12 +576,11 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$m */
     /* loaded from: classes.dex */
-    public class C0912m implements OnRenameListener {
+    public class m implements OnRenameListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0912m() {
+        m() {
         }
 
         @Override // cn.damai.common.image.luban.OnRenameListener
@@ -605,9 +591,8 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$n */
     /* loaded from: classes.dex */
-    public class C0913n implements DMImageCreator.DMImageSuccListener {
+    public class n implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
         final /* synthetic */ ImageView b;
@@ -616,7 +601,7 @@ public class GenerateImageUtil {
         final /* synthetic */ View e;
         final /* synthetic */ ScrollView f;
 
-        C0913n(Activity activity, ImageView imageView, DMShareMessage dMShareMessage, ImageView imageView2, View view, ScrollView scrollView) {
+        n(Activity activity, ImageView imageView, DMShareMessage dMShareMessage, ImageView imageView2, View view, ScrollView scrollView) {
             this.a = activity;
             this.b = imageView;
             this.c = dMShareMessage;
@@ -626,13 +611,13 @@ public class GenerateImageUtil {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "2109769896")) {
-                ipChange.ipc$dispatch("2109769896", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("2109769896", new Object[]{this, eVar});
                 return;
             }
-            Bitmap bitmap = c0502e.b;
+            Bitmap bitmap = eVar.b;
             if (bitmap == null) {
                 GenerateImageUtil.I(this.a);
                 cb1.a("bitmap is null");
@@ -658,15 +643,14 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$o */
     /* loaded from: classes.dex */
-    public class C0914o implements LiveShareImageViewHolder.IFinishCallBack {
+    public class o implements LiveShareImageViewHolder.IFinishCallBack {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
         final /* synthetic */ LiveShareImageViewHolder b;
         final /* synthetic */ DMShareMessage c;
 
-        C0914o(Activity activity, LiveShareImageViewHolder liveShareImageViewHolder, DMShareMessage dMShareMessage) {
+        o(Activity activity, LiveShareImageViewHolder liveShareImageViewHolder, DMShareMessage dMShareMessage) {
             this.a = activity;
             this.b = liveShareImageViewHolder;
             this.c = dMShareMessage;
@@ -685,21 +669,20 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$p */
     /* loaded from: classes.dex */
-    public class C0915p implements DMImageCreator.DMImageFailListener {
+    public class p implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
 
-        C0915p(Activity activity) {
+        p(Activity activity) {
             this.a = activity;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1471480534")) {
-                ipChange.ipc$dispatch("1471480534", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("1471480534", new Object[]{this, dVar});
                 return;
             }
             GenerateImageUtil.I(this.a);
@@ -711,9 +694,8 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$q */
     /* loaded from: classes.dex */
-    public class C0916q implements DMImageCreator.DMImageSuccListener {
+    public class q implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
         final /* synthetic */ ImageView b;
@@ -722,7 +704,7 @@ public class GenerateImageUtil {
         final /* synthetic */ View e;
         final /* synthetic */ ScrollView f;
 
-        C0916q(Activity activity, ImageView imageView, DMShareMessage dMShareMessage, ImageView imageView2, View view, ScrollView scrollView) {
+        q(Activity activity, ImageView imageView, DMShareMessage dMShareMessage, ImageView imageView2, View view, ScrollView scrollView) {
             this.a = activity;
             this.b = imageView;
             this.c = dMShareMessage;
@@ -732,13 +714,13 @@ public class GenerateImageUtil {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "285539307")) {
-                ipChange.ipc$dispatch("285539307", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("285539307", new Object[]{this, eVar});
                 return;
             }
-            Bitmap bitmap = c0502e.b;
+            Bitmap bitmap = eVar.b;
             if (bitmap == null) {
                 GenerateImageUtil.I(this.a);
                 cb1.a("bitmap is null");
@@ -764,21 +746,20 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$r */
     /* loaded from: classes.dex */
-    public class C0917r implements DMImageCreator.DMImageFailListener {
+    public class r implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
 
-        C0917r(Activity activity) {
+        r(Activity activity) {
             this.a = activity;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-861912104")) {
-                ipChange.ipc$dispatch("-861912104", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-861912104", new Object[]{this, dVar});
                 return;
             }
             GenerateImageUtil.I(this.a);
@@ -790,9 +771,8 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$s */
     /* loaded from: classes.dex */
-    public class C0918s implements DMImageCreator.DMImageSuccListener {
+    public class s implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
         final /* synthetic */ ImageView b;
@@ -801,7 +781,7 @@ public class GenerateImageUtil {
         final /* synthetic */ View e;
         final /* synthetic */ ScrollView f;
 
-        C0918s(Activity activity, ImageView imageView, DMShareMessage dMShareMessage, ImageView imageView2, View view, ScrollView scrollView) {
+        s(Activity activity, ImageView imageView, DMShareMessage dMShareMessage, ImageView imageView2, View view, ScrollView scrollView) {
             this.a = activity;
             this.b = imageView;
             this.c = dMShareMessage;
@@ -811,13 +791,13 @@ public class GenerateImageUtil {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-930614419")) {
-                ipChange.ipc$dispatch("-930614419", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("-930614419", new Object[]{this, eVar});
                 return;
             }
-            Bitmap bitmap = c0502e.b;
+            Bitmap bitmap = eVar.b;
             if (bitmap == null) {
                 GenerateImageUtil.I(this.a);
                 cb1.a("bitmap is null");
@@ -843,21 +823,20 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$t */
     /* loaded from: classes.dex */
-    public class C0919t implements DMImageCreator.DMImageFailListener {
+    public class t implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
 
-        C0919t(Activity activity) {
+        t(Activity activity) {
             this.a = activity;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1099662554")) {
-                ipChange.ipc$dispatch("1099662554", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("1099662554", new Object[]{this, dVar});
                 return;
             }
             GenerateImageUtil.I(this.a);
@@ -869,9 +848,8 @@ public class GenerateImageUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.generateimage.GenerateImageUtil$u */
     /* loaded from: classes.dex */
-    public class C0920u implements DMImageCreator.DMImageSuccListener {
+    public class u implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
         final /* synthetic */ ImageView b;
@@ -880,7 +858,7 @@ public class GenerateImageUtil {
         final /* synthetic */ View e;
         final /* synthetic */ ScrollView f;
 
-        C0920u(Activity activity, ImageView imageView, DMShareMessage dMShareMessage, ImageView imageView2, View view, ScrollView scrollView) {
+        u(Activity activity, ImageView imageView, DMShareMessage dMShareMessage, ImageView imageView2, View view, ScrollView scrollView) {
             this.a = activity;
             this.b = imageView;
             this.c = dMShareMessage;
@@ -890,13 +868,13 @@ public class GenerateImageUtil {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-2146768145")) {
-                ipChange.ipc$dispatch("-2146768145", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("-2146768145", new Object[]{this, eVar});
                 return;
             }
-            Bitmap bitmap = c0502e.b;
+            Bitmap bitmap = eVar.b;
             if (bitmap == null) {
                 GenerateImageUtil.I(this.a);
                 cb1.a("bitmap is null");
@@ -936,7 +914,7 @@ public class GenerateImageUtil {
         ((TextView) inflate.findViewById(R$id.share_page_subtitle)).setText(dMShareMessage.shareContent);
         ((ImageView) inflate.findViewById(R$id.share_page_qrcode_img)).setImageBitmap(QrcodeUtil.a(t60.a(activity, 60.0f), dMShareMessage.shareLink));
         ((TextView) inflate.findViewById(R$id.share_page_qrcode_tip)).setText("长按识别二维码，查看精彩演出");
-        C0504a.b().h(activity).c(dMShareMessage.sharePictureUrl).n(new C0910k(activity, imageView, dMShareMessage, imageView2, inflate, scrollView)).e(new C0909j(activity)).f();
+        cn.damai.common.image.a.b().h(activity).c(dMShareMessage.sharePictureUrl).n(new k(activity, imageView, dMShareMessage, imageView2, inflate, scrollView)).e(new j(activity)).f();
     }
 
     public static void B(Activity activity, Bitmap bitmap, String str) {
@@ -957,24 +935,24 @@ public class GenerateImageUtil {
         }
     }
 
-    public static void D(Activity activity, Bitmap bitmap, String str, boolean z, int i) {
+    public static void D(Activity activity, Bitmap bitmap, String str, boolean z, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-424407576")) {
-            ipChange.ipc$dispatch("-424407576", new Object[]{activity, bitmap, str, Boolean.valueOf(z), Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-424407576", new Object[]{activity, bitmap, str, Boolean.valueOf(z), Integer.valueOf(i2)});
         } else {
-            E(activity, bitmap, str, z, i, null);
+            E(activity, bitmap, str, z, i2, null);
         }
     }
 
-    public static void E(Activity activity, Bitmap bitmap, String str, boolean z, int i, DMShareMessage dMShareMessage) {
+    public static void E(Activity activity, Bitmap bitmap, String str, boolean z, int i2, DMShareMessage dMShareMessage) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "998824676")) {
-            ipChange.ipc$dispatch("998824676", new Object[]{activity, bitmap, str, Boolean.valueOf(z), Integer.valueOf(i), dMShareMessage});
+            ipChange.ipc$dispatch("998824676", new Object[]{activity, bitmap, str, Boolean.valueOf(z), Integer.valueOf(i2), dMShareMessage});
             return;
         }
         try {
             BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(b21.e(activity)));
-            bitmap.compress(Bitmap.CompressFormat.PNG, i, bufferedOutputStream);
+            bitmap.compress(Bitmap.CompressFormat.PNG, i2, bufferedOutputStream);
             bufferedOutputStream.flush();
             bufferedOutputStream.close();
             h(activity, str, z, dMShareMessage);
@@ -989,15 +967,15 @@ public class GenerateImageUtil {
         }
     }
 
-    private static GradientDrawable F(String str, int i, String str2, int i2) {
+    private static GradientDrawable F(String str, int i2, String str2, int i3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "181696947")) {
-            return (GradientDrawable) ipChange.ipc$dispatch("181696947", new Object[]{str, Integer.valueOf(i), str2, Integer.valueOf(i2)});
+            return (GradientDrawable) ipChange.ipc$dispatch("181696947", new Object[]{str, Integer.valueOf(i2), str2, Integer.valueOf(i3)});
         }
         GradientDrawable gradientDrawable = new GradientDrawable();
         gradientDrawable.setColor(Color.parseColor(str));
-        gradientDrawable.setCornerRadius(i);
-        gradientDrawable.setStroke(i2, Color.parseColor(str2));
+        gradientDrawable.setCornerRadius(i2);
+        gradientDrawable.setStroke(i3, Color.parseColor(str2));
         return gradientDrawable;
     }
 
@@ -1062,7 +1040,7 @@ public class GenerateImageUtil {
         ((TextView) inflate.findViewById(R$id.share_page_subtitle)).setText(dMShareMessage.shareContent);
         ((ImageView) inflate.findViewById(R$id.share_page_qrcode_img)).setImageBitmap(QrcodeUtil.a(t60.a(activity, 60.0f), dMShareMessage.shareLink));
         ((TextView) inflate.findViewById(R$id.share_page_qrcode_tip)).setText("长按二维码跟着我一起感受现场");
-        C0504a.b().h(activity).c(dMShareMessage.sharePictureUrl).n(new C0918s(activity, imageView, dMShareMessage, imageView2, inflate, scrollView)).e(new C0917r(activity)).f();
+        cn.damai.common.image.a.b().h(activity).c(dMShareMessage.sharePictureUrl).n(new s(activity, imageView, dMShareMessage, imageView2, inflate, scrollView)).e(new r(activity)).f();
     }
 
     public static boolean K(String str) {
@@ -1085,7 +1063,7 @@ public class GenerateImageUtil {
         ((TextView) inflate.findViewById(R$id.share_page_subtitle)).setText(dMShareMessage.shareContent);
         ((ImageView) inflate.findViewById(R$id.share_page_qrcode_img)).setImageBitmap(QrcodeUtil.a(t60.a(activity, 60.0f), dMShareMessage.shareLink));
         ((TextView) inflate.findViewById(R$id.share_page_qrcode_tip)).setText("长按二维码关注TA");
-        C0504a.b().h(activity).c(dMShareMessage.sharePictureUrl).n(new C0903d(activity, imageView, imageView2, inflate, scrollView, dMShareMessage)).e(new C0902c(activity)).f();
+        cn.damai.common.image.a.b().h(activity).c(dMShareMessage.sharePictureUrl).n(new d(activity, imageView, imageView2, inflate, scrollView, dMShareMessage)).e(new c(activity)).f();
     }
 
     public static void h(Activity activity, String str, boolean z, DMShareMessage dMShareMessage) {
@@ -1094,11 +1072,11 @@ public class GenerateImageUtil {
             ipChange.ipc$dispatch("-1952156973", new Object[]{activity, str, Boolean.valueOf(z), dMShareMessage});
             return;
         }
-        Luban.C0513a l = Luban.l(activity);
+        Luban.a l2 = Luban.l(activity);
         if (z) {
-            l.i(512000);
+            l2.i(512000);
         }
-        l.k(b21.e(activity)).n(b21.d(activity)).m(new C0912m()).l(new C0911l(dMShareMessage, str, activity)).j();
+        l2.k(b21.e(activity)).n(b21.d(activity)).m(new m()).l(new l(dMShareMessage, str, activity)).j();
     }
 
     private static void i(Activity activity, DMShareMessage dMShareMessage) {
@@ -1116,7 +1094,7 @@ public class GenerateImageUtil {
         ((TextView) inflate.findViewById(R$id.share_page_subtitle)).setText(dMShareMessage.shareContent);
         ((ImageView) inflate.findViewById(R$id.share_page_qrcode_img)).setImageBitmap(QrcodeUtil.a(t60.a(activity, 60.0f), dMShareMessage.shareLink));
         ((TextView) inflate.findViewById(R$id.share_page_qrcode_tip)).setText("长按识别二维码，查看精彩演出");
-        C0504a.b().h(activity).c(dMShareMessage.sharePictureUrl).n(new C0920u(activity, imageView, dMShareMessage, imageView2, inflate, scrollView)).e(new C0919t(activity)).f();
+        cn.damai.common.image.a.b().h(activity).c(dMShareMessage.sharePictureUrl).n(new u(activity, imageView, dMShareMessage, imageView2, inflate, scrollView)).e(new t(activity)).f();
     }
 
     private static void j(Activity activity, DMShareMessage dMShareMessage) {
@@ -1127,7 +1105,7 @@ public class GenerateImageUtil {
         }
         H(activity);
         EvaluateShareViewHolder evaluateShareViewHolder = new EvaluateShareViewHolder(activity);
-        evaluateShareViewHolder.l(dMShareMessage, new C0905f(activity, evaluateShareViewHolder, dMShareMessage));
+        evaluateShareViewHolder.l(dMShareMessage, new f(activity, evaluateShareViewHolder, dMShareMessage));
     }
 
     private static void k(Activity activity, DMShareMessage dMShareMessage) {
@@ -1167,7 +1145,7 @@ public class GenerateImageUtil {
             imageView.setVisibility(8);
         }
         if (!TextUtils.isEmpty(dMShareMessage.bgImageUrl)) {
-            C0504a.b().h(activity).c(dMShareMessage.bgImageUrl).k(new DMRoundedCornersBitmapProcessor(t60.a(activity, 6.0f), 0)).n(new C0908i(activity, relativeLayout, inflate, scrollView, dMShareMessage)).e(new C0906g(activity, relativeLayout, inflate, scrollView, dMShareMessage)).f();
+            cn.damai.common.image.a.b().h(activity).c(dMShareMessage.bgImageUrl).k(new DMRoundedCornersBitmapProcessor(t60.a(activity, 6.0f), 0)).n(new i(activity, relativeLayout, inflate, scrollView, dMShareMessage)).e(new g(activity, relativeLayout, inflate, scrollView, dMShareMessage)).f();
             return;
         }
         relativeLayout.setBackgroundResource(R$drawable.fassion_share_bg);
@@ -1226,9 +1204,9 @@ public class GenerateImageUtil {
             return;
         }
         e = -1;
-        int i = dMShareMessage.requestCode;
-        if (i > 0) {
-            e = i;
+        int i2 = dMShareMessage.requestCode;
+        if (i2 > 0) {
+            e = i2;
         }
         if ("projectImage".equals(dMShareMessage.shareImageStyle)) {
             z(activity, dMShareMessage);
@@ -1285,11 +1263,11 @@ public class GenerateImageUtil {
         if (AndroidInstantRuntime.support(ipChange, "2108416782")) {
             return (Bitmap) ipChange.ipc$dispatch("2108416782", new Object[]{scrollView, config});
         }
-        int i = 0;
-        for (int i2 = 0; i2 < scrollView.getChildCount(); i2++) {
-            i = scrollView.getChildAt(i2).getHeight();
+        int i2 = 0;
+        for (int i3 = 0; i3 < scrollView.getChildCount(); i3++) {
+            i2 = scrollView.getChildAt(i3).getHeight();
         }
-        Bitmap createBitmap = Bitmap.createBitmap(scrollView.getWidth(), i, config);
+        Bitmap createBitmap = Bitmap.createBitmap(scrollView.getWidth(), i2, config);
         scrollView.draw(new Canvas(createBitmap));
         return createBitmap;
     }
@@ -1311,7 +1289,7 @@ public class GenerateImageUtil {
         textView.setVisibility(8);
         ((ImageView) inflate.findViewById(R$id.share_page_qrcode_img)).setImageBitmap(QrcodeUtil.a(t60.a(activity, 60.0f), dMShareMessage.shareLink));
         ((TextView) inflate.findViewById(R$id.share_page_qrcode_tip)).setText("长按二维码跟着我一起感受现场");
-        C0504a.b().h(activity).c(dMShareMessage.sharePictureUrl).n(new C0916q(activity, imageView, dMShareMessage, imageView2, inflate, scrollView)).e(new C0915p(activity)).f();
+        cn.damai.common.image.a.b().h(activity).c(dMShareMessage.sharePictureUrl).n(new q(activity, imageView, dMShareMessage, imageView2, inflate, scrollView)).e(new p(activity)).f();
     }
 
     public static void v(Activity activity, View view) {
@@ -1321,10 +1299,10 @@ public class GenerateImageUtil {
             return;
         }
         DisplayMetrics b2 = t60.b(activity);
-        int i = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(b2);
-        int i2 = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(b2);
-        view.layout(0, 0, i, i2);
-        view.measure(View.MeasureSpec.makeMeasureSpec(i, 1073741824), View.MeasureSpec.makeMeasureSpec(i2, Integer.MIN_VALUE));
+        int i2 = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(b2);
+        int i3 = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(b2);
+        view.layout(0, 0, i2, i3);
+        view.measure(View.MeasureSpec.makeMeasureSpec(i2, 1073741824), View.MeasureSpec.makeMeasureSpec(i3, Integer.MIN_VALUE));
         view.layout(0, 0, view.getMeasuredWidth(), view.getMeasuredHeight());
     }
 
@@ -1336,7 +1314,7 @@ public class GenerateImageUtil {
         }
         H(activity);
         LiveShareImageViewHolder liveShareImageViewHolder = new LiveShareImageViewHolder(activity);
-        liveShareImageViewHolder.q((LiveShareImageBean) iImageShareInfoProvider.getImageShareInfo(), new C0914o(activity, liveShareImageViewHolder, dMShareMessage));
+        liveShareImageViewHolder.q((LiveShareImageBean) iImageShareInfoProvider.getImageShareInfo(), new o(activity, liveShareImageViewHolder, dMShareMessage));
     }
 
     private static void x(Activity activity, DMShareMessage dMShareMessage) {
@@ -1354,7 +1332,7 @@ public class GenerateImageUtil {
         ((TextView) inflate.findViewById(R$id.share_page_subtitle)).setText(dMShareMessage.shareContent);
         ((ImageView) inflate.findViewById(R$id.share_page_qrcode_img)).setImageBitmap(QrcodeUtil.a(t60.a(activity, 60.0f), dMShareMessage.shareLink));
         ((TextView) inflate.findViewById(R$id.share_page_qrcode_tip)).setText("长按识别二维码，查看精彩演出");
-        C0504a.b().h(activity).c(dMShareMessage.sharePictureUrl).m().n(new C0913n(activity, imageView, dMShareMessage, imageView2, inflate, scrollView)).e(new C0907h(activity)).f();
+        cn.damai.common.image.a.b().h(activity).c(dMShareMessage.sharePictureUrl).m().n(new n(activity, imageView, dMShareMessage, imageView2, inflate, scrollView)).e(new h(activity)).f();
     }
 
     private static void y(Activity activity, DMShareMessage dMShareMessage) {
@@ -1365,7 +1343,7 @@ public class GenerateImageUtil {
         }
         H(activity);
         mi1 mi1Var = new mi1(activity);
-        mi1Var.e(dMShareMessage, new C0904e(activity, mi1Var, dMShareMessage));
+        mi1Var.e(dMShareMessage, new e(activity, mi1Var, dMShareMessage));
     }
 
     private static void z(Activity activity, DMShareMessage dMShareMessage) {
@@ -1389,6 +1367,6 @@ public class GenerateImageUtil {
         layoutParams.height = a2;
         layoutParams.width = a2;
         imageView3.setImageBitmap(a3);
-        C0504a.b().h(activity).c(dMShareMessage.sharePictureUrl).n(new C0901b(activity, imageView, dMShareMessage, imageView2, inflate, scrollView)).e(new C0900a(activity)).f();
+        cn.damai.common.image.a.b().h(activity).c(dMShareMessage.sharePictureUrl).n(new b(activity, imageView, dMShareMessage, imageView2, inflate, scrollView)).e(new a(activity)).f();
     }
 }

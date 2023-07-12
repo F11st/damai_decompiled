@@ -61,7 +61,7 @@ public class PermissionActivity extends Activity implements ActivityCompat.OnReq
     @Override // android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        setContentView(R.C2952layout.aliuser_activity_permission);
+        setContentView(R.layout.aliuser_activity_permission);
         String[] stringArrayExtra = getIntent().getStringArrayExtra("permissions");
         String stringExtra = getIntent().getStringExtra("explain");
         if (stringArrayExtra != null && stringArrayExtra.length == 1 && stringArrayExtra[0].equals("android.permission.SYSTEM_ALERT_WINDOW")) {

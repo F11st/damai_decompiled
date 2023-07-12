@@ -42,17 +42,16 @@ public class ig {
     private long g;
     private long h;
     private String i;
-    private C4589b j;
-    private id.InterfaceC4586a k;
+    private b j;
+    private id.a k;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.ig$a */
     /* loaded from: classes10.dex */
-    public static class C4588a {
+    public static class a {
         public HttpURLConnection a;
         public int b;
 
-        public C4588a(HttpURLConnection httpURLConnection, int i) {
+        public a(HttpURLConnection httpURLConnection, int i) {
             this.a = httpURLConnection;
             this.b = i;
         }
@@ -60,18 +59,17 @@ public class ig {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.ig$b */
     /* loaded from: classes10.dex */
-    public static class C4589b {
-        private Vector<C4590c> a;
-        private volatile C4590c b;
+    public static class b {
+        private Vector<c> a;
+        private volatile c b;
 
-        private C4589b() {
+        private b() {
             this.a = new Vector<>();
-            this.b = new C4590c();
+            this.b = new c();
         }
 
-        public C4590c a() {
+        public c a() {
             return this.b;
         }
 
@@ -82,32 +80,31 @@ public class ig {
             this.b.a(str);
         }
 
-        public C4590c a(String str) {
+        public c a(String str) {
             if (TextUtils.isEmpty(str)) {
                 return this.b;
             }
             for (int i = 0; i < this.a.size(); i++) {
-                C4590c c4590c = this.a.get(i);
-                if (c4590c != null && c4590c.a().equals(str)) {
-                    return c4590c;
+                c cVar = this.a.get(i);
+                if (cVar != null && cVar.a().equals(str)) {
+                    return cVar;
                 }
             }
-            C4590c c4590c2 = new C4590c();
-            c4590c2.b(str);
-            this.a.add(c4590c2);
-            return c4590c2;
+            c cVar2 = new c();
+            cVar2.b(str);
+            this.a.add(cVar2);
+            return cVar2;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.ig$c */
     /* loaded from: classes10.dex */
-    public static class C4590c implements HostnameVerifier {
+    public static class c implements HostnameVerifier {
         private String a;
         private String b;
 
-        private C4590c() {
+        private c() {
         }
 
         public void a(String str) {
@@ -148,7 +145,7 @@ public class ig {
         try {
             this.i = UUID.randomUUID().toString().replaceAll("-", "").toLowerCase();
         } catch (Throwable th) {
-            C4573ha.a(th, "ht", ReportManager.g);
+            ha.a(th, "ht", ReportManager.g);
         }
     }
 
@@ -171,7 +168,7 @@ public class ig {
         this.f = true;
     }
 
-    ig(int i, int i2, Proxy proxy, boolean z, id.InterfaceC4586a interfaceC4586a) {
+    ig(int i, int i2, Proxy proxy, boolean z, id.a aVar) {
         this.f = false;
         this.g = -1L;
         this.h = 0L;
@@ -182,7 +179,7 @@ public class ig {
         if (gi.c()) {
             this.c = false;
         }
-        this.k = interfaceC4586a;
+        this.k = aVar;
         b();
         if (this.c) {
             try {
@@ -190,10 +187,10 @@ public class ig {
                 sSLContext.init(null, null, null);
                 this.d = sSLContext;
             } catch (Throwable th) {
-                C4573ha.a(th, "ht", "ne");
+                ha.a(th, "ht", "ne");
             }
         }
-        this.j = new C4589b();
+        this.j = new b();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -205,12 +202,12 @@ public class ig {
         if (TextUtils.isEmpty(str)) {
             return str;
         }
-        String a = a(map);
+        String a2 = a(map);
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append(str);
-        if (a != null) {
+        if (a2 != null) {
             stringBuffer.append("?");
-            stringBuffer.append(a);
+            stringBuffer.append(a2);
         }
         return stringBuffer.toString();
     }
@@ -226,18 +223,18 @@ public class ig {
         HttpURLConnection httpURLConnection = null;
         try {
             try {
-                C4588a a = a(a(str, map2), a(str2, map2), z, str3, map, false, i);
+                a a2 = a(a(str, map2), a(str2, map2), z, str3, map, false, i);
                 try {
-                    httpURLConnection = a.a;
-                    ik a2 = a(a, z2);
+                    httpURLConnection = a2.a;
+                    ik a3 = a(a2, z2);
                     if (httpURLConnection != null) {
                         try {
                             httpURLConnection.disconnect();
                         } catch (Throwable th) {
-                            C4573ha.a(th, "ht", "mgr");
+                            ha.a(th, "ht", "mgr");
                         }
                     }
-                    return a2;
+                    return a3;
                 } catch (gb e) {
                     e = e;
                     throw e;
@@ -275,14 +272,14 @@ public class ig {
         } catch (Throwable th4) {
             try {
                 gd.a(i);
-                b((C4588a) null);
+                b((a) null);
             } catch (Throwable unused15) {
             }
             if (str != 0) {
                 try {
                     str.disconnect();
                 } catch (Throwable th5) {
-                    C4573ha.a(th5, "ht", "mgr");
+                    ha.a(th5, "ht", "mgr");
                 }
             }
             throw th4;
@@ -337,7 +334,7 @@ public class ig {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public void a(java.lang.String r20, java.lang.String r21, boolean r22, java.lang.String r23, java.util.Map<java.lang.String, java.lang.String> r24, java.util.Map<java.lang.String, java.lang.String> r25, byte[] r26, com.amap.api.mapcore.util.Cif.InterfaceC4587a r27, int r28) {
+    public void a(java.lang.String r20, java.lang.String r21, boolean r22, java.lang.String r23, java.util.Map<java.lang.String, java.lang.String> r24, java.util.Map<java.lang.String, java.lang.String> r25, byte[] r26, com.amap.api.mapcore.util.Cif.a r27, int r28) {
         /*
             Method dump skipped, instructions count: 490
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -352,8 +349,8 @@ public class ig {
         return 1;
     }
 
-    private void b(C4588a c4588a) {
-        a(c4588a, true, 0L, 0L);
+    private void b(a aVar) {
+        a(aVar, true, 0L, 0L);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -362,16 +359,16 @@ public class ig {
         HttpURLConnection httpURLConnection = null;
         try {
             try {
-                String a = a(str, map2);
-                String a2 = a(str2, map2);
+                String a2 = a(str, map2);
+                String a3 = a(str2, map2);
                 try {
                     long currentTimeMillis = System.currentTimeMillis();
-                    C4588a a3 = a(a, a2, z, str3, map, false, i);
+                    a a4 = a(a2, a3, z, str3, map, false, i);
                     try {
-                        httpURLConnection = a3.a;
+                        httpURLConnection = a4.a;
                         if (httpURLConnection.getResponseCode() < 400) {
                             try {
-                                a(a3, false, currentTimeMillis, System.currentTimeMillis());
+                                a(a4, false, currentTimeMillis, System.currentTimeMillis());
                                 HashMap hashMap = new HashMap();
                                 for (int i2 = 0; i2 < 50; i2++) {
                                     String headerFieldKey = httpURLConnection.getHeaderFieldKey(i2);
@@ -383,7 +380,7 @@ public class ig {
                                 try {
                                     httpURLConnection.disconnect();
                                 } catch (Throwable th) {
-                                    C4573ha.a(th, "hth", "mgr");
+                                    ha.a(th, "hth", "mgr");
                                 }
                                 return hashMap;
                             } catch (gb e) {
@@ -449,8 +446,8 @@ public class ig {
         } catch (Throwable th6) {
             if (1 != 0) {
                 try {
-                    a((C4588a) null);
-                    b((C4588a) null);
+                    a((a) null);
+                    b((a) null);
                 } catch (Throwable unused29) {
                 }
             }
@@ -458,7 +455,7 @@ public class ig {
                 try {
                     str.disconnect();
                 } catch (Throwable th7) {
-                    C4573ha.a(th7, "hth", "mgr");
+                    ha.a(th7, "hth", "mgr");
                 }
             }
             throw th6;
@@ -496,11 +493,11 @@ public class ig {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* JADX WARN: Multi-variable type inference failed */
     public ik a(String str, String str2, boolean z, String str3, Map<String, String> map, byte[] bArr, boolean z2, int i) throws gb {
-        C4588a a;
+        a a2;
         HttpURLConnection httpURLConnection = null;
         try {
             try {
-                a = a(str, str2, z, str3, map, true, i);
+                a2 = a(str, str2, z, str3, map, true, i);
             } catch (gb e) {
                 e = e;
             } catch (InterruptedIOException unused) {
@@ -520,24 +517,24 @@ public class ig {
                 th = th;
             }
             try {
-                HttpURLConnection httpURLConnection2 = a.a;
+                HttpURLConnection httpURLConnection2 = a2.a;
                 if (bArr != null && bArr.length > 0) {
                     DataOutputStream dataOutputStream = new DataOutputStream(httpURLConnection2.getOutputStream());
                     dataOutputStream.write(bArr);
                     dataOutputStream.close();
                 }
-                ik a2 = a(a, z2);
+                ik a3 = a(a2, z2);
                 if (httpURLConnection2 != null) {
                     try {
                         httpURLConnection2.disconnect();
                     } catch (Throwable th2) {
-                        C4573ha.a(th2, "ht", "mPt");
+                        ha.a(th2, "ht", "mPt");
                     }
                 }
-                return a2;
+                return a3;
             } catch (gb e8) {
                 e = e8;
-                C4573ha.a(e, "ht", "mPt");
+                ha.a(e, "ht", "mPt");
                 throw e;
             } catch (InterruptedIOException unused2) {
                 throw new gb(AMapException.ERROR_UNKNOWN);
@@ -567,20 +564,20 @@ public class ig {
                 throw new gb("IO 操作异常 - IOException");
             } catch (Throwable th3) {
                 th = th3;
-                C4573ha.a(th, "ht", "mPt");
+                ha.a(th, "ht", "mPt");
                 throw new gb(AMapException.ERROR_UNKNOWN);
             }
         } catch (Throwable th4) {
             try {
                 gd.a(i);
-                b((C4588a) this);
+                b((a) this);
             } catch (Throwable unused3) {
             }
             if (0 != 0) {
                 try {
                     httpURLConnection.disconnect();
                 } catch (Throwable th5) {
-                    C4573ha.a(th5, "ht", "mPt");
+                    ha.a(th5, "ht", "mPt");
                 }
             }
             throw th4;
@@ -604,40 +601,40 @@ public class ig {
         return uri;
     }
 
-    C4588a a(String str, String str2, boolean z, String str3, Map<String, String> map, boolean z2, int i) throws IOException {
+    a a(String str, String str2, boolean z, String str3, Map<String, String> map, boolean z2, int i) throws IOException {
         HttpsURLConnection httpsURLConnection;
         gg.c();
-        String a = a(str, str2, i);
+        String a2 = a(str, str2, i);
         c(i);
         if (map == null) {
             map = new HashMap<>();
         }
-        C4590c a2 = this.j.a();
+        c a3 = this.j.a();
         if (z && !TextUtils.isEmpty(str3)) {
-            a2 = this.j.a(str3);
+            a3 = this.j.a(str3);
         }
-        String a3 = a(id.a, a, map);
+        String a4 = a(id.a, a2, map);
         if (this.c) {
-            a3 = gi.a(a3);
+            a4 = gi.a(a4);
         }
-        URL url = new URL(a3);
-        id.InterfaceC4586a interfaceC4586a = this.k;
-        URLConnection a4 = interfaceC4586a != null ? interfaceC4586a.a(this.e, url) : null;
-        if (a4 == null) {
+        URL url = new URL(a4);
+        id.a aVar = this.k;
+        URLConnection a5 = aVar != null ? aVar.a(this.e, url) : null;
+        if (a5 == null) {
             Proxy proxy = this.e;
             if (proxy != null) {
-                a4 = url.openConnection(proxy);
+                a5 = url.openConnection(proxy);
             } else {
-                a4 = url.openConnection();
+                a5 = url.openConnection();
             }
         }
         if (this.c) {
-            HttpsURLConnection httpsURLConnection2 = (HttpsURLConnection) a4;
+            HttpsURLConnection httpsURLConnection2 = (HttpsURLConnection) a5;
             httpsURLConnection2.setSSLSocketFactory(this.d.getSocketFactory());
-            httpsURLConnection2.setHostnameVerifier(a2);
+            httpsURLConnection2.setHostnameVerifier(a3);
             httpsURLConnection = httpsURLConnection2;
         } else {
-            httpsURLConnection = (HttpURLConnection) a4;
+            httpsURLConnection = (HttpURLConnection) a5;
         }
         if (Build.VERSION.SDK != null && Build.VERSION.SDK_INT > 13) {
             httpsURLConnection.setRequestProperty(IRequestConst.CONNECTION, "close");
@@ -652,7 +649,7 @@ public class ig {
             httpsURLConnection.setRequestMethod("GET");
             httpsURLConnection.setDoInput(true);
         }
-        return new C4588a(httpsURLConnection, i);
+        return new a(httpsURLConnection, i);
     }
 
     private String a(HttpURLConnection httpURLConnection) {
@@ -670,22 +667,22 @@ public class ig {
         return "";
     }
 
-    private void a(C4588a c4588a) {
-        if (c4588a == null) {
+    private void a(a aVar) {
+        if (aVar == null) {
             return;
         }
-        gd.a(c4588a.b);
+        gd.a(aVar.b);
     }
 
-    private void a(C4588a c4588a, boolean z, long j, long j2) {
+    private void a(a aVar, boolean z, long j, long j2) {
         String str;
         boolean z2;
         boolean z3;
         boolean z4 = false;
         String str2 = null;
         try {
-            str2 = c4588a.a.getURL().toString();
-            int i = c4588a.b;
+            str2 = aVar.a.getURL().toString();
+            int i = aVar.b;
             boolean z5 = i == 3;
             z2 = (i == 2 || i == 4) ? true : true;
             z3 = z5;
@@ -709,7 +706,7 @@ public class ig {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private com.amap.api.mapcore.util.ik a(com.amap.api.mapcore.util.ig.C4588a r17, boolean r18) throws com.amap.api.mapcore.util.gb, java.io.IOException {
+    private com.amap.api.mapcore.util.ik a(com.amap.api.mapcore.util.ig.a r17, boolean r18) throws com.amap.api.mapcore.util.gb, java.io.IOException {
         /*
             Method dump skipped, instructions count: 344
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -726,7 +723,7 @@ public class ig {
         try {
             httpURLConnection.addRequestProperty("csid", this.i);
         } catch (Throwable th) {
-            C4573ha.a(th, "ht", "adh");
+            ha.a(th, "ht", "adh");
         }
         httpURLConnection.setConnectTimeout(this.a);
         httpURLConnection.setReadTimeout(this.b);

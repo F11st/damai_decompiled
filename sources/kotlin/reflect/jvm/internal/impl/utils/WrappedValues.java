@@ -7,7 +7,7 @@ import tb.cg0;
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public class WrappedValues {
-    private static final Object a = new C8563a();
+    private static final Object a = new a();
     public static volatile boolean b = false;
 
     /* compiled from: Taobao */
@@ -19,10 +19,9 @@ public class WrappedValues {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.utils.WrappedValues$a */
     /* loaded from: classes3.dex */
-    static class C8563a {
-        C8563a() {
+    static class a {
+        a() {
         }
 
         public String toString() {
@@ -32,12 +31,11 @@ public class WrappedValues {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.utils.WrappedValues$b */
     /* loaded from: classes3.dex */
-    public static final class C8564b {
+    public static final class b {
         private final Throwable a;
 
-        /* synthetic */ C8564b(Throwable th, C8563a c8563a) {
+        /* synthetic */ b(Throwable th, a aVar) {
             this(th);
         }
 
@@ -76,7 +74,7 @@ public class WrappedValues {
             return this.a.toString();
         }
 
-        private C8564b(@NotNull Throwable th) {
+        private b(@NotNull Throwable th) {
             if (th == null) {
                 a(0);
             }
@@ -128,7 +126,7 @@ public class WrappedValues {
         if (th == null) {
             a(3);
         }
-        return new C8564b(th, null);
+        return new b(th, null);
     }
 
     @Nullable
@@ -154,8 +152,8 @@ public class WrappedValues {
     /* JADX WARN: Multi-variable type inference failed */
     @Nullable
     public static <V> V f(@Nullable Object obj) {
-        if (obj instanceof C8564b) {
-            Throwable b2 = ((C8564b) obj).b();
+        if (obj instanceof b) {
+            Throwable b2 = ((b) obj).b();
             if (b && cg0.a(b2)) {
                 throw new WrappedProcessCanceledException(b2);
             }

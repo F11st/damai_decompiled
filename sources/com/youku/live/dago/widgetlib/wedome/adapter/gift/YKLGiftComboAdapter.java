@@ -41,7 +41,7 @@ public class YKLGiftComboAdapter extends FrameLayout implements YKLGiftComboProt
             return;
         }
         this.mContext = context;
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_layout_gift_combo_component, this);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_layout_gift_combo_component, this);
         RoundGiftButton roundGiftButton = (RoundGiftButton) findViewById(R.id.round_gift_bt);
         this.mComboGiftButton = roundGiftButton;
         roundGiftButton.setShowIcon(true);

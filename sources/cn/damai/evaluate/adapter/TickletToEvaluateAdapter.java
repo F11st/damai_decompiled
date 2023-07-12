@@ -17,8 +17,8 @@ import cn.damai.comment.R$layout;
 import cn.damai.comment.util.CommentItemMoreUtil;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.issue.net.CommentInfo;
 import cn.damai.issue.net.ToEvaListResponse;
 import cn.damai.uikit.view.DMPosterView;
@@ -80,14 +80,13 @@ public class TickletToEvaluateAdapter extends RecyclerView.Adapter<TikletToEvalu
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.adapter.TickletToEvaluateAdapter$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1077a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ToEvaListResponse.EvaluateInfo a;
         final /* synthetic */ CommentInfo b;
 
-        View$OnClickListenerC1077a(ToEvaListResponse.EvaluateInfo evaluateInfo, CommentInfo commentInfo) {
+        a(ToEvaListResponse.EvaluateInfo evaluateInfo, CommentInfo commentInfo) {
             this.a = evaluateInfo;
             this.b = commentInfo;
         }
@@ -110,15 +109,14 @@ public class TickletToEvaluateAdapter extends RecyclerView.Adapter<TikletToEvalu
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.adapter.TickletToEvaluateAdapter$b */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1078b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ToEvaListResponse.EvaluateInfo a;
         final /* synthetic */ CommentInfo b;
         final /* synthetic */ int c;
 
-        View$OnClickListenerC1078b(ToEvaListResponse.EvaluateInfo evaluateInfo, CommentInfo commentInfo, int i) {
+        b(ToEvaListResponse.EvaluateInfo evaluateInfo, CommentInfo commentInfo, int i) {
             this.a = evaluateInfo;
             this.b = commentInfo;
             this.c = i;
@@ -146,8 +144,8 @@ public class TickletToEvaluateAdapter extends RecyclerView.Adapter<TikletToEvalu
             } else {
                 hashMap.put("style", "0");
             }
-            C0529c e = C0529c.e();
-            C0525a.C0527b i = new C0525a.C0527b().i(un2.TICKLET_MYCOMMENT_LIST_PAGE);
+            c e = c.e();
+            a.b i = new a.b().i(un2.TICKLET_MYCOMMENT_LIST_PAGE);
             e.x(i.f("tobeevaluate_" + this.c).l("goto_evaluate").g(true).j(hashMap));
             TickletToEvaluateAdapter.this.d(this.a, this.b.getItemId(), m);
         }
@@ -197,14 +195,14 @@ public class TickletToEvaluateAdapter extends RecyclerView.Adapter<TikletToEvalu
         evaluateInfo.getIsDisplayComment();
         CommentInfo commentInfo = evaluateInfo.getCommentInfo();
         tikletToEvaluateViewHolder.g.setVisibility(0);
-        tikletToEvaluateViewHolder.h.setOnClickListener(new View$OnClickListenerC1077a(evaluateInfo, commentInfo));
+        tikletToEvaluateViewHolder.h.setOnClickListener(new a(evaluateInfo, commentInfo));
         if (commentInfo != null) {
             if (!TextUtils.isEmpty(commentInfo.getIsHasComment()) && commentInfo.getIsHasComment().equals("1")) {
                 tikletToEvaluateViewHolder.i.setVisibility(8);
             } else {
                 tikletToEvaluateViewHolder.i.setVisibility(0);
             }
-            tikletToEvaluateViewHolder.i.setOnClickListener(new View$OnClickListenerC1078b(evaluateInfo, commentInfo, i));
+            tikletToEvaluateViewHolder.i.setOnClickListener(new b(evaluateInfo, commentInfo, i));
             if (!TextUtils.isEmpty(commentInfo.getCommentGiftTxt())) {
                 tikletToEvaluateViewHolder.j.setText(commentInfo.getCommentGiftTxt());
                 tikletToEvaluateViewHolder.j.setVisibility(0);

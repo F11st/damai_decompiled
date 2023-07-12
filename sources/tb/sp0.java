@@ -7,9 +7,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
@@ -20,8 +17,8 @@ import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
-import kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a;
 import kotlin.reflect.jvm.internal.impl.descriptors.impl.ValueParameterDescriptorImpl;
+import kotlin.reflect.jvm.internal.impl.descriptors.impl.a;
 import kotlin.reflect.jvm.internal.impl.types.TypeSubstitutor;
 import kotlin.reflect.jvm.internal.impl.types.Variance;
 import org.jetbrains.annotations.NotNull;
@@ -31,16 +28,15 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public final class sp0 extends cd2 {
     @NotNull
-    public static final C9697a Factory = new C9697a(null);
+    public static final a Factory = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.sp0$a */
     /* loaded from: classes3.dex */
-    public static final class C9697a {
-        private C9697a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9697a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -75,7 +71,7 @@ public final class sp0 extends cd2 {
             List<TypeParameterDescriptor> declaredTypeParameters = qp0Var.getDeclaredTypeParameters();
             sp0 sp0Var = new sp0(qp0Var, null, CallableMemberDescriptor.Kind.DECLARATION, z, null);
             ReceiverParameterDescriptor thisAsReceiverParameter = qp0Var.getThisAsReceiverParameter();
-            g = C8214m.g();
+            g = kotlin.collections.m.g();
             ArrayList arrayList = new ArrayList();
             for (Object obj : declaredTypeParameters) {
                 if (!(((TypeParameterDescriptor) obj).getVariance() == Variance.IN_VARIANCE)) {
@@ -84,12 +80,12 @@ public final class sp0 extends cd2 {
                 arrayList.add(obj);
             }
             G0 = CollectionsKt___CollectionsKt.G0(arrayList);
-            q = C8215n.q(G0, 10);
+            q = kotlin.collections.n.q(G0, 10);
             ArrayList arrayList2 = new ArrayList(q);
             for (i21 i21Var : G0) {
                 arrayList2.add(sp0.Factory.b(sp0Var, i21Var.c(), (TypeParameterDescriptor) i21Var.d()));
             }
-            sp0Var.l(null, thisAsReceiverParameter, g, arrayList2, ((TypeParameterDescriptor) C8212k.b0(declaredTypeParameters)).getDefaultType(), Modality.ABSTRACT, e70.PUBLIC);
+            sp0Var.l(null, thisAsReceiverParameter, g, arrayList2, ((TypeParameterDescriptor) kotlin.collections.k.b0(declaredTypeParameters)).getDefaultType(), Modality.ABSTRACT, e70.PUBLIC);
             sp0Var.t(true);
             return sp0Var;
         }
@@ -114,7 +110,7 @@ public final class sp0 extends cd2 {
         boolean z2 = true;
         List<ValueParameterDescriptor> valueParameters = getValueParameters();
         b41.h(valueParameters, "valueParameters");
-        q = C8215n.q(valueParameters, 10);
+        q = kotlin.collections.n.q(valueParameters, 10);
         ArrayList arrayList = new ArrayList(q);
         for (ValueParameterDescriptor valueParameterDescriptor : valueParameters) {
             ni1 name = valueParameterDescriptor.getName();
@@ -126,7 +122,7 @@ public final class sp0 extends cd2 {
             }
             arrayList.add(valueParameterDescriptor.copy(this, name, index));
         }
-        AbstractC8316a.C8319c m = m(TypeSubstitutor.EMPTY);
+        a.c m = m(TypeSubstitutor.EMPTY);
         if (!list.isEmpty()) {
             for (ni1 ni1Var2 : list) {
                 if (ni1Var2 == null) {
@@ -142,7 +138,7 @@ public final class sp0 extends cd2 {
             }
         }
         z2 = false;
-        AbstractC8316a.C8319c original = m.m(z2).setValueParameters(arrayList).setOriginal(getOriginal());
+        a.c original = m.m(z2).setValueParameters(arrayList).setOriginal(getOriginal());
         b41.h(original, "newCopyBuilder(TypeSubst…   .setOriginal(original)");
         FunctionDescriptor g = super.g(original);
         b41.f(g);
@@ -150,9 +146,9 @@ public final class sp0 extends cd2 {
         return g;
     }
 
-    @Override // tb.cd2, kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a
+    @Override // tb.cd2, kotlin.reflect.jvm.internal.impl.descriptors.impl.a
     @NotNull
-    protected AbstractC8316a f(@NotNull DeclarationDescriptor declarationDescriptor, @Nullable FunctionDescriptor functionDescriptor, @NotNull CallableMemberDescriptor.Kind kind, @Nullable ni1 ni1Var, @NotNull Annotations annotations, @NotNull SourceElement sourceElement) {
+    protected kotlin.reflect.jvm.internal.impl.descriptors.impl.a f(@NotNull DeclarationDescriptor declarationDescriptor, @Nullable FunctionDescriptor functionDescriptor, @NotNull CallableMemberDescriptor.Kind kind, @Nullable ni1 ni1Var, @NotNull Annotations annotations, @NotNull SourceElement sourceElement) {
         b41.i(declarationDescriptor, "newOwner");
         b41.i(kind, "kind");
         b41.i(annotations, "annotations");
@@ -161,13 +157,13 @@ public final class sp0 extends cd2 {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a
     @Nullable
-    public FunctionDescriptor g(@NotNull AbstractC8316a.C8319c c8319c) {
+    public FunctionDescriptor g(@NotNull a.c cVar) {
         boolean z;
         int q;
-        b41.i(c8319c, PipUtils.DAGO_PIP_MODE_CONFIGURATION);
-        sp0 sp0Var = (sp0) super.g(c8319c);
+        b41.i(cVar, PipUtils.DAGO_PIP_MODE_CONFIGURATION);
+        sp0 sp0Var = (sp0) super.g(cVar);
         if (sp0Var == null) {
             return null;
         }
@@ -196,7 +192,7 @@ public final class sp0 extends cd2 {
         }
         List<ValueParameterDescriptor> valueParameters2 = sp0Var.getValueParameters();
         b41.h(valueParameters2, "substituted.valueParameters");
-        q = C8215n.q(valueParameters2, 10);
+        q = kotlin.collections.n.q(valueParameters2, 10);
         ArrayList arrayList = new ArrayList(q);
         for (ValueParameterDescriptor valueParameterDescriptor2 : valueParameters2) {
             z71 type2 = valueParameterDescriptor2.getType();
@@ -206,17 +202,17 @@ public final class sp0 extends cd2 {
         return sp0Var.J(arrayList);
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.MemberDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.MemberDescriptor
     public boolean isExternal() {
         return false;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor
     public boolean isInline() {
         return false;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor
     public boolean isTailrec() {
         return false;
     }

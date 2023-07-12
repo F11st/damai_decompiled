@@ -12,20 +12,19 @@ public abstract class df {
     private String d;
     private boolean e;
     private boolean f;
-    cz.InterfaceC4409a j;
+    cz.a j;
     int g = 20000;
     int h = 20000;
     Proxy i = null;
     private boolean a = false;
     private int b = 20000;
     private boolean c = true;
-    private EnumC4423a k = EnumC4423a.NORMAL;
-    private EnumC4424b l = EnumC4424b.FIRST_NONDEGRADE;
+    private a k = a.NORMAL;
+    private b l = b.FIRST_NONDEGRADE;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.df$a */
     /* loaded from: classes10.dex */
-    public enum EnumC4423a {
+    public enum a {
         NORMAL(0),
         INTERRUPT_IO(1),
         NEVER(2),
@@ -34,15 +33,14 @@ public abstract class df {
         
         private int f;
 
-        EnumC4423a(int i) {
+        a(int i) {
             this.f = i;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.df$b */
     /* loaded from: classes10.dex */
-    public enum EnumC4424b {
+    public enum b {
         FIRST_NONDEGRADE(0),
         NEVER_GRADE(1),
         DEGRADE_BYERROR(2),
@@ -53,7 +51,7 @@ public abstract class df {
         
         private int h;
 
-        EnumC4424b(int i2) {
+        b(int i2) {
             this.h = i2;
         }
 
@@ -82,15 +80,14 @@ public abstract class df {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.df$c */
     /* loaded from: classes10.dex */
-    public enum EnumC4425c {
+    public enum c {
         HTTP(0),
         HTTPS(1);
         
         private int c;
 
-        EnumC4425c(int i) {
+        c(int i) {
             this.c = i;
         }
     }
@@ -112,11 +109,11 @@ public abstract class df {
         if (e == null) {
             return str;
         }
-        String a = dc.a(e);
+        String a2 = dc.a(e);
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append(str);
         stringBuffer.append("?");
-        stringBuffer.append(a);
+        stringBuffer.append(a2);
         return stringBuffer.toString();
     }
 
@@ -175,7 +172,7 @@ public abstract class df {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public final EnumC4423a o() {
+    public final a o() {
         return this.k;
     }
 
@@ -193,12 +190,12 @@ public abstract class df {
         return this.f;
     }
 
-    public final cz.InterfaceC4409a s() {
+    public final cz.a s() {
         return this.j;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public final EnumC4424b t() {
+    public final b t() {
         return this.l;
     }
 
@@ -298,16 +295,16 @@ public abstract class df {
         this.g = i;
     }
 
-    public final void a(EnumC4423a enumC4423a) {
-        this.k = enumC4423a;
+    public final void a(a aVar) {
+        this.k = aVar;
     }
 
-    public final void a(EnumC4425c enumC4425c) {
-        this.f = enumC4425c == EnumC4425c.HTTPS;
+    public final void a(c cVar) {
+        this.f = cVar == c.HTTPS;
     }
 
-    public final void a(EnumC4424b enumC4424b) {
-        this.l = enumC4424b;
+    public final void a(b bVar) {
+        this.l = bVar;
     }
 
     private static String a(Map<String, String> map) {

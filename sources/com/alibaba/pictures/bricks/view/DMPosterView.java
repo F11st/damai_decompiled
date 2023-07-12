@@ -46,12 +46,11 @@ public class DMPosterView extends FrameLayout {
     private ImageView videoIcon;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.DMPosterView$a */
     /* loaded from: classes7.dex */
-    public class C3574a implements IImageSuccListener {
+    public class a implements IImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3574a() {
+        a() {
         }
 
         @Override // com.alient.oneservice.image.IImageSuccListener
@@ -67,12 +66,11 @@ public class DMPosterView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.DMPosterView$b */
     /* loaded from: classes7.dex */
-    public class C3575b implements IImageFailListener {
+    public class b implements IImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3575b() {
+        b() {
         }
 
         @Override // com.alient.oneservice.image.IImageFailListener
@@ -121,17 +119,17 @@ public class DMPosterView extends FrameLayout {
         this.imageViewMask.setBackgroundResource(R$drawable.bricks_uikit_default_image_bg_mask_gradient);
         this.imageViewMask.setVisibility(8);
         s60 s60Var = s60.INSTANCE;
-        int a = s60Var.a(context, 0.5f);
-        layoutParams.leftMargin = a;
-        layoutParams.topMargin = a;
-        layoutParams.rightMargin = a;
-        layoutParams.bottomMargin = a;
+        int a2 = s60Var.a(context, 0.5f);
+        layoutParams.leftMargin = a2;
+        layoutParams.topMargin = a2;
+        layoutParams.rightMargin = a2;
+        layoutParams.bottomMargin = a2;
         addView(this.imageView, layoutParams);
         FrameLayout.LayoutParams layoutParams2 = new FrameLayout.LayoutParams(-1, -1);
         this.borderView = new View(context);
         GradientDrawable gradientDrawable = new GradientDrawable();
         gradientDrawable.setCornerRadius(s60Var.b(context, 6));
-        gradientDrawable.setStroke(a, Color.parseColor("#1A000000"));
+        gradientDrawable.setStroke(a2, Color.parseColor("#1A000000"));
         if (Build.VERSION.SDK_INT >= 16) {
             this.borderView.setBackground(gradientDrawable);
         } else {
@@ -499,7 +497,7 @@ public class DMPosterView extends FrameLayout {
             ipChange.ipc$dispatch("-1499132039", new Object[]{this, str, Integer.valueOf(i), Integer.valueOf(i2)});
         } else if (this.imageView == null) {
         } else {
-            ImageLoaderProviderProxy.getProxy().load(str, new C3574a(), new C3575b());
+            ImageLoaderProviderProxy.getProxy().load(str, new a(), new b());
         }
     }
 

@@ -127,7 +127,7 @@ public final class MaybeDelaySubscriptionOtherPublisher<T, U> extends AbstractMa
         this.other = publisher;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         this.other.subscribe(new OtherSubscriber(maybeObserver, this.source));
     }

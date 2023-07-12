@@ -1,7 +1,6 @@
 package tb;
 
 import java.util.Iterator;
-import kotlin.collections.C8214m;
 import kotlin.jvm.internal.markers.KMappedMarker;
 import org.jetbrains.annotations.NotNull;
 
@@ -25,7 +24,7 @@ public final class k21<T> implements Iterator<i21<? extends T>>, KMappedMarker {
         int i = this.b;
         this.b = i + 1;
         if (i < 0) {
-            C8214m.p();
+            kotlin.collections.m.p();
         }
         return new i21<>(i, this.a.next());
     }

@@ -10,7 +10,7 @@ import org.apache.commons.lang3.StringUtils;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class he {
-    private static WeakReference<C4593in> a = null;
+    private static WeakReference<in> a = null;
     private static boolean b = true;
     private static WeakReference<jh> c;
     private static WeakReference<jh> d;
@@ -52,7 +52,7 @@ public class he {
     private static void a(Context context, gm gmVar, int i2, String str, String str2) {
         String str3;
         String a2 = iu.a();
-        String a3 = iu.a(C4554gc.a(context), iu.a(context, gmVar), a2, i2, str, str2);
+        String a3 = iu.a(gc.a(context), iu.a(context, gmVar), a2, i2, str, str2);
         if (a3 == null || "".equals(a3)) {
             return;
         }
@@ -146,13 +146,13 @@ public class he {
     }
 
     private static void a(Context context, String str, String str2, String str3) {
-        C4593in a2 = iu.a(a);
+        in a2 = iu.a(a);
         iu.a(context, a2, str2, 1000, 40960, "1");
         if (a2.e == null) {
             a2.e = new ht(new hu(new hw(new hx())));
         }
         try {
-            C4594io.a(str, gn.a(str3.replaceAll(StringUtils.LF, "<br/>")), a2);
+            io.a(str, gn.a(str3.replaceAll(StringUtils.LF, "<br/>")), a2);
         } catch (Throwable unused) {
         }
     }
@@ -163,14 +163,14 @@ public class he {
             public void run() {
                 try {
                     synchronized (he.class) {
-                        C4593in a2 = iu.a(he.a);
+                        in a2 = iu.a(he.a);
                         iu.a(context, a2, str, 1000, 40960, "1");
                         a2.f = jhVar;
                         if (a2.g == null) {
-                            a2.g = new iy(new ix(context, new jc(), new hu(new hw(new hx())), "EImtleSI6IiVzIiwicGxhdGZvcm0iOiJhbmRyb2lkIiwiZGl1IjoiJXMiLCJwa2ciOiIlcyIsIm1vZGVsIjoiJXMiLCJhcHBuYW1lIjoiJXMiLCJhcHB2ZXJzaW9uIjoiJXMiLCJzeXN2ZXJzaW9uIjoiJXMiLA=", C4554gc.f(context), gg.w(context), C4554gc.c(context), Build.getMODEL(), C4554gc.b(context), C4554gc.d(context), Build.VERSION.getRELEASE()));
+                            a2.g = new iy(new ix(context, new jc(), new hu(new hw(new hx())), "EImtleSI6IiVzIiwicGxhdGZvcm0iOiJhbmRyb2lkIiwiZGl1IjoiJXMiLCJwa2ciOiIlcyIsIm1vZGVsIjoiJXMiLCJhcHBuYW1lIjoiJXMiLCJhcHB2ZXJzaW9uIjoiJXMiLCJzeXN2ZXJzaW9uIjoiJXMiLA=", gc.f(context), gg.w(context), gc.c(context), Build.getMODEL(), gc.b(context), gc.d(context), Build.VERSION.getRELEASE()));
                         }
                         a2.h = 3600000;
-                        C4594io.a(a2);
+                        io.a(a2);
                     }
                 } catch (Throwable th) {
                     hd.c(th, "lg", "pul");

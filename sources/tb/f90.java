@@ -7,7 +7,6 @@ import android.os.Build;
 import android.text.TextUtils;
 import android.util.Pair;
 import android.view.View;
-import com.taobao.android.dinamic.C6313b;
 import com.taobao.android.dinamic.log.DinamicLog;
 
 /* compiled from: Taobao */
@@ -44,8 +43,8 @@ public class f90 {
             }
             return new Pair<>(substring, substring2);
         }
-        if (C6313b.e()) {
-            DinamicLog.e(C6313b.TAG, String.format("事件属性:%s语法出错,没有包含\"（）\"", str));
+        if (com.taobao.android.dinamic.b.e()) {
+            DinamicLog.e(com.taobao.android.dinamic.b.TAG, String.format("事件属性:%s语法出错,没有包含\"（）\"", str));
         }
         return null;
     }

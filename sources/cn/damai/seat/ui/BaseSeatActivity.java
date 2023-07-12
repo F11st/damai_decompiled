@@ -10,9 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import cn.damai.common.app.base.BaseModel;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
-import cn.damai.common.util.toastutil.C0537a;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.base.ResponseErrorPage;
 import cn.damai.commonbusiness.seatbiz.promotion.NcovPromotionFragment;
@@ -47,12 +45,11 @@ public abstract class BaseSeatActivity<T extends BaseSeatPresenter, M extends Ba
     private List<View> exposureViewList = new ArrayList();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.BaseSeatActivity$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1698a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1698a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -67,12 +64,11 @@ public abstract class BaseSeatActivity<T extends BaseSeatPresenter, M extends Ba
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.BaseSeatActivity$b */
     /* loaded from: classes7.dex */
-    public class C1699b implements SeatPriceListPanel.OnPriceClickListener {
+    public class b implements SeatPriceListPanel.OnPriceClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1699b() {
+        b() {
         }
 
         @Override // cn.damai.seat.helper.SeatPriceListPanel.OnPriceClickListener
@@ -87,13 +83,12 @@ public abstract class BaseSeatActivity<T extends BaseSeatPresenter, M extends Ba
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.BaseSeatActivity$c */
     /* loaded from: classes7.dex */
-    public class C1700c implements NcovPromotionFragment.OnConfirmClickListener {
+    public class c implements NcovPromotionFragment.OnConfirmClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ViewGroup a;
 
-        C1700c(ViewGroup viewGroup) {
+        c(ViewGroup viewGroup) {
             this.a = viewGroup;
         }
 
@@ -137,8 +132,8 @@ public abstract class BaseSeatActivity<T extends BaseSeatPresenter, M extends Ba
         } else if (fragment == null || fragment.getActivity() == null || fragment.getActivity().isFinishing() || !(fragment instanceof NcovPromotionFragment)) {
         } else {
             viewIgnoreTagForExposure(fragment.getView());
-            C0529c.e().n(this, this.mBuilder);
-            C0529c.e().b(this.exposureViewList);
+            cn.damai.common.user.c.e().n(this, this.mBuilder);
+            cn.damai.common.user.c.e().b(this.exposureViewList);
             this.exposureViewList.clear();
         }
     }
@@ -149,7 +144,7 @@ public abstract class BaseSeatActivity<T extends BaseSeatPresenter, M extends Ba
             return (List) ipChange.ipc$dispatch("-169903402", new Object[]{this, view});
         }
         new ArrayList();
-        return C0529c.e().I(C0529c.e().d(view));
+        return cn.damai.common.user.c.e().I(cn.damai.common.user.c.e().d(view));
     }
 
     @Override // cn.damai.common.app.base.BaseActivity
@@ -211,13 +206,13 @@ public abstract class BaseSeatActivity<T extends BaseSeatPresenter, M extends Ba
             ipChange.ipc$dispatch("-1068301639", new Object[]{this});
             return;
         }
-        C0529c.e().K(this);
+        cn.damai.common.user.c.e().K(this);
         hideStatusBar();
         this.mBackBtn = findViewById(R$id.header_btn_back);
         this.mPerformNameTv = (TextView) findViewById(R$id.header_perform_name);
         this.mPromotionDesc = findViewById(R$id.header_promotion_desc);
-        this.mBackBtn.setOnClickListener(new View$OnClickListenerC1698a());
-        this.mListPanel = new SeatPriceListPanel(this, findViewById(R$id.price_scroll_view), new C1699b());
+        this.mBackBtn.setOnClickListener(new a());
+        this.mListPanel = new SeatPriceListPanel(this, findViewById(R$id.price_scroll_view), new b());
     }
 
     @Override // cn.damai.seat.contract.BaseSeatView
@@ -298,7 +293,7 @@ public abstract class BaseSeatActivity<T extends BaseSeatPresenter, M extends Ba
             ipChange.ipc$dispatch("1850957511", new Object[]{this, str});
         } else if (isFinishing() || TextUtils.isEmpty(str)) {
         } else {
-            C0537a.j(mu0.a().getApplicationContext(), C0537a.b(this, null, str), 0, 80, 0, 300);
+            cn.damai.common.util.toastutil.a.j(mu0.a().getApplicationContext(), cn.damai.common.util.toastutil.a.b(this, null, str), 0, 80, 0, 300);
         }
     }
 
@@ -341,7 +336,7 @@ public abstract class BaseSeatActivity<T extends BaseSeatPresenter, M extends Ba
         getSupportFragmentManager().beginTransaction().replace(viewGroup.getId(), fragment).commitAllowingStateLoss();
         viewGroup.setVisibility(0);
         if (fragment instanceof NcovPromotionFragment) {
-            C0529c.e().q(this);
+            cn.damai.common.user.c.e().q(this);
             this.exposureViewList = viewIgnoreTagForExposure(getWindow().getDecorView());
         }
     }
@@ -391,7 +386,7 @@ public abstract class BaseSeatActivity<T extends BaseSeatPresenter, M extends Ba
         if (promotionDataBean == null || fragmentContainer == null) {
             return;
         }
-        NcovPromotionFragment instance = NcovPromotionFragment.instance(promotionDataBean, new C1700c(fragmentContainer));
+        NcovPromotionFragment instance = NcovPromotionFragment.instance(promotionDataBean, new c(fragmentContainer));
         this.mFragment = instance;
         showFragment(instance, fragmentContainer);
     }

@@ -34,12 +34,11 @@ public class LogoutDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.view.LogoutDialog$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1470a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1470a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -55,12 +54,11 @@ public class LogoutDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.view.LogoutDialog$b */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1471b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1471b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -76,12 +74,11 @@ public class LogoutDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.view.LogoutDialog$c */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1472c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1472c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -121,9 +118,9 @@ public class LogoutDialog extends Dialog {
             ipChange.ipc$dispatch("555597297", new Object[]{this, view});
             return;
         }
-        view.findViewById(R$id.tv_cancel).setOnClickListener(new View$OnClickListenerC1470a());
-        this.b.setOnClickListener(new View$OnClickListenerC1471b());
-        this.c.setOnClickListener(new View$OnClickListenerC1472c());
+        view.findViewById(R$id.tv_cancel).setOnClickListener(new a());
+        this.b.setOnClickListener(new b());
+        this.c.setOnClickListener(new c());
     }
 
     private void d() {

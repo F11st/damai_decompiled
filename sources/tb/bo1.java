@@ -3,7 +3,6 @@ package tb;
 import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
-import cn.damai.common.user.C0529c;
 import cn.damai.trade.R$id;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -15,13 +14,12 @@ public class bo1 {
     private TextView a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.bo1$a */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC8969a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        View$OnClickListenerC8969a(bo1 bo1Var, String str) {
+        a(bo1 bo1Var, String str) {
             this.a = str;
         }
 
@@ -32,7 +30,7 @@ public class bo1 {
                 ipChange.ipc$dispatch("-1928548376", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(pp2.u().s1(this.a));
+            cn.damai.common.user.c.e().x(pp2.u().s1(this.a));
             xr.c(mo1.NOTIFY_CANCEL_SELL, "");
         }
     }
@@ -49,7 +47,7 @@ public class bo1 {
             ipChange.ipc$dispatch("-585565093", new Object[]{this, context, Boolean.valueOf(z), str});
         } else if (context != null && z) {
             this.a.setVisibility(0);
-            this.a.setOnClickListener(new View$OnClickListenerC8969a(this, str));
+            this.a.setOnClickListener(new a(this, str));
         } else {
             this.a.setVisibility(8);
         }

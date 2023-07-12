@@ -59,9 +59,8 @@ public class FilterModel implements FloatListener, BtnInfoProvider, RequestParam
     public final CategoryDataAssembler mCatAssembler = new CategoryDataAssembler();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.projectfilter.model.FilterModel$a */
     /* loaded from: classes15.dex */
-    static /* synthetic */ class C1518a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -106,11 +105,11 @@ public class FilterModel implements FloatListener, BtnInfoProvider, RequestParam
         if (cb2.d(list)) {
             return null;
         }
-        List<FilterBean> a = kh0.a(list);
-        kh0.b(a, this.mCalendarBean);
-        kh0.c(a, this.mFilterMap, this.mGroupKeyInFilterBtn);
-        kh0.d(a, this.mFastGroupIdSelected);
-        return a;
+        List<FilterBean> a2 = kh0.a(list);
+        kh0.b(a2, this.mCalendarBean);
+        kh0.c(a2, this.mFilterMap, this.mGroupKeyInFilterBtn);
+        kh0.d(a2, this.mFastGroupIdSelected);
+        return a2;
     }
 
     private void createRequestParams() {
@@ -225,7 +224,7 @@ public class FilterModel implements FloatListener, BtnInfoProvider, RequestParam
         if (AndroidInstantRuntime.support(ipChange, "1485732380")) {
             return (rd) ipChange.ipc$dispatch("1485732380", new Object[]{this, type});
         }
-        switch (C1518a.a[type.ordinal()]) {
+        switch (a.a[type.ordinal()]) {
             case 1:
                 return rd.i(this.mSortBean, this.mBeanList);
             case 2:
@@ -385,7 +384,7 @@ public class FilterModel implements FloatListener, BtnInfoProvider, RequestParam
             ipChange.ipc$dispatch("-1602762114", new Object[]{this, type, filterData});
             return;
         }
-        switch (C1518a.a[type.ordinal()]) {
+        switch (a.a[type.ordinal()]) {
             case 1:
                 this.mSortBean = filterData.mSortBean;
                 break;

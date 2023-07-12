@@ -16,7 +16,7 @@ import com.youku.resource.widget.YKImageLayout;
 import com.youku.resource.widget.YKImageView;
 import com.youku.resource.widget.YKLayout;
 import java.util.ArrayList;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -94,7 +94,7 @@ public class PerformanceActivity extends FragmentActivity {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            return new ImageViewHolder(View.inflate(this.context, R.C8074layout.resource3_item_three_program_view, null));
+            return new ImageViewHolder(View.inflate(this.context, R.layout.resource3_item_three_program_view, null));
         }
 
         public void setDemoInfos(ArrayList<DemoInfo> arrayList) {
@@ -174,7 +174,7 @@ public class PerformanceActivity extends FragmentActivity {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            return new ImageViewHolder(View.inflate(this.context, R.C8074layout.resource_item_three_program_view, null));
+            return new ImageViewHolder(View.inflate(this.context, R.layout.resource_item_three_program_view, null));
         }
 
         public void setDemoInfos(ArrayList<DemoInfo> arrayList) {
@@ -229,7 +229,7 @@ public class PerformanceActivity extends FragmentActivity {
     }
 
     public static int getWidth(Context context) {
-        return ((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getWidth();
+        return ((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getWidth();
     }
 
     private void initAdapter() {
@@ -384,7 +384,7 @@ public class PerformanceActivity extends FragmentActivity {
         getActionBar().hide();
         super.onCreate(null);
         setTitle("");
-        setContentView(R.C8074layout.activity_performance);
+        setContentView(R.layout.activity_performance);
         this.custom_title = (TextView) findViewById(R.id.custom_title);
         this.mRecyclerview = (RecyclerView) findViewById(R.id.resource_recyclerview);
         this.per_time = (TextView) findViewById(R.id.per_time);

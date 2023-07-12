@@ -16,7 +16,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
@@ -59,25 +58,24 @@ public class FissionUpgradeContentView extends ConstraintLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.view.FissionUpgradeContentView$a */
     /* loaded from: classes4.dex */
-    public class C0709a implements DMImageCreator.DMImageFailListener {
+    public class a implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FissionInfoBean a;
         final /* synthetic */ FissionParam b;
         final /* synthetic */ String c;
 
-        C0709a(FissionInfoBean fissionInfoBean, FissionParam fissionParam, String str) {
+        a(FissionInfoBean fissionInfoBean, FissionParam fissionParam, String str) {
             this.a = fissionInfoBean;
             this.b = fissionParam;
             this.c = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "196518549")) {
-                ipChange.ipc$dispatch("196518549", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("196518549", new Object[]{this, dVar});
                 return;
             }
             FissionUpgradeContentView.this.bgDefault();
@@ -86,28 +84,27 @@ public class FissionUpgradeContentView extends ConstraintLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.view.FissionUpgradeContentView$b */
     /* loaded from: classes4.dex */
-    public class C0710b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FissionInfoBean a;
         final /* synthetic */ FissionParam b;
         final /* synthetic */ String c;
 
-        C0710b(FissionInfoBean fissionInfoBean, FissionParam fissionParam, String str) {
+        b(FissionInfoBean fissionInfoBean, FissionParam fissionParam, String str) {
             this.a = fissionInfoBean;
             this.b = fissionParam;
             this.c = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1993969770")) {
-                ipChange.ipc$dispatch("1993969770", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("1993969770", new Object[]{this, eVar});
                 return;
             }
-            Bitmap bitmap = c0502e.b;
+            Bitmap bitmap = eVar.b;
             if (bitmap == null) {
                 FissionUpgradeContentView.this.bgDefault();
             } else {
@@ -123,25 +120,24 @@ public class FissionUpgradeContentView extends ConstraintLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.view.FissionUpgradeContentView$c */
     /* loaded from: classes4.dex */
-    public class C0711c implements DMImageCreator.DMImageFailListener {
+    public class c implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FissionInfoBean a;
         final /* synthetic */ FissionParam b;
         final /* synthetic */ String c;
 
-        C0711c(FissionInfoBean fissionInfoBean, FissionParam fissionParam, String str) {
+        c(FissionInfoBean fissionInfoBean, FissionParam fissionParam, String str) {
             this.a = fissionInfoBean;
             this.b = fissionParam;
             this.c = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-2136874089")) {
-                ipChange.ipc$dispatch("-2136874089", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-2136874089", new Object[]{this, dVar});
                 return;
             }
             FissionUpgradeContentView fissionUpgradeContentView = FissionUpgradeContentView.this;
@@ -150,28 +146,27 @@ public class FissionUpgradeContentView extends ConstraintLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.view.FissionUpgradeContentView$d */
     /* loaded from: classes4.dex */
-    public class C0712d implements DMImageCreator.DMImageSuccListener {
+    public class d implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FissionInfoBean a;
         final /* synthetic */ FissionParam b;
         final /* synthetic */ String c;
 
-        C0712d(FissionInfoBean fissionInfoBean, FissionParam fissionParam, String str) {
+        d(FissionInfoBean fissionInfoBean, FissionParam fissionParam, String str) {
             this.a = fissionInfoBean;
             this.b = fissionParam;
             this.c = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "777816044")) {
-                ipChange.ipc$dispatch("777816044", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("777816044", new Object[]{this, eVar});
                 return;
             }
-            Bitmap bitmap = c0502e.b;
+            Bitmap bitmap = eVar.b;
             if (bitmap == null) {
                 FissionUpgradeContentView.this.projectImage.setImageResource(R$drawable.uikit_default_image_rightangle_bg_grey);
             } else {
@@ -182,25 +177,24 @@ public class FissionUpgradeContentView extends ConstraintLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.view.FissionUpgradeContentView$e */
     /* loaded from: classes4.dex */
-    public class C0713e implements DMImageCreator.DMImageFailListener {
+    public class e implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FissionInfoBean a;
         final /* synthetic */ FissionParam b;
         final /* synthetic */ String c;
 
-        C0713e(FissionInfoBean fissionInfoBean, FissionParam fissionParam, String str) {
+        e(FissionInfoBean fissionInfoBean, FissionParam fissionParam, String str) {
             this.a = fissionInfoBean;
             this.b = fissionParam;
             this.c = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-175299431")) {
-                ipChange.ipc$dispatch("-175299431", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-175299431", new Object[]{this, dVar});
                 return;
             }
             FissionUpgradeContentView fissionUpgradeContentView = FissionUpgradeContentView.this;
@@ -209,28 +203,27 @@ public class FissionUpgradeContentView extends ConstraintLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.view.FissionUpgradeContentView$f */
     /* loaded from: classes4.dex */
-    public class C0714f implements DMImageCreator.DMImageSuccListener {
+    public class f implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FissionInfoBean a;
         final /* synthetic */ FissionParam b;
         final /* synthetic */ String c;
 
-        C0714f(FissionInfoBean fissionInfoBean, FissionParam fissionParam, String str) {
+        f(FissionInfoBean fissionInfoBean, FissionParam fissionParam, String str) {
             this.a = fissionInfoBean;
             this.b = fissionParam;
             this.c = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-438337682")) {
-                ipChange.ipc$dispatch("-438337682", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("-438337682", new Object[]{this, eVar});
                 return;
             }
-            Bitmap bitmap = c0502e.b;
+            Bitmap bitmap = eVar.b;
             if (bitmap == null) {
                 FissionUpgradeContentView.this.userImage.setImageResource(R$drawable.uikit_user_default_icon);
             } else {
@@ -280,10 +273,10 @@ public class FissionUpgradeContentView extends ConstraintLayout {
             ipChange.ipc$dispatch("301982390", new Object[]{this, Integer.valueOf(i), str});
             return;
         }
-        int a = t60.a(this.context, i);
+        int a2 = t60.a(this.context, i);
         this.fission_upgrade_qrcode.setVisibility(0);
         Bitmap decodeResource = BitmapFactory.decodeResource(this.context.getResources(), R$drawable.damai_small_logo);
-        this.fission_upgrade_qrcode.setImageBitmap(QrcodeUtil.b(a, GenerateImageUtil.SHARE_URL + URLEncoder.encode(str), decodeResource));
+        this.fission_upgrade_qrcode.setImageBitmap(QrcodeUtil.b(a2, GenerateImageUtil.SHARE_URL + URLEncoder.encode(str), decodeResource));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -361,15 +354,15 @@ public class FissionUpgradeContentView extends ConstraintLayout {
             ipChange.ipc$dispatch("573696515", new Object[]{this, fissionInfoBean, fissionParam, str});
         } else if (fissionInfoBean == null || fissionParam == null) {
         } else {
-            C0504a.b().h(this.context).c(fissionInfoBean.shareInfo.bgImageUrl).n(new C0710b(fissionInfoBean, fissionParam, str)).e(new C0709a(fissionInfoBean, fissionParam, str)).f();
-            int a = DisplayMetrics.getwidthPixels(t60.b(this.context)) - (t60.a(this.context, this.margin) * 2);
+            cn.damai.common.image.a.b().h(this.context).c(fissionInfoBean.shareInfo.bgImageUrl).n(new b(fissionInfoBean, fissionParam, str)).e(new a(fissionInfoBean, fissionParam, str)).f();
+            int a2 = DisplayMetrics.getwidthPixels(t60.b(this.context)) - (t60.a(this.context, this.margin) * 2);
             ConstraintLayout.LayoutParams layoutParams = (ConstraintLayout.LayoutParams) this.projectImage.getLayoutParams();
-            ((ViewGroup.MarginLayoutParams) layoutParams).width = a;
-            ((ViewGroup.MarginLayoutParams) layoutParams).height = (a * 4) / 3;
-            C0504a.b().h(this.context).c(fissionParam.imageUrl).n(new C0712d(fissionInfoBean, fissionParam, str)).e(new C0711c(fissionInfoBean, fissionParam, str)).f();
+            ((ViewGroup.MarginLayoutParams) layoutParams).width = a2;
+            ((ViewGroup.MarginLayoutParams) layoutParams).height = (a2 * 4) / 3;
+            cn.damai.common.image.a.b().h(this.context).c(fissionParam.imageUrl).n(new d(fissionInfoBean, fissionParam, str)).e(new c(fissionInfoBean, fissionParam, str)).f();
             FissionInfoBean.UserInfo userInfo = fissionInfoBean.userInfo;
             if (userInfo != null && !TextUtils.isEmpty(userInfo.portraitUrl)) {
-                C0504a.b().h(this.context).c(fissionInfoBean.userInfo.portraitUrl).n(new C0714f(fissionInfoBean, fissionParam, str)).e(new C0713e(fissionInfoBean, fissionParam, str)).f();
+                cn.damai.common.image.a.b().h(this.context).c(fissionInfoBean.userInfo.portraitUrl).n(new f(fissionInfoBean, fissionParam, str)).e(new e(fissionInfoBean, fissionParam, str)).f();
             } else {
                 setBgAndView(this.userImage, R$drawable.uikit_user_default_icon, fissionInfoBean, fissionParam, str);
             }

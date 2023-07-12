@@ -95,7 +95,7 @@ public class Chip extends AppCompatCheckBox implements ChipDrawable.Delegate, Sh
     private RippleDrawable ripple;
     @NonNull
     private final ChipTouchHelper touchHelper;
-    private static final int DEF_STYLE_RES = R.C4819style.Widget_MaterialComponents_Chip_Action;
+    private static final int DEF_STYLE_RES = R.style.Widget_MaterialComponents_Chip_Action;
     private static final Rect EMPTY_BOUNDS = new Rect();
     private static final int[] SELECTED_STATE = {16842913};
     private static final int[] CHECKABLE_STATE_SET = {16842911};

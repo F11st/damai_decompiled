@@ -20,50 +20,50 @@ import tb.ls0;
 public final class GXExtensionDynamicProperty implements GXRegisterCenter.GXIExtensionDynamicProperty {
     @Override // com.alibaba.gaiax.GXRegisterCenter.GXIExtensionDynamicProperty
     @Nullable
-    public Object convert(@NotNull GXRegisterCenter.GXIExtensionDynamicProperty.C3331a c3331a) {
+    public Object convert(@NotNull GXRegisterCenter.GXIExtensionDynamicProperty.a aVar) {
         hs0 A;
         boolean J;
         hs0 A2;
         boolean J2;
-        b41.i(c3331a, "params");
-        if (b41.d(c3331a.c(), "scroll-compute-container-height")) {
-            if (b41.d(c3331a.d(), Boolean.FALSE)) {
+        b41.i(aVar, "params");
+        if (b41.d(aVar.c(), "scroll-compute-container-height")) {
+            if (b41.d(aVar.d(), Boolean.FALSE)) {
                 return Boolean.TRUE;
             }
-        } else if (b41.d(c3331a.c(), "grid-compute-container-height")) {
-            er0 b = c3331a.b();
+        } else if (b41.d(aVar.c(), "grid-compute-container-height")) {
+            er0 b = aVar.b();
             boolean z = false;
             if (b != null && !b.k()) {
                 z = true;
             }
-            if (z && b41.d(c3331a.d(), Boolean.FALSE)) {
+            if (z && b41.d(aVar.d(), Boolean.FALSE)) {
                 return Boolean.TRUE;
             }
-        } else if (!b41.d(c3331a.c(), "size") && !b41.d(c3331a.c(), "min-size") && !b41.d(c3331a.c(), "max-size")) {
-            if (b41.d(c3331a.c(), "line-height")) {
-                ls0 a = c3331a.a();
+        } else if (!b41.d(aVar.c(), "size") && !b41.d(aVar.c(), "min-size") && !b41.d(aVar.c(), "max-size")) {
+            if (b41.d(aVar.c(), "line-height")) {
+                ls0 a = aVar.a();
                 J2 = CollectionsKt___CollectionsKt.J(GXExtensionSize.Companion.getProcessSizes(), (a == null || (A2 = a.A()) == null) ? null : A2.a());
                 if (J2) {
                     IProxyFeatures features = GaiaXProxy.Companion.getInstance().getFeatures();
                     Float valueOf = features == null ? null : Float.valueOf(features.largeFontScale());
                     if (valueOf != null) {
-                        return Float.valueOf(((Float) c3331a.d()).floatValue() * valueOf.floatValue());
+                        return Float.valueOf(((Float) aVar.d()).floatValue() * valueOf.floatValue());
                     }
                 }
             }
         } else {
-            ld2 ld2Var = (ld2) c3331a.d();
-            ls0 a2 = c3331a.a();
+            ld2 ld2Var = (ld2) aVar.d();
+            ls0 a2 = aVar.a();
             J = CollectionsKt___CollectionsKt.J(GXExtensionSize.Companion.getProcessSizes(), (a2 == null || (A = a2.A()) == null) ? null : A.a());
             if (J) {
                 IProxyFeatures features2 = GaiaXProxy.Companion.getInstance().getFeatures();
                 Float valueOf2 = features2 == null ? null : Float.valueOf(features2.largeFontScale());
                 if (valueOf2 != null) {
                     k80 k80Var = (k80) ld2Var.a();
-                    if (k80Var instanceof k80.C9339c) {
-                        ld2Var.c(new k80.C9339c(((k80.C9339c) k80Var).c() * valueOf2.floatValue()));
+                    if (k80Var instanceof k80.c) {
+                        ld2Var.c(new k80.c(((k80.c) k80Var).c() * valueOf2.floatValue()));
                     }
-                    return c3331a.d();
+                    return aVar.d();
                 }
             }
         }

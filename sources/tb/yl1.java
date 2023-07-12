@@ -16,9 +16,8 @@ import java.util.Locale;
 public class yl1 implements Processor<ApkUpdateContext> {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yl1$a */
     /* loaded from: classes11.dex */
-    public static class C9992a {
+    public static class a {
         private static String a(String str) {
             if (TextUtils.isEmpty(str)) {
                 return "";
@@ -70,10 +69,10 @@ public class yl1 implements Processor<ApkUpdateContext> {
             apkUpdateContext.errorCode = -53;
         } else if (apkUpdateContext.background && !apkUpdateContext.isForceUpdate()) {
             MainUpdateData mainUpdateData = apkUpdateContext.mainUpdate;
-            int i = C9992a.get(mainUpdateData.version);
+            int i = a.get(mainUpdateData.version);
             int i2 = mainUpdateData.remindCount;
             if (i2 > 0 && i < i2) {
-                C9992a.update(mainUpdateData.version, i2);
+                a.update(mainUpdateData.version, i2);
                 return;
             }
             apkUpdateContext.success = false;

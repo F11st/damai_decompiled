@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import androidx.fragment.app.FragmentActivity;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.player.base.IVideoController;
 import cn.damai.player.base.IVideoPlayer;
@@ -327,7 +327,7 @@ public class DMVideoPlayerMuteOnlyBottomView extends FrameLayout implements View
             return;
         }
         if (this.mDataHolder.e() != null && !TextUtils.isEmpty(this.mDataHolder.e().getPicUrl())) {
-            C0504a.b().c(this.mDataHolder.e().getPicUrl()).c(R$color.color_111111).g(this.mCoverImg);
+            a.b().c(this.mDataHolder.e().getPicUrl()).c(R$color.color_111111).g(this.mCoverImg);
         }
         this.mVid = this.mDataHolder.e().getVid();
     }
@@ -347,7 +347,7 @@ public class DMVideoPlayerMuteOnlyBottomView extends FrameLayout implements View
             ipChange.ipc$dispatch("2101275172", new Object[]{this, str});
         } else if (wh2.j(str)) {
         } else {
-            C0504a.b().c(str).g(this.mCoverImg);
+            a.b().c(str).g(this.mCoverImg);
         }
     }
 

@@ -19,11 +19,11 @@ import tb.nm1;
 @GwtCompatible
 /* loaded from: classes10.dex */
 public final class Tables {
-    private static final Function<? extends Map<?, ?>, ? extends Map<?, ?>> a = new C5129a();
+    private static final Function<? extends Map<?, ?>, ? extends Map<?, ?>> a = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
-    static final class ImmutableCell<R, C, V> extends AbstractC5130b<R, C, V> implements Serializable {
+    static final class ImmutableCell<R, C, V> extends b<R, C, V> implements Serializable {
         private static final long serialVersionUID = 0;
         @NullableDecl
         private final C columnKey;
@@ -63,18 +63,18 @@ public final class Tables {
             super(rowSortedTable);
         }
 
-        @Override // com.google.common.collect.Tables.UnmodifiableTable, com.google.common.collect.AbstractC5210y, com.google.common.collect.Table
+        @Override // com.google.common.collect.Tables.UnmodifiableTable, com.google.common.collect.y, com.google.common.collect.Table
         public SortedSet<R> rowKeySet() {
             return Collections.unmodifiableSortedSet(delegate().rowKeySet());
         }
 
-        @Override // com.google.common.collect.Tables.UnmodifiableTable, com.google.common.collect.AbstractC5210y, com.google.common.collect.Table
+        @Override // com.google.common.collect.Tables.UnmodifiableTable, com.google.common.collect.y, com.google.common.collect.Table
         public SortedMap<R, Map<C, V>> rowMap() {
             return Collections.unmodifiableSortedMap(Maps.E(delegate().rowMap(), Tables.a()));
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.google.common.collect.Tables.UnmodifiableTable, com.google.common.collect.AbstractC5210y, com.google.common.collect.AbstractC5205t
+        @Override // com.google.common.collect.Tables.UnmodifiableTable, com.google.common.collect.y, com.google.common.collect.t
         public RowSortedTable<R, C, V> delegate() {
             return (RowSortedTable) super.delegate();
         }
@@ -83,7 +83,7 @@ public final class Tables {
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
-    public static class UnmodifiableTable<R, C, V> extends AbstractC5210y<R, C, V> implements Serializable {
+    public static class UnmodifiableTable<R, C, V> extends y<R, C, V> implements Serializable {
         private static final long serialVersionUID = 0;
         final Table<? extends R, ? extends C, ? extends V> delegate;
 
@@ -91,78 +91,77 @@ public final class Tables {
             this.delegate = (Table) du1.p(table);
         }
 
-        @Override // com.google.common.collect.AbstractC5210y, com.google.common.collect.Table
+        @Override // com.google.common.collect.y, com.google.common.collect.Table
         public Set<Table.Cell<R, C, V>> cellSet() {
             return Collections.unmodifiableSet(super.cellSet());
         }
 
-        @Override // com.google.common.collect.AbstractC5210y, com.google.common.collect.Table
+        @Override // com.google.common.collect.y, com.google.common.collect.Table
         public void clear() {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5210y, com.google.common.collect.Table
+        @Override // com.google.common.collect.y, com.google.common.collect.Table
         public Map<R, V> column(@NullableDecl C c) {
             return Collections.unmodifiableMap(super.column(c));
         }
 
-        @Override // com.google.common.collect.AbstractC5210y, com.google.common.collect.Table
+        @Override // com.google.common.collect.y, com.google.common.collect.Table
         public Set<C> columnKeySet() {
             return Collections.unmodifiableSet(super.columnKeySet());
         }
 
-        @Override // com.google.common.collect.AbstractC5210y, com.google.common.collect.Table
+        @Override // com.google.common.collect.y, com.google.common.collect.Table
         public Map<C, Map<R, V>> columnMap() {
             return Collections.unmodifiableMap(Maps.D(super.columnMap(), Tables.a()));
         }
 
-        @Override // com.google.common.collect.AbstractC5210y, com.google.common.collect.Table
+        @Override // com.google.common.collect.y, com.google.common.collect.Table
         public V put(@NullableDecl R r, @NullableDecl C c, @NullableDecl V v) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5210y, com.google.common.collect.Table
+        @Override // com.google.common.collect.y, com.google.common.collect.Table
         public void putAll(Table<? extends R, ? extends C, ? extends V> table) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5210y, com.google.common.collect.Table
+        @Override // com.google.common.collect.y, com.google.common.collect.Table
         public V remove(@NullableDecl Object obj, @NullableDecl Object obj2) {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5210y, com.google.common.collect.Table
+        @Override // com.google.common.collect.y, com.google.common.collect.Table
         public Map<C, V> row(@NullableDecl R r) {
             return Collections.unmodifiableMap(super.row(r));
         }
 
-        @Override // com.google.common.collect.AbstractC5210y, com.google.common.collect.Table
+        @Override // com.google.common.collect.y, com.google.common.collect.Table
         public Set<R> rowKeySet() {
             return Collections.unmodifiableSet(super.rowKeySet());
         }
 
-        @Override // com.google.common.collect.AbstractC5210y, com.google.common.collect.Table
+        @Override // com.google.common.collect.y, com.google.common.collect.Table
         public Map<R, Map<C, V>> rowMap() {
             return Collections.unmodifiableMap(Maps.D(super.rowMap(), Tables.a()));
         }
 
-        @Override // com.google.common.collect.AbstractC5210y, com.google.common.collect.Table
+        @Override // com.google.common.collect.y, com.google.common.collect.Table
         public Collection<V> values() {
             return Collections.unmodifiableCollection(super.values());
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.google.common.collect.AbstractC5210y, com.google.common.collect.AbstractC5205t
+        @Override // com.google.common.collect.y, com.google.common.collect.t
         public Table<R, C, V> delegate() {
             return (Table<? extends R, ? extends C, ? extends V>) this.delegate;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Tables$a */
     /* loaded from: classes10.dex */
-    static class C5129a implements Function<Map<Object, Object>, Map<Object, Object>> {
-        C5129a() {
+    static class a implements Function<Map<Object, Object>, Map<Object, Object>> {
+        a() {
         }
 
         @Override // com.google.common.base.Function
@@ -173,9 +172,8 @@ public final class Tables {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Tables$b */
     /* loaded from: classes10.dex */
-    static abstract class AbstractC5130b<R, C, V> implements Table.Cell<R, C, V> {
+    static abstract class b<R, C, V> implements Table.Cell<R, C, V> {
         @Override // com.google.common.collect.Table.Cell
         public boolean equals(Object obj) {
             if (obj == this) {

@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -37,7 +37,7 @@ public final class ObservableBufferBoundary<T, U extends Collection<? super T>, 
         volatile boolean cancelled;
         volatile boolean done;
         long index;
-        final SpscLinkedArrayQueue<C> queue = new SpscLinkedArrayQueue<>(AbstractC8149d.bufferSize());
+        final SpscLinkedArrayQueue<C> queue = new SpscLinkedArrayQueue<>(d.bufferSize());
         final jm observers = new jm();
         final AtomicReference<Disposable> upstream = new AtomicReference<>();
         Map<Long, C> buffers = new LinkedHashMap();
@@ -327,7 +327,7 @@ public final class ObservableBufferBoundary<T, U extends Collection<? super T>, 
         this.bufferSupplier = callable;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super U> observer) {
         BufferBoundaryObserver bufferBoundaryObserver = new BufferBoundaryObserver(observer, this.bufferOpen, this.bufferClose, this.bufferSupplier);
         observer.onSubscribe(bufferBoundaryObserver);

@@ -1,11 +1,11 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
-import io.reactivex.AbstractC8152e;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.SingleObserver;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.functions.Predicate;
 import io.reactivex.internal.fuseable.FuseToFlowable;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
@@ -15,9 +15,9 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableAnySingle<T> extends AbstractC8152e<Boolean> implements FuseToFlowable<Boolean> {
+public final class FlowableAnySingle<T> extends e<Boolean> implements FuseToFlowable<Boolean> {
     final Predicate<? super T> predicate;
-    final AbstractC8147b<T> source;
+    final b<T> source;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -94,17 +94,17 @@ public final class FlowableAnySingle<T> extends AbstractC8152e<Boolean> implemen
         }
     }
 
-    public FlowableAnySingle(AbstractC8147b<T> abstractC8147b, Predicate<? super T> predicate) {
-        this.source = abstractC8147b;
+    public FlowableAnySingle(b<T> bVar, Predicate<? super T> predicate) {
+        this.source = bVar;
         this.predicate = predicate;
     }
 
     @Override // io.reactivex.internal.fuseable.FuseToFlowable
-    public AbstractC8147b<Boolean> fuseToFlowable() {
+    public b<Boolean> fuseToFlowable() {
         return i42.l(new FlowableAny(this.source, this.predicate));
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super Boolean> singleObserver) {
         this.source.subscribe((FlowableSubscriber) new AnySubscriber(singleObserver, this.predicate));
     }

@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import androidx.fragment.app.FragmentActivity;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.player.base.IVideoPlayer;
 import cn.damai.player.listener.OnPlayerUTReportListener;
 import cn.damai.uikit.iconfont.DMIconFontTextView;
@@ -241,7 +241,7 @@ public class DMVideoPlayerHomeBottomView extends FrameLayout implements View.OnC
             return;
         }
         if (this.mDataHolder.e() != null && !TextUtils.isEmpty(this.mDataHolder.e().getPicUrl())) {
-            C0504a.b().c(this.mDataHolder.e().getPicUrl()).c(R$color.color_111111).g(this.mCoverImg);
+            a.b().c(this.mDataHolder.e().getPicUrl()).c(R$color.color_111111).g(this.mCoverImg);
         }
         this.mVid = this.mDataHolder.e().getVid();
     }

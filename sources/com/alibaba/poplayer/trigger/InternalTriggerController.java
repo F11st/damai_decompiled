@@ -11,8 +11,7 @@ import android.text.TextUtils;
 import android.view.View;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import com.alibaba.poplayer.PopLayer;
-import com.alibaba.poplayer.layermanager.C3660e;
-import com.alibaba.poplayer.trigger.view.C3699d;
+import com.alibaba.poplayer.layermanager.e;
 import com.alibaba.poplayer.utils.Monitor;
 import java.lang.ref.WeakReference;
 import tb.d7;
@@ -77,17 +76,17 @@ public class InternalTriggerController implements Application.ActivityLifecycleC
                     d7.A().x(stringExtra, stringExtra2);
                 } else if (stringExtra.startsWith(gq1.PAGE_SCHEME)) {
                     gq1.A().x(stringExtra, stringExtra2);
-                } else if (stringExtra.startsWith(C3699d.VIEW_SCHEME)) {
-                    C3699d.M().C(stringExtra, stringExtra2);
+                } else if (stringExtra.startsWith(com.alibaba.poplayer.trigger.view.d.VIEW_SCHEME)) {
+                    com.alibaba.poplayer.trigger.view.d.M().C(stringExtra, stringExtra2);
                 } else {
                     if (!TextUtils.isEmpty(stringExtra3) && stringExtra3.contains("clean")) {
                         d7.A().n(InternalTriggerController.this.c(), InternalTriggerController.b(InternalTriggerController.this.c()));
                         gq1.A().n(InternalTriggerController.this.c(), InternalTriggerController.b(InternalTriggerController.this.c()));
-                        C3699d.M().n(InternalTriggerController.this.c(), InternalTriggerController.b(InternalTriggerController.this.c()));
+                        com.alibaba.poplayer.trigger.view.d.M().n(InternalTriggerController.this.c(), InternalTriggerController.b(InternalTriggerController.this.c()));
                     }
                     d7.A().x(stringExtra, stringExtra2);
                     gq1.A().x(stringExtra, stringExtra2);
-                    C3699d.M().C(stringExtra, stringExtra2);
+                    com.alibaba.poplayer.trigger.view.d.M().C(stringExtra, stringExtra2);
                 }
             } catch (Throwable th) {
                 dt1.c("InternalBroadcastReceiver.onReceive.fail", th);
@@ -102,7 +101,7 @@ public class InternalTriggerController implements Application.ActivityLifecycleC
     }
 
     public static View a(Activity activity) {
-        if (C3660e.i && activity.isChild() && (activity.getParent() instanceof Activity)) {
+        if (e.i && activity.isChild() && (activity.getParent() instanceof Activity)) {
             activity = activity.getParent();
         }
         return activity.getWindow().findViewById(16908290);
@@ -113,7 +112,7 @@ public class InternalTriggerController implements Application.ActivityLifecycleC
             return "";
         }
         String obj = activity.toString();
-        return (C3660e.i && activity.isChild() && (activity.getParent() instanceof Activity)) ? activity.getParent().toString() : obj;
+        return (e.i && activity.isChild() && (activity.getParent() instanceof Activity)) ? activity.getParent().toString() : obj;
     }
 
     private boolean d(Activity activity) {
@@ -147,11 +146,11 @@ public class InternalTriggerController implements Application.ActivityLifecycleC
                 }
                 d7.A().o();
                 gq1.A().o();
-                C3699d.M().o();
+                com.alibaba.poplayer.trigger.view.d.M().o();
             } else if (PopLayer.getReference().isValidActivity(activity)) {
                 if (activity2 != null) {
                     gq1.A().n(activity2, b(activity2));
-                    C3699d.M().n(activity2, b(activity2));
+                    com.alibaba.poplayer.trigger.view.d.M().n(activity2, b(activity2));
                     d7.A().n(activity2, b(activity2));
                 }
                 this.a = new WeakReference<>(activity);
@@ -165,16 +164,16 @@ public class InternalTriggerController implements Application.ActivityLifecycleC
                 }
                 PopLayer.getReference().internalNotifyNativeUrlChanged(str2);
                 String b = b(activity);
-                C3660e.f().k(activity, b);
+                e.f().k(activity, b);
                 d7.A().u(activity, name, str2, b);
                 gq1.A().u(activity, name, str2, b);
-                C3699d.M().u(activity, name, str2, b);
+                com.alibaba.poplayer.trigger.view.d.M().u(activity, name, str2, b);
                 if (e) {
                     return;
                 }
                 d7.A().D();
                 gq1.A().B();
-                C3699d.M().O();
+                com.alibaba.poplayer.trigger.view.d.M().O();
                 dt1.b("EventManager.onActivityOrFragmentResumed.posttoService{uri:%s,param:%s}", name, str2);
             }
         } catch (Throwable th) {
@@ -220,8 +219,8 @@ public class InternalTriggerController implements Application.ActivityLifecycleC
             dt1.b("EventManager.onActivityPaused.activity{%s}", activity.getClass().getName());
             d7.A().s();
             gq1.A().s();
-            C3699d.M().s();
-            C3699d.M().l(activity);
+            com.alibaba.poplayer.trigger.view.d.M().s();
+            com.alibaba.poplayer.trigger.view.d.M().l(activity);
             gq1.A().l(activity);
             d7.A().l(activity);
         } catch (Throwable th) {
@@ -233,7 +232,7 @@ public class InternalTriggerController implements Application.ActivityLifecycleC
     public void onActivityResumed(Activity activity) {
         try {
             f(activity, null, null, true);
-            C3699d.M().m(activity);
+            com.alibaba.poplayer.trigger.view.d.M().m(activity);
             gq1.A().m(activity);
             d7.A().m(activity);
             if (this.b) {

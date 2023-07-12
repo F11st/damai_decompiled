@@ -24,7 +24,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-import kotlin.collections.C8214m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.og1;
@@ -43,9 +42,8 @@ public final class sg1 {
     private static final Paint a = new Paint(6);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.sg1$a  reason: invalid class name */
     /* loaded from: classes7.dex */
-    public static final class locksLockC9693a implements Lock {
+    public static final class a implements Lock {
         private static transient /* synthetic */ IpChange $ipChange;
 
         @Override // java.util.concurrent.locks.Lock
@@ -105,10 +103,10 @@ public final class sg1 {
     static {
         List j;
         new Paint(7);
-        j = C8214m.j("XT1085", "XT1092", "XT1093", "XT1094", "XT1095", "XT1096", "XT1097", "XT1098", "XT1031", "XT1028", "XT937C", "XT1032", "XT1008", "XT1033", "XT1035", "XT1034", "XT939G", "XT1039", "XT1040", "XT1042", "XT1045", "XT1063", "XT1064", "XT1068", "XT1069", "XT1072", "XT1077", "XT1078", "XT1079");
+        j = kotlin.collections.m.j("XT1085", "XT1092", "XT1093", "XT1094", "XT1095", "XT1096", "XT1097", "XT1098", "XT1031", "XT1028", "XT937C", "XT1032", "XT1008", "XT1033", "XT1035", "XT1034", "XT939G", "XT1039", "XT1040", "XT1042", "XT1045", "XT1063", "XT1064", "XT1068", "XT1069", "XT1072", "XT1077", "XT1078", "XT1079");
         HashSet hashSet = new HashSet(j);
         c = hashSet;
-        d = hashSet.contains(Build.getMODEL()) ? new ReentrantLock() : new locksLockC9693a();
+        d = hashSet.contains(Build.getMODEL()) ? new ReentrantLock() : new a();
         Paint paint = new Paint(7);
         b = paint;
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
@@ -159,19 +157,19 @@ public final class sg1 {
     }
 
     @Nullable
-    public final Bitmap b(@NotNull BitmapProcessor.BitmapSupplier bitmapSupplier, @Nullable Bitmap bitmap, @Nullable og1.C9521a c9521a) {
+    public final Bitmap b(@NotNull BitmapProcessor.BitmapSupplier bitmapSupplier, @Nullable Bitmap bitmap, @Nullable og1.a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1898148273")) {
-            return (Bitmap) ipChange.ipc$dispatch("-1898148273", new Object[]{this, bitmapSupplier, bitmap, c9521a});
+            return (Bitmap) ipChange.ipc$dispatch("-1898148273", new Object[]{this, bitmapSupplier, bitmap, aVar});
         }
         b41.i(bitmapSupplier, "bitmapSupplier");
-        if (bitmap == null || c9521a == null) {
+        if (bitmap == null || aVar == null) {
             return null;
         }
-        float[] d2 = c9521a.d();
-        float c2 = c9521a.c();
-        int a2 = c9521a.a();
-        int b2 = c9521a.b();
+        float[] d2 = aVar.d();
+        float c2 = aVar.c();
+        int a2 = aVar.a();
+        int b2 = aVar.b();
         Bitmap bitmap2 = bitmapSupplier.get(bitmap.getWidth(), bitmap.getHeight(), Bitmap.Config.ARGB_8888);
         if (bitmap2 == null) {
             bitmap2 = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), Bitmap.Config.ARGB_8888);
@@ -196,7 +194,7 @@ public final class sg1 {
             }
             paint.setAntiAlias(true);
             Path path = new Path();
-            if (c9521a.f()) {
+            if (aVar.f()) {
                 path.addCircle(bitmap.getWidth() / 2.0f, bitmap.getHeight() / 2.0f, (Math.min(bitmap.getWidth(), bitmap.getHeight()) - c2) / 2, Path.Direction.CCW);
             } else {
                 float f = c2 / 2;
@@ -209,7 +207,7 @@ public final class sg1 {
         paint2.setShader(new BitmapShader(bitmap, tileMode, tileMode));
         paint2.setAntiAlias(true);
         Path path2 = new Path();
-        if (c9521a.f()) {
+        if (aVar.f()) {
             path2.addCircle(bitmap.getWidth() / 2.0f, bitmap.getHeight() / 2.0f, (Math.min(bitmap.getWidth(), bitmap.getHeight()) / 2) - c2, Path.Direction.CCW);
         } else {
             path2.addRoundRect(new RectF(c2, c2, bitmap.getWidth() - c2, bitmap.getHeight() - c2), d2, Path.Direction.CCW);

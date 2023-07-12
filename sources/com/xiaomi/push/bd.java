@@ -10,11 +10,11 @@ class bd implements Runnable {
     final /* synthetic */ IBinder a;
 
     /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ bb.ServiceConnectionC7607b f128a;
+    final /* synthetic */ bb.b f128a;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public bd(bb.ServiceConnectionC7607b serviceConnectionC7607b, IBinder iBinder) {
-        this.f128a = serviceConnectionC7607b;
+    public bd(bb.b bVar, IBinder iBinder) {
+        this.f128a = bVar;
         this.a = iBinder;
     }
 
@@ -32,12 +32,12 @@ class bd implements Runnable {
             context = bb.this.f123a;
             String packageName = context.getPackageName();
             b = bb.this.b();
-            bb.C7606a c7606a = new bb.C7606a();
-            c7606a.f127a = bb.C7608c.a(this.a, packageName, b, "GUID");
-            c7606a.b = bb.C7608c.a(this.a, packageName, b, "OUID");
-            c7606a.c = bb.C7608c.a(this.a, packageName, b, "DUID");
-            c7606a.d = bb.C7608c.a(this.a, packageName, b, "AUID");
-            bb.this.f125a = c7606a;
+            bb.a aVar = new bb.a();
+            aVar.f127a = bb.c.a(this.a, packageName, b, "GUID");
+            aVar.b = bb.c.a(this.a, packageName, b, "OUID");
+            aVar.c = bb.c.a(this.a, packageName, b, "DUID");
+            aVar.d = bb.c.a(this.a, packageName, b, "AUID");
+            bb.this.f125a = aVar;
             bb.this.m691b();
             bb.this.f122a = 2;
             obj5 = bb.this.f126a;

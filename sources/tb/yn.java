@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.TextView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.discover.content.bean.ContentTour;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -70,7 +69,7 @@ public class yn extends cp2<ContentTour.ContentTopic> {
         if (contentTopic == null) {
             return;
         }
-        C0529c.e().x(getLiveUt().H(contentTopic.name, contentTopic.id));
+        cn.damai.common.user.c.e().x(getLiveUt().H(contentTopic.name, contentTopic.id));
         Bundle bundle = new Bundle();
         bundle.putString("themeId", contentTopic.id);
         DMNav.from(this.a).withExtras(bundle).toUri(NavUri.b(cs.DISCOVER_THEME));

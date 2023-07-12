@@ -13,14 +13,13 @@ public class rh1 implements IMtopLifecycle {
     private Lock c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.rh1$b */
     /* loaded from: classes11.dex */
-    private static final class C9652b {
+    private static final class b {
         private static final rh1 a = new rh1();
     }
 
     public static rh1 a() {
-        return C9652b.a;
+        return b.a;
     }
 
     public void b(IMtopLifecycle iMtopLifecycle) {

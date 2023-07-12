@@ -14,7 +14,6 @@ import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
-import kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.kf0;
@@ -24,10 +23,9 @@ import tb.kf0;
 public class if0 extends cd2 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.if0$a */
     /* loaded from: classes3.dex */
-    class C9261a implements FunctionDescriptor.CopyBuilder<SimpleFunctionDescriptor> {
-        C9261a() {
+    class a implements FunctionDescriptor.CopyBuilder<SimpleFunctionDescriptor> {
+        a() {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:104:0x0151  */
@@ -66,7 +64,7 @@ public class if0 extends cd2 {
                 Method dump skipped, instructions count: 566
                 To view this dump change 'Code comments level' option to 'DEBUG'
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.if0.C9261a.a(int):void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.if0.a.a(int):void");
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor.CopyBuilder
@@ -222,12 +220,12 @@ public class if0 extends cd2 {
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public if0(@NotNull ClassDescriptor classDescriptor, @NotNull kf0.C9354d c9354d) {
+    public if0(@NotNull ClassDescriptor classDescriptor, @NotNull kf0.d dVar) {
         super(classDescriptor, null, Annotations.Companion.b(), ni1.i("<ERROR FUNCTION>"), CallableMemberDescriptor.Kind.DECLARATION, SourceElement.NO_SOURCE);
         if (classDescriptor == null) {
             a(0);
         }
-        if (c9354d == null) {
+        if (dVar == null) {
             a(1);
         }
     }
@@ -293,16 +291,16 @@ public class if0 extends cd2 {
         throw new IllegalStateException(format);
     }
 
-    @Override // tb.cd2, kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a
+    @Override // tb.cd2, kotlin.reflect.jvm.internal.impl.descriptors.impl.a
     @NotNull
     /* renamed from: E */
     public SimpleFunctionDescriptor e(DeclarationDescriptor declarationDescriptor, Modality modality, f70 f70Var, CallableMemberDescriptor.Kind kind, boolean z) {
         return this;
     }
 
-    @Override // tb.cd2, kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a
+    @Override // tb.cd2, kotlin.reflect.jvm.internal.impl.descriptors.impl.a
     @NotNull
-    protected AbstractC8316a f(@NotNull DeclarationDescriptor declarationDescriptor, @Nullable FunctionDescriptor functionDescriptor, @NotNull CallableMemberDescriptor.Kind kind, @Nullable ni1 ni1Var, @NotNull Annotations annotations, @NotNull SourceElement sourceElement) {
+    protected kotlin.reflect.jvm.internal.impl.descriptors.impl.a f(@NotNull DeclarationDescriptor declarationDescriptor, @Nullable FunctionDescriptor functionDescriptor, @NotNull CallableMemberDescriptor.Kind kind, @Nullable ni1 ni1Var, @NotNull Annotations annotations, @NotNull SourceElement sourceElement) {
         if (declarationDescriptor == null) {
             a(2);
         }
@@ -318,23 +316,23 @@ public class if0 extends cd2 {
         return this;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
     public <V> V getUserData(CallableDescriptor.UserDataKey<V> userDataKey) {
         return null;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor
     public boolean isSuspend() {
         return false;
     }
 
-    @Override // tb.cd2, kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor
+    @Override // tb.cd2, kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor
     @NotNull
     public FunctionDescriptor.CopyBuilder<? extends SimpleFunctionDescriptor> newCopyBuilder() {
-        return new C9261a();
+        return new a();
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor
     public void setOverriddenDescriptors(@NotNull Collection<? extends CallableMemberDescriptor> collection) {
         if (collection == null) {
             a(8);

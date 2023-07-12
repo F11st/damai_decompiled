@@ -132,25 +132,25 @@ public class cq0 implements GXRegisterCenter.GXIExtensionTemplateSource {
 
     @Override // com.alibaba.gaiax.GXRegisterCenter.GXIExtensionTemplateSource
     @Nullable
-    public ns0 getTemplate(@NotNull GXTemplateEngine.C3347i c3347i) {
-        b41.i(c3347i, "gxTemplateItem");
-        ns0 fromCache = getFromCache(c3347i.a(), c3347i.d());
+    public ns0 getTemplate(@NotNull GXTemplateEngine.i iVar) {
+        b41.i(iVar, "gxTemplateItem");
+        ns0 fromCache = getFromCache(iVar.a(), iVar.d());
         if (fromCache != null) {
             return fromCache;
         }
-        String b = c3347i.b();
+        String b = iVar.b();
         if (b.length() == 0) {
-            b = c3347i.a();
+            b = iVar.a();
         }
-        String str = b + r10.DIR + c3347i.d() + "/index.json";
-        String str2 = b + r10.DIR + c3347i.d() + "/index.css";
-        String str3 = b + r10.DIR + c3347i.d() + "/index.databinding";
+        String str = b + r10.DIR + iVar.d() + "/index.json";
+        String str2 = b + r10.DIR + iVar.d() + "/index.css";
+        String str3 = b + r10.DIR + iVar.d() + "/index.databinding";
         String readFileFromAssets = readFileFromAssets(str);
         String readFileFromAssets2 = readFileFromAssets(str2);
         String readFileFromAssets3 = readFileFromAssets(str3);
-        String readFileFromAssets4 = readFileFromAssets(b + r10.DIR + c3347i.d() + "/index.js");
+        String readFileFromAssets4 = readFileFromAssets(b + r10.DIR + iVar.d() + "/index.js");
         if (readFileFromAssets != null) {
-            ns0 ns0Var = new ns0(c3347i.d(), c3347i.a(), -1, readFileFromAssets, readFileFromAssets2 == null ? "" : readFileFromAssets2, readFileFromAssets3 == null ? "" : readFileFromAssets3, readFileFromAssets4 == null ? "" : readFileFromAssets4);
+            ns0 ns0Var = new ns0(iVar.d(), iVar.a(), -1, readFileFromAssets, readFileFromAssets2 == null ? "" : readFileFromAssets2, readFileFromAssets3 == null ? "" : readFileFromAssets3, readFileFromAssets4 == null ? "" : readFileFromAssets4);
             ns0Var.i("assets");
             addToCache(ns0Var);
             return ns0Var;

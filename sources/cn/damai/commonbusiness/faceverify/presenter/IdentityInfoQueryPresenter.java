@@ -17,12 +17,11 @@ public class IdentityInfoQueryPresenter extends IdentityInfoQueryContract.Presen
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.faceverify.presenter.IdentityInfoQueryPresenter$a */
     /* loaded from: classes4.dex */
-    public class C0693a implements Action<Object> {
+    public class a implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0693a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -70,7 +69,7 @@ public class IdentityInfoQueryPresenter extends IdentityInfoQueryContract.Presen
         });
     }
 
-    @Override // cn.damai.common.app.base.AbstractC0470a
+    @Override // cn.damai.common.app.base.a
     public void onStart() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1258444679")) {
@@ -78,7 +77,7 @@ public class IdentityInfoQueryPresenter extends IdentityInfoQueryContract.Presen
             return;
         }
         super.onStart();
-        this.mDMMessage.b("faceVerify", new C0693a());
+        this.mDMMessage.b("faceVerify", new a());
     }
 
     @Override // cn.damai.commonbusiness.faceverify.contract.IdentityInfoQueryContract.Presenter

@@ -20,12 +20,11 @@ public class IpVideoAlbumPresenter extends BasePresenter<IpVideoAlbumContract.Mo
     private TrackInfo mTrackInfo;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.ip.IpVideoAlbumPresenter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1914a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1914a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -77,7 +76,7 @@ public class IpVideoAlbumPresenter extends BasePresenter<IpVideoAlbumContract.Mo
                 if (!TextUtils.isEmpty(getModel().getVideoInfo().schema)) {
                     title.d(true);
                     title.e("全部");
-                    title.a(new View$OnClickListenerC1914a());
+                    title.a(new a());
                 } else {
                     title.d(false);
                 }

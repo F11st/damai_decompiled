@@ -17,8 +17,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import cn.damai.common.R$id;
 import cn.damai.common.R$layout;
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseModel;
+import cn.damai.common.app.base.a;
 import cn.damai.common.app.widget.DMProgressDialog;
 import cn.damai.common.app.widget.GrayFrameLayout;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -32,7 +32,7 @@ import tb.xr;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
-public abstract class BaseActivity<T extends AbstractC0470a, E extends BaseModel> extends AppCompatActivity implements View.OnClickListener {
+public abstract class BaseActivity<T extends cn.damai.common.app.base.a, E extends BaseModel> extends AppCompatActivity implements View.OnClickListener {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final int CONMENTS_REQUEST = 5001;
     public static final int FINISH_ACTIVITY = 1000;
@@ -69,12 +69,11 @@ public abstract class BaseActivity<T extends AbstractC0470a, E extends BaseModel
     private AtomicBoolean mHasDoneGray = new AtomicBoolean(false);
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.app.base.BaseActivity$a */
     /* loaded from: classes13.dex */
-    public class DialogInterface$OnDismissListenerC0468a implements DialogInterface.OnDismissListener {
+    public class a implements DialogInterface.OnDismissListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnDismissListenerC0468a(BaseActivity baseActivity) {
+        a(BaseActivity baseActivity) {
         }
 
         @Override // android.content.DialogInterface.OnDismissListener
@@ -431,7 +430,7 @@ public abstract class BaseActivity<T extends AbstractC0470a, E extends BaseModel
                 if (!wh2.j(str)) {
                     this.progressDialog.c(str);
                 }
-                this.progressDialog.setOnDismissListener(new DialogInterface$OnDismissListenerC0468a(this));
+                this.progressDialog.setOnDismissListener(new a(this));
             }
             this.progressDialog.show();
         }

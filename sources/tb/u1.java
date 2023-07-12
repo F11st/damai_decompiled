@@ -1,6 +1,5 @@
 package tb;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -18,16 +17,15 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public abstract class u1<E> extends AbstractCollection<E> implements List<E> {
     @NotNull
-    public static final C9752a Companion = new C9752a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.u1$a */
     /* loaded from: classes3.dex */
-    public static final class C9752a {
-        private C9752a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9752a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -53,7 +51,7 @@ public abstract class u1<E> extends AbstractCollection<E> implements List<E> {
         }
 
         public final boolean d(@NotNull Collection<?> collection, @NotNull Collection<?> collection2) {
-            b41.i(collection, AbstractC5658c.a);
+            b41.i(collection, com.huawei.hms.opendevice.c.a);
             b41.i(collection2, "other");
             if (collection.size() != collection2.size()) {
                 return false;
@@ -69,7 +67,7 @@ public abstract class u1<E> extends AbstractCollection<E> implements List<E> {
         }
 
         public final int e(@NotNull Collection<?> collection) {
-            b41.i(collection, AbstractC5658c.a);
+            b41.i(collection, com.huawei.hms.opendevice.c.a);
             Iterator<?> it = collection.iterator();
             int i = 1;
             while (it.hasNext()) {
@@ -82,12 +80,11 @@ public abstract class u1<E> extends AbstractCollection<E> implements List<E> {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.u1$b */
     /* loaded from: classes3.dex */
-    public class C9753b implements Iterator<E>, KMappedMarker {
+    public class b implements Iterator<E>, KMappedMarker {
         private int a;
 
-        public C9753b() {
+        public b() {
         }
 
         protected final int a() {
@@ -121,10 +118,9 @@ public abstract class u1<E> extends AbstractCollection<E> implements List<E> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.u1$c */
     /* loaded from: classes3.dex */
-    private class C9754c extends u1<E>.C9753b implements ListIterator<E> {
-        public C9754c(int i) {
+    private class c extends u1<E>.b implements ListIterator<E> {
+        public c(int i) {
             super();
             u1.Companion.b(i, u1.this.size());
             b(i);
@@ -167,16 +163,15 @@ public abstract class u1<E> extends AbstractCollection<E> implements List<E> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.u1$d */
     /* loaded from: classes3.dex */
-    private static final class C9755d<E> extends u1<E> implements RandomAccess {
+    private static final class d<E> extends u1<E> implements RandomAccess {
         @NotNull
         private final u1<E> a;
         private final int b;
         private int c;
 
         /* JADX WARN: Multi-variable type inference failed */
-        public C9755d(@NotNull u1<? extends E> u1Var, int i, int i2) {
+        public d(@NotNull u1<? extends E> u1Var, int i, int i2) {
             b41.i(u1Var, "list");
             this.a = u1Var;
             this.b = i;
@@ -238,7 +233,7 @@ public abstract class u1<E> extends AbstractCollection<E> implements List<E> {
     @Override // java.util.Collection, java.lang.Iterable, java.util.List
     @NotNull
     public Iterator<E> iterator() {
-        return new C9753b();
+        return new b();
     }
 
     public int lastIndexOf(E e) {
@@ -254,7 +249,7 @@ public abstract class u1<E> extends AbstractCollection<E> implements List<E> {
     @Override // java.util.List
     @NotNull
     public ListIterator<E> listIterator() {
-        return new C9754c(0);
+        return new c(0);
     }
 
     @Override // java.util.List
@@ -270,12 +265,12 @@ public abstract class u1<E> extends AbstractCollection<E> implements List<E> {
     @Override // java.util.List
     @NotNull
     public List<E> subList(int i, int i2) {
-        return new C9755d(this, i, i2);
+        return new d(this, i, i2);
     }
 
     @Override // java.util.List
     @NotNull
     public ListIterator<E> listIterator(int i) {
-        return new C9754c(i);
+        return new c(i);
     }
 }

@@ -7,7 +7,6 @@ import android.text.TextUtils;
 import cn.damai.common.askpermission.OnGrantListener;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.contacts.bean.IdCardTypes;
 import cn.damai.commonbusiness.util.SystemContactsUtil;
@@ -34,13 +33,12 @@ public class bs extends ib {
     private boolean k = false;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.bs$a */
     /* loaded from: classes9.dex */
-    public class C8978a implements OnGrantListener {
+    public class a implements OnGrantListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
 
-        C8978a(bs bsVar, Activity activity) {
+        a(bs bsVar, Activity activity) {
             this.a = activity;
         }
 
@@ -56,13 +54,12 @@ public class bs extends ib {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.bs$b */
     /* loaded from: classes9.dex */
-    public class C8979b implements YouKuTrustListener {
+    public class b implements YouKuTrustListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ IDMComponent a;
 
-        C8979b(IDMComponent iDMComponent) {
+        b(IDMComponent iDMComponent) {
             this.a = iDMComponent;
         }
 
@@ -104,9 +101,9 @@ public class bs extends ib {
             ipChange.ipc$dispatch("-969243133", new Object[]{this, Boolean.valueOf(z), iDMComponent});
             return;
         }
-        C0529c.e().x(kb0.u().t(this.c.getContext()));
+        cn.damai.common.user.c.e().x(kb0.u().t(this.c.getContext()));
         if (z) {
-            LoginManager.k().i(this.c.getContext(), 0, new C8979b(iDMComponent));
+            LoginManager.k().i(this.c.getContext(), 0, new b(iDMComponent));
         } else {
             ToastUtil.f("账号已绑定，可在我的-设置-账号安全中进行换绑");
         }
@@ -129,9 +126,9 @@ public class bs extends ib {
         ArrayList<? extends Parcelable> arrayList = new ArrayList<>();
         if (!TextUtils.isEmpty(str)) {
             for (String str2 : str.split(",")) {
-                IdCardTypes b = lb0.b(Integer.parseInt(str2));
-                if (b != null) {
-                    arrayList.add(b);
+                IdCardTypes b2 = lb0.b(Integer.parseInt(str2));
+                if (b2 != null) {
+                    arrayList.add(b2);
                 }
             }
         }
@@ -195,8 +192,8 @@ public class bs extends ib {
         } else {
             this.k = true;
             this.j = 0;
-            IDMComponent a = np2Var.a();
-            String tag = a != null ? a.getTag() : "";
+            IDMComponent a2 = np2Var.a();
+            String tag = a2 != null ? a2.getTag() : "";
             if (tag != null) {
                 if (tag.equalsIgnoreCase(fb0.VIEWER_TITLE)) {
                     this.j = 1;
@@ -215,27 +212,27 @@ public class bs extends ib {
             if (i == 0) {
                 r(np2Var, "");
             } else if (i == 1) {
-                C0529c.e().x(kb0.u().l(this.b));
-                o(a);
+                cn.damai.common.user.c.e().x(kb0.u().l(this.b));
+                o(a2);
             } else if (i == 2) {
-                C0529c.e().x(kb0.u().F(this.b));
+                cn.damai.common.user.c.e().x(kb0.u().F(this.b));
                 r(np2Var, "purchase_notice");
             } else if (i == 3) {
-                C0529c.e().x(kb0.u().v(this.b));
+                cn.damai.common.user.c.e().x(kb0.u().v(this.b));
                 r(np2Var, "purchase_self_address");
             } else if (i == 4) {
                 IPresenter iPresenter = this.c;
                 if (iPresenter == null || (context = iPresenter.getContext()) == null) {
                     return;
                 }
-                ir1.a(context, false, "android.permission.READ_CONTACTS", "方便您快速填写手机号", new C8978a(this, context));
+                ir1.a(context, false, "android.permission.READ_CONTACTS", "方便您快速填写手机号", new a(this, context));
             } else if (i != 5) {
             } else {
-                JSONObject fields = a.getFields();
+                JSONObject fields = a2.getFields();
                 if (fields != null && fields.containsKey("liveAccountInfoList") && (jSONArray = fields.getJSONArray("liveAccountInfoList")) != null && jSONArray.size() > 0) {
                     z = false;
                 }
-                n(z, a);
+                n(z, a2);
             }
         }
     }

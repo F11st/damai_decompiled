@@ -1,12 +1,11 @@
 package tb;
 
 import android.text.TextUtils;
-import com.uploader.implement.a.InterfaceC7374f;
 import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class i33 implements InterfaceC7374f {
+public class i33 implements com.uploader.implement.a.f {
     final int a;
     final Map<String, String> b;
     public final Object[] c;

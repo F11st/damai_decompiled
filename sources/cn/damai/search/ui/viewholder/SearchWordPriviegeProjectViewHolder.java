@@ -13,9 +13,9 @@ import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.comment.bean.StoreInfo;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.image.a;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
 import cn.damai.homepage.R$drawable;
@@ -27,9 +27,9 @@ import com.android.alibaba.ip.runtime.IpChange;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import tb.C9826vr;
 import tb.b82;
 import tb.q60;
+import tb.vr;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
@@ -143,7 +143,7 @@ public class SearchWordPriviegeProjectViewHolder extends RecyclerView.ViewHolder
                 } else {
                     str = "1".equals(projectItemBean.categoryName) ? "be_evaluated" : "";
                 }
-                C0529c.e().F(this.itemView, str, "top", b82.SEARCH_ITEM_ASSOCIATE);
+                c.e().F(this.itemView, str, "top", b82.SEARCH_ITEM_ASSOCIATE);
             }
             if (z) {
                 TextView textView = this.g;
@@ -202,16 +202,16 @@ public class SearchWordPriviegeProjectViewHolder extends RecyclerView.ViewHolder
                 this.d.setMaxLines(2);
                 d(projectItemBean.showTime, projectItemBean.venueName);
             }
-            if (this.c.getTag() instanceof C9826vr) {
-                ((C9826vr) this.c.getTag()).cancel();
+            if (this.c.getTag() instanceof vr) {
+                ((vr) this.c.getTag()).cancel();
             }
             Integer num2 = projectItemBean.itemType;
             if (num2 != null && num2.intValue() == 1) {
-                DMImageCreator c = C0504a.b().c(projectItemBean.verticalPic);
+                DMImageCreator c = a.b().c(projectItemBean.verticalPic);
                 int i2 = R$drawable.store_defult_img;
                 this.c.setTag(c.i(i2).c(i2).g(this.c));
             } else {
-                DMImageCreator c2 = C0504a.b().c(projectItemBean.verticalPic);
+                DMImageCreator c2 = a.b().c(projectItemBean.verticalPic);
                 int i3 = R$drawable.uikit_default_image_bg_gradient;
                 this.c.setTag(c2.i(i3).c(i3).g(this.c));
             }

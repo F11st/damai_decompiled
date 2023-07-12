@@ -2,13 +2,13 @@ package com.taobao.monitor.impl.processor;
 
 import com.taobao.monitor.impl.processor.IProcessor;
 import com.taobao.monitor.impl.trace.IDispatcher;
-import tb.C8934b0;
+import tb.b0;
 import tb.fu0;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public abstract class AbsProcessor implements IProcessor {
-    private C8934b0 a;
+    private b0 a;
     private IProcessor.IProcessorLifeCycle b;
     private volatile boolean c;
 
@@ -19,7 +19,7 @@ public abstract class AbsProcessor implements IProcessor {
 
     /* JADX INFO: Access modifiers changed from: protected */
     public IDispatcher a(String str) {
-        return C8934b0.a(str);
+        return b0.a(str);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -58,7 +58,7 @@ public abstract class AbsProcessor implements IProcessor {
 
     /* JADX INFO: Access modifiers changed from: protected */
     public AbsProcessor(boolean z) {
-        this.a = C8934b0.b();
+        this.a = b0.b();
         this.c = false;
     }
 }

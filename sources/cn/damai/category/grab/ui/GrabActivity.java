@@ -18,7 +18,6 @@ import cn.damai.category.grab.bean.ItemGroup;
 import cn.damai.category.grab.model.GrabModel;
 import cn.damai.category.grab.request.GrabRequest;
 import cn.damai.category.grab.ui.adapter.GrabListAdapter;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.base.ResponseErrorPage;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.commonbusiness.share.ShareManager;
@@ -76,7 +75,7 @@ public class GrabActivity extends SimpleBaseActivity {
     private int mFenjiexianIndex = 0;
     private boolean mHasTop = false;
     private int mTitleIndex = 0;
-    private View.OnClickListener mProjectItemListener = new View$OnClickListenerC0406j();
+    private View.OnClickListener mProjectItemListener = new j();
     private Runnable mRunnable = new Runnable() { // from class: cn.damai.category.grab.ui.GrabActivity.13
         private static transient /* synthetic */ IpChange $ipChange;
 
@@ -97,12 +96,11 @@ public class GrabActivity extends SimpleBaseActivity {
     };
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.grab.ui.GrabActivity$a */
     /* loaded from: classes.dex */
-    public class C0397a implements AppBarLayout.OnOffsetChangedListener {
+    public class a implements AppBarLayout.OnOffsetChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0397a() {
+        a() {
         }
 
         @Override // com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener, com.google.android.material.appbar.AppBarLayout.BaseOnOffsetChangedListener
@@ -119,12 +117,11 @@ public class GrabActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.grab.ui.GrabActivity$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0398b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0398b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -149,12 +146,11 @@ public class GrabActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.grab.ui.GrabActivity$c */
     /* loaded from: classes.dex */
-    public class C0399c implements ResponseErrorPage.ErrorRefreshListener {
+    public class c implements ResponseErrorPage.ErrorRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0399c() {
+        c() {
         }
 
         @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
@@ -169,12 +165,11 @@ public class GrabActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.grab.ui.GrabActivity$d */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0400d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0400d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -189,12 +184,11 @@ public class GrabActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.grab.ui.GrabActivity$e */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0401e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0401e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -204,7 +198,7 @@ public class GrabActivity extends SimpleBaseActivity {
                 ipChange.ipc$dispatch("1194431613", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(ou0.g().i(z20.E(), z20.d()));
+            cn.damai.common.user.c.e().x(ou0.g().i(z20.E(), z20.d()));
             Bundle bundle = new Bundle();
             bundle.putString("title", "来抢票播报站，发现火热演出");
             bundle.putString("projectName", "来抢票播报站，发现火热演出");
@@ -225,12 +219,11 @@ public class GrabActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.grab.ui.GrabActivity$f */
     /* loaded from: classes.dex */
-    public class C0402f implements ShareImageCallback {
+    public class f implements ShareImageCallback {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0402f() {
+        f() {
         }
 
         @Override // cn.damai.category.common.listener.ShareImageCallback
@@ -246,12 +239,11 @@ public class GrabActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.grab.ui.GrabActivity$g */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0403g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0403g() {
+        g() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -264,18 +256,17 @@ public class GrabActivity extends SimpleBaseActivity {
             ItemBean itemBean = GrabActivity.this.mTopView.E;
             if (itemBean != null) {
                 GrabActivity.this.goProject(itemBean);
-                C0529c.e().x(ou0.g().h(itemBean.groupIndex, itemBean.index, z20.d(), itemBean.groupTitle, itemBean.itemId));
+                cn.damai.common.user.c.e().x(ou0.g().h(itemBean.groupIndex, itemBean.index, z20.d(), itemBean.groupTitle, itemBean.itemId));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.grab.ui.GrabActivity$h */
     /* loaded from: classes.dex */
-    public class C0404h implements LinearPullToRefreshView.OnRefreshListener {
+    public class h implements LinearPullToRefreshView.OnRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0404h() {
+        h() {
         }
 
         @Override // cn.damai.uikit.view.LinearPullToRefreshView.OnRefreshListener
@@ -290,12 +281,11 @@ public class GrabActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.grab.ui.GrabActivity$i */
     /* loaded from: classes.dex */
-    public class C0405i implements ShareImageCallback {
+    public class i implements ShareImageCallback {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0405i() {
+        i() {
         }
 
         @Override // cn.damai.category.common.listener.ShareImageCallback
@@ -312,12 +302,11 @@ public class GrabActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.grab.ui.GrabActivity$j */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0406j implements View.OnClickListener {
+    public class j implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0406j() {
+        j() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -332,7 +321,7 @@ public class GrabActivity extends SimpleBaseActivity {
                 if (itemBean == null || TextUtils.isEmpty(itemBean.itemId)) {
                     return;
                 }
-                C0529c.e().x(ou0.g().h(itemBean.groupIndex, itemBean.index, z20.d(), itemBean.groupTitle, itemBean.itemId));
+                cn.damai.common.user.c.e().x(ou0.g().h(itemBean.groupIndex, itemBean.index, z20.d(), itemBean.groupTitle, itemBean.itemId));
                 GrabActivity.this.goProject(itemBean);
             } catch (Exception unused) {
             }
@@ -345,10 +334,10 @@ public class GrabActivity extends SimpleBaseActivity {
             return (List) ipChange.ipc$dispatch("2070419185", new Object[]{this, list});
         }
         ArrayList arrayList = new ArrayList();
-        for (int i = 0; i < list.size(); i++) {
-            ItemGroup itemGroup = list.get(i);
+        for (int i2 = 0; i2 < list.size(); i2++) {
+            ItemGroup itemGroup = list.get(i2);
             if (wh2.e(itemGroup.items) > 0) {
-                if (i == 0) {
+                if (i2 == 0) {
                     this.mFenjiexianIndex = itemGroup.items.size() + 1;
                 }
                 ItemBean itemBean = new ItemBean();
@@ -356,16 +345,16 @@ public class GrabActivity extends SimpleBaseActivity {
                 itemBean.groupTitle = itemGroup.title;
                 itemBean.groupTip = itemGroup.tip;
                 arrayList.add(itemBean);
-                for (int i2 = 0; i2 < itemGroup.items.size(); i2++) {
-                    ItemBean itemBean2 = itemGroup.items.get(i2);
+                for (int i3 = 0; i3 < itemGroup.items.size(); i3++) {
+                    ItemBean itemBean2 = itemGroup.items.get(i3);
                     if (itemBean2 != null) {
-                        itemBean2.index = i2;
+                        itemBean2.index = i3;
                         itemBean2.group = itemGroup.type;
                         itemBean2.groupTitle = itemGroup.title;
                         if (this.mHasTop) {
-                            itemBean2.groupIndex = i + 1;
+                            itemBean2.groupIndex = i2 + 1;
                         } else {
-                            itemBean2.groupIndex = i;
+                            itemBean2.groupIndex = i2;
                         }
                         arrayList.add(itemBean2);
                     }
@@ -486,7 +475,7 @@ public class GrabActivity extends SimpleBaseActivity {
         this.mRefreshView = linearPullToRefreshView;
         linearPullToRefreshView.setPullToRefreshEnabled(true);
         this.mAppBarLayout = (AppBarLayout) findViewById(R$id.appbar_layout);
-        this.mRefreshView.setOnRefreshListener(new C0404h());
+        this.mRefreshView.setOnRefreshListener(new h());
         this.mHorScrollView = (HorScrollView) findViewById(R$id.view_group);
         this.mLineView = findViewById(R$id.view_divider);
         RecyclerView recyclerView = (RecyclerView) findViewById(R$id.irc);
@@ -495,20 +484,20 @@ public class GrabActivity extends SimpleBaseActivity {
         this.mRecyclerManager = (LinearLayoutManager) this.mRecyclerView.getLayoutManager();
         GrabListAdapter grabListAdapter = new GrabListAdapter(this, this.mProjectItemListener);
         this.mAdapter = grabListAdapter;
-        grabListAdapter.b(new C0405i());
+        grabListAdapter.b(new i());
         this.mRecyclerView.setAdapter(this.mAdapter);
         this.mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() { // from class: cn.damai.category.grab.ui.GrabActivity.7
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
-            public void onScrolled(RecyclerView recyclerView2, int i, int i2) {
+            public void onScrolled(RecyclerView recyclerView2, int i2, int i3) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "-837973679")) {
-                    ipChange2.ipc$dispatch("-837973679", new Object[]{this, recyclerView2, Integer.valueOf(i), Integer.valueOf(i2)});
+                    ipChange2.ipc$dispatch("-837973679", new Object[]{this, recyclerView2, Integer.valueOf(i2), Integer.valueOf(i3)});
                     return;
                 }
                 int findFirstVisibleItemPosition = ((LinearLayoutManager) recyclerView2.getLayoutManager()).findFirstVisibleItemPosition();
-                if (i2 >= 0) {
+                if (i3 >= 0) {
                     if (findFirstVisibleItemPosition == GrabActivity.this.mFenjiexianIndex) {
                         GrabActivity.this.mHorScrollView.selectTitle(1);
                         GrabActivity.this.mTitleIndex = 1;
@@ -537,10 +526,10 @@ public class GrabActivity extends SimpleBaseActivity {
         }
         this.mView = (LinearLayout) findViewById(R$id.layout_grab);
         removeHeadTitleView();
-        findViewById(R$id.btn_left).setOnClickListener(new View$OnClickListenerC0400d());
+        findViewById(R$id.btn_left).setOnClickListener(new d());
         View findViewById = findViewById(R$id.btn_right);
         this.mShareBtn = findViewById;
-        findViewById.setOnClickListener(new View$OnClickListenerC0401e());
+        findViewById.setOnClickListener(new e());
         View findViewById2 = findViewById(R$id.status_bar_space);
         if (Build.VERSION.SDK_INT >= 23) {
             findViewById2.getLayoutParams().height = kg2.a(this);
@@ -561,10 +550,10 @@ public class GrabActivity extends SimpleBaseActivity {
         }
         LinearLayout linearLayout = (LinearLayout) findViewById(R$id.grab_top);
         this.mTop = linearLayout;
-        this.mTopView = new bp2(this, linearLayout, new C0402f());
+        this.mTopView = new bp2(this, linearLayout, new f());
         View findViewById = findViewById(R$id.item_top);
         this.mItemTopView = findViewById;
-        findViewById.setOnClickListener(new View$OnClickListenerC0403g());
+        findViewById.setOnClickListener(new g());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -599,19 +588,19 @@ public class GrabActivity extends SimpleBaseActivity {
         super.initView();
         initBundle();
         setDamaiUTKeyBuilder(ou0.g().f(this.mTopProjectId));
-        C0529c.e().K(this);
+        cn.damai.common.user.c.e().K(this);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, android.app.Activity
-    public void onActivityResult(int i, int i2, Intent intent) {
+    public void onActivityResult(int i2, int i3, Intent intent) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-567210704")) {
-            ipChange.ipc$dispatch("-567210704", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), intent});
+            ipChange.ipc$dispatch("-567210704", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3), intent});
             return;
         }
-        super.onActivityResult(i, i2, intent);
-        ShareManager.E().r0(i, i2, intent);
+        super.onActivityResult(i2, i3, intent);
+        ShareManager.E().r0(i2, i3, intent);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -637,7 +626,7 @@ public class GrabActivity extends SimpleBaseActivity {
             ResponseErrorPage responseErrorPage2 = new ResponseErrorPage(this, str, str2, str3);
             this.mErrorPage = responseErrorPage2;
             responseErrorPage2.hideTitle();
-            this.mErrorPage.setRefreshListener(new C0399c());
+            this.mErrorPage.setRefreshListener(new c());
             this.mView.addView(this.mErrorPage, new LinearLayout.LayoutParams(-1, -1));
             this.mRefreshView.setVisibility(8);
         }

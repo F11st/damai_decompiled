@@ -12,7 +12,7 @@ import okio.ByteString;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public final class AudioEntity extends Message<AudioEntity, C6110a> {
+public final class AudioEntity extends Message<AudioEntity, a> {
     public static final String DEFAULT_AUDIOKEY = "";
     private static final long serialVersionUID = 0;
     @WireField(adapter = "com.youku.squareup.wire.ProtoAdapter#STRING", tag = 1)
@@ -25,23 +25,22 @@ public final class AudioEntity extends Message<AudioEntity, C6110a> {
     public final Integer startTime;
     @WireField(adapter = "com.youku.squareup.wire.ProtoAdapter#INT32", tag = 5)
     public final Integer totalTime;
-    public static final ProtoAdapter<AudioEntity> ADAPTER = new C6111b();
+    public static final ProtoAdapter<AudioEntity> ADAPTER = new b();
     public static final Integer DEFAULT_STARTFRAME = 0;
     public static final Integer DEFAULT_ENDFRAME = 0;
     public static final Integer DEFAULT_STARTTIME = 0;
     public static final Integer DEFAULT_TOTALTIME = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.proto.AudioEntity$a */
     /* loaded from: classes10.dex */
-    public static final class C6110a extends Message.Builder<AudioEntity, C6110a> {
+    public static final class a extends Message.Builder<AudioEntity, a> {
         public String a;
         public Integer b;
         public Integer c;
         public Integer d;
         public Integer e;
 
-        public C6110a a(String str) {
+        public a a(String str) {
             this.a = str;
             return this;
         }
@@ -52,58 +51,57 @@ public final class AudioEntity extends Message<AudioEntity, C6110a> {
             return new AudioEntity(this.a, this.b, this.c, this.d, this.e, super.buildUnknownFields());
         }
 
-        public C6110a c(Integer num) {
+        public a c(Integer num) {
             this.c = num;
             return this;
         }
 
-        public C6110a d(Integer num) {
+        public a d(Integer num) {
             this.b = num;
             return this;
         }
 
-        public C6110a e(Integer num) {
+        public a e(Integer num) {
             this.d = num;
             return this;
         }
 
-        public C6110a f(Integer num) {
+        public a f(Integer num) {
             this.e = num;
             return this;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.proto.AudioEntity$b */
     /* loaded from: classes10.dex */
-    private static final class C6111b extends ProtoAdapter<AudioEntity> {
-        C6111b() {
+    private static final class b extends ProtoAdapter<AudioEntity> {
+        b() {
             super(FieldEncoding.LENGTH_DELIMITED, AudioEntity.class);
         }
 
         @Override // com.youku.squareup.wire.ProtoAdapter
         /* renamed from: a */
         public AudioEntity decode(ProtoReader protoReader) throws IOException {
-            C6110a c6110a = new C6110a();
+            a aVar = new a();
             long beginMessage = protoReader.beginMessage();
             while (true) {
                 int nextTag = protoReader.nextTag();
                 if (nextTag == -1) {
                     protoReader.endMessage(beginMessage);
-                    return c6110a.build();
+                    return aVar.build();
                 } else if (nextTag == 1) {
-                    c6110a.a(ProtoAdapter.STRING.decode(protoReader));
+                    aVar.a(ProtoAdapter.STRING.decode(protoReader));
                 } else if (nextTag == 2) {
-                    c6110a.d(ProtoAdapter.INT32.decode(protoReader));
+                    aVar.d(ProtoAdapter.INT32.decode(protoReader));
                 } else if (nextTag == 3) {
-                    c6110a.c(ProtoAdapter.INT32.decode(protoReader));
+                    aVar.c(ProtoAdapter.INT32.decode(protoReader));
                 } else if (nextTag == 4) {
-                    c6110a.e(ProtoAdapter.INT32.decode(protoReader));
+                    aVar.e(ProtoAdapter.INT32.decode(protoReader));
                 } else if (nextTag != 5) {
                     FieldEncoding peekFieldEncoding = protoReader.peekFieldEncoding();
-                    c6110a.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
+                    aVar.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
                 } else {
-                    c6110a.f(ProtoAdapter.INT32.decode(protoReader));
+                    aVar.f(ProtoAdapter.INT32.decode(protoReader));
                 }
             }
         }
@@ -233,14 +231,14 @@ public final class AudioEntity extends Message<AudioEntity, C6110a> {
 
     @Override // com.youku.squareup.wire.Message
     /* renamed from: newBuilder */
-    public Message.Builder<AudioEntity, C6110a> newBuilder2() {
-        C6110a c6110a = new C6110a();
-        c6110a.a = this.audioKey;
-        c6110a.b = this.startFrame;
-        c6110a.c = this.endFrame;
-        c6110a.d = this.startTime;
-        c6110a.e = this.totalTime;
-        c6110a.addUnknownFields(unknownFields());
-        return c6110a;
+    public Message.Builder<AudioEntity, a> newBuilder2() {
+        a aVar = new a();
+        aVar.a = this.audioKey;
+        aVar.b = this.startFrame;
+        aVar.c = this.endFrame;
+        aVar.d = this.startTime;
+        aVar.e = this.totalTime;
+        aVar.addUnknownFields(unknownFields());
+        return aVar;
     }
 }

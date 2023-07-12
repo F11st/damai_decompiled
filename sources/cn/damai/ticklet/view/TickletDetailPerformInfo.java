@@ -13,8 +13,6 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.scriptmurder.coupon.CouponDetailFragment;
 import cn.damai.issue.tool.IssueConstants;
 import cn.damai.member.R$id;
@@ -51,13 +49,12 @@ public class TickletDetailPerformInfo extends RelativeLayout {
     TUrlImageView tv_project_image;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletDetailPerformInfo$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2099a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TicketDeatilResult a;
 
-        View$OnClickListenerC2099a(TicketDeatilResult ticketDeatilResult) {
+        a(TicketDeatilResult ticketDeatilResult) {
             this.a = ticketDeatilResult;
         }
 
@@ -72,19 +69,18 @@ public class TickletDetailPerformInfo extends RelativeLayout {
             if (ticketDeatilResult == null || TextUtils.isEmpty(ticketDeatilResult.getShowTimeRangeDetail())) {
                 return;
             }
-            C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "iteminfo", "useexplain", un2.k().t(this.a.getProjectId(), this.a.getPerformId()), Boolean.FALSE));
+            cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "iteminfo", "useexplain", un2.k().t(this.a.getProjectId(), this.a.getPerformId()), Boolean.FALSE));
             TickletDetailPerformInfo.this.passDialogTip(this.a.getShowTimeRangeDetail());
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletDetailPerformInfo$b */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2100b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TicketDeatilResult a;
 
-        View$OnClickListenerC2100b(TicketDeatilResult ticketDeatilResult) {
+        b(TicketDeatilResult ticketDeatilResult) {
             this.a = ticketDeatilResult;
         }
 
@@ -95,7 +91,7 @@ public class TickletDetailPerformInfo extends RelativeLayout {
                 ipChange.ipc$dispatch("-1589481838", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "iteminfo", "itemimage", un2.k().t(this.a.getProjectId(), this.a.getPerformId()), Boolean.TRUE));
+            cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "iteminfo", "itemimage", un2.k().t(this.a.getProjectId(), this.a.getPerformId()), Boolean.TRUE));
             if (this.a.isLivePerform() && !TextUtils.isEmpty(this.a.getLiveH5Url())) {
                 py2.f().n(TickletDetailPerformInfo.this.context, this.a.getLiveH5Url());
             } else if (this.a.getUserPerformVO().isCouponPerform()) {
@@ -108,13 +104,12 @@ public class TickletDetailPerformInfo extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletDetailPerformInfo$c */
     /* loaded from: classes7.dex */
-    public class C2101c implements IPhenixListener<ui2> {
+    public class c implements IPhenixListener<ui2> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
-        C2101c(TickletDetailPerformInfo tickletDetailPerformInfo, ImageView imageView) {
+        c(TickletDetailPerformInfo tickletDetailPerformInfo, ImageView imageView) {
             this.a = imageView;
         }
 
@@ -132,13 +127,12 @@ public class TickletDetailPerformInfo extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletDetailPerformInfo$d */
     /* loaded from: classes7.dex */
-    public class C2102d implements IPhenixListener<nh0> {
+    public class d implements IPhenixListener<nh0> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
-        C2102d(TickletDetailPerformInfo tickletDetailPerformInfo, ImageView imageView) {
+        d(TickletDetailPerformInfo tickletDetailPerformInfo, ImageView imageView) {
             this.a = imageView;
         }
 
@@ -210,8 +204,8 @@ public class TickletDetailPerformInfo extends RelativeLayout {
             return;
         }
         tUrlImageView.setImageUrl(str);
-        tUrlImageView.succListener(new C2101c(this, imageView));
-        tUrlImageView.failListener(new C2102d(this, imageView));
+        tUrlImageView.succListener(new c(this, imageView));
+        tUrlImageView.failListener(new d(this, imageView));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -250,7 +244,7 @@ public class TickletDetailPerformInfo extends RelativeLayout {
             }
             if (!TextUtils.isEmpty(ticketDeatilResult.getLongtermProject()) && "1".equals(ticketDeatilResult.getLongtermProject())) {
                 this.passTicket.setVisibility(0);
-                this.passTicket.setOnClickListener(new View$OnClickListenerC2099a(ticketDeatilResult));
+                this.passTicket.setOnClickListener(new a(ticketDeatilResult));
             } else {
                 this.passTicket.setVisibility(8);
             }
@@ -258,7 +252,7 @@ public class TickletDetailPerformInfo extends RelativeLayout {
                 ticketDeatilResult.setProjectImage(in2.PROJECT_DEFAULT_IMAGE);
             }
             loadPerformImage(this.tv_project_image, this.imageViewShadow, ticketDeatilResult.getProjectImage());
-            this.tv_project_image.setOnClickListener(new View$OnClickListenerC2100b(ticketDeatilResult));
+            this.tv_project_image.setOnClickListener(new b(ticketDeatilResult));
         }
     }
 

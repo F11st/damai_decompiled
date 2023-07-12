@@ -1,7 +1,7 @@
 package com.youku.middlewareservice.provider;
 
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -11,7 +11,7 @@ public class ChannelProviderProxy {
     public static String getChannelId() {
         try {
             if (sProxy == null) {
-                sProxy = (ChannelProvider) C8883a.j("com.youku.middlewareservice_impl.provider.ChannelProviderImpl").b().f();
+                sProxy = (ChannelProvider) a.j("com.youku.middlewareservice_impl.provider.ChannelProviderImpl").b().f();
             }
             return sProxy.getChannelId();
         } catch (Throwable th) {
@@ -23,7 +23,7 @@ public class ChannelProviderProxy {
     public static String getPid() {
         try {
             if (sProxy == null) {
-                sProxy = (ChannelProvider) C8883a.j("com.youku.middlewareservice_impl.provider.ChannelProviderImpl").b().f();
+                sProxy = (ChannelProvider) a.j("com.youku.middlewareservice_impl.provider.ChannelProviderImpl").b().f();
             }
             return sProxy.getPid();
         } catch (Throwable th) {
@@ -34,7 +34,7 @@ public class ChannelProviderProxy {
 
     public static ChannelProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (ChannelProvider) C8883a.j("com.youku.middlewareservice_impl.provider.ChannelProviderImpl").b().f();
+            sProxy = (ChannelProvider) a.j("com.youku.middlewareservice_impl.provider.ChannelProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -52,7 +52,7 @@ public class ChannelProviderProxy {
     public static boolean isGooglePlayChannel() {
         try {
             if (sProxy == null) {
-                sProxy = (ChannelProvider) C8883a.j("com.youku.middlewareservice_impl.provider.ChannelProviderImpl").b().f();
+                sProxy = (ChannelProvider) a.j("com.youku.middlewareservice_impl.provider.ChannelProviderImpl").b().f();
             }
             return sProxy.isGooglePlayChannel();
         } catch (Throwable th) {

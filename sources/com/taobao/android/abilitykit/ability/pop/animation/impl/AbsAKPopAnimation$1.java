@@ -8,15 +8,14 @@ import com.taobao.android.abilitykit.ability.pop.animation.IAKPopAnimationCallba
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
 class AbsAKPopAnimation$1 implements Runnable {
-    final /* synthetic */ AbstractC6297a this$0;
+    final /* synthetic */ com.taobao.android.abilitykit.ability.pop.animation.impl.a this$0;
     final /* synthetic */ IAKPopAnimationCallback val$callback;
     final /* synthetic */ View val$targetView;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.abilitykit.ability.pop.animation.impl.AbsAKPopAnimation$1$a */
     /* loaded from: classes8.dex */
-    class C6296a extends AnimatorListenerAdapter {
-        C6296a() {
+    class a extends AnimatorListenerAdapter {
+        a() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -35,17 +34,17 @@ class AbsAKPopAnimation$1 implements Runnable {
         }
     }
 
-    AbsAKPopAnimation$1(AbstractC6297a abstractC6297a, View view, IAKPopAnimationCallback iAKPopAnimationCallback) {
+    AbsAKPopAnimation$1(com.taobao.android.abilitykit.ability.pop.animation.impl.a aVar, View view, IAKPopAnimationCallback iAKPopAnimationCallback) {
         this.val$targetView = view;
         this.val$callback = iAKPopAnimationCallback;
     }
 
     @Override // java.lang.Runnable
     public void run() {
-        AbstractC6297a abstractC6297a = this.this$0;
-        AbstractC6297a.b(abstractC6297a, AbstractC6297a.c(abstractC6297a, this.val$targetView));
-        AbstractC6297a.a(this.this$0).removeAllListeners();
-        AbstractC6297a.a(this.this$0).addListener(new C6296a());
-        AbstractC6297a.a(this.this$0).start();
+        com.taobao.android.abilitykit.ability.pop.animation.impl.a aVar = this.this$0;
+        com.taobao.android.abilitykit.ability.pop.animation.impl.a.b(aVar, com.taobao.android.abilitykit.ability.pop.animation.impl.a.c(aVar, this.val$targetView));
+        com.taobao.android.abilitykit.ability.pop.animation.impl.a.a(this.this$0).removeAllListeners();
+        com.taobao.android.abilitykit.ability.pop.animation.impl.a.a(this.this$0).addListener(new a());
+        com.taobao.android.abilitykit.ability.pop.animation.impl.a.a(this.this$0).start();
     }
 }

@@ -32,7 +32,7 @@ public final class DefaultExecutor extends EventLoopImplBase implements Runnable
         Long l;
         DefaultExecutor defaultExecutor = new DefaultExecutor();
         INSTANCE = defaultExecutor;
-        AbstractC8699m.incrementUseCount$default(defaultExecutor, false, 1, null);
+        m.incrementUseCount$default(defaultExecutor, false, 1, null);
         TimeUnit timeUnit = TimeUnit.MILLISECONDS;
         try {
             l = Long.getLong("kotlinx.coroutines.DefaultExecutor.keepAlive", 1000L);
@@ -102,7 +102,7 @@ public final class DefaultExecutor extends EventLoopImplBase implements Runnable
         }
     }
 
-    @Override // kotlinx.coroutines.AbstractC8700n
+    @Override // kotlinx.coroutines.n
     @NotNull
     protected Thread getThread() {
         Thread thread = _thread;

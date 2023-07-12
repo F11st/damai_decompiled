@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -42,39 +41,37 @@ public class MusicFestivalTabAdapter extends RecyclerView.Adapter<BaseViewHolder
         private int f;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.tetris.component.music.adapter.MusicFestivalTabAdapter$MfTabVh$a */
         /* loaded from: classes7.dex */
-        public class C1924a implements IImageLoader.IImageSuccListener {
+        public class a implements IImageLoader.IImageSuccListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1924a() {
+            a() {
             }
 
             @Override // cn.damai.uikit.image.IImageLoader.IImageSuccListener
-            public void onSuccess(IImageLoader.C2496b c2496b) {
+            public void onSuccess(IImageLoader.b bVar) {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "-1495018969")) {
-                    ipChange.ipc$dispatch("-1495018969", new Object[]{this, c2496b});
+                    ipChange.ipc$dispatch("-1495018969", new Object[]{this, bVar});
                 } else {
-                    MfTabVh.this.d.setImageDrawable(c2496b.a);
+                    MfTabVh.this.d.setImageDrawable(bVar.a);
                 }
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.tetris.component.music.adapter.MusicFestivalTabAdapter$MfTabVh$b */
         /* loaded from: classes7.dex */
-        public class C1925b implements IImageLoader.IImageFailListener {
+        public class b implements IImageLoader.IImageFailListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1925b(MfTabVh mfTabVh) {
+            b(MfTabVh mfTabVh) {
             }
 
             @Override // cn.damai.uikit.image.IImageLoader.IImageFailListener
-            public void onFail(IImageLoader.C2495a c2495a) {
+            public void onFail(IImageLoader.a aVar) {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "-1685652528")) {
-                    ipChange.ipc$dispatch("-1685652528", new Object[]{this, c2495a});
+                    ipChange.ipc$dispatch("-1685652528", new Object[]{this, aVar});
                 }
             }
         }
@@ -104,7 +101,7 @@ public class MusicFestivalTabAdapter extends RecyclerView.Adapter<BaseViewHolder
                 this.c.setTextColor(-16777216);
                 this.e.setBackgroundResource(R$drawable.bg_item_city_tab_ring_normal);
             }
-            C0504a.b().load(musicIpBean.musicIpIcon, MusicFestivalTabAdapter.this.d, MusicFestivalTabAdapter.this.d, new C1924a(), new C1925b(this));
+            cn.damai.common.image.a.b().load(musicIpBean.musicIpIcon, MusicFestivalTabAdapter.this.d, MusicFestivalTabAdapter.this.d, new a(), new b(this));
             this.c.setText(musicIpBean.musicIpName);
         }
 

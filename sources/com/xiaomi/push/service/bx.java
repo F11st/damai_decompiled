@@ -2,13 +2,12 @@ package com.xiaomi.push.service;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import com.xiaomi.push.C7784t;
 import java.util.concurrent.ConcurrentHashMap;
 import org.apache.commons.lang3.time.DateUtils;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public final class bx implements InterfaceC7727ar {
+public final class bx implements ar {
     private static volatile bx a;
 
     /* renamed from: a  reason: collision with other field name */
@@ -24,19 +23,18 @@ public final class bx implements InterfaceC7727ar {
     private volatile boolean f951a = false;
 
     /* renamed from: a  reason: collision with other field name */
-    private ConcurrentHashMap<String, AbstractRunnableC7746a> f950a = new ConcurrentHashMap<>();
+    private ConcurrentHashMap<String, a> f950a = new ConcurrentHashMap<>();
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.service.bx$a */
     /* loaded from: classes11.dex */
-    public static abstract class AbstractRunnableC7746a implements Runnable {
+    public static abstract class a implements Runnable {
         long a;
 
         /* renamed from: a  reason: collision with other field name */
         String f952a;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public AbstractRunnableC7746a(String str, long j) {
+        public a(String str, long j) {
             this.f952a = str;
             this.a = j;
         }
@@ -52,7 +50,7 @@ public final class bx implements InterfaceC7727ar {
                     SharedPreferences sharedPreferences = bx.a.f949a;
                     if (currentTimeMillis - sharedPreferences.getLong(":ts-" + this.f952a, 0L) > this.a || com.xiaomi.push.ai.a(context)) {
                         SharedPreferences.Editor edit = bx.a.f949a.edit();
-                        C7784t.a(edit.putLong(":ts-" + this.f952a, System.currentTimeMillis()));
+                        com.xiaomi.push.t.a(edit.putLong(":ts-" + this.f952a, System.currentTimeMillis()));
                         a(bx.a);
                     }
                 }
@@ -81,7 +79,7 @@ public final class bx implements InterfaceC7727ar {
         return sharedPreferences.getString(str + ":" + str2, "");
     }
 
-    @Override // com.xiaomi.push.service.InterfaceC7727ar
+    @Override // com.xiaomi.push.service.ar
     /* renamed from: a  reason: collision with other method in class */
     public void mo1213a() {
         if (this.f951a) {
@@ -96,14 +94,14 @@ public final class bx implements InterfaceC7727ar {
         com.xiaomi.push.al.a(this.f948a).a(new by(this), (int) (Math.random() * 10.0d));
     }
 
-    public void a(AbstractRunnableC7746a abstractRunnableC7746a) {
-        if (this.f950a.putIfAbsent(abstractRunnableC7746a.f952a, abstractRunnableC7746a) == null) {
-            com.xiaomi.push.al.a(this.f948a).a(abstractRunnableC7746a, ((int) (Math.random() * 30.0d)) + 10);
+    public void a(a aVar) {
+        if (this.f950a.putIfAbsent(aVar.f952a, aVar) == null) {
+            com.xiaomi.push.al.a(this.f948a).a(aVar, ((int) (Math.random() * 30.0d)) + 10);
         }
     }
 
     public void a(String str, String str2, String str3) {
         SharedPreferences.Editor edit = a.f949a.edit();
-        C7784t.a(edit.putString(str + ":" + str2, str3));
+        com.xiaomi.push.t.a(edit.putString(str + ":" + str2, str3));
     }
 }

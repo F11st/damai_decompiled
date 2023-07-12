@@ -2,7 +2,7 @@ package com.alient.oneservice.nav;
 
 import android.content.Context;
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -11,7 +11,7 @@ public class NavProviderProxy {
 
     public static NavProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (NavProvider) C8883a.j("com.alient.oneservice.provider.impl.nav.NavProviderImpl").b().f();
+            sProxy = (NavProvider) a.j("com.alient.oneservice.provider.impl.nav.NavProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -29,7 +29,7 @@ public class NavProviderProxy {
     public static void toUri(Context context, Action action) {
         try {
             if (sProxy == null) {
-                sProxy = (NavProvider) C8883a.j("com.alient.oneservice.provider.impl.nav.NavProviderImpl").b().f();
+                sProxy = (NavProvider) a.j("com.alient.oneservice.provider.impl.nav.NavProviderImpl").b().f();
             }
             sProxy.toUri(context, action);
         } catch (Throwable th) {

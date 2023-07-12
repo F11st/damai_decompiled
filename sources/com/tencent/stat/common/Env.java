@@ -4,7 +4,7 @@ import android.content.Context;
 import android.os.Build;
 import android.util.DisplayMetrics;
 import com.alimm.xadsdk.base.ut.AdUtConstants;
-import com.alipay.sdk.m.s.C4293a;
+import com.alipay.sdk.m.s.a;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import com.tencent.stat.StatConfig;
 import java.util.Locale;
@@ -57,10 +57,10 @@ public class Env {
 
         void encode(JSONObject jSONObject) throws JSONException {
             jSONObject.put("sr", com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(this.display) + jn1.MUL + com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(this.display));
-            StatCommonHelper.jsonPut(jSONObject, C4293a.w, this.appVersion);
+            StatCommonHelper.jsonPut(jSONObject, a.w, this.appVersion);
             StatCommonHelper.jsonPut(jSONObject, "ch", this.channel);
             StatCommonHelper.jsonPut(jSONObject, "mf", this.manufacture);
-            StatCommonHelper.jsonPut(jSONObject, C4293a.t, this.sdkVersion);
+            StatCommonHelper.jsonPut(jSONObject, a.t, this.sdkVersion);
             StatCommonHelper.jsonPut(jSONObject, "ov", Integer.toString(this.osVersion));
             jSONObject.put("os", 1);
             StatCommonHelper.jsonPut(jSONObject, "op", this.operator);

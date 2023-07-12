@@ -6,8 +6,8 @@ import android.graphics.Color;
 import android.os.Build;
 import android.util.TypedValue;
 import com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect;
-import com.amap.api.mapcore.util.C4646y;
 import com.amap.api.mapcore.util.hd;
+import com.amap.api.mapcore.util.y;
 import com.amap.api.maps.model.BitmapDescriptor;
 import com.amap.api.maps.model.BitmapDescriptorFactory;
 import com.amap.api.maps.model.CrossOverlay;
@@ -17,11 +17,11 @@ import com.autonavi.amap.mapcore.interfaces.ICrossVectorOverlay;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public class CrossVectorOverlay extends BaseMapOverlay<GLCrossVector, Object> implements C4646y.InterfaceC4647a, ICrossVectorOverlay {
+public class CrossVectorOverlay extends BaseMapOverlay<GLCrossVector, Object> implements y.a, ICrossVectorOverlay {
     AVectorCrossAttr attr;
     private CrossOverlay.GenerateCrossImageListener imageListener;
     private boolean isImageMode;
-    private C4646y pluginTexture;
+    private y pluginTexture;
 
     public CrossVectorOverlay(int i, Context context, IAMap iAMap) {
         super(i, context, iAMap);
@@ -30,9 +30,9 @@ public class CrossVectorOverlay extends BaseMapOverlay<GLCrossVector, Object> im
     }
 
     private void drawVectorFailed(int i) {
-        C4646y c4646y = this.pluginTexture;
-        if (c4646y != null) {
-            c4646y.b();
+        y yVar = this.pluginTexture;
+        if (yVar != null) {
+            yVar.b();
         }
         CrossOverlay.GenerateCrossImageListener generateCrossImageListener = this.imageListener;
         if (generateCrossImageListener != null) {
@@ -42,9 +42,9 @@ public class CrossVectorOverlay extends BaseMapOverlay<GLCrossVector, Object> im
 
     private void initImageMode(int i, int i2) {
         if (this.pluginTexture == null) {
-            C4646y c4646y = new C4646y(this.mMapView);
-            this.pluginTexture = c4646y;
-            c4646y.a(this.imageListener);
+            y yVar = new y(this.mMapView);
+            this.pluginTexture = yVar;
+            yVar.a(this.imageListener);
             this.pluginTexture.a(this);
             this.pluginTexture.b(Rect.width(this.attr.stAreaRect), Rect.height(this.attr.stAreaRect));
         }
@@ -80,7 +80,7 @@ public class CrossVectorOverlay extends BaseMapOverlay<GLCrossVector, Object> im
         }
     }
 
-    @Override // com.amap.api.mapcore.util.C4646y.InterfaceC4647a
+    @Override // com.amap.api.mapcore.util.y.a
     public int getTextureID() {
         return ((GLCrossVector) this.mGLOverlay).getFBOTextureId();
     }
@@ -92,9 +92,9 @@ public class CrossVectorOverlay extends BaseMapOverlay<GLCrossVector, Object> im
 
     @Override // com.autonavi.amap.mapcore.interfaces.ICrossVectorOverlay
     public void remove() {
-        C4646y c4646y = this.pluginTexture;
-        if (c4646y != null) {
-            c4646y.b();
+        y yVar = this.pluginTexture;
+        if (yVar != null) {
+            yVar.b();
             this.pluginTexture = null;
         }
         this.imageListener = null;
@@ -171,9 +171,9 @@ public class CrossVectorOverlay extends BaseMapOverlay<GLCrossVector, Object> im
     @Override // com.autonavi.amap.mapcore.interfaces.ICrossVectorOverlay
     public void setGenerateCrossImageListener(CrossOverlay.GenerateCrossImageListener generateCrossImageListener) {
         this.imageListener = generateCrossImageListener;
-        C4646y c4646y = this.pluginTexture;
-        if (c4646y != null) {
-            c4646y.a(generateCrossImageListener);
+        y yVar = this.pluginTexture;
+        if (yVar != null) {
+            yVar.a(generateCrossImageListener);
         }
     }
 

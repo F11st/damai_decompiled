@@ -15,8 +15,8 @@ import cn.damai.user.repertoite.ui.RepertoireDetailFragment;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.Map;
-import tb.C9548pb;
 import tb.ja;
+import tb.pb;
 import tb.qd2;
 import tb.u12;
 
@@ -27,12 +27,11 @@ public class RankCardPresenter extends BasePresenter<RankCardContract.Model, Ran
     private TrackInfo mTrackInfo;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.rank.RankCardPresenter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1944a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1944a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -73,7 +72,7 @@ public class RankCardPresenter extends BasePresenter<RankCardContract.Model, Ran
         bundle.putString("projectName", rankItemBean.name);
         bundle.putString("projectImage", rankItemBean.headPic);
         RankInfo rankInfo = new RankInfo();
-        rankInfo.setId(map.get(C9548pb.CNT_CONTENT_ID));
+        rankInfo.setId(map.get(pb.CNT_CONTENT_ID));
         rankInfo.setName(map.get("titlelabel"));
         rankInfo.setOrder(rankItemBean.order + "");
         bundle.putParcelable("rankInfo", rankInfo);
@@ -114,7 +113,7 @@ public class RankCardPresenter extends BasePresenter<RankCardContract.Model, Ran
             TrackInfo trackInfo = this.mTrackInfo;
             trackInfo.put("item_id", (Object) (model.getData().id + ""));
             getView().getHolder().a(model.getOffset(), 0, model.getData());
-            getView().getRootView().setOnClickListener(new View$OnClickListenerC1944a());
+            getView().getRootView().setOnClickListener(new a());
             View rootView = getView().getRootView();
             userTrackExpose(rootView, "item_" + getModel().getOffset(), this.mTrackInfo.getArgsMap(), true);
         }

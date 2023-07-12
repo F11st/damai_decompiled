@@ -12,13 +12,12 @@ import tb.fn;
 public interface JavaPropertyInitializerEvaluator {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.components.JavaPropertyInitializerEvaluator$a */
     /* loaded from: classes3.dex */
-    public static final class C8335a implements JavaPropertyInitializerEvaluator {
+    public static final class a implements JavaPropertyInitializerEvaluator {
         @NotNull
-        public static final C8335a INSTANCE = new C8335a();
+        public static final a INSTANCE = new a();
 
-        private C8335a() {
+        private a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.load.java.components.JavaPropertyInitializerEvaluator

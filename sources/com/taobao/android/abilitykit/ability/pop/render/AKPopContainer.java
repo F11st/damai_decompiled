@@ -14,14 +14,14 @@ import com.taobao.android.abilitykit.ability.pop.animation.IAKPopAnimationCallba
 import com.taobao.android.abilitykit.ability.pop.render.IAKPopContainer;
 import com.taobao.android.abilitykit.ability.pop.render.util.GestureRoundCornerFrameLayout;
 import com.taobao.android.abilitykit.ability.pop.render.util.VerticalGestureHandler;
-import tb.C9586q;
-import tb.C9749u;
-import tb.C9796v;
-import tb.C9833w;
+import tb.q;
+import tb.u;
+import tb.v;
+import tb.w;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
-public class AKPopContainer<PARAMS extends C9833w, CONTEXT extends C9586q> extends FrameLayout implements IAKPopContainer<PARAMS, CONTEXT> {
+public class AKPopContainer<PARAMS extends w, CONTEXT extends q> extends FrameLayout implements IAKPopContainer<PARAMS, CONTEXT> {
     protected final int DEFAULT_BACKGROUND_COLOR;
     boolean hasAnimatedIn;
     @Nullable
@@ -35,9 +35,9 @@ public class AKPopContainer<PARAMS extends C9833w, CONTEXT extends C9586q> exten
     protected float mHeightRate;
     @Nullable
     protected View mLoadingView;
-    protected C9833w mParams;
+    protected w mParams;
     @Nullable
-    protected C9796v mPopConfig;
+    protected v mPopConfig;
     @Nullable
     protected IAKPopRender mPopRender;
     protected IAKPopContainer.Callback mStateCallback;
@@ -46,10 +46,9 @@ public class AKPopContainer<PARAMS extends C9833w, CONTEXT extends C9586q> exten
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.abilitykit.ability.pop.render.AKPopContainer$a */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC6298a implements View.OnClickListener {
-        View$OnClickListenerC6298a(AKPopContainer aKPopContainer) {
+    public class a implements View.OnClickListener {
+        a(AKPopContainer aKPopContainer) {
         }
 
         @Override // android.view.View.OnClickListener
@@ -58,10 +57,9 @@ public class AKPopContainer<PARAMS extends C9833w, CONTEXT extends C9586q> exten
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.abilitykit.ability.pop.render.AKPopContainer$b */
     /* loaded from: classes8.dex */
-    class C6299b implements VerticalGestureHandler.Callback {
-        C6299b() {
+    class b implements VerticalGestureHandler.Callback {
+        b() {
         }
 
         @Override // com.taobao.android.abilitykit.ability.pop.render.util.VerticalGestureHandler.Callback
@@ -74,13 +72,13 @@ public class AKPopContainer<PARAMS extends C9833w, CONTEXT extends C9586q> exten
 
         @Override // com.taobao.android.abilitykit.ability.pop.render.util.VerticalGestureHandler.Callback
         public boolean isAnimating() {
-            C9796v c9796v = AKPopContainer.this.mPopConfig;
+            v vVar = AKPopContainer.this.mPopConfig;
             throw null;
         }
 
         @Override // com.taobao.android.abilitykit.ability.pop.render.util.VerticalGestureHandler.Callback
         public boolean isPanEnabled() {
-            C9796v c9796v = AKPopContainer.this.mPopConfig;
+            v vVar = AKPopContainer.this.mPopConfig;
             throw null;
         }
 
@@ -98,14 +96,13 @@ public class AKPopContainer<PARAMS extends C9833w, CONTEXT extends C9586q> exten
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.abilitykit.ability.pop.render.AKPopContainer$c */
     /* loaded from: classes8.dex */
-    class C6300c implements ValueAnimator.AnimatorUpdateListener {
+    class c implements ValueAnimator.AnimatorUpdateListener {
         final /* synthetic */ int a;
         final /* synthetic */ int b;
         final /* synthetic */ int c;
 
-        C6300c(int i, int i2, int i3) {
+        c(int i, int i2, int i3) {
             this.a = i;
             this.b = i2;
             this.c = i3;
@@ -141,11 +138,11 @@ public class AKPopContainer<PARAMS extends C9833w, CONTEXT extends C9586q> exten
             this.mBackgroundAnimator = ValueAnimator.ofInt(Color.alpha(i), 0);
         }
         this.mBackgroundAnimator.setDuration(300L);
-        this.mBackgroundAnimator.addUpdateListener(new C6300c(red, green, blue));
+        this.mBackgroundAnimator.addUpdateListener(new c(red, green, blue));
         this.mBackgroundAnimator.start();
     }
 
-    private void doAnimation(boolean z, @NonNull View view, @NonNull C9796v c9796v, @Nullable IAKPopAnimationCallback iAKPopAnimationCallback) {
+    private void doAnimation(boolean z, @NonNull View view, @NonNull v vVar, @Nullable IAKPopAnimationCallback iAKPopAnimationCallback) {
         throw null;
     }
 
@@ -163,8 +160,8 @@ public class AKPopContainer<PARAMS extends C9833w, CONTEXT extends C9586q> exten
         if (this.mGestureUtil != null) {
             return;
         }
-        new C6299b();
-        new C9749u();
+        new b();
+        new u();
         throw null;
     }
 
@@ -190,7 +187,7 @@ public class AKPopContainer<PARAMS extends C9833w, CONTEXT extends C9586q> exten
         this.mContentView = view;
         this.mContentWrapper.removeAllViews();
         this.mContentWrapper.addView(this.mContentView);
-        this.mContentView.setOnClickListener(new View$OnClickListenerC6298a(this));
+        this.mContentView.setOnClickListener(new a(this));
         adjustWrapperHeight();
     }
 

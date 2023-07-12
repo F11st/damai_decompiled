@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import cn.damai.category.discountticket.model.OnTListener;
 import cn.damai.common.app.base.BaseActivity;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
 import cn.damai.commonbusiness.yymember.MemberGuideCallBackRequest;
@@ -35,7 +34,7 @@ import tb.ur1;
 public class MemberGuideDialogManger {
     private static transient /* synthetic */ IpChange $ipChange;
     private final BaseActivity a;
-    private final C1213g b;
+    private final g b;
     private UTHelperCallback c;
 
     /* compiled from: Taobao */
@@ -85,37 +84,35 @@ public class MemberGuideDialogManger {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.util.MemberGuideDialogManger$a */
     /* loaded from: classes5.dex */
-    public class C1205a implements DMImageCreator.DMImageSuccListener {
+    public class a implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnTListener a;
 
-        C1205a(OnTListener onTListener) {
+        a(OnTListener onTListener) {
             this.a = onTListener;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1578956669")) {
-                ipChange.ipc$dispatch("1578956669", new Object[]{this, c0502e});
-            } else if (!MemberGuideDialogManger.this.j() || c0502e == null || (bitmap = c0502e.b) == null || bitmap.isRecycled()) {
+                ipChange.ipc$dispatch("1578956669", new Object[]{this, eVar});
+            } else if (!MemberGuideDialogManger.this.j() || eVar == null || (bitmap = eVar.b) == null || bitmap.isRecycled()) {
             } else {
-                this.a.callBack(c0502e.b);
+                this.a.callBack(eVar.b);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.util.MemberGuideDialogManger$b */
     /* loaded from: classes5.dex */
-    public class C1206b implements OnTListener<Bitmap> {
+    public class b implements OnTListener<Bitmap> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ WrapFirstGuideBean a;
 
-        C1206b(WrapFirstGuideBean wrapFirstGuideBean) {
+        b(WrapFirstGuideBean wrapFirstGuideBean) {
             this.a = wrapFirstGuideBean;
         }
 
@@ -132,13 +129,12 @@ public class MemberGuideDialogManger {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.util.MemberGuideDialogManger$c */
     /* loaded from: classes5.dex */
-    public class C1207c implements OnTListener<Bitmap> {
+    public class c implements OnTListener<Bitmap> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ MemberFinishedInfo a;
 
-        C1207c(MemberFinishedInfo memberFinishedInfo) {
+        c(MemberFinishedInfo memberFinishedInfo) {
             this.a = memberFinishedInfo;
         }
 
@@ -155,19 +151,17 @@ public class MemberGuideDialogManger {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.util.MemberGuideDialogManger$d */
     /* loaded from: classes5.dex */
-    public class C1208d implements DialogUtil.MemberDialogAction {
+    public class d implements DialogUtil.MemberDialogAction {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ WrapFirstGuideBean a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.homepage.util.MemberGuideDialogManger$d$a */
         /* loaded from: classes14.dex */
-        public class View$OnClickListenerC1209a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC1209a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -180,19 +174,18 @@ public class MemberGuideDialogManger {
                 if (MemberGuideDialogManger.this.c != null) {
                     MemberGuideDialogManger.this.c.confirmUt("");
                 } else {
-                    py0.h(C1208d.this.a.tipType);
+                    py0.h(d.this.a.tipType);
                 }
                 k23.e(MemberGuideDialogManger.this.a);
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.homepage.util.MemberGuideDialogManger$d$b */
         /* loaded from: classes14.dex */
-        public class View$OnClickListenerC1210b implements View.OnClickListener {
+        public class b implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC1210b() {
+            b() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -203,12 +196,12 @@ public class MemberGuideDialogManger {
                 } else if (MemberGuideDialogManger.this.c != null) {
                     MemberGuideDialogManger.this.c.closeUt();
                 } else {
-                    py0.g(C1208d.this.a.tipType);
+                    py0.g(d.this.a.tipType);
                 }
             }
         }
 
-        C1208d(WrapFirstGuideBean wrapFirstGuideBean) {
+        d(WrapFirstGuideBean wrapFirstGuideBean) {
             this.a = wrapFirstGuideBean;
         }
 
@@ -227,24 +220,23 @@ public class MemberGuideDialogManger {
         @Override // cn.damai.uikit.util.DialogUtil.MemberDialogAction
         public View.OnClickListener getCloseClick() {
             IpChange ipChange = $ipChange;
-            return AndroidInstantRuntime.support(ipChange, "-1653062356") ? (View.OnClickListener) ipChange.ipc$dispatch("-1653062356", new Object[]{this}) : new View$OnClickListenerC1210b();
+            return AndroidInstantRuntime.support(ipChange, "-1653062356") ? (View.OnClickListener) ipChange.ipc$dispatch("-1653062356", new Object[]{this}) : new b();
         }
 
         @Override // cn.damai.uikit.util.DialogUtil.MemberDialogAction
         public View.OnClickListener getContentClick() {
             IpChange ipChange = $ipChange;
-            return AndroidInstantRuntime.support(ipChange, "-148446483") ? (View.OnClickListener) ipChange.ipc$dispatch("-148446483", new Object[]{this}) : new View$OnClickListenerC1209a();
+            return AndroidInstantRuntime.support(ipChange, "-148446483") ? (View.OnClickListener) ipChange.ipc$dispatch("-148446483", new Object[]{this}) : new a();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.util.MemberGuideDialogManger$e */
     /* loaded from: classes14.dex */
-    public class DialogInterface$OnShowListenerC1211e implements DialogInterface.OnShowListener {
+    public class e implements DialogInterface.OnShowListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ WrapFirstGuideBean a;
 
-        DialogInterface$OnShowListenerC1211e(MemberGuideDialogManger memberGuideDialogManger, WrapFirstGuideBean wrapFirstGuideBean) {
+        e(MemberGuideDialogManger memberGuideDialogManger, WrapFirstGuideBean wrapFirstGuideBean) {
             this.a = wrapFirstGuideBean;
         }
 
@@ -260,12 +252,11 @@ public class MemberGuideDialogManger {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.util.MemberGuideDialogManger$f */
     /* loaded from: classes14.dex */
-    public class DialogInterface$OnShowListenerC1212f implements DialogInterface.OnShowListener {
+    public class f implements DialogInterface.OnShowListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnShowListenerC1212f(MemberGuideDialogManger memberGuideDialogManger) {
+        f(MemberGuideDialogManger memberGuideDialogManger) {
         }
 
         @Override // android.content.DialogInterface.OnShowListener
@@ -280,13 +271,12 @@ public class MemberGuideDialogManger {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.util.MemberGuideDialogManger$g */
     /* loaded from: classes5.dex */
-    public static class C1213g implements IMemberDialogDispatcher {
+    public static class g implements IMemberDialogDispatcher {
         private static transient /* synthetic */ IpChange $ipChange;
         private final IMemberDialogDispatcher a;
 
-        public C1213g(IMemberDialogDispatcher iMemberDialogDispatcher) {
+        public g(IMemberDialogDispatcher iMemberDialogDispatcher) {
             this.a = iMemberDialogDispatcher;
         }
 
@@ -306,7 +296,7 @@ public class MemberGuideDialogManger {
 
     public MemberGuideDialogManger(BaseActivity baseActivity, IMemberDialogDispatcher iMemberDialogDispatcher) {
         this.a = baseActivity;
-        this.b = new C1213g(iMemberDialogDispatcher);
+        this.b = new g(iMemberDialogDispatcher);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -316,16 +306,16 @@ public class MemberGuideDialogManger {
             ipChange.ipc$dispatch("-108449975", new Object[]{this, memberFinishedInfo, bitmap});
             return;
         }
-        Dialog c = DialogUtil.c(this.a, bitmap, memberFinishedInfo.avatar, memberFinishedInfo.userNick, memberFinishedInfo.memberFlag, memberFinishedInfo.gifUrl, new DialogUtil.MemberDialogActionV2() { // from class: cn.damai.homepage.util.MemberGuideDialogManger.5
+        Dialog c2 = DialogUtil.c(this.a, bitmap, memberFinishedInfo.avatar, memberFinishedInfo.userNick, memberFinishedInfo.memberFlag, memberFinishedInfo.gifUrl, new DialogUtil.MemberDialogActionV2() { // from class: cn.damai.homepage.util.MemberGuideDialogManger.5
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* compiled from: Taobao */
             /* renamed from: cn.damai.homepage.util.MemberGuideDialogManger$5$a */
             /* loaded from: classes14.dex */
-            public class View$OnClickListenerC1203a implements View.OnClickListener {
+            public class a implements View.OnClickListener {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                View$OnClickListenerC1203a() {
+                a() {
                 }
 
                 @Override // android.view.View.OnClickListener
@@ -347,10 +337,10 @@ public class MemberGuideDialogManger {
             /* compiled from: Taobao */
             /* renamed from: cn.damai.homepage.util.MemberGuideDialogManger$5$b */
             /* loaded from: classes14.dex */
-            public class View$OnClickListenerC1204b implements View.OnClickListener {
+            public class b implements View.OnClickListener {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                View$OnClickListenerC1204b() {
+                b() {
                 }
 
                 @Override // android.view.View.OnClickListener
@@ -379,13 +369,13 @@ public class MemberGuideDialogManger {
             @Override // cn.damai.uikit.util.DialogUtil.MemberDialogAction
             public View.OnClickListener getCloseClick() {
                 IpChange ipChange2 = $ipChange;
-                return AndroidInstantRuntime.support(ipChange2, "-777043350") ? (View.OnClickListener) ipChange2.ipc$dispatch("-777043350", new Object[]{this}) : new View$OnClickListenerC1204b();
+                return AndroidInstantRuntime.support(ipChange2, "-777043350") ? (View.OnClickListener) ipChange2.ipc$dispatch("-777043350", new Object[]{this}) : new b();
             }
 
             @Override // cn.damai.uikit.util.DialogUtil.MemberDialogAction
             public View.OnClickListener getContentClick() {
                 IpChange ipChange2 = $ipChange;
-                return AndroidInstantRuntime.support(ipChange2, "-107771733") ? (View.OnClickListener) ipChange2.ipc$dispatch("-107771733", new Object[]{this}) : new View$OnClickListenerC1203a();
+                return AndroidInstantRuntime.support(ipChange2, "-107771733") ? (View.OnClickListener) ipChange2.ipc$dispatch("-107771733", new Object[]{this}) : new a();
             }
 
             @Override // cn.damai.uikit.util.DialogUtil.MemberDialogActionV2
@@ -498,8 +488,8 @@ public class MemberGuideDialogManger {
                 }
             }
         });
-        c.setOnShowListener(new DialogInterface$OnShowListenerC1212f(this));
-        this.b.dialogToShow(c);
+        c2.setOnShowListener(new f(this));
+        this.b.dialogToShow(c2);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -509,9 +499,9 @@ public class MemberGuideDialogManger {
             ipChange.ipc$dispatch("559967750", new Object[]{this, wrapFirstGuideBean, bitmap});
             return;
         }
-        Dialog d = DialogUtil.d(this.a, bitmap, new C1208d(wrapFirstGuideBean));
-        d.setOnShowListener(new DialogInterface$OnShowListenerC1211e(this, wrapFirstGuideBean));
-        this.b.dialogToShow(d);
+        Dialog d2 = DialogUtil.d(this.a, bitmap, new d(wrapFirstGuideBean));
+        d2.setOnShowListener(new e(this, wrapFirstGuideBean));
+        this.b.dialogToShow(d2);
     }
 
     private void i(String str, OnTListener<Bitmap> onTListener) {
@@ -519,7 +509,7 @@ public class MemberGuideDialogManger {
         if (AndroidInstantRuntime.support(ipChange, "580040991")) {
             ipChange.ipc$dispatch("580040991", new Object[]{this, str, onTListener});
         } else {
-            C0504a.b().e(str).n(new C1205a(onTListener)).f();
+            cn.damai.common.image.a.b().e(str).n(new a(onTListener)).f();
         }
     }
 
@@ -540,14 +530,14 @@ public class MemberGuideDialogManger {
         } else if (mainAlertEntity.isFirstMemberGuide()) {
             WrapFirstGuideBean wrapFirstGuideBean = mainAlertEntity.getWrapFirstGuideBean();
             if (wrapFirstGuideBean.isValid()) {
-                i(wrapFirstGuideBean.firstMemberGuideUrl, new C1206b(wrapFirstGuideBean));
+                i(wrapFirstGuideBean.firstMemberGuideUrl, new b(wrapFirstGuideBean));
             } else {
                 onDismissListener.onDismiss(null);
             }
         } else if (mainAlertEntity.isMemberFinishGuide()) {
             MemberFinishedInfo memberFinishedInfo = mainAlertEntity.getMemberFinishedInfo();
             if (memberFinishedInfo.isValid4FinishDialog()) {
-                i(memberFinishedInfo.profitImageUrl, new C1207c(memberFinishedInfo));
+                i(memberFinishedInfo.profitImageUrl, new c(memberFinishedInfo));
             } else {
                 onDismissListener.onDismiss(null);
             }

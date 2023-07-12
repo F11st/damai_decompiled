@@ -26,7 +26,7 @@ public class YKThumbsupIcon extends FrameLayout {
     }
 
     private void init(Context context) {
-        this.lottieAnimationView = (LottieAnimationView) LayoutInflater.from(context).inflate(R.C8074layout.resource_yk_thumbsup_icon, (ViewGroup) this, true).findViewById(R.id.thumbs_up_icon);
+        this.lottieAnimationView = (LottieAnimationView) LayoutInflater.from(context).inflate(R.layout.resource_yk_thumbsup_icon, (ViewGroup) this, true).findViewById(R.id.thumbs_up_icon);
         if (!Utils.isDebug(context) && YoukuDeviceInfoProviderProxy.getDeviceScore() <= 80) {
             this.animate = false;
         } else {
@@ -37,7 +37,7 @@ public class YKThumbsupIcon extends FrameLayout {
     public void changeState(boolean z) {
         if (this.animate) {
             if (this.clicked) {
-                this.lottieAnimationView.setImageResource(R.C8072drawable.yk_icon_thumbs_up);
+                this.lottieAnimationView.setImageResource(R.drawable.yk_icon_thumbs_up);
                 this.clicked = false;
                 return;
             }
@@ -50,7 +50,7 @@ public class YKThumbsupIcon extends FrameLayout {
 
                 @Override // android.animation.Animator.AnimatorListener
                 public void onAnimationEnd(Animator animator) {
-                    YKThumbsupIcon.this.lottieAnimationView.setImageResource(R.C8072drawable.yk_icon_thumbs_uped);
+                    YKThumbsupIcon.this.lottieAnimationView.setImageResource(R.drawable.yk_icon_thumbs_uped);
                 }
 
                 @Override // android.animation.Animator.AnimatorListener
@@ -64,19 +64,19 @@ public class YKThumbsupIcon extends FrameLayout {
             this.lottieAnimationView.playAnimation();
             this.clicked = true;
         } else if (this.clicked) {
-            this.lottieAnimationView.setImageResource(R.C8072drawable.yk_icon_thumbs_up);
+            this.lottieAnimationView.setImageResource(R.drawable.yk_icon_thumbs_up);
             this.clicked = false;
         } else {
-            this.lottieAnimationView.setImageResource(R.C8072drawable.yk_icon_thumbs_uped);
+            this.lottieAnimationView.setImageResource(R.drawable.yk_icon_thumbs_uped);
             this.clicked = true;
         }
     }
 
     public void setInitState(boolean z) {
         if (z) {
-            this.lottieAnimationView.setImageResource(R.C8072drawable.yk_icon_thumbs_uped);
+            this.lottieAnimationView.setImageResource(R.drawable.yk_icon_thumbs_uped);
         } else {
-            this.lottieAnimationView.setImageResource(R.C8072drawable.yk_icon_thumbs_up);
+            this.lottieAnimationView.setImageResource(R.drawable.yk_icon_thumbs_up);
         }
         this.clicked = z;
     }

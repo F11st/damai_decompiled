@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.ultron.R$id;
 import cn.damai.ultron.R$layout;
 import cn.damai.ultron.utils.DmUltronConstants;
@@ -37,15 +37,14 @@ public class PayTypeView extends LinearLayout implements View.OnClickListener {
     private TextView tv_pay_info;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.custom.view.PayTypeView$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2622a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DmPayTypeBean a;
         final /* synthetic */ PayTypeItemView b;
         final /* synthetic */ int c;
 
-        View$OnClickListenerC2622a(DmPayTypeBean dmPayTypeBean, PayTypeItemView payTypeItemView, int i) {
+        a(DmPayTypeBean dmPayTypeBean, PayTypeItemView payTypeItemView, int i) {
             this.a = dmPayTypeBean;
             this.b = payTypeItemView;
             this.c = i;
@@ -65,7 +64,7 @@ public class PayTypeView extends LinearLayout implements View.OnClickListener {
                 PayTypeView.this.selectView = this.b;
                 xr.c(DmUltronConstants.REFRESH_PAYTYPE_COMPONENT_DATA, PayTypeView.this.dmPayTypeComponent.a());
                 try {
-                    C0529c.e().x(kb0.u().z(this.c, String.valueOf(ua0.b(PayTypeView.this.mContext)), this.a.name));
+                    c.e().x(kb0.u().z(this.c, String.valueOf(ua0.b(PayTypeView.this.mContext)), this.a.name));
                 } catch (Exception unused) {
                 }
             }
@@ -98,7 +97,7 @@ public class PayTypeView extends LinearLayout implements View.OnClickListener {
                     this.selectView = payTypeItemView;
                     payTypeItemView.setChecked(Boolean.TRUE, false);
                 }
-                payTypeItemView.setOnClickListener(new View$OnClickListenerC2622a(dmPayTypeBean, payTypeItemView, i));
+                payTypeItemView.setOnClickListener(new a(dmPayTypeBean, payTypeItemView, i));
                 if (!this.isAllShow.booleanValue() && i >= this.defaultShowNum) {
                     payTypeItemView.setVisibility(8);
                 }
@@ -108,7 +107,7 @@ public class PayTypeView extends LinearLayout implements View.OnClickListener {
                     hashMap.put("item_id", ua0.b(getContext()) + "");
                     hashMap.put("titlelabel", dmPayTypeBean.name);
                     hashMap.put("discount_name", dmPayTypeBean.promotionDesc);
-                    C0529c e = C0529c.e();
+                    c e = c.e();
                     e.G(payTypeItemView, "pay_type_" + i, "pay", "confirm", hashMap);
                 } catch (Exception unused) {
                 }
@@ -147,7 +146,7 @@ public class PayTypeView extends LinearLayout implements View.OnClickListener {
             this.ll_show_all.setVisibility(8);
             this.isAllShow = Boolean.TRUE;
             try {
-                C0529c.e().x(kb0.u().y(this.mContext));
+                c.e().x(kb0.u().y(this.mContext));
             } catch (Exception unused) {
             }
         }

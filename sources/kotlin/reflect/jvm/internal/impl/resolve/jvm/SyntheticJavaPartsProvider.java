@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.resolve.jvm;
 
 import java.util.Collection;
 import java.util.List;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.SimpleFunctionDescriptor;
@@ -14,23 +14,22 @@ import tb.ni1;
 /* loaded from: classes3.dex */
 public interface SyntheticJavaPartsProvider {
     @NotNull
-    public static final C8496a Companion = C8496a.a;
+    public static final a Companion = a.a;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.resolve.jvm.SyntheticJavaPartsProvider$a */
     /* loaded from: classes3.dex */
-    public static final class C8496a {
-        static final /* synthetic */ C8496a a = new C8496a();
+    public static final class a {
+        static final /* synthetic */ a a = new a();
         @NotNull
         private static final lm b;
 
         static {
             List g;
-            g = C8214m.g();
+            g = m.g();
             b = new lm(g);
         }
 
-        private C8496a() {
+        private a() {
         }
 
         @NotNull

@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.Observer;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import java.util.concurrent.atomic.AtomicReference;
@@ -70,12 +70,12 @@ public final class ObservableConcatWithSingle<T> extends AbstractObservableWithU
         }
     }
 
-    public ObservableConcatWithSingle(AbstractC8149d<T> abstractC8149d, SingleSource<? extends T> singleSource) {
-        super(abstractC8149d);
+    public ObservableConcatWithSingle(d<T> dVar, SingleSource<? extends T> singleSource) {
+        super(dVar);
         this.other = singleSource;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new ConcatWithObserver(observer, this.other));
     }

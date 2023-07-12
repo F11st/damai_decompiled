@@ -13,13 +13,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.app.widget.DMDialog;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.imagebrowse.bean.PicInfo;
 import cn.damai.commonbusiness.imagebrowse.bean.VideoInfo;
 import cn.damai.commonbusiness.share.ShareManager;
@@ -45,7 +42,7 @@ import cn.damai.user.userprofile.bean.InteractionFeedData;
 import cn.damai.user.userprofile.bean.PraiseRequest;
 import cn.damai.user.userprofile.bean.VideoInfo;
 import cn.damai.user.userprofile.bean.WatchFeedData;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
@@ -94,13 +91,12 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
     public NineGridlayout v;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.FeedsWraperHolder$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2758a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        View$OnClickListenerC2758a(String str) {
+        a(String str) {
             this.a = str;
         }
 
@@ -118,13 +114,12 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.FeedsWraperHolder$b */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2759b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FeedMergeDataDO a;
 
-        View$OnClickListenerC2759b(FeedMergeDataDO feedMergeDataDO) {
+        b(FeedMergeDataDO feedMergeDataDO) {
             this.a = feedMergeDataDO;
         }
 
@@ -140,19 +135,17 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.FeedsWraperHolder$c */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2760c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FeedMergeDataDO a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.user.userprofile.cuser.view.FeedsWraperHolder$c$a */
         /* loaded from: classes17.dex */
-        public class DialogInterface$OnClickListenerC2761a implements DialogInterface.OnClickListener {
+        public class a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC2761a(View$OnClickListenerC2760c view$OnClickListenerC2760c) {
+            a(c cVar) {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -168,12 +161,11 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.user.userprofile.cuser.view.FeedsWraperHolder$c$b */
         /* loaded from: classes17.dex */
-        public class DialogInterface$OnClickListenerC2762b implements DialogInterface.OnClickListener {
+        public class b implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC2762b() {
+            b() {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -183,14 +175,14 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
                     ipChange.ipc$dispatch("1922257476", new Object[]{this, dialogInterface, Integer.valueOf(i)});
                     return;
                 }
-                View$OnClickListenerC2760c view$OnClickListenerC2760c = View$OnClickListenerC2760c.this;
-                FeedsWraperHolder.this.p(view$OnClickListenerC2760c.a);
+                c cVar = c.this;
+                FeedsWraperHolder.this.p(cVar.a);
                 dialogInterface.dismiss();
                 ShareManager.E().C();
             }
         }
 
-        View$OnClickListenerC2760c(FeedMergeDataDO feedMergeDataDO) {
+        c(FeedMergeDataDO feedMergeDataDO) {
             this.a = feedMergeDataDO;
         }
 
@@ -200,19 +192,18 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
             if (AndroidInstantRuntime.support(ipChange, "-359401731")) {
                 ipChange.ipc$dispatch("-359401731", new Object[]{this, view});
             } else {
-                new DMDialog(FeedsWraperHolder.this.l).v("注意").q("确定要删除该数据吗?").n("确定", new DialogInterface$OnClickListenerC2762b()).i("取消", new DialogInterface$OnClickListenerC2761a(this)).show();
+                new DMDialog(FeedsWraperHolder.this.l).v("注意").q("确定要删除该数据吗?").n("确定", new b()).i("取消", new a(this)).show();
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.FeedsWraperHolder$d */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2763d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FeedMergeDataDO a;
 
-        View$OnClickListenerC2763d(FeedMergeDataDO feedMergeDataDO) {
+        d(FeedMergeDataDO feedMergeDataDO) {
             this.a = feedMergeDataDO;
         }
 
@@ -252,13 +243,12 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.FeedsWraperHolder$e */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2764e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FeedMergeDataDO a;
 
-        View$OnClickListenerC2764e(FeedMergeDataDO feedMergeDataDO) {
+        e(FeedMergeDataDO feedMergeDataDO) {
             this.a = feedMergeDataDO;
         }
 
@@ -294,13 +284,12 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.FeedsWraperHolder$f */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2765f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FeedMergeDataDO a;
 
-        View$OnClickListenerC2765f(FeedMergeDataDO feedMergeDataDO) {
+        f(FeedMergeDataDO feedMergeDataDO) {
             this.a = feedMergeDataDO;
         }
 
@@ -321,8 +310,8 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
                     hashMap.put("evaluate_id", FeedsWraperHolder.this.i(this.a));
                     hashMap.put("content_type", this.a.bizType);
                     hashMap.put("content_id", FeedsWraperHolder.this.i(this.a));
-                    C0528b c0528b = new C0528b();
-                    C0529c.e().x(c0528b.e("brand", "evaluate_list", "forward_" + FeedsWraperHolder.this.itemView.getTag(), hashMap, Boolean.TRUE));
+                    cn.damai.common.user.b bVar = new cn.damai.common.user.b();
+                    cn.damai.common.user.c.e().x(bVar.e("brand", "evaluate_list", "forward_" + FeedsWraperHolder.this.itemView.getTag(), hashMap, Boolean.TRUE));
                     return;
                 }
                 if (!feedsWraperHolder.k) {
@@ -346,13 +335,12 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.FeedsWraperHolder$g */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2766g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FeedMergeDataDO a;
 
-        View$OnClickListenerC2766g(FeedMergeDataDO feedMergeDataDO) {
+        g(FeedMergeDataDO feedMergeDataDO) {
             this.a = feedMergeDataDO;
         }
 
@@ -379,7 +367,7 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
                 if (!wh2.j(FeedsWraperHolder.this.m(this.a))) {
                     Bundle bundle2 = new Bundle();
                     bundle2.putString("url", FeedsWraperHolder.this.m(this.a) + "#commentlist");
-                    DMNav.from(FeedsWraperHolder.this.l).needLogin().withExtras(bundle2).toUri(NavUri.b(C3834a.C3837c.d));
+                    DMNav.from(FeedsWraperHolder.this.l).needLogin().withExtras(bundle2).toUri(NavUri.b(a.c.d));
                 }
             } else {
                 WatchFeedData watchFeedData = this.a.watchData.get(0);
@@ -396,8 +384,8 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
                 hashMap.put("evaluate_id", FeedsWraperHolder.this.i(this.a));
                 hashMap.put("content_type", this.a.bizType);
                 hashMap.put("content_id", FeedsWraperHolder.this.i(this.a));
-                C0528b c0528b = new C0528b();
-                C0529c.e().x(c0528b.e("brand", "evaluate_list", "comment_" + FeedsWraperHolder.this.itemView.getTag(), hashMap, Boolean.TRUE));
+                cn.damai.common.user.b bVar = new cn.damai.common.user.b();
+                cn.damai.common.user.c.e().x(bVar.e("brand", "evaluate_list", "comment_" + FeedsWraperHolder.this.itemView.getTag(), hashMap, Boolean.TRUE));
                 return;
             }
             if (!feedsWraperHolder.k) {
@@ -428,15 +416,14 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.FeedsWraperHolder$h */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2767h implements View.OnClickListener {
+    public class h implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
         final /* synthetic */ VideoInfo b;
         final /* synthetic */ ArrayList c;
 
-        View$OnClickListenerC2767h(FeedsWraperHolder feedsWraperHolder, Activity activity, VideoInfo videoInfo, ArrayList arrayList) {
+        h(FeedsWraperHolder feedsWraperHolder, Activity activity, VideoInfo videoInfo, ArrayList arrayList) {
             this.a = activity;
             this.b = videoInfo;
             this.c = arrayList;
@@ -491,9 +478,8 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.FeedsWraperHolder$i */
     /* loaded from: classes17.dex */
-    public class C2768i {
+    public class i {
         private static transient /* synthetic */ IpChange $ipChange;
         private CommentFeedData a;
         private String b;
@@ -501,7 +487,7 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
         private String d;
         private String e;
 
-        public C2768i(CommentFeedData commentFeedData) {
+        public i(CommentFeedData commentFeedData) {
             this.a = commentFeedData;
         }
 
@@ -525,10 +511,10 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
             return AndroidInstantRuntime.support(ipChange, "826652043") ? (String) ipChange.ipc$dispatch("826652043", new Object[]{this}) : this.d;
         }
 
-        public C2768i e() {
+        public i e() {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-512677418")) {
-                return (C2768i) ipChange.ipc$dispatch("-512677418", new Object[]{this});
+                return (i) ipChange.ipc$dispatch("-512677418", new Object[]{this});
             }
             CommentFeedData commentFeedData = this.a;
             this.c = commentFeedData.comment;
@@ -690,19 +676,19 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
             this.itemView.findViewById(R$id.user_feeds_zhuanfaicon).setVisibility(8);
             this.itemView.findViewById(R$id.user_feeds_zhuanfatv).setVisibility(8);
         } else {
-            new View$OnClickListenerC2765f(feedMergeDataDO);
+            new f(feedMergeDataDO);
         }
         if (!feedMergeDataDO.enableComment) {
             this.itemView.findViewById(R$id.user_feeds_commenticon).setVisibility(8);
             this.d.setVisibility(8);
         } else {
             View view = this.itemView;
-            int i = R$id.user_feeds_commenticon;
-            view.findViewById(i).setVisibility(0);
+            int i2 = R$id.user_feeds_commenticon;
+            view.findViewById(i2).setVisibility(0);
             this.d.setVisibility(0);
             if (getItemViewType() == FeedsAdapter.G) {
                 this.d.setVisibility(8);
-                this.itemView.findViewById(i).setVisibility(8);
+                this.itemView.findViewById(i2).setVisibility(8);
             }
             if (feedMergeDataDO.commentNum == 0) {
                 this.d.setText("回复");
@@ -710,9 +696,9 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
                 TextView textView = this.d;
                 textView.setText(feedMergeDataDO.commentNum + "");
             }
-            View$OnClickListenerC2766g view$OnClickListenerC2766g = new View$OnClickListenerC2766g(feedMergeDataDO);
-            this.itemView.findViewById(i).setOnClickListener(view$OnClickListenerC2766g);
-            this.d.setOnClickListener(view$OnClickListenerC2766g);
+            g gVar = new g(feedMergeDataDO);
+            this.itemView.findViewById(i2).setOnClickListener(gVar);
+            this.d.setOnClickListener(gVar);
         }
         if (!feedMergeDataDO.enablePraise) {
             this.itemView.findViewById(R$id.user_feeds_zanicon).setVisibility(8);
@@ -720,8 +706,8 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
             return;
         }
         View view2 = this.itemView;
-        int i2 = R$id.user_feeds_zanicon;
-        view2.findViewById(i2).setVisibility(0);
+        int i3 = R$id.user_feeds_zanicon;
+        view2.findViewById(i3).setVisibility(0);
         this.e.setVisibility(0);
         if (feedMergeDataDO.praiseNum == 0) {
             this.e.setText("赞");
@@ -792,9 +778,9 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
                                 if (FeedsWraperHolder.this.o) {
                                     AnonymousClass8 anonymousClass8 = AnonymousClass8.this;
                                     FeedMergeDataDO feedMergeDataDO2 = feedMergeDataDO;
-                                    int i3 = feedMergeDataDO2.praiseNum - 1;
-                                    feedMergeDataDO2.praiseNum = i3;
-                                    if (i3 < 0) {
+                                    int i4 = feedMergeDataDO2.praiseNum - 1;
+                                    feedMergeDataDO2.praiseNum = i4;
+                                    if (i4 < 0) {
                                         feedMergeDataDO2.praiseNum = 0;
                                     }
                                     if (feedMergeDataDO2.praiseNum == 0) {
@@ -805,10 +791,10 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
                                     FeedsWraperHolder feedsWraperHolder2 = FeedsWraperHolder.this;
                                     TextView textView3 = feedsWraperHolder2.e;
                                     Resources resources = feedsWraperHolder2.l.getResources();
-                                    int i4 = R$color.color_nozan;
-                                    textView3.setTextColor(resources.getColor(i4));
+                                    int i5 = R$color.color_nozan;
+                                    textView3.setTextColor(resources.getColor(i5));
                                     FeedsWraperHolder feedsWraperHolder3 = FeedsWraperHolder.this;
-                                    feedsWraperHolder3.f.setTextColor(feedsWraperHolder3.l.getResources().getColor(i4));
+                                    feedsWraperHolder3.f.setTextColor(feedsWraperHolder3.l.getResources().getColor(i5));
                                     FeedsWraperHolder feedsWraperHolder4 = FeedsWraperHolder.this;
                                     feedsWraperHolder4.f.setText(feedsWraperHolder4.l.getResources().getString(R$string.iconfont_dianzan_));
                                 } else {
@@ -818,10 +804,10 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
                                     FeedsWraperHolder feedsWraperHolder5 = FeedsWraperHolder.this;
                                     TextView textView4 = feedsWraperHolder5.e;
                                     Resources resources2 = feedsWraperHolder5.l.getResources();
-                                    int i5 = R$color.color_FF1268;
-                                    textView4.setTextColor(resources2.getColor(i5));
+                                    int i6 = R$color.color_FF1268;
+                                    textView4.setTextColor(resources2.getColor(i6));
                                     FeedsWraperHolder feedsWraperHolder6 = FeedsWraperHolder.this;
-                                    feedsWraperHolder6.f.setTextColor(feedsWraperHolder6.l.getResources().getColor(i5));
+                                    feedsWraperHolder6.f.setTextColor(feedsWraperHolder6.l.getResources().getColor(i6));
                                     FeedsWraperHolder feedsWraperHolder7 = FeedsWraperHolder.this;
                                     feedsWraperHolder7.f.setText(feedsWraperHolder7.l.getResources().getString(R$string.iconfont_dianzanmian_));
                                 }
@@ -836,8 +822,8 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
                         hashMap.put("evaluate_id", FeedsWraperHolder.this.i(feedMergeDataDO));
                         hashMap.put("content_type", feedMergeDataDO.bizType);
                         hashMap.put("content_id", FeedsWraperHolder.this.i(feedMergeDataDO));
-                        C0528b c0528b = new C0528b();
-                        C0529c.e().x(c0528b.e("brand", "evaluate_list", "likes_" + FeedsWraperHolder.this.itemView.getTag(), hashMap, Boolean.FALSE));
+                        cn.damai.common.user.b bVar = new cn.damai.common.user.b();
+                        cn.damai.common.user.c.e().x(bVar.e("brand", "evaluate_list", "likes_" + FeedsWraperHolder.this.itemView.getTag(), hashMap, Boolean.FALSE));
                     } else if (!feedsWraperHolder.k) {
                         HashMap hashMap2 = new HashMap();
                         FeedMergeDataDO feedMergeDataDO2 = feedMergeDataDO;
@@ -865,7 +851,7 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
                 }
             }
         };
-        this.itemView.findViewById(i2).setOnClickListener(onClickListener);
+        this.itemView.findViewById(i3).setOnClickListener(onClickListener);
         this.e.setOnClickListener(onClickListener);
     }
 
@@ -876,8 +862,8 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
             ipChange.ipc$dispatch("-397726620", new Object[]{this, feedMergeDataDO, dMRatingBar});
         } else if (dMRatingBar == null) {
         } else {
-            int i = this.n;
-            if ((i == FeedsAdapter.t || i == FeedsAdapter.u || i == FeedsAdapter.x) && (list = feedMergeDataDO.watchData) != null && list.size() > 0 && feedMergeDataDO.watchData.get(0) != null) {
+            int i2 = this.n;
+            if ((i2 == FeedsAdapter.t || i2 == FeedsAdapter.u || i2 == FeedsAdapter.x) && (list = feedMergeDataDO.watchData) != null && list.size() > 0 && feedMergeDataDO.watchData.get(0) != null) {
                 float value = feedMergeDataDO.watchData.get(0).getValue();
                 Log.e("titleRatingBar", "============  mark: " + value);
                 if (value > 0.0f) {
@@ -932,40 +918,40 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
         return AndroidInstantRuntime.support(ipChange, "-993556639") ? (Activity) ipChange.ipc$dispatch("-993556639", new Object[]{this}) : this.l;
     }
 
-    public void h(String str, String str2, Activity activity, String str3, String str4, int i, String str5) {
+    public void h(String str, String str2, Activity activity, String str3, String str4, int i2, String str5) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-779440507")) {
-            ipChange.ipc$dispatch("-779440507", new Object[]{this, str, str2, activity, str3, str4, Integer.valueOf(i), str5});
+            ipChange.ipc$dispatch("-779440507", new Object[]{this, str, str2, activity, str3, str4, Integer.valueOf(i2), str5});
         } else if (this.k) {
             View view = this.itemView;
-            int i2 = R$id.feeds_item_header;
-            ImageView imageView = (ImageView) view.findViewById(i2);
+            int i3 = R$id.feeds_item_header;
+            ImageView imageView = (ImageView) view.findViewById(i3);
             if (imageView == null) {
                 return;
             }
-            DMImageCreator k = C0504a.b().c(str2).k(new yq(t60.a(activity, 1.0f), this.l.getResources().getColor(R$color.color_6black)));
-            int i3 = R$drawable.uikit_user_default_icon;
-            k.i(i3).c(i3).g(imageView);
+            DMImageCreator k = cn.damai.common.image.a.b().c(str2).k(new yq(t60.a(activity, 1.0f), this.l.getResources().getColor(R$color.color_6black)));
+            int i4 = R$drawable.uikit_user_default_icon;
+            k.i(i4).c(i4).g(imageView);
             v(str, R$id.feeds_item_name);
             v(str3, R$id.feeds_item_date);
-            this.itemView.findViewById(i2).setOnClickListener(new View$OnClickListenerC2758a(str4));
+            this.itemView.findViewById(i3).setOnClickListener(new a(str4));
             View view2 = this.itemView;
-            int i4 = R$id.user_b_tag;
-            if (view2.findViewById(i4) != null) {
+            int i5 = R$id.user_b_tag;
+            if (view2.findViewById(i5) != null) {
                 if (!wh2.j(str5)) {
-                    this.itemView.findViewById(i4).setVisibility(0);
+                    this.itemView.findViewById(i5).setVisibility(0);
                     if (str5.equals(InteractionFeedData.USER_BTAG_OFFICIAL)) {
-                        ((ImageView) this.itemView.findViewById(i4)).setImageDrawable(this.l.getResources().getDrawable(R$drawable.feeds_user_tag_offical));
+                        ((ImageView) this.itemView.findViewById(i5)).setImageDrawable(this.l.getResources().getDrawable(R$drawable.feeds_user_tag_offical));
                         return;
                     } else if (str5.equals(InteractionFeedData.USER_BTAG_FANS)) {
-                        ((ImageView) this.itemView.findViewById(i4)).setImageDrawable(this.l.getResources().getDrawable(R$drawable.feeds_user_tag_fans));
+                        ((ImageView) this.itemView.findViewById(i5)).setImageDrawable(this.l.getResources().getDrawable(R$drawable.feeds_user_tag_fans));
                         return;
                     } else {
-                        this.itemView.findViewById(i4).setVisibility(8);
+                        this.itemView.findViewById(i5).setVisibility(8);
                         return;
                     }
                 }
-                this.itemView.findViewById(i4).setVisibility(8);
+                this.itemView.findViewById(i5).setVisibility(8);
             }
         }
     }
@@ -1007,12 +993,12 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
         return str + " / " + str2 + " / " + str3;
     }
 
-    public void o(Bundle bundle, String str, int i, int i2, String str2) {
+    public void o(Bundle bundle, String str, int i2, int i3, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-946332998")) {
-            ipChange.ipc$dispatch("-946332998", new Object[]{this, bundle, str, Integer.valueOf(i), Integer.valueOf(i2), str2});
-        } else if (i != 9) {
-            switch (i) {
+            ipChange.ipc$dispatch("-946332998", new Object[]{this, bundle, str, Integer.valueOf(i2), Integer.valueOf(i3), str2});
+        } else if (i2 != 9) {
+            switch (i2) {
                 case 1:
                     bundle.putString(FeedsViewModel.ARG_USERID, str);
                     DMNav.from(this.l).withExtras(bundle).toUri(NavUri.b(cs.ARTISTID_THEME));
@@ -1035,13 +1021,13 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
                     DMNav.from(this.l).withExtras(bundle).toUri(NavUri.b(u12.REPERTOITE));
                     return;
                 case 6:
-                    if (i2 == 0) {
+                    if (i3 == 0) {
                         return;
                     }
                     try {
                         bundle.putLong(IssueConstants.ProjectID, Long.parseLong(str));
-                    } catch (NumberFormatException e) {
-                        e.printStackTrace();
+                    } catch (NumberFormatException e2) {
+                        e2.printStackTrace();
                     }
                     qd2.a(this.l, str2, bundle);
                     return;
@@ -1055,10 +1041,10 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
         }
     }
 
-    public void r(ArrayList<String> arrayList, Activity activity, int i, cn.damai.user.userprofile.bean.VideoInfo videoInfo) {
+    public void r(ArrayList<String> arrayList, Activity activity, int i2, cn.damai.user.userprofile.bean.VideoInfo videoInfo) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-693376614")) {
-            ipChange.ipc$dispatch("-693376614", new Object[]{this, arrayList, activity, Integer.valueOf(i), videoInfo});
+            ipChange.ipc$dispatch("-693376614", new Object[]{this, arrayList, activity, Integer.valueOf(i2), videoInfo});
             return;
         }
         NineGridlayout nineGridlayout = this.v;
@@ -1086,23 +1072,23 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
                 }
             }
             if (arrayList2.size() > 0) {
-                this.v.setTotalWidth(i);
+                this.v.setTotalWidth(i2);
                 this.v.updateImages(arrayList2);
-                View$OnClickListenerC2767h view$OnClickListenerC2767h = new View$OnClickListenerC2767h(this, activity, videoInfo, arrayList);
-                this.v.setListener(view$OnClickListenerC2767h);
-                this.v.setOnClickListener(view$OnClickListenerC2767h);
+                h hVar = new h(this, activity, videoInfo, arrayList);
+                this.v.setListener(hVar);
+                this.v.setOnClickListener(hVar);
                 return;
             }
             this.v.setVisibility(8);
         }
     }
 
-    public void setType(int i) {
+    public void setType(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-313262733")) {
-            ipChange.ipc$dispatch("-313262733", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-313262733", new Object[]{this, Integer.valueOf(i2)});
         } else {
-            this.n = i;
+            this.n = i2;
         }
     }
 
@@ -1115,26 +1101,26 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
         }
     }
 
-    public void u(boolean z, int i) {
+    public void u(boolean z, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "917270754")) {
-            ipChange.ipc$dispatch("917270754", new Object[]{this, Boolean.valueOf(z), Integer.valueOf(i)});
+            ipChange.ipc$dispatch("917270754", new Object[]{this, Boolean.valueOf(z), Integer.valueOf(i2)});
         } else {
             this.p = true;
         }
     }
 
-    public void v(String str, int i) {
+    public void v(String str, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-320946532")) {
-            ipChange.ipc$dispatch("-320946532", new Object[]{this, str, Integer.valueOf(i)});
-        } else if (this.itemView.findViewById(i) != null) {
+            ipChange.ipc$dispatch("-320946532", new Object[]{this, str, Integer.valueOf(i2)});
+        } else if (this.itemView.findViewById(i2) != null) {
             if (wh2.j(str)) {
-                this.itemView.findViewById(i).setVisibility(8);
+                this.itemView.findViewById(i2).setVisibility(8);
                 return;
             }
-            this.itemView.findViewById(i).setVisibility(0);
-            ((TextView) this.itemView.findViewById(i)).setText(str);
+            this.itemView.findViewById(i2).setVisibility(0);
+            ((TextView) this.itemView.findViewById(i2)).setText(str);
         }
     }
 
@@ -1162,7 +1148,7 @@ public class FeedsWraperHolder extends RecyclerView.ViewHolder {
         this.s = str3;
         if (i(feedMergeDataDO) != null && (textView = this.g) != null) {
             textView.setVisibility(0);
-            this.g.setOnClickListener(new View$OnClickListenerC2759b(feedMergeDataDO));
+            this.g.setOnClickListener(new b(feedMergeDataDO));
         } else {
             TextView textView2 = this.g;
             if (textView2 != null) {

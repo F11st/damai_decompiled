@@ -13,10 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0525a;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -46,22 +45,20 @@ public class ImageGalleryActivity extends SimpleBaseActivity {
         int c;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.commonbusiness.imagebrowse.ui.ImageGalleryActivity$ImageAdapter$a */
         /* loaded from: classes4.dex */
-        class C0721a extends RecyclerView.ViewHolder {
-            C0721a(ImageAdapter imageAdapter, View view) {
+        class a extends RecyclerView.ViewHolder {
+            a(ImageAdapter imageAdapter, View view) {
                 super(view);
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.commonbusiness.imagebrowse.ui.ImageGalleryActivity$ImageAdapter$b */
         /* loaded from: classes14.dex */
-        public class View$OnClickListenerC0722b implements View.OnClickListener {
+        public class b implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ int a;
 
-            View$OnClickListenerC0722b(int i) {
+            b(int i) {
                 this.a = i;
             }
 
@@ -111,8 +108,8 @@ public class ImageGalleryActivity extends SimpleBaseActivity {
                 ipChange.ipc$dispatch("460017581", new Object[]{this, viewHolder, Integer.valueOf(i)});
                 return;
             }
-            C0504a.b().loadinto(this.a.get(i), (ImageView) viewHolder.itemView);
-            viewHolder.itemView.setOnClickListener(new View$OnClickListenerC0722b(i));
+            cn.damai.common.image.a.b().loadinto(this.a.get(i), (ImageView) viewHolder.itemView);
+            viewHolder.itemView.setOnClickListener(new b(i));
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
@@ -129,7 +126,7 @@ public class ImageGalleryActivity extends SimpleBaseActivity {
             roundImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             int i2 = this.c;
             roundImageView.setLayoutParams(new RecyclerView.LayoutParams(i2, (int) (i2 * 0.75d)));
-            return new C0721a(this, roundImageView);
+            return new a(this, roundImageView);
         }
     }
 
@@ -163,12 +160,11 @@ public class ImageGalleryActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.imagebrowse.ui.ImageGalleryActivity$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0723a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0723a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -212,7 +208,7 @@ public class ImageGalleryActivity extends SimpleBaseActivity {
             return;
         }
         super.onCreate(bundle);
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i("repertoire_photo"));
+        setDamaiUTKeyBuilder(new a.b().i("repertoire_photo"));
         setContentView(R$layout.activity_image_gallery);
         setImmersionsStyle();
         initTransStatusBar();
@@ -221,7 +217,7 @@ public class ImageGalleryActivity extends SimpleBaseActivity {
         this.recyclerView.setLayoutManager(new GridLayoutManager((Context) this, 2, 1, false));
         this.recyclerView.addItemDecoration(new ItemDecoration(this, q60.a(this, 6.0f), 2));
         this.recyclerView.setAdapter(new ImageAdapter(initExtraData(), this, (DisplayMetrics.getwidthPixels(getResources().getDisplayMetrics()) - q60.a(this, 54.0f)) / 2));
-        findViewById(R$id.brand_back).setOnClickListener(new View$OnClickListenerC0723a());
+        findViewById(R$id.brand_back).setOnClickListener(new a());
     }
 
     @Override // cn.damai.common.app.base.BaseActivity

@@ -23,15 +23,14 @@ public class eu {
     private static final Bitmap.CompressFormat a = Bitmap.CompressFormat.PNG;
     private hy b;
     private ec<String, Bitmap> c;
-    private C4534a d;
+    private a d;
     private final Object e = new Object();
     private boolean f = true;
     private HashMap<String, WeakReference<Bitmap>> g;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.eu$a */
     /* loaded from: classes10.dex */
-    public static class C4534a {
+    public static class a {
         public File c;
         public String j;
         public int a = HttpRequest.DEFAULT_MAX_LENGTH;
@@ -43,7 +42,7 @@ public class eu {
         public boolean h = false;
         public boolean i = true;
 
-        public C4534a(Context context, String str) {
+        public a(Context context, String str) {
             this.j = null;
             this.j = str;
             this.c = eu.a(context, str, null);
@@ -65,7 +64,7 @@ public class eu {
         }
 
         public void b(String str) {
-            this.c = eu.a(C4640t.a, this.j, str);
+            this.c = eu.a(t.a, this.j, str);
         }
 
         public void a(String str) {
@@ -76,20 +75,20 @@ public class eu {
             this.f = z;
         }
 
-        public C4534a(Context context, String str, String str2) {
+        public a(Context context, String str, String str2) {
             this.j = null;
             this.j = str;
             this.c = eu.a(context, str, str2);
         }
     }
 
-    private eu(C4534a c4534a) {
-        b(c4534a);
+    private eu(a aVar) {
+        b(aVar);
     }
 
-    private void b(C4534a c4534a) {
-        this.d = c4534a;
-        if (c4534a.f) {
+    private void b(a aVar) {
+        this.d = aVar;
+        if (aVar.f) {
             if (ev.a()) {
                 this.g = new HashMap<>(64);
             }
@@ -115,7 +114,7 @@ public class eu {
                 }
             };
         }
-        if (c4534a.h) {
+        if (aVar.h) {
             a();
         }
     }
@@ -139,17 +138,17 @@ public class eu {
         }
     }
 
-    public static eu a(C4534a c4534a) {
-        return new eu(c4534a);
+    public static eu a(a aVar) {
+        return new eu(aVar);
     }
 
     public void a() {
         synchronized (this.e) {
             hy hyVar = this.b;
             if (hyVar == null || hyVar.d()) {
-                C4534a c4534a = this.d;
-                File file = c4534a.c;
-                if (c4534a.g && file != null) {
+                a aVar = this.d;
+                File file = aVar.c;
+                if (aVar.g && file != null) {
                     try {
                         if (file.exists()) {
                             if (this.d.i) {
@@ -219,7 +218,7 @@ public class eu {
             bitmap = null;
             if (hyVar != null) {
                 try {
-                    hy.C4582b a2 = hyVar.a(c);
+                    hy.b a2 = hyVar.a(c);
                     if (a2 != null) {
                         inputStream = a2.a(0);
                         if (inputStream != null) {
@@ -342,7 +341,7 @@ public class eu {
             if (hyVar != null && !hyVar.d()) {
                 try {
                     this.b.close();
-                    b(a(C4640t.a, this.d.j, null));
+                    b(a(t.a, this.d.j, null));
                 } catch (Throwable unused) {
                 }
                 this.b = null;

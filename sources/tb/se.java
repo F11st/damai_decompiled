@@ -17,12 +17,11 @@ public class se implements Builder<BytesPool> {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.se$a */
     /* loaded from: classes11.dex */
-    public class ComponentCallbacks2C9691a implements ComponentCallbacks2 {
+    public class a implements ComponentCallbacks2 {
         final /* synthetic */ BytesPool a;
 
-        ComponentCallbacks2C9691a(BytesPool bytesPool) {
+        a(BytesPool bytesPool) {
             this.a = bytesPool;
         }
 
@@ -47,9 +46,9 @@ public class se implements Builder<BytesPool> {
     private BytesPool b(BytesPool bytesPool) {
         Context applicationContext = ur1.o().applicationContext();
         if (applicationContext != null && Build.VERSION.SDK_INT >= 14) {
-            ComponentCallbacks2C9691a componentCallbacks2C9691a = new ComponentCallbacks2C9691a(bytesPool);
-            this.d = componentCallbacks2C9691a;
-            applicationContext.registerComponentCallbacks(componentCallbacks2C9691a);
+            a aVar = new a(bytesPool);
+            this.d = aVar;
+            applicationContext.registerComponentCallbacks(aVar);
         }
         return bytesPool;
     }

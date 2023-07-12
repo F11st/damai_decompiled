@@ -35,12 +35,11 @@ public class yy2 implements View.OnClickListener {
     private int k;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yy2$a */
     /* loaded from: classes4.dex */
-    public class C10006a implements ValueAnimator.AnimatorUpdateListener {
+    public class a implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C10006a() {
+        a() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -81,7 +80,7 @@ public class yy2 implements View.OnClickListener {
         }
         if (i > 0 && z) {
             ValueAnimator ofInt = ValueAnimator.ofInt(0, i);
-            ofInt.addUpdateListener(new C10006a());
+            ofInt.addUpdateListener(new a());
             ofInt.setDuration(300L);
             ofInt.setInterpolator(new LinearInterpolator());
             ofInt.start();
@@ -117,8 +116,8 @@ public class yy2 implements View.OnClickListener {
                     } else {
                         drawable = mu0.a().getResources().getDrawable(R$drawable.icon_vote_dui_gou_fuhao);
                     }
-                    int a = m62.a(mu0.a(), 16.0f);
-                    drawable.setBounds(0, 0, a, a);
+                    int a2 = m62.a(mu0.a(), 16.0f);
+                    drawable.setBounds(0, 0, a2, a2);
                     if (this.g) {
                         drawable.mutate();
                         DrawableCompat.setTint(drawable, this.k);

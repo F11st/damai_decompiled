@@ -118,7 +118,7 @@ final class NioByteString extends ByteString.LeafByteString {
 
     @Override // com.google.protobuf.ByteString
     public InputStream newInput() {
-        return new C5385a();
+        return new a();
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -181,16 +181,15 @@ final class NioByteString extends ByteString.LeafByteString {
             outputStream.write(this.buffer.array(), this.buffer.arrayOffset() + this.buffer.position() + i, i2);
             return;
         }
-        C5397c.e(slice(i, i2 + i), outputStream);
+        c.e(slice(i, i2 + i), outputStream);
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.NioByteString$a */
     /* loaded from: classes10.dex */
-    class C5385a extends InputStream {
+    class a extends InputStream {
         private final ByteBuffer a;
 
-        C5385a() {
+        a() {
             this.a = NioByteString.this.buffer.slice();
         }
 
@@ -239,7 +238,7 @@ final class NioByteString extends ByteString.LeafByteString {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     @Override // com.google.protobuf.ByteString
-    public void writeTo(AbstractC5398d abstractC5398d) throws IOException {
-        abstractC5398d.a(this.buffer.slice());
+    public void writeTo(d dVar) throws IOException {
+        dVar.a(this.buffer.slice());
     }
 }

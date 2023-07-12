@@ -25,18 +25,18 @@ public class az extends OfflineMapCity implements bi, bz {
             return new az[i];
         }
     };
-    public final AbstractC4497cd a;
-    public final AbstractC4497cd b;
-    public final AbstractC4497cd c;
-    public final AbstractC4497cd d;
-    public final AbstractC4497cd e;
-    public final AbstractC4497cd f;
-    public final AbstractC4497cd g;
-    public final AbstractC4497cd h;
-    public final AbstractC4497cd i;
-    public final AbstractC4497cd j;
-    public final AbstractC4497cd k;
-    AbstractC4497cd l;
+    public final cd a;
+    public final cd b;
+    public final cd c;
+    public final cd d;
+    public final cd e;
+    public final cd f;
+    public final cd g;
+    public final cd h;
+    public final cd i;
+    public final cd j;
+    public final cd k;
+    cd l;
     Context m;
     boolean n;
     private String p;
@@ -50,18 +50,18 @@ public class az extends OfflineMapCity implements bi, bz {
         static final /* synthetic */ int[] a;
 
         static {
-            int[] iArr = new int[ca.EnumC4496a.values().length];
+            int[] iArr = new int[ca.a.values().length];
             a = iArr;
             try {
-                iArr[ca.EnumC4496a.amap_exception.ordinal()] = 1;
+                iArr[ca.a.amap_exception.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                a[ca.EnumC4496a.file_io_exception.ordinal()] = 2;
+                a[ca.a.file_io_exception.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                a[ca.EnumC4496a.network_exception.ordinal()] = 3;
+                a[ca.a.network_exception.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
         }
@@ -102,7 +102,7 @@ public class az extends OfflineMapCity implements bi, bz {
         return getUrl();
     }
 
-    public AbstractC4497cd c() {
+    public cd c() {
         return this.l;
     }
 
@@ -383,7 +383,7 @@ public class az extends OfflineMapCity implements bi, bz {
         a(i);
     }
 
-    public AbstractC4497cd b(int i) {
+    public cd b(int i) {
         switch (i) {
             case 101:
                 return this.i;
@@ -396,9 +396,9 @@ public class az extends OfflineMapCity implements bi, bz {
         }
     }
 
-    public void a(AbstractC4497cd abstractC4497cd) {
-        this.l = abstractC4497cd;
-        setState(abstractC4497cd.b());
+    public void a(cd cdVar) {
+        this.l = cdVar;
+        setState(cdVar.b());
     }
 
     @Override // com.amap.api.mapcore.util.ca
@@ -411,9 +411,9 @@ public class az extends OfflineMapCity implements bi, bz {
     }
 
     @Override // com.amap.api.mapcore.util.ca
-    public void a(ca.EnumC4496a enumC4496a) {
+    public void a(ca.a aVar) {
         int b;
-        int i = AnonymousClass3.a[enumC4496a.ordinal()];
+        int i = AnonymousClass3.a[aVar.ordinal()];
         if (i == 1) {
             b = this.j.b();
         } else if (i != 2) {
@@ -460,12 +460,12 @@ public class az extends OfflineMapCity implements bi, bz {
     }
 
     private void a(final File file, File file2, final String str) {
-        new br().a(file, file2, -1L, bx.a(file), new br.InterfaceC4485a() { // from class: com.amap.api.mapcore.util.az.1
-            @Override // com.amap.api.mapcore.util.br.InterfaceC4485a
+        new br().a(file, file2, -1L, bx.a(file), new br.a() { // from class: com.amap.api.mapcore.util.az.1
+            @Override // com.amap.api.mapcore.util.br.a
             public void a(String str2, String str3) {
             }
 
-            @Override // com.amap.api.mapcore.util.br.InterfaceC4485a
+            @Override // com.amap.api.mapcore.util.br.a
             public void a(String str2, String str3, float f) {
                 int i = (int) ((f * 0.39d) + 60.0d);
                 if (i - az.this.getcompleteCode() <= 0 || System.currentTimeMillis() - az.this.r <= 1000) {
@@ -475,7 +475,7 @@ public class az extends OfflineMapCity implements bi, bz {
                 az.this.r = System.currentTimeMillis();
             }
 
-            @Override // com.amap.api.mapcore.util.br.InterfaceC4485a
+            @Override // com.amap.api.mapcore.util.br.a
             public void b(String str2, String str3) {
                 try {
                     if (new File(str).delete()) {
@@ -489,7 +489,7 @@ public class az extends OfflineMapCity implements bi, bz {
                 }
             }
 
-            @Override // com.amap.api.mapcore.util.br.InterfaceC4485a
+            @Override // com.amap.api.mapcore.util.br.a
             public void a(String str2, String str3, int i) {
                 az azVar = az.this;
                 azVar.l.a(azVar.k.b());

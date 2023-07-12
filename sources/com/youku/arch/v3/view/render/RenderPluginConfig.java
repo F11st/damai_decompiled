@@ -10,7 +10,7 @@ import java.util.HashMap;
 import kotlin.Metadata;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.joor.C8883a;
+import org.joor.a;
 import tb.b41;
 
 /* compiled from: Taobao */
@@ -40,7 +40,7 @@ public final class RenderPluginConfig {
             if (str2 == null) {
                 str2 = null;
             } else {
-                C8883a.j(str2).b().f();
+                a.j(str2).b().f();
             }
             if (str2 instanceof RenderPluginFactory) {
                 return (RenderPluginFactory) str2;

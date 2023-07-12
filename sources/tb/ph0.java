@@ -4,7 +4,7 @@ import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
+import kotlin.reflect.jvm.internal.impl.builtins.c;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -20,9 +20,9 @@ public final class ph0 {
         ph0 ph0Var = new ph0();
         INSTANCE = ph0Var;
         a = new HashMap<>();
-        ph0Var.c(C8277c.C8278a.mutableList, ph0Var.a("java.util.ArrayList", "java.util.LinkedList"));
-        ph0Var.c(C8277c.C8278a.mutableSet, ph0Var.a("java.util.HashSet", "java.util.TreeSet", "java.util.LinkedHashSet"));
-        ph0Var.c(C8277c.C8278a.mutableMap, ph0Var.a("java.util.HashMap", "java.util.TreeMap", "java.util.LinkedHashMap", "java.util.concurrent.ConcurrentHashMap", "java.util.concurrent.ConcurrentSkipListMap"));
+        ph0Var.c(c.a.mutableList, ph0Var.a("java.util.ArrayList", "java.util.LinkedList"));
+        ph0Var.c(c.a.mutableSet, ph0Var.a("java.util.HashSet", "java.util.TreeSet", "java.util.LinkedHashSet"));
+        ph0Var.c(c.a.mutableMap, ph0Var.a("java.util.HashMap", "java.util.TreeMap", "java.util.LinkedHashMap", "java.util.concurrent.ConcurrentHashMap", "java.util.concurrent.ConcurrentSkipListMap"));
         ph0Var.c(new hp0("java.util.function.Function"), ph0Var.a("java.util.function.UnaryOperator"));
         ph0Var.c(new hp0("java.util.function.BiFunction"), ph0Var.a("java.util.function.BinaryOperator"));
     }

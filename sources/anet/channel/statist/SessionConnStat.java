@@ -5,8 +5,8 @@ import anet.channel.status.NetworkStatusHelper;
 import anet.channel.util.Inet64Util;
 import org.json.JSONException;
 import org.json.JSONObject;
-import tb.C9708t9;
 import tb.hu0;
+import tb.t9;
 
 /* compiled from: Taobao */
 @Monitor(module = "networkPrefer", monitorPoint = "conn_stat")
@@ -81,8 +81,8 @@ public class SessionConnStat extends StatObject {
     public SessionConnStat() {
         this.isBg = hu0.i() ? "bg" : "fg";
         this.ipStackType = Inet64Util.n();
-        this.isComplexEnable = C9708t9.p();
-        this.isTicketStore = C9708t9.P();
+        this.isComplexEnable = t9.p();
+        this.isTicketStore = t9.P();
     }
 
     public void appendErrorTrace(int i) {

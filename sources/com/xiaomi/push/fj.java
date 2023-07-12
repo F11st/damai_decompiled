@@ -1,7 +1,6 @@
 package com.xiaomi.push;
 
 import android.os.SystemClock;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.ff;
 import com.xiaomi.push.service.XMPushService;
 import com.xiaomi.push.service.bg;
@@ -17,9 +16,8 @@ public class fj {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.fj$a */
     /* loaded from: classes11.dex */
-    public static class C7654a {
+    public static class a {
         static Hashtable<Integer, Long> a = new Hashtable<>();
     }
 
@@ -40,9 +38,9 @@ public class fj {
     public static synchronized void a(int i, int i2) {
         synchronized (fj.class) {
             if (i2 < 16777215) {
-                C7654a.a.put(Integer.valueOf((i << 24) | i2), Long.valueOf(System.currentTimeMillis()));
+                a.a.put(Integer.valueOf((i << 24) | i2), Long.valueOf(System.currentTimeMillis()));
             } else {
-                AbstractC7535b.d("stats key should less than 16777215");
+                com.xiaomi.channel.commonutils.logger.b.d("stats key should less than 16777215");
             }
         }
     }
@@ -61,24 +59,24 @@ public class fj {
         synchronized (fj.class) {
             long currentTimeMillis = System.currentTimeMillis();
             int i4 = (i << 24) | i2;
-            if (C7654a.a.containsKey(Integer.valueOf(i4))) {
+            if (a.a.containsKey(Integer.valueOf(i4))) {
                 fa m883a = fh.m881a().m883a();
                 m883a.a(i2);
-                m883a.b((int) (currentTimeMillis - C7654a.a.get(Integer.valueOf(i4)).longValue()));
+                m883a.b((int) (currentTimeMillis - a.a.get(Integer.valueOf(i4)).longValue()));
                 m883a.b(str);
                 if (i3 > -1) {
                     m883a.c(i3);
                 }
                 fh.m881a().a(m883a);
-                C7654a.a.remove(Integer.valueOf(i2));
+                a.a.remove(Integer.valueOf(i2));
             } else {
-                AbstractC7535b.d("stats key not found");
+                com.xiaomi.channel.commonutils.logger.b.d("stats key not found");
             }
         }
     }
 
-    public static void a(XMPushService xMPushService, bg.C7737b c7737b) {
-        new C7651fc(xMPushService, c7737b).a();
+    public static void a(XMPushService xMPushService, bg.b bVar) {
+        new fc(xMPushService, bVar).a();
     }
 
     public static void a(String str, int i, Exception exc) {
@@ -94,7 +92,7 @@ public class fj {
             return;
         }
         try {
-            ff.C7652a a2 = ff.a(exc);
+            ff.a a2 = ff.a(exc);
             m883a.a(a2.a.a());
             m883a.c(a2.f349a);
             m883a.b(str);
@@ -105,7 +103,7 @@ public class fj {
 
     public static void a(String str, Exception exc) {
         try {
-            ff.C7652a b = ff.b(exc);
+            ff.a b = ff.b(exc);
             fa m883a = fh.m881a().m883a();
             m883a.a(b.a.a());
             m883a.c(b.f349a);
@@ -133,7 +131,7 @@ public class fj {
 
     public static void b(String str, Exception exc) {
         try {
-            ff.C7652a d = ff.d(exc);
+            ff.a d = ff.d(exc);
             fa m883a = fh.m881a().m883a();
             m883a.a(d.a.a());
             m883a.c(d.f349a);

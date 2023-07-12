@@ -31,30 +31,28 @@ public final class TMPhotoUploadPlugin extends TaoMaiApiPlugin {
     @NotNull
     public static final String BRIDGE_NAME = "TMPhotoUpload";
     @NotNull
-    public static final C6993a Companion = new C6993a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String TAG = "TMPhotoUploadPlugin";
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMPhotoUploadPlugin$a */
     /* loaded from: classes11.dex */
-    public static final class C6993a {
-        private C6993a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C6993a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMPhotoUploadPlugin$b */
     /* loaded from: classes11.dex */
-    public static final class C6994b extends q50 {
+    public static final class b extends q50 {
         final /* synthetic */ WVCallBackContext a;
         final /* synthetic */ Ref$ObjectRef b;
 
-        C6994b(WVCallBackContext wVCallBackContext, Ref$ObjectRef ref$ObjectRef) {
+        b(WVCallBackContext wVCallBackContext, Ref$ObjectRef ref$ObjectRef) {
             this.a = wVCallBackContext;
             this.b = ref$ObjectRef;
         }

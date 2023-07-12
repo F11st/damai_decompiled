@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8148c;
 import io.reactivex.MaybeEmitter;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeOnSubscribe;
+import io.reactivex.c;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Cancellable;
 import io.reactivex.internal.disposables.CancellableDisposable;
@@ -14,7 +14,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeCreate<T> extends AbstractC8148c<T> {
+public final class MaybeCreate<T> extends c<T> {
     final MaybeOnSubscribe<T> source;
 
     /* compiled from: Taobao */
@@ -122,7 +122,7 @@ public final class MaybeCreate<T> extends AbstractC8148c<T> {
         this.source = maybeOnSubscribe;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         Emitter emitter = new Emitter(maybeObserver);
         maybeObserver.onSubscribe(emitter);

@@ -18,7 +18,7 @@ import org.json.JSONObject;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public final class f1 {
-    Hashtable<String, ArrayList<C5832a>> a = new Hashtable<>();
+    Hashtable<String, ArrayList<a>> a = new Hashtable<>();
     private long b = 0;
     private boolean c = false;
     private String d = "2.0.201501131131".replace(".", "");
@@ -35,13 +35,12 @@ public final class f1 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.loc.f1$a */
     /* loaded from: classes10.dex */
-    public static class C5832a {
+    public static class a {
         private eo a = null;
         private String b = null;
 
-        protected C5832a() {
+        protected a() {
         }
 
         public final eo a() {
@@ -94,7 +93,7 @@ public final class f1 {
             java.util.ArrayList r6 = (java.util.ArrayList) r6     // Catch: java.lang.Throwable -> L94
             r1 = 0
             java.lang.Object r6 = r6.get(r1)     // Catch: java.lang.Throwable -> L94
-            com.loc.f1$a r6 = (com.loc.f1.C5832a) r6     // Catch: java.lang.Throwable -> L94
+            com.loc.f1$a r6 = (com.loc.f1.a) r6     // Catch: java.lang.Throwable -> L94
             goto L46
         L40:
             r6 = r0
@@ -146,10 +145,10 @@ public final class f1 {
         throw new UnsupportedOperationException("Method not decompiled: com.loc.f1.c(java.lang.String, java.lang.StringBuilder, boolean):com.loc.eo");
     }
 
-    private C5832a d(StringBuilder sb, String str) {
-        C5832a c5832a;
+    private a d(StringBuilder sb, String str) {
+        a aVar;
         boolean z;
-        C5832a c5832a2;
+        a aVar2;
         if (this.a.isEmpty() || TextUtils.isEmpty(sb)) {
             return null;
         }
@@ -157,22 +156,22 @@ public final class f1 {
             Hashtable hashtable = new Hashtable();
             Hashtable hashtable2 = new Hashtable();
             Hashtable hashtable3 = new Hashtable();
-            ArrayList<C5832a> arrayList = this.a.get(str);
+            ArrayList<a> arrayList = this.a.get(str);
             char c = 1;
             int size = arrayList.size() - 1;
             while (size >= 0) {
-                C5832a c5832a3 = arrayList.get(size);
-                if (!TextUtils.isEmpty(c5832a3.d())) {
-                    if (!q(c5832a3.d(), sb)) {
+                a aVar3 = arrayList.get(size);
+                if (!TextUtils.isEmpty(aVar3.d())) {
+                    if (!q(aVar3.d(), sb)) {
                         z = false;
-                    } else if (m1.t(c5832a3.d(), sb.toString())) {
-                        c5832a2 = c5832a3;
-                        c5832a = c5832a2;
+                    } else if (m1.t(aVar3.d(), sb.toString())) {
+                        aVar2 = aVar3;
+                        aVar = aVar2;
                         break;
                     } else {
                         z = true;
                     }
-                    n(c5832a3.d(), hashtable);
+                    n(aVar3.d(), hashtable);
                     n(sb.toString(), hashtable2);
                     hashtable3.clear();
                     for (String str2 : hashtable.keySet()) {
@@ -199,26 +198,26 @@ public final class f1 {
                     keySet.clear();
                     double[] s = s(dArr, dArr2);
                     if (s[0] < 0.800000011920929d) {
-                        c5832a2 = c5832a3;
+                        aVar2 = aVar3;
                         if (s[c] < Math.min(i1.u(), 0.618d)) {
                             if (z && s[0] >= Math.min(i1.u(), 0.618d)) {
                             }
                         }
-                        c5832a = c5832a2;
+                        aVar = aVar2;
                         break;
                     }
-                    c5832a2 = c5832a3;
-                    c5832a = c5832a2;
+                    aVar2 = aVar3;
+                    aVar = aVar2;
                     break;
                 }
                 size--;
                 c = 1;
             }
-            c5832a = null;
+            aVar = null;
             hashtable.clear();
             hashtable2.clear();
             hashtable3.clear();
-            return c5832a;
+            return aVar;
         }
         return null;
     }
@@ -578,14 +577,14 @@ public final class f1 {
                     return;
                 }
                 this.b = m1.B();
-                C5832a c5832a = new C5832a();
-                c5832a.b(eoVar);
-                c5832a.c(TextUtils.isEmpty(sb) ? null : sb.toString());
+                a aVar = new a();
+                aVar.b(eoVar);
+                aVar.c(TextUtils.isEmpty(sb) ? null : sb.toString());
                 if (this.a.containsKey(str2)) {
-                    this.a.get(str2).add(c5832a);
+                    this.a.get(str2).add(aVar);
                 } else {
-                    ArrayList<C5832a> arrayList = new ArrayList<>();
-                    arrayList.add(c5832a);
+                    ArrayList<a> arrayList = new ArrayList<>();
+                    arrayList.add(aVar);
                     this.a.put(str2, arrayList);
                 }
                 if (z) {

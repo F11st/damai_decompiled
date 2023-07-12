@@ -14,19 +14,18 @@ public final class da2<T> {
     private static transient /* synthetic */ IpChange $ipChange;
     private final tk2<T> a;
     private q13 b;
-    private List<C9038a> c;
+    private List<a> c;
     private int d = 0;
     private int e = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.da2$a */
     /* loaded from: classes4.dex */
-    public static class C9038a {
+    public static class a {
         private static transient /* synthetic */ IpChange $ipChange;
         private String a;
         private boolean b;
 
-        public C9038a(String str) {
+        public a(String str) {
             this.a = str;
         }
 
@@ -69,9 +68,9 @@ public final class da2<T> {
             return ((Long) ipChange.ipc$dispatch("-378641646", new Object[]{this})).longValue();
         }
         if (this.a.j()) {
-            g40 a = n("count(\"" + this.a.e().d() + "\") as count").a();
-            if (a != null) {
-                return a.b(AdUtConstants.XAD_UT_ARG_COUNT);
+            g40 a2 = n("count(\"" + this.a.e().d() + "\") as count").a();
+            if (a2 != null) {
+                return a2.b(AdUtConstants.XAD_UT_ARG_COUNT);
             }
             return 0L;
         }
@@ -131,7 +130,7 @@ public final class da2<T> {
         return AndroidInstantRuntime.support(ipChange, "-47081897") ? ((Integer) ipChange.ipc$dispatch("-47081897", new Object[]{this})).intValue() : this.e;
     }
 
-    public List<C9038a> h() {
+    public List<a> h() {
         IpChange ipChange = $ipChange;
         return AndroidInstantRuntime.support(ipChange, "-142984873") ? (List) ipChange.ipc$dispatch("-142984873", new Object[]{this}) : this.c;
     }
@@ -172,7 +171,7 @@ public final class da2<T> {
         if (this.c == null) {
             this.c = new ArrayList(5);
         }
-        this.c.add(new C9038a(str));
+        this.c.add(new a(str));
         return this;
     }
 
@@ -207,11 +206,11 @@ public final class da2<T> {
             sb.append(" WHERE ");
             sb.append(this.b.toString());
         }
-        List<C9038a> list = this.c;
+        List<a> list = this.c;
         if (list != null && list.size() > 0) {
             sb.append(" ORDER BY ");
-            for (C9038a c9038a : this.c) {
-                sb.append(c9038a.toString());
+            for (a aVar : this.c) {
+                sb.append(aVar.toString());
                 sb.append(',');
             }
             sb.deleteCharAt(sb.length() - 1);

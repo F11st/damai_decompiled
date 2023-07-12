@@ -73,12 +73,11 @@ public class TickletPerformBannerLoginView extends RelativeLayout implements Vie
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletPerformBannerLoginView$a */
     /* loaded from: classes7.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC2109a implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class a implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC2109a() {
+        a() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -112,7 +111,7 @@ public class TickletPerformBannerLoginView extends RelativeLayout implements Vie
             return;
         }
         this.ellipsisTextView.setColor(Color.parseColor("#EB7609"));
-        this.ellipsisTextView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC2109a());
+        this.ellipsisTextView.getViewTreeObserver().addOnGlobalLayoutListener(new a());
     }
 
     private void initBanner() {

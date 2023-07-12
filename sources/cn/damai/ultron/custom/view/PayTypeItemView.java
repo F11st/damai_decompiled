@@ -9,7 +9,7 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.ultron.R$id;
 import cn.damai.ultron.R$layout;
 import cn.damai.ultron.view.bean.DmPayTypeBean;
@@ -85,7 +85,7 @@ public class PayTypeItemView extends RelativeLayout {
         } else if (dmPayTypeBean == null) {
         } else {
             this.code = dmPayTypeBean.code;
-            C0504a.b().c(dmPayTypeBean.icon).g(this.iv_pay);
+            a.b().c(dmPayTypeBean.icon).g(this.iv_pay);
             this.tv_pay_title.setText(dmPayTypeBean.name);
             if (!TextUtils.isEmpty(dmPayTypeBean.promotionDesc)) {
                 this.textPromotion.setVisibility(0);

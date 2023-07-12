@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -9,15 +9,14 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import kotlin.collections.C8203e0;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8220r;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.e0;
+import kotlin.collections.k;
+import kotlin.collections.l;
+import kotlin.collections.m;
+import kotlin.collections.n;
+import kotlin.collections.r;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor;
@@ -52,15 +51,14 @@ public final class LazyJavaStaticClassScope extends s81 {
     private final LazyJavaClassDescriptor n;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaStaticClassScope$a */
     /* loaded from: classes3.dex */
-    public static final class C8353a extends DFS.AbstractC8561b<ClassDescriptor, wt2> {
+    public static final class a extends DFS.b<ClassDescriptor, wt2> {
         final /* synthetic */ ClassDescriptor a;
         final /* synthetic */ Set<R> b;
         final /* synthetic */ Function1<MemberScope, Collection<R>> c;
 
         /* JADX WARN: Multi-variable type inference failed */
-        C8353a(ClassDescriptor classDescriptor, Set<R> set, Function1<? super MemberScope, ? extends Collection<? extends R>> function1) {
+        a(ClassDescriptor classDescriptor, Set<R> set, Function1<? super MemberScope, ? extends Collection<? extends R>> function1) {
             this.a = classDescriptor;
             this.b = set;
             this.c = function1;
@@ -95,7 +93,7 @@ public final class LazyJavaStaticClassScope extends s81 {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public LazyJavaStaticClassScope(@NotNull r81 r81Var, @NotNull JavaClass javaClass, @NotNull LazyJavaClassDescriptor lazyJavaClassDescriptor) {
         super(r81Var);
-        b41.i(r81Var, AbstractC5658c.a);
+        b41.i(r81Var, c.a);
         b41.i(javaClass, "jClass");
         b41.i(lazyJavaClassDescriptor, "ownerDescriptor");
         this.m = javaClass;
@@ -104,7 +102,7 @@ public final class LazyJavaStaticClassScope extends s81 {
 
     private final <R> Set<R> G(ClassDescriptor classDescriptor, Set<R> set, Function1<? super MemberScope, ? extends Collection<? extends R>> function1) {
         List e;
-        e = C8213l.e(classDescriptor);
+        e = l.e(classDescriptor);
         DFS.b(e, new DFS.Neighbors() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaStaticClassScope$flatMapJavaStaticSupertypesScopes$1
             @Override // kotlin.reflect.jvm.internal.impl.utils.DFS.Neighbors
             @NotNull
@@ -130,7 +128,7 @@ public final class LazyJavaStaticClassScope extends s81 {
                 l = SequencesKt___SequencesKt.l(w);
                 return l;
             }
-        }, new C8353a(classDescriptor, set, function1));
+        }, new a(classDescriptor, set, function1));
         return set;
     }
 
@@ -142,14 +140,14 @@ public final class LazyJavaStaticClassScope extends s81 {
         }
         Collection<? extends PropertyDescriptor> overriddenDescriptors = propertyDescriptor.getOverriddenDescriptors();
         b41.h(overriddenDescriptors, "this.overriddenDescriptors");
-        q = C8215n.q(overriddenDescriptors, 10);
+        q = n.q(overriddenDescriptors, 10);
         ArrayList arrayList = new ArrayList(q);
         for (PropertyDescriptor propertyDescriptor2 : overriddenDescriptors) {
             b41.h(propertyDescriptor2, AdvanceSetting.NETWORK_TYPE);
             arrayList.add(I(propertyDescriptor2));
         }
         K = CollectionsKt___CollectionsKt.K(arrayList);
-        return (PropertyDescriptor) C8212k.q0(K);
+        return (PropertyDescriptor) k.q0(K);
     }
 
     private final Set<SimpleFunctionDescriptor> J(ni1 ni1Var, ClassDescriptor classDescriptor) {
@@ -157,7 +155,7 @@ public final class LazyJavaStaticClassScope extends s81 {
         Set<SimpleFunctionDescriptor> d;
         LazyJavaStaticClassScope b = yv2.b(classDescriptor);
         if (b == null) {
-            d = C8203e0.d();
+            d = e0.d();
             return d;
         }
         E0 = CollectionsKt___CollectionsKt.E0(b.getContributedFunctions(ni1Var, NoLookupLocation.WHEN_GET_SUPER_MEMBERS));
@@ -193,7 +191,7 @@ public final class LazyJavaStaticClassScope extends s81 {
     public Set<ni1> e(@NotNull z60 z60Var, @Nullable Function1<? super ni1, Boolean> function1) {
         Set<ni1> d;
         b41.i(z60Var, "kindFilter");
-        d = C8203e0.d();
+        d = e0.d();
         return d;
     }
 
@@ -208,11 +206,11 @@ public final class LazyJavaStaticClassScope extends s81 {
         LazyJavaStaticClassScope b = yv2.b(v());
         Set<ni1> functionNames = b == null ? null : b.getFunctionNames();
         if (functionNames == null) {
-            functionNames = C8203e0.d();
+            functionNames = e0.d();
         }
         D0.addAll(functionNames);
         if (this.m.isEnum()) {
-            j = C8214m.j(C8277c.ENUM_VALUE_OF, C8277c.ENUM_VALUES);
+            j = m.j(kotlin.reflect.jvm.internal.impl.builtins.c.ENUM_VALUE_OF, kotlin.reflect.jvm.internal.impl.builtins.c.ENUM_VALUES);
             D0.addAll(j);
         }
         D0.addAll(p().a().w().getStaticFunctionNames(v()));
@@ -244,11 +242,11 @@ public final class LazyJavaStaticClassScope extends s81 {
         b41.h(e, "resolveOverridesForStati….overridingUtil\n        )");
         collection.addAll(e);
         if (this.m.isEnum()) {
-            if (b41.d(ni1Var, C8277c.ENUM_VALUE_OF)) {
+            if (b41.d(ni1Var, kotlin.reflect.jvm.internal.impl.builtins.c.ENUM_VALUE_OF)) {
                 SimpleFunctionDescriptor d = x60.d(v());
                 b41.h(d, "createEnumValueOfMethod(ownerDescriptor)");
                 collection.add(d);
-            } else if (b41.d(ni1Var, C8277c.ENUM_VALUES)) {
+            } else if (b41.d(ni1Var, kotlin.reflect.jvm.internal.impl.builtins.c.ENUM_VALUES)) {
                 SimpleFunctionDescriptor e2 = x60.e(v());
                 b41.h(e2, "createEnumValuesMethod(ownerDescriptor)");
                 collection.add(e2);
@@ -294,7 +292,7 @@ public final class LazyJavaStaticClassScope extends s81 {
         for (Map.Entry entry : linkedHashMap.entrySet()) {
             Collection e2 = a70.e(ni1Var, (Collection) entry.getValue(), collection, v(), p().a().c(), p().a().k().getOverridingUtil());
             b41.h(e2, "resolveOverridesForStati…ingUtil\n                )");
-            C8220r.v(arrayList, e2);
+            r.v(arrayList, e2);
         }
         collection.addAll(arrayList);
     }

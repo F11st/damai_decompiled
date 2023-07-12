@@ -17,7 +17,7 @@ import java.util.Set;
 /* loaded from: classes2.dex */
 public class QuicProofVerifier {
     private static Set<TrustAnchor> LoadFromAndroidSystem(CertificateFactory certificateFactory) {
-        return C8877a.e().f();
+        return a.e().f();
     }
 
     @Deprecated
@@ -58,21 +58,21 @@ public class QuicProofVerifier {
     }
 
     private static CertPathValidator getAndroidCertPathValidator() {
-        return C8877a.e().b();
+        return a.e().b();
     }
 
     private static CertificateFactory getCertificateFactoryFromInited() {
-        return C8877a.e().d();
+        return a.e().d();
     }
 
     private static PKIXParameters getPKIXParametersFromPresetCA() {
-        PKIXParameters c = C8877a.e().c();
+        PKIXParameters c = a.e().c();
         if (c == null) {
             Set<TrustAnchor> LoadFromAndroidSystem = LoadFromAndroidSystem(getCertificateFactoryFromInited());
             if (LoadFromAndroidSystem == null) {
                 return null;
             }
-            return C8877a.e().g(LoadFromAndroidSystem);
+            return a.e().g(LoadFromAndroidSystem);
         }
         return c;
     }

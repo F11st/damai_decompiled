@@ -54,14 +54,13 @@ public final class yo2 {
     private static long g;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yo2$a */
     /* loaded from: classes7.dex */
-    public static final class HandlerC9993a extends Handler {
+    public static final class a extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
         @Nullable
         private final Handler a;
 
-        public HandlerC9993a(@Nullable Handler handler) {
+        public a(@Nullable Handler handler) {
             this.a = handler;
         }
 
@@ -155,7 +154,7 @@ public final class yo2 {
                     b41.g(obj2, "null cannot be cast to non-null type android.os.Handler");
                     Field field3 = b;
                     b41.f(field3);
-                    field3.set(obj, new HandlerC9993a((Handler) obj2));
+                    field3.set(obj, new a((Handler) obj2));
                 }
             }
         } catch (Exception e2) {

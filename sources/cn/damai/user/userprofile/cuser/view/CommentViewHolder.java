@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMRoundedCornersBitmapProcessor;
 import cn.damai.common.nav.DMNav;
@@ -52,14 +51,13 @@ public class CommentViewHolder extends FeedsWraperHolder {
     public ImageView z;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.CommentViewHolder$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2756a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CommentFeedData a;
         final /* synthetic */ FeedMergeDataDO b;
 
-        View$OnClickListenerC2756a(CommentFeedData commentFeedData, FeedMergeDataDO feedMergeDataDO) {
+        a(CommentFeedData commentFeedData, FeedMergeDataDO feedMergeDataDO) {
             this.a = commentFeedData;
             this.b = feedMergeDataDO;
         }
@@ -98,15 +96,14 @@ public class CommentViewHolder extends FeedsWraperHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.CommentViewHolder$b */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2757b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         Bundle a = new Bundle();
         final /* synthetic */ FeedMergeDataDO b;
         final /* synthetic */ CommentFeedData c;
 
-        View$OnClickListenerC2757b(FeedMergeDataDO feedMergeDataDO, CommentFeedData commentFeedData) {
+        b(FeedMergeDataDO feedMergeDataDO, CommentFeedData commentFeedData) {
             this.b = feedMergeDataDO;
             this.c = commentFeedData;
         }
@@ -178,7 +175,7 @@ public class CommentViewHolder extends FeedsWraperHolder {
             this.A.setText(watchFeedData.comment);
         }
         if (this.z != null && !wh2.j(watchFeedData.targetImg)) {
-            DMImageCreator k = C0504a.b().c(watchFeedData.targetImg).k(new DMRoundedCornersBitmapProcessor(t60.a(this.w, 3.0f), 0));
+            DMImageCreator k = cn.damai.common.image.a.b().c(watchFeedData.targetImg).k(new DMRoundedCornersBitmapProcessor(t60.a(this.w, 3.0f), 0));
             int i = R$drawable.uikit_user_default_icon;
             k.i(i).c(i).g(this.z);
         }
@@ -210,8 +207,8 @@ public class CommentViewHolder extends FeedsWraperHolder {
                 this.C.setVisibility(0);
             }
         }
-        this.itemView.setOnClickListener(new View$OnClickListenerC2756a(watchFeedData, feedMergeDataDO));
-        this.x.setOnClickListener(new View$OnClickListenerC2757b(feedMergeDataDO, watchFeedData));
+        this.itemView.setOnClickListener(new a(watchFeedData, feedMergeDataDO));
+        this.x.setOnClickListener(new b(feedMergeDataDO, watchFeedData));
         if (watchFeedData instanceof WatchFeedData) {
             WatchFeedData watchFeedData2 = (WatchFeedData) watchFeedData;
             if (watchFeedData2.imgs == null && watchFeedData2.videoInfo == null) {

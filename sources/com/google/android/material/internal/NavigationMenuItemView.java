@@ -180,7 +180,7 @@ public class NavigationMenuItemView extends ForegroundLinearLayout implements Me
             drawable.setBounds(0, 0, i, i);
         } else if (this.needsEmptyIcon) {
             if (this.emptyDrawable == null) {
-                Drawable drawable2 = ResourcesCompat.getDrawable(getResources(), com.google.android.material.R.C4816drawable.navigation_empty_icon, getContext().getTheme());
+                Drawable drawable2 = ResourcesCompat.getDrawable(getResources(), com.google.android.material.R.drawable.navigation_empty_icon, getContext().getTheme());
                 this.emptyDrawable = drawable2;
                 if (drawable2 != null) {
                     int i2 = this.iconSize;
@@ -255,7 +255,7 @@ public class NavigationMenuItemView extends ForegroundLinearLayout implements Me
         };
         this.accessibilityDelegate = accessibilityDelegateCompat;
         setOrientation(0);
-        LayoutInflater.from(context).inflate(com.google.android.material.R.C4818layout.design_navigation_menu_item, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(com.google.android.material.R.layout.design_navigation_menu_item, (ViewGroup) this, true);
         setIconSize(context.getResources().getDimensionPixelSize(com.google.android.material.R.dimen.design_navigation_icon_size));
         CheckedTextView checkedTextView = (CheckedTextView) findViewById(com.google.android.material.R.id.design_menu_item_text);
         this.textView = checkedTextView;

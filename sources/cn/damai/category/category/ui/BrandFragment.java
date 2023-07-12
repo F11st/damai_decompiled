@@ -68,17 +68,16 @@ public class BrandFragment extends DamaiBaseMvpFragment implements OnLoadMoreLis
     private boolean mHasNextPage = true;
     private boolean mIsFirst = true;
     private BrandRequest mBrandRequest = new BrandRequest();
-    private View.OnClickListener mBrandItemListener = new View$OnClickListenerC0320b();
-    private View.OnClickListener mProjectItemListener = new View$OnClickListenerC0321c();
-    private View.OnClickListener mFollowListener = new View$OnClickListenerC0322d();
+    private View.OnClickListener mBrandItemListener = new b();
+    private View.OnClickListener mProjectItemListener = new c();
+    private View.OnClickListener mFollowListener = new d();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.BrandFragment$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0319a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0319a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -93,12 +92,11 @@ public class BrandFragment extends DamaiBaseMvpFragment implements OnLoadMoreLis
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.BrandFragment$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0320b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0320b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -124,12 +122,11 @@ public class BrandFragment extends DamaiBaseMvpFragment implements OnLoadMoreLis
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.BrandFragment$c */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0321c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0321c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -152,12 +149,11 @@ public class BrandFragment extends DamaiBaseMvpFragment implements OnLoadMoreLis
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.BrandFragment$d */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0322d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0322d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -184,12 +180,11 @@ public class BrandFragment extends DamaiBaseMvpFragment implements OnLoadMoreLis
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.BrandFragment$e */
     /* loaded from: classes.dex */
-    public class C0323e implements ResponseErrorPage.ErrorRefreshListener {
+    public class e implements ResponseErrorPage.ErrorRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0323e() {
+        e() {
         }
 
         @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
@@ -369,7 +364,7 @@ public class BrandFragment extends DamaiBaseMvpFragment implements OnLoadMoreLis
         this.mEmptyView = this.rootView.findViewById(R$id.ll_empty);
         View findViewById = this.rootView.findViewById(R$id.image_gotop);
         this.mGoTopView = findViewById;
-        findViewById.setOnClickListener(new View$OnClickListenerC0319a());
+        findViewById.setOnClickListener(new a());
         this.mRecyclerView = (IRecyclerView) this.rootView.findViewById(R$id.brand_irc);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.mActivity);
         this.mLinearLayoutManager = linearLayoutManager;
@@ -476,7 +471,7 @@ public class BrandFragment extends DamaiBaseMvpFragment implements OnLoadMoreLis
             ResponseErrorPage responseErrorPage2 = new ResponseErrorPage(this.mActivity, null, null, null);
             this.mErrorPage = responseErrorPage2;
             responseErrorPage2.hideTitle();
-            this.mErrorPage.setRefreshListener(new C0323e());
+            this.mErrorPage.setRefreshListener(new e());
             this.mBrandLayout.addView(this.mErrorPage);
             this.mPageLayout.setVisibility(8);
         }
@@ -495,8 +490,8 @@ public class BrandFragment extends DamaiBaseMvpFragment implements OnLoadMoreLis
                 this.mBrandLayout.removeView(this.mErrorPage);
                 this.mErrorPage = null;
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 

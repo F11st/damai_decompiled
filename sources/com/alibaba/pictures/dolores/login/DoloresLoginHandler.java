@@ -8,8 +8,8 @@ import com.android.alibaba.ip.runtime.IpChange;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
-import kotlin.C8177b;
 import kotlin.Lazy;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
@@ -22,7 +22,7 @@ import tb.sb0;
 public final class DoloresLoginHandler extends Handler implements IDoloresLoginListener {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3607a Companion = new C3607a(null);
+    public static final a Companion = new a(null);
     public static final int LOGIN = 0;
     public static final int LOGIN_RET_CANCEL = 3;
     public static final int LOGIN_RET_FAIL = 2;
@@ -39,12 +39,11 @@ public final class DoloresLoginHandler extends Handler implements IDoloresLoginL
     private int a;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.dolores.login.DoloresLoginHandler$a */
     /* loaded from: classes7.dex */
-    public static final class C3607a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3607a() {
+        private a() {
         }
 
         @NotNull
@@ -55,13 +54,13 @@ public final class DoloresLoginHandler extends Handler implements IDoloresLoginL
                 value = ipChange.ipc$dispatch("2126724172", new Object[]{this});
             } else {
                 Lazy lazy = DoloresLoginHandler.d;
-                C3607a c3607a = DoloresLoginHandler.Companion;
+                a aVar = DoloresLoginHandler.Companion;
                 value = lazy.getValue();
             }
             return (DoloresLoginHandler) value;
         }
 
-        public /* synthetic */ C3607a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -72,7 +71,7 @@ public final class DoloresLoginHandler extends Handler implements IDoloresLoginL
         b41.h(simpleName, "DoloresLoginHandler::class.java.simpleName");
         b = simpleName;
         c = new AtomicBoolean();
-        b2 = C8177b.b(new Function0<DoloresLoginHandler>() { // from class: com.alibaba.pictures.dolores.login.DoloresLoginHandler$Companion$sInstance$2
+        b2 = b.b(new Function0<DoloresLoginHandler>() { // from class: com.alibaba.pictures.dolores.login.DoloresLoginHandler$Companion$sInstance$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* JADX WARN: Can't rename method to resolve collision */

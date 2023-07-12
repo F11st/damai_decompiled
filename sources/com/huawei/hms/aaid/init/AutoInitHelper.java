@@ -2,8 +2,8 @@ package com.huawei.hms.aaid.init;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
-import com.huawei.hms.opendevice.C5665i;
-import com.huawei.hms.opendevice.RunnableC5662f;
+import com.huawei.hms.opendevice.f;
+import com.huawei.hms.opendevice.i;
 import com.huawei.hms.support.log.HMSLog;
 
 /* compiled from: Taobao */
@@ -13,7 +13,7 @@ public class AutoInitHelper {
         try {
             if (isAutoInitEnabled(context)) {
                 HMSLog.i("AutoInit", "Push init start");
-                new Thread(new RunnableC5662f(context)).start();
+                new Thread(new f(context)).start();
             }
         } catch (Exception e) {
             HMSLog.e("AutoInit", "Push init failed", e);
@@ -21,7 +21,7 @@ public class AutoInitHelper {
     }
 
     public static boolean isAutoInitEnabled(Context context) {
-        C5665i a = C5665i.a(context);
+        i a = i.a(context);
         if (a.containsKey("push_kit_auto_init_enabled")) {
             return a.getBoolean("push_kit_auto_init_enabled");
         }
@@ -33,7 +33,7 @@ public class AutoInitHelper {
     }
 
     public static void setAutoInitEnabled(Context context, boolean z) {
-        C5665i a = C5665i.a(context);
+        i a = i.a(context);
         boolean z2 = a.getBoolean("push_kit_auto_init_enabled");
         a.saveBoolean("push_kit_auto_init_enabled", z);
         if (!z || z2) {

@@ -19,17 +19,16 @@ abstract class Striped64 extends Number {
     volatile transient long base;
     volatile transient int busy;
     @NullableDecl
-    volatile transient C4890b[] cells;
+    volatile transient b[] cells;
     static final ThreadLocal<int[]> threadHashCode = new ThreadLocal<>();
     static final Random rng = new Random();
     static final int NCPU = Runtime.getRuntime().availableProcessors();
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.cache.Striped64$a */
     /* loaded from: classes10.dex */
-    public static class C4889a implements PrivilegedExceptionAction<Unsafe> {
-        C4889a() {
+    public static class a implements PrivilegedExceptionAction<Unsafe> {
+        a() {
         }
 
         @Override // java.security.PrivilegedExceptionAction
@@ -48,9 +47,8 @@ abstract class Striped64 extends Number {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.cache.Striped64$b */
     /* loaded from: classes10.dex */
-    static final class C4890b {
+    static final class b {
         private static final Unsafe b;
         private static final long c;
         volatile long a;
@@ -59,13 +57,13 @@ abstract class Striped64 extends Number {
             try {
                 Unsafe access$000 = Striped64.access$000();
                 b = access$000;
-                c = access$000.objectFieldOffset(C4890b.class.getDeclaredField("a"));
+                c = access$000.objectFieldOffset(b.class.getDeclaredField("a"));
             } catch (Exception e) {
                 throw new Error(e);
             }
         }
 
-        C4890b(long j) {
+        b(long j) {
             this.a = j;
         }
 
@@ -95,7 +93,7 @@ abstract class Striped64 extends Number {
             try {
                 return Unsafe.getUnsafe();
             } catch (SecurityException unused) {
-                return (Unsafe) AccessController.doPrivileged(new C4889a());
+                return (Unsafe) AccessController.doPrivileged(new a());
             }
         } catch (PrivilegedActionException e) {
             throw new RuntimeException("Could not initialize intrinsics", e.getCause());
@@ -115,12 +113,12 @@ abstract class Striped64 extends Number {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public final void internalReset(long j) {
-        C4890b[] c4890bArr = this.cells;
+        b[] bVarArr = this.cells;
         this.base = j;
-        if (c4890bArr != null) {
-            for (C4890b c4890b : c4890bArr) {
-                if (c4890b != null) {
-                    c4890b.a = j;
+        if (bVarArr != null) {
+            for (b bVar : bVarArr) {
+                if (bVar != null) {
+                    bVar.a = j;
                 }
             }
         }

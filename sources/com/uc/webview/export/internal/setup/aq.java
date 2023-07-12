@@ -4,8 +4,6 @@ import android.webkit.ValueCallback;
 import com.uc.webview.export.CDParamKeys;
 import com.uc.webview.export.extension.UCCore;
 import com.uc.webview.export.internal.interfaces.IWaStat;
-import com.uc.webview.export.internal.utility.C7337j;
-import com.uc.webview.export.internal.utility.C7349p;
 import com.uc.webview.export.internal.utility.Log;
 import com.youku.uplayer.MsgID;
 
@@ -27,21 +25,21 @@ public class aq extends bh {
         long j = e;
         try {
             IWaStat.WaStat.stat(IWaStat.SHARE_CORE_SDCARD_SETUP_TASK_RUN);
-            if (!C7349p.a(UCSetupTask.getTotalLoadedUCM())) {
+            if (!com.uc.webview.export.internal.utility.p.a(UCSetupTask.getTotalLoadedUCM())) {
                 IWaStat.WaStat.stat(IWaStat.SHARE_CORE_SDCARD_SETUP_TASK_HAD_INIT);
                 str = c;
                 sb = new StringBuilder(".run stat: ");
             } else {
                 String str2 = (String) getOption(UCCore.OPTION_LOCAL_DIR);
-                if (C7349p.a(str2)) {
-                    str2 = C7337j.d(getContext().getApplicationContext());
+                if (com.uc.webview.export.internal.utility.p.a(str2)) {
+                    str2 = com.uc.webview.export.internal.utility.j.d(getContext().getApplicationContext());
                 }
                 String str3 = c;
                 Log.d(str3, ".run locationDecDir: " + str2);
-                if (!C7349p.a(str2)) {
+                if (!com.uc.webview.export.internal.utility.p.a(str2)) {
                     j = f;
                     IWaStat.WaStat.stat(IWaStat.SHARE_CORE_SDCARD_SETUP_TASK_LOCATION_DEC);
-                    ((AbstractC7282l) ((AbstractC7282l) ((AbstractC7282l) ((AbstractC7282l) ((AbstractC7282l) setup(UCCore.OPTION_DEX_FILE_PATH, (Object) null)).setup(UCCore.OPTION_SO_FILE_PATH, (Object) null)).setup(UCCore.OPTION_RES_FILE_PATH, (Object) null)).setup(UCCore.OPTION_UCM_LIB_DIR, (Object) null)).setup(UCCore.OPTION_UCM_CFG_FILE, (Object) null)).setup(UCCore.OPTION_UCM_KRL_DIR, (Object) str2);
+                    ((l) ((l) ((l) ((l) ((l) setup(UCCore.OPTION_DEX_FILE_PATH, (Object) null)).setup(UCCore.OPTION_SO_FILE_PATH, (Object) null)).setup(UCCore.OPTION_RES_FILE_PATH, (Object) null)).setup(UCCore.OPTION_UCM_LIB_DIR, (Object) null)).setup(UCCore.OPTION_UCM_CFG_FILE, (Object) null)).setup(UCCore.OPTION_UCM_KRL_DIR, (Object) str2);
                     super.run();
                 } else {
                     ValueCallback<CALLBACK_TYPE> callback = getCallback(UCCore.EVENT_DELAY_SEARCH_CORE_FILE);
@@ -49,12 +47,12 @@ public class aq extends bh {
                     Log.d(str4, ".run delaySeareCoreFileCB: " + callback);
                     if (callback == 0) {
                         String str5 = (String) getOption(UCCore.OPTION_DEC_FILE);
-                        if (C7349p.a(str5)) {
-                            str5 = C7337j.e(getContext().getApplicationContext());
+                        if (com.uc.webview.export.internal.utility.p.a(str5)) {
+                            str5 = com.uc.webview.export.internal.utility.j.e(getContext().getApplicationContext());
                         }
                         String str6 = c;
                         Log.d(str6, ".run sdCoreDecFilePath: " + str5);
-                        if (!C7349p.a(str5)) {
+                        if (!com.uc.webview.export.internal.utility.p.a(str5)) {
                             j = g;
                             Integer num = (Integer) this.mOptions.get(UCCore.OPTION_VERIFY_POLICY);
                             String param = UCCore.getParam(CDParamKeys.CD_KEY_SHARE_CORE_CLIENT_VERIFY_POLICY);
@@ -66,7 +64,7 @@ public class aq extends bh {
                             IWaStat.WaStat.stat(IWaStat.SHARE_CORE_SDCARD_SETUP_TASK_SDCARD);
                             this.mCallbacks = null;
                             resetCrashFlag();
-                            ((AbstractC7282l) ((AbstractC7282l) ((AbstractC7282l) ((AbstractC7282l) ((AbstractC7282l) ((AbstractC7282l) ((AbstractC7282l) ((AbstractC7282l) ((AbstractC7282l) ((AbstractC7282l) new C7268b().setParent(this)).setCallbacks(this.mCallbacks)).setOptions(this.mOptions)).setup(UCCore.OPTION_VERIFY_POLICY, (Object) num)).setup(UCCore.OPTION_DEX_FILE_PATH, (Object) null)).setup(UCCore.OPTION_SO_FILE_PATH, (Object) null)).setup(UCCore.OPTION_RES_FILE_PATH, (Object) null)).setup(UCCore.OPTION_UCM_CFG_FILE, (Object) null)).setup(UCCore.OPTION_UCM_KRL_DIR, (Object) null)).setup(UCCore.OPTION_UCM_ZIP_FILE, (Object) str5)).start();
+                            ((l) ((l) ((l) ((l) ((l) ((l) ((l) ((l) ((l) ((l) new b().setParent(this)).setCallbacks(this.mCallbacks)).setOptions(this.mOptions)).setup(UCCore.OPTION_VERIFY_POLICY, (Object) num)).setup(UCCore.OPTION_DEX_FILE_PATH, (Object) null)).setup(UCCore.OPTION_SO_FILE_PATH, (Object) null)).setup(UCCore.OPTION_RES_FILE_PATH, (Object) null)).setup(UCCore.OPTION_UCM_CFG_FILE, (Object) null)).setup(UCCore.OPTION_UCM_KRL_DIR, (Object) null)).setup(UCCore.OPTION_UCM_ZIP_FILE, (Object) str5)).start();
                         } else {
                             long j2 = h;
                             IWaStat.WaStat.stat(IWaStat.SHARE_CORE_SDCARD_SETUP_TASK_EXCEPTION);

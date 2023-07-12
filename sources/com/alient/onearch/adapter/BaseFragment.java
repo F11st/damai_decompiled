@@ -413,7 +413,7 @@ public abstract class BaseFragment extends GenericFragment implements IResponsiv
 
     @Override // com.youku.arch.v3.page.GenericFragment
     protected int getLayoutResId() {
-        return R.C4043layout.one_arch_fragment_layout;
+        return R.layout.one_arch_fragment_layout;
     }
 
     @Override // com.alibaba.pictures.ut.IUTPageOperation

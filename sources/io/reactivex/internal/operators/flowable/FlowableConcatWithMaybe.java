@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeSource;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.subscribers.SinglePostCompleteSubscriber;
@@ -71,12 +71,12 @@ public final class FlowableConcatWithMaybe<T> extends AbstractFlowableWithUpstre
         }
     }
 
-    public FlowableConcatWithMaybe(AbstractC8147b<T> abstractC8147b, MaybeSource<? extends T> maybeSource) {
-        super(abstractC8147b);
+    public FlowableConcatWithMaybe(b<T> bVar, MaybeSource<? extends T> maybeSource) {
+        super(bVar);
         this.other = maybeSource;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new ConcatWithSubscriber(subscriber, this.other));
     }

@@ -17,13 +17,12 @@ public class wc0 {
     private static long a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.wc0$a */
     /* loaded from: classes5.dex */
-    public class DialogInterface$OnClickListenerC9851a implements DialogInterface.OnClickListener {
+    public class a implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnDialogListener a;
 
-        DialogInterface$OnClickListenerC9851a(OnDialogListener onDialogListener) {
+        a(OnDialogListener onDialogListener) {
             this.a = onDialogListener;
         }
 
@@ -40,13 +39,12 @@ public class wc0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.wc0$b */
     /* loaded from: classes5.dex */
-    public class DialogInterface$OnClickListenerC9852b implements DialogInterface.OnClickListener {
+    public class b implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnDialogListener a;
 
-        DialogInterface$OnClickListenerC9852b(OnDialogListener onDialogListener) {
+        b(OnDialogListener onDialogListener) {
             this.a = onDialogListener;
         }
 
@@ -63,13 +61,12 @@ public class wc0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.wc0$c */
     /* loaded from: classes5.dex */
-    public class DialogInterface$OnClickListenerC9853c implements DialogInterface.OnClickListener {
+    public class c implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnDialogListener a;
 
-        DialogInterface$OnClickListenerC9853c(OnDialogListener onDialogListener) {
+        c(OnDialogListener onDialogListener) {
             this.a = onDialogListener;
         }
 
@@ -86,13 +83,12 @@ public class wc0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.wc0$d */
     /* loaded from: classes5.dex */
-    public class DialogInterface$OnClickListenerC9854d implements DialogInterface.OnClickListener {
+    public class d implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnDialogListener a;
 
-        DialogInterface$OnClickListenerC9854d(OnDialogListener onDialogListener) {
+        d(OnDialogListener onDialogListener) {
             this.a = onDialogListener;
         }
 
@@ -140,7 +136,7 @@ public class wc0 {
             ipChange.ipc$dispatch("1106722249", new Object[]{activity, onDialogListener});
             return;
         }
-        new h4(activity).e("发现未完成的草稿\n是否加载？").h("加载", new DialogInterface$OnClickListenerC9852b(onDialogListener)).f("新增", new DialogInterface$OnClickListenerC9851a(onDialogListener)).c(false).j();
+        new h4(activity).e("发现未完成的草稿\n是否加载？").h("加载", new b(onDialogListener)).f("新增", new a(onDialogListener)).c(false).j();
         a = System.currentTimeMillis();
     }
 
@@ -150,7 +146,7 @@ public class wc0 {
             ipChange.ipc$dispatch("-1472271628", new Object[]{activity, onDialogListener});
             return;
         }
-        new h4(activity).e("将此次编辑保留？").h("保留", new DialogInterface$OnClickListenerC9854d(onDialogListener)).f("不保留", new DialogInterface$OnClickListenerC9853c(onDialogListener)).c(false).j();
+        new h4(activity).e("将此次编辑保留？").h("保留", new d(onDialogListener)).f("不保留", new c(onDialogListener)).c(false).j();
         a = System.currentTimeMillis();
     }
 

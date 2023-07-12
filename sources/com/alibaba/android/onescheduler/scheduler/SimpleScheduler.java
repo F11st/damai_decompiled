@@ -20,14 +20,13 @@ import tb.tf0;
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
 public class SimpleScheduler implements IScheduler {
-    private ExecutorService a = Executors.newSingleThreadExecutor(new ThreadFactoryC3239a(this));
+    private ExecutorService a = Executors.newSingleThreadExecutor(new a(this));
     private Handler b;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.onescheduler.scheduler.SimpleScheduler$a */
     /* loaded from: classes5.dex */
-    class ThreadFactoryC3239a implements ThreadFactory {
-        ThreadFactoryC3239a(SimpleScheduler simpleScheduler) {
+    class a implements ThreadFactory {
+        a(SimpleScheduler simpleScheduler) {
         }
 
         @Override // java.util.concurrent.ThreadFactory
@@ -41,14 +40,13 @@ public class SimpleScheduler implements IScheduler {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.onescheduler.scheduler.SimpleScheduler$b */
     /* loaded from: classes5.dex */
-    class HandlerC3240b extends Handler {
+    class b extends Handler {
         final /* synthetic */ FutureTask a;
         final /* synthetic */ Executor b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        HandlerC3240b(SimpleScheduler simpleScheduler, Looper looper, FutureTask futureTask, Executor executor) {
+        b(SimpleScheduler simpleScheduler, Looper looper, FutureTask futureTask, Executor executor) {
             super(looper);
             this.a = futureTask;
             this.b = executor;
@@ -62,9 +60,8 @@ public class SimpleScheduler implements IScheduler {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.onescheduler.scheduler.SimpleScheduler$c */
     /* loaded from: classes5.dex */
-    static /* synthetic */ class C3241c {
+    static /* synthetic */ class c {
         static final /* synthetic */ int[] a;
 
         static {
@@ -89,7 +86,7 @@ public class SimpleScheduler implements IScheduler {
     public void schedule(@NonNull final InnerOneTask innerOneTask) {
         Executor executor = innerOneTask.getExecutor();
         if (executor == null) {
-            int i = C3241c.a[innerOneTask.getTaskType().ordinal()];
+            int i = c.a[innerOneTask.getTaskType().ordinal()];
             if (i == 1) {
                 executor = qg0.c().b();
             } else if (i == 2) {
@@ -114,7 +111,7 @@ public class SimpleScheduler implements IScheduler {
             obtain.what = innerOneTask.hashCode();
             obtain.obj = innerOneTask;
             if (this.b == null) {
-                this.b = new HandlerC3240b(this, Looper.getMainLooper(), futureTask, executor);
+                this.b = new b(this, Looper.getMainLooper(), futureTask, executor);
             }
             this.b.sendMessageDelayed(obtain, System.currentTimeMillis() - innerOneTask.getAddedTime());
             return;

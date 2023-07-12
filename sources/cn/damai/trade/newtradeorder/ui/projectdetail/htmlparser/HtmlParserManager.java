@@ -22,7 +22,7 @@ public class HtmlParserManager {
     /* compiled from: Taobao */
     /* loaded from: classes16.dex */
     public interface OnParseFinishedListener {
-        void onParseFinished(List<C2244a> list);
+        void onParseFinished(List<a> list);
     }
 
     /* compiled from: Taobao */
@@ -32,9 +32,8 @@ public class HtmlParserManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.htmlparser.HtmlParserManager$a */
     /* loaded from: classes16.dex */
-    public static class C2244a {
+    public static class a {
         private static transient /* synthetic */ IpChange $ipChange;
         private int a;
         private Spanned b;

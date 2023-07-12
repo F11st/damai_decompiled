@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.functions.BiFunction;
@@ -31,7 +31,7 @@ import tb.jm;
 public final class FlowableGroupJoin<TLeft, TRight, TLeftEnd, TRightEnd, R> extends AbstractFlowableWithUpstream<TLeft, R> {
     final Function<? super TLeft, ? extends Publisher<TLeftEnd>> leftEnd;
     final Publisher<? extends TRight> other;
-    final BiFunction<? super TLeft, ? super AbstractC8147b<TRight>, ? extends R> resultSelector;
+    final BiFunction<? super TLeft, ? super b<TRight>, ? extends R> resultSelector;
     final Function<? super TRight, ? extends Publisher<TRightEnd>> rightEnd;
 
     /* compiled from: Taobao */
@@ -42,7 +42,7 @@ public final class FlowableGroupJoin<TLeft, TRight, TLeftEnd, TRightEnd, R> exte
         volatile boolean cancelled;
         final Function<? super TLeft, ? extends Publisher<TLeftEnd>> leftEnd;
         int leftIndex;
-        final BiFunction<? super TLeft, ? super AbstractC8147b<TRight>, ? extends R> resultSelector;
+        final BiFunction<? super TLeft, ? super b<TRight>, ? extends R> resultSelector;
         final Function<? super TRight, ? extends Publisher<TRightEnd>> rightEnd;
         int rightIndex;
         static final Integer LEFT_VALUE = 1;
@@ -51,13 +51,13 @@ public final class FlowableGroupJoin<TLeft, TRight, TLeftEnd, TRightEnd, R> exte
         static final Integer RIGHT_CLOSE = 4;
         final AtomicLong requested = new AtomicLong();
         final jm disposables = new jm();
-        final SpscLinkedArrayQueue<Object> queue = new SpscLinkedArrayQueue<>(AbstractC8147b.bufferSize());
+        final SpscLinkedArrayQueue<Object> queue = new SpscLinkedArrayQueue<>(b.bufferSize());
         final Map<Integer, UnicastProcessor<TRight>> lefts = new LinkedHashMap();
         final Map<Integer, TRight> rights = new LinkedHashMap();
         final AtomicReference<Throwable> error = new AtomicReference<>();
         final AtomicInteger active = new AtomicInteger(2);
 
-        GroupJoinSubscription(Subscriber<? super R> subscriber, Function<? super TLeft, ? extends Publisher<TLeftEnd>> function, Function<? super TRight, ? extends Publisher<TRightEnd>> function2, BiFunction<? super TLeft, ? super AbstractC8147b<TRight>, ? extends R> biFunction) {
+        GroupJoinSubscription(Subscriber<? super R> subscriber, Function<? super TLeft, ? extends Publisher<TLeftEnd>> function, Function<? super TRight, ? extends Publisher<TRightEnd>> function2, BiFunction<? super TLeft, ? super b<TRight>, ? extends R> biFunction) {
             this.actual = subscriber;
             this.leftEnd = function;
             this.rightEnd = function2;
@@ -369,15 +369,15 @@ public final class FlowableGroupJoin<TLeft, TRight, TLeftEnd, TRightEnd, R> exte
         }
     }
 
-    public FlowableGroupJoin(AbstractC8147b<TLeft> abstractC8147b, Publisher<? extends TRight> publisher, Function<? super TLeft, ? extends Publisher<TLeftEnd>> function, Function<? super TRight, ? extends Publisher<TRightEnd>> function2, BiFunction<? super TLeft, ? super AbstractC8147b<TRight>, ? extends R> biFunction) {
-        super(abstractC8147b);
+    public FlowableGroupJoin(b<TLeft> bVar, Publisher<? extends TRight> publisher, Function<? super TLeft, ? extends Publisher<TLeftEnd>> function, Function<? super TRight, ? extends Publisher<TRightEnd>> function2, BiFunction<? super TLeft, ? super b<TRight>, ? extends R> biFunction) {
+        super(bVar);
         this.other = publisher;
         this.leftEnd = function;
         this.rightEnd = function2;
         this.resultSelector = biFunction;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super R> subscriber) {
         GroupJoinSubscription groupJoinSubscription = new GroupJoinSubscription(subscriber, this.leftEnd, this.rightEnd, this.resultSelector);
         subscriber.onSubscribe(groupJoinSubscription);

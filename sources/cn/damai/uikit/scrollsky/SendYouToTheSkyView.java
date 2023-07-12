@@ -16,7 +16,6 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 import cn.damai.uikit.R$color;
-import cn.damai.uikit.image.C2497a;
 import cn.damai.uikit.image.IImageLoader;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -70,12 +69,11 @@ public class SendYouToTheSkyView extends View {
     private BarrageBean[] mTexts;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.scrollsky.SendYouToTheSkyView$a */
     /* loaded from: classes8.dex */
-    public class C2542a implements ValueAnimator.AnimatorUpdateListener {
+    public class a implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2542a() {
+        a() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -111,23 +109,22 @@ public class SendYouToTheSkyView extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.scrollsky.SendYouToTheSkyView$b */
     /* loaded from: classes8.dex */
-    public class C2543b implements IImageLoader.IImageSuccListener {
+    public class b implements IImageLoader.IImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ BarrageBean a;
 
-        C2543b(BarrageBean barrageBean) {
+        b(BarrageBean barrageBean) {
             this.a = barrageBean;
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageSuccListener
-        public void onSuccess(IImageLoader.C2496b c2496b) {
+        public void onSuccess(IImageLoader.b bVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1579373357")) {
-                ipChange.ipc$dispatch("-1579373357", new Object[]{this, c2496b});
-            } else if (c2496b == null || (bitmap = c2496b.b) == null) {
+                ipChange.ipc$dispatch("-1579373357", new Object[]{this, bVar});
+            } else if (bVar == null || (bitmap = bVar.b) == null) {
             } else {
                 this.a.bitmap = SendYouToTheSkyView.this.getCirleBitmap(SendYouToTheSkyView.zoomImage(bitmap, SendYouToTheSkyView.this.dip2pxForFloat(20.0f), SendYouToTheSkyView.this.dip2pxForFloat(20.0f)));
             }
@@ -238,7 +235,7 @@ public class SendYouToTheSkyView extends View {
         this.mAnimator = ofInt;
         ofInt.setDuration(500L);
         this.mAnimator.setRepeatCount(0);
-        this.mAnimator.addUpdateListener(new C2542a());
+        this.mAnimator.addUpdateListener(new a());
         this.mAnimator.addListener(new Animator.AnimatorListener() { // from class: cn.damai.uikit.scrollsky.SendYouToTheSkyView.2
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -487,7 +484,7 @@ public class SendYouToTheSkyView extends View {
                     barrageBean.content = str.substring(0, str.indexOf(StringUtils.LF));
                 }
                 barrageBean.bitmap = this.mDefaultBitmap;
-                C2497a.a().load(barrageBean.headImg, 0, new C2543b(barrageBean), null);
+                cn.damai.uikit.image.a.a().load(barrageBean.headImg, 0, new b(barrageBean), null);
                 this.mList.add(barrageBean);
             }
         }

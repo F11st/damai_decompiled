@@ -39,9 +39,9 @@ public class UploadQueueMgr implements Runnable {
                 String take = queueCache.take();
                 Logger.f("", "take queueCache size", Integer.valueOf(queueCache.size()));
                 if ("i".equals(take)) {
-                    C3134f.i().m();
+                    f.i().m();
                 } else if (MSGTYPE_REALTIME.equals(take)) {
-                    C3133e.h().j();
+                    e.h().j();
                 }
             } catch (Throwable th) {
                 Logger.f("", th);

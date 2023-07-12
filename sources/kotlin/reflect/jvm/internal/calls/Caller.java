@@ -15,9 +15,8 @@ import tb.zf;
 public interface Caller<M extends Member> {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.calls.Caller$a */
     /* loaded from: classes3.dex */
-    public static final class C8265a {
+    public static final class a {
         public static <M extends Member> void a(@NotNull Caller<? extends M> caller, @NotNull Object[] objArr) {
             b41.i(objArr, "args");
             if (zf.a(caller) == objArr.length) {

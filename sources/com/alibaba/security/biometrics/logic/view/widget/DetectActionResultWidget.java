@@ -9,9 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.alibaba.security.biometrics.R;
-import com.alibaba.security.biometrics.a.InterfaceC3740a;
 import com.alibaba.security.biometrics.activity.BaseBioNavigatorActivity;
-import com.alibaba.security.biometrics.c.C3753c;
+import com.alibaba.security.biometrics.c.c;
 import com.alibaba.security.biometrics.service.constants.GlobalErrorCode;
 import com.alibaba.security.biometrics.service.listener.OnRetryListener;
 import com.alibaba.security.biometrics.service.model.params.ALBiometricsParams;
@@ -26,7 +25,7 @@ public class DetectActionResultWidget extends BaseWidget {
     private TextView f;
     private Button g;
     private Button h;
-    private InterfaceC3740a i;
+    private com.alibaba.security.biometrics.a.a i;
 
     public DetectActionResultWidget(Context context) {
         super(context);
@@ -39,9 +38,9 @@ public class DetectActionResultWidget extends BaseWidget {
 
     @Override // com.alibaba.security.biometrics.logic.view.widget.BaseWidget
     protected final void b() {
-        C3788b.a(this.g, c("mainButton"));
-        C3788b.a(this.e, d("titleText"));
-        C3788b.a(this.f, d("messageText"));
+        b.a(this.g, c("mainButton"));
+        b.a(this.e, d("titleText"));
+        b.a(this.f, d("messageText"));
     }
 
     @Override // com.alibaba.security.biometrics.logic.view.widget.BaseWidget
@@ -51,7 +50,7 @@ public class DetectActionResultWidget extends BaseWidget {
 
     public final void g() {
         b();
-        C3788b.a(this.d, a("promptSucceedImageView"), R.C3735drawable.rp_face_result_icon_ok);
+        b.a(this.d, a("promptSucceedImageView"), R.drawable.rp_face_result_icon_ok);
         this.e.setText(R.string.face_liveness_success);
         this.f.setVisibility(4);
         this.g.setVisibility(4);
@@ -69,8 +68,8 @@ public class DetectActionResultWidget extends BaseWidget {
         return "resultPage";
     }
 
-    public void setOnDetectActionResultListener(InterfaceC3740a interfaceC3740a) {
-        this.i = interfaceC3740a;
+    public void setOnDetectActionResultListener(com.alibaba.security.biometrics.a.a aVar) {
+        this.i = aVar;
     }
 
     @Override // com.alibaba.security.biometrics.logic.view.widget.BaseWidget
@@ -96,9 +95,9 @@ public class DetectActionResultWidget extends BaseWidget {
     private void a(final int i, String str, CharSequence charSequence, String str2, boolean z, final int i2) {
         b();
         if (i2 == 0) {
-            C3788b.a(this.d, a("promptSucceedImageView"), R.C3735drawable.rp_face_result_icon_ok);
+            b.a(this.d, a("promptSucceedImageView"), R.drawable.rp_face_result_icon_ok);
         } else {
-            C3788b.a(this.d, a("promptFailImageView"), R.C3735drawable.rp_face_result_icon_fail);
+            b.a(this.d, a("promptFailImageView"), R.drawable.rp_face_result_icon_fail);
         }
         this.e.setText(str);
         this.g.setText(str2);
@@ -108,7 +107,7 @@ public class DetectActionResultWidget extends BaseWidget {
                 setVisibility(0);
                 setAlpha(1.0f);
             } else {
-                C3753c.AnonymousClass1 anonymousClass1 = new C3753c.AnonymousClass1(this);
+                c.AnonymousClass1 anonymousClass1 = new c.AnonymousClass1(this);
                 AlphaAnimation alphaAnimation = new AlphaAnimation(0.0f, 1.0f);
                 alphaAnimation.setFillBefore(true);
                 alphaAnimation.setFillAfter(true);
@@ -151,9 +150,9 @@ public class DetectActionResultWidget extends BaseWidget {
 
     public final void a(final int i, final Runnable runnable, final ALBiometricsParams aLBiometricsParams, String str, final String str2) {
         b();
-        InterfaceC3740a interfaceC3740a = this.i;
-        if (interfaceC3740a != null) {
-            interfaceC3740a.onBeforeRetry(new OnRetryListener() { // from class: com.alibaba.security.biometrics.logic.view.widget.DetectActionResultWidget.3
+        com.alibaba.security.biometrics.a.a aVar = this.i;
+        if (aVar != null) {
+            aVar.onBeforeRetry(new OnRetryListener() { // from class: com.alibaba.security.biometrics.logic.view.widget.DetectActionResultWidget.3
                 @Override // com.alibaba.security.biometrics.service.listener.OnRetryListener
                 public final void onRetry(int i2) {
                     int i3 = i;

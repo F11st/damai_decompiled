@@ -53,7 +53,7 @@ public class CropActivity extends Activity {
             return;
         }
         super.onCreate(bundle);
-        setContentView(R.C7942layout.dago_pgc_ailp_activity_crop);
+        setContentView(R.layout.dago_pgc_ailp_activity_crop);
         this.cropView = (CropView) findViewById(R.id.cropView);
         Bundle extras = getIntent().getExtras();
         if (extras != null) {

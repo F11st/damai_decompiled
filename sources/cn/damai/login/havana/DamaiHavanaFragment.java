@@ -11,9 +11,7 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import androidx.annotation.Nullable;
 import cn.damai.common.app.widget.DMDialog;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$layout;
@@ -36,12 +34,11 @@ public class DamaiHavanaFragment extends AliUserMobileLoginFragment {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.login.havana.DamaiHavanaFragment$a */
     /* loaded from: classes15.dex */
-    public class C1326a implements TextWatcher {
+    public class a implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1326a() {
+        a() {
         }
 
         @Override // android.text.TextWatcher
@@ -72,12 +69,11 @@ public class DamaiHavanaFragment extends AliUserMobileLoginFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.login.havana.DamaiHavanaFragment$b */
     /* loaded from: classes15.dex */
-    public class DialogInterface$OnClickListenerC1327b implements DialogInterface.OnClickListener {
+    public class b implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC1327b() {
+        b() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -95,13 +91,12 @@ public class DamaiHavanaFragment extends AliUserMobileLoginFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.login.havana.DamaiHavanaFragment$c */
     /* loaded from: classes15.dex */
-    public class DialogInterface$OnClickListenerC1328c implements DialogInterface.OnClickListener {
+    public class c implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        DialogInterface$OnClickListenerC1328c(String str) {
+        c(String str) {
             this.a = str;
         }
 
@@ -117,12 +112,11 @@ public class DamaiHavanaFragment extends AliUserMobileLoginFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.login.havana.DamaiHavanaFragment$d */
     /* loaded from: classes15.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC1329d implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class d implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC1329d() {
+        d() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -190,7 +184,7 @@ public class DamaiHavanaFragment extends AliUserMobileLoginFragment {
             this.mSendSMSCodeBtn.setTextColor(getResources().getColor(R$color.main_color));
         } else {
             this.mSendSMSCodeBtn.setTextColor(getResources().getColor(R$color.main_color_disable_state));
-            this.mMobileET.addTextChangedListener(new C1326a());
+            this.mMobileET.addTextChangedListener(new a());
         }
         return onCreateView;
     }
@@ -203,7 +197,7 @@ public class DamaiHavanaFragment extends AliUserMobileLoginFragment {
             return;
         }
         super.onHiddenChanged(z);
-        C0529c.e().o(this, ew0.f().g());
+        cn.damai.common.user.c.e().o(this, ew0.f().g());
     }
 
     @Override // com.ali.user.mobile.login.ui.AliUserMobileLoginFragment, com.ali.user.mobile.login.ui.BaseLoginFragment, com.ali.user.mobile.login.ui.BaseLoginView
@@ -219,9 +213,9 @@ public class DamaiHavanaFragment extends AliUserMobileLoginFragment {
             DMDialog dMDialog = new DMDialog(this.mAttachedActivity);
             dMDialog.setCancelable(true);
             if (DataProviderFactory.getDataProvider().getSite() == 18) {
-                dMDialog.i("再考虑下", new DialogInterface$OnClickListenerC1327b());
+                dMDialog.i("再考虑下", new b());
             }
-            dMDialog.n(getString(R$string.aliuser_agree_and_reg), new DialogInterface$OnClickListenerC1328c(str2));
+            dMDialog.n(getString(R$string.aliuser_agree_and_reg), new c(str2));
             dMDialog.v("温馨提示");
             DamaiProtocolView damaiProtocolView = new DamaiProtocolView(this.mAttachedActivity);
             damaiProtocolView.setRegTip(str);
@@ -240,7 +234,7 @@ public class DamaiHavanaFragment extends AliUserMobileLoginFragment {
         }
         super.onResume();
         HavanaProxy.v().N();
-        C0529c.e().o(this, ew0.f().g());
+        cn.damai.common.user.c.e().o(this, ew0.f().g());
         HavanaProxy.v().O(100);
     }
 
@@ -250,7 +244,7 @@ public class DamaiHavanaFragment extends AliUserMobileLoginFragment {
         if (AndroidInstantRuntime.support(ipChange, "1150536313")) {
             ipChange.ipc$dispatch("1150536313", new Object[]{this});
         } else {
-            this.mRegionTV.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC1329d());
+            this.mRegionTV.getViewTreeObserver().addOnGlobalLayoutListener(new d());
         }
     }
 
@@ -262,7 +256,7 @@ public class DamaiHavanaFragment extends AliUserMobileLoginFragment {
             return;
         }
         super.setUserVisibleHint(z);
-        C0529c.e().o(this, ew0.f().g());
+        cn.damai.common.user.c.e().o(this, ew0.f().g());
     }
 
     @Override // com.ali.user.mobile.login.ui.BaseLoginFragment
@@ -272,8 +266,8 @@ public class DamaiHavanaFragment extends AliUserMobileLoginFragment {
             ipChange.ipc$dispatch("-239540083", new Object[]{this, str});
             return;
         }
-        DMImageCreator c = C0504a.b().c(z20.B(str));
+        DMImageCreator c2 = cn.damai.common.image.a.b().c(z20.B(str));
         int i = R$drawable.uikit_user_default_icon;
-        c.i(i).c(i).g(this.mAvatarIV);
+        c2.i(i).c(i).g(this.mAvatarIV);
     }
 }

@@ -6,7 +6,7 @@ public abstract class NamedRunnable implements Runnable {
     protected final String name;
 
     public NamedRunnable(String str, Object... objArr) {
-        this.name = C8753a.q(str, objArr);
+        this.name = a.q(str, objArr);
     }
 
     protected abstract void execute();

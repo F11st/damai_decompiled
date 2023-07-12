@@ -39,11 +39,9 @@ import com.youku.playerservice.axp.utils.SystemUtil;
 import com.youku.playerservice.axp.utils.TLogUtil;
 import com.youku.playerservice.axp.utils.UpsUtil;
 import com.youku.playerservice.axp.utils.Utils;
-import com.youku.ups.data.C8085a;
-import com.youku.ups.data.C8086b;
 import com.youku.ups.data.RequestParams;
-import com.youku.ups.request.C8088b;
-import com.youku.ups.request.InterfaceC8087a;
+import com.youku.ups.request.a;
+import com.youku.ups.request.b;
 import com.youku.upsplayer.data.ConnectStat;
 import com.youku.upsplayer.module.AntiTheftChainUtLogType;
 import com.youku.upsplayer.module.UtAntiTheaftBean;
@@ -68,7 +66,7 @@ public class GetUpsRequest implements IPlayInfoRequest {
     private volatile boolean mIsCancel;
     private PlayParams mPlayParams;
     private PlayerConfig mPlayerConfig;
-    private C8088b mRequest;
+    private b mRequest;
 
     public GetUpsRequest(PlayerConfig playerConfig) {
         this.mContext = playerConfig.getContext();
@@ -362,7 +360,7 @@ public class GetUpsRequest implements IPlayInfoRequest {
         INetworkTask iNetworkTask = mockTask;
         String string = this.mPlayParams.getPlayIdParams().getString("domain");
         String string2 = this.mPlayParams.getPlayIdParams().getString(TbAuthConstants.IP);
-        this.mRequest = (TextUtils.isEmpty(string) || TextUtils.isEmpty(string2)) ? new C8088b(this.mContext, iNetworkTask, z) : new C8088b(this.mContext, iNetworkTask, z, string, string2);
+        this.mRequest = (TextUtils.isEmpty(string) || TextUtils.isEmpty(string2)) ? new b(this.mContext, iNetworkTask, z) : new b(this.mContext, iNetworkTask, z, string, string2);
         RequestParams requestParams2 = new RequestParams();
         if (playParams.getPlayIdParams().isDisableAd()) {
             requestParams2.put(IRequestConst.NEED_AD, "0");
@@ -376,28 +374,28 @@ public class GetUpsRequest implements IPlayInfoRequest {
         if (dlnaParams != null && dlnaParams.size() > 0) {
             requestParams.putAll(dlnaParams);
         }
-        this.mRequest.a(requestParams, requestParams2, createNetworkParam, new InterfaceC8087a<VideoInfo>() { // from class: com.youku.playerservice.axp.playinfo.request.GetUpsRequest.1
-            @Override // com.youku.ups.request.InterfaceC8087a
-            public void onFailure(C8085a c8085a) {
+        this.mRequest.a(requestParams, requestParams2, createNetworkParam, new a<VideoInfo>() { // from class: com.youku.playerservice.axp.playinfo.request.GetUpsRequest.1
+            @Override // com.youku.ups.request.a
+            public void onFailure(com.youku.ups.data.a aVar) {
                 if (GetUpsRequest.this.mIsCancel) {
                     return;
                 }
                 PlayInfoUpsResponse playInfoUpsResponse = new PlayInfoUpsResponse(GetUpsRequest.this.mContext, GetUpsRequest.this.mPlayParams);
                 playInfoUpsResponse.setInfoType(PlayDefinition.PlayInfoType.UPS);
                 PlayInfoError playInfoError = new PlayInfoError();
-                playInfoError.setErrorCode(c8085a.a());
-                playInfoError.setErrorMsg(c8085a.b());
+                playInfoError.setErrorCode(aVar.a());
+                playInfoError.setErrorMsg(aVar.b());
                 playInfoUpsResponse.setError(playInfoError);
                 GetUpsRequest.this.reportResult(playInfoUpsResponse);
             }
 
-            @Override // com.youku.ups.request.InterfaceC8087a
-            public void onSuccess(C8086b<VideoInfo> c8086b, ConnectStat connectStat) {
+            @Override // com.youku.ups.request.a
+            public void onSuccess(com.youku.ups.data.b<VideoInfo> bVar, ConnectStat connectStat) {
                 if (GetUpsRequest.this.mIsCancel) {
                     return;
                 }
                 GetUpsRequest getUpsRequest = GetUpsRequest.this;
-                getUpsRequest.checkResult(getUpsRequest.mPlayParams, c8086b.a(), connectStat);
+                getUpsRequest.checkResult(getUpsRequest.mPlayParams, bVar.a(), connectStat);
             }
         });
     }

@@ -1,11 +1,11 @@
 package io.reactivex.internal.operators.single;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8152e;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.observers.ResumeSingleObserver;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
@@ -16,7 +16,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SingleDelayWithPublisher<T, U> extends AbstractC8152e<T> {
+public final class SingleDelayWithPublisher<T, U> extends e<T> {
     final Publisher<U> other;
     final SingleSource<T> source;
 
@@ -85,7 +85,7 @@ public final class SingleDelayWithPublisher<T, U> extends AbstractC8152e<T> {
         this.other = publisher;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super T> singleObserver) {
         this.other.subscribe(new OtherSubscriber(singleObserver, this.source));
     }

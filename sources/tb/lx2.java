@@ -21,12 +21,12 @@ public class lx2 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
 
     @Override // cn.damai.tetris.v2.convertor.IConverter
     /* renamed from: a */
-    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, C9039db c9039db) {
+    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, db dbVar) {
         NodeData item;
         IpChange ipChange = $ipChange;
         int i = 0;
         if (AndroidInstantRuntime.support(ipChange, "-420435462")) {
-            return (List) ipChange.ipc$dispatch("-420435462", new Object[]{this, baseResponse, baseSection, globalConfig, c9039db});
+            return (List) ipChange.ipc$dispatch("-420435462", new Object[]{this, baseResponse, baseSection, globalConfig, dbVar});
         }
         NodeData nodeData = null;
         if (baseResponse != null) {
@@ -56,6 +56,6 @@ public class lx2 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
         if (nodeData != null) {
             nodeData.put("isLastTab", (Object) Boolean.TRUE);
         }
-        return new g32().convert(baseResponse, baseSection, globalConfig, c9039db);
+        return new g32().convert(baseResponse, baseSection, globalConfig, dbVar);
     }
 }

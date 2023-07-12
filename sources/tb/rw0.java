@@ -46,7 +46,7 @@ public class rw0 implements FlutterPlugin, MethodChannel.MethodCallHandler {
             if (context == null && (registrar = this.a) != null && registrar.activeContext() != null) {
                 context = this.a.activeContext();
             }
-            if (context != null && (windowManager = (WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)) != null) {
+            if (context != null && (windowManager = (WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)) != null) {
                 f = windowManager.getDefaultDisplay().getRefreshRate();
             }
             result.success(Float.valueOf(f));

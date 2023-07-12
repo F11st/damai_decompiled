@@ -18,19 +18,18 @@ import java.io.File;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class ur2 implements UINotify {
-    private C9786a a;
+    private a a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ur2$a */
     /* loaded from: classes11.dex */
-    public static class C9786a {
+    public static class a {
         private int a = 34858;
         private String b = "update_channel_" + this.a;
         private NotificationManager c;
         private Context d;
         private Notification.Builder e;
 
-        public C9786a(Context context) {
+        public a(Context context) {
             this.d = context;
             this.c = (NotificationManager) context.getSystemService("notification");
             if (Build.VERSION.SDK_INT >= 26) {
@@ -108,19 +107,19 @@ public class ur2 implements UINotify {
     @Override // com.taobao.update.adapter.UINotify
     public void notifyDownloadError(String str) {
         a();
-        new C9786a(UpdateRuntime.getContext()).error(str);
+        new a(UpdateRuntime.getContext()).error(str);
     }
 
     @Override // com.taobao.update.adapter.UINotify
     public void notifyDownloadFinish(String str) {
         a();
-        new C9786a(UpdateRuntime.getContext()).finish(str);
+        new a(UpdateRuntime.getContext()).finish(str);
     }
 
     @Override // com.taobao.update.adapter.UINotify
     public void notifyDownloadProgress(int i) {
         if (this.a == null) {
-            this.a = new C9786a(UpdateRuntime.getContext());
+            this.a = new a(UpdateRuntime.getContext());
         }
         this.a.updateProgress(i);
     }

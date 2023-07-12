@@ -3,7 +3,7 @@ package com.youku.playerservice.axp.utils;
 import android.content.Context;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
-import com.taobao.application.common.C6673b;
+import com.taobao.application.common.b;
 import com.taobao.phenix.request.ImageStatistics;
 import com.youku.android.liveservice.bean.Artp;
 import com.youku.android.liveservice.bean.Grtn;
@@ -290,7 +290,7 @@ public class PlayerUtil {
     }
 
     public static int getDeviceScore() {
-        return C6673b.d().getInt("oldDeviceScore", YoukuContext.getApplicationContext().getSharedPreferences("device_score", 0).getInt("device_score", -1));
+        return b.d().getInt("oldDeviceScore", YoukuContext.getApplicationContext().getSharedPreferences("device_score", 0).getInt("device_score", -1));
     }
 
     public static String getLanguageCodeById(int i) {

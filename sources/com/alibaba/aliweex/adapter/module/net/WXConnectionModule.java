@@ -17,10 +17,9 @@ public class WXConnectionModule extends WXSDKEngine.DestroyableModule {
     private IWXConnection mWXConnectionImpl;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.module.net.WXConnectionModule$a */
     /* loaded from: classes5.dex */
-    class C3062a implements IWXConnection.OnNetworkChangeListener {
-        C3062a() {
+    class a implements IWXConnection.OnNetworkChangeListener {
+        a() {
         }
 
         @Override // com.alibaba.aliweex.adapter.module.net.IWXConnection.OnNetworkChangeListener
@@ -48,9 +47,9 @@ public class WXConnectionModule extends WXSDKEngine.DestroyableModule {
         if (wXSDKInstance == null || wXSDKInstance.getContext() == null) {
             return false;
         }
-        IWXConnection a = C3063a.a(this.mWXSDKInstance.getContext());
-        this.mWXConnectionImpl = a;
-        return a != null;
+        IWXConnection a2 = com.alibaba.aliweex.adapter.module.net.a.a(this.mWXSDKInstance.getContext());
+        this.mWXConnectionImpl = a2;
+        return a2 != null;
     }
 
     @Override // com.taobao.weex.common.WXModule
@@ -64,7 +63,7 @@ public class WXConnectionModule extends WXSDKEngine.DestroyableModule {
             }
             return;
         }
-        this.mWXConnectionImpl.addNetworkChangeListener(new C3062a());
+        this.mWXConnectionImpl.addNetworkChangeListener(new a());
     }
 
     @Override // com.taobao.weex.common.Destroyable

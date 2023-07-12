@@ -3,8 +3,8 @@ package com.amap.api.services.route;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
-import com.amap.api.col.s.C4435i;
 import com.amap.api.col.s.bg;
+import com.amap.api.col.s.i;
 import com.amap.api.services.core.AMapException;
 import com.amap.api.services.core.LatLonPoint;
 import com.amap.api.services.interfaces.IRouteSearchV2;
@@ -340,15 +340,15 @@ public class RouteSearchV2 {
         }
 
         public boolean hasAvoidRoad() {
-            return !C4435i.a(getAvoidRoad());
+            return !i.a(getAvoidRoad());
         }
 
         public boolean hasAvoidpolygons() {
-            return !C4435i.a(getAvoidpolygonsStr());
+            return !i.a(getAvoidpolygonsStr());
         }
 
         public boolean hasPassPoint() {
-            return !C4435i.a(getPassedPointStr());
+            return !i.a(getPassedPointStr());
         }
 
         public int hashCode() {
@@ -412,7 +412,7 @@ public class RouteSearchV2 {
             try {
                 super.clone();
             } catch (CloneNotSupportedException e) {
-                C4435i.a(e, "RouteSearchV2", "DriveRouteQueryclone");
+                i.a(e, "RouteSearchV2", "DriveRouteQueryclone");
             }
             DriveRouteQuery driveRouteQuery = new DriveRouteQuery(this.a, DrivingStrategy.fromValue(this.c), this.d, this.e, this.f);
             driveRouteQuery.setUseFerry(this.g);
@@ -667,7 +667,7 @@ public class RouteSearchV2 {
             try {
                 super.clone();
             } catch (CloneNotSupportedException e) {
-                C4435i.a(e, "RouteSearchV2", "FromAndToclone");
+                i.a(e, "RouteSearchV2", "FromAndToclone");
             }
             FromAndTo fromAndTo = new FromAndTo(this.a, this.b);
             fromAndTo.setStartPoiID(this.c);

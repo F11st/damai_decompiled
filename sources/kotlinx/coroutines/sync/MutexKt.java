@@ -16,8 +16,8 @@ public final class MutexKt {
         a = kj2Var;
         kj2 kj2Var2 = new kj2("UNLOCKED");
         b = kj2Var2;
-        new C8712a(kj2Var);
-        new C8712a(kj2Var2);
+        new a(kj2Var);
+        new a(kj2Var2);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:10:0x0023  */
@@ -45,7 +45,7 @@ public final class MutexKt {
             r0.<init>(r7)
         L18:
             java.lang.Object r7 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L3c

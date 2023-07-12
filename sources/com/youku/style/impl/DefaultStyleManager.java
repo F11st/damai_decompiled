@@ -14,7 +14,7 @@ import androidx.lifecycle.OnLifecycleEvent;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
+import com.alibaba.security.realidentity.jsbridge.a;
 import com.youku.middlewareservice.provider.youku.YoukuSkinManagerProviderProxy;
 import com.youku.middlewareservice.provider.youku.analytics.YoukuAnalyticsProviderProxy;
 import com.youku.skinmanager.entity.SkinConstant;
@@ -133,7 +133,7 @@ public class DefaultStyleManager<STYLE extends Map> implements IStyleManager<STY
 
     private void sendCustomStatics() {
         HashMap hashMap = new HashMap(8);
-        hashMap.put(AbstractC3893a.V, this.skinPath);
+        hashMap.put(a.V, this.skinPath);
         hashMap.put("enable", String.valueOf(this.enableSkin));
         try {
             if (this.mContext == null) {

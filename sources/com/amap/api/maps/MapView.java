@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import com.amap.api.mapcore.util.C4640t;
+import com.amap.api.mapcore.util.t;
 import com.autonavi.amap.mapcore.interfaces.IAMap;
 import com.autonavi.amap.mapcore.interfaces.IMapFragmentDelegate;
 
@@ -41,7 +41,7 @@ public class MapView extends FrameLayout implements BaseMapView {
     protected IMapFragmentDelegate getMapFragmentDelegate() {
         IMapFragmentDelegate iMapFragmentDelegate = this.a;
         if (iMapFragmentDelegate == null && iMapFragmentDelegate == null) {
-            this.a = new C4640t(0);
+            this.a = new t(0);
         }
         return this.a;
     }

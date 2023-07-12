@@ -1,6 +1,5 @@
 package tb;
 
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -20,19 +19,18 @@ public final class wf {
     private final hp0 d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.wf$a */
     /* loaded from: classes3.dex */
-    private static final class C9864a {
-        private C9864a() {
+    private static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9864a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     static {
-        new C9864a(null);
+        new a(null);
         ni1 i = ni1.i("<local>");
         b41.h(i, "special(\"<local>\")");
         e = i;
@@ -88,7 +86,7 @@ public final class wf {
         StringBuilder sb = new StringBuilder();
         String b = c().b();
         b41.h(b, "packageName.asString()");
-        y = C8604o.y(b, '.', r10.DIR, false, 4, null);
+        y = kotlin.text.o.y(b, '.', r10.DIR, false, 4, null);
         sb.append(y);
         sb.append("/");
         if (b() != null) {

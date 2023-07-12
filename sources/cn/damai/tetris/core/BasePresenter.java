@@ -39,9 +39,8 @@ public abstract class BasePresenter<M extends IModel, V extends IView, N extends
     protected int postion;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.core.BasePresenter$a */
     /* loaded from: classes16.dex */
-    static /* synthetic */ class C1987a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -231,7 +230,7 @@ public abstract class BasePresenter<M extends IModel, V extends IView, N extends
         if (m == null || (trackInfo = m.getTrackInfo()) == null) {
             return null;
         }
-        int i = C1987a.a[point.ordinal()];
+        int i = a.a[point.ordinal()];
         if (i != 1) {
             if (i != 2) {
                 return null;

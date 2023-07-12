@@ -3,8 +3,8 @@ package cn.damai.ticklet.ui.activity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseModel;
+import cn.damai.common.app.base.a;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
@@ -19,7 +19,7 @@ import tb.z20;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
-public class TickletBaseActivity<T extends AbstractC0470a, E extends BaseModel> extends DamaiBaseActivity<T, E> implements View.OnClickListener {
+public class TickletBaseActivity<T extends a, E extends BaseModel> extends DamaiBaseActivity<T, E> implements View.OnClickListener {
     private static transient /* synthetic */ IpChange $ipChange;
 
     @Override // cn.damai.common.app.base.BaseActivity

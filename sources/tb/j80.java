@@ -17,16 +17,15 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes8.dex */
 public final class j80 {
     @NotNull
-    public static final C9301a Companion = new C9301a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.j80$a */
     /* loaded from: classes8.dex */
-    public static final class C9301a {
-        private C9301a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9301a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

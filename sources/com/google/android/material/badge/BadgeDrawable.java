@@ -48,7 +48,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
     static final String DEFAULT_EXCEED_MAX_BADGE_NUMBER_SUFFIX = "+";
     private static final int DEFAULT_MAX_BADGE_CHARACTER_COUNT = 4;
     @StyleRes
-    private static final int DEFAULT_STYLE = R.C4819style.Widget_MaterialComponents_Badge;
+    private static final int DEFAULT_STYLE = R.style.Widget_MaterialComponents_Badge;
     @AttrRes
     private static final int DEFAULT_THEME_ATTR = R.attr.badgeStyle;
     private static final int MAX_CIRCULAR_BADGE_NUMBER_COUNT = 9;
@@ -97,7 +97,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
         this.textDrawableHelper = textDrawableHelper;
         textDrawableHelper.getTextPaint().setTextAlign(Paint.Align.CENTER);
         this.savedState = new SavedState(context);
-        setTextAppearanceResource(R.C4819style.TextAppearance_MaterialComponents_Badge);
+        setTextAppearanceResource(R.style.TextAppearance_MaterialComponents_Badge);
     }
 
     private void calculateCenterAndBounds(@NonNull Context context, @NonNull Rect rect, @NonNull View view) {
@@ -603,7 +603,7 @@ public class BadgeDrawable extends Drawable implements TextDrawableHelper.TextDr
         public SavedState(@NonNull Context context) {
             this.alpha = 255;
             this.number = -1;
-            this.badgeTextColor = new TextAppearance(context, R.C4819style.TextAppearance_MaterialComponents_Badge).textColor.getDefaultColor();
+            this.badgeTextColor = new TextAppearance(context, R.style.TextAppearance_MaterialComponents_Badge).textColor.getDefaultColor();
             this.contentDescriptionNumberless = context.getString(R.string.mtrl_badge_numberless_content_description);
             this.contentDescriptionQuantityStrings = R.plurals.mtrl_badge_content_description;
             this.contentDescriptionExceedsMaxBadgeNumberRes = R.string.mtrl_exceed_max_badge_number_content_description;

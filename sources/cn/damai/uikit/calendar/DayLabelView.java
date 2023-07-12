@@ -46,19 +46,19 @@ public class DayLabelView extends LinearLayout {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public void applyFacade(C2490a c2490a) {
+    public void applyFacade(a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-832223864")) {
-            ipChange.ipc$dispatch("-832223864", new Object[]{this, c2490a});
-        } else if (c2490a == null) {
+            ipChange.ipc$dispatch("-832223864", new Object[]{this, aVar});
+        } else if (aVar == null) {
         } else {
-            if (c2490a.p() && this.mDayView.isInMonth()) {
-                this.mLabelTv.setBackgroundDrawable(c2490a.i());
-                if (c2490a.j() != null) {
-                    this.mLabelTv.setBackground(c2490a.i(), c2490a.j());
+            if (aVar.p() && this.mDayView.isInMonth()) {
+                this.mLabelTv.setBackgroundDrawable(aVar.i());
+                if (aVar.j() != null) {
+                    this.mLabelTv.setBackground(aVar.i(), aVar.j());
                 }
-                this.mLabelTv.setText(c2490a.k());
-                if (!TextUtils.isEmpty(c2490a.k()) && "惠".equals(c2490a.k())) {
+                this.mLabelTv.setText(aVar.k());
+                if (!TextUtils.isEmpty(aVar.k()) && "惠".equals(aVar.k())) {
                     this.mLabelTv.setTextColor(getResources().getColor(R$color.day_ff2d79));
                     this.mLabelTv.getPaint().setFakeBoldText(false);
                 } else {
@@ -69,7 +69,7 @@ public class DayLabelView extends LinearLayout {
             } else {
                 this.mLabelTv.setVisibility(4);
             }
-            this.mDayView.applyFacade(c2490a);
+            this.mDayView.applyFacade(aVar);
         }
     }
 

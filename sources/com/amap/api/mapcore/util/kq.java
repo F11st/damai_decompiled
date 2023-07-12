@@ -8,14 +8,13 @@ import java.util.List;
 public final class kq {
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.kq$a */
     /* loaded from: classes10.dex */
-    public static class C4606a implements ko {
+    public static class a implements ko {
         private int a;
         private int b;
         private int c;
 
-        C4606a(int i, int i2, int i3) {
+        a(int i, int i2, int i3) {
             this.a = i;
             this.b = i2;
             this.c = i3;
@@ -37,7 +36,7 @@ public final class kq {
     }
 
     public static synchronized void a(List<ks> list) {
-        C4606a c4606a;
+        a aVar;
         synchronized (kq.class) {
             if (list != null) {
                 if (!list.isEmpty()) {
@@ -45,18 +44,18 @@ public final class kq {
                     for (ks ksVar : list) {
                         if (ksVar instanceof ku) {
                             ku kuVar = (ku) ksVar;
-                            c4606a = new C4606a(kuVar.j, kuVar.k, kuVar.c);
+                            aVar = new a(kuVar.j, kuVar.k, kuVar.c);
                         } else if (ksVar instanceof kv) {
                             kv kvVar = (kv) ksVar;
-                            c4606a = new C4606a(kvVar.j, kvVar.k, kvVar.c);
+                            aVar = new a(kvVar.j, kvVar.k, kvVar.c);
                         } else if (ksVar instanceof kw) {
                             kw kwVar = (kw) ksVar;
-                            c4606a = new C4606a(kwVar.j, kwVar.k, kwVar.c);
+                            aVar = new a(kwVar.j, kwVar.k, kwVar.c);
                         } else if (ksVar instanceof kt) {
                             kt ktVar = (kt) ksVar;
-                            c4606a = new C4606a(ktVar.k, ktVar.l, ktVar.c);
+                            aVar = new a(ktVar.k, ktVar.l, ktVar.c);
                         }
-                        arrayList.add(c4606a);
+                        arrayList.add(aVar);
                     }
                     kp.a().a(arrayList);
                 }

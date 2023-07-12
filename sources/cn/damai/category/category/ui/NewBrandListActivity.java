@@ -1,6 +1,6 @@
 package cn.damai.category.category.ui;
 
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -16,12 +16,11 @@ public class NewBrandListActivity extends SimpleBaseActivity {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.NewBrandListActivity$a */
     /* loaded from: classes.dex */
-    public class C0337a implements SimpleTitleLayout.OnBtnClickListener {
+    public class a implements SimpleTitleLayout.OnBtnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0337a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.view.SimpleTitleLayout.OnBtnClickListener
@@ -59,13 +58,13 @@ public class NewBrandListActivity extends SimpleBaseActivity {
         super.initView();
         hideBaseLayout();
         setDamaiUTKeyBuilder(kd.k());
-        C0529c.e().K(this);
+        c.e().K(this);
         SimpleTitleLayout simpleTitleLayout = (SimpleTitleLayout) findViewById(R$id.nbl_stl);
         simpleTitleLayout.setTitle(ErrControlViewInfo.TYPE_BRAND_IP);
         simpleTitleLayout.showShareBtn(false);
         simpleTitleLayout.enableImmersiveMode(this);
         simpleTitleLayout.switchMode(true);
-        simpleTitleLayout.setListener(new C0337a());
+        simpleTitleLayout.setListener(new a());
         getSupportFragmentManager().beginTransaction().add(R$id.nbl_fragment_container, new BrandFragment()).commitAllowingStateLoss();
     }
 

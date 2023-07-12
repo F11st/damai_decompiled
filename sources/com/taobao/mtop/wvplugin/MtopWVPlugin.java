@@ -5,7 +5,7 @@ import android.taobao.windvane.jsbridge.WVCallBackContext;
 import android.taobao.windvane.jsbridge.WVPluginManager;
 import android.taobao.windvane.jsbridge.WindVaneInterface;
 import mtopsdk.common.util.TBSdkLog;
-import tb.C10007z;
+import tb.z;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -17,7 +17,7 @@ public class MtopWVPlugin extends WVApiPlugin {
     private static final String TAG = "mtopsdk.MtopWVPlugin";
     public static final String TIME_OUT = "MP_TIME_OUT";
     private MtopBridge mtopBridge = new MtopBridge(this);
-    private C10007z aNetBridge = new C10007z();
+    private z aNetBridge = new z();
 
     public static void register() {
         WVPluginManager.registerPlugin(API_SERVER_NAME, (Class<? extends WVApiPlugin>) MtopWVPlugin.class);
@@ -60,12 +60,12 @@ public class MtopWVPlugin extends WVApiPlugin {
         this.mtopBridge.i(wVCallBackContext, str);
     }
 
-    public void wvCallback(C6824b c6824b) {
-        if (c6824b.d()) {
-            c6824b.c().success(c6824b.toString());
+    public void wvCallback(b bVar) {
+        if (bVar.d()) {
+            bVar.c().success(bVar.toString());
         } else {
-            c6824b.c().error(c6824b.toString());
+            bVar.c().error(bVar.toString());
         }
-        c6824b.f(null);
+        bVar.f(null);
     }
 }

@@ -8,12 +8,12 @@ import android.text.TextUtils;
 import com.huawei.hms.aaid.constant.ErrorEnum;
 import com.huawei.hms.aaid.plugin.ProxyCenter;
 import com.huawei.hms.aaid.utils.PushPreferences;
-import com.huawei.hms.push.C5684e;
-import com.huawei.hms.push.C5687h;
-import com.huawei.hms.push.C5688i;
-import com.huawei.hms.push.C5701u;
-import com.huawei.hms.push.C5705x;
 import com.huawei.hms.push.constant.RemoteMessageConst;
+import com.huawei.hms.push.e;
+import com.huawei.hms.push.h;
+import com.huawei.hms.push.i;
+import com.huawei.hms.push.u;
+import com.huawei.hms.push.x;
 import com.huawei.hms.support.log.HMSLog;
 import com.huawei.hms.utils.ResourceLoaderUtil;
 import com.taobao.orange.OConstant;
@@ -28,24 +28,24 @@ import org.json.JSONObject;
 public class PluginUtil {
     public static void a(Context context, String str, String str2, String str3) {
         HMSLog.i("PluginUtil", "onNotification");
-        if (!C5701u.a(context)) {
+        if (!u.a(context)) {
             HMSLog.i("PluginUtil", context.getPackageName() + " disable display notification.");
-            C5684e.a(context, str, null, OConstant.CODE_POINT_EXP_GET_TARGET_DIR);
+            e.a(context, str, null, OConstant.CODE_POINT_EXP_GET_TARGET_DIR);
             return;
         }
         Intent intent = new Intent();
         intent.setAction("com.huawei.push.msg.NOTIFY_MSG");
-        Charset charset = C5705x.a;
+        Charset charset = x.a;
         intent.putExtra("selfshow_info", str3.getBytes(charset));
         intent.putExtra("selfshow_token", str2.getBytes(charset));
         intent.setPackage(context.getPackageName());
-        C5688i.a(context, intent);
+        i.a(context, intent);
         HMSLog.i("PluginUtil", "invokeSelfShow done");
     }
 
     public static void onAppOpened(Context context, String str, String str2, Bundle bundle) {
-        C5684e.a(context, str, str2, "appHasOpenedId");
-        C5684e.a(context, bundle, "hmsStatistics");
+        e.a(context, str, str2, "appHasOpenedId");
+        e.a(context, bundle, "hmsStatistics");
     }
 
     public static boolean onDataMessage(Context context, String str, String str2, boolean z) {
@@ -61,9 +61,9 @@ public class PluginUtil {
         intent.setPackage(context.getPackageName());
         Bundle bundle = new Bundle();
         bundle.putString("message_id", str);
-        bundle.putByteArray(RemoteMessageConst.MSGBODY, str2.getBytes(C5705x.a));
+        bundle.putByteArray(RemoteMessageConst.MSGBODY, str2.getBytes(x.a));
         bundle.putString("message_type", "received_message");
-        return new C5687h().a(context, bundle, intent);
+        return new h().a(context, bundle, intent);
     }
 
     public static boolean onDeletedMessages(Context context) {
@@ -76,7 +76,7 @@ public class PluginUtil {
         Bundle bundle = new Bundle();
         bundle.putString("message_proxy_type", ProxyCenter.getProxy().getProxyType());
         bundle.putString("message_type", "server_deleted_message");
-        return new C5687h().a(context, bundle, intent);
+        return new h().a(context, bundle, intent);
     }
 
     public static void onMessage(Context context, String[] strArr) {
@@ -108,15 +108,15 @@ public class PluginUtil {
             bundle.putString("subjectId", str2);
         }
         bundle.putString("message_proxy_type", ProxyCenter.getProxy().getProxyType());
-        return new C5687h().a(context, bundle, intent);
+        return new h().a(context, bundle, intent);
     }
 
     public static void onNotificationArrived(Context context, String str, String str2) {
-        C5684e.a(context, str, str2, MessageService.MSG_DB_COMPLETE);
+        e.a(context, str, str2, MessageService.MSG_DB_COMPLETE);
     }
 
     public static void onNotificationClicked(Context context, String str, String str2) {
-        C5684e.a(context, str, str2, "1");
+        e.a(context, str, str2, "1");
         onAppOpened(context, str, str2, null);
     }
 
@@ -170,6 +170,6 @@ public class PluginUtil {
     }
 
     public static void a(Context context, String str) {
-        C5684e.a(context, str, null, OConstant.CODE_POINT_EXP_LOAD_CACHE);
+        e.a(context, str, null, OConstant.CODE_POINT_EXP_LOAD_CACHE);
     }
 }

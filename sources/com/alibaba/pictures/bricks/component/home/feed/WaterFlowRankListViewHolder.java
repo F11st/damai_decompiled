@@ -14,8 +14,8 @@ import com.alibaba.pictures.R$drawable;
 import com.alibaba.pictures.R$id;
 import com.alibaba.pictures.bricks.bean.WaterFlowRecommendItem;
 import com.alibaba.pictures.bricks.component.home.feed.WaterFlowRankListViewHolder;
-import com.alibaba.pictures.bricks.util.C3550a;
 import com.alibaba.pictures.bricks.util.DMRGBUtil;
+import com.alibaba.pictures.bricks.util.a;
 import com.alibaba.pictures.bricks.view.RCRelativeLayoutView;
 import com.alient.onearch.adapter.view.BaseViewHolder;
 import com.alient.oneservice.image.FailEvent;
@@ -130,7 +130,7 @@ public class WaterFlowRankListViewHolder extends BaseViewHolder<WaterFlowRecomme
                 ((ImageTicket) this.mRankListImage.getTag()).cancel();
             }
             final String str = "5".equals(waterFlowRecommendItem.cardType) ? waterFlowRecommendItem.pic : waterFlowRecommendItem.backgroundPic;
-            this.mRankListImage.setTag(ImageLoaderProviderProxy.getProxy().load(C3550a.c(str, this.imageViewWidth, this.imageViewHeight), new IImageSuccListener() { // from class: tb.z03
+            this.mRankListImage.setTag(ImageLoaderProviderProxy.getProxy().load(a.c(str, this.imageViewWidth, this.imageViewHeight), new IImageSuccListener() { // from class: tb.z03
                 @Override // com.alient.oneservice.image.IImageSuccListener
                 public final void onSuccess(SuccessEvent successEvent) {
                     WaterFlowRankListViewHolder.this.lambda$handleView$1(str, successEvent);

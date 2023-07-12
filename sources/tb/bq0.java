@@ -83,16 +83,16 @@ public final class bq0 implements GXRegisterCenter.GXIExtensionTemplateSource {
         return (ns0) obj;
     }
 
-    private final byte[] d(GXTemplateEngine.C3347i c3347i) {
+    private final byte[] d(GXTemplateEngine.i iVar) {
         AssetManager assets;
         try {
-            String b = c3347i.b();
+            String b = iVar.b();
             if (b.length() == 0) {
-                b = c3347i.a();
+                b = iVar.a();
             }
             Resources resources = this.a.getResources();
             if (resources != null && (assets = resources.getAssets()) != null) {
-                InputStream open = assets.open(b + r10.DIR + c3347i.d());
+                InputStream open = assets.open(b + r10.DIR + iVar.d());
                 if (open == null) {
                     return null;
                 }
@@ -109,18 +109,18 @@ public final class bq0 implements GXRegisterCenter.GXIExtensionTemplateSource {
 
     @Override // com.alibaba.gaiax.GXRegisterCenter.GXIExtensionTemplateSource
     @Nullable
-    public ns0 getTemplate(@NotNull GXTemplateEngine.C3347i c3347i) {
-        b41.i(c3347i, "gxTemplateItem");
-        ns0 c = c(c3347i.a(), c3347i.d());
+    public ns0 getTemplate(@NotNull GXTemplateEngine.i iVar) {
+        b41.i(iVar, "gxTemplateItem");
+        ns0 c = c(iVar.a(), iVar.d());
         if (c != null) {
             return c;
         }
-        byte[] d = d(c3347i);
+        byte[] d = d(iVar);
         if (d != null) {
-            ns0 b = b(d, c3347i.a(), c3347i.d());
+            ns0 b = b(d, iVar.a(), iVar.d());
             b.i("assets_binary");
             a(b);
-            return c(c3347i.a(), c3347i.d());
+            return c(iVar.a(), iVar.d());
         }
         return null;
     }

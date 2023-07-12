@@ -5,7 +5,6 @@ import android.util.LruCache;
 import com.alibaba.fastjson.JSONObject;
 import com.taobao.android.dinamicx.DinamicXEngine;
 import com.taobao.android.dinamicx.model.DXLongSparseArray;
-import com.taobao.android.dinamicx.template.download.C6399b;
 import com.taobao.android.dinamicx.template.download.DXTemplateItem;
 import com.taobao.android.dinamicx.template.download.DXTemplatePackageInfo;
 import java.util.Collection;
@@ -22,26 +21,24 @@ import java.util.concurrent.ConcurrentHashMap;
 public class q10 {
     private ConcurrentHashMap<String, JSONObject> a;
     private final Map<String, Map<String, LinkedList<DXTemplateItem>>> b;
-    private final DXLongSparseArray<C9590b> c;
+    private final DXLongSparseArray<b> c;
     private final Map<String, Set<Long>> d;
     private final LruCache<String, Integer> e;
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.q10$b */
     /* loaded from: classes11.dex */
-    public class C9590b {
+    public class b {
         Map<String, LinkedList<DXTemplateItem>> a;
 
-        private C9590b(q10 q10Var) {
+        private b(q10 q10Var) {
             this.a = new HashMap();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.q10$c */
     /* loaded from: classes11.dex */
-    private static class C9591c {
+    private static class c {
         private static final q10 a = new q10();
     }
 
@@ -58,20 +55,20 @@ public class q10 {
         sb.append(str);
         sb.append(r10.DIR);
         sb.append(dXTemplateItem.name);
-        long a = r10.a(C6399b.a(sb.toString()));
-        if (a < 0) {
+        long a2 = r10.a(com.taobao.android.dinamicx.template.download.b.a(sb.toString()));
+        if (a2 < 0) {
             return null;
         }
         DXTemplateItem dXTemplateItem2 = new DXTemplateItem();
         dXTemplateItem2.name = dXTemplateItem.name;
-        dXTemplateItem2.version = a;
+        dXTemplateItem2.version = a2;
         sb.append(r10.DIR);
-        sb.append(a);
+        sb.append(a2);
         String sb2 = sb.toString();
-        String[] a2 = C6399b.a(sb2);
-        if (a2 != null) {
+        String[] a3 = com.taobao.android.dinamicx.template.download.b.a(sb2);
+        if (a3 != null) {
             HashMap hashMap = new HashMap();
-            for (String str2 : a2) {
+            for (String str2 : a3) {
                 hashMap.put(str2, sb2 + r10.DIR + str2);
             }
             String str3 = hashMap.get(r10.DX_MAIN_TEMPLATE_NAME);
@@ -128,7 +125,7 @@ public class q10 {
     }
 
     public static q10 f() {
-        return C9591c.a;
+        return c.a;
     }
 
     private boolean j(String str, long j, DXTemplateItem dXTemplateItem) {
@@ -144,9 +141,9 @@ public class q10 {
             }
             if (map.get(dXTemplateItem.name) == null) {
                 LinkedList<DXTemplateItem> e = o10.b().e(str, dXTemplateItem);
-                DXTemplateItem b = b(str, dXTemplateItem);
-                if (b != null) {
-                    i(e, b);
+                DXTemplateItem b2 = b(str, dXTemplateItem);
+                if (b2 != null) {
+                    i(e, b2);
                 }
                 map.put(dXTemplateItem.name, e);
             }
@@ -156,12 +153,12 @@ public class q10 {
     private void p(String str, long j, DXTemplateItem dXTemplateItem) {
         LinkedList<DXTemplateItem> linkedList;
         synchronized (this.c) {
-            C9590b c9590b = this.c.get(j);
-            if (c9590b == null) {
-                c9590b = new C9590b();
-                this.c.put(j, c9590b);
+            b bVar = this.c.get(j);
+            if (bVar == null) {
+                bVar = new b();
+                this.c.put(j, bVar);
             }
-            linkedList = c9590b.a.get(dXTemplateItem.name);
+            linkedList = bVar.a.get(dXTemplateItem.name);
             if (linkedList == null) {
                 Map<String, LinkedList<DXTemplateItem>> map = this.b.get(str);
                 if (map == null || map.get(dXTemplateItem.name) == null) {
@@ -171,9 +168,9 @@ public class q10 {
                 if (map2 != null) {
                     LinkedList<DXTemplateItem> linkedList2 = map2.get(dXTemplateItem.name);
                     if (linkedList2 == null) {
-                        c9590b.a.put(dXTemplateItem.name, new LinkedList<>());
+                        bVar.a.put(dXTemplateItem.name, new LinkedList<>());
                     } else {
-                        c9590b.a.put(dXTemplateItem.name, new LinkedList<>(linkedList2));
+                        bVar.a.put(dXTemplateItem.name, new LinkedList<>(linkedList2));
                     }
                 }
             }
@@ -435,8 +432,8 @@ public class q10 {
             if (hashSet != null && !hashSet.isEmpty()) {
                 synchronized (this.c) {
                     for (Long l : hashSet) {
-                        C9590b c9590b = this.c.get(l.longValue());
-                        if (c9590b != null && (linkedList = c9590b.a.get(dXTemplateItem.name)) != null) {
+                        b bVar = this.c.get(l.longValue());
+                        if (bVar != null && (linkedList = bVar.a.get(dXTemplateItem.name)) != null) {
                             linkedList.remove(dXTemplateItem);
                         }
                     }
@@ -479,9 +476,9 @@ public class q10 {
                 }
                 synchronized (this.c) {
                     for (Long l : hashSet) {
-                        C9590b c9590b = this.c.get(l.longValue());
-                        if (c9590b != null) {
-                            i(c9590b.a.get(dXTemplateItem.name), dXTemplateItem);
+                        b bVar = this.c.get(l.longValue());
+                        if (bVar != null) {
+                            i(bVar.a.get(dXTemplateItem.name), dXTemplateItem);
                         }
                     }
                 }

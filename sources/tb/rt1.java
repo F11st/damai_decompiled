@@ -65,7 +65,7 @@ public class rt1 {
         if (AndroidInstantRuntime.support(ipChange, "2134393459")) {
             return ((Integer) ipChange.ipc$dispatch("2134393459", new Object[]{this, activity})).intValue();
         }
-        WindowManager windowManager = (WindowManager) activity.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+        WindowManager windowManager = (WindowManager) activity.getSystemService(v.ATTACH_MODE_WINDOW);
         Point point = new Point();
         if (Build.VERSION.SDK_INT >= 17) {
             Display.getRealSize(windowManager.getDefaultDisplay(), point);

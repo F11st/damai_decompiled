@@ -18,7 +18,7 @@ public final class ow2 {
         b41.i(lookupLocation, "from");
         b41.i(classDescriptor, "scopeOwner");
         b41.i(ni1Var, "name");
-        if (lookupTracker == LookupTracker.C8324a.INSTANCE || (location = lookupLocation.getLocation()) == null) {
+        if (lookupTracker == LookupTracker.a.INSTANCE || (location = lookupLocation.getLocation()) == null) {
             return;
         }
         Position position = lookupTracker.getRequiresPosition() ? location.getPosition() : Position.Companion.a();
@@ -49,7 +49,7 @@ public final class ow2 {
         b41.i(lookupLocation, "from");
         b41.i(str, "packageFqName");
         b41.i(str2, "name");
-        if (lookupTracker == LookupTracker.C8324a.INSTANCE || (location = lookupLocation.getLocation()) == null) {
+        if (lookupTracker == LookupTracker.a.INSTANCE || (location = lookupLocation.getLocation()) == null) {
             return;
         }
         lookupTracker.record(location.getFilePath(), lookupTracker.getRequiresPosition() ? location.getPosition() : Position.Companion.a(), str, ScopeKind.PACKAGE, str2);

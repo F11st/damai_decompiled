@@ -16,7 +16,7 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.google.android.flexbox.FlexboxLayout;
 import java.util.ArrayList;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.ap2;
@@ -38,15 +38,14 @@ public final class CouponQuestionViewHolder extends RecyclerView.ViewHolder impl
     private FaqBean e;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.coupon.view.CouponQuestionViewHolder$a */
     /* loaded from: classes7.dex */
-    public static final class C3521a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
         @NotNull
         private final String a;
         private final int b;
 
-        public C3521a(@NotNull String str, int i) {
+        public a(@NotNull String str, int i) {
             b41.i(str, "question");
             this.a = str;
             this.b = i;
@@ -119,11 +118,11 @@ public final class CouponQuestionViewHolder extends RecyclerView.ViewHolder impl
         for (Object obj : this.d) {
             int i3 = i2 + 1;
             if (i2 < 0) {
-                C8214m.p();
+                m.p();
             }
             String str2 = (String) obj;
             View inflate = LayoutInflater.from(this.itemView.getContext()).inflate(R$layout.bricks_coupon_one_question_view, (ViewGroup) this.b, false);
-            inflate.setTag(new C3521a(str2, i2));
+            inflate.setTag(new a(str2, i2));
             inflate.setOnClickListener(this);
             TextView textView = (TextView) inflate.findViewById(R$id.id_bricks_coq_tv);
             if (textView != null) {
@@ -161,10 +160,10 @@ public final class CouponQuestionViewHolder extends RecyclerView.ViewHolder impl
             return;
         }
         FaqBean faqBean = this.e;
-        if (faqBean == null || (orderBean = faqBean.getOrderBean()) == null || view == null || (tag = view.getTag()) == null || !(tag instanceof C3521a)) {
+        if (faqBean == null || (orderBean = faqBean.getOrderBean()) == null || view == null || (tag = view.getTag()) == null || !(tag instanceof a)) {
             return;
         }
-        C3521a c3521a = (C3521a) tag;
-        this.a.onItemClick(view, c3521a.b(), orderBean, c3521a.a());
+        a aVar = (a) tag;
+        this.a.onItemClick(view, aVar.b(), orderBean, aVar.a());
     }
 }

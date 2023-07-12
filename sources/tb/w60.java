@@ -1,7 +1,6 @@
 package tb;
 
 import kotlin.jvm.functions.Function3;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassKind;
@@ -20,7 +19,6 @@ import kotlin.reflect.jvm.internal.impl.types.TypeProjection;
 import kotlin.reflect.jvm.internal.impl.types.Variance;
 import kotlin.reflect.jvm.internal.impl.types.typeUtil.TypeUtilsKt;
 import kotlin.reflect.jvm.internal.impl.utils.FunctionsKt;
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -46,7 +44,7 @@ public final class w60 {
                 StringBuilder sb = new StringBuilder();
                 String b = fqName.b();
                 b41.h(b, "fqName.asString()");
-                y = C8604o.y(b, '.', r10.DIR, false, 4, null);
+                y = kotlin.text.o.y(b, '.', r10.DIR, false, 4, null);
                 sb.append(y);
                 sb.append(r10.DIR);
                 sb.append(d);
@@ -79,7 +77,7 @@ public final class w60 {
         }
         z71 returnType = callableDescriptor.getReturnType();
         b41.f(returnType);
-        if (AbstractC8271b.A0(returnType)) {
+        if (kotlin.reflect.jvm.internal.impl.builtins.b.A0(returnType)) {
             z71 returnType2 = callableDescriptor.getReturnType();
             b41.f(returnType2);
             if (!fr2.m(returnType2) && !(callableDescriptor instanceof PropertyGetterDescriptor)) {
@@ -126,7 +124,7 @@ public final class w60 {
                         return t;
                     }
                     boolean z = declarationDescriptor instanceof ClassDescriptor;
-                    if (z && AbstractC8271b.c0(z71Var)) {
+                    if (z && kotlin.reflect.jvm.internal.impl.builtins.b.c0(z71Var)) {
                         if (z71Var.b().size() == 1) {
                             TypeProjection typeProjection = z71Var.b().get(0);
                             z71 type = typeProjection.getType();
@@ -145,7 +143,7 @@ public final class w60 {
                         if (q21.b(declarationDescriptor) && !vq2Var.c() && (z71Var2 = (z71) tg0.a(xc2Var, z71Var)) != null) {
                             return (T) d(z71Var2, jvmTypeFactory, vq2Var.g(), typeMappingConfiguration, u61Var, function3);
                         }
-                        if (vq2Var.e() && AbstractC8271b.j0((ClassDescriptor) declarationDescriptor)) {
+                        if (vq2Var.e() && kotlin.reflect.jvm.internal.impl.builtins.b.j0((ClassDescriptor) declarationDescriptor)) {
                             obj = (Object) jvmTypeFactory.getJavaLangClassType();
                         } else {
                             ClassDescriptor classDescriptor = (ClassDescriptor) declarationDescriptor;

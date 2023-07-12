@@ -113,18 +113,17 @@ public class CropImageActivity extends MonitoredActivity {
             }
         }
 
-        /* synthetic */ Cropper(CropImageActivity cropImageActivity, C2681a c2681a) {
+        /* synthetic */ Cropper(CropImageActivity cropImageActivity, a aVar) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.crop.CropImageActivity$a */
     /* loaded from: classes9.dex */
-    public class C2681a implements ImageViewTouchBase.Recycler {
+    public class a implements ImageViewTouchBase.Recycler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2681a(CropImageActivity cropImageActivity) {
+        a(CropImageActivity cropImageActivity) {
         }
 
         @Override // cn.damai.user.crop.ImageViewTouchBase.Recycler
@@ -140,12 +139,11 @@ public class CropImageActivity extends MonitoredActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.crop.CropImageActivity$b */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2682b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2682b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -161,12 +159,11 @@ public class CropImageActivity extends MonitoredActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.crop.CropImageActivity$c */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2683c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2683c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -534,9 +531,9 @@ public class CropImageActivity extends MonitoredActivity {
         CropImageView cropImageView = (CropImageView) findViewById(R$id.crop_image);
         this.n = cropImageView;
         cropImageView.context = this;
-        cropImageView.setRecycler(new C2681a(this));
-        findViewById(R$id.btn_cancel).setOnClickListener(new View$OnClickListenerC2682b());
-        findViewById(R$id.btn_done).setOnClickListener(new View$OnClickListenerC2683c());
+        cropImageView.setRecycler(new a(this));
+        findViewById(R$id.btn_cancel).setOnClickListener(new b());
+        findViewById(R$id.btn_done).setOnClickListener(new c());
     }
 
     @TargetApi(19)

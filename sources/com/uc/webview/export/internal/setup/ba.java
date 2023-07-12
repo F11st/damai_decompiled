@@ -9,7 +9,7 @@ import com.uc.webview.export.internal.utility.Log;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public final class ba extends AbstractC7282l {
+public final class ba extends l {
     public ba() {
         Log.i("SystemSetupTask", "<init>", new Throwable());
     }

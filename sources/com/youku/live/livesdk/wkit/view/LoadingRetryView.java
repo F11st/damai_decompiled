@@ -99,7 +99,7 @@ public class LoadingRetryView extends RelativeLayout {
         } else if (this.mHasBeenInited) {
         } else {
             this.mHasBeenInited = true;
-            new AsyncLayoutInflater(context).inflate(R.C7960layout.dago_container_retry_loading_layout, this, new AsyncLayoutInflater.OnInflateFinishedListener() { // from class: com.youku.live.livesdk.wkit.view.LoadingRetryView.1
+            new AsyncLayoutInflater(context).inflate(R.layout.dago_container_retry_loading_layout, this, new AsyncLayoutInflater.OnInflateFinishedListener() { // from class: com.youku.live.livesdk.wkit.view.LoadingRetryView.1
                 private static transient /* synthetic */ IpChange $ipChange;
 
                 @Override // androidx.asynclayoutinflater.view.AsyncLayoutInflater.OnInflateFinishedListener
@@ -164,7 +164,7 @@ public class LoadingRetryView extends RelativeLayout {
         View view = this.mBackground;
         if (view != null) {
             if (z) {
-                view.setBackgroundResource(R.C7959drawable.dago_container_live_room_bg_online_class);
+                view.setBackgroundResource(R.drawable.dago_container_live_room_bg_online_class);
             } else {
                 view.setBackground(new ColorDrawable(0));
             }

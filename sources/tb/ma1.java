@@ -20,9 +20,8 @@ public class ma1 {
     private volatile Object _removedRef = null;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ma1$a */
     /* loaded from: classes11.dex */
-    public static abstract class AbstractC9434a extends t8 {
+    public static abstract class a extends t8 {
         @Override // tb.t8
         public final void a(@NotNull v8<?> v8Var, @Nullable Object obj) {
             boolean z = obj == null;
@@ -143,7 +142,7 @@ public class ma1 {
                 java.lang.Object r7 = tb.u8.RETRY_ATOMIC
                 return r7
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.ma1.AbstractC9434a.c(tb.v8):java.lang.Object");
+            throw new UnsupportedOperationException("Method not decompiled: tb.ma1.a.c(tb.v8):java.lang.Object");
         }
 
         @Nullable
@@ -153,7 +152,7 @@ public class ma1 {
 
         protected abstract void f(@NotNull ma1 ma1Var, @NotNull ma1 ma1Var2);
 
-        public abstract void g(@NotNull C9437d c9437d);
+        public abstract void g(@NotNull d dVar);
 
         @Nullable
         protected abstract ma1 h();
@@ -162,8 +161,8 @@ public class ma1 {
         protected abstract ma1 i();
 
         @Nullable
-        public Object j(@NotNull C9437d c9437d) {
-            g(c9437d);
+        public Object j(@NotNull d dVar) {
+            g(dVar);
             return null;
         }
 
@@ -180,10 +179,9 @@ public class ma1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ma1$b */
     /* loaded from: classes11.dex */
-    public static class C9435b<T extends ma1> extends AbstractC9434a {
-        private static final AtomicReferenceFieldUpdater d = AtomicReferenceFieldUpdater.newUpdater(C9435b.class, Object.class, "_affectedNode");
+    public static class b<T extends ma1> extends a {
+        private static final AtomicReferenceFieldUpdater d = AtomicReferenceFieldUpdater.newUpdater(b.class, Object.class, "_affectedNode");
         private volatile Object _affectedNode;
         @JvmField
         @NotNull
@@ -192,7 +190,7 @@ public class ma1 {
         @NotNull
         public final T c;
 
-        public C9435b(@NotNull ma1 ma1Var, @NotNull T t) {
+        public b(@NotNull ma1 ma1Var, @NotNull T t) {
             this.b = ma1Var;
             this.c = t;
             if (k40.a()) {
@@ -203,40 +201,40 @@ public class ma1 {
             this._affectedNode = null;
         }
 
-        @Override // tb.ma1.AbstractC9434a
+        @Override // tb.ma1.a
         protected void f(@NotNull ma1 ma1Var, @NotNull ma1 ma1Var2) {
             this.c.i(this.b);
         }
 
-        @Override // tb.ma1.AbstractC9434a
-        public void g(@NotNull C9437d c9437d) {
-            d.compareAndSet(this, null, c9437d.a);
+        @Override // tb.ma1.a
+        public void g(@NotNull d dVar) {
+            d.compareAndSet(this, null, dVar.a);
         }
 
-        @Override // tb.ma1.AbstractC9434a
+        @Override // tb.ma1.a
         @Nullable
         protected final ma1 h() {
             return (ma1) this._affectedNode;
         }
 
-        @Override // tb.ma1.AbstractC9434a
+        @Override // tb.ma1.a
         @Nullable
         protected final ma1 i() {
             return this.b;
         }
 
-        @Override // tb.ma1.AbstractC9434a
+        @Override // tb.ma1.a
         protected boolean l(@NotNull ma1 ma1Var, @NotNull Object obj) {
             return obj != this.b;
         }
 
-        @Override // tb.ma1.AbstractC9434a
+        @Override // tb.ma1.a
         @Nullable
         protected final ma1 m(@NotNull cn1 cn1Var) {
             return this.b.g(cn1Var);
         }
 
-        @Override // tb.ma1.AbstractC9434a
+        @Override // tb.ma1.a
         @NotNull
         public Object n(@NotNull ma1 ma1Var, @NotNull ma1 ma1Var2) {
             T t = this.c;
@@ -249,9 +247,8 @@ public class ma1 {
 
     /* compiled from: Taobao */
     @PublishedApi
-    /* renamed from: tb.ma1$c */
     /* loaded from: classes11.dex */
-    public static abstract class AbstractC9436c extends v8<ma1> {
+    public static abstract class c extends v8<ma1> {
         @JvmField
         @Nullable
         public ma1 b;
@@ -259,7 +256,7 @@ public class ma1 {
         @NotNull
         public final ma1 c;
 
-        public AbstractC9436c(@NotNull ma1 ma1Var) {
+        public c(@NotNull ma1 ma1Var) {
             this.c = ma1Var;
         }
 
@@ -278,9 +275,8 @@ public class ma1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ma1$d */
     /* loaded from: classes11.dex */
-    public static final class C9437d extends cn1 {
+    public static final class d extends cn1 {
         @JvmField
         @NotNull
         public final ma1 a;
@@ -289,12 +285,12 @@ public class ma1 {
         public final ma1 b;
         @JvmField
         @NotNull
-        public final AbstractC9434a c;
+        public final a c;
 
-        public C9437d(@NotNull ma1 ma1Var, @NotNull ma1 ma1Var2, @NotNull AbstractC9434a abstractC9434a) {
+        public d(@NotNull ma1 ma1Var, @NotNull ma1 ma1Var2, @NotNull a aVar) {
             this.a = ma1Var;
             this.b = ma1Var2;
-            this.c = abstractC9434a;
+            this.c = aVar;
         }
 
         @Override // tb.cn1
@@ -353,22 +349,21 @@ public class ma1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ma1$e */
     /* loaded from: classes11.dex */
-    public static class C9438e<T> extends AbstractC9434a {
-        private static final AtomicReferenceFieldUpdater c = AtomicReferenceFieldUpdater.newUpdater(C9438e.class, Object.class, "_affectedNode");
-        private static final AtomicReferenceFieldUpdater d = AtomicReferenceFieldUpdater.newUpdater(C9438e.class, Object.class, "_originalNext");
+    public static class e<T> extends a {
+        private static final AtomicReferenceFieldUpdater c = AtomicReferenceFieldUpdater.newUpdater(e.class, Object.class, "_affectedNode");
+        private static final AtomicReferenceFieldUpdater d = AtomicReferenceFieldUpdater.newUpdater(e.class, Object.class, "_originalNext");
         private volatile Object _affectedNode = null;
         private volatile Object _originalNext = null;
         @JvmField
         @NotNull
         public final ma1 b;
 
-        public C9438e(@NotNull ma1 ma1Var) {
+        public e(@NotNull ma1 ma1Var) {
             this.b = ma1Var;
         }
 
-        @Override // tb.ma1.AbstractC9434a
+        @Override // tb.ma1.a
         @Nullable
         protected Object e(@NotNull ma1 ma1Var) {
             if (ma1Var == this.b) {
@@ -377,30 +372,30 @@ public class ma1 {
             return null;
         }
 
-        @Override // tb.ma1.AbstractC9434a
+        @Override // tb.ma1.a
         protected final void f(@NotNull ma1 ma1Var, @NotNull ma1 ma1Var2) {
             ma1Var2.g(null);
         }
 
-        @Override // tb.ma1.AbstractC9434a
-        public void g(@NotNull C9437d c9437d) {
-            c.compareAndSet(this, null, c9437d.a);
-            d.compareAndSet(this, null, c9437d.b);
+        @Override // tb.ma1.a
+        public void g(@NotNull d dVar) {
+            c.compareAndSet(this, null, dVar.a);
+            d.compareAndSet(this, null, dVar.b);
         }
 
-        @Override // tb.ma1.AbstractC9434a
+        @Override // tb.ma1.a
         @Nullable
         protected final ma1 h() {
             return (ma1) this._affectedNode;
         }
 
-        @Override // tb.ma1.AbstractC9434a
+        @Override // tb.ma1.a
         @Nullable
         protected final ma1 i() {
             return (ma1) this._originalNext;
         }
 
-        @Override // tb.ma1.AbstractC9434a
+        @Override // tb.ma1.a
         protected final boolean l(@NotNull ma1 ma1Var, @NotNull Object obj) {
             if (obj instanceof p12) {
                 ((p12) obj).a.n();
@@ -409,7 +404,7 @@ public class ma1 {
             return false;
         }
 
-        @Override // tb.ma1.AbstractC9434a
+        @Override // tb.ma1.a
         @Nullable
         protected final ma1 m(@NotNull cn1 cn1Var) {
             ma1 ma1Var = this.b;
@@ -428,7 +423,7 @@ public class ma1 {
             }
         }
 
-        @Override // tb.ma1.AbstractC9434a
+        @Override // tb.ma1.a
         @NotNull
         public final Object n(@NotNull ma1 ma1Var, @NotNull ma1 ma1Var2) {
             return ma1Var2.r();
@@ -652,13 +647,13 @@ public class ma1 {
     }
 
     @PublishedApi
-    public final int s(@NotNull ma1 ma1Var, @NotNull ma1 ma1Var2, @NotNull AbstractC9436c abstractC9436c) {
+    public final int s(@NotNull ma1 ma1Var, @NotNull ma1 ma1Var2, @NotNull c cVar) {
         b.lazySet(ma1Var, this);
         AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = a;
         atomicReferenceFieldUpdater.lazySet(ma1Var, ma1Var2);
-        abstractC9436c.b = ma1Var2;
-        if (atomicReferenceFieldUpdater.compareAndSet(this, ma1Var2, abstractC9436c)) {
-            return abstractC9436c.c(this) == null ? 1 : 2;
+        cVar.b = ma1Var2;
+        if (atomicReferenceFieldUpdater.compareAndSet(this, ma1Var2, cVar)) {
+            return cVar.c(this) == null ? 1 : 2;
         }
         return 0;
     }

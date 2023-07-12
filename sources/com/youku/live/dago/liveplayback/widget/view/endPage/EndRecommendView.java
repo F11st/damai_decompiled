@@ -35,7 +35,7 @@ public class EndRecommendView extends LinearLayout {
             ipChange.ipc$dispatch("1967184777", new Object[]{this, context});
             return;
         }
-        LayoutInflater.from(context).inflate(R.C7935layout.dago_end_item_view_recommend, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_end_item_view_recommend, (ViewGroup) this, true);
         this.mCoverIv = (ImageView) findViewById(R.id.end_recommend_cover);
         this.mNickTv = (TextView) findViewById(R.id.end_recommend_nick);
         this.mContext = context;

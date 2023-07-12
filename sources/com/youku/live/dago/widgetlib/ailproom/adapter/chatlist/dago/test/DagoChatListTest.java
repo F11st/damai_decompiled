@@ -141,7 +141,7 @@ public class DagoChatListTest implements View.OnClickListener {
         if (this.thread != null) {
             this.thread = null;
         }
-        this.mSendMsgThreadBtn.setText(GXTemplateEngine.C3338b.STATE_START);
+        this.mSendMsgThreadBtn.setText(GXTemplateEngine.b.STATE_START);
     }
 
     public void addTestView() {

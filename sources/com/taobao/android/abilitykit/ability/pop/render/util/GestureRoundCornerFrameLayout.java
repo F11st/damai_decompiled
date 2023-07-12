@@ -10,7 +10,7 @@ import android.widget.FrameLayout;
 /* loaded from: classes8.dex */
 public class GestureRoundCornerFrameLayout extends FrameLayout {
     private IGestureHandler mGestureHandler;
-    private C6301a mRoundCornerLayoutHelper;
+    private a mRoundCornerLayoutHelper;
 
     public GestureRoundCornerFrameLayout(Context context) {
         this(context, null);
@@ -63,6 +63,6 @@ public class GestureRoundCornerFrameLayout extends FrameLayout {
 
     public GestureRoundCornerFrameLayout(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        this.mRoundCornerLayoutHelper = new C6301a(this);
+        this.mRoundCornerLayoutHelper = new a(this);
     }
 }

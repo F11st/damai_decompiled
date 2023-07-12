@@ -14,7 +14,7 @@ import java.lang.annotation.RetentionPolicy;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public final class CircularProgressIndicator extends BaseProgressIndicator<CircularProgressIndicatorSpec> {
-    public static final int DEF_STYLE_RES = R.C4819style.Widget_MaterialComponents_CircularProgressIndicator;
+    public static final int DEF_STYLE_RES = R.style.Widget_MaterialComponents_CircularProgressIndicator;
     public static final int INDICATOR_DIRECTION_CLOCKWISE = 0;
     public static final int INDICATOR_DIRECTION_COUNTERCLOCKWISE = 1;
 

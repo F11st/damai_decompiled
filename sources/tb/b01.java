@@ -6,20 +6,13 @@ import java.io.EOFException;
 import java.io.IOException;
 import java.net.ProtocolException;
 import java.util.concurrent.TimeUnit;
-import okhttp3.C8816l;
-import okhttp3.C8818m;
-import okhttp3.C8823o;
-import okhttp3.C8827q;
 import okhttp3.OkHttpClient;
-import okhttp3.internal.C8753a;
-import okhttp3.internal.connection.C8770e;
-import okhttp3.internal.http.C8783e;
 import okhttp3.internal.http.ExchangeCodec;
+import okhttp3.l;
+import okhttp3.q;
 import okio.Buffer;
 import okio.BufferedSink;
 import okio.BufferedSource;
-import okio.C8841e;
-import okio.C8857o;
 import okio.Sink;
 import okio.Source;
 import org.apache.commons.net.SocketClient;
@@ -28,23 +21,22 @@ import org.apache.commons.net.SocketClient;
 /* loaded from: classes2.dex */
 public final class b01 implements ExchangeCodec {
     private final OkHttpClient a;
-    private final C8770e b;
+    private final okhttp3.internal.connection.e b;
     private final BufferedSource c;
     private final BufferedSink d;
     private int e = 0;
     private long f = PlaybackStateCompat.ACTION_SET_REPEAT_MODE;
-    private C8816l g;
+    private okhttp3.l g;
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.b01$b */
     /* loaded from: classes2.dex */
-    public abstract class AbstractC8936b implements Source {
-        protected final C8841e a;
+    public abstract class b implements Source {
+        protected final okio.e a;
         protected boolean b;
 
-        private AbstractC8936b() {
-            this.a = new C8841e(b01.this.c.timeout());
+        private b() {
+            this.a = new okio.e(b01.this.c.timeout());
         }
 
         final void a() {
@@ -71,21 +63,20 @@ public final class b01 implements ExchangeCodec {
         }
 
         @Override // okio.Source
-        public C8857o timeout() {
+        public okio.o timeout() {
             return this.a;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.b01$c */
     /* loaded from: classes2.dex */
-    public final class C8937c implements Sink {
-        private final C8841e a;
+    public final class c implements Sink {
+        private final okio.e a;
         private boolean b;
 
-        C8937c() {
-            this.a = new C8841e(b01.this.d.timeout());
+        c() {
+            this.a = new okio.e(b01.this.d.timeout());
         }
 
         @Override // okio.Sink, java.io.Closeable, java.lang.AutoCloseable
@@ -108,7 +99,7 @@ public final class b01 implements ExchangeCodec {
         }
 
         @Override // okio.Sink
-        public C8857o timeout() {
+        public okio.o timeout() {
             return this.a;
         }
 
@@ -129,18 +120,17 @@ public final class b01 implements ExchangeCodec {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.b01$d */
     /* loaded from: classes2.dex */
-    public class C8938d extends AbstractC8936b {
-        private final C8818m d;
+    public class d extends b {
+        private final okhttp3.m d;
         private long e;
         private boolean f;
 
-        C8938d(C8818m c8818m) {
+        d(okhttp3.m mVar) {
             super();
             this.e = -1L;
             this.f = true;
-            this.d = c8818m;
+            this.d = mVar;
         }
 
         private void c() throws IOException {
@@ -172,14 +162,14 @@ public final class b01 implements ExchangeCodec {
             if (this.b) {
                 return;
             }
-            if (this.f && !C8753a.p(this, 100, TimeUnit.MILLISECONDS)) {
+            if (this.f && !okhttp3.internal.a.p(this, 100, TimeUnit.MILLISECONDS)) {
                 b01.this.b.p();
                 a();
             }
             this.b = true;
         }
 
-        @Override // tb.b01.AbstractC8936b, okio.Source
+        @Override // tb.b01.b, okio.Source
         public long read(Buffer buffer, long j) throws IOException {
             if (j >= 0) {
                 if (!this.b) {
@@ -211,12 +201,11 @@ public final class b01 implements ExchangeCodec {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.b01$e */
     /* loaded from: classes2.dex */
-    public class C8939e extends AbstractC8936b {
+    public class e extends b {
         private long d;
 
-        C8939e(long j) {
+        e(long j) {
             super();
             this.d = j;
             if (j == 0) {
@@ -229,14 +218,14 @@ public final class b01 implements ExchangeCodec {
             if (this.b) {
                 return;
             }
-            if (this.d != 0 && !C8753a.p(this, 100, TimeUnit.MILLISECONDS)) {
+            if (this.d != 0 && !okhttp3.internal.a.p(this, 100, TimeUnit.MILLISECONDS)) {
                 b01.this.b.p();
                 a();
             }
             this.b = true;
         }
 
-        @Override // tb.b01.AbstractC8936b, okio.Source
+        @Override // tb.b01.b, okio.Source
         public long read(Buffer buffer, long j) throws IOException {
             if (j >= 0) {
                 if (!this.b) {
@@ -266,14 +255,13 @@ public final class b01 implements ExchangeCodec {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.b01$f */
     /* loaded from: classes2.dex */
-    public final class C8940f implements Sink {
-        private final C8841e a;
+    public final class f implements Sink {
+        private final okio.e a;
         private boolean b;
 
-        private C8940f() {
-            this.a = new C8841e(b01.this.d.timeout());
+        private f() {
+            this.a = new okio.e(b01.this.d.timeout());
         }
 
         @Override // okio.Sink, java.io.Closeable, java.lang.AutoCloseable
@@ -295,14 +283,14 @@ public final class b01 implements ExchangeCodec {
         }
 
         @Override // okio.Sink
-        public C8857o timeout() {
+        public okio.o timeout() {
             return this.a;
         }
 
         @Override // okio.Sink
         public void write(Buffer buffer, long j) throws IOException {
             if (!this.b) {
-                C8753a.f(buffer.size(), 0L, j);
+                okhttp3.internal.a.f(buffer.size(), 0L, j);
                 b01.this.d.write(buffer, j);
                 return;
             }
@@ -312,12 +300,11 @@ public final class b01 implements ExchangeCodec {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.b01$g */
     /* loaded from: classes2.dex */
-    public class C8941g extends AbstractC8936b {
+    public class g extends b {
         private boolean d;
 
-        private C8941g(b01 b01Var) {
+        private g(b01 b01Var) {
             super();
         }
 
@@ -332,7 +319,7 @@ public final class b01 implements ExchangeCodec {
             this.b = true;
         }
 
-        @Override // tb.b01.AbstractC8936b, okio.Source
+        @Override // tb.b01.b, okio.Source
         public long read(Buffer buffer, long j) throws IOException {
             if (j >= 0) {
                 if (!this.b) {
@@ -353,33 +340,33 @@ public final class b01 implements ExchangeCodec {
         }
     }
 
-    public b01(OkHttpClient okHttpClient, C8770e c8770e, BufferedSource bufferedSource, BufferedSink bufferedSink) {
+    public b01(OkHttpClient okHttpClient, okhttp3.internal.connection.e eVar, BufferedSource bufferedSource, BufferedSink bufferedSink) {
         this.a = okHttpClient;
-        this.b = c8770e;
+        this.b = eVar;
         this.c = bufferedSource;
         this.d = bufferedSink;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void k(C8841e c8841e) {
-        C8857o a = c8841e.a();
-        c8841e.b(C8857o.NONE);
-        a.clearDeadline();
-        a.clearTimeout();
+    public void k(okio.e eVar) {
+        okio.o a2 = eVar.a();
+        eVar.b(okio.o.NONE);
+        a2.clearDeadline();
+        a2.clearTimeout();
     }
 
     private Sink l() {
         if (this.e == 1) {
             this.e = 2;
-            return new C8937c();
+            return new c();
         }
         throw new IllegalStateException("state: " + this.e);
     }
 
-    private Source m(C8818m c8818m) {
+    private Source m(okhttp3.m mVar) {
         if (this.e == 4) {
             this.e = 5;
-            return new C8938d(c8818m);
+            return new d(mVar);
         }
         throw new IllegalStateException("state: " + this.e);
     }
@@ -387,7 +374,7 @@ public final class b01 implements ExchangeCodec {
     private Source n(long j) {
         if (this.e == 4) {
             this.e = 5;
-            return new C8939e(j);
+            return new e(j);
         }
         throw new IllegalStateException("state: " + this.e);
     }
@@ -395,7 +382,7 @@ public final class b01 implements ExchangeCodec {
     private Sink o() {
         if (this.e == 1) {
             this.e = 2;
-            return new C8940f();
+            return new f();
         }
         throw new IllegalStateException("state: " + this.e);
     }
@@ -404,7 +391,7 @@ public final class b01 implements ExchangeCodec {
         if (this.e == 4) {
             this.e = 5;
             this.b.p();
-            return new C8941g();
+            return new g();
         }
         throw new IllegalStateException("state: " + this.e);
     }
@@ -416,37 +403,37 @@ public final class b01 implements ExchangeCodec {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public C8816l r() throws IOException {
-        C8816l.C8817a c8817a = new C8816l.C8817a();
+    public okhttp3.l r() throws IOException {
+        l.a aVar = new l.a();
         while (true) {
             String q = q();
             if (q.length() != 0) {
-                w31.a.a(c8817a, q);
+                w31.a.a(aVar, q);
             } else {
-                return c8817a.e();
+                return aVar.e();
             }
         }
     }
 
     @Override // okhttp3.internal.http.ExchangeCodec
     public void cancel() {
-        C8770e c8770e = this.b;
-        if (c8770e != null) {
-            c8770e.c();
+        okhttp3.internal.connection.e eVar = this.b;
+        if (eVar != null) {
+            eVar.c();
         }
     }
 
     @Override // okhttp3.internal.http.ExchangeCodec
-    public C8770e connection() {
+    public okhttp3.internal.connection.e connection() {
         return this.b;
     }
 
     @Override // okhttp3.internal.http.ExchangeCodec
-    public Sink createRequestBody(C8823o c8823o, long j) throws IOException {
-        if (c8823o.a() != null && c8823o.a().f()) {
+    public Sink createRequestBody(okhttp3.o oVar, long j) throws IOException {
+        if (oVar.a() != null && oVar.a().f()) {
             throw new ProtocolException("Duplex connections are not supported for HTTP/1");
         }
-        if ("chunked".equalsIgnoreCase(c8823o.c("Transfer-Encoding"))) {
+        if ("chunked".equalsIgnoreCase(oVar.c("Transfer-Encoding"))) {
             return l();
         }
         if (j != -1) {
@@ -466,72 +453,72 @@ public final class b01 implements ExchangeCodec {
     }
 
     @Override // okhttp3.internal.http.ExchangeCodec
-    public Source openResponseBodySource(C8827q c8827q) {
-        if (!g01.c(c8827q)) {
+    public Source openResponseBodySource(okhttp3.q qVar) {
+        if (!g01.c(qVar)) {
             return n(0L);
         }
-        if ("chunked".equalsIgnoreCase(c8827q.g("Transfer-Encoding"))) {
-            return m(c8827q.q().i());
+        if ("chunked".equalsIgnoreCase(qVar.g("Transfer-Encoding"))) {
+            return m(qVar.q().i());
         }
-        long b = g01.b(c8827q);
-        if (b != -1) {
-            return n(b);
+        long b2 = g01.b(qVar);
+        if (b2 != -1) {
+            return n(b2);
         }
         return p();
     }
 
     @Override // okhttp3.internal.http.ExchangeCodec
-    public C8827q.C8828a readResponseHeaders(boolean z) throws IOException {
+    public q.a readResponseHeaders(boolean z) throws IOException {
         int i = this.e;
         if (i != 1 && i != 3) {
             throw new IllegalStateException("state: " + this.e);
         }
         try {
-            C8783e a = C8783e.a(q());
-            C8827q.C8828a j = new C8827q.C8828a().o(a.a).g(a.b).l(a.c).j(r());
-            if (z && a.b == 100) {
+            okhttp3.internal.http.e a2 = okhttp3.internal.http.e.a(q());
+            q.a j = new q.a().o(a2.a).g(a2.b).l(a2.c).j(r());
+            if (z && a2.b == 100) {
                 return null;
             }
-            if (a.b == 100) {
+            if (a2.b == 100) {
                 this.e = 3;
                 return j;
             }
             this.e = 4;
             return j;
-        } catch (EOFException e) {
-            C8770e c8770e = this.b;
-            String A = c8770e != null ? c8770e.route().a().l().A() : "unknown";
-            throw new IOException("unexpected end of stream on " + A, e);
+        } catch (EOFException e2) {
+            okhttp3.internal.connection.e eVar = this.b;
+            String A = eVar != null ? eVar.route().a().l().A() : "unknown";
+            throw new IOException("unexpected end of stream on " + A, e2);
         }
     }
 
     @Override // okhttp3.internal.http.ExchangeCodec
-    public long reportedContentLength(C8827q c8827q) {
-        if (g01.c(c8827q)) {
-            if ("chunked".equalsIgnoreCase(c8827q.g("Transfer-Encoding"))) {
+    public long reportedContentLength(okhttp3.q qVar) {
+        if (g01.c(qVar)) {
+            if ("chunked".equalsIgnoreCase(qVar.g("Transfer-Encoding"))) {
                 return -1L;
             }
-            return g01.b(c8827q);
+            return g01.b(qVar);
         }
         return 0L;
     }
 
-    public void s(C8827q c8827q) throws IOException {
-        long b = g01.b(c8827q);
-        if (b == -1) {
+    public void s(okhttp3.q qVar) throws IOException {
+        long b2 = g01.b(qVar);
+        if (b2 == -1) {
             return;
         }
-        Source n = n(b);
-        C8753a.F(n, Integer.MAX_VALUE, TimeUnit.MILLISECONDS);
+        Source n = n(b2);
+        okhttp3.internal.a.F(n, Integer.MAX_VALUE, TimeUnit.MILLISECONDS);
         n.close();
     }
 
-    public void t(C8816l c8816l, String str) throws IOException {
+    public void t(okhttp3.l lVar, String str) throws IOException {
         if (this.e == 0) {
             this.d.writeUtf8(str).writeUtf8(SocketClient.NETASCII_EOL);
-            int h = c8816l.h();
+            int h = lVar.h();
             for (int i = 0; i < h; i++) {
-                this.d.writeUtf8(c8816l.e(i)).writeUtf8(": ").writeUtf8(c8816l.j(i)).writeUtf8(SocketClient.NETASCII_EOL);
+                this.d.writeUtf8(lVar.e(i)).writeUtf8(": ").writeUtf8(lVar.j(i)).writeUtf8(SocketClient.NETASCII_EOL);
             }
             this.d.writeUtf8(SocketClient.NETASCII_EOL);
             this.e = 1;
@@ -541,16 +528,16 @@ public final class b01 implements ExchangeCodec {
     }
 
     @Override // okhttp3.internal.http.ExchangeCodec
-    public C8816l trailers() {
+    public okhttp3.l trailers() {
         if (this.e == 6) {
-            C8816l c8816l = this.g;
-            return c8816l != null ? c8816l : C8753a.EMPTY_HEADERS;
+            okhttp3.l lVar = this.g;
+            return lVar != null ? lVar : okhttp3.internal.a.EMPTY_HEADERS;
         }
         throw new IllegalStateException("too early; can't read the trailers yet");
     }
 
     @Override // okhttp3.internal.http.ExchangeCodec
-    public void writeRequestHeaders(C8823o c8823o) throws IOException {
-        t(c8823o.e(), d22.a(c8823o, this.b.route().b().type()));
+    public void writeRequestHeaders(okhttp3.o oVar) throws IOException {
+        t(oVar.e(), d22.a(oVar, this.b.route().b().type()));
     }
 }

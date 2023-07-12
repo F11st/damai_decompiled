@@ -10,7 +10,7 @@ import cn.damai.category.ranking.ui.RankListFragment;
 import cn.damai.common.bean.RankBean;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.rank.CommonRankHolder;
 import cn.damai.commonbusiness.rank.RankItemBean;
 import cn.damai.mine.mycollect.bean.MyCollectDataHolder;
@@ -32,15 +32,14 @@ public class MyJoinAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     private List<MyCollectDataHolder> c;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.mycollect.ui.adapter.MyJoinAdapter$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1442a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ RankBean a;
         final /* synthetic */ RankBean b;
         final /* synthetic */ int c;
 
-        View$OnClickListenerC1442a(RankBean rankBean, RankBean rankBean2, int i) {
+        a(RankBean rankBean, RankBean rankBean2, int i) {
             this.a = rankBean;
             this.b = rankBean2;
             this.c = i;
@@ -53,7 +52,7 @@ public class MyJoinAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                 ipChange.ipc$dispatch("-1045927645", new Object[]{this, view});
                 return;
             }
-            C0529c e = C0529c.e();
+            c e = c.e();
             hi1 m = hi1.m();
             RankBean rankBean = this.a;
             e.x(m.n(rankBean.name, rankBean.id, this.b.type, this.c));
@@ -118,7 +117,7 @@ public class MyJoinAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             viewHolder.itemView.setTag(Integer.valueOf(i));
             viewHolder.itemView.setOnLongClickListener(this.b);
             if (rankBean.isEnableClick()) {
-                viewHolder.itemView.setOnClickListener(new View$OnClickListenerC1442a(rankBean, rankBean, i));
+                viewHolder.itemView.setOnClickListener(new a(rankBean, rankBean, i));
             } else {
                 viewHolder.itemView.setOnClickListener(null);
             }

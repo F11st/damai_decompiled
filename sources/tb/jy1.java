@@ -9,7 +9,6 @@ import android.text.style.LeadingMarginSpan;
 import android.text.style.LineHeightSpan;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.huawei.hms.opendevice.AbstractC5658c;
 import org.jetbrains.annotations.NotNull;
 import tb.a01;
 
@@ -18,27 +17,26 @@ import tb.a01;
 public final class jy1 extends CharacterStyle implements LeadingMarginSpan, LineHeightSpan {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C9324a Companion = new C9324a(null);
+    public static final a Companion = new a(null);
     private static final float a;
     private static final float b;
     private static final float c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.jy1$a */
     /* loaded from: classes7.dex */
-    public static final class C9324a {
-        private C9324a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9324a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     static {
-        a01.C8891a c8891a = a01.Companion;
-        a = c8891a.a() / 4;
-        b = c8891a.a();
+        a01.a aVar = a01.Companion;
+        a = aVar.a() / 4;
+        b = aVar.a();
         c = 0.89285713f;
     }
 
@@ -66,7 +64,7 @@ public final class jy1 extends CharacterStyle implements LeadingMarginSpan, Line
             ipChange.ipc$dispatch("-1299685162", new Object[]{this, canvas, paint, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4), Integer.valueOf(i5), charSequence, Integer.valueOf(i6), Integer.valueOf(i7), Boolean.valueOf(z), layout});
             return;
         }
-        b41.i(canvas, AbstractC5658c.a);
+        b41.i(canvas, com.huawei.hms.opendevice.c.a);
         b41.i(paint, "p");
         b41.i(charSequence, "text");
         b41.i(layout, "layout");

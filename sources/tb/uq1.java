@@ -13,9 +13,8 @@ public class uq1 {
     private e31 a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.uq1$b */
     /* loaded from: classes11.dex */
-    private class C9785b implements DownloadListener {
+    private class b implements DownloadListener {
         CountDownLatch a;
 
         @Override // com.taobao.downloader.request.DownloadListener
@@ -55,7 +54,7 @@ public class uq1 {
         public void onNetworkLimit(int i, jq1 jq1Var, DownloadListener.NetworkLimitCallback networkLimitCallback) {
         }
 
-        private C9785b(CountDownLatch countDownLatch) {
+        private b(CountDownLatch countDownLatch) {
             this.a = countDownLatch;
         }
     }
@@ -78,7 +77,7 @@ public class uq1 {
         ArrayList arrayList = new ArrayList();
         qc0Var.a = arrayList;
         arrayList.add(l41Var);
-        sc0.c().b(qc0Var, new C9785b(countDownLatch));
+        sc0.c().b(qc0Var, new b(countDownLatch));
         try {
             countDownLatch.await();
             e31 e31Var = this.a;

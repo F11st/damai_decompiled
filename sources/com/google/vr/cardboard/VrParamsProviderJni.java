@@ -11,9 +11,9 @@ import com.google.vr.ndk.base.SdkConfigurationReader;
 import com.google.vr.sdk.proto.nano.CardboardDevice;
 import com.google.vr.sdk.proto.nano.Phone;
 import com.google.vr.sdk.proto.nano.Preferences;
-import tb.C9796v;
 import tb.az2;
 import tb.ga0;
+import tb.v;
 
 /* compiled from: Taobao */
 @UsedByNative
@@ -23,7 +23,7 @@ public class VrParamsProviderJni {
 
     private static DisplayMetrics a(Context context) {
         DisplayMetrics displayMetrics = a;
-        return displayMetrics != null ? displayMetrics : ga0.c(((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay());
+        return displayMetrics != null ? displayMetrics : ga0.c(((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay());
     }
 
     private static void b(long j, DisplayMetrics displayMetrics, float f) {

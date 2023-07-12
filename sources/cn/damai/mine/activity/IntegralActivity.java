@@ -27,7 +27,7 @@ import cn.damai.mine.bean.LostScoreDto;
 import cn.damai.mine.bean.UserScoreDto;
 import cn.damai.mine.contract.IntegralContract;
 import cn.damai.mine.presenter.IntegralPresenter;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
@@ -116,24 +116,24 @@ public class IntegralActivity extends DamaiBaseActivity<IntegralPresenter, Integ
         @Override // android.widget.Adapter
         public View getView(int i, View view, ViewGroup viewGroup) {
             View view2;
-            C1389i c1389i;
+            i iVar;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "468071")) {
                 return (View) ipChange.ipc$dispatch("468071", new Object[]{this, Integer.valueOf(i), view, viewGroup});
             }
             if (view == null) {
-                c1389i = new C1389i(null);
+                iVar = new i(null);
                 view2 = ((BaseActivity) IntegralActivity.this).mInflater.inflate(R$layout.integral_list_item, (ViewGroup) null);
-                c1389i.a = (TextView) view2.findViewById(R$id.tv_integralitem_no);
-                c1389i.b = (TextView) view2.findViewById(R$id.tv_integral_price);
-                c1389i.c = (TextView) view2.findViewById(R$id.tv_integral_stauts);
-                c1389i.d = (TextView) view2.findViewById(R$id.tv_integralitem_name);
-                c1389i.e = (TextView) view2.findViewById(R$id.tv_integralitem_date);
+                iVar.a = (TextView) view2.findViewById(R$id.tv_integralitem_no);
+                iVar.b = (TextView) view2.findViewById(R$id.tv_integral_price);
+                iVar.c = (TextView) view2.findViewById(R$id.tv_integral_stauts);
+                iVar.d = (TextView) view2.findViewById(R$id.tv_integralitem_name);
+                iVar.e = (TextView) view2.findViewById(R$id.tv_integralitem_date);
                 RelativeLayout relativeLayout = (RelativeLayout) view2.findViewById(R$id.integral_list_rlyt);
-                view2.setTag(c1389i);
+                view2.setTag(iVar);
             } else {
                 view2 = view;
-                c1389i = (C1389i) view.getTag();
+                iVar = (i) view.getTag();
             }
             AcquireScoreDto.AcquireScoreModel acquireScoreModel = (AcquireScoreDto.AcquireScoreModel) IntegralActivity.this.acquireScoreDtoList.get(i);
             if (i == IntegralActivity.this.acquireScoreDtoList.size() - 1) {
@@ -141,26 +141,26 @@ public class IntegralActivity extends DamaiBaseActivity<IntegralPresenter, Integ
             }
             if (acquireScoreModel != null) {
                 if (acquireScoreModel.businessAcquireId != null) {
-                    TextView textView = c1389i.a;
+                    TextView textView = iVar.a;
                     textView.setText("" + acquireScoreModel.businessAcquireId);
                 }
                 String str = acquireScoreModel.businessName;
                 if (str != null) {
-                    c1389i.d.setText(str);
+                    iVar.d.setText(str);
                 }
-                c1389i.c.setText("交易获得");
-                TextView textView2 = c1389i.b;
+                iVar.c.setText("交易获得");
+                TextView textView2 = iVar.b;
                 textView2.setText(jn1.PLUS + acquireScoreModel.score);
-                c1389i.b.setTextColor(IntegralActivity.this.getResources().getColor(R$color.main_color));
+                iVar.b.setTextColor(IntegralActivity.this.getResources().getColor(R$color.main_color));
                 String str2 = acquireScoreModel.acquireTime;
                 if (str2 != null) {
-                    c1389i.e.setText(str2);
+                    iVar.e.setText(str2);
                 }
             }
             return view2;
         }
 
-        /* synthetic */ AcquireAdapter(IntegralActivity integralActivity, C1381a c1381a) {
+        /* synthetic */ AcquireAdapter(IntegralActivity integralActivity, a aVar) {
             this();
         }
     }
@@ -206,24 +206,24 @@ public class IntegralActivity extends DamaiBaseActivity<IntegralPresenter, Integ
         @Override // android.widget.Adapter
         public View getView(int i, View view, ViewGroup viewGroup) {
             View view2;
-            C1389i c1389i;
+            i iVar;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1889573087")) {
                 return (View) ipChange.ipc$dispatch("1889573087", new Object[]{this, Integer.valueOf(i), view, viewGroup});
             }
             if (view == null) {
-                c1389i = new C1389i(null);
+                iVar = new i(null);
                 view2 = ((BaseActivity) IntegralActivity.this).mInflater.inflate(R$layout.integral_list_item, (ViewGroup) null);
-                c1389i.a = (TextView) view2.findViewById(R$id.tv_integralitem_no);
-                c1389i.b = (TextView) view2.findViewById(R$id.tv_integral_price);
-                c1389i.c = (TextView) view2.findViewById(R$id.tv_integral_stauts);
-                c1389i.d = (TextView) view2.findViewById(R$id.tv_integralitem_name);
-                c1389i.e = (TextView) view2.findViewById(R$id.tv_integralitem_date);
+                iVar.a = (TextView) view2.findViewById(R$id.tv_integralitem_no);
+                iVar.b = (TextView) view2.findViewById(R$id.tv_integral_price);
+                iVar.c = (TextView) view2.findViewById(R$id.tv_integral_stauts);
+                iVar.d = (TextView) view2.findViewById(R$id.tv_integralitem_name);
+                iVar.e = (TextView) view2.findViewById(R$id.tv_integralitem_date);
                 RelativeLayout relativeLayout = (RelativeLayout) view2.findViewById(R$id.integral_list_rlyt);
-                view2.setTag(c1389i);
+                view2.setTag(iVar);
             } else {
                 view2 = view;
-                c1389i = (C1389i) view.getTag();
+                iVar = (i) view.getTag();
             }
             LostScoreDto.LostScoreModel lostScoreModel = (LostScoreDto.LostScoreModel) IntegralActivity.this.lostScoreDtoList.get(i);
             if (i == IntegralActivity.this.lostScoreDtoList.size() - 1) {
@@ -231,37 +231,36 @@ public class IntegralActivity extends DamaiBaseActivity<IntegralPresenter, Integ
             }
             if (lostScoreModel != null) {
                 if (lostScoreModel.businessAbatementId != null) {
-                    TextView textView = c1389i.a;
+                    TextView textView = iVar.a;
                     textView.setText("" + lostScoreModel.businessAbatementId);
                 }
                 String str = lostScoreModel.businessName;
                 if (str != null) {
-                    c1389i.d.setText(str);
+                    iVar.d.setText(str);
                 }
-                TextView textView2 = c1389i.b;
+                TextView textView2 = iVar.b;
                 textView2.setText("-" + lostScoreModel.score);
-                c1389i.b.setTextColor(IntegralActivity.this.getResources().getColor(R$color.color_009944));
+                iVar.b.setTextColor(IntegralActivity.this.getResources().getColor(R$color.color_009944));
                 String str2 = lostScoreModel.lostTime;
                 if (str2 != null) {
-                    c1389i.e.setText(str2);
+                    iVar.e.setText(str2);
                 }
-                c1389i.c.setText("交易扣减");
+                iVar.c.setText("交易扣减");
             }
             return view2;
         }
 
-        /* synthetic */ LostScoreAdapter(IntegralActivity integralActivity, C1381a c1381a) {
+        /* synthetic */ LostScoreAdapter(IntegralActivity integralActivity, a aVar) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.IntegralActivity$a */
     /* loaded from: classes6.dex */
-    public class C1381a implements OnLoadMoreListener {
+    public class a implements OnLoadMoreListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1381a() {
+        a() {
         }
 
         @Override // cn.damai.baseview.abcpullrefresh.library.listeners.OnLoadMoreListener
@@ -295,12 +294,11 @@ public class IntegralActivity extends DamaiBaseActivity<IntegralPresenter, Integ
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.IntegralActivity$b */
     /* loaded from: classes6.dex */
-    public class C1382b implements OnRefreshListener {
+    public class b implements OnRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1382b() {
+        b() {
         }
 
         @Override // cn.damai.baseview.abcpullrefresh.library.listeners.OnRefreshListener
@@ -324,12 +322,11 @@ public class IntegralActivity extends DamaiBaseActivity<IntegralPresenter, Integ
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.IntegralActivity$c */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1383c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1383c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -361,12 +358,11 @@ public class IntegralActivity extends DamaiBaseActivity<IntegralPresenter, Integ
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.IntegralActivity$d */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1384d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1384d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -398,12 +394,11 @@ public class IntegralActivity extends DamaiBaseActivity<IntegralPresenter, Integ
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.IntegralActivity$e */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1385e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1385e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -435,12 +430,11 @@ public class IntegralActivity extends DamaiBaseActivity<IntegralPresenter, Integ
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.IntegralActivity$f */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1386f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1386f() {
+        f() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -471,12 +465,11 @@ public class IntegralActivity extends DamaiBaseActivity<IntegralPresenter, Integ
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.IntegralActivity$g */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1387g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1387g() {
+        g() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -495,12 +488,11 @@ public class IntegralActivity extends DamaiBaseActivity<IntegralPresenter, Integ
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.IntegralActivity$h */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1388h implements View.OnClickListener {
+    public class h implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1388h() {
+        h() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -516,38 +508,37 @@ public class IntegralActivity extends DamaiBaseActivity<IntegralPresenter, Integ
             }
             Bundle bundle = new Bundle();
             bundle.putString("url", str);
-            DMNav.from(IntegralActivity.this).withExtras(bundle).toUri(NavUri.b(C3834a.C3837c.d));
+            DMNav.from(IntegralActivity.this).withExtras(bundle).toUri(NavUri.b(a.c.d));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.IntegralActivity$i */
     /* loaded from: classes15.dex */
-    private static class C1389i {
+    private static class i {
         TextView a;
         TextView b;
         TextView c;
         TextView d;
         TextView e;
 
-        private C1389i() {
+        private i() {
         }
 
-        /* synthetic */ C1389i(C1381a c1381a) {
+        /* synthetic */ i(a aVar) {
             this();
         }
     }
 
-    static /* synthetic */ int access$112(IntegralActivity integralActivity, int i) {
-        int i2 = integralActivity.pointIndex + i;
-        integralActivity.pointIndex = i2;
-        return i2;
+    static /* synthetic */ int access$112(IntegralActivity integralActivity, int i2) {
+        int i3 = integralActivity.pointIndex + i2;
+        integralActivity.pointIndex = i3;
+        return i3;
     }
 
-    static /* synthetic */ int access$312(IntegralActivity integralActivity, int i) {
-        int i2 = integralActivity.sumptionIndex + i;
-        integralActivity.sumptionIndex = i2;
-        return i2;
+    static /* synthetic */ int access$312(IntegralActivity integralActivity, int i2) {
+        int i3 = integralActivity.sumptionIndex + i2;
+        integralActivity.sumptionIndex = i3;
+        return i3;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -613,12 +604,12 @@ public class IntegralActivity extends DamaiBaseActivity<IntegralPresenter, Integ
         this.null_page.setVisibility(8);
         requestIntegralList();
         requestPointsIntegral();
-        new w2().a(this.myActivity, this.pull_down_view, this.lv_list, new C1382b()).b(this.myActivity, this.pull_down_view, this.lv_list, new C1381a());
-        this.integral_obtain_top_llyt.setOnClickListener(new View$OnClickListenerC1383c());
-        this.integral_consume_top_llyt.setOnClickListener(new View$OnClickListenerC1384d());
-        this.integral_obtain_llyt.setOnClickListener(new View$OnClickListenerC1385e());
-        this.integral_consume_llyt.setOnClickListener(new View$OnClickListenerC1386f());
-        this.tv_exchange.setOnClickListener(new View$OnClickListenerC1387g());
+        new w2().a(this.myActivity, this.pull_down_view, this.lv_list, new b()).b(this.myActivity, this.pull_down_view, this.lv_list, new a());
+        this.integral_obtain_top_llyt.setOnClickListener(new c());
+        this.integral_consume_top_llyt.setOnClickListener(new d());
+        this.integral_obtain_llyt.setOnClickListener(new e());
+        this.integral_consume_llyt.setOnClickListener(new f());
+        this.tv_exchange.setOnClickListener(new g());
     }
 
     private void initScoreTipView() {
@@ -685,18 +676,18 @@ public class IntegralActivity extends DamaiBaseActivity<IntegralPresenter, Integ
     }
 
     @Override // cn.damai.common.app.base.BaseActivity
-    public void dealHeaderClick(int i) {
+    public void dealHeaderClick(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-171262913")) {
-            ipChange.ipc$dispatch("-171262913", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-171262913", new Object[]{this, Integer.valueOf(i2)});
             return;
         }
-        if (i == 10004) {
+        if (i2 == 10004) {
             Bundle bundle = new Bundle();
             bundle.putString("title", cm2.b(this, R$string.damai_more_aboutintegral));
             DMNav.from(this).withExtras(bundle).toUri("https://mobile.damai.cn/help/help_integral_about.html");
         }
-        if (i == 10003) {
+        if (i2 == 10003) {
             finish();
         }
     }
@@ -708,10 +699,10 @@ public class IntegralActivity extends DamaiBaseActivity<IntegralPresenter, Integ
     }
 
     @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
-    public void handleError(int i) {
+    public void handleError(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1596545392")) {
-            ipChange.ipc$dispatch("-1596545392", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-1596545392", new Object[]{this, Integer.valueOf(i2)});
         }
     }
 
@@ -831,7 +822,7 @@ public class IntegralActivity extends DamaiBaseActivity<IntegralPresenter, Integ
             } else {
                 this.mBtnScoreTip.setVisibility(0);
                 this.mBtnScoreTip.setTag(userScoreDto.noticeUrl);
-                this.mBtnScoreTip.setOnClickListener(new View$OnClickListenerC1388h());
+                this.mBtnScoreTip.setOnClickListener(new h());
             }
             this.mScoreTipLayout.setVisibility(0);
         }

@@ -16,26 +16,26 @@ public final class as extends at<WeatherSearchQuery, LocalWeatherLive> {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    @Override // com.amap.api.col.s.AbstractC4379b, com.amap.api.col.s.AbstractC4370a
+    @Override // com.amap.api.col.s.b, com.amap.api.col.s.a
     /* renamed from: c */
     public LocalWeatherLive a(String str) throws AMapException {
-        LocalWeatherLive e = C4443q.e(str);
+        LocalWeatherLive e = q.e(str);
         this.k = e;
         return e;
     }
 
-    @Override // com.amap.api.col.s.AbstractC4379b, com.amap.api.col.s.AbstractC4370a
+    @Override // com.amap.api.col.s.b, com.amap.api.col.s.a
     protected final String a_() {
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append("output=json");
-        String city = ((WeatherSearchQuery) ((AbstractC4370a) this).b).getCity();
-        if (!C4443q.g(city)) {
-            String b = AbstractC4379b.b(city);
+        String city = ((WeatherSearchQuery) ((a) this).b).getCity();
+        if (!q.g(city)) {
+            String b = b.b(city);
             stringBuffer.append("&city=");
             stringBuffer.append(b);
         }
         stringBuffer.append("&extensions=base");
-        stringBuffer.append("&key=" + bk.f(((AbstractC4370a) this).e));
+        stringBuffer.append("&key=" + bk.f(((a) this).e));
         return stringBuffer.toString();
     }
 

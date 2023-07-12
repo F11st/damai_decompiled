@@ -489,7 +489,7 @@ public final class ObservableBufferTimed<T, U extends Collection<? super T>> ext
         this.restartTimerOnMaxSize = z;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super U> observer) {
         if (this.timespan == this.timeskip && this.maxSize == Integer.MAX_VALUE) {
             this.source.subscribe(new BufferExactUnboundedObserver(new ra2(observer), this.bufferSupplier, this.timespan, this.unit, this.scheduler));

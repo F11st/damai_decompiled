@@ -50,12 +50,11 @@ public class RankTopViewHolder extends CommonViewHolder {
     private List<ScrollTitleBean> tabs;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.viewholder.RankTopViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1860a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1860a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -71,12 +70,11 @@ public class RankTopViewHolder extends CommonViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.viewholder.RankTopViewHolder$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1861b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1861b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -130,8 +128,8 @@ public class RankTopViewHolder extends CommonViewHolder {
                 }
             }
         };
-        this.mOnClickListener = new View$OnClickListenerC1860a();
-        this.mOnTabItemClickListener = new View$OnClickListenerC1861b();
+        this.mOnClickListener = new a();
+        this.mOnTabItemClickListener = new b();
         this.mContext = mu0.a();
         this.mModuleTitleMoreLayout = (LinearLayout) this.itemView.findViewById(R$id.homepage_rank_top_more_layout);
         this.mModuleTitleMoreText = (TextView) this.itemView.findViewById(R$id.homepage_rank_top_more_text);

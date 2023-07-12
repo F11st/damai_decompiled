@@ -124,10 +124,10 @@ public class HavanaDialogHelper implements IDialogHelper {
             /* compiled from: Taobao */
             /* renamed from: cn.damai.login.havana.HavanaDialogHelper$1$a */
             /* loaded from: classes15.dex */
-            public class DialogInterface$OnClickListenerC1332a implements DialogInterface.OnClickListener {
+            public class a implements DialogInterface.OnClickListener {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                DialogInterface$OnClickListenerC1332a() {
+                a() {
                 }
 
                 @Override // android.content.DialogInterface.OnClickListener
@@ -147,10 +147,10 @@ public class HavanaDialogHelper implements IDialogHelper {
             /* compiled from: Taobao */
             /* renamed from: cn.damai.login.havana.HavanaDialogHelper$1$b */
             /* loaded from: classes15.dex */
-            public class DialogInterface$OnClickListenerC1333b implements DialogInterface.OnClickListener {
+            public class b implements DialogInterface.OnClickListener {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                DialogInterface$OnClickListenerC1333b() {
+                b() {
                 }
 
                 @Override // android.content.DialogInterface.OnClickListener
@@ -174,7 +174,7 @@ public class HavanaDialogHelper implements IDialogHelper {
                     ipChange2.ipc$dispatch("1593902393", new Object[]{this});
                     return;
                 }
-                HavanaDialogHelper.this.a = new h4(activity).h(str3, new DialogInterface$OnClickListenerC1333b()).f(str4, new DialogInterface$OnClickListenerC1332a()).i((TextUtils.isEmpty(str2) || TextUtils.isEmpty(str)) ? "" : str).e(TextUtils.isEmpty(str2) ? str : str2).d(z2).j();
+                HavanaDialogHelper.this.a = new h4(activity).h(str3, new b()).f(str4, new a()).i((TextUtils.isEmpty(str2) || TextUtils.isEmpty(str)) ? "" : str).e(TextUtils.isEmpty(str2) ? str : str2).d(z2).j();
                 Activity activity2 = activity;
                 wu0.g(activity2, (activity2 == null || activity2.getWindow() == null) ? null : HavanaDialogHelper.this.a.getWindow().getDecorView());
             }
@@ -194,10 +194,10 @@ public class HavanaDialogHelper implements IDialogHelper {
                 /* compiled from: Taobao */
                 /* renamed from: cn.damai.login.havana.HavanaDialogHelper$2$a */
                 /* loaded from: classes15.dex */
-                public class DialogInterface$OnDismissListenerC1334a implements DialogInterface.OnDismissListener {
+                public class a implements DialogInterface.OnDismissListener {
                     private static transient /* synthetic */ IpChange $ipChange;
 
-                    DialogInterface$OnDismissListenerC1334a(AnonymousClass2 anonymousClass2) {
+                    a(AnonymousClass2 anonymousClass2) {
                     }
 
                     @Override // android.content.DialogInterface.OnDismissListener
@@ -219,7 +219,7 @@ public class HavanaDialogHelper implements IDialogHelper {
                     HavanaDialogHelper.this.dismissProgressDialog();
                     if (HavanaDialogHelper.this.b == null) {
                         HavanaDialogHelper.this.b = new DMProgressDialog(activity).a();
-                        HavanaDialogHelper.this.b.setOnDismissListener(new DialogInterface$OnDismissListenerC1334a(this));
+                        HavanaDialogHelper.this.b.setOnDismissListener(new a(this));
                     }
                     Activity activity2 = activity;
                     wu0.g(activity2, (activity2 == null || activity2.getWindow() == null) ? null : HavanaDialogHelper.this.b.getWindow().getDecorView());

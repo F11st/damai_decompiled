@@ -1,11 +1,11 @@
 package io.reactivex.internal.operators.parallel;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import io.reactivex.internal.util.BackpressureHelper;
-import io.reactivex.parallel.AbstractC8161a;
+import io.reactivex.parallel.a;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -18,9 +18,9 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ParallelSortedJoin<T> extends AbstractC8147b<T> {
+public final class ParallelSortedJoin<T> extends b<T> {
     final Comparator<? super T> comparator;
-    final AbstractC8161a<List<T>> source;
+    final a<List<T>> source;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
@@ -227,12 +227,12 @@ public final class ParallelSortedJoin<T> extends AbstractC8147b<T> {
         }
     }
 
-    public ParallelSortedJoin(AbstractC8161a<List<T>> abstractC8161a, Comparator<? super T> comparator) {
-        this.source = abstractC8161a;
+    public ParallelSortedJoin(a<List<T>> aVar, Comparator<? super T> comparator) {
+        this.source = aVar;
         this.comparator = comparator;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         SortedJoinSubscription sortedJoinSubscription = new SortedJoinSubscription(subscriber, this.source.parallelism(), this.comparator);
         subscriber.onSubscribe(sortedJoinSubscription);

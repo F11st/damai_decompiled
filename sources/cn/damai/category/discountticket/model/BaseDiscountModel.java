@@ -11,8 +11,8 @@ import cn.damai.category.discountticket.bean.HeaderData;
 import cn.damai.category.discountticket.bean.biz.ApplyResult;
 import cn.damai.category.discountticket.contract.DiscountTicketContract;
 import cn.damai.category.discountticket.request.CouponApplyRequest;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
 import cn.damai.commonbusiness.seatbiz.utils.RequestHolder;
 import cn.damai.commonbusiness.share.generateimage.GenerateImageUtil;
@@ -112,19 +112,19 @@ public abstract class BaseDiscountModel implements DiscountTicketContract.DtMode
         onShareListener.showLoading(true);
         final String str = headerData.sharePic;
         Application a = mu0.a();
-        C0504a.b().f(str, m62.a(a, 111.0f), m62.a(a, 148.0f)).n(new DMImageCreator.DMImageSuccListener() { // from class: cn.damai.category.discountticket.model.BaseDiscountModel.2
+        a.b().f(str, m62.a(a, 111.0f), m62.a(a, 148.0f)).n(new DMImageCreator.DMImageSuccListener() { // from class: cn.damai.category.discountticket.model.BaseDiscountModel.2
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-            public void onSuccess(DMImageCreator.C0502e c0502e) {
+            public void onSuccess(DMImageCreator.e eVar) {
                 Bitmap bitmap;
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "-495626785")) {
-                    ipChange2.ipc$dispatch("-495626785", new Object[]{this, c0502e});
+                    ipChange2.ipc$dispatch("-495626785", new Object[]{this, eVar});
                     return;
                 }
                 onShareListener.showLoading(false);
-                if (c0502e == null || (bitmap = c0502e.b) == null) {
+                if (eVar == null || (bitmap = eVar.b) == null) {
                     return;
                 }
                 try {
@@ -160,10 +160,10 @@ public abstract class BaseDiscountModel implements DiscountTicketContract.DtMode
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-            public void onFail(DMImageCreator.C0501d c0501d) {
+            public void onFail(DMImageCreator.d dVar) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "-1289952310")) {
-                    ipChange2.ipc$dispatch("-1289952310", new Object[]{this, c0501d});
+                    ipChange2.ipc$dispatch("-1289952310", new Object[]{this, dVar});
                     return;
                 }
                 onShareListener.showLoading(false);

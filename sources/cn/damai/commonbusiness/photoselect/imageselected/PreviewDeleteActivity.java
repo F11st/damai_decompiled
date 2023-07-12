@@ -59,12 +59,11 @@ public class PreviewDeleteActivity extends DamaiBaseActivity {
     private MyViewPager vpImage;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.PreviewDeleteActivity$a */
     /* loaded from: classes4.dex */
-    public class View$OnClickListenerC0747a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0747a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -79,12 +78,11 @@ public class PreviewDeleteActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.PreviewDeleteActivity$b */
     /* loaded from: classes4.dex */
-    public class View$OnClickListenerC0748b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0748b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -99,12 +97,11 @@ public class PreviewDeleteActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.PreviewDeleteActivity$c */
     /* loaded from: classes4.dex */
-    public class C0749c implements ImagePagerAdapter.OnItemClickListener {
+    public class c implements ImagePagerAdapter.OnItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0749c() {
+        c() {
         }
 
         @Override // cn.damai.commonbusiness.photoselect.imageselected.adapter.ImagePagerAdapter.OnItemClickListener
@@ -122,12 +119,11 @@ public class PreviewDeleteActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.PreviewDeleteActivity$d */
     /* loaded from: classes4.dex */
-    public class DialogInterface$OnClickListenerC0750d implements DialogInterface.OnClickListener {
+    public class d implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC0750d() {
+        d() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -246,8 +242,8 @@ public class PreviewDeleteActivity extends DamaiBaseActivity {
             ipChange.ipc$dispatch("1187097144", new Object[]{this});
             return;
         }
-        findViewById(R$id.btn_back).setOnClickListener(new View$OnClickListenerC0747a());
-        this.btnConfirm.setOnClickListener(new View$OnClickListenerC0748b());
+        findViewById(R$id.btn_back).setOnClickListener(new a());
+        this.btnConfirm.setOnClickListener(new b());
     }
 
     private void initVideo() {
@@ -286,7 +282,7 @@ public class PreviewDeleteActivity extends DamaiBaseActivity {
         ImagePagerAdapter imagePagerAdapter = new ImagePagerAdapter(this, this.mImages);
         this.adapter = imagePagerAdapter;
         this.vpImage.setAdapter(imagePagerAdapter);
-        this.adapter.c(new C0749c());
+        this.adapter.c(new c());
         this.vpImage.addOnPageChangeListener(new ViewPager.OnPageChangeListener() { // from class: cn.damai.commonbusiness.photoselect.imageselected.PreviewDeleteActivity.4
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -392,10 +388,10 @@ public class PreviewDeleteActivity extends DamaiBaseActivity {
             /* compiled from: Taobao */
             /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.PreviewDeleteActivity$5$a */
             /* loaded from: classes14.dex */
-            public class C0746a extends AnimatorListenerAdapter {
+            public class a extends AnimatorListenerAdapter {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C0746a() {
+                a() {
                 }
 
                 @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -420,7 +416,7 @@ public class PreviewDeleteActivity extends DamaiBaseActivity {
                     ipChange2.ipc$dispatch("84336978", new Object[]{this});
                 } else if (PreviewDeleteActivity.this.rlTopBar != null) {
                     ObjectAnimator duration = ObjectAnimator.ofFloat(PreviewDeleteActivity.this.rlTopBar, "translationY", PreviewDeleteActivity.this.rlTopBar.getTranslationY(), 0.0f).setDuration(300L);
-                    duration.addListener(new C0746a());
+                    duration.addListener(new a());
                     duration.start();
                 }
             }
@@ -437,7 +433,7 @@ public class PreviewDeleteActivity extends DamaiBaseActivity {
         DMDialog dMDialog = new DMDialog(this);
         dMDialog.v(getResources().getString(R$string.damai_delete_image));
         dMDialog.g(R$string.damai_no, null);
-        dMDialog.l(R$string.damai_yes, new DialogInterface$OnClickListenerC0750d());
+        dMDialog.l(R$string.damai_yes, new d());
         dMDialog.show();
     }
 
@@ -519,9 +515,10 @@ public class PreviewDeleteActivity extends DamaiBaseActivity {
         }
     }
 
+    /* JADX INFO: Access modifiers changed from: protected */
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity, cn.damai.common.app.base.BaseActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     @RequiresApi(api = 11)
-    protected void onCreate(@Nullable Bundle bundle) {
+    public void onCreate(@Nullable Bundle bundle) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1841237325")) {
             ipChange.ipc$dispatch("-1841237325", new Object[]{this, bundle});
@@ -557,8 +554,9 @@ public class PreviewDeleteActivity extends DamaiBaseActivity {
         this.vpImage.setCurrentItem(this.position);
     }
 
+    /* JADX INFO: Access modifiers changed from: protected */
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity, cn.damai.common.app.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, android.app.Activity
-    protected void onDestroy() {
+    public void onDestroy() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1067532979")) {
             ipChange.ipc$dispatch("1067532979", new Object[]{this});
@@ -590,8 +588,9 @@ public class PreviewDeleteActivity extends DamaiBaseActivity {
         }
     }
 
+    /* JADX INFO: Access modifiers changed from: protected */
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, android.app.Activity
-    protected void onStart() {
+    public void onStart() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1168579765")) {
             ipChange.ipc$dispatch("-1168579765", new Object[]{this});

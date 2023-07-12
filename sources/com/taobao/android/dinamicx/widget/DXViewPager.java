@@ -9,7 +9,6 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DXRuntimeContext;
 import com.taobao.android.dinamicx.view.DXNativeViewPagerView;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
@@ -57,12 +56,11 @@ public class DXViewPager extends DXAbsContainerBaseLayout {
     private SparseBooleanArray hasSelectedMap = new SparseBooleanArray();
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXViewPager$a */
     /* loaded from: classes11.dex */
-    class C6470a implements ViewPager.OnPageChangeListener {
+    class a implements ViewPager.OnPageChangeListener {
         final /* synthetic */ int a;
 
-        C6470a(int i) {
+        a(int i) {
             this.a = i;
         }
 
@@ -129,9 +127,8 @@ public class DXViewPager extends DXAbsContainerBaseLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXViewPager$b */
     /* loaded from: classes11.dex */
-    public static class C6471b implements IDXBuilderWidgetNode {
+    public static class b implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(Object obj) {
             return new DXViewPager();
@@ -205,7 +202,7 @@ public class DXViewPager extends DXAbsContainerBaseLayout {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.C6493f
+    @Override // com.taobao.android.dinamicx.widget.f
     public ArrayList<DXWidgetNode> generateWidgetNodeByData(int i, JSONArray jSONArray, List<DXWidgetNode> list) {
         boolean z;
         Iterator<DXWidgetNode> it = list.iterator();
@@ -237,7 +234,7 @@ public class DXViewPager extends DXAbsContainerBaseLayout {
                     } else {
                         cloneWithWidgetNode.getDataProxy();
                     }
-                    DXWidgetNode c = C6494g.c(dXWidgetNode, cloneWithWidgetNode, false);
+                    DXWidgetNode c = g.c(dXWidgetNode, cloneWithWidgetNode, false);
                     c.setParentWidget(this);
                     arrayList.add(c);
                 }
@@ -267,7 +264,7 @@ public class DXViewPager extends DXAbsContainerBaseLayout {
         return super.getItemWidgetNodes();
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.IDXNodePropProvider
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.IDXNodePropProvider
     public Object getNodePropByKey(String str) {
         if ("selected".equals(str)) {
             return Integer.valueOf(this.selected);
@@ -313,7 +310,7 @@ public class DXViewPager extends DXAbsContainerBaseLayout {
         return null;
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXAbsContainerBaseLayout, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXAbsContainerBaseLayout, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onBeforeBindChildData() {
         nz.g("shandian", "VP onBeforeBindChildData");
         if (this.originWidgetNodes == null) {
@@ -337,11 +334,11 @@ public class DXViewPager extends DXAbsContainerBaseLayout {
         }
         setDisableFlatten(true);
         if (generateWidgetNodeByData.size() == 0) {
-            trackError(C6368e.DX_ERROR_CODE_RECYCLER_LAYOUT_231001, "生成的子节点为空，或者数量为 0");
+            trackError(com.taobao.android.dinamicx.e.DX_ERROR_CODE_RECYCLER_LAYOUT_231001, "生成的子节点为空，或者数量为 0");
         }
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXAbsContainerBaseLayout, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXAbsContainerBaseLayout, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onClone(DXWidgetNode dXWidgetNode, boolean z) {
         if (dXWidgetNode == null || !(dXWidgetNode instanceof DXViewPager)) {
             return;
@@ -384,7 +381,7 @@ public class DXViewPager extends DXAbsContainerBaseLayout {
         }
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     protected void onRenderView(Context context, View view) {
         if (view instanceof ViewPager) {
             ViewPager viewPager = (ViewPager) view;
@@ -409,7 +406,7 @@ public class DXViewPager extends DXAbsContainerBaseLayout {
             this.preSelect = this.currentSelect;
             int size = getItemWidgetNodes() != null ? getItemWidgetNodes().size() : 0;
             viewPager.clearOnPageChangeListeners();
-            viewPager.addOnPageChangeListener(new C6470a(size - 1));
+            viewPager.addOnPageChangeListener(new a(size - 1));
             DXTabHeaderLayoutWidgetNode dXTabHeaderLayoutWidgetNode = this.dxTabHeaderLayoutWidgetNode;
             if (dXTabHeaderLayoutWidgetNode != null) {
                 dXTabHeaderLayoutWidgetNode.bindViewPager(this);
@@ -437,7 +434,7 @@ public class DXViewPager extends DXAbsContainerBaseLayout {
         }
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXAbsContainerBaseLayout, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXAbsContainerBaseLayout, com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetIntAttribute(long j, int i) {
         if (j == 6456471229575806289L) {
             this.selected = i;
@@ -451,7 +448,7 @@ public class DXViewPager extends DXAbsContainerBaseLayout {
         }
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXAbsContainerBaseLayout, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXAbsContainerBaseLayout, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     protected void onSetListAttribute(long j, JSONArray jSONArray) {
         if (j == -5948810534719014123L) {
             this.dataSource = jSONArray;

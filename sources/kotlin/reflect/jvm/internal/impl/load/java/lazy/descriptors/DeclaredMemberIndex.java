@@ -3,8 +3,8 @@ package kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
-import kotlin.collections.C8203e0;
-import kotlin.collections.C8214m;
+import kotlin.collections.e0;
+import kotlin.collections.m;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaField;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaMethod;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaRecordComponent;
@@ -18,13 +18,12 @@ import tb.ni1;
 public interface DeclaredMemberIndex {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.DeclaredMemberIndex$a */
     /* loaded from: classes3.dex */
-    public static final class C8343a implements DeclaredMemberIndex {
+    public static final class a implements DeclaredMemberIndex {
         @NotNull
-        public static final C8343a INSTANCE = new C8343a();
+        public static final a INSTANCE = new a();
 
-        private C8343a() {
+        private a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.DeclaredMemberIndex
@@ -33,7 +32,7 @@ public interface DeclaredMemberIndex {
         public List<JavaMethod> findMethodsByName(@NotNull ni1 ni1Var) {
             List<JavaMethod> g;
             b41.i(ni1Var, "name");
-            g = C8214m.g();
+            g = m.g();
             return g;
         }
 
@@ -55,7 +54,7 @@ public interface DeclaredMemberIndex {
         @NotNull
         public Set<ni1> getFieldNames() {
             Set<ni1> d;
-            d = C8203e0.d();
+            d = e0.d();
             return d;
         }
 
@@ -63,7 +62,7 @@ public interface DeclaredMemberIndex {
         @NotNull
         public Set<ni1> getMethodNames() {
             Set<ni1> d;
-            d = C8203e0.d();
+            d = e0.d();
             return d;
         }
 
@@ -71,7 +70,7 @@ public interface DeclaredMemberIndex {
         @NotNull
         public Set<ni1> getRecordComponentNames() {
             Set<ni1> d;
-            d = C8203e0.d();
+            d = e0.d();
             return d;
         }
     }

@@ -42,7 +42,7 @@ public class PagerExpressionNormal extends PagerExpression {
             String prefix = ExpressionDict.getPrefix();
             if (i3 < 10) {
                 try {
-                    field = R.C7941drawable.class.getDeclaredField(prefix + "00" + i3);
+                    field = R.drawable.class.getDeclaredField(prefix + "00" + i3);
                     hashMap.put(PagerExpression.RES_NAME, prefix + "00" + i3);
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
@@ -54,10 +54,10 @@ public class PagerExpressionNormal extends PagerExpression {
                     e4.printStackTrace();
                 }
             } else if (i3 >= 10 && i3 < 100) {
-                field = R.C7941drawable.class.getDeclaredField(prefix + "0" + i3);
+                field = R.drawable.class.getDeclaredField(prefix + "0" + i3);
                 hashMap.put(PagerExpression.RES_NAME, prefix + "0" + i3);
             } else if (i3 >= 100) {
-                field = R.C7941drawable.class.getDeclaredField(prefix + i3);
+                field = R.drawable.class.getDeclaredField(prefix + i3);
                 hashMap.put(PagerExpression.RES_NAME, prefix + i3);
             }
             hashMap.put(PagerExpression.RES_ID, Integer.valueOf(Integer.parseInt(field.get(null).toString())));
@@ -65,14 +65,14 @@ public class PagerExpressionNormal extends PagerExpression {
         }
         int i4 = i2 - i;
         try {
-            int parseInt = Integer.parseInt(R.C7941drawable.class.getDeclaredField(PagerExpression.BLANK).get(null).toString());
+            int parseInt = Integer.parseInt(R.drawable.class.getDeclaredField(PagerExpression.BLANK).get(null).toString());
             for (int i5 = 0; i5 < 23 - i4; i5++) {
                 HashMap hashMap2 = new HashMap();
                 hashMap2.put(PagerExpression.RES_ID, Integer.valueOf(parseInt));
                 hashMap2.put(PagerExpression.RES_NAME, PagerExpression.BLANK);
                 this.listItems.add(hashMap2);
             }
-            int parseInt2 = Integer.parseInt(R.C7941drawable.class.getDeclaredField(PagerExpression.BACK).get(null).toString());
+            int parseInt2 = Integer.parseInt(R.drawable.class.getDeclaredField(PagerExpression.BACK).get(null).toString());
             HashMap hashMap3 = new HashMap();
             hashMap3.put(PagerExpression.RES_ID, Integer.valueOf(parseInt2));
             hashMap3.put(PagerExpression.RES_NAME, PagerExpression.BACK);
@@ -82,7 +82,7 @@ public class PagerExpressionNormal extends PagerExpression {
         } catch (NoSuchFieldException e6) {
             e6.printStackTrace();
         }
-        this.mGridview.setAdapter((ListAdapter) new SimpleAdapter(getContext(), this.listItems, R.C7942layout.dago_pgc_item_grid_cell, new String[]{PagerExpression.RES_ID}, new int[]{R.id.image}));
+        this.mGridview.setAdapter((ListAdapter) new SimpleAdapter(getContext(), this.listItems, R.layout.dago_pgc_item_grid_cell, new String[]{PagerExpression.RES_ID}, new int[]{R.id.image}));
         this.mGridview.setStretchMode(2);
         this.mGridview.setNumColumns(8);
         this.mGridview.setOnItemClickListener(new AdapterView.OnItemClickListener() { // from class: com.youku.live.dago.widgetlib.ailproom.adapter.chatinput.expression.widget.PagerExpressionNormal.1

@@ -1,6 +1,5 @@
 package tb;
 
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.types.TypeProjection;
 import kotlin.reflect.jvm.internal.impl.types.Variance;
 import org.jetbrains.annotations.NotNull;
@@ -11,9 +10,9 @@ public final class wf2 extends yq2 {
     @NotNull
     private final z71 a;
 
-    public wf2(@NotNull AbstractC8271b abstractC8271b) {
-        b41.i(abstractC8271b, "kotlinBuiltIns");
-        fd2 I = abstractC8271b.I();
+    public wf2(@NotNull kotlin.reflect.jvm.internal.impl.builtins.b bVar) {
+        b41.i(bVar, "kotlinBuiltIns");
+        fd2 I = bVar.I();
         b41.h(I, "kotlinBuiltIns.nullableAnyType");
         this.a = I;
     }

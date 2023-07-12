@@ -26,12 +26,11 @@ public class MassClient {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.mass.MassClient$a */
     /* loaded from: classes11.dex */
-    public class C6748a implements ProcessStateListener {
+    public class a implements ProcessStateListener {
         final /* synthetic */ ComponentName a;
 
-        C6748a(ComponentName componentName) {
+        a(ComponentName componentName) {
             this.a = componentName;
         }
 
@@ -75,7 +74,7 @@ public class MassClient {
             } catch (IPCException e) {
                 ALog.e(TAG, "[getMassService]", null, e);
             }
-            ARanger.registerProcessStateListener(new C6748a(componentName));
+            ARanger.registerProcessStateListener(new a(componentName));
         }
         return this.iMassService;
     }

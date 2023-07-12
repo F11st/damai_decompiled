@@ -1,7 +1,7 @@
 package com.squareup.okhttp;
 
 import com.alimm.xadsdk.request.builder.IRequestConst;
-import com.alipay.sdk.m.n.C4250a;
+import com.alipay.sdk.m.n.a;
 import com.squareup.okhttp.internal.Util;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -19,7 +19,7 @@ public final class FormEncodingBuilder {
         try {
             StringBuilder sb = this.content;
             sb.append(URLEncoder.encode(str, "UTF-8"));
-            sb.append(C4250a.h);
+            sb.append(a.h);
             sb.append(URLEncoder.encode(str2, "UTF-8"));
             return this;
         } catch (UnsupportedEncodingException e) {

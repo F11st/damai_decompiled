@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMRoundedCornersBitmapProcessor;
 import cn.damai.homepage.R$drawable;
@@ -17,10 +16,10 @@ import com.alibaba.pictures.bricks.view.DMAvatar;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
-import tb.C9826vr;
 import tb.kv2;
 import tb.lu2;
 import tb.t60;
+import tb.vr;
 import tb.wh2;
 
 /* compiled from: Taobao */
@@ -38,9 +37,8 @@ public class FollowViewHolder extends FeedsWraperHolder {
     DMAvatar z;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.FollowViewHolder$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2771a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         Bundle a = new Bundle();
         final /* synthetic */ String b;
@@ -48,7 +46,7 @@ public class FollowViewHolder extends FeedsWraperHolder {
         final /* synthetic */ int d;
         final /* synthetic */ FollowFeedData e;
 
-        View$OnClickListenerC2771a(String str, int i, int i2, FollowFeedData followFeedData) {
+        a(String str, int i, int i2, FollowFeedData followFeedData) {
             this.b = str;
             this.c = i;
             this.d = i2;
@@ -121,12 +119,12 @@ public class FollowViewHolder extends FeedsWraperHolder {
                 this.B.setVisibility(8);
             }
             if (1 != i && 2 != i) {
-                if (this.y.getTag() instanceof C9826vr) {
-                    ((C9826vr) this.y.getTag()).cancel();
+                if (this.y.getTag() instanceof vr) {
+                    ((vr) this.y.getTag()).cancel();
                 }
-                DMImageCreator k = C0504a.b().c(str4).k(new DMRoundedCornersBitmapProcessor(t60.a(this.w, 3.0f), 0));
+                DMImageCreator k = cn.damai.common.image.a.b().c(str4).k(new DMRoundedCornersBitmapProcessor(t60.a(this.w, 3.0f), 0));
                 int i3 = R$drawable.uikit_default_image_bg_gradient;
-                C9826vr g = k.i(i3).c(i3).g(this.y);
+                vr g = k.i(i3).c(i3).g(this.y);
                 this.y.setVisibility(0);
                 DMAvatar dMAvatar = this.z;
                 if (dMAvatar != null) {
@@ -142,8 +140,8 @@ public class FollowViewHolder extends FeedsWraperHolder {
                     }
                 }
             } else {
-                if (this.y.getTag() instanceof C9826vr) {
-                    ((C9826vr) this.y.getTag()).cancel();
+                if (this.y.getTag() instanceof vr) {
+                    ((vr) this.y.getTag()).cancel();
                 }
                 this.y.setVisibility(4);
                 this.z.setAvatar(str4);
@@ -164,13 +162,13 @@ public class FollowViewHolder extends FeedsWraperHolder {
                 if (this.E != null) {
                     if (!wh2.j(followFeedData.vipLevelIcon)) {
                         this.E.setVisibility(0);
-                        C0504a.b().c(followFeedData.vipLevelIcon).g(this.E);
+                        cn.damai.common.image.a.b().c(followFeedData.vipLevelIcon).g(this.E);
                     } else {
                         this.E.setVisibility(8);
                     }
                 }
             }
         }
-        this.C.setOnClickListener(new View$OnClickListenerC2771a(str5, i, i2, followFeedData));
+        this.C.setOnClickListener(new a(str5, i, i2, followFeedData));
     }
 }

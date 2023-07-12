@@ -12,8 +12,8 @@ import androidx.fragment.app.Fragment;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
 import com.taobao.weex.bridge.WXBridgeManager;
 import com.tencent.connect.api.QQAuthManage;
-import com.tencent.connect.auth.C7048c;
 import com.tencent.connect.auth.QQToken;
+import com.tencent.connect.auth.c;
 import com.tencent.connect.avatar.QQAvatar;
 import com.tencent.connect.common.Constants;
 import com.tencent.connect.common.UIListenerManager;
@@ -23,19 +23,18 @@ import com.tencent.connect.share.QQShare;
 import com.tencent.connect.share.QzonePublish;
 import com.tencent.connect.share.QzoneShare;
 import com.tencent.open.SocialOperation;
-import com.tencent.open.a.C7074f;
 import com.tencent.open.apireq.IApiCallback;
-import com.tencent.open.b.C7081b;
+import com.tencent.open.b.b;
 import com.tencent.open.im.IM;
 import com.tencent.open.log.SLog;
 import com.tencent.open.log.Tracer;
 import com.tencent.open.miniapp.MiniApp;
-import com.tencent.open.utils.C7117f;
-import com.tencent.open.utils.C7119g;
-import com.tencent.open.utils.C7121i;
-import com.tencent.open.utils.C7123k;
-import com.tencent.open.utils.C7126m;
 import com.tencent.open.utils.HttpUtils;
+import com.tencent.open.utils.f;
+import com.tencent.open.utils.g;
+import com.tencent.open.utils.i;
+import com.tencent.open.utils.k;
+import com.tencent.open.utils.m;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -52,13 +51,13 @@ public class Tencent {
     public static boolean USE_ONE_HOUR;
     private static Tencent c;
     private static boolean d;
-    private final C7048c a;
+    private final c a;
     private String b;
 
     private Tencent(String str, Context context) {
-        this.a = C7048c.a(str, context);
-        C7081b.a().a(str, context);
-        C7117f.a().a(context);
+        this.a = c.a(str, context);
+        b.a().a(str, context);
+        f.a().a(context);
     }
 
     private static boolean a(Context context, String str) {
@@ -120,11 +119,11 @@ public class Tencent {
     }
 
     public static boolean isPermissionNotGranted() {
-        return !d || TextUtils.isEmpty(C7117f.a().b());
+        return !d || TextUtils.isEmpty(f.a().b());
     }
 
     public static boolean isSupportPushToQZone(Context context) {
-        boolean z = C7123k.c(context, "5.9.5") >= 0;
+        boolean z = k.c(context, "5.9.5") >= 0;
         SLog.i("openSDK_LOG.Tencent", "isSupportPushToQZone() support=" + z);
         a("isSupportPushToQZone", Boolean.valueOf(z));
         return z;
@@ -133,11 +132,11 @@ public class Tencent {
     public static boolean isSupportShareToQQ(Context context) {
         SLog.i("openSDK_LOG.Tencent", "isSupportShareToQQ()");
         boolean z = true;
-        if (C7126m.c(context) && C7123k.a(context, Constants.PACKAGE_QQ_PAD) != null) {
+        if (m.c(context) && k.a(context, Constants.PACKAGE_QQ_PAD) != null) {
             a("isSupportShareToQQ", Boolean.TRUE);
             return true;
         }
-        if (C7123k.c(context, "4.1") < 0 && C7123k.a(context, Constants.PACKAGE_TIM) == null) {
+        if (k.c(context, "4.1") < 0 && k.a(context, Constants.PACKAGE_TIM) == null) {
             z = false;
         }
         SLog.i("openSDK_LOG.Tencent", "isSupportShareToQQ() support=" + z);
@@ -209,15 +208,15 @@ public class Tencent {
     }
 
     public static void resetQQAppInfoCache() {
-        C7123k.a("com.tencent.mobileqq");
+        k.a("com.tencent.mobileqq");
     }
 
     public static void resetTargetAppInfoCache() {
-        C7123k.a();
+        k.a();
     }
 
     public static void resetTimAppInfoCache() {
-        C7123k.a(Constants.PACKAGE_TIM);
+        k.a(Constants.PACKAGE_TIM);
     }
 
     public static void setCustomLogger(Tracer tracer) {
@@ -229,8 +228,8 @@ public class Tencent {
     public static void setIsPermissionGranted(boolean z) {
         String str;
         if (z) {
-            C7117f.a().a(C7119g.a());
-            str = C7117f.a().b();
+            f.a().a(g.a());
+            str = f.a().b();
             if (str == null || str.isEmpty()) {
                 str = Build.getMODEL();
             }
@@ -247,8 +246,8 @@ public class Tencent {
     }
 
     public void callCommonChannelApi(Activity activity, Bundle bundle, IUiListener iUiListener) {
-        C7048c c7048c = this.a;
-        int launchQQ = new CommonChannelApi(c7048c, c7048c.b()).launchQQ(activity, bundle, iUiListener);
+        c cVar = this.a;
+        int launchQQ = new CommonChannelApi(cVar, cVar.b()).launchQQ(activity, bundle, iUiListener);
         SLog.i("openSDK_LOG.Tencent", "callCommonChannelApi ret: " + launchQQ);
     }
 
@@ -321,7 +320,7 @@ public class Tencent {
     }
 
     public boolean isQQInstalled(Context context) {
-        boolean b = C7123k.b(context);
+        boolean b = k.b(context);
         SLog.i("openSDK_LOG.Tencent", "isQQInstalled() installed=" + b);
         a("isQQInstalled", Boolean.valueOf(b));
         return b;
@@ -344,11 +343,11 @@ public class Tencent {
     public boolean isSupportSSOLogin(Activity activity) {
         SLog.i("openSDK_LOG.Tencent", "isSupportSSOLogin()");
         boolean z = true;
-        if (C7126m.c(activity) && C7123k.a((Context) activity, Constants.PACKAGE_QQ_PAD) != null) {
+        if (m.c(activity) && k.a((Context) activity, Constants.PACKAGE_QQ_PAD) != null) {
             a("isSupportSSOLogin", Boolean.TRUE);
             return true;
         }
-        if (C7123k.c(activity, "4.1") < 0 && C7123k.d(activity, "1.1") < 0) {
+        if (k.c(activity, "4.1") < 0 && k.d(activity, "1.1") < 0) {
             z = false;
         }
         SLog.i("openSDK_LOG.Tencent", "isSupportSSOLogin() support=" + z);
@@ -383,8 +382,8 @@ public class Tencent {
     public int loginServerSide(Activity activity, String str, IUiListener iUiListener) {
         SLog.i("openSDK_LOG.Tencent", "loginServerSide() with activity, scope = " + str + ",server_side");
         a("loginServerSide_activity", "scope", str);
-        C7048c c7048c = this.a;
-        return c7048c.a(activity, str + ",server_side", iUiListener);
+        c cVar = this.a;
+        return cVar.a(activity, str + ",server_side", iUiListener);
     }
 
     public int loginWithOEM(Activity activity, String str, IUiListener iUiListener, boolean z, String str2, String str3, String str4) {
@@ -422,13 +421,13 @@ public class Tencent {
     public JSONObject request(String str, Bundle bundle, String str2) throws IOException, JSONException, HttpUtils.NetworkUnavailableException, HttpUtils.HttpStatusException {
         SLog.i("openSDK_LOG.Tencent", "request()");
         a("request", "graphPath", str, "httpMethod", str2);
-        return HttpUtils.request(this.a.b(), C7119g.a(), str, bundle, str2);
+        return HttpUtils.request(this.a.b(), g.a(), str, bundle, str2);
     }
 
     public void requestAsync(String str, Bundle bundle, String str2, IRequestListener iRequestListener) {
         SLog.i("openSDK_LOG.Tencent", "requestAsync()");
         a("requestAsync", "graphPath", str, "httpMethod", str2);
-        HttpUtils.requestAsync(this.a.b(), C7119g.a(), str, bundle, str2, iRequestListener);
+        HttpUtils.requestAsync(this.a.b(), g.a(), str, bundle, str2, iRequestListener);
     }
 
     public void saveSession(JSONObject jSONObject) {
@@ -474,7 +473,7 @@ public class Tencent {
     public void setOpenId(String str) {
         SLog.i("openSDK_LOG.Tencent", "setOpenId() --start");
         a("setOpenId", new Object[0]);
-        this.a.b(C7119g.a(), str);
+        this.a.b(g.a(), str);
         SLog.i("openSDK_LOG.Tencent", "setOpenId() --end");
     }
 
@@ -534,7 +533,7 @@ public class Tencent {
     }
 
     public boolean isQQInstalled(Context context, String str) {
-        boolean z = C7123k.c(context, str) >= 0;
+        boolean z = k.c(context, str) >= 0;
         SLog.i("openSDK_LOG.Tencent", "isQQInstalled version[" + str + "] = " + z);
         return z;
     }
@@ -548,8 +547,8 @@ public class Tencent {
     public int loginServerSide(Fragment fragment, String str, IUiListener iUiListener) {
         SLog.i("openSDK_LOG.Tencent", "loginServerSide() with fragment, scope = " + str + ",server_side");
         a("loginServerSide_fragment", "scope", str);
-        C7048c c7048c = this.a;
-        return c7048c.a(fragment, str + ",server_side", iUiListener, "");
+        c cVar = this.a;
+        return cVar.a(fragment, str + ",server_side", iUiListener, "");
     }
 
     public static void setIsPermissionGranted(boolean z, String str) {
@@ -559,16 +558,16 @@ public class Tencent {
                 z = false;
             }
             d = z;
-            C7117f.a().a(C7119g.a(), str);
+            f.a().a(g.a(), str);
         }
         str = null;
         d = z;
-        C7117f.a().a(C7119g.a(), str);
+        f.a().a(g.a(), str);
     }
 
     public static synchronized Tencent createInstance(String str, Context context) {
         synchronized (Tencent.class) {
-            C7119g.a(context.getApplicationContext());
+            g.a(context.getApplicationContext());
             SLog.i("openSDK_LOG.Tencent", "createInstance()  -- start, appId = " + str);
             if (TextUtils.isEmpty(str)) {
                 SLog.e("openSDK_LOG.Tencent", "appId should not be empty!");
@@ -583,7 +582,7 @@ public class Tencent {
             }
             if (a(context, str)) {
                 a(WXBridgeManager.METHOD_CREATE_INSTANCE, "appid", str);
-                C7074f.a().a(C7121i.a(context, str));
+                com.tencent.open.a.f.a().a(i.a(context, str));
                 SLog.i("openSDK_LOG.Tencent", "createInstance()  -- end");
                 return c;
             }
@@ -618,7 +617,7 @@ public class Tencent {
     }
 
     private static void a(String str, Object... objArr) {
-        C7081b.a().a(str, a(objArr));
+        b.a().a(str, a(objArr));
     }
 
     private static String a(Object... objArr) {
@@ -639,6 +638,6 @@ public class Tencent {
     }
 
     private static void a(String str, Object obj) {
-        C7081b.a().a(str, obj);
+        b.a().a(str, obj);
     }
 }

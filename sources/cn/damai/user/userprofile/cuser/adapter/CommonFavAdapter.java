@@ -10,11 +10,10 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMRoundedCornersBitmapProcessor;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import cn.damai.homepage.R$color;
 import cn.damai.homepage.R$drawable;
 import cn.damai.issue.tool.IssueConstants;
@@ -23,10 +22,10 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 import java.util.List;
-import tb.C9826vr;
 import tb.iv2;
 import tb.qd2;
 import tb.t60;
+import tb.vr;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
@@ -51,14 +50,13 @@ public class CommonFavAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.adapter.CommonFavAdapter$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2754a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CommonFavObject a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC2754a(CommonFavObject commonFavObject, int i) {
+        a(CommonFavObject commonFavObject, int i) {
             this.a = commonFavObject;
             this.b = i;
         }
@@ -96,13 +94,13 @@ public class CommonFavAdapter extends RecyclerView.Adapter<ViewHolder> {
             return;
         }
         CommonFavObject commonFavObject = this.a.get(i);
-        if (viewHolder.a.getTag() instanceof C9826vr) {
-            ((C9826vr) viewHolder.a.getTag()).cancel();
+        if (viewHolder.a.getTag() instanceof vr) {
+            ((vr) viewHolder.a.getTag()).cancel();
         }
-        DMImageCreator k = C0504a.b().c(commonFavObject.pic).k(new DMRoundedCornersBitmapProcessor(t60.a(this.b, 3.0f), 0));
+        DMImageCreator k = cn.damai.common.image.a.b().c(commonFavObject.pic).k(new DMRoundedCornersBitmapProcessor(t60.a(this.b, 3.0f), 0));
         int i2 = R$drawable.uikit_default_image_bg_gradient;
         viewHolder.a.setTag(k.i(i2).c(i2).g(viewHolder.a));
-        viewHolder.a.setOnClickListener(new View$OnClickListenerC2754a(commonFavObject, i));
+        viewHolder.a.setOnClickListener(new a(commonFavObject, i));
         viewHolder.b.setText(commonFavObject.name);
         if (commonFavObject.status == 1) {
             viewHolder.c.setVisibility(0);
@@ -166,8 +164,8 @@ public class CommonFavAdapter extends RecyclerView.Adapter<ViewHolder> {
         hashMap.put("usercode", "");
         hashMap.put("item_id", str);
         hashMap.put("contentlabel", "");
-        C0528b c0528b = new C0528b();
-        C0529c.e().x(c0528b.e(iv2.USER_HOME_PAGE, "taste", "project_" + i, hashMap, Boolean.TRUE));
+        b bVar = new b();
+        c.e().x(bVar.e(iv2.USER_HOME_PAGE, "taste", "project_" + i, hashMap, Boolean.TRUE));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

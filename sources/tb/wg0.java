@@ -2,7 +2,6 @@ package tb;
 
 import android.util.Pair;
 import com.taobao.android.dinamicx.widget.DXRecyclerLayout;
-import com.taobao.android.ultron.expr.C6667c;
 import java.lang.reflect.Array;
 import java.util.HashSet;
 import java.util.List;
@@ -19,13 +18,12 @@ public class wg0 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.wg0$b */
     /* loaded from: classes11.dex */
-    public static class C9866b {
+    public static class b {
         public boolean a;
         public Object b;
 
-        private C9866b() {
+        private b() {
         }
     }
 
@@ -37,9 +35,9 @@ public class wg0 {
         hashSet.add("deleteifnull");
     }
 
-    private static void a(Object obj, Object obj2, C9866b c9866b) {
-        c9866b.b = d(obj, "${" + obj2 + "}");
-        c9866b.a = b(obj, obj2) > 0;
+    private static void a(Object obj, Object obj2, b bVar) {
+        bVar.b = d(obj, "${" + obj2 + "}");
+        bVar.a = b(obj, obj2) > 0;
     }
 
     private static int b(Object obj, Object obj2) {
@@ -120,13 +118,13 @@ public class wg0 {
             String group = matcher.group();
             Pair<String, String> f = f(group);
             if (f != null) {
-                C9866b e = e((String) f.first, f.second, obj);
+                b e = e((String) f.first, f.second, obj);
                 a2 = e.b;
                 if (e.a) {
                     return a2;
                 }
             } else {
-                a2 = C6667c.a(obj, group);
+                a2 = com.taobao.android.ultron.expr.c.a(obj, group);
             }
             if (start == 0 && end == length) {
                 return a2;
@@ -136,20 +134,20 @@ public class wg0 {
         return sb.toString();
     }
 
-    private static C9866b e(String str, Object obj, Object obj2) {
-        C9866b c9866b = new C9866b();
+    private static b e(String str, Object obj, Object obj2) {
+        b bVar = new b();
         if (DXRecyclerLayout.LOAD_MORE_EMPTY.equalsIgnoreCase(str)) {
-            c9866b.b = Integer.valueOf(b(obj2, obj));
-            return c9866b;
+            bVar.b = Integer.valueOf(b(obj2, obj));
+            return bVar;
         } else if (m80.NOT_PREFIX.equalsIgnoreCase(str)) {
-            c9866b.b = Integer.valueOf(c(obj2, obj));
-            return c9866b;
+            bVar.b = Integer.valueOf(c(obj2, obj));
+            return bVar;
         } else if ("deleteIfNull".equalsIgnoreCase(str)) {
-            a(obj2, obj, c9866b);
-            return c9866b;
+            a(obj2, obj, bVar);
+            return bVar;
         } else {
-            c9866b.b = obj;
-            return c9866b;
+            bVar.b = obj;
+            return bVar;
         }
     }
 

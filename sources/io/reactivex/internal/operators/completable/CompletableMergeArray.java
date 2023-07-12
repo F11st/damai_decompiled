@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.completable;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
+import io.reactivex.a;
 import io.reactivex.disposables.Disposable;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -11,7 +11,7 @@ import tb.jm;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class CompletableMergeArray extends AbstractC8146a {
+public final class CompletableMergeArray extends a {
     final CompletableSource[] sources;
 
     /* compiled from: Taobao */
@@ -56,7 +56,7 @@ public final class CompletableMergeArray extends AbstractC8146a {
         this.sources = completableSourceArr;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     public void subscribeActual(CompletableObserver completableObserver) {
         CompletableSource[] completableSourceArr;
         jm jmVar = new jm();

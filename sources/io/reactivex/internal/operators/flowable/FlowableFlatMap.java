@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.functions.Function;
@@ -500,8 +500,8 @@ public final class FlowableFlatMap<T, U> extends AbstractFlowableWithUpstream<T,
         }
     }
 
-    public FlowableFlatMap(AbstractC8147b<T> abstractC8147b, Function<? super T, ? extends Publisher<? extends U>> function, boolean z, int i, int i2) {
-        super(abstractC8147b);
+    public FlowableFlatMap(b<T> bVar, Function<? super T, ? extends Publisher<? extends U>> function, boolean z, int i, int i2) {
+        super(bVar);
         this.mapper = function;
         this.delayErrors = z;
         this.maxConcurrency = i;
@@ -512,7 +512,7 @@ public final class FlowableFlatMap<T, U> extends AbstractFlowableWithUpstream<T,
         return new MergeSubscriber(subscriber, function, z, i, i2);
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super U> subscriber) {
         if (FlowableScalarXMap.tryScalarXMapSubscribe(this.source, subscriber, this.mapper)) {
             return;

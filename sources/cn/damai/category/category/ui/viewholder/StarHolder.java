@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.category.category.bean.StarAndBrandItem;
 import cn.damai.category.category.bean.StarBean;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.homepage.R$color;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -59,7 +59,7 @@ public class StarHolder extends RecyclerView.ViewHolder {
             ImageView imageView = this.c;
             int i2 = R$drawable.uikit_user_default_icon_trans_white;
             imageView.setImageResource(i2);
-            C0504a.b().h(this.a).f(starBean.headPic, m62.a(this.a, 50.0f), m62.a(this.a, 50.0f)).i(i2).c(i2).k(new yq()).g(this.c);
+            a.b().h(this.a).f(starBean.headPic, m62.a(this.a, 50.0f), m62.a(this.a, 50.0f)).i(i2).c(i2).k(new yq()).g(this.c);
             this.d.setText(starBean.name);
             this.g.setText(starBean.additionDescription);
             this.f.setTag(starAndBrandItem);

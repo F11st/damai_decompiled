@@ -11,8 +11,8 @@ import com.ut.mini.behavior.trigger.TriggerConfig;
 import com.ut.mini.behavior.trigger.TriggerMgr;
 import java.io.File;
 import java.util.Random;
-import tb.C9225hn;
 import tb.hl2;
+import tb.hn;
 import tb.s01;
 import tb.si0;
 import tb.sj;
@@ -41,7 +41,7 @@ public class UTBehaviorConfigMgr {
             return;
         }
         String str2 = str + "/v1.json";
-        s01.C9670a a = new s01().a(str2);
+        s01.a a = new s01().a(str2);
         Logger.f(TAG, "downloadConfig url", str2, "response", a);
         if (a == null || (bArr = a.a) == null) {
             return;
@@ -72,7 +72,7 @@ public class UTBehaviorConfigMgr {
         sb.append(j.getFilesDir().getAbsolutePath());
         String str = File.separator;
         sb.append(str);
-        sb.append(C9225hn.UT_FILE_DIR);
+        sb.append(hn.UT_FILE_DIR);
         String sb2 = sb.toString();
         si0.b(sb2);
         return sb2 + str + UT_BEHAVIOR_CONFIG_FILE;

@@ -8,7 +8,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.alibaba.security.biometrics.R;
-import com.alibaba.security.biometrics.c.c.C3755b;
 import com.alibaba.security.biometrics.skin.model.NavigatorSkinData;
 
 /* compiled from: Taobao */
@@ -29,9 +28,9 @@ public class TitleBarWidget extends BaseWidget {
     protected final void b() {
         NavigatorSkinData b2 = b("navigator");
         if (b2 != null) {
-            C3788b.a(this.c, b2.getCloseImageView(), R.C3735drawable.rp_face_top_back);
+            b.a(this.c, b2.getCloseImageView(), R.drawable.rp_face_top_back);
         } else {
-            this.c.setImageResource(R.C3735drawable.rp_face_top_back);
+            this.c.setImageResource(R.drawable.rp_face_top_back);
         }
     }
 
@@ -42,10 +41,10 @@ public class TitleBarWidget extends BaseWidget {
     @Override // com.alibaba.security.biometrics.logic.view.widget.BaseWidget
     public final void d() {
         RelativeLayout.LayoutParams layoutParams;
-        if (C3755b.a(getContext()) <= 0 || (layoutParams = (RelativeLayout.LayoutParams) getLayoutParams()) == null) {
+        if (com.alibaba.security.biometrics.c.c.b.a(getContext()) <= 0 || (layoutParams = (RelativeLayout.LayoutParams) getLayoutParams()) == null) {
             return;
         }
-        layoutParams.setMargins(0, C3755b.a(getContext()), 0, 0);
+        layoutParams.setMargins(0, com.alibaba.security.biometrics.c.c.b.a(getContext()), 0, 0);
         setLayoutParams(layoutParams);
     }
 

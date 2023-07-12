@@ -1,6 +1,5 @@
 package tb;
 
-import com.alipay.sdk.m.k.C4226b;
 import java.util.Objects;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -26,7 +25,7 @@ public final class ns0 {
 
     public ns0(@NotNull String str, @NotNull String str2, int i, @NotNull String str3, @NotNull String str4, @NotNull String str5, @NotNull String str6) {
         b41.i(str, "id");
-        b41.i(str2, C4226b.l);
+        b41.i(str2, com.alipay.sdk.m.k.b.l);
         b41.i(str3, "layer");
         b41.i(str4, "css");
         b41.i(str5, "dataBind");

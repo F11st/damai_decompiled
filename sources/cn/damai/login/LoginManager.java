@@ -53,13 +53,12 @@ public class LoginManager {
     private static LoginManager a;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.login.LoginManager$a */
     /* loaded from: classes5.dex */
-    public class C1320a implements ICallback<AbsResult> {
+    public class a implements ICallback<AbsResult> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ YouKuTrustListener a;
 
-        C1320a(YouKuTrustListener youKuTrustListener) {
+        a(YouKuTrustListener youKuTrustListener) {
             this.a = youKuTrustListener;
         }
 
@@ -302,7 +301,7 @@ public class LoginManager {
         } else if (youKuTrustListener == null || context == null) {
         } else {
             youKuTrustListener.showLoading(true);
-            PassportManager.getInstance().uccTrustLogin("youku", null, new C1320a(youKuTrustListener));
+            PassportManager.getInstance().uccTrustLogin("youku", null, new a(youKuTrustListener));
         }
     }
 

@@ -7,7 +7,7 @@ import com.alibaba.security.biometrics.manager.ALBiometricsManager;
 import com.alibaba.security.biometrics.service.model.params.ABParamsHelper;
 import com.alibaba.security.biometrics.service.model.params.ALBiometricsKeys;
 import com.alibaba.security.biometrics.theme.ALBiometricsConfig;
-import com.alibaba.security.common.d.C3812i;
+import com.alibaba.security.common.d.i;
 import com.alibaba.security.common.track.model.TrackLog;
 
 /* compiled from: Taobao */
@@ -28,7 +28,7 @@ public abstract class ALBiometricsNavigator {
         if (context != null) {
             Intent intent = new Intent();
             intent.setAction(ALBiometricsKeys.KEY_ACTION_FINISH_BIOMETRICS);
-            C3812i.a(context).a(intent);
+            i.a(context).a(intent);
         }
     }
 
@@ -41,7 +41,7 @@ public abstract class ALBiometricsNavigator {
             Intent intent = new Intent();
             intent.setAction(ALBiometricsKeys.KEY_ACTION_RESTART_BIOMETRICS);
             intent.putExtra("data", bundle);
-            C3812i.a(context).a(intent);
+            i.a(context).a(intent);
         }
     }
 

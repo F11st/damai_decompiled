@@ -15,12 +15,11 @@ public class RepertoireDetailPresenter extends RepertoireDetailContract.Presente
     private static final String EVENT_COMMENT_PUBLISH = "comment_publish_success";
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.repertoite.presenter.RepertoireDetailPresenter$a */
     /* loaded from: classes9.dex */
-    public class C2697a implements Action<Object> {
+    public class a implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2697a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -35,12 +34,11 @@ public class RepertoireDetailPresenter extends RepertoireDetailContract.Presente
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.repertoite.presenter.RepertoireDetailPresenter$b */
     /* loaded from: classes9.dex */
-    public class C2698b implements Action<Object> {
+    public class b implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2698b() {
+        b() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -55,12 +53,11 @@ public class RepertoireDetailPresenter extends RepertoireDetailContract.Presente
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.repertoite.presenter.RepertoireDetailPresenter$c */
     /* loaded from: classes9.dex */
-    public class C2699c implements Action<Object> {
+    public class c implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2699c() {
+        c() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -74,7 +71,7 @@ public class RepertoireDetailPresenter extends RepertoireDetailContract.Presente
         }
     }
 
-    @Override // cn.damai.common.app.base.AbstractC0470a
+    @Override // cn.damai.common.app.base.a
     public void onStart() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "634222890")) {
@@ -82,8 +79,8 @@ public class RepertoireDetailPresenter extends RepertoireDetailContract.Presente
             return;
         }
         super.onStart();
-        this.mDMMessage.b(EVENT_COMMENT_PUBLISH, new C2697a());
-        this.mDMMessage.b(EVENT_COMMENT_DELETE, new C2698b());
-        this.mDMMessage.b(COMMENT_PRAISE, new C2699c());
+        this.mDMMessage.b(EVENT_COMMENT_PUBLISH, new a());
+        this.mDMMessage.b(EVENT_COMMENT_DELETE, new b());
+        this.mDMMessage.b(COMMENT_PRAISE, new c());
     }
 }

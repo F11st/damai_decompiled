@@ -18,7 +18,7 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes9.dex */
 public @interface ExecuteError {
     @NotNull
-    public static final C3002a Companion = C3002a.a;
+    public static final a Companion = a.a;
     @NotNull
     public static final String abilityInternalError = "500";
     @NotNull
@@ -29,10 +29,9 @@ public @interface ExecuteError {
     public static final String parametersNotCorrect = "400";
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.ability.result.ExecuteError$a */
     /* loaded from: classes9.dex */
-    public static final class C3002a {
-        static final /* synthetic */ C3002a a = new C3002a();
+    public static final class a {
+        static final /* synthetic */ a a = new a();
         @NotNull
         public static final String abilityInternalError = "500";
         @NotNull
@@ -42,7 +41,7 @@ public @interface ExecuteError {
         @NotNull
         public static final String parametersNotCorrect = "400";
 
-        private C3002a() {
+        private a() {
         }
     }
 }

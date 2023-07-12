@@ -1,66 +1,65 @@
 package com.loc;
 
-import com.loc.C5879t;
+import com.loc.t;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public final class s1 {
-    public final C5879t.EnumC5882c a;
+    public final t.c a;
     public final String b;
 
     /* compiled from: Taobao */
-    /* renamed from: com.loc.s1$a */
     /* loaded from: classes10.dex */
-    static /* synthetic */ class C5878a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
-            int[] iArr = new int[C5879t.EnumC5882c.values().length];
+            int[] iArr = new int[t.c.values().length];
             a = iArr;
             try {
-                iArr[C5879t.EnumC5882c.ShowUnknowCode.ordinal()] = 1;
+                iArr[t.c.ShowUnknowCode.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                a[C5879t.EnumC5882c.ShowNoShowCode.ordinal()] = 2;
+                a[t.c.ShowNoShowCode.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                a[C5879t.EnumC5882c.InfoUnknowCode.ordinal()] = 3;
+                a[t.c.InfoUnknowCode.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
             try {
-                a[C5879t.EnumC5882c.InfoNotContainCode.ordinal()] = 4;
+                a[t.c.InfoNotContainCode.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
             try {
-                a[C5879t.EnumC5882c.AgreeUnknowCode.ordinal()] = 5;
+                a[t.c.AgreeUnknowCode.ordinal()] = 5;
             } catch (NoSuchFieldError unused5) {
             }
             try {
-                a[C5879t.EnumC5882c.AgreeNotAgreeCode.ordinal()] = 6;
+                a[t.c.AgreeNotAgreeCode.ordinal()] = 6;
             } catch (NoSuchFieldError unused6) {
             }
             try {
-                a[C5879t.EnumC5882c.InvaildUserKeyCode.ordinal()] = 7;
+                a[t.c.InvaildUserKeyCode.ordinal()] = 7;
             } catch (NoSuchFieldError unused7) {
             }
             try {
-                a[C5879t.EnumC5882c.IllegalArgument.ordinal()] = 8;
+                a[t.c.IllegalArgument.ordinal()] = 8;
             } catch (NoSuchFieldError unused8) {
             }
             try {
-                a[C5879t.EnumC5882c.SuccessCode.ordinal()] = 9;
+                a[t.c.SuccessCode.ordinal()] = 9;
             } catch (NoSuchFieldError unused9) {
             }
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public s1(C5879t.EnumC5882c enumC5882c, u1 u1Var) {
+    public s1(t.c cVar, u1 u1Var) {
         String format;
-        this.a = enumC5882c;
-        switch (C5878a.a[enumC5882c.ordinal()]) {
+        this.a = cVar;
+        switch (a.a[cVar.ordinal()]) {
             case 1:
                 format = String.format("***确保调用SDK任何接口前先调用更新隐私合规updatePrivacyShow、updatePrivacyAgree两个接口并且参数值都为true，若未正确设置有崩溃风险***\n使用%s SDK 功能前请设置隐私权政策是否弹窗告知用户", u1Var.a());
                 break;

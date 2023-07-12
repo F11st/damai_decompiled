@@ -3,7 +3,6 @@ package com.amap.api.mapcore.util;
 import android.content.Context;
 import android.text.TextUtils;
 import com.amap.api.mapcore.util.gm;
-import com.huawei.hms.opendevice.AbstractC5658c;
 import java.util.ArrayList;
 import java.util.List;
 import org.json.JSONArray;
@@ -18,7 +17,7 @@ public final class jl {
     public jl(String str) {
         this.a = null;
         try {
-            this.a = new gm.C4569a(str, "1.0", "1.0.0").a(new String[]{"info"}).a();
+            this.a = new gm.a(str, "1.0", "1.0.0").a(new String[]{"info"}).a();
         } catch (gb unused) {
         }
     }
@@ -60,7 +59,7 @@ public final class jl {
         try {
             jSONObject.put("a", gmVar.a());
             jSONObject.put("b", gmVar.b());
-            jSONObject.put(AbstractC5658c.a, gmVar.c());
+            jSONObject.put(com.huawei.hms.opendevice.c.a, gmVar.c());
             JSONArray jSONArray = new JSONArray();
             for (int i = 0; gmVar.g() != null && i < gmVar.g().length; i++) {
                 jSONArray.put(gmVar.g()[i]);
@@ -79,13 +78,13 @@ public final class jl {
         try {
             String optString = jSONObject.optString("a");
             String optString2 = jSONObject.optString("b");
-            String optString3 = jSONObject.optString(AbstractC5658c.a);
+            String optString3 = jSONObject.optString(com.huawei.hms.opendevice.c.a);
             ArrayList arrayList = new ArrayList();
             JSONArray optJSONArray = jSONObject.optJSONArray("d");
             for (int i = 0; i < optJSONArray.length(); i++) {
                 arrayList.add(optJSONArray.getString(i));
             }
-            return new gm.C4569a(optString, optString2, optString).a(optString3).a((String[]) arrayList.toArray(new String[0])).a();
+            return new gm.a(optString, optString2, optString).a(optString3).a((String[]) arrayList.toArray(new String[0])).a();
         } catch (Throwable unused) {
             return null;
         }

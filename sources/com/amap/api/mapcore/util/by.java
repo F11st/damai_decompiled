@@ -24,7 +24,7 @@ public abstract class by<T, V> {
 
     protected abstract String a();
 
-    protected abstract JSONObject a(gd.C4555a c4555a);
+    protected abstract JSONObject a(gd.a aVar);
 
     protected abstract V b(JSONObject jSONObject) throws AMapException;
 
@@ -43,11 +43,11 @@ public abstract class by<T, V> {
         AMapException aMapException;
         int i2 = 0;
         V v = null;
-        gd.C4555a c4555a = null;
+        gd.a aVar = null;
         while (i2 < this.b) {
             try {
-                c4555a = gd.a(this.c, eq.e(), a(), b());
-                v = b(a(c4555a));
+                aVar = gd.a(this.c, eq.e(), a(), b());
+                v = b(a(aVar));
                 i2 = this.b;
             } finally {
                 if (i2 < i) {

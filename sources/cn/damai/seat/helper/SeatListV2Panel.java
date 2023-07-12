@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.seatbiz.seat.common.bean.seat.SeatNew;
 import cn.damai.commonbusiness.seatbiz.seat.qilin.bean.TbParams;
 import cn.damai.commonbusiness.seatbiz.seat.qilin.bean.biz.ShortTag;
@@ -33,7 +33,7 @@ import tb.wh2;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
-public class SeatListV2Panel extends C1666a implements OnSeatRemoveListener {
+public class SeatListV2Panel extends cn.damai.seat.helper.a implements OnSeatRemoveListener {
     private static transient /* synthetic */ IpChange $ipChange;
     private SeatHorizontalListAdapter b;
     private RecyclerView c;
@@ -50,12 +50,11 @@ public class SeatListV2Panel extends C1666a implements OnSeatRemoveListener {
     boolean n;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.helper.SeatListV2Panel$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1661a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1661a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -82,7 +81,7 @@ public class SeatListV2Panel extends C1666a implements OnSeatRemoveListener {
         this.i = view.findViewById(R$id.seat_selected_info_bottom);
         this.j = (LinearLayout) view.findViewById(R$id.seat_selected_info_bottomlist);
         this.k = (ImageView) view.findViewById(R$id.seat_selected_info_arrow);
-        this.i.setOnClickListener(new View$OnClickListenerC1661a());
+        this.i.setOnClickListener(new a());
         this.e = m62.a(this.a, 3.0f);
         this.f = m62.a(this.a, 18.0f);
         this.c.addItemDecoration(new RecyclerView.ItemDecoration() { // from class: cn.damai.seat.helper.SeatListV2Panel.2
@@ -175,7 +174,7 @@ public class SeatListV2Panel extends C1666a implements OnSeatRemoveListener {
             ipChange.ipc$dispatch("1765283691", new Object[]{this});
             return;
         }
-        C0529c.e().x(o92.l().m(this.l.itemId + "", this.l.performId + ""));
+        c.e().x(o92.l().m(this.l.itemId + "", this.l.performId + ""));
     }
 
     private void l() {
@@ -187,7 +186,7 @@ public class SeatListV2Panel extends C1666a implements OnSeatRemoveListener {
         HashMap hashMap = new HashMap();
         hashMap.put("item_id", this.l.itemId + "");
         hashMap.put("titlelabel", this.l.performId + "");
-        C0529c.e().G(this.j, "layer", "discountinfor", "seatselect", hashMap);
+        c.e().G(this.j, "layer", "discountinfor", "seatselect", hashMap);
     }
 
     public void i(TbParams tbParams) {

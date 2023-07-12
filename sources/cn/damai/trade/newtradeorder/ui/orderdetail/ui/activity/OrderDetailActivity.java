@@ -27,8 +27,6 @@ import cn.damai.common.DamaiConstants;
 import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.address.bean.AddressBean;
 import cn.damai.commonbusiness.address.bean.DmPickupAddressBean;
@@ -167,19 +165,18 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     private final int TYPE_TICKET = 5;
     private final String ERROR_CODE_ORDER_HAS_PAY = "MAPIE98087";
     private final String ERROR_CODE_ORDER_NO_CANCEL = "MAPIE98096";
-    private View.OnClickListener mButtonListener = new View$OnClickListenerC2160k();
-    private Handler mTimeHandler = new HandlerC2164o();
+    private View.OnClickListener mButtonListener = new k();
+    private Handler mTimeHandler = new o();
     private StringBuilder mBuilder = new StringBuilder();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2149a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ String b;
 
-        View$OnClickListenerC2149a(String str, String str2) {
+        a(String str, String str2) {
             this.a = str;
             this.b = str2;
         }
@@ -201,14 +198,13 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2150b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ OrderDetailProgress b;
 
-        View$OnClickListenerC2150b(String str, OrderDetailProgress orderDetailProgress) {
+        b(String str, OrderDetailProgress orderDetailProgress) {
             this.a = str;
             this.b = orderDetailProgress;
         }
@@ -220,7 +216,7 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
                 ipChange.ipc$dispatch("-1476933791", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(pp2.u().p1(OrderDetailActivity.this.mProjectId, OrderDetailActivity.this.mOrderId, this.a));
+            cn.damai.common.user.c.e().x(pp2.u().p1(OrderDetailActivity.this.mProjectId, OrderDetailActivity.this.mOrderId, this.a));
             if (this.b.supportJumpProgressPage()) {
                 OrderDetailActivity orderDetailActivity = OrderDetailActivity.this;
                 mo1.f(orderDetailActivity, orderDetailActivity.mOrderId, OrderDetailActivity.this.imageUrl);
@@ -231,20 +227,18 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2151c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OrderDetailProgressBtn a;
         final /* synthetic */ OrderDetailProgress b;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$c$a */
         /* loaded from: classes8.dex */
-        public class C2152a implements SeatPrepare4Order.OnLoadListener {
+        public class a implements SeatPrepare4Order.OnLoadListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C2152a() {
+            a() {
             }
 
             @Override // cn.damai.commonbusiness.seatbiz.seat.qilin.loader.prepare.SeatPrepare4Order.OnLoadListener
@@ -265,12 +259,12 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
                 if (AndroidInstantRuntime.support(ipChange, "1230746531")) {
                     ipChange.ipc$dispatch("1230746531", new Object[]{this, Long.valueOf(j)});
                 } else {
-                    C0529c.e().x(pp2.u().K(OrderDetailActivity.this.mOrderId));
+                    cn.damai.common.user.c.e().x(pp2.u().K(OrderDetailActivity.this.mOrderId));
                 }
             }
         }
 
-        View$OnClickListenerC2151c(OrderDetailProgressBtn orderDetailProgressBtn, OrderDetailProgress orderDetailProgress) {
+        c(OrderDetailProgressBtn orderDetailProgressBtn, OrderDetailProgress orderDetailProgress) {
             this.a = orderDetailProgressBtn;
             this.b = orderDetailProgress;
         }
@@ -288,17 +282,17 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
                 if (TextUtils.isEmpty(orderDetailProgressBtn.url)) {
                     return;
                 }
-                C0529c.e().x(pp2.u().H(OrderDetailActivity.this.mOrderId));
+                cn.damai.common.user.c.e().x(pp2.u().H(OrderDetailActivity.this.mOrderId));
                 mo1.k(OrderDetailActivity.this, this.a.url);
             } else if (i == 2) {
-                C0529c.e().x(pp2.u().J(OrderDetailActivity.this.mOrderId));
+                cn.damai.common.user.c.e().x(pp2.u().J(OrderDetailActivity.this.mOrderId));
                 mo1.l(OrderDetailActivity.this);
                 if (wl1.b(OrderDetailActivity.this)) {
                     OrderDetailActivity orderDetailActivity = OrderDetailActivity.this;
                     ((OrderDetailPresenter) orderDetailActivity.mPresenter).orderDetailChooseSeatRemind(orderDetailActivity.mOrderId);
                 }
             } else if (i == 3) {
-                C0529c.e().x(pp2.u().o1(OrderDetailActivity.this.mProjectId, OrderDetailActivity.this.mOrderId));
+                cn.damai.common.user.c.e().x(pp2.u().o1(OrderDetailActivity.this.mProjectId, OrderDetailActivity.this.mOrderId));
                 ToastUtil.a();
                 ToastUtil.f(this.a.toast);
                 OrderDetailActivity orderDetailActivity2 = OrderDetailActivity.this;
@@ -320,18 +314,17 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
                 String str3 = OrderDetailActivity.this.mOrderId;
                 String str4 = OrderDetailActivity.this.mProjectId;
                 OrderDetailProgress orderDetailProgress = this.b;
-                seatPrepare4Order.h(str, str2, str3, str4, orderDetailProgress.performId, orderDetailProgress.showCityId, orderDetailProgress.priceInfoList, new C2152a());
+                seatPrepare4Order.h(str, str2, str3, str4, orderDetailProgress.performId, orderDetailProgress.showCityId, orderDetailProgress.priceInfoList, new a());
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$d */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2153d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2153d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -349,14 +342,13 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$e */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC2154e implements DialogInterface.OnClickListener {
+    public class e implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CheckBox a;
         final /* synthetic */ OrderDetailCanResellBean b;
 
-        DialogInterface$OnClickListenerC2154e(CheckBox checkBox, OrderDetailCanResellBean orderDetailCanResellBean) {
+        e(CheckBox checkBox, OrderDetailCanResellBean orderDetailCanResellBean) {
             this.a = checkBox;
             this.b = orderDetailCanResellBean;
         }
@@ -370,20 +362,19 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
                 ToastUtil.a().j(OrderDetailActivity.this.mContext, "请您认真阅读《票品转卖服务协议》,接受后可开始使用我们的服务。");
             } else {
                 z20.R();
-                C0529c.e().x(pp2.u().t1(OrderDetailActivity.this.mOrderId));
+                cn.damai.common.user.c.e().x(pp2.u().t1(OrderDetailActivity.this.mOrderId));
                 OrderDetailActivity.this.jumpCanResellPage(this.b.resellUrl);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$f */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC2155f implements DialogInterface.OnClickListener {
+    public class f implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CheckBox a;
 
-        DialogInterface$OnClickListenerC2155f(CheckBox checkBox) {
+        f(CheckBox checkBox) {
             this.a = checkBox;
         }
 
@@ -396,17 +387,16 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
             }
             dialogInterface.dismiss();
             this.a.setChecked(false);
-            C0529c.e().x(pp2.u().v1(OrderDetailActivity.this.mOrderId));
+            cn.damai.common.user.c.e().x(pp2.u().v1(OrderDetailActivity.this.mOrderId));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$g */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC2156g implements DialogInterface.OnClickListener {
+    public class g implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC2156g() {
+        g() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -421,13 +411,12 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$h */
     /* loaded from: classes8.dex */
-    public class C2157h implements HavanaProxy.UccTrustLoginListener {
+    public class h implements HavanaProxy.UccTrustLoginListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C2157h(String str) {
+        h(String str) {
             this.a = str;
         }
 
@@ -459,12 +448,11 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$i */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC2158i implements DialogInterface.OnClickListener {
+    public class i implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC2158i(OrderDetailActivity orderDetailActivity) {
+        i(OrderDetailActivity orderDetailActivity) {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -479,12 +467,11 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$j */
     /* loaded from: classes8.dex */
-    public class C2159j implements OnCompleteListener {
+    public class j implements OnCompleteListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2159j() {
+        j() {
         }
 
         @Override // cn.damai.commonbusiness.servicenotice.OnCompleteListener
@@ -499,12 +486,11 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$k */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2160k implements View.OnClickListener {
+    public class k implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2160k() {
+        k() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -534,12 +520,11 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$l */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC2161l implements DialogInterface.OnClickListener {
+    public class l implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC2161l() {
+        l() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -555,12 +540,11 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$m */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC2162m implements DialogInterface.OnClickListener {
+    public class m implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC2162m() {
+        m() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -576,12 +560,11 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$n */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC2163n implements DialogInterface.OnClickListener {
+    public class n implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC2163n() {
+        n() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -597,12 +580,11 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$o */
     /* loaded from: classes16.dex */
-    public class HandlerC2164o extends Handler {
+    public class o extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC2164o() {
+        o() {
         }
 
         @Override // android.os.Handler
@@ -644,13 +626,12 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$p */
     /* loaded from: classes8.dex */
-    public class C2165p implements AppBarLayout.OnOffsetChangedListener {
+    public class p implements AppBarLayout.OnOffsetChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TextView a;
 
-        C2165p(TextView textView) {
+        p(TextView textView) {
             this.a = textView;
         }
 
@@ -692,12 +673,11 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$q */
     /* loaded from: classes8.dex */
-    public class C2166q implements PullToRefreshHeaderView.PullToRefreshListener {
+    public class q implements PullToRefreshHeaderView.PullToRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2166q() {
+        q() {
         }
 
         @Override // cn.damai.uikit.irecycler.widget.PullToRefreshHeaderView.PullToRefreshListener
@@ -721,12 +701,11 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$r */
     /* loaded from: classes8.dex */
-    public class C2167r implements LinearPullToRefreshView.OnRefreshListener {
+    public class r implements LinearPullToRefreshView.OnRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2167r() {
+        r() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.orderdetail.ui.view.LinearPullToRefreshView.OnRefreshListener
@@ -761,12 +740,11 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$s */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2168s implements View.OnClickListener {
+    public class s implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2168s() {
+        s() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -781,12 +759,11 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$t */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2169t implements View.OnClickListener {
+    public class t implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2169t() {
+        t() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -801,12 +778,11 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$u */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2170u implements View.OnClickListener {
+    public class u implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2170u() {
+        u() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -821,12 +797,11 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$v */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2171v implements View.OnClickListener {
+    public class v implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2171v() {
+        v() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -841,12 +816,11 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailActivity$w */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2172w implements View.OnClickListener {
+    public class w implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2172w() {
+        w() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -860,38 +834,38 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
         }
     }
 
-    static /* synthetic */ int access$012(OrderDetailActivity orderDetailActivity, int i) {
-        int i2 = orderDetailActivity.distance + i;
-        orderDetailActivity.distance = i2;
-        return i2;
+    static /* synthetic */ int access$012(OrderDetailActivity orderDetailActivity, int i2) {
+        int i3 = orderDetailActivity.distance + i2;
+        orderDetailActivity.distance = i3;
+        return i3;
     }
 
-    static /* synthetic */ int access$020(OrderDetailActivity orderDetailActivity, int i) {
-        int i2 = orderDetailActivity.distance - i;
-        orderDetailActivity.distance = i2;
-        return i2;
+    static /* synthetic */ int access$020(OrderDetailActivity orderDetailActivity, int i2) {
+        int i3 = orderDetailActivity.distance - i2;
+        orderDetailActivity.distance = i3;
+        return i3;
     }
 
-    private void addHeaderView(int i) {
+    private void addHeaderView(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1201874770")) {
-            ipChange.ipc$dispatch("1201874770", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("1201874770", new Object[]{this, Integer.valueOf(i2)});
             return;
         }
         View inflate = this.mInflater.inflate(R$layout.order_detail_button_item, (ViewGroup) null);
         LinearLayout linearLayout = (LinearLayout) inflate.findViewById(R$id.ll_button);
         TextView textView = (TextView) inflate.findViewById(R$id.tv_button);
-        if (i == 3) {
+        if (i2 == 3) {
             linearLayout.setBackgroundResource(R$drawable.bg_order_head_btn);
             inflate.findViewById(R$id.icon_button).setVisibility(8);
             textView.setText("查看物流");
             textView.setTextColor(ContextCompat.getColor(this, R$color.color_white));
-        } else if (i == 2) {
+        } else if (i2 == 2) {
             linearLayout.setBackgroundResource(R$drawable.bg_order_head_pay);
             inflate.findViewById(R$id.icon_button).setVisibility(0);
             textView.setText("查看票夹");
             textView.setTextColor(ContextCompat.getColor(this, R$color.color_FF2869));
-        } else if (i == 4) {
+        } else if (i2 == 4) {
             linearLayout.setBackgroundResource(R$drawable.bg_order_head_btn);
             inflate.findViewById(R$id.icon_button).setVisibility(8);
             textView.setText("修改配送地址");
@@ -901,7 +875,7 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
         if (this.mBtnHeaderContainer.getVisibility() != 0) {
             this.mBtnHeaderContainer.setVisibility(0);
         }
-        inflate.setTag(Integer.valueOf(i));
+        inflate.setTag(Integer.valueOf(i2));
         inflate.setOnClickListener(this.mButtonListener);
     }
 
@@ -942,13 +916,13 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
             ipChange.ipc$dispatch("-1186943188", new Object[]{this, Boolean.valueOf(z)});
             return;
         }
-        C0529c.e().x(pp2.u().A(this.mProjectId, this.mOrderId, z));
+        cn.damai.common.user.c.e().x(pp2.u().A(this.mProjectId, this.mOrderId, z));
         DMDialog dMDialog = new DMDialog(this);
         this.mCancelOrderDialog = dMDialog;
         dMDialog.v("取消订单");
         this.mCancelOrderDialog.q("订单取消后将自动关闭，确定取消?");
         this.mCancelOrderDialog.i("取消", null);
-        this.mCancelOrderDialog.n("确定", new DialogInterface$OnClickListenerC2161l());
+        this.mCancelOrderDialog.n("确定", new l());
         this.mCancelOrderDialog.show();
     }
 
@@ -962,9 +936,9 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
             FragmentTransaction beginTransaction = getSupportFragmentManager().beginTransaction();
             beginTransaction.remove(this.detailFragment);
             beginTransaction.commitAllowingStateLoss();
-            int i = R$id.trade_project_detail_popup_layer_container_flv;
-            findViewById(i).setVisibility(8);
-            findViewById(i).setOnClickListener(null);
+            int i2 = R$id.trade_project_detail_popup_layer_container_flv;
+            findViewById(i2).setVisibility(8);
+            findViewById(i2).setOnClickListener(null);
         }
     }
 
@@ -974,7 +948,7 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
         if (AndroidInstantRuntime.support(ipChange, "-455880933")) {
             ipChange.ipc$dispatch("-455880933", new Object[]{this});
         } else if (this.ticketServiceFragment != null) {
-            C0529c.e().x(pp2.u().n1(this.mProjectId, this.mOrderId));
+            cn.damai.common.user.c.e().x(pp2.u().n1(this.mProjectId, this.mOrderId));
             this.ticketServiceFragment.dismissAllowingStateLoss();
             this.ticketServiceFragment = null;
         }
@@ -1038,9 +1012,9 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
         if (AndroidInstantRuntime.support(ipChange, "742758862")) {
             ipChange.ipc$dispatch("742758862", new Object[]{this, orderDetailProgress});
         } else if (orderDetailProgress != null) {
-            int e = wh2.e(orderDetailProgress.buttonList);
-            for (int i = 0; i < e; i++) {
-                OrderDetailProgressBtn orderDetailProgressBtn = orderDetailProgress.buttonList.get(i);
+            int e2 = wh2.e(orderDetailProgress.buttonList);
+            for (int i2 = 0; i2 < e2; i2++) {
+                OrderDetailProgressBtn orderDetailProgressBtn = orderDetailProgress.buttonList.get(i2);
                 if (orderDetailProgressBtn != null) {
                     View inflate = this.mInflater.inflate(R$layout.order_detail_button_item, (ViewGroup) null);
                     LinearLayout linearLayout = (LinearLayout) inflate.findViewById(R$id.ll_button);
@@ -1048,11 +1022,11 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
                     dMIconFontTextView.setVisibility(8);
                     TextView textView = (TextView) inflate.findViewById(R$id.tv_button);
                     textView.setText(orderDetailProgressBtn.buttonName);
-                    int i2 = orderDetailProgressBtn.buttonType;
-                    if (i2 == 4) {
+                    int i3 = orderDetailProgressBtn.buttonType;
+                    if (i3 == 4) {
                         linearLayout.setBackgroundResource(R$drawable.bg_order_head_pay);
                         textView.setTextColor(ContextCompat.getColor(this, R$color.color_FF2869));
-                    } else if (i2 == 5) {
+                    } else if (i3 == 5) {
                         dMIconFontTextView.setVisibility(0);
                         linearLayout.setBackgroundResource(R$drawable.bg_order_head_pay);
                         textView.setTextColor(ContextCompat.getColor(this, R$color.color_FF2869));
@@ -1061,10 +1035,10 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
                         textView.setTextColor(ContextCompat.getColor(this, R$color.color_white));
                     }
                     this.mBtnHeaderContainer.addView(inflate);
-                    linearLayout.setOnClickListener(new View$OnClickListenerC2151c(orderDetailProgressBtn, orderDetailProgress));
+                    linearLayout.setOnClickListener(new c(orderDetailProgressBtn, orderDetailProgress));
                 }
             }
-            this.mBtnHeaderContainer.setVisibility(e <= 0 ? 8 : 0);
+            this.mBtnHeaderContainer.setVisibility(e2 <= 0 ? 8 : 0);
         }
     }
 
@@ -1076,21 +1050,21 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
             return;
         }
         OrderDetailBean orderDetailBean = this.mOrderDetailBean;
-        int e = orderDetailBean != null ? wh2.e(orderDetailBean.paymentInfoList) : 0;
-        if (e == 0) {
-            C0529c.e().x(pp2.u().E(this.mProjectId, this.mOrderId, z));
+        int e2 = orderDetailBean != null ? wh2.e(orderDetailBean.paymentInfoList) : 0;
+        if (e2 == 0) {
+            cn.damai.common.user.c.e().x(pp2.u().E(this.mProjectId, this.mOrderId, z));
             OrderDetailBean orderDetailBean2 = this.mOrderDetailBean;
             String str = (orderDetailBean2 == null || TextUtils.isEmpty(orderDetailBean2.dialogTips)) ? "当前订单不支持此渠道支付，请前往下单渠道完成支付" : this.mOrderDetailBean.dialogTips;
             DMDialog dMDialog = new DMDialog(this);
             dMDialog.q(str);
-            dMDialog.n("我知道了", new DialogInterface$OnClickListenerC2158i(this));
+            dMDialog.n("我知道了", new i(this));
             dMDialog.show();
-        } else if (e == 1) {
+        } else if (e2 == 1) {
             OrderDetailPayInfo orderDetailPayInfo = this.mOrderDetailBean.paymentInfoList.get(0);
-            C0529c.e().x(pp2.u().C(this.mProjectId, this.mOrderId, orderDetailPayInfo.payName, z));
+            cn.damai.common.user.c.e().x(pp2.u().C(this.mProjectId, this.mOrderId, orderDetailPayInfo.payName, z));
             requestOrderPay(orderDetailPayInfo.payCode, orderDetailPayInfo.paymentInfoExt, orderDetailPayInfo.payTypeId);
         } else {
-            C0529c.e().x(pp2.u().G(this.mProjectId, this.mOrderId, z));
+            cn.damai.common.user.c.e().x(pp2.u().G(this.mProjectId, this.mOrderId, z));
             Intent intent = new Intent();
             intent.putExtra("payList", (ArrayList) this.mOrderDetailBean.paymentInfoList);
             intent.putExtra("isHouNiaoOrder", this.isHouNiaoOrder);
@@ -1108,8 +1082,8 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
                     return;
                 }
                 this.dialogFragment.a(getFragmentManager());
-            } catch (Exception e2) {
-                e2.printStackTrace();
+            } catch (Exception e3) {
+                e3.printStackTrace();
             }
         }
     }
@@ -1187,10 +1161,10 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
             ipChange.ipc$dispatch("-1246426716", new Object[]{this});
             return;
         }
-        ((AppBarLayout) findViewById(R$id.appbar_layout)).addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new C2165p((TextView) findViewById(R$id.tv_title_name)));
-        this.mRefreshView.getHeaderLayout().setPullToRefreshListener(new C2166q());
-        this.mRefreshView.setOnRefreshListener(new C2167r());
-        findViewById(R$id.tv_goback).setOnClickListener(new View$OnClickListenerC2168s());
+        ((AppBarLayout) findViewById(R$id.appbar_layout)).addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new p((TextView) findViewById(R$id.tv_title_name)));
+        this.mRefreshView.getHeaderLayout().setPullToRefreshListener(new q());
+        this.mRefreshView.setOnRefreshListener(new r());
+        findViewById(R$id.tv_goback).setOnClickListener(new s());
     }
 
     private void initHeadView(View view) {
@@ -1241,25 +1215,25 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
-            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int i) {
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int i2) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "-1422633328")) {
-                    ipChange2.ipc$dispatch("-1422633328", new Object[]{this, recyclerView, Integer.valueOf(i)});
+                    ipChange2.ipc$dispatch("-1422633328", new Object[]{this, recyclerView, Integer.valueOf(i2)});
                 } else {
-                    super.onScrollStateChanged(recyclerView, i);
+                    super.onScrollStateChanged(recyclerView, i2);
                 }
             }
 
             @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
-            public void onScrolled(@NonNull RecyclerView recyclerView, int i, int i2) {
+            public void onScrolled(@NonNull RecyclerView recyclerView, int i2, int i3) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "-2066874481")) {
-                    ipChange2.ipc$dispatch("-2066874481", new Object[]{this, recyclerView, Integer.valueOf(i), Integer.valueOf(i2)});
+                    ipChange2.ipc$dispatch("-2066874481", new Object[]{this, recyclerView, Integer.valueOf(i2), Integer.valueOf(i3)});
                     return;
                 }
-                super.onScrolled(recyclerView, i, i2);
-                OrderDetailActivity.access$020(OrderDetailActivity.this, i2);
-                cb1.b("OrderDetailRefundView", "showPop dy= " + i2 + "  distance = " + OrderDetailActivity.this.distance);
+                super.onScrolled(recyclerView, i2, i3);
+                OrderDetailActivity.access$020(OrderDetailActivity.this, i3);
+                cb1.b("OrderDetailRefundView", "showPop dy= " + i3 + "  distance = " + OrderDetailActivity.this.distance);
                 OrderDetailActivity orderDetailActivity = OrderDetailActivity.this;
                 orderDetailActivity.setRefundPopLayoutParam(orderDetailActivity.distance);
             }
@@ -1310,8 +1284,8 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
         }
         try {
             return context.getPackageManager().getPackageInfo("com.taobao.idlefish", 64) != null;
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
             return false;
         }
     }
@@ -1331,20 +1305,20 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
                     intent.setFlags(268435456);
                     startActivity(intent);
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
         }
     }
 
-    private void loadHeaderStateInfo(OrderDetailStatusBean orderDetailStatusBean, long j, long j2, String str, String str2, String str3, String str4, OrderDetailButtonBean orderDetailButtonBean, boolean z) {
+    private void loadHeaderStateInfo(OrderDetailStatusBean orderDetailStatusBean, long j2, long j3, String str, String str2, String str3, String str4, OrderDetailButtonBean orderDetailButtonBean, boolean z) {
         boolean z2;
         boolean z3;
         String str5;
         IpChange ipChange = $ipChange;
         boolean z4 = true;
         if (AndroidInstantRuntime.support(ipChange, "-338470054")) {
-            ipChange.ipc$dispatch("-338470054", new Object[]{this, orderDetailStatusBean, Long.valueOf(j), Long.valueOf(j2), str, str2, str3, str4, orderDetailButtonBean, Boolean.valueOf(z)});
+            ipChange.ipc$dispatch("-338470054", new Object[]{this, orderDetailStatusBean, Long.valueOf(j2), Long.valueOf(j3), str, str2, str3, str4, orderDetailButtonBean, Boolean.valueOf(z)});
         } else if (orderDetailStatusBean == null) {
         } else {
             mo1.c = false;
@@ -1370,14 +1344,14 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
             if (mo1.b && orderDetailStatusBean.payStatus < 2 && (str5 = mo1.a) != null && str5.equals(this.mOrderId)) {
                 updateOrderStateMessage("支付结果处理中，请稍后刷新查看…");
                 z4 = false;
-            } else if (orderDetailStatusBean.orderStatus == 1 && j > 0) {
+            } else if (orderDetailStatusBean.orderStatus == 1 && j2 > 0) {
                 mo1.c = true;
                 startTimer(0);
             } else {
                 mo1.c = true;
                 OrderDetailProgress orderDetailProgress = orderDetailStatusBean.headProgress;
                 if (orderDetailProgress != null) {
-                    updateOrderProgress(orderDetailProgress, j2, orderDetailStatusBean.orderStatusStr);
+                    updateOrderProgress(orderDetailProgress, j3, orderDetailStatusBean.orderStatusStr);
                 } else if (orderDetailButtonBean != null) {
                     backUpHeadButtonView(orderDetailButtonBean, z);
                 }
@@ -1455,10 +1429,10 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
         ((OrderDetailPresenter) this.mPresenter).cancelOrderDetail(this.mOrderId);
     }
 
-    private void requestOrderPay(String str, String str2, int i) {
+    private void requestOrderPay(String str, String str2, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-2007370028")) {
-            ipChange.ipc$dispatch("-2007370028", new Object[]{this, str, str2, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-2007370028", new Object[]{this, str, str2, Integer.valueOf(i2)});
         } else if (TextUtils.isEmpty(str)) {
             ToastUtil.i("你当前没有选择支付方式");
         } else if (this.RequestOrderPaying) {
@@ -1466,7 +1440,7 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
             showLoading("");
             this.RequestOrderPaying = true;
             if (this.isHouNiaoOrder) {
-                ((OrderDetailPresenter) this.mPresenter).orderDetailPay(this.mOrderId, str, str2, i);
+                ((OrderDetailPresenter) this.mPresenter).orderDetailPay(this.mOrderId, str, str2, i2);
             } else {
                 ((OrderDetailPresenter) this.mPresenter).orderWolfDetailPay(this.mOrderId, str);
             }
@@ -1483,7 +1457,7 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
             this.mAddInvoiceDialog = dMDialog;
             dMDialog.v("温馨提示");
             this.mAddInvoiceDialog.q(str);
-            this.mAddInvoiceDialog.n("我知道了", new DialogInterface$OnClickListenerC2163n());
+            this.mAddInvoiceDialog.n("我知道了", new n());
             this.mAddInvoiceDialog.show();
         }
     }
@@ -1511,19 +1485,19 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
             this.mOrderAddressDialog = dMDialog;
             dMDialog.v("温馨提示");
             this.mOrderAddressDialog.q(str);
-            this.mOrderAddressDialog.n("我知道了", new DialogInterface$OnClickListenerC2162m());
+            this.mOrderAddressDialog.n("我知道了", new m());
             this.mOrderAddressDialog.show();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void setRefundPopLayoutParam(int i) {
+    public void setRefundPopLayoutParam(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "91354315")) {
-            ipChange.ipc$dispatch("91354315", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("91354315", new Object[]{this, Integer.valueOf(i2)});
         } else if (this.llRefundPop.getVisibility() == 0) {
             ViewGroup.LayoutParams layoutParams = this.llRefundPop.getLayoutParams();
-            ((ViewGroup.MarginLayoutParams) layoutParams).topMargin = i;
+            ((ViewGroup.MarginLayoutParams) layoutParams).topMargin = i2;
             this.llRefundPop.setLayoutParams(layoutParams);
         }
     }
@@ -1534,23 +1508,23 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
             ipChange.ipc$dispatch("-758451678", new Object[]{this, arrayList});
             return;
         }
-        List<ServiceNote> a = mo1.a(arrayList);
+        List<ServiceNote> a2 = mo1.a(arrayList);
         ArrayList arrayList2 = new ArrayList();
-        if (!cb2.d(a)) {
-            arrayList2.addAll(a);
+        if (!cb2.d(a2)) {
+            arrayList2.addAll(a2);
         }
         if (cb2.d(arrayList2)) {
             return;
         }
         if (this.ticketServiceFragment == null) {
-            ow1 c = ow1.c(arrayList2);
-            this.ticketServiceFragment = c;
-            c.d(new C2159j());
+            ow1 c2 = ow1.c(arrayList2);
+            this.ticketServiceFragment = c2;
+            c2.d(new j());
         }
         if (this.ticketServiceFragment.isAdded()) {
             return;
         }
-        C0529c.e().x(pp2.u().q1(this.mProjectId, this.mOrderId));
+        cn.damai.common.user.c.e().x(pp2.u().q1(this.mProjectId, this.mOrderId));
         this.ticketServiceFragment.e(getFragmentManager());
     }
 
@@ -1582,28 +1556,28 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
             this.visAppNotify = true;
             this.mNoticeContentTv.setText(str);
             this.mNoticeView.setVisibility(0);
-            this.mNoticeView.setOnClickListener(new View$OnClickListenerC2149a(str, str2));
+            this.mNoticeView.setOnClickListener(new a(str, str2));
         }
     }
 
-    private void updateBottomButtonView(int i, boolean z) {
+    private void updateBottomButtonView(int i2, boolean z) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1278011412")) {
-            ipChange.ipc$dispatch("-1278011412", new Object[]{this, Integer.valueOf(i), Boolean.valueOf(z)});
+            ipChange.ipc$dispatch("-1278011412", new Object[]{this, Integer.valueOf(i2), Boolean.valueOf(z)});
             return;
         }
         View inflate = this.mInflater.inflate(R$layout.order_detail_bottom_button, (ViewGroup) null);
         TextView textView = (TextView) inflate.findViewById(R$id.tv_button);
         this.mBottomBtnContainer.addView(inflate);
-        if (i == 0) {
+        if (i2 == 0) {
             textView.setText("取消订单");
-        } else if (i == 1) {
+        } else if (i2 == 1) {
             textView.setText("立即付款");
-        } else if (i == 2) {
+        } else if (i2 == 2) {
             textView.setText("查看票夹");
-        } else if (i == 3) {
+        } else if (i2 == 3) {
             textView.setText("查看物流");
-        } else if (i == 4) {
+        } else if (i2 == 4) {
             textView.setText("修改地址");
         }
         if (z) {
@@ -1613,7 +1587,7 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
             textView.setBackgroundResource(R$drawable.bg_border_corner_ccc_20);
             textView.setTextColor(ContextCompat.getColor(this, R$color.color_000000));
         }
-        textView.setTag(Integer.valueOf(i));
+        textView.setTag(Integer.valueOf(i2));
         textView.setOnClickListener(this.mButtonListener);
     }
 
@@ -1628,7 +1602,7 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
         TextView textView = (TextView) inflate.findViewById(R$id.tv_button);
         textView.setText("取消订单");
         textView.setTextColor(ContextCompat.getColor(this, R$color.color_white));
-        inflate.setOnClickListener(new View$OnClickListenerC2171v());
+        inflate.setOnClickListener(new v());
         this.mBtnHeaderContainer.addView(inflate);
         if (this.mBtnHeaderContainer.getVisibility() != 0) {
             this.mBtnHeaderContainer.setVisibility(0);
@@ -1648,7 +1622,7 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
         if (z) {
             textView.setTextColor(ContextCompat.getColor(this, R$color.color_FF2869));
             inflate.setTag(1);
-            inflate.setOnClickListener(new View$OnClickListenerC2172w());
+            inflate.setOnClickListener(new w());
         } else {
             textView.setTextColor(ContextCompat.getColor(this, R$color.mask_white_40));
             inflate.setOnClickListener(null);
@@ -1659,25 +1633,25 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
         }
     }
 
-    private void updateOrderProgress(OrderDetailProgress orderDetailProgress, long j, String str) {
+    private void updateOrderProgress(OrderDetailProgress orderDetailProgress, long j2, String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1907490874")) {
-            ipChange.ipc$dispatch("1907490874", new Object[]{this, orderDetailProgress, Long.valueOf(j), str});
+            ipChange.ipc$dispatch("1907490874", new Object[]{this, orderDetailProgress, Long.valueOf(j2), str});
         } else if (orderDetailProgress == null) {
         } else {
             this.mParHeadBar.setClickable(true);
-            this.mParHeadBar.setOnClickListener(new View$OnClickListenerC2150b(str, orderDetailProgress));
+            this.mParHeadBar.setOnClickListener(new b(str, orderDetailProgress));
             if (orderDetailProgress.supportJumpPage()) {
                 this.mIconHeadProgress.setVisibility(0);
             }
-            if (j > 0) {
-                long j2 = orderDetailProgress.chooseSeatTime;
-                if (j2 > 0 && j2 > j) {
-                    long j3 = (j2 - j) / 1000;
-                    if (j3 < 86400) {
-                        int[] b = mo1.b(j3);
-                        if (b.length == 3) {
-                            updateTimerShow(orderDetailProgress.countDownDescPrefix, b[0], b[1], b[2], orderDetailProgress.countDownDescSuffix);
+            if (j2 > 0) {
+                long j3 = orderDetailProgress.chooseSeatTime;
+                if (j3 > 0 && j3 > j2) {
+                    long j4 = (j3 - j2) / 1000;
+                    if (j4 < 86400) {
+                        int[] b2 = mo1.b(j4);
+                        if (b2.length == 3) {
+                            updateTimerShow(orderDetailProgress.countDownDescPrefix, b2[0], b2[1], b2[2], orderDetailProgress.countDownDescSuffix);
                         }
                         startTimer(1);
                     }
@@ -1718,11 +1692,11 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     @Override // cn.damai.common.app.base.BaseActivity
-    public void dealHeaderClick(int i) {
+    public void dealHeaderClick(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-447817298")) {
-            ipChange.ipc$dispatch("-447817298", new Object[]{this, Integer.valueOf(i)});
-        } else if (i == 10003 || i == 10001) {
+            ipChange.ipc$dispatch("-447817298", new Object[]{this, Integer.valueOf(i2)});
+        } else if (i2 == 10003 || i2 == 10001) {
             onBackPressed();
         }
     }
@@ -1734,10 +1708,10 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
     }
 
     @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
-    public void handleError(int i) {
+    public void handleError(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "271111039")) {
-            ipChange.ipc$dispatch("271111039", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("271111039", new Object[]{this, Integer.valueOf(i2)});
         } else {
             requestOrderDetail(true);
         }
@@ -1780,9 +1754,9 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
         if (AndroidInstantRuntime.support(ipChange, "374026616")) {
             ipChange.ipc$dispatch("374026616", new Object[]{this, str});
         } else if (!HavanaProxy.v().A()) {
-            new DMThemeDialog(this).r(DMThemeDialog.DMDialogTheme.THEME_TAOBAO_LOGIN).o("淘宝授权 登录大麦账号").f(false).i("手机淘宝登录", new DialogInterface$OnClickListenerC2156g()).g(true, null).show();
+            new DMThemeDialog(this).r(DMThemeDialog.DMDialogTheme.THEME_TAOBAO_LOGIN).o("淘宝授权 登录大麦账号").f(false).i("手机淘宝登录", new g()).g(true, null).show();
         } else {
-            HavanaProxy.v().P(this, new C2157h(str));
+            HavanaProxy.v().P(this, new h(str));
         }
     }
 
@@ -1798,15 +1772,15 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, android.app.Activity
-    public void onActivityResult(int i, int i2, Intent intent) {
+    public void onActivityResult(int i2, int i3, Intent intent) {
         boolean booleanExtra;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "904103992")) {
-            ipChange.ipc$dispatch("904103992", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), intent});
+            ipChange.ipc$dispatch("904103992", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3), intent});
             return;
         }
-        super.onActivityResult(i, i2, intent);
-        if (i == 2000) {
+        super.onActivityResult(i2, i3, intent);
+        if (i2 == 2000) {
             if (intent != null && (booleanExtra = intent.getBooleanExtra("payResult", false))) {
                 mo1.b = booleanExtra;
                 mo1.a = this.mOrderId;
@@ -1815,19 +1789,19 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
                 return;
             }
             requestOrderDetail(true);
-        } else if (i2 == -1) {
-            if (i == 1002) {
+        } else if (i3 == -1) {
+            if (i2 == 1002) {
                 AddressBean addressBean = (AddressBean) intent.getParcelableExtra("added_address");
                 if (addressBean != null) {
                     mo1.e(this, this.mOrderId, this.mProjectId, addressBean.getAddressId());
                 }
-            } else if (i == 1001) {
+            } else if (i2 == 1001) {
                 this.mCheckModifyResult = true;
                 if (mo1.c) {
                     return;
                 }
                 requestOrderDetail(true);
-            } else if (i == 1005) {
+            } else if (i2 == 1005) {
                 this.mCheckAddInvoice = true;
                 if (mo1.c) {
                     return;
@@ -1850,16 +1824,16 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
             disMissNoticeFragment();
             return;
         }
-        int i = this.mFromPage;
-        if (i == 0) {
+        int i2 = this.mFromPage;
+        if (i2 == 0) {
             backOrderListPage();
-        } else if (i == 1) {
+        } else if (i2 == 1) {
             DMNav.from(this).toUri(NavUri.b(cs.f));
             finish();
-        } else if (i == 2) {
+        } else if (i2 == 2) {
             DMNav.from(this).toUri(NavUri.b(cs.n));
             finish();
-        } else if (i != 3) {
+        } else if (i2 != 3) {
             backOrderListPage();
         } else {
             finish();
@@ -1979,16 +1953,16 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
         }
         NoticeDetailFragment instance = NoticeDetailFragment.instance(arrayList, this.mProjectId + "");
         this.detailFragment = instance;
-        instance.setClose(new View$OnClickListenerC2169t());
+        instance.setClose(new t());
         FragmentTransaction beginTransaction = getSupportFragmentManager().beginTransaction();
-        int i = R$id.trade_project_detail_popup_layer_container_flv;
-        beginTransaction.replace(i, this.detailFragment);
+        int i2 = R$id.trade_project_detail_popup_layer_container_flv;
+        beginTransaction.replace(i2, this.detailFragment);
         beginTransaction.commitAllowingStateLoss();
-        findViewById(i).setVisibility(0);
-        findViewById(i).setOnClickListener(new View$OnClickListenerC2170u());
+        findViewById(i2).setVisibility(0);
+        findViewById(i2).setOnClickListener(new u());
         HashMap hashMap = new HashMap();
         hashMap.put("item_id", this.mProjectId);
-        C0529c.e().x(C0528b.getInstance().e(pp2.ORDER_DETAL_PAGE, "show", "showchange", hashMap, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(pp2.ORDER_DETAL_PAGE, "show", "showchange", hashMap, Boolean.FALSE));
     }
 
     @Override // cn.damai.trade.newtradeorder.ui.orderdetail.contract.OrderDetailContract.View
@@ -2074,12 +2048,12 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
                     this.mCanResellDialog = dMDialog2;
                     dMDialog2.v("是否同意并授权票品转卖");
                     View inflate = this.mInflater.inflate(R$layout.order_detail_canresell_content, (ViewGroup) null);
-                    inflate.findViewById(R$id.damai_dialog_tip_content).setOnClickListener(new View$OnClickListenerC2153d());
+                    inflate.findViewById(R$id.damai_dialog_tip_content).setOnClickListener(new d());
                     CheckBox checkBox = (CheckBox) inflate.findViewById(R$id.order_resell_checkbox);
                     this.mCanResellDialog.u(inflate);
                     this.mCanResellDialog.b(false);
-                    this.mCanResellDialog.n("去转卖", new DialogInterface$OnClickListenerC2154e(checkBox, orderDetailCanResellBean));
-                    this.mCanResellDialog.i("不同意", new DialogInterface$OnClickListenerC2155f(checkBox));
+                    this.mCanResellDialog.n("去转卖", new e(checkBox, orderDetailCanResellBean));
+                    this.mCanResellDialog.i("不同意", new f(checkBox));
                     this.mCanResellDialog.j(false);
                     this.mCanResellDialog.show();
                     return;
@@ -2334,7 +2308,7 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
             return;
         }
         this.RequestOrderPaying = false;
-        C0529c.e().A(pp2.u().P(this.mProjectId, this.mOrderId, this.isSeatProject), pp2.CUSTOM_ORDER, pp2.ORDER_DETAL_PAGE);
+        cn.damai.common.user.c.e().A(pp2.u().P(this.mProjectId, this.mOrderId, this.isSeatProject), pp2.CUSTOM_ORDER, pp2.ORDER_DETAL_PAGE);
         no1.b(this, orderPayDTO);
     }
 
@@ -2346,7 +2320,7 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
             return;
         }
         this.RequestOrderPaying = false;
-        C0529c.e().A(pp2.u().N(this.mProjectId, this.mOrderId, str2, this.isSeatProject), pp2.CUSTOM_ORDER, pp2.ORDER_DETAL_PAGE);
+        cn.damai.common.user.c.e().A(pp2.u().N(this.mProjectId, this.mOrderId, str2, this.isSeatProject), pp2.CUSTOM_ORDER, pp2.ORDER_DETAL_PAGE);
         ap1.b(OrderDetailConstantsApi.API_ORDER_DETAIL_PAY_ORDER, str, str2, this.mOrderId, "订单支付按钮接口失败");
         if (str != null && "MAPIE98087".equals(str)) {
             if (TextUtils.isEmpty(str2)) {
@@ -2367,7 +2341,7 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
             return;
         }
         this.RequestOrderPaying = false;
-        C0529c.e().A(pp2.u().P(this.mProjectId, this.mOrderId, this.isSeatProject), pp2.CUSTOM_ORDER, pp2.ORDER_DETAL_PAGE);
+        cn.damai.common.user.c.e().A(pp2.u().P(this.mProjectId, this.mOrderId, this.isSeatProject), pp2.CUSTOM_ORDER, pp2.ORDER_DETAL_PAGE);
         no1.c(this, orderParmasResult, this.mOrderId);
     }
 
@@ -2403,10 +2377,10 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
         }
     }
 
-    public void startTimer(final int i) {
+    public void startTimer(final int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1999727104")) {
-            ipChange.ipc$dispatch("-1999727104", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-1999727104", new Object[]{this, Integer.valueOf(i2)});
             return;
         }
         if (this.mTimer == null) {
@@ -2422,7 +2396,7 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
                     if (AndroidInstantRuntime.support(ipChange2, "-899863380")) {
                         ipChange2.ipc$dispatch("-899863380", new Object[]{this});
                     } else {
-                        OrderDetailActivity.this.mTimeHandler.sendEmptyMessage(i);
+                        OrderDetailActivity.this.mTimeHandler.sendEmptyMessage(i2);
                     }
                 }
             };
@@ -2446,10 +2420,10 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
         stopProgressDialog();
     }
 
-    public void updateTimerShow(String str, long j, long j2, long j3, String str2) {
+    public void updateTimerShow(String str, long j2, long j3, long j4, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-409586791")) {
-            ipChange.ipc$dispatch("-409586791", new Object[]{this, str, Long.valueOf(j), Long.valueOf(j2), Long.valueOf(j3), str2});
+            ipChange.ipc$dispatch("-409586791", new Object[]{this, str, Long.valueOf(j2), Long.valueOf(j3), Long.valueOf(j4), str2});
             return;
         }
         StringBuilder sb = this.mBuilder;
@@ -2457,14 +2431,14 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
         if (!TextUtils.isEmpty(str)) {
             this.mBuilder.append(str);
         }
-        if (j > 0) {
+        if (j2 > 0) {
             StringBuilder sb2 = this.mBuilder;
-            sb2.append(j + "时");
+            sb2.append(j2 + "时");
         }
         StringBuilder sb3 = this.mBuilder;
-        sb3.append(j2 + "分");
+        sb3.append(j3 + "分");
         StringBuilder sb4 = this.mBuilder;
-        sb4.append(j3 + "秒");
+        sb4.append(j4 + "秒");
         if (!TextUtils.isEmpty(str2)) {
             this.mBuilder.append(str2);
         }
@@ -2484,7 +2458,7 @@ public class OrderDetailActivity extends DamaiBaseActivity<OrderDetailPresenter,
         hideBaseLayout();
         handleIntent();
         setDamaiUTKeyBuilder(pp2.u().t(this.mOrderId));
-        C0529c.e().K(this);
+        cn.damai.common.user.c.e().K(this);
         this.mOrderDetailBean = null;
     }
 }

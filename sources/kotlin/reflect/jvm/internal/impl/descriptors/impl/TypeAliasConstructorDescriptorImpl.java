@@ -35,7 +35,7 @@ import tb.z71;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class TypeAliasConstructorDescriptorImpl extends AbstractC8316a implements TypeAliasConstructorDescriptor {
+public final class TypeAliasConstructorDescriptorImpl extends kotlin.reflect.jvm.internal.impl.descriptors.impl.a implements TypeAliasConstructorDescriptor {
     @NotNull
     private final StorageManager D;
     @NotNull
@@ -46,16 +46,15 @@ public final class TypeAliasConstructorDescriptorImpl extends AbstractC8316a imp
     private ClassConstructorDescriptor G;
     static final /* synthetic */ KProperty<Object>[] H = {a12.i(new PropertyReference1Impl(a12.b(TypeAliasConstructorDescriptorImpl.class), "withDispatchReceiver", "getWithDispatchReceiver()Lorg/jetbrains/kotlin/descriptors/impl/TypeAliasConstructorDescriptor;"))};
     @NotNull
-    public static final C8314a Companion = new C8314a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.impl.TypeAliasConstructorDescriptorImpl$a */
     /* loaded from: classes3.dex */
-    public static final class C8314a {
-        private C8314a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8314a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -83,7 +82,7 @@ public final class TypeAliasConstructorDescriptorImpl extends AbstractC8316a imp
             SourceElement source = typeAliasDescriptor.getSource();
             b41.h(source, "typeAliasDescriptor.source");
             TypeAliasConstructorDescriptorImpl typeAliasConstructorDescriptorImpl = new TypeAliasConstructorDescriptorImpl(storageManager, typeAliasDescriptor, substitute, null, annotations, kind, source, null);
-            List<ValueParameterDescriptor> i = AbstractC8316a.i(typeAliasConstructorDescriptorImpl, classConstructorDescriptor.getValueParameters(), c);
+            List<ValueParameterDescriptor> i = kotlin.reflect.jvm.internal.impl.descriptors.impl.a.i(typeAliasConstructorDescriptorImpl, classConstructorDescriptor.getValueParameters(), c);
             if (i == null) {
                 return null;
             }
@@ -141,7 +140,7 @@ public final class TypeAliasConstructorDescriptorImpl extends AbstractC8316a imp
         this(storageManager, typeAliasDescriptor, classConstructorDescriptor, typeAliasConstructorDescriptor, annotations, kind, sourceElement);
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a
     @NotNull
     /* renamed from: E */
     public TypeAliasConstructorDescriptor e(@NotNull DeclarationDescriptor declarationDescriptor, @NotNull Modality modality, @NotNull f70 f70Var, @NotNull CallableMemberDescriptor.Kind kind, boolean z) {
@@ -155,7 +154,7 @@ public final class TypeAliasConstructorDescriptorImpl extends AbstractC8316a imp
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a
     @NotNull
     /* renamed from: F */
     public TypeAliasConstructorDescriptorImpl f(@NotNull DeclarationDescriptor declarationDescriptor, @Nullable FunctionDescriptor functionDescriptor, @NotNull CallableMemberDescriptor.Kind kind, @Nullable ni1 ni1Var, @NotNull Annotations annotations, @NotNull SourceElement sourceElement) {
@@ -177,7 +176,7 @@ public final class TypeAliasConstructorDescriptorImpl extends AbstractC8316a imp
         return I();
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, tb.u40, tb.t40, kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, tb.u40, tb.t40, kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor
     @NotNull
     /* renamed from: H */
     public TypeAliasConstructorDescriptor getOriginal() {
@@ -189,7 +188,7 @@ public final class TypeAliasConstructorDescriptorImpl extends AbstractC8316a imp
         return this.E;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor, kotlin.reflect.jvm.internal.impl.descriptors.Substitutable
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor, kotlin.reflect.jvm.internal.impl.descriptors.Substitutable
     @Nullable
     /* renamed from: J */
     public TypeAliasConstructorDescriptor substitute(@NotNull TypeSubstitutor typeSubstitutor) {
@@ -215,7 +214,7 @@ public final class TypeAliasConstructorDescriptorImpl extends AbstractC8316a imp
         return constructedClass;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
     @NotNull
     public z71 getReturnType() {
         z71 returnType = super.getReturnType();

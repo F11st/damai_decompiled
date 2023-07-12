@@ -21,9 +21,8 @@ public class v82 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.v82$a */
     /* loaded from: classes.dex */
-    public static /* synthetic */ class C9814a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -112,7 +111,7 @@ public class v82 {
         if (AndroidInstantRuntime.support(ipChange, "2080823118")) {
             return (String) ipChange.ipc$dispatch("2080823118", new Object[0]);
         }
-        int i = C9814a.a[AppConfig.h().ordinal()];
+        int i = a.a[AppConfig.h().ordinal()];
         return i != 1 ? i != 2 ? "https://market.waptest.taobao.com/app/dmfe/select-seat-biz/kylin.html" : "https://market.wapa.taobao.com/app/dmfe/select-seat-biz/kylin.html" : "https://m.damai.cn/app/dmfe/select-seat-biz/kylin.html";
     }
 

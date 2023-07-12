@@ -18,7 +18,7 @@ import tb.k50;
 public final class MovieShowShareActivity extends BaseShareActivity {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3639a Companion = new C3639a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String PARAMS_ISHARE_ACTION = "params_ishare_action";
     private IShareAction iShareAction;
@@ -32,13 +32,12 @@ public final class MovieShowShareActivity extends BaseShareActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.share.common.ui.MovieShowShareActivity$a */
     /* loaded from: classes8.dex */
-    public static final class C3639a {
-        private C3639a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3639a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

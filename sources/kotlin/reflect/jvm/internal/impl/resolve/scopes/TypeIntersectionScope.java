@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import kotlin.Pair;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.n;
 import kotlin.jvm.JvmStatic;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
@@ -29,18 +29,17 @@ import tb.z71;
 /* loaded from: classes3.dex */
 public final class TypeIntersectionScope extends f2 {
     @NotNull
-    public static final C8501a Companion = new C8501a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final MemberScope a;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.resolve.scopes.TypeIntersectionScope$a */
     /* loaded from: classes3.dex */
-    public static final class C8501a {
-        private C8501a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8501a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -50,7 +49,7 @@ public final class TypeIntersectionScope extends f2 {
             int q;
             b41.i(str, "message");
             b41.i(collection, "types");
-            q = C8215n.q(collection, 10);
+            q = n.q(collection, 10);
             ArrayList arrayList = new ArrayList(q);
             for (z71 z71Var : collection) {
                 arrayList.add(z71Var.getMemberScope());

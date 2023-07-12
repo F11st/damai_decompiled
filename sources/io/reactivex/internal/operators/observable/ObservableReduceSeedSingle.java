@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.SingleObserver;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.functions.ObjectHelper;
@@ -13,7 +13,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableReduceSeedSingle<T, R> extends AbstractC8152e<R> {
+public final class ObservableReduceSeedSingle<T, R> extends e<R> {
     final BiFunction<R, ? super T, R> reducer;
     final R seed;
     final ObservableSource<T> source;
@@ -92,7 +92,7 @@ public final class ObservableReduceSeedSingle<T, R> extends AbstractC8152e<R> {
         this.reducer = biFunction;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super R> singleObserver) {
         this.source.subscribe(new ReduceSeedObserver(singleObserver, this.reducer, this.seed));
     }

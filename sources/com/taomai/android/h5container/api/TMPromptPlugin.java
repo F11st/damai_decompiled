@@ -29,30 +29,28 @@ public final class TMPromptPlugin extends TaoMaiApiPlugin {
     @NotNull
     public static final String BRIDGE_NAME = "TMPrompt";
     @NotNull
-    public static final C6995a Companion = new C6995a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMPromptPlugin$a */
     /* loaded from: classes11.dex */
-    public static final class C6995a {
-        private C6995a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C6995a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMPromptPlugin$b */
     /* loaded from: classes11.dex */
-    public static final class C6996b implements InputDialog.OnClickNegativeListener {
+    public static final class b implements InputDialog.OnClickNegativeListener {
         final /* synthetic */ WVCallBackContext b;
         final /* synthetic */ InputDialog c;
         final /* synthetic */ Activity d;
 
-        C6996b(WVCallBackContext wVCallBackContext, InputDialog inputDialog, Activity activity) {
+        b(WVCallBackContext wVCallBackContext, InputDialog inputDialog, Activity activity) {
             this.b = wVCallBackContext;
             this.c = inputDialog;
             this.d = activity;
@@ -83,14 +81,13 @@ public final class TMPromptPlugin extends TaoMaiApiPlugin {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMPromptPlugin$c */
     /* loaded from: classes11.dex */
-    public static final class C6997c implements InputDialog.OnClickPositiveListener {
+    public static final class c implements InputDialog.OnClickPositiveListener {
         final /* synthetic */ InputDialog b;
         final /* synthetic */ WVCallBackContext c;
         final /* synthetic */ Activity d;
 
-        C6997c(InputDialog inputDialog, WVCallBackContext wVCallBackContext, Activity activity) {
+        c(InputDialog inputDialog, WVCallBackContext wVCallBackContext, Activity activity) {
             this.b = inputDialog;
             this.c = wVCallBackContext;
             this.d = activity;
@@ -145,8 +142,8 @@ public final class TMPromptPlugin extends TaoMaiApiPlugin {
     }
 
     public final boolean prompt(@Nullable String str, @Nullable WVCallBackContext wVCallBackContext) {
-        JSONObject a;
-        if (str != null && (a = kh2.a(str)) != null) {
+        JSONObject a2;
+        if (str != null && (a2 = kh2.a(str)) != null) {
             Context context = this.mContext;
             if (!(context instanceof Activity)) {
                 context = null;
@@ -154,14 +151,14 @@ public final class TMPromptPlugin extends TaoMaiApiPlugin {
             Activity activity = (Activity) context;
             if (activity != null) {
                 try {
-                    String string = a.getString("title");
-                    String string2 = a.getString("message");
-                    String string3 = a.getString("okButton");
-                    String string4 = a.getString("cancelButton");
-                    InputDialog g = new InputDialog(activity, string, string2, string3, string4, false).k(a.getString("confirmColor")).i(a.getString("cancelColor")).g(a.getString(Constants.Name.PLACEHOLDER));
+                    String string = a2.getString("title");
+                    String string2 = a2.getString("message");
+                    String string3 = a2.getString("okButton");
+                    String string4 = a2.getString("cancelButton");
+                    InputDialog g = new InputDialog(activity, string, string2, string3, string4, false).k(a2.getString("confirmColor")).i(a2.getString("cancelColor")).g(a2.getString(Constants.Name.PLACEHOLDER));
                     g.show();
-                    g.h(new C6996b(wVCallBackContext, g, activity));
-                    g.j(new C6997c(g, wVCallBackContext, activity));
+                    g.h(new b(wVCallBackContext, g, activity));
+                    g.j(new c(g, wVCallBackContext, activity));
                 } catch (Throwable th) {
                     fb1.c("H5PromptPlugin", "prompt exception!", th);
                 }

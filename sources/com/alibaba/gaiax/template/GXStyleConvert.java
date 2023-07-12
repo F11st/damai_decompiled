@@ -12,12 +12,11 @@ import com.taobao.weex.devtools.inspector.elements.W3CStyleConstants;
 import com.taobao.weex.utils.TypefaceUtil;
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.C8177b;
 import kotlin.Lazy;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import kotlin.jvm.functions.Function0;
-import kotlin.text.C8604o;
 import kotlin.text.StringsKt__StringsKt;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -38,18 +37,17 @@ import tb.pr0;
 /* loaded from: classes6.dex */
 public final class GXStyleConvert {
     @NotNull
-    public static final C3399a Companion = new C3399a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final Lazy<GXStyleConvert> a;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.template.GXStyleConvert$a */
     /* loaded from: classes6.dex */
-    public static final class C3399a {
-        private C3399a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3399a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -60,9 +58,8 @@ public final class GXStyleConvert {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.template.GXStyleConvert$b */
     /* loaded from: classes6.dex */
-    public /* synthetic */ class C3400b {
+    public /* synthetic */ class b {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -80,8 +77,8 @@ public final class GXStyleConvert {
     }
 
     static {
-        Lazy<GXStyleConvert> b;
-        b = C8177b.b(new Function0<GXStyleConvert>() { // from class: com.alibaba.gaiax.template.GXStyleConvert$Companion$instance$2
+        Lazy<GXStyleConvert> b2;
+        b2 = kotlin.b.b(new Function0<GXStyleConvert>() { // from class: com.alibaba.gaiax.template.GXStyleConvert$Companion$instance$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull
@@ -89,7 +86,7 @@ public final class GXStyleConvert {
                 return new GXStyleConvert();
             }
         });
-        a = b;
+        a = b2;
     }
 
     @Nullable
@@ -108,7 +105,7 @@ public final class GXStyleConvert {
     public final lz1<hs0> B(@NotNull JSONObject jSONObject) {
         lz1<hs0> lz1Var;
         b41.i(jSONObject, "cssJson");
-        lz1<hs0> b = oq0.INSTANCE.b(jSONObject.getString("edge-insets"));
+        lz1<hs0> b2 = oq0.INSTANCE.b(jSONObject.getString("edge-insets"));
         String string = jSONObject.getString(Constants.Name.PADDING);
         if (string == null) {
             lz1Var = null;
@@ -119,51 +116,51 @@ public final class GXStyleConvert {
         String string2 = jSONObject.getString(W3CStyleConstants.PADDING_LEFT);
         if (string2 != null) {
             if (lz1Var == null) {
-                hs0.C9232f c9232f = hs0.C9232f.INSTANCE;
-                lz1Var = new lz1<>(c9232f, c9232f, c9232f, c9232f);
+                hs0.f fVar = hs0.f.INSTANCE;
+                lz1Var = new lz1<>(fVar, fVar, fVar, fVar);
             }
             lz1Var.g(hs0.Companion.d(string2));
         }
         String string3 = jSONObject.getString(W3CStyleConstants.PADDING_RIGHT);
         if (string3 != null) {
             if (lz1Var == null) {
-                hs0.C9232f c9232f2 = hs0.C9232f.INSTANCE;
-                lz1Var = new lz1<>(c9232f2, c9232f2, c9232f2, c9232f2);
+                hs0.f fVar2 = hs0.f.INSTANCE;
+                lz1Var = new lz1<>(fVar2, fVar2, fVar2, fVar2);
             }
             lz1Var.f(hs0.Companion.d(string3));
         }
         String string4 = jSONObject.getString(W3CStyleConstants.PADDING_TOP);
         if (string4 != null) {
             if (lz1Var == null) {
-                hs0.C9232f c9232f3 = hs0.C9232f.INSTANCE;
-                lz1Var = new lz1<>(c9232f3, c9232f3, c9232f3, c9232f3);
+                hs0.f fVar3 = hs0.f.INSTANCE;
+                lz1Var = new lz1<>(fVar3, fVar3, fVar3, fVar3);
             }
             lz1Var.h(hs0.Companion.d(string4));
         }
         String string5 = jSONObject.getString(W3CStyleConstants.PADDING_BOTTOM);
         if (string5 != null) {
             if (lz1Var == null) {
-                hs0.C9232f c9232f4 = hs0.C9232f.INSTANCE;
-                lz1Var = new lz1<>(c9232f4, c9232f4, c9232f4, c9232f4);
+                hs0.f fVar4 = hs0.f.INSTANCE;
+                lz1Var = new lz1<>(fVar4, fVar4, fVar4, fVar4);
             }
             lz1Var.e(hs0.Companion.d(string5));
         }
-        if (b != null) {
+        if (b2 != null) {
             if (lz1Var == null) {
-                hs0.C9232f c9232f5 = hs0.C9232f.INSTANCE;
-                lz1Var = new lz1<>(c9232f5, c9232f5, c9232f5, c9232f5);
+                hs0.f fVar5 = hs0.f.INSTANCE;
+                lz1Var = new lz1<>(fVar5, fVar5, fVar5, fVar5);
             }
-            if (!(b.c() instanceof hs0.C9232f)) {
-                lz1Var.g(b.c());
+            if (!(b2.c() instanceof hs0.f)) {
+                lz1Var.g(b2.c());
             }
-            if (!(b.b() instanceof hs0.C9232f)) {
-                lz1Var.f(b.b());
+            if (!(b2.b() instanceof hs0.f)) {
+                lz1Var.f(b2.b());
             }
-            if (!(b.d() instanceof hs0.C9232f)) {
-                lz1Var.h(b.d());
+            if (!(b2.d() instanceof hs0.f)) {
+                lz1Var.h(b2.d());
             }
-            if (!(b.a() instanceof hs0.C9232f)) {
-                lz1Var.e(b.a());
+            if (!(b2.a() instanceof hs0.f)) {
+                lz1Var.e(b2.a());
             }
         }
         return lz1Var;
@@ -198,7 +195,7 @@ public final class GXStyleConvert {
     public final hr0 d(@NotNull String str) {
         boolean F;
         b41.i(str, "target");
-        F = C8604o.F(str, "linear-gradient", false, 2, null);
+        F = o.F(str, "linear-gradient", false, 2, null);
         if (F) {
             List<String> u = u(str);
             return new hr0(t(u), v(u));
@@ -272,15 +269,15 @@ public final class GXStyleConvert {
         b41.i(str, "target");
         t0 = StringsKt__StringsKt.t0(str, new String[]{" "}, false, 0, 6, null);
         if (t0.size() == 5) {
-            hs0.C9228b c9228b = hs0.Companion;
-            hs0 d = c9228b.d((String) t0.get(0));
-            hs0 d2 = c9228b.d((String) t0.get(1));
-            hs0 d3 = c9228b.d((String) t0.get(2));
-            hs0 d4 = c9228b.d((String) t0.get(3));
-            mq0.C9449a c9449a = mq0.Companion;
-            mq0 a2 = c9449a.a((String) t0.get(4));
+            hs0.b bVar = hs0.Companion;
+            hs0 d = bVar.d((String) t0.get(0));
+            hs0 d2 = bVar.d((String) t0.get(1));
+            hs0 d3 = bVar.d((String) t0.get(2));
+            hs0 d4 = bVar.d((String) t0.get(3));
+            mq0.a aVar = mq0.Companion;
+            mq0 a2 = aVar.a((String) t0.get(4));
             if (a2 == null) {
-                a2 = c9449a.c();
+                a2 = aVar.c();
             }
             return new lq0(d, d2, d3, d4, a2);
         }
@@ -291,7 +288,7 @@ public final class GXStyleConvert {
     public final Shader i(float f, float f2, @NotNull GradientDrawable.Orientation orientation, @NotNull int[] iArr) {
         b41.i(orientation, "direction");
         b41.i(iArr, "colors");
-        switch (C3400b.$EnumSwitchMapping$0[orientation.ordinal()]) {
+        switch (b.$EnumSwitchMapping$0[orientation.ordinal()]) {
             case 1:
                 return new ir0(0.0f, 0.0f, 0.0f, f2, iArr, null, Shader.TileMode.CLAMP);
             case 2:
@@ -344,7 +341,7 @@ public final class GXStyleConvert {
         Object convert;
         b41.i(str, Constants.Name.FONT_FAMILY);
         GXRegisterCenter.GXIExtensionStaticProperty q = GXRegisterCenter.Companion.a().q();
-        if (q != null && (convert = q.convert(new GXRegisterCenter.GXIExtensionStaticProperty.C3332a(TypefaceUtil.FONT_CACHE_DIR_NAME, str))) != null) {
+        if (q != null && (convert = q.convert(new GXRegisterCenter.GXIExtensionStaticProperty.a(TypefaceUtil.FONT_CACHE_DIR_NAME, str))) != null) {
             Typeface typeface = convert instanceof Typeface ? (Typeface) convert : null;
             if (typeface != null) {
                 return typeface;
@@ -394,7 +391,7 @@ public final class GXStyleConvert {
                 }
             } else if (str.equals("clip")) {
                 GXRegisterCenter.GXIExtensionStaticProperty q = GXRegisterCenter.Companion.a().q();
-                if (q == null || (convert = q.convert(new GXRegisterCenter.GXIExtensionStaticProperty.C3332a("text-overflow", "clip"))) == null) {
+                if (q == null || (convert = q.convert(new GXRegisterCenter.GXIExtensionStaticProperty.a("text-overflow", "clip"))) == null) {
                     return null;
                 }
                 return (TextUtils.TruncateAt) convert;
@@ -650,13 +647,13 @@ public final class GXStyleConvert {
                 for (Object obj : t03) {
                     int i2 = i + 1;
                     if (i < 0) {
-                        C8214m.p();
+                        m.p();
                     }
                     String str2 = (String) obj;
                     if (str2 != null) {
                         M03 = StringsKt__StringsKt.M0(str2);
                         String obj2 = M03.toString();
-                        p2 = C8604o.p(obj2, ",", false, 2, null);
+                        p2 = o.p(obj2, ",", false, 2, null);
                         if (p2) {
                             obj2 = obj2.substring(0, obj2.length() - 1);
                             b41.h(obj2, "(this as java.lang.Strin…ing(startIndex, endIndex)");
@@ -679,13 +676,13 @@ public final class GXStyleConvert {
                     for (Object obj3 : t02) {
                         int i4 = i3 + 1;
                         if (i3 < 0) {
-                            C8214m.p();
+                            m.p();
                         }
                         String str3 = (String) obj3;
                         if (str3 != null) {
                             M02 = StringsKt__StringsKt.M0(str3);
                             String obj4 = M02.toString();
-                            p = C8604o.p(obj4, ",", false, 2, null);
+                            p = o.p(obj4, ",", false, 2, null);
                             if (p) {
                                 obj4 = obj4.substring(0, obj4.length() - 1);
                                 b41.h(obj4, "(this as java.lang.Strin…ing(startIndex, endIndex)");
@@ -723,7 +720,7 @@ public final class GXStyleConvert {
         b41.i(list, "linear");
         ArrayList<String> arrayList = new ArrayList();
         for (String str : list) {
-            F = C8604o.F(str, "to", false, 2, null);
+            F = o.F(str, "to", false, 2, null);
             if (!F) {
                 arrayList.add(str);
             }

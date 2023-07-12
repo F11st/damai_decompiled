@@ -23,10 +23,9 @@ public class CloneableResizedImageSpan extends DynamicDrawableSpan implements Pu
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.view.richtext.span.CloneableResizedImageSpan$a */
     /* loaded from: classes12.dex */
-    public static class C6434a extends Drawable {
-        public C6434a(int i, int i2) {
+    public static class a extends Drawable {
+        public a(int i, int i2) {
             setBounds(0, 0, i, i2);
         }
 
@@ -55,7 +54,7 @@ public class CloneableResizedImageSpan extends DynamicDrawableSpan implements Pu
 
     private Drawable getDefaultDrawable() {
         if (this.mDefaultDrawable == null) {
-            this.mDefaultDrawable = new C6434a(this.mWidth, this.mHeight);
+            this.mDefaultDrawable = new a(this.mWidth, this.mHeight);
         }
         return this.mDefaultDrawable;
     }

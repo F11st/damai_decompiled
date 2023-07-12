@@ -2,25 +2,24 @@ package com.vivo.push.cache;
 
 import android.content.Context;
 import android.text.TextUtils;
-import com.vivo.push.model.C7493a;
-import com.vivo.push.util.C7523p;
 import com.vivo.push.util.ContextDelegate;
+import com.vivo.push.util.p;
 import java.util.HashSet;
 import java.util.Set;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class ClientConfigManagerImpl implements InterfaceC7448d {
+public class ClientConfigManagerImpl implements d {
     private static final String TAG = "ClientConfigManager";
     private static volatile ClientConfigManagerImpl sClientConfigManagerImpl;
-    private C7445a mAppConfigSettings;
+    private a mAppConfigSettings;
     private Context mContext;
-    private C7449e mPushConfigSettings;
+    private e mPushConfigSettings;
 
     private ClientConfigManagerImpl(Context context) {
         this.mContext = ContextDelegate.getContext(context);
-        this.mAppConfigSettings = new C7445a(this.mContext);
-        this.mPushConfigSettings = new C7449e(this.mContext);
+        this.mAppConfigSettings = new a(this.mContext);
+        this.mPushConfigSettings = new e(this.mContext);
     }
 
     public static synchronized ClientConfigManagerImpl getInstance(Context context) {
@@ -35,20 +34,20 @@ public class ClientConfigManagerImpl implements InterfaceC7448d {
     }
 
     private void prepareAppConfig() {
-        C7445a c7445a = this.mAppConfigSettings;
-        if (c7445a == null) {
-            this.mAppConfigSettings = new C7445a(this.mContext);
+        a aVar = this.mAppConfigSettings;
+        if (aVar == null) {
+            this.mAppConfigSettings = new a(this.mContext);
         } else {
-            c7445a.c();
+            aVar.c();
         }
     }
 
-    private C7449e preparePushConfigSettings() {
-        C7449e c7449e = this.mPushConfigSettings;
-        if (c7449e == null) {
-            this.mPushConfigSettings = new C7449e(this.mContext);
+    private e preparePushConfigSettings() {
+        e eVar = this.mPushConfigSettings;
+        if (eVar == null) {
+            this.mPushConfigSettings = new e(this.mContext);
         } else {
-            c7449e.c();
+            eVar.c();
         }
         return this.mPushConfigSettings;
     }
@@ -84,7 +83,7 @@ public class ClientConfigManagerImpl implements InterfaceC7448d {
                 }
             }
         }
-        C7523p.d(TAG, " initWhiteLogList ".concat(String.valueOf(hashSet)));
+        p.d(TAG, " initWhiteLogList ".concat(String.valueOf(hashSet)));
         return hashSet;
     }
 
@@ -123,19 +122,19 @@ public class ClientConfigManagerImpl implements InterfaceC7448d {
 
     public boolean isDebug() {
         this.mAppConfigSettings.c();
-        return C7445a.a(this.mAppConfigSettings.b());
+        return a.a(this.mAppConfigSettings.b());
     }
 
     public boolean isEnablePush() {
         prepareAppConfig();
-        C7493a c = this.mAppConfigSettings.c(this.mContext.getPackageName());
+        com.vivo.push.model.a c = this.mAppConfigSettings.c(this.mContext.getPackageName());
         if (c != null) {
             return "1".equals(c.b());
         }
         return true;
     }
 
-    @Override // com.vivo.push.cache.InterfaceC7448d
+    @Override // com.vivo.push.cache.d
     public boolean isInBlackList(long j) {
         String[] split;
         String c = preparePushConfigSettings().c("BL");
@@ -154,6 +153,6 @@ public class ClientConfigManagerImpl implements InterfaceC7448d {
     }
 
     public boolean isDebug(int i) {
-        return C7445a.a(i);
+        return a.a(i);
     }
 }

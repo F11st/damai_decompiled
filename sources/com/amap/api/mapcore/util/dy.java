@@ -4,7 +4,7 @@ import android.graphics.Color;
 import android.opengl.GLES20;
 import android.util.Log;
 import android.view.SurfaceHolder;
-import com.amap.api.mapcore.util.C4505de;
+import com.amap.api.mapcore.util.de;
 import com.autonavi.base.amap.api.mapcore.IGLSurfaceView;
 import com.autonavi.base.amap.mapcore.AMapNativeRenderer;
 import java.nio.Buffer;
@@ -20,10 +20,9 @@ public class dy {
     private static float[] a = new float[1024];
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.dy$b */
     /* loaded from: classes10.dex */
-    public static class C4525b extends dx {
-        @Override // com.amap.api.mapcore.util.dx, android.opengl.GLSurfaceView.EGLContextFactory, com.amap.api.mapcore.util.TextureView$SurfaceTextureListenerC4615n.InterfaceC4621f
+    public static class b extends dx {
+        @Override // com.amap.api.mapcore.util.dx, android.opengl.GLSurfaceView.EGLContextFactory, com.amap.api.mapcore.util.n.f
         public EGLContext createContext(EGL10 egl10, EGLDisplay eGLDisplay, EGLConfig eGLConfig) {
             try {
                 return egl10.eglCreateContext(eGLDisplay, eGLConfig, EGL10.EGL_NO_CONTEXT, new int[]{12440, 2, 12344});
@@ -33,7 +32,7 @@ public class dy {
             }
         }
 
-        @Override // com.amap.api.mapcore.util.dx, android.opengl.GLSurfaceView.EGLContextFactory, com.amap.api.mapcore.util.TextureView$SurfaceTextureListenerC4615n.InterfaceC4621f
+        @Override // com.amap.api.mapcore.util.dx, android.opengl.GLSurfaceView.EGLContextFactory, com.amap.api.mapcore.util.n.f
         public void destroyContext(EGL10 egl10, EGLDisplay eGLDisplay, EGLContext eGLContext) {
             egl10.eglDestroyContext(eGLDisplay, eGLContext);
         }
@@ -41,13 +40,12 @@ public class dy {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.dy$c */
     /* loaded from: classes10.dex */
-    public static class C4526c {
+    public static class c {
         public int[] a;
         public int[] b;
 
-        private C4526c() {
+        private c() {
             this.a = null;
             this.b = new int[1];
         }
@@ -62,14 +60,13 @@ public class dy {
         throw new RuntimeException(str + ": glError " + glGetError);
     }
 
-    private static void b(C4505de.C4510e c4510e, int i, int i2, FloatBuffer floatBuffer, float f, int i3, float[] fArr) {
-        a(c4510e, i, i2, floatBuffer, f, 0, i3, fArr);
+    private static void b(de.e eVar, int i, int i2, FloatBuffer floatBuffer, float f, int i3, float[] fArr) {
+        a(eVar, i, i2, floatBuffer, f, 0, i3, fArr);
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.dy$a */
     /* loaded from: classes10.dex */
-    public static class C4524a extends dw {
+    public static class a extends dw {
         private static int g = 4;
         protected int a;
         protected int b;
@@ -79,7 +76,7 @@ public class dy {
         protected int f;
         private int[] h = new int[1];
 
-        public C4524a(int i, int i2, int i3, int i4, int i5, int i6) {
+        public a(int i, int i2, int i3, int i4, int i5, int i6) {
             this.a = i;
             this.b = i2;
             this.c = i3;
@@ -92,11 +89,11 @@ public class dy {
             return i == 2 ? new int[]{12324, this.a, 12323, this.b, 12322, this.c, 12321, this.d, 12325, this.e, 12326, this.f, 12338, z ? 1 : 0, 12352, g, 12344} : z ? new int[]{12324, this.a, 12323, this.b, 12322, this.c, 12338, 1, 12344} : new int[]{12324, this.a, 12323, this.b, 12322, this.c, 12344};
         }
 
-        @Override // com.amap.api.mapcore.util.dw, android.opengl.GLSurfaceView.EGLConfigChooser, com.amap.api.mapcore.util.TextureView$SurfaceTextureListenerC4615n.InterfaceC4620e
+        @Override // com.amap.api.mapcore.util.dw, android.opengl.GLSurfaceView.EGLConfigChooser, com.amap.api.mapcore.util.n.e
         public EGLConfig chooseConfig(EGL10 egl10, EGLDisplay eGLDisplay) {
             int[] iArr;
             int[] iArr2;
-            C4526c a = a(egl10, eGLDisplay);
+            c a = a(egl10, eGLDisplay);
             if (a == null || (iArr = a.a) == null) {
                 return null;
             }
@@ -108,7 +105,7 @@ public class dy {
                 this.a = 8;
                 this.b = 8;
                 this.c = 8;
-                C4526c a3 = a(egl10, eGLDisplay);
+                c a3 = a(egl10, eGLDisplay);
                 if (a3 == null || (iArr2 = a3.a) == null) {
                     return a2;
                 }
@@ -120,20 +117,20 @@ public class dy {
             return a2;
         }
 
-        private C4526c a(EGL10 egl10, EGLDisplay eGLDisplay) {
-            C4526c c4526c = new C4526c();
+        private c a(EGL10 egl10, EGLDisplay eGLDisplay) {
+            c cVar = new c();
             int[] a = a(2, true);
-            c4526c.a = a;
-            egl10.eglChooseConfig(eGLDisplay, a, null, 0, c4526c.b);
-            if (c4526c.b[0] <= 0) {
+            cVar.a = a;
+            egl10.eglChooseConfig(eGLDisplay, a, null, 0, cVar.b);
+            if (cVar.b[0] <= 0) {
                 int[] a2 = a(2, false);
-                c4526c.a = a2;
-                egl10.eglChooseConfig(eGLDisplay, a2, null, 0, c4526c.b);
-                if (c4526c.b[0] <= 0) {
+                cVar.a = a2;
+                egl10.eglChooseConfig(eGLDisplay, a2, null, 0, cVar.b);
+                if (cVar.b[0] <= 0) {
                     return null;
                 }
             }
-            return c4526c;
+            return cVar;
         }
 
         public EGLConfig a(EGL10 egl10, EGLDisplay eGLDisplay, EGLConfig[] eGLConfigArr) {
@@ -158,29 +155,29 @@ public class dy {
         }
     }
 
-    public static void a(C4505de.C4510e c4510e, int i, int i2, FloatBuffer floatBuffer, float f, FloatBuffer floatBuffer2, int i3, int i4, float[] fArr, int i5, float f2, float f3, int i6, int i7, boolean z, boolean z2) {
-        b(c4510e, 4, i, floatBuffer2, 1.0f, i4, fArr);
+    public static void a(de.e eVar, int i, int i2, FloatBuffer floatBuffer, float f, FloatBuffer floatBuffer2, int i3, int i4, float[] fArr, int i5, float f2, float f3, int i6, int i7, boolean z, boolean z2) {
+        b(eVar, 4, i, floatBuffer2, 1.0f, i4, fArr);
         if (z2) {
-            a(c4510e, i, i2, floatBuffer, f, floatBuffer2, i3, i4, fArr, i5, f2, f3, i6, i7, z);
+            a(eVar, i, i2, floatBuffer, f, floatBuffer2, i3, i4, fArr, i5, f2, f3, i6, i7, z);
         }
     }
 
-    public static void a(C4505de.C4510e c4510e, int i, int i2, FloatBuffer floatBuffer, float f, int i3, float[] fArr, float f2, int i4, float f3, boolean z, boolean z2) {
-        b(c4510e, 6, i, floatBuffer, 1.0f, i3, fArr);
+    public static void a(de.e eVar, int i, int i2, FloatBuffer floatBuffer, float f, int i3, float[] fArr, float f2, int i4, float f3, boolean z, boolean z2) {
+        b(eVar, 6, i, floatBuffer, 1.0f, i3, fArr);
         if (z2) {
-            a(c4510e, i, i2, floatBuffer, f, i3, fArr, f2, i4, f3, z);
+            a(eVar, i, i2, floatBuffer, f, i3, fArr, f2, i4, f3, z);
         }
     }
 
-    public static void a(C4505de.C4510e c4510e, int i, int i2, FloatBuffer floatBuffer, float f, int i3, float[] fArr, float f2, int i4, float f3, boolean z) {
+    public static void a(de.e eVar, int i, int i2, FloatBuffer floatBuffer, float f, int i3, float[] fArr, float f2, int i4, float f3, boolean z) {
         if (z && i4 != -1) {
-            a(c4510e, i, i2, floatBuffer, f * f2, i3, fArr, i4, f3);
+            a(eVar, i, i2, floatBuffer, f * f2, i3, fArr, i4, f3);
         } else {
-            a(c4510e, i, i2, floatBuffer, f, i3, fArr);
+            a(eVar, i, i2, floatBuffer, f, i3, fArr);
         }
     }
 
-    public static void a(C4505de.C4510e c4510e, int i, int i2, FloatBuffer floatBuffer, float f, FloatBuffer floatBuffer2, int i3, int i4, float[] fArr, int i5, float f2, float f3, int i6, int i7, boolean z) {
+    public static void a(de.e eVar, int i, int i2, FloatBuffer floatBuffer, float f, FloatBuffer floatBuffer2, int i3, int i4, float[] fArr, int i5, float f2, float f3, int i6, int i7, boolean z) {
         if (z && i5 != -1) {
             float f4 = f3 * f;
             try {
@@ -203,14 +200,14 @@ public class dy {
                 }
                 return;
             } catch (Throwable unused) {
-                b(c4510e, 2, i2, floatBuffer, f, i3, fArr);
+                b(eVar, 2, i2, floatBuffer, f, i3, fArr);
                 return;
             }
         }
-        b(c4510e, 2, i2, floatBuffer, f, i3, fArr);
+        b(eVar, 2, i2, floatBuffer, f, i3, fArr);
     }
 
-    private static void a(C4505de.C4510e c4510e, int i, int i2, FloatBuffer floatBuffer, float f, int i3, float[] fArr, int i4, float f2) {
+    private static void a(de.e eVar, int i, int i2, FloatBuffer floatBuffer, float f, int i3, float[] fArr, int i4, float f2) {
         try {
             float alpha = Color.alpha(i2) / 255.0f;
             float red = Color.red(i2) / 255.0f;
@@ -235,26 +232,26 @@ public class dy {
         }
     }
 
-    private static void a(C4505de.C4510e c4510e, int i, int i2, FloatBuffer floatBuffer, float f, int i3, float[] fArr) {
-        a(c4510e, 2, i2, floatBuffer, f, 1, i3 - 1, fArr);
+    private static void a(de.e eVar, int i, int i2, FloatBuffer floatBuffer, float f, int i3, float[] fArr) {
+        a(eVar, 2, i2, floatBuffer, f, 1, i3 - 1, fArr);
     }
 
-    private static void a(C4505de.C4510e c4510e, int i, int i2, FloatBuffer floatBuffer, float f, int i3, int i4, float[] fArr) {
-        if (f == 0.0f || c4510e == null) {
+    private static void a(de.e eVar, int i, int i2, FloatBuffer floatBuffer, float f, int i3, int i4, float[] fArr) {
+        if (f == 0.0f || eVar == null) {
             return;
         }
-        c4510e.a();
+        eVar.a();
         GLES20.glEnable(3042);
         GLES20.glDisable(2929);
         GLES20.glBlendFunc(770, 771);
         float[] fArr2 = {Color.red(i2) / 255.0f, Color.green(i2) / 255.0f, Color.blue(i2) / 255.0f, Color.alpha(i2) / 255.0f};
         GLES20.glLineWidth(f);
-        GLES20.glEnableVertexAttribArray(c4510e.b);
-        GLES20.glVertexAttribPointer(c4510e.b, 3, 5126, false, 0, (Buffer) floatBuffer);
-        GLES20.glUniform4fv(c4510e.c, 1, fArr2, 0);
-        GLES20.glUniformMatrix4fv(c4510e.a, 1, false, fArr, 0);
+        GLES20.glEnableVertexAttribArray(eVar.b);
+        GLES20.glVertexAttribPointer(eVar.b, 3, 5126, false, 0, (Buffer) floatBuffer);
+        GLES20.glUniform4fv(eVar.c, 1, fArr2, 0);
+        GLES20.glUniformMatrix4fv(eVar.a, 1, false, fArr, 0);
         GLES20.glDrawArrays(i, i3, i4);
-        GLES20.glDisableVertexAttribArray(c4510e.b);
+        GLES20.glDisableVertexAttribArray(eVar.b);
         GLES20.glDisable(3042);
         GLES20.glUseProgram(0);
     }
@@ -264,7 +261,7 @@ public class dy {
         if (i4 > 0 && (holder = iGLSurfaceView.getHolder()) != null) {
             holder.setFormat(-3);
         }
-        iGLSurfaceView.setEGLContextFactory(new C4525b());
-        iGLSurfaceView.setEGLConfigChooser(new C4524a(i, i2, i3, i4, i5, i6));
+        iGLSurfaceView.setEGLContextFactory(new b());
+        iGLSurfaceView.setEGLConfigChooser(new a(i, i2, i3, i4, i5, i6));
     }
 }

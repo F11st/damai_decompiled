@@ -11,6 +11,6 @@ public class EnableServiceActivity extends Activity {
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         requestWindowFeature(1);
-        setContentView(R.C5541layout.activity_endisable_service);
+        setContentView(R.layout.activity_endisable_service);
     }
 }

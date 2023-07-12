@@ -86,13 +86,12 @@ public final class DenseImmutableTable<R, C, V> extends RegularImmutableTable<R,
         private final int size;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.DenseImmutableTable$ImmutableArrayMap$a */
         /* loaded from: classes10.dex */
-        class C4948a extends AbstractIterator<Map.Entry<K, V>> {
+        class a extends AbstractIterator<Map.Entry<K, V>> {
             private int c = -1;
             private final int d;
 
-            C4948a() {
+            a() {
                 this.d = ImmutableArrayMap.this.keyToIndex().size();
             }
 
@@ -133,7 +132,7 @@ public final class DenseImmutableTable<R, C, V> extends RegularImmutableTable<R,
 
         @Override // com.google.common.collect.ImmutableMap.IteratorBasedImmutableMap
         yt2<Map.Entry<K, V>> entryIterator() {
-            return new C4948a();
+            return new a();
         }
 
         @Override // com.google.common.collect.ImmutableMap, java.util.Map
@@ -250,7 +249,7 @@ public final class DenseImmutableTable<R, C, V> extends RegularImmutableTable<R,
         return ImmutableTable.SerializedForm.create(this, this.cellRowIndices, this.cellColumnIndices);
     }
 
-    @Override // com.google.common.collect.ImmutableTable, com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.ImmutableTable, com.google.common.collect.h, com.google.common.collect.Table
     public V get(@NullableDecl Object obj, @NullableDecl Object obj2) {
         Integer num = this.rowKeyToIndex.get(obj);
         Integer num2 = this.columnKeyToIndex.get(obj2);

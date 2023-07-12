@@ -41,12 +41,11 @@ public class HomeTabScrollView extends HorizontalScrollView {
     private ViewPager pager;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.widget.HomeTabScrollView$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1874a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1874a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -161,7 +160,7 @@ public class HomeTabScrollView extends HorizontalScrollView {
         this.mLayout.setHeight(this.mHeight);
         this.mLayout.setIsEqual(this.mIsEqual);
         this.mLayout.setDefaultPadding(this.mPaddingLeftRight);
-        this.mLayout.setTitle(this.mList, new View$OnClickListenerC1874a());
+        this.mLayout.setTitle(this.mList, new a());
         if (this.mLayout.getLayoutParams() != null) {
             this.mLayout.getLayoutParams().height = this.mLayout.dip2px(this.mHeight);
         }

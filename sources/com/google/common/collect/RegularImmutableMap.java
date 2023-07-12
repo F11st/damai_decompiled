@@ -189,7 +189,7 @@ public final class RegularImmutableMap<K, V> extends ImmutableMap<K, V> {
             return (RegularImmutableMap) EMPTY;
         }
         if (i == 1) {
-            C5191k.a(objArr[0], objArr[1]);
+            k.a(objArr[0], objArr[1]);
             return new RegularImmutableMap<>(null, objArr, 1);
         }
         du1.t(i, objArr.length >> 1);
@@ -220,7 +220,7 @@ public final class RegularImmutableMap<K, V> extends ImmutableMap<K, V> {
             r10 = r9[r12]
             r11 = r12 ^ 1
             r9 = r9[r11]
-            com.google.common.collect.C5191k.a(r10, r9)
+            com.google.common.collect.k.a(r10, r9)
             r9 = 0
             return r9
         Le:
@@ -238,9 +238,9 @@ public final class RegularImmutableMap<K, V> extends ImmutableMap<K, V> {
             r3 = r9[r1]
             r4 = r1 ^ 1
             r4 = r9[r4]
-            com.google.common.collect.C5191k.a(r3, r4)
+            com.google.common.collect.k.a(r3, r4)
             int r5 = r3.hashCode()
-            int r5 = com.google.common.collect.C5211z.c(r5)
+            int r5 = com.google.common.collect.z.c(r5)
         L31:
             r5 = r5 & r0
             r6 = r11[r5]
@@ -274,9 +274,9 @@ public final class RegularImmutableMap<K, V> extends ImmutableMap<K, V> {
             r3 = r9[r1]
             r4 = r1 ^ 1
             r4 = r9[r4]
-            com.google.common.collect.C5191k.a(r3, r4)
+            com.google.common.collect.k.a(r3, r4)
             int r5 = r3.hashCode()
-            int r5 = com.google.common.collect.C5211z.c(r5)
+            int r5 = com.google.common.collect.z.c(r5)
         L70:
             r5 = r5 & r0
             short r6 = r11[r5]
@@ -308,9 +308,9 @@ public final class RegularImmutableMap<K, V> extends ImmutableMap<K, V> {
             r4 = r9[r1]
             r5 = r1 ^ 1
             r5 = r9[r5]
-            com.google.common.collect.C5191k.a(r4, r5)
+            com.google.common.collect.k.a(r4, r5)
             int r6 = r4.hashCode()
-            int r6 = com.google.common.collect.C5211z.c(r6)
+            int r6 = com.google.common.collect.z.c(r6)
         Lab:
             r6 = r6 & r0
             r7 = r11[r6]
@@ -385,7 +385,7 @@ public final class RegularImmutableMap<K, V> extends ImmutableMap<K, V> {
             if (obj instanceof byte[]) {
                 byte[] bArr = (byte[]) obj;
                 int length = bArr.length - 1;
-                int c = C5211z.c(obj2.hashCode());
+                int c = z.c(obj2.hashCode());
                 while (true) {
                     int i3 = c & length;
                     int i4 = bArr[i3] & 255;
@@ -400,7 +400,7 @@ public final class RegularImmutableMap<K, V> extends ImmutableMap<K, V> {
             } else if (obj instanceof short[]) {
                 short[] sArr = (short[]) obj;
                 int length2 = sArr.length - 1;
-                int c2 = C5211z.c(obj2.hashCode());
+                int c2 = z.c(obj2.hashCode());
                 while (true) {
                     int i5 = c2 & length2;
                     int i6 = sArr[i5] & hs2.MAX_VALUE;
@@ -415,7 +415,7 @@ public final class RegularImmutableMap<K, V> extends ImmutableMap<K, V> {
             } else {
                 int[] iArr = (int[]) obj;
                 int length3 = iArr.length - 1;
-                int c3 = C5211z.c(obj2.hashCode());
+                int c3 = z.c(obj2.hashCode());
                 while (true) {
                     int i7 = c3 & length3;
                     int i8 = iArr[i7];

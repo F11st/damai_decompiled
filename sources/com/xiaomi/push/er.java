@@ -14,7 +14,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.RemoteViews;
 import com.huawei.hms.push.constant.RemoteMessageConst;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.youku.live.dago.widgetlib.ailproom.adapter.chatlist.dago.model.BaseCellItem;
 import java.util.Map;
 
@@ -63,7 +62,7 @@ public class er extends es {
     public er a(Bitmap bitmap) {
         if (m871b() && bitmap != null) {
             if (bitmap.getWidth() != 984 || bitmap.getHeight() < 177 || bitmap.getHeight() > 207) {
-                AbstractC7535b.m586a("colorful notification bg image resolution error, must [984*177, 984*207]");
+                com.xiaomi.channel.commonutils.logger.b.m586a("colorful notification bg image resolution error, must [984*177, 984*207]");
             } else {
                 this.f306b = bitmap;
             }
@@ -87,7 +86,7 @@ public class er extends es {
             try {
                 this.b = Color.parseColor(str);
             } catch (Exception unused) {
-                AbstractC7535b.m586a("parse colorful notification button bg color error");
+                com.xiaomi.channel.commonutils.logger.b.m586a("parse colorful notification button bg color error");
             }
         }
         return this;
@@ -142,7 +141,7 @@ public class er extends es {
         int a10 = a(resources, "bg", "id", packageName);
         int a11 = a(resources, "container", "id", packageName);
         if (this.a != 16777216) {
-            if (C7688m.a(a()) >= 10) {
+            if (m.a(a()) >= 10) {
                 m867a3 = m867a();
                 a = a(this.a, 984, 192, 30.0f);
             } else {
@@ -157,9 +156,9 @@ public class er extends es {
                 m867a().setViewVisibility(a2, 8);
                 m867a().setViewVisibility(a10, 8);
                 try {
-                    bk.a((Object) this, "setStyle", C7786v.a(a(), "android.app.Notification$DecoratedCustomViewStyle").getConstructor(new Class[0]).newInstance(new Object[0]));
+                    bk.a((Object) this, "setStyle", v.a(a(), "android.app.Notification$DecoratedCustomViewStyle").getConstructor(new Class[0]).newInstance(new Object[0]));
                 } catch (Exception unused) {
-                    AbstractC7535b.m586a("load class DecoratedCustomViewStyle failed");
+                    com.xiaomi.channel.commonutils.logger.b.m586a("load class DecoratedCustomViewStyle failed");
                 }
             }
             Bundle bundle = new Bundle();
@@ -167,7 +166,7 @@ public class er extends es {
             addExtras(bundle);
             setCustomContentView(m867a());
         } else {
-            if (C7688m.a(a()) >= 10) {
+            if (m.a(a()) >= 10) {
                 m867a = m867a();
                 bitmap = a(this.f306b, 30.0f);
             } else {
@@ -193,7 +192,7 @@ public class er extends es {
     @Override // com.xiaomi.push.es
     /* renamed from: a */
     protected boolean mo862a() {
-        if (C7688m.m1118a()) {
+        if (m.m1118a()) {
             Resources resources = a().getResources();
             String packageName = a().getPackageName();
             return (a(resources, RemoteMessageConst.Notification.ICON, "id", packageName) == 0 || a(resources, "title", "id", packageName) == 0 || a(resources, "content", "id", packageName) == 0) ? false : true;
@@ -206,7 +205,7 @@ public class er extends es {
             try {
                 this.a = Color.parseColor(str);
             } catch (Exception unused) {
-                AbstractC7535b.m586a("parse colorful notification bg color error");
+                com.xiaomi.channel.commonutils.logger.b.m586a("parse colorful notification bg color error");
             }
         }
         return this;
@@ -222,7 +221,7 @@ public class er extends es {
             try {
                 this.c = Color.parseColor(str);
             } catch (Exception unused) {
-                AbstractC7535b.m586a("parse colorful notification image text color error");
+                com.xiaomi.channel.commonutils.logger.b.m586a("parse colorful notification image text color error");
             }
         }
         return this;

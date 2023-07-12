@@ -16,9 +16,6 @@ import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
 import okhttp3.OkHttpClient;
 import okhttp3.Protocol;
-import okhttp3.internal.C8753a;
-import okhttp3.internal.tls.AbstractC8805b;
-import okhttp3.internal.tls.C8804a;
 import okhttp3.internal.tls.TrustRootIndex;
 import okio.Buffer;
 
@@ -57,7 +54,7 @@ public class ps1 {
     }
 
     private static ps1 i() {
-        C9012cn s;
+        cn s;
         ps1 u = e5.u();
         if (u != null) {
             return u;
@@ -66,7 +63,7 @@ public class ps1 {
         if (u2 != null) {
             return u2;
         }
-        if (!p() || (s = C9012cn.s()) == null) {
+        if (!p() || (s = cn.s()) == null) {
             a61 s2 = a61.s();
             if (s2 != null) {
                 return s2;
@@ -82,7 +79,7 @@ public class ps1 {
     }
 
     public static boolean p() {
-        if ("conscrypt".equals(C8753a.r("okhttp.platform", null))) {
+        if ("conscrypt".equals(okhttp3.internal.a.r("okhttp.platform", null))) {
             return true;
         }
         return "Conscrypt".equals(Security.getProviders()[0].getName());
@@ -91,12 +88,12 @@ public class ps1 {
     public void a(SSLSocket sSLSocket) {
     }
 
-    public AbstractC8805b c(X509TrustManager x509TrustManager) {
-        return new C8804a(d(x509TrustManager));
+    public okhttp3.internal.tls.b c(X509TrustManager x509TrustManager) {
+        return new okhttp3.internal.tls.a(d(x509TrustManager));
     }
 
     public TrustRootIndex d(X509TrustManager x509TrustManager) {
-        return new C9712tb(x509TrustManager.getAcceptedIssuers());
+        return new tb(x509TrustManager.getAcceptedIssuers());
     }
 
     public void f(SSLSocketFactory sSLSocketFactory) {

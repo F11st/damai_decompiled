@@ -24,7 +24,7 @@ public class AtomicDoubleArray implements Serializable {
     private void readObject(ObjectInputStream objectInputStream) throws IOException, ClassNotFoundException {
         objectInputStream.defaultReadObject();
         int readInt = objectInputStream.readInt();
-        ImmutableLongArray.C5253b builder = ImmutableLongArray.builder();
+        ImmutableLongArray.b builder = ImmutableLongArray.builder();
         for (int i = 0; i < readInt; i++) {
             builder.a(Double.doubleToRawLongBits(objectInputStream.readDouble()));
         }

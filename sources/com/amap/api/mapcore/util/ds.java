@@ -29,7 +29,7 @@ public class ds {
     public static void a(Context context, String str) {
         b(a);
         if (context != null) {
-            a("key:" + C4554gc.f(context));
+            a("key:" + gc.f(context));
         }
         b(str);
         b(a);

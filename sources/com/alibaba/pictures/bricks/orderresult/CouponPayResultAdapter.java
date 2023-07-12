@@ -21,7 +21,7 @@ import com.youku.middlewareservice.provider.info.DeviceInfoProviderProxy;
 import io.flutter.wpkbridge.WPKFactory;
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.collections.C8212k;
+import kotlin.collections.k;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.ap2;
@@ -42,12 +42,11 @@ public class CouponPayResultAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     private ArrayList<PayResultDataHolder> c;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.orderresult.CouponPayResultAdapter$a */
     /* loaded from: classes7.dex */
-    public static final class C3537a extends gp {
+    public static final class a extends gp {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3537a(Context context, String str) {
+        a(Context context, String str) {
             super(context, str);
         }
 
@@ -77,12 +76,11 @@ public class CouponPayResultAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.orderresult.CouponPayResultAdapter$b */
     /* loaded from: classes7.dex */
-    public static final class C3538b extends kz1 {
+    public static final class b extends kz1 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3538b(Context context) {
+        b(Context context) {
             super(context);
         }
 
@@ -157,7 +155,7 @@ public class CouponPayResultAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         Integer valueOf = payResultDataHolder != null ? Integer.valueOf(payResultDataHolder.getType()) : null;
         if (valueOf != null && valueOf.intValue() == 0) {
             DmCouponPaySuccessBean mPayResponse = payResultDataHolder.getMPayResponse();
-            if (mPayResponse == null || (list = mPayResponse.render) == null || (gaiaxRender = (DmCouponPaySuccessBean.GaiaxRender) C8212k.P(list)) == null) {
+            if (mPayResponse == null || (list = mPayResponse.render) == null || (gaiaxRender = (DmCouponPaySuccessBean.GaiaxRender) k.P(list)) == null) {
                 return;
             }
             UrlUtil urlUtil = UrlUtil.INSTANCE;
@@ -200,10 +198,10 @@ public class CouponPayResultAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         b41.i(viewGroup, "parent");
         if (i == 0) {
             Context context = this.a;
-            return new NativeGaiaXViewHolder(context, new C3537a(context, this.b));
+            return new NativeGaiaXViewHolder(context, new a(context, this.b));
         } else if (i != 1) {
             Context context2 = this.a;
-            return new NativeGaiaXViewHolder(context2, new C3538b(context2));
+            return new NativeGaiaXViewHolder(context2, new b(context2));
         } else {
             View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(R$layout.bricks_coupon_order_result_recommend_title, viewGroup, false);
             b41.h(inflate, "from(parent.context).inf…, false\n                )");

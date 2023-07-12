@@ -73,7 +73,7 @@ public class TextInputLayout extends LinearLayout {
     public static final int BOX_BACKGROUND_FILLED = 1;
     public static final int BOX_BACKGROUND_NONE = 0;
     public static final int BOX_BACKGROUND_OUTLINE = 2;
-    private static final int DEF_STYLE_RES = R.C4819style.Widget_Design_TextInputLayout;
+    private static final int DEF_STYLE_RES = R.style.Widget_Design_TextInputLayout;
     public static final int END_ICON_CLEAR_TEXT = 2;
     public static final int END_ICON_CUSTOM = -1;
     public static final int END_ICON_DROPDOWN_MENU = 3;
@@ -2240,10 +2240,10 @@ public class TextInputLayout extends LinearLayout {
         L1b:
         L1c:
             if (r0 == 0) goto L30
-            int r4 = com.google.android.material.R.C4819style.TextAppearance_AppCompat_Caption
+            int r4 = com.google.android.material.R.style.TextAppearance_AppCompat_Caption
             androidx.core.widget.TextViewCompat.setTextAppearance(r3, r4)
             android.content.Context r4 = r2.getContext()
-            int r0 = com.google.android.material.R.C4815color.design_error
+            int r0 = com.google.android.material.R.color.design_error
             int r4 = androidx.core.content.ContextCompat.getColor(r4, r0)
             r3.setTextColor(r4)
         L30:

@@ -1,6 +1,6 @@
 package com.amap.api.services.weather;
 
-import com.amap.api.col.s.C4435i;
+import com.amap.api.col.s.i;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -29,7 +29,7 @@ public class WeatherSearchQuery implements Cloneable {
         try {
             super.clone();
         } catch (CloneNotSupportedException e) {
-            C4435i.a(e, "WeatherSearchQuery", "clone");
+            i.a(e, "WeatherSearchQuery", "clone");
         }
         return new WeatherSearchQuery(this.a, this.b);
     }

@@ -17,15 +17,14 @@ public class l42 {
     private final SVGAVideoEntity b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.l42$a */
     /* loaded from: classes10.dex */
-    public final class C9404a {
+    public final class a {
         @Nullable
         private final String a;
         @NotNull
         private final e52 b;
 
-        public C9404a(@Nullable l42 l42Var, @NotNull String str, e52 e52Var) {
+        public a(@Nullable l42 l42Var, @NotNull String str, e52 e52Var) {
             b41.j(e52Var, "frameEntity");
             this.a = str;
             this.b = e52Var;
@@ -71,16 +70,16 @@ public class l42 {
     }
 
     @NotNull
-    public final List<C9404a> e(int i) {
+    public final List<a> e(int i) {
         List<d52> g = this.b.g();
         ArrayList arrayList = new ArrayList();
         for (d52 d52Var : g) {
-            C9404a c9404a = null;
+            a aVar = null;
             if (i >= 0 && i < d52Var.a().size() && d52Var.a().get(i).a() > 0.0d) {
-                c9404a = new C9404a(this, d52Var.b(), d52Var.a().get(i));
+                aVar = new a(this, d52Var.b(), d52Var.a().get(i));
             }
-            if (c9404a != null) {
-                arrayList.add(c9404a);
+            if (aVar != null) {
+                arrayList.add(aVar);
             }
         }
         return arrayList;

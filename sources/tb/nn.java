@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.TextView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.discover.content.net.CliqueInfo;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -65,7 +64,7 @@ public class nn extends cp2<CliqueInfo> {
         }
         super.onClick(view);
         CliqueInfo cliqueInfo = (CliqueInfo) view.getTag();
-        C0529c.e().x(getLiveUt().v(cliqueInfo.name, String.valueOf(cliqueInfo.id)));
+        cn.damai.common.user.c.e().x(getLiveUt().v(cliqueInfo.name, String.valueOf(cliqueInfo.id)));
         Bundle bundle = new Bundle();
         bundle.putString("themeId", String.valueOf(cliqueInfo.id));
         DMNav.from(this.a).withExtras(bundle).toUri(NavUri.b(cs.DISCOVER_CIRCLE_THEME_PAGE));

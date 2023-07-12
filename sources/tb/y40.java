@@ -43,13 +43,12 @@ public class y40 {
     public ArrayList<Long> C = new ArrayList<>();
     public ArrayList<Long> D = new ArrayList<>();
     public ArrayList<Long> E = new ArrayList<>();
-    public ArrayList<C9949a> F = new ArrayList<>();
+    public ArrayList<a> F = new ArrayList<>();
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.y40$a */
     /* loaded from: classes7.dex */
-    public class C9949a {
+    public class a {
         long a;
         long b;
         long c;
@@ -62,7 +61,7 @@ public class y40 {
         long j;
         long k;
 
-        C9949a(y40 y40Var) {
+        a(y40 y40Var) {
         }
     }
 
@@ -90,7 +89,7 @@ public class y40 {
         long j9 = this.o;
         long j10 = this.p;
         long j11 = this.q;
-        C9269io.a("binary", "decode mask bits=" + j + "|" + j2 + "|" + j3 + "|" + j4 + "|" + j5 + "|" + j6 + "|" + j7 + "|" + j8 + "|" + j9 + "|" + j10 + "|" + j11);
+        io.a("binary", "decode mask bits=" + j + "|" + j2 + "|" + j3 + "|" + j4 + "|" + j5 + "|" + j6 + "|" + j7 + "|" + j8 + "|" + j9 + "|" + j10 + "|" + j11);
         long j12 = j + j2 + j3 + j4 + j5 + j6 + j7 + j8 + j9 + j10 + j11;
         if (j12 > 0 && j12 <= this.f * 8) {
             long j13 = j12 - j;
@@ -104,60 +103,60 @@ public class y40 {
             long j21 = j20 - j9;
             long j22 = j21 - j10;
             long j23 = j22 - j11;
-            C9269io.a("binary", "decode: δChairBits=" + j12 + " ,last offset=" + j23);
+            io.a("binary", "decode: δChairBits=" + j12 + " ,last offset=" + j23);
             if (j23 != 0) {
-                C9269io.b("binary", "decode: compute δ_offset error...!");
+                io.b("binary", "decode: compute δ_offset error...!");
                 return -1;
             }
             for (Long l : this.s) {
                 long longValue = l.longValue();
-                C9949a c9949a = new C9949a(this);
+                a aVar = new a(this);
                 long j24 = j23;
-                c9949a.a = (longValue << ((int) ((64 - j13) - j))) >>> ((int) (64 - j));
-                c9949a.b = (longValue << ((int) ((64 - j14) - j2))) >>> ((int) (64 - j2));
-                c9949a.c = (longValue << ((int) ((64 - j15) - j3))) >>> ((int) (64 - j3));
-                c9949a.d = (longValue << ((int) ((64 - j16) - j4))) >>> ((int) (64 - j4));
-                c9949a.e = (longValue << ((int) ((64 - j17) - j5))) >>> ((int) (64 - j5));
-                c9949a.f = (longValue << ((int) ((64 - j18) - j6))) >>> ((int) (64 - j6));
-                c9949a.g = (longValue << ((int) ((64 - j19) - j7))) >>> ((int) (64 - j7));
-                c9949a.h = (longValue << ((int) ((64 - j20) - j8))) >>> ((int) (64 - j8));
-                c9949a.i = (longValue << ((int) ((64 - j21) - j9))) >>> ((int) (64 - j9));
-                c9949a.j = (longValue << ((int) ((64 - j22) - j10))) >>> ((int) (64 - j10));
-                c9949a.k = (longValue << ((int) ((64 - j24) - j11))) >>> ((int) (64 - j11));
-                this.F.add(c9949a);
+                aVar.a = (longValue << ((int) ((64 - j13) - j))) >>> ((int) (64 - j));
+                aVar.b = (longValue << ((int) ((64 - j14) - j2))) >>> ((int) (64 - j2));
+                aVar.c = (longValue << ((int) ((64 - j15) - j3))) >>> ((int) (64 - j3));
+                aVar.d = (longValue << ((int) ((64 - j16) - j4))) >>> ((int) (64 - j4));
+                aVar.e = (longValue << ((int) ((64 - j17) - j5))) >>> ((int) (64 - j5));
+                aVar.f = (longValue << ((int) ((64 - j18) - j6))) >>> ((int) (64 - j6));
+                aVar.g = (longValue << ((int) ((64 - j19) - j7))) >>> ((int) (64 - j7));
+                aVar.h = (longValue << ((int) ((64 - j20) - j8))) >>> ((int) (64 - j8));
+                aVar.i = (longValue << ((int) ((64 - j21) - j9))) >>> ((int) (64 - j9));
+                aVar.j = (longValue << ((int) ((64 - j22) - j10))) >>> ((int) (64 - j10));
+                aVar.k = (longValue << ((int) ((64 - j24) - j11))) >>> ((int) (64 - j11));
+                this.F.add(aVar);
                 j23 = j24;
                 j13 = j13;
             }
             g();
-            C9269io.a("binary", "δList size=" + this.u.size() + "|" + this.v.size() + "|" + this.w.size() + "|" + this.x.size() + "|" + this.y.size() + "|" + this.z.size() + "|" + this.A.size() + "|" + this.B.size() + "|" + this.C.size() + "|" + this.D.size() + "|" + this.E.size());
+            io.a("binary", "δList size=" + this.u.size() + "|" + this.v.size() + "|" + this.w.size() + "|" + this.x.size() + "|" + this.y.size() + "|" + this.z.size() + "|" + this.A.size() + "|" + this.B.size() + "|" + this.C.size() + "|" + this.D.size() + "|" + this.E.size());
             Chair chair = this.r;
-            C9269io.a("binary", "------- base seat ： sid = " + this.r.sid + " x = " + this.r.x + " y = " + this.r.y + " fn = " + this.r.floorOrigin + " rhint = " + this.r.rowOrigin + " chint = " + this.r.chairOrigin + " plid = " + this.r.priceId + " groupId = " + this.r.groupId + " groupPriceId = " + this.r.groupPriceId + " angle = " + this.r.angle + " i = " + this.r.secondIndex);
+            io.a("binary", "------- base seat ： sid = " + this.r.sid + " x = " + this.r.x + " y = " + this.r.y + " fn = " + this.r.floorOrigin + " rhint = " + this.r.rowOrigin + " chint = " + this.r.chairOrigin + " plid = " + this.r.priceId + " groupId = " + this.r.groupId + " groupPriceId = " + this.r.groupPriceId + " angle = " + this.r.angle + " i = " + this.r.secondIndex);
             StringBuilder sb = new StringBuilder();
             sb.append("δChairList size=");
             sb.append(this.s.size());
-            C9269io.a("binary", sb.toString());
+            io.a("binary", sb.toString());
             int i = 0;
             while (i < this.s.size()) {
                 Chair chair2 = new Chair();
-                C9949a c9949a2 = this.F.get(i);
-                chair2.sid = chair.sid + this.u.get((int) c9949a2.a).longValue();
-                chair2.decodeFloor(chair.floorCode + this.v.get((int) c9949a2.b).intValue(), this.a.b().b());
-                chair2.decodeRow(chair.rowCode + this.w.get((int) c9949a2.c).intValue(), this.a.b().e());
-                chair2.decodeChair(chair.chairCode + this.x.get((int) c9949a2.d).intValue(), this.a.b().a());
-                chair2.x = (int) (chair.x + this.y.get((int) c9949a2.e).longValue());
-                chair2.y = (int) (chair.y + this.z.get((int) c9949a2.f).longValue());
-                chair2.priceId = chair.priceId + this.A.get((int) c9949a2.g).longValue();
-                chair2.groupId = chair.groupId + this.B.get((int) c9949a2.h).longValue();
-                chair2.groupPriceId = chair.groupPriceId + this.C.get((int) c9949a2.i).longValue();
-                chair2.angle = (int) (chair.angle + this.D.get((int) c9949a2.j).longValue());
-                chair2.secondIndex = (int) (chair.secondIndex + this.E.get((int) c9949a2.k).longValue());
+                a aVar2 = this.F.get(i);
+                chair2.sid = chair.sid + this.u.get((int) aVar2.a).longValue();
+                chair2.decodeFloor(chair.floorCode + this.v.get((int) aVar2.b).intValue(), this.a.b().b());
+                chair2.decodeRow(chair.rowCode + this.w.get((int) aVar2.c).intValue(), this.a.b().e());
+                chair2.decodeChair(chair.chairCode + this.x.get((int) aVar2.d).intValue(), this.a.b().a());
+                chair2.x = (int) (chair.x + this.y.get((int) aVar2.e).longValue());
+                chair2.y = (int) (chair.y + this.z.get((int) aVar2.f).longValue());
+                chair2.priceId = chair.priceId + this.A.get((int) aVar2.g).longValue();
+                chair2.groupId = chair.groupId + this.B.get((int) aVar2.h).longValue();
+                chair2.groupPriceId = chair.groupPriceId + this.C.get((int) aVar2.i).longValue();
+                chair2.angle = (int) (chair.angle + this.D.get((int) aVar2.j).longValue());
+                chair2.secondIndex = (int) (chair.secondIndex + this.E.get((int) aVar2.k).longValue());
                 this.b.add(chair2);
                 i++;
                 chair = chair2;
             }
             return 0;
         }
-        C9269io.b("binrary", "decode: compute δ_bits error...!");
+        io.b("binrary", "decode: compute δ_bits error...!");
         return -1;
     }
 
@@ -174,8 +173,8 @@ public class y40 {
         this.c = allocate;
         pw0.b(allocate, this.d);
         this.c.rewind();
-        if (C9269io.c()) {
-            C9269io.a("binary", "decode: dest binary=" + sh2.d(this.c));
+        if (io.c()) {
+            io.a("binary", "decode: dest binary=" + sh2.d(this.c));
         }
         this.c.getLong();
         this.c.getShort();
@@ -219,7 +218,7 @@ public class y40 {
         }
         q40.a(arrayList, "decode: δChair(ByteBuffer)");
         q40.b(this.s, "decode: δChair(long)");
-        C9269io.a("binary", "parserBin() done---------------------------------");
+        io.a("binary", "parserBin() done---------------------------------");
         return 0;
     }
 
@@ -228,9 +227,9 @@ public class y40 {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "322304723")) {
             ipChange.ipc$dispatch("322304723", new Object[]{y40Var});
-        } else if (C9269io.c()) {
+        } else if (io.c()) {
             String str = "binary";
-            C9269io.a("binary", "decoder | δ list--------------->>>");
+            io.a("binary", "decoder | δ list--------------->>>");
             ArrayList arrayList = new ArrayList();
             ArrayList arrayList2 = new ArrayList();
             ArrayList arrayList3 = new ArrayList();
@@ -242,9 +241,9 @@ public class y40 {
             ArrayList arrayList9 = new ArrayList();
             ArrayList arrayList10 = new ArrayList();
             ArrayList arrayList11 = new ArrayList();
-            Iterator<C9949a> it = y40Var.F.iterator();
+            Iterator<a> it = y40Var.F.iterator();
             while (it.hasNext()) {
-                C9949a next = it.next();
+                a next = it.next();
                 arrayList.add(Long.valueOf(next.a));
                 arrayList2.add(Long.valueOf(next.b));
                 arrayList3.add(Long.valueOf(next.c));
@@ -281,7 +280,7 @@ public class y40 {
             q40.c(arrayList10, "δAngle.index");
             q40.c(y40Var.E, "δI.key");
             q40.c(arrayList11, "δI.index");
-            C9269io.a(str, "decoder | δ list--------------- <<<");
+            io.a(str, "decoder | δ list--------------- <<<");
         }
     }
 

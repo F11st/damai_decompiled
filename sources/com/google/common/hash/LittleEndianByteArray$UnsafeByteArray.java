@@ -37,10 +37,9 @@ enum LittleEndianByteArray$UnsafeByteArray implements LittleEndianByteArray$Litt
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.hash.LittleEndianByteArray$UnsafeByteArray$a */
     /* loaded from: classes10.dex */
-    public static class C5218a implements PrivilegedExceptionAction<Unsafe> {
-        C5218a() {
+    public static class a implements PrivilegedExceptionAction<Unsafe> {
+        a() {
         }
 
         @Override // java.security.PrivilegedExceptionAction
@@ -72,7 +71,7 @@ enum LittleEndianByteArray$UnsafeByteArray implements LittleEndianByteArray$Litt
             try {
                 return Unsafe.getUnsafe();
             } catch (SecurityException unused) {
-                return (Unsafe) AccessController.doPrivileged(new C5218a());
+                return (Unsafe) AccessController.doPrivileged(new a());
             }
         } catch (PrivilegedActionException e) {
             throw new RuntimeException("Could not initialize intrinsics", e.getCause());

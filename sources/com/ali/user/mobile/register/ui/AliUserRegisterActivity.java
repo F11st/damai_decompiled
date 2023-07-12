@@ -25,7 +25,7 @@ import com.ali.user.mobile.ui.R;
 import com.ali.user.mobile.ui.WebConstant;
 import com.ali.user.mobile.utils.UTConstans;
 import com.ali.user.mobile.webview.WebViewActivity;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
+import com.alibaba.security.realidentity.jsbridge.a;
 import com.taobao.login4android.config.LoginSwitch;
 import com.taobao.login4android.session.SessionManager;
 import java.util.Properties;
@@ -130,7 +130,7 @@ public class AliUserRegisterActivity extends BaseActivity {
             if (TextUtils.isEmpty(dataString)) {
                 return;
             }
-            this.token = Uri.parse(dataString).getQueryParameter(AbstractC3893a.d);
+            this.token = Uri.parse(dataString).getQueryParameter(a.d);
         } catch (Throwable unused) {
         }
     }
@@ -182,7 +182,7 @@ public class AliUserRegisterActivity extends BaseActivity {
 
     @Override // com.ali.user.mobile.base.ui.BaseActivity
     protected int getLayoutContent() {
-        return R.C2965layout.aliuser_activity_frame_content;
+        return R.layout.aliuser_activity_frame_content;
     }
 
     public void gotoMobileRegFragment(Intent intent) {

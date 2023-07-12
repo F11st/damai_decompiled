@@ -9,8 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import cn.damai.commonbusiness.home.bean.TabExtraBean;
-import cn.damai.commonbusiness.tab.C0938a;
 import cn.damai.commonbusiness.tab.TabItem;
+import cn.damai.commonbusiness.tab.a;
 import cn.damai.homepage.R$id;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -74,7 +74,7 @@ public class ContentPopTipPanel implements View.OnClickListener {
             this.b.setOnClickListener(this);
             this.b.setVisibility(0);
             this.a.setText(tabExtraBean.msg);
-            List<TabItem> e = C0938a.e();
+            List<TabItem> e = a.e();
             DisplayMetrics b = m62.b(mu0.a());
             this.b.measure(View.MeasureSpec.makeMeasureSpec(com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(b), Integer.MIN_VALUE), View.MeasureSpec.makeMeasureSpec(com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(b), Integer.MIN_VALUE));
             int measuredWidth = this.b.getMeasuredWidth();

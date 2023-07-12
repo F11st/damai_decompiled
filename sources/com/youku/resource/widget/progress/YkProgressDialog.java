@@ -49,7 +49,7 @@ public class YkProgressDialog extends Dialog {
     }
 
     private void initContentView() {
-        setContentView(R.C8074layout.ykdialog_download_progress);
+        setContentView(R.layout.ykdialog_download_progress);
         this.mProgressBar = (DownloadProgressBar) findViewById(R.id.downloadProgressBar);
     }
 
@@ -58,7 +58,7 @@ public class YkProgressDialog extends Dialog {
         super.onCreate(bundle);
         Window window = getWindow();
         window.setGravity(17);
-        window.setWindowAnimations(R.C8077style.yk_CenterDialog);
+        window.setWindowAnimations(R.style.yk_CenterDialog);
         window.setDimAmount(0.3f);
         setCancelable(false);
         setCanceledOnTouchOutside(false);

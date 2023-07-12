@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.app.base.BaseActivity;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.discover.bean.CircleCard;
 import cn.damai.commonbusiness.discover.bean.VoteBean;
 import cn.damai.commonbusiness.discover.bean.VoteInfoBean;
@@ -54,14 +53,13 @@ public class HomePageViewFactory {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.component.base.HomePageViewFactory$a */
     /* loaded from: classes5.dex */
-    public class C1138a implements OnItemClickListener<NoteBean> {
+    public class a implements OnItemClickListener<NoteBean> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context a;
         final /* synthetic */ View b;
 
-        C1138a(Context context, View view) {
+        a(Context context, View view) {
             this.a = context;
             this.b = view;
         }
@@ -74,7 +72,7 @@ public class HomePageViewFactory {
                 ipChange.ipc$dispatch("-1515794119", new Object[]{this, noteBean, Integer.valueOf(i)});
                 return;
             }
-            C0529c.e().x(py0.I().w());
+            cn.damai.common.user.c.e().x(py0.I().w());
             if (TextUtils.isEmpty(noteBean.goDnaUrl)) {
                 DialogUtil.b(this.a).show();
             } else {
@@ -97,7 +95,7 @@ public class HomePageViewFactory {
                 int i2 = extraBean.pageNum;
                 int i3 = extraBean.pos;
                 ProjectInNote projectInNote = noteBean.project;
-                C0529c.e().x(I.L(noteBean, i2, i3, projectInNote == null ? "" : projectInNote.id, "14"));
+                cn.damai.common.user.c.e().x(I.L(noteBean, i2, i3, projectInNote == null ? "" : projectInNote.id, "14"));
             }
             if (noteBean.project != null) {
                 Bundle bundle = new Bundle();
@@ -123,7 +121,7 @@ public class HomePageViewFactory {
                     int i2 = extraBean.pageNum;
                     int i3 = extraBean.pos;
                     ProjectInNote projectInNote = noteBean.project;
-                    C0529c.e().x(I.K(noteBean, i2, i3, projectInNote == null ? "" : projectInNote.id, "14"));
+                    cn.damai.common.user.c.e().x(I.K(noteBean, i2, i3, projectInNote == null ? "" : projectInNote.id, "14"));
                 }
                 Bundle bundle = new Bundle();
                 bundle.putString("contentId", noteBean.id);
@@ -134,14 +132,13 @@ public class HomePageViewFactory {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.component.base.HomePageViewFactory$b */
     /* loaded from: classes5.dex */
-    public class C1139b implements OnItemClickListener<CircleCard> {
+    public class b implements OnItemClickListener<CircleCard> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context a;
         final /* synthetic */ View b;
 
-        C1139b(Context context, View view) {
+        b(Context context, View view) {
             this.a = context;
             this.b = view;
         }
@@ -168,7 +165,7 @@ public class HomePageViewFactory {
             Bundle bundle = new Bundle();
             bundle.putString("themeId", String.valueOf(circleCard.id));
             DMNav.from(this.a).withExtras(bundle).toUri(NavUri.b(cs.DISCOVER_CIRCLE_THEME_PAGE));
-            C0529c.e().x(py0.I().u(circleCard.id, i, "", "13"));
+            cn.damai.common.user.c.e().x(py0.I().u(circleCard.id, i, "", "13"));
         }
 
         @Override // cn.damai.commonbusiness.discover.viewholder.OnItemClickListener
@@ -178,14 +175,13 @@ public class HomePageViewFactory {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.component.base.HomePageViewFactory$c */
     /* loaded from: classes5.dex */
-    public class C1140c implements VotePanel.VoteActionListener {
+    public class c implements VotePanel.VoteActionListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context a;
         final /* synthetic */ String b;
 
-        C1140c(Context context, String str) {
+        c(Context context, String str) {
             this.a = context;
             this.b = str;
         }
@@ -263,7 +259,7 @@ public class HomePageViewFactory {
 
     private static VotePanel.VoteActionListener a(Context context, String str) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1656032984") ? (VotePanel.VoteActionListener) ipChange.ipc$dispatch("1656032984", new Object[]{context, str}) : new C1140c(context, str);
+        return AndroidInstantRuntime.support(ipChange, "1656032984") ? (VotePanel.VoteActionListener) ipChange.ipc$dispatch("1656032984", new Object[]{context, str}) : new c(context, str);
     }
 
     public static void b(@NonNull RecyclerView.ViewHolder viewHolder, fm fmVar, int i, GuessAdapter guessAdapter) {
@@ -357,7 +353,7 @@ public class HomePageViewFactory {
                 return new WaterFlowCategoryViewHolder(str, context);
             case 310:
                 View inflate = LayoutInflater.from(context).inflate(R$layout.homepage_waterflow_recmmend_note, viewGroup, false);
-                return new NoteViewHolder(inflate, new C1138a(context, inflate)) { // from class: cn.damai.homepage.component.base.HomePageViewFactory.2
+                return new NoteViewHolder(inflate, new a(context, inflate)) { // from class: cn.damai.homepage.component.base.HomePageViewFactory.2
                     private static transient /* synthetic */ IpChange $ipChange;
 
                     @Override // cn.damai.commonbusiness.discover.viewholder.NoteViewHolder
@@ -394,7 +390,7 @@ public class HomePageViewFactory {
                 return new VoteViewHolder(LayoutInflater.from(context).inflate(R$layout.homepage_waterflow_rec_vote, viewGroup, false), a(context, str));
             case 313:
                 View inflate2 = LayoutInflater.from(context).inflate(R$layout.item_discover_feed_circle, viewGroup, false);
-                return new CircleGroupViewHolder(inflate2, new C1139b(context, inflate2));
+                return new CircleGroupViewHolder(inflate2, new b(context, inflate2));
             default:
                 return null;
         }

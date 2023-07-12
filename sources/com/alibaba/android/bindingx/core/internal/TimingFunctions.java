@@ -13,13 +13,12 @@ import org.json.JSONException;
 @Keep
 /* loaded from: classes5.dex */
 public class TimingFunctions {
-    private static final C3191h0<animationInterpolatorC3189g0> cache = new C3191h0<>(4);
+    private static final h0<g0> cache = new h0<>(4);
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$a */
     /* loaded from: classes5.dex */
-    static class C3176a implements JSFunctionInterface {
-        C3176a() {
+    static class a implements JSFunctionInterface {
+        a() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -34,10 +33,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$a0 */
     /* loaded from: classes5.dex */
-    static class C3177a0 implements JSFunctionInterface {
-        C3177a0() {
+    static class a0 implements JSFunctionInterface {
+        a0() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -52,10 +50,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$b */
     /* loaded from: classes5.dex */
-    static class C3178b implements JSFunctionInterface {
-        C3178b() {
+    static class b implements JSFunctionInterface {
+        b() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -74,10 +71,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$b0 */
     /* loaded from: classes5.dex */
-    static class C3179b0 implements JSFunctionInterface {
-        C3179b0() {
+    static class b0 implements JSFunctionInterface {
+        b0() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -96,10 +92,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$c */
     /* loaded from: classes5.dex */
-    static class C3180c implements JSFunctionInterface {
-        C3180c() {
+    static class c implements JSFunctionInterface {
+        c() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -114,10 +109,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$c0 */
     /* loaded from: classes5.dex */
-    static class C3181c0 implements JSFunctionInterface {
-        C3181c0() {
+    static class c0 implements JSFunctionInterface {
+        c0() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -132,10 +126,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$d */
     /* loaded from: classes5.dex */
-    static class C3182d implements JSFunctionInterface {
-        C3182d() {
+    static class d implements JSFunctionInterface {
+        d() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -150,10 +143,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$d0 */
     /* loaded from: classes5.dex */
-    static class C3183d0 implements JSFunctionInterface {
-        C3183d0() {
+    static class d0 implements JSFunctionInterface {
+        d0() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -168,10 +160,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$e */
     /* loaded from: classes5.dex */
-    static class C3184e implements JSFunctionInterface {
-        C3184e() {
+    static class e implements JSFunctionInterface {
+        e() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -190,10 +181,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$e0 */
     /* loaded from: classes5.dex */
-    static class C3185e0 implements JSFunctionInterface {
-        C3185e0() {
+    static class e0 implements JSFunctionInterface {
+        e0() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -212,10 +202,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$f */
     /* loaded from: classes5.dex */
-    static class C3186f implements JSFunctionInterface {
-        C3186f() {
+    static class f implements JSFunctionInterface {
+        f() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -229,10 +218,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$f0 */
     /* loaded from: classes5.dex */
-    static class C3187f0 implements JSFunctionInterface {
-        C3187f0() {
+    static class f0 implements JSFunctionInterface {
+        f0() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -247,10 +235,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$g */
     /* loaded from: classes5.dex */
-    static class C3188g implements JSFunctionInterface {
-        C3188g() {
+    static class g implements JSFunctionInterface {
+        g() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -265,16 +252,15 @@ public class TimingFunctions {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$g0  reason: invalid class name */
     /* loaded from: classes5.dex */
-    public static class animationInterpolatorC3189g0 implements Interpolator {
+    public static class g0 implements Interpolator {
         float a;
         float b;
         float c;
         float d;
         private Interpolator e;
 
-        animationInterpolatorC3189g0(float f, float f2, float f3, float f4) {
+        g0(float f, float f2, float f3, float f4) {
             this.a = f;
             this.b = f2;
             this.c = f3;
@@ -289,10 +275,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$h */
     /* loaded from: classes5.dex */
-    static class C3190h implements JSFunctionInterface {
-        C3190h() {
+    static class h implements JSFunctionInterface {
+        h() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -307,12 +292,11 @@ public class TimingFunctions {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$h0 */
     /* loaded from: classes5.dex */
-    public static class C3191h0<T> {
+    public static class h0<T> {
         private final ArrayDeque<T> a;
 
-        C3191h0(int i) {
+        h0(int i) {
             this.a = new ArrayDeque<>(i);
         }
 
@@ -331,10 +315,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$i */
     /* loaded from: classes5.dex */
-    static class C3192i implements JSFunctionInterface {
-        C3192i() {
+    static class i implements JSFunctionInterface {
+        i() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -352,10 +335,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$j */
     /* loaded from: classes5.dex */
-    static class C3193j implements JSFunctionInterface {
-        C3193j() {
+    static class j implements JSFunctionInterface {
+        j() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -370,10 +352,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$k */
     /* loaded from: classes5.dex */
-    static class C3194k implements JSFunctionInterface {
-        C3194k() {
+    static class k implements JSFunctionInterface {
+        k() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -387,10 +368,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$l */
     /* loaded from: classes5.dex */
-    static class C3195l implements JSFunctionInterface {
-        C3195l() {
+    static class l implements JSFunctionInterface {
+        l() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -415,10 +395,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$m */
     /* loaded from: classes5.dex */
-    static class C3196m implements JSFunctionInterface {
-        C3196m() {
+    static class m implements JSFunctionInterface {
+        m() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -433,10 +412,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$n */
     /* loaded from: classes5.dex */
-    static class C3197n implements JSFunctionInterface {
-        C3197n() {
+    static class n implements JSFunctionInterface {
+        n() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -451,10 +429,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$o */
     /* loaded from: classes5.dex */
-    static class C3198o implements JSFunctionInterface {
-        C3198o() {
+    static class o implements JSFunctionInterface {
+        o() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -473,10 +450,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$p */
     /* loaded from: classes5.dex */
-    static class C3199p implements JSFunctionInterface {
-        C3199p() {
+    static class p implements JSFunctionInterface {
+        p() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -500,10 +476,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$q */
     /* loaded from: classes5.dex */
-    static class C3200q implements JSFunctionInterface {
-        C3200q() {
+    static class q implements JSFunctionInterface {
+        q() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -526,10 +501,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$r */
     /* loaded from: classes5.dex */
-    static class C3201r implements JSFunctionInterface {
-        C3201r() {
+    static class r implements JSFunctionInterface {
+        r() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -558,10 +532,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$s */
     /* loaded from: classes5.dex */
-    static class C3202s implements JSFunctionInterface {
-        C3202s() {
+    static class s implements JSFunctionInterface {
+        s() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -576,10 +549,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$t */
     /* loaded from: classes5.dex */
-    static class C3203t implements JSFunctionInterface {
-        C3203t() {
+    static class t implements JSFunctionInterface {
+        t() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -594,10 +566,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$u */
     /* loaded from: classes5.dex */
-    static class C3204u implements JSFunctionInterface {
-        C3204u() {
+    static class u implements JSFunctionInterface {
+        u() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -616,10 +587,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$v */
     /* loaded from: classes5.dex */
-    static class C3205v implements JSFunctionInterface {
-        C3205v() {
+    static class v implements JSFunctionInterface {
+        v() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -638,9 +608,9 @@ public class TimingFunctions {
                 float f2 = (float) doubleValue6;
                 float f3 = (float) doubleValue7;
                 float f4 = (float) doubleValue8;
-                animationInterpolatorC3189g0 isCacheHit = TimingFunctions.isCacheHit(f, f2, f3, f4);
+                g0 isCacheHit = TimingFunctions.isCacheHit(f, f2, f3, f4);
                 if (isCacheHit == null) {
-                    isCacheHit = new animationInterpolatorC3189g0(f, f2, f3, f4);
+                    isCacheHit = new g0(f, f2, f3, f4);
                     TimingFunctions.cache.a(isCacheHit);
                 }
                 return Double.valueOf((doubleValue3 * isCacheHit.getInterpolation((float) (min / doubleValue4))) + doubleValue2);
@@ -650,10 +620,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$w */
     /* loaded from: classes5.dex */
-    static class C3206w implements JSFunctionInterface {
-        C3206w() {
+    static class w implements JSFunctionInterface {
+        w() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -667,10 +636,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$x */
     /* loaded from: classes5.dex */
-    static class C3207x implements JSFunctionInterface {
-        C3207x() {
+    static class x implements JSFunctionInterface {
+        x() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -684,10 +652,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$y */
     /* loaded from: classes5.dex */
-    static class C3208y implements JSFunctionInterface {
-        C3208y() {
+    static class y implements JSFunctionInterface {
+        y() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -702,10 +669,9 @@ public class TimingFunctions {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.TimingFunctions$z */
     /* loaded from: classes5.dex */
-    static class C3209z implements JSFunctionInterface {
-        C3209z() {
+    static class z implements JSFunctionInterface {
+        z() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.JSFunctionInterface
@@ -723,173 +689,173 @@ public class TimingFunctions {
     }
 
     public static Object cubicBezier() {
-        return new C3205v();
+        return new v();
     }
 
     public static Object easeInBack() {
-        return new C3202s();
+        return new s();
     }
 
     public static Object easeInBounce() {
-        return new C3206w();
+        return new w();
     }
 
     public static Object easeInCirc() {
-        return new C3196m();
+        return new m();
     }
 
     public static Object easeInCubic() {
-        return new C3181c0();
+        return new c0();
     }
 
     public static Object easeInElastic() {
-        return new C3199p();
+        return new p();
     }
 
     public static Object easeInExpo() {
-        return new C3192i();
+        return new i();
     }
 
     public static Object easeInOutBack() {
-        return new C3204u();
+        return new u();
     }
 
     public static Object easeInOutBounce() {
-        return new C3208y();
+        return new y();
     }
 
     public static Object easeInOutCirc() {
-        return new C3198o();
+        return new o();
     }
 
     public static Object easeInOutCubic() {
-        return new C3185e0();
+        return new e0();
     }
 
     public static Object easeInOutElastic() {
-        return new C3201r();
+        return new r();
     }
 
     public static Object easeInOutExpo() {
-        return new C3195l();
+        return new l();
     }
 
     public static Object easeInOutQuad() {
-        return new C3179b0();
+        return new b0();
     }
 
     public static Object easeInOutQuart() {
-        return new C3178b();
+        return new b();
     }
 
     public static Object easeInOutQuint() {
-        return new C3184e();
+        return new e();
     }
 
     public static Object easeInOutSine() {
-        return new C3190h();
+        return new h();
     }
 
     public static Object easeInQuad() {
-        return new C3209z();
+        return new z();
     }
 
     public static Object easeInQuart() {
-        return new C3187f0();
+        return new f0();
     }
 
     public static Object easeInQuint() {
-        return new C3180c();
+        return new c();
     }
 
     public static Object easeInSine() {
-        return new C3186f();
+        return new f();
     }
 
     public static Object easeOutBack() {
-        return new C3203t();
+        return new t();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static double easeOutBounce(double d, double d2, double d3, double d4) {
-        double d5;
+    public static double easeOutBounce(double d2, double d3, double d4, double d5) {
         double d6;
         double d7;
-        double d8 = d / d4;
-        if (d8 < 0.36363636363636365d) {
-            d7 = 7.5625d * d8 * d8;
+        double d8;
+        double d9 = d2 / d5;
+        if (d9 < 0.36363636363636365d) {
+            d8 = 7.5625d * d9 * d9;
         } else {
-            if (d8 < 0.7272727272727273d) {
-                double d9 = d8 - 0.5454545454545454d;
-                d5 = 7.5625d * d9 * d9;
-                d6 = 0.75d;
-            } else if (d8 < 0.9090909090909091d) {
-                double d10 = d8 - 0.8181818181818182d;
-                d5 = 7.5625d * d10 * d10;
-                d6 = 0.9375d;
+            if (d9 < 0.7272727272727273d) {
+                double d10 = d9 - 0.5454545454545454d;
+                d6 = 7.5625d * d10 * d10;
+                d7 = 0.75d;
+            } else if (d9 < 0.9090909090909091d) {
+                double d11 = d9 - 0.8181818181818182d;
+                d6 = 7.5625d * d11 * d11;
+                d7 = 0.9375d;
             } else {
-                double d11 = d8 - 0.9545454545454546d;
-                d5 = 7.5625d * d11 * d11;
-                d6 = 0.984375d;
+                double d12 = d9 - 0.9545454545454546d;
+                d6 = 7.5625d * d12 * d12;
+                d7 = 0.984375d;
             }
-            d7 = d5 + d6;
+            d8 = d6 + d7;
         }
-        return (d3 * d7) + d2;
+        return (d4 * d8) + d3;
     }
 
     public static Object easeOutBounce() {
-        return new C3207x();
+        return new x();
     }
 
     public static Object easeOutCirc() {
-        return new C3197n();
+        return new n();
     }
 
     public static Object easeOutCubic() {
-        return new C3183d0();
+        return new d0();
     }
 
     public static Object easeOutElastic() {
-        return new C3200q();
+        return new q();
     }
 
     public static Object easeOutExpo() {
-        return new C3193j();
+        return new j();
     }
 
     public static Object easeOutQuad() {
-        return new C3177a0();
+        return new a0();
     }
 
     public static Object easeOutQuart() {
-        return new C3176a();
+        return new a();
     }
 
     public static Object easeOutQuint() {
-        return new C3182d();
+        return new d();
     }
 
     public static Object easeOutSine() {
-        return new C3188g();
+        return new g();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     @Nullable
-    public static animationInterpolatorC3189g0 isCacheHit(float f, float f2, float f3, float f4) {
-        for (animationInterpolatorC3189g0 animationinterpolatorc3189g0 : cache.b()) {
-            if (Float.compare(animationinterpolatorc3189g0.a, f) == 0 && Float.compare(animationinterpolatorc3189g0.c, f3) == 0 && Float.compare(animationinterpolatorc3189g0.b, f2) == 0 && Float.compare(animationinterpolatorc3189g0.d, f4) == 0) {
-                return animationinterpolatorc3189g0;
+    public static g0 isCacheHit(float f2, float f3, float f4, float f5) {
+        for (g0 g0Var : cache.b()) {
+            if (Float.compare(g0Var.a, f2) == 0 && Float.compare(g0Var.c, f4) == 0 && Float.compare(g0Var.b, f3) == 0 && Float.compare(g0Var.d, f5) == 0) {
+                return g0Var;
             }
         }
         return null;
     }
 
     public static Object linear() {
-        return new C3194k();
+        return new k();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static double easeInBounce(double d, double d2, double d3, double d4) {
-        return (d3 - easeOutBounce(d4 - d, 0.0d, d3, d4)) + d2;
+    public static double easeInBounce(double d2, double d3, double d4, double d5) {
+        return (d4 - easeOutBounce(d5 - d2, 0.0d, d4, d5)) + d3;
     }
 }

@@ -5,18 +5,16 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.collections.ArraysKt___ArraysKt;
-import kotlin.collections.C8203e0;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8226x;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.e0;
+import kotlin.collections.m;
+import kotlin.collections.n;
+import kotlin.collections.x;
 import kotlin.jvm.JvmOverloads;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptorVisitor;
 import kotlin.reflect.jvm.internal.impl.descriptors.InvalidModuleException;
@@ -46,7 +44,7 @@ public final class ModuleDescriptorImpl extends t40 implements ModuleDescriptor 
     @NotNull
     private final StorageManager c;
     @NotNull
-    private final AbstractC8271b d;
+    private final kotlin.reflect.jvm.internal.impl.builtins.b d;
     @NotNull
     private final Map<zg1<?>, Object> e;
     @NotNull
@@ -63,11 +61,11 @@ public final class ModuleDescriptorImpl extends t40 implements ModuleDescriptor 
 
     /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
     @JvmOverloads
-    public ModuleDescriptorImpl(@NotNull ni1 ni1Var, @NotNull StorageManager storageManager, @NotNull AbstractC8271b abstractC8271b, @Nullable dl2 dl2Var) {
-        this(ni1Var, storageManager, abstractC8271b, dl2Var, null, null, 48, null);
+    public ModuleDescriptorImpl(@NotNull ni1 ni1Var, @NotNull StorageManager storageManager, @NotNull kotlin.reflect.jvm.internal.impl.builtins.b bVar, @Nullable dl2 dl2Var) {
+        this(ni1Var, storageManager, bVar, dl2Var, null, null, 48, null);
         b41.i(ni1Var, "moduleName");
         b41.i(storageManager, "storageManager");
-        b41.i(abstractC8271b, "builtIns");
+        b41.i(bVar, "builtIns");
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
@@ -75,7 +73,7 @@ public final class ModuleDescriptorImpl extends t40 implements ModuleDescriptor 
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public /* synthetic */ ModuleDescriptorImpl(tb.ni1 r10, kotlin.reflect.jvm.internal.impl.storage.StorageManager r11, kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b r12, tb.dl2 r13, java.util.Map r14, tb.ni1 r15, int r16, tb.k50 r17) {
+    public /* synthetic */ ModuleDescriptorImpl(tb.ni1 r10, kotlin.reflect.jvm.internal.impl.storage.StorageManager r11, kotlin.reflect.jvm.internal.impl.builtins.b r12, tb.dl2 r13, java.util.Map r14, tb.ni1 r15, int r16, tb.k50 r17) {
         /*
             r9 = this;
             r0 = r16 & 8
@@ -88,7 +86,7 @@ public final class ModuleDescriptorImpl extends t40 implements ModuleDescriptor 
         L8:
             r0 = r16 & 16
             if (r0 == 0) goto L12
-            java.util.Map r0 = kotlin.collections.C8223u.i()
+            java.util.Map r0 = kotlin.collections.u.i()
             r7 = r0
             goto L13
         L12:
@@ -129,12 +127,12 @@ public final class ModuleDescriptorImpl extends t40 implements ModuleDescriptor 
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor
     public <R, D> R accept(@NotNull DeclarationDescriptorVisitor<R, D> declarationDescriptorVisitor, D d) {
-        return (R) ModuleDescriptor.C8292a.a(this, declarationDescriptorVisitor, d);
+        return (R) ModuleDescriptor.a.a(this, declarationDescriptorVisitor, d);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor
     @NotNull
-    public AbstractC8271b getBuiltIns() {
+    public kotlin.reflect.jvm.internal.impl.builtins.b getBuiltIns() {
         return this.d;
     }
 
@@ -148,7 +146,7 @@ public final class ModuleDescriptorImpl extends t40 implements ModuleDescriptor 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor
     @Nullable
     public DeclarationDescriptor getContainingDeclaration() {
-        return ModuleDescriptor.C8292a.b(this);
+        return ModuleDescriptor.a.b(this);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor
@@ -203,7 +201,7 @@ public final class ModuleDescriptorImpl extends t40 implements ModuleDescriptor 
     public final void p(@NotNull List<ModuleDescriptorImpl> list) {
         Set<ModuleDescriptorImpl> d;
         b41.i(list, "descriptors");
-        d = C8203e0.d();
+        d = e0.d();
         q(list, d);
     }
 
@@ -212,8 +210,8 @@ public final class ModuleDescriptorImpl extends t40 implements ModuleDescriptor 
         Set d;
         b41.i(list, "descriptors");
         b41.i(set, "friends");
-        g = C8214m.g();
-        d = C8203e0.d();
+        g = m.g();
+        d = e0.d();
         r(new bh1(list, set, g, d));
     }
 
@@ -244,22 +242,22 @@ public final class ModuleDescriptorImpl extends t40 implements ModuleDescriptor 
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     @JvmOverloads
-    public ModuleDescriptorImpl(@NotNull ni1 ni1Var, @NotNull StorageManager storageManager, @NotNull AbstractC8271b abstractC8271b, @Nullable dl2 dl2Var, @NotNull Map<zg1<?>, ? extends Object> map, @Nullable ni1 ni1Var2) {
+    public ModuleDescriptorImpl(@NotNull ni1 ni1Var, @NotNull StorageManager storageManager, @NotNull kotlin.reflect.jvm.internal.impl.builtins.b bVar, @Nullable dl2 dl2Var, @NotNull Map<zg1<?>, ? extends Object> map, @Nullable ni1 ni1Var2) {
         super(Annotations.Companion.b(), ni1Var);
         Map<zg1<?>, Object> v;
         Lazy b;
         b41.i(ni1Var, "moduleName");
         b41.i(storageManager, "storageManager");
-        b41.i(abstractC8271b, "builtIns");
+        b41.i(bVar, "builtIns");
         b41.i(map, "capabilities");
         this.c = storageManager;
-        this.d = abstractC8271b;
+        this.d = bVar;
         if (ni1Var.g()) {
-            v = C8226x.v(map);
+            v = x.v(map);
             this.e = v;
             v.put(c81.a(), new sz1(null));
             PackageViewDescriptorFactory packageViewDescriptorFactory = (PackageViewDescriptorFactory) getCapability(PackageViewDescriptorFactory.Companion.a());
-            this.f = packageViewDescriptorFactory == null ? PackageViewDescriptorFactory.C8313b.INSTANCE : packageViewDescriptorFactory;
+            this.f = packageViewDescriptorFactory == null ? PackageViewDescriptorFactory.b.INSTANCE : packageViewDescriptorFactory;
             this.i = true;
             this.j = storageManager.createMemoizedFunction(new Function1<hp0, PackageViewDescriptor>() { // from class: kotlin.reflect.jvm.internal.impl.descriptors.impl.ModuleDescriptorImpl$packages$1
                 /* JADX INFO: Access modifiers changed from: package-private */
@@ -279,7 +277,7 @@ public final class ModuleDescriptorImpl extends t40 implements ModuleDescriptor 
                     return packageViewDescriptorFactory2.compute(moduleDescriptorImpl, hp0Var, storageManager2);
                 }
             });
-            b = C8177b.b(new Function0<km>() { // from class: kotlin.reflect.jvm.internal.impl.descriptors.impl.ModuleDescriptorImpl$packageFragmentProviderForWholeModuleWithDependencies$2
+            b = kotlin.b.b(new Function0<km>() { // from class: kotlin.reflect.jvm.internal.impl.descriptors.impl.ModuleDescriptorImpl$packageFragmentProviderForWholeModuleWithDependencies$2
                 /* JADX INFO: Access modifiers changed from: package-private */
                 {
                     super(0);
@@ -300,7 +298,7 @@ public final class ModuleDescriptorImpl extends t40 implements ModuleDescriptor 
                         for (ModuleDescriptorImpl moduleDescriptorImpl2 : allDependencies) {
                             moduleDescriptorImpl2.n();
                         }
-                        q = C8215n.q(allDependencies, 10);
+                        q = n.q(allDependencies, 10);
                         ArrayList arrayList = new ArrayList(q);
                         for (ModuleDescriptorImpl moduleDescriptorImpl3 : allDependencies) {
                             packageFragmentProvider = moduleDescriptorImpl3.h;

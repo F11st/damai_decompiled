@@ -35,23 +35,23 @@ public class OneCommonTaskImpl implements InnerOneTask {
     protected TaskType mTaskType;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public OneCommonTaskImpl(@NonNull C3242a c3242a) {
-        checkBuilderParameters(c3242a);
-        if (!c3242a.h) {
-            if (c3242a.d != null) {
-                this.mFutureTask = new PriorityFutureTask(c3242a.d, null);
+    public OneCommonTaskImpl(@NonNull a aVar) {
+        checkBuilderParameters(aVar);
+        if (!aVar.h) {
+            if (aVar.d != null) {
+                this.mFutureTask = new PriorityFutureTask(aVar.d, null);
             } else {
-                this.mFutureTask = new PriorityFutureTask(c3242a.e);
+                this.mFutureTask = new PriorityFutureTask(aVar.e);
             }
-            this.mFutureTask.setPriority(c3242a.a);
+            this.mFutureTask.setPriority(aVar.a);
         }
-        this.mGroupName = c3242a.b;
-        this.mName = c3242a.c;
-        this.mCallback = c3242a.f;
-        this.mTaskType = c3242a.g;
-        this.mExecutor = c3242a.i;
-        this.mTaskTracker = c3242a.j;
-        this.mDelayTime = c3242a.k;
+        this.mGroupName = aVar.b;
+        this.mName = aVar.c;
+        this.mCallback = aVar.f;
+        this.mTaskType = aVar.g;
+        this.mExecutor = aVar.i;
+        this.mTaskTracker = aVar.j;
+        this.mDelayTime = aVar.k;
     }
 
     @Override // com.alibaba.android.onescheduler.OneCommonTask
@@ -66,11 +66,11 @@ public class OneCommonTaskImpl implements InnerOneTask {
         }
     }
 
-    protected void checkBuilderParameters(@NonNull C3242a c3242a) {
-        if (!c3242a.h && c3242a.d == null && c3242a.e == null) {
+    protected void checkBuilderParameters(@NonNull a aVar) {
+        if (!aVar.h && aVar.d == null && aVar.e == null) {
             xm1.a("Runnable and Callable are null !!!");
         }
-        if (TextUtils.isEmpty(c3242a.c) || TextUtils.isEmpty(c3242a.b)) {
+        if (TextUtils.isEmpty(aVar.c) || TextUtils.isEmpty(aVar.b)) {
             xm1.a("Name or GroupName is null !!!");
         }
     }

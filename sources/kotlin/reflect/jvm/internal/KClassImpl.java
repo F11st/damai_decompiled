@@ -9,9 +9,9 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.m;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.PropertyReference1Impl;
 import kotlin.reflect.KCallable;
@@ -43,8 +43,8 @@ import kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite;
 import kotlin.reflect.jvm.internal.impl.resolve.scopes.MemberScope;
 import kotlin.reflect.jvm.internal.impl.resolve.scopes.ResolutionScope;
 import kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedClassDescriptor;
-import kotlin.text.C8604o;
 import kotlin.text.StringsKt__StringsKt;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.a12;
@@ -71,7 +71,7 @@ import tb.zv2;
 public final class KClassImpl<T> extends KDeclarationContainerImpl implements KClass<T>, KClassifierImpl, KTypeParameterOwnerImpl {
     public static final /* synthetic */ int e = 0;
     @NotNull
-    private final x02.C9895b<KClassImpl<T>.Data> c;
+    private final x02.b<KClassImpl<T>.Data> c;
     @NotNull
     private final Class<T> d;
 
@@ -80,36 +80,36 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
     public final class Data extends KDeclarationContainerImpl.Data {
         static final /* synthetic */ KProperty[] v = {a12.i(new PropertyReference1Impl(a12.b(Data.class), "descriptor", "getDescriptor()Lorg/jetbrains/kotlin/descriptors/ClassDescriptor;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "annotations", "getAnnotations()Ljava/util/List;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "simpleName", "getSimpleName()Ljava/lang/String;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "qualifiedName", "getQualifiedName()Ljava/lang/String;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "constructors", "getConstructors()Ljava/util/Collection;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "nestedClasses", "getNestedClasses()Ljava/util/Collection;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "objectInstance", "getObjectInstance()Ljava/lang/Object;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "typeParameters", "getTypeParameters()Ljava/util/List;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "supertypes", "getSupertypes()Ljava/util/List;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "sealedSubclasses", "getSealedSubclasses()Ljava/util/List;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "declaredNonStaticMembers", "getDeclaredNonStaticMembers()Ljava/util/Collection;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "declaredStaticMembers", "getDeclaredStaticMembers()Ljava/util/Collection;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "inheritedNonStaticMembers", "getInheritedNonStaticMembers()Ljava/util/Collection;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "inheritedStaticMembers", "getInheritedStaticMembers()Ljava/util/Collection;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "allNonStaticMembers", "getAllNonStaticMembers()Ljava/util/Collection;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "allStaticMembers", "getAllStaticMembers()Ljava/util/Collection;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "declaredMembers", "getDeclaredMembers()Ljava/util/Collection;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "allMembers", "getAllMembers()Ljava/util/Collection;"))};
         @NotNull
-        private final x02.C9894a d;
+        private final x02.a d;
         @NotNull
-        private final x02.C9894a e;
+        private final x02.a e;
         @Nullable
-        private final x02.C9894a f;
+        private final x02.a f;
         @Nullable
-        private final x02.C9894a g;
+        private final x02.a g;
         @NotNull
-        private final x02.C9894a h;
+        private final x02.a h;
         @NotNull
-        private final x02.C9894a i;
+        private final x02.a i;
         @Nullable
-        private final x02.C9895b j;
+        private final x02.b j;
         @NotNull
-        private final x02.C9894a k;
+        private final x02.a k;
         @NotNull
-        private final x02.C9894a l;
+        private final x02.a l;
         @NotNull
-        private final x02.C9894a m;
+        private final x02.a m;
         @NotNull
-        private final x02.C9894a n;
-        private final x02.C9894a o;
-        private final x02.C9894a p;
-        private final x02.C9894a q;
+        private final x02.a n;
+        private final x02.a o;
+        private final x02.a p;
+        private final x02.a q;
         @NotNull
-        private final x02.C9894a r;
+        private final x02.a r;
         @NotNull
-        private final x02.C9894a s;
+        private final x02.a s;
         @NotNull
-        private final x02.C9894a t;
+        private final x02.a t;
 
         public Data() {
             super();
@@ -198,7 +198,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
                 public final List<KFunction<T>> invoke() {
                     int q;
                     Collection<ConstructorDescriptor> i = KClassImpl.this.i();
-                    q = C8215n.q(i, 10);
+                    q = n.q(i, 10);
                     ArrayList arrayList = new ArrayList(q);
                     for (ConstructorDescriptor constructorDescriptor : i) {
                         arrayList.add(new KFunctionImpl(KClassImpl.this, constructorDescriptor));
@@ -214,7 +214,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
 
                 @Override // kotlin.jvm.functions.Function0
                 public final List<? extends KClassImpl<? extends Object>> invoke() {
-                    Collection a = ResolutionScope.C8500a.a(KClassImpl.Data.this.n().getUnsubstitutedInnerClassesScope(), null, null, 3, null);
+                    Collection a = ResolutionScope.a.a(KClassImpl.Data.this.n().getUnsubstitutedInnerClassesScope(), null, null, 3, null);
                     ArrayList<DeclarationDescriptor> arrayList = new ArrayList();
                     for (Object obj : a) {
                         if (!d70.B((DeclarationDescriptor) obj)) {
@@ -271,7 +271,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
                     int q;
                     List<TypeParameterDescriptor> declaredTypeParameters = KClassImpl.Data.this.n().getDeclaredTypeParameters();
                     b41.h(declaredTypeParameters, "descriptor.declaredTypeParameters");
-                    q = C8215n.q(declaredTypeParameters, 10);
+                    q = n.q(declaredTypeParameters, 10);
                     ArrayList arrayList = new ArrayList(q);
                     for (TypeParameterDescriptor typeParameterDescriptor : declaredTypeParameters) {
                         KClassImpl kClassImpl = KClassImpl.this;
@@ -528,7 +528,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
     public KClassImpl(@NotNull Class<T> cls) {
         b41.i(cls, "jClass");
         this.d = cls;
-        x02.C9895b<KClassImpl<T>.Data> b = x02.b(new Function0<KClassImpl<T>.Data>() { // from class: kotlin.reflect.jvm.internal.KClassImpl$data$1
+        x02.b<KClassImpl<T>.Data> b = x02.b(new Function0<KClassImpl<T>.Data>() { // from class: kotlin.reflect.jvm.internal.KClassImpl$data$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -673,7 +673,7 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
             b41.h(constructors, "descriptor.constructors");
             return constructors;
         }
-        g = C8214m.g();
+        g = m.g();
         return g;
     }
 
@@ -762,9 +762,9 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
         DeserializedClassDescriptor deserializedClassDescriptor = (DeserializedClassDescriptor) descriptor;
         if (deserializedClassDescriptor != null) {
             ProtoBuf$Class t = deserializedClassDescriptor.t();
-            GeneratedMessageLite.C8441c<ProtoBuf$Class, List<ProtoBuf$Property>> c8441c = JvmProtoBuf.classLocalVariable;
-            b41.h(c8441c, "JvmProtoBuf.classLocalVariable");
-            ProtoBuf$Property protoBuf$Property = (ProtoBuf$Property) fx1.b(t, c8441c, i);
+            GeneratedMessageLite.c<ProtoBuf$Class, List<ProtoBuf$Property>> cVar = JvmProtoBuf.classLocalVariable;
+            b41.h(cVar, "JvmProtoBuf.classLocalVariable");
+            ProtoBuf$Property protoBuf$Property = (ProtoBuf$Property) fx1.b(t, cVar, i);
             if (protoBuf$Property != null) {
                 return (PropertyDescriptor) zv2.h(getJClass(), protoBuf$Property, deserializedClassDescriptor.s().g(), deserializedClassDescriptor.s().j(), deserializedClassDescriptor.v(), KClassImpl$getLocalProperty$2$1$1.INSTANCE);
             }
@@ -800,13 +800,13 @@ public final class KClassImpl<T> extends KDeclarationContainerImpl implements KC
         }
         String b = w.i().b();
         b41.h(b, "classId.relativeClassName.asString()");
-        y = C8604o.y(b, '.', '$', false, 4, null);
+        y = o.y(b, '.', '$', false, 4, null);
         sb.append(str + y);
         return sb.toString();
     }
 
     @NotNull
-    public final x02.C9895b<KClassImpl<T>.Data> x() {
+    public final x02.b<KClassImpl<T>.Data> x() {
         return this.c;
     }
 

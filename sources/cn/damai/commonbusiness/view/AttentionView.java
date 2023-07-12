@@ -88,13 +88,12 @@ public class AttentionView extends LinearLayout implements View.OnClickListener 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.view.AttentionView$a  reason: invalid class name */
     /* loaded from: classes.dex */
-    public class animationAnimation$AnimationListenerC0951a implements Animation.AnimationListener {
+    public class a implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
 
-        animationAnimation$AnimationListenerC0951a(View view) {
+        a(View view) {
             this.a = view;
         }
 
@@ -127,12 +126,11 @@ public class AttentionView extends LinearLayout implements View.OnClickListener 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.view.AttentionView$b  reason: invalid class name */
     /* loaded from: classes.dex */
-    public class animationAnimation$AnimationListenerC0952b implements Animation.AnimationListener {
+    public class b implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        animationAnimation$AnimationListenerC0952b() {
+        b() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -359,7 +357,7 @@ public class AttentionView extends LinearLayout implements View.OnClickListener 
         Animation loadAnimation = AnimationUtils.loadAnimation(this.mContext, R$anim.rotate_right);
         LinearInterpolator linearInterpolator = new LinearInterpolator();
         loadAnimation.setInterpolator(linearInterpolator);
-        loadAnimation.setAnimationListener(new animationAnimation$AnimationListenerC0951a(view));
+        loadAnimation.setAnimationListener(new a(view));
         view.startAnimation(loadAnimation);
         if (this.animView == null) {
             return;
@@ -371,7 +369,7 @@ public class AttentionView extends LinearLayout implements View.OnClickListener 
         animationSet.setDuration(500L);
         animationSet.addAnimation(loadAnimation2);
         this.animView.startAnimation(animationSet);
-        animationSet.setAnimationListener(new animationAnimation$AnimationListenerC0952b());
+        animationSet.setAnimationListener(new b());
     }
 
     public void addAttentionView(AttentionView attentionView) {

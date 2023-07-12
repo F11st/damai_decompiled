@@ -2,9 +2,7 @@ package tb;
 
 import android.content.Context;
 import android.text.TextUtils;
-import anet.channel.util.C0241c;
 import cn.damai.common.AppConfig;
-import cn.damai.common.user.C0528b;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -15,7 +13,7 @@ import org.android.agoo.common.AgooConstants;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
-public class ml extends C0528b {
+public class ml extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange;
     private static ml b;
 
@@ -73,7 +71,7 @@ public class ml extends C0528b {
         hashMap.put("utdid", UTDevice.getUtdid(context));
         hashMap.put("model", Build.getMODEL());
         hashMap.put("version", AppConfig.q());
-        hashMap.put("deviceid", C0241c.c(context));
+        hashMap.put("deviceid", anet.channel.util.c.c(context));
         hashMap.put(AgooConstants.MESSAGE_FLAG, str2);
         hashMap.put("type", str);
         hashMap.put("errorCode", str3);

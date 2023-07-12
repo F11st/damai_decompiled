@@ -1,7 +1,6 @@
 package tb;
 
 import kotlin.jvm.JvmField;
-import kotlinx.coroutines.channels.C8648b;
 import kotlinx.coroutines.channels.ClosedReceiveChannelException;
 import kotlinx.coroutines.channels.ClosedSendChannelException;
 import kotlinx.coroutines.channels.ReceiveOrClosed;
@@ -23,13 +22,13 @@ public final class zj<E> extends ha2 implements ReceiveOrClosed<E> {
     @NotNull
     public final Throwable A() {
         Throwable th = this.d;
-        return th != null ? th : new ClosedReceiveChannelException(C8648b.DEFAULT_CLOSE_MESSAGE);
+        return th != null ? th : new ClosedReceiveChannelException(kotlinx.coroutines.channels.b.DEFAULT_CLOSE_MESSAGE);
     }
 
     @NotNull
     public final Throwable B() {
         Throwable th = this.d;
-        return th != null ? th : new ClosedSendChannelException(C8648b.DEFAULT_CLOSE_MESSAGE);
+        return th != null ? th : new ClosedSendChannelException(kotlinx.coroutines.channels.b.DEFAULT_CLOSE_MESSAGE);
     }
 
     @Override // kotlinx.coroutines.channels.ReceiveOrClosed
@@ -48,10 +47,10 @@ public final class zj<E> extends ha2 implements ReceiveOrClosed<E> {
 
     @Override // kotlinx.coroutines.channels.ReceiveOrClosed
     @Nullable
-    public kj2 tryResumeReceive(E e, @Nullable ma1.C9437d c9437d) {
+    public kj2 tryResumeReceive(E e, @Nullable ma1.d dVar) {
         kj2 kj2Var = cg.RESUME_TOKEN;
-        if (c9437d != null) {
-            c9437d.d();
+        if (dVar != null) {
+            dVar.d();
         }
         return kj2Var;
     }
@@ -65,10 +64,10 @@ public final class zj<E> extends ha2 implements ReceiveOrClosed<E> {
 
     @Override // tb.ha2
     @Nullable
-    public kj2 w(@Nullable ma1.C9437d c9437d) {
+    public kj2 w(@Nullable ma1.d dVar) {
         kj2 kj2Var = cg.RESUME_TOKEN;
-        if (c9437d != null) {
-            c9437d.d();
+        if (dVar != null) {
+            dVar.d();
         }
         return kj2Var;
     }

@@ -8,7 +8,6 @@ import android.os.Build;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import com.alimm.xadsdk.request.builder.IRequestConst;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import io.flutter.wpkbridge.WPKFactory;
 import java.io.BufferedReader;
 import java.io.Closeable;
@@ -41,12 +40,11 @@ public class bj {
     public static final Pattern c = Pattern.compile("(\\<\\?xml\\s+.*?encoding\\s*=[^a-zA-Z0-9]*)([-a-zA-Z0-9]+)(.*)", 2);
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.bj$a */
     /* loaded from: classes11.dex */
-    public static final class C7609a extends FilterInputStream {
+    public static final class a extends FilterInputStream {
         private boolean a;
 
-        public C7609a(InputStream inputStream) {
+        public a(InputStream inputStream) {
             super(inputStream);
         }
 
@@ -62,9 +60,8 @@ public class bj {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.bj$b */
     /* loaded from: classes11.dex */
-    public static class C7610b {
+    public static class b {
         public int a;
 
         /* renamed from: a  reason: collision with other field name */
@@ -146,7 +143,7 @@ public class bj {
                         }
                     }
                     bhVar.a = m694a.getResponseCode();
-                    AbstractC7535b.m586a("Http POST Response Code: " + bhVar.a);
+                    com.xiaomi.channel.commonutils.logger.b.m586a("Http POST Response Code: " + bhVar.a);
                     while (true) {
                         String headerFieldKey = m694a.getHeaderFieldKey(i);
                         String headerField = m694a.getHeaderField(i);
@@ -154,14 +151,14 @@ public class bj {
                             try {
                                 break;
                             } catch (IOException unused) {
-                                bufferedReader = new BufferedReader(new InputStreamReader(new C7609a(m694a.getErrorStream())));
+                                bufferedReader = new BufferedReader(new InputStreamReader(new a(m694a.getErrorStream())));
                             }
                         } else {
                             bhVar.f131a.put(headerFieldKey, headerField);
                             i = i + 1 + 1;
                         }
                     }
-                    bufferedReader = new BufferedReader(new InputStreamReader(new C7609a(m694a.getInputStream())));
+                    bufferedReader = new BufferedReader(new InputStreamReader(new a(m694a.getInputStream())));
                     try {
                         StringBuffer stringBuffer = new StringBuffer();
                         String property = System.getProperty("line.separator");
@@ -171,8 +168,8 @@ public class bj {
                         }
                         bhVar.f130a = stringBuffer.toString();
                         bufferedReader.close();
-                        C7594ab.a((Closeable) null);
-                        C7594ab.a((Closeable) null);
+                        ab.a((Closeable) null);
+                        ab.a((Closeable) null);
                         return bhVar;
                     } catch (IOException e2) {
                         e = e2;
@@ -188,8 +185,8 @@ public class bj {
                 e = e3;
             }
         } catch (Throwable th4) {
-            C7594ab.a((Closeable) null);
-            C7594ab.a((Closeable) str2);
+            ab.a((Closeable) null);
+            ab.a((Closeable) str2);
             throw th4;
         }
     }
@@ -202,7 +199,7 @@ public class bj {
         return a(context, url, z, str, str2, null, null);
     }
 
-    public static InputStream a(Context context, URL url, boolean z, String str, String str2, Map<String, String> map, C7610b c7610b) {
+    public static InputStream a(Context context, URL url, boolean z, String str, String str2, Map<String, String> map, b bVar) {
         if (context != null) {
             if (url != null) {
                 URL url2 = !z ? new URL(a(url.toString())) : url;
@@ -222,10 +219,10 @@ public class bj {
                             m694a.setRequestProperty(str3, map.get(str3));
                         }
                     }
-                    if (c7610b != null && (url.getProtocol().equals("http") || url.getProtocol().equals("https"))) {
-                        c7610b.a = m694a.getResponseCode();
-                        if (c7610b.f132a == null) {
-                            c7610b.f132a = new HashMap();
+                    if (bVar != null && (url.getProtocol().equals("http") || url.getProtocol().equals("https"))) {
+                        bVar.a = m694a.getResponseCode();
+                        if (bVar.f132a == null) {
+                            bVar.f132a = new HashMap();
                         }
                         int i = 0;
                         while (true) {
@@ -235,12 +232,12 @@ public class bj {
                                 break;
                             }
                             if (!TextUtils.isEmpty(headerFieldKey) && !TextUtils.isEmpty(headerField)) {
-                                c7610b.f132a.put(headerFieldKey, headerField);
+                                bVar.f132a.put(headerFieldKey, headerField);
                             }
                             i++;
                         }
                     }
-                    return new C7609a(m694a.getInputStream());
+                    return new a(m694a.getInputStream());
                 } catch (IOException e) {
                     throw new IOException("IOException:" + e.getClass().getSimpleName());
                 } catch (Throwable th) {
@@ -291,14 +288,14 @@ public class bj {
             while (true) {
                 int read = bufferedReader.read(cArr);
                 if (-1 == read) {
-                    C7594ab.a(inputStream);
+                    ab.a(inputStream);
                     return sb.toString();
                 }
                 sb.append(cArr, 0, read);
             }
         } catch (Throwable th2) {
             th = th2;
-            C7594ab.a(inputStream);
+            ab.a(inputStream);
             throw th;
         }
     }
@@ -356,14 +353,14 @@ public class bj {
                     dataOutputStream.writeBytes(SocketClient.NETASCII_EOL);
                     dataOutputStream.flush();
                     StringBuffer stringBuffer = new StringBuffer();
-                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new C7609a(httpURLConnection.getInputStream())));
+                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new a(httpURLConnection.getInputStream())));
                     while (true) {
                         try {
                             String readLine = bufferedReader.readLine();
                             if (readLine == null) {
                                 String stringBuffer2 = stringBuffer.toString();
-                                C7594ab.a(fileInputStream);
-                                C7594ab.a(bufferedReader);
+                                ab.a(fileInputStream);
+                                ab.a(bufferedReader);
                                 return stringBuffer2;
                             }
                             stringBuffer.append(readLine);
@@ -386,8 +383,8 @@ public class bj {
                 th = th3;
             }
         } catch (Throwable th4) {
-            C7594ab.a((Closeable) null);
-            C7594ab.a((Closeable) file);
+            ab.a((Closeable) null);
+            ab.a((Closeable) file);
             throw th4;
         }
     }
@@ -405,8 +402,8 @@ public class bj {
                     stringBuffer.append(URLEncoder.encode(entry.getValue(), "UTF-8"));
                     stringBuffer.append("&");
                 } catch (UnsupportedEncodingException e) {
-                    AbstractC7535b.m586a("Failed to convert from params map to string: " + e);
-                    AbstractC7535b.m586a("map: " + map.toString());
+                    com.xiaomi.channel.commonutils.logger.b.m586a("Failed to convert from params map to string: " + e);
+                    com.xiaomi.channel.commonutils.logger.b.m586a("map: " + map.toString());
                     return null;
                 }
             }

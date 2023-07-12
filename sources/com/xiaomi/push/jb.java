@@ -31,24 +31,23 @@ public class jb extends jf {
     private byte[] h;
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.jb$a */
     /* loaded from: classes11.dex */
-    public static class C7681a implements jh {
+    public static class a implements jh {
         protected int a;
 
         /* renamed from: a  reason: collision with other field name */
         protected boolean f799a;
         protected boolean b;
 
-        public C7681a() {
+        public a() {
             this(false, true);
         }
 
-        public C7681a(boolean z, boolean z2) {
+        public a(boolean z, boolean z2) {
             this(z, z2, 0);
         }
 
-        public C7681a(boolean z, boolean z2, int i) {
+        public a(boolean z, boolean z2, int i) {
             this.f799a = false;
             this.b = true;
             this.f799a = z;

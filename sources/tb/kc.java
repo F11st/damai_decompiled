@@ -22,52 +22,51 @@ public class kc {
     private Map<String, String> l;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kc$b */
     /* loaded from: classes7.dex */
-    public static class C9346b {
+    public static class b {
         private static transient /* synthetic */ IpChange $ipChange;
         public kc a = new kc();
 
-        public C9346b a(String str) {
+        public b a(String str) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1073511905")) {
-                return (C9346b) ipChange.ipc$dispatch("1073511905", new Object[]{this, str});
+                return (b) ipChange.ipc$dispatch("1073511905", new Object[]{this, str});
             }
             this.a.i = str;
             return this;
         }
 
-        public C9346b b(boolean z) {
+        public b b(boolean z) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-996375035")) {
-                return (C9346b) ipChange.ipc$dispatch("-996375035", new Object[]{this, Boolean.valueOf(z)});
+                return (b) ipChange.ipc$dispatch("-996375035", new Object[]{this, Boolean.valueOf(z)});
             }
             this.a.k = z;
             return this;
         }
 
-        public C9346b c(String str) {
+        public b c(String str) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1935391420")) {
-                return (C9346b) ipChange.ipc$dispatch("-1935391420", new Object[]{this, str});
+                return (b) ipChange.ipc$dispatch("-1935391420", new Object[]{this, str});
             }
             this.a.g = str;
             return this;
         }
 
-        public C9346b d(Map<String, String> map) {
+        public b d(Map<String, String> map) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "302487874")) {
-                return (C9346b) ipChange.ipc$dispatch("302487874", new Object[]{this, map});
+                return (b) ipChange.ipc$dispatch("302487874", new Object[]{this, map});
             }
             this.a.l = map;
             return this;
         }
 
-        public C9346b e(String str) {
+        public b e(String str) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "908711865")) {
-                return (C9346b) ipChange.ipc$dispatch("908711865", new Object[]{this, str});
+                return (b) ipChange.ipc$dispatch("908711865", new Object[]{this, str});
             }
             this.a.h = str;
             return this;

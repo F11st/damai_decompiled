@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import cn.damai.comment.ui.CommentDetailActivity;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.homepage.R$id;
@@ -177,11 +177,11 @@ public class MessageCommentFragment extends DamaiBaseMvpFragment<FollowCommentPr
                 if (TextUtils.isEmpty(str)) {
                     return;
                 }
-                C0529c.e().x(te1.m().i(z20.E(), str, str2, i));
+                c.e().x(te1.m().i(z20.E(), str, str2, i));
                 startCommentDetailActivity(str);
             } else if (TextUtils.isEmpty(actionValue)) {
             } else {
-                C0529c.e().x(te1.m().i(z20.E(), actionValue, "", i));
+                c.e().x(te1.m().i(z20.E(), actionValue, "", i));
                 startCommentDetailActivity(actionValue);
             }
         }

@@ -5,9 +5,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.View;
 import android.widget.FrameLayout;
-import com.amap.api.mapcore.util.C4640t;
 import com.amap.api.mapcore.util.dz;
 import com.amap.api.mapcore.util.eq;
+import com.amap.api.mapcore.util.t;
 import java.io.FileInputStream;
 import java.io.InputStream;
 
@@ -29,7 +29,7 @@ public final class BitmapDescriptorFactory {
 
     public static BitmapDescriptor defaultMarker() {
         try {
-            return fromAsset(dz.EnumC4527a.marker_default.name() + ".png");
+            return fromAsset(dz.a.marker_default.name() + ".png");
         } catch (Throwable th) {
             eq.a(th);
             return null;
@@ -129,7 +129,7 @@ public final class BitmapDescriptorFactory {
     }
 
     public static Context getContext() {
-        return C4640t.a;
+        return t.a;
     }
 
     public static BitmapDescriptor defaultMarker(float f) {

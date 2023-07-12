@@ -1,8 +1,8 @@
 package com.taobao.monitor.impl.data.block;
 
-import com.taobao.application.common.C6673b;
 import com.taobao.application.common.IAppPreferences;
-import com.taobao.application.common.impl.C6674a;
+import com.taobao.application.common.b;
+import com.taobao.application.common.impl.a;
 import java.util.HashMap;
 import org.json.JSONObject;
 import tb.a80;
@@ -26,11 +26,11 @@ class BlockWatcher$1 implements Runnable {
 
     @Override // java.lang.Runnable
     public void run() {
-        IAppPreferences d = C6673b.d();
+        IAppPreferences d = b.d();
         HashMap hashMap = new HashMap();
         hashMap.put("blockTime", Long.valueOf(this.val$blockTime));
         hashMap.put("mainThreadStackTrace", this.val$sb.toString());
-        hashMap.put("topActivity", m3.b(C6674a.g().getTopActivity()));
+        hashMap.put("topActivity", m3.b(a.g().getTopActivity()));
         hashMap.put("deviceLevel", Integer.valueOf(d.getInt("deviceLevel", -1)));
         hashMap.put("gcCount", Integer.valueOf(this.val$gc));
         hashMap.put("activeThread", Integer.valueOf(Thread.activeCount()));

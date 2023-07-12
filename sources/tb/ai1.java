@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
-import cn.damai.common.image.C0504a;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.musicfestival.adapter.OnMarkListener;
@@ -23,7 +22,7 @@ import java.util.List;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
-public class ai1 extends MusicFestivalMapView.AbstractC1484b<AbstractC8911a> {
+public class ai1 extends MusicFestivalMapView.b<a> {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final int CLICK_TYPE_CLOSE = 2;
     public static final int CLICK_TYPE_ITEM = 1;
@@ -34,10 +33,9 @@ public class ai1 extends MusicFestivalMapView.AbstractC1484b<AbstractC8911a> {
     private boolean f;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ai1$a */
     /* loaded from: classes6.dex */
-    public static abstract class AbstractC8911a<T> extends MusicFestivalMapView.C1487e {
-        public AbstractC8911a(View view) {
+    public static abstract class a<T> extends MusicFestivalMapView.e {
+        public a(View view) {
             super(view);
         }
 
@@ -45,9 +43,8 @@ public class ai1 extends MusicFestivalMapView.AbstractC1484b<AbstractC8911a> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ai1$b */
     /* loaded from: classes6.dex */
-    public class View$OnClickListenerC8912b extends AbstractC8911a<CityFilterBean> implements View.OnClickListener {
+    public class b extends a<CityFilterBean> implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private RoundImageView d;
         private TextView e;
@@ -56,53 +53,52 @@ public class ai1 extends MusicFestivalMapView.AbstractC1484b<AbstractC8911a> {
         private int h;
 
         /* compiled from: Taobao */
-        /* renamed from: tb.ai1$b$a */
         /* loaded from: classes6.dex */
-        public class C8913a implements IImageLoader.IImageSuccListener {
+        public class a implements IImageLoader.IImageSuccListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C8913a() {
+            a() {
             }
 
             @Override // cn.damai.uikit.image.IImageLoader.IImageSuccListener
-            public void onSuccess(IImageLoader.C2496b c2496b) {
+            public void onSuccess(IImageLoader.b bVar) {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "-358501162")) {
-                    ipChange.ipc$dispatch("-358501162", new Object[]{this, c2496b});
+                    ipChange.ipc$dispatch("-358501162", new Object[]{this, bVar});
                 } else {
-                    View$OnClickListenerC8912b.this.d.setImageDrawable(c2496b.a);
+                    b.this.d.setImageDrawable(bVar.a);
                 }
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.ai1$b$b */
+        /* renamed from: tb.ai1$b$b  reason: collision with other inner class name */
         /* loaded from: classes6.dex */
-        public class C8914b implements IImageLoader.IImageFailListener {
+        public class C0448b implements IImageLoader.IImageFailListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C8914b() {
+            C0448b() {
             }
 
             @Override // cn.damai.uikit.image.IImageLoader.IImageFailListener
-            public void onFail(IImageLoader.C2495a c2495a) {
+            public void onFail(IImageLoader.a aVar) {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "-246133313")) {
-                    ipChange.ipc$dispatch("-246133313", new Object[]{this, c2495a});
+                    ipChange.ipc$dispatch("-246133313", new Object[]{this, aVar});
                 } else {
-                    View$OnClickListenerC8912b.this.d.setImageDrawable(null);
+                    b.this.d.setImageDrawable(null);
                 }
             }
         }
 
-        public View$OnClickListenerC8912b(View view, OnMarkListener<CityMusicBean, CityFilterBean> onMarkListener) {
+        public b(View view, OnMarkListener<CityMusicBean, CityFilterBean> onMarkListener) {
             super(view);
             this.d = (RoundImageView) view.findViewById(R$id.mark_s4_filter_icon);
             this.e = (TextView) view.findViewById(R$id.mark_s4_filter_title);
             this.f = onMarkListener;
         }
 
-        @Override // tb.ai1.AbstractC8911a
+        @Override // tb.ai1.a
         /* renamed from: c */
         public void a(CityFilterBean cityFilterBean, int i) {
             IpChange ipChange = $ipChange;
@@ -114,7 +110,7 @@ public class ai1 extends MusicFestivalMapView.AbstractC1484b<AbstractC8911a> {
             this.h = i;
             MusicFestivalMapView.MfmLayoutParams.setLocationAndZ(this.c.getLayoutParams(), cityFilterBean.xRatioInWidth, cityFilterBean.yRatioInHeight, 0, m62.a(mu0.a(), 10.0f));
             this.e.setText(cityFilterBean.title);
-            C0504a.b().load(cityFilterBean.iconUrl, ai1.this.c, ai1.this.c, new C8913a(), new C8914b());
+            cn.damai.common.image.a.b().load(cityFilterBean.iconUrl, ai1.this.c, ai1.this.c, new a(), new C0448b());
             this.c.setOnClickListener(this);
         }
 
@@ -135,9 +131,8 @@ public class ai1 extends MusicFestivalMapView.AbstractC1484b<AbstractC8911a> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ai1$c */
     /* loaded from: classes6.dex */
-    public static class C8915c extends AbstractC8911a<CityMusicBean> {
+    public static class c extends a<CityMusicBean> {
         private static transient /* synthetic */ IpChange $ipChange;
         private View d;
         private View e;
@@ -148,7 +143,7 @@ public class ai1 extends MusicFestivalMapView.AbstractC1484b<AbstractC8911a> {
         public CityMusicBean j;
         public int k;
 
-        public C8915c(View view, OnMarkListener<CityMusicBean, CityFilterBean> onMarkListener) {
+        public c(View view, OnMarkListener<CityMusicBean, CityFilterBean> onMarkListener) {
             super(view);
             this.i = new ArrayList();
             this.d = view.findViewById(R$id.mark_s1_layout_normal);
@@ -176,7 +171,7 @@ public class ai1 extends MusicFestivalMapView.AbstractC1484b<AbstractC8911a> {
             }
         }
 
-        @Override // tb.ai1.AbstractC8911a
+        @Override // tb.ai1.a
         /* renamed from: b */
         public void a(CityMusicBean cityMusicBean, int i) {
             int i2;
@@ -211,7 +206,7 @@ public class ai1 extends MusicFestivalMapView.AbstractC1484b<AbstractC8911a> {
         this.c = m62.a(context, 16.0f);
     }
 
-    @Override // cn.damai.musicfestival.view.MusicFestivalMapView.AbstractC1484b
+    @Override // cn.damai.musicfestival.view.MusicFestivalMapView.b
     public int b() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1305532109")) {
@@ -224,7 +219,7 @@ public class ai1 extends MusicFestivalMapView.AbstractC1484b<AbstractC8911a> {
         return list.size();
     }
 
-    @Override // cn.damai.musicfestival.view.MusicFestivalMapView.AbstractC1484b
+    @Override // cn.damai.musicfestival.view.MusicFestivalMapView.b
     public int c(int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-86269196")) {
@@ -242,29 +237,29 @@ public class ai1 extends MusicFestivalMapView.AbstractC1484b<AbstractC8911a> {
         return AndroidInstantRuntime.support(ipChange, "610849388") ? ((Boolean) ipChange.ipc$dispatch("610849388", new Object[]{this})).booleanValue() : this.f;
     }
 
-    @Override // cn.damai.musicfestival.view.MusicFestivalMapView.AbstractC1484b
+    @Override // cn.damai.musicfestival.view.MusicFestivalMapView.b
     /* renamed from: j */
-    public void f(@NonNull AbstractC8911a abstractC8911a, int i) {
+    public void f(@NonNull a aVar, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1845551376")) {
-            ipChange.ipc$dispatch("1845551376", new Object[]{this, abstractC8911a, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("1845551376", new Object[]{this, aVar, Integer.valueOf(i)});
         } else {
-            abstractC8911a.a(this.e.get(i), i);
+            aVar.a(this.e.get(i), i);
         }
     }
 
-    @Override // cn.damai.musicfestival.view.MusicFestivalMapView.AbstractC1484b
+    @Override // cn.damai.musicfestival.view.MusicFestivalMapView.b
     /* renamed from: k */
-    public AbstractC8911a g(@NonNull ViewGroup viewGroup, int i) {
+    public a g(@NonNull ViewGroup viewGroup, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-186175962")) {
-            return (AbstractC8911a) ipChange.ipc$dispatch("-186175962", new Object[]{this, viewGroup, Integer.valueOf(i)});
+            return (a) ipChange.ipc$dispatch("-186175962", new Object[]{this, viewGroup, Integer.valueOf(i)});
         }
         if (i == 136) {
-            return new C8915c(LayoutInflater.from(this.b).inflate(R$layout.item_city_map_mark, viewGroup, false), this.d);
+            return new c(LayoutInflater.from(this.b).inflate(R$layout.item_city_map_mark, viewGroup, false), this.d);
         }
         if (i == 153) {
-            return new View$OnClickListenerC8912b(LayoutInflater.from(this.b).inflate(R$layout.item_city_mark_filter_city, viewGroup, false), this.d);
+            return new b(LayoutInflater.from(this.b).inflate(R$layout.item_city_mark_filter_city, viewGroup, false), this.d);
         }
         return null;
     }

@@ -18,12 +18,11 @@ public class FactRelativeLayout extends RelativeLayout {
     private View.OnClickListener mOuterClickListener;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.nodoubleclick.FactRelativeLayout$a */
     /* loaded from: classes8.dex */
-    public class CountDownTimerC2523a extends CountDownTimer {
+    public class a extends CountDownTimer {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        CountDownTimerC2523a(long j, long j2) {
+        a(long j, long j2) {
             super(j, j2);
         }
 
@@ -47,12 +46,11 @@ public class FactRelativeLayout extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.nodoubleclick.FactRelativeLayout$b */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC2524b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2524b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -75,8 +73,8 @@ public class FactRelativeLayout extends RelativeLayout {
         super(context);
         this.mOuterClickListener = null;
         this.mIsSleep = false;
-        this.mClickTimer = new CountDownTimerC2523a(500L, 500L);
-        this.mInternalClick = new View$OnClickListenerC2524b();
+        this.mClickTimer = new a(500L, 500L);
+        this.mInternalClick = new b();
     }
 
     @Override // android.view.ViewGroup, android.view.View
@@ -105,15 +103,15 @@ public class FactRelativeLayout extends RelativeLayout {
         super(context, attributeSet);
         this.mOuterClickListener = null;
         this.mIsSleep = false;
-        this.mClickTimer = new CountDownTimerC2523a(500L, 500L);
-        this.mInternalClick = new View$OnClickListenerC2524b();
+        this.mClickTimer = new a(500L, 500L);
+        this.mInternalClick = new b();
     }
 
     public FactRelativeLayout(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         this.mOuterClickListener = null;
         this.mIsSleep = false;
-        this.mClickTimer = new CountDownTimerC2523a(500L, 500L);
-        this.mInternalClick = new View$OnClickListenerC2524b();
+        this.mClickTimer = new a(500L, 500L);
+        this.mInternalClick = new b();
     }
 }

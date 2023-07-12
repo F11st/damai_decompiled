@@ -1,14 +1,14 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8148c;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeSource;
+import io.reactivex.c;
 import io.reactivex.disposables.Disposable;
 import java.util.concurrent.atomic.AtomicReference;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeCache<T> extends AbstractC8148c<T> implements MaybeObserver<T> {
+public final class MaybeCache<T> extends c<T> implements MaybeObserver<T> {
     static final CacheDisposable[] EMPTY = new CacheDisposable[0];
     static final CacheDisposable[] TERMINATED = new CacheDisposable[0];
     Throwable error;
@@ -134,7 +134,7 @@ public final class MaybeCache<T> extends AbstractC8148c<T> implements MaybeObser
         } while (!this.observers.compareAndSet(cacheDisposableArr, cacheDisposableArr2));
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         CacheDisposable<T> cacheDisposable = new CacheDisposable<>(maybeObserver, this);
         maybeObserver.onSubscribe(cacheDisposable);

@@ -4,7 +4,6 @@ import com.google.common.annotations.Beta;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Predicate;
 import com.google.common.hash.BloomFilterStrategies;
-import com.google.common.math.C5235a;
 import com.google.common.primitives.SignedBytes;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import java.io.DataInputStream;
@@ -23,7 +22,7 @@ import tb.nm1;
 @Beta
 /* loaded from: classes10.dex */
 public final class BloomFilter<T> implements Predicate<T>, Serializable {
-    private final BloomFilterStrategies.C5214a bits;
+    private final BloomFilterStrategies.a bits;
     private final Funnel<? super T> funnel;
     private final int numHashFunctions;
     private final Strategy strategy;
@@ -38,14 +37,14 @@ public final class BloomFilter<T> implements Predicate<T>, Serializable {
         final Strategy strategy;
 
         SerialForm(BloomFilter<T> bloomFilter) {
-            this.data = BloomFilterStrategies.C5214a.g(((BloomFilter) bloomFilter).bits.a);
+            this.data = BloomFilterStrategies.a.g(((BloomFilter) bloomFilter).bits.a);
             this.numHashFunctions = ((BloomFilter) bloomFilter).numHashFunctions;
             this.funnel = ((BloomFilter) bloomFilter).funnel;
             this.strategy = ((BloomFilter) bloomFilter).strategy;
         }
 
         Object readResolve() {
-            return new BloomFilter(new BloomFilterStrategies.C5214a(this.data), this.numHashFunctions, this.funnel, this.strategy);
+            return new BloomFilter(new BloomFilterStrategies.a(this.data), this.numHashFunctions, this.funnel, this.strategy);
         }
     }
 
@@ -53,11 +52,11 @@ public final class BloomFilter<T> implements Predicate<T>, Serializable {
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
     public interface Strategy extends Serializable {
-        <T> boolean mightContain(T t, Funnel<? super T> funnel, int i, BloomFilterStrategies.C5214a c5214a);
+        <T> boolean mightContain(T t, Funnel<? super T> funnel, int i, BloomFilterStrategies.a aVar);
 
         int ordinal();
 
-        <T> boolean put(T t, Funnel<? super T> funnel, int i, BloomFilterStrategies.C5214a c5214a);
+        <T> boolean put(T t, Funnel<? super T> funnel, int i, BloomFilterStrategies.a aVar);
     }
 
     public static <T> BloomFilter<T> create(Funnel<? super T> funnel, int i, double d) {
@@ -96,7 +95,7 @@ public final class BloomFilter<T> implements Predicate<T>, Serializable {
                         for (int i3 = 0; i3 < readInt; i3++) {
                             jArr[i3] = dataInputStream.readLong();
                         }
-                        return new BloomFilter<>(new BloomFilterStrategies.C5214a(jArr), i2, funnel, bloomFilterStrategies);
+                        return new BloomFilter<>(new BloomFilterStrategies.a(jArr), i2, funnel, bloomFilterStrategies);
                     } catch (RuntimeException e) {
                         e = e;
                         b = readByte;
@@ -132,7 +131,7 @@ public final class BloomFilter<T> implements Predicate<T>, Serializable {
 
     public long approximateElementCount() {
         double b = this.bits.b();
-        return C5235a.c(((-Math.log1p(-(this.bits.a() / b))) * b) / this.numHashFunctions, RoundingMode.HALF_UP);
+        return com.google.common.math.a.c(((-Math.log1p(-(this.bits.a() / b))) * b) / this.numHashFunctions, RoundingMode.HALF_UP);
     }
 
     @VisibleForTesting
@@ -200,10 +199,10 @@ public final class BloomFilter<T> implements Predicate<T>, Serializable {
         }
     }
 
-    private BloomFilter(BloomFilterStrategies.C5214a c5214a, int i, Funnel<? super T> funnel, Strategy strategy) {
+    private BloomFilter(BloomFilterStrategies.a aVar, int i, Funnel<? super T> funnel, Strategy strategy) {
         du1.f(i > 0, "numHashFunctions (%s) must be > 0", i);
         du1.f(i <= 255, "numHashFunctions (%s) must be <= 255", i);
-        this.bits = (BloomFilterStrategies.C5214a) du1.p(c5214a);
+        this.bits = (BloomFilterStrategies.a) du1.p(aVar);
         this.numHashFunctions = i;
         this.funnel = (Funnel) du1.p(funnel);
         this.strategy = (Strategy) du1.p(strategy);
@@ -226,7 +225,7 @@ public final class BloomFilter<T> implements Predicate<T>, Serializable {
         }
         long optimalNumOfBits = optimalNumOfBits(j, d);
         try {
-            return new BloomFilter<>(new BloomFilterStrategies.C5214a(optimalNumOfBits), optimalNumOfHashFunctions(j, optimalNumOfBits), funnel, strategy);
+            return new BloomFilter<>(new BloomFilterStrategies.a(optimalNumOfBits), optimalNumOfHashFunctions(j, optimalNumOfBits), funnel, strategy);
         } catch (IllegalArgumentException e) {
             throw new IllegalArgumentException("Could not create BloomFilter of " + optimalNumOfBits + " bits", e);
         }

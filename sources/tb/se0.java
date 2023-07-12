@@ -29,7 +29,7 @@ final class se0 implements AnnotationDescriptor {
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationDescriptor
     @Nullable
     public hp0 getFqName() {
-        return AnnotationDescriptor.C8301a.a(this);
+        return AnnotationDescriptor.a.a(this);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationDescriptor

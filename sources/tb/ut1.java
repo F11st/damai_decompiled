@@ -1,7 +1,6 @@
 package tb;
 
 import com.taobao.power_image.dispatcher.PowerImageDispatcher;
-import com.taobao.power_image.request.C6871a;
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodCall;
@@ -16,21 +15,19 @@ public class ut1 implements FlutterPlugin, MethodChannel.MethodCallHandler {
     private EventChannel b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ut1$b */
     /* loaded from: classes11.dex */
-    public static class C9791b implements EventChannel.StreamHandler {
+    public static class b implements EventChannel.StreamHandler {
         private EventChannel.EventSink a;
 
         /* JADX INFO: Access modifiers changed from: private */
         /* compiled from: Taobao */
-        /* renamed from: tb.ut1$b$a */
         /* loaded from: classes11.dex */
-        public static class C9792a {
-            private static final C9791b a = new C9791b();
+        public static class a {
+            private static final b a = new b();
         }
 
-        public static C9791b a() {
-            return C9792a.a;
+        public static b a() {
+            return a.a;
         }
 
         public void b(Map<String, Object> map, boolean z) {
@@ -52,7 +49,7 @@ public class ut1 implements FlutterPlugin, MethodChannel.MethodCallHandler {
             this.a = eventSink;
         }
 
-        private C9791b() {
+        private b() {
         }
     }
 
@@ -67,8 +64,8 @@ public class ut1 implements FlutterPlugin, MethodChannel.MethodCallHandler {
         methodChannel.setMethodCallHandler(this);
         EventChannel eventChannel = new EventChannel(flutterPluginBinding.getBinaryMessenger(), "power_image/event");
         this.b = eventChannel;
-        eventChannel.setStreamHandler(C9791b.a());
-        C6871a.c().b(flutterPluginBinding.getTextureRegistry());
+        eventChannel.setStreamHandler(b.a());
+        com.taobao.power_image.request.a.c().b(flutterPluginBinding.getTextureRegistry());
         PowerImageDispatcher.c().d();
     }
 
@@ -84,15 +81,15 @@ public class ut1 implements FlutterPlugin, MethodChannel.MethodCallHandler {
             Object obj = methodCall.arguments;
             if (obj instanceof List) {
                 List<Map<String, Object>> list = (List) obj;
-                result.success(C6871a.c().a(list));
-                C6871a.c().e(list);
+                result.success(com.taobao.power_image.request.a.c().a(list));
+                com.taobao.power_image.request.a.c().e(list);
                 return;
             }
             throw new IllegalArgumentException("startImageRequests require List arguments");
         } else if ("releaseImageRequests".equals(methodCall.method)) {
             Object obj2 = methodCall.arguments;
             if (obj2 instanceof List) {
-                result.success(C6871a.c().d((List) obj2));
+                result.success(com.taobao.power_image.request.a.c().d((List) obj2));
                 return;
             }
             throw new IllegalArgumentException("stopImageRequests require List arguments");

@@ -3,8 +3,8 @@ package kotlin.reflect.jvm.internal.impl.descriptors.impl;
 import com.taobao.android.dinamicx.widget.DXRecyclerLayout;
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.PropertyReference1Impl;
 import kotlin.reflect.KProperty;
@@ -87,17 +87,17 @@ public class LazyPackageViewDescriptorImpl extends t40 implements PackageViewDes
                 int q;
                 List n0;
                 if (LazyPackageViewDescriptorImpl.this.isEmpty()) {
-                    return MemberScope.C8499b.INSTANCE;
+                    return MemberScope.b.INSTANCE;
                 }
                 List<PackageFragmentDescriptor> fragments = LazyPackageViewDescriptorImpl.this.getFragments();
-                q = C8215n.q(fragments, 10);
+                q = n.q(fragments, 10);
                 ArrayList arrayList = new ArrayList(q);
                 for (PackageFragmentDescriptor packageFragmentDescriptor : fragments) {
                     arrayList.add(packageFragmentDescriptor.getMemberScope());
                 }
                 n0 = CollectionsKt___CollectionsKt.n0(arrayList, new qi2(LazyPackageViewDescriptorImpl.this.getModule(), LazyPackageViewDescriptorImpl.this.getFqName()));
-                lh.C9410a c9410a = lh.Companion;
-                return c9410a.a("package view scope for " + LazyPackageViewDescriptorImpl.this.getFqName() + " in " + LazyPackageViewDescriptorImpl.this.getModule().getName(), n0);
+                lh.a aVar = lh.Companion;
+                return aVar.a("package view scope for " + LazyPackageViewDescriptorImpl.this.getFqName() + " in " + LazyPackageViewDescriptorImpl.this.getModule().getName(), n0);
             }
         });
     }

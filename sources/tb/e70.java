@@ -7,7 +7,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.ServiceLoader;
 import java.util.Set;
-import kotlin.collections.C8203e0;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptorWithTypeParameters;
@@ -59,10 +58,9 @@ public class e70 {
     private static final Map<uy2, f70> d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.e70$a */
     /* loaded from: classes3.dex */
-    static class C9073a implements ReceiverValue {
-        C9073a() {
+    static class a implements ReceiverValue {
+        a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.resolve.scopes.receivers.ReceiverValue
@@ -73,10 +71,9 @@ public class e70 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.e70$b */
     /* loaded from: classes3.dex */
-    static class C9074b implements ReceiverValue {
-        C9074b() {
+    static class b implements ReceiverValue {
+        b() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.resolve.scopes.receivers.ReceiverValue
@@ -87,10 +84,9 @@ public class e70 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.e70$c */
     /* loaded from: classes3.dex */
-    static class C9075c implements ReceiverValue {
-        C9075c() {
+    static class c implements ReceiverValue {
+        c() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.resolve.scopes.receivers.ReceiverValue
@@ -101,10 +97,9 @@ public class e70 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.e70$d */
     /* loaded from: classes3.dex */
-    static class C9076d extends m60 {
-        C9076d(uy2 uy2Var) {
+    static class d extends m60 {
+        d(uy2 uy2Var) {
             super(uy2Var);
         }
 
@@ -183,10 +178,9 @@ public class e70 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.e70$e */
     /* loaded from: classes3.dex */
-    static class C9077e extends m60 {
-        C9077e(uy2 uy2Var) {
+    static class e extends m60 {
+        e(uy2 uy2Var) {
             super(uy2Var);
         }
 
@@ -224,10 +218,9 @@ public class e70 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.e70$f */
     /* loaded from: classes3.dex */
-    static class C9078f extends m60 {
-        C9078f(uy2 uy2Var) {
+    static class f extends m60 {
+        f(uy2 uy2Var) {
             super(uy2Var);
         }
 
@@ -301,10 +294,9 @@ public class e70 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.e70$g */
     /* loaded from: classes3.dex */
-    static class C9079g extends m60 {
-        C9079g(uy2 uy2Var) {
+    static class g extends m60 {
+        g(uy2 uy2Var) {
             super(uy2Var);
         }
 
@@ -336,10 +328,9 @@ public class e70 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.e70$h */
     /* loaded from: classes3.dex */
-    static class C9080h extends m60 {
-        C9080h(uy2 uy2Var) {
+    static class h extends m60 {
+        h(uy2 uy2Var) {
             super(uy2Var);
         }
 
@@ -368,10 +359,9 @@ public class e70 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.e70$i */
     /* loaded from: classes3.dex */
-    static class C9081i extends m60 {
-        C9081i(uy2 uy2Var) {
+    static class i extends m60 {
+        i(uy2 uy2Var) {
             super(uy2Var);
         }
 
@@ -400,10 +390,9 @@ public class e70 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.e70$j */
     /* loaded from: classes3.dex */
-    static class C9082j extends m60 {
-        C9082j(uy2 uy2Var) {
+    static class j extends m60 {
+        j(uy2 uy2Var) {
             super(uy2Var);
         }
 
@@ -432,10 +421,9 @@ public class e70 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.e70$k */
     /* loaded from: classes3.dex */
-    static class C9083k extends m60 {
-        C9083k(uy2 uy2Var) {
+    static class k extends m60 {
+        k(uy2 uy2Var) {
             super(uy2Var);
         }
 
@@ -464,10 +452,9 @@ public class e70 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.e70$l */
     /* loaded from: classes3.dex */
-    static class C9084l extends m60 {
-        C9084l(uy2 uy2Var) {
+    static class l extends m60 {
+        l(uy2 uy2Var) {
             super(uy2Var);
         }
 
@@ -496,50 +483,50 @@ public class e70 {
     }
 
     static {
-        Set g;
-        C9076d c9076d = new C9076d(ty2.C9741e.INSTANCE);
-        PRIVATE = c9076d;
-        C9077e c9077e = new C9077e(ty2.C9742f.INSTANCE);
-        PRIVATE_TO_THIS = c9077e;
-        C9078f c9078f = new C9078f(ty2.C9743g.INSTANCE);
-        PROTECTED = c9078f;
-        C9079g c9079g = new C9079g(ty2.C9738b.INSTANCE);
-        INTERNAL = c9079g;
-        C9080h c9080h = new C9080h(ty2.C9744h.INSTANCE);
-        PUBLIC = c9080h;
-        C9081i c9081i = new C9081i(ty2.C9740d.INSTANCE);
-        LOCAL = c9081i;
-        C9082j c9082j = new C9082j(ty2.C9737a.INSTANCE);
-        INHERITED = c9082j;
-        C9083k c9083k = new C9083k(ty2.C9739c.INSTANCE);
-        INVISIBLE_FAKE = c9083k;
-        C9084l c9084l = new C9084l(ty2.C9745i.INSTANCE);
-        UNKNOWN = c9084l;
-        g = C8203e0.g(c9076d, c9077e, c9079g, c9081i);
-        INVISIBLE_FROM_OTHER_MODULES = Collections.unmodifiableSet(g);
-        HashMap e = kk.e(4);
-        e.put(c9077e, 0);
-        e.put(c9076d, 0);
-        e.put(c9079g, 1);
-        e.put(c9078f, 1);
-        e.put(c9080h, 2);
-        a = Collections.unmodifiableMap(e);
-        DEFAULT_VISIBILITY = c9080h;
-        b = new C9073a();
-        ALWAYS_SUITABLE_RECEIVER = new C9074b();
-        FALSE_IF_PROTECTED = new C9075c();
+        Set g2;
+        d dVar = new d(ty2.e.INSTANCE);
+        PRIVATE = dVar;
+        e eVar = new e(ty2.f.INSTANCE);
+        PRIVATE_TO_THIS = eVar;
+        f fVar = new f(ty2.g.INSTANCE);
+        PROTECTED = fVar;
+        g gVar = new g(ty2.b.INSTANCE);
+        INTERNAL = gVar;
+        h hVar = new h(ty2.h.INSTANCE);
+        PUBLIC = hVar;
+        i iVar = new i(ty2.d.INSTANCE);
+        LOCAL = iVar;
+        j jVar = new j(ty2.a.INSTANCE);
+        INHERITED = jVar;
+        k kVar = new k(ty2.c.INSTANCE);
+        INVISIBLE_FAKE = kVar;
+        l lVar = new l(ty2.i.INSTANCE);
+        UNKNOWN = lVar;
+        g2 = kotlin.collections.e0.g(dVar, eVar, gVar, iVar);
+        INVISIBLE_FROM_OTHER_MODULES = Collections.unmodifiableSet(g2);
+        HashMap e2 = kk.e(4);
+        e2.put(eVar, 0);
+        e2.put(dVar, 0);
+        e2.put(gVar, 1);
+        e2.put(fVar, 1);
+        e2.put(hVar, 2);
+        a = Collections.unmodifiableMap(e2);
+        DEFAULT_VISIBILITY = hVar;
+        b = new a();
+        ALWAYS_SUITABLE_RECEIVER = new b();
+        FALSE_IF_PROTECTED = new c();
         Iterator it = ServiceLoader.load(ModuleVisibilityHelper.class, ModuleVisibilityHelper.class.getClassLoader()).iterator();
-        c = it.hasNext() ? (ModuleVisibilityHelper) it.next() : ModuleVisibilityHelper.C8557a.INSTANCE;
+        c = it.hasNext() ? (ModuleVisibilityHelper) it.next() : ModuleVisibilityHelper.a.INSTANCE;
         d = new HashMap();
-        i(c9076d);
-        i(c9077e);
-        i(c9078f);
-        i(c9079g);
-        i(c9080h);
-        i(c9081i);
-        i(c9082j);
-        i(c9083k);
-        i(c9084l);
+        i(dVar);
+        i(eVar);
+        i(fVar);
+        i(gVar);
+        i(hVar);
+        i(iVar);
+        i(jVar);
+        i(kVar);
+        i(lVar);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:26:0x0042  */
@@ -715,7 +702,7 @@ public class e70 {
 
     @Nullable
     public static DeclarationDescriptorWithVisibility e(@Nullable ReceiverValue receiverValue, @NotNull DeclarationDescriptorWithVisibility declarationDescriptorWithVisibility, @NotNull DeclarationDescriptor declarationDescriptor) {
-        DeclarationDescriptorWithVisibility e;
+        DeclarationDescriptorWithVisibility e2;
         if (declarationDescriptorWithVisibility == null) {
             a(8);
         }
@@ -727,10 +714,10 @@ public class e70 {
                 return declarationDescriptorWithVisibility2;
             }
         }
-        if (!(declarationDescriptorWithVisibility instanceof TypeAliasConstructorDescriptor) || (e = e(receiverValue, ((TypeAliasConstructorDescriptor) declarationDescriptorWithVisibility).getUnderlyingConstructorDescriptor(), declarationDescriptor)) == null) {
+        if (!(declarationDescriptorWithVisibility instanceof TypeAliasConstructorDescriptor) || (e2 = e(receiverValue, ((TypeAliasConstructorDescriptor) declarationDescriptorWithVisibility).getUnderlyingConstructorDescriptor(), declarationDescriptor)) == null) {
             return null;
         }
-        return e;
+        return e2;
     }
 
     public static boolean f(@NotNull DeclarationDescriptor declarationDescriptor, @NotNull DeclarationDescriptor declarationDescriptor2) {
@@ -740,9 +727,9 @@ public class e70 {
         if (declarationDescriptor2 == null) {
             a(7);
         }
-        SourceFile j = d70.j(declarationDescriptor2);
-        if (j != SourceFile.NO_SOURCE_FILE) {
-            return j.equals(d70.j(declarationDescriptor));
+        SourceFile j2 = d70.j(declarationDescriptor2);
+        if (j2 != SourceFile.NO_SOURCE_FILE) {
+            return j2.equals(d70.j(declarationDescriptor));
         }
         return false;
     }

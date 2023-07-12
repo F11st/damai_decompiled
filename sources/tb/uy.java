@@ -19,14 +19,13 @@ public class uy {
     private final ConcurrentHashMap<String, zy> a = new ConcurrentHashMap<>();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.uy$a */
     /* loaded from: classes11.dex */
-    public static class C9793a {
+    public static class a {
         public final boolean a;
         public final String b;
         public final az c;
 
-        public C9793a(boolean z, String str, az azVar) {
+        public a(boolean z, String str, az azVar) {
             this.a = z;
             this.b = str;
             this.c = azVar;
@@ -83,24 +82,24 @@ public class uy {
         return !TextUtils.isEmpty(str) && this.a.containsKey(str);
     }
 
-    public C9793a b(String str, byte[] bArr, int i) {
+    public a b(String str, byte[] bArr, int i) {
         this.a.remove(str);
         zy zyVar = new zy();
         zyVar.o(this);
         try {
             zyVar.a(bArr, i);
             this.a.put(str, zyVar);
-            return new C9793a(true, null, null);
+            return new a(true, null, null);
         } catch (Throwable th) {
             th.printStackTrace();
-            return new C9793a(false, th.getMessage(), null);
+            return new a(false, th.getMessage(), null);
         }
     }
 
-    public C9793a f(DXRuntimeContext dXRuntimeContext, hy hyVar, String str, int i, Object obj, Object obj2, Integer num, Map<String, az> map, DXJSMethodProxy dXJSMethodProxy, DXExprDxMethodProxy dXExprDxMethodProxy, DXBuiltinProvider dXBuiltinProvider) {
+    public a f(DXRuntimeContext dXRuntimeContext, hy hyVar, String str, int i, Object obj, Object obj2, Integer num, Map<String, az> map, DXJSMethodProxy dXJSMethodProxy, DXExprDxMethodProxy dXExprDxMethodProxy, DXBuiltinProvider dXBuiltinProvider) {
         zy zyVar = this.a.get(str);
         if (zyVar == null) {
-            return new C9793a(false, "template engine not exist: " + str, null);
+            return new a(false, "template engine not exist: " + str, null);
         }
         try {
             HashMap hashMap = new HashMap();
@@ -125,10 +124,10 @@ public class uy {
             if (map != null) {
                 hashMap.putAll(map);
             }
-            return new C9793a(true, null, zyVar.m(dXRuntimeContext, hyVar, i, hashMap, dXJSMethodProxy, dXExprDxMethodProxy, dXBuiltinProvider));
+            return new a(true, null, zyVar.m(dXRuntimeContext, hyVar, i, hashMap, dXJSMethodProxy, dXExprDxMethodProxy, dXBuiltinProvider));
         } catch (Throwable th) {
             ry.b(th);
-            return new C9793a(false, th.getMessage(), null);
+            return new a(false, th.getMessage(), null);
         }
     }
 }

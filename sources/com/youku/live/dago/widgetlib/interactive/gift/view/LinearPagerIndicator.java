@@ -32,7 +32,7 @@ public class LinearPagerIndicator extends LinearLayout {
         for (int i = 0; i < this.mIndicatorCount; i++) {
             ImageView imageView = new ImageView(getContext());
             imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
-            imageView.setImageResource(R.C7941drawable.dago_pgc_ykl_indicator_selector);
+            imageView.setImageResource(R.drawable.dago_pgc_ykl_indicator_selector);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(-1, -1);
             layoutParams.weight = 1.0f;
             layoutParams.leftMargin = dip2px;

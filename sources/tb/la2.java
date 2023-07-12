@@ -1,7 +1,6 @@
 package tb;
 
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlinx.coroutines.InternalCoroutinesApi;
 import kotlinx.coroutines.channels.SendChannel;
 import kotlinx.coroutines.flow.FlowCollector;
@@ -24,7 +23,7 @@ public final class la2<T> implements FlowCollector<T> {
     public Object emit(T t, @NotNull Continuation<? super wt2> continuation) {
         Object d;
         Object send = this.a.send(t, continuation);
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         return send == d ? send : wt2.INSTANCE;
     }
 }

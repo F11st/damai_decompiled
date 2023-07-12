@@ -127,15 +127,14 @@ public class PullDownView extends LinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.pull.refresh.PullDownView$a */
     /* loaded from: classes.dex */
-    public class View$OnTouchListenerC0298a implements View.OnTouchListener {
+    public class a implements View.OnTouchListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private float a = -1.0f;
         private float b = -1.0f;
         private int c = -1;
 
-        View$OnTouchListenerC0298a() {
+        a() {
         }
 
         private void b(MotionEvent motionEvent) {
@@ -270,14 +269,13 @@ public class PullDownView extends LinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.pull.refresh.PullDownView$b */
     /* loaded from: classes.dex */
-    public class C0299b implements OnHeaderViewStateChangeListener {
+    public class b implements OnHeaderViewStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private RotateAnimation a;
         private RotateAnimation b;
 
-        public C0299b() {
+        public b() {
             RotateAnimation rotateAnimation = new RotateAnimation(0.0f, -180.0f, 1, 0.5f, 1, 0.5f);
             this.a = rotateAnimation;
             rotateAnimation.setInterpolator(new LinearInterpolator());
@@ -362,7 +360,7 @@ public class PullDownView extends LinearLayout {
                 }
             }
         };
-        this.ON_LISTVIEW_TOUCH_LISTENER = new View$OnTouchListenerC0298a();
+        this.ON_LISTVIEW_TOUCH_LISTENER = new a();
         this.ON_ITEM_CLICK_LISTENER = new AdapterView.OnItemClickListener() { // from class: cn.damai.baseview.pull.refresh.PullDownView.3
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -409,7 +407,7 @@ public class PullDownView extends LinearLayout {
                 return false;
             }
         };
-        this.ON_HEADER_VIEW_STATE_CHANGE_LISTENER = new C0299b();
+        this.ON_HEADER_VIEW_STATE_CHANGE_LISTENER = new b();
         this.mScroller = new Scroller(context);
     }
 
@@ -889,7 +887,7 @@ public class PullDownView extends LinearLayout {
                 }
             }
         };
-        this.ON_LISTVIEW_TOUCH_LISTENER = new View$OnTouchListenerC0298a();
+        this.ON_LISTVIEW_TOUCH_LISTENER = new a();
         this.ON_ITEM_CLICK_LISTENER = new AdapterView.OnItemClickListener() { // from class: cn.damai.baseview.pull.refresh.PullDownView.3
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -936,7 +934,7 @@ public class PullDownView extends LinearLayout {
                 return false;
             }
         };
-        this.ON_HEADER_VIEW_STATE_CHANGE_LISTENER = new C0299b();
+        this.ON_HEADER_VIEW_STATE_CHANGE_LISTENER = new b();
         this.mScroller = new Scroller(context);
     }
 }

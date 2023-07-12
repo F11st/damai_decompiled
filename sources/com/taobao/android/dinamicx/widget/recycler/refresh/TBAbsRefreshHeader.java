@@ -33,7 +33,7 @@ public abstract class TBAbsRefreshHeader extends RelativeLayout {
 
         @Override // java.lang.Enum
         public String toString() {
-            switch (C6518a.a[ordinal()]) {
+            switch (a.a[ordinal()]) {
                 case 1:
                     return "NONE";
                 case 2:
@@ -55,9 +55,8 @@ public abstract class TBAbsRefreshHeader extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.refresh.TBAbsRefreshHeader$a */
     /* loaded from: classes12.dex */
-    static /* synthetic */ class C6518a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {

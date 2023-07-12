@@ -45,7 +45,7 @@ public class GrsApp {
     }
 
     public String getIssueCountryCode(Context context) {
-        return C5557a.a(context, false).getCountryCode();
+        return a.a(context, false).getCountryCode();
     }
 
     public void setAppConfigName(String str) {

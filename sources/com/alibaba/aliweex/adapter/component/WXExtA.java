@@ -14,10 +14,9 @@ public class WXExtA extends WXA {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.component.WXExtA$a */
     /* loaded from: classes5.dex */
-    public class C3027a implements WXComponent.OnClickListener {
-        C3027a() {
+    public class a implements WXComponent.OnClickListener {
+        a() {
         }
 
         @Override // com.taobao.weex.ui.component.WXComponent.OnClickListener
@@ -33,7 +32,7 @@ public class WXExtA extends WXA {
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.taobao.weex.ui.component.WXA, com.taobao.weex.ui.component.WXComponent
     public void onHostViewInitialized(WXFrameLayout wXFrameLayout) {
-        addClickListener(new C3027a());
+        addClickListener(new a());
         super.onHostViewInitialized(wXFrameLayout);
     }
 }

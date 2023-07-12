@@ -56,7 +56,7 @@ public class k42 extends b2 {
             if (r2 == 0) goto L41
             java.io.FileInputStream r2 = new java.io.FileInputStream     // Catch: java.lang.Exception -> L2a
             r2.<init>(r0)     // Catch: java.lang.Exception -> L2a
-            byte[] r0 = com.taobao.android.dinamic.parser.C6339a.a(r2)     // Catch: java.lang.Exception -> L2a
+            byte[] r0 = com.taobao.android.dinamic.parser.a.a(r2)     // Catch: java.lang.Exception -> L2a
             goto L42
         L2a:
             r0 = move-exception

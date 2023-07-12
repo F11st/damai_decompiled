@@ -1,7 +1,7 @@
 package com.huawei.hms.ui;
 
 import android.os.Bundle;
-import com.huawei.hms.base.ui.C5543a;
+import com.huawei.hms.base.ui.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -16,7 +16,7 @@ public class SafeBundle {
         try {
             return this.a.containsKey(str);
         } catch (Exception unused) {
-            C5543a.a("SafeBundle", "containsKey exception. key:");
+            a.a("SafeBundle", "containsKey exception. key:");
             return false;
         }
     }
@@ -25,7 +25,7 @@ public class SafeBundle {
         try {
             return this.a.get(str);
         } catch (Exception e) {
-            C5543a.a("SafeBundle", "get exception: " + e.getMessage(), true);
+            a.a("SafeBundle", "get exception: " + e.getMessage(), true);
             return null;
         }
     }
@@ -42,7 +42,7 @@ public class SafeBundle {
         try {
             return this.a.getString(str);
         } catch (Exception e) {
-            C5543a.a("SafeBundle", "getString exception: " + e.getMessage(), true);
+            a.a("SafeBundle", "getString exception: " + e.getMessage(), true);
             return "";
         }
     }
@@ -51,7 +51,7 @@ public class SafeBundle {
         try {
             return this.a.isEmpty();
         } catch (Exception unused) {
-            C5543a.a("SafeBundle", "isEmpty exception");
+            a.a("SafeBundle", "isEmpty exception");
             return true;
         }
     }
@@ -60,7 +60,7 @@ public class SafeBundle {
         try {
             return this.a.size();
         } catch (Exception unused) {
-            C5543a.a("SafeBundle", "size exception");
+            a.a("SafeBundle", "size exception");
             return 0;
         }
     }
@@ -77,7 +77,7 @@ public class SafeBundle {
         try {
             return this.a.getInt(str, i);
         } catch (Exception e) {
-            C5543a.a("SafeBundle", "getInt exception: " + e.getMessage(), true);
+            a.a("SafeBundle", "getInt exception: " + e.getMessage(), true);
             return i;
         }
     }
@@ -86,7 +86,7 @@ public class SafeBundle {
         try {
             return this.a.getString(str, str2);
         } catch (Exception e) {
-            C5543a.a("SafeBundle", "getString exception: " + e.getMessage(), true);
+            a.a("SafeBundle", "getString exception: " + e.getMessage(), true);
             return str2;
         }
     }

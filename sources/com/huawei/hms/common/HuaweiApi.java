@@ -24,12 +24,12 @@ import com.huawei.hms.common.internal.TaskApiCall;
 import com.huawei.hms.common.internal.TaskApiCallWrapper;
 import com.huawei.hms.common.internal.TransactionIdCreater;
 import com.huawei.hms.core.aidl.IMessageEntity;
-import com.huawei.hms.core.aidl.InterfaceC5551d;
+import com.huawei.hms.core.aidl.d;
 import com.huawei.hms.support.api.client.Status;
 import com.huawei.hms.support.api.client.SubAppInfo;
 import com.huawei.hms.support.api.entity.auth.Scope;
 import com.huawei.hms.support.api.entity.core.CommonCode;
-import com.huawei.hms.support.hianalytics.C5725b;
+import com.huawei.hms.support.hianalytics.b;
 import com.huawei.hms.support.log.HMSLog;
 import com.huawei.hms.utils.Checker;
 import com.huawei.hms.utils.HMSBIInitializer;
@@ -135,7 +135,7 @@ public class HuaweiApi<TOption extends Api.ApiOptions> {
                 TaskApiCallWrapper apiCallWrapper = taskApiCallbackWrapper.getApiCallWrapper();
                 ResponseHeader responseHeader = new ResponseHeader(1, CommonCode.ErrorCode.CLIENT_API_INVALID, "Connection Failed:" + errorReason(connectionResult) + jn1.BRACKET_START_STR + connectionResult.getErrorCode() + jn1.BRACKET_END_STR);
                 responseHeader.setTransactionId(apiCallWrapper.getTaskApiCall().getTransactionId());
-                C5725b.a(this.mApi.getContext(), responseHeader, String.valueOf(this.mApi.getKitSdkVersion()));
+                b.a(this.mApi.getContext(), responseHeader, String.valueOf(this.mApi.getKitSdkVersion()));
                 if (this.mConnectionResult.getResolution() != null && z) {
                     responseHeader.setParcelable(this.mConnectionResult.getResolution());
                     z = false;
@@ -196,7 +196,7 @@ public class HuaweiApi<TOption extends Api.ApiOptions> {
                         HMSLog.e(HuaweiApi.TAG, "Response has resolution: " + responseHeader.getResolution());
                     }
                     if (this.isFirstRsp.compareAndSet(true, false)) {
-                        C5725b.a(RequestHandler.this.mApi.getContext(), responseHeader, String.valueOf(RequestHandler.this.mApi.getKitSdkVersion()));
+                        b.a(RequestHandler.this.mApi.getContext(), responseHeader, String.valueOf(RequestHandler.this.mApi.getKitSdkVersion()));
                     }
                     taskApiCallWrapper.getTaskApiCall().onResponse(RequestHandler.this.mClient, responseHeader, str, taskApiCallWrapper.getTaskCompletionSource());
                 }
@@ -290,7 +290,7 @@ public class HuaweiApi<TOption extends Api.ApiOptions> {
                 HMSLog.i(HuaweiApi.TAG, "isConnected:true.");
                 BinderAdapter adapter = ((BaseHmsClient) this.mClient).getAdapter();
                 adapter.updateDelayTask();
-                ((HmsClient) this.mClient).setService(InterfaceC5551d.AbstractBinderC5552a.a(adapter.getServiceBinder()));
+                ((HmsClient) this.mClient).setService(d.a.a(adapter.getServiceBinder()));
                 postMessage(wrapperRequest);
                 return;
             }
@@ -397,7 +397,7 @@ public class HuaweiApi<TOption extends Api.ApiOptions> {
             taskCompletionSource.setException(new ApiException(Status.FAILURE));
             return taskCompletionSource.getTask();
         }
-        C5725b.a(this.mContext, taskApiCall.getUri(), TextUtils.isEmpty(this.mSubAppInfo.getSubAppID()) ? this.mAppID : this.mSubAppInfo.getSubAppID(), taskApiCall.getTransactionId(), String.valueOf(getKitSdkVersion()));
+        b.a(this.mContext, taskApiCall.getUri(), TextUtils.isEmpty(this.mSubAppInfo.getSubAppID()) ? this.mAppID : this.mSubAppInfo.getSubAppID(), taskApiCall.getTransactionId(), String.valueOf(getKitSdkVersion()));
         if (this.requestManager == null) {
             this.requestManager = RequestManager.getInstance();
         }

@@ -10,13 +10,12 @@ import android.os.Message;
 public class DinamicLogThread extends HandlerThread {
     private static HandlerThread handlerThread;
     private static boolean isInited;
-    public static HandlerC6338a threadHandler;
+    public static a threadHandler;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamic.log.DinamicLogThread$a */
     /* loaded from: classes12.dex */
-    public static class HandlerC6338a extends Handler {
-        public HandlerC6338a(Looper looper) {
+    public static class a extends Handler {
+        public a(Looper looper) {
             super(looper);
         }
 
@@ -55,7 +54,7 @@ public class DinamicLogThread extends HandlerThread {
                     looper = handlerThread.getLooper();
                 } catch (Throwable unused2) {
                 }
-                threadHandler = new HandlerC6338a(looper);
+                threadHandler = new a(looper);
                 isInited = true;
             }
         }

@@ -7,8 +7,8 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import androidx.annotation.Nullable;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.R$string;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
@@ -164,8 +164,8 @@ public class ShareMiddleActivity extends DamaiBaseActivity {
         }
         super.onCreate(bundle);
         setContentView(R$layout.share_middle_main);
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i("share_pic"));
-        C0529c.e().K(this);
+        setDamaiUTKeyBuilder(new a.b().i("share_pic"));
+        c.e().K(this);
         ShareManager.E().C();
     }
 

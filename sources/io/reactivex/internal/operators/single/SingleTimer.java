@@ -1,16 +1,16 @@
 package io.reactivex.internal.operators.single;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.Scheduler;
 import io.reactivex.SingleObserver;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.disposables.DisposableHelper;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SingleTimer extends AbstractC8152e<Long> {
+public final class SingleTimer extends e<Long> {
     final long delay;
     final Scheduler scheduler;
     final TimeUnit unit;
@@ -51,7 +51,7 @@ public final class SingleTimer extends AbstractC8152e<Long> {
         this.scheduler = scheduler;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super Long> singleObserver) {
         TimerDisposable timerDisposable = new TimerDisposable(singleObserver);
         singleObserver.onSubscribe(timerDisposable);

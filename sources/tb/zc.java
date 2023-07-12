@@ -13,7 +13,7 @@ public final class zc extends EventLoopImplBase {
         this.a = thread;
     }
 
-    @Override // kotlinx.coroutines.AbstractC8700n
+    @Override // kotlinx.coroutines.n
     @NotNull
     protected Thread getThread() {
         return this.a;

@@ -45,22 +45,21 @@ public abstract class ImmutableSet<E> extends ImmutableCollection<E> implements 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableSet$a */
     /* loaded from: classes10.dex */
-    public static class C4989a<E> extends ImmutableCollection.AbstractC4967a<E> {
+    public static class a<E> extends ImmutableCollection.a<E> {
         @VisibleForTesting
         @NullableDecl
         Object[] d;
         private int e;
 
-        public C4989a() {
+        public a() {
             super(4);
         }
 
         private void k(E e) {
             int length = this.d.length - 1;
             int hashCode = e.hashCode();
-            int c = C5211z.c(hashCode);
+            int c = z.c(hashCode);
             while (true) {
                 int i = c & length;
                 Object[] objArr = this.d;
@@ -78,10 +77,10 @@ public abstract class ImmutableSet<E> extends ImmutableCollection<E> implements 
             }
         }
 
-        @Override // com.google.common.collect.ImmutableCollection.AbstractC4968b
+        @Override // com.google.common.collect.ImmutableCollection.b
         @CanIgnoreReturnValue
         /* renamed from: h */
-        public C4989a<E> a(E e) {
+        public a<E> a(E e) {
             du1.p(e);
             if (this.d != null && ImmutableSet.chooseTableSize(this.b) <= this.d.length) {
                 k(e);
@@ -93,7 +92,7 @@ public abstract class ImmutableSet<E> extends ImmutableCollection<E> implements 
         }
 
         @CanIgnoreReturnValue
-        public C4989a<E> i(E... eArr) {
+        public a<E> i(E... eArr) {
             if (this.d != null) {
                 for (E e : eArr) {
                     a(e);
@@ -105,7 +104,7 @@ public abstract class ImmutableSet<E> extends ImmutableCollection<E> implements 
         }
 
         @CanIgnoreReturnValue
-        public C4989a<E> j(Iterator<? extends E> it) {
+        public a<E> j(Iterator<? extends E> it) {
             du1.p(it);
             while (it.hasNext()) {
                 a(it.next());
@@ -136,20 +135,20 @@ public abstract class ImmutableSet<E> extends ImmutableCollection<E> implements 
             return ImmutableSet.of();
         }
 
-        C4989a(int i) {
+        a(int i) {
             super(i);
             this.d = new Object[ImmutableSet.chooseTableSize(i)];
         }
     }
 
-    public static <E> C4989a<E> builder() {
-        return new C4989a<>();
+    public static <E> a<E> builder() {
+        return new a<>();
     }
 
     @Beta
-    public static <E> C4989a<E> builderWithExpectedSize(int i) {
-        C5191k.b(i, "expectedSize");
-        return new C4989a<>(i);
+    public static <E> a<E> builderWithExpectedSize(int i) {
+        k.b(i, "expectedSize");
+        return new a<>(i);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -177,19 +176,19 @@ public abstract class ImmutableSet<E> extends ImmutableCollection<E> implements 
                 int i3 = 0;
                 int i4 = 0;
                 for (int i5 = 0; i5 < i; i5++) {
-                    Object a = C5158b0.a(objArr[i5], i5);
-                    int hashCode = a.hashCode();
-                    int c = C5211z.c(hashCode);
+                    Object a2 = b0.a(objArr[i5], i5);
+                    int hashCode = a2.hashCode();
+                    int c = z.c(hashCode);
                     while (true) {
                         int i6 = c & i2;
                         Object obj = objArr2[i6];
                         if (obj == null) {
-                            objArr[i4] = a;
-                            objArr2[i6] = a;
+                            objArr[i4] = a2;
+                            objArr2[i6] = a2;
                             i3 += hashCode;
                             i4++;
                             break;
-                        } else if (obj.equals(a)) {
+                        } else if (obj.equals(a2)) {
                             break;
                         } else {
                             c++;
@@ -327,7 +326,7 @@ public abstract class ImmutableSet<E> extends ImmutableCollection<E> implements 
         if (!it.hasNext()) {
             return of((Object) next);
         }
-        return new C4989a().a(next).j(it).l();
+        return new a().a(next).j(it).l();
     }
 
     public static <E> ImmutableSet<E> copyOf(E[] eArr) {

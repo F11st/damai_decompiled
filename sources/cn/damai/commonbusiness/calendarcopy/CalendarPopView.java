@@ -80,12 +80,11 @@ public class CalendarPopView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.calendarcopy.CalendarPopView$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0590a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0590a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -126,12 +125,11 @@ public class CalendarPopView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.calendarcopy.CalendarPopView$b */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0591b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0591b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -174,12 +172,11 @@ public class CalendarPopView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.calendarcopy.CalendarPopView$c */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0592c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0592c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -202,12 +199,11 @@ public class CalendarPopView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.calendarcopy.CalendarPopView$d */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0593d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0593d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -223,12 +219,11 @@ public class CalendarPopView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.calendarcopy.CalendarPopView$e */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0594e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0594e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -244,12 +239,11 @@ public class CalendarPopView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.calendarcopy.CalendarPopView$f */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0595f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0595f() {
+        f() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -265,12 +259,11 @@ public class CalendarPopView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.calendarcopy.CalendarPopView$g */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0596g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0596g() {
+        g() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -507,8 +500,8 @@ public class CalendarPopView {
             ipChange.ipc$dispatch("-1436837416", new Object[]{this});
             return;
         }
-        this.b.findViewById(R$id.item_filter_confirm).setOnClickListener(new View$OnClickListenerC0591b());
-        this.b.findViewById(R$id.item_filter_reset).setOnClickListener(new View$OnClickListenerC0592c());
+        this.b.findViewById(R$id.item_filter_confirm).setOnClickListener(new b());
+        this.b.findViewById(R$id.item_filter_reset).setOnClickListener(new c());
     }
 
     private void w(Context context, boolean z, boolean z2, int i, OnDateClickListener onDateClickListener, CalendarInitBean calendarInitBean) {
@@ -536,8 +529,8 @@ public class CalendarPopView {
                 if (spValue != null) {
                     this.n = (CalendarBean) JSON.parseObject(spValue, CalendarBean.class);
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
         }
         y(calendarInitBean.mCalendarEntityList);
@@ -557,10 +550,10 @@ public class CalendarPopView {
             this.f = (TextView) this.d.findViewById(R$id.tv_time2);
             this.g = (TextView) this.d.findViewById(R$id.tv_time3);
             this.h = (TextView) this.d.findViewById(R$id.tv_time4);
-            this.e.setOnClickListener(new View$OnClickListenerC0593d());
-            this.f.setOnClickListener(new View$OnClickListenerC0594e());
-            this.g.setOnClickListener(new View$OnClickListenerC0595f());
-            this.h.setOnClickListener(new View$OnClickListenerC0596g());
+            this.e.setOnClickListener(new d());
+            this.f.setOnClickListener(new e());
+            this.g.setOnClickListener(new f());
+            this.h.setOnClickListener(new g());
             H();
             return;
         }
@@ -591,7 +584,7 @@ public class CalendarPopView {
         RecyclerView recyclerView = (RecyclerView) this.b.findViewById(R$id.pop_irc);
         this.i = recyclerView;
         recyclerView.setLayoutManager(new LinearLayoutManager(this.a, 1, false));
-        CalendarListAdapter calendarListAdapter = new CalendarListAdapter(this.a, list, new View$OnClickListenerC0590a());
+        CalendarListAdapter calendarListAdapter = new CalendarListAdapter(this.a, list, new a());
         this.m = calendarListAdapter;
         this.i.setAdapter(calendarListAdapter);
         this.i.addOnScrollListener(new RecyclerView.OnScrollListener() { // from class: cn.damai.commonbusiness.calendarcopy.CalendarPopView.3
@@ -719,8 +712,8 @@ public class CalendarPopView {
         } else {
             try {
                 i = Integer.parseInt(calendarBean.dateType);
-            } catch (NumberFormatException e) {
-                e.printStackTrace();
+            } catch (NumberFormatException e2) {
+                e2.printStackTrace();
             }
             if (i == 10) {
                 this.o = of.k();
@@ -761,7 +754,7 @@ public class CalendarPopView {
         this.b.setVisibility(0);
         G();
         this.m.a(this.n, this.o);
-        final int a = (((((DisplayMetrics.getwidthPixels(this.a.getResources().getDisplayMetrics()) - k62.a(this.a, 18.0f)) / 7) - 6) * 56) / 45) + k62.a(this.a, 16.0f);
+        final int a2 = (((((DisplayMetrics.getwidthPixels(this.a.getResources().getDisplayMetrics()) - k62.a(this.a, 18.0f)) / 7) - 6) * 56) / 45) + k62.a(this.a, 16.0f);
         if (bb2.c(this.o) > 0 && (day = this.o.get(0)) != null) {
             this.p = of.f(day);
         }
@@ -798,7 +791,7 @@ public class CalendarPopView {
                             Calendar.getInstance(TimeZone.getTimeZone("GMT+8")).set(day2.year, day2.month, day2.day);
                             m = day2.day;
                         }
-                        CalendarPopView.this.i.scrollBy(0, a * (((h + m) - 2) / 7));
+                        CalendarPopView.this.i.scrollBy(0, a2 * (((h + m) - 2) / 7));
                     }
                 }, 100L);
             }

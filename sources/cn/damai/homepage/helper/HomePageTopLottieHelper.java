@@ -11,8 +11,6 @@ import android.view.View;
 import cn.damai.commonbusiness.home.bean.HeadLottieBean;
 import cn.damai.commonbusiness.home.bean.HeadLottieStyleBean;
 import cn.damai.homepage.util.ZipDownLoadManager;
-import com.airbnb.lottie.C2821a;
-import com.airbnb.lottie.C2861b;
 import com.airbnb.lottie.ImageAssetDelegate;
 import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.LottieListener;
@@ -43,7 +41,7 @@ public class HomePageTopLottieHelper {
     private List<LottiePath> e = new ArrayList();
     private int h = 0;
     private boolean i = true;
-    private LottieListener j = new C1144c();
+    private LottieListener j = new c();
 
     /* compiled from: Taobao */
     /* loaded from: classes14.dex */
@@ -73,13 +71,12 @@ public class HomePageTopLottieHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.helper.HomePageTopLottieHelper$a */
     /* loaded from: classes5.dex */
-    public class C1142a implements ZipDownLoadManager.OnZipDownLoadListsner {
+    public class a implements ZipDownLoadManager.OnZipDownLoadListsner {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C1142a(String str) {
+        a(String str) {
             this.a = str;
         }
 
@@ -110,13 +107,12 @@ public class HomePageTopLottieHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.helper.HomePageTopLottieHelper$b */
     /* loaded from: classes5.dex */
-    public class C1143b implements ImageAssetDelegate {
+    public class b implements ImageAssetDelegate {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ LottiePath a;
 
-        C1143b(LottiePath lottiePath) {
+        b(LottiePath lottiePath) {
             this.a = lottiePath;
         }
 
@@ -129,7 +125,7 @@ public class HomePageTopLottieHelper {
         public android.graphics.Bitmap fetchBitmap(tb.jc1 r6) {
             /*
                 r5 = this;
-                com.android.alibaba.ip.runtime.IpChange r0 = cn.damai.homepage.helper.HomePageTopLottieHelper.C1143b.$ipChange
+                com.android.alibaba.ip.runtime.IpChange r0 = cn.damai.homepage.helper.HomePageTopLottieHelper.b.$ipChange
                 java.lang.String r1 = "1341727458"
                 boolean r2 = com.android.alibaba.ip.runtime.AndroidInstantRuntime.support(r0, r1)
                 r3 = 1
@@ -218,40 +214,38 @@ public class HomePageTopLottieHelper {
             L97:
                 throw r6
             */
-            throw new UnsupportedOperationException("Method not decompiled: cn.damai.homepage.helper.HomePageTopLottieHelper.C1143b.fetchBitmap(tb.jc1):android.graphics.Bitmap");
+            throw new UnsupportedOperationException("Method not decompiled: cn.damai.homepage.helper.HomePageTopLottieHelper.b.fetchBitmap(tb.jc1):android.graphics.Bitmap");
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.helper.HomePageTopLottieHelper$c */
     /* loaded from: classes5.dex */
-    public class C1144c implements LottieListener<C2821a> {
+    public class c implements LottieListener<com.airbnb.lottie.a> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1144c() {
+        c() {
         }
 
         @Override // com.airbnb.lottie.LottieListener
         /* renamed from: a */
-        public void onResult(C2821a c2821a) {
+        public void onResult(com.airbnb.lottie.a aVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "790604430")) {
-                ipChange.ipc$dispatch("790604430", new Object[]{this, c2821a});
+                ipChange.ipc$dispatch("790604430", new Object[]{this, aVar});
                 return;
             }
-            HomePageTopLottieHelper.this.d.setComposition(c2821a);
+            HomePageTopLottieHelper.this.d.setComposition(aVar);
             HomePageTopLottieHelper.this.d.playAnimation();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.helper.HomePageTopLottieHelper$d */
     /* loaded from: classes5.dex */
-    public class C1145d implements ImageAssetDelegate {
+    public class d implements ImageAssetDelegate {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ LottiePath a;
 
-        C1145d(LottiePath lottiePath) {
+        d(LottiePath lottiePath) {
             this.a = lottiePath;
         }
 
@@ -264,7 +258,7 @@ public class HomePageTopLottieHelper {
         public android.graphics.Bitmap fetchBitmap(tb.jc1 r6) {
             /*
                 r5 = this;
-                com.android.alibaba.ip.runtime.IpChange r0 = cn.damai.homepage.helper.HomePageTopLottieHelper.C1145d.$ipChange
+                com.android.alibaba.ip.runtime.IpChange r0 = cn.damai.homepage.helper.HomePageTopLottieHelper.d.$ipChange
                 java.lang.String r1 = "-1694689345"
                 boolean r2 = com.android.alibaba.ip.runtime.AndroidInstantRuntime.support(r0, r1)
                 r3 = 1
@@ -353,28 +347,27 @@ public class HomePageTopLottieHelper {
             L97:
                 throw r6
             */
-            throw new UnsupportedOperationException("Method not decompiled: cn.damai.homepage.helper.HomePageTopLottieHelper.C1145d.fetchBitmap(tb.jc1):android.graphics.Bitmap");
+            throw new UnsupportedOperationException("Method not decompiled: cn.damai.homepage.helper.HomePageTopLottieHelper.d.fetchBitmap(tb.jc1):android.graphics.Bitmap");
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.helper.HomePageTopLottieHelper$e */
     /* loaded from: classes5.dex */
-    public class C1146e implements LottieListener<C2821a> {
+    public class e implements LottieListener<com.airbnb.lottie.a> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1146e() {
+        e() {
         }
 
         @Override // com.airbnb.lottie.LottieListener
         /* renamed from: a */
-        public void onResult(C2821a c2821a) {
+        public void onResult(com.airbnb.lottie.a aVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1966022836")) {
-                ipChange.ipc$dispatch("-1966022836", new Object[]{this, c2821a});
+                ipChange.ipc$dispatch("-1966022836", new Object[]{this, aVar});
                 return;
             }
-            HomePageTopLottieHelper.this.d.setComposition(c2821a);
+            HomePageTopLottieHelper.this.d.setComposition(aVar);
             HomePageTopLottieHelper.this.d.playAnimation();
         }
     }
@@ -495,8 +488,8 @@ public class HomePageTopLottieHelper {
                     }
                 }
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
         return this.e.size() > 0 && (list = this.a) != null && list.size() == this.e.size();
     }
@@ -523,7 +516,7 @@ public class HomePageTopLottieHelper {
             t(str);
             return;
         }
-        new ZipDownLoadManager().h(this.b.zipUrl).f(o(this.g, str)).g(new C1142a(str)).e();
+        new ZipDownLoadManager().h(this.b.zipUrl).f(o(this.g, str)).g(new a(str)).e();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -552,8 +545,8 @@ public class HomePageTopLottieHelper {
                 str = Constants.TYPE_LIVE_ROOM_BG_COLOR_PREFFIX + str;
             }
             return Color.parseColor(str);
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
             return -1;
         }
     }
@@ -606,7 +599,7 @@ public class HomePageTopLottieHelper {
                 this.c.setBackgroundColor(u);
             }
             try {
-                this.d.setImageAssetDelegate(new C1143b(lottiePath));
+                this.d.setImageAssetDelegate(new b(lottiePath));
                 BufferedReader bufferedReader = new BufferedReader(new FileReader(lottiePath.jsonPath));
                 StringBuilder sb = new StringBuilder();
                 while (true) {
@@ -614,7 +607,7 @@ public class HomePageTopLottieHelper {
                     if (readLine != null) {
                         sb.append(readLine);
                     } else {
-                        C2861b.m(sb.toString(), null).f(this.j);
+                        com.airbnb.lottie.b.m(sb.toString(), null).f(this.j);
                         this.d.addAnimatorListener(new Animator.AnimatorListener() { // from class: cn.damai.homepage.helper.HomePageTopLottieHelper.4
                             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -673,8 +666,8 @@ public class HomePageTopLottieHelper {
                         return;
                     }
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
         }
     }
@@ -694,12 +687,12 @@ public class HomePageTopLottieHelper {
             if (u != -1) {
                 this.c.setBackgroundColor(u);
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
         this.d.setRepeatCount(-1);
         try {
-            this.d.setImageAssetDelegate(new C1145d(lottiePath));
+            this.d.setImageAssetDelegate(new d(lottiePath));
             BufferedReader bufferedReader = new BufferedReader(new FileReader(lottiePath.jsonPath));
             StringBuilder sb = new StringBuilder();
             while (true) {
@@ -707,12 +700,12 @@ public class HomePageTopLottieHelper {
                 if (readLine != null) {
                     sb.append(readLine);
                 } else {
-                    C2861b.m(sb.toString(), null).f(new C1146e());
+                    com.airbnb.lottie.b.m(sb.toString(), null).f(new e());
                     return;
                 }
             }
-        } catch (Exception e2) {
-            e2.printStackTrace();
+        } catch (Exception e3) {
+            e3.printStackTrace();
         }
     }
 

@@ -14,11 +14,11 @@ import cn.damai.comment.R$drawable;
 import cn.damai.comment.R$id;
 import cn.damai.comment.R$layout;
 import cn.damai.comment.R$string;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.share.generateimage.DMShareMessage;
 import cn.damai.evaluate.ui.EvaluateSuccessActivity;
 import cn.damai.issue.net.EvaluteSuccessRenderResponse;
@@ -137,10 +137,10 @@ public final class DMEvaluateSuccessHeadView extends LinearLayout implements Vie
         if (AndroidInstantRuntime.support(ipChange, "1694636614")) {
             ipChange.ipc$dispatch("1694636614", new Object[]{this, view, str});
         } else {
-            C0504a.b().c(str).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.hr
+            a.b().c(str).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.hr
                 @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-                public final void onSuccess(DMImageCreator.C0502e c0502e) {
-                    DMEvaluateSuccessHeadView.m61loadBackground$lambda9(view, c0502e);
+                public final void onSuccess(DMImageCreator.e eVar) {
+                    DMEvaluateSuccessHeadView.m61loadBackground$lambda9(view, eVar);
                 }
             }).f();
         }
@@ -148,14 +148,14 @@ public final class DMEvaluateSuccessHeadView extends LinearLayout implements Vie
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: loadBackground$lambda-9  reason: not valid java name */
-    public static final void m61loadBackground$lambda9(View view, DMImageCreator.C0502e c0502e) {
+    public static final void m61loadBackground$lambda9(View view, DMImageCreator.e eVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "682521672")) {
-            ipChange.ipc$dispatch("682521672", new Object[]{view, c0502e});
+            ipChange.ipc$dispatch("682521672", new Object[]{view, eVar});
             return;
         }
         b41.i(view, "$this_loadBackground");
-        view.setBackground(c0502e != null ? c0502e.a : null);
+        view.setBackground(eVar != null ? eVar.a : null);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -172,7 +172,7 @@ public final class DMEvaluateSuccessHeadView extends LinearLayout implements Vie
         Bundle bundle = new Bundle();
         bundle.putString(g41.ISSUE_PARAM_COMMENT_ID, str);
         DMNav.from(dMEvaluateSuccessHeadView.mContext).withExtras(bundle).toUri(NavUri.b(cs.X));
-        C0529c.e().x(dl.I().K(str2, str));
+        c.e().x(dl.I().K(str2, str));
         Context context = dMEvaluateSuccessHeadView.mContext;
         EvaluateSuccessActivity evaluateSuccessActivity = context instanceof EvaluateSuccessActivity ? (EvaluateSuccessActivity) context : null;
         if (evaluateSuccessActivity != null) {
@@ -190,7 +190,7 @@ public final class DMEvaluateSuccessHeadView extends LinearLayout implements Vie
         }
         b41.i(dMEvaluateSuccessHeadView, "this$0");
         DMNav.from(dMEvaluateSuccessHeadView.mContext).toUri(k23.j());
-        C0529c.e().x(dl.I().L(str));
+        c.e().x(dl.I().L(str));
         Context context = dMEvaluateSuccessHeadView.mContext;
         EvaluateSuccessActivity evaluateSuccessActivity = context instanceof EvaluateSuccessActivity ? (EvaluateSuccessActivity) context : null;
         if (evaluateSuccessActivity != null) {

@@ -36,8 +36,8 @@ public class AutoFitHelper {
     private boolean h;
     private boolean i;
     private ArrayList<OnTextSizeChangeListener> j;
-    private TextWatcher k = new C2373c();
-    private View.OnLayoutChangeListener l = new View$OnLayoutChangeListenerC2372b();
+    private TextWatcher k = new c();
+    private View.OnLayoutChangeListener l = new b();
 
     /* compiled from: Taobao */
     /* loaded from: classes16.dex */
@@ -46,12 +46,11 @@ public class AutoFitHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.autofittext.AutoFitHelper$b */
     /* loaded from: classes16.dex */
-    public class View$OnLayoutChangeListenerC2372b implements View.OnLayoutChangeListener {
+    public class b implements View.OnLayoutChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private View$OnLayoutChangeListenerC2372b() {
+        private b() {
         }
 
         @Override // android.view.View.OnLayoutChangeListener
@@ -66,12 +65,11 @@ public class AutoFitHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.autofittext.AutoFitHelper$c */
     /* loaded from: classes16.dex */
-    public class C2373c implements TextWatcher {
+    public class c implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C2373c() {
+        private c() {
         }
 
         @Override // android.text.TextWatcher

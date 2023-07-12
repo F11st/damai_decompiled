@@ -15,7 +15,7 @@ public final class GXViewHolder extends RecyclerView.ViewHolder {
     @Nullable
     private Object a;
     @Nullable
-    private GXTemplateEngine.C3347i b;
+    private GXTemplateEngine.i b;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public GXViewHolder(@NotNull View view) {
@@ -24,7 +24,7 @@ public final class GXViewHolder extends RecyclerView.ViewHolder {
     }
 
     @Nullable
-    public final GXTemplateEngine.C3347i a() {
+    public final GXTemplateEngine.i a() {
         return this.b;
     }
 
@@ -32,7 +32,7 @@ public final class GXViewHolder extends RecyclerView.ViewHolder {
         this.a = obj;
     }
 
-    public final void c(@Nullable GXTemplateEngine.C3347i c3347i) {
-        this.b = c3347i;
+    public final void c(@Nullable GXTemplateEngine.i iVar) {
+        this.b = iVar;
     }
 }

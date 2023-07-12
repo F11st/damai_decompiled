@@ -1,8 +1,8 @@
 package com.youku.gaiax.provider.module.net;
 
-import anet.channel.request.C0193a;
+import anet.channel.request.a;
 import com.alibaba.fastjson.JSONObject;
-import com.alipay.sdk.m.p.AbstractC4271e;
+import com.alipay.sdk.m.p.e;
 import java.io.Serializable;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -60,7 +60,7 @@ public final class JSMtopRequest extends YYBaseMtopRequest implements Serializab
                 }
                 break;
             case 2213344:
-                if (string.equals(C0193a.C0196c.HEAD)) {
+                if (string.equals(a.c.HEAD)) {
                     return MethodEnum.HEAD;
                 }
                 break;
@@ -135,16 +135,16 @@ public final class JSMtopRequest extends YYBaseMtopRequest implements Serializab
         String string2;
         JSONObject jSONObject = this.data;
         String str = "";
-        if (jSONObject != null && (string2 = jSONObject.getString(AbstractC4271e.l)) != null) {
+        if (jSONObject != null && (string2 = jSONObject.getString(e.l)) != null) {
             str = string2;
         }
         JSONObject jSONObject2 = this.bodyParams;
-        if (jSONObject2 != null && (string = jSONObject2.getString(AbstractC4271e.l)) != null) {
+        if (jSONObject2 != null && (string = jSONObject2.getString(e.l)) != null) {
             str = string;
         }
         JSONObject jSONObject3 = this.bodyParams;
         if (jSONObject3 != null) {
-            jSONObject3.remove(AbstractC4271e.l);
+            jSONObject3.remove(e.l);
         }
         return str;
     }

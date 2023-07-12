@@ -10,7 +10,6 @@ import androidx.annotation.RawRes;
 import cn.damai.common.R$id;
 import cn.damai.common.R$layout;
 import cn.damai.common.R$string;
-import cn.damai.common.util.toastutil.C0537a;
 import com.airbnb.lottie.LottieAnimationView;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -40,15 +39,14 @@ public class ToastUtil {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.util.ToastUtil$b */
     /* loaded from: classes13.dex */
-    public static class C0534b {
+    public static class b {
         private static final ToastUtil a = new ToastUtil();
     }
 
     public static final ToastUtil a() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-456941317") ? (ToastUtil) ipChange.ipc$dispatch("-456941317", new Object[0]) : C0534b.a;
+        return AndroidInstantRuntime.support(ipChange, "-456941317") ? (ToastUtil) ipChange.ipc$dispatch("-456941317", new Object[0]) : b.a;
     }
 
     public static void b(CharSequence charSequence, int i) {
@@ -61,7 +59,7 @@ public class ToastUtil {
     }
 
     public static void c(Context context, int i, int i2) {
-        String b;
+        String b2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-789824819")) {
             ipChange.ipc$dispatch("-789824819", new Object[]{context, Integer.valueOf(i), Integer.valueOf(i2)});
@@ -69,15 +67,15 @@ public class ToastUtil {
         }
         if (i != 0) {
             try {
-                b = cm2.b(context, i);
+                b2 = cm2.b(context, i);
             } catch (Exception e) {
                 cb1.c("ToastUtil", e.getMessage());
                 return;
             }
         } else {
-            b = "";
+            b2 = "";
         }
-        d(context, b, i2 != 0 ? cm2.b(context, i2) : "");
+        d(context, b2, i2 != 0 ? cm2.b(context, i2) : "");
     }
 
     public static void d(Context context, CharSequence charSequence, CharSequence charSequence2) {
@@ -85,7 +83,7 @@ public class ToastUtil {
         if (AndroidInstantRuntime.support(ipChange, "1246216437")) {
             ipChange.ipc$dispatch("1246216437", new Object[]{context, charSequence, charSequence2});
         } else {
-            C0537a.j(mu0.a().getApplicationContext(), C0537a.b(context, charSequence, charSequence2), 0, 17, 0, 0);
+            cn.damai.common.util.toastutil.a.j(mu0.a().getApplicationContext(), cn.damai.common.util.toastutil.a.b(context, charSequence, charSequence2), 0, 17, 0, 0);
         }
     }
 
@@ -134,7 +132,7 @@ public class ToastUtil {
         textView.setVisibility(TextUtils.isEmpty(str) ? 8 : 0);
         textView2.setText(str2);
         textView2.setVisibility(TextUtils.isEmpty(str2) ? 8 : 0);
-        C0537a.j(mu0.a().getApplicationContext(), inflate, 0, 17, 0, 0);
+        cn.damai.common.util.toastutil.a.j(mu0.a().getApplicationContext(), inflate, 0, 17, 0, 0);
     }
 
     public void e(Context context, String str) {

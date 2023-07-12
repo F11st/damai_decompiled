@@ -16,10 +16,9 @@ public class DXScrollLinearLayoutManager extends DXLinearLayoutManager {
     private float c;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.view.DXScrollLinearLayoutManager$a */
     /* loaded from: classes11.dex */
-    class C6412a extends LinearSmoothScroller {
-        C6412a(Context context) {
+    class a extends LinearSmoothScroller {
+        a(Context context) {
             super(context);
         }
 
@@ -74,8 +73,8 @@ public class DXScrollLinearLayoutManager extends DXLinearLayoutManager {
 
     @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.LayoutManager
     public void smoothScrollToPosition(RecyclerView recyclerView, RecyclerView.State state, int i) {
-        C6412a c6412a = new C6412a(recyclerView.getContext());
-        c6412a.setTargetPosition(i);
-        startSmoothScroll(c6412a);
+        a aVar = new a(recyclerView.getContext());
+        aVar.setTargetPosition(i);
+        startSmoothScroll(aVar);
     }
 }

@@ -83,15 +83,14 @@ public class CityView {
             }
         }
     };
-    private CitySelectAdapter.OnCityListItemClickListener2 w = new C0360d();
+    private CitySelectAdapter.OnCityListItemClickListener2 w = new d();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.view.CityView$a */
     /* loaded from: classes.dex */
-    public class C0357a implements LetterSortBar.OnTouchingLetterChangedListener {
+    public class a implements LetterSortBar.OnTouchingLetterChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0357a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.city.view.LetterSortBar.OnTouchingLetterChangedListener
@@ -138,14 +137,13 @@ public class CityView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.view.CityView$b */
     /* loaded from: classes.dex */
-    public class C0358b implements OnGrantListener {
+    public class b implements OnGrantListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ boolean a;
         final /* synthetic */ cj b;
 
-        C0358b(boolean z, cj cjVar) {
+        b(boolean z, cj cjVar) {
             this.a = z;
             this.b = cjVar;
         }
@@ -166,13 +164,12 @@ public class CityView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.view.CityView$c */
     /* loaded from: classes.dex */
-    public class C0359c implements CityLocationUtil.LocaltionListener {
+    public class c implements CityLocationUtil.LocaltionListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ cj a;
 
-        C0359c(cj cjVar) {
+        c(cj cjVar) {
             this.a = cjVar;
         }
 
@@ -208,12 +205,11 @@ public class CityView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.view.CityView$d */
     /* loaded from: classes.dex */
-    public class C0360d implements CitySelectAdapter.OnCityListItemClickListener2 {
+    public class d implements CitySelectAdapter.OnCityListItemClickListener2 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0360d() {
+        d() {
         }
 
         @Override // cn.damai.category.category.ui.adapter.CitySelectAdapter.OnCityListItemClickListener2
@@ -258,12 +254,11 @@ public class CityView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.view.CityView$e */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0361e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0361e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -321,7 +316,7 @@ public class CityView {
             return;
         }
         String[] strArr = mr1.LOCATION;
-        ir1.b(this.e, false, strArr, "才能定位到当前所在城市～", new C0358b(ir1.i(strArr), cjVar));
+        ir1.b(this.e, false, strArr, "才能定位到当前所在城市～", new b(ir1.i(strArr), cjVar));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -348,7 +343,7 @@ public class CityView {
         ViewGroup.LayoutParams layoutParams = letterSortBar.getLayoutParams();
         layoutParams.height = this.b - ScreenUtil.dip2px(this.e, 43.0f);
         this.o.setLayoutParams(layoutParams);
-        this.o.setOnTouchingLetterChangedListener(new C0357a());
+        this.o.setOnTouchingLetterChangedListener(new a());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -358,7 +353,7 @@ public class CityView {
             ipChange.ipc$dispatch("-586653914", new Object[]{this, cjVar});
             return;
         }
-        CityLocationUtil cityLocationUtil = new CityLocationUtil(this.e, new C0359c(cjVar));
+        CityLocationUtil cityLocationUtil = new CityLocationUtil(this.e, new c(cjVar));
         this.n = cityLocationUtil;
         cityLocationUtil.p(true);
         this.n.n();
@@ -424,7 +419,7 @@ public class CityView {
 
     public void r(CityListResponse cityListResponse) {
         List<SitesBean> sites;
-        int e;
+        int e2;
         IpChange ipChange = $ipChange;
         int i = 1;
         if (AndroidInstantRuntime.support(ipChange, "-499334611")) {
@@ -450,10 +445,10 @@ public class CityView {
             A(cjVar, false);
             this.j.add(this.s);
             List<HotCityBean> hotCity = cityListResponse.getHotCity();
-            int e2 = wh2.e(hotCity);
-            if (e2 > 0) {
+            int e3 = wh2.e(hotCity);
+            if (e3 > 0) {
                 ArrayList arrayList = new ArrayList();
-                for (int i2 = 0; i2 < e2; i2++) {
+                for (int i2 = 0; i2 < e3; i2++) {
                     HotCityBean hotCityBean = hotCity.get(i2);
                     if (TextUtils.getTrimmedLength(hotCityBean.getCityId()) > 0 && TextUtils.getTrimmedLength(hotCityBean.getCityName()) > 0 && TextUtils.getTrimmedLength(hotCityBean.getUrl()) > 0) {
                         arrayList.add(hotCityBean);
@@ -473,13 +468,13 @@ public class CityView {
                 }
             }
             List<GroupsBean> groups = cityListResponse.getGroups();
-            int e3 = wh2.e(groups);
-            if (e3 > 0) {
-                for (int i3 = 0; i3 < e3; i3++) {
+            int e4 = wh2.e(groups);
+            if (e4 > 0) {
+                for (int i3 = 0; i3 < e4; i3++) {
                     GroupsBean groupsBean = groups.get(i3);
-                    if (groupsBean != null && (e = wh2.e((sites = groupsBean.getSites()))) > 0) {
+                    if (groupsBean != null && (e2 = wh2.e((sites = groupsBean.getSites()))) > 0) {
                         ArrayList arrayList2 = new ArrayList();
-                        for (int i4 = 0; i4 < e; i4++) {
+                        for (int i4 = 0; i4 < e2; i4++) {
                             SitesBean sitesBean = sites.get(i4);
                             if (sitesBean != null && TextUtils.getTrimmedLength(sitesBean.getCityId()) > 0 && TextUtils.getTrimmedLength(sitesBean.getCityName()) > 0) {
                                 arrayList2.add(sitesBean);
@@ -498,9 +493,9 @@ public class CityView {
                 }
             }
             List<ManualBean> manual = cityListResponse.getManual();
-            int e4 = wh2.e(manual);
-            if (e4 > 0) {
-                for (int i6 = 0; i6 < e4; i6++) {
+            int e5 = wh2.e(manual);
+            if (e5 > 0) {
+                for (int i6 = 0; i6 < e5; i6++) {
                     ManualBean manualBean = manual.get(i6);
                     if (manualBean != null && !TextUtils.isEmpty(manualBean.getCityId().trim()) && !TextUtils.isEmpty(manualBean.getUrl().trim())) {
                         this.k.put(manualBean.getCityId(), manualBean.getUrl());
@@ -562,7 +557,7 @@ public class CityView {
             dMIconFontTextView.setText(this.e.getText(R$string.iconfont_shaixuanxia12));
             return;
         }
-        this.d.setOnClickListener(new View$OnClickListenerC0361e());
+        this.d.setOnClickListener(new e());
         this.c.setVisibility(0);
         this.a.d(250);
         dMIconFontTextView.setText(this.e.getText(R$string.iconfont_shaixuanshang12));

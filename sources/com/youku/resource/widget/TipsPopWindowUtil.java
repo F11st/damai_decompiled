@@ -57,7 +57,7 @@ public class TipsPopWindowUtil {
     }
 
     private void initPopView() {
-        this.mHolderView = (ViewGroup) LayoutInflater.from(this.mContext).inflate(R.C8074layout.resource_yk_window_pop_tips, (ViewGroup) null);
+        this.mHolderView = (ViewGroup) LayoutInflater.from(this.mContext).inflate(R.layout.resource_yk_window_pop_tips, (ViewGroup) null);
         this.mTrianglePopView = new PopupWindow((View) this.mHolderView, -2, -2, false);
         this.mGuideTipsView = (PlayerGuideTipsView) this.mHolderView.findViewById(R.id.v_guide_tips);
         this.mHorizontalGuideTipsView = (PlayerHorizontalGuideTipsView) this.mHolderView.findViewById(R.id.v_horizontal_guide_tips);

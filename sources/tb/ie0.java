@@ -17,7 +17,7 @@ public final class ie0 extends jp1 {
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentDescriptor
     @NotNull
     /* renamed from: d */
-    public MemberScope.C8499b getMemberScope() {
-        return MemberScope.C8499b.INSTANCE;
+    public MemberScope.b getMemberScope() {
+        return MemberScope.b.INSTANCE;
     }
 }

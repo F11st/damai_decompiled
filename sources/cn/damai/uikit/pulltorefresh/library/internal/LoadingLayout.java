@@ -54,9 +54,8 @@ public abstract class LoadingLayout extends FrameLayout implements ILoadingLayou
     private boolean mUseIntrinsicAnimation;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.pulltorefresh.library.internal.LoadingLayout$a */
     /* loaded from: classes8.dex */
-    static /* synthetic */ class C2540a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
         static final /* synthetic */ int[] b;
 
@@ -92,7 +91,7 @@ public abstract class LoadingLayout extends FrameLayout implements ILoadingLayou
         this.mMode = mode;
         this.mScrollDirection = orientation;
         if (!z) {
-            if (C2540a.a[orientation.ordinal()] != 1) {
+            if (a.a[orientation.ordinal()] != 1) {
                 LayoutInflater.from(context).inflate(R$layout.pull_to_refresh_header_vertical, this);
             } else {
                 LayoutInflater.from(context).inflate(R$layout.pull_to_refresh_header_horizontal, this);
@@ -107,7 +106,7 @@ public abstract class LoadingLayout extends FrameLayout implements ILoadingLayou
         this.mSubHeaderText = (TextView) this.mInnerLayout.findViewById(R$id.pull_to_refresh_sub_text);
         this.mHeaderImage = (ImageView) this.mInnerLayout.findViewById(R$id.pull_to_refresh_image);
         FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) this.mInnerLayout.getLayoutParams();
-        int[] iArr = C2540a.b;
+        int[] iArr = a.b;
         if (iArr[mode.ordinal()] != 1) {
             layoutParams.gravity = orientation == PullToRefreshBase.Orientation.VERTICAL ? 80 : 5;
             this.mPullLabel = context.getString(R$string.pull_to_refresh_pull_label);
@@ -191,9 +190,9 @@ public abstract class LoadingLayout extends FrameLayout implements ILoadingLayou
                 }
             } else if (findViewById != null) {
                 ViewGroup.LayoutParams layoutParams = findViewById.getLayoutParams();
-                int a = kg2.a(activity);
-                layoutParams.height = a;
-                mStatusBarHeight = a;
+                int a2 = kg2.a(activity);
+                layoutParams.height = a2;
+                mStatusBarHeight = a2;
                 findViewById.setVisibility(0);
             }
         }
@@ -276,7 +275,7 @@ public abstract class LoadingLayout extends FrameLayout implements ILoadingLayou
         if (AndroidInstantRuntime.support(ipChange, "-1131637968")) {
             return ((Integer) ipChange.ipc$dispatch("-1131637968", new Object[]{this})).intValue();
         }
-        if (C2540a.a[this.mScrollDirection.ordinal()] != 1) {
+        if (a.a[this.mScrollDirection.ordinal()] != 1) {
             return this.mInnerLayout.getHeight();
         }
         return this.mInnerLayout.getWidth();

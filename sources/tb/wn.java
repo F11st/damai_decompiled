@@ -5,10 +5,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import cn.damai.comment.bean.StoreInfo;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -69,7 +67,7 @@ public final class wn extends cp2<StoreInfo> {
             }
             getLiveUt().n(this.d, storeInfo.getStoreId());
             this.e = storeInfo;
-            DMImageCreator f = C0504a.b().f(storeInfo.getStoreImgUrl(), m62.a(mu0.a(), 42.0f), m62.a(mu0.a(), 42.0f));
+            DMImageCreator f = cn.damai.common.image.a.b().f(storeInfo.getStoreImgUrl(), m62.a(mu0.a(), 42.0f), m62.a(mu0.a(), 42.0f));
             int i = R$drawable.store_defult_img;
             f.i(i).c(i).g(this.f);
             String des = storeInfo.getDes();
@@ -104,7 +102,7 @@ public final class wn extends cp2<StoreInfo> {
         StoreInfo storeInfo = this.e;
         String storeId = storeInfo != null ? storeInfo.getStoreId() : null;
         if (storeId != null) {
-            C0529c e = C0529c.e();
+            cn.damai.common.user.c e = cn.damai.common.user.c.e();
             q91 liveUt = getLiveUt();
             StoreInfo storeInfo2 = this.e;
             e.x(liveUt.G(storeInfo2 != null ? storeInfo2.getStoreId() : null));

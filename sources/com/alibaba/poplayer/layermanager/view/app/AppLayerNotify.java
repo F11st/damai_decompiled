@@ -11,7 +11,7 @@ import java.util.List;
 /* loaded from: classes8.dex */
 public class AppLayerNotify {
     public static final String TAG = "AppLayerNotify";
-    private HandlerC3672b a = new HandlerC3672b();
+    private b a = new b();
     private Application b;
     private ActivityManager c;
     private AppBackgroundNotify d;
@@ -27,10 +27,9 @@ public class AppLayerNotify {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayer.layermanager.view.app.AppLayerNotify$b */
     /* loaded from: classes8.dex */
-    public final class HandlerC3672b extends Handler {
-        private HandlerC3672b() {
+    public final class b extends Handler {
+        private b() {
         }
 
         @Override // android.os.Handler

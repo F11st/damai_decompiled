@@ -21,11 +21,11 @@ import tb.wt2;
 /* loaded from: classes5.dex */
 public final class MegaScheduler {
     @NotNull
-    public static final C3244a Companion = new C3244a(null);
+    public static final a Companion = new a(null);
     private static ExecutorService f;
     private static DelayHandler g;
     private final AtomicInteger a;
-    private final LinkedList<C3245b> b;
+    private final LinkedList<b> b;
     private int c;
     private final String d;
     private final int e;
@@ -36,12 +36,12 @@ public final class MegaScheduler {
     /* loaded from: classes5.dex */
     public static final class DelayHandler implements Runnable {
         private final Object lock = new Object();
-        private final PriorityQueue<C3245b> mDelayList = new PriorityQueue<>(10);
+        private final PriorityQueue<b> mDelayList = new PriorityQueue<>(10);
 
         @Override // java.lang.Runnable
         public void run() {
             while (true) {
-                C3245b c3245b = null;
+                b bVar = null;
                 synchronized (this.lock) {
                     if (this.mDelayList.isEmpty()) {
                         try {
@@ -53,21 +53,21 @@ public final class MegaScheduler {
                         if (b > 0) {
                             this.lock.wait(b);
                         } else {
-                            c3245b = this.mDelayList.remove();
+                            bVar = this.mDelayList.remove();
                         }
                     }
                     wt2 wt2Var = wt2.INSTANCE;
                 }
-                if (c3245b != null) {
-                    MegaScheduler.i(c3245b.c(), c3245b.d(), 0L, 2, null);
+                if (bVar != null) {
+                    MegaScheduler.i(bVar.c(), bVar.d(), 0L, 2, null);
                 }
             }
         }
 
-        public final void submit(@NotNull C3245b c3245b) {
-            b41.i(c3245b, "task");
+        public final void submit(@NotNull b bVar) {
+            b41.i(bVar, "task");
             synchronized (this.lock) {
-                this.mDelayList.add(c3245b);
+                this.mDelayList.add(bVar);
                 this.lock.notify();
                 wt2 wt2Var = wt2.INSTANCE;
             }
@@ -94,20 +94,19 @@ public final class MegaScheduler {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.schedule.MegaScheduler$a */
     /* loaded from: classes5.dex */
-    public static final class C3244a {
-        private C3244a() {
+    public static final class a {
+        private a() {
         }
 
         /* JADX INFO: Access modifiers changed from: private */
         @JvmStatic
         public final DelayHandler c() {
             if (MegaScheduler.g == null) {
-                C3244a c3244a = MegaScheduler.Companion;
-                synchronized (c3244a) {
+                a aVar = MegaScheduler.Companion;
+                synchronized (aVar) {
                     MegaScheduler.g = new DelayHandler();
-                    c3244a.d().submit(MegaScheduler.g);
+                    aVar.d().submit(MegaScheduler.g);
                 }
             }
             DelayHandler delayHandler = MegaScheduler.g;
@@ -129,23 +128,22 @@ public final class MegaScheduler {
             return executorService;
         }
 
-        public /* synthetic */ C3244a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.schedule.MegaScheduler$b */
     /* loaded from: classes5.dex */
-    public static final class C3245b implements Comparable<C3245b> {
+    public static final class b implements Comparable<b> {
         @NotNull
         private final MegaScheduler a;
         private final long b;
         @NotNull
         private final Runnable c;
 
-        public C3245b(@NotNull MegaScheduler megaScheduler, long j, @NotNull Runnable runnable) {
+        public b(@NotNull MegaScheduler megaScheduler, long j, @NotNull Runnable runnable) {
             b41.i(megaScheduler, "megaScheduler");
             b41.i(runnable, "runnable");
             this.a = megaScheduler;
@@ -155,10 +153,10 @@ public final class MegaScheduler {
 
         @Override // java.lang.Comparable
         /* renamed from: a */
-        public int compareTo(@NotNull C3245b c3245b) {
-            b41.i(c3245b, "other");
+        public int compareTo(@NotNull b bVar) {
+            b41.i(bVar, "other");
             long j = this.b;
-            long j2 = c3245b.b;
+            long j2 = bVar.b;
             if (j > j2) {
                 return 1;
             }
@@ -195,15 +193,15 @@ public final class MegaScheduler {
                 this.c--;
                 return false;
             }
-            C3245b removeFirst = this.b.removeFirst();
+            b removeFirst = this.b.removeFirst();
             b41.h(removeFirst, "taskQ.removeFirst()");
-            C3245b c3245b = removeFirst;
+            b bVar = removeFirst;
             wt2 wt2Var = wt2.INSTANCE;
             Thread currentThread = Thread.currentThread();
             String name = currentThread.getName();
             currentThread.setName(this.d + '-' + i);
             try {
-                c3245b.d().run();
+                bVar.d().run();
             } catch (Throwable unused) {
             }
             currentThread.setName(name);
@@ -222,11 +220,11 @@ public final class MegaScheduler {
     public final void h(@NotNull Runnable runnable, long j) {
         b41.i(runnable, "runnable");
         if (j > 0) {
-            Companion.c().submit(new C3245b(this, (System.nanoTime() / 1000000) + j, runnable));
+            Companion.c().submit(new b(this, (System.nanoTime() / 1000000) + j, runnable));
             return;
         }
         synchronized (this.b) {
-            this.b.addLast(new C3245b(this, 0L, runnable));
+            this.b.addLast(new b(this, 0L, runnable));
             int i = this.e;
             int i2 = this.c;
             if (i2 >= 0 && i > i2) {

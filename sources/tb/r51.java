@@ -3,8 +3,6 @@ package tb;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
@@ -29,15 +27,14 @@ public final class r51 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.r51$a */
     /* loaded from: classes3.dex */
-    public static class C9642a {
+    public static class a {
         @NotNull
         private final z71 a;
         private final int b;
         private final boolean c;
 
-        public C9642a(@NotNull z71 z71Var, int i, boolean z) {
+        public a(@NotNull z71 z71Var, int i, boolean z) {
             b41.i(z71Var, "type");
             this.a = z71Var;
             this.b = i;
@@ -69,20 +66,19 @@ public final class r51 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.r51$b */
     /* loaded from: classes3.dex */
-    public static final class C9643b extends C9642a {
+    public static final class b extends a {
         @NotNull
         private final fd2 d;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C9643b(@NotNull fd2 fd2Var, int i, boolean z) {
+        public b(@NotNull fd2 fd2Var, int i, boolean z) {
             super(fd2Var, i, z);
             b41.i(fd2Var, "type");
             this.d = fd2Var;
         }
 
-        @Override // tb.r51.C9642a
+        @Override // tb.r51.a
         @NotNull
         /* renamed from: e */
         public fd2 b() {
@@ -96,18 +92,18 @@ public final class r51 {
     }
 
     private final z71 a(z71 z71Var, z71 z71Var2) {
-        z71 a = gr2.a(z71Var2);
-        z71 a2 = gr2.a(z71Var);
-        if (a2 == null) {
-            if (a == null) {
+        z71 a2 = gr2.a(z71Var2);
+        z71 a3 = gr2.a(z71Var);
+        if (a3 == null) {
+            if (a2 == null) {
                 return null;
             }
-            a2 = a;
+            a3 = a2;
         }
-        return a == null ? a2 : KotlinTypeFactory.d(dk0.c(a2), dk0.d(a));
+        return a2 == null ? a3 : KotlinTypeFactory.d(dk0.c(a3), dk0.d(a2));
     }
 
-    private final C9643b c(fd2 fd2Var, Function1<? super Integer, s51> function1, int i, TypeComponentPosition typeComponentPosition, boolean z, boolean z2) {
+    private final b c(fd2 fd2Var, Function1<? super Integer, s51> function1, int i, TypeComponentPosition typeComponentPosition, boolean z, boolean z2) {
         ue0 e;
         int q;
         boolean z3;
@@ -120,30 +116,30 @@ public final class r51 {
         if (nq2.a(typeComponentPosition) || !fd2Var.b().isEmpty()) {
             ClassifierDescriptor declarationDescriptor = fd2Var.c().getDeclarationDescriptor();
             if (declarationDescriptor == null) {
-                return new C9643b(fd2Var, 1, false);
+                return new b(fd2Var, 1, false);
             }
             s51 invoke = function12.invoke(Integer.valueOf(i));
             e = sq2.e(declarationDescriptor, invoke, typeComponentPosition);
             ClassifierDescriptor classifierDescriptor = (ClassifierDescriptor) e.a();
-            Annotations b = e.b();
+            Annotations b2 = e.b();
             TypeConstructor typeConstructor = classifierDescriptor.getTypeConstructor();
             b41.h(typeConstructor, "enhancedClassifier.typeConstructor");
             int i2 = i + 1;
-            boolean z4 = b != null;
+            boolean z4 = b2 != null;
             if (z2 && z) {
                 i2 += fd2Var.b().size();
                 boolean z5 = z4;
                 arrayList = fd2Var.b();
                 z3 = z5;
             } else {
-                List<TypeProjection> b2 = fd2Var.b();
-                q = C8215n.q(b2, 10);
+                List<TypeProjection> b3 = fd2Var.b();
+                q = kotlin.collections.n.q(b3, 10);
                 ArrayList arrayList2 = new ArrayList(q);
                 int i3 = 0;
-                for (Object obj : b2) {
+                for (Object obj : b3) {
                     int i4 = i3 + 1;
                     if (i3 < 0) {
-                        C8214m.p();
+                        kotlin.collections.m.p();
                     }
                     TypeProjection typeProjection = (TypeProjection) obj;
                     if (typeProjection.isStarProjection()) {
@@ -159,13 +155,13 @@ public final class r51 {
                         }
                         i2 = i5;
                     } else {
-                        C9642a e3 = e(typeProjection.getType().f(), function12, i2, z2);
+                        a e3 = e(typeProjection.getType().f(), function12, i2, z2);
                         z4 = z4 || e3.d();
                         i2 += e3.a();
-                        z71 b3 = e3.b();
+                        z71 b4 = e3.b();
                         Variance projectionKind2 = typeProjection.getProjectionKind();
                         b41.h(projectionKind2, "arg.projectionKind");
-                        e2 = TypeUtilsKt.e(b3, projectionKind2, typeConstructor.getParameters().get(i3));
+                        e2 = TypeUtilsKt.e(b4, projectionKind2, typeConstructor.getParameters().get(i3));
                     }
                     arrayList2.add(e2);
                     function12 = function1;
@@ -176,53 +172,53 @@ public final class r51 {
             }
             h = sq2.h(fd2Var, invoke, typeComponentPosition);
             boolean booleanValue = ((Boolean) h.a()).booleanValue();
-            Annotations b4 = h.b();
+            Annotations b5 = h.b();
             int i6 = i2 - i;
-            if (!(z3 || b4 != null)) {
-                return new C9643b(fd2Var, i6, false);
+            if (!(z3 || b5 != null)) {
+                return new b(fd2Var, i6, false);
             }
             boolean z6 = false;
-            l = C8214m.l(fd2Var.getAnnotations(), b, b4);
+            l = kotlin.collections.m.l(fd2Var.getAnnotations(), b2, b5);
             d = sq2.d(l);
             fd2 i7 = KotlinTypeFactory.i(d, typeConstructor, arrayList, booleanValue, null, 16, null);
             gu2 gu2Var = i7;
             if (invoke.d()) {
                 gu2Var = f(i7);
             }
-            if (b4 != null && invoke.e()) {
+            if (b5 != null && invoke.e()) {
                 z6 = true;
             }
             if (z6) {
                 gu2Var = gr2.e(fd2Var, gu2Var);
             }
-            return new C9643b((fd2) gu2Var, i6, true);
+            return new b((fd2) gu2Var, i6, true);
         }
-        return new C9643b(fd2Var, 1, false);
+        return new b(fd2Var, 1, false);
     }
 
-    static /* synthetic */ C9643b d(r51 r51Var, fd2 fd2Var, Function1 function1, int i, TypeComponentPosition typeComponentPosition, boolean z, boolean z2, int i2, Object obj) {
+    static /* synthetic */ b d(r51 r51Var, fd2 fd2Var, Function1 function1, int i, TypeComponentPosition typeComponentPosition, boolean z, boolean z2, int i2, Object obj) {
         return r51Var.c(fd2Var, function1, i, typeComponentPosition, (i2 & 8) != 0 ? false : z, (i2 & 16) != 0 ? false : z2);
     }
 
-    private final C9642a e(gu2 gu2Var, Function1<? super Integer, s51> function1, int i, boolean z) {
+    private final a e(gu2 gu2Var, Function1<? super Integer, s51> function1, int i, boolean z) {
         gu2 gu2Var2 = gu2Var;
         boolean z2 = false;
         if (a81.a(gu2Var)) {
-            return new C9642a(gu2Var2, 1, false);
+            return new a(gu2Var2, 1, false);
         }
         if (gu2Var2 instanceof ak0) {
             boolean z3 = gu2Var2 instanceof RawType;
             ak0 ak0Var = (ak0) gu2Var2;
-            C9643b c = c(ak0Var.k(), function1, i, TypeComponentPosition.FLEXIBLE_LOWER, z3, z);
-            C9643b c2 = c(ak0Var.l(), function1, i, TypeComponentPosition.FLEXIBLE_UPPER, z3, z);
+            b c = c(ak0Var.k(), function1, i, TypeComponentPosition.FLEXIBLE_LOWER, z3, z);
+            b c2 = c(ak0Var.l(), function1, i, TypeComponentPosition.FLEXIBLE_UPPER, z3, z);
             c.a();
             c2.a();
             z2 = (c.d() || c2.d()) ? true : true;
-            z71 a = a(c.b(), c2.b());
+            z71 a2 = a(c.b(), c2.b());
             if (z2) {
-                gu2Var2 = gr2.e(gu2Var2 instanceof RawTypeImpl ? new RawTypeImpl(c.b(), c2.b()) : KotlinTypeFactory.d(c.b(), c2.b()), a);
+                gu2Var2 = gr2.e(gu2Var2 instanceof RawTypeImpl ? new RawTypeImpl(c.b(), c2.b()) : KotlinTypeFactory.d(c.b(), c2.b()), a2);
             }
-            return new C9642a(gu2Var2, c.a(), z2);
+            return new a(gu2Var2, c.a(), z2);
         } else if (gu2Var2 instanceof fd2) {
             return d(this, (fd2) gu2Var2, function1, i, TypeComponentPosition.INFLEXIBLE, false, z, 8, null);
         } else {

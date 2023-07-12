@@ -56,11 +56,11 @@ public class DMRequester implements IDMRequester {
     /* compiled from: Taobao */
     /* loaded from: classes11.dex */
     public class Response implements IRemoteBaseListener, IRemoteCacheListener {
-        C6661a mDMContext;
+        com.taobao.android.ultron.datamodel.imp.a mDMContext;
         f1 mOuterCallback;
 
-        Response(f1 f1Var, C6661a c6661a) {
-            this.mDMContext = c6661a;
+        Response(f1 f1Var, com.taobao.android.ultron.datamodel.imp.a aVar) {
+            this.mDMContext = aVar;
             this.mOuterCallback = f1Var;
         }
 
@@ -212,12 +212,11 @@ public class DMRequester implements IDMRequester {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.ultron.datamodel.imp.DMRequester$a */
     /* loaded from: classes11.dex */
-    class C6659a extends f1 {
+    class a extends f1 {
         private IRequestCallback a;
 
-        public C6659a(DMRequester dMRequester, IRequestCallback iRequestCallback) {
+        public a(DMRequester dMRequester, IRequestCallback iRequestCallback) {
             this.a = iRequestCallback;
         }
 
@@ -253,7 +252,7 @@ public class DMRequester implements IDMRequester {
         if (isVar.m() != null) {
             this.b = isVar.m();
         } else {
-            this.b = new C6661a(this.f);
+            this.b = new com.taobao.android.ultron.datamodel.imp.a(this.f);
         }
         this.k = isVar.o();
         this.g = isVar.n();
@@ -275,13 +274,13 @@ public class DMRequester implements IDMRequester {
         this.a.setNeedEcode(isVar.w());
         this.p = isVar.l();
         this.b.setBizName(this.o);
-        ((C6661a) this.b).x(isVar.l());
+        ((com.taobao.android.ultron.datamodel.imp.a) this.b).x(isVar.l());
     }
 
     private boolean a(Object obj, f1 f1Var) {
         IDMContext iDMContext = this.b;
-        if (iDMContext instanceof C6661a) {
-            C6661a c6661a = (C6661a) iDMContext;
+        if (iDMContext instanceof com.taobao.android.ultron.datamodel.imp.a) {
+            com.taobao.android.ultron.datamodel.imp.a aVar = (com.taobao.android.ultron.datamodel.imp.a) iDMContext;
             if (this.m == null) {
                 this.m = new HashMap();
             }
@@ -289,7 +288,7 @@ public class DMRequester implements IDMRequester {
                 if (this.f) {
                     this.m.put("feature", "{\"gzip\":\"true\"}");
                 }
-                this.m.put("params", c6661a.g().a(c6661a, this.l));
+                this.m.put("params", aVar.g().a(aVar, this.l));
                 JSONObject jSONObject = new JSONObject();
                 jSONObject.putAll(this.m);
                 this.a.setData(jSONObject.toJSONString());
@@ -297,7 +296,7 @@ public class DMRequester implements IDMRequester {
                 if (this.f) {
                     this.m.put("feature", "{\"gzip\":\"true\"}");
                 }
-                this.m.put("params", c6661a.g().g(c6661a));
+                this.m.put("params", aVar.g().g(aVar));
                 JSONObject jSONObject2 = new JSONObject();
                 jSONObject2.putAll(this.m);
                 this.a.setData(jSONObject2.toJSONString());
@@ -333,7 +332,7 @@ public class DMRequester implements IDMRequester {
                 build.reqContext(obj);
             }
             build.setErrorNotifyAfterCache(true);
-            Response response = new Response(f1Var, c6661a);
+            Response response = new Response(f1Var, aVar);
             if (this.n == null) {
                 build.addListener((MtopListener) response).startRequest();
             } else {
@@ -358,6 +357,6 @@ public class DMRequester implements IDMRequester {
 
     @Override // com.taobao.android.ultron.datamodel.IDMRequester
     public boolean execute(IRequestCallback iRequestCallback) {
-        return a(null, new C6659a(this, iRequestCallback));
+        return a(null, new a(this, iRequestCallback));
     }
 }

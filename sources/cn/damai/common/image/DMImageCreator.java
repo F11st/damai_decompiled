@@ -11,10 +11,10 @@ import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.phenix.bitmap.BitmapProcessor;
 import com.taobao.phenix.intf.event.IPhenixListener;
 import com.youku.alixplayer.opensdk.statistics.StaticsUtil;
-import tb.C9826vr;
 import tb.b23;
 import tb.nh0;
 import tb.ui2;
+import tb.vr;
 import tb.wr1;
 
 /* compiled from: Taobao */
@@ -29,28 +29,27 @@ public class DMImageCreator {
     /* compiled from: Taobao */
     /* loaded from: classes13.dex */
     public interface DMImageFailListener {
-        void onFail(C0501d c0501d);
+        void onFail(d dVar);
     }
 
     /* compiled from: Taobao */
     /* loaded from: classes13.dex */
     public interface DMImageMemCacheMissListener {
-        void onCacheMiss(C0500c c0500c);
+        void onCacheMiss(c cVar);
     }
 
     /* compiled from: Taobao */
     /* loaded from: classes13.dex */
     public interface DMImageSuccListener {
-        void onSuccess(C0502e c0502e);
+        void onSuccess(e eVar);
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.image.DMImageCreator$a */
     /* loaded from: classes4.dex */
-    public class C0498a implements IPhenixListener<ui2> {
+    public class a implements IPhenixListener<ui2> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0498a() {
+        a() {
         }
 
         @Override // com.taobao.phenix.intf.event.IPhenixListener
@@ -60,21 +59,20 @@ public class DMImageCreator {
             if (AndroidInstantRuntime.support(ipChange, "-1409254332")) {
                 return ((Boolean) ipChange.ipc$dispatch("-1409254332", new Object[]{this, ui2Var})).booleanValue();
             }
-            C0502e c0502e = new C0502e(DMImageCreator.this);
-            c0502e.a = ui2Var.f();
-            c0502e.b = ui2Var.f().getBitmap();
-            DMImageCreator.this.c.onSuccess(c0502e);
+            e eVar = new e(DMImageCreator.this);
+            eVar.a = ui2Var.f();
+            eVar.b = ui2Var.f().getBitmap();
+            DMImageCreator.this.c.onSuccess(eVar);
             return true;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.image.DMImageCreator$b */
     /* loaded from: classes4.dex */
-    public class C0499b implements IPhenixListener<nh0> {
+    public class b implements IPhenixListener<nh0> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0499b() {
+        b() {
         }
 
         @Override // com.taobao.phenix.intf.event.IPhenixListener
@@ -84,12 +82,12 @@ public class DMImageCreator {
             if (AndroidInstantRuntime.support(ipChange, "-1880475487")) {
                 return ((Boolean) ipChange.ipc$dispatch("-1880475487", new Object[]{this, nh0Var})).booleanValue();
             }
-            C0501d c0501d = new C0501d(DMImageCreator.this);
-            c0501d.a = nh0Var.f();
-            DMImageCreator.this.d.onFail(c0501d);
+            d dVar = new d(DMImageCreator.this);
+            dVar.a = nh0Var.f();
+            DMImageCreator.this.d.onFail(dVar);
             if (!TextUtils.isEmpty(nh0Var.b())) {
                 try {
-                    b23.g("DMImageCreator:jsondata={appVersion:" + AppConfig.q() + ",resultCode:" + c0501d.a + ",url:" + nh0Var.b() + ",message:" + nh0Var.e() + "}", StaticsUtil.PLAY_CODE_101, "图片加载失败");
+                    b23.g("DMImageCreator:jsondata={appVersion:" + AppConfig.q() + ",resultCode:" + dVar.a + ",url:" + nh0Var.b() + ",message:" + nh0Var.e() + "}", StaticsUtil.PLAY_CODE_101, "图片加载失败");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -99,29 +97,26 @@ public class DMImageCreator {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.image.DMImageCreator$c */
     /* loaded from: classes13.dex */
-    public class C0500c {
+    public class c {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.image.DMImageCreator$d */
     /* loaded from: classes13.dex */
-    public class C0501d {
+    public class d {
         public int a;
 
-        public C0501d(DMImageCreator dMImageCreator) {
+        public d(DMImageCreator dMImageCreator) {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.image.DMImageCreator$e */
     /* loaded from: classes13.dex */
-    public class C0502e {
+    public class e {
         public Drawable a;
         public Bitmap b;
 
-        public C0502e(DMImageCreator dMImageCreator) {
+        public e(DMImageCreator dMImageCreator) {
         }
     }
 
@@ -157,31 +152,31 @@ public class DMImageCreator {
         this.d = dMImageFailListener;
         wr1 wr1Var = this.b;
         if (wr1Var != null && dMImageFailListener != null) {
-            wr1Var.m(new C0499b());
+            wr1Var.m(new b());
         }
         return this;
     }
 
-    public C9826vr f() {
+    public vr f() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-840819468")) {
-            return (C9826vr) ipChange.ipc$dispatch("-840819468", new Object[]{this});
+            return (vr) ipChange.ipc$dispatch("-840819468", new Object[]{this});
         }
         wr1 wr1Var = this.b;
         if (wr1Var != null) {
-            return new C9826vr(wr1Var.n());
+            return new vr(wr1Var.n());
         }
         return null;
     }
 
-    public C9826vr g(ImageView imageView) {
+    public vr g(ImageView imageView) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-487877674")) {
-            return (C9826vr) ipChange.ipc$dispatch("-487877674", new Object[]{this, imageView});
+            return (vr) ipChange.ipc$dispatch("-487877674", new Object[]{this, imageView});
         }
         wr1 wr1Var = this.b;
         if (wr1Var != null) {
-            return new C9826vr(wr1Var.y(imageView));
+            return new vr(wr1Var.y(imageView));
         }
         return null;
     }
@@ -266,7 +261,7 @@ public class DMImageCreator {
         this.c = dMImageSuccListener;
         wr1 wr1Var = this.b;
         if (wr1Var != null && dMImageSuccListener != null) {
-            wr1Var.Q(new C0498a());
+            wr1Var.Q(new a());
         }
         return this;
     }

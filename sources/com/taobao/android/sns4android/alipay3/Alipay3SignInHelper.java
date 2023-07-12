@@ -32,14 +32,13 @@ public class Alipay3SignInHelper extends SNSSignInAbstractHelper {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.alipay3.Alipay3SignInHelper$a */
     /* loaded from: classes11.dex */
-    public class C6601a implements OauthCallback {
+    public class a implements OauthCallback {
         final /* synthetic */ SNSSignInListener a;
         final /* synthetic */ Activity b;
         final /* synthetic */ Context c;
 
-        C6601a(SNSSignInListener sNSSignInListener, Activity activity, Context context) {
+        a(SNSSignInListener sNSSignInListener, Activity activity, Context context) {
             this.a = sNSSignInListener;
             this.b = activity;
             this.c = context;
@@ -135,7 +134,7 @@ public class Alipay3SignInHelper extends SNSSignInAbstractHelper {
         Context applicationContext = DataProviderFactory.getApplicationContext();
         if (AliMemberSDK.getService(OauthService.class) != null) {
             TLogAdapter.e(TAG, "oauthservice != null");
-            ((OauthService) AliMemberSDK.getService(OauthService.class)).oauth(activity, "alipay", hashMap, new C6601a(sNSSignInListener, activity, applicationContext));
+            ((OauthService) AliMemberSDK.getService(OauthService.class)).oauth(activity, "alipay", hashMap, new a(sNSSignInListener, activity, applicationContext));
             return;
         }
         TLogAdapter.e(TAG, "OauthService is null");

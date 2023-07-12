@@ -11,8 +11,7 @@ import com.huawei.hms.framework.network.grs.GrsBaseInfo;
 import com.huawei.hms.framework.network.grs.GrsClient;
 import com.huawei.hms.framework.network.grs.IQueryUrlCallBack;
 import com.huawei.hms.hatool.HmsHiAnalyticsUtils;
-import com.huawei.hms.stats.C5706a;
-import com.huawei.hms.stats.C5708c;
+import com.huawei.hms.stats.c;
 import com.huawei.hms.support.hianalytics.HiAnalyticsConstant;
 import com.huawei.hms.support.log.HMSLog;
 import java.util.Locale;
@@ -26,13 +25,12 @@ public class HMSBIInitializer {
     public static HiAnalyticsInstance f;
     public final Context a;
     public AtomicBoolean b = new AtomicBoolean(false);
-    public boolean c = C5708c.a();
+    public boolean c = c.a();
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.utils.HMSBIInitializer$a */
     /* loaded from: classes10.dex */
-    public class C5734a implements IQueryUrlCallBack {
-        public C5734a() {
+    public class a implements IQueryUrlCallBack {
+        public a() {
         }
 
         @Override // com.huawei.hms.framework.network.grs.IQueryUrlCallBack
@@ -58,10 +56,9 @@ public class HMSBIInitializer {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.utils.HMSBIInitializer$b */
     /* loaded from: classes10.dex */
-    public class AsyncTaskC5735b extends AsyncTask<String, Integer, Void> {
-        public AsyncTaskC5735b() {
+    public class b extends AsyncTask<String, Integer, Void> {
+        public b() {
         }
 
         @Override // android.os.AsyncTask
@@ -71,7 +68,7 @@ public class HMSBIInitializer {
             return null;
         }
 
-        public /* synthetic */ AsyncTaskC5735b(HMSBIInitializer hMSBIInitializer, C5734a c5734a) {
+        public /* synthetic */ b(HMSBIInitializer hMSBIInitializer, a aVar) {
             this();
         }
     }
@@ -106,7 +103,7 @@ public class HMSBIInitializer {
             initFlag = HiAnalyticsManager.getInitFlag(HiAnalyticsConstant.HA_SERVICE_TAG);
         }
         HMSLog.i("HMSBIInitializer", "Builder->biInitFlag :" + initFlag);
-        if (initFlag || C5706a.c(this.a) || !this.b.compareAndSet(false, true)) {
+        if (initFlag || com.huawei.hms.stats.a.c(this.a) || !this.b.compareAndSet(false, true)) {
             return;
         }
         String issueCountryCode = GrsApp.getInstance().getIssueCountryCode(this.a);
@@ -114,7 +111,7 @@ public class HMSBIInitializer {
             issueCountryCode = issueCountryCode.toUpperCase(Locale.ENGLISH);
         }
         if (!"UNKNOWN".equalsIgnoreCase(issueCountryCode) && !TextUtils.isEmpty(issueCountryCode)) {
-            new AsyncTaskC5735b(this, null).execute(issueCountryCode);
+            new b(this, null).execute(issueCountryCode);
             return;
         }
         HMSLog.e("HMSBIInitializer", "Failed to get device issue country");
@@ -132,6 +129,6 @@ public class HMSBIInitializer {
         HMSLog.i("HMSBIInitializer", "Start to query GRS");
         GrsBaseInfo grsBaseInfo = new GrsBaseInfo();
         grsBaseInfo.setIssueCountry(str);
-        new GrsClient(this.a, grsBaseInfo).ayncGetGrsUrl("com.huawei.cloud.opensdkhianalytics", "ROOTV2", new C5734a());
+        new GrsClient(this.a, grsBaseInfo).ayncGetGrsUrl("com.huawei.cloud.opensdkhianalytics", "ROOTV2", new a());
     }
 }

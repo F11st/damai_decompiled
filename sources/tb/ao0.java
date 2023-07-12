@@ -13,9 +13,8 @@ public class ao0 {
     private FlutterEngineProvider e;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ao0$b */
     /* loaded from: classes10.dex */
-    public static class C8917b {
+    public static class b {
         private String a = "/";
         private String b = lu2.MAIN;
         private boolean c = false;
@@ -26,14 +25,14 @@ public class ao0 {
             return new ao0(this);
         }
 
-        public C8917b g(String[] strArr) {
+        public b g(String[] strArr) {
             this.d = strArr;
             return this;
         }
     }
 
     public static ao0 a() {
-        return new C8917b().f();
+        return new b().f();
     }
 
     public String b() {
@@ -77,11 +76,11 @@ public class ao0 {
         return "initialRoute:" + this.a + ", dartEntrypoint:" + this.b + ", shouldOverrideBackForegroundEvent:" + this.d + ", shellArgs:" + sb.toString();
     }
 
-    private ao0(C8917b c8917b) {
-        this.a = c8917b.a;
-        this.b = c8917b.b;
-        this.c = c8917b.d;
-        this.d = c8917b.c;
-        this.e = c8917b.e;
+    private ao0(b bVar) {
+        this.a = bVar.a;
+        this.b = bVar.b;
+        this.c = bVar.d;
+        this.d = bVar.c;
+        this.e = bVar.e;
     }
 }

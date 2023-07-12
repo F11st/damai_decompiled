@@ -66,12 +66,11 @@ public class FilterViewManager implements FilterBtnAction {
     private kj0 p;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.projectfiltercopy.FilterViewManager$a */
     /* loaded from: classes6.dex */
-    public class C1519a implements OnHorCalendarListener {
+    public class a implements OnHorCalendarListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1519a() {
+        a() {
         }
 
         /* JADX INFO: Access modifiers changed from: private */
@@ -93,7 +92,7 @@ public class FilterViewManager implements FilterBtnAction {
                 FilterViewManager.this.m.onHorCalendarCall(day, list, new HorDateClickResultListener() { // from class: tb.mj0
                     @Override // cn.damai.projectfiltercopy.listener.HorDateClickResultListener
                     public final void onProcessResult(CalendarBean calendarBean) {
-                        FilterViewManager.C1519a.this.b(calendarBean);
+                        FilterViewManager.a.this.b(calendarBean);
                     }
                 });
             }
@@ -101,12 +100,11 @@ public class FilterViewManager implements FilterBtnAction {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.projectfiltercopy.FilterViewManager$b */
     /* loaded from: classes6.dex */
-    public class C1520b implements OnItemBindListener<FilterBean> {
+    public class b implements OnItemBindListener<FilterBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1520b() {
+        b() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholdercopy.OnItemBindListener
@@ -134,12 +132,11 @@ public class FilterViewManager implements FilterBtnAction {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.projectfiltercopy.FilterViewManager$c */
     /* loaded from: classes6.dex */
-    public class C1521c implements OnItemBindListener<Type> {
+    public class c implements OnItemBindListener<Type> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1521c() {
+        c() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholdercopy.OnItemBindListener
@@ -191,7 +188,7 @@ public class FilterViewManager implements FilterBtnAction {
             }
         });
         this.j.setLayoutManager(new LinearLayoutManager(this.a, 0, false));
-        DaysAdapter daysAdapter = new DaysAdapter(new C1519a());
+        DaysAdapter daysAdapter = new DaysAdapter(new a());
         this.k = daysAdapter;
         this.j.setAdapter(daysAdapter);
         this.c = (ViewGroup) this.b.findViewById(R$id.filter_btn_container);
@@ -218,7 +215,7 @@ public class FilterViewManager implements FilterBtnAction {
         });
         this.g.setItemAnimator(null);
         this.g.setLayoutManager(new LinearLayoutManager(this.a, 0, false));
-        FastFilterAdapter fastFilterAdapter = new FastFilterAdapter(this.a, new C1520b());
+        FastFilterAdapter fastFilterAdapter = new FastFilterAdapter(this.a, new b());
         this.h = fastFilterAdapter;
         this.g.setAdapter(fastFilterAdapter);
         this.f = new gk0(context, viewGroup);
@@ -386,7 +383,7 @@ public class FilterViewManager implements FilterBtnAction {
             this.n.add(fj0.g(context4, floatContainer4, filterModel4, filterModel4.getSortList()));
         }
         for (fj0 fj0Var : this.n) {
-            fj0Var.h(new C1521c());
+            fj0Var.h(new c());
             fj0Var.e.setFilterUt(this.p);
             fj0Var.a(this.c, this.d, this.e, this);
         }

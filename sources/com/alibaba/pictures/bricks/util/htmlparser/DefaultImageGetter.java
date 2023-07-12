@@ -25,7 +25,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.a01;
@@ -38,7 +38,7 @@ import tb.r10;
 public final class DefaultImageGetter implements ImageGetter {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C3553a Companion = new C3553a(null);
+    public static final a Companion = new a(null);
     private static final String f = DefaultImageGetter.class.getSimpleName();
     @Nullable
     private static Set<BitmapWorkerTask> g = new HashSet();
@@ -48,7 +48,7 @@ public final class DefaultImageGetter implements ImageGetter {
     @NotNull
     private final Context b;
     @Nullable
-    private final C3558b c;
+    private final b c;
     private final int d;
     @NotNull
     private final String e;
@@ -116,15 +116,14 @@ public final class DefaultImageGetter implements ImageGetter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.util.htmlparser.DefaultImageGetter$a */
     /* loaded from: classes7.dex */
-    public static final class C3553a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3553a() {
+        private a() {
         }
 
-        public /* synthetic */ C3553a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -191,7 +190,7 @@ public final class DefaultImageGetter implements ImageGetter {
         if (str == null) {
             str = "";
         } else {
-            p = C8604o.p(str, "/", false, 2, null);
+            p = o.p(str, "/", false, 2, null);
             if (!p) {
                 str = str + r10.DIR;
             }
@@ -231,7 +230,7 @@ public final class DefaultImageGetter implements ImageGetter {
         ColorDrawable colorDrawable = new ColorDrawable(-3355444);
         if (str != null) {
             if (!(str.length() == 0)) {
-                F = C8604o.F(str, "/smiley", false, 2, null);
+                F = o.F(str, "/smiley", false, 2, null);
                 if (F) {
                     int i = this.d;
                     colorDrawable.setBounds(0, 0, i, i);
@@ -257,7 +256,7 @@ public final class DefaultImageGetter implements ImageGetter {
         } else if (imageGetterCallBack == null || TextUtils.isEmpty(str) || b41.d("null", str) || b41.d("NULL", str)) {
         } else {
             b41.f(str);
-            F = C8604o.F(str, "smiley/", false, 2, null);
+            F = o.F(str, "smiley/", false, 2, null);
             if (F) {
                 try {
                     imageGetterCallBack.onImageReady(str, i, i2, h(str, Companion.c(this.b.getAssets().open(str), false, this.d)));
@@ -267,9 +266,9 @@ public final class DefaultImageGetter implements ImageGetter {
                     return;
                 }
             }
-            F2 = C8604o.F(str, "http://", false, 2, null);
+            F2 = o.F(str, "http://", false, 2, null);
             if (!F2) {
-                F3 = C8604o.F(str, "https://", false, 2, null);
+                F3 = o.F(str, "https://", false, 2, null);
                 if (!F3) {
                     return;
                 }

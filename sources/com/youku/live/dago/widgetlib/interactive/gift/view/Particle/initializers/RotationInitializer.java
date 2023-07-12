@@ -2,7 +2,7 @@ package com.youku.live.dago.widgetlib.interactive.gift.view.Particle.initializer
 
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.youku.live.dago.widgetlib.interactive.gift.view.Particle.C7945Particle;
+import com.youku.live.dago.widgetlib.interactive.gift.view.Particle.Particle;
 import java.util.Random;
 
 /* compiled from: Taobao */
@@ -18,14 +18,14 @@ public class RotationInitializer implements ParticleInitializer {
     }
 
     @Override // com.youku.live.dago.widgetlib.interactive.gift.view.Particle.initializers.ParticleInitializer
-    public void initParticle(C7945Particle c7945Particle, Random random) {
+    public void initParticle(Particle particle, Random random) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "270692458")) {
-            ipChange.ipc$dispatch("270692458", new Object[]{this, c7945Particle, random});
+            ipChange.ipc$dispatch("270692458", new Object[]{this, particle, random});
             return;
         }
         int i = this.mMinAngle;
         int i2 = this.mMaxAngle;
-        c7945Particle.mInitialRotation = i == i2 ? i : random.nextInt(i2 - i) + this.mMinAngle;
+        particle.mInitialRotation = i == i2 ? i : random.nextInt(i2 - i) + this.mMinAngle;
     }
 }

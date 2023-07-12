@@ -3,8 +3,8 @@ package com.huawei.secure.android.common.encrypt.rsa;
 import android.os.Build;
 import android.text.TextUtils;
 import android.util.Base64;
-import com.huawei.secure.android.common.encrypt.utils.C5742b;
 import com.huawei.secure.android.common.encrypt.utils.EncryptUtil;
+import com.huawei.secure.android.common.encrypt.utils.b;
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 import java.security.GeneralSecurityException;
@@ -39,7 +39,7 @@ public abstract class RSASign {
             }
             return sign(str, privateKey);
         }
-        C5742b.b(c, "sign content or key is null");
+        b.b(c, "sign content or key is null");
         return "";
     }
 
@@ -49,7 +49,7 @@ public abstract class RSASign {
 
     public static String newSign(String str, String str2) {
         if (!isBuildVersionHigherThan23()) {
-            C5742b.b(c, "sdk version is too low");
+            b.b(c, "sdk version is too low");
             return "";
         }
         return a(str, str2, true);
@@ -57,7 +57,7 @@ public abstract class RSASign {
 
     public static boolean newVerifySign(String str, String str2, String str3) {
         if (!isBuildVersionHigherThan23()) {
-            C5742b.b(c, "sdk version is too low");
+            b.b(c, "sdk version is too low");
             return false;
         }
         return a(str, str2, str3, true);
@@ -99,27 +99,27 @@ public abstract class RSASign {
                 return signature.sign();
             } catch (InvalidAlgorithmParameterException e2) {
                 String str = c;
-                C5742b.b(str, "sign InvalidAlgorithmParameterException: " + e2.getMessage());
+                b.b(str, "sign InvalidAlgorithmParameterException: " + e2.getMessage());
                 return bArr2;
             } catch (InvalidKeyException e3) {
                 String str2 = c;
-                C5742b.b(str2, "sign InvalidKeyException: " + e3.getMessage());
+                b.b(str2, "sign InvalidKeyException: " + e3.getMessage());
                 return bArr2;
             } catch (NoSuchAlgorithmException e4) {
                 String str3 = c;
-                C5742b.b(str3, "sign NoSuchAlgorithmException: " + e4.getMessage());
+                b.b(str3, "sign NoSuchAlgorithmException: " + e4.getMessage());
                 return bArr2;
             } catch (SignatureException e5) {
                 String str4 = c;
-                C5742b.b(str4, "sign SignatureException: " + e5.getMessage());
+                b.b(str4, "sign SignatureException: " + e5.getMessage());
                 return bArr2;
             } catch (Exception e6) {
                 String str5 = c;
-                C5742b.b(str5, "sign Exception: " + e6.getMessage());
+                b.b(str5, "sign Exception: " + e6.getMessage());
                 return bArr2;
             }
         }
-        C5742b.b(c, "content or privateKey is null , or length is too short");
+        b.b(c, "content or privateKey is null , or length is too short");
         return bArr2;
     }
 
@@ -138,21 +138,21 @@ public abstract class RSASign {
                 return signature.verify(bArr2);
             } catch (GeneralSecurityException e2) {
                 String str = c;
-                C5742b.b(str, "check sign exception: " + e2.getMessage());
+                b.b(str, "check sign exception: " + e2.getMessage());
                 return false;
             } catch (Exception e3) {
                 String str2 = c;
-                C5742b.b(str2, "exception : " + e3.getMessage());
+                b.b(str2, "exception : " + e3.getMessage());
                 return false;
             }
         }
-        C5742b.b(c, "content or publicKey is null , or length is too short");
+        b.b(c, "content or publicKey is null , or length is too short");
         return false;
     }
 
     public static String newSign(String str, PrivateKey privateKey) {
         if (!isBuildVersionHigherThan23()) {
-            C5742b.b(c, "sdk version is too low");
+            b.b(c, "sdk version is too low");
             return "";
         }
         return a(str, privateKey, true);
@@ -160,7 +160,7 @@ public abstract class RSASign {
 
     public static boolean newVerifySign(String str, String str2, PublicKey publicKey) {
         if (!isBuildVersionHigherThan23()) {
-            C5742b.b(c, "sdk version is too low");
+            b.b(c, "sdk version is too low");
             return false;
         }
         return a(str, str2, publicKey, true);
@@ -171,7 +171,7 @@ public abstract class RSASign {
             return Base64.encodeToString(sign(str.getBytes("UTF-8"), privateKey, z), 0);
         } catch (UnsupportedEncodingException e2) {
             String str2 = c;
-            C5742b.b(str2, "sign UnsupportedEncodingException: " + e2.getMessage());
+            b.b(str2, "sign UnsupportedEncodingException: " + e2.getMessage());
             return "";
         }
     }
@@ -184,7 +184,7 @@ public abstract class RSASign {
             }
             return verifySign(str, str2, publicKey);
         }
-        C5742b.b(c, "content or public key or sign value is null");
+        b.b(c, "content or public key or sign value is null");
         return false;
     }
 
@@ -193,11 +193,11 @@ public abstract class RSASign {
             return verifySign(str.getBytes("UTF-8"), Base64.decode(str2, 0), publicKey, z);
         } catch (UnsupportedEncodingException e2) {
             String str3 = c;
-            C5742b.b(str3, "verifySign UnsupportedEncodingException: " + e2.getMessage());
+            b.b(str3, "verifySign UnsupportedEncodingException: " + e2.getMessage());
             return false;
         } catch (Exception e3) {
             String str4 = c;
-            C5742b.b(str4, "base64 decode Exception : " + e3.getMessage());
+            b.b(str4, "base64 decode Exception : " + e3.getMessage());
             return false;
         }
     }
@@ -217,15 +217,15 @@ public abstract class RSASign {
                 return signature.verify(bArr);
             } catch (GeneralSecurityException e2) {
                 String str = c;
-                C5742b.b(str, "check sign exception: " + e2.getMessage());
+                b.b(str, "check sign exception: " + e2.getMessage());
                 return false;
             } catch (Exception e3) {
                 String str2 = c;
-                C5742b.b(str2, "exception : " + e3.getMessage());
+                b.b(str2, "exception : " + e3.getMessage());
                 return false;
             }
         }
-        C5742b.b(c, "content or publicKey is null , or length is too short");
+        b.b(c, "content or publicKey is null , or length is too short");
         return false;
     }
 
@@ -244,31 +244,31 @@ public abstract class RSASign {
                 signature.update(byteBuffer);
                 bArr = signature.sign();
                 String str = c;
-                C5742b.c(str, "result is : " + Arrays.toString(bArr));
+                b.c(str, "result is : " + Arrays.toString(bArr));
                 return bArr;
             } catch (InvalidAlgorithmParameterException e2) {
                 String str2 = c;
-                C5742b.b(str2, "sign InvalidAlgorithmParameterException: " + e2.getMessage());
+                b.b(str2, "sign InvalidAlgorithmParameterException: " + e2.getMessage());
                 return bArr;
             } catch (InvalidKeyException e3) {
                 String str3 = c;
-                C5742b.b(str3, "sign InvalidKeyException: " + e3.getMessage());
+                b.b(str3, "sign InvalidKeyException: " + e3.getMessage());
                 return bArr;
             } catch (NoSuchAlgorithmException e4) {
                 String str4 = c;
-                C5742b.b(str4, "sign NoSuchAlgorithmException: " + e4.getMessage());
+                b.b(str4, "sign NoSuchAlgorithmException: " + e4.getMessage());
                 return bArr;
             } catch (SignatureException e5) {
                 String str5 = c;
-                C5742b.b(str5, "sign SignatureException: " + e5.getMessage());
+                b.b(str5, "sign SignatureException: " + e5.getMessage());
                 return bArr;
             } catch (Exception e6) {
                 String str6 = c;
-                C5742b.b(str6, "sign Exception: " + e6.getMessage());
+                b.b(str6, "sign Exception: " + e6.getMessage());
                 return bArr;
             }
         }
-        C5742b.b(c, "content or privateKey is null , or length is too short");
+        b.b(c, "content or privateKey is null , or length is too short");
         return bArr;
     }
 }

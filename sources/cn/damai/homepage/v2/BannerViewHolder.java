@@ -3,7 +3,6 @@ package cn.damai.homepage.v2;
 import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.homepage.R$id;
@@ -23,39 +22,37 @@ public class BannerViewHolder extends BaseViewHolder<BannerItem> {
     private RoundImageView imageView;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.BannerViewHolder$a */
     /* loaded from: classes5.dex */
-    public class C1249a implements DMImageCreator.DMImageSuccListener {
+    public class a implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1249a() {
+        a() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "419514891")) {
-                ipChange.ipc$dispatch("419514891", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("419514891", new Object[]{this, eVar});
             } else {
-                BannerViewHolder.this.imageView.setImageDrawable(c0502e.a);
+                BannerViewHolder.this.imageView.setImageDrawable(eVar.a);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.BannerViewHolder$b */
     /* loaded from: classes5.dex */
-    public class C1250b implements DMImageCreator.DMImageFailListener {
+    public class b implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1250b() {
+        b() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1660529144")) {
-                ipChange.ipc$dispatch("1660529144", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("1660529144", new Object[]{this, dVar});
             } else {
                 BannerViewHolder.this.imageView.setImageResource(R$drawable.uikit_default_image_bg_grey);
             }
@@ -74,7 +71,7 @@ public class BannerViewHolder extends BaseViewHolder<BannerItem> {
         if (AndroidInstantRuntime.support(ipChange, "-1006112046")) {
             ipChange.ipc$dispatch("-1006112046", new Object[]{this, iItem});
         } else {
-            C0504a.b().c(getValue().pic).e(new C1250b()).n(new C1249a()).f();
+            cn.damai.common.image.a.b().c(getValue().pic).e(new b()).n(new a()).f();
         }
     }
 }

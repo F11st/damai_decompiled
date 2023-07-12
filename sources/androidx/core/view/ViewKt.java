@@ -14,9 +14,9 @@ import kotlin.Metadata;
 import kotlin.jvm.JvmName;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.sequences.C8577e;
 import kotlin.sequences.Sequence;
 import kotlin.sequences.SequencesKt__SequencesKt;
+import kotlin.sequences.e;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
 import tb.wt2;
@@ -139,16 +139,14 @@ public final class ViewKt {
     public static final Sequence<View> getAllViews(@NotNull View view) {
         Sequence<View> b;
         b41.i(view, "<this>");
-        b = C8577e.b(new ViewKt$allViews$1(view, null));
+        b = e.b(new ViewKt$allViews$1(view, null));
         return b;
     }
 
     @NotNull
     public static final Sequence<ViewParent> getAncestors(@NotNull View view) {
-        Sequence<ViewParent> h;
         b41.i(view, "<this>");
-        h = SequencesKt__SequencesKt.h(view.getParent(), ViewKt$ancestors$1.INSTANCE);
-        return h;
+        return SequencesKt__SequencesKt.h(view.getParent(), ViewKt$ancestors$1.INSTANCE);
     }
 
     public static final int getMarginBottom(@NotNull View view) {

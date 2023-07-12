@@ -13,12 +13,11 @@ public class NetworkStageDispatcher extends AbsDispatcher<INetworkStageListener>
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.NetworkStageDispatcher$a */
     /* loaded from: classes11.dex */
-    class C6796a implements AbsDispatcher.ListenerCaller<INetworkStageListener> {
+    class a implements AbsDispatcher.ListenerCaller<INetworkStageListener> {
         final /* synthetic */ int a;
 
-        C6796a(NetworkStageDispatcher networkStageDispatcher, int i) {
+        a(NetworkStageDispatcher networkStageDispatcher, int i) {
             this.a = i;
         }
 
@@ -30,6 +29,6 @@ public class NetworkStageDispatcher extends AbsDispatcher<INetworkStageListener>
     }
 
     public void f(int i) {
-        c(new C6796a(this, i));
+        c(new a(this, i));
     }
 }

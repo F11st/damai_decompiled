@@ -46,7 +46,7 @@ public class AliUserWebTransparent extends BaseActivity {
     public void onCreate(Bundle bundle) {
         this.activityIsTranslucent = true;
         super.onCreate(bundle);
-        setContentView(R.C2965layout.aliuser_web_trans);
+        setContentView(R.layout.aliuser_web_trans);
         this.mViewGroup.setBackgroundColor(0);
         try {
             this.mUrl = getIntent().getStringExtra(WebConstant.WEBURL);

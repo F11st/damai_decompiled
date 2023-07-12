@@ -62,7 +62,7 @@ public class AILPLikeViewYoukuAdapter extends FrameLayout implements AILPLikeVie
             ipChange.ipc$dispatch("550985350", new Object[]{this, context});
             return;
         }
-        View inflate = LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ailp_like_view, this);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.dago_pgc_ailp_like_view, this);
         this.view = inflate;
         FavorLayout favorLayout = (FavorLayout) inflate.findViewById(R.id.ailp_like_favor);
         this.mFavorLayout = favorLayout;

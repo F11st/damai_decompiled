@@ -13,9 +13,9 @@ import java.util.List;
 import java.util.Objects;
 import java.util.SortedMap;
 import kotlin.Metadata;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8225w;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.k;
+import kotlin.collections.w;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.ClassBasedDeclarationContainer;
@@ -27,10 +27,10 @@ import kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.runtime.structure.ReflectClassUtilKt;
 import kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer;
-import kotlin.text.C8604o;
 import kotlin.text.MatchResult;
 import kotlin.text.Regex;
 import kotlin.text.StringsKt__StringsKt;
+import kotlin.text.o;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -56,7 +56,7 @@ import tb.zv2;
 /* loaded from: classes3.dex */
 public abstract class KDeclarationContainerImpl implements ClassBasedDeclarationContainer {
     @NotNull
-    public static final C8252a Companion = new C8252a(null);
+    public static final a Companion = new a(null);
     private static final Class<?> a = k50.class;
     @NotNull
     private static final Regex b = new Regex("<v#(\\d+)>");
@@ -66,7 +66,7 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
     public abstract class Data {
         static final /* synthetic */ KProperty[] c = {a12.i(new PropertyReference1Impl(a12.b(Data.class), "moduleData", "getModuleData()Lorg/jetbrains/kotlin/descriptors/runtime/components/RuntimeModuleData;"))};
         @NotNull
-        private final x02.C9894a a = x02.d(new Function0<d42>() { // from class: kotlin.reflect.jvm.internal.KDeclarationContainerImpl$Data$moduleData$2
+        private final x02.a a = x02.d(new Function0<d42>() { // from class: kotlin.reflect.jvm.internal.KDeclarationContainerImpl$Data$moduleData$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -103,10 +103,9 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.KDeclarationContainerImpl$a */
     /* loaded from: classes3.dex */
-    public static final class C8252a {
-        private C8252a() {
+    public static final class a {
+        private a() {
         }
 
         @NotNull
@@ -114,18 +113,17 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
             return KDeclarationContainerImpl.b;
         }
 
-        public /* synthetic */ C8252a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.KDeclarationContainerImpl$b */
     /* loaded from: classes3.dex */
-    static final class C8253b<T> implements Comparator {
-        public static final C8253b INSTANCE = new C8253b();
+    static final class b<T> implements Comparator {
+        public static final b INSTANCE = new b();
 
-        C8253b() {
+        b() {
         }
 
         @Override // java.util.Comparator
@@ -140,10 +138,9 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.KDeclarationContainerImpl$c */
     /* loaded from: classes3.dex */
-    public static final class C8254c extends vp {
-        C8254c(KDeclarationContainerImpl kDeclarationContainerImpl, KDeclarationContainerImpl kDeclarationContainerImpl2) {
+    public static final class c extends vp {
+        c(KDeclarationContainerImpl kDeclarationContainerImpl, KDeclarationContainerImpl kDeclarationContainerImpl2) {
             super(kDeclarationContainerImpl2);
         }
 
@@ -248,7 +245,7 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
                 ClassLoader f = ReflectClassUtilKt.f(getJClass());
                 String substring = str.substring(i + 1, i2 - 1);
                 b41.h(substring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
-                y = C8604o.y(substring, r10.DIR, '.', false, 4, null);
+                y = o.y(substring, r10.DIR, '.', false, 4, null);
                 Class<?> loadClass = f.loadClass(y);
                 b41.h(loadClass, "jClass.safeClassLoader.l…d - 1).replace('/', '.'))");
                 return loadClass;
@@ -435,7 +432,7 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
             sb.append(Z.length() == 0 ? " no members found" : '\n' + Z);
             throw new KotlinReflectionInternalError(sb.toString());
         }
-        return (FunctionDescriptor) C8212k.q0(arrayList);
+        return (FunctionDescriptor) k.q0(arrayList);
     }
 
     @Nullable
@@ -496,13 +493,13 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
                     }
                     ((List) obj3).add(obj2);
                 }
-                h = C8225w.h(linkedHashMap, C8253b.INSTANCE);
+                h = w.h(linkedHashMap, b.INSTANCE);
                 Collection values = h.values();
                 b41.h(values, "properties\n             …                }).values");
-                List list = (List) C8212k.a0(values);
+                List list = (List) k.a0(values);
                 if (list.size() == 1) {
                     b41.h(list, "mostVisibleProperties");
-                    return (PropertyDescriptor) C8212k.P(list);
+                    return (PropertyDescriptor) k.P(list);
                 }
                 ni1 f2 = ni1.f(str);
                 b41.h(f2, "Name.identifier(name)");
@@ -525,7 +522,7 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
                 sb.append(Z.length() == 0 ? " no members found" : '\n' + Z);
                 throw new KotlinReflectionInternalError(sb.toString());
             }
-            return (PropertyDescriptor) C8212k.q0(arrayList);
+            return (PropertyDescriptor) k.q0(arrayList);
         }
         throw new KotlinReflectionInternalError("Property '" + str + "' (JVM signature: " + str2 + ") not resolved in " + this);
     }
@@ -558,7 +555,7 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
             r0.<init>(r7, r7)
             r1 = 0
             r2 = 3
-            java.util.Collection r8 = kotlin.reflect.jvm.internal.impl.resolve.scopes.ResolutionScope.C8500a.a(r8, r1, r1, r2, r1)
+            java.util.Collection r8 = kotlin.reflect.jvm.internal.impl.resolve.scopes.ResolutionScope.a.a(r8, r1, r1, r2, r1)
             java.util.ArrayList r2 = new java.util.ArrayList
             r2.<init>()
             java.util.Iterator r8 = r8.iterator()
@@ -589,7 +586,7 @@ public abstract class KDeclarationContainerImpl implements ClassBasedDeclaration
             r2.add(r3)
             goto L1e
         L55:
-            java.util.List r8 = kotlin.collections.C8212k.A0(r2)
+            java.util.List r8 = kotlin.collections.k.A0(r2)
             return r8
         */
         throw new UnsupportedOperationException("Method not decompiled: kotlin.reflect.jvm.internal.KDeclarationContainerImpl.l(kotlin.reflect.jvm.internal.impl.resolve.scopes.MemberScope, kotlin.reflect.jvm.internal.KDeclarationContainerImpl$MemberBelonginess):java.util.Collection");

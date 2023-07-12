@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.IConfigAdapter;
 import com.alibaba.aliweex.adapter.module.WXPerformanceModule;
 import com.taobao.monitor.performance.IWXApmAdapter;
@@ -26,7 +25,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import tb.C8890a0;
+import tb.a0;
 import tb.gn1;
 import tb.k4;
 import tb.oz2;
@@ -46,15 +45,14 @@ public class WXAPMAdapter implements IWXApmMonitorAdapter {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.adapter.WXAPMAdapter$a */
     /* loaded from: classes15.dex */
-    public class C3008a {
+    public class a {
         String a;
         long b;
         long c;
         long d;
 
-        private C3008a(WXAPMAdapter wXAPMAdapter) {
+        private a(WXAPMAdapter wXAPMAdapter) {
         }
 
         /* JADX INFO: Access modifiers changed from: private */
@@ -68,20 +66,20 @@ public class WXAPMAdapter implements IWXApmMonitorAdapter {
         }
     }
 
-    private C3008a d(String str, String str2, String str3) {
+    private a d(String str, String str2, String str3) {
         WXSDKInstance wXSDKInstance = WXSDKManager.v().i().get(this.a);
         if (wXSDKInstance == null) {
             return null;
         }
-        C3008a c3008a = new C3008a();
-        c3008a.a = str;
+        a aVar = new a();
+        aVar.a = str;
         Long l = wXSDKInstance.getApmForInstance().d.get(str3);
         Long l2 = wXSDKInstance.getApmForInstance().d.get(str2);
-        c3008a.c = l2 == null ? -1L : l2.longValue();
+        aVar.c = l2 == null ? -1L : l2.longValue();
         long longValue = l != null ? l.longValue() : -1L;
-        c3008a.d = longValue;
-        c3008a.b = longValue - c3008a.c;
-        return c3008a;
+        aVar.d = longValue;
+        aVar.b = longValue - aVar.c;
+        return aVar;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -89,9 +87,9 @@ public class WXAPMAdapter implements IWXApmMonitorAdapter {
         if (WXSDKManager.v().i().get(this.a) == null) {
             return "";
         }
-        C3008a d = d("downLoad", WXInstanceApm.KEY_PAGE_STAGES_DOWN_BUNDLE_START, WXInstanceApm.KEY_PAGE_STAGES_DOWN_BUNDLE_END);
-        C3008a d2 = d("interactive", WXInstanceApm.KEY_PAGE_STAGES_RENDER_ORGIGIN, WXInstanceApm.KEY_PAGE_STAGES_INTERACTION);
-        C3008a d3 = d(WXInstanceApm.KEY_PAGE_STAGES_END_EXCUTE_BUNDLE, WXInstanceApm.KEY_PAGE_STAGES_LOAD_BUNDLE_END, WXInstanceApm.KEY_PAGE_STAGES_END_EXCUTE_BUNDLE);
+        a d = d("downLoad", WXInstanceApm.KEY_PAGE_STAGES_DOWN_BUNDLE_START, WXInstanceApm.KEY_PAGE_STAGES_DOWN_BUNDLE_END);
+        a d2 = d("interactive", WXInstanceApm.KEY_PAGE_STAGES_RENDER_ORGIGIN, WXInstanceApm.KEY_PAGE_STAGES_INTERACTION);
+        a d3 = d(WXInstanceApm.KEY_PAGE_STAGES_END_EXCUTE_BUNDLE, WXInstanceApm.KEY_PAGE_STAGES_LOAD_BUNDLE_END, WXInstanceApm.KEY_PAGE_STAGES_END_EXCUTE_BUNDLE);
         StringBuilder sb = new StringBuilder();
         sb.append("dowlnLoad:");
         sb.append(d == null ? "" : Long.valueOf(d.b));
@@ -103,12 +101,12 @@ public class WXAPMAdapter implements IWXApmMonitorAdapter {
     }
 
     private void f() {
-        IConfigAdapter c = C3004a.l().c();
+        IConfigAdapter c = com.alibaba.aliweex.a.l().c();
         if (c != null && Boolean.valueOf(c.getConfig(oz2.WXAPM_CONFIG_GROUP, "collectDeviceLevel", "true")).booleanValue()) {
             if (f == -2) {
                 if (g) {
                     try {
-                        k4.C9333e f2 = k4.d().f();
+                        k4.e f2 = k4.d().f();
                         f = f2 == null ? -1 : f2.a;
                     } catch (Throwable unused) {
                         g = false;
@@ -172,25 +170,25 @@ public class WXAPMAdapter implements IWXApmMonitorAdapter {
             jSONObject.put("pageName", this.e);
             JSONArray jSONArray = new JSONArray();
             jSONObject.put("stages", jSONArray);
-            C3008a d = d("downLoad", WXInstanceApm.KEY_PAGE_STAGES_DOWN_BUNDLE_START, WXInstanceApm.KEY_PAGE_STAGES_DOWN_BUNDLE_END);
+            a d = d("downLoad", WXInstanceApm.KEY_PAGE_STAGES_DOWN_BUNDLE_START, WXInstanceApm.KEY_PAGE_STAGES_DOWN_BUNDLE_END);
             if (d != null) {
                 jSONArray.put(d.b());
             }
-            C3008a d2 = d("prePareBundle", WXInstanceApm.KEY_PAGE_STAGES_LOAD_BUNDLE_START, WXInstanceApm.KEY_PAGE_STAGES_LOAD_BUNDLE_END);
+            a d2 = d("prePareBundle", WXInstanceApm.KEY_PAGE_STAGES_LOAD_BUNDLE_START, WXInstanceApm.KEY_PAGE_STAGES_LOAD_BUNDLE_END);
             if (d2 != null) {
                 jSONArray.put(d2.b());
             }
-            C3008a d3 = d("evalJsBundle", WXInstanceApm.KEY_PAGE_STAGES_LOAD_BUNDLE_END, WXInstanceApm.KEY_PAGE_STAGES_END_EXCUTE_BUNDLE);
+            a d3 = d("evalJsBundle", WXInstanceApm.KEY_PAGE_STAGES_LOAD_BUNDLE_END, WXInstanceApm.KEY_PAGE_STAGES_END_EXCUTE_BUNDLE);
             if (d3 != null) {
                 jSONArray.put(d3.b());
             }
-            C3008a d4 = d("interactive", WXInstanceApm.KEY_PAGE_STAGES_END_EXCUTE_BUNDLE, WXInstanceApm.KEY_PAGE_STAGES_INTERACTION);
+            a d4 = d("interactive", WXInstanceApm.KEY_PAGE_STAGES_END_EXCUTE_BUNDLE, WXInstanceApm.KEY_PAGE_STAGES_INTERACTION);
             if (d4 != null && d4.b > 0) {
                 jSONArray.put(d4.b());
             }
             JSONObject jSONObject2 = new JSONObject();
             jSONObject.put("extra", jSONObject2);
-            C3008a d5 = d("mtopRequest", WXPerformanceModule.KEY_STAGE_JS_ASYNC_DATA_START, WXPerformanceModule.KEY_STAGE_JS_ASYNC_DATA_END);
+            a d5 = d("mtopRequest", WXPerformanceModule.KEY_STAGE_JS_ASYNC_DATA_START, WXPerformanceModule.KEY_STAGE_JS_ASYNC_DATA_END);
             if (d5 != null) {
                 jSONObject2.put("mtopRequest", d5.b());
             }
@@ -311,7 +309,7 @@ public class WXAPMAdapter implements IWXApmMonitorAdapter {
         if (!TextUtils.isEmpty(this.e)) {
             hashMap.put("mPageName", this.e);
         }
-        C3004a.l().s(str, hashMap);
+        com.alibaba.aliweex.a.l().s(str, hashMap);
         if (h) {
             g();
         }
@@ -320,7 +318,7 @@ public class WXAPMAdapter implements IWXApmMonitorAdapter {
     @Override // com.taobao.weex.performance.IWXApmMonitorAdapter
     public void onStart(String str) {
         this.a = str;
-        IWXApmAdapter createApmAdapter = C8890a0.a().createApmAdapter();
+        IWXApmAdapter createApmAdapter = a0.a().createApmAdapter();
         this.b = createApmAdapter;
         if (createApmAdapter == null) {
             return;

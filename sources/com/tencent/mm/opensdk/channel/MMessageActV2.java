@@ -5,11 +5,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import com.tencent.mm.opensdk.channel.a.C7054a;
+import com.tencent.mm.opensdk.channel.a.a;
 import com.tencent.mm.opensdk.constants.Build;
 import com.tencent.mm.opensdk.constants.ConstantsAPI;
-import com.tencent.mm.opensdk.utils.C7065b;
 import com.tencent.mm.opensdk.utils.Log;
+import com.tencent.mm.opensdk.utils.b;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -40,10 +40,10 @@ public class MMessageActV2 {
         String str;
         if (context == null || args == null) {
             str = "send fail, invalid argument";
-        } else if (C7065b.b(args.targetPkgName)) {
+        } else if (b.b(args.targetPkgName)) {
             str = "send fail, invalid targetPkgName, targetPkgName = " + args.targetPkgName;
         } else {
-            if (C7065b.b(args.targetClassName)) {
+            if (b.b(args.targetClassName)) {
                 args.targetClassName = args.targetPkgName + DEFAULT_ENTRY_CLASS_NAME;
             }
             Log.d(TAG, "send, targetPkgName = " + args.targetPkgName + ", targetClassName = " + args.targetClassName + ", launchMode = " + args.launchMode);
@@ -57,7 +57,7 @@ public class MMessageActV2 {
             intent.putExtra(ConstantsAPI.SDK_VERSION, Build.SDK_INT);
             intent.putExtra(ConstantsAPI.APP_PACKAGE, packageName);
             intent.putExtra(ConstantsAPI.CONTENT, args.content);
-            intent.putExtra(ConstantsAPI.CHECK_SUM, C7054a.a(args.content, (int) Build.SDK_INT, packageName));
+            intent.putExtra(ConstantsAPI.CHECK_SUM, a.a(args.content, (int) Build.SDK_INT, packageName));
             intent.putExtra(ConstantsAPI.TOKEN, args.token);
             int i = args.flags;
             if (i == -1) {

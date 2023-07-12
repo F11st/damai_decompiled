@@ -16,13 +16,13 @@ public abstract class r1 extends BaseLayoutHelper {
     protected boolean c = false;
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public void a(int i, Rect rect, VirtualLayoutManager.C3287d c3287d, LayoutManagerHelper layoutManagerHelper) {
+    public void a(int i, Rect rect, VirtualLayoutManager.d dVar, LayoutManagerHelper layoutManagerHelper) {
         int i2 = 0;
         if (layoutManagerHelper.getOrientation() == 1) {
             rect.left = layoutManagerHelper.getPaddingLeft() + this.mMarginLeft + this.mPaddingLeft;
             rect.right = ((layoutManagerHelper.getContentWidth() - layoutManagerHelper.getPaddingRight()) - this.mMarginRight) - this.mPaddingRight;
-            if (c3287d.f() == -1) {
-                int g = c3287d.g();
+            if (dVar.f() == -1) {
+                int g = dVar.g();
                 if (!this.c && !this.b) {
                     i2 = this.mMarginBottom + this.mPaddingBottom;
                 }
@@ -31,7 +31,7 @@ public abstract class r1 extends BaseLayoutHelper {
                 rect.top = i3 - i;
                 return;
             }
-            int g2 = c3287d.g();
+            int g2 = dVar.g();
             if (!this.c && !this.a) {
                 i2 = this.mMarginTop + this.mPaddingTop;
             }
@@ -42,8 +42,8 @@ public abstract class r1 extends BaseLayoutHelper {
         }
         rect.top = layoutManagerHelper.getPaddingTop() + this.mMarginTop + this.mPaddingTop;
         rect.bottom = ((layoutManagerHelper.getContentHeight() - layoutManagerHelper.getPaddingBottom()) - this.mMarginBottom) - this.mPaddingBottom;
-        if (c3287d.f() == -1) {
-            int g3 = c3287d.g();
+        if (dVar.f() == -1) {
+            int g3 = dVar.g();
             if (!this.c && !this.b) {
                 i2 = this.mMarginRight + this.mPaddingRight;
             }
@@ -52,7 +52,7 @@ public abstract class r1 extends BaseLayoutHelper {
             rect.left = i5 - i;
             return;
         }
-        int g4 = c3287d.g();
+        int g4 = dVar.g();
         if (!this.c && !this.a) {
             i2 = this.mMarginLeft + this.mPaddingLeft;
         }
@@ -61,7 +61,7 @@ public abstract class r1 extends BaseLayoutHelper {
         rect.right = i6 + i;
     }
 
-    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.a
     public void afterLayout(RecyclerView.Recycler recycler, RecyclerView.State state, int i, int i2, int i3, LayoutManagerHelper layoutManagerHelper) {
         super.afterLayout(recycler, state, i, i2, i3, layoutManagerHelper);
         this.c = false;
@@ -75,19 +75,19 @@ public abstract class r1 extends BaseLayoutHelper {
         return new ViewGroup.LayoutParams(-1, -2);
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
-    public void checkAnchorInfo(RecyclerView.State state, VirtualLayoutManager.C3286c c3286c, LayoutManagerHelper layoutManagerHelper) {
-        if (c3286c.c) {
+    @Override // com.alibaba.android.vlayout.a
+    public void checkAnchorInfo(RecyclerView.State state, VirtualLayoutManager.c cVar, LayoutManagerHelper layoutManagerHelper) {
+        if (cVar.c) {
             if (!this.b) {
-                c3286c.a = getRange().e().intValue();
+                cVar.a = getRange().e().intValue();
             }
         } else if (!this.a) {
-            c3286c.a = getRange().d().intValue();
+            cVar.a = getRange().d().intValue();
         }
         this.c = true;
     }
 
-    @Override // com.alibaba.android.vlayout.layout.AbstractC3303d, com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.layout.d, com.alibaba.android.vlayout.a
     public int computeAlignOffset(int i, boolean z, boolean z2, LayoutManagerHelper layoutManagerHelper) {
         if (layoutManagerHelper.getOrientation() == 1) {
             if (z) {
@@ -126,7 +126,7 @@ public abstract class r1 extends BaseLayoutHelper {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public int e(android.view.View[] r7, androidx.recyclerview.widget.RecyclerView.Recycler r8, com.alibaba.android.vlayout.VirtualLayoutManager.C3287d r9, tb.m81 r10, com.alibaba.android.vlayout.LayoutManagerHelper r11) {
+    public int e(android.view.View[] r7, androidx.recyclerview.widget.RecyclerView.Recycler r8, com.alibaba.android.vlayout.VirtualLayoutManager.d r9, tb.m81 r10, com.alibaba.android.vlayout.LayoutManagerHelper r11) {
         /*
             r6 = this;
             int r0 = r9.e()
@@ -203,7 +203,7 @@ public abstract class r1 extends BaseLayoutHelper {
         throw new UnsupportedOperationException("Method not decompiled: tb.r1.e(android.view.View[], androidx.recyclerview.widget.RecyclerView$Recycler, com.alibaba.android.vlayout.VirtualLayoutManager$d, tb.m81, com.alibaba.android.vlayout.LayoutManagerHelper):int");
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public boolean isRecyclable(int i, int i2, int i3, LayoutManagerHelper layoutManagerHelper, boolean z) {
         py1<Integer> range = getRange();
         if (range.a(Integer.valueOf(i))) {

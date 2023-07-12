@@ -20,7 +20,6 @@ import kotlin.reflect.KProperty0;
 import kotlin.reflect.KProperty1;
 import kotlin.reflect.KProperty2;
 import kotlin.reflect.jvm.ReflectLambdaKt;
-import kotlin.reflect.jvm.internal.C8263a;
 import kotlin.reflect.jvm.internal.KDeclarationContainerImpl;
 import kotlin.reflect.jvm.internal.KFunctionImpl;
 import kotlin.reflect.jvm.internal.KMutableProperty0Impl;
@@ -37,7 +36,7 @@ import kotlin.reflect.jvm.internal.ReflectionObjectRenderer;
 public class d12 extends c12 {
     private static KDeclarationContainerImpl l(CallableReference callableReference) {
         KDeclarationContainer owner = callableReference.getOwner();
-        return owner instanceof KDeclarationContainerImpl ? (KDeclarationContainerImpl) owner : C8263a.INSTANCE;
+        return owner instanceof KDeclarationContainerImpl ? (KDeclarationContainerImpl) owner : kotlin.reflect.jvm.internal.a.INSTANCE;
     }
 
     @Override // tb.c12

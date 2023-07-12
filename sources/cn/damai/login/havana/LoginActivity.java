@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import androidx.appcompat.app.AppCompatActivity;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.model.UserBaseInfoBean;
 import cn.damai.commonbusiness.model.UserData;
@@ -31,12 +31,11 @@ public class LoginActivity extends AppCompatActivity implements ILoginListener {
     private wb1 loginStatusAppMonitor = new wb1();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.login.havana.LoginActivity$a */
     /* loaded from: classes5.dex */
-    public class C1338a implements UserInfoUtil.OnUserInfoListener {
+    public class a implements UserInfoUtil.OnUserInfoListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1338a() {
+        a() {
         }
 
         @Override // cn.damai.im.UserInfoUtil.OnUserInfoListener
@@ -96,11 +95,11 @@ public class LoginActivity extends AppCompatActivity implements ILoginListener {
                 if (TextUtils.isEmpty(mobile)) {
                     mobile = valueOf;
                 }
-                C0529c.e().E(mobile, z20.i());
-                C0529c.e().A(xb1.g().f(mobile, valueOf, LoginManager.k().m()), xb1.CUSTOM_LOGIN, "login");
+                c.e().E(mobile, z20.i());
+                c.e().A(xb1.g().f(mobile, valueOf, LoginManager.k().m()), xb1.CUSTOM_LOGIN, "login");
             } else if (!TextUtils.isEmpty(userBaseInfo.getMobile())) {
-                C0529c.e().E(userBaseInfo.getMobile(), z20.i());
-                C0529c.e().A(xb1.g().f(userBaseInfo.getMobile(), valueOf, LoginManager.k().m()), xb1.CUSTOM_LOGIN, "login");
+                c.e().E(userBaseInfo.getMobile(), z20.i());
+                c.e().A(xb1.g().f(userBaseInfo.getMobile(), valueOf, LoginManager.k().m()), xb1.CUSTOM_LOGIN, "login");
             }
         }
         this.loginStatusAppMonitor.a(this.mPlatform, LoginManager.k().m(), "success", "success", "success");
@@ -153,7 +152,7 @@ public class LoginActivity extends AppCompatActivity implements ILoginListener {
             PersonalInfoRequest personalInfoRequest = new PersonalInfoRequest();
             personalInfoRequest.needCertificationBaseInfo = "true";
             personalInfoRequest.needUserBaseInfo = "true";
-            UserInfoUtil.b(personalInfoRequest, new C1338a());
+            UserInfoUtil.b(personalInfoRequest, new a());
         }
     }
 

@@ -13,11 +13,9 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.ta.utdid2.device.UTDevice;
 import com.taobao.orange.OConstant;
-import com.taobao.slide.control.C6887a;
-import com.taobao.slide.core.C6889b;
 import com.taobao.slide.core.SlideReceiver;
+import com.taobao.slide.core.b;
 import com.taobao.slide.plugin.SlideWVPlugin;
-import com.taobao.slide.request.AbstractC6891b;
 import com.taobao.slide.task.PushTask;
 import com.uc.webview.export.extension.UCCore;
 import com.youku.arch.v3.core.Constants;
@@ -46,7 +44,7 @@ public class SlideLoad {
     AtomicBoolean a;
     Context b;
     String c;
-    C6889b d;
+    b d;
     Map<ki2, SlideSubscriber> e;
 
     /* compiled from: Taobao */
@@ -65,21 +63,20 @@ public class SlideLoad {
         public void run() {
             ki2 ki2Var = new ki2(this.val$podNames);
             SlideLoad slideLoad = SlideLoad.this;
-            C6889b c6889b = slideLoad.d;
-            if (c6889b == null) {
+            b bVar = slideLoad.d;
+            if (bVar == null) {
                 slideLoad.e.put(ki2Var, this.val$subscriber);
                 m42.k("Load", "subscribe delay wait init complete", new Object[0]);
                 return;
             }
-            c6889b.p(ki2Var, this.val$subscriber);
+            bVar.p(ki2Var, this.val$subscriber);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.slide.api.SlideLoad$a */
     /* loaded from: classes11.dex */
-    public static class C6885a {
+    public static class a {
         private static final SlideLoad a = new SlideLoad();
     }
 
@@ -101,13 +98,13 @@ public class SlideLoad {
     }
 
     public static SlideLoad h() {
-        return C6885a.a;
+        return a.a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public void k() {
         try {
-            AbstractC6891b.d = true;
+            com.taobao.slide.request.b.d = true;
         } catch (Throwable unused) {
             m42.k("Load", "init not found taobao networksdk", new Object[0]);
         }
@@ -121,7 +118,7 @@ public class SlideLoad {
     /* JADX INFO: Access modifiers changed from: private */
     public void l(SlideConfig slideConfig) {
         fh2 fh2Var = new fh2();
-        C6887a.a(new da1("did_hash", this.c, new zv0()).e(true), new da1("ttid", slideConfig.getTtid(), fh2Var).e(true), new da1("app_ver", slideConfig.getAppVersion(), new gx2()).e(true), new da1(OConstant.CANDIDATE_OSVER, String.valueOf(Build.VERSION.SDK_INT), new gx2()).e(true), new da1("m_vendor", com.alibaba.wireless.security.aopsdk.replace.android.os.Build.getMANUFACTURER(), fh2Var).e(true), new da1(OConstant.CANDIDATE_BRAND, com.alibaba.wireless.security.aopsdk.replace.android.os.Build.getBRAND(), fh2Var).e(true), new da1(OConstant.CANDIDATE_MODEL, com.alibaba.wireless.security.aopsdk.replace.android.os.Build.getMODEL(), fh2Var).e(true));
+        com.taobao.slide.control.a.a(new da1("did_hash", this.c, new zv0()).e(true), new da1("ttid", slideConfig.getTtid(), fh2Var).e(true), new da1("app_ver", slideConfig.getAppVersion(), new gx2()).e(true), new da1(OConstant.CANDIDATE_OSVER, String.valueOf(Build.VERSION.SDK_INT), new gx2()).e(true), new da1("m_vendor", com.alibaba.wireless.security.aopsdk.replace.android.os.Build.getMANUFACTURER(), fh2Var).e(true), new da1(OConstant.CANDIDATE_BRAND, com.alibaba.wireless.security.aopsdk.replace.android.os.Build.getBRAND(), fh2Var).e(true), new da1(OConstant.CANDIDATE_MODEL, com.alibaba.wireless.security.aopsdk.replace.android.os.Build.getMODEL(), fh2Var).e(true));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -142,9 +139,9 @@ public class SlideLoad {
 
     @AnyThread
     public JSONObject g() {
-        C6889b c6889b = this.d;
-        if (c6889b != null) {
-            return JSON.parseObject(JSON.toJSONString(c6889b.d()));
+        b bVar = this.d;
+        if (bVar != null) {
+            return JSON.parseObject(JSON.toJSONString(bVar.d()));
         }
         return null;
     }
@@ -181,7 +178,7 @@ public class SlideLoad {
                         m42.g("Load", "init start", "sdkVersion", "1.0.0", "utdid", SlideLoad.this.c, Constants.CONFIG, slideConfig.toString());
                         SlideLoad.this.l(slideConfig);
                         SlideLoad slideLoad2 = SlideLoad.this;
-                        slideLoad2.d = new C6889b(slideLoad2.b, slideConfig);
+                        slideLoad2.d = new b(slideLoad2.b, slideConfig);
                         SlideLoad.this.d.h();
                         SlideLoad.this.k();
                         SlideLoad.this.a.set(true);

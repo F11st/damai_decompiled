@@ -43,10 +43,9 @@ public class fs {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.fs$a */
     /* loaded from: classes10.dex */
-    public static class C4548a implements FilenameFilter {
-        C4548a() {
+    public static class a implements FilenameFilter {
+        a() {
         }
 
         @Override // java.io.FilenameFilter
@@ -82,7 +81,7 @@ public class fs {
     }
 
     private static void e() {
-        File[] listFiles = new File(m).listFiles(new C4548a());
+        File[] listFiles = new File(m).listFiles(new a());
         if (listFiles == null || listFiles.length <= 0) {
             return;
         }

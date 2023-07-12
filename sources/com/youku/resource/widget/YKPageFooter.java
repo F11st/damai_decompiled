@@ -141,7 +141,7 @@ public class YKPageFooter extends FrameLayout implements FooterImpl {
         if (AppPerfABUtils.isOpenDegrade()) {
             return;
         }
-        this.mLoading = (YKLoading) LayoutInflater.from(context).inflate(R.C8074layout.resource_yk_loading, (ViewGroup) this, false);
+        this.mLoading = (YKLoading) LayoutInflater.from(context).inflate(R.layout.resource_yk_loading, (ViewGroup) this, false);
         FrameLayout.LayoutParams layoutParams2 = new FrameLayout.LayoutParams(-2, -2);
         layoutParams2.gravity = 17;
         this.mLoading.setLayoutParams(layoutParams2);

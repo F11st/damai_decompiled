@@ -2,7 +2,7 @@ package com.alient.oneservice.net;
 
 import android.util.Log;
 import java.util.Map;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -12,7 +12,7 @@ public class NetworkProviderProxy {
     public static String getErrorMsg(String str, String str2) {
         try {
             if (sProxy == null) {
-                sProxy = (NetworkProvider) C8883a.j("com.alient.oneservice.provider.impl.net.NetworkProviderImpl").b().f();
+                sProxy = (NetworkProvider) a.j("com.alient.oneservice.provider.impl.net.NetworkProviderImpl").b().f();
             }
             return sProxy.getErrorMsg(str, str2);
         } catch (Throwable th) {
@@ -23,7 +23,7 @@ public class NetworkProviderProxy {
 
     public static NetworkProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (NetworkProvider) C8883a.j("com.alient.oneservice.provider.impl.net.NetworkProviderImpl").b().f();
+            sProxy = (NetworkProvider) a.j("com.alient.oneservice.provider.impl.net.NetworkProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -41,7 +41,7 @@ public class NetworkProviderProxy {
     public static Map<String, String> signParams(String str, Map<String, String> map) {
         try {
             if (sProxy == null) {
-                sProxy = (NetworkProvider) C8883a.j("com.alient.oneservice.provider.impl.net.NetworkProviderImpl").b().f();
+                sProxy = (NetworkProvider) a.j("com.alient.oneservice.provider.impl.net.NetworkProviderImpl").b().f();
             }
             return sProxy.signParams(str, map);
         } catch (Throwable th) {

@@ -50,7 +50,7 @@ public class YKPlayListImageView extends YKImageView {
 
     private void drawLayerBackgroud(Canvas canvas) {
         if (!isOnlyGrey() && this.isLayer) {
-            Drawable drawable = getResources().getDrawable(R.C8071color.cg_2);
+            Drawable drawable = getResources().getDrawable(R.color.cg_2);
             this.layerBackground = drawable;
             if (drawable != null) {
                 drawable.setBounds(0, 0, this.width, this.height);
@@ -104,7 +104,7 @@ public class YKPlayListImageView extends YKImageView {
         paint2.getTextBounds(str, 0, str.length(), rect);
         this.txWidth = this.paint.measureText(this.playlist_tx);
         this.txHeight = com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.height(rect);
-        int color = getResources().getColor(R.C8071color.cw_1);
+        int color = getResources().getColor(R.color.cw_1);
         this.textColor = color;
         this.paint.setColor(color);
     }

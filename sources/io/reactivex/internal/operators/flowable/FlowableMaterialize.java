@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.internal.subscribers.SinglePostCompleteSubscriber;
 import org.reactivestreams.Subscriber;
 import tb.i42;
@@ -48,11 +48,11 @@ public final class FlowableMaterialize<T> extends AbstractFlowableWithUpstream<T
         }
     }
 
-    public FlowableMaterialize(AbstractC8147b<T> abstractC8147b) {
-        super(abstractC8147b);
+    public FlowableMaterialize(b<T> bVar) {
+        super(bVar);
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super ul1<T>> subscriber) {
         this.source.subscribe((FlowableSubscriber) new MaterializeSubscriber(subscriber));
     }

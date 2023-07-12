@@ -11,9 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.imagebrowse.bean.PicInfo;
 import cn.damai.commonbusiness.imagebrowse.bean.VideoInfo;
 import cn.damai.commonbusiness.view.DmViewPager;
@@ -56,21 +54,20 @@ public class ContentBannerViewHolder extends cp2<ArrayList<ContentDetail.Content
     public String p;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.content.ui.viewholder.ContentBannerViewHolder$a */
     /* loaded from: classes5.dex */
-    public class C1006a implements DMImageCreator.DMImageFailListener {
+    public class a implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ArrayList a;
 
-        C1006a(ArrayList arrayList) {
+        a(ArrayList arrayList) {
             this.a = arrayList;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1500487327")) {
-                ipChange.ipc$dispatch("1500487327", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("1500487327", new Object[]{this, dVar});
                 return;
             }
             float f = (ContentBannerViewHolder.this.i * 1.0f) / ContentBannerViewHolder.this.n;
@@ -83,35 +80,34 @@ public class ContentBannerViewHolder extends cp2<ArrayList<ContentDetail.Content
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.content.ui.viewholder.ContentBannerViewHolder$b */
     /* loaded from: classes5.dex */
-    public class C1007b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ArrayList a;
 
-        C1007b(ArrayList arrayList) {
+        b(ArrayList arrayList) {
             this.a = arrayList;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             float intrinsicWidth;
             int intrinsicHeight;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1306778868")) {
-                ipChange.ipc$dispatch("1306778868", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("1306778868", new Object[]{this, eVar});
                 return;
             }
             float f = (ContentBannerViewHolder.this.i * 1.0f) / ContentBannerViewHolder.this.n;
-            Bitmap bitmap = c0502e.b;
+            Bitmap bitmap = eVar.b;
             if (bitmap != null) {
                 intrinsicWidth = bitmap.getWidth() * 1.0f;
-                intrinsicHeight = c0502e.b.getHeight();
+                intrinsicHeight = eVar.b.getHeight();
             } else {
-                Drawable drawable = c0502e.a;
+                Drawable drawable = eVar.a;
                 if (drawable != null) {
                     intrinsicWidth = drawable.getIntrinsicWidth() * 1.0f;
-                    intrinsicHeight = c0502e.a.getIntrinsicHeight();
+                    intrinsicHeight = eVar.a.getIntrinsicHeight();
                 }
                 cb1.b("ContentBannerViewHolder", "Got ratio from  first banner:" + f);
                 ContentBannerViewHolder.this.t(f, this.a);
@@ -123,13 +119,12 @@ public class ContentBannerViewHolder extends cp2<ArrayList<ContentDetail.Content
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.content.ui.viewholder.ContentBannerViewHolder$c */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1008c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private int a;
 
-        View$OnClickListenerC1008c(int i) {
+        c(int i) {
             this.a = i;
         }
 
@@ -140,7 +135,7 @@ public class ContentBannerViewHolder extends cp2<ArrayList<ContentDetail.Content
                 ipChange.ipc$dispatch("-651751926", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(ContentBannerViewHolder.this.getLiveUt().q(ContentBannerViewHolder.this.p, this.a));
+            cn.damai.common.user.c.e().x(ContentBannerViewHolder.this.getLiveUt().q(ContentBannerViewHolder.this.p, this.a));
             if (ContentBannerViewHolder.this.e != null && !TextUtils.isEmpty(ContentBannerViewHolder.this.e.url) && !TextUtils.isEmpty(ContentBannerViewHolder.this.e.coverUrl)) {
                 ContentBannerViewHolder contentBannerViewHolder = ContentBannerViewHolder.this;
                 px2.a(contentBannerViewHolder.a, "", contentBannerViewHolder.e.coverUrl, ContentBannerViewHolder.this.e.url, ContentBannerViewHolder.this.e.sourceLabel, ContentBannerViewHolder.this.d, this.a);
@@ -217,21 +212,21 @@ public class ContentBannerViewHolder extends cp2<ArrayList<ContentDetail.Content
             /* compiled from: Taobao */
             /* renamed from: cn.damai.discover.content.ui.viewholder.ContentBannerViewHolder$3$a */
             /* loaded from: classes5.dex */
-            public class C1004a implements DMImageCreator.DMImageFailListener {
+            public class a implements DMImageCreator.DMImageFailListener {
                 private static transient /* synthetic */ IpChange $ipChange;
                 final /* synthetic */ ImageView a;
                 final /* synthetic */ int b;
 
-                C1004a(ImageView imageView, int i) {
+                a(ImageView imageView, int i) {
                     this.a = imageView;
                     this.b = i;
                 }
 
                 @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-                public void onFail(DMImageCreator.C0501d c0501d) {
+                public void onFail(DMImageCreator.d dVar) {
                     IpChange ipChange = $ipChange;
                     if (AndroidInstantRuntime.support(ipChange, "-592432786")) {
-                        ipChange.ipc$dispatch("-592432786", new Object[]{this, c0501d});
+                        ipChange.ipc$dispatch("-592432786", new Object[]{this, dVar});
                         return;
                     }
                     this.a.setImageResource(R$drawable.uikit_default_image_bg_grey);
@@ -242,30 +237,30 @@ public class ContentBannerViewHolder extends cp2<ArrayList<ContentDetail.Content
             /* compiled from: Taobao */
             /* renamed from: cn.damai.discover.content.ui.viewholder.ContentBannerViewHolder$3$b */
             /* loaded from: classes5.dex */
-            public class C1005b implements DMImageCreator.DMImageSuccListener {
+            public class b implements DMImageCreator.DMImageSuccListener {
                 private static transient /* synthetic */ IpChange $ipChange;
                 final /* synthetic */ int a;
                 final /* synthetic */ ImageView b;
 
-                C1005b(int i, ImageView imageView) {
+                b(int i, ImageView imageView) {
                     this.a = i;
                     this.b = imageView;
                 }
 
                 @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-                public void onSuccess(DMImageCreator.C0502e c0502e) {
+                public void onSuccess(DMImageCreator.e eVar) {
                     IpChange ipChange = $ipChange;
                     if (AndroidInstantRuntime.support(ipChange, "1964562563")) {
-                        ipChange.ipc$dispatch("1964562563", new Object[]{this, c0502e});
+                        ipChange.ipc$dispatch("1964562563", new Object[]{this, eVar});
                         return;
                     }
-                    Bitmap bitmap = c0502e.b;
+                    Bitmap bitmap = eVar.b;
                     if (bitmap != null) {
                         ContentBannerViewHolder.this.h[this.a] = ContentBannerViewHolder.this.q((bitmap.getWidth() * 1.0f) / bitmap.getHeight());
                         this.b.setImageBitmap(bitmap);
                         return;
                     }
-                    Drawable drawable = c0502e.a;
+                    Drawable drawable = eVar.a;
                     if (drawable != null) {
                         ContentBannerViewHolder.this.h[this.a] = ContentBannerViewHolder.this.q((drawable.getIntrinsicWidth() * 1.0f) / drawable.getIntrinsicHeight());
                         this.b.setImageDrawable(drawable);
@@ -325,15 +320,15 @@ public class ContentBannerViewHolder extends cp2<ArrayList<ContentDetail.Content
                     if (g.getParent() != null && (g.getParent() instanceof ViewGroup)) {
                         ((ViewGroup) g.getParent()).removeView(g);
                     }
-                    g.setPlayerClickListener(new View$OnClickListenerC1008c(i));
+                    g.setPlayerClickListener(new c(i));
                     viewGroup.addView(g);
                     return g;
                 }
                 ImageView imageView = new ImageView(ContentBannerViewHolder.this.a);
                 imageView.setImageResource(R$drawable.uikit_default_image_bg_grey);
                 imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                imageView.setOnClickListener(new View$OnClickListenerC1008c(i));
-                C0504a.b().c(((ContentDetail.ContentBanner) list.get(i)).url).n(new C1005b(i, imageView)).e(new C1004a(imageView, i)).f();
+                imageView.setOnClickListener(new c(i));
+                cn.damai.common.image.a.b().c(((ContentDetail.ContentBanner) list.get(i)).url).n(new b(i, imageView)).e(new a(imageView, i)).f();
                 viewGroup.addView(imageView);
                 return imageView;
             }
@@ -471,7 +466,7 @@ public class ContentBannerViewHolder extends cp2<ArrayList<ContentDetail.Content
             t(f, arrayList);
             return;
         }
-        C0504a.b().c(arrayList.get(0).url).n(new C1007b(arrayList)).e(new C1006a(arrayList)).f();
+        cn.damai.common.image.a.b().c(arrayList.get(0).url).n(new b(arrayList)).e(new a(arrayList)).f();
     }
 
     public void u() {

@@ -9,7 +9,6 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 import androidx.core.content.ContextCompat;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.commonbusiness.R$anim;
@@ -40,15 +39,14 @@ public class UserVipPanel {
     private AutoTextSwitcher f;
     private TextView g;
     private BasePresenter h;
-    View.OnClickListener i = new View$OnClickListenerC1978a();
+    View.OnClickListener i = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.vipcard.UserVipPanel$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1978a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1978a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -125,7 +123,7 @@ public class UserVipPanel {
             this.b.setTag(artistVipBean);
             this.e.setText(artistVipBean.name);
             this.f.update(artistVipBean.desc);
-            DMImageCreator c = C0504a.b().c(artistVipBean.bgImage);
+            DMImageCreator c = cn.damai.common.image.a.b().c(artistVipBean.bgImage);
             int i = R$drawable.bg_vip_switch;
             c.i(i).c(i).g(this.c);
             if (artistVipBean.artistVip) {

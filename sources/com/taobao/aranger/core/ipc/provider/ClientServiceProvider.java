@@ -14,10 +14,10 @@ import com.taobao.aranger.core.entity.Reply;
 import com.taobao.aranger.core.wrapper.ParameterWrapper;
 import com.taobao.aranger.exception.IPCException;
 import com.taobao.aranger.intf.IClientService;
-import com.taobao.aranger.utils.C6698a;
-import com.taobao.aranger.utils.C6702d;
 import com.taobao.aranger.utils.CallbackManager;
 import com.taobao.aranger.utils.TypeUtils;
+import com.taobao.aranger.utils.a;
+import com.taobao.aranger.utils.d;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
@@ -177,12 +177,12 @@ public class ClientServiceProvider extends Binder implements IClientService {
         }
         try {
             ArrayList<Integer> arrayList = new ArrayList();
-            Method f = C6702d.e().f(d.getClass(), callback.getMethodWrapper(), callback.getParameterWrappers());
-            Object[] a = C6698a.a(callback.getParameterWrappers(), arrayList);
+            Method f = d.e().f(d.getClass(), callback.getMethodWrapper(), callback.getParameterWrappers());
+            Object[] a = a.a(callback.getParameterWrappers(), arrayList);
             boolean z = false;
             for (Class<?> cls : d.getClass().getInterfaces()) {
                 if (TypeUtils.arrayContainsAnnotation(cls.getAnnotations(), com.taobao.aranger.annotation.type.Callback.class)) {
-                    z = TypeUtils.arrayContainsAnnotation(C6702d.e().f(cls, callback.getMethodWrapper(), callback.getParameterWrappers()).getAnnotations(), UIThread.class);
+                    z = TypeUtils.arrayContainsAnnotation(d.e().f(cls, callback.getMethodWrapper(), callback.getParameterWrappers()).getAnnotations(), UIThread.class);
                 }
             }
             boolean z2 = true;

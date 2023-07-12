@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.renderer;
 
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.collections.C8221s;
+import kotlin.collections.s;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
@@ -20,13 +20,12 @@ import tb.q12;
 public interface ClassifierNamePolicy {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.renderer.ClassifierNamePolicy$a */
     /* loaded from: classes3.dex */
-    public static final class C8471a implements ClassifierNamePolicy {
+    public static final class a implements ClassifierNamePolicy {
         @NotNull
-        public static final C8471a INSTANCE = new C8471a();
+        public static final a INSTANCE = new a();
 
-        private C8471a() {
+        private a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.renderer.ClassifierNamePolicy
@@ -46,13 +45,12 @@ public interface ClassifierNamePolicy {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.renderer.ClassifierNamePolicy$b */
     /* loaded from: classes3.dex */
-    public static final class C8472b implements ClassifierNamePolicy {
+    public static final class b implements ClassifierNamePolicy {
         @NotNull
-        public static final C8472b INSTANCE = new C8472b();
+        public static final b INSTANCE = new b();
 
-        private C8472b() {
+        private b() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.renderer.ClassifierNamePolicy
@@ -75,19 +73,18 @@ public interface ClassifierNamePolicy {
                 z = containingDeclaration instanceof ClassDescriptor;
                 classifierDescriptor2 = containingDeclaration;
             } while (z);
-            D = C8221s.D(arrayList);
+            D = s.D(arrayList);
             return q12.c(D);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.renderer.ClassifierNamePolicy$c */
     /* loaded from: classes3.dex */
-    public static final class C8473c implements ClassifierNamePolicy {
+    public static final class c implements ClassifierNamePolicy {
         @NotNull
-        public static final C8473c INSTANCE = new C8473c();
+        public static final c INSTANCE = new c();
 
-        private C8473c() {
+        private c() {
         }
 
         private final String a(ClassifierDescriptor classifierDescriptor) {

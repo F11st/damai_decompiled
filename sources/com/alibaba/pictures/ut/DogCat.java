@@ -20,12 +20,12 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Properties;
 import java.util.regex.Pattern;
-import kotlin.C8177b;
 import kotlin.Lazy;
+import kotlin.b;
 import kotlin.jvm.JvmStatic;
 import kotlin.jvm.functions.Function0;
-import kotlin.text.C8604o;
 import kotlin.text.Regex;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -54,7 +54,7 @@ public final class DogCat {
     static {
         Lazy b2;
         Lazy b3;
-        b2 = C8177b.b(new Function0<HashMap<Integer, ClickCat>>() { // from class: com.alibaba.pictures.ut.DogCat$catMap$2
+        b2 = b.b(new Function0<HashMap<Integer, ClickCat>>() { // from class: com.alibaba.pictures.ut.DogCat$catMap$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // kotlin.jvm.functions.Function0
@@ -65,7 +65,7 @@ public final class DogCat {
             }
         });
         c = b2;
-        b3 = C8177b.b(new Function0<HashMap<Integer, ExposureDog>>() { // from class: com.alibaba.pictures.ut.DogCat$dogMap$2
+        b3 = b.b(new Function0<HashMap<Integer, ExposureDog>>() { // from class: com.alibaba.pictures.ut.DogCat$dogMap$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // kotlin.jvm.functions.Function0
@@ -115,7 +115,7 @@ public final class DogCat {
         }
         String e3 = ys2Var.e();
         b41.f(e3);
-        F = C8604o.F(str, e3, false, 2, null);
+        F = o.F(str, e3, false, 2, null);
         if (F) {
             return str;
         }
@@ -390,9 +390,9 @@ public final class DogCat {
             z = false;
         }
         if (!z) {
-            F = C8604o.F(str, "Page_", false, 2, null);
+            F = o.F(str, "Page_", false, 2, null);
             if (!F) {
-                F2 = C8604o.F(str, "page_", false, 2, null);
+                F2 = o.F(str, "page_", false, 2, null);
                 if (!F2) {
                     return b41.r(ys2.INSTANCE.e(), str);
                 }

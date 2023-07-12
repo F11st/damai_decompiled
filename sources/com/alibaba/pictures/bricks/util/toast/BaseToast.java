@@ -18,20 +18,19 @@ import tb.k50;
 public class BaseToast extends Toast {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C3561a Companion = new C3561a(null);
+    public static final a Companion = new a(null);
     @Nullable
     private View mMessageView;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.util.toast.BaseToast$a */
     /* loaded from: classes7.dex */
-    public static final class C3561a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3561a() {
+        private a() {
         }
 
-        public /* synthetic */ C3561a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

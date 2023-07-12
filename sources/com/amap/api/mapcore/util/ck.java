@@ -7,7 +7,7 @@ public class ck extends cc {
         super(i, azVar);
     }
 
-    @Override // com.amap.api.mapcore.util.AbstractC4497cd
+    @Override // com.amap.api.mapcore.util.cd
     public void d() {
         b(this.b.b);
         az azVar = this.b;

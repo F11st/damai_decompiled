@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.functions.ObjectHelper;
@@ -270,14 +270,14 @@ public final class FlowableSwitchMap<T, R> extends AbstractFlowableWithUpstream<
         }
     }
 
-    public FlowableSwitchMap(AbstractC8147b<T> abstractC8147b, Function<? super T, ? extends Publisher<? extends R>> function, int i, boolean z) {
-        super(abstractC8147b);
+    public FlowableSwitchMap(b<T> bVar, Function<? super T, ? extends Publisher<? extends R>> function, int i, boolean z) {
+        super(bVar);
         this.mapper = function;
         this.bufferSize = i;
         this.delayErrors = z;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super R> subscriber) {
         if (FlowableScalarXMap.tryScalarXMapSubscribe(this.source, subscriber, this.mapper)) {
             return;

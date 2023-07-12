@@ -5,7 +5,6 @@ import android.content.res.Configuration;
 import android.os.Build;
 import com.alibaba.responsive.IDisableOritationActivity;
 import com.alibaba.responsive.page.IResponsivePage;
-import com.alibaba.responsive.page.orientation.C3730a;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
@@ -13,7 +12,7 @@ public class r22 {
     private IResponsivePage a;
     private int b;
     private int c;
-    private C3730a d;
+    private com.alibaba.responsive.page.orientation.a d;
 
     public r22(IResponsivePage iResponsivePage) {
         this.a = iResponsivePage;
@@ -60,7 +59,7 @@ public class r22 {
             }
             IDisableOritationActivity b = v22.c().b();
             if (b == null || !b.hitDisableOritationActivityClassName(this.a.getPageActivity().getLocalClassName())) {
-                this.d = new C3730a(this.a.getPageActivity());
+                this.d = new com.alibaba.responsive.page.orientation.a(this.a.getPageActivity());
                 return;
             }
             return;
@@ -103,9 +102,9 @@ public class r22 {
 
     public void f() {
         w22.d().a(this.a.getPageActivity());
-        C3730a c3730a = this.d;
-        if (c3730a != null) {
-            c3730a.g();
+        com.alibaba.responsive.page.orientation.a aVar = this.d;
+        if (aVar != null) {
+            aVar.g();
         }
     }
 

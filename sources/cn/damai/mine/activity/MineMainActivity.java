@@ -10,7 +10,7 @@ import androidx.fragment.app.FragmentTransaction;
 import cn.damai.common.DamaiConstants;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.tab.DamaiTabbarManager;
 import cn.damai.commonbusiness.tab.TabItem;
@@ -43,12 +43,11 @@ public class MineMainActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.MineMainActivity$a */
     /* loaded from: classes6.dex */
-    public class C1390a implements TabbarLayout.TabBarListener {
+    public class a implements TabbarLayout.TabBarListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1390a(MineMainActivity mineMainActivity) {
+        a(MineMainActivity mineMainActivity) {
         }
 
         @Override // cn.damai.commonbusiness.tab.TabbarLayout.TabBarListener
@@ -85,12 +84,11 @@ public class MineMainActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.MineMainActivity$b */
     /* loaded from: classes6.dex */
-    public class C1391b implements Action<Integer> {
+    public class b implements Action<Integer> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1391b() {
+        b() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -121,7 +119,7 @@ public class MineMainActivity extends DamaiBaseActivity {
         if (AndroidInstantRuntime.support(ipChange, "-305363758")) {
             ipChange.ipc$dispatch("-305363758", new Object[]{this});
         } else {
-            this.mDMMessage.b(tf1.NOTIFY_UPDATE_BADGE_DATA, new C1391b());
+            this.mDMMessage.b(tf1.NOTIFY_UPDATE_BADGE_DATA, new b());
         }
     }
 
@@ -131,7 +129,7 @@ public class MineMainActivity extends DamaiBaseActivity {
             ipChange.ipc$dispatch("-2083764663", new Object[]{this});
             return;
         }
-        DamaiTabbarManager damaiTabbarManager = new DamaiTabbarManager(this, (TabbarLayout) findViewById(R$id.mine_activity_bottomsheet_container), new C1390a(this));
+        DamaiTabbarManager damaiTabbarManager = new DamaiTabbarManager(this, (TabbarLayout) findViewById(R$id.mine_activity_bottomsheet_container), new a(this));
         this.mDamaiTabbarManager = damaiTabbarManager;
         damaiTabbarManager.j(DamaiConstants.TAB_MINE);
     }
@@ -254,7 +252,7 @@ public class MineMainActivity extends DamaiBaseActivity {
         }
         super.onCreate(bundle);
         tf1.a = tf1.b;
-        C0529c.e().K(this);
+        c.e().K(this);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */

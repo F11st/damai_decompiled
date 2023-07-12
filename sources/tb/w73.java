@@ -9,8 +9,6 @@ import android.os.Build;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
-import com.loc.C5846l;
-import com.loc.C5861o;
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -270,7 +268,7 @@ public final class w73 {
         String str6;
         ArrayList<com.loc.y0> arrayList;
         int i;
-        String j = C5846l.j(context);
+        String j = com.loc.l.j(context);
         int P = com.loc.m1.P();
         this.K = str;
         this.O = null;
@@ -294,7 +292,7 @@ public final class w73 {
         if (D != null) {
             if (TextUtils.isEmpty(com.loc.j1.g)) {
                 try {
-                    com.loc.j1.g = C5861o.h0(context);
+                    com.loc.j1.g = com.loc.o.h0(context);
                 } catch (Throwable th) {
                     str4 = "1";
                     com.loc.j1.h(th, "Aps", "getApsReq part4");
@@ -307,7 +305,7 @@ public final class w73 {
             }
             if (TextUtils.isEmpty(com.loc.j1.h)) {
                 try {
-                    com.loc.j1.h = C5861o.k0(context);
+                    com.loc.j1.h = com.loc.o.k0(context);
                 } catch (SecurityException unused) {
                 } catch (Throwable th2) {
                     com.loc.j1.h(th2, "Aps", "getApsReq part2");
@@ -410,25 +408,25 @@ public final class w73 {
         this.N = (int) ((com.loc.m1.B() - l73Var.B()) / 1000);
         try {
             if (TextUtils.isEmpty(Q)) {
-                Q = C5861o.R(context);
+                Q = com.loc.o.R(context);
             }
         } catch (Throwable unused3) {
         }
         try {
             if (TextUtils.isEmpty(R)) {
-                R = C5861o.w(context);
+                R = com.loc.o.w(context);
             }
         } catch (Throwable unused4) {
         }
         try {
             if (TextUtils.isEmpty(this.L)) {
-                this.L = C5861o.T(context);
+                this.L = com.loc.o.T(context);
             }
         } catch (Throwable unused5) {
         }
         try {
             if (TextUtils.isEmpty(this.M)) {
-                this.M = C5861o.Q(context);
+                this.M = com.loc.o.Q(context);
             }
         } catch (Throwable unused6) {
         }

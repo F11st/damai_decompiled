@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
 import com.amap.api.location.AMapLocationClientOption;
-import com.loc.C5846l;
 import com.tencent.open.SocialConstants;
 import org.json.JSONObject;
 
@@ -241,7 +240,7 @@ public final class v73 {
         StringBuffer stringBuffer = new StringBuffer();
         try {
             stringBuffer.append("#SHA1AndPackage#");
-            stringBuffer.append(C5846l.i(context));
+            stringBuffer.append(com.loc.l.i(context));
             String str2 = t43Var.b.get("gsid").get(0);
             if (!TextUtils.isEmpty(str2)) {
                 stringBuffer.append("#gsid#");

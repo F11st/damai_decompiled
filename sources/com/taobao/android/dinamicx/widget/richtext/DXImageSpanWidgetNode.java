@@ -5,8 +5,8 @@ import android.graphics.Bitmap;
 import android.text.TextUtils;
 import android.view.View;
 import com.taobao.android.dinamicx.DXGlobalCenter;
-import com.taobao.android.dinamicx.view.richtext.node.C6414a;
 import com.taobao.android.dinamicx.view.richtext.node.RichTextNode;
+import com.taobao.android.dinamicx.view.richtext.node.a;
 import com.taobao.android.dinamicx.widget.DXImageWidgetNode;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
 import com.taobao.android.dinamicx.widget.IDXRichTextImageInterface;
@@ -27,7 +27,7 @@ public class DXImageSpanWidgetNode extends DXImageWidgetNode {
     public static final long DXIMAGESPAN_PRESS = 19050239308914L;
     private String v;
     private String w;
-    private C6414a x;
+    private com.taobao.android.dinamicx.view.richtext.node.a x;
 
     /* compiled from: Taobao */
     /* loaded from: classes12.dex */
@@ -36,12 +36,11 @@ public class DXImageSpanWidgetNode extends DXImageWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.richtext.DXImageSpanWidgetNode$a */
     /* loaded from: classes11.dex */
-    class C6535a implements RichTextNode.OnLinkTapListener {
+    class a implements RichTextNode.OnLinkTapListener {
         final /* synthetic */ long a;
 
-        C6535a(long j) {
+        a(long j) {
             this.a = j;
         }
 
@@ -54,12 +53,11 @@ public class DXImageSpanWidgetNode extends DXImageWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.richtext.DXImageSpanWidgetNode$b */
     /* loaded from: classes11.dex */
-    class C6536b implements RichTextNode.OnLongPressListener {
+    class b implements RichTextNode.OnLongPressListener {
         final /* synthetic */ long a;
 
-        C6536b(long j) {
+        b(long j) {
             this.a = j;
         }
 
@@ -73,10 +71,9 @@ public class DXImageSpanWidgetNode extends DXImageWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.richtext.DXImageSpanWidgetNode$c */
     /* loaded from: classes11.dex */
-    class C6537c implements RichTextNode.OnTapListener {
-        C6537c() {
+    class c implements RichTextNode.OnTapListener {
+        c() {
         }
 
         @Override // com.taobao.android.dinamicx.view.richtext.node.RichTextNode.OnTapListener
@@ -86,10 +83,9 @@ public class DXImageSpanWidgetNode extends DXImageWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.richtext.DXImageSpanWidgetNode$d */
     /* loaded from: classes11.dex */
-    class C6538d implements RichTextNode.OnLongTapListener {
-        C6538d() {
+    class d implements RichTextNode.OnLongTapListener {
+        d() {
         }
 
         @Override // com.taobao.android.dinamicx.view.richtext.node.RichTextNode.OnLongTapListener
@@ -100,13 +96,12 @@ public class DXImageSpanWidgetNode extends DXImageWidgetNode {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.richtext.DXImageSpanWidgetNode$e */
     /* loaded from: classes11.dex */
-    public class C6539e implements ImageLoadCallback {
-        final /* synthetic */ C6414a a;
+    public class e implements ImageLoadCallback {
+        final /* synthetic */ com.taobao.android.dinamicx.view.richtext.node.a a;
 
-        C6539e(C6414a c6414a) {
-            this.a = c6414a;
+        e(com.taobao.android.dinamicx.view.richtext.node.a aVar) {
+            this.a = aVar;
         }
 
         @Override // com.taobao.android.dinamicx.widget.richtext.DXImageSpanWidgetNode.ImageLoadCallback
@@ -130,35 +125,35 @@ public class DXImageSpanWidgetNode extends DXImageWidgetNode {
         return new DXImageSpanWidgetNode();
     }
 
-    public C6414a k(boolean z, boolean z2) {
+    public com.taobao.android.dinamicx.view.richtext.node.a k(boolean z, boolean z2) {
         if (getLayoutWidth() > 0 || getLayoutHeight() > 0) {
-            C6414a.C6423i c6423i = new C6414a.C6423i();
-            c6423i.f(getLayoutWidth()).b(getLayoutHeight()).c(this.v).d(this.w).e(c());
-            C6414a a = c6423i.a();
+            a.i iVar = new a.i();
+            iVar.f(getLayoutWidth()).b(getLayoutHeight()).c(this.v).d(this.w).e(c());
+            com.taobao.android.dinamicx.view.richtext.node.a a2 = iVar.a();
             if (z) {
-                l(a, z2);
+                l(a2, z2);
             }
-            this.x = a;
-            return a;
+            this.x = a2;
+            return a2;
         }
         return null;
     }
 
-    public void l(C6414a c6414a, boolean z) {
-        IDXRichTextImageInterface d;
+    public void l(com.taobao.android.dinamicx.view.richtext.node.a aVar, boolean z) {
+        IDXRichTextImageInterface d2;
         IDXWebImageUrlInterface g;
-        if (c6414a == null || (d = DXGlobalCenter.d(getDXRuntimeContext())) == null || getDXRuntimeContext() == null || getDXRuntimeContext().getContext() == null) {
+        if (aVar == null || (d2 = DXGlobalCenter.d(getDXRuntimeContext())) == null || getDXRuntimeContext() == null || getDXRuntimeContext().getContext() == null) {
             return;
         }
-        String e = e();
-        if (!z && !TextUtils.isEmpty(e) && (g = DXGlobalCenter.g()) != null) {
-            String decideUrl = g.decideUrl(e, c6414a.r(), c6414a.q(), a());
+        String e2 = e();
+        if (!z && !TextUtils.isEmpty(e2) && (g = DXGlobalCenter.g()) != null) {
+            String decideUrl = g.decideUrl(e2, aVar.r(), aVar.q(), a());
             if (!TextUtils.isEmpty(decideUrl)) {
-                e = decideUrl;
+                e2 = decideUrl;
             }
         }
-        nz.g("DXImageSpanRequest", e);
-        d.downloadImage(getDXRuntimeContext().getContext(), e, new C6539e(c6414a));
+        nz.g("DXImageSpanRequest", e2);
+        d2.downloadImage(getDXRuntimeContext().getContext(), e2, new e(aVar));
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -170,13 +165,13 @@ public class DXImageSpanWidgetNode extends DXImageWidgetNode {
             }
             super.onBindEvent(context, view, j);
         } else if (j == 9859228430928305L && !TextUtils.isEmpty(this.v)) {
-            this.x.w(new C6535a(j));
+            this.x.w(new a(j));
         } else if (j == 5176476879387311985L && !TextUtils.isEmpty(this.w)) {
-            this.x.x(new C6536b(j));
+            this.x.x(new b(j));
         } else if (j == 18903999933159L) {
-            this.x.z(new C6537c());
+            this.x.z(new c());
         } else if (j == -6544685697300501093L) {
-            this.x.y(new C6538d());
+            this.x.y(new d());
         } else if (wt.j0(this)) {
         } else {
             super.onBindEvent(context, view, j);

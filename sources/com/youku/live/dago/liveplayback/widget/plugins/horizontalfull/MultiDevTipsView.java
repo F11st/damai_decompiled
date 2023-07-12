@@ -70,7 +70,7 @@ public class MultiDevTipsView extends PopupWindow implements View.OnClickListene
             ipChange.ipc$dispatch("-1831228973", new Object[]{this, activity});
             return;
         }
-        View inflate = LayoutInflater.from(activity).inflate(R.C7935layout.dago_multi_dev_tips, (ViewGroup) null);
+        View inflate = LayoutInflater.from(activity).inflate(R.layout.dago_multi_dev_tips, (ViewGroup) null);
         this.mText = (TextView) inflate.findViewById(R.id.iv_multi_tip);
         View findViewById = inflate.findViewById(R.id.iv_multi_close);
         this.mBtnClose = findViewById;

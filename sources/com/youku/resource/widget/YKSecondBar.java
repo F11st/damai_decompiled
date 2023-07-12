@@ -46,7 +46,7 @@ public class YKSecondBar extends LinearLayout implements YKCustomizedView {
             this.barStyle = obtainStyledAttributes.getString(R.styleable.YKSecondBarWidget_secondbar_style);
             obtainStyledAttributes.recycle();
         }
-        LayoutInflater.from(context).inflate(R.C8074layout.yk_secondbar_layout, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.yk_secondbar_layout, (ViewGroup) this, true);
         setStyle(this.barStyle);
     }
 

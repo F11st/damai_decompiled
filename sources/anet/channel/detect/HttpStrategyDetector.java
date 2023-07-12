@@ -3,18 +3,16 @@ package anet.channel.detect;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
-import anet.channel.C0162c;
 import anet.channel.Session;
 import anet.channel.entity.ConnType;
 import anet.channel.entity.EventCb;
 import anet.channel.session.HttpSession;
 import anet.channel.statist.HttpDetectStat;
 import anet.channel.status.NetworkStatusHelper;
-import anet.channel.strategy.C0213a;
-import anet.channel.strategy.C0214b;
 import anet.channel.strategy.IConnStrategy;
 import anet.channel.strategy.IStrategyFilter;
 import anet.channel.strategy.IStrategyListener;
+import anet.channel.strategy.b;
 import anet.channel.thread.ThreadPoolExecutorFactory;
 import anet.channel.util.ALog;
 import com.uc.crashsdk.export.LogType;
@@ -23,9 +21,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.atomic.AtomicInteger;
-import tb.C9708t9;
 import tb.hu0;
 import tb.sf0;
+import tb.t9;
 import tb.x6;
 import tb.ym;
 import tb.zm;
@@ -36,24 +34,23 @@ public class HttpStrategyDetector {
     private static SharedPreferences b;
     private static CopyOnWriteArraySet<String> c;
     private static AtomicInteger a = new AtomicInteger(1);
-    private static IStrategyListener d = new C0172a();
-    private static IStrategyFilter e = new C0173b();
-    private static IStrategyFilter f = new C0174c();
+    private static IStrategyListener d = new a();
+    private static IStrategyFilter e = new b();
+    private static IStrategyFilter f = new c();
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.detect.HttpStrategyDetector$a */
     /* loaded from: classes.dex */
-    static class C0172a implements IStrategyListener {
-        C0172a() {
+    static class a implements IStrategyListener {
+        a() {
         }
 
-        private void a(C0214b.C0218d[] c0218dArr) {
-            if (c0218dArr == null || c0218dArr.length == 0) {
+        private void a(b.d[] dVarArr) {
+            if (dVarArr == null || dVarArr.length == 0) {
                 return;
             }
-            for (C0214b.C0218d c0218d : c0218dArr) {
-                String str = c0218d.a;
-                if (C9708t9.l(str) || HttpStrategyDetector.c.contains(str)) {
+            for (b.d dVar : dVarArr) {
+                String str = dVar.a;
+                if (t9.l(str) || HttpStrategyDetector.c.contains(str)) {
                     if (!HttpStrategyDetector.c.contains(str)) {
                         HttpStrategyDetector.c.add(str);
                         SharedPreferences.Editor edit = HttpStrategyDetector.b.edit();
@@ -65,13 +62,13 @@ public class HttpStrategyDetector {
             }
         }
 
-        private void b(C0214b.C0219e[] c0219eArr) {
-            if (c0219eArr == null || c0219eArr.length == 0) {
+        private void b(b.e[] eVarArr) {
+            if (eVarArr == null || eVarArr.length == 0) {
                 return;
             }
-            for (C0214b.C0219e c0219e : c0219eArr) {
-                String str = c0219e.a;
-                if (C9708t9.l(str) || HttpStrategyDetector.c.contains(str)) {
+            for (b.e eVar : eVarArr) {
+                String str = eVar.a;
+                if (t9.l(str) || HttpStrategyDetector.c.contains(str)) {
                     if (!HttpStrategyDetector.c.contains(str)) {
                         HttpStrategyDetector.c.add(str);
                         SharedPreferences.Editor edit = HttpStrategyDetector.b.edit();
@@ -84,23 +81,22 @@ public class HttpStrategyDetector {
         }
 
         @Override // anet.channel.strategy.IStrategyListener
-        public void onStrategyUpdated(C0214b.C0221g c0221g) {
-            if (c0221g == null) {
+        public void onStrategyUpdated(b.g gVar) {
+            if (gVar == null) {
                 return;
             }
-            if (C9708t9.N()) {
-                a(c0221g.c);
+            if (t9.N()) {
+                a(gVar.c);
             } else {
-                b(c0221g.b);
+                b(gVar.b);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.detect.HttpStrategyDetector$b */
     /* loaded from: classes.dex */
-    static class C0173b implements IStrategyFilter {
-        C0173b() {
+    static class b implements IStrategyFilter {
+        b() {
         }
 
         @Override // anet.channel.strategy.IStrategyFilter
@@ -110,10 +106,9 @@ public class HttpStrategyDetector {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.detect.HttpStrategyDetector$c */
     /* loaded from: classes.dex */
-    static class C0174c implements IStrategyFilter {
-        C0174c() {
+    static class c implements IStrategyFilter {
+        c() {
         }
 
         @Override // anet.channel.strategy.IStrategyFilter
@@ -124,15 +119,14 @@ public class HttpStrategyDetector {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.detect.HttpStrategyDetector$d */
     /* loaded from: classes.dex */
-    public static class C0175d implements EventCb {
+    public static class d implements EventCb {
         final /* synthetic */ String a;
         final /* synthetic */ IConnStrategy b;
         final /* synthetic */ boolean c;
         final /* synthetic */ List d;
 
-        C0175d(String str, IConnStrategy iConnStrategy, boolean z, List list) {
+        d(String str, IConnStrategy iConnStrategy, boolean z, List list) {
             this.a = str;
             this.b = iConnStrategy;
             this.c = z;
@@ -153,16 +147,16 @@ public class HttpStrategyDetector {
             if (i != 512) {
                 if (i == 1024) {
                     ymVar.a = false;
-                    C0213a.a().notifyConnEvent(this.a, this.b, ymVar);
+                    anet.channel.strategy.a.a().notifyConnEvent(this.a, this.b, ymVar);
                     HttpStrategyDetector.j(this.a, this.c, this.d);
                     return;
                 }
                 return;
             }
             ymVar.a = true;
-            C0213a.a().notifyConnEvent(this.a, this.b, ymVar);
+            anet.channel.strategy.a.a().notifyConnEvent(this.a, this.b, ymVar);
             try {
-                C0162c k = C0162c.k();
+                anet.channel.c k = anet.channel.c.k();
                 StringBuilder sb = new StringBuilder();
                 sb.append(this.c ? "https://" : "http://");
                 sb.append(this.a);
@@ -181,7 +175,7 @@ public class HttpStrategyDetector {
             c.addAll(stringSet);
         }
         ALog.e("awcn.HttpStrategyDetector", "init host :" + c.toString(), null, new Object[0]);
-        C0213a.a().registerListener(d);
+        anet.channel.strategy.a.a().registerListener(d);
         h();
     }
 
@@ -198,7 +192,7 @@ public class HttpStrategyDetector {
 
     /* JADX INFO: Access modifiers changed from: private */
     public static void i(final String str) {
-        if (!C9708t9.v()) {
+        if (!t9.v()) {
             ALog.e("awcn.HttpStrategyDetector", "isHttpDetectEnable is false!", null, new Object[0]);
         } else if (!NetworkStatusHelper.n()) {
             ALog.e("awcn.HttpStrategyDetector", "network is not connected!", null, new Object[0]);
@@ -208,8 +202,8 @@ public class HttpStrategyDetector {
             ThreadPoolExecutorFactory.e(new Runnable() { // from class: anet.channel.detect.HttpStrategyDetector.4
                 @Override // java.lang.Runnable
                 public void run() {
-                    List<IConnStrategy> connStrategyListByHost = C0213a.a().getConnStrategyListByHost(str, HttpStrategyDetector.e);
-                    List<IConnStrategy> connStrategyListByHost2 = C0213a.a().getConnStrategyListByHost(str, HttpStrategyDetector.f);
+                    List<IConnStrategy> connStrategyListByHost = anet.channel.strategy.a.a().getConnStrategyListByHost(str, HttpStrategyDetector.e);
+                    List<IConnStrategy> connStrategyListByHost2 = anet.channel.strategy.a.a().getConnStrategyListByHost(str, HttpStrategyDetector.f);
                     if (connStrategyListByHost != null && connStrategyListByHost.size() > 0) {
                         HttpStrategyDetector.j(str, true, connStrategyListByHost);
                     } else {
@@ -232,7 +226,7 @@ public class HttpStrategyDetector {
         if (remove.getStatus() != -1) {
             ALog.e("awcn.HttpStrategyDetector", "this strategy has detected!", null, new Object[0]);
             if (remove.getStatus() == 1) {
-                C0162c k = C0162c.k();
+                anet.channel.c k = anet.channel.c.k();
                 StringBuilder sb = new StringBuilder();
                 sb.append(z ? "https://" : "http://");
                 sb.append(str);
@@ -246,7 +240,7 @@ public class HttpStrategyDetector {
         sb2.append(str);
         String sb3 = sb2.toString();
         HttpSession httpSession = new HttpSession(hu0.c(), new zm(sb3, "HttpDetect" + a.getAndIncrement(), remove));
-        httpSession.v(LogType.UNEXP_OTHER, new C0175d(str, remove, z, list));
+        httpSession.v(LogType.UNEXP_OTHER, new d(str, remove, z, list));
         httpSession.s.isCommitted = true;
         httpSession.e();
     }

@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import com.youku.resource.R;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -111,13 +111,13 @@ public class Utils {
         }
         Color.parseColor("#66000000");
         if (i == 1) {
-            return context.getResources().getColor(R.C8071color.cb_2);
+            return context.getResources().getColor(R.color.cb_2);
         }
         if (i == 2) {
-            return context.getResources().getColor(R.C8071color.cr_1);
+            return context.getResources().getColor(R.color.cr_1);
         }
         if (i == 3) {
-            return context.getResources().getColor(R.C8071color.cv_1);
+            return context.getResources().getColor(R.color.cv_1);
         }
         if (i == 4) {
             return Color.parseColor("#99000000");
@@ -150,7 +150,7 @@ public class Utils {
     }
 
     public static int getHeight(Context context) {
-        return ((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getHeight();
+        return ((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getHeight();
     }
 
     public static String getLoginMonkeyJsonPath() {
@@ -175,13 +175,13 @@ public class Utils {
         }
         Color.parseColor("#66000000");
         if (i == 1) {
-            return context.getResources().getColor(R.C8071color.cb_2);
+            return context.getResources().getColor(R.color.cb_2);
         }
         if (i == 2) {
-            return context.getResources().getColor(R.C8071color.cr_1);
+            return context.getResources().getColor(R.color.cr_1);
         }
         if (i == 3) {
-            return context.getResources().getColor(R.C8071color.cv_1);
+            return context.getResources().getColor(R.color.cv_1);
         }
         if (i == 4) {
             return Color.parseColor("#99000000");
@@ -209,7 +209,7 @@ public class Utils {
     }
 
     public static int getWidth(Context context) {
-        return ((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getWidth();
+        return ((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getWidth();
     }
 
     public static String getWifiMonkeyJsonPath() {

@@ -8,7 +8,6 @@ import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import androidx.exifinterface.media.ExifInterface;
-import com.taobao.application.common.C6673b;
 import com.taobao.application.common.IAppPreferences;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -144,7 +143,7 @@ public class eq1 extends ra {
             this.e.addProperty("pageCalculateType", "view_manual_calculate");
         }
         this.Q = true;
-        IAppPreferences d = C6673b.d();
+        IAppPreferences d = com.taobao.application.common.b.d();
         e30.a("PageProcessor", "errorCode", Integer.valueOf(this.U));
         this.e.addProperty("totalVisibleDuration", Long.valueOf(this.H));
         this.e.addProperty("deviceLevel", Integer.valueOf(d.getInt("deviceLevel", -1)));

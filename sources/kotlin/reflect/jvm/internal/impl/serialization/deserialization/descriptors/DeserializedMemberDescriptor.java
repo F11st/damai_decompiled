@@ -25,9 +25,8 @@ public interface DeserializedMemberDescriptor extends DeserializedDescriptor, Me
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedMemberDescriptor$a */
     /* loaded from: classes3.dex */
-    public static final class C8513a {
+    public static final class a {
         @NotNull
         public static List<hx2> a(@NotNull DeserializedMemberDescriptor deserializedMemberDescriptor) {
             b41.i(deserializedMemberDescriptor, "this");

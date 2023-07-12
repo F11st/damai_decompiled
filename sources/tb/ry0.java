@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.discover.bean.IFeedProjectBean;
 import cn.damai.commonbusiness.search.bean.MarketTagBean;
 import cn.damai.homepage.bean.WaterFlowRecommendItem;
@@ -56,7 +55,7 @@ public class ry0 implements OnItemBindListener<IFeedProjectBean<WaterFlowRecomme
         if (raw == null || this.a == null) {
             return;
         }
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         py0 I = py0.I();
         String str = this.b;
         String str2 = raw.projectId;

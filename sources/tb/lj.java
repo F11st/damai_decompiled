@@ -112,11 +112,11 @@ public class lj extends m1 {
     @Override // kotlin.reflect.jvm.internal.impl.types.AbstractTypeConstructor
     @NotNull
     public SupertypeLoopChecker j() {
-        SupertypeLoopChecker.C8298a c8298a = SupertypeLoopChecker.C8298a.INSTANCE;
-        if (c8298a == null) {
+        SupertypeLoopChecker.a aVar = SupertypeLoopChecker.a.INSTANCE;
+        if (aVar == null) {
             o(7);
         }
-        return c8298a;
+        return aVar;
     }
 
     @Override // tb.pj, kotlin.reflect.jvm.internal.impl.types.TypeConstructor

@@ -24,7 +24,7 @@ import tb.b41;
 public final class GXExtensionContainerItemBind implements GXRegisterCenter.GXIExtensionContainerItemBind {
     @Override // com.alibaba.gaiax.GXRegisterCenter.GXIExtensionContainerItemBind
     @Nullable
-    public Object bindViewHolder(@Nullable Object obj, @NotNull ViewGroup viewGroup, @NotNull GXTemplateEngine.C3343f c3343f, @NotNull GXTemplateEngine.C3347i c3347i, @NotNull GXTemplateEngine.C3341d c3341d) {
+    public Object bindViewHolder(@Nullable Object obj, @NotNull ViewGroup viewGroup, @NotNull GXTemplateEngine.f fVar, @NotNull GXTemplateEngine.i iVar, @NotNull GXTemplateEngine.d dVar) {
         Integer c;
         Map<GaiaX.IRule, GaiaX.IDataPipeline5> dataPipelines5;
         GaiaX.IScrollItemStatusDelegate scrollItemStatusDelegate;
@@ -34,17 +34,17 @@ public final class GXExtensionContainerItemBind implements GXRegisterCenter.GXIE
         final GaiaX.IRouterDelegate2 routerDelegate2;
         final GaiaX.IEventDelegate eventDelegate;
         b41.i(viewGroup, "itemContainer");
-        b41.i(c3343f, "gxMeasureSize");
-        b41.i(c3347i, "gxTemplateItem");
-        b41.i(c3341d, "gxExtendParams");
-        JSONObject b = c3341d.b();
-        if (b == null || (c = c3341d.c()) == null) {
+        b41.i(fVar, "gxMeasureSize");
+        b41.i(iVar, "gxTemplateItem");
+        b41.i(dVar, "gxExtendParams");
+        JSONObject b = dVar.b();
+        if (b == null || (c = dVar.c()) == null) {
             return null;
         }
         final int intValue = c.intValue();
         b.put((JSONObject) GaiaXKey.GAIAX_SCROLL_POSITION, (String) Integer.valueOf(intValue));
         GaiaX.Params params = obj instanceof GaiaX.Params ? (GaiaX.Params) obj : null;
-        GaiaX.Params.Builder data = new GaiaX.Params.Builder().templateId(c3347i.d()).templateBiz(c3347i.a()).container(viewGroup).data(b);
+        GaiaX.Params.Builder data = new GaiaX.Params.Builder().templateId(iVar.d()).templateBiz(iVar.a()).container(viewGroup).data(b);
         LoadType childLoadMode$GaiaX_Android = params == null ? null : params.getChildLoadMode$GaiaX_Android();
         if (childLoadMode$GaiaX_Android == null) {
             childLoadMode$GaiaX_Android = params == null ? null : params.getMode();
@@ -53,14 +53,14 @@ public final class GXExtensionContainerItemBind implements GXRegisterCenter.GXIE
             }
         }
         GaiaX.Params.Builder mode = data.mode(childLoadMode$GaiaX_Android);
-        Float b2 = c3343f.b();
+        Float b2 = fVar.b();
         GaiaX.Params.Builder width = mode.width(b2 == null ? ScreenUtils.INSTANCE.getScreenWidthPx() : b2.floatValue());
-        Float a = c3343f.a();
+        Float a = fVar.a();
         if (a != null) {
             width.height(a.floatValue());
         }
         GaiaX.Params build = width.build();
-        build.setGxExtendParams(c3341d);
+        build.setGxExtendParams(dVar);
         build.setIndexPosition$GaiaX_Android(intValue);
         if (params != null && (eventDelegate = params.getEventDelegate()) != null) {
             build.setEventDelegate(new GaiaX.IEventDelegate() { // from class: com.youku.gaiax.impl.register.GXExtensionContainerItemBind$bindViewHolder$1$1

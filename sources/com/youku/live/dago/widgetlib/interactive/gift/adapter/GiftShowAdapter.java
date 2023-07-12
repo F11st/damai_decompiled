@@ -53,11 +53,11 @@ public class GiftShowAdapter extends MultiItemCommonAdapter<GiftInfoBean> {
                 int i2 = giftInfoBean.girdViewType;
                 if (i2 != 0) {
                     if (i2 != 1) {
-                        return R.C7942layout.dago_pgc_ykl_send_gift_sel_item;
+                        return R.layout.dago_pgc_ykl_send_gift_sel_item;
                     }
-                    return R.C7942layout.dago_pgc_gift_star_item;
+                    return R.layout.dago_pgc_gift_star_item;
                 }
-                return R.C7942layout.dago_pgc_ykl_send_gift_sel_item;
+                return R.layout.dago_pgc_ykl_send_gift_sel_item;
             }
         });
     }
@@ -147,9 +147,9 @@ public class GiftShowAdapter extends MultiItemCommonAdapter<GiftInfoBean> {
             return;
         }
         this.mGiftInfo = giftInfoBean;
-        if (commonViewHolder.getLayoutId() == R.C7942layout.dago_pgc_ykl_send_gift_sel_item) {
+        if (commonViewHolder.getLayoutId() == R.layout.dago_pgc_ykl_send_gift_sel_item) {
             ((GiftItemView) commonViewHolder.getView(R.id.id_gift_item_view)).setData(giftInfoBean);
-        } else if (commonViewHolder.getLayoutId() == R.C7942layout.dago_pgc_gift_star_item) {
+        } else if (commonViewHolder.getLayoutId() == R.layout.dago_pgc_gift_star_item) {
             GiftStarItemView giftStarItemView = (GiftStarItemView) commonViewHolder.getView(R.id.startView);
             giftStarItemView.upDateState(giftInfoBean);
             if (this.mCurrentSelectedView == null && giftStarItemView.isRealView()) {

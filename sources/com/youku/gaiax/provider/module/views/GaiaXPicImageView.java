@@ -23,8 +23,8 @@ import io.flutter.wpkbridge.WPKFactory;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function2;
-import kotlin.text.C8604o;
 import kotlin.text.StringsKt__StringsKt;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -82,20 +82,20 @@ public final class GaiaXPicImageView extends MoImageView implements GXIImageView
     /* JADX INFO: Access modifiers changed from: private */
     public final String getGaiaxResUri(String str) {
         String z;
-        z = C8604o.z(str, GAIAX_RES_PREFIX, "", false, 4, null);
+        z = o.z(str, GAIAX_RES_PREFIX, "", false, 4, null);
         return z;
     }
 
     private final String getLocalUri(String str) {
         String z;
-        z = C8604o.z(str, "local:", "", false, 4, null);
+        z = o.z(str, "local:", "", false, 4, null);
         return z;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public final String getResUri(String str) {
         String z;
-        z = C8604o.z(str, RES_PREFIX, "", false, 4, null);
+        z = o.z(str, RES_PREFIX, "", false, 4, null);
         return z;
     }
 
@@ -299,7 +299,7 @@ public final class GaiaXPicImageView extends MoImageView implements GXIImageView
     public final boolean isLocalUri(@NotNull String str) {
         boolean F;
         b41.i(str, "uri");
-        F = C8604o.F(str, "local:", false, 2, null);
+        F = o.F(str, "local:", false, 2, null);
         return F;
     }
 
@@ -307,9 +307,9 @@ public final class GaiaXPicImageView extends MoImageView implements GXIImageView
         boolean F;
         boolean F2;
         b41.i(str, "uri");
-        F = C8604o.F(str, "http:", false, 2, null);
+        F = o.F(str, "http:", false, 2, null);
         if (!F) {
-            F2 = C8604o.F(str, "https:", false, 2, null);
+            F2 = o.F(str, "https:", false, 2, null);
             if (!F2) {
                 return false;
             }
@@ -320,7 +320,7 @@ public final class GaiaXPicImageView extends MoImageView implements GXIImageView
     public final boolean isResUri(@NotNull String str) {
         boolean F;
         b41.i(str, "uri");
-        F = C8604o.F(str, RES_PREFIX, false, 2, null);
+        F = o.F(str, RES_PREFIX, false, 2, null);
         return F;
     }
 
@@ -389,14 +389,14 @@ public final class GaiaXPicImageView extends MoImageView implements GXIImageView
                 b41.i(str, "uri");
                 GaiaXPicImageView gaiaXPicImageView = GaiaXPicImageView.this;
                 JSONObject jSONObject2 = jSONObject;
-                F = C8604o.F(str, GaiaXPicImageView.GAIAX_RES_PREFIX, false, 2, null);
+                F = o.F(str, GaiaXPicImageView.GAIAX_RES_PREFIX, false, 2, null);
                 if (F) {
                     gaiaxResUri = gaiaXPicImageView.getGaiaxResUri(str);
                     gaiaXPicImageView.dispatchRes(imageView, gaiaxResUri);
                     LogUtil.d("[GaiaX][Image]", b41.r("dispatchRes：", str));
                     return;
                 }
-                F2 = C8604o.F(str, GaiaXPicImageView.RES_PREFIX, false, 2, null);
+                F2 = o.F(str, GaiaXPicImageView.RES_PREFIX, false, 2, null);
                 if (F2) {
                     resUri = gaiaXPicImageView.getResUri(str);
                     gaiaXPicImageView.dispatchRes(imageView, resUri);
@@ -471,7 +471,7 @@ public final class GaiaXPicImageView extends MoImageView implements GXIImageView
 
     @Override // com.alibaba.gaiax.render.view.GXIViewBindData
     public void onResetData() {
-        GXIImageView.C3362a.a(this);
+        GXIImageView.a.a(this);
     }
 
     @Override // android.widget.ImageView

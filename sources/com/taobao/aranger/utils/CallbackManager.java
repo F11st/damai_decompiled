@@ -20,7 +20,7 @@ import tb.z01;
 public class CallbackManager {
     private static final String f = "CallbackManager";
     private static volatile CallbackManager g;
-    private final ConcurrentHashMap<String, C6697b> a;
+    private final ConcurrentHashMap<String, b> a;
     private final CopyOnWriteArrayList<ProcessStateListener> b;
     private final ProcessStateReceiver c = new ProcessStateReceiver();
     private final IntentFilter d;
@@ -61,12 +61,11 @@ public class CallbackManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.aranger.utils.CallbackManager$b */
     /* loaded from: classes11.dex */
-    private static class C6697b {
+    private static class b {
         private final Object a;
 
-        C6697b(boolean z, Object obj) {
+        b(boolean z, Object obj) {
             if (z) {
                 this.a = new WeakReference(obj);
             } else {
@@ -101,19 +100,19 @@ public class CallbackManager {
     }
 
     public void c(String str, Object obj, boolean z) {
-        this.a.putIfAbsent(str, new C6697b(z, obj));
+        this.a.putIfAbsent(str, new b(z, obj));
     }
 
     public Object d(String str) {
-        C6697b c6697b = this.a.get(str);
-        if (c6697b == null) {
+        b bVar = this.a.get(str);
+        if (bVar == null) {
             return null;
         }
-        Object a = c6697b.a();
-        if (a == null) {
+        Object a2 = bVar.a();
+        if (a2 == null) {
             this.a.remove(str);
         }
-        return a;
+        return a2;
     }
 
     public void f(ProcessStateListener processStateListener) {

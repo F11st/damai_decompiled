@@ -4,8 +4,8 @@ import android.text.TextUtils;
 import androidx.recyclerview.widget.RecyclerView;
 import com.alibaba.fastjson.JSONArray;
 import com.taobao.analysis.v3.FalcoSpan;
-import com.taobao.android.dinamicx.C6386m;
 import com.taobao.android.dinamicx.DXRuntimeContext;
+import com.taobao.android.dinamicx.m;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import com.taobao.android.dinamicx.widget.recycler.RecyclerAdapter;
 import com.taobao.android.dinamicx.widget.recycler.WaterfallLayout;
@@ -53,7 +53,7 @@ public abstract class DXAbsContainerBaseLayout extends DXLinearLayoutWidgetNode 
     private int samplingCount = 1;
     int scrollPosition = -1;
     protected WaterfallLayout waterfallLayout;
-    protected C6386m widgetNodeParser;
+    protected m widgetNodeParser;
 
     /* compiled from: Taobao */
     @Retention(RetentionPolicy.SOURCE)
@@ -90,7 +90,7 @@ public abstract class DXAbsContainerBaseLayout extends DXLinearLayoutWidgetNode 
 
     private void parseTemplateWidgetNode(DXTemplateWidgetNode dXTemplateWidgetNode) {
         if (this.widgetNodeParser == null) {
-            this.widgetNodeParser = new C6386m();
+            this.widgetNodeParser = new m();
         }
         this.widgetNodeParser.h(dXTemplateWidgetNode, true);
         if (TextUtils.isEmpty(dXTemplateWidgetNode.getSlotId())) {
@@ -171,7 +171,7 @@ public abstract class DXAbsContainerBaseLayout extends DXLinearLayoutWidgetNode 
 
     @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.DXWidgetNode, com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
     public DXWidgetNode build(Object obj) {
-        return new C6493f();
+        return new f();
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -247,7 +247,7 @@ public abstract class DXAbsContainerBaseLayout extends DXLinearLayoutWidgetNode 
         return this.scrollPosition;
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onBeforeBindChildData() {
         if (this.originWidgetNodes == null) {
             ArrayList<DXWidgetNode> arrayList = new ArrayList<>();
@@ -273,7 +273,7 @@ public abstract class DXAbsContainerBaseLayout extends DXLinearLayoutWidgetNode 
         setDisableFlatten(true);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onClone(DXWidgetNode dXWidgetNode, boolean z) {
         if (dXWidgetNode instanceof DXAbsContainerBaseLayout) {
             super.onClone(dXWidgetNode, z);
@@ -307,7 +307,7 @@ public abstract class DXAbsContainerBaseLayout extends DXLinearLayoutWidgetNode 
         super.onMeasure(i, i2);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetIntAttribute(long j, int i) {
         if (j == DXABSCONTAINERBASELAYOUT_POSTEVENTSAMPLING) {
             if (i <= 0) {
@@ -320,7 +320,7 @@ public abstract class DXAbsContainerBaseLayout extends DXLinearLayoutWidgetNode 
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetListAttribute(long j, JSONArray jSONArray) {
         if (j == -5948810534719014123L) {
             this.dataSource = jSONArray;
@@ -331,7 +331,7 @@ public abstract class DXAbsContainerBaseLayout extends DXLinearLayoutWidgetNode 
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetUserDefinedListAttribute(long j, List<Object> list) {
         if (-5948810534719014123L == j) {
             this.dataSource = list;

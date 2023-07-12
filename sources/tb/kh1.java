@@ -20,9 +20,8 @@ public class kh1 {
     public long h;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kh1$b */
     /* loaded from: classes8.dex */
-    public static final class C9360b {
+    public static final class b {
         private final String a;
         private final String b;
         private Exception c;
@@ -37,51 +36,51 @@ public class kh1 {
             return new kh1(this);
         }
 
-        public C9360b k(long j) {
+        public b k(long j) {
             this.i = j;
             return this;
         }
 
-        public C9360b l(int i) {
+        public b l(int i) {
             this.e = i;
             return this;
         }
 
-        public C9360b m(String str) {
+        public b m(String str) {
             this.d = str;
             return this;
         }
 
-        public C9360b n(boolean z) {
+        public b n(boolean z) {
             this.h = z;
             return this;
         }
 
-        public C9360b o(String str) {
+        public b o(String str) {
             this.f = str;
             return this;
         }
 
-        private C9360b(String str, String str2, boolean z) {
+        private b(String str, String str2, boolean z) {
             this.a = str;
             this.b = str2;
             this.g = z;
         }
     }
 
-    public static C9360b a(String str, String str2, boolean z) {
-        return new C9360b(str, str2, z);
+    public static b a(String str, String str2, boolean z) {
+        return new b(str, str2, z);
     }
 
-    private kh1(C9360b c9360b) {
-        this.a = c9360b.a;
-        this.b = c9360b.b;
-        Exception unused = c9360b.c;
-        this.c = c9360b.d;
-        this.d = c9360b.e;
-        this.e = c9360b.f;
-        this.f = c9360b.g;
-        this.g = c9360b.h;
-        this.h = c9360b.i;
+    private kh1(b bVar) {
+        this.a = bVar.a;
+        this.b = bVar.b;
+        Exception unused = bVar.c;
+        this.c = bVar.d;
+        this.d = bVar.e;
+        this.e = bVar.f;
+        this.f = bVar.g;
+        this.g = bVar.h;
+        this.h = bVar.i;
     }
 }

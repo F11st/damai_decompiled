@@ -372,28 +372,28 @@ public class GridFixAutoStatLayoutHelper extends BaseLayoutHelper {
         return i;
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
-    public void checkAnchorInfo(RecyclerView.State state, VirtualLayoutManager.C3286c c3286c, LayoutManagerHelper layoutManagerHelper) {
+    @Override // com.alibaba.android.vlayout.a
+    public void checkAnchorInfo(RecyclerView.State state, VirtualLayoutManager.c cVar, LayoutManagerHelper layoutManagerHelper) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-125682324")) {
-            ipChange.ipc$dispatch("-125682324", new Object[]{this, state, c3286c, layoutManagerHelper});
+            ipChange.ipc$dispatch("-125682324", new Object[]{this, state, cVar, layoutManagerHelper});
         } else if (state.getItemCount() <= 0 || state.isPreLayout()) {
         } else {
-            int cachedSpanIndex = this.mSpanSizeLookup.getCachedSpanIndex(c3286c.a, this.mSpanCount);
-            if (!c3286c.c) {
+            int cachedSpanIndex = this.mSpanSizeLookup.getCachedSpanIndex(cVar.a, this.mSpanCount);
+            if (!cVar.c) {
                 while (cachedSpanIndex > 0) {
-                    int i = c3286c.a;
+                    int i = cVar.a;
                     if (i <= 0) {
                         break;
                     }
                     int i2 = i - 1;
-                    c3286c.a = i2;
+                    cVar.a = i2;
                     cachedSpanIndex = this.mSpanSizeLookup.getCachedSpanIndex(i2, this.mSpanCount);
                 }
             } else {
-                while (cachedSpanIndex < this.mSpanCount - 1 && c3286c.a < getRange().e().intValue()) {
-                    int i3 = c3286c.a + 1;
-                    c3286c.a = i3;
+                while (cachedSpanIndex < this.mSpanCount - 1 && cVar.a < getRange().e().intValue()) {
+                    int i3 = cVar.a + 1;
+                    cVar.a = i3;
                     cachedSpanIndex = this.mSpanSizeLookup.getCachedSpanIndex(i3, this.mSpanCount);
                 }
             }
@@ -401,7 +401,7 @@ public class GridFixAutoStatLayoutHelper extends BaseLayoutHelper {
         }
     }
 
-    @Override // com.alibaba.android.vlayout.layout.AbstractC3303d, com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.layout.d, com.alibaba.android.vlayout.a
     public int computeAlignOffset(int i, boolean z, boolean z2, LayoutManagerHelper layoutManagerHelper) {
         int i2;
         int i3;
@@ -492,7 +492,7 @@ public class GridFixAutoStatLayoutHelper extends BaseLayoutHelper {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public void layoutViews(androidx.recyclerview.widget.RecyclerView.Recycler r34, androidx.recyclerview.widget.RecyclerView.State r35, com.alibaba.android.vlayout.VirtualLayoutManager.C3287d r36, tb.m81 r37, com.alibaba.android.vlayout.LayoutManagerHelper r38) {
+    public void layoutViews(androidx.recyclerview.widget.RecyclerView.Recycler r34, androidx.recyclerview.widget.RecyclerView.State r35, com.alibaba.android.vlayout.VirtualLayoutManager.d r36, tb.m81 r37, com.alibaba.android.vlayout.LayoutManagerHelper r38) {
         /*
             Method dump skipped, instructions count: 1818
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -511,7 +511,7 @@ public class GridFixAutoStatLayoutHelper extends BaseLayoutHelper {
         this.mSpanSizeLookup.invalidateSpanIndexCache();
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public void onItemsChanged(LayoutManagerHelper layoutManagerHelper) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "2143808261")) {
@@ -522,7 +522,7 @@ public class GridFixAutoStatLayoutHelper extends BaseLayoutHelper {
         this.mSpanSizeLookup.invalidateSpanIndexCache();
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public void onRangeChange(int i, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1173454606")) {

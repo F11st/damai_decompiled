@@ -26,28 +26,26 @@ import tb.k50;
 /* loaded from: classes11.dex */
 public class TaoMaiWebChromeClient extends WVWebChromeClient {
     @NotNull
-    public static final C7026a Companion = new C7026a(null);
+    public static final a Companion = new a(null);
     public static final int FILE_CHOOSER_REQUEST_CODE = 15;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.webview.TaoMaiWebChromeClient$a */
     /* loaded from: classes11.dex */
-    public static final class C7026a {
-        private C7026a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C7026a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.webview.TaoMaiWebChromeClient$b */
     /* loaded from: classes11.dex */
-    static final class DialogInterface$OnClickListenerC7027b implements DialogInterface.OnClickListener {
+    static final class b implements DialogInterface.OnClickListener {
         final /* synthetic */ PermissionRequest a;
 
-        DialogInterface$OnClickListenerC7027b(PermissionRequest permissionRequest) {
+        b(PermissionRequest permissionRequest) {
             this.a = permissionRequest;
         }
 
@@ -59,12 +57,11 @@ public class TaoMaiWebChromeClient extends WVWebChromeClient {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.webview.TaoMaiWebChromeClient$c */
     /* loaded from: classes11.dex */
-    static final class DialogInterface$OnClickListenerC7028c implements DialogInterface.OnClickListener {
+    static final class c implements DialogInterface.OnClickListener {
         final /* synthetic */ PermissionRequest a;
 
-        DialogInterface$OnClickListenerC7028c(PermissionRequest permissionRequest) {
+        c(PermissionRequest permissionRequest) {
             this.a = permissionRequest;
         }
 
@@ -76,12 +73,11 @@ public class TaoMaiWebChromeClient extends WVWebChromeClient {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.webview.TaoMaiWebChromeClient$d */
     /* loaded from: classes11.dex */
-    static final class DialogInterface$OnClickListenerC7029d implements DialogInterface.OnClickListener {
+    static final class d implements DialogInterface.OnClickListener {
         final /* synthetic */ PermissionRequest a;
 
-        DialogInterface$OnClickListenerC7029d(PermissionRequest permissionRequest) {
+        d(PermissionRequest permissionRequest) {
             this.a = permissionRequest;
         }
 
@@ -93,12 +89,11 @@ public class TaoMaiWebChromeClient extends WVWebChromeClient {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.webview.TaoMaiWebChromeClient$e */
     /* loaded from: classes11.dex */
-    static final class DialogInterface$OnClickListenerC7030e implements DialogInterface.OnClickListener {
+    static final class e implements DialogInterface.OnClickListener {
         final /* synthetic */ PermissionRequest a;
 
-        DialogInterface$OnClickListenerC7030e(PermissionRequest permissionRequest) {
+        e(PermissionRequest permissionRequest) {
             this.a = permissionRequest;
         }
 
@@ -153,11 +148,11 @@ public class TaoMaiWebChromeClient extends WVWebChromeClient {
         }
         for (String str : resources) {
             if (b41.d(str, com.uc.webview.export.PermissionRequest.RESOURCE_VIDEO_CAPTURE)) {
-                new AlertDialog.Builder(this.mContext).setTitle("当前页面申请使用你的摄像头").setPositiveButton("同意", new DialogInterface$OnClickListenerC7027b(permissionRequest)).setNegativeButton("拒绝", new DialogInterface$OnClickListenerC7028c(permissionRequest)).show();
+                new AlertDialog.Builder(this.mContext).setTitle("当前页面申请使用你的摄像头").setPositiveButton("同意", new b(permissionRequest)).setNegativeButton("拒绝", new c(permissionRequest)).show();
                 return;
             }
             if (b41.d(str, com.uc.webview.export.PermissionRequest.RESOURCE_AUDIO_CAPTURE)) {
-                new AlertDialog.Builder(this.mContext).setTitle("当前页面申请录音").setPositiveButton("同意", new DialogInterface$OnClickListenerC7029d(permissionRequest)).setNegativeButton("拒绝", new DialogInterface$OnClickListenerC7030e(permissionRequest)).show();
+                new AlertDialog.Builder(this.mContext).setTitle("当前页面申请录音").setPositiveButton("同意", new d(permissionRequest)).setNegativeButton("拒绝", new e(permissionRequest)).show();
             } else {
                 permissionRequest.deny();
             }

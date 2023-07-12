@@ -4,7 +4,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-import com.alibaba.emas.datalab.C3318a;
 import com.alibaba.emas.datalab.DatalabBizType;
 import com.alibaba.fastjson.JSON;
 import com.tmall.android.dai.DAIKVStoreage;
@@ -19,7 +18,7 @@ public class DaiReceiver extends BroadcastReceiver {
     @Override // android.content.BroadcastReceiver
     public void onReceive(Context context, Intent intent) {
         String str;
-        C3318a b = C3318a.b();
+        com.alibaba.emas.datalab.a b = com.alibaba.emas.datalab.a.b();
         Boolean bool = Boolean.TRUE;
         b.d = bool;
         l30.c().d();

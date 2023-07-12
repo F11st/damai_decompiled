@@ -36,7 +36,7 @@ public final class uq2 implements TypeMappingConfiguration<c71> {
     @Override // kotlin.reflect.jvm.internal.impl.load.kotlin.TypeMappingConfiguration
     @Nullable
     public String getPredefinedFullInternalNameForClass(@NotNull ClassDescriptor classDescriptor) {
-        return TypeMappingConfiguration.C8377a.a(this, classDescriptor);
+        return TypeMappingConfiguration.a.a(this, classDescriptor);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.kotlin.TypeMappingConfiguration
@@ -49,7 +49,7 @@ public final class uq2 implements TypeMappingConfiguration<c71> {
     @Override // kotlin.reflect.jvm.internal.impl.load.kotlin.TypeMappingConfiguration
     @Nullable
     public z71 preprocessType(@NotNull z71 z71Var) {
-        return TypeMappingConfiguration.C8377a.b(this, z71Var);
+        return TypeMappingConfiguration.a.b(this, z71Var);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.kotlin.TypeMappingConfiguration
@@ -60,6 +60,6 @@ public final class uq2 implements TypeMappingConfiguration<c71> {
 
     @Override // kotlin.reflect.jvm.internal.impl.load.kotlin.TypeMappingConfiguration
     public boolean releaseCoroutines() {
-        return TypeMappingConfiguration.C8377a.c(this);
+        return TypeMappingConfiguration.a.c(this);
     }
 }

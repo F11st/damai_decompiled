@@ -21,10 +21,9 @@ import cn.damai.category.category.model.CategoryModel;
 import cn.damai.category.category.request.StarListRequest;
 import cn.damai.category.category.ui.adapter.CategoryStarPagerAdapter;
 import cn.damai.category.common.ui.adapter.HorizontalTitleAdapter;
-import cn.damai.common.user.C0525a;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
-import cn.damai.commonbusiness.pageut.C0726a;
 import cn.damai.commonbusiness.pageut.PageUtExecutor;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -37,10 +36,10 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
 import java.util.List;
-import tb.C9796v;
 import tb.bh;
 import tb.cb2;
 import tb.o91;
+import tb.v;
 import tb.yf2;
 
 /* compiled from: Taobao */
@@ -113,7 +112,7 @@ public class StarBaseFragment extends DamaiBaseMvpFragment {
                             ((StarFragment) StarBaseFragment.this.getFollowFragment()).startTimer();
                         }
                     }
-                    C0726a f = C0726a.f(StarBaseFragment.this.mActivity);
+                    cn.damai.commonbusiness.pageut.a f = cn.damai.commonbusiness.pageut.a.f(StarBaseFragment.this.mActivity);
                     if (f == null || f.g() == null) {
                         return;
                     }
@@ -124,18 +123,17 @@ public class StarBaseFragment extends DamaiBaseMvpFragment {
             };
         }
 
-        /* synthetic */ OnPageChangeListener(StarBaseFragment starBaseFragment, View$OnClickListenerC0342a view$OnClickListenerC0342a) {
+        /* synthetic */ OnPageChangeListener(StarBaseFragment starBaseFragment, a aVar) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.StarBaseFragment$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0342a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0342a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -157,19 +155,18 @@ public class StarBaseFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.StarBaseFragment$b */
     /* loaded from: classes.dex */
-    public class C0343b implements PageUtExecutor.UTKeyBuilderProvider {
+    public class b implements PageUtExecutor.UTKeyBuilderProvider {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0343b(StarBaseFragment starBaseFragment) {
+        b(StarBaseFragment starBaseFragment) {
         }
 
         @Override // cn.damai.commonbusiness.pageut.PageUtExecutor.UTKeyBuilderProvider
-        public C0525a.C0527b get(int i) {
+        public a.b get(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1004334211")) {
-                return (C0525a.C0527b) ipChange.ipc$dispatch("-1004334211", new Object[]{this, Integer.valueOf(i)});
+                return (a.b) ipChange.ipc$dispatch("-1004334211", new Object[]{this, Integer.valueOf(i)});
             }
             if (i == 0) {
                 return bh.m().p(yf2.PAGE_STAR_REC);
@@ -177,7 +174,7 @@ public class StarBaseFragment extends DamaiBaseMvpFragment {
             if (i == 1) {
                 return bh.m().p(yf2.PAGE_STAR_FOLLOW);
             }
-            return new C0525a.C0527b().i("ace_artist");
+            return new a.b().i("ace_artist");
         }
     }
 
@@ -240,7 +237,7 @@ public class StarBaseFragment extends DamaiBaseMvpFragment {
         view.getLocationOnScreen(iArr);
         int width = view.getWidth();
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        Display.getMetrics(((WindowManager) this.mActivity.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+        Display.getMetrics(((WindowManager) this.mActivity.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
         this.mStarHrv.smoothScrollBy((iArr[0] - (com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(displayMetrics) / 2)) + (width / 2), 0);
     }
 
@@ -304,10 +301,10 @@ public class StarBaseFragment extends DamaiBaseMvpFragment {
         CategoryStarPagerAdapter categoryStarPagerAdapter = new CategoryStarPagerAdapter(getChildFragmentManager(), starListBean);
         this.mPagerAdapter = categoryStarPagerAdapter;
         this.mViewPager.setAdapter(categoryStarPagerAdapter);
-        ViewPager.OnPageChangeListener a = new OnPageChangeListener(this, null).a();
-        this.listener = a;
-        this.mViewPager.addOnPageChangeListener(a);
-        PageUtExecutor pageUtExecutor = new PageUtExecutor(this.mActivity, new C0343b(this));
+        ViewPager.OnPageChangeListener a2 = new OnPageChangeListener(this, null).a();
+        this.listener = a2;
+        this.mViewPager.addOnPageChangeListener(a2);
+        PageUtExecutor pageUtExecutor = new PageUtExecutor(this.mActivity, new b(this));
         this.mViewPager.addOnPageChangeListener(pageUtExecutor);
         this.mViewPager.setCurrentItem(0);
         pageUtExecutor.a();
@@ -350,7 +347,7 @@ public class StarBaseFragment extends DamaiBaseMvpFragment {
         if (this.mStarHrv.getItemDecorationCount() == 0) {
             this.mStarHrv.addItemDecoration(new SpaceItemDecoration(ScreenUtil.dip2px(this.mActivity, 7.5f)));
         }
-        HorizontalTitleAdapter horizontalTitleAdapter = new HorizontalTitleAdapter(this.mActivity, new View$OnClickListenerC0342a());
+        HorizontalTitleAdapter horizontalTitleAdapter = new HorizontalTitleAdapter(this.mActivity, new a());
         this.mAdapter = horizontalTitleAdapter;
         this.mStarHrv.setAdapter(horizontalTitleAdapter);
         this.mViewPager = (ViewPager) this.rootView.findViewById(R$id.star_pager);

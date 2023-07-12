@@ -35,7 +35,7 @@ public class MovingPointOverlay {
     private int index = 0;
     private boolean useDefaultDescriptor = false;
     AtomicBoolean exitFlag = new AtomicBoolean(false);
-    private EnumC4653a STATUS = EnumC4653a.ACTION_UNKNOWN;
+    private a STATUS = a.ACTION_UNKNOWN;
     private long mAnimationBeginTime = System.currentTimeMillis();
 
     /* compiled from: Taobao */
@@ -46,9 +46,8 @@ public class MovingPointOverlay {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.maps.utils.overlay.MovingPointOverlay$a */
     /* loaded from: classes10.dex */
-    public enum EnumC4653a {
+    public enum a {
         ACTION_UNKNOWN,
         ACTION_START,
         ACTION_RUNNING,
@@ -57,10 +56,9 @@ public class MovingPointOverlay {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.maps.utils.overlay.MovingPointOverlay$b */
     /* loaded from: classes10.dex */
-    private class ThreadFactoryC4654b implements ThreadFactory {
-        private ThreadFactoryC4654b() {
+    private class b implements ThreadFactory {
+        private b() {
         }
 
         @Override // java.util.concurrent.ThreadFactory
@@ -70,31 +68,30 @@ public class MovingPointOverlay {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.maps.utils.overlay.MovingPointOverlay$c */
     /* loaded from: classes10.dex */
-    private class RunnableC4655c implements Runnable {
-        private RunnableC4655c() {
+    private class c implements Runnable {
+        private c() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
             try {
                 MovingPointOverlay.this.mAnimationBeginTime = System.currentTimeMillis();
-                MovingPointOverlay.this.STATUS = EnumC4653a.ACTION_START;
+                MovingPointOverlay.this.STATUS = a.ACTION_START;
                 MovingPointOverlay.this.exitFlag.set(false);
                 while (!MovingPointOverlay.this.exitFlag.get() && MovingPointOverlay.this.index <= MovingPointOverlay.this.points.size() - 1) {
                     synchronized (MovingPointOverlay.this.mLock) {
                         if (MovingPointOverlay.this.exitFlag.get()) {
                             return;
                         }
-                        if (MovingPointOverlay.this.STATUS != EnumC4653a.ACTION_PAUSE) {
+                        if (MovingPointOverlay.this.STATUS != a.ACTION_PAUSE) {
                             MovingPointOverlay.this.baseOverlay.setGeoPoint(MovingPointOverlay.this.getCurPosition(System.currentTimeMillis() - MovingPointOverlay.this.mAnimationBeginTime));
-                            MovingPointOverlay.this.STATUS = EnumC4653a.ACTION_RUNNING;
+                            MovingPointOverlay.this.STATUS = a.ACTION_RUNNING;
                         }
                     }
                     Thread.sleep(MovingPointOverlay.this.mStepDuration);
                 }
-                MovingPointOverlay.this.STATUS = EnumC4653a.ACTION_STOP;
+                MovingPointOverlay.this.STATUS = a.ACTION_STOP;
             } catch (Throwable th) {
                 th.printStackTrace();
             }
@@ -107,7 +104,7 @@ public class MovingPointOverlay {
             return;
         }
         this.mAMap = aMap;
-        this.mThreadPools = new ThreadPoolExecutor(1, 2, 5L, TimeUnit.SECONDS, new SynchronousQueue(), new ThreadFactoryC4654b());
+        this.mThreadPools = new ThreadPoolExecutor(1, 2, 5L, TimeUnit.SECONDS, new SynchronousQueue(), new b());
         this.baseOverlay = basePointOverlay;
     }
 
@@ -182,12 +179,12 @@ public class MovingPointOverlay {
 
     private void reset() {
         try {
-            EnumC4653a enumC4653a = this.STATUS;
-            if (enumC4653a == EnumC4653a.ACTION_RUNNING || enumC4653a == EnumC4653a.ACTION_PAUSE) {
+            a aVar = this.STATUS;
+            if (aVar == a.ACTION_RUNNING || aVar == a.ACTION_PAUSE) {
                 this.exitFlag.set(true);
                 this.mThreadPools.awaitTermination(this.mStepDuration + 20, TimeUnit.MILLISECONDS);
                 this.baseOverlay.setAnimation(null);
-                this.STATUS = EnumC4653a.ACTION_UNKNOWN;
+                this.STATUS = a.ACTION_UNKNOWN;
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -316,14 +313,14 @@ public class MovingPointOverlay {
     }
 
     public void startSmoothMove() {
-        EnumC4653a enumC4653a = this.STATUS;
-        if (enumC4653a == EnumC4653a.ACTION_PAUSE) {
-            this.STATUS = EnumC4653a.ACTION_RUNNING;
+        a aVar = this.STATUS;
+        if (aVar == a.ACTION_PAUSE) {
+            this.STATUS = a.ACTION_RUNNING;
             this.mAnimationBeginTime += System.currentTimeMillis() - this.pauseMillis;
-        } else if ((enumC4653a == EnumC4653a.ACTION_UNKNOWN || enumC4653a == EnumC4653a.ACTION_STOP) && this.points.size() >= 1) {
+        } else if ((aVar == a.ACTION_UNKNOWN || aVar == a.ACTION_STOP) && this.points.size() >= 1) {
             this.index = 0;
             try {
-                this.mThreadPools.execute(new RunnableC4655c());
+                this.mThreadPools.execute(new c());
             } catch (Throwable th) {
                 th.printStackTrace();
             }
@@ -331,8 +328,8 @@ public class MovingPointOverlay {
     }
 
     public void stopMove() {
-        if (this.STATUS == EnumC4653a.ACTION_RUNNING) {
-            this.STATUS = EnumC4653a.ACTION_PAUSE;
+        if (this.STATUS == a.ACTION_RUNNING) {
+            this.STATUS = a.ACTION_PAUSE;
             this.pauseMillis = System.currentTimeMillis();
         }
     }

@@ -43,7 +43,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import tb.ar0;
 import tb.b41;
@@ -206,20 +206,20 @@ public final class GXNodeTreeUpdate {
                 gXIViewBindData.onBindData(jSONObject2);
                 return;
             }
-            GXTemplateEngine.C3346h p = os0Var.p();
+            GXTemplateEngine.h p = os0Var.p();
             if ((p == null ? null : p.b()) != null) {
-                GXTemplateEngine.C3348j c3348j = new GXTemplateEngine.C3348j();
-                c3348j.m(obj instanceof CharSequence ? (CharSequence) obj : null);
-                c3348j.g((View) gXIViewBindData);
-                c3348j.e(gr0Var.d());
-                c3348j.f(os0Var.r());
-                c3348j.k(pq0Var);
-                c3348j.l(d);
-                c3348j.d(Integer.valueOf(os0Var.h()));
-                c3348j.j(qs0Var.h(jSONObject));
-                GXTemplateEngine.C3346h p2 = os0Var.p();
+                GXTemplateEngine.j jVar = new GXTemplateEngine.j();
+                jVar.m(obj instanceof CharSequence ? (CharSequence) obj : null);
+                jVar.g((View) gXIViewBindData);
+                jVar.e(gr0Var.d());
+                jVar.f(os0Var.r());
+                jVar.k(pq0Var);
+                jVar.l(d);
+                jVar.d(Integer.valueOf(os0Var.h()));
+                jVar.j(qs0Var.h(jSONObject));
+                GXTemplateEngine.h p2 = os0Var.p();
                 if (p2 != null && (b = p2.b()) != null) {
-                    charSequence = b.onTextProcess(c3348j);
+                    charSequence = b.onTextProcess(jVar);
                 }
                 if (charSequence != null) {
                     JSONObject jSONObject3 = new JSONObject();
@@ -240,7 +240,7 @@ public final class GXNodeTreeUpdate {
             JSON f = qs0Var.f(jSONObject);
             JSONArray jSONArray = f instanceof JSONArray ? (JSONArray) f : null;
             if (jSONArray == null) {
-                GXRegisterCenter.C3334b d = GXRegisterCenter.Companion.a().d();
+                GXRegisterCenter.b d = GXRegisterCenter.Companion.a().d();
                 boolean z = false;
                 if (d != null && d.f()) {
                     z = true;
@@ -309,7 +309,7 @@ public final class GXNodeTreeUpdate {
             JSON f = qs0Var.f(jSONObject);
             JSONArray jSONArray = f instanceof JSONArray ? (JSONArray) f : null;
             if (jSONArray == null) {
-                GXRegisterCenter.C3334b d = GXRegisterCenter.Companion.a().d();
+                GXRegisterCenter.b d = GXRegisterCenter.Companion.a().d();
                 boolean z = false;
                 if (d != null && d.f()) {
                     z = true;
@@ -352,23 +352,23 @@ public final class GXNodeTreeUpdate {
             CharSequence onTextProcess;
             Object obj;
             JSONObject d = qs0Var.d(jSONObject);
-            GXTemplateEngine.C3346h p = os0Var.p();
+            GXTemplateEngine.h p = os0Var.p();
             String str = null;
             if ((p == null ? null : p.b()) != null) {
-                GXTemplateEngine.C3348j c3348j = new GXTemplateEngine.C3348j();
+                GXTemplateEngine.j jVar = new GXTemplateEngine.j();
                 if (d != null && (obj = d.get("value")) != null) {
                     str = obj.toString();
                 }
-                c3348j.m(str);
-                c3348j.g((View) gXIViewBindData);
-                c3348j.e(gr0Var.d());
-                c3348j.f(os0Var.r());
-                c3348j.k(pq0Var);
-                c3348j.l(d);
-                c3348j.d(Integer.valueOf(os0Var.h()));
-                c3348j.j(qs0Var.h(jSONObject));
-                GXTemplateEngine.C3346h p2 = os0Var.p();
-                if (p2 != null && (b = p2.b()) != null && (onTextProcess = b.onTextProcess(c3348j)) != null) {
+                jVar.m(str);
+                jVar.g((View) gXIViewBindData);
+                jVar.e(gr0Var.d());
+                jVar.f(os0Var.r());
+                jVar.k(pq0Var);
+                jVar.l(d);
+                jVar.d(Integer.valueOf(os0Var.h()));
+                jVar.j(qs0Var.h(jSONObject));
+                GXTemplateEngine.h p2 = os0Var.p();
+                if (p2 != null && (b = p2.b()) != null && (onTextProcess = b.onTextProcess(jVar)) != null) {
                     JSONObject jSONObject2 = new JSONObject();
                     if (d != null) {
                         jSONObject2.putAll(d);
@@ -475,7 +475,7 @@ public final class GXNodeTreeUpdate {
                     }
                 }
                 if (q instanceof RecyclerView) {
-                    GXTemplateEngine.C3346h p = os0Var.p();
+                    GXTemplateEngine.h p = os0Var.p();
                     if ((p == null ? null : p.c()) != null) {
                         RecyclerView recyclerView = (RecyclerView) q;
                         recyclerView.clearOnScrollListeners();
@@ -484,31 +484,31 @@ public final class GXNodeTreeUpdate {
                             public void onScrollStateChanged(@NotNull RecyclerView recyclerView2, int i) {
                                 GXTemplateEngine.GXIEventListener c;
                                 b41.i(recyclerView2, "recyclerView");
-                                GXTemplateEngine.C3344g c3344g = new GXTemplateEngine.C3344g();
-                                c3344g.i(GXTemplateEngine.C3344g.TYPE_ON_SCROLL_STATE_CHANGED);
-                                c3344g.j(recyclerView2);
-                                c3344g.h(i);
-                                GXTemplateEngine.C3346h p2 = os0.this.p();
+                                GXTemplateEngine.g gVar = new GXTemplateEngine.g();
+                                gVar.i(GXTemplateEngine.g.TYPE_ON_SCROLL_STATE_CHANGED);
+                                gVar.j(recyclerView2);
+                                gVar.h(i);
+                                GXTemplateEngine.h p2 = os0.this.p();
                                 if (p2 == null || (c = p2.c()) == null) {
                                     return;
                                 }
-                                c.onScrollEvent(c3344g);
+                                c.onScrollEvent(gVar);
                             }
 
                             @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
                             public void onScrolled(@NotNull RecyclerView recyclerView2, int i, int i2) {
                                 GXTemplateEngine.GXIEventListener c;
                                 b41.i(recyclerView2, "recyclerView");
-                                GXTemplateEngine.C3344g c3344g = new GXTemplateEngine.C3344g();
-                                c3344g.i(GXTemplateEngine.C3344g.TYPE_ON_SCROLLED);
-                                c3344g.j(recyclerView2);
-                                c3344g.f(i);
-                                c3344g.g(i2);
-                                GXTemplateEngine.C3346h p2 = os0.this.p();
+                                GXTemplateEngine.g gVar = new GXTemplateEngine.g();
+                                gVar.i(GXTemplateEngine.g.TYPE_ON_SCROLLED);
+                                gVar.j(recyclerView2);
+                                gVar.f(i);
+                                gVar.g(i2);
+                                GXTemplateEngine.h p2 = os0.this.p();
                                 if (p2 == null || (c = p2.c()) == null) {
                                     return;
                                 }
-                                c.onScrollEvent(c3344g);
+                                c.onScrollEvent(gVar);
                             }
                         });
                     }
@@ -549,20 +549,20 @@ public final class GXNodeTreeUpdate {
                 if (jSONObject2 == null) {
                     return;
                 }
-                GXTemplateEngine.C3349k c3349k = new GXTemplateEngine.C3349k();
-                c3349k.i(q);
-                c3349k.h(jSONObject2);
-                c3349k.f(o.i().d());
-                c3349k.g(os0Var.r());
-                c3349k.e(-1);
+                GXTemplateEngine.k kVar = new GXTemplateEngine.k();
+                kVar.i(q);
+                kVar.h(jSONObject2);
+                kVar.f(o.i().d());
+                kVar.g(os0Var.r());
+                kVar.e(-1);
                 if (os0Var.i() == null) {
                     os0Var.I(new LinkedHashMap());
                 }
-                Map<String, GXTemplateEngine.C3349k> i = os0Var.i();
+                Map<String, GXTemplateEngine.k> i = os0Var.i();
                 if (i == null) {
                     return;
                 }
-                i.put(o.j(), c3349k);
+                i.put(o.j(), kVar);
                 return;
             }
             vq0 g = o.g();
@@ -574,28 +574,28 @@ public final class GXNodeTreeUpdate {
             if (jSONObject2 == null) {
                 return;
             }
-            GXTemplateEngine.C3349k c3349k2 = new GXTemplateEngine.C3349k();
-            c3349k2.i(q);
-            c3349k2.h(jSONObject2);
-            c3349k2.f(o.i().d());
-            c3349k2.g(os0Var.r());
-            c3349k2.e(-1);
-            GXTemplateEngine.C3346h p = os0Var.p();
+            GXTemplateEngine.k kVar2 = new GXTemplateEngine.k();
+            kVar2.i(q);
+            kVar2.h(jSONObject2);
+            kVar2.f(o.i().d());
+            kVar2.g(os0Var.r());
+            kVar2.e(-1);
+            GXTemplateEngine.h p = os0Var.p();
             if (p == null || (f = p.f()) == null) {
                 return;
             }
-            f.onTrackEvent(c3349k2);
+            f.onTrackEvent(kVar2);
         }
 
         private final void u(os0 os0Var, qr0 qr0Var, JSONObject jSONObject, JSONObject jSONObject2, String str) {
             boolean q;
             boolean q2;
             GXIAnimation gXIAnimation;
-            q = C8604o.q(f81.TAG, str, true);
+            q = o.q(f81.TAG, str, true);
             if (q) {
                 JSONObject jSONObject3 = jSONObject2.getJSONObject(zp0.KEY_LOTTIE_ANIMATOR);
                 if (jSONObject3 == null) {
-                    GXRegisterCenter.C3334b d = GXRegisterCenter.Companion.a().d();
+                    GXRegisterCenter.b d = GXRegisterCenter.Companion.a().d();
                     if (!(d != null && d.d())) {
                         return;
                     }
@@ -603,7 +603,7 @@ public final class GXNodeTreeUpdate {
                 }
                 gXIAnimation = mr0.Companion.a(jSONObject3);
             } else {
-                q2 = C8604o.q("PROP", str, true);
+                q2 = o.q("PROP", str, true);
                 if (q2) {
                     JSONObject jSONObject4 = jSONObject2.getJSONObject(zp0.KEY_PROP_ANIMATOR_SET);
                     if (jSONObject4 == null) {
@@ -682,13 +682,12 @@ public final class GXNodeTreeUpdate {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.node.GXNodeTreeUpdate$a */
     /* loaded from: classes6.dex */
-    public static final class C3360a {
+    public static final class a {
         @NotNull
-        public static final C3360a INSTANCE = new C3360a();
+        public static final a INSTANCE = new a();
 
-        private C3360a() {
+        private a() {
         }
 
         private final boolean a(qr0 qr0Var) {
@@ -725,13 +724,13 @@ public final class GXNodeTreeUpdate {
                 if (qr0Var.G()) {
                     fs0 h2 = qr0Var.o().i().h();
                     if (h2 != null) {
-                        boolean z2 = h2.j() && t == null && (a5 == null || b41.d(a5, k80.C9337a.INSTANCE) || b41.d(a5, k80.C9340d.INSTANCE));
+                        boolean z2 = h2.j() && t == null && (a5 == null || b41.d(a5, k80.a.INSTANCE) || b41.d(a5, k80.d.INSTANCE));
                         GXRegisterCenter.GXIExtensionDynamicProperty h3 = GXRegisterCenter.Companion.a().h();
                         if (h3 != null) {
-                            GXRegisterCenter.GXIExtensionDynamicProperty.C3331a c3331a = new GXRegisterCenter.GXIExtensionDynamicProperty.C3331a("scroll-compute-container-height", Boolean.valueOf(z2));
-                            c3331a.f(a4);
+                            GXRegisterCenter.GXIExtensionDynamicProperty.a aVar = new GXRegisterCenter.GXIExtensionDynamicProperty.a("scroll-compute-container-height", Boolean.valueOf(z2));
+                            aVar.f(a4);
                             wt2 wt2Var = wt2.INSTANCE;
-                            Object convert = h3.convert(c3331a);
+                            Object convert = h3.convert(aVar);
                             if (convert != null) {
                                 z2 = ((Boolean) convert).booleanValue();
                             }
@@ -750,14 +749,14 @@ public final class GXNodeTreeUpdate {
                 } else if (qr0Var.w()) {
                     er0 c2 = qr0Var.o().i().c();
                     if (c2 != null) {
-                        boolean z3 = c2.n() && t == null && (a5 == null || b41.d(a5, k80.C9337a.INSTANCE) || b41.d(a5, k80.C9340d.INSTANCE));
+                        boolean z3 = c2.n() && t == null && (a5 == null || b41.d(a5, k80.a.INSTANCE) || b41.d(a5, k80.d.INSTANCE));
                         GXRegisterCenter.GXIExtensionDynamicProperty h4 = GXRegisterCenter.Companion.a().h();
                         if (h4 != null) {
-                            GXRegisterCenter.GXIExtensionDynamicProperty.C3331a c3331a2 = new GXRegisterCenter.GXIExtensionDynamicProperty.C3331a("grid-compute-container-height", Boolean.valueOf(z3));
-                            c3331a2.g(c2);
-                            c3331a2.f(a4);
+                            GXRegisterCenter.GXIExtensionDynamicProperty.a aVar2 = new GXRegisterCenter.GXIExtensionDynamicProperty.a("grid-compute-container-height", Boolean.valueOf(z3));
+                            aVar2.g(c2);
+                            aVar2.f(a4);
                             wt2 wt2Var2 = wt2.INSTANCE;
-                            Object convert2 = h4.convert(c3331a2);
+                            Object convert2 = h4.convert(aVar2);
                             if (convert2 != null) {
                                 z3 = ((Boolean) convert2).booleanValue();
                             }
@@ -775,7 +774,7 @@ public final class GXNodeTreeUpdate {
                     }
                 } else {
                     if (qr0Var.H()) {
-                        if ((a5 == null || b41.d(a5, k80.C9337a.INSTANCE) || b41.d(a5, k80.C9340d.INSTANCE)) && (A = vr0.INSTANCE.A(os0Var, qr0Var, jSONArray)) != null && (a = A.a()) != null) {
+                        if ((a5 == null || b41.d(a5, k80.a.INSTANCE) || b41.d(a5, k80.d.INSTANCE)) && (A = vr0.INSTANCE.A(os0Var, qr0Var, jSONArray)) != null && (a = A.a()) != null) {
                             ld2<k80> V4 = a4.V();
                             if (V4 != null) {
                                 V4.c(a);
@@ -836,10 +835,10 @@ public final class GXNodeTreeUpdate {
             rs0.INSTANCE.b(a, style.getSize());
             GXRegisterCenter.GXIExtensionDynamicProperty h = GXRegisterCenter.Companion.a().h();
             if (h != null) {
-                GXRegisterCenter.GXIExtensionDynamicProperty.C3331a c3331a = new GXRegisterCenter.GXIExtensionDynamicProperty.C3331a("size", style.getSize());
-                c3331a.e(ls0Var);
+                GXRegisterCenter.GXIExtensionDynamicProperty.a aVar = new GXRegisterCenter.GXIExtensionDynamicProperty.a("size", style.getSize());
+                aVar.e(ls0Var);
                 wt2 wt2Var = wt2.INSTANCE;
-                h.convert(c3331a);
+                h.convert(aVar);
             }
             if (!(style.getFlexGrow() == 0.0f)) {
                 style.setFlexGrow(0.0f);
@@ -945,10 +944,10 @@ public final class GXNodeTreeUpdate {
                     rs0.INSTANCE.b(V, style.getSize());
                     GXRegisterCenter.GXIExtensionDynamicProperty h = GXRegisterCenter.Companion.a().h();
                     if (h != null) {
-                        GXRegisterCenter.GXIExtensionDynamicProperty.C3331a c3331a = new GXRegisterCenter.GXIExtensionDynamicProperty.C3331a("size", style.getSize());
-                        c3331a.e(b);
+                        GXRegisterCenter.GXIExtensionDynamicProperty.a aVar = new GXRegisterCenter.GXIExtensionDynamicProperty.a("size", style.getSize());
+                        aVar.e(b);
                         wt2 wt2Var = wt2.INSTANCE;
-                        h.convert(c3331a);
+                        h.convert(aVar);
                     }
                     bool = Boolean.TRUE;
                 }
@@ -957,10 +956,10 @@ public final class GXNodeTreeUpdate {
                     rs0.INSTANCE.b(I, style.getMinSize());
                     GXRegisterCenter.GXIExtensionDynamicProperty h2 = GXRegisterCenter.Companion.a().h();
                     if (h2 != null) {
-                        GXRegisterCenter.GXIExtensionDynamicProperty.C3331a c3331a2 = new GXRegisterCenter.GXIExtensionDynamicProperty.C3331a("min-size", style.getMinSize());
-                        c3331a2.e(b);
+                        GXRegisterCenter.GXIExtensionDynamicProperty.a aVar2 = new GXRegisterCenter.GXIExtensionDynamicProperty.a("min-size", style.getMinSize());
+                        aVar2.e(b);
                         wt2 wt2Var2 = wt2.INSTANCE;
-                        h2.convert(c3331a2);
+                        h2.convert(aVar2);
                     }
                     bool = Boolean.TRUE;
                 }
@@ -971,10 +970,10 @@ public final class GXNodeTreeUpdate {
                 rs0.INSTANCE.b(F, style.getMaxSize());
                 GXRegisterCenter.GXIExtensionDynamicProperty h3 = GXRegisterCenter.Companion.a().h();
                 if (h3 != null) {
-                    GXRegisterCenter.GXIExtensionDynamicProperty.C3331a c3331a3 = new GXRegisterCenter.GXIExtensionDynamicProperty.C3331a("max-size", style.getMaxSize());
-                    c3331a3.e(b);
+                    GXRegisterCenter.GXIExtensionDynamicProperty.a aVar3 = new GXRegisterCenter.GXIExtensionDynamicProperty.a("max-size", style.getMaxSize());
+                    aVar3.e(b);
                     wt2 wt2Var3 = wt2.INSTANCE;
-                    h3.convert(c3331a3);
+                    h3.convert(aVar3);
                 }
                 return Boolean.TRUE;
             }
@@ -985,7 +984,7 @@ public final class GXNodeTreeUpdate {
             qs0 m = qr0Var.o().m();
             JSON f = m == null ? null : m.f(jSONObject);
             if (f instanceof JSONArray) {
-                GXRegisterCenter.C3334b d = GXRegisterCenter.Companion.a().d();
+                GXRegisterCenter.b d = GXRegisterCenter.Companion.a().d();
                 boolean z = false;
                 if (d != null && d.a()) {
                     z = true;
@@ -1159,13 +1158,13 @@ public final class GXNodeTreeUpdate {
         b41.i(os0Var, "gxTemplateContext");
         qr0 j = os0Var.j();
         if (j != null) {
-            GXTemplateEngine.C3346h p = os0Var.p();
-            JSONObject a = p == null ? null : p.a();
-            if (a != null) {
+            GXTemplateEngine.h p = os0Var.p();
+            JSONObject a2 = p == null ? null : p.a();
+            if (a2 != null) {
                 ld2<Float> ld2Var = new ld2<>(os0Var.n().b(), os0Var.n().a());
-                C3360a c3360a = C3360a.INSTANCE;
-                c3360a.l(os0Var, j, a, ld2Var);
-                c3360a.m(os0Var, j, ld2Var);
+                a aVar = a.INSTANCE;
+                aVar.l(os0Var, j, a2, ld2Var);
+                aVar.m(os0Var, j, ld2Var);
                 return;
             }
             throw new IllegalArgumentException("Data is null");
@@ -1177,10 +1176,10 @@ public final class GXNodeTreeUpdate {
         b41.i(os0Var, "gxTemplateContext");
         qr0 j = os0Var.j();
         if (j != null) {
-            GXTemplateEngine.C3346h p = os0Var.p();
-            JSONObject a = p == null ? null : p.a();
-            if (a != null) {
-                Style.INSTANCE.C(os0Var, j, a);
+            GXTemplateEngine.h p = os0Var.p();
+            JSONObject a2 = p == null ? null : p.a();
+            if (a2 != null) {
+                Style.INSTANCE.C(os0Var, j, a2);
                 return;
             }
             throw new IllegalArgumentException("Data is null");

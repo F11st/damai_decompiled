@@ -22,10 +22,9 @@ public class PerformanceTracker {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.PerformanceTracker$a */
     /* loaded from: classes17.dex */
-    class C2820a implements Comparator<Pair<String, Float>> {
-        C2820a(PerformanceTracker performanceTracker) {
+    class a implements Comparator<Pair<String, Float>> {
+        a(PerformanceTracker performanceTracker) {
         }
 
         @Override // java.util.Comparator
@@ -41,7 +40,7 @@ public class PerformanceTracker {
     }
 
     public PerformanceTracker() {
-        new C2820a(this);
+        new a(this);
     }
 
     public void a(String str, float f) {

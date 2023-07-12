@@ -1,7 +1,7 @@
 package cn.damai.trade.newtradeorder.ui.orderdetail.contract;
 
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseModel;
+import cn.damai.common.app.base.a;
 import cn.damai.commonbusiness.base.BaseDamaiView;
 import cn.damai.commonbusiness.notice.bean.ItemContent;
 import cn.damai.trade.newtradeorder.ui.orderdetail.bean.OrderDetailBean;
@@ -22,7 +22,7 @@ public interface OrderDetailContract {
 
     /* compiled from: Taobao */
     /* loaded from: classes8.dex */
-    public static abstract class Presenter extends AbstractC0470a<View, Model> {
+    public static abstract class Presenter extends a<View, Model> {
         public abstract void cancelOrderDetail(String str);
 
         public abstract void getOrderDetailData(String str, boolean z, boolean z2);

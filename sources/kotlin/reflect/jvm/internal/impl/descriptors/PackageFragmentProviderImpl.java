@@ -57,7 +57,6 @@ public final class PackageFragmentProviderImpl implements PackageFragmentProvide
         Sequence I;
         Sequence v;
         Sequence o;
-        List B;
         b41.i(hp0Var, "fqName");
         b41.i(function1, "nameFilter");
         I = CollectionsKt___CollectionsKt.I(this.a);
@@ -82,8 +81,7 @@ public final class PackageFragmentProviderImpl implements PackageFragmentProvide
                 return Boolean.valueOf(!hp0Var2.d() && b41.d(hp0Var2.e(), hp0.this));
             }
         });
-        B = SequencesKt___SequencesKt.B(o);
-        return B;
+        return SequencesKt___SequencesKt.B(o);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentProviderOptimized

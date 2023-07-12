@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.viewpager.widget.ViewPager;
 import cn.damai.common.askpermission.OnGrantListener;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.R$id;
@@ -121,12 +120,11 @@ public class ImageBrowseActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.imagebrowse.ui.ImageBrowseActivity$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0716a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0716a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -141,12 +139,11 @@ public class ImageBrowseActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.imagebrowse.ui.ImageBrowseActivity$b */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0717b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0717b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -162,12 +159,11 @@ public class ImageBrowseActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.imagebrowse.ui.ImageBrowseActivity$c */
     /* loaded from: classes4.dex */
-    public class C0718c implements ImageBrowseAdapter.OnImageLongClickListener {
+    public class c implements ImageBrowseAdapter.OnImageLongClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0718c() {
+        c() {
         }
 
         @Override // cn.damai.commonbusiness.imagebrowse.adapter.ImageBrowseAdapter.OnImageLongClickListener
@@ -184,19 +180,18 @@ public class ImageBrowseActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.imagebrowse.ui.ImageBrowseActivity$d */
     /* loaded from: classes4.dex */
-    public class C0719d implements DMImageCreator.DMImageFailListener {
+    public class d implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0719d() {
+        d() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "973048181")) {
-                ipChange.ipc$dispatch("973048181", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("973048181", new Object[]{this, dVar});
             } else {
                 ToastUtil.a().e(ImageBrowseActivity.this, "保存失败");
             }
@@ -204,21 +199,20 @@ public class ImageBrowseActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.imagebrowse.ui.ImageBrowseActivity$e */
     /* loaded from: classes4.dex */
-    public class C0720e implements DMImageCreator.DMImageSuccListener {
+    public class e implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0720e() {
+        e() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-237908150")) {
-                ipChange.ipc$dispatch("-237908150", new Object[]{this, c0502e});
-            } else if (c0502e == null || (bitmap = c0502e.b) == null) {
+                ipChange.ipc$dispatch("-237908150", new Object[]{this, eVar});
+            } else if (eVar == null || (bitmap = eVar.b) == null) {
             } else {
                 ImageBrowseActivity.this.saveToLocal(bitmap);
             }
@@ -277,8 +271,8 @@ public class ImageBrowseActivity extends DamaiBaseActivity {
                 ImageBrowseActivity.this.updateImageIntroduce();
             }
         };
-        this.mOnImageDownloadClickListener = new View$OnClickListenerC0717b();
-        this.mOnImageLongClickListener = new C0718c();
+        this.mOnImageDownloadClickListener = new b();
+        this.mOnImageLongClickListener = new c();
     }
 
     private void initPosterView() {
@@ -306,7 +300,7 @@ public class ImageBrowseActivity extends DamaiBaseActivity {
         }
         DMIconFontTextView dMIconFontTextView = (DMIconFontTextView) findViewById(R$id.image_browse_back_tv);
         this.mBackView = dMIconFontTextView;
-        dMIconFontTextView.setOnClickListener(new View$OnClickListenerC0716a());
+        dMIconFontTextView.setOnClickListener(new a());
         this.mTitleView = (TextView) findViewById(R$id.image_browse_title_tv);
     }
 
@@ -322,7 +316,7 @@ public class ImageBrowseActivity extends DamaiBaseActivity {
         if (list == null || i >= list.size() || (picInfo = this.mPicInfoList.get(i)) == null || TextUtils.isEmpty(picInfo.getPicUrl())) {
             return;
         }
-        C0504a.b().c(picInfo.getPicUrl()).n(new C0720e()).e(new C0719d()).f();
+        cn.damai.common.image.a.b().c(picInfo.getPicUrl()).n(new e()).e(new d()).f();
     }
 
     /* JADX INFO: Access modifiers changed from: private */

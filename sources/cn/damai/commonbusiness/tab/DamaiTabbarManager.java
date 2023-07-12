@@ -11,7 +11,7 @@ import cn.damai.common.badge.DMBadgeListener;
 import cn.damai.common.badge.bean.BadgeNodeItem;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.home.bean.TabExtraBean;
 import cn.damai.commonbusiness.tab.TabbarLayout;
 import cn.damai.login.LoginManager;
@@ -48,12 +48,11 @@ public class DamaiTabbarManager implements TabbarLayout.TabBarListener {
     private DMBadgeListener g;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.tab.DamaiTabbarManager$a */
     /* loaded from: classes.dex */
-    public class C0929a implements DMBadgeListener {
+    public class a implements DMBadgeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0929a() {
+        a() {
         }
 
         @Override // cn.damai.common.badge.DMBadgeListener
@@ -118,7 +117,7 @@ public class DamaiTabbarManager implements TabbarLayout.TabBarListener {
         if (AndroidInstantRuntime.support(ipChange, "-856245027")) {
             ipChange.ipc$dispatch("-856245027", new Object[]{this});
         } else {
-            this.g = new C0929a();
+            this.g = new a();
         }
     }
 
@@ -278,24 +277,24 @@ public class DamaiTabbarManager implements TabbarLayout.TabBarListener {
         }
         try {
             if (DamaiConstants.TAB_HOME.equals(tabItem.tab)) {
-                C0529c.e().x(pl.j().t("首页", 0));
+                c.e().x(pl.j().t("首页", 0));
                 DMNav.from(this.a).toUri(NavUri.b(cs.n));
                 this.a.overridePendingTransition(0, 0);
             } else if (DamaiConstants.TAB_CATEGORY.equals(tabItem.tab)) {
-                C0529c.e().x(pl.j().t("全部", 1));
+                c.e().x(pl.j().t("全部", 1));
                 DMNav.from(this.a).setTransition(0, 0).toUri(NavUri.b(cs.p));
             } else if (DamaiConstants.TAB_FIND.equals(tabItem.tab)) {
-                C0529c.e().x(pl.j().t("发现", 2));
+                c.e().x(pl.j().t("发现", 2));
                 if (bundle != null) {
                     DMNav.from(this.a).setTransition(0, 0).withExtras(bundle).toUri(NavUri.b(cs.PAGE_DISCOVER));
                 } else {
                     DMNav.from(this.a).setTransition(0, 0).toUri(NavUri.b(cs.PAGE_DISCOVER));
                 }
             } else if (DamaiConstants.TAB_MEMBER.equals(tabItem.tab)) {
-                C0529c.e().x(pl.j().t("票夹", 3));
+                c.e().x(pl.j().t("票夹", 3));
                 DMNav.from(this.a).setTransition(0, 0).toUri(NavUri.b("member_ticketwalletlist"));
             } else if (DamaiConstants.TAB_MINE.equals(tabItem.tab)) {
-                C0529c.e().x(pl.j().t("我的", 4));
+                c.e().x(pl.j().t("我的", 4));
                 DMNav.from(this.a).setTransition(0, 0).toUri(cs.m());
             } else if (DamaiConstants.TAB_HUIYUAN.equals(tabItem.tab)) {
                 DMNav.from(this.a).setTransition(0, 0).toUri(NavUri.b(cs.q));

@@ -1,9 +1,9 @@
 package cn.damai.user.repertoite.contract;
 
 import cn.damai.comment.bean.CommentsItemBean;
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseModel;
 import cn.damai.common.app.base.BaseView;
+import cn.damai.common.app.base.a;
 import cn.damai.commonbusiness.model.UserAttentionBean;
 import cn.damai.user.repertoite.bean.RepertoireDetailDataBean;
 import cn.damai.user.repertoite.bean.comment.RepertoireDetailCommentBean;
@@ -19,7 +19,7 @@ public interface RepertoireDetailContract {
 
     /* compiled from: Taobao */
     /* loaded from: classes9.dex */
-    public static abstract class Presenter extends AbstractC0470a<View, Model> {
+    public static abstract class Presenter extends a<View, Model> {
     }
 
     /* compiled from: Taobao */

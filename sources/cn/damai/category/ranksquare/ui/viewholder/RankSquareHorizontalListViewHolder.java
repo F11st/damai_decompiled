@@ -15,7 +15,7 @@ import cn.damai.category.ranking.ui.RankListFragment;
 import cn.damai.category.ranksquare.bean.RankSquareListInfoBean;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.discover.viewholder.BaseViewHolderV2;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -47,13 +47,12 @@ public class RankSquareHorizontalListViewHolder extends BaseViewHolderV2<RankSqu
     private HeaderPicListViewHolder i;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.ranksquare.ui.viewholder.RankSquareHorizontalListViewHolder$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0433a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ RankSquareListInfoBean a;
 
-        View$OnClickListenerC0433a(RankSquareListInfoBean rankSquareListInfoBean) {
+        a(RankSquareListInfoBean rankSquareListInfoBean) {
             this.a = rankSquareListInfoBean;
         }
 
@@ -63,7 +62,7 @@ public class RankSquareHorizontalListViewHolder extends BaseViewHolderV2<RankSqu
             if (AndroidInstantRuntime.support(ipChange, "853208362")) {
                 ipChange.ipc$dispatch("853208362", new Object[]{this, view});
             } else if (!TextUtils.isEmpty(this.a.schema)) {
-                C0529c.e().x(zy1.f().s());
+                c.e().x(zy1.f().s());
                 Bundle bundle = new Bundle();
                 bundle.putString("cityId", z20.c());
                 NavProxy.from(RankSquareHorizontalListViewHolder.this.e).withExtras(bundle).toUri(this.a.schema);
@@ -76,14 +75,13 @@ public class RankSquareHorizontalListViewHolder extends BaseViewHolderV2<RankSqu
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.ranksquare.ui.viewholder.RankSquareHorizontalListViewHolder$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0434b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ RankSquareListInfoBean a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC0434b(RankSquareListInfoBean rankSquareListInfoBean, int i) {
+        b(RankSquareListInfoBean rankSquareListInfoBean, int i) {
             this.a = rankSquareListInfoBean;
             this.b = i;
         }
@@ -97,9 +95,9 @@ public class RankSquareHorizontalListViewHolder extends BaseViewHolderV2<RankSqu
                 Bundle bundle = new Bundle();
                 bundle.putString("themeId", this.a.itemList.get(this.b).id);
                 DMNav.from(RankSquareHorizontalListViewHolder.this.e).withExtras(bundle).toUri(NavUri.b(cs.DISCOVER_THEME));
-                C0529c.e().x(zy1.f().r(this.a.itemList.get(this.b).id, this.b));
+                c.e().x(zy1.f().r(this.a.itemList.get(this.b).id, this.b));
             } else if (Integer.parseInt(this.a.type) == 5) {
-                C0529c.e().x(zy1.f().p(this.a.itemList.get(this.b).id, this.b));
+                c.e().x(zy1.f().p(this.a.itemList.get(this.b).id, this.b));
                 Bundle bundle2 = new Bundle();
                 bundle2.putString(RepertoireDetailFragment.REPERTOIREID, this.a.itemList.get(this.b).id);
                 DMNav.from(RankSquareHorizontalListViewHolder.this.e).withExtras(bundle2).toUri(NavUri.b(u12.REPERTOITE));
@@ -132,7 +130,7 @@ public class RankSquareHorizontalListViewHolder extends BaseViewHolderV2<RankSqu
             }
             this.c.setText(rankSquareListInfoBean.name);
             this.d.setText(rankSquareListInfoBean.description);
-            this.h.setOnClickListener(new View$OnClickListenerC0433a(rankSquareListInfoBean));
+            this.h.setOnClickListener(new a(rankSquareListInfoBean));
             for (int i2 = 0; i2 < rankSquareListInfoBean.itemList.size(); i2++) {
                 View inflate = LayoutInflater.from(this.e).inflate(R$layout.rank_square_pro_list_item, (ViewGroup) null);
                 TextView textView = (TextView) inflate.findViewById(R$id.squre_tv_rank_name);
@@ -145,7 +143,7 @@ public class RankSquareHorizontalListViewHolder extends BaseViewHolderV2<RankSqu
                 } else if (i2 == 2) {
                     imageView.setImageResource(R$drawable.rank_square_num_3);
                 }
-                inflate.setOnClickListener(new View$OnClickListenerC0434b(rankSquareListInfoBean, i2));
+                inflate.setOnClickListener(new b(rankSquareListInfoBean, i2));
                 OnLinePosterView onLinePosterView = (OnLinePosterView) inflate.findViewById(R$id.squre_image_project);
                 OnLinePosterView onLinePosterView2 = (OnLinePosterView) inflate.findViewById(R$id.squre_image_theme);
                 LinearLayout linearLayout = (LinearLayout) inflate.findViewById(R$id.theme_price_layout);

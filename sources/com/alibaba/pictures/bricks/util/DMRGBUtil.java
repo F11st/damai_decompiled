@@ -25,7 +25,7 @@ import tb.pu1;
 public class DMRGBUtil {
     private static transient /* synthetic */ IpChange $ipChange;
     private static HashMap<String, Integer> b = new HashMap<>();
-    private static HandlerC3548a a = new HandlerC3548a();
+    private static a a = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes7.dex */
@@ -34,10 +34,9 @@ public class DMRGBUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.util.DMRGBUtil$a */
     /* loaded from: classes7.dex */
-    public static class HandlerC3548a extends Handler {
-        public HandlerC3548a() {
+    public static class a extends Handler {
+        public a() {
             super(Looper.getMainLooper());
         }
     }

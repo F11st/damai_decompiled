@@ -35,12 +35,11 @@ public class DatePickerImpl {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.appfram.pickers.DatePickerImpl$a */
     /* loaded from: classes11.dex */
-    static class C6951a implements DatePickerDialog.OnDateSetListener {
+    static class a implements DatePickerDialog.OnDateSetListener {
         final /* synthetic */ OnPickListener a;
 
-        C6951a(OnPickListener onPickListener) {
+        a(OnPickListener onPickListener) {
             this.a = onPickListener;
         }
 
@@ -64,12 +63,11 @@ public class DatePickerImpl {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.appfram.pickers.DatePickerImpl$b */
     /* loaded from: classes11.dex */
-    static class DialogInterface$OnCancelListenerC6952b implements DialogInterface.OnCancelListener {
+    static class b implements DialogInterface.OnCancelListener {
         final /* synthetic */ OnPickListener a;
 
-        DialogInterface$OnCancelListenerC6952b(OnPickListener onPickListener) {
+        b(OnPickListener onPickListener) {
             this.a = onPickListener;
         }
 
@@ -80,12 +78,11 @@ public class DatePickerImpl {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.appfram.pickers.DatePickerImpl$c */
     /* loaded from: classes11.dex */
-    static class C6953c implements TimePickerDialog.OnTimeSetListener {
+    static class c implements TimePickerDialog.OnTimeSetListener {
         final /* synthetic */ OnPickListener a;
 
-        C6953c(OnPickListener onPickListener) {
+        c(OnPickListener onPickListener) {
             this.a = onPickListener;
         }
 
@@ -108,12 +105,11 @@ public class DatePickerImpl {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.appfram.pickers.DatePickerImpl$d */
     /* loaded from: classes11.dex */
-    static class DialogInterface$OnCancelListenerC6954d implements DialogInterface.OnCancelListener {
+    static class d implements DialogInterface.OnCancelListener {
         final /* synthetic */ OnPickListener a;
 
-        DialogInterface$OnCancelListenerC6954d(OnPickListener onPickListener) {
+        d(OnPickListener onPickListener) {
             this.a = onPickListener;
         }
 
@@ -150,7 +146,7 @@ public class DatePickerImpl {
     public static void c(@NonNull Context context, String str, String str2, String str3, @NonNull OnPickListener onPickListener, @Nullable Map<String, Object> map) {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(a(str));
-        DatePickerDialog datePickerDialog = new DatePickerDialog(context, new C6951a(onPickListener), calendar.get(1), calendar.get(2), calendar.get(5));
+        DatePickerDialog datePickerDialog = new DatePickerDialog(context, new a(onPickListener), calendar.get(1), calendar.get(2), calendar.get(5));
         DatePicker datePicker = datePickerDialog.getDatePicker();
         Calendar calendar2 = Calendar.getInstance(Locale.getDefault());
         Calendar calendar3 = Calendar.getInstance(Locale.getDefault());
@@ -172,7 +168,7 @@ public class DatePickerImpl {
                 datePicker.setMaxDate(calendar3.getTimeInMillis());
             }
         }
-        datePickerDialog.setOnCancelListener(new DialogInterface$OnCancelListenerC6952b(onPickListener));
+        datePickerDialog.setOnCancelListener(new b(onPickListener));
         e(datePickerDialog, -2, String.valueOf(map != null ? map.get(WXModalUIModule.CANCEL_TITLE) : null));
         e(datePickerDialog, -1, String.valueOf(map != null ? map.get("confirmTitle") : null));
         datePickerDialog.show();
@@ -181,8 +177,8 @@ public class DatePickerImpl {
     public static void d(@NonNull Context context, String str, @NonNull OnPickListener onPickListener, @Nullable Map<String, Object> map) {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(b(str));
-        TimePickerDialog timePickerDialog = new TimePickerDialog(context, new C6953c(onPickListener), calendar.get(11), calendar.get(12), false);
-        timePickerDialog.setOnCancelListener(new DialogInterface$OnCancelListenerC6954d(onPickListener));
+        TimePickerDialog timePickerDialog = new TimePickerDialog(context, new c(onPickListener), calendar.get(11), calendar.get(12), false);
+        timePickerDialog.setOnCancelListener(new d(onPickListener));
         e(timePickerDialog, -2, String.valueOf(map != null ? map.get(WXModalUIModule.CANCEL_TITLE) : null));
         e(timePickerDialog, -1, String.valueOf(map != null ? map.get("confirmTitle") : null));
         timePickerDialog.show();

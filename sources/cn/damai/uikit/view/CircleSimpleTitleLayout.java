@@ -22,7 +22,7 @@ import cn.damai.uikit.R$drawable;
 import cn.damai.uikit.R$id;
 import cn.damai.uikit.R$layout;
 import cn.damai.uikit.iconfont.DMIconFontTextView;
-import cn.damai.uikit.image.C2497a;
+import cn.damai.uikit.image.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.uplayer.AliMediaPlayer;
@@ -196,7 +196,7 @@ public class CircleSimpleTitleLayout extends FrameLayout implements View.OnClick
             this.mImgIv.setVisibility(8);
         } else {
             this.mImgIv.setVisibility(0);
-            C2497a.a().loadinto(str, this.mImgIv);
+            a.a().loadinto(str, this.mImgIv);
         }
     }
 

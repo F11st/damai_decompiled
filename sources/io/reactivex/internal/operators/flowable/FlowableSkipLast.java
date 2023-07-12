@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import java.util.ArrayDeque;
 import org.reactivestreams.Subscriber;
@@ -65,12 +65,12 @@ public final class FlowableSkipLast<T> extends AbstractFlowableWithUpstream<T, T
         }
     }
 
-    public FlowableSkipLast(AbstractC8147b<T> abstractC8147b, int i) {
-        super(abstractC8147b);
+    public FlowableSkipLast(b<T> bVar, int i) {
+        super(bVar);
         this.skip = i;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new SkipLastSubscriber(subscriber, this.skip));
     }

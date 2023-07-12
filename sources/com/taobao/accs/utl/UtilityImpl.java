@@ -19,7 +19,7 @@ import com.alibaba.wireless.security.open.dynamicdatastore.IDynamicDataStoreComp
 import com.alibaba.wireless.security.open.securesignature.ISecureSignatureComponent;
 import com.alibaba.wireless.security.open.staticdataencrypt.IStaticDataEncryptComponent;
 import com.alimm.xadsdk.base.expose.RetryMonitorDbHelper;
-import com.alipay.sdk.m.c.C4151a;
+import com.alipay.sdk.m.c.a;
 import com.taobao.accs.ACCSManager;
 import com.taobao.accs.AccsClientConfig;
 import com.taobao.accs.asp.APreferencesManager;
@@ -413,7 +413,7 @@ public class UtilityImpl {
 
     public static String getEmuiVersion() {
         Class<?>[] clsArr = {String.class};
-        Object[] objArr = {C4151a.a};
+        Object[] objArr = {a.a};
         try {
             Class<?> cls = Class.forName("android.os.SystemProperties");
             String str = (String) cls.getDeclaredMethod(gn1.TYPE_OPEN_URL_METHOD_GET, clsArr).invoke(cls, objArr);

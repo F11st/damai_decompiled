@@ -21,10 +21,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import kotlin.Pair;
-import kotlin.collections.C8226x;
+import kotlin.collections.x;
 import kotlin.jvm.internal.Ref$ObjectRef;
-import kotlin.text.C8604o;
-import kotlinx.coroutines.C8690g;
+import kotlin.text.o;
+import kotlinx.coroutines.g;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -47,13 +47,12 @@ public final class ShareMenuHelper {
     private final Context c;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.share.common.share.ShareMenuHelper$a */
     /* loaded from: classes8.dex */
-    public static final class C3634a extends ub2 {
+    public static final class a extends ub2 {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ShareContent b;
 
-        C3634a(ShareContent shareContent) {
+        a(ShareContent shareContent) {
             this.b = shareContent;
         }
 
@@ -79,12 +78,11 @@ public final class ShareMenuHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.share.common.share.ShareMenuHelper$b */
     /* loaded from: classes8.dex */
-    public static final class C3635b implements ShareManager.IDownloadImage.IDownloadListener {
+    public static final class b implements ShareManager.IDownloadImage.IDownloadListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3635b() {
+        b() {
         }
 
         @Override // com.alibaba.pictures.share.ShareManager.IDownloadImage.IDownloadListener
@@ -131,7 +129,7 @@ public final class ShareMenuHelper {
             url = "";
         }
         pairArr[0] = hq2.a("ShareUrl", url);
-        m = C8226x.m(pairArr);
+        m = x.m(pairArr);
         yb2.b(yb2Var, "ShareMenu_Alipay", null, m, 2, null);
         xb2 xb2Var = this.a;
         if (xb2Var != null) {
@@ -153,7 +151,7 @@ public final class ShareMenuHelper {
             url = "";
         }
         pairArr[0] = hq2.a("ShareUrl", url);
-        m = C8226x.m(pairArr);
+        m = x.m(pairArr);
         yb2.b(yb2Var, "ShareMenu_Alipay_Timeline", null, m, 2, null);
         xb2 xb2Var = this.a;
         if (xb2Var != null) {
@@ -175,7 +173,7 @@ public final class ShareMenuHelper {
             url = "";
         }
         pairArr[0] = hq2.a("ShareUrl", url);
-        m = C8226x.m(pairArr);
+        m = x.m(pairArr);
         yb2.b(yb2Var, "ShareMenu_CopyLink", null, m, 2, null);
         xb2 xb2Var = this.a;
         if (xb2Var != null) {
@@ -197,7 +195,7 @@ public final class ShareMenuHelper {
             url = "";
         }
         pairArr[0] = hq2.a("ShareUrl", url);
-        m = C8226x.m(pairArr);
+        m = x.m(pairArr);
         yb2.b(yb2Var, "ShareMenu_QQ", null, m, 2, null);
         xb2 xb2Var = this.a;
         if (xb2Var != null) {
@@ -219,7 +217,7 @@ public final class ShareMenuHelper {
             url = "";
         }
         pairArr[0] = hq2.a("ShareUrl", url);
-        m = C8226x.m(pairArr);
+        m = x.m(pairArr);
         yb2.b(yb2Var, "ShareMenu_QZone", null, m, 2, null);
         xb2 xb2Var = this.a;
         if (xb2Var != null) {
@@ -284,7 +282,7 @@ public final class ShareMenuHelper {
         if (TextUtils.isEmpty(str)) {
             return;
         }
-        F = C8604o.F(str, "http", false, 2, null);
+        F = o.F(str, "http", false, 2, null);
         if (!F) {
             s(yd1.a(this.c, str));
         } else {
@@ -310,7 +308,7 @@ public final class ShareMenuHelper {
             url = "";
         }
         pairArr[0] = hq2.a("ShareUrl", url);
-        m = C8226x.m(pairArr);
+        m = x.m(pairArr);
         yb2.b(yb2Var, "ShareMenu_WeiXin", null, m, 2, null);
         xb2 xb2Var = this.a;
         if (xb2Var != null) {
@@ -332,7 +330,7 @@ public final class ShareMenuHelper {
             url = "";
         }
         pairArr[0] = hq2.a("ShareUrl", url);
-        m = C8226x.m(pairArr);
+        m = x.m(pairArr);
         yb2.b(yb2Var, "ShareMenu_WeiXinTimeLine", null, m, 2, null);
         xb2 xb2Var = this.a;
         if (xb2Var != null) {
@@ -354,7 +352,7 @@ public final class ShareMenuHelper {
             url = "";
         }
         pairArr[0] = hq2.a("ShareUrl", url);
-        m = C8226x.m(pairArr);
+        m = x.m(pairArr);
         yb2.b(yb2Var, "ShareMenu_Weibo", null, m, 2, null);
         xb2 xb2Var = this.a;
         if (xb2Var != null) {
@@ -370,7 +368,7 @@ public final class ShareMenuHelper {
         }
         ShareManager.IDownloadImage i = ShareManager.INSTANCE.b().i();
         if (i != null) {
-            i.download(str, new C3635b());
+            i.download(str, new b());
         }
     }
 
@@ -389,7 +387,7 @@ public final class ShareMenuHelper {
             url = "";
         }
         pairArr[0] = hq2.a("ShareUrl", url);
-        m = C8226x.m(pairArr);
+        m = x.m(pairArr);
         yb2.b(yb2Var, "ShareMenu_DD", null, m, 2, null);
         xb2 xb2Var = this.a;
         if (xb2Var != null) {
@@ -474,7 +472,7 @@ public final class ShareMenuHelper {
             if (num != null && num.intValue() == i9) {
                 ShareManager.IApplyPermission f = ShareManager.INSTANCE.b().f();
                 if (f != null) {
-                    ShareManager.IApplyPermission.C3628a.a(f, new C3634a(shareContent), null, 2, null);
+                    ShareManager.IApplyPermission.a.a(f, new a(shareContent), null, 2, null);
                     return;
                 }
                 return;
@@ -582,7 +580,7 @@ public final class ShareMenuHelper {
             if (fragmentActivity == null || (lifecycleScope = LifecycleOwnerKt.getLifecycleScope(fragmentActivity)) == null) {
                 return;
             }
-            C8690g.b(lifecycleScope, da0.b(), null, new ShareMenuHelper$saveCommentShareToLocal$1(this, ref$ObjectRef, bitmap, ref$ObjectRef2, null), 2, null);
+            g.b(lifecycleScope, da0.b(), null, new ShareMenuHelper$saveCommentShareToLocal$1(this, ref$ObjectRef, bitmap, ref$ObjectRef2, null), 2, null);
         }
     }
 }

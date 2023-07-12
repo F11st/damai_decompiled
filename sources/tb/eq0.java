@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSONObject;
 import java.io.File;
 import java.io.FileInputStream;
 import java.nio.charset.Charset;
-import kotlin.collections.C8207h;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -21,8 +20,8 @@ public final class eq0 {
         return (bArr[0] & 255) | ((bArr[1] & 255) << 8);
     }
 
-    private final C9107a d(File file) {
-        C9107a c9107a = new C9107a(null, null, null, null, 15, null);
+    private final a d(File file) {
+        a aVar = new a(null, null, null, null, 15, null);
         FileInputStream fileInputStream = new FileInputStream(file);
         try {
             int length = (int) file.length();
@@ -35,20 +34,20 @@ public final class eq0 {
                 byte[] bArr = new byte[4];
                 int read = fileInputStream.read(bArr, 0, 4);
                 eq0 eq0Var = INSTANCE;
-                int a = eq0Var.a(bArr);
+                int a2 = eq0Var.a(bArr);
                 int i2 = i - read;
-                byte[] bArr2 = new byte[a];
-                int read2 = fileInputStream.read(bArr2, 0, a);
+                byte[] bArr2 = new byte[a2];
+                int read2 = fileInputStream.read(bArr2, 0, a2);
                 Charset forName = Charset.forName("UTF-8");
                 b41.h(forName, "forName(\"UTF-8\")");
                 String str = new String(bArr2, forName);
                 int i3 = i2 - read2;
                 byte[] bArr3 = new byte[4];
                 int read3 = fileInputStream.read(bArr3, 0, 4);
-                int a2 = eq0Var.a(bArr3);
+                int a3 = eq0Var.a(bArr3);
                 int i4 = i3 - read3;
-                byte[] bArr4 = new byte[a2];
-                int read4 = fileInputStream.read(bArr4, 0, a2);
+                byte[] bArr4 = new byte[a3];
+                int read4 = fileInputStream.read(bArr4, 0, a3);
                 Charset forName2 = Charset.forName("UTF-8");
                 b41.h(forName2, "forName(\"UTF-8\")");
                 String str2 = new String(bArr4, forName2);
@@ -58,70 +57,70 @@ public final class eq0 {
                         if (!str.equals("index.databinding")) {
                             break;
                         } else {
-                            c9107a.f(str2);
+                            aVar.f(str2);
                             break;
                         }
                     case -808658201:
                         if (!str.equals("index.css")) {
                             break;
                         } else {
-                            c9107a.e(str2);
+                            aVar.e(str2);
                             break;
                         }
                     case 112461797:
                         if (!str.equals("index.js")) {
                             break;
                         } else {
-                            c9107a.g(str2);
+                            aVar.g(str2);
                             break;
                         }
                     case 701608068:
                         if (!str.equals("index.json")) {
                             break;
                         } else {
-                            c9107a.h(str2);
+                            aVar.h(str2);
                             break;
                         }
                 }
             }
             wt2 wt2Var = wt2.INSTANCE;
             xj.a(fileInputStream, null);
-            return c9107a;
+            return aVar;
         } finally {
         }
     }
 
-    private final C9107a e(byte[] bArr) {
+    private final a e(byte[] bArr) {
         byte[] g;
         byte[] g2;
         byte[] g3;
         byte[] g4;
         byte[] g5;
-        C9107a c9107a = new C9107a(null, null, null, null, 15, null);
+        a aVar = new a(null, null, null, null, 15, null);
         int length = bArr.length;
         int i = 100;
-        g = C8207h.g(bArr, 0, 100);
+        g = kotlin.collections.h.g(bArr, 0, 100);
         if (g.length <= 0) {
             return null;
         }
         int i2 = length - 100;
         while (i2 > 0) {
-            g2 = C8207h.g(bArr, i, i + 4);
+            g2 = kotlin.collections.h.g(bArr, i, i + 4);
             int length2 = g2.length;
             int i3 = i + length2;
             int i4 = i2 - length2;
-            g3 = C8207h.g(bArr, i3, a(g2) + i3);
+            g3 = kotlin.collections.h.g(bArr, i3, a(g2) + i3);
             int length3 = g3.length;
             Charset forName = Charset.forName("UTF-8");
             b41.h(forName, "forName(\"UTF-8\")");
             String str = new String(g3, forName);
             int i5 = i3 + length3;
             int i6 = i4 - length3;
-            g4 = C8207h.g(bArr, i5, i5 + 4);
+            g4 = kotlin.collections.h.g(bArr, i5, i5 + 4);
             int length4 = g4.length;
             int i7 = i5 + length4;
             int i8 = i6 - length4;
-            g5 = C8207h.g(bArr, i7, a(g4) + i7);
+            g5 = kotlin.collections.h.g(bArr, i7, a(g4) + i7);
             int length5 = g5.length;
             Charset forName2 = Charset.forName("UTF-8");
             b41.h(forName2, "forName(\"UTF-8\")");
@@ -133,40 +132,40 @@ public final class eq0 {
                     if (!str.equals("index.databinding")) {
                         break;
                     } else {
-                        c9107a.f(str2);
+                        aVar.f(str2);
                         break;
                     }
                 case -808658201:
                     if (!str.equals("index.css")) {
                         break;
                     } else {
-                        c9107a.e(str2);
+                        aVar.e(str2);
                         break;
                     }
                 case 112461797:
                     if (!str.equals("index.js")) {
                         break;
                     } else {
-                        c9107a.g(str2);
+                        aVar.g(str2);
                         break;
                     }
                 case 701608068:
                     if (!str.equals("index.json")) {
                         break;
                     } else {
-                        c9107a.h(str2);
+                        aVar.h(str2);
                         break;
                     }
             }
         }
-        return c9107a;
+        return aVar;
     }
 
     @NotNull
     public final JSONObject b(@NotNull File file) {
         b41.i(file, "binFile");
         JSONObject jSONObject = new JSONObject();
-        C9107a d = d(file);
+        a d = d(file);
         if (d != null) {
             jSONObject.put((JSONObject) "layer", d.d());
             jSONObject.put((JSONObject) "databinding", d.b());
@@ -180,7 +179,7 @@ public final class eq0 {
     public final JSONObject c(@NotNull byte[] bArr) {
         b41.i(bArr, "bytes");
         JSONObject jSONObject = new JSONObject();
-        C9107a e = e(bArr);
+        a e = e(bArr);
         if (e != null) {
             jSONObject.put((JSONObject) "layer", e.d());
             jSONObject.put((JSONObject) "databinding", e.b());
@@ -191,9 +190,8 @@ public final class eq0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.eq0$a */
     /* loaded from: classes6.dex */
-    public static final class C9107a {
+    public static final class a {
         @NotNull
         private String a;
         @NotNull
@@ -203,11 +201,11 @@ public final class eq0 {
         @NotNull
         private String d;
 
-        public C9107a() {
+        public a() {
             this(null, null, null, null, 15, null);
         }
 
-        public C9107a(@NotNull String str, @NotNull String str2, @NotNull String str3, @NotNull String str4) {
+        public a(@NotNull String str, @NotNull String str2, @NotNull String str3, @NotNull String str4) {
             b41.i(str, "layer");
             b41.i(str2, "databinding");
             b41.i(str3, "css");
@@ -247,9 +245,9 @@ public final class eq0 {
             if (this == obj) {
                 return true;
             }
-            if (obj instanceof C9107a) {
-                C9107a c9107a = (C9107a) obj;
-                return b41.d(this.a, c9107a.a) && b41.d(this.b, c9107a.b) && b41.d(this.c, c9107a.c) && b41.d(this.d, c9107a.d);
+            if (obj instanceof a) {
+                a aVar = (a) obj;
+                return b41.d(this.a, aVar.a) && b41.d(this.b, aVar.b) && b41.d(this.c, aVar.c) && b41.d(this.d, aVar.d);
             }
             return false;
         }
@@ -278,7 +276,7 @@ public final class eq0 {
             return "GXBinaryData(layer=" + this.a + ", databinding=" + this.b + ", css=" + this.c + ", js=" + this.d + ')';
         }
 
-        public /* synthetic */ C9107a(String str, String str2, String str3, String str4, int i, k50 k50Var) {
+        public /* synthetic */ a(String str, String str2, String str3, String str4, int i, k50 k50Var) {
             this((i & 1) != 0 ? "" : str, (i & 2) != 0 ? "" : str2, (i & 4) != 0 ? "" : str3, (i & 8) != 0 ? "" : str4);
         }
     }

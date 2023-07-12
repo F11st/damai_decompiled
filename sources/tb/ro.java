@@ -3,12 +3,10 @@ package tb;
 import java.util.concurrent.CancellationException;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.jvm.functions.Function2;
 import kotlinx.coroutines.CompletableJob;
 import kotlinx.coroutines.CoroutineScope;
 import kotlinx.coroutines.Job;
-import kotlinx.coroutines.internal.C8694a;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -44,9 +42,9 @@ public final class ro {
     @Nullable
     public static final <R> Object d(@NotNull Function2<? super CoroutineScope, ? super Continuation<? super R>, ? extends Object> function2, @NotNull Continuation<? super R> continuation) {
         Object d;
-        C8694a c8694a = new C8694a(continuation.getContext(), continuation);
-        Object e = st2.e(c8694a, c8694a, function2);
-        d = C8234b.d();
+        kotlinx.coroutines.internal.a aVar = new kotlinx.coroutines.internal.a(continuation.getContext(), continuation);
+        Object e = st2.e(aVar, aVar, function2);
+        d = kotlin.coroutines.intrinsics.b.d();
         if (e == d) {
             n40.c(continuation);
         }

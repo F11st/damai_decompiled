@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.View;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseModel;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -23,10 +22,10 @@ import tb.k50;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
-public final class NoticeDetailFragment extends DamaiBaseMvpFragment<AbstractC0470a<?, ?>, BaseModel> {
+public final class NoticeDetailFragment extends DamaiBaseMvpFragment<cn.damai.common.app.base.a<?, ?>, BaseModel> {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C0725a Companion = new C0725a(null);
+    public static final a Companion = new a(null);
     private NoticeAdapter adapter;
     private View closeBtn;
     private String itemId;
@@ -35,15 +34,14 @@ public final class NoticeDetailFragment extends DamaiBaseMvpFragment<AbstractC04
     private RecyclerView recyclerView;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.notice.NoticeDetailFragment$a */
     /* loaded from: classes14.dex */
-    public static final class C0725a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C0725a() {
+        private a() {
         }
 
-        public /* synthetic */ C0725a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

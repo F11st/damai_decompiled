@@ -26,13 +26,12 @@ public class ProjectItemPresenter extends ProjectItemContract.Presenter {
     private ProjectItemRepository mRepository = new ProjectItemRepository();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.presenter.ProjectItemPresenter$a */
     /* loaded from: classes8.dex */
-    public class C2277a extends w12<ProjectDetailDataBean> {
+    public class a extends w12<ProjectDetailDataBean> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        C2277a(int i) {
+        a(int i) {
             this.a = i;
         }
 
@@ -60,12 +59,11 @@ public class ProjectItemPresenter extends ProjectItemContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.presenter.ProjectItemPresenter$b */
     /* loaded from: classes8.dex */
-    public class C2278b extends w12<ProjectInformationBean> {
+    public class b extends w12<ProjectInformationBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2278b() {
+        b() {
         }
 
         @Override // tb.w12
@@ -91,12 +89,11 @@ public class ProjectItemPresenter extends ProjectItemContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.presenter.ProjectItemPresenter$c */
     /* loaded from: classes8.dex */
-    public class C2279c extends w12<ProjectRecommendListBean> {
+    public class c extends w12<ProjectRecommendListBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2279c() {
+        c() {
         }
 
         @Override // tb.w12
@@ -122,12 +119,11 @@ public class ProjectItemPresenter extends ProjectItemContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.presenter.ProjectItemPresenter$d */
     /* loaded from: classes8.dex */
-    public class C2280d extends w12<ProjectDetailCommentBean> {
+    public class d extends w12<ProjectDetailCommentBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2280d() {
+        d() {
         }
 
         @Override // tb.w12
@@ -153,12 +149,11 @@ public class ProjectItemPresenter extends ProjectItemContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.presenter.ProjectItemPresenter$e */
     /* loaded from: classes8.dex */
-    public class C2281e extends w12<ProjectDetailCommentBean> {
+    public class e extends w12<ProjectDetailCommentBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2281e() {
+        e() {
         }
 
         @Override // tb.w12
@@ -184,12 +179,11 @@ public class ProjectItemPresenter extends ProjectItemContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.presenter.ProjectItemPresenter$f */
     /* loaded from: classes8.dex */
-    public class C2282f extends w12<FollowDataBean> {
+    public class f extends w12<FollowDataBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2282f() {
+        f() {
         }
 
         @Override // tb.w12
@@ -220,7 +214,7 @@ public class ProjectItemPresenter extends ProjectItemContract.Presenter {
         if (AndroidInstantRuntime.support(ipChange, "1545230092")) {
             ipChange.ipc$dispatch("1545230092", new Object[]{this, Integer.valueOf(i), str});
         } else {
-            this.mRepository.retrieveProjectItemData(str, new C2277a(i));
+            this.mRepository.retrieveProjectItemData(str, new a(i));
         }
     }
 
@@ -230,7 +224,7 @@ public class ProjectItemPresenter extends ProjectItemContract.Presenter {
         if (AndroidInstantRuntime.support(ipChange, "-2030420371")) {
             ipChange.ipc$dispatch("-2030420371", new Object[]{this, Long.valueOf(j), Long.valueOf(j2), str});
         } else {
-            this.mRepository.retrieveDiscussions(j, j2, str, 1, 1, 3, new C2281e());
+            this.mRepository.retrieveDiscussions(j, j2, str, 1, 1, 3, new e());
         }
     }
 
@@ -240,7 +234,7 @@ public class ProjectItemPresenter extends ProjectItemContract.Presenter {
         if (AndroidInstantRuntime.support(ipChange, "-210733553")) {
             ipChange.ipc$dispatch("-210733553", new Object[]{this, Long.valueOf(j), Long.valueOf(j2), str, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4), Boolean.valueOf(z), str2});
         } else {
-            this.mRepository.retrieveEvaluates(j, j2, str, i, i2, i3, i4, z, str2, new C2280d());
+            this.mRepository.retrieveEvaluates(j, j2, str, i, i2, i3, i4, z, str2, new d());
         }
     }
 
@@ -250,17 +244,17 @@ public class ProjectItemPresenter extends ProjectItemContract.Presenter {
         if (AndroidInstantRuntime.support(ipChange, "1164314669")) {
             ipChange.ipc$dispatch("1164314669", new Object[]{this, str});
         } else {
-            this.mRepository.retrieveProjectNATData(str, new C2278b());
+            this.mRepository.retrieveProjectNATData(str, new b());
         }
     }
 
     @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.contract.ProjectItemContract.Presenter
-    public void getRecommendProjectList(String str, String str2, double d, double d2, int i, int i2, String str3, boolean z, int i3) {
+    public void getRecommendProjectList(String str, String str2, double d2, double d3, int i, int i2, String str3, boolean z, int i3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-273248569")) {
-            ipChange.ipc$dispatch("-273248569", new Object[]{this, str, str2, Double.valueOf(d), Double.valueOf(d2), Integer.valueOf(i), Integer.valueOf(i2), str3, Boolean.valueOf(z), Integer.valueOf(i3)});
+            ipChange.ipc$dispatch("-273248569", new Object[]{this, str, str2, Double.valueOf(d2), Double.valueOf(d3), Integer.valueOf(i), Integer.valueOf(i2), str3, Boolean.valueOf(z), Integer.valueOf(i3)});
         } else {
-            this.mRepository.retrieveRecommendProject(str, str2, d, d2, i, i2, str3, z, i3, new C2279c());
+            this.mRepository.retrieveRecommendProject(str, str2, d2, d3, i, i2, str3, z, i3, new c());
         }
     }
 
@@ -324,7 +318,7 @@ public class ProjectItemPresenter extends ProjectItemContract.Presenter {
         if (AndroidInstantRuntime.support(ipChange, "120516020")) {
             ipChange.ipc$dispatch("120516020", new Object[]{this, Integer.valueOf(i), Long.valueOf(j), Integer.valueOf(i2)});
         } else {
-            this.mRepository.updateFollowRelation(i, j, i2, new C2282f());
+            this.mRepository.updateFollowRelation(i, j, i2, new f());
         }
     }
 }

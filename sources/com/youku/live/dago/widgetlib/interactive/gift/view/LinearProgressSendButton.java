@@ -49,7 +49,7 @@ public class LinearProgressSendButton extends FrameLayout {
             ipChange.ipc$dispatch("-340818963", new Object[]{this});
             return;
         }
-        View inflate = LayoutInflater.from(this.mContext).inflate(R.C7942layout.dago_pgc_ykl_linear_send_progress_button, this);
+        View inflate = LayoutInflater.from(this.mContext).inflate(R.layout.dago_pgc_ykl_linear_send_progress_button, this);
         this.mRootView = inflate;
         this.mSendText = (TextView) inflate.findViewById(R.id.send_text);
         this.mSendTextFront = (TextView) this.mRootView.findViewById(R.id.send_text_tv);

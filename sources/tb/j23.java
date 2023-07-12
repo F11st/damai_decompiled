@@ -1,8 +1,6 @@
 package tb;
 
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
@@ -10,23 +8,22 @@ import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
-public final class j23 extends C0528b {
+public final class j23 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C9296a Companion = new C9296a(null);
+    public static final a Companion = new a(null);
     @NotNull
-    private static final j23 b = C9297b.INSTANCE.a();
+    private static final j23 b = b.INSTANCE.a();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.j23$a */
     /* loaded from: classes.dex */
-    public static final class C9296a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9296a() {
+        private a() {
         }
 
-        public /* synthetic */ C9296a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -38,16 +35,15 @@ public final class j23 extends C0528b {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.j23$b */
     /* loaded from: classes.dex */
-    public static final class C9297b {
+    public static final class b {
         private static transient /* synthetic */ IpChange $ipChange;
         @NotNull
-        public static final C9297b INSTANCE = new C9297b();
+        public static final b INSTANCE = new b();
         @NotNull
         private static final j23 a = new j23();
 
-        private C9297b() {
+        private b() {
         }
 
         @NotNull
@@ -66,19 +62,19 @@ public final class j23 extends C0528b {
         b41.i(str, "pageSource");
         b41.i(str2, "module");
         b41.i(str3, "widget");
-        C0529c.e().C(str3, str2, str, "1.0", j2 - j, null, 2201);
+        cn.damai.common.user.c.e().C(str3, str2, str, "1.0", j2 - j, null, 2201);
     }
 
     @NotNull
-    public final C0525a.C0527b h(@NotNull String str, @NotNull String str2, @NotNull String str3) {
+    public final a.b h(@NotNull String str, @NotNull String str2, @NotNull String str3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1905854701")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1905854701", new Object[]{this, str, str2, str3});
+            return (a.b) ipChange.ipc$dispatch("1905854701", new Object[]{this, str, str2, str3});
         }
         b41.i(str, "pageSource");
         b41.i(str2, "module");
         b41.i(str3, "widget");
-        C0525a.C0527b e = e(str, str2, str3, new HashMap(), Boolean.FALSE);
+        a.b e = e(str, str2, str3, new HashMap(), Boolean.FALSE);
         b41.h(e, "getDamaiUTKeyBuilder(pag…dule, widget, map, false)");
         return e;
     }

@@ -65,7 +65,7 @@ public abstract class ImmutableMultiset<E> extends ImmutableMultisetGwtSerializa
             return new EntrySetSerializedForm(ImmutableMultiset.this);
         }
 
-        /* synthetic */ EntrySet(ImmutableMultiset immutableMultiset, C4983a c4983a) {
+        /* synthetic */ EntrySet(ImmutableMultiset immutableMultiset, a aVar) {
             this();
         }
 
@@ -93,15 +93,14 @@ public abstract class ImmutableMultiset<E> extends ImmutableMultisetGwtSerializa
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableMultiset$a */
     /* loaded from: classes10.dex */
-    public class C4983a extends yt2<E> {
+    public class a extends yt2<E> {
         int a;
         @MonotonicNonNullDecl
         E b;
         final /* synthetic */ Iterator c;
 
-        C4983a(ImmutableMultiset immutableMultiset, Iterator it) {
+        a(ImmutableMultiset immutableMultiset, Iterator it) {
             this.c = it;
         }
 
@@ -123,57 +122,56 @@ public abstract class ImmutableMultiset<E> extends ImmutableMultisetGwtSerializa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableMultiset$b */
     /* loaded from: classes10.dex */
-    public static class C4984b<E> extends ImmutableCollection.AbstractC4968b<E> {
-        C5163c0<E> a;
+    public static class b<E> extends ImmutableCollection.b<E> {
+        c0<E> a;
         boolean b;
         boolean c;
 
-        public C4984b() {
+        public b() {
             this(4);
         }
 
         @NullableDecl
-        static <T> C5163c0<T> l(Iterable<T> iterable) {
+        static <T> c0<T> l(Iterable<T> iterable) {
             if (iterable instanceof RegularImmutableMultiset) {
-                return (C5163c0<E>) ((RegularImmutableMultiset) iterable).contents;
+                return (c0<E>) ((RegularImmutableMultiset) iterable).contents;
             }
             if (iterable instanceof AbstractMapBasedMultiset) {
-                return (C5163c0<E>) ((AbstractMapBasedMultiset) iterable).backingMap;
+                return (c0<E>) ((AbstractMapBasedMultiset) iterable).backingMap;
             }
             return null;
         }
 
-        @Override // com.google.common.collect.ImmutableCollection.AbstractC4968b
+        @Override // com.google.common.collect.ImmutableCollection.b
         @CanIgnoreReturnValue
         /* renamed from: f */
-        public C4984b<E> a(E e) {
+        public b<E> a(E e) {
             return j(e, 1);
         }
 
         @CanIgnoreReturnValue
-        public C4984b<E> g(E... eArr) {
+        public b<E> g(E... eArr) {
             super.b(eArr);
             return this;
         }
 
         /* JADX WARN: Multi-variable type inference failed */
         @CanIgnoreReturnValue
-        public C4984b<E> h(Iterable<? extends E> iterable) {
+        public b<E> h(Iterable<? extends E> iterable) {
             if (iterable instanceof Multiset) {
                 Multiset d = Multisets.d(iterable);
-                C5163c0 l = l(d);
+                c0 l = l(d);
                 if (l != null) {
-                    C5163c0<E> c5163c0 = this.a;
-                    c5163c0.d(Math.max(c5163c0.C(), l.C()));
+                    c0<E> c0Var = this.a;
+                    c0Var.d(Math.max(c0Var.C(), l.C()));
                     for (int e = l.e(); e >= 0; e = l.s(e)) {
                         j(l.i(e), l.k(e));
                     }
                 } else {
                     Set<Multiset.Entry<E>> entrySet = d.entrySet();
-                    C5163c0<E> c5163c02 = this.a;
-                    c5163c02.d(Math.max(c5163c02.C(), entrySet.size()));
+                    c0<E> c0Var2 = this.a;
+                    c0Var2.d(Math.max(c0Var2.C(), entrySet.size()));
                     for (Multiset.Entry<E> entry : d.entrySet()) {
                         j(entry.getElement(), entry.getCount());
                     }
@@ -185,24 +183,24 @@ public abstract class ImmutableMultiset<E> extends ImmutableMultisetGwtSerializa
         }
 
         @CanIgnoreReturnValue
-        public C4984b<E> i(Iterator<? extends E> it) {
+        public b<E> i(Iterator<? extends E> it) {
             super.d(it);
             return this;
         }
 
         @CanIgnoreReturnValue
-        public C4984b<E> j(E e, int i) {
+        public b<E> j(E e, int i) {
             if (i == 0) {
                 return this;
             }
             if (this.b) {
-                this.a = new C5163c0<>((C5163c0<? extends E>) this.a);
+                this.a = new c0<>((c0<? extends E>) this.a);
                 this.c = false;
             }
             this.b = false;
             du1.p(e);
-            C5163c0<E> c5163c0 = this.a;
-            c5163c0.u(e, i + c5163c0.f(e));
+            c0<E> c0Var = this.a;
+            c0Var.u(e, i + c0Var.f(e));
             return this;
         }
 
@@ -211,7 +209,7 @@ public abstract class ImmutableMultiset<E> extends ImmutableMultisetGwtSerializa
                 return ImmutableMultiset.of();
             }
             if (this.c) {
-                this.a = new C5163c0<>((C5163c0<? extends E>) this.a);
+                this.a = new c0<>((c0<? extends E>) this.a);
                 this.c = false;
             }
             this.b = true;
@@ -219,34 +217,34 @@ public abstract class ImmutableMultiset<E> extends ImmutableMultisetGwtSerializa
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C4984b(int i) {
+        public b(int i) {
             this.b = false;
             this.c = false;
-            this.a = C5163c0.c(i);
+            this.a = c0.c(i);
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C4984b(boolean z) {
+        public b(boolean z) {
             this.b = false;
             this.c = false;
             this.a = null;
         }
     }
 
-    public static <E> C4984b<E> builder() {
-        return new C4984b<>();
+    public static <E> b<E> builder() {
+        return new b<>();
     }
 
     private static <E> ImmutableMultiset<E> copyFromElements(E... eArr) {
-        return new C4984b().g(eArr).k();
+        return new b().g(eArr).k();
     }
 
     static <E> ImmutableMultiset<E> copyFromEntries(Collection<? extends Multiset.Entry<? extends E>> collection) {
-        C4984b c4984b = new C4984b(collection.size());
+        b bVar = new b(collection.size());
         for (Multiset.Entry<? extends E> entry : collection) {
-            c4984b.j(entry.getElement(), entry.getCount());
+            bVar.j(entry.getElement(), entry.getCount());
         }
-        return c4984b.k();
+        return bVar.k();
     }
 
     public static <E> ImmutableMultiset<E> copyOf(E[] eArr) {
@@ -342,9 +340,9 @@ public abstract class ImmutableMultiset<E> extends ImmutableMultisetGwtSerializa
                 return immutableMultiset;
             }
         }
-        C4984b c4984b = new C4984b(Multisets.h(iterable));
-        c4984b.h(iterable);
-        return c4984b.k();
+        b bVar = new b(Multisets.h(iterable));
+        bVar.h(iterable);
+        return bVar.k();
     }
 
     public static <E> ImmutableMultiset<E> of(E e) {
@@ -364,7 +362,7 @@ public abstract class ImmutableMultiset<E> extends ImmutableMultisetGwtSerializa
 
     @Override // com.google.common.collect.ImmutableCollection, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set, java.util.NavigableSet, com.google.common.collect.SortedIterable
     public yt2<E> iterator() {
-        return new C4983a(this, entrySet().iterator());
+        return new a(this, entrySet().iterator());
     }
 
     @Override // com.google.common.collect.Multiset
@@ -391,10 +389,10 @@ public abstract class ImmutableMultiset<E> extends ImmutableMultisetGwtSerializa
     }
 
     public static <E> ImmutableMultiset<E> of(E e, E e2, E e3, E e4, E e5, E e6, E... eArr) {
-        return new C4984b().a(e).a(e2).a(e3).a(e4).a(e5).a(e6).g(eArr).k();
+        return new b().a(e).a(e2).a(e3).a(e4).a(e5).a(e6).g(eArr).k();
     }
 
     public static <E> ImmutableMultiset<E> copyOf(Iterator<? extends E> it) {
-        return new C4984b().i(it).k();
+        return new b().i(it).k();
     }
 }

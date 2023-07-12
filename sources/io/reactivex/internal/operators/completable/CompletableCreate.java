@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.completable;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableEmitter;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableOnSubscribe;
+import io.reactivex.a;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Cancellable;
 import io.reactivex.internal.disposables.CancellableDisposable;
@@ -14,7 +14,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class CompletableCreate extends AbstractC8146a {
+public final class CompletableCreate extends a {
     final CompletableOnSubscribe source;
 
     /* compiled from: Taobao */
@@ -97,7 +97,7 @@ public final class CompletableCreate extends AbstractC8146a {
         this.source = completableOnSubscribe;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     protected void subscribeActual(CompletableObserver completableObserver) {
         Emitter emitter = new Emitter(completableObserver);
         completableObserver.onSubscribe(emitter);

@@ -36,12 +36,11 @@ public class ScreenView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.show.view.ScreenView$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1155a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1155a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -56,12 +55,11 @@ public class ScreenView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.show.view.ScreenView$b */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1156b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1156b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -76,12 +74,11 @@ public class ScreenView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.show.view.ScreenView$c */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1157c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1157c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -96,12 +93,11 @@ public class ScreenView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.show.view.ScreenView$d */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1158d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1158d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -129,9 +125,9 @@ public class ScreenView {
         this.c = (TextView) view.findViewById(R$id.tv_order1);
         this.d = (TextView) view.findViewById(R$id.tv_order2);
         this.e = (TextView) view.findViewById(R$id.tv_order3);
-        this.c.setOnClickListener(new View$OnClickListenerC1155a());
-        this.d.setOnClickListener(new View$OnClickListenerC1156b());
-        this.e.setOnClickListener(new View$OnClickListenerC1157c());
+        this.c.setOnClickListener(new a());
+        this.d.setOnClickListener(new b());
+        this.e.setOnClickListener(new c());
         this.c.setTextColor(this.a.getResources().getColor(R$color.color_FF2869));
         TextView textView = this.d;
         Resources resources = this.a.getResources();
@@ -142,7 +138,7 @@ public class ScreenView {
         this.g = (TextView) view.findViewById(R$id.tv_time);
         this.h = (DMIconFontTextView) view.findViewById(R$id.icon_time);
         f(false);
-        this.f.setOnClickListener(new View$OnClickListenerC1158d());
+        this.f.setOnClickListener(new d());
     }
 
     /* JADX INFO: Access modifiers changed from: private */

@@ -1,7 +1,7 @@
 package com.tencent.stat.event;
 
 import android.content.Context;
-import com.alipay.sdk.m.s.C4293a;
+import com.alipay.sdk.m.s.a;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import com.tencent.stat.StatAppMonitor;
 import com.tencent.stat.common.StatCommonHelper;
@@ -43,7 +43,7 @@ public class MonitorStatEvent extends Event {
         if (appVersion == null) {
             appVersion = StatCommonHelper.getAppVersion(this.ctx);
         }
-        StatCommonHelper.jsonPut(jSONObject, C4293a.w, appVersion);
+        StatCommonHelper.jsonPut(jSONObject, a.w, appVersion);
         if (simOperator == null) {
             simOperator = StatCommonHelper.getSimOperator(this.ctx);
         }

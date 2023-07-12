@@ -71,6 +71,6 @@ public final class hk1 implements NewKotlinTypeChecker {
     }
 
     public /* synthetic */ hk1(b81 b81Var, KotlinTypePreparator kotlinTypePreparator, int i, k50 k50Var) {
-        this(b81Var, (i & 2) != 0 ? KotlinTypePreparator.C8547a.INSTANCE : kotlinTypePreparator);
+        this(b81Var, (i & 2) != 0 ? KotlinTypePreparator.a.INSTANCE : kotlinTypePreparator);
     }
 }

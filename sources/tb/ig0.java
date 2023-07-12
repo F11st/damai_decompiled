@@ -1,7 +1,6 @@
 package tb;
 
 import java.util.Set;
-import kotlin.collections.C8203e0;
 import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
@@ -14,7 +13,7 @@ public final class ig0 {
 
     static {
         Set<hp0> g;
-        g = C8203e0.g(new hp0("kotlin.internal.NoInfer"), new hp0("kotlin.internal.Exact"));
+        g = kotlin.collections.e0.g(new hp0("kotlin.internal.NoInfer"), new hp0("kotlin.internal.Exact"));
         a = g;
     }
 

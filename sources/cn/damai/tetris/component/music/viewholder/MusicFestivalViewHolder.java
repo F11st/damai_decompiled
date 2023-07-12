@@ -10,7 +10,6 @@ import android.widget.TextView;
 import android.widget.ViewFlipper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMImageStrategyConfig;
 import cn.damai.common.nav.DMNav;
@@ -64,13 +63,12 @@ public class MusicFestivalViewHolder extends BaseViewHolder<MusicFestivalRes> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.music.viewholder.MusicFestivalViewHolder$a */
     /* loaded from: classes7.dex */
-    public class C1927a implements MusicFlipperPanel.OnHotFlipListener {
+    public class a implements MusicFlipperPanel.OnHotFlipListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
 
-        C1927a(View view) {
+        a(View view) {
             this.a = view;
         }
 
@@ -118,11 +116,11 @@ public class MusicFestivalViewHolder extends BaseViewHolder<MusicFestivalRes> {
                 for (int i = 0; i < childCount; i++) {
                     View childAt = MusicFestivalViewHolder.this.b.getChildAt(i);
                     if (childAt != null) {
-                        MusicFestivalMapView.C1487e viewHolder = MusicFestivalViewHolder.this.b.getViewHolder(childAt);
-                        if (viewHolder instanceof ai1.C8915c) {
-                            ai1.C8915c c8915c = (ai1.C8915c) viewHolder;
-                            if (doShiningChangedEdit.contains(c8915c.j)) {
-                                c8915c.a(c8915c.j, c8915c.k);
+                        MusicFestivalMapView.e viewHolder = MusicFestivalViewHolder.this.b.getViewHolder(childAt);
+                        if (viewHolder instanceof ai1.c) {
+                            ai1.c cVar = (ai1.c) viewHolder;
+                            if (doShiningChangedEdit.contains(cVar.j)) {
+                                cVar.a(cVar.j, cVar.k);
                             }
                         }
                     }
@@ -148,12 +146,11 @@ public class MusicFestivalViewHolder extends BaseViewHolder<MusicFestivalRes> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.music.viewholder.MusicFestivalViewHolder$b */
     /* loaded from: classes7.dex */
-    public class C1928b implements OnMarkListener<CityMusicBean, CityFilterBean> {
+    public class b implements OnMarkListener<CityMusicBean, CityFilterBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1928b() {
+        b() {
         }
 
         @Override // cn.damai.musicfestival.adapter.OnMarkListener
@@ -204,12 +201,11 @@ public class MusicFestivalViewHolder extends BaseViewHolder<MusicFestivalRes> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.music.viewholder.MusicFestivalViewHolder$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1929c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1929c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -224,12 +220,11 @@ public class MusicFestivalViewHolder extends BaseViewHolder<MusicFestivalRes> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.music.viewholder.MusicFestivalViewHolder$d */
     /* loaded from: classes7.dex */
-    public class C1930d implements OnItemClickListener<MusicIpBean> {
+    public class d implements OnItemClickListener<MusicIpBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1930d() {
+        d() {
         }
 
         @Override // cn.damai.commonbusiness.discover.viewholder.OnItemClickListener
@@ -265,39 +260,37 @@ public class MusicFestivalViewHolder extends BaseViewHolder<MusicFestivalRes> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.music.viewholder.MusicFestivalViewHolder$e */
     /* loaded from: classes7.dex */
-    public class C1931e implements DMImageCreator.DMImageFailListener {
+    public class e implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1931e(MusicFestivalViewHolder musicFestivalViewHolder) {
+        e(MusicFestivalViewHolder musicFestivalViewHolder) {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1879551311")) {
-                ipChange.ipc$dispatch("-1879551311", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-1879551311", new Object[]{this, dVar});
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.music.viewholder.MusicFestivalViewHolder$f */
     /* loaded from: classes7.dex */
-    public class C1932f implements DMImageCreator.DMImageSuccListener {
+    public class f implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1932f() {
+        f() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "407223174")) {
-                ipChange.ipc$dispatch("407223174", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("407223174", new Object[]{this, eVar});
             } else {
-                MusicFestivalViewHolder.this.b.setBackground(c0502e.a);
+                MusicFestivalViewHolder.this.b.setBackground(eVar.a);
             }
         }
     }
@@ -308,12 +301,12 @@ public class MusicFestivalViewHolder extends BaseViewHolder<MusicFestivalRes> {
         this.b = (MusicFestivalMapView) view.findViewById(R$id.music_festival_map_view);
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R$id.music_festival_map_tab_list);
         this.a = (TextView) view.findViewById(R$id.music_festival_map_tip);
-        this.e = new MusicFlipperPanel((ViewGroup) view.findViewById(R$id.music_festival_hot_vf_ui), (ViewFlipper) view.findViewById(R$id.music_festival_vf), (ViewFlipper) view.findViewById(R$id.music_icon_vf), new C1927a(view));
-        this.c = new ai1(mu0.a(), new C1928b());
-        this.b.setOnClickListener(new View$OnClickListenerC1929c());
+        this.e = new MusicFlipperPanel((ViewGroup) view.findViewById(R$id.music_festival_hot_vf_ui), (ViewFlipper) view.findViewById(R$id.music_festival_vf), (ViewFlipper) view.findViewById(R$id.music_icon_vf), new a(view));
+        this.c = new ai1(mu0.a(), new b());
+        this.b.setOnClickListener(new c());
         this.b.setAdapter(this.c);
-        final int a = m62.a(mu0.a(), 12.0f);
-        final int a2 = m62.a(mu0.a(), 9.0f);
+        final int a2 = m62.a(mu0.a(), 12.0f);
+        final int a3 = m62.a(mu0.a(), 9.0f);
         recyclerView.addItemDecoration(new RecyclerView.ItemDecoration() { // from class: cn.damai.tetris.component.music.viewholder.MusicFestivalViewHolder.4
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -327,8 +320,8 @@ public class MusicFestivalViewHolder extends BaseViewHolder<MusicFestivalRes> {
                 int childAdapterPosition = recyclerView2.getChildAdapterPosition(view2);
                 boolean z = childAdapterPosition == 0;
                 boolean z2 = childAdapterPosition == MusicFestivalViewHolder.this.d.getItemCount() - 1;
-                rect.left = z ? a : 0;
-                rect.right = z2 ? a : a2;
+                rect.left = z ? a2 : 0;
+                rect.right = z2 ? a2 : a3;
                 if (!z || z2) {
                     return;
                 }
@@ -336,7 +329,7 @@ public class MusicFestivalViewHolder extends BaseViewHolder<MusicFestivalRes> {
             }
         });
         recyclerView.setLayoutManager(new LinearLayoutManager(mu0.a(), 0, false));
-        MusicFestivalTabAdapter musicFestivalTabAdapter = new MusicFestivalTabAdapter(new C1930d());
+        MusicFestivalTabAdapter musicFestivalTabAdapter = new MusicFestivalTabAdapter(new d());
         this.d = musicFestivalTabAdapter;
         recyclerView.setAdapter(musicFestivalTabAdapter);
     }
@@ -391,12 +384,12 @@ public class MusicFestivalViewHolder extends BaseViewHolder<MusicFestivalRes> {
             this.c.m(cityMusicListInAllMode);
             this.e.l(musicFestivalRes.musicDispatchInfos);
             if (musicFestivalRes.bgInfo != null) {
-                DisplayMetrics b = m62.b(mu0.a());
+                DisplayMetrics b2 = m62.b(mu0.a());
                 DMImageStrategyConfig dMImageStrategyConfig = new DMImageStrategyConfig();
                 dMImageStrategyConfig.a = false;
                 dMImageStrategyConfig.g = m62.a(mu0.a(), 270.0f);
-                dMImageStrategyConfig.h = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(b);
-                C0504a.b().d(musicFestivalRes.bgInfo.mapUrl, dMImageStrategyConfig).n(new C1932f()).e(new C1931e(this)).f();
+                dMImageStrategyConfig.h = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(b2);
+                cn.damai.common.image.a.b().d(musicFestivalRes.bgInfo.mapUrl, dMImageStrategyConfig).n(new f()).e(new e(this)).f();
             }
         }
     }

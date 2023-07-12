@@ -16,7 +16,7 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.ResponseErrorPage;
 import cn.damai.trade.R$id;
@@ -90,7 +90,7 @@ public class OrderDetailPayFragment extends ro1 implements View.OnClickListener,
             OrderDetailPayFragment orderDetailPayFragment = OrderDetailPayFragment.this;
             orderDetailPayFragment.n = false;
             if (orderDetailPayFragment.j != null) {
-                C0529c.e().A(pp2.u().N(OrderDetailPayFragment.this.j.getProjectId(), OrderDetailPayFragment.this.j.getOrderId(), str2, OrderDetailPayFragment.this.j.isSeatProject()), pp2.CUSTOM_ORDER, pp2.ORDER_DETAL_PAGE);
+                c.e().A(pp2.u().N(OrderDetailPayFragment.this.j.getProjectId(), OrderDetailPayFragment.this.j.getOrderId(), str2, OrderDetailPayFragment.this.j.isSeatProject()), pp2.CUSTOM_ORDER, pp2.ORDER_DETAL_PAGE);
             }
             OrderDetailPayFragment.this.o(str, str2);
         }
@@ -107,7 +107,7 @@ public class OrderDetailPayFragment extends ro1 implements View.OnClickListener,
             orderDetailPayFragment.n = false;
             if (orderPayDTO != null) {
                 if (orderDetailPayFragment.j != null) {
-                    C0529c.e().A(pp2.u().P(OrderDetailPayFragment.this.j.getProjectId(), OrderDetailPayFragment.this.j.getOrderId(), OrderDetailPayFragment.this.j.isSeatProject()), pp2.CUSTOM_ORDER, pp2.ORDER_DETAL_PAGE);
+                    c.e().A(pp2.u().P(OrderDetailPayFragment.this.j.getProjectId(), OrderDetailPayFragment.this.j.getOrderId(), OrderDetailPayFragment.this.j.isSeatProject()), pp2.CUSTOM_ORDER, pp2.ORDER_DETAL_PAGE);
                     orderPayDTO.payTypeId = OrderDetailPayFragment.this.j.getSelectPayInfo().payTypeId;
                 }
                 no1.b(OrderDetailPayFragment.this.getActivity(), orderPayDTO);
@@ -131,7 +131,7 @@ public class OrderDetailPayFragment extends ro1 implements View.OnClickListener,
             OrderDetailPayFragment orderDetailPayFragment = OrderDetailPayFragment.this;
             orderDetailPayFragment.n = false;
             if (orderDetailPayFragment.j != null) {
-                C0529c.e().A(pp2.u().N(OrderDetailPayFragment.this.j.getProjectId(), OrderDetailPayFragment.this.j.getOrderId(), str2, OrderDetailPayFragment.this.j.isSeatProject()), pp2.CUSTOM_ORDER, pp2.ORDER_DETAL_PAGE);
+                c.e().A(pp2.u().N(OrderDetailPayFragment.this.j.getProjectId(), OrderDetailPayFragment.this.j.getOrderId(), str2, OrderDetailPayFragment.this.j.isSeatProject()), pp2.CUSTOM_ORDER, pp2.ORDER_DETAL_PAGE);
             }
             OrderDetailPayFragment.this.o(str, str2);
         }
@@ -147,7 +147,7 @@ public class OrderDetailPayFragment extends ro1 implements View.OnClickListener,
             OrderDetailPayFragment orderDetailPayFragment = OrderDetailPayFragment.this;
             orderDetailPayFragment.n = false;
             if (orderDetailPayFragment.j != null) {
-                C0529c.e().A(pp2.u().P(OrderDetailPayFragment.this.j.getProjectId(), OrderDetailPayFragment.this.j.getOrderId(), OrderDetailPayFragment.this.j.isSeatProject()), pp2.CUSTOM_ORDER, pp2.ORDER_DETAL_PAGE);
+                c.e().A(pp2.u().P(OrderDetailPayFragment.this.j.getProjectId(), OrderDetailPayFragment.this.j.getOrderId(), OrderDetailPayFragment.this.j.isSeatProject()), pp2.CUSTOM_ORDER, pp2.ORDER_DETAL_PAGE);
             }
             no1.c(OrderDetailPayFragment.this.getActivity(), orderParmasResult, OrderDetailPayFragment.this.j.getOrderId());
         }
@@ -170,7 +170,7 @@ public class OrderDetailPayFragment extends ro1 implements View.OnClickListener,
             if (this.n) {
                 return;
             }
-            C0529c.e().x(pp2.u().T(this.j.getProjectId(), this.j.getOrderId(), selectPayInfo.payName, this.j.isCoupon()));
+            c.e().x(pp2.u().T(this.j.getProjectId(), this.j.getOrderId(), selectPayInfo.payName, this.j.isCoupon()));
             r();
             this.n = true;
             if (!this.j.isHouNiaoOrder() && !this.j.isCoupon()) {
@@ -318,14 +318,14 @@ public class OrderDetailPayFragment extends ro1 implements View.OnClickListener,
             hashMap.put("item_id", this.j.getProjectId());
             hashMap.put("orderid", this.j.getOrderId());
             long currentTimeMillis = System.currentTimeMillis() - this.q;
-            C0529c.e().C("confirm_pay", "bottom", pp2.PROJECT_SCRIPTKILL_ORDRR_DETAILS_PAGE, "1.0", currentTimeMillis, hashMap, 2201);
+            c.e().C("confirm_pay", "bottom", pp2.PROJECT_SCRIPTKILL_ORDRR_DETAILS_PAGE, "1.0", currentTimeMillis, hashMap, 2201);
             List<OrderDetailPayInfo> payInfoList = this.j.getPayInfoList();
             for (int i = 0; i < payInfoList.size(); i++) {
                 HashMap hashMap2 = new HashMap();
                 hashMap2.put("orderid", this.j.getOrderId());
                 hashMap2.put("item_id", this.j.getProjectId());
                 hashMap2.put("titlelabel", payInfoList.get(i).payName);
-                C0529c e = C0529c.e();
+                c e = c.e();
                 e.C("pay_" + i, "bottom", pp2.PROJECT_SCRIPTKILL_ORDRR_DETAILS_PAGE, "1.0", currentTimeMillis, hashMap, 2201);
             }
         }

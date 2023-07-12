@@ -23,9 +23,8 @@ import org.apache.commons.net.SocketClient;
 public final class s33 implements IHttpUtil {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.s33$a */
     /* loaded from: classes10.dex */
-    static class C9673a {
+    static class a {
         private static final s33 a = new s33((byte) 0);
     }
 
@@ -88,12 +87,12 @@ public final class s33 implements IHttpUtil {
         httpURLConnection = null;
         try {
             try {
-                HttpURLConnection a = a(str, map);
+                HttpURLConnection a2 = a(str, map);
                 try {
-                    a.setRequestMethod("POST");
-                    a.setRequestProperty(IRequestConst.CONNECTION, "close");
-                    a.setRequestProperty("Content-Type", "multipart/form-data;boundary=----WebKitFormBoundaryP0Rfzlf32iRoMhmb");
-                    outputStream = a.getOutputStream();
+                    a2.setRequestMethod("POST");
+                    a2.setRequestProperty(IRequestConst.CONNECTION, "close");
+                    a2.setRequestProperty("Content-Type", "multipart/form-data;boundary=----WebKitFormBoundaryP0Rfzlf32iRoMhmb");
+                    outputStream = a2.getOutputStream();
                     try {
                         dataOutputStream = new DataOutputStream(outputStream);
                         try {
@@ -115,7 +114,7 @@ public final class s33 implements IHttpUtil {
                                         r4 = fileInputStream4;
                                     } catch (SocketTimeoutException e) {
                                         e = e;
-                                        httpURLConnection = a;
+                                        httpURLConnection = a2;
                                         fileInputStream3 = fileInputStream4;
                                         l01Var.e(-3);
                                         str2 = "post file '" + str + "' error";
@@ -125,7 +124,7 @@ public final class s33 implements IHttpUtil {
                                         return l01Var;
                                     } catch (UnknownHostException e2) {
                                         e = e2;
-                                        httpURLConnection = a;
+                                        httpURLConnection = a2;
                                         fileInputStream2 = fileInputStream4;
                                         l01Var.e(-2);
                                         str2 = "post file '" + str + "' error， maybe network is disconnect";
@@ -135,7 +134,7 @@ public final class s33 implements IHttpUtil {
                                         return l01Var;
                                     } catch (Throwable th) {
                                         e = th;
-                                        httpURLConnection = a;
+                                        httpURLConnection = a2;
                                         fileInputStream = fileInputStream4;
                                         str2 = "post file '" + str + "' error";
                                         bArr = fileInputStream;
@@ -144,7 +143,7 @@ public final class s33 implements IHttpUtil {
                                         return l01Var;
                                     }
                                 }
-                                e(a);
+                                e(a2);
                                 z43.c(outputStream);
                                 z43.c(dataOutputStream);
                                 z43.c(null);
@@ -155,8 +154,8 @@ public final class s33 implements IHttpUtil {
                             dataOutputStream.write(bArr, 0, bArr.length);
                             dataOutputStream.writeBytes(SocketClient.NETASCII_EOL);
                             dataOutputStream.writeBytes("------WebKitFormBoundaryP0Rfzlf32iRoMhmb--\r\n");
-                            l01Var = c(a);
-                            e(a);
+                            l01Var = c(a2);
+                            e(a2);
                             z43.c(outputStream);
                             z43.c(dataOutputStream);
                             z43.c(r4);
@@ -271,7 +270,7 @@ public final class s33 implements IHttpUtil {
     }
 
     public static s33 d() {
-        return C9673a.a;
+        return a.a;
     }
 
     private static void e(HttpURLConnection httpURLConnection) {

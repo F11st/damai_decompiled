@@ -33,6 +33,6 @@ public final class ChannelsKt__Channels_commonKt$associateByTo$1 extends Continu
     public final Object invokeSuspend(@NotNull Object obj) {
         this.result = obj;
         this.label |= Integer.MIN_VALUE;
-        return C8648b.g(null, null, null, this);
+        return b.g(null, null, null, this);
     }
 }

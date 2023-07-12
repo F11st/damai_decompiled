@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.b;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.fuseable.ConditionalSubscriber;
@@ -231,14 +231,14 @@ public final class FlowableWithLatestFromMany<T, R> extends AbstractFlowableWith
         }
     }
 
-    public FlowableWithLatestFromMany(@NonNull AbstractC8147b<T> abstractC8147b, @NonNull Publisher<?>[] publisherArr, Function<? super Object[], R> function) {
-        super(abstractC8147b);
+    public FlowableWithLatestFromMany(@NonNull b<T> bVar, @NonNull Publisher<?>[] publisherArr, Function<? super Object[], R> function) {
+        super(bVar);
         this.otherArray = publisherArr;
         this.otherIterable = null;
         this.combiner = function;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super R> subscriber) {
         int length;
         Publisher<?>[] publisherArr = this.otherArray;
@@ -272,8 +272,8 @@ public final class FlowableWithLatestFromMany<T, R> extends AbstractFlowableWith
         this.source.subscribe((FlowableSubscriber) withLatestFromSubscriber);
     }
 
-    public FlowableWithLatestFromMany(@NonNull AbstractC8147b<T> abstractC8147b, @NonNull Iterable<? extends Publisher<?>> iterable, @NonNull Function<? super Object[], R> function) {
-        super(abstractC8147b);
+    public FlowableWithLatestFromMany(@NonNull b<T> bVar, @NonNull Iterable<? extends Publisher<?>> iterable, @NonNull Function<? super Object[], R> function) {
+        super(bVar);
         this.otherArray = null;
         this.otherIterable = iterable;
         this.combiner = function;

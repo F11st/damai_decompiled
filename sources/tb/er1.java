@@ -10,7 +10,6 @@ import cn.damai.ticklet.bean.UserProjectBean;
 import cn.damai.ticklet.bean.UserTicketTable;
 import cn.damai.ticklet.bean.UserVenueBean;
 import cn.damai.ticklet.ui.fragment.TicketDetailExtFragment;
-import cn.damai.ticklet.utils.C2088a;
 import com.alibaba.fastjson.JSON;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -209,7 +208,7 @@ public class er1 {
                 if (performTable.getUserProjectVO() != null) {
                     String e = m61.e(performTable.getUserProjectVO());
                     if (!xh2.c(e)) {
-                        performTable.setLocalUserProjectVO(new String(Base64.encode(C2088a.b(e.getBytes(), fu1.c(), Base64.decode(C2088a.d(mu0.a()), 2)), 2)));
+                        performTable.setLocalUserProjectVO(new String(Base64.encode(cn.damai.ticklet.utils.a.b(e.getBytes(), fu1.c(), Base64.decode(cn.damai.ticklet.utils.a.d(mu0.a()), 2)), 2)));
                     }
                 }
                 if (performTable.getUserVenueVO() != null) {

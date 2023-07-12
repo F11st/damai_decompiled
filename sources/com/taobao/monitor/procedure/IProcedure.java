@@ -5,7 +5,7 @@ import java.util.Map;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public interface IProcedure {
-    public static final IProcedure DEFAULT = new C6809a();
+    public static final IProcedure DEFAULT = new a();
 
     IProcedure addBiz(String str, Map<String, Object> map);
 

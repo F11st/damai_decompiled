@@ -3,7 +3,6 @@ package com.youku.arch.probe.plugins;
 import android.content.Context;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.youku.arch.analysis.net.C7809a;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
@@ -11,7 +10,7 @@ public abstract class BasePlugin {
     public static String a = "BasePlugin";
     protected Context b;
     private boolean c;
-    private volatile C7881a d;
+    private volatile a d;
 
     /* compiled from: Taobao */
     /* renamed from: com.youku.arch.probe.plugins.BasePlugin$1  reason: invalid class name */
@@ -100,14 +99,13 @@ public abstract class BasePlugin {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.arch.probe.plugins.BasePlugin$a */
     /* loaded from: classes2.dex */
-    private static class C7881a {
+    private static class a {
         public NotiType a;
         public long b;
     }
 
-    public abstract C7809a a(C7809a c7809a);
+    public abstract com.youku.arch.analysis.net.a a(com.youku.arch.analysis.net.a aVar);
 
     public abstract void a();
 

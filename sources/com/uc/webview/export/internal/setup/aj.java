@@ -4,7 +4,6 @@ import android.content.Context;
 import android.webkit.ValueCallback;
 import com.taobao.accs.common.Constants;
 import com.uc.webview.export.internal.setup.UCSetupTask;
-import com.uc.webview.export.internal.utility.C7349p;
 import com.uc.webview.export.internal.utility.Log;
 import java.io.File;
 import java.lang.ref.WeakReference;
@@ -23,9 +22,8 @@ public class aj<RETURN_TYPE extends UCSetupTask<RETURN_TYPE, CALLBACK_TYPE>, CAL
     private File h;
 
     /* compiled from: Taobao */
-    /* renamed from: com.uc.webview.export.internal.setup.aj$a */
     /* loaded from: classes11.dex */
-    public static class C7265a {
+    public static class a {
         private static ConcurrentHashMap<String, aj> a = new ConcurrentHashMap<>();
 
         static /* synthetic */ aj a(Context context, String str) {
@@ -36,7 +34,7 @@ public class aj<RETURN_TYPE extends UCSetupTask<RETURN_TYPE, CALLBACK_TYPE>, CAL
             aj ajVar;
             String str2 = aj.d;
             Log.d(str2, "create " + str);
-            if (C7349p.a(str)) {
+            if (com.uc.webview.export.internal.utility.p.a(str)) {
                 return null;
             }
             synchronized (aj.class) {
@@ -47,7 +45,7 @@ public class aj<RETURN_TYPE extends UCSetupTask<RETURN_TYPE, CALLBACK_TYPE>, CAL
         }
 
         public static aj a(UCSetupTask uCSetupTask, Context context, String str) {
-            if (C7349p.a(str)) {
+            if (com.uc.webview.export.internal.utility.p.a(str)) {
                 return null;
             }
             synchronized (aj.class) {
@@ -64,7 +62,7 @@ public class aj<RETURN_TYPE extends UCSetupTask<RETURN_TYPE, CALLBACK_TYPE>, CAL
     public aj(UCSetupTask uCSetupTask, Context context, String str) {
         if (this.f == null) {
             a(uCSetupTask);
-            File b = C7349p.b(C7349p.a(context, Constants.KEY_FLAGS), C7349p.e(str));
+            File b = com.uc.webview.export.internal.utility.p.b(com.uc.webview.export.internal.utility.p.a(context, Constants.KEY_FLAGS), com.uc.webview.export.internal.utility.p.e(str));
             String str2 = d;
             Log.d(str2, "<init> flgDirFile.path: " + b.getAbsolutePath());
             this.f = new File(b, "b36ce8d879e33bc88f717f74617ea05a");
@@ -196,7 +194,7 @@ public class aj<RETURN_TYPE extends UCSetupTask<RETURN_TYPE, CALLBACK_TYPE>, CAL
 
     public static void a(Context context, String[] strArr) {
         for (int i = 0; i < 2; i++) {
-            C7265a.a(context, strArr[i]);
+            a.a(context, strArr[i]);
         }
     }
 

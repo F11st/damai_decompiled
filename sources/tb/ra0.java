@@ -5,7 +5,6 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.android.ultron.common.model.IDMComponent;
 import com.taobao.android.ultron.datamodel.IDMContext;
-import com.taobao.android.ultron.datamodel.imp.C6661a;
 import com.taobao.android.ultron.datamodel.imp.DMComponent;
 import com.taobao.weex.annotation.JSMethod;
 import java.util.HashMap;
@@ -39,8 +38,8 @@ public class ra0 extends ib {
         i(dMComponent, hashMap);
         l(hashMap);
         IDMContext dataContext = this.c.getDataContext();
-        if (dataContext instanceof C6661a) {
-            Map<String, DMComponent> c = ((C6661a) dataContext).c();
+        if (dataContext instanceof com.taobao.android.ultron.datamodel.imp.a) {
+            Map<String, DMComponent> c = ((com.taobao.android.ultron.datamodel.imp.a) dataContext).c();
             c.put(dMComponent.getTag() + JSMethod.NOT_SET + dMComponent.getId(), dMComponent);
         }
     }

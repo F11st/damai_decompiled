@@ -8,7 +8,7 @@ import com.google.common.collect.ImmutableSortedMultiset;
 /* loaded from: classes10.dex */
 abstract class ImmutableSortedMultisetFauxverideShim<E> extends ImmutableMultiset<E> {
     @Deprecated
-    public static <E> ImmutableSortedMultiset.C4994a<E> builder() {
+    public static <E> ImmutableSortedMultiset.a<E> builder() {
         throw new UnsupportedOperationException();
     }
 

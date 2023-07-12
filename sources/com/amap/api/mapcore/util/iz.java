@@ -38,9 +38,9 @@ public class iz extends jb {
             gn.a(byteArrayOutputStream, Build.getMODEL());
             gn.a(byteArrayOutputStream, android.os.Build.DEVICE);
             gn.a(byteArrayOutputStream, gg.y(context));
-            gn.a(byteArrayOutputStream, C4554gc.c(context));
-            gn.a(byteArrayOutputStream, C4554gc.d(context));
-            gn.a(byteArrayOutputStream, C4554gc.f(context));
+            gn.a(byteArrayOutputStream, gc.c(context));
+            gn.a(byteArrayOutputStream, gc.d(context));
+            gn.a(byteArrayOutputStream, gc.f(context));
             byteArrayOutputStream.write(new byte[]{0});
             bArr = byteArrayOutputStream.toByteArray();
             byteArrayOutputStream.close();

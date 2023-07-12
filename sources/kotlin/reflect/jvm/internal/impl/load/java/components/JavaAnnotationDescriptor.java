@@ -1,10 +1,10 @@
 package kotlin.reflect.jvm.internal.impl.load.java.components;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import java.util.Collection;
 import java.util.Map;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8226x;
+import kotlin.collections.k;
+import kotlin.collections.x;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.PropertyReference1Impl;
 import kotlin.reflect.KProperty;
@@ -41,7 +41,7 @@ public class JavaAnnotationDescriptor implements AnnotationDescriptor, PossiblyE
 
     public JavaAnnotationDescriptor(@NotNull final r81 r81Var, @Nullable JavaAnnotation javaAnnotation, @NotNull hp0 hp0Var) {
         Collection<JavaAnnotationArgument> arguments;
-        b41.i(r81Var, AbstractC5658c.a);
+        b41.i(r81Var, c.a);
         b41.i(hp0Var, "fqName");
         this.a = hp0Var;
         JavaAnnotationArgument javaAnnotationArgument = null;
@@ -67,7 +67,7 @@ public class JavaAnnotationDescriptor implements AnnotationDescriptor, PossiblyE
             }
         });
         if (javaAnnotation != null && (arguments = javaAnnotation.getArguments()) != null) {
-            javaAnnotationArgument = (JavaAnnotationArgument) C8212k.Q(arguments);
+            javaAnnotationArgument = (JavaAnnotationArgument) k.Q(arguments);
         }
         this.d = javaAnnotationArgument;
         boolean z = false;
@@ -94,7 +94,7 @@ public class JavaAnnotationDescriptor implements AnnotationDescriptor, PossiblyE
     @NotNull
     public Map<ni1, fn<?>> getAllValueArguments() {
         Map<ni1, fn<?>> i;
-        i = C8226x.i();
+        i = x.i();
         return i;
     }
 

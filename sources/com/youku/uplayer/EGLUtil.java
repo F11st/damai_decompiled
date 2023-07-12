@@ -2,7 +2,7 @@ package com.youku.uplayer;
 
 import android.opengl.GLDebugHelper;
 import android.view.SurfaceHolder;
-import com.youku.player.util.C8063c;
+import com.youku.player.util.c;
 import java.io.Writer;
 import javax.microedition.khronos.egl.EGL10;
 import javax.microedition.khronos.egl.EGLConfig;
@@ -56,7 +56,7 @@ public class EGLUtil {
                     try {
                         mEGLSurface = mEGL.eglCreateWindowSurface(mEGLDisplay, mEGLConfig, mSHolder, null);
                     } catch (Exception e) {
-                        C8063c.a(TAG, e);
+                        c.a(TAG, e);
                     }
                     EGLSurface eGLSurface = EGL10.EGL_NO_SURFACE;
                     EGLSurface eGLSurface2 = mEGLSurface;
@@ -76,7 +76,7 @@ public class EGLUtil {
                                 str2 = "0 == mSurfaceWidth || 0 == mSurfaceHeight";
                             } else {
                                 String str3 = TAG;
-                                C8063c.a(str3, "mSurfaceWidth=" + Integer.toString(mSurfaceWidth) + ",mSurfaceHeight=" + Integer.toString(mSurfaceHeight));
+                                c.a(str3, "mSurfaceWidth=" + Integer.toString(mSurfaceWidth) + ",mSurfaceHeight=" + Integer.toString(mSurfaceHeight));
                                 EGLContext eglCreateContext = mEGL.eglCreateContext(mEGLDisplay, mEGLConfig, EGL10.EGL_NO_CONTEXT, new int[]{EGL_CONTEXT_CLIENT_VERSION, 2, 12344});
                                 mEGLContext = eglCreateContext;
                                 if (EGL10.EGL_NO_CONTEXT == eglCreateContext) {
@@ -105,7 +105,7 @@ public class EGLUtil {
                 str2 = "mEGL.eglInitialize failed";
             }
         }
-        C8063c.a(str, str2);
+        c.a(str, str2);
         return false;
     }
 
@@ -136,7 +136,7 @@ public class EGLUtil {
             int[] iArr2 = new int[1];
             int[] iArr3 = new int[1];
             if (!mEGL.eglQuerySurface(mEGLDisplay, mEGLSurface, 12375, iArr2) || !mEGL.eglQuerySurface(mEGLDisplay, mEGLSurface, 12374, iArr3)) {
-                C8063c.a(TAG, "mEGL.eglQuerySurface failed");
+                c.a(TAG, "mEGL.eglQuerySurface failed");
                 return;
             }
             int i = iArr2[0];

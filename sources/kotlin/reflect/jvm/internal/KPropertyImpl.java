@@ -38,11 +38,11 @@ import tb.zv2;
 /* loaded from: classes3.dex */
 public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProperty<V> {
     @NotNull
-    public static final C8262b Companion = new C8262b(null);
+    public static final b Companion = new b(null);
     @NotNull
     private static final Object k = new Object();
-    private final x02.C9895b<Field> e;
-    private final x02.C9894a<PropertyDescriptor> f;
+    private final x02.b<Field> e;
+    private final x02.a<PropertyDescriptor> f;
     @NotNull
     private final KDeclarationContainerImpl g;
     @NotNull
@@ -53,10 +53,10 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    public static abstract class Getter<V> extends AbstractC8261a<V, V> implements KProperty.Getter<V> {
+    public static abstract class Getter<V> extends a<V, V> implements KProperty.Getter<V> {
         static final /* synthetic */ KProperty[] g = {a12.i(new PropertyReference1Impl(a12.b(Getter.class), "descriptor", "getDescriptor()Lorg/jetbrains/kotlin/descriptors/PropertyGetterDescriptor;")), a12.i(new PropertyReference1Impl(a12.b(Getter.class), "caller", "getCaller()Lkotlin/reflect/jvm/internal/calls/Caller;"))};
         @NotNull
-        private final x02.C9894a e = x02.d(new Function0<PropertyGetterDescriptor>() { // from class: kotlin.reflect.jvm.internal.KPropertyImpl$Getter$descriptor$2
+        private final x02.a e = x02.d(new Function0<PropertyGetterDescriptor>() { // from class: kotlin.reflect.jvm.internal.KPropertyImpl$Getter$descriptor$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -69,7 +69,7 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
             }
         });
         @NotNull
-        private final x02.C9895b f = x02.b(new Function0<Caller<?>>() { // from class: kotlin.reflect.jvm.internal.KPropertyImpl$Getter$caller$2
+        private final x02.b f = x02.b(new Function0<Caller<?>>() { // from class: kotlin.reflect.jvm.internal.KPropertyImpl$Getter$caller$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -101,7 +101,7 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
             return m().hashCode();
         }
 
-        @Override // kotlin.reflect.jvm.internal.KPropertyImpl.AbstractC8261a
+        @Override // kotlin.reflect.jvm.internal.KPropertyImpl.a
         @NotNull
         /* renamed from: n */
         public PropertyGetterDescriptor l() {
@@ -116,10 +116,10 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    public static abstract class Setter<V> extends AbstractC8261a<V, wt2> implements KMutableProperty.Setter<V> {
+    public static abstract class Setter<V> extends a<V, wt2> implements KMutableProperty.Setter<V> {
         static final /* synthetic */ KProperty[] g = {a12.i(new PropertyReference1Impl(a12.b(Setter.class), "descriptor", "getDescriptor()Lorg/jetbrains/kotlin/descriptors/PropertySetterDescriptor;")), a12.i(new PropertyReference1Impl(a12.b(Setter.class), "caller", "getCaller()Lkotlin/reflect/jvm/internal/calls/Caller;"))};
         @NotNull
-        private final x02.C9894a e = x02.d(new Function0<PropertySetterDescriptor>() { // from class: kotlin.reflect.jvm.internal.KPropertyImpl$Setter$descriptor$2
+        private final x02.a e = x02.d(new Function0<PropertySetterDescriptor>() { // from class: kotlin.reflect.jvm.internal.KPropertyImpl$Setter$descriptor$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -132,12 +132,12 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
                     return setter;
                 }
                 PropertyDescriptor i = KPropertyImpl.Setter.this.m().i();
-                Annotations.C8302a c8302a = Annotations.Companion;
-                return x60.c(i, c8302a.b(), c8302a.b());
+                Annotations.a aVar = Annotations.Companion;
+                return x60.c(i, aVar.b(), aVar.b());
             }
         });
         @NotNull
-        private final x02.C9895b f = x02.b(new Function0<Caller<?>>() { // from class: kotlin.reflect.jvm.internal.KPropertyImpl$Setter$caller$2
+        private final x02.b f = x02.b(new Function0<Caller<?>>() { // from class: kotlin.reflect.jvm.internal.KPropertyImpl$Setter$caller$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -169,7 +169,7 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
             return m().hashCode();
         }
 
-        @Override // kotlin.reflect.jvm.internal.KPropertyImpl.AbstractC8261a
+        @Override // kotlin.reflect.jvm.internal.KPropertyImpl.a
         @NotNull
         /* renamed from: n */
         public PropertySetterDescriptor l() {
@@ -183,9 +183,8 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.KPropertyImpl$a */
     /* loaded from: classes3.dex */
-    public static abstract class AbstractC8261a<PropertyType, ReturnType> extends KCallableImpl<ReturnType> implements KFunction<ReturnType>, KProperty.Accessor<PropertyType> {
+    public static abstract class a<PropertyType, ReturnType> extends KCallableImpl<ReturnType> implements KFunction<ReturnType>, KProperty.Accessor<PropertyType> {
         @Override // kotlin.reflect.jvm.internal.KCallableImpl
         @NotNull
         public KDeclarationContainerImpl g() {
@@ -236,13 +235,12 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.KPropertyImpl$b */
     /* loaded from: classes3.dex */
-    public static final class C8262b {
-        private C8262b() {
+    public static final class b {
+        private b() {
         }
 
-        public /* synthetic */ C8262b(k50 k50Var) {
+        public /* synthetic */ b(k50 k50Var) {
             this();
         }
     }
@@ -252,7 +250,7 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
         this.h = str;
         this.i = str2;
         this.j = obj;
-        x02.C9895b<Field> b = x02.b(new Function0<Field>() { // from class: kotlin.reflect.jvm.internal.KPropertyImpl$_javaField$1
+        x02.b<Field> b2 = x02.b(new Function0<Field>() { // from class: kotlin.reflect.jvm.internal.KPropertyImpl$_javaField$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -263,13 +261,13 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
             public final Field invoke() {
                 Class<?> enclosingClass;
                 a71 f = g42.INSTANCE.f(KPropertyImpl.this.i());
-                if (f instanceof a71.C8900c) {
-                    a71.C8900c c8900c = (a71.C8900c) f;
-                    PropertyDescriptor b2 = c8900c.b();
-                    w61.C9845a d = b71.d(b71.INSTANCE, c8900c.e(), c8900c.d(), c8900c.g(), false, 8, null);
+                if (f instanceof a71.c) {
+                    a71.c cVar = (a71.c) f;
+                    PropertyDescriptor b3 = cVar.b();
+                    w61.a d = b71.d(b71.INSTANCE, cVar.e(), cVar.d(), cVar.g(), false, 8, null);
                     if (d != null) {
-                        if (!g70.e(b2) && !b71.f(c8900c.e())) {
-                            DeclarationDescriptor containingDeclaration = b2.getContainingDeclaration();
+                        if (!g70.e(b3) && !b71.f(cVar.e())) {
+                            DeclarationDescriptor containingDeclaration = b3.getContainingDeclaration();
                             enclosingClass = containingDeclaration instanceof ClassDescriptor ? zv2.p((ClassDescriptor) containingDeclaration) : KPropertyImpl.this.g().getJClass();
                         } else {
                             enclosingClass = KPropertyImpl.this.g().getJClass().getEnclosingClass();
@@ -284,19 +282,19 @@ public abstract class KPropertyImpl<V> extends KCallableImpl<V> implements KProp
                         return null;
                     }
                     return null;
-                } else if (f instanceof a71.C8898a) {
-                    return ((a71.C8898a) f).b();
+                } else if (f instanceof a71.a) {
+                    return ((a71.a) f).b();
                 } else {
-                    if ((f instanceof a71.C8899b) || (f instanceof a71.C8901d)) {
+                    if ((f instanceof a71.b) || (f instanceof a71.d)) {
                         return null;
                     }
                     throw new NoWhenBranchMatchedException();
                 }
             }
         });
-        b41.h(b, "ReflectProperties.lazy {…y -> null\n        }\n    }");
-        this.e = b;
-        x02.C9894a<PropertyDescriptor> c = x02.c(propertyDescriptor, new Function0<PropertyDescriptor>() { // from class: kotlin.reflect.jvm.internal.KPropertyImpl$_descriptor$1
+        b41.h(b2, "ReflectProperties.lazy {…y -> null\n        }\n    }");
+        this.e = b2;
+        x02.a<PropertyDescriptor> c = x02.c(propertyDescriptor, new Function0<PropertyDescriptor>() { // from class: kotlin.reflect.jvm.internal.KPropertyImpl$_descriptor$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);

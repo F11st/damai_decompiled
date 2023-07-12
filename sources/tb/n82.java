@@ -30,12 +30,12 @@ public class n82 extends kn1<j82> {
         if (regionSeat3DVrInfo == null || regionSeat3DVrInfo.imgDecrypt == null) {
             return;
         }
-        j82.C9302a c9302a = new j82.C9302a();
-        c9302a.f(String.valueOf(regionSeat3DVrInfo.venueId));
-        c9302a.d(str);
-        c9302a.g(j);
-        c9302a.e(regionSeat3DVrInfo.imgDecrypt.safeToken);
-        j82Var.g(c9302a);
+        j82.a aVar = new j82.a();
+        aVar.f(String.valueOf(regionSeat3DVrInfo.venueId));
+        aVar.d(str);
+        aVar.g(j);
+        aVar.e(regionSeat3DVrInfo.imgDecrypt.safeToken);
+        j82Var.g(aVar);
     }
 
     @Nullable

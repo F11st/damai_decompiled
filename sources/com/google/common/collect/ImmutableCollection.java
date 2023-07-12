@@ -20,16 +20,15 @@ public abstract class ImmutableCollection<E> extends AbstractCollection<E> imple
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableCollection$a */
     /* loaded from: classes10.dex */
-    public static abstract class AbstractC4967a<E> extends AbstractC4968b<E> {
+    public static abstract class a<E> extends b<E> {
         Object[] a;
         int b;
         boolean c;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public AbstractC4967a(int i) {
-            C5191k.b(i, "initialCapacity");
+        public a(int i) {
+            k.b(i, "initialCapacity");
             this.a = new Object[i];
             this.b = 0;
         }
@@ -37,7 +36,7 @@ public abstract class ImmutableCollection<E> extends AbstractCollection<E> imple
         private void g(int i) {
             Object[] objArr = this.a;
             if (objArr.length < i) {
-                this.a = Arrays.copyOf(objArr, AbstractC4968b.e(objArr.length, i));
+                this.a = Arrays.copyOf(objArr, b.e(objArr.length, i));
                 this.c = false;
             } else if (this.c) {
                 this.a = (Object[]) objArr.clone();
@@ -45,10 +44,10 @@ public abstract class ImmutableCollection<E> extends AbstractCollection<E> imple
             }
         }
 
-        @Override // com.google.common.collect.ImmutableCollection.AbstractC4968b
+        @Override // com.google.common.collect.ImmutableCollection.b
         @CanIgnoreReturnValue
-        public AbstractC4968b<E> b(E... eArr) {
-            C5158b0.b(eArr);
+        public b<E> b(E... eArr) {
+            b0.b(eArr);
             g(this.b + eArr.length);
             System.arraycopy(eArr, 0, this.a, this.b, eArr.length);
             this.b += eArr.length;
@@ -56,7 +55,7 @@ public abstract class ImmutableCollection<E> extends AbstractCollection<E> imple
         }
 
         @CanIgnoreReturnValue
-        public AbstractC4967a<E> f(E e) {
+        public a<E> f(E e) {
             du1.p(e);
             g(this.b + 1);
             Object[] objArr = this.a;
@@ -68,9 +67,8 @@ public abstract class ImmutableCollection<E> extends AbstractCollection<E> imple
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableCollection$b */
     /* loaded from: classes10.dex */
-    public static abstract class AbstractC4968b<E> {
+    public static abstract class b<E> {
         /* JADX INFO: Access modifiers changed from: package-private */
         public static int e(int i, int i2) {
             if (i2 >= 0) {
@@ -87,10 +85,10 @@ public abstract class ImmutableCollection<E> extends AbstractCollection<E> imple
         }
 
         @CanIgnoreReturnValue
-        public abstract AbstractC4968b<E> a(E e);
+        public abstract b<E> a(E e);
 
         @CanIgnoreReturnValue
-        public AbstractC4968b<E> b(E... eArr) {
+        public b<E> b(E... eArr) {
             for (E e : eArr) {
                 a(e);
             }
@@ -98,7 +96,7 @@ public abstract class ImmutableCollection<E> extends AbstractCollection<E> imple
         }
 
         @CanIgnoreReturnValue
-        public AbstractC4968b<E> c(Iterable<? extends E> iterable) {
+        public b<E> c(Iterable<? extends E> iterable) {
             for (E e : iterable) {
                 a(e);
             }
@@ -106,7 +104,7 @@ public abstract class ImmutableCollection<E> extends AbstractCollection<E> imple
         }
 
         @CanIgnoreReturnValue
-        public AbstractC4968b<E> d(Iterator<? extends E> it) {
+        public b<E> d(Iterator<? extends E> it) {
             while (it.hasNext()) {
                 a(it.next());
             }
@@ -211,9 +209,9 @@ public abstract class ImmutableCollection<E> extends AbstractCollection<E> imple
         if (tArr.length < size) {
             Object[] internalArray = internalArray();
             if (internalArray != null) {
-                return (T[]) C5172e0.a(internalArray, internalArrayStart(), internalArrayEnd(), tArr);
+                return (T[]) e0.a(internalArray, internalArrayStart(), internalArrayEnd(), tArr);
             }
-            tArr = (T[]) C5158b0.e(tArr, size);
+            tArr = (T[]) b0.e(tArr, size);
         } else if (tArr.length > size) {
             tArr[size] = null;
         }

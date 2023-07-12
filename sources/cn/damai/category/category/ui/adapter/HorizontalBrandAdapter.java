@@ -117,17 +117,16 @@ public class HorizontalBrandAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.adapter.HorizontalBrandAdapter$a */
     /* loaded from: classes.dex */
-    class C0355a extends RecyclerView.ViewHolder {
+    class a extends RecyclerView.ViewHolder {
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.category.category.ui.adapter.HorizontalBrandAdapter$a$a */
+        /* renamed from: cn.damai.category.category.ui.adapter.HorizontalBrandAdapter$a$a  reason: collision with other inner class name */
         /* loaded from: classes.dex */
-        public class View$OnClickListenerC0356a implements View.OnClickListener {
+        public class View$OnClickListenerC0020a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC0356a(HorizontalBrandAdapter horizontalBrandAdapter) {
+            View$OnClickListenerC0020a(HorizontalBrandAdapter horizontalBrandAdapter) {
             }
 
             @Override // android.view.View.OnClickListener
@@ -141,9 +140,9 @@ public class HorizontalBrandAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             }
         }
 
-        public C0355a() {
+        public a() {
             super(LayoutInflater.from(HorizontalBrandAdapter.this.a).inflate(R$layout.category_brand_galley_item_all, (ViewGroup) null));
-            this.itemView.setOnClickListener(new View$OnClickListenerC0356a(HorizontalBrandAdapter.this));
+            this.itemView.setOnClickListener(new View$OnClickListenerC0020a(HorizontalBrandAdapter.this));
         }
     }
 
@@ -197,7 +196,7 @@ public class HorizontalBrandAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                 if (i2 != 9) {
                     return;
                 }
-                ((C0355a) viewHolder).itemView.setTag(this.b);
+                ((a) viewHolder).itemView.setTag(this.b);
                 return;
             }
             ((ViewHolder) viewHolder).a(brandBean, this.c.size());
@@ -217,7 +216,7 @@ public class HorizontalBrandAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             if (i != 9) {
                 return null;
             }
-            return new C0355a();
+            return new a();
         }
         return new ViewHolder();
     }

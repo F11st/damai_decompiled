@@ -9,5 +9,5 @@ import com.taobao.android.dinamicx.widget.DXImageWidgetNode;
 public interface IDXWebImageInterface {
     ImageView buildView(Context context);
 
-    void setImage(ImageView imageView, String str, DXImageWidgetNode.C6440c c6440c);
+    void setImage(ImageView imageView, String str, DXImageWidgetNode.c cVar);
 }

@@ -16,12 +16,11 @@ public class FeedProjectView extends AbsView<FeedProjectContract.Presenter> impl
     private FeedProjectViewHolder mViewHolder;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.discover.mvp.FeedProjectView$a */
     /* loaded from: classes7.dex */
-    public class C1818a implements OnItemBindListener<ProjectItemBean> {
+    public class a implements OnItemBindListener<ProjectItemBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1818a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -55,7 +54,7 @@ public class FeedProjectView extends AbsView<FeedProjectContract.Presenter> impl
 
     public FeedProjectView(View view) {
         super(view);
-        this.mViewHolder = new FeedProjectViewHolder(view, new C1818a());
+        this.mViewHolder = new FeedProjectViewHolder(view, new a());
     }
 
     @Override // cn.damai.tetris.component.discover.mvp.FeedProjectContract.View

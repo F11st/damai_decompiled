@@ -20,13 +20,12 @@ import tb.b41;
 public final class TMScreen extends WVScreen {
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMScreen$a */
     /* loaded from: classes11.dex */
-    public static final class C6998a implements IPermissionListener {
+    public static final class a implements IPermissionListener {
         final /* synthetic */ WVCallBackContext b;
         final /* synthetic */ String c;
 
-        C6998a(WVCallBackContext wVCallBackContext, String str) {
+        a(WVCallBackContext wVCallBackContext, String str) {
             this.b = wVCallBackContext;
             this.c = str;
         }
@@ -61,7 +60,7 @@ public final class TMScreen extends WVScreen {
             if (this.mContext != null) {
                 Context context = getContext();
                 b41.h(context, WPKFactory.INIT_KEY_CONTEXT);
-                new Permission(context, new PermissionModel(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE", "android.permission.READ_EXTERNAL_STORAGE"}, null, null, null)).a(new C6998a(wVCallBackContext, str2)).b();
+                new Permission(context, new PermissionModel(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE", "android.permission.READ_EXTERNAL_STORAGE"}, null, null, null)).a(new a(wVCallBackContext, str2)).b();
             }
         } else if (b41.d("getOrientation", str)) {
             getOrientation(wVCallBackContext, str2);

@@ -1,7 +1,6 @@
 package tb;
 
 import androidx.annotation.NonNull;
-import com.alipay.sdk.m.e0.C4186a;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
@@ -13,13 +12,12 @@ public class lh1 {
     private boolean e;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.lh1$a */
     /* loaded from: classes5.dex */
-    public static class C9413a {
+    public static class a {
         private int a = 500;
         private int b = 2000;
         private int c = 180000;
-        private int d = C4186a.a;
+        private int d = com.alipay.sdk.m.e0.a.a;
         private boolean e = true;
 
         @NonNull
@@ -28,12 +26,12 @@ public class lh1 {
         }
     }
 
-    lh1(@NonNull C9413a c9413a) {
-        this.a = c9413a.a;
-        this.b = c9413a.b;
-        this.d = c9413a.d;
-        this.c = c9413a.c;
-        this.e = c9413a.e;
+    lh1(@NonNull a aVar) {
+        this.a = aVar.a;
+        this.b = aVar.b;
+        this.d = aVar.d;
+        this.c = aVar.c;
+        this.e = aVar.e;
     }
 
     public int a() {

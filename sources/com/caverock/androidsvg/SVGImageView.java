@@ -21,18 +21,17 @@ import java.lang.reflect.Method;
 /* loaded from: classes10.dex */
 public class SVGImageView extends AppCompatImageView {
     private static Method setLayerTypeMethod;
-    private C4748d renderOptions;
+    private d renderOptions;
     private SVG svg;
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVGImageView$b */
     /* loaded from: classes10.dex */
-    public class AsyncTaskC4735b extends AsyncTask<Integer, Integer, SVG> {
+    public class b extends AsyncTask<Integer, Integer, SVG> {
         private Context a;
         private int b;
 
-        AsyncTaskC4735b(Context context, int i) {
+        b(Context context, int i) {
             this.a = context;
             this.b = i;
         }
@@ -60,10 +59,9 @@ public class SVGImageView extends AppCompatImageView {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVGImageView$c */
     /* loaded from: classes10.dex */
-    public class AsyncTaskC4736c extends AsyncTask<InputStream, Integer, SVG> {
-        private AsyncTaskC4736c() {
+    public class c extends AsyncTask<InputStream, Integer, SVG> {
+        private c() {
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
@@ -115,7 +113,7 @@ public class SVGImageView extends AppCompatImageView {
     public SVGImageView(Context context) {
         super(context);
         this.svg = null;
-        this.renderOptions = new C4748d();
+        this.renderOptions = new d();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -161,7 +159,7 @@ public class SVGImageView extends AppCompatImageView {
 
     private boolean internalSetImageAsset(String str) {
         try {
-            new AsyncTaskC4736c().execute(getContext().getAssets().open(str));
+            new c().execute(getContext().getAssets().open(str));
             return true;
         } catch (IOException unused) {
             return false;
@@ -170,7 +168,7 @@ public class SVGImageView extends AppCompatImageView {
 
     private boolean internalSetImageURI(Uri uri) {
         try {
-            new AsyncTaskC4736c().execute(getContext().getContentResolver().openInputStream(uri));
+            new c().execute(getContext().getContentResolver().openInputStream(uri));
             return true;
         } catch (FileNotFoundException unused) {
             return false;
@@ -211,7 +209,7 @@ public class SVGImageView extends AppCompatImageView {
 
     @Override // androidx.appcompat.widget.AppCompatImageView, android.widget.ImageView
     public void setImageResource(int i) {
-        new AsyncTaskC4735b(getContext(), i).execute(new Integer[0]);
+        new b(getContext(), i).execute(new Integer[0]);
     }
 
     @Override // androidx.appcompat.widget.AppCompatImageView, android.widget.ImageView
@@ -234,7 +232,7 @@ public class SVGImageView extends AppCompatImageView {
     public SVGImageView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet, 0);
         this.svg = null;
-        this.renderOptions = new C4748d();
+        this.renderOptions = new d();
         init(attributeSet, 0);
     }
 
@@ -251,7 +249,7 @@ public class SVGImageView extends AppCompatImageView {
     public SVGImageView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         this.svg = null;
-        this.renderOptions = new C4748d();
+        this.renderOptions = new d();
         init(attributeSet, i);
     }
 }

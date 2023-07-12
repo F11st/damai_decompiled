@@ -23,15 +23,14 @@ public final class cy1 {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.cy1$a */
     /* loaded from: classes8.dex */
-    public static final class C9019a implements ShareManager.IApplyPermission.IPermissionListener {
+    public static final class a implements ShareManager.IApplyPermission.IPermissionListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context b;
         final /* synthetic */ ShareContent c;
         final /* synthetic */ boolean d;
 
-        C9019a(Context context, ShareContent shareContent, boolean z) {
+        a(Context context, ShareContent shareContent, boolean z) {
             this.b = context;
             this.c = shareContent;
             this.d = z;
@@ -92,7 +91,7 @@ public final class cy1 {
             }
             ShareManager.IApplyPermission f = ShareManager.INSTANCE.b().f();
             if (f != null) {
-                f.requestStoragePermission(new C9019a(context, shareContent, z), (Activity) context);
+                f.requestStoragePermission(new a(context, shareContent, z), (Activity) context);
             }
         } else {
             String string = context.getString(R$string.qq_not_install);

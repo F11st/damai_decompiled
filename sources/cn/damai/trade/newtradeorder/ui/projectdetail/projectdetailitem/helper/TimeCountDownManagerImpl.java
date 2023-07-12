@@ -10,10 +10,10 @@ import tb.xv1;
 /* loaded from: classes8.dex */
 public class TimeCountDownManagerImpl implements ITimeCountDownManager {
     private static transient /* synthetic */ IpChange $ipChange;
-    private CountDownTimerC2276b a;
+    private b a;
     private long b;
     private OnTimeCountDownListener c;
-    private OnTimeCountDownCallback d = new C2275a();
+    private OnTimeCountDownCallback d = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes16.dex */
@@ -24,12 +24,11 @@ public class TimeCountDownManagerImpl implements ITimeCountDownManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.helper.TimeCountDownManagerImpl$a */
     /* loaded from: classes8.dex */
-    public class C2275a implements OnTimeCountDownCallback {
+    public class a implements OnTimeCountDownCallback {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2275a() {
+        a() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.helper.TimeCountDownManagerImpl.OnTimeCountDownCallback
@@ -55,14 +54,13 @@ public class TimeCountDownManagerImpl implements ITimeCountDownManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.helper.TimeCountDownManagerImpl$b */
     /* loaded from: classes16.dex */
-    public static class CountDownTimerC2276b extends CountDownTimer {
+    public static class b extends CountDownTimer {
         private static transient /* synthetic */ IpChange $ipChange;
         private long a;
         private OnTimeCountDownCallback b;
 
-        public CountDownTimerC2276b(long j, long j2, OnTimeCountDownCallback onTimeCountDownCallback) {
+        public b(long j, long j2, OnTimeCountDownCallback onTimeCountDownCallback) {
             super(1000 * j, j2);
             this.a = j;
             this.b = onTimeCountDownCallback;
@@ -112,9 +110,9 @@ public class TimeCountDownManagerImpl implements ITimeCountDownManager {
             ipChange.ipc$dispatch("1431636339", new Object[]{this});
             return;
         }
-        CountDownTimerC2276b countDownTimerC2276b = this.a;
-        if (countDownTimerC2276b != null) {
-            countDownTimerC2276b.cancel();
+        b bVar = this.a;
+        if (bVar != null) {
+            bVar.cancel();
             this.a = null;
         }
     }
@@ -138,12 +136,12 @@ public class TimeCountDownManagerImpl implements ITimeCountDownManager {
         }
         cancelCountDown();
         if (this.a == null) {
-            this.a = new CountDownTimerC2276b(this.b, 1000L, this.d);
+            this.a = new b(this.b, 1000L, this.d);
         }
         this.a.start();
         if (this.c != null) {
-            String[] a = xv1.a(this.b);
-            this.c.onCountDownStart(!TextUtils.isEmpty(a[0]) ? a[0] : "00", a[1], a[2], a[3]);
+            String[] a2 = xv1.a(this.b);
+            this.c.onCountDownStart(!TextUtils.isEmpty(a2[0]) ? a2[0] : "00", a2[1], a2[2], a2[3]);
         }
     }
 }

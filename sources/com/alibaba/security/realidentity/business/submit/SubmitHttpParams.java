@@ -2,11 +2,11 @@ package com.alibaba.security.realidentity.business.submit;
 
 import android.text.TextUtils;
 import com.alibaba.security.biometrics.service.constants.GlobalErrorCode;
-import com.alibaba.security.common.d.C3811h;
+import com.alibaba.security.common.d.h;
 import com.alibaba.security.realidentity.RPResult;
-import com.alibaba.security.realidentity.business.C3873c;
 import com.alibaba.security.realidentity.business.bucket.BucketParams;
 import com.alibaba.security.realidentity.business.bucket.HttpBucketParams;
+import com.alibaba.security.realidentity.business.c;
 import com.alibaba.security.realidentity.http.base.BusinessHttpWrapper;
 import com.alibaba.security.realidentity.http.base.BusinessRequest;
 import com.alibaba.security.realidentity.http.model.HttpResponse;
@@ -36,7 +36,7 @@ public class SubmitHttpParams extends AbsSubmitHttpParams {
     }
 
     @Override // com.alibaba.security.realidentity.business.bucket.BucketParams
-    public boolean onDelivering(C3873c c3873c) {
+    public boolean onDelivering(c cVar) {
         return false;
     }
 
@@ -51,7 +51,7 @@ public class SubmitHttpParams extends AbsSubmitHttpParams {
         }
         int status = this.submitHttpResponse.getStatus();
         if (status == 0) {
-            return new BucketParams.ErrorCode(RPResult.AUDIT_IN_AUDIT, String.valueOf(status), C3811h.a(this.submitHttpResponse), GlobalErrorCode.ERROR_VERIFY_BIO_DATA);
+            return new BucketParams.ErrorCode(RPResult.AUDIT_IN_AUDIT, String.valueOf(status), h.a(this.submitHttpResponse), GlobalErrorCode.ERROR_VERIFY_BIO_DATA);
         }
         if (status == 2) {
             try {
@@ -62,7 +62,7 @@ public class SubmitHttpParams extends AbsSubmitHttpParams {
         } else if (!TextUtils.isEmpty(this.submitHttpResponse.getRetCode())) {
             return new BucketParams.ErrorCode(RPResult.AUDIT_NOT, "-10302", this.submitHttpResponse.getRetMsg(), GlobalErrorCode.ERROR_VERIFY_BIO_DATA);
         } else {
-            return new BucketParams.ErrorCode(RPResult.AUDIT_NOT, "-10302", C3811h.a(this.submitHttpResponse), GlobalErrorCode.ERROR_VERIFY_BIO_DATA);
+            return new BucketParams.ErrorCode(RPResult.AUDIT_NOT, "-10302", h.a(this.submitHttpResponse), GlobalErrorCode.ERROR_VERIFY_BIO_DATA);
         }
     }
 }

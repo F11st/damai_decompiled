@@ -2,8 +2,6 @@ package tb;
 
 import android.text.TextUtils;
 import com.alimm.xadsdk.request.builder.IRequestConst;
-import com.efs.sdk.base.a.c.a.C4783c;
-import com.efs.sdk.base.a.d.C4786a;
 import io.flutter.wpkbridge.U4WPKAdapter;
 import java.util.Locale;
 import java.util.Map;
@@ -27,11 +25,11 @@ public final class e53 {
 
     public static e53 a() {
         e53 e53Var = new e53();
-        e53Var.a = C4786a.a().a;
-        e53Var.b = C4786a.a().b;
-        e53Var.j = C4786a.a().i;
-        e53Var.c = g83.a(C4786a.a().c);
-        e53Var.i = String.valueOf(C4783c.a().e.a);
+        e53Var.a = com.efs.sdk.base.a.d.a.a().a;
+        e53Var.b = com.efs.sdk.base.a.d.a.a().b;
+        e53Var.j = com.efs.sdk.base.a.d.a.a().i;
+        e53Var.c = g83.a(com.efs.sdk.base.a.d.a.a().c);
+        e53Var.i = String.valueOf(com.efs.sdk.base.a.c.a.c.a().e.a);
         return e53Var;
     }
 

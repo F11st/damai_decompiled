@@ -3,7 +3,7 @@ package cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.model;
 import android.text.TextUtils;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.C0864c;
+import cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.c;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.live.livesdk.wkit.component.Constants;
@@ -124,7 +124,7 @@ public class CSSStyle {
             return (Integer) ipChange.ipc$dispatch("69899395", new Object[]{this, str});
         }
         try {
-            return C0864c.c(str);
+            return c.c(str);
         } catch (Exception e) {
             e.printStackTrace();
             return null;

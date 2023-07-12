@@ -4,7 +4,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.text.Html;
 import android.view.ViewGroup;
-import com.airbnb.lottie.C2861b;
+import com.airbnb.lottie.b;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.alixplayer.IAlixPlayer;
@@ -67,7 +67,7 @@ public class HBRPlugin extends AbsPlugin implements HBRContract.Presenter {
                 }
             }
         };
-        HBRPluginView hBRPluginView = new HBRPluginView(alixPlayerContext, alixPlayerContext.getPluginManager(viewGroup).getLayerManager(), this.mLayerId, R.C7935layout.dago_frame_plugin_view, alixPlayerContext.getPluginManager(viewGroup).getViewPlaceholder(this.mName));
+        HBRPluginView hBRPluginView = new HBRPluginView(alixPlayerContext, alixPlayerContext.getPluginManager(viewGroup).getLayerManager(), this.mLayerId, R.layout.dago_frame_plugin_view, alixPlayerContext.getPluginManager(viewGroup).getViewPlaceholder(this.mName));
         this.mView = hBRPluginView;
         hBRPluginView.setPresenter((HBRContract.Presenter) this);
         this.mAttachToParent = true;
@@ -156,7 +156,7 @@ public class HBRPlugin extends AbsPlugin implements HBRContract.Presenter {
         this.mView.hide();
         checkState();
         try {
-            C2861b.s(alixPlayerContext.getContext(), HBRPluginView.HBR_CHANGING_LOTTIE);
+            b.s(alixPlayerContext.getContext(), HBRPluginView.HBR_CHANGING_LOTTIE);
         } catch (Exception unused) {
         }
     }

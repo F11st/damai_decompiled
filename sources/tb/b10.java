@@ -1,7 +1,6 @@
 package tb;
 
 import androidx.annotation.Nullable;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DXRuntimeContext;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
@@ -22,7 +21,7 @@ public class b10 extends wy {
             } catch (Throwable th) {
                 th = th;
                 ry.b(th);
-                DXAppMonitor.p(dXRuntimeContext, "DX_SCRIPT", "DX_SCRIPT_ERROR", C6368e.DXSCRIPT_SCRIPT_NODE_ERROR, ry.a(th));
+                DXAppMonitor.p(dXRuntimeContext, "DX_SCRIPT", "DX_SCRIPT_ERROR", com.taobao.android.dinamicx.e.DXSCRIPT_SCRIPT_NODE_ERROR, ry.a(th));
                 return null;
             }
         }
@@ -57,7 +56,7 @@ public class b10 extends wy {
             hashMap.putAll(env);
         }
         try {
-            uy.C9793a f = c.f(dXRuntimeContext, hyVar, identifier, (int) this.b, dXRuntimeContext.getData(), null, null, hashMap, dXRuntimeContext.getEngineContext().d(), dXRuntimeContext.getEngineContext().d(), dXRuntimeContext.getEngineContext().d());
+            uy.a f = c.f(dXRuntimeContext, hyVar, identifier, (int) this.b, dXRuntimeContext.getData(), null, null, hashMap, dXRuntimeContext.getEngineContext().d(), dXRuntimeContext.getEngineContext().d(), dXRuntimeContext.getEngineContext().d());
             if (f.a) {
                 return az.P(f.c);
             }
@@ -66,7 +65,7 @@ public class b10 extends wy {
         } catch (Throwable th2) {
             th = th2;
             ry.b(th);
-            DXAppMonitor.p(dXRuntimeContext, "DX_SCRIPT", "DX_SCRIPT_ERROR", C6368e.DXSCRIPT_SCRIPT_NODE_ERROR, ry.a(th));
+            DXAppMonitor.p(dXRuntimeContext, "DX_SCRIPT", "DX_SCRIPT_ERROR", com.taobao.android.dinamicx.e.DXSCRIPT_SCRIPT_NODE_ERROR, ry.a(th));
             return null;
         }
     }

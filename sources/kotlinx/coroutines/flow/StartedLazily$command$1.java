@@ -3,7 +3,6 @@ package kotlinx.coroutines.flow;
 import com.alibaba.wireless.security.SecExceptionCode;
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function2;
@@ -49,7 +48,7 @@ final class StartedLazily$command$1 extends SuspendLambda implements Function2<F
     @Nullable
     public final Object invokeSuspend(@NotNull Object obj) {
         Object d;
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         int i = this.label;
         if (i == 0) {
             i32.b(obj);

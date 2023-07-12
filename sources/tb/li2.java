@@ -17,15 +17,14 @@ public final class li2<T> implements Sequence<T>, DropTakeSequence<T> {
     private final int c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.li2$a */
     /* loaded from: classes3.dex */
-    public static final class C9414a implements Iterator<T>, KMappedMarker {
+    public static final class a implements Iterator<T>, KMappedMarker {
         @NotNull
         private final Iterator<T> a;
         private int b;
         final /* synthetic */ li2<T> c;
 
-        C9414a(li2<T> li2Var) {
+        a(li2<T> li2Var) {
             this.c = li2Var;
             this.a = ((li2) li2Var).a.iterator();
         }
@@ -95,7 +94,7 @@ public final class li2<T> implements Sequence<T>, DropTakeSequence<T> {
     @Override // kotlin.sequences.Sequence
     @NotNull
     public Iterator<T> iterator() {
-        return new C9414a(this);
+        return new a(this);
     }
 
     @Override // kotlin.sequences.DropTakeSequence

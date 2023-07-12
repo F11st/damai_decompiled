@@ -122,7 +122,7 @@ public final class ObservableDoFinally<T> extends AbstractObservableWithUpstream
         this.onFinally = action;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new DoFinallyObserver(observer, this.onFinally));
     }

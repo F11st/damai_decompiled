@@ -2,7 +2,6 @@ package tb;
 
 import kotlin.jvm.JvmField;
 import kotlin.jvm.JvmStatic;
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
@@ -33,9 +32,9 @@ public final class n61 {
         boolean F;
         boolean F2;
         b41.i(str, "name");
-        F = C8604o.F(str, gn1.TYPE_OPEN_URL_METHOD_GET, false, 2, null);
+        F = kotlin.text.o.F(str, gn1.TYPE_OPEN_URL_METHOD_GET, false, 2, null);
         if (!F) {
-            F2 = C8604o.F(str, "is", false, 2, null);
+            F2 = kotlin.text.o.F(str, "is", false, 2, null);
             if (!F2) {
                 return false;
             }
@@ -47,7 +46,7 @@ public final class n61 {
     public static final boolean c(@NotNull String str) {
         boolean F;
         b41.i(str, "name");
-        F = C8604o.F(str, "set", false, 2, null);
+        F = kotlin.text.o.F(str, "set", false, 2, null);
         return F;
     }
 
@@ -69,7 +68,7 @@ public final class n61 {
     public static final boolean e(@NotNull String str) {
         boolean F;
         b41.i(str, "name");
-        F = C8604o.F(str, "is", false, 2, null);
+        F = kotlin.text.o.F(str, "is", false, 2, null);
         if (F && str.length() != 2) {
             char charAt = str.charAt(2);
             return b41.k(97, charAt) > 0 || b41.k(charAt, 122) > 0;

@@ -2,8 +2,8 @@ package tb;
 
 import android.content.Context;
 import android.text.TextUtils;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DXRuntimeContext;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.template.download.DXTemplateItem;
 import com.taobao.android.dinamicx.template.download.DXTemplatePackageInfo;
 import com.taobao.android.dinamicx.template.loader.ILoader;
@@ -19,7 +19,7 @@ public class a00 {
     private it a = new it();
 
     private DXWidgetNode b(DXTemplateItem dXTemplateItem, String str, Map<String, String> map, DXRuntimeContext dXRuntimeContext, Context context) {
-        List<C6368e.C6369a> list;
+        List<e.a> list;
         if (TextUtils.isEmpty(str)) {
             return null;
         }
@@ -36,13 +36,13 @@ public class a00 {
             return c;
         }
         if (dXRuntimeContext != null && dXRuntimeContext.getDxError() != null && (list = dXRuntimeContext.getDxError().c) != null) {
-            C6368e.C6369a c6369a = new C6368e.C6369a("Template", "Template_Read", C6368e.DX_TEMPLATE_LOAD_ERROR);
+            e.a aVar = new e.a("Template", "Template_Read", com.taobao.android.dinamicx.e.DX_TEMPLATE_LOAD_ERROR);
             if (e == null) {
-                c6369a.e = "DXPackageManager load  bytes == null";
+                aVar.e = "DXPackageManager load  bytes == null";
             } else {
-                c6369a.e = "DXPackageManager load  bytes.len == 0";
+                aVar.e = "DXPackageManager load  bytes.len == 0";
             }
-            list.add(c6369a);
+            list.add(aVar);
         }
         q10.f().n(dXRuntimeContext.getBizType(), dXTemplateItem);
         return null;

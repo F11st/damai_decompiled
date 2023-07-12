@@ -7,7 +7,7 @@ import java.io.Serializable;
 public final class Calendar implements Serializable, Comparable<Calendar> {
     private static final long serialVersionUID = 141315161718191143L;
     private boolean booked;
-    private C6483a calendarInfo;
+    private a calendarInfo;
     private int day;
     private boolean isCurrentDay;
     private boolean isCurrentMonth;
@@ -29,9 +29,8 @@ public final class Calendar implements Serializable, Comparable<Calendar> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.calander.Calendar$a */
     /* loaded from: classes12.dex */
-    public static class C6483a {
+    public static class a {
         public String a;
         public String b;
     }
@@ -41,7 +40,7 @@ public final class Calendar implements Serializable, Comparable<Calendar> {
     }
 
     public final int differ(Calendar calendar) {
-        return C6487a.b(this, calendar);
+        return com.taobao.android.dinamicx.widget.calander.a.b(this, calendar);
     }
 
     public boolean equals(Object obj) {
@@ -54,7 +53,7 @@ public final class Calendar implements Serializable, Comparable<Calendar> {
         return super.equals(obj);
     }
 
-    public C6483a getCalendarInfo() {
+    public a getCalendarInfo() {
         return this.calendarInfo;
     }
 
@@ -151,8 +150,8 @@ public final class Calendar implements Serializable, Comparable<Calendar> {
         this.booked = z;
     }
 
-    public void setCalendarInfo(C6483a c6483a) {
-        this.calendarInfo = c6483a;
+    public void setCalendarInfo(a aVar) {
+        this.calendarInfo = aVar;
     }
 
     public void setCurrentDay(boolean z) {

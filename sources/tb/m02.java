@@ -2,7 +2,6 @@ package tb;
 
 import java.util.Collection;
 import java.util.List;
-import kotlin.collections.C8214m;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotation;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClass;
@@ -26,7 +25,7 @@ public final class m02 extends g02 implements JavaPackage {
     /* renamed from: a */
     public List<JavaAnnotation> getAnnotations() {
         List<JavaAnnotation> g;
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         return g;
     }
 
@@ -46,7 +45,7 @@ public final class m02 extends g02 implements JavaPackage {
     public Collection<JavaClass> getClasses(@NotNull Function1<? super ni1, Boolean> function1) {
         List g;
         b41.i(function1, "nameFilter");
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         return g;
     }
 
@@ -60,7 +59,7 @@ public final class m02 extends g02 implements JavaPackage {
     @NotNull
     public Collection<JavaPackage> getSubPackages() {
         List g;
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         return g;
     }
 

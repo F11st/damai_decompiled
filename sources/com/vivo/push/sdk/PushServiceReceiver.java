@@ -6,13 +6,13 @@ import android.content.Intent;
 import android.net.NetworkInfo;
 import android.os.Handler;
 import android.os.HandlerThread;
-import com.vivo.push.C7481e;
 import com.vivo.push.PushClient;
 import com.vivo.push.cache.ClientConfigManagerImpl;
-import com.vivo.push.util.C7523p;
-import com.vivo.push.util.C7525r;
+import com.vivo.push.e;
 import com.vivo.push.util.ContextDelegate;
 import com.vivo.push.util.VivoPushException;
+import com.vivo.push.util.p;
+import com.vivo.push.util.r;
 import io.flutter.plugins.connectivity.ConnectivityBroadcastReceiver;
 import tb.jn1;
 
@@ -21,36 +21,35 @@ import tb.jn1;
 public class PushServiceReceiver extends BroadcastReceiver {
     private static HandlerThread a;
     private static Handler b;
-    private static RunnableC7500a c = new RunnableC7500a();
+    private static a c = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: com.vivo.push.sdk.PushServiceReceiver$a */
     /* loaded from: classes11.dex */
-    static class RunnableC7500a implements Runnable {
+    static class a implements Runnable {
         private Context a;
         private String b;
 
-        RunnableC7500a() {
+        a() {
         }
 
-        static /* synthetic */ void a(RunnableC7500a runnableC7500a, Context context, String str) {
-            runnableC7500a.a = ContextDelegate.getContext(context);
-            runnableC7500a.b = str;
+        static /* synthetic */ void a(a aVar, Context context, String str) {
+            aVar.a = ContextDelegate.getContext(context);
+            aVar.b = str;
         }
 
         @Override // java.lang.Runnable
         public final void run() {
-            NetworkInfo a = C7525r.a(this.a);
+            NetworkInfo a = r.a(this.a);
             if (!(a != null ? a.isConnectedOrConnecting() : false)) {
-                C7523p.d("PushServiceReceiver", this.a.getPackageName() + ": 无网络  by " + this.b);
+                p.d("PushServiceReceiver", this.a.getPackageName() + ": 无网络  by " + this.b);
                 Context context = this.a;
-                C7523p.a(context, "触发静态广播:无网络(" + this.b + "," + this.a.getPackageName() + jn1.BRACKET_END_STR);
+                p.a(context, "触发静态广播:无网络(" + this.b + "," + this.a.getPackageName() + jn1.BRACKET_END_STR);
                 return;
             }
-            C7523p.d("PushServiceReceiver", this.a.getPackageName() + ": 执行开始出发动作: " + this.b);
+            p.d("PushServiceReceiver", this.a.getPackageName() + ": 执行开始出发动作: " + this.b);
             Context context2 = this.a;
-            C7523p.a(context2, "触发静态广播(" + this.b + "," + this.a.getPackageName() + jn1.BRACKET_END_STR);
-            C7481e.a().a(this.a);
+            p.a(context2, "触发静态广播(" + this.b + "," + this.a.getPackageName() + jn1.BRACKET_END_STR);
+            e.a().a(this.a);
             if (ClientConfigManagerImpl.getInstance(this.a).isCancleBroadcastReceiver()) {
                 return;
             }
@@ -59,7 +58,7 @@ public class PushServiceReceiver extends BroadcastReceiver {
             } catch (VivoPushException e) {
                 e.printStackTrace();
                 Context context3 = this.a;
-                C7523p.a(context3, " 初始化异常 error= " + e.getMessage());
+                p.a(context3, " 初始化异常 error= " + e.getMessage());
             }
         }
     }
@@ -75,8 +74,8 @@ public class PushServiceReceiver extends BroadcastReceiver {
                 handlerThread.start();
                 b = new Handler(a.getLooper());
             }
-            C7523p.d("PushServiceReceiver", context2.getPackageName() + ": start PushSerevice for by " + action + "  ; handler : " + b);
-            RunnableC7500a.a(c, context2, action);
+            p.d("PushServiceReceiver", context2.getPackageName() + ": start PushSerevice for by " + action + "  ; handler : " + b);
+            a.a(c, context2, action);
             b.removeCallbacks(c);
             b.postDelayed(c, 2000L);
         }

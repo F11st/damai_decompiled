@@ -13,21 +13,20 @@ import tb.er2;
 /* loaded from: classes3.dex */
 public interface ContractDeserializer {
     @NotNull
-    public static final C8504a Companion = C8504a.a;
+    public static final a Companion = a.a;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.serialization.deserialization.ContractDeserializer$a */
     /* loaded from: classes3.dex */
-    public static final class C8504a {
-        static final /* synthetic */ C8504a a = new C8504a();
+    public static final class a {
+        static final /* synthetic */ a a = new a();
         @NotNull
-        private static final ContractDeserializer b = new C8505a();
+        private static final ContractDeserializer b = new C0429a();
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.serialization.deserialization.ContractDeserializer$a$a */
+        /* renamed from: kotlin.reflect.jvm.internal.impl.serialization.deserialization.ContractDeserializer$a$a  reason: collision with other inner class name */
         /* loaded from: classes3.dex */
-        public static final class C8505a implements ContractDeserializer {
-            C8505a() {
+        public static final class C0429a implements ContractDeserializer {
+            C0429a() {
             }
 
             @Override // kotlin.reflect.jvm.internal.impl.serialization.deserialization.ContractDeserializer
@@ -41,7 +40,7 @@ public interface ContractDeserializer {
             }
         }
 
-        private C8504a() {
+        private a() {
         }
 
         @NotNull

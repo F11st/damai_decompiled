@@ -9,7 +9,7 @@ import tb.jn1;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
-public class AsyncTimeout extends C8857o {
+public class AsyncTimeout extends o {
     private static final long IDLE_TIMEOUT_MILLIS;
     private static final long IDLE_TIMEOUT_NANOS;
     private static final int TIMEOUT_WRITE_SIZE = 65536;
@@ -69,12 +69,11 @@ public class AsyncTimeout extends C8857o {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: okio.AsyncTimeout$a */
     /* loaded from: classes2.dex */
-    public class C8832a implements Sink {
+    public class a implements Sink {
         final /* synthetic */ Sink a;
 
-        C8832a(Sink sink) {
+        a(Sink sink) {
             this.a = sink;
         }
 
@@ -111,7 +110,7 @@ public class AsyncTimeout extends C8857o {
         }
 
         @Override // okio.Sink
-        public C8857o timeout() {
+        public o timeout() {
             return AsyncTimeout.this;
         }
 
@@ -121,23 +120,23 @@ public class AsyncTimeout extends C8857o {
 
         @Override // okio.Sink
         public void write(Buffer buffer, long j) throws IOException {
-            C8859p.b(buffer.size, 0L, j);
+            p.b(buffer.size, 0L, j);
             while (true) {
                 long j2 = 0;
                 if (j <= 0) {
                     return;
                 }
-                C8855m c8855m = buffer.head;
+                m mVar = buffer.head;
                 while (true) {
                     if (j2 >= PlaybackStateCompat.ACTION_PREPARE_FROM_SEARCH) {
                         break;
                     }
-                    j2 += c8855m.c - c8855m.b;
+                    j2 += mVar.c - mVar.b;
                     if (j2 >= j) {
                         j2 = j;
                         break;
                     }
-                    c8855m = c8855m.f;
+                    mVar = mVar.f;
                 }
                 AsyncTimeout.this.enter();
                 try {
@@ -158,12 +157,11 @@ public class AsyncTimeout extends C8857o {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: okio.AsyncTimeout$b */
     /* loaded from: classes2.dex */
-    public class C8833b implements Source {
+    public class b implements Source {
         final /* synthetic */ Source a;
 
-        C8833b(Source source) {
+        b(Source source) {
             this.a = source;
         }
 
@@ -201,7 +199,7 @@ public class AsyncTimeout extends C8857o {
         }
 
         @Override // okio.Source
-        public C8857o timeout() {
+        public o timeout() {
             return AsyncTimeout.this;
         }
 
@@ -323,11 +321,11 @@ public class AsyncTimeout extends C8857o {
     }
 
     public final Sink sink(Sink sink) {
-        return new C8832a(sink);
+        return new a(sink);
     }
 
     public final Source source(Source source) {
-        return new C8833b(source);
+        return new b(source);
     }
 
     protected void timedOut() {

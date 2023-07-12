@@ -24,10 +24,9 @@ public class f51 {
     private static final Map<uy2, f70> a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.f51$a */
     /* loaded from: classes3.dex */
-    static class C9127a extends m60 {
-        C9127a(uy2 uy2Var) {
+    static class a extends m60 {
+        a(uy2 uy2Var) {
             super(uy2Var);
         }
 
@@ -56,10 +55,9 @@ public class f51 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.f51$b */
     /* loaded from: classes3.dex */
-    static class C9128b extends m60 {
-        C9128b(uy2 uy2Var) {
+    static class b extends m60 {
+        b(uy2 uy2Var) {
             super(uy2Var);
         }
 
@@ -88,10 +86,9 @@ public class f51 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.f51$c */
     /* loaded from: classes3.dex */
-    static class C9129c extends m60 {
-        C9129c(uy2 uy2Var) {
+    static class c extends m60 {
+        c(uy2 uy2Var) {
             super(uy2Var);
         }
 
@@ -120,16 +117,16 @@ public class f51 {
     }
 
     static {
-        C9127a c9127a = new C9127a(w51.INSTANCE);
-        PACKAGE_VISIBILITY = c9127a;
-        C9128b c9128b = new C9128b(y51.INSTANCE);
-        PROTECTED_STATIC_VISIBILITY = c9128b;
-        C9129c c9129c = new C9129c(x51.INSTANCE);
-        PROTECTED_AND_PACKAGE = c9129c;
+        a aVar = new a(w51.INSTANCE);
+        PACKAGE_VISIBILITY = aVar;
+        b bVar = new b(y51.INSTANCE);
+        PROTECTED_STATIC_VISIBILITY = bVar;
+        c cVar = new c(x51.INSTANCE);
+        PROTECTED_AND_PACKAGE = cVar;
         a = new HashMap();
-        f(c9127a);
-        f(c9128b);
-        f(c9129c);
+        f(aVar);
+        f(bVar);
+        f(cVar);
     }
 
     private static /* synthetic */ void a(int i) {

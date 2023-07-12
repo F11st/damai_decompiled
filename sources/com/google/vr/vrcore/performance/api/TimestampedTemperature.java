@@ -6,16 +6,15 @@ import android.os.Parcelable;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class TimestampedTemperature implements Parcelable {
-    public static final Parcelable.Creator<TimestampedTemperature> CREATOR = new C5451a();
+    public static final Parcelable.Creator<TimestampedTemperature> CREATOR = new a();
     private static final int PARCEL_SIZE = 16;
     public float temperature;
     public long timestamp;
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.vrcore.performance.api.TimestampedTemperature$a */
     /* loaded from: classes10.dex */
-    class C5451a implements Parcelable.Creator<TimestampedTemperature> {
-        C5451a() {
+    class a implements Parcelable.Creator<TimestampedTemperature> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

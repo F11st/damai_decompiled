@@ -18,7 +18,7 @@ import io.flutter.Log;
 import io.flutter.embedding.engine.FlutterJNI;
 import java.util.ArrayList;
 import java.util.Iterator;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -124,7 +124,7 @@ public class VsyncWaiter {
         }
         Display.Mode mode = null;
         float f2 = Float.MAX_VALUE;
-        for (Display.Mode mode2 : ((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getSupportedModes()) {
+        for (Display.Mode mode2 : ((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getSupportedModes()) {
             float abs = Math.abs(f - mode2.getRefreshRate());
             if (abs < f2) {
                 mode = mode2;

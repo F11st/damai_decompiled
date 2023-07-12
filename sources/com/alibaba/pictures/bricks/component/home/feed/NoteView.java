@@ -23,7 +23,6 @@ import com.alibaba.pictures.bricks.bean.VideoInfo;
 import com.alibaba.pictures.bricks.component.home.feed.NoteContract;
 import com.alibaba.pictures.bricks.component.home.feed.NoteView;
 import com.alibaba.pictures.bricks.onearch.AbsView;
-import com.alibaba.pictures.bricks.util.C3550a;
 import com.alibaba.pictures.bricks.view.BricksStrokeLinearLayout;
 import com.alibaba.pictures.bricks.view.DMDigitTextView;
 import com.alibaba.pictures.bricks.view.GifCareImageView;
@@ -52,7 +51,7 @@ import tb.ux2;
 public final class NoteView extends AbsView<GenericItem<ItemValue>, NoteModel, NotePresent> implements NoteContract.View {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3471b Companion = new C3471b(null);
+    public static final b Companion = new b(null);
     @NotNull
     public static final String LABEL_TYPE_ACHIEVEMENT = "ACHIEVEMENT";
     @NotNull
@@ -113,12 +112,11 @@ public final class NoteView extends AbsView<GenericItem<ItemValue>, NoteModel, N
     private final DMDigitTextView tvDnaSimilarity;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.feed.NoteView$a */
     /* loaded from: classes7.dex */
-    public static final class C3470a implements NoteItemClickListener<NoteBean> {
+    public static final class a implements NoteItemClickListener<NoteBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3470a() {
+        a() {
         }
 
         @Override // com.alibaba.pictures.bricks.component.home.feed.NoteItemClickListener
@@ -156,13 +154,12 @@ public final class NoteView extends AbsView<GenericItem<ItemValue>, NoteModel, N
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.feed.NoteView$b */
     /* loaded from: classes7.dex */
-    public static final class C3471b {
-        private C3471b() {
+    public static final class b {
+        private b() {
         }
 
-        public /* synthetic */ C3471b(k50 k50Var) {
+        public /* synthetic */ b(k50 k50Var) {
             this();
         }
     }
@@ -239,7 +236,7 @@ public final class NoteView extends AbsView<GenericItem<ItemValue>, NoteModel, N
         Context context3 = view.getContext();
         b41.h(context3, "itemView.context");
         this.highLightStrokeWidth = s60Var.a(context3, 3.0f);
-        this.mListener = new C3470a();
+        this.mListener = new a();
     }
 
     private final void bindProjectInfo(NoteBean noteBean) {
@@ -481,13 +478,13 @@ public final class NoteView extends AbsView<GenericItem<ItemValue>, NoteModel, N
                 try {
                     if (!TextUtils.isEmpty(str)) {
                         Context context = this.itemView.getContext();
-                        int a = (int) (((DisplayMetrics.getwidthPixels(k62.b(context)) / 2.0f) - k62.a(context, 15.0f)) * 1.33f);
-                        if (a > 800) {
-                            a = 800;
+                        int a2 = (int) (((DisplayMetrics.getwidthPixels(k62.b(context)) / 2.0f) - k62.a(context, 15.0f)) * 1.33f);
+                        if (a2 > 800) {
+                            a2 = 800;
                         }
-                        str = C3550a.c(str, a, a);
+                        str = com.alibaba.pictures.bricks.util.a.c(str, a2, a2);
                         if (AppInfoProviderProxy.isDebuggable()) {
-                            nd.b("ImWidth = " + a + " Note Url = " + str, null, 2, null);
+                            nd.b("ImWidth = " + a2 + " Note Url = " + str, null, 2, null);
                         }
                     }
                 } catch (Exception e) {

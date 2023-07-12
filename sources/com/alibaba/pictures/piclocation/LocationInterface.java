@@ -14,17 +14,16 @@ import tb.ga1;
 /* loaded from: classes7.dex */
 public interface LocationInterface {
     @NotNull
-    public static final C3621a Companion = C3621a.a;
+    public static final a Companion = a.a;
     public static final long DEF_TIMEOUT = 15000;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.piclocation.LocationInterface$a */
     /* loaded from: classes7.dex */
-    public static final class C3621a {
+    public static final class a {
         public static final long DEF_TIMEOUT = 15000;
-        static final /* synthetic */ C3621a a = new C3621a();
+        static final /* synthetic */ a a = new a();
 
-        private C3621a() {
+        private a() {
         }
     }
 

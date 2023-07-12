@@ -10,15 +10,14 @@ public class kk2 {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kk2$b */
     /* loaded from: classes4.dex */
-    private static class C9367b {
+    private static class b {
         private static final kk2 a = new kk2();
     }
 
     public static final kk2 a() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "2022436939") ? (kk2) ipChange.ipc$dispatch("2022436939", new Object[0]) : C9367b.a;
+        return AndroidInstantRuntime.support(ipChange, "2022436939") ? (kk2) ipChange.ipc$dispatch("2022436939", new Object[0]) : b.a;
     }
 
     public void b(String str, String str2) {

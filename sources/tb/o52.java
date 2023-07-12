@@ -6,7 +6,6 @@ import kotlin.Result;
 import kotlin.SinceKotlin;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.intrinsics.CoroutineSingletons;
 import kotlin.coroutines.jvm.internal.CoroutineStackFrame;
 import org.jetbrains.annotations.NotNull;
@@ -25,19 +24,18 @@ public final class o52<T> implements Continuation<T>, CoroutineStackFrame {
     private volatile Object result;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.o52$a */
     /* loaded from: classes3.dex */
-    private static final class C9507a {
-        private C9507a() {
+    private static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9507a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     static {
-        new C9507a(null);
+        new a(null);
         b = AtomicReferenceFieldUpdater.newUpdater(o52.class, Object.class, "result");
     }
 
@@ -58,15 +56,15 @@ public final class o52<T> implements Continuation<T>, CoroutineStackFrame {
         CoroutineSingletons coroutineSingletons = CoroutineSingletons.UNDECIDED;
         if (obj == coroutineSingletons) {
             AtomicReferenceFieldUpdater<o52<?>, Object> atomicReferenceFieldUpdater = b;
-            d2 = C8234b.d();
+            d2 = kotlin.coroutines.intrinsics.b.d();
             if (atomicReferenceFieldUpdater.compareAndSet(this, coroutineSingletons, d2)) {
-                d3 = C8234b.d();
+                d3 = kotlin.coroutines.intrinsics.b.d();
                 return d3;
             }
             obj = this.result;
         }
         if (obj == CoroutineSingletons.RESUMED) {
-            d = C8234b.d();
+            d = kotlin.coroutines.intrinsics.b.d();
             return d;
         } else if (obj instanceof Result.Failure) {
             throw ((Result.Failure) obj).exception;
@@ -105,12 +103,12 @@ public final class o52<T> implements Continuation<T>, CoroutineStackFrame {
             Object obj2 = this.result;
             CoroutineSingletons coroutineSingletons = CoroutineSingletons.UNDECIDED;
             if (obj2 != coroutineSingletons) {
-                d = C8234b.d();
+                d = kotlin.coroutines.intrinsics.b.d();
                 if (obj2 != d) {
                     throw new IllegalStateException("Already resumed");
                 }
                 AtomicReferenceFieldUpdater<o52<?>, Object> atomicReferenceFieldUpdater = b;
-                d2 = C8234b.d();
+                d2 = kotlin.coroutines.intrinsics.b.d();
                 if (atomicReferenceFieldUpdater.compareAndSet(this, d2, CoroutineSingletons.RESUMED)) {
                     this.a.resumeWith(obj);
                     return;

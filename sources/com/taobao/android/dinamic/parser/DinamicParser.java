@@ -1,7 +1,6 @@
 package com.taobao.android.dinamic.parser;
 
-import com.taobao.android.dinamic.C6312a;
-import com.taobao.android.dinamic.C6313b;
+import com.taobao.android.dinamic.b;
 import com.taobao.android.dinamic.log.DinamicLog;
 import com.taobao.android.dinamic.tempate.DinamicTemplate;
 import org.xmlpull.v1.XmlPullParser;
@@ -37,16 +36,16 @@ public class DinamicParser {
 
         @Override // java.lang.Runnable
         public void run() {
-            if (C6313b.e()) {
-                DinamicLog.a(C6313b.TAG, "module=" + this.val$module + "read File=" + this.val$template + (((float) this.val$consumingTime) / 1000000.0d));
+            if (b.e()) {
+                DinamicLog.a(b.TAG, "module=" + this.val$module + "read File=" + this.val$template + (((float) this.val$consumingTime) / 1000000.0d));
             }
-            C6312a.h().d();
+            com.taobao.android.dinamic.a.h().d();
             throw null;
         }
     }
 
     public static XmlPullParser a(String str, DinamicTemplate dinamicTemplate, iy2 iy2Var) {
-        XmlPullParser openXmlResourceParser = (C6313b.e() && c.c(dinamicTemplate)) ? c.openXmlResourceParser(str, dinamicTemplate, iy2Var) : null;
+        XmlPullParser openXmlResourceParser = (b.e() && c.c(dinamicTemplate)) ? c.openXmlResourceParser(str, dinamicTemplate, iy2Var) : null;
         long nanoTime = System.nanoTime();
         if (!dinamicTemplate.isPreset()) {
             XmlPullParser openXmlResourceParser2 = b.openXmlResourceParser(str, dinamicTemplate, iy2Var);
@@ -64,6 +63,6 @@ public class DinamicParser {
     }
 
     private static void b(String str, DinamicTemplate dinamicTemplate, boolean z, long j) {
-        C6312a.h().d();
+        com.taobao.android.dinamic.a.h().d();
     }
 }

@@ -205,7 +205,7 @@ public class MultiTargetListView extends FrameLayout implements View.OnClickList
             ipChange.ipc$dispatch("-986787281", new Object[]{this});
             return;
         }
-        View inflate = LayoutInflater.from(this.mContext).inflate(R.C7942layout.dago_pgc_ykl_gift_target_list_view, this);
+        View inflate = LayoutInflater.from(this.mContext).inflate(R.layout.dago_pgc_ykl_gift_target_list_view, this);
         this.rootView = inflate;
         this.mListContainer = (LinearLayout) inflate.findViewById(R.id.voice_live_list_container);
         this.mTargetListView = (NestRecyclerView) this.rootView.findViewById(R.id.voice_live_list);
@@ -517,7 +517,7 @@ public class MultiTargetListView extends FrameLayout implements View.OnClickList
                 this.mCheckedModelList.add(giftTargetInfoBean);
                 if (i == 0) {
                     this.mDetailtarget = giftTargetInfoBean;
-                    DagoImageLoader.getInstance().showCircle(this.mContext, giftTargetInfoBean.icon, this.mIvAvater, R.C7941drawable.dago_pgc_ykl_gift_board_bg);
+                    DagoImageLoader.getInstance().showCircle(this.mContext, giftTargetInfoBean.icon, this.mIvAvater, R.drawable.dago_pgc_ykl_gift_board_bg);
                     TextView textView = this.mTagretDetailView;
                     textView.setText("送给：" + giftTargetInfoBean.desc);
                 }
@@ -554,7 +554,7 @@ public class MultiTargetListView extends FrameLayout implements View.OnClickList
         if (checkedModel != null) {
             this.nowCheckedId = checkedModel.id;
             this.isAttentioned = checkedModel.isAttentioned;
-            DagoImageLoader.getInstance().showCircle(this.mContext, this.mCheckedModel.icon, this.mIvAvater, R.C7941drawable.dago_pgc_ykl_gift_board_bg);
+            DagoImageLoader.getInstance().showCircle(this.mContext, this.mCheckedModel.icon, this.mIvAvater, R.drawable.dago_pgc_ykl_gift_board_bg);
             TextView textView = this.mTagretDetailView;
             textView.setText("送给：" + this.mCheckedModel.name);
             setAttentionUi();

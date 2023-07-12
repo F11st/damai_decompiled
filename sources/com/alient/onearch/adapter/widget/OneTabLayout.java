@@ -24,7 +24,7 @@ import com.uc.webview.export.extension.UCCore;
 import io.flutter.wpkbridge.WPKFactory;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -190,7 +190,7 @@ public class OneTabLayout extends TabLayout {
     }
 
     public int getItemLayoutId() {
-        return R.C4043layout.onearch_tab_layout_item;
+        return R.layout.onearch_tab_layout_item;
     }
 
     @Nullable
@@ -300,7 +300,7 @@ public class OneTabLayout extends TabLayout {
         for (Object obj : list) {
             int i3 = i2 + 1;
             if (i2 < 0) {
-                C8214m.p();
+                m.p();
             }
             RichTitle richTitle = (RichTitle) obj;
             TabLayout.Tab newTab = newTab();

@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Cancellable;
 import io.reactivex.internal.disposables.CancellableDisposable;
@@ -17,7 +17,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableCreate<T> extends AbstractC8149d<T> {
+public final class ObservableCreate<T> extends d<T> {
     final ObservableOnSubscribe<T> source;
 
     /* compiled from: Taobao */
@@ -235,7 +235,7 @@ public final class ObservableCreate<T> extends AbstractC8149d<T> {
         this.source = observableOnSubscribe;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super T> observer) {
         CreateEmitter createEmitter = new CreateEmitter(observer);
         observer.onSubscribe(createEmitter);

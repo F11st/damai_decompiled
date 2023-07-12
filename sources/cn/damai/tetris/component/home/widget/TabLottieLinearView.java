@@ -17,14 +17,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.viewpager.widget.ViewPager;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.uikit.snake.ScrollTitleBean;
-import com.airbnb.lottie.C2821a;
-import com.airbnb.lottie.C2861b;
 import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.LottieListener;
 import com.airbnb.lottie.LottieTask;
@@ -101,43 +98,41 @@ public class TabLottieLinearView extends TabLinearView {
             }
         }
 
-        /* synthetic */ PageListener(TabLottieLinearView tabLottieLinearView, C1881a c1881a) {
+        /* synthetic */ PageListener(TabLottieLinearView tabLottieLinearView, a aVar) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.widget.TabLottieLinearView$a */
     /* loaded from: classes7.dex */
-    public class C1881a implements LottieListener<C2821a> {
+    public class a implements LottieListener<com.airbnb.lottie.a> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ LottieAnimationView a;
 
-        C1881a(TabLottieLinearView tabLottieLinearView, LottieAnimationView lottieAnimationView) {
+        a(TabLottieLinearView tabLottieLinearView, LottieAnimationView lottieAnimationView) {
             this.a = lottieAnimationView;
         }
 
         @Override // com.airbnb.lottie.LottieListener
         /* renamed from: a */
-        public void onResult(C2821a c2821a) {
+        public void onResult(com.airbnb.lottie.a aVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-149696691")) {
-                ipChange.ipc$dispatch("-149696691", new Object[]{this, c2821a});
+                ipChange.ipc$dispatch("-149696691", new Object[]{this, aVar});
                 return;
             }
-            this.a.setComposition(c2821a);
+            this.a.setComposition(aVar);
             this.a.playAnimation();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.widget.TabLottieLinearView$b */
     /* loaded from: classes7.dex */
-    public class C1882b implements LottieListener {
+    public class b implements LottieListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ LottieAnimationView a;
 
-        C1882b(TabLottieLinearView tabLottieLinearView, LottieAnimationView lottieAnimationView) {
+        b(TabLottieLinearView tabLottieLinearView, LottieAnimationView lottieAnimationView) {
             this.a = lottieAnimationView;
         }
 
@@ -153,21 +148,20 @@ public class TabLottieLinearView extends TabLinearView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.widget.TabLottieLinearView$c */
     /* loaded from: classes7.dex */
-    public class C1883c implements DMImageCreator.DMImageFailListener {
+    public class c implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ LottieAnimationView a;
 
-        C1883c(TabLottieLinearView tabLottieLinearView, LottieAnimationView lottieAnimationView) {
+        c(TabLottieLinearView tabLottieLinearView, LottieAnimationView lottieAnimationView) {
             this.a = lottieAnimationView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1805006171")) {
-                ipChange.ipc$dispatch("-1805006171", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-1805006171", new Object[]{this, dVar});
             } else {
                 this.a.setVisibility(8);
             }
@@ -175,23 +169,22 @@ public class TabLottieLinearView extends TabLinearView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.widget.TabLottieLinearView$d */
     /* loaded from: classes7.dex */
-    public class C1884d implements DMImageCreator.DMImageSuccListener {
+    public class d implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ LottieAnimationView a;
 
-        C1884d(TabLottieLinearView tabLottieLinearView, LottieAnimationView lottieAnimationView) {
+        d(TabLottieLinearView tabLottieLinearView, LottieAnimationView lottieAnimationView) {
             this.a = lottieAnimationView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Drawable drawable;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1259180934")) {
-                ipChange.ipc$dispatch("-1259180934", new Object[]{this, c0502e});
-            } else if (c0502e == null || (drawable = c0502e.a) == null) {
+                ipChange.ipc$dispatch("-1259180934", new Object[]{this, eVar});
+            } else if (eVar == null || (drawable = eVar.a) == null) {
             } else {
                 this.a.setImageDrawable(drawable);
             }
@@ -199,13 +192,12 @@ public class TabLottieLinearView extends TabLinearView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.widget.TabLottieLinearView$e */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1885e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View.OnClickListener a;
 
-        View$OnClickListenerC1885e(TabLottieLinearView tabLottieLinearView, View.OnClickListener onClickListener) {
+        e(TabLottieLinearView tabLottieLinearView, View.OnClickListener onClickListener) {
             this.a = onClickListener;
         }
 
@@ -221,15 +213,14 @@ public class TabLottieLinearView extends TabLinearView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.widget.TabLottieLinearView$f */
     /* loaded from: classes16.dex */
-    public class C1886f implements ValueAnimator.AnimatorUpdateListener {
+    public class f implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ float a;
         final /* synthetic */ float b;
         final /* synthetic */ float c;
 
-        C1886f(float f, float f2, float f3) {
+        f(float f, float f2, float f3) {
             this.a = f;
             this.b = f2;
             this.c = f3;
@@ -292,10 +283,10 @@ public class TabLottieLinearView extends TabLinearView {
         }
         if (childAt != null) {
             float right = childAt.getRight() - childAt.getLeft();
-            float f = this.mLineWidth;
-            float left = childAt.getLeft() + ((right - f) / 2.0f);
+            float f2 = this.mLineWidth;
+            float left = childAt.getLeft() + ((right - f2) / 2.0f);
             this.mStartX = left;
-            this.mStopX = left + f;
+            this.mStopX = left + f2;
         }
         if (this.mLastStartX == 0.0f && this.mLastStopX == 0.0f) {
             this.mLastStartX = this.mStartX;
@@ -340,9 +331,9 @@ public class TabLottieLinearView extends TabLinearView {
         paint.setStrokeWidth(dip2px(4.0f));
         this.mPaint.setStrokeCap(Paint.Cap.ROUND);
         this.mLineWidth = dip2px(18.0f);
-        float f = this.mStartX;
+        float f2 = this.mStartX;
         int i = this.mStartY;
-        this.mPaint.setShader(new LinearGradient(f, i, this.mStopX, i, Color.parseColor("#FF70B8"), Color.parseColor("#FFBEED"), Shader.TileMode.CLAMP));
+        this.mPaint.setShader(new LinearGradient(f2, i, this.mStopX, i, Color.parseColor("#FF70B8"), Color.parseColor("#FFBEED"), Shader.TileMode.CLAMP));
         this.mPaint.setAntiAlias(true);
     }
 
@@ -360,16 +351,16 @@ public class TabLottieLinearView extends TabLinearView {
             Paint paint = this.mPaint;
             if (paint != null) {
                 if (this.colorMode) {
-                    float f = this.mStartX;
+                    float f2 = this.mStartX;
                     int i = this.mStartY;
-                    this.mPaint.setShader(new LinearGradient(f, i, this.mStopX, i, Color.parseColor("#FF70B8"), Color.parseColor("#FFBEED"), Shader.TileMode.CLAMP));
+                    this.mPaint.setShader(new LinearGradient(f2, i, this.mStopX, i, Color.parseColor("#FF70B8"), Color.parseColor("#FFBEED"), Shader.TileMode.CLAMP));
                 } else {
                     paint.setShader(null);
                     this.mPaint.setColor(this.mContext.getResources().getColor(R$color.white));
                 }
-                float f2 = this.mStartX;
+                float f3 = this.mStartX;
                 int i2 = this.mStartY;
-                canvas.drawLine(f2, i2, this.mStopX, i2, this.mPaint);
+                canvas.drawLine(f3, i2, this.mStopX, i2, this.mPaint);
             }
         }
     }
@@ -512,14 +503,14 @@ public class TabLottieLinearView extends TabLinearView {
                         lottieAnimationView.setVisibility(0);
                         if (!TextUtils.isEmpty(scrollTitleBean.picJson)) {
                             String str = scrollTitleBean.picJson;
-                            LottieTask<C2821a> m = C2861b.m(str, MD5Util.getMD5(str));
-                            m.f(new C1881a(this, lottieAnimationView));
-                            m.e(new C1882b(this, lottieAnimationView));
+                            LottieTask<com.airbnb.lottie.a> m = com.airbnb.lottie.b.m(str, MD5Util.getMD5(str));
+                            m.f(new a(this, lottieAnimationView));
+                            m.e(new b(this, lottieAnimationView));
                         } else if (!TextUtils.isEmpty(scrollTitleBean.picUrl)) {
-                            C0504a.b().h(this.mContext).c(scrollTitleBean.picUrl).n(new C1884d(this, lottieAnimationView)).e(new C1883c(this, lottieAnimationView)).f();
+                            cn.damai.common.image.a.b().h(this.mContext).c(scrollTitleBean.picUrl).n(new d(this, lottieAnimationView)).e(new c(this, lottieAnimationView)).f();
                         }
                     }
-                    inflate.setOnClickListener(new View$OnClickListenerC1885e(this, onClickListener));
+                    inflate.setOnClickListener(new e(this, onClickListener));
                     addView(inflate);
                     OnBindListener onBindListener = this.listener;
                     if (onBindListener != null) {
@@ -549,13 +540,13 @@ public class TabLottieLinearView extends TabLinearView {
     }
 
     @Override // cn.damai.tetris.component.home.widget.TabLinearView
-    public void startAnim(int i, float f, float f2, float f3, float f4) {
+    public void startAnim(int i, float f2, float f3, float f4, float f5) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "307390271")) {
-            ipChange.ipc$dispatch("307390271", new Object[]{this, Integer.valueOf(i), Float.valueOf(f), Float.valueOf(f2), Float.valueOf(f3), Float.valueOf(f4)});
-        } else if (f == f3) {
-            this.mStartX = f3;
-            this.mStopX = f4;
+            ipChange.ipc$dispatch("307390271", new Object[]{this, Integer.valueOf(i), Float.valueOf(f2), Float.valueOf(f3), Float.valueOf(f4), Float.valueOf(f5)});
+        } else if (f2 == f4) {
+            this.mStartX = f4;
+            this.mStopX = f5;
             TextView textView = this.mTv;
             if (textView != null) {
                 textView.setTextSize(1, this.mDaSize);
@@ -566,7 +557,7 @@ public class TabLottieLinearView extends TabLinearView {
         } else {
             ValueAnimator ofInt = ValueAnimator.ofInt(0, 100);
             ofInt.setDuration(200L);
-            ofInt.addUpdateListener(new C1886f(f, f3, f4));
+            ofInt.addUpdateListener(new f(f2, f4, f5));
             ofInt.start();
         }
     }

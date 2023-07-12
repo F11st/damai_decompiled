@@ -141,7 +141,7 @@ public class RoundGiftButton extends FrameLayout implements ValueAnimator.Animat
         this.mProgressPadding = DensityUtil.dip2px(context, 3.0f);
         Context context2 = getContext();
         this.mContext = context2;
-        LayoutInflater.from(context2).inflate(R.C7942layout.dago_pgc_ykl_round_gift_bt, this);
+        LayoutInflater.from(context2).inflate(R.layout.dago_pgc_ykl_round_gift_bt, this);
         this.mCountNumView = (TextView) findViewById(R.id.countnum);
         this.mRelayoutBt = findViewById(R.id.rel_bt);
         this.mOutterBgView = findViewById(R.id.out_bg);
@@ -337,7 +337,7 @@ public class RoundGiftButton extends FrameLayout implements ValueAnimator.Animat
         this.showIcon = z;
         if (z) {
             this.mGiftIconBreathAnim = AnimationUtils.loadAnimation(getContext(), R.anim.dago_pgc_gift_icon_breath_anim);
-            this.mOutterBgView.setBackgroundResource(R.C7941drawable.dago_pgc_ykl_gift_serial_send_bt_bg);
+            this.mOutterBgView.setBackgroundResource(R.drawable.dago_pgc_ykl_gift_serial_send_bt_bg);
             this.mComboIconLayout.setVisibility(0);
             this.mComboTextLayout.setVisibility(8);
             return;

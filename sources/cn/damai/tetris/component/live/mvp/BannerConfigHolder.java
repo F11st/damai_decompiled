@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.tetris.component.live.bean.LiveHeaderCardItemBean;
-import cn.damai.uikit.image.C2497a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 
@@ -23,14 +22,13 @@ public class BannerConfigHolder extends RecyclerView.ViewHolder {
     private TextView d;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.live.mvp.BannerConfigHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1916a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ BannerPresenter a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC1916a(BannerConfigHolder bannerConfigHolder, BannerPresenter bannerPresenter, int i) {
+        a(BannerConfigHolder bannerConfigHolder, BannerPresenter bannerPresenter, int i) {
             this.a = bannerPresenter;
             this.b = i;
         }
@@ -75,9 +73,9 @@ public class BannerConfigHolder extends RecyclerView.ViewHolder {
             } else {
                 this.b.setVisibility(8);
             }
-            C2497a.a().loadinto(liveHeaderCardItemBean.pic, this.c);
+            cn.damai.uikit.image.a.a().loadinto(liveHeaderCardItemBean.pic, this.c);
             this.d.setText(liveHeaderCardItemBean.name);
-            this.itemView.setOnClickListener(new View$OnClickListenerC1916a(this, bannerPresenter, i));
+            this.itemView.setOnClickListener(new a(this, bannerPresenter, i));
         }
     }
 }

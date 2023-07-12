@@ -284,7 +284,7 @@ public class ActionMenuPresenter extends BaseMenuPresenter implements ActionProv
     }
 
     public ActionMenuPresenter(Context context) {
-        super(context, R.C0013layout.abc_action_menu_layout, R.C0013layout.abc_action_menu_item_layout);
+        super(context, R.layout.abc_action_menu_layout, R.layout.abc_action_menu_item_layout);
         this.mActionButtonGroups = new SparseBooleanArray();
         this.mPopupPresenterCallback = new PopupPresenterCallback();
     }

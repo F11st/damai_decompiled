@@ -1,20 +1,20 @@
 package com.squareup.okhttp.internal;
 
 import java.io.IOException;
-import okio.AbstractC8839c;
 import okio.Buffer;
 import okio.Sink;
+import okio.c;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
-class FaultHidingSink extends AbstractC8839c {
+class FaultHidingSink extends c {
     private boolean hasErrors;
 
     public FaultHidingSink(Sink sink) {
         super(sink);
     }
 
-    @Override // okio.AbstractC8839c, okio.Sink, java.io.Closeable, java.lang.AutoCloseable
+    @Override // okio.c, okio.Sink, java.io.Closeable, java.lang.AutoCloseable
     public void close() throws IOException {
         if (this.hasErrors) {
             return;
@@ -27,7 +27,7 @@ class FaultHidingSink extends AbstractC8839c {
         }
     }
 
-    @Override // okio.AbstractC8839c, okio.Sink, java.io.Flushable
+    @Override // okio.c, okio.Sink, java.io.Flushable
     public void flush() throws IOException {
         if (this.hasErrors) {
             return;
@@ -43,7 +43,7 @@ class FaultHidingSink extends AbstractC8839c {
     protected void onException(IOException iOException) {
     }
 
-    @Override // okio.AbstractC8839c, okio.Sink
+    @Override // okio.c, okio.Sink
     public void write(Buffer buffer, long j) throws IOException {
         if (this.hasErrors) {
             buffer.skip(j);

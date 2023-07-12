@@ -51,25 +51,24 @@ public class RealNameAuthErrorActivity extends DamaiBaseActivity<RealNameVerifyS
     private RealNameErrorDetailFragment mErrorDetailFragment;
     private ImageView mErrorImg;
     private LinearLayout mErrorReasonLayout;
-    private HandlerC1408b mHandler;
+    private b mHandler;
     private TextView mLeftBtn;
     private TextView mRightBtn;
     private TextView mShowErrorDetailBtn;
     private TextView mTitleMsg;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.RealNameAuthErrorActivity$a */
     /* loaded from: classes6.dex */
-    public class C1406a implements AliMeUtil.UserCodeListener {
+    public class a implements AliMeUtil.UserCodeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.mine.activity.RealNameAuthErrorActivity$a$a */
+        /* renamed from: cn.damai.mine.activity.RealNameAuthErrorActivity$a$a  reason: collision with other inner class name */
         /* loaded from: classes6.dex */
-        public class C1407a implements AliMeUtil.AliMeTokenListener {
+        public class C0055a implements AliMeUtil.AliMeTokenListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1407a() {
+            C0055a() {
             }
 
             @Override // cn.damai.im.AliMeUtil.AliMeTokenListener
@@ -93,7 +92,7 @@ public class RealNameAuthErrorActivity extends DamaiBaseActivity<RealNameVerifyS
             }
         }
 
-        C1406a() {
+        a() {
         }
 
         @Override // cn.damai.im.AliMeUtil.UserCodeListener
@@ -112,18 +111,17 @@ public class RealNameAuthErrorActivity extends DamaiBaseActivity<RealNameVerifyS
             if (AndroidInstantRuntime.support(ipChange, "-39070265")) {
                 ipChange.ipc$dispatch("-39070265", new Object[]{this, Long.valueOf(j)});
             } else {
-                AliMeUtil.e(j, AliMeUtil.FROM_REALNAME_AUTH, new C1407a());
+                AliMeUtil.e(j, AliMeUtil.FROM_REALNAME_AUTH, new C0055a());
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.RealNameAuthErrorActivity$b */
     /* loaded from: classes15.dex */
-    public class HandlerC1408b extends Handler {
+    public class b extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC1408b() {
+        b() {
         }
 
         @Override // android.os.Handler
@@ -279,7 +277,7 @@ public class RealNameAuthErrorActivity extends DamaiBaseActivity<RealNameVerifyS
             return;
         }
         if (this.mHandler == null) {
-            this.mHandler = new HandlerC1408b();
+            this.mHandler = new b();
         }
         SoftInputUtils.a(this);
         this.mErrorDetailFragment = new RealNameErrorDetailFragment();
@@ -352,7 +350,7 @@ public class RealNameAuthErrorActivity extends DamaiBaseActivity<RealNameVerifyS
         if (AndroidInstantRuntime.support(ipChange, "603537051")) {
             ipChange.ipc$dispatch("603537051", new Object[]{this});
         } else {
-            AliMeUtil.j(new C1406a());
+            AliMeUtil.j(new a());
         }
     }
 

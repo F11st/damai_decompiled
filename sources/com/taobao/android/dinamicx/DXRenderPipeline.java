@@ -4,8 +4,8 @@ import android.os.Looper;
 import android.text.TextUtils;
 import android.view.View;
 import com.alibaba.fastjson.JSONObject;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DXRenderOptions;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.model.DXLongSparseArray;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import com.taobao.android.dinamicx.notification.DXNotificationCenter;
@@ -39,20 +39,20 @@ public class DXRenderPipeline extends DXRenderPipelineBase implements IDXControl
     public static final String MEASURE_TIME = "measureTime";
     public static final String RENDER_TIME = "renderTime";
     DXNotificationCenter f;
-    C6385l g;
-    C6379g h;
-    C6382i i;
+    l g;
+    g h;
+    i i;
     DXTemplateManager j;
     WeakReference<bu> k;
-    WeakReference<C6380h> l;
+    WeakReference<h> l;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public DXRenderPipeline(C6367d c6367d, DXTemplateManager dXTemplateManager) {
-        super(c6367d);
-        this.g = new C6385l();
-        this.h = new C6379g();
-        this.i = new C6382i();
-        DinamicXEngine e = c6367d.e();
+    public DXRenderPipeline(d dVar, DXTemplateManager dXTemplateManager) {
+        super(dVar);
+        this.g = new l();
+        this.h = new g();
+        this.i = new i();
+        DinamicXEngine e = dVar.e();
         if (e == null) {
             return;
         }
@@ -98,11 +98,11 @@ public class DXRenderPipeline extends DXRenderPipelineBase implements IDXControl
         }
     }
 
-    private boolean l(C6368e c6368e) {
-        List<C6368e.C6369a> list;
-        if (wt.x0(this.b) && c6368e != null && (list = c6368e.c) != null && !list.isEmpty()) {
-            for (C6368e.C6369a c6369a : c6368e.c) {
-                if (c6369a.d == 80001) {
+    private boolean l(e eVar) {
+        List<e.a> list;
+        if (wt.x0(this.b) && eVar != null && (list = eVar.c) != null && !list.isEmpty()) {
+            for (e.a aVar : eVar.c) {
+                if (aVar.d == 80001) {
                     return true;
                 }
             }
@@ -146,7 +146,7 @@ public class DXRenderPipeline extends DXRenderPipelineBase implements IDXControl
         if ((obj instanceof DXWidgetNode) && (dXWidgetNode = (DXWidgetNode) obj) != null && (dXRuntimeContext = dXWidgetNode.getDXRuntimeContext()) != null && dXRuntimeContext.renderType == 0 && (rootView = dXRuntimeContext.getRootView()) != null && dXRuntimeContext.dxTemplateItem.equals(rootView.dxTemplateItem) && dXRuntimeContext.getData() == rootView.data) {
             DXRuntimeContext cloneWithWidgetNode = dXWidgetNode.getDXRuntimeContext().cloneWithWidgetNode(dXWidgetNode);
             cloneWithWidgetNode.refreshType = f00Var.e;
-            DXRenderOptions k = new DXRenderOptions.C6359b().o(true).l(f00Var.d).u(dXRuntimeContext.getRootWidthSpec()).m(dXRuntimeContext.getRootHeightSpec()).s(8).k();
+            DXRenderOptions k = new DXRenderOptions.b().o(true).l(f00Var.d).u(dXRuntimeContext.getRootWidthSpec()).m(dXRuntimeContext.getRootHeightSpec()).s(8).k();
             if (cloneWithWidgetNode.isRefreshPart()) {
                 dXWidgetNode.updateRefreshType(1);
             }
@@ -162,9 +162,9 @@ public class DXRenderPipeline extends DXRenderPipelineBase implements IDXControl
             }
         } catch (Exception e) {
             ry.b(e);
-            C6368e c6368e = new C6368e(a());
-            c6368e.c.add(new C6368e.C6369a("Pipeline", "Pipeline_Stage_Reset_Bindingx", C6368e.RESET_ANIMATION_CRASH, ry.a(e)));
-            DXAppMonitor.n(c6368e);
+            e eVar = new e(a());
+            eVar.c.add(new e.a("Pipeline", "Pipeline_Stage_Reset_Bindingx", e.RESET_ANIMATION_CRASH, ry.a(e)));
+            DXAppMonitor.n(eVar);
         }
     }
 
@@ -180,16 +180,16 @@ public class DXRenderPipeline extends DXRenderPipelineBase implements IDXControl
         }
     }
 
-    private void u(C6368e c6368e, String str, int i, String str2, Map<String, String> map, boolean z) {
-        if (c6368e == null || c6368e.c == null) {
+    private void u(e eVar, String str, int i, String str2, Map<String, String> map, boolean z) {
+        if (eVar == null || eVar.c == null) {
             return;
         }
-        C6368e.C6369a c6369a = new C6368e.C6369a("Pipeline", str, i);
-        c6369a.e = str2;
-        c6369a.f = map;
-        c6368e.c.add(c6369a);
+        e.a aVar = new e.a("Pipeline", str, i);
+        aVar.e = str2;
+        aVar.f = map;
+        eVar.c.add(aVar);
         if (z) {
-            DXAppMonitor.n(c6368e);
+            DXAppMonitor.n(eVar);
         }
     }
 
@@ -256,7 +256,7 @@ public class DXRenderPipeline extends DXRenderPipelineBase implements IDXControl
         return this.k.get();
     }
 
-    public C6380h j() {
+    public h j() {
         return this.l.get();
     }
 

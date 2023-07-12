@@ -27,9 +27,8 @@ abstract class AbstractIterator<T> implements Iterator<T> {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.base.AbstractIterator$a */
     /* loaded from: classes10.dex */
-    public static /* synthetic */ class C4821a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -69,7 +68,7 @@ abstract class AbstractIterator<T> implements Iterator<T> {
     @Override // java.util.Iterator
     public final boolean hasNext() {
         du1.w(this.a != State.FAILED);
-        int i = C4821a.a[this.a.ordinal()];
+        int i = a.a[this.a.ordinal()];
         if (i != 1) {
             if (i != 2) {
                 return c();

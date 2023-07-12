@@ -1,7 +1,7 @@
 package cn.damai.common.soloader.reporter;
 
 import android.text.TextUtils;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
@@ -46,9 +46,8 @@ public class SoLoadMonitor {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.soloader.reporter.SoLoadMonitor$a */
     /* loaded from: classes13.dex */
-    public static /* synthetic */ class C0524a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -130,7 +129,7 @@ public class SoLoadMonitor {
             return;
         }
         HashMap hashMap = new HashMap();
-        switch (C0524a.a[monitorType.ordinal()]) {
+        switch (a.a[monitorType.ordinal()]) {
             case 1:
                 str2 = SOLOAD_CHECK_SUCCESS;
                 break;
@@ -181,6 +180,6 @@ public class SoLoadMonitor {
             hashMap.put("contentlabel", str);
         }
         hashMap.put("titlelabel", str2);
-        C0529c.e().A(hashMap, "SoLoad", "SoLoadDynamicsService");
+        c.e().A(hashMap, "SoLoad", "SoLoadDynamicsService");
     }
 }

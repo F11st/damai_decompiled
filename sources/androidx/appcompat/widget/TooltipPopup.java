@@ -16,7 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 import androidx.appcompat.R;
 import com.youku.arch.v3.data.Constants;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
@@ -39,7 +39,7 @@ class TooltipPopup {
         this.mTmpAnchorPos = new int[2];
         this.mTmpAppPos = new int[2];
         this.mContext = context;
-        View inflate = LayoutInflater.from(context).inflate(R.C0013layout.abc_tooltip, (ViewGroup) null);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.abc_tooltip, (ViewGroup) null);
         this.mContentView = inflate;
         this.mMessageView = (TextView) inflate.findViewById(R.id.message);
         layoutParams.setTitle(getClass().getSimpleName());
@@ -48,7 +48,7 @@ class TooltipPopup {
         layoutParams.width = -2;
         layoutParams.height = -2;
         layoutParams.format = -3;
-        layoutParams.windowAnimations = R.C0014style.Animation_AppCompat_Tooltip;
+        layoutParams.windowAnimations = R.style.Animation_AppCompat_Tooltip;
         layoutParams.flags = 24;
     }
 
@@ -128,7 +128,7 @@ class TooltipPopup {
     /* JADX INFO: Access modifiers changed from: package-private */
     public void hide() {
         if (isShowing()) {
-            ((WindowManager) this.mContext.getSystemService(C9796v.ATTACH_MODE_WINDOW)).removeView(this.mContentView);
+            ((WindowManager) this.mContext.getSystemService(v.ATTACH_MODE_WINDOW)).removeView(this.mContentView);
         }
     }
 
@@ -143,6 +143,6 @@ class TooltipPopup {
         }
         this.mMessageView.setText(charSequence);
         computePosition(view, i, i2, z, this.mLayoutParams);
-        ((WindowManager) this.mContext.getSystemService(C9796v.ATTACH_MODE_WINDOW)).addView(this.mContentView, this.mLayoutParams);
+        ((WindowManager) this.mContext.getSystemService(v.ATTACH_MODE_WINDOW)).addView(this.mContentView, this.mLayoutParams);
     }
 }

@@ -22,31 +22,31 @@ public abstract class FixAreaLayoutHelper extends BaseLayoutHelper {
         this.a = wj0Var;
     }
 
-    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.a
     public void adjustLayout(int i, int i2, LayoutManagerHelper layoutManagerHelper) {
     }
 
-    @Override // com.alibaba.android.vlayout.layout.AbstractC3303d, com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.layout.d, com.alibaba.android.vlayout.a
     public int computeMarginEnd(int i, boolean z, boolean z2, LayoutManagerHelper layoutManagerHelper) {
         return 0;
     }
 
-    @Override // com.alibaba.android.vlayout.layout.AbstractC3303d, com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.layout.d, com.alibaba.android.vlayout.a
     public int computeMarginStart(int i, boolean z, boolean z2, LayoutManagerHelper layoutManagerHelper) {
         return 0;
     }
 
-    @Override // com.alibaba.android.vlayout.layout.AbstractC3303d, com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.layout.d, com.alibaba.android.vlayout.a
     public int computePaddingEnd(int i, boolean z, boolean z2, LayoutManagerHelper layoutManagerHelper) {
         return 0;
     }
 
-    @Override // com.alibaba.android.vlayout.layout.AbstractC3303d, com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.layout.d, com.alibaba.android.vlayout.a
     public int computePaddingStart(int i, boolean z, boolean z2, LayoutManagerHelper layoutManagerHelper) {
         return 0;
     }
 
-    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.a
     public boolean isFixLayout() {
         return true;
     }

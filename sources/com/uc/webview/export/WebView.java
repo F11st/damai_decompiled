@@ -32,16 +32,13 @@ import com.uc.webview.export.annotations.Reflection;
 import com.uc.webview.export.extension.CommonExtension;
 import com.uc.webview.export.extension.UCCore;
 import com.uc.webview.export.extension.UCExtension;
-import com.uc.webview.export.internal.AbstractC7213a;
 import com.uc.webview.export.internal.SDKFactory;
 import com.uc.webview.export.internal.interfaces.IWebView;
 import com.uc.webview.export.internal.interfaces.IWebViewOverride;
 import com.uc.webview.export.internal.interfaces.InvokeObject;
-import com.uc.webview.export.internal.uc.startup.C7302b;
-import com.uc.webview.export.internal.utility.C7327d;
-import com.uc.webview.export.internal.utility.C7345n;
-import com.uc.webview.export.internal.utility.C7349p;
 import com.uc.webview.export.internal.utility.ReflectionUtil;
+import com.uc.webview.export.internal.utility.n;
+import com.uc.webview.export.internal.utility.p;
 import java.lang.reflect.Field;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -60,11 +57,11 @@ public class WebView extends FrameLayout implements IWebViewOverride {
     public static final String SCHEME_MAILTO = "mailto:";
     public static final String SCHEME_TEL = "tel:";
     private WebSettings a;
-    private AbstractC7213a b;
+    private com.uc.webview.export.internal.a b;
     private CommonExtension c;
     private UCExtension d;
     private boolean e;
-    private C7175a f;
+    private a f;
     private int g;
     private WebViewCountting h;
     private boolean i;
@@ -149,12 +146,11 @@ public class WebView extends FrameLayout implements IWebViewOverride {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.uc.webview.export.WebView$a */
     /* loaded from: classes11.dex */
-    static class C7175a extends MutableContextWrapper {
+    static class a extends MutableContextWrapper {
         WebView a;
 
-        public C7175a(Context context, WebView webView) {
+        public a(Context context, WebView webView) {
             super(context);
             if (context != null) {
                 this.a = webView;
@@ -174,9 +170,8 @@ public class WebView extends FrameLayout implements IWebViewOverride {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.uc.webview.export.WebView$b */
     /* loaded from: classes11.dex */
-    public static abstract class AbstractC7176b {
+    public static abstract class b {
     }
 
     public WebView(Context context) throws RuntimeException {
@@ -184,7 +179,7 @@ public class WebView extends FrameLayout implements IWebViewOverride {
     }
 
     public static <T extends WebView> void asyncNew(Class<T> cls, Class<?>[] clsArr, Object[] objArr, ValueCallback<Pair<T, Throwable>> valueCallback) {
-        C7345n.a(new RunnableC7207e(cls, clsArr, objArr, valueCallback));
+        n.a(new e(cls, clsArr, objArr, valueCallback));
     }
 
     private void d() {
@@ -197,7 +192,7 @@ public class WebView extends FrameLayout implements IWebViewOverride {
     }
 
     private static void e() {
-        C7349p.a((Map<String, String>) new C7177a());
+        p.a((Map<String, String>) new com.uc.webview.export.a());
     }
 
     public static void enableSlowWholeDocumentDraw() {
@@ -442,15 +437,15 @@ public class WebView extends FrameLayout implements IWebViewOverride {
         this.b = null;
         this.c = null;
         this.d = null;
-        C7175a c7175a = this.f;
-        if (c7175a != null) {
-            Context baseContext = c7175a.getBaseContext();
+        a aVar = this.f;
+        if (aVar != null) {
+            Context baseContext = aVar.getBaseContext();
             if (baseContext != null) {
                 try {
                     Field declaredField = ContextWrapper.class.getDeclaredField("mBase");
                     if (declaredField != null) {
                         declaredField.setAccessible(true);
-                        declaredField.set(c7175a, baseContext.getApplicationContext());
+                        declaredField.set(aVar, baseContext.getApplicationContext());
                     }
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
@@ -458,8 +453,8 @@ public class WebView extends FrameLayout implements IWebViewOverride {
                     e2.printStackTrace();
                 }
             }
-            if (c7175a.a != null) {
-                c7175a.a = null;
+            if (aVar.a != null) {
+                aVar.a = null;
             }
             this.f = null;
         }
@@ -668,7 +663,7 @@ public class WebView extends FrameLayout implements IWebViewOverride {
         if (iWebView == null || this.b == null) {
             return;
         }
-        AbstractC7213a.a(iWebView);
+        com.uc.webview.export.internal.a.a(iWebView);
     }
 
     @Override // android.view.View
@@ -688,13 +683,13 @@ public class WebView extends FrameLayout implements IWebViewOverride {
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.view.ViewGroup, android.view.View
     public void onDetachedFromWindow() {
-        AbstractC7213a abstractC7213a;
+        com.uc.webview.export.internal.a aVar;
         super.onDetachedFromWindow();
         IWebView iWebView = this.mWebView;
-        if (iWebView == null || (abstractC7213a = this.b) == null) {
+        if (iWebView == null || (aVar = this.b) == null) {
             return;
         }
-        abstractC7213a.b(iWebView);
+        aVar.b(iWebView);
     }
 
     @Override // android.view.ViewGroup
@@ -723,12 +718,12 @@ public class WebView extends FrameLayout implements IWebViewOverride {
 
     @Override // android.view.View
     protected void onSizeChanged(int i, int i2, int i3, int i4) {
-        AbstractC7213a abstractC7213a;
+        com.uc.webview.export.internal.a aVar;
         super.onSizeChanged(i, i2, i3, i4);
-        if (this.mWebView == null || (abstractC7213a = this.b) == null) {
+        if (this.mWebView == null || (aVar = this.b) == null) {
             return;
         }
-        abstractC7213a.a(i, i2);
+        aVar.a(i, i2);
     }
 
     @Override // android.view.View
@@ -739,13 +734,13 @@ public class WebView extends FrameLayout implements IWebViewOverride {
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.view.View
     public void onWindowVisibilityChanged(int i) {
-        AbstractC7213a abstractC7213a;
+        com.uc.webview.export.internal.a aVar;
         super.onWindowVisibilityChanged(i);
         IWebView iWebView = this.mWebView;
-        if (iWebView == null || (abstractC7213a = this.b) == null) {
+        if (iWebView == null || (aVar = this.b) == null) {
             return;
         }
-        abstractC7213a.a(iWebView, i);
+        aVar.a(iWebView, i);
     }
 
     @Override // android.view.View
@@ -773,8 +768,8 @@ public class WebView extends FrameLayout implements IWebViewOverride {
         this.mWebView.postUrl(str, bArr);
     }
 
-    public void postVisualStateCallback(long j2, AbstractC7176b abstractC7176b) {
-        this.mWebView.postVisualStateCallback(j2, abstractC7176b);
+    public void postVisualStateCallback(long j2, b bVar) {
+        this.mWebView.postVisualStateCallback(j2, bVar);
     }
 
     public void postWebMessage(WebMessage webMessage, Uri uri) {
@@ -925,7 +920,7 @@ public class WebView extends FrameLayout implements IWebViewOverride {
     public void setOnKeyListener(View.OnKeyListener onKeyListener) {
         d();
         if (onKeyListener != null) {
-            this.mWebView.setOnKeyListener(new View$OnKeyListenerC7206d(this, onKeyListener));
+            this.mWebView.setOnKeyListener(new d(this, onKeyListener));
         } else {
             this.mWebView.setOnKeyListener(null);
         }
@@ -935,7 +930,7 @@ public class WebView extends FrameLayout implements IWebViewOverride {
     public void setOnLongClickListener(View.OnLongClickListener onLongClickListener) {
         d();
         if (onLongClickListener != null) {
-            this.mWebView.setOnLongClickListener(new View$OnLongClickListenerC7178b(this, onLongClickListener));
+            this.mWebView.setOnLongClickListener(new com.uc.webview.export.b(this, onLongClickListener));
         } else {
             this.mWebView.setOnLongClickListener(null);
         }
@@ -945,7 +940,7 @@ public class WebView extends FrameLayout implements IWebViewOverride {
     public void setOnTouchListener(View.OnTouchListener onTouchListener) {
         d();
         if (onTouchListener != null) {
-            this.mWebView.setOnTouchListener(new View$OnTouchListenerC7205c(this, onTouchListener));
+            this.mWebView.setOnTouchListener(new c(this, onTouchListener));
         } else {
             this.mWebView.setOnTouchListener(null);
         }
@@ -1100,7 +1095,7 @@ public class WebView extends FrameLayout implements IWebViewOverride {
         super.addView(view);
     }
 
-    private WebView(Context context, AttributeSet attributeSet, int i, boolean z, byte b) throws RuntimeException {
+    private WebView(Context context, AttributeSet attributeSet, int i, boolean z, byte b2) throws RuntimeException {
         super(context, attributeSet, i);
         this.a = null;
         this.b = null;
@@ -1112,15 +1107,15 @@ public class WebView extends FrameLayout implements IWebViewOverride {
         if (context != null) {
             if (m) {
                 com.uc.webview.export.cyclone.Log.rInfo("ucstartup", "begin create new first export WebView");
-                C7327d.a("HasNewUCWebView", "true");
-                C7302b.a(526);
+                com.uc.webview.export.internal.utility.d.a("HasNewUCWebView", "true");
+                com.uc.webview.export.internal.uc.startup.b.a(526);
             }
-            C7175a c7175a = new C7175a(context, this);
-            this.f = c7175a;
+            a aVar = new a(context, this);
+            this.f = aVar;
             int[] iArr = new int[1];
-            IWebView a = SDKFactory.a(c7175a, attributeSet, this, z, iArr);
-            this.mWebView = a;
-            a.setOverrideObject(this);
+            IWebView a2 = SDKFactory.a(aVar, attributeSet, this, z, iArr);
+            this.mWebView = a2;
+            a2.setOverrideObject(this);
             int i2 = iArr[0];
             this.g = i2;
             int[] iArr2 = sInstanceCount;
@@ -1149,7 +1144,7 @@ public class WebView extends FrameLayout implements IWebViewOverride {
             }
             if (m) {
                 m = false;
-                C7302b.a(527);
+                com.uc.webview.export.internal.uc.startup.b.a(527);
                 com.uc.webview.export.cyclone.Log.rInfo("ucstartup", "end create first export WebView");
             }
             j.incrementAndGet();

@@ -12,10 +12,10 @@ import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.live.livesdk.preloader.Preloader;
 import java.util.HashMap;
 import java.util.Map;
-import tb.C9548pb;
 import tb.cb2;
 import tb.d23;
 import tb.ja;
+import tb.pb;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -36,11 +36,11 @@ public class VotePresenter extends BasePresenter<VoteModel, VoteView, BaseSectio
             if (cb2.f(argsMap)) {
                 return;
             }
-            String str = argsMap.get(C9548pb.CNT_CONTENT_ID);
+            String str = argsMap.get(pb.CNT_CONTENT_ID);
             if (TextUtils.isEmpty(str)) {
                 return;
             }
-            hashMap.put(C9548pb.CNT_CONTENT_ID, str);
+            hashMap.put(pb.CNT_CONTENT_ID, str);
         }
     }
 

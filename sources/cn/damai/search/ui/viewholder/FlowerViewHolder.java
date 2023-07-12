@@ -25,12 +25,11 @@ public class FlowerViewHolder extends RecyclerView.ViewHolder {
     private SearchListener d;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.viewholder.FlowerViewHolder$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1620a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1620a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -45,12 +44,11 @@ public class FlowerViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.viewholder.FlowerViewHolder$b */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1621b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1621b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -84,9 +82,9 @@ public class FlowerViewHolder extends RecyclerView.ViewHolder {
                 ((TextView) inflate.findViewById(R$id.tv_keyname)).setText(list.get(i));
                 this.b.addView(inflate);
                 linearLayout.setTag(list.get(i) + "," + String.valueOf(i));
-                linearLayout.setOnClickListener(new View$OnClickListenerC1620a());
+                linearLayout.setOnClickListener(new a());
             }
-            this.a.setOnClickListener(new View$OnClickListenerC1621b());
+            this.a.setOnClickListener(new b());
         }
     }
 

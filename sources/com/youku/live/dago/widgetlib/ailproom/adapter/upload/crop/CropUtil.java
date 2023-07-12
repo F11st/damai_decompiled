@@ -25,7 +25,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
@@ -369,7 +369,7 @@ public class CropUtil {
         if (AndroidInstantRuntime.support(ipChange, "268315838")) {
             return ((Integer) ipChange.ipc$dispatch("268315838", new Object[]{context})).intValue();
         }
-        Display defaultDisplay = ((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
+        Display defaultDisplay = ((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
         Point point = new Point();
         com.alibaba.wireless.security.aopsdk.replace.android.view.Display.getSize(defaultDisplay, point);
         return (int) Math.sqrt(Math.pow(com.alibaba.wireless.security.aopsdk.replace.android.graphics.Point.getx(point), 2.0d) + Math.pow(com.alibaba.wireless.security.aopsdk.replace.android.graphics.Point.gety(point), 2.0d));

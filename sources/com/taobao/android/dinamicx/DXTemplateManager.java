@@ -2,9 +2,8 @@ package com.taobao.android.dinamicx;
 
 import android.content.Context;
 import android.text.TextUtils;
-import com.taobao.android.dinamicx.C6368e;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
-import com.taobao.android.dinamicx.template.download.C6399b;
 import com.taobao.android.dinamicx.template.download.DXDownloadManager;
 import com.taobao.android.dinamicx.template.download.DXTemplateItem;
 import com.taobao.android.dinamicx.template.download.DXTemplatePackageInfo;
@@ -31,7 +30,7 @@ import tb.y00;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class DXTemplateManager extends C6365b {
+public class DXTemplateManager extends b {
     protected a00 d;
     private DXDownloadManager e;
     private p10 f;
@@ -41,24 +40,23 @@ public class DXTemplateManager extends C6365b {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.DXTemplateManager$a */
     /* loaded from: classes12.dex */
-    public class C6361a {
+    public class a {
         List<DXTemplateItem> a = new ArrayList();
 
-        C6361a(DXTemplateManager dXTemplateManager) {
+        a(DXTemplateManager dXTemplateManager) {
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public DXTemplateManager(C6367d c6367d, final Context context) {
-        super(c6367d);
+    public DXTemplateManager(d dVar, final Context context) {
+        super(dVar);
         this.g = context;
         this.h = this.a.e();
         this.d = new a00();
         this.f = new p10(this.a.d);
         this.i = new ConcurrentHashMap();
-        this.e = new DXDownloadManager(DXGlobalCenter.d, c6367d.e().l, this.i);
+        this.e = new DXDownloadManager(DXGlobalCenter.d, dVar.e().l, this.i);
         y00.p(new Runnable() { // from class: com.taobao.android.dinamicx.DXTemplateManager.1
             @Override // java.lang.Runnable
             public void run() {
@@ -85,26 +83,26 @@ public class DXTemplateManager extends C6365b {
         return false;
     }
 
-    private C6361a i(List<DXTemplateItem> list) {
-        C6361a c6361a = new C6361a(this);
+    private a i(List<DXTemplateItem> list) {
+        a aVar = new a(this);
         if (list != null && !list.isEmpty()) {
             HashSet<DXTemplateItem> hashSet = new HashSet(list);
             if (hashSet.size() > 0) {
                 for (DXTemplateItem dXTemplateItem : hashSet) {
                     if (r10.b(dXTemplateItem) && !k(dXTemplateItem) && (!wt.i0() || !d(dXTemplateItem))) {
-                        c6361a.a.add(dXTemplateItem);
+                        aVar.a.add(dXTemplateItem);
                     }
                 }
             }
         }
-        return c6361a;
+        return aVar;
     }
 
     private void l() {
         if (q10.f().l(this.b)) {
             q10 f = q10.f();
             String str = this.b;
-            f.m(str, C6399b.f(str));
+            f.m(str, com.taobao.android.dinamicx.template.download.b.f(str));
         }
     }
 
@@ -181,9 +179,9 @@ public class DXTemplateManager extends C6365b {
     /* JADX INFO: Access modifiers changed from: package-private */
     public DXTemplateItem h(DXTemplateItem dXTemplateItem) {
         long nanoTime = System.nanoTime();
-        DXTemplateItem a = this.f.a(this.b, this.h, dXTemplateItem);
+        DXTemplateItem a2 = this.f.a(this.b, this.h, dXTemplateItem);
         n("Template_Fetch", this.b, dXTemplateItem, System.nanoTime() - nanoTime);
-        return a;
+        return a2;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -192,9 +190,9 @@ public class DXTemplateManager extends C6365b {
             return null;
         }
         DXRuntimeContext cloneWithWidgetNode = dXRuntimeContext.cloneWithWidgetNode(null);
-        C6368e c6368e = new C6368e(this.a.a);
-        cloneWithWidgetNode.dxError = c6368e;
-        c6368e.b = dXRuntimeContext.dxTemplateItem;
+        e eVar = new e(this.a.a);
+        cloneWithWidgetNode.dxError = eVar;
+        eVar.b = dXRuntimeContext.dxTemplateItem;
         cloneWithWidgetNode.dxUserContext = null;
         DXTemplateItem dXTemplateItem = cloneWithWidgetNode.dxTemplateItem;
         if (k(dXTemplateItem)) {
@@ -203,7 +201,7 @@ public class DXTemplateManager extends C6365b {
                 dXTemplateItem.packageInfo = q10.f().g(this.b, dXTemplateItem);
             }
             if (dXTemplateItem.packageInfo == null) {
-                dXRuntimeContext.getDxError().c.add(new C6368e.C6369a("Pipeline_Render", "Pipeline_Stage_Get_Template_Widget", C6368e.DX_GET_PACKAGEINFO_NULL));
+                dXRuntimeContext.getDxError().c.add(new e.a("Pipeline_Render", "Pipeline_Stage_Get_Template_Widget", e.DX_GET_PACKAGEINFO_NULL));
                 s00.b("templateItem.packageInfo == null");
                 return null;
             }
@@ -214,7 +212,7 @@ public class DXTemplateManager extends C6365b {
                 b = this.d.a(dXTemplateItem, cloneWithWidgetNode, this.g);
                 if (b == null) {
                     s00.b(" load widgetTree == null");
-                    dXRuntimeContext.getDxError().c.add(new C6368e.C6369a("Pipeline_Render", "Pipeline_Stage_Get_Template_Widget", C6368e.DX_LOAD_WT_NULL));
+                    dXRuntimeContext.getDxError().c.add(new e.a("Pipeline_Render", "Pipeline_Stage_Get_Template_Widget", e.DX_LOAD_WT_NULL));
                 }
                 long nanoTime2 = System.nanoTime() - nanoTime;
                 DXAppMonitor.s(3, this.b, "Template", "Pipeline_Stage_Load_Binary", dXTemplateItem, DXAppMonitor.g((float) nanoTime2), nanoTime2, true);

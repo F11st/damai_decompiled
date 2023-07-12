@@ -16,18 +16,17 @@ public enum State {
     INVALID;
     
     @NotNull
-    public static final C3462a Companion = new C3462a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.State$a */
     /* loaded from: classes7.dex */
-    public static final class C3462a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3462a() {
+        private a() {
         }
 
-        public /* synthetic */ C3462a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

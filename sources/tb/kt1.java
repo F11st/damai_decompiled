@@ -7,37 +7,34 @@ import org.jetbrains.annotations.NotNull;
 public abstract class kt1 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kt1$a */
     /* loaded from: classes8.dex */
-    public static final class C9375a extends kt1 {
+    public static final class a extends kt1 {
         @NotNull
-        public static final C9375a INSTANCE = new C9375a();
+        public static final a INSTANCE = new a();
 
-        private C9375a() {
+        private a() {
             super(null);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kt1$b */
     /* loaded from: classes8.dex */
-    public static final class C9376b extends kt1 {
+    public static final class b extends kt1 {
         @NotNull
-        public static final C9376b INSTANCE = new C9376b();
+        public static final b INSTANCE = new b();
 
-        private C9376b() {
+        private b() {
             super(null);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kt1$c */
     /* loaded from: classes8.dex */
-    public static final class C9377c extends kt1 {
+    public static final class c extends kt1 {
         @NotNull
-        public static final C9377c INSTANCE = new C9377c();
+        public static final c INSTANCE = new c();
 
-        private C9377c() {
+        private c() {
             super(null);
         }
     }

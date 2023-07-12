@@ -174,7 +174,7 @@ public class AliUserDialog extends Dialog {
     @Override // android.app.Dialog
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        setContentView(R.C2952layout.aliuser_dialog_layout);
+        setContentView(R.layout.aliuser_dialog_layout);
         setCanceledOnTouchOutside(false);
         initView();
     }
@@ -194,7 +194,7 @@ public class AliUserDialog extends Dialog {
     }
 
     private AliUserDialog(Context context, String str, String str2, String str3, String str4, PositiveClickListener positiveClickListener, NegativeClickListener negativeClickListener) {
-        super(context, R.C2953style.AliUserDialogTheme);
+        super(context, R.style.AliUserDialogTheme);
         this.mTitle = str;
         this.mMessage = str2;
         this.mPositiveText = str3;

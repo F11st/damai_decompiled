@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 
@@ -22,7 +22,7 @@ public class DMImageView extends AppCompatImageView {
         if (AndroidInstantRuntime.support(ipChange, "805389134")) {
             ipChange.ipc$dispatch("805389134", new Object[]{this, str});
         } else {
-            C0504a.b().c(str).g(this);
+            a.b().c(str).g(this);
         }
     }
 

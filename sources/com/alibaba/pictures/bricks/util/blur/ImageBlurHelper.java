@@ -24,7 +24,7 @@ import tb.y11;
 public class ImageBlurHelper {
     private static transient /* synthetic */ IpChange $ipChange;
     private static pe1<String, Bitmap> b = new pe1<>(new oc(), KeyTransformer.IDENTITY);
-    private static HandlerC3551a a = new HandlerC3551a();
+    private static a a = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes7.dex */
@@ -33,10 +33,9 @@ public class ImageBlurHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.util.blur.ImageBlurHelper$a */
     /* loaded from: classes7.dex */
-    private static class HandlerC3551a extends Handler {
-        public HandlerC3551a() {
+    private static class a extends Handler {
+        public a() {
             super(Looper.getMainLooper());
         }
     }

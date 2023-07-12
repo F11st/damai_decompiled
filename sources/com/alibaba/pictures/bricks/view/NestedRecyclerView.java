@@ -20,7 +20,7 @@ import tb.k50;
 public final class NestedRecyclerView extends RecyclerView {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C3581a Companion = new C3581a(null);
+    public static final a Companion = new a(null);
     private boolean isStopNestUtilIdle;
     @NotNull
     private final ArrayList<NestedListener> mListenerList;
@@ -28,15 +28,14 @@ public final class NestedRecyclerView extends RecyclerView {
     private final int[] outConsumed;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.NestedRecyclerView$a */
     /* loaded from: classes7.dex */
-    public static final class C3581a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3581a() {
+        private a() {
         }
 
-        public /* synthetic */ C3581a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

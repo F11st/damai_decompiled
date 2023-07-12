@@ -150,7 +150,7 @@ public class ApplicationCompat extends Application {
     @TargetApi(14)
     public void registerActivityLifecycleCallbacks(ActivityLifecycleCallbacksCompat activityLifecycleCallbacksCompat) {
         if (Build.VERSION.SDK_INT >= 14) {
-            super.registerActivityLifecycleCallbacks(new C6311a(activityLifecycleCallbacksCompat));
+            super.registerActivityLifecycleCallbacks(new a(activityLifecycleCallbacksCompat));
             return;
         }
         synchronized (this.mActivityLifecycleCallbacks) {
@@ -161,7 +161,7 @@ public class ApplicationCompat extends Application {
     @TargetApi(14)
     public void unregisterActivityLifecycleCallbacks(ActivityLifecycleCallbacksCompat activityLifecycleCallbacksCompat) {
         if (Build.VERSION.SDK_INT >= 14) {
-            super.unregisterActivityLifecycleCallbacks(new C6311a(activityLifecycleCallbacksCompat));
+            super.unregisterActivityLifecycleCallbacks(new a(activityLifecycleCallbacksCompat));
             return;
         }
         synchronized (this.mActivityLifecycleCallbacks) {

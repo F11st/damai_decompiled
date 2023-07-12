@@ -7,34 +7,32 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes3.dex */
 public abstract class lf0 extends fn<wt2> {
     @NotNull
-    public static final C9407a Companion = new C9407a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.lf0$a */
     /* loaded from: classes3.dex */
-    public static final class C9407a {
-        private C9407a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9407a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
         @NotNull
         public final lf0 a(@NotNull String str) {
             b41.i(str, "message");
-            return new C9408b(str);
+            return new b(str);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.lf0$b */
     /* loaded from: classes3.dex */
-    public static final class C9408b extends lf0 {
+    public static final class b extends lf0 {
         @NotNull
         private final String b;
 
-        public C9408b(@NotNull String str) {
+        public b(@NotNull String str) {
             b41.i(str, "message");
             this.b = str;
         }

@@ -1946,7 +1946,7 @@ public class NotificationCompat {
         private RemoteViews createRemoteViews(RemoteViews remoteViews, boolean z) {
             int min;
             boolean z2 = true;
-            RemoteViews applyStandardTemplate = applyStandardTemplate(true, R.C0038layout.notification_template_custom_big, false);
+            RemoteViews applyStandardTemplate = applyStandardTemplate(true, R.layout.notification_template_custom_big, false);
             applyStandardTemplate.removeAllViews(R.id.actions);
             List<Action> nonContextualActions = getNonContextualActions(this.mBuilder.mActions);
             if (!z || nonContextualActions == null || (min = Math.min(nonContextualActions.size(), 3)) <= 0) {
@@ -1968,14 +1968,14 @@ public class NotificationCompat {
             boolean z = action.actionIntent == null;
             String packageName = this.mBuilder.mContext.getPackageName();
             if (z) {
-                i = R.C0038layout.notification_action_tombstone;
+                i = R.layout.notification_action_tombstone;
             } else {
-                i = R.C0038layout.notification_action;
+                i = R.layout.notification_action;
             }
             RemoteViews remoteViews = new RemoteViews(packageName, i);
             IconCompat iconCompat = action.getIconCompat();
             if (iconCompat != null) {
-                remoteViews.setImageViewBitmap(R.id.action_image, createColoredBitmap(iconCompat, this.mBuilder.mContext.getResources().getColor(R.C0036color.notification_action_color_filter)));
+                remoteViews.setImageViewBitmap(R.id.action_image, createColoredBitmap(iconCompat, this.mBuilder.mContext.getResources().getColor(R.color.notification_action_color_filter)));
             }
             remoteViews.setTextViewText(R.id.action_text, action.title);
             if (!z) {
@@ -2225,7 +2225,7 @@ public class NotificationCompat {
         }
 
         private Bitmap createIconWithBackground(int i, int i2, int i3, int i4) {
-            int i5 = R.C0037drawable.notification_icon_background;
+            int i5 = R.drawable.notification_icon_background;
             if (i4 == 0) {
                 i4 = 0;
             }

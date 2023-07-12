@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 /* compiled from: Taobao */
 /* loaded from: classes15.dex */
 public class GoogleAdvertisingIdClient {
-    private static C3119b a;
+    private static b a;
 
     /* compiled from: Taobao */
     /* loaded from: classes15.dex */
@@ -62,13 +62,12 @@ public class GoogleAdvertisingIdClient {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.analytics.core.logbuilder.GoogleAdvertisingIdClient$b */
     /* loaded from: classes15.dex */
-    public static final class C3119b {
+    public static final class b {
         private final String a;
         private final boolean b;
 
-        C3119b(String str, boolean z) {
+        b(String str, boolean z) {
             this.a = str;
             this.b = z;
         }
@@ -83,13 +82,12 @@ public class GoogleAdvertisingIdClient {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.analytics.core.logbuilder.GoogleAdvertisingIdClient$c */
     /* loaded from: classes15.dex */
-    private static final class ServiceConnectionC3120c implements ServiceConnection {
+    private static final class c implements ServiceConnection {
         boolean a;
         private final LinkedBlockingQueue<IBinder> b;
 
-        private ServiceConnectionC3120c() {
+        private c() {
             this.a = false;
             this.b = new LinkedBlockingQueue<>();
         }
@@ -116,7 +114,7 @@ public class GoogleAdvertisingIdClient {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static C3119b a() {
+    public static b a() {
         return a;
     }
 
@@ -126,25 +124,25 @@ public class GoogleAdvertisingIdClient {
                 return;
             }
             try {
-                ServiceConnectionC3120c serviceConnectionC3120c = new ServiceConnectionC3120c();
+                c cVar = new c();
                 Intent intent = new Intent("com.google.android.gms.ads.identifier.service.START");
                 intent.setPackage("com.google.android.gms");
-                if (context.bindService(intent, serviceConnectionC3120c, 1)) {
+                if (context.bindService(intent, cVar, 1)) {
                     try {
-                        IBinder a2 = serviceConnectionC3120c.a();
+                        IBinder a2 = cVar.a();
                         if (a2 != null) {
                             AdvertisingInterface advertisingInterface = new AdvertisingInterface(a2);
-                            a = new C3119b(advertisingInterface.d(), advertisingInterface.e(true));
+                            a = new b(advertisingInterface.d(), advertisingInterface.e(true));
                         }
                     } catch (Exception e) {
                         Logger.u("GoogleAdvertisingIdClient", e, new Object[0]);
                     }
-                    context.unbindService(serviceConnectionC3120c);
+                    context.unbindService(cVar);
                 }
             } catch (Throwable unused) {
             }
             if (a == null) {
-                a = new C3119b("", true);
+                a = new b("", true);
             }
         }
     }

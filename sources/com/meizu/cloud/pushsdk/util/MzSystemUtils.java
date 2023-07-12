@@ -12,11 +12,8 @@ import android.os.Environment;
 import android.os.PowerManager;
 import android.os.Process;
 import android.text.TextUtils;
-import com.alipay.sdk.m.c.C4151a;
 import com.meizu.cloud.pushinternal.DebugLogger;
-import com.meizu.cloud.pushsdk.b.C5917a;
-import com.meizu.cloud.pushsdk.b.C5941i;
-import com.meizu.cloud.pushsdk.b.b.C5926d;
+import com.meizu.cloud.pushsdk.b.i;
 import com.meizu.cloud.pushsdk.constants.PushConstants;
 import java.io.File;
 import java.util.Iterator;
@@ -119,13 +116,13 @@ public class MzSystemUtils {
         }
         try {
             try {
-                int parseInt = Integer.parseInt(C5941i.a("ro.build.flyme.version"));
+                int parseInt = Integer.parseInt(i.a("ro.build.flyme.version"));
                 flymeVersion = parseInt;
                 return parseInt;
             } catch (Exception unused) {
-                String a = C5941i.a("ro.flyme.version.id");
+                String a = i.a("ro.flyme.version.id");
                 if (TextUtils.isEmpty(a)) {
-                    a = C5941i.a("ro.build.display.id");
+                    a = i.a("ro.build.display.id");
                 }
                 int intValue = Integer.valueOf(a.replace("Flyme", "").replace(" ", "").substring(0, 1)).intValue();
                 flymeVersion = intValue;
@@ -247,11 +244,11 @@ public class MzSystemUtils {
     public static boolean isBrandMeizu(android.content.Context r2) {
         /*
             java.lang.String r0 = "ro.meizu.product.model"
-            java.lang.String r0 = com.meizu.cloud.pushsdk.b.C5941i.a(r0)
+            java.lang.String r0 = com.meizu.cloud.pushsdk.b.i.a(r0)
             boolean r0 = android.text.TextUtils.isEmpty(r0)
             if (r0 == 0) goto L37
             java.lang.String r0 = "ro.vendor.meizu.product.model"
-            java.lang.String r0 = com.meizu.cloud.pushsdk.b.C5941i.a(r0)
+            java.lang.String r0 = com.meizu.cloud.pushsdk.b.i.a(r0)
             boolean r0 = android.text.TextUtils.isEmpty(r0)
             if (r0 == 0) goto L37
             java.lang.String r0 = com.alibaba.wireless.security.aopsdk.replace.android.os.Build.getBRAND()
@@ -273,7 +270,7 @@ public class MzSystemUtils {
         L38:
             if (r0 != 0) goto L41
             android.content.Context r2 = r2.getApplicationContext()
-            com.meizu.cloud.pushsdk.a.C5909a.b(r2)
+            com.meizu.cloud.pushsdk.a.a.b(r2)
         L41:
             return r0
         */
@@ -291,13 +288,13 @@ public class MzSystemUtils {
     }
 
     public static boolean isHuaWei() {
-        String a = C5941i.a(C4151a.a);
+        String a = i.a(com.alipay.sdk.m.c.a.a);
         DebugLogger.e(TAG, "huawei eui " + a);
         return !TextUtils.isEmpty(a);
     }
 
     public static boolean isIndiaLocal() {
-        return "india".equals(C5941i.a("ro.meizu.locale.region"));
+        return "india".equals(i.a("ro.meizu.locale.region"));
     }
 
     public static boolean isInteractive(Context context) {
@@ -314,8 +311,8 @@ public class MzSystemUtils {
     }
 
     public static boolean isInternational() {
-        if (C5917a.a().a) {
-            return C5917a.a().b.booleanValue();
+        if (com.meizu.cloud.pushsdk.b.a.a().a) {
+            return com.meizu.cloud.pushsdk.b.a.a().b.booleanValue();
         }
         return false;
     }
@@ -325,7 +322,7 @@ public class MzSystemUtils {
     }
 
     public static boolean isMeizuAndFlyme() {
-        C5926d<Boolean> b = C5917a.b();
+        com.meizu.cloud.pushsdk.b.b.d<Boolean> b = com.meizu.cloud.pushsdk.b.a.b();
         if (b.a) {
             return !b.b.booleanValue();
         }
@@ -365,7 +362,7 @@ public class MzSystemUtils {
 
     public static boolean isWatch() {
         if (TextUtils.isEmpty(sCharacteristics)) {
-            sCharacteristics = C5941i.a("ro.build.characteristics");
+            sCharacteristics = i.a("ro.build.characteristics");
         }
         if (TextUtils.isEmpty(sCharacteristics)) {
             sCharacteristics = "phone";

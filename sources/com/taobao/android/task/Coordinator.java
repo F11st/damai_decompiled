@@ -168,10 +168,9 @@ public class Coordinator {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.task.Coordinator$a */
     /* loaded from: classes12.dex */
-    static class ThreadFactoryC6648a implements ThreadFactory {
-        ThreadFactoryC6648a() {
+    static class a implements ThreadFactory {
+        a() {
             new AtomicInteger(1);
         }
 
@@ -188,10 +187,9 @@ public class Coordinator {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.task.Coordinator$b */
     /* loaded from: classes12.dex */
-    public static class HandlerC6649b extends Handler {
-        HandlerC6649b(Looper looper) {
+    public static class b extends Handler {
+        b(Looper looper) {
             super(looper);
         }
 
@@ -202,10 +200,9 @@ public class Coordinator {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.task.Coordinator$c */
     /* loaded from: classes12.dex */
-    static class C6650c implements MessageQueue.IdleHandler {
-        C6650c() {
+    static class c implements MessageQueue.IdleHandler {
+        c() {
         }
 
         @Override // android.os.MessageQueue.IdleHandler
@@ -221,9 +218,8 @@ public class Coordinator {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.task.Coordinator$d */
     /* loaded from: classes12.dex */
-    static class C6651d<Runnable> implements Comparator<Runnable> {
+    static class d<Runnable> implements Comparator<Runnable> {
         @Override // java.util.Comparator
         public int compare(Runnable runnable, Runnable runnable2) {
             if ((runnable instanceof StandaloneTask) && (runnable2 instanceof StandaloneTask)) {
@@ -239,9 +235,9 @@ public class Coordinator {
     }
 
     static {
-        PriorityBlockingQueue priorityBlockingQueue = new PriorityBlockingQueue(100, new C6651d());
+        PriorityBlockingQueue priorityBlockingQueue = new PriorityBlockingQueue(100, new d());
         mPoolWorkQueue = priorityBlockingQueue;
-        CoordThreadPoolExecutor coordThreadPoolExecutor = new CoordThreadPoolExecutor(8, 16, 1L, TimeUnit.SECONDS, priorityBlockingQueue, new ThreadFactoryC6648a(), new CoordinatorRejectHandler());
+        CoordThreadPoolExecutor coordThreadPoolExecutor = new CoordThreadPoolExecutor(8, 16, 1L, TimeUnit.SECONDS, priorityBlockingQueue, new a(), new CoordinatorRejectHandler());
         sThreadPoolExecutor = coordThreadPoolExecutor;
         coordThreadPoolExecutor.allowCoreThreadTimeOut(true);
         SaturativeExecutor.installAsDefaultAsyncTaskExecutor(sThreadPoolExecutor);
@@ -471,7 +467,7 @@ public class Coordinator {
 
     @Deprecated
     public static void scheduleIdleTasks() {
-        Looper.myQueue().addIdleHandler(new C6650c());
+        Looper.myQueue().addIdleHandler(new c());
     }
 
     public static void setThreadInfoListener(ThreadInfoListener threadInfoListener) {
@@ -499,7 +495,7 @@ public class Coordinator {
             obtain.what = taggedRunnable.hashCode();
             obtain.obj = standaloneTask;
             if (sHandler == null) {
-                sHandler = new HandlerC6649b(Looper.getMainLooper());
+                sHandler = new b(Looper.getMainLooper());
             }
             sHandler.sendMessageDelayed(obtain, i2);
             return;

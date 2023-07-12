@@ -22,7 +22,7 @@ public class ContentVideoHelper {
     private WifiStateChangeReceiver c;
     private boolean d = true;
     private boolean e = false;
-    private View.OnAttachStateChangeListener f = new View$OnAttachStateChangeListenerC1012a();
+    private View.OnAttachStateChangeListener f = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes14.dex */
@@ -57,12 +57,11 @@ public class ContentVideoHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.content.ui.viewholder.item.ContentVideoHelper$a */
     /* loaded from: classes14.dex */
-    public class View$OnAttachStateChangeListenerC1012a implements View.OnAttachStateChangeListener {
+    public class a implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC1012a() {
+        a() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener

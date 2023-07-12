@@ -2,16 +2,15 @@ package tb;
 
 import java.lang.ref.WeakReference;
 import kotlin.reflect.jvm.internal.KClassImpl;
-import kotlin.reflect.jvm.internal.pcollections.C8567b;
 import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class e71 {
-    private static C8567b<String, Object> a;
+    private static kotlin.reflect.jvm.internal.pcollections.b<String, Object> a;
 
     static {
-        C8567b<String, Object> b = C8567b.b();
+        kotlin.reflect.jvm.internal.pcollections.b<String, Object> b = kotlin.reflect.jvm.internal.pcollections.b.b();
         b41.h(b, "HashPMap.empty<String, Any>()");
         a = b;
     }
@@ -38,13 +37,13 @@ public final class e71 {
             System.arraycopy(c, 0, weakReferenceArr, 0, length);
             KClassImpl<T> kClassImpl3 = new KClassImpl<>(cls);
             weakReferenceArr[length] = new WeakReference(kClassImpl3);
-            C8567b<String, Object> f = a.f(name, weakReferenceArr);
+            kotlin.reflect.jvm.internal.pcollections.b<String, Object> f = a.f(name, weakReferenceArr);
             b41.h(f, "K_CLASS_CACHE.plus(name, newArray)");
             a = f;
             return kClassImpl3;
         }
         KClassImpl<T> kClassImpl4 = new KClassImpl<>(cls);
-        C8567b<String, Object> f2 = a.f(name, new WeakReference(kClassImpl4));
+        kotlin.reflect.jvm.internal.pcollections.b<String, Object> f2 = a.f(name, new WeakReference(kClassImpl4));
         b41.h(f2, "K_CLASS_CACHE.plus(name, WeakReference(newKClass))");
         a = f2;
         return kClassImpl4;

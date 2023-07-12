@@ -98,7 +98,7 @@ public class QrScanActivity extends BaseActivity {
 
     @Override // com.ali.user.mobile.base.ui.BaseActivity
     protected int getLayoutContent() {
-        return R.C6728layout.user_scan_activity;
+        return R.layout.user_scan_activity;
     }
 
     @Override // com.ali.user.mobile.base.ui.BaseActivity

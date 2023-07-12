@@ -28,12 +28,11 @@ public class zb1 {
     private boolean c = false;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.zb1$a */
     /* loaded from: classes5.dex */
-    public class C10018a implements YouKuTrustListener {
+    public class a implements YouKuTrustListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C10018a() {
+        a() {
         }
 
         @Override // cn.damai.login.YouKuTrustListener
@@ -112,7 +111,7 @@ public class zb1 {
             } else if (this.c) {
             } else {
                 this.b = 0;
-                LoginManager.k().i(context, 0, new C10018a());
+                LoginManager.k().i(context, 0, new a());
             }
         }
     }

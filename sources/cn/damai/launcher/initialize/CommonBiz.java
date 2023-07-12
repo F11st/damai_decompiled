@@ -17,19 +17,17 @@ import cn.damai.common.AppConfig;
 import cn.damai.common.DamaiConstants;
 import cn.damai.common.OrangeConfigCenter;
 import cn.damai.common.app.ShareperfenceConstants;
-import cn.damai.common.image.C0504a;
-import cn.damai.common.image.C0511b;
 import cn.damai.common.image.DMImageStrategyConfig;
+import cn.damai.common.image.b;
 import cn.damai.common.uploader.AusConfigCenter;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.common.util.CompliantUtUtils;
 import cn.damai.commonbusiness.poplayer.DMPopLayer;
 import cn.damai.commonbusiness.share.ShareInit;
 import cn.damai.h5container.UniH5ContainerSwitcher;
 import cn.damai.h5container.WindvaneAgent;
 import cn.damai.homepage.R$drawable;
-import cn.damai.im.C1277a;
 import cn.damai.launcher.LauncherApplication;
 import cn.damai.launcher.PrivacyDoubleListDelegate;
 import cn.damai.launcher.utils.PictureGaiaxProviderImp;
@@ -40,7 +38,6 @@ import cn.damai.net.NetConstants;
 import cn.damai.onearch.token.DMTokenManager;
 import cn.damai.push.DaMaiPushAgent;
 import cn.damai.security.AliSecurityHelper;
-import cn.damai.solid.C1768a;
 import cn.damai.tetris.core.ut.TrackProxy;
 import cn.damai.tetris.core.ut.TrackType;
 import cn.damai.uikit.image.IImageLoader;
@@ -80,7 +77,6 @@ import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.login4android.Login;
 import com.taobao.login4android.constants.LoginEnvType;
 import com.taobao.pexode.Pexode;
-import com.taobao.pexode.mimetype.C6838a;
 import com.taobao.tao.image.IImageStrategySupport;
 import com.taobao.tao.remotebusiness.login.RemoteLogin;
 import com.uc.webview.export.extension.UCCore;
@@ -281,9 +277,8 @@ public class CommonBiz {
     };
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.launcher.initialize.CommonBiz$a */
     /* loaded from: classes15.dex */
-    static /* synthetic */ class C1311a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
         static final /* synthetic */ int[] b;
         static final /* synthetic */ int[] c;
@@ -844,7 +839,7 @@ public class CommonBiz {
                         ipChange2.ipc$dispatch("1982979308", new Object[]{this, str, Boolean.valueOf(z)});
                         return;
                     }
-                    z2 = (Pexode.a(C6838a.WEBP) && Pexode.a(C6838a.WEBP_A)) ? false : false;
+                    z2 = (Pexode.a(com.taobao.pexode.mimetype.a.WEBP) && Pexode.a(com.taobao.pexode.mimetype.a.WEBP_A)) ? false : false;
                     n11.e(mu0.a(), new IImageStrategySupport(this) { // from class: cn.damai.launcher.initialize.CommonBiz.15.1
                         private static transient /* synthetic */ IpChange $ipChange;
 
@@ -927,7 +922,7 @@ public class CommonBiz {
         if (AndroidInstantRuntime.support(ipChange, "63445565")) {
             ipChange.ipc$dispatch("63445565", new Object[]{this});
         } else if (ProcessUtils.b(mu0.a())) {
-            C1768a.d().g(mu0.a(), LauncherApplication.sAppCreateTimeMillis);
+            cn.damai.solid.a.d().g(mu0.a(), LauncherApplication.sAppCreateTimeMillis);
         }
     }
 
@@ -954,14 +949,14 @@ public class CommonBiz {
                     if (AndroidInstantRuntime.support(ipChange2, "886430823")) {
                         ipChange2.ipc$dispatch("886430823", new Object[]{this, str, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), iImageSuccListener, iImageFailListener});
                     } else {
-                        C0504a.b().load(str, i, i2, i3, iImageSuccListener, iImageFailListener);
+                        cn.damai.common.image.a.b().load(str, i, i2, i3, iImageSuccListener, iImageFailListener);
                     }
                 }
 
                 @Override // cn.damai.uikit.image.IImageLoader
                 public IImageLoader.ImageTicket loadinto(String str, ImageView imageView) {
                     IpChange ipChange2 = $ipChange;
-                    return AndroidInstantRuntime.support(ipChange2, "-1064802065") ? (IImageLoader.ImageTicket) ipChange2.ipc$dispatch("-1064802065", new Object[]{this, str, imageView}) : C0504a.b().loadinto(str, imageView);
+                    return AndroidInstantRuntime.support(ipChange2, "-1064802065") ? (IImageLoader.ImageTicket) ipChange2.ipc$dispatch("-1064802065", new Object[]{this, str, imageView}) : cn.damai.common.image.a.b().loadinto(str, imageView);
                 }
 
                 @Override // cn.damai.uikit.image.IImageLoader
@@ -970,26 +965,26 @@ public class CommonBiz {
                     if (AndroidInstantRuntime.support(ipChange2, "1113573063")) {
                         ipChange2.ipc$dispatch("1113573063", new Object[]{this, str, Integer.valueOf(i), iImageSuccListener, iImageFailListener});
                     } else {
-                        C0504a.b().load(str, i, iImageSuccListener, iImageFailListener);
+                        cn.damai.common.image.a.b().load(str, i, iImageSuccListener, iImageFailListener);
                     }
                 }
 
                 @Override // cn.damai.uikit.image.IImageLoader
                 public IImageLoader.ImageTicket loadinto(String str, ImageView imageView, int i, int i2) {
                     IpChange ipChange2 = $ipChange;
-                    return AndroidInstantRuntime.support(ipChange2, "-1391060785") ? (IImageLoader.ImageTicket) ipChange2.ipc$dispatch("-1391060785", new Object[]{this, str, imageView, Integer.valueOf(i), Integer.valueOf(i2)}) : C0504a.b().loadinto(str, imageView, i, i2);
+                    return AndroidInstantRuntime.support(ipChange2, "-1391060785") ? (IImageLoader.ImageTicket) ipChange2.ipc$dispatch("-1391060785", new Object[]{this, str, imageView, Integer.valueOf(i), Integer.valueOf(i2)}) : cn.damai.common.image.a.b().loadinto(str, imageView, i, i2);
                 }
 
                 @Override // cn.damai.uikit.image.IImageLoader
                 public IImageLoader.ImageTicket load(String str, int i, int i2, IImageLoader.IImageSuccListener iImageSuccListener, IImageLoader.IImageFailListener iImageFailListener) {
                     IpChange ipChange2 = $ipChange;
-                    return AndroidInstantRuntime.support(ipChange2, "-875145951") ? (IImageLoader.ImageTicket) ipChange2.ipc$dispatch("-875145951", new Object[]{this, str, Integer.valueOf(i), Integer.valueOf(i2), iImageSuccListener, iImageFailListener}) : C0504a.b().load(str, i, i2, iImageSuccListener, iImageFailListener);
+                    return AndroidInstantRuntime.support(ipChange2, "-875145951") ? (IImageLoader.ImageTicket) ipChange2.ipc$dispatch("-875145951", new Object[]{this, str, Integer.valueOf(i), Integer.valueOf(i2), iImageSuccListener, iImageFailListener}) : cn.damai.common.image.a.b().load(str, i, i2, iImageSuccListener, iImageFailListener);
                 }
 
                 @Override // cn.damai.uikit.image.IImageLoader
                 public IImageLoader.ImageTicket load(String str, int i, int i2, int i3, int i4, IImageLoader.IImageSuccListener iImageSuccListener, IImageLoader.IImageFailListener iImageFailListener) {
                     IpChange ipChange2 = $ipChange;
-                    return AndroidInstantRuntime.support(ipChange2, "-192099455") ? (IImageLoader.ImageTicket) ipChange2.ipc$dispatch("-192099455", new Object[]{this, str, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4), iImageSuccListener, iImageFailListener}) : C0504a.b().load(str, i, i2, i3, i4, iImageSuccListener, iImageFailListener);
+                    return AndroidInstantRuntime.support(ipChange2, "-192099455") ? (IImageLoader.ImageTicket) ipChange2.ipc$dispatch("-192099455", new Object[]{this, str, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4), iImageSuccListener, iImageFailListener}) : cn.damai.common.image.a.b().load(str, i, i2, i3, i4, iImageSuccListener, iImageFailListener);
                 }
             }, new TrackProxy.ITrack() { // from class: cn.damai.launcher.initialize.CommonBiz.7
                 private static transient /* synthetic */ IpChange $ipChange;
@@ -1001,21 +996,21 @@ public class CommonBiz {
                         ipChange2.ipc$dispatch("-2083521267", new Object[]{this, trackType, view, str, str2, str3, map, Boolean.valueOf(z)});
                         return;
                     }
-                    switch (C1311a.b[trackType.ordinal()]) {
+                    switch (a.b[trackType.ordinal()]) {
                         case 1:
-                            C0529c.e().x(CommonBiz.this.f(str, str2, str3, map, Boolean.valueOf(z)));
+                            c.e().x(CommonBiz.this.f(str, str2, str3, map, Boolean.valueOf(z)));
                             return;
                         case 2:
-                            C0529c.e().x(CommonBiz.this.f(str, str2, str3, map, Boolean.valueOf(z)));
+                            c.e().x(CommonBiz.this.f(str, str2, str3, map, Boolean.valueOf(z)));
                             return;
                         case 3:
-                            C0529c.e().G(view, str3, str2, str, map);
+                            c.e().G(view, str3, str2, str, map);
                             return;
                         case 4:
-                            C0529c.e().D(str, str2, map.get("arg1"), map.get("arg2"), map, map.get("eventId") != null ? Integer.parseInt(map.get("eventId")) : 0);
+                            c.e().D(str, str2, map.get("arg1"), map.get("arg2"), map, map.get("eventId") != null ? Integer.parseInt(map.get("eventId")) : 0);
                             return;
                         case 5:
-                            C0529c.e().A(map, str2, str);
+                            c.e().A(map, str2, str);
                             return;
                         case 6:
                             try {
@@ -1056,9 +1051,9 @@ public class CommonBiz {
         }
     }
 
-    public C0525a.C0527b f(String str, String str2, String str3, Map<String, String> map, Boolean bool) {
+    public a.b f(String str, String str2, String str3, Map<String, String> map, Boolean bool) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-345139164") ? (C0525a.C0527b) ipChange.ipc$dispatch("-345139164", new Object[]{this, str, str2, str3, map, bool}) : new C0525a.C0527b().i(str).f(str2).l(str3).g(bool.booleanValue()).j(map);
+        return AndroidInstantRuntime.support(ipChange, "-345139164") ? (a.b) ipChange.ipc$dispatch("-345139164", new Object[]{this, str, str2, str3, map, bool}) : new a.b().i(str).f(str2).l(str3).g(bool.booleanValue()).j(map);
     }
 
     public void i() {
@@ -1096,7 +1091,7 @@ public class CommonBiz {
                     return (EnvMode) ipChange2.ipc$dispatch("-1741980379", new Object[]{this});
                 }
                 EnvMode envMode = EnvMode.ONLINE;
-                int i = C1311a.a[AppConfig.g().ordinal()];
+                int i = a.a[AppConfig.g().ordinal()];
                 if (i != 1) {
                     return i != 2 ? envMode : EnvMode.PREPARE;
                 }
@@ -1127,7 +1122,7 @@ public class CommonBiz {
         if (AndroidInstantRuntime.support(ipChange, "2137681539")) {
             ipChange.ipc$dispatch("2137681539", new Object[]{this});
         } else if (ProcessUtils.b(this.a)) {
-            C0504a.b().h(this.a);
+            cn.damai.common.image.a.b().h(this.a);
             mg1 mg1Var = mg1.INSTANCE;
             mg1Var.k(ko.d().isExpected(DamaiConstants.CONFIG_KEY_MOIMAGE_XCDN_SWITCH, "on", false));
             mg1Var.j(ko.d().isExpected(DamaiConstants.CONFIG_KEY_MOIMAGE_DOMAIN_CONVERGE_SWITCH, "on", true));
@@ -1199,12 +1194,12 @@ public class CommonBiz {
                     }
                     try {
                         String addPrefixIfNeeded = addPrefixIfNeeded(str);
-                        DMImageStrategyConfig b = C0511b.b(str, i, i2);
+                        DMImageStrategyConfig b = b.b(str, i, i2);
                         if (addPrefixIfNeeded == null || b == null) {
                             return addPrefixIfNeeded;
                         }
                         if (imgResQuality != null) {
-                            int i3 = C1311a.c[imgResQuality.ordinal()];
+                            int i3 = a.c[imgResQuality.ordinal()];
                             if (i3 == 1) {
                                 b.j = DMImageStrategyConfig.DMImageQuality.q90;
                             } else if (i3 == 2) {
@@ -1219,7 +1214,7 @@ public class CommonBiz {
                                 b.j = DMImageStrategyConfig.DMImageQuality.q30;
                             }
                         }
-                        return C0511b.c(str, b);
+                        return b.c(str, b);
                     } catch (Exception unused) {
                         return str;
                     }
@@ -1347,9 +1342,9 @@ public class CommonBiz {
             ipChange.ipc$dispatch("1228579598", new Object[]{this});
             return;
         }
-        Application a = mu0.a();
-        this.a = a;
-        if (ProcessUtils.b(a) || ProcessUtils.a(this.a)) {
+        Application a2 = mu0.a();
+        this.a = a2;
+        if (ProcessUtils.b(a2) || ProcessUtils.a(this.a)) {
             F();
             K();
         }
@@ -1363,7 +1358,7 @@ public class CommonBiz {
         k();
         y();
         ShareInit.INSTANCE.b(mu0.a());
-        C1277a.a();
+        cn.damai.im.a.a();
         PrivacyDoubleListDelegate.INSTANCE.a(this.a);
         this.b.sendEmptyMessageDelayed(1, 2000L);
         this.b.sendEmptyMessageDelayed(2, 3000L);

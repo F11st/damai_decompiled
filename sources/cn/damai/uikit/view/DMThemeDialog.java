@@ -70,13 +70,12 @@ public class DMThemeDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.DMThemeDialog$a */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC2578a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DialogInterface.OnClickListener a;
 
-        View$OnClickListenerC2578a(DialogInterface.OnClickListener onClickListener) {
+        a(DialogInterface.OnClickListener onClickListener) {
             this.a = onClickListener;
         }
 
@@ -96,13 +95,12 @@ public class DMThemeDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.DMThemeDialog$b */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC2579b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DialogInterface.OnClickListener a;
 
-        View$OnClickListenerC2579b(DialogInterface.OnClickListener onClickListener) {
+        b(DialogInterface.OnClickListener onClickListener) {
             this.a = onClickListener;
         }
 
@@ -122,13 +120,12 @@ public class DMThemeDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.DMThemeDialog$c */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC2580c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View.OnClickListener a;
 
-        View$OnClickListenerC2580c(View.OnClickListener onClickListener) {
+        c(View.OnClickListener onClickListener) {
             this.a = onClickListener;
         }
 
@@ -216,7 +213,7 @@ public class DMThemeDialog extends Dialog {
             this.m++;
             TextView textView = this.i;
             if (textView != null) {
-                textView.setOnClickListener(new View$OnClickListenerC2578a(onClickListener));
+                textView.setOnClickListener(new a(onClickListener));
             }
         }
         return this;
@@ -262,7 +259,7 @@ public class DMThemeDialog extends Dialog {
         }
         if (z) {
             dMIconFontTextView.setVisibility(0);
-            this.j.setOnClickListener(new View$OnClickListenerC2580c(onClickListener));
+            this.j.setOnClickListener(new c(onClickListener));
         } else {
             dMIconFontTextView.setVisibility(8);
         }
@@ -281,7 +278,7 @@ public class DMThemeDialog extends Dialog {
             }
             this.h.setVisibility(0);
             this.m++;
-            this.h.setOnClickListener(new View$OnClickListenerC2579b(onClickListener));
+            this.h.setOnClickListener(new b(onClickListener));
         }
         return this;
     }

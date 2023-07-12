@@ -11,7 +11,6 @@ import android.text.TextUtils;
 import com.alibaba.pictures.picpermission.Permission;
 import com.alibaba.pictures.picpermission.custom.IPermissionListener;
 import com.alibaba.pictures.picpermission.manage.PermissionModel;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
 import com.taobao.weex.bridge.WXBridgeManager;
 import io.flutter.wpkbridge.WPKFactory;
 import kotlin.Metadata;
@@ -27,13 +26,12 @@ import tb.b41;
 public final class TMImage extends WVImage {
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMImage$a */
     /* loaded from: classes11.dex */
-    public static final class C6986a implements IPermissionListener {
+    public static final class a implements IPermissionListener {
         final /* synthetic */ WVCallBackContext b;
         final /* synthetic */ String c;
 
-        C6986a(WVCallBackContext wVCallBackContext, String str) {
+        a(WVCallBackContext wVCallBackContext, String str) {
             this.b = wVCallBackContext;
             this.c = str;
         }
@@ -42,7 +40,7 @@ public final class TMImage extends WVImage {
         public void onPermissionDenied(@NotNull String[] strArr) {
             b41.i(strArr, "permission");
             WVResult wVResult = new WVResult();
-            wVResult.addData("msg", AbstractC3893a.al);
+            wVResult.addData("msg", com.alibaba.security.realidentity.jsbridge.a.al);
             WVCallBackContext wVCallBackContext = this.b;
             b41.f(wVCallBackContext);
             wVCallBackContext.error(wVResult);
@@ -57,7 +55,7 @@ public final class TMImage extends WVImage {
         public void onShowRationale(@NotNull String[] strArr) {
             b41.i(strArr, "deniedPermissions");
             WVResult wVResult = new WVResult();
-            wVResult.addData("msg", AbstractC3893a.al);
+            wVResult.addData("msg", com.alibaba.security.realidentity.jsbridge.a.al);
             WVCallBackContext wVCallBackContext = this.b;
             b41.f(wVCallBackContext);
             wVCallBackContext.error(wVResult);
@@ -65,12 +63,11 @@ public final class TMImage extends WVImage {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMImage$b */
     /* loaded from: classes11.dex */
-    public static final class C6987b implements ImageTool.ImageSaveCallback {
+    public static final class b implements ImageTool.ImageSaveCallback {
         final /* synthetic */ WVCallBackContext a;
 
-        C6987b(WVCallBackContext wVCallBackContext) {
+        b(WVCallBackContext wVCallBackContext) {
             this.a = wVCallBackContext;
         }
 
@@ -101,7 +98,7 @@ public final class TMImage extends WVImage {
             if (TextUtils.isEmpty(optString)) {
                 return;
             }
-            ImageTool.saveImageToDCIM(this.mContext, optString, new C6987b(wVCallBackContext));
+            ImageTool.saveImageToDCIM(this.mContext, optString, new b(wVCallBackContext));
         } catch (JSONException e) {
             WVResult wVResult = new WVResult();
             wVResult.addData("msg", e.getMessage());
@@ -117,7 +114,7 @@ public final class TMImage extends WVImage {
             try {
                 Context context = getContext();
                 b41.h(context, WPKFactory.INIT_KEY_CONTEXT);
-                new Permission(context, new PermissionModel(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE", "android.permission.READ_EXTERNAL_STORAGE"}, null, null, null)).a(new C6986a(wVCallBackContext, str2)).b();
+                new Permission(context, new PermissionModel(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE", "android.permission.READ_EXTERNAL_STORAGE"}, null, null, null)).a(new a(wVCallBackContext, str2)).b();
                 return true;
             } catch (Exception e) {
                 TaoLog.d(WVAPI.PluginName.API_IMAGE, "Run whith some exception!");

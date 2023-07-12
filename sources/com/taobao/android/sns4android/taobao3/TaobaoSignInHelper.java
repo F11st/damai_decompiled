@@ -32,12 +32,11 @@ public class TaobaoSignInHelper extends SNSSignInAbstractHelper {
     public static String SNS_TYPE = "taobao";
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: com.taobao.android.sns4android.taobao3.TaobaoSignInHelper$a */
     /* loaded from: classes11.dex */
-    public class C6623a implements LoginCallback {
+    public class a implements LoginCallback {
         final /* synthetic */ Activity a;
 
-        C6623a(Activity activity) {
+        a(Activity activity) {
             this.a = activity;
         }
 
@@ -67,13 +66,12 @@ public class TaobaoSignInHelper extends SNSSignInAbstractHelper {
         }
     }
 
-    /* renamed from: com.taobao.android.sns4android.taobao3.TaobaoSignInHelper$b */
     /* loaded from: classes11.dex */
-    class C6624b implements LoginCallback {
+    class b implements LoginCallback {
         final /* synthetic */ SNSSignInListener a;
         final /* synthetic */ Activity b;
 
-        C6624b(SNSSignInListener sNSSignInListener, Activity activity) {
+        b(SNSSignInListener sNSSignInListener, Activity activity) {
             this.a = sNSSignInListener;
             this.b = activity;
         }
@@ -105,10 +103,9 @@ public class TaobaoSignInHelper extends SNSSignInAbstractHelper {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: com.taobao.android.sns4android.taobao3.TaobaoSignInHelper$c */
     /* loaded from: classes11.dex */
-    public class C6625c implements UccCallback {
-        C6625c(TaobaoSignInHelper taobaoSignInHelper) {
+    public class c implements UccCallback {
+        c(TaobaoSignInHelper taobaoSignInHelper) {
         }
 
         @Override // com.ali.user.open.ucc.UccCallback
@@ -143,7 +140,7 @@ public class TaobaoSignInHelper extends SNSSignInAbstractHelper {
             map = new HashMap<>();
         }
         map.put(ParamsConstants.Key.PARAM_ONLY_AUTHCODE, "1");
-        ((TbAuthService) AliMemberSDK.getService(TbAuthService.class)).auth(map, new C6623a(activity));
+        ((TbAuthService) AliMemberSDK.getService(TbAuthService.class)).auth(map, new a(activity));
     }
 
     public static TaobaoSignInHelper create() {
@@ -156,7 +153,7 @@ public class TaobaoSignInHelper extends SNSSignInAbstractHelper {
     }
 
     public void uccOAuthLogin(Activity activity) {
-        ((UccService) AliMemberSDK.getService(UccService.class)).uccOAuthLogin(activity, "taobao", null, new C6625c(this));
+        ((UccService) AliMemberSDK.getService(UccService.class)).uccOAuthLogin(activity, "taobao", null, new c(this));
     }
 
     @Override // com.taobao.android.sns4android.SNSSignInAbstractHelper
@@ -169,6 +166,6 @@ public class TaobaoSignInHelper extends SNSSignInAbstractHelper {
         UserTrackAdapter.sendControlUT(UTConstans.PageName.UT_PAGE_EXTENT_TAOBAO3, "Btn_Login");
         HashMap hashMap = new HashMap();
         hashMap.put(ParamsConstants.Key.PARAM_ONLY_AUTHCODE, "1");
-        ((TbAuthService) AliMemberSDK.getService(TbAuthService.class)).auth(hashMap, new C6624b(sNSSignInListener, activity));
+        ((TbAuthService) AliMemberSDK.getService(TbAuthService.class)).auth(hashMap, new b(sNSSignInListener, activity));
     }
 }

@@ -10,7 +10,6 @@ import java.util.NoSuchElementException;
 import java.util.Objects;
 import java.util.Set;
 import kotlin.collections.ArraysKt___ArraysKt;
-import kotlin.collections.C8203e0;
 import kotlin.jvm.JvmStatic;
 import kotlin.jvm.internal.markers.KMutableIterator;
 import org.jetbrains.annotations.NotNull;
@@ -20,19 +19,18 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public final class yd2<T> extends AbstractSet<T> {
     @NotNull
-    public static final C9957b Companion = new C9957b(null);
+    public static final b Companion = new b(null);
     @Nullable
     private Object a;
     private int b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yd2$a */
     /* loaded from: classes3.dex */
-    private static final class C9956a<T> implements Iterator<T>, KMutableIterator {
+    private static final class a<T> implements Iterator<T>, KMutableIterator {
         @NotNull
         private final Iterator<T> a;
 
-        public C9956a(@NotNull T[] tArr) {
+        public a(@NotNull T[] tArr) {
             b41.i(tArr, "array");
             this.a = r7.a(tArr);
         }
@@ -56,13 +54,12 @@ public final class yd2<T> extends AbstractSet<T> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yd2$b */
     /* loaded from: classes3.dex */
-    public static final class C9957b {
-        private C9957b() {
+    public static final class b {
+        private b() {
         }
 
-        public /* synthetic */ C9957b(k50 k50Var) {
+        public /* synthetic */ b(k50 k50Var) {
             this();
         }
 
@@ -83,13 +80,12 @@ public final class yd2<T> extends AbstractSet<T> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yd2$c */
     /* loaded from: classes3.dex */
-    private static final class C9958c<T> implements Iterator<T>, KMutableIterator {
+    private static final class c<T> implements Iterator<T>, KMutableIterator {
         private final T a;
         private boolean b = true;
 
-        public C9958c(T t) {
+        public c(T t) {
             this.a = t;
         }
 
@@ -150,7 +146,7 @@ public final class yd2<T> extends AbstractSet<T> {
                 return false;
             }
             if (size() == 4) {
-                e = C8203e0.e(Arrays.copyOf(objArr2, objArr2.length));
+                e = kotlin.collections.e0.e(Arrays.copyOf(objArr2, objArr2.length));
                 e.add(t);
                 wt2 wt2Var = wt2.INSTANCE;
                 objArr = e;
@@ -214,12 +210,12 @@ public final class yd2<T> extends AbstractSet<T> {
             return Collections.emptySet().iterator();
         }
         if (size() == 1) {
-            return new C9958c(this.a);
+            return new c(this.a);
         }
         if (size() < 5) {
             Object obj = this.a;
             Objects.requireNonNull(obj, "null cannot be cast to non-null type kotlin.Array<T of org.jetbrains.kotlin.utils.SmartSet>");
-            return new C9956a((Object[]) obj);
+            return new a((Object[]) obj);
         }
         Object obj2 = this.a;
         Objects.requireNonNull(obj2, "null cannot be cast to non-null type kotlin.collections.MutableSet<T of org.jetbrains.kotlin.utils.SmartSet>");

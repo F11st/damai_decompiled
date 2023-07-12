@@ -1,6 +1,6 @@
 package com.amap.api.col.s;
 
-import com.amap.api.col.s.C4373ae;
+import com.amap.api.col.s.ae;
 import com.amap.api.services.core.LatLonPoint;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -11,13 +11,12 @@ final class ag extends af {
     private double a;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.ag$a */
     /* loaded from: classes10.dex */
-    static class C4377a {
+    static class a {
         LatLonPoint a;
         double b;
 
-        public C4377a(double d, double d2, double d3) {
+        public a(double d, double d2, double d3) {
             this.a = null;
             this.b = 0.0d;
             this.a = new LatLonPoint(d, d2);
@@ -28,14 +27,14 @@ final class ag extends af {
             if (this == obj) {
                 return true;
             }
-            if (obj != null && C4377a.class == obj.getClass()) {
+            if (obj != null && a.class == obj.getClass()) {
                 LatLonPoint latLonPoint = this.a;
-                C4377a c4377a = (C4377a) obj;
-                LatLonPoint latLonPoint2 = c4377a.a;
+                a aVar = (a) obj;
+                LatLonPoint latLonPoint2 = aVar.a;
                 if (latLonPoint == latLonPoint2) {
                     return true;
                 }
-                if (latLonPoint != null && C4435i.a(latLonPoint, latLonPoint2) <= c4377a.b) {
+                if (latLonPoint != null && i.a(latLonPoint, latLonPoint2) <= aVar.b) {
                     return true;
                 }
             }
@@ -51,16 +50,16 @@ final class ag extends af {
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.amap.api.col.s.af
-    public final boolean a(LinkedHashMap<C4373ae.C4375b, Object> linkedHashMap, C4373ae.C4375b c4375b) {
+    public final boolean a(LinkedHashMap<ae.b, Object> linkedHashMap, ae.b bVar) {
         String str;
-        if (linkedHashMap != null && c4375b != null) {
-            if (c4375b.b == null) {
-                return super.a(linkedHashMap, c4375b);
+        if (linkedHashMap != null && bVar != null) {
+            if (bVar.b == null) {
+                return super.a(linkedHashMap, bVar);
             }
-            for (C4373ae.C4375b c4375b2 : linkedHashMap.keySet()) {
-                if (c4375b2 != null && (str = c4375b2.a) != null && str.equals(c4375b.a)) {
-                    Object obj = c4375b2.b;
-                    if ((obj instanceof C4377a) && ((C4377a) obj).a(c4375b.b)) {
+            for (ae.b bVar2 : linkedHashMap.keySet()) {
+                if (bVar2 != null && (str = bVar2.a) != null && str.equals(bVar.a)) {
+                    Object obj = bVar2.b;
+                    if ((obj instanceof a) && ((a) obj).a(bVar.b)) {
                         return true;
                     }
                 }
@@ -71,17 +70,17 @@ final class ag extends af {
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.amap.api.col.s.af
-    public final Object b(LinkedHashMap<C4373ae.C4375b, Object> linkedHashMap, C4373ae.C4375b c4375b) {
+    public final Object b(LinkedHashMap<ae.b, Object> linkedHashMap, ae.b bVar) {
         String str;
-        if (linkedHashMap != null && c4375b != null) {
-            if (c4375b.b == null) {
-                return super.b(linkedHashMap, c4375b);
+        if (linkedHashMap != null && bVar != null) {
+            if (bVar.b == null) {
+                return super.b(linkedHashMap, bVar);
             }
-            for (C4373ae.C4375b c4375b2 : linkedHashMap.keySet()) {
-                if (c4375b2 != null && (str = c4375b2.a) != null && str.equals(c4375b.a)) {
-                    Object obj = c4375b2.b;
-                    if ((obj instanceof C4377a) && ((C4377a) obj).a(c4375b.b)) {
-                        return linkedHashMap.get(c4375b2);
+            for (ae.b bVar2 : linkedHashMap.keySet()) {
+                if (bVar2 != null && (str = bVar2.a) != null && str.equals(bVar.a)) {
+                    Object obj = bVar2.b;
+                    if ((obj instanceof a) && ((a) obj).a(bVar.b)) {
+                        return linkedHashMap.get(bVar2);
                     }
                 }
             }
@@ -91,29 +90,29 @@ final class ag extends af {
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.amap.api.col.s.af
-    public final Object c(LinkedHashMap<C4373ae.C4375b, Object> linkedHashMap, C4373ae.C4375b c4375b) {
-        C4373ae.C4375b c4375b2;
+    public final Object c(LinkedHashMap<ae.b, Object> linkedHashMap, ae.b bVar) {
+        ae.b bVar2;
         String str;
-        if (linkedHashMap != null && c4375b != null) {
-            if (c4375b.b == null) {
-                return super.c(linkedHashMap, c4375b);
+        if (linkedHashMap != null && bVar != null) {
+            if (bVar.b == null) {
+                return super.c(linkedHashMap, bVar);
             }
-            Iterator<C4373ae.C4375b> it = linkedHashMap.keySet().iterator();
+            Iterator<ae.b> it = linkedHashMap.keySet().iterator();
             while (true) {
                 if (!it.hasNext()) {
-                    c4375b2 = null;
+                    bVar2 = null;
                     break;
                 }
-                c4375b2 = it.next();
-                if (c4375b2 != null && (str = c4375b2.a) != null && str.equals(c4375b.a)) {
-                    Object obj = c4375b2.b;
-                    if ((obj instanceof C4377a) && ((C4377a) obj).a(c4375b.b)) {
+                bVar2 = it.next();
+                if (bVar2 != null && (str = bVar2.a) != null && str.equals(bVar.a)) {
+                    Object obj = bVar2.b;
+                    if ((obj instanceof a) && ((a) obj).a(bVar.b)) {
                         break;
                     }
                 }
             }
-            if (c4375b2 != null) {
-                return linkedHashMap.remove(c4375b2);
+            if (bVar2 != null) {
+                return linkedHashMap.remove(bVar2);
             }
         }
         return null;
@@ -124,10 +123,10 @@ final class ag extends af {
     }
 
     @Override // com.amap.api.col.s.af
-    public final void a(C4373ae.C4374a c4374a) {
-        super.a(c4374a);
-        if (c4374a != null) {
-            this.a = c4374a.d();
+    public final void a(ae.a aVar) {
+        super.a(aVar);
+        if (aVar != null) {
+            this.a = aVar.d();
         }
     }
 }

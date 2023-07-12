@@ -5,7 +5,6 @@ import android.text.TextUtils;
 import com.alient.onearch.adapter.pom.OneArchConstants;
 import com.alimm.xadsdk.request.builder.IRequestConst;
 import com.alipay.mobile.bqcscanservice.BQCCameraParam;
-import com.loc.C5846l;
 import com.taobao.weex.ui.component.richtext.node.RichTextNode;
 import java.util.HashMap;
 import java.util.Map;
@@ -47,7 +46,7 @@ public final class g43 {
 
     private static Map<String, String> e(Context context, String str, String str2, String str3, String str4, String str5, String str6, String str7) {
         HashMap hashMap = new HashMap(16);
-        hashMap.put("key", C5846l.j(context));
+        hashMap.put("key", com.loc.l.j(context));
         if (!TextUtils.isEmpty(str)) {
             hashMap.put(OneArchConstants.LayoutKey.KEY_WORDS, str);
         }

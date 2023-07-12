@@ -8,9 +8,9 @@ import java.net.ProtocolException;
 import java.util.Objects;
 import okio.Buffer;
 import okio.BufferedSource;
-import okio.C8844h;
-import okio.C8857o;
 import okio.Source;
+import okio.h;
+import okio.o;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -106,7 +106,7 @@ public final class WebSocketReader {
         }
 
         @Override // okio.Source
-        public C8857o timeout() {
+        public o timeout() {
             return WebSocketReader.this.source.timeout();
         }
     }
@@ -228,7 +228,7 @@ public final class WebSocketReader {
             throw new IllegalStateException("Unknown opcode: " + Integer.toHexString(this.opcode));
         }
         this.messageClosed = false;
-        this.frameCallback.onMessage(C8844h.d(this.framedMessageSource), payloadType);
+        this.frameCallback.onMessage(h.d(this.framedMessageSource), payloadType);
         if (!this.messageClosed) {
             throw new IllegalStateException("Listener failed to call close on message payload.");
         }

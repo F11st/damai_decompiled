@@ -34,7 +34,7 @@ public class SoLibInstallActivity extends DamaiBaseActivity implements OnSoGroup
         startProgressDialog("组件加载中...");
         SolidRequest solidRequest = new SolidRequest();
         solidRequest.name = soGroupEnum.soGroupName;
-        C1768a.f("SoLibInstallActivity downloadSoGroup " + soGroupEnum.soGroupName);
+        a.f("SoLibInstallActivity downloadSoGroup " + soGroupEnum.soGroupName);
         SolidServer.registerListener(solidRequest, new SoMainListener(this));
     }
 
@@ -94,7 +94,7 @@ public class SoLibInstallActivity extends DamaiBaseActivity implements OnSoGroup
         }
         super.onDestroy();
         if (this.mGuideExtra != null) {
-            C1768a.d().e(this.mGuideExtra.listenerKey);
+            a.d().e(this.mGuideExtra.listenerKey);
         }
     }
 
@@ -106,9 +106,9 @@ public class SoLibInstallActivity extends DamaiBaseActivity implements OnSoGroup
             return;
         }
         stopProgressDialog();
-        C1768a d = C1768a.d();
+        a d = a.d();
         SoInstallListener e = d.e(this.mGuideExtra.listenerKey);
-        C1768a.f("SoLibInstallActivity onResponse groupName:" + solidResponse.groupName + " status:" + solidResponse.status.name());
+        a.f("SoLibInstallActivity onResponse groupName:" + solidResponse.groupName + " status:" + solidResponse.status.name());
         if (e != null) {
             Status status = Status.DOWNLOADED;
             Status status2 = solidResponse.status;
@@ -140,17 +140,16 @@ public class SoLibInstallActivity extends DamaiBaseActivity implements OnSoGroup
     /* loaded from: classes16.dex */
     public static class Extra implements Parcelable {
         private static transient /* synthetic */ IpChange $ipChange;
-        public static final Parcelable.Creator<Extra> CREATOR = new C1767a();
+        public static final Parcelable.Creator<Extra> CREATOR = new a();
         public int listenerKey;
         public String soGroupEnumName;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.solid.SoLibInstallActivity$Extra$a */
         /* loaded from: classes16.dex */
-        public class C1767a implements Parcelable.Creator<Extra> {
+        public class a implements Parcelable.Creator<Extra> {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1767a() {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator

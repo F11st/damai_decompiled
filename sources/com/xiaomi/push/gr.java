@@ -22,38 +22,37 @@ public class gr {
     private String d;
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.gr$a */
     /* loaded from: classes11.dex */
-    public static class C7666a {
-        public static final C7666a a = new C7666a("internal-server-error");
-        public static final C7666a b = new C7666a("forbidden");
-        public static final C7666a c = new C7666a("bad-request");
-        public static final C7666a d = new C7666a("conflict");
-        public static final C7666a e = new C7666a("feature-not-implemented");
-        public static final C7666a f = new C7666a("gone");
-        public static final C7666a g = new C7666a("item-not-found");
-        public static final C7666a h = new C7666a("jid-malformed");
-        public static final C7666a i = new C7666a("not-acceptable");
-        public static final C7666a j = new C7666a("not-allowed");
-        public static final C7666a k = new C7666a("not-authorized");
-        public static final C7666a l = new C7666a("payment-required");
-        public static final C7666a m = new C7666a("recipient-unavailable");
-        public static final C7666a n = new C7666a("redirect");
-        public static final C7666a o = new C7666a("registration-required");
-        public static final C7666a p = new C7666a("remote-server-error");
-        public static final C7666a q = new C7666a("remote-server-not-found");
-        public static final C7666a r = new C7666a("remote-server-timeout");
-        public static final C7666a s = new C7666a("resource-constraint");
-        public static final C7666a t = new C7666a("service-unavailable");
-        public static final C7666a u = new C7666a("subscription-required");
-        public static final C7666a v = new C7666a("undefined-condition");
-        public static final C7666a w = new C7666a("unexpected-request");
-        public static final C7666a x = new C7666a("request-timeout");
+    public static class a {
+        public static final a a = new a("internal-server-error");
+        public static final a b = new a("forbidden");
+        public static final a c = new a("bad-request");
+        public static final a d = new a("conflict");
+        public static final a e = new a("feature-not-implemented");
+        public static final a f = new a("gone");
+        public static final a g = new a("item-not-found");
+        public static final a h = new a("jid-malformed");
+        public static final a i = new a("not-acceptable");
+        public static final a j = new a("not-allowed");
+        public static final a k = new a("not-authorized");
+        public static final a l = new a("payment-required");
+        public static final a m = new a("recipient-unavailable");
+        public static final a n = new a("redirect");
+        public static final a o = new a("registration-required");
+        public static final a p = new a("remote-server-error");
+        public static final a q = new a("remote-server-not-found");
+        public static final a r = new a("remote-server-timeout");
+        public static final a s = new a("resource-constraint");
+        public static final a t = new a("service-unavailable");
+        public static final a u = new a("subscription-required");
+        public static final a v = new a("undefined-condition");
+        public static final a w = new a("unexpected-request");
+        public static final a x = new a("request-timeout");
 
         /* renamed from: a  reason: collision with other field name */
         private String f439a;
 
-        public C7666a(String str) {
+        public a(String str) {
             this.f439a = str;
         }
 
@@ -85,22 +84,22 @@ public class gr {
         if (parcelableArray != null) {
             this.f438a = new ArrayList(parcelableArray.length);
             for (Parcelable parcelable : parcelableArray) {
-                gk a = gk.a((Bundle) parcelable);
-                if (a != null) {
-                    this.f438a.add(a);
+                gk a2 = gk.a((Bundle) parcelable);
+                if (a2 != null) {
+                    this.f438a.add(a2);
                 }
             }
         }
     }
 
-    public gr(C7666a c7666a) {
+    public gr(a aVar) {
         this.f438a = null;
-        a(c7666a);
+        a(aVar);
         this.d = null;
     }
 
-    private void a(C7666a c7666a) {
-        this.b = c7666a.f439a;
+    private void a(a aVar) {
+        this.b = aVar.f439a;
     }
 
     public Bundle a() {
@@ -127,9 +126,9 @@ public class gr {
             Bundle[] bundleArr = new Bundle[list.size()];
             int i = 0;
             for (gk gkVar : this.f438a) {
-                Bundle a = gkVar.a();
-                if (a != null) {
-                    bundleArr[i] = a;
+                Bundle a2 = gkVar.a();
+                if (a2 != null) {
+                    bundleArr[i] = a2;
                     i++;
                 }
             }

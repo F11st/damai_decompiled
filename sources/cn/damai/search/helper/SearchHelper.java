@@ -7,7 +7,6 @@ import android.text.TextUtils;
 import android.widget.ImageView;
 import androidx.annotation.Nullable;
 import androidx.core.util.Pair;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.brand.BrandOptimizationDO;
 import cn.damai.commonbusiness.search.bean.BaccountInfo;
@@ -29,9 +28,9 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
-import tb.C9826vr;
 import tb.cb2;
 import tb.mu0;
+import tb.vr;
 import tb.wh2;
 
 /* compiled from: Taobao */
@@ -101,12 +100,11 @@ public class SearchHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.helper.SearchHelper$a */
     /* loaded from: classes15.dex */
-    public class C1575a implements Comparator<ArtificialProxy> {
+    public class a implements Comparator<ArtificialProxy> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1575a() {
+        a() {
         }
 
         @Override // java.util.Comparator
@@ -118,41 +116,39 @@ public class SearchHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.helper.SearchHelper$b */
     /* loaded from: classes6.dex */
-    public class C1576b implements DMImageCreator.DMImageFailListener {
+    public class b implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1576b() {
+        b() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "186201785")) {
-                ipChange.ipc$dispatch("186201785", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("186201785", new Object[]{this, dVar});
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.helper.SearchHelper$c */
     /* loaded from: classes6.dex */
-    public class C1577c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
-        C1577c(ImageView imageView) {
+        c(ImageView imageView) {
             this.a = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Drawable drawable;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1868396942")) {
-                ipChange.ipc$dispatch("1868396942", new Object[]{this, c0502e});
-            } else if (c0502e == null || (drawable = c0502e.a) == null) {
+                ipChange.ipc$dispatch("1868396942", new Object[]{this, eVar});
+            } else if (eVar == null || (drawable = eVar.a) == null) {
             } else {
                 this.a.setImageDrawable(drawable);
             }
@@ -161,9 +157,8 @@ public class SearchHelper {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.helper.SearchHelper$d */
     /* loaded from: classes15.dex */
-    public static /* synthetic */ class C1578d {
+    public static /* synthetic */ class d {
         static final /* synthetic */ int[] a;
 
         static {
@@ -301,46 +296,46 @@ public class SearchHelper {
     }
 
     public static String f(String str) {
-        double d;
+        double d2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "220634623")) {
             return (String) ipChange.ipc$dispatch("220634623", new Object[]{str});
         }
         try {
-            d = Double.parseDouble(str);
+            d2 = Double.parseDouble(str);
         } catch (Exception unused) {
-            d = 0.0d;
+            d2 = 0.0d;
         }
-        double d2 = d >= 0.0d ? d : 0.0d;
-        if (d2 < 1000.0d) {
+        double d3 = d2 >= 0.0d ? d2 : 0.0d;
+        if (d3 < 1000.0d) {
             return "距离" + str + WXComponent.PROP_FS_MATCH_PARENT;
-        } else if (d2 < 100000.0d) {
+        } else if (d3 < 100000.0d) {
             DecimalFormat decimalFormat = new DecimalFormat("0.0");
-            return "距离" + decimalFormat.format(d2 / 1000.0d) + "km";
+            return "距离" + decimalFormat.format(d3 / 1000.0d) + "km";
         } else {
             DecimalFormat decimalFormat2 = new DecimalFormat("0");
-            return "距离" + decimalFormat2.format(d2 / 1000.0d) + "km";
+            return "距离" + decimalFormat2.format(d3 / 1000.0d) + "km";
         }
     }
 
     public static String g(String str) {
-        double d;
         double d2;
+        double d3;
         DecimalFormat decimalFormat;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-984039865")) {
             return (String) ipChange.ipc$dispatch("-984039865", new Object[]{str});
         }
         try {
-            d = Double.parseDouble(str);
+            d2 = Double.parseDouble(str);
         } catch (Exception unused) {
-            d = 0.0d;
+            d2 = 0.0d;
         }
-        if ((d >= 0.0d ? d : 0.0d) < 10000.0d) {
+        if ((d2 >= 0.0d ? d2 : 0.0d) < 10000.0d) {
             return str + " 粉丝";
         }
         new DecimalFormat("0.0").setRoundingMode(RoundingMode.FLOOR);
-        return decimalFormat.format(d2 / 10000.0d) + "万粉丝";
+        return decimalFormat.format(d3 / 10000.0d) + "万粉丝";
     }
 
     @Nullable
@@ -390,7 +385,7 @@ public class SearchHelper {
                 arrayList3.addAll(list5);
             }
             if (!cb2.d(arrayList3)) {
-                Collections.sort(arrayList3, new C1575a());
+                Collections.sort(arrayList3, new a());
                 searchDataHolder.artificialList = arrayList3;
             }
             arrayList.add(searchDataHolder);
@@ -475,7 +470,7 @@ public class SearchHelper {
         if (AndroidInstantRuntime.support(ipChange, "-353462371")) {
             return ((Integer) ipChange.ipc$dispatch("-353462371", new Object[]{inputState})).intValue();
         }
-        switch (C1578d.a[inputState.ordinal()]) {
+        switch (d.a[inputState.ordinal()]) {
             case 4:
                 return 1;
             case 5:
@@ -655,15 +650,15 @@ public class SearchHelper {
             return;
         }
         Object tag = imageView.getTag();
-        if (tag instanceof C9826vr) {
-            ((C9826vr) tag).cancel();
+        if (tag instanceof vr) {
+            ((vr) tag).cancel();
         }
         imageView.setTag(null);
         imageView.setImageDrawable(mu0.a().getResources().getDrawable(R$drawable.uikit_default_image_bg_gradient));
         if (TextUtils.isEmpty(str)) {
             return;
         }
-        imageView.setTag(C0504a.b().f(str, i, i2).n(new C1577c(imageView)).e(new C1576b()).f());
+        imageView.setTag(cn.damai.common.image.a.b().f(str, i, i2).n(new c(imageView)).e(new b()).f());
     }
 
     public static void t(Context context, List<String> list) {

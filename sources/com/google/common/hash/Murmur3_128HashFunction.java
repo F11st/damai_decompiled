@@ -12,21 +12,20 @@ import tb.jn1;
 /* compiled from: Taobao */
 @Immutable
 /* loaded from: classes10.dex */
-public final class Murmur3_128HashFunction extends AbstractC5229b implements Serializable {
+public final class Murmur3_128HashFunction extends b implements Serializable {
     private static final long serialVersionUID = 0;
     private final int seed;
     static final HashFunction MURMUR3_128 = new Murmur3_128HashFunction(0);
     static final HashFunction GOOD_FAST_HASH_128 = new Murmur3_128HashFunction(Hashing.a);
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.hash.Murmur3_128HashFunction$a */
     /* loaded from: classes10.dex */
-    private static final class C5223a extends AbstractC5231d {
+    private static final class a extends d {
         private long d;
         private long e;
         private int f;
 
-        C5223a(int i) {
+        a(int i) {
             super(16);
             long j = i;
             this.d = j;
@@ -66,7 +65,7 @@ public final class Murmur3_128HashFunction extends AbstractC5229b implements Ser
             return Long.rotateLeft(j * 5545529020109919103L, 33) * (-8663945395140668459L);
         }
 
-        @Override // com.google.common.hash.AbstractC5231d
+        @Override // com.google.common.hash.d
         public HashCode a() {
             long j = this.d;
             int i = this.f;
@@ -86,13 +85,13 @@ public final class Murmur3_128HashFunction extends AbstractC5229b implements Ser
             return HashCode.fromBytesNoCopy(ByteBuffer.wrap(new byte[16]).order(ByteOrder.LITTLE_ENDIAN).putLong(this.d).putLong(this.e).array());
         }
 
-        @Override // com.google.common.hash.AbstractC5231d
+        @Override // com.google.common.hash.d
         protected void d(ByteBuffer byteBuffer) {
             g(byteBuffer.getLong(), byteBuffer.getLong());
             this.f += 16;
         }
 
-        @Override // com.google.common.hash.AbstractC5231d
+        @Override // com.google.common.hash.d
         protected void e(ByteBuffer byteBuffer) {
             long j;
             long j2;
@@ -281,7 +280,7 @@ public final class Murmur3_128HashFunction extends AbstractC5229b implements Ser
 
     @Override // com.google.common.hash.HashFunction
     public Hasher newHasher() {
-        return new C5223a(this.seed);
+        return new a(this.seed);
     }
 
     public String toString() {

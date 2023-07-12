@@ -20,8 +20,8 @@ import android.util.Pair;
 import anet.channel.status.NetworkStatusHelper;
 import anet.channel.thread.ThreadPoolExecutorFactory;
 import anet.channel.util.ALog;
-import anet.channel.util.C0241c;
 import anet.channel.util.Inet64Util;
+import anet.channel.util.c;
 import io.flutter.plugins.connectivity.ConnectivityBroadcastReceiver;
 import java.lang.reflect.Method;
 import java.net.InetAddress;
@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
-import tb.C9708t9;
+import tb.t9;
 
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
@@ -71,10 +71,9 @@ public class NetworkStatusMonitor {
     };
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.status.NetworkStatusMonitor$a */
     /* loaded from: classes.dex */
-    static class C0204a extends ConnectivityManager.NetworkCallback {
-        C0204a() {
+    static class a extends ConnectivityManager.NetworkCallback {
+        a() {
         }
 
         @Override // android.net.ConnectivityManager.NetworkCallback
@@ -100,10 +99,9 @@ public class NetworkStatusMonitor {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.status.NetworkStatusMonitor$b */
     /* loaded from: classes.dex */
-    public static class C0205b extends ConnectivityManager.NetworkCallback {
-        C0205b() {
+    public static class b extends ConnectivityManager.NetworkCallback {
+        b() {
         }
 
         @Override // android.net.ConnectivityManager.NetworkCallback
@@ -314,13 +312,13 @@ public class NetworkStatusMonitor {
     }
 
     private static void k() {
-        if (C9708t9.I()) {
-            if (C0241c.k() && !C9708t9.y(C0241c.d())) {
+        if (t9.I()) {
+            if (c.k() && !t9.y(c.d())) {
                 ALog.e("awcn.NetworkStatusMonitor", "close multi path in harmonyOS system.", null, new Object[0]);
                 return;
             }
             ALog.e("awcn.NetworkStatusMonitor", "[registerCellularNetworkCallback]", null, new Object[0]);
-            o.requestNetwork(new NetworkRequest.Builder().addTransportType(0).addCapability(12).build(), new C0205b());
+            o.requestNetwork(new NetworkRequest.Builder().addTransportType(0).addCapability(12).build(), new b());
         }
     }
 
@@ -331,7 +329,7 @@ public class NetworkStatusMonitor {
         }
         NetworkInfo d2 = d();
         b = d2 != null && d2.isConnected();
-        o.registerDefaultNetworkCallback(new C0204a());
+        o.registerDefaultNetworkCallback(new a());
         try {
             k();
         } catch (Throwable unused) {

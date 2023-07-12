@@ -2,8 +2,8 @@ package com.huawei.secure.android.common.encrypt.rsa;
 
 import android.text.TextUtils;
 import android.util.Base64;
-import com.huawei.secure.android.common.encrypt.utils.C5742b;
 import com.huawei.secure.android.common.encrypt.utils.EncryptUtil;
+import com.huawei.secure.android.common.encrypt.utils.b;
 import java.io.UnsupportedEncodingException;
 import java.security.GeneralSecurityException;
 import java.security.Key;
@@ -33,7 +33,7 @@ public abstract class RSAEncrypt {
         if (!TextUtils.isEmpty(str) && !TextUtils.isEmpty(str2)) {
             return decrypt(str, EncryptUtil.getPrivateKey(str2));
         }
-        C5742b.b(b, "content or private key is null");
+        b.b(b, "content or private key is null");
         return "";
     }
 
@@ -41,14 +41,14 @@ public abstract class RSAEncrypt {
         if (!TextUtils.isEmpty(str) && !TextUtils.isEmpty(str2)) {
             return encrypt(str, EncryptUtil.getPublicKey(str2));
         }
-        C5742b.b(b, "content or public key is null");
+        b.b(b, "content or public key is null");
         return "";
     }
 
     public static Map<String, Key> generateRSAKeyPair(int i) throws NoSuchAlgorithmException {
         HashMap hashMap = new HashMap(2);
         if (i < 2048) {
-            C5742b.b(b, "generateRSAKeyPair: key length is too short");
+            b.b(b, "generateRSAKeyPair: key length is too short");
             return hashMap;
         }
         SecureRandom genSecureRandom = EncryptUtil.genSecureRandom();
@@ -75,14 +75,14 @@ public abstract class RSAEncrypt {
             try {
                 return new String(decrypt(Base64.decode(str, 0), privateKey), "UTF-8");
             } catch (UnsupportedEncodingException e2) {
-                C5742b.b(b, "RSA decrypt exception : " + e2.getMessage());
+                b.b(b, "RSA decrypt exception : " + e2.getMessage());
                 return "";
             } catch (Exception e3) {
-                C5742b.b(b, "exception : " + e3.getMessage());
+                b.b(b, "exception : " + e3.getMessage());
                 return "";
             }
         }
-        C5742b.b(b, "content or privateKey is null , or length is too short");
+        b.b(b, "content or privateKey is null , or length is too short");
         return "";
     }
 
@@ -91,14 +91,14 @@ public abstract class RSAEncrypt {
             try {
                 return Base64.encodeToString(encrypt(str.getBytes("UTF-8"), publicKey), 0);
             } catch (UnsupportedEncodingException unused) {
-                C5742b.b(b, "encrypt: UnsupportedEncodingException");
+                b.b(b, "encrypt: UnsupportedEncodingException");
                 return "";
             } catch (Exception e2) {
-                C5742b.b(b, "exception : " + e2.getMessage());
+                b.b(b, "exception : " + e2.getMessage());
                 return "";
             }
         }
-        C5742b.b(b, "content or PublicKey is null , or length is too short");
+        b.b(b, "content or PublicKey is null , or length is too short");
         return "";
     }
 
@@ -110,11 +110,11 @@ public abstract class RSAEncrypt {
                 cipher.init(2, privateKey);
                 return cipher.doFinal(bArr);
             } catch (GeneralSecurityException e2) {
-                C5742b.b(b, "RSA decrypt exception : " + e2.getMessage());
+                b.b(b, "RSA decrypt exception : " + e2.getMessage());
                 return bArr2;
             }
         }
-        C5742b.b(b, "content or privateKey is null , or length is too short");
+        b.b(b, "content or privateKey is null , or length is too short");
         return bArr2;
     }
 
@@ -126,11 +126,11 @@ public abstract class RSAEncrypt {
                 cipher.init(1, publicKey);
                 return cipher.doFinal(bArr);
             } catch (GeneralSecurityException e2) {
-                C5742b.b(b, "RSA encrypt exception : " + e2.getMessage());
+                b.b(b, "RSA encrypt exception : " + e2.getMessage());
                 return bArr2;
             }
         }
-        C5742b.b(b, "content or PublicKey is null , or length is too short");
+        b.b(b, "content or PublicKey is null , or length is too short");
         return bArr2;
     }
 }

@@ -12,7 +12,6 @@ import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 import cn.damai.common.app.widget.DMDialog;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.commonbusiness.model.RealNameAuthStatusBean;
@@ -80,23 +79,22 @@ public class UserCenterHeaderPanel implements View.OnClickListener, HeaderUiCont
     private TextView mZanCountTv;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userhome.view.usercenter.UserCenterHeaderPanel$a */
     /* loaded from: classes9.dex */
-    public class C2728a implements DMImageCreator.DMImageSuccListener {
+    public class a implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
-        C2728a(UserCenterHeaderPanel userCenterHeaderPanel, ImageView imageView) {
+        a(UserCenterHeaderPanel userCenterHeaderPanel, ImageView imageView) {
             this.a = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Drawable drawable;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1761403312")) {
-                ipChange.ipc$dispatch("1761403312", new Object[]{this, c0502e});
-            } else if (c0502e == null || (drawable = c0502e.a) == null) {
+                ipChange.ipc$dispatch("1761403312", new Object[]{this, eVar});
+            } else if (eVar == null || (drawable = eVar.a) == null) {
             } else {
                 int intrinsicWidth = drawable.getIntrinsicWidth();
                 int intrinsicHeight = drawable.getIntrinsicHeight();
@@ -112,19 +110,18 @@ public class UserCenterHeaderPanel implements View.OnClickListener, HeaderUiCont
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userhome.view.usercenter.UserCenterHeaderPanel$b */
     /* loaded from: classes9.dex */
-    public class C2729b implements DMImageCreator.DMImageFailListener {
+    public class b implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2729b() {
+        b() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1591026013")) {
-                ipChange.ipc$dispatch("1591026013", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("1591026013", new Object[]{this, dVar});
             } else {
                 UserCenterHeaderPanel.this.mHeaderBgImg.setImageResource(R$drawable.user_center_header_default);
             }
@@ -132,37 +129,35 @@ public class UserCenterHeaderPanel implements View.OnClickListener, HeaderUiCont
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userhome.view.usercenter.UserCenterHeaderPanel$c */
     /* loaded from: classes9.dex */
-    public class C2730c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C2730c(String str) {
+        c(String str) {
             this.a = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "545249586")) {
-                ipChange.ipc$dispatch("545249586", new Object[]{this, c0502e});
-            } else if (c0502e == null || c0502e.a == null) {
+                ipChange.ipc$dispatch("545249586", new Object[]{this, eVar});
+            } else if (eVar == null || eVar.a == null) {
                 UserCenterHeaderPanel.this.mHeaderBgImg.setImageResource(R$drawable.user_center_header_default);
             } else {
                 UserCenterHeaderPanel.this.mShowingBackGUrl = this.a;
-                UserCenterHeaderPanel.this.mHeaderBgImg.setImageDrawable(c0502e.a);
+                UserCenterHeaderPanel.this.mHeaderBgImg.setImageDrawable(eVar.a);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userhome.view.usercenter.UserCenterHeaderPanel$d */
     /* loaded from: classes17.dex */
-    public class DialogInterface$OnClickListenerC2731d implements DialogInterface.OnClickListener {
+    public class d implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC2731d(UserCenterHeaderPanel userCenterHeaderPanel) {
+        d(UserCenterHeaderPanel userCenterHeaderPanel) {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -175,12 +170,11 @@ public class UserCenterHeaderPanel implements View.OnClickListener, HeaderUiCont
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userhome.view.usercenter.UserCenterHeaderPanel$e */
     /* loaded from: classes17.dex */
-    public class C2732e implements ValueAnimator.AnimatorUpdateListener {
+    public class e implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2732e() {
+        e() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -252,33 +246,33 @@ public class UserCenterHeaderPanel implements View.OnClickListener, HeaderUiCont
         if (AndroidInstantRuntime.support(ipChange, "242400326")) {
             ipChange.ipc$dispatch("242400326", new Object[]{this, str, imageView});
         } else {
-            C0504a.b().c(str).n(new C2728a(this, imageView)).f();
+            cn.damai.common.image.a.b().c(str).n(new a(this, imageView)).f();
         }
     }
 
     private void setHeaderInfoLayoutMarginTop(boolean z) {
-        int a;
+        int a2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1305434839")) {
             ipChange.ipc$dispatch("-1305434839", new Object[]{this, Boolean.valueOf(z)});
             return;
         }
-        int a2 = m62.a(mu0.a(), 22.0f);
+        int a3 = m62.a(mu0.a(), 22.0f);
         if (!z) {
-            a = m62.a(mu0.a(), 97.0f);
+            a2 = m62.a(mu0.a(), 97.0f);
         } else {
-            a = m62.a(mu0.a(), 138.0f);
+            a2 = m62.a(mu0.a(), 138.0f);
         }
         ViewGroup.LayoutParams layoutParams = this.mHeaderInfoLayout.getLayoutParams();
         if (layoutParams instanceof ViewGroup.MarginLayoutParams) {
             ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
-            if (marginLayoutParams.topMargin != a) {
-                marginLayoutParams.topMargin = a;
+            if (marginLayoutParams.topMargin != a2) {
+                marginLayoutParams.topMargin = a2;
                 this.mHeaderInfoLayout.requestLayout();
             }
         }
         ViewGroup.LayoutParams layoutParams2 = this.mHeadBgImgClickArea.getLayoutParams();
-        int i = a2 + a;
+        int i = a3 + a2;
         if (layoutParams2 == null || layoutParams2.height == i) {
             return;
         }
@@ -404,7 +398,7 @@ public class UserCenterHeaderPanel implements View.OnClickListener, HeaderUiCont
             this.mHeaderBgImg.setImageResource(R$drawable.user_center_header_default);
             return;
         }
-        C0504a.b().c(str).n(new C2730c(str)).e(new C2729b()).f();
+        cn.damai.common.image.a.b().c(str).n(new c(str)).e(new b()).f();
     }
 
     private void setUserTypeTagView(UserInfoBean userInfoBean) {
@@ -430,7 +424,7 @@ public class UserCenterHeaderPanel implements View.OnClickListener, HeaderUiCont
             ipChange.ipc$dispatch("68010628", new Object[]{this});
         } else if (this.mActivity.isFinishing()) {
         } else {
-            new DMDialog(this.mActivity).v("IP属地说明").q("为维护网络安全、保障良好生态和社区的真实性，根据网络运营商数据，展示用户IP属地信息。").n("我知道了", new DialogInterface$OnClickListenerC2731d(this)).show();
+            new DMDialog(this.mActivity).v("IP属地说明").q("为维护网络安全、保障良好生态和社区的真实性，根据网络运营商数据，展示用户IP属地信息。").n("我知道了", new d(this)).show();
         }
     }
 
@@ -501,8 +495,8 @@ public class UserCenterHeaderPanel implements View.OnClickListener, HeaderUiCont
                         String goDnaUrl = this.mHomeDataBean.getGoDnaUrl();
                         if (TextUtils.isEmpty(goDnaUrl)) {
                             this.mUtListener.onUtDNAViewClick(false);
-                            final Dialog b = DialogUtil.b(this.mActivity);
-                            b.show();
+                            final Dialog b2 = DialogUtil.b(this.mActivity);
+                            b2.show();
                             this.mDnaUi.postDelayed(new Runnable() { // from class: cn.damai.user.userhome.view.usercenter.UserCenterHeaderPanel.5
                                 private static transient /* synthetic */ IpChange $ipChange;
 
@@ -511,8 +505,8 @@ public class UserCenterHeaderPanel implements View.OnClickListener, HeaderUiCont
                                     IpChange ipChange2 = $ipChange;
                                     if (AndroidInstantRuntime.support(ipChange2, "449136547")) {
                                         ipChange2.ipc$dispatch("449136547", new Object[]{this});
-                                    } else if (b.isShowing()) {
-                                        b.dismiss();
+                                    } else if (b2.isShowing()) {
+                                        b2.dismiss();
                                     }
                                 }
                             }, DanmakuFactory.MIN_DANMAKU_DURATION);
@@ -591,7 +585,7 @@ public class UserCenterHeaderPanel implements View.OnClickListener, HeaderUiCont
         this.mShowDnaAnimator = ofInt;
         ofInt.setDuration(300L);
         this.mShowDnaAnimator.setInterpolator(new LinearInterpolator());
-        this.mShowDnaAnimator.addUpdateListener(new C2732e());
+        this.mShowDnaAnimator.addUpdateListener(new e());
         this.mShowDnaAnimator.start();
     }
 

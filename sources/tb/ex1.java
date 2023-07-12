@@ -4,8 +4,6 @@ import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8225w;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Class;
@@ -21,28 +19,28 @@ public final class ex1 implements ClassDataFinder {
     @NotNull
     private final NameResolver a;
     @NotNull
-    private final AbstractC9135fc b;
+    private final fc b;
     @NotNull
     private final Function1<hj, SourceElement> c;
     @NotNull
     private final Map<hj, ProtoBuf$Class> d;
 
     /* JADX WARN: Multi-variable type inference failed */
-    public ex1(@NotNull ProtoBuf$PackageFragment protoBuf$PackageFragment, @NotNull NameResolver nameResolver, @NotNull AbstractC9135fc abstractC9135fc, @NotNull Function1<? super hj, ? extends SourceElement> function1) {
+    public ex1(@NotNull ProtoBuf$PackageFragment protoBuf$PackageFragment, @NotNull NameResolver nameResolver, @NotNull fc fcVar, @NotNull Function1<? super hj, ? extends SourceElement> function1) {
         int q;
         int e;
         int a;
         b41.i(protoBuf$PackageFragment, "proto");
         b41.i(nameResolver, "nameResolver");
-        b41.i(abstractC9135fc, "metadataVersion");
+        b41.i(fcVar, "metadataVersion");
         b41.i(function1, "classSource");
         this.a = nameResolver;
-        this.b = abstractC9135fc;
+        this.b = fcVar;
         this.c = function1;
         List<ProtoBuf$Class> class_List = protoBuf$PackageFragment.getClass_List();
         b41.h(class_List, "proto.class_List");
-        q = C8215n.q(class_List, 10);
-        e = C8225w.e(q);
+        q = kotlin.collections.n.q(class_List, 10);
+        e = kotlin.collections.w.e(q);
         a = ty1.a(e, 16);
         LinkedHashMap linkedHashMap = new LinkedHashMap(a);
         for (Object obj : class_List) {

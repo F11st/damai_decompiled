@@ -7,13 +7,12 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes3.dex */
 public final class qh0 extends c2 {
     @NotNull
-    private final C9605a a = new C9605a();
+    private final a a = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qh0$a */
     /* loaded from: classes3.dex */
-    public static final class C9605a extends ThreadLocal<Random> {
-        C9605a() {
+    public static final class a extends ThreadLocal<Random> {
+        a() {
         }
 
         /* JADX INFO: Access modifiers changed from: protected */

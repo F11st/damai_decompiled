@@ -16,7 +16,6 @@ import cn.damai.projectfiltercopy.filterbtn.FilterBtn;
 import cn.damai.projectfiltercopy.floatcontainer.FloatContainer;
 import cn.damai.projectfiltercopy.floatview.CityFloatLayer;
 import cn.damai.projectfiltercopy.floatview.FloatLayer;
-import cn.damai.projectfiltercopy.floatview.View$OnClickListenerC1532b;
 import cn.damai.projectfiltercopy.listener.FilterBtnAction;
 import cn.damai.projectfiltercopy.listener.FilterBtnClickListener;
 import cn.damai.projectfiltercopy.listener.FilterBtnClickProxyHListener;
@@ -107,7 +106,7 @@ public class fj0<T> implements FloatListener, FilterBtnClickListener {
             return (fj0) ipChange.ipc$dispatch("1016657269", new Object[]{context, floatContainer, filterModel, list});
         }
         Type type = Type.SORT;
-        return new fj0<>(type, filterModel, floatContainer, new dj0(context, type, filterModel), new View$OnClickListenerC1532b(context, list), new SortT(filterModel));
+        return new fj0<>(type, filterModel, floatContainer, new dj0(context, type, filterModel), new cn.damai.projectfiltercopy.floatview.b(context, list), new SortT(filterModel));
     }
 
     public void a(ViewGroup viewGroup, ViewGroup viewGroup2, ViewGroup viewGroup3, FilterBtnAction filterBtnAction) {

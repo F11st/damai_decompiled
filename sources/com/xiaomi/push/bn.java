@@ -2,7 +2,6 @@ package com.xiaomi.push;
 
 import android.net.Uri;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidParameterException;
 import java.security.MessageDigest;
@@ -16,9 +15,9 @@ import java.util.TreeMap;
 public class bn {
     public static String a(String str) {
         try {
-            return String.valueOf(C7613bm.a(MessageDigest.getInstance("SHA1").digest(str.getBytes("UTF-8"))));
+            return String.valueOf(bm.a(MessageDigest.getInstance("SHA1").digest(str.getBytes("UTF-8"))));
         } catch (UnsupportedEncodingException | NoSuchAlgorithmException | Exception e) {
-            AbstractC7535b.a("CloudCoder.hash4SHA1 ", e);
+            com.xiaomi.channel.commonutils.logger.b.a("CloudCoder.hash4SHA1 ", e);
             throw new IllegalStateException("failed to SHA1");
         }
     }

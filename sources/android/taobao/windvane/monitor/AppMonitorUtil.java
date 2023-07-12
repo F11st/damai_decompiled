@@ -12,7 +12,7 @@ import com.alibaba.mtl.appmonitor.model.DimensionValueSet;
 import com.alibaba.mtl.appmonitor.model.Measure;
 import com.alibaba.mtl.appmonitor.model.MeasureSet;
 import com.alibaba.mtl.appmonitor.model.MeasureValueSet;
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import com.huawei.hms.support.hianalytics.HiAnalyticsConstant;
 import com.taobao.accs.utl.BaseMonitor;
 import com.taobao.orange.OConstant;
@@ -726,7 +726,7 @@ public class AppMonitorUtil {
             create34.addMeasure(createMeasuerWithRange("firstByte", 0.0d, 600000.0d));
             create34.addMeasure(createMeasuerWithRange("domLoad", 0.0d, 600000.0d));
             create34.addMeasure(createMeasuerWithRange("pageLoad", 0.0d, 600000.0d));
-            create34.addMeasure(createMeasuerWithRange(AbstractC5658c.a, 0.0d, 600000.0d));
+            create34.addMeasure(createMeasuerWithRange(c.a, 0.0d, 600000.0d));
             create34.addMeasure(createMeasuerWithRange("dc", 0.0d, 600000.0d));
             create34.addMeasure(createMeasuerWithRange("dcl", 0.0d, 600000.0d));
             create34.addMeasure(createMeasuerWithRange("dl", 0.0d, 600000.0d));

@@ -3,7 +3,7 @@ package com.amap.api.fence;
 import android.app.PendingIntent;
 import android.content.Context;
 import com.amap.api.location.DPoint;
-import com.loc.C5785a;
+import com.loc.a;
 import com.loc.j1;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ public class GeoFenceClient {
     public static final int GEOFENCE_OUT = 2;
     public static final int GEOFENCE_STAYED = 4;
     Context a;
-    C5785a b;
+    a b;
 
     public GeoFenceClient(Context context) {
         this.a = null;
@@ -32,8 +32,8 @@ public class GeoFenceClient {
         }
     }
 
-    private static C5785a a(Context context) {
-        return new C5785a(context);
+    private static a a(Context context) {
+        return new a(context);
     }
 
     public void addGeoFence(DPoint dPoint, float f, String str) {

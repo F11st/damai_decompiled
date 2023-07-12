@@ -4,7 +4,7 @@ import com.xiaomi.push.service.XMPushService;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-class ck extends XMPushService.AbstractC7707j {
+class ck extends XMPushService.j {
     final /* synthetic */ XMPushService a;
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -14,13 +14,13 @@ class ck extends XMPushService.AbstractC7707j {
         this.a = xMPushService;
     }
 
-    @Override // com.xiaomi.push.service.XMPushService.AbstractC7707j
+    @Override // com.xiaomi.push.service.XMPushService.j
     /* renamed from: a */
     public String mo1157a() {
         return "disconnect for service destroy.";
     }
 
-    @Override // com.xiaomi.push.service.XMPushService.AbstractC7707j
+    @Override // com.xiaomi.push.service.XMPushService.j
     /* renamed from: a */
     public void mo878a() {
         if (this.a.f836a != null) {

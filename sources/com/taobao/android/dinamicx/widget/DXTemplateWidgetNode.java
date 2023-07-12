@@ -82,9 +82,8 @@ public class DXTemplateWidgetNode extends DXLinearLayoutWidgetNode {
     private String version;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXTemplateWidgetNode$a */
     /* loaded from: classes11.dex */
-    public static class C6464a implements IDXBuilderWidgetNode {
+    public static class a implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(Object obj) {
             return new DXTemplateWidgetNode();
@@ -253,7 +252,7 @@ public class DXTemplateWidgetNode extends DXLinearLayoutWidgetNode {
         DXWidgetNode childAt;
         DXWidgetNode dXWidgetNode = (DXWidgetNode) shallowClone(dXRuntimeContext, true);
         dXWidgetNode.setSourceWidget(getSourceWidget());
-        C6494g.a(dXWidgetNode);
+        g.a(dXWidgetNode);
         if (!isRemote() && (childAt = getChildAt(0)) != null && childAt.getDXRuntimeContext() != null) {
             DXRuntimeContext cloneWithWidgetNode = childAt.getDXRuntimeContext().cloneWithWidgetNode(childAt);
             if (dXRuntimeContext.getSubData() instanceof JSONObject) {
@@ -264,7 +263,7 @@ public class DXTemplateWidgetNode extends DXLinearLayoutWidgetNode {
                 cloneWithWidgetNode.setData(dXJSONObjectForVM);
                 setData(dXJSONObjectForVM);
             }
-            dXWidgetNode.addChild(C6494g.c(childAt, cloneWithWidgetNode, false), false);
+            dXWidgetNode.addChild(g.c(childAt, cloneWithWidgetNode, false), false);
         }
         return dXWidgetNode;
     }
@@ -337,7 +336,7 @@ public class DXTemplateWidgetNode extends DXLinearLayoutWidgetNode {
         return this.sticky == 1;
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onBeforeBindChildData() {
         super.onBeforeBindChildData();
     }
@@ -353,7 +352,7 @@ public class DXTemplateWidgetNode extends DXLinearLayoutWidgetNode {
         super.onBindEvent(context, view, j);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onClone(DXWidgetNode dXWidgetNode, boolean z) {
         if (dXWidgetNode == null || !(dXWidgetNode instanceof DXTemplateWidgetNode)) {
             return;
@@ -452,7 +451,7 @@ public class DXTemplateWidgetNode extends DXLinearLayoutWidgetNode {
         }
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     protected void onRenderView(Context context, View view) {
         super.onRenderView(context, view);
         if (!isSticky() || getDXRuntimeContext().getRootView().getDxNestedScrollerView() == null) {
@@ -461,7 +460,7 @@ public class DXTemplateWidgetNode extends DXLinearLayoutWidgetNode {
         getDXRuntimeContext().getRootView().getDxNestedScrollerView().setStickyHeight(getMeasuredHeight());
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetIntAttribute(long j, int i) {
         if (j == DXTEMPLATE___STORAGETYPE) {
             nz.a("onSetIntAttribute");
@@ -484,7 +483,7 @@ public class DXTemplateWidgetNode extends DXLinearLayoutWidgetNode {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetListAttribute(long j, JSONArray jSONArray) {
         if (j == DXTEMPLATE__SLOTINFOLIST) {
             this._slotInfoList = jSONArray;
@@ -546,8 +545,8 @@ public class DXTemplateWidgetNode extends DXLinearLayoutWidgetNode {
             return;
         }
         DXWidgetNode queryRootWidgetNode = queryRootWidgetNode();
-        if (queryRootWidgetNode instanceof C6493f) {
-            Map<String, WeakReference<DXWidgetNode>> dxUserIdMap = ((C6493f) queryRootWidgetNode).getDxUserIdMap();
+        if (queryRootWidgetNode instanceof f) {
+            Map<String, WeakReference<DXWidgetNode>> dxUserIdMap = ((f) queryRootWidgetNode).getDxUserIdMap();
             WeakReference<DXWidgetNode> weakReference = dxUserIdMap.get(this.userId);
             if (weakReference != null) {
                 DXWidgetNode dXWidgetNode = weakReference.get();

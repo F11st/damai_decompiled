@@ -2,7 +2,6 @@ package tb;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.taobao.android.dinamic.C6313b;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -104,7 +103,7 @@ public class c7 {
     public JSONObject c() {
         JSONObject jSONObject = this.a;
         if (jSONObject == null || !this.b) {
-            JSONObject parseObject = JSON.parseObject(b(C6313b.a()));
+            JSONObject parseObject = JSON.parseObject(b(com.taobao.android.dinamic.b.a()));
             this.a = parseObject;
             this.b = true;
             return parseObject;

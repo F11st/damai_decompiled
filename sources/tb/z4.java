@@ -32,7 +32,7 @@ import org.jetbrains.annotations.Nullable;
 public final class z4 implements LocationInterface, GeocodeSearch.OnGeocodeSearchListener {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C10011a Companion = new C10011a(null);
+    public static final a Companion = new a(null);
     private static boolean m = true;
     @Nullable
     private static z4 n;
@@ -52,12 +52,11 @@ public final class z4 implements LocationInterface, GeocodeSearch.OnGeocodeSearc
     private GetLocationInfoInterface l;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.z4$a */
     /* loaded from: classes7.dex */
-    public static final class C10011a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C10011a() {
+        private a() {
         }
 
         public final boolean a() {
@@ -98,18 +97,17 @@ public final class z4 implements LocationInterface, GeocodeSearch.OnGeocodeSearc
             }
         }
 
-        public /* synthetic */ C10011a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.z4$b */
     /* loaded from: classes7.dex */
-    public static final class C10012b implements AMapLocationListener {
+    public static final class b implements AMapLocationListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C10012b() {
+        b() {
         }
 
         @Override // com.amap.api.location.AMapLocationListener
@@ -206,7 +204,7 @@ public final class z4 implements LocationInterface, GeocodeSearch.OnGeocodeSearc
         this.a = context;
         this.h = 300000L;
         this.i = 300000L;
-        this.k = new C10012b();
+        this.k = new b();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -320,9 +318,9 @@ public final class z4 implements LocationInterface, GeocodeSearch.OnGeocodeSearc
             ipChange.ipc$dispatch("-1882727232", new Object[]{this, Integer.valueOf(i)});
             return;
         }
-        LocationErrorReporter b = ia1.INSTANCE.b();
-        if (b != null) {
-            b.reportGpsLocateFailed(i);
+        LocationErrorReporter b2 = ia1.INSTANCE.b();
+        if (b2 != null) {
+            b2.reportGpsLocateFailed(i);
         }
     }
 

@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.single;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.Scheduler;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.disposables.DisposableHelper;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
@@ -13,7 +13,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SingleTimeout<T> extends AbstractC8152e<T> {
+public final class SingleTimeout<T> extends e<T> {
     final SingleSource<? extends T> other;
     final Scheduler scheduler;
     final SingleSource<T> source;
@@ -136,7 +136,7 @@ public final class SingleTimeout<T> extends AbstractC8152e<T> {
         this.other = singleSource2;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super T> singleObserver) {
         TimeoutMainObserver timeoutMainObserver = new TimeoutMainObserver(singleObserver, this.other);
         singleObserver.onSubscribe(timeoutMainObserver);

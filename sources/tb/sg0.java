@@ -16,7 +16,7 @@ import tb.ai1;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
-public class sg0 extends ai1.AbstractC8911a<CityMusicBean> implements View.OnClickListener {
+public class sg0 extends ai1.a<CityMusicBean> implements View.OnClickListener {
     private static transient /* synthetic */ IpChange $ipChange;
     private View d;
     private TextView e;
@@ -57,7 +57,7 @@ public class sg0 extends ai1.AbstractC8911a<CityMusicBean> implements View.OnCli
         return sb.toString();
     }
 
-    @Override // tb.ai1.AbstractC8911a
+    @Override // tb.ai1.a
     /* renamed from: b */
     public void a(CityMusicBean cityMusicBean, int i) {
         IpChange ipChange = $ipChange;

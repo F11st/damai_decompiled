@@ -26,7 +26,7 @@ public class AudioRecordFunc {
     private boolean closedForLimit = false;
     private int mMaxRecordSeconds = 15;
     private int mMinRecordSeconds = 1;
-    private CountDownTimer countDownTimer = new CountDownTimerC6736a(this, 15000, 500);
+    private CountDownTimer countDownTimer = new a(this, 15000, 500);
     private String folderPath = DataProviderFactory.getApplicationContext().getCacheDir().getPath() + "/records/";
 
     /* compiled from: Taobao */
@@ -54,10 +54,9 @@ public class AudioRecordFunc {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.video.AudioRecordFunc$a */
     /* loaded from: classes11.dex */
-    class CountDownTimerC6736a extends CountDownTimer {
-        CountDownTimerC6736a(AudioRecordFunc audioRecordFunc, long j, long j2) {
+    class a extends CountDownTimer {
+        a(AudioRecordFunc audioRecordFunc, long j, long j2) {
             super(j, j2);
         }
 

@@ -24,18 +24,18 @@ public class j91<E> extends AbstractChannel<E> {
         return true;
     }
 
-    @Override // kotlinx.coroutines.channels.AbstractC8641a
+    @Override // kotlinx.coroutines.channels.a
     protected final boolean p() {
         return false;
     }
 
-    @Override // kotlinx.coroutines.channels.AbstractC8641a
+    @Override // kotlinx.coroutines.channels.a
     protected final boolean q() {
         return false;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // kotlinx.coroutines.channels.AbstractC8641a
+    @Override // kotlinx.coroutines.channels.a
     @NotNull
     public Object s(E e) {
         ReceiveOrClosed<?> w;
@@ -60,7 +60,7 @@ public class j91<E> extends AbstractChannel<E> {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // kotlinx.coroutines.channels.AbstractC8641a
+    @Override // kotlinx.coroutines.channels.a
     @NotNull
     public Object t(E e, @NotNull SelectInstance<?> selectInstance) {
         Object performAtomicTrySelect;

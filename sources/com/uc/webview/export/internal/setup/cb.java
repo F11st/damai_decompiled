@@ -8,14 +8,14 @@ import com.uc.webview.export.cyclone.UCKnownException;
 import com.uc.webview.export.cyclone.update.UpdateService;
 import com.uc.webview.export.extension.UCCore;
 import com.uc.webview.export.internal.interfaces.IWaStat;
-import com.uc.webview.export.internal.update.C7312b;
+import com.uc.webview.export.internal.update.b;
 import java.io.File;
 import java.util.Map;
 import java.util.concurrent.Callable;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-final class cb extends C7312b.C7313a {
+final class cb extends b.a {
     final /* synthetic */ File a;
     final /* synthetic */ bq b;
     final /* synthetic */ by c;
@@ -32,7 +32,7 @@ final class cb extends C7312b.C7313a {
     /* JADX WARN: Code restructure failed: missing block: B:10:0x0022, code lost:
         if (r2.getAbsolutePath().startsWith(r4.a.getAbsolutePath()) == false) goto L24;
      */
-    @Override // com.uc.webview.export.internal.update.C7312b.C7313a
+    @Override // com.uc.webview.export.internal.update.b.a
     /*
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
@@ -85,7 +85,7 @@ final class cb extends C7312b.C7313a {
         throw new UnsupportedOperationException("Method not decompiled: com.uc.webview.export.internal.setup.cb.a(com.uc.webview.export.cyclone.update.UpdateService):void");
     }
 
-    @Override // com.uc.webview.export.internal.update.C7312b.C7313a
+    @Override // com.uc.webview.export.internal.update.b.a
     public final void b(UpdateService updateService) {
         synchronized (this.c) {
             by.a(this.c);
@@ -93,7 +93,7 @@ final class cb extends C7312b.C7313a {
         super.b(updateService);
     }
 
-    @Override // com.uc.webview.export.internal.update.C7312b.C7313a
+    @Override // com.uc.webview.export.internal.update.b.a
     public final void c(UpdateService updateService) {
         synchronized (this.c) {
             by.a(this.c);
@@ -133,13 +133,13 @@ final class cb extends C7312b.C7313a {
         super.c(updateService);
     }
 
-    @Override // com.uc.webview.export.internal.update.C7312b.C7313a
+    @Override // com.uc.webview.export.internal.update.b.a
     public final void d(UpdateService updateService) {
         super.d(updateService);
         this.b.a(0, null);
     }
 
-    @Override // com.uc.webview.export.internal.update.C7312b.C7313a
+    @Override // com.uc.webview.export.internal.update.b.a
     public final void e(UpdateService updateService) {
         synchronized (this.c) {
             by.b(this.c);
@@ -153,13 +153,13 @@ final class cb extends C7312b.C7313a {
         }
     }
 
-    @Override // com.uc.webview.export.internal.update.C7312b.C7313a
+    @Override // com.uc.webview.export.internal.update.b.a
     public final void f(UpdateService updateService) {
         super.f(updateService);
         this.b.a(4, null);
     }
 
-    @Override // com.uc.webview.export.internal.update.C7312b.C7313a
+    @Override // com.uc.webview.export.internal.update.b.a
     public final void g(UpdateService updateService) {
         super.g(updateService);
         File downloadFile = updateService.getDownloadFile();
@@ -172,7 +172,7 @@ final class cb extends C7312b.C7313a {
         }
     }
 
-    @Override // com.uc.webview.export.internal.update.C7312b.C7313a
+    @Override // com.uc.webview.export.internal.update.b.a
     public final void h(UpdateService updateService) {
         super.h(updateService);
         this.c.mPercent = updateService.getPercent();

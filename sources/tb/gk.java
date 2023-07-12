@@ -12,16 +12,15 @@ import org.jetbrains.annotations.NotNull;
 public final class gk extends CharacterStyle {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C9176a Companion = new C9176a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.gk$a */
     /* loaded from: classes7.dex */
-    public static final class C9176a {
-        private C9176a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9176a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

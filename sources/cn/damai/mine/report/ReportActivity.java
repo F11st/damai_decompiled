@@ -15,9 +15,7 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.homepage.R$drawable;
@@ -39,12 +37,11 @@ public class ReportActivity extends SimpleBaseActivity {
     private ReportViewModel reportViewModel;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.report.ReportActivity$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1454a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1454a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -55,17 +52,16 @@ public class ReportActivity extends SimpleBaseActivity {
                 return;
             }
             ReportActivity.this.reportViewModel.submitReport();
-            C0529c.e().x(new C0528b().e("report", "bottom", "submit", new HashMap(), Boolean.FALSE));
+            cn.damai.common.user.c.e().x(new cn.damai.common.user.b().e("report", "bottom", "submit", new HashMap(), Boolean.FALSE));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.report.ReportActivity$b */
     /* loaded from: classes15.dex */
-    public class C1455b implements TextWatcher {
+    public class b implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1455b() {
+        b() {
         }
 
         @Override // android.text.TextWatcher
@@ -105,13 +101,12 @@ public class ReportActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.report.ReportActivity$c */
     /* loaded from: classes6.dex */
-    public class C1456c implements KeyBoardHelper.SoftKeyboardStateListener {
+    public class c implements KeyBoardHelper.SoftKeyboardStateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ScrollView a;
 
-        C1456c(ScrollView scrollView) {
+        c(ScrollView scrollView) {
             this.a = scrollView;
         }
 
@@ -151,10 +146,10 @@ public class ReportActivity extends SimpleBaseActivity {
             ipChange.ipc$dispatch("1737935131", new Object[]{this});
             return;
         }
-        findViewById(R$id.submit_report).setOnClickListener(new View$OnClickListenerC1454a());
-        ((EditText) findViewById(R$id.report_reason_memo)).addTextChangedListener(new C1455b());
+        findViewById(R$id.submit_report).setOnClickListener(new a());
+        ((EditText) findViewById(R$id.report_reason_memo)).addTextChangedListener(new b());
         int i = R$id.report_root;
-        new KeyBoardHelper(findViewById(i)).a(new C1456c((ScrollView) findViewById(i)));
+        new KeyBoardHelper(findViewById(i)).a(new c((ScrollView) findViewById(i)));
     }
 
     private void addObserver(final ReasonAdapter reasonAdapter) {
@@ -261,7 +256,7 @@ public class ReportActivity extends SimpleBaseActivity {
             return;
         }
         super.onCreate(bundle);
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i("report"));
+        setDamaiUTKeyBuilder(new a.b().i("report"));
         this.bese_head_view.setVisibility(0);
         ReportViewModel obtainViewModel = obtainViewModel(this);
         this.reportViewModel = obtainViewModel;

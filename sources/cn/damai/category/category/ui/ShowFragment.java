@@ -17,8 +17,7 @@ import cn.damai.category.category.bean.ConditionEntity;
 import cn.damai.category.category.repository.CategoryRepository;
 import cn.damai.category.common.request.CategoryRequestNew;
 import cn.damai.common.AppConfig;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.base.ResponseErrorPage;
 import cn.damai.commonbusiness.search.Daojishi;
@@ -47,8 +46,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import tb.C9039db;
 import tb.bh;
+import tb.db;
 import tb.dh;
 import tb.jn1;
 import tb.wh2;
@@ -87,12 +86,11 @@ public class ShowFragment extends AbsFragmentV2 {
     private int mScrollTotal = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.ShowFragment$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0339a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0339a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -105,17 +103,16 @@ public class ShowFragment extends AbsFragmentV2 {
             ShowFragment.this.mRecyclerView.scrollToPosition(0);
             HashMap hashMap = new HashMap();
             hashMap.put("titlelabel", ShowFragment.this.spmB);
-            C0529c.e().x(new C0525a.C0527b().i(ShowFragment.this.spmB).f("bottom").l("anchor").g(false).j(hashMap));
+            cn.damai.common.user.c.e().x(new a.b().i(ShowFragment.this.spmB).f("bottom").l("anchor").g(false).j(hashMap));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.ShowFragment$b */
     /* loaded from: classes.dex */
-    public class C0340b implements ResponseErrorPage.ErrorRefreshListener {
+    public class b implements ResponseErrorPage.ErrorRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0340b() {
+        b() {
         }
 
         @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
@@ -130,13 +127,12 @@ public class ShowFragment extends AbsFragmentV2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.ShowFragment$c */
     /* loaded from: classes.dex */
-    public class C0341c {
+    public class c {
         private static transient /* synthetic */ IpChange $ipChange;
         private BaseResponse a;
 
-        public C0341c(BaseResponse baseResponse) {
+        public c(BaseResponse baseResponse) {
             this.a = baseResponse;
         }
 
@@ -270,11 +266,11 @@ public class ShowFragment extends AbsFragmentV2 {
                         List<ProjectItem> a = a((CategoryNewProjectBean) JSON.parseObject(baseSection.getItem().toJSONString(), CategoryNewProjectBean.class));
                         JSONObject jSONObject = new JSONObject();
                         jSONObject.put("result", (Object) a);
-                        jSONObject.put(C9039db.KEY_DAOJISHI, (Object) ShowFragment.this.mData.daojishi);
-                        jSONObject.put(C9039db.KEY_SHOW_DIS, (Object) Boolean.valueOf(ShowFragment.this.mData.isShowJuli));
-                        jSONObject.put(C9039db.TRACKKEY_CATEGORY_NAME, (Object) ShowFragment.this.mCategoryName);
+                        jSONObject.put(db.KEY_DAOJISHI, (Object) ShowFragment.this.mData.daojishi);
+                        jSONObject.put(db.KEY_SHOW_DIS, (Object) Boolean.valueOf(ShowFragment.this.mData.isShowJuli));
+                        jSONObject.put(db.TRACKKEY_CATEGORY_NAME, (Object) ShowFragment.this.mCategoryName);
                         jSONObject.put("trackB", (Object) bh.g(ShowFragment.this.mCategoryId));
-                        jSONObject.put(C9039db.TRACKKEY_CITY, (Object) z20.d());
+                        jSONObject.put(db.TRACKKEY_CITY, (Object) z20.d());
                         baseSection.setItem(jSONObject);
                     }
                 }
@@ -353,8 +349,8 @@ public class ShowFragment extends AbsFragmentV2 {
                 hashMap.put("current_ab", jSONArray.toJSONString());
             }
             if (getUserVisibleHint()) {
-                C0529c.e().L(getActivity(), str);
-                C0529c.e().l(getActivity(), new C0525a.C0527b().i(str).j(this.arg));
+                cn.damai.common.user.c.e().L(getActivity(), str);
+                cn.damai.common.user.c.e().l(getActivity(), new a.b().i(str).j(this.arg));
             }
         }
     }
@@ -394,7 +390,7 @@ public class ShowFragment extends AbsFragmentV2 {
         this.mRecycleViewLayout = (ViewGroup) damaiRootRecyclerView.getParent();
         View findViewById = this.rootView.findViewById(R$id.category_image_gotop);
         this.mTopView = findViewById;
-        findViewById.setOnClickListener(new View$OnClickListenerC0339a());
+        findViewById.setOnClickListener(new a());
         View findViewById2 = this.rootView.findViewById(R$id.ll_empty);
         this.emptyView = findViewById2;
         findViewById2.setVisibility(8);
@@ -534,7 +530,7 @@ public class ShowFragment extends AbsFragmentV2 {
             this.mErrorPage = responseErrorPage2;
             responseErrorPage2.setVisibility(0);
             this.mErrorPage.hideTitle();
-            this.mErrorPage.setRefreshListener(new C0340b());
+            this.mErrorPage.setRefreshListener(new b());
             this.mContainerLayout.addView(this.mErrorPage);
         }
     }
@@ -782,8 +778,8 @@ public class ShowFragment extends AbsFragmentV2 {
                                 return;
                             }
                         }
-                        new C0341c(baseResponse).b();
-                        Node e = new C9039db().e(baseResponse);
+                        new c(baseResponse).b();
+                        Node e = new db().e(baseResponse);
                         if (z) {
                             ShowFragment.this.setData(e);
                         } else {

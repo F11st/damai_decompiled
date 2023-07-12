@@ -1,23 +1,21 @@
 package com.youku.network;
 
-import com.youku.network.call.C7988b;
-
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
 class YKNetwork$2 implements Runnable {
-    final /* synthetic */ C7980b this$0;
-    final /* synthetic */ InterfaceC7974a val$callback;
+    final /* synthetic */ b this$0;
+    final /* synthetic */ a val$callback;
 
-    YKNetwork$2(C7980b c7980b, InterfaceC7974a interfaceC7974a) {
-        this.this$0 = c7980b;
-        this.val$callback = interfaceC7974a;
+    YKNetwork$2(b bVar, a aVar) {
+        this.this$0 = bVar;
+        this.val$callback = aVar;
     }
 
     @Override // java.lang.Runnable
     public void run() {
-        C7988b c7988b;
+        com.youku.network.call.b bVar;
         this.this$0.a();
-        c7988b = this.this$0.d;
-        c7988b.b(this.val$callback);
+        bVar = this.this$0.d;
+        bVar.b(this.val$callback);
     }
 }

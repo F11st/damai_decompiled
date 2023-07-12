@@ -18,7 +18,7 @@ import androidx.appcompat.R;
 import androidx.appcompat.view.menu.MenuPresenter;
 import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP_PREFIX})
@@ -45,7 +45,7 @@ public class MenuPopupHelper implements MenuHelper {
     @NonNull
     private MenuPopup createPopup() {
         MenuPopup standardMenuPopup;
-        Display defaultDisplay = ((WindowManager) this.mContext.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
+        Display defaultDisplay = ((WindowManager) this.mContext.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
         Point point = new Point();
         if (Build.VERSION.SDK_INT >= 17) {
             com.alibaba.wireless.security.aopsdk.replace.android.view.Display.getRealSize(defaultDisplay, point);

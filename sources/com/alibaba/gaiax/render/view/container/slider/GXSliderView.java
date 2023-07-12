@@ -47,7 +47,7 @@ import tb.wt2;
 /* loaded from: classes6.dex */
 public final class GXSliderView extends FrameLayout implements GXIContainer, GXIRelease, GXIRootView, GXIRoundCorner, GXIViewBindData, GXIViewVisibleChange {
     @NotNull
-    public static final C3374a Companion = new C3374a(null);
+    public static final a Companion = new a(null);
     private static int SHOWN_VIEW_COUNT;
     @Nullable
     private is0 config;
@@ -76,18 +76,17 @@ public final class GXSliderView extends FrameLayout implements GXIContainer, GXI
         BOTTOM_RIGHT("bottom-right");
         
         @NotNull
-        public static final C3373a Companion = new C3373a(null);
+        public static final a Companion = new a(null);
         @NotNull
         private final String value;
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.render.view.container.slider.GXSliderView$IndicatorPosition$a */
         /* loaded from: classes6.dex */
-        public static final class C3373a {
-            private C3373a() {
+        public static final class a {
+            private a() {
             }
 
-            public /* synthetic */ C3373a(k50 k50Var) {
+            public /* synthetic */ a(k50 k50Var) {
                 this();
             }
 
@@ -125,21 +124,19 @@ public final class GXSliderView extends FrameLayout implements GXIContainer, GXI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.view.container.slider.GXSliderView$a */
     /* loaded from: classes6.dex */
-    public static final class C3374a {
-        private C3374a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3374a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.view.container.slider.GXSliderView$b */
     /* loaded from: classes6.dex */
-    public /* synthetic */ class C3375b {
+    public /* synthetic */ class b {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -155,10 +152,9 @@ public final class GXSliderView extends FrameLayout implements GXIContainer, GXI
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.view.container.slider.GXSliderView$c */
     /* loaded from: classes6.dex */
-    public static final class View$OnTouchListenerC3376c implements View.OnTouchListener {
-        View$OnTouchListenerC3376c() {
+    public static final class c implements View.OnTouchListener {
+        c() {
         }
 
         @Override // android.view.View.OnTouchListener
@@ -180,12 +176,11 @@ public final class GXSliderView extends FrameLayout implements GXIContainer, GXI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.view.container.slider.GXSliderView$d */
     /* loaded from: classes6.dex */
-    public static final class C3377d extends ViewOutlineProvider {
+    public static final class d extends ViewOutlineProvider {
         final /* synthetic */ float b;
 
-        C3377d(float f) {
+        d(float f) {
             this.b = f;
         }
 
@@ -208,11 +203,11 @@ public final class GXSliderView extends FrameLayout implements GXIContainer, GXI
     }
 
     private final GXSliderBaseIndicatorView createIndicatorView() {
-        String c;
+        String c2;
         is0 is0Var = this.config;
-        if (is0Var != null && (c = is0Var.c()) != null) {
+        if (is0Var != null && (c2 = is0Var.c()) != null) {
             try {
-                Object newInstance = Class.forName(c).getConstructor(Context.class).newInstance(getContext());
+                Object newInstance = Class.forName(c2).getConstructor(Context.class).newInstance(getContext());
                 GXSliderBaseIndicatorView gXSliderBaseIndicatorView = newInstance instanceof GXSliderBaseIndicatorView ? (GXSliderBaseIndicatorView) newInstance : null;
                 if (gXSliderBaseIndicatorView != null) {
                     return gXSliderBaseIndicatorView;
@@ -244,7 +239,7 @@ public final class GXSliderView extends FrameLayout implements GXIContainer, GXI
         }
         is0 is0Var2 = this.config;
         IndicatorPosition g = is0Var2 == null ? null : is0Var2.g();
-        int i = g == null ? -1 : C3375b.$EnumSwitchMapping$0[g.ordinal()];
+        int i = g == null ? -1 : b.$EnumSwitchMapping$0[g.ordinal()];
         if (i == 1) {
             layoutParams.gravity = 51;
         } else if (i == 2) {
@@ -319,7 +314,7 @@ public final class GXSliderView extends FrameLayout implements GXIContainer, GXI
         });
         GXViewPager gXViewPager2 = this.viewPager;
         if (gXViewPager2 != null) {
-            gXViewPager2.setOnTouchListener(new View$OnTouchListenerC3376c());
+            gXViewPager2.setOnTouchListener(new c());
         }
         addView(this.viewPager, new FrameLayout.LayoutParams(-1, -1));
         kr0 kr0Var = kr0.INSTANCE;
@@ -492,7 +487,7 @@ public final class GXSliderView extends FrameLayout implements GXIContainer, GXI
 
     @Override // com.alibaba.gaiax.render.view.GXIViewBindData
     public void onResetData() {
-        GXIViewBindData.C3361a.a(this);
+        GXIViewBindData.a.a(this);
     }
 
     @Override // com.alibaba.gaiax.render.view.GXIViewVisibleChange
@@ -583,7 +578,7 @@ public final class GXSliderView extends FrameLayout implements GXIContainer, GXI
                     if (f2 == f3) {
                         if ((f3 == f4) && f > 0.0f) {
                             setClipToOutline(true);
-                            setOutlineProvider(new C3377d(f));
+                            setOutlineProvider(new d(f));
                             return;
                         }
                     }

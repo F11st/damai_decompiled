@@ -5,10 +5,10 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import io.flutter.wpkbridge.WPKFactory;
 import java.util.HashMap;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
@@ -46,7 +46,7 @@ public final class SizeStrategyTokenManager extends StrategyTokenManager<SizeTok
 
     static {
         Lazy<SizeStrategyTokenManager> a;
-        a = C8177b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<SizeStrategyTokenManager>() { // from class: com.youku.arch.v3.token.SizeStrategyTokenManager$Companion$instance$2
+        a = b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<SizeStrategyTokenManager>() { // from class: com.youku.arch.v3.token.SizeStrategyTokenManager$Companion$instance$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* JADX WARN: Can't rename method to resolve collision */

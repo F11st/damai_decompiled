@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.Emitter;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.functions.Consumer;
@@ -13,7 +13,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableGenerate<T, S> extends AbstractC8149d<T> {
+public final class ObservableGenerate<T, S> extends d<T> {
     final Consumer<? super S> disposeState;
     final BiFunction<S, Emitter<T>, S> generator;
     final Callable<S> stateSupplier;
@@ -24,7 +24,7 @@ public final class ObservableGenerate<T, S> extends AbstractC8149d<T> {
         this.disposeState = consumer;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         try {
             GeneratorDisposable generatorDisposable = new GeneratorDisposable(observer, this.generator, this.disposeState, this.stateSupplier.call());

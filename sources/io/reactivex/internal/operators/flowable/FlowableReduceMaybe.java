@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
-import io.reactivex.AbstractC8148c;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.MaybeObserver;
+import io.reactivex.b;
+import io.reactivex.c;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.internal.functions.ObjectHelper;
@@ -18,9 +18,9 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableReduceMaybe<T> extends AbstractC8148c<T> implements HasUpstreamPublisher<T>, FuseToFlowable<T> {
+public final class FlowableReduceMaybe<T> extends c<T> implements HasUpstreamPublisher<T>, FuseToFlowable<T> {
     final BiFunction<T, T, T> reducer;
-    final AbstractC8147b<T> source;
+    final b<T> source;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -100,13 +100,13 @@ public final class FlowableReduceMaybe<T> extends AbstractC8148c<T> implements H
         }
     }
 
-    public FlowableReduceMaybe(AbstractC8147b<T> abstractC8147b, BiFunction<T, T, T> biFunction) {
-        this.source = abstractC8147b;
+    public FlowableReduceMaybe(b<T> bVar, BiFunction<T, T, T> biFunction) {
+        this.source = bVar;
         this.reducer = biFunction;
     }
 
     @Override // io.reactivex.internal.fuseable.FuseToFlowable
-    public AbstractC8147b<T> fuseToFlowable() {
+    public b<T> fuseToFlowable() {
         return i42.l(new FlowableReduce(this.source, this.reducer));
     }
 
@@ -115,7 +115,7 @@ public final class FlowableReduceMaybe<T> extends AbstractC8148c<T> implements H
         return this.source;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         this.source.subscribe((FlowableSubscriber) new ReduceSubscriber(maybeObserver, this.reducer));
     }

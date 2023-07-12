@@ -36,9 +36,9 @@ public class jm2 extends v0 {
             java.util.Map r7 = (java.util.Map) r7
             java.lang.String r1 = "dianmicContextKeyPresenter"
             java.lang.Object r7 = r7.get(r1)
-            boolean r1 = r7 instanceof com.alibaba.android.ultron.trade.presenter.AbstractC3258a
+            boolean r1 = r7 instanceof com.alibaba.android.ultron.trade.presenter.a
             if (r1 == 0) goto L2d
-            com.alibaba.android.ultron.trade.presenter.a r7 = (com.alibaba.android.ultron.trade.presenter.AbstractC3258a) r7
+            com.alibaba.android.ultron.trade.presenter.a r7 = (com.alibaba.android.ultron.trade.presenter.a) r7
             tb.km2 r7 = r7.getThemeManager()
             goto L2e
         L2d:

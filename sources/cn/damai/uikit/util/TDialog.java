@@ -31,12 +31,11 @@ public class TDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.util.TDialog$a */
     /* loaded from: classes8.dex */
-    public class C2562a extends g3 {
+    public class a extends g3 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2562a() {
+        a() {
         }
 
         @Override // tb.g3
@@ -70,7 +69,7 @@ public class TDialog extends Dialog {
     public TDialog(@NonNull Context context) {
         super(context);
         this.f = false;
-        this.g = new C2562a();
+        this.g = new a();
         e(context);
     }
 
@@ -188,7 +187,7 @@ public class TDialog extends Dialog {
     public TDialog(@NonNull Context context, int i) {
         super(context, i);
         this.f = false;
-        this.g = new C2562a();
+        this.g = new a();
         e(context);
     }
 }

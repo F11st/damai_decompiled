@@ -27,8 +27,8 @@ import java.io.Closeable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.Locale;
-import kotlin.C8177b;
 import kotlin.Lazy;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
@@ -58,7 +58,7 @@ import tb.zb0;
 public abstract class DoloresKernel<BizResponse> implements Closeable {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3603a Companion = new C3603a(null);
+    public static final a Companion = new a(null);
     public static final int NODE_REQUEST_COMPLETE = 4;
     public static final int NODE_REQUEST_PREPARE = 1;
     public static final int NODE_REQUEST_REQUEST = 2;
@@ -105,12 +105,11 @@ public abstract class DoloresKernel<BizResponse> implements Closeable {
     private boolean r;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.dolores.DoloresKernel$a */
     /* loaded from: classes7.dex */
-    public static final class C3603a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3603a() {
+        private a() {
         }
 
         @NotNull
@@ -119,7 +118,7 @@ public abstract class DoloresKernel<BizResponse> implements Closeable {
             return AndroidInstantRuntime.support(ipChange, "285095566") ? (String) ipChange.ipc$dispatch("285095566", new Object[]{this}) : DoloresKernel.s;
         }
 
-        public /* synthetic */ C3603a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -135,7 +134,7 @@ public abstract class DoloresKernel<BizResponse> implements Closeable {
         String str;
         String str2;
         String str3;
-        b = C8177b.b(new Function0<bo2>() { // from class: com.alibaba.pictures.dolores.DoloresKernel$timeMonitor$2
+        b = b.b(new Function0<bo2>() { // from class: com.alibaba.pictures.dolores.DoloresKernel$timeMonitor$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // kotlin.jvm.functions.Function0
@@ -146,11 +145,11 @@ public abstract class DoloresKernel<BizResponse> implements Closeable {
             }
         });
         this.a = b;
-        sb0.C9690a c9690a = sb0.Companion;
-        IJSONConverter c = c9690a.c();
+        sb0.a aVar = sb0.Companion;
+        IJSONConverter c = aVar.c();
         this.n = c == null ? xh0.INSTANCE : c;
         if (this.j == null) {
-            String k = c9690a.g().k(IGlobalConfig.Key.WUA_SWITCH, "off");
+            String k = aVar.g().k(IGlobalConfig.Key.WUA_SWITCH, "off");
             if (k != null) {
                 Locale locale = Locale.ROOT;
                 b41.h(locale, "Locale.ROOT");
@@ -162,7 +161,7 @@ public abstract class DoloresKernel<BizResponse> implements Closeable {
             this.j = Boolean.valueOf(b41.d(str3, "on"));
         }
         if (this.k == null) {
-            String k2 = c9690a.g().k(IGlobalConfig.Key.IS_USE_HTTPS, "true");
+            String k2 = aVar.g().k(IGlobalConfig.Key.IS_USE_HTTPS, "true");
             if (k2 != null) {
                 Locale locale2 = Locale.ROOT;
                 b41.h(locale2, "Locale.ROOT");
@@ -174,7 +173,7 @@ public abstract class DoloresKernel<BizResponse> implements Closeable {
             this.k = Boolean.valueOf(b41.d(str2, "true"));
         }
         if (this.l == null) {
-            String k3 = c9690a.g().k(IGlobalConfig.Key.IS_GET, "false");
+            String k3 = aVar.g().k(IGlobalConfig.Key.IS_GET, "false");
             if (k3 != null) {
                 Locale locale3 = Locale.ROOT;
                 b41.h(locale3, "Locale.ROOT");
@@ -186,7 +185,7 @@ public abstract class DoloresKernel<BizResponse> implements Closeable {
             this.l = Boolean.valueOf(b41.d(str, "true"));
         }
         if (this.m == null) {
-            this.m = c9690a.g().k(IGlobalConfig.Key.PROJECT_NAME, null);
+            this.m = aVar.g().k(IGlobalConfig.Key.PROJECT_NAME, null);
         }
     }
 
@@ -275,11 +274,11 @@ public abstract class DoloresKernel<BizResponse> implements Closeable {
                     ipChange2.ipc$dispatch("-1123902970", new Object[]{this, doloresRequest});
                     return;
                 }
-                String a = DoloresKernel.Companion.a();
+                String a2 = DoloresKernel.Companion.a();
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append("preload:doOnKTStart:");
                 sb2.append(doloresRequest != null ? doloresRequest.getClass().getSimpleName() : null);
-                rq.a(a, sb2.toString());
+                rq.a(a2, sb2.toString());
             }
         }).doOnKTHitCache(new Function2<Boolean, BizResponse, wt2>() { // from class: com.alibaba.pictures.dolores.DoloresKernel$preload$2
             private static transient /* synthetic */ IpChange $ipChange;
@@ -309,12 +308,12 @@ public abstract class DoloresKernel<BizResponse> implements Closeable {
                 if (iPreloadListener2 != null) {
                     iPreloadListener2.onHitCache(bizresponse);
                 }
-                String a = DoloresKernel.Companion.a();
+                String a2 = DoloresKernel.Companion.a();
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append("preload:doOnKTHitCache:");
                 DoloresRequest<BizResponse> m2 = DoloresKernel.this.m();
                 sb2.append(m2 != null ? m2.getClass().getSimpleName() : null);
-                rq.a(a, sb2.toString());
+                rq.a(a2, sb2.toString());
             }
         }).doOnKTFinish(new Function0<wt2>() { // from class: com.alibaba.pictures.dolores.DoloresKernel$preload$3
             private static transient /* synthetic */ IpChange $ipChange;
@@ -338,13 +337,13 @@ public abstract class DoloresKernel<BizResponse> implements Closeable {
                     ipChange2.ipc$dispatch("1754151722", new Object[]{this});
                     return;
                 }
-                DoloresKernel.C3603a c3603a = DoloresKernel.Companion;
-                String a = c3603a.a();
+                DoloresKernel.a aVar = DoloresKernel.Companion;
+                String a2 = aVar.a();
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append("preload:doOnKTFinish:");
                 DoloresRequest m2 = DoloresKernel.this.m();
                 sb2.append(m2 != null ? m2.getClass().getSimpleName() : null);
-                rq.a(a, sb2.toString());
+                rq.a(a2, sb2.toString());
                 dc0<BizResponse> response = dispatchOnOri$default.getResponse();
                 if (response != 0) {
                     response.k(true);
@@ -359,28 +358,28 @@ public abstract class DoloresKernel<BizResponse> implements Closeable {
                     b2.setResponse(response);
                     response.o(b2.getTag());
                     if (c.u()) {
-                        String a2 = c3603a.a();
-                        rq.d(a2, "preload:[" + c.g() + "]->该请求被取消||返回时业务调用页面生命周期已结束");
+                        String a3 = aVar.a();
+                        rq.d(a3, "preload:[" + c.g() + "]->该请求被取消||返回时业务调用页面生命周期已结束");
                         b2.onFinish();
                         c.z();
                         return;
                     }
-                    rq.a(c3603a.a(), "preload:doOnKTFinish:真实业务已经发出,处理onFail或success!");
+                    rq.a(aVar.a(), "preload:doOnKTFinish:真实业务已经发出,处理onFail或success!");
                     if (response.b() == BizResponseType.RESULT_SUCCESS.getCode()) {
-                        String a3 = c3603a.a();
-                        rq.a(a3, jn1.ARRAY_START + c.g() + "]->onSuccess call back");
+                        String a4 = aVar.a();
+                        rq.a(a4, jn1.ARRAY_START + c.g() + "]->onSuccess call back");
                         if (response.a() == null) {
                             if (!b2.onSuccessNull(response)) {
                                 b2.onFail(response);
                             }
                         } else {
-                            Object a4 = response.a();
-                            b41.f(a4);
-                            b2.onSuccess(a4);
+                            Object a5 = response.a();
+                            b41.f(a5);
+                            b2.onSuccess(a5);
                         }
                     } else {
-                        String a5 = c3603a.a();
-                        rq.a(a5, "preload:[" + c.g() + "]->onFail call back");
+                        String a6 = aVar.a();
+                        rq.a(a6, "preload:[" + c.g() + "]->onFail call back");
                         b2.onFail(response);
                     }
                     b2.onFinish();
@@ -389,15 +388,15 @@ public abstract class DoloresKernel<BizResponse> implements Closeable {
                         iPreloadListener2.onPreloadOver(response, true);
                     }
                     c.z();
-                    String a6 = c3603a.a();
-                    rq.a(a6, "preload:[" + c.g() + "]->AsyncRequestFuture done");
+                    String a7 = aVar.a();
+                    rq.a(a7, "preload:[" + c.g() + "]->AsyncRequestFuture done");
                     return;
                 }
                 IPreloadListener iPreloadListener3 = iPreloadListener;
                 if (iPreloadListener3 != null) {
                     iPreloadListener3.onPreloadOver(response, false);
                 }
-                rq.a(c3603a.a(), "preload:doOnKTFinish:真实业务请求还没有发出,只缓存!");
+                rq.a(aVar.a(), "preload:doOnKTFinish:真实业务请求还没有发出,只缓存!");
             }
         });
     }
@@ -578,12 +577,12 @@ public abstract class DoloresKernel<BizResponse> implements Closeable {
             C("isSessionValid = true");
             return null;
         } else {
-            DoloresLoginHandler.C3607a c3607a = DoloresLoginHandler.Companion;
-            int b = c3607a.a().b();
+            DoloresLoginHandler.a aVar = DoloresLoginHandler.Companion;
+            int b = aVar.a().b();
             if (b == 3) {
                 f();
             }
-            if (!this.f || c3607a.a().c()) {
+            if (!this.f || aVar.a().c()) {
                 return null;
             }
             C("isSessionValid = false,Session过期");

@@ -15,7 +15,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.adapter.IEventModuleAdapter;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONException;
@@ -83,10 +82,9 @@ public class WXWVWebView implements IWebView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.component.WXWVWebView$a */
     /* loaded from: classes5.dex */
-    class C3037a implements AliWVUCWebView.OnScrollListener {
-        C3037a() {
+    class a implements AliWVUCWebView.OnScrollListener {
+        a() {
         }
 
         @Override // com.alibaba.aliweex.adapter.component.WXWVWebView.AliWVUCWebView.OnScrollListener
@@ -103,10 +101,9 @@ public class WXWVWebView implements IWebView {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.component.WXWVWebView$b */
     /* loaded from: classes5.dex */
-    public class C3038b extends WVUCWebViewClient {
-        C3038b(Context context) {
+    public class b extends WVUCWebViewClient {
+        b(Context context) {
             super(context);
         }
 
@@ -162,7 +159,7 @@ public class WXWVWebView implements IWebView {
                 if ((WXWVWebView.this.i != null && WXWVWebView.this.i.contains(str)) || str.contains(WXWVWebView.m) || this.mContext.get() == null) {
                     return false;
                 }
-                IEventModuleAdapter f = C3004a.l().f();
+                IEventModuleAdapter f = com.alibaba.aliweex.a.l().f();
                 if (f != null) {
                     f.openURL(WXWVWebView.this.f.getContext(), str);
                 }
@@ -174,10 +171,9 @@ public class WXWVWebView implements IWebView {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.component.WXWVWebView$c */
     /* loaded from: classes5.dex */
-    public class C3039c extends WVUCWebChromeClient {
-        C3039c() {
+    public class c extends WVUCWebChromeClient {
+        c() {
         }
 
         @Override // android.taobao.windvane.extra.uc.WVUCWebChromeClient, com.uc.webview.export.WebChromeClient
@@ -214,20 +210,18 @@ public class WXWVWebView implements IWebView {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.component.WXWVWebView$d */
     /* loaded from: classes15.dex */
-    public class C3040d {
-        C3040d(WXWVWebView wXWVWebView) {
+    public class d {
+        d(WXWVWebView wXWVWebView) {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.component.WXWVWebView$e */
     /* loaded from: classes15.dex */
-    private static class HandlerC3041e extends Handler {
+    private static class e extends Handler {
         private final WeakReference<WXWVWebView> a;
 
-        /* synthetic */ HandlerC3041e(WXWVWebView wXWVWebView, C3037a c3037a) {
+        /* synthetic */ e(WXWVWebView wXWVWebView, a aVar) {
             this(wXWVWebView);
         }
 
@@ -240,7 +234,7 @@ public class WXWVWebView implements IWebView {
             this.a.get().c.onMessage((Map) message.obj);
         }
 
-        private HandlerC3041e(WXWVWebView wXWVWebView) {
+        private e(WXWVWebView wXWVWebView) {
             this.a = new WeakReference<>(wXWVWebView);
         }
     }
@@ -285,12 +279,12 @@ public class WXWVWebView implements IWebView {
         settings.setDomStorageEnabled(true);
         settings.setSupportZoom(false);
         settings.setBuiltInZoomControls(false);
-        wVUCWebView.setWebViewClient(new C3038b(this.e));
-        wVUCWebView.setWebChromeClient(new C3039c());
+        wVUCWebView.setWebViewClient(new b(this.e));
+        wVUCWebView.setWebChromeClient(new c());
         if (o) {
             return;
         }
-        wVUCWebView.addJavascriptInterface(new C3040d(this), "__WEEX_WEB_VIEW_BRIDGE");
+        wVUCWebView.addJavascriptInterface(new d(this), "__WEEX_WEB_VIEW_BRIDGE");
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -307,8 +301,8 @@ public class WXWVWebView implements IWebView {
             message.what = 1;
             message.obj = hashMap;
             this.k.sendMessage(message);
-        } catch (JSONException e) {
-            throw new RuntimeException(e);
+        } catch (JSONException e2) {
+            throw new RuntimeException(e2);
         }
     }
 
@@ -333,7 +327,7 @@ public class WXWVWebView implements IWebView {
         frameLayout.setBackgroundColor(-1);
         AliWVUCWebView aliWVUCWebView = new AliWVUCWebView(this.e);
         this.d = aliWVUCWebView;
-        aliWVUCWebView.onScrollChangeListener = new C3037a();
+        aliWVUCWebView.onScrollChangeListener = new a();
         FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(-1, -1);
         layoutParams.gravity = 17;
         this.d.setLayoutParams(layoutParams);
@@ -345,7 +339,7 @@ public class WXWVWebView implements IWebView {
         this.g.setLayoutParams(layoutParams2);
         layoutParams2.gravity = 17;
         frameLayout.addView(this.g);
-        this.k = new HandlerC3041e(this, null);
+        this.k = new e(this, null);
         WXComponent wXComponent = this.l;
         if (wXComponent != null && wXComponent.getStyles() != null) {
             this.d.setBackgroundColor(WXResourceUtils.getColor((String) this.l.getStyles().get("backgroundColor"), 0));
@@ -403,8 +397,8 @@ public class WXWVWebView implements IWebView {
                 jSONObject.put("data", obj);
                 jSONObject.put("origin", (Object) this.j);
                 i("javascript:(function () {var initData = " + jSONObject.toString() + ";try {var event = new MessageEvent('message', initData);window.dispatchEvent(event);} catch (e) {}})();");
-            } catch (JSONException e) {
-                throw new RuntimeException(e);
+            } catch (JSONException e2) {
+                throw new RuntimeException(e2);
             }
         }
     }

@@ -30,16 +30,15 @@ public class NineImgUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.util.NineImgUtil$a */
     /* loaded from: classes13.dex */
-    public class View$OnClickListenerC0452a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnClickExtraListener a;
         final /* synthetic */ ArrayList b;
         final /* synthetic */ Context c;
         final /* synthetic */ ArrayList d;
 
-        View$OnClickListenerC0452a(OnClickExtraListener onClickExtraListener, ArrayList arrayList, Context context, ArrayList arrayList2) {
+        a(OnClickExtraListener onClickExtraListener, ArrayList arrayList, Context context, ArrayList arrayList2) {
             this.a = onClickExtraListener;
             this.b = arrayList;
             this.c = context;
@@ -57,7 +56,7 @@ public class NineImgUtil {
         public void onClick(android.view.View r13) {
             /*
                 r12 = this;
-                com.android.alibaba.ip.runtime.IpChange r0 = cn.damai.comment.util.NineImgUtil.View$OnClickListenerC0452a.$ipChange
+                com.android.alibaba.ip.runtime.IpChange r0 = cn.damai.comment.util.NineImgUtil.a.$ipChange
                 java.lang.String r1 = "1154850604"
                 boolean r2 = com.android.alibaba.ip.runtime.AndroidInstantRuntime.support(r0, r1)
                 r3 = 1
@@ -133,20 +132,19 @@ public class NineImgUtil {
             L91:
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: cn.damai.comment.util.NineImgUtil.View$OnClickListenerC0452a.onClick(android.view.View):void");
+            throw new UnsupportedOperationException("Method not decompiled: cn.damai.comment.util.NineImgUtil.a.onClick(android.view.View):void");
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.util.NineImgUtil$b */
     /* loaded from: classes13.dex */
-    private static class C0453b {
+    private static class b {
         private static final NineImgUtil a = new NineImgUtil();
     }
 
     public static final NineImgUtil a() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-962867247") ? (NineImgUtil) ipChange.ipc$dispatch("-962867247", new Object[0]) : C0453b.a;
+        return AndroidInstantRuntime.support(ipChange, "-962867247") ? (NineImgUtil) ipChange.ipc$dispatch("-962867247", new Object[0]) : b.a;
     }
 
     public void b(Context context, int i, boolean z, NineGridlayout nineGridlayout, CommentsItemBean commentsItemBean, List<CommentImageInfoBean> list, OnClickExtraListener onClickExtraListener) {
@@ -209,7 +207,7 @@ public class NineImgUtil {
                 nineGridlayout.setTotalWidth(i);
                 nineGridlayout.setAutoShrink(z);
                 nineGridlayout.updateImages(arrayList);
-                nineGridlayout.setListener(new View$OnClickListenerC0452a(onClickExtraListener, arrayList2, context, arrayList3));
+                nineGridlayout.setListener(new a(onClickExtraListener, arrayList2, context, arrayList3));
                 return;
             }
             nineGridlayout.setVisibility(8);

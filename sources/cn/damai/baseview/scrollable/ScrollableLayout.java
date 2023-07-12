@@ -48,7 +48,7 @@ public class ScrollableLayout extends FrameLayout {
     private boolean mIsScrolling;
     private boolean mIsTouchOngoing;
     private int mMaxScrollY;
-    private C0305d mMotionEventHook;
+    private d mMotionEventHook;
     private OnScrollChangedListener mOnScrollChangedListener;
     private GestureDetector mScrollDetector;
     private final Runnable mScrollRunnable;
@@ -64,12 +64,11 @@ public class ScrollableLayout extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.scrollable.ScrollableLayout$a */
     /* loaded from: classes.dex */
-    public class C0302a implements MotionEventHookCallback {
+    public class a implements MotionEventHookCallback {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0302a() {
+        a() {
         }
 
         @Override // cn.damai.baseview.scrollable.ScrollableLayout.MotionEventHookCallback
@@ -84,12 +83,11 @@ public class ScrollableLayout extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.scrollable.ScrollableLayout$b */
     /* loaded from: classes.dex */
-    public class C0303b extends Property<ScrollableLayout, Integer> {
+    public class b extends Property<ScrollableLayout, Integer> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0303b(ScrollableLayout scrollableLayout, Class cls, String str) {
+        b(ScrollableLayout scrollableLayout, Class cls, String str) {
             super(cls, str);
         }
 
@@ -113,15 +111,14 @@ public class ScrollableLayout extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.scrollable.ScrollableLayout$c */
     /* loaded from: classes.dex */
-    public class C0304c extends wt0 {
+    public class c extends wt0 {
         private static transient /* synthetic */ IpChange $ipChange;
         private final int a;
         private final float b;
 
-        C0304c(Context context) {
-            this.a = C0307a.a(context, 12);
+        c(Context context) {
+            this.a = cn.damai.baseview.scrollable.a.a(context, 12);
             this.b = ViewConfiguration.get(context).getScaledMinimumFlingVelocity();
         }
 
@@ -154,13 +151,12 @@ public class ScrollableLayout extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.scrollable.ScrollableLayout$d */
     /* loaded from: classes.dex */
-    public static class C0305d {
+    public static class d {
         private static transient /* synthetic */ IpChange $ipChange;
         final MotionEventHookCallback a;
 
-        C0305d(MotionEventHookCallback motionEventHookCallback) {
+        d(MotionEventHookCallback motionEventHookCallback) {
             this.a = motionEventHookCallback;
         }
 
@@ -190,9 +186,9 @@ public class ScrollableLayout extends FrameLayout {
                     ipChange.ipc$dispatch("-595021287", new Object[]{this});
                     return;
                 }
-                boolean c = ScrollableLayout.this.mScroller.c();
-                ScrollableLayout.this.mSelfUpdateFling = c;
-                if (c) {
+                boolean c2 = ScrollableLayout.this.mScroller.c();
+                ScrollableLayout.this.mSelfUpdateFling = c2;
+                if (c2) {
                     int f = ScrollableLayout.this.mScroller.f() - ScrollableLayout.this.getScrollY();
                     if (f != 0) {
                         ScrollableLayout.this.scrollBy(0, f);
@@ -207,10 +203,10 @@ public class ScrollableLayout extends FrameLayout {
             /* compiled from: Taobao */
             /* renamed from: cn.damai.baseview.scrollable.ScrollableLayout$3$a */
             /* loaded from: classes.dex */
-            public class C0300a extends AnimatorListenerAdapter {
+            public class a extends AnimatorListenerAdapter {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C0300a() {
+                a() {
                 }
 
                 @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -273,14 +269,14 @@ public class ScrollableLayout extends FrameLayout {
                     j = ScrollableLayout.DEFAULT_IDLE_CLOSE_UP_ANIMATION;
                 }
                 ScrollableLayout.this.mCloseUpAnimator.setDuration(j);
-                ScrollableLayout.this.mCloseUpAnimator.addListener(new C0300a());
+                ScrollableLayout.this.mCloseUpAnimator.addListener(new a());
                 if (ScrollableLayout.this.mCloseAnimatorConfigurator != null) {
                     ScrollableLayout.this.mCloseAnimatorConfigurator.configure(ScrollableLayout.this.mCloseUpAnimator);
                 }
                 ScrollableLayout.this.mCloseUpAnimator.start();
             }
         };
-        this.mCloseUpAnimationProperty = new C0303b(this, Integer.class, "scrollY");
+        this.mCloseUpAnimationProperty = new b(this, Integer.class, "scrollY");
         init(context, null);
     }
 
@@ -329,9 +325,9 @@ public class ScrollableLayout extends FrameLayout {
             }
             obtainStyledAttributes.recycle();
             setVerticalScrollBarEnabled(true);
-            this.mScrollDetector = new GestureDetector(context, new C0306e(this, null));
-            this.mFlingDetector = new GestureDetector(context, new C0304c(context));
-            this.mMotionEventHook = new C0305d(new C0302a());
+            this.mScrollDetector = new GestureDetector(context, new e(this, null));
+            this.mFlingDetector = new GestureDetector(context, new c(context));
+            this.mMotionEventHook = new d(new a());
         } catch (Throwable th) {
             obtainStyledAttributes.recycle();
             throw th;
@@ -622,16 +618,15 @@ public class ScrollableLayout extends FrameLayout {
     /* loaded from: classes.dex */
     public static class ScrollableLayoutSavedState extends View.BaseSavedState {
         private static transient /* synthetic */ IpChange $ipChange;
-        public static final Parcelable.Creator<ScrollableLayoutSavedState> CREATOR = new C0301a();
+        public static final Parcelable.Creator<ScrollableLayoutSavedState> CREATOR = new a();
         int scrollY;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.baseview.scrollable.ScrollableLayout$ScrollableLayoutSavedState$a */
         /* loaded from: classes.dex */
-        public static final class C0301a implements Parcelable.Creator<ScrollableLayoutSavedState> {
+        public static final class a implements Parcelable.Creator<ScrollableLayoutSavedState> {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C0301a() {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator
@@ -671,13 +666,12 @@ public class ScrollableLayout extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.scrollable.ScrollableLayout$e */
     /* loaded from: classes.dex */
-    public class C0306e extends wt0 {
+    public class e extends wt0 {
         private static transient /* synthetic */ IpChange $ipChange;
         private final int a;
 
-        private C0306e() {
+        private e() {
             this.a = ViewConfiguration.get(ScrollableLayout.this.getContext()).getScaledTouchSlop();
         }
 
@@ -696,7 +690,7 @@ public class ScrollableLayout extends FrameLayout {
             return scrollY != ScrollableLayout.this.getScrollY();
         }
 
-        /* synthetic */ C0306e(ScrollableLayout scrollableLayout, C0302a c0302a) {
+        /* synthetic */ e(ScrollableLayout scrollableLayout, a aVar) {
             this();
         }
     }
@@ -714,9 +708,9 @@ public class ScrollableLayout extends FrameLayout {
                     ipChange.ipc$dispatch("-595021287", new Object[]{this});
                     return;
                 }
-                boolean c = ScrollableLayout.this.mScroller.c();
-                ScrollableLayout.this.mSelfUpdateFling = c;
-                if (c) {
+                boolean c2 = ScrollableLayout.this.mScroller.c();
+                ScrollableLayout.this.mSelfUpdateFling = c2;
+                if (c2) {
                     int f = ScrollableLayout.this.mScroller.f() - ScrollableLayout.this.getScrollY();
                     if (f != 0) {
                         ScrollableLayout.this.scrollBy(0, f);
@@ -731,10 +725,10 @@ public class ScrollableLayout extends FrameLayout {
             /* compiled from: Taobao */
             /* renamed from: cn.damai.baseview.scrollable.ScrollableLayout$3$a */
             /* loaded from: classes.dex */
-            public class C0300a extends AnimatorListenerAdapter {
+            public class a extends AnimatorListenerAdapter {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C0300a() {
+                a() {
                 }
 
                 @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -797,14 +791,14 @@ public class ScrollableLayout extends FrameLayout {
                     j = ScrollableLayout.DEFAULT_IDLE_CLOSE_UP_ANIMATION;
                 }
                 ScrollableLayout.this.mCloseUpAnimator.setDuration(j);
-                ScrollableLayout.this.mCloseUpAnimator.addListener(new C0300a());
+                ScrollableLayout.this.mCloseUpAnimator.addListener(new a());
                 if (ScrollableLayout.this.mCloseAnimatorConfigurator != null) {
                     ScrollableLayout.this.mCloseAnimatorConfigurator.configure(ScrollableLayout.this.mCloseUpAnimator);
                 }
                 ScrollableLayout.this.mCloseUpAnimator.start();
             }
         };
-        this.mCloseUpAnimationProperty = new C0303b(this, Integer.class, "scrollY");
+        this.mCloseUpAnimationProperty = new b(this, Integer.class, "scrollY");
         init(context, attributeSet);
     }
 
@@ -821,9 +815,9 @@ public class ScrollableLayout extends FrameLayout {
                     ipChange.ipc$dispatch("-595021287", new Object[]{this});
                     return;
                 }
-                boolean c = ScrollableLayout.this.mScroller.c();
-                ScrollableLayout.this.mSelfUpdateFling = c;
-                if (c) {
+                boolean c2 = ScrollableLayout.this.mScroller.c();
+                ScrollableLayout.this.mSelfUpdateFling = c2;
+                if (c2) {
                     int f = ScrollableLayout.this.mScroller.f() - ScrollableLayout.this.getScrollY();
                     if (f != 0) {
                         ScrollableLayout.this.scrollBy(0, f);
@@ -838,10 +832,10 @@ public class ScrollableLayout extends FrameLayout {
             /* compiled from: Taobao */
             /* renamed from: cn.damai.baseview.scrollable.ScrollableLayout$3$a */
             /* loaded from: classes.dex */
-            public class C0300a extends AnimatorListenerAdapter {
+            public class a extends AnimatorListenerAdapter {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C0300a() {
+                a() {
                 }
 
                 @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -904,14 +898,14 @@ public class ScrollableLayout extends FrameLayout {
                     j = ScrollableLayout.DEFAULT_IDLE_CLOSE_UP_ANIMATION;
                 }
                 ScrollableLayout.this.mCloseUpAnimator.setDuration(j);
-                ScrollableLayout.this.mCloseUpAnimator.addListener(new C0300a());
+                ScrollableLayout.this.mCloseUpAnimator.addListener(new a());
                 if (ScrollableLayout.this.mCloseAnimatorConfigurator != null) {
                     ScrollableLayout.this.mCloseAnimatorConfigurator.configure(ScrollableLayout.this.mCloseUpAnimator);
                 }
                 ScrollableLayout.this.mCloseUpAnimator.start();
             }
         };
-        this.mCloseUpAnimationProperty = new C0303b(this, Integer.class, "scrollY");
+        this.mCloseUpAnimationProperty = new b(this, Integer.class, "scrollY");
         init(context, attributeSet);
     }
 }

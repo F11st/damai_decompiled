@@ -5,8 +5,8 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
-import kotlin.collections.C8214m;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.m;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.markers.KMappedMarker;
 import org.jetbrains.annotations.NotNull;
@@ -21,16 +21,15 @@ import tb.zj0;
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public class SequencesKt___SequencesKt extends C8580g {
+public class SequencesKt___SequencesKt extends g {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.sequences.SequencesKt___SequencesKt$a */
     /* loaded from: classes3.dex */
-    public static final class C8571a<T> implements Iterable<T>, KMappedMarker {
+    public static final class a<T> implements Iterable<T>, KMappedMarker {
         final /* synthetic */ Sequence a;
 
-        public C8571a(Sequence sequence) {
+        public a(Sequence sequence) {
             this.a = sequence;
         }
 
@@ -57,7 +56,7 @@ public class SequencesKt___SequencesKt extends C8580g {
         List<T> n;
         b41.i(sequence, "<this>");
         C = C(sequence);
-        n = C8214m.n(C);
+        n = m.n(C);
         return n;
     }
 
@@ -70,7 +69,7 @@ public class SequencesKt___SequencesKt extends C8580g {
     @NotNull
     public static <T> Iterable<T> l(@NotNull Sequence<? extends T> sequence) {
         b41.i(sequence, "<this>");
-        return new C8571a(sequence);
+        return new a(sequence);
     }
 
     public static <T> int m(@NotNull Sequence<? extends T> sequence) {
@@ -81,7 +80,7 @@ public class SequencesKt___SequencesKt extends C8580g {
             it.next();
             i++;
             if (i < 0) {
-                C8214m.o();
+                m.o();
             }
         }
         return i;

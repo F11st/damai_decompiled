@@ -43,7 +43,7 @@ public class RecommendFragment extends AbsFragmentV2 implements PtrChildHandler,
     private int mTopPadding;
     private RecommendModel mModel = new RecommendModel();
     private boolean isViewCreated = false;
-    private qx1 mHandler = new C1031c(this);
+    private qx1 mHandler = new c(this);
 
     /* compiled from: Taobao */
     /* loaded from: classes14.dex */
@@ -52,19 +52,18 @@ public class RecommendFragment extends AbsFragmentV2 implements PtrChildHandler,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.RecommendFragment$a */
     /* loaded from: classes5.dex */
-    public class C1028a implements OnBizListener<PageData<BaseResponse>> {
+    public class a implements OnBizListener<PageData<BaseResponse>> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnBizListener a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.discover.main.ui.RecommendFragment$a$a */
+        /* renamed from: cn.damai.discover.main.ui.RecommendFragment$a$a  reason: collision with other inner class name */
         /* loaded from: classes5.dex */
-        public class C1029a implements OnErrClickListener {
+        public class C0043a implements OnErrClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1029a() {
+            C0043a() {
             }
 
             @Override // cn.damai.commonbusiness.wannasee.listener.OnErrClickListener
@@ -79,7 +78,7 @@ public class RecommendFragment extends AbsFragmentV2 implements PtrChildHandler,
             }
         }
 
-        C1028a(OnBizListener onBizListener) {
+        a(OnBizListener onBizListener) {
             this.a = onBizListener;
         }
 
@@ -115,17 +114,16 @@ public class RecommendFragment extends AbsFragmentV2 implements PtrChildHandler,
             if (onBizListener != null) {
                 onBizListener.onBizFail(str, str2);
             }
-            RecommendFragment.this.showErrView(str, str2, new C1029a());
+            RecommendFragment.this.showErrView(str, str2, new C0043a());
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.RecommendFragment$b */
     /* loaded from: classes5.dex */
-    public class C1030b implements OnBizListener<PageData<BaseResponse>> {
+    public class b implements OnBizListener<PageData<BaseResponse>> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1030b() {
+        b() {
         }
 
         @Override // cn.damai.commonbusiness.wannasee.listener.OnBizListener
@@ -156,12 +154,11 @@ public class RecommendFragment extends AbsFragmentV2 implements PtrChildHandler,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.RecommendFragment$c */
     /* loaded from: classes5.dex */
-    public class C1031c extends qx1 {
+    public class c extends qx1 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1031c(RecommendFragment recommendFragment) {
+        c(RecommendFragment recommendFragment) {
         }
 
         @Override // in.srain.cube.views.ptr.PtrHandler
@@ -174,14 +171,13 @@ public class RecommendFragment extends AbsFragmentV2 implements PtrChildHandler,
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.RecommendFragment$d */
     /* loaded from: classes5.dex */
-    public class C1032d implements OnBizListener<BaseResponse> {
+    public class d implements OnBizListener<BaseResponse> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ RefreshCallBack a;
         final /* synthetic */ PtrFrameLayout b;
 
-        C1032d(RecommendFragment recommendFragment, RefreshCallBack refreshCallBack, PtrFrameLayout ptrFrameLayout) {
+        d(RecommendFragment recommendFragment, RefreshCallBack refreshCallBack, PtrFrameLayout ptrFrameLayout) {
             this.a = refreshCallBack;
             this.b = ptrFrameLayout;
         }
@@ -236,7 +232,7 @@ public class RecommendFragment extends AbsFragmentV2 implements PtrChildHandler,
         if (AndroidInstantRuntime.support(ipChange, "31495206")) {
             ipChange.ipc$dispatch("31495206", new Object[]{this, onBizListener});
         } else {
-            this.mModel.load(true, new C1028a(onBizListener));
+            this.mModel.load(true, new a(onBizListener));
         }
     }
 
@@ -354,7 +350,7 @@ public class RecommendFragment extends AbsFragmentV2 implements PtrChildHandler,
             return;
         }
         showLoadMoreV2();
-        this.mModel.load(false, new C1030b());
+        this.mModel.load(false, new b());
     }
 
     @Override // cn.damai.tetris.page.AbsFragment, cn.damai.tetris.core.msg.IMessage
@@ -379,7 +375,7 @@ public class RecommendFragment extends AbsFragmentV2 implements PtrChildHandler,
         if (AndroidInstantRuntime.support(ipChange, "1776452074")) {
             ipChange.ipc$dispatch("1776452074", new Object[]{this, ptrFrameLayout, refreshCallBack});
         } else {
-            loadPage(new C1032d(this, refreshCallBack, ptrFrameLayout));
+            loadPage(new d(this, refreshCallBack, ptrFrameLayout));
         }
     }
 

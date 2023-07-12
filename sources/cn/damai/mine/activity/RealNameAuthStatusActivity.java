@@ -12,11 +12,10 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.faceverify.bean.BaseFaceVerifyBean;
@@ -68,12 +67,11 @@ public class RealNameAuthStatusActivity extends DamaiBaseActivity<RealNameAuthSt
     private TextView mTitle;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.RealNameAuthStatusActivity$a */
     /* loaded from: classes6.dex */
-    public class C1409a implements RPSDK.RPCompletedListener {
+    public class a implements RPSDK.RPCompletedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1409a() {
+        a() {
         }
 
         @Override // com.alibaba.security.rp.RPSDK.RPCompletedListener
@@ -88,18 +86,16 @@ public class RealNameAuthStatusActivity extends DamaiBaseActivity<RealNameAuthSt
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.RealNameAuthStatusActivity$b */
     /* loaded from: classes6.dex */
-    public class C1410b implements AliMeUtil.UserCodeListener {
+    public class b implements AliMeUtil.UserCodeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.mine.activity.RealNameAuthStatusActivity$b$a */
         /* loaded from: classes6.dex */
-        public class C1411a implements AliMeUtil.AliMeTokenListener {
+        public class a implements AliMeUtil.AliMeTokenListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1411a() {
+            a() {
             }
 
             @Override // cn.damai.im.AliMeUtil.AliMeTokenListener
@@ -123,7 +119,7 @@ public class RealNameAuthStatusActivity extends DamaiBaseActivity<RealNameAuthSt
             }
         }
 
-        C1410b() {
+        b() {
         }
 
         @Override // cn.damai.im.AliMeUtil.UserCodeListener
@@ -142,7 +138,7 @@ public class RealNameAuthStatusActivity extends DamaiBaseActivity<RealNameAuthSt
             if (AndroidInstantRuntime.support(ipChange, "1237242363")) {
                 ipChange.ipc$dispatch("1237242363", new Object[]{this, Long.valueOf(j)});
             } else {
-                AliMeUtil.e(j, AliMeUtil.FROM_REALNAME_AUTH, new C1411a());
+                AliMeUtil.e(j, AliMeUtil.FROM_REALNAME_AUTH, new a());
             }
         }
     }
@@ -277,7 +273,7 @@ public class RealNameAuthStatusActivity extends DamaiBaseActivity<RealNameAuthSt
         }
         ImageView imageView = (ImageView) findViewById(R$id.authenticate_banner);
         imageView.setLayoutParams(new LinearLayout.LayoutParams(-1, getHeight(FeatureFactory.PRIORITY_ABOVE_NORMAL, H5MainActivity.REQUEST_REALNAME, 0)));
-        C0504a.b().c("https://static.damai.cn/mapi/2017-04-07/5e0c314c-f09f-475e-a38f-7b25546035a9.jpg").g(imageView);
+        cn.damai.common.image.a.b().c("https://static.damai.cn/mapi/2017-04-07/5e0c314c-f09f-475e-a38f-7b25546035a9.jpg").g(imageView);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -527,22 +523,22 @@ public class RealNameAuthStatusActivity extends DamaiBaseActivity<RealNameAuthSt
             return;
         }
         if (realNameVerifyBean != null && !TextUtils.isEmpty(realNameVerifyBean.getVerifyToken())) {
-            C0529c.e().x(vf1.x().s());
+            c.e().x(vf1.x().s());
             try {
                 if (mu0.a() == null) {
                     HashMap hashMap = new HashMap();
                     hashMap.put("contentlabel", "application 为null");
-                    C0529c.e().A(hashMap, "RPSDK_Application", vf1.REALNAME_AUTHCENTER_PAGE);
+                    c.e().A(hashMap, "RPSDK_Application", vf1.REALNAME_AUTHCENTER_PAGE);
                     return;
                 }
                 my1.a(mu0.a());
                 if (RPSDK.getContext() == null) {
                     HashMap hashMap2 = new HashMap();
                     hashMap2.put("contentlabel", "RPSDK Context 为null");
-                    C0529c.e().A(hashMap2, "RPSDK_Context", vf1.REALNAME_AUTHCENTER_PAGE);
+                    c.e().A(hashMap2, "RPSDK_Context", vf1.REALNAME_AUTHCENTER_PAGE);
                     return;
                 }
-                RPSDK.start(realNameVerifyBean.getVerifyToken(), this, new C1409a());
+                RPSDK.start(realNameVerifyBean.getVerifyToken(), this, new a());
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -561,7 +557,7 @@ public class RealNameAuthStatusActivity extends DamaiBaseActivity<RealNameAuthSt
         if (AndroidInstantRuntime.support(ipChange, "-542950487")) {
             ipChange.ipc$dispatch("-542950487", new Object[]{this});
         } else {
-            AliMeUtil.j(new C1410b());
+            AliMeUtil.j(new b());
         }
     }
 
@@ -610,7 +606,7 @@ public class RealNameAuthStatusActivity extends DamaiBaseActivity<RealNameAuthSt
         } else if (id == R$id.realname_title_back) {
             finish();
         } else if (id == R$id.realname_right_icon) {
-            C0529c.e().x(vf1.x().V());
+            c.e().x(vf1.x().V());
             gotoAliMe();
         } else if (id == R$id.realname_error_right_btn) {
             retryAuth();

@@ -25,10 +25,10 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Pattern;
 import me.ele.altriax.launcher.real.time.data.biz.BizTime;
-import tb.C9225hn;
 import tb.et2;
 import tb.ft2;
 import tb.hl2;
+import tb.hn;
 import tb.sj;
 import tb.yh2;
 
@@ -76,7 +76,7 @@ public class UTTracker {
     }
 
     private void fillReserve1Fields(Map<String, String> map) {
-        map.put(LogField.SDKTYPE.toString(), C9225hn.SDK_TYPE);
+        map.put(LogField.SDKTYPE.toString(), hn.SDK_TYPE);
         if (!TextUtils.isEmpty(this.mAppkey)) {
             map.put(LogField.APPKEY.toString(), this.mAppkey);
         } else {

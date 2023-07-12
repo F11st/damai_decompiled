@@ -8,18 +8,17 @@ import java.util.ArrayList;
 /* loaded from: classes10.dex */
 public class fe {
     private boolean b = false;
-    ArrayList<C4543a> a = new ArrayList<>();
+    ArrayList<a> a = new ArrayList<>();
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.fe$a */
     /* loaded from: classes10.dex */
-    public static class C4543a {
+    public static class a {
         private String a;
         private Object b;
         private Class<?>[] c;
         private Object[] d;
 
-        public C4543a(Object obj, String str, Object... objArr) {
+        public a(Object obj, String str, Object... objArr) {
             this.b = obj;
             this.a = str;
             if (objArr == null || objArr.length <= 0) {
@@ -42,29 +41,29 @@ public class fe {
         }
         this.b = true;
         for (int i = 0; i < this.a.size(); i++) {
-            C4543a c4543a = this.a.get(i);
+            a aVar = this.a.get(i);
             try {
                 try {
                     try {
-                        if (c4543a.b != null) {
-                            Class<?> cls = c4543a.b.getClass();
+                        if (aVar.b != null) {
+                            Class<?> cls = aVar.b.getClass();
                             Method method = null;
                             try {
-                                method = cls.getDeclaredMethod(c4543a.a, c4543a.c);
+                                method = cls.getDeclaredMethod(aVar.a, aVar.c);
                             } catch (NoSuchMethodException unused) {
-                                if (c4543a.c.length > 0) {
-                                    Class<?>[] clsArr = new Class[c4543a.c.length];
-                                    for (int i2 = 0; i2 < c4543a.c.length; i2++) {
-                                        if (c4543a.c[i2].getInterfaces().length > 0) {
-                                            clsArr[i2] = c4543a.c[i2].getInterfaces()[0];
+                                if (aVar.c.length > 0) {
+                                    Class<?>[] clsArr = new Class[aVar.c.length];
+                                    for (int i2 = 0; i2 < aVar.c.length; i2++) {
+                                        if (aVar.c[i2].getInterfaces().length > 0) {
+                                            clsArr[i2] = aVar.c[i2].getInterfaces()[0];
                                         }
                                     }
-                                    method = cls.getDeclaredMethod(c4543a.a, clsArr);
+                                    method = cls.getDeclaredMethod(aVar.a, clsArr);
                                 }
                             }
                             if (method != null) {
                                 method.setAccessible(true);
-                                method.invoke(c4543a.b, c4543a.d);
+                                method.invoke(aVar.b, aVar.d);
                             }
                         }
                     } catch (IllegalArgumentException e) {
@@ -88,7 +87,7 @@ public class fe {
         try {
             StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
             if (stackTrace != null && stackTrace.length >= 3) {
-                this.a.add(new C4543a(obj, stackTrace[3].getMethodName(), objArr));
+                this.a.add(new a(obj, stackTrace[3].getMethodName(), objArr));
             }
         } catch (Throwable unused) {
         }

@@ -16,7 +16,6 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.AppConfig;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
 import cn.damai.common.util.ToastUtil;
@@ -72,7 +71,7 @@ public class TicketGuideActity extends SimpleBaseActivity implements ILoginListe
     private long mProjectId;
     private ProjectTicketGuideBean mProjectTicketGuideBean;
     private RecyclerView mRecyclerView;
-    CountDownTimerC2417c mTimeCount;
+    c mTimeCount;
     private View mTitleLineView;
     private TextView mTvTitle;
     private boolean mVisEmail;
@@ -84,14 +83,13 @@ public class TicketGuideActity extends SimpleBaseActivity implements ILoginListe
     private boolean mAppBarLayoutHeight = false;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.robticketstrategy.TicketGuideActity$a */
     /* loaded from: classes8.dex */
-    public class C2415a implements AppBarLayout.OnOffsetChangedListener {
+    public class a implements AppBarLayout.OnOffsetChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
         final /* synthetic */ LinearLayout b;
 
-        C2415a(int i, LinearLayout linearLayout) {
+        a(int i, LinearLayout linearLayout) {
             this.a = i;
             this.b = linearLayout;
         }
@@ -132,12 +130,11 @@ public class TicketGuideActity extends SimpleBaseActivity implements ILoginListe
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.robticketstrategy.TicketGuideActity$b */
     /* loaded from: classes8.dex */
-    public class C2416b implements NetworkChangedBroadcastReceiver.OnNetworkChangedListener {
+    public class b implements NetworkChangedBroadcastReceiver.OnNetworkChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2416b() {
+        b() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.robticketstrategy.utils.NetworkChangedBroadcastReceiver.OnNetworkChangedListener
@@ -155,12 +152,11 @@ public class TicketGuideActity extends SimpleBaseActivity implements ILoginListe
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.robticketstrategy.TicketGuideActity$c */
     /* loaded from: classes16.dex */
-    public class CountDownTimerC2417c extends CountDownTimer {
+    public class c extends CountDownTimer {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        public CountDownTimerC2417c(long j, long j2) {
+        public c(long j, long j2) {
             super(j, j2);
         }
 
@@ -283,8 +279,8 @@ public class TicketGuideActity extends SimpleBaseActivity implements ILoginListe
             ipChange.ipc$dispatch("-1197873369", new Object[]{this});
             return;
         }
-        int a = this.stateHeight + m62.a(this, 44.0f);
-        ((CollapsingToolbarLayout) findViewById(R$id.toolbar_layout)).setMinimumHeight(a);
+        int a2 = this.stateHeight + m62.a(this, 44.0f);
+        ((CollapsingToolbarLayout) findViewById(R$id.toolbar_layout)).setMinimumHeight(a2);
         LinearLayout linearLayout = (LinearLayout) findViewById(R$id.iv_ticket_rob_bar);
         this.mIconBack = (DMIconFontTextView) linearLayout.findViewById(R$id.ticket_rob_title_back_tv);
         this.mTvTitle = (TextView) linearLayout.findViewById(R$id.ticket_rob_title_tv);
@@ -292,7 +288,7 @@ public class TicketGuideActity extends SimpleBaseActivity implements ILoginListe
         this.mTitleLineView = findViewById;
         findViewById.setVisibility(8);
         this.mIconBack.setOnClickListener(this);
-        ((AppBarLayout) findViewById(R$id.appbar_layout)).addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new C2415a(a, linearLayout));
+        ((AppBarLayout) findViewById(R$id.appbar_layout)).addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new a(a2, linearLayout));
     }
 
     private void initData() {
@@ -454,7 +450,7 @@ public class TicketGuideActity extends SimpleBaseActivity implements ILoginListe
         if (AndroidInstantRuntime.support(ipChange, "-60503378")) {
             ipChange.ipc$dispatch("-60503378", new Object[]{this, str});
         } else if (str != null) {
-            DMImageCreator f = C0504a.b().f(str, -1, -1);
+            DMImageCreator f = cn.damai.common.image.a.b().f(str, -1, -1);
             int i = R$drawable.bg_border_corner_f5;
             f.i(i).c(i).g(this.mIvHeadImageBg);
         }
@@ -467,7 +463,7 @@ public class TicketGuideActity extends SimpleBaseActivity implements ILoginListe
             return;
         }
         if (this.mNetworkChangedBroadcastReceiver == null) {
-            this.mNetworkChangedBroadcastReceiver = new NetworkChangedBroadcastReceiver(new C2416b());
+            this.mNetworkChangedBroadcastReceiver = new NetworkChangedBroadcastReceiver(new b());
         }
         registerReceiver(this.mNetworkChangedBroadcastReceiver, new IntentFilter(ConnectivityBroadcastReceiver.CONNECTIVITY_ACTION));
     }
@@ -479,9 +475,9 @@ public class TicketGuideActity extends SimpleBaseActivity implements ILoginListe
             ipChange.ipc$dispatch("-45542562", new Object[]{this});
             return;
         }
-        CountDownTimerC2417c countDownTimerC2417c = this.mTimeCount;
-        if (countDownTimerC2417c != null) {
-            countDownTimerC2417c.cancel();
+        c cVar = this.mTimeCount;
+        if (cVar != null) {
+            cVar.cancel();
             this.mTimeCount = null;
         }
     }
@@ -657,9 +653,9 @@ public class TicketGuideActity extends SimpleBaseActivity implements ILoginListe
             stopTimer();
         }
         if (gn2.b().g()) {
-            CountDownTimerC2417c countDownTimerC2417c = new CountDownTimerC2417c(gn2.b().f() * 1000, 1000L);
-            this.mTimeCount = countDownTimerC2417c;
-            countDownTimerC2417c.start();
+            c cVar = new c(gn2.b().f() * 1000, 1000L);
+            this.mTimeCount = cVar;
+            cVar.start();
         }
     }
 }

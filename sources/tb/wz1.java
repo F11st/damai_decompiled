@@ -10,18 +10,17 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public abstract class wz1 implements JavaAnnotationArgument {
     @NotNull
-    public static final C9889a Factory = new C9889a(null);
+    public static final a Factory = new a(null);
     @Nullable
     private final ni1 a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.wz1$a */
     /* loaded from: classes3.dex */
-    public static final class C9889a {
-        private C9889a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9889a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

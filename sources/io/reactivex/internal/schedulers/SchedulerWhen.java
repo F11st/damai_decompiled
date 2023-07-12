@@ -1,12 +1,11 @@
 package io.reactivex.internal.schedulers;
 
-import io.reactivex.AbstractC8146a;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.CompletableObserver;
 import io.reactivex.Scheduler;
+import io.reactivex.a;
 import io.reactivex.annotations.Experimental;
 import io.reactivex.annotations.NonNull;
-import io.reactivex.disposables.C8151a;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.processors.UnicastProcessor;
@@ -22,26 +21,26 @@ import tb.mn0;
 public class SchedulerWhen extends Scheduler implements Disposable {
     private final Scheduler actualScheduler;
     private Disposable disposable;
-    private final mn0<AbstractC8147b<AbstractC8146a>> workerProcessor;
+    private final mn0<b<a>> workerProcessor;
     static final Disposable SUBSCRIBED = new SubscribedDisposable();
-    static final Disposable DISPOSED = C8151a.a();
+    static final Disposable DISPOSED = io.reactivex.disposables.a.a();
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class CreateWorkerFunction implements Function<ScheduledAction, AbstractC8146a> {
+    static final class CreateWorkerFunction implements Function<ScheduledAction, a> {
         final Scheduler.Worker actualWorker;
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
         /* loaded from: classes3.dex */
-        public final class WorkerCompletable extends AbstractC8146a {
+        public final class WorkerCompletable extends a {
             final ScheduledAction action;
 
             WorkerCompletable(ScheduledAction scheduledAction) {
                 this.action = scheduledAction;
             }
 
-            @Override // io.reactivex.AbstractC8146a
+            @Override // io.reactivex.a
             protected void subscribeActual(CompletableObserver completableObserver) {
                 completableObserver.onSubscribe(this.action);
                 this.action.call(CreateWorkerFunction.this.actualWorker, completableObserver);
@@ -53,7 +52,7 @@ public class SchedulerWhen extends Scheduler implements Disposable {
         }
 
         @Override // io.reactivex.functions.Function
-        public AbstractC8146a apply(ScheduledAction scheduledAction) {
+        public a apply(ScheduledAction scheduledAction) {
             return new WorkerCompletable(scheduledAction);
         }
     }
@@ -173,12 +172,12 @@ public class SchedulerWhen extends Scheduler implements Disposable {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public SchedulerWhen(Function<AbstractC8147b<AbstractC8147b<AbstractC8146a>>, AbstractC8146a> function, Scheduler scheduler) {
+    public SchedulerWhen(Function<b<b<a>>, a> function, Scheduler scheduler) {
         this.actualScheduler = scheduler;
         mn0 a = UnicastProcessor.c().a();
         this.workerProcessor = a;
         try {
-            this.disposable = ((AbstractC8146a) function.apply(a)).subscribe();
+            this.disposable = ((a) function.apply(a)).subscribe();
         } catch (Throwable th) {
             dg0.a(th);
         }
@@ -189,7 +188,7 @@ public class SchedulerWhen extends Scheduler implements Disposable {
     public Scheduler.Worker createWorker() {
         Scheduler.Worker createWorker = this.actualScheduler.createWorker();
         mn0<T> a = UnicastProcessor.c().a();
-        AbstractC8147b<AbstractC8146a> map = a.map(new CreateWorkerFunction(createWorker));
+        b<a> map = a.map(new CreateWorkerFunction(createWorker));
         QueueWorker queueWorker = new QueueWorker(a, createWorker);
         this.workerProcessor.onNext(map);
         return queueWorker;

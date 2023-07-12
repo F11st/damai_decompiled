@@ -17,14 +17,13 @@ public class je {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.je$a */
     /* loaded from: classes.dex */
-    public static class C9307a {
+    public static class a {
         static je a = new je();
     }
 
     public static je a() {
-        return C9307a.a;
+        return a.a;
     }
 
     public synchronized void b(he heVar) {

@@ -3,15 +3,14 @@ package tb;
 import com.alibaba.fastjson.JSONObject;
 import com.taobao.android.dinamicx.DXGlobalCenter;
 import com.taobao.android.dinamicx.DXRuntimeContext;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 import com.taobao.android.dinamicx.widget.IDXAbTestInterface;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class vv extends AbstractC6375a {
+public class vv extends com.taobao.android.dinamicx.expression.parser.a {
     public static final long DX_PARSER_DXAB = 33582044307L;
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         JSONObject jSONObject = new JSONObject();
         if (objArr != null && objArr.length > 1) {
@@ -29,7 +28,7 @@ public class vv extends AbstractC6375a {
         return jSONObject;
     }
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
     public String getDxFunctionName() {
         return "dxAB";
     }

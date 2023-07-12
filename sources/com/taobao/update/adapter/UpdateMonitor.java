@@ -5,9 +5,8 @@ package com.taobao.update.adapter;
 public interface UpdateMonitor {
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.update.adapter.UpdateMonitor$a */
     /* loaded from: classes11.dex */
-    public static class C6914a implements UpdateMonitor {
+    public static class a implements UpdateMonitor {
         @Override // com.taobao.update.adapter.UpdateMonitor
         public void add(String str, boolean z, String str2, String str3, String str4, String str5, String str6, long j, long j2) {
         }

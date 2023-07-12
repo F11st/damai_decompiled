@@ -4,7 +4,6 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
-import cn.damai.common.user.C0529c;
 import cn.damai.trade.R$id;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -16,15 +15,14 @@ public class po1 {
     private TextView a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.po1$a */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC9560a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ Context b;
         final /* synthetic */ String c;
 
-        View$OnClickListenerC9560a(po1 po1Var, String str, Context context, String str2) {
+        a(po1 po1Var, String str, Context context, String str2) {
             this.a = str;
             this.b = context;
             this.c = str2;
@@ -37,7 +35,7 @@ public class po1 {
                 ipChange.ipc$dispatch("1397022719", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(pp2.u().u1(this.a));
+            cn.damai.common.user.c.e().x(pp2.u().u1(this.a));
             mo1.k(this.b, this.c);
         }
     }
@@ -54,7 +52,7 @@ public class po1 {
             ipChange.ipc$dispatch("1633178880", new Object[]{this, context, str, str2});
         } else if (context != null && !TextUtils.isEmpty(str)) {
             this.a.setVisibility(0);
-            this.a.setOnClickListener(new View$OnClickListenerC9560a(this, str2, context, str));
+            this.a.setOnClickListener(new a(this, str2, context, str));
         } else {
             this.a.setVisibility(8);
         }

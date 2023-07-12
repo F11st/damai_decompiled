@@ -1,15 +1,14 @@
 package tb;
 
 import android.text.TextUtils;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
+import cn.damai.common.user.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
-public class du0 extends C0528b {
+public class du0 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static String b = "xiannv";
     private static du0 c;
@@ -25,10 +24,10 @@ public class du0 extends C0528b {
         return c;
     }
 
-    public C0525a.C0527b g(int i, String str, String str2) {
+    public a.b g(int i, String str, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1591965539")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1591965539", new Object[]{this, Integer.valueOf(i), str, str2});
+            return (a.b) ipChange.ipc$dispatch("1591965539", new Object[]{this, Integer.valueOf(i), str, str2});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("titlelabel", str);

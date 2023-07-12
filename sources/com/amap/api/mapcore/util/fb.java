@@ -19,7 +19,6 @@ import android.widget.TextView;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-import tb.C9796v;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -41,12 +40,11 @@ public class fb extends ScrollView {
     private int o;
     private Runnable p;
     private int q;
-    private InterfaceC4540a r;
+    private a r;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.fb$a */
     /* loaded from: classes10.dex */
-    public interface InterfaceC4540a {
+    public interface a {
         void a(int i);
     }
 
@@ -108,7 +106,7 @@ public class fb extends ScrollView {
     public void setBackgroundDrawable(Drawable drawable) {
         if (this.h == 0) {
             try {
-                WindowManager windowManager = (WindowManager) this.c.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+                WindowManager windowManager = (WindowManager) this.c.getSystemService(tb.v.ATTACH_MODE_WINDOW);
                 if (windowManager != null) {
                     this.h = windowManager.getDefaultDisplay().getWidth();
                 }
@@ -211,10 +209,10 @@ public class fb extends ScrollView {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void g() {
-        InterfaceC4540a interfaceC4540a = this.r;
-        if (interfaceC4540a != null) {
+        a aVar = this.r;
+        if (aVar != null) {
             try {
-                interfaceC4540a.a(c());
+                aVar.a(c());
             } catch (Throwable unused) {
             }
         }
@@ -378,8 +376,8 @@ public class fb extends ScrollView {
         });
     }
 
-    public void a(InterfaceC4540a interfaceC4540a) {
-        this.r = interfaceC4540a;
+    public void a(a aVar) {
+        this.r = aVar;
     }
 
     public static int a(Context context, float f) {

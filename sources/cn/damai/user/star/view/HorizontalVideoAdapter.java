@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -58,7 +58,7 @@ public class HorizontalVideoAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                 RoundImageView roundImageView = this.c;
                 int i = R$drawable.uikit_default_image_bg_gradient;
                 roundImageView.setImageResource(i);
-                C0504a.b().c(videos.picUrl).c(i).g(this.c);
+                a.b().c(videos.picUrl).c(i).g(this.c);
                 if (TextUtils.isEmpty(videos.vid)) {
                     this.d.setVisibility(8);
                 } else {

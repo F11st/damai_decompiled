@@ -38,10 +38,9 @@ public class NearlyAround {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.view.NearlyAround$a */
     /* loaded from: classes15.dex */
-    class View$OnClickListenerC3073a implements View.OnClickListener {
-        View$OnClickListenerC3073a() {
+    class a implements View.OnClickListener {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -107,7 +106,7 @@ public class NearlyAround {
                 textView.setTextSize(16.0f);
                 textView.setBackgroundDrawable(this.a.getResources().getDrawable(R$drawable.huichang_nearlyaround_tv_bg));
                 textView.setTag(jj1Var);
-                textView.setOnClickListener(new View$OnClickListenerC3073a());
+                textView.setOnClickListener(new a());
                 this.b.addView(textView);
             }
             return;

@@ -13,13 +13,12 @@ import tb.z71;
 public interface TypeAliasExpansionReportStrategy {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.types.TypeAliasExpansionReportStrategy$a */
     /* loaded from: classes3.dex */
-    public static final class C8539a implements TypeAliasExpansionReportStrategy {
+    public static final class a implements TypeAliasExpansionReportStrategy {
         @NotNull
-        public static final C8539a INSTANCE = new C8539a();
+        public static final a INSTANCE = new a();
 
-        private C8539a() {
+        private a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.types.TypeAliasExpansionReportStrategy

@@ -118,15 +118,14 @@ public class PullToRefreshListView extends PullToRefreshAdapterViewBase<ListView
                 return ((Boolean) ipChange.ipc$dispatch("236636318", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4), Integer.valueOf(i5), Integer.valueOf(i6), Integer.valueOf(i7), Integer.valueOf(i8), Boolean.valueOf(z)})).booleanValue();
             }
             boolean overScrollBy = super.overScrollBy(i, i2, i3, i4, i5, i6, i7, i8, z);
-            C2536b.d(PullToRefreshListView.this, i, i3, i2, i4, z);
+            b.d(PullToRefreshListView.this, i, i3, i2, i4, z);
             return overScrollBy;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.pulltorefresh.library.PullToRefreshListView$a */
     /* loaded from: classes8.dex */
-    static /* synthetic */ class C2533a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -164,12 +163,12 @@ public class PullToRefreshListView extends PullToRefreshAdapterViewBase<ListView
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // cn.damai.uikit.pulltorefresh.library.PullToRefreshBase
-    public C2535a createLoadingLayoutProxy(boolean z, boolean z2) {
+    public cn.damai.uikit.pulltorefresh.library.a createLoadingLayoutProxy(boolean z, boolean z2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1245772312")) {
-            return (C2535a) ipChange.ipc$dispatch("1245772312", new Object[]{this, Boolean.valueOf(z), Boolean.valueOf(z2)});
+            return (cn.damai.uikit.pulltorefresh.library.a) ipChange.ipc$dispatch("1245772312", new Object[]{this, Boolean.valueOf(z), Boolean.valueOf(z2)});
         }
-        C2535a createLoadingLayoutProxy = super.createLoadingLayoutProxy(z, z2);
+        cn.damai.uikit.pulltorefresh.library.a createLoadingLayoutProxy = super.createLoadingLayoutProxy(z, z2);
         if (this.mListViewExtrasEnabled) {
             PullToRefreshBase.Mode mode = getMode();
             if (z && mode.showHeaderLoadingLayout()) {
@@ -235,7 +234,7 @@ public class PullToRefreshListView extends PullToRefreshAdapterViewBase<ListView
         ListAdapter adapter = ((ListView) this.mRefreshableView).getAdapter();
         if (this.mListViewExtrasEnabled && getShowViewWhileRefreshing() && adapter != null && !adapter.isEmpty()) {
             super.onRefreshing(false);
-            int i2 = C2533a.a[getCurrentMode().ordinal()];
+            int i2 = a.a[getCurrentMode().ordinal()];
             if (i2 != 1 && i2 != 2) {
                 footerLayout = getHeaderLayout();
                 loadingLayout = this.mHeaderLoadingView;
@@ -280,7 +279,7 @@ public class PullToRefreshListView extends PullToRefreshAdapterViewBase<ListView
         } else if (!this.mListViewExtrasEnabled) {
             super.onReset();
         } else {
-            int i3 = C2533a.a[getCurrentMode().ordinal()];
+            int i3 = a.a[getCurrentMode().ordinal()];
             if (i3 != 1 && i3 != 2) {
                 footerLayout = getHeaderLayout();
                 loadingLayout = this.mHeaderLoadingView;

@@ -39,13 +39,13 @@ import tb.s60;
 public final class RichTextAdapter extends RecyclerView.Adapter<RichTextViewHolder> {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    private List<HtmlParserManager.C3555b> a;
+    private List<HtmlParserManager.b> a;
     @NotNull
     private Context b;
     @NotNull
     private ArrayList<HashMap<String, String>> c;
 
-    public RichTextAdapter(@NotNull List<HtmlParserManager.C3555b> list, @NotNull Context context) {
+    public RichTextAdapter(@NotNull List<HtmlParserManager.b> list, @NotNull Context context) {
         b41.i(list, "convertedItemList");
         b41.i(context, WPKFactory.INIT_KEY_CONTEXT);
         this.a = list;
@@ -89,9 +89,9 @@ public final class RichTextAdapter extends RecyclerView.Adapter<RichTextViewHold
         b41.i(ref$ObjectRef, "$item");
         b41.i(richTextAdapter, "this$0");
         Context context = richTextViewHolder.itemView.getContext();
-        if (!TextUtils.isEmpty(((HtmlParserManager.C3555b) ref$ObjectRef.element).d())) {
+        if (!TextUtils.isEmpty(((HtmlParserManager.b) ref$ObjectRef.element).d())) {
             Bundle bundle = new Bundle();
-            bundle.putString("url", ((HtmlParserManager.C3555b) ref$ObjectRef.element).d());
+            bundle.putString("url", ((HtmlParserManager.b) ref$ObjectRef.element).d());
             Action action = new Action();
             action.setActionType(1);
             action.setActionUrl("damai://webview");
@@ -101,7 +101,7 @@ public final class RichTextAdapter extends RecyclerView.Adapter<RichTextViewHold
         }
         Bundle bundle2 = new Bundle();
         bundle2.putSerializable("pic_info_map", richTextAdapter.c);
-        bundle2.putInt("position", ((HtmlParserManager.C3555b) ref$ObjectRef.element).e());
+        bundle2.putInt("position", ((HtmlParserManager.b) ref$ObjectRef.element).e());
         Action action2 = new Action();
         action2.setActionType(1);
         action2.setActionUrl("damai://videobrowse");
@@ -144,9 +144,9 @@ public final class RichTextAdapter extends RecyclerView.Adapter<RichTextViewHold
     }
 
     @NotNull
-    public final HtmlParserManager.C3555b d(int i) {
+    public final HtmlParserManager.b d(int i) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1220803712") ? (HtmlParserManager.C3555b) ipChange.ipc$dispatch("-1220803712", new Object[]{this, Integer.valueOf(i)}) : this.a.get(i);
+        return AndroidInstantRuntime.support(ipChange, "-1220803712") ? (HtmlParserManager.b) ipChange.ipc$dispatch("-1220803712", new Object[]{this, Integer.valueOf(i)}) : this.a.get(i);
     }
 
     /* JADX WARN: Type inference failed for: r8v1, types: [com.alibaba.pictures.bricks.util.htmlparser.HtmlParserManager$b, T] */
@@ -162,8 +162,8 @@ public final class RichTextAdapter extends RecyclerView.Adapter<RichTextViewHold
         final Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
         ?? d = d(i);
         ref$ObjectRef.element = d;
-        if (((HtmlParserManager.C3555b) d).f() == 1) {
-            richTextViewHolder.b().setText(((HtmlParserManager.C3555b) ref$ObjectRef.element).a());
+        if (((HtmlParserManager.b) d).f() == 1) {
+            richTextViewHolder.b().setText(((HtmlParserManager.b) ref$ObjectRef.element).a());
             return;
         }
         final int b = DisplayMetrics.getwidthPixels(this.b.getResources().getDisplayMetrics()) - (s60.INSTANCE.b(this.b, 12) * 2);
@@ -173,7 +173,7 @@ public final class RichTextAdapter extends RecyclerView.Adapter<RichTextViewHold
             ((ImageTicket) tag).cancel();
         }
         j(b, richTextViewHolder);
-        richTextViewHolder.a().setTag(ImageLoaderProviderProxy.getProxy().load(String.valueOf(((HtmlParserManager.C3555b) ref$ObjectRef.element).a()), R$drawable.bricks_default_image_bg_gradient, new IImageSuccListener() { // from class: tb.n32
+        richTextViewHolder.a().setTag(ImageLoaderProviderProxy.getProxy().load(String.valueOf(((HtmlParserManager.b) ref$ObjectRef.element).a()), R$drawable.bricks_default_image_bg_gradient, new IImageSuccListener() { // from class: tb.n32
             @Override // com.alient.oneservice.image.IImageSuccListener
             public final void onSuccess(SuccessEvent successEvent) {
                 RichTextAdapter.f(RichTextViewHolder.this, b, this, ref$ObjectRef, successEvent);
@@ -232,7 +232,7 @@ public final class RichTextAdapter extends RecyclerView.Adapter<RichTextViewHold
         this.c = arrayList;
     }
 
-    public final void m(@NotNull List<HtmlParserManager.C3555b> list) {
+    public final void m(@NotNull List<HtmlParserManager.b> list) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-808602436")) {
             ipChange.ipc$dispatch("-808602436", new Object[]{this, list});

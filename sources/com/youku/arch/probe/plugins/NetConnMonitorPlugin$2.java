@@ -2,7 +2,6 @@ package com.youku.arch.probe.plugins;
 
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.youku.arch.probe.a.C7876d;
 import java.util.List;
 import java.util.Map;
 
@@ -10,11 +9,11 @@ import java.util.Map;
 /* loaded from: classes2.dex */
 public class NetConnMonitorPlugin$2 extends Thread {
     private static transient /* synthetic */ IpChange $ipChange;
-    final /* synthetic */ C7884b this$0;
+    final /* synthetic */ b this$0;
     final /* synthetic */ List val$speedInfoList;
 
-    NetConnMonitorPlugin$2(C7884b c7884b, List list) {
-        this.this$0 = c7884b;
+    NetConnMonitorPlugin$2(b bVar, List list) {
+        this.this$0 = bVar;
         this.val$speedInfoList = list;
     }
 
@@ -28,15 +27,15 @@ public class NetConnMonitorPlugin$2 extends Thread {
             return;
         }
         try {
-            C7876d.a().b();
-            C7876d.a().a(this.val$speedInfoList);
-            Map<String, String> b = C7876d.a().b(this.val$speedInfoList);
+            com.youku.arch.probe.a.d.a().b();
+            com.youku.arch.probe.a.d.a().a(this.val$speedInfoList);
+            Map<String, String> b = com.youku.arch.probe.a.d.a().b(this.val$speedInfoList);
             map = this.this$0.D;
             map.putAll(b);
-            C7876d.a().a(b);
+            com.youku.arch.probe.a.d.a().a(b);
             str = this.this$0.y;
-            this.this$0.z = C7876d.a().a(str);
-            C7876d.a().c();
+            this.this$0.z = com.youku.arch.probe.a.d.a().a(str);
+            com.youku.arch.probe.a.d.a().c();
         } catch (Exception e) {
             e.printStackTrace();
         }

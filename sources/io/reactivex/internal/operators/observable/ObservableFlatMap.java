@@ -394,7 +394,7 @@ public final class ObservableFlatMap<T, U> extends AbstractObservableWithUpstrea
         this.bufferSize = i2;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super U> observer) {
         if (ObservableScalarXMap.tryScalarXMapSubscribe(this.source, observer, this.mapper)) {
             return;

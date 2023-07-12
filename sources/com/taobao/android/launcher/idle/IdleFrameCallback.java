@@ -9,7 +9,7 @@ import android.util.Log;
 import android.view.Choreographer;
 import androidx.annotation.NonNull;
 import com.taobao.android.launcher.device.LowDevice;
-import com.taobao.application.common.C6673b;
+import com.taobao.application.common.b;
 import com.youku.danmaku.engine.danmaku.model.android.DanmakuFactory;
 import java.util.concurrent.TimeUnit;
 
@@ -44,7 +44,7 @@ class IdleFrameCallback implements Handler.Callback, Choreographer.FrameCallback
         handlerThread.start();
         Handler handler = new Handler(handlerThread.getLooper(), this);
         this.smoothHandler = handler;
-        boolean z2 = C6673b.d().getBoolean("isFullNewInstall", false);
+        boolean z2 = b.d().getBoolean("isFullNewInstall", false);
         Object obj = LowDevice.identify().first;
         if (obj != null && ((Boolean) obj).booleanValue()) {
             z = true;

@@ -10,10 +10,10 @@ public final class ai0 {
     static {
         Object m1271constructorimpl;
         try {
-            Result.C8174a c8174a = Result.Companion;
+            Result.a aVar = Result.Companion;
             m1271constructorimpl = Result.m1271constructorimpl(Class.forName("android.os.Build"));
         } catch (Throwable th) {
-            Result.C8174a c8174a2 = Result.Companion;
+            Result.a aVar2 = Result.Companion;
             m1271constructorimpl = Result.m1271constructorimpl(i32.a(th));
         }
         a = Result.m1278isSuccessimpl(m1271constructorimpl);

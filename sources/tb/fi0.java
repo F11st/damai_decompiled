@@ -1,7 +1,6 @@
 package tb;
 
 import android.text.TextUtils;
-import cn.damai.common.image.C0504a;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.lazyimg.TaskListener;
 import cn.damai.commonbusiness.lazyimg.view.GifCareImageView;
@@ -17,44 +16,42 @@ public class fi0 extends d21<GifCareImageView> {
     private IImageLoader.ImageTicket c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.fi0$a */
     /* loaded from: classes4.dex */
-    public class C9138a implements IImageLoader.IImageSuccListener {
+    public class a implements IImageLoader.IImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TaskListener a;
 
-        C9138a(TaskListener taskListener) {
+        a(TaskListener taskListener) {
             this.a = taskListener;
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageSuccListener
-        public void onSuccess(IImageLoader.C2496b c2496b) {
+        public void onSuccess(IImageLoader.b bVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1589465875")) {
-                ipChange.ipc$dispatch("1589465875", new Object[]{this, c2496b});
+                ipChange.ipc$dispatch("1589465875", new Object[]{this, bVar});
                 return;
             }
-            fi0.this.b().setImageDrawable(c2496b.a);
+            fi0.this.b().setImageDrawable(bVar.a);
             this.a.onTaskLoadFinish(fi0.this);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.fi0$b */
     /* loaded from: classes4.dex */
-    public class C9139b implements IImageLoader.IImageFailListener {
+    public class b implements IImageLoader.IImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TaskListener a;
 
-        C9139b(TaskListener taskListener) {
+        b(TaskListener taskListener) {
             this.a = taskListener;
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageFailListener
-        public void onFail(IImageLoader.C2495a c2495a) {
+        public void onFail(IImageLoader.a aVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1860264516")) {
-                ipChange.ipc$dispatch("-1860264516", new Object[]{this, c2495a});
+                ipChange.ipc$dispatch("-1860264516", new Object[]{this, aVar});
             } else {
                 this.a.onTaskLoadFinish(fi0.this);
             }
@@ -90,9 +87,9 @@ public class fi0 extends d21<GifCareImageView> {
         } else if (TextUtils.isEmpty(this.b)) {
             taskListener.onTaskLoadFinish(this);
         } else {
-            int a = (int) (((int) (((DisplayMetrics.getwidthPixels(m62.b(mu0.a())) - (m62.a(mu0.a(), 21.0f) * 2)) - m62.a(mu0.a(), 12.0f)) / 2.0f)) * 1.3333334f);
-            int i = a > 800 ? 800 : a;
-            this.c = C0504a.b().load(this.b, i, i, new C9138a(taskListener), new C9139b(taskListener));
+            int a2 = (int) (((int) (((DisplayMetrics.getwidthPixels(m62.b(mu0.a())) - (m62.a(mu0.a(), 21.0f) * 2)) - m62.a(mu0.a(), 12.0f)) / 2.0f)) * 1.3333334f);
+            int i = a2 > 800 ? 800 : a2;
+            this.c = cn.damai.common.image.a.b().load(this.b, i, i, new a(taskListener), new b(taskListener));
         }
     }
 

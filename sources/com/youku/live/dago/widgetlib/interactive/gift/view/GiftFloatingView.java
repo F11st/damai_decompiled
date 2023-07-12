@@ -47,7 +47,7 @@ public class GiftFloatingView extends LinearLayout {
 
     public GiftFloatingView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ykl_gift_anim_item, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_ykl_gift_anim_item, (ViewGroup) this, true);
         this.imageIcon = (ImageView) findViewById(R.id.gift_icon);
     }
 }

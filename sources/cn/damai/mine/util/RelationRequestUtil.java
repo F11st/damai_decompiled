@@ -6,7 +6,6 @@ import android.text.TextUtils;
 import androidx.annotation.NonNull;
 import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.login.LoginManager;
@@ -39,12 +38,11 @@ public class RelationRequestUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.util.RelationRequestUtil$a */
     /* loaded from: classes15.dex */
-    public class DialogInterface$OnClickListenerC1467a implements DialogInterface.OnClickListener {
+    public class a implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC1467a(RelationRequestUtil relationRequestUtil) {
+        a(RelationRequestUtil relationRequestUtil) {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -59,9 +57,8 @@ public class RelationRequestUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.util.RelationRequestUtil$b */
     /* loaded from: classes15.dex */
-    public class DialogInterface$OnClickListenerC1468b implements DialogInterface.OnClickListener {
+    public class b implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context a;
         final /* synthetic */ int b;
@@ -70,7 +67,7 @@ public class RelationRequestUtil {
         final /* synthetic */ int e;
         final /* synthetic */ String f;
 
-        DialogInterface$OnClickListenerC1468b(Context context, int i, String str, String str2, int i2, String str3) {
+        b(Context context, int i, String str, String str2, int i2, String str3) {
             this.a = context;
             this.b = i;
             this.c = str;
@@ -91,15 +88,14 @@ public class RelationRequestUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.util.RelationRequestUtil$c */
     /* loaded from: classes6.dex */
-    public class C1469c implements ActionRelation<FollowStateBean> {
+    public class c implements ActionRelation<FollowStateBean> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context a;
         final /* synthetic */ int b;
         final /* synthetic */ int c;
 
-        C1469c(Context context, int i, int i2) {
+        c(Context context, int i, int i2) {
             this.a = context;
             this.b = i;
             this.c = i2;
@@ -169,8 +165,8 @@ public class RelationRequestUtil {
             if (i != 0) {
                 DMDialog dMDialog = new DMDialog(context);
                 dMDialog.o(false).q("确认不再关注TA了？");
-                dMDialog.i("取消", new DialogInterface$OnClickListenerC1467a(this));
-                dMDialog.n(PurchaseConstants.CONFIRM, new DialogInterface$OnClickListenerC1468b(context, i, str, str2, i2, str3)).show();
+                dMDialog.i("取消", new a(this));
+                dMDialog.n(PurchaseConstants.CONFIRM, new b(context, i, str, str2, i2, str3)).show();
             } else {
                 b(context, i, str, str2, i2, str3);
             }
@@ -188,18 +184,18 @@ public class RelationRequestUtil {
                 ((DamaiBaseActivity) context).startProgressDialog();
             }
             if ("fans".equals(str3)) {
-                C0529c.e().x(vf1.x().b0(vf1.FANS_LIST_PAGE, i2, i != 0 ? "0" : "1", ""));
+                cn.damai.common.user.c.e().x(vf1.x().b0(vf1.FANS_LIST_PAGE, i2, i != 0 ? "0" : "1", ""));
             } else if ("wantsee".equals(str3)) {
-                C0529c.e().x(vf1.x().c0(i2, i != 0 ? "0" : "1"));
+                cn.damai.common.user.c.e().x(vf1.x().c0(i2, i != 0 ? "0" : "1"));
             } else if ("brand".equals(str3)) {
-                C0529c.e().x(vf1.x().b0(vf1.FOLLOW_LIST_PAGE, i2, i != 0 ? "0" : "1", "0"));
+                cn.damai.common.user.c.e().x(vf1.x().b0(vf1.FOLLOW_LIST_PAGE, i2, i != 0 ? "0" : "1", "0"));
             } else if ("star".equals(str3)) {
-                C0529c.e().x(vf1.x().b0(vf1.FOLLOW_LIST_PAGE, i2, i == 0 ? "1" : "0", "1"));
+                cn.damai.common.user.c.e().x(vf1.x().b0(vf1.FOLLOW_LIST_PAGE, i2, i == 0 ? "1" : "0", "1"));
             } else if (RelationBaseFragment.RELATION_TYPE_KIND_COSTOMER.equals(str3)) {
-                C0529c.e().x(vf1.x().b0(vf1.FOLLOW_LIST_PAGE, i2, i != 0 ? "0" : "1", "2"));
+                cn.damai.common.user.c.e().x(vf1.x().b0(vf1.FOLLOW_LIST_PAGE, i2, i != 0 ? "0" : "1", "2"));
             }
             if ("star".equalsIgnoreCase(str3)) {
-                CityWantRequestKt.a(i == 0, str, new C1469c(context, i, i2), CityWantRequest.PageName.DM_MY_FOLLOW_LIST);
+                CityWantRequestKt.a(i == 0, str, new c(context, i, i2), CityWantRequest.PageName.DM_MY_FOLLOW_LIST);
                 return;
             }
             RelationItemRequest relationItemRequest = new RelationItemRequest();

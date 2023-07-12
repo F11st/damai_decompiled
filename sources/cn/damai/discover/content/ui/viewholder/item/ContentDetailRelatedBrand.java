@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.discover.content.bean.RelatedBrandOrArtist;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -51,7 +51,7 @@ public class ContentDetailRelatedBrand extends RelativeLayout {
             ipChange.ipc$dispatch("356009127", new Object[]{this, relatedBrandOrArtist});
         } else if (relatedBrandOrArtist != null && !wh2.j(relatedBrandOrArtist.id) && !wh2.j(relatedBrandOrArtist.name)) {
             if (!wh2.j(relatedBrandOrArtist.headPic)) {
-                C0504a.b().c(relatedBrandOrArtist.headPic).g(this.mAvatarView);
+                a.b().c(relatedBrandOrArtist.headPic).g(this.mAvatarView);
             }
             this.mNameView.setText(relatedBrandOrArtist.name);
             this.mDescView.setText(relatedBrandOrArtist.additionDescription);

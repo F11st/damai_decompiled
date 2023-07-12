@@ -1,7 +1,6 @@
 package org.android.spdy;
 
 import android.content.Context;
-import com.alipay.sdk.m.n.C4250a;
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 import java.util.HashMap;
@@ -184,7 +183,7 @@ public final class SpdyAgent {
                         r9 = substring2 != null ? substring2.getBytes() : null;
                         if (parseLong + 604800000 < currentTimeMillis) {
                             spduLog.Logd("tnet-jni", "xquic cache is expired");
-                            C8881e.b(new Runnable() { // from class: org.android.spdy.SpdyAgent.2
+                            e.b(new Runnable() { // from class: org.android.spdy.SpdyAgent.2
                                 @Override // java.lang.Runnable
                                 public void run() {
                                     SpdyAgent.this.xqcCache.remove(str);
@@ -210,7 +209,7 @@ public final class SpdyAgent {
                     spduLog.Loge("tnet-jni", "commonCacheStore fail");
                 }
             }
-            C8881e.b(new Runnable() { // from class: org.android.spdy.SpdyAgent.1
+            e.b(new Runnable() { // from class: org.android.spdy.SpdyAgent.1
                 @Override // java.lang.Runnable
                 public void run() {
                     SpdyAgent.this.xqcCache.store(str, str2);
@@ -291,9 +290,9 @@ public final class SpdyAgent {
 
     /* JADX WARN: Multi-variable type inference failed */
     private int getNetWorkStatus() {
-        boolean b = C8879c.b();
+        boolean b = c.b();
         int i = b;
-        if (C8879c.a()) {
+        if (c.a()) {
             i = (b ? 1 : 0) | true;
         }
         spduLog.Logi("tnet-jni", "networkStatusFlag = " + i);
@@ -358,7 +357,7 @@ public final class SpdyAgent {
                 String key = entry.getKey();
                 String value = entry.getValue();
                 sb.append(key);
-                sb.append(C4250a.h);
+                sb.append(com.alipay.sdk.m.n.a.h);
                 sb.append(value);
                 sb.append('&');
                 i += key.length() + 1 + value.length();
@@ -602,7 +601,7 @@ public final class SpdyAgent {
         String[] strArr = new String[iArr.length];
         int i3 = 0;
         if (this.enable_header_cache) {
-            C8878b b = C8878b.b();
+            b b = b.b();
             int i4 = 0;
             while (i3 < iArr.length) {
                 strArr[i3] = b.a(ByteBuffer.wrap(bArr, i4, iArr[i3]));
@@ -704,7 +703,7 @@ public final class SpdyAgent {
 
     public void InitializeSecurityStuff() {
         this.xqcCache.init(this.context);
-        C8877a.e().a();
+        a.e().a();
         spduLog.Logd("tnet-jni", "[InitializeSecurityStuff] -  complete");
     }
 

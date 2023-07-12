@@ -2,9 +2,9 @@ package com.taobao.android.dinamicx.widget;
 
 import android.content.Context;
 import android.view.View;
-import com.taobao.android.dinamicx.C6384k;
-import com.taobao.android.dinamicx.C6386m;
 import com.taobao.android.dinamicx.DXRuntimeContext;
+import com.taobao.android.dinamicx.k;
+import com.taobao.android.dinamicx.m;
 import com.taobao.android.dinamicx.view.DXNativeRecyclerView;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
 import java.util.ArrayList;
@@ -33,7 +33,7 @@ public class DXScrollLayoutBase extends DXLinearLayoutWidgetNode {
     protected String indicatorId;
     protected DXWidgetNode indicatorWidgetNode;
     protected ArrayList<DXWidgetNode> itemWidgetNodes;
-    protected C6384k pipeline;
+    protected k pipeline;
     protected boolean showIndicator = true;
     protected boolean scrollEnabled = true;
 
@@ -244,12 +244,12 @@ public class DXScrollLayoutBase extends DXLinearLayoutWidgetNode {
         forceUniformWidth(arrayList, i2);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onBeforeBindChildData() {
         super.onBeforeBindChildData();
         DXWidgetNode queryIndicatorNodeByUserId = queryIndicatorNodeByUserId(this.indicatorId);
         if (queryIndicatorNodeByUserId != null) {
-            C6386m.a(queryIndicatorNodeByUserId);
+            m.a(queryIndicatorNodeByUserId);
             if (this.showIndicator) {
                 queryIndicatorNodeByUserId.setVisibility(0);
                 this.indicatorWidgetNode = queryIndicatorNodeByUserId;
@@ -265,7 +265,7 @@ public class DXScrollLayoutBase extends DXLinearLayoutWidgetNode {
         setDisableFlatten(true);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onClone(DXWidgetNode dXWidgetNode, boolean z) {
         super.onClone(dXWidgetNode, z);
         if (dXWidgetNode instanceof DXScrollLayoutBase) {
@@ -286,7 +286,7 @@ public class DXScrollLayoutBase extends DXLinearLayoutWidgetNode {
     @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onMeasure(int i, int i2) {
         if (this.pipeline == null) {
-            this.pipeline = new C6384k(getDXRuntimeContext().getEngineContext(), 3, UUID.randomUUID().toString(), isPipelineDefaultCreateRootView());
+            this.pipeline = new k(getDXRuntimeContext().getEngineContext(), 3, UUID.randomUUID().toString(), isPipelineDefaultCreateRootView());
         }
         ArrayList arrayList = new ArrayList();
         if (this.listData == null) {
@@ -300,7 +300,7 @@ public class DXScrollLayoutBase extends DXLinearLayoutWidgetNode {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onRenderView(Context context, View view) {
         DXWidgetNode widgetNode;
         super.onRenderView(context, view);
@@ -311,7 +311,7 @@ public class DXScrollLayoutBase extends DXLinearLayoutWidgetNode {
         removeAllChild();
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetIntAttribute(long j, int i) {
         if (j == -3765027987112450965L) {
             this.showIndicator = i != 0;

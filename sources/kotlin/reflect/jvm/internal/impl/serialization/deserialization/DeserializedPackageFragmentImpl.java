@@ -4,7 +4,7 @@ import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import com.youku.arch.v3.data.Constants;
 import java.util.ArrayList;
 import java.util.Collection;
-import kotlin.collections.C8215n;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
@@ -18,9 +18,9 @@ import kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptor
 import kotlin.reflect.jvm.internal.impl.storage.StorageManager;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tb.AbstractC9135fc;
 import tb.b41;
 import tb.ex1;
+import tb.fc;
 import tb.h70;
 import tb.hj;
 import tb.hp0;
@@ -33,7 +33,7 @@ import tb.oi1;
 /* loaded from: classes3.dex */
 public abstract class DeserializedPackageFragmentImpl extends n70 {
     @NotNull
-    private final AbstractC9135fc h;
+    private final fc h;
     @Nullable
     private final DeserializedContainerSource i;
     @NotNull
@@ -45,14 +45,14 @@ public abstract class DeserializedPackageFragmentImpl extends n70 {
     private MemberScope m;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public DeserializedPackageFragmentImpl(@NotNull hp0 hp0Var, @NotNull StorageManager storageManager, @NotNull ModuleDescriptor moduleDescriptor, @NotNull ProtoBuf$PackageFragment protoBuf$PackageFragment, @NotNull AbstractC9135fc abstractC9135fc, @Nullable DeserializedContainerSource deserializedContainerSource) {
+    public DeserializedPackageFragmentImpl(@NotNull hp0 hp0Var, @NotNull StorageManager storageManager, @NotNull ModuleDescriptor moduleDescriptor, @NotNull ProtoBuf$PackageFragment protoBuf$PackageFragment, @NotNull fc fcVar, @Nullable DeserializedContainerSource deserializedContainerSource) {
         super(hp0Var, storageManager, moduleDescriptor);
         b41.i(hp0Var, "fqName");
         b41.i(storageManager, "storageManager");
         b41.i(moduleDescriptor, "module");
         b41.i(protoBuf$PackageFragment, "proto");
-        b41.i(abstractC9135fc, "metadataVersion");
-        this.h = abstractC9135fc;
+        b41.i(fcVar, "metadataVersion");
+        this.h = fcVar;
         this.i = deserializedContainerSource;
         ProtoBuf$StringTable strings = protoBuf$PackageFragment.getStrings();
         b41.h(strings, "proto.strings");
@@ -60,7 +60,7 @@ public abstract class DeserializedPackageFragmentImpl extends n70 {
         b41.h(qualifiedNames, "proto.qualifiedNames");
         oi1 oi1Var = new oi1(strings, qualifiedNames);
         this.j = oi1Var;
-        this.k = new ex1(protoBuf$PackageFragment, oi1Var, abstractC9135fc, new Function1<hj, SourceElement>() { // from class: kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializedPackageFragmentImpl$classDataFinder$1
+        this.k = new ex1(protoBuf$PackageFragment, oi1Var, fcVar, new Function1<hj, SourceElement>() { // from class: kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializedPackageFragmentImpl$classDataFinder$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(1);
@@ -109,7 +109,7 @@ public abstract class DeserializedPackageFragmentImpl extends n70 {
                             arrayList.add(obj);
                         }
                     }
-                    q = C8215n.q(arrayList, 10);
+                    q = n.q(arrayList, 10);
                     ArrayList arrayList2 = new ArrayList(q);
                     for (hj hjVar2 : arrayList) {
                         arrayList2.add(hjVar2.j());

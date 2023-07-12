@@ -2,7 +2,6 @@ package kotlinx.coroutines.flow;
 
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function2;
@@ -25,12 +24,11 @@ final class FlowKt__DelayKt$sample$2$values$1 extends SuspendLambda implements F
     final /* synthetic */ FlowKt__DelayKt$sample$2 this$0;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.flow.FlowKt__DelayKt$sample$2$values$1$a */
     /* loaded from: classes11.dex */
-    public static final class C8663a implements FlowCollector<Object> {
+    public static final class a implements FlowCollector<Object> {
         final /* synthetic */ ProducerScope a;
 
-        public C8663a(ProducerScope producerScope) {
+        public a(ProducerScope producerScope) {
             this.a = producerScope;
         }
 
@@ -43,7 +41,7 @@ final class FlowKt__DelayKt$sample$2$values$1 extends SuspendLambda implements F
                 obj = cm1.NULL;
             }
             Object send = producerScope.send(obj, continuation);
-            d = C8234b.d();
+            d = kotlin.coroutines.intrinsics.b.d();
             return send == d ? send : wt2.INSTANCE;
         }
     }
@@ -72,17 +70,17 @@ final class FlowKt__DelayKt$sample$2$values$1 extends SuspendLambda implements F
     @Nullable
     public final Object invokeSuspend(@NotNull Object obj) {
         Object d;
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         int i = this.label;
         if (i == 0) {
             i32.b(obj);
             ProducerScope producerScope = this.p$;
             Flow flow = this.this$0.$this_sample;
-            C8663a c8663a = new C8663a(producerScope);
+            a aVar = new a(producerScope);
             this.L$0 = producerScope;
             this.L$1 = flow;
             this.label = 1;
-            if (flow.collect(c8663a, this) == d) {
+            if (flow.collect(aVar, this) == d) {
                 return d;
             }
         } else if (i != 1) {

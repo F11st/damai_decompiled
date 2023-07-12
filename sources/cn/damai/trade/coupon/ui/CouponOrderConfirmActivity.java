@@ -5,8 +5,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import androidx.fragment.app.FragmentTransaction;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.pay.AliPayActivity;
 import cn.damai.trade.R$color;
@@ -33,28 +33,26 @@ import tb.wt2;
 public final class CouponOrderConfirmActivity extends SimpleBaseActivity {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C2133a Companion = new C2133a(null);
+    public static final a Companion = new a(null);
     public static final int DM_REQUEST_CODE_PAY_SUCCESS = 10;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.coupon.ui.CouponOrderConfirmActivity$a */
     /* loaded from: classes16.dex */
-    public static final class C2133a {
-        private C2133a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C2133a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.coupon.ui.CouponOrderConfirmActivity$b */
     /* loaded from: classes8.dex */
-    public static final class C2134b implements PaymentService {
+    public static final class b implements PaymentService {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2134b() {
+        b() {
         }
 
         @Override // com.alibaba.pictures.bricks.util.PaymentService
@@ -90,7 +88,7 @@ public final class CouponOrderConfirmActivity extends SimpleBaseActivity {
             bundle.putString(CouponOrderConfirmFragment.SKU_ID, stringExtra2);
         }
         couponOrderConfirmFragment.setArguments(bundle);
-        couponOrderConfirmFragment.setPaymentService(new C2134b());
+        couponOrderConfirmFragment.setPaymentService(new b());
         wt2 wt2Var = wt2.INSTANCE;
         beginTransaction.add(i, couponOrderConfirmFragment);
         beginTransaction.commit();
@@ -105,7 +103,7 @@ public final class CouponOrderConfirmActivity extends SimpleBaseActivity {
         HashMap hashMap = new HashMap();
         Intent intent = getIntent();
         hashMap.put("id", intent != null ? intent.getStringExtra("itemId") : null);
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i("scriptkill_confirm").j(hashMap));
+        setDamaiUTKeyBuilder(new a.b().i("scriptkill_confirm").j(hashMap));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -207,7 +205,7 @@ public final class CouponOrderConfirmActivity extends SimpleBaseActivity {
         setImmersionStyle();
         addFragment();
         addUtPage();
-        C0529c.e().K(this);
+        c.e().K(this);
         findViewById(R$id.coupon_iv_left_icon).setOnClickListener(new View.OnClickListener() { // from class: tb.bp
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {

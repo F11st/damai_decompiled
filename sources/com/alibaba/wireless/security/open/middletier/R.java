@@ -18,12 +18,11 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.wireless.security.open.middletier.R$xml */
     /* loaded from: classes8.dex */
-    public static final class C4027xml {
+    public static final class xml {
         public static final int sg_apk_path = 0x7f14000b;
 
-        private C4027xml() {
+        private xml() {
         }
     }
 

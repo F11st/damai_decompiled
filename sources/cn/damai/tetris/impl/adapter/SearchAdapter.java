@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
 import cn.damai.commonbusiness.search.viewholder.ProjectItemViewHolder;
 import cn.damai.tetris.core.TrackInfo;
@@ -107,7 +107,7 @@ public class SearchAdapter extends RecyclerView.Adapter<ProxyViewHolder> {
         if (TextUtils.isEmpty(str) || TextUtils.isEmpty(str2) || TextUtils.isEmpty(str3)) {
             return;
         }
-        C0529c e = C0529c.e();
+        c e = c.e();
         e.G(view, str + i, str2, str3, hashMap);
     }
 

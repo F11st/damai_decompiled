@@ -16,7 +16,7 @@ import com.youku.arch.v3.view.render.GenericRenderConfig;
 import java.lang.reflect.Field;
 import java.util.List;
 import kotlin.jvm.internal.Ref$IntRef;
-import kotlinx.coroutines.C8690g;
+import kotlinx.coroutines.g;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -33,20 +33,19 @@ public final class HomeCalendarPageView extends PagerGridView {
     @Nullable
     private Scroller customScroller;
     @NotNull
-    public static final C3466a Companion = new C3466a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final String SCROLLER_TAG_KEY = "HOME_CALENDAR_SCROLLER";
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.calendar.HomeCalendarPageView$a */
     /* loaded from: classes7.dex */
-    public static final class C3466a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3466a() {
+        private a() {
         }
 
-        public /* synthetic */ C3466a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -111,6 +110,6 @@ public final class HomeCalendarPageView extends PagerGridView {
         Context context2 = getGridViewPager().getContext();
         b41.h(context2, "gridViewPager.context");
         ref$IntRef.element = (DisplayMetrics.getwidthPixels(s60Var.f(context)) / 6) + s60Var.b(context2, 18);
-        C8690g.b(ro.a(da0.b()), null, null, new HomeCalendarPageView$renderPagerInView$1(list, this, ref$IntRef, null), 3, null);
+        g.b(ro.a(da0.b()), null, null, new HomeCalendarPageView$renderPagerInView$1(list, this, ref$IntRef, null), 3, null);
     }
 }

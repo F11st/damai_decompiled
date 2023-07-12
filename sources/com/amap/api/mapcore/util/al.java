@@ -8,7 +8,7 @@ import android.view.MotionEvent;
 /* loaded from: classes10.dex */
 public class al extends aj {
     private static final PointF n = new PointF();
-    private final InterfaceC4473a o;
+    private final a o;
     private boolean p;
     private PointF q;
     private PointF r;
@@ -16,9 +16,8 @@ public class al extends aj {
     private PointF t;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.al$a */
     /* loaded from: classes10.dex */
-    public interface InterfaceC4473a {
+    public interface a {
         boolean a(al alVar);
 
         boolean b(al alVar);
@@ -26,11 +25,11 @@ public class al extends aj {
         void c(al alVar);
     }
 
-    public al(Context context, InterfaceC4473a interfaceC4473a) {
+    public al(Context context, a aVar) {
         super(context);
         this.s = new PointF();
         this.t = new PointF();
-        this.o = interfaceC4473a;
+        this.o = aVar;
     }
 
     @Override // com.amap.api.mapcore.util.ak

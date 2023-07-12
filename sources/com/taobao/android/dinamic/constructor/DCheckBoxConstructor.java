@@ -45,13 +45,13 @@ public class DCheckBoxConstructor extends DinamicViewAdvancedConstructor {
     /* loaded from: classes12.dex */
     public static class OnChangeListener implements CompoundButton.OnCheckedChangeListener {
         private v80 mDinamicParams;
-        private C6316b mHandler;
+        private b mHandler;
         private String mOnChangeExpression;
         private x80 mProperty;
         private View mView;
 
-        public OnChangeListener(C6316b c6316b, v80 v80Var, x80 x80Var, View view) {
-            this.mHandler = c6316b;
+        public OnChangeListener(b bVar, v80 v80Var, x80 x80Var, View view) {
+            this.mHandler = bVar;
             this.mDinamicParams = v80Var;
             this.mProperty = x80Var;
             this.mView = view;
@@ -76,10 +76,9 @@ public class DCheckBoxConstructor extends DinamicViewAdvancedConstructor {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamic.constructor.DCheckBoxConstructor$b */
     /* loaded from: classes11.dex */
-    private static class C6316b extends q80 {
-        private C6316b() {
+    private static class b extends q80 {
+        private b() {
         }
 
         @Override // tb.q80
@@ -100,9 +99,8 @@ public class DCheckBoxConstructor extends DinamicViewAdvancedConstructor {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamic.constructor.DCheckBoxConstructor$c */
     /* loaded from: classes12.dex */
-    public static class AsyncTaskC6317c extends AsyncTask<Void, Void, Drawable[]> {
+    public static class c extends AsyncTask<Void, Void, Drawable[]> {
         String a;
         String b;
         String c;
@@ -112,7 +110,7 @@ public class DCheckBoxConstructor extends DinamicViewAdvancedConstructor {
         int g;
         private WeakReference<AppCompatCheckBox> h;
 
-        public AsyncTaskC6317c(AppCompatCheckBox appCompatCheckBox, String str, String str2, String str3, String str4, int i, int i2) {
+        public c(AppCompatCheckBox appCompatCheckBox, String str, String str2, String str3, String str4, int i, int i2) {
             this.a = null;
             this.b = null;
             this.c = null;
@@ -234,14 +232,14 @@ public class DCheckBoxConstructor extends DinamicViewAdvancedConstructor {
             int defaultSize2 = getDefaultSize(view.getContext());
             Object obj = map.get("dWidth");
             Object obj2 = map.get("dHeight");
-            int b = p62.b(view.getContext(), obj, -1);
-            int b2 = p62.b(view.getContext(), obj2, -1);
-            if (b == -1 || b2 == -1) {
+            int b2 = p62.b(view.getContext(), obj, -1);
+            int b3 = p62.b(view.getContext(), obj2, -1);
+            if (b2 == -1 || b3 == -1) {
                 i = defaultSize2;
                 i2 = defaultSize;
             } else {
-                i2 = b2;
-                i = b;
+                i2 = b3;
+                i = b2;
             }
             String str = (String) map.get(D_CHECK_IMG);
             String str2 = (String) view.getTag(a90.ALREADY_INT_CHECK_IMG);
@@ -274,7 +272,7 @@ public class DCheckBoxConstructor extends DinamicViewAdvancedConstructor {
                 view.setTag(a90.NEED_INT_UNCHECK_IMG, str6);
                 view.setTag(a90.NEED_INT_DIS_CHECK_IMG, str9);
                 view.setTag(a90.NEED_INT_DIS_UNCHECK_IMG, str10);
-                new AsyncTaskC6317c(appCompatCheckBox, str3, str6, str9, str10, i, i2).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+                new c(appCompatCheckBox, str3, str6, str9, str10, i, i2).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
             }
         }
         if (arrayList.contains(D_CHECKED)) {
@@ -301,6 +299,6 @@ public class DCheckBoxConstructor extends DinamicViewAdvancedConstructor {
 
     @Override // com.taobao.android.dinamic.dinamic.DinamicViewAdvancedConstructor
     public void setEvents(View view, v80 v80Var) {
-        new C6316b().b(view, v80Var);
+        new b().b(view, v80Var);
     }
 }

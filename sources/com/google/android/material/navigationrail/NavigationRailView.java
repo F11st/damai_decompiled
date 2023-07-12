@@ -126,7 +126,7 @@ public class NavigationRailView extends NavigationBarView {
     }
 
     public NavigationRailView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
-        this(context, attributeSet, i, R.C4819style.Widget_MaterialComponents_NavigationRailView);
+        this(context, attributeSet, i, R.style.Widget_MaterialComponents_NavigationRailView);
     }
 
     public NavigationRailView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i, int i2) {

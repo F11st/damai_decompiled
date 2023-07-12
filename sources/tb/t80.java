@@ -1,7 +1,6 @@
 package tb;
 
 import android.text.TextUtils;
-import com.taobao.android.dinamic.expression.parser.resolver.C6330e;
 import java.util.List;
 import java.util.StringTokenizer;
 
@@ -20,7 +19,7 @@ public class t80 extends v0 {
         }
         StringTokenizer stringTokenizer = new StringTokenizer(str, " .[]", false);
         while (stringTokenizer.hasMoreTokens()) {
-            obj = C6330e.a(obj, stringTokenizer.nextToken());
+            obj = com.taobao.android.dinamic.expression.parser.resolver.e.a(obj, stringTokenizer.nextToken());
         }
         return obj;
     }

@@ -14,11 +14,11 @@ import com.taobao.tao.log.upload.FileUploadListener;
 import com.taobao.tao.log.upload.LogUploader;
 import com.taobao.tao.log.upload.UploaderInfo;
 import com.taobao.tao.log.upload.UploaderParam;
-import com.uploader.export.C7361a;
 import com.uploader.export.ITaskListener;
 import com.uploader.export.ITaskResult;
 import com.uploader.export.IUploaderManager;
 import com.uploader.export.IUploaderTask;
+import com.uploader.export.a;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
@@ -222,7 +222,7 @@ public class TLogUploader implements LogUploader {
         String str6 = map.get("arupBizType");
         String str7 = uploaderParam.params.get("ossObjectKey");
         if (str6 != null && str7 != null) {
-            IUploaderManager a = C7361a.a();
+            IUploaderManager a = a.a();
             this.mUploadManager = a;
             if (!a.isInitialized()) {
                 this.mUploadManager.initialize(context, new yu2(context, new bv2(context) { // from class: com.taobao.android.tlog.uploader.TLogUploader.1

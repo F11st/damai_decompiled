@@ -4,7 +4,6 @@ import io.flutter.wpkbridge.WPKFactory;
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -19,9 +18,8 @@ import tb.wt2;
 public interface Delay {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.Delay$a */
     /* loaded from: classes8.dex */
-    public static final class C8611a {
+    public static final class a {
         @Nullable
         public static Object a(@NotNull Delay delay, long j, @NotNull Continuation<? super wt2> continuation) {
             Continuation c;
@@ -34,7 +32,7 @@ public interface Delay {
             cancellableContinuationImpl.initCancellability();
             delay.scheduleResumeAfterDelay(j, cancellableContinuationImpl);
             Object result = cancellableContinuationImpl.getResult();
-            d = C8234b.d();
+            d = kotlin.coroutines.intrinsics.b.d();
             if (result == d) {
                 n40.c(continuation);
             }

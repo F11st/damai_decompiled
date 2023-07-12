@@ -14,16 +14,15 @@ import tb.x02;
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class KMutableProperty2Impl<D, E, V> extends KProperty2Impl<D, E, V> implements KMutableProperty2<D, E, V> {
-    private final x02.C9895b<C8257a<D, E, V>> n;
+    private final x02.b<a<D, E, V>> n;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.KMutableProperty2Impl$a */
     /* loaded from: classes3.dex */
-    public static final class C8257a<D, E, V> extends KPropertyImpl.Setter<V> implements KMutableProperty2.Setter<D, E, V> {
+    public static final class a<D, E, V> extends KPropertyImpl.Setter<V> implements KMutableProperty2.Setter<D, E, V> {
         @NotNull
         private final KMutableProperty2Impl<D, E, V> h;
 
-        public C8257a(@NotNull KMutableProperty2Impl<D, E, V> kMutableProperty2Impl) {
+        public a(@NotNull KMutableProperty2Impl<D, E, V> kMutableProperty2Impl) {
             b41.i(kMutableProperty2Impl, "property");
             this.h = kMutableProperty2Impl;
         }
@@ -35,7 +34,7 @@ public final class KMutableProperty2Impl<D, E, V> extends KProperty2Impl<D, E, V
             return wt2.INSTANCE;
         }
 
-        @Override // kotlin.reflect.jvm.internal.KPropertyImpl.AbstractC8261a
+        @Override // kotlin.reflect.jvm.internal.KPropertyImpl.a
         @NotNull
         /* renamed from: o */
         public KMutableProperty2Impl<D, E, V> m() {
@@ -53,15 +52,15 @@ public final class KMutableProperty2Impl<D, E, V> extends KProperty2Impl<D, E, V
         b41.i(kDeclarationContainerImpl, "container");
         b41.i(str, "name");
         b41.i(str2, SocialOperation.GAME_SIGNATURE);
-        x02.C9895b<C8257a<D, E, V>> b = x02.b(new Function0<C8257a<D, E, V>>() { // from class: kotlin.reflect.jvm.internal.KMutableProperty2Impl$_setter$1
+        x02.b<a<D, E, V>> b = x02.b(new Function0<a<D, E, V>>() { // from class: kotlin.reflect.jvm.internal.KMutableProperty2Impl$_setter$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
             }
 
             @Override // kotlin.jvm.functions.Function0
-            public final KMutableProperty2Impl.C8257a<D, E, V> invoke() {
-                return new KMutableProperty2Impl.C8257a<>(KMutableProperty2Impl.this);
+            public final KMutableProperty2Impl.a<D, E, V> invoke() {
+                return new KMutableProperty2Impl.a<>(KMutableProperty2Impl.this);
             }
         });
         b41.h(b, "ReflectProperties.lazy { Setter(this) }");
@@ -76,8 +75,8 @@ public final class KMutableProperty2Impl<D, E, V> extends KProperty2Impl<D, E, V
     @Override // kotlin.reflect.KMutableProperty2, kotlin.reflect.KMutableProperty
     @NotNull
     /* renamed from: t */
-    public C8257a<D, E, V> getSetter() {
-        C8257a<D, E, V> invoke = this.n.invoke();
+    public a<D, E, V> getSetter() {
+        a<D, E, V> invoke = this.n.invoke();
         b41.h(invoke, "_setter()");
         return invoke;
     }
@@ -87,15 +86,15 @@ public final class KMutableProperty2Impl<D, E, V> extends KProperty2Impl<D, E, V
         super(kDeclarationContainerImpl, propertyDescriptor);
         b41.i(kDeclarationContainerImpl, "container");
         b41.i(propertyDescriptor, "descriptor");
-        x02.C9895b<C8257a<D, E, V>> b = x02.b(new Function0<C8257a<D, E, V>>() { // from class: kotlin.reflect.jvm.internal.KMutableProperty2Impl$_setter$1
+        x02.b<a<D, E, V>> b = x02.b(new Function0<a<D, E, V>>() { // from class: kotlin.reflect.jvm.internal.KMutableProperty2Impl$_setter$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
             }
 
             @Override // kotlin.jvm.functions.Function0
-            public final KMutableProperty2Impl.C8257a<D, E, V> invoke() {
-                return new KMutableProperty2Impl.C8257a<>(KMutableProperty2Impl.this);
+            public final KMutableProperty2Impl.a<D, E, V> invoke() {
+                return new KMutableProperty2Impl.a<>(KMutableProperty2Impl.this);
             }
         });
         b41.h(b, "ReflectProperties.lazy { Setter(this) }");

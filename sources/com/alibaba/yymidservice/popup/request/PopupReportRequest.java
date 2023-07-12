@@ -23,12 +23,12 @@ public final class PopupReportRequest {
     public final void a(@NotNull Context context, @NotNull final String str, @Nullable final String str2, @Nullable final JSONObject jSONObject) {
         b41.i(context, WPKFactory.INIT_KEY_CONTEXT);
         b41.i(str, "comboCityId");
-        rb0.C9647a c9647a = rb0.Companion;
+        rb0.a aVar = rb0.Companion;
         PopupReportRequestParam popupReportRequestParam = new PopupReportRequestParam();
         popupReportRequestParam.setComboCityId(str);
         popupReportRequestParam.setPkId(str2);
         popupReportRequestParam.setArgs(jSONObject);
-        c9647a.b(popupReportRequestParam).c(context).a().doOnKTSuccess(new Function1<PopupReportResponseBean, wt2>() { // from class: com.alibaba.yymidservice.popup.request.PopupReportRequest$popupReportRequest$2
+        aVar.b(popupReportRequestParam).c(context).a().doOnKTSuccess(new Function1<PopupReportResponseBean, wt2>() { // from class: com.alibaba.yymidservice.popup.request.PopupReportRequest$popupReportRequest$2
             @Override // kotlin.jvm.functions.Function1
             public /* bridge */ /* synthetic */ wt2 invoke(PopupReportResponseBean popupReportResponseBean) {
                 invoke2(popupReportResponseBean);

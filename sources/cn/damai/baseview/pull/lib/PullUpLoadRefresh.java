@@ -19,12 +19,11 @@ public class PullUpLoadRefresh implements IPullUpLoad {
     private OnLoadMoreListener c;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.pull.lib.PullUpLoadRefresh$a */
     /* loaded from: classes.dex */
-    public class C0297a implements PullScrollView.OnScrollListener {
+    public class a implements PullScrollView.OnScrollListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0297a() {
+        a() {
         }
 
         @Override // cn.damai.baseview.PullScrollView.OnScrollListener
@@ -128,7 +127,7 @@ public class PullUpLoadRefresh implements IPullUpLoad {
         if (AndroidInstantRuntime.support(ipChange, "1530853241")) {
             ipChange.ipc$dispatch("1530853241", new Object[]{this, pullScrollView});
         } else {
-            pullScrollView.setOnScrollListener(new C0297a());
+            pullScrollView.setOnScrollListener(new a());
         }
     }
 

@@ -1,15 +1,13 @@
 package tb;
 
 import android.view.View;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
-public class vf2 extends C0528b {
+public class vf2 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange;
     private static vf2 c;
     public String b = "business_homepage";
@@ -41,7 +39,7 @@ public class vf2 extends C0528b {
             hashMap.put(u12.VIEW_TYPE, "0");
         }
         hashMap.put("contentlabel", str2);
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         e.G(view, "item_" + i, "banners", this.b, hashMap);
     }
 }

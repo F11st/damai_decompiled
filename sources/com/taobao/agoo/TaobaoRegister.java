@@ -107,9 +107,8 @@ public final class TaobaoRegister {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: com.taobao.agoo.TaobaoRegister$a */
     /* loaded from: classes8.dex */
-    public static class C6250a implements IAgooAppReceiver {
+    public static class a implements IAgooAppReceiver {
         final /* synthetic */ Context a;
         final /* synthetic */ Context b;
         final /* synthetic */ IRegister c;
@@ -117,7 +116,7 @@ public final class TaobaoRegister {
         final /* synthetic */ String e;
         final /* synthetic */ IACCSManager f;
 
-        C6250a(Context context, Context context2, IRegister iRegister, String str, String str2, IACCSManager iACCSManager) {
+        a(Context context, Context context2, IRegister iRegister, String str, String str2, IACCSManager iACCSManager) {
             this.a = context;
             this.b = context2;
             this.c = iRegister;
@@ -854,7 +853,7 @@ public final class TaobaoRegister {
                         AdapterGlobalClientInfo.mAuthCode = configByTag.getAuthCode();
                     }
                     IACCSManager accsInstance = ACCSManager.getAccsInstance(context, str2, str);
-                    accsInstance.bindApp(applicationContext, str2, str3, str4, new C6250a(applicationContext, context, iRegister, str2, str4, accsInstance));
+                    accsInstance.bindApp(applicationContext, str2, str3, str4, new a(applicationContext, context, iRegister, str2, str4, accsInstance));
                     return;
                 }
             }

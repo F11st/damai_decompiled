@@ -123,18 +123,17 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     private TextView mTvTitleSaveAddress;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0544a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$a$a */
+        /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$a$a  reason: collision with other inner class name */
         /* loaded from: classes4.dex */
-        public class C0545a implements OnGrantListener {
+        public class C0028a implements OnGrantListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C0545a() {
+            C0028a() {
             }
 
             @Override // cn.damai.common.askpermission.OnGrantListener
@@ -148,7 +147,7 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
             }
         }
 
-        View$OnClickListenerC0544a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -157,18 +156,17 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
             if (AndroidInstantRuntime.support(ipChange, "-694372336")) {
                 ipChange.ipc$dispatch("-694372336", new Object[]{this, view});
             } else {
-                ir1.a(AddAddressActivity.this, false, "android.permission.READ_CONTACTS", "方便您快速填写手机号", new C0545a());
+                ir1.a(AddAddressActivity.this, false, "android.permission.READ_CONTACTS", "方便您快速填写手机号", new C0028a());
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$b */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0546b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0546b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -183,12 +181,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$c */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0547c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0547c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -207,12 +204,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$d */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0548d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0548d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -227,12 +223,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$e */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0549e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0549e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -247,12 +242,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$f */
     /* loaded from: classes4.dex */
-    public class C0550f implements AddressDivisionSelectView.OnProvinceDivisionChangedListener {
+    public class f implements AddressDivisionSelectView.OnProvinceDivisionChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0550f() {
+        f() {
         }
 
         @Override // cn.damai.commonbusiness.address.view.AddressDivisionSelectView.OnProvinceDivisionChangedListener
@@ -267,12 +261,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$g */
     /* loaded from: classes4.dex */
-    public class C0551g implements AddressDivisionSelectView.OnCityDivisionChangedListener {
+    public class g implements AddressDivisionSelectView.OnCityDivisionChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0551g() {
+        g() {
         }
 
         @Override // cn.damai.commonbusiness.address.view.AddressDivisionSelectView.OnCityDivisionChangedListener
@@ -287,12 +280,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$h */
     /* loaded from: classes4.dex */
-    public class C0552h implements AddressDivisionSelectView.OnCountyDivisionChangedListener {
+    public class h implements AddressDivisionSelectView.OnCountyDivisionChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0552h() {
+        h() {
         }
 
         @Override // cn.damai.commonbusiness.address.view.AddressDivisionSelectView.OnCountyDivisionChangedListener
@@ -307,12 +299,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$i */
     /* loaded from: classes4.dex */
-    public class C0553i implements AddressDivisionSelectView.OnProvinceCityCountySelectedListener {
+    public class i implements AddressDivisionSelectView.OnProvinceCityCountySelectedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0553i() {
+        i() {
         }
 
         @Override // cn.damai.commonbusiness.address.view.AddressDivisionSelectView.OnProvinceCityCountySelectedListener
@@ -332,12 +323,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$j */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0554j implements View.OnClickListener {
+    public class j implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0554j() {
+        j() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -352,12 +342,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$k */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0555k implements View.OnClickListener {
+    public class k implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0555k() {
+        k() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -372,12 +361,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$l */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0556l implements View.OnClickListener {
+    public class l implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0556l() {
+        l() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -392,12 +380,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$m */
     /* loaded from: classes4.dex */
-    public class C0557m implements AddressStreetSelectView.OnStreetDivisionSelectedListener {
+    public class m implements AddressStreetSelectView.OnStreetDivisionSelectedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0557m() {
+        m() {
         }
 
         @Override // cn.damai.commonbusiness.address.view.AddressStreetSelectView.OnStreetDivisionSelectedListener
@@ -423,12 +410,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$n */
     /* loaded from: classes4.dex */
-    public class C0558n implements AddressStreetSelectView.OnStreetDivisionChangedListener {
+    public class n implements AddressStreetSelectView.OnStreetDivisionChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0558n() {
+        n() {
         }
 
         @Override // cn.damai.commonbusiness.address.view.AddressStreetSelectView.OnStreetDivisionChangedListener
@@ -443,12 +429,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$o */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0559o implements View.OnClickListener {
+    public class o implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0559o() {
+        o() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -464,12 +449,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$p */
     /* loaded from: classes14.dex */
-    public class C0560p implements TextWatcher {
+    public class p implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0560p() {
+        p() {
         }
 
         @Override // android.text.TextWatcher
@@ -502,12 +486,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$q */
     /* loaded from: classes14.dex */
-    public class C0561q implements TextWatcher {
+    public class q implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0561q() {
+        q() {
         }
 
         @Override // android.text.TextWatcher
@@ -540,12 +523,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$r */
     /* loaded from: classes14.dex */
-    public class C0562r implements TextWatcher {
+    public class r implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0562r() {
+        r() {
         }
 
         @Override // android.text.TextWatcher
@@ -578,12 +560,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$s */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0563s implements View.OnClickListener {
+    public class s implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0563s() {
+        s() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -598,12 +579,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$t */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0564t implements View.OnClickListener {
+    public class t implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0564t() {
+        t() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -618,12 +598,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$u */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0565u implements View.OnClickListener {
+    public class u implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0565u() {
+        u() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -639,12 +618,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.ui.AddAddressActivity$v */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0566v implements View.OnClickListener {
+    public class v implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0566v() {
+        v() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -668,12 +646,12 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
         ((AddAddressPresenter) this.mPresenter).addShippingAddress(z20.q(), str2, str, str3, str4, str5, str6, str7, str8, str9, str10, str11, str12);
     }
 
-    private void executeDivisionDataRequest(int i, String str) {
+    private void executeDivisionDataRequest(int i2, String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "690786650")) {
-            ipChange.ipc$dispatch("690786650", new Object[]{this, Integer.valueOf(i), str});
+            ipChange.ipc$dispatch("690786650", new Object[]{this, Integer.valueOf(i2), str});
         } else {
-            ((AddAddressPresenter) this.mPresenter).getDivisionChildren(i, str);
+            ((AddAddressPresenter) this.mPresenter).getDivisionChildren(i2, str);
         }
     }
 
@@ -718,10 +696,10 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
         this.mAddressDivisionSelectPopupWindow.dismiss();
     }
 
-    private void initAddressSelectPopupWindow(int i) {
+    private void initAddressSelectPopupWindow(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1798377769")) {
-            ipChange.ipc$dispatch("1798377769", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("1798377769", new Object[]{this, Integer.valueOf(i2)});
             return;
         }
         if (this.mAddressDivisionSelectPopupWindow == null) {
@@ -745,10 +723,10 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
                 }
             });
         }
-        if (i == 1) {
+        if (i2 == 1) {
             initProvinceCityCountySelectView();
             this.mAddressDivisionSelectPopupWindow.setContentView(this.mSelectAddressDivisionView);
-        } else if (i != 2) {
+        } else if (i2 != 2) {
         } else {
             initStreetSelectView();
             this.mAddressDivisionSelectPopupWindow.setContentView(this.mAddressStreetSelectView);
@@ -774,18 +752,18 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
             ipChange.ipc$dispatch("478809157", new Object[]{this});
             return;
         }
-        this.mOnTitleBackClickListener = new View$OnClickListenerC0554j();
-        this.mOnSaveAddressClickListener = new View$OnClickListenerC0559o();
-        this.mConsigneeNameTextWatcher = new C0560p();
-        this.mConsigneePhoneTextWatcher = new C0561q();
-        this.mConsigneeDetailAddressTextWatcher = new C0562r();
-        this.mOnClearConsigneeNameListener = new View$OnClickListenerC0563s();
-        this.mOnClearConsigneePhoneListener = new View$OnClickListenerC0564t();
-        this.mOnAreaCodeClickListener = new View$OnClickListenerC0565u();
-        this.mOnClearDetailAddressListener = new View$OnClickListenerC0566v();
-        this.mOnAddContactClickListener = new View$OnClickListenerC0544a();
-        this.mOnConsigneeRegionClickListener = new View$OnClickListenerC0546b();
-        this.mOnConsigneeStreetClickListener = new View$OnClickListenerC0547c();
+        this.mOnTitleBackClickListener = new j();
+        this.mOnSaveAddressClickListener = new o();
+        this.mConsigneeNameTextWatcher = new p();
+        this.mConsigneePhoneTextWatcher = new q();
+        this.mConsigneeDetailAddressTextWatcher = new r();
+        this.mOnClearConsigneeNameListener = new s();
+        this.mOnClearConsigneePhoneListener = new t();
+        this.mOnAreaCodeClickListener = new u();
+        this.mOnClearDetailAddressListener = new v();
+        this.mOnAddContactClickListener = new a();
+        this.mOnConsigneeRegionClickListener = new b();
+        this.mOnConsigneeStreetClickListener = new c();
     }
 
     private void initModifyAddressData() {
@@ -941,12 +919,12 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
         } else if (this.mSelectAddressDivisionView == null) {
             AddressDivisionSelectView addressDivisionSelectView = new AddressDivisionSelectView(this);
             this.mSelectAddressDivisionView = addressDivisionSelectView;
-            addressDivisionSelectView.setOnClickListener(new View$OnClickListenerC0548d());
-            this.mSelectAddressDivisionView.setOnCancelClickListener(new View$OnClickListenerC0549e());
-            this.mSelectAddressDivisionView.setOnProvinceDivisionChangedListener(new C0550f());
-            this.mSelectAddressDivisionView.setOnCityDivisionChangedListener(new C0551g());
-            this.mSelectAddressDivisionView.setOnCountyDivisionChangedListener(new C0552h());
-            this.mSelectAddressDivisionView.setOnDivisionsSelectedListener(new C0553i());
+            addressDivisionSelectView.setOnClickListener(new d());
+            this.mSelectAddressDivisionView.setOnCancelClickListener(new e());
+            this.mSelectAddressDivisionView.setOnProvinceDivisionChangedListener(new f());
+            this.mSelectAddressDivisionView.setOnCityDivisionChangedListener(new g());
+            this.mSelectAddressDivisionView.setOnCountyDivisionChangedListener(new h());
+            this.mSelectAddressDivisionView.setOnDivisionsSelectedListener(new i());
         }
     }
 
@@ -957,10 +935,10 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
         } else if (this.mAddressStreetSelectView == null) {
             AddressStreetSelectView addressStreetSelectView = new AddressStreetSelectView(this);
             this.mAddressStreetSelectView = addressStreetSelectView;
-            addressStreetSelectView.setOnClickListener(new View$OnClickListenerC0555k());
-            this.mAddressStreetSelectView.setOnCancelClickListener(new View$OnClickListenerC0556l());
-            this.mAddressStreetSelectView.setOnStreetDivisionSelectedListener(new C0557m());
-            this.mAddressStreetSelectView.setOnStreetDivisionChangedListener(new C0558n());
+            addressStreetSelectView.setOnClickListener(new k());
+            this.mAddressStreetSelectView.setOnCancelClickListener(new l());
+            this.mAddressStreetSelectView.setOnStreetDivisionSelectedListener(new m());
+            this.mAddressStreetSelectView.setOnStreetDivisionChangedListener(new n());
         }
     }
 
@@ -970,11 +948,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
             ipChange.ipc$dispatch("-857762857", new Object[]{this});
             return;
         }
-        int i = this.mOperationType;
-        if (i == 1) {
+        int i2 = this.mOperationType;
+        if (i2 == 1) {
             this.mTvTitleMain.setText("新增收货地址");
             resetViewData();
-        } else if (i == 2) {
+        } else if (i2 == 2) {
             this.mTvTitleMain.setText("修改收货地址");
             initModifyAddressData();
         } else {
@@ -1021,8 +999,8 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
             return ((Boolean) ipChange.ipc$dispatch("614837437", new Object[]{this, str})).booleanValue();
         }
         if (str != null && (length = str.length()) != 0) {
-            for (int i = 0; i < length; i++) {
-                if (!Character.isWhitespace(str.charAt(i))) {
+            for (int i2 = 0; i2 < length; i2++) {
+                if (!Character.isWhitespace(str.charAt(i2))) {
                     return false;
                 }
             }
@@ -1102,17 +1080,17 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
         }
     }
 
-    private void processRetrievedDivisionData(int i, List<DivisionBean> list) {
+    private void processRetrievedDivisionData(int i2, List<DivisionBean> list) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1688304658")) {
-            ipChange.ipc$dispatch("-1688304658", new Object[]{this, Integer.valueOf(i), list});
-        } else if (i == 2) {
+            ipChange.ipc$dispatch("-1688304658", new Object[]{this, Integer.valueOf(i2), list});
+        } else if (i2 == 2) {
             updatePopWindowProvinceDivisionList(list);
-        } else if (i == 3) {
+        } else if (i2 == 3) {
             updatePopWindowCityDivisionList(list);
-        } else if (i == 4) {
+        } else if (i2 == 4) {
             updatePopWindowCountyDivisionList(list);
-        } else if (i != 5) {
+        } else if (i2 != 5) {
         } else {
             updatePopWindowStreetDivisionList(list);
         }
@@ -1207,12 +1185,12 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
             if (TextUtils.isEmpty(obj)) {
                 return;
             }
-            String b = SystemContactsUtil.b(obj, this.mSelectedAreaCode);
+            String b2 = SystemContactsUtil.b(obj, this.mSelectedAreaCode);
             EditText editText = this.mEtConsigneePhone;
-            if (TextUtils.isEmpty(b)) {
-                b = "";
+            if (TextUtils.isEmpty(b2)) {
+                b2 = "";
             }
-            editText.setText(b);
+            editText.setText(b2);
         }
     }
 
@@ -1222,19 +1200,19 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
             ipChange.ipc$dispatch("-222459852", new Object[]{this, uri});
             return;
         }
-        SystemContactsUtil.ContactInfo d = SystemContactsUtil.d(this, uri);
-        if (d != null) {
-            String b = SystemContactsUtil.b(d.getPhoneNum(), this.mSelectedAreaCode);
-            String contactName = d.getContactName();
+        SystemContactsUtil.ContactInfo d2 = SystemContactsUtil.d(this, uri);
+        if (d2 != null) {
+            String b2 = SystemContactsUtil.b(d2.getPhoneNum(), this.mSelectedAreaCode);
+            String contactName = d2.getContactName();
             if (!TextUtils.isEmpty(contactName)) {
                 this.mEtConsigneeName.setText(contactName);
                 this.mEtConsigneeName.setSelection(contactName.length());
             }
-            if (TextUtils.isEmpty(b)) {
+            if (TextUtils.isEmpty(b2)) {
                 return;
             }
-            this.mEtConsigneePhone.setText(b);
-            this.mEtConsigneePhone.setSelection(b.length());
+            this.mEtConsigneePhone.setText(b2);
+            this.mEtConsigneePhone.setSelection(b2.length());
         }
     }
 
@@ -1346,10 +1324,10 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void startSystemContactActivity(int i) {
+    public void startSystemContactActivity(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "633578763")) {
-            ipChange.ipc$dispatch("633578763", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("633578763", new Object[]{this, Integer.valueOf(i2)});
             return;
         }
         Intent intent = new Intent();
@@ -1357,10 +1335,10 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
         intent.setData(ContactsContract.Contacts.CONTENT_URI);
         try {
             if (intent.resolveActivity(getPackageManager()) != null) {
-                startActivityForResult(intent, i);
+                startActivityForResult(intent, i2);
             }
-        } catch (ActivityNotFoundException e) {
-            cb1.b("contract", e.getMessage() + "");
+        } catch (ActivityNotFoundException e2) {
+            cb1.b("contract", e2.getMessage() + "");
         }
     }
 
@@ -1581,11 +1559,11 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
                         }
                         String obj3 = this.mEtConsigneeDetailAddress.getText().toString();
                         if (!TextUtils.isEmpty(obj3) && !TextUtils.isEmpty(obj3.trim())) {
-                            int i = this.mOperationType;
-                            if (i == 1) {
+                            int i2 = this.mOperationType;
+                            if (i2 == 1) {
                                 executeAddShippingAddressRequest(obj, str5, obj2, divisionId, divisionName, divisionId2, divisionName2, str, str2, str3, str4, obj3);
                                 return;
-                            } else if (i != 2 || (addressBean = this.mModifyAddressBean) == null) {
+                            } else if (i2 != 2 || (addressBean = this.mModifyAddressBean) == null) {
                                 return;
                             } else {
                                 executeModifyShippingAddressRequest(addressBean.getAddressId(), str5, obj, obj2, divisionId, divisionName, divisionId2, divisionName2, str, str2, str3, str4, obj3);
@@ -1608,10 +1586,10 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     @Override // cn.damai.common.app.base.BaseActivity
-    public void dealHeaderClick(int i) {
+    public void dealHeaderClick(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "2118602494")) {
-            ipChange.ipc$dispatch("2118602494", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("2118602494", new Object[]{this, Integer.valueOf(i2)});
         }
     }
 
@@ -1622,10 +1600,10 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
-    public void handleError(int i) {
+    public void handleError(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "735080655")) {
-            ipChange.ipc$dispatch("735080655", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("735080655", new Object[]{this, Integer.valueOf(i2)});
         }
     }
 
@@ -1661,21 +1639,21 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, android.app.Activity
-    public void onActivityResult(int i, int i2, Intent intent) {
+    public void onActivityResult(int i2, int i3, Intent intent) {
         Parcelable parcelableExtra;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-19334776")) {
-            ipChange.ipc$dispatch("-19334776", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), intent});
+            ipChange.ipc$dispatch("-19334776", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3), intent});
             return;
         }
-        super.onActivityResult(i, i2, intent);
-        if (i2 == -1) {
-            if (i == 17) {
+        super.onActivityResult(i2, i3, intent);
+        if (i3 == -1) {
+            if (i2 == 17) {
                 if (intent != null) {
                     setSelectedContact(intent.getData());
                 }
-            } else if (i != 19) {
-                if (i == 18) {
+            } else if (i2 != 19) {
+                if (i2 == 18) {
                     executeSaveShippingAddressRequest();
                 }
             } else if (intent == null || (parcelableExtra = intent.getParcelableExtra("selected_phone_allowable")) == null) {
@@ -1783,14 +1761,14 @@ public class AddAddressActivity extends DamaiBaseActivity<AddAddressPresenter, A
     }
 
     @Override // cn.damai.commonbusiness.address.contract.AddAddressContract.View
-    public void onRetrieveDivisionChildrenSuccess(int i, DivisionListBean divisionListBean) {
+    public void onRetrieveDivisionChildrenSuccess(int i2, DivisionListBean divisionListBean) {
         List<DivisionBean> model;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "638172672")) {
-            ipChange.ipc$dispatch("638172672", new Object[]{this, Integer.valueOf(i), divisionListBean});
+            ipChange.ipc$dispatch("638172672", new Object[]{this, Integer.valueOf(i2), divisionListBean});
         } else if (divisionListBean == null || (model = divisionListBean.getModel()) == null || model.size() <= 0) {
         } else {
-            processRetrievedDivisionData(i, model);
+            processRetrievedDivisionData(i2, model);
         }
     }
 

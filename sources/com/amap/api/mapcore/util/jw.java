@@ -222,7 +222,7 @@ public final class jw {
         }
     }
 
-    public final void a(Context context, boolean z, boolean z2, lb lbVar, C4599js c4599js, ConnectivityManager connectivityManager, String str) {
+    public final void a(Context context, boolean z, boolean z2, lb lbVar, js jsVar, ConnectivityManager connectivityManager, String str) {
         String str2;
         String str3;
         int i;
@@ -238,7 +238,7 @@ public final class jw {
         String str11;
         ArrayList<ScanResult> arrayList2;
         int i2;
-        String f = C4554gc.f(context);
+        String f = gc.f(context);
         int d = kc.d();
         this.K = str;
         if (z2) {
@@ -256,7 +256,7 @@ public final class jw {
         TelephonyManager g = lbVar.g();
         ArrayList<la> c = lbVar.c();
         ArrayList<la> d2 = lbVar.d();
-        ArrayList<ScanResult> a = c4599js.a();
+        ArrayList<ScanResult> a = jsVar.a();
         String str14 = f2 == 2 ? "1" : "0";
         if (g != null) {
             if (TextUtils.isEmpty(jy.e)) {
@@ -293,7 +293,7 @@ public final class jw {
             jy.a(th3, "Aps", "getApsReq part");
             networkInfo = null;
         }
-        boolean a2 = c4599js.a(connectivityManager);
+        boolean a2 = jsVar.a(connectivityManager);
         if (kc.a(networkInfo) != -1) {
             str5 = kc.b(g);
             str6 = a2 ? "2" : str4;
@@ -388,10 +388,10 @@ public final class jw {
             this.C.addAll(d2);
         }
         StringBuilder sb3 = new StringBuilder();
-        if (c4599js.e()) {
+        if (jsVar.e()) {
             if (a2) {
-                WifiInfo f3 = c4599js.f();
-                if (C4599js.a(f3)) {
+                WifiInfo f3 = jsVar.f();
+                if (js.a(f3)) {
                     sb3.append(f3.getBSSID());
                     sb3.append(",");
                     int rssi = f3.getRssi();
@@ -417,7 +417,7 @@ public final class jw {
                 this.F.addAll(arrayList);
             }
         } else {
-            c4599js.b();
+            jsVar.b();
             ArrayList<ScanResult> arrayList3 = this.F;
             if (arrayList3 != null) {
                 arrayList3.clear();
@@ -453,7 +453,7 @@ public final class jw {
         this.A = str11;
         this.B = sb.toString();
         this.D = lbVar.j();
-        this.G = C4599js.i();
+        this.G = js.i();
         this.E = sb3.toString();
         try {
             if (TextUtils.isEmpty(J)) {

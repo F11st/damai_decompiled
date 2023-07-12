@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.text.TextUtils;
 import cn.damai.common.askpermission.OnGrantListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.calendar.remind.CalendarsResolver;
 import cn.damai.uikit.view.DMThemeDialog;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -16,13 +15,12 @@ public class qv1 {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qv1$a */
     /* loaded from: classes8.dex */
-    public class C9631a implements CalendarsResolver.RemindMeListener {
+    public class a implements CalendarsResolver.RemindMeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ long a;
 
-        C9631a(long j) {
+        a(long j) {
             this.a = j;
         }
 
@@ -40,22 +38,21 @@ public class qv1 {
             if (AndroidInstantRuntime.support(ipChange, "1719211297")) {
                 ipChange.ipc$dispatch("1719211297", new Object[]{this});
             } else {
-                C0529c.e().x(pp2.u().p(this.a));
+                cn.damai.common.user.c.e().x(pp2.u().p(this.a));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qv1$b */
     /* loaded from: classes8.dex */
-    public class C9632b implements OnGrantListener {
+    public class b implements OnGrantListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ long b;
         final /* synthetic */ CalendarsResolver.RemindMeListener c;
         final /* synthetic */ Activity d;
 
-        C9632b(String str, long j, CalendarsResolver.RemindMeListener remindMeListener, Activity activity) {
+        b(String str, long j, CalendarsResolver.RemindMeListener remindMeListener, Activity activity) {
             this.a = str;
             this.b = j;
             this.c = remindMeListener;
@@ -76,16 +73,15 @@ public class qv1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qv1$c */
     /* loaded from: classes8.dex */
-    public class C9633c implements OnGrantListener {
+    public class c implements OnGrantListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ long b;
         final /* synthetic */ CalendarsResolver.RemindMeListener c;
         final /* synthetic */ Activity d;
 
-        C9633c(String str, long j, CalendarsResolver.RemindMeListener remindMeListener, Activity activity) {
+        c(String str, long j, CalendarsResolver.RemindMeListener remindMeListener, Activity activity) {
             this.a = str;
             this.b = j;
             this.c = remindMeListener;
@@ -111,7 +107,7 @@ public class qv1 {
             ipChange.ipc$dispatch("1445953190", new Object[]{activity, str, Long.valueOf(j), remindMeListener});
         } else if (activity == null) {
         } else {
-            ir1.b(activity, false, mr1.CALENDAR, "用于帮助您设置开售提醒", new C9632b(str, j, remindMeListener, activity));
+            ir1.b(activity, false, mr1.CALENDAR, "用于帮助您设置开售提醒", new b(str, j, remindMeListener, activity));
         }
     }
 
@@ -120,7 +116,7 @@ public class qv1 {
         if (AndroidInstantRuntime.support(ipChange, "1693591969")) {
             ipChange.ipc$dispatch("1693591969", new Object[]{activity, str, Long.valueOf(j), Long.valueOf(j2)});
         } else if (activity != null && ir1.i(mr1.CALENDAR) && d(activity, str, j)) {
-            c(activity, str, j, new C9631a(j2));
+            c(activity, str, j, new a(j2));
         }
     }
 
@@ -130,7 +126,7 @@ public class qv1 {
             ipChange.ipc$dispatch("-1922381817", new Object[]{activity, str, Long.valueOf(j), remindMeListener});
         } else if (activity == null) {
         } else {
-            ir1.b(activity, false, mr1.CALENDAR, "用于帮助您取消开售提醒", new C9633c(str, j, remindMeListener, activity));
+            ir1.b(activity, false, mr1.CALENDAR, "用于帮助您取消开售提醒", new c(str, j, remindMeListener, activity));
         }
     }
 

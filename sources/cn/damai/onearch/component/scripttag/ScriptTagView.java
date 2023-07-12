@@ -22,17 +22,16 @@ import tb.b41;
 public final class ScriptTagView extends AbsView<GenericItem<ItemValue>, ScriptTagModel, ScriptTagPresent> implements ScriptTagContract.View {
     private static transient /* synthetic */ IpChange $ipChange;
     @Nullable
-    private C1490a tagSelectedListener;
+    private a tagSelectedListener;
     @NotNull
     private final OneTabLayout tagsView;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.onearch.component.scripttag.ScriptTagView$a */
     /* loaded from: classes6.dex */
-    public final class C1490a implements TabLayout.OnTabSelectedListener {
+    public final class a implements TabLayout.OnTabSelectedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        public C1490a() {
+        public a() {
         }
 
         @Override // com.google.android.material.tabs.TabLayout.BaseOnTabSelectedListener
@@ -84,16 +83,16 @@ public final class ScriptTagView extends AbsView<GenericItem<ItemValue>, ScriptT
             return;
         }
         b41.i(list, IRequestConst.TAGS);
-        C1490a c1490a = this.tagSelectedListener;
-        if (c1490a != null) {
+        a aVar = this.tagSelectedListener;
+        if (aVar != null) {
             OneTabLayout oneTabLayout = this.tagsView;
-            b41.g(c1490a, "null cannot be cast to non-null type cn.damai.onearch.component.scripttag.ScriptTagView.TagSelectedListener");
-            oneTabLayout.removeOnTabSelectedListener((TabLayout.OnTabSelectedListener) c1490a);
+            b41.g(aVar, "null cannot be cast to non-null type cn.damai.onearch.component.scripttag.ScriptTagView.TagSelectedListener");
+            oneTabLayout.removeOnTabSelectedListener((TabLayout.OnTabSelectedListener) aVar);
         }
         this.tagsView.removeAllTabs();
         this.tagsView.setTitles(list, i);
-        C1490a c1490a2 = new C1490a();
-        this.tagsView.addOnTabSelectedListener((TabLayout.OnTabSelectedListener) c1490a2);
-        this.tagSelectedListener = c1490a2;
+        a aVar2 = new a();
+        this.tagsView.addOnTabSelectedListener((TabLayout.OnTabSelectedListener) aVar2);
+        this.tagSelectedListener = aVar2;
     }
 }

@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.os.Build;
 import android.util.Log;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
+import com.alibaba.security.realidentity.jsbridge.a;
 import com.android.alibaba.ip.server.FileManager;
 import dalvik.system.DexFile;
 import java.io.File;
@@ -197,7 +197,7 @@ public final class MultiDex {
 
         static void install(ClassLoader classLoader, List<? extends File> list) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, IOException {
             int size = list.size();
-            Field findField = MultiDex.findField(classLoader, AbstractC3893a.V);
+            Field findField = MultiDex.findField(classLoader, a.V);
             StringBuilder sb = new StringBuilder((String) findField.get(classLoader));
             String[] strArr = new String[size];
             File[] fileArr = new File[size];

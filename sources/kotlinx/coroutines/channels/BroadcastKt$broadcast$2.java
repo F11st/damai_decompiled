@@ -55,7 +55,7 @@ final class BroadcastKt$broadcast$2 extends SuspendLambda implements Function2<P
     public final java.lang.Object invokeSuspend(@org.jetbrains.annotations.NotNull java.lang.Object r8) {
         /*
             r7 = this;
-            java.lang.Object r0 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r0 = kotlin.coroutines.intrinsics.a.d()
             int r1 = r7.label
             r2 = 2
             r3 = 1

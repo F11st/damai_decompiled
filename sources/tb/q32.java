@@ -17,8 +17,6 @@ import android.text.style.LeadingMarginSpan;
 import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
-import com.taobao.android.dinamicx.view.richtext.node.C6414a;
-import com.taobao.android.dinamicx.view.richtext.node.C6424b;
 import com.taobao.android.dinamicx.view.richtext.node.RichText;
 import com.taobao.android.dinamicx.view.richtext.node.RichTextNode;
 import com.taobao.android.dinamicx.view.richtext.span.VerticalCenterSpan;
@@ -78,13 +76,12 @@ public class q32 {
     private int T = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.q32$a */
     /* loaded from: classes11.dex */
-    public static class C9594a {
+    public static class a {
         private int a;
         private int b;
 
-        public C9594a(int i, int i2) {
+        public a(int i, int i2) {
             this.a = i;
             this.b = i2;
         }
@@ -110,7 +107,7 @@ public class q32 {
         while (i4 < this.b.size()) {
             int lineForOffset = this.c.getLineForOffset(i5);
             RichTextNode richTextNode = this.b.get(i4);
-            if ((richTextNode instanceof C6424b) && !z) {
+            if ((richTextNode instanceof com.taobao.android.dinamicx.view.richtext.node.b) && !z) {
                 if (i5 >= length) {
                     break;
                 }
@@ -128,22 +125,22 @@ public class q32 {
                     i3 = 1;
                 }
             }
-            if (richTextNode instanceof C6414a) {
-                C6414a c6414a = (C6414a) richTextNode;
+            if (richTextNode instanceof com.taobao.android.dinamicx.view.richtext.node.a) {
+                com.taobao.android.dinamicx.view.richtext.node.a aVar = (com.taobao.android.dinamicx.view.richtext.node.a) richTextNode;
                 int lineBottom2 = this.c.getLineBottom(lineForOffset) - this.c.getLineTop(lineForOffset);
                 if (this.M == 1) {
-                    int q = ((lineBottom2 - c6414a.q()) >> 1) + ((int) (this.c.getSpacingAdd() / 2.0f));
+                    int q = ((lineBottom2 - aVar.q()) >> 1) + ((int) (this.c.getSpacingAdd() / 2.0f));
                     i2 = lineForOffset == this.c.getLineCount() - 1 ? (int) (q - (this.c.getSpacingAdd() / 2.0f)) : q;
                 } else {
                     i2 = 0;
                 }
                 if (this.M == 2) {
-                    i2 = lineBottom2 - c6414a.q();
+                    i2 = lineBottom2 - aVar.q();
                 }
                 if (this.M == 0) {
                     i2 = (int) this.c.getSpacingAdd();
                 }
-                c6414a.t(-i2);
+                aVar.t(-i2);
             }
             i5 += richTextNode.getText().length();
             i4++;
@@ -188,7 +185,7 @@ public class q32 {
                     textPaint.setLetterSpacing(this.g.getLetterSpacing());
                 }
                 float min = Math.min(Math.max(0.0f, this.c.getLineWidth(this.I - 1)), this.c.getWidth());
-                C6424b c6424b = null;
+                com.taobao.android.dinamicx.view.richtext.node.b bVar = null;
                 int i5 = 0;
                 while (descendingIterator.hasNext()) {
                     RichTextNode next = descendingIterator.next();
@@ -198,7 +195,7 @@ public class q32 {
                         int lineForOffset2 = this.c.getLineForOffset(length - next.getText().length());
                         if (lineForOffset > this.I - 1 && descendingIterator.hasNext() && lineForOffset2 > this.I - 1) {
                             length -= next.getText().length();
-                        } else if (!(next instanceof C6414a)) {
+                        } else if (!(next instanceof com.taobao.android.dinamicx.view.richtext.node.a)) {
                             i3 = lineEnd;
                         }
                     } else {
@@ -206,9 +203,9 @@ public class q32 {
                     }
                     if (max < lineStart) {
                         break;
-                    } else if (next instanceof C6424b) {
-                        c6424b = (C6424b) next;
-                        textPaint.setTextSize(c6424b.H() == 0 ? this.t : c6424b.H());
+                    } else if (next instanceof com.taobao.android.dinamicx.view.richtext.node.b) {
+                        bVar = (com.taobao.android.dinamicx.view.richtext.node.b) next;
+                        textPaint.setTextSize(bVar.H() == 0 ? this.t : bVar.H());
                         int i6 = i3 - 1;
                         boolean z2 = charSequence.charAt(i6) == ' ';
                         while (true) {
@@ -250,11 +247,11 @@ public class q32 {
                         lineStart = i2;
                     } else {
                         i2 = lineStart;
-                        if (next instanceof C6414a) {
-                            C6414a c6414a = (C6414a) next;
-                            min -= c6414a.r();
+                        if (next instanceof com.taobao.android.dinamicx.view.richtext.node.a) {
+                            com.taobao.android.dinamicx.view.richtext.node.a aVar = (com.taobao.android.dinamicx.view.richtext.node.a) next;
+                            min -= aVar.r();
                             if (min < width) {
-                                i5 = i3 - c6414a.getText().length();
+                                i5 = i3 - aVar.getText().length();
                                 break;
                             }
                         }
@@ -265,9 +262,9 @@ public class q32 {
                 i2 = lineStart;
                 int i9 = i5 == 0 ? i2 : i5;
                 CharSequence charSequence3 = this.P;
-                if (!(charSequence3 instanceof Spannable) && c6424b != null && c6424b.G() != null) {
+                if (!(charSequence3 instanceof Spannable) && bVar != null && bVar.G() != null) {
                     SpannableString spannableString = new SpannableString(charSequence3);
-                    spannableString.setSpan(new ForegroundColorSpan(c6424b.G().intValue()), 0, charSequence3.length(), 33);
+                    spannableString.setSpan(new ForegroundColorSpan(bVar.G().intValue()), 0, charSequence3.length(), 33);
                     charSequence3 = spannableString;
                 }
                 return TextUtils.concat(charSequence.subSequence(0, i9), charSequence3);
@@ -644,7 +641,7 @@ public class q32 {
         return (this.P.equals(DEFAULT_ELLIPSIS_TEXT) || (layout = this.c) == null || this.T <= layout.getLineCount()) ? false : true;
     }
 
-    public C9594a u(int i, int i2) {
+    public a u(int i, int i2) {
         int size;
         p();
         CharSequence charSequence = this.s;
@@ -693,14 +690,14 @@ public class q32 {
                 i3 = Math.min(Math.min(this.c.getHeight() + this.p + this.o + (this.z * 2), size2), this.H);
             }
             this.e = c(i3, mode);
-            CharSequence a = a(charSequence, size);
-            if (a != null) {
-                charSequence = a;
+            CharSequence a2 = a(charSequence, size);
+            if (a2 != null) {
+                charSequence = a2;
             }
             this.f = charSequence;
-            return new C9594a(size, i3);
+            return new a(size, i3);
         }
-        return new C9594a(size, 0);
+        return new a(size, 0);
     }
 
     public void v(int i) {

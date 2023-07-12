@@ -2,7 +2,7 @@ package com.amap.api.services.district;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import com.amap.api.col.s.C4435i;
+import com.amap.api.col.s.i;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -209,7 +209,7 @@ public class DistrictSearchQuery implements Parcelable, Cloneable {
         try {
             super.clone();
         } catch (CloneNotSupportedException e) {
-            C4435i.a(e, "DistrictSearchQuery", "clone");
+            i.a(e, "DistrictSearchQuery", "clone");
         }
         DistrictSearchQuery districtSearchQuery = new DistrictSearchQuery();
         districtSearchQuery.setKeywords(this.c);

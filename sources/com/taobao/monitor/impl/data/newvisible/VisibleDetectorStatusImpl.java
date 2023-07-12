@@ -29,7 +29,7 @@ import tb.ry2;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class VisibleDetectorStatusImpl implements IVisibleDetector, Runnable {
-    private static final List<C6763a> BLACK_VIEW_INFO_LIST;
+    private static final List<a> BLACK_VIEW_INFO_LIST;
     private static final long CONTINUOUS_OBSERVER_DURATION = 5000;
     private static final long INTERVAL = 75;
     private static final String TAG = "VisibleDetectorStatusImpl";
@@ -37,7 +37,7 @@ public class VisibleDetectorStatusImpl implements IVisibleDetector, Runnable {
     private IVisibleDetector.IDetectorCallback callback;
     private final WeakReference<View> containRef;
     private final String pageName;
-    final C6764a pagePercentCalculate;
+    final com.taobao.monitor.impl.data.newvisible.a pagePercentCalculate;
     private int validElementCount = 0;
     private Set<String> typeLocationStatusSet = new HashSet();
     private Map<String, String> typeKeyStatusMap = new HashMap();
@@ -50,14 +50,13 @@ public class VisibleDetectorStatusImpl implements IVisibleDetector, Runnable {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.data.newvisible.VisibleDetectorStatusImpl$a */
     /* loaded from: classes11.dex */
-    public static class C6763a {
+    public static class a {
         private String a;
         private int b;
         private String c;
 
-        public C6763a(String str, int i, String str2) {
+        public a(String str, int i, String str2) {
             this.a = str;
             this.b = i;
             this.c = str2;
@@ -67,12 +66,12 @@ public class VisibleDetectorStatusImpl implements IVisibleDetector, Runnable {
     static {
         ArrayList arrayList = new ArrayList();
         BLACK_VIEW_INFO_LIST = arrayList;
-        arrayList.add(new C6763a("TBMainActivity", id("uik_refresh_header_second_floor"), jn1.MUL));
-        arrayList.add(new C6763a("MainActivity3", id("uik_refresh_header_second_floor"), jn1.MUL));
-        arrayList.add(new C6763a(jn1.MUL, id("mytaobao_carousel"), "RecyclerView"));
-        arrayList.add(new C6763a(jn1.MUL, -1, "HLoopView"));
-        arrayList.add(new C6763a(jn1.MUL, -1, "HGifView"));
-        arrayList.add(new C6763a("TBLiveVideoActivity", id("recyclerview"), "AliLiveRecyclerView"));
+        arrayList.add(new a("TBMainActivity", id("uik_refresh_header_second_floor"), jn1.MUL));
+        arrayList.add(new a("MainActivity3", id("uik_refresh_header_second_floor"), jn1.MUL));
+        arrayList.add(new a(jn1.MUL, id("mytaobao_carousel"), "RecyclerView"));
+        arrayList.add(new a(jn1.MUL, -1, "HLoopView"));
+        arrayList.add(new a(jn1.MUL, -1, "HGifView"));
+        arrayList.add(new a("TBLiveVideoActivity", id("recyclerview"), "AliLiveRecyclerView"));
     }
 
     public VisibleDetectorStatusImpl(View view, String str, float f) {
@@ -85,7 +84,7 @@ public class VisibleDetectorStatusImpl implements IVisibleDetector, Runnable {
         }
         this.containRef = new WeakReference<>(view);
         this.pageName = str;
-        this.pagePercentCalculate = new C6764a(f);
+        this.pagePercentCalculate = new com.taobao.monitor.impl.data.newvisible.a(f);
         pb1.a(TAG, str);
     }
 
@@ -177,10 +176,10 @@ public class VisibleDetectorStatusImpl implements IVisibleDetector, Runnable {
         String e = ky2.e(view);
         String b = ky2.b(view2, view);
         String d = ky2.d(view);
-        String a = ky2.a(view);
+        String a2 = ky2.a(view);
         String str = e + b + d;
-        String str2 = e + a + d;
-        String str3 = e + a;
+        String str2 = e + a2 + d;
+        String str3 = e + a2;
         String c = ky2.c(view2, view);
         Integer num = 1;
         if (ry2.d(view, view2) && !this.typeKeyStatusMap.containsKey(str2)) {
@@ -223,10 +222,10 @@ public class VisibleDetectorStatusImpl implements IVisibleDetector, Runnable {
     }
 
     private boolean inBlackList(View view) {
-        for (C6763a c6763a : BLACK_VIEW_INFO_LIST) {
-            if (c6763a.a.equals(jn1.MUL) || this.pageName.endsWith(c6763a.a)) {
-                if (view.getId() == c6763a.b || c6763a.b == -1) {
-                    if (c6763a.c.equals(jn1.MUL) || c6763a.c.equals(view.getClass().getSimpleName())) {
+        for (a aVar : BLACK_VIEW_INFO_LIST) {
+            if (aVar.a.equals(jn1.MUL) || this.pageName.endsWith(aVar.a)) {
+                if (view.getId() == aVar.b || aVar.b == -1) {
+                    if (aVar.c.equals(jn1.MUL) || aVar.c.equals(view.getClass().getSimpleName())) {
                         return true;
                     }
                 }
@@ -254,11 +253,11 @@ public class VisibleDetectorStatusImpl implements IVisibleDetector, Runnable {
             stop();
             return;
         }
-        long a = ho2.a();
-        this.lastChangedTime = a;
+        long a2 = ho2.a();
+        this.lastChangedTime = a2;
         IVisibleDetector.IDetectorCallback iDetectorCallback = this.callback;
         if (iDetectorCallback != null) {
-            iDetectorCallback.onChanged(a);
+            iDetectorCallback.onChanged(a2);
         }
         fu0.e().b().postDelayed(this, 75L);
     }
@@ -269,11 +268,11 @@ public class VisibleDetectorStatusImpl implements IVisibleDetector, Runnable {
 
     @Override // java.lang.Runnable
     public void run() {
-        long a = ho2.a();
+        long a2 = ho2.a();
         if (this.stopped) {
             return;
         }
-        if (a - this.lastChangedTime <= 5000 && !this.stopImmediately) {
+        if (a2 - this.lastChangedTime <= 5000 && !this.stopImmediately) {
             check();
             fu0.e().b().postDelayed(this, 75L);
             return;

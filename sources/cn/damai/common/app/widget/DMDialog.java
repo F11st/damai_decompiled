@@ -48,13 +48,12 @@ public class DMDialog extends Dialog {
     private boolean o;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.app.widget.DMDialog$a */
     /* loaded from: classes13.dex */
-    public class View$OnClickListenerC0476a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DialogInterface.OnClickListener a;
 
-        View$OnClickListenerC0476a(DialogInterface.OnClickListener onClickListener) {
+        a(DialogInterface.OnClickListener onClickListener) {
             this.a = onClickListener;
         }
 
@@ -76,13 +75,12 @@ public class DMDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.app.widget.DMDialog$b */
     /* loaded from: classes13.dex */
-    public class View$OnClickListenerC0477b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DialogInterface.OnClickListener a;
 
-        View$OnClickListenerC0477b(DialogInterface.OnClickListener onClickListener) {
+        b(DialogInterface.OnClickListener onClickListener) {
             this.a = onClickListener;
         }
 
@@ -104,12 +102,11 @@ public class DMDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.app.widget.DMDialog$c */
     /* loaded from: classes13.dex */
-    public class View$OnClickListenerC0478c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0478c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -226,7 +223,7 @@ public class DMDialog extends Dialog {
             this.n++;
             TextView textView = this.j;
             if (textView != null) {
-                textView.setOnClickListener(new View$OnClickListenerC0476a(onClickListener));
+                textView.setOnClickListener(new a(onClickListener));
             }
         }
         return this;
@@ -252,7 +249,7 @@ public class DMDialog extends Dialog {
         }
         if (z) {
             imageView.setVisibility(0);
-            this.m.setOnClickListener(new View$OnClickListenerC0478c());
+            this.m.setOnClickListener(new c());
         } else {
             imageView.setVisibility(8);
         }
@@ -284,7 +281,7 @@ public class DMDialog extends Dialog {
             }
             this.l.setVisibility(0);
             this.n++;
-            this.l.setOnClickListener(new View$OnClickListenerC0477b(onClickListener));
+            this.l.setOnClickListener(new b(onClickListener));
         }
         return this;
     }

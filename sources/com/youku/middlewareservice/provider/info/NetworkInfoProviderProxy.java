@@ -1,7 +1,7 @@
 package com.youku.middlewareservice.provider.info;
 
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -11,7 +11,7 @@ public class NetworkInfoProviderProxy {
     public static int getNetworkType() {
         try {
             if (sProxy == null) {
-                sProxy = (NetworkInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
+                sProxy = (NetworkInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
             }
             return sProxy.getNetworkType();
         } catch (Throwable th) {
@@ -23,7 +23,7 @@ public class NetworkInfoProviderProxy {
     public static int getNetworkTypeWithCache() {
         try {
             if (sProxy == null) {
-                sProxy = (NetworkInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
+                sProxy = (NetworkInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
             }
             return sProxy.getNetworkTypeWithCache();
         } catch (Throwable th) {
@@ -34,7 +34,7 @@ public class NetworkInfoProviderProxy {
 
     public static NetworkInfoProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (NetworkInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
+            sProxy = (NetworkInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -42,7 +42,7 @@ public class NetworkInfoProviderProxy {
     public static String getWifiMacAdress() {
         try {
             if (sProxy == null) {
-                sProxy = (NetworkInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
+                sProxy = (NetworkInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
             }
             return sProxy.getWifiMacAdress();
         } catch (Throwable th) {
@@ -54,7 +54,7 @@ public class NetworkInfoProviderProxy {
     public static String getWifiSsid() {
         try {
             if (sProxy == null) {
-                sProxy = (NetworkInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
+                sProxy = (NetworkInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
             }
             return sProxy.getWifiSsid();
         } catch (Throwable th) {
@@ -76,7 +76,7 @@ public class NetworkInfoProviderProxy {
     public static boolean isMobile() {
         try {
             if (sProxy == null) {
-                sProxy = (NetworkInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
+                sProxy = (NetworkInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
             }
             return sProxy.isMobile();
         } catch (Throwable th) {
@@ -88,7 +88,7 @@ public class NetworkInfoProviderProxy {
     public static boolean isMobileWithCache() {
         try {
             if (sProxy == null) {
-                sProxy = (NetworkInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
+                sProxy = (NetworkInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
             }
             return sProxy.isMobileWithCache();
         } catch (Throwable th) {
@@ -100,7 +100,7 @@ public class NetworkInfoProviderProxy {
     public static boolean isNetworkAvailable() {
         try {
             if (sProxy == null) {
-                sProxy = (NetworkInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
+                sProxy = (NetworkInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
             }
             return sProxy.isNetworkAvailable();
         } catch (Throwable th) {
@@ -112,7 +112,7 @@ public class NetworkInfoProviderProxy {
     public static boolean isNetworkAvailableWithCache() {
         try {
             if (sProxy == null) {
-                sProxy = (NetworkInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
+                sProxy = (NetworkInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
             }
             return sProxy.isNetworkAvailableWithCache();
         } catch (Throwable th) {
@@ -124,7 +124,7 @@ public class NetworkInfoProviderProxy {
     public static boolean isWifi() {
         try {
             if (sProxy == null) {
-                sProxy = (NetworkInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
+                sProxy = (NetworkInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
             }
             return sProxy.isWifi();
         } catch (Throwable th) {
@@ -136,7 +136,7 @@ public class NetworkInfoProviderProxy {
     public static boolean isWifiWithCache() {
         try {
             if (sProxy == null) {
-                sProxy = (NetworkInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
+                sProxy = (NetworkInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.NetworkInfoProviderImpl").b().f();
             }
             return sProxy.isWifiWithCache();
         } catch (Throwable th) {

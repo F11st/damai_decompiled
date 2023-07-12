@@ -4,13 +4,13 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.Pair;
-import kotlin.collections.C8201d0;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8225w;
+import kotlin.b;
+import kotlin.collections.d0;
+import kotlin.collections.k;
+import kotlin.collections.n;
+import kotlin.collections.w;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -46,20 +46,19 @@ public final class TypeParameterUpperBoundEraser {
     @NotNull
     private final RawSubstitution c;
     @NotNull
-    private final MemoizedFunctionToNotNull<C8356a, z71> d;
+    private final MemoizedFunctionToNotNull<a, z71> d;
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.lazy.types.TypeParameterUpperBoundEraser$a */
     /* loaded from: classes3.dex */
-    public static final class C8356a {
+    public static final class a {
         @NotNull
         private final TypeParameterDescriptor a;
         private final boolean b;
         @NotNull
         private final q51 c;
 
-        public C8356a(@NotNull TypeParameterDescriptor typeParameterDescriptor, boolean z, @NotNull q51 q51Var) {
+        public a(@NotNull TypeParameterDescriptor typeParameterDescriptor, boolean z, @NotNull q51 q51Var) {
             b41.i(typeParameterDescriptor, "typeParameter");
             b41.i(q51Var, "typeAttr");
             this.a = typeParameterDescriptor;
@@ -82,9 +81,9 @@ public final class TypeParameterUpperBoundEraser {
         }
 
         public boolean equals(@Nullable Object obj) {
-            if (obj instanceof C8356a) {
-                C8356a c8356a = (C8356a) obj;
-                return b41.d(c8356a.a, this.a) && c8356a.b == this.b && c8356a.c.d() == this.c.d() && c8356a.c.e() == this.c.e() && c8356a.c.g() == this.c.g() && b41.d(c8356a.c.c(), this.c.c());
+            if (obj instanceof a) {
+                a aVar = (a) obj;
+                return b41.d(aVar.a, this.a) && aVar.b == this.b && aVar.c.d() == this.c.d() && aVar.c.e() == this.c.e() && aVar.c.g() == this.c.g() && b41.d(aVar.c.c(), this.c.c());
             }
             return false;
         }
@@ -110,7 +109,7 @@ public final class TypeParameterUpperBoundEraser {
         Lazy b;
         LockBasedStorageManager lockBasedStorageManager = new LockBasedStorageManager("Type parameter upper bound erasion results");
         this.a = lockBasedStorageManager;
-        b = C8177b.b(new Function0<fd2>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.types.TypeParameterUpperBoundEraser$erroneousErasedBound$2
+        b = b.b(new Function0<fd2>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.types.TypeParameterUpperBoundEraser$erroneousErasedBound$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -124,16 +123,16 @@ public final class TypeParameterUpperBoundEraser {
         });
         this.b = b;
         this.c = rawSubstitution == null ? new RawSubstitution(this) : rawSubstitution;
-        MemoizedFunctionToNotNull<C8356a, z71> createMemoizedFunction = lockBasedStorageManager.createMemoizedFunction(new Function1<C8356a, z71>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.types.TypeParameterUpperBoundEraser$getErasedUpperBound$1
+        MemoizedFunctionToNotNull<a, z71> createMemoizedFunction = lockBasedStorageManager.createMemoizedFunction(new Function1<a, z71>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.types.TypeParameterUpperBoundEraser$getErasedUpperBound$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(1);
             }
 
             @Override // kotlin.jvm.functions.Function1
-            public final z71 invoke(TypeParameterUpperBoundEraser.C8356a c8356a) {
+            public final z71 invoke(TypeParameterUpperBoundEraser.a aVar) {
                 z71 d;
-                d = TypeParameterUpperBoundEraser.this.d(c8356a.b(), c8356a.c(), c8356a.a());
+                d = TypeParameterUpperBoundEraser.this.d(aVar.b(), aVar.c(), aVar.a());
                 return d;
             }
         });
@@ -156,7 +155,7 @@ public final class TypeParameterUpperBoundEraser {
     public final z71 d(TypeParameterDescriptor typeParameterDescriptor, boolean z, q51 q51Var) {
         int q;
         int e;
-        int a;
+        int a2;
         TypeProjection j;
         Set<TypeParameterDescriptor> f = q51Var.f();
         if (f != null && f.contains(typeParameterDescriptor.getOriginal())) {
@@ -165,10 +164,10 @@ public final class TypeParameterUpperBoundEraser {
         fd2 defaultType = typeParameterDescriptor.getDefaultType();
         b41.h(defaultType, "typeParameter.defaultType");
         Set<TypeParameterDescriptor> f2 = TypeUtilsKt.f(defaultType, f);
-        q = C8215n.q(f2, 10);
-        e = C8225w.e(q);
-        a = ty1.a(e, 16);
-        LinkedHashMap linkedHashMap = new LinkedHashMap(a);
+        q = n.q(f2, 10);
+        e = w.e(q);
+        a2 = ty1.a(e, 16);
+        LinkedHashMap linkedHashMap = new LinkedHashMap(a2);
         for (TypeParameterDescriptor typeParameterDescriptor2 : f2) {
             if (f != null && f.contains(typeParameterDescriptor2)) {
                 j = u51.b(typeParameterDescriptor2, q51Var);
@@ -179,21 +178,21 @@ public final class TypeParameterUpperBoundEraser {
                 b41.h(c, "getErasedUpperBound(it, …Parameter(typeParameter))");
                 j = rawSubstitution.j(typeParameterDescriptor2, i, c);
             }
-            Pair a2 = hq2.a(typeParameterDescriptor2.getTypeConstructor(), j);
-            linkedHashMap.put(a2.getFirst(), a2.getSecond());
+            Pair a3 = hq2.a(typeParameterDescriptor2.getTypeConstructor(), j);
+            linkedHashMap.put(a3.getFirst(), a3.getSecond());
         }
-        TypeSubstitutor g = TypeSubstitutor.g(oq2.C9530a.e(oq2.Companion, linkedHashMap, false, 2, null));
+        TypeSubstitutor g = TypeSubstitutor.g(oq2.a.e(oq2.Companion, linkedHashMap, false, 2, null));
         b41.h(g, "create(TypeConstructorSu…rsMap(erasedUpperBounds))");
         List<z71> upperBounds = typeParameterDescriptor.getUpperBounds();
         b41.h(upperBounds, "typeParameter.upperBounds");
-        z71 z71Var = (z71) C8212k.P(upperBounds);
+        z71 z71Var = (z71) k.P(upperBounds);
         if (z71Var.c().getDeclarationDescriptor() instanceof ClassDescriptor) {
             b41.h(z71Var, "firstUpperBound");
             return TypeUtilsKt.s(z71Var, g, linkedHashMap, Variance.OUT_VARIANCE, q51Var.f());
         }
         Set<TypeParameterDescriptor> f3 = q51Var.f();
         if (f3 == null) {
-            f3 = C8201d0.c(this);
+            f3 = d0.c(this);
         }
         ClassifierDescriptor declarationDescriptor = z71Var.c().getDeclarationDescriptor();
         Objects.requireNonNull(declarationDescriptor, "null cannot be cast to non-null type org.jetbrains.kotlin.descriptors.TypeParameterDescriptor");
@@ -202,7 +201,7 @@ public final class TypeParameterUpperBoundEraser {
             if (!f3.contains(typeParameterDescriptor3)) {
                 List<z71> upperBounds2 = typeParameterDescriptor3.getUpperBounds();
                 b41.h(upperBounds2, "current.upperBounds");
-                z71 z71Var2 = (z71) C8212k.P(upperBounds2);
+                z71 z71Var2 = (z71) k.P(upperBounds2);
                 if (z71Var2.c().getDeclarationDescriptor() instanceof ClassDescriptor) {
                     b41.h(z71Var2, "nextUpperBound");
                     return TypeUtilsKt.s(z71Var2, g, linkedHashMap, Variance.OUT_VARIANCE, q51Var.f());
@@ -222,7 +221,7 @@ public final class TypeParameterUpperBoundEraser {
     public final z71 c(@NotNull TypeParameterDescriptor typeParameterDescriptor, boolean z, @NotNull q51 q51Var) {
         b41.i(typeParameterDescriptor, "typeParameter");
         b41.i(q51Var, "typeAttr");
-        return this.d.invoke(new C8356a(typeParameterDescriptor, z, q51Var));
+        return this.d.invoke(new a(typeParameterDescriptor, z, q51Var));
     }
 
     public /* synthetic */ TypeParameterUpperBoundEraser(RawSubstitution rawSubstitution, int i, k50 k50Var) {

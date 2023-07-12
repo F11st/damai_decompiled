@@ -13,10 +13,6 @@ import com.uc.webview.export.extension.UCCore;
 import com.uc.webview.export.internal.SDKFactory;
 import com.uc.webview.export.internal.setup.UCSetupTask;
 import com.uc.webview.export.internal.setup.aj;
-import com.uc.webview.export.internal.uc.startup.C7302b;
-import com.uc.webview.export.internal.utility.C7329e;
-import com.uc.webview.export.internal.utility.C7336i;
-import com.uc.webview.export.internal.utility.C7349p;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -100,7 +96,7 @@ public abstract class UCSetupTask<RETURN_TYPE extends UCSetupTask<RETURN_TYPE, C
         }
         switch (c2) {
             case 0:
-                if (C7349p.a((String) option) && obj != null) {
+                if (com.uc.webview.export.internal.utility.p.a((String) option) && obj != null) {
                     option = obj;
                     str = UCCore.PROCESS_PRIVATE_DATA_DIR_SUFFIX_OPTION;
                     z = false;
@@ -119,7 +115,7 @@ public abstract class UCSetupTask<RETURN_TYPE extends UCSetupTask<RETURN_TYPE, C
                 z2 = false;
                 break;
             case 2:
-                Integer b2 = C7329e.b(str);
+                Integer b2 = com.uc.webview.export.internal.utility.e.b(str);
                 if (b2 != null) {
                     sb.append("    use DynamicSetting ");
                     sb.append(str);
@@ -180,7 +176,7 @@ public abstract class UCSetupTask<RETURN_TYPE extends UCSetupTask<RETURN_TYPE, C
         sb.append(str2);
         sb.append(z4 ? " [UseDefault]" : "");
         sb.append(StringUtils.LF);
-        C7336i.a().a(str, obj);
+        com.uc.webview.export.internal.utility.i.a().a(str, obj);
     }
 
     @Reflection
@@ -239,7 +235,7 @@ public abstract class UCSetupTask<RETURN_TYPE extends UCSetupTask<RETURN_TYPE, C
 
     /* JADX INFO: Access modifiers changed from: protected */
     public final String getCrashCode() {
-        return this.j != null ? aj.C7265a.a(this, getContext(), this.j).a : "";
+        return this.j != null ? aj.a.a(this, getContext(), this.j).a : "";
     }
 
     @Reflection
@@ -254,17 +250,17 @@ public abstract class UCSetupTask<RETURN_TYPE extends UCSetupTask<RETURN_TYPE, C
 
     /* JADX INFO: Access modifiers changed from: protected */
     public aj getSetupCrashImprover(Context context, String str) {
-        if (C7349p.a(str)) {
+        if (com.uc.webview.export.internal.utility.p.a(str)) {
             return null;
         }
         this.j = str;
-        return aj.C7265a.a(this, context, str);
+        return aj.a.a(this, context, str);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     public void resetCrashFlag() {
         if (this.j != null) {
-            aj.C7265a.a(this, getContext(), this.j).a();
+            aj.a.a(this, getContext(), this.j).a();
         }
     }
 
@@ -292,7 +288,7 @@ public abstract class UCSetupTask<RETURN_TYPE extends UCSetupTask<RETURN_TYPE, C
             return;
         }
         Log.d("UCSetupTask", "setupGlobalOnce");
-        C7302b.a(292);
+        com.uc.webview.export.internal.uc.startup.b.a(292);
         SDKFactory.e(getContext().getApplicationContext());
         UCElapseTime uCElapseTime = new UCElapseTime();
         Object[] objArr = (Object[]) getOption(UCCore.OPTION_LOG_CONFIG);
@@ -302,7 +298,7 @@ public abstract class UCSetupTask<RETURN_TYPE extends UCSetupTask<RETURN_TYPE, C
             Log.setup(bool != null ? bool.booleanValue() : false, bool2 != null ? bool2.booleanValue() : false, (ValueCallback) objArr[2]);
         }
         UCCyclone.enableDebugLog = Log.enabled();
-        C7302b.a(226, uCElapseTime.getMilis());
+        com.uc.webview.export.internal.uc.startup.b.a(226, uCElapseTime.getMilis());
         Log.rInfo("UCSetupTask", "setupPrintLog log_conf=" + Arrays.toString(objArr) + ", enabled:" + Log.enabled());
         Log.d("UCSetupTask", "setupGlobalOption: ucbs version:" + Build.Version.NAME + JSMethod.NOT_SET + Build.Version.BUILD_SERIAL);
         StringBuilder sb = new StringBuilder();
@@ -340,14 +336,14 @@ public abstract class UCSetupTask<RETURN_TYPE extends UCSetupTask<RETURN_TYPE, C
         a(UCCore.OPTION_TRHEAD_WATCHDOG_DUMP_NATIVE_RATE, null, sb);
         Log.d("UCSetupTask", sb.toString());
         sb.setLength(0);
-        if (C7336i.a().c(UCCore.OPTION_INIT_FAILED_LOG_POLICY) == 0) {
+        if (com.uc.webview.export.internal.utility.i.a().c(UCCore.OPTION_INIT_FAILED_LOG_POLICY) == 0) {
             Log.flushCachedLogs(null);
         }
         StringBuilder sb2 = new StringBuilder();
         sb2.append("otherInitOption:\n");
         for (Map.Entry<String, Object> entry : this.mOptions.entrySet()) {
             String key = entry.getKey();
-            if (!C7336i.a().a.containsKey(key)) {
+            if (!com.uc.webview.export.internal.utility.i.a().a.containsKey(key)) {
                 sb2.append("    ");
                 sb2.append(key);
                 sb2.append("=");
@@ -357,28 +353,28 @@ public abstract class UCSetupTask<RETURN_TYPE extends UCSetupTask<RETURN_TYPE, C
         }
         Log.d("UCSetupTask", sb2.toString());
         sb2.setLength(0);
-        C7302b.a(293);
+        com.uc.webview.export.internal.uc.startup.b.a(293);
     }
 
     @Override // com.uc.webview.export.internal.setup.UCAsyncTask
     public synchronized RETURN_TYPE start() {
         if (getParent() == null) {
-            C7302b.a(328);
+            com.uc.webview.export.internal.uc.startup.b.a(328);
             Integer num = (Integer) this.mOptions.get(UCCore.OPTION_SETUP_THREAD_PRIORITY);
             if (num != null) {
                 setRootTaskPriority(num.intValue());
             }
             Boolean bool = (Boolean) this.mOptions.get(UCCore.OPTION_SETUP_CREATE_THREAD);
-            if (!C7349p.a((String) this.mOptions.get(UCCore.OPTION_UCM_UPD_URL))) {
+            if (!com.uc.webview.export.internal.utility.p.a((String) this.mOptions.get(UCCore.OPTION_UCM_UPD_URL))) {
                 bool = Boolean.TRUE;
             }
             if (bool != null) {
                 setEnableRootTaskCreateThread(bool);
             }
-            C7302b.a(329);
+            com.uc.webview.export.internal.uc.startup.b.a(329);
             UCAsyncTask root = getRoot();
             setParent(root);
-            C7302b.a(330);
+            com.uc.webview.export.internal.uc.startup.b.a(330);
             RETURN_TYPE return_type = (RETURN_TYPE) super.start();
             root.start();
             return return_type;

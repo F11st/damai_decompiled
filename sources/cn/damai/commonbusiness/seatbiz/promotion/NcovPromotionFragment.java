@@ -8,8 +8,7 @@ import android.view.View;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -61,12 +60,11 @@ public class NcovPromotionFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.promotion.NcovPromotionFragment$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0804a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0804a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -81,12 +79,11 @@ public class NcovPromotionFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.promotion.NcovPromotionFragment$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0805b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0805b(NcovPromotionFragment ncovPromotionFragment) {
+        b(NcovPromotionFragment ncovPromotionFragment) {
         }
 
         @Override // android.view.View.OnClickListener
@@ -99,12 +96,11 @@ public class NcovPromotionFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.promotion.NcovPromotionFragment$c */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0806c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0806c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -119,12 +115,11 @@ public class NcovPromotionFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.promotion.NcovPromotionFragment$d */
     /* loaded from: classes.dex */
-    public class C0807d implements OnCouponApplyClickListener {
+    public class d implements OnCouponApplyClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0807d() {
+        d() {
         }
 
         @Override // cn.damai.commonbusiness.seatbiz.promotion.OnCouponApplyClickListener
@@ -214,7 +209,7 @@ public class NcovPromotionFragment extends DamaiBaseMvpFragment {
                     if (cb2.d(couponApplyDataBean.getSuccessCoupons())) {
                         return;
                     }
-                    C0529c.e().x(yw1.f().g(NcovPromotionFragment.this.mPageSource, NcovPromotionFragment.this.mItemId, couponApplyDataBean.getSuccessCoupons().get(0).id));
+                    cn.damai.common.user.c.e().x(yw1.f().g(NcovPromotionFragment.this.mPageSource, NcovPromotionFragment.this.mItemId, couponApplyDataBean.getSuccessCoupons().get(0).id));
                 }
             }
         });
@@ -412,12 +407,12 @@ public class NcovPromotionFragment extends DamaiBaseMvpFragment {
         this.mContext = getContext();
         View findViewById = this.rootView.findViewById(R$id.view_top);
         this.mTopView = findViewById;
-        findViewById.setOnClickListener(new View$OnClickListenerC0804a());
-        this.rootView.findViewById(R$id.layout_null).setOnClickListener(new View$OnClickListenerC0805b(this));
+        findViewById.setOnClickListener(new a());
+        this.rootView.findViewById(R$id.layout_null).setOnClickListener(new b(this));
         RecyclerView recyclerView = (RecyclerView) this.rootView.findViewById(R$id.fg_promotion_recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.mContext, 1, false));
-        this.rootView.findViewById(R$id.desc_close).setOnClickListener(new View$OnClickListenerC0806c());
-        PromotionAdapter promotionAdapter = new PromotionAdapter(this.mContext, new C0807d());
+        this.rootView.findViewById(R$id.desc_close).setOnClickListener(new c());
+        PromotionAdapter promotionAdapter = new PromotionAdapter(this.mContext, new d());
         this.mAdapter = promotionAdapter;
         promotionAdapter.c(this.mPageSource, String.valueOf(this.mItemId));
         recyclerView.setAdapter(this.mAdapter);
@@ -434,9 +429,9 @@ public class NcovPromotionFragment extends DamaiBaseMvpFragment {
         }
         super.onActivityCreated(bundle);
         HashMap hashMap = new HashMap();
-        C0525a.C0527b c0527b = new C0525a.C0527b();
-        c0527b.d(String.valueOf(this.mItemId)).i(this.mPageSource).j(hashMap);
-        C0529c.e().p(this, c0527b);
+        a.b bVar = new a.b();
+        bVar.d(String.valueOf(this.mItemId)).i(this.mPageSource).j(hashMap);
+        cn.damai.common.user.c.e().p(this, bVar);
     }
 
     @Override // android.view.View.OnClickListener

@@ -52,8 +52,8 @@ public final class dc {
     private SSLContext b;
     private Proxy c;
     private String g;
-    private cz.InterfaceC4409a h;
-    private C4418d i;
+    private cz.a h;
+    private d i;
     private boolean l;
     private String m;
     private String n;
@@ -66,12 +66,11 @@ public final class dc {
     private String q = "";
     private String r = "";
     private String s = "";
-    private C4420f u = new C4420f();
+    private f u = new f();
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.dc$a */
     /* loaded from: classes10.dex */
-    public static class C4415a implements Cloneable, Comparable {
+    public static class a implements Cloneable, Comparable {
         public int a;
         public String b;
         public String c;
@@ -83,24 +82,24 @@ public final class dc {
         public long i;
         public volatile AtomicInteger j = new AtomicInteger(1);
 
-        public C4415a(C4417c c4417c) {
-            this.b = c4417c.c;
-            this.c = c4417c.e;
-            this.e = c4417c.d;
-            this.f = c4417c.m;
-            this.g = c4417c.n;
-            this.h = c4417c.b.a();
-            this.d = c4417c.a;
-            this.i = c4417c.f;
+        public a(c cVar) {
+            this.b = cVar.c;
+            this.c = cVar.e;
+            this.e = cVar.d;
+            this.f = cVar.m;
+            this.g = cVar.n;
+            this.h = cVar.b.a();
+            this.d = cVar.a;
+            this.i = cVar.f;
             if (this.f == 10) {
                 this.a = 0;
             }
         }
 
         /* renamed from: a */
-        public final C4415a clone() {
+        public final a clone() {
             try {
-                return (C4415a) super.clone();
+                return (a) super.clone();
             } catch (CloneNotSupportedException unused) {
                 return null;
             }
@@ -144,29 +143,27 @@ public final class dc {
 
         @Override // java.lang.Comparable
         public final int compareTo(Object obj) {
-            return this.a - ((C4415a) obj).a;
+            return this.a - ((a) obj).a;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.dc$b */
     /* loaded from: classes10.dex */
-    public static class C4416b {
+    public static class b {
         public HttpURLConnection a;
         public int b = this.b;
         public int b = this.b;
 
-        public C4416b(HttpURLConnection httpURLConnection) {
+        public b(HttpURLConnection httpURLConnection) {
             this.a = httpURLConnection;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.dc$c */
     /* loaded from: classes10.dex */
-    public static class C4417c implements Cloneable {
+    public static class c implements Cloneable {
         public String a = "";
-        public df.EnumC4424b b = df.EnumC4424b.FIRST_NONDEGRADE;
+        public df.b b = df.b.FIRST_NONDEGRADE;
         public String c = "";
         public String d = "";
         public String e = "";
@@ -182,9 +179,9 @@ public final class dc {
 
         /* JADX INFO: Access modifiers changed from: protected */
         /* renamed from: a */
-        public final C4417c clone() {
+        public final c clone() {
             try {
-                return (C4417c) super.clone();
+                return (c) super.clone();
             } catch (CloneNotSupportedException unused) {
                 return null;
             }
@@ -215,13 +212,12 @@ public final class dc {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.dc$e */
     /* loaded from: classes10.dex */
-    public static class C4419e implements HostnameVerifier {
+    public static class e implements HostnameVerifier {
         private String a;
         private String b;
 
-        private C4419e() {
+        private e() {
         }
 
         public final void a(String str) {
@@ -249,7 +245,7 @@ public final class dc {
             return defaultHostnameVerifier.verify(str, sSLSession);
         }
 
-        /* synthetic */ C4419e(byte b) {
+        /* synthetic */ e(byte b) {
             this();
         }
 
@@ -260,18 +256,17 @@ public final class dc {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.dc$f */
     /* loaded from: classes10.dex */
-    public class C4420f {
+    public class f {
         long a = 0;
         long b = 0;
-        C4417c c = new C4417c();
-        C4415a d;
-        C4417c e;
+        c c = new c();
+        a d;
+        c e;
         String f;
         URL g;
 
-        C4420f() {
+        f() {
         }
 
         public final void a(df dfVar, URL url) {
@@ -279,8 +274,8 @@ public final class dc {
             this.c.d = url.getPath();
             this.c.e = url.getHost();
             if (!TextUtils.isEmpty(dc.this.n) && dfVar.t().b()) {
-                C4417c c4417c = this.c;
-                c4417c.c = c4417c.e.replace(jn1.ARRAY_START_STR, "").replace(jn1.ARRAY_END_STR, "");
+                c cVar = this.c;
+                cVar.c = cVar.e.replace(jn1.ARRAY_START_STR, "").replace(jn1.ARRAY_END_STR, "");
                 this.c.e = dc.this.n;
             }
             if (dfVar.t().b()) {
@@ -300,7 +295,7 @@ public final class dc {
         }
 
         public final void d() {
-            C4417c clone = this.c.clone();
+            c clone = this.c.clone();
             if (this.c.f > bl.e) {
                 clone.m = 1;
             }
@@ -316,16 +311,16 @@ public final class dc {
         }
 
         public final void a(dg dgVar) {
-            C4417c clone;
+            c clone;
             try {
                 this.c.f = SystemClock.elapsedRealtime() - this.a;
                 if (dgVar != null) {
                     dgVar.f = this.c.b.c();
                 }
                 if (this.c.b.b()) {
-                    C4417c c4417c = this.c;
-                    if (c4417c.f > 10000) {
-                        bl.a(false, c4417c.e);
+                    c cVar = this.c;
+                    if (cVar.f > 10000) {
+                        bl.a(false, cVar.e);
                     }
                 }
                 if (this.c.b.d()) {
@@ -335,8 +330,8 @@ public final class dc {
                 if (a) {
                     bl.c(this.c);
                     bl.a(true, this.d);
-                    C4417c c4417c2 = this.c;
-                    if (c4417c2.f > bl.e && (clone = c4417c2.clone()) != null) {
+                    c cVar2 = this.c;
+                    if (cVar2.f > bl.e && (clone = cVar2.clone()) != null) {
                         clone.m = 1;
                         bl.b(clone);
                         clone.toString();
@@ -355,9 +350,9 @@ public final class dc {
             dc.a();
             try {
                 this.c.f = SystemClock.elapsedRealtime() - this.a;
-                C4417c c4417c = this.c;
-                c4417c.m = i;
-                if (c4417c.b.e()) {
+                c cVar = this.c;
+                cVar.m = i;
+                if (cVar.b.e()) {
                     bl.a(false, this.c.e);
                 }
                 boolean a = dc.this.a(this.c.e);
@@ -399,7 +394,7 @@ public final class dc {
     }
 
     private void c(df dfVar) throws bj {
-        this.i = new C4418d((byte) 0);
+        this.i = new d((byte) 0);
         this.p = dfVar.x();
         this.c = dfVar.n();
         this.h = dfVar.s();
@@ -408,7 +403,7 @@ public final class dc {
         this.a = bq.a().b(dfVar.r());
         String l = dfVar.t().b() ? dfVar.l() : dfVar.k();
         this.m = l;
-        this.m = C4411db.a(l, this.j);
+        this.m = db.a(l, this.j);
         this.n = dfVar.i();
         if ("loc".equals(this.j)) {
             String k2 = dfVar.k();
@@ -442,31 +437,31 @@ public final class dc {
         try {
             try {
                 c(dfVar);
-                dg b = C4411db.b(this.m, this.j);
-                if (b != null) {
+                dg b2 = db.b(this.m, this.j);
+                if (b2 != null) {
                     this.u.d();
-                    return b;
+                    return b2;
                 }
-                C4416b a = a(dfVar, true);
-                HttpURLConnection httpURLConnection2 = a.a;
+                b a2 = a(dfVar, true);
+                HttpURLConnection httpURLConnection2 = a2.a;
                 try {
                     this.u.b = SystemClock.elapsedRealtime();
                     httpURLConnection2.connect();
                     this.u.a();
                     byte[] g = dfVar.g();
                     if (g == null || g.length == 0) {
-                        Map<String, String> e = dfVar.e();
+                        Map<String, String> e2 = dfVar.e();
                         HashMap<String, String> hashMap = cz.e;
                         if (hashMap != null) {
-                            if (e != null) {
-                                e.putAll(hashMap);
+                            if (e2 != null) {
+                                e2.putAll(hashMap);
                             } else {
-                                e = hashMap;
+                                e2 = hashMap;
                             }
                         }
-                        String a2 = a(e);
-                        if (!TextUtils.isEmpty(a2)) {
-                            g = bw.a(a2);
+                        String a3 = a(e2);
+                        if (!TextUtils.isEmpty(a3)) {
+                            g = bw.a(a3);
                         }
                     }
                     if (g != null && g.length > 0) {
@@ -503,41 +498,41 @@ public final class dc {
                             throw th;
                         }
                     }
-                    dg a3 = a(a);
-                    this.u.a(a3);
+                    dg a4 = a(a2);
+                    this.u.a(a4);
                     try {
                         httpURLConnection2.disconnect();
                     } catch (Throwable th5) {
                         ci.a(th5, "ht", "mPt");
                     }
                     this.u.d();
-                    return a3;
-                } catch (bj e2) {
-                    e = e2;
+                    return a4;
+                } catch (bj e3) {
+                    e = e3;
                     if (!e.i() && e.g() != 10) {
                         this.u.a(e.g());
                     }
                     ci.a(e, "ht", "mPt");
                     throw e;
-                } catch (ConnectException e3) {
-                    e = e3;
+                } catch (ConnectException e4) {
+                    e = e4;
                     e.printStackTrace();
                     this.u.b(a(e));
                     this.u.a(6);
                     throw new bj(AMapException.ERROR_CONNECTION);
-                } catch (MalformedURLException e4) {
-                    e = e4;
+                } catch (MalformedURLException e5) {
+                    e = e5;
                     e.printStackTrace();
                     this.u.a(8);
                     throw new bj("url异常 - MalformedURLException");
-                } catch (SocketException e5) {
-                    e = e5;
+                } catch (SocketException e6) {
+                    e = e6;
                     e.printStackTrace();
                     this.u.b(a(e));
                     this.u.a(6);
                     throw new bj(AMapException.ERROR_SOCKET);
-                } catch (SocketTimeoutException e6) {
-                    e = e6;
+                } catch (SocketTimeoutException e7) {
+                    e = e7;
                     e.printStackTrace();
                     this.u.b(a(e));
                     this.u.a(2);
@@ -546,25 +541,25 @@ public final class dc {
                     this.u.b(7101);
                     this.u.a(7);
                     throw new bj(AMapException.ERROR_UNKNOWN);
-                } catch (UnknownHostException e7) {
-                    e = e7;
+                } catch (UnknownHostException e8) {
+                    e = e8;
                     e.printStackTrace();
                     this.u.a(5);
                     throw new bj("未知主机 - UnKnowHostException");
-                } catch (SSLException e8) {
-                    e = e8;
+                } catch (SSLException e9) {
+                    e = e9;
                     e.printStackTrace();
                     this.u.b(a(e));
                     this.u.a(4);
                     throw new bj("IO 操作异常 - IOException");
-                } catch (ConnectTimeoutException e9) {
-                    e = e9;
+                } catch (ConnectTimeoutException e10) {
+                    e = e10;
                     e.printStackTrace();
                     this.u.b(a(e));
                     this.u.a(2);
                     throw new bj("IO 操作异常 - IOException");
-                } catch (IOException e10) {
-                    e = e10;
+                } catch (IOException e11) {
+                    e = e11;
                     e.printStackTrace();
                     this.u.a(7);
                     throw new bj("IO 操作异常 - IOException");
@@ -574,25 +569,25 @@ public final class dc {
                     this.u.a(9);
                     throw new bj(AMapException.ERROR_UNKNOWN);
                 }
-            } catch (bj e11) {
-                e = e11;
-            } catch (InterruptedIOException unused2) {
-            } catch (ConnectException e12) {
+            } catch (bj e12) {
                 e = e12;
-            } catch (MalformedURLException e13) {
+            } catch (InterruptedIOException unused2) {
+            } catch (ConnectException e13) {
                 e = e13;
-            } catch (SocketException e14) {
+            } catch (MalformedURLException e14) {
                 e = e14;
-            } catch (SocketTimeoutException e15) {
+            } catch (SocketException e15) {
                 e = e15;
-            } catch (UnknownHostException e16) {
+            } catch (SocketTimeoutException e16) {
                 e = e16;
-            } catch (SSLException e17) {
+            } catch (UnknownHostException e17) {
                 e = e17;
-            } catch (ConnectTimeoutException e18) {
+            } catch (SSLException e18) {
                 e = e18;
-            } catch (IOException e19) {
+            } catch (ConnectTimeoutException e19) {
                 e = e19;
+            } catch (IOException e20) {
+                e = e20;
             } catch (Throwable th7) {
                 th = th7;
             }
@@ -611,34 +606,33 @@ public final class dc {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.dc$d */
     /* loaded from: classes10.dex */
-    public static class C4418d {
-        private Vector<C4419e> a;
-        private volatile C4419e b;
+    public static class d {
+        private Vector<e> a;
+        private volatile e b;
 
-        private C4418d() {
+        private d() {
             this.a = new Vector<>();
-            this.b = new C4419e((byte) 0);
+            this.b = new e((byte) 0);
         }
 
-        public final C4419e a(String str) {
+        public final e a(String str) {
             if (TextUtils.isEmpty(str)) {
                 return this.b;
             }
             for (int i = 0; i < this.a.size(); i++) {
-                C4419e c4419e = this.a.get(i);
-                if (c4419e != null && c4419e.a().equals(str)) {
-                    return c4419e;
+                e eVar = this.a.get(i);
+                if (eVar != null && eVar.a().equals(str)) {
+                    return eVar;
                 }
             }
-            C4419e c4419e2 = new C4419e((byte) 0);
-            c4419e2.b(str);
-            this.a.add(c4419e2);
-            return c4419e2;
+            e eVar2 = new e((byte) 0);
+            eVar2.b(str);
+            this.a.add(eVar2);
+            return eVar2;
         }
 
-        /* synthetic */ C4418d(byte b) {
+        /* synthetic */ d(byte b) {
             this();
         }
     }
@@ -678,7 +672,7 @@ public final class dc {
         if (map.size() == 0) {
             return str;
         }
-        String a = a((Map<String, String>) map);
+        String a2 = a((Map<String, String>) map);
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append(str);
         if (indexOf >= 0) {
@@ -688,8 +682,8 @@ public final class dc {
         } else {
             stringBuffer.append("?");
         }
-        if (a != null) {
-            stringBuffer.append(a);
+        if (a2 != null) {
+            stringBuffer.append(a2);
         }
         return stringBuffer.toString();
     }
@@ -705,52 +699,52 @@ public final class dc {
                                 try {
                                     try {
                                         c(dfVar);
-                                        String a = a(this.m, dfVar.e());
-                                        this.m = a;
-                                        dg b = C4411db.b(a, this.j);
-                                        if (b != null) {
+                                        String a2 = a(this.m, dfVar.e());
+                                        this.m = a2;
+                                        dg b2 = db.b(a2, this.j);
+                                        if (b2 != null) {
                                             this.u.d();
-                                            return b;
+                                            return b2;
                                         }
-                                        C4416b a2 = a(dfVar, false);
-                                        HttpURLConnection httpURLConnection = a2.a;
+                                        b a3 = a(dfVar, false);
+                                        HttpURLConnection httpURLConnection = a3.a;
                                         this.u.b = SystemClock.elapsedRealtime();
                                         httpURLConnection.connect();
                                         this.u.a();
-                                        dg a3 = a(a2);
-                                        this.u.a(a3);
+                                        dg a4 = a(a3);
+                                        this.u.a(a4);
                                         try {
                                             httpURLConnection.disconnect();
                                         } catch (Throwable th) {
                                             ci.a(th, "ht", "mgr");
                                         }
                                         this.u.d();
-                                        return a3;
+                                        return a4;
                                     } catch (InterruptedIOException unused) {
                                         this.u.b(7101);
                                         this.u.a(7);
                                         throw new bj(AMapException.ERROR_UNKNOWN);
-                                    } catch (SSLException e) {
-                                        e.printStackTrace();
-                                        this.u.b(a(e));
+                                    } catch (SSLException e2) {
+                                        e2.printStackTrace();
+                                        this.u.b(a(e2));
                                         this.u.a(4);
                                         throw new bj("IO 操作异常 - IOException");
                                     }
-                                } catch (ConnectException e2) {
-                                    this.u.b(a(e2));
+                                } catch (ConnectException e3) {
+                                    this.u.b(a(e3));
                                     this.u.a(6);
                                     throw new bj(AMapException.ERROR_CONNECTION);
                                 } catch (UnknownHostException unused2) {
                                     this.u.a(9);
                                     throw new bj("未知主机 - UnKnowHostException");
                                 }
-                            } catch (SocketTimeoutException e3) {
-                                this.u.b(a(e3));
+                            } catch (SocketTimeoutException e4) {
+                                this.u.b(a(e4));
                                 this.u.a(2);
                                 throw new bj("socket 连接超时 - SocketTimeoutException");
-                            } catch (ConnectTimeoutException e4) {
-                                e4.printStackTrace();
-                                this.u.b(a(e4));
+                            } catch (ConnectTimeoutException e5) {
+                                e5.printStackTrace();
+                                this.u.b(a(e5));
                                 this.u.a(2);
                                 throw new bj("IO 操作异常 - IOException");
                             }
@@ -758,18 +752,18 @@ public final class dc {
                             this.u.a(7);
                             throw new bj("IO 操作异常 - IOException");
                         }
-                    } catch (bj e5) {
-                        if (!e5.i() && e5.g() != 10) {
-                            this.u.a(e5.f());
+                    } catch (bj e6) {
+                        if (!e6.i() && e6.g() != 10) {
+                            this.u.a(e6.f());
                         }
-                        throw e5;
+                        throw e6;
                     }
                 } catch (MalformedURLException unused4) {
                     this.u.a(8);
                     throw new bj("url异常 - MalformedURLException");
                 }
-            } catch (SocketException e6) {
-                this.u.b(a(e6));
+            } catch (SocketException e7) {
+                this.u.b(a(e7));
                 this.u.a(6);
                 throw new bj(AMapException.ERROR_SOCKET);
             }
@@ -794,7 +788,7 @@ public final class dc {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private com.amap.api.col.s.dc.C4416b a(com.amap.api.col.s.df r15, boolean r16) throws java.io.IOException, com.amap.api.col.s.bj {
+    private com.amap.api.col.s.dc.b a(com.amap.api.col.s.df r15, boolean r16) throws java.io.IOException, com.amap.api.col.s.bj {
         /*
             Method dump skipped, instructions count: 659
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -853,7 +847,7 @@ public final class dc {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private com.amap.api.col.s.dg a(com.amap.api.col.s.dc.C4416b r15) throws com.amap.api.col.s.bj, java.io.IOException {
+    private com.amap.api.col.s.dg a(com.amap.api.col.s.dc.b r15) throws com.amap.api.col.s.bj, java.io.IOException {
         /*
             Method dump skipped, instructions count: 545
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -932,7 +926,7 @@ public final class dc {
 
     private void a(Map<String, String> map, HttpURLConnection httpURLConnection) {
         String str;
-        C4417c f;
+        c f2;
         if (map != null) {
             try {
                 for (String str2 : map.keySet()) {
@@ -955,25 +949,25 @@ public final class dc {
         }
         httpURLConnection.addRequestProperty("csid", this.g);
         if (a(this.u.c.e)) {
-            C4420f c4420f = this.u;
-            if (TextUtils.isEmpty(c4420f.c.c)) {
+            f fVar = this.u;
+            if (TextUtils.isEmpty(fVar.c.c)) {
                 str = "";
             } else {
-                String b = bp.b(cv.a(c4420f.c.c.getBytes(), "YXBtX25ldHdvcmtf".getBytes()));
-                String str4 = c4420f.c.c;
-                str = b;
+                String b2 = bp.b(cv.a(fVar.c.c.getBytes(), "YXBtX25ldHdvcmtf".getBytes()));
+                String str4 = fVar.c.c;
+                str = b2;
             }
             if (!TextUtils.isEmpty(str)) {
                 httpURLConnection.addRequestProperty("sip", str);
             }
-            if (bl.j && (f = bl.f()) != null) {
-                httpURLConnection.addRequestProperty("nls", f.b());
-                this.u.e = f;
+            if (bl.j && (f2 = bl.f()) != null) {
+                httpURLConnection.addRequestProperty("nls", f2.b());
+                this.u.e = f2;
             }
-            C4415a e = bl.e();
-            if (e != null) {
-                httpURLConnection.addRequestProperty("nlf", e.b());
-                this.u.d = e;
+            a e2 = bl.e();
+            if (e2 != null) {
+                httpURLConnection.addRequestProperty("nlf", e2.b());
+                this.u.d = e2;
             }
         }
     }

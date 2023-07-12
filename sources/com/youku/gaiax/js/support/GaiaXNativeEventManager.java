@@ -3,9 +3,9 @@ package com.youku.gaiax.js.support;
 import com.alibaba.fastjson.JSONObject;
 import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArraySet;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
@@ -41,7 +41,7 @@ public final class GaiaXNativeEventManager {
 
     static {
         Lazy<GaiaXNativeEventManager> b;
-        b = C8177b.b(new Function0<GaiaXNativeEventManager>() { // from class: com.youku.gaiax.js.support.GaiaXNativeEventManager$Companion$instance$2
+        b = b.b(new Function0<GaiaXNativeEventManager>() { // from class: com.youku.gaiax.js.support.GaiaXNativeEventManager$Companion$instance$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull

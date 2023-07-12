@@ -6,7 +6,6 @@ import android.text.TextUtils;
 import cn.damai.category.ranking.ui.RankListFragment;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.imagebrowse.bean.PicInfo;
 import cn.damai.commonbusiness.imagebrowse.bean.VideoInfo;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
@@ -67,7 +66,7 @@ public class tv1 {
         if (AndroidInstantRuntime.support(ipChange, "1921952769")) {
             ipChange.ipc$dispatch("1921952769", new Object[]{context, Long.valueOf(j), Long.valueOf(j2)});
         } else if (context != null && j2 > 0) {
-            C0529c.e().x(pp2.u().V0(j));
+            cn.damai.common.user.c.e().x(pp2.u().V0(j));
             Bundle bundle = new Bundle();
             bundle.putLong(RankListFragment.KEY_RANK_ID, j2);
             DMNav.from(context).withExtras(bundle).toUri(NavUri.b("ranking"));
@@ -90,7 +89,7 @@ public class tv1 {
             ipChange.ipc$dispatch("1090733876", new Object[]{projectStaticDataBean, Long.valueOf(j), context});
         } else if (projectStaticDataBean == null || context == null) {
         } else {
-            C0529c.e().x(pp2.u().S0(j));
+            cn.damai.common.user.c.e().x(pp2.u().S0(j));
             VenueBean venue = projectStaticDataBean.getVenue();
             if (venue == null || TextUtils.isEmpty(venue.getVenueName()) || venue.getVenueName().contains(cm2.b(context, R$string.damai_projectdetail_tbd))) {
                 return;
@@ -110,7 +109,7 @@ public class tv1 {
             ipChange.ipc$dispatch("1286126335", new Object[]{projectStaticDataBean, Long.valueOf(j), context});
             return;
         }
-        C0529c.e().x(pp2.u().a0(j));
+        cn.damai.common.user.c.e().x(pp2.u().a0(j));
         if (projectStaticDataBean == null || context == null || (venue = projectStaticDataBean.getVenue()) == null || TextUtils.isEmpty(venue.getVenueName()) || venue.getVenueName().contains(cm2.b(context, R$string.damai_projectdetail_tbd))) {
             return;
         }
@@ -128,11 +127,11 @@ public class tv1 {
         } else if (context == null || projectDynamicExtDataBean == null) {
         } else {
             if (yb.m(projectDynamicExtDataBean)) {
-                C0529c.e().x(pp2.u().v(j));
+                cn.damai.common.user.c.e().x(pp2.u().v(j));
                 q(context, j, yb.l(projectDynamicExtDataBean), yb.e(projectDynamicExtDataBean), i);
                 return;
             }
-            C0529c.e().x(pp2.u().A0(j, i));
+            cn.damai.common.user.c.e().x(pp2.u().A0(j, i));
             ArrayList<PicInfo> e = yb.e(projectDynamicExtDataBean);
             if (e == null || e.isEmpty()) {
                 return;
@@ -156,7 +155,7 @@ public class tv1 {
         if (AndroidInstantRuntime.support(ipChange, "-560651511")) {
             ipChange.ipc$dispatch("-560651511", new Object[]{context, Long.valueOf(j), Integer.valueOf(i), projectItemBean});
         } else if (projectItemBean != null) {
-            C0529c.e().x(pp2.u().L0(String.valueOf(j), projectItemBean.id, projectItemBean.alg, i));
+            cn.damai.common.user.c.e().x(pp2.u().L0(String.valueOf(j), projectItemBean.id, projectItemBean.alg, i));
             Bundle bundle = new Bundle();
             bundle.putString(IssueConstants.ProjectID, projectItemBean.id);
             bundle.putString("projectName", projectItemBean.name);
@@ -172,7 +171,7 @@ public class tv1 {
             ipChange.ipc$dispatch("-1290991155", new Object[]{context, brandAndArtists, str, Integer.valueOf(i), str2});
         } else if (brandAndArtists == null || context == null) {
         } else {
-            C0529c e = C0529c.e();
+            cn.damai.common.user.c e = cn.damai.common.user.c.e();
             pp2 u = pp2.u();
             e.x(u.g0(str, brandAndArtists.type + "", String.valueOf(brandAndArtists.id), i, str2));
             Bundle bundle = new Bundle();
@@ -188,7 +187,7 @@ public class tv1 {
             ipChange.ipc$dispatch("-542095245", new Object[]{context, brandAndArtists, str, Integer.valueOf(i), str2});
         } else if (context == null || brandAndArtists == null) {
         } else {
-            C0529c e = C0529c.e();
+            cn.damai.common.user.c e = cn.damai.common.user.c.e();
             pp2 u = pp2.u();
             e.x(u.g0(str, brandAndArtists.type + "", String.valueOf(brandAndArtists.id), i, str2));
             Bundle bundle = new Bundle();
@@ -217,7 +216,7 @@ public class tv1 {
         if (AndroidInstantRuntime.support(ipChange, "1921553009")) {
             ipChange.ipc$dispatch("1921553009", new Object[]{context, str, Long.valueOf(j)});
         } else if (context != null) {
-            C0529c.e().x(pp2.u().s0(j, z20.E(), str));
+            cn.damai.common.user.c.e().x(pp2.u().s0(j, z20.E(), str));
             Bundle bundle = new Bundle();
             bundle.putString(g41.ISSUE_PARAM_COMMENT_ID, str);
             DMNav.from(context).withExtras(bundle).toUri(NavUri.b(cs.X));
@@ -289,7 +288,7 @@ public class tv1 {
                 }
             }
             l(context, j, arrayList, 0);
-            C0529c.e().x(pp2.u().N0(j, z));
+            cn.damai.common.user.c.e().x(pp2.u().N0(j, z));
         }
     }
 

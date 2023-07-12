@@ -17,9 +17,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.common.util.PriorityTask;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.screenshot.ScreenShotDetector;
@@ -108,7 +106,7 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
     private TickletForgetCardFragment forgetCardFragment;
     private String from;
     TextureMapView gd_map;
-    private HandlerC2020e hanlder;
+    private e hanlder;
     private Boolean history;
     private Boolean isCloseLocal;
     private boolean isFirstLoadData;
@@ -147,12 +145,11 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
     public String productSystemId = "";
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TicketDeatilActivity$a */
     /* loaded from: classes7.dex */
-    public class C2016a implements ScreenShotDetector.IScreenShotExtraListener {
+    public class a implements ScreenShotDetector.IScreenShotExtraListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2016a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.screenshot.ScreenShotDetector.IScreenShotExtraListener
@@ -167,12 +164,11 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TicketDeatilActivity$b */
     /* loaded from: classes7.dex */
-    public class C2017b implements WebViewFragment.LoadListener {
+    public class b implements WebViewFragment.LoadListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2017b() {
+        b() {
         }
 
         @Override // cn.damai.h5container.WebViewFragment.LoadListener
@@ -187,12 +183,11 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TicketDeatilActivity$c */
     /* loaded from: classes7.dex */
-    public class C2018c implements Action<TicketNftExtAttr> {
+    public class c implements Action<TicketNftExtAttr> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2018c() {
+        c() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -210,12 +205,11 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TicketDeatilActivity$d */
     /* loaded from: classes7.dex */
-    public class C2019d implements Action<Boolean> {
+    public class d implements Action<Boolean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2019d() {
+        d() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -235,12 +229,11 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TicketDeatilActivity$e */
     /* loaded from: classes16.dex */
-    public class HandlerC2020e extends Handler {
+    public class e extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC2020e() {
+        e() {
         }
 
         @Override // android.os.Handler
@@ -277,9 +270,9 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
         this.page = 1;
         this.utTimeUtils = new UTTimeUtils(UTTimeUtils.p);
         this.rendererTime = 0;
-        this.hanlder = new HandlerC2020e();
+        this.hanlder = new e();
         this.titleHeight = 0;
-        this.screenShotExtraListener = new C2016a();
+        this.screenShotExtraListener = new a();
         this.barStatusBarHeight = 0;
         this.isPulling = false;
         this.movedDistance = 0;
@@ -356,7 +349,7 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
             hashMap.put("screening_id", ticketDeatilResult.getPerformId());
             hashMap.put("item_id", this.ticketDeatilResult.getProjectId());
         }
-        C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "venue_info", "venue_map_pic", hashMap, Boolean.TRUE));
+        cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "venue_info", "venue_map_pic", hashMap, Boolean.TRUE));
         py2 f = py2.f();
         String performId = getPerformId();
         String productSystemId = getProductSystemId();
@@ -389,12 +382,12 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
         this.cancelView = (TickletPerformCancelView) findViewById(R$id.ticklet_detail_perform_cancel);
         this.detailServer.registerObserver(this.td_header);
         this.td_header.setBackgroundColor(Color.parseColor("#965BBD"));
-        rn2 a = rn2.a();
-        this.server = a;
-        a.registerObserver(this);
+        rn2 a2 = rn2.a();
+        this.server = a2;
+        a2.registerObserver(this);
         this.flScreen.setOnClickListener(this);
-        this.mDMMessage.b(TickletNFTTicketItemView.NFT_RECEIVE_ACTION, new C2018c());
-        this.mDMMessage.b(TickletNFTTicketItemView.NFT_LOADING_ACTION, new C2019d());
+        this.mDMMessage.b(TickletNFTTicketItemView.NFT_RECEIVE_ACTION, new c());
+        this.mDMMessage.b(TickletNFTTicketItemView.NFT_LOADING_ACTION, new d());
     }
 
     private void isShowHttpErrorView() {
@@ -428,8 +421,8 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
                 return;
             }
             xn2.c(xn2.f(xn2.TICKLET_NFT_RECEIVE_STATE_ERROR_MSG, "mtop.damai.wireless.ticklet2.nft.prepareIssue", "", "", " uniqueId:" + this.mNftAttr.uniqueId + " , ycCode:" + this.mNftAttr.acSn + " , currentStatus:" + str), xn2.TICKLET_NFT_RECEIVE_STATE_ERROR_CODE, xn2.TICKLET_NFT_RECEIVE_STATE_ERROR_MSG);
-        } catch (NullPointerException e) {
-            e.printStackTrace();
+        } catch (NullPointerException e2) {
+            e2.printStackTrace();
         }
     }
 
@@ -445,7 +438,7 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
             this.isFirstLoadData = false;
             resetTickletDetailUI(ticketDeatilResult, Boolean.TRUE);
             if (this.hanlder == null) {
-                this.hanlder = new HandlerC2020e();
+                this.hanlder = new e();
             }
             this.hanlder.sendEmptyMessageDelayed(200, 3L);
             return;
@@ -625,8 +618,8 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
                 }
                 this.transaction.commitAllowingStateLoss();
                 this.flScreen.setVisibility(0);
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
         }
     }
@@ -642,9 +635,9 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
         hashMap.put("nft_type", z2 ? "1" : "0");
         hashMap.put("item_id", getProjectId());
         hashMap.put("screening_id", getPerformId());
-        C0525a.C0527b c0527b = new C0525a.C0527b();
-        c0527b.i(un2.TICKLET_DETAIL_PAGE).j(hashMap);
-        C0529c.e().l(this, c0527b);
+        a.b bVar = new a.b();
+        bVar.i(un2.TICKLET_DETAIL_PAGE).j(hashMap);
+        cn.damai.common.user.c.e().l(this, bVar);
     }
 
     @Override // cn.damai.ticklet.ui.fragment.TickletDetailInterface
@@ -665,7 +658,7 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
             return;
         }
         if (this.ticketDeatilResult != null) {
-            C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "ticket_info", "nocardbtn", un2.k().t(getProjectId(), str2), Boolean.FALSE));
+            cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "ticket_info", "nocardbtn", un2.k().t(getProjectId(), str2), Boolean.FALSE));
         }
         TickletForgetCardRequest tickletForgetCardRequest = new TickletForgetCardRequest();
         tickletForgetCardRequest.voucherUniqueKey = str;
@@ -722,7 +715,7 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
         beginTransaction.commitAllowingStateLoss();
         this.noticeFragemnt = null;
         if (this.hanlder == null) {
-            this.hanlder = new HandlerC2020e();
+            this.hanlder = new e();
         }
         this.hanlder.sendEmptyMessageDelayed(100, 350L);
     }
@@ -740,7 +733,7 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
             beginTransaction.commitAllowingStateLoss();
             j62.b(this, j62.a(this));
             if (this.hanlder == null) {
-                this.hanlder = new HandlerC2020e();
+                this.hanlder = new e();
             }
             this.hanlder.sendEmptyMessageDelayed(100, 350L);
         }
@@ -765,7 +758,7 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
         beginTransaction.commitAllowingStateLoss();
         this.forgetCardFragment = null;
         if (this.hanlder == null) {
-            this.hanlder = new HandlerC2020e();
+            this.hanlder = new e();
         }
         this.hanlder.sendEmptyMessageDelayed(100, 350L);
     }
@@ -932,8 +925,8 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
         getAllExtras();
         hideBaseLayout();
         initViewUI();
-        String b = oc0.b();
-        if (!TextUtils.isEmpty(b)) {
+        String b2 = oc0.b();
+        if (!TextUtils.isEmpty(b2)) {
             setTitleBackgroundColor(Color.parseColor("#ffffff"));
             this.td_header.fixStatusBar(true);
             Bundle bundle = new Bundle();
@@ -941,11 +934,11 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
             hashMap.put(TicketDetailExtFragment.PRODUCT_SYSTEM_ID, this.productSystemId);
             hashMap.put(TicketDetailExtFragment.PERFORM_ID, this.performId);
             hashMap.put("orderId", this.orderId);
-            bundle.putString("url", WebViewUtil.appendQueryParameter(b, hashMap));
+            bundle.putString("url", WebViewUtil.appendQueryParameter(b2, hashMap));
             WebViewFragment webViewFragment = new WebViewFragment();
             this.downH5Fragment = webViewFragment;
             webViewFragment.setArguments(bundle);
-            this.downH5Fragment.setListener(new C2017b());
+            this.downH5Fragment.setListener(new b());
             getSupportFragmentManager().beginTransaction().replace(R$id.onearch_fragment_container, this.downH5Fragment).commitAllowingStateLoss();
         } else {
             onRefreshDetail();
@@ -1071,7 +1064,7 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
         FrameLayout frameLayout = (FrameLayout) findViewById(R$id.ticklet_container);
         this.mTickletDialogContainer = frameLayout;
         frameLayout.setOnClickListener(this);
-        C0529c.e().K(this);
+        cn.damai.common.user.c.e().K(this);
         TickletTicketItemDigitalTicketsView.SHOW_TYPE = -1;
     }
 
@@ -1095,9 +1088,9 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
         if (tickletDetailViewPager != null) {
             tickletDetailViewPager.onDestory();
         }
-        HandlerC2020e handlerC2020e = this.hanlder;
-        if (handlerC2020e != null) {
-            handlerC2020e.removeCallbacks(null);
+        e eVar = this.hanlder;
+        if (eVar != null) {
+            eVar.removeCallbacks(null);
             this.hanlder = null;
         }
         TickletAnimWindow tickletAnimWindow = this.mapAppWindow;
@@ -1474,7 +1467,7 @@ public class TicketDeatilActivity extends DamaiMapBaseActivity implements Tickle
             hashMap.put("item_id", ticketDeatilResult.getProjectId());
             hashMap.put("titlelabel", i + "");
         }
-        C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "ticket_info", un2.TICKLET_VOUCHER, hashMap, Boolean.TRUE));
+        cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "ticket_info", un2.TICKLET_VOUCHER, hashMap, Boolean.TRUE));
         FrameLayout frameLayout = this.mTickletDialogContainer;
         if (frameLayout != null) {
             frameLayout.setVisibility(0);

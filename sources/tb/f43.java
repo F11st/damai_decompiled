@@ -1,7 +1,6 @@
 package tb;
 
 import android.text.TextUtils;
-import com.alibaba.security.common.d.AbstractC3806c;
 import com.heytap.msp.push.encrypt.AESEncrypt;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
@@ -91,7 +90,7 @@ public class f43 {
         }
         try {
             str2 = c53.a(str, a());
-            a = AbstractC3806c.a;
+            a = com.alibaba.security.common.d.c.a;
             u63.f().d(a);
             z53.a("sdkDecrypt aesDecrypt des data " + str2);
             return str2;
@@ -106,7 +105,7 @@ public class f43 {
         if (TextUtils.isEmpty(a)) {
             a = u63.f().e();
         }
-        if (AbstractC3806c.a.equals(a)) {
+        if (com.alibaba.security.common.d.c.a.equals(a)) {
             z53.a("sdkDecrypt start DES");
             return d(str);
         }

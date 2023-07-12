@@ -295,7 +295,7 @@ public final class FastPreviewActivity extends AppCompatActivity {
     @Override // androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     public void onCreate(@Nullable Bundle bundle) {
         super.onCreate(bundle);
-        setContentView(R.C7909layout.gaiax_fast_preview_activity);
+        setContentView(R.layout.gaiax_fast_preview_activity);
         this.gaiax_render_root_parent = findViewById(R.id.gaiax_render_root_parent);
         findViewById(R.id.close).setOnClickListener(new View.OnClickListener() { // from class: com.youku.gaiax.fastpreview.ui.FastPreviewActivity$onCreate$1
             @Override // android.view.View.OnClickListener
@@ -305,28 +305,28 @@ public final class FastPreviewActivity extends AppCompatActivity {
         });
         Uri data = getIntent().getData();
         String encodedQuery = data == null ? null : data.getEncodedQuery();
-        GXClientToStudio.C3381a c3381a = GXClientToStudio.Companion;
-        JSONObject l = c3381a.a().l(encodedQuery);
+        GXClientToStudio.a aVar = GXClientToStudio.Companion;
+        JSONObject l = aVar.a().l(encodedQuery);
         if (l == null) {
             finish();
             return;
         }
-        GXClientToStudio a = c3381a.a();
+        GXClientToStudio a = aVar.a();
         Context applicationContext = getApplicationContext();
         b41.h(applicationContext, "applicationContext");
         a.m(applicationContext);
         FastPreviewListener fastPreviewListener = new FastPreviewListener();
         this.gxSocketToStudioListener = fastPreviewListener;
         fastPreviewListener.setActivity(this);
-        c3381a.a().t(this.gxSocketToStudioListener);
+        aVar.a().t(this.gxSocketToStudioListener);
         IExperiment experiment = GaiaX.Companion.getInstance().experiment();
         if (experiment != null) {
             experiment.setGaiaXStudioSocket(this.jsIStudioSocket);
         }
         if (b41.d("auto", l.getString("TYPE"))) {
-            c3381a.a().i(this, l);
+            aVar.a().i(this, l);
         } else if (b41.d("manual", l.getString("TYPE"))) {
-            c3381a.a().o(this, l);
+            aVar.a().o(this, l);
             finish();
         }
     }

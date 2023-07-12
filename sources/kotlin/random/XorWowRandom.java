@@ -9,7 +9,7 @@ import tb.oy1;
 /* loaded from: classes3.dex */
 public final class XorWowRandom extends Random implements Serializable {
     @NotNull
-    private static final C8239a Companion = new C8239a(null);
+    private static final a Companion = new a(null);
     @Deprecated
     private static final long serialVersionUID = 0;
     private int addend;
@@ -20,13 +20,12 @@ public final class XorWowRandom extends Random implements Serializable {
     private int z;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.random.XorWowRandom$a */
     /* loaded from: classes3.dex */
-    private static final class C8239a {
-        private C8239a() {
+    private static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8239a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

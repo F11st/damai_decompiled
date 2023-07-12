@@ -22,8 +22,8 @@ import org.android.netutil.UdpConnectType;
 import org.android.spdy.SpdyAgent;
 import org.android.spdy.SpdySessionKind;
 import org.android.spdy.SpdyVersion;
-import tb.C9708t9;
 import tb.hu0;
+import tb.t9;
 import tb.ti1;
 import tb.x6;
 
@@ -112,7 +112,7 @@ public class Inet64Util {
             r8 = 0
             java.lang.String r9 = "udp_connect"
             int r10 = l()     // Catch: java.lang.Throwable -> L3d
-            boolean r11 = tb.C9708t9.F()     // Catch: java.lang.Throwable -> L3b
+            boolean r11 = tb.t9.F()     // Catch: java.lang.Throwable -> L3b
             if (r11 == 0) goto L49
             if (r10 != r5) goto L49
             int r11 = k()     // Catch: java.lang.Throwable -> L3b
@@ -336,7 +336,7 @@ public class Inet64Util {
 
     public static boolean p() {
         Integer num;
-        return C9708t9.D() && (num = i.get(b)) != null && num.intValue() == 2;
+        return t9.D() && (num = i.get(b)) != null && num.intValue() == 2;
     }
 
     public static void q() {
@@ -385,7 +385,7 @@ public class Inet64Util {
                         } catch (Exception unused) {
                         }
                     }
-                }, ThreadPoolExecutorFactory.C0235b.c);
+                }, ThreadPoolExecutorFactory.b.c);
             }
         }, 1500L, TimeUnit.MILLISECONDS);
     }

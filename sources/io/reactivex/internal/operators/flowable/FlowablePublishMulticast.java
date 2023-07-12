@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.functions.Function;
@@ -27,11 +27,11 @@ import tb.i42;
 public final class FlowablePublishMulticast<T, R> extends AbstractFlowableWithUpstream<T, R> {
     final boolean delayError;
     final int prefetch;
-    final Function<? super AbstractC8147b<T>, ? extends Publisher<? extends R>> selector;
+    final Function<? super b<T>, ? extends Publisher<? extends R>> selector;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class MulticastProcessor<T> extends AbstractC8147b<T> implements FlowableSubscriber<T>, Disposable {
+    static final class MulticastProcessor<T> extends b<T> implements FlowableSubscriber<T>, Disposable {
         static final MulticastSubscription[] EMPTY = new MulticastSubscription[0];
         static final MulticastSubscription[] TERMINATED = new MulticastSubscription[0];
         int consumed;
@@ -306,7 +306,7 @@ public final class FlowablePublishMulticast<T, R> extends AbstractFlowableWithUp
             } while (!this.subscribers.compareAndSet(multicastSubscriptionArr, multicastSubscriptionArr2));
         }
 
-        @Override // io.reactivex.AbstractC8147b
+        @Override // io.reactivex.b
         protected void subscribeActual(Subscriber<? super T> subscriber) {
             MulticastSubscription<T> multicastSubscription = new MulticastSubscription<>(subscriber, this);
             subscriber.onSubscribe(multicastSubscription);
@@ -411,14 +411,14 @@ public final class FlowablePublishMulticast<T, R> extends AbstractFlowableWithUp
         }
     }
 
-    public FlowablePublishMulticast(AbstractC8147b<T> abstractC8147b, Function<? super AbstractC8147b<T>, ? extends Publisher<? extends R>> function, int i, boolean z) {
-        super(abstractC8147b);
+    public FlowablePublishMulticast(b<T> bVar, Function<? super b<T>, ? extends Publisher<? extends R>> function, int i, boolean z) {
+        super(bVar);
         this.selector = function;
         this.prefetch = i;
         this.delayError = z;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super R> subscriber) {
         MulticastProcessor multicastProcessor = new MulticastProcessor(this.prefetch, this.delayError);
         try {

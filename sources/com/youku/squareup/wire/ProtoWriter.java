@@ -1,6 +1,6 @@
 package com.youku.squareup.wire;
 
-import com.alipay.sdk.m.n.C4250a;
+import com.alipay.sdk.m.n.a;
 import java.io.IOException;
 import okio.BufferedSink;
 import okio.ByteString;
@@ -78,7 +78,7 @@ public final class ProtoWriter {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static int varint32Size(int i) {
-        if ((i & C4250a.g) == 0) {
+        if ((i & a.g) == 0) {
             return 1;
         }
         if ((i & (-16384)) == 0) {
@@ -149,7 +149,7 @@ public final class ProtoWriter {
     }
 
     public void writeVarint32(int i) throws IOException {
-        while ((i & C4250a.g) != 0) {
+        while ((i & a.g) != 0) {
             this.sink.writeByte((i & 127) | 128);
             i >>>= 7;
         }

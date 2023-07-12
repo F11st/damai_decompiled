@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Pair;
 import com.huawei.hms.common.PackageConstants;
-import com.huawei.hms.device.C5556a;
 import com.huawei.hms.support.log.HMSLog;
 import com.huawei.hms.utils.PackageManagerHelper;
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
@@ -40,10 +39,9 @@ public class HMSPackageManager {
     public long k;
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.utils.HMSPackageManager$a */
     /* loaded from: classes10.dex */
-    public class RunnableC5736a implements Runnable {
-        public RunnableC5736a() {
+    public class a implements Runnable {
+        public a() {
         }
 
         @Override // java.lang.Runnable
@@ -59,9 +57,8 @@ public class HMSPackageManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.utils.HMSPackageManager$b */
     /* loaded from: classes10.dex */
-    public static class C5737b implements Comparable<C5737b> {
+    public static class b implements Comparable<b> {
         public String a;
         public String b;
         public String c;
@@ -69,7 +66,7 @@ public class HMSPackageManager {
         public String e;
         public Long f;
 
-        public C5737b(String str, String str2, String str3, String str4, String str5, long j) {
+        public b(String str, String str2, String str3, String str4, String str5, long j) {
             this.a = str;
             this.b = str2;
             this.c = str3;
@@ -80,11 +77,11 @@ public class HMSPackageManager {
 
         @Override // java.lang.Comparable
         /* renamed from: a */
-        public int compareTo(C5737b c5737b) {
-            if (TextUtils.equals(this.e, c5737b.e)) {
-                return this.f.compareTo(c5737b.f);
+        public int compareTo(b bVar) {
+            if (TextUtils.equals(this.e, bVar.e)) {
+                return this.f.compareTo(bVar.f);
             }
-            return this.e.compareTo(c5737b.e);
+            return this.e.compareTo(bVar.e);
         }
     }
 
@@ -173,14 +170,14 @@ public class HMSPackageManager {
             this.h = "com.huawei.hms.core.aidlservice";
             return f;
         }
-        ArrayList<C5737b> h = h();
+        ArrayList<b> h = h();
         if (h == null) {
             HMSLog.e("HMSPackageManager", "PackagePriorityInfo list is null");
             return null;
         }
-        Iterator<C5737b> it = h.iterator();
+        Iterator<b> it = h.iterator();
         while (it.hasNext()) {
-            C5737b next = it.next();
+            b next = it.next();
             String str = next.a;
             String str2 = next.b;
             String str3 = next.c;
@@ -292,10 +289,10 @@ public class HMSPackageManager {
         return !TextUtils.isEmpty(this.h) ? this.h : "com.huawei.hms.core.aidlservice";
     }
 
-    public final ArrayList<C5737b> h() {
+    public final ArrayList<b> h() {
         List<ResolveInfo> queryIntentServices = this.a.getPackageManager().queryIntentServices(new Intent(PackageConstants.GENERAL_SERVICES_ACTION), 128);
         if (queryIntentServices != null && !queryIntentServices.isEmpty()) {
-            ArrayList<C5737b> arrayList = new ArrayList<>();
+            ArrayList<b> arrayList = new ArrayList<>();
             for (ResolveInfo resolveInfo : queryIntentServices) {
                 String str = resolveInfo.serviceInfo.applicationInfo.packageName;
                 long packageFirstInstallTime = this.b.getPackageFirstInstallTime(str);
@@ -303,21 +300,21 @@ public class HMSPackageManager {
                 if (bundle == null) {
                     HMSLog.e("HMSPackageManager", "package " + str + " get metaData is null");
                 } else {
-                    String a = a(bundle, "hms_app_checker_config");
-                    String a2 = a(a);
-                    if (TextUtils.isEmpty(a2)) {
-                        HMSLog.i("HMSPackageManager", "get priority fail. hmsCheckerCfg: " + a);
+                    String a2 = a(bundle, "hms_app_checker_config");
+                    String a3 = a(a2);
+                    if (TextUtils.isEmpty(a3)) {
+                        HMSLog.i("HMSPackageManager", "get priority fail. hmsCheckerCfg: " + a2);
                     } else {
-                        String a3 = a(bundle, "hms_app_signer_v2");
-                        if (TextUtils.isEmpty(a3)) {
+                        String a4 = a(bundle, "hms_app_signer_v2");
+                        if (TextUtils.isEmpty(a4)) {
                             HMSLog.i("HMSPackageManager", "get signerV2 fail.");
                         } else {
-                            String a4 = a(bundle, "hms_app_cert_chain");
-                            if (TextUtils.isEmpty(a4)) {
+                            String a5 = a(bundle, "hms_app_cert_chain");
+                            if (TextUtils.isEmpty(a5)) {
                                 HMSLog.i("HMSPackageManager", "get certChain fail.");
                             } else {
-                                HMSLog.i("HMSPackageManager", "add: " + str + AVFSCacheConstants.COMMA_SEP + a + AVFSCacheConstants.COMMA_SEP + packageFirstInstallTime);
-                                arrayList.add(new C5737b(str, a, a3, a4, a2, packageFirstInstallTime));
+                                HMSLog.i("HMSPackageManager", "add: " + str + AVFSCacheConstants.COMMA_SEP + a2 + AVFSCacheConstants.COMMA_SEP + packageFirstInstallTime);
+                                arrayList.add(new b(str, a2, a4, a5, a3, packageFirstInstallTime));
                             }
                         }
                     }
@@ -431,11 +428,11 @@ public class HMSPackageManager {
     }
 
     public final void b(String str) {
-        String a = a(str);
-        if (TextUtils.isEmpty(a)) {
+        String a2 = a(str);
+        if (TextUtils.isEmpty(a2)) {
             return;
         }
-        a.substring(9);
+        a2.substring(9);
     }
 
     public final String a(String str) {
@@ -475,22 +472,22 @@ public class HMSPackageManager {
 
     public final boolean a(String str, String str2, String str3) {
         if (!TextUtils.isEmpty(str2) && !TextUtils.isEmpty(str3)) {
-            List<X509Certificate> b = C5556a.b(str3);
-            if (b.size() == 0) {
+            List<X509Certificate> b2 = com.huawei.hms.device.a.b(str3);
+            if (b2.size() == 0) {
                 HMSLog.e("HMSPackageManager", "certChain is empty");
                 return false;
-            } else if (!C5556a.a(C5556a.a(this.a), b)) {
+            } else if (!com.huawei.hms.device.a.a(com.huawei.hms.device.a.a(this.a), b2)) {
                 HMSLog.e("HMSPackageManager", "failed to verify cert chain");
                 return false;
             } else {
-                X509Certificate x509Certificate = b.get(b.size() - 1);
-                if (!C5556a.a(x509Certificate, "Huawei CBG HMS")) {
+                X509Certificate x509Certificate = b2.get(b2.size() - 1);
+                if (!com.huawei.hms.device.a.a(x509Certificate, "Huawei CBG HMS")) {
                     HMSLog.e("HMSPackageManager", "CN is invalid");
                     return false;
-                } else if (!C5556a.b(x509Certificate, "Huawei CBG Cloud Security Signer")) {
+                } else if (!com.huawei.hms.device.a.b(x509Certificate, "Huawei CBG Cloud Security Signer")) {
                     HMSLog.e("HMSPackageManager", "OU is invalid");
                     return false;
-                } else if (C5556a.a(x509Certificate, str, str2)) {
+                } else if (com.huawei.hms.device.a.a(x509Certificate, str, str2)) {
                     return true;
                 } else {
                     HMSLog.e("HMSPackageManager", "signature is invalid: " + str);
@@ -503,7 +500,7 @@ public class HMSPackageManager {
     }
 
     public final void a() {
-        new Thread(new RunnableC5736a(), "Thread-asyncOnceCheckMDMState").start();
+        new Thread(new a(), "Thread-asyncOnceCheckMDMState").start();
     }
 
     public static String a(int i) {

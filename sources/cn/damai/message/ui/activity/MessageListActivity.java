@@ -19,7 +19,7 @@ import cn.damai.common.DamaiConstants;
 import cn.damai.common.app.ShareperfenceConstants;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.homepage.R$color;
@@ -84,7 +84,7 @@ public class MessageListActivity extends DamaiBaseActivity<MessagePresenter, Mes
                 HashMap hashMap = new HashMap();
                 hashMap.put("titlelabel", MessageListActivity.this.mMessageGroupItem.getMsgTypeName());
                 hashMap.put("contentlabel", messageItem.getTitle());
-                C0529c.e().x(te1.m().g(te1.HOME_MESSAGE_LIST_PAGE, "list", "item_" + i2, hashMap, Boolean.TRUE));
+                c.e().x(te1.m().g(te1.HOME_MESSAGE_LIST_PAGE, "list", "item_" + i2, hashMap, Boolean.TRUE));
                 if (!wh2.j(messageItem.actionUrl)) {
                     Bundle bundle = new Bundle();
                     bundle.putString("from", "push");
@@ -102,11 +102,11 @@ public class MessageListActivity extends DamaiBaseActivity<MessagePresenter, Mes
         /* compiled from: Taobao */
         /* renamed from: cn.damai.message.ui.activity.MessageListActivity$2$a */
         /* loaded from: classes15.dex */
-        public class DialogInterface$OnClickListenerC1347a implements DialogInterface.OnClickListener {
+        public class a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ MessageItem a;
 
-            DialogInterface$OnClickListenerC1347a(MessageItem messageItem) {
+            a(MessageItem messageItem) {
                 this.a = messageItem;
             }
 
@@ -131,22 +131,21 @@ public class MessageListActivity extends DamaiBaseActivity<MessagePresenter, Mes
             }
             int i2 = i - 1;
             if (i2 < wh2.e(MessageListActivity.this.mDatas) && (messageItem = (MessageItem) MessageListActivity.this.mDatas.get(i2)) != null) {
-                new AlertDialog.Builder(MessageListActivity.this.mContext).setCancelable(true).setItems(new String[]{"删除消息"}, new DialogInterface$OnClickListenerC1347a(messageItem)).create().show();
+                new AlertDialog.Builder(MessageListActivity.this.mContext).setCancelable(true).setItems(new String[]{"删除消息"}, new a(messageItem)).create().show();
                 return true;
             }
             return false;
         }
     };
-    private PullToRefreshBase.OnRefreshListener<ListView> mOnRefreshListener = new C1348a();
-    private PullToRefreshBase.OnLastItemVisibleListener mOnLastItemVisibleListener = new C1349b();
+    private PullToRefreshBase.OnRefreshListener<ListView> mOnRefreshListener = new a();
+    private PullToRefreshBase.OnLastItemVisibleListener mOnLastItemVisibleListener = new b();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.message.ui.activity.MessageListActivity$a */
     /* loaded from: classes6.dex */
-    public class C1348a implements PullToRefreshBase.OnRefreshListener<ListView> {
+    public class a implements PullToRefreshBase.OnRefreshListener<ListView> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1348a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.pulltorefresh.library.PullToRefreshBase.OnRefreshListener
@@ -163,12 +162,11 @@ public class MessageListActivity extends DamaiBaseActivity<MessagePresenter, Mes
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.message.ui.activity.MessageListActivity$b */
     /* loaded from: classes6.dex */
-    public class C1349b implements PullToRefreshBase.OnLastItemVisibleListener {
+    public class b implements PullToRefreshBase.OnLastItemVisibleListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1349b() {
+        b() {
         }
 
         @Override // cn.damai.uikit.pulltorefresh.library.PullToRefreshBase.OnLastItemVisibleListener

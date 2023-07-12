@@ -21,7 +21,7 @@ import org.jetbrains.annotations.Nullable;
 public final class h8 {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C9206a Companion = new C9206a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final h8 c = new h8();
     @NotNull
@@ -30,15 +30,14 @@ public final class h8 {
     private final HashMap<String, ActionRelation<FollowStateBean>> b = new HashMap<>();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.h8$a */
     /* loaded from: classes7.dex */
-    public static final class C9206a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9206a() {
+        private a() {
         }
 
-        public /* synthetic */ C9206a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -50,14 +49,13 @@ public final class h8 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.h8$b */
     /* loaded from: classes7.dex */
-    public static final class C9207b implements ActionRelation<FollowStateBean> {
+    public static final class b implements ActionRelation<FollowStateBean> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Ref$ObjectRef<FollowBox> b;
         final /* synthetic */ FollowBox c;
 
-        C9207b(Ref$ObjectRef<FollowBox> ref$ObjectRef, FollowBox followBox) {
+        b(Ref$ObjectRef<FollowBox> ref$ObjectRef, FollowBox followBox) {
             this.b = ref$ObjectRef;
             this.c = followBox;
         }
@@ -144,7 +142,7 @@ public final class h8 {
             return;
         }
         function1.invoke(Boolean.valueOf(followBox.isFollowed));
-        CityWantRequestKt.b(!followBox.isFollowed, str, new C9207b(ref$ObjectRef, followBox), null, 8, null);
+        CityWantRequestKt.b(!followBox.isFollowed, str, new b(ref$ObjectRef, followBox), null, 8, null);
     }
 
     public final void d(@Nullable Fragment fragment, @Nullable String str) {

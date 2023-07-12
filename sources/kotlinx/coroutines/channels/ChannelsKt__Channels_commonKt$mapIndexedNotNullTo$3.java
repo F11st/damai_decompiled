@@ -42,6 +42,6 @@ public final class ChannelsKt__Channels_commonKt$mapIndexedNotNullTo$3 extends C
     public final Object invokeSuspend(@NotNull Object obj) {
         this.result = obj;
         this.label |= Integer.MIN_VALUE;
-        return C8648b.V(null, null, null, this);
+        return b.V(null, null, null, this);
     }
 }

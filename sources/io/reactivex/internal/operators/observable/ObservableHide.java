@@ -57,7 +57,7 @@ public final class ObservableHide<T> extends AbstractObservableWithUpstream<T, T
         super(observableSource);
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new HideDisposable(observer));
     }

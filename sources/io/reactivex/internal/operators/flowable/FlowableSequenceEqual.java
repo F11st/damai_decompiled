@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.functions.BiPredicate;
 import io.reactivex.internal.fuseable.QueueSubscription;
@@ -20,7 +20,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableSequenceEqual<T> extends AbstractC8147b<Boolean> {
+public final class FlowableSequenceEqual<T> extends b<Boolean> {
     final BiPredicate<? super T, ? super T> comparer;
     final Publisher<? extends T> first;
     final int prefetch;
@@ -274,7 +274,7 @@ public final class FlowableSequenceEqual<T> extends AbstractC8147b<Boolean> {
         this.prefetch = i;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super Boolean> subscriber) {
         EqualCoordinator equalCoordinator = new EqualCoordinator(subscriber, this.prefetch, this.comparer);
         subscriber.onSubscribe(equalCoordinator);

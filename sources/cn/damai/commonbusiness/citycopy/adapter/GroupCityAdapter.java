@@ -24,7 +24,7 @@ public class GroupCityAdapter extends RecyclerView.Adapter<GroupCityViewHolder> 
     private OnCityListItemClickListener a;
     private Context b;
     private List<SitesBean> c;
-    private View.OnClickListener d = new View$OnClickListenerC0611a();
+    private View.OnClickListener d = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes4.dex */
@@ -59,12 +59,11 @@ public class GroupCityAdapter extends RecyclerView.Adapter<GroupCityViewHolder> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.citycopy.adapter.GroupCityAdapter$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0611a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0611a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener

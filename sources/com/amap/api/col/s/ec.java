@@ -26,9 +26,8 @@ public final class ec implements ThreadFactory {
     private final int j;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.ec$a */
     /* loaded from: classes10.dex */
-    public static class C4430a {
+    public static class a {
         private ThreadFactory a;
         private Thread.UncaughtExceptionHandler b;
         private String c;
@@ -47,7 +46,7 @@ public final class ec implements ThreadFactory {
             this.e = null;
         }
 
-        public final C4430a a(String str) {
+        public final a a(String str) {
             this.c = str;
             return this;
         }
@@ -66,8 +65,8 @@ public final class ec implements ThreadFactory {
         m = (availableProcessors * 2) + 1;
     }
 
-    /* synthetic */ ec(C4430a c4430a, byte b) {
-        this(c4430a);
+    /* synthetic */ ec(a aVar, byte b) {
+        this(aVar);
     }
 
     private ThreadFactory g() {
@@ -134,31 +133,31 @@ public final class ec implements ThreadFactory {
         return newThread;
     }
 
-    private ec(C4430a c4430a) {
-        if (c4430a.a != null) {
-            this.b = c4430a.a;
+    private ec(a aVar) {
+        if (aVar.a != null) {
+            this.b = aVar.a;
         } else {
             this.b = Executors.defaultThreadFactory();
         }
-        int i = c4430a.f;
+        int i = aVar.f;
         this.g = i;
         int i2 = m;
         this.h = i2;
         if (i2 >= i) {
-            this.j = c4430a.h;
-            if (c4430a.i != null) {
-                this.i = c4430a.i;
+            this.j = aVar.h;
+            if (aVar.i != null) {
+                this.i = aVar.i;
             } else {
                 this.i = new LinkedBlockingQueue(256);
             }
-            if (!TextUtils.isEmpty(c4430a.c)) {
-                this.d = c4430a.c;
+            if (!TextUtils.isEmpty(aVar.c)) {
+                this.d = aVar.c;
             } else {
                 this.d = "amap-threadpool";
             }
-            this.e = c4430a.d;
-            this.f = c4430a.e;
-            this.c = c4430a.b;
+            this.e = aVar.d;
+            this.f = aVar.e;
+            this.c = aVar.b;
             this.a = new AtomicLong();
             return;
         }

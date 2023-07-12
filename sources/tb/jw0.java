@@ -6,7 +6,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.IdRes;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -21,24 +20,23 @@ public class jw0 {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.jw0$a */
     /* loaded from: classes9.dex */
-    public class C9323a implements DMImageCreator.DMImageSuccListener {
+    public class a implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ViewGroup a;
 
-        C9323a(ViewGroup viewGroup) {
+        a(ViewGroup viewGroup) {
             this.a = viewGroup;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1471158371")) {
-                ipChange.ipc$dispatch("-1471158371", new Object[]{this, c0502e});
-            } else if (c0502e == null || c0502e.b == null) {
+                ipChange.ipc$dispatch("-1471158371", new Object[]{this, eVar});
+            } else if (eVar == null || eVar.b == null) {
             } else {
-                ((ImageView) this.a.findViewById(R$id.user_iv_header)).setImageDrawable(new C9771ui(c0502e.b));
+                ((ImageView) this.a.findViewById(R$id.user_iv_header)).setImageDrawable(new ui(eVar.b));
             }
         }
     }
@@ -108,7 +106,7 @@ public class jw0 {
                 } else {
                     str = str3 + "?ran=" + new Random().nextInt();
                 }
-                C0504a.b().c(str).c(R$drawable.c_default_bg).i(i8).n(new C9323a(viewGroup)).f();
+                cn.damai.common.image.a.b().c(str).c(R$drawable.c_default_bg).i(i8).n(new a(viewGroup)).f();
             }
         }
     }

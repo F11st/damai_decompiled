@@ -6,14 +6,13 @@ public class PushAnalyticsCenter {
     public PushBaseAnalytics a;
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.push.utils.ha.PushAnalyticsCenter$a */
     /* loaded from: classes10.dex */
-    private static class C5702a {
+    private static class a {
         public static PushAnalyticsCenter a = new PushAnalyticsCenter();
     }
 
     public static PushAnalyticsCenter getInstance() {
-        return C5702a.a;
+        return a.a;
     }
 
     public PushBaseAnalytics getPushAnalytics() {

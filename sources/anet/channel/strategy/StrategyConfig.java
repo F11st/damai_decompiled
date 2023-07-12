@@ -1,15 +1,15 @@
 package anet.channel.strategy;
 
 import android.text.TextUtils;
-import anet.channel.strategy.C0214b;
+import anet.channel.strategy.b;
 import anet.channel.strategy.utils.SerialLruCache;
 import anet.channel.util.ALog;
 import java.io.Serializable;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
-import tb.C9708t9;
 import tb.lw2;
+import tb.t9;
 
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
@@ -17,34 +17,34 @@ import tb.lw2;
 public class StrategyConfig implements Serializable {
     private static final int MAX_CACHE_SIZE = 256;
     public static final String NO_RESULT = "No_Result";
-    private static transient boolean isStrategyUpgrade = C9708t9.N();
+    private static transient boolean isStrategyUpgrade = t9.N();
     private static final long serialVersionUID = -7798500032935529499L;
     private SerialLruCache<String, String> schemeMap = null;
     private Map<String, String> unitMap = null;
     private transient StrategyInfoHolder holder = null;
     private Map<String, String> bssidUniqueIdMap = null;
 
-    private TreeMap<String, String> updateDns(C0214b.C0218d[] c0218dArr) {
+    private TreeMap<String, String> updateDns(b.d[] dVarArr) {
         TreeMap<String, String> treeMap = null;
-        if (c0218dArr != null && c0218dArr.length != 0) {
-            for (C0214b.C0218d c0218d : c0218dArr) {
-                if (c0218d.f) {
-                    this.schemeMap.remove(c0218d.a);
-                } else if (c0218d.d != null) {
+        if (dVarArr != null && dVarArr.length != 0) {
+            for (b.d dVar : dVarArr) {
+                if (dVar.f) {
+                    this.schemeMap.remove(dVar.a);
+                } else if (dVar.d != null) {
                     if (treeMap == null) {
                         treeMap = new TreeMap<>();
                     }
-                    treeMap.put(c0218d.a, c0218d.d);
+                    treeMap.put(dVar.a, dVar.d);
                 } else {
-                    if (!"http".equalsIgnoreCase(c0218d.c) && !"https".equalsIgnoreCase(c0218d.c)) {
-                        this.schemeMap.put(c0218d.a, NO_RESULT);
+                    if (!"http".equalsIgnoreCase(dVar.c) && !"https".equalsIgnoreCase(dVar.c)) {
+                        this.schemeMap.put(dVar.a, NO_RESULT);
                     } else {
-                        this.schemeMap.put(c0218d.a, c0218d.c);
+                        this.schemeMap.put(dVar.a, dVar.c);
                     }
-                    if (!TextUtils.isEmpty(c0218d.e)) {
-                        this.unitMap.put(c0218d.a, c0218d.e);
+                    if (!TextUtils.isEmpty(dVar.e)) {
+                        this.unitMap.put(dVar.a, dVar.e);
                     } else {
-                        this.unitMap.remove(c0218d.a);
+                        this.unitMap.remove(dVar.a);
                     }
                 }
             }
@@ -52,27 +52,27 @@ public class StrategyConfig implements Serializable {
         return treeMap;
     }
 
-    private TreeMap<String, String> updateDnsInfo(C0214b.C0219e[] c0219eArr) {
+    private TreeMap<String, String> updateDnsInfo(b.e[] eVarArr) {
         TreeMap<String, String> treeMap = null;
-        if (c0219eArr != null && c0219eArr.length != 0) {
-            for (C0214b.C0219e c0219e : c0219eArr) {
-                if (c0219e.j) {
-                    this.schemeMap.remove(c0219e.a);
-                } else if (c0219e.d != null) {
+        if (eVarArr != null && eVarArr.length != 0) {
+            for (b.e eVar : eVarArr) {
+                if (eVar.j) {
+                    this.schemeMap.remove(eVar.a);
+                } else if (eVar.d != null) {
                     if (treeMap == null) {
                         treeMap = new TreeMap<>();
                     }
-                    treeMap.put(c0219e.a, c0219e.d);
+                    treeMap.put(eVar.a, eVar.d);
                 } else {
-                    if (!"http".equalsIgnoreCase(c0219e.c) && !"https".equalsIgnoreCase(c0219e.c)) {
-                        this.schemeMap.put(c0219e.a, NO_RESULT);
+                    if (!"http".equalsIgnoreCase(eVar.c) && !"https".equalsIgnoreCase(eVar.c)) {
+                        this.schemeMap.put(eVar.a, NO_RESULT);
                     } else {
-                        this.schemeMap.put(c0219e.a, c0219e.c);
+                        this.schemeMap.put(eVar.a, eVar.c);
                     }
-                    if (!TextUtils.isEmpty(c0219e.e)) {
-                        this.unitMap.put(c0219e.a, c0219e.e);
+                    if (!TextUtils.isEmpty(eVar.e)) {
+                        this.unitMap.put(eVar.a, eVar.e);
                     } else {
-                        this.unitMap.remove(c0219e.a);
+                        this.unitMap.remove(eVar.a);
                     }
                 }
             }
@@ -151,9 +151,9 @@ public class StrategyConfig implements Serializable {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public void update(C0214b.C0221g c0221g) {
+    public void update(b.g gVar) {
         synchronized (this) {
-            TreeMap<String, String> updateDns = isStrategyUpgrade ? updateDns(c0221g.c) : updateDnsInfo(c0221g.b);
+            TreeMap<String, String> updateDns = isStrategyUpgrade ? updateDns(gVar.c) : updateDnsInfo(gVar.b);
             if (updateDns != null) {
                 for (Map.Entry<String, String> entry : updateDns.entrySet()) {
                     String value = entry.getValue();

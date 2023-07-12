@@ -39,7 +39,7 @@ public class DagoLikeEffectViewUtils {
             List<Bitmap> list2 = sBitmaps;
             return list2.get(random(list2.size()));
         }
-        return BitmapFactory.decodeResource(UIUtil.getResources(), new int[]{R.C7941drawable.dago_pgc_ic_heart0, R.C7941drawable.dago_pgc_ic_heart1, R.C7941drawable.dago_pgc_ic_heart2, R.C7941drawable.dago_pgc_ic_heart3, R.C7941drawable.dago_pgc_ic_heart4, R.C7941drawable.dago_pgc_ic_heart5}[random(5)]);
+        return BitmapFactory.decodeResource(UIUtil.getResources(), new int[]{R.drawable.dago_pgc_ic_heart0, R.drawable.dago_pgc_ic_heart1, R.drawable.dago_pgc_ic_heart2, R.drawable.dago_pgc_ic_heart3, R.drawable.dago_pgc_ic_heart4, R.drawable.dago_pgc_ic_heart5}[random(5)]);
     }
 
     public static int[] getRandomPos() {

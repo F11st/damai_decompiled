@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.taobao.phenix.compat.effects.C6855a;
+import com.taobao.phenix.compat.effects.a;
 import com.taobao.uikit.extend.feature.features.PhenixOptions;
 import com.taobao.uikit.extend.feature.view.TUrlImageView;
 import com.youku.live.dago.liveplayback.R;
@@ -33,7 +33,7 @@ import tb.cq;
 /* loaded from: classes2.dex */
 public class EndPageView extends LinearLayout {
     private static transient /* synthetic */ IpChange $ipChange = null;
-    private static final int DEFAULT_AVATAR = R.C7933drawable.dago_end_page_default_avatar;
+    private static final int DEFAULT_AVATAR = R.drawable.dago_end_page_default_avatar;
     private static final long DEFAULT_COINS = 0;
     private static final long DEFAULT_FANS = 0;
     private static final String DEFAULT_NICK = "主播";
@@ -133,7 +133,7 @@ public class EndPageView extends LinearLayout {
             ipChange.ipc$dispatch("-950592342", new Object[]{this, context});
             return;
         }
-        LayoutInflater.from(context).inflate(R.C7935layout.dago_end_page_view, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_end_page_view, (ViewGroup) this, true);
         this.mBackgroundImageView = (TUrlImageView) findViewById(R.id.end_page_background);
         this.mActorNickTv = (TextView) findViewById(R.id.end_page_nick);
         this.mActorAvatar = (TUrlImageView) findViewById(R.id.end_page_avatar);
@@ -165,11 +165,11 @@ public class EndPageView extends LinearLayout {
         this.mFirstRecommendView.setOnClickListener(this.mClickListener);
         this.mSecondRecommendView.setOnClickListener(this.mClickListener);
         TUrlImageView tUrlImageView = this.mBackgroundImageView;
-        int i = R.C7933drawable.dago_end_page_bg;
+        int i = R.drawable.dago_end_page_bg;
         tUrlImageView.setImageResource(i);
         this.mBackgroundImageView.setPlaceHoldImageResId(i);
         this.mBackgroundImageView.setFadeIn(true);
-        this.mBackgroundImageView.setImageUrl("https://gw.alicdn.com/tfs/TB1sVTsJYj1gK0jSZFOXXc7GpXa-113-244.png", new PhenixOptions().bitmapProcessors(new C6855a(getContext())));
+        this.mBackgroundImageView.setImageUrl("https://gw.alicdn.com/tfs/TB1sVTsJYj1gK0jSZFOXXc7GpXa-113-244.png", new PhenixOptions().bitmapProcessors(new a(getContext())));
         this.mContext = context;
         setVisibility(8);
         UIUtils.setViewRoundedCorner(this.mActorAvatar, 35);
@@ -273,10 +273,10 @@ public class EndPageView extends LinearLayout {
         this.mPopularityTv.setText(Utils.formatNum(String.valueOf(endPageModel.fansCount), bool));
         int i = endPageModel.gender;
         if (i == 0) {
-            this.mGenderIv.setImageResource(R.C7933drawable.dago_end_page_women);
+            this.mGenderIv.setImageResource(R.drawable.dago_end_page_women);
             this.mGenderIv.setVisibility(0);
         } else if (1 == i) {
-            this.mGenderIv.setImageResource(R.C7933drawable.dago_end_page_men);
+            this.mGenderIv.setImageResource(R.drawable.dago_end_page_men);
             this.mGenderIv.setVisibility(0);
             this.mGenderIv.setVisibility(0);
         } else {

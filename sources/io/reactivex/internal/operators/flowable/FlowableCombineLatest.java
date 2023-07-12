@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.b;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.operators.flowable.FlowableMap;
@@ -25,7 +25,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableCombineLatest<T, R> extends AbstractC8147b<R> {
+public final class FlowableCombineLatest<T, R> extends b<R> {
     @Nullable
     final Publisher<? extends T>[] array;
     final int bufferSize;
@@ -379,7 +379,7 @@ public final class FlowableCombineLatest<T, R> extends AbstractC8147b<R> {
         this.delayErrors = z;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super R> subscriber) {
         int length;
         Publisher<? extends T>[] publisherArr = this.array;

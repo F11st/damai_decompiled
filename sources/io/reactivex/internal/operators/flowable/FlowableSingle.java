@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.internal.subscriptions.DeferredScalarSubscription;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import org.reactivestreams.Subscriber;
@@ -85,12 +85,12 @@ public final class FlowableSingle<T> extends AbstractFlowableWithUpstream<T, T> 
         }
     }
 
-    public FlowableSingle(AbstractC8147b<T> abstractC8147b, T t) {
-        super(abstractC8147b);
+    public FlowableSingle(b<T> bVar, T t) {
+        super(bVar);
         this.defaultValue = t;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new SingleElementSubscriber(subscriber, this.defaultValue));
     }

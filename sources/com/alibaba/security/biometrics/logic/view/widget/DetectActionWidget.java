@@ -19,14 +19,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.core.internal.view.SupportMenu;
 import com.alibaba.security.biometrics.R;
-import com.alibaba.security.biometrics.c.C3757d;
 import com.alibaba.security.biometrics.logic.model.DazzleCollectDataUIConfigItem;
 import com.alibaba.security.biometrics.logic.view.ALBiometricsActivityParentView;
 import com.alibaba.security.biometrics.logic.view.custom.RPDetectCoreView;
 import com.alibaba.security.biometrics.service.model.params.ALBiometricsParams;
 import com.alibaba.security.biometrics.skin.model.DetectAnimSkinData;
-import com.alibaba.security.common.c.C3800a;
-import com.alibaba.security.common.d.C3807d;
+import com.alibaba.security.common.d.d;
 import com.alibaba.security.common.view.GifImageView;
 
 /* compiled from: Taobao */
@@ -51,20 +49,18 @@ public class DetectActionWidget extends BaseWidget {
     private long r;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.security.biometrics.logic.view.widget.DetectActionWidget$a */
     /* loaded from: classes8.dex */
-    public interface InterfaceC3782a {
+    public interface a {
         DazzleCollectDataUIConfigItem a(int i);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.security.biometrics.logic.view.widget.DetectActionWidget$b */
     /* loaded from: classes8.dex */
-    public static class HandlerC3783b extends Handler {
+    public static class b extends Handler {
         private final DetectActionWidget a;
 
-        public HandlerC3783b(DetectActionWidget detectActionWidget) {
+        public b(DetectActionWidget detectActionWidget) {
             super(Looper.getMainLooper());
             this.a = detectActionWidget;
         }
@@ -90,23 +86,23 @@ public class DetectActionWidget extends BaseWidget {
     }
 
     private void k() {
-        this.p = new HandlerC3783b(this);
+        this.p = new b(this);
     }
 
     private void l() {
         RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) this.l.getLayoutParams();
-        layoutParams.setMargins(0, this.b.getCircleBottom() + C3807d.a(getContext(), 80.0f), 0, 0);
+        layoutParams.setMargins(0, this.b.getCircleBottom() + d.a(getContext(), 80.0f), 0, 0);
         this.l.setLayoutParams(layoutParams);
         this.l.requestLayout();
         RelativeLayout.LayoutParams layoutParams2 = (RelativeLayout.LayoutParams) this.m.getLayoutParams();
-        layoutParams2.setMargins(0, this.b.getCircleBottom() + C3807d.a(getContext(), 78.0f), 0, 0);
+        layoutParams2.setMargins(0, this.b.getCircleBottom() + d.a(getContext(), 78.0f), 0, 0);
         this.m.setLayoutParams(layoutParams2);
         this.m.requestLayout();
     }
 
     private void m() {
         RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) this.i.getLayoutParams();
-        layoutParams.setMargins(0, this.b.getCircleBottom() + C3807d.a(getContext(), 20.0f), 0, 0);
+        layoutParams.setMargins(0, this.b.getCircleBottom() + d.a(getContext(), 20.0f), 0, 0);
         this.i.setLayoutParams(layoutParams);
         this.i.requestLayout();
     }
@@ -125,20 +121,20 @@ public class DetectActionWidget extends BaseWidget {
     }
 
     private void p() {
-        ALBiometricsActivityParentView.InterfaceC3778a interfaceC3778a = this.a;
-        if (interfaceC3778a != null) {
-            interfaceC3778a.g();
+        ALBiometricsActivityParentView.a aVar = this.a;
+        if (aVar != null) {
+            aVar.g();
         }
     }
 
     @Override // com.alibaba.security.biometrics.logic.view.widget.BaseWidget
     protected final void b() {
-        C3788b.a(this.i, d("actionTipText"));
-        C3788b.a(this.j, d("messageText"));
+        com.alibaba.security.biometrics.logic.view.widget.b.a(this.i, d("actionTipText"));
+        com.alibaba.security.biometrics.logic.view.widget.b.a(this.j, d("messageText"));
         DetectAnimSkinData e2 = e("detectAnimation");
         if (e2 != null) {
-            this.b.setBreatheColor(C3757d.a(e2.getWarningColor(), SupportMenu.CATEGORY_MASK));
-            this.b.setWaitingColor(C3757d.a(e2.getLoadingColor(), -16776961));
+            this.b.setBreatheColor(com.alibaba.security.biometrics.c.d.a(e2.getWarningColor(), SupportMenu.CATEGORY_MASK));
+            this.b.setWaitingColor(com.alibaba.security.biometrics.c.d.a(e2.getLoadingColor(), -16776961));
             return;
         }
         this.b.setBreatheColor(SupportMenu.CATEGORY_MASK);
@@ -158,7 +154,7 @@ public class DetectActionWidget extends BaseWidget {
             return;
         }
         b();
-        C3788b.a(this.i, d("actionTipText"));
+        com.alibaba.security.biometrics.logic.view.widget.b.a(this.i, d("actionTipText"));
         this.p.removeMessages(1);
         this.p.sendEmptyMessageDelayed(1, 1000L);
         if (System.currentTimeMillis() - this.r >= 500) {
@@ -182,7 +178,7 @@ public class DetectActionWidget extends BaseWidget {
     }
 
     public final void h() {
-        C3800a.d(c, "stopDazzleCollectView");
+        com.alibaba.security.common.c.a.d(c, "stopDazzleCollectView");
         this.p.removeMessages(2);
         this.b.setBackgroundColor(-1);
         this.b.invalidate();
@@ -231,7 +227,7 @@ public class DetectActionWidget extends BaseWidget {
 
     private void g(String str) {
         this.r = 0L;
-        C3788b.a(this.i, d("actionTipText"));
+        com.alibaba.security.biometrics.logic.view.widget.b.a(this.i, d("actionTipText"));
         this.p.removeMessages(1);
         this.i.setText(str);
         this.i.setVisibility(0);
@@ -243,7 +239,7 @@ public class DetectActionWidget extends BaseWidget {
     }
 
     private void h(String str) {
-        C3788b.a(this.i, d("actionTipText"));
+        com.alibaba.security.biometrics.logic.view.widget.b.a(this.i, d("actionTipText"));
         this.p.removeMessages(1);
         this.p.sendEmptyMessageDelayed(1, 1000L);
         if (System.currentTimeMillis() - this.r < 500) {
@@ -254,9 +250,9 @@ public class DetectActionWidget extends BaseWidget {
     }
 
     static /* synthetic */ void b(DetectActionWidget detectActionWidget) {
-        ALBiometricsActivityParentView.InterfaceC3778a interfaceC3778a = detectActionWidget.a;
-        if (interfaceC3778a != null) {
-            interfaceC3778a.g();
+        ALBiometricsActivityParentView.a aVar = detectActionWidget.a;
+        if (aVar != null) {
+            aVar.g();
         }
     }
 
@@ -271,7 +267,7 @@ public class DetectActionWidget extends BaseWidget {
         g(str);
         String str2 = aLBiometricsParams.userName;
         if (!TextUtils.isEmpty(str2)) {
-            C3788b.a(this.j, d("messageText"));
+            com.alibaba.security.biometrics.logic.view.widget.b.a(this.j, d("messageText"));
             this.k.setVisibility(0);
             this.j.setText(str2);
             return;
@@ -279,13 +275,13 @@ public class DetectActionWidget extends BaseWidget {
         this.k.setVisibility(8);
     }
 
-    public final void a(DazzleCollectDataUIConfigItem dazzleCollectDataUIConfigItem, InterfaceC3782a interfaceC3782a, int i) {
+    public final void a(DazzleCollectDataUIConfigItem dazzleCollectDataUIConfigItem, a aVar, int i) {
         g(dazzleCollectDataUIConfigItem.getTitle());
         this.k.setVisibility(4);
         try {
             this.i.setTextColor(Color.parseColor(dazzleCollectDataUIConfigItem.getTextColor()));
         } catch (Exception unused) {
-            this.i.setTextColor(getContext().getResources().getColor(R.C3734color.rpsdk_color_333333));
+            this.i.setTextColor(getContext().getResources().getColor(R.color.rpsdk_color_333333));
         }
         try {
             this.b.setBackgroundColor(Color.parseColor(dazzleCollectDataUIConfigItem.getColor()));
@@ -293,39 +289,39 @@ public class DetectActionWidget extends BaseWidget {
             this.b.setBackgroundColor(-1);
         }
         dazzleCollectDataUIConfigItem.setTimeInterval(System.currentTimeMillis());
-        C3807d.a(this.q, (int) (dazzleCollectDataUIConfigItem.getScreenLight() * 255.0f));
+        d.a(this.q, (int) (dazzleCollectDataUIConfigItem.getScreenLight() * 255.0f));
         if (dazzleCollectDataUIConfigItem.getDuration() <= 0.0f) {
-            a(interfaceC3782a, i);
+            a(aVar, i);
             return;
         }
         long duration = dazzleCollectDataUIConfigItem.getDuration() * 1000.0f;
         Message obtain = Message.obtain();
         obtain.what = 2;
         obtain.arg1 = i;
-        obtain.obj = interfaceC3782a;
+        obtain.obj = aVar;
         this.p.sendMessageDelayed(obtain, duration);
     }
 
-    private void a(InterfaceC3782a interfaceC3782a, int i) {
+    private void a(a aVar, int i) {
         int i2 = i + 1;
-        DazzleCollectDataUIConfigItem a = interfaceC3782a.a(i2);
-        if (a != null) {
-            a(a, interfaceC3782a, i2);
+        DazzleCollectDataUIConfigItem a2 = aVar.a(i2);
+        if (a2 != null) {
+            a(a2, aVar, i2);
         }
     }
 
-    public final void a(final RPDetectCoreView.InterfaceC3781a interfaceC3781a) {
+    public final void a(final RPDetectCoreView.a aVar) {
         b();
         RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) this.i.getLayoutParams();
-        layoutParams.setMargins(0, this.b.getCircleBottom() + C3807d.a(getContext(), 20.0f), 0, 0);
+        layoutParams.setMargins(0, this.b.getCircleBottom() + d.a(getContext(), 20.0f), 0, 0);
         this.i.setLayoutParams(layoutParams);
         this.i.requestLayout();
         RelativeLayout.LayoutParams layoutParams2 = (RelativeLayout.LayoutParams) this.l.getLayoutParams();
-        layoutParams2.setMargins(0, this.b.getCircleBottom() + C3807d.a(getContext(), 80.0f), 0, 0);
+        layoutParams2.setMargins(0, this.b.getCircleBottom() + d.a(getContext(), 80.0f), 0, 0);
         this.l.setLayoutParams(layoutParams2);
         this.l.requestLayout();
         RelativeLayout.LayoutParams layoutParams3 = (RelativeLayout.LayoutParams) this.m.getLayoutParams();
-        layoutParams3.setMargins(0, this.b.getCircleBottom() + C3807d.a(getContext(), 78.0f), 0, 0);
+        layoutParams3.setMargins(0, this.b.getCircleBottom() + d.a(getContext(), 78.0f), 0, 0);
         this.m.setLayoutParams(layoutParams3);
         this.m.requestLayout();
         RelativeLayout.LayoutParams layoutParams4 = (RelativeLayout.LayoutParams) this.o.getLayoutParams();
@@ -337,20 +333,20 @@ public class DetectActionWidget extends BaseWidget {
         setVisibility(0);
         this.n.setVisibility(0);
         RPDetectCoreView rPDetectCoreView = this.b;
-        RPDetectCoreView.InterfaceC3781a interfaceC3781a2 = new RPDetectCoreView.InterfaceC3781a() { // from class: com.alibaba.security.biometrics.logic.view.widget.DetectActionWidget.1
-            @Override // com.alibaba.security.biometrics.logic.view.custom.RPDetectCoreView.InterfaceC3781a
+        RPDetectCoreView.a aVar2 = new RPDetectCoreView.a() { // from class: com.alibaba.security.biometrics.logic.view.widget.DetectActionWidget.1
+            @Override // com.alibaba.security.biometrics.logic.view.custom.RPDetectCoreView.a
             public final void a() {
-                RPDetectCoreView.InterfaceC3781a interfaceC3781a3 = interfaceC3781a;
-                if (interfaceC3781a3 != null) {
-                    interfaceC3781a3.a();
+                RPDetectCoreView.a aVar3 = aVar;
+                if (aVar3 != null) {
+                    aVar3.a();
                 }
             }
 
-            @Override // com.alibaba.security.biometrics.logic.view.custom.RPDetectCoreView.InterfaceC3781a
+            @Override // com.alibaba.security.biometrics.logic.view.custom.RPDetectCoreView.a
             public final void b() {
-                RPDetectCoreView.InterfaceC3781a interfaceC3781a3 = interfaceC3781a;
-                if (interfaceC3781a3 != null) {
-                    interfaceC3781a3.b();
+                RPDetectCoreView.a aVar3 = aVar;
+                if (aVar3 != null) {
+                    aVar3.b();
                 }
                 DetectActionWidget.this.n.setVisibility(8);
             }
@@ -358,7 +354,7 @@ public class DetectActionWidget extends BaseWidget {
         rPDetectCoreView.d = 2.5f;
         rPDetectCoreView.e = 1.0f;
         rPDetectCoreView.c = 350L;
-        rPDetectCoreView.a = interfaceC3781a2;
+        rPDetectCoreView.a = aVar2;
         rPDetectCoreView.f = false;
         rPDetectCoreView.b = SystemClock.uptimeMillis();
         rPDetectCoreView.invalidate();
@@ -376,7 +372,7 @@ public class DetectActionWidget extends BaseWidget {
             r3.b()
             java.lang.String r0 = ""
             if (r4 == 0) goto L5f
-            int[] r1 = com.alibaba.security.biometrics.c.C3749b.AnonymousClass1.a
+            int[] r1 = com.alibaba.security.biometrics.c.b.AnonymousClass1.a
             int r2 = r4.ordinal()
             r1 = r1[r2]
             switch(r1) {
@@ -433,7 +429,7 @@ public class DetectActionWidget extends BaseWidget {
         L5f:
             r3.a(r0, r5)
             if (r4 == 0) goto L7c
-            int[] r5 = com.alibaba.security.biometrics.c.C3749b.AnonymousClass1.a
+            int[] r5 = com.alibaba.security.biometrics.c.b.AnonymousClass1.a
             int r4 = r4.ordinal()
             r4 = r5[r4]
             switch(r4) {
@@ -453,16 +449,16 @@ public class DetectActionWidget extends BaseWidget {
         L6f:
             goto L7c
         L70:
-            int r4 = com.alibaba.security.biometrics.R.C3735drawable.rp_face_guide_yaw_anim
+            int r4 = com.alibaba.security.biometrics.R.drawable.rp_face_guide_yaw_anim
             goto L7d
         L73:
-            int r4 = com.alibaba.security.biometrics.R.C3735drawable.rp_face_guide_pitch_anim
+            int r4 = com.alibaba.security.biometrics.R.drawable.rp_face_guide_pitch_anim
             goto L7d
         L76:
-            int r4 = com.alibaba.security.biometrics.R.C3735drawable.rp_face_guide_mouth_anim
+            int r4 = com.alibaba.security.biometrics.R.drawable.rp_face_guide_mouth_anim
             goto L7d
         L79:
-            int r4 = com.alibaba.security.biometrics.R.C3735drawable.rp_face_guide_blink_anim
+            int r4 = com.alibaba.security.biometrics.R.drawable.rp_face_guide_blink_anim
             goto L7d
         L7c:
             r4 = -1
@@ -505,10 +501,10 @@ public class DetectActionWidget extends BaseWidget {
     }
 
     private void a(Message message) {
-        a((InterfaceC3782a) message.obj, message.arg1);
+        a((a) message.obj, message.arg1);
     }
 
     static /* synthetic */ void a(DetectActionWidget detectActionWidget, Message message) {
-        detectActionWidget.a((InterfaceC3782a) message.obj, message.arg1);
+        detectActionWidget.a((a) message.obj, message.arg1);
     }
 }

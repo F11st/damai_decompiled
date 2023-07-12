@@ -1,15 +1,13 @@
 package tb;
 
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
-public class kn extends C0528b {
+public class kn extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final String ADD_CONTACTS_PAGE = "addbuyperson";
     private static kn b;
@@ -22,7 +20,7 @@ public class kn extends C0528b {
         }
         HashMap hashMap = new HashMap();
         hashMap.put("certificate_type", str);
-        C0529c.e().C("popconfirmbtn", "pop", "addbuyperson", "1.0", j, hashMap, 2201);
+        cn.damai.common.user.c.e().C("popconfirmbtn", "pop", "addbuyperson", "1.0", j, hashMap, 2201);
     }
 
     public static kn j() {
@@ -36,30 +34,30 @@ public class kn extends C0528b {
         return b;
     }
 
-    public C0525a.C0527b g(String str) {
+    public a.b g(String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "898608148")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("898608148", new Object[]{this, str});
+            return (a.b) ipChange.ipc$dispatch("898608148", new Object[]{this, str});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("certificate_type", str);
         return e("addbuyperson", "bottom", "confirmbtn", hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b h(String str) {
+    public a.b h(String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-237801244")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-237801244", new Object[]{this, str});
+            return (a.b) ipChange.ipc$dispatch("-237801244", new Object[]{this, str});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("certificate_type", str);
         return e("addbuyperson", "pop", "cancel", hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b i(String str) {
+    public a.b i(String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1687714238")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-1687714238", new Object[]{this, str});
+            return (a.b) ipChange.ipc$dispatch("-1687714238", new Object[]{this, str});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("certificate_type", str);

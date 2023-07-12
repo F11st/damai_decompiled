@@ -509,7 +509,7 @@ public class DagoVipHongbaoHelper {
             this.mGetHongbaoWindow = popupWindow;
             popupWindow.setFocusable(true);
             this.mGetHongbaoWindow.setOutsideTouchable(true);
-            this.mGetHongbaoWindow.setAnimationStyle(R.C7944style.dago_hongbao_window_show);
+            this.mGetHongbaoWindow.setAnimationStyle(R.style.dago_hongbao_window_show);
             this.mGetHongbaoWindow.setOnDismissListener(new PopupWindow.OnDismissListener() { // from class: com.youku.live.dago.widgetlib.view.hongbao.DagoVipHongbaoHelper.2
                 private static transient /* synthetic */ IpChange $ipChange;
 

@@ -36,7 +36,7 @@ public final class og1 {
     @Nullable
     private PointF i;
     @NotNull
-    private C9521a j;
+    private a j;
     private boolean k;
     private int l;
     private int m;
@@ -50,12 +50,11 @@ public final class og1 {
     private int t;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.og1$a */
     /* loaded from: classes7.dex */
-    public static final class C9521a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
         @NotNull
-        public static final C9522a Companion = new C9522a(null);
+        public static final C0460a Companion = new C0460a(null);
         private int a;
         private float[] b;
         private boolean c = true;
@@ -68,27 +67,27 @@ public final class og1 {
         private int j;
 
         /* compiled from: Taobao */
-        /* renamed from: tb.og1$a$a */
+        /* renamed from: tb.og1$a$a  reason: collision with other inner class name */
         /* loaded from: classes7.dex */
-        public static final class C9522a {
+        public static final class C0460a {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            private C9522a() {
+            private C0460a() {
             }
 
             @JvmStatic
             @NotNull
-            public final C9521a a(float f) {
+            public final a a(float f) {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "-374861772")) {
-                    return (C9521a) ipChange.ipc$dispatch("-374861772", new Object[]{this, Float.valueOf(f)});
+                    return (a) ipChange.ipc$dispatch("-374861772", new Object[]{this, Float.valueOf(f)});
                 }
-                C9521a c9521a = new C9521a();
-                c9521a.k(f);
-                return c9521a;
+                a aVar = new a();
+                aVar.k(f);
+                return aVar;
             }
 
-            public /* synthetic */ C9522a(k50 k50Var) {
+            public /* synthetic */ C0460a(k50 k50Var) {
                 this();
             }
         }
@@ -187,10 +186,10 @@ public final class og1 {
         }
 
         @NotNull
-        public final C9521a j(float f, float f2, float f3, float f4) {
+        public final a j(float f, float f2, float f3, float f4) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1697895209")) {
-                return (C9521a) ipChange.ipc$dispatch("1697895209", new Object[]{this, Float.valueOf(f), Float.valueOf(f2), Float.valueOf(f3), Float.valueOf(f4)});
+                return (a) ipChange.ipc$dispatch("1697895209", new Object[]{this, Float.valueOf(f), Float.valueOf(f2), Float.valueOf(f3), Float.valueOf(f4)});
             }
             float f5 = 0;
             if (f > f5 || f2 > f5 || f3 > f5 || f4 > f5) {
@@ -209,10 +208,10 @@ public final class og1 {
         }
 
         @NotNull
-        public final C9521a k(float f) {
+        public final a k(float f) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "646535468")) {
-                return (C9521a) ipChange.ipc$dispatch("646535468", new Object[]{this, Float.valueOf(f)});
+                return (a) ipChange.ipc$dispatch("646535468", new Object[]{this, Float.valueOf(f)});
             }
             if (f > 0) {
                 this.g = true;
@@ -281,7 +280,7 @@ public final class og1 {
         Boolean bool = Boolean.FALSE;
         this.a = bool;
         this.b = bool;
-        this.j = new C9521a();
+        this.j = new a();
         this.n = MoImageView.ImageViewType.DEFAULT;
     }
 
@@ -554,14 +553,14 @@ public final class og1 {
         }
     }
 
-    public final void N(@NotNull C9521a c9521a) {
+    public final void N(@NotNull a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1313606814")) {
-            ipChange.ipc$dispatch("-1313606814", new Object[]{this, c9521a});
+            ipChange.ipc$dispatch("-1313606814", new Object[]{this, aVar});
             return;
         }
-        b41.i(c9521a, "<set-?>");
-        this.j = c9521a;
+        b41.i(aVar, "<set-?>");
+        this.j = aVar;
     }
 
     public final void O(int i, int i2) {
@@ -718,9 +717,9 @@ public final class og1 {
     }
 
     @NotNull
-    public final C9521a q() {
+    public final a q() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "671472878") ? (C9521a) ipChange.ipc$dispatch("671472878", new Object[]{this}) : this.j;
+        return AndroidInstantRuntime.support(ipChange, "671472878") ? (a) ipChange.ipc$dispatch("671472878", new Object[]{this}) : this.j;
     }
 
     public final boolean t() {

@@ -3,9 +3,8 @@ package cn.damai.category.category.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
-import cn.damai.commonbusiness.pageut.C0726a;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
 import cn.damai.uikit.view.SimpleTitleLayout;
@@ -19,12 +18,11 @@ public class NewStarListActivity extends SimpleBaseActivity {
     private StarBaseFragment mStarBaseFragment;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.NewStarListActivity$a */
     /* loaded from: classes.dex */
-    public class C0338a implements SimpleTitleLayout.OnBtnClickListener {
+    public class a implements SimpleTitleLayout.OnBtnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0338a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.view.SimpleTitleLayout.OnBtnClickListener
@@ -61,13 +59,13 @@ public class NewStarListActivity extends SimpleBaseActivity {
         }
         super.initView();
         hideBaseLayout();
-        C0529c.e().K(this);
+        c.e().K(this);
         SimpleTitleLayout simpleTitleLayout = (SimpleTitleLayout) findViewById(R$id.nsl_stl);
         simpleTitleLayout.setTitle("大咖");
         simpleTitleLayout.showShareBtn(false);
         simpleTitleLayout.enableImmersiveMode(this);
         simpleTitleLayout.switchMode(true);
-        simpleTitleLayout.setListener(new C0338a());
+        simpleTitleLayout.setListener(new a());
         this.mStarBaseFragment = new StarBaseFragment();
         getSupportFragmentManager().beginTransaction().add(R$id.nsl_fragment_container, this.mStarBaseFragment).commitAllowingStateLoss();
     }
@@ -95,7 +93,7 @@ public class NewStarListActivity extends SimpleBaseActivity {
             ipChange.ipc$dispatch("-1096255629", new Object[]{this, bundle});
             return;
         }
-        C0726a.i(this);
+        cn.damai.commonbusiness.pageut.a.i(this);
         super.onCreate(bundle);
     }
 
@@ -108,7 +106,7 @@ public class NewStarListActivity extends SimpleBaseActivity {
             return;
         }
         super.onDestroy();
-        C0726a.j(this);
+        cn.damai.commonbusiness.pageut.a.j(this);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -120,7 +118,7 @@ public class NewStarListActivity extends SimpleBaseActivity {
             return;
         }
         super.onPause();
-        C0726a.a(this);
+        cn.damai.commonbusiness.pageut.a.a(this);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -132,7 +130,7 @@ public class NewStarListActivity extends SimpleBaseActivity {
             return;
         }
         super.onResume();
-        C0726a.b(this);
+        cn.damai.commonbusiness.pageut.a.b(this);
     }
 
     @Override // cn.damai.common.app.base.BaseActivity

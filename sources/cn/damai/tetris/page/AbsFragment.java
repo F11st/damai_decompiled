@@ -20,8 +20,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
@@ -79,7 +78,7 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
     AbsAdapter absAdapter;
     protected LinearLayout bottomBarParent;
     private Action commonAction;
-    AbsFragment<T>.C1996g listener;
+    AbsFragment<T>.g listener;
     protected ViewGroup mBottomView;
     protected View mEmptyFoot;
     private ResponseErrorPage mErrorPage;
@@ -94,7 +93,7 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
     private boolean enableLineView = true;
     private boolean isViewCreated = false;
     private boolean isLazyLoaded = false;
-    protected HandlerC1995f cdnReqHandler = new HandlerC1995f(this);
+    protected f cdnReqHandler = new f(this);
     public xr mDMMessage = new xr();
     protected ja baseContext = new ja();
 
@@ -104,11 +103,11 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
         private static transient /* synthetic */ IpChange $ipChange;
         private String cityCode;
         private String pattern;
-        private WeakReference<HandlerC1995f> reference;
+        private WeakReference<f> reference;
         private String version;
 
-        public ReqRunnable(HandlerC1995f handlerC1995f, String str, String str2, String str3) {
-            this.reference = new WeakReference<>(handlerC1995f);
+        public ReqRunnable(f fVar, String str, String str2, String str3) {
+            this.reference = new WeakReference<>(fVar);
             this.pattern = str;
             this.version = str2;
             this.cityCode = str3;
@@ -131,12 +130,11 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.page.AbsFragment$a */
     /* loaded from: classes7.dex */
-    public class C1990a implements OnLoadMoreListener {
+    public class a implements OnLoadMoreListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1990a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.irecycler.OnLoadMoreListener
@@ -152,12 +150,11 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.page.AbsFragment$b */
     /* loaded from: classes7.dex */
-    public class C1991b implements Action<cn.damai.tetris.core.msg.Message> {
+    public class b implements Action<cn.damai.tetris.core.msg.Message> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1991b() {
+        b() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -174,12 +171,11 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.page.AbsFragment$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1992c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1992c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -195,12 +191,11 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.page.AbsFragment$d */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnDismissListenerC1993d implements DialogInterface.OnDismissListener {
+    public class d implements DialogInterface.OnDismissListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnDismissListenerC1993d(AbsFragment absFragment) {
+        d(AbsFragment absFragment) {
         }
 
         @Override // android.content.DialogInterface.OnDismissListener
@@ -213,12 +208,11 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.page.AbsFragment$e */
     /* loaded from: classes7.dex */
-    public class C1994e implements ResponseErrorPage.ErrorRefreshListener {
+    public class e implements ResponseErrorPage.ErrorRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1994e() {
+        e() {
         }
 
         @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
@@ -233,13 +227,12 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.page.AbsFragment$f */
     /* loaded from: classes16.dex */
-    public static class HandlerC1995f extends Handler {
+    public static class f extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
         private final WeakReference<AbsFragment> a;
 
-        public HandlerC1995f(AbsFragment absFragment) {
+        public f(AbsFragment absFragment) {
             this.a = new WeakReference<>(absFragment);
         }
 
@@ -255,13 +248,12 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.page.AbsFragment$g */
     /* loaded from: classes7.dex */
-    public class C1996g implements IOnResultListener {
+    public class g implements IOnResultListener {
         private static transient /* synthetic */ IpChange $ipChange;
         AbsFragment a;
 
-        public C1996g(AbsFragment absFragment, AbsFragment absFragment2) {
+        public g(AbsFragment absFragment, AbsFragment absFragment2) {
             this.a = absFragment2;
         }
 
@@ -304,7 +296,7 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
             damaiRootRecyclerView.setRefreshEnabled(true);
             damaiRootRecyclerView.setIsAutoToDefault(false);
             damaiRootRecyclerView.setOnRefreshListener(this);
-            damaiRootRecyclerView.setOnLoadMoreListener(new C1990a());
+            damaiRootRecyclerView.setOnLoadMoreListener(new a());
             damaiRootRecyclerView.setLoadMoreEnabled(true);
             damaiRootRecyclerView.setItemAnimator(null);
             damaiRootRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() { // from class: cn.damai.tetris.page.AbsFragment.2
@@ -336,7 +328,7 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
                 damaiRootRecyclerView.setAdapter(adapter);
             }
             this.mDMMessage = new xr();
-            this.commonAction = new C1991b();
+            this.commonAction = new b();
             this.mDMMessage.b(this.baseContext.a(), this.commonAction);
             xr xrVar = this.mDMMessage;
             xrVar.b(this.baseContext.a() + 11004, this.commonAction);
@@ -356,7 +348,7 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
             return;
         }
         final View findViewById = view.findViewById(R$id.list_move_top);
-        findViewById.setOnClickListener(new View$OnClickListenerC1992c());
+        findViewById.setOnClickListener(new c());
         this.mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() { // from class: cn.damai.tetris.page.AbsFragment.5
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -590,8 +582,8 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
                 if (childAt != null && layoutManager != null) {
                     return layoutManager.getPosition(childAt) > 10;
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
         }
         return false;
@@ -737,7 +729,7 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
             this.mErrorPage = responseErrorPage2;
             responseErrorPage2.setVisibility(0);
             this.mErrorPage.hideTitle();
-            this.mErrorPage.setRefreshListener(new C1994e());
+            this.mErrorPage.setRefreshListener(new e());
             this.mBottomView.addView(this.mErrorPage, new ViewGroup.LayoutParams(-1, -1));
         }
     }
@@ -756,8 +748,8 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
                 this.mBottomView.removeView(this.mErrorPage);
                 this.mErrorPage = null;
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 
@@ -773,7 +765,7 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
         if (this.properties == null || !getUserVisibleHint()) {
             return;
         }
-        C0529c.e().O(getActivity(), this.properties);
+        cn.damai.common.user.c.e().O(getActivity(), this.properties);
         Log.e("abtest", "abs onResume updatePageProperties : size : " + this.properties.size());
     }
 
@@ -819,9 +811,9 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
         yl2.a(this.baseContext);
         checkLazyLoad();
         if (getActivity() instanceof DamaiBaseActivity) {
-            AbsFragment<T>.C1996g c1996g = new C1996g(this, this);
-            this.listener = c1996g;
-            ((DamaiBaseActivity) getActivity()).addResultListener(c1996g);
+            AbsFragment<T>.g gVar = new g(this, this);
+            this.listener = gVar;
+            ((DamaiBaseActivity) getActivity()).addResultListener(gVar);
         }
     }
 
@@ -1003,9 +995,9 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
         } else if (getActivity() == null || getActivity().isFinishing()) {
         } else {
             if (this.progressDialog == null) {
-                DMProgressDialog a = new DMProgressDialog(getActivity()).a();
-                this.progressDialog = a;
-                a.setOnDismissListener(new DialogInterface$OnDismissListenerC1993d(this));
+                DMProgressDialog a2 = new DMProgressDialog(getActivity()).a();
+                this.progressDialog = a2;
+                a2.setOnDismissListener(new d(this));
             }
             if (!isAdded() || this.progressDialog.isShowing()) {
                 return;
@@ -1038,12 +1030,12 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
                 hashMap.put("ABTrackInfo", globalConfig.pabBucket);
             }
             if (getUserVisibleHint()) {
-                Map<String, String> g = C0529c.e().g(getActivity());
-                if (g != null) {
-                    g.putAll(hashMap);
-                    hashMap = g;
+                Map<String, String> g2 = cn.damai.common.user.c.e().g(getActivity());
+                if (g2 != null) {
+                    g2.putAll(hashMap);
+                    hashMap = g2;
                 }
-                C0529c.e().O(getActivity(), hashMap);
+                cn.damai.common.user.c.e().O(getActivity(), hashMap);
                 if (getActivity() instanceof PageUtExecutor.FragmentPropertiesProvider) {
                     ((PageUtExecutor.FragmentPropertiesProvider) getActivity()).put(globalConfig.pageName, hashMap);
                     Log.e("abtest", " ===== fragment update 1 put  size : " + hashMap.size() + "， name : " + globalConfig.pageName);
@@ -1116,8 +1108,8 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
                 hashMap.putAll(globalConfig.getBuzUTMap());
             }
             if (getUserVisibleHint()) {
-                C0529c.e().L(getActivity(), str);
-                C0529c.e().l(getActivity(), new C0525a.C0527b().i(str).j(hashMap));
+                cn.damai.common.user.c.e().L(getActivity(), str);
+                cn.damai.common.user.c.e().l(getActivity(), new a.b().i(str).j(hashMap));
             }
         }
     }
@@ -1133,8 +1125,8 @@ public abstract class AbsFragment<T> extends Fragment implements OnLoadMoreListe
                 hashMap.put("ABTrackInfo", jSONArray.toJSONString());
             }
             if (getUserVisibleHint()) {
-                C0529c.e().L(getActivity(), str);
-                C0529c.e().l(getActivity(), new C0525a.C0527b().i(str).j(hashMap));
+                cn.damai.common.user.c.e().L(getActivity(), str);
+                cn.damai.common.user.c.e().l(getActivity(), new a.b().i(str).j(hashMap));
             }
         }
     }

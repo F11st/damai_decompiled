@@ -1,6 +1,5 @@
 package tb;
 
-import cn.damai.common.user.C0529c;
 import cn.damai.push.model.PushMessageBean;
 import com.alibaba.pictures.accs.AgooMessage;
 import com.alibaba.pictures.accs.DecodeOverListener;
@@ -17,7 +16,7 @@ public final class xl1 implements INotifyActionHandler {
     @NotNull
     public static final String CHANNEL_NAME = "大麦应用通知";
     @NotNull
-    public static final C9933a Companion = new C9933a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String DEFAULT_CHANNEL_ID = "default_channel";
     @NotNull
@@ -26,13 +25,12 @@ public final class xl1 implements INotifyActionHandler {
     public static final String TYPE = "typestatus";
 
     /* compiled from: Taobao */
-    /* renamed from: tb.xl1$a */
     /* loaded from: classes6.dex */
-    public static final class C9933a {
-        private C9933a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9933a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -77,7 +75,7 @@ public final class xl1 implements INotifyActionHandler {
             Object extObj = agooMessage.getExtObj();
             PushMessageBean.Exts exts = extObj instanceof PushMessageBean.Exts ? (PushMessageBean.Exts) extObj : null;
             if (exts != null) {
-                C0529c.e().A(ml.g().h(exts.tag, exts.type, exts.value), "recitem", py0.PUSH_PAGE);
+                cn.damai.common.user.c.e().A(ml.g().h(exts.tag, exts.type, exts.value), "recitem", py0.PUSH_PAGE);
             }
         } catch (Exception e) {
             cb1.d(e);

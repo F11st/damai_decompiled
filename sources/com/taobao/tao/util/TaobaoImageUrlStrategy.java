@@ -8,7 +8,7 @@ import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
 import com.ali.user.mobile.login.model.LoginConstant;
-import com.alipay.sdk.m.u.C4318n;
+import com.alipay.sdk.m.u.n;
 import com.autonavi.amap.mapcore.tools.GlMapUtil;
 import com.taobao.tao.image.ImageStrategyConfig;
 import com.taobao.tao.util.ImageStrategyExtra;
@@ -17,9 +17,9 @@ import com.youku.live.dago.liveplayback.widget.plugins.resize.AntiShakeOrientati
 import com.youku.resource.widget.PlayerGuideTipsView;
 import com.youku.uplayer.AliMediaPlayer;
 import java.util.HashMap;
-import tb.C9796v;
 import tb.n11;
 import tb.qb1;
+import tb.v;
 
 @SuppressLint({"NewApi"})
 /* loaded from: classes11.dex */
@@ -29,12 +29,12 @@ public class TaobaoImageUrlStrategy {
     private boolean mIsNetworkSlow;
     private long mLastUpdateTime;
     private HashMap<String, ServiceImageSwitch> mServiceImageSwitchList;
-    private static final int[] CDN = {16, 20, 24, 30, 32, 36, 40, 48, 50, 60, 64, 70, 72, 80, 88, 90, 100, 110, 120, 125, 128, 130, 145, 160, AliMediaPlayer.UPLAYER_PROPERTY_TYPE_PATTAYA_NEXT_SEGMENT_SPEED_CALC_COUNT, 180, AliMediaPlayer.TYPE_SUBTITLE_LIB_PATH, 200, 210, 220, PlayerGuideTipsView.ANIM_DURATION_ALPHA, 234, GlMapUtil.DEVICE_DISPLAY_DPI_MEDIAN, 250, AntiShakeOrientationEventListener.SCREEN_ORIENTATION_LANDSCAPE, 290, 300, 310, 315, 320, 336, 350, 360, 400, 430, C4318n.g, 468, GlMapUtil.DEVICE_DISPLAY_DPI_XHIGH, 490, 540, 560, 570, 580, 600, 640, 670, LoginConstant.RESULT_WINDWANE_CLOSEW, 728, 760, 960, 970};
+    private static final int[] CDN = {16, 20, 24, 30, 32, 36, 40, 48, 50, 60, 64, 70, 72, 80, 88, 90, 100, 110, 120, 125, 128, 130, 145, 160, AliMediaPlayer.UPLAYER_PROPERTY_TYPE_PATTAYA_NEXT_SEGMENT_SPEED_CALC_COUNT, 180, AliMediaPlayer.TYPE_SUBTITLE_LIB_PATH, 200, 210, 220, PlayerGuideTipsView.ANIM_DURATION_ALPHA, 234, GlMapUtil.DEVICE_DISPLAY_DPI_MEDIAN, 250, AntiShakeOrientationEventListener.SCREEN_ORIENTATION_LANDSCAPE, 290, 300, 310, 315, 320, 336, 350, 360, 400, 430, n.g, 468, GlMapUtil.DEVICE_DISPLAY_DPI_XHIGH, 490, 540, 560, 570, 580, 600, 640, 670, LoginConstant.RESULT_WINDWANE_CLOSEW, 728, 760, 960, 970};
     private static final int[] CDN10000Width = {110, 150, AliMediaPlayer.UPLAYER_PROPERTY_TYPE_PATTAYA_NEXT_SEGMENT_SPEED_CALC_COUNT, 220, GlMapUtil.DEVICE_DISPLAY_DPI_MEDIAN, 290, 450, 570, 580, 620, 790};
     private static final int[] CDN10000Height = {AliMediaPlayer.UPLAYER_PROPERTY_TYPE_PATTAYA_NEXT_SEGMENT_SPEED_CALC_COUNT, 220, MsgID.TYPE_MSG_BEGIN_PLAYBACK, 500};
-    private static final int[] XZCDN = {72, 88, 90, 100, 110, 120, 145, 160, AliMediaPlayer.UPLAYER_PROPERTY_TYPE_PATTAYA_NEXT_SEGMENT_SPEED_CALC_COUNT, 180, 200, PlayerGuideTipsView.ANIM_DURATION_ALPHA, GlMapUtil.DEVICE_DISPLAY_DPI_MEDIAN, AntiShakeOrientationEventListener.SCREEN_ORIENTATION_LANDSCAPE, 290, 310, 320, 360, 430, C4318n.g, 580, 640};
-    private static final int[] LEVEL_MODEL_CDN = {90, 110, 200, 320, C4318n.g, 600, 760, 960, 1200};
-    private static final int[] LEVEL_MODEL_XZCDN = {90, 110, 200, 320, C4318n.g, 640};
+    private static final int[] XZCDN = {72, 88, 90, 100, 110, 120, 145, 160, AliMediaPlayer.UPLAYER_PROPERTY_TYPE_PATTAYA_NEXT_SEGMENT_SPEED_CALC_COUNT, 180, 200, PlayerGuideTipsView.ANIM_DURATION_ALPHA, GlMapUtil.DEVICE_DISPLAY_DPI_MEDIAN, AntiShakeOrientationEventListener.SCREEN_ORIENTATION_LANDSCAPE, 290, 310, 320, 360, 430, n.g, 580, 640};
+    private static final int[] LEVEL_MODEL_CDN = {90, 110, 200, 320, n.g, 600, 760, 960, 1200};
+    private static final int[] LEVEL_MODEL_XZCDN = {90, 110, 200, 320, n.g, 640};
     private static final String[] FUZZY_EXCLUDE_PATH = {"getAvatar"};
     private static final String[] LOOSE_CDN_DOMAIN_WHITE_LIST = {".alicdn.com", ".tbcdn.cn", ".taobaocdn.com", ".wimg.taobao.com", "img.taobao.com", "i.mmcdn.cn"};
     private static final String[] LOOSE_CDN_DOMAIN_BLACK_LIST = {"a.tbcdn.cn", "b.tbcdn.cn", "gqrcode.alicdn.com", "g.tbcdn.cn", "m.alicdn.com", "assets.alicdn.com", "g.alicdn.com", "ag.alicdn.com", "a.dd.alicdn.com", "uaction.alicdn.com", "wwc.alicdn.com", "osdes.alicdn.com", "download.taobaocdn.com", "gtb-fun.alicdn.com", "qianniu.alicdn.com", "gamc.alicdn.com", "glife-img.alicdn.com", "ossgw.alicdn.com", "gjusp.alicdn.com", "alchemy-img.alicdn.com", "alpha.alicdn.com", "h5.m.taobao.com"};
@@ -274,9 +274,8 @@ public class TaobaoImageUrlStrategy {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: com.taobao.tao.util.TaobaoImageUrlStrategy$a */
     /* loaded from: classes11.dex */
-    public static class C6902a {
+    public static class a {
         public static final TaobaoImageUrlStrategy instance = new TaobaoImageUrlStrategy();
     }
 
@@ -416,7 +415,7 @@ public class TaobaoImageUrlStrategy {
     }
 
     public static TaobaoImageUrlStrategy getInstance() {
-        return C6902a.instance;
+        return a.instance;
     }
 
     private boolean isApgAllowedWithBiz(int i) {
@@ -498,7 +497,7 @@ public class TaobaoImageUrlStrategy {
             return;
         }
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        Display defaultDisplay = ((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
+        Display defaultDisplay = ((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
         if (defaultDisplay != null) {
             com.alibaba.wireless.security.aopsdk.replace.android.view.Display.getMetrics(defaultDisplay, displayMetrics);
             float f = displayMetrics.density;

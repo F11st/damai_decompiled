@@ -323,7 +323,7 @@ public class ChipDrawable extends MaterialShapeDrawable implements Drawable.Call
         AttributeSet parseDrawableXml = DrawableUtils.parseDrawableXml(context, i, "chip");
         int styleAttribute = parseDrawableXml.getStyleAttribute();
         if (styleAttribute == 0) {
-            styleAttribute = R.C4819style.Widget_MaterialComponents_Chip_Entry;
+            styleAttribute = R.style.Widget_MaterialComponents_Chip_Entry;
         }
         return createFromAttributes(context, parseDrawableXml, R.attr.chipStandaloneStyle, styleAttribute);
     }

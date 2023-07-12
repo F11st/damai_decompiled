@@ -10,11 +10,10 @@ import cn.damai.tetris.component.common.ProductCellContract;
 import cn.damai.tetris.core.BasePresenter;
 import cn.damai.tetris.core.BaseSection;
 import cn.damai.tetris.core.TrackInfo;
-import cn.damai.uikit.image.C2497a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.Map;
-import tb.C9175gc;
+import tb.gc;
 import tb.ja;
 import tb.pl;
 
@@ -25,12 +24,11 @@ public class ProductCellPresenter extends BasePresenter<ProductCellContract.Mode
     private TrackInfo mTrackInfo;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.common.ProductCellPresenter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1805a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1805a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -75,10 +73,10 @@ public class ProductCellPresenter extends BasePresenter<ProductCellContract.Mode
             return;
         }
         this.mTrackInfo = model.getTrackInfo();
-        C2497a.a().loadinto(model.getBgImg(), getView().getImg());
-        C9175gc.a(getView().getTitle(), getModel().getName());
-        C9175gc.a(getView().getPrice(), getModel().getPriceLow());
+        cn.damai.uikit.image.a.a().loadinto(model.getBgImg(), getView().getImg());
+        gc.a(getView().getTitle(), getModel().getName());
+        gc.a(getView().getPrice(), getModel().getPriceLow());
         userTrackExpose(getView().getTitle(), "item");
-        getView().getRootView().setOnClickListener(new View$OnClickListenerC1805a());
+        getView().getRootView().setOnClickListener(new a());
     }
 }

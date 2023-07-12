@@ -30,10 +30,10 @@ public final class ContextAwareKt$withContextAvailable$$inlined$suspendCancellab
         b41.i(context, WPKFactory.INIT_KEY_CONTEXT);
         CancellableContinuation cancellableContinuation = this.$co;
         try {
-            Result.C8174a c8174a = Result.Companion;
+            Result.a aVar = Result.Companion;
             m1271constructorimpl = Result.m1271constructorimpl(this.$onContextAvailable$inlined.invoke(context));
         } catch (Throwable th) {
-            Result.C8174a c8174a2 = Result.Companion;
+            Result.a aVar2 = Result.Companion;
             m1271constructorimpl = Result.m1271constructorimpl(i32.a(th));
         }
         cancellableContinuation.resumeWith(m1271constructorimpl);

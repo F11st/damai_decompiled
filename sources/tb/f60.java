@@ -1,9 +1,6 @@
 package tb;
 
 import com.taobao.phenix.loader.network.NetworkQualityListener;
-import com.taobao.rxm.schedule.C6874a;
-import com.taobao.rxm.schedule.C6875b;
-import com.taobao.rxm.schedule.C6878c;
 import com.taobao.rxm.schedule.PairingThrottlingScheduler;
 import com.taobao.rxm.schedule.Scheduler;
 import com.taobao.rxm.schedule.SchedulerSupplier;
@@ -79,17 +76,17 @@ public class f60 implements NetworkQualityListener, SchedulerSupplier {
 
     public f60(Scheduler scheduler, int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, boolean z) {
         if (scheduler != null && !z) {
-            this.a = new C6878c(scheduler, i2, i4, i5);
+            this.a = new com.taobao.rxm.schedule.c(scheduler, i2, i4, i5);
         } else {
-            this.a = new C6875b("Phenix-Scheduler", i, i2, i3, i4, i5);
+            this.a = new com.taobao.rxm.schedule.b("Phenix-Scheduler", i, i2, i3, i4, i5);
         }
         this.f = i7;
         this.g = i8;
         if (i9 > 0) {
             this.b = new PairingThrottlingScheduler(this.a, i7, i9);
         } else {
-            this.b = new C6874a(this.a, i7);
+            this.b = new com.taobao.rxm.schedule.a(this.a, i7);
         }
-        this.c = new C6874a(this.a, i6);
+        this.c = new com.taobao.rxm.schedule.a(this.a, i6);
     }
 }

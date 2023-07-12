@@ -26,10 +26,9 @@ public class AccountBindJSBridge extends WVApiPlugin {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.jsbridge.AccountBindJSBridge$a */
     /* loaded from: classes11.dex */
-    public class C6617a implements CommonCallback {
-        C6617a() {
+    public class a implements CommonCallback {
+        a() {
         }
 
         @Override // com.ali.user.mobile.model.CommonCallback
@@ -134,7 +133,7 @@ public class AccountBindJSBridge extends WVApiPlugin {
                 }
             }
             if (ServiceFactory.getService(SNSBindService.class) != null) {
-                ((SNSBindService) ServiceFactory.getService(SNSBindService.class)).bind((Activity) this.mContext, convertSNSPlatform(optString), new C6617a());
+                ((SNSBindService) ServiceFactory.getService(SNSBindService.class)).bind((Activity) this.mContext, convertSNSPlatform(optString), new a());
             }
         } catch (Exception e) {
             setErrorCallback(PARAM_ERROR_CODE, PARAM_ERROR_MESSAGE);

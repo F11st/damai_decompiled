@@ -37,6 +37,6 @@ public final class ChannelsKt__Channels_commonKt$filterNotNullTo$3 extends Conti
     public final Object invokeSuspend(@NotNull Object obj) {
         this.result = obj;
         this.label |= Integer.MIN_VALUE;
-        return C8648b.v(null, null, this);
+        return b.v(null, null, this);
     }
 }

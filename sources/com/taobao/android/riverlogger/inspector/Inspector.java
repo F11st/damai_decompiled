@@ -2,7 +2,6 @@ package com.taobao.android.riverlogger.inspector;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.taobao.android.riverlogger.remote.C6581b;
 import com.taobao.android.riverlogger.remote.RemoteChannel;
 import java.util.Iterator;
 import java.util.Map;
@@ -17,11 +16,11 @@ import org.json.JSONObject;
 /* loaded from: classes12.dex */
 public class Inspector {
     private static final ConcurrentHashMap<String, String> a;
-    private static final ConcurrentHashMap<String, ConcurrentLinkedQueue<C6575a>> b;
+    private static final ConcurrentHashMap<String, ConcurrentLinkedQueue<a>> b;
     private static final AtomicBoolean c;
     private static boolean d;
     private static final ConcurrentLinkedQueue<IConnectionListener> e;
-    private static final ConcurrentHashMap<String, ConcurrentLinkedQueue<C6576a>> f;
+    private static final ConcurrentHashMap<String, ConcurrentLinkedQueue<com.taobao.android.riverlogger.inspector.a>> f;
     private static final ConcurrentHashMap<String, Set<String>> g;
 
     /* compiled from: Taobao */
@@ -32,13 +31,12 @@ public class Inspector {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.riverlogger.inspector.Inspector$a */
     /* loaded from: classes12.dex */
-    public static class C6575a {
+    public static class a {
         public String a;
         public InspectorAgent b;
 
-        C6575a(InspectorAgent inspectorAgent, String str) {
+        a(InspectorAgent inspectorAgent, String str) {
             this.b = inspectorAgent;
             this.a = str;
         }
@@ -56,17 +54,17 @@ public class Inspector {
         concurrentHashMap.put("os", "Android");
     }
 
-    private static void a(C6575a c6575a, boolean z) {
-        for (Map.Entry<String, InspectorCommandHandler> entry : c6575a.b.getCommands().entrySet()) {
-            ConcurrentHashMap<String, ConcurrentLinkedQueue<C6576a>> concurrentHashMap = f;
-            ConcurrentLinkedQueue<C6576a> putIfAbsent = concurrentHashMap.putIfAbsent(entry.getKey(), new ConcurrentLinkedQueue<>());
+    private static void a(a aVar, boolean z) {
+        for (Map.Entry<String, InspectorCommandHandler> entry : aVar.b.getCommands().entrySet()) {
+            ConcurrentHashMap<String, ConcurrentLinkedQueue<com.taobao.android.riverlogger.inspector.a>> concurrentHashMap = f;
+            ConcurrentLinkedQueue<com.taobao.android.riverlogger.inspector.a> putIfAbsent = concurrentHashMap.putIfAbsent(entry.getKey(), new ConcurrentLinkedQueue<>());
             if (putIfAbsent == null) {
                 putIfAbsent = concurrentHashMap.get(entry.getKey());
             }
-            putIfAbsent.add(new C6576a(entry.getValue(), entry.getKey(), c6575a.a));
+            putIfAbsent.add(new com.taobao.android.riverlogger.inspector.a(entry.getValue(), entry.getKey(), aVar.a));
         }
         if (z && d) {
-            c6575a.b.connectionChanged(true);
+            aVar.b.connectionChanged(true);
         }
     }
 
@@ -75,7 +73,7 @@ public class Inspector {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private static com.taobao.android.riverlogger.inspector.C6576a b(@androidx.annotation.NonNull java.lang.String r3, @androidx.annotation.Nullable java.util.Set<java.lang.String> r4) {
+    private static com.taobao.android.riverlogger.inspector.a b(@androidx.annotation.NonNull java.lang.String r3, @androidx.annotation.Nullable java.util.Set<java.lang.String> r4) {
         /*
             java.util.concurrent.ConcurrentHashMap<java.lang.String, java.util.concurrent.ConcurrentLinkedQueue<com.taobao.android.riverlogger.inspector.a>> r0 = com.taobao.android.riverlogger.inspector.Inspector.f
             java.lang.Object r3 = r0.get(r3)
@@ -89,7 +87,7 @@ public class Inspector {
             boolean r1 = r3.hasNext()
             if (r1 == 0) goto L28
             java.lang.Object r1 = r3.next()
-            com.taobao.android.riverlogger.inspector.a r1 = (com.taobao.android.riverlogger.inspector.C6576a) r1
+            com.taobao.android.riverlogger.inspector.a r1 = (com.taobao.android.riverlogger.inspector.a) r1
             if (r4 != 0) goto L1f
             return r1
         L1f:
@@ -104,21 +102,21 @@ public class Inspector {
     }
 
     public static void c(@NonNull String str, int i, @Nullable String str2, @NonNull JSONObject jSONObject) {
-        C6576a b2;
+        com.taobao.android.riverlogger.inspector.a b2;
         if (str2 != null) {
             Set<String> set = g.get(str2);
             if (set != null && (b2 = b(str, set)) != null) {
-                b2.a.handle(jSONObject, new C6577b(str, i, str2, jSONObject));
+                b2.a.handle(jSONObject, new b(str, i, str2, jSONObject));
                 return;
             }
         } else {
-            C6576a b3 = b(str, null);
+            com.taobao.android.riverlogger.inspector.a b3 = b(str, null);
             if (b3 != null) {
-                b3.a.handle(jSONObject, new C6577b(str, i, str2, jSONObject));
+                b3.a.handle(jSONObject, new b(str, i, str2, jSONObject));
                 return;
             }
         }
-        RemoteChannel c2 = C6581b.c();
+        RemoteChannel c2 = com.taobao.android.riverlogger.remote.b.c();
         if (c2 != null) {
             JSONObject jSONObject2 = new JSONObject();
             try {
@@ -136,17 +134,17 @@ public class Inspector {
         if (inspectorAgent == null || str == null) {
             return;
         }
-        C6575a c6575a = new C6575a(inspectorAgent, str);
+        a aVar = new a(inspectorAgent, str);
         if (c.get()) {
-            a(c6575a, true);
+            a(aVar, true);
             return;
         }
-        ConcurrentHashMap<String, ConcurrentLinkedQueue<C6575a>> concurrentHashMap = b;
-        ConcurrentLinkedQueue<C6575a> putIfAbsent = concurrentHashMap.putIfAbsent(str, new ConcurrentLinkedQueue<>());
+        ConcurrentHashMap<String, ConcurrentLinkedQueue<a>> concurrentHashMap = b;
+        ConcurrentLinkedQueue<a> putIfAbsent = concurrentHashMap.putIfAbsent(str, new ConcurrentLinkedQueue<>());
         if (putIfAbsent == null) {
             putIfAbsent = concurrentHashMap.get(str);
         }
-        putIfAbsent.add(c6575a);
+        putIfAbsent.add(aVar);
     }
 
     public static void e(@NonNull String str, @NonNull String str2) {
@@ -158,7 +156,7 @@ public class Inspector {
     }
 
     private static void f() {
-        RemoteChannel c2 = C6581b.c();
+        RemoteChannel c2 = com.taobao.android.riverlogger.remote.b.c();
         if (c2 == null) {
             return;
         }
@@ -179,8 +177,8 @@ public class Inspector {
         d = z;
         if (z) {
             if (c.compareAndSet(false, true)) {
-                for (ConcurrentLinkedQueue<C6575a> concurrentLinkedQueue : b.values()) {
-                    Iterator<C6575a> it = concurrentLinkedQueue.iterator();
+                for (ConcurrentLinkedQueue<a> concurrentLinkedQueue : b.values()) {
+                    Iterator<a> it = concurrentLinkedQueue.iterator();
                     while (it.hasNext()) {
                         a(it.next(), false);
                     }
@@ -189,8 +187,8 @@ public class Inspector {
             f();
         }
         InspectorNativeAgent.setConnectedNative(z);
-        for (ConcurrentLinkedQueue<C6575a> concurrentLinkedQueue2 : b.values()) {
-            Iterator<C6575a> it2 = concurrentLinkedQueue2.iterator();
+        for (ConcurrentLinkedQueue<a> concurrentLinkedQueue2 : b.values()) {
+            Iterator<a> it2 = concurrentLinkedQueue2.iterator();
             while (it2.hasNext()) {
                 it2.next().b.connectionChanged(z);
             }

@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
-import kotlin.collections.C8203e0;
-import kotlin.collections.C8214m;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
@@ -49,7 +47,7 @@ public class qi2 extends le1 {
     @NotNull
     public Set<ni1> getClassifierNames() {
         Set<ni1> d;
-        d = C8203e0.d();
+        d = kotlin.collections.e0.d();
         return d;
     }
 
@@ -61,10 +59,10 @@ public class qi2 extends le1 {
         b41.i(z60Var, "kindFilter");
         b41.i(function1, "nameFilter");
         if (!z60Var.a(z60.Companion.f())) {
-            g2 = C8214m.g();
+            g2 = kotlin.collections.m.g();
             return g2;
-        } else if (this.b.d() && z60Var.l().contains(y60.C9952b.INSTANCE)) {
-            g = C8214m.g();
+        } else if (this.b.d() && z60Var.l().contains(y60.b.INSTANCE)) {
+            g = kotlin.collections.m.g();
             return g;
         } else {
             Collection<hp0> subPackagesOf = this.a.getSubPackagesOf(this.b, function1);

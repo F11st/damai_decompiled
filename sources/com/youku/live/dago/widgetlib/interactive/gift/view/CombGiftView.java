@@ -39,7 +39,7 @@ public class CombGiftView extends FrameLayout {
 
     public CombGiftView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_comb_gift, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_comb_gift, (ViewGroup) this, true);
         this.imageIcon = (ImageView) findViewById(R.id.gift_icon);
     }
 }

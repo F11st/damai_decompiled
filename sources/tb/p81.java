@@ -2,14 +2,13 @@ package tb;
 
 import java.io.IOException;
 import kotlin.reflect.jvm.internal.impl.protobuf.ByteString;
-import kotlin.reflect.jvm.internal.impl.protobuf.C8447c;
 import kotlin.reflect.jvm.internal.impl.protobuf.MessageLite;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public class p81 {
     private ByteString a;
-    private C8447c b;
+    private kotlin.reflect.jvm.internal.impl.protobuf.c b;
     private volatile boolean c;
     protected volatile MessageLite d;
 

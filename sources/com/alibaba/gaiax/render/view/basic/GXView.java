@@ -50,12 +50,11 @@ public class GXView extends AbsoluteLayout implements GXIRelease, GXIRootView, G
     private float[] radius;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.view.basic.GXView$a */
     /* loaded from: classes6.dex */
-    public static final class C3367a extends ViewOutlineProvider {
+    public static final class a extends ViewOutlineProvider {
         final /* synthetic */ float b;
 
-        C3367a(float f) {
+        a(float f) {
             this.b = f;
         }
 
@@ -185,7 +184,7 @@ public class GXView extends AbsoluteLayout implements GXIRelease, GXIRootView, G
 
     @Override // com.alibaba.gaiax.render.view.GXIViewBindData
     public void onResetData() {
-        GXIViewBindData.C3361a.a(this);
+        GXIViewBindData.a.a(this);
     }
 
     @Override // com.alibaba.gaiax.render.view.GXIRelease
@@ -204,7 +203,7 @@ public class GXView extends AbsoluteLayout implements GXIRelease, GXIRootView, G
         b41.i(os0Var, "gxTemplateContext");
         this.gxTemplateContext = os0Var;
         if (!b41.d(dq0Var, this.lastBackdropFilter)) {
-            if (dq0Var instanceof dq0.C9054a) {
+            if (dq0Var instanceof dq0.a) {
                 if (Build.VERSION.SDK_INT >= 17) {
                     if (this.gxBlurHelper == null) {
                         this.gxBlurHelper = new gq0(this);
@@ -219,7 +218,7 @@ public class GXView extends AbsoluteLayout implements GXIRelease, GXIRootView, G
                     }
                 }
                 this.gxBackdropFilter = dq0Var;
-            } else if (dq0Var instanceof dq0.C9056c) {
+            } else if (dq0Var instanceof dq0.c) {
                 if (Build.VERSION.SDK_INT >= 17) {
                     gq0 gq0Var3 = this.gxBlurHelper;
                     if (gq0Var3 != null) {
@@ -278,7 +277,7 @@ public class GXView extends AbsoluteLayout implements GXIRelease, GXIRootView, G
                     if (f2 == f3) {
                         if ((f3 == f4) && f > 0.0f) {
                             setClipToOutline(true);
-                            setOutlineProvider(new C3367a(f));
+                            setOutlineProvider(new a(f));
                             return;
                         }
                     }

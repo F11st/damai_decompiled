@@ -46,9 +46,8 @@ public class MaterialHeader extends InternalAbstract implements RefreshHeader {
     protected int mWaveHeight;
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.MaterialHeader$a */
     /* loaded from: classes6.dex */
-    static /* synthetic */ class C6162a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -182,7 +181,7 @@ public class MaterialHeader extends InternalAbstract implements RefreshHeader {
     public void onStateChanged(@NonNull RefreshLayout refreshLayout, @NonNull RefreshState refreshState, @NonNull RefreshState refreshState2) {
         ImageView imageView = this.mCircleView;
         this.mState = refreshState2;
-        if (C6162a.a[refreshState2.ordinal()] != 2) {
+        if (a.a[refreshState2.ordinal()] != 2) {
             return;
         }
         this.mFinished = false;

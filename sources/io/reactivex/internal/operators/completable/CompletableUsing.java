@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.completable;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
+import io.reactivex.a;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.CompositeException;
 import io.reactivex.functions.Consumer;
@@ -17,7 +17,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class CompletableUsing<R> extends AbstractC8146a {
+public final class CompletableUsing<R> extends a {
     final Function<? super R, ? extends CompletableSource> completableFunction;
     final Consumer<? super R> disposer;
     final boolean eager;
@@ -124,7 +124,7 @@ public final class CompletableUsing<R> extends AbstractC8146a {
         this.eager = z;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     protected void subscribeActual(CompletableObserver completableObserver) {
         try {
             R call = this.resourceSupplier.call();

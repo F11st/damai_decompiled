@@ -30,8 +30,8 @@ import org.android.agoo.assist.AssistCallback;
 import org.android.agoo.assist.AssistManager;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tb.C9120f;
 import tb.b41;
+import tb.f;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -52,18 +52,17 @@ public final class PushAgent {
     private static IACCSConfigProvider g;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.accs.PushAgent$a */
     /* loaded from: classes7.dex */
-    public static final class C3440a implements AssistCallback {
+    public static final class a implements AssistCallback {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.pictures.accs.PushAgent$a$a */
+        /* renamed from: com.alibaba.pictures.accs.PushAgent$a$a  reason: collision with other inner class name */
         /* loaded from: classes7.dex */
-        public static final class C3441a implements ICallBackResultService {
+        public static final class C0148a implements ICallBackResultService {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C3441a() {
+            C0148a() {
             }
 
             @Override // com.heytap.msp.push.callback.ICallBackResultService
@@ -124,13 +123,12 @@ public final class PushAgent {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.pictures.accs.PushAgent$a$b */
         /* loaded from: classes7.dex */
-        public static final class C3442b implements IPushActionListener {
+        public static final class b implements IPushActionListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ Context a;
 
-            C3442b(Context context) {
+            b(Context context) {
                 this.a = context;
             }
 
@@ -147,7 +145,7 @@ public final class PushAgent {
             }
         }
 
-        C3440a() {
+        a() {
         }
 
         @Override // org.android.agoo.assist.AssistCallback
@@ -190,7 +188,7 @@ public final class PushAgent {
             }
             b41.i(context, WPKFactory.INIT_KEY_CONTEXT);
             HeytapPushManager.init(context, (context.getApplicationInfo().flags & 2) != 0);
-            HeytapPushManager.register(context, str, str2, new C3441a());
+            HeytapPushManager.register(context, str, str2, new C0148a());
         }
 
         @Override // org.android.agoo.assist.AssistCallback
@@ -201,7 +199,7 @@ public final class PushAgent {
                 return;
             }
             PushClient.getInstance(context).initialize();
-            PushClient.getInstance(context).turnOnPush(new C3442b(context));
+            PushClient.getInstance(context).turnOnPush(new b(context));
         }
 
         @Override // org.android.agoo.assist.AssistCallback
@@ -292,7 +290,7 @@ public final class PushAgent {
             INSTANCE.q();
             return;
         }
-        ACCSClient.getAccsClient("default").bindApp(iACCSConfigProvider.getTTid(), new C9120f(iACCSConfigProvider));
+        ACCSClient.getAccsClient("default").bindApp(iACCSConfigProvider.getTTid(), new f(iACCSConfigProvider));
     }
 
     @JvmStatic
@@ -426,7 +424,7 @@ public final class PushAgent {
         if (iACCSConfigProvider == null) {
             INSTANCE.q();
         } else {
-            AssistManager.init(iACCSConfigProvider.getContext(), new C3440a());
+            AssistManager.init(iACCSConfigProvider.getContext(), new a());
         }
     }
 

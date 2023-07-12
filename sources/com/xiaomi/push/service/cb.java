@@ -1,9 +1,7 @@
 package com.xiaomi.push.service;
 
 import android.content.Context;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
-import com.xiaomi.push.C7594ab;
-import com.xiaomi.push.C7672hn;
+import com.xiaomi.push.hn;
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -16,12 +14,12 @@ public final class cb implements Runnable {
     final /* synthetic */ Context a;
 
     /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ C7672hn f957a;
+    final /* synthetic */ hn f957a;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public cb(Context context, C7672hn c7672hn) {
+    public cb(Context context, hn hnVar) {
         this.a = context;
-        this.f957a = c7672hn;
+        this.f957a = hnVar;
     }
 
     @Override // java.lang.Runnable
@@ -32,7 +30,7 @@ public final class cb implements Runnable {
             try {
                 try {
                     File file = new File(this.a.getFilesDir(), "tiny_data.lock");
-                    C7594ab.m659a(file);
+                    com.xiaomi.push.ab.m659a(file);
                     randomAccessFile = new RandomAccessFile(file, "rw");
                 } catch (Exception e) {
                     e = e;
@@ -44,10 +42,10 @@ public final class cb implements Runnable {
                         try {
                             fileLock.release();
                         } catch (IOException e2) {
-                            AbstractC7535b.a(e2);
+                            com.xiaomi.channel.commonutils.logger.b.a(e2);
                         }
                     }
-                    C7594ab.a(randomAccessFile);
+                    com.xiaomi.push.ab.a(randomAccessFile);
                     throw th;
                 }
                 try {
@@ -58,7 +56,7 @@ public final class cb implements Runnable {
                             try {
                                 fileLock.release();
                             } catch (IOException e3) {
-                                AbstractC7535b.a(e3);
+                                com.xiaomi.channel.commonutils.logger.b.a(e3);
                             }
                         }
                     } catch (Throwable th2) {
@@ -66,22 +64,22 @@ public final class cb implements Runnable {
                         if (fileLock != null && fileLock.isValid()) {
                             fileLock.release();
                         }
-                        C7594ab.a(randomAccessFile);
+                        com.xiaomi.push.ab.a(randomAccessFile);
                         throw th;
                     }
                 } catch (Exception e4) {
                     e = e4;
-                    AbstractC7535b.a(e);
+                    com.xiaomi.channel.commonutils.logger.b.a(e);
                     if (fileLock != null && fileLock.isValid()) {
                         try {
                             fileLock.release();
                         } catch (IOException e5) {
-                            AbstractC7535b.a(e5);
+                            com.xiaomi.channel.commonutils.logger.b.a(e5);
                         }
                     }
-                    C7594ab.a(randomAccessFile);
+                    com.xiaomi.push.ab.a(randomAccessFile);
                 }
-                C7594ab.a(randomAccessFile);
+                com.xiaomi.push.ab.a(randomAccessFile);
             } catch (Throwable th3) {
                 throw th3;
             }

@@ -26,7 +26,6 @@ import cn.damai.comment.bean.CommentsResultBean;
 import cn.damai.comment.bean.EvaluateParams;
 import cn.damai.comment.util.CommentItemMoreUtil;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
@@ -101,13 +100,12 @@ public class EvaluateListFragment extends DamaiBaseMvpFragment<EvaluateListPrese
         public boolean isFinishShowOneTime = false;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.evaluate.ui.EvaluateListFragment$ShowWantSeeGuideTask$a */
         /* loaded from: classes5.dex */
-        public class C1079a implements WantSeePosterTips.ActionListener {
+        public class a implements WantSeePosterTips.ActionListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ CommentProjectInfoBean a;
 
-            C1079a(ShowWantSeeGuideTask showWantSeeGuideTask, CommentProjectInfoBean commentProjectInfoBean) {
+            a(ShowWantSeeGuideTask showWantSeeGuideTask, CommentProjectInfoBean commentProjectInfoBean) {
                 this.a = commentProjectInfoBean;
             }
 
@@ -142,7 +140,7 @@ public class EvaluateListFragment extends DamaiBaseMvpFragment<EvaluateListPrese
                 this.isFinishShowOneTime = true;
                 CommentProjectInfoBean projectInfoBean = ((EvaluateListPresenter) EvaluateListFragment.this.mPresenter).getProjectInfoBean();
                 EvaluateListFragment.this.updateWantSeeTips(projectInfoBean, false);
-                EvaluateListFragment.this.mWantSeePosterTips.setListener(new C1079a(this, projectInfoBean));
+                EvaluateListFragment.this.mWantSeePosterTips.setListener(new a(this, projectInfoBean));
                 EvaluateListFragment.this.mWantSeePosterTips.showAnim();
                 WantSeeGuideTips.Companion.b(true);
             }
@@ -150,12 +148,11 @@ public class EvaluateListFragment extends DamaiBaseMvpFragment<EvaluateListPrese
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.ui.EvaluateListFragment$a */
     /* loaded from: classes5.dex */
-    public class C1080a implements EvaluateItemDataBinder.SimpleItemClickListener {
+    public class a implements EvaluateItemDataBinder.SimpleItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1080a(EvaluateListFragment evaluateListFragment) {
+        a(EvaluateListFragment evaluateListFragment) {
         }
 
         @Override // cn.damai.evaluate.ui.item.EvaluateItemDataBinder.SimpleItemClickListener
@@ -168,12 +165,11 @@ public class EvaluateListFragment extends DamaiBaseMvpFragment<EvaluateListPrese
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.ui.EvaluateListFragment$b */
     /* loaded from: classes5.dex */
-    public class C1081b implements Action<Object> {
+    public class b implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1081b(EvaluateListFragment evaluateListFragment) {
+        b(EvaluateListFragment evaluateListFragment) {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -188,12 +184,11 @@ public class EvaluateListFragment extends DamaiBaseMvpFragment<EvaluateListPrese
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.ui.EvaluateListFragment$c */
     /* loaded from: classes5.dex */
-    public class C1082c implements Action<Object> {
+    public class c implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1082c() {
+        c() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -208,14 +203,13 @@ public class EvaluateListFragment extends DamaiBaseMvpFragment<EvaluateListPrese
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.ui.EvaluateListFragment$d */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1083d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ boolean a;
         final /* synthetic */ CommentProjectInfoBean b;
 
-        View$OnClickListenerC1083d(boolean z, CommentProjectInfoBean commentProjectInfoBean) {
+        d(boolean z, CommentProjectInfoBean commentProjectInfoBean) {
             this.a = z;
             this.b = commentProjectInfoBean;
         }
@@ -332,7 +326,7 @@ public class EvaluateListFragment extends DamaiBaseMvpFragment<EvaluateListPrese
             this.mEvaluateListAdapter = evaluateListAdapter;
             evaluateListAdapter.c(this.mUtDataConfiger);
             this.mEvaluateListAdapter.b(this);
-            this.mEvaluateListAdapter.d(new C1080a(this));
+            this.mEvaluateListAdapter.d(new a(this));
             this.irc.setAdapter(this.mEvaluateListAdapter);
             this.irc.setRefreshHeaderView(PullToRefreshHeaderView.getInstance(getActivity()));
             this.irc.getLoadMoreFooterView().setVisibility(8);
@@ -367,12 +361,12 @@ public class EvaluateListFragment extends DamaiBaseMvpFragment<EvaluateListPrese
                     }
                     EvaluateListFragment.access$212(EvaluateListFragment.this, i2);
                     int i3 = DisplayMetrics.getheightPixels(t60.b(EvaluateListFragment.this.getActivity()));
-                    int a = m62.a(EvaluateListFragment.this.getActivity(), 42.0f);
+                    int a2 = m62.a(EvaluateListFragment.this.getActivity(), 42.0f);
                     boolean z = EvaluateListFragment.this.mScrollDistance > i3;
                     if (z) {
                         EvaluateListFragment.this.postWantSeeDelayTaskIfNeed();
                     }
-                    pf0.b(EvaluateListFragment.this.mBack2Top, z, a);
+                    pf0.b(EvaluateListFragment.this.mBack2Top, z, a2);
                 }
             });
             if (this.fromWhere == EVALUATELIST_REPERTOIRE) {
@@ -433,7 +427,7 @@ public class EvaluateListFragment extends DamaiBaseMvpFragment<EvaluateListPrese
         if (AndroidInstantRuntime.support(ipChange, "744926694")) {
             ipChange.ipc$dispatch("744926694", new Object[]{this});
         } else {
-            this.mDMMessage.b("comment_publish_success", new C1082c());
+            this.mDMMessage.b("comment_publish_success", new c());
         }
     }
 
@@ -442,7 +436,7 @@ public class EvaluateListFragment extends DamaiBaseMvpFragment<EvaluateListPrese
         if (AndroidInstantRuntime.support(ipChange, "722381757")) {
             ipChange.ipc$dispatch("722381757", new Object[]{this});
         } else {
-            this.mDMMessage.b("evaluate_praise", new C1081b(this));
+            this.mDMMessage.b("evaluate_praise", new b(this));
         }
     }
 
@@ -563,12 +557,12 @@ public class EvaluateListFragment extends DamaiBaseMvpFragment<EvaluateListPrese
         String shortOptName = commentProjectInfoBean.getShortOptName();
         boolean z2 = commentProjectInfoBean.wantSee;
         String str = z2 ? "抢手热卖中，别忘了及时购票哦～" : "标「想看」，订阅更多演出信息～";
-        WantSeePosterTips.AbstractC1555b.C1556a c1556a = WantSeePosterTips.AbstractC1555b.C1556a.INSTANCE;
-        c1556a.s(new WantSeeIconUpdate(true, z2, z, new View$OnClickListenerC1083d(z2, commentProjectInfoBean)));
-        c1556a.u(shortOptName);
-        c1556a.r(commentProjectInfoBean.getProjectPoster());
-        c1556a.t(str);
-        this.mWantSeePosterTips.setPageSource(c1556a);
+        WantSeePosterTips.b.a aVar = WantSeePosterTips.b.a.INSTANCE;
+        aVar.s(new WantSeeIconUpdate(true, z2, z, new d(z2, commentProjectInfoBean)));
+        aVar.u(shortOptName);
+        aVar.r(commentProjectInfoBean.getProjectPoster());
+        aVar.t(str);
+        this.mWantSeePosterTips.setPageSource(aVar);
     }
 
     @Override // cn.damai.evaluate.contract.EvaluateListContract.View
@@ -665,7 +659,7 @@ public class EvaluateListFragment extends DamaiBaseMvpFragment<EvaluateListPrese
         } else {
             setLabelStatusUpdate(this.chooseLabel.getPos(), this.chooseLabel);
             setLabelStatusUpdate(commentContentLabelBean.getPos(), commentContentLabelBean);
-            C0529c.e().x(dl.I().D(commentContentLabelBean.getLabelName(), ((EvaluateListPresenter) this.mPresenter).getScriptId(), commentContentLabelBean.getPos()));
+            cn.damai.common.user.c.e().x(dl.I().D(commentContentLabelBean.getLabelName(), ((EvaluateListPresenter) this.mPresenter).getScriptId(), commentContentLabelBean.getPos()));
             setChooseLabel(commentContentLabelBean);
             this.headView.setInitSelectLabel(commentContentLabelBean.getLabelName(), commentContentLabelBean.getLabelType(), commentContentLabelBean.getLabelId());
             ((EvaluateListPresenter) this.mPresenter).setContentLabelList(jn1.ARRAY_START_STR + commentContentLabelBean.getLabelType() + jn1.ARRAY_END_STR);
@@ -704,7 +698,7 @@ public class EvaluateListFragment extends DamaiBaseMvpFragment<EvaluateListPrese
             if (((EvaluateListPresenter) this.mPresenter).getPerformInfo() == null || ((EvaluateListPresenter) this.mPresenter).getProjectInfoBean() == null) {
                 return;
             }
-            C0529c.e().x(dl.I().P("1", String.valueOf(this.mItemId)));
+            cn.damai.common.user.c.e().x(dl.I().P("1", String.valueOf(this.mItemId)));
             CommentItemMoreUtil.g(this.mActivity, ((EvaluateListPresenter) this.mPresenter).getPerformInfo().getPerformId(), ((EvaluateListPresenter) this.mPresenter).getProjectInfoBean().getProjectId(), ((EvaluateListPresenter) this.mPresenter).getProjectInfoBean().getProjectName(), ((EvaluateListPresenter) this.mPresenter).getProjectInfoBean().getProjectPoster(), ((EvaluateListPresenter) this.mPresenter).getPerformInfo().getPerformValidTime(), CommentItemMoreUtil.n(((EvaluateListPresenter) this.mPresenter).getProjectInfoBean().getCityName(), ((EvaluateListPresenter) this.mPresenter).getProjectInfoBean().getShowTime(), ((EvaluateListPresenter) this.mPresenter).getProjectInfoBean().getVenueName()));
         } else if (view.getId() == R$id.evaluate_back_to_top) {
             this.irc.smoothScrollToPosition(0);
@@ -865,7 +859,7 @@ public class EvaluateListFragment extends DamaiBaseMvpFragment<EvaluateListPrese
             hashMap.put("evaluate_id", str);
             hashMap.put("usercode", z20.E());
         }
-        C0529c.e().G(view, "item_" + i, "evaluate_tab_" + getChooseLabel().getPos(), dl.EVALUATE_LIST_PAGE, hashMap);
+        cn.damai.common.user.c.e().G(view, "item_" + i, "evaluate_tab_" + getChooseLabel().getPos(), dl.EVALUATE_LIST_PAGE, hashMap);
     }
 
     @Override // cn.damai.common.app.base.BaseView

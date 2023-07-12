@@ -13,9 +13,9 @@ import com.taobao.monitor.impl.trace.NetworkStageDispatcher;
 import com.taobao.monitor.impl.trace.PageLeaveDispatcher;
 import com.taobao.monitor.impl.trace.RenderDispatcher;
 import com.taobao.monitor.impl.trace.WindowEventDispatcher;
-import com.taobao.monitor.procedure.C6817d;
 import com.taobao.monitor.procedure.IPage;
 import com.taobao.monitor.procedure.IProcedure;
+import com.taobao.monitor.procedure.d;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -123,39 +123,39 @@ public abstract class ra extends AbsProcessor implements ApplicationBackgroundCh
     }
 
     protected void g() {
-        IDispatcher a = a(C8934b0.WINDOW_EVENT_DISPATCHER);
+        IDispatcher a = a(b0.WINDOW_EVENT_DISPATCHER);
         if (a instanceof WindowEventDispatcher) {
             this.g = (WindowEventDispatcher) a;
         }
-        IDispatcher a2 = a(C8934b0.APPLICATION_LOW_MEMORY_DISPATCHER);
+        IDispatcher a2 = a(b0.APPLICATION_LOW_MEMORY_DISPATCHER);
         if (a2 instanceof ApplicationLowMemoryDispatcher) {
             this.h = (ApplicationLowMemoryDispatcher) a2;
         }
-        IDispatcher a3 = a(C8934b0.ACTIVITY_FPS_DISPATCHER);
+        IDispatcher a3 = a(b0.ACTIVITY_FPS_DISPATCHER);
         if (a3 instanceof FPSDispatcher) {
             this.i = (FPSDispatcher) a3;
         }
-        IDispatcher a4 = a(C8934b0.APPLICATION_GC_DISPATCHER);
+        IDispatcher a4 = a(b0.APPLICATION_GC_DISPATCHER);
         if (a4 instanceof ApplicationGCDispatcher) {
             this.j = (ApplicationGCDispatcher) a4;
         }
-        IDispatcher a5 = a(C8934b0.APPLICATION_BACKGROUND_CHANGED_DISPATCHER);
+        IDispatcher a5 = a(b0.APPLICATION_BACKGROUND_CHANGED_DISPATCHER);
         if (a5 instanceof ApplicationBackgroundChangedDispatcher) {
             this.k = (ApplicationBackgroundChangedDispatcher) a5;
         }
-        IDispatcher a6 = a(C8934b0.NETWORK_STAGE_DISPATCHER);
+        IDispatcher a6 = a(b0.NETWORK_STAGE_DISPATCHER);
         if (a6 instanceof NetworkStageDispatcher) {
             this.l = (NetworkStageDispatcher) a6;
         }
-        IDispatcher a7 = a(C8934b0.IMAGE_STAGE_DISPATCHER);
+        IDispatcher a7 = a(b0.IMAGE_STAGE_DISPATCHER);
         if (a7 instanceof ImageStageDispatcher) {
             this.m = (ImageStageDispatcher) a7;
         }
-        IDispatcher a8 = a(C8934b0.PAGE_RENDER_DISPATCHER);
+        IDispatcher a8 = a(b0.PAGE_RENDER_DISPATCHER);
         if (a8 instanceof RenderDispatcher) {
             this.n = (RenderDispatcher) a8;
         }
-        IDispatcher a9 = a(C8934b0.PAGE_LEAVE_DISPATCHER);
+        IDispatcher a9 = a(b0.PAGE_LEAVE_DISPATCHER);
         if (a9 instanceof PageLeaveDispatcher) {
             this.o = (PageLeaveDispatcher) a9;
         }
@@ -196,7 +196,7 @@ public abstract class ra extends AbsProcessor implements ApplicationBackgroundCh
     }
 
     protected void h() {
-        IProcedure createProcedure = tu1.b.createProcedure(dp2.a(f()), new C6817d.C6819b().g(false).k(true).i(true).h(null).f());
+        IProcedure createProcedure = tu1.b.createProcedure(dp2.a(f()), new d.b().g(false).k(true).i(true).h(null).f());
         this.e = createProcedure;
         createProcedure.begin();
         if (this.d.a() != null) {
@@ -220,7 +220,7 @@ public abstract class ra extends AbsProcessor implements ApplicationBackgroundCh
     }
 
     protected void l() {
-        IDispatcher b = ca0.b(C8934b0.CUSTOM_PAGE_LIFECYCLE_DISPATCHER);
+        IDispatcher b = ca0.b(b0.CUSTOM_PAGE_LIFECYCLE_DISPATCHER);
         if (b instanceof CustomPageLifecycleDispatcher) {
             this.f = (CustomPageLifecycleDispatcher) b;
         }

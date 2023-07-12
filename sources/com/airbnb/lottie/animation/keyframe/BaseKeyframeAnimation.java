@@ -51,10 +51,9 @@ public abstract class BaseKeyframeAnimation<K, A> {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.animation.keyframe.BaseKeyframeAnimation$b */
     /* loaded from: classes9.dex */
-    public static final class C2844b<T> implements KeyframesWrapper<T> {
-        private C2844b() {
+    public static final class b<T> implements KeyframesWrapper<T> {
+        private b() {
         }
 
         @Override // com.airbnb.lottie.animation.keyframe.BaseKeyframeAnimation.KeyframesWrapper
@@ -90,16 +89,15 @@ public abstract class BaseKeyframeAnimation<K, A> {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.animation.keyframe.BaseKeyframeAnimation$c */
     /* loaded from: classes9.dex */
-    public static final class C2845c<T> implements KeyframesWrapper<T> {
+    public static final class c<T> implements KeyframesWrapper<T> {
         private final List<? extends u71<T>> a;
         private u71<T> c = null;
         private float d = -1.0f;
         @NonNull
         private u71<T> b = a(0.0f);
 
-        C2845c(List<? extends u71<T>> list) {
+        c(List<? extends u71<T>> list) {
             this.a = list;
         }
 
@@ -164,14 +162,13 @@ public abstract class BaseKeyframeAnimation<K, A> {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.airbnb.lottie.animation.keyframe.BaseKeyframeAnimation$d */
     /* loaded from: classes9.dex */
-    public static final class C2846d<T> implements KeyframesWrapper<T> {
+    public static final class d<T> implements KeyframesWrapper<T> {
         @NonNull
         private final u71<T> a;
         private float b = -1.0f;
 
-        C2846d(List<? extends u71<T>> list) {
+        d(List<? extends u71<T>> list) {
             this.a = list.get(0);
         }
 
@@ -225,12 +222,12 @@ public abstract class BaseKeyframeAnimation<K, A> {
 
     private static <T> KeyframesWrapper<T> o(List<? extends u71<T>> list) {
         if (list.isEmpty()) {
-            return new C2844b();
+            return new b();
         }
         if (list.size() == 1) {
-            return new C2846d(list);
+            return new d(list);
         }
-        return new C2845c(list);
+        return new c(list);
     }
 
     public void a(AnimationListener animationListener) {
@@ -255,11 +252,11 @@ public abstract class BaseKeyframeAnimation<K, A> {
 
     /* JADX INFO: Access modifiers changed from: protected */
     public float d() {
-        u71<K> b = b();
-        if (b.h()) {
+        u71<K> b2 = b();
+        if (b2.h()) {
             return 0.0f;
         }
-        return b.d.getInterpolation(e());
+        return b2.d.getInterpolation(e());
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -267,11 +264,11 @@ public abstract class BaseKeyframeAnimation<K, A> {
         if (this.b) {
             return 0.0f;
         }
-        u71<K> b = b();
-        if (b.h()) {
+        u71<K> b2 = b();
+        if (b2.h()) {
             return 0.0f;
         }
-        return (this.d - b.e()) / (b.b() - b.e());
+        return (this.d - b2.e()) / (b2.b() - b2.e());
     }
 
     public float f() {
@@ -284,12 +281,12 @@ public abstract class BaseKeyframeAnimation<K, A> {
         if (this.e == null && this.c.isCachedValueEnabled(e)) {
             return this.f;
         }
-        u71<K> b = b();
-        Interpolator interpolator = b.e;
-        if (interpolator != null && b.f != null) {
-            i = j(b, e, interpolator.getInterpolation(e), b.f.getInterpolation(e));
+        u71<K> b2 = b();
+        Interpolator interpolator = b2.e;
+        if (interpolator != null && b2.f != null) {
+            i = j(b2, e, interpolator.getInterpolation(e), b2.f.getInterpolation(e));
         } else {
-            i = i(b, d());
+            i = i(b2, d());
         }
         this.f = i;
         return i;

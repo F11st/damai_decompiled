@@ -14,6 +14,6 @@ public final class em1 {
 
     public final boolean a(@NotNull gu2 gu2Var) {
         b41.i(gu2Var, "type");
-        return a2.INSTANCE.a(xc2.INSTANCE.a(false, true), dk0.c(gu2Var), AbstractTypeCheckerContext.AbstractC8531a.C8533b.INSTANCE);
+        return a2.INSTANCE.a(xc2.INSTANCE.a(false, true), dk0.c(gu2Var), AbstractTypeCheckerContext.a.b.INSTANCE);
     }
 }

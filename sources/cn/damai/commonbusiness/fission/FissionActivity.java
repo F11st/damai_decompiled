@@ -21,13 +21,11 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.viewpager.widget.ViewPager;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMRoundedCornersBitmapProcessor;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
@@ -52,7 +50,7 @@ import cn.damai.uikit.iconfont.DMIconFontTextView;
 import cn.damai.uikit.number.DMDigitTextView;
 import cn.damai.wxapi.ShareUtil;
 import com.ali.user.open.core.Site;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -108,12 +106,11 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
     FissionUtil fissionUtil = new FissionUtil();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.FissionActivity$a */
     /* loaded from: classes4.dex */
-    public class C0694a implements DMRGBUtil.OnFetchColorListener {
+    public class a implements DMRGBUtil.OnFetchColorListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0694a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.util.DMRGBUtil.OnFetchColorListener
@@ -130,14 +127,13 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.FissionActivity$b */
     /* loaded from: classes4.dex */
-    public class C0695b implements GenerateImageUtil.OnImageGenerateListener {
+    public class b implements GenerateImageUtil.OnImageGenerateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
         final /* synthetic */ String b;
 
-        C0695b(View view, String str) {
+        b(View view, String str) {
             this.a = view;
             this.b = str;
         }
@@ -170,12 +166,11 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.FissionActivity$c */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0696c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0696c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -185,7 +180,7 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
                 ipChange.ipc$dispatch("-762438980", new Object[]{this, view});
             } else if (FissionActivity.this.isFastDoubleClick()) {
             } else {
-                C0529c.e().x(rj0.h().k(0, "weixin", FissionActivity.this.style_type, false));
+                cn.damai.common.user.c.e().x(rj0.h().k(0, "weixin", FissionActivity.this.style_type, false));
                 FissionActivity fissionActivity = FissionActivity.this;
                 fissionActivity.toShare(0, fissionActivity.getShareUrl(), FissionActivity.this.subMessage, FissionActivity.this.uniqueIdent, FissionActivity.this.channel);
             }
@@ -193,12 +188,11 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.FissionActivity$d */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0697d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0697d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -208,19 +202,18 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
                 ipChange.ipc$dispatch("1348851389", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(rj0.h().k(1, "pengyouquan", FissionActivity.this.style_type, false));
+            cn.damai.common.user.c.e().x(rj0.h().k(1, "pengyouquan", FissionActivity.this.style_type, false));
             FissionActivity fissionActivity = FissionActivity.this;
             fissionActivity.createPic("weixin_friend", view, fissionActivity, fissionActivity.getShareUrl(), FissionActivity.this.imageUrl, FissionActivity.this.projectName, FissionActivity.this.subMessage, FissionActivity.this.uniqueIdent, FissionActivity.this.getImageUrl());
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.FissionActivity$e */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0698e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0698e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -230,19 +223,18 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
                 ipChange.ipc$dispatch("-834825538", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(rj0.h().k(3, Site.WEIBO, FissionActivity.this.style_type, false));
+            cn.damai.common.user.c.e().x(rj0.h().k(3, Site.WEIBO, FissionActivity.this.style_type, false));
             FissionActivity fissionActivity = FissionActivity.this;
             fissionActivity.createPic(Site.WEIBO, view, fissionActivity, fissionActivity.getShareUrl(), FissionActivity.this.imageUrl, FissionActivity.this.projectName, FissionActivity.this.subMessage, FissionActivity.this.uniqueIdent, FissionActivity.this.getImageUrl());
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.FissionActivity$f */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0699f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0699f() {
+        f() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -252,19 +244,18 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
                 ipChange.ipc$dispatch("1276464831", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(rj0.h().k(2, "poster", FissionActivity.this.style_type, true));
+            cn.damai.common.user.c.e().x(rj0.h().k(2, "poster", FissionActivity.this.style_type, true));
             FissionActivity fissionActivity = FissionActivity.this;
             fissionActivity.createPic("gen_image", view, fissionActivity, fissionActivity.getShareUrl(), FissionActivity.this.imageUrl, FissionActivity.this.projectName, FissionActivity.this.subMessage, FissionActivity.this.uniqueIdent, FissionActivity.this.getImageUrl());
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.FissionActivity$g */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0700g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0700g() {
+        g() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -274,20 +265,19 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
                 ipChange.ipc$dispatch("1204078273", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(rj0.h().g("top", "details", Boolean.TRUE));
+            cn.damai.common.user.c.e().x(rj0.h().g("top", "details", Boolean.TRUE));
             Bundle bundle = new Bundle();
             bundle.putString("url", FissionActivity.this.infoBean.shareInfo.detailLinkUrl);
-            DMNav.from(FissionActivity.this).withExtras(bundle).toUri(NavUri.b(C3834a.C3837c.d));
+            DMNav.from(FissionActivity.this).withExtras(bundle).toUri(NavUri.b(a.c.d));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.FissionActivity$h */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0701h implements View.OnClickListener {
+    public class h implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0701h() {
+        h() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -297,25 +287,24 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
                 ipChange.ipc$dispatch("-979598654", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(rj0.h().i());
+            cn.damai.common.user.c.e().x(rj0.h().i());
             LoginManager.k().x(FissionActivity.this, new Intent(), 2000);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.FissionActivity$i */
     /* loaded from: classes4.dex */
-    public class C0702i implements DMImageCreator.DMImageFailListener {
+    public class i implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0702i() {
+        i() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1890732405")) {
-                ipChange.ipc$dispatch("1890732405", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("1890732405", new Object[]{this, dVar});
             } else {
                 FissionActivity.this.colorDefault();
             }
@@ -323,23 +312,22 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.FissionActivity$j */
     /* loaded from: classes4.dex */
-    public class C0703j implements DMImageCreator.DMImageSuccListener {
+    public class j implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0703j() {
+        j() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-2022404278")) {
-                ipChange.ipc$dispatch("-2022404278", new Object[]{this, c0502e});
-            } else if (c0502e == null || c0502e.b == null) {
+                ipChange.ipc$dispatch("-2022404278", new Object[]{this, eVar});
+            } else if (eVar == null || eVar.b == null) {
             } else {
                 FissionViewPagerBean fissionViewPagerBean = FissionActivity.this.viewPagerBean;
-                Bitmap bitmap = c0502e.b;
+                Bitmap bitmap = eVar.b;
                 fissionViewPagerBean.bitmap = bitmap;
                 FissionActivity.this.getColor(bitmap);
             }
@@ -391,7 +379,7 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
                     z = false;
                 }
                 GenerateImageUtil.q(activity, dMShareMessage, z);
-                GenerateImageUtil.G(new C0695b(view, str));
+                GenerateImageUtil.G(new b(view, str));
             }
         }
     }
@@ -402,7 +390,7 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
         if (AndroidInstantRuntime.support(ipChange, "-1319232931")) {
             ipChange.ipc$dispatch("-1319232931", new Object[]{this, bitmap});
         } else {
-            DMRGBUtil.g(1.0f, bitmap, this.imageUrl, new C0694a());
+            DMRGBUtil.g(1.0f, bitmap, this.imageUrl, new a());
         }
     }
 
@@ -465,9 +453,9 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
         ArrayList arrayList = new ArrayList();
         this.indicators = arrayList;
         arrayList.clear();
-        for (int i = 0; i < this.viewPagerCount; i++) {
+        for (int i2 = 0; i2 < this.viewPagerCount; i2++) {
             ImageView imageView = new ImageView(this);
-            if (i == 0) {
+            if (i2 == 0) {
                 imageView.setImageResource(R$drawable.cb_pigeonindicator_selected);
             } else {
                 imageView.setImageResource(R$drawable.cb_circleindicator_00000_unselected);
@@ -493,30 +481,30 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener
-            public void onPageScrollStateChanged(int i) {
+            public void onPageScrollStateChanged(int i2) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "-1306916718")) {
-                    ipChange2.ipc$dispatch("-1306916718", new Object[]{this, Integer.valueOf(i)});
+                    ipChange2.ipc$dispatch("-1306916718", new Object[]{this, Integer.valueOf(i2)});
                 }
             }
 
             @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener
-            public void onPageScrolled(int i, float f, int i2) {
+            public void onPageScrolled(int i2, float f2, int i3) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "1105413937")) {
-                    ipChange2.ipc$dispatch("1105413937", new Object[]{this, Integer.valueOf(i), Float.valueOf(f), Integer.valueOf(i2)});
+                    ipChange2.ipc$dispatch("1105413937", new Object[]{this, Integer.valueOf(i2), Float.valueOf(f2), Integer.valueOf(i3)});
                 }
             }
 
             @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener
-            public void onPageSelected(int i) {
+            public void onPageSelected(int i2) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "-763488675")) {
-                    ipChange2.ipc$dispatch("-763488675", new Object[]{this, Integer.valueOf(i)});
+                    ipChange2.ipc$dispatch("-763488675", new Object[]{this, Integer.valueOf(i2)});
                     return;
                 }
-                C0529c.e().x(rj0.h().j(i));
-                FissionActivity.this.refreshIndicator(i);
+                cn.damai.common.user.c.e().x(rj0.h().j(i2));
+                FissionActivity.this.refreshIndicator(i2);
             }
         });
     }
@@ -577,7 +565,7 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
         } else if (TextUtils.isEmpty(str)) {
             setDownPartData();
         } else {
-            C0504a.b().e(str).k(new DMRoundedCornersBitmapProcessor(24, 0)).n(new C0703j()).e(new C0702i()).f();
+            cn.damai.common.image.a.b().e(str).k(new DMRoundedCornersBitmapProcessor(24, 0)).n(new j()).e(new i()).f();
         }
     }
 
@@ -590,37 +578,37 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
         this.viewPagerResults.clear();
         this.viewPagerResults.add(this.viewPagerBean);
         this.viewPagerResults.add(this.viewPagerBean);
-        int a = DisplayMetrics.getwidthPixels(t60.b(this)) - (t60.a(this, 68.0f) * 2);
+        int a2 = DisplayMetrics.getwidthPixels(t60.b(this)) - (t60.a(this, 68.0f) * 2);
         RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) this.viewPager.getLayoutParams();
         layoutParams.height = t60.a(this, 75.0f) + r1;
-        layoutParams.width = a;
+        layoutParams.width = a2;
         this.viewPager.setLayoutParams(layoutParams);
         this.pagerAdapter.d(this.viewPagerResults);
-        this.pagerAdapter.f(a);
+        this.pagerAdapter.f(a2);
         this.pagerAdapter.e(r1);
         this.viewPager.setAdapter(this.pagerAdapter);
         this.pagerAdapter.notifyDataSetChanged();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void refreshIndicator(int i) {
+    public void refreshIndicator(int i2) {
         IpChange ipChange = $ipChange;
-        int i2 = 0;
+        int i3 = 0;
         if (AndroidInstantRuntime.support(ipChange, "-1591883399")) {
-            ipChange.ipc$dispatch("-1591883399", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-1591883399", new Object[]{this, Integer.valueOf(i2)});
             return;
         }
         while (true) {
-            int i3 = this.viewPagerCount;
-            if (i2 < i3) {
-                if (i % i3 == i2) {
-                    this.indicators.get(i2).setImageResource(R$drawable.cb_pigeonindicator_selected);
+            int i4 = this.viewPagerCount;
+            if (i3 < i4) {
+                if (i2 % i4 == i3) {
+                    this.indicators.get(i3).setImageResource(R$drawable.cb_pigeonindicator_selected);
                 } else {
-                    this.indicators.get(i2).setImageResource(R$drawable.cb_circleindicator_00000_unselected);
+                    this.indicators.get(i3).setImageResource(R$drawable.cb_circleindicator_00000_unselected);
                 }
-                i2++;
+                i3++;
             } else {
-                viewPagerType(i);
+                viewPagerType(i2);
                 return;
             }
         }
@@ -644,9 +632,9 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
             ipChange.ipc$dispatch("-1193268501", new Object[]{this});
             return;
         }
-        int i = this.dataLoadCount + 1;
-        this.dataLoadCount = i;
-        if (i == 2) {
+        int i2 = this.dataLoadCount + 1;
+        this.dataLoadCount = i2;
+        if (i2 == 2) {
             notifAdapter();
             this.dataLoadCount = 0;
         }
@@ -718,16 +706,16 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void setShareColor(int i) {
+    public void setShareColor(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-135866499")) {
-            ipChange.ipc$dispatch("-135866499", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-135866499", new Object[]{this, Integer.valueOf(i2)});
             return;
         }
-        this.icon_generate_image.update(i);
-        this.icon_friend.update(i);
-        this.icon_wx.update(i);
-        this.icon_weibo.update(i);
+        this.icon_generate_image.update(i2);
+        this.icon_friend.update(i2);
+        this.icon_wx.update(i2);
+        this.icon_weibo.update(i2);
     }
 
     private void setShareListener() {
@@ -736,10 +724,10 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
             ipChange.ipc$dispatch("-91043155", new Object[]{this});
             return;
         }
-        this.icon_wx.setListener(new View$OnClickListenerC0696c());
-        this.icon_friend.setListener(new View$OnClickListenerC0697d());
-        this.icon_weibo.setListener(new View$OnClickListenerC0698e());
-        this.icon_generate_image.setListener(new View$OnClickListenerC0699f());
+        this.icon_wx.setListener(new c());
+        this.icon_friend.setListener(new d());
+        this.icon_weibo.setListener(new e());
+        this.icon_generate_image.setListener(new f());
     }
 
     private void setStatusBar() {
@@ -788,10 +776,10 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
         FissionInfoBean fissionInfoBean = this.infoBean;
         if (fissionInfoBean != null && (activityInfo = fissionInfoBean.shareInfo) != null && (fissionInfoBean == null || activityInfo == null || !TextUtils.isEmpty(activityInfo.detailLinkUrl))) {
             if (z) {
-                this.tvMyInviteRecord.setOnClickListener(new View$OnClickListenerC0700g());
+                this.tvMyInviteRecord.setOnClickListener(new g());
                 str = "明细>";
             } else {
-                this.tvMyInviteRecord.setOnClickListener(new View$OnClickListenerC0701h());
+                this.tvMyInviteRecord.setOnClickListener(new h());
                 str = "去登录>";
             }
             SpannableString spannableString = new SpannableString("我的邀请记录 " + str);
@@ -815,15 +803,15 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void toShare(int i, String str, String str2, String str3, String str4) {
+    public void toShare(int i2, String str, String str2, String str3, String str4) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-149881405")) {
-            ipChange.ipc$dispatch("-149881405", new Object[]{this, Integer.valueOf(i), str, str2, str3, str4});
+            ipChange.ipc$dispatch("-149881405", new Object[]{this, Integer.valueOf(i2), str, str2, str3, str4});
             return;
         }
         ShareUtil shareUtil = new ShareUtil(this, this.fromWhere);
         shareUtil.initShareData(this.projectName, str2, this.imageUrl, str, null, "", Long.parseLong(str3));
-        shareUtil.shareByWchart(i);
+        shareUtil.shareByWchart(i2);
     }
 
     private void updatePageUT(String str) {
@@ -835,27 +823,27 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
         HashMap hashMap = new HashMap();
         hashMap.put("usercode", String.valueOf(z20.E()));
         hashMap.put("invite_code", str);
-        C0525a.C0527b c0527b = new C0525a.C0527b();
-        c0527b.i(rj0.SHARE_PAGE).j(hashMap);
-        C0529c.e().l(this, c0527b);
+        a.b bVar = new a.b();
+        bVar.i(rj0.SHARE_PAGE).j(hashMap);
+        cn.damai.common.user.c.e().l(this, bVar);
     }
 
-    private void viewPagerType(int i) {
+    private void viewPagerType(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "568593967")) {
-            ipChange.ipc$dispatch("568593967", new Object[]{this, Integer.valueOf(i)});
-        } else if (i == 0) {
+            ipChange.ipc$dispatch("568593967", new Object[]{this, Integer.valueOf(i2)});
+        } else if (i2 == 0) {
             this.style_type = "picture";
-        } else if (i == 1) {
+        } else if (i2 == 1) {
             this.style_type = "word";
         }
     }
 
     @Override // cn.damai.common.app.base.BaseActivity
-    public void dealHeaderClick(int i) {
+    public void dealHeaderClick(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1005733606")) {
-            ipChange.ipc$dispatch("1005733606", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("1005733606", new Object[]{this, Integer.valueOf(i2)});
         }
     }
 
@@ -866,10 +854,10 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
     }
 
     @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
-    public void handleError(int i) {
+    public void handleError(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-264004425")) {
-            ipChange.ipc$dispatch("-264004425", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-264004425", new Object[]{this, Integer.valueOf(i2)});
         }
     }
 
@@ -893,14 +881,14 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, android.app.Activity
-    public void onActivityResult(int i, int i2, Intent intent) {
+    public void onActivityResult(int i2, int i3, Intent intent) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-995860624")) {
-            ipChange.ipc$dispatch("-995860624", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), intent});
+            ipChange.ipc$dispatch("-995860624", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3), intent});
             return;
         }
-        super.onActivityResult(i, i2, intent);
-        ShareManager.E().r0(i, i2, intent);
+        super.onActivityResult(i2, i3, intent);
+        ShareManager.E().r0(i2, i3, intent);
     }
 
     public void onBackPresss() {
@@ -918,16 +906,16 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
         if (AndroidInstantRuntime.support(ipChange, "735781743")) {
             ipChange.ipc$dispatch("735781743", new Object[]{this, view});
         } else if (view.getId() == R$id.cb_title_text_url) {
-            C0529c.e().x(rj0.h().g("top", "rule", Boolean.FALSE));
+            cn.damai.common.user.c.e().x(rj0.h().g("top", "rule", Boolean.FALSE));
             FissionInfoBean.ActivityInfo activityInfo = this.infoBean.shareInfo;
             if (activityInfo == null || TextUtils.isEmpty(activityInfo.ruleUrl)) {
                 return;
             }
             Bundle bundle = new Bundle();
             bundle.putString("url", this.infoBean.shareInfo.ruleUrl);
-            DMNav.from(this).withExtras(bundle).toUri(NavUri.b(C3834a.C3837c.d));
+            DMNav.from(this).withExtras(bundle).toUri(NavUri.b(a.c.d));
         } else if (view.getId() == R$id.jubao_desc) {
-            C0529c.e().x(rj0.h().g("bottom", "report", Boolean.TRUE));
+            cn.damai.common.user.c.e().x(rj0.h().g("bottom", "report", Boolean.TRUE));
             if ("1".equals(this.channel)) {
                 ShareManager.E().b0(this, 1, this.uniqueIdent, 1);
             } else if ("2".equals(this.channel)) {
@@ -937,7 +925,7 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
             if (this.infoBean == null || this.mContext == null) {
                 return;
             }
-            C0529c.e().x(rj0.h().g("bottom", "copy_url", Boolean.FALSE));
+            cn.damai.common.user.c.e().x(rj0.h().g("bottom", "copy_url", Boolean.FALSE));
             Context context = this.mContext;
             nb2.a(context, getShareUrl());
         } else if (view.getId() == R$id.cb_title_left_icon) {
@@ -994,15 +982,15 @@ public class FissionActivity extends DamaiBaseActivity implements FissionUtil.Fi
     }
 
     @Override // androidx.appcompat.app.AppCompatActivity, android.app.Activity, android.view.KeyEvent.Callback
-    public boolean onKeyDown(int i, KeyEvent keyEvent) {
+    public boolean onKeyDown(int i2, KeyEvent keyEvent) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "954760871")) {
-            return ((Boolean) ipChange.ipc$dispatch("954760871", new Object[]{this, Integer.valueOf(i), keyEvent})).booleanValue();
+            return ((Boolean) ipChange.ipc$dispatch("954760871", new Object[]{this, Integer.valueOf(i2), keyEvent})).booleanValue();
         }
-        if (i == 4) {
+        if (i2 == 4) {
             onBackPresss();
         }
-        return super.onKeyDown(i, keyEvent);
+        return super.onKeyDown(i2, keyEvent);
     }
 
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity

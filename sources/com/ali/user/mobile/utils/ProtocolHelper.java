@@ -159,7 +159,7 @@ public class ProtocolHelper {
         }
         protocolModel.protocolTitle = sb.toString();
         protocolModel.protocolItems = hashMap;
-        protocolModel.protocolItemColor = R.C2963color.aliuser_new_edit_text_color;
+        protocolModel.protocolItemColor = R.color.aliuser_new_edit_text_color;
         return protocolModel;
     }
 

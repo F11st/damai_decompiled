@@ -1,8 +1,8 @@
 package com.amap.api.services.poisearch;
 
 import android.content.Context;
-import com.amap.api.col.s.C4435i;
 import com.amap.api.col.s.bd;
+import com.amap.api.col.s.i;
 import com.amap.api.services.core.AMapException;
 import com.amap.api.services.core.LatLonPoint;
 import com.amap.api.services.core.PoiItem;
@@ -267,7 +267,7 @@ public class PoiSearch {
             try {
                 super.clone();
             } catch (CloneNotSupportedException e) {
-                C4435i.a(e, "PoiSearch", "queryclone");
+                i.a(e, "PoiSearch", "queryclone");
             }
             Query query = new Query(this.a, this.b, this.c);
             query.setPageNum(this.d);
@@ -419,7 +419,7 @@ public class PoiSearch {
             try {
                 super.clone();
             } catch (CloneNotSupportedException e) {
-                C4435i.a(e, "PoiSearch", "SearchBoundClone");
+                i.a(e, "PoiSearch", "SearchBoundClone");
             }
             return new SearchBound(this.a, this.b, this.c, this.d, this.e, this.g, this.f);
         }

@@ -1,7 +1,7 @@
 package io.reactivex.subjects;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
+import io.reactivex.a;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.functions.ObjectHelper;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -10,7 +10,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class CompletableSubject extends AbstractC8146a implements CompletableObserver {
+public final class CompletableSubject extends a implements CompletableObserver {
     static final CompletableDisposable[] d = new CompletableDisposable[0];
     static final CompletableDisposable[] e = new CompletableDisposable[0];
     Throwable c;
@@ -126,7 +126,7 @@ public final class CompletableSubject extends AbstractC8146a implements Completa
         }
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     protected void subscribeActual(CompletableObserver completableObserver) {
         CompletableDisposable completableDisposable = new CompletableDisposable(completableObserver, this);
         completableObserver.onSubscribe(completableDisposable);

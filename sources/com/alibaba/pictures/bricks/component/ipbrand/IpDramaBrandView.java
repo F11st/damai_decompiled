@@ -75,12 +75,11 @@ public class IpDramaBrandView extends AbsView<IItem<ItemValue>, IpDramaBrandCont
     ImageView vip_tag;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.ipbrand.IpDramaBrandView$a */
     /* loaded from: classes7.dex */
-    public class C3480a implements UserTrackInterface {
+    public class a implements UserTrackInterface {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3480a() {
+        a() {
         }
 
         @Override // com.alibaba.pictures.bricks.component.artist.UserTrackInterface
@@ -105,12 +104,11 @@ public class IpDramaBrandView extends AbsView<IItem<ItemValue>, IpDramaBrandCont
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.ipbrand.IpDramaBrandView$b */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC3481b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC3481b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -125,13 +123,12 @@ public class IpDramaBrandView extends AbsView<IItem<ItemValue>, IpDramaBrandCont
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.ipbrand.IpDramaBrandView$c */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC3482c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ VideoAlbum a;
 
-        View$OnClickListenerC3482c(VideoAlbum videoAlbum) {
+        c(VideoAlbum videoAlbum) {
             this.a = videoAlbum;
         }
 
@@ -181,7 +178,7 @@ public class IpDramaBrandView extends AbsView<IItem<ItemValue>, IpDramaBrandCont
         ArtistHorAdapter artistHorAdapter = new ArtistHorAdapter(this.context);
         this.artistHorAdapter = artistHorAdapter;
         this.ircArtist.setAdapter(artistHorAdapter);
-        this.artistHorAdapter.d(new C3480a());
+        this.artistHorAdapter.d(new a());
         this.ip_brand_quickreport = (RelativeLayout) view.findViewById(R$id.ip_brand_quickreport);
         this.ip_brand_quickreport_img = (DMPosterView) view.findViewById(R$id.ip_brand_quickreport_img);
         this.ip_brand_quickreport_title = (TextView) view.findViewById(R$id.ip_brand_quickreport_title);
@@ -190,7 +187,7 @@ public class IpDramaBrandView extends AbsView<IItem<ItemValue>, IpDramaBrandCont
         this.brand_quickreport_ipuv = (TextView) view.findViewById(R$id.brand_quickreport_ipuv);
         this.ip_brand_video_time = (TextView) view.findViewById(R$id.ip_brand_video_time);
         this.bottomLine = view.findViewById(R$id.item_bottom_line);
-        this.ip_brand_top_layout.setOnClickListener(new View$OnClickListenerC3481b());
+        this.ip_brand_top_layout.setOnClickListener(new b());
     }
 
     private void imgShow(DMPosterView dMPosterView, String str, boolean z) {
@@ -259,8 +256,8 @@ public class IpDramaBrandView extends AbsView<IItem<ItemValue>, IpDramaBrandCont
                 if (i == 1) {
                     if (n91.a(videoAlbum.imgList) > 0) {
                         Drawable drawable = this.context.getResources().getDrawable(R$drawable.bricks_icon_nine_grid_pic_indicator);
-                        int b = s60.INSTANCE.b(this.context, 10);
-                        drawable.setBounds(0, 0, b, b);
+                        int b2 = s60.INSTANCE.b(this.context, 10);
+                        drawable.setBounds(0, 0, b2, b2);
                         this.ip_brand_video_time.setCompoundDrawables(drawable, null, null, null);
                         TextView textView = this.ip_brand_video_time;
                         textView.setText(AltriaXLaunchTime.SPACE + videoAlbum.imgList.size());
@@ -312,7 +309,7 @@ public class IpDramaBrandView extends AbsView<IItem<ItemValue>, IpDramaBrandCont
                 setViewGone(this.brand_quickreport_ipuv_icon, 8);
                 setViewGone(this.brand_quickreport_ipuv, 8);
             }
-            this.ip_brand_quickreport.setOnClickListener(new View$OnClickListenerC3482c(videoAlbum));
+            this.ip_brand_quickreport.setOnClickListener(new c(videoAlbum));
         } else {
             setViewGone(this.ip_brand_quickreport, 8);
         }

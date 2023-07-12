@@ -11,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.trade.R$drawable;
 import cn.damai.trade.R$layout;
@@ -38,14 +37,13 @@ public class WantSeeAvatarLayout2 extends ViewGroup {
     private boolean mIsReverse;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.wantsee.WantSeeAvatarLayout2$a */
     /* loaded from: classes16.dex */
-    public class C2440a implements ValueAnimator.AnimatorUpdateListener {
+    public class a implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
         final /* synthetic */ View b;
 
-        C2440a(ImageView imageView, View view) {
+        a(ImageView imageView, View view) {
             this.a = imageView;
             this.b = view;
         }
@@ -69,12 +67,11 @@ public class WantSeeAvatarLayout2 extends ViewGroup {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.wantsee.WantSeeAvatarLayout2$b */
     /* loaded from: classes16.dex */
-    public class C2441b extends AnimatorListenerAdapter {
+    public class b extends AnimatorListenerAdapter {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2441b() {
+        b() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -107,13 +104,12 @@ public class WantSeeAvatarLayout2 extends ViewGroup {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.wantsee.WantSeeAvatarLayout2$c */
     /* loaded from: classes16.dex */
-    public class C2442c implements ValueAnimator.AnimatorUpdateListener {
+    public class c implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
 
-        C2442c(View view) {
+        c(View view) {
             this.a = view;
         }
 
@@ -131,13 +127,12 @@ public class WantSeeAvatarLayout2 extends ViewGroup {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.wantsee.WantSeeAvatarLayout2$d */
     /* loaded from: classes16.dex */
-    public class C2443d extends AnimatorListenerAdapter {
+    public class d extends AnimatorListenerAdapter {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        C2443d(int i) {
+        d(int i) {
             this.a = i;
         }
 
@@ -187,9 +182,9 @@ public class WantSeeAvatarLayout2 extends ViewGroup {
         removeAllViews();
         for (int i = 0; i < this.mAllUris.size() && i < 5; i++) {
             ImageView imageView = (ImageView) LayoutInflater.from(this.mContext).inflate(R$layout.want_see_avatarlist_item, (ViewGroup) this, false);
-            DMImageCreator c = C0504a.b().h(this.mContext).c(this.mAllUris.get(i));
+            DMImageCreator c2 = cn.damai.common.image.a.b().h(this.mContext).c(this.mAllUris.get(i));
             int i2 = R$drawable.uikit_user_default_icon;
-            c.i(i2).c(i2).k(new yq()).g(imageView);
+            c2.i(i2).c(i2).k(new yq()).g(imageView);
             addView(imageView);
         }
     }
@@ -327,8 +322,8 @@ public class WantSeeAvatarLayout2 extends ViewGroup {
             ValueAnimator ofInt = ValueAnimator.ofInt((int) (measuredWidth * this.mImageOffset), 0);
             this.mAnimator = ofInt;
             ofInt.setDuration(1000L);
-            this.mAnimator.addUpdateListener(new C2442c(childAt));
-            this.mAnimator.addListener(new C2443d(childCount));
+            this.mAnimator.addUpdateListener(new c(childAt));
+            this.mAnimator.addListener(new d(childCount));
             this.mAnimator.start();
         }
     }
@@ -365,16 +360,16 @@ public class WantSeeAvatarLayout2 extends ViewGroup {
                 isNeedDeleteLast = true;
             }
             ImageView imageView = (ImageView) LayoutInflater.from(this.mContext).inflate(R$layout.want_see_avatarlist_item, (ViewGroup) this, false);
-            DMImageCreator c = C0504a.b().h(this.mContext).c(str);
+            DMImageCreator c2 = cn.damai.common.image.a.b().h(this.mContext).c(str);
             int i = R$drawable.uikit_user_default_icon;
-            c.i(i).c(i).k(new yq()).g(imageView);
+            c2.i(i).c(i).k(new yq()).g(imageView);
             addView(imageView);
             View childAt = getChildAt(0);
             ValueAnimator ofInt = ValueAnimator.ofInt(0, (int) (childAt.getMeasuredWidth() * (1.0f - this.mImageOffset)));
             this.mAnimator = ofInt;
             ofInt.setDuration(1000L);
-            this.mAnimator.addUpdateListener(new C2440a(imageView, childAt));
-            this.mAnimator.addListener(new C2441b());
+            this.mAnimator.addUpdateListener(new a(imageView, childAt));
+            this.mAnimator.addListener(new b());
             this.mAnimator.start();
         }
     }

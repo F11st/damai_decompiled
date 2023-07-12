@@ -42,15 +42,15 @@ public class cz implements IPolylineDelegate {
     private int[] R;
     private int[] S;
     private PolylineOptions V;
-    private C4505de Z;
-    private C4637r e;
+    private de Z;
+    private r e;
     private String f;
     private FloatBuffer p;
     private List<IPoint> g = new ArrayList();
     private List<FPoint> h = new ArrayList();
     private List<LatLng> i = new ArrayList();
     private List<BitmapDescriptor> j = new ArrayList();
-    private List<C4645x> k = new ArrayList();
+    private List<x> k = new ArrayList();
     private List<Integer> l = new ArrayList();
     private List<Integer> m = new ArrayList();
     private List<Integer> n = new ArrayList();
@@ -95,8 +95,8 @@ public class cz implements IPolylineDelegate {
     ArrayList<FPoint> c = new ArrayList<>();
     long d = 0;
 
-    public cz(C4637r c4637r, PolylineOptions polylineOptions) {
-        this.e = c4637r;
+    public cz(r rVar, PolylineOptions polylineOptions) {
+        this.e = rVar;
         setOptions(polylineOptions);
         try {
             this.f = getId();
@@ -192,7 +192,7 @@ public class cz implements IPolylineDelegate {
             synchronized (this) {
                 BitmapDescriptor bitmapDescriptor = this.q;
                 if (bitmapDescriptor != null) {
-                    C4645x a2 = a(Build.VERSION.SDK_INT >= 12, bitmapDescriptor, true);
+                    x a2 = a(Build.VERSION.SDK_INT >= 12, bitmapDescriptor, true);
                     if (a2 != null) {
                         i = a2.k();
                         this.D = a2.l();
@@ -237,7 +237,7 @@ public class cz implements IPolylineDelegate {
             synchronized (this) {
                 BitmapDescriptor bitmapDescriptor = this.q;
                 if (bitmapDescriptor != null) {
-                    C4645x a = a(Build.VERSION.SDK_INT >= 12, bitmapDescriptor, true);
+                    x a = a(Build.VERSION.SDK_INT >= 12, bitmapDescriptor, true);
                     if (a != null) {
                         i = a.k();
                         this.D = a.l();
@@ -448,13 +448,13 @@ public class cz implements IPolylineDelegate {
     public void destroy() {
         try {
             remove();
-            List<C4645x> list = this.k;
+            List<x> list = this.k;
             if (list != null && list.size() > 0) {
                 for (int i = 0; i < this.k.size(); i++) {
-                    C4645x c4645x = this.k.get(i);
-                    if (c4645x != null) {
-                        this.e.a(c4645x);
-                        this.e.g().removeTextureItem(c4645x.p());
+                    x xVar = this.k.get(i);
+                    if (xVar != null) {
+                        this.e.a(xVar);
+                        this.e.g().removeTextureItem(xVar.p());
                     }
                 }
                 this.k.clear();
@@ -1073,12 +1073,12 @@ public class cz implements IPolylineDelegate {
     }
 
     private void b() {
-        C4637r c4637r;
-        List<C4645x> list = this.k;
+        r rVar;
+        List<x> list = this.k;
         if (list != null) {
-            for (C4645x c4645x : list) {
-                if (c4645x != null && (c4637r = this.e) != null) {
-                    c4637r.a(c4645x);
+            for (x xVar : list) {
+                if (xVar != null && (rVar = this.e) != null) {
+                    rVar.a(xVar);
                 }
             }
             this.k.clear();
@@ -1270,7 +1270,7 @@ public class cz implements IPolylineDelegate {
                     int i = 0;
                     int i2 = 0;
                     for (BitmapDescriptor bitmapDescriptor : this.j) {
-                        C4645x a = a(z, bitmapDescriptor, false);
+                        x a = a(z, bitmapDescriptor, false);
                         if (a != null) {
                             i2 = a.k();
                             this.D = a.l();
@@ -1317,37 +1317,37 @@ public class cz implements IPolylineDelegate {
         }
     }
 
-    private void a(C4645x c4645x) {
-        if (c4645x != null) {
-            this.k.add(c4645x);
-            c4645x.m();
+    private void a(x xVar) {
+        if (xVar != null) {
+            this.k.add(xVar);
+            xVar.m();
         }
     }
 
-    private C4645x a(boolean z, BitmapDescriptor bitmapDescriptor, boolean z2) {
+    private x a(boolean z, BitmapDescriptor bitmapDescriptor, boolean z2) {
         if (z2) {
             b();
         }
-        C4645x c4645x = null;
-        if (z && (c4645x = this.e.a(bitmapDescriptor)) != null && c4645x.k() > 0) {
-            c4645x.k();
-            a(c4645x);
-            return c4645x;
+        x xVar = null;
+        if (z && (xVar = this.e.a(bitmapDescriptor)) != null && xVar.k() > 0) {
+            xVar.k();
+            a(xVar);
+            return xVar;
         }
-        if (c4645x == null) {
-            c4645x = new C4645x(bitmapDescriptor, 0);
+        if (xVar == null) {
+            xVar = new x(bitmapDescriptor, 0);
         }
         Bitmap bitmap = bitmapDescriptor.getBitmap();
         if (bitmap != null && !bitmap.isRecycled()) {
             int c = c();
             if (z) {
-                c4645x.a(c);
-                this.e.g().addTextureItem(c4645x);
+                xVar.a(c);
+                this.e.g().addTextureItem(xVar);
             }
-            a(c4645x);
+            a(xVar);
             eq.b(c, bitmap, true);
         }
-        return c4645x;
+        return xVar;
     }
 
     private boolean a(FPoint[] fPointArr) {
@@ -1410,7 +1410,7 @@ public class cz implements IPolylineDelegate {
         this.Y = lineCapType;
     }
 
-    public void a(C4505de c4505de) {
-        this.Z = c4505de;
+    public void a(de deVar) {
+        this.Z = deVar;
     }
 }

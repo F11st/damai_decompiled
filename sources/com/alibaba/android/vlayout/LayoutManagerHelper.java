@@ -12,9 +12,9 @@ public interface LayoutManagerHelper {
 
     void addChildView(View view, int i);
 
-    void addChildView(VirtualLayoutManager.C3287d c3287d, View view);
+    void addChildView(VirtualLayoutManager.d dVar, View view);
 
-    void addChildView(VirtualLayoutManager.C3287d c3287d, View view, int i);
+    void addChildView(VirtualLayoutManager.d dVar, View view, int i);
 
     void addFixedView(View view);
 
@@ -24,7 +24,7 @@ public interface LayoutManagerHelper {
 
     int findLastVisibleItemPosition();
 
-    AbstractC3289a findLayoutHelperByPosition(int i);
+    a findLayoutHelperByPosition(int i);
 
     @Nullable
     View findViewByPosition(int i);
@@ -52,7 +52,7 @@ public interface LayoutManagerHelper {
 
     int getDecoratedTop(View view);
 
-    AbstractC3291c getMainOrientationHelper();
+    c getMainOrientationHelper();
 
     int getOrientation();
 
@@ -70,7 +70,7 @@ public interface LayoutManagerHelper {
 
     boolean getReverseLayout();
 
-    AbstractC3291c getSecondaryOrientationHelper();
+    c getSecondaryOrientationHelper();
 
     void hideView(View view);
 

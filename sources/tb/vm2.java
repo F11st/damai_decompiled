@@ -17,12 +17,11 @@ public class vm2 {
     private static IHandlerThreadMaker b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.vm2$a */
     /* loaded from: classes11.dex */
-    static class ThreadFactoryC9822a implements ThreadFactory {
+    static class a implements ThreadFactory {
         final /* synthetic */ AtomicInteger a;
 
-        ThreadFactoryC9822a(AtomicInteger atomicInteger) {
+        a(AtomicInteger atomicInteger) {
             this.a = atomicInteger;
         }
 
@@ -50,9 +49,9 @@ public class vm2 {
 
     public static void d(Runnable runnable) {
         if (a == null) {
-            ThreadFactoryC9822a threadFactoryC9822a = new ThreadFactoryC9822a(new AtomicInteger(0));
+            a aVar = new a(new AtomicInteger(0));
             TimeUnit timeUnit = TimeUnit.MILLISECONDS;
-            ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(3, 3, 0L, timeUnit, new LinkedBlockingQueue(), threadFactoryC9822a, new ThreadPoolExecutor.AbortPolicy());
+            ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(3, 3, 0L, timeUnit, new LinkedBlockingQueue(), aVar, new ThreadPoolExecutor.AbortPolicy());
             threadPoolExecutor.setKeepAliveTime(3000L, timeUnit);
             threadPoolExecutor.allowCoreThreadTimeOut(true);
             a = threadPoolExecutor;

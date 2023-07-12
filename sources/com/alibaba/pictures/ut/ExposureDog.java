@@ -28,7 +28,6 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -67,21 +66,21 @@ public final class ExposureDog {
         @Nullable
         private Runnable a;
         @NotNull
-        private View$OnAttachStateChangeListenerC3648a b;
+        private a b;
         @NotNull
         private View c;
 
-        public ExpGlobalLayoutListener(@NotNull View$OnAttachStateChangeListenerC3648a view$OnAttachStateChangeListenerC3648a, @NotNull View view) {
-            b41.i(view$OnAttachStateChangeListenerC3648a, "attachListener");
+        public ExpGlobalLayoutListener(@NotNull a aVar, @NotNull View view) {
+            b41.i(aVar, "attachListener");
             b41.i(view, "view");
-            this.b = view$OnAttachStateChangeListenerC3648a;
+            this.b = aVar;
             this.c = view;
         }
 
         @NotNull
-        public final View$OnAttachStateChangeListenerC3648a a() {
+        public final a a() {
             IpChange ipChange = $ipChange;
-            return AndroidInstantRuntime.support(ipChange, "214107030") ? (View$OnAttachStateChangeListenerC3648a) ipChange.ipc$dispatch("214107030", new Object[]{this}) : this.b;
+            return AndroidInstantRuntime.support(ipChange, "214107030") ? (a) ipChange.ipc$dispatch("214107030", new Object[]{this}) : this.b;
         }
 
         @Nullable
@@ -259,9 +258,8 @@ public final class ExposureDog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.ut.ExposureDog$a */
     /* loaded from: classes8.dex */
-    public static final class View$OnAttachStateChangeListenerC3648a implements View.OnAttachStateChangeListener {
+    public static final class a implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         @NotNull
         private Map<String, String> a;
@@ -279,7 +277,7 @@ public final class ExposureDog {
         @Nullable
         private Map<String, String> h;
 
-        public View$OnAttachStateChangeListenerC3648a(@NotNull View view, @Nullable String str, @Nullable String str2, @NotNull String str3, @Nullable Map<String, String> map) {
+        public a(@NotNull View view, @Nullable String str, @Nullable String str2, @NotNull String str3, @Nullable Map<String, String> map) {
             b41.i(view, "view");
             b41.i(str3, "block");
             this.e = str;
@@ -389,14 +387,13 @@ public final class ExposureDog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.ut.ExposureDog$b */
     /* loaded from: classes8.dex */
-    public static final class ViewTreeObserver$OnGlobalLayoutListenerC3649b implements ViewTreeObserver.OnGlobalLayoutListener {
+    public static final class b implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private boolean a;
         private long b;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC3649b() {
+        b() {
             this.a = ExposureDog.this.n.getVisibility() == 0;
         }
 
@@ -422,9 +419,9 @@ public final class ExposureDog {
     }
 
     public ExposureDog(@Nullable View view) {
-        Lazy b;
+        Lazy b2;
         this.n = view;
-        b = C8177b.b(new Function0<HashMap<String, String>>() { // from class: com.alibaba.pictures.ut.ExposureDog$params$2
+        b2 = kotlin.b.b(new Function0<HashMap<String, String>>() { // from class: com.alibaba.pictures.ut.ExposureDog$params$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // kotlin.jvm.functions.Function0
@@ -434,7 +431,7 @@ public final class ExposureDog {
                 return AndroidInstantRuntime.support(ipChange, "863780026") ? (HashMap) ipChange.ipc$dispatch("863780026", new Object[]{this}) : new HashMap<>();
             }
         });
-        this.h = b;
+        this.h = b2;
         this.m = new Handler(Looper.getMainLooper());
     }
 
@@ -485,7 +482,7 @@ public final class ExposureDog {
         if (AndroidInstantRuntime.support(ipChange, "1925154073")) {
             ipChange.ipc$dispatch("1925154073", new Object[]{this, view, str, str2, str3, map});
         } else if (str3 != null) {
-            view.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC3648a(view, str, str2, str3, map));
+            view.addOnAttachStateChangeListener(new a(view, str, str2, str3, map));
         } else {
             qv2.c("exposureWindow-error,block==null");
             wt2 wt2Var = wt2.INSTANCE;
@@ -537,11 +534,11 @@ public final class ExposureDog {
             str = this.a + '.' + this.b;
         }
         DogCat dogCat = DogCat.INSTANCE;
-        String a = dogCat.a(str, str2);
-        if (a == null) {
-            a = dogCat.f();
+        String a2 = dogCat.a(str, str2);
+        if (a2 == null) {
+            a2 = dogCat.f();
         }
-        this.f = a;
+        this.f = a2;
         String str3 = this.b;
         if (((str3 == null || str3.length() == 0) ? true : true) || (!b41.d(this.c, Boolean.TRUE))) {
             StringBuilder sb = new StringBuilder();
@@ -582,7 +579,7 @@ public final class ExposureDog {
         if (view == null) {
             return;
         }
-        view.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC3649b());
+        view.getViewTreeObserver().addOnGlobalLayoutListener(new b());
     }
 
     /* JADX INFO: Access modifiers changed from: private */

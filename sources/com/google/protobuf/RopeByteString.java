@@ -30,12 +30,11 @@ public final class RopeByteString extends ByteString {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.RopeByteString$b */
     /* loaded from: classes10.dex */
-    public static class C5387b {
+    public static class b {
         private final Stack<ByteString> a;
 
-        private C5387b() {
+        private b() {
             this.a = new Stack<>();
         }
 
@@ -92,9 +91,8 @@ public final class RopeByteString extends ByteString {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.RopeByteString$c */
     /* loaded from: classes10.dex */
-    public static class C5388c implements Iterator<ByteString.LeafByteString> {
+    public static class c implements Iterator<ByteString.LeafByteString> {
         private final Stack<RopeByteString> a;
         private ByteString.LeafByteString b;
 
@@ -138,7 +136,7 @@ public final class RopeByteString extends ByteString {
             throw new UnsupportedOperationException();
         }
 
-        private C5388c(ByteString byteString) {
+        private c(ByteString byteString) {
             this.a = new Stack<>();
             this.b = a(byteString);
         }
@@ -188,7 +186,7 @@ public final class RopeByteString extends ByteString {
             }
         }
         if (size < minLengthByDepth[Math.max(byteString.getTreeDepth(), byteString2.getTreeDepth()) + 1]) {
-            return new C5387b().b(byteString, byteString2);
+            return new b().b(byteString, byteString2);
         }
         return new RopeByteString(byteString, byteString2);
     }
@@ -204,10 +202,10 @@ public final class RopeByteString extends ByteString {
 
     private boolean equalsFragments(ByteString byteString) {
         boolean equalsRange;
-        C5388c c5388c = new C5388c(this);
-        ByteString.LeafByteString next = c5388c.next();
-        C5388c c5388c2 = new C5388c(byteString);
-        ByteString.LeafByteString next2 = c5388c2.next();
+        c cVar = new c(this);
+        ByteString.LeafByteString next = cVar.next();
+        c cVar2 = new c(byteString);
+        ByteString.LeafByteString next2 = cVar2.next();
         int i = 0;
         int i2 = 0;
         int i3 = 0;
@@ -233,13 +231,13 @@ public final class RopeByteString extends ByteString {
             }
             if (min == size) {
                 i = 0;
-                next = c5388c.next();
+                next = cVar.next();
             } else {
                 i += min;
                 next = next;
             }
             if (min == size2) {
-                next2 = c5388c2.next();
+                next2 = cVar2.next();
                 i2 = 0;
             } else {
                 i2 += min;
@@ -263,9 +261,9 @@ public final class RopeByteString extends ByteString {
     @Override // com.google.protobuf.ByteString
     public List<ByteBuffer> asReadOnlyByteBufferList() {
         ArrayList arrayList = new ArrayList();
-        C5388c c5388c = new C5388c(this);
-        while (c5388c.hasNext()) {
-            arrayList.add(c5388c.next().asReadOnlyByteBuffer());
+        c cVar = new c(this);
+        while (cVar.hasNext()) {
+            arrayList.add(cVar.next().asReadOnlyByteBuffer());
         }
         return arrayList;
     }
@@ -346,12 +344,12 @@ public final class RopeByteString extends ByteString {
 
     @Override // com.google.protobuf.ByteString
     public CodedInputStream newCodedInput() {
-        return CodedInputStream.c(new C5389d());
+        return CodedInputStream.c(new d());
     }
 
     @Override // com.google.protobuf.ByteString
     public InputStream newInput() {
-        return new C5389d();
+        return new d();
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -450,23 +448,22 @@ public final class RopeByteString extends ByteString {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     @Override // com.google.protobuf.ByteString
-    public void writeTo(AbstractC5398d abstractC5398d) throws IOException {
-        this.left.writeTo(abstractC5398d);
-        this.right.writeTo(abstractC5398d);
+    public void writeTo(com.google.protobuf.d dVar) throws IOException {
+        this.left.writeTo(dVar);
+        this.right.writeTo(dVar);
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.RopeByteString$d */
     /* loaded from: classes10.dex */
-    private class C5389d extends InputStream {
-        private C5388c a;
+    private class d extends InputStream {
+        private c a;
         private ByteString.LeafByteString b;
         private int c;
         private int d;
         private int e;
         private int f;
 
-        public C5389d() {
+        public d() {
             c();
         }
 
@@ -490,9 +487,9 @@ public final class RopeByteString extends ByteString {
         }
 
         private void c() {
-            C5388c c5388c = new C5388c(RopeByteString.this);
-            this.a = c5388c;
-            ByteString.LeafByteString next = c5388c.next();
+            c cVar = new c(RopeByteString.this);
+            this.a = cVar;
+            ByteString.LeafByteString next = cVar.next();
             this.b = next;
             this.c = next.size();
             this.d = 0;

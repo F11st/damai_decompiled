@@ -1,16 +1,16 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8148c;
 import io.reactivex.MaybeObserver;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
+import io.reactivex.c;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.fuseable.HasUpstreamSingleSource;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeFromSingle<T> extends AbstractC8148c<T> implements HasUpstreamSingleSource<T> {
+public final class MaybeFromSingle<T> extends c<T> implements HasUpstreamSingleSource<T> {
     final SingleSource<T> source;
 
     /* compiled from: Taobao */
@@ -64,7 +64,7 @@ public final class MaybeFromSingle<T> extends AbstractC8148c<T> implements HasUp
         return this.source;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         this.source.subscribe(new FromSingleObserver(maybeObserver));
     }

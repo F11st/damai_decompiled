@@ -2,10 +2,8 @@ package tb;
 
 import androidx.annotation.Nullable;
 import com.airbnb.lottie.LottieDrawable;
-import com.airbnb.lottie.animation.content.C2839k;
 import com.airbnb.lottie.animation.content.Content;
 import com.airbnb.lottie.model.content.ContentModel;
-import com.airbnb.lottie.model.layer.AbstractC2872a;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
@@ -46,7 +44,7 @@ public class t12 implements ContentModel {
 
     @Override // com.airbnb.lottie.model.content.ContentModel
     @Nullable
-    public Content toContent(LottieDrawable lottieDrawable, AbstractC2872a abstractC2872a) {
-        return new C2839k(lottieDrawable, abstractC2872a, this);
+    public Content toContent(LottieDrawable lottieDrawable, com.airbnb.lottie.model.layer.a aVar) {
+        return new com.airbnb.lottie.animation.content.k(lottieDrawable, aVar, this);
     }
 }

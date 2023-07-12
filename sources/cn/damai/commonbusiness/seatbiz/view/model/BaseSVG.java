@@ -3,7 +3,7 @@ package cn.damai.commonbusiness.seatbiz.view.model;
 import android.graphics.Picture;
 import android.graphics.RectF;
 import android.graphics.drawable.PictureDrawable;
-import cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a;
+import cn.damai.commonbusiness.seatbiz.view.render.a;
 import cn.damai.commonbusiness.seatbiz.view.svgview.core.model.PointLocation;
 import cn.damai.commonbusiness.seatbiz.view.svgview.core.model.RegionBound;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -19,7 +19,7 @@ public class BaseSVG {
     protected List<RegionBound> mRegionBounds;
     protected Picture picture;
     protected List<List<PointLocation>> regionLocationList;
-    protected AbstractC0856a svgPaintData;
+    protected a svgPaintData;
     protected List<String> unrecognizedCommandList;
     protected float svgScale = 1.0f;
     protected PictureDrawable drawable = null;
@@ -61,9 +61,9 @@ public class BaseSVG {
         return AndroidInstantRuntime.support(ipChange, "382712028") ? ((Float) ipChange.ipc$dispatch("382712028", new Object[]{this})).floatValue() : this.svgScale;
     }
 
-    public AbstractC0856a getSvgPaintData() {
+    public a getSvgPaintData() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-124682967") ? (AbstractC0856a) ipChange.ipc$dispatch("-124682967", new Object[]{this}) : this.svgPaintData;
+        return AndroidInstantRuntime.support(ipChange, "-124682967") ? (a) ipChange.ipc$dispatch("-124682967", new Object[]{this}) : this.svgPaintData;
     }
 
     public List<String> getUnrecognizedCommandList() {
@@ -89,12 +89,12 @@ public class BaseSVG {
         }
     }
 
-    public void setSvgPaintData(AbstractC0856a abstractC0856a) {
+    public void setSvgPaintData(a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1526933475")) {
-            ipChange.ipc$dispatch("1526933475", new Object[]{this, abstractC0856a});
+            ipChange.ipc$dispatch("1526933475", new Object[]{this, aVar});
         } else {
-            this.svgPaintData = abstractC0856a;
+            this.svgPaintData = aVar;
         }
     }
 

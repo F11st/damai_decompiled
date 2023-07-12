@@ -42,7 +42,7 @@ public class ActionBarContextView extends AbsActionBarView {
 
     private void initTitle() {
         if (this.mTitleLayout == null) {
-            LayoutInflater.from(getContext()).inflate(R.C0013layout.abc_action_bar_title_item, this);
+            LayoutInflater.from(getContext()).inflate(R.layout.abc_action_bar_title_item, this);
             LinearLayout linearLayout = (LinearLayout) getChildAt(getChildCount() - 1);
             this.mTitleLayout = linearLayout;
             this.mTitleView = (TextView) linearLayout.findViewById(R.id.action_bar_title);
@@ -409,7 +409,7 @@ public class ActionBarContextView extends AbsActionBarView {
         this.mTitleStyleRes = obtainStyledAttributes.getResourceId(R.styleable.ActionMode_titleTextStyle, 0);
         this.mSubtitleStyleRes = obtainStyledAttributes.getResourceId(R.styleable.ActionMode_subtitleTextStyle, 0);
         this.mContentHeight = obtainStyledAttributes.getLayoutDimension(R.styleable.ActionMode_height, 0);
-        this.mCloseItemLayout = obtainStyledAttributes.getResourceId(R.styleable.ActionMode_closeItemLayout, R.C0013layout.abc_action_mode_close_item_material);
+        this.mCloseItemLayout = obtainStyledAttributes.getResourceId(R.styleable.ActionMode_closeItemLayout, R.layout.abc_action_mode_close_item_material);
         obtainStyledAttributes.recycle();
     }
 }

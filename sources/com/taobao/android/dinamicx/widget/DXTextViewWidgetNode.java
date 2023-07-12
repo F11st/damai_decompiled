@@ -12,8 +12,6 @@ import androidx.annotation.Nullable;
 import androidx.core.widget.TextViewCompat;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
 import com.taobao.android.dinamic.R$id;
-import com.taobao.android.dinamicx.C6366c;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DXRuntimeContext;
 import com.taobao.android.dinamicx.DinamicXEngine;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
@@ -58,9 +56,8 @@ public class DXTextViewWidgetNode extends DXWidgetNode {
     int d = -16777216;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXTextViewWidgetNode$a */
     /* loaded from: classes11.dex */
-    public static class C6469a implements IDXBuilderWidgetNode {
+    public static class a implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(@Nullable Object obj) {
             return new DXTextViewWidgetNode();
@@ -140,7 +137,7 @@ public class DXTextViewWidgetNode extends DXWidgetNode {
                             if (measuredWidthAndState == i3 && measuredHeightAndState == i4) {
                                 return;
                             }
-                            DXAppMonitor.p(DXTextViewWidgetNode.this.getDXRuntimeContext(), "DX_TextView_Font", "DX_TextView_Font_Measure_Error", C6368e.DX_TEXTVIEW_FONT_MEASURE_ERROR, String.format("text view 宽高计算不一致[width=%s height=%s measuredWidth=%s measuredHeight=%s  manufacturer=%s romName=%s romverName=%s systemModel=%s brand=%s fontStyle=%s  useTypeface=%s]", Integer.valueOf(measuredWidthAndState), Integer.valueOf(measuredHeightAndState), Integer.valueOf(i3), Integer.valueOf(i4), lm1.a(), lm1.d(), lm1.e(), lm1.f(), Build.getBRAND(), intValue + "", wt.I0() + ""));
+                            DXAppMonitor.p(DXTextViewWidgetNode.this.getDXRuntimeContext(), "DX_TextView_Font", "DX_TextView_Font_Measure_Error", com.taobao.android.dinamicx.e.DX_TEXTVIEW_FONT_MEASURE_ERROR, String.format("text view 宽高计算不一致[width=%s height=%s measuredWidth=%s measuredHeight=%s  manufacturer=%s romName=%s romverName=%s systemModel=%s brand=%s fontStyle=%s  useTypeface=%s]", Integer.valueOf(measuredWidthAndState), Integer.valueOf(measuredHeightAndState), Integer.valueOf(i3), Integer.valueOf(i4), lm1.a(), lm1.d(), lm1.e(), lm1.f(), Build.getBRAND(), intValue + "", wt.I0() + ""));
                         } catch (Throwable th) {
                             ry.b(th);
                         }
@@ -241,12 +238,12 @@ public class DXTextViewWidgetNode extends DXWidgetNode {
             lzVar.d = d20.a(DXWidgetNode.getAbsoluteGravity(i, getDirection()));
             this.b.e = this.layoutGravity;
         }
-        C6493f c6493f = (C6493f) this.parentWidget;
+        f fVar = (f) this.parentWidget;
         ViewGroup.LayoutParams layoutParams = textView.getLayoutParams();
         if (layoutParams == null) {
-            generateLayoutParams = c6493f.generateLayoutParams(this.b);
+            generateLayoutParams = fVar.generateLayoutParams(this.b);
         } else {
-            generateLayoutParams = c6493f.generateLayoutParams(this.b, layoutParams);
+            generateLayoutParams = fVar.generateLayoutParams(this.b, layoutParams);
         }
         textView.setLayoutParams(generateLayoutParams);
     }
@@ -358,7 +355,7 @@ public class DXTextViewWidgetNode extends DXWidgetNode {
     public void onEndParser() {
         DXRuntimeContext dXRuntimeContext;
         if (this.m && (dXRuntimeContext = this.dXRuntimeContext) != null && dXRuntimeContext.getEngineContext().b().p()) {
-            this.e = C6366c.b(this.dXRuntimeContext, this.e);
+            this.e = com.taobao.android.dinamicx.c.b(this.dXRuntimeContext, this.e);
         }
     }
 

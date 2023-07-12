@@ -1,15 +1,15 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.observers.QueueDrainObserver;
 import io.reactivex.internal.queue.MpscLinkedQueue;
 import io.reactivex.internal.util.NotificationLite;
-import io.reactivex.observers.AbstractC8160b;
+import io.reactivex.observers.b;
 import io.reactivex.subjects.UnicastSubject;
 import java.util.concurrent.Callable;
 import java.util.concurrent.atomic.AtomicLong;
@@ -20,14 +20,14 @@ import tb.ra2;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableWindowBoundarySupplier<T, B> extends AbstractObservableWithUpstream<T, AbstractC8149d<T>> {
+public final class ObservableWindowBoundarySupplier<T, B> extends AbstractObservableWithUpstream<T, d<T>> {
     final int bufferSize;
     final Callable<? extends ObservableSource<B>> other;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    public static final class WindowBoundaryInnerObserver<T, B> extends AbstractC8160b<B> {
+    public static final class WindowBoundaryInnerObserver<T, B> extends b<B> {
         boolean done;
         final WindowBoundaryMainObserver<T, B> parent;
 
@@ -67,7 +67,7 @@ public final class ObservableWindowBoundarySupplier<T, B> extends AbstractObserv
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class WindowBoundaryMainObserver<T, B> extends QueueDrainObserver<T, Object, AbstractC8149d<T>> implements Disposable {
+    static final class WindowBoundaryMainObserver<T, B> extends QueueDrainObserver<T, Object, d<T>> implements Disposable {
         static final Object NEXT = new Object();
         final AtomicReference<Disposable> boundary;
         final int bufferSize;
@@ -76,7 +76,7 @@ public final class ObservableWindowBoundarySupplier<T, B> extends AbstractObserv
         UnicastSubject<T> window;
         final AtomicLong windows;
 
-        WindowBoundaryMainObserver(Observer<? super AbstractC8149d<T>> observer, Callable<? extends ObservableSource<B>> callable, int i) {
+        WindowBoundaryMainObserver(Observer<? super d<T>> observer, Callable<? extends ObservableSource<B>> callable, int i) {
             super(observer, new MpscLinkedQueue());
             this.boundary = new AtomicReference<>();
             AtomicLong atomicLong = new AtomicLong();
@@ -242,8 +242,8 @@ public final class ObservableWindowBoundarySupplier<T, B> extends AbstractObserv
         this.bufferSize = i;
     }
 
-    @Override // io.reactivex.AbstractC8149d
-    public void subscribeActual(Observer<? super AbstractC8149d<T>> observer) {
+    @Override // io.reactivex.d
+    public void subscribeActual(Observer<? super d<T>> observer) {
         this.source.subscribe(new WindowBoundaryMainObserver(new ra2(observer), this.other, this.bufferSize));
     }
 }

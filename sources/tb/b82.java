@@ -3,9 +3,7 @@ package tb;
 import android.text.TextUtils;
 import android.view.View;
 import androidx.media.MediaBrowserServiceCompat;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.onearch.errpage.bean.ErrControlViewInfo;
 import com.alibaba.fastjson.JSON;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -15,22 +13,21 @@ import java.util.HashMap;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
-public class b82 extends C0528b {
+public class b82 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final String CODE_SEARCH_CDN_DOWNGRADE_ALARM = "-1302";
     public static final String MSG_SEARCH_CDN_DOWNGRADE_ALARM = "搜索cdn降级";
     public static final String SEARCH_ITEM_ASSOCIATE = "item_associate";
 
     /* compiled from: Taobao */
-    /* renamed from: tb.b82$a */
     /* loaded from: classes6.dex */
-    private static class C8956a {
+    private static class a {
         private static final b82 a = new b82();
     }
 
     public static final b82 C() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "786161921") ? (b82) ipChange.ipc$dispatch("786161921", new Object[0]) : C8956a.a;
+        return AndroidInstantRuntime.support(ipChange, "786161921") ? (b82) ipChange.ipc$dispatch("786161921", new Object[0]) : a.a;
     }
 
     public static void f(String str, String str2, String str3) {
@@ -77,16 +74,16 @@ public class b82 extends C0528b {
         HashMap hashMap = new HashMap();
         d23.h(hashMap, "titlelabel", str);
         d23.h(hashMap, "aaid", str2);
-        d23.h(hashMap, C9548pb.PRE_CONTENT_ID, str3);
-        d23.h(hashMap, C9548pb.PRE_CONTENT_TYPE, str4);
-        C0529c e = C0529c.e();
+        d23.h(hashMap, pb.PRE_CONTENT_ID, str3);
+        d23.h(hashMap, pb.PRE_CONTENT_TYPE, str4);
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         e.G(view, "item_" + i, "content", "search", hashMap);
     }
 
-    public C0525a.C0527b B(String str, String str2, int i) {
+    public a.b B(String str, String str2, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1600323602")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-1600323602", new Object[]{this, str, str2, Integer.valueOf(i)});
+            return (a.b) ipChange.ipc$dispatch("-1600323602", new Object[]{this, str, str2, Integer.valueOf(i)});
         }
         HashMap hashMap = new HashMap();
         d23.h(hashMap, "titlelabel", str);
@@ -94,25 +91,25 @@ public class b82 extends C0528b {
         return e("search", "content", "item_" + i, hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b D(String str) {
+    public a.b D(String str) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-965795959") ? (C0525a.C0527b) ipChange.ipc$dispatch("-965795959", new Object[]{this, str}) : new C0525a.C0527b().a(z20.d()).e(str).i("related_search");
+        return AndroidInstantRuntime.support(ipChange, "-965795959") ? (a.b) ipChange.ipc$dispatch("-965795959", new Object[]{this, str}) : new a.b().a(z20.d()).e(str).i("related_search");
     }
 
-    public C0525a.C0527b E() {
+    public a.b E() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1712210992") ? (C0525a.C0527b) ipChange.ipc$dispatch("1712210992", new Object[]{this}) : new C0525a.C0527b().i(SEARCH_ITEM_ASSOCIATE);
+        return AndroidInstantRuntime.support(ipChange, "1712210992") ? (a.b) ipChange.ipc$dispatch("1712210992", new Object[]{this}) : new a.b().i(SEARCH_ITEM_ASSOCIATE);
     }
 
-    public C0525a.C0527b F(String str) {
+    public a.b F(String str) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "744560602") ? (C0525a.C0527b) ipChange.ipc$dispatch("744560602", new Object[]{this, str}) : new C0525a.C0527b().a(z20.d()).e(str).i("search");
+        return AndroidInstantRuntime.support(ipChange, "744560602") ? (a.b) ipChange.ipc$dispatch("744560602", new Object[]{this, str}) : new a.b().a(z20.d()).e(str).i("search");
     }
 
-    public C0525a.C0527b G(String str, String str2, boolean z) {
+    public a.b G(String str, String str2, boolean z) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1911990485")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-1911990485", new Object[]{this, str, str2, Boolean.valueOf(z)});
+            return (a.b) ipChange.ipc$dispatch("-1911990485", new Object[]{this, str, str2, Boolean.valueOf(z)});
         }
         int i = !z ? 1 : 0;
         HashMap hashMap = new HashMap();
@@ -122,10 +119,10 @@ public class b82 extends C0528b {
         return e("search", "top", "tab_" + i, hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b H(String str) {
+    public a.b H(String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1810842748")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1810842748", new Object[]{this, str});
+            return (a.b) ipChange.ipc$dispatch("1810842748", new Object[]{this, str});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("biz_id", str);
@@ -141,7 +138,7 @@ public class b82 extends C0528b {
         }
         HashMap hashMap = new HashMap();
         hashMap.put("contentlabel", JSON.toJSONString(d82Var));
-        C0529c.e().A(hashMap, "keyword", "search");
+        cn.damai.common.user.c.e().A(hashMap, "keyword", "search");
     }
 
     public void J(View view, String str, String str2, String str3, String str4, String str5, int i) {
@@ -155,20 +152,20 @@ public class b82 extends C0528b {
                 hashMap.put("item_id", str);
                 hashMap.put("alg", str4);
             } else {
-                hashMap.put(C9548pb.PRE_CONTENT_ID, str5);
-                hashMap.put(C9548pb.PRE_CONTENT_TYPE, "note");
+                hashMap.put(pb.PRE_CONTENT_ID, str5);
+                hashMap.put(pb.PRE_CONTENT_TYPE, "note");
             }
             hashMap.put("keyword", str2);
             hashMap.put("contentLabel", str3);
-            C0529c e = C0529c.e();
+            cn.damai.common.user.c e = cn.damai.common.user.c.e();
             e.G(view, "item_" + i, "Recommend", "search", hashMap);
         }
     }
 
-    public C0525a.C0527b K(String str, String str2, int i) {
+    public a.b K(String str, String str2, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1711970132")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-1711970132", new Object[]{this, str, str2, Integer.valueOf(i)});
+            return (a.b) ipChange.ipc$dispatch("-1711970132", new Object[]{this, str, str2, Integer.valueOf(i)});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("keyword", str);
@@ -177,10 +174,10 @@ public class b82 extends C0528b {
         return e("search", "top", "searchbtn", hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b L(String str, String str2, String str3, int i, int i2) {
+    public a.b L(String str, String str2, String str3, int i, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1430374754")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1430374754", new Object[]{this, str, str2, str3, Integer.valueOf(i), Integer.valueOf(i2)});
+            return (a.b) ipChange.ipc$dispatch("1430374754", new Object[]{this, str, str2, str3, Integer.valueOf(i), Integer.valueOf(i2)});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("aaid", str);
@@ -191,20 +188,20 @@ public class b82 extends C0528b {
         return e("search", "list", "tour_item_" + i2, hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b M(String str) {
+    public a.b M(String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1395165721")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1395165721", new Object[]{this, str});
+            return (a.b) ipChange.ipc$dispatch("1395165721", new Object[]{this, str});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("aaid", str);
         return e("search", "list", "more", hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b g(String str, String str2) {
+    public a.b g(String str, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1038337307")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-1038337307", new Object[]{this, str, str2});
+            return (a.b) ipChange.ipc$dispatch("-1038337307", new Object[]{this, str, str2});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("type", str2);
@@ -212,10 +209,10 @@ public class b82 extends C0528b {
         return e(SEARCH_ITEM_ASSOCIATE, "searchbar", "search", hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b h(String str, boolean z, String str2, String str3, String str4, int i) {
+    public a.b h(String str, boolean z, String str2, String str3, String str4, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-2044239858")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-2044239858", new Object[]{this, str, Boolean.valueOf(z), str2, str3, str4, Integer.valueOf(i)});
+            return (a.b) ipChange.ipc$dispatch("-2044239858", new Object[]{this, str, Boolean.valueOf(z), str2, str3, str4, Integer.valueOf(i)});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("aaid", str);
@@ -228,10 +225,10 @@ public class b82 extends C0528b {
         return e("search", "business_account", "flow", hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b i(String str, String str2, String str3, String str4, int i) {
+    public a.b i(String str, String str2, String str3, String str4, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1865831800")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1865831800", new Object[]{this, str, str2, str3, str4, Integer.valueOf(i)});
+            return (a.b) ipChange.ipc$dispatch("1865831800", new Object[]{this, str, str2, str3, str4, Integer.valueOf(i)});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("aaid", str);
@@ -243,10 +240,10 @@ public class b82 extends C0528b {
         return e("search", "business_account", "card", hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b j(String str, Long l) {
+    public a.b j(String str, Long l) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1237850773")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1237850773", new Object[]{this, str, l});
+            return (a.b) ipChange.ipc$dispatch("1237850773", new Object[]{this, str, l});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("itemId", str);
@@ -259,30 +256,30 @@ public class b82 extends C0528b {
         return e(SEARCH_ITEM_ASSOCIATE, "be_evaluated", "upload", hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b k(String str) {
+    public a.b k(String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "179625180")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("179625180", new Object[]{this, str});
+            return (a.b) ipChange.ipc$dispatch("179625180", new Object[]{this, str});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("itemId", str);
         return e(SEARCH_ITEM_ASSOCIATE, MediaBrowserServiceCompat.KEY_SEARCH_RESULTS, "upload", hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b l(String str) {
+    public a.b l(String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-614272132")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-614272132", new Object[]{this, str});
+            return (a.b) ipChange.ipc$dispatch("-614272132", new Object[]{this, str});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("itemId", str);
         return e(SEARCH_ITEM_ASSOCIATE, "topic", "upload", hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b m(String str, String str2, boolean z) {
+    public a.b m(String str, String str2, boolean z) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "81057858")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("81057858", new Object[]{this, str, str2, Boolean.valueOf(z)});
+            return (a.b) ipChange.ipc$dispatch("81057858", new Object[]{this, str, str2, Boolean.valueOf(z)});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("usercode", z20.E());
@@ -292,10 +289,10 @@ public class b82 extends C0528b {
         return e("search", "business_card", "follow_btn", hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b n(String str, String str2, String str3) {
+    public a.b n(String str, String str2, String str3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-511625910")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-511625910", new Object[]{this, str, str2, str3});
+            return (a.b) ipChange.ipc$dispatch("-511625910", new Object[]{this, str, str2, str3});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("aaid", str);
@@ -305,10 +302,10 @@ public class b82 extends C0528b {
         return e("search", "business_card", "card", hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b o(String str, String str2, String str3, String str4, int i) {
+    public a.b o(String str, String str2, String str3, String str4, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1140206958")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-1140206958", new Object[]{this, str, str2, str3, str4, Integer.valueOf(i)});
+            return (a.b) ipChange.ipc$dispatch("-1140206958", new Object[]{this, str, str2, str3, str4, Integer.valueOf(i)});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("aaid", str);
@@ -319,35 +316,35 @@ public class b82 extends C0528b {
         return e("search", "business_card", "item_" + i, hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b p() {
+    public a.b p() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1517790958") ? (C0525a.C0527b) ipChange.ipc$dispatch("1517790958", new Object[]{this}) : c("search", "clearhistory", Constants.TAG_CLEAR_STRING, Boolean.FALSE);
+        return AndroidInstantRuntime.support(ipChange, "1517790958") ? (a.b) ipChange.ipc$dispatch("1517790958", new Object[]{this}) : c("search", "clearhistory", Constants.TAG_CLEAR_STRING, Boolean.FALSE);
     }
 
-    public C0525a.C0527b q(String str) {
+    public a.b q(String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-293096231")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-293096231", new Object[]{this, str});
+            return (a.b) ipChange.ipc$dispatch("-293096231", new Object[]{this, str});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("titlelabel", str);
         return e("search", "cleartext", Constants.TAG_CLEAR_STRING, hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b r(String str, String str2) {
+    public a.b r(String str, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "402064477")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("402064477", new Object[]{this, str, str2});
+            return (a.b) ipChange.ipc$dispatch("402064477", new Object[]{this, str, str2});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("titlelabel", str);
         return e("search", "searchhistory", "item_" + str2, hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b s(String str, String str2, String str3, String str4, int i) {
+    public a.b s(String str, String str2, String str3, String str4, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-2138801219")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-2138801219", new Object[]{this, str, str2, str3, str4, Integer.valueOf(i)});
+            return (a.b) ipChange.ipc$dispatch("-2138801219", new Object[]{this, str, str2, str3, str4, Integer.valueOf(i)});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("titlelabel", str);
@@ -357,10 +354,10 @@ public class b82 extends C0528b {
         return e("search", "hotword", "item_" + i, hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b t(String str, String str2, String str3, int i, String str4, int i2) {
+    public a.b t(String str, String str2, String str3, int i, String str4, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "9964736")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("9964736", new Object[]{this, str, str2, str3, Integer.valueOf(i), str4, Integer.valueOf(i2)});
+            return (a.b) ipChange.ipc$dispatch("9964736", new Object[]{this, str, str2, str3, Integer.valueOf(i), str4, Integer.valueOf(i2)});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("aaid", str);
@@ -374,10 +371,10 @@ public class b82 extends C0528b {
         return e("search", "list", "item_" + i2, hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b u(String str, String str2, String str3, int i, int i2, String str4) {
+    public a.b u(String str, String str2, String str3, int i, int i2, String str4) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1843623737")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1843623737", new Object[]{this, str, str2, str3, Integer.valueOf(i), Integer.valueOf(i2), str4});
+            return (a.b) ipChange.ipc$dispatch("1843623737", new Object[]{this, str, str2, str3, Integer.valueOf(i), Integer.valueOf(i2), str4});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("aaid", str);
@@ -394,10 +391,10 @@ public class b82 extends C0528b {
         return e("search", "keywordother", "item_" + i2, hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b v(String str, String str2, String str3, String str4, int i) {
+    public a.b v(String str, String str2, String str3, String str4, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "794363065")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("794363065", new Object[]{this, str, str2, str3, str4, Integer.valueOf(i)});
+            return (a.b) ipChange.ipc$dispatch("794363065", new Object[]{this, str, str2, str3, str4, Integer.valueOf(i)});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("item_id", str);
@@ -407,10 +404,10 @@ public class b82 extends C0528b {
         return e("search", "top", "item_" + str4, hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b w(String str, String str2, String str3, int i) {
+    public a.b w(String str, String str2, String str3, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-605071504")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-605071504", new Object[]{this, str, str2, str3, Integer.valueOf(i)});
+            return (a.b) ipChange.ipc$dispatch("-605071504", new Object[]{this, str, str2, str3, Integer.valueOf(i)});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("keyword", str);
@@ -419,10 +416,10 @@ public class b82 extends C0528b {
         return e("search", "suggestion", "item_" + i, hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b x(String str, String str2, String str3, int i) {
+    public a.b x(String str, String str2, String str3, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "694949461")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("694949461", new Object[]{this, str, str2, str3, Integer.valueOf(i)});
+            return (a.b) ipChange.ipc$dispatch("694949461", new Object[]{this, str, str2, str3, Integer.valueOf(i)});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("keyword", str);
@@ -432,10 +429,10 @@ public class b82 extends C0528b {
     }
 
     @Deprecated
-    public C0525a.C0527b y(String str, String str2, String str3, int i, String str4, int i2) {
+    public a.b y(String str, String str2, String str3, int i, String str4, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-198918370")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-198918370", new Object[]{this, str, str2, str3, Integer.valueOf(i), str4, Integer.valueOf(i2)});
+            return (a.b) ipChange.ipc$dispatch("-198918370", new Object[]{this, str, str2, str3, Integer.valueOf(i), str4, Integer.valueOf(i2)});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("keyword", str3);
@@ -449,10 +446,10 @@ public class b82 extends C0528b {
         return e("search", "suggestionitem", "items_" + i2, hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b z(String str) {
+    public a.b z(String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-581638252")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-581638252", new Object[]{this, str});
+            return (a.b) ipChange.ipc$dispatch("-581638252", new Object[]{this, str});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("keyword", str);

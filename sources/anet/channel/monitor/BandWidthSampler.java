@@ -21,13 +21,12 @@ public class BandWidthSampler {
     static double n = 40.0d;
     private int a;
     private int b;
-    private C0185a c;
+    private anet.channel.monitor.a c;
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.monitor.BandWidthSampler$a */
     /* loaded from: classes.dex */
-    class C0183a implements NetworkStatusHelper.INetworkStatusChangeListener {
-        C0183a() {
+    class a implements NetworkStatusHelper.INetworkStatusChangeListener {
+        a() {
         }
 
         @Override // anet.channel.status.NetworkStatusHelper.INetworkStatusChangeListener
@@ -40,13 +39,12 @@ public class BandWidthSampler {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.monitor.BandWidthSampler$b */
     /* loaded from: classes.dex */
-    public static class C0184b {
+    public static class b {
         static BandWidthSampler a = new BandWidthSampler(null);
     }
 
-    /* synthetic */ BandWidthSampler(C0183a c0183a) {
+    /* synthetic */ BandWidthSampler(a aVar) {
         this();
     }
 
@@ -57,7 +55,7 @@ public class BandWidthSampler {
     }
 
     public static BandWidthSampler f() {
-        return C0184b.a;
+        return b.a;
     }
 
     public double g() {
@@ -156,7 +154,7 @@ public class BandWidthSampler {
     private BandWidthSampler() {
         this.a = 5;
         this.b = 0;
-        this.c = new C0185a();
-        NetworkStatusHelper.a(new C0183a());
+        this.c = new anet.channel.monitor.a();
+        NetworkStatusHelper.a(new a());
     }
 }

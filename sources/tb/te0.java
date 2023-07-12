@@ -2,7 +2,6 @@ package tb;
 
 import java.util.Iterator;
 import java.util.List;
-import kotlin.collections.C8214m;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
 import org.jetbrains.annotations.NotNull;
@@ -32,7 +31,7 @@ final class te0 implements Annotations {
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations
     public boolean hasAnnotation(@NotNull hp0 hp0Var) {
-        return Annotations.C8304b.b(this, hp0Var);
+        return Annotations.b.b(this, hp0Var);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations
@@ -44,7 +43,7 @@ final class te0 implements Annotations {
     @NotNull
     public Iterator<AnnotationDescriptor> iterator() {
         List g;
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         return g.iterator();
     }
 }

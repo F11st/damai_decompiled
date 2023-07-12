@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.internal.subscriptions.SubscriptionArbiter;
 import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;
@@ -11,7 +11,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableDelaySubscriptionOther<T, U> extends AbstractC8147b<T> {
+public final class FlowableDelaySubscriptionOther<T, U> extends b<T> {
     final Publisher<? extends T> main;
     final Publisher<U> other;
 
@@ -110,7 +110,7 @@ public final class FlowableDelaySubscriptionOther<T, U> extends AbstractC8147b<T
         this.other = publisher2;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super T> subscriber) {
         SubscriptionArbiter subscriptionArbiter = new SubscriptionArbiter();
         subscriber.onSubscribe(subscriptionArbiter);

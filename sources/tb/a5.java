@@ -15,10 +15,9 @@ public class a5 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.a5$a */
     /* loaded from: classes.dex */
-    public static class ThreadFactoryC8894a implements ThreadFactory {
-        ThreadFactoryC8894a() {
+    public static class a implements ThreadFactory {
+        a() {
         }
 
         @Override // java.util.concurrent.ThreadFactory
@@ -34,7 +33,7 @@ public class a5 {
         if (b == null) {
             synchronized (a5.class) {
                 if (b == null) {
-                    ScheduledThreadPoolExecutor scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(2, new ThreadFactoryC8894a());
+                    ScheduledThreadPoolExecutor scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(2, new a());
                     b = scheduledThreadPoolExecutor;
                     scheduledThreadPoolExecutor.setKeepAliveTime(60L, TimeUnit.SECONDS);
                     b.allowCoreThreadTimeOut(true);

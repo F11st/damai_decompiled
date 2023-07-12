@@ -26,9 +26,9 @@ public final class zz1 extends wz1 implements JavaArrayAnnotationArgument {
         Object[] objArr = this.b;
         ArrayList arrayList = new ArrayList(objArr.length);
         for (Object obj : objArr) {
-            wz1.C9889a c9889a = wz1.Factory;
+            wz1.a aVar = wz1.Factory;
             b41.f(obj);
-            arrayList.add(c9889a.a(obj, null));
+            arrayList.add(aVar.a(obj, null));
         }
         return arrayList;
     }

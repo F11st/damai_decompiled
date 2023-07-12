@@ -5,11 +5,11 @@ import com.taobao.vessel.VesselView;
 /* compiled from: Taobao */
 /* loaded from: classes15.dex */
 class WebLoadListener$1 implements Runnable {
-    final /* synthetic */ C3268b this$0;
+    final /* synthetic */ b this$0;
     final /* synthetic */ VesselView val$mVesselView;
 
-    WebLoadListener$1(C3268b c3268b, VesselView vesselView) {
-        this.this$0 = c3268b;
+    WebLoadListener$1(b bVar, VesselView vesselView) {
+        this.this$0 = bVar;
         this.val$mVesselView = vesselView;
     }
 
@@ -25,7 +25,7 @@ class WebLoadListener$1 implements Runnable {
         VesselView vesselView2 = this.val$mVesselView;
         str2 = this.this$0.a;
         str3 = this.this$0.b;
-        vesselView2.setOnLoadListener(new C3268b(webMaskView, str2, str3));
+        vesselView2.setOnLoadListener(new b(webMaskView, str2, str3));
         webMaskView.setErrorTextVisible(true);
     }
 }

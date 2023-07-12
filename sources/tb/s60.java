@@ -109,7 +109,7 @@ public final class s60 {
         b41.i(context, WPKFactory.INIT_KEY_CONTEXT);
         try {
             if (Build.VERSION.SDK_INT > 16) {
-                Object systemService = context.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+                Object systemService = context.getSystemService(v.ATTACH_MODE_WINDOW);
                 b41.g(systemService, "null cannot be cast to non-null type android.view.WindowManager");
                 Point point = new Point();
                 Display.getRealSize(((WindowManager) systemService).getDefaultDisplay(), point);

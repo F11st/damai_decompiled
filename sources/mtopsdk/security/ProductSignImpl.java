@@ -7,7 +7,7 @@ import com.alibaba.wireless.security.open.SecurityGuardParamContext;
 import com.alibaba.wireless.security.open.securitybody.ISecurityBodyComponent;
 import com.alibaba.wireless.security.open.umid.IUMIDComponent;
 import com.alibaba.wireless.security.open.umid.IUMIDInitListenerEx;
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import java.util.HashMap;
 import java.util.Map;
 import mtopsdk.common.util.StringUtils;
@@ -144,7 +144,7 @@ public class ProductSignImpl extends AbstractSignImpl {
                 securityGuardParamContext.appKey = str;
                 securityGuardParamContext.requestType = 7;
                 Map<String, String> convertProductBaseStrMap = convertProductBaseStrMap(hashMap, str);
-                convertProductBaseStrMap.put("ATLAS", AbstractC5658c.a);
+                convertProductBaseStrMap.put("ATLAS", c.a);
                 securityGuardParamContext.paramMap = convertProductBaseStrMap;
                 return this.sgMgr.getSecureSignatureComp().signRequest(securityGuardParamContext, str2);
             } catch (SecException e) {

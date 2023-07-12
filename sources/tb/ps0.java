@@ -3,7 +3,6 @@ package tb;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import kotlin.collections.C8212k;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -12,12 +11,11 @@ import org.jetbrains.annotations.Nullable;
 public final class ps0 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ps0$a */
     /* loaded from: classes6.dex */
-    static final class C9566a<T> implements Comparator {
-        public static final C9566a<T> INSTANCE = new C9566a<>();
+    static final class a<T> implements Comparator {
+        public static final a<T> INSTANCE = new a<>();
 
-        C9566a() {
+        a() {
         }
 
         @Override // java.util.Comparator
@@ -28,12 +26,11 @@ public final class ps0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ps0$b */
     /* loaded from: classes6.dex */
-    static final class C9567b<T> implements Comparator {
-        public static final C9567b<T> INSTANCE = new C9567b<>();
+    static final class b<T> implements Comparator {
+        public static final b<T> INSTANCE = new b<>();
 
-        C9567b() {
+        b() {
         }
 
         @Override // java.util.Comparator
@@ -72,7 +69,7 @@ public final class ps0 {
         if (l == null) {
             return null;
         }
-        Map.Entry entry = (Map.Entry) C8212k.g0(l.entrySet(), C9566a.INSTANCE);
+        Map.Entry entry = (Map.Entry) kotlin.collections.k.g0(l.entrySet(), a.INSTANCE);
         if (entry == null) {
             return null;
         }
@@ -86,7 +83,7 @@ public final class ps0 {
         if (l == null) {
             return null;
         }
-        Map.Entry entry = (Map.Entry) C8212k.i0(l.entrySet(), C9567b.INSTANCE);
+        Map.Entry entry = (Map.Entry) kotlin.collections.k.i0(l.entrySet(), b.INSTANCE);
         if (entry == null) {
             return null;
         }

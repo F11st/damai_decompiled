@@ -3,7 +3,6 @@ package tb;
 import java.lang.reflect.Member;
 import java.lang.reflect.Type;
 import java.util.List;
-import kotlin.collections.C8214m;
 import kotlin.reflect.jvm.internal.calls.Caller;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -38,7 +37,7 @@ public final class an2 implements Caller {
     @NotNull
     public List<Type> getParameterTypes() {
         List<Type> g;
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         return g;
     }
 

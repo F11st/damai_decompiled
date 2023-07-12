@@ -51,7 +51,7 @@ public class h23 {
     @NotNull
     private final Random d;
     @NotNull
-    public static final C9197a Companion = new C9197a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static String e = "android";
     @NotNull
@@ -60,13 +60,12 @@ public class h23 {
     private static String g = "yyMoviePoint";
 
     /* compiled from: Taobao */
-    /* renamed from: tb.h23$a */
     /* loaded from: classes8.dex */
-    public static final class C9197a {
-        private C9197a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9197a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -148,7 +147,7 @@ public class h23 {
         int successState = nbVar.getSuccessState();
         int failCount = nbVar.getFailCount();
         int successCount = nbVar.getSuccessCount();
-        String a = l23.INSTANCE.a();
+        String a2 = l23.INSTANCE.a();
         HashMap<String, String> extraDataMap = nbVar.getExtraDataMap();
         String signCode = nbVar.getSignCode();
         f();
@@ -160,7 +159,7 @@ public class h23 {
         create.setValue("pageName", pageName);
         create.setValue(SIGN_CODE_DIMEN, signCode);
         create.setValue("platform", e);
-        create.setValue("userId", a);
+        create.setValue("userId", a2);
         if (!TextUtils.isEmpty(bizScene)) {
             create.setValue(BIZ_SCENE_DIMEN, bizScene);
         }

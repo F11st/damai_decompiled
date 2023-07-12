@@ -7,7 +7,6 @@ import android.os.Message;
 import android.util.Log;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.uploader.export.C7361a;
 import com.uploader.export.ITaskResult;
 import com.uploader.export.IUploaderTask;
 import com.uploader.export.UploaderGlobal;
@@ -17,8 +16,8 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import kotlin.jvm.JvmOverloads;
 import kotlin.jvm.JvmStatic;
-import kotlinx.coroutines.C8658e;
 import kotlinx.coroutines.Job;
+import kotlinx.coroutines.e;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.av2;
@@ -53,21 +52,20 @@ public final class FileUploader {
     private Job g;
     private Boolean h;
     private qu2 i;
-    private HandlerC3646b j;
+    private b j;
     @Nullable
     private String k;
     @NotNull
-    public static final C3645a Companion = new C3645a(null);
+    public static final a Companion = new a(null);
     @Nullable
     private static Boolean p = Boolean.FALSE;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.uploader.FileUploader$a */
     /* loaded from: classes8.dex */
-    public static final class C3645a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3645a() {
+        private a() {
         }
 
         @JvmStatic
@@ -191,18 +189,17 @@ public final class FileUploader {
             }
         }
 
-        public /* synthetic */ C3645a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.uploader.FileUploader$b */
     /* loaded from: classes8.dex */
-    public static final class HandlerC3646b extends Handler {
+    public static final class b extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC3646b(Looper looper) {
+        b(Looper looper) {
             super(looper);
         }
 
@@ -233,7 +230,7 @@ public final class FileUploader {
         this.c = new AtomicInteger(0);
         this.d = new AtomicInteger(0);
         this.h = Boolean.FALSE;
-        this.j = new HandlerC3646b(Looper.getMainLooper());
+        this.j = new b(Looper.getMainLooper());
     }
 
     public static /* synthetic */ FileUploader A(FileUploader fileUploader, qu2 qu2Var, int i, Object obj) {
@@ -364,13 +361,13 @@ public final class FileUploader {
             return;
         }
         if (l2 != null && l2.longValue() > 0) {
-            C3645a c3645a = Companion;
-            c3645a.h("startUpLoadGroup---开始超时处理=" + l2);
+            a aVar = Companion;
+            aVar.h("startUpLoadGroup---开始超时处理=" + l2);
             Message obtain = Message.obtain();
             obtain.what = UploadErrorCode.TIME_OUT.getValue();
             this.j.sendMessageDelayed(obtain, l2.longValue());
         }
-        this.g = C8658e.b(ro.a(da0.b()), null, null, new FileUploader$uploadGroup$1(this, list, null), 3, null);
+        this.g = e.b(ro.a(da0.b()), null, null, new FileUploader$uploadGroup$1(this, list, null), 3, null);
     }
 
     public final void p() {
@@ -381,14 +378,14 @@ public final class FileUploader {
         }
         for (wu2 wu2Var : this.b) {
             if (wu2Var.a().b() != null) {
-                C7361a.a().cancelAsync(wu2Var);
+                com.uploader.export.a.a().cancelAsync(wu2Var);
             }
         }
         Job job = this.g;
         if (job == null || !job.isActive()) {
             return;
         }
-        Job.C8613a.b(job, null, 1, null);
+        Job.a.b(job, null, 1, null);
     }
 
     @Nullable
@@ -399,7 +396,7 @@ public final class FileUploader {
 
     public final void t(@Nullable IUploaderTask iUploaderTask) {
         FileUploadListener fileUploadListener;
-        uu2 a;
+        uu2 a2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1067112244")) {
             ipChange.ipc$dispatch("-1067112244", new Object[]{this, iUploaderTask});
@@ -409,8 +406,8 @@ public final class FileUploader {
             iUploaderTask = null;
         }
         wu2 wu2Var = (wu2) iUploaderTask;
-        if (wu2Var != null && (a = wu2Var.a()) != null) {
-            a.k(UploadStatus.CANCEL);
+        if (wu2Var != null && (a2 = wu2Var.a()) != null) {
+            a2.k(UploadStatus.CANCEL);
         }
         if (this.c.decrementAndGet() > 0 || (fileUploadListener = this.f) == null) {
             return;
@@ -420,7 +417,7 @@ public final class FileUploader {
 
     public final void u(@Nullable IUploaderTask iUploaderTask, @Nullable fl2 fl2Var) {
         FileUploadListener fileUploadListener;
-        uu2 a;
+        uu2 a2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1073050430")) {
             ipChange.ipc$dispatch("1073050430", new Object[]{this, iUploaderTask, fl2Var});
@@ -430,9 +427,9 @@ public final class FileUploader {
             iUploaderTask = null;
         }
         wu2 wu2Var = (wu2) iUploaderTask;
-        if (wu2Var != null && (a = wu2Var.a()) != null) {
-            a.k(UploadStatus.FAILURE);
-            a.f(fl2Var);
+        if (wu2Var != null && (a2 = wu2Var.a()) != null) {
+            a2.k(UploadStatus.FAILURE);
+            a2.f(fl2Var);
         }
         if (this.c.decrementAndGet() > 0 || (fileUploadListener = this.f) == null) {
             return;
@@ -441,7 +438,7 @@ public final class FileUploader {
     }
 
     public final void v(@Nullable IUploaderTask iUploaderTask, @Nullable UploadStatus uploadStatus) {
-        uu2 a;
+        uu2 a2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1309913608")) {
             ipChange.ipc$dispatch("1309913608", new Object[]{this, iUploaderTask, uploadStatus});
@@ -451,14 +448,14 @@ public final class FileUploader {
             iUploaderTask = null;
         }
         wu2 wu2Var = (wu2) iUploaderTask;
-        if (wu2Var == null || (a = wu2Var.a()) == null) {
+        if (wu2Var == null || (a2 = wu2Var.a()) == null) {
             return;
         }
-        a.k(uploadStatus);
+        a2.k(uploadStatus);
     }
 
     public final void w(@Nullable IUploaderTask iUploaderTask, int i) {
-        uu2 a;
+        uu2 a2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1431548708")) {
             ipChange.ipc$dispatch("1431548708", new Object[]{this, iUploaderTask, Integer.valueOf(i)});
@@ -468,19 +465,19 @@ public final class FileUploader {
             iUploaderTask = null;
         }
         wu2 wu2Var = (wu2) iUploaderTask;
-        if (wu2Var == null || (a = wu2Var.a()) == null) {
+        if (wu2Var == null || (a2 = wu2Var.a()) == null) {
             return;
         }
-        a.k(UploadStatus.UPLOADING);
-        a.i(i);
+        a2.k(UploadStatus.UPLOADING);
+        a2.i(i);
         FileUploadListener fileUploadListener = this.f;
         if (fileUploadListener != null) {
-            fileUploadListener.onSingleTaskProgress(a);
+            fileUploadListener.onSingleTaskProgress(a2);
         }
     }
 
     public final void x(@Nullable IUploaderTask iUploaderTask, @Nullable ITaskResult iTaskResult) {
-        uu2 a;
+        uu2 a2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-353463395")) {
             ipChange.ipc$dispatch("-353463395", new Object[]{this, iUploaderTask, iTaskResult});
@@ -490,9 +487,9 @@ public final class FileUploader {
             iUploaderTask = null;
         }
         wu2 wu2Var = (wu2) iUploaderTask;
-        if (wu2Var != null && (a = wu2Var.a()) != null) {
-            a.k(UploadStatus.SUCCESS);
-            a.j(iTaskResult);
+        if (wu2Var != null && (a2 = wu2Var.a()) != null) {
+            a2.k(UploadStatus.SUCCESS);
+            a2.j(iTaskResult);
         }
         int decrementAndGet = this.d.decrementAndGet();
         int i = this.e;

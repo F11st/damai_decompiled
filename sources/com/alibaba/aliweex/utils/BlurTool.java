@@ -15,7 +15,7 @@ import java.util.concurrent.ThreadFactory;
 /* compiled from: Taobao */
 /* loaded from: classes15.dex */
 public class BlurTool {
-    private static ExecutorService a = Executors.newCachedThreadPool(new ThreadFactoryC3100a());
+    private static ExecutorService a = Executors.newCachedThreadPool(new a());
 
     /* compiled from: Taobao */
     /* loaded from: classes15.dex */
@@ -24,10 +24,9 @@ public class BlurTool {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.utils.BlurTool$a */
     /* loaded from: classes15.dex */
-    static class ThreadFactoryC3100a implements ThreadFactory {
-        ThreadFactoryC3100a() {
+    static class a implements ThreadFactory {
+        a() {
         }
 
         @Override // java.util.concurrent.ThreadFactory

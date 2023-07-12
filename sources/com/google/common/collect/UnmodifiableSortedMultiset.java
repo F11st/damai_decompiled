@@ -79,13 +79,13 @@ public final class UnmodifiableSortedMultiset<E> extends Multisets.UnmodifiableM
         return Sets.j(delegate().elementSet());
     }
 
-    @Override // com.google.common.collect.Multisets.UnmodifiableMultiset, com.google.common.collect.AbstractC5204s, com.google.common.collect.Multiset
+    @Override // com.google.common.collect.Multisets.UnmodifiableMultiset, com.google.common.collect.s, com.google.common.collect.Multiset
     public NavigableSet<E> elementSet() {
         return (NavigableSet) super.elementSet();
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.google.common.collect.Multisets.UnmodifiableMultiset, com.google.common.collect.AbstractC5204s, com.google.common.collect.AbstractC5200o, com.google.common.collect.AbstractC5205t
+    @Override // com.google.common.collect.Multisets.UnmodifiableMultiset, com.google.common.collect.s, com.google.common.collect.o, com.google.common.collect.t
     public SortedMultiset<E> delegate() {
         return (SortedMultiset) super.delegate();
     }

@@ -15,9 +15,7 @@ import androidx.core.content.ContextCompat;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.commonbusiness.seatbiz.seat.qilin.loader.prepare.SeatPrepare4Order;
@@ -105,15 +103,14 @@ public class OrderDetailProgressActivity extends SimpleBaseActivity {
             }
         }
     };
-    View.OnClickListener eventListener = new View$OnClickListenerC2179d();
+    View.OnClickListener eventListener = new d();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailProgressActivity$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2176a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2176a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -128,19 +125,18 @@ public class OrderDetailProgressActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailProgressActivity$b */
     /* loaded from: classes8.dex */
-    public class C2177b implements DMImageCreator.DMImageFailListener {
+    public class b implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2177b() {
+        b() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-291793980")) {
-                ipChange.ipc$dispatch("-291793980", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-291793980", new Object[]{this, dVar});
             } else {
                 OrderDetailProgressActivity.this.mMohuImageBg.setBackgroundColor(ContextCompat.getColor(OrderDetailProgressActivity.this, R$color.color_274B93));
             }
@@ -148,21 +144,20 @@ public class OrderDetailProgressActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailProgressActivity$c */
     /* loaded from: classes8.dex */
-    public class C2178c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2178c() {
+        c() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "315269721")) {
-                ipChange.ipc$dispatch("315269721", new Object[]{this, c0502e});
-            } else if (c0502e != null) {
-                Bitmap bitmap = c0502e.b;
+                ipChange.ipc$dispatch("315269721", new Object[]{this, eVar});
+            } else if (eVar != null) {
+                Bitmap bitmap = eVar.b;
                 if (bitmap != null) {
                     OrderDetailProgressActivity.this.mMohuImageBg.setBackgroundColor(DMRGBUtil.e(0.7f, bitmap));
                 } else {
@@ -173,19 +168,17 @@ public class OrderDetailProgressActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailProgressActivity$d */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2179d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailProgressActivity$d$a */
         /* loaded from: classes8.dex */
-        public class C2180a implements SeatPrepare4Order.OnLoadListener {
+        public class a implements SeatPrepare4Order.OnLoadListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ String a;
 
-            C2180a(String str) {
+            a(String str) {
                 this.a = str;
             }
 
@@ -207,12 +200,12 @@ public class OrderDetailProgressActivity extends SimpleBaseActivity {
                 if (AndroidInstantRuntime.support(ipChange, "1742793104")) {
                     ipChange.ipc$dispatch("1742793104", new Object[]{this, Long.valueOf(j)});
                 } else {
-                    C0529c.e().x(pp2.u().y1(this.a));
+                    cn.damai.common.user.c.e().x(pp2.u().y1(this.a));
                 }
             }
         }
 
-        View$OnClickListenerC2179d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -229,10 +222,10 @@ public class OrderDetailProgressActivity extends SimpleBaseActivity {
             String orderId = OrderDetailProgressActivity.this.mViewModel != null ? OrderDetailProgressActivity.this.mViewModel.getOrderId() : "";
             int i = orderDetailProgressType.buttonType;
             if (i == 1) {
-                C0529c.e().x(pp2.u().A1(orderId));
+                cn.damai.common.user.c.e().x(pp2.u().A1(orderId));
                 mo1.k(OrderDetailProgressActivity.this.mContext, orderDetailProgressType.url);
             } else if (i == 2) {
-                C0529c.e().x(pp2.u().B1(orderId));
+                cn.damai.common.user.c.e().x(pp2.u().B1(orderId));
                 mo1.l(OrderDetailProgressActivity.this);
                 if (OrderDetailProgressActivity.this.mViewModel == null || !wl1.b(OrderDetailProgressActivity.this)) {
                     return;
@@ -242,19 +235,19 @@ public class OrderDetailProgressActivity extends SimpleBaseActivity {
                 if (TextUtils.isEmpty(orderDetailProgressType.toast)) {
                     return;
                 }
-                C0529c.e().x(pp2.u().z1(orderId));
+                cn.damai.common.user.c.e().x(pp2.u().z1(orderId));
                 ToastUtil.i(orderDetailProgressType.toast);
                 if (OrderDetailProgressActivity.this.mViewModel != null) {
                     OrderDetailProgressActivity.this.mViewModel.requestOrderChooseSeatRemind();
                 }
             } else if (i != 4) {
                 if (i == 5 && OrderDetailProgressActivity.this.mViewModel != null) {
-                    C0529c.e().x(pp2.u().C1(orderId));
+                    cn.damai.common.user.c.e().x(pp2.u().C1(orderId));
                     OrderDetailProgressActivity orderDetailProgressActivity = OrderDetailProgressActivity.this;
                     mo1.j(orderDetailProgressActivity, orderDetailProgressActivity.mViewModel.getOrderId());
                 }
             } else if (OrderDetailProgressActivity.this.mAllProgressBean != null) {
-                OrderDetailProgressActivity.this.chooseSeat.g(OrderDetailProgressActivity.this.mAllProgressBean.projectName, OrderDetailProgressActivity.this.mAllProgressBean.performName, OrderDetailProgressActivity.this.mAllProgressBean.orderId, OrderDetailProgressActivity.this.mAllProgressBean.itemId, OrderDetailProgressActivity.this.mAllProgressBean.performId, OrderDetailProgressActivity.this.mAllProgressBean.showCityId, new C2180a(orderId));
+                OrderDetailProgressActivity.this.chooseSeat.g(OrderDetailProgressActivity.this.mAllProgressBean.projectName, OrderDetailProgressActivity.this.mAllProgressBean.performName, OrderDetailProgressActivity.this.mAllProgressBean.orderId, OrderDetailProgressActivity.this.mAllProgressBean.itemId, OrderDetailProgressActivity.this.mAllProgressBean.performId, OrderDetailProgressActivity.this.mAllProgressBean.showCityId, new a(orderId));
             }
         }
     }
@@ -305,7 +298,7 @@ public class OrderDetailProgressActivity extends SimpleBaseActivity {
             ipChange.ipc$dispatch("1055999343", new Object[]{this});
             return;
         }
-        findViewById(R$id.tv_goback).setOnClickListener(new View$OnClickListenerC2176a());
+        findViewById(R$id.tv_goback).setOnClickListener(new a());
         ((TextView) findViewById(R$id.tv_title_name)).setText("订单进度");
     }
 
@@ -347,7 +340,7 @@ public class OrderDetailProgressActivity extends SimpleBaseActivity {
             ipChange.ipc$dispatch("-513881610", new Object[]{this, str});
         } else if (TextUtils.isEmpty(str)) {
         } else {
-            C0504a.b().c(str).n(new C2178c()).e(new C2177b()).f();
+            cn.damai.common.image.a.b().c(str).n(new c()).e(new b()).f();
         }
     }
 

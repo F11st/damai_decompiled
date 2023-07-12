@@ -2,7 +2,6 @@ package com.alibaba.analytics.core.sync;
 
 import android.text.TextUtils;
 import com.alibaba.analytics.core.Variables;
-import com.alibaba.analytics.core.config.AbstractC3111d;
 import com.alibaba.analytics.core.network.NetworkUtil;
 import com.alibaba.analytics.utils.Logger;
 import com.youku.arch.v3.core.Constants;
@@ -53,7 +52,7 @@ public class UploadLog {
         String str2;
         if (!TextUtils.isEmpty(str)) {
             try {
-                AbstractC3111d i = Variables.n().i();
+                com.alibaba.analytics.core.config.d i = Variables.n().i();
                 if (i == null || (jSONObject = new JSONObject(str).getJSONObject(Constants.CONFIG)) == null) {
                     return;
                 }
@@ -79,7 +78,7 @@ public class UploadLog {
                             i.o(next, hashMap);
                         }
                     }
-                    AbstractC3111d.m("1");
+                    com.alibaba.analytics.core.config.d.m("1");
                     return;
                 }
                 Logger.m(null, "No Config Update");

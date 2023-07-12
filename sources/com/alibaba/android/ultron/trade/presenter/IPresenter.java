@@ -21,7 +21,7 @@ public interface IPresenter {
 
     op2 getTradeEventHandler();
 
-    C3259b getViewManager();
+    b getViewManager();
 
     void respondToLinkage(IDMComponent iDMComponent);
 }

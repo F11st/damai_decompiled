@@ -469,15 +469,15 @@ public class PhoneCommonTitlesWidget extends View implements ICssSetter2 {
     }
 
     private void initValues(@NonNull Context context, AttributeSet attributeSet) {
-        if (sDefaultTitleTextSize <= 0 || sDefaultTitleTextColor != getResources().getColor(R.C8071color.ykn_primary_info)) {
+        if (sDefaultTitleTextSize <= 0 || sDefaultTitleTextColor != getResources().getColor(R.color.ykn_primary_info)) {
             Resources resources = context.getResources();
             sDefaultTitleTextSize = resources.getDimensionPixelSize(R.dimen.font_size_middle2);
             sDefaultSubtitleTextSize = resources.getDimensionPixelSize(R.dimen.font_size_middle4);
             float f = resources.getDisplayMetrics().density;
             sDefaultTitleHeight = (int) (17.75f * f);
             sDefaultSubtitleHeight = (int) (f * 14.25d);
-            sDefaultTitleTextColor = resources.getColor(R.C8071color.ykn_primary_info);
-            sDefaultSubtitleTextColor = resources.getColor(R.C8071color.ykn_tertiary_info);
+            sDefaultTitleTextColor = resources.getColor(R.color.ykn_primary_info);
+            sDefaultSubtitleTextColor = resources.getColor(R.color.ykn_tertiary_info);
             sDefaultTitleTopPadding = resources.getDimensionPixelOffset(R.dimen.dim_5);
             sDefaultSubtitleTopPadding = resources.getDimensionPixelOffset(R.dimen.resource_size_4);
             mStrokeRadius = resources.getDimensionPixelSize(R.dimen.resource_size_2);

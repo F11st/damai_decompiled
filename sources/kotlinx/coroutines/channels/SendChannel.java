@@ -16,9 +16,8 @@ import tb.wt2;
 public interface SendChannel<E> {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.channels.SendChannel$a */
     /* loaded from: classes9.dex */
-    public static final class C8640a {
+    public static final class a {
         public static /* synthetic */ boolean a(SendChannel sendChannel, Throwable th, int i, Object obj) {
             if (obj == null) {
                 if ((i & 1) != 0) {

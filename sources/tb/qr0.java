@@ -15,7 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import kotlin.Pair;
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -47,7 +46,7 @@ public final class qr0 {
     @Nullable
     private GXINodeEvent n;
     @Nullable
-    private List<Pair<GXTemplateEngine.C3347i, qs0>> o;
+    private List<Pair<GXTemplateEngine.i, qs0>> o;
 
     private final boolean D(qr0 qr0Var) {
         Style style;
@@ -197,17 +196,17 @@ public final class qr0 {
         this.i = js0Var;
     }
 
-    public final void a(@NotNull GXTemplateEngine.C3347i c3347i, @NotNull qs0 qs0Var) {
-        b41.i(c3347i, "templateItem");
+    public final void a(@NotNull GXTemplateEngine.i iVar, @NotNull qs0 qs0Var) {
+        b41.i(iVar, "templateItem");
         b41.i(qs0Var, "visualTemplateNode");
         if (this.o == null) {
             this.o = new ArrayList();
         }
-        List<Pair<GXTemplateEngine.C3347i, qs0>> list = this.o;
+        List<Pair<GXTemplateEngine.i, qs0>> list = this.o;
         if (list == null) {
             return;
         }
-        list.add(new Pair<>(c3347i, qs0Var));
+        list.add(new Pair<>(iVar, qs0Var));
     }
 
     public final void a0(@NotNull qs0 qs0Var) {
@@ -225,7 +224,7 @@ public final class qr0 {
     }
 
     @Nullable
-    public final List<Pair<GXTemplateEngine.C3347i, qs0>> c() {
+    public final List<Pair<GXTemplateEngine.i, qs0>> c() {
         return this.o;
     }
 
@@ -349,7 +348,7 @@ public final class qr0 {
         boolean q;
         zp0 a = o().a();
         if (a != null && (b = a.b()) != null) {
-            q = C8604o.q(b, f81.TAG, true);
+            q = kotlin.text.o.q(b, f81.TAG, true);
             if (q) {
                 return true;
             }

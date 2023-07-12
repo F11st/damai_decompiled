@@ -21,15 +21,14 @@ public class DmUltronPhoneCodeActivity extends DmPopWindowBaseActivity {
     public static List<DmPhoneCodeBean> dmDeliveryWayBeans;
     private DmPhoneCodeAdapter dmChoseCodeAdapter;
     public String selectedIndex = "0";
-    DmUltronChooseListenerImpl<String> itemClickListener = new C2643a();
+    DmUltronChooseListenerImpl<String> itemClickListener = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.secondpage.phonecode.DmUltronPhoneCodeActivity$a */
     /* loaded from: classes9.dex */
-    public class C2643a implements DmUltronChooseListenerImpl<String> {
+    public class a implements DmUltronChooseListenerImpl<String> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2643a() {
+        a() {
         }
 
         @Override // cn.damai.ultron.utils.DmUltronChooseListenerImpl

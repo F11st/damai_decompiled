@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
@@ -45,13 +44,12 @@ public class InfoViewHolder extends FeedsWraperHolder {
     public TextView y;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.InfoViewHolder$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2777a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DynamicFeedData a;
 
-        View$OnClickListenerC2777a(DynamicFeedData dynamicFeedData) {
+        a(DynamicFeedData dynamicFeedData) {
             this.a = dynamicFeedData;
         }
 
@@ -76,14 +74,13 @@ public class InfoViewHolder extends FeedsWraperHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.InfoViewHolder$b */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2778b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CommentFeedData a;
         final /* synthetic */ FeedMergeDataDO b;
 
-        View$OnClickListenerC2778b(CommentFeedData commentFeedData, FeedMergeDataDO feedMergeDataDO) {
+        b(CommentFeedData commentFeedData, FeedMergeDataDO feedMergeDataDO) {
             this.a = commentFeedData;
             this.b = feedMergeDataDO;
         }
@@ -113,13 +110,12 @@ public class InfoViewHolder extends FeedsWraperHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.InfoViewHolder$c */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2779c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CommentFeedData a;
 
-        View$OnClickListenerC2779c(CommentFeedData commentFeedData) {
+        c(CommentFeedData commentFeedData) {
             this.a = commentFeedData;
         }
 
@@ -151,13 +147,12 @@ public class InfoViewHolder extends FeedsWraperHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.cuser.view.InfoViewHolder$d */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2780d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ WatchFeedData a;
 
-        View$OnClickListenerC2780d(WatchFeedData watchFeedData) {
+        d(WatchFeedData watchFeedData) {
             this.a = watchFeedData;
         }
 
@@ -270,7 +265,7 @@ public class InfoViewHolder extends FeedsWraperHolder {
             v(dynamicFeedData.circleName, R$id.user_feed_fabuquanzi);
             TextView textView = this.y;
             if (textView != null) {
-                textView.setOnClickListener(new View$OnClickListenerC2777a(dynamicFeedData));
+                textView.setOnClickListener(new a(dynamicFeedData));
             }
             if (TextUtils.isEmpty(dynamicFeedData.havanaIdStr)) {
                 return;
@@ -286,7 +281,7 @@ public class InfoViewHolder extends FeedsWraperHolder {
             }
             if (!wh2.j(commentFeedData.comment)) {
                 this.x.setText(commentFeedData.comment);
-                this.itemView.setOnClickListener(new View$OnClickListenerC2778b(commentFeedData, feedMergeDataDO));
+                this.itemView.setOnClickListener(new b(commentFeedData, feedMergeDataDO));
             }
             if (!TextUtils.isEmpty(commentFeedData.havanaIdStr)) {
                 String str3 = commentFeedData.userNick;
@@ -306,17 +301,17 @@ public class InfoViewHolder extends FeedsWraperHolder {
                     View view2 = this.itemView;
                     int i2 = R$id.mine_user_feed_propic;
                     if (view2.findViewById(i2) != null) {
-                        DMImageCreator c = C0504a.b().c(commentFeedData.targetImg);
+                        DMImageCreator c2 = cn.damai.common.image.a.b().c(commentFeedData.targetImg);
                         int i3 = R$drawable.uikit_default_image_bg_gradient;
-                        c.i(i3).c(i3).g((ImageView) this.itemView.findViewById(i2));
+                        c2.i(i3).c(i3).g((ImageView) this.itemView.findViewById(i2));
                     }
                 }
             }
-            View$OnClickListenerC2779c view$OnClickListenerC2779c = new View$OnClickListenerC2779c(commentFeedData);
+            c cVar = new c(commentFeedData);
             View view3 = this.itemView;
             int i4 = R$id.mine_user_feed_wrapper;
             if (view3.findViewById(i4) != null) {
-                this.itemView.findViewById(i4).setOnClickListener(view$OnClickListenerC2779c);
+                this.itemView.findViewById(i4).setOnClickListener(cVar);
             }
         } else if (feedMergeDataDO == null || (list = feedMergeDataDO.watchData) == null || list.size() <= 0 || (watchFeedData = feedMergeDataDO.watchData.get(0)) == null) {
         } else {
@@ -351,17 +346,17 @@ public class InfoViewHolder extends FeedsWraperHolder {
                     View view5 = this.itemView;
                     int i6 = R$id.mine_user_feed_propic;
                     if (view5.findViewById(i6) != null) {
-                        DMImageCreator c2 = C0504a.b().c(watchFeedData.targetImg);
+                        DMImageCreator c3 = cn.damai.common.image.a.b().c(watchFeedData.targetImg);
                         int i7 = R$drawable.uikit_default_image_bg_gradient;
-                        c2.i(i7).c(i7).g((ImageView) this.itemView.findViewById(i6));
+                        c3.i(i7).c(i7).g((ImageView) this.itemView.findViewById(i6));
                     }
                 }
             }
-            View$OnClickListenerC2780d view$OnClickListenerC2780d = new View$OnClickListenerC2780d(watchFeedData);
+            d dVar = new d(watchFeedData);
             View view6 = this.itemView;
             int i8 = R$id.mine_user_feed_wrapper;
             if (view6.findViewById(i8) != null) {
-                this.itemView.findViewById(i8).setOnClickListener(view$OnClickListenerC2780d);
+                this.itemView.findViewById(i8).setOnClickListener(dVar);
             }
         }
     }

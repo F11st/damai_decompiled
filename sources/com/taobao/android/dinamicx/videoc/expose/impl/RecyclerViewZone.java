@@ -93,13 +93,12 @@ public class RecyclerViewZone<ExposeKey, ExposeData> extends q1<ExposeKey, Expos
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.videoc.expose.impl.RecyclerViewZone$a */
     /* loaded from: classes11.dex */
-    public static class C6409a<ExposeKey, ExposeData> implements IExposureZone.Builder<ExposeKey, ExposeData> {
+    public static class a<ExposeKey, ExposeData> implements IExposureZone.Builder<ExposeKey, ExposeData> {
         private final RecyclerView a;
         private OnRecyclerViewExposeCallback<ExposeKey, ExposeData> b;
 
-        public C6409a(@NonNull RecyclerView recyclerView) {
+        public a(@NonNull RecyclerView recyclerView) {
             this.a = recyclerView;
         }
 
@@ -115,7 +114,7 @@ public class RecyclerViewZone<ExposeKey, ExposeData> extends q1<ExposeKey, Expos
             return new RecyclerViewZone<>(this.a, this.b, iExposure, str);
         }
 
-        public C6409a<ExposeKey, ExposeData> c(OnRecyclerViewExposeCallback<ExposeKey, ExposeData> onRecyclerViewExposeCallback) {
+        public a<ExposeKey, ExposeData> c(OnRecyclerViewExposeCallback<ExposeKey, ExposeData> onRecyclerViewExposeCallback) {
             this.b = onRecyclerViewExposeCallback;
             return this;
         }

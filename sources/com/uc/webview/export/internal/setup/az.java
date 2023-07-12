@@ -2,7 +2,6 @@ package com.uc.webview.export.internal.setup;
 
 import androidx.constraintlayout.core.motion.utils.TypedValues;
 import com.uc.webview.export.internal.uc.CoreFactory;
-import com.uc.webview.export.internal.uc.startup.C7302b;
 import java.util.concurrent.Callable;
 
 /* JADX INFO: Access modifiers changed from: package-private */
@@ -18,13 +17,13 @@ public final class az implements Callable<Object> {
 
     @Override // java.util.concurrent.Callable
     public final Object call() throws Exception {
-        C7302b.a(TypedValues.Attributes.TYPE_PIVOT_TARGET);
+        com.uc.webview.export.internal.uc.startup.b.a(TypedValues.Attributes.TYPE_PIVOT_TARGET);
         if (af.b) {
             CoreFactory.a(af.a);
         }
-        C7279j.c();
-        C7279j.d();
-        C7302b.a(319);
+        j.c();
+        j.d();
+        com.uc.webview.export.internal.uc.startup.b.a(319);
         return null;
     }
 }

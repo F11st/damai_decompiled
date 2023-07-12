@@ -27,20 +27,19 @@ public class CookieManager {
     private static volatile boolean a = false;
     private static android.webkit.CookieManager b = null;
     private static boolean c = true;
-    private static C0243a d;
+    private static a d;
     private static SharedPreferences e;
 
     /* compiled from: Taobao */
-    /* renamed from: anetwork.channel.cookie.CookieManager$a */
     /* loaded from: classes.dex */
-    private static class C0243a {
+    private static class a {
         String a;
         String b;
         String c;
         String d;
         long e;
 
-        C0243a(String str) {
+        a(String str) {
             this.a = str;
             String string = CookieManager.e.getString("networksdk_cookie_monitor", null);
             if (TextUtils.isEmpty(string)) {
@@ -100,7 +99,7 @@ public class CookieManager {
                     if (TextUtils.isEmpty(CookieManager.a())) {
                         return;
                     }
-                    C0243a unused = CookieManager.d = new C0243a(CookieManager.a());
+                    a unused = CookieManager.d = new a(CookieManager.a());
                 } catch (Exception e2) {
                     ALog.d(CookieManager.TAG, "", null, e2, new Object[0]);
                 }

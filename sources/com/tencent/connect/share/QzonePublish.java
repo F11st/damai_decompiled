@@ -6,14 +6,13 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.text.TextUtils;
-import com.tencent.connect.C7035a;
 import com.tencent.connect.auth.QQToken;
 import com.tencent.connect.common.BaseApi;
 import com.tencent.connect.common.Constants;
 import com.tencent.open.TDialog;
-import com.tencent.open.b.C7084e;
+import com.tencent.open.b.e;
 import com.tencent.open.log.SLog;
-import com.tencent.open.utils.C7126m;
+import com.tencent.open.utils.m;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.UiError;
 import java.io.File;
@@ -63,20 +62,20 @@ public class QzonePublish extends BaseApi {
 
     public void publishToQzone(final Activity activity, final Bundle bundle, final IUiListener iUiListener) {
         SLog.i("openSDK_LOG.QzonePublish", "publishToQzone() -- start");
-        if (C7035a.a("openSDK_LOG.QzonePublish", iUiListener)) {
+        if (com.tencent.connect.a.a("openSDK_LOG.QzonePublish", iUiListener)) {
             return;
         }
         if (bundle == null) {
             iUiListener.onError(new UiError(-6, Constants.MSG_PARAM_NULL_ERROR, null));
             SLog.e("openSDK_LOG.QzonePublish", "-->publishToQzone, params is null");
-            C7084e.a().a(1, "SHARE_CHECK_SDK", "1000", this.c.getAppId(), String.valueOf(4), Long.valueOf(SystemClock.elapsedRealtime()), 0, 1, Constants.MSG_PARAM_NULL_ERROR);
-        } else if (!C7126m.f(activity)) {
+            e.a().a(1, "SHARE_CHECK_SDK", "1000", this.c.getAppId(), String.valueOf(4), Long.valueOf(SystemClock.elapsedRealtime()), 0, 1, Constants.MSG_PARAM_NULL_ERROR);
+        } else if (!m.f(activity)) {
             iUiListener.onError(new UiError(-15, Constants.MSG_PARAM_VERSION_TOO_LOW, null));
             SLog.e("openSDK_LOG.QzonePublish", "-->publishToQzone, this is not support below qq 5.9.5");
-            C7084e.a().a(1, "SHARE_CHECK_SDK", "1000", this.c.getAppId(), String.valueOf(4), Long.valueOf(SystemClock.elapsedRealtime()), 0, 1, "publicToQzone, this is not support below qq 5.9.5");
+            e.a().a(1, "SHARE_CHECK_SDK", "1000", this.c.getAppId(), String.valueOf(4), Long.valueOf(SystemClock.elapsedRealtime()), 0, 1, "publicToQzone, this is not support below qq 5.9.5");
             new TDialog(activity, "", a(""), null, this.c).show();
         } else {
-            String a = C7126m.a(activity);
+            String a = m.a(activity);
             int i = 0;
             if (a == null) {
                 a = bundle.getString("appName");
@@ -91,7 +90,7 @@ public class QzonePublish extends BaseApi {
                 ArrayList<String> stringArrayList = bundle.getStringArrayList("imageUrl");
                 if (stringArrayList != null && stringArrayList.size() > 0) {
                     while (i < stringArrayList.size()) {
-                        if (!C7126m.i(stringArrayList.get(i))) {
+                        if (!m.i(stringArrayList.get(i))) {
                             stringArrayList.remove(i);
                             i--;
                         }
@@ -103,7 +102,7 @@ public class QzonePublish extends BaseApi {
                 SLog.i("openSDK_LOG.QzonePublish", "publishToQzone() --end");
             } else if (i2 == 4) {
                 final String string = bundle.getString(PUBLISH_TO_QZONE_VIDEO_PATH);
-                if (!C7126m.i(string)) {
+                if (!m.i(string)) {
                     SLog.e("openSDK_LOG.QzonePublish", "publishToQzone() video url invalid");
                     iUiListener.onError(new UiError(-5, Constants.MSG_PUBLISH_VIDEO_ERROR, null));
                     return;
@@ -139,7 +138,7 @@ public class QzonePublish extends BaseApi {
             } else {
                 iUiListener.onError(new UiError(-5, Constants.MSG_SHARE_TYPE_ERROR, null));
                 SLog.e("openSDK_LOG.QzonePublish", "publishToQzone() error--end请选择支持的分享类型");
-                C7084e.a().a(1, "SHARE_CHECK_SDK", "1000", this.c.getAppId(), String.valueOf(4), Long.valueOf(SystemClock.elapsedRealtime()), 0, 1, "publishToQzone() 请选择支持的分享类型");
+                e.a().a(1, "SHARE_CHECK_SDK", "1000", this.c.getAppId(), String.valueOf(4), Long.valueOf(SystemClock.elapsedRealtime()), 0, 1, "publishToQzone() 请选择支持的分享类型");
             }
         }
     }

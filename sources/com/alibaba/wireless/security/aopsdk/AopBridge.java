@@ -2,11 +2,9 @@ package com.alibaba.wireless.security.aopsdk;
 
 import android.util.Log;
 import com.alibaba.wireless.security.aopsdk.config.ConfigManager;
-import com.alibaba.wireless.security.aopsdk.e.RuleManager;
-import com.alibaba.wireless.security.aopsdk.e.f.ExecutionConfig;
-import com.alibaba.wireless.security.aopsdk.e.f.RuleConfig;
-import com.alibaba.wireless.security.aopsdk.e.f.TopLevelConfig;
-import com.alibaba.wireless.security.aopsdk.i.LogUtils;
+import com.alibaba.wireless.security.aopsdk.e.d;
+import com.alibaba.wireless.security.aopsdk.e.f.e;
+import com.alibaba.wireless.security.aopsdk.e.f.g;
 import com.alibaba.wireless.security.aopsdk.report.ReportManager;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +14,7 @@ import java.util.Objects;
 public class AopBridge {
     public static final String TAG = "AopBase";
     public static final boolean TIME_PROFILE = true;
-    private final RuleManager ruleManager = RuleManager.a();
+    private final com.alibaba.wireless.security.aopsdk.e.d ruleManager = com.alibaba.wireless.security.aopsdk.e.d.a();
 
     private void applyDefaultSamplingRule(Invocation invocation) {
         if (shouldSampleDefault(invocation)) {
@@ -28,38 +26,38 @@ public class AopBridge {
     }
 
     public void applyRulesToInvocation(Invocation invocation) {
-        List<RuleManager.C3978b> a = this.ruleManager.a(invocation.getProxyName());
-        LogUtils.b(TAG, "Strategy get for " + invocation.getProxyName() + " with " + (a != null ? a.size() : 0) + " strategies");
+        List<d.b> a = this.ruleManager.a(invocation.getProxyName());
+        com.alibaba.wireless.security.aopsdk.i.a.b(TAG, "Strategy get for " + invocation.getProxyName() + " with " + (a != null ? a.size() : 0) + " strategies");
         invocation.basicIncTimeCost = (System.nanoTime() - invocation.aopStartTime) / 1000;
-        ReflectUtil.a();
+        d.a();
         if (a == null) {
             applyDefaultSamplingRule(invocation);
             return;
         }
-        for (RuleManager.C3978b c3978b : a) {
-            for (RuleManager.C3977a c3977a : c3978b.b) {
-                LogUtils.b(TAG, "Start to process rule " + c3977a.a);
-                if (c3977a.b.c()) {
-                    LogUtils.b(TAG, "Sampling check passed");
-                    if (c3977a.b.g(invocation)) {
+        for (d.b bVar : a) {
+            for (d.a aVar : bVar.b) {
+                com.alibaba.wireless.security.aopsdk.i.a.b(TAG, "Start to process rule " + aVar.a);
+                if (aVar.b.c()) {
+                    com.alibaba.wireless.security.aopsdk.i.a.b(TAG, "Sampling check passed");
+                    if (aVar.b.g(invocation)) {
                         if (invocation.invocationConfig == null) {
                             invocation.invocationConfig = new InvocationConfig();
                         }
                         InvocationConfig invocationConfig = invocation.invocationConfig;
-                        invocationConfig.matchedStrategyId = c3978b.a;
-                        RuleConfig ruleConfig = c3977a.b;
-                        invocationConfig.matchedRule = ruleConfig;
+                        invocationConfig.matchedStrategyId = bVar.a;
+                        e eVar = aVar.b;
+                        invocationConfig.matchedRule = eVar;
                         int i = invocationConfig.matchedAction;
-                        int i2 = ruleConfig.p;
+                        int i2 = eVar.p;
                         invocationConfig.matchedAction = i | i2;
                         if (i2 != 1) {
                             if (i2 == 2) {
                                 invocationConfig.shouldBlock = true;
                             } else if (i2 == 4) {
                                 invocationConfig.shouldChangeReturnValue = true;
-                                invocationConfig.newReturnValue = ruleConfig.t;
+                                invocationConfig.newReturnValue = eVar.t;
                             } else if (i2 == 8) {
-                                Map<Integer, Object> d = ruleConfig.d();
+                                Map<Integer, Object> d = eVar.d();
                                 for (Integer num : d.keySet()) {
                                     int intValue = num.intValue();
                                     Object[] objArr = invocation.args;
@@ -68,31 +66,31 @@ public class AopBridge {
                                     }
                                 }
                             } else if (i2 == 32) {
-                                invocationConfig.setCacheRule(ruleConfig);
-                                c3977a.b.i(invocation);
-                                if (c3977a.b.a(invocation)) {
-                                    if (c3977a.b.r != 0) {
+                                invocationConfig.setCacheRule(eVar);
+                                aVar.b.i(invocation);
+                                if (aVar.b.a(invocation)) {
+                                    if (aVar.b.r != 0) {
                                         invocationConfig.shouldCacheResult = true;
                                     }
                                 } else if (invocationConfig.getCacheRule().f(invocation)) {
                                     invocationConfig.shouldBlock = true;
-                                    RuleConfig ruleConfig2 = c3977a.b;
-                                    int i3 = ruleConfig2.r;
+                                    e eVar2 = aVar.b;
+                                    int i3 = eVar2.r;
                                     if (i3 == 0) {
-                                        invocation.setResult(ruleConfig2.d(invocation));
-                                        invocation.setThrowable(c3977a.b.e(invocation));
+                                        invocation.setResult(eVar2.d(invocation));
+                                        invocation.setThrowable(aVar.b.e(invocation));
                                     } else if (i3 != 2) {
-                                        invocation.setResult(ruleConfig2.b(invocation));
-                                        invocation.setThrowable(c3977a.b.e(invocation));
+                                        invocation.setResult(eVar2.b(invocation));
+                                        invocation.setThrowable(aVar.b.e(invocation));
                                     }
                                 }
                             }
-                        } else if (ruleConfig.b()) {
+                        } else if (eVar.b()) {
                             invocation.shouldReport = true;
                         }
                     }
                 }
-                if (c3977a.b.o == 1) {
+                if (aVar.b.o == 1) {
                     break;
                 }
             }
@@ -148,7 +146,7 @@ public class AopBridge {
             if (invocationConfig != null) {
                 if (invocationConfig.shouldBlock) {
                     invocation.setShouldBlock(true);
-                    LogUtils.b(TAG, "block call for " + invocation.getProxyName());
+                    com.alibaba.wireless.security.aopsdk.i.a.b(TAG, "block call for " + invocation.getProxyName());
                 }
                 return true;
             }
@@ -251,8 +249,8 @@ public class AopBridge {
     }
 
     public boolean shouldSampleDefault(Invocation invocation) {
-        ExecutionConfig executionConfig;
-        TopLevelConfig c = this.ruleManager.c();
-        return (c == null || (executionConfig = c.f) == null || !executionConfig.c()) ? false : true;
+        com.alibaba.wireless.security.aopsdk.e.f.c cVar;
+        g c = this.ruleManager.c();
+        return (c == null || (cVar = c.f) == null || !cVar.c()) ? false : true;
     }
 }

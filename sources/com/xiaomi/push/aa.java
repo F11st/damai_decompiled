@@ -1,6 +1,5 @@
 package com.xiaomi.push;
 
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import java.io.File;
 import java.util.HashMap;
 
@@ -27,7 +26,7 @@ public class aa {
                 j += listFiles[i].isDirectory() ? a(listFiles[i]) : listFiles[i].length();
             }
         } catch (Exception e) {
-            AbstractC7535b.a(e);
+            com.xiaomi.channel.commonutils.logger.b.a(e);
         }
         return j;
     }

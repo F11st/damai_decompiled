@@ -28,7 +28,7 @@ public /* synthetic */ class SignatureEnhancement$SignatureParts$enhance$contain
     @Override // kotlin.jvm.internal.CallableReference
     @NotNull
     public final KDeclarationContainer getOwner() {
-        return a12.b(b41.C8949a.class);
+        return a12.b(b41.a.class);
     }
 
     @Override // kotlin.jvm.internal.CallableReference

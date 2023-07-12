@@ -1,8 +1,6 @@
 package tb;
 
 import java.util.List;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8214m;
 import kotlin.reflect.jvm.internal.impl.builtins.functions.FunctionClassKind;
 import kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor;
 import kotlin.reflect.jvm.internal.impl.resolve.scopes.GivenFunctionsMemberScope;
@@ -14,9 +12,8 @@ import org.jetbrains.annotations.NotNull;
 public final class rp0 extends GivenFunctionsMemberScope {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.rp0$a */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C9660a {
+    public /* synthetic */ class a {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -40,15 +37,15 @@ public final class rp0 extends GivenFunctionsMemberScope {
         List<FunctionDescriptor> e;
         List<FunctionDescriptor> e2;
         List<FunctionDescriptor> g;
-        int i = C9660a.$EnumSwitchMapping$0[((qp0) e()).o().ordinal()];
+        int i = a.$EnumSwitchMapping$0[((qp0) e()).o().ordinal()];
         if (i == 1) {
-            e = C8213l.e(sp0.Factory.a((qp0) e(), false));
+            e = kotlin.collections.l.e(sp0.Factory.a((qp0) e(), false));
             return e;
         } else if (i != 2) {
-            g = C8214m.g();
+            g = kotlin.collections.m.g();
             return g;
         } else {
-            e2 = C8213l.e(sp0.Factory.a((qp0) e(), true));
+            e2 = kotlin.collections.l.e(sp0.Factory.a((qp0) e(), true));
             return e2;
         }
     }

@@ -14,13 +14,13 @@ import com.autonavi.amap.mapcore.Inner_3dMap_locationOption;
 /* loaded from: classes10.dex */
 public final class kl {
     Context a;
-    private C4599js e;
+    private js e;
     private lb f;
     private ju h;
     private ConnectivityManager i;
     private jw j;
     private Inner_3dMap_locationOption l;
-    private C4604a g = null;
+    private a g = null;
     boolean b = false;
     private StringBuilder k = new StringBuilder();
     String c = null;
@@ -31,13 +31,12 @@ public final class kl {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.kl$a */
     /* loaded from: classes10.dex */
-    public class C4604a extends BroadcastReceiver {
-        private C4604a() {
+    public class a extends BroadcastReceiver {
+        private a() {
         }
 
-        /* synthetic */ C4604a(kl klVar, byte b) {
+        /* synthetic */ a(kl klVar, byte b) {
             this();
         }
 
@@ -80,9 +79,9 @@ public final class kl {
             a(this.a);
             this.l = new Inner_3dMap_locationOption();
             if (this.e == null) {
-                C4599js c4599js = new C4599js(this.a, (WifiManager) kc.a(this.a, "wifi"));
-                this.e = c4599js;
-                c4599js.a(this.b);
+                js jsVar = new js(this.a, (WifiManager) kc.a(this.a, "wifi"));
+                this.e = jsVar;
+                jsVar.a(this.b);
             }
             if (this.f == null) {
                 this.f = new lb(this.a);
@@ -126,7 +125,7 @@ public final class kl {
     private void c() {
         try {
             if (this.g == null) {
-                this.g = new C4604a(this, (byte) 0);
+                this.g = new a(this, (byte) 0);
             }
             IntentFilter intentFilter = new IntentFilter();
             intentFilter.addAction("android.net.wifi.WIFI_STATE_CHANGED");
@@ -144,8 +143,8 @@ public final class kl {
         String str;
         String str2 = "";
         kj kjVar = new kj("");
-        C4599js c4599js = this.e;
-        if (c4599js != null && c4599js.g()) {
+        js jsVar = this.e;
+        if (jsVar != null && jsVar.g()) {
             kjVar.setErrorCode(15);
             return kjVar;
         }
@@ -158,10 +157,10 @@ public final class kl {
             byte[] bArr = null;
             try {
                 try {
-                    ik a = this.h.a(this.h.a(this.a, this.j.a(), jy.a(), jy.b()));
-                    if (a != null) {
-                        bArr = a.a;
-                        str2 = a.c;
+                    ik a2 = this.h.a(this.h.a(this.a, this.j.a(), jy.a(), jy.b()));
+                    if (a2 != null) {
+                        bArr = a2.a;
+                        str2 = a2.c;
                     }
                     if (bArr == null || bArr.length == 0) {
                         kjVar.setErrorCode(4);
@@ -175,12 +174,12 @@ public final class kl {
                     }
                     String str3 = new String(bArr, "UTF-8");
                     if (str3.contains("\"status\":\"0\"")) {
-                        return kmVar.a(str3, this.a, a);
+                        return kmVar.a(str3, this.a, a2);
                     }
                     if (str3.contains("</body></html>")) {
                         kjVar.setErrorCode(5);
-                        C4599js c4599js2 = this.e;
-                        if (c4599js2 == null || !c4599js2.a(this.i)) {
+                        js jsVar2 = this.e;
+                        if (jsVar2 == null || !jsVar2.a(this.i)) {
                             sb = this.k;
                             str = "request may be intercepted";
                         } else {
@@ -195,8 +194,8 @@ public final class kl {
                         kjVar.setLocationDetail(this.k.toString());
                         return kjVar;
                     }
-                    byte[] a2 = jt.a(bArr);
-                    if (a2 == null) {
+                    byte[] a3 = jt.a(bArr);
+                    if (a3 == null) {
                         kjVar.setErrorCode(5);
                         this.k.append("decrypt response data error");
                         if (!TextUtils.isEmpty(str2)) {
@@ -206,19 +205,19 @@ public final class kl {
                         kjVar.setLocationDetail(this.k.toString());
                         return kjVar;
                     }
-                    kj a3 = kmVar.a(a2);
-                    this.c = a3.a();
-                    if (a3.getErrorCode() != 0) {
+                    kj a4 = kmVar.a(a3);
+                    this.c = a4.a();
+                    if (a4.getErrorCode() != 0) {
                         if (!TextUtils.isEmpty(str2)) {
-                            a3.setLocationDetail(a3.getLocationDetail() + " #csid:" + str2);
+                            a4.setLocationDetail(a4.getLocationDetail() + " #csid:" + str2);
                         }
-                        return a3;
-                    } else if (!kn.a(a3)) {
-                        String b = a3.b();
-                        a3.setErrorCode(6);
+                        return a4;
+                    } else if (!kn.a(a4)) {
+                        String b = a4.b();
+                        a4.setErrorCode(6);
                         StringBuilder sb5 = this.k;
                         StringBuilder sb6 = new StringBuilder("location faile retype:");
-                        sb6.append(a3.d());
+                        sb6.append(a4.d());
                         sb6.append(" rdesc:");
                         if (b == null) {
                             b = "null";
@@ -229,24 +228,24 @@ public final class kl {
                             StringBuilder sb7 = this.k;
                             sb7.append(" #csid:" + str2);
                         }
-                        a3.setLocationDetail(this.k.toString());
-                        return a3;
+                        a4.setLocationDetail(this.k.toString());
+                        return a4;
                     } else {
-                        a3.e();
-                        if (a3.getErrorCode() == 0 && a3.getLocationType() == 0) {
-                            if ("-5".equals(a3.d()) || "1".equals(a3.d()) || "2".equals(a3.d()) || "14".equals(a3.d()) || "24".equals(a3.d()) || "-1".equals(a3.d())) {
-                                a3.setLocationType(5);
+                        a4.e();
+                        if (a4.getErrorCode() == 0 && a4.getLocationType() == 0) {
+                            if ("-5".equals(a4.d()) || "1".equals(a4.d()) || "2".equals(a4.d()) || "14".equals(a4.d()) || "24".equals(a4.d()) || "-1".equals(a4.d())) {
+                                a4.setLocationType(5);
                             } else {
-                                a3.setLocationType(6);
+                                a4.setLocationType(6);
                             }
-                            this.k.append(a3.d());
+                            this.k.append(a4.d());
                             if (!TextUtils.isEmpty(str2)) {
                                 StringBuilder sb8 = this.k;
                                 sb8.append(" #csid:" + str2);
                             }
-                            a3.setLocationDetail(this.k.toString());
+                            a4.setLocationDetail(this.k.toString());
                         }
-                        return a3;
+                        return a4;
                     }
                 } catch (Throwable th) {
                     jy.a(th, "MapNetLocation", "getApsLoc req");
@@ -315,9 +314,9 @@ public final class kl {
             this.l = new Inner_3dMap_locationOption();
         }
         try {
-            C4599js c4599js = this.e;
+            js jsVar = this.e;
             this.l.isWifiActiveScan();
-            c4599js.c(this.l.isWifiScan());
+            jsVar.c(this.l.isWifiScan());
         } catch (Throwable unused) {
         }
         try {
@@ -327,21 +326,21 @@ public final class kl {
     }
 
     public final void b() {
-        C4604a c4604a;
+        a aVar;
         this.b = false;
         this.c = null;
         try {
             Context context = this.a;
-            if (context != null && (c4604a = this.g) != null) {
-                context.unregisterReceiver(c4604a);
+            if (context != null && (aVar = this.g) != null) {
+                context.unregisterReceiver(aVar);
             }
             lb lbVar = this.f;
             if (lbVar != null) {
                 lbVar.h();
             }
-            C4599js c4599js = this.e;
-            if (c4599js != null) {
-                c4599js.h();
+            js jsVar = this.e;
+            if (jsVar != null) {
+                jsVar.h();
             }
             this.g = null;
         } catch (Throwable unused) {

@@ -56,8 +56,8 @@ public final class BuiltinMethodsWithSpecialGenericSignature extends SpecialGene
     @Nullable
     public static final SpecialGenericSignatures.SpecialSignatureInfo m(@NotNull CallableMemberDescriptor callableMemberDescriptor) {
         b41.i(callableMemberDescriptor, "<this>");
-        SpecialGenericSignatures.C8333a c8333a = SpecialGenericSignatures.Companion;
-        if (c8333a.d().contains(callableMemberDescriptor.getName())) {
+        SpecialGenericSignatures.a aVar = SpecialGenericSignatures.Companion;
+        if (aVar.d().contains(callableMemberDescriptor.getName())) {
             CallableMemberDescriptor d = DescriptorUtilsKt.d(callableMemberDescriptor, false, new Function1<CallableMemberDescriptor, Boolean>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.BuiltinMethodsWithSpecialGenericSignature$getSpecialSignatureInfo$builtinSignature$1
                 @Override // kotlin.jvm.functions.Function1
                 @NotNull
@@ -80,7 +80,7 @@ public final class BuiltinMethodsWithSpecialGenericSignature extends SpecialGene
             if (d2 == null) {
                 return null;
             }
-            return c8333a.l(d2);
+            return aVar.l(d2);
         }
         return null;
     }

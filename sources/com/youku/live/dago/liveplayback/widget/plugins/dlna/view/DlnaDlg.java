@@ -110,7 +110,7 @@ public class DlnaDlg {
                 str = SupportApiBu.api().orange().multiscreen().high_definition_msg;
                 str2 = SupportApiBu.api().orange().multiscreen().high_definition_btn;
             }
-            mDlg.dlgView().setTitle(R.string.dago_dlna_dlg_title_install_cibn).setMsgLayout(R.C7935layout.dago_dlna_dlg_msg).btns().reset().setBtn(DlgDef.DlgBtnId.POSITIVE, str2, (Object) null).setHighlightedBtn(DlgDef.DlgBtnId.POSITIVE);
+            mDlg.dlgView().setTitle(R.string.dago_dlna_dlg_title_install_cibn).setMsgLayout(R.layout.dago_dlna_dlg_msg).btns().reset().setBtn(DlgDef.DlgBtnId.POSITIVE, str2, (Object) null).setHighlightedBtn(DlgDef.DlgBtnId.POSITIVE);
             ((DlnaDlgView) mDlg.dlgView().msgView(DlnaDlgView.class)).setMsg(str);
             mDlg.setDlgListener(new DlgDef.IAppDlgListener() { // from class: com.youku.live.dago.liveplayback.widget.plugins.dlna.view.DlnaDlg.1
                 public void onBtnClicked(AppDlg appDlg3, DlgDef.DlgBtnId dlgBtnId, Object obj) {

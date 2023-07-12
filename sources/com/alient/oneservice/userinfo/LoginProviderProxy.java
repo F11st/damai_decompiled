@@ -2,7 +2,7 @@ package com.alient.oneservice.userinfo;
 
 import android.content.Context;
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -12,7 +12,7 @@ public class LoginProviderProxy {
     public static boolean checkSessionValid() {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.alient.oneservice.provider.impl.userinfo.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.alient.oneservice.provider.impl.userinfo.LoginProviderImpl").b().f();
             }
             return sProxy.checkSessionValid();
         } catch (Throwable th) {
@@ -23,7 +23,7 @@ public class LoginProviderProxy {
 
     public static LoginProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (LoginProvider) C8883a.j("com.alient.oneservice.provider.impl.userinfo.LoginProviderImpl").b().f();
+            sProxy = (LoginProvider) a.j("com.alient.oneservice.provider.impl.userinfo.LoginProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -41,7 +41,7 @@ public class LoginProviderProxy {
     public static void notifyLogin(Context context, YYLoginListener yYLoginListener) {
         try {
             if (sProxy == null) {
-                sProxy = (LoginProvider) C8883a.j("com.alient.oneservice.provider.impl.userinfo.LoginProviderImpl").b().f();
+                sProxy = (LoginProvider) a.j("com.alient.oneservice.provider.impl.userinfo.LoginProviderImpl").b().f();
             }
             sProxy.notifyLogin(context, yYLoginListener);
         } catch (Throwable th) {

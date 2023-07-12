@@ -950,9 +950,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.live.dago.widgetlib.R$color */
     /* loaded from: classes2.dex */
-    public static final class C7940color {
+    public static final class color {
         public static final int A2 = 0x7f060000;
         public static final int A3 = 0x7f060001;
         public static final int AccountTextColor = 0x7f060002;
@@ -1367,7 +1366,7 @@ public final class R {
         public static final int yushouzhong_bg_color = 0x7f0605b2;
         public static final int zhangtai_bg = 0x7f0605b3;
 
-        private C7940color() {
+        private color() {
         }
     }
 
@@ -1634,9 +1633,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.live.dago.widgetlib.R$drawable */
     /* loaded from: classes2.dex */
-    public static final class C7941drawable {
+    public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha = 0x7f080006;
         public static final int abc_action_bar_item_background_material = 0x7f080007;
         public static final int abc_bg_color = 0x7f080008;
@@ -2433,7 +2431,7 @@ public final class R {
         public static final int yinying_line = 0x7f081007;
         public static final int yk_player_bofang_btn = 0x7f081052;
 
-        private C7941drawable() {
+        private drawable() {
         }
     }
 
@@ -3313,9 +3311,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.live.dago.widgetlib.R$layout */
     /* loaded from: classes2.dex */
-    public static final class C7942layout {
+    public static final class layout {
         public static final int abc_action_bar_title_item = 0x7f0c0000;
         public static final int abc_action_bar_up_container = 0x7f0c0001;
         public static final int abc_action_menu_item_layout = 0x7f0c0002;
@@ -3528,14 +3525,13 @@ public final class R {
         public static final int x_banner_item = 0x7f0c085a;
         public static final int x_banner_layout = 0x7f0c085b;
 
-        private C7942layout() {
+        private layout() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.live.dago.widgetlib.R$raw */
     /* loaded from: classes2.dex */
-    public static final class C7943raw {
+    public static final class raw {
         public static final int lottie_artist_header = 0x7f100074;
         public static final int lottie_dian_zan = 0x7f100075;
         public static final int lottie_dian_zan_dismiss = 0x7f100076;
@@ -3548,7 +3544,7 @@ public final class R {
         public static final int uikit_loading_color = 0x7f1000a7;
         public static final int uikit_loading_white = 0x7f1000a8;
 
-        private C7943raw() {
+        private raw() {
         }
     }
 
@@ -4151,9 +4147,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.live.dago.widgetlib.R$style */
     /* loaded from: classes2.dex */
-    public static final class C7944style {
+    public static final class style {
         public static final int ActionSheetStyle = 0x7f120008;
         public static final int AlertDialog_AppCompat = 0x7f120009;
         public static final int AlertDialog_AppCompat_Light = 0x7f12000a;
@@ -4582,7 +4577,7 @@ public final class R {
         public static final int uik_imagesavedialog = 0x7f120575;
         public static final int wrap = 0x7f12058a;
 
-        private C7944style() {
+        private style() {
         }
     }
 

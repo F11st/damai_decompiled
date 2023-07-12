@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import kotlin.Pair;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8226x;
+import kotlin.collections.m;
+import kotlin.collections.n;
+import kotlin.collections.x;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.PropertyReference1Impl;
 import kotlin.reflect.KProperty;
@@ -95,7 +95,7 @@ public final class LazyJavaPackageFragment extends jp1 {
                         arrayList.add(a);
                     }
                 }
-                r = C8226x.r(arrayList);
+                r = x.r(arrayList);
                 return r;
             }
         });
@@ -114,7 +114,7 @@ public final class LazyJavaPackageFragment extends jp1 {
                 int q;
                 javaPackage2 = LazyJavaPackageFragment.this.g;
                 Collection<JavaPackage> subPackages = javaPackage2.getSubPackages();
-                q = C8215n.q(subPackages, 10);
+                q = n.q(subPackages, 10);
                 ArrayList arrayList = new ArrayList(q);
                 for (JavaPackage javaPackage3 : subPackages) {
                     arrayList.add(javaPackage3.getFqName());
@@ -122,15 +122,14 @@ public final class LazyJavaPackageFragment extends jp1 {
                 return arrayList;
             }
         };
-        g = C8214m.g();
+        g = m.g();
         this.k = e.createRecursionTolerantLazyValue(function0, g);
         this.l = d.a().i().b() ? Annotations.Companion.b() : q81.a(d, javaPackage);
         this.m = d.e().createLazyValue(new Function0<HashMap<t61, t61>>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaPackageFragment$partToFacade$2
 
             /* compiled from: Taobao */
-            /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaPackageFragment$partToFacade$2$a */
             /* loaded from: classes3.dex */
-            public /* synthetic */ class C8345a {
+            public /* synthetic */ class a {
                 public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
                 static {
@@ -154,7 +153,7 @@ public final class LazyJavaPackageFragment extends jp1 {
                     t61 d2 = t61.d(entry.getKey());
                     b41.h(d2, "byInternalName(partInternalName)");
                     KotlinClassHeader classHeader = entry.getValue().getClassHeader();
-                    int i = C8345a.$EnumSwitchMapping$0[classHeader.c().ordinal()];
+                    int i = a.$EnumSwitchMapping$0[classHeader.c().ordinal()];
                     if (i == 1) {
                         String e2 = classHeader.e();
                         if (e2 != null) {

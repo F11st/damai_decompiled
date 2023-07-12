@@ -1,7 +1,6 @@
 package tb;
 
 import java.util.List;
-import kotlin.collections.C8214m;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
 import kotlin.reflect.jvm.internal.impl.resolve.calls.inference.CapturedTypeConstructor;
 import kotlin.reflect.jvm.internal.impl.resolve.scopes.MemberScope;
@@ -28,7 +27,7 @@ public final class kg extends fd2 implements CapturedTypeMarker {
     @NotNull
     public List<TypeProjection> b() {
         List<TypeProjection> g;
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         return g;
     }
 

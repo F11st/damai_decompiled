@@ -11,8 +11,8 @@ import java.util.concurrent.ThreadPoolExecutor;
 public abstract class ef {
     protected ThreadPoolExecutor a;
     private ConcurrentHashMap<ee, Future<?>> c = new ConcurrentHashMap<>();
-    protected ee.InterfaceC4431a b = new ee.InterfaceC4431a() { // from class: com.amap.api.col.s.ef.1
-        @Override // com.amap.api.col.s.ee.InterfaceC4431a
+    protected ee.a b = new ee.a() { // from class: com.amap.api.col.s.ef.1
+        @Override // com.amap.api.col.s.ee.a
         public final void a(ee eeVar) {
             ef.this.a(eeVar);
         }

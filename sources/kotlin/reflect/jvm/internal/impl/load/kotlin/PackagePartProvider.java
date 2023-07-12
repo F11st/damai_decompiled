@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.load.kotlin;
 
 import java.util.List;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
 
@@ -10,13 +10,12 @@ import tb.b41;
 public interface PackagePartProvider {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.kotlin.PackagePartProvider$a */
     /* loaded from: classes3.dex */
-    public static final class C8376a implements PackagePartProvider {
+    public static final class a implements PackagePartProvider {
         @NotNull
-        public static final C8376a INSTANCE = new C8376a();
+        public static final a INSTANCE = new a();
 
-        private C8376a() {
+        private a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.load.kotlin.PackagePartProvider
@@ -24,7 +23,7 @@ public interface PackagePartProvider {
         public List<String> findPackageParts(@NotNull String str) {
             List<String> g;
             b41.i(str, "packageFqName");
-            g = C8214m.g();
+            g = m.g();
             return g;
         }
     }

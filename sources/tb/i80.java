@@ -21,13 +21,12 @@ public class i80 {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.i80$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC9255a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TDialog a;
 
-        View$OnClickListenerC9255a(TDialog tDialog) {
+        a(TDialog tDialog) {
             this.a = tDialog;
         }
 
@@ -55,11 +54,11 @@ public class i80 {
         tDialog.setContentView(inflate);
         tDialog.setCanceledOnTouchOutside(false);
         tDialog.g(4);
-        int a = xr2.a(context, Double.valueOf(xr2.b(context) * 0.75d).intValue(), 62, 105, 250);
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(a, (a * 251) / SecExceptionCode.SEC_ERROR_DYN_STORE_UNKNOWN_ERROR);
+        int a2 = xr2.a(context, Double.valueOf(xr2.b(context) * 0.75d).intValue(), 62, 105, 250);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(a2, (a2 * 251) / SecExceptionCode.SEC_ERROR_DYN_STORE_UNKNOWN_ERROR);
         ImageView imageView = (ImageView) inflate.findViewById(R$id.homepage_popup_window_dna);
         imageView.setLayoutParams(layoutParams);
-        imageView.setOnClickListener(new View$OnClickListenerC9255a(tDialog));
+        imageView.setOnClickListener(new a(tDialog));
         return tDialog;
     }
 }

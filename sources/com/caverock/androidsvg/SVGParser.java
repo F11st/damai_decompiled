@@ -7,7 +7,6 @@ import android.util.Xml;
 import androidx.core.internal.view.SupportMenu;
 import androidx.core.view.InputDeviceCompat;
 import com.alipay.mobile.bqcscanservice.BQCCameraParam;
-import com.alipay.sdk.m.n.C4250a;
 import com.autonavi.amap.mapcore.tools.GlMapUtil;
 import com.caverock.androidsvg.CSSParser;
 import com.caverock.androidsvg.PreserveAspectRatio;
@@ -237,9 +236,8 @@ public class SVGParser {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVGParser$a */
     /* loaded from: classes10.dex */
-    public static /* synthetic */ class C4737a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
         static final /* synthetic */ int[] b;
 
@@ -733,9 +731,8 @@ public class SVGParser {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVGParser$b */
     /* loaded from: classes10.dex */
-    public static class C4738b {
+    public static class b {
         private static final Map<String, PreserveAspectRatio.Alignment> a;
 
         static {
@@ -760,9 +757,8 @@ public class SVGParser {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVGParser$c */
     /* loaded from: classes10.dex */
-    public static class C4739c {
+    public static class c {
         private static final Map<String, Integer> a;
 
         static {
@@ -926,9 +922,8 @@ public class SVGParser {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVGParser$d */
     /* loaded from: classes10.dex */
-    public static class C4740d {
+    public static class d {
         private static final Map<String, SVG.Length> a;
 
         static {
@@ -954,9 +949,8 @@ public class SVGParser {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVGParser$e */
     /* loaded from: classes10.dex */
-    public static class C4741e {
+    public static class e {
         private static final Map<String, Integer> a;
 
         static {
@@ -984,10 +978,9 @@ public class SVGParser {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVGParser$f */
     /* loaded from: classes10.dex */
-    public class C4742f extends DefaultHandler2 {
-        private C4742f() {
+    public class f extends DefaultHandler2 {
+        private f() {
         }
 
         @Override // org.xml.sax.helpers.DefaultHandler, org.xml.sax.ContentHandler
@@ -1007,7 +1000,7 @@ public class SVGParser {
 
         @Override // org.xml.sax.helpers.DefaultHandler, org.xml.sax.ContentHandler
         public void processingInstruction(String str, String str2) throws SAXException {
-            SVGParser.this.r(str, SVGParser.this.x0(new C4743g(str2)));
+            SVGParser.this.r(str, SVGParser.this.x0(new g(str2)));
         }
 
         @Override // org.xml.sax.helpers.DefaultHandler, org.xml.sax.ContentHandler
@@ -1020,23 +1013,22 @@ public class SVGParser {
             SVGParser.this.X0(str, str2, str3, attributes);
         }
 
-        /* synthetic */ C4742f(SVGParser sVGParser, C4737a c4737a) {
+        /* synthetic */ f(SVGParser sVGParser, a aVar) {
             this();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVGParser$g */
     /* loaded from: classes10.dex */
-    public static class C4743g {
+    public static class g {
         String a;
         int c;
         int b = 0;
-        private C4747c d = new C4747c();
+        private com.caverock.androidsvg.c d = new com.caverock.androidsvg.c();
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C4743g(String str) {
+        public g(String str) {
             this.c = 0;
             String trim = str.trim();
             this.a = trim;
@@ -1343,12 +1335,11 @@ public class SVGParser {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.caverock.androidsvg.SVGParser$h */
     /* loaded from: classes10.dex */
-    public class C4744h implements Attributes {
+    public class h implements Attributes {
         private XmlPullParser a;
 
-        public C4744h(SVGParser sVGParser, XmlPullParser xmlPullParser) {
+        public h(SVGParser sVGParser, XmlPullParser xmlPullParser) {
             this.a = xmlPullParser;
         }
 
@@ -1417,19 +1408,19 @@ public class SVGParser {
         }
     }
 
-    private void A(SVG.C4697d c4697d, Attributes attributes) throws SVGParseException {
+    private void A(SVG.d dVar, Attributes attributes) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             String trim = attributes.getValue(i).trim();
-            switch (C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()]) {
+            switch (a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()]) {
                 case 12:
-                    c4697d.o = o0(trim);
+                    dVar.o = o0(trim);
                     break;
                 case 13:
-                    c4697d.p = o0(trim);
+                    dVar.p = o0(trim);
                     break;
                 case 14:
                     SVG.Length o0 = o0(trim);
-                    c4697d.q = o0;
+                    dVar.q = o0;
                     if (o0.isNegative()) {
                         throw new SVGParseException("Invalid <circle> element. r cannot be negative");
                     }
@@ -1439,23 +1430,23 @@ public class SVGParser {
     }
 
     private static Set<String> A0(String str) {
-        C4743g c4743g = new C4743g(str);
+        g gVar = new g(str);
         HashSet hashSet = new HashSet();
-        while (!c4743g.h()) {
-            hashSet.add(c4743g.r());
-            c4743g.A();
+        while (!gVar.h()) {
+            hashSet.add(gVar.r());
+            gVar.A();
         }
         return hashSet;
     }
 
-    private void B(SVG.C4699e c4699e, Attributes attributes) throws SVGParseException {
+    private void B(SVG.e eVar, Attributes attributes) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             String trim = attributes.getValue(i).trim();
-            if (C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()] == 38) {
+            if (a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()] == 38) {
                 if ("objectBoundingBox".equals(trim)) {
-                    c4699e.o = Boolean.FALSE;
+                    eVar.o = Boolean.FALSE;
                 } else if ("userSpaceOnUse".equals(trim)) {
-                    c4699e.o = Boolean.TRUE;
+                    eVar.o = Boolean.TRUE;
                 } else {
                     throw new SVGParseException("Invalid value for attribute clipPathUnits");
                 }
@@ -1465,17 +1456,17 @@ public class SVGParser {
 
     private static SVG.Length[] B0(String str) {
         SVG.Length p;
-        C4743g c4743g = new C4743g(str);
-        c4743g.A();
-        if (c4743g.h() || (p = c4743g.p()) == null || p.isNegative()) {
+        g gVar = new g(str);
+        gVar.A();
+        if (gVar.h() || (p = gVar.p()) == null || p.isNegative()) {
             return null;
         }
         float floatValue = p.floatValue();
         ArrayList arrayList = new ArrayList();
         arrayList.add(p);
-        while (!c4743g.h()) {
-            c4743g.z();
-            SVG.Length p2 = c4743g.p();
+        while (!gVar.h()) {
+            gVar.z();
+            SVG.Length p2 = gVar.p();
             if (p2 == null || p2.isNegative()) {
                 return null;
             }
@@ -1491,7 +1482,7 @@ public class SVGParser {
     private void C(SVG.SvgConditional svgConditional, Attributes attributes) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             String trim = attributes.getValue(i).trim();
-            switch (C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()]) {
+            switch (a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()]) {
                 case 21:
                     svgConditional.setRequiredFeatures(z0(trim));
                     break;
@@ -1525,24 +1516,24 @@ public class SVGParser {
         return null;
     }
 
-    private void D(SVG.AbstractC4692a0 abstractC4692a0, Attributes attributes) throws SVGParseException {
+    private void D(SVG.a0 a0Var, Attributes attributes) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             String qName = attributes.getQName(i);
             if (!qName.equals("id") && !qName.equals("xml:id")) {
                 if (qName.equals("xml:space")) {
                     String trim = attributes.getValue(i).trim();
                     if ("default".equals(trim)) {
-                        abstractC4692a0.d = Boolean.FALSE;
+                        a0Var.d = Boolean.FALSE;
                         return;
                     } else if ("preserve".equals(trim)) {
-                        abstractC4692a0.d = Boolean.TRUE;
+                        a0Var.d = Boolean.TRUE;
                         return;
                     } else {
                         throw new SVGParseException("Invalid value for \"xml:space\" attribute: " + trim);
                     }
                 }
             } else {
-                abstractC4692a0.c = attributes.getValue(i).trim();
+                a0Var.c = attributes.getValue(i).trim();
                 return;
             }
         }
@@ -1561,57 +1552,57 @@ public class SVGParser {
         return null;
     }
 
-    private void E(SVG.C4703g c4703g, Attributes attributes) throws SVGParseException {
+    private void E(SVG.g gVar, Attributes attributes) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             String trim = attributes.getValue(i).trim();
-            switch (C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()]) {
+            switch (a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()]) {
                 case 10:
                     SVG.Length o0 = o0(trim);
-                    c4703g.q = o0;
+                    gVar.q = o0;
                     if (o0.isNegative()) {
                         throw new SVGParseException("Invalid <ellipse> element. rx cannot be negative");
                     }
                     break;
                 case 11:
                     SVG.Length o02 = o0(trim);
-                    c4703g.r = o02;
+                    gVar.r = o02;
                     if (o02.isNegative()) {
                         throw new SVGParseException("Invalid <ellipse> element. ry cannot be negative");
                     }
                     break;
                 case 12:
-                    c4703g.o = o0(trim);
+                    gVar.o = o0(trim);
                     break;
                 case 13:
-                    c4703g.p = o0(trim);
+                    gVar.p = o0(trim);
                     break;
             }
         }
     }
 
-    private static void E0(SVG.AbstractC4692a0 abstractC4692a0, String str) {
-        C4743g c4743g = new C4743g(str.replaceAll("/\\*.*?\\*/", ""));
+    private static void E0(SVG.a0 a0Var, String str) {
+        g gVar = new g(str.replaceAll("/\\*.*?\\*/", ""));
         while (true) {
-            String s = c4743g.s(jn1.CONDITION_IF_MIDDLE);
-            c4743g.A();
-            if (!c4743g.f(jn1.CONDITION_IF_MIDDLE)) {
+            String s = gVar.s(jn1.CONDITION_IF_MIDDLE);
+            gVar.A();
+            if (!gVar.f(jn1.CONDITION_IF_MIDDLE)) {
                 return;
             }
-            c4743g.A();
-            String u = c4743g.u(b90.TokenSEM);
+            gVar.A();
+            String u = gVar.u(b90.TokenSEM);
             if (u == null) {
                 return;
             }
-            c4743g.A();
-            if (c4743g.h() || c4743g.f(b90.TokenSEM)) {
-                if (abstractC4692a0.f == null) {
-                    abstractC4692a0.f = new SVG.Style();
+            gVar.A();
+            if (gVar.h() || gVar.f(b90.TokenSEM)) {
+                if (a0Var.f == null) {
+                    a0Var.f = new SVG.Style();
                 }
                 if (u.contains("!important")) {
-                    abstractC4692a0.f.important = true;
+                    a0Var.f.important = true;
                 }
-                S0(abstractC4692a0.f, s, u);
-                c4743g.A();
+                S0(a0Var.f, s, u);
+                gVar.A();
             }
         }
     }
@@ -1623,7 +1614,7 @@ public class SVGParser {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private void F(com.caverock.androidsvg.SVG.AbstractC4705h r5, org.xml.sax.Attributes r6) throws com.caverock.androidsvg.SVGParseException {
+    private void F(com.caverock.androidsvg.SVG.h r5, org.xml.sax.Attributes r6) throws com.caverock.androidsvg.SVGParseException {
         /*
             r4 = this;
             r0 = 0
@@ -1632,7 +1623,7 @@ public class SVGParser {
             if (r0 >= r1) goto L90
             java.lang.String r1 = r6.getValue(r0)
             java.lang.String r1 = r1.trim()
-            int[] r2 = com.caverock.androidsvg.SVGParser.C4737a.b
+            int[] r2 = com.caverock.androidsvg.SVGParser.a.b
             java.lang.String r3 = r6.getLocalName(r0)
             com.caverock.androidsvg.SVGParser$SVGAttr r3 = com.caverock.androidsvg.SVGParser.SVGAttr.fromString(r3)
             int r3 = r3.ordinal()
@@ -1707,74 +1698,74 @@ public class SVGParser {
     }
 
     private static Set<String> F0(String str) {
-        C4743g c4743g = new C4743g(str);
+        g gVar = new g(str);
         HashSet hashSet = new HashSet();
-        while (!c4743g.h()) {
-            String r = c4743g.r();
+        while (!gVar.h()) {
+            String r = gVar.r();
             int indexOf = r.indexOf(45);
             if (indexOf != -1) {
                 r = r.substring(0, indexOf);
             }
             hashSet.add(new Locale(r, "", "").getLanguage());
-            c4743g.A();
+            gVar.A();
         }
         return hashSet;
     }
 
-    private void G(SVG.C4711k c4711k, Attributes attributes) throws SVGParseException {
+    private void G(SVG.k kVar, Attributes attributes) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             String trim = attributes.getValue(i).trim();
-            int i2 = C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
+            int i2 = a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
             if (i2 == 1) {
-                c4711k.p = o0(trim);
+                kVar.p = o0(trim);
             } else if (i2 == 2) {
-                c4711k.q = o0(trim);
+                kVar.q = o0(trim);
             } else if (i2 == 3) {
                 SVG.Length o0 = o0(trim);
-                c4711k.r = o0;
+                kVar.r = o0;
                 if (o0.isNegative()) {
                     throw new SVGParseException("Invalid <use> element. width cannot be negative");
                 }
             } else if (i2 == 4) {
                 SVG.Length o02 = o0(trim);
-                c4711k.s = o02;
+                kVar.s = o02;
                 if (o02.isNegative()) {
                     throw new SVGParseException("Invalid <use> element. height cannot be negative");
                 }
             } else if (i2 != 6) {
                 if (i2 == 7) {
-                    w0(c4711k, trim);
+                    w0(kVar, trim);
                 }
             } else if ("".equals(attributes.getURI(i)) || "http://www.w3.org/1999/xlink".equals(attributes.getURI(i))) {
-                c4711k.o = trim;
+                kVar.o = trim;
             }
         }
     }
 
     private static SVG.Style.TextAnchor G0(String str) {
         str.hashCode();
-        char c = 65535;
+        char c2 = 65535;
         switch (str.hashCode()) {
             case -1074341483:
                 if (str.equals("middle")) {
-                    c = 0;
+                    c2 = 0;
                     break;
                 }
                 break;
             case 100571:
                 if (str.equals("end")) {
-                    c = 1;
+                    c2 = 1;
                     break;
                 }
                 break;
             case 109757538:
                 if (str.equals("start")) {
-                    c = 2;
+                    c2 = 2;
                     break;
                 }
                 break;
         }
-        switch (c) {
+        switch (c2) {
             case 0:
                 return SVG.Style.TextAnchor.Middle;
             case 1:
@@ -1786,21 +1777,21 @@ public class SVGParser {
         }
     }
 
-    private void H(SVG.C4713l c4713l, Attributes attributes) throws SVGParseException {
+    private void H(SVG.l lVar, Attributes attributes) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             String trim = attributes.getValue(i).trim();
-            switch (C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()]) {
+            switch (a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()]) {
                 case 15:
-                    c4713l.o = o0(trim);
+                    lVar.o = o0(trim);
                     break;
                 case 16:
-                    c4713l.p = o0(trim);
+                    lVar.p = o0(trim);
                     break;
                 case 17:
-                    c4713l.q = o0(trim);
+                    lVar.q = o0(trim);
                     break;
                 case 18:
-                    c4713l.r = o0(trim);
+                    lVar.r = o0(trim);
                     break;
             }
         }
@@ -1808,40 +1799,40 @@ public class SVGParser {
 
     private static SVG.Style.TextDecoration H0(String str) {
         str.hashCode();
-        char c = 65535;
+        char c2 = 65535;
         switch (str.hashCode()) {
             case -1171789332:
                 if (str.equals("line-through")) {
-                    c = 0;
+                    c2 = 0;
                     break;
                 }
                 break;
             case -1026963764:
                 if (str.equals("underline")) {
-                    c = 1;
+                    c2 = 1;
                     break;
                 }
                 break;
             case 3387192:
                 if (str.equals("none")) {
-                    c = 2;
+                    c2 = 2;
                     break;
                 }
                 break;
             case 93826908:
                 if (str.equals("blink")) {
-                    c = 3;
+                    c2 = 3;
                     break;
                 }
                 break;
             case 529818312:
                 if (str.equals("overline")) {
-                    c = 4;
+                    c2 = 4;
                     break;
                 }
                 break;
         }
-        switch (c) {
+        switch (c2) {
             case 0:
                 return SVG.Style.TextDecoration.LineThrough;
             case 1:
@@ -1857,21 +1848,21 @@ public class SVGParser {
         }
     }
 
-    private void I(SVG.C4694b0 c4694b0, Attributes attributes) throws SVGParseException {
+    private void I(SVG.b0 b0Var, Attributes attributes) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             String trim = attributes.getValue(i).trim();
-            switch (C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()]) {
+            switch (a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()]) {
                 case 15:
-                    c4694b0.m = o0(trim);
+                    b0Var.m = o0(trim);
                     break;
                 case 16:
-                    c4694b0.n = o0(trim);
+                    b0Var.n = o0(trim);
                     break;
                 case 17:
-                    c4694b0.o = o0(trim);
+                    b0Var.o = o0(trim);
                     break;
                 case 18:
-                    c4694b0.p = o0(trim);
+                    b0Var.p = o0(trim);
                     break;
             }
         }
@@ -1888,46 +1879,46 @@ public class SVGParser {
         return null;
     }
 
-    private void J(SVG.C4715m c4715m, Attributes attributes) throws SVGParseException {
+    private void J(SVG.m mVar, Attributes attributes) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             String trim = attributes.getValue(i).trim();
-            switch (C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()]) {
+            switch (a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()]) {
                 case 26:
-                    c4715m.q = o0(trim);
+                    mVar.q = o0(trim);
                     break;
                 case 27:
-                    c4715m.r = o0(trim);
+                    mVar.r = o0(trim);
                     break;
                 case 28:
                     SVG.Length o0 = o0(trim);
-                    c4715m.s = o0;
+                    mVar.s = o0;
                     if (o0.isNegative()) {
                         throw new SVGParseException("Invalid <marker> element. markerWidth cannot be negative");
                     }
                     break;
                 case 29:
                     SVG.Length o02 = o0(trim);
-                    c4715m.t = o02;
+                    mVar.t = o02;
                     if (o02.isNegative()) {
                         throw new SVGParseException("Invalid <marker> element. markerHeight cannot be negative");
                     }
                     break;
                 case 30:
                     if ("strokeWidth".equals(trim)) {
-                        c4715m.p = false;
+                        mVar.p = false;
                         break;
                     } else if ("userSpaceOnUse".equals(trim)) {
-                        c4715m.p = true;
+                        mVar.p = true;
                         break;
                     } else {
                         throw new SVGParseException("Invalid value for attribute markerUnits");
                     }
                 case 31:
                     if ("auto".equals(trim)) {
-                        c4715m.u = Float.valueOf(Float.NaN);
+                        mVar.u = Float.valueOf(Float.NaN);
                         break;
                     } else {
-                        c4715m.u = Float.valueOf(f0(trim));
+                        mVar.u = Float.valueOf(f0(trim));
                         break;
                     }
             }
@@ -1936,66 +1927,66 @@ public class SVGParser {
 
     private Matrix J0(String str) throws SVGParseException {
         Matrix matrix = new Matrix();
-        C4743g c4743g = new C4743g(str);
-        c4743g.A();
-        while (!c4743g.h()) {
-            String o = c4743g.o();
+        g gVar = new g(str);
+        gVar.A();
+        while (!gVar.h()) {
+            String o = gVar.o();
             if (o != null) {
-                char c = 65535;
+                char c2 = 65535;
                 switch (o.hashCode()) {
                     case -1081239615:
                         if (o.equals("matrix")) {
-                            c = 0;
+                            c2 = 0;
                             break;
                         }
                         break;
                     case -925180581:
                         if (o.equals("rotate")) {
-                            c = 1;
+                            c2 = 1;
                             break;
                         }
                         break;
                     case 109250890:
                         if (o.equals("scale")) {
-                            c = 2;
+                            c2 = 2;
                             break;
                         }
                         break;
                     case 109493390:
                         if (o.equals("skewX")) {
-                            c = 3;
+                            c2 = 3;
                             break;
                         }
                         break;
                     case 109493391:
                         if (o.equals("skewY")) {
-                            c = 4;
+                            c2 = 4;
                             break;
                         }
                         break;
                     case 1052832078:
                         if (o.equals("translate")) {
-                            c = 5;
+                            c2 = 5;
                             break;
                         }
                         break;
                 }
-                switch (c) {
+                switch (c2) {
                     case 0:
-                        c4743g.A();
-                        float n = c4743g.n();
-                        c4743g.z();
-                        float n2 = c4743g.n();
-                        c4743g.z();
-                        float n3 = c4743g.n();
-                        c4743g.z();
-                        float n4 = c4743g.n();
-                        c4743g.z();
-                        float n5 = c4743g.n();
-                        c4743g.z();
-                        float n6 = c4743g.n();
-                        c4743g.A();
-                        if (!Float.isNaN(n6) && c4743g.f(')')) {
+                        gVar.A();
+                        float n = gVar.n();
+                        gVar.z();
+                        float n2 = gVar.n();
+                        gVar.z();
+                        float n3 = gVar.n();
+                        gVar.z();
+                        float n4 = gVar.n();
+                        gVar.z();
+                        float n5 = gVar.n();
+                        gVar.z();
+                        float n6 = gVar.n();
+                        gVar.A();
+                        if (!Float.isNaN(n6) && gVar.f(')')) {
                             Matrix matrix2 = new Matrix();
                             matrix2.setValues(new float[]{n, n3, n5, n2, n4, n6, 0.0f, 0.0f, 1.0f});
                             matrix.preConcat(matrix2);
@@ -2005,12 +1996,12 @@ public class SVGParser {
                         }
                         break;
                     case 1:
-                        c4743g.A();
-                        float n7 = c4743g.n();
-                        float x = c4743g.x();
-                        float x2 = c4743g.x();
-                        c4743g.A();
-                        if (!Float.isNaN(n7) && c4743g.f(')')) {
+                        gVar.A();
+                        float n7 = gVar.n();
+                        float x = gVar.x();
+                        float x2 = gVar.x();
+                        gVar.A();
+                        if (!Float.isNaN(n7) && gVar.f(')')) {
                             if (Float.isNaN(x)) {
                                 matrix.preRotate(n7);
                                 break;
@@ -2024,11 +2015,11 @@ public class SVGParser {
                             throw new SVGParseException("Invalid transform list: " + str);
                         }
                     case 2:
-                        c4743g.A();
-                        float n8 = c4743g.n();
-                        float x3 = c4743g.x();
-                        c4743g.A();
-                        if (!Float.isNaN(n8) && c4743g.f(')')) {
+                        gVar.A();
+                        float n8 = gVar.n();
+                        float x3 = gVar.x();
+                        gVar.A();
+                        if (!Float.isNaN(n8) && gVar.f(')')) {
                             if (Float.isNaN(x3)) {
                                 matrix.preScale(n8, n8);
                                 break;
@@ -2041,10 +2032,10 @@ public class SVGParser {
                         }
                         break;
                     case 3:
-                        c4743g.A();
-                        float n9 = c4743g.n();
-                        c4743g.A();
-                        if (!Float.isNaN(n9) && c4743g.f(')')) {
+                        gVar.A();
+                        float n9 = gVar.n();
+                        gVar.A();
+                        if (!Float.isNaN(n9) && gVar.f(')')) {
                             matrix.preSkew((float) Math.tan(Math.toRadians(n9)), 0.0f);
                             break;
                         } else {
@@ -2052,21 +2043,21 @@ public class SVGParser {
                         }
                         break;
                     case 4:
-                        c4743g.A();
-                        float n10 = c4743g.n();
-                        c4743g.A();
-                        if (!Float.isNaN(n10) && c4743g.f(')')) {
+                        gVar.A();
+                        float n10 = gVar.n();
+                        gVar.A();
+                        if (!Float.isNaN(n10) && gVar.f(')')) {
                             matrix.preSkew(0.0f, (float) Math.tan(Math.toRadians(n10)));
                             break;
                         } else {
                             throw new SVGParseException("Invalid transform list: " + str);
                         }
                     case 5:
-                        c4743g.A();
-                        float n11 = c4743g.n();
-                        float x4 = c4743g.x();
-                        c4743g.A();
-                        if (!Float.isNaN(n11) && c4743g.f(')')) {
+                        gVar.A();
+                        float n11 = gVar.n();
+                        float x4 = gVar.x();
+                        gVar.A();
+                        if (!Float.isNaN(n11) && gVar.f(')')) {
                             if (Float.isNaN(x4)) {
                                 matrix.preTranslate(n11, 0.0f);
                                 break;
@@ -2081,10 +2072,10 @@ public class SVGParser {
                     default:
                         throw new SVGParseException("Invalid transform list fn: " + o + jn1.BRACKET_END_STR);
                 }
-                if (c4743g.h()) {
+                if (gVar.h()) {
                     return matrix;
                 }
-                c4743g.z();
+                gVar.z();
             } else {
                 throw new SVGParseException("Bad transform function encountered in transform list: " + str);
             }
@@ -2092,23 +2083,23 @@ public class SVGParser {
         return matrix;
     }
 
-    private void K(SVG.C4717n c4717n, Attributes attributes) throws SVGParseException {
+    private void K(SVG.n nVar, Attributes attributes) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             String trim = attributes.getValue(i).trim();
-            int i2 = C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
+            int i2 = a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
             if (i2 == 1) {
-                c4717n.p = o0(trim);
+                nVar.p = o0(trim);
             } else if (i2 == 2) {
-                c4717n.q = o0(trim);
+                nVar.q = o0(trim);
             } else if (i2 == 3) {
                 SVG.Length o0 = o0(trim);
-                c4717n.r = o0;
+                nVar.r = o0;
                 if (o0.isNegative()) {
                     throw new SVGParseException("Invalid <mask> element. width cannot be negative");
                 }
             } else if (i2 == 4) {
                 SVG.Length o02 = o0(trim);
-                c4717n.s = o02;
+                nVar.s = o02;
                 if (o02.isNegative()) {
                     throw new SVGParseException("Invalid <mask> element. height cannot be negative");
                 }
@@ -2116,16 +2107,16 @@ public class SVGParser {
                 if (i2 != 44) {
                     continue;
                 } else if ("objectBoundingBox".equals(trim)) {
-                    c4717n.o = Boolean.FALSE;
+                    nVar.o = Boolean.FALSE;
                 } else if ("userSpaceOnUse".equals(trim)) {
-                    c4717n.o = Boolean.TRUE;
+                    nVar.o = Boolean.TRUE;
                 } else {
                     throw new SVGParseException("Invalid value for attribute maskContentUnits");
                 }
             } else if ("objectBoundingBox".equals(trim)) {
-                c4717n.n = Boolean.FALSE;
+                nVar.n = Boolean.FALSE;
             } else if ("userSpaceOnUse".equals(trim)) {
-                c4717n.n = Boolean.TRUE;
+                nVar.n = Boolean.TRUE;
             } else {
                 throw new SVGParseException("Invalid value for attribute maskUnits");
             }
@@ -2139,30 +2130,30 @@ public class SVGParser {
             newInstance.setFeature("http://xml.org/sax/features/external-general-entities", false);
             newInstance.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
             XMLReader xMLReader = newInstance.newSAXParser().getXMLReader();
-            C4742f c4742f = new C4742f(this, null);
-            xMLReader.setContentHandler(c4742f);
-            xMLReader.setProperty("http://xml.org/sax/properties/lexical-handler", c4742f);
+            f fVar = new f(this, null);
+            xMLReader.setContentHandler(fVar);
+            xMLReader.setProperty("http://xml.org/sax/properties/lexical-handler", fVar);
             xMLReader.parse(new InputSource(inputStream));
-        } catch (IOException e) {
-            throw new SVGParseException("Stream error", e);
-        } catch (ParserConfigurationException e2) {
-            throw new SVGParseException("XML parser problem", e2);
-        } catch (SAXException e3) {
-            throw new SVGParseException("SVG parse error", e3);
+        } catch (IOException e2) {
+            throw new SVGParseException("Stream error", e2);
+        } catch (ParserConfigurationException e3) {
+            throw new SVGParseException("XML parser problem", e3);
+        } catch (SAXException e4) {
+            throw new SVGParseException("SVG parse error", e4);
         }
     }
 
-    private void L(SVG.C4719o c4719o, Attributes attributes) throws SVGParseException {
+    private void L(SVG.o oVar, Attributes attributes) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             String trim = attributes.getValue(i).trim();
-            int i2 = C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
+            int i2 = a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
             if (i2 == 8) {
-                c4719o.o = u0(trim);
+                oVar.o = u0(trim);
             } else if (i2 != 9) {
                 continue;
             } else {
                 Float valueOf = Float.valueOf(f0(trim));
-                c4719o.p = valueOf;
+                oVar.p = valueOf;
                 if (valueOf.floatValue() < 0.0f) {
                     throw new SVGParseException("Invalid <path> element. pathLength cannot be negative");
                 }
@@ -2174,7 +2165,7 @@ public class SVGParser {
         try {
             try {
                 XmlPullParser newPullParser = Xml.newPullParser();
-                C4744h c4744h = new C4744h(this, newPullParser);
+                h hVar = new h(this, newPullParser);
                 newPullParser.setFeature("http://xmlpull.org/v1/doc/features.html#process-docdecl", false);
                 newPullParser.setFeature("http://xmlpull.org/v1/doc/features.html#process-namespaces", true);
                 newPullParser.setInput(inputStream, null);
@@ -2183,15 +2174,15 @@ public class SVGParser {
                         W0();
                     } else if (eventType == 8) {
                         Log.d("SVGParser", "PROC INSTR: " + newPullParser.getText());
-                        C4743g c4743g = new C4743g(newPullParser.getText());
-                        r(c4743g.r(), x0(c4743g));
+                        g gVar = new g(newPullParser.getText());
+                        r(gVar.r(), x0(gVar));
                     } else if (eventType != 10) {
                         if (eventType == 2) {
                             String name = newPullParser.getName();
                             if (newPullParser.getPrefix() != null) {
                                 name = newPullParser.getPrefix() + jn1.CONDITION_IF_MIDDLE + name;
                             }
-                            X0(newPullParser.getNamespace(), newPullParser.getName(), name, c4744h);
+                            X0(newPullParser.getNamespace(), newPullParser.getName(), name, hVar);
                         } else if (eventType == 3) {
                             String name2 = newPullParser.getName();
                             if (newPullParser.getPrefix() != null) {
@@ -2217,13 +2208,13 @@ public class SVGParser {
                     }
                 }
                 o();
-            } catch (XmlPullParserException e) {
-                throw new SVGParseException("XML parser problem", e);
+            } catch (XmlPullParserException e2) {
+                throw new SVGParseException("XML parser problem", e2);
             } catch (Throwable th) {
                 th.printStackTrace();
             }
-        } catch (IOException e2) {
-            throw new SVGParseException("Stream error", e2);
+        } catch (IOException e3) {
+            throw new SVGParseException("Stream error", e3);
         }
     }
 
@@ -2234,7 +2225,7 @@ public class SVGParser {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private void M(com.caverock.androidsvg.SVG.C4723q r6, org.xml.sax.Attributes r7) throws com.caverock.androidsvg.SVGParseException {
+    private void M(com.caverock.androidsvg.SVG.q r6, org.xml.sax.Attributes r7) throws com.caverock.androidsvg.SVGParseException {
         /*
             r5 = this;
             r0 = 0
@@ -2243,7 +2234,7 @@ public class SVGParser {
             if (r0 >= r1) goto Ld3
             java.lang.String r1 = r7.getValue(r0)
             java.lang.String r1 = r1.trim()
-            int[] r2 = com.caverock.androidsvg.SVGParser.C4737a.b
+            int[] r2 = com.caverock.androidsvg.SVGParser.a.b
             java.lang.String r3 = r7.getLocalName(r0)
             com.caverock.androidsvg.SVGParser$SVGAttr r3 = com.caverock.androidsvg.SVGParser.SVGAttr.fromString(r3)
             int r3 = r3.ordinal()
@@ -2367,19 +2358,19 @@ public class SVGParser {
         return null;
     }
 
-    private void N(SVG.C4725r c4725r, Attributes attributes, String str) throws SVGParseException {
+    private void N(SVG.r rVar, Attributes attributes, String str) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             if (SVGAttr.fromString(attributes.getLocalName(i)) == SVGAttr.points) {
-                C4743g c4743g = new C4743g(attributes.getValue(i));
+                g gVar = new g(attributes.getValue(i));
                 ArrayList<Float> arrayList = new ArrayList();
-                c4743g.A();
-                while (!c4743g.h()) {
-                    float n = c4743g.n();
+                gVar.A();
+                while (!gVar.h()) {
+                    float n = gVar.n();
                     if (!Float.isNaN(n)) {
-                        c4743g.z();
-                        float n2 = c4743g.n();
+                        gVar.z();
+                        float n2 = gVar.n();
                         if (!Float.isNaN(n2)) {
-                            c4743g.z();
+                            gVar.z();
                             arrayList.add(Float.valueOf(n));
                             arrayList.add(Float.valueOf(n2));
                         } else {
@@ -2389,32 +2380,32 @@ public class SVGParser {
                         throw new SVGParseException("Invalid <" + str + "> points attribute. Non-coordinate content found in list.");
                     }
                 }
-                c4725r.o = new float[arrayList.size()];
+                rVar.o = new float[arrayList.size()];
                 int i2 = 0;
-                for (Float f : arrayList) {
-                    c4725r.o[i2] = f.floatValue();
+                for (Float f2 : arrayList) {
+                    rVar.o[i2] = f2.floatValue();
                     i2++;
                 }
             }
         }
     }
 
-    private static SVG.C4693b N0(String str) throws SVGParseException {
-        C4743g c4743g = new C4743g(str);
-        c4743g.A();
-        float n = c4743g.n();
-        c4743g.z();
-        float n2 = c4743g.n();
-        c4743g.z();
-        float n3 = c4743g.n();
-        c4743g.z();
-        float n4 = c4743g.n();
+    private static SVG.b N0(String str) throws SVGParseException {
+        g gVar = new g(str);
+        gVar.A();
+        float n = gVar.n();
+        gVar.z();
+        float n2 = gVar.n();
+        gVar.z();
+        float n3 = gVar.n();
+        gVar.z();
+        float n4 = gVar.n();
         if (Float.isNaN(n) || Float.isNaN(n2) || Float.isNaN(n3) || Float.isNaN(n4)) {
             throw new SVGParseException("Invalid viewBox definition - should have four numbers");
         }
         if (n3 >= 0.0f) {
             if (n4 >= 0.0f) {
-                return new SVG.C4693b(n, n2, n3, n4);
+                return new SVG.b(n, n2, n3, n4);
             }
             throw new SVGParseException("Invalid viewBox. height cannot be negative");
         }
@@ -2428,7 +2419,7 @@ public class SVGParser {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private void O(com.caverock.androidsvg.SVG.C4700e0 r5, org.xml.sax.Attributes r6) throws com.caverock.androidsvg.SVGParseException {
+    private void O(com.caverock.androidsvg.SVG.e0 r5, org.xml.sax.Attributes r6) throws com.caverock.androidsvg.SVGParseException {
         /*
             r4 = this;
             r0 = 0
@@ -2437,7 +2428,7 @@ public class SVGParser {
             if (r0 >= r1) goto L5e
             java.lang.String r1 = r6.getValue(r0)
             java.lang.String r1 = r1.trim()
-            int[] r2 = com.caverock.androidsvg.SVGParser.C4737a.b
+            int[] r2 = com.caverock.androidsvg.SVGParser.a.b
             java.lang.String r3 = r6.getLocalName(r0)
             com.caverock.androidsvg.SVGParser$SVGAttr r3 = com.caverock.androidsvg.SVGParser.SVGAttr.fromString(r3)
             int r3 = r3.ordinal()
@@ -2492,43 +2483,43 @@ public class SVGParser {
     private void O0(Attributes attributes) throws SVGParseException {
         l("<path>", new Object[0]);
         if (this.b != null) {
-            SVG.C4719o c4719o = new SVG.C4719o();
-            c4719o.a = this.a;
-            c4719o.b = this.b;
-            D(c4719o, attributes);
-            S(c4719o, attributes);
-            W(c4719o, attributes);
-            C(c4719o, attributes);
-            L(c4719o, attributes);
-            this.b.addChild(c4719o);
+            SVG.o oVar = new SVG.o();
+            oVar.a = this.a;
+            oVar.b = this.b;
+            D(oVar, attributes);
+            S(oVar, attributes);
+            W(oVar, attributes);
+            C(oVar, attributes);
+            L(oVar, attributes);
+            this.b.addChild(oVar);
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
     }
 
-    private void P(SVG.C4727t c4727t, Attributes attributes) throws SVGParseException {
+    private void P(SVG.t tVar, Attributes attributes) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             String trim = attributes.getValue(i).trim();
-            int i2 = C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
+            int i2 = a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
             if (i2 == 1) {
-                c4727t.o = o0(trim);
+                tVar.o = o0(trim);
             } else if (i2 == 2) {
-                c4727t.p = o0(trim);
+                tVar.p = o0(trim);
             } else if (i2 == 3) {
                 SVG.Length o0 = o0(trim);
-                c4727t.q = o0;
+                tVar.q = o0;
                 if (o0.isNegative()) {
                     throw new SVGParseException("Invalid <rect> element. width cannot be negative");
                 }
             } else if (i2 == 4) {
                 SVG.Length o02 = o0(trim);
-                c4727t.r = o02;
+                tVar.r = o02;
                 if (o02.isNegative()) {
                     throw new SVGParseException("Invalid <rect> element. height cannot be negative");
                 }
             } else if (i2 == 10) {
                 SVG.Length o03 = o0(trim);
-                c4727t.s = o03;
+                tVar.s = o03;
                 if (o03.isNegative()) {
                     throw new SVGParseException("Invalid <rect> element. rx cannot be negative");
                 }
@@ -2536,7 +2527,7 @@ public class SVGParser {
                 continue;
             } else {
                 SVG.Length o04 = o0(trim);
-                c4727t.t = o04;
+                tVar.t = o04;
                 if (o04.isNegative()) {
                     throw new SVGParseException("Invalid <rect> element. ry cannot be negative");
                 }
@@ -2547,43 +2538,43 @@ public class SVGParser {
     private void P0(Attributes attributes) throws SVGParseException {
         l("<pattern>", new Object[0]);
         if (this.b != null) {
-            SVG.C4723q c4723q = new SVG.C4723q();
-            c4723q.a = this.a;
-            c4723q.b = this.b;
-            D(c4723q, attributes);
-            S(c4723q, attributes);
-            C(c4723q, attributes);
-            Y(c4723q, attributes);
-            M(c4723q, attributes);
-            this.b.addChild(c4723q);
-            this.b = c4723q;
+            SVG.q qVar = new SVG.q();
+            qVar.a = this.a;
+            qVar.b = this.b;
+            D(qVar, attributes);
+            S(qVar, attributes);
+            C(qVar, attributes);
+            Y(qVar, attributes);
+            M(qVar, attributes);
+            this.b.addChild(qVar);
+            this.b = qVar;
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
     }
 
-    private void Q(SVG.C4730w c4730w, Attributes attributes) throws SVGParseException {
+    private void Q(SVG.w wVar, Attributes attributes) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             String trim = attributes.getValue(i).trim();
-            int i2 = C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
+            int i2 = a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
             if (i2 == 1) {
-                c4730w.p = o0(trim);
+                wVar.p = o0(trim);
             } else if (i2 == 2) {
-                c4730w.q = o0(trim);
+                wVar.q = o0(trim);
             } else if (i2 == 3) {
                 SVG.Length o0 = o0(trim);
-                c4730w.r = o0;
+                wVar.r = o0;
                 if (o0.isNegative()) {
                     throw new SVGParseException("Invalid <svg> element. width cannot be negative");
                 }
             } else if (i2 == 4) {
                 SVG.Length o02 = o0(trim);
-                c4730w.s = o02;
+                wVar.s = o02;
                 if (o02.isNegative()) {
                     throw new SVGParseException("Invalid <svg> element. height cannot be negative");
                 }
             } else if (i2 == 5) {
-                c4730w.t = trim;
+                wVar.t = trim;
             }
         }
     }
@@ -2591,25 +2582,25 @@ public class SVGParser {
     private void Q0(Attributes attributes) throws SVGParseException {
         l("<polygon>", new Object[0]);
         if (this.b != null) {
-            SVG.C4725r c4726s = new SVG.C4726s();
-            c4726s.a = this.a;
-            c4726s.b = this.b;
-            D(c4726s, attributes);
-            S(c4726s, attributes);
-            W(c4726s, attributes);
-            C(c4726s, attributes);
-            N(c4726s, attributes, "polygon");
-            this.b.addChild(c4726s);
+            SVG.r sVar = new SVG.s();
+            sVar.a = this.a;
+            sVar.b = this.b;
+            D(sVar, attributes);
+            S(sVar, attributes);
+            W(sVar, attributes);
+            C(sVar, attributes);
+            N(sVar, attributes, "polygon");
+            this.b.addChild(sVar);
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
     }
 
-    private void R(SVG.C4729v c4729v, Attributes attributes) throws SVGParseException {
+    private void R(SVG.v vVar, Attributes attributes) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             String trim = attributes.getValue(i).trim();
-            if (C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()] == 37) {
-                c4729v.h = n0(trim);
+            if (a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()] == 37) {
+                vVar.h = n0(trim);
             }
         }
     }
@@ -2617,34 +2608,34 @@ public class SVGParser {
     private void R0(Attributes attributes) throws SVGParseException {
         l("<polyline>", new Object[0]);
         if (this.b != null) {
-            SVG.C4725r c4725r = new SVG.C4725r();
-            c4725r.a = this.a;
-            c4725r.b = this.b;
-            D(c4725r, attributes);
-            S(c4725r, attributes);
-            W(c4725r, attributes);
-            C(c4725r, attributes);
-            N(c4725r, attributes, "polyline");
-            this.b.addChild(c4725r);
+            SVG.r rVar = new SVG.r();
+            rVar.a = this.a;
+            rVar.b = this.b;
+            D(rVar, attributes);
+            S(rVar, attributes);
+            W(rVar, attributes);
+            C(rVar, attributes);
+            N(rVar, attributes, "polyline");
+            this.b.addChild(rVar);
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
     }
 
-    private void S(SVG.AbstractC4692a0 abstractC4692a0, Attributes attributes) throws SVGParseException {
+    private void S(SVG.a0 a0Var, Attributes attributes) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             String trim = attributes.getValue(i).trim();
             if (trim.length() != 0) {
-                int i2 = C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
+                int i2 = a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
                 if (i2 == 45) {
-                    E0(abstractC4692a0, trim);
+                    E0(a0Var, trim);
                 } else if (i2 != 46) {
-                    if (abstractC4692a0.e == null) {
-                        abstractC4692a0.e = new SVG.Style();
+                    if (a0Var.e == null) {
+                        a0Var.e = new SVG.Style();
                     }
-                    S0(abstractC4692a0.e, attributes.getLocalName(i), attributes.getValue(i).trim());
+                    S0(a0Var.e, attributes.getLocalName(i), attributes.getValue(i).trim());
                 } else {
-                    abstractC4692a0.g = CSSParser.f(trim);
+                    a0Var.g = CSSParser.f(trim);
                 }
             }
         }
@@ -2656,7 +2647,7 @@ public class SVGParser {
             return;
         }
         try {
-            switch (C4737a.b[SVGAttr.fromString(str).ordinal()]) {
+            switch (a.b[SVGAttr.fromString(str).ordinal()]) {
                 case 47:
                     SVG.SvgPaint t0 = t0(str2);
                     style.fill = t0;
@@ -2858,8 +2849,8 @@ public class SVGParser {
                     } else {
                         try {
                             style.stopColor = b0(str2);
-                        } catch (SVGParseException e) {
-                            Log.w("SVGParser", e.getMessage());
+                        } catch (SVGParseException e2) {
+                            Log.w("SVGParser", e2.getMessage());
                             return;
                         }
                     }
@@ -2870,7 +2861,7 @@ public class SVGParser {
                     style.specifiedFlags |= 134217728;
                     return;
                 case 77:
-                    SVG.C4695c a0 = a0(str2);
+                    SVG.c a0 = a0(str2);
                     style.clip = a0;
                     if (a0 != null) {
                         style.specifiedFlags |= 1048576;
@@ -2895,8 +2886,8 @@ public class SVGParser {
                     } else {
                         try {
                             style.solidColor = b0(str2);
-                        } catch (SVGParseException e2) {
-                            Log.w("SVGParser", e2.getMessage());
+                        } catch (SVGParseException e3) {
+                            Log.w("SVGParser", e3.getMessage());
                             return;
                         }
                     }
@@ -2912,8 +2903,8 @@ public class SVGParser {
                     } else {
                         try {
                             style.viewportFill = b0(str2);
-                        } catch (SVGParseException e3) {
-                            Log.w("SVGParser", e3.getMessage());
+                        } catch (SVGParseException e4) {
+                            Log.w("SVGParser", e4.getMessage());
                             return;
                         }
                     }
@@ -2945,11 +2936,11 @@ public class SVGParser {
         }
     }
 
-    private void T(SVG.C4708i0 c4708i0, Attributes attributes) {
+    private void T(SVG.i0 i0Var, Attributes attributes) {
         for (int i = 0; i < attributes.getLength(); i++) {
             String trim = attributes.getValue(i).trim();
-            if (C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()] == 6 && ("".equals(attributes.getURI(i)) || "http://www.w3.org/1999/xlink".equals(attributes.getURI(i)))) {
-                c4708i0.n = trim;
+            if (a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()] == 6 && ("".equals(attributes.getURI(i)) || "http://www.w3.org/1999/xlink".equals(attributes.getURI(i)))) {
+                i0Var.n = trim;
             }
         }
     }
@@ -2957,30 +2948,30 @@ public class SVGParser {
     private void T0(Attributes attributes) throws SVGParseException {
         l("<radialGradient>", new Object[0]);
         if (this.b != null) {
-            SVG.C4700e0 c4700e0 = new SVG.C4700e0();
-            c4700e0.a = this.a;
-            c4700e0.b = this.b;
-            D(c4700e0, attributes);
-            S(c4700e0, attributes);
-            F(c4700e0, attributes);
-            O(c4700e0, attributes);
-            this.b.addChild(c4700e0);
-            this.b = c4700e0;
+            SVG.e0 e0Var = new SVG.e0();
+            e0Var.a = this.a;
+            e0Var.b = this.b;
+            D(e0Var, attributes);
+            S(e0Var, attributes);
+            F(e0Var, attributes);
+            O(e0Var, attributes);
+            this.b.addChild(e0Var);
+            this.b = e0Var;
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
     }
 
-    private void U(SVG.C4716m0 c4716m0, Attributes attributes) throws SVGParseException {
+    private void U(SVG.m0 m0Var, Attributes attributes) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             String trim = attributes.getValue(i).trim();
-            int i2 = C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
+            int i2 = a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
             if (i2 != 6) {
                 if (i2 == 39) {
-                    c4716m0.o = o0(trim);
+                    m0Var.o = o0(trim);
                 }
             } else if ("".equals(attributes.getURI(i)) || "http://www.w3.org/1999/xlink".equals(attributes.getURI(i))) {
-                c4716m0.n = trim;
+                m0Var.n = trim;
             }
         }
     }
@@ -2988,32 +2979,32 @@ public class SVGParser {
     private void U0(Attributes attributes) throws SVGParseException {
         l("<rect>", new Object[0]);
         if (this.b != null) {
-            SVG.C4727t c4727t = new SVG.C4727t();
-            c4727t.a = this.a;
-            c4727t.b = this.b;
-            D(c4727t, attributes);
-            S(c4727t, attributes);
-            W(c4727t, attributes);
-            C(c4727t, attributes);
-            P(c4727t, attributes);
-            this.b.addChild(c4727t);
+            SVG.t tVar = new SVG.t();
+            tVar.a = this.a;
+            tVar.b = this.b;
+            D(tVar, attributes);
+            S(tVar, attributes);
+            W(tVar, attributes);
+            C(tVar, attributes);
+            P(tVar, attributes);
+            this.b.addChild(tVar);
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
     }
 
-    private void V(SVG.AbstractC4718n0 abstractC4718n0, Attributes attributes) throws SVGParseException {
+    private void V(SVG.n0 n0Var, Attributes attributes) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             String trim = attributes.getValue(i).trim();
-            int i2 = C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
+            int i2 = a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
             if (i2 == 1) {
-                abstractC4718n0.n = p0(trim);
+                n0Var.n = p0(trim);
             } else if (i2 == 2) {
-                abstractC4718n0.o = p0(trim);
+                n0Var.o = p0(trim);
             } else if (i2 == 19) {
-                abstractC4718n0.p = p0(trim);
+                n0Var.p = p0(trim);
             } else if (i2 == 20) {
-                abstractC4718n0.q = p0(trim);
+                n0Var.q = p0(trim);
             }
         }
     }
@@ -3021,13 +3012,13 @@ public class SVGParser {
     private void V0(Attributes attributes) throws SVGParseException {
         l("<solidColor>", new Object[0]);
         if (this.b != null) {
-            SVG.C4728u c4728u = new SVG.C4728u();
-            c4728u.a = this.a;
-            c4728u.b = this.b;
-            D(c4728u, attributes);
-            S(c4728u, attributes);
-            this.b.addChild(c4728u);
-            this.b = c4728u;
+            SVG.u uVar = new SVG.u();
+            uVar.a = this.a;
+            uVar.b = this.b;
+            D(uVar, attributes);
+            S(uVar, attributes);
+            this.b.addChild(uVar);
+            this.b = uVar;
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
@@ -3046,27 +3037,27 @@ public class SVGParser {
         this.a = new SVG();
     }
 
-    private void X(SVG.C4722p0 c4722p0, Attributes attributes) throws SVGParseException {
+    private void X(SVG.p0 p0Var, Attributes attributes) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             String trim = attributes.getValue(i).trim();
-            int i2 = C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
+            int i2 = a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
             if (i2 == 1) {
-                c4722p0.p = o0(trim);
+                p0Var.p = o0(trim);
             } else if (i2 == 2) {
-                c4722p0.q = o0(trim);
+                p0Var.q = o0(trim);
             } else if (i2 == 3) {
                 SVG.Length o0 = o0(trim);
-                c4722p0.r = o0;
+                p0Var.r = o0;
                 if (o0.isNegative()) {
                     throw new SVGParseException("Invalid <use> element. width cannot be negative");
                 }
             } else if (i2 != 4) {
                 if (i2 == 6 && ("".equals(attributes.getURI(i)) || "http://www.w3.org/1999/xlink".equals(attributes.getURI(i)))) {
-                    c4722p0.o = trim;
+                    p0Var.o = trim;
                 }
             } else {
                 SVG.Length o02 = o0(trim);
-                c4722p0.s = o02;
+                p0Var.s = o02;
                 if (o02.isNegative()) {
                     throw new SVGParseException("Invalid <use> element. height cannot be negative");
                 }
@@ -3083,7 +3074,7 @@ public class SVGParser {
                 str2 = str3;
             }
             SVGElem fromString = SVGElem.fromString(str2);
-            switch (C4737a.a[fromString.ordinal()]) {
+            switch (a.a[fromString.ordinal()]) {
                 case 1:
                     a1(attributes);
                     return;
@@ -3182,14 +3173,14 @@ public class SVGParser {
         }
     }
 
-    private void Y(SVG.AbstractC4702f0 abstractC4702f0, Attributes attributes) throws SVGParseException {
+    private void Y(SVG.f0 f0Var, Attributes attributes) throws SVGParseException {
         for (int i = 0; i < attributes.getLength(); i++) {
             String trim = attributes.getValue(i).trim();
-            int i2 = C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
+            int i2 = a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
             if (i2 == 7) {
-                w0(abstractC4702f0, trim);
+                w0(f0Var, trim);
             } else if (i2 == 87) {
-                abstractC4702f0.o = N0(trim);
+                f0Var.o = N0(trim);
             }
         }
     }
@@ -3198,15 +3189,15 @@ public class SVGParser {
         l("<stop>", new Object[0]);
         SVG.SvgContainer svgContainer = this.b;
         if (svgContainer != null) {
-            if (svgContainer instanceof SVG.AbstractC4705h) {
-                SVG.C4729v c4729v = new SVG.C4729v();
-                c4729v.a = this.a;
-                c4729v.b = this.b;
-                D(c4729v, attributes);
-                S(c4729v, attributes);
-                R(c4729v, attributes);
-                this.b.addChild(c4729v);
-                this.b = c4729v;
+            if (svgContainer instanceof SVG.h) {
+                SVG.v vVar = new SVG.v();
+                vVar.a = this.a;
+                vVar.b = this.b;
+                D(vVar, attributes);
+                S(vVar, attributes);
+                R(vVar, attributes);
+                this.b.addChild(vVar);
+                this.b = vVar;
                 return;
             }
             throw new SVGParseException("Invalid document. <stop> elements are only valid inside <linearGradient> or <radialGradient> elements.");
@@ -3225,7 +3216,7 @@ public class SVGParser {
             boolean z = true;
             for (int i = 0; i < attributes.getLength(); i++) {
                 String trim = attributes.getValue(i).trim();
-                int i2 = C4737a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
+                int i2 = a.b[SVGAttr.fromString(attributes.getLocalName(i)).ordinal()];
                 if (i2 == 88) {
                     z = trim.equals("text/css");
                 } else if (i2 == 89) {
@@ -3243,20 +3234,20 @@ public class SVGParser {
         throw new SVGParseException("Invalid document. Root element must be <svg>");
     }
 
-    private static SVG.C4695c a0(String str) {
+    private static SVG.c a0(String str) {
         if (!"auto".equals(str) && str.startsWith("rect(")) {
-            C4743g c4743g = new C4743g(str.substring(5));
-            c4743g.A();
-            SVG.Length q0 = q0(c4743g);
-            c4743g.z();
-            SVG.Length q02 = q0(c4743g);
-            c4743g.z();
-            SVG.Length q03 = q0(c4743g);
-            c4743g.z();
-            SVG.Length q04 = q0(c4743g);
-            c4743g.A();
-            if (c4743g.f(')') || c4743g.h()) {
-                return new SVG.C4695c(q0, q02, q03, q04);
+            g gVar = new g(str.substring(5));
+            gVar.A();
+            SVG.Length q0 = q0(gVar);
+            gVar.z();
+            SVG.Length q02 = q0(gVar);
+            gVar.z();
+            SVG.Length q03 = q0(gVar);
+            gVar.z();
+            SVG.Length q04 = q0(gVar);
+            gVar.A();
+            if (gVar.f(')') || gVar.h()) {
+                return new SVG.c(q0, q02, q03, q04);
             }
             return null;
         }
@@ -3265,48 +3256,48 @@ public class SVGParser {
 
     private void a1(Attributes attributes) throws SVGParseException {
         l("<svg>", new Object[0]);
-        SVG.C4730w c4730w = new SVG.C4730w();
-        c4730w.a = this.a;
-        c4730w.b = this.b;
-        D(c4730w, attributes);
-        S(c4730w, attributes);
-        C(c4730w, attributes);
-        Y(c4730w, attributes);
-        Q(c4730w, attributes);
+        SVG.w wVar = new SVG.w();
+        wVar.a = this.a;
+        wVar.b = this.b;
+        D(wVar, attributes);
+        S(wVar, attributes);
+        C(wVar, attributes);
+        Y(wVar, attributes);
+        Q(wVar, attributes);
         SVG.SvgContainer svgContainer = this.b;
         if (svgContainer == null) {
-            this.a.r(c4730w);
+            this.a.r(wVar);
         } else {
-            svgContainer.addChild(c4730w);
+            svgContainer.addChild(wVar);
         }
-        this.b = c4730w;
+        this.b = wVar;
     }
 
     private static SVG.Colour b0(String str) throws SVGParseException {
         if (str.charAt(0) == '#') {
-            C4746b b = C4746b.b(str, 1, str.length());
-            if (b != null) {
-                int a = b.a();
-                if (a == 4) {
-                    int d = b.d();
-                    int i = d & 3840;
-                    int i2 = d & GlMapUtil.DEVICE_DISPLAY_DPI_MEDIAN;
-                    int i3 = d & 15;
+            com.caverock.androidsvg.b b2 = com.caverock.androidsvg.b.b(str, 1, str.length());
+            if (b2 != null) {
+                int a2 = b2.a();
+                if (a2 == 4) {
+                    int d2 = b2.d();
+                    int i = d2 & 3840;
+                    int i2 = d2 & GlMapUtil.DEVICE_DISPLAY_DPI_MEDIAN;
+                    int i3 = d2 & 15;
                     return new SVG.Colour(i3 | (i << 8) | (-16777216) | (i << 12) | (i2 << 8) | (i2 << 4) | (i3 << 4));
-                } else if (a == 5) {
-                    int d2 = b.d();
-                    int i4 = 61440 & d2;
-                    int i5 = d2 & 3840;
-                    int i6 = d2 & GlMapUtil.DEVICE_DISPLAY_DPI_MEDIAN;
-                    int i7 = d2 & 15;
+                } else if (a2 == 5) {
+                    int d3 = b2.d();
+                    int i4 = 61440 & d3;
+                    int i5 = d3 & 3840;
+                    int i6 = d3 & GlMapUtil.DEVICE_DISPLAY_DPI_MEDIAN;
+                    int i7 = d3 & 15;
                     return new SVG.Colour((i7 << 24) | (i7 << 28) | (i4 << 8) | (i4 << 4) | (i5 << 4) | i5 | i6 | (i6 >> 4));
-                } else if (a != 7) {
-                    if (a == 9) {
-                        return new SVG.Colour((b.d() >>> 8) | (b.d() << 24));
+                } else if (a2 != 7) {
+                    if (a2 == 9) {
+                        return new SVG.Colour((b2.d() >>> 8) | (b2.d() << 24));
                     }
                     throw new SVGParseException("Bad hex colour value: " + str);
                 } else {
-                    return new SVG.Colour(b.d() | (-16777216));
+                    return new SVG.Colour(b2.d() | (-16777216));
                 }
             }
             throw new SVGParseException("Bad hex colour value: " + str);
@@ -3318,56 +3309,56 @@ public class SVGParser {
             if (!startsWith2 && !lowerCase.startsWith("hsl(")) {
                 return c0(lowerCase);
             }
-            C4743g c4743g = new C4743g(str.substring(startsWith2 ? 5 : 4));
-            c4743g.A();
-            float n = c4743g.n();
-            float d3 = c4743g.d(n);
-            if (!Float.isNaN(d3)) {
-                c4743g.f(WXUtils.PERCENT);
-            }
-            float d4 = c4743g.d(d3);
+            g gVar = new g(str.substring(startsWith2 ? 5 : 4));
+            gVar.A();
+            float n = gVar.n();
+            float d4 = gVar.d(n);
             if (!Float.isNaN(d4)) {
-                c4743g.f(WXUtils.PERCENT);
+                gVar.f(WXUtils.PERCENT);
+            }
+            float d5 = gVar.d(d4);
+            if (!Float.isNaN(d5)) {
+                gVar.f(WXUtils.PERCENT);
             }
             if (startsWith2) {
-                float d5 = c4743g.d(d4);
-                c4743g.A();
-                if (!Float.isNaN(d5) && c4743g.f(')')) {
-                    return new SVG.Colour((j(d5 * 256.0f) << 24) | s(n, d3, d4));
+                float d6 = gVar.d(d5);
+                gVar.A();
+                if (!Float.isNaN(d6) && gVar.f(')')) {
+                    return new SVG.Colour((j(d6 * 256.0f) << 24) | s(n, d4, d5));
                 }
                 throw new SVGParseException("Bad hsla() colour value: " + str);
             }
-            c4743g.A();
-            if (!Float.isNaN(d4) && c4743g.f(')')) {
-                return new SVG.Colour(s(n, d3, d4) | (-16777216));
+            gVar.A();
+            if (!Float.isNaN(d5) && gVar.f(')')) {
+                return new SVG.Colour(s(n, d4, d5) | (-16777216));
             }
             throw new SVGParseException("Bad hsl() colour value: " + str);
         }
-        C4743g c4743g2 = new C4743g(str.substring(startsWith ? 5 : 4));
-        c4743g2.A();
-        float n2 = c4743g2.n();
-        if (!Float.isNaN(n2) && c4743g2.f(WXUtils.PERCENT)) {
+        g gVar2 = new g(str.substring(startsWith ? 5 : 4));
+        gVar2.A();
+        float n2 = gVar2.n();
+        if (!Float.isNaN(n2) && gVar2.f(WXUtils.PERCENT)) {
             n2 = (n2 * 256.0f) / 100.0f;
         }
-        float d6 = c4743g2.d(n2);
-        if (!Float.isNaN(d6) && c4743g2.f(WXUtils.PERCENT)) {
-            d6 = (d6 * 256.0f) / 100.0f;
-        }
-        float d7 = c4743g2.d(d6);
-        if (!Float.isNaN(d7) && c4743g2.f(WXUtils.PERCENT)) {
+        float d7 = gVar2.d(n2);
+        if (!Float.isNaN(d7) && gVar2.f(WXUtils.PERCENT)) {
             d7 = (d7 * 256.0f) / 100.0f;
         }
+        float d8 = gVar2.d(d7);
+        if (!Float.isNaN(d8) && gVar2.f(WXUtils.PERCENT)) {
+            d8 = (d8 * 256.0f) / 100.0f;
+        }
         if (startsWith) {
-            float d8 = c4743g2.d(d7);
-            c4743g2.A();
-            if (!Float.isNaN(d8) && c4743g2.f(')')) {
-                return new SVG.Colour((j(d8 * 256.0f) << 24) | (j(n2) << 16) | (j(d6) << 8) | j(d7));
+            float d9 = gVar2.d(d8);
+            gVar2.A();
+            if (!Float.isNaN(d9) && gVar2.f(')')) {
+                return new SVG.Colour((j(d9 * 256.0f) << 24) | (j(n2) << 16) | (j(d7) << 8) | j(d8));
             }
             throw new SVGParseException("Bad rgba() colour value: " + str);
         }
-        c4743g2.A();
-        if (!Float.isNaN(d7) && c4743g2.f(')')) {
-            return new SVG.Colour((j(n2) << 16) | (-16777216) | (j(d6) << 8) | j(d7));
+        gVar2.A();
+        if (!Float.isNaN(d8) && gVar2.f(')')) {
+            return new SVG.Colour((j(n2) << 16) | (-16777216) | (j(d7) << 8) | j(d8));
         }
         throw new SVGParseException("Bad rgb() colour value: " + str);
     }
@@ -3375,24 +3366,24 @@ public class SVGParser {
     private void b1(Attributes attributes) throws SVGParseException {
         l("<symbol>", new Object[0]);
         if (this.b != null) {
-            SVG.AbstractC4702f0 c4706h0 = new SVG.C4706h0();
-            c4706h0.a = this.a;
-            c4706h0.b = this.b;
-            D(c4706h0, attributes);
-            S(c4706h0, attributes);
-            C(c4706h0, attributes);
-            Y(c4706h0, attributes);
-            this.b.addChild(c4706h0);
-            this.b = c4706h0;
+            SVG.f0 h0Var = new SVG.h0();
+            h0Var.a = this.a;
+            h0Var.b = this.b;
+            D(h0Var, attributes);
+            S(h0Var, attributes);
+            C(h0Var, attributes);
+            Y(h0Var, attributes);
+            this.b.addChild(h0Var);
+            this.b = h0Var;
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
     }
 
     private static SVG.Colour c0(String str) throws SVGParseException {
-        Integer a = C4739c.a(str);
-        if (a != null) {
-            return new SVG.Colour(a.intValue());
+        Integer a2 = c.a(str);
+        if (a2 != null) {
+            return new SVG.Colour(a2.intValue());
         }
         throw new SVGParseException("Invalid colour keyword: " + str);
     }
@@ -3412,7 +3403,7 @@ public class SVGParser {
                 this.i = new StringBuilder(str.length());
             }
             this.i.append(str);
-        } else if (this.b instanceof SVG.AbstractC4714l0) {
+        } else if (this.b instanceof SVG.l0) {
             h(str);
         }
     }
@@ -3435,16 +3426,16 @@ public class SVGParser {
     private void d1(Attributes attributes) throws SVGParseException {
         l("<text>", new Object[0]);
         if (this.b != null) {
-            SVG.C4712k0 c4712k0 = new SVG.C4712k0();
-            c4712k0.a = this.a;
-            c4712k0.b = this.b;
-            D(c4712k0, attributes);
-            S(c4712k0, attributes);
-            W(c4712k0, attributes);
-            C(c4712k0, attributes);
-            V(c4712k0, attributes);
-            this.b.addChild(c4712k0);
-            this.b = c4712k0;
+            SVG.k0 k0Var = new SVG.k0();
+            k0Var.a = this.a;
+            k0Var.b = this.b;
+            D(k0Var, attributes);
+            S(k0Var, attributes);
+            W(k0Var, attributes);
+            C(k0Var, attributes);
+            V(k0Var, attributes);
+            this.b.addChild(k0Var);
+            this.b = k0Var;
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
@@ -3474,7 +3465,7 @@ public class SVGParser {
                 this.i = new StringBuilder(i2);
             }
             this.i.append(cArr, i, i2);
-        } else if (this.b instanceof SVG.AbstractC4714l0) {
+        } else if (this.b instanceof SVG.l0) {
             h(new String(cArr, i, i2));
         }
     }
@@ -3490,21 +3481,21 @@ public class SVGParser {
     private void f1(Attributes attributes) throws SVGParseException {
         l("<textPath>", new Object[0]);
         if (this.b != null) {
-            SVG.C4716m0 c4716m0 = new SVG.C4716m0();
-            c4716m0.a = this.a;
-            c4716m0.b = this.b;
-            D(c4716m0, attributes);
-            S(c4716m0, attributes);
-            C(c4716m0, attributes);
-            U(c4716m0, attributes);
-            this.b.addChild(c4716m0);
-            this.b = c4716m0;
-            SVG.SvgContainer svgContainer = c4716m0.b;
+            SVG.m0 m0Var = new SVG.m0();
+            m0Var.a = this.a;
+            m0Var.b = this.b;
+            D(m0Var, attributes);
+            S(m0Var, attributes);
+            C(m0Var, attributes);
+            U(m0Var, attributes);
+            this.b.addChild(m0Var);
+            this.b = m0Var;
+            SVG.SvgContainer svgContainer = m0Var.b;
             if (svgContainer instanceof SVG.TextRoot) {
-                c4716m0.setTextRoot((SVG.TextRoot) svgContainer);
+                m0Var.setTextRoot((SVG.TextRoot) svgContainer);
                 return;
             } else {
-                c4716m0.setTextRoot(((SVG.TextChild) svgContainer).getTextRoot());
+                m0Var.setTextRoot(((SVG.TextChild) svgContainer).getTextRoot());
                 return;
             }
         }
@@ -3512,32 +3503,32 @@ public class SVGParser {
     }
 
     private static float g0(String str, int i, int i2) throws SVGParseException {
-        float b = new C4747c().b(str, i, i2);
-        if (Float.isNaN(b)) {
+        float b2 = new com.caverock.androidsvg.c().b(str, i, i2);
+        if (Float.isNaN(b2)) {
             throw new SVGParseException("Invalid float value: " + str);
         }
-        return b;
+        return b2;
     }
 
     private void g1(Attributes attributes) throws SVGParseException {
         l("<tref>", new Object[0]);
         SVG.SvgContainer svgContainer = this.b;
         if (svgContainer != null) {
-            if (svgContainer instanceof SVG.AbstractC4714l0) {
-                SVG.C4708i0 c4708i0 = new SVG.C4708i0();
-                c4708i0.a = this.a;
-                c4708i0.b = this.b;
-                D(c4708i0, attributes);
-                S(c4708i0, attributes);
-                C(c4708i0, attributes);
-                T(c4708i0, attributes);
-                this.b.addChild(c4708i0);
-                SVG.SvgContainer svgContainer2 = c4708i0.b;
+            if (svgContainer instanceof SVG.l0) {
+                SVG.i0 i0Var = new SVG.i0();
+                i0Var.a = this.a;
+                i0Var.b = this.b;
+                D(i0Var, attributes);
+                S(i0Var, attributes);
+                C(i0Var, attributes);
+                T(i0Var, attributes);
+                this.b.addChild(i0Var);
+                SVG.SvgContainer svgContainer2 = i0Var.b;
                 if (svgContainer2 instanceof SVG.TextRoot) {
-                    c4708i0.setTextRoot((SVG.TextRoot) svgContainer2);
+                    i0Var.setTextRoot((SVG.TextRoot) svgContainer2);
                     return;
                 } else {
-                    c4708i0.setTextRoot(((SVG.TextChild) svgContainer2).getTextRoot());
+                    i0Var.setTextRoot(((SVG.TextChild) svgContainer2).getTextRoot());
                     return;
                 }
             }
@@ -3547,34 +3538,34 @@ public class SVGParser {
     }
 
     private void h(String str) throws SVGParseException {
-        SVG.AbstractC4731x abstractC4731x = (SVG.AbstractC4731x) this.b;
-        int size = abstractC4731x.i.size();
-        SVG.C4696c0 c4696c0 = size == 0 ? null : abstractC4731x.i.get(size - 1);
-        if (c4696c0 instanceof SVG.C4720o0) {
+        SVG.x xVar = (SVG.x) this.b;
+        int size = xVar.i.size();
+        SVG.c0 c0Var = size == 0 ? null : xVar.i.get(size - 1);
+        if (c0Var instanceof SVG.o0) {
             StringBuilder sb = new StringBuilder();
-            SVG.C4720o0 c4720o0 = (SVG.C4720o0) c4696c0;
-            sb.append(c4720o0.c);
+            SVG.o0 o0Var = (SVG.o0) c0Var;
+            sb.append(o0Var.c);
             sb.append(str);
-            c4720o0.c = sb.toString();
+            o0Var.c = sb.toString();
             return;
         }
-        this.b.addChild(new SVG.C4720o0(str));
+        this.b.addChild(new SVG.o0(str));
     }
 
     private static void h0(SVG.Style style, String str) {
         String s;
         if ("|caption|icon|menu|message-box|small-caption|status-bar|".contains('|' + str + '|')) {
-            C4743g c4743g = new C4743g(str);
+            g gVar = new g(str);
             Integer num = null;
             SVG.Style.FontStyle fontStyle = null;
             String str2 = null;
             while (true) {
-                s = c4743g.s(r10.DIR);
-                c4743g.A();
+                s = gVar.s(r10.DIR);
+                gVar.A();
                 if (s != null) {
                     if (num != null && fontStyle != null) {
                         break;
-                    } else if (!s.equals("normal") && (num != null || (num = C4741e.a(s)) == null)) {
+                    } else if (!s.equals("normal") && (num != null || (num = e.a(s)) == null)) {
                         if (fontStyle != null || (fontStyle = k0(s)) == null) {
                             if (str2 != null || !s.equals("small-caps")) {
                                 break;
@@ -3587,9 +3578,9 @@ public class SVGParser {
                 }
             }
             SVG.Length j0 = j0(s);
-            if (c4743g.f(r10.DIR)) {
-                c4743g.A();
-                String r = c4743g.r();
+            if (gVar.f(r10.DIR)) {
+                gVar.A();
+                String r = gVar.r();
                 if (r != null) {
                     try {
                         o0(r);
@@ -3597,9 +3588,9 @@ public class SVGParser {
                         return;
                     }
                 }
-                c4743g.A();
+                gVar.A();
             }
-            style.fontFamily = i0(c4743g.y());
+            style.fontFamily = i0(gVar.y());
             style.fontSize = j0;
             style.fontWeight = Integer.valueOf(num == null ? 400 : num.intValue());
             if (fontStyle == null) {
@@ -3614,22 +3605,22 @@ public class SVGParser {
         l("<tspan>", new Object[0]);
         SVG.SvgContainer svgContainer = this.b;
         if (svgContainer != null) {
-            if (svgContainer instanceof SVG.AbstractC4714l0) {
-                SVG.C4710j0 c4710j0 = new SVG.C4710j0();
-                c4710j0.a = this.a;
-                c4710j0.b = this.b;
-                D(c4710j0, attributes);
-                S(c4710j0, attributes);
-                C(c4710j0, attributes);
-                V(c4710j0, attributes);
-                this.b.addChild(c4710j0);
-                this.b = c4710j0;
-                SVG.SvgContainer svgContainer2 = c4710j0.b;
+            if (svgContainer instanceof SVG.l0) {
+                SVG.j0 j0Var = new SVG.j0();
+                j0Var.a = this.a;
+                j0Var.b = this.b;
+                D(j0Var, attributes);
+                S(j0Var, attributes);
+                C(j0Var, attributes);
+                V(j0Var, attributes);
+                this.b.addChild(j0Var);
+                this.b = j0Var;
+                SVG.SvgContainer svgContainer2 = j0Var.b;
                 if (svgContainer2 instanceof SVG.TextRoot) {
-                    c4710j0.setTextRoot((SVG.TextRoot) svgContainer2);
+                    j0Var.setTextRoot((SVG.TextRoot) svgContainer2);
                     return;
                 } else {
-                    c4710j0.setTextRoot(((SVG.TextChild) svgContainer2).getTextRoot());
+                    j0Var.setTextRoot(((SVG.TextChild) svgContainer2).getTextRoot());
                     return;
                 }
             }
@@ -3641,27 +3632,27 @@ public class SVGParser {
     private void i(Attributes attributes) throws SVGParseException {
         l("<circle>", new Object[0]);
         if (this.b != null) {
-            SVG.C4697d c4697d = new SVG.C4697d();
-            c4697d.a = this.a;
-            c4697d.b = this.b;
-            D(c4697d, attributes);
-            S(c4697d, attributes);
-            W(c4697d, attributes);
-            C(c4697d, attributes);
-            A(c4697d, attributes);
-            this.b.addChild(c4697d);
+            SVG.d dVar = new SVG.d();
+            dVar.a = this.a;
+            dVar.b = this.b;
+            D(dVar, attributes);
+            S(dVar, attributes);
+            W(dVar, attributes);
+            C(dVar, attributes);
+            A(dVar, attributes);
+            this.b.addChild(dVar);
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
     }
 
     private static List<String> i0(String str) {
-        C4743g c4743g = new C4743g(str);
+        g gVar = new g(str);
         ArrayList arrayList = null;
         do {
-            String q = c4743g.q();
+            String q = gVar.q();
             if (q == null) {
-                q = c4743g.u(',');
+                q = gVar.u(',');
             }
             if (q == null) {
                 break;
@@ -3670,43 +3661,43 @@ public class SVGParser {
                 arrayList = new ArrayList();
             }
             arrayList.add(q);
-            c4743g.z();
-        } while (!c4743g.h());
+            gVar.z();
+        } while (!gVar.h());
         return arrayList;
     }
 
     private void i1(Attributes attributes) throws SVGParseException {
         l("<use>", new Object[0]);
         if (this.b != null) {
-            SVG.C4722p0 c4722p0 = new SVG.C4722p0();
-            c4722p0.a = this.a;
-            c4722p0.b = this.b;
-            D(c4722p0, attributes);
-            S(c4722p0, attributes);
-            W(c4722p0, attributes);
-            C(c4722p0, attributes);
-            X(c4722p0, attributes);
-            this.b.addChild(c4722p0);
-            this.b = c4722p0;
+            SVG.p0 p0Var = new SVG.p0();
+            p0Var.a = this.a;
+            p0Var.b = this.b;
+            D(p0Var, attributes);
+            S(p0Var, attributes);
+            W(p0Var, attributes);
+            C(p0Var, attributes);
+            X(p0Var, attributes);
+            this.b.addChild(p0Var);
+            this.b = p0Var;
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
     }
 
-    private static int j(float f) {
-        if (f < 0.0f) {
+    private static int j(float f2) {
+        if (f2 < 0.0f) {
             return 0;
         }
-        if (f > 255.0f) {
+        if (f2 > 255.0f) {
             return 255;
         }
-        return Math.round(f);
+        return Math.round(f2);
     }
 
     private static SVG.Length j0(String str) {
         try {
-            SVG.Length a = C4740d.a(str);
-            return a == null ? o0(str) : a;
+            SVG.Length a2 = d.a(str);
+            return a2 == null ? o0(str) : a2;
         } catch (SVGParseException unused) {
             return null;
         }
@@ -3715,14 +3706,14 @@ public class SVGParser {
     private void j1(Attributes attributes) throws SVGParseException {
         l("<view>", new Object[0]);
         if (this.b != null) {
-            SVG.AbstractC4702f0 c4724q0 = new SVG.C4724q0();
-            c4724q0.a = this.a;
-            c4724q0.b = this.b;
-            D(c4724q0, attributes);
-            C(c4724q0, attributes);
-            Y(c4724q0, attributes);
-            this.b.addChild(c4724q0);
-            this.b = c4724q0;
+            SVG.f0 q0Var = new SVG.q0();
+            q0Var.a = this.a;
+            q0Var.b = this.b;
+            D(q0Var, attributes);
+            C(q0Var, attributes);
+            Y(q0Var, attributes);
+            this.b.addChild(q0Var);
+            this.b = q0Var;
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
@@ -3731,16 +3722,16 @@ public class SVGParser {
     private void k(Attributes attributes) throws SVGParseException {
         l("<clipPath>", new Object[0]);
         if (this.b != null) {
-            SVG.C4699e c4699e = new SVG.C4699e();
-            c4699e.a = this.a;
-            c4699e.b = this.b;
-            D(c4699e, attributes);
-            S(c4699e, attributes);
-            W(c4699e, attributes);
-            C(c4699e, attributes);
-            B(c4699e, attributes);
-            this.b.addChild(c4699e);
-            this.b = c4699e;
+            SVG.e eVar = new SVG.e();
+            eVar.a = this.a;
+            eVar.b = this.b;
+            D(eVar, attributes);
+            S(eVar, attributes);
+            W(eVar, attributes);
+            C(eVar, attributes);
+            B(eVar, attributes);
+            this.b.addChild(eVar);
+            this.b = eVar;
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
@@ -3748,28 +3739,28 @@ public class SVGParser {
 
     private static SVG.Style.FontStyle k0(String str) {
         str.hashCode();
-        char c = 65535;
+        char c2 = 65535;
         switch (str.hashCode()) {
             case -1657669071:
                 if (str.equals("oblique")) {
-                    c = 0;
+                    c2 = 0;
                     break;
                 }
                 break;
             case -1178781136:
                 if (str.equals(Constants.Value.ITALIC)) {
-                    c = 1;
+                    c2 = 1;
                     break;
                 }
                 break;
             case -1039745817:
                 if (str.equals("normal")) {
-                    c = 2;
+                    c2 = 2;
                     break;
                 }
                 break;
         }
-        switch (c) {
+        switch (c2) {
             case 0:
                 return SVG.Style.FontStyle.Oblique;
             case 1:
@@ -3784,15 +3775,15 @@ public class SVGParser {
     private void k1(Attributes attributes) throws SVGParseException {
         l("<switch>", new Object[0]);
         if (this.b != null) {
-            SVG.C4704g0 c4704g0 = new SVG.C4704g0();
-            c4704g0.a = this.a;
-            c4704g0.b = this.b;
-            D(c4704g0, attributes);
-            S(c4704g0, attributes);
-            W(c4704g0, attributes);
-            C(c4704g0, attributes);
-            this.b.addChild(c4704g0);
-            this.b = c4704g0;
+            SVG.g0 g0Var = new SVG.g0();
+            g0Var.a = this.a;
+            g0Var.b = this.b;
+            D(g0Var, attributes);
+            S(g0Var, attributes);
+            W(g0Var, attributes);
+            C(g0Var, attributes);
+            this.b.addChild(g0Var);
+            this.b = g0Var;
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
@@ -3802,20 +3793,20 @@ public class SVGParser {
     }
 
     private static Integer l0(String str) {
-        return C4741e.a(str);
+        return e.a(str);
     }
 
     private void m(Attributes attributes) throws SVGParseException {
         l("<defs>", new Object[0]);
         if (this.b != null) {
-            SVG.C4701f c4701f = new SVG.C4701f();
-            c4701f.a = this.a;
-            c4701f.b = this.b;
-            D(c4701f, attributes);
-            S(c4701f, attributes);
-            W(c4701f, attributes);
-            this.b.addChild(c4701f);
-            this.b = c4701f;
+            SVG.f fVar = new SVG.f();
+            fVar.a = this.a;
+            fVar.b = this.b;
+            D(fVar, attributes);
+            S(fVar, attributes);
+            W(fVar, attributes);
+            this.b.addChild(fVar);
+            this.b = fVar;
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
@@ -3834,15 +3825,15 @@ public class SVGParser {
     private void n(Attributes attributes) throws SVGParseException {
         l("<ellipse>", new Object[0]);
         if (this.b != null) {
-            SVG.C4703g c4703g = new SVG.C4703g();
-            c4703g.a = this.a;
-            c4703g.b = this.b;
-            D(c4703g, attributes);
-            S(c4703g, attributes);
-            W(c4703g, attributes);
-            C(c4703g, attributes);
-            E(c4703g, attributes);
-            this.b.addChild(c4703g);
+            SVG.g gVar = new SVG.g();
+            gVar.a = this.a;
+            gVar.b = this.b;
+            D(gVar, attributes);
+            S(gVar, attributes);
+            W(gVar, attributes);
+            C(gVar, attributes);
+            E(gVar, attributes);
+            this.b.addChild(gVar);
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
@@ -3859,18 +3850,18 @@ public class SVGParser {
             }
             try {
                 float g0 = g0(str, 0, length);
-                float f = 100.0f;
+                float f2 = 100.0f;
                 if (z) {
                     g0 /= 100.0f;
                 }
                 if (g0 < 0.0f) {
-                    f = 0.0f;
+                    f2 = 0.0f;
                 } else if (g0 <= 100.0f) {
-                    f = g0;
+                    f2 = g0;
                 }
-                return Float.valueOf(f);
-            } catch (NumberFormatException e) {
-                throw new SVGParseException("Invalid offset value in <stop>: " + str, e);
+                return Float.valueOf(f2);
+            } catch (NumberFormatException e2) {
+                throw new SVGParseException("Invalid offset value in <stop>: " + str, e2);
             }
         }
         throw new SVGParseException("Invalid offset value in <stop> (empty string)");
@@ -3898,8 +3889,8 @@ public class SVGParser {
             }
             try {
                 return new SVG.Length(g0(str, 0, length), unit);
-            } catch (NumberFormatException e) {
-                throw new SVGParseException("Invalid length value: " + str, e);
+            } catch (NumberFormatException e2) {
+                throw new SVGParseException("Invalid length value: " + str, e2);
             }
         }
         throw new SVGParseException("Invalid length value (empty string)");
@@ -3919,7 +3910,7 @@ public class SVGParser {
             if (str2.length() <= 0) {
                 str2 = str3;
             }
-            int i2 = C4737a.a[SVGElem.fromString(str2).ordinal()];
+            int i2 = a.a[SVGElem.fromString(str2).ordinal()];
             if (i2 != 1 && i2 != 2 && i2 != 4 && i2 != 5 && i2 != 13 && i2 != 14) {
                 switch (i2) {
                     case 16:
@@ -3964,26 +3955,26 @@ public class SVGParser {
                         return;
                 }
             }
-            this.b = ((SVG.C4696c0) this.b).b;
+            this.b = ((SVG.c0) this.b).b;
         }
     }
 
     private static List<SVG.Length> p0(String str) throws SVGParseException {
         if (str.length() != 0) {
             ArrayList arrayList = new ArrayList(1);
-            C4743g c4743g = new C4743g(str);
-            c4743g.A();
-            while (!c4743g.h()) {
-                float n = c4743g.n();
+            g gVar = new g(str);
+            gVar.A();
+            while (!gVar.h()) {
+                float n = gVar.n();
                 if (!Float.isNaN(n)) {
-                    SVG.Unit v = c4743g.v();
+                    SVG.Unit v = gVar.v();
                     if (v == null) {
                         v = SVG.Unit.px;
                     }
                     arrayList.add(new SVG.Length(n, v));
-                    c4743g.z();
+                    gVar.z();
                 } else {
-                    throw new SVGParseException("Invalid length list value: " + c4743g.b());
+                    throw new SVGParseException("Invalid length list value: " + gVar.b());
                 }
             }
             return arrayList;
@@ -3994,25 +3985,25 @@ public class SVGParser {
     private void q(Attributes attributes) throws SVGParseException {
         l("<g>", new Object[0]);
         if (this.b != null) {
-            SVG.C4709j c4709j = new SVG.C4709j();
-            c4709j.a = this.a;
-            c4709j.b = this.b;
-            D(c4709j, attributes);
-            S(c4709j, attributes);
-            W(c4709j, attributes);
-            C(c4709j, attributes);
-            this.b.addChild(c4709j);
-            this.b = c4709j;
+            SVG.j jVar = new SVG.j();
+            jVar.a = this.a;
+            jVar.b = this.b;
+            D(jVar, attributes);
+            S(jVar, attributes);
+            W(jVar, attributes);
+            C(jVar, attributes);
+            this.b.addChild(jVar);
+            this.b = jVar;
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
     }
 
-    private static SVG.Length q0(C4743g c4743g) {
-        if (c4743g.g("auto")) {
+    private static SVG.Length q0(g gVar) {
+        if (gVar.g("auto")) {
             return new SVG.Length(0.0f);
         }
-        return c4743g.p();
+        return gVar.p();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -4036,56 +4027,56 @@ public class SVGParser {
         }
     }
 
-    private static int s(float f, float f2, float f3) {
-        int i = (f > 0.0f ? 1 : (f == 0.0f ? 0 : -1));
-        float f4 = f % 360.0f;
+    private static int s(float f2, float f3, float f4) {
+        int i = (f2 > 0.0f ? 1 : (f2 == 0.0f ? 0 : -1));
+        float f5 = f2 % 360.0f;
         if (i < 0) {
-            f4 += 360.0f;
+            f5 += 360.0f;
         }
-        float f5 = f4 / 60.0f;
-        float f6 = f2 / 100.0f;
+        float f6 = f5 / 60.0f;
         float f7 = f3 / 100.0f;
-        if (f6 < 0.0f) {
-            f6 = 0.0f;
-        } else if (f6 > 1.0f) {
-            f6 = 1.0f;
+        float f8 = f4 / 100.0f;
+        if (f7 < 0.0f) {
+            f7 = 0.0f;
+        } else if (f7 > 1.0f) {
+            f7 = 1.0f;
         }
-        float f8 = f7 >= 0.0f ? f7 > 1.0f ? 1.0f : f7 : 0.0f;
-        float f9 = f8 <= 0.5f ? (f6 + 1.0f) * f8 : (f8 + f6) - (f6 * f8);
-        float f10 = (f8 * 2.0f) - f9;
-        return j(t(f10, f9, f5 - 2.0f) * 256.0f) | (j(t(f10, f9, f5 + 2.0f) * 256.0f) << 16) | (j(t(f10, f9, f5) * 256.0f) << 8);
+        float f9 = f8 >= 0.0f ? f8 > 1.0f ? 1.0f : f8 : 0.0f;
+        float f10 = f9 <= 0.5f ? (f7 + 1.0f) * f9 : (f9 + f7) - (f7 * f9);
+        float f11 = (f9 * 2.0f) - f10;
+        return j(t(f11, f10, f6 - 2.0f) * 256.0f) | (j(t(f11, f10, f6 + 2.0f) * 256.0f) << 16) | (j(t(f11, f10, f6) * 256.0f) << 8);
     }
 
     private static Boolean s0(String str) {
         str.hashCode();
-        char c = 65535;
+        char c2 = 65535;
         switch (str.hashCode()) {
             case -1217487446:
                 if (str.equals("hidden")) {
-                    c = 0;
+                    c2 = 0;
                     break;
                 }
                 break;
             case -907680051:
                 if (str.equals("scroll")) {
-                    c = 1;
+                    c2 = 1;
                     break;
                 }
                 break;
             case 3005871:
                 if (str.equals("auto")) {
-                    c = 2;
+                    c2 = 2;
                     break;
                 }
                 break;
             case 466743410:
                 if (str.equals("visible")) {
-                    c = 3;
+                    c2 = 3;
                     break;
                 }
                 break;
         }
-        switch (c) {
+        switch (c2) {
             case 0:
             case 1:
                 return Boolean.FALSE;
@@ -4097,25 +4088,25 @@ public class SVGParser {
         }
     }
 
-    private static float t(float f, float f2, float f3) {
-        float f4;
-        if (f3 < 0.0f) {
-            f3 += 6.0f;
+    private static float t(float f2, float f3, float f4) {
+        float f5;
+        if (f4 < 0.0f) {
+            f4 += 6.0f;
         }
-        if (f3 >= 6.0f) {
-            f3 -= 6.0f;
+        if (f4 >= 6.0f) {
+            f4 -= 6.0f;
         }
-        if (f3 < 1.0f) {
-            f4 = (f2 - f) * f3;
-        } else if (f3 < 3.0f) {
-            return f2;
+        if (f4 < 1.0f) {
+            f5 = (f3 - f2) * f4;
+        } else if (f4 < 3.0f) {
+            return f3;
         } else {
-            if (f3 >= 4.0f) {
-                return f;
+            if (f4 >= 4.0f) {
+                return f2;
             }
-            f4 = (f2 - f) * (4.0f - f3);
+            f5 = (f3 - f2) * (4.0f - f4);
         }
-        return f4 + f;
+        return f5 + f2;
     }
 
     private static SVG.SvgPaint t0(String str) {
@@ -4134,16 +4125,16 @@ public class SVGParser {
     private void u(Attributes attributes) throws SVGParseException {
         l("<image>", new Object[0]);
         if (this.b != null) {
-            SVG.C4711k c4711k = new SVG.C4711k();
-            c4711k.a = this.a;
-            c4711k.b = this.b;
-            D(c4711k, attributes);
-            S(c4711k, attributes);
-            W(c4711k, attributes);
-            C(c4711k, attributes);
-            G(c4711k, attributes);
-            this.b.addChild(c4711k);
-            this.b = c4711k;
+            SVG.k kVar = new SVG.k();
+            kVar.a = this.a;
+            kVar.b = this.b;
+            D(kVar, attributes);
+            S(kVar, attributes);
+            W(kVar, attributes);
+            C(kVar, attributes);
+            G(kVar, attributes);
+            this.b.addChild(kVar);
+            this.b = kVar;
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
@@ -4156,7 +4147,7 @@ public class SVGParser {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private static com.caverock.androidsvg.SVG.C4721p u0(java.lang.String r20) {
+    private static com.caverock.androidsvg.SVG.p u0(java.lang.String r20) {
         /*
             Method dump skipped, instructions count: 762
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -4167,33 +4158,33 @@ public class SVGParser {
     private void v(Attributes attributes) throws SVGParseException {
         l("<line>", new Object[0]);
         if (this.b != null) {
-            SVG.C4713l c4713l = new SVG.C4713l();
-            c4713l.a = this.a;
-            c4713l.b = this.b;
-            D(c4713l, attributes);
-            S(c4713l, attributes);
-            W(c4713l, attributes);
-            C(c4713l, attributes);
-            H(c4713l, attributes);
-            this.b.addChild(c4713l);
+            SVG.l lVar = new SVG.l();
+            lVar.a = this.a;
+            lVar.b = this.b;
+            D(lVar, attributes);
+            S(lVar, attributes);
+            W(lVar, attributes);
+            C(lVar, attributes);
+            H(lVar, attributes);
+            this.b.addChild(lVar);
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
     }
 
     static PreserveAspectRatio v0(String str) throws SVGParseException {
-        C4743g c4743g = new C4743g(str);
-        c4743g.A();
-        String r = c4743g.r();
+        g gVar = new g(str);
+        gVar.A();
+        String r = gVar.r();
         if ("defer".equals(r)) {
-            c4743g.A();
-            r = c4743g.r();
+            gVar.A();
+            r = gVar.r();
         }
-        PreserveAspectRatio.Alignment a = C4738b.a(r);
+        PreserveAspectRatio.Alignment a2 = b.a(r);
         PreserveAspectRatio.Scale scale = null;
-        c4743g.A();
-        if (!c4743g.h()) {
-            String r2 = c4743g.r();
+        gVar.A();
+        if (!gVar.h()) {
+            String r2 = gVar.r();
             r2.hashCode();
             if (r2.equals("meet")) {
                 scale = PreserveAspectRatio.Scale.meet;
@@ -4203,58 +4194,58 @@ public class SVGParser {
                 throw new SVGParseException("Invalid preserveAspectRatio definition: " + str);
             }
         }
-        return new PreserveAspectRatio(a, scale);
+        return new PreserveAspectRatio(a2, scale);
     }
 
     private void w(Attributes attributes) throws SVGParseException {
         l("<linearGradient>", new Object[0]);
         if (this.b != null) {
-            SVG.C4694b0 c4694b0 = new SVG.C4694b0();
-            c4694b0.a = this.a;
-            c4694b0.b = this.b;
-            D(c4694b0, attributes);
-            S(c4694b0, attributes);
-            F(c4694b0, attributes);
-            I(c4694b0, attributes);
-            this.b.addChild(c4694b0);
-            this.b = c4694b0;
+            SVG.b0 b0Var = new SVG.b0();
+            b0Var.a = this.a;
+            b0Var.b = this.b;
+            D(b0Var, attributes);
+            S(b0Var, attributes);
+            F(b0Var, attributes);
+            I(b0Var, attributes);
+            this.b.addChild(b0Var);
+            this.b = b0Var;
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
     }
 
-    private static void w0(SVG.AbstractC4698d0 abstractC4698d0, String str) throws SVGParseException {
-        abstractC4698d0.n = v0(str);
+    private static void w0(SVG.d0 d0Var, String str) throws SVGParseException {
+        d0Var.n = v0(str);
     }
 
     private void x(Attributes attributes) throws SVGParseException {
         l("<marker>", new Object[0]);
         if (this.b != null) {
-            SVG.C4715m c4715m = new SVG.C4715m();
-            c4715m.a = this.a;
-            c4715m.b = this.b;
-            D(c4715m, attributes);
-            S(c4715m, attributes);
-            C(c4715m, attributes);
-            Y(c4715m, attributes);
-            J(c4715m, attributes);
-            this.b.addChild(c4715m);
-            this.b = c4715m;
+            SVG.m mVar = new SVG.m();
+            mVar.a = this.a;
+            mVar.b = this.b;
+            D(mVar, attributes);
+            S(mVar, attributes);
+            C(mVar, attributes);
+            Y(mVar, attributes);
+            J(mVar, attributes);
+            this.b.addChild(mVar);
+            this.b = mVar;
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public Map<String, String> x0(C4743g c4743g) {
+    public Map<String, String> x0(g gVar) {
         HashMap hashMap = new HashMap();
-        c4743g.A();
-        String s = c4743g.s(C4250a.h);
+        gVar.A();
+        String s = gVar.s(com.alipay.sdk.m.n.a.h);
         while (s != null) {
-            c4743g.f(C4250a.h);
-            hashMap.put(s, c4743g.q());
-            c4743g.A();
-            s = c4743g.s(C4250a.h);
+            gVar.f(com.alipay.sdk.m.n.a.h);
+            hashMap.put(s, gVar.q());
+            gVar.A();
+            s = gVar.s(com.alipay.sdk.m.n.a.h);
         }
         return hashMap;
     }
@@ -4262,15 +4253,15 @@ public class SVGParser {
     private void y(Attributes attributes) throws SVGParseException {
         l("<mask>", new Object[0]);
         if (this.b != null) {
-            SVG.C4717n c4717n = new SVG.C4717n();
-            c4717n.a = this.a;
-            c4717n.b = this.b;
-            D(c4717n, attributes);
-            S(c4717n, attributes);
-            C(c4717n, attributes);
-            K(c4717n, attributes);
-            this.b.addChild(c4717n);
-            this.b = c4717n;
+            SVG.n nVar = new SVG.n();
+            nVar.a = this.a;
+            nVar.b = this.b;
+            D(nVar, attributes);
+            S(nVar, attributes);
+            C(nVar, attributes);
+            K(nVar, attributes);
+            this.b.addChild(nVar);
+            this.b = nVar;
             return;
         }
         throw new SVGParseException("Invalid document. Root element must be <svg>");
@@ -4278,28 +4269,28 @@ public class SVGParser {
 
     private static SVG.Style.RenderQuality y0(String str) {
         str.hashCode();
-        char c = 65535;
+        char c2 = 65535;
         switch (str.hashCode()) {
             case -933002398:
                 if (str.equals("optimizeQuality")) {
-                    c = 0;
+                    c2 = 0;
                     break;
                 }
                 break;
             case 3005871:
                 if (str.equals("auto")) {
-                    c = 1;
+                    c2 = 1;
                     break;
                 }
                 break;
             case 362741610:
                 if (str.equals("optimizeSpeed")) {
-                    c = 2;
+                    c2 = 2;
                     break;
                 }
                 break;
         }
-        switch (c) {
+        switch (c2) {
             case 0:
                 return SVG.Style.RenderQuality.optimizeQuality;
             case 1:
@@ -4312,16 +4303,16 @@ public class SVGParser {
     }
 
     private static Set<String> z0(String str) {
-        C4743g c4743g = new C4743g(str);
+        g gVar = new g(str);
         HashSet hashSet = new HashSet();
-        while (!c4743g.h()) {
-            String r = c4743g.r();
+        while (!gVar.h()) {
+            String r = gVar.r();
             if (r.startsWith("http://www.w3.org/TR/SVG11/feature#")) {
                 hashSet.add(r.substring(35));
             } else {
                 hashSet.add("UNSUPPORTED");
             }
-            c4743g.A();
+            gVar.A();
         }
         return hashSet;
     }

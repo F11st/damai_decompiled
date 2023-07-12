@@ -34,7 +34,7 @@ public final class UTUtil {
     public static final class UTExposureBean implements Serializable {
         private static transient /* synthetic */ IpChange $ipChange = null;
         @NotNull
-        public static final C3549a Companion = new C3549a(null);
+        public static final a Companion = new a(null);
         private static final long serialVersionUID = 1;
         @Nullable
         private String area;
@@ -47,13 +47,12 @@ public final class UTUtil {
         private String viewid;
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.pictures.bricks.util.UTUtil$UTExposureBean$a */
         /* loaded from: classes7.dex */
-        public static final class C3549a {
-            private C3549a() {
+        public static final class a {
+            private a() {
             }
 
-            public /* synthetic */ C3549a(k50 k50Var) {
+            public /* synthetic */ a(k50 k50Var) {
                 this();
             }
         }
@@ -178,7 +177,7 @@ public final class UTUtil {
             tb.b41.h(r2, r7)
             boolean r2 = r0.b(r2)
             if (r2 == 0) goto L66
-            boolean r2 = kotlin.text.C8596g.K(r8, r15, r12, r10, r14)
+            boolean r2 = kotlin.text.g.K(r8, r15, r12, r10, r14)
             if (r2 == 0) goto L66
             r4 = 0
             r5 = 0
@@ -188,7 +187,7 @@ public final class UTUtil {
             r2 = r19
             r10 = r7
             r7 = r16
-            int r2 = kotlin.text.C8596g.f0(r2, r3, r4, r5, r6, r7)
+            int r2 = kotlin.text.g.f0(r2, r3, r4, r5, r6, r7)
             java.lang.String r2 = r8.substring(r12, r2)
             tb.b41.h(r2, r13)
             r8 = r2
@@ -205,7 +204,7 @@ public final class UTUtil {
             boolean r2 = r0.b(r2)
             if (r2 == 0) goto L9a
             r2 = 2
-            boolean r2 = kotlin.text.C8596g.K(r9, r15, r12, r2, r14)
+            boolean r2 = kotlin.text.g.K(r9, r15, r12, r2, r14)
             if (r2 == 0) goto L9a
             r4 = 0
             r5 = 0
@@ -213,7 +212,7 @@ public final class UTUtil {
             r7 = 0
             java.lang.String r3 = "_"
             r2 = r20
-            int r2 = kotlin.text.C8596g.f0(r2, r3, r4, r5, r6, r7)
+            int r2 = kotlin.text.g.f0(r2, r3, r4, r5, r6, r7)
             java.lang.String r2 = r9.substring(r12, r2)
             tb.b41.h(r2, r13)
             goto L9b

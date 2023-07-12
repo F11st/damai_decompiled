@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.b;
 import io.reactivex.internal.fuseable.ConditionalSubscriber;
 import io.reactivex.internal.subscriptions.BasicQueueSubscription;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
@@ -11,7 +11,7 @@ import org.reactivestreams.Subscriber;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableRange extends AbstractC8147b<Integer> {
+public final class FlowableRange extends b<Integer> {
     final int end;
     final int start;
 
@@ -201,7 +201,7 @@ public final class FlowableRange extends AbstractC8147b<Integer> {
         this.end = i + i2;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super Integer> subscriber) {
         if (subscriber instanceof ConditionalSubscriber) {
             subscriber.onSubscribe(new RangeConditionalSubscription((ConditionalSubscriber) subscriber, this.start, this.end));

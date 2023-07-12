@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import cn.damai.common.bean.RankBean;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.bean.FocusEvent;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
@@ -62,12 +61,11 @@ public class MultipleListFragment extends BaseFuncFragment implements UpLoadMore
     private xr mFocusSubscriber = new xr();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.fragment.MultipleListFragment$a */
     /* loaded from: classes6.dex */
-    public class C1432a implements Action<FocusEvent> {
+    public class a implements Action<FocusEvent> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1432a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -83,12 +81,11 @@ public class MultipleListFragment extends BaseFuncFragment implements UpLoadMore
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.fragment.MultipleListFragment$b */
     /* loaded from: classes6.dex */
-    public class C1433b extends w3 {
+    public class b extends w3 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1433b(MultipleListFragment multipleListFragment) {
+        b(MultipleListFragment multipleListFragment) {
         }
 
         @Override // cn.damai.mine.listener.MultiClickUt
@@ -97,18 +94,17 @@ public class MultipleListFragment extends BaseFuncFragment implements UpLoadMore
             if (AndroidInstantRuntime.support(ipChange, "-1872632528")) {
                 ipChange.ipc$dispatch("-1872632528", new Object[]{this, noteBean, Integer.valueOf(i)});
             } else {
-                C0529c.e().x(hi1.m().o(i));
+                cn.damai.common.user.c.e().x(hi1.m().o(i));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.fragment.MultipleListFragment$c */
     /* loaded from: classes6.dex */
-    public class C1434c implements MultiAdapter.Exposure {
+    public class c implements MultiAdapter.Exposure {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1434c() {
+        c() {
         }
 
         @Override // cn.damai.mine.adapter.MultiAdapter.Exposure
@@ -141,12 +137,11 @@ public class MultipleListFragment extends BaseFuncFragment implements UpLoadMore
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.fragment.MultipleListFragment$d */
     /* loaded from: classes6.dex */
-    public class C1435d implements OnRefreshListener {
+    public class d implements OnRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1435d() {
+        d() {
         }
 
         @Override // cn.damai.uikit.irecycler.OnRefreshListener
@@ -161,12 +156,11 @@ public class MultipleListFragment extends BaseFuncFragment implements UpLoadMore
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.fragment.MultipleListFragment$e */
     /* loaded from: classes6.dex */
-    public class C1436e implements OnErrClickListener {
+    public class e implements OnErrClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1436e() {
+        e() {
         }
 
         @Override // cn.damai.mine.listener.OnErrClickListener
@@ -181,19 +175,17 @@ public class MultipleListFragment extends BaseFuncFragment implements UpLoadMore
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.fragment.MultipleListFragment$f */
     /* loaded from: classes6.dex */
-    public class C1437f implements OnBizListener<PageData<List>> {
+    public class f implements OnBizListener<PageData<List>> {
         private static transient /* synthetic */ IpChange $ipChange;
         final boolean a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.mine.fragment.MultipleListFragment$f$a */
         /* loaded from: classes6.dex */
-        public class C1438a implements OnErrClickListener {
+        public class a implements OnErrClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1438a() {
+            a() {
             }
 
             @Override // cn.damai.mine.listener.OnErrClickListener
@@ -207,7 +199,7 @@ public class MultipleListFragment extends BaseFuncFragment implements UpLoadMore
             }
         }
 
-        public C1437f(boolean z) {
+        public f(boolean z) {
             this.a = z;
         }
 
@@ -243,7 +235,7 @@ public class MultipleListFragment extends BaseFuncFragment implements UpLoadMore
             }
             MultipleListFragment.this.stopLoading();
             if (this.a) {
-                MultipleListFragment.this.showErrorView(str, str2, new C1438a());
+                MultipleListFragment.this.showErrorView(str, str2, new a());
                 return;
             }
             ToastUtil.i(str2);
@@ -257,8 +249,8 @@ public class MultipleListFragment extends BaseFuncFragment implements UpLoadMore
             ipChange.ipc$dispatch("-1371540006", new Object[]{this, damaiRootRecyclerView});
         } else if (PageType.RECORD == this.mType) {
             this.mItemOffset = m62.a(this.mActivity, 6.0f);
-            int a = m62.a(this.mActivity, 15.0f);
-            damaiRootRecyclerView.setPadding(a, 0, a, 0);
+            int a2 = m62.a(this.mActivity, 15.0f);
+            damaiRootRecyclerView.setPadding(a2, 0, a2, 0);
             damaiRootRecyclerView.addItemDecoration(new RecyclerView.ItemDecoration() { // from class: cn.damai.mine.fragment.MultipleListFragment.5
                 private static transient /* synthetic */ IpChange $ipChange;
 
@@ -325,9 +317,9 @@ public class MultipleListFragment extends BaseFuncFragment implements UpLoadMore
         if (AndroidInstantRuntime.support(ipChange, "1007949860")) {
             ipChange.ipc$dispatch("1007949860", new Object[]{this, Boolean.valueOf(z)});
         } else if (!LoginManager.k().q()) {
-            showLoginView(new C1436e());
+            showLoginView(new e());
         } else {
-            this.mModel.load(z, new C1437f(z));
+            this.mModel.load(z, new f(z));
         }
     }
 
@@ -369,20 +361,20 @@ public class MultipleListFragment extends BaseFuncFragment implements UpLoadMore
         this.mRecyclerView = damaiRootRecyclerView;
         damaiRootRecyclerView.setRefreshHeaderView(PullToRefreshHeaderView.getInstance(getActivity()));
         if (isStaggeredLayout()) {
-            int a = m62.a(mu0.a(), 0.0f);
-            this.mRecyclerView.setPadding(a, 0, a, 0);
+            int a2 = m62.a(mu0.a(), 0.0f);
+            this.mRecyclerView.setPadding(a2, 0, a2, 0);
             this.mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, 1));
         } else {
             this.mRecyclerView.setLayoutManager(new LinearLayoutManager(this.mActivity, 1, false));
         }
         FragmentActivity fragmentActivity = this.mActivity;
-        MultiAdapter multiAdapter = new MultiAdapter(fragmentActivity, new u3(fragmentActivity, new C1433b(this)));
+        MultiAdapter multiAdapter = new MultiAdapter(fragmentActivity, new u3(fragmentActivity, new b(this)));
         this.mAdapter = multiAdapter;
-        multiAdapter.c(new C1434c());
+        multiAdapter.c(new c());
         this.mRecyclerView.setAdapter(this.mAdapter);
         addItemDecorationIfNeed(this.mRecyclerView);
         this.mRecyclerView.setRefreshEnabled(true);
-        this.mRecyclerView.setOnRefreshListener(new C1435d());
+        this.mRecyclerView.setOnRefreshListener(new d());
         this.mRecyclerView.setIsAutoToDefault(false);
         this.mRecyclerView.setLoadMoreEnabled(true);
         this.mRecyclerView.setItemAnimator(null);
@@ -407,7 +399,7 @@ public class MultipleListFragment extends BaseFuncFragment implements UpLoadMore
             this.mType = PageType.RECORD;
         }
         this.mModel = new WannaSeeModel(this.mType, this.mListener);
-        this.mFocusSubscriber.b(this.mType.isProject() ? FocusEvent.EVENT_NAME_PROJECT_FOCUS_CHANGED : FocusEvent.EVENT_NAME_NOTE_FOCUS_CHANGED, new C1432a());
+        this.mFocusSubscriber.b(this.mType.isProject() ? FocusEvent.EVENT_NAME_PROJECT_FOCUS_CHANGED : FocusEvent.EVENT_NAME_NOTE_FOCUS_CHANGED, new a());
         super.onCreate(bundle);
     }
 

@@ -1,6 +1,5 @@
 package tb;
 
-import com.alibaba.appmonitor.pool.C3316a;
 import com.alibaba.appmonitor.pool.Reusable;
 import com.alibaba.appmonitor.pool.ReuseJSONObject;
 import com.alibaba.fastjson.JSONObject;
@@ -30,7 +29,7 @@ public abstract class qf0 implements Reusable {
     }
 
     public JSONObject b() {
-        JSONObject jSONObject = (JSONObject) C3316a.a().poll(ReuseJSONObject.class, new Object[0]);
+        JSONObject jSONObject = (JSONObject) com.alibaba.appmonitor.pool.a.a().poll(ReuseJSONObject.class, new Object[0]);
         jSONObject.put("page", (Object) this.a);
         jSONObject.put("monitorPoint", (Object) this.b);
         jSONObject.put(OnePlayTrack.PlayType.BEGIN, (Object) Long.valueOf(this.e));

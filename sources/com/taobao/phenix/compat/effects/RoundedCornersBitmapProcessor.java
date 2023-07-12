@@ -33,9 +33,8 @@ public class RoundedCornersBitmapProcessor implements BitmapProcessor {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.phenix.compat.effects.RoundedCornersBitmapProcessor$a */
     /* loaded from: classes11.dex */
-    public static /* synthetic */ class C6854a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -75,7 +74,7 @@ public class RoundedCornersBitmapProcessor implements BitmapProcessor {
         int i3 = this.d;
         float f3 = f - i3;
         float f4 = f2 - i3;
-        int i4 = C6854a.a[this.e.ordinal()];
+        int i4 = a.a[this.e.ordinal()];
         RectF rectF2 = null;
         if (i4 == 1) {
             int i5 = this.d;

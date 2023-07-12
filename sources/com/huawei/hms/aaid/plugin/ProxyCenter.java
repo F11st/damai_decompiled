@@ -7,14 +7,13 @@ public class ProxyCenter {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.aaid.plugin.ProxyCenter$a */
     /* loaded from: classes10.dex */
-    public static class C5506a {
+    public static class a {
         public static ProxyCenter a = new ProxyCenter();
     }
 
     public static ProxyCenter getInstance() {
-        return C5506a.a;
+        return a.a;
     }
 
     public static PushProxy getProxy() {

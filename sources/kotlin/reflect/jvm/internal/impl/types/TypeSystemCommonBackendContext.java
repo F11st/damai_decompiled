@@ -18,9 +18,8 @@ import tb.ip0;
 public interface TypeSystemCommonBackendContext extends TypeSystemContext {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.types.TypeSystemCommonBackendContext$a */
     /* loaded from: classes3.dex */
-    public static final class C8542a {
+    public static final class a {
         @NotNull
         public static KotlinTypeMarker a(@NotNull TypeSystemCommonBackendContext typeSystemCommonBackendContext, @NotNull KotlinTypeMarker kotlinTypeMarker) {
             b41.i(typeSystemCommonBackendContext, "this");

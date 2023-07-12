@@ -95,7 +95,7 @@ public class LiveManageDialog extends Dialog {
     }
 
     public LiveManageDialog(Context context, LiveManageController liveManageController) {
-        super(context, R.C7944style.dago_pgc_live_manage_dialog);
+        super(context, R.style.dago_pgc_live_manage_dialog);
         this.mLiveManageController = liveManageController;
     }
 
@@ -141,7 +141,7 @@ public class LiveManageDialog extends Dialog {
             attributes.width = -1;
             attributes.height = -2;
             window.setAttributes(attributes);
-            window.setWindowAnimations(R.C7944style.dago_pgc_user_card_bottom_anim);
+            window.setWindowAnimations(R.style.dago_pgc_user_card_bottom_anim);
         }
     }
 
@@ -262,7 +262,7 @@ public class LiveManageDialog extends Dialog {
         super.onCreate(bundle);
         requestWindowFeature(1);
         setCanceledOnTouchOutside(true);
-        setContentView(R.C7942layout.dago_pgc_dialog_live_manage_layout);
+        setContentView(R.layout.dago_pgc_dialog_live_manage_layout);
         setDialogWindow();
         initView();
     }

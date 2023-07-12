@@ -2,7 +2,7 @@ package androidx.collection;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.alipay.sdk.m.n.C4250a;
+import com.alipay.sdk.m.n.a;
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
 
 /* compiled from: Taobao */
@@ -251,7 +251,7 @@ public class SparseArrayCompat<E> implements Cloneable {
                 sb.append(AVFSCacheConstants.COMMA_SEP);
             }
             sb.append(keyAt(i));
-            sb.append(C4250a.h);
+            sb.append(a.h);
             E valueAt = valueAt(i);
             if (valueAt != this) {
                 sb.append(valueAt);

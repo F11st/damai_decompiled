@@ -74,12 +74,11 @@ public class AddressDivisionSelectView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.view.AddressDivisionSelectView$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0570a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0570a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -95,12 +94,11 @@ public class AddressDivisionSelectView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.view.AddressDivisionSelectView$b */
     /* loaded from: classes4.dex */
-    public class C0571b implements OnWheelScrollListener {
+    public class b implements OnWheelScrollListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0571b() {
+        b() {
         }
 
         @Override // cn.damai.uikit.wheel.OnWheelScrollListener
@@ -127,12 +125,11 @@ public class AddressDivisionSelectView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.view.AddressDivisionSelectView$c */
     /* loaded from: classes4.dex */
-    public class C0572c implements OnWheelScrollListener {
+    public class c implements OnWheelScrollListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0572c() {
+        c() {
         }
 
         @Override // cn.damai.uikit.wheel.OnWheelScrollListener
@@ -158,12 +155,11 @@ public class AddressDivisionSelectView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.view.AddressDivisionSelectView$d */
     /* loaded from: classes4.dex */
-    public class C0573d implements OnWheelScrollListener {
+    public class d implements OnWheelScrollListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0573d() {
+        d() {
         }
 
         @Override // cn.damai.uikit.wheel.OnWheelScrollListener
@@ -240,10 +236,10 @@ public class AddressDivisionSelectView extends FrameLayout {
             ipChange.ipc$dispatch("1022527466", new Object[]{this});
             return;
         }
-        this.mOnCompletedClickListener = new View$OnClickListenerC0570a();
-        this.mOnProvinceWheelScrollListener = new C0571b();
-        this.mOnCityWheelScrollListener = new C0572c();
-        this.mOnCountyWheelScrollListener = new C0573d();
+        this.mOnCompletedClickListener = new a();
+        this.mOnProvinceWheelScrollListener = new b();
+        this.mOnCityWheelScrollListener = new c();
+        this.mOnCountyWheelScrollListener = new d();
     }
 
     private void resetData() {

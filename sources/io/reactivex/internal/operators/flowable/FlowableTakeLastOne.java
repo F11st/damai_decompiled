@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.internal.subscriptions.DeferredScalarSubscription;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import org.reactivestreams.Subscriber;
@@ -59,11 +59,11 @@ public final class FlowableTakeLastOne<T> extends AbstractFlowableWithUpstream<T
         }
     }
 
-    public FlowableTakeLastOne(AbstractC8147b<T> abstractC8147b) {
-        super(abstractC8147b);
+    public FlowableTakeLastOne(b<T> bVar) {
+        super(bVar);
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new TakeLastOneSubscriber(subscriber));
     }

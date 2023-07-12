@@ -34,7 +34,7 @@ public class CitySelectAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     private int d;
     private int e;
     private String f;
-    private View.OnClickListener g = new View$OnClickListenerC0353a();
+    private View.OnClickListener g = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes.dex */
@@ -44,12 +44,11 @@ public class CitySelectAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         private GroupCityAdapter b;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.category.category.ui.adapter.CitySelectAdapter$GroupViewHolder$a */
         /* loaded from: classes.dex */
-        public class C0351a implements OnCityListItemClickListener2 {
+        public class a implements OnCityListItemClickListener2 {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C0351a(CitySelectAdapter citySelectAdapter) {
+            a(CitySelectAdapter citySelectAdapter) {
             }
 
             @Override // cn.damai.category.category.ui.adapter.CitySelectAdapter.OnCityListItemClickListener2
@@ -97,7 +96,7 @@ public class CitySelectAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             this.a.setLayoutManager(linearLayoutManager);
             GroupCityAdapter groupCityAdapter = new GroupCityAdapter(CitySelectAdapter.this.b);
             this.b = groupCityAdapter;
-            groupCityAdapter.f(new C0351a(CitySelectAdapter.this));
+            groupCityAdapter.f(new a(CitySelectAdapter.this));
             this.a.setAdapter(this.b);
             this.itemView.setLayoutParams(new ViewGroup.LayoutParams(-1, -2));
         }
@@ -120,14 +119,13 @@ public class CitySelectAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         private FlowLayout a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.category.category.ui.adapter.CitySelectAdapter$HotViewHolder$a */
         /* loaded from: classes.dex */
-        public class View$OnClickListenerC0352a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ HotCityBean a;
             final /* synthetic */ int b;
 
-            View$OnClickListenerC0352a(HotCityBean hotCityBean, int i) {
+            a(HotCityBean hotCityBean, int i) {
                 this.a = hotCityBean;
                 this.b = i;
             }
@@ -156,12 +154,12 @@ public class CitySelectAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
                 ipChange.ipc$dispatch("871292902", new Object[]{this, cjVar});
                 return;
             }
-            List<HotCityBean> a = cjVar.a();
-            int e = wh2.e(a);
+            List<HotCityBean> a2 = cjVar.a();
+            int e = wh2.e(a2);
             this.a.removeAllViews();
             if (e > 0) {
                 for (int i = 0; i < e; i++) {
-                    HotCityBean hotCityBean = a.get(i);
+                    HotCityBean hotCityBean = a2.get(i);
                     if (hotCityBean != null) {
                         View inflate = LayoutInflater.from(CitySelectAdapter.this.b).inflate(R$layout.layout_select_city_hot_list_item, (ViewGroup) null);
                         TextView textView = (TextView) inflate.findViewById(R$id.select_city_hot_list_item);
@@ -177,7 +175,7 @@ public class CitySelectAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
                             textView.setTextColor(Color.parseColor("#333333"));
                         }
                         textView.setText(hotCityBean.getCityName());
-                        inflate.setOnClickListener(new View$OnClickListenerC0352a(hotCityBean, i));
+                        inflate.setOnClickListener(new a(hotCityBean, i));
                         this.a.addView(inflate);
                     }
                 }
@@ -245,12 +243,11 @@ public class CitySelectAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.adapter.CitySelectAdapter$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0353a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0353a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener

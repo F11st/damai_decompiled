@@ -89,13 +89,12 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.tetris.component.home.widget.banner.Banner$BannerPagerAdapter$a */
         /* loaded from: classes16.dex */
-        public class View$OnClickListenerC1887a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ int a;
 
-            View$OnClickListenerC1887a(int i) {
+            a(int i) {
                 this.a = i;
             }
 
@@ -111,12 +110,11 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.tetris.component.home.widget.banner.Banner$BannerPagerAdapter$b */
         /* loaded from: classes16.dex */
-        public class View$OnClickListenerC1888b implements View.OnClickListener {
+        public class b implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC1888b() {
+            b() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -158,7 +156,7 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
             viewGroup.addView(Banner.this.imageViews.get(i));
             View view = Banner.this.imageViews.get(i);
             if (Banner.this.listener != null) {
-                view.setOnClickListener(new View$OnClickListenerC1887a(i));
+                view.setOnClickListener(new a(i));
             }
             if (Banner.this.onTagListener != null) {
                 try {
@@ -168,7 +166,7 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
                             viewGroup2.getChildAt(1).setVisibility(8);
                         }
                         viewGroup2.getChildAt(1).setVisibility(0);
-                        viewGroup2.getChildAt(1).setOnClickListener(new View$OnClickListenerC1888b());
+                        viewGroup2.getChildAt(1).setOnClickListener(new b());
                     }
                 } catch (Exception unused) {
                 }
@@ -184,12 +182,11 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.widget.banner.Banner$a */
     /* loaded from: classes16.dex */
-    public class View$OnAttachStateChangeListenerC1889a implements View.OnAttachStateChangeListener {
+    public class a implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC1889a() {
+        a() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -313,9 +310,9 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
         if (getTag() != null) {
             removeOnAttachStateChangeListener((View.OnAttachStateChangeListener) getTag());
         }
-        View$OnAttachStateChangeListenerC1889a view$OnAttachStateChangeListenerC1889a = new View$OnAttachStateChangeListenerC1889a();
-        addOnAttachStateChangeListener(view$OnAttachStateChangeListenerC1889a);
-        setTag(view$OnAttachStateChangeListenerC1889a);
+        a aVar = new a();
+        addOnAttachStateChangeListener(aVar);
+        setTag(aVar);
     }
 
     private void initViewPagerScroll() {
@@ -547,9 +544,9 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
         if (AndroidInstantRuntime.support(ipChange, "1635852370")) {
             return ((Boolean) ipChange.ipc$dispatch("1635852370", new Object[]{this, list})).booleanValue();
         }
-        int a = cb2.a(this.imageUrls);
-        if (a == cb2.a(list)) {
-            for (int i = 0; i < a; i++) {
+        int a2 = cb2.a(this.imageUrls);
+        if (a2 == cb2.a(list)) {
+            for (int i = 0; i < a2; i++) {
                 Object obj = this.imageUrls.get(i);
                 Object obj2 = list.get(i);
                 if (!(obj == obj2 || (obj != null && obj.equals(obj2)))) {

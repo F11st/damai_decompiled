@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.discover.bean.VoteInfoBean;
@@ -64,7 +64,7 @@ public class VoteViewHolder extends BaseViewHolder<VoteInfoBean> {
             } else {
                 this.b.setVisibility(0);
                 int a = m62.a(mu0.a(), 82.0f);
-                C0504a.b().f(str, (DisplayMetrics.getwidthPixels(m62.b(mu0.a())) - (m62.a(mu0.a(), 21.0f) * 2)) / 2, m62.a(mu0.a(), 90.0f)).g(this.b);
+                a.b().f(str, (DisplayMetrics.getwidthPixels(m62.b(mu0.a())) - (m62.a(mu0.a(), 21.0f) * 2)) / 2, m62.a(mu0.a(), 90.0f)).g(this.b);
                 i2 = a;
             }
             View i3 = this.a.i();

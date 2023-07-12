@@ -13,8 +13,8 @@ import okio.ByteString;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public final class SpriteEntity extends Message<SpriteEntity, C6132a> {
-    public static final ProtoAdapter<SpriteEntity> ADAPTER = new C6133b();
+public final class SpriteEntity extends Message<SpriteEntity, a> {
+    public static final ProtoAdapter<SpriteEntity> ADAPTER = new b();
     public static final String DEFAULT_IMAGEKEY = "";
     private static final long serialVersionUID = 0;
     @WireField(adapter = "com.opensource.svgaplayer.proto.FrameEntity#ADAPTER", label = WireField.Label.REPEATED, tag = 2)
@@ -23,9 +23,8 @@ public final class SpriteEntity extends Message<SpriteEntity, C6132a> {
     public final String imageKey;
 
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.proto.SpriteEntity$a */
     /* loaded from: classes10.dex */
-    public static final class C6132a extends Message.Builder<SpriteEntity, C6132a> {
+    public static final class a extends Message.Builder<SpriteEntity, a> {
         public String a;
         public List<FrameEntity> b = Internal.newMutableList();
 
@@ -35,37 +34,36 @@ public final class SpriteEntity extends Message<SpriteEntity, C6132a> {
             return new SpriteEntity(this.a, this.b, super.buildUnknownFields());
         }
 
-        public C6132a b(String str) {
+        public a b(String str) {
             this.a = str;
             return this;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.proto.SpriteEntity$b */
     /* loaded from: classes10.dex */
-    private static final class C6133b extends ProtoAdapter<SpriteEntity> {
-        C6133b() {
+    private static final class b extends ProtoAdapter<SpriteEntity> {
+        b() {
             super(FieldEncoding.LENGTH_DELIMITED, SpriteEntity.class);
         }
 
         @Override // com.youku.squareup.wire.ProtoAdapter
         /* renamed from: a */
         public SpriteEntity decode(ProtoReader protoReader) throws IOException {
-            C6132a c6132a = new C6132a();
+            a aVar = new a();
             long beginMessage = protoReader.beginMessage();
             while (true) {
                 int nextTag = protoReader.nextTag();
                 if (nextTag == -1) {
                     protoReader.endMessage(beginMessage);
-                    return c6132a.build();
+                    return aVar.build();
                 } else if (nextTag == 1) {
-                    c6132a.b(ProtoAdapter.STRING.decode(protoReader));
+                    aVar.b(ProtoAdapter.STRING.decode(protoReader));
                 } else if (nextTag != 2) {
                     FieldEncoding peekFieldEncoding = protoReader.peekFieldEncoding();
-                    c6132a.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
+                    aVar.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
                 } else {
-                    c6132a.b.add(FrameEntity.ADAPTER.decode(protoReader));
+                    aVar.b.add(FrameEntity.ADAPTER.decode(protoReader));
                 }
             }
         }
@@ -150,11 +148,11 @@ public final class SpriteEntity extends Message<SpriteEntity, C6132a> {
 
     @Override // com.youku.squareup.wire.Message
     /* renamed from: newBuilder */
-    public Message.Builder<SpriteEntity, C6132a> newBuilder2() {
-        C6132a c6132a = new C6132a();
-        c6132a.a = this.imageKey;
-        c6132a.b = Internal.copyOf("frames", this.frames);
-        c6132a.addUnknownFields(unknownFields());
-        return c6132a;
+    public Message.Builder<SpriteEntity, a> newBuilder2() {
+        a aVar = new a();
+        aVar.a = this.imageKey;
+        aVar.b = Internal.copyOf("frames", this.frames);
+        aVar.addUnknownFields(unknownFields());
+        return aVar;
     }
 }

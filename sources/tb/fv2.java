@@ -22,10 +22,9 @@ public class fv2 {
     private boolean d = true;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.fv2$a */
     /* loaded from: classes5.dex */
-    class C9148a implements Animator.AnimatorListener {
-        C9148a() {
+    class a implements Animator.AnimatorListener {
+        a() {
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -60,13 +59,12 @@ public class fv2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.fv2$b */
     /* loaded from: classes5.dex */
-    class View$OnClickListenerC9149b implements View.OnClickListener {
+    class b implements View.OnClickListener {
         final /* synthetic */ AnimatorSet a;
         final /* synthetic */ ObjectAnimator b;
 
-        View$OnClickListenerC9149b(AnimatorSet animatorSet, ObjectAnimator objectAnimator) {
+        b(AnimatorSet animatorSet, ObjectAnimator objectAnimator) {
             this.a = animatorSet;
             this.b = objectAnimator;
         }
@@ -142,8 +140,8 @@ public class fv2 {
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.play(ofFloat);
         animatorSet.play(ofFloat2).after(3000L);
-        ofFloat2.addListener(new C9148a());
+        ofFloat2.addListener(new a());
         animatorSet.start();
-        this.a.setOnClickListener(new View$OnClickListenerC9149b(animatorSet, ofFloat2));
+        this.a.setOnClickListener(new b(animatorSet, ofFloat2));
     }
 }

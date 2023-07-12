@@ -6,10 +6,9 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.text.TextUtils;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-import com.alibaba.security.common.track.model.C3834a;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
+import com.alibaba.security.common.track.model.a;
 import com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics;
-import com.taobao.weex.C6948a;
+import com.taobao.weex.a;
 import com.taobao.weex.adapter.IDrawableLoader;
 import com.taobao.weex.adapter.IWXHttpAdapter;
 import com.taobao.weex.adapter.IWXImgLoaderAdapter;
@@ -88,8 +87,8 @@ import com.youku.live.livesdk.wkit.widget.LiveWeexWidget;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
-import tb.C9796v;
 import tb.kh1;
+import tb.v;
 import tb.vz2;
 
 /* compiled from: Taobao */
@@ -108,9 +107,8 @@ public class WXSDKEngine implements Serializable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.WXSDKEngine$a */
     /* loaded from: classes11.dex */
-    public static abstract class AbstractC6943a<T extends DestroyableModule> extends TypeModuleFactory<T> {
+    public static abstract class a<T extends DestroyableModule> extends TypeModuleFactory<T> {
     }
 
     public static void addCustomOptions(String str, String str2) {
@@ -121,7 +119,7 @@ public class WXSDKEngine implements Serializable {
         WXSDKManager.v().a(str, str2, map);
     }
 
-    private static void doInitInternal(final Application application, final C6948a c6948a) {
+    private static void doInitInternal(final Application application, final com.taobao.weex.a aVar) {
         WXEnvironment.sApplication = application;
         if (application == null) {
             WXLogUtils.e(TAG, " doInitInternal application is null");
@@ -135,30 +133,30 @@ public class WXSDKEngine implements Serializable {
                 long currentTimeMillis = System.currentTimeMillis();
                 WXSDKManager v = WXSDKManager.v();
                 v.M();
-                C6948a c6948a2 = C6948a.this;
-                if (c6948a2 != null) {
-                    v.X(c6948a2);
+                com.taobao.weex.a aVar2 = com.taobao.weex.a.this;
+                if (aVar2 != null) {
+                    v.X(aVar2);
                 }
                 WXSoInstallMgrSdk.init(application, v.r(), v.H());
-                C6948a c6948a3 = C6948a.this;
-                IWXUserTrackAdapter E = c6948a3 != null ? c6948a3.E() : null;
+                com.taobao.weex.a aVar3 = com.taobao.weex.a.this;
+                IWXUserTrackAdapter E = aVar3 != null ? aVar3.E() : null;
                 boolean unused = WXSDKEngine.mIsSoInit = WXSoInstallMgrSdk.initSo("weexcore", 1, E);
                 WXSoInstallMgrSdk.copyJssRuntimeSo();
-                C6948a c6948a4 = C6948a.this;
-                if (c6948a4 != null) {
-                    for (String str : c6948a4.B()) {
+                com.taobao.weex.a aVar4 = com.taobao.weex.a.this;
+                if (aVar4 != null) {
+                    for (String str : aVar4.B()) {
                         WXSoInstallMgrSdk.initSo(str, 1, E);
                     }
                 }
-                C6967b.b().f(1, E);
+                b.b().f(1, E);
                 vz2.b().c(1, E);
                 if (!WXSDKEngine.mIsSoInit) {
                     WXErrorCode wXErrorCode2 = WXErrorCode.WX_KEY_EXCEPTION_SDK_INIT;
                     WXExceptionUtils.commitCriticalExceptionRT(null, wXErrorCode2, "doInitInternal", wXErrorCode2.getErrorMsg() + "isSoInit false", null);
                     return;
                 }
-                C6948a c6948a5 = C6948a.this;
-                v.K(c6948a5 != null ? c6948a5.u() : null);
+                com.taobao.weex.a aVar5 = com.taobao.weex.a.this;
+                v.K(aVar5 != null ? aVar5.u() : null);
                 long currentTimeMillis2 = System.currentTimeMillis() - currentTimeMillis;
                 WXEnvironment.sSDKInitExecuteTime = currentTimeMillis2;
                 WXLogUtils.renderPerformanceLog("SDKInitExecuteTime", currentTimeMillis2);
@@ -205,7 +203,7 @@ public class WXSDKEngine implements Serializable {
         init(application, null);
     }
 
-    public static void initialize(Application application, C6948a c6948a) {
+    public static void initialize(Application application, com.taobao.weex.a aVar) {
         synchronized (mLock) {
             if (mIsInit) {
                 return;
@@ -217,7 +215,7 @@ public class WXSDKEngine implements Serializable {
             } else {
                 WXEnvironment.sLogLevel = LogLevel.WARN;
             }
-            doInitInternal(application, c6948a);
+            doInitInternal(application, aVar);
             registerApplicationOptions(application);
             long currentTimeMillis2 = System.currentTimeMillis() - currentTimeMillis;
             WXEnvironment.sSDKInitInvokeTime = currentTimeMillis2;
@@ -272,8 +270,8 @@ public class WXSDKEngine implements Serializable {
             registerComponent("header", WXHeader.class);
             registerModule("modal", WXModalUIModule.class);
             registerModule("instanceWrap", WXInstanceWrap.class);
-            registerModule(C9796v.TAK_ABILITY_SHOW_POP_ANIMATION, WXAnimationModule.class);
-            registerModule(C3834a.C3837c.d, WXWebViewModule.class);
+            registerModule(v.TAK_ABILITY_SHOW_POP_ANIMATION, WXAnimationModule.class);
+            registerModule(a.c.d, WXWebViewModule.class);
             registerModule("navigator", WXNavigatorModule.class);
             registerModule(kh1.RESOURCE_STREAM, WXStreamModule.class);
             registerModule("timer", WXTimerModule.class);
@@ -284,7 +282,7 @@ public class WXSDKEngine implements Serializable {
             registerModule("meta", WXMetaModule.class);
             registerModule("webSocket", WebSocketModule.class);
             registerModule("locale", WXLocaleModule.class);
-            registerModule(AbstractC3893a.I, WXDeviceInfoModule.class);
+            registerModule(com.alibaba.security.realidentity.jsbridge.a.I, WXDeviceInfoModule.class);
             registerModule("sdk-console-log", ConsoleLogModule.class);
         } catch (WXException e) {
             WXLogUtils.e("[WXSDKEngine] register:", e);
@@ -321,8 +319,8 @@ public class WXSDKEngine implements Serializable {
         return cls != null && registerModule(str, new TypeModuleFactory(cls), z);
     }
 
-    public static <T extends WXModule> boolean registerModuleWithFactory(String str, AbstractC6943a abstractC6943a, boolean z) throws WXException {
-        return registerModule(str, abstractC6943a, z);
+    public static <T extends WXModule> boolean registerModuleWithFactory(String str, a aVar, boolean z) throws WXException {
+        return registerModule(str, aVar, z);
     }
 
     public static boolean registerService(String str, String str2, Map<String, Object> map) {
@@ -384,7 +382,7 @@ public class WXSDKEngine implements Serializable {
 
     @Deprecated
     public static void init(Application application, IWXUserTrackAdapter iWXUserTrackAdapter, String str) {
-        initialize(application, new C6948a.C6950b().m(iWXUserTrackAdapter).b());
+        initialize(application, new a.b().m(iWXUserTrackAdapter).b());
     }
 
     public static boolean registerComponent(Class<? extends WXComponent> cls, boolean z, String... strArr) throws WXException {
@@ -424,7 +422,7 @@ public class WXSDKEngine implements Serializable {
 
     @Deprecated
     public static void init(Application application, String str, IWXUserTrackAdapter iWXUserTrackAdapter, IWXImgLoaderAdapter iWXImgLoaderAdapter, IWXHttpAdapter iWXHttpAdapter) {
-        initialize(application, new C6948a.C6950b().m(iWXUserTrackAdapter).g(iWXHttpAdapter).h(iWXImgLoaderAdapter).b());
+        initialize(application, new a.b().m(iWXUserTrackAdapter).g(iWXHttpAdapter).h(iWXImgLoaderAdapter).b());
     }
 
     public static void reload(Context context, boolean z) {

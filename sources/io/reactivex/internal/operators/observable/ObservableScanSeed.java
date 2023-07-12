@@ -93,7 +93,7 @@ public final class ObservableScanSeed<T, R> extends AbstractObservableWithUpstre
         this.seedSupplier = callable;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super R> observer) {
         try {
             this.source.subscribe(new ScanSeedObserver(observer, this.accumulator, ObjectHelper.requireNonNull(this.seedSupplier.call(), "The seed supplied is null")));

@@ -8,19 +8,19 @@ import tb.yj0;
 public final class v61 {
     @NotNull
     public static final v61 INSTANCE = new v61();
-    private static final yj0.C9988b a = yj0.AbstractC9990d.c();
-    private static final yj0.C9988b b;
+    private static final yj0.b a = yj0.d.c();
+    private static final yj0.b b;
 
     static {
-        yj0.C9988b c = yj0.AbstractC9990d.c();
+        yj0.b c = yj0.d.c();
         b = c;
-        yj0.AbstractC9990d.b(c);
+        yj0.d.b(c);
     }
 
     private v61() {
     }
 
-    public final yj0.C9988b a() {
+    public final yj0.b a() {
         return a;
     }
 }

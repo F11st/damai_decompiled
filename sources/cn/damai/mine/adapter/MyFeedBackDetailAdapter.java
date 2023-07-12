@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
@@ -37,7 +36,7 @@ public class MyFeedBackDetailAdapter extends RecyclerView.Adapter<RecyclerView.V
     private Context b;
     private int c;
     private ArrayList<String> d = new ArrayList<>();
-    private View.OnClickListener e = new View$OnClickListenerC1427a();
+    private View.OnClickListener e = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes6.dex */
@@ -91,7 +90,7 @@ public class MyFeedBackDetailAdapter extends RecyclerView.Adapter<RecyclerView.V
                             View inflate = this.d.inflate(R$layout.feed_back_image, (ViewGroup) null);
                             ImageView imageView = (ImageView) inflate.findViewById(R$id.iv_quest);
                             imageView.setLayoutParams(this.e);
-                            DMImageCreator c = C0504a.b().c(myFeedBackDetailDO.imageAddrs.get(i));
+                            DMImageCreator c = cn.damai.common.image.a.b().c(myFeedBackDetailDO.imageAddrs.get(i));
                             int i2 = R$drawable.uikit_default_image_bg_gradient;
                             c.i(i2).c(i2).g(imageView);
                             this.c.addView(inflate);
@@ -174,12 +173,11 @@ public class MyFeedBackDetailAdapter extends RecyclerView.Adapter<RecyclerView.V
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.adapter.MyFeedBackDetailAdapter$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1427a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1427a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener

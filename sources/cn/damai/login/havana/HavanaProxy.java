@@ -11,7 +11,6 @@ import android.taobao.windvane.jsbridge.WVPluginManager;
 import android.text.TextUtils;
 import android.util.Log;
 import androidx.fragment.app.Fragment;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.CompliantUtUtils;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.h5container.DamaiCookieManager;
@@ -79,12 +78,11 @@ public class HavanaProxy {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.login.havana.HavanaProxy$a */
     /* loaded from: classes5.dex */
-    public class C1335a extends LoginApprearanceExtensions {
+    public class a extends LoginApprearanceExtensions {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1335a(HavanaProxy havanaProxy) {
+        a(HavanaProxy havanaProxy) {
         }
 
         @Override // com.ali.user.mobile.common.api.LoginApprearanceExtensions
@@ -116,13 +114,12 @@ public class HavanaProxy {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.login.havana.HavanaProxy$b */
     /* loaded from: classes5.dex */
-    public class C1336b implements UccCallback {
+    public class b implements UccCallback {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ UccTrustLoginListener a;
 
-        C1336b(HavanaProxy havanaProxy, UccTrustLoginListener uccTrustLoginListener) {
+        b(HavanaProxy havanaProxy, UccTrustLoginListener uccTrustLoginListener) {
             this.a = uccTrustLoginListener;
         }
 
@@ -154,9 +151,8 @@ public class HavanaProxy {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.login.havana.HavanaProxy$c */
     /* loaded from: classes15.dex */
-    static /* synthetic */ class C1337c {
+    static /* synthetic */ class c {
         static final /* synthetic */ int[] a;
 
         static {
@@ -302,7 +298,7 @@ public class HavanaProxy {
         if (loginPhone != null && loginPhone.length() > 3) {
             z20.b0(true);
         }
-        C0529c.e().E(loginPhone, userId);
+        cn.damai.common.user.c.e().E(loginPhone, userId);
         CompliantUtUtils.c(userId);
     }
 
@@ -362,15 +358,15 @@ public class HavanaProxy {
             ipChange.ipc$dispatch("823333465", new Object[]{this});
             return;
         }
-        C1335a c1335a = new C1335a(this);
-        c1335a.setNeedHelp(false);
-        c1335a.setFullyCustomizeMobileLoginFragment(DamaiHavanaFragment.class);
-        c1335a.setFullyCustomizeLoginFragment(DamaiAccountLoginFragment.class);
-        c1335a.setFullyCustomizeMobileRegisterFragment(DamaiRegisterFragment.class);
-        c1335a.setFullyCustomizeGuideFragment(DamaiGuideFragment.class);
-        c1335a.setFullyCustomizedFaceLoginFragment(BaseFaceLoginFragment.class);
-        c1335a.setDialogHelper(HavanaDialogHelper.class);
-        AliUserLogin.setLoginAppreanceExtions(c1335a);
+        a aVar = new a(this);
+        aVar.setNeedHelp(false);
+        aVar.setFullyCustomizeMobileLoginFragment(DamaiHavanaFragment.class);
+        aVar.setFullyCustomizeLoginFragment(DamaiAccountLoginFragment.class);
+        aVar.setFullyCustomizeMobileRegisterFragment(DamaiRegisterFragment.class);
+        aVar.setFullyCustomizeGuideFragment(DamaiGuideFragment.class);
+        aVar.setFullyCustomizedFaceLoginFragment(BaseFaceLoginFragment.class);
+        aVar.setDialogHelper(HavanaDialogHelper.class);
+        AliUserLogin.setLoginAppreanceExtions(aVar);
     }
 
     public boolean A() {
@@ -465,7 +461,7 @@ public class HavanaProxy {
                         ew0 f2 = ew0.f();
                         int x = HavanaProxy.this.x();
                         f2.l(x, action + AltriaXLaunchTime.SPACE + HavanaProxy.e);
-                        int i = C1337c.a[valueOf.ordinal()];
+                        int i = c.a[valueOf.ordinal()];
                         if (i == 1) {
                             HavanaProxy.this.J();
                         } else if (i == 2) {
@@ -515,7 +511,7 @@ public class HavanaProxy {
         }
         HashMap hashMap = new HashMap();
         hashMap.put(ParamsConstants.Key.PARAM_H5ONLY, "1");
-        ((UccService) AliMemberSDK.getService(UccService.class)).trustLogin(activity, "taobao", hashMap, new C1336b(this, uccTrustLoginListener));
+        ((UccService) AliMemberSDK.getService(UccService.class)).trustLogin(activity, "taobao", hashMap, new b(this, uccTrustLoginListener));
     }
 
     public void Q(ILoginListener iLoginListener) {

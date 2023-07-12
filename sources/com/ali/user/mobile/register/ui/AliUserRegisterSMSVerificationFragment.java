@@ -132,7 +132,7 @@ public class AliUserRegisterSMSVerificationFragment extends BaseFragment impleme
 
     @Override // com.ali.user.mobile.base.ui.BaseFragment
     protected int getLayoutContent() {
-        return R.C2965layout.aliuser_fragment_register_sms_verification;
+        return R.layout.aliuser_fragment_register_sms_verification;
     }
 
     @Override // com.ali.user.mobile.base.ui.BaseFragment, com.ali.user.mobile.login.ui.BaseLoginView
@@ -279,7 +279,7 @@ public class AliUserRegisterSMSVerificationFragment extends BaseFragment impleme
     @Override // androidx.fragment.app.Fragment
     public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
         menu.clear();
-        menuInflater.inflate(R.C2966menu.aliuser_menu, menu);
+        menuInflater.inflate(R.menu.aliuser_menu, menu);
         if (!TextUtils.isEmpty(this.mVideoUrl)) {
             try {
                 menu.findItem(R.id.aliuser_menu_item_help).setTitle(new SpannableString(getResources().getString(R.string.aliuser_sms_need_help)));

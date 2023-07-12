@@ -30,7 +30,7 @@ final class ChannelsKt__Channels_commonKt$consumesAll$1 extends Lambda implement
         Throwable th2 = null;
         for (ReceiveChannel receiveChannel : this.$channels) {
             try {
-                C8648b.j(receiveChannel, th);
+                b.j(receiveChannel, th);
             } catch (Throwable th3) {
                 if (th2 == null) {
                     th2 = th3;

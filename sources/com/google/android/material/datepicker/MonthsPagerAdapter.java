@@ -118,7 +118,7 @@ class MonthsPagerAdapter extends RecyclerView.Adapter<ViewHolder> {
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     @NonNull
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        LinearLayout linearLayout = (LinearLayout) LayoutInflater.from(viewGroup.getContext()).inflate(R.C4818layout.mtrl_calendar_month_labeled, viewGroup, false);
+        LinearLayout linearLayout = (LinearLayout) LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.mtrl_calendar_month_labeled, viewGroup, false);
         if (MaterialDatePicker.isFullscreen(viewGroup.getContext())) {
             linearLayout.setLayoutParams(new RecyclerView.LayoutParams(-1, this.itemHeight));
             return new ViewHolder(linearLayout, true);

@@ -12,14 +12,13 @@ class NetworkStatCache implements INetworkStat {
     private Map<String, String> a;
 
     /* compiled from: Taobao */
-    /* renamed from: anetwork.channel.stat.NetworkStatCache$a */
     /* loaded from: classes.dex */
-    private static class C0245a {
+    private static class a {
         public static NetworkStatCache a = new NetworkStatCache();
     }
 
     public static NetworkStatCache a() {
-        return C0245a.a;
+        return a.a;
     }
 
     @Override // anetwork.channel.stat.INetworkStat

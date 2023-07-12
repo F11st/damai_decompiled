@@ -28,7 +28,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.ap2;
@@ -40,10 +40,9 @@ public final class NestedBannerPresent extends AbsPresenter<GenericItem<ItemValu
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.NestedBannerPresent$a */
     /* loaded from: classes7.dex */
-    public static final class C3456a extends TypeReference<HashMap<String, Action>> {
-        C3456a() {
+    public static final class a extends TypeReference<HashMap<String, Action>> {
+        a() {
         }
     }
 
@@ -63,7 +62,7 @@ public final class NestedBannerPresent extends AbsPresenter<GenericItem<ItemValu
         try {
             JSONObject jSONObject = nestedBannerBean.action;
             if (jSONObject != null) {
-                return (HashMap) JSON.parseObject(jSONObject.toJSONString(), new C3456a(), new Feature[0]);
+                return (HashMap) JSON.parseObject(jSONObject.toJSONString(), new a(), new Feature[0]);
             }
             return null;
         } catch (Exception e) {
@@ -150,7 +149,7 @@ public final class NestedBannerPresent extends AbsPresenter<GenericItem<ItemValu
                     if (trackInfo.getSpmd() != null) {
                         String spmd = trackInfo.getSpmd();
                         b41.h(spmd, "spmd");
-                        p = C8604o.p(spmd, JSMethod.NOT_SET, false, 2, null);
+                        p = o.p(spmd, JSMethod.NOT_SET, false, 2, null);
                         if (p) {
                             trackInfo.setSpmd(trackInfo.getSpmd() + i);
                         }
@@ -192,7 +191,7 @@ public final class NestedBannerPresent extends AbsPresenter<GenericItem<ItemValu
         if (trackInfo.getSpmd() != null) {
             String spmd = trackInfo.getSpmd();
             b41.h(spmd, "spmd");
-            p = C8604o.p(spmd, JSMethod.NOT_SET, false, 2, null);
+            p = o.p(spmd, JSMethod.NOT_SET, false, 2, null);
             if (p) {
                 trackInfo.setSpmd(trackInfo.getSpmd() + i);
             }

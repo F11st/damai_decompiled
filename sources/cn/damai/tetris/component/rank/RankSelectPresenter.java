@@ -20,10 +20,10 @@ import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tb.C9548pb;
 import tb.b41;
 import tb.d23;
 import tb.ja;
+import tb.pb;
 import tb.z20;
 
 /* compiled from: Taobao */
@@ -59,7 +59,7 @@ public final class RankSelectPresenter extends BasePresenter<RankSelectModel, Ra
         HashMap<String, String> g = d23.g();
         d23.h(g, "city", getRankCity().cityName);
         d23.h(g, "titlelabel", rankSelectItemBean != null ? rankSelectItemBean.shortName : null);
-        d23.h(g, C9548pb.CNT_CONTENT_ID, rankSelectItemBean != null ? rankSelectItemBean.id : null);
+        d23.h(g, pb.CNT_CONTENT_ID, rankSelectItemBean != null ? rankSelectItemBean.id : null);
         TrackType trackType = TrackType.expose;
         b41.f(view);
         View rootView = view.getRootView();
@@ -78,7 +78,7 @@ public final class RankSelectPresenter extends BasePresenter<RankSelectModel, Ra
         d23.h(g, "city", getRankCity().cityName);
         b41.f(rankSelectItemBean);
         d23.h(g, "titlelabel", rankSelectItemBean.shortName);
-        d23.h(g, C9548pb.CNT_CONTENT_ID, rankSelectItemBean.id);
+        d23.h(g, pb.CNT_CONTENT_ID, rankSelectItemBean.id);
         TrackType trackType = TrackType.click;
         String str = ((RankSelectModel) this.mModel).getTrackInfo().trackB;
         userTrack(trackType, null, str, "theme_ranklist", "item_" + i, g, true);

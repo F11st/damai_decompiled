@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8148c;
 import io.reactivex.MaybeObserver;
 import io.reactivex.Scheduler;
+import io.reactivex.c;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import java.util.concurrent.TimeUnit;
@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeTimer extends AbstractC8148c<Long> {
+public final class MaybeTimer extends c<Long> {
     final long delay;
     final Scheduler scheduler;
     final TimeUnit unit;
@@ -51,7 +51,7 @@ public final class MaybeTimer extends AbstractC8148c<Long> {
         this.scheduler = scheduler;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super Long> maybeObserver) {
         TimerDisposable timerDisposable = new TimerDisposable(maybeObserver);
         maybeObserver.onSubscribe(timerDisposable);

@@ -1,7 +1,7 @@
 package com.alient.onearch.adapter.component.tab.generic.vertical;
 
 import android.view.View;
-import com.alibaba.android.vlayout.AbstractC3289a;
+import com.alibaba.android.vlayout.a;
 import com.alibaba.android.vlayout.layout.StickyLayoutHelper;
 import com.alibaba.fastjson.JSONArray;
 import com.alient.onearch.adapter.component.header.sticky.StickyHeaderFeature;
@@ -95,7 +95,7 @@ public class VerticalTabPresenter extends BaseTabPresenter<GenericItem<ItemValue
         b41.i(list3, "childComponentNodes");
         ((VerticalTabView) getView()).setChildComponentData(getItem(), list, list2, list3);
         VBaseAdapter<IItem<ItemValue>, VBaseHolder<IItem<ItemValue>, GenericRenderConfig>> adapter = ((GenericItem) getItem()).getComponent().getAdapter();
-        AbstractC3289a layoutHelper = adapter == null ? null : adapter.getLayoutHelper();
+        a layoutHelper = adapter == null ? null : adapter.getLayoutHelper();
         StickyLayoutHelper stickyLayoutHelper = layoutHelper instanceof StickyLayoutHelper ? (StickyLayoutHelper) layoutHelper : null;
         if (stickyLayoutHelper != null) {
             stickyLayoutHelper.i(this);

@@ -19,7 +19,7 @@ import com.taobao.weex.ui.component.WXVContainer;
 import com.taobao.weex.utils.WXLogUtils;
 import com.taobao.weex.utils.WXUtils;
 import java.util.HashMap;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
@@ -35,10 +35,9 @@ public class WXMask extends WXVContainer {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.component.WXMask$a */
     /* loaded from: classes15.dex */
-    public class View$OnAttachStateChangeListenerC3029a implements View.OnAttachStateChangeListener {
-        View$OnAttachStateChangeListenerC3029a() {
+    public class a implements View.OnAttachStateChangeListener {
+        a() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -99,7 +98,7 @@ public class WXMask extends WXVContainer {
     }
 
     private void initWindow(final WXMaskView wXMaskView) {
-        this.mWindowManager = (WindowManager) wXMaskView.getContext().getSystemService(C9796v.ATTACH_MODE_WINDOW);
+        this.mWindowManager = (WindowManager) wXMaskView.getContext().getSystemService(v.ATTACH_MODE_WINDOW);
         FrameLayout frameLayout = new FrameLayout(wXMaskView.getContext()) { // from class: com.alibaba.aliweex.adapter.component.WXMask.1
             @Override // android.view.ViewGroup, android.view.View
             public boolean dispatchKeyEvent(KeyEvent keyEvent) {
@@ -139,7 +138,7 @@ public class WXMask extends WXVContainer {
                 }
             }
         });
-        this.mFrameLayout.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC3029a());
+        this.mFrameLayout.addOnAttachStateChangeListener(new a());
         WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
         layoutParams.width = -1;
         layoutParams.height = -1;

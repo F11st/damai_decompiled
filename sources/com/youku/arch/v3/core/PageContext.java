@@ -22,9 +22,10 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
-import kotlinx.coroutines.C8658e;
 import kotlinx.coroutines.CoroutineExceptionHandler;
 import kotlinx.coroutines.CoroutineScope;
+import kotlinx.coroutines.e;
+import kotlinx.coroutines.g;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -239,7 +240,7 @@ public final class PageContext extends ContextWrapper {
             return;
         }
         b41.i(function0, "action");
-        C8658e.b(this.loaderCoroutineScope, null, null, new PageContext$runOnLoaderThread$1(function0, null), 3, null);
+        g.b(this.loaderCoroutineScope, null, null, new PageContext$runOnLoaderThread$1(function0, null), 3, null);
     }
 
     @Override // com.youku.arch.v3.core.ContextWrapper, com.youku.arch.v3.core.IContext
@@ -266,7 +267,7 @@ public final class PageContext extends ContextWrapper {
         }
         b41.i(function0, "action");
         if (d61.i(this.renderCoroutineScope.getCoroutineContext())) {
-            C8658e.b(this.renderCoroutineScope, null, null, new PageContext$runOnUIThread$1(function0, null), 3, null);
+            g.b(this.renderCoroutineScope, null, null, new PageContext$runOnUIThread$1(function0, null), 3, null);
             return;
         }
         EventDispatcher eventDispatcher = getEventDispatcher();
@@ -290,7 +291,7 @@ public final class PageContext extends ContextWrapper {
         if (b41.d(Looper.myLooper(), Looper.getMainLooper())) {
             function0.invoke();
         } else if (d61.i(this.renderCoroutineScope.getCoroutineContext())) {
-            C8658e.c(this.renderCoroutineScope.getCoroutineContext(), new PageContext$runOnUIThreadLocked$1(function0, null));
+            e.c(this.renderCoroutineScope.getCoroutineContext(), new PageContext$runOnUIThreadLocked$1(function0, null));
         } else {
             EventDispatcher eventDispatcher = getEventDispatcher();
             if (eventDispatcher == null) {

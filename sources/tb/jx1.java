@@ -3,7 +3,6 @@ package tb;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.collections.C8215n;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Class;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Function;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Property;
@@ -162,7 +161,7 @@ public final class jx1 {
         if (supertypeList == null) {
             List<Integer> supertypeIdList = protoBuf$Class.getSupertypeIdList();
             b41.h(supertypeIdList, "supertypeIdList");
-            q = C8215n.q(supertypeIdList, 10);
+            q = kotlin.collections.n.q(supertypeIdList, 10);
             supertypeList = new ArrayList<>(q);
             for (Integer num : supertypeIdList) {
                 b41.h(num, AdvanceSetting.NETWORK_TYPE);
@@ -227,7 +226,7 @@ public final class jx1 {
         if (upperBoundList == null) {
             List<Integer> upperBoundIdList = protoBuf$TypeParameter.getUpperBoundIdList();
             b41.h(upperBoundIdList, "upperBoundIdList");
-            q = C8215n.q(upperBoundIdList, 10);
+            q = kotlin.collections.n.q(upperBoundIdList, 10);
             upperBoundList = new ArrayList<>(q);
             for (Integer num : upperBoundIdList) {
                 b41.h(num, AdvanceSetting.NETWORK_TYPE);

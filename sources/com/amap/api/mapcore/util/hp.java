@@ -12,9 +12,8 @@ import tb.lu2;
 public final class hp {
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.hp$a */
     /* loaded from: classes10.dex */
-    static class C4578a {
+    static class a {
         public static hp a = new hp();
     }
 
@@ -97,27 +96,27 @@ public final class hp {
             }
             str3 = null;
         }
-        gm a = a(str3, list);
-        if (z && a == null) {
+        gm a2 = a(str3, list);
+        if (z && a2 == null) {
             return false;
         }
         String str4 = str + "<br />" + str3;
-        JSONArray a2 = a(str2);
+        JSONArray a3 = a(str2);
         JSONObject jSONObject = new JSONObject();
         try {
             jSONObject.put("crashStack", str4);
-            jSONObject.put("backStacks", a2);
+            jSONObject.put("backStacks", a3);
         } catch (Throwable unused) {
         }
         String jSONObject2 = jSONObject.toString();
         if (TextUtils.isEmpty(jSONObject2)) {
             return false;
         }
-        if (!z && a == null) {
+        if (!z && a2 == null) {
             hd.b(context, gmVar, jSONObject2, "NATIVE_APP_CRASH_CLS_NAME", "NATIVE_CRASH_MHD_NAME");
             return true;
         }
-        hd.a(context, a, jSONObject2, "NATIVE_CRASH_CLS_NAME", "NATIVE_CRASH_MHD_NAME");
+        hd.a(context, a2, jSONObject2, "NATIVE_CRASH_CLS_NAME", "NATIVE_CRASH_MHD_NAME");
         return true;
     }
 }

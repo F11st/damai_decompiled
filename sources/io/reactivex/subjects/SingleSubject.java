@@ -1,9 +1,9 @@
 package io.reactivex.subjects;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.SingleObserver;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.functions.ObjectHelper;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
@@ -11,7 +11,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SingleSubject<T> extends AbstractC8152e<T> implements SingleObserver<T> {
+public final class SingleSubject<T> extends e<T> implements SingleObserver<T> {
     static final SingleDisposable[] e = new SingleDisposable[0];
     static final SingleDisposable[] f = new SingleDisposable[0];
     T c;
@@ -131,7 +131,7 @@ public final class SingleSubject<T> extends AbstractC8152e<T> implements SingleO
         }
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(@NonNull SingleObserver<? super T> singleObserver) {
         SingleDisposable<T> singleDisposable = new SingleDisposable<>(singleObserver, this);
         singleObserver.onSubscribe(singleDisposable);

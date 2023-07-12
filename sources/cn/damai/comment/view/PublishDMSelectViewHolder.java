@@ -14,12 +14,12 @@ import cn.damai.comment.R$drawable;
 import cn.damai.comment.R$id;
 import cn.damai.comment.bean.DmInfo;
 import cn.damai.comment.view.PublishDMSelectViewHolder;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.share.generateimage.DMShareMessage;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
-import com.taobao.phenix.bitmap.C6849b;
+import com.taobao.phenix.bitmap.b;
 import com.youku.resource.utils.CircleBorderBitmapProcessor;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -66,7 +66,7 @@ public final class PublishDMSelectViewHolder extends RecyclerView.ViewHolder {
             }
         });
         checkBox.setClickable(false);
-        this.f = new BitmapDrawable(new CircleBorderBitmapProcessor(t60.a(imageView.getContext(), 1.0f), ColorStateList.valueOf(imageView.getResources().getColor(R$color.color_D8D8D8))).process("", new C6849b(), BitmapFactory.decodeResource(checkBox.getResources(), R$drawable.dm_profile_placeholder)));
+        this.f = new BitmapDrawable(new CircleBorderBitmapProcessor(t60.a(imageView.getContext(), 1.0f), ColorStateList.valueOf(imageView.getResources().getColor(R$color.color_D8D8D8))).process("", new b(), BitmapFactory.decodeResource(checkBox.getResources(), R$drawable.dm_profile_placeholder)));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -92,7 +92,7 @@ public final class PublishDMSelectViewHolder extends RecyclerView.ViewHolder {
         }
         b41.i(dmInfo, DMShareMessage.KEY_EVALUATE_DMINFO);
         this.e = dmInfo;
-        C0504a.b().c(dmInfo.dmHeadImageUrl).j(this.f).d(this.f).k(new CircleBorderBitmapProcessor(t60.a(this.b.getContext(), 1.0f), ColorStateList.valueOf(this.b.getResources().getColor(R$color.color_D8D8D8)))).g(this.b);
+        a.b().c(dmInfo.dmHeadImageUrl).j(this.f).d(this.f).k(new CircleBorderBitmapProcessor(t60.a(this.b.getContext(), 1.0f), ColorStateList.valueOf(this.b.getResources().getColor(R$color.color_D8D8D8)))).g(this.b);
         this.d.setText(dmInfo.dmName);
         this.c.setChecked(z);
     }

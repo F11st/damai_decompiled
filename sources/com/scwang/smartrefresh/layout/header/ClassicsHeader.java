@@ -63,9 +63,8 @@ public class ClassicsHeader extends InternalClassics<ClassicsHeader> implements 
     public static String REFRESH_HEADER_SECONDARY = null;
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.layout.header.ClassicsHeader$a */
     /* loaded from: classes7.dex */
-    static /* synthetic */ class C6193a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -124,7 +123,7 @@ public class ClassicsHeader extends InternalClassics<ClassicsHeader> implements 
     public void onStateChanged(@NonNull RefreshLayout refreshLayout, @NonNull RefreshState refreshState, @NonNull RefreshState refreshState2) {
         ImageView imageView = this.mArrowView;
         TextView textView = this.mLastUpdateText;
-        switch (C6193a.a[refreshState2.ordinal()]) {
+        switch (a.a[refreshState2.ordinal()]) {
             case 1:
                 textView.setVisibility(this.mEnableLastTime ? 0 : 8);
                 break;

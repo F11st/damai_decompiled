@@ -1,7 +1,7 @@
 package com.alient.onearch.adapter.responsive.util;
 
 import android.app.Activity;
-import com.alibaba.android.vlayout.AbstractC3289a;
+import com.alibaba.android.vlayout.a;
 import com.youku.arch.v3.IComponent;
 import com.youku.arch.v3.IContainer;
 import com.youku.arch.v3.IItem;
@@ -87,7 +87,7 @@ public final class ResponsiveLayoutDataUtil {
 
     public final void responsiveLayoutHelper(@NotNull IComponent<ComponentValue> iComponent) {
         VBaseAdapter<IItem<ItemValue>, VBaseHolder<IItem<ItemValue>, GenericRenderConfig>> adapter;
-        AbstractC3289a layoutHelper;
+        a layoutHelper;
         b41.i(iComponent, "component");
         Activity activity = iComponent.getPageContext().getActivity();
         if (activity == null || (adapter = iComponent.getAdapter()) == null || (layoutHelper = adapter.getLayoutHelper()) == null) {

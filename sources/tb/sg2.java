@@ -9,13 +9,12 @@ import java.util.List;
 public class sg2 {
     private static final ThreadLocal<sg2> d = new ThreadLocal<>();
     private long a;
-    private List<C9694a> b = new ArrayList();
+    private List<a> b = new ArrayList();
     private long c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.sg2$a */
     /* loaded from: classes11.dex */
-    public static class C9694a {
+    public static class a {
     }
 
     public static double a(long j) {
@@ -32,11 +31,11 @@ public class sg2 {
     public static void c(String str) {
         if (wz2.b()) {
             try {
-                C9694a c9694a = new C9694a();
+                a aVar = new a();
                 ThreadLocal<sg2> threadLocal = d;
                 long j = threadLocal.get().c;
                 e();
-                threadLocal.get().b.add(c9694a);
+                threadLocal.get().b.add(aVar);
             } catch (Throwable th) {
                 th.printStackTrace();
             }

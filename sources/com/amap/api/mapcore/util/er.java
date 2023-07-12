@@ -33,9 +33,9 @@ public class er extends es {
         activeNetworkInfo.isConnectedOrConnecting();
     }
 
-    private Bitmap c(dc.C4503a c4503a) {
+    private Bitmap c(dc.a aVar) {
         try {
-            Tile tile = this.e.getTile(c4503a.a, c4503a.b, c4503a.c);
+            Tile tile = this.e.getTile(aVar.a, aVar.b, aVar.c);
             if (tile == null || tile == TileProvider.NO_TILE) {
                 return null;
             }
@@ -52,6 +52,6 @@ public class er extends es {
 
     @Override // com.amap.api.mapcore.util.es, com.amap.api.mapcore.util.et
     protected Bitmap a(Object obj) {
-        return c((dc.C4503a) obj);
+        return c((dc.a) obj);
     }
 }

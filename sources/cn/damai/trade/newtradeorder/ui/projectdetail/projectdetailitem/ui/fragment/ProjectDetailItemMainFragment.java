@@ -40,8 +40,7 @@ import cn.damai.common.OrangeConfigCenter;
 import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.commonbusiness.bean.FocusEvent;
@@ -331,47 +330,46 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         private static transient /* synthetic */ IpChange $ipChange;
 
         @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
-        public void onScrollStateChanged(RecyclerView recyclerView, int i) {
+        public void onScrollStateChanged(RecyclerView recyclerView, int i2) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1067239650")) {
-                ipChange.ipc$dispatch("1067239650", new Object[]{this, recyclerView, Integer.valueOf(i)});
+                ipChange.ipc$dispatch("1067239650", new Object[]{this, recyclerView, Integer.valueOf(i2)});
                 return;
             }
-            super.onScrollStateChanged(recyclerView, i);
-            ProjectDetailItemMainFragment.this.mIsScrolled = i != 0;
+            super.onScrollStateChanged(recyclerView, i2);
+            ProjectDetailItemMainFragment.this.mIsScrolled = i2 != 0;
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
-        public void onScrolled(RecyclerView recyclerView, int i, int i2) {
+        public void onScrolled(RecyclerView recyclerView, int i2, int i3) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-298432259")) {
-                ipChange.ipc$dispatch("-298432259", new Object[]{this, recyclerView, Integer.valueOf(i), Integer.valueOf(i2)});
+                ipChange.ipc$dispatch("-298432259", new Object[]{this, recyclerView, Integer.valueOf(i2), Integer.valueOf(i3)});
                 return;
             }
-            super.onScrolled(recyclerView, i, i2);
+            super.onScrolled(recyclerView, i2, i3);
             ProjectDetailItemMainFragment.this.updateTitleBarStyle();
             if (ProjectDetailItemMainFragment.this.mIsScrolled) {
-                boolean z = i2 > 0;
+                boolean z2 = i3 > 0;
                 ProjectDetailItemMainFragment.this.updateTitleBgAndAnchorIndicator();
-                ProjectDetailItemMainFragment.this.fixAnchorSelection(z);
+                ProjectDetailItemMainFragment.this.fixAnchorSelection(z2);
             }
         }
     };
     public String mButtomText = "";
     private List<View> exposureViewList = new ArrayList();
-    private CalendarsResolver.RemindMeListener calendRemindMeListener = new C2300h0();
-    private GuideUtProvider mGuideUtProvider = new C2304j0();
-    ShareManagerImpl mShareManagerImpl = new C2318q0();
+    private CalendarsResolver.RemindMeListener calendRemindMeListener = new h0();
+    private GuideUtProvider mGuideUtProvider = new j0();
+    ShareManagerImpl mShareManagerImpl = new q0();
     ProjectDialogShowListener dialogShowListener = new u0();
     ScreenShotDetector.IScreenShotExtraListener extraListener = new v0();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2285a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2285a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -385,19 +383,18 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             if (posterPicInfoList == null || posterPicInfoList.isEmpty()) {
                 return;
             }
-            C0529c.e().x(pp2.u().G0(ProjectDetailItemMainFragment.this.mProjectId));
+            cn.damai.common.user.c.e().x(pp2.u().G0(ProjectDetailItemMainFragment.this.mProjectId));
             ProjectDetailItemMainFragment projectDetailItemMainFragment = ProjectDetailItemMainFragment.this;
             tv1.l(projectDetailItemMainFragment.mProjectDetailActivity, projectDetailItemMainFragment.mProjectId, posterPicInfoList, 0);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$a0 */
     /* loaded from: classes8.dex */
-    public class C2286a0 implements NcovPromotionFragment.OnConfirmClickListener {
+    public class a0 implements NcovPromotionFragment.OnConfirmClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2286a0() {
+        a0() {
         }
 
         @Override // cn.damai.commonbusiness.seatbiz.promotion.NcovPromotionFragment.OnConfirmClickListener
@@ -433,12 +430,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2287b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2287b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -448,7 +444,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             if (AndroidInstantRuntime.support(ipChange, "1750524367")) {
                 ipChange.ipc$dispatch("1750524367", new Object[]{this, view});
             } else if (ProjectDetailItemMainFragment.this.mProjectItemDataBean != null) {
-                C0529c.e().x(pp2.u().E0(ProjectDetailItemMainFragment.this.mProjectId));
+                cn.damai.common.user.c.e().x(pp2.u().E0(ProjectDetailItemMainFragment.this.mProjectId));
                 List<String> itemPromotionTag = ProjectDetailItemMainFragment.this.mProjectItemDataBean.getItemPromotionTag();
                 if (ProjectDetailItemMainFragment.this.mProjectItemDataBean.promotionList != null && !cb2.d(ProjectDetailItemMainFragment.this.mProjectItemDataBean.promotionList)) {
                     Iterator<PromotionItemBean> it = ProjectDetailItemMainFragment.this.mProjectItemDataBean.promotionList.iterator();
@@ -474,12 +470,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$b0 */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2288b0 implements View.OnClickListener {
+    public class b0 implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2288b0() {
+        b0() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -508,7 +503,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             if (AndroidInstantRuntime.support(ipChange, "2012709214")) {
                 ipChange.ipc$dispatch("2012709214", new Object[]{this, view});
             } else if (ProjectDetailItemMainFragment.this.hasRecommendProject()) {
-                C0529c.e().x(pp2.u().B0(ProjectDetailItemMainFragment.this.mProjectId));
+                cn.damai.common.user.c.e().x(pp2.u().B0(ProjectDetailItemMainFragment.this.mProjectId));
                 ProjectDetailItemMainFragment.this.mHasClosedMoreRecommend = true;
                 ProjectDetailItemMainFragment.this.mFlMoreRecommendFloatLayer.setVisibility(8);
                 ProjectDetailItemMainFragment.this.scrollToRecommend();
@@ -517,12 +512,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$c */
     /* loaded from: classes8.dex */
-    public class C2289c implements ProjectTimerAndStrategyTmPromptView.ProjectPromptListener {
+    public class c implements ProjectTimerAndStrategyTmPromptView.ProjectPromptListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2289c() {
+        c() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectTimerAndStrategyTmPromptView.ProjectPromptListener
@@ -547,12 +541,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$c0 */
     /* loaded from: classes8.dex */
-    public class C2290c0 implements DMRGBUtil.OnFetchColorListener {
+    public class c0 implements DMRGBUtil.OnFetchColorListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2290c0() {
+        c0() {
         }
 
         @Override // cn.damai.commonbusiness.util.DMRGBUtil.OnFetchColorListener
@@ -570,12 +563,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$d */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2291d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2291d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -590,12 +582,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$d0 */
     /* loaded from: classes8.dex */
-    public class C2292d0 implements AliMeUtil.OnAliMeTokenListener {
+    public class d0 implements AliMeUtil.OnAliMeTokenListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2292d0() {
+        d0() {
         }
 
         @Override // cn.damai.im.AliMeUtil.OnAliMeTokenListener
@@ -629,12 +620,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$e */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2293e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2293e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -650,12 +640,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$e0 */
     /* loaded from: classes8.dex */
-    public class C2294e0 implements ProjectItemStatusHelper.OnBottomViewClickListener {
+    public class e0 implements ProjectItemStatusHelper.OnBottomViewClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2294e0() {
+        e0() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectItemStatusHelper.OnBottomViewClickListener
@@ -722,12 +711,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$f */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2295f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2295f() {
+        f() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -743,12 +731,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$f0 */
     /* loaded from: classes8.dex */
-    public class C2296f0 implements ProjectTitleBarPanel.OnUiClickListener {
+    public class f0 implements ProjectTitleBarPanel.OnUiClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2296f0() {
+        f0() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.projectheader.ProjectTitleBarPanel.OnUiClickListener
@@ -769,7 +756,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
                 ipChange.ipc$dispatch("1575630017", new Object[]{this});
                 return;
             }
-            C0529c.e().x(pp2.u().f1(ProjectDetailItemMainFragment.this.mProjectId, true));
+            cn.damai.common.user.c.e().x(pp2.u().f1(ProjectDetailItemMainFragment.this.mProjectId, true));
             if (ProjectDetailItemMainFragment.this.mIsFromPush && ProjectDetailItemMainFragment.this.mBackType != 1) {
                 DMNav.from(ProjectDetailItemMainFragment.this.mProjectDetailActivity).toUri(NavUri.b(cs.n));
             }
@@ -783,7 +770,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
                 ipChange.ipc$dispatch("-699599028", new Object[]{this});
                 return;
             }
-            C0529c.e().x(pp2.u().g1(ProjectDetailItemMainFragment.this.mProjectId, true));
+            cn.damai.common.user.c.e().x(pp2.u().g1(ProjectDetailItemMainFragment.this.mProjectId, true));
             ProjectDetailItemMainFragment projectDetailItemMainFragment = ProjectDetailItemMainFragment.this;
             tv1.b(projectDetailItemMainFragment.mProjectDetailActivity, projectDetailItemMainFragment.mProjectId, projectDetailItemMainFragment.mProjectStaticDataBean);
         }
@@ -806,12 +793,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$g */
     /* loaded from: classes8.dex */
-    public class C2297g implements ProjectSpecialBuyPromptView.SpecialBuyPromptListener {
+    public class g implements ProjectSpecialBuyPromptView.SpecialBuyPromptListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2297g() {
+        g() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectSpecialBuyPromptView.SpecialBuyPromptListener
@@ -836,12 +822,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$g0 */
     /* loaded from: classes8.dex */
-    public class C2298g0 implements ProjectItemStatusHelper.OnProjectNotExistsListener {
+    public class g0 implements ProjectItemStatusHelper.OnProjectNotExistsListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2298g0() {
+        g0() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectItemStatusHelper.OnProjectNotExistsListener
@@ -856,12 +841,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$h */
     /* loaded from: classes8.dex */
-    public class C2299h implements OnTimeCountDownListener {
+    public class h implements OnTimeCountDownListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2299h() {
+        h() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.helper.OnTimeCountDownListener
@@ -897,12 +881,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$h0 */
     /* loaded from: classes8.dex */
-    public class C2300h0 implements CalendarsResolver.RemindMeListener {
+    public class h0 implements CalendarsResolver.RemindMeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2300h0() {
+        h0() {
         }
 
         @Override // cn.damai.commonbusiness.calendar.remind.CalendarsResolver.RemindMeListener
@@ -912,7 +895,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
                 ipChange.ipc$dispatch("1051736854", new Object[]{this});
                 return;
             }
-            C0529c.e().x(pp2.u().n(ProjectDetailItemMainFragment.this.mProjectId));
+            cn.damai.common.user.c.e().x(pp2.u().n(ProjectDetailItemMainFragment.this.mProjectId));
             ProjectDetailItemMainFragment.this.timerAndStagoryView.updateRemindMeBtnText(true);
             qv1.f(ProjectDetailItemMainFragment.this.mProjectDetailActivity, "添加日历提醒成功", "开抢前10分钟将收到手机日历提醒，可在系统日历中更改提醒时间");
         }
@@ -924,19 +907,18 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
                 ipChange.ipc$dispatch("-390678812", new Object[]{this});
                 return;
             }
-            C0529c.e().x(pp2.u().p(ProjectDetailItemMainFragment.this.mProjectId));
+            cn.damai.common.user.c.e().x(pp2.u().p(ProjectDetailItemMainFragment.this.mProjectId));
             ProjectDetailItemMainFragment.this.timerAndStagoryView.updateRemindMeBtnText(false);
             ToastUtil.i("取消提醒成功");
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$i */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2301i implements View.OnClickListener {
+    public class i implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2301i() {
+        i() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -952,12 +934,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$i0 */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2302i0 implements View.OnClickListener {
+    public class i0 implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2302i0() {
+        i0() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -974,12 +955,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$j */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2303j implements View.OnClickListener {
+    public class j implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2303j() {
+        j() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -989,7 +969,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
                 ipChange.ipc$dispatch("1460978135", new Object[]{this, view});
             } else if (ProjectDetailItemMainFragment.this.mProjectStaticDataBean == null || ProjectDetailItemMainFragment.this.mProjectStaticDataBean.getItemBase() == null || !"true".equals(ProjectDetailItemMainFragment.this.mProjectStaticDataBean.getItemBase().getHasSkuPopup())) {
             } else {
-                C0529c.e().x(pp2.u().F0(ProjectDetailItemMainFragment.this.mProjectId));
+                cn.damai.common.user.c.e().x(pp2.u().F0(ProjectDetailItemMainFragment.this.mProjectId));
                 if (ProjectDetailItemMainFragment.this.isLogin()) {
                     ProjectDetailItemMainFragment.this.popupSkuByPerformInfo();
                     hw1.f(false);
@@ -1001,12 +981,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$j0 */
     /* loaded from: classes8.dex */
-    public class C2304j0 implements GuideUtProvider {
+    public class j0 implements GuideUtProvider {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2304j0() {
+        j0() {
         }
 
         @Override // cn.damai.wantsee.GuideUtProvider
@@ -1044,12 +1023,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$k */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2305k implements View.OnClickListener {
+    public class k implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2305k() {
+        k() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -1067,12 +1045,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$k0 */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC2306k0 implements DialogInterface.OnClickListener {
+    public class k0 implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC2306k0() {
+        k0() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -1082,18 +1059,17 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
                 ipChange.ipc$dispatch("1488337504", new Object[]{this, dialogInterface, Integer.valueOf(i)});
             } else if (ProjectDetailItemMainFragment.this.getContext() != null) {
                 ProjectDetailItemMainFragment.this.getContext().startActivity(vl1.a(ProjectDetailItemMainFragment.this.getContext()));
-                C0529c.e().x(pp2.u().w(ProjectDetailItemMainFragment.this.mProjectId));
+                cn.damai.common.user.c.e().x(pp2.u().w(ProjectDetailItemMainFragment.this.mProjectId));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$l */
     /* loaded from: classes8.dex */
-    public class C2307l implements OnRecommendItemClickListener {
+    public class l implements OnRecommendItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2307l() {
+        l() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.listeners.OnRecommendItemClickListener
@@ -1122,13 +1098,12 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$l0 */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnDismissListenerC2308l0 implements DialogInterface.OnDismissListener {
+    public class l0 implements DialogInterface.OnDismissListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ long a;
 
-        DialogInterface$OnDismissListenerC2308l0(long j) {
+        l0(long j) {
             this.a = j;
         }
 
@@ -1144,12 +1119,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$m */
     /* loaded from: classes8.dex */
-    public class C2309m implements OnItemExtendInfoItemClickListener {
+    public class m implements OnItemExtendInfoItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2309m() {
+        m() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.listeners.OnItemExtendInfoItemClickListener
@@ -1176,17 +1150,16 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
                 return;
             }
             ProjectDetailItemMainFragment.this.onMoreExtendInfoBtnClickListener(i, -1);
-            ProjectDetailItemMainFragment.this.startWantSeeGuideTimer(WantSeeGuideTips.AbstractC1546b.C1549c.INSTANCE);
+            ProjectDetailItemMainFragment.this.startWantSeeGuideTimer(WantSeeGuideTips.b.c.INSTANCE);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$m0 */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2310m0 implements View.OnClickListener {
+    public class m0 implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2310m0(ProjectDetailItemMainFragment projectDetailItemMainFragment) {
+        m0(ProjectDetailItemMainFragment projectDetailItemMainFragment) {
         }
 
         @Override // android.view.View.OnClickListener
@@ -1199,12 +1172,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$n */
     /* loaded from: classes8.dex */
-    public class C2311n implements OnCommonProblemsListener {
+    public class n implements OnCommonProblemsListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2311n() {
+        n() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.listeners.OnSectionMoreClickListener
@@ -1214,7 +1186,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
                 ipChange.ipc$dispatch("-24221780", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3)});
                 return;
             }
-            C0529c.e().x(pp2.u().m0(ProjectDetailItemMainFragment.this.mProjectId));
+            cn.damai.common.user.c.e().x(pp2.u().m0(ProjectDetailItemMainFragment.this.mProjectId));
             ProjectDetailItemMainFragment.this.setAliMeParams(AliMeUtil.FROM_PROJECT_DETAIL, "");
             ProjectDetailItemMainFragment.this.getAliMeTokenAndEnter();
         }
@@ -1226,19 +1198,18 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
                 ipChange.ipc$dispatch("1775344195", new Object[]{this, Integer.valueOf(i), str});
                 return;
             }
-            C0529c.e().x(pp2.u().l0(ProjectDetailItemMainFragment.this.mProjectId, i));
+            cn.damai.common.user.c.e().x(pp2.u().l0(ProjectDetailItemMainFragment.this.mProjectId, i));
             ProjectDetailItemMainFragment.this.setAliMeParams(AliMeUtil.FROM_PROJECT_COMMON_PROBLEM, str);
             ProjectDetailItemMainFragment.this.getAliMeTokenAndEnter();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$n0 */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2312n0 implements View.OnClickListener {
+    public class n0 implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2312n0() {
+        n0() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -1254,12 +1225,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$o */
     /* loaded from: classes8.dex */
-    public class C2313o implements OnEvaluateMineListener {
+    public class o implements OnEvaluateMineListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2313o() {
+        o() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.listeners.OnEvaluateMineListener
@@ -1275,12 +1245,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$o0 */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2314o0 implements View.OnClickListener {
+    public class o0 implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2314o0() {
+        o0() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -1296,12 +1265,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$p */
     /* loaded from: classes8.dex */
-    public class C2315p implements OnDiscussionClickListener {
+    public class p implements OnDiscussionClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2315p(ProjectDetailItemMainFragment projectDetailItemMainFragment) {
+        p(ProjectDetailItemMainFragment projectDetailItemMainFragment) {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.listeners.OnDiscussionClickListener
@@ -1314,12 +1282,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$p0 */
     /* loaded from: classes8.dex */
-    public class C2316p0 implements ProjectDialogHelper.ProjectDialogListener {
+    public class p0 implements ProjectDialogHelper.ProjectDialogListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2316p0() {
+        p0() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectDialogHelper.ProjectDialogListener
@@ -1334,12 +1301,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$q */
     /* loaded from: classes8.dex */
-    public class C2317q implements OnSectionMoreClickListener {
+    public class q implements OnSectionMoreClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2317q() {
+        q() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.listeners.OnSectionMoreClickListener
@@ -1348,14 +1314,14 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             if (AndroidInstantRuntime.support(ipChange, "609830959")) {
                 ipChange.ipc$dispatch("609830959", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3)});
             } else if (i == 2) {
-                C0529c.e().x(pp2.u().n0(ProjectDetailItemMainFragment.this.mProjectId));
+                cn.damai.common.user.c.e().x(pp2.u().n0(ProjectDetailItemMainFragment.this.mProjectId));
                 ProjectDetailItemMainFragment projectDetailItemMainFragment = ProjectDetailItemMainFragment.this;
                 tv1.n(projectDetailItemMainFragment.mProjectDetailActivity, projectDetailItemMainFragment.mProjectId, projectDetailItemMainFragment.getIpId(), ProjectDetailItemMainFragment.this.getTourId(), "");
             } else if (i == 3) {
-                C0529c.e().x(pp2.u().D0(ProjectDetailItemMainFragment.this.mProjectId));
+                cn.damai.common.user.c.e().x(pp2.u().D0(ProjectDetailItemMainFragment.this.mProjectId));
                 ProjectDetailItemMainFragment.this.showNoticeFragment(0);
             } else if (i == 4) {
-                C0529c.e().x(pp2.u().U0(ProjectDetailItemMainFragment.this.mProjectId));
+                cn.damai.common.user.c.e().x(pp2.u().U0(ProjectDetailItemMainFragment.this.mProjectId));
                 ProjectDetailItemMainFragment.this.showNoticeFragment(1);
             } else if (i == 0) {
                 ProjectDetailItemMainFragment.this.onMoreExtendInfoBtnClickListener(i2, i3);
@@ -1364,12 +1330,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$q0 */
     /* loaded from: classes8.dex */
-    public class C2318q0 implements ShareManagerImpl {
+    public class q0 implements ShareManagerImpl {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2318q0() {
+        q0() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.helper.ShareManagerImpl
@@ -1413,12 +1378,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$r */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2319r implements View.OnClickListener {
+    public class r implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2319r() {
+        r() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -1434,12 +1398,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$r0 */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC2320r0 implements DialogInterface.OnClickListener {
+    public class r0 implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC2320r0() {
+        r0() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -1454,12 +1417,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$s */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2321s implements View.OnClickListener {
+    public class s implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2321s() {
+        s() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -1482,7 +1444,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
                 if (!inFieldCommentsBean.isTypeGROUP() || TextUtils.isEmpty(inFieldCommentsBean.groupJumpUrl)) {
                     return;
                 }
-                C0529c e2 = C0529c.e();
+                cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
                 pp2 u = pp2.u();
                 e2.x(u.x2(ProjectDetailItemMainFragment.this.mProjectId + "", inFieldCommentsBean, inFieldCommentsBean.index));
                 NavProxy.from(ProjectDetailItemMainFragment.this.mActivity).toUri(inFieldCommentsBean.groupJumpUrl);
@@ -1491,7 +1453,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             Bundle bundle = new Bundle();
             bundle.putString("contentId", inFieldCommentsBean.id);
             NavProxy.from(ProjectDetailItemMainFragment.this.mActivity).withExtras(bundle).toUri(INavUri.page(cs.DISCOVER_CONTENT_DETAIL));
-            C0529c e3 = C0529c.e();
+            cn.damai.common.user.c e3 = cn.damai.common.user.c.e();
             pp2 u2 = pp2.u();
             e3.x(u2.x2(ProjectDetailItemMainFragment.this.mProjectId + "", inFieldCommentsBean, inFieldCommentsBean.index));
         }
@@ -1517,12 +1479,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$t */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2322t implements View.OnClickListener {
+    public class t implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2322t() {
+        t() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -1557,12 +1518,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$u */
     /* loaded from: classes16.dex */
-    public class HandlerC2323u extends Handler {
+    public class u extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC2323u() {
+        u() {
         }
 
         @Override // android.os.Handler
@@ -1600,12 +1560,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$v */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2324v implements View.OnClickListener {
+    public class v implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2324v() {
+        v() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -1655,12 +1614,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$w */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2325w implements View.OnClickListener {
+    public class w implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2325w() {
+        w() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -1679,12 +1637,12 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     /* loaded from: classes16.dex */
     public class w0 extends CountDownTimer {
         private static transient /* synthetic */ IpChange $ipChange;
-        final /* synthetic */ WantSeeGuideTips.AbstractC1546b a;
+        final /* synthetic */ WantSeeGuideTips.b a;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        w0(long j, long j2, WantSeeGuideTips.AbstractC1546b abstractC1546b) {
+        w0(long j, long j2, WantSeeGuideTips.b bVar) {
             super(j, j2);
-            this.a = abstractC1546b;
+            this.a = bVar;
         }
 
         @Override // android.os.CountDownTimer
@@ -1717,12 +1675,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$x */
     /* loaded from: classes8.dex */
-    public class C2326x implements OnTimeCountDownListener {
+    public class x implements OnTimeCountDownListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2326x() {
+        x() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.helper.OnTimeCountDownListener
@@ -1796,7 +1753,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
                 ipChange.ipc$dispatch("1106490160", new Object[]{this});
                 return;
             }
-            C0529c.e().x(pp2.u().C0(ProjectDetailItemMainFragment.this.mProjectId));
+            cn.damai.common.user.c.e().x(pp2.u().C0(ProjectDetailItemMainFragment.this.mProjectId));
             ProjectDetailItemMainFragment.this.showProjectNoticeFragment();
         }
 
@@ -1860,7 +1817,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
                 ipChange.ipc$dispatch("-2147360939", new Object[]{this, str, str2});
                 return;
             }
-            C0529c e = C0529c.e();
+            cn.damai.common.user.c e = cn.damai.common.user.c.e();
             pp2 u = pp2.u();
             e.x(u.D1(ProjectDetailItemMainFragment.this.mProjectId + "", ProjectDetailItemMainFragment.this.getIpId(), str2));
             DMNav.from(ProjectDetailItemMainFragment.this.mActivity).toUri(str);
@@ -1883,7 +1840,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
                 ipChange.ipc$dispatch("-286614921", new Object[]{this});
                 return;
             }
-            C0529c.e().x(pp2.u().P0(ProjectDetailItemMainFragment.this.mProjectId));
+            cn.damai.common.user.c.e().x(pp2.u().P0(ProjectDetailItemMainFragment.this.mProjectId));
             ProjectDetailItemMainFragment.this.showSupportServicePopLayer();
         }
 
@@ -1944,12 +1901,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$y */
     /* loaded from: classes8.dex */
-    public class C2327y implements OnTimeCountDownListener {
+    public class y implements OnTimeCountDownListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2327y() {
+        y() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.helper.OnTimeCountDownListener
@@ -2003,19 +1959,18 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
                 ipChange.ipc$dispatch("-26194597", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(pp2.u().O0(ProjectDetailItemMainFragment.this.mProjectId));
+            cn.damai.common.user.c.e().x(pp2.u().O0(ProjectDetailItemMainFragment.this.mProjectId));
             ProjectDetailItemMainFragment.this.setAliMeParams(AliMeUtil.FROM_PROJECT_DETAIL, "");
             ProjectDetailItemMainFragment.this.getAliMeTokenAndEnter();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment$z */
     /* loaded from: classes8.dex */
-    public class C2328z implements VIPCreditExchangePopFragment.IExchangeResult {
+    public class z implements VIPCreditExchangePopFragment.IExchangeResult {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2328z() {
+        z() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.ui.fragment.VIPCreditExchangePopFragment.IExchangeResult
@@ -2065,14 +2020,14 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             ipChange.ipc$dispatch("363252408", new Object[]{this});
             return;
         }
-        int i = this.mPurchaseType;
-        if (i == 1) {
+        int i2 = this.mPurchaseType;
+        if (i2 == 1) {
             this.mPurchaseType = -1;
             showPerformListFragment(false);
-        } else if (i == 2) {
+        } else if (i2 == 2) {
             this.mPurchaseType = -1;
             handleChooseSeatPage();
-        } else if (i != 3) {
+        } else if (i2 != 3) {
         } else {
             this.mPurchaseType = -1;
             processClickSaleRemindStatus();
@@ -2106,11 +2061,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         }
     }
 
-    private void checkDisplayFixedAnchorIndicator(int i) {
+    private void checkDisplayFixedAnchorIndicator(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "608064555")) {
-            ipChange.ipc$dispatch("608064555", new Object[]{this, Integer.valueOf(i)});
-        } else if (i >= (this.mLvProjectDetailHeader.getHeight() - this.mTitleBarPanel.e()) - this.mAnchorIndicator.getHeight()) {
+            ipChange.ipc$dispatch("608064555", new Object[]{this, Integer.valueOf(i2)});
+        } else if (i2 >= (this.mLvProjectDetailHeader.getHeight() - this.mTitleBarPanel.e()) - this.mAnchorIndicator.getHeight()) {
             this.isFixedAnchorVisible = true;
             showFixedAnchorIndicator();
         } else {
@@ -2119,14 +2074,14 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         }
     }
 
-    private void clickedAnchorItem(int i, c5 c5Var) {
+    private void clickedAnchorItem(int i2, c5 c5Var) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "922975081")) {
-            ipChange.ipc$dispatch("922975081", new Object[]{this, Integer.valueOf(i), c5Var});
+            ipChange.ipc$dispatch("922975081", new Object[]{this, Integer.valueOf(i2), c5Var});
             return;
         }
         this.mLinearPullToRefreshView.setPullToRefreshEnabled(false);
-        setCurAnchorPosition(i);
+        setCurAnchorPosition(i2);
         scrollToPosition(c5Var.c().b().intValue(), getOffset());
         this.isFixedAnchorVisible = true;
         updateTitleAndFixAnchorVisibility(false);
@@ -2233,17 +2188,17 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         return projectItemDataBean != null && projectItemDataBean.getSellStartTime() > 0 && this.mProjectItemDataBean.getCountDown() > 600;
     }
 
-    private void enterShowWantSeeGuideTips(long j) {
+    private void enterShowWantSeeGuideTips(long j2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1081558632")) {
-            ipChange.ipc$dispatch("-1081558632", new Object[]{this, Long.valueOf(j)});
+            ipChange.ipc$dispatch("-1081558632", new Object[]{this, Long.valueOf(j2)});
             return;
         }
         HashMap<Long, Integer> hashMap = projectEnterCountMap;
-        if (hashMap.containsKey(Long.valueOf(j))) {
+        if (hashMap.containsKey(Long.valueOf(j2))) {
             for (Map.Entry<Long, Integer> entry : hashMap.entrySet()) {
-                if (entry.getKey().longValue() == j && entry.getValue().intValue() >= 3) {
-                    startWantSeeGuideTimer(WantSeeGuideTips.AbstractC1546b.C1547a.INSTANCE);
+                if (entry.getKey().longValue() == j2 && entry.getValue().intValue() >= 3) {
+                    startWantSeeGuideTimer(WantSeeGuideTips.b.a.INSTANCE);
                 }
             }
         }
@@ -2267,12 +2222,12 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         ((ProjectItemPresenter) this.mPresenter).getProjectDetailDiscussion(this.mProjectId, categoryId, ipId);
     }
 
-    private void executeProjectDetailDataRequest(int i) {
+    private void executeProjectDetailDataRequest(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-461896703")) {
-            ipChange.ipc$dispatch("-461896703", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-461896703", new Object[]{this, Integer.valueOf(i2)});
         } else {
-            ((ProjectItemPresenter) this.mPresenter).getProjectDetailData(i, String.valueOf(this.mProjectId));
+            ((ProjectItemPresenter) this.mPresenter).getProjectDetailData(i2, String.valueOf(this.mProjectId));
         }
     }
 
@@ -2286,28 +2241,28 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void fixAnchorSelection(boolean z) {
+    public void fixAnchorSelection(boolean z2) {
         AnchorManager anchorManager;
-        c5 e;
+        c5 e2;
         View findViewByPosition;
-        c5 h;
+        c5 h2;
         View findViewByPosition2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1738675390")) {
-            ipChange.ipc$dispatch("1738675390", new Object[]{this, Boolean.valueOf(z)});
+            ipChange.ipc$dispatch("1738675390", new Object[]{this, Boolean.valueOf(z2)});
         } else if (this.isShowAnchor && (anchorManager = this.mAnchorManager) != null) {
-            if (z) {
-                if (!anchorManager.j() || (h = this.mAnchorManager.h()) == null || (findViewByPosition2 = this.mLinearLayoutManager.findViewByPosition(h.c().b().intValue())) == null || Math.abs(findViewByPosition2.getTop()) > getOffset() || this.mAnchorManager.f() == h.b()) {
+            if (z2) {
+                if (!anchorManager.j() || (h2 = this.mAnchorManager.h()) == null || (findViewByPosition2 = this.mLinearLayoutManager.findViewByPosition(h2.c().b().intValue())) == null || Math.abs(findViewByPosition2.getTop()) > getOffset() || this.mAnchorManager.f() == h2.b()) {
                     return;
                 }
-                int b = h.b();
-                this.mCurAnchorPosition = b;
-                setCurAnchorPosition(b);
-            } else if (!anchorManager.k() || (e = this.mAnchorManager.e()) == null || (findViewByPosition = this.mLinearLayoutManager.findViewByPosition(e.c().b().intValue())) == null || Math.abs(findViewByPosition.getTop()) <= getOffset()) {
-            } else {
-                int b2 = this.mAnchorManager.i().b();
+                int b2 = h2.b();
                 this.mCurAnchorPosition = b2;
                 setCurAnchorPosition(b2);
+            } else if (!anchorManager.k() || (e2 = this.mAnchorManager.e()) == null || (findViewByPosition = this.mLinearLayoutManager.findViewByPosition(e2.c().b().intValue())) == null || Math.abs(findViewByPosition.getTop()) <= getOffset()) {
+            } else {
+                int b3 = this.mAnchorManager.i().b();
+                this.mCurAnchorPosition = b3;
+                setCurAnchorPosition(b3);
             }
         }
     }
@@ -2321,9 +2276,9 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         }
         String E = z20.E();
         if (isLogin() && !TextUtils.isEmpty(E)) {
-            int k = wh2.k(E);
+            int k2 = wh2.k(E);
             startProgressDialog();
-            AliMeUtil.d(k, this.mAliMeFrom, new C2292d0());
+            AliMeUtil.d(k2, this.mAliMeFrom, new d0());
             return;
         }
         startLoginActivityForResult(CaptureActivity.LOCK_SUCCESS);
@@ -2356,9 +2311,9 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             return (FragmentTransaction) ipChange.ipc$dispatch("-955636886", new Object[]{this});
         }
         FragmentTransaction beginTransaction = getChildFragmentManager().beginTransaction();
-        int i = R$anim.pop_layer_slide_in_from_bottom;
-        int i2 = R$anim.pop_layer_slide_out_to_bottom;
-        beginTransaction.setCustomAnimations(i, i2, i, i2);
+        int i2 = R$anim.pop_layer_slide_in_from_bottom;
+        int i3 = R$anim.pop_layer_slide_out_to_bottom;
+        beginTransaction.setCustomAnimations(i2, i3, i2, i3);
         return beginTransaction;
     }
 
@@ -2392,10 +2347,10 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void getProjectDetailData(int i) {
+    public void getProjectDetailData(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1007447799")) {
-            ipChange.ipc$dispatch("-1007447799", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-1007447799", new Object[]{this, Integer.valueOf(i2)});
         } else if (this.mIsLoading) {
         } else {
             this.mIsLoading = true;
@@ -2403,8 +2358,8 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             this.mPerformDataConfigure.a();
             this.mNewSkuData.a();
             this.mProjectDataHolderManager.T();
-            executeProjectDetailDataRequest(i);
-            if (i == 0 || i == 1) {
+            executeProjectDetailDataRequest(i2);
+            if (i2 == 0 || i2 == 1) {
                 executeRecommendedProjectRequest();
             }
         }
@@ -2445,9 +2400,9 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             return (FragmentTransaction) ipChange.ipc$dispatch("-1184366444", new Object[]{this});
         }
         FragmentTransaction beginTransaction = getChildFragmentManager().beginTransaction();
-        int i = R$anim.pop_layer_slide_left_from_right;
-        int i2 = R$anim.pop_layer_slide_right_to_left;
-        beginTransaction.setCustomAnimations(i, i2, i, i2);
+        int i2 = R$anim.pop_layer_slide_left_from_right;
+        int i3 = R$anim.pop_layer_slide_right_to_left;
+        beginTransaction.setCustomAnimations(i2, i3, i2, i3);
         return beginTransaction;
     }
 
@@ -2472,8 +2427,8 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         String str2 = null;
         ProjectStaticDataBean projectStaticDataBean = this.mProjectStaticDataBean;
         if (projectStaticDataBean != null && !m91.a(projectStaticDataBean.tourProjects)) {
-            for (int i = 0; i < this.mProjectStaticDataBean.tourProjects.size(); i++) {
-                ProjectTour projectTour = this.mProjectStaticDataBean.tourProjects.get(i);
+            for (int i2 = 0; i2 < this.mProjectStaticDataBean.tourProjects.size(); i2++) {
+                ProjectTour projectTour = this.mProjectStaticDataBean.tourProjects.get(i2);
                 if (projectTour != null && (str = projectTour.itemId) != null) {
                     if (str.equals(this.mProjectId + "")) {
                         str2 = projectTour.tourId;
@@ -2554,15 +2509,15 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         AnchorIndicatorView anchorIndicatorView = (AnchorIndicatorView) this.mLvProjectDetailHeader.findViewById(R$id.project_item_anchor_indicator);
         this.mAnchorIndicator = anchorIndicatorView;
         Resources resources = getResources();
-        int i = R$color.color_000000;
-        int color = resources.getColor(i);
+        int i2 = R$color.color_000000;
+        int color = resources.getColor(i2);
         Resources resources2 = getResources();
-        int i2 = R$color.color_9C9CA5;
-        anchorIndicatorView.setAnchorFontColor(color, resources2.getColor(i2));
+        int i3 = R$color.color_9C9CA5;
+        anchorIndicatorView.setAnchorFontColor(color, resources2.getColor(i3));
         this.mAnchorIndicator.setOnAnchorItemClickListener(this);
         AnchorIndicatorView anchorIndicatorView2 = (AnchorIndicatorView) this.rootView.findViewById(R$id.project_item_anchor_indicator_fixed);
         this.mAnchorIndicatorFixed = anchorIndicatorView2;
-        anchorIndicatorView2.setAnchorFontColor(getResources().getColor(i), getResources().getColor(i2));
+        anchorIndicatorView2.setAnchorFontColor(getResources().getColor(i2), getResources().getColor(i3));
         this.mAnchorIndicatorFixed.setOnAnchorItemClickListener(this);
         this.mAnchorIndicatorFixed.setVisibility(8);
         View findViewById = this.rootView.findViewById(R$id.header_line_divider);
@@ -2631,9 +2586,9 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             ProjectIntentExtraParser.ProjectDetailExtrasData projectDetailExtrasData = (ProjectIntentExtraParser.ProjectDetailExtrasData) arguments.getParcelable("projectExtraData");
             this.mProjectExtraData = projectDetailExtrasData;
             if (projectDetailExtrasData != null) {
-                long j = projectDetailExtrasData.projectId;
-                if (j > 0) {
-                    this.mProjectId = j;
+                long j2 = projectDetailExtrasData.projectId;
+                if (j2 > 0) {
+                    this.mProjectId = j2;
                     this.mIsFromPush = projectDetailExtrasData.isFromPush;
                     this.mBackType = projectDetailExtrasData.backType;
                     this.mRankInfo = projectDetailExtrasData.rankInfo;
@@ -2661,32 +2616,32 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         yr.c().e("brand_state_changed", this.action);
         this.mOnCloseMoreRecommendClickListener = new a1();
         this.mOnMoreRecommendClickListener = new b1();
-        this.mOnProjectPosterClickListener = new View$OnClickListenerC2285a();
-        this.mOnPromotionDetailClickListener = new View$OnClickListenerC2287b();
+        this.mOnProjectPosterClickListener = new a();
+        this.mOnPromotionDetailClickListener = new b();
         this.timerAndStagoryView = (ProjectTimerAndStagoryView) this.rootView.findViewById(R$id.project_item_bottom_time_stagory);
         ProjectTimerAndStrategyTmPromptView projectTimerAndStrategyTmPromptView = (ProjectTimerAndStrategyTmPromptView) this.rootView.findViewById(R$id.rl_member_timer_strategy);
         this.timerAndStrategyTmPromptView = projectTimerAndStrategyTmPromptView;
-        projectTimerAndStrategyTmPromptView.setPromptParam(this.mProjectDetailActivity, new C2289c());
-        this.timerAndStagoryView.setOnRemindMeClickListener(new View$OnClickListenerC2291d());
-        this.timerAndStagoryView.setStrategoryClickListener(new View$OnClickListenerC2293e());
-        this.timerAndStrategyTmPromptView.setOnStrategyClickListener(new View$OnClickListenerC2295f());
+        projectTimerAndStrategyTmPromptView.setPromptParam(this.mProjectDetailActivity, new c());
+        this.timerAndStagoryView.setOnRemindMeClickListener(new d());
+        this.timerAndStagoryView.setStrategoryClickListener(new e());
+        this.timerAndStrategyTmPromptView.setOnStrategyClickListener(new f());
         this.timerAndStagoryView.setProjectId(String.valueOf(this.mProjectId));
         this.timerAndStrategyTmPromptView.setProjectId(String.valueOf(this.mProjectId));
         ProjectSpecialBuyPromptView projectSpecialBuyPromptView = (ProjectSpecialBuyPromptView) this.rootView.findViewById(R$id.member_special_buy_layout);
         this.specialBuyPromptView = projectSpecialBuyPromptView;
         projectSpecialBuyPromptView.setProjectId(this.mPrivilegeId);
-        this.specialBuyPromptView.setPromptListener(new C2297g());
-        this.specialBuyPromptView.setCountDownListener(new C2299h());
-        this.specialBuyPromptView.setOnStrategyClickListener(new View$OnClickListenerC2301i());
-        this.mOnPerformInfoClickListener = new View$OnClickListenerC2303j();
-        this.mOnPerformSeatImgIconClickListener = new View$OnClickListenerC2305k();
-        this.mOnRecommendItemClickListener = new C2307l();
-        this.mOnExtendInfoImageItemClickListener = new C2309m();
-        this.mOnProjectCommonProblemListener = new C2311n();
-        this.mOnEvaluateMineListener = new C2313o();
-        this.mOnDiscussionClickListener = new C2315p(this);
-        this.mOnSectionMoreClickListener = new C2317q();
-        this.mOnProjectFollowClickListener = new View$OnClickListenerC2319r();
+        this.specialBuyPromptView.setPromptListener(new g());
+        this.specialBuyPromptView.setCountDownListener(new h());
+        this.specialBuyPromptView.setOnStrategyClickListener(new i());
+        this.mOnPerformInfoClickListener = new j();
+        this.mOnPerformSeatImgIconClickListener = new k();
+        this.mOnRecommendItemClickListener = new l();
+        this.mOnExtendInfoImageItemClickListener = new m();
+        this.mOnProjectCommonProblemListener = new n();
+        this.mOnEvaluateMineListener = new o();
+        this.mOnDiscussionClickListener = new p(this);
+        this.mOnSectionMoreClickListener = new q();
+        this.mOnProjectFollowClickListener = new r();
     }
 
     private void initPopFragmentHandler() {
@@ -2694,7 +2649,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         if (AndroidInstantRuntime.support(ipChange, "1434646527")) {
             ipChange.ipc$dispatch("1434646527", new Object[]{this});
         } else {
-            this.mHandler = new HandlerC2323u();
+            this.mHandler = new u();
         }
     }
 
@@ -2719,7 +2674,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         this.mLvProjectDetailHeader = linearLayout;
         View findViewById = linearLayout.findViewById(R$id.project_header);
         this.header = findViewById;
-        ProjectDialogHelper projectDialogHelper = new ProjectDialogHelper(this.mProjectDetailActivity, findViewById.findViewById(R$id.header_service_etc_ui), new C2316p0());
+        ProjectDialogHelper projectDialogHelper = new ProjectDialogHelper(this.mProjectDetailActivity, findViewById.findViewById(R$id.header_service_etc_ui), new p0());
         this.mDialogPanel = projectDialogHelper;
         projectDialogHelper.u(this.dialogShowListener);
         this.mHeadPanel = new ProjectHeaderPanel(this.mProjectDetailActivity, this.mProjectId, this.header, new x0());
@@ -2792,9 +2747,9 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             ipChange.ipc$dispatch("991554799", new Object[]{this});
             return;
         }
-        this.mProjectItemStatusHelper.r(new C2294e0());
-        this.mProjectItemStatusHelper.s(ProjectItemStatusHelper.C2352a.a(this.mProjectId));
-        this.mProjectItemStatusHelper.t(new C2298g0());
+        this.mProjectItemStatusHelper.r(new e0());
+        this.mProjectItemStatusHelper.s(ProjectItemStatusHelper.a.a(this.mProjectId));
+        this.mProjectItemStatusHelper.t(new g0());
     }
 
     private void initTitleView() {
@@ -2803,7 +2758,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             ipChange.ipc$dispatch("1896304229", new Object[]{this});
             return;
         }
-        this.mTitleBarPanel = new ProjectTitleBarPanel(this.mProjectDetailActivity, this.rootView.findViewById(R$id.project_new_title), new C2296f0());
+        this.mTitleBarPanel = new ProjectTitleBarPanel(this.mProjectDetailActivity, this.rootView.findViewById(R$id.project_new_title), new f0());
         this.mContentRootLayout = (FrameLayout) this.rootView.findViewById(R$id.project_details_root_layout);
         this.mRvProjectDetailContent = (RelativeLayout) this.rootView.findViewById(R$id.project_item_bottom_content_rv);
     }
@@ -2820,16 +2775,16 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         return (projectTimerAndStagoryView != null && projectTimerAndStagoryView.isShowing()) || ((projectTimerAndStrategyTmPromptView = this.timerAndStrategyTmPromptView) != null && projectTimerAndStrategyTmPromptView.getVisibility() == 0) || ((projectSpecialBuyPromptView = this.specialBuyPromptView) != null && projectSpecialBuyPromptView.getVisibility() == 0);
     }
 
-    private boolean isChangeAttendees(int i, boolean z) {
+    private boolean isChangeAttendees(int i2, boolean z2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "437208424")) {
-            return ((Boolean) ipChange.ipc$dispatch("437208424", new Object[]{this, Integer.valueOf(i), Boolean.valueOf(z)})).booleanValue();
+            return ((Boolean) ipChange.ipc$dispatch("437208424", new Object[]{this, Integer.valueOf(i2), Boolean.valueOf(z2)})).booleanValue();
         }
-        if (StartConfig.isResetAttendeesOpen() && i != 0) {
-            x8.C9911a c9911a = x8.Companion;
-            if (c9911a.b(String.valueOf(this.mProjectId), this.mActivity).length > i) {
-                if (z) {
-                    c9911a.a(String.valueOf(this.mProjectId), this.mActivity);
+        if (StartConfig.isResetAttendeesOpen() && i2 != 0) {
+            x8.a aVar = x8.Companion;
+            if (aVar.b(String.valueOf(this.mProjectId), this.mActivity).length > i2) {
+                if (z2) {
+                    aVar.a(String.valueOf(this.mProjectId), this.mActivity);
                 }
                 return true;
             }
@@ -2913,9 +2868,9 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             ipChange.ipc$dispatch("-1095891975", new Object[]{this, str});
             return;
         }
-        String f = AliMeUtil.f(this.mAliMeFrom, str, String.valueOf(this.mProjectId), this.mClickedProblem);
-        if (!wh2.j(f)) {
-            AliMeUtil.b(this.mActivity, f);
+        String f2 = AliMeUtil.f(this.mAliMeFrom, str, String.valueOf(this.mProjectId), this.mClickedProblem);
+        if (!wh2.j(f2)) {
+            AliMeUtil.b(this.mActivity, f2);
         }
         resetAliMeClickData();
     }
@@ -2941,9 +2896,9 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             return;
         }
         viewIgnoreTagForExposure(this.mPopLayerFragment.getView());
-        C0529c.e().q(getActivity());
-        C0529c.e().p(this, getDamaiUTKeyBuilder());
-        C0529c.e().b(this.exposureViewList);
+        cn.damai.common.user.c.e().q(getActivity());
+        cn.damai.common.user.c.e().p(this, getDamaiUTKeyBuilder());
+        cn.damai.common.user.c.e().b(this.exposureViewList);
         this.exposureViewList.clear();
     }
 
@@ -3010,14 +2965,14 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         this.mProjectStaticDataBean.getItemBase().getNationalStandardCityId();
     }
 
-    private void processAutoShowSku(int i, int i2) {
+    private void processAutoShowSku(int i2, int i3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1919691510")) {
-            ipChange.ipc$dispatch("1919691510", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2)});
-        } else if (i != i2 && this.mPurchaseType == 4) {
+            ipChange.ipc$dispatch("1919691510", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3)});
+        } else if (i2 != i3 && this.mPurchaseType == 4) {
             this.mPurchaseType = -1;
             popupSkuByPerformInfo();
-        } else if (i == i2) {
+        } else if (i2 == i3) {
             autoShowSkuLayer();
         } else {
             this.mPurchaseType = -1;
@@ -3070,22 +3025,22 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         }
     }
 
-    private void recordProjectEnterCount(long j) {
+    private void recordProjectEnterCount(long j2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1419077871")) {
-            ipChange.ipc$dispatch("-1419077871", new Object[]{this, Long.valueOf(j)});
+            ipChange.ipc$dispatch("-1419077871", new Object[]{this, Long.valueOf(j2)});
             return;
         }
         HashMap<Long, Integer> hashMap = projectEnterCountMap;
-        if (hashMap.containsKey(Long.valueOf(j))) {
+        if (hashMap.containsKey(Long.valueOf(j2))) {
             for (Map.Entry<Long, Integer> entry : hashMap.entrySet()) {
-                if (entry.getKey().longValue() == j) {
-                    projectEnterCountMap.put(Long.valueOf(j), Integer.valueOf(entry.getValue().intValue() + 1));
+                if (entry.getKey().longValue() == j2) {
+                    projectEnterCountMap.put(Long.valueOf(j2), Integer.valueOf(entry.getValue().intValue() + 1));
                 }
             }
             return;
         }
-        hashMap.put(Long.valueOf(j), 1);
+        hashMap.put(Long.valueOf(j2), 1);
     }
 
     private void registerMessageObserver() {
@@ -3152,27 +3107,27 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
 
     /* JADX INFO: Access modifiers changed from: private */
     @RequiresApi(api = 11)
-    public void requestFavorite(boolean z) {
+    public void requestFavorite(boolean z2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "902743213")) {
-            ipChange.ipc$dispatch("902743213", new Object[]{this, Boolean.valueOf(z)});
+            ipChange.ipc$dispatch("902743213", new Object[]{this, Boolean.valueOf(z2)});
             return;
         }
-        this.isFlowByBottomBar = z;
+        this.isFlowByBottomBar = z2;
         if (isLogin()) {
             ProjectDynamicExtDataBean projectDynamicExtDataBean = this.mProjectDynamicExtDataBean;
             if (projectDynamicExtDataBean != null ? projectDynamicExtDataBean.isSubFlag() : false) {
                 this.mViewProjectFollow.cancelAnimate();
-                C0529c.e().x(pp2.u().k0(this.mProjectId, false));
+                cn.damai.common.user.c.e().x(pp2.u().k0(this.mProjectId, false));
                 updateProjectFollowRelation(0);
                 return;
             }
             this.mViewProjectFollow.clickAnimate();
-            C0529c.e().x(pp2.u().k0(this.mProjectId, true));
+            cn.damai.common.user.c.e().x(pp2.u().k0(this.mProjectId, true));
             updateProjectFollowRelation(1);
             return;
         }
-        C0529c.e().x(pp2.u().k0(this.mProjectId, false));
+        cn.damai.common.user.c.e().x(pp2.u().k0(this.mProjectId, false));
         startLoginActivityForResult(4097);
     }
 
@@ -3225,14 +3180,14 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void scrollToPosition(int i, int i2) {
+    public void scrollToPosition(int i2, int i3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-2047428633")) {
-            ipChange.ipc$dispatch("-2047428633", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2)});
+            ipChange.ipc$dispatch("-2047428633", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3)});
             return;
         }
         this.mRecyclerView.dispatchTouchEvent(MotionEvent.obtain(SystemClock.uptimeMillis(), SystemClock.uptimeMillis(), 3, 0.0f, 0.0f, 0));
-        this.mLinearLayoutManager.scrollToPositionWithOffset(i, i2);
+        this.mLinearLayoutManager.scrollToPositionWithOffset(i2, i3);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -3245,21 +3200,21 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         } else {
             AnchorManager.AnchorType anchorType = AnchorManager.AnchorType.RECOMMEND;
             if (anchorManager.c(anchorType) != null) {
-                c5 c = this.mAnchorManager.c(anchorType);
-                clickedAnchorItem(c.b(), c);
+                c5 c2 = this.mAnchorManager.c(anchorType);
+                clickedAnchorItem(c2.b(), c2);
             }
         }
     }
 
-    private void sendHandlerMessage(int i, long j) {
+    private void sendHandlerMessage(int i2, long j2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "902429652")) {
-            ipChange.ipc$dispatch("902429652", new Object[]{this, Integer.valueOf(i), Long.valueOf(j)});
+            ipChange.ipc$dispatch("902429652", new Object[]{this, Integer.valueOf(i2), Long.valueOf(j2)});
             return;
         }
         Message obtainMessage = this.mHandler.obtainMessage();
-        obtainMessage.what = i;
-        this.mHandler.sendMessageDelayed(obtainMessage, j);
+        obtainMessage.what = i2;
+        this.mHandler.sendMessageDelayed(obtainMessage, j2);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -3274,34 +3229,34 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void setCurAnchorPosition(int i) {
+    public void setCurAnchorPosition(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "949100615")) {
-            ipChange.ipc$dispatch("949100615", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("949100615", new Object[]{this, Integer.valueOf(i2)});
             return;
         }
-        this.mAnchorManager.n(i);
-        this.mAnchorIndicator.setSelectAnchor(i);
-        this.mAnchorIndicatorFixed.setSelectAnchor(i);
+        this.mAnchorManager.n(i2);
+        this.mAnchorIndicator.setSelectAnchor(i2);
+        this.mAnchorIndicatorFixed.setSelectAnchor(i2);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void setProjectDetailMaskLayerImage(String str, Bitmap bitmap, boolean z) {
+    public void setProjectDetailMaskLayerImage(String str, Bitmap bitmap, boolean z2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1240320202")) {
-            ipChange.ipc$dispatch("1240320202", new Object[]{this, str, bitmap, Boolean.valueOf(z)});
+            ipChange.ipc$dispatch("1240320202", new Object[]{this, str, bitmap, Boolean.valueOf(z2)});
             return;
         }
         try {
-            if (z) {
+            if (z2) {
                 this.mIvProjectPosterMask.setBackgroundColor(Color.parseColor("#000000"));
             } else if (str == null) {
                 return;
             } else {
-                DMRGBUtil.g(1.0f, bitmap, str, new C2290c0());
+                DMRGBUtil.g(1.0f, bitmap, str, new c0());
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
         if (TextUtils.isEmpty(str)) {
             return;
@@ -3309,15 +3264,15 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         this.mSinaSharePath = wv1.b(str, bitmap, this.mProjectDetailActivity);
     }
 
-    private void setProjectFollowStatus(boolean z) {
+    private void setProjectFollowStatus(boolean z2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1000319562")) {
-            ipChange.ipc$dispatch("-1000319562", new Object[]{this, Boolean.valueOf(z)});
+            ipChange.ipc$dispatch("-1000319562", new Object[]{this, Boolean.valueOf(z2)});
             return;
         }
         ProjectDynamicExtDataBean projectDynamicExtDataBean = this.mProjectDynamicExtDataBean;
         if (projectDynamicExtDataBean != null) {
-            projectDynamicExtDataBean.setSubFlag(z);
+            projectDynamicExtDataBean.setSubFlag(z2);
         }
     }
 
@@ -3360,7 +3315,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         this.mProjectItemDetailAdapter.e(this.mOnDiscussionClickListener);
         this.mProjectItemDetailAdapter.g(this.mOnSectionMoreClickListener);
         this.mProjectItemDetailAdapter.k(this.mShareManagerImpl);
-        this.mProjectItemDetailAdapter.d(new View$OnClickListenerC2321s());
+        this.mProjectItemDetailAdapter.d(new s());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -3383,13 +3338,13 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
                 list = null;
                 str = null;
             }
-            this.mPopLayerFragment = NcovPromotionFragment.instance(new PromotionDataBean("preferentialexplain", this.mProjectId, list, str, null, null), new C2286a0());
+            this.mPopLayerFragment = NcovPromotionFragment.instance(new PromotionDataBean("preferentialexplain", this.mProjectId, list, str, null, null), new a0());
             FragmentTransaction fragmentTransaction = getFragmentTransaction();
             fragmentTransaction.replace(R$id.trade_project_detail_popup_layer_container_flv, this.mPopLayerFragment);
             fragmentTransaction.commitAllowingStateLoss();
             this.mFlvPopupLayer.setVisibility(0);
             Log.e("xxxxx_fragment_ut", "detail pageDisAppear before");
-            C0529c.e().q(getActivity());
+            cn.damai.common.user.c.e().q(getActivity());
             this.exposureViewList = viewIgnoreTagForExposure(getActivity().getWindow().getDecorView());
             Log.e("xxxxx_fragment_ut", "detail pageDisAppear after");
         }
@@ -3415,7 +3370,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         DMDialog dMDialog = new DMDialog(getActivity());
         dMDialog.setCanceledOnTouchOutside(false);
         dMDialog.setCancelable(true);
-        dMDialog.v("排队的人数太多啦").q("抱歉，当前排队人数太多啦，实在挤不进去了，请稍后再进行尝试").i(hasRecommendProject() ? "看看别的" : "", new s0()).n("努力刷新", new DialogInterface$OnClickListenerC2320r0()).j(true).show();
+        dMDialog.v("排队的人数太多啦").q("抱歉，当前排队人数太多啦，实在挤不进去了，请稍后再进行尝试").i(hasRecommendProject() ? "看看别的" : "", new s0()).n("努力刷新", new r0()).j(true).show();
     }
 
     private void showNewScreenShotShare() {
@@ -3428,29 +3383,29 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void showNoticeFragment(int i) {
+    public void showNoticeFragment(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "106614672")) {
-            ipChange.ipc$dispatch("106614672", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("106614672", new Object[]{this, Integer.valueOf(i2)});
             return;
         }
         ProjectStaticDataBean projectStaticDataBean = this.mProjectStaticDataBean;
         if (projectStaticDataBean == null || projectStaticDataBean.getNoticeMatter() == null || this.mProjectStaticDataBean.getNoticeMatter().getNoticeList() == null) {
             return;
         }
-        this.mPopLayerFragment = ProjectNoticeMatterFragment.newInstance(this.mProjectId, i, this.mProjectStaticDataBean.getNoticeMatter());
+        this.mPopLayerFragment = ProjectNoticeMatterFragment.newInstance(this.mProjectId, i2, this.mProjectStaticDataBean.getNoticeMatter());
         FragmentTransaction fragmentTransaction = getFragmentTransaction();
         fragmentTransaction.replace(R$id.trade_project_detail_popup_layer_container_flv, this.mPopLayerFragment);
         fragmentTransaction.commitAllowingStateLoss();
         this.mFlvPopupLayer.setVisibility(0);
-        this.mFlvPopupLayer.setOnClickListener(new View$OnClickListenerC2314o0());
+        this.mFlvPopupLayer.setOnClickListener(new o0());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void showPerformListFragment(boolean z) {
+    public void showPerformListFragment(boolean z2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-540137036")) {
-            ipChange.ipc$dispatch("-540137036", new Object[]{this, Boolean.valueOf(z)});
+            ipChange.ipc$dispatch("-540137036", new Object[]{this, Boolean.valueOf(z2)});
         } else if (isLogin()) {
             openSkuActivity();
         } else {
@@ -3459,20 +3414,20 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void showPrivilegeCodeVerifyFragment(int i) {
+    public void showPrivilegeCodeVerifyFragment(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-2115321189")) {
-            ipChange.ipc$dispatch("-2115321189", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-2115321189", new Object[]{this, Integer.valueOf(i2)});
         } else if (isLogin()) {
             ProjectItemDataBean projectItemDataBean = this.mProjectItemDataBean;
             if (projectItemDataBean == null) {
                 return;
             }
-            this.mPrivilegeCodeVerifyFragment = PrivilegeCodeVerifyFragment.newInstance(this.mProjectId, projectItemDataBean.getPrivilegeId(), i);
+            this.mPrivilegeCodeVerifyFragment = PrivilegeCodeVerifyFragment.newInstance(this.mProjectId, projectItemDataBean.getPrivilegeId(), i2);
             FragmentTransaction fragmentTransaction = getFragmentTransaction();
             fragmentTransaction.replace(R$id.trade_project_detail_popup_layer_container_flv, this.mPrivilegeCodeVerifyFragment);
             fragmentTransaction.commitAllowingStateLoss();
-            this.mFlvPopupLayer.setOnClickListener(new View$OnClickListenerC2302i0());
+            this.mFlvPopupLayer.setOnClickListener(new i0());
             this.mFlvPopupLayer.setVisibility(0);
         } else {
             startLoginActivityForResult(4102);
@@ -3493,11 +3448,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             ArrayList<ItemContent> subItemContentList = noticeListBean.subItemContentList();
             NoticeDetailFragment instance = NoticeDetailFragment.instance(subItemContentList, this.mProjectId + "");
             this.detailFragment = instance;
-            instance.setClose(new View$OnClickListenerC2322t());
+            instance.setClose(new t());
             FragmentTransaction fragmentTransaction = getFragmentTransaction();
             fragmentTransaction.replace(R$id.trade_project_detail_popup_layer_container_flv, this.detailFragment);
             fragmentTransaction.commitAllowingStateLoss();
-            this.mFlvPopupLayer.setOnClickListener(new View$OnClickListenerC2324v());
+            this.mFlvPopupLayer.setOnClickListener(new v());
             this.mFlvPopupLayer.setVisibility(0);
         } else if (projectStaticDataBean == null || (projectNotice = projectStaticDataBean.announcementMsg) == null) {
         } else {
@@ -3509,7 +3464,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             FragmentTransaction fragmentTransaction2 = getFragmentTransaction();
             fragmentTransaction2.replace(R$id.trade_project_detail_popup_layer_container_flv, this.mPopLayerFragment);
             fragmentTransaction2.commitAllowingStateLoss();
-            this.mFlvPopupLayer.setOnClickListener(new View$OnClickListenerC2325w());
+            this.mFlvPopupLayer.setOnClickListener(new w());
             this.mFlvPopupLayer.setVisibility(0);
         }
     }
@@ -3546,22 +3501,22 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             return;
         }
         ArrayList arrayList = new ArrayList();
-        StatusNotice j = yb.j(this.mProjectItemDataBean);
-        if (j != null && j.isHasPopup()) {
+        StatusNotice j2 = yb.j(this.mProjectItemDataBean);
+        if (j2 != null && j2.isHasPopup()) {
             ServiceNote serviceNote = new ServiceNote();
             serviceNote.isSupport = "false";
-            String prefixText = j.getPrefixText();
+            String prefixText = j2.getPrefixText();
             if (TextUtils.isEmpty(prefixText)) {
                 prefixText = PurchaseConstants.NORMAL_WARNING_TITLE;
             }
             serviceNote.tagName = prefixText;
-            serviceNote.tagDesc = j.getPopupContent();
-            serviceNote.tagDescWithStyle = j.getPopupContent();
+            serviceNote.tagDesc = j2.getPopupContent();
+            serviceNote.tagDescWithStyle = j2.getPopupContent();
             arrayList.add(serviceNote);
         }
-        List<ServiceNote> i = yb.i(this.mProjectStaticDataBean);
-        if (!cb2.d(i)) {
-            arrayList.addAll(i);
+        List<ServiceNote> i2 = yb.i(this.mProjectStaticDataBean);
+        if (!cb2.d(i2)) {
+            arrayList.addAll(i2);
         }
         if (cb2.d(arrayList)) {
             return;
@@ -3570,7 +3525,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         FragmentTransaction fragmentTransaction = getFragmentTransaction();
         fragmentTransaction.replace(R$id.trade_project_detail_popup_layer_container_flv, this.mPopLayerFragment);
         fragmentTransaction.commitAllowingStateLoss();
-        this.mFlvPopupLayer.setOnClickListener(new View$OnClickListenerC2288b0());
+        this.mFlvPopupLayer.setOnClickListener(new b0());
         this.mFlvPopupLayer.setVisibility(0);
     }
 
@@ -3695,21 +3650,21 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         if (projectDetailDataBean == null || (projectDynamicExtDataBean = projectDetailDataBean.dynamicExtData) == null || (projectMemberPrompt = projectDynamicExtDataBean.memberPrompt) == null) {
             return;
         }
-        final VIPCreditExchangePopFragment a = VIPCreditExchangePopFragment.Companion.a(projectMemberPrompt, new C2328z());
-        a.setCloseListener(new View.OnClickListener() { // from class: tb.rv1
+        final VIPCreditExchangePopFragment a2 = VIPCreditExchangePopFragment.Companion.a(projectMemberPrompt, new z());
+        a2.setCloseListener(new View.OnClickListener() { // from class: tb.rv1
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
-                ProjectDetailItemMainFragment.this.lambda$showVIPCreditExchangeFragment$0(a, view);
+                ProjectDetailItemMainFragment.this.lambda$showVIPCreditExchangeFragment$0(a2, view);
             }
         });
         FragmentTransaction fragmentTransaction = getFragmentTransaction();
-        fragmentTransaction.replace(R$id.trade_project_detail_popup_layer_container_flv, a);
+        fragmentTransaction.replace(R$id.trade_project_detail_popup_layer_container_flv, a2);
         fragmentTransaction.commitAllowingStateLoss();
         this.mFlvPopupLayer.setVisibility(0);
         this.mFlvPopupLayer.setOnClickListener(new View.OnClickListener() { // from class: tb.sv1
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
-                ProjectDetailItemMainFragment.this.lambda$showVIPCreditExchangeFragment$1(a, view);
+                ProjectDetailItemMainFragment.this.lambda$showVIPCreditExchangeFragment$1(a2, view);
             }
         });
     }
@@ -3738,8 +3693,8 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             translateAnimation.setDuration(300L);
             inflate.startAnimation(translateAnimation);
             View findViewById = inflate.findViewById(R$id.want_see_bottombar_tip_close);
-            inflate.findViewById(R$id.want_see_bottombar_tip_bg).setOnClickListener(new View$OnClickListenerC2310m0(this));
-            findViewById.setOnClickListener(new View$OnClickListenerC2312n0());
+            inflate.findViewById(R$id.want_see_bottombar_tip_bg).setOnClickListener(new m0(this));
+            findViewById.setOnClickListener(new n0());
             inflate.postDelayed(new Runnable() { // from class: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectDetailItemMainFragment.48
                 private static transient /* synthetic */ IpChange $ipChange;
 
@@ -3759,12 +3714,12 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void startLoginActivityForResult(int i) {
+    public void startLoginActivityForResult(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "897776417")) {
-            ipChange.ipc$dispatch("897776417", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("897776417", new Object[]{this, Integer.valueOf(i2)});
         } else {
-            LoginManager.k().y(this, new Intent(), i);
+            LoginManager.k().y(this, new Intent(), i2);
         }
     }
 
@@ -3783,19 +3738,19 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void startWantSeeGuideTimer(WantSeeGuideTips.AbstractC1546b abstractC1546b) {
+    public void startWantSeeGuideTimer(WantSeeGuideTips.b bVar) {
         ProjectDynamicExtDataBean projectDynamicExtDataBean;
         ProjectWantSeeBean projectWantSeeBean;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1052910826")) {
-            ipChange.ipc$dispatch("1052910826", new Object[]{this, abstractC1546b});
+            ipChange.ipc$dispatch("1052910826", new Object[]{this, bVar});
         } else if (!n03.INSTANCE.c() || (projectDynamicExtDataBean = this.mProjectDynamicExtDataBean) == null || (projectWantSeeBean = projectDynamicExtDataBean.wantVO) == null || projectWantSeeBean.isSubFlag() || WantSeeGuideTips.Companion.a()) {
         } else {
             CountDownTimer countDownTimer = this.wantSeeGuideTipsTimer;
             if (countDownTimer != null) {
                 countDownTimer.cancel();
             }
-            w0 w0Var = new w0(3000L, 1000L, abstractC1546b);
+            w0 w0Var = new w0(3000L, 1000L, bVar);
             this.wantSeeGuideTipsTimer = w0Var;
             w0Var.start();
         }
@@ -3871,18 +3826,18 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             ipChange.ipc$dispatch("1316552585", new Object[]{this});
             return;
         }
-        MarketingStallBean d = yb.d(this.mProjectItemDataBean);
-        if (d != null) {
-            int i = d.interactiveMode;
-            if (i == 2) {
+        MarketingStallBean d2 = yb.d(this.mProjectItemDataBean);
+        if (d2 != null) {
+            int i2 = d2.interactiveMode;
+            if (i2 == 2) {
                 if (isLogin()) {
                     return;
                 }
-                C0529c.e().x(pp2.u().X0(this.mProjectId, d.utd));
+                cn.damai.common.user.c.e().x(pp2.u().X0(this.mProjectId, d2.utd));
                 startLoginActivityForResult(4118);
-            } else if (i == 3) {
-                C0529c.e().x(pp2.u().X0(this.mProjectId, d.utd));
-                tv1.d(this.mProjectDetailActivity, d.forwardUrl);
+            } else if (i2 == 3) {
+                cn.damai.common.user.c.e().x(pp2.u().X0(this.mProjectId, d2.utd));
+                tv1.d(this.mProjectDetailActivity, d2.forwardUrl);
             }
         }
     }
@@ -3917,11 +3872,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             this.mAnchorIndicator.setVisibility(0);
             this.mAnchorIndicatorFixed.setVisibility(this.isShowFixAnchorIndicator ? 0 : 8);
             this.mHeadDividerLine.setVisibility(this.isShowFixAnchorIndicator ? 0 : 8);
-            List<c5> d = this.mAnchorManager.d();
-            this.mAnchorIndicator.setAnchorList(d);
-            this.mAnchorIndicatorFixed.setAnchorList(d);
+            List<c5> d2 = this.mAnchorManager.d();
+            this.mAnchorIndicator.setAnchorList(d2);
+            this.mAnchorIndicatorFixed.setAnchorList(d2);
             setCurAnchorPosition(this.mAnchorManager.f());
-            this.mAnchorManager.m(d, this.mAnchorIndicator, String.valueOf(this.mProjectId));
+            this.mAnchorManager.m(d2, this.mAnchorIndicator, String.valueOf(this.mProjectId));
             return;
         }
         this.isShowAnchor = false;
@@ -3929,11 +3884,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         hideFixedAnchorIndicator();
     }
 
-    private void updateCalendRemindText(boolean z) {
+    private void updateCalendRemindText(boolean z2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1101370716")) {
-            ipChange.ipc$dispatch("-1101370716", new Object[]{this, Boolean.valueOf(z)});
-        } else if (z) {
+            ipChange.ipc$dispatch("-1101370716", new Object[]{this, Boolean.valueOf(z2)});
+        } else if (z2) {
             if (!ir1.i(mr1.CALENDAR)) {
                 this.timerAndStagoryView.updateRemindMeBtnText(false);
             } else {
@@ -3942,14 +3897,14 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         }
     }
 
-    private void updateCountDownVisibility(boolean z, boolean z2) {
+    private void updateCountDownVisibility(boolean z2, boolean z3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1062796936")) {
-            ipChange.ipc$dispatch("-1062796936", new Object[]{this, Boolean.valueOf(z), Boolean.valueOf(z2)});
+            ipChange.ipc$dispatch("-1062796936", new Object[]{this, Boolean.valueOf(z2), Boolean.valueOf(z3)});
         } else if (this.timerAndStagoryView == null) {
         } else {
-            updateCalendRemindText(z);
-            updateRecyclerMargin(this.timerAndStagoryView.setCountDownVisibility(z, z2, this.mDialogPanel.o(), isChangeAttendees(this.mProjectItemDataBean.getPurchaseLimitation(), z)));
+            updateCalendRemindText(z2);
+            updateRecyclerMargin(this.timerAndStagoryView.setCountDownVisibility(z2, z3, this.mDialogPanel.o(), isChangeAttendees(this.mProjectItemDataBean.getPurchaseLimitation(), z2)));
         }
     }
 
@@ -3959,25 +3914,25 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             ipChange.ipc$dispatch("1160125265", new Object[]{this});
             return;
         }
-        List<ProjectDataHolder> p = this.mProjectDataHolderManager.p(this.mProjectStaticDataBean, this.mProjectDynamicExtDataBean, this.mProjectDetailEvaluateBean, this.mProjectDetailDiscussionBean, this.mRecommendItems, this.mProjectItemDataBean, String.valueOf(this.mProjectId));
-        if (wh2.e(p) > 0) {
-            this.mProjectItemDetailAdapter.c(p);
+        List<ProjectDataHolder> p2 = this.mProjectDataHolderManager.p(this.mProjectStaticDataBean, this.mProjectDynamicExtDataBean, this.mProjectDetailEvaluateBean, this.mProjectDetailDiscussionBean, this.mRecommendItems, this.mProjectItemDataBean, String.valueOf(this.mProjectId));
+        if (wh2.e(p2) > 0) {
+            this.mProjectItemDetailAdapter.c(p2);
         }
         updateAnchorData();
     }
 
-    private void updateMemberPromptCountDownVisibility(boolean z, boolean z2) {
+    private void updateMemberPromptCountDownVisibility(boolean z2, boolean z3) {
         ProjectMemberPrompt projectMemberPrompt;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-286517450")) {
-            ipChange.ipc$dispatch("-286517450", new Object[]{this, Boolean.valueOf(z), Boolean.valueOf(z2)});
+            ipChange.ipc$dispatch("-286517450", new Object[]{this, Boolean.valueOf(z2), Boolean.valueOf(z3)});
             return;
         }
         ProjectDynamicExtDataBean projectDynamicExtDataBean = this.mProjectDynamicExtDataBean;
         if (projectDynamicExtDataBean != null && (projectMemberPrompt = projectDynamicExtDataBean.memberPrompt) != null && projectMemberPrompt.isSpecialBuy()) {
             ProjectSpecialBuyPromptView projectSpecialBuyPromptView = this.specialBuyPromptView;
             if (projectSpecialBuyPromptView != null) {
-                updateRecyclerMargin(projectSpecialBuyPromptView.setCountDownVisibility(z, z2, this.mProjectDynamicExtDataBean.memberPrompt, isChangeAttendees(this.mProjectItemDataBean.getPurchaseLimitation(), false)));
+                updateRecyclerMargin(projectSpecialBuyPromptView.setCountDownVisibility(z2, z3, this.mProjectDynamicExtDataBean.memberPrompt, isChangeAttendees(this.mProjectItemDataBean.getPurchaseLimitation(), false)));
                 return;
             }
             return;
@@ -3986,7 +3941,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         if (projectTimerAndStrategyTmPromptView == null) {
             return;
         }
-        updateRecyclerMargin(projectTimerAndStrategyTmPromptView.setCountDownVisibility(z, z2, this.mProjectDynamicExtDataBean.memberPrompt, isChangeAttendees(this.mProjectItemDataBean.getPurchaseLimitation(), z)));
+        updateRecyclerMargin(projectTimerAndStrategyTmPromptView.setCountDownVisibility(z2, z3, this.mProjectDynamicExtDataBean.memberPrompt, isChangeAttendees(this.mProjectItemDataBean.getPurchaseLimitation(), z2)));
     }
 
     private void updateMemberPromptTimeCountDownStatus() {
@@ -3996,14 +3951,14 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         if (AndroidInstantRuntime.support(ipChange, "-1128784253")) {
             ipChange.ipc$dispatch("-1128784253", new Object[]{this});
         } else if (this.mProjectItemDataBean != null && (projectDynamicExtDataBean = this.mProjectDynamicExtDataBean) != null && projectDynamicExtDataBean.memberPrompt != null) {
-            long a = zn2.a();
+            long a2 = zn2.a();
             if (this.mProjectDynamicExtDataBean.memberPrompt.isSpecialBuy()) {
                 this.specialBuyPromptView.setItemName(getCalendarRemindTitle());
                 long scd = this.mProjectDynamicExtDataBean.memberPrompt.getScd();
                 if (scd <= 0) {
                     updateMemberPromptCountDownVisibility(true, false);
                     return;
-                } else if (scd > a) {
+                } else if (scd > a2) {
                     updateMemberPromptCountDownVisibility(true, false);
                     return;
                 } else {
@@ -4020,16 +3975,16 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             }
             if (launchScd <= 0) {
                 updateMemberPromptCountDownVisibility(false, false);
-            } else if (launchScd > a) {
-                long j = launchScd - a;
+            } else if (launchScd > a2) {
+                long j2 = launchScd - a2;
                 if (this.mMemberPromptOnTimeCountDownListener == null) {
-                    this.mMemberPromptOnTimeCountDownListener = new C2326x();
+                    this.mMemberPromptOnTimeCountDownListener = new x();
                 }
                 if (this.mMemberPromptTimeCountDownManager == null) {
                     this.mMemberPromptTimeCountDownManager = TimeCountDownManagerImpl.c(this.mMemberPromptOnTimeCountDownListener);
                 }
                 updateMemberPromptCountDownVisibility(true, false);
-                this.mMemberPromptTimeCountDownManager.setCountDown(j);
+                this.mMemberPromptTimeCountDownManager.setCountDown(j2);
                 this.mMemberPromptTimeCountDownManager.startCountDown();
             } else {
                 this.mHasCountDownFinished = true;
@@ -4066,9 +4021,9 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             HashMap hashMap = new HashMap();
             hashMap.put("project_post_status", buyBtnText);
             hashMap.put("project_pre_status", this.mButtomText);
-            C0525a.C0527b c0527b = new C0525a.C0527b();
-            c0527b.d(String.valueOf(this.mProjectId)).i(gb.PROJECT_PAGE).j(hashMap);
-            C0529c.e().l(getActivity(), c0527b);
+            a.b bVar = new a.b();
+            bVar.d(String.valueOf(this.mProjectId)).i(gb.PROJECT_PAGE).j(hashMap);
+            cn.damai.common.user.c.e().l(getActivity(), bVar);
         }
     }
 
@@ -4099,12 +4054,12 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         }
     }
 
-    private void updateProjectFollowRelation(int i) {
+    private void updateProjectFollowRelation(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-622121714")) {
-            ipChange.ipc$dispatch("-622121714", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-622121714", new Object[]{this, Integer.valueOf(i2)});
         } else {
-            ((ProjectItemPresenter) this.mPresenter).updateProjectFollowRelation(i, this.mProjectId, 7);
+            ((ProjectItemPresenter) this.mPresenter).updateProjectFollowRelation(i2, this.mProjectId, 7);
         }
     }
 
@@ -4224,7 +4179,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         ProjectTimerAndStagoryView.StateEnum strategyVisibility;
         ProjectMemberPrompt projectMemberPrompt;
         IpChange ipChange = $ipChange;
-        boolean z = false;
+        boolean z2 = false;
         if (AndroidInstantRuntime.support(ipChange, "53300490")) {
             ipChange.ipc$dispatch("53300490", new Object[]{this});
             return;
@@ -4234,9 +4189,9 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         if (projectDynamicExtDataBean != null && (projectMemberPrompt = projectDynamicExtDataBean.memberPrompt) != null) {
             if (projectMemberPrompt.isSpecialBuy()) {
                 if (hasShowStrategy && this.mProjectDynamicExtDataBean.memberPrompt.isPromptBeforeSale()) {
-                    z = true;
+                    z2 = true;
                 }
-                strategyVisibility = this.specialBuyPromptView.setTmLottieStrategy(z, isChangeAttendees(this.mProjectItemDataBean.getPurchaseLimitation(), z));
+                strategyVisibility = this.specialBuyPromptView.setTmLottieStrategy(z2, isChangeAttendees(this.mProjectItemDataBean.getPurchaseLimitation(), z2));
             } else {
                 strategyVisibility = this.timerAndStrategyTmPromptView.setTmLottieStrategy(hasShowStrategy, isChangeAttendees(this.mProjectItemDataBean.getPurchaseLimitation(), hasShowStrategy));
             }
@@ -4287,20 +4242,20 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             int buyBtnStatus = projectItemDataBean.getBuyBtnStatus();
             String sellStartTimeStr = this.mProjectItemDataBean.getSellStartTimeStr();
             long countDown = this.mProjectItemDataBean.getCountDown();
-            long a = zn2.a();
+            long a2 = zn2.a();
             if ((buyBtnStatus != 105 && buyBtnStatus != 106) || TextUtils.isEmpty(sellStartTimeStr) || countDown <= 0) {
                 updateCountDownVisibility(false, false);
                 return;
-            } else if (countDown > a) {
-                long j = countDown - a;
+            } else if (countDown > a2) {
+                long j2 = countDown - a2;
                 this.timerAndStagoryView.updateCountDownRemindText(sellStartTimeStr + "开抢");
                 if (this.mOnTimeCountDownListener == null) {
-                    this.mOnTimeCountDownListener = new C2327y();
+                    this.mOnTimeCountDownListener = new y();
                 }
                 if (this.mTimeCountDownManager == null) {
                     this.mTimeCountDownManager = TimeCountDownManagerImpl.c(this.mOnTimeCountDownListener);
                 }
-                this.mTimeCountDownManager.setCountDown(j);
+                this.mTimeCountDownManager.setCountDown(j2);
                 this.mTimeCountDownManager.startCountDown();
                 updateCountDownVisibility(true, false);
                 return;
@@ -4313,11 +4268,11 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         updateCountDownVisibility(false, false);
     }
 
-    private void updateTitleAndFixAnchorVisibility(boolean z) {
+    private void updateTitleAndFixAnchorVisibility(boolean z2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1235080042")) {
-            ipChange.ipc$dispatch("-1235080042", new Object[]{this, Boolean.valueOf(z)});
-        } else if (z) {
+            ipChange.ipc$dispatch("-1235080042", new Object[]{this, Boolean.valueOf(z2)});
+        } else if (z2) {
             hideFixedAnchorIndicator();
             this.mTitleBarPanel.l(false);
         } else {
@@ -4370,12 +4325,12 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         }
     }
 
-    private void updateWantSeeButtonStatus(boolean z) {
+    private void updateWantSeeButtonStatus(boolean z2) {
         ProjectWantSeeBean projectWantSeeBean;
         String string;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1921247200")) {
-            ipChange.ipc$dispatch("-1921247200", new Object[]{this, Boolean.valueOf(z)});
+            ipChange.ipc$dispatch("-1921247200", new Object[]{this, Boolean.valueOf(z2)});
             return;
         }
         ProjectDynamicExtDataBean projectDynamicExtDataBean = this.mProjectDynamicExtDataBean;
@@ -4392,12 +4347,12 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         this.mTvProjectFollowText.setText(string);
         if (isSubFlag) {
             this.mViewProjectFollow.setFollowImage();
-            if (z) {
+            if (z2) {
                 this.mViewProjectFollow.clickAnimate();
             }
         } else {
             this.mViewProjectFollow.setCancelImage();
-            if (z) {
+            if (z2) {
                 this.mViewProjectFollow.cancelAnimate();
             } else if (fw1.a()) {
                 this.mViewProjectFollow.guideAnimate();
@@ -4407,33 +4362,33 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         pp2.u().q2(this.mViewProjectFollow, String.valueOf(this.mProjectId), isSubFlag);
     }
 
-    private void updateWantSeeByFollow(boolean z) {
+    private void updateWantSeeByFollow(boolean z2) {
         ProjectWantSeeBean projectWantSeeBean;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "2104671684")) {
-            ipChange.ipc$dispatch("2104671684", new Object[]{this, Boolean.valueOf(z)});
+            ipChange.ipc$dispatch("2104671684", new Object[]{this, Boolean.valueOf(z2)});
             return;
         }
         ProjectDynamicExtDataBean projectDynamicExtDataBean = this.mProjectDynamicExtDataBean;
         if (projectDynamicExtDataBean == null || (projectWantSeeBean = projectDynamicExtDataBean.wantVO) == null) {
             return;
         }
-        if (z) {
+        if (z2) {
             this.mWantSeeNum = projectWantSeeBean.getWantNum() + 1;
         } else {
             this.mWantSeeNum = Math.max(projectWantSeeBean.getWantNum() - 1, 0L);
         }
         this.mProjectDynamicExtDataBean.wantVO.setWantNum(this.mWantSeeNum);
-        String a = WantSeeHelper.b().a(this.mWantSeeNum);
-        this.mProjectDynamicExtDataBean.wantVO.setSubFlag(z);
+        String a2 = WantSeeHelper.b().a(this.mWantSeeNum);
+        this.mProjectDynamicExtDataBean.wantVO.setSubFlag(z2);
         if (!TextUtils.isEmpty(this.mProjectDynamicExtDataBean.wantVO.getWantNumStr())) {
-            this.mProjectDynamicExtDataBean.wantVO.setWantNumStr(a);
+            this.mProjectDynamicExtDataBean.wantVO.setWantNumStr(a2);
         }
         ProjectWantSeeBean projectWantSeeBean2 = this.mProjectDynamicExtDataBean.wantVO;
         updateWantSeeButtonStatus(true);
         ProjectHeaderPanel projectHeaderPanel = this.mHeadPanel;
         if (projectHeaderPanel != null) {
-            projectHeaderPanel.A(z, projectWantSeeBean2);
+            projectHeaderPanel.A(z2, projectWantSeeBean2);
         }
     }
 
@@ -4443,7 +4398,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             return (List) ipChange.ipc$dispatch("1340967680", new Object[]{this, view});
         }
         new ArrayList();
-        return C0529c.e().I(C0529c.e().d(view));
+        return cn.damai.common.user.c.e().I(cn.damai.common.user.c.e().d(view));
     }
 
     @Override // cn.damai.common.app.base.BaseFragment
@@ -4458,10 +4413,10 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
-    public void handleError(int i) {
+    public void handleError(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "2079561553")) {
-            ipChange.ipc$dispatch("2079561553", new Object[]{this, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("2079561553", new Object[]{this, Integer.valueOf(i2)});
             return;
         }
         hideSkeleton();
@@ -4488,7 +4443,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             dismissPopLayerFragment(this.detailFragment);
             return true;
         }
-        C0529c.e().x(pp2.u().f1(this.mProjectId, true));
+        cn.damai.common.user.c.e().x(pp2.u().f1(this.mProjectId, true));
         return false;
     }
 
@@ -4538,32 +4493,32 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     @Override // androidx.fragment.app.Fragment
-    public void onActivityResult(int i, int i2, Intent intent) {
+    public void onActivityResult(int i2, int i3, Intent intent) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-609529718")) {
-            ipChange.ipc$dispatch("-609529718", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), intent});
+            ipChange.ipc$dispatch("-609529718", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3), intent});
             return;
         }
-        super.onActivityResult(i, i2, intent);
-        ShareManager.E().r0(i, i2, intent);
-        if (i == 2000 && i2 == 1000) {
+        super.onActivityResult(i2, i3, intent);
+        ShareManager.E().r0(i2, i3, intent);
+        if (i2 == 2000 && i3 == 1000) {
             this.mProjectDetailActivity.finish();
-        } else if (i == 4097 && i2 == -1) {
+        } else if (i2 == 4097 && i3 == -1) {
             updateProjectFollowRelation(1);
-        } else if (i == 4101 && i2 == -1) {
+        } else if (i2 == 4101 && i3 == -1) {
             this.mPurchaseType = 1;
-        } else if (i == 4103 && i2 == -1) {
+        } else if (i2 == 4103 && i3 == -1) {
             this.mPurchaseType = 2;
-        } else if (i == 4119 && i2 == -1) {
+        } else if (i2 == 4119 && i3 == -1) {
             this.mPurchaseType = 4;
-        } else if (i == 4120 && i2 == -1) {
+        } else if (i2 == 4120 && i3 == -1) {
             this.mPurchaseType = 3;
-        } else if (i == 4115 && i2 == -1) {
+        } else if (i2 == 4115 && i3 == -1) {
             getAliMeTokenAndEnter();
-        } else if (i == 4117 && i2 == -1) {
+        } else if (i2 == 4117 && i3 == -1) {
             popupSkuByPerformInfo();
-        } else if (i != 4118 || i2 != -1) {
-            if (i == 4130) {
+        } else if (i2 != 4118 || i3 != -1) {
+            if (i2 == 4130) {
                 onRefresh();
             }
         } else {
@@ -4577,13 +4532,13 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.AnchorIndicatorView.OnAnchorItemClickListener
-    public void onAnchorItemClick(int i, c5 c5Var) {
+    public void onAnchorItemClick(int i2, c5 c5Var) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1119833353")) {
-            ipChange.ipc$dispatch("-1119833353", new Object[]{this, Integer.valueOf(i), c5Var});
+            ipChange.ipc$dispatch("-1119833353", new Object[]{this, Integer.valueOf(i2), c5Var});
             return;
         }
-        clickedAnchorItem(i, c5Var);
+        clickedAnchorItem(i2, c5Var);
         pp2.u().b0(c5Var.d(), this.mProjectId);
     }
 
@@ -4596,17 +4551,17 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     @Override // cn.damai.commonbusiness.servicenotice.OnCompleteListener
-    public void onComplete(int i) {
+    public void onComplete(int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "609714595")) {
-            ipChange.ipc$dispatch("609714595", new Object[]{this, Integer.valueOf(i)});
-        } else if (i == 1) {
+            ipChange.ipc$dispatch("609714595", new Object[]{this, Integer.valueOf(i2)});
+        } else if (i2 == 1) {
             dismissPopLayerFragment(this.mPopLayerFragment);
-        } else if (i == 2) {
+        } else if (i2 == 2) {
             dismissPopLayerFragment(this.mPopLayerFragment);
-        } else if (i == 3) {
+        } else if (i2 == 3) {
             dismissPopLayerFragment(this.mPopLayerFragment);
-        } else if (i == 4) {
+        } else if (i2 == 4) {
             dismissPopLayerFragment(this.mPrivilegeCodeVerifyFragment);
         } else {
             dismissPopLayerFragment(this.mPopLayerFragment);
@@ -4643,9 +4598,9 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         super.onDestroy();
         removeShotListener();
         cancelCountDown();
-        SkuPerform c = this.mPerformDataConfigure.c();
-        if (c != null) {
-            this.mRegionManager.d(fr1.b(c));
+        SkuPerform c2 = this.mPerformDataConfigure.c();
+        if (c2 != null) {
+            this.mRegionManager.d(fr1.b(c2));
         }
         fr1 fr1Var = this.mPerformDataManager;
         if (fr1Var != null) {
@@ -4673,27 +4628,27 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         OrangeConfigCenter.c().g("damai_seat_data_preload_switch");
     }
 
-    public void onExtendInfoItemClick(View view, int i, String str, String str2) {
-        LinkedHashMap<String, Integer> q;
+    public void onExtendInfoItemClick(View view, int i2, String str, String str2) {
+        LinkedHashMap<String, Integer> q2;
         IpChange ipChange = $ipChange;
-        int i2 = 0;
+        int i3 = 0;
         if (AndroidInstantRuntime.support(ipChange, "83481833")) {
-            ipChange.ipc$dispatch("83481833", new Object[]{this, view, Integer.valueOf(i), str, str2});
-        } else if (!TextUtils.isEmpty(str2) && (q = this.mProjectDataHolderManager.q(i)) != null) {
+            ipChange.ipc$dispatch("83481833", new Object[]{this, view, Integer.valueOf(i2), str, str2});
+        } else if (!TextUtils.isEmpty(str2) && (q2 = this.mProjectDataHolderManager.q(i2)) != null) {
             try {
-                Integer num = q.get(str2);
+                Integer num = q2.get(str2);
                 if (num != null) {
-                    i2 = num.intValue();
+                    i3 = num.intValue();
                 }
             } catch (Exception unused) {
             }
             if (!TextUtils.isEmpty(str)) {
-                C0529c.e().x(pp2.u().x0(this.mProjectId, i2));
+                cn.damai.common.user.c.e().x(pp2.u().x0(this.mProjectId, i3));
                 DMNav.from(this.mActivity).toUri(str);
                 return;
             }
             ArrayList arrayList = new ArrayList();
-            for (Map.Entry<String, Integer> entry : q.entrySet()) {
+            for (Map.Entry<String, Integer> entry : q2.entrySet()) {
                 String key = entry.getKey();
                 if (!TextUtils.isEmpty(key)) {
                     PicInfo picInfo = new PicInfo();
@@ -4701,30 +4656,30 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
                     arrayList.add(picInfo);
                 }
             }
-            C0529c.e().x(pp2.u().x0(this.mProjectId, i2));
-            tv1.l(this.mProjectDetailActivity, this.mProjectId, arrayList, i2);
+            cn.damai.common.user.c.e().x(pp2.u().x0(this.mProjectId, i3));
+            tv1.l(this.mProjectDetailActivity, this.mProjectId, arrayList, i3);
         }
     }
 
-    public void onMoreExtendInfoBtnClickListener(int i, int i2) {
-        IRichTextManager r;
+    public void onMoreExtendInfoBtnClickListener(int i2, int i3) {
+        IRichTextManager r2;
         AnchorManager anchorManager;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1758583076")) {
-            ipChange.ipc$dispatch("-1758583076", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2)});
-        } else if (isRemoving() || isDetached() || this.mProjectItemDetailAdapter == null || (r = this.mProjectDataHolderManager.r(i)) == null) {
+            ipChange.ipc$dispatch("-1758583076", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3)});
+        } else if (isRemoving() || isDetached() || this.mProjectItemDetailAdapter == null || (r2 = this.mProjectDataHolderManager.r(i2)) == null) {
         } else {
-            boolean hasExpanded = r.hasExpanded();
-            r.expandShrinkRichText();
+            boolean hasExpanded = r2.hasExpanded();
+            r2.expandShrinkRichText();
             this.mProjectItemDetailAdapter.c(this.mProjectDataHolderManager.o());
             this.mProjectItemDetailAdapter.notifyDataSetChanged();
             if (hasExpanded && (anchorManager = this.mAnchorManager) != null && anchorManager.e() != null && this.mAnchorManager.e().c() != null) {
                 setCurAnchorPosition(0);
-                scrollToPosition(r.getStartIndex(), getOffset());
+                scrollToPosition(r2.getStartIndex(), getOffset());
                 this.isFixedAnchorVisible = true;
                 updateTitleAndFixAnchorVisibility(false);
             }
-            C0529c.e().x(pp2.u().y0(this.mProjectId));
+            cn.damai.common.user.c.e().x(pp2.u().y0(this.mProjectId));
         }
     }
 
@@ -4783,9 +4738,9 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             ipChange.ipc$dispatch("99704301", new Object[]{this, commentsItemBean});
         } else if (commentsItemBean != null && (projectDetailCommentBean = this.mProjectDetailEvaluateBean) != null) {
             List<CommentsItemBean> moduleComments = projectDetailCommentBean.getModuleComments();
-            int e = wh2.e(moduleComments);
-            for (int i = 0; i < e; i++) {
-                CommentsItemBean commentsItemBean2 = moduleComments.get(i);
+            int e2 = wh2.e(moduleComments);
+            for (int i2 = 0; i2 < e2; i2++) {
+                CommentsItemBean commentsItemBean2 = moduleComments.get(i2);
                 if (commentsItemBean2 != null && commentsItemBean.getCommentId().equals(commentsItemBean2.getCommentId())) {
                     CommentPraiseInfoBean praiseInfo = commentsItemBean.getPraiseInfo();
                     CommentPraiseInfoBean praiseInfo2 = commentsItemBean2.getPraiseInfo();
@@ -4801,10 +4756,10 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     @Override // cn.damai.trade.newtradeorder.ui.projectdetail.ui.fragment.PrivilegeCodeVerifyFragment.OnPrivilegeCodeVerifyResultListener
-    public void onPrivilegeCodeVerifySuccess(int i, String str) {
+    public void onPrivilegeCodeVerifySuccess(int i2, String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-286357024")) {
-            ipChange.ipc$dispatch("-286357024", new Object[]{this, Integer.valueOf(i), str});
+            ipChange.ipc$dispatch("-286357024", new Object[]{this, Integer.valueOf(i2), str});
             return;
         }
         if (this.mProjectItemDataBean != null) {
@@ -4813,9 +4768,9 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             }
             this.mPrivilegeId = str;
         }
-        if (i == 300) {
+        if (i2 == 300) {
             showPerformListFragment(false);
-        } else if (i == 200) {
+        } else if (i2 == 200) {
             handleChooseSeatPage();
         }
     }
@@ -4899,14 +4854,14 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
     }
 
     @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.contract.ProjectItemContract.View
-    public void onReturnProjectDetailDataSuccess(int i, ProjectDetailDataBean projectDetailDataBean) {
+    public void onReturnProjectDetailDataSuccess(int i2, ProjectDetailDataBean projectDetailDataBean) {
         ProjectWantSeeBean.GuideVO guideVO;
         ProjectStaticDataBean projectStaticDataBean;
         ProjectStaticExtendInfoBean projectStaticExtendInfoBean;
         ProjectTicketGuideBean projectTicketGuideBean;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1072918516")) {
-            ipChange.ipc$dispatch("-1072918516", new Object[]{this, Integer.valueOf(i), projectDetailDataBean});
+            ipChange.ipc$dispatch("-1072918516", new Object[]{this, Integer.valueOf(i2), projectDetailDataBean});
             return;
         }
         this.mLinearPullToRefreshView.onRefreshComplete();
@@ -4980,23 +4935,23 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         if (projectDetailDataBean2 != null && (projectStaticDataBean = projectDetailDataBean2.staticData) != null && (projectStaticExtendInfoBean = projectStaticDataBean.itemExtendInfo) != null) {
             this.mTitleBarPanel.i(projectStaticExtendInfoBean.approvalVO != null);
         }
-        WantSeePosterTips.C1554a c1554a = WantSeePosterTips.Companion;
-        if (c1554a.a()) {
+        WantSeePosterTips.a aVar = WantSeePosterTips.Companion;
+        if (aVar.a()) {
             return;
         }
         ProjectDynamicExtDataBean projectDynamicExtDataBean = this.mProjectDynamicExtDataBean;
         if (projectDynamicExtDataBean != null && projectDynamicExtDataBean.wantVO != null && !isBottomTimerAndStrategyShowing() && (guideVO = this.mProjectDynamicExtDataBean.wantVO.guideVO) != null) {
-            WantSeePosterTips.AbstractC1555b.C1559d c1559d = WantSeePosterTips.AbstractC1555b.C1559d.INSTANCE;
-            c1559d.u(guideVO.title);
-            c1559d.v(guideVO.titleSuffix);
-            c1559d.t(guideVO.subTitle);
-            c1559d.r(guideVO.posterUrl);
-            c1559d.q(Integer.valueOf(guideVO.titleType));
+            WantSeePosterTips.b.d dVar = WantSeePosterTips.b.d.INSTANCE;
+            dVar.u(guideVO.title);
+            dVar.v(guideVO.titleSuffix);
+            dVar.t(guideVO.subTitle);
+            dVar.r(guideVO.posterUrl);
+            dVar.q(Integer.valueOf(guideVO.titleType));
             this.wantSeePosterTips.setProjectId(Long.valueOf(this.mProjectId));
-            this.wantSeePosterTips.setPageSource(c1559d);
+            this.wantSeePosterTips.setPageSource(dVar);
             this.wantSeePosterTips.showAnim();
             this.wantSeePosterTips.mark(Long.valueOf(this.mProjectId));
-            c1554a.b(true);
+            aVar.b(true);
         }
         enterShowWantSeeGuideTips(this.mProjectId);
     }
@@ -5073,7 +5028,7 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
 
     @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.contract.ProjectItemContract.View
     public void onReturnSkuBeanDataSuccess(SkuBean skuBean) {
-        long j;
+        long j2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1223338604")) {
             ipChange.ipc$dispatch("1223338604", new Object[]{this, skuBean});
@@ -5088,8 +5043,8 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             ToastUtil.i("麦麦开小差了，请稍后重试");
             return;
         }
-        int i = itemBuyBtnBean.btnStatus;
-        if (i != 230 && i != 231) {
+        int i2 = itemBuyBtnBean.btnStatus;
+        if (i2 != 230 && i2 != 231) {
             this.mSkuBean = skuBean;
         } else {
             this.mSkuBean = null;
@@ -5102,16 +5057,16 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         }
         if (itemBuyBtnBean.btnStatus == 106) {
             try {
-                j = Long.parseLong(itemBuyBtnBean.scd);
+                j2 = Long.parseLong(itemBuyBtnBean.scd);
             } catch (Exception unused) {
-                j = 0;
+                j2 = 0;
             }
-            if (j > 60) {
+            if (j2 > 60) {
                 this.mPurchaseType = 4;
                 getProjectDetailData(1);
                 return;
-            } else if (j > 0) {
-                this.mProjectItemDataBean.setCountDown(j);
+            } else if (j2 > 0) {
+                this.mProjectItemDataBean.setCountDown(j2);
                 updateTimeCountDownFunction();
                 ProjectItemStatusHelper projectItemStatusHelper = this.mProjectItemStatusHelper;
                 if (projectItemStatusHelper != null) {
@@ -5145,15 +5100,15 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
         }
     }
 
-    public void onSelfActivityResult(int i, int i2, Intent intent) {
+    public void onSelfActivityResult(int i2, int i3, Intent intent) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-2076110946")) {
-            ipChange.ipc$dispatch("-2076110946", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), intent});
-        } else if (i == 4128) {
-            startWantSeeGuideTimer(WantSeeGuideTips.AbstractC1546b.C1548b.INSTANCE);
-        } else if (i != 4129) {
+            ipChange.ipc$dispatch("-2076110946", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3), intent});
+        } else if (i2 == 4128) {
+            startWantSeeGuideTimer(WantSeeGuideTips.b.C0063b.INSTANCE);
+        } else if (i2 != 4129) {
         } else {
-            startWantSeeGuideTimer(WantSeeGuideTips.AbstractC1546b.C1550d.INSTANCE);
+            startWantSeeGuideTimer(WantSeeGuideTips.b.d.INSTANCE);
         }
     }
 
@@ -5233,10 +5188,10 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             if (countDownTimer != null) {
                 countDownTimer.cancel();
             }
-            WantSeeGuideTips.AbstractC1546b.C1551e c1551e = WantSeeGuideTips.AbstractC1546b.C1551e.INSTANCE;
-            c1551e.j(projectWantSeeBean.tipsTitle);
-            c1551e.i(projectWantSeeBean.tipsSubTitle);
-            this.wantSeeGuideTips.setScenesSource(c1551e);
+            WantSeeGuideTips.b.e eVar = WantSeeGuideTips.b.e.INSTANCE;
+            eVar.j(projectWantSeeBean.tipsTitle);
+            eVar.i(projectWantSeeBean.tipsSubTitle);
+            this.wantSeeGuideTips.setScenesSource(eVar);
             ((FrameLayout.LayoutParams) this.wantSeeGuideTips.getLayoutParams()).gravity = BadgeDrawable.BOTTOM_END;
             this.wantSeeGuideTips.showAnim();
         } else {
@@ -5248,10 +5203,10 @@ public class ProjectDetailItemMainFragment extends DamaiBaseMvpFragment<ProjectI
             if (wantSeeGuideTips != null) {
                 wantSeeGuideTips.cancel();
             }
-            WantSeeTips.AbstractC1562a.C1567e c1567e = WantSeeTips.AbstractC1562a.C1567e.INSTANCE;
-            c1567e.p(projectWantSeeBean.tipsTitle);
-            c1567e.o(projectWantSeeBean.tipsSubTitle);
-            this.wantSeeTips.setPageSource(c1567e);
+            WantSeeTips.a.e eVar2 = WantSeeTips.a.e.INSTANCE;
+            eVar2.p(projectWantSeeBean.tipsTitle);
+            eVar2.o(projectWantSeeBean.tipsSubTitle);
+            this.wantSeeTips.setPageSource(eVar2);
             this.wantSeeTips.showAnim();
         }
         pp2.u().Y1(this.wantSeeTips, String.valueOf(this.mProjectId), this.mButtomText);

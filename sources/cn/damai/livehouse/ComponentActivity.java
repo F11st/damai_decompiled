@@ -1,7 +1,7 @@
 package cn.damai.livehouse;
 
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
@@ -17,12 +17,11 @@ public class ComponentActivity extends DamaiBaseActivity {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.livehouse.ComponentActivity$a */
     /* loaded from: classes5.dex */
-    public class C1316a implements SimpleTitleLayout.OnBtnClickListener {
+    public class a implements SimpleTitleLayout.OnBtnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1316a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.view.SimpleTitleLayout.OnBtnClickListener
@@ -52,7 +51,7 @@ public class ComponentActivity extends DamaiBaseActivity {
         }
         HashMap hashMap = new HashMap();
         d23.a(hashMap);
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i("livehouse_all").j(hashMap));
+        setDamaiUTKeyBuilder(new a.b().i("livehouse_all").j(hashMap));
     }
 
     @Override // cn.damai.common.app.base.BaseActivity
@@ -93,7 +92,7 @@ public class ComponentActivity extends DamaiBaseActivity {
             return;
         }
         setUpUt();
-        C0529c.e().K(this);
+        c.e().K(this);
         removeHeadTitleView();
         SimpleTitleLayout simpleTitleLayout = (SimpleTitleLayout) findViewById(R$id.id_stl);
         if (getIntent() != null) {
@@ -103,7 +102,7 @@ public class ComponentActivity extends DamaiBaseActivity {
         simpleTitleLayout.showShareBtn(false);
         simpleTitleLayout.switchMode(true);
         simpleTitleLayout.enableDivider(false);
-        simpleTitleLayout.setListener(new C1316a());
+        simpleTitleLayout.setListener(new a());
         getSupportFragmentManager().beginTransaction().add(R$id.ca_fragment_container, new ComponentFragment()).commitAllowingStateLoss();
     }
 

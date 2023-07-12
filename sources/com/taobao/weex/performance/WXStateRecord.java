@@ -16,13 +16,13 @@ import tb.oz2;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class WXStateRecord {
-    private RecordList<C6976a> a;
-    private RecordList<C6976a> b;
-    private RecordList<C6976a> c;
-    private RecordList<C6976a> d;
-    private RecordList<C6976a> e;
-    private RecordList<C6976a> f;
-    private RecordList<C6976a> g;
+    private RecordList<a> a;
+    private RecordList<a> b;
+    private RecordList<a> c;
+    private RecordList<a> d;
+    private RecordList<a> e;
+    private RecordList<a> f;
+    private RecordList<a> g;
     private long h;
     private Runnable i;
 
@@ -39,14 +39,13 @@ public class WXStateRecord {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.performance.WXStateRecord$a */
     /* loaded from: classes11.dex */
-    public static class C6976a implements Comparable<C6976a> {
+    public static class a implements Comparable<a> {
         private long a;
         private String b;
         private String c;
 
-        public C6976a(long j, String str, String str2) {
+        public a(long j, String str, String str2) {
             this.a = j;
             this.b = str;
             this.c = str2;
@@ -54,9 +53,9 @@ public class WXStateRecord {
 
         @Override // java.lang.Comparable
         /* renamed from: a */
-        public int compareTo(@NonNull C6976a c6976a) {
+        public int compareTo(@NonNull a aVar) {
             long j = this.a;
-            long j2 = c6976a.a;
+            long j2 = aVar.a;
             if (j == j2) {
                 return 0;
             }
@@ -70,22 +69,21 @@ public class WXStateRecord {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.performance.WXStateRecord$b */
     /* loaded from: classes11.dex */
-    public static class C6977b {
+    public static class b {
         private static final WXStateRecord a = new WXStateRecord();
     }
 
     public static WXStateRecord d() {
-        return C6977b.a;
+        return b.a;
     }
 
-    private void j(RecordList<C6976a> recordList, C6976a c6976a) {
-        if (recordList == null || c6976a == null) {
+    private void j(RecordList<a> recordList, a aVar) {
+        if (recordList == null || aVar == null) {
             return;
         }
         try {
-            recordList.add(c6976a);
+            recordList.add(aVar);
             if (recordList.isEmpty() || recordList.size() <= ((RecordList) recordList).maxSize) {
                 return;
             }
@@ -116,11 +114,11 @@ public class WXStateRecord {
     }
 
     public void f(String str) {
-        j(this.d, new C6976a(WXUtils.getFixUnixTime(), str, "onJSCCrash"));
+        j(this.d, new a(WXUtils.getFixUnixTime(), str, "onJSCCrash"));
     }
 
     public void g(String str) {
-        j(this.e, new C6976a(WXUtils.getFixUnixTime(), str, "onJSEngineReload"));
+        j(this.e, new a(WXUtils.getFixUnixTime(), str, "onJSEngineReload"));
     }
 
     public void h() {
@@ -128,29 +126,29 @@ public class WXStateRecord {
     }
 
     public void i(String str, String str2) {
-        j(this.b, new C6976a(WXUtils.getFixUnixTime(), str, str2));
+        j(this.b, new a(WXUtils.getFixUnixTime(), str, str2));
     }
 
     public void k(String str, String str2) {
         if (str2.length() > 200) {
             str2 = str2.substring(0, 200);
         }
-        j(this.a, new C6976a(WXUtils.getFixUnixTime(), str, str2));
+        j(this.a, new a(WXUtils.getFixUnixTime(), str, str2));
     }
 
     public void l(String str, String str2) {
         if (str2.length() > 200) {
             str2 = str2.substring(0, 200);
         }
-        j(this.g, new C6976a(WXUtils.getFixUnixTime(), str, str2));
+        j(this.g, new a(WXUtils.getFixUnixTime(), str, str2));
     }
 
     public void m(String str) {
-        j(this.f, new C6976a(WXUtils.getFixUnixTime(), "jsWatch", str));
+        j(this.f, new a(WXUtils.getFixUnixTime(), "jsWatch", str));
     }
 
     public void n(String str) {
-        j(this.c, new C6976a(WXUtils.getFixUnixTime(), "JSFM", str));
+        j(this.c, new a(WXUtils.getFixUnixTime(), "JSFM", str));
     }
 
     public void o() {

@@ -23,7 +23,7 @@ import tb.wh2;
 public class DMRGBUtil {
     private static transient /* synthetic */ IpChange $ipChange;
     private static HashMap<String, Integer> b = new HashMap<>();
-    private static HandlerC0944a a = new HandlerC0944a();
+    private static a a = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes.dex */
@@ -32,10 +32,9 @@ public class DMRGBUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.util.DMRGBUtil$a */
     /* loaded from: classes.dex */
-    public static class HandlerC0944a extends Handler {
-        public HandlerC0944a() {
+    public static class a extends Handler {
+        public a() {
             super(Looper.getMainLooper());
         }
     }

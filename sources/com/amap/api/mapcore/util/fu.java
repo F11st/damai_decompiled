@@ -9,7 +9,7 @@ import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public abstract class fu<T, V> extends AbstractC4517dp {
+public abstract class fu<T, V> extends dp {
     protected T d;
     protected int e = 1;
     protected Context f;
@@ -103,11 +103,11 @@ public abstract class fu<T, V> extends AbstractC4517dp {
         gm e = eq.e();
         String b = e != null ? e.b() : null;
         Hashtable hashtable = new Hashtable(16);
-        hashtable.put(IRequestConst.USER_AGENT, C4614m.c);
+        hashtable.put(IRequestConst.USER_AGENT, m.c);
         hashtable.put("Accept-Encoding", "gzip");
         hashtable.put("platinfo", String.format(Locale.US, "platform=Android&sdkversion=%s&product=%s", b, "3dmap"));
         hashtable.put("X-INFO", gf.b(this.f));
-        hashtable.put("key", C4554gc.f(this.f));
+        hashtable.put("key", gc.f(this.f));
         hashtable.put("logversion", "2.1");
         return hashtable;
     }

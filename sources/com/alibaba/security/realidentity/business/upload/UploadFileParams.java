@@ -1,15 +1,14 @@
 package com.alibaba.security.realidentity.business.upload;
 
 import com.alibaba.security.biometrics.service.constants.GlobalErrorCode;
-import com.alibaba.security.realidentity.business.C3873c;
 import com.alibaba.security.realidentity.business.bucket.BucketParams;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
 public class UploadFileParams extends AbsUploadFileParams {
     @Override // com.alibaba.security.realidentity.business.upload.AbsUploadFileParams, com.alibaba.security.realidentity.business.bucket.BucketParams
-    public boolean onDelivering(C3873c c3873c) {
-        super.onDelivering(c3873c);
+    public boolean onDelivering(com.alibaba.security.realidentity.business.c cVar) {
+        super.onDelivering(cVar);
         return true;
     }
 

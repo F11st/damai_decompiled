@@ -24,10 +24,10 @@ public final class az implements IDistrictSearch {
     private Handler g;
 
     public az(Context context) throws AMapException {
-        bu a = bt.a(context, C4434h.a(false));
-        if (a.a == bt.EnumC4398c.SuccessCode) {
+        bu a = bt.a(context, h.a(false));
+        if (a.a == bt.c.SuccessCode) {
             this.a = context.getApplicationContext();
-            this.g = HandlerC4447t.a();
+            this.g = t.a();
             return;
         }
         String str = a.b;
@@ -45,7 +45,7 @@ public final class az implements IDistrictSearch {
         int i;
         try {
             DistrictResult districtResult = new DistrictResult();
-            C4444r.a(this.a);
+            r.a(this.a);
             if (!a()) {
                 this.b = new DistrictSearchQuery();
             }
@@ -59,7 +59,7 @@ public final class az implements IDistrictSearch {
                 }
             }
             if (this.e == 0) {
-                a = new C4437k(this.a, this.b.m225clone()).b();
+                a = new k(this.a, this.b.m225clone()).b();
                 if (a == null) {
                     return a;
                 }
@@ -68,7 +68,7 @@ public final class az implements IDistrictSearch {
             } else {
                 a = a(this.b.getPageNum());
                 if (a == null) {
-                    a = new C4437k(this.a, this.b.m225clone()).b();
+                    a = new k(this.a, this.b.m225clone()).b();
                     DistrictSearchQuery districtSearchQuery = this.b;
                     if (districtSearchQuery != null && a != null && (i = this.e) > 0 && i > districtSearchQuery.getPageNum()) {
                         f.put(Integer.valueOf(this.b.getPageNum()), a);
@@ -77,7 +77,7 @@ public final class az implements IDistrictSearch {
             }
             return a;
         } catch (AMapException e) {
-            C4435i.a(e, "DistrictSearch", "searchDistrict");
+            i.a(e, "DistrictSearch", "searchDistrict");
             throw e;
         }
     }
@@ -93,7 +93,7 @@ public final class az implements IDistrictSearch {
             ao.a().a(new Runnable() { // from class: com.amap.api.col.s.az.1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                    Message obtainMessage = t.a().obtainMessage();
                     DistrictResult districtResult = new DistrictResult();
                     districtResult.setQuery(az.this.b);
                     try {
@@ -113,7 +113,7 @@ public final class az implements IDistrictSearch {
                                 az.this.g.sendMessage(obtainMessage);
                             }
                         } catch (Throwable th) {
-                            C4435i.a(th, "DistrictSearch", "searchDistrictAnsyThrowable");
+                            i.a(th, "DistrictSearch", "searchDistrictAnsyThrowable");
                             obtainMessage.arg1 = 4;
                             obtainMessage.obj = az.this.c;
                             Bundle bundle2 = new Bundle();

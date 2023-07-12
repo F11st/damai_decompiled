@@ -3,14 +3,13 @@ package tb;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.taobao.android.dinamicx.DXRuntimeContext;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 import com.taobao.android.dinamicx.videoc.DXVideoControlConfig;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
 import java.util.Comparator;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class yx extends AbstractC6375a {
+public class yx extends com.taobao.android.dinamicx.expression.parser.a {
     public static final long DX_PARSER_VIDEOCONTROLCONFIG = -7801350391660369312L;
     public static final String LOOP_PLAY = "isLoop";
     public static final String MAX_PLATING_VIDEO = "maxParallelCount";
@@ -30,7 +29,7 @@ public class yx extends AbstractC6375a {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         if (objArr == null || objArr.length == 0 || objArr.length != 1) {
             return null;

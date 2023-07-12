@@ -19,7 +19,6 @@ import com.opensource.svgaplayer.SVGAVideoShapeEntity;
 import java.util.HashMap;
 import kotlin.TypeCastException;
 import kotlin.jvm.functions.Function2;
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 import tb.l42;
 
@@ -55,21 +54,21 @@ public final class r42 extends l42 {
         this.l = new float[16];
     }
 
-    private final void f(l42.C9404a c9404a, Canvas canvas, int i) {
+    private final void f(l42.a aVar, Canvas canvas, int i) {
         Function2<Canvas, Integer, Boolean> function2;
-        String b = c9404a.b();
+        String b = aVar.b();
         if (b == null || (function2 = this.m.a().get(b)) == null) {
             return;
         }
-        o(c9404a.a().e());
+        o(aVar.a().e());
         canvas.save();
         canvas.concat(this.i);
         function2.invoke(canvas, Integer.valueOf(i));
         canvas.restore();
     }
 
-    private final void g(l42.C9404a c9404a, Canvas canvas) {
-        String b = c9404a.b();
+    private final void g(l42.a aVar, Canvas canvas) {
+        String b = aVar.b();
         if (b != null) {
             Boolean bool = this.m.b().get(b);
             if (bool != null) {
@@ -86,13 +85,13 @@ public final class r42 extends l42 {
                 bitmap = c().e().get(b);
             }
             if (bitmap != null) {
-                o(c9404a.a().e());
+                o(aVar.a().e());
                 this.e.reset();
                 this.e.setAntiAlias(c().a());
                 this.e.setFilterBitmap(c().a());
-                this.e.setAlpha((int) (c9404a.a().a() * 255));
-                if (c9404a.a().c() != null) {
-                    v42 c = c9404a.a().c();
+                this.e.setAlpha((int) (aVar.a().a() * 255));
+                if (aVar.a().c() != null) {
+                    v42 c = aVar.a().c();
                     if (c == null) {
                         return;
                     }
@@ -101,28 +100,28 @@ public final class r42 extends l42 {
                     c.a(this.f);
                     this.f.transform(this.i);
                     canvas.clipPath(this.f);
-                    this.i.preScale((float) (c9404a.a().b().b() / bitmap.getWidth()), (float) (c9404a.a().b().b() / bitmap.getWidth()));
+                    this.i.preScale((float) (aVar.a().b().b() / bitmap.getWidth()), (float) (aVar.a().b().b() / bitmap.getWidth()));
                     canvas.drawBitmap(bitmap, this.i, this.e);
                     canvas.restore();
                 } else {
-                    this.i.preScale((float) (c9404a.a().b().b() / bitmap.getWidth()), (float) (c9404a.a().b().b() / bitmap.getWidth()));
+                    this.i.preScale((float) (aVar.a().b().b() / bitmap.getWidth()), (float) (aVar.a().b().b() / bitmap.getWidth()));
                     canvas.drawBitmap(bitmap, this.i, this.e);
                 }
-                j(canvas, bitmap, c9404a);
+                j(canvas, bitmap, aVar);
             }
         }
     }
 
-    private final void h(l42.C9404a c9404a, Canvas canvas) {
+    private final void h(l42.a aVar, Canvas canvas) {
         int a;
-        o(c9404a.a().e());
-        for (SVGAVideoShapeEntity sVGAVideoShapeEntity : c9404a.a().d()) {
+        o(aVar.a().e());
+        for (SVGAVideoShapeEntity sVGAVideoShapeEntity : aVar.a().d()) {
             sVGAVideoShapeEntity.a();
             if (sVGAVideoShapeEntity.b() != null) {
                 this.e.reset();
                 this.e.setAntiAlias(c().a());
                 double d = 255;
-                this.e.setAlpha((int) (c9404a.a().a() * d));
+                this.e.setAlpha((int) (aVar.a().a() * d));
                 if (!this.k.containsKey(sVGAVideoShapeEntity)) {
                     Path path = new Path();
                     path.set(sVGAVideoShapeEntity.b());
@@ -137,14 +136,14 @@ public final class r42 extends l42 {
                 }
                 this.h.postConcat(this.i);
                 this.f.transform(this.h);
-                SVGAVideoShapeEntity.C6109a c = sVGAVideoShapeEntity.c();
+                SVGAVideoShapeEntity.a c = sVGAVideoShapeEntity.c();
                 if (c != null && (a = c.a()) != 0) {
                     this.e.setColor(a);
-                    this.e.setAlpha(Math.min(255, Math.max(0, (int) (c9404a.a().a() * d))));
-                    if (c9404a.a().c() != null) {
+                    this.e.setAlpha(Math.min(255, Math.max(0, (int) (aVar.a().a() * d))));
+                    if (aVar.a().c() != null) {
                         canvas.save();
                     }
-                    v42 c2 = c9404a.a().c();
+                    v42 c2 = aVar.a().c();
                     if (c2 != null) {
                         this.g.reset();
                         c2.a(this.g);
@@ -152,17 +151,17 @@ public final class r42 extends l42 {
                         canvas.clipPath(this.g);
                     }
                     canvas.drawPath(this.f, this.e);
-                    if (c9404a.a().c() != null) {
+                    if (aVar.a().c() != null) {
                         canvas.restore();
                     }
                 }
-                SVGAVideoShapeEntity.C6109a c3 = sVGAVideoShapeEntity.c();
+                SVGAVideoShapeEntity.a c3 = sVGAVideoShapeEntity.c();
                 if (c3 != null && c3.g() > 0) {
                     n(sVGAVideoShapeEntity);
-                    if (c9404a.a().c() != null) {
+                    if (aVar.a().c() != null) {
                         canvas.save();
                     }
-                    v42 c4 = c9404a.a().c();
+                    v42 c4 = aVar.a().c();
                     if (c4 != null) {
                         this.g.reset();
                         c4.a(this.g);
@@ -170,7 +169,7 @@ public final class r42 extends l42 {
                         canvas.clipPath(this.g);
                     }
                     canvas.drawPath(this.f, this.e);
-                    if (c9404a.a().c() != null) {
+                    if (aVar.a().c() != null) {
                         canvas.restore();
                     }
                 }
@@ -178,19 +177,19 @@ public final class r42 extends l42 {
         }
     }
 
-    private final void i(l42.C9404a c9404a, Canvas canvas, int i) {
-        g(c9404a, canvas);
-        h(c9404a, canvas);
-        f(c9404a, canvas, i);
+    private final void i(l42.a aVar, Canvas canvas, int i) {
+        g(aVar, canvas);
+        h(aVar, canvas);
+        f(aVar, canvas, i);
     }
 
-    private final void j(Canvas canvas, Bitmap bitmap, l42.C9404a c9404a) {
+    private final void j(Canvas canvas, Bitmap bitmap, l42.a aVar) {
         TextPaint textPaint;
         if (this.m.g()) {
             this.j.clear();
             this.m.i(false);
         }
-        String b = c9404a.b();
+        String b = aVar.b();
         if (b != null) {
             Bitmap bitmap2 = null;
             String str = this.m.e().get(b);
@@ -225,8 +224,8 @@ public final class r42 extends l42 {
             if (bitmap2 != null) {
                 this.e.reset();
                 this.e.setAntiAlias(c().a());
-                if (c9404a.a().c() != null) {
-                    v42 c = c9404a.a().c();
+                if (aVar.a().c() != null) {
+                    v42 c = aVar.a().c();
                     if (c != null) {
                         canvas.save();
                         canvas.concat(this.i);
@@ -312,7 +311,7 @@ public final class r42 extends l42 {
     }
 
     private final void n(SVGAVideoShapeEntity sVGAVideoShapeEntity) {
-        SVGAVideoShapeEntity.C6109a c;
+        SVGAVideoShapeEntity.a c;
         float[] c2;
         String d;
         boolean q;
@@ -325,43 +324,43 @@ public final class r42 extends l42 {
         this.e.reset();
         this.e.setAntiAlias(c().a());
         this.e.setStyle(Paint.Style.STROKE);
-        SVGAVideoShapeEntity.C6109a c3 = sVGAVideoShapeEntity.c();
+        SVGAVideoShapeEntity.a c3 = sVGAVideoShapeEntity.c();
         if (c3 != null) {
             this.e.setColor(c3.f());
         }
         float l = l();
-        SVGAVideoShapeEntity.C6109a c4 = sVGAVideoShapeEntity.c();
+        SVGAVideoShapeEntity.a c4 = sVGAVideoShapeEntity.c();
         if (c4 != null) {
             this.e.setStrokeWidth(c4.g() * l);
         }
-        SVGAVideoShapeEntity.C6109a c5 = sVGAVideoShapeEntity.c();
+        SVGAVideoShapeEntity.a c5 = sVGAVideoShapeEntity.c();
         if (c5 != null && (b = c5.b()) != null) {
-            q4 = C8604o.q(b, "butt", true);
+            q4 = kotlin.text.o.q(b, "butt", true);
             if (q4) {
                 this.e.setStrokeCap(Paint.Cap.BUTT);
             } else {
-                q5 = C8604o.q(b, "round", true);
+                q5 = kotlin.text.o.q(b, "round", true);
                 if (q5) {
                     this.e.setStrokeCap(Paint.Cap.ROUND);
                 } else {
-                    q6 = C8604o.q(b, "square", true);
+                    q6 = kotlin.text.o.q(b, "square", true);
                     if (q6) {
                         this.e.setStrokeCap(Paint.Cap.SQUARE);
                     }
                 }
             }
         }
-        SVGAVideoShapeEntity.C6109a c6 = sVGAVideoShapeEntity.c();
+        SVGAVideoShapeEntity.a c6 = sVGAVideoShapeEntity.c();
         if (c6 != null && (d = c6.d()) != null) {
-            q = C8604o.q(d, "miter", true);
+            q = kotlin.text.o.q(d, "miter", true);
             if (q) {
                 this.e.setStrokeJoin(Paint.Join.MITER);
             } else {
-                q2 = C8604o.q(d, "round", true);
+                q2 = kotlin.text.o.q(d, "round", true);
                 if (q2) {
                     this.e.setStrokeJoin(Paint.Join.ROUND);
                 } else {
-                    q3 = C8604o.q(d, "bevel", true);
+                    q3 = kotlin.text.o.q(d, "bevel", true);
                     if (q3) {
                         this.e.setStrokeJoin(Paint.Join.BEVEL);
                     }
@@ -371,7 +370,7 @@ public final class r42 extends l42 {
         if (sVGAVideoShapeEntity.c() != null) {
             this.e.setStrokeMiter(c.e() * l);
         }
-        SVGAVideoShapeEntity.C6109a c7 = sVGAVideoShapeEntity.c();
+        SVGAVideoShapeEntity.a c7 = sVGAVideoShapeEntity.c();
         if (c7 == null || (c2 = c7.c()) == null || c2.length != 3) {
             return;
         }
@@ -398,8 +397,8 @@ public final class r42 extends l42 {
         b41.j(scaleType, "scaleType");
         super.a(canvas, i, scaleType);
         m(canvas);
-        for (l42.C9404a c9404a : e(i)) {
-            i(c9404a, canvas, i);
+        for (l42.a aVar : e(i)) {
+            i(aVar, canvas, i);
         }
         k(i);
     }

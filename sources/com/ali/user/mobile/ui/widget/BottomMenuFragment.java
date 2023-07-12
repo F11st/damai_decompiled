@@ -58,10 +58,10 @@ public class BottomMenuFragment extends DialogFragment {
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         getDialog().requestWindowFeature(1);
         if (this.transparent) {
-            getDialog().getWindow().setWindowAnimations(R.C2967style.AliUserMenuAnimation);
+            getDialog().getWindow().setWindowAnimations(R.style.AliUserMenuAnimation);
         }
         if (this.rootLayoutId <= 0) {
-            this.rootLayoutId = R.C2965layout.aliuser_fragment_bottom_menu;
+            this.rootLayoutId = R.layout.aliuser_fragment_bottom_menu;
         }
         View inflate = layoutInflater.inflate(this.rootLayoutId, viewGroup, false);
         if (this.menuItems == null) {
@@ -111,7 +111,7 @@ public class BottomMenuFragment extends DialogFragment {
         if (this.transparent) {
             getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(0));
         } else {
-            getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(getContext().getResources().getColor(R.C2963color.aliuser_half_transparent_background)));
+            getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(getContext().getResources().getColor(R.color.aliuser_half_transparent_background)));
         }
     }
 

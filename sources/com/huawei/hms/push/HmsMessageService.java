@@ -11,8 +11,8 @@ import android.text.TextUtils;
 import com.huawei.hms.aaid.constant.ErrorEnum;
 import com.huawei.hms.aaid.utils.BaseUtils;
 import com.huawei.hms.adapter.internal.CommonCode;
-import com.huawei.hms.push.HandlerC5699t;
 import com.huawei.hms.push.constant.RemoteMessageConst;
+import com.huawei.hms.push.t;
 import com.huawei.hms.push.utils.PushBiUtil;
 import com.huawei.hms.support.api.entity.push.PushNaming;
 import com.huawei.hms.support.log.HMSLog;
@@ -25,16 +25,15 @@ import org.json.JSONObject;
 public class HmsMessageService extends Service {
     public static final String PROXY_TYPE = "proxy_type";
     public static final String SUBJECT_ID = "subject_id";
-    public final Messenger a = new Messenger(new HandlerC5699t(new C5679a()));
+    public final Messenger a = new Messenger(new t(new a()));
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.push.HmsMessageService$a */
     /* loaded from: classes10.dex */
-    private class C5679a implements HandlerC5699t.InterfaceC5700a {
-        public C5679a() {
+    private class a implements t.a {
+        public a() {
         }
 
-        @Override // com.huawei.hms.push.HandlerC5699t.InterfaceC5700a
+        @Override // com.huawei.hms.push.t.a
         public void handleMessage(Message message) {
             if (message == null) {
                 HMSLog.e("HmsMessageService", "receive message is null");

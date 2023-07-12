@@ -1,6 +1,5 @@
 package com.alibaba.security.realidentity.business.upload;
 
-import com.alibaba.security.realidentity.business.C3873c;
 import com.alibaba.security.realidentity.business.bucket.BucketParams;
 import java.util.List;
 
@@ -8,14 +7,14 @@ import java.util.List;
 /* loaded from: classes8.dex */
 public abstract class AbsUploadFileParams extends BucketParams {
     protected int mUploadErrorCode;
-    private List<AsyncTaskC3885e> uploadTaskList;
+    private List<e> uploadTaskList;
 
-    public List<AsyncTaskC3885e> getUploadTaskList() {
+    public List<e> getUploadTaskList() {
         return this.uploadTaskList;
     }
 
     @Override // com.alibaba.security.realidentity.business.bucket.BucketParams
-    public boolean onDelivering(C3873c c3873c) {
+    public boolean onDelivering(com.alibaba.security.realidentity.business.c cVar) {
         return true;
     }
 
@@ -23,7 +22,7 @@ public abstract class AbsUploadFileParams extends BucketParams {
         this.mUploadErrorCode = i;
     }
 
-    public void setUploadTaskList(List<AsyncTaskC3885e> list) {
+    public void setUploadTaskList(List<e> list) {
         this.uploadTaskList = list;
     }
 }

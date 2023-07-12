@@ -9,7 +9,7 @@ import tb.hl2;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
-public class UTOrangeConfMgr extends AbstractC3111d {
+public class UTOrangeConfMgr extends d {
     private static final String[] g = {"ut_sample", "ut_stream", "ut_bussiness", "utap_system", "ap_alarm", "ap_counter", "ap_stat", "ut_realtime"};
 
     /* compiled from: Taobao */
@@ -25,7 +25,7 @@ public class UTOrangeConfMgr extends AbstractC3111d {
             String[] strArr = UTOrangeConfMgr.g;
             UTOrangeConfMgr.super.k();
             UTOrangeConfMgr.super.i();
-            AbstractC3111d.m("0");
+            d.m("0");
             int i = 0;
             int i2 = 0;
             do {
@@ -54,10 +54,9 @@ public class UTOrangeConfMgr extends AbstractC3111d {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.analytics.core.config.UTOrangeConfMgr$a */
     /* loaded from: classes5.dex */
-    class C3107a implements OrangeConfigListenerV1 {
-        C3107a() {
+    class a implements OrangeConfigListenerV1 {
+        a() {
         }
 
         @Override // com.taobao.orange.OrangeConfigListenerV1
@@ -66,17 +65,17 @@ public class UTOrangeConfMgr extends AbstractC3111d {
             Map<String, String> configs = OrangeConfig.getInstance().getConfigs(str);
             if (configs != null) {
                 UTOrangeConfMgr.super.o(str, configs);
-                AbstractC3111d.m("2");
+                d.m("2");
             }
         }
     }
 
-    @Override // com.alibaba.analytics.core.config.AbstractC3111d
+    @Override // com.alibaba.analytics.core.config.d
     public void l() {
         try {
             OrangeConfig.getInstance().init(Variables.n().j());
             hl2.c().f(new OrangeGetConfigsRunnable());
-            OrangeConfig.getInstance().registerListener(g, new C3107a());
+            OrangeConfig.getInstance().registerListener(g, new a());
         } catch (Throwable th) {
             th.printStackTrace();
         }

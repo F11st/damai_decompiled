@@ -14,8 +14,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.core.internal.view.SupportMenu;
-import com.alibaba.security.common.c.C3800a;
-import com.alibaba.security.common.d.C3807d;
+import com.alibaba.security.common.d.d;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
@@ -24,7 +23,7 @@ public class RPDetectCoreView extends View {
     private static final int j = -1;
     private int A;
     private int B;
-    public InterfaceC3781a a;
+    public a a;
     public long b;
     public long c;
     public float d;
@@ -78,9 +77,8 @@ public class RPDetectCoreView extends View {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.security.biometrics.logic.view.custom.RPDetectCoreView$a */
     /* loaded from: classes8.dex */
-    public interface InterfaceC3781a {
+    public interface a {
         void a();
 
         void b();
@@ -104,32 +102,32 @@ public class RPDetectCoreView extends View {
         if (Build.VERSION.SDK_INT >= 11) {
             setLayerType(1, null);
         }
-        this.n = C3807d.a(getContext());
-        C3800a.a(i, "mRadius:" + this.n);
-        this.A = C3807d.c(getContext());
-        this.B = C3807d.b(getContext());
-        C3800a.a(i, "width:" + this.A);
-        C3800a.a(i, "height:" + this.B);
+        this.n = d.a(getContext());
+        com.alibaba.security.common.c.a.a(i, "mRadius:" + this.n);
+        this.A = d.c(getContext());
+        this.B = d.b(getContext());
+        com.alibaba.security.common.c.a.a(i, "width:" + this.A);
+        com.alibaba.security.common.c.a.a(i, "height:" + this.B);
         this.p = this.A / 2;
         this.o = a(getContext());
-        C3800a.a(i, "mCircleCenterX:" + this.p);
-        C3800a.a(i, "mCircleCenterY:" + this.o);
+        com.alibaba.security.common.c.a.a(i, "mCircleCenterX:" + this.p);
+        com.alibaba.security.common.c.a.a(i, "mCircleCenterY:" + this.o);
         this.q = -1;
         Paint paint = new Paint(1);
         this.l = paint;
         paint.setColor(-1);
         this.m = new Path();
-        this.t = C3807d.a(getContext(), 7.0f);
+        this.t = d.a(getContext(), 7.0f);
         Paint paint2 = new Paint(1);
         this.u = paint2;
         paint2.setColor(SupportMenu.CATEGORY_MASK);
         this.u.setStyle(Paint.Style.STROKE);
-        this.u.setStrokeWidth(C3807d.a(getContext(), 5.0f));
+        this.u.setStrokeWidth(d.a(getContext(), 5.0f));
         Paint paint3 = new Paint(1);
         this.w = paint3;
         paint3.setColor(-16776961);
         this.w.setStyle(Paint.Style.STROKE);
-        this.w.setStrokeWidth(C3807d.a(getContext(), 5.0f));
+        this.w.setStrokeWidth(d.a(getContext(), 5.0f));
         Paint paint4 = new Paint(1);
         this.z = paint4;
         paint4.setColor(-16777216);
@@ -210,15 +208,15 @@ public class RPDetectCoreView extends View {
 
     @Override // android.view.View
     protected void onDraw(Canvas canvas) {
-        InterfaceC3781a interfaceC3781a;
+        a aVar;
         super.onDraw(canvas);
         try {
             if (getWidth() != 0 && getWidth() != this.A) {
                 this.p = getWidth() / 2;
                 int width = getWidth();
-                C3800a.a(i, "mViewWidth:".concat(String.valueOf(width)));
-                this.n = (Math.min(C3807d.b(getContext()), width) / 2) - C3807d.a(getContext(), 50.0f);
-                this.o = C3807d.a(getContext(), 125.0f) + this.n;
+                com.alibaba.security.common.c.a.a(i, "mViewWidth:".concat(String.valueOf(width)));
+                this.n = (Math.min(d.b(getContext()), width) / 2) - d.a(getContext(), 50.0f);
+                this.o = d.a(getContext(), 125.0f) + this.n;
             }
             if (this.y == null) {
                 int i2 = this.p;
@@ -244,16 +242,16 @@ public class RPDetectCoreView extends View {
             }
             if (this.r != -1.0f) {
                 invalidate();
-                if (this.f || (interfaceC3781a = this.a) == null) {
+                if (this.f || (aVar = this.a) == null) {
                     return;
                 }
-                interfaceC3781a.a();
+                aVar.a();
                 this.f = true;
                 return;
             }
-            InterfaceC3781a interfaceC3781a2 = this.a;
-            if (interfaceC3781a2 != null) {
-                interfaceC3781a2.b();
+            a aVar2 = this.a;
+            if (aVar2 != null) {
+                aVar2.b();
                 this.a = null;
             }
         } catch (Throwable unused) {
@@ -287,14 +285,14 @@ public class RPDetectCoreView extends View {
     }
 
     private int a(Context context) {
-        return C3807d.a(context, 125.0f) + this.n;
+        return d.a(context, 125.0f) + this.n;
     }
 
-    private void a(float f, float f2, long j2, InterfaceC3781a interfaceC3781a) {
+    private void a(float f, float f2, long j2, a aVar) {
         this.d = f;
         this.e = f2;
         this.c = j2;
-        this.a = interfaceC3781a;
+        this.a = aVar;
         this.f = false;
         this.b = SystemClock.uptimeMillis();
         invalidate();

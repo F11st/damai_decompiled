@@ -2,7 +2,6 @@ package tb;
 
 import android.content.Context;
 import android.text.TextUtils;
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.IConfigAdapter;
 import com.taobao.weex.WXEnvironment;
 import com.taobao.weex.WXSDKInstance;
@@ -16,7 +15,7 @@ public class qz2 implements IWXJscProcessManager {
 
     @Override // com.taobao.weex.adapter.IWXJscProcessManager
     public boolean enableBackUpThreadCache() {
-        IConfigAdapter c = C3004a.l().c();
+        IConfigAdapter c = com.alibaba.aliweex.a.l().c();
         if (c == null) {
             return true;
         }
@@ -27,7 +26,7 @@ public class qz2 implements IWXJscProcessManager {
     @Override // com.taobao.weex.adapter.IWXJscProcessManager
     public boolean enableBackupThread() {
         IConfigAdapter c;
-        if (zz2.e() && (c = C3004a.l().c()) != null) {
+        if (zz2.e() && (c = com.alibaba.aliweex.a.l().c()) != null) {
             oz2 j = oz2.j();
             return "true".equals(c.getConfig("android_weex_ext_config", oz2.key_enableBackUpThread, j.i(j.d)));
         }
@@ -36,7 +35,7 @@ public class qz2 implements IWXJscProcessManager {
 
     @Override // com.taobao.weex.adapter.IWXJscProcessManager
     public long rebootTimeout() {
-        IConfigAdapter c = C3004a.l().c();
+        IConfigAdapter c = com.alibaba.aliweex.a.l().c();
         if (c == null) {
             return this.a;
         }
@@ -52,7 +51,7 @@ public class qz2 implements IWXJscProcessManager {
         if (WXEnvironment.isApkDebugable()) {
             return false;
         }
-        IConfigAdapter c = C3004a.l().c();
+        IConfigAdapter c = com.alibaba.aliweex.a.l().c();
         if (c == null) {
             return true;
         }

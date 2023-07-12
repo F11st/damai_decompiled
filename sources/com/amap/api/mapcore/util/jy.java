@@ -56,7 +56,7 @@ public final class jy {
     public static gm c() {
         try {
             if (m == null) {
-                m = new gm.C4569a("loc", "4.9.0", "AMAP_Location_SDK_Android 4.9.0").a(d()).a("4.9.0").a();
+                m = new gm.a("loc", "4.9.0", "AMAP_Location_SDK_Android 4.9.0").a(d()).a("4.9.0").a();
             }
         } catch (Throwable th) {
             a(th, "CoreUtil", "getSDKInfo");

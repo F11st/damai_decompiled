@@ -9,9 +9,7 @@ import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
 import cn.damai.homepage.MainActivity;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -40,12 +38,11 @@ public class ZhiboView {
     private HomeFragmentAgent i;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.view.ZhiboView$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1183a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1183a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -60,12 +57,11 @@ public class ZhiboView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.view.ZhiboView$b */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1184b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1184b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -75,19 +71,18 @@ public class ZhiboView {
                 ipChange.ipc$dispatch("-83197292", new Object[]{this, view});
             } else if (ZhiboView.this.h == null || TextUtils.isEmpty(ZhiboView.this.h.schema)) {
             } else {
-                C0529c.e().x(py0.I().S(ZhiboView.this.h.itemId));
+                cn.damai.common.user.c.e().x(py0.I().S(ZhiboView.this.h.itemId));
                 DMNav.from(ZhiboView.this.a).toUri(ZhiboView.this.h.schema);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.view.ZhiboView$c */
     /* loaded from: classes14.dex */
-    public class C1185c implements ValueAnimator.AnimatorUpdateListener {
+    public class c implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1185c() {
+        c() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -107,7 +102,7 @@ public class ZhiboView {
         view.setVisibility(8);
         View findViewById = view.findViewById(R$id.layout_close);
         this.c = findViewById;
-        findViewById.setOnClickListener(new View$OnClickListenerC1183a());
+        findViewById.setOnClickListener(new a());
         this.g = (ImageView) view.findViewById(R$id.image_head);
         this.e = (LottieAnimationView) view.findViewById(R$id.view_bolang);
         this.f = (LottieAnimationView) view.findViewById(R$id.view_liwu);
@@ -116,7 +111,7 @@ public class ZhiboView {
         } catch (Exception unused) {
         }
         this.d = (TextView) view.findViewById(R$id.tv_zhibo);
-        this.b.setOnClickListener(new View$OnClickListenerC1184b());
+        this.b.setOnClickListener(new b());
     }
 
     public boolean e() {
@@ -143,7 +138,7 @@ public class ZhiboView {
         ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) this.b.getLayoutParams();
         ValueAnimator ofInt = ValueAnimator.ofInt(0, 100);
         ofInt.setDuration(400L);
-        ofInt.addUpdateListener(new C1185c());
+        ofInt.addUpdateListener(new c());
         ofInt.start();
     }
 
@@ -231,7 +226,7 @@ public class ZhiboView {
         }
         py0.I().b0(this.b, this.h.itemId);
         if (!TextUtils.isEmpty(homeZhibotiaoBean.artistHeadPic)) {
-            C0504a.b().f(homeZhibotiaoBean.artistHeadPic, t60.a(this.a, 28.0f), t60.a(this.a, 28.0f)).c(R$drawable.homepage_zhibo_head_bg_default).g(this.g);
+            cn.damai.common.image.a.b().f(homeZhibotiaoBean.artistHeadPic, t60.a(this.a, 28.0f), t60.a(this.a, 28.0f)).c(R$drawable.homepage_zhibo_head_bg_default).g(this.g);
         }
         if (!TextUtils.isEmpty(homeZhibotiaoBean.itemName)) {
             this.d.setText(homeZhibotiaoBean.itemName);

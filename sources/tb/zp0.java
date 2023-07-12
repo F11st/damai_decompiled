@@ -9,7 +9,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes6.dex */
 public final class zp0 {
     @NotNull
-    public static final C10031a Companion = new C10031a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String KEY_LOTTIE_ANIMATOR = "lottieAnimator";
     @NotNull
@@ -26,13 +26,12 @@ public final class zp0 {
     private final GXIExpression b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.zp0$a */
     /* loaded from: classes6.dex */
-    public static final class C10031a {
-        private C10031a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C10031a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -47,7 +46,7 @@ public final class zp0 {
             }
             xq0 xq0Var = xq0.INSTANCE;
             GXIExpression a3 = xq0Var.a(str, string);
-            String obj = (a3 == null || (a = GXIExpression.C3398a.a(a3, null, 1, null)) == null) ? null : a.toString();
+            String obj = (a3 == null || (a = GXIExpression.a.a(a3, null, 1, null)) == null) ? null : a.toString();
             if (obj == null || (a2 = xq0Var.a(str, jSONObject)) == null) {
                 return null;
             }
@@ -57,7 +56,7 @@ public final class zp0 {
 
     public zp0(@NotNull String str, @NotNull GXIExpression gXIExpression) {
         b41.i(str, "type");
-        b41.i(gXIExpression, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+        b41.i(gXIExpression, v.TAK_ABILITY_SHOW_POP_ANIMATION);
         this.a = str;
         this.b = gXIExpression;
     }

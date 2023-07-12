@@ -24,9 +24,8 @@ public enum PageType {
     public final String tabName;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.bean.PageType$a */
     /* loaded from: classes.dex */
-    static /* synthetic */ class C0970a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -65,7 +64,7 @@ public enum PageType {
     public List getListByType(WannaBean wannaBean) {
         RecommendProjects recommendProjects;
         if (wannaBean != null) {
-            int i = C0970a.a[ordinal()];
+            int i = a.a[ordinal()];
             if (i != 1 && i != 2) {
                 if (i != 3) {
                     if (i != 4) {
@@ -101,7 +100,7 @@ public enum PageType {
     }
 
     public String getPageEmptyMsg() {
-        int i = C0970a.a[ordinal()];
+        int i = a.a[ordinal()];
         return (i == 1 || i == 2) ? "你还没有想看的演出哦（-.-）" : i != 3 ? i != 4 ? i != 5 ? "你还没有想看的内容哦（-.-）" : "你还没有想看的合辑哦（-.-）" : "你还没有想玩的剧本哦（-.-）" : "你还没有想看的现场记录哦（-.-）";
     }
 

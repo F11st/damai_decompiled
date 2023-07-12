@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.single;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.Observer;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -15,7 +15,7 @@ import tb.dg0;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SingleFlatMapIterableObservable<T, R> extends AbstractC8149d<R> {
+public final class SingleFlatMapIterableObservable<T, R> extends d<R> {
     final Function<? super T, ? extends Iterable<? extends R>> mapper;
     final SingleSource<T> source;
 
@@ -141,7 +141,7 @@ public final class SingleFlatMapIterableObservable<T, R> extends AbstractC8149d<
         this.mapper = function;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super R> observer) {
         this.source.subscribe(new FlatMapIterableObserver(observer, this.mapper));
     }

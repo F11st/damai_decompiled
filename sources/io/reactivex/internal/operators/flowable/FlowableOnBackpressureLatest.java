@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import io.reactivex.internal.util.BackpressureHelper;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -139,11 +139,11 @@ public final class FlowableOnBackpressureLatest<T> extends AbstractFlowableWithU
         }
     }
 
-    public FlowableOnBackpressureLatest(AbstractC8147b<T> abstractC8147b) {
-        super(abstractC8147b);
+    public FlowableOnBackpressureLatest(b<T> bVar) {
+        super(bVar);
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new BackpressureLatestSubscriber(subscriber));
     }

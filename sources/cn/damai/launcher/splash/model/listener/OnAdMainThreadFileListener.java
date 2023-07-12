@@ -5,13 +5,13 @@ import android.os.Looper;
 import cn.damai.commonbusiness.wannasee.listener.OnBizListener;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.taobao.downloader.request.C6703a;
 import com.taobao.downloader.request.DownloadListener;
+import com.taobao.downloader.request.a;
 import tb.jq1;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
-public class OnAdMainThreadFileListener extends C6703a {
+public class OnAdMainThreadFileListener extends a {
     private static transient /* synthetic */ IpChange $ipChange;
     private final OnBizListener<String> mListener;
 
@@ -24,7 +24,7 @@ public class OnAdMainThreadFileListener extends C6703a {
         return AndroidInstantRuntime.support(ipChange, "-1480394558") ? ((Boolean) ipChange.ipc$dispatch("-1480394558", new Object[]{this})).booleanValue() : Thread.currentThread() == Looper.getMainLooper().getThread();
     }
 
-    @Override // com.taobao.downloader.request.C6703a, com.taobao.downloader.request.DownloadListener
+    @Override // com.taobao.downloader.request.a, com.taobao.downloader.request.DownloadListener
     public void onDownloadError(String str, final int i, final String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1042876475")) {
@@ -50,7 +50,7 @@ public class OnAdMainThreadFileListener extends C6703a {
         }
     }
 
-    @Override // com.taobao.downloader.request.C6703a, com.taobao.downloader.request.DownloadListener
+    @Override // com.taobao.downloader.request.a, com.taobao.downloader.request.DownloadListener
     public void onDownloadFinish(String str, final String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1085550043")) {
@@ -74,7 +74,7 @@ public class OnAdMainThreadFileListener extends C6703a {
         }
     }
 
-    @Override // com.taobao.downloader.request.C6703a, com.taobao.downloader.request.DownloadListener
+    @Override // com.taobao.downloader.request.a, com.taobao.downloader.request.DownloadListener
     public void onNetworkLimit(int i, jq1 jq1Var, DownloadListener.NetworkLimitCallback networkLimitCallback) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1019682537")) {

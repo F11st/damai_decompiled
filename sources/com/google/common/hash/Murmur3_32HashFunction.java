@@ -18,7 +18,7 @@ import tb.jn1;
 /* compiled from: Taobao */
 @Immutable
 /* loaded from: classes10.dex */
-public final class Murmur3_32HashFunction extends AbstractC5229b implements Serializable {
+public final class Murmur3_32HashFunction extends b implements Serializable {
     private static final int C1 = -862048943;
     private static final int C2 = 461845907;
     private static final int CHUNK_SIZE = 4;
@@ -29,16 +29,15 @@ public final class Murmur3_32HashFunction extends AbstractC5229b implements Seri
 
     /* compiled from: Taobao */
     @CanIgnoreReturnValue
-    /* renamed from: com.google.common.hash.Murmur3_32HashFunction$a */
     /* loaded from: classes10.dex */
-    private static final class C5224a extends AbstractC5230c {
+    private static final class a extends c {
         private int a;
         private long b;
         private int c;
         private int d = 0;
         private boolean e = false;
 
-        C5224a(int i) {
+        a(int i) {
             this.a = i;
         }
 
@@ -91,7 +90,7 @@ public final class Murmur3_32HashFunction extends AbstractC5229b implements Seri
             return this;
         }
 
-        @Override // com.google.common.hash.AbstractC5230c, com.google.common.hash.PrimitiveSink
+        @Override // com.google.common.hash.c, com.google.common.hash.PrimitiveSink
         public Hasher putString(CharSequence charSequence, Charset charset) {
             if (ii.UTF_8.equals(charset)) {
                 int length = charSequence.length();
@@ -221,7 +220,7 @@ public final class Murmur3_32HashFunction extends AbstractC5229b implements Seri
         return (obj instanceof Murmur3_32HashFunction) && this.seed == ((Murmur3_32HashFunction) obj).seed;
     }
 
-    @Override // com.google.common.hash.AbstractC5229b, com.google.common.hash.HashFunction
+    @Override // com.google.common.hash.b, com.google.common.hash.HashFunction
     public HashCode hashBytes(byte[] bArr, int i, int i2) {
         du1.v(i, i + i2, bArr.length);
         int i3 = this.seed;
@@ -249,18 +248,18 @@ public final class Murmur3_32HashFunction extends AbstractC5229b implements Seri
         return Murmur3_32HashFunction.class.hashCode() ^ this.seed;
     }
 
-    @Override // com.google.common.hash.AbstractC5229b, com.google.common.hash.HashFunction
+    @Override // com.google.common.hash.b, com.google.common.hash.HashFunction
     public HashCode hashInt(int i) {
         return fmix(mixH1(this.seed, mixK1(i)), 4);
     }
 
-    @Override // com.google.common.hash.AbstractC5229b, com.google.common.hash.HashFunction
+    @Override // com.google.common.hash.b, com.google.common.hash.HashFunction
     public HashCode hashLong(long j) {
         int i = (int) (j >>> 32);
         return fmix(mixH1(mixH1(this.seed, mixK1((int) j)), mixK1(i)), 8);
     }
 
-    @Override // com.google.common.hash.AbstractC5229b, com.google.common.hash.HashFunction
+    @Override // com.google.common.hash.b, com.google.common.hash.HashFunction
     public HashCode hashString(CharSequence charSequence, Charset charset) {
         if (ii.UTF_8.equals(charset)) {
             int length = charSequence.length();
@@ -320,7 +319,7 @@ public final class Murmur3_32HashFunction extends AbstractC5229b implements Seri
         return hashBytes(charSequence.toString().getBytes(charset));
     }
 
-    @Override // com.google.common.hash.AbstractC5229b, com.google.common.hash.HashFunction
+    @Override // com.google.common.hash.b, com.google.common.hash.HashFunction
     public HashCode hashUnencodedChars(CharSequence charSequence) {
         int i = this.seed;
         for (int i2 = 1; i2 < charSequence.length(); i2 += 2) {
@@ -334,7 +333,7 @@ public final class Murmur3_32HashFunction extends AbstractC5229b implements Seri
 
     @Override // com.google.common.hash.HashFunction
     public Hasher newHasher() {
-        return new C5224a(this.seed);
+        return new a(this.seed);
     }
 
     public String toString() {

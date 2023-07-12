@@ -13,14 +13,12 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.wannasee.WantSeePosterTipsMarkRequest;
 import cn.damai.rank.view.WantSeePosterTips;
 import cn.damai.uikit.iconfont.DMIconFontTextView;
-import cn.damai.uikit.image.C2497a;
 import cn.damai.uikit.image.IImageLoader;
 import cn.damai.uikit.view.RoundImageView;
 import cn.damai.uikit.view.SeeAnimateView;
@@ -48,7 +46,7 @@ import tb.wt2;
 public final class WantSeePosterTips extends FrameLayout {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C1554a Companion = new C1554a(null);
+    public static final a Companion = new a(null);
     private static boolean wantSeePosterTipsShown;
     @NotNull
     private DMIconFontTextView arrow;
@@ -57,7 +55,7 @@ public final class WantSeePosterTips extends FrameLayout {
     @Nullable
     private ActionListener listener;
     @Nullable
-    private AbstractC1555b pageSource;
+    private b pageSource;
     @NotNull
     private LinearLayout parentTitle;
     @NotNull
@@ -87,15 +85,14 @@ public final class WantSeePosterTips extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.rank.view.WantSeePosterTips$a */
     /* loaded from: classes15.dex */
-    public static final class C1554a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C1554a() {
+        private a() {
         }
 
-        public /* synthetic */ C1554a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -115,9 +112,8 @@ public final class WantSeePosterTips extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.rank.view.WantSeePosterTips$b */
     /* loaded from: classes15.dex */
-    public static abstract class AbstractC1555b {
+    public static abstract class b {
         private static transient /* synthetic */ IpChange $ipChange;
         @NotNull
         private WantSeeIconUpdate a;
@@ -135,18 +131,17 @@ public final class WantSeePosterTips extends FrameLayout {
         private Integer g;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.rank.view.WantSeePosterTips$b$a */
         /* loaded from: classes6.dex */
-        public static final class C1556a extends AbstractC1555b {
+        public static final class a extends b {
             private static transient /* synthetic */ IpChange $ipChange;
             @NotNull
-            public static final C1556a INSTANCE = new C1556a();
+            public static final a INSTANCE = new a();
 
-            private C1556a() {
+            private a() {
                 super(null);
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             public boolean a() {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "835714894")) {
@@ -155,7 +150,7 @@ public final class WantSeePosterTips extends FrameLayout {
                 return false;
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             @NotNull
             public String f() {
                 IpChange ipChange = $ipChange;
@@ -166,7 +161,7 @@ public final class WantSeePosterTips extends FrameLayout {
                 return m == null ? "" : m;
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             @NotNull
             public String g() {
                 IpChange ipChange = $ipChange;
@@ -177,7 +172,7 @@ public final class WantSeePosterTips extends FrameLayout {
                 return n == null ? "" : n;
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             public int h() {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "-2061188809")) {
@@ -186,7 +181,7 @@ public final class WantSeePosterTips extends FrameLayout {
                 return 60;
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             public boolean i() {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "-113794882")) {
@@ -197,18 +192,18 @@ public final class WantSeePosterTips extends FrameLayout {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.rank.view.WantSeePosterTips$b$b */
+        /* renamed from: cn.damai.rank.view.WantSeePosterTips$b$b  reason: collision with other inner class name */
         /* loaded from: classes6.dex */
-        public static final class C1557b extends AbstractC1555b {
+        public static final class C0064b extends b {
             private static transient /* synthetic */ IpChange $ipChange;
             @NotNull
-            public static final C1557b INSTANCE = new C1557b();
+            public static final C0064b INSTANCE = new C0064b();
 
-            private C1557b() {
+            private C0064b() {
                 super(null);
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             public boolean a() {
                 IpChange ipChange = $ipChange;
                 boolean z = false;
@@ -219,7 +214,7 @@ public final class WantSeePosterTips extends FrameLayout {
                 return !((b == null || b.length() == 0) ? true : true);
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             @NotNull
             public String f() {
                 IpChange ipChange = $ipChange;
@@ -230,7 +225,7 @@ public final class WantSeePosterTips extends FrameLayout {
                 return m == null ? "" : m;
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             @NotNull
             public String g() {
                 IpChange ipChange = $ipChange;
@@ -241,7 +236,7 @@ public final class WantSeePosterTips extends FrameLayout {
                 return n == null ? "" : n;
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             public int h() {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "1991476034")) {
@@ -250,7 +245,7 @@ public final class WantSeePosterTips extends FrameLayout {
                 return 30;
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             public boolean i() {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "-955158903")) {
@@ -261,18 +256,17 @@ public final class WantSeePosterTips extends FrameLayout {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.rank.view.WantSeePosterTips$b$c */
         /* loaded from: classes6.dex */
-        public static final class C1558c extends AbstractC1555b {
+        public static final class c extends b {
             private static transient /* synthetic */ IpChange $ipChange;
             @NotNull
-            public static final C1558c INSTANCE = new C1558c();
+            public static final c INSTANCE = new c();
 
-            private C1558c() {
+            private c() {
                 super(null);
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             public boolean a() {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "-1902394276")) {
@@ -281,21 +275,21 @@ public final class WantSeePosterTips extends FrameLayout {
                 return true;
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             @NotNull
             public String f() {
                 IpChange ipChange = $ipChange;
                 return AndroidInstantRuntime.support(ipChange, "86902285") ? (String) ipChange.ipc$dispatch("86902285", new Object[]{this}) : "大麦超懂你，可以点击了解更多哦～";
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             @NotNull
             public String g() {
                 IpChange ipChange = $ipChange;
                 return AndroidInstantRuntime.support(ipChange, "-272644071") ? (String) ipChange.ipc$dispatch("-272644071", new Object[]{this}) : "哇～又发现了相似好演出";
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             public int h() {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "869388393")) {
@@ -304,7 +298,7 @@ public final class WantSeePosterTips extends FrameLayout {
                 return 12;
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             public boolean i() {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "76874352")) {
@@ -315,18 +309,17 @@ public final class WantSeePosterTips extends FrameLayout {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.rank.view.WantSeePosterTips$b$d */
         /* loaded from: classes6.dex */
-        public static final class C1559d extends AbstractC1555b {
+        public static final class d extends b {
             private static transient /* synthetic */ IpChange $ipChange;
             @NotNull
-            public static final C1559d INSTANCE = new C1559d();
+            public static final d INSTANCE = new d();
 
-            private C1559d() {
+            private d() {
                 super(null);
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             public boolean a() {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "446822590")) {
@@ -335,7 +328,7 @@ public final class WantSeePosterTips extends FrameLayout {
                 return false;
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             @NotNull
             public String f() {
                 IpChange ipChange = $ipChange;
@@ -346,7 +339,7 @@ public final class WantSeePosterTips extends FrameLayout {
                 return m == null ? "" : m;
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             @NotNull
             public String g() {
                 IpChange ipChange = $ipChange;
@@ -357,7 +350,7 @@ public final class WantSeePosterTips extends FrameLayout {
                 return n == null ? "" : n;
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             public int h() {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "-1235465785")) {
@@ -366,7 +359,7 @@ public final class WantSeePosterTips extends FrameLayout {
                 return 30;
             }
 
-            @Override // cn.damai.rank.view.WantSeePosterTips.AbstractC1555b
+            @Override // cn.damai.rank.view.WantSeePosterTips.b
             public boolean i() {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "908754254")) {
@@ -376,7 +369,7 @@ public final class WantSeePosterTips extends FrameLayout {
             }
         }
 
-        private AbstractC1555b() {
+        private b() {
             this.a = new WantSeeIconUpdate(false, false, false, null, 8, null);
             this.b = "";
             this.c = "";
@@ -385,7 +378,7 @@ public final class WantSeePosterTips extends FrameLayout {
             this.f = "";
         }
 
-        public /* synthetic */ AbstractC1555b(k50 k50Var) {
+        public /* synthetic */ b(k50 k50Var) {
             this();
         }
 
@@ -527,12 +520,11 @@ public final class WantSeePosterTips extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.rank.view.WantSeePosterTips$c */
     /* loaded from: classes15.dex */
-    public static final class CountDownTimerC1560c extends CountDownTimer {
+    public static final class c extends CountDownTimer {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        CountDownTimerC1560c() {
+        c() {
             super(5500L, 1000L);
         }
 
@@ -557,12 +549,11 @@ public final class WantSeePosterTips extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.rank.view.WantSeePosterTips$d */
     /* loaded from: classes15.dex */
-    public static final class CountDownTimerC1561d extends CountDownTimer {
+    public static final class d extends CountDownTimer {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        CountDownTimerC1561d() {
+        d() {
             super(5500L, 1000L);
         }
 
@@ -631,12 +622,12 @@ public final class WantSeePosterTips extends FrameLayout {
         if (actionListener != null) {
             actionListener.click();
         }
-        AbstractC1555b abstractC1555b = wantSeePosterTips.pageSource;
-        if (b41.d(abstractC1555b, AbstractC1555b.C1558c.INSTANCE) ? true : b41.d(abstractC1555b, AbstractC1555b.C1557b.INSTANCE)) {
+        b bVar = wantSeePosterTips.pageSource;
+        if (b41.d(bVar, b.c.INSTANCE) ? true : b41.d(bVar, b.C0064b.INSTANCE)) {
             wantSeePosterTips.cancel();
-            AbstractC1555b abstractC1555b2 = wantSeePosterTips.pageSource;
-            if (abstractC1555b2 != null) {
-                DMNav.from(context).setTransition(0, 0).toUri(abstractC1555b2.b());
+            b bVar2 = wantSeePosterTips.pageSource;
+            if (bVar2 != null) {
+                DMNav.from(context).setTransition(0, 0).toUri(bVar2.b());
             }
         }
     }
@@ -707,27 +698,27 @@ public final class WantSeePosterTips extends FrameLayout {
         }
     }
 
-    private final void updateUI(AbstractC1555b abstractC1555b) {
+    private final void updateUI(b bVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "8565787")) {
-            ipChange.ipc$dispatch("8565787", new Object[]{this, abstractC1555b});
+            ipChange.ipc$dispatch("8565787", new Object[]{this, bVar});
             return;
         }
-        this.title.setText(abstractC1555b.g());
-        this.subTitle.setText(abstractC1555b.f());
-        this.arrow.setVisibility(abstractC1555b.a() ? 0 : 8);
+        this.title.setText(bVar.g());
+        this.subTitle.setText(bVar.f());
+        this.arrow.setVisibility(bVar.a() ? 0 : 8);
         TextView textView = this.titleSuffix;
-        textView.setVisibility(abstractC1555b.i() ? 0 : 8);
-        textView.setText(abstractC1555b.o());
+        textView.setVisibility(bVar.i() ? 0 : 8);
+        textView.setText(bVar.o());
         ViewGroup.LayoutParams layoutParams = this.parentTitle.getLayoutParams();
         b41.g(layoutParams, "null cannot be cast to non-null type android.widget.RelativeLayout.LayoutParams");
-        ((RelativeLayout.LayoutParams) layoutParams).setMarginEnd(q60.a(AppInfoProviderProxy.getAppContext(), abstractC1555b.h()));
-        IImageLoader a = C2497a.a();
-        String k = abstractC1555b.k();
+        ((RelativeLayout.LayoutParams) layoutParams).setMarginEnd(q60.a(AppInfoProviderProxy.getAppContext(), bVar.h()));
+        IImageLoader a2 = cn.damai.uikit.image.a.a();
+        String k = bVar.k();
         RoundImageView roundImageView = this.poster;
         int i = R$drawable.uikit_default_image_bg_grey;
-        a.loadinto(k, roundImageView, i, i);
-        WantSeeIconUpdate l = abstractC1555b.l();
+        a2.loadinto(k, roundImageView, i, i);
+        WantSeeIconUpdate l = bVar.l();
         if (l.getShowWantSeeIcon()) {
             this.wantSeeView.setVisibility(0);
             this.wantSeeView.setOnClickListener(l.getListener());
@@ -833,7 +824,7 @@ public final class WantSeePosterTips extends FrameLayout {
         if (countDownTimer != null) {
             countDownTimer.cancel();
         }
-        this.timer = new CountDownTimerC1560c().start();
+        this.timer = new c().start();
     }
 
     public final void setListener(@Nullable ActionListener actionListener) {
@@ -845,15 +836,15 @@ public final class WantSeePosterTips extends FrameLayout {
         }
     }
 
-    public final void setPageSource(@NotNull AbstractC1555b abstractC1555b) {
+    public final void setPageSource(@NotNull b bVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1813055190")) {
-            ipChange.ipc$dispatch("1813055190", new Object[]{this, abstractC1555b});
+            ipChange.ipc$dispatch("1813055190", new Object[]{this, bVar});
             return;
         }
-        b41.i(abstractC1555b, "pageSource");
-        this.pageSource = abstractC1555b;
-        updateUI(abstractC1555b);
+        b41.i(bVar, "pageSource");
+        this.pageSource = bVar;
+        updateUI(bVar);
     }
 
     public final void setProjectId(@Nullable Long l) {
@@ -882,24 +873,24 @@ public final class WantSeePosterTips extends FrameLayout {
         translateAnimation.setDuration(500L);
         startAnimation(translateAnimation);
         this.view.setVisibility(0);
-        this.timer = new CountDownTimerC1561d().start();
-        if (b41.d(this.pageSource, AbstractC1555b.C1559d.INSTANCE)) {
+        this.timer = new d().start();
+        if (b41.d(this.pageSource, b.d.INSTANCE)) {
             HashMap<String, String> f = d23.f();
             if (f != null) {
                 f.put("item_id", String.valueOf(this.projectId));
-                AbstractC1555b abstractC1555b = this.pageSource;
-                f.put("type", String.valueOf(abstractC1555b != null ? abstractC1555b.j() : null));
+                b bVar = this.pageSource;
+                f.put("type", String.valueOf(bVar != null ? bVar.j() : null));
                 hashMap = f;
             } else {
                 hashMap = null;
             }
-            C0529c e = C0529c.e();
-            AbstractC1555b abstractC1555b2 = this.pageSource;
-            String e2 = abstractC1555b2 != null ? abstractC1555b2.e() : null;
-            AbstractC1555b abstractC1555b3 = this.pageSource;
-            String d = abstractC1555b3 != null ? abstractC1555b3.d() : null;
-            AbstractC1555b abstractC1555b4 = this.pageSource;
-            e.G(this, e2, d, abstractC1555b4 != null ? abstractC1555b4.c() : null, hashMap);
+            cn.damai.common.user.c e = cn.damai.common.user.c.e();
+            b bVar2 = this.pageSource;
+            String e2 = bVar2 != null ? bVar2.e() : null;
+            b bVar3 = this.pageSource;
+            String d2 = bVar3 != null ? bVar3.d() : null;
+            b bVar4 = this.pageSource;
+            e.G(this, e2, d2, bVar4 != null ? bVar4.c() : null, hashMap);
         }
     }
 

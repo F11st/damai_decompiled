@@ -41,13 +41,12 @@ public class DmPurchaseIndicatorView extends LinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.secondpage.notice.view.DmPurchaseIndicatorView$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2639a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DmNoticeTitleBean a;
 
-        View$OnClickListenerC2639a(DmNoticeTitleBean dmNoticeTitleBean) {
+        a(DmNoticeTitleBean dmNoticeTitleBean) {
             this.a = dmNoticeTitleBean;
         }
 
@@ -89,7 +88,7 @@ public class DmPurchaseIndicatorView extends LinearLayout {
                 textView.setText(dmNoticeTitleBean.name);
                 textView.setTextColor(this.mUnSelectedFontColor);
                 textView.setTextSize(1, this.mUnSelectedFontSize);
-                inflate.setOnClickListener(new View$OnClickListenerC2639a(dmNoticeTitleBean));
+                inflate.setOnClickListener(new a(dmNoticeTitleBean));
                 addView(inflate);
             }
         }

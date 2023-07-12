@@ -44,14 +44,13 @@ public class FontUtil {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.util.FontUtil$b */
     /* loaded from: classes12.dex */
-    public static class C6405b {
+    public static class b {
         private static final FontUtil a = new FontUtil();
     }
 
     public static final FontUtil c() {
-        return C6405b.a;
+        return b.a;
     }
 
     public Typeface b(String str, int i) throws InterruptedException {

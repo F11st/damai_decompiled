@@ -3,7 +3,7 @@ package tb;
 import android.text.TextPaint;
 import android.text.style.MetricAffectingSpan;
 import android.text.style.UpdateAppearance;
-import cn.damai.trade.newtradeorder.ui.projectdetail.htmlparser.C2247c;
+import cn.damai.trade.newtradeorder.ui.projectdetail.htmlparser.c;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 
@@ -15,9 +15,9 @@ public class fi2 extends MetricAffectingSpan implements UpdateAppearance {
     private int a;
     private int b;
 
-    public fi2(C2247c.C2248a c2248a) {
-        this.a = c2248a.c;
-        this.b = c2248a.d;
+    public fi2(c.a aVar) {
+        this.a = aVar.c;
+        this.b = aVar.d;
     }
 
     @Override // android.text.style.CharacterStyle

@@ -36,13 +36,12 @@ public class HorizontalCategoryAdapter extends RecyclerView.Adapter<ViewHolder> 
         private View d;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.category.calendar.ui.adapter.HorizontalCategoryAdapter$ViewHolder$a */
         /* loaded from: classes.dex */
-        public class View$OnClickListenerC0315a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ CategoryBean a;
 
-            View$OnClickListenerC0315a(CategoryBean categoryBean) {
+            a(CategoryBean categoryBean) {
                 this.a = categoryBean;
             }
 
@@ -103,7 +102,7 @@ public class HorizontalCategoryAdapter extends RecyclerView.Adapter<ViewHolder> 
                     textView3.setTextColor(resources2.getColor(i2));
                     this.b.setTextColor(HorizontalCategoryAdapter.this.a.getResources().getColor(i2));
                 }
-                this.itemView.setOnClickListener(new View$OnClickListenerC0315a(categoryBean));
+                this.itemView.setOnClickListener(new a(categoryBean));
             }
         }
     }

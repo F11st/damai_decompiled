@@ -15,10 +15,9 @@ public class xj2 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.xj2$a */
     /* loaded from: classes11.dex */
-    public static class C9930a implements INetworkQualityChangeListener {
-        C9930a() {
+    public static class a implements INetworkQualityChangeListener {
+        a() {
         }
 
         @Override // anet.channel.monitor.INetworkQualityChangeListener
@@ -33,10 +32,9 @@ public class xj2 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.xj2$b */
     /* loaded from: classes11.dex */
-    public static class C9931b extends gy1 {
-        C9931b() {
+    public static class b extends gy1 {
+        b() {
         }
 
         @Override // tb.gy1
@@ -61,7 +59,7 @@ public class xj2 {
 
     public static void c() {
         if (a) {
-            Monitor.addListener(new C9930a(), new C9931b());
+            Monitor.addListener(new a(), new b());
             xt2.f("TBNetwork4Phenix", "network quality monitor setup", new Object[0]);
         }
     }

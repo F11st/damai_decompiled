@@ -2,7 +2,7 @@ package androidx.collection;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.alipay.sdk.m.n.C4250a;
+import com.alipay.sdk.m.n.a;
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
 import java.util.ConcurrentModificationException;
 import java.util.Map;
@@ -478,7 +478,7 @@ public class SimpleArrayMap<K, V> {
             } else {
                 sb.append("(this Map)");
             }
-            sb.append(C4250a.h);
+            sb.append(a.h);
             V valueAt = valueAt(i);
             if (valueAt != this) {
                 sb.append(valueAt);

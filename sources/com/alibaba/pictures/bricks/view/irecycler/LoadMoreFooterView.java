@@ -37,12 +37,11 @@ public class LoadMoreFooterView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.irecycler.LoadMoreFooterView$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC3590a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC3590a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -58,9 +57,8 @@ public class LoadMoreFooterView extends FrameLayout {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.irecycler.LoadMoreFooterView$b */
     /* loaded from: classes7.dex */
-    public static /* synthetic */ class C3591b {
+    public static /* synthetic */ class b {
         static final /* synthetic */ int[] a;
 
         static {
@@ -95,7 +93,7 @@ public class LoadMoreFooterView extends FrameLayout {
             ipChange.ipc$dispatch("-188559083", new Object[]{this});
             return;
         }
-        int i = C3591b.a[this.mStatus.ordinal()];
+        int i = b.a[this.mStatus.ordinal()];
         if (i == 1) {
             this.mLoadingView.setVisibility(8);
             this.mErrorView.setVisibility(8);
@@ -159,7 +157,7 @@ public class LoadMoreFooterView extends FrameLayout {
         this.mLoadingView = findViewById(R$id.loadingView);
         this.mErrorView = findViewById(R$id.errorView);
         this.mTheEndView = findViewById(R$id.theEndView);
-        this.mErrorView.setOnClickListener(new View$OnClickListenerC3590a());
+        this.mErrorView.setOnClickListener(new a());
         setStatus(Status.GONE);
     }
 }

@@ -2,13 +2,11 @@ package kotlinx.coroutines.flow.internal;
 
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function2;
 import kotlinx.coroutines.CoroutineScope;
 import kotlinx.coroutines.channels.ReceiveChannel;
-import kotlinx.coroutines.flow.C8672c;
 import kotlinx.coroutines.flow.FlowCollector;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -52,7 +50,7 @@ public final class ChannelFlow$collect$2 extends SuspendLambda implements Functi
     @Nullable
     public final Object invokeSuspend(@NotNull Object obj) {
         Object d;
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         int i = this.label;
         if (i == 0) {
             i32.b(obj);
@@ -61,7 +59,7 @@ public final class ChannelFlow$collect$2 extends SuspendLambda implements Functi
             ReceiveChannel g = this.this$0.g(coroutineScope);
             this.L$0 = coroutineScope;
             this.label = 1;
-            if (C8672c.k(flowCollector, g, this) == d) {
+            if (kotlinx.coroutines.flow.c.k(flowCollector, g, this) == d) {
                 return d;
             }
         } else if (i != 1) {

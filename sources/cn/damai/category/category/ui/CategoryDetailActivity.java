@@ -6,7 +6,6 @@ import android.view.View;
 import cn.damai.category.category.bean.CategoryEntity;
 import cn.damai.category.category.ui.adapter.CategoryDetailAdapter;
 import cn.damai.category.common.bean.CategoryPerformBean;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.homepage.R$anim;
 import cn.damai.homepage.R$color;
@@ -31,17 +30,16 @@ public class CategoryDetailActivity extends SimpleBaseActivity {
     private CategoryPerformBean mCategoryPerformBean;
     private View mCloseView;
     private boolean mHasChoice;
-    private View.OnClickListener mItemListener = new View$OnClickListenerC0329c();
+    private View.OnClickListener mItemListener = new c();
     private IRecyclerView mRecyclerView;
     private View mTranView;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.CategoryDetailActivity$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0327a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0327a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -56,12 +54,11 @@ public class CategoryDetailActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.CategoryDetailActivity$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0328b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0328b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -76,12 +73,11 @@ public class CategoryDetailActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.CategoryDetailActivity$c */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0329c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0329c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -98,7 +94,7 @@ public class CategoryDetailActivity extends SimpleBaseActivity {
                     CategoryDetailActivity.this.mAdapter.a(CategoryDetailActivity.this.mCategoryPerformBean, categoryEntity);
                     CategoryDetailActivity.this.mCategoryEntity = categoryEntity;
                     CategoryDetailActivity.this.close();
-                    C0529c e = C0529c.e();
+                    cn.damai.common.user.c e = cn.damai.common.user.c.e();
                     bh m = bh.m();
                     int i = categoryEntity.subIndex;
                     e.x(m.n(i, categoryEntity.categoryName + "-" + categoryEntity.subName));
@@ -155,10 +151,10 @@ public class CategoryDetailActivity extends SimpleBaseActivity {
         }
         View findViewById2 = findViewById(R$id.tran_view);
         this.mTranView = findViewById2;
-        findViewById2.setOnClickListener(new View$OnClickListenerC0327a());
+        findViewById2.setOnClickListener(new a());
         View findViewById3 = findViewById(R$id.close_view);
         this.mCloseView = findViewById3;
-        findViewById3.setOnClickListener(new View$OnClickListenerC0328b());
+        findViewById3.setOnClickListener(new b());
         IRecyclerView iRecyclerView = (IRecyclerView) findViewById(R$id.irc);
         this.mRecyclerView = iRecyclerView;
         iRecyclerView.setLayoutManager(new WrapLinearLayoutManager(this));

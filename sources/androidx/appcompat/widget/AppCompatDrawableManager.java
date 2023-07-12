@@ -56,12 +56,12 @@ public final class AppCompatDrawableManager {
                 INSTANCE = appCompatDrawableManager;
                 appCompatDrawableManager.mResourceManager = ResourceManagerInternal.get();
                 INSTANCE.mResourceManager.setHooks(new ResourceManagerInternal.ResourceManagerHooks() { // from class: androidx.appcompat.widget.AppCompatDrawableManager.1
-                    private final int[] COLORFILTER_TINT_COLOR_CONTROL_NORMAL = {R.C0011drawable.abc_textfield_search_default_mtrl_alpha, R.C0011drawable.abc_textfield_default_mtrl_alpha, R.C0011drawable.abc_ab_share_pack_mtrl_alpha};
-                    private final int[] TINT_COLOR_CONTROL_NORMAL = {R.C0011drawable.abc_ic_commit_search_api_mtrl_alpha, R.C0011drawable.abc_seekbar_tick_mark_material, R.C0011drawable.abc_ic_menu_share_mtrl_alpha, R.C0011drawable.abc_ic_menu_copy_mtrl_am_alpha, R.C0011drawable.abc_ic_menu_cut_mtrl_alpha, R.C0011drawable.abc_ic_menu_selectall_mtrl_alpha, R.C0011drawable.abc_ic_menu_paste_mtrl_am_alpha};
-                    private final int[] COLORFILTER_COLOR_CONTROL_ACTIVATED = {R.C0011drawable.abc_textfield_activated_mtrl_alpha, R.C0011drawable.abc_textfield_search_activated_mtrl_alpha, R.C0011drawable.abc_cab_background_top_mtrl_alpha, R.C0011drawable.abc_text_cursor_material, R.C0011drawable.abc_text_select_handle_left_mtrl, R.C0011drawable.abc_text_select_handle_middle_mtrl, R.C0011drawable.abc_text_select_handle_right_mtrl};
-                    private final int[] COLORFILTER_COLOR_BACKGROUND_MULTIPLY = {R.C0011drawable.abc_popup_background_mtrl_mult, R.C0011drawable.abc_cab_background_internal_bg, R.C0011drawable.abc_menu_hardkey_panel_mtrl_mult};
-                    private final int[] TINT_COLOR_CONTROL_STATE_LIST = {R.C0011drawable.abc_tab_indicator_material, R.C0011drawable.abc_textfield_search_material};
-                    private final int[] TINT_CHECKABLE_BUTTON_LIST = {R.C0011drawable.abc_btn_check_material, R.C0011drawable.abc_btn_radio_material, R.C0011drawable.abc_btn_check_material_anim, R.C0011drawable.abc_btn_radio_material_anim};
+                    private final int[] COLORFILTER_TINT_COLOR_CONTROL_NORMAL = {R.drawable.abc_textfield_search_default_mtrl_alpha, R.drawable.abc_textfield_default_mtrl_alpha, R.drawable.abc_ab_share_pack_mtrl_alpha};
+                    private final int[] TINT_COLOR_CONTROL_NORMAL = {R.drawable.abc_ic_commit_search_api_mtrl_alpha, R.drawable.abc_seekbar_tick_mark_material, R.drawable.abc_ic_menu_share_mtrl_alpha, R.drawable.abc_ic_menu_copy_mtrl_am_alpha, R.drawable.abc_ic_menu_cut_mtrl_alpha, R.drawable.abc_ic_menu_selectall_mtrl_alpha, R.drawable.abc_ic_menu_paste_mtrl_am_alpha};
+                    private final int[] COLORFILTER_COLOR_CONTROL_ACTIVATED = {R.drawable.abc_textfield_activated_mtrl_alpha, R.drawable.abc_textfield_search_activated_mtrl_alpha, R.drawable.abc_cab_background_top_mtrl_alpha, R.drawable.abc_text_cursor_material, R.drawable.abc_text_select_handle_left_mtrl, R.drawable.abc_text_select_handle_middle_mtrl, R.drawable.abc_text_select_handle_right_mtrl};
+                    private final int[] COLORFILTER_COLOR_BACKGROUND_MULTIPLY = {R.drawable.abc_popup_background_mtrl_mult, R.drawable.abc_cab_background_internal_bg, R.drawable.abc_menu_hardkey_panel_mtrl_mult};
+                    private final int[] TINT_COLOR_CONTROL_STATE_LIST = {R.drawable.abc_tab_indicator_material, R.drawable.abc_textfield_search_material};
+                    private final int[] TINT_CHECKABLE_BUTTON_LIST = {R.drawable.abc_btn_check_material, R.drawable.abc_btn_radio_material, R.drawable.abc_btn_check_material_anim, R.drawable.abc_btn_radio_material_anim};
 
                     private boolean arrayContains(int[] iArr, int i) {
                         for (int i2 : iArr) {
@@ -117,8 +117,8 @@ public final class AppCompatDrawableManager {
                         BitmapDrawable bitmapDrawable2;
                         BitmapDrawable bitmapDrawable3;
                         int dimensionPixelSize = context.getResources().getDimensionPixelSize(i);
-                        Drawable drawable = resourceManagerInternal.getDrawable(context, R.C0011drawable.abc_star_black_48dp);
-                        Drawable drawable2 = resourceManagerInternal.getDrawable(context, R.C0011drawable.abc_star_half_black_48dp);
+                        Drawable drawable = resourceManagerInternal.getDrawable(context, R.drawable.abc_star_black_48dp);
+                        Drawable drawable2 = resourceManagerInternal.getDrawable(context, R.drawable.abc_star_half_black_48dp);
                         if ((drawable instanceof BitmapDrawable) && drawable.getIntrinsicWidth() == dimensionPixelSize && drawable.getIntrinsicHeight() == dimensionPixelSize) {
                             bitmapDrawable = (BitmapDrawable) drawable;
                             bitmapDrawable2 = new BitmapDrawable(bitmapDrawable.getBitmap());
@@ -159,16 +159,16 @@ public final class AppCompatDrawableManager {
 
                     @Override // androidx.appcompat.widget.ResourceManagerInternal.ResourceManagerHooks
                     public Drawable createDrawableFor(@NonNull ResourceManagerInternal resourceManagerInternal, @NonNull Context context, int i) {
-                        if (i == R.C0011drawable.abc_cab_background_top_material) {
-                            return new LayerDrawable(new Drawable[]{resourceManagerInternal.getDrawable(context, R.C0011drawable.abc_cab_background_internal_bg), resourceManagerInternal.getDrawable(context, R.C0011drawable.abc_cab_background_top_mtrl_alpha)});
+                        if (i == R.drawable.abc_cab_background_top_material) {
+                            return new LayerDrawable(new Drawable[]{resourceManagerInternal.getDrawable(context, R.drawable.abc_cab_background_internal_bg), resourceManagerInternal.getDrawable(context, R.drawable.abc_cab_background_top_mtrl_alpha)});
                         }
-                        if (i == R.C0011drawable.abc_ratingbar_material) {
+                        if (i == R.drawable.abc_ratingbar_material) {
                             return getRatingBarLayerDrawable(resourceManagerInternal, context, R.dimen.abc_star_big);
                         }
-                        if (i == R.C0011drawable.abc_ratingbar_indicator_material) {
+                        if (i == R.drawable.abc_ratingbar_indicator_material) {
                             return getRatingBarLayerDrawable(resourceManagerInternal, context, R.dimen.abc_star_medium);
                         }
-                        if (i == R.C0011drawable.abc_ratingbar_small_material) {
+                        if (i == R.drawable.abc_ratingbar_small_material) {
                             return getRatingBarLayerDrawable(resourceManagerInternal, context, R.dimen.abc_star_small);
                         }
                         return null;
@@ -176,45 +176,45 @@ public final class AppCompatDrawableManager {
 
                     @Override // androidx.appcompat.widget.ResourceManagerInternal.ResourceManagerHooks
                     public ColorStateList getTintListForDrawableRes(@NonNull Context context, int i) {
-                        if (i == R.C0011drawable.abc_edit_text_material) {
-                            return AppCompatResources.getColorStateList(context, R.C0010color.abc_tint_edittext);
+                        if (i == R.drawable.abc_edit_text_material) {
+                            return AppCompatResources.getColorStateList(context, R.color.abc_tint_edittext);
                         }
-                        if (i == R.C0011drawable.abc_switch_track_mtrl_alpha) {
-                            return AppCompatResources.getColorStateList(context, R.C0010color.abc_tint_switch_track);
+                        if (i == R.drawable.abc_switch_track_mtrl_alpha) {
+                            return AppCompatResources.getColorStateList(context, R.color.abc_tint_switch_track);
                         }
-                        if (i == R.C0011drawable.abc_switch_thumb_material) {
+                        if (i == R.drawable.abc_switch_thumb_material) {
                             return createSwitchThumbColorStateList(context);
                         }
-                        if (i == R.C0011drawable.abc_btn_default_mtrl_shape) {
+                        if (i == R.drawable.abc_btn_default_mtrl_shape) {
                             return createDefaultButtonColorStateList(context);
                         }
-                        if (i == R.C0011drawable.abc_btn_borderless_material) {
+                        if (i == R.drawable.abc_btn_borderless_material) {
                             return createBorderlessButtonColorStateList(context);
                         }
-                        if (i == R.C0011drawable.abc_btn_colored_material) {
+                        if (i == R.drawable.abc_btn_colored_material) {
                             return createColoredButtonColorStateList(context);
                         }
-                        if (i != R.C0011drawable.abc_spinner_mtrl_am_alpha && i != R.C0011drawable.abc_spinner_textfield_background_material) {
+                        if (i != R.drawable.abc_spinner_mtrl_am_alpha && i != R.drawable.abc_spinner_textfield_background_material) {
                             if (arrayContains(this.TINT_COLOR_CONTROL_NORMAL, i)) {
                                 return ThemeUtils.getThemeAttrColorStateList(context, R.attr.colorControlNormal);
                             }
                             if (arrayContains(this.TINT_COLOR_CONTROL_STATE_LIST, i)) {
-                                return AppCompatResources.getColorStateList(context, R.C0010color.abc_tint_default);
+                                return AppCompatResources.getColorStateList(context, R.color.abc_tint_default);
                             }
                             if (arrayContains(this.TINT_CHECKABLE_BUTTON_LIST, i)) {
-                                return AppCompatResources.getColorStateList(context, R.C0010color.abc_tint_btn_checkable);
+                                return AppCompatResources.getColorStateList(context, R.color.abc_tint_btn_checkable);
                             }
-                            if (i == R.C0011drawable.abc_seekbar_thumb_material) {
-                                return AppCompatResources.getColorStateList(context, R.C0010color.abc_tint_seek_thumb);
+                            if (i == R.drawable.abc_seekbar_thumb_material) {
+                                return AppCompatResources.getColorStateList(context, R.color.abc_tint_seek_thumb);
                             }
                             return null;
                         }
-                        return AppCompatResources.getColorStateList(context, R.C0010color.abc_tint_spinner);
+                        return AppCompatResources.getColorStateList(context, R.color.abc_tint_spinner);
                     }
 
                     @Override // androidx.appcompat.widget.ResourceManagerInternal.ResourceManagerHooks
                     public PorterDuff.Mode getTintModeForDrawableRes(int i) {
-                        if (i == R.C0011drawable.abc_switch_thumb_material) {
+                        if (i == R.drawable.abc_switch_thumb_material) {
                             return PorterDuff.Mode.MULTIPLY;
                         }
                         return null;
@@ -222,7 +222,7 @@ public final class AppCompatDrawableManager {
 
                     @Override // androidx.appcompat.widget.ResourceManagerInternal.ResourceManagerHooks
                     public boolean tintDrawable(@NonNull Context context, int i, @NonNull Drawable drawable) {
-                        if (i == R.C0011drawable.abc_seekbar_track_material) {
+                        if (i == R.drawable.abc_seekbar_track_material) {
                             LayerDrawable layerDrawable = (LayerDrawable) drawable;
                             Drawable findDrawableByLayerId = layerDrawable.findDrawableByLayerId(16908288);
                             int i2 = R.attr.colorControlNormal;
@@ -230,7 +230,7 @@ public final class AppCompatDrawableManager {
                             setPorterDuffColorFilter(layerDrawable.findDrawableByLayerId(16908303), ThemeUtils.getThemeAttrColor(context, i2), AppCompatDrawableManager.DEFAULT_MODE);
                             setPorterDuffColorFilter(layerDrawable.findDrawableByLayerId(16908301), ThemeUtils.getThemeAttrColor(context, R.attr.colorControlActivated), AppCompatDrawableManager.DEFAULT_MODE);
                             return true;
-                        } else if (i == R.C0011drawable.abc_ratingbar_material || i == R.C0011drawable.abc_ratingbar_indicator_material || i == R.C0011drawable.abc_ratingbar_small_material) {
+                        } else if (i == R.drawable.abc_ratingbar_material || i == R.drawable.abc_ratingbar_indicator_material || i == R.drawable.abc_ratingbar_small_material) {
                             LayerDrawable layerDrawable2 = (LayerDrawable) drawable;
                             setPorterDuffColorFilter(layerDrawable2.findDrawableByLayerId(16908288), ThemeUtils.getDisabledThemeAttrColor(context, R.attr.colorControlNormal), AppCompatDrawableManager.DEFAULT_MODE);
                             Drawable findDrawableByLayerId2 = layerDrawable2.findDrawableByLayerId(16908303);
@@ -280,14 +280,14 @@ public final class AppCompatDrawableManager {
                             android.graphics.PorterDuff$Mode r0 = android.graphics.PorterDuff.Mode.MULTIPLY
                             goto L14
                         L2d:
-                            int r1 = androidx.appcompat.R.C0011drawable.abc_list_divider_mtrl_alpha
+                            int r1 = androidx.appcompat.R.drawable.abc_list_divider_mtrl_alpha
                             if (r8 != r1) goto L3c
                             r2 = 16842800(0x1010030, float:2.3693693E-38)
                             r8 = 1109603123(0x42233333, float:40.8)
                             int r8 = java.lang.Math.round(r8)
                             goto L15
                         L3c:
-                            int r1 = androidx.appcompat.R.C0011drawable.abc_dialog_material_background
+                            int r1 = androidx.appcompat.R.drawable.abc_dialog_material_background
                             if (r8 != r1) goto L41
                             goto L14
                         L41:

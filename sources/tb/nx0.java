@@ -19,10 +19,10 @@ public class nx0 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
 
     @Override // cn.damai.tetris.v2.convertor.IConverter
     /* renamed from: a */
-    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, C9039db c9039db) {
+    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, db dbVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1030697861")) {
-            return (List) ipChange.ipc$dispatch("-1030697861", new Object[]{this, baseResponse, baseSection, globalConfig, c9039db});
+            return (List) ipChange.ipc$dispatch("-1030697861", new Object[]{this, baseResponse, baseSection, globalConfig, dbVar});
         }
         if (baseSection != null && baseSection.getItem() != null) {
             NodeData item = baseSection.getItem();
@@ -49,6 +49,6 @@ public class nx0 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
                 item.put("projects", (Object) jSONArray2);
             }
         }
-        return new g32().convert(baseResponse, baseSection, globalConfig, c9039db);
+        return new g32().convert(baseResponse, baseSection, globalConfig, dbVar);
     }
 }

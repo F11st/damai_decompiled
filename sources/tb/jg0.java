@@ -8,7 +8,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes9.dex */
 public abstract class jg0 {
     @NotNull
-    public static final C9310a Companion = new C9310a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String DATA = "data";
     @NotNull
@@ -23,13 +23,12 @@ public abstract class jg0 {
     private final Map<String, Object> a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.jg0$a */
     /* loaded from: classes9.dex */
-    public static final class C9310a {
-        private C9310a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9310a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

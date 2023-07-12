@@ -28,6 +28,6 @@ final class BroadcastKt$broadcast$1 extends Lambda implements Function1<Throwabl
 
     /* renamed from: invoke  reason: avoid collision after fix types in other method */
     public final void invoke2(@Nullable Throwable th) {
-        C8648b.j(this.$this_broadcast, th);
+        b.j(this.$this_broadcast, th);
     }
 }

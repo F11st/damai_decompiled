@@ -3,14 +3,14 @@ package com.alibaba.security.biometrics.skin.model;
 import android.graphics.Bitmap;
 import android.text.TextUtils;
 import com.alibaba.security.biometrics.skin.interfaces.ISkinParse;
-import com.alibaba.security.common.b.a.InterfaceC3799a;
+import com.alibaba.security.common.b.a.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
 public class ButtonSkinData extends TextViewSkinData {
     private String backgroundColor;
     private String backgroundImage;
-    @InterfaceC3799a(d = false)
+    @a(d = false)
     private Bitmap backgroundImageBitmap;
 
     public String getBackgroundColor() {

@@ -66,35 +66,34 @@ public class TradeTextInputConstructor extends DinamicViewAdvancedConstructor {
     private static final int TEXT_WATCHER = R$id.trade_text_watcher;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.ultron.trade.dinamicX.constructor.TradeTextInputConstructor$a */
     /* loaded from: classes6.dex */
-    public static class C3249a extends q80 {
+    public static class a extends q80 {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.android.ultron.trade.dinamicX.constructor.TradeTextInputConstructor$a$a */
+        /* renamed from: com.alibaba.android.ultron.trade.dinamicX.constructor.TradeTextInputConstructor$a$a  reason: collision with other inner class name */
         /* loaded from: classes15.dex */
-        public class View$OnTouchListenerC3250a implements View.OnTouchListener {
+        public class View$OnTouchListenerC0132a implements View.OnTouchListener {
             final /* synthetic */ View a;
             final /* synthetic */ Map b;
             final /* synthetic */ v80 c;
             final /* synthetic */ x80 d;
 
             /* compiled from: Taobao */
-            /* renamed from: com.alibaba.android.ultron.trade.dinamicX.constructor.TradeTextInputConstructor$a$a$a */
+            /* renamed from: com.alibaba.android.ultron.trade.dinamicX.constructor.TradeTextInputConstructor$a$a$a  reason: collision with other inner class name */
             /* loaded from: classes6.dex */
-            class C3251a implements TradeTextInputDialog.OnClickListener {
-                C3251a() {
+            class C0133a implements TradeTextInputDialog.OnClickListener {
+                C0133a() {
                 }
 
                 @Override // com.alibaba.android.ultron.trade.dinamicX.widget.TradeTextInputDialog.OnClickListener
                 public void onClick(DialogInterface dialogInterface, CharSequence charSequence) {
-                    View$OnTouchListenerC3250a view$OnTouchListenerC3250a = View$OnTouchListenerC3250a.this;
-                    C3249a.this.f(view$OnTouchListenerC3250a.a, view$OnTouchListenerC3250a.c, view$OnTouchListenerC3250a.d, (String) View$OnTouchListenerC3250a.this.b.get("onFinish"));
+                    View$OnTouchListenerC0132a view$OnTouchListenerC0132a = View$OnTouchListenerC0132a.this;
+                    a.this.f(view$OnTouchListenerC0132a.a, view$OnTouchListenerC0132a.c, view$OnTouchListenerC0132a.d, (String) View$OnTouchListenerC0132a.this.b.get("onFinish"));
                 }
             }
 
-            View$OnTouchListenerC3250a(View view, Map map, v80 v80Var, x80 x80Var) {
+            View$OnTouchListenerC0132a(View view, Map map, v80 v80Var, x80 x80Var) {
                 this.a = view;
                 this.b = map;
                 this.c = v80Var;
@@ -108,7 +107,7 @@ public class TradeTextInputConstructor extends DinamicViewAdvancedConstructor {
                 }
                 TradeTextInputDialog tradeTextInputDialog = new TradeTextInputDialog(view.getContext());
                 tradeTextInputDialog.h((EditText) this.a);
-                tradeTextInputDialog.i(new C3251a());
+                tradeTextInputDialog.i(new C0133a());
                 tradeTextInputDialog.show();
                 return true;
             }
@@ -133,15 +132,15 @@ public class TradeTextInputConstructor extends DinamicViewAdvancedConstructor {
             if (map.isEmpty()) {
                 return;
             }
-            C3252b c3252b = (C3252b) view.getTag(TradeTextInputConstructor.TEXT_WATCHER);
-            if (c3252b != null) {
-                ((EditText) view).removeTextChangedListener(c3252b);
+            b bVar = (b) view.getTag(TradeTextInputConstructor.TEXT_WATCHER);
+            if (bVar != null) {
+                ((EditText) view).removeTextChangedListener(bVar);
             }
-            C3252b c3252b2 = new C3252b(this, view, x80Var);
-            c3252b2.a(v80Var);
-            view.setTag(TradeTextInputConstructor.TEXT_WATCHER, c3252b2);
-            ((EditText) view).addTextChangedListener(c3252b2);
-            view.setOnTouchListener(new View$OnTouchListenerC3250a(view, map, v80Var, x80Var));
+            b bVar2 = new b(this, view, x80Var);
+            bVar2.a(v80Var);
+            view.setTag(TradeTextInputConstructor.TEXT_WATCHER, bVar2);
+            ((EditText) view).addTextChangedListener(bVar2);
+            view.setOnTouchListener(new View$OnTouchListenerC0132a(view, map, v80Var, x80Var));
         }
 
         public void f(View view, v80 v80Var, x80 x80Var, String str) {
@@ -157,17 +156,16 @@ public class TradeTextInputConstructor extends DinamicViewAdvancedConstructor {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.ultron.trade.dinamicX.constructor.TradeTextInputConstructor$b */
     /* loaded from: classes15.dex */
-    public static class C3252b implements TextWatcher {
+    public static class b implements TextWatcher {
         private v80 a;
         private x80 b;
         private String c;
         private View d;
-        private C3249a e;
+        private a e;
 
-        public C3252b(C3249a c3249a, View view, x80 x80Var) {
-            this.e = c3249a;
+        public b(a aVar, View view, x80 x80Var) {
+            this.e = aVar;
             this.b = x80Var;
             this.d = view;
             Map<String, String> map = x80Var.d;
@@ -294,7 +292,7 @@ public class TradeTextInputConstructor extends DinamicViewAdvancedConstructor {
 
     @Override // com.taobao.android.dinamic.dinamic.DinamicViewAdvancedConstructor
     public void setEvents(View view, v80 v80Var) {
-        new C3249a().b(view, v80Var);
+        new a().b(view, v80Var);
     }
 
     public void setMaxLines(EditText editText, String str) {
@@ -309,9 +307,9 @@ public class TradeTextInputConstructor extends DinamicViewAdvancedConstructor {
     }
 
     public void setMaxWidth(EditText editText, String str) {
-        int b = p62.b(editText.getContext(), str, -1);
-        if (b != -1) {
-            editText.setMaxWidth(b);
+        int b2 = p62.b(editText.getContext(), str, -1);
+        if (b2 != -1) {
+            editText.setMaxWidth(b2);
         }
     }
 
@@ -365,11 +363,11 @@ public class TradeTextInputConstructor extends DinamicViewAdvancedConstructor {
     }
 
     public void setTextSize(EditText editText, String str) {
-        int b = p62.b(editText.getContext(), str, -1);
-        if (b == -1) {
+        int b2 = p62.b(editText.getContext(), str, -1);
+        if (b2 == -1) {
             editText.setTextSize(1, 12.0f);
         } else {
-            editText.setTextSize(0, b);
+            editText.setTextSize(0, b2);
         }
     }
 

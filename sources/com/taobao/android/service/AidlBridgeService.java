@@ -26,7 +26,7 @@ public class AidlBridgeService extends Service {
         }
     };
     private IAidlServiceBridge a = new IAidlServiceBridge.Stub() { // from class: com.taobao.android.service.AidlBridgeService.1
-        private Map<ComponentName, ServiceConnectionC6587a> mServices = new HashMap();
+        private Map<ComponentName, a> mServices = new HashMap();
 
         @Override // com.taobao.android.modular.IAidlServiceBridge
         public synchronized IBinder bindService(Intent intent) {
@@ -40,28 +40,28 @@ public class AidlBridgeService extends Service {
                 ServiceInfo serviceInfo = resolveService.serviceInfo;
                 component = new ComponentName(serviceInfo.packageName, serviceInfo.name);
             }
-            ServiceConnectionC6587a serviceConnectionC6587a = this.mServices.get(component);
-            if (serviceConnectionC6587a != null) {
-                return serviceConnectionC6587a.a;
+            a aVar = this.mServices.get(component);
+            if (aVar != null) {
+                return aVar.a;
             }
             intent.setComponent(component);
-            ServiceConnectionC6587a serviceConnectionC6587a2 = new ServiceConnectionC6587a();
+            a aVar2 = new a();
             try {
-                z = LocalAidlServices.b(AidlBridgeService.this, intent, serviceConnectionC6587a2);
+                z = LocalAidlServices.b(AidlBridgeService.this, intent, aVar2);
             } catch (ClassNotFoundException unused) {
             }
             if (z) {
-                this.mServices.put(component, serviceConnectionC6587a2);
-                return serviceConnectionC6587a2.a;
+                this.mServices.put(component, aVar2);
+                return aVar2.a;
             }
             return null;
         }
 
         @Override // com.taobao.android.modular.IAidlServiceBridge
         public synchronized void unbindService(IBinder iBinder) {
-            Iterator<Map.Entry<ComponentName, ServiceConnectionC6587a>> it = this.mServices.entrySet().iterator();
+            Iterator<Map.Entry<ComponentName, a>> it = this.mServices.entrySet().iterator();
             while (it.hasNext()) {
-                ServiceConnectionC6587a value = it.next().getValue();
+                a value = it.next().getValue();
                 if (value.a == iBinder) {
                     LocalAidlServices.h(AidlBridgeService.this, value);
                     it.remove();
@@ -71,12 +71,11 @@ public class AidlBridgeService extends Service {
     };
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.service.AidlBridgeService$a */
     /* loaded from: classes12.dex */
-    private static class ServiceConnectionC6587a implements ServiceConnection {
+    private static class a implements ServiceConnection {
         IBinder a;
 
-        private ServiceConnectionC6587a() {
+        private a() {
         }
 
         @Override // android.content.ServiceConnection

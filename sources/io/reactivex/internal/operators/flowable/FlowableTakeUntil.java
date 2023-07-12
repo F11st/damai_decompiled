@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import io.reactivex.internal.util.AtomicThrowable;
 import io.reactivex.internal.util.HalfSerializer;
@@ -103,12 +103,12 @@ public final class FlowableTakeUntil<T, U> extends AbstractFlowableWithUpstream<
         }
     }
 
-    public FlowableTakeUntil(AbstractC8147b<T> abstractC8147b, Publisher<? extends U> publisher) {
-        super(abstractC8147b);
+    public FlowableTakeUntil(b<T> bVar, Publisher<? extends U> publisher) {
+        super(bVar);
         this.other = publisher;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         TakeUntilMainSubscriber takeUntilMainSubscriber = new TakeUntilMainSubscriber(subscriber);
         subscriber.onSubscribe(takeUntilMainSubscriber);

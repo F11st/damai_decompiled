@@ -4,17 +4,13 @@ import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Base64;
 import androidx.annotation.Nullable;
-import com.alipay.sdk.m.x.AbstractC4344c;
 import com.taobao.alivfssdk.fresco.binaryresource.BinaryResource;
-import com.taobao.alivfssdk.fresco.binaryresource.C6272a;
 import com.taobao.alivfssdk.fresco.cache.common.CacheErrorLogger;
 import com.taobao.alivfssdk.fresco.cache.common.CacheKey;
 import com.taobao.alivfssdk.fresco.cache.common.WriterCallback;
 import com.taobao.alivfssdk.fresco.cache.disk.DiskStorage;
-import com.taobao.alivfssdk.fresco.common.file.C6285a;
 import com.taobao.alivfssdk.fresco.common.file.FileTreeVisitor;
 import com.taobao.alivfssdk.fresco.common.file.FileUtils;
-import com.taobao.alivfssdk.fresco.common.internal.C6290b;
 import com.taobao.alivfssdk.fresco.common.internal.VisibleForTesting;
 import com.taobao.weex.annotation.JSMethod;
 import com.taobao.weex.common.Constants;
@@ -80,12 +76,11 @@ public class DefaultDiskStorage implements DiskStorage {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.alivfssdk.fresco.cache.disk.DefaultDiskStorage$b */
     /* loaded from: classes8.dex */
-    public class C6277b implements FileTreeVisitor {
+    public class b implements FileTreeVisitor {
         private final List<DiskStorage.Entry> a;
 
-        private C6277b() {
+        private b() {
             this.a = new ArrayList();
         }
 
@@ -103,28 +98,27 @@ public class DefaultDiskStorage implements DiskStorage {
 
         @Override // com.taobao.alivfssdk.fresco.common.file.FileTreeVisitor
         public void visitFile(File file) {
-            C6279d h = DefaultDiskStorage.this.h(file);
+            d h = DefaultDiskStorage.this.h(file);
             if (h == null || h.a != FileType.CONTENT) {
                 return;
             }
-            this.a.add(new C6278c(h.b, file));
+            this.a.add(new c(h.b, file));
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     @VisibleForTesting
-    /* renamed from: com.taobao.alivfssdk.fresco.cache.disk.DefaultDiskStorage$c */
     /* loaded from: classes8.dex */
-    public static class C6278c implements DiskStorage.Entry {
+    public static class c implements DiskStorage.Entry {
         private final String a;
-        private final C6272a b;
+        private final com.taobao.alivfssdk.fresco.binaryresource.a b;
         private long c;
         private long d;
 
         @Override // com.taobao.alivfssdk.fresco.cache.disk.DiskStorage.Entry
         /* renamed from: a */
-        public C6272a getResource() {
+        public com.taobao.alivfssdk.fresco.binaryresource.a getResource() {
             return this.b;
         }
 
@@ -149,10 +143,10 @@ public class DefaultDiskStorage implements DiskStorage {
             return this.d;
         }
 
-        private C6278c(String str, File file) {
+        private c(String str, File file) {
             bu1.a(file);
             this.a = (String) bu1.a(str);
-            this.b = C6272a.a(file);
+            this.b = com.taobao.alivfssdk.fresco.binaryresource.a.a(file);
             this.c = -1L;
             this.d = -1L;
         }
@@ -160,15 +154,14 @@ public class DefaultDiskStorage implements DiskStorage {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.alivfssdk.fresco.cache.disk.DefaultDiskStorage$d */
     /* loaded from: classes8.dex */
-    public static class C6279d {
+    public static class d {
         public final FileType a;
         public final String b;
         public final String c;
 
         @Nullable
-        public static C6279d b(File file) {
+        public static d b(File file) {
             FileType fromExtension;
             String name = file.getName();
             int lastIndexOf = name.lastIndexOf(46);
@@ -187,7 +180,7 @@ public class DefaultDiskStorage implements DiskStorage {
                     str = substring.substring(lastIndexOf3 + 1);
                     substring = substring.substring(0, lastIndexOf3);
                 }
-                return new C6279d(fromExtension, substring, str);
+                return new d(fromExtension, substring, str);
             }
             return null;
         }
@@ -212,7 +205,7 @@ public class DefaultDiskStorage implements DiskStorage {
             return this.a + jn1.BRACKET_START_STR + this.b + jn1.BRACKET_END_STR;
         }
 
-        private C6279d(FileType fileType, String str, CacheKey cacheKey) {
+        private d(FileType fileType, String str, CacheKey cacheKey) {
             this.a = fileType;
             this.b = str;
             if ((cacheKey instanceof iq1) && !TextUtils.isEmpty(((iq1) cacheKey).b)) {
@@ -228,7 +221,7 @@ public class DefaultDiskStorage implements DiskStorage {
             this.c = null;
         }
 
-        private C6279d(FileType fileType, String str, String str2) {
+        private d(FileType fileType, String str, String str2) {
             this.a = fileType;
             this.b = str;
             this.c = str2;
@@ -237,14 +230,13 @@ public class DefaultDiskStorage implements DiskStorage {
 
     /* compiled from: Taobao */
     @VisibleForTesting
-    /* renamed from: com.taobao.alivfssdk.fresco.cache.disk.DefaultDiskStorage$e */
     /* loaded from: classes8.dex */
-    class C6280e implements DiskStorage.Inserter {
+    class e implements DiskStorage.Inserter {
         private final String a;
         @VisibleForTesting
         final File b;
 
-        public C6280e(String str, File file) {
+        public e(String str, File file) {
             this.a = str;
             this.b = file;
         }
@@ -263,7 +255,7 @@ public class DefaultDiskStorage implements DiskStorage {
                 if (e.exists()) {
                     e.setLastModified(System.currentTimeMillis());
                 }
-                return C6272a.a(e);
+                return com.taobao.alivfssdk.fresco.binaryresource.a.a(e);
             } catch (FileUtils.RenameException e2) {
                 Throwable cause = e2.getCause();
                 if (cause != null) {
@@ -289,10 +281,10 @@ public class DefaultDiskStorage implements DiskStorage {
             try {
                 OutputStream fileOutputStream = new FileOutputStream(this.b);
                 try {
-                    C6290b c6290b = new C6290b(fileOutputStream);
-                    fileOutputStream = writerCallback.write(c6290b);
+                    com.taobao.alivfssdk.fresco.common.internal.b bVar = new com.taobao.alivfssdk.fresco.common.internal.b(fileOutputStream);
+                    fileOutputStream = writerCallback.write(bVar);
                     fileOutputStream.flush();
-                    long count = c6290b.getCount();
+                    long count = bVar.getCount();
                     fileOutputStream.close();
                     if (this.b.length() != count) {
                         throw new IncompleteFileException(count, this.b.length());
@@ -332,23 +324,23 @@ public class DefaultDiskStorage implements DiskStorage {
         return 0L;
     }
 
-    private DiskStorage.C6282b d(DiskStorage.Entry entry) throws IOException {
-        C6278c c6278c = (C6278c) entry;
-        byte[] read = c6278c.getResource().read();
+    private DiskStorage.b d(DiskStorage.Entry entry) throws IOException {
+        c cVar = (c) entry;
+        byte[] read = cVar.getResource().read();
         String p = p(read);
-        return new DiskStorage.C6282b(c6278c.getResource().b().getPath(), p, (float) c6278c.getSize(), (!p.equals(Constants.Name.UNDEFINED) || read.length < 4) ? "" : String.format(null, "0x%02X 0x%02X 0x%02X 0x%02X", Byte.valueOf(read[0]), Byte.valueOf(read[1]), Byte.valueOf(read[2]), Byte.valueOf(read[3])));
+        return new DiskStorage.b(cVar.getResource().b().getPath(), p, (float) cVar.getSize(), (!p.equals(Constants.Name.UNDEFINED) || read.length < 4) ? "" : String.format(null, "0x%02X 0x%02X 0x%02X 0x%02X", Byte.valueOf(read[0]), Byte.valueOf(read[1]), Byte.valueOf(read[2]), Byte.valueOf(read[3])));
     }
 
     private String g(String str, CacheKey cacheKey) {
-        C6279d c6279d = new C6279d(FileType.CONTENT, str, cacheKey);
-        return c6279d.c(j(c6279d.b));
+        d dVar = new d(FileType.CONTENT, str, cacheKey);
+        return dVar.c(j(dVar.b));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public C6279d h(File file) {
-        C6279d b = C6279d.b(file);
-        if (b != null && i(b.b).equals(file.getParentFile())) {
-            return b;
+    public d h(File file) {
+        d b2 = d.b(file);
+        if (b2 != null && i(b2.b).equals(file.getParentFile())) {
+            return b2;
         }
         return null;
     }
@@ -364,7 +356,7 @@ public class DefaultDiskStorage implements DiskStorage {
 
     @VisibleForTesting
     static String k(int i) {
-        return String.format(null, "%s.ols%d.%d", AbstractC4344c.d, 100, Integer.valueOf(i));
+        return String.format(null, "%s.ols%d.%d", com.alipay.sdk.m.x.c.d, 100, Integer.valueOf(i));
     }
 
     private static boolean l(File file, CacheErrorLogger cacheErrorLogger) {
@@ -373,14 +365,14 @@ public class DefaultDiskStorage implements DiskStorage {
             try {
                 try {
                     return file.getCanonicalPath().contains(externalStorageDirectory.toString());
-                } catch (IOException e) {
-                    e = e;
+                } catch (IOException e2) {
+                    e = e2;
                     CacheErrorLogger.CacheErrorCategory cacheErrorCategory = CacheErrorLogger.CacheErrorCategory.OTHER;
                     cacheErrorLogger.logError(cacheErrorCategory, "DefaultDiskStorage", "failed to read folder to check if external: " + ((String) null), e);
                     return false;
                 }
-            } catch (IOException e2) {
-                e = e2;
+            } catch (IOException e3) {
+                e = e3;
             }
         }
         return false;
@@ -389,17 +381,17 @@ public class DefaultDiskStorage implements DiskStorage {
     private void m(File file, String str) throws IOException {
         try {
             FileUtils.a(file);
-        } catch (FileUtils.CreateDirectoryException e) {
-            this.d.logError(CacheErrorLogger.CacheErrorCategory.WRITE_CREATE_DIR, "DefaultDiskStorage", str, e);
-            throw e;
+        } catch (FileUtils.CreateDirectoryException e2) {
+            this.d.logError(CacheErrorLogger.CacheErrorCategory.WRITE_CREATE_DIR, "DefaultDiskStorage", str, e2);
+            throw e2;
         }
     }
 
     private boolean n(String str, CacheKey cacheKey, boolean z) {
-        File e = e(str, cacheKey);
-        boolean exists = e.exists();
+        File e2 = e(str, cacheKey);
+        boolean exists = e2.exists();
         if (z && exists) {
-            e.setLastModified(System.currentTimeMillis());
+            e2.setLastModified(System.currentTimeMillis());
         }
         return exists;
     }
@@ -428,7 +420,7 @@ public class DefaultDiskStorage implements DiskStorage {
 
     @Override // com.taobao.alivfssdk.fresco.cache.disk.DiskStorage
     public void clearAll() {
-        C6285a.a(this.a);
+        com.taobao.alivfssdk.fresco.common.file.a.a(this.a);
     }
 
     @Override // java.io.Closeable, java.lang.AutoCloseable
@@ -448,9 +440,9 @@ public class DefaultDiskStorage implements DiskStorage {
     @Override // com.taobao.alivfssdk.fresco.cache.disk.DiskStorage
     /* renamed from: f */
     public List<DiskStorage.Entry> getEntries() throws IOException {
-        C6277b c6277b = new C6277b();
-        C6285a.c(this.c, c6277b);
-        return c6277b.a();
+        b bVar = new b();
+        com.taobao.alivfssdk.fresco.common.file.a.c(this.c, bVar);
+        return bVar.a();
     }
 
     @Override // com.taobao.alivfssdk.fresco.cache.disk.DiskStorage
@@ -459,12 +451,12 @@ public class DefaultDiskStorage implements DiskStorage {
         ArrayList arrayList = new ArrayList();
         if (listFiles != null) {
             for (File file : listFiles) {
-                C6279d b = C6279d.b(file);
-                if (b != null && b.a == FileType.CONTENT && str.equals(b.b) && !TextUtils.isEmpty(b.c)) {
+                d b2 = d.b(file);
+                if (b2 != null && b2.a == FileType.CONTENT && str.equals(b2.b) && !TextUtils.isEmpty(b2.c)) {
                     try {
-                        arrayList.add(new String(Base64.decode(b.c, 11), "UTF-8"));
-                    } catch (UnsupportedEncodingException e) {
-                        throw new RuntimeException(e);
+                        arrayList.add(new String(Base64.decode(b2.c, 11), "UTF-8"));
+                    } catch (UnsupportedEncodingException e2) {
+                        throw new RuntimeException(e2);
                     }
                 }
             }
@@ -473,28 +465,28 @@ public class DefaultDiskStorage implements DiskStorage {
     }
 
     @Override // com.taobao.alivfssdk.fresco.cache.disk.DiskStorage
-    public DiskStorage.C6281a getDumpInfo() throws IOException {
+    public DiskStorage.a getDumpInfo() throws IOException {
         List<DiskStorage.Entry> entries = getEntries();
-        DiskStorage.C6281a c6281a = new DiskStorage.C6281a();
+        DiskStorage.a aVar = new DiskStorage.a();
         for (DiskStorage.Entry entry : entries) {
-            DiskStorage.C6282b d = d(entry);
-            String str = d.a;
-            if (!c6281a.b.containsKey(str)) {
-                c6281a.b.put(str, 0);
+            DiskStorage.b d2 = d(entry);
+            String str = d2.a;
+            if (!aVar.b.containsKey(str)) {
+                aVar.b.put(str, 0);
             }
-            Map<String, Integer> map = c6281a.b;
+            Map<String, Integer> map = aVar.b;
             map.put(str, Integer.valueOf(map.get(str).intValue() + 1));
-            c6281a.a.add(d);
+            aVar.a.add(d2);
         }
-        return c6281a;
+        return aVar;
     }
 
     @Override // com.taobao.alivfssdk.fresco.cache.disk.DiskStorage
     public BinaryResource getResource(String str, CacheKey cacheKey, Object obj) {
-        File e = e(str, cacheKey);
-        if (e.exists()) {
-            e.setLastModified(System.currentTimeMillis());
-            return C6272a.a(e);
+        File e2 = e(str, cacheKey);
+        if (e2.exists()) {
+            e2.setLastModified(System.currentTimeMillis());
+            return com.taobao.alivfssdk.fresco.binaryresource.a.a(e2);
         }
         return null;
     }
@@ -507,16 +499,16 @@ public class DefaultDiskStorage implements DiskStorage {
 
     @Override // com.taobao.alivfssdk.fresco.cache.disk.DiskStorage
     public DiskStorage.Inserter insert(String str, CacheKey cacheKey, Object obj) throws IOException {
-        C6279d c6279d = new C6279d(FileType.TEMP, str, cacheKey);
-        File i = i(c6279d.b);
+        d dVar = new d(FileType.TEMP, str, cacheKey);
+        File i = i(dVar.b);
         if (!i.exists()) {
             m(i, "insert");
         }
         try {
-            return new C6280e(str, c6279d.a(i));
-        } catch (IOException e) {
-            this.d.logError(CacheErrorLogger.CacheErrorCategory.WRITE_CREATE_TEMPFILE, "DefaultDiskStorage", "insert", e);
-            throw e;
+            return new e(str, dVar.a(i));
+        } catch (IOException e2) {
+            this.d.logError(CacheErrorLogger.CacheErrorCategory.WRITE_CREATE_TEMPFILE, "DefaultDiskStorage", "insert", e2);
+            throw e2;
         }
     }
 
@@ -536,7 +528,7 @@ public class DefaultDiskStorage implements DiskStorage {
 
     @Override // com.taobao.alivfssdk.fresco.cache.disk.DiskStorage
     public long remove(DiskStorage.Entry entry) {
-        return c(((C6278c) entry).getResource().b());
+        return c(((c) entry).getResource().b());
     }
 
     @Override // com.taobao.alivfssdk.fresco.cache.disk.DiskStorage

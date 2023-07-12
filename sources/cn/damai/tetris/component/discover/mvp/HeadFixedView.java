@@ -17,12 +17,11 @@ public class HeadFixedView extends AbsView<HeadFixedContract.Presenter> implemen
     private final HeadFixedViewHolder mViewHolder;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.discover.mvp.HeadFixedView$a */
     /* loaded from: classes7.dex */
-    public class C1819a implements OnItemBindListener<HeadFixedBean> {
+    public class a implements OnItemBindListener<HeadFixedBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1819a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -56,7 +55,7 @@ public class HeadFixedView extends AbsView<HeadFixedContract.Presenter> implemen
 
     public HeadFixedView(View view) {
         super(view);
-        this.mViewHolder = new HeadFixedViewHolder(view, new C1819a());
+        this.mViewHolder = new HeadFixedViewHolder(view, new a());
     }
 
     @Override // cn.damai.tetris.component.discover.mvp.HeadFixedContract.View

@@ -11,13 +11,13 @@ public interface IImageLoader {
     /* compiled from: Taobao */
     /* loaded from: classes17.dex */
     public interface IImageFailListener {
-        void onFail(C2495a c2495a);
+        void onFail(a aVar);
     }
 
     /* compiled from: Taobao */
     /* loaded from: classes17.dex */
     public interface IImageSuccListener {
-        void onSuccess(C2496b c2496b);
+        void onSuccess(b bVar);
     }
 
     /* compiled from: Taobao */
@@ -27,16 +27,14 @@ public interface IImageLoader {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.image.IImageLoader$a */
     /* loaded from: classes17.dex */
-    public static class C2495a {
+    public static class a {
         public int a;
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.image.IImageLoader$b */
     /* loaded from: classes17.dex */
-    public static class C2496b {
+    public static class b {
         public Drawable a;
         public Bitmap b;
     }

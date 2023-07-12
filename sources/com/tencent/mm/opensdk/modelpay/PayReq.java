@@ -1,7 +1,7 @@
 package com.tencent.mm.opensdk.modelpay;
 
 import android.os.Bundle;
-import com.tencent.mm.opensdk.channel.a.C7054a;
+import com.tencent.mm.opensdk.channel.a.a;
 import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.utils.Log;
 
@@ -29,8 +29,8 @@ public class PayReq extends BaseReq {
         public int callbackFlags = -1;
 
         public void fromBundle(Bundle bundle) {
-            this.callbackClassName = C7054a.a(bundle, "_wxapi_payoptions_callback_classname");
-            this.callbackFlags = C7054a.a(bundle, "_wxapi_payoptions_callback_flags", -1);
+            this.callbackClassName = a.a(bundle, "_wxapi_payoptions_callback_classname");
+            this.callbackFlags = a.a(bundle, "_wxapi_payoptions_callback_flags", -1);
         }
 
         public void toBundle(Bundle bundle) {
@@ -89,15 +89,15 @@ public class PayReq extends BaseReq {
     @Override // com.tencent.mm.opensdk.modelbase.BaseReq
     public void fromBundle(Bundle bundle) {
         super.fromBundle(bundle);
-        this.appId = C7054a.a(bundle, "_wxapi_payreq_appid");
-        this.partnerId = C7054a.a(bundle, "_wxapi_payreq_partnerid");
-        this.prepayId = C7054a.a(bundle, "_wxapi_payreq_prepayid");
-        this.nonceStr = C7054a.a(bundle, "_wxapi_payreq_noncestr");
-        this.timeStamp = C7054a.a(bundle, "_wxapi_payreq_timestamp");
-        this.packageValue = C7054a.a(bundle, "_wxapi_payreq_packagevalue");
-        this.sign = C7054a.a(bundle, "_wxapi_payreq_sign");
-        this.extData = C7054a.a(bundle, "_wxapi_payreq_extdata");
-        this.signType = C7054a.a(bundle, "_wxapi_payreq_sign_type");
+        this.appId = a.a(bundle, "_wxapi_payreq_appid");
+        this.partnerId = a.a(bundle, "_wxapi_payreq_partnerid");
+        this.prepayId = a.a(bundle, "_wxapi_payreq_prepayid");
+        this.nonceStr = a.a(bundle, "_wxapi_payreq_noncestr");
+        this.timeStamp = a.a(bundle, "_wxapi_payreq_timestamp");
+        this.packageValue = a.a(bundle, "_wxapi_payreq_packagevalue");
+        this.sign = a.a(bundle, "_wxapi_payreq_sign");
+        this.extData = a.a(bundle, "_wxapi_payreq_extdata");
+        this.signType = a.a(bundle, "_wxapi_payreq_sign_type");
         Options options = new Options();
         this.options = options;
         options.fromBundle(bundle);

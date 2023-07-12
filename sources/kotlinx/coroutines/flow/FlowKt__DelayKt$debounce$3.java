@@ -3,7 +3,6 @@ package kotlinx.coroutines.flow;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Lambda;
-import kotlinx.coroutines.C8696j;
 import tb.ed0;
 
 /* compiled from: Taobao */
@@ -20,7 +19,7 @@ final class FlowKt__DelayKt$debounce$3 extends Lambda implements Function1<Objec
 
     /* renamed from: invoke  reason: avoid collision after fix types in other method */
     public final long invoke2(Object obj) {
-        return C8696j.c(((ed0) this.$timeout.invoke(obj)).unbox-impl());
+        return kotlinx.coroutines.j.c(((ed0) this.$timeout.invoke(obj)).unbox-impl());
     }
 
     @Override // kotlin.jvm.functions.Function1

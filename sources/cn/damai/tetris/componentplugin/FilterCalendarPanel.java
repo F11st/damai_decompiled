@@ -22,7 +22,7 @@ public class FilterCalendarPanel implements View.OnClickListener {
     private ViewGroup c;
     private View d;
     private boolean e = false;
-    private CalendarPopView f = new CalendarPopView(mu0.a(), true, true, 80, new C1980a());
+    private CalendarPopView f = new CalendarPopView(mu0.a(), true, true, 80, new a());
 
     /* compiled from: Taobao */
     /* loaded from: classes16.dex */
@@ -33,12 +33,11 @@ public class FilterCalendarPanel implements View.OnClickListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.componentplugin.FilterCalendarPanel$a */
     /* loaded from: classes7.dex */
-    public class C1980a implements CalendarPopView.OnDateClickListener {
+    public class a implements CalendarPopView.OnDateClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1980a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.calendar.CalendarPopView.OnDateClickListener
@@ -66,13 +65,12 @@ public class FilterCalendarPanel implements View.OnClickListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.componentplugin.FilterCalendarPanel$b */
     /* loaded from: classes7.dex */
-    public static class C1981b implements OnCalendarListener {
+    public static class b implements OnCalendarListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private OnCalendarListener a;
 
-        public C1981b(OnCalendarListener onCalendarListener) {
+        public b(OnCalendarListener onCalendarListener) {
             this.a = onCalendarListener;
         }
 
@@ -109,7 +107,7 @@ public class FilterCalendarPanel implements View.OnClickListener {
         this.d = this.b.findViewById(R$id.calendar_top_padding);
         ((FrameLayout) this.b.findViewById(R$id.calendar_out_container)).addView(this.f.s(), -1, -1);
         viewGroup.addView(this.b, -1, -1);
-        this.a = new C1981b(onCalendarListener);
+        this.a = new b(onCalendarListener);
         this.d.setOnClickListener(this);
     }
 

@@ -10,7 +10,6 @@ import android.os.Handler;
 import android.view.Window;
 import android.view.WindowManager;
 import com.google.android.material.badge.BadgeDrawable;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -27,11 +26,11 @@ public final class NotificationClickedActivity extends Activity {
                 if (intent2 != null) {
                     intent2.setComponent(new ComponentName(getPackageName(), "com.xiaomi.mipush.sdk.PushMessageHandler"));
                     intent2.putExtra("is_clicked_activity_call", true);
-                    AbstractC7535b.b("clicked activity start service.");
+                    com.xiaomi.channel.commonutils.logger.b.b("clicked activity start service.");
                     startService(intent2);
                 }
             } catch (Exception e) {
-                AbstractC7535b.a(e);
+                com.xiaomi.channel.commonutils.logger.b.a(e);
             }
         }
     }
@@ -50,10 +49,10 @@ public final class NotificationClickedActivity extends Activity {
         handler.postDelayed(new ac(this), 3000L);
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction("action_clicked_activity_finish");
-        C7560ad c7560ad = new C7560ad(this);
-        this.a = c7560ad;
+        ad adVar = new ad(this);
+        this.a = adVar;
         try {
-            registerReceiver(c7560ad, intentFilter, C7567d.a(this), null);
+            registerReceiver(adVar, intentFilter, d.a(this), null);
         } catch (Exception unused) {
         }
     }

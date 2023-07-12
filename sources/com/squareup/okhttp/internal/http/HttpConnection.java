@@ -16,10 +16,10 @@ import java.util.concurrent.TimeUnit;
 import okio.Buffer;
 import okio.BufferedSink;
 import okio.BufferedSource;
-import okio.C8844h;
-import okio.C8857o;
 import okio.Sink;
 import okio.Source;
+import okio.h;
+import okio.o;
 import org.apache.commons.net.SocketClient;
 import tb.jn1;
 
@@ -72,7 +72,7 @@ public final class HttpConnection {
         }
 
         @Override // okio.Source
-        public C8857o timeout() {
+        public o timeout() {
             return HttpConnection.this.source.timeout();
         }
 
@@ -109,7 +109,7 @@ public final class HttpConnection {
         }
 
         @Override // okio.Sink
-        public C8857o timeout() {
+        public o timeout() {
             return HttpConnection.this.sink.timeout();
         }
 
@@ -234,7 +234,7 @@ public final class HttpConnection {
         }
 
         @Override // okio.Sink
-        public C8857o timeout() {
+        public o timeout() {
             return HttpConnection.this.sink.timeout();
         }
 
@@ -352,8 +352,8 @@ public final class HttpConnection {
         this.pool = connectionPool;
         this.connection = connection;
         this.socket = socket;
-        this.source = C8844h.d(C8844h.m(socket));
-        this.sink = C8844h.c(C8844h.i(socket));
+        this.source = h.d(h.m(socket));
+        this.sink = h.c(h.i(socket));
     }
 
     public long bufferSize() {

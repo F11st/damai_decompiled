@@ -13,13 +13,12 @@ import tb.z71;
 public interface SupertypeLoopChecker {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.SupertypeLoopChecker$a */
     /* loaded from: classes3.dex */
-    public static final class C8298a implements SupertypeLoopChecker {
+    public static final class a implements SupertypeLoopChecker {
         @NotNull
-        public static final C8298a INSTANCE = new C8298a();
+        public static final a INSTANCE = new a();
 
-        private C8298a() {
+        private a() {
         }
 
         /* JADX WARN: Multi-variable type inference failed */

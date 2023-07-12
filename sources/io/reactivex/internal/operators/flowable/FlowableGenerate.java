@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.Emitter;
+import io.reactivex.b;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.functions.Consumer;
 import io.reactivex.internal.subscriptions.EmptySubscription;
@@ -16,7 +16,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableGenerate<T, S> extends AbstractC8147b<T> {
+public final class FlowableGenerate<T, S> extends b<T> {
     final Consumer<? super S> disposeState;
     final BiFunction<S, Emitter<T>, S> generator;
     final Callable<S> stateSupplier;
@@ -150,7 +150,7 @@ public final class FlowableGenerate<T, S> extends AbstractC8147b<T> {
         this.disposeState = consumer;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super T> subscriber) {
         try {
             subscriber.onSubscribe(new GeneratorSubscription(subscriber, this.generator, this.disposeState, this.stateSupplier.call()));

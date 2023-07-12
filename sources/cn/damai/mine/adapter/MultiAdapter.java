@@ -43,12 +43,11 @@ public class MultiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.adapter.MultiAdapter$a */
     /* loaded from: classes6.dex */
-    public class C1426a implements OnItemClickListener<NoteBean> {
+    public class a implements OnItemClickListener<NoteBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1426a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.discover.viewholder.OnItemClickListener
@@ -204,6 +203,6 @@ public class MultiAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             Context context = this.a;
             return new ProjectItemViewHolder(context, LayoutInflater.from(context));
         }
-        return new NoteViewHolder(this.a, viewGroup, new C1426a());
+        return new NoteViewHolder(this.a, viewGroup, new a());
     }
 }

@@ -12,16 +12,15 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public abstract class br2 {
     @NotNull
-    public static final C8976b Companion = new C8976b(null);
+    public static final b Companion = new b(null);
     @JvmField
     @NotNull
-    public static final br2 EMPTY = new C8975a();
+    public static final br2 EMPTY = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.br2$a */
     /* loaded from: classes3.dex */
-    public static final class C8975a extends br2 {
-        C8975a() {
+    public static final class a extends br2 {
+        a() {
         }
 
         @Override // tb.br2
@@ -47,22 +46,20 @@ public abstract class br2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.br2$b */
     /* loaded from: classes3.dex */
-    public static final class C8976b {
-        private C8976b() {
+    public static final class b {
+        private b() {
         }
 
-        public /* synthetic */ C8976b(k50 k50Var) {
+        public /* synthetic */ b(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.br2$c */
     /* loaded from: classes3.dex */
-    public static final class C8977c extends br2 {
-        C8977c() {
+    public static final class c extends br2 {
+        c() {
         }
 
         @Override // tb.br2
@@ -140,6 +137,6 @@ public abstract class br2 {
 
     @NotNull
     public final br2 h() {
-        return new C8977c();
+        return new c();
     }
 }

@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.single;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.exceptions.CompositeException;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -14,7 +14,7 @@ import tb.dg0;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SingleResumeNext<T> extends AbstractC8152e<T> {
+public final class SingleResumeNext<T> extends e<T> {
     final Function<? super Throwable, ? extends SingleSource<? extends T>> nextFunction;
     final SingleSource<? extends T> source;
 
@@ -68,7 +68,7 @@ public final class SingleResumeNext<T> extends AbstractC8152e<T> {
         this.nextFunction = function;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super T> singleObserver) {
         this.source.subscribe(new ResumeMainSingleObserver(singleObserver, this.nextFunction));
     }

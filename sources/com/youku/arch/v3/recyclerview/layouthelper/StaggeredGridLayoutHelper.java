@@ -5,9 +5,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import com.alibaba.android.vlayout.AbstractC3291c;
 import com.alibaba.android.vlayout.LayoutManagerHelper;
 import com.alibaba.android.vlayout.VirtualLayoutManager;
+import com.alibaba.android.vlayout.c;
 import com.alibaba.android.vlayout.layout.BaseLayoutHelper;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -181,10 +181,10 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         int mLastEdgeStart;
         private ArrayList<View> mViews;
 
-        void appendToSpan(View view, AbstractC3291c abstractC3291c) {
+        void appendToSpan(View view, c cVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1315722847")) {
-                ipChange.ipc$dispatch("-1315722847", new Object[]{this, view, abstractC3291c});
+                ipChange.ipc$dispatch("-1315722847", new Object[]{this, view, cVar});
                 return;
             }
             RecyclerView.LayoutParams layoutParams = getLayoutParams(view);
@@ -194,28 +194,28 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
                 this.mCachedStart = Integer.MIN_VALUE;
             }
             if (layoutParams.isItemRemoved() || layoutParams.isItemChanged()) {
-                this.mDeletedSize += abstractC3291c.e(view);
+                this.mDeletedSize += cVar.e(view);
             }
         }
 
-        void cacheReferenceLineAndClear(boolean z, int i, AbstractC3291c abstractC3291c) {
+        void cacheReferenceLineAndClear(boolean z, int i, c cVar) {
             int startLine;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1450057170")) {
-                ipChange.ipc$dispatch("1450057170", new Object[]{this, Boolean.valueOf(z), Integer.valueOf(i), abstractC3291c});
+                ipChange.ipc$dispatch("1450057170", new Object[]{this, Boolean.valueOf(z), Integer.valueOf(i), cVar});
                 return;
             }
             if (z) {
-                startLine = getEndLine(abstractC3291c);
+                startLine = getEndLine(cVar);
             } else {
-                startLine = getStartLine(abstractC3291c);
+                startLine = getStartLine(cVar);
             }
             clear();
             if (startLine == Integer.MIN_VALUE) {
                 return;
             }
-            if ((!z || startLine >= abstractC3291c.i()) && !z) {
-                abstractC3291c.k();
+            if ((!z || startLine >= cVar.i()) && !z) {
+                cVar.k();
             }
             if (i != Integer.MIN_VALUE) {
                 startLine += i;
@@ -226,26 +226,26 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
             this.mLastEdgeStart = Integer.MIN_VALUE;
         }
 
-        void calculateCachedEnd(AbstractC3291c abstractC3291c) {
+        void calculateCachedEnd(c cVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1721753633")) {
-                ipChange.ipc$dispatch("1721753633", new Object[]{this, abstractC3291c});
+                ipChange.ipc$dispatch("1721753633", new Object[]{this, cVar});
             } else if (this.mViews.size() == 0) {
                 this.mCachedEnd = Integer.MIN_VALUE;
             } else {
                 ArrayList<View> arrayList = this.mViews;
-                this.mCachedEnd = abstractC3291c.d(arrayList.get(arrayList.size() - 1));
+                this.mCachedEnd = cVar.d(arrayList.get(arrayList.size() - 1));
             }
         }
 
-        void calculateCachedStart(AbstractC3291c abstractC3291c) {
+        void calculateCachedStart(c cVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-345504920")) {
-                ipChange.ipc$dispatch("-345504920", new Object[]{this, abstractC3291c});
+                ipChange.ipc$dispatch("-345504920", new Object[]{this, cVar});
             } else if (this.mViews.size() == 0) {
                 this.mCachedStart = Integer.MIN_VALUE;
             } else {
-                this.mCachedStart = abstractC3291c.g(this.mViews.get(0));
+                this.mCachedStart = cVar.g(this.mViews.get(0));
             }
         }
 
@@ -279,9 +279,9 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
             return AndroidInstantRuntime.support(ipChange, "-2031417151") ? ((Integer) ipChange.ipc$dispatch("-2031417151", new Object[]{this})).intValue() : this.mDeletedSize;
         }
 
-        int getEndLine(AbstractC3291c abstractC3291c) {
+        int getEndLine(c cVar) {
             IpChange ipChange = $ipChange;
-            return AndroidInstantRuntime.support(ipChange, "-590431302") ? ((Integer) ipChange.ipc$dispatch("-590431302", new Object[]{this, abstractC3291c})).intValue() : getEndLine(Integer.MIN_VALUE, abstractC3291c);
+            return AndroidInstantRuntime.support(ipChange, "-590431302") ? ((Integer) ipChange.ipc$dispatch("-590431302", new Object[]{this, cVar})).intValue() : getEndLine(Integer.MIN_VALUE, cVar);
         }
 
         RecyclerView.LayoutParams getLayoutParams(View view) {
@@ -289,31 +289,31 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
             return AndroidInstantRuntime.support(ipChange, "1344909403") ? (RecyclerView.LayoutParams) ipChange.ipc$dispatch("1344909403", new Object[]{this, view}) : (RecyclerView.LayoutParams) view.getLayoutParams();
         }
 
-        int getNormalizedOffset(int i, int i2, int i3, AbstractC3291c abstractC3291c) {
+        int getNormalizedOffset(int i, int i2, int i3, c cVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "2125043240")) {
-                return ((Integer) ipChange.ipc$dispatch("2125043240", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), abstractC3291c})).intValue();
+                return ((Integer) ipChange.ipc$dispatch("2125043240", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), cVar})).intValue();
             }
             if (this.mViews.size() == 0) {
                 return 0;
             }
             if (i < 0) {
-                int endLine = getEndLine(0, abstractC3291c) - i3;
+                int endLine = getEndLine(0, cVar) - i3;
                 if (endLine <= 0) {
                     return 0;
                 }
                 return (-i) > endLine ? -endLine : i;
             }
-            int startLine = i2 - getStartLine(0, abstractC3291c);
+            int startLine = i2 - getStartLine(0, cVar);
             if (startLine <= 0) {
                 return 0;
             }
             return startLine < i ? startLine : i;
         }
 
-        int getStartLine(AbstractC3291c abstractC3291c) {
+        int getStartLine(c cVar) {
             IpChange ipChange = $ipChange;
-            return AndroidInstantRuntime.support(ipChange, "1914373889") ? ((Integer) ipChange.ipc$dispatch("1914373889", new Object[]{this, abstractC3291c})).intValue() : getStartLine(Integer.MIN_VALUE, abstractC3291c);
+            return AndroidInstantRuntime.support(ipChange, "1914373889") ? ((Integer) ipChange.ipc$dispatch("1914373889", new Object[]{this, cVar})).intValue() : getStartLine(Integer.MIN_VALUE, cVar);
         }
 
         void invalidateCache() {
@@ -328,15 +328,15 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
             this.mLastEdgeStart = Integer.MIN_VALUE;
         }
 
-        boolean isEmpty(int i, int i2, AbstractC3291c abstractC3291c) {
+        boolean isEmpty(int i, int i2, c cVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-740656113")) {
-                return ((Boolean) ipChange.ipc$dispatch("-740656113", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), abstractC3291c})).booleanValue();
+                return ((Boolean) ipChange.ipc$dispatch("-740656113", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), cVar})).booleanValue();
             }
             int size = this.mViews.size();
             for (int i3 = 0; i3 < size; i3++) {
                 View view = this.mViews.get(i3);
-                if (abstractC3291c.g(view) < i2 && abstractC3291c.d(view) > i) {
+                if (cVar.g(view) < i2 && cVar.d(view) > i) {
                     return false;
                 }
             }
@@ -367,17 +367,17 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
             }
         }
 
-        void popEnd(AbstractC3291c abstractC3291c) {
+        void popEnd(c cVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1205308504")) {
-                ipChange.ipc$dispatch("1205308504", new Object[]{this, abstractC3291c});
+                ipChange.ipc$dispatch("1205308504", new Object[]{this, cVar});
                 return;
             }
             int size = this.mViews.size();
             View remove = this.mViews.remove(size - 1);
             RecyclerView.LayoutParams layoutParams = getLayoutParams(remove);
             if (layoutParams.isItemRemoved() || layoutParams.isItemChanged()) {
-                this.mDeletedSize -= abstractC3291c.e(remove);
+                this.mDeletedSize -= cVar.e(remove);
             }
             if (size == 1) {
                 this.mCachedStart = Integer.MIN_VALUE;
@@ -385,10 +385,10 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
             this.mCachedEnd = Integer.MIN_VALUE;
         }
 
-        void popStart(AbstractC3291c abstractC3291c) {
+        void popStart(c cVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1566932447")) {
-                ipChange.ipc$dispatch("1566932447", new Object[]{this, abstractC3291c});
+                ipChange.ipc$dispatch("1566932447", new Object[]{this, cVar});
                 return;
             }
             View remove = this.mViews.remove(0);
@@ -397,15 +397,15 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
                 this.mCachedEnd = Integer.MIN_VALUE;
             }
             if (layoutParams.isItemRemoved() || layoutParams.isItemChanged()) {
-                this.mDeletedSize -= abstractC3291c.e(remove);
+                this.mDeletedSize -= cVar.e(remove);
             }
             this.mCachedStart = Integer.MIN_VALUE;
         }
 
-        void prependToSpan(View view, AbstractC3291c abstractC3291c) {
+        void prependToSpan(View view, c cVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1380036845")) {
-                ipChange.ipc$dispatch("-1380036845", new Object[]{this, view, abstractC3291c});
+                ipChange.ipc$dispatch("-1380036845", new Object[]{this, view, cVar});
                 return;
             }
             RecyclerView.LayoutParams layoutParams = getLayoutParams(view);
@@ -415,7 +415,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
                 this.mCachedEnd = Integer.MIN_VALUE;
             }
             if (layoutParams.isItemRemoved() || layoutParams.isItemChanged()) {
-                this.mDeletedSize += abstractC3291c.e(view);
+                this.mDeletedSize += cVar.e(view);
             }
         }
 
@@ -441,10 +441,10 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
             this.mIndex = i;
         }
 
-        int getEndLine(int i, AbstractC3291c abstractC3291c) {
+        int getEndLine(int i, c cVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1429693783")) {
-                return ((Integer) ipChange.ipc$dispatch("-1429693783", new Object[]{this, Integer.valueOf(i), abstractC3291c})).intValue();
+                return ((Integer) ipChange.ipc$dispatch("-1429693783", new Object[]{this, Integer.valueOf(i), cVar})).intValue();
             }
             int i2 = this.mCachedEnd;
             if (i2 != Integer.MIN_VALUE) {
@@ -454,14 +454,14 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
                 int i3 = this.mLastEdgeStart;
                 return i3 != Integer.MIN_VALUE ? i3 : i;
             }
-            calculateCachedEnd(abstractC3291c);
+            calculateCachedEnd(cVar);
             return this.mCachedEnd;
         }
 
-        int getStartLine(int i, AbstractC3291c abstractC3291c) {
+        int getStartLine(int i, c cVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1090144190")) {
-                return ((Integer) ipChange.ipc$dispatch("-1090144190", new Object[]{this, Integer.valueOf(i), abstractC3291c})).intValue();
+                return ((Integer) ipChange.ipc$dispatch("-1090144190", new Object[]{this, Integer.valueOf(i), cVar})).intValue();
             }
             int i2 = this.mCachedStart;
             if (i2 != Integer.MIN_VALUE) {
@@ -471,7 +471,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
                 int i3 = this.mLastEdgeEnd;
                 return i3 != Integer.MIN_VALUE ? i3 : i;
             }
-            calculateCachedStart(abstractC3291c);
+            calculateCachedStart(cVar);
             return this.mCachedStart;
         }
     }
@@ -501,7 +501,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         if (AndroidInstantRuntime.support(ipChange, "2135465265")) {
             return ((Boolean) ipChange.ipc$dispatch("2135465265", new Object[]{this, span, virtualLayoutManager, Integer.valueOf(i)})).booleanValue();
         }
-        AbstractC3291c mainOrientationHelper = virtualLayoutManager.getMainOrientationHelper();
+        c mainOrientationHelper = virtualLayoutManager.getMainOrientationHelper();
         if (virtualLayoutManager.getReverseLayout()) {
             if (span.getEndLine(mainOrientationHelper) != i) {
                 return true;
@@ -565,14 +565,14 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         }
     }
 
-    private int getMaxEnd(int i, AbstractC3291c abstractC3291c) {
+    private int getMaxEnd(int i, c cVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1638649759")) {
-            return ((Integer) ipChange.ipc$dispatch("1638649759", new Object[]{this, Integer.valueOf(i), abstractC3291c})).intValue();
+            return ((Integer) ipChange.ipc$dispatch("1638649759", new Object[]{this, Integer.valueOf(i), cVar})).intValue();
         }
-        int endLine = this.mSpans[0].getEndLine(i, abstractC3291c);
+        int endLine = this.mSpans[0].getEndLine(i, cVar);
         for (int i2 = 1; i2 < this.mNumLanes; i2++) {
-            int endLine2 = this.mSpans[i2].getEndLine(i, abstractC3291c);
+            int endLine2 = this.mSpans[i2].getEndLine(i, cVar);
             if (endLine2 > endLine) {
                 endLine = endLine2;
             }
@@ -580,14 +580,14 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         return endLine;
     }
 
-    private int getMaxStart(int i, AbstractC3291c abstractC3291c) {
+    private int getMaxStart(int i, c cVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "288149816")) {
-            return ((Integer) ipChange.ipc$dispatch("288149816", new Object[]{this, Integer.valueOf(i), abstractC3291c})).intValue();
+            return ((Integer) ipChange.ipc$dispatch("288149816", new Object[]{this, Integer.valueOf(i), cVar})).intValue();
         }
-        int startLine = this.mSpans[0].getStartLine(i, abstractC3291c);
+        int startLine = this.mSpans[0].getStartLine(i, cVar);
         for (int i2 = 1; i2 < this.mNumLanes; i2++) {
-            int startLine2 = this.mSpans[i2].getStartLine(i, abstractC3291c);
+            int startLine2 = this.mSpans[i2].getStartLine(i, cVar);
             if (startLine2 > startLine) {
                 startLine = startLine2;
             }
@@ -595,14 +595,14 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         return startLine;
     }
 
-    private int getMinEnd(int i, AbstractC3291c abstractC3291c) {
+    private int getMinEnd(int i, c cVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1363947149")) {
-            return ((Integer) ipChange.ipc$dispatch("1363947149", new Object[]{this, Integer.valueOf(i), abstractC3291c})).intValue();
+            return ((Integer) ipChange.ipc$dispatch("1363947149", new Object[]{this, Integer.valueOf(i), cVar})).intValue();
         }
-        int endLine = this.mSpans[0].getEndLine(i, abstractC3291c);
+        int endLine = this.mSpans[0].getEndLine(i, cVar);
         for (int i2 = 1; i2 < this.mNumLanes; i2++) {
-            int endLine2 = this.mSpans[i2].getEndLine(i, abstractC3291c);
+            int endLine2 = this.mSpans[i2].getEndLine(i, cVar);
             if (endLine2 < endLine) {
                 endLine = endLine2;
             }
@@ -610,14 +610,14 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         return endLine;
     }
 
-    private int getMinStart(int i, AbstractC3291c abstractC3291c) {
+    private int getMinStart(int i, c cVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1708053338")) {
-            return ((Integer) ipChange.ipc$dispatch("-1708053338", new Object[]{this, Integer.valueOf(i), abstractC3291c})).intValue();
+            return ((Integer) ipChange.ipc$dispatch("-1708053338", new Object[]{this, Integer.valueOf(i), cVar})).intValue();
         }
-        int startLine = this.mSpans[0].getStartLine(i, abstractC3291c);
+        int startLine = this.mSpans[0].getStartLine(i, cVar);
         for (int i2 = 1; i2 < this.mNumLanes; i2++) {
-            int startLine2 = this.mSpans[i2].getStartLine(i, abstractC3291c);
+            int startLine2 = this.mSpans[i2].getStartLine(i, cVar);
             if (startLine2 < startLine) {
                 startLine = startLine2;
             }
@@ -641,7 +641,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private com.youku.arch.v3.recyclerview.layouthelper.StaggeredGridLayoutHelper.Span getNextSpan(int r7, com.alibaba.android.vlayout.VirtualLayoutManager.C3287d r8, com.alibaba.android.vlayout.LayoutManagerHelper r9) {
+    private com.youku.arch.v3.recyclerview.layouthelper.StaggeredGridLayoutHelper.Span getNextSpan(int r7, com.alibaba.android.vlayout.VirtualLayoutManager.d r8, com.alibaba.android.vlayout.LayoutManagerHelper r9) {
         /*
             r6 = this;
             com.android.alibaba.ip.runtime.IpChange r0 = com.youku.arch.v3.recyclerview.layouthelper.StaggeredGridLayoutHelper.$ipChange
@@ -764,27 +764,27 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         return null;
     }
 
-    private void recycle(RecyclerView.Recycler recycler, VirtualLayoutManager.C3287d c3287d, Span span, int i, LayoutManagerHelper layoutManagerHelper) {
+    private void recycle(RecyclerView.Recycler recycler, VirtualLayoutManager.d dVar, Span span, int i, LayoutManagerHelper layoutManagerHelper) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1516962409")) {
-            ipChange.ipc$dispatch("1516962409", new Object[]{this, recycler, c3287d, span, Integer.valueOf(i), layoutManagerHelper});
+            ipChange.ipc$dispatch("1516962409", new Object[]{this, recycler, dVar, span, Integer.valueOf(i), layoutManagerHelper});
             return;
         }
-        AbstractC3291c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
-        if (c3287d.f() == -1) {
+        c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
+        if (dVar.f() == -1) {
             recycleFromEnd(recycler, Math.max(i, getMaxStart(span.getStartLine(mainOrientationHelper), mainOrientationHelper)) + (mainOrientationHelper.h() - mainOrientationHelper.k()), layoutManagerHelper);
         } else {
             recycleFromStart(recycler, Math.min(i, getMinEnd(span.getEndLine(mainOrientationHelper), mainOrientationHelper)) - (mainOrientationHelper.h() - mainOrientationHelper.k()), layoutManagerHelper);
         }
     }
 
-    private void recycleForPreLayout(RecyclerView.Recycler recycler, VirtualLayoutManager.C3287d c3287d, LayoutManagerHelper layoutManagerHelper) {
+    private void recycleForPreLayout(RecyclerView.Recycler recycler, VirtualLayoutManager.d dVar, LayoutManagerHelper layoutManagerHelper) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "408906306")) {
-            ipChange.ipc$dispatch("408906306", new Object[]{this, recycler, c3287d, layoutManagerHelper});
+            ipChange.ipc$dispatch("408906306", new Object[]{this, recycler, dVar, layoutManagerHelper});
             return;
         }
-        AbstractC3291c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
+        c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
         for (int size = this.preLayoutViewList.size() - 1; size >= 0; size--) {
             View view = this.preLayoutViewList.get(size);
             if (view != null && mainOrientationHelper.g(view) > mainOrientationHelper.i()) {
@@ -812,7 +812,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
             ipChange.ipc$dispatch("-1593922109", new Object[]{this, recycler, Integer.valueOf(i), layoutManagerHelper});
             return;
         }
-        AbstractC3291c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
+        c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
         for (int childCount = layoutManagerHelper.getChildCount() - 1; childCount >= 0; childCount--) {
             View childAt = layoutManagerHelper.getChildAt(childCount);
             if (childAt == null || mainOrientationHelper.g(childAt) <= i) {
@@ -834,7 +834,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
             ipChange.ipc$dispatch("304527516", new Object[]{this, recycler, Integer.valueOf(i), layoutManagerHelper});
             return;
         }
-        AbstractC3291c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
+        c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
         boolean z = true;
         while (layoutManagerHelper.getChildCount() > 0 && z && (childAt = layoutManagerHelper.getChildAt(0)) != null && mainOrientationHelper.d(childAt) < i) {
             Span findSpan = findSpan(((RecyclerView.LayoutParams) childAt.getLayoutParams()).getViewPosition(), childAt, true);
@@ -848,36 +848,36 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         }
     }
 
-    private void updateAllRemainingSpans(int i, int i2, AbstractC3291c abstractC3291c) {
+    private void updateAllRemainingSpans(int i, int i2, c cVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1910880849")) {
-            ipChange.ipc$dispatch("-1910880849", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), abstractC3291c});
+            ipChange.ipc$dispatch("-1910880849", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), cVar});
             return;
         }
         for (int i3 = 0; i3 < this.mNumLanes; i3++) {
             if (!this.mSpans[i3].mViews.isEmpty()) {
-                updateRemainingSpans(this.mSpans[i3], i, i2, abstractC3291c);
+                updateRemainingSpans(this.mSpans[i3], i, i2, cVar);
             }
         }
     }
 
-    private void updateRemainingSpans(Span span, int i, int i2, AbstractC3291c abstractC3291c) {
+    private void updateRemainingSpans(Span span, int i, int i2, c cVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "997038972")) {
-            ipChange.ipc$dispatch("997038972", new Object[]{this, span, Integer.valueOf(i), Integer.valueOf(i2), abstractC3291c});
+            ipChange.ipc$dispatch("997038972", new Object[]{this, span, Integer.valueOf(i), Integer.valueOf(i2), cVar});
             return;
         }
         int deletedSize = span.getDeletedSize();
         if (i == -1) {
-            if (span.getStartLine(abstractC3291c) + deletedSize < i2) {
+            if (span.getStartLine(cVar) + deletedSize < i2) {
                 this.mRemainingSpans.set(span.mIndex, false);
             }
-        } else if (span.getEndLine(abstractC3291c) - deletedSize > i2) {
+        } else if (span.getEndLine(cVar) - deletedSize > i2) {
             this.mRemainingSpans.set(span.mIndex, false);
         }
     }
 
-    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.a
     public void afterLayout(RecyclerView.Recycler recycler, RecyclerView.State state, int i, int i2, int i3, LayoutManagerHelper layoutManagerHelper) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-560108773")) {
@@ -892,7 +892,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         ViewCompat.postOnAnimation(layoutManagerHelper.getChildAt(0), this.checkForGapsRunnable);
     }
 
-    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.a
     public void beforeLayout(RecyclerView.Recycler recycler, RecyclerView.State state, LayoutManagerHelper layoutManagerHelper) {
         int contentHeight;
         int verticalPadding;
@@ -932,45 +932,45 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         }
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
-    public void checkAnchorInfo(RecyclerView.State state, VirtualLayoutManager.C3286c c3286c, LayoutManagerHelper layoutManagerHelper) {
+    @Override // com.alibaba.android.vlayout.a
+    public void checkAnchorInfo(RecyclerView.State state, VirtualLayoutManager.c cVar, LayoutManagerHelper layoutManagerHelper) {
         int i;
         IpChange ipChange = $ipChange;
         int i2 = 0;
         if (AndroidInstantRuntime.support(ipChange, "110763244")) {
-            ipChange.ipc$dispatch("110763244", new Object[]{this, state, c3286c, layoutManagerHelper});
+            ipChange.ipc$dispatch("110763244", new Object[]{this, state, cVar, layoutManagerHelper});
             return;
         }
-        super.checkAnchorInfo(state, c3286c, layoutManagerHelper);
+        super.checkAnchorInfo(state, cVar, layoutManagerHelper);
         ensureLanes();
         py1<Integer> range = getRange();
-        if (c3286c.c) {
-            if (c3286c.a < (range.d().intValue() + this.mNumLanes) - 1) {
-                c3286c.a = Math.min((range.d().intValue() + this.mNumLanes) - 1, range.e().intValue());
+        if (cVar.c) {
+            if (cVar.a < (range.d().intValue() + this.mNumLanes) - 1) {
+                cVar.a = Math.min((range.d().intValue() + this.mNumLanes) - 1, range.e().intValue());
             }
-        } else if (c3286c.a > range.e().intValue() - (this.mNumLanes - 1)) {
-            c3286c.a = Math.max(range.d().intValue(), range.e().intValue() - (this.mNumLanes - 1));
+        } else if (cVar.a > range.e().intValue() - (this.mNumLanes - 1)) {
+            cVar.a = Math.max(range.d().intValue(), range.e().intValue() - (this.mNumLanes - 1));
         }
-        View findViewByPosition = layoutManagerHelper.findViewByPosition(c3286c.a);
+        View findViewByPosition = layoutManagerHelper.findViewByPosition(cVar.a);
         int i3 = layoutManagerHelper.getOrientation() == 1 ? this.mVGap : this.mHGap;
-        AbstractC3291c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
+        c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
         if (findViewByPosition == null) {
             int length = this.mSpans.length;
             while (i2 < length) {
                 Span span = this.mSpans[i2];
                 span.clear();
-                span.setLine(c3286c.b);
+                span.setLine(cVar.b);
                 i2++;
             }
             return;
         }
         int i4 = Integer.MIN_VALUE;
-        int i5 = c3286c.c ? Integer.MIN_VALUE : Integer.MAX_VALUE;
+        int i5 = cVar.c ? Integer.MIN_VALUE : Integer.MAX_VALUE;
         int length2 = this.mSpans.length;
         for (int i6 = 0; i6 < length2; i6++) {
             Span span2 = this.mSpans[i6];
             if (!span2.mViews.isEmpty()) {
-                if (c3286c.c) {
+                if (cVar.c) {
                     i5 = Math.max(i5, layoutManagerHelper.getPosition((View) span2.mViews.get(span2.mViews.size() - 1)));
                 } else {
                     i5 = Math.min(i5, layoutManagerHelper.getPosition((View) span2.mViews.get(0)));
@@ -981,65 +981,65 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
             boolean z = i5 == range.d().intValue();
             View findViewByPosition2 = layoutManagerHelper.findViewByPosition(i5);
             if (findViewByPosition2 != null) {
-                if (c3286c.c) {
-                    c3286c.a = i5;
+                if (cVar.c) {
+                    cVar.a = i5;
                     int d = mainOrientationHelper.d(findViewByPosition);
-                    int i7 = c3286c.b;
+                    int i7 = cVar.b;
                     if (d < i7) {
                         int i8 = i7 - d;
                         if (z) {
                             i3 = 0;
                         }
                         i = i8 + i3;
-                        c3286c.b = mainOrientationHelper.d(findViewByPosition2) + i;
+                        cVar.b = mainOrientationHelper.d(findViewByPosition2) + i;
                     } else {
                         if (z) {
                             i3 = 0;
                         }
-                        c3286c.b = mainOrientationHelper.d(findViewByPosition2) + i3;
+                        cVar.b = mainOrientationHelper.d(findViewByPosition2) + i3;
                         i = i3;
                     }
                 } else {
-                    c3286c.a = i5;
+                    cVar.a = i5;
                     int g = mainOrientationHelper.g(findViewByPosition);
-                    int i9 = c3286c.b;
+                    int i9 = cVar.b;
                     if (g > i9) {
                         int i10 = i9 - g;
                         if (z) {
                             i3 = 0;
                         }
                         i = i10 - i3;
-                        c3286c.b = mainOrientationHelper.g(findViewByPosition2) + i;
+                        cVar.b = mainOrientationHelper.g(findViewByPosition2) + i;
                     } else {
                         if (z) {
                             i3 = 0;
                         }
                         int i11 = -i3;
-                        c3286c.b = mainOrientationHelper.g(findViewByPosition2) + i11;
+                        cVar.b = mainOrientationHelper.g(findViewByPosition2) + i11;
                         i4 = i11;
                     }
                 }
                 i4 = i;
             }
         } else {
-            this.anchorPosition = c3286c.a;
+            this.anchorPosition = cVar.a;
             this.mLayoutWithAnchor = true;
         }
         int length3 = this.mSpans.length;
         while (i2 < length3) {
-            this.mSpans[i2].cacheReferenceLineAndClear(layoutManagerHelper.getReverseLayout() ^ c3286c.c, i4, mainOrientationHelper);
+            this.mSpans[i2].cacheReferenceLineAndClear(layoutManagerHelper.getReverseLayout() ^ cVar.c, i4, mainOrientationHelper);
             i2++;
         }
     }
 
-    @Override // com.alibaba.android.vlayout.layout.AbstractC3303d, com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.layout.d, com.alibaba.android.vlayout.a
     public int computeAlignOffset(int i, boolean z, boolean z2, LayoutManagerHelper layoutManagerHelper) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1253465475")) {
             return ((Integer) ipChange.ipc$dispatch("-1253465475", new Object[]{this, Integer.valueOf(i), Boolean.valueOf(z), Boolean.valueOf(z2), layoutManagerHelper})).intValue();
         }
         boolean z3 = layoutManagerHelper.getOrientation() == 1;
-        AbstractC3291c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
+        c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
         View findViewByPosition = layoutManagerHelper.findViewByPosition(getRange().d().intValue() + i);
         if (findViewByPosition == null) {
             return 0;
@@ -1089,7 +1089,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         return AndroidInstantRuntime.support(ipChange, "591825625") ? ((Integer) ipChange.ipc$dispatch("591825625", new Object[]{this})).intValue() : this.mVGap;
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public boolean isRecyclable(int i, int i2, int i3, LayoutManagerHelper layoutManagerHelper, boolean z) {
         View findViewByPosition;
         IpChange ipChange = $ipChange;
@@ -1098,7 +1098,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         }
         boolean isRecyclable = super.isRecyclable(i, i2, i3, layoutManagerHelper, z);
         if (isRecyclable && (findViewByPosition = layoutManagerHelper.findViewByPosition(i)) != null) {
-            AbstractC3291c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
+            c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
             int viewPosition = ((RecyclerView.LayoutParams) findViewByPosition.getLayoutParams()).getViewPosition();
             if (layoutManagerHelper.getReverseLayout()) {
                 if (z) {
@@ -1128,10 +1128,10 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
     }
 
     @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper
-    public void layoutViews(RecyclerView.Recycler recycler, RecyclerView.State state, VirtualLayoutManager.C3287d c3287d, m81 m81Var, LayoutManagerHelper layoutManagerHelper) {
+    public void layoutViews(RecyclerView.Recycler recycler, RecyclerView.State state, VirtualLayoutManager.d dVar, m81 m81Var, LayoutManagerHelper layoutManagerHelper) {
         int g;
         int d;
-        VirtualLayoutManager.C3287d c3287d2;
+        VirtualLayoutManager.d dVar2;
         int i;
         int i2;
         int i3;
@@ -1150,36 +1150,36 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         boolean z2;
         Span span2;
         int i11;
-        AbstractC3291c abstractC3291c;
+        c cVar;
         int i12;
         RecyclerView.Recycler recycler2 = recycler;
         RecyclerView.State state2 = state;
-        VirtualLayoutManager.C3287d c3287d3 = c3287d;
+        VirtualLayoutManager.d dVar3 = dVar;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "318493983")) {
-            ipChange.ipc$dispatch("318493983", new Object[]{this, recycler2, state2, c3287d3, m81Var, layoutManagerHelper});
-        } else if (!isOutOfRange(c3287d.c())) {
+            ipChange.ipc$dispatch("318493983", new Object[]{this, recycler2, state2, dVar3, m81Var, layoutManagerHelper});
+        } else if (!isOutOfRange(dVar.c())) {
             ensureLanes();
             boolean z3 = layoutManagerHelper.getOrientation() == 1;
-            AbstractC3291c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
-            AbstractC3291c secondaryOrientationHelper = layoutManagerHelper.getSecondaryOrientationHelper();
+            c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
+            c secondaryOrientationHelper = layoutManagerHelper.getSecondaryOrientationHelper();
             boolean isEnableMarginOverLap = layoutManagerHelper.isEnableMarginOverLap();
             this.mRemainingSpans.set(0, this.mNumLanes, true);
-            if (c3287d.f() == 1) {
-                g = c3287d.g() + c3287d.b();
-                d = c3287d.d() + g + mainOrientationHelper.j();
+            if (dVar.f() == 1) {
+                g = dVar.g() + dVar.b();
+                d = dVar.d() + g + mainOrientationHelper.j();
             } else {
-                g = c3287d.g() - c3287d.b();
-                d = (g - c3287d.d()) - mainOrientationHelper.k();
+                g = dVar.g() - dVar.b();
+                d = (g - dVar.d()) - mainOrientationHelper.k();
             }
             int i13 = g;
             int i14 = d;
-            updateAllRemainingSpans(c3287d.f(), i14, mainOrientationHelper);
-            int g2 = c3287d.g();
+            updateAllRemainingSpans(dVar.f(), i14, mainOrientationHelper);
+            int g2 = dVar.g();
             this.preLayoutViewList.clear();
-            while (c3287d3.h(state2) && !this.mRemainingSpans.isEmpty() && !isOutOfRange(c3287d.c())) {
-                int c = c3287d.c();
-                View l = c3287d3.l(recycler2);
+            while (dVar3.h(state2) && !this.mRemainingSpans.isEmpty() && !isOutOfRange(dVar.c())) {
+                int c = dVar.c();
+                View l = dVar3.l(recycler2);
                 if (l == null) {
                     break;
                 }
@@ -1188,7 +1188,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
                 int i15 = i14;
                 int span3 = this.mLazySpanLookup.getSpan(viewPosition);
                 if (span3 == Integer.MIN_VALUE) {
-                    span = getNextSpan(g2, c3287d3, layoutManagerHelper);
+                    span = getNextSpan(g2, dVar3, layoutManagerHelper);
                     this.mLazySpanLookup.setSpan(viewPosition, span);
                 } else {
                     span = this.mSpans[span3];
@@ -1196,10 +1196,10 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
                 Span span4 = span;
                 boolean z4 = viewPosition - getRange().d().intValue() < this.mNumLanes;
                 boolean z5 = getRange().e().intValue() - viewPosition < this.mNumLanes;
-                if (c3287d.j()) {
+                if (dVar.j()) {
                     this.preLayoutViewList.add(l);
                 }
-                layoutManagerHelper.addChildView(c3287d3, l);
+                layoutManagerHelper.addChildView(dVar3, l);
                 if (z3) {
                     int childMeasureSpec = layoutManagerHelper.getChildMeasureSpec(this.mColLength, ((ViewGroup.MarginLayoutParams) layoutParams).width, false);
                     layoutManagerHelper.measureChildWithMargins(l, childMeasureSpec, layoutManagerHelper.getChildMeasureSpec(mainOrientationHelper.l(), Float.isNaN(layoutParams.a) ? ((ViewGroup.MarginLayoutParams) layoutParams).height : (int) ((View.MeasureSpec.getSize(childMeasureSpec) / layoutParams.a) + 0.5f), true));
@@ -1211,7 +1211,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
                     z = true;
                     layoutManagerHelper.measureChildWithMargins(l, layoutManagerHelper.getChildMeasureSpec(l2, size, true), childMeasureSpec2);
                 }
-                if (c3287d.f() == z) {
+                if (dVar.f() == z) {
                     e = span4.getEndLine(g2, mainOrientationHelper);
                     if (z4) {
                         i12 = computeStartSpace(layoutManagerHelper, z3, z, isEnableMarginOverLap);
@@ -1237,7 +1237,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
                     i6 = i16;
                     e = i16 - mainOrientationHelper.e(l);
                 }
-                if (c3287d.f() == 1) {
+                if (dVar.f() == 1) {
                     span4.appendToSpan(l, mainOrientationHelper);
                 } else {
                     span4.prependToSpan(l, mainOrientationHelper);
@@ -1267,7 +1267,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
                     layoutChildWithMargin(l, i20, e, f, i6, layoutManagerHelper);
                     i11 = i15;
                     span2 = span4;
-                    abstractC3291c = mainOrientationHelper;
+                    cVar = mainOrientationHelper;
                 } else {
                     view = l;
                     i10 = g2;
@@ -1276,23 +1276,23 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
                     span2 = span4;
                     int i22 = i6;
                     i11 = i15;
-                    abstractC3291c = mainOrientationHelper;
+                    cVar = mainOrientationHelper;
                     layoutChildWithMargin(view, i21, i20, i22, f, layoutManagerHelper);
                 }
-                updateRemainingSpans(span2, c3287d.f(), i11, abstractC3291c);
-                recycle(recycler, c3287d, span2, i13, layoutManagerHelper);
+                updateRemainingSpans(span2, dVar.f(), i11, cVar);
+                recycle(recycler, dVar, span2, i13, layoutManagerHelper);
                 handleStateOnResult(m81Var, view);
                 recycler2 = recycler;
-                c3287d3 = c3287d;
+                dVar3 = dVar;
                 i14 = i11;
-                mainOrientationHelper = abstractC3291c;
+                mainOrientationHelper = cVar;
                 isEnableMarginOverLap = z2;
                 g2 = i10;
                 state2 = state;
             }
-            AbstractC3291c abstractC3291c2 = mainOrientationHelper;
-            if (isOutOfRange(c3287d.c())) {
-                if (c3287d.f() == -1) {
+            c cVar2 = mainOrientationHelper;
+            if (isOutOfRange(dVar.c())) {
+                if (dVar.f() == -1) {
                     int length = this.mSpans.length;
                     for (int i23 = 0; i23 < length; i23++) {
                         Span span5 = this.mSpans[i23];
@@ -1312,16 +1312,16 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
                     }
                 }
             }
-            if (c3287d.f() == -1) {
-                if (isOutOfRange(c3287d.c())) {
-                    c3287d2 = c3287d;
+            if (dVar.f() == -1) {
+                if (isOutOfRange(dVar.c())) {
+                    dVar2 = dVar;
                 } else {
-                    c3287d2 = c3287d;
-                    if (c3287d2.h(state)) {
-                        m81Var.a = c3287d.g() - getMaxStart(abstractC3291c2.k(), abstractC3291c2);
+                    dVar2 = dVar;
+                    if (dVar2.h(state)) {
+                        m81Var.a = dVar.g() - getMaxStart(cVar2.k(), cVar2);
                     }
                 }
-                int g3 = c3287d.g() - getMinStart(abstractC3291c2.i(), abstractC3291c2);
+                int g3 = dVar.g() - getMinStart(cVar2.i(), cVar2);
                 if (z3) {
                     i3 = this.mMarginTop;
                     i4 = this.mPaddingTop;
@@ -1331,11 +1331,11 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
                 }
                 m81Var.a = g3 + i3 + i4;
             } else {
-                c3287d2 = c3287d;
-                if (!isOutOfRange(c3287d.c()) && c3287d2.h(state)) {
-                    m81Var.a = getMinEnd(abstractC3291c2.i(), abstractC3291c2) - c3287d.g();
+                dVar2 = dVar;
+                if (!isOutOfRange(dVar.c()) && dVar2.h(state)) {
+                    m81Var.a = getMinEnd(cVar2.i(), cVar2) - dVar.g();
                 } else {
-                    int maxEnd = getMaxEnd(abstractC3291c2.i(), abstractC3291c2) - c3287d.g();
+                    int maxEnd = getMaxEnd(cVar2.i(), cVar2) - dVar.g();
                     if (z3) {
                         i = this.mMarginBottom;
                         i2 = this.mPaddingBottom;
@@ -1346,7 +1346,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
                     m81Var.a = maxEnd + i + i2;
                 }
             }
-            recycleForPreLayout(recycler, c3287d2, layoutManagerHelper);
+            recycleForPreLayout(recycler, dVar2, layoutManagerHelper);
         }
     }
 
@@ -1363,7 +1363,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         this.mLayoutManager = null;
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public void onItemsChanged(LayoutManagerHelper layoutManagerHelper) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "245787269")) {
@@ -1371,7 +1371,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         }
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public void onOffsetChildrenHorizontal(int i, LayoutManagerHelper layoutManagerHelper) {
         Span[] spanArr;
         IpChange ipChange = $ipChange;
@@ -1389,7 +1389,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         }
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public void onOffsetChildrenVertical(int i, LayoutManagerHelper layoutManagerHelper) {
         Span[] spanArr;
         IpChange ipChange = $ipChange;
@@ -1407,16 +1407,16 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         }
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
-    public void onRefreshLayout(RecyclerView.State state, VirtualLayoutManager.C3286c c3286c, LayoutManagerHelper layoutManagerHelper) {
+    @Override // com.alibaba.android.vlayout.a
+    public void onRefreshLayout(RecyclerView.State state, VirtualLayoutManager.c cVar, LayoutManagerHelper layoutManagerHelper) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1836652239")) {
-            ipChange.ipc$dispatch("-1836652239", new Object[]{this, state, c3286c, layoutManagerHelper});
+            ipChange.ipc$dispatch("-1836652239", new Object[]{this, state, cVar, layoutManagerHelper});
             return;
         }
-        super.onRefreshLayout(state, c3286c, layoutManagerHelper);
+        super.onRefreshLayout(state, cVar, layoutManagerHelper);
         ensureLanes();
-        if (isOutOfRange(c3286c.a)) {
+        if (isOutOfRange(cVar.a)) {
             int length = this.mSpans.length;
             for (int i = 0; i < length; i++) {
                 this.mSpans[i].clear();
@@ -1424,7 +1424,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         }
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public void onRestoreInstanceState(Bundle bundle) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-702241421")) {
@@ -1435,7 +1435,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         this.mLazySpanLookup.mData = bundle.getIntArray(LOOKUP_BUNDLE_KEY);
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public void onSaveState(Bundle bundle) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1975126381")) {
@@ -1446,7 +1446,7 @@ public class StaggeredGridLayoutHelper extends BaseLayoutHelper {
         bundle.putIntArray(LOOKUP_BUNDLE_KEY, this.mLazySpanLookup.mData);
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public void onScrollStateChanged(int i, int i2, int i3, LayoutManagerHelper layoutManagerHelper) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "479499612")) {

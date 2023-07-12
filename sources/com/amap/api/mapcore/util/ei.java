@@ -16,19 +16,18 @@ public class ei {
         String format = String.format(locale, "%05d", Integer.valueOf(nextInt));
         int nextInt2 = random.nextInt(10);
         int nextInt3 = random.nextInt(100);
-        String a2 = new C4530a(a, nextInt3).a(nextInt2, format);
+        String a2 = new a(a, nextInt3).a(nextInt2, format);
         return a2 + String.format(locale, "%01d", Integer.valueOf(nextInt2)) + String.format(locale, TimeModel.ZERO_LEADING_NUMBER_FORMAT, Integer.valueOf(nextInt3));
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.ei$a */
     /* loaded from: classes10.dex */
-    static class C4530a {
+    static class a {
         private String a;
         private int b;
         private int c;
 
-        public C4530a(String str, int i) {
+        public a(String str, int i) {
             this.b = 1103515245;
             this.c = 12345;
             this.a = a(str, i, str.length());
@@ -52,7 +51,7 @@ public class ei {
             return (int) (((i * this.b) + this.c) & 2147483647L);
         }
 
-        public C4530a() {
+        public a() {
             this(11);
         }
 
@@ -71,7 +70,7 @@ public class ei {
             return stringBuffer.toString();
         }
 
-        public C4530a(int i) {
+        public a(int i) {
             this("ABCDEFGHIJKLMNOPQRSTUVWXYZ", i);
         }
 

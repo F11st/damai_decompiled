@@ -3,7 +3,7 @@ package cn.damai.player;
 import android.app.Activity;
 import android.content.Context;
 import android.text.TextUtils;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.imagebrowse.bean.VideoInfo;
 import cn.damai.network.NetworkType;
@@ -80,7 +80,7 @@ public class PlayerEventListener extends YKEventListener {
             if (!TextUtils.isEmpty(str)) {
                 hashMap.put("play_session_id", str);
             }
-            C0529c e = C0529c.e();
+            c e = c.e();
             String str2 = this.e;
             e.D(str2, "page_" + this.e + "_playend", "playend", "", hashMap, 12003);
         }
@@ -107,7 +107,7 @@ public class PlayerEventListener extends YKEventListener {
             if (this.b != null && this.b.b() != null) {
                 hashMap.put("play_session_id", this.b.b().getSessionId());
             }
-            C0529c e = C0529c.e();
+            c e = c.e();
             String str = this.e;
             e.D(str, "page_" + this.e + "_playstart", "playstart", "", hashMap, 12002);
         }

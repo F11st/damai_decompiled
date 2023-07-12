@@ -8,7 +8,7 @@ import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class MiPushMessage implements PushMessageHandler.InterfaceC7557a {
+public class MiPushMessage implements PushMessageHandler.a {
     private static final String KEY_ALIAS = "alias";
     private static final String KEY_CATEGORY = "category";
     private static final String KEY_CONTENT = "content";

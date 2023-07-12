@@ -1,8 +1,6 @@
 package tb;
 
 import android.app.Application;
-import com.taobao.android.dinamic.C6312a;
-import com.taobao.android.dinamic.C6313b;
 import com.taobao.android.dinamic.dinamic.DinamicAppMonitor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -31,9 +29,9 @@ public class o80 {
             declaredField.setAccessible(true);
             return (Application) declaredField.get(declaredMethod.invoke(null, new Object[0]));
         } catch (Exception unused) {
-            DinamicAppMonitor a2 = C6312a.h().a();
+            DinamicAppMonitor a2 = com.taobao.android.dinamic.a.h().a();
             if (a2 != null) {
-                a2.counter_commit(C6313b.TAG, "getApplication", 1.0d);
+                a2.counter_commit(com.taobao.android.dinamic.b.TAG, "getApplication", 1.0d);
             }
             return null;
         }

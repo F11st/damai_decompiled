@@ -14,9 +14,9 @@ import com.alibaba.fastjson.JSONObject;
 import com.taobao.analysis.v3.FalcoContainerSpan;
 import com.taobao.android.dinamic.R$id;
 import com.taobao.android.dinamic.R$layout;
-import com.taobao.android.dinamicx.C6368e;
-import com.taobao.android.dinamicx.C6384k;
 import com.taobao.android.dinamicx.DXRuntimeContext;
+import com.taobao.android.dinamicx.e;
+import com.taobao.android.dinamicx.k;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import com.taobao.android.dinamicx.view.DXNativeFrameLayout;
 import com.taobao.android.dinamicx.widget.DXRecyclerLayout;
@@ -44,7 +44,7 @@ public class RecyclerAdapter extends BaseStickyAdapter {
     public static final String LOADMORE_TITLE = "load_more_title";
     public static final String TAG = "RecyclerAdapter";
     public static final int TYPE_FOOTER_VIEW = -1;
-    protected C6384k c;
+    protected k c;
     protected Context d;
     protected zx f;
     protected DXRecyclerLayout g;
@@ -77,10 +77,9 @@ public class RecyclerAdapter extends BaseStickyAdapter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.RecyclerAdapter$a */
     /* loaded from: classes12.dex */
-    class View$OnClickListenerC6507a implements View.OnClickListener {
-        View$OnClickListenerC6507a() {
+    class a implements View.OnClickListener {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -92,9 +91,9 @@ public class RecyclerAdapter extends BaseStickyAdapter {
     public RecyclerAdapter(Context context, boolean z, boolean z2) {
         this.d = context;
         this.j = z;
-        View a = e10.a(context, R$layout.dx_scrollable_load_more_bottom);
-        this.l = a;
-        this.k = (TextView) a.findViewById(R$id.scrollable_loadmore_tv);
+        View a2 = e10.a(context, R$layout.dx_scrollable_load_more_bottom);
+        this.l = a2;
+        this.k = (TextView) a2.findViewById(R$id.scrollable_loadmore_tv);
         this.n = (ProgressBar) this.l.findViewById(R$id.scrollable_loadmore_progressbar);
         this.w = z2;
     }
@@ -281,11 +280,11 @@ public class RecyclerAdapter extends BaseStickyAdapter {
                         th = th3;
                         falcoContainerSpan2 = falcoContainerSpan3;
                         try {
-                            C6368e c6368e = new C6368e(WXBasicComponentType.RECYCLER);
-                            C6368e.C6369a c6369a = new C6368e.C6369a("DX_RECYCLER", "DX_RECYCLER_BIND", C6368e.DX_ERROR_CODE_RECYCLER_LAYOUT_ON_BIND);
-                            c6369a.e = ry.a(th);
-                            c6368e.c.add(c6369a);
-                            DXAppMonitor.n(c6368e);
+                            e eVar = new e(WXBasicComponentType.RECYCLER);
+                            e.a aVar = new e.a("DX_RECYCLER", "DX_RECYCLER_BIND", e.DX_ERROR_CODE_RECYCLER_LAYOUT_ON_BIND);
+                            aVar.e = ry.a(th);
+                            eVar.c.add(aVar);
+                            DXAppMonitor.n(eVar);
                             ry.b(th);
                             zz.o(falcoContainerSpan2, "onbindViewholder 发生 exception" + i);
                             n(i);
@@ -300,7 +299,7 @@ public class RecyclerAdapter extends BaseStickyAdapter {
                             i2.updateRefreshType(0);
                         }
                     }
-                    this.g.trackError(C6368e.DX_ERROR_CODE_RECYCLER_LAYOUT_ON_BINDHOLDER, "onbindViewholder返回的view是空");
+                    this.g.trackError(e.DX_ERROR_CODE_RECYCLER_LAYOUT_ON_BINDHOLDER, "onbindViewholder返回的view是空");
                     falcoContainerSpan2 = falcoContainerSpan3;
                     zz.o(falcoContainerSpan2, "onbindViewholder返回的view是空: " + i);
                     zz.p(falcoContainerSpan2, "onBindEnd", System.currentTimeMillis());
@@ -322,9 +321,9 @@ public class RecyclerAdapter extends BaseStickyAdapter {
     @NonNull
     public DXRuntimeContext e(DXWidgetNode dXWidgetNode) {
         DXRuntimeContext cloneWithWidgetNode = dXWidgetNode.getDXRuntimeContext().cloneWithWidgetNode(dXWidgetNode);
-        C6368e c6368e = new C6368e(cloneWithWidgetNode.getBizType());
-        c6368e.b = cloneWithWidgetNode.getDxTemplateItem();
-        cloneWithWidgetNode.setDxError(c6368e);
+        e eVar = new e(cloneWithWidgetNode.getBizType());
+        eVar.b = cloneWithWidgetNode.getDxTemplateItem();
+        cloneWithWidgetNode.setDxError(eVar);
         return cloneWithWidgetNode;
     }
 
@@ -488,7 +487,7 @@ public class RecyclerAdapter extends BaseStickyAdapter {
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View dXNativeFrameLayout;
-        C6384k c6384k;
+        k kVar;
         if (i == -1) {
             RelativeLayout relativeLayout = new RelativeLayout(this.d);
             DXAbsOnLoadMoreView dXAbsOnLoadMoreView = this.m;
@@ -505,11 +504,11 @@ public class RecyclerAdapter extends BaseStickyAdapter {
             layoutParams.setFullSpan(true);
             relativeLayout.setLayoutParams(layoutParams);
             ItemViewHolder itemViewHolder = new ItemViewHolder(relativeLayout);
-            relativeLayout.setOnClickListener(new View$OnClickListenerC6507a());
+            relativeLayout.setOnClickListener(new a());
             return itemViewHolder;
         }
-        if (this.g.isEnableVideoControl() && (c6384k = this.c) != null) {
-            dXNativeFrameLayout = c6384k.e(this.d);
+        if (this.g.isEnableVideoControl() && (kVar = this.c) != null) {
+            dXNativeFrameLayout = kVar.e(this.d);
         } else {
             dXNativeFrameLayout = new DXNativeFrameLayout(this.d);
         }
@@ -602,7 +601,7 @@ public class RecyclerAdapter extends BaseStickyAdapter {
         if (dXRecyclerLayout == null || this.c != null) {
             return;
         }
-        this.c = new C6384k(dXRecyclerLayout.getDXRuntimeContext().getEngineContext(), 3, UUID.randomUUID().toString(), dXRecyclerLayout.isEnableVideoControl());
+        this.c = new k(dXRecyclerLayout.getDXRuntimeContext().getEngineContext(), 3, UUID.randomUUID().toString(), dXRecyclerLayout.isEnableVideoControl());
         if (dXRecyclerLayout.getDXRuntimeContext().getEngineContext().b() != null) {
             dXRecyclerLayout.getDXRuntimeContext().getEngineContext().b().c();
         }

@@ -1,7 +1,7 @@
 package com.youku.middlewareservice.provider;
 
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -11,7 +11,7 @@ public class LogProviderProxy {
     public static void enableLog(boolean z) {
         try {
             if (sProxy == null) {
-                sProxy = (LogProvider) C8883a.j("com.youku.middlewareservice_impl.provider.LogProviderImpl").b().f();
+                sProxy = (LogProvider) a.j("com.youku.middlewareservice_impl.provider.LogProviderImpl").b().f();
             }
             sProxy.enableLog(z);
         } catch (Throwable th) {
@@ -21,7 +21,7 @@ public class LogProviderProxy {
 
     public static LogProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (LogProvider) C8883a.j("com.youku.middlewareservice_impl.provider.LogProviderImpl").b().f();
+            sProxy = (LogProvider) a.j("com.youku.middlewareservice_impl.provider.LogProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -39,7 +39,7 @@ public class LogProviderProxy {
     public static void logd(String str, String str2) {
         try {
             if (sProxy == null) {
-                sProxy = (LogProvider) C8883a.j("com.youku.middlewareservice_impl.provider.LogProviderImpl").b().f();
+                sProxy = (LogProvider) a.j("com.youku.middlewareservice_impl.provider.LogProviderImpl").b().f();
             }
             sProxy.logd(str, str2);
         } catch (Throwable th) {
@@ -50,7 +50,7 @@ public class LogProviderProxy {
     public static void loge(String str, String str2) {
         try {
             if (sProxy == null) {
-                sProxy = (LogProvider) C8883a.j("com.youku.middlewareservice_impl.provider.LogProviderImpl").b().f();
+                sProxy = (LogProvider) a.j("com.youku.middlewareservice_impl.provider.LogProviderImpl").b().f();
             }
             sProxy.loge(str, str2);
         } catch (Throwable th) {
@@ -61,7 +61,7 @@ public class LogProviderProxy {
     public static void logi(String str, String str2) {
         try {
             if (sProxy == null) {
-                sProxy = (LogProvider) C8883a.j("com.youku.middlewareservice_impl.provider.LogProviderImpl").b().f();
+                sProxy = (LogProvider) a.j("com.youku.middlewareservice_impl.provider.LogProviderImpl").b().f();
             }
             sProxy.logi(str, str2);
         } catch (Throwable th) {
@@ -72,7 +72,7 @@ public class LogProviderProxy {
     public static void logv(String str, String str2) {
         try {
             if (sProxy == null) {
-                sProxy = (LogProvider) C8883a.j("com.youku.middlewareservice_impl.provider.LogProviderImpl").b().f();
+                sProxy = (LogProvider) a.j("com.youku.middlewareservice_impl.provider.LogProviderImpl").b().f();
             }
             sProxy.logv(str, str2);
         } catch (Throwable th) {
@@ -83,7 +83,7 @@ public class LogProviderProxy {
     public static void logw(String str, String str2) {
         try {
             if (sProxy == null) {
-                sProxy = (LogProvider) C8883a.j("com.youku.middlewareservice_impl.provider.LogProviderImpl").b().f();
+                sProxy = (LogProvider) a.j("com.youku.middlewareservice_impl.provider.LogProviderImpl").b().f();
             }
             sProxy.logw(str, str2);
         } catch (Throwable th) {
@@ -94,7 +94,7 @@ public class LogProviderProxy {
     public static void loge(String str, String str2, Throwable th) {
         try {
             if (sProxy == null) {
-                sProxy = (LogProvider) C8883a.j("com.youku.middlewareservice_impl.provider.LogProviderImpl").b().f();
+                sProxy = (LogProvider) a.j("com.youku.middlewareservice_impl.provider.LogProviderImpl").b().f();
             }
             sProxy.loge(str, str2, th);
         } catch (Throwable th2) {

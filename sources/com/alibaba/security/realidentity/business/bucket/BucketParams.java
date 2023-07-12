@@ -3,7 +3,7 @@ package com.alibaba.security.realidentity.business.bucket;
 import android.content.Context;
 import android.os.Bundle;
 import com.alibaba.security.realidentity.RPResult;
-import com.alibaba.security.realidentity.business.C3873c;
+import com.alibaba.security.realidentity.business.c;
 import com.alibaba.security.realidentity.http.base.BusinessHttpWrapper;
 import java.io.Serializable;
 
@@ -46,9 +46,8 @@ public abstract class BucketParams implements Serializable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.security.realidentity.business.bucket.BucketParams$a */
     /* loaded from: classes8.dex */
-    public interface InterfaceC3872a {
+    public interface a {
         void a();
     }
 
@@ -59,13 +58,13 @@ public abstract class BucketParams implements Serializable {
         errorCode.errorCode = String.valueOf(-10000);
     }
 
-    public boolean dispatch(C3873c c3873c) {
-        this.mVerifyToken = c3873c.b();
-        onDelivering(c3873c);
+    public boolean dispatch(c cVar) {
+        this.mVerifyToken = cVar.b();
+        onDelivering(cVar);
         return true;
     }
 
-    public boolean finishTask(Context context, boolean z, InterfaceC3872a interfaceC3872a, Object... objArr) {
+    public boolean finishTask(Context context, boolean z, a aVar, Object... objArr) {
         return true;
     }
 
@@ -85,7 +84,7 @@ public abstract class BucketParams implements Serializable {
         return this.mVerifyToken;
     }
 
-    public abstract boolean onDelivering(C3873c c3873c);
+    public abstract boolean onDelivering(c cVar);
 
     public abstract ErrorCode parseErrorCode();
 

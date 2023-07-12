@@ -2,8 +2,8 @@ package com.taobao.monitor.adapter;
 
 import android.os.Looper;
 import android.os.SystemClock;
-import com.taobao.monitor.procedure.C6817d;
 import com.taobao.monitor.procedure.IProcedure;
+import com.taobao.monitor.procedure.d;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -15,14 +15,13 @@ import tb.wu1;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class TBAPMAdapterSubTaskManager {
-    private static Map<String, C6755a> a = new HashMap();
+    private static Map<String, a> a = new HashMap();
     private static Map<String, IProcedure> b = new HashMap();
     private static boolean c = true;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.adapter.TBAPMAdapterSubTaskManager$a */
     /* loaded from: classes11.dex */
-    private static class C6755a {
+    private static class a {
         private long a;
         private long b;
         private long c;
@@ -30,7 +29,7 @@ public class TBAPMAdapterSubTaskManager {
         private boolean e;
         private String f;
 
-        private C6755a() {
+        private a() {
         }
     }
 
@@ -46,16 +45,16 @@ public class TBAPMAdapterSubTaskManager {
             public void run() {
                 if (!TBAPMAdapterSubTaskManager.c) {
                     IProcedure iProcedure = (IProcedure) TBAPMAdapterSubTaskManager.b.get(str);
-                    C6755a c6755a = (C6755a) TBAPMAdapterSubTaskManager.a.get(str);
-                    if (iProcedure == null && c6755a != null) {
-                        C6817d f = new C6817d.C6819b().g(false).k(false).i(false).h(wu1.b.getLauncherProcedure()).f();
+                    a aVar = (a) TBAPMAdapterSubTaskManager.a.get(str);
+                    if (iProcedure == null && aVar != null) {
+                        d f = new d.b().g(false).k(false).i(false).h(wu1.b.getLauncherProcedure()).f();
                         tu1 tu1Var = tu1.b;
                         iProcedure = tu1Var.createProcedure("/" + str, f);
                         iProcedure.begin();
-                        iProcedure.stage("taskStart", c6755a.a);
-                        iProcedure.stage("cpuStartTime", c6755a.c);
-                        iProcedure.addProperty("isMainThread", Boolean.valueOf(c6755a.e));
-                        iProcedure.addProperty("threadName", c6755a.f);
+                        iProcedure.stage("taskStart", aVar.a);
+                        iProcedure.stage("cpuStartTime", aVar.c);
+                        iProcedure.addProperty("isMainThread", Boolean.valueOf(aVar.e));
+                        iProcedure.addProperty("threadName", aVar.f);
                         TBAPMAdapterSubTaskManager.a.remove(str);
                     }
                     if (iProcedure != null) {
@@ -65,9 +64,9 @@ public class TBAPMAdapterSubTaskManager {
                         TBAPMAdapterSubTaskManager.b.remove(str);
                     }
                 } else if (TBAPMAdapterSubTaskManager.a.keySet().contains(str)) {
-                    C6755a c6755a2 = (C6755a) TBAPMAdapterSubTaskManager.a.get(str);
-                    c6755a2.b = a2;
-                    c6755a2.d = currentThreadTimeMillis;
+                    a aVar2 = (a) TBAPMAdapterSubTaskManager.a.get(str);
+                    aVar2.b = a2;
+                    aVar2.d = currentThreadTimeMillis;
                 }
             }
         });
@@ -85,15 +84,15 @@ public class TBAPMAdapterSubTaskManager {
                     if (TBAPMAdapterSubTaskManager.a.keySet().contains(str)) {
                         return;
                     }
-                    C6755a c6755a = new C6755a();
-                    c6755a.a = a2;
-                    c6755a.c = currentThreadTimeMillis;
-                    c6755a.e = z;
-                    c6755a.f = name;
-                    TBAPMAdapterSubTaskManager.a.put(str, c6755a);
+                    a aVar = new a();
+                    aVar.a = a2;
+                    aVar.c = currentThreadTimeMillis;
+                    aVar.e = z;
+                    aVar.f = name;
+                    TBAPMAdapterSubTaskManager.a.put(str, aVar);
                     return;
                 }
-                C6817d f = new C6817d.C6819b().g(false).k(false).i(false).h(wu1.b.getLauncherProcedure()).f();
+                d f = new d.b().g(false).k(false).i(false).h(wu1.b.getLauncherProcedure()).f();
                 tu1 tu1Var = tu1.b;
                 IProcedure createProcedure = tu1Var.createProcedure("/" + str, f);
                 TBAPMAdapterSubTaskManager.b.put(str, createProcedure);
@@ -115,18 +114,18 @@ public class TBAPMAdapterSubTaskManager {
                 while (it.hasNext()) {
                     Map.Entry entry = (Map.Entry) it.next();
                     String str = (String) entry.getKey();
-                    C6755a c6755a = (C6755a) entry.getValue();
-                    if (c6755a.b != 0) {
-                        C6817d f = new C6817d.C6819b().g(false).k(false).i(false).h(wu1.b.getLauncherProcedure()).f();
+                    a aVar = (a) entry.getValue();
+                    if (aVar.b != 0) {
+                        d f = new d.b().g(false).k(false).i(false).h(wu1.b.getLauncherProcedure()).f();
                         tu1 tu1Var = tu1.b;
                         IProcedure createProcedure = tu1Var.createProcedure("/" + str, f);
                         createProcedure.begin();
-                        createProcedure.stage("taskStart", c6755a.a);
-                        createProcedure.stage("cpuStartTime", c6755a.c);
-                        createProcedure.addProperty("isMainThread", Boolean.valueOf(c6755a.e));
-                        createProcedure.addProperty("threadName", c6755a.f);
-                        createProcedure.stage("taskEnd", c6755a.b);
-                        createProcedure.stage("cpuEndTime", c6755a.d);
+                        createProcedure.stage("taskStart", aVar.a);
+                        createProcedure.stage("cpuStartTime", aVar.c);
+                        createProcedure.addProperty("isMainThread", Boolean.valueOf(aVar.e));
+                        createProcedure.addProperty("threadName", aVar.f);
+                        createProcedure.stage("taskEnd", aVar.b);
+                        createProcedure.stage("cpuEndTime", aVar.d);
                         createProcedure.end();
                         it.remove();
                     }

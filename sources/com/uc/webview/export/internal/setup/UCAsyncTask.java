@@ -11,7 +11,6 @@ import com.uc.webview.export.annotations.Reflection;
 import com.uc.webview.export.cyclone.UCLogger;
 import com.uc.webview.export.extension.UCCore;
 import com.uc.webview.export.internal.setup.UCAsyncTask;
-import com.uc.webview.export.internal.uc.startup.C7302b;
 import com.uc.webview.export.internal.utility.Log;
 import java.lang.ref.WeakReference;
 import java.util.Map;
@@ -46,10 +45,9 @@ public class UCAsyncTask<RETURN_TYPE extends UCAsyncTask, CALLBACK_TYPE extends 
     private Vector<Pair<String, Pair<Long, Long>>> q;
 
     /* compiled from: Taobao */
-    /* renamed from: com.uc.webview.export.internal.setup.UCAsyncTask$a */
     /* loaded from: classes11.dex */
-    public class C7251a<CB_TYPE extends UCAsyncTask<CB_TYPE, CB_TYPE>> implements ValueCallback<CB_TYPE> {
-        public C7251a() {
+    public class a<CB_TYPE extends UCAsyncTask<CB_TYPE, CB_TYPE>> implements ValueCallback<CB_TYPE> {
+        public a() {
         }
 
         @Override // android.webkit.ValueCallback
@@ -59,10 +57,9 @@ public class UCAsyncTask<RETURN_TYPE extends UCAsyncTask, CALLBACK_TYPE extends 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.uc.webview.export.internal.setup.UCAsyncTask$b */
     /* loaded from: classes11.dex */
-    public class C7252b<CB_TYPE extends UCAsyncTask<CB_TYPE, CB_TYPE>> implements ValueCallback<CB_TYPE> {
-        public C7252b() {
+    public class b<CB_TYPE extends UCAsyncTask<CB_TYPE, CB_TYPE>> implements ValueCallback<CB_TYPE> {
+        public b() {
         }
 
         @Override // android.webkit.ValueCallback
@@ -241,12 +238,12 @@ public class UCAsyncTask<RETURN_TYPE extends UCAsyncTask, CALLBACK_TYPE extends 
     }
 
     public boolean isPaused() {
-        boolean a;
-        UCAsyncTask b = b();
-        synchronized (b.i) {
-            a = b.i.a();
+        boolean a2;
+        UCAsyncTask b2 = b();
+        synchronized (b2.i) {
+            a2 = b2.i.a();
         }
-        return a;
+        return a2;
     }
 
     public boolean isStopped() {
@@ -276,10 +273,10 @@ public class UCAsyncTask<RETURN_TYPE extends UCAsyncTask, CALLBACK_TYPE extends 
     }
 
     public RETURN_TYPE pause() {
-        UCAsyncTask b = b();
-        synchronized (b.i) {
-            if (!b.i.a()) {
-                b.g = true;
+        UCAsyncTask b2 = b();
+        synchronized (b2.i) {
+            if (!b2.i.a()) {
+                b2.g = true;
             }
         }
         return this;
@@ -299,11 +296,11 @@ public class UCAsyncTask<RETURN_TYPE extends UCAsyncTask, CALLBACK_TYPE extends 
     }
 
     public RETURN_TYPE resume() {
-        UCAsyncTask b = b();
-        synchronized (b.i) {
-            b.g = false;
-            if (b.i.a()) {
-                b.i.a(0, null);
+        UCAsyncTask b2 = b();
+        synchronized (b2.i) {
+            b2.g = false;
+            if (b2.i.a()) {
+                b2.i.a(0, null);
             }
         }
         return this;
@@ -368,7 +365,7 @@ public class UCAsyncTask<RETURN_TYPE extends UCAsyncTask, CALLBACK_TYPE extends 
             android.os.HandlerThread r1 = r4.j     // Catch: java.lang.Throwable -> Lc3
             r2 = 225(0xe1, float:3.15E-43)
             if (r1 != 0) goto Lb7
-            com.uc.webview.export.internal.uc.startup.C7302b.a(r2)     // Catch: java.lang.Throwable -> Lc3
+            com.uc.webview.export.internal.uc.startup.b.a(r2)     // Catch: java.lang.Throwable -> Lc3
             android.os.Looper r1 = android.os.Looper.myLooper()     // Catch: java.lang.Throwable -> Lc3
             android.os.Looper r2 = android.os.Looper.getMainLooper()     // Catch: java.lang.Throwable -> Lc3
             if (r1 == r2) goto L8b
@@ -431,7 +428,7 @@ public class UCAsyncTask<RETURN_TYPE extends UCAsyncTask, CALLBACK_TYPE extends 
             r1.start()     // Catch: java.lang.Throwable -> Lc3
             goto Lc1
         Lb7:
-            com.uc.webview.export.internal.uc.startup.C7302b.a(r2)     // Catch: java.lang.Throwable -> Lc3
+            com.uc.webview.export.internal.uc.startup.b.a(r2)     // Catch: java.lang.Throwable -> Lc3
             android.os.HandlerThread r1 = r4.j     // Catch: java.lang.Throwable -> Lc3
             if (r1 == 0) goto Lc1
             r1.start()     // Catch: java.lang.Throwable -> Lc3
@@ -498,11 +495,11 @@ public class UCAsyncTask<RETURN_TYPE extends UCAsyncTask, CALLBACK_TYPE extends 
 
     /* JADX INFO: Access modifiers changed from: private */
     public Handler a(Looper looper) {
-        C7302b.a(TypedValues.Position.TYPE_PERCENT_X);
+        com.uc.webview.export.internal.uc.startup.b.a(TypedValues.Position.TYPE_PERCENT_X);
         br brVar = new br(this, looper);
         this.l = brVar;
         brVar.post(this);
-        C7302b.a(TypedValues.Position.TYPE_PERCENT_Y);
+        com.uc.webview.export.internal.uc.startup.b.a(TypedValues.Position.TYPE_PERCENT_Y);
         return this.l;
     }
 

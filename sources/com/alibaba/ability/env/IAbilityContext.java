@@ -15,9 +15,8 @@ import tb.b41;
 public interface IAbilityContext {
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.ability.env.IAbilityContext$a */
     /* loaded from: classes9.dex */
-    public static final class C3000a {
+    public static final class a {
         @NotNull
         public static IAbilityEnv a(@NotNull IAbilityContext iAbilityContext) {
             IAbilityEnv env = iAbilityContext.getEnv();

@@ -2,7 +2,7 @@ package com.google.common.util.concurrent;
 
 import com.google.common.annotations.GwtCompatible;
 import com.google.common.base.Function;
-import com.google.common.util.concurrent.AbstractC5344e;
+import com.google.common.util.concurrent.e;
 import com.google.errorprone.annotations.ForOverride;
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.ExecutionException;
@@ -15,7 +15,7 @@ import tb.jn1;
 /* compiled from: Taobao */
 @GwtCompatible
 /* loaded from: classes10.dex */
-public abstract class AbstractTransformFuture<I, O, F, T> extends AbstractC5344e.AbstractC5345a<O> implements Runnable {
+public abstract class AbstractTransformFuture<I, O, F, T> extends e.a<O> implements Runnable {
     @NullableDecl
     F function;
     @NullableDecl

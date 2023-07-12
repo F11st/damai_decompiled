@@ -16,13 +16,13 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes6.dex */
 public final class yr0 implements GXIPropAnimation {
     @NotNull
-    public static final C9998a Companion = new C9998a(null);
+    public static final a Companion = new a(null);
     @Nullable
     private static ArgbEvaluator h;
     @NotNull
     private final GXPropAnimationSet.GXPropName a;
     @NotNull
-    private final GXPropAnimationSet.AbstractC3408b b;
+    private final GXPropAnimationSet.b b;
     private int c;
     @NotNull
     private GXPropAnimationSet.GXPropInterpolator d;
@@ -32,13 +32,12 @@ public final class yr0 implements GXIPropAnimation {
     private long g;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yr0$a */
     /* loaded from: classes6.dex */
-    public static final class C9998a {
-        private C9998a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9998a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -46,7 +45,7 @@ public final class yr0 implements GXIPropAnimation {
         public final yr0 a(@NotNull JSONObject jSONObject) {
             b41.i(jSONObject, "data");
             GXPropAnimationSet.GXPropName a = GXPropAnimationSet.GXPropName.Companion.a(jSONObject.getString("propName"));
-            GXPropAnimationSet.AbstractC3408b a2 = GXPropAnimationSet.AbstractC3408b.Companion.a(jSONObject);
+            GXPropAnimationSet.b a2 = GXPropAnimationSet.b.Companion.a(jSONObject);
             if (a == null || a2 == null) {
                 return null;
             }
@@ -80,12 +79,11 @@ public final class yr0 implements GXIPropAnimation {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.yr0$b */
     /* loaded from: classes6.dex */
-    static final class C9999b implements ValueAnimator.AnimatorUpdateListener {
+    static final class b implements ValueAnimator.AnimatorUpdateListener {
         final /* synthetic */ View b;
 
-        C9999b(View view) {
+        b(View view) {
             this.b = view;
         }
 
@@ -107,11 +105,11 @@ public final class yr0 implements GXIPropAnimation {
         }
     }
 
-    public yr0(@NotNull GXPropAnimationSet.GXPropName gXPropName, @NotNull GXPropAnimationSet.AbstractC3408b abstractC3408b) {
+    public yr0(@NotNull GXPropAnimationSet.GXPropName gXPropName, @NotNull GXPropAnimationSet.b bVar) {
         b41.i(gXPropName, "name");
-        b41.i(abstractC3408b, "value");
+        b41.i(bVar, "value");
         this.a = gXPropName;
-        this.b = abstractC3408b;
+        this.b = bVar;
         this.c = 300;
         this.d = GXPropAnimationSet.GXPropInterpolator.STANDARD;
         this.f = GXPropAnimationSet.GXPropLoopMode.RESET;
@@ -140,17 +138,17 @@ public final class yr0 implements GXIPropAnimation {
         valueAnimator.setRepeatMode(this.f == GXPropAnimationSet.GXPropLoopMode.RESET ? 1 : 2);
         valueAnimator.setDuration(this.c);
         valueAnimator.setInterpolator(this.d.value());
-        GXPropAnimationSet.AbstractC3408b abstractC3408b = this.b;
-        if (abstractC3408b instanceof GXPropAnimationSet.AbstractC3408b.C3413c) {
-            valueAnimator.setFloatValues(((GXPropAnimationSet.AbstractC3408b.C3413c) abstractC3408b).a(), ((GXPropAnimationSet.AbstractC3408b.C3413c) this.b).b());
-        } else if (abstractC3408b instanceof GXPropAnimationSet.AbstractC3408b.C3411b) {
+        GXPropAnimationSet.b bVar = this.b;
+        if (bVar instanceof GXPropAnimationSet.b.c) {
+            valueAnimator.setFloatValues(((GXPropAnimationSet.b.c) bVar).a(), ((GXPropAnimationSet.b.c) this.b).b());
+        } else if (bVar instanceof GXPropAnimationSet.b.C0145b) {
             if (h == null) {
                 h = new ArgbEvaluator();
             }
             valueAnimator.setEvaluator(h);
-            valueAnimator.setIntValues(mq0.d(((GXPropAnimationSet.AbstractC3408b.C3411b) this.b).a(), null, 1, null), mq0.d(((GXPropAnimationSet.AbstractC3408b.C3411b) this.b).b(), null, 1, null));
+            valueAnimator.setIntValues(mq0.d(((GXPropAnimationSet.b.C0145b) this.b).a(), null, 1, null), mq0.d(((GXPropAnimationSet.b.C0145b) this.b).b(), null, 1, null));
         }
-        valueAnimator.addUpdateListener(new C9999b(view));
+        valueAnimator.addUpdateListener(new b(view));
         valueAnimator.setStartDelay(this.g);
         return valueAnimator;
     }

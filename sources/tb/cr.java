@@ -17,9 +17,8 @@ public class cr {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.cr$a */
     /* loaded from: classes7.dex */
-    static /* synthetic */ class C9013a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -45,7 +44,7 @@ public class cr {
         if (TextUtils.isEmpty(str2) || (d = d(str)) == null) {
             return null;
         }
-        int i = C9013a.a[d.ordinal()];
+        int i = a.a[d.ordinal()];
         if (i == 1) {
             try {
                 return y82.b(str2);
@@ -68,7 +67,7 @@ public class cr {
         if (AndroidInstantRuntime.support(ipChange, "-767844463")) {
             return (Seat3DVrDataDecodeReulst) ipChange.ipc$dispatch("-767844463", new Object[]{str, str2});
         }
-        if (!TextUtils.isEmpty(str2) && (d = d(str)) != null && C9013a.a[d.ordinal()] == 1) {
+        if (!TextUtils.isEmpty(str2) && (d = d(str)) != null && a.a[d.ordinal()] == 1) {
             try {
                 return r82.b(str2);
             } catch (Exception e) {

@@ -5,8 +5,8 @@ import android.view.View;
 import com.real.android.nativehtml.common.css.CssProperty;
 import com.real.android.nativehtml.common.dom.Element;
 import com.real.android.nativehtml.common.dom.HtmlCollection;
-import com.real.android.nativehtml.common.layout.C6149b;
 import com.real.android.nativehtml.common.layout.Layout;
+import com.real.android.nativehtml.common.layout.b;
 import tb.qb0;
 
 /* compiled from: Taobao */
@@ -43,7 +43,7 @@ public abstract class AndroidWrapperElement extends AbstractAndroidComponentElem
             return 0.0f;
         }
         float a = this.document.h().a();
-        this.child.measure(C6140a.a(directive) | Math.round(f * a), 0);
+        this.child.measure(a.a(directive) | Math.round(f * a), 0);
         return this.child.getMeasuredWidth() / a;
     }
 
@@ -64,7 +64,7 @@ public abstract class AndroidWrapperElement extends AbstractAndroidComponentElem
     @Override // android.view.View
     public void onMeasure(int i, int i2) {
         float a = this.document.h().a();
-        float[] b = C6149b.b(this, Layout.Directive.FIT_CONTENT, this.containingBoxWidth);
+        float[] b = b.b(this, Layout.Directive.FIT_CONTENT, this.containingBoxWidth);
         setMeasuredDimension(Math.round(b[0] * a), Math.round(b[1] * a));
     }
 }

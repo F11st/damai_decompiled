@@ -12,8 +12,8 @@ public final class cy extends df {
     public cy(byte[] bArr, Map<String, String> map) {
         this.a = bArr;
         this.b = map;
-        a(df.EnumC4423a.SINGLE);
-        a(df.EnumC4425c.HTTPS);
+        a(df.a.SINGLE);
+        a(df.c.HTTPS);
     }
 
     @Override // com.amap.api.col.s.df

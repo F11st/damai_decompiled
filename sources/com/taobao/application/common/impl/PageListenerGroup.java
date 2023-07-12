@@ -10,7 +10,7 @@ class PageListenerGroup implements IPageListener, IListenerGroup<IPageListener> 
     private ArrayList<IPageListener> a = new ArrayList<>();
 
     private void c(Runnable runnable) {
-        C6674a.g().h(runnable);
+        a.g().h(runnable);
     }
 
     @Override // com.taobao.application.common.impl.IListenerGroup

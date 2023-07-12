@@ -111,13 +111,12 @@ public final class ImmutableLongArray implements Serializable {
 
     /* compiled from: Taobao */
     @CanIgnoreReturnValue
-    /* renamed from: com.google.common.primitives.ImmutableLongArray$b */
     /* loaded from: classes10.dex */
-    public static final class C5253b {
+    public static final class b {
         private long[] a;
         private int b = 0;
 
-        C5253b(int i) {
+        b(int i) {
             this.a = new long[i];
         }
 
@@ -145,7 +144,7 @@ public final class ImmutableLongArray implements Serializable {
             throw new AssertionError("cannot store more than MAX_VALUE elements");
         }
 
-        public C5253b a(long j) {
+        public b a(long j) {
             e(1);
             long[] jArr = this.a;
             int i = this.b;
@@ -154,7 +153,7 @@ public final class ImmutableLongArray implements Serializable {
             return this;
         }
 
-        public C5253b b(Iterable<Long> iterable) {
+        public b b(Iterable<Long> iterable) {
             if (iterable instanceof Collection) {
                 return c((Collection) iterable);
             }
@@ -164,7 +163,7 @@ public final class ImmutableLongArray implements Serializable {
             return this;
         }
 
-        public C5253b c(Collection<Long> collection) {
+        public b c(Collection<Long> collection) {
             e(collection.size());
             for (Long l : collection) {
                 long[] jArr = this.a;
@@ -181,9 +180,9 @@ public final class ImmutableLongArray implements Serializable {
         }
     }
 
-    public static C5253b builder(int i) {
+    public static b builder(int i) {
         du1.f(i >= 0, "Invalid initialCapacity: %s", i);
-        return new C5253b(i);
+        return new b(i);
     }
 
     public static ImmutableLongArray copyOf(long[] jArr) {
@@ -329,8 +328,8 @@ public final class ImmutableLongArray implements Serializable {
         this.end = i2;
     }
 
-    public static C5253b builder() {
-        return new C5253b(10);
+    public static b builder() {
+        return new b(10);
     }
 
     public static ImmutableLongArray copyOf(Collection<Long> collection) {

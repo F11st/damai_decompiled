@@ -23,10 +23,9 @@ public class MediaSessionManagerImplBase implements MediaSessionManager.MediaSes
     ContentResolver mContentResolver;
     Context mContext;
 
-    /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes.dex */
-    public static class RemoteUserInfoImplBase implements MediaSessionManager.RemoteUserInfoImpl {
+    static class RemoteUserInfoImplBase implements MediaSessionManager.RemoteUserInfoImpl {
         private String mPackageName;
         private int mPid;
         private int mUid;

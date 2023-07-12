@@ -21,11 +21,11 @@ public class ah implements IConverter<BaseResponse, BaseSection, GlobalConfig, L
 
     @Override // cn.damai.tetris.v2.convertor.IConverter
     /* renamed from: a */
-    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, C9039db c9039db) {
+    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, db dbVar) {
         JSONArray jSONArray;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "17611223")) {
-            return (List) ipChange.ipc$dispatch("17611223", new Object[]{this, baseResponse, baseSection, globalConfig, c9039db});
+            return (List) ipChange.ipc$dispatch("17611223", new Object[]{this, baseResponse, baseSection, globalConfig, dbVar});
         }
         ArrayList arrayList = new ArrayList();
         NodeData item = baseSection.getItem();
@@ -39,15 +39,15 @@ public class ah implements IConverter<BaseResponse, BaseSection, GlobalConfig, L
                         trackInfo = baseSection.getTrackInfo();
                     }
                     trackInfo.trackB = item.getString("trackB");
-                    trackInfo.put(C9039db.TRACKKEY_CURRENT_ITEM_TOTAL, (Object) Integer.valueOf(item.getIntValue(C9039db.TRACKKEY_CURRENT_ITEM_TOTAL)));
-                    trackInfo.put(C9039db.TRACKKEY_CATEGORY_NAME, (Object) item.getString(C9039db.TRACKKEY_CATEGORY_NAME));
-                    trackInfo.put(C9039db.TRACKKEY_CITY, (Object) item.getString(C9039db.TRACKKEY_CITY));
+                    trackInfo.put(db.TRACKKEY_CURRENT_ITEM_TOTAL, (Object) Integer.valueOf(item.getIntValue(db.TRACKKEY_CURRENT_ITEM_TOTAL)));
+                    trackInfo.put(db.TRACKKEY_CATEGORY_NAME, (Object) item.getString(db.TRACKKEY_CATEGORY_NAME));
+                    trackInfo.put(db.TRACKKEY_CITY, (Object) item.getString(db.TRACKKEY_CITY));
                     if (intValue == 1) {
                         JSONObject jSONObject2 = new JSONObject();
                         jSONObject2.put("hasCurrentCity", (Object) jSONObject.getBoolean("hasCurrentCity"));
                         baseSection.setItem(jSONObject2);
                         baseSection.setComponentId(xl2.DM_CARD_CATEGORY_TITLE);
-                        List<Node> l = c9039db.l(baseSection, globalConfig);
+                        List<Node> l = dbVar.l(baseSection, globalConfig);
                         if (l != null) {
                             arrayList.addAll(l);
                         }
@@ -55,24 +55,24 @@ public class ah implements IConverter<BaseResponse, BaseSection, GlobalConfig, L
                         baseSection.setItem(jSONObject.getJSONObject("rankBean"));
                         baseSection.setComponentId(xl2.DM_CARD_RANKLIST_HORIZONTAL);
                         baseSection.setTrackInfo(trackInfo);
-                        List<Node> l2 = c9039db.l(baseSection, globalConfig);
+                        List<Node> l2 = dbVar.l(baseSection, globalConfig);
                         if (l2 != null) {
                             arrayList.addAll(l2);
                         }
                     } else {
                         JSONObject jSONObject3 = new JSONObject();
-                        jSONObject3.put(C9039db.KEY_PROJECT, (Object) jSONObject.getJSONObject("projectItemBean"));
-                        jSONObject3.put(C9039db.KEY_DAOJISHI, item.get(C9039db.KEY_DAOJISHI));
-                        jSONObject3.put(C9039db.KEY_SHOW_DIS, item.get(C9039db.KEY_SHOW_DIS));
+                        jSONObject3.put(db.KEY_PROJECT, (Object) jSONObject.getJSONObject("projectItemBean"));
+                        jSONObject3.put(db.KEY_DAOJISHI, item.get(db.KEY_DAOJISHI));
+                        jSONObject3.put(db.KEY_SHOW_DIS, item.get(db.KEY_SHOW_DIS));
                         baseSection.setItem(jSONObject3);
-                        boolean booleanValue = jSONObject.getBooleanValue(C9039db.TRACKKEY_IS_CURRENT_CITY);
-                        trackInfo.put(C9039db.TRACKKEY_IS_CURRENT_CITY, (Object) Boolean.valueOf(booleanValue));
+                        boolean booleanValue = jSONObject.getBooleanValue(db.TRACKKEY_IS_CURRENT_CITY);
+                        trackInfo.put(db.TRACKKEY_IS_CURRENT_CITY, (Object) Boolean.valueOf(booleanValue));
                         String str = booleanValue ? "categorylist" : "othercitylist";
                         trackInfo.trackC = str;
                         trackInfo.put("spmc", (Object) str);
                         baseSection.setTrackInfo(trackInfo);
                         baseSection.setComponentId(xl2.DM_PROJECT_HORIZONTAL);
-                        List<Node> l3 = c9039db.l(baseSection, globalConfig);
+                        List<Node> l3 = dbVar.l(baseSection, globalConfig);
                         if (l3 != null) {
                             arrayList.addAll(l3);
                         }

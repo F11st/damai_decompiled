@@ -2,7 +2,7 @@ package anet.channel.strategy;
 
 import anet.channel.entity.ConnType;
 import anet.channel.statist.AmdcResultStat;
-import anet.channel.strategy.C0214b;
+import anet.channel.strategy.b;
 import anet.channel.strategy.utils.SerialLruCache;
 import anet.channel.util.ALog;
 import java.io.Serializable;
@@ -39,15 +39,14 @@ public class StrategyEntity implements Serializable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.strategy.StrategyEntity$a */
     /* loaded from: classes.dex */
-    public class C0207a implements Predicate<IPConnStrategy> {
-        final /* synthetic */ C0214b.C0217c a;
+    public class a implements Predicate<IPConnStrategy> {
+        final /* synthetic */ b.c a;
         final /* synthetic */ String b;
         final /* synthetic */ ConnProtocol c;
 
-        C0207a(StrategyEntity strategyEntity, C0214b.C0217c c0217c, String str, ConnProtocol connProtocol) {
-            this.a = c0217c;
+        a(StrategyEntity strategyEntity, b.c cVar, String str, ConnProtocol connProtocol) {
+            this.a = cVar;
             this.b = str;
             this.c = connProtocol;
         }
@@ -61,10 +60,9 @@ public class StrategyEntity implements Serializable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.strategy.StrategyEntity$b */
     /* loaded from: classes.dex */
-    public class C0208b implements Comparator<IPConnStrategy> {
-        C0208b() {
+    public class b implements Comparator<IPConnStrategy> {
+        b() {
         }
 
         @Override // java.util.Comparator
@@ -123,19 +121,19 @@ public class StrategyEntity implements Serializable {
 
     private Comparator getDefaultComparator() {
         if (this.defaultComparator == null) {
-            this.defaultComparator = new C0208b();
+            this.defaultComparator = new b();
         }
         return this.defaultComparator;
     }
 
-    private void handleUpdate(String str, int i, C0214b.C0217c c0217c) {
-        ConnProtocol valueOf = ConnProtocol.valueOf(c0217c);
-        int find = find(this.ipStrategyList, new C0207a(this, c0217c, str, valueOf));
+    private void handleUpdate(String str, int i, b.c cVar) {
+        ConnProtocol valueOf = ConnProtocol.valueOf(cVar);
+        int find = find(this.ipStrategyList, new a(this, cVar, str, valueOf));
         if (find != -1) {
             IPConnStrategy iPConnStrategy = this.ipStrategyList.get(find);
-            iPConnStrategy.cto = c0217c.c;
-            iPConnStrategy.rto = c0217c.d;
-            iPConnStrategy.heartbeat = c0217c.f;
+            iPConnStrategy.cto = cVar.c;
+            iPConnStrategy.rto = cVar.d;
+            iPConnStrategy.heartbeat = cVar.f;
             iPConnStrategy.ipType = i;
             iPConnStrategy.ipSource = 0;
             iPConnStrategy.isToRemove = false;
@@ -145,7 +143,7 @@ public class StrategyEntity implements Serializable {
             this.historyItemMap.put(Integer.valueOf(iPConnStrategy.getUniqueId()), new ConnHistoryItem());
             return;
         }
-        IPConnStrategy create = IPConnStrategy.create(str, c0217c);
+        IPConnStrategy create = IPConnStrategy.create(str, cVar);
         if (create != null) {
             create.ipType = i;
             create.ipSource = 0;
@@ -248,27 +246,27 @@ public class StrategyEntity implements Serializable {
         return new ArrayList(this.ipStrategyList).toString();
     }
 
-    public void update(C0214b.C0218d c0218d) {
+    public void update(b.d dVar) {
         for (IPConnStrategy iPConnStrategy : this.ipStrategyList) {
             iPConnStrategy.isToRemove = true;
         }
         this.amdcResultStat = new AmdcResultStat();
         int i = 0;
         while (true) {
-            C0214b.C0223i[] c0223iArr = c0218d.k;
-            if (i >= c0223iArr.length) {
+            b.i[] iVarArr = dVar.k;
+            if (i >= iVarArr.length) {
                 break;
             }
-            boolean z = c0223iArr[i].c;
-            C0214b.C0216b[] c0216bArr = c0223iArr[i].a;
-            if (c0216bArr != null && c0216bArr.length != 0) {
-                for (int i2 = 0; i2 < c0216bArr.length; i2++) {
-                    C0214b.C0217c[] c0217cArr = c0216bArr[i2].b;
-                    String[] strArr = c0216bArr[i2].a;
-                    if (c0217cArr != null && c0217cArr.length != 0 && strArr != null && strArr.length != 0) {
-                        for (C0214b.C0217c c0217c : c0217cArr) {
+            boolean z = iVarArr[i].c;
+            b.C0015b[] c0015bArr = iVarArr[i].a;
+            if (c0015bArr != null && c0015bArr.length != 0) {
+                for (int i2 = 0; i2 < c0015bArr.length; i2++) {
+                    b.c[] cVarArr = c0015bArr[i2].b;
+                    String[] strArr = c0015bArr[i2].a;
+                    if (cVarArr != null && cVarArr.length != 0 && strArr != null && strArr.length != 0) {
+                        for (b.c cVar : cVarArr) {
                             for (String str : strArr) {
-                                handleUpdate(str, !z ? 1 : 0, c0217c);
+                                handleUpdate(str, !z ? 1 : 0, cVar);
                             }
                         }
                     }
@@ -292,7 +290,7 @@ public class StrategyEntity implements Serializable {
             ALog.d(TAG, "strategy sort error!", null, e, new Object[0]);
         }
         AmdcResultStat amdcResultStat = this.amdcResultStat;
-        amdcResultStat.host = c0218d.a;
+        amdcResultStat.host = dVar.a;
         amdcResultStat.trace = TAG;
         ALog.c(TAG, amdcResultStat.toString(), null, new Object[0]);
         x6.b().commitStat(this.amdcResultStat);

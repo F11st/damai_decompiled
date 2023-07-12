@@ -278,9 +278,9 @@ public class AILPChatInputModule extends WXModule {
             KeywordChatInputDto keywordChatInputDto = (KeywordChatInputDto) JSON.parseObject(JSON.toJSONString(map), KeywordChatInputDto.class);
             int i2 = this.mWXSDKInstance.getContext().getResources().getConfiguration().orientation;
             if (i2 == 2) {
-                i = R.C7944style.dago_pgc_fullScreenSecretInputDialog;
+                i = R.style.dago_pgc_fullScreenSecretInputDialog;
             } else {
-                i = R.C7944style.dago_pgc_customSecretInputDialog;
+                i = R.style.dago_pgc_customSecretInputDialog;
             }
             int i3 = i;
             if (keywordChatInputDto == null) {

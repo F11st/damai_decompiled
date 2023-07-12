@@ -24,7 +24,7 @@ public abstract class ep<T> {
     private String f;
     private boolean g;
     private boolean c = false;
-    private Map<String, C5829b> d = new ConcurrentHashMap();
+    private Map<String, b> d = new ConcurrentHashMap();
     private Runnable h = new Runnable() { // from class: com.loc.ep.2
         @Override // java.lang.Runnable
         public final void run() {
@@ -42,30 +42,28 @@ public abstract class ep<T> {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.loc.ep$a */
     /* loaded from: classes10.dex */
-    public final class C5828a implements Comparator<String> {
-        C5828a() {
+    public final class a implements Comparator<String> {
+        a() {
         }
 
         /* JADX INFO: Access modifiers changed from: private */
         @Override // java.util.Comparator
         /* renamed from: a */
         public int compare(String str, String str2) {
-            return ep.a(((C5829b) ep.this.d.get(str2)).c, ((C5829b) ep.this.d.get(str)).c);
+            return ep.a(((b) ep.this.d.get(str2)).c, ((b) ep.this.d.get(str)).c);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.loc.ep$b */
     /* loaded from: classes10.dex */
-    public static class C5829b {
+    public static class b {
         int a;
         long b;
         long c;
 
-        public C5829b(int i, long j, long j2) {
+        public b(int i, long j, long j2) {
             this.a = i;
             this.b = j;
             this.c = j2;
@@ -101,21 +99,21 @@ public abstract class ep<T> {
             return;
         }
         String i = i(t);
-        C5829b c5829b = this.d.get(i);
-        if (c5829b == null) {
+        b bVar = this.d.get(i);
+        if (bVar == null) {
             e(t, j);
-            this.d.put(i, new C5829b(l(t), o(t), j));
+            this.d.put(i, new b(l(t), o(t), j));
             this.g = true;
             return;
         }
-        c5829b.c = j;
-        if (c5829b.a == l(t)) {
-            e(t, c5829b.b);
+        bVar.c = j;
+        if (bVar.a == l(t)) {
+            e(t, bVar.b);
             return;
         }
         e(t, j);
-        c5829b.a = l(t);
-        c5829b.b = o(t);
+        bVar.a = l(t);
+        bVar.b = o(t);
         this.g = true;
     }
 
@@ -123,7 +121,7 @@ public abstract class ep<T> {
         try {
             for (String str : m1.l(this.b)) {
                 String[] split = new String(e1.h(p1.g(str), this.f), "UTF-8").split(",");
-                this.d.put(split[0], new C5829b(Integer.parseInt(split[1]), Long.parseLong(split[2]), split.length >= 4 ? Long.parseLong(split[3]) : m1.B()));
+                this.d.put(split[0], new b(Integer.parseInt(split[1]), Long.parseLong(split[2]), split.length >= 4 ? Long.parseLong(split[3]) : m1.B()));
             }
         } catch (Throwable th) {
             th.printStackTrace();
@@ -136,7 +134,7 @@ public abstract class ep<T> {
             this.d.size();
             if (h() > 0) {
                 long B = m1.B();
-                Iterator<Map.Entry<String, C5829b>> it = this.d.entrySet().iterator();
+                Iterator<Map.Entry<String, b>> it = this.d.entrySet().iterator();
                 while (it.hasNext()) {
                     if (B - this.d.get(it.next().getKey()).c > h()) {
                         it.remove();
@@ -145,14 +143,14 @@ public abstract class ep<T> {
             }
             if (this.d.size() > m()) {
                 ArrayList arrayList = new ArrayList(this.d.keySet());
-                Collections.sort(arrayList, new C5828a());
+                Collections.sort(arrayList, new a());
                 for (int m = (int) m(); m < arrayList.size(); m++) {
                     this.d.remove(arrayList.get(m));
                 }
             }
         }
         StringBuilder sb = new StringBuilder();
-        for (Map.Entry<String, C5829b> entry : this.d.entrySet()) {
+        for (Map.Entry<String, b> entry : this.d.entrySet()) {
             String str = entry.getKey() + "," + entry.getValue().a + "," + entry.getValue().b + "," + entry.getValue().c;
             try {
                 sb.append(p1.f(e1.e(str.getBytes("UTF-8"), this.f)) + StringUtils.LF);
@@ -198,7 +196,7 @@ public abstract class ep<T> {
         if (this.d.size() > 16384 || m() <= 0) {
             this.d.clear();
             for (T t2 : list) {
-                this.d.put(i(t2), new C5829b(l(t2), o(t2), B));
+                this.d.put(i(t2), new b(l(t2), o(t2), B));
             }
         }
     }

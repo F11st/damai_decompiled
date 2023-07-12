@@ -6,9 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
 import cn.damai.discover.content.bean.ContentTour;
 import cn.damai.discover.content.bean.TwoTuple;
@@ -240,7 +238,7 @@ public class ew1 extends cp2<TwoTuple<String, ContentTour>> implements OnItemBin
                 if (z) {
                     d(projectItemBean);
                 }
-                DMImageCreator f = C0504a.b().f(projectItemBean.verticalPic, a2, a);
+                DMImageCreator f = cn.damai.common.image.a.b().f(projectItemBean.verticalPic, a2, a);
                 int i = R$drawable.uikit_default_image_bg_gradient;
                 f.i(i).c(i).g(this.e);
             } else {
@@ -261,7 +259,7 @@ public class ew1 extends cp2<TwoTuple<String, ContentTour>> implements OnItemBin
             ipChange.ipc$dispatch("-355292826", new Object[]{this, contentRelatedTourListItem, Integer.valueOf(i)});
         } else if (this.a == null) {
         } else {
-            C0529c.e().x(getLiveUt().L(contentRelatedTourListItem.itemId, i));
+            cn.damai.common.user.c.e().x(getLiveUt().L(contentRelatedTourListItem.itemId, i));
             Bundle bundle = new Bundle();
             bundle.putString("id", contentRelatedTourListItem.itemId);
             qd2.a(this.a, contentRelatedTourListItem.schema, bundle);
@@ -275,7 +273,7 @@ public class ew1 extends cp2<TwoTuple<String, ContentTour>> implements OnItemBin
             ipChange.ipc$dispatch("-1632561555", new Object[]{this, view});
         } else if (view.getId() != R$id.card_project_ui || this.s == null || this.a == null) {
         } else {
-            C0529c.e().x(getLiveUt().A(2, this.s.id));
+            cn.damai.common.user.c.e().x(getLiveUt().A(2, this.s.id));
             Bundle bundle = new Bundle();
             bundle.putString("id", this.s.id);
             bundle.putString("projectImage", this.s.verticalPic);

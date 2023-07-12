@@ -25,7 +25,7 @@ public class YKFavoriteIconStyleGold extends FrameLayout {
     }
 
     private void init(Context context) {
-        this.lottieAnimationView = (LottieAnimationView) LayoutInflater.from(context).inflate(R.C8074layout.resource_yk_fav_icon, (ViewGroup) this, true).findViewById(R.id.favorite_icon);
+        this.lottieAnimationView = (LottieAnimationView) LayoutInflater.from(context).inflate(R.layout.resource_yk_fav_icon, (ViewGroup) this, true).findViewById(R.id.favorite_icon);
         if (!Utils.isDebug(context) && YoukuDeviceInfoProviderProxy.getDeviceScore() <= 80) {
             this.animate = false;
         } else {
@@ -47,19 +47,19 @@ public class YKFavoriteIconStyleGold extends FrameLayout {
             this.lottieAnimationView.playAnimation();
             this.clicked = true;
         } else if (this.clicked) {
-            this.lottieAnimationView.setImageResource(R.C8072drawable.yk_icon_fav_cancel);
+            this.lottieAnimationView.setImageResource(R.drawable.yk_icon_fav_cancel);
             this.clicked = false;
         } else {
-            this.lottieAnimationView.setImageResource(R.C8072drawable.yk_icon_fav_confirm_gold);
+            this.lottieAnimationView.setImageResource(R.drawable.yk_icon_fav_confirm_gold);
             this.clicked = true;
         }
     }
 
     public void setInitState(boolean z) {
         if (z) {
-            this.lottieAnimationView.setImageResource(R.C8072drawable.yk_icon_fav_confirm_gold);
+            this.lottieAnimationView.setImageResource(R.drawable.yk_icon_fav_confirm_gold);
         } else {
-            this.lottieAnimationView.setImageResource(R.C8072drawable.yk_icon_fav_cancel);
+            this.lottieAnimationView.setImageResource(R.drawable.yk_icon_fav_cancel);
         }
         this.clicked = z;
     }

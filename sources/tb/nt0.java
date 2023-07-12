@@ -42,13 +42,12 @@ public class nt0 implements IContainer {
     private HashMap<String, Value> l = new HashMap<>();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.nt0$a */
     /* loaded from: classes7.dex */
-    public class C9484a implements OnChildAttachStateChangeListener {
+    public class a implements OnChildAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ boolean a;
 
-        C9484a(boolean z) {
+        a(boolean z) {
             this.a = z;
         }
 
@@ -72,13 +71,12 @@ public class nt0 implements IContainer {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.nt0$b */
     /* loaded from: classes7.dex */
-    public class C9485b implements OnChildAttachStateChangeListener {
+    public class b implements OnChildAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ IModule a;
 
-        C9485b(IModule iModule) {
+        b(IModule iModule) {
             this.a = iModule;
         }
 
@@ -497,7 +495,7 @@ public class nt0 implements IContainer {
         if (AndroidInstantRuntime.support(ipChange, "254048840")) {
             ipChange.ipc$dispatch("254048840", new Object[]{this, Integer.valueOf(i), iModule, Boolean.valueOf(z)});
         } else {
-            addModule(i, iModule, new C9484a(z));
+            addModule(i, iModule, new a(z));
         }
     }
 
@@ -507,7 +505,7 @@ public class nt0 implements IContainer {
         if (AndroidInstantRuntime.support(ipChange, "21251858")) {
             ipChange.ipc$dispatch("21251858", new Object[]{this, iModule, Boolean.valueOf(z)});
         } else {
-            removeModule(iModule, new C9485b(iModule));
+            removeModule(iModule, new b(iModule));
         }
     }
 }

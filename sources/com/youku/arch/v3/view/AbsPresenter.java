@@ -22,7 +22,7 @@ import java.util.Map;
 import kotlin.Metadata;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.joor.C8883a;
+import org.joor.a;
 import tb.b41;
 import tb.k50;
 
@@ -124,7 +124,7 @@ public abstract class AbsPresenter<DATA extends IItem<ItemValue>, MODEL extends 
         if (AndroidInstantRuntime.support(ipChange, "1831543711")) {
             return (VIEW) ipChange.ipc$dispatch("1831543711", new Object[]{this, str, view});
         }
-        Object f = C8883a.k(str, getClass().getClassLoader()).c(view).f();
+        Object f = a.k(str, getClass().getClassLoader()).c(view).f();
         b41.h(f, "on(vClassName, this.java….create(renderView).get()");
         return (VIEW) f;
     }
@@ -164,7 +164,7 @@ public abstract class AbsPresenter<DATA extends IItem<ItemValue>, MODEL extends 
             return (MODEL) ipChange.ipc$dispatch("-189951661", new Object[]{this, data, str});
         }
         b41.i(data, "item");
-        Object f = C8883a.k(str, getClass().getClassLoader()).b().f();
+        Object f = a.k(str, getClass().getClassLoader()).b().f();
         b41.h(f, "on(mClassName, this.java…assLoader).create().get()");
         return (MODEL) f;
     }

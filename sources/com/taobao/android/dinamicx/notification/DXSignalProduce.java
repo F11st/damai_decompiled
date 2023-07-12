@@ -1,6 +1,6 @@
 package com.taobao.android.dinamicx.notification;
 
-import com.taobao.android.dinamicx.C6368e;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import java.lang.ref.WeakReference;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -16,7 +16,7 @@ public class DXSignalProduce {
     public static int f = 50;
     CopyOnWriteArrayList<WeakReference<DXNotificationCenter>> a;
     CopyOnWriteArrayList<WeakReference<bu>> b;
-    CopyOnWriteArrayList<WeakReference<C6390a>> c;
+    CopyOnWriteArrayList<WeakReference<com.taobao.android.dinamicx.notification.a>> c;
     private int d;
     int e;
 
@@ -27,14 +27,13 @@ public class DXSignalProduce {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.notification.DXSignalProduce$a */
     /* loaded from: classes12.dex */
-    private static final class C6389a {
+    private static final class a {
         private static final DXSignalProduce a = new DXSignalProduce();
     }
 
     public static DXSignalProduce e() {
-        return C6389a.a;
+        return a.a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -69,9 +68,9 @@ public class DXSignalProduce {
     public void j() {
         int i = 0;
         while (i < this.c.size()) {
-            C6390a c6390a = this.c.get(i).get();
-            if (c6390a != null) {
-                c6390a.onReceiver();
+            com.taobao.android.dinamicx.notification.a aVar = this.c.get(i).get();
+            if (aVar != null) {
+                aVar.onReceiver();
                 i++;
             } else {
                 this.c.remove(i);
@@ -102,11 +101,11 @@ public class DXSignalProduce {
                 } catch (Throwable th) {
                     DXSignalProduce dXSignalProduce = DXSignalProduce.this;
                     if (dXSignalProduce.e < dXSignalProduce.d) {
-                        C6368e c6368e = new C6368e(r10.DB_NAME);
-                        C6368e.C6369a c6369a = new C6368e.C6369a("Signal", "Signal_Exception", C6368e.DX_ERROR_CODE_SIGNAL_EXCEPTION_CRASH);
-                        c6369a.e = ry.a(th);
-                        c6368e.c.add(c6369a);
-                        DXAppMonitor.n(c6368e);
+                        e eVar = new e(r10.DB_NAME);
+                        e.a aVar = new e.a("Signal", "Signal_Exception", e.DX_ERROR_CODE_SIGNAL_EXCEPTION_CRASH);
+                        aVar.e = ry.a(th);
+                        eVar.c.add(aVar);
+                        DXAppMonitor.n(eVar);
                         DXSignalProduce.this.e++;
                     }
                 }

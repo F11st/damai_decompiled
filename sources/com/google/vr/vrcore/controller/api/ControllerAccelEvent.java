@@ -6,16 +6,15 @@ import android.os.Parcelable;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public final class ControllerAccelEvent extends ControllerEvent {
-    public static final Parcelable.Creator<ControllerAccelEvent> CREATOR = new C5438a();
+    public static final Parcelable.Creator<ControllerAccelEvent> CREATOR = new a();
     public float x;
     public float y;
     public float z;
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.vrcore.controller.api.ControllerAccelEvent$a */
     /* loaded from: classes10.dex */
-    class C5438a implements Parcelable.Creator<ControllerAccelEvent> {
-        C5438a() {
+    class a implements Parcelable.Creator<ControllerAccelEvent> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

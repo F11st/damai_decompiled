@@ -14,8 +14,8 @@ import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 @GwtCompatible(emulated = true, serializable = true)
 /* loaded from: classes10.dex */
 public class RegularImmutableMultiset<E> extends ImmutableMultiset<E> {
-    static final RegularImmutableMultiset<Object> EMPTY = new RegularImmutableMultiset<>(C5163c0.b());
-    final transient C5163c0<E> contents;
+    static final RegularImmutableMultiset<Object> EMPTY = new RegularImmutableMultiset<>(c0.b());
+    final transient c0<E> contents;
     @LazyInit
     private transient ImmutableSet<E> elementSet;
     private final transient int size;
@@ -71,26 +71,26 @@ public class RegularImmutableMultiset<E> extends ImmutableMultiset<E> {
 
         /* JADX WARN: Multi-variable type inference failed */
         Object readResolve() {
-            ImmutableMultiset.C4984b c4984b = new ImmutableMultiset.C4984b(this.elements.length);
+            ImmutableMultiset.b bVar = new ImmutableMultiset.b(this.elements.length);
             int i = 0;
             while (true) {
                 Object[] objArr = this.elements;
                 if (i < objArr.length) {
-                    c4984b.j(objArr[i], this.counts[i]);
+                    bVar.j(objArr[i], this.counts[i]);
                     i++;
                 } else {
-                    return c4984b.k();
+                    return bVar.k();
                 }
             }
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public RegularImmutableMultiset(C5163c0<E> c5163c0) {
-        this.contents = c5163c0;
+    public RegularImmutableMultiset(c0<E> c0Var) {
+        this.contents = c0Var;
         long j = 0;
-        for (int i = 0; i < c5163c0.C(); i++) {
-            j += c5163c0.k(i);
+        for (int i = 0; i < c0Var.C(); i++) {
+            j += c0Var.k(i);
         }
         this.size = Ints.j(j);
     }

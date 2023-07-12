@@ -31,7 +31,7 @@ public class StaticCachedImage extends ef {
         this.i = bitmap;
         this.j = rect;
         k();
-        xt2.a(C6851a.TAG_RECYCLE, "new image=%s", this);
+        xt2.a(a.TAG_RECYCLE, "new image=%s", this);
     }
 
     private void k() {
@@ -73,14 +73,14 @@ public class StaticCachedImage extends ef {
                 int size = map2.size();
                 if (size == 0) {
                     map.remove(this.i);
-                    xt2.a(C6851a.TAG_RECYCLE, "bitmap in the image can be recycled now, image=%s", this);
+                    xt2.a(a.TAG_RECYCLE, "bitmap in the image can be recycled now, image=%s", this);
                 } else {
-                    xt2.i(C6851a.TAG_RECYCLE, "cannot recycled the image(bitmap referenced by %d image still), image=%s", Integer.valueOf(size), this);
+                    xt2.i(a.TAG_RECYCLE, "cannot recycled the image(bitmap referenced by %d image still), image=%s", Integer.valueOf(size), this);
                     z2 = false;
                 }
                 z = z2;
             } else {
-                xt2.i(C6851a.TAG_RECYCLE, "cannot recycled the image(bitmap has been recycled ever), image=%s", this);
+                xt2.i(a.TAG_RECYCLE, "cannot recycled the image(bitmap has been recycled ever), image=%s", this);
             }
         }
         if (!z || (staticImageRecycleListener = this.k) == null) {
@@ -91,7 +91,7 @@ public class StaticCachedImage extends ef {
 
     @Override // tb.ef
     protected void g() {
-        xt2.a(C6851a.TAG_RECYCLE, "image change to not recycled, image=%s", this);
+        xt2.a(a.TAG_RECYCLE, "image change to not recycled, image=%s", this);
         k();
     }
 

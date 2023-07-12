@@ -100,9 +100,8 @@ public class TBImageUrlStrategy {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.tao.util.TBImageUrlStrategy$a */
     /* loaded from: classes11.dex */
-    public static /* synthetic */ class C6900a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -116,18 +115,17 @@ public class TBImageUrlStrategy {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.tao.util.TBImageUrlStrategy$b */
     /* loaded from: classes11.dex */
-    private static class C6901b {
+    private static class b {
         public static final TBImageUrlStrategy instance = new TBImageUrlStrategy(null);
     }
 
-    /* synthetic */ TBImageUrlStrategy(C6900a c6900a) {
+    /* synthetic */ TBImageUrlStrategy(a aVar) {
         this();
     }
 
     public static TBImageUrlStrategy getInstance() {
-        return C6901b.instance;
+        return b.instance;
     }
 
     public String convergenceUrl(String str) {
@@ -193,7 +191,7 @@ public class TBImageUrlStrategy {
             qb1.g(qb1.COMMON_TAG, "origin not cdn url:%s", str);
             return str;
         }
-        if (C6900a.a[cutType.ordinal()] != 1) {
+        if (a.a[cutType.ordinal()] != 1) {
             cutType2 = TaobaoImageUrlStrategy.CutType.non;
         } else {
             cutType2 = TaobaoImageUrlStrategy.CutType.xz;

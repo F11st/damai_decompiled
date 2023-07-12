@@ -14,9 +14,8 @@ public class ContextDelegate {
     private static Boolean mIsFbeProject;
 
     /* compiled from: Taobao */
-    /* renamed from: com.vivo.push.util.ContextDelegate$a */
     /* loaded from: classes11.dex */
-    private static class C7507a {
+    private static class a {
         private static ContextDelegate a = new ContextDelegate();
     }
 
@@ -57,16 +56,16 @@ public class ContextDelegate {
     }
 
     public static ContextDelegate getInstance() {
-        return C7507a.a;
+        return a.a;
     }
 
     public static boolean isFBEProject() {
         if (mIsFbeProject == null) {
             try {
-                mIsFbeProject = Boolean.valueOf("file".equals(C7517j.a("ro.crypto.type", "unknow")));
-                C7523p.b(TAG, "mIsFbeProject = " + mIsFbeProject.toString());
+                mIsFbeProject = Boolean.valueOf("file".equals(j.a("ro.crypto.type", "unknow")));
+                p.b(TAG, "mIsFbeProject = " + mIsFbeProject.toString());
             } catch (Exception e) {
-                C7523p.a(TAG, "mIsFbeProject = " + e.getMessage());
+                p.a(TAG, "mIsFbeProject = " + e.getMessage());
             }
         }
         Boolean bool = mIsFbeProject;

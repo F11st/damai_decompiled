@@ -21,7 +21,7 @@ import androidx.appcompat.widget.AppCompatImageView;
 import com.alibaba.wireless.security.aopsdk.replace.android.view.Display;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
@@ -78,7 +78,7 @@ public class ClipImageView extends AppCompatImageView {
             return ((Integer) ipChange.ipc$dispatch("1253179384", new Object[]{context})).intValue();
         }
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        Display.getMetrics(((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+        Display.getMetrics(((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
         return com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(displayMetrics);
     }
 
@@ -88,7 +88,7 @@ public class ClipImageView extends AppCompatImageView {
             return ((Integer) ipChange.ipc$dispatch("-1151890463", new Object[]{context})).intValue();
         }
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        Display.getMetrics(((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+        Display.getMetrics(((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
         return com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(displayMetrics);
     }
 

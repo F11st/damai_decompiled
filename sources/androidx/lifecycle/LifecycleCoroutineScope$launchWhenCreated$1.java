@@ -2,7 +2,7 @@ package androidx.lifecycle;
 
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
+import kotlin.coroutines.intrinsics.b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function2;
@@ -46,7 +46,7 @@ final class LifecycleCoroutineScope$launchWhenCreated$1 extends SuspendLambda im
     @Nullable
     public final Object invokeSuspend(@NotNull Object obj) {
         Object d;
-        d = C8234b.d();
+        d = b.d();
         int i = this.label;
         if (i == 0) {
             i32.b(obj);

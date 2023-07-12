@@ -50,12 +50,11 @@ public class ProjectDialog extends Dialog implements Runnable {
     ObjectAnimator upAnim;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectDialog$a */
     /* loaded from: classes8.dex */
-    public class C2342a implements SmartScrollView.ISmartScrollChangedListener {
+    public class a implements SmartScrollView.ISmartScrollChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2342a() {
+        a() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.SmartScrollView.ISmartScrollChangedListener
@@ -78,12 +77,11 @@ public class ProjectDialog extends Dialog implements Runnable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectDialog$b */
     /* loaded from: classes16.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC2343b implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class b implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC2343b() {
+        b() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -101,12 +99,11 @@ public class ProjectDialog extends Dialog implements Runnable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectDialog$c */
     /* loaded from: classes16.dex */
-    public class C2344c extends AnimatorListenerAdapter {
+    public class c extends AnimatorListenerAdapter {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2344c() {
+        c() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -122,12 +119,11 @@ public class ProjectDialog extends Dialog implements Runnable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectDialog$d */
     /* loaded from: classes16.dex */
-    public class C2345d extends AnimatorListenerAdapter {
+    public class d extends AnimatorListenerAdapter {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2345d() {
+        d() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -143,13 +139,12 @@ public class ProjectDialog extends Dialog implements Runnable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectDialog$e */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2346e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DialogInterface.OnClickListener a;
 
-        View$OnClickListenerC2346e(DialogInterface.OnClickListener onClickListener) {
+        e(DialogInterface.OnClickListener onClickListener) {
             this.a = onClickListener;
         }
 
@@ -185,8 +180,8 @@ public class ProjectDialog extends Dialog implements Runnable {
         this.upAnim.setDuration(1000L);
         this.downAnim.setInterpolator(new LinearInterpolator());
         this.upAnim.setInterpolator(new LinearInterpolator());
-        this.downAnim.addListener(new C2344c());
-        this.upAnim.addListener(new C2345d());
+        this.downAnim.addListener(new c());
+        this.upAnim.addListener(new d());
         this.downAnim.start();
     }
 
@@ -221,8 +216,8 @@ public class ProjectDialog extends Dialog implements Runnable {
         this.titleText = (TextView) inflate.findViewById(R$id.damai_theme_dialog_title);
         SmartScrollView smartScrollView = (SmartScrollView) inflate.findViewById(R$id.damai_theme_dialog_content_layout);
         this.contentLayout = smartScrollView;
-        smartScrollView.setScanScrollChangedListener(new C2342a());
-        this.contentLayout.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC2343b());
+        smartScrollView.setScanScrollChangedListener(new a());
+        this.contentLayout.getViewTreeObserver().addOnGlobalLayoutListener(new b());
         this.tipConetnt = (TextView) inflate.findViewById(R$id.damai_theme_dialog_tip_content);
         this.arrow = (ImageView) inflate.findViewById(R$id.damai_theme_dialog_img_btn);
         this.confirmButton = (TextView) inflate.findViewById(R$id.damai_theme_dialog_confirm_btn);
@@ -355,7 +350,7 @@ public class ProjectDialog extends Dialog implements Runnable {
             if (i != 0) {
                 this.confirmButton.setTextColor(i);
             }
-            this.confirmButton.setOnClickListener(new View$OnClickListenerC2346e(onClickListener));
+            this.confirmButton.setOnClickListener(new e(onClickListener));
         }
         this.mConfirmText = charSequence;
         return this;

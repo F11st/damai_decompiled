@@ -5,18 +5,15 @@ import android.content.Intent;
 import android.net.Uri;
 import android.text.TextUtils;
 import com.meizu.cloud.pushinternal.DebugLogger;
-import com.meizu.cloud.pushsdk.C5908a;
 import com.meizu.cloud.pushsdk.constants.PushConstants;
 import com.meizu.cloud.pushsdk.handler.MessageV3;
-import com.meizu.cloud.pushsdk.handler.a.c.C6043d;
+import com.meizu.cloud.pushsdk.handler.a.c.d;
 import com.meizu.cloud.pushsdk.platform.message.BasicPushStatus;
-import com.meizu.cloud.pushsdk.platform.message.C6100a;
 import com.meizu.cloud.pushsdk.platform.message.PushSwitchStatus;
 import com.meizu.cloud.pushsdk.platform.message.RegisterStatus;
 import com.meizu.cloud.pushsdk.platform.message.SubAliasStatus;
 import com.meizu.cloud.pushsdk.platform.message.SubTagsStatus;
 import com.meizu.cloud.pushsdk.platform.message.UnRegisterStatus;
-import com.meizu.cloud.pushsdk.util.C6104d;
 import com.meizu.cloud.pushsdk.util.MinSdkChecker;
 import com.meizu.cloud.pushsdk.util.MzSystemUtils;
 
@@ -26,9 +23,8 @@ public class PlatformMessageSender {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.meizu.cloud.pushsdk.platform.PlatformMessageSender$a */
     /* loaded from: classes10.dex */
-    public interface InterfaceC6088a {
+    public interface a {
         String a();
 
         BasicPushStatus b();
@@ -56,143 +52,143 @@ public class PlatformMessageSender {
         }
     }
 
-    private static void a(Context context, String str, InterfaceC6088a interfaceC6088a) {
+    private static void a(Context context, String str, a aVar) {
         Intent intent = new Intent();
         intent.addCategory(str);
         intent.setPackage(str);
-        intent.putExtra("method", interfaceC6088a.a());
+        intent.putExtra("method", aVar.a());
         if (MinSdkChecker.isSupportTransmitMessageValue(context, str)) {
-            intent.putExtra(PushConstants.MZ_MESSAGE_VALUE, interfaceC6088a.d());
+            intent.putExtra(PushConstants.MZ_MESSAGE_VALUE, aVar.d());
         } else {
-            intent.putExtra(interfaceC6088a.c(), interfaceC6088a.b());
+            intent.putExtra(aVar.c(), aVar.b());
         }
         MzSystemUtils.sendMessageFromBroadcast(context, intent, PushConstants.MZ_PUSH_ON_MESSAGE_ACTION, str);
-        C5908a.a(context);
+        com.meizu.cloud.pushsdk.a.a(context);
     }
 
     public static void a(Context context, String str, final PushSwitchStatus pushSwitchStatus) {
-        a(context, str, new InterfaceC6088a() { // from class: com.meizu.cloud.pushsdk.platform.PlatformMessageSender.1
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+        a(context, str, new a() { // from class: com.meizu.cloud.pushsdk.platform.PlatformMessageSender.1
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public String a() {
                 return PushConstants.MZ_PUSH_MESSAGE_METHOD_ACTION_PUSH_STATUS;
             }
 
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public BasicPushStatus b() {
                 return PushSwitchStatus.this;
             }
 
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public String c() {
                 return PushConstants.EXTRA_APP_PUSH_SWITCH_STATUS;
             }
 
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public String d() {
-                return C6100a.a(PushSwitchStatus.this);
+                return com.meizu.cloud.pushsdk.platform.message.a.a(PushSwitchStatus.this);
             }
         });
     }
 
     public static void a(Context context, String str, final RegisterStatus registerStatus) {
-        a(context, str, new InterfaceC6088a() { // from class: com.meizu.cloud.pushsdk.platform.PlatformMessageSender.2
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+        a(context, str, new a() { // from class: com.meizu.cloud.pushsdk.platform.PlatformMessageSender.2
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public String a() {
                 return PushConstants.MZ_PUSH_MESSAGE_METHOD_ACTION_REGISTER_STATUS;
             }
 
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public BasicPushStatus b() {
                 return RegisterStatus.this;
             }
 
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public String c() {
                 return PushConstants.EXTRA_APP_PUSH_REGISTER_STATUS;
             }
 
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public String d() {
-                return C6100a.a(RegisterStatus.this);
+                return com.meizu.cloud.pushsdk.platform.message.a.a(RegisterStatus.this);
             }
         });
     }
 
     public static void a(Context context, String str, final SubAliasStatus subAliasStatus) {
-        a(context, str, new InterfaceC6088a() { // from class: com.meizu.cloud.pushsdk.platform.PlatformMessageSender.5
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+        a(context, str, new a() { // from class: com.meizu.cloud.pushsdk.platform.PlatformMessageSender.5
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public String a() {
                 return PushConstants.MZ_PUSH_MESSAGE_METHOD_ACTION_SUBALIAS_STATUS;
             }
 
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public BasicPushStatus b() {
                 return SubAliasStatus.this;
             }
 
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public String c() {
                 return PushConstants.EXTRA_APP_PUSH_SUBALIAS_STATUS;
             }
 
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public String d() {
-                return C6100a.a(SubAliasStatus.this);
+                return com.meizu.cloud.pushsdk.platform.message.a.a(SubAliasStatus.this);
             }
         });
     }
 
     public static void a(Context context, String str, final SubTagsStatus subTagsStatus) {
-        a(context, str, new InterfaceC6088a() { // from class: com.meizu.cloud.pushsdk.platform.PlatformMessageSender.4
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+        a(context, str, new a() { // from class: com.meizu.cloud.pushsdk.platform.PlatformMessageSender.4
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public String a() {
                 return PushConstants.MZ_PUSH_MESSAGE_METHOD_ACTION_SUBTAGS_STATUS;
             }
 
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public BasicPushStatus b() {
                 return SubTagsStatus.this;
             }
 
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public String c() {
                 return PushConstants.EXTRA_APP_PUSH_SUBTAGS_STATUS;
             }
 
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public String d() {
-                return C6100a.a(SubTagsStatus.this);
+                return com.meizu.cloud.pushsdk.platform.message.a.a(SubTagsStatus.this);
             }
         });
     }
 
     public static void a(Context context, String str, final UnRegisterStatus unRegisterStatus) {
-        a(context, str, new InterfaceC6088a() { // from class: com.meizu.cloud.pushsdk.platform.PlatformMessageSender.3
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+        a(context, str, new a() { // from class: com.meizu.cloud.pushsdk.platform.PlatformMessageSender.3
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public String a() {
                 return PushConstants.MZ_PUSH_MESSAGE_METHOD_ACTION_UNREGISTER_STATUS;
             }
 
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public BasicPushStatus b() {
                 return UnRegisterStatus.this;
             }
 
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public String c() {
                 return PushConstants.EXTRA_APP_PUSH_UNREGISTER_STATUS;
             }
 
-            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.InterfaceC6088a
+            @Override // com.meizu.cloud.pushsdk.platform.PlatformMessageSender.a
             public String d() {
-                return C6100a.a(UnRegisterStatus.this);
+                return com.meizu.cloud.pushsdk.platform.message.a.a(UnRegisterStatus.this);
             }
         });
     }
 
     public static void launchStartActivity(Context context, String str, String str2, String str3) {
-        C6043d a = C6104d.a(str3);
-        MessageV3 parse = MessageV3.parse(str, str, a.e(), a.f(), a.c(), a.d(), str2);
+        d a2 = com.meizu.cloud.pushsdk.util.d.a(str3);
+        MessageV3 parse = MessageV3.parse(str, str, a2.e(), a2.f(), a2.c(), a2.d(), str2);
         Intent intent = new Intent();
         intent.setData(Uri.parse("custom://" + System.currentTimeMillis()));
         intent.putExtra(PushConstants.MZ_PUSH_PRIVATE_MESSAGE, parse);
@@ -212,14 +208,14 @@ public class PlatformMessageSender {
     }
 
     public static void showQuickNotification(Context context, String str, String str2) {
-        C6043d a = C6104d.a(str2);
+        d a2 = com.meizu.cloud.pushsdk.util.d.a(str2);
         Intent intent = new Intent();
-        intent.putExtra(PushConstants.EXTRA_APP_PUSH_SEQ_ID, a.d());
-        intent.putExtra(PushConstants.EXTRA_APP_PUSH_TASK_ID, a.c());
-        intent.putExtra(PushConstants.EXTRA_APP_PUSH_TASK_TIMES_TAMP, a.e());
+        intent.putExtra(PushConstants.EXTRA_APP_PUSH_SEQ_ID, a2.d());
+        intent.putExtra(PushConstants.EXTRA_APP_PUSH_TASK_ID, a2.c());
+        intent.putExtra(PushConstants.EXTRA_APP_PUSH_TASK_TIMES_TAMP, a2.e());
         intent.putExtra(PushConstants.EXTRA_APP_PUSH_SERVICE_DEFAULT_PACKAGE_NAME, context.getPackageName());
         intent.putExtra(PushConstants.MZ_PUSH_PRIVATE_MESSAGE, str);
-        intent.putExtra(PushConstants.MZ_PUSH_MESSAGE_STATISTICS_IMEI_KEY, a.f());
+        intent.putExtra(PushConstants.MZ_PUSH_MESSAGE_STATISTICS_IMEI_KEY, a2.f());
         intent.putExtra("method", PushConstants.MZ_PUSH_MESSAGE_METHOD_ACTION_NOTIFICATION_SHOW_V3);
         intent.setAction(PushConstants.MZ_PUSH_ON_MESSAGE_ACTION);
         intent.setClassName(context.getPackageName(), "com.meizu.cloud.pushsdk.NotificationService");

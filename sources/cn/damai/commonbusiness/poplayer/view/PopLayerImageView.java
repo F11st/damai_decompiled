@@ -28,12 +28,11 @@ public class PopLayerImageView extends PopLayerBaseView<DMImageView, t01> {
     private String url;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.poplayer.view.PopLayerImageView$a */
     /* loaded from: classes4.dex */
-    public class View$OnClickListenerC0774a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0774a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -55,13 +54,12 @@ public class PopLayerImageView extends PopLayerBaseView<DMImageView, t01> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.poplayer.view.PopLayerImageView$b */
     /* loaded from: classes4.dex */
-    public class C0775b extends ClickableSpan {
+    public class b extends ClickableSpan {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ BaseConfigItem a;
 
-        C0775b(BaseConfigItem baseConfigItem) {
+        b(BaseConfigItem baseConfigItem) {
             this.a = baseConfigItem;
         }
 
@@ -126,7 +124,7 @@ public class PopLayerImageView extends PopLayerBaseView<DMImageView, t01> {
         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder();
         try {
             BaseConfigItem r = getPopRequest().r();
-            p40.a(spannableStringBuilder, "UUID", r.uuid, null, new C0775b(r));
+            p40.a(spannableStringBuilder, "UUID", r.uuid, null, new b(r));
             p40.a(spannableStringBuilder, "PopTimes", et1.b(r.uuid, -1) + "", null, null);
             p40.a(spannableStringBuilder, "ImageUrl", this.url, null, null);
             p40.a(spannableStringBuilder, "ModalThreshold", String.format("%.2f", Float.valueOf(((float) getPenetrateAlpha()) / 255.0f)) + "/" + getPenetrateAlpha(), null, null);
@@ -198,7 +196,7 @@ public class PopLayerImageView extends PopLayerBaseView<DMImageView, t01> {
         ?? dMImageView = new DMImageView(context);
         dMImageView.setImageUrl(this.url);
         dMImageView.setScaleType(getScaleType(jSONObject.optString("imgFillMode", "ScaleAspectFit")));
-        dMImageView.setOnClickListener(new View$OnClickListenerC0774a());
+        dMImageView.setOnClickListener(new a());
         this.mInnerView = dMImageView;
         addView((View) dMImageView, new FrameLayout.LayoutParams(-1, -1));
         showCloseButton(t01Var.r().showCloseBtn);

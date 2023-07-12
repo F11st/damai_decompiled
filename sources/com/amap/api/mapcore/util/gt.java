@@ -21,26 +21,26 @@ public class gt {
     private static boolean f = false;
     private String g = "";
 
-    public static gg.InterfaceC4565a a() {
-        return new gg.InterfaceC4565a() { // from class: com.amap.api.mapcore.util.gt.1
+    public static gg.a a() {
+        return new gg.a() { // from class: com.amap.api.mapcore.util.gt.1
             private gt a = new gt();
 
-            @Override // com.amap.api.mapcore.util.gg.InterfaceC4565a
+            @Override // com.amap.api.mapcore.util.gg.a
             public String a() {
                 return this.a.c();
             }
 
-            @Override // com.amap.api.mapcore.util.gg.InterfaceC4565a
+            @Override // com.amap.api.mapcore.util.gg.a
             public Map<String, String> b() {
                 return this.a.b();
             }
 
-            @Override // com.amap.api.mapcore.util.gg.InterfaceC4565a
+            @Override // com.amap.api.mapcore.util.gg.a
             public String a(Context context, String str) {
                 return this.a.a(context, str);
             }
 
-            @Override // com.amap.api.mapcore.util.gg.InterfaceC4565a
+            @Override // com.amap.api.mapcore.util.gg.a
             public String a(String str, String str2, String str3, String str4) {
                 return this.a.a(str, str2, str3, str4);
             }

@@ -31,12 +31,11 @@ public class ReportViewModel extends AndroidViewModel implements Serializable {
     public int type;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.report.ReportViewModel$a */
     /* loaded from: classes6.dex */
-    public class C1457a extends v12<ReportResponse> {
+    public class a extends v12<ReportResponse> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1457a() {
+        a() {
         }
 
         @Override // tb.v12
@@ -147,7 +146,7 @@ public class ReportViewModel extends AndroidViewModel implements Serializable {
         if (wh2.j(str)) {
             this.toastEvent.setValue(this.mContext.getResources().getString(R$string.report_toast_noselect));
         } else {
-            this.mRepository.c(this.targetId, this.type, this.targetType, i, str, this.reason_memo.getValue(), new C1457a());
+            this.mRepository.c(this.targetId, this.type, this.targetType, i, str, this.reason_memo.getValue(), new a());
         }
     }
 }

@@ -7,5 +7,5 @@ import org.reactivestreams.Publisher;
 /* loaded from: classes3.dex */
 public interface FlowableTransformer<Upstream, Downstream> {
     @NonNull
-    Publisher<Downstream> apply(@NonNull AbstractC8147b<Upstream> abstractC8147b);
+    Publisher<Downstream> apply(@NonNull b<Upstream> bVar);
 }

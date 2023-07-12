@@ -2,12 +2,6 @@ package tb;
 
 import android.text.TextUtils;
 import android.util.Pair;
-import com.uploader.implement.C7364a;
-import com.uploader.implement.C7399c;
-import com.uploader.implement.a.InterfaceC7373e;
-import com.uploader.implement.a.InterfaceC7374f;
-import com.uploader.implement.a.c.C7371b;
-import com.uploader.implement.b.a.C7393f;
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -20,33 +14,33 @@ import org.json.JSONObject;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class d53 implements InterfaceC7373e {
+public class d53 implements com.uploader.implement.a.e {
     private boolean a;
     private h43 b;
-    private C7393f c;
+    private com.uploader.implement.b.a.f c;
     private long d;
     private final Pair<Boolean, Pair<String, Integer>> e;
     private final int f = hashCode();
     private final i83 g;
     private final String h;
-    private final C7399c i;
+    private final com.uploader.implement.c i;
 
-    public d53(C7399c c7399c, h43 h43Var, String str, long j, long j2, boolean z) throws Exception {
-        this.i = c7399c;
+    public d53(com.uploader.implement.c cVar, h43 h43Var, String str, long j, long j2, boolean z) throws Exception {
+        this.i = cVar;
         this.b = h43Var;
         this.a = z;
-        Pair<Boolean, Pair<String, Integer>> g = c7399c.a.g();
+        Pair<Boolean, Pair<String, Integer>> g = cVar.a.g();
         this.e = g;
         if (g != null) {
-            this.h = (String) c7399c.a.a().first;
-            this.d = c7399c.a.i();
+            this.h = (String) cVar.a.a().first;
+            this.d = cVar.a.i();
             this.g = new i83(h43Var.b, h43Var.j, j, j2, null, b(j, j2, str).getBytes("UTF-8"), j < h43Var.f ? "\r\n\r\n".getBytes() : null, h43Var.k);
             return;
         }
         throw new RuntimeException("currentUploadTarget is null");
     }
 
-    private InterfaceC7374f c(Map<String, String> map, byte[] bArr, int i, int i2) {
+    private com.uploader.implement.a.f c(Map<String, String> map, byte[] bArr, int i, int i2) {
         i33 i33Var;
         if (map == null) {
             map = new HashMap<>();
@@ -69,7 +63,7 @@ public class d53 implements InterfaceC7373e {
                         if (indexOf > 1) {
                             String substring = readLine.substring(0, indexOf);
                             if (indexOf < length) {
-                                map.put(substring.trim(), C7371b.c(readLine.substring(indexOf + 1, length)));
+                                map.put(substring.trim(), com.uploader.implement.a.c.b.c(readLine.substring(indexOf + 1, length)));
                             }
                         } else {
                             int indexOf2 = readLine.indexOf(" ");
@@ -84,8 +78,8 @@ public class d53 implements InterfaceC7373e {
                         }
                     }
                 } catch (IOException e) {
-                    if (C7364a.d(16)) {
-                        C7364a.b(16, "FileUploadActionRequest", this.f + " decode response header failed", e);
+                    if (com.uploader.implement.a.d(16)) {
+                        com.uploader.implement.a.b(16, "FileUploadActionRequest", this.f + " decode response header failed", e);
                     }
                     try {
                         bufferedReader.close();
@@ -117,28 +111,28 @@ public class d53 implements InterfaceC7373e {
             return i33Var;
         }
         map.put("divided_length", Integer.toString(i2));
-        if (C7364a.d(4)) {
-            C7364a.a(4, "FileUploadActionRequest", this.f + " decode actionResponse header:" + map.toString());
+        if (com.uploader.implement.a.d(4)) {
+            com.uploader.implement.a.a(4, "FileUploadActionRequest", this.f + " decode actionResponse header:" + map.toString());
         }
         return i33Var;
     }
 
-    @Override // com.uploader.implement.a.InterfaceC7373e
+    @Override // com.uploader.implement.a.e
     public i83 b() {
         return this.g;
     }
 
-    @Override // com.uploader.implement.a.InterfaceC7373e
+    @Override // com.uploader.implement.a.e
     /* renamed from: d */
-    public C7393f a() {
-        C7393f c7393f = this.c;
-        if (c7393f != null) {
-            return c7393f;
+    public com.uploader.implement.b.a.f a() {
+        com.uploader.implement.b.a.f fVar = this.c;
+        if (fVar != null) {
+            return fVar;
         }
         Object obj = this.e.second;
-        C7393f c7393f2 = new C7393f((String) ((Pair) obj).first, ((Integer) ((Pair) obj).second).intValue(), true, ((Boolean) this.e.first).booleanValue());
-        this.c = c7393f2;
-        return c7393f2;
+        com.uploader.implement.b.a.f fVar2 = new com.uploader.implement.b.a.f((String) ((Pair) obj).first, ((Integer) ((Pair) obj).second).intValue(), true, ((Boolean) this.e.first).booleanValue());
+        this.c = fVar2;
+        return fVar2;
     }
 
     private final String b(long j, long j2, String str) throws Exception {
@@ -188,8 +182,8 @@ public class d53 implements InterfaceC7373e {
             sb3.append(valueOf);
             String signature = this.i.b.signature(sb3.toString());
             if (TextUtils.isEmpty(signature)) {
-                if (C7364a.d(16)) {
-                    C7364a.a(16, "FileUploadActionRequest", this.f + " compute upload sign failed.");
+                if (com.uploader.implement.a.d(16)) {
+                    com.uploader.implement.a.a(16, "FileUploadActionRequest", this.f + " compute upload sign failed.");
                 }
                 throw new Exception("compute api sign failed.");
             }
@@ -209,7 +203,7 @@ public class d53 implements InterfaceC7373e {
             for (Map.Entry entry : hashMap.entrySet()) {
                 sb.append((String) entry.getKey());
                 sb.append(":");
-                sb.append(C7371b.e((String) entry.getValue()));
+                sb.append(com.uploader.implement.a.c.b.e((String) entry.getValue()));
                 sb.append(SocketClient.NETASCII_EOL);
             }
             sb.append(SocketClient.NETASCII_EOL);
@@ -235,16 +229,16 @@ public class d53 implements InterfaceC7373e {
                 }
                 sb.append("x-arup-meta");
                 sb.append(":");
-                sb.append(C7371b.e(jSONObject.toString()));
+                sb.append(com.uploader.implement.a.c.b.e(jSONObject.toString()));
                 sb.append(SocketClient.NETASCII_EOL);
             }
             sb.append("x-arup-file-md5");
             sb.append(":");
-            sb.append(C7371b.e(this.b.g));
+            sb.append(com.uploader.implement.a.c.b.e(this.b.g));
             sb.append(SocketClient.NETASCII_EOL);
             sb.append("x-arup-file-name");
             sb.append(":");
-            sb.append(C7371b.e(this.b.c));
+            sb.append(com.uploader.implement.a.c.b.e(this.b.c));
             sb.append(SocketClient.NETASCII_EOL);
             sb.append("x-arup-range");
             sb.append(":");
@@ -260,7 +254,7 @@ public class d53 implements InterfaceC7373e {
         if (sb == null) {
             return null;
         }
-        if (C7364a.d(2)) {
+        if (com.uploader.implement.a.d(2)) {
             String sb4 = sb.toString();
             String str3 = "";
             while (true) {
@@ -271,7 +265,7 @@ public class d53 implements InterfaceC7373e {
                 str3 = str3 + sb4.substring(i, indexOf) + StringUtils.LF;
                 i = indexOf + 2;
             }
-            C7364a.a(2, "FileUploadActionRequest", this.f + " create upload header:" + str3);
+            com.uploader.implement.a.a(2, "FileUploadActionRequest", this.f + " create upload header:" + str3);
         }
         return sb.toString();
     }
@@ -280,13 +274,13 @@ public class d53 implements InterfaceC7373e {
         r13 = r13 - r2.available();
      */
     /* JADX WARN: Removed duplicated region for block: B:84:0x000b A[SYNTHETIC] */
-    @Override // com.uploader.implement.a.InterfaceC7373e
+    @Override // com.uploader.implement.a.e
     @androidx.annotation.NonNull
     /*
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public android.util.Pair<com.uploader.implement.a.InterfaceC7374f, java.lang.Integer> a(java.util.Map<java.lang.String, java.lang.String> r10, byte[] r11, int r12, int r13) {
+    public android.util.Pair<com.uploader.implement.a.f, java.lang.Integer> a(java.util.Map<java.lang.String, java.lang.String> r10, byte[] r11, int r12, int r13) {
         /*
             r9 = this;
             java.lang.String r0 = " divide"
@@ -330,7 +324,7 @@ public class d53 implements InterfaceC7373e {
             goto L9a
         L3a:
             r2 = move-exception
-            boolean r4 = com.uploader.implement.C7364a.d(r5)
+            boolean r4 = com.uploader.implement.a.d(r5)
             if (r4 == 0) goto L9a
             java.lang.StringBuilder r4 = new java.lang.StringBuilder
             r4.<init>()
@@ -338,7 +332,7 @@ public class d53 implements InterfaceC7373e {
             r4.append(r7)
             r4.append(r0)
             java.lang.String r0 = r4.toString()
-            com.uploader.implement.C7364a.b(r5, r1, r0, r2)
+            com.uploader.implement.a.b(r5, r1, r0, r2)
             goto L9a
         L56:
             if (r4 == 0) goto Lb
@@ -349,7 +343,7 @@ public class d53 implements InterfaceC7373e {
         L5b:
             r13 = move-exception
             r4 = 16
-            boolean r7 = com.uploader.implement.C7364a.d(r4)     // Catch: java.lang.Throwable -> L59
+            boolean r7 = com.uploader.implement.a.d(r4)     // Catch: java.lang.Throwable -> L59
             if (r7 == 0) goto L7a
             java.lang.StringBuilder r7 = new java.lang.StringBuilder     // Catch: java.lang.Throwable -> L59
             r7.<init>()     // Catch: java.lang.Throwable -> L59
@@ -358,13 +352,13 @@ public class d53 implements InterfaceC7373e {
             java.lang.String r8 = " divide, exception"
             r7.append(r8)     // Catch: java.lang.Throwable -> L59
             java.lang.String r7 = r7.toString()     // Catch: java.lang.Throwable -> L59
-            com.uploader.implement.C7364a.b(r4, r1, r7, r13)     // Catch: java.lang.Throwable -> L59
+            com.uploader.implement.a.b(r4, r1, r7, r13)     // Catch: java.lang.Throwable -> L59
         L7a:
             r2.close()     // Catch: java.io.IOException -> L7e
             goto L99
         L7e:
             r13 = move-exception
-            boolean r2 = com.uploader.implement.C7364a.d(r5)
+            boolean r2 = com.uploader.implement.a.d(r5)
             if (r2 == 0) goto L99
             java.lang.StringBuilder r2 = new java.lang.StringBuilder
             r2.<init>()
@@ -372,7 +366,7 @@ public class d53 implements InterfaceC7373e {
             r2.append(r4)
             r2.append(r0)
             java.lang.String r0 = r2.toString()
-            com.uploader.implement.C7364a.b(r5, r1, r0, r13)
+            com.uploader.implement.a.b(r5, r1, r0, r13)
         L99:
             r13 = -1
         L9a:
@@ -398,7 +392,7 @@ public class d53 implements InterfaceC7373e {
             goto Ld8
         Lbd:
             r11 = move-exception
-            boolean r12 = com.uploader.implement.C7364a.d(r5)
+            boolean r12 = com.uploader.implement.a.d(r5)
             if (r12 == 0) goto Ld8
             java.lang.StringBuilder r12 = new java.lang.StringBuilder
             r12.<init>()
@@ -406,7 +400,7 @@ public class d53 implements InterfaceC7373e {
             r12.append(r13)
             r12.append(r0)
             java.lang.String r12 = r12.toString()
-            com.uploader.implement.C7364a.b(r5, r1, r12, r11)
+            com.uploader.implement.a.b(r5, r1, r12, r11)
         Ld8:
             throw r10
         */

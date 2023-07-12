@@ -10,8 +10,8 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import kotlin.collections.ArraysKt___ArraysKt;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
+import kotlin.collections.m;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.runtime.structure.ReflectJavaAnnotationOwner;
 import kotlin.reflect.jvm.internal.impl.descriptors.runtime.structure.ReflectJavaModifierListOwner;
@@ -66,14 +66,14 @@ public final class ReflectJavaClass extends g02 implements ReflectJavaAnnotation
     @Nullable
     /* renamed from: b */
     public vz1 findAnnotation(@NotNull hp0 hp0Var) {
-        return ReflectJavaAnnotationOwner.C8322a.a(this, hp0Var);
+        return ReflectJavaAnnotationOwner.a.a(this, hp0Var);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotationOwner
     @NotNull
     /* renamed from: c */
     public List<vz1> getAnnotations() {
-        return ReflectJavaAnnotationOwner.C8322a.b(this);
+        return ReflectJavaAnnotationOwner.a.b(this);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClass
@@ -83,14 +83,12 @@ public final class ReflectJavaClass extends g02 implements ReflectJavaAnnotation
         Sequence o;
         Sequence p;
         Sequence v;
-        List<f02> B;
         Constructor<?>[] declaredConstructors = this.a.getDeclaredConstructors();
         b41.h(declaredConstructors, "klass.declaredConstructors");
         o = ArraysKt___ArraysKt.o(declaredConstructors);
         p = SequencesKt___SequencesKt.p(o, ReflectJavaClass$constructors$1.INSTANCE);
         v = SequencesKt___SequencesKt.v(p, ReflectJavaClass$constructors$2.INSTANCE);
-        B = SequencesKt___SequencesKt.B(v);
-        return B;
+        return SequencesKt___SequencesKt.B(v);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.runtime.structure.ReflectJavaAnnotationOwner
@@ -111,14 +109,12 @@ public final class ReflectJavaClass extends g02 implements ReflectJavaAnnotation
         Sequence o;
         Sequence p;
         Sequence v;
-        List<i02> B;
         Field[] declaredFields = this.a.getDeclaredFields();
         b41.h(declaredFields, "klass.declaredFields");
         o = ArraysKt___ArraysKt.o(declaredFields);
         p = SequencesKt___SequencesKt.p(o, ReflectJavaClass$fields$1.INSTANCE);
         v = SequencesKt___SequencesKt.v(p, ReflectJavaClass$fields$2.INSTANCE);
-        B = SequencesKt___SequencesKt.B(v);
-        return B;
+        return SequencesKt___SequencesKt.B(v);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClass
@@ -128,7 +124,6 @@ public final class ReflectJavaClass extends g02 implements ReflectJavaAnnotation
         Sequence o;
         Sequence p;
         Sequence w;
-        List<ni1> B;
         Class<?>[] declaredClasses = this.a.getDeclaredClasses();
         b41.h(declaredClasses, "klass.declaredClasses");
         o = ArraysKt___ArraysKt.o(declaredClasses);
@@ -155,8 +150,7 @@ public final class ReflectJavaClass extends g02 implements ReflectJavaAnnotation
                 return ni1.f(simpleName);
             }
         });
-        B = SequencesKt___SequencesKt.B(w);
-        return B;
+        return SequencesKt___SequencesKt.B(w);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClass
@@ -190,7 +184,7 @@ public final class ReflectJavaClass extends g02 implements ReflectJavaAnnotation
     @NotNull
     public Collection<JavaClassifierType> getPermittedTypes() {
         List g;
-        g = C8214m.g();
+        g = m.g();
         return g;
     }
 
@@ -198,7 +192,7 @@ public final class ReflectJavaClass extends g02 implements ReflectJavaAnnotation
     @NotNull
     public Collection<JavaRecordComponent> getRecordComponents() {
         List g;
-        g = C8214m.g();
+        g = m.g();
         return g;
     }
 
@@ -211,7 +205,7 @@ public final class ReflectJavaClass extends g02 implements ReflectJavaAnnotation
         List g;
         cls = Object.class;
         if (b41.d(this.a, cls)) {
-            g = C8214m.g();
+            g = m.g();
             return g;
         }
         if2 if2Var = new if2(2);
@@ -220,8 +214,8 @@ public final class ReflectJavaClass extends g02 implements ReflectJavaAnnotation
         Type[] genericInterfaces = this.a.getGenericInterfaces();
         b41.h(genericInterfaces, "klass.genericInterfaces");
         if2Var.b(genericInterfaces);
-        j = C8214m.j(if2Var.d(new Type[if2Var.c()]));
-        q = C8215n.q(j, 10);
+        j = m.j(if2Var.d(new Type[if2Var.c()]));
+        q = n.q(j, 10);
         ArrayList arrayList = new ArrayList(q);
         for (Type type : j) {
             arrayList.add(new e02(type));
@@ -244,7 +238,7 @@ public final class ReflectJavaClass extends g02 implements ReflectJavaAnnotation
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaModifierListOwner
     @NotNull
     public uy2 getVisibility() {
-        return ReflectJavaModifierListOwner.C8323a.a(this);
+        return ReflectJavaModifierListOwner.a.a(this);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClass
@@ -254,7 +248,6 @@ public final class ReflectJavaClass extends g02 implements ReflectJavaAnnotation
         Sequence o;
         Sequence o2;
         Sequence v;
-        List<l02> B;
         Method[] declaredMethods = this.a.getDeclaredMethods();
         b41.h(declaredMethods, "klass.declaredMethods");
         o = ArraysKt___ArraysKt.o(declaredMethods);
@@ -300,8 +293,7 @@ public final class ReflectJavaClass extends g02 implements ReflectJavaAnnotation
             }
         });
         v = SequencesKt___SequencesKt.v(o2, ReflectJavaClass$methods$2.INSTANCE);
-        B = SequencesKt___SequencesKt.B(v);
-        return B;
+        return SequencesKt___SequencesKt.B(v);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClass
@@ -326,7 +318,7 @@ public final class ReflectJavaClass extends g02 implements ReflectJavaAnnotation
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaModifierListOwner
     public boolean isAbstract() {
-        return ReflectJavaModifierListOwner.C8323a.b(this);
+        return ReflectJavaModifierListOwner.a.b(this);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClass
@@ -336,7 +328,7 @@ public final class ReflectJavaClass extends g02 implements ReflectJavaAnnotation
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotationOwner
     public boolean isDeprecatedInJavaDoc() {
-        return ReflectJavaAnnotationOwner.C8322a.c(this);
+        return ReflectJavaAnnotationOwner.a.c(this);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClass
@@ -346,7 +338,7 @@ public final class ReflectJavaClass extends g02 implements ReflectJavaAnnotation
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaModifierListOwner
     public boolean isFinal() {
-        return ReflectJavaModifierListOwner.C8323a.c(this);
+        return ReflectJavaModifierListOwner.a.c(this);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClass
@@ -366,7 +358,7 @@ public final class ReflectJavaClass extends g02 implements ReflectJavaAnnotation
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaModifierListOwner
     public boolean isStatic() {
-        return ReflectJavaModifierListOwner.C8323a.d(this);
+        return ReflectJavaModifierListOwner.a.d(this);
     }
 
     @NotNull

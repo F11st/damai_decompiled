@@ -47,11 +47,11 @@ public class f20 implements IDXVideoControlCenter {
             p = new j20();
         }
         DXVideoController dXVideoController = new DXVideoController(recyclerView, new m20(i20Var, p, dXVideoControlConfig.n() == 1, dXVideoControlConfig.t()), new l20(dXVideoControlConfig.l()));
-        pz1.C9584b c9584b = new pz1.C9584b(recyclerView, new r00(dXVideoController, dXVideoControlConfig.s(), dXVideoControlConfig.r(), dXVideoControlConfig.u()));
+        pz1.b bVar = new pz1.b(recyclerView, new r00(dXVideoController, dXVideoControlConfig.s(), dXVideoControlConfig.r(), dXVideoControlConfig.u()));
         for (String str : dXVideoController.scenes()) {
-            c9584b.d(new h20(dXVideoController, dXVideoControlConfig.q(), dXVideoControlConfig.u()), dXVideoControlConfig.m(), str);
+            bVar.d(new h20(dXVideoController, dXVideoControlConfig.q(), dXVideoControlConfig.u()), dXVideoControlConfig.m(), str);
         }
-        this.b.put(recyclerView, new Pair<>(c9584b.a(), dXVideoController));
+        this.b.put(recyclerView, new Pair<>(bVar.a(), dXVideoController));
     }
 
     @Override // com.taobao.android.dinamicx.videoc.IDXVideoControlCenter

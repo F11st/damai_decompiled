@@ -14,8 +14,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.pay.AliPayActivity;
@@ -45,7 +45,7 @@ public class OrderModifyAddressActivity extends DamaiBaseActivity<OrderAddressMo
     private String mAddressId;
     private LinearLayout mAddressLayout;
     private Button mAddressModifySubmit;
-    private View.OnClickListener mClickListener = new View$OnClickListenerC2182a();
+    private View.OnClickListener mClickListener = new a();
     private TextView mFreightTv;
     private LayoutInflater mInflater;
     private View mMainView;
@@ -60,18 +60,17 @@ public class OrderModifyAddressActivity extends DamaiBaseActivity<OrderAddressMo
     private TextView mTipTv;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderModifyAddressActivity$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2182a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderModifyAddressActivity$a$a */
+        /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderModifyAddressActivity$a$a  reason: collision with other inner class name */
         /* loaded from: classes16.dex */
-        public class DialogInterface$OnClickListenerC2183a implements DialogInterface.OnClickListener {
+        public class DialogInterface$OnClickListenerC0081a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC2183a() {
+            DialogInterface$OnClickListenerC0081a() {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -81,7 +80,7 @@ public class OrderModifyAddressActivity extends DamaiBaseActivity<OrderAddressMo
                     ipChange.ipc$dispatch("-1894074769", new Object[]{this, dialogInterface, Integer.valueOf(i)});
                     return;
                 }
-                C0529c.e().x(pp2.u().k(OrderModifyAddressActivity.this.mOrderId, OrderModifyAddressActivity.this.mProjectId));
+                c.e().x(pp2.u().k(OrderModifyAddressActivity.this.mOrderId, OrderModifyAddressActivity.this.mProjectId));
                 OrderModifyAddressActivity.this.mAddressModifySubmit.setEnabled(false);
                 OrderModifyAddressActivity.this.mPayFreightLayout.setEnabled(false);
                 OrderModifyAddressActivity orderModifyAddressActivity = OrderModifyAddressActivity.this;
@@ -90,12 +89,11 @@ public class OrderModifyAddressActivity extends DamaiBaseActivity<OrderAddressMo
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderModifyAddressActivity$a$b */
         /* loaded from: classes16.dex */
-        public class DialogInterface$OnClickListenerC2184b implements DialogInterface.OnClickListener {
+        public class b implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC2184b() {
+            b() {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -104,12 +102,12 @@ public class OrderModifyAddressActivity extends DamaiBaseActivity<OrderAddressMo
                 if (AndroidInstantRuntime.support(ipChange, "-924493746")) {
                     ipChange.ipc$dispatch("-924493746", new Object[]{this, dialogInterface, Integer.valueOf(i)});
                 } else {
-                    C0529c.e().x(pp2.u().j(OrderModifyAddressActivity.this.mOrderId, OrderModifyAddressActivity.this.mProjectId));
+                    c.e().x(pp2.u().j(OrderModifyAddressActivity.this.mOrderId, OrderModifyAddressActivity.this.mProjectId));
                 }
             }
         }
 
-        View$OnClickListenerC2182a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -129,8 +127,8 @@ public class OrderModifyAddressActivity extends DamaiBaseActivity<OrderAddressMo
                 ModifyAddressDialog modifyAddressDialog = new ModifyAddressDialog(OrderModifyAddressActivity.this.mContext);
                 modifyAddressDialog.b(OrderModifyAddressActivity.this.mOrderAddressModifyInfo.newDeliveryInfo);
                 modifyAddressDialog.setCancelable(true);
-                modifyAddressDialog.d(new DialogInterface$OnClickListenerC2183a());
-                modifyAddressDialog.c(new DialogInterface$OnClickListenerC2184b());
+                modifyAddressDialog.d(new DialogInterface$OnClickListenerC0081a());
+                modifyAddressDialog.c(new b());
                 modifyAddressDialog.show();
                 pp2.u().l(OrderModifyAddressActivity.this.mOrderId, OrderModifyAddressActivity.this.mProjectId);
             }
@@ -221,7 +219,7 @@ public class OrderModifyAddressActivity extends DamaiBaseActivity<OrderAddressMo
             }
             pp2 u = pp2.u();
             String str = this.mOrderId;
-            C0529c.e().x(u.y2(E, str, i + ""));
+            c.e().x(u.y2(E, str, i + ""));
         }
     }
 
@@ -373,7 +371,7 @@ public class OrderModifyAddressActivity extends DamaiBaseActivity<OrderAddressMo
         this.mFreightTv = (TextView) findViewById(R$id.tv_freight);
         hideView();
         getIntentData();
-        setDamaiUTKeyBuilder(new C0525a.C0527b().h(this.mOrderId).i(pp2.ORDER_MODIFY_ADDRESS_PAGE));
+        setDamaiUTKeyBuilder(new a.b().h(this.mOrderId).i(pp2.ORDER_MODIFY_ADDRESS_PAGE));
         requestModifyAddressInfo(this.mOrderId, this.mAddressId);
     }
 
@@ -420,7 +418,7 @@ public class OrderModifyAddressActivity extends DamaiBaseActivity<OrderAddressMo
             ipChange.ipc$dispatch("-1696678760", new Object[]{this, str});
             return;
         }
-        C0529c.e().x(pp2.u().l1(z20.E(), this.mOrderId));
+        c.e().x(pp2.u().l1(z20.E(), this.mOrderId));
         Bundle bundle = new Bundle();
         bundle.putString("dm_bundle_address_id", str);
         DMNav.from(this).withExtras(bundle).forResult(1102).toUri(NavUri.b("purchase_address_list"));

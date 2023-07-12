@@ -46,10 +46,10 @@ public final class vz1 extends g02 implements JavaAnnotation {
         b41.h(declaredMethods, "annotation.annotationClass.java.declaredMethods");
         ArrayList arrayList = new ArrayList(declaredMethods.length);
         for (Method method : declaredMethods) {
-            wz1.C9889a c9889a = wz1.Factory;
+            wz1.a aVar = wz1.Factory;
             Object invoke = method.invoke(a(), new Object[0]);
             b41.h(invoke, "method.invoke(annotation)");
-            arrayList.add(c9889a.a(invoke, ni1.f(method.getName())));
+            arrayList.add(aVar.a(invoke, ni1.f(method.getName())));
         }
         return arrayList;
     }
@@ -66,12 +66,12 @@ public final class vz1 extends g02 implements JavaAnnotation {
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotation
     public boolean isFreshlySupportedTypeUseAnnotation() {
-        return JavaAnnotation.C8357a.a(this);
+        return JavaAnnotation.a.a(this);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotation
     public boolean isIdeExternalAnnotation() {
-        return JavaAnnotation.C8357a.b(this);
+        return JavaAnnotation.a.b(this);
     }
 
     @NotNull

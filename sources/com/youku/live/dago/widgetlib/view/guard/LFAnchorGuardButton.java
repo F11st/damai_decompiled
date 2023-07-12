@@ -124,7 +124,7 @@ public class LFAnchorGuardButton extends FrameLayout implements IDestroyable, IA
         this.supportAsyncInflater = AsyncInflaterUtils.supportAsyncInflater();
         this.params = new HashMap<>();
         if (this.supportAsyncInflater) {
-            new AsyncLayoutInflater(getContext()).inflate(R.C7942layout.dago_lf_guard_btn_layout, this, new AsyncLayoutInflater.OnInflateFinishedListener() { // from class: com.youku.live.dago.widgetlib.view.guard.LFAnchorGuardButton.1
+            new AsyncLayoutInflater(getContext()).inflate(R.layout.dago_lf_guard_btn_layout, this, new AsyncLayoutInflater.OnInflateFinishedListener() { // from class: com.youku.live.dago.widgetlib.view.guard.LFAnchorGuardButton.1
                 private static transient /* synthetic */ IpChange $ipChange;
 
                 @Override // androidx.asynclayoutinflater.view.AsyncLayoutInflater.OnInflateFinishedListener
@@ -186,7 +186,7 @@ public class LFAnchorGuardButton extends FrameLayout implements IDestroyable, IA
             });
             return;
         }
-        View inflate = LayoutInflater.from(context).inflate(R.C7942layout.dago_lf_guard_btn_layout, (ViewGroup) this, false);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.dago_lf_guard_btn_layout, (ViewGroup) this, false);
         this.mInflateRoot = inflate;
         this.mTextShouhu = (FrameLayout) inflate.findViewById(R.id.guard_btn_layout);
         this.mTextShouhuNum = (TextView) this.mInflateRoot.findViewById(R.id.guard_num_text);

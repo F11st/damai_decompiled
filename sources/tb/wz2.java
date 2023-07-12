@@ -15,9 +15,8 @@ public class wz2 {
     private static final AtomicInteger a = new AtomicInteger(0);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.wz2$a */
     /* loaded from: classes11.dex */
-    public static class C9890a {
+    public static class a {
         public String a;
         public String c;
         public String f;
@@ -26,7 +25,7 @@ public class wz2 {
         public String i;
         public String j;
         public double l;
-        public SparseArray<C9890a> m;
+        public SparseArray<a> m;
         public String n;
         public double o;
         public boolean p;
@@ -48,9 +47,8 @@ public class wz2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.wz2$b */
     /* loaded from: classes11.dex */
-    public static class C9891b {
+    public static class b {
         public int a;
         public long b;
         public long c = -1;
@@ -67,24 +65,24 @@ public class wz2 {
         return WXEnvironment.isApkDebugable();
     }
 
-    public static C9890a c(String str, String str2, int i) {
-        C9890a c9890a = new C9890a();
-        c9890a.a = str;
-        c9890a.f = str2;
-        c9890a.d = d();
-        c9890a.k = i;
-        return c9890a;
+    public static a c(String str, String str2, int i) {
+        a aVar = new a();
+        aVar.a = str;
+        aVar.f = str2;
+        aVar.d = d();
+        aVar.k = i;
+        return aVar;
     }
 
     public static int d() {
         return a.getAndIncrement();
     }
 
-    public static synchronized void e(C9890a c9890a) {
+    public static synchronized void e(a aVar) {
         synchronized (wz2.class) {
             ITracingAdapter z = WXSDKManager.v().z();
             if (z != null) {
-                z.submitTracingEvent(c9890a);
+                z.submitTracingEvent(aVar);
             }
         }
     }

@@ -149,9 +149,9 @@ public class ChipTextInputComboView extends FrameLayout implements Checkable {
     public ChipTextInputComboView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         LayoutInflater from = LayoutInflater.from(context);
-        Chip chip = (Chip) from.inflate(R.C4818layout.material_time_chip, (ViewGroup) this, false);
+        Chip chip = (Chip) from.inflate(R.layout.material_time_chip, (ViewGroup) this, false);
         this.chip = chip;
-        TextInputLayout textInputLayout = (TextInputLayout) from.inflate(R.C4818layout.material_time_input, (ViewGroup) this, false);
+        TextInputLayout textInputLayout = (TextInputLayout) from.inflate(R.layout.material_time_input, (ViewGroup) this, false);
         this.textInputLayout = textInputLayout;
         EditText editText = textInputLayout.getEditText();
         this.editText = editText;

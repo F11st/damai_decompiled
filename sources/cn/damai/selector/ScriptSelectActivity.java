@@ -55,7 +55,7 @@ public final class ScriptSelectActivity extends SimpleBaseActivity {
 
     /* JADX INFO: Access modifiers changed from: protected */
     /* JADX WARN: Code restructure failed: missing block: B:14:0x005f, code lost:
-        r6 = kotlin.text.C8603n.i(r6);
+        r6 = kotlin.text.n.i(r6);
      */
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity, cn.damai.common.app.base.BaseActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     /*
@@ -106,7 +106,7 @@ public final class ScriptSelectActivity extends SimpleBaseActivity {
             java.lang.String r0 = "pageType"
             java.lang.String r6 = r6.getString(r0)
             if (r6 == 0) goto L69
-            java.lang.Integer r6 = kotlin.text.C8596g.i(r6)
+            java.lang.Integer r6 = kotlin.text.g.i(r6)
             if (r6 == 0) goto L69
             int r4 = r6.intValue()
         L69:
@@ -120,7 +120,7 @@ public final class ScriptSelectActivity extends SimpleBaseActivity {
             r0.<init>()
             cn.damai.common.user.a$b r6 = r0.i(r6)
             r5.setDamaiUTKeyBuilder(r6)
-            cn.damai.common.user.c r6 = cn.damai.common.user.C0529c.e()
+            cn.damai.common.user.c r6 = cn.damai.common.user.c.e()
             r6.K(r5)
             return
         */

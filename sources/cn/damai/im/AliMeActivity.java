@@ -5,7 +5,7 @@ import androidx.annotation.Nullable;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import com.alimm.xadsdk.base.expose.MonitorType;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -70,7 +70,7 @@ public class AliMeActivity extends DamaiBaseActivity {
         if (extras != null) {
             extras.putBoolean("refreshable", false);
             extras.putBoolean(MonitorType.SKIP, true);
-            DMNav.from(this).withExtras(extras).toUri(NavUri.b(C3834a.C3837c.d));
+            DMNav.from(this).withExtras(extras).toUri(NavUri.b(a.c.d));
         }
         finish();
     }

@@ -23,12 +23,11 @@ public class fk extends BaseExpandableListAdapter implements ExpandableListView.
     private Context e;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.fk$a */
     /* loaded from: classes10.dex */
-    public final class C4545a {
+    public final class a {
         public fo a;
 
-        public C4545a() {
+        public a() {
         }
     }
 
@@ -61,19 +60,19 @@ public class fk extends BaseExpandableListAdapter implements ExpandableListView.
 
     @Override // android.widget.ExpandableListAdapter
     public View getChildView(int i, int i2, boolean z, View view, ViewGroup viewGroup) {
-        C4545a c4545a;
+        a aVar;
         if (view != null) {
-            c4545a = (C4545a) view.getTag();
+            aVar = (a) view.getTag();
         } else {
-            c4545a = new C4545a();
+            aVar = new a();
             fo foVar = new fo(this.e, this.d);
             foVar.a(1);
-            View a = foVar.a();
-            c4545a.a = foVar;
-            a.setTag(c4545a);
-            view = a;
+            View a2 = foVar.a();
+            aVar.a = foVar;
+            a2.setTag(aVar);
+            view = a2;
         }
-        c4545a.a.a(this.c.get(i).getCityList().get(i2));
+        aVar.a.a(this.c.get(i).getCityList().get(i2));
         return view;
     }
 

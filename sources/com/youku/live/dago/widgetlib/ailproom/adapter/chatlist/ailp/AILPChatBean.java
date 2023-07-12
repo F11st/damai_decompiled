@@ -2,7 +2,7 @@ package com.youku.live.dago.widgetlib.ailproom.adapter.chatlist.ailp;
 
 import android.graphics.Color;
 import android.text.TextUtils;
-import com.alipay.sdk.m.s.C4293a;
+import com.alipay.sdk.m.s.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.weex.common.Constants;
@@ -325,7 +325,7 @@ public class AILPChatBean {
         this.an = new ArrayList();
         try {
             this.bn = parseImages(map.get("bn"));
-            this.an = parseImages(map.get(C4293a.u));
+            this.an = parseImages(map.get(a.u));
         } catch (Exception e) {
             e.printStackTrace();
         }

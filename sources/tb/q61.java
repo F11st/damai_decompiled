@@ -2,7 +2,6 @@ package tb;
 
 import java.io.InputStream;
 import java.util.List;
-import kotlin.collections.C8214m;
 import kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltInClassDescriptorFactory;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.NotFoundClasses;
@@ -26,16 +25,15 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public final class q61 extends AbstractDeserializedPackageFragmentProvider {
     @NotNull
-    public static final C9596a Companion = new C9596a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.q61$a */
     /* loaded from: classes3.dex */
-    public static final class C9596a {
-        private C9596a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9596a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -54,15 +52,15 @@ public final class q61 extends AbstractDeserializedPackageFragmentProvider {
         b41.i(newKotlinTypeChecker, "kotlinTypeChecker");
         b41.i(samConversionResolver, "samConversionResolver");
         m70 m70Var = new m70(this);
-        C8906ae c8906ae = C8906ae.INSTANCE;
-        z5 z5Var = new z5(moduleDescriptor, notFoundClasses, c8906ae);
-        LocalClassifierTypeSettings.C8510a c8510a = LocalClassifierTypeSettings.C8510a.INSTANCE;
+        ae aeVar = ae.INSTANCE;
+        z5 z5Var = new z5(moduleDescriptor, notFoundClasses, aeVar);
+        LocalClassifierTypeSettings.a aVar = LocalClassifierTypeSettings.a.INSTANCE;
         ErrorReporter errorReporter = ErrorReporter.DO_NOTHING;
         b41.h(errorReporter, "DO_NOTHING");
-        LookupTracker.C8324a c8324a = LookupTracker.C8324a.INSTANCE;
-        FlexibleTypeDeserializer.C8509a c8509a = FlexibleTypeDeserializer.C8509a.INSTANCE;
-        j = C8214m.j(new zd(storageManager, moduleDescriptor), new JvmBuiltInClassDescriptorFactory(storageManager, moduleDescriptor, null, 4, null));
-        f(new h70(storageManager, moduleDescriptor, deserializationConfiguration, m70Var, z5Var, this, c8510a, errorReporter, c8324a, c8509a, j, notFoundClasses, ContractDeserializer.Companion.a(), additionalClassPartsProvider, platformDependentDeclarationFilter, c8906ae.e(), newKotlinTypeChecker, samConversionResolver, null, 262144, null));
+        LookupTracker.a aVar2 = LookupTracker.a.INSTANCE;
+        FlexibleTypeDeserializer.a aVar3 = FlexibleTypeDeserializer.a.INSTANCE;
+        j = kotlin.collections.m.j(new zd(storageManager, moduleDescriptor), new JvmBuiltInClassDescriptorFactory(storageManager, moduleDescriptor, null, 4, null));
+        f(new h70(storageManager, moduleDescriptor, deserializationConfiguration, m70Var, z5Var, this, aVar, errorReporter, aVar2, aVar3, j, notFoundClasses, ContractDeserializer.Companion.a(), additionalClassPartsProvider, platformDependentDeclarationFilter, aeVar.e(), newKotlinTypeChecker, samConversionResolver, null, 262144, null));
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.serialization.deserialization.AbstractDeserializedPackageFragmentProvider

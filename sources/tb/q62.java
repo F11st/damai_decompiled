@@ -27,12 +27,11 @@ public class q62 {
     private DMIconFontTextView h;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.q62$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9597a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9597a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -47,12 +46,11 @@ public class q62 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.q62$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9598b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9598b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -67,12 +65,11 @@ public class q62 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.q62$c */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9599c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9599c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -92,8 +89,8 @@ public class q62 {
         View findViewById = view.findViewById(R$id.layout_tab1);
         int i = R$id.layout_tab2;
         View findViewById2 = view.findViewById(i);
-        findViewById.setOnClickListener(new View$OnClickListenerC9597a());
-        findViewById2.setOnClickListener(new View$OnClickListenerC9598b());
+        findViewById.setOnClickListener(new a());
+        findViewById2.setOnClickListener(new b());
         this.f = (SwitchButton) view.findViewById(R$id.switch_btn);
         ArrayList arrayList = new ArrayList();
         Option option = new Option();
@@ -113,7 +110,7 @@ public class q62 {
         arrayList.add(option3);
         this.f.setOption(arrayList);
         this.f.setVisibility(0);
-        this.f.setBtnClickListener(new View$OnClickListenerC9599c());
+        this.f.setBtnClickListener(new c());
         this.d = (TextView) view.findViewById(R$id.tv_tab1);
         this.e = (TextView) view.findViewById(R$id.tv_tab2);
         this.g = (DMIconFontTextView) view.findViewById(R$id.icon_tab1);

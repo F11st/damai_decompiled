@@ -25,16 +25,15 @@ public final class TMNetworkPlugin extends TaoMaiApiPlugin {
     @NotNull
     public static final String BRIDGE_NAME = "TMNetWork";
     @NotNull
-    public static final C6992a Companion = new C6992a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMNetworkPlugin$a */
     /* loaded from: classes11.dex */
-    public static final class C6992a {
-        private C6992a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C6992a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

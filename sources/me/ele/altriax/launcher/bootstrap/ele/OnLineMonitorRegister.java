@@ -6,7 +6,7 @@ import android.os.Message;
 import android.util.Log;
 import com.taobao.android.task.Coordinator;
 import com.taobao.application.common.Apm;
-import com.taobao.application.common.C6673b;
+import com.taobao.application.common.b;
 import com.youku.danmaku.engine.danmaku.model.android.DanmakuFactory;
 import me.ele.altriax.launcher.bootstrap.ele.delegate.RegisterDelegate;
 
@@ -101,13 +101,13 @@ public class OnLineMonitorRegister implements RegisterDelegate {
 
     @Override // me.ele.altriax.launcher.bootstrap.ele.delegate.RegisterDelegate
     public void register() {
-        boolean z = C6673b.d().getBoolean("isApm", false);
+        boolean z = b.d().getBoolean("isApm", false);
         Log.e(TAG, "isApm:" + z);
-        C6673b.b(this.mOnAppLaunchListener);
+        b.b(this.mOnAppLaunchListener);
         if (this.mHandler != null) {
             long j = DELAY_MSG_BOOT_FINISHED;
             long j2 = 3500;
-            int i = C6673b.d().getInt("oldDeviceScore", 60);
+            int i = b.d().getInt("oldDeviceScore", 60);
             if (i >= 75 && i < 90) {
                 j2 = 5500;
                 j = 6500;

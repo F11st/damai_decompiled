@@ -7,7 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import cn.damai.category.discountticket.bean.biz.DtParams;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.share.ShareManager;
 import cn.damai.homepage.R$color;
@@ -121,7 +121,7 @@ public class DiscountTicketActivity extends DamaiBaseActivity {
         int i = this.mParams.type;
         if (i == 6) {
             setDamaiUTKeyBuilder(mv2.i());
-            C0529c.e().K(this);
+            c.e().K(this);
         } else if (i == 7) {
             setDamaiUTKeyBuilder(mv2.o());
         }

@@ -1,7 +1,6 @@
 package tb;
 
 import android.view.View;
-import com.taobao.android.dinamic.expressionv2.C6337g;
 import com.taobao.android.dinamic.log.DinamicLog;
 
 /* compiled from: Taobao */
@@ -22,7 +21,7 @@ public class r80 implements View.OnClickListener, View.OnLongClickListener {
         long nanoTime = System.nanoTime();
         try {
             this.a.f(view.getTag(a90.SUBDATA));
-            C6337g.d(view, this.b, this.a);
+            com.taobao.android.dinamic.expressionv2.g.d(view, this.b, this.a);
             DinamicLog.g(this.a.c(), this.c.a, System.nanoTime() - nanoTime);
         } catch (Throwable unused) {
             this.a.e().b().a(p80.ERROR_CODE_EVENT_HANDLER_EXCEPTION, this.c.a);
@@ -35,7 +34,7 @@ public class r80 implements View.OnClickListener, View.OnLongClickListener {
         long nanoTime = System.nanoTime();
         try {
             this.a.f(view.getTag(a90.SUBDATA));
-            C6337g.d(view, this.b, this.a);
+            com.taobao.android.dinamic.expressionv2.g.d(view, this.b, this.a);
             DinamicLog.g(this.a.c(), this.c.a, System.nanoTime() - nanoTime);
             return true;
         } catch (Throwable unused) {

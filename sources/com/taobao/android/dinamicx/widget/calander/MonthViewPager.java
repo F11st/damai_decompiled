@@ -17,7 +17,7 @@ public final class MonthViewPager extends ViewPager {
     private boolean isUpdateMonthView;
     private boolean isUsingScrollToCalendar;
     private int mCurrentViewHeight;
-    private C6488b mDelegate;
+    private com.taobao.android.dinamicx.widget.calander.b mDelegate;
     private int mMonthCount;
     private int mNextViewHeight;
     private int mPreViewHeight;
@@ -25,10 +25,9 @@ public final class MonthViewPager extends ViewPager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.calander.MonthViewPager$a */
     /* loaded from: classes11.dex */
-    public class C6485a implements ViewPager.OnPageChangeListener {
-        C6485a() {
+    public class a implements ViewPager.OnPageChangeListener {
+        a() {
         }
 
         @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener
@@ -56,7 +55,7 @@ public final class MonthViewPager extends ViewPager {
 
         @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener
         public void onPageSelected(int i) {
-            Calendar e = C6487a.e(i, MonthViewPager.this.mDelegate);
+            Calendar e = com.taobao.android.dinamicx.widget.calander.a.e(i, MonthViewPager.this.mDelegate);
             if (MonthViewPager.this.getVisibility() == 0) {
                 if (MonthViewPager.this.mDelegate.M != null && e.getYear() != MonthViewPager.this.mDelegate.M.getYear() && MonthViewPager.this.mDelegate.H != null) {
                     MonthViewPager.this.mDelegate.H.onYearChange(e.getYear());
@@ -74,7 +73,7 @@ public final class MonthViewPager extends ViewPager {
                 if (!e.isCurrentMonth()) {
                     MonthViewPager.this.mDelegate.L = e;
                 } else {
-                    MonthViewPager.this.mDelegate.L = C6487a.m(e, MonthViewPager.this.mDelegate);
+                    MonthViewPager.this.mDelegate.L = com.taobao.android.dinamicx.widget.calander.a.m(e, MonthViewPager.this.mDelegate);
                 }
                 MonthViewPager.this.mDelegate.M = MonthViewPager.this.mDelegate.L;
             }
@@ -93,7 +92,7 @@ public final class MonthViewPager extends ViewPager {
                 }
                 baseMonthView.invalidate();
                 if (MonthViewPager.this.mDelegate.J != null) {
-                    MonthViewPager.this.mDelegate.J.onMonthUIRangeChange(MonthViewPager.this.mDelegate.L, C6487a.f(e.getYear(), e.getMonth()), MonthViewPager.this.mDelegate.x(e.getYear(), e.getMonth()));
+                    MonthViewPager.this.mDelegate.J.onMonthUIRangeChange(MonthViewPager.this.mDelegate.L, com.taobao.android.dinamicx.widget.calander.a.f(e.getYear(), e.getMonth()), MonthViewPager.this.mDelegate.x(e.getYear(), e.getMonth()));
                 }
             }
             MonthViewPager.this.updateMonthViewHeight(e.getYear(), e.getMonth());
@@ -103,10 +102,9 @@ public final class MonthViewPager extends ViewPager {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.calander.MonthViewPager$b */
     /* loaded from: classes11.dex */
-    public final class C6486b extends PagerAdapter {
-        private C6486b() {
+    public final class b extends PagerAdapter {
+        private b() {
         }
 
         @Override // androidx.viewpager.widget.PagerAdapter
@@ -143,7 +141,7 @@ public final class MonthViewPager extends ViewPager {
             customMonthView.setSelectedCalendar(MonthViewPager.this.mDelegate.L);
             viewGroup.addView(customMonthView);
             if (i == MonthViewPager.this.getCurrentItem() && MonthViewPager.this.mDelegate.J != null) {
-                MonthViewPager.this.mDelegate.J.onMonthUIRangeChange(MonthViewPager.this.mDelegate.L, C6487a.f(v, v2), MonthViewPager.this.mDelegate.x(v, v2));
+                MonthViewPager.this.mDelegate.J.onMonthUIRangeChange(MonthViewPager.this.mDelegate.L, com.taobao.android.dinamicx.widget.calander.a.f(v, v2), MonthViewPager.this.mDelegate.x(v, v2));
             }
             return customMonthView;
         }
@@ -153,7 +151,7 @@ public final class MonthViewPager extends ViewPager {
             return view.equals(obj);
         }
 
-        /* synthetic */ C6486b(MonthViewPager monthViewPager, C6485a c6485a) {
+        /* synthetic */ b(MonthViewPager monthViewPager, a aVar) {
             this();
         }
     }
@@ -163,8 +161,8 @@ public final class MonthViewPager extends ViewPager {
     }
 
     private void init() {
-        setAdapter(new C6486b(this, null));
-        addOnPageChangeListener(new C6485a());
+        setAdapter(new b(this, null));
+        addOnPageChangeListener(new a());
     }
 
     private void notifyAdapterDataSetChanged() {
@@ -181,17 +179,17 @@ public final class MonthViewPager extends ViewPager {
             getLayoutParams().height = this.mCurrentViewHeight;
             return;
         }
-        this.mCurrentViewHeight = C6487a.k(i, i2, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
+        this.mCurrentViewHeight = com.taobao.android.dinamicx.widget.calander.a.k(i, i2, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
         if (i2 == 1) {
-            this.mPreViewHeight = C6487a.k(i - 1, 12, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
-            this.mNextViewHeight = C6487a.k(i, 2, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
+            this.mPreViewHeight = com.taobao.android.dinamicx.widget.calander.a.k(i - 1, 12, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
+            this.mNextViewHeight = com.taobao.android.dinamicx.widget.calander.a.k(i, 2, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
             return;
         }
-        this.mPreViewHeight = C6487a.k(i, i2 - 1, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
+        this.mPreViewHeight = com.taobao.android.dinamicx.widget.calander.a.k(i, i2 - 1, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
         if (i2 == 12) {
-            this.mNextViewHeight = C6487a.k(i + 1, 1, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
+            this.mNextViewHeight = com.taobao.android.dinamicx.widget.calander.a.k(i + 1, 1, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
         } else {
-            this.mNextViewHeight = C6487a.k(i, i2 + 1, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
+            this.mNextViewHeight = com.taobao.android.dinamicx.widget.calander.a.k(i, i2 + 1, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
         }
     }
 
@@ -220,9 +218,9 @@ public final class MonthViewPager extends ViewPager {
         calendar.setDay(i3);
         calendar.setCurrentDay(calendar.equals(this.mDelegate.g()));
         if (z3) {
-            C6488b c6488b = this.mDelegate;
-            c6488b.M = calendar;
-            c6488b.L = calendar;
+            com.taobao.android.dinamicx.widget.calander.b bVar = this.mDelegate;
+            bVar.M = calendar;
+            bVar.L = calendar;
         }
         int year = (((calendar.getYear() - this.mDelegate.t()) * 12) + calendar.getMonth()) - this.mDelegate.v();
         if (getCurrentItem() == year) {
@@ -251,7 +249,7 @@ public final class MonthViewPager extends ViewPager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public void scrollToCurrent(boolean z) {
-        C6488b c6488b;
+        com.taobao.android.dinamicx.widget.calander.b bVar;
         Calendar calendar;
         this.isUsingScrollToCalendar = true;
         int year = (((this.mDelegate.g().getYear() - this.mDelegate.t()) * 12) + this.mDelegate.g().getMonth()) - this.mDelegate.v();
@@ -264,10 +262,10 @@ public final class MonthViewPager extends ViewPager {
             baseMonthView.setSelectedCalendar(this.mDelegate.g());
             baseMonthView.invalidate();
         }
-        if (this.mDelegate.E == null || getVisibility() != 0 || (calendar = (c6488b = this.mDelegate).L) == null) {
+        if (this.mDelegate.E == null || getVisibility() != 0 || (calendar = (bVar = this.mDelegate).L) == null) {
             return;
         }
-        c6488b.E.onCalendarSelect(calendar, false);
+        bVar.E.onCalendarSelect(calendar, false);
     }
 
     @Override // androidx.viewpager.widget.ViewPager
@@ -276,16 +274,16 @@ public final class MonthViewPager extends ViewPager {
     }
 
     public void setScrollable(boolean z) {
-        C6488b c6488b = this.mDelegate;
-        if (c6488b != null) {
-            c6488b.V(z);
+        com.taobao.android.dinamicx.widget.calander.b bVar = this.mDelegate;
+        if (bVar != null) {
+            bVar.V(z);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public void setup(C6488b c6488b) {
-        this.mDelegate = c6488b;
-        updateMonthViewHeight(c6488b.g().getYear(), this.mDelegate.g().getMonth());
+    public void setup(com.taobao.android.dinamicx.widget.calander.b bVar) {
+        this.mDelegate = bVar;
+        updateMonthViewHeight(bVar.g().getYear(), this.mDelegate.g().getMonth());
         ViewGroup.LayoutParams layoutParams = getLayoutParams();
         layoutParams.height = this.mCurrentViewHeight;
         setLayoutParams(layoutParams);
@@ -299,26 +297,26 @@ public final class MonthViewPager extends ViewPager {
             baseMonthView.updateItemHeight();
             baseMonthView.requestLayout();
         }
-        C6488b c6488b = this.mDelegate;
-        Calendar calendar = c6488b.M;
+        com.taobao.android.dinamicx.widget.calander.b bVar = this.mDelegate;
+        Calendar calendar = bVar.M;
         if (calendar == null) {
-            calendar = c6488b.g();
+            calendar = bVar.g();
         }
-        if (!C6487a.q(calendar, this.mDelegate)) {
+        if (!com.taobao.android.dinamicx.widget.calander.a.q(calendar, this.mDelegate)) {
             calendar = this.mDelegate.s();
         }
         int year = calendar.getYear();
         int month = calendar.getMonth();
-        this.mCurrentViewHeight = C6487a.k(year, month, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
+        this.mCurrentViewHeight = com.taobao.android.dinamicx.widget.calander.a.k(year, month, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
         if (month == 1) {
-            this.mPreViewHeight = C6487a.k(year - 1, 12, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
-            this.mNextViewHeight = C6487a.k(year, 2, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
+            this.mPreViewHeight = com.taobao.android.dinamicx.widget.calander.a.k(year - 1, 12, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
+            this.mNextViewHeight = com.taobao.android.dinamicx.widget.calander.a.k(year, 2, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
         } else {
-            this.mPreViewHeight = C6487a.k(year, month - 1, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
+            this.mPreViewHeight = com.taobao.android.dinamicx.widget.calander.a.k(year, month - 1, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
             if (month == 12) {
-                this.mNextViewHeight = C6487a.k(year + 1, 1, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
+                this.mNextViewHeight = com.taobao.android.dinamicx.widget.calander.a.k(year + 1, 1, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
             } else {
-                this.mNextViewHeight = C6487a.k(year, month + 1, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
+                this.mNextViewHeight = com.taobao.android.dinamicx.widget.calander.a.k(year, month + 1, this.mDelegate.d(), this.mDelegate.E(), this.mDelegate.w());
             }
         }
         ViewGroup.LayoutParams layoutParams = getLayoutParams();
@@ -335,15 +333,15 @@ public final class MonthViewPager extends ViewPager {
             return;
         }
         this.isUsingScrollToCalendar = false;
-        C6488b c6488b = this.mDelegate;
-        Calendar calendar = c6488b.K;
+        com.taobao.android.dinamicx.widget.calander.b bVar = this.mDelegate;
+        Calendar calendar = bVar.K;
         if (calendar == null) {
-            calendar = c6488b.L;
+            calendar = bVar.L;
         }
         if (calendar == null) {
-            calendar = c6488b.g();
+            calendar = bVar.g();
         }
-        if (!C6487a.q(calendar, this.mDelegate)) {
+        if (!com.taobao.android.dinamicx.widget.calander.a.q(calendar, this.mDelegate)) {
             calendar = this.mDelegate.s();
         }
         int year = (((calendar.getYear() - this.mDelegate.t()) * 12) + calendar.getMonth()) - this.mDelegate.v();
@@ -355,17 +353,17 @@ public final class MonthViewPager extends ViewPager {
             baseMonthView.setSelectedCalendar(this.mDelegate.M);
             baseMonthView.invalidate();
         }
-        C6488b c6488b2 = this.mDelegate;
-        Calendar calendar2 = c6488b2.L;
+        com.taobao.android.dinamicx.widget.calander.b bVar2 = this.mDelegate;
+        Calendar calendar2 = bVar2.L;
         if (calendar2 != null) {
-            CalendarView.OnInnerDateSelectedListener onInnerDateSelectedListener = c6488b2.G;
+            CalendarView.OnInnerDateSelectedListener onInnerDateSelectedListener = bVar2.G;
             if (onInnerDateSelectedListener != null) {
                 onInnerDateSelectedListener.onMonthDateSelected(calendar2, false);
             }
-            C6488b c6488b3 = this.mDelegate;
-            CalendarView.OnCalendarSelectListener onCalendarSelectListener = c6488b3.E;
+            com.taobao.android.dinamicx.widget.calander.b bVar3 = this.mDelegate;
+            CalendarView.OnCalendarSelectListener onCalendarSelectListener = bVar3.E;
             if (onCalendarSelectListener != null) {
-                onCalendarSelectListener.onCalendarSelect(c6488b3.L, false);
+                onCalendarSelectListener.onCalendarSelect(bVar3.L, false);
             }
         }
         updateSelected();

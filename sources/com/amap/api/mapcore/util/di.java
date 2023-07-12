@@ -11,12 +11,11 @@ public class di implements Runnable {
     private Context a;
     private dh b;
     private Cdo c;
-    private InterfaceC4516a d;
+    private a d;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.di$a */
     /* loaded from: classes10.dex */
-    public interface InterfaceC4516a {
+    public interface a {
         void a(String str, Cdo cdo);
     }
 
@@ -44,15 +43,15 @@ public class di implements Runnable {
             if (MapsInitializer.getNetWorkEnable()) {
                 dh dhVar = this.b;
                 if (dhVar != null) {
-                    dh.C4515a e = dhVar.e();
+                    dh.a e = dhVar.e();
                     String str = null;
                     if (e != null && e.a != null) {
                         str = a(this.a) + "/custom_texture_data";
                         a(str, e.a);
                     }
-                    InterfaceC4516a interfaceC4516a = this.d;
-                    if (interfaceC4516a != null) {
-                        interfaceC4516a.a(str, this.c);
+                    a aVar = this.d;
+                    if (aVar != null) {
+                        aVar.a(str, this.c);
                     }
                 }
                 hd.a(this.a, eq.e());
@@ -78,8 +77,8 @@ public class di implements Runnable {
         }
     }
 
-    public void a(InterfaceC4516a interfaceC4516a) {
-        this.d = interfaceC4516a;
+    public void a(a aVar) {
+        this.d = aVar;
     }
 
     public void a(Cdo cdo) {

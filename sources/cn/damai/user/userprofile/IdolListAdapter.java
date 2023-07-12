@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -22,19 +21,18 @@ import tb.yq;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
-public class IdolListAdapter extends RecyclerView.Adapter<C2739b> {
+public class IdolListAdapter extends RecyclerView.Adapter<b> {
     private static transient /* synthetic */ IpChange $ipChange;
     Activity a;
     List<IdolData> b = new ArrayList();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.IdolListAdapter$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2738a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ IdolData a;
 
-        View$OnClickListenerC2738a(IdolData idolData) {
+        a(IdolData idolData) {
             this.a = idolData;
         }
 
@@ -56,13 +54,12 @@ public class IdolListAdapter extends RecyclerView.Adapter<C2739b> {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.IdolListAdapter$b */
     /* loaded from: classes9.dex */
-    public class C2739b extends RecyclerView.ViewHolder {
+    public class b extends RecyclerView.ViewHolder {
         ImageView a;
         TextView b;
 
-        public C2739b(IdolListAdapter idolListAdapter, View view) {
+        public b(IdolListAdapter idolListAdapter, View view) {
             super(view);
             this.a = (ImageView) view.findViewById(R$id.idol_img);
             this.b = (TextView) view.findViewById(R$id.idol_name);
@@ -85,25 +82,25 @@ public class IdolListAdapter extends RecyclerView.Adapter<C2739b> {
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     /* renamed from: b */
-    public void onBindViewHolder(C2739b c2739b, int i) {
+    public void onBindViewHolder(b bVar, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-259162194")) {
-            ipChange.ipc$dispatch("-259162194", new Object[]{this, c2739b, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-259162194", new Object[]{this, bVar, Integer.valueOf(i)});
             return;
         }
         IdolData idolData = this.b.get(i);
-        DMImageCreator c = C0504a.b().c(idolData.targetImg);
+        DMImageCreator c = cn.damai.common.image.a.b().c(idolData.targetImg);
         int i2 = R$drawable.uikit_user_default_icon;
-        c.i(i2).k(new yq()).c(i2).g(c2739b.a);
-        c2739b.b.setText(idolData.circleName);
-        c2739b.itemView.setOnClickListener(new View$OnClickListenerC2738a(idolData));
+        c.i(i2).k(new yq()).c(i2).g(bVar.a);
+        bVar.b.setText(idolData.circleName);
+        bVar.itemView.setOnClickListener(new a(idolData));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     /* renamed from: c */
-    public C2739b onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public b onCreateViewHolder(ViewGroup viewGroup, int i) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "222929672") ? (C2739b) ipChange.ipc$dispatch("222929672", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new C2739b(this, LayoutInflater.from(this.a).inflate(R$layout.idol_select_list_item, viewGroup, false));
+        return AndroidInstantRuntime.support(ipChange, "222929672") ? (b) ipChange.ipc$dispatch("222929672", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new b(this, LayoutInflater.from(this.a).inflate(R$layout.idol_select_list_item, viewGroup, false));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

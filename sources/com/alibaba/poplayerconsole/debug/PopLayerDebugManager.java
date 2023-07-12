@@ -10,9 +10,9 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import com.ali.user.open.tbauth.TbAuthConstants;
 import com.alibaba.poplayer.PopLayer;
 import com.alibaba.poplayer.norm.IConfigAdapter;
-import com.alibaba.poplayer.trigger.AbstractC3680a;
-import com.alibaba.poplayer.trigger.AbstractC3683b;
-import com.alibaba.poplayer.trigger.view.C3699d;
+import com.alibaba.poplayer.trigger.a;
+import com.alibaba.poplayer.trigger.b;
+import com.alibaba.poplayer.trigger.view.d;
 import com.alibaba.poplayerconsole.PopLayerDebugActivity;
 import com.youku.arch.v3.core.Constants;
 import java.lang.reflect.Field;
@@ -30,9 +30,9 @@ import tb.oh0;
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
 public class PopLayerDebugManager extends WVApiPlugin {
-    private void hookConfigAdapter(AbstractC3680a abstractC3680a, IConfigAdapter iConfigAdapter) throws IllegalAccessException {
+    private void hookConfigAdapter(a aVar, IConfigAdapter iConfigAdapter) throws IllegalAccessException {
         Field field;
-        Field[] declaredFields = AbstractC3680a.class.getDeclaredFields();
+        Field[] declaredFields = a.class.getDeclaredFields();
         int length = declaredFields.length;
         int i = 0;
         while (true) {
@@ -42,25 +42,25 @@ public class PopLayerDebugManager extends WVApiPlugin {
             }
             field = declaredFields[i];
             field.setAccessible(true);
-            if (field.get(abstractC3680a) instanceof IConfigAdapter) {
+            if (field.get(aVar) instanceof IConfigAdapter) {
                 break;
             }
             i++;
         }
-        field.set(abstractC3680a, iConfigAdapter);
+        field.set(aVar, iConfigAdapter);
     }
 
-    private void singleStartMock(AbstractC3683b abstractC3683b, String str) throws JSONException, IllegalAccessException {
-        if (abstractC3683b.g().k() instanceof oh0) {
-            ((oh0) abstractC3683b.g().k()).b = new JSONObject(str);
+    private void singleStartMock(b bVar, String str) throws JSONException, IllegalAccessException {
+        if (bVar.g().k() instanceof oh0) {
+            ((oh0) bVar.g().k()).b = new JSONObject(str);
             return;
         }
-        hookConfigAdapter(abstractC3683b.g(), new oh0(abstractC3683b.g().k(), new JSONObject(str)));
+        hookConfigAdapter(bVar.g(), new oh0(bVar.g().k(), new JSONObject(str)));
     }
 
-    private boolean singleStopMock(AbstractC3683b abstractC3683b) throws IllegalAccessException {
-        if (abstractC3683b.g().k() instanceof oh0) {
-            hookConfigAdapter(abstractC3683b.g(), ((oh0) abstractC3683b.g().k()).a);
+    private boolean singleStopMock(b bVar) throws IllegalAccessException {
+        if (bVar.g().k() instanceof oh0) {
+            hookConfigAdapter(bVar.g(), ((oh0) bVar.g().k()).a);
             return true;
         }
         return false;
@@ -69,10 +69,10 @@ public class PopLayerDebugManager extends WVApiPlugin {
     private boolean startMock(String str, WVCallBackContext wVCallBackContext) throws IllegalAccessException, IllegalArgumentException, JSONException {
         singleStartMock(d7.A(), str);
         singleStartMock(gq1.A(), str);
-        singleStartMock(C3699d.M(), str);
+        singleStartMock(d.M(), str);
         d7.A().d();
         gq1.A().d();
-        C3699d.M().d();
+        d.M().d();
         PopLayer.getReference().updateCacheConfigAsync(1);
         PopLayer.getReference().updateCacheConfigAsync(2);
         PopLayer.getReference().updateCacheConfigAsync(3);
@@ -90,7 +90,7 @@ public class PopLayerDebugManager extends WVApiPlugin {
             PopLayer.getReference().updateCacheConfigAsync(2);
             dt1.b("PopLayerManager.stopMock.success Page.", new Object[0]);
         }
-        if (singleStopMock(C3699d.M())) {
+        if (singleStopMock(d.M())) {
             PopLayer.getReference().updateCacheConfigAsync(3);
             dt1.b("PopLayerManager.stopMock.success View.", new Object[0]);
         }

@@ -4,7 +4,6 @@ import android.content.Context;
 import com.alibaba.pictures.share.common.share.ShareChannel;
 import com.alibaba.pictures.share.common.share.ShareContent;
 import com.alibaba.pictures.share.common.share.ShareService;
-import com.alipay.sdk.m.k.C4226b;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import io.flutter.wpkbridge.WPKFactory;
@@ -32,9 +31,9 @@ public final class xb2 {
         } else if (shareContent == null) {
         } else {
             if (z) {
-                this.a.b(this.b, shareContent, ShareChannel.WEIXIN, C4226b.l);
+                this.a.b(this.b, shareContent, ShareChannel.WEIXIN, com.alipay.sdk.m.k.b.l);
             } else {
-                this.a.b(this.b, shareContent, ShareChannel.WEIXIN_FRIEND, C4226b.l);
+                this.a.b(this.b, shareContent, ShareChannel.WEIXIN_FRIEND, com.alipay.sdk.m.k.b.l);
             }
         }
     }
@@ -45,7 +44,7 @@ public final class xb2 {
             ipChange.ipc$dispatch("603430334", new Object[]{this, shareContent});
         } else if (shareContent == null) {
         } else {
-            this.a.b(this.b, shareContent, ShareChannel.QQ, C4226b.l);
+            this.a.b(this.b, shareContent, ShareChannel.QQ, com.alipay.sdk.m.k.b.l);
         }
     }
 
@@ -55,7 +54,7 @@ public final class xb2 {
             ipChange.ipc$dispatch("-409626753", new Object[]{this, shareContent});
         } else if (shareContent == null) {
         } else {
-            this.a.b(this.b, shareContent, ShareChannel.QZONE, C4226b.l);
+            this.a.b(this.b, shareContent, ShareChannel.QZONE, com.alipay.sdk.m.k.b.l);
         }
     }
 
@@ -65,7 +64,7 @@ public final class xb2 {
             ipChange.ipc$dispatch("-1643318936", new Object[]{this, shareContent});
         } else if (shareContent == null) {
         } else {
-            this.a.b(this.b, shareContent, ShareChannel.ALIPAY, C4226b.l);
+            this.a.b(this.b, shareContent, ShareChannel.ALIPAY, com.alipay.sdk.m.k.b.l);
         }
     }
 
@@ -75,7 +74,7 @@ public final class xb2 {
             ipChange.ipc$dispatch("-284108247", new Object[]{this, shareContent});
         } else if (shareContent == null) {
         } else {
-            this.a.b(this.b, shareContent, ShareChannel.ALIPAY_TIMELINE, C4226b.l);
+            this.a.b(this.b, shareContent, ShareChannel.ALIPAY_TIMELINE, com.alipay.sdk.m.k.b.l);
         }
     }
 
@@ -85,7 +84,7 @@ public final class xb2 {
             ipChange.ipc$dispatch("479821266", new Object[]{this, shareContent});
         } else if (shareContent == null) {
         } else {
-            this.a.b(this.b, shareContent, ShareChannel.COPYLINK, C4226b.l);
+            this.a.b(this.b, shareContent, ShareChannel.COPYLINK, com.alipay.sdk.m.k.b.l);
         }
     }
 
@@ -95,7 +94,7 @@ public final class xb2 {
             ipChange.ipc$dispatch("-1731086306", new Object[]{this, shareContent});
         } else if (shareContent == null) {
         } else {
-            this.a.b(this.b, shareContent, ShareChannel.DD, C4226b.l);
+            this.a.b(this.b, shareContent, ShareChannel.DD, com.alipay.sdk.m.k.b.l);
         }
     }
 
@@ -112,7 +111,7 @@ public final class xb2 {
             ipChange.ipc$dispatch("-622134390", new Object[]{this, shareContent});
         } else if (shareContent == null) {
         } else {
-            this.a.b(this.b, shareContent, ShareChannel.WEIBO, C4226b.l);
+            this.a.b(this.b, shareContent, ShareChannel.WEIBO, com.alipay.sdk.m.k.b.l);
         }
     }
 

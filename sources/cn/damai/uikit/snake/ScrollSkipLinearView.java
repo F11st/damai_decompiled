@@ -38,13 +38,12 @@ public class ScrollSkipLinearView extends ScrollLinearView {
     private float mStopX;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.snake.ScrollSkipLinearView$a */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC2551a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View.OnClickListener a;
 
-        View$OnClickListenerC2551a(ScrollSkipLinearView scrollSkipLinearView, View.OnClickListener onClickListener) {
+        a(ScrollSkipLinearView scrollSkipLinearView, View.OnClickListener onClickListener) {
             this.a = onClickListener;
         }
 
@@ -60,12 +59,11 @@ public class ScrollSkipLinearView extends ScrollLinearView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.snake.ScrollSkipLinearView$b */
     /* loaded from: classes8.dex */
-    public class C2552b implements IPhenixListener<ui2> {
+    public class b implements IPhenixListener<ui2> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2552b(ScrollSkipLinearView scrollSkipLinearView) {
+        b(ScrollSkipLinearView scrollSkipLinearView) {
         }
 
         @Override // com.taobao.phenix.intf.event.IPhenixListener
@@ -98,7 +96,7 @@ public class ScrollSkipLinearView extends ScrollLinearView {
         if (AndroidInstantRuntime.support(ipChange, "967636053")) {
             ipChange.ipc$dispatch("967636053", new Object[]{this});
         } else {
-            this.listener = new C2552b(this);
+            this.listener = new b(this);
         }
     }
 
@@ -164,7 +162,7 @@ public class ScrollSkipLinearView extends ScrollLinearView {
                     layoutParams.gravity = 16;
                     inflate.setPadding(dip2px(this.mSpace / 2), 0, dip2px(this.mSpace / 2), 0);
                     inflate.setLayoutParams(layoutParams);
-                    inflate.setOnClickListener(new View$OnClickListenerC2551a(this, onClickListener));
+                    inflate.setOnClickListener(new a(this, onClickListener));
                     addView(inflate);
                 }
             }

@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -19,7 +19,7 @@ import tb.pi2;
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class ObservableRetryWhen<T> extends AbstractObservableWithUpstream<T, T> {
-    final Function<? super AbstractC8149d<Throwable>, ? extends ObservableSource<?>> handler;
+    final Function<? super d<Throwable>, ? extends ObservableSource<?>> handler;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -131,12 +131,12 @@ public final class ObservableRetryWhen<T> extends AbstractObservableWithUpstream
         }
     }
 
-    public ObservableRetryWhen(ObservableSource<T> observableSource, Function<? super AbstractC8149d<Throwable>, ? extends ObservableSource<?>> function) {
+    public ObservableRetryWhen(ObservableSource<T> observableSource, Function<? super d<Throwable>, ? extends ObservableSource<?>> function) {
         super(observableSource);
         this.handler = function;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super T> observer) {
         pi2<T> a = PublishSubject.c().a();
         try {

@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -141,7 +141,7 @@ public final class ObservableFlatMapSingle<T, R> extends AbstractObservableWithU
                 if (spscLinkedArrayQueue2 != null) {
                     return spscLinkedArrayQueue2;
                 }
-                spscLinkedArrayQueue = new SpscLinkedArrayQueue<>(AbstractC8149d.bufferSize());
+                spscLinkedArrayQueue = new SpscLinkedArrayQueue<>(d.bufferSize());
             } while (!this.queue.compareAndSet(null, spscLinkedArrayQueue));
             return spscLinkedArrayQueue;
         }
@@ -250,7 +250,7 @@ public final class ObservableFlatMapSingle<T, R> extends AbstractObservableWithU
         this.delayErrors = z;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super R> observer) {
         this.source.subscribe(new FlatMapSingleObserver(observer, this.mapper, this.delayErrors));
     }

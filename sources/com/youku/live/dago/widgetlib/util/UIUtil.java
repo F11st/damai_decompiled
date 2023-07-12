@@ -73,8 +73,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Method;
-import tb.C9796v;
 import tb.gn1;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
@@ -746,7 +746,7 @@ public class UIUtil {
             return 0;
         }
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        Display.getMetrics(((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+        Display.getMetrics(((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
         return com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(displayMetrics);
     }
 
@@ -768,9 +768,9 @@ public class UIUtil {
         char c = i != 1 ? (char) 1 : (char) 0;
         if (mRealSizes[c] == null) {
             if (context != null) {
-                windowManager = (WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+                windowManager = (WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW);
             } else {
-                windowManager = (WindowManager) AppContextUtils.getApp().getSystemService(C9796v.ATTACH_MODE_WINDOW);
+                windowManager = (WindowManager) AppContextUtils.getApp().getSystemService(v.ATTACH_MODE_WINDOW);
             }
             if (windowManager == null) {
                 return getScreenHeight(context);
@@ -795,7 +795,7 @@ public class UIUtil {
             return 0;
         }
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        Display.getMetrics(((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+        Display.getMetrics(((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
         return com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(displayMetrics);
     }
 
@@ -988,7 +988,7 @@ public class UIUtil {
         mHasCheckAllScreen = true;
         mIsAllScreenDevice = false;
         if (Build.VERSION.SDK_INT >= 21 && AppContextUtils.getApp() != null) {
-            WindowManager windowManager = (WindowManager) AppContextUtils.getApp().getSystemService(C9796v.ATTACH_MODE_WINDOW);
+            WindowManager windowManager = (WindowManager) AppContextUtils.getApp().getSystemService(v.ATTACH_MODE_WINDOW);
             if (windowManager != null) {
                 android.view.Display defaultDisplay = windowManager.getDefaultDisplay();
                 Point point = new Point();

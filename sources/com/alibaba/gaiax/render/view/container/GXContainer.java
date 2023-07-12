@@ -36,12 +36,11 @@ public class GXContainer extends RecyclerView implements GXIContainer, GXIRootVi
     private os0 gxTemplateContext;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.view.container.GXContainer$a */
     /* loaded from: classes6.dex */
-    public static final class C3368a extends ViewOutlineProvider {
+    public static final class a extends ViewOutlineProvider {
         final /* synthetic */ float b;
 
-        C3368a(float f) {
+        a(float f) {
             this.b = f;
         }
 
@@ -74,7 +73,7 @@ public class GXContainer extends RecyclerView implements GXIContainer, GXIRootVi
 
     @Override // com.alibaba.gaiax.render.view.GXIViewBindData
     public void onResetData() {
-        GXIViewBindData.C3361a.a(this);
+        GXIViewBindData.a.a(this);
     }
 
     @Override // com.alibaba.gaiax.render.view.GXIRoundCorner
@@ -111,7 +110,7 @@ public class GXContainer extends RecyclerView implements GXIContainer, GXIRootVi
                     if (f2 == f3) {
                         if ((f3 == f4) && f > 0.0f) {
                             setClipToOutline(true);
-                            setOutlineProvider(new C3368a(f));
+                            setOutlineProvider(new a(f));
                             return;
                         }
                     }

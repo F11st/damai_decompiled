@@ -1,15 +1,15 @@
 package io.reactivex.internal.operators.single;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.Observer;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SingleToObservable<T> extends AbstractC8149d<T> {
+public final class SingleToObservable<T> extends d<T> {
     final SingleSource<? extends T> source;
 
     /* compiled from: Taobao */
@@ -56,7 +56,7 @@ public final class SingleToObservable<T> extends AbstractC8149d<T> {
         this.source = singleSource;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new SingleToObservableObserver(observer));
     }

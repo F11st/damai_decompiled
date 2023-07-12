@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
-import kotlin.collections.C8214m;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.jvm.JvmField;
 import org.jetbrains.annotations.NotNull;
@@ -26,7 +25,7 @@ public final class z60 {
     @NotNull
     public static final z60 CLASSIFIERS;
     @NotNull
-    public static final C10015a Companion;
+    public static final a Companion;
     @JvmField
     @NotNull
     public static final z60 FUNCTIONS;
@@ -60,27 +59,26 @@ public final class z60 {
     private static final int l;
     private static final int m;
     @NotNull
-    private static final List<C10015a.C10016a> n;
+    private static final List<a.C0466a> n;
     @NotNull
-    private static final List<C10015a.C10016a> o;
+    private static final List<a.C0466a> o;
     @NotNull
     private final List<y60> a;
     private final int b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.z60$a */
     /* loaded from: classes3.dex */
-    public static final class C10015a {
+    public static final class a {
 
         /* compiled from: Taobao */
-        /* renamed from: tb.z60$a$a */
+        /* renamed from: tb.z60$a$a  reason: collision with other inner class name */
         /* loaded from: classes3.dex */
-        private static final class C10016a {
+        private static final class C0466a {
             private final int a;
             @NotNull
             private final String b;
 
-            public C10016a(int i, @NotNull String str) {
+            public C0466a(int i, @NotNull String str) {
                 b41.i(str, "name");
                 this.a = i;
                 this.b = str;
@@ -96,17 +94,17 @@ public final class z60 {
             }
         }
 
-        private C10015a() {
+        private a() {
         }
 
-        public /* synthetic */ C10015a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
         /* JADX INFO: Access modifiers changed from: private */
         public final int j() {
             int i = z60.c;
-            C10015a c10015a = z60.Companion;
+            a aVar = z60.Companion;
             z60.c <<= 1;
             return i;
         }
@@ -145,24 +143,24 @@ public final class z60 {
     }
 
     static {
-        C10015a.C10016a c10016a;
-        C10015a.C10016a c10016a2;
-        C10015a c10015a = new C10015a(null);
-        Companion = c10015a;
+        a.C0466a c0466a;
+        a.C0466a c0466a2;
+        a aVar = new a(null);
+        Companion = aVar;
         c = 1;
-        int j2 = c10015a.j();
+        int j2 = aVar.j();
         d = j2;
-        int j3 = c10015a.j();
+        int j3 = aVar.j();
         e = j3;
-        int j4 = c10015a.j();
+        int j4 = aVar.j();
         f = j4;
-        int j5 = c10015a.j();
+        int j5 = aVar.j();
         g = j5;
-        int j6 = c10015a.j();
+        int j6 = aVar.j();
         h = j6;
-        int j7 = c10015a.j();
+        int j7 = aVar.j();
         i = j7;
-        int j8 = c10015a.j() - 1;
+        int j8 = aVar.j() - 1;
         j = j8;
         int i2 = j2 | j3 | j4;
         k = i2;
@@ -196,12 +194,12 @@ public final class z60 {
                 int m2 = z60Var.m();
                 String name = field2.getName();
                 b41.h(name, "field.name");
-                c10016a2 = new C10015a.C10016a(m2, name);
+                c0466a2 = new a.C0466a(m2, name);
             } else {
-                c10016a2 = null;
+                c0466a2 = null;
             }
-            if (c10016a2 != null) {
-                arrayList2.add(c10016a2);
+            if (c0466a2 != null) {
+                arrayList2.add(c0466a2);
             }
         }
         n = arrayList2;
@@ -227,12 +225,12 @@ public final class z60 {
             if (intValue == ((-intValue) & intValue)) {
                 String name2 = field4.getName();
                 b41.h(name2, "field.name");
-                c10016a = new C10015a.C10016a(intValue, name2);
+                c0466a = new a.C0466a(intValue, name2);
             } else {
-                c10016a = null;
+                c0466a = null;
             }
-            if (c10016a != null) {
-                arrayList5.add(c10016a);
+            if (c0466a != null) {
+                arrayList5.add(c0466a);
             }
         }
         o = arrayList5;
@@ -297,7 +295,7 @@ public final class z60 {
                 break;
             }
             obj = it.next();
-            if (((C10015a.C10016a) obj).a() == m()) {
+            if (((a.C0466a) obj).a() == m()) {
                 z = true;
                 continue;
             } else {
@@ -308,13 +306,13 @@ public final class z60 {
                 break;
             }
         }
-        C10015a.C10016a c10016a = (C10015a.C10016a) obj;
-        String b = c10016a == null ? null : c10016a.b();
+        a.C0466a c0466a = (a.C0466a) obj;
+        String b = c0466a == null ? null : c0466a.b();
         if (b == null) {
-            List<C10015a.C10016a> list = o;
+            List<a.C0466a> list = o;
             ArrayList arrayList = new ArrayList();
-            for (C10015a.C10016a c10016a2 : list) {
-                String b2 = a(c10016a2.a()) ? c10016a2.b() : null;
+            for (a.C0466a c0466a2 : list) {
+                String b2 = a(c0466a2.a()) ? c0466a2.b() : null;
                 if (b2 != null) {
                     arrayList.add(b2);
                 }
@@ -325,6 +323,6 @@ public final class z60 {
     }
 
     public /* synthetic */ z60(int i2, List list, int i3, k50 k50Var) {
-        this(i2, (i3 & 2) != 0 ? C8214m.g() : list);
+        this(i2, (i3 & 2) != 0 ? kotlin.collections.m.g() : list);
     }
 }

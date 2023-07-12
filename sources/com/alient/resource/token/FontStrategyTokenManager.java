@@ -8,10 +8,10 @@ import com.youku.arch.v3.data.Constants;
 import io.flutter.wpkbridge.WPKFactory;
 import java.util.HashMap;
 import java.util.Objects;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import kotlin.text.StringsKt__StringsKt;
 import org.jetbrains.annotations.NotNull;
@@ -50,7 +50,7 @@ public final class FontStrategyTokenManager extends StrategyTokenManager<Integer
 
     static {
         Lazy a;
-        a = C8177b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<FontStrategyTokenManager>() { // from class: com.alient.resource.token.FontStrategyTokenManager$Companion$instance$2
+        a = b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<FontStrategyTokenManager>() { // from class: com.alient.resource.token.FontStrategyTokenManager$Companion$instance$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull

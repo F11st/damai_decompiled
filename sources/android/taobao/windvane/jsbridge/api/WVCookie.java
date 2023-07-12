@@ -8,7 +8,7 @@ import android.taobao.windvane.jsbridge.WVResult;
 import android.taobao.windvane.util.EnvUtil;
 import android.taobao.windvane.util.TaoLog;
 import android.text.TextUtils;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
+import com.alibaba.security.realidentity.jsbridge.a;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
@@ -190,7 +190,7 @@ public class WVCookie extends WVApiPlugin {
                 }
                 string = jSONObject.getString("domain");
                 String optString = jSONObject.optString(HttpConnector.EXPIRES);
-                String optString2 = jSONObject.optString(AbstractC3893a.V);
+                String optString2 = jSONObject.optString(a.V);
                 String optString3 = jSONObject.optString("secure");
                 sb.append(string2);
                 sb.append("=");

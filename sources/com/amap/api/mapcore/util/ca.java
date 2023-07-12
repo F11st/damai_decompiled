@@ -5,9 +5,8 @@ package com.amap.api.mapcore.util;
 public interface ca {
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.ca$a */
     /* loaded from: classes10.dex */
-    public enum EnumC4496a {
+    public enum a {
         amap_exception(-1),
         network_exception(-1),
         file_io_exception(0),
@@ -16,14 +15,14 @@ public interface ca {
         
         private int f;
 
-        EnumC4496a(int i) {
+        a(int i) {
             this.f = i;
         }
     }
 
     void a(long j, long j2);
 
-    void a(EnumC4496a enumC4496a);
+    void a(a aVar);
 
     void n();
 

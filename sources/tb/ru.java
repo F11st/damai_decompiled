@@ -6,13 +6,12 @@ import cn.damai.commonbusiness.dynamicx.customwidget.taplayout.DMDXTapFrameLayou
 import com.alibaba.fastjson.JSONArray;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.taobao.android.dinamicx.widget.C6489d;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
 import com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
-public class ru extends C6489d {
+public class ru extends com.taobao.android.dinamicx.widget.d {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final long DXDMTAPFRAMELAYOUT_ISENABLED = -6141556675476878192L;
     public static final long DXDMTAPFRAMELAYOUT_ISEXPOSURE = -8177886521563870911L;
@@ -29,9 +28,8 @@ public class ru extends C6489d {
     private JSONArray h;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ru$a */
     /* loaded from: classes4.dex */
-    public static class C9666a implements IDXBuilderWidgetNode {
+    public static class a implements IDXBuilderWidgetNode {
         private static transient /* synthetic */ IpChange $ipChange;
 
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
@@ -41,7 +39,7 @@ public class ru extends C6489d {
         }
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6489d, com.taobao.android.dinamicx.widget.DXWidgetNode, com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.d, com.taobao.android.dinamicx.widget.DXWidgetNode, com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
     public DXWidgetNode build(Object obj) {
         IpChange ipChange = $ipChange;
         return AndroidInstantRuntime.support(ipChange, "-2053758852") ? (DXWidgetNode) ipChange.ipc$dispatch("-2053758852", new Object[]{this, obj}) : new ru();
@@ -58,7 +56,7 @@ public class ru extends C6489d {
         }
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onClone(DXWidgetNode dXWidgetNode, boolean z) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1806941642")) {
@@ -77,14 +75,14 @@ public class ru extends C6489d {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.C6489d, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.d, com.taobao.android.dinamicx.widget.DXWidgetNode
     public View onCreateView(Context context) {
         IpChange ipChange = $ipChange;
         return AndroidInstantRuntime.support(ipChange, "-38869137") ? (View) ipChange.ipc$dispatch("-38869137", new Object[]{this, context}) : new DMDXTapFrameLayout(context);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.C6489d, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.d, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onLayout(boolean z, int i, int i2, int i3, int i4) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-791883870")) {
@@ -95,7 +93,7 @@ public class ru extends C6489d {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.C6489d, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.d, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onMeasure(int i, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-374113936")) {
@@ -106,7 +104,7 @@ public class ru extends C6489d {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onRenderView(Context context, View view) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "777751659")) {
@@ -129,7 +127,7 @@ public class ru extends C6489d {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetListAttribute(long j, JSONArray jSONArray) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "147950572")) {

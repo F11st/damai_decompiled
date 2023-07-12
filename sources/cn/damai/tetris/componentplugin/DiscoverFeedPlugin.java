@@ -25,8 +25,8 @@ import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import tb.C9039db;
 import tb.cb2;
+import tb.db;
 import tb.jn1;
 import tb.m61;
 import tb.xl2;
@@ -128,7 +128,7 @@ public class DiscoverFeedPlugin extends ComponentPlugin {
                         if (cb2.d(layerList)) {
                             return;
                         }
-                        layerList.get(layerList.size() - 1).addSectionListEnd(new C9039db().f(baseResponse), true);
+                        layerList.get(layerList.size() - 1).addSectionListEnd(new db().f(baseResponse), true);
                     }
                 }
             });

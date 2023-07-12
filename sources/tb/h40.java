@@ -93,7 +93,7 @@ public final class h40 {
                 sb.append(this.c.toString());
             }
         }
-        List<da2.C9038a> h = this.d.h();
+        List<da2.a> h = this.d.h();
         if (h != null && h.size() > 0) {
             for (int i = 0; i < h.size(); i++) {
                 sb.append(" ORDER BY ");

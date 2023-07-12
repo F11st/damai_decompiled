@@ -19,12 +19,11 @@ public class ir implements IFaceAdapter {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ir$b */
     /* loaded from: classes4.dex */
-    public static class C9275b implements Nav.NavHooker {
+    public static class b implements Nav.NavHooker {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9275b() {
+        private b() {
         }
 
         @Override // com.taobao.android.nav.Nav.NavHooker
@@ -78,7 +77,7 @@ public class ir implements IFaceAdapter {
         if (AndroidInstantRuntime.support(ipChange, "-1861339186")) {
             ipChange.ipc$dispatch("-1861339186", new Object[]{this, context, popLayer});
         } else {
-            Nav.registerHooker(new C9275b());
+            Nav.registerHooker(new b());
         }
     }
 

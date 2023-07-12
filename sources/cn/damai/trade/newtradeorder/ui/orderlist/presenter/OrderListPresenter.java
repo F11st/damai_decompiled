@@ -16,12 +16,11 @@ public class OrderListPresenter extends OrderListContract.Presenter {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderlist.presenter.OrderListPresenter$a */
     /* loaded from: classes8.dex */
-    public class C2228a implements Action<String> {
+    public class a implements Action<String> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2228a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -37,12 +36,11 @@ public class OrderListPresenter extends OrderListContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderlist.presenter.OrderListPresenter$b */
     /* loaded from: classes8.dex */
-    public class C2229b implements Action<String> {
+    public class b implements Action<String> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2229b() {
+        b() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -96,7 +94,7 @@ public class OrderListPresenter extends OrderListContract.Presenter {
         });
     }
 
-    @Override // cn.damai.common.app.base.AbstractC0470a
+    @Override // cn.damai.common.app.base.a
     public void onStart() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "240709660")) {
@@ -104,7 +102,7 @@ public class OrderListPresenter extends OrderListContract.Presenter {
             return;
         }
         super.onStart();
-        this.mDMMessage.b(uo1.NOTIFY_ORDER_LIST_SELF, new C2228a());
-        this.mDMMessage.b(uo1.NOTIFY_ORDER_LIST_REFRESH, new C2229b());
+        this.mDMMessage.b(uo1.NOTIFY_ORDER_LIST_SELF, new a());
+        this.mDMMessage.b(uo1.NOTIFY_ORDER_LIST_REFRESH, new b());
     }
 }

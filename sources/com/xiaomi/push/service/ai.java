@@ -2,7 +2,6 @@ package com.xiaomi.push.service;
 
 import android.content.Context;
 import android.text.TextUtils;
-import com.xiaomi.push.C7680j;
 import com.xiaomi.push.hj;
 import com.xiaomi.push.ht;
 import com.xiaomi.push.ii;
@@ -13,24 +12,24 @@ import java.util.HashMap;
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public final class ai extends bx.AbstractRunnableC7746a {
+public final class ai extends bx.a {
     final /* synthetic */ XMPushService a;
 
     /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ C7776t f879a;
+    final /* synthetic */ t f879a;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public ai(String str, long j, XMPushService xMPushService, C7776t c7776t) {
+    public ai(String str, long j, XMPushService xMPushService, t tVar) {
         super(str, j);
         this.a = xMPushService;
-        this.f879a = c7776t;
+        this.f879a = tVar;
     }
 
-    @Override // com.xiaomi.push.service.bx.AbstractRunnableC7746a
+    @Override // com.xiaomi.push.service.bx.a
     void a(bx bxVar) {
         String a = bxVar.a("GAID", "gaid");
-        String a2 = C7680j.a((Context) this.a);
+        String a2 = com.xiaomi.push.j.a((Context) this.a);
         if (TextUtils.isEmpty(a2) || TextUtils.equals(a, a2)) {
             return;
         }

@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.Observer;
 import io.reactivex.Scheduler;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.schedulers.TrampolineScheduler;
@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableIntervalRange extends AbstractC8149d<Long> {
+public final class ObservableIntervalRange extends d<Long> {
     final long end;
     final long initialDelay;
     final long period;
@@ -72,7 +72,7 @@ public final class ObservableIntervalRange extends AbstractC8149d<Long> {
         this.end = j2;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super Long> observer) {
         IntervalRangeObserver intervalRangeObserver = new IntervalRangeObserver(observer, this.start, this.end);
         observer.onSubscribe(intervalRangeObserver);

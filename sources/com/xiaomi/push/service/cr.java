@@ -2,7 +2,6 @@ package com.xiaomi.push.service;
 
 import android.database.ContentObserver;
 import android.os.Handler;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.service.XMPushService;
 
 /* compiled from: Taobao */
@@ -22,13 +21,13 @@ class cr extends ContentObserver {
         boolean m1144g;
         super.onChange(z);
         m1144g = this.a.m1144g();
-        AbstractC7535b.m586a("SuperPowerMode:" + m1144g);
+        com.xiaomi.channel.commonutils.logger.b.m586a("SuperPowerMode:" + m1144g);
         this.a.e();
         if (!m1144g) {
             this.a.a(true);
             return;
         }
         XMPushService xMPushService = this.a;
-        xMPushService.a(new XMPushService.C7704g(24, null));
+        xMPushService.a(new XMPushService.g(24, null));
     }
 }

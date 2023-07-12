@@ -8,7 +8,7 @@ import android.text.TextUtils;
 import cn.damai.common.OrangeConfigCenter;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
@@ -86,7 +86,7 @@ public class pc0 extends ll {
         }
         bundle.putString("url", str2);
         cb1.b("DMNav", "DowngradeProcessor navToWebView url : " + str2);
-        DMNav.from(context).withExtras(bundle).toUri(NavUri.b(C3834a.C3837c.d));
+        DMNav.from(context).withExtras(bundle).toUri(NavUri.b(a.c.d));
     }
 
     public boolean a(String str, long j2) {

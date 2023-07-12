@@ -241,7 +241,7 @@ public class AliUserMobileLoginFragment extends BaseLoginFragment implements Use
 
     @Override // com.ali.user.mobile.base.ui.BaseFragment
     protected int getLayoutContent() {
-        return R.C2965layout.aliuser_fragment_mobile_login;
+        return R.layout.aliuser_fragment_mobile_login;
     }
 
     @Override // com.ali.user.mobile.login.ui.BaseLoginFragment, com.ali.user.mobile.login.ui.BaseLoginView

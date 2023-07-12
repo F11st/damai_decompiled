@@ -8,7 +8,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
@@ -36,12 +35,11 @@ public class NotificationFragment extends DamaiBaseMvpFragment {
     private TextView mTvNotificationTitle;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.NotificationFragment$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2064a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2064a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -56,12 +54,11 @@ public class NotificationFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.NotificationFragment$b */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2065b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2065b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -79,23 +76,22 @@ public class NotificationFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.NotificationFragment$c */
     /* loaded from: classes7.dex */
-    public class C2066c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2066c() {
+        c() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-564294898")) {
-                ipChange.ipc$dispatch("-564294898", new Object[]{this, c0502e});
-            } else if (c0502e == null || (bitmap = c0502e.b) == null || bitmap.isRecycled()) {
+                ipChange.ipc$dispatch("-564294898", new Object[]{this, eVar});
+            } else if (eVar == null || (bitmap = eVar.b) == null || bitmap.isRecycled()) {
             } else {
-                NotificationFragment.this.mTvNotificationImg.setImageBitmap(c0502e.b);
+                NotificationFragment.this.mTvNotificationImg.setImageBitmap(eVar.b);
             }
         }
     }
@@ -174,8 +170,8 @@ public class NotificationFragment extends DamaiBaseMvpFragment {
             this.mTvNotificationContent.setText(popupContent);
             if (!TextUtils.isEmpty(this.mStatusNotice.imageUrl)) {
                 this.mTvNotificationImg.setVisibility(0);
-                this.mTvNotificationImg.setOnClickListener(new View$OnClickListenerC2065b());
-                C0504a.b().f(this.mStatusNotice.imageUrl, 650, 900).n(new C2066c()).f();
+                this.mTvNotificationImg.setOnClickListener(new b());
+                cn.damai.common.image.a.b().f(this.mStatusNotice.imageUrl, 650, 900).n(new c()).f();
                 return;
             }
             this.mTvNotificationImg.setVisibility(8);
@@ -187,7 +183,7 @@ public class NotificationFragment extends DamaiBaseMvpFragment {
         if (AndroidInstantRuntime.support(ipChange, "136683974")) {
             ipChange.ipc$dispatch("136683974", new Object[]{this});
         } else {
-            this.mTvNotificationComplete.setOnClickListener(new View$OnClickListenerC2064a());
+            this.mTvNotificationComplete.setOnClickListener(new a());
         }
     }
 

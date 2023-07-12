@@ -18,8 +18,8 @@ import com.taobao.monitor.adapter.procedure.getter.H5ProcedureGetterBridge;
 import com.taobao.monitor.common.IHandlerThreadMaker;
 import com.taobao.monitor.impl.data.AbsWebView;
 import com.taobao.monitor.impl.data.utsession.IUTSession;
-import com.taobao.monitor.procedure.C6817d;
 import com.taobao.monitor.procedure.IProcedure;
+import com.taobao.monitor.procedure.d;
 import com.taobao.monitor.test.APMTestPluginLauncher;
 import com.uc.webview.export.WebView;
 import com.ut.mini.internal.UTTeamWork;
@@ -60,12 +60,11 @@ abstract class AbsAPMInitiator implements Serializable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.adapter.AbsAPMInitiator$a */
     /* loaded from: classes11.dex */
-    public class ThreadFactoryC6750a implements ThreadFactory {
+    public class a implements ThreadFactory {
         final /* synthetic */ AtomicInteger a;
 
-        ThreadFactoryC6750a(AbsAPMInitiator absAPMInitiator, AtomicInteger atomicInteger) {
+        a(AbsAPMInitiator absAPMInitiator, AtomicInteger atomicInteger) {
             this.a = atomicInteger;
         }
 
@@ -77,10 +76,9 @@ abstract class AbsAPMInitiator implements Serializable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.adapter.AbsAPMInitiator$b */
     /* loaded from: classes11.dex */
-    public class C6751b implements IHandlerThreadMaker {
-        C6751b(AbsAPMInitiator absAPMInitiator) {
+    public class b implements IHandlerThreadMaker {
+        b(AbsAPMInitiator absAPMInitiator) {
         }
 
         @Override // com.taobao.monitor.common.IHandlerThreadMaker
@@ -91,10 +89,9 @@ abstract class AbsAPMInitiator implements Serializable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.adapter.AbsAPMInitiator$c */
     /* loaded from: classes11.dex */
-    public class C6752c extends AbsWebView {
-        C6752c(AbsAPMInitiator absAPMInitiator) {
+    public class c extends AbsWebView {
+        c(AbsAPMInitiator absAPMInitiator) {
         }
 
         @Override // com.taobao.monitor.impl.data.AbsWebView
@@ -110,10 +107,9 @@ abstract class AbsAPMInitiator implements Serializable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.adapter.AbsAPMInitiator$d */
     /* loaded from: classes11.dex */
-    public class C6753d implements IUTSession {
-        C6753d(AbsAPMInitiator absAPMInitiator) {
+    public class d implements IUTSession {
+        d(AbsAPMInitiator absAPMInitiator) {
         }
 
         @Override // com.taobao.monitor.impl.data.utsession.IUTSession
@@ -153,23 +149,23 @@ abstract class AbsAPMInitiator implements Serializable {
 
                 @Override // com.ali.ha.datahub.BizSubscriber
                 public void onBizDataReadyStage() {
-                    IProcedure a = C6756a.a();
-                    if (a != null) {
-                        a.stage("onBizDataReadyTime", ho2.a());
+                    IProcedure a2 = com.taobao.monitor.adapter.a.a();
+                    if (a2 != null) {
+                        a2.stage("onBizDataReadyTime", ho2.a());
                     }
                 }
 
                 @Override // com.ali.ha.datahub.BizSubscriber
                 public void onStage(final String str, final String str2, long j) {
-                    final long a = ho2.a();
+                    final long a2 = ho2.a();
                     a(new Runnable() { // from class: com.taobao.monitor.adapter.AbsAPMInitiator.4.3
                         @Override // java.lang.Runnable
                         public void run() {
-                            IProcedure a2 = C6756a.a();
-                            if (a2 != null) {
+                            IProcedure a3 = com.taobao.monitor.adapter.a.a();
+                            if (a3 != null) {
                                 HashMap hashMap2 = new HashMap();
-                                hashMap2.put(str2, Long.valueOf(a));
-                                a2.addBizStage(str, hashMap2);
+                                hashMap2.put(str2, Long.valueOf(a2));
+                                a3.addBizStage(str, hashMap2);
                             }
                         }
                     });
@@ -192,9 +188,9 @@ abstract class AbsAPMInitiator implements Serializable {
                                 e30.a(AbsAPMInitiator.TAG, str, hashMap2);
                             }
                             pb1.a(AbsAPMInitiator.TAG, str, hashMap2);
-                            IProcedure a = C6756a.a();
-                            if (a != null) {
-                                a.addBiz(str, hashMap2);
+                            IProcedure a2 = com.taobao.monitor.adapter.a.a();
+                            if (a2 != null) {
+                                a2.addBiz(str, hashMap2);
                             }
                         }
                     });
@@ -205,9 +201,9 @@ abstract class AbsAPMInitiator implements Serializable {
                     a(new Runnable() { // from class: com.taobao.monitor.adapter.AbsAPMInitiator.4.2
                         @Override // java.lang.Runnable
                         public void run() {
-                            IProcedure a = C6756a.a();
-                            if (a != null) {
-                                a.addBizAbTest(str, hashMap2);
+                            IProcedure a2 = com.taobao.monitor.adapter.a.a();
+                            if (a2 != null) {
+                                a2.addBizAbTest(str, hashMap2);
                             }
                         }
                     });
@@ -218,13 +214,13 @@ abstract class AbsAPMInitiator implements Serializable {
                     a(new Runnable() { // from class: com.taobao.monitor.adapter.AbsAPMInitiator.4.4
                         @Override // java.lang.Runnable
                         public void run() {
-                            IProcedure a = C6756a.a();
-                            if (a != null) {
-                                a.addProperty("bizID", str);
+                            IProcedure a2 = com.taobao.monitor.adapter.a.a();
+                            if (a2 != null) {
+                                a2.addProperty("bizID", str);
                                 if (TextUtils.isEmpty(str2)) {
                                     return;
                                 }
-                                a.addProperty("bizCode", str2);
+                                a2.addProperty("bizCode", str2);
                             }
                         }
                     });
@@ -238,10 +234,10 @@ abstract class AbsAPMInitiator implements Serializable {
     }
 
     private void initLauncherProcedure() {
-        IProcedure createProcedure = tu1.b.createProcedure(dp2.a("/startup"), new C6817d.C6819b().g(false).k(true).i(false).h(null).f());
+        IProcedure createProcedure = tu1.b.createProcedure(dp2.a("/startup"), new d.b().g(false).k(true).i(false).h(null).f());
         createProcedure.begin();
         uu1.PROCEDURE_MANAGER.s(createProcedure);
-        IProcedure createProcedure2 = tu1.b.createProcedure("/APMSelf", new C6817d.C6819b().g(false).k(false).i(false).h(createProcedure).f());
+        IProcedure createProcedure2 = tu1.b.createProcedure("/APMSelf", new d.b().g(false).k(false).i(false).h(createProcedure).f());
         createProcedure2.begin();
         createProcedure2.addProperty("isMainThread", Boolean.valueOf(Looper.getMainLooper().getThread() == Thread.currentThread()));
         createProcedure2.addProperty("threadName", Thread.currentThread().getName());
@@ -268,21 +264,21 @@ abstract class AbsAPMInitiator implements Serializable {
     private void initThread() {
         fu0.e().g(uu1.d().b());
         if (rj2.f) {
-            vm2.b(new TBThreadPoolExecutor(3, 3, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue(), new ThreadFactoryC6750a(this, new AtomicInteger(0)), new ThreadPoolExecutor.AbortPolicy()));
-            vm2.c(new C6751b(this));
+            vm2.b(new TBThreadPoolExecutor(3, 3, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue(), new a(this, new AtomicInteger(0)), new ThreadPoolExecutor.AbortPolicy()));
+            vm2.c(new b(this));
         }
     }
 
     private void initUTSession(HashMap<String, Object> hashMap) {
         if (nq1.a(hashMap.get("needUT"), true)) {
-            dt2.a().b(new C6753d(this));
+            dt2.a().b(new d(this));
         }
     }
 
     private void initWebView() {
         if (rj2.g) {
             WVPluginManager.registerPlugin(H5ProcedureGetterBridge.class.getSimpleName(), (Class<? extends WVApiPlugin>) H5ProcedureGetterBridge.class, false);
-            k13.INSTANCE.a(new C6752c(this));
+            k13.INSTANCE.a(new c(this));
         }
     }
 

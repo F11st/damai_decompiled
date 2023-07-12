@@ -16,9 +16,9 @@ import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.youkuplayer.IYoukuPlayer;
 import com.youku.youkuplayer.YoukuPlayer;
 import com.youku.youkuplayer.data.PlayParam;
-import tb.C9878ws;
 import tb.bt;
 import tb.mu0;
+import tb.ws;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
@@ -209,7 +209,7 @@ public class VideoView extends ResizeFrameLayout implements ApiPlayer {
     public VideoView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         this.mUiFacade = new NonNullUiFacade(this);
-        IYoukuPlayer create = YoukuPlayer.create(mu0.a(), new C9878ws().a(), null);
+        IYoukuPlayer create = YoukuPlayer.create(mu0.a(), new ws().a(), null);
         this.mPlayer = create;
         create.setWaterMarkImageView(new bt(context));
         MainThreadVideoListener mainThreadVideoListener = new MainThreadVideoListener(this, this.mUiFacade);

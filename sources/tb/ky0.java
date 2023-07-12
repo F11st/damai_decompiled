@@ -8,8 +8,6 @@ import cn.damai.homepage.bean.HomeConfigBean;
 import cn.damai.homepage.bean.HomeConfigPopBean;
 import cn.damai.homepage.ui.view.HomeLottieView;
 import cn.damai.homepage.util.ZipDownLoadManager;
-import com.airbnb.lottie.C2821a;
-import com.airbnb.lottie.C2861b;
 import com.airbnb.lottie.ImageAssetDelegate;
 import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.LottieListener;
@@ -30,15 +28,14 @@ public class ky0 {
     private static ky0 d;
     private Context a;
     private LottieAnimationView b;
-    private LottieListener c = new C9390d();
+    private LottieListener c = new d();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ky0$a */
     /* loaded from: classes5.dex */
-    public class C9387a implements ZipDownLoadManager.OnZipDownLoadListsner {
+    public class a implements ZipDownLoadManager.OnZipDownLoadListsner {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9387a() {
+        a() {
         }
 
         @Override // cn.damai.homepage.util.ZipDownLoadManager.OnZipDownLoadListsner
@@ -64,13 +61,12 @@ public class ky0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ky0$b */
     /* loaded from: classes5.dex */
-    public class C9388b implements ImageAssetDelegate {
+    public class b implements ImageAssetDelegate {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C9388b(ky0 ky0Var, String str) {
+        b(ky0 ky0Var, String str) {
             this.a = str;
         }
 
@@ -90,7 +86,7 @@ public class ky0 {
             /*
                 r6 = this;
                 java.lang.String r0 = "HomePageLottieHelper"
-                com.android.alibaba.ip.runtime.IpChange r1 = tb.ky0.C9388b.$ipChange
+                com.android.alibaba.ip.runtime.IpChange r1 = tb.ky0.b.$ipChange
                 java.lang.String r2 = "-1716022274"
                 boolean r3 = com.android.alibaba.ip.runtime.AndroidInstantRuntime.support(r1, r2)
                 r4 = 1
@@ -172,19 +168,18 @@ public class ky0 {
             L8c:
                 throw r7
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.ky0.C9388b.fetchBitmap(tb.jc1):android.graphics.Bitmap");
+            throw new UnsupportedOperationException("Method not decompiled: tb.ky0.b.fetchBitmap(tb.jc1):android.graphics.Bitmap");
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ky0$c */
     /* loaded from: classes5.dex */
-    public class C9389c implements Animator.AnimatorListener {
+    public class c implements Animator.AnimatorListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ HomeLottieView a;
         final /* synthetic */ String b;
 
-        C9389c(ky0 ky0Var, HomeLottieView homeLottieView, String str) {
+        c(ky0 ky0Var, HomeLottieView homeLottieView, String str) {
             this.a = homeLottieView;
             this.b = str;
         }
@@ -231,23 +226,22 @@ public class ky0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ky0$d */
     /* loaded from: classes5.dex */
-    public class C9390d implements LottieListener<C2821a> {
+    public class d implements LottieListener<com.airbnb.lottie.a> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9390d() {
+        d() {
         }
 
         @Override // com.airbnb.lottie.LottieListener
         /* renamed from: a */
-        public void onResult(C2821a c2821a) {
+        public void onResult(com.airbnb.lottie.a aVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1300973226")) {
-                ipChange.ipc$dispatch("1300973226", new Object[]{this, c2821a});
+                ipChange.ipc$dispatch("1300973226", new Object[]{this, aVar});
                 return;
             }
-            ky0.this.b.setComposition(c2821a);
+            ky0.this.b.setComposition(aVar);
             ky0.this.b.playAnimation();
         }
     }
@@ -382,7 +376,7 @@ public class ky0 {
         }
         String B = z20.B("paopaodate");
         if (B == null || !B.equals(g())) {
-            new ZipDownLoadManager().h(str).f(h(this.a)).g(new C9387a()).e();
+            new ZipDownLoadManager().h(str).f(h(this.a)).g(new a()).e();
         }
     }
 
@@ -408,16 +402,16 @@ public class ky0 {
                 }
                 sb.append(readLine);
             }
-            String c = c(new File(e).getParentFile());
-            if (!TextUtils.isEmpty(c)) {
-                homeLottieView.setBgImage(c);
+            String c2 = c(new File(e).getParentFile());
+            if (!TextUtils.isEmpty(c2)) {
+                homeLottieView.setBgImage(c2);
             }
             String f = f(new File(e).getParentFile());
             if (!TextUtils.isEmpty(f)) {
-                homeLottieView.setImageAssetDelegate(new C9388b(this, f));
+                homeLottieView.setImageAssetDelegate(new b(this, f));
             }
-            C2861b.m(sb.toString(), "homeLottie").f(this.c);
-            homeLottieView.addAnimatorListener(new C9389c(this, homeLottieView, str));
+            com.airbnb.lottie.b.m(sb.toString(), "homeLottie").f(this.c);
+            homeLottieView.addAnimatorListener(new c(this, homeLottieView, str));
         } catch (Exception e2) {
             cb1.b("HomePageLottieHelper", e2.getMessage());
         }

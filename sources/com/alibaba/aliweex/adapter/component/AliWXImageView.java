@@ -4,7 +4,7 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import androidx.annotation.Nullable;
-import com.alibaba.aliweex.C3004a;
+import com.alibaba.aliweex.a;
 import com.alibaba.aliweex.adapter.adapter.WXImgLoaderAdapter;
 import com.taobao.weex.common.Destroyable;
 import com.taobao.weex.ui.view.WXImageView;
@@ -45,7 +45,7 @@ public class AliWXImageView extends WXImageView implements Destroyable {
         releaseDrawable();
         super.setImageDrawable(drawable);
         if (drawable instanceof m12) {
-            String config = C3004a.l().c().getConfig(WXImgLoaderAdapter.WX_IMAGE_RELEASE_CONFIG, WXImgLoaderAdapter.WX_ALLOW_RELEASE_DOMAIN, "");
+            String config = a.l().c().getConfig(WXImgLoaderAdapter.WX_IMAGE_RELEASE_CONFIG, WXImgLoaderAdapter.WX_ALLOW_RELEASE_DOMAIN, "");
             if (TextUtils.isEmpty(config) || !TextUtils.equals("true", config)) {
                 return;
             }

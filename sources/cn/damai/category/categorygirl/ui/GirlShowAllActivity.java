@@ -16,7 +16,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.category.categorygirl.model.CategoryGirlModel;
 import cn.damai.category.categorygirl.request.SearchListRequest;
 import cn.damai.category.categorygirl.ui.adapter.GirlShowListAdapter;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.base.ResponseErrorPage;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.commonbusiness.search.Daojishi;
@@ -65,15 +64,14 @@ public class GirlShowAllActivity extends SimpleBaseActivity implements OnLoadMor
     private String mGroupId = "";
     private String mGroupName = "";
     private String mCityId = "";
-    private View.OnClickListener mProjectItemListener = new View$OnClickListenerC0372c();
+    private View.OnClickListener mProjectItemListener = new c();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.categorygirl.ui.GirlShowAllActivity$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0370a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0370a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -88,12 +86,11 @@ public class GirlShowAllActivity extends SimpleBaseActivity implements OnLoadMor
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.categorygirl.ui.GirlShowAllActivity$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0371b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0371b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -108,12 +105,11 @@ public class GirlShowAllActivity extends SimpleBaseActivity implements OnLoadMor
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.categorygirl.ui.GirlShowAllActivity$c */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0372c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0372c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -133,19 +129,18 @@ public class GirlShowAllActivity extends SimpleBaseActivity implements OnLoadMor
                 bundle.putString("projectName", projectItemBean.name);
                 bundle.putString("projectImage", projectItemBean.verticalPic);
                 qd2.a(GirlShowAllActivity.this, projectItemBean.schema, bundle);
-                C0529c.e().x(og.g().h(projectItemBean.pos, z20.d(), GirlShowAllActivity.this.mGroupName, projectItemBean.id));
+                cn.damai.common.user.c.e().x(og.g().h(projectItemBean.pos, z20.d(), GirlShowAllActivity.this.mGroupName, projectItemBean.id));
             } catch (Exception unused) {
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.categorygirl.ui.GirlShowAllActivity$d */
     /* loaded from: classes.dex */
-    public class C0373d implements ResponseErrorPage.ErrorRefreshListener {
+    public class d implements ResponseErrorPage.ErrorRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0373d() {
+        d() {
         }
 
         @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
@@ -273,7 +268,7 @@ public class GirlShowAllActivity extends SimpleBaseActivity implements OnLoadMor
         this.mEmptyFoot.setVisibility(8);
         View findViewById = findViewById(R$id.image_gotop);
         this.mGoTopView = findViewById;
-        findViewById.setOnClickListener(new View$OnClickListenerC0371b());
+        findViewById.setOnClickListener(new b());
     }
 
     private void initTitle() {
@@ -283,7 +278,7 @@ public class GirlShowAllActivity extends SimpleBaseActivity implements OnLoadMor
             return;
         }
         removeHeadTitleView();
-        findViewById(R$id.btn_left).setOnClickListener(new View$OnClickListenerC0370a());
+        findViewById(R$id.btn_left).setOnClickListener(new a());
         ((TextView) findViewById(R$id.tv_title)).setText(this.mGroupName);
         int i = R$id.view_line;
         this.mLineView = findViewById(i);
@@ -388,7 +383,7 @@ public class GirlShowAllActivity extends SimpleBaseActivity implements OnLoadMor
             ResponseErrorPage responseErrorPage2 = new ResponseErrorPage(this, str, str2, str3);
             this.mErrorPage = responseErrorPage2;
             responseErrorPage2.hideTitle();
-            this.mErrorPage.setRefreshListener(new C0373d());
+            this.mErrorPage.setRefreshListener(new d());
             this.mLayoutPage.addView(this.mErrorPage);
         }
     }

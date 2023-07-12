@@ -30,7 +30,7 @@ import com.google.android.material.shape.Shapeable;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class ShapeableImageView extends AppCompatImageView implements Shapeable {
-    private static final int DEF_STYLE_RES = R.C4819style.Widget_MaterialComponents_ShapeableImageView;
+    private static final int DEF_STYLE_RES = R.style.Widget_MaterialComponents_ShapeableImageView;
     private static final int UNDEFINED_PADDING = Integer.MIN_VALUE;
     private final Paint borderPaint;
     @Dimension

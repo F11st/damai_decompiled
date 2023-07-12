@@ -58,7 +58,7 @@ public class NavigationView extends ScrimInsetsFrameLayout {
     private final int[] tmpLocation;
     private static final int[] CHECKED_STATE_SET = {16842912};
     private static final int[] DISABLED_STATE_SET = {-16842910};
-    private static final int DEF_STYLE_RES = R.C4819style.Widget_Design_NavigationView;
+    private static final int DEF_STYLE_RES = R.style.Widget_Design_NavigationView;
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */

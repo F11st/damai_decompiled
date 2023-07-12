@@ -23,22 +23,21 @@ import tb.cb2;
 /* loaded from: classes15.dex */
 public class MusicFestivalMapView extends FrameLayout implements Comparator<View> {
     private static transient /* synthetic */ IpChange $ipChange;
-    private AbstractC1484b mAdapter;
-    private C1486d mRecycleBin;
-    private AbstractC1485c mSetObserver;
+    private b mAdapter;
+    private d mRecycleBin;
+    private c mSetObserver;
     private List<View> mSortList;
     private Rect mTemp;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.musicfestival.view.MusicFestivalMapView$a */
     /* loaded from: classes6.dex */
-    public class C1483a extends AbstractC1485c {
+    public class a extends c {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1483a() {
+        a() {
         }
 
-        @Override // cn.damai.musicfestival.view.MusicFestivalMapView.AbstractC1485c
+        @Override // cn.damai.musicfestival.view.MusicFestivalMapView.c
         public void a() {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-971114286")) {
@@ -48,14 +47,14 @@ public class MusicFestivalMapView extends FrameLayout implements Comparator<View
             }
         }
 
-        @Override // cn.damai.musicfestival.view.MusicFestivalMapView.AbstractC1485c
+        @Override // cn.damai.musicfestival.view.MusicFestivalMapView.c
         public void b(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "109234142")) {
                 ipChange.ipc$dispatch("109234142", new Object[]{this, Integer.valueOf(i)});
                 return;
             }
-            C1487e findChildViewHolder = MusicFestivalMapView.this.findChildViewHolder(i);
+            e findChildViewHolder = MusicFestivalMapView.this.findChildViewHolder(i);
             if (findChildViewHolder != null && MusicFestivalMapView.this.mAdapter != null) {
                 MusicFestivalMapView.this.mAdapter.f(findChildViewHolder, i);
             }
@@ -64,18 +63,17 @@ public class MusicFestivalMapView extends FrameLayout implements Comparator<View
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.musicfestival.view.MusicFestivalMapView$b */
     /* loaded from: classes15.dex */
-    public static abstract class AbstractC1484b<VH extends C1487e> {
+    public static abstract class b<VH extends e> {
         private static transient /* synthetic */ IpChange $ipChange;
-        private AbstractC1485c a;
+        private c a;
 
-        public void a(AbstractC1485c abstractC1485c) {
+        public void a(c cVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "843488897")) {
-                ipChange.ipc$dispatch("843488897", new Object[]{this, abstractC1485c});
+                ipChange.ipc$dispatch("843488897", new Object[]{this, cVar});
             } else {
-                this.a = abstractC1485c;
+                this.a = cVar;
             }
         }
 
@@ -95,19 +93,19 @@ public class MusicFestivalMapView extends FrameLayout implements Comparator<View
                 ipChange.ipc$dispatch("1142556491", new Object[]{this});
                 return;
             }
-            AbstractC1485c abstractC1485c = this.a;
-            if (abstractC1485c != null) {
-                abstractC1485c.a();
+            c cVar = this.a;
+            if (cVar != null) {
+                cVar.a();
             }
         }
 
         public void e(int i) {
-            AbstractC1485c abstractC1485c;
+            c cVar;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1191603937")) {
                 ipChange.ipc$dispatch("1191603937", new Object[]{this, Integer.valueOf(i)});
-            } else if (i >= 0 && (abstractC1485c = this.a) != null) {
-                abstractC1485c.b(i);
+            } else if (i >= 0 && (cVar = this.a) != null) {
+                cVar.b(i);
             }
         }
 
@@ -117,9 +115,8 @@ public class MusicFestivalMapView extends FrameLayout implements Comparator<View
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.musicfestival.view.MusicFestivalMapView$c */
     /* loaded from: classes15.dex */
-    public static abstract class AbstractC1485c {
+    public static abstract class c {
         private static transient /* synthetic */ IpChange $ipChange;
 
         public abstract void a();
@@ -128,11 +125,10 @@ public class MusicFestivalMapView extends FrameLayout implements Comparator<View
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.musicfestival.view.MusicFestivalMapView$d */
     /* loaded from: classes15.dex */
-    public static class C1486d {
+    public static class d {
         private static transient /* synthetic */ IpChange $ipChange;
-        private final SparseArray<List<C1487e>> a = new SparseArray<>();
+        private final SparseArray<List<e>> a = new SparseArray<>();
 
         public void a() {
             IpChange ipChange = $ipChange;
@@ -143,12 +139,12 @@ public class MusicFestivalMapView extends FrameLayout implements Comparator<View
             }
         }
 
-        public C1487e b(int i) {
+        public e b(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-647393450")) {
-                return (C1487e) ipChange.ipc$dispatch("-647393450", new Object[]{this, Integer.valueOf(i)});
+                return (e) ipChange.ipc$dispatch("-647393450", new Object[]{this, Integer.valueOf(i)});
             }
-            List<C1487e> list = this.a.get(i);
+            List<e> list = this.a.get(i);
             if (cb2.d(list)) {
                 return null;
             }
@@ -156,7 +152,7 @@ public class MusicFestivalMapView extends FrameLayout implements Comparator<View
         }
 
         public void c(View view) {
-            C1487e c1487e;
+            e eVar;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-216673983")) {
                 ipChange.ipc$dispatch("-216673983", new Object[]{this, view});
@@ -165,32 +161,31 @@ public class MusicFestivalMapView extends FrameLayout implements Comparator<View
                 ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
                 if (layoutParams instanceof MfmLayoutParams) {
                     MfmLayoutParams mfmLayoutParams = (MfmLayoutParams) layoutParams;
-                    if (mfmLayoutParams.markUnRecycler || (c1487e = mfmLayoutParams.mViewHolder) == null) {
+                    if (mfmLayoutParams.markUnRecycler || (eVar = mfmLayoutParams.mViewHolder) == null) {
                         return;
                     }
-                    int i = c1487e.a;
-                    List<C1487e> list = this.a.get(i);
+                    int i = eVar.a;
+                    List<e> list = this.a.get(i);
                     if (list == null) {
                         list = new ArrayList<>();
                         this.a.put(i, list);
                     }
-                    list.add(c1487e);
+                    list.add(eVar);
                 }
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.musicfestival.view.MusicFestivalMapView$e */
     /* loaded from: classes15.dex */
-    public static class C1487e {
+    public static class e {
         public static final int NO_POS = -1;
         public static final int NO_VIEW_TYPE = -1;
         public int a = -1;
         public int b = -1;
         public final View c;
 
-        public C1487e(View view) {
+        public e(View view) {
             this.c = view;
             view.setTag(this);
         }
@@ -198,10 +193,10 @@ public class MusicFestivalMapView extends FrameLayout implements Comparator<View
 
     public MusicFestivalMapView(@NonNull Context context) {
         super(context);
-        this.mRecycleBin = new C1486d();
+        this.mRecycleBin = new d();
         this.mSortList = new ArrayList(30);
         this.mTemp = new Rect();
-        this.mSetObserver = new C1483a();
+        this.mSetObserver = new a();
     }
 
     private void ensureLayoutParams(View view) {
@@ -260,30 +255,30 @@ public class MusicFestivalMapView extends FrameLayout implements Comparator<View
 
     /* JADX INFO: Access modifiers changed from: private */
     public void removeChildThenFillViews() {
-        int b;
+        int b2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-717054304")) {
             ipChange.ipc$dispatch("-717054304", new Object[]{this});
             return;
         }
         removeAllViews();
-        AbstractC1484b abstractC1484b = this.mAdapter;
-        if (abstractC1484b != null && (b = abstractC1484b.b()) > 0) {
+        b bVar = this.mAdapter;
+        if (bVar != null && (b2 = bVar.b()) > 0) {
             this.mSortList.clear();
-            for (int i = 0; i < b; i++) {
-                int c = this.mAdapter.c(i);
-                C1487e b2 = this.mRecycleBin.b(c);
-                if (b2 == null) {
-                    b2 = this.mAdapter.g(this, c);
+            for (int i = 0; i < b2; i++) {
+                int c2 = this.mAdapter.c(i);
+                e b3 = this.mRecycleBin.b(c2);
+                if (b3 == null) {
+                    b3 = this.mAdapter.g(this, c2);
                 }
-                this.mAdapter.f(b2, i);
-                ensureLayoutParams(b2.c);
-                MfmLayoutParams mfmLayoutParams = (MfmLayoutParams) b2.c.getLayoutParams();
-                mfmLayoutParams.mViewHolder = b2;
+                this.mAdapter.f(b3, i);
+                ensureLayoutParams(b3.c);
+                MfmLayoutParams mfmLayoutParams = (MfmLayoutParams) b3.c.getLayoutParams();
+                mfmLayoutParams.mViewHolder = b3;
                 mfmLayoutParams.eatAxisZChanged();
-                b2.a = c;
-                b2.b = i;
-                this.mSortList.add(b2.c);
+                b3.a = c2;
+                b3.b = i;
+                this.mSortList.add(b3.c);
             }
             Collections.sort(this.mSortList, this);
             for (View view : this.mSortList) {
@@ -318,17 +313,17 @@ public class MusicFestivalMapView extends FrameLayout implements Comparator<View
         }
     }
 
-    public C1487e findChildViewHolder(int i) {
+    public e findChildViewHolder(int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1687949664")) {
-            return (C1487e) ipChange.ipc$dispatch("1687949664", new Object[]{this, Integer.valueOf(i)});
+            return (e) ipChange.ipc$dispatch("1687949664", new Object[]{this, Integer.valueOf(i)});
         }
         int childCount = getChildCount();
         if (childCount > 0) {
             for (int i2 = 0; i2 < childCount; i2++) {
-                C1487e c1487e = ((MfmLayoutParams) getChildAt(i2).getLayoutParams()).mViewHolder;
-                if (c1487e != null && c1487e.b == i) {
-                    return c1487e;
+                e eVar = ((MfmLayoutParams) getChildAt(i2).getLayoutParams()).mViewHolder;
+                if (eVar != null && eVar.b == i) {
+                    return eVar;
                 }
             }
             return null;
@@ -336,15 +331,15 @@ public class MusicFestivalMapView extends FrameLayout implements Comparator<View
         return null;
     }
 
-    public C1487e getViewHolder(View view) {
+    public e getViewHolder(View view) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1792709278")) {
-            return (C1487e) ipChange.ipc$dispatch("-1792709278", new Object[]{this, view});
+            return (e) ipChange.ipc$dispatch("-1792709278", new Object[]{this, view});
         }
         if (view != null) {
             Object tag = view.getTag();
-            if (tag instanceof C1487e) {
-                return (C1487e) tag;
+            if (tag instanceof e) {
+                return (e) tag;
             }
             return null;
         }
@@ -445,22 +440,22 @@ public class MusicFestivalMapView extends FrameLayout implements Comparator<View
         super.requestLayout();
     }
 
-    public void setAdapter(AbstractC1484b abstractC1484b) {
+    public void setAdapter(b bVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1914181693")) {
-            ipChange.ipc$dispatch("1914181693", new Object[]{this, abstractC1484b});
+            ipChange.ipc$dispatch("1914181693", new Object[]{this, bVar});
             return;
         }
-        AbstractC1484b abstractC1484b2 = this.mAdapter;
-        this.mAdapter = abstractC1484b;
+        b bVar2 = this.mAdapter;
+        this.mAdapter = bVar;
         removeAllViews();
         this.mRecycleBin.a();
-        if (abstractC1484b2 != null) {
-            abstractC1484b2.a(null);
+        if (bVar2 != null) {
+            bVar2.a(null);
         }
-        AbstractC1484b abstractC1484b3 = this.mAdapter;
-        if (abstractC1484b3 != null) {
-            abstractC1484b3.a(this.mSetObserver);
+        b bVar3 = this.mAdapter;
+        if (bVar3 != null) {
+            bVar3.a(this.mSetObserver);
             this.mAdapter.d();
         }
     }
@@ -499,7 +494,7 @@ public class MusicFestivalMapView extends FrameLayout implements Comparator<View
         public int lastAxisZ;
         public boolean layoutAsFrameLayout;
         public int leftOffsetInRatioMode;
-        public C1487e mViewHolder;
+        public e mViewHolder;
         public boolean markUnRecycler;
         public float xRatioInWidth;
         public float yRatioInHeight;
@@ -570,17 +565,17 @@ public class MusicFestivalMapView extends FrameLayout implements Comparator<View
 
     public MusicFestivalMapView(@NonNull Context context, @Nullable AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.mRecycleBin = new C1486d();
+        this.mRecycleBin = new d();
         this.mSortList = new ArrayList(30);
         this.mTemp = new Rect();
-        this.mSetObserver = new C1483a();
+        this.mSetObserver = new a();
     }
 
     public MusicFestivalMapView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        this.mRecycleBin = new C1486d();
+        this.mRecycleBin = new d();
         this.mSortList = new ArrayList(30);
         this.mTemp = new Rect();
-        this.mSetObserver = new C1483a();
+        this.mSetObserver = new a();
     }
 }

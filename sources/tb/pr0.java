@@ -9,7 +9,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes6.dex */
 public final class pr0 {
     @NotNull
-    public static final C9565a Companion = new C9565a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String MODE_TYPE_CROP = "crop";
     @NotNull
@@ -20,13 +20,12 @@ public final class pr0 {
     private final String b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.pr0$a */
     /* loaded from: classes6.dex */
-    public static final class C9565a {
-        private C9565a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9565a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

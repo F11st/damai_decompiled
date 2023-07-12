@@ -1,11 +1,9 @@
 package com.xiaomi.push;
 
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.gl;
 import com.xiaomi.push.gp;
 import com.xiaomi.push.gr;
-import com.xiaomi.push.service.C7760k;
 import com.xiaomi.push.service.bg;
 import com.youku.passport.family.Relation;
 import java.io.ByteArrayInputStream;
@@ -24,10 +22,10 @@ public class gv {
 
     public static gk a(String str, String str2, XmlPullParser xmlPullParser) {
         Object m933a = gu.a().m933a("all", "xm:chat");
-        if (m933a == null || !(m933a instanceof C7760k)) {
+        if (m933a == null || !(m933a instanceof com.xiaomi.push.service.k)) {
             return null;
         }
-        return ((C7760k) m933a).b(xmlPullParser);
+        return ((com.xiaomi.push.service.k) m933a).b(xmlPullParser);
     }
 
     public static gl a(XmlPullParser xmlPullParser, fw fwVar) {
@@ -35,7 +33,7 @@ public class gv {
         String attributeValue2 = xmlPullParser.getAttributeValue("", "to");
         String attributeValue3 = xmlPullParser.getAttributeValue("", "from");
         String attributeValue4 = xmlPullParser.getAttributeValue("", "chid");
-        gl.C7663a a2 = gl.C7663a.a(xmlPullParser.getAttributeValue("", "type"));
+        gl.a a2 = gl.a.a(xmlPullParser.getAttributeValue("", "type"));
         HashMap hashMap = new HashMap();
         boolean z = false;
         for (int i = 0; i < xmlPullParser.getAttributeCount(); i++) {
@@ -60,16 +58,16 @@ public class gv {
             }
         }
         if (glVar == null) {
-            if (gl.C7663a.a == a2 || gl.C7663a.b == a2) {
+            if (gl.a.a == a2 || gl.a.b == a2) {
                 gw gwVar = new gw();
                 gwVar.k(attributeValue);
                 gwVar.m(attributeValue3);
                 gwVar.n(attributeValue2);
-                gwVar.a(gl.C7663a.d);
+                gwVar.a(gl.a.d);
                 gwVar.l(attributeValue4);
-                gwVar.a(new gr(gr.C7666a.e));
+                gwVar.a(new gr(gr.a.e));
                 fwVar.a(gwVar);
-                AbstractC7535b.d("iq usage error. send packet in packet parser.");
+                com.xiaomi.channel.commonutils.logger.b.d("iq usage error. send packet in packet parser.");
                 return null;
             }
             glVar = new gx();
@@ -94,7 +92,7 @@ public class gv {
             String attributeValue3 = xmlPullParser.getAttributeValue("", "from");
             String attributeValue4 = xmlPullParser.getAttributeValue("", "to");
             String attributeValue5 = xmlPullParser.getAttributeValue("", "type");
-            bg.C7737b a2 = com.xiaomi.push.service.bg.a().a(attributeValue, attributeValue4);
+            bg.b a2 = com.xiaomi.push.service.bg.a().a(attributeValue, attributeValue4);
             if (a2 == null) {
                 a2 = com.xiaomi.push.service.bg.a().a(attributeValue, attributeValue3);
             }
@@ -226,17 +224,17 @@ public class gv {
 
     /* renamed from: a  reason: collision with other method in class */
     public static gp m935a(XmlPullParser xmlPullParser) {
-        gp.EnumC7665b enumC7665b = gp.EnumC7665b.available;
+        gp.b bVar = gp.b.available;
         String attributeValue = xmlPullParser.getAttributeValue("", "type");
         if (attributeValue != null && !attributeValue.equals("")) {
             try {
-                enumC7665b = gp.EnumC7665b.valueOf(attributeValue);
+                bVar = gp.b.valueOf(attributeValue);
             } catch (IllegalArgumentException unused) {
                 PrintStream printStream = System.err;
                 printStream.println("Found invalid presence type " + attributeValue);
             }
         }
-        gp gpVar = new gp(enumC7665b);
+        gp gpVar = new gp(bVar);
         gpVar.m(xmlPullParser.getAttributeValue("", "to"));
         gpVar.n(xmlPullParser.getAttributeValue("", "from"));
         gpVar.l(xmlPullParser.getAttributeValue("", "chid"));
@@ -263,7 +261,7 @@ public class gv {
                 } else if (name.equals("show")) {
                     String nextText = xmlPullParser.nextText();
                     try {
-                        gpVar.a(gp.EnumC7664a.valueOf(nextText));
+                        gpVar.a(gp.a.valueOf(nextText));
                     } catch (IllegalArgumentException unused4) {
                         PrintStream printStream2 = System.err;
                         printStream2.println("Found invalid presence mode " + nextText);

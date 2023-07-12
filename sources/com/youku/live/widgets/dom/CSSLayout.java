@@ -17,7 +17,7 @@ import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.live.widgets.WidgetSDKEngine;
 import com.youku.live.widgets.model.template.WidgetAttributesModel;
 import com.youku.live.widgets.protocol.Orientation;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -44,7 +44,7 @@ public class CSSLayout extends FrameLayout {
             return ((Float) ipChange.ipc$dispatch("133730052", new Object[]{this})).floatValue();
         }
         if (this.baseDensity <= 0.0f) {
-            WindowManager windowManager = (WindowManager) getContext().getSystemService(C9796v.ATTACH_MODE_WINDOW);
+            WindowManager windowManager = (WindowManager) getContext().getSystemService(v.ATTACH_MODE_WINDOW);
             DisplayMetrics displayMetrics = new DisplayMetrics();
             if (windowManager != null) {
                 Display.getMetrics(windowManager.getDefaultDisplay(), displayMetrics);

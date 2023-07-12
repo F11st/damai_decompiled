@@ -9,7 +9,7 @@ import androidx.appcompat.widget.AppCompatTextView;
 /* loaded from: classes11.dex */
 public class CountDownTextView extends AppCompatTextView {
     private long mBeginTime;
-    private CountDownTimerC6567a mCountDownTimer;
+    private a mCountDownTimer;
     private long mCountInterval;
     private String mIdleText;
     private OnFinishListener mOnFinishListener;
@@ -22,10 +22,9 @@ public class CountDownTextView extends AppCompatTextView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.purchase.core.dinamcX.view.CountDownTextView$a */
     /* loaded from: classes12.dex */
-    public class CountDownTimerC6567a extends CountDownTimer {
-        public CountDownTimerC6567a(long j, long j2) {
+    public class a extends CountDownTimer {
+        public a(long j, long j2) {
             super(j, j2);
         }
 
@@ -95,14 +94,14 @@ public class CountDownTextView extends AppCompatTextView {
         if (j3 <= j5 || j5 <= 0 || j <= 0 || j2 / 1000 >= j3) {
             return;
         }
-        CountDownTimerC6567a countDownTimerC6567a = this.mCountDownTimer;
-        if (countDownTimerC6567a != null) {
-            countDownTimerC6567a.cancel();
+        a aVar = this.mCountDownTimer;
+        if (aVar != null) {
+            aVar.cancel();
             this.mCountDownTimer = null;
         }
-        CountDownTimerC6567a countDownTimerC6567a2 = new CountDownTimerC6567a(j4, this.mCountInterval * 1000);
-        this.mCountDownTimer = countDownTimerC6567a2;
-        countDownTimerC6567a2.start();
+        a aVar2 = new a(j4, this.mCountInterval * 1000);
+        this.mCountDownTimer = aVar2;
+        aVar2.start();
     }
 
     public CountDownTextView(Context context, AttributeSet attributeSet) {

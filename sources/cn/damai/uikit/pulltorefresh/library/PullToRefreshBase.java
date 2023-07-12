@@ -90,7 +90,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
         }
 
         LoadingLayout createLoadingLayout(Context context, Mode mode, Orientation orientation, TypedArray typedArray) {
-            int i = C2532c.d[ordinal()];
+            int i = c.d[ordinal()];
             if (i != 2) {
                 if (i != 3) {
                     return new RotateLoadingLayout(context, mode, orientation, typedArray);
@@ -285,12 +285,11 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.pulltorefresh.library.PullToRefreshBase$a */
     /* loaded from: classes8.dex */
-    public class C2530a implements OnSmoothScrollFinishedListener {
+    public class a implements OnSmoothScrollFinishedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2530a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.pulltorefresh.library.PullToRefreshBase.OnSmoothScrollFinishedListener
@@ -305,12 +304,11 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.pulltorefresh.library.PullToRefreshBase$b */
     /* loaded from: classes8.dex */
-    public class C2531b implements OnSmoothScrollFinishedListener {
+    public class b implements OnSmoothScrollFinishedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2531b() {
+        b() {
         }
 
         @Override // cn.damai.uikit.pulltorefresh.library.PullToRefreshBase.OnSmoothScrollFinishedListener
@@ -326,9 +324,8 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.pulltorefresh.library.PullToRefreshBase$c */
     /* loaded from: classes8.dex */
-    public static /* synthetic */ class C2532c {
+    public static /* synthetic */ class c {
         static final /* synthetic */ int[] a;
         static final /* synthetic */ int[] b;
         static final /* synthetic */ int[] c;
@@ -460,7 +457,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
         if (AndroidInstantRuntime.support(ipChange, "-1507176326")) {
             return (LinearLayout.LayoutParams) ipChange.ipc$dispatch("-1507176326", new Object[]{this});
         }
-        if (C2532c.a[getPullToRefreshScrollDirection().ordinal()] != 1) {
+        if (c.a[getPullToRefreshScrollDirection().ordinal()] != 1) {
             return new LinearLayout.LayoutParams(-1, -2);
         }
         return new LinearLayout.LayoutParams(-2, -1);
@@ -471,7 +468,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
         if (AndroidInstantRuntime.support(ipChange, "2127525608")) {
             return ((Integer) ipChange.ipc$dispatch("2127525608", new Object[]{this})).intValue();
         }
-        if (C2532c.a[getPullToRefreshScrollDirection().ordinal()] != 1) {
+        if (c.a[getPullToRefreshScrollDirection().ordinal()] != 1) {
             return Math.round(getHeight() / FRICTION);
         }
         return Math.round(getWidth() / FRICTION);
@@ -483,7 +480,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
             ipChange.ipc$dispatch("256161063", new Object[]{this, context, attributeSet});
             return;
         }
-        if (C2532c.a[getPullToRefreshScrollDirection().ordinal()] != 1) {
+        if (c.a[getPullToRefreshScrollDirection().ordinal()] != 1) {
             setOrientation(1);
         } else {
             setOrientation(0);
@@ -538,7 +535,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
         if (AndroidInstantRuntime.support(ipChange, "-572182912")) {
             return ((Boolean) ipChange.ipc$dispatch("-572182912", new Object[]{this})).booleanValue();
         }
-        int i = C2532c.c[this.mMode.ordinal()];
+        int i = c.c[this.mMode.ordinal()];
         if (i != 1) {
             if (i != 2) {
                 if (i != 4) {
@@ -561,14 +558,14 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
             ipChange.ipc$dispatch("1445369220", new Object[]{this});
             return;
         }
-        if (C2532c.a[getPullToRefreshScrollDirection().ordinal()] != 1) {
+        if (c.a[getPullToRefreshScrollDirection().ordinal()] != 1) {
             f = this.mInitialMotionY;
             f2 = this.mLastMotionY;
         } else {
             f = this.mInitialMotionX;
             f2 = this.mLastMotionX;
         }
-        int[] iArr = C2532c.c;
+        int[] iArr = c.c;
         if (iArr[this.mCurrentMode.ordinal()] != 1) {
             round = Math.round(Math.min(f - f2, 0.0f) / FRICTION);
             footerSize = getHeaderSize();
@@ -601,7 +598,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
         if (AndroidInstantRuntime.support(ipChange, "1730393010")) {
             ipChange.ipc$dispatch("1730393010", new Object[]{this, Integer.valueOf(i)});
         } else {
-            smoothScrollTo(i, 200L, 0L, new C2531b());
+            smoothScrollTo(i, 200L, 0L, new b());
         }
     }
 
@@ -642,19 +639,19 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public C2535a createLoadingLayoutProxy(boolean z, boolean z2) {
+    public cn.damai.uikit.pulltorefresh.library.a createLoadingLayoutProxy(boolean z, boolean z2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "110430726")) {
-            return (C2535a) ipChange.ipc$dispatch("110430726", new Object[]{this, Boolean.valueOf(z), Boolean.valueOf(z2)});
+            return (cn.damai.uikit.pulltorefresh.library.a) ipChange.ipc$dispatch("110430726", new Object[]{this, Boolean.valueOf(z), Boolean.valueOf(z2)});
         }
-        C2535a c2535a = new C2535a();
+        cn.damai.uikit.pulltorefresh.library.a aVar = new cn.damai.uikit.pulltorefresh.library.a();
         if (z && this.mMode.showHeaderLoadingLayout()) {
-            c2535a.a(this.mHeaderLayout);
+            aVar.a(this.mHeaderLayout);
         }
         if (z2 && this.mMode.showFooterLoadingLayout()) {
-            c2535a.a(this.mFooterLayout);
+            aVar.a(this.mFooterLayout);
         }
-        return c2535a;
+        return aVar;
     }
 
     protected abstract T createRefreshableView(Context context, AttributeSet attributeSet);
@@ -796,7 +793,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
     @Override // cn.damai.uikit.pulltorefresh.library.IPullToRefresh
     public final boolean isPullToRefreshOverScrollEnabled() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1580551654") ? ((Boolean) ipChange.ipc$dispatch("1580551654", new Object[]{this})).booleanValue() : Build.VERSION.SDK_INT >= 9 && this.mOverScrollEnabled && C2536b.a(this.mRefreshableView);
+        return AndroidInstantRuntime.support(ipChange, "1580551654") ? ((Boolean) ipChange.ipc$dispatch("1580551654", new Object[]{this})).booleanValue() : Build.VERSION.SDK_INT >= 9 && this.mOverScrollEnabled && cn.damai.uikit.pulltorefresh.library.b.a(this.mRefreshableView);
     }
 
     protected abstract boolean isReadyForPullEnd();
@@ -839,7 +836,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
                             if (isReadyForPull()) {
                                 float y = motionEvent.getY();
                                 float x = motionEvent.getX();
-                                if (C2532c.a[getPullToRefreshScrollDirection().ordinal()] != 1) {
+                                if (c.a[getPullToRefreshScrollDirection().ordinal()] != 1) {
                                     f = y - this.mLastMotionY;
                                     f2 = x - this.mLastMotionX;
                                 } else {
@@ -908,7 +905,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
             ipChange.ipc$dispatch("-1251306243", new Object[]{this});
             return;
         }
-        int i = C2532c.c[this.mCurrentMode.ordinal()];
+        int i = c.c[this.mCurrentMode.ordinal()];
         if (i == 1) {
             this.mFooterLayout.pullToRefresh();
         } else if (i != 2) {
@@ -942,13 +939,13 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
         }
         if (z) {
             if (this.mShowViewWhileRefreshing) {
-                C2530a c2530a = new C2530a();
-                int i = C2532c.c[this.mCurrentMode.ordinal()];
+                a aVar = new a();
+                int i = c.c[this.mCurrentMode.ordinal()];
                 if (i != 1 && i != 3) {
-                    smoothScrollTo(-getHeaderSize(), c2530a);
+                    smoothScrollTo(-getHeaderSize(), aVar);
                     return;
                 } else {
-                    smoothScrollTo(getFooterSize(), c2530a);
+                    smoothScrollTo(getFooterSize(), aVar);
                     return;
                 }
             }
@@ -965,7 +962,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
             ipChange.ipc$dispatch("-143594535", new Object[]{this});
             return;
         }
-        int i = C2532c.c[this.mCurrentMode.ordinal()];
+        int i = c.c[this.mCurrentMode.ordinal()];
         if (i == 1) {
             this.mFooterLayout.releaseToRefresh();
         } else if (i != 2) {
@@ -1165,7 +1162,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
         int paddingTop = getPaddingTop();
         int paddingRight = getPaddingRight();
         int paddingBottom = getPaddingBottom();
-        int i = C2532c.a[getPullToRefreshScrollDirection().ordinal()];
+        int i = c.a[getPullToRefreshScrollDirection().ordinal()];
         if (i == 1) {
             if (this.mMode.showHeaderLoadingLayout()) {
                 this.mHeaderLayout.setWidth(maximumPullScroll);
@@ -1204,7 +1201,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
             return;
         }
         LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) this.mRefreshableViewWrapper.getLayoutParams();
-        int i3 = C2532c.a[getPullToRefreshScrollDirection().ordinal()];
+        int i3 = c.a[getPullToRefreshScrollDirection().ordinal()];
         if (i3 != 1) {
             if (i3 == 2 && layoutParams.height != i2) {
                 layoutParams.height = i2;
@@ -1255,7 +1252,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
                 this.mFooterLayout.setVisibility(4);
             }
         }
-        int i2 = C2532c.a[getPullToRefreshScrollDirection().ordinal()];
+        int i2 = c.a[getPullToRefreshScrollDirection().ordinal()];
         if (i2 == 1) {
             scrollTo(min, 0);
         } else if (i2 != 2) {
@@ -1420,7 +1417,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
         }
         this.mState = state;
         Log.d(LOG_TAG, "State: " + this.mState.name());
-        int i = C2532c.b[this.mState.ordinal()];
+        int i = c.b[this.mState.ordinal()];
         if (i == 1) {
             onReset();
         } else if (i == 2) {
@@ -1586,7 +1583,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
         if (smoothScrollRunnable != null) {
             smoothScrollRunnable.stop();
         }
-        if (C2532c.a[getPullToRefreshScrollDirection().ordinal()] != 1) {
+        if (c.a[getPullToRefreshScrollDirection().ordinal()] != 1) {
             scrollX = getScrollY();
         } else {
             scrollX = getScrollX();

@@ -16,9 +16,8 @@ public enum RVLLevel {
     public final int value;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.riverlogger.RVLLevel$a */
     /* loaded from: classes12.dex */
-    static /* synthetic */ class C6568a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -49,7 +48,7 @@ public enum RVLLevel {
 
     @Override // java.lang.Enum
     public String toString() {
-        int i = C6568a.a[ordinal()];
+        int i = a.a[ordinal()];
         return i != 1 ? i != 2 ? i != 3 ? i != 4 ? "verbose" : "debug" : "info" : "warn" : "error";
     }
 

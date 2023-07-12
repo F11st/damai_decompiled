@@ -25,8 +25,8 @@ import cn.damai.uikit.R$styleable;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.List;
-import tb.C9796v;
 import tb.q60;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
@@ -78,12 +78,11 @@ public class SlidingTabLayout extends HorizontalScrollView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.slidingtab.SlidingTabLayout$a */
     /* loaded from: classes8.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC2545a implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class a implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC2545a() {
+        a() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -105,13 +104,12 @@ public class SlidingTabLayout extends HorizontalScrollView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.slidingtab.SlidingTabLayout$b */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC2546b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        View$OnClickListenerC2546b(int i) {
+        b(int i) {
             this.a = i;
         }
 
@@ -163,7 +161,7 @@ public class SlidingTabLayout extends HorizontalScrollView {
             }
         }
         textView.setPadding(this.mTabPaddingLeft, 0, this.mTabPaddingRight, 0);
-        textView.setOnClickListener(new View$OnClickListenerC2546b(i));
+        textView.setOnClickListener(new b(i));
         this.mTabsContainer.addView(textView);
     }
 
@@ -173,7 +171,7 @@ public class SlidingTabLayout extends HorizontalScrollView {
             ipChange.ipc$dispatch("1993306607", new Object[]{this, attributeSet});
             return;
         }
-        this.mScreenWidth = ((WindowManager) getContext().getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getWidth();
+        this.mScreenWidth = ((WindowManager) getContext().getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getWidth();
         DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
         this.mIndicatorHeight = (int) TypedValue.applyDimension(1, this.mIndicatorHeight, displayMetrics);
         this.mTabPaddingLeft = (int) TypedValue.applyDimension(1, this.mTabPaddingLeft, displayMetrics);
@@ -356,7 +354,7 @@ public class SlidingTabLayout extends HorizontalScrollView {
             resetTabItems();
         }
         this.mCheckedTabWidths = false;
-        getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC2545a());
+        getViewTreeObserver().addOnGlobalLayoutListener(new a());
     }
 
     @Override // android.view.View

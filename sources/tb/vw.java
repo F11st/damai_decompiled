@@ -4,15 +4,14 @@ import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.util.Log;
 import com.taobao.android.dinamicx.DXRuntimeContext;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class vw extends AbstractC6375a {
+public class vw extends com.taobao.android.dinamicx.expression.parser.a {
     public static final long DX_PARSER_LINEAR_GRADIENT = 5808997026297879479L;
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         GradientDrawable.Orientation orientation;
         if (objArr == null || objArr.length < 3 || !(objArr[0] instanceof String)) {
@@ -49,14 +48,14 @@ public class vw extends AbstractC6375a {
         } else {
             orientation = GradientDrawable.Orientation.LEFT_RIGHT;
         }
-        DXWidgetNode.C6475d c6475d = new DXWidgetNode.C6475d();
-        c6475d.d(0);
-        c6475d.f(orientation);
-        c6475d.e(iArr);
-        return c6475d;
+        DXWidgetNode.d dVar = new DXWidgetNode.d();
+        dVar.d(0);
+        dVar.f(orientation);
+        dVar.e(iArr);
+        return dVar;
     }
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
     public String getDxFunctionName() {
         return "linearGradient";
     }

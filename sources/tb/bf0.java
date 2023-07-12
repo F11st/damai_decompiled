@@ -22,12 +22,11 @@ public class bf0 implements ResponseErrorPage.ErrorRefreshListener, ErrorControl
     private DMProgressDialogV2 d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.bf0$a */
     /* loaded from: classes6.dex */
-    public class DialogInterface$OnDismissListenerC8961a implements DialogInterface.OnDismissListener {
+    public class a implements DialogInterface.OnDismissListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnDismissListenerC8961a(bf0 bf0Var) {
+        a(bf0 bf0Var) {
         }
 
         @Override // android.content.DialogInterface.OnDismissListener
@@ -126,9 +125,9 @@ public class bf0 implements ResponseErrorPage.ErrorRefreshListener, ErrorControl
             if (errContainerActivity != null && !errContainerActivity.isFinishing()) {
                 if (z) {
                     if (this.d == null) {
-                        DMProgressDialogV2 a = new DMProgressDialogV2(errContainerActivity).a();
-                        this.d = a;
-                        a.setOnDismissListener(new DialogInterface$OnDismissListenerC8961a(this));
+                        DMProgressDialogV2 a2 = new DMProgressDialogV2(errContainerActivity).a();
+                        this.d = a2;
+                        a2.setOnDismissListener(new a(this));
                     }
                     if (this.d.isShowing()) {
                         return;

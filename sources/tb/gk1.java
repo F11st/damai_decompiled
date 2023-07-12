@@ -2,16 +2,14 @@ package tb;
 
 import com.taobao.aranger.constant.Constants;
 import com.taobao.aranger.core.entity.Call;
-import com.taobao.aranger.core.handler.reply.AbstractC6690a;
 import com.taobao.aranger.exception.IPCException;
 import com.taobao.aranger.intf.IServiceProxy;
-import com.taobao.aranger.utils.C6702d;
 import com.taobao.aranger.utils.TypeUtils;
 import java.lang.reflect.Constructor;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class gk1 extends AbstractC6690a {
+public class gk1 extends com.taobao.aranger.core.handler.reply.a {
     private static final String f = "gk1";
     private final String b;
     private String c;
@@ -23,9 +21,9 @@ public class gk1 extends AbstractC6690a {
         Class<?> cls;
         boolean z;
         this.b = call.getServiceWrapper().getTimeStamp();
-        Class<?> a = C6702d.e().a(call.getServiceWrapper());
+        Class<?> a = com.taobao.aranger.utils.d.e().a(call.getServiceWrapper());
         try {
-            C6702d e = C6702d.e();
+            com.taobao.aranger.utils.d e = com.taobao.aranger.utils.d.e();
             cls = e.b(a.getName() + Constants.PROXY_SUFFIX);
             z = true;
         } catch (IPCException unused) {
@@ -37,10 +35,10 @@ public class gk1 extends AbstractC6690a {
             this.d = TypeUtils.getConstructor(cls, new Class[0]);
             return;
         }
-        this.e = TypeUtils.getConstructor(a, C6702d.e().c(call.getParameterWrappers()));
+        this.e = TypeUtils.getConstructor(a, com.taobao.aranger.utils.d.e().c(call.getParameterWrappers()));
     }
 
-    @Override // com.taobao.aranger.core.handler.reply.AbstractC6690a
+    @Override // com.taobao.aranger.core.handler.reply.a
     public Object a(Object[] objArr) throws IPCException {
         Object newInstance;
         try {

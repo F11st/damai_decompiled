@@ -95,7 +95,7 @@ public final class ObservableScan<T> extends AbstractObservableWithUpstream<T, T
         this.accumulator = biFunction;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new ScanObserver(observer, this.accumulator));
     }

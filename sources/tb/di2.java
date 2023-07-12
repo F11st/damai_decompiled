@@ -36,16 +36,15 @@ public class di2 {
     final String x;
     final int y;
     public static final int holoRedLight = -48060;
-    public static final di2 ALERT = new C9046b().A(holoRedLight).z();
+    public static final di2 ALERT = new b().A(holoRedLight).z();
     public static final int holoGreenLight = -6697984;
-    public static final di2 CONFIRM = new C9046b().A(holoGreenLight).z();
+    public static final di2 CONFIRM = new b().A(holoGreenLight).z();
     public static final int holoBlueLight = -13388315;
-    public static final di2 INFO = new C9046b().A(holoBlueLight).z();
+    public static final di2 INFO = new b().A(holoBlueLight).z();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.di2$b */
     /* loaded from: classes4.dex */
-    public static class C9046b {
+    public static class b {
         private static transient /* synthetic */ IpChange $ipChange;
         private int i;
         private int k;
@@ -73,10 +72,10 @@ public class di2 {
         private String x = null;
         private int y = 0;
 
-        public C9046b A(int i) {
+        public b A(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1557061445")) {
-                return (C9046b) ipChange.ipc$dispatch("1557061445", new Object[]{this, Integer.valueOf(i)});
+                return (b) ipChange.ipc$dispatch("1557061445", new Object[]{this, Integer.valueOf(i)});
             }
             this.b = i;
             return this;
@@ -96,31 +95,31 @@ public class di2 {
         return "Style{configuration=" + this.a + ", backgroundColorResourceId=" + this.b + ", backgroundDrawableResourceId=" + this.c + ", backgroundColorValue=" + this.d + ", isTileEnabled=" + this.e + ", textColorResourceId=" + this.f + ", textColorValue=" + this.g + ", heightInPixels=" + this.h + ", heightDimensionResId=" + this.i + ", widthInPixels=" + this.j + ", widthDimensionResId=" + this.k + ", gravity=" + this.l + ", imageDrawable=" + this.m + ", imageResId=" + this.n + ", imageScaleType=" + this.o + ", textSize=" + this.p + ", textShadowColorResId=" + this.q + ", textShadowRadius=" + this.r + ", textShadowDy=" + this.s + ", textShadowDx=" + this.t + ", textAppearanceResId=" + this.u + ", paddingInPixels=" + this.v + ", paddingDimensionResId=" + this.w + ", fontName=" + this.x + ", fontNameResId=" + this.y + '}';
     }
 
-    private di2(C9046b c9046b) {
-        this.a = c9046b.a;
-        this.b = c9046b.c;
-        this.c = c9046b.d;
-        this.e = c9046b.e;
-        this.f = c9046b.f;
-        this.g = c9046b.g;
-        this.h = c9046b.h;
-        this.i = c9046b.i;
-        this.j = c9046b.j;
-        this.k = c9046b.k;
-        this.l = c9046b.l;
-        this.m = c9046b.m;
-        this.p = c9046b.n;
-        this.q = c9046b.o;
-        this.r = c9046b.p;
-        this.t = c9046b.q;
-        this.s = c9046b.r;
-        this.u = c9046b.s;
-        this.n = c9046b.t;
-        this.o = c9046b.u;
-        this.v = c9046b.v;
-        this.w = c9046b.w;
-        this.d = c9046b.b;
-        this.x = c9046b.x;
-        this.y = c9046b.y;
+    private di2(b bVar) {
+        this.a = bVar.a;
+        this.b = bVar.c;
+        this.c = bVar.d;
+        this.e = bVar.e;
+        this.f = bVar.f;
+        this.g = bVar.g;
+        this.h = bVar.h;
+        this.i = bVar.i;
+        this.j = bVar.j;
+        this.k = bVar.k;
+        this.l = bVar.l;
+        this.m = bVar.m;
+        this.p = bVar.n;
+        this.q = bVar.o;
+        this.r = bVar.p;
+        this.t = bVar.q;
+        this.s = bVar.r;
+        this.u = bVar.s;
+        this.n = bVar.t;
+        this.o = bVar.u;
+        this.v = bVar.v;
+        this.w = bVar.w;
+        this.d = bVar.b;
+        this.x = bVar.x;
+        this.y = bVar.y;
     }
 }

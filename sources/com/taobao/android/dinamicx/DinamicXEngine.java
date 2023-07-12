@@ -9,17 +9,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.alibaba.fastjson.JSONObject;
 import com.taobao.analysis.v3.FalcoContainerSpan;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DXRenderOptions;
 import com.taobao.android.dinamicx.DXRootView;
-import com.taobao.android.dinamicx.asyncrender.C6363a;
 import com.taobao.android.dinamicx.asyncrender.DXAsyncRenderCallback;
 import com.taobao.android.dinamicx.asyncrender.batch.DXBatchAsyncRenderCallback;
 import com.taobao.android.dinamicx.asyncrender.batch.DXBatchRenderWorkTask;
 import com.taobao.android.dinamicx.config.IDXConfigInterface;
-import com.taobao.android.dinamicx.eventchain.C6372b;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.expression.expr_v2.IDXFunction;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 import com.taobao.android.dinamicx.expression.parser.IDXDataParser;
 import com.taobao.android.dinamicx.log.IDXRemoteDebugLog;
 import com.taobao.android.dinamicx.model.DXLongSparseArray;
@@ -73,7 +70,7 @@ import tb.zz;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public final class DinamicXEngine extends C6365b {
+public final class DinamicXEngine extends b {
     public static final String ENGINE_INIT_ERROR_LOG_KEY = "DinamicXInitError";
     public static final String OPEN_TRACE_KEY_RENDER_TMPL = "renderForTemplate";
     public static final int REFRESH_TYPE_LAYOUT = 1;
@@ -85,7 +82,7 @@ public final class DinamicXEngine extends C6365b {
     private static Context y;
     private static Class<? extends IDXJSEngine> z;
     private w10 d;
-    private C6363a e;
+    private com.taobao.android.dinamicx.asyncrender.a e;
     private DXLongSparseArray<IDXDataParser> f;
     private DXLongSparseArray<IDXEventHandler> g;
     private DXLongSparseArray<IDXBuilderWidgetNode> h;
@@ -93,7 +90,7 @@ public final class DinamicXEngine extends C6365b {
     DXTemplateManager j;
     bu k;
     protected DXNotificationCenter l;
-    C6380h m;
+    h m;
     kt n;
     private DXRemoteTimeInterface o;
     private uy p;
@@ -101,7 +98,7 @@ public final class DinamicXEngine extends C6365b {
     private vy r;
     private IDXJSEngine s;
     private Map<String, DXRemoteChildTemplateManager> t;
-    C6372b u;
+    com.taobao.android.dinamicx.eventchain.b u;
     private g20 v;
 
     /* compiled from: Taobao */
@@ -128,9 +125,9 @@ public final class DinamicXEngine extends C6365b {
                     dXRenderOptions = DXRenderOptions.DEFAULT_PRERENDER_OPTIONS;
                 }
                 DXRuntimeContext z = DinamicXEngine.this.z(this.val$context, null, this.val$templateItem, this.val$data, null, dXRenderOptions);
-                C6363a c6363a = DinamicXEngine.this.e;
+                com.taobao.android.dinamicx.asyncrender.a aVar = DinamicXEngine.this.e;
                 DinamicXEngine dinamicXEngine = DinamicXEngine.this;
-                c6363a.s(z, dXRenderOptions, dinamicXEngine.j, dinamicXEngine.m, dinamicXEngine.k);
+                aVar.s(z, dXRenderOptions, dinamicXEngine.j, dinamicXEngine.m, dinamicXEngine.k);
             } catch (Throwable th) {
                 ry.b(th);
             }
@@ -158,14 +155,14 @@ public final class DinamicXEngine extends C6365b {
             DXRenderOptions k;
             try {
                 if (this.val$renderOptions != null) {
-                    k = new DXRenderOptions.C6359b().r(1).s(this.val$renderOptions.f()).l(this.val$renderOptions.a()).u(this.val$renderOptions.h()).m(this.val$renderOptions.b()).t(this.val$renderOptions.g()).n(this.val$renderOptions.i()).o(this.val$renderOptions.j()).k();
+                    k = new DXRenderOptions.b().r(1).s(this.val$renderOptions.f()).l(this.val$renderOptions.a()).u(this.val$renderOptions.h()).m(this.val$renderOptions.b()).t(this.val$renderOptions.g()).n(this.val$renderOptions.i()).o(this.val$renderOptions.j()).k();
                 } else {
-                    k = new DXRenderOptions.C6359b().r(1).s(4).k();
+                    k = new DXRenderOptions.b().r(1).s(4).k();
                 }
                 DXRuntimeContext z = DinamicXEngine.this.z(this.val$context, null, this.val$templateItem, this.val$data, null, k);
-                C6363a c6363a = DinamicXEngine.this.e;
+                com.taobao.android.dinamicx.asyncrender.a aVar = DinamicXEngine.this.e;
                 DinamicXEngine dinamicXEngine = DinamicXEngine.this;
-                c6363a.u(z, k, dinamicXEngine.j, dinamicXEngine.m, dinamicXEngine.k);
+                aVar.u(z, k, dinamicXEngine.j, dinamicXEngine.m, dinamicXEngine.k);
             } catch (Throwable th) {
                 ry.b(th);
             }
@@ -200,9 +197,9 @@ public final class DinamicXEngine extends C6365b {
             for (ht htVar : this.val$items) {
                 arrayList.add(DinamicXEngine.this.z(this.val$context, null, htVar.b, htVar.a, null, dXRenderOptions));
             }
-            C6363a c6363a = DinamicXEngine.this.e;
+            com.taobao.android.dinamicx.asyncrender.a aVar = DinamicXEngine.this.e;
             DinamicXEngine dinamicXEngine = DinamicXEngine.this;
-            c6363a.h(arrayList, dXRenderOptions, dinamicXEngine.j, dinamicXEngine.m, dinamicXEngine.k, this.val$callback, this.val$isBatch);
+            aVar.h(arrayList, dXRenderOptions, dinamicXEngine.j, dinamicXEngine.m, dinamicXEngine.k, this.val$callback, this.val$isBatch);
         }
     }
 
@@ -213,20 +210,20 @@ public final class DinamicXEngine extends C6365b {
     }
 
     public DinamicXEngine(@NonNull DXEngineConfig dXEngineConfig) {
-        super(new C6367d(dXEngineConfig));
+        super(new d(dXEngineConfig));
         if (dXEngineConfig == null && x()) {
             throw new RuntimeException("DXEngineConfig cannot be null");
         }
         String str = null;
         if (!w || i() == null) {
             if (!x()) {
-                C6368e c6368e = new C6368e(this.b);
-                C6368e.C6369a c6369a = new C6368e.C6369a("Engine", "Engine_Init", C6368e.DXError_EngineInitContextNUll);
+                e eVar = new e(this.b);
+                e.a aVar = new e.a("Engine", "Engine_Init", e.DXError_EngineInitContextNUll);
                 String str2 = !w ? "没有初始化" : "context == null";
-                c6369a.e = str2;
-                c6368e.c.add(c6369a);
-                DXAppMonitor.n(c6368e);
-                y(c6368e);
+                aVar.e = str2;
+                eVar.c.add(aVar);
+                DXAppMonitor.n(eVar);
+                y(eVar);
                 str = str2;
             } else {
                 throw new RuntimeException("DinamicX not initialize");
@@ -242,16 +239,16 @@ public final class DinamicXEngine extends C6365b {
             DXTemplateManager s = s();
             this.j = s;
             s.m(this.a.d);
-            this.m = new C6380h(this.c);
+            this.m = new h(this.c);
             this.i = new DXRenderPipeline(this.c, this.j);
         } catch (Throwable th) {
-            C6368e c6368e2 = new C6368e(this.b);
-            C6368e.C6369a c6369a2 = new C6368e.C6369a("Engine", "Engine_Init", C6368e.DXError_EngineInitException);
-            c6369a2.e = "30011reason=" + str + "-" + ry.a(th);
-            c6368e2.c.add(c6369a2);
-            DXAppMonitor.n(c6368e2);
+            e eVar2 = new e(this.b);
+            e.a aVar2 = new e.a("Engine", "Engine_Init", e.DXError_EngineInitException);
+            aVar2.e = "30011reason=" + str + "-" + ry.a(th);
+            eVar2.c.add(aVar2);
+            DXAppMonitor.n(eVar2);
             ry.b(th);
-            y(c6368e2);
+            y(eVar2);
         }
         G(false);
         q();
@@ -333,9 +330,9 @@ public final class DinamicXEngine extends C6365b {
 
     private void p() {
         try {
-            this.e = new C6363a(this.c);
+            this.e = new com.taobao.android.dinamicx.asyncrender.a(this.c);
         } catch (Throwable th) {
-            DXAppMonitor.q(this.b, null, "AsyncRender", "Async_Render_3.0_init_Crash", C6368e.V3_ASYNC_RENDER_INIT_CRASH, ry.a(th));
+            DXAppMonitor.q(this.b, null, "AsyncRender", "Async_Render_3.0_init_Crash", e.V3_ASYNC_RENDER_INIT_CRASH, ry.a(th));
         }
     }
 
@@ -347,7 +344,7 @@ public final class DinamicXEngine extends C6365b {
             }
         } catch (Throwable th) {
             ry.b(th);
-            DXAppMonitor.q(this.b, null, "DX_BindingX", "DX_BindingX_Crash", C6368e.BINDINGX_INIT_CRASH, ry.a(th));
+            DXAppMonitor.q(this.b, null, "DX_BindingX", "DX_BindingX_Crash", e.BINDINGX_INIT_CRASH, ry.a(th));
         }
     }
 
@@ -366,7 +363,7 @@ public final class DinamicXEngine extends C6365b {
             this.c.m(vyVar);
         } catch (Throwable th) {
             ry.b(th);
-            DXAppMonitor.q(this.b, null, "DX_SCRIPT", "DX_SCRIPT_ERROR", C6368e.DXSCRIPT_INIT_ERROR, ry.a(th));
+            DXAppMonitor.q(this.b, null, "DX_SCRIPT", "DX_SCRIPT_ERROR", e.DXSCRIPT_INIT_ERROR, ry.a(th));
         }
     }
 
@@ -384,7 +381,7 @@ public final class DinamicXEngine extends C6365b {
                 } else {
                     dzVar = null;
                 }
-                Method method2 = cls.getMethod("newDXDevTemplateManager", C6367d.class, Context.class);
+                Method method2 = cls.getMethod("newDXDevTemplateManager", d.class, Context.class);
                 if (method2 != null) {
                     method2.setAccessible(true);
                     dXTemplateManager2 = (DXTemplateManager) method2.invoke(null, this.c, y);
@@ -408,16 +405,16 @@ public final class DinamicXEngine extends C6365b {
                 this.v.a();
             }
         } catch (Throwable th) {
-            DXAppMonitor.q(this.b, null, "DX_Video_Control", "DX_Video_Control_Init_Crash", C6368e.DX_VIDEO_CONTROL_INIT_CRASH, ry.a(th));
+            DXAppMonitor.q(this.b, null, "DX_Video_Control", "DX_Video_Control_Init_Crash", e.DX_VIDEO_CONTROL_INIT_CRASH, ry.a(th));
         }
     }
 
     private void u() {
         try {
-            this.u = new C6372b(this.c);
+            this.u = new com.taobao.android.dinamicx.eventchain.b(this.c);
         } catch (Throwable th) {
             ry.b(th);
-            DXAppMonitor.q(this.b, null, "DX_EventChain", "DX_EventChain_Crash", C6368e.EVENTCHAIN_INIT_CRASH, ry.a(th));
+            DXAppMonitor.q(this.b, null, "DX_EventChain", "DX_EventChain_Crash", e.EVENTCHAIN_INIT_CRASH, ry.a(th));
         }
     }
 
@@ -426,11 +423,11 @@ public final class DinamicXEngine extends C6365b {
             this.d = new w10(dXEngineConfig.k());
         } catch (Throwable th) {
             ry.b(th);
-            DXAppMonitor.q(this.b, null, "Engine", "Engine_Init", C6368e.DXERROR_ENGINE_INIT_EXCEPTION_TIMER_ERROR, ry.a(th));
+            DXAppMonitor.q(this.b, null, "Engine", "Engine_Init", e.DXERROR_ENGINE_INIT_EXCEPTION_TIMER_ERROR, ry.a(th));
         }
     }
 
-    public static void w(@NonNull Context context, @Nullable C6376f c6376f) {
+    public static void w(@NonNull Context context, @Nullable f fVar) {
         try {
             long nanoTime = System.nanoTime();
             if (w) {
@@ -443,116 +440,116 @@ public final class DinamicXEngine extends C6365b {
                 y = context;
             }
             w = true;
-            if (c6376f == null) {
+            if (fVar == null) {
                 return;
             }
-            x = c6376f.m;
-            IDXRemoteDebugLog iDXRemoteDebugLog = c6376f.f;
+            x = fVar.m;
+            IDXRemoteDebugLog iDXRemoteDebugLog = fVar.f;
             if (iDXRemoteDebugLog != null) {
                 s00.g(iDXRemoteDebugLog);
             }
-            IDXAppMonitor iDXAppMonitor = c6376f.e;
+            IDXAppMonitor iDXAppMonitor = fVar.e;
             if (iDXAppMonitor != null) {
                 DXAppMonitor.j(iDXAppMonitor);
             }
-            DXLongSparseArray<IDXDataParser> dXLongSparseArray = c6376f.b;
+            DXLongSparseArray<IDXDataParser> dXLongSparseArray = fVar.b;
             if (dXLongSparseArray != null) {
                 DXGlobalCenter.a.putAll(dXLongSparseArray);
             }
             if (y == null) {
-                C6368e c6368e = new C6368e("initialize");
-                C6368e.C6369a c6369a = new C6368e.C6369a("Engine", "SDK_InitEnv", C6368e.DXError_SDKInitException);
-                c6369a.e = applicationContext == null ? "applicationContext == null" : "";
-                c6368e.c.add(c6369a);
-                DXAppMonitor.n(c6368e);
-                y(c6368e);
+                e eVar = new e("initialize");
+                e.a aVar = new e.a("Engine", "SDK_InitEnv", e.DXError_SDKInitException);
+                aVar.e = applicationContext == null ? "applicationContext == null" : "";
+                eVar.c.add(aVar);
+                DXAppMonitor.n(eVar);
+                y(eVar);
             }
             for (int i = 0; i < DXGlobalCenter.a.size(); i++) {
                 IDXDataParser valueAt = DXGlobalCenter.a.valueAt(i);
-                if ((valueAt instanceof AbstractC6375a) && !TextUtils.isEmpty(((AbstractC6375a) valueAt).getDxFunctionName())) {
-                    uy.d(((AbstractC6375a) valueAt).getDxFunctionName(), (AbstractC6375a) valueAt);
+                if ((valueAt instanceof com.taobao.android.dinamicx.expression.parser.a) && !TextUtils.isEmpty(((com.taobao.android.dinamicx.expression.parser.a) valueAt).getDxFunctionName())) {
+                    uy.d(((com.taobao.android.dinamicx.expression.parser.a) valueAt).getDxFunctionName(), (com.taobao.android.dinamicx.expression.parser.a) valueAt);
                 }
             }
-            DXLongSparseArray<IDXEventHandler> dXLongSparseArray2 = c6376f.a;
+            DXLongSparseArray<IDXEventHandler> dXLongSparseArray2 = fVar.a;
             if (dXLongSparseArray2 != null) {
                 DXGlobalCenter.b.putAll(dXLongSparseArray2);
             }
             for (int i2 = 0; i2 < DXGlobalCenter.b.size(); i2++) {
                 IDXEventHandler valueAt2 = DXGlobalCenter.b.valueAt(i2);
-                if ((valueAt2 instanceof AbstractC6362a) && !TextUtils.isEmpty(((AbstractC6362a) valueAt2).getDxFunctionName())) {
-                    uy.d(((AbstractC6362a) valueAt2).getDxFunctionName(), (AbstractC6362a) valueAt2);
+                if ((valueAt2 instanceof a) && !TextUtils.isEmpty(((a) valueAt2).getDxFunctionName())) {
+                    uy.d(((a) valueAt2).getDxFunctionName(), (a) valueAt2);
                 }
             }
-            DXLongSparseArray<IDXBuilderWidgetNode> dXLongSparseArray3 = c6376f.c;
+            DXLongSparseArray<IDXBuilderWidgetNode> dXLongSparseArray3 = fVar.c;
             if (dXLongSparseArray3 != null) {
                 DXGlobalCenter.c.putAll(dXLongSparseArray3);
             }
-            IDXDownloader iDXDownloader = c6376f.d;
+            IDXDownloader iDXDownloader = fVar.d;
             if (iDXDownloader != null) {
                 DXGlobalCenter.d = iDXDownloader;
             }
-            IDXWebImageInterface iDXWebImageInterface = c6376f.g;
+            IDXWebImageInterface iDXWebImageInterface = fVar.g;
             if (iDXWebImageInterface != null) {
                 DXGlobalCenter.e = iDXWebImageInterface;
             }
-            IDXRichTextImageInterface iDXRichTextImageInterface = c6376f.i;
+            IDXRichTextImageInterface iDXRichTextImageInterface = fVar.i;
             if (iDXRichTextImageInterface != null) {
                 DXGlobalCenter.f = iDXRichTextImageInterface;
             }
-            IDXAbTestInterface iDXAbTestInterface = c6376f.q;
+            IDXAbTestInterface iDXAbTestInterface = fVar.q;
             if (iDXAbTestInterface != null) {
                 DXGlobalCenter.g = iDXAbTestInterface;
             }
-            IDXConfigInterface iDXConfigInterface = c6376f.j;
+            IDXConfigInterface iDXConfigInterface = fVar.j;
             if (iDXConfigInterface != null) {
                 DXGlobalCenter.j = iDXConfigInterface;
             }
-            IDXWebImageInterface iDXWebImageInterface2 = c6376f.h;
+            IDXWebImageInterface iDXWebImageInterface2 = fVar.h;
             if (iDXWebImageInterface2 != null) {
                 DXGlobalCenter.i = iDXWebImageInterface2;
             }
-            IDXHardwareInterface iDXHardwareInterface = c6376f.r;
+            IDXHardwareInterface iDXHardwareInterface = fVar.r;
             if (iDXHardwareInterface != null) {
                 DXGlobalCenter.h = iDXHardwareInterface;
             }
             wt.K0();
-            int i3 = c6376f.o;
+            int i3 = fVar.o;
             if (i3 != 0) {
                 z00.a(i3);
             }
-            IDXDarkModeInterface iDXDarkModeInterface = c6376f.k;
+            IDXDarkModeInterface iDXDarkModeInterface = fVar.k;
             if (iDXDarkModeInterface != null) {
                 DXDarkModeCenter.b = iDXDarkModeInterface;
             }
-            Class<? extends IDXJSEngine> cls = c6376f.p;
+            Class<? extends IDXJSEngine> cls = fVar.p;
             if (cls != null) {
                 z = cls;
             }
-            IDXElderInterface iDXElderInterface = c6376f.s;
+            IDXElderInterface iDXElderInterface = fVar.s;
             if (iDXElderInterface != null) {
-                C6366c.a = iDXElderInterface;
+                c.a = iDXElderInterface;
             }
-            IDXElderTextSizeStrategy iDXElderTextSizeStrategy = c6376f.t;
+            IDXElderTextSizeStrategy iDXElderTextSizeStrategy = fVar.t;
             if (iDXElderTextSizeStrategy != null) {
-                C6366c.b = new fy(iDXElderTextSizeStrategy);
+                c.b = new fy(iDXElderTextSizeStrategy);
             }
-            IDXWebImageUrlInterface iDXWebImageUrlInterface = c6376f.u;
+            IDXWebImageUrlInterface iDXWebImageUrlInterface = fVar.u;
             if (iDXWebImageUrlInterface != null) {
                 DXGlobalCenter.k = iDXWebImageUrlInterface;
             }
-            DXDarkModeCenter.a = c6376f.n;
+            DXDarkModeCenter.a = fVar.n;
             Log.e(nz.TAG, "DX初始化完成，时间为：" + (System.nanoTime() - nanoTime));
         } catch (Throwable th) {
             try {
                 if (x()) {
                     th.printStackTrace();
                 }
-                C6368e c6368e2 = new C6368e("initialize");
-                C6368e.C6369a c6369a2 = new C6368e.C6369a("Engine", "Engine_InitEnv", 30001);
-                c6369a2.e = ry.a(th);
-                c6368e2.c.add(c6369a2);
-                DXAppMonitor.n(c6368e2);
-                y(c6368e2);
+                e eVar2 = new e("initialize");
+                e.a aVar2 = new e.a("Engine", "Engine_InitEnv", 30001);
+                aVar2.e = ry.a(th);
+                eVar2.c.add(aVar2);
+                DXAppMonitor.n(eVar2);
+                y(eVar2);
             } catch (Throwable unused) {
             }
         }
@@ -562,8 +559,8 @@ public final class DinamicXEngine extends C6365b {
         return x;
     }
 
-    private static void y(C6368e c6368e) {
-        Log.e(ENGINE_INIT_ERROR_LOG_KEY, c6368e.toString());
+    private static void y(e eVar) {
+        Log.e(ENGINE_INIT_ERROR_LOG_KEY, eVar.toString());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -579,9 +576,9 @@ public final class DinamicXEngine extends C6365b {
         dXRuntimeContext.dxTemplateItem = dXTemplateItem;
         dXRuntimeContext.rootViewWeakReference = new WeakReference<>(dXRootView);
         dXRuntimeContext.setData(jSONObject);
-        C6368e c6368e = new C6368e(this.b);
-        dXRuntimeContext.dxError = c6368e;
-        c6368e.b = dXTemplateItem;
+        e eVar = new e(this.b);
+        dXRuntimeContext.dxError = eVar;
+        eVar.b = dXTemplateItem;
         dXRuntimeContext.refreshType = 0;
         if (dXRenderOptions != null) {
             dXRuntimeContext.dxUserContext = dXRenderOptions.c();
@@ -594,9 +591,9 @@ public final class DinamicXEngine extends C6365b {
     }
 
     public void A() {
-        C6363a c6363a = this.e;
-        if (c6363a != null) {
-            c6363a.r();
+        com.taobao.android.dinamicx.asyncrender.a aVar = this.e;
+        if (aVar != null) {
+            aVar.r();
         }
         kt ktVar = this.n;
         if (ktVar != null && ktVar.g() != null) {
@@ -688,7 +685,7 @@ public final class DinamicXEngine extends C6365b {
             if (TextUtils.isEmpty(a)) {
                 a = r10.DB_NAME;
             }
-            DXAppMonitor.q(a, null, "Engine", "Engine_Post_Message", C6368e.ENGINE_POST_MSG_CRASH, ry.a(th));
+            DXAppMonitor.q(a, null, "Engine", "Engine_Post_Message", e.ENGINE_POST_MSG_CRASH, ry.a(th));
         }
     }
 
@@ -706,9 +703,9 @@ public final class DinamicXEngine extends C6365b {
                 DXRenderOptions k;
                 try {
                     if (dXRenderOptions != null) {
-                        k = new DXRenderOptions.C6359b().r(1).s(dXRenderOptions.f()).l(dXRenderOptions.a()).u(dXRenderOptions.h()).m(dXRenderOptions.b()).t(dXRenderOptions.g()).n(dXRenderOptions.i()).o(dXRenderOptions.j()).k();
+                        k = new DXRenderOptions.b().r(1).s(dXRenderOptions.f()).l(dXRenderOptions.a()).u(dXRenderOptions.h()).m(dXRenderOptions.b()).t(dXRenderOptions.g()).n(dXRenderOptions.i()).o(dXRenderOptions.j()).k();
                     } else {
-                        k = new DXRenderOptions.C6359b().r(1).s(4).k();
+                        k = new DXRenderOptions.b().r(1).s(4).k();
                     }
                     DXRuntimeContext dXRuntimeContext2 = a.getDXRuntimeContext();
                     DinamicXEngine.this.e.v(dXRuntimeContext2, k, null, view, dXAsyncRenderCallback);
@@ -726,11 +723,11 @@ public final class DinamicXEngine extends C6365b {
         this.q.put(str, iDXFunction);
     }
 
-    public void I(DXRootView dXRootView, DXRootView.AbstractC6360a abstractC6360a) {
+    public void I(DXRootView dXRootView, DXRootView.a aVar) {
         if (dXRootView == null) {
             return;
         }
-        dXRootView.registerDXRootViewLifeCycle(abstractC6360a);
+        dXRootView.registerDXRootViewLifeCycle(aVar);
     }
 
     public boolean J(long j, IDXDataParser iDXDataParser) {
@@ -739,12 +736,12 @@ public final class DinamicXEngine extends C6365b {
             return false;
         }
         dXLongSparseArray.put(j, iDXDataParser);
-        if (iDXDataParser instanceof AbstractC6375a) {
-            AbstractC6375a abstractC6375a = (AbstractC6375a) iDXDataParser;
-            if (TextUtils.isEmpty(abstractC6375a.getDxFunctionName())) {
+        if (iDXDataParser instanceof com.taobao.android.dinamicx.expression.parser.a) {
+            com.taobao.android.dinamicx.expression.parser.a aVar = (com.taobao.android.dinamicx.expression.parser.a) iDXDataParser;
+            if (TextUtils.isEmpty(aVar.getDxFunctionName())) {
                 return true;
             }
-            H(abstractC6375a.getDxFunctionName(), abstractC6375a);
+            H(aVar.getDxFunctionName(), aVar);
             return true;
         }
         return true;
@@ -767,11 +764,11 @@ public final class DinamicXEngine extends C6365b {
                     dXNotificationCenter.g(iDXNotificationListener);
                 }
             } catch (Throwable th) {
-                C6368e c6368e = new C6368e(this.a.a);
-                C6368e.C6369a c6369a = new C6368e.C6369a("Engine", "Engine_Register_Notification", C6368e.DXERROR_REGISTER_NOTIFICATION_CRASH);
-                c6369a.e = ry.a(th);
-                c6368e.c.add(c6369a);
-                DXAppMonitor.n(c6368e);
+                e eVar = new e(this.a.a);
+                e.a aVar = new e.a("Engine", "Engine_Register_Notification", e.DXERROR_REGISTER_NOTIFICATION_CRASH);
+                aVar.e = ry.a(th);
+                eVar.c.add(aVar);
+                DXAppMonitor.n(eVar);
             }
         }
     }
@@ -798,16 +795,16 @@ public final class DinamicXEngine extends C6365b {
             dXTemplateItem = null;
         }
         try {
-            return P(context, dXRootView, dXTemplateItem, jSONObject, -1, new DXRenderOptions.C6359b().u(i).m(i2).p(obj).k());
+            return P(context, dXRootView, dXTemplateItem, jSONObject, -1, new DXRenderOptions.b().u(i).m(i2).p(obj).k());
         } catch (Throwable th2) {
             th = th2;
             ry.b(th);
-            C6368e c6368e = new C6368e(this.b);
-            c6368e.b = dXTemplateItem;
-            C6368e.C6369a c6369a = new C6368e.C6369a("Engine", "Engine_Render", C6368e.DXError_EngineRenderException);
-            c6369a.e = ry.a(th);
-            c6368e.c.add(c6369a);
-            DXAppMonitor.n(c6368e);
+            e eVar = new e(this.b);
+            eVar.b = dXTemplateItem;
+            e.a aVar = new e.a("Engine", "Engine_Render", e.DXError_EngineRenderException);
+            aVar.e = ry.a(th);
+            eVar.c.add(aVar);
+            DXAppMonitor.n(eVar);
             return null;
         }
     }
@@ -823,8 +820,8 @@ public final class DinamicXEngine extends C6365b {
                 s00.c(str4, "renderTemplate", null, null, "DXTemplate 为空 + positon=" + i);
                 t00<DXRootView> t00Var = new t00<>();
                 t00Var.f(null);
-                C6368e c6368e = new C6368e(this.b);
-                C6368e.C6369a c6369a = new C6368e.C6369a("Engine", "Engine_Render", C6368e.DXERROR_ENGINERENDER_TEMPLATE_NULL);
+                e eVar = new e(this.b);
+                e.a aVar = new e.a("Engine", "Engine_Render", e.DXERROR_ENGINERENDER_TEMPLATE_NULL);
                 StringBuilder sb = new StringBuilder();
                 sb.append("position=");
                 sb.append(i);
@@ -833,15 +830,15 @@ public final class DinamicXEngine extends C6365b {
                     str3 = "data is null";
                 }
                 sb.append(str3);
-                c6369a.e = sb.toString();
-                c6368e.c.add(c6369a);
-                t00Var.d(c6368e);
+                aVar.e = sb.toString();
+                eVar.c.add(aVar);
+                t00Var.d(eVar);
                 return t00Var;
             } else if (!dXTemplateItem.checkValid()) {
                 t00<DXRootView> t00Var2 = new t00<>();
                 t00Var2.f(null);
-                C6368e c6368e2 = new C6368e(this.b);
-                C6368e.C6369a c6369a2 = new C6368e.C6369a("Engine", "Engine_Render", C6368e.DXERROR_ENGINERENDER_INVALID_PARAMS);
+                e eVar2 = new e(this.b);
+                e.a aVar2 = new e.a("Engine", "Engine_Render", e.DXERROR_ENGINERENDER_INVALID_PARAMS);
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append("参数校验不合法 position=");
                 sb2.append(i);
@@ -850,10 +847,10 @@ public final class DinamicXEngine extends C6365b {
                     str3 = "data is null";
                 }
                 sb2.append(str3);
-                c6369a2.e = sb2.toString();
-                c6368e2.c.add(c6369a2);
-                t00Var2.d(c6368e2);
-                DXAppMonitor.n(c6368e2);
+                aVar2.e = sb2.toString();
+                eVar2.c.add(aVar2);
+                t00Var2.d(eVar2);
+                DXAppMonitor.n(eVar2);
                 return t00Var2;
             } else {
                 DXTraceUtil.b("DX-RenderTemplate", " : ", dXTemplateItem.getIdentifier());
@@ -868,9 +865,9 @@ public final class DinamicXEngine extends C6365b {
                     z2.setOpenTracerSpan(e);
                     falcoContainerSpan = e;
                 }
-                C6363a c6363a = this.e;
-                if (c6363a != null) {
-                    c6363a.i(z2);
+                com.taobao.android.dinamicx.asyncrender.a aVar3 = this.e;
+                if (aVar3 != null) {
+                    aVar3.i(z2);
                 }
                 t00<DXRootView> q = this.i.q(dXRootView, z2, i, dXRenderOptions2);
                 if (x() && q != null && q.c()) {
@@ -893,12 +890,12 @@ public final class DinamicXEngine extends C6365b {
                 } catch (Throwable th) {
                     th = th;
                     ry.b(th);
-                    C6368e c6368e3 = new C6368e(this.b);
-                    c6368e3.b = dXTemplateItem;
-                    C6368e.C6369a c6369a3 = new C6368e.C6369a(str2, str, C6368e.DXError_EngineRenderException);
-                    c6369a3.e = ry.a(th);
-                    c6368e3.c.add(c6369a3);
-                    DXAppMonitor.n(c6368e3);
+                    e eVar3 = new e(this.b);
+                    eVar3.b = dXTemplateItem;
+                    e.a aVar4 = new e.a(str2, str, e.DXError_EngineRenderException);
+                    aVar4.e = ry.a(th);
+                    eVar3.c.add(aVar4);
+                    DXAppMonitor.n(eVar3);
                     DXTraceUtil.c();
                     return null;
                 }
@@ -920,35 +917,35 @@ public final class DinamicXEngine extends C6365b {
                 if (x()) {
                     th.printStackTrace();
                 }
-                C6368e c6368e = new C6368e(this.b);
+                e eVar = new e(this.b);
                 if (dXRootView != null) {
-                    c6368e.b = dXRootView.dxTemplateItem;
+                    eVar.b = dXRootView.dxTemplateItem;
                 }
-                C6368e.C6369a c6369a = new C6368e.C6369a("Engine", "Engine_Render", C6368e.DXError_EngineRenderException);
-                c6369a.e = ry.a(th);
-                c6368e.c.add(c6369a);
-                DXAppMonitor.n(c6368e);
-                return new t00<>(c6368e);
+                e.a aVar = new e.a("Engine", "Engine_Render", e.DXError_EngineRenderException);
+                aVar.e = ry.a(th);
+                eVar.c.add(aVar);
+                DXAppMonitor.n(eVar);
+                return new t00<>(eVar);
             }
         }
-        C6368e c6368e2 = new C6368e(this.b);
-        C6368e.C6369a c6369a2 = new C6368e.C6369a("Engine", "Engine_Render", C6368e.DXError_EngineRenderException);
-        c6369a2.e = "dxRootView == null || dxRootView.getContext() == null || dxRootView.dxTemplateItem == null";
-        c6368e2.c.add(c6369a2);
-        DXAppMonitor.n(c6368e2);
-        return new t00<>(c6368e2);
+        e eVar2 = new e(this.b);
+        e.a aVar2 = new e.a("Engine", "Engine_Render", e.DXError_EngineRenderException);
+        aVar2.e = "dxRootView == null || dxRootView.getContext() == null || dxRootView.dxTemplateItem == null";
+        eVar2.c.add(aVar2);
+        DXAppMonitor.n(eVar2);
+        return new t00<>(eVar2);
     }
 
     public void R() {
-        C6380h c6380h = this.m;
-        if (c6380h != null) {
-            c6380h.d();
+        h hVar = this.m;
+        if (hVar != null) {
+            hVar.d();
         }
-        C6363a c6363a = this.e;
-        if (c6363a != null) {
-            c6363a.w();
+        com.taobao.android.dinamicx.asyncrender.a aVar = this.e;
+        if (aVar != null) {
+            aVar.w();
         }
-        C6372b o = o();
+        com.taobao.android.dinamicx.eventchain.b o = o();
         if (o != null) {
             o.l();
         }
@@ -959,9 +956,9 @@ public final class DinamicXEngine extends C6365b {
     }
 
     public void e() {
-        C6372b c6372b = this.u;
-        if (c6372b != null) {
-            c6372b.c();
+        com.taobao.android.dinamicx.eventchain.b bVar = this.u;
+        if (bVar != null) {
+            bVar.c();
         }
     }
 
@@ -980,11 +977,11 @@ public final class DinamicXEngine extends C6365b {
             if (x()) {
                 th.printStackTrace();
             }
-            C6368e c6368e = new C6368e(this.b);
-            C6368e.C6369a c6369a = new C6368e.C6369a("Engine", "Engine_Download", C6368e.DXError_EngineDownloadException);
-            c6369a.e = "downLoadTemplates error " + ry.a(th);
-            c6368e.c.add(c6369a);
-            DXAppMonitor.n(c6368e);
+            e eVar = new e(this.b);
+            e.a aVar = new e.a("Engine", "Engine_Download", e.DXError_EngineDownloadException);
+            aVar.e = "downLoadTemplates error " + ry.a(th);
+            eVar.c.add(aVar);
+            DXAppMonitor.n(eVar);
         }
     }
 
@@ -1005,12 +1002,12 @@ public final class DinamicXEngine extends C6365b {
             if (x()) {
                 th.printStackTrace();
             }
-            C6368e c6368e = new C6368e(this.b);
-            C6368e.C6369a c6369a = new C6368e.C6369a("Engine", "Engine_Fetch", C6368e.DXError_EngineFetchException);
-            c6368e.b = dXTemplateItem;
-            c6369a.e = ry.a(th);
-            c6368e.c.add(c6369a);
-            DXAppMonitor.n(c6368e);
+            e eVar = new e(this.b);
+            e.a aVar = new e.a("Engine", "Engine_Fetch", e.DXError_EngineFetchException);
+            eVar.b = dXTemplateItem;
+            aVar.e = ry.a(th);
+            eVar.c.add(aVar);
+            DXAppMonitor.n(eVar);
             return null;
         }
     }
@@ -1020,7 +1017,7 @@ public final class DinamicXEngine extends C6365b {
     }
 
     @Nullable
-    public C6363a k() {
+    public com.taobao.android.dinamicx.asyncrender.a k() {
         return this.e;
     }
 
@@ -1041,7 +1038,7 @@ public final class DinamicXEngine extends C6365b {
         return this.v;
     }
 
-    public C6372b o() {
+    public com.taobao.android.dinamicx.eventchain.b o() {
         return this.u;
     }
 }

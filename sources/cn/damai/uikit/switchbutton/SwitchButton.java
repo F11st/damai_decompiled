@@ -99,17 +99,16 @@ public class SwitchButton extends CompoundButton {
     /* loaded from: classes8.dex */
     public static class SavedState extends View.BaseSavedState {
         private static transient /* synthetic */ IpChange $ipChange;
-        public static final Parcelable.Creator<SavedState> CREATOR = new C2557a();
+        public static final Parcelable.Creator<SavedState> CREATOR = new a();
         CharSequence offText;
         CharSequence onText;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.uikit.switchbutton.SwitchButton$SavedState$a */
         /* loaded from: classes8.dex */
-        public static final class C2557a implements Parcelable.Creator<SavedState> {
+        public static final class a implements Parcelable.Creator<SavedState> {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C2557a() {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator
@@ -354,9 +353,9 @@ public class SwitchButton extends CompoundButton {
         boolean z5 = drawable2 != null;
         this.mIsBackUseDrawable = z5;
         if (!z5 && colorStateList6 == null) {
-            ColorStateList a = sk.a(this.mTintColor);
-            this.mBackColor = a;
-            int defaultColor = a.getDefaultColor();
+            ColorStateList a2 = sk.a(this.mTintColor);
+            this.mBackColor = a2;
+            int defaultColor = a2.getDefaultColor();
             this.mCurrBackColor = defaultColor;
             this.mNextBackColor = this.mBackColor.getColorForState(CHECKED_PRESSED_STATE, defaultColor);
         }

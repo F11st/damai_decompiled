@@ -4,7 +4,7 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
+import kotlin.coroutines.intrinsics.b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function0;
@@ -58,7 +58,7 @@ public final class ActivityContext$runOnUIThreadLocked$1<T> extends SuspendLambd
         if (AndroidInstantRuntime.support(ipChange, "1988070237")) {
             return ipChange.ipc$dispatch("1988070237", new Object[]{this, obj});
         }
-        C8234b.d();
+        b.d();
         if (this.label == 0) {
             i32.b(obj);
             return this.$action.invoke();

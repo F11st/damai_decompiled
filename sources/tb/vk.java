@@ -12,12 +12,12 @@ public class vk extends r1 {
         new Rect();
     }
 
-    @Override // tb.r1, com.alibaba.android.vlayout.AbstractC3289a
-    public void checkAnchorInfo(RecyclerView.State state, VirtualLayoutManager.C3286c c3286c, LayoutManagerHelper layoutManagerHelper) {
-        if (c3286c.c) {
-            c3286c.a = getRange().e().intValue();
+    @Override // tb.r1, com.alibaba.android.vlayout.a
+    public void checkAnchorInfo(RecyclerView.State state, VirtualLayoutManager.c cVar, LayoutManagerHelper layoutManagerHelper) {
+        if (cVar.c) {
+            cVar.a = getRange().e().intValue();
         } else {
-            c3286c.a = getRange().d().intValue();
+            cVar.a = getRange().d().intValue();
         }
     }
 }

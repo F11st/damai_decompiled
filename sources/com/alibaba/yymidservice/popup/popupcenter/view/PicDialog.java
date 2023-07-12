@@ -20,7 +20,7 @@ public final class PicDialog extends Dialog {
     private Activity d;
     private boolean e;
     @NotNull
-    private final js1.AbstractC9321b f;
+    private final js1.b f;
 
     /* compiled from: Taobao */
     /* loaded from: classes8.dex */
@@ -29,19 +29,18 @@ public final class PicDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.yymidservice.popup.popupcenter.view.PicDialog$a */
     /* loaded from: classes8.dex */
-    public static final class C4029a extends js1.AbstractC9321b {
-        C4029a() {
+    public static final class a extends js1.b {
+        a() {
         }
 
-        @Override // tb.js1.AbstractC9321b
+        @Override // tb.js1.b
         public boolean a(@NotNull Activity activity) {
             b41.i(activity, "activity");
             return PicDialog.this.d != null && PicDialog.this.d == activity;
         }
 
-        @Override // tb.js1.AbstractC9321b
+        @Override // tb.js1.b
         public void b(@NotNull Activity activity) {
             b41.i(activity, "activity");
             if (PicDialog.this.e) {
@@ -50,7 +49,7 @@ public final class PicDialog extends Dialog {
             }
         }
 
-        @Override // tb.js1.AbstractC9321b
+        @Override // tb.js1.b
         public void c(@NotNull Activity activity) {
             b41.i(activity, "activity");
             if (PicDialog.this.e) {
@@ -63,13 +62,13 @@ public final class PicDialog extends Dialog {
     public PicDialog(@NotNull Context context) {
         super(context);
         b41.i(context, WPKFactory.INIT_KEY_CONTEXT);
-        C4029a c4029a = new C4029a();
-        this.f = c4029a;
+        a aVar = new a();
+        this.f = aVar;
         if (getContext() instanceof Activity) {
             Context context2 = getContext();
             b41.g(context2, "null cannot be cast to non-null type android.app.Activity");
             this.d = (Activity) context2;
-            js1.Companion.a().c(c4029a);
+            js1.Companion.a().c(aVar);
         }
     }
 
@@ -124,13 +123,13 @@ public final class PicDialog extends Dialog {
     public PicDialog(@NotNull Context context, int i) {
         super(context, i);
         b41.i(context, WPKFactory.INIT_KEY_CONTEXT);
-        C4029a c4029a = new C4029a();
-        this.f = c4029a;
+        a aVar = new a();
+        this.f = aVar;
         if (getContext() instanceof Activity) {
             Context context2 = getContext();
             b41.g(context2, "null cannot be cast to non-null type android.app.Activity");
             this.d = (Activity) context2;
-            js1.Companion.a().c(c4029a);
+            js1.Companion.a().c(aVar);
         }
     }
 }

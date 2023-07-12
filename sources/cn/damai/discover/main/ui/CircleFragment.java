@@ -40,11 +40,11 @@ import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
-import tb.C9548pb;
 import tb.cb1;
 import tb.g41;
 import tb.lm2;
 import tb.m61;
+import tb.pb;
 import tb.s90;
 import tb.t60;
 import tb.z20;
@@ -71,12 +71,11 @@ public class CircleFragment extends AbsFragmentV2 implements View.OnClickListene
     int totalDy = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.CircleFragment$a */
     /* loaded from: classes5.dex */
-    public class C1016a implements OnShareListener {
+    public class a implements OnShareListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1016a() {
+        a() {
         }
 
         @Override // cn.damai.discover.main.ui.listener.OnShareListener
@@ -334,8 +333,8 @@ public class CircleFragment extends AbsFragmentV2 implements View.OnClickListene
             if (themeShare == null || !themeShare.isValid()) {
                 return;
             }
-            C9548pb.j(this.mUt.p(this.themeId));
-            s90.q(new C1016a(), this.bean);
+            pb.j(this.mUt.p(this.themeId));
+            s90.q(new a(), this.bean);
         }
     }
 
@@ -523,8 +522,8 @@ public class CircleFragment extends AbsFragmentV2 implements View.OnClickListene
                 HashMap hashMap = new HashMap();
                 hashMap.put("usercode", z20.E());
                 hashMap.put("city", z20.d());
-                hashMap.put(C9548pb.CNT_CONTENT_TYPE, "theme");
-                hashMap.put(C9548pb.CNT_CONTENT_ID, CircleFragment.this.themeId);
+                hashMap.put(pb.CNT_CONTENT_TYPE, "theme");
+                hashMap.put(pb.CNT_CONTENT_ID, CircleFragment.this.themeId);
                 hashMap.put("cnt_content_name", CircleFragment.this.themeName);
                 hashMap.put("type", "圈子");
                 baseResponse.globalConfig.putBuzUTMap(hashMap);

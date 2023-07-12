@@ -52,12 +52,11 @@ public class CustomersActivity extends DamaiBaseActivity {
     boolean showTip = false;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.CustomersActivity$a */
     /* loaded from: classes15.dex */
-    public class DialogInterface$OnClickListenerC1368a implements DialogInterface.OnClickListener {
+    public class a implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC1368a(CustomersActivity customersActivity) {
+        a(CustomersActivity customersActivity) {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -72,13 +71,12 @@ public class CustomersActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.CustomersActivity$b */
     /* loaded from: classes15.dex */
-    public class DialogInterface$OnClickListenerC1369b implements DialogInterface.OnClickListener {
+    public class b implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        DialogInterface$OnClickListenerC1369b(String str) {
+        b(String str) {
             this.a = str;
         }
 
@@ -95,13 +93,12 @@ public class CustomersActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.CustomersActivity$c */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1370c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ AlertDialog a;
 
-        View$OnClickListenerC1370c(CustomersActivity customersActivity, AlertDialog alertDialog) {
+        c(CustomersActivity customersActivity, AlertDialog alertDialog) {
             this.a = alertDialog;
         }
 
@@ -117,13 +114,12 @@ public class CustomersActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.CustomersActivity$d */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1371d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ AlertDialog a;
 
-        View$OnClickListenerC1371d(CustomersActivity customersActivity, AlertDialog alertDialog) {
+        d(CustomersActivity customersActivity, AlertDialog alertDialog) {
             this.a = alertDialog;
         }
 
@@ -333,8 +329,8 @@ public class CustomersActivity extends DamaiBaseActivity {
         AlertDialog create = new AlertDialog.Builder(this).create();
         View inflate = LayoutInflater.from(this).inflate(R$layout.delete_customer_alert, (ViewGroup) null);
         ((TextView) inflate.findViewById(R$id.tips)).setText(getString(R$string.addcustomer_limit_tips));
-        ((TextView) inflate.findViewById(R$id.delete_customer_cancle)).setOnClickListener(new View$OnClickListenerC1370c(this, create));
-        ((TextView) inflate.findViewById(R$id.delete_customer_confirm)).setOnClickListener(new View$OnClickListenerC1371d(this, create));
+        ((TextView) inflate.findViewById(R$id.delete_customer_cancle)).setOnClickListener(new c(this, create));
+        ((TextView) inflate.findViewById(R$id.delete_customer_confirm)).setOnClickListener(new d(this, create));
         create.setView(inflate);
         create.show();
     }
@@ -544,8 +540,8 @@ public class CustomersActivity extends DamaiBaseActivity {
         }
         DMDialog dMDialog = new DMDialog(this);
         dMDialog.p(R$string.customer_delete_tips);
-        dMDialog.i("取消", new DialogInterface$OnClickListenerC1368a(this));
-        dMDialog.n("确定", new DialogInterface$OnClickListenerC1369b(str));
+        dMDialog.i("取消", new a(this));
+        dMDialog.n("确定", new b(str));
         dMDialog.show();
     }
 }

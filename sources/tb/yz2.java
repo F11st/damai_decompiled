@@ -4,7 +4,6 @@ import android.content.Context;
 import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.R$string;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.mtl.appmonitor.AppMonitor;
@@ -29,7 +28,7 @@ public class yz2 implements IWXUserTrackAdapter {
     private static boolean c;
 
     public yz2() {
-        String string = C3004a.l().b().getString(R$string.weex_performance_log_switch);
+        String string = com.alibaba.aliweex.a.l().b().getString(R$string.weex_performance_log_switch);
         b = string;
         if (TextUtils.equals(string, "true")) {
             c = true;

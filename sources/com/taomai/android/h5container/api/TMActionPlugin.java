@@ -16,7 +16,7 @@ import tb.wt2;
 /* loaded from: classes11.dex */
 public final class TMActionPlugin extends TaoMaiApiPlugin {
     @NotNull
-    public static final C6981a Companion = new C6981a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final HashMap<String, IWVAPIPlugin> commonPluginMap = new HashMap<>();
 
@@ -28,10 +28,9 @@ public final class TMActionPlugin extends TaoMaiApiPlugin {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMActionPlugin$a */
     /* loaded from: classes11.dex */
-    public static final class C6981a {
-        private C6981a() {
+    public static final class a {
+        private a() {
         }
 
         @NotNull
@@ -39,7 +38,7 @@ public final class TMActionPlugin extends TaoMaiApiPlugin {
             return TMActionPlugin.commonPluginMap;
         }
 
-        public /* synthetic */ C6981a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

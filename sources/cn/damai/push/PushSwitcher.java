@@ -6,7 +6,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import cn.damai.common.AppConfig;
 import cn.damai.common.DamaiConstants;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.push.model.PushMessageBean;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -41,16 +41,15 @@ public class PushSwitcher {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.push.PushSwitcher$a */
     /* loaded from: classes15.dex */
-    public static class C1539a {
+    public static class a {
         private static transient /* synthetic */ IpChange $ipChange;
         Context a;
         private String b = null;
         private String c = null;
         private PushChannel d = PushChannel.AGOO;
 
-        public C1539a(Context context) {
+        public a(Context context) {
             this.a = context;
         }
 
@@ -66,28 +65,28 @@ public class PushSwitcher {
             return pushSwitcher;
         }
 
-        public C1539a b(String str) {
+        public a b(String str) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-2119137043")) {
-                return (C1539a) ipChange.ipc$dispatch("-2119137043", new Object[]{this, str});
+                return (a) ipChange.ipc$dispatch("-2119137043", new Object[]{this, str});
             }
             this.c = str;
             return this;
         }
 
-        public C1539a c(String str) {
+        public a c(String str) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-2125433752")) {
-                return (C1539a) ipChange.ipc$dispatch("-2125433752", new Object[]{this, str});
+                return (a) ipChange.ipc$dispatch("-2125433752", new Object[]{this, str});
             }
             this.b = str;
             return this;
         }
 
-        public C1539a d(PushChannel pushChannel) {
+        public a d(PushChannel pushChannel) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "2078624522")) {
-                return (C1539a) ipChange.ipc$dispatch("2078624522", new Object[]{this, pushChannel});
+                return (a) ipChange.ipc$dispatch("2078624522", new Object[]{this, pushChannel});
             }
             this.d = pushChannel;
             return this;
@@ -127,7 +126,7 @@ public class PushSwitcher {
             if (!TextUtils.isEmpty(this.b)) {
                 hashMap.put("id", this.b);
             }
-            C0529c.e().A(hashMap, "agoo_damai_info", "push");
+            c.e().A(hashMap, "agoo_damai_info", "push");
         }
     }
 

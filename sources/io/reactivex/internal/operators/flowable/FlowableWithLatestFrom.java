@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.fuseable.ConditionalSubscriber;
@@ -129,13 +129,13 @@ public final class FlowableWithLatestFrom<T, U, R> extends AbstractFlowableWithU
         }
     }
 
-    public FlowableWithLatestFrom(AbstractC8147b<T> abstractC8147b, BiFunction<? super T, ? super U, ? extends R> biFunction, Publisher<? extends U> publisher) {
-        super(abstractC8147b);
+    public FlowableWithLatestFrom(b<T> bVar, BiFunction<? super T, ? super U, ? extends R> biFunction, Publisher<? extends U> publisher) {
+        super(bVar);
         this.combiner = biFunction;
         this.other = publisher;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super R> subscriber) {
         ua2 ua2Var = new ua2(subscriber);
         WithLatestFromSubscriber withLatestFromSubscriber = new WithLatestFromSubscriber(ua2Var, this.combiner);

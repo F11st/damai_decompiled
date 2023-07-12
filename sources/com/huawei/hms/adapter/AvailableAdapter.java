@@ -22,7 +22,7 @@ import com.huawei.hms.utils.UIUtil;
 public class AvailableAdapter {
     public final int a;
     public AvailableCallBack b;
-    public SystemObserver d = new C5508a();
+    public SystemObserver d = new a();
     public boolean c = false;
 
     /* compiled from: Taobao */
@@ -32,10 +32,9 @@ public class AvailableAdapter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.adapter.AvailableAdapter$a */
     /* loaded from: classes10.dex */
-    public class C5508a implements SystemObserver {
-        public C5508a() {
+    public class a implements SystemObserver {
+        public a() {
         }
 
         @Override // com.huawei.hms.adapter.sysobs.SystemObserver
@@ -72,22 +71,22 @@ public class AvailableAdapter {
 
     public int checkHuaweiMobileServicesForUpdate(Context context) {
         Checker.checkNonNull(context, "context must not be null.");
-        int a = a(context);
-        if (a == 0 && HMSPackageManager.getInstance(context).isApkNeedUpdate(this.a)) {
+        int a2 = a(context);
+        if (a2 == 0 && HMSPackageManager.getInstance(context).isApkNeedUpdate(this.a)) {
             HMSLog.i("AvailableAdapter", "The current version does not meet the target version requirements");
             return 2;
         }
-        return a;
+        return a2;
     }
 
     public int isHuaweiMobileServicesAvailable(Context context) {
         Checker.checkNonNull(context, "context must not be null.");
-        int a = a(context);
-        if (a == 0 && HMSPackageManager.getInstance(context).isApkUpdateNecessary(this.a)) {
+        int a2 = a(context);
+        if (a2 == 0 && HMSPackageManager.getInstance(context).isApkUpdateNecessary(this.a)) {
             HMSLog.i("AvailableAdapter", "The current version does not meet the minimum version requirements");
             return 2;
         }
-        return a;
+        return a2;
     }
 
     public boolean isUserNoticeError(int i) {

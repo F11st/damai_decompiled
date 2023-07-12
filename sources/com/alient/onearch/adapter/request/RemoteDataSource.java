@@ -15,10 +15,10 @@ import com.youku.middlewareservice.provider.info.AppInfoProviderProxy;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import kotlin.text.StringsKt__StringsKt;
 import mtopsdk.common.util.StringUtils;
@@ -64,7 +64,7 @@ public final class RemoteDataSource implements IDataSource {
 
     static {
         Lazy<RemoteDataSource> a;
-        a = C8177b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<RemoteDataSource>() { // from class: com.alient.onearch.adapter.request.RemoteDataSource$Companion$instance$2
+        a = b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<RemoteDataSource>() { // from class: com.alient.onearch.adapter.request.RemoteDataSource$Companion$instance$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull

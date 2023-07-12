@@ -8,9 +8,9 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.k;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function0;
 import kotlin.reflect.jvm.internal.impl.resolve.constants.IntegerLiteralTypeConstructor;
 import kotlin.reflect.jvm.internal.impl.types.IntersectionTypeConstructor;
@@ -39,7 +39,7 @@ public final class TypeIntersector {
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
     private static final class ResultNullability {
-        public static final ResultNullability START = new START(GXTemplateEngine.C3338b.STATE_START, 0);
+        public static final ResultNullability START = new START(GXTemplateEngine.b.STATE_START, 0);
         public static final ResultNullability ACCEPT_NULL = new ACCEPT_NULL("ACCEPT_NULL", 1);
         public static final ResultNullability UNKNOWN = new UNKNOWN("UNKNOWN", 2);
         public static final ResultNullability NOT_NULL = new NOT_NULL("NOT_NULL", 3);
@@ -197,7 +197,7 @@ public final class TypeIntersector {
 
     private final fd2 d(final Set<? extends fd2> set) {
         if (set.size() == 1) {
-            return (fd2) C8212k.p0(set);
+            return (fd2) k.p0(set);
         }
         new Function0<String>() { // from class: kotlin.reflect.jvm.internal.impl.types.checker.TypeIntersector$intersectTypesWithoutIntersectionType$errorMessage$1
             /* JADX INFO: Access modifiers changed from: package-private */
@@ -221,7 +221,7 @@ public final class TypeIntersector {
         if (b2 == null) {
             Collection<fd2> b3 = b(b, new TypeIntersector$intersectTypesWithoutIntersectionType$filteredSuperAndEqualTypes$1(NewKotlinTypeChecker.Companion.a()));
             b3.isEmpty();
-            return b3.size() < 2 ? (fd2) C8212k.p0(b3) : new IntersectionTypeConstructor(set).b();
+            return b3.size() < 2 ? (fd2) k.p0(b3) : new IntersectionTypeConstructor(set).b();
         }
         return b2;
     }
@@ -242,7 +242,7 @@ public final class TypeIntersector {
             if (fd2Var.c() instanceof IntersectionTypeConstructor) {
                 Collection<z71> supertypes = fd2Var.c().getSupertypes();
                 b41.h(supertypes, "type.constructor.supertypes");
-                q = C8215n.q(supertypes, 10);
+                q = n.q(supertypes, 10);
                 ArrayList arrayList2 = new ArrayList(q);
                 for (z71 z71Var : supertypes) {
                     b41.h(z71Var, AdvanceSetting.NETWORK_TYPE);

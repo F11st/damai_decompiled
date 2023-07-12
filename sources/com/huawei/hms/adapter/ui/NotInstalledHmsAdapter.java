@@ -19,12 +19,11 @@ public class NotInstalledHmsAdapter implements IBridgeActivityDelegate {
     public Dialog b;
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.adapter.ui.NotInstalledHmsAdapter$a */
     /* loaded from: classes10.dex */
-    public static class DialogInterface$OnCancelListenerC5510a implements DialogInterface.OnCancelListener {
+    public static class a implements DialogInterface.OnCancelListener {
         public final Activity a;
 
-        public DialogInterface$OnCancelListenerC5510a(Activity activity) {
+        public a(Activity activity) {
             this.a = activity;
         }
 
@@ -37,12 +36,11 @@ public class NotInstalledHmsAdapter implements IBridgeActivityDelegate {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.adapter.ui.NotInstalledHmsAdapter$b */
     /* loaded from: classes10.dex */
-    public static class DialogInterface$OnClickListenerC5511b implements DialogInterface.OnClickListener {
+    public static class b implements DialogInterface.OnClickListener {
         public final Activity a;
 
-        public DialogInterface$OnClickListenerC5511b(Activity activity) {
+        public b(Activity activity) {
             this.a = activity;
         }
 
@@ -71,7 +69,7 @@ public class NotInstalledHmsAdapter implements IBridgeActivityDelegate {
             this.b.setOnCancelListener(null);
             this.b.cancel();
         }
-        this.b = NotInstalledHmsDialogHelper.getDialogBuilder(activity).setPositiveButton(NotInstalledHmsDialogHelper.getConfirmResId(activity), new DialogInterface$OnClickListenerC5511b(activity)).setOnCancelListener(new DialogInterface$OnCancelListenerC5510a(activity)).show();
+        this.b = NotInstalledHmsDialogHelper.getDialogBuilder(activity).setPositiveButton(NotInstalledHmsDialogHelper.getConfirmResId(activity), new b(activity)).setOnCancelListener(new a(activity)).show();
     }
 
     @Override // com.huawei.hms.activity.IBridgeActivityDelegate

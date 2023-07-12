@@ -10,13 +10,12 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import kotlin.C8177b;
 import kotlin.Lazy;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tb.C9796v;
 import tb.b41;
 import tb.gr0;
 import tb.k50;
@@ -26,6 +25,7 @@ import tb.qq0;
 import tb.rq0;
 import tb.sq0;
 import tb.ss0;
+import tb.v;
 import tb.vq0;
 import tb.wt2;
 import tb.xq0;
@@ -193,7 +193,7 @@ public final class GXTemplateInfo {
                 if (jSONObject4 == null) {
                     jSONObject4 = new JSONObject();
                 }
-                JSONObject jSONObject5 = i2.getJSONObject(C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+                JSONObject jSONObject5 = i2.getJSONObject(v.TAK_ABILITY_SHOW_POP_ANIMATION);
                 if (jSONObject5 == null) {
                     jSONObject5 = new JSONObject();
                 }
@@ -257,7 +257,7 @@ public final class GXTemplateInfo {
             }
         }
 
-        private final void k(final GXTemplateInfo gXTemplateInfo, final GXTemplateEngine.C3347i c3347i) {
+        private final void k(final GXTemplateInfo gXTemplateInfo, final GXTemplateEngine.i iVar) {
             j(gXTemplateInfo.p(), new Function1<gr0, wt2>() { // from class: com.alibaba.gaiax.template.GXTemplateInfo$Companion$initChildren$1
                 /* JADX INFO: Access modifiers changed from: package-private */
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -275,12 +275,12 @@ public final class GXTemplateInfo {
                 public final void invoke2(@NotNull gr0 gr0Var) {
                     b41.i(gr0Var, AdvanceSetting.NETWORK_TYPE);
                     GXTemplateInfo.Companion companion = GXTemplateInfo.Companion;
-                    GXTemplateEngine.C3347i c3347i2 = new GXTemplateEngine.C3347i(GXTemplateEngine.C3347i.this.c(), GXTemplateEngine.C3347i.this.a(), gr0Var.d());
-                    GXTemplateEngine.C3347i c3347i3 = GXTemplateEngine.C3347i.this;
-                    c3347i2.g(c3347i3.f());
-                    c3347i2.h(c3347i3.e());
+                    GXTemplateEngine.i iVar2 = new GXTemplateEngine.i(GXTemplateEngine.i.this.c(), GXTemplateEngine.i.this.a(), gr0Var.d());
+                    GXTemplateEngine.i iVar3 = GXTemplateEngine.i.this;
+                    iVar2.g(iVar3.f());
+                    iVar2.h(iVar3.e());
                     wt2 wt2Var = wt2.INSTANCE;
-                    GXTemplateInfo g = companion.g(c3347i2);
+                    GXTemplateInfo g = companion.g(iVar2);
                     if (gXTemplateInfo.k() == null) {
                         gXTemplateInfo.x(new ArrayList());
                     }
@@ -294,10 +294,10 @@ public final class GXTemplateInfo {
         }
 
         @NotNull
-        public final GXTemplateInfo g(@NotNull GXTemplateEngine.C3347i c3347i) {
-            b41.i(c3347i, "templateItem");
-            GXTemplateInfo h = h(GXTemplateEngine.Companion.a().h().d().getTemplate(c3347i));
-            GXTemplateInfo.Companion.k(h, c3347i);
+        public final GXTemplateInfo g(@NotNull GXTemplateEngine.i iVar) {
+            b41.i(iVar, "templateItem");
+            GXTemplateInfo h = h(GXTemplateEngine.Companion.a().h().d().getTemplate(iVar));
+            GXTemplateInfo.Companion.k(h, iVar);
             return h;
         }
 
@@ -332,7 +332,7 @@ public final class GXTemplateInfo {
         this.f = map5;
         this.g = map6;
         this.h = str;
-        b = C8177b.b(new Function0<Boolean>() { // from class: com.alibaba.gaiax.template.GXTemplateInfo$isJsExist$2
+        b = b.b(new Function0<Boolean>() { // from class: com.alibaba.gaiax.template.GXTemplateInfo$isJsExist$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);

@@ -139,7 +139,7 @@ final class ta2<T> extends pi2<T> implements AppendOnlyLinkedArrayList.NonThrowi
         b();
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super T> observer) {
         this.a.subscribe(observer);
     }

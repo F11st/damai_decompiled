@@ -6,8 +6,8 @@ import java.lang.annotation.Annotation;
 import java.util.List;
 import kotlin.NoWhenBranchMatchedException;
 import kotlin.SinceKotlin;
-import kotlin.collections.C8214m;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.m;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.KClass;
 import kotlin.reflect.KClassifier;
@@ -26,7 +26,7 @@ import tb.s61;
 /* loaded from: classes3.dex */
 public final class TypeReference implements KType {
     @NotNull
-    public static final C8235a Companion = new C8235a(null);
+    public static final a Companion = new a(null);
     public static final int IS_MARKED_NULLABLE = 1;
     public static final int IS_MUTABLE_COLLECTION_TYPE = 2;
     public static final int IS_NOTHING_TYPE = 4;
@@ -39,21 +39,19 @@ public final class TypeReference implements KType {
     private final int d;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.jvm.internal.TypeReference$a */
     /* loaded from: classes3.dex */
-    public static final class C8235a {
-        private C8235a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8235a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.jvm.internal.TypeReference$b */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C8236b {
+    public /* synthetic */ class b {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -76,7 +74,7 @@ public final class TypeReference implements KType {
         if (typeReference == null || (valueOf = typeReference.c(true)) == null) {
             valueOf = String.valueOf(k71Var.c());
         }
-        int i = C8236b.$EnumSwitchMapping$0[k71Var.d().ordinal()];
+        int i = b.$EnumSwitchMapping$0[k71Var.d().ordinal()];
         if (i != 1) {
             if (i == 2) {
                 return "in " + valueOf;
@@ -93,19 +91,19 @@ public final class TypeReference implements KType {
         String name;
         KClassifier classifier = getClassifier();
         KClass kClass = classifier instanceof KClass ? (KClass) classifier : null;
-        Class<?> b = kClass != null ? s61.b(kClass) : null;
-        if (b == null) {
+        Class<?> b2 = kClass != null ? s61.b(kClass) : null;
+        if (b2 == null) {
             name = getClassifier().toString();
         } else if ((this.d & 4) != 0) {
             name = "kotlin.Nothing";
-        } else if (b.isArray()) {
-            name = d(b);
-        } else if (z && b.isPrimitive()) {
+        } else if (b2.isArray()) {
+            name = d(b2);
+        } else if (z && b2.isPrimitive()) {
             KClassifier classifier2 = getClassifier();
             b41.g(classifier2, "null cannot be cast to non-null type kotlin.reflect.KClass<*>");
             name = s61.c((KClass) classifier2).getName();
         } else {
-            name = b.getName();
+            name = b2.getName();
         }
         String str = name + (getArguments().isEmpty() ? "" : CollectionsKt___CollectionsKt.Z(getArguments(), AVFSCacheConstants.COMMA_SEP, jn1.L, jn1.G, 0, null, new Function1<k71, CharSequence>() { // from class: kotlin.jvm.internal.TypeReference$asString$args$1
             /* JADX INFO: Access modifiers changed from: package-private */
@@ -116,10 +114,10 @@ public final class TypeReference implements KType {
             @Override // kotlin.jvm.functions.Function1
             @NotNull
             public final CharSequence invoke(@NotNull k71 k71Var) {
-                String b2;
+                String b3;
                 b41.i(k71Var, AdvanceSetting.NETWORK_TYPE);
-                b2 = TypeReference.this.b(k71Var);
-                return b2;
+                b3 = TypeReference.this.b(k71Var);
+                return b3;
             }
         }, 24, null)) + (isMarkedNullable() ? "?" : "");
         KType kType = this.c;
@@ -154,7 +152,7 @@ public final class TypeReference implements KType {
     @NotNull
     public List<Annotation> getAnnotations() {
         List<Annotation> g;
-        g = C8214m.g();
+        g = m.g();
         return g;
     }
 

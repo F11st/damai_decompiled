@@ -12,7 +12,7 @@ import okhttp3.EventListener;
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
 public abstract class EventListener {
-    public static final EventListener NONE = new C8732a();
+    public static final EventListener NONE = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes2.dex */
@@ -21,10 +21,9 @@ public abstract class EventListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: okhttp3.EventListener$a */
     /* loaded from: classes2.dex */
-    class C8732a extends EventListener {
-        C8732a() {
+    class a extends EventListener {
+        a() {
         }
     }
 
@@ -84,7 +83,7 @@ public abstract class EventListener {
     public void p(Call call, IOException iOException) {
     }
 
-    public void q(Call call, C8823o c8823o) {
+    public void q(Call call, o oVar) {
     }
 
     public void r(Call call) {
@@ -99,13 +98,13 @@ public abstract class EventListener {
     public void u(Call call, IOException iOException) {
     }
 
-    public void v(Call call, C8827q c8827q) {
+    public void v(Call call, q qVar) {
     }
 
     public void w(Call call) {
     }
 
-    public void x(Call call, @Nullable C8815k c8815k) {
+    public void x(Call call, @Nullable k kVar) {
     }
 
     public void y(Call call) {

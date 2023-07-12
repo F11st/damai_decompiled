@@ -1,12 +1,11 @@
 package tb;
 
-import com.taobao.phenix.request.C6865a;
 import com.taobao.rxm.consume.Consumer;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class yg2 {
-    private final Consumer<?, C6865a> a;
+    private final Consumer<?, com.taobao.phenix.request.a> a;
     private final int b;
     private int c;
     public final int d;
@@ -14,7 +13,7 @@ public class yg2 {
     private int f;
     private byte[] g;
 
-    public yg2(Consumer<?, C6865a> consumer, int i, int i2) {
+    public yg2(Consumer<?, com.taobao.phenix.request.a> consumer, int i, int i2) {
         this.a = consumer;
         this.d = i;
         this.b = i2;
@@ -46,7 +45,7 @@ public class yg2 {
         int i2;
         int i3 = this.f + i;
         this.f = i3;
-        Consumer<?, C6865a> consumer = this.a;
+        Consumer<?, com.taobao.phenix.request.a> consumer = this.a;
         if (consumer == null) {
             return true;
         }

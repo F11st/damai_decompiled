@@ -78,13 +78,13 @@ public final class PopupRequest {
         b41.i(activity, WPKFactory.INIT_KEY_CONTEXT);
         b41.i(str, "comboCityId");
         b41.i(str2, "sceneType");
-        rb0.C9647a c9647a = rb0.Companion;
+        rb0.a aVar = rb0.Companion;
         PopupRequestParam popupRequestParam = new PopupRequestParam();
         popupRequestParam.setComboCityId(str);
         popupRequestParam.setSceneType(str2);
         popupRequestParam.setEventType(arrayList);
         popupRequestParam.setArgs(jSONObject);
-        c9647a.b(popupRequestParam).c(activity).a().doOnKTSuccess(new Function1<PopupResponseBean, wt2>() { // from class: com.alibaba.yymidservice.popup.request.PopupRequest$tryPopupRequest$2
+        aVar.b(popupRequestParam).c(activity).a().doOnKTSuccess(new Function1<PopupResponseBean, wt2>() { // from class: com.alibaba.yymidservice.popup.request.PopupRequest$tryPopupRequest$2
             /* JADX INFO: Access modifiers changed from: package-private */
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             {
@@ -103,18 +103,18 @@ public final class PopupRequest {
                 PopupRequest popupRequest = PopupRequest.INSTANCE;
                 popupRequest.c(popupResponseBean.spmab, popupResponseBean.show);
                 popupRequest.c(popupResponseBean.spmab, popupResponseBean.trigger);
-                ct1.C9015a c9015a = ct1.Companion;
-                c9015a.a().l(popupResponseBean.sceneTypes);
-                lt1.C9421a c9421a = lt1.Companion;
-                c9421a.a().o().compareAndSet(false, true);
+                ct1.a aVar2 = ct1.Companion;
+                aVar2.a().l(popupResponseBean.sceneTypes);
+                lt1.a aVar3 = lt1.Companion;
+                aVar3.a().o().compareAndSet(false, true);
                 HashMap hashMap = new HashMap();
                 hashMap.put("sceneType", str2.toString());
                 hashMap.put("sceneTypes", yh0.INSTANCE.e(popupResponseBean.sceneTypes));
                 String simpleName = activity.getClass().getSimpleName();
                 b41.h(simpleName, "context::class.java.simpleName");
                 pt1.g(simpleName, AgooConstants.MESSAGE_POPUP, "request_success", hashMap);
-                c9015a.a().d().put(c9421a.a().c(activity, str2, arrayList), popupResponseBean);
-                c9015a.a().j(c9421a.a().c(activity, str2, arrayList), popupResponseBean.trigger);
+                aVar2.a().d().put(aVar3.a().c(activity, str2, arrayList), popupResponseBean);
+                aVar2.a().j(aVar3.a().c(activity, str2, arrayList), popupResponseBean.trigger);
                 PopupListener popupListener2 = popupListener;
                 if (popupListener2 != null) {
                     popupListener2.onSuccess(popupResponseBean);

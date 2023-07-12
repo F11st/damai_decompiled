@@ -85,12 +85,11 @@ public class Login {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.Login$a */
     /* loaded from: classes11.dex */
-    public static class AsyncTaskC6704a extends LoginAsyncTask {
+    public static class a extends LoginAsyncTask {
         final /* synthetic */ boolean a;
 
-        AsyncTaskC6704a(boolean z) {
+        a(boolean z) {
             this.a = z;
         }
 
@@ -105,13 +104,12 @@ public class Login {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.Login$b */
     /* loaded from: classes11.dex */
-    public static class AsyncTaskC6705b extends LoginAsyncTask<Object, Void, Void> {
+    public static class b extends LoginAsyncTask<Object, Void, Void> {
         final /* synthetic */ boolean a;
         final /* synthetic */ Bundle b;
 
-        AsyncTaskC6705b(boolean z, Bundle bundle) {
+        b(boolean z, Bundle bundle) {
             this.a = z;
             this.b = bundle;
         }
@@ -127,12 +125,11 @@ public class Login {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.Login$c */
     /* loaded from: classes11.dex */
-    static class AsyncTaskC6706c extends LoginAsyncTask {
+    static class c extends LoginAsyncTask {
         final /* synthetic */ RegistParam a;
 
-        AsyncTaskC6706c(RegistParam registParam) {
+        c(RegistParam registParam) {
             this.a = registParam;
         }
 
@@ -146,12 +143,11 @@ public class Login {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.Login$d */
     /* loaded from: classes11.dex */
-    public static class C6707d implements CommonCallback {
+    public static class d implements CommonCallback {
         final /* synthetic */ Context a;
 
-        C6707d(Context context) {
+        d(Context context) {
             this.a = context;
         }
 
@@ -171,10 +167,9 @@ public class Login {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.Login$e */
     /* loaded from: classes11.dex */
-    static class AsyncTaskC6708e extends LoginAsyncTask<Object, Void, Boolean> {
-        AsyncTaskC6708e() {
+    static class e extends LoginAsyncTask<Object, Void, Boolean> {
+        e() {
         }
 
         @Override // com.taobao.login4android.thread.LoginAsyncTask
@@ -386,7 +381,7 @@ public class Login {
     }
 
     public static void goRegister(RegistParam registParam) {
-        new CoordinatorWrapper().execute(new AsyncTaskC6706c(registParam), new Object[0]);
+        new CoordinatorWrapper().execute(new c(registParam), new Object[0]);
     }
 
     public static void init(Context context, String str, String str2, LoginEnvType loginEnvType) {
@@ -451,7 +446,7 @@ public class Login {
             TLogAdapter.e(TAG, "logout: return because is logining right now. isLogining=true, userLogin=" + LoginStatus.isUserLogin() + ", lastLoginTime=" + LoginStatus.getLastLoginTime());
             return;
         }
-        LoginController.getInstance().logout(i, str, str2, str3, z, new C6707d(context));
+        LoginController.getInstance().logout(i, str, str2, str3, z, new d(context));
     }
 
     public static void navByScene(Context context, String str) {
@@ -547,7 +542,7 @@ public class Login {
             }
         }
         if (z) {
-            new CoordinatorWrapper().execute(new AsyncTaskC6708e(), new Object[0]);
+            new CoordinatorWrapper().execute(new e(), new Object[0]);
             return;
         }
         notifyRefreshResult(false);
@@ -631,7 +626,7 @@ public class Login {
                 }
                 if (LoginSwitch.getSwitch(LoginSwitch.OPEN_LOGIN_PAGE_WHEN_IS_LOGIN, "false")) {
                     BroadCastHelper.sendLocalBroadCast(new Intent(LoginResActions.LOGIN_CLOSE_ACTION));
-                    loginTask = new AsyncTaskC6704a(z);
+                    loginTask = new a(z);
                     new CoordinatorWrapper().execute(loginTask, new Object[0]);
                     return;
                 }
@@ -640,7 +635,7 @@ public class Login {
                 return;
             }
         }
-        loginTask = new AsyncTaskC6705b(z, bundle);
+        loginTask = new b(z, bundle);
         new CoordinatorWrapper().execute(loginTask, new Object[0]);
     }
 
@@ -808,8 +803,8 @@ public class Login {
                         if (TextUtils.isEmpty(DefaultTaobaoAppProvider.this.getAppkey())) {
                             LoginBroadcastHelper.sentInitFailBroadcast(DataProviderFactory.getApplicationContext());
                         }
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                    } catch (Exception e2) {
+                        e2.printStackTrace();
                     } catch (Throwable th) {
                         th.printStackTrace();
                     }

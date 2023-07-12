@@ -192,13 +192,13 @@ public final class AppMonitor {
 
     private static void addRegisterEntity(String str, String str2, MeasureSet measureSet, DimensionSet dimensionSet, boolean z) {
         try {
-            AnalyticsMgr.C3104b c3104b = new AnalyticsMgr.C3104b();
-            c3104b.a = str;
-            c3104b.b = str2;
-            c3104b.c = measureSet;
-            c3104b.d = dimensionSet;
-            c3104b.e = z;
-            AnalyticsMgr.mRegisterList.add(c3104b);
+            AnalyticsMgr.b bVar = new AnalyticsMgr.b();
+            bVar.a = str;
+            bVar.b = str2;
+            bVar.c = measureSet;
+            bVar.d = dimensionSet;
+            bVar.e = z;
+            AnalyticsMgr.mRegisterList.add(bVar);
         } catch (Throwable unused) {
         }
     }

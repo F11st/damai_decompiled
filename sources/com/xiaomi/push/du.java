@@ -14,7 +14,7 @@ public class du extends dt {
         return hl.Storage;
     }
 
-    @Override // com.xiaomi.push.al.AbstractRunnableC7597a
+    @Override // com.xiaomi.push.al.a
     /* renamed from: a */
     public String mo706a() {
         return "23";
@@ -22,6 +22,6 @@ public class du extends dt {
 
     @Override // com.xiaomi.push.dt
     public String b() {
-        return "ram:" + C7680j.m1091a() + ",rom:" + C7680j.m1094b() + "|ramOriginal:" + C7680j.m1096c() + ",romOriginal:" + C7680j.d();
+        return "ram:" + j.m1091a() + ",rom:" + j.m1094b() + "|ramOriginal:" + j.m1096c() + ",romOriginal:" + j.d();
     }
 }

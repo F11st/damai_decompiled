@@ -1,9 +1,7 @@
 package com.huawei.secure.android.common.ssl;
 
 import android.content.Context;
-import com.huawei.secure.android.common.ssl.util.C5749a;
-import com.huawei.secure.android.common.ssl.util.C5751c;
-import com.huawei.secure.android.common.ssl.util.C5755g;
+import com.huawei.secure.android.common.ssl.util.g;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.Socket;
@@ -45,26 +43,26 @@ public class SecureApacheSSLSocketFactory extends SSLSocketFactory {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static void a(X509TrustManager x509TrustManager) {
-        C5755g.c(i, "sasf update socket factory trust manager");
+        g.c(i, "sasf update socket factory trust manager");
         try {
             j = new SecureApacheSSLSocketFactory((KeyStore) null, x509TrustManager);
         } catch (IOException unused) {
-            C5755g.b(i, "IOException");
+            g.b(i, "IOException");
         } catch (KeyManagementException unused2) {
-            C5755g.b(i, "KeyManagementException");
+            g.b(i, "KeyManagementException");
         } catch (KeyStoreException unused3) {
-            C5755g.b(i, "KeyStoreException");
+            g.b(i, "KeyStoreException");
         } catch (NoSuchAlgorithmException unused4) {
-            C5755g.b(i, "NoSuchAlgorithmException");
+            g.b(i, "NoSuchAlgorithmException");
         } catch (UnrecoverableKeyException unused5) {
-            C5755g.b(i, "UnrecoverableKeyException");
+            g.b(i, "UnrecoverableKeyException");
         } catch (CertificateException unused6) {
-            C5755g.b(i, "CertificateException");
+            g.b(i, "CertificateException");
         }
     }
 
     public static SecureApacheSSLSocketFactory getInstance(KeyStore keyStore, Context context) throws NoSuchAlgorithmException, KeyManagementException, KeyStoreException, UnrecoverableKeyException, CertificateException, IOException, IllegalArgumentException {
-        C5751c.a(context);
+        com.huawei.secure.android.common.ssl.util.c.a(context);
         if (j == null) {
             synchronized (SecureApacheSSLSocketFactory.class) {
                 if (j == null) {
@@ -77,7 +75,7 @@ public class SecureApacheSSLSocketFactory extends SSLSocketFactory {
 
     @Override // org.apache.http.conn.ssl.SSLSocketFactory, org.apache.http.conn.scheme.LayeredSocketFactory
     public Socket createSocket(Socket socket, String str, int i2, boolean z) throws IOException {
-        C5755g.c(i, "createSocket: socket host port autoClose");
+        g.c(i, "createSocket: socket host port autoClose");
         Socket createSocket = this.a.getSocketFactory().createSocket(socket, str, i2, z);
         if (createSocket instanceof SSLSocket) {
             a(createSocket);
@@ -158,7 +156,7 @@ public class SecureApacheSSLSocketFactory extends SSLSocketFactory {
         super(keyStore);
         this.b = null;
         if (context == null) {
-            C5755g.b(i, "SecureSSLSocketFactory: context is null");
+            g.b(i, "SecureSSLSocketFactory: context is null");
             return;
         }
         setContext(context);
@@ -170,7 +168,7 @@ public class SecureApacheSSLSocketFactory extends SSLSocketFactory {
 
     @Override // org.apache.http.conn.ssl.SSLSocketFactory, org.apache.http.conn.scheme.SocketFactory
     public Socket createSocket() throws IOException {
-        C5755g.c(i, "createSocket: ");
+        g.c(i, "createSocket: ");
         Socket createSocket = this.a.getSocketFactory().createSocket();
         if (createSocket instanceof SSLSocket) {
             a(createSocket);
@@ -184,33 +182,33 @@ public class SecureApacheSSLSocketFactory extends SSLSocketFactory {
     private void a(Socket socket) {
         boolean z;
         boolean z2 = true;
-        if (C5749a.a(this.h)) {
+        if (com.huawei.secure.android.common.ssl.util.a.a(this.h)) {
             z = false;
         } else {
-            C5755g.c(i, "set protocols");
+            g.c(i, "set protocols");
             SSLUtil.setEnabledProtocols((SSLSocket) socket, this.h);
             z = true;
         }
-        if (C5749a.a(this.g) && C5749a.a(this.f)) {
+        if (com.huawei.secure.android.common.ssl.util.a.a(this.g) && com.huawei.secure.android.common.ssl.util.a.a(this.f)) {
             z2 = false;
         } else {
-            C5755g.c(i, "set white cipher or black cipher");
+            g.c(i, "set white cipher or black cipher");
             SSLSocket sSLSocket = (SSLSocket) socket;
             SSLUtil.setEnabledProtocols(sSLSocket);
-            if (!C5749a.a(this.g)) {
+            if (!com.huawei.secure.android.common.ssl.util.a.a(this.g)) {
                 SSLUtil.setWhiteListCipherSuites(sSLSocket, this.g);
             } else {
                 SSLUtil.setBlackListCipherSuites(sSLSocket, this.f);
             }
         }
         if (!z) {
-            C5755g.c(i, "set default protocols");
+            g.c(i, "set default protocols");
             SSLUtil.setEnabledProtocols((SSLSocket) socket);
         }
         if (z2) {
             return;
         }
-        C5755g.c(i, "set default cipher suites");
+        g.c(i, "set default cipher suites");
         SSLUtil.setEnableSafeCipherSuites((SSLSocket) socket);
     }
 

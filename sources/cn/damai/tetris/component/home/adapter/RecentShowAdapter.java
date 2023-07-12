@@ -17,7 +17,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.category.category.ui.StarFragment;
 import cn.damai.comment.bean.FollowStateBean;
 import cn.damai.comment.request.FollowUpdateRequest;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
@@ -46,7 +45,6 @@ import java.math.RoundingMode;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import tb.C9826vr;
 import tb.cs;
 import tb.d23;
 import tb.jm1;
@@ -54,6 +52,7 @@ import tb.m62;
 import tb.mu0;
 import tb.oy0;
 import tb.t60;
+import tb.vr;
 import tb.wh2;
 import tb.xr;
 import tb.xw0;
@@ -70,7 +69,7 @@ public class RecentShowAdapter extends RecyclerView.Adapter<RankItemViewHolder> 
     private int f;
     private int g;
     private String h;
-    private View.OnClickListener i = new View$OnClickListenerC1850a();
+    private View.OnClickListener i = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes7.dex */
@@ -245,8 +244,8 @@ public class RecentShowAdapter extends RecyclerView.Adapter<RankItemViewHolder> 
                 return;
             }
             homePageRecentItems.position = i;
-            if (this.a.getTag() instanceof C9826vr) {
-                ((C9826vr) this.a.getTag()).cancel();
+            if (this.a.getTag() instanceof vr) {
+                ((vr) this.a.getTag()).cancel();
             }
             HashMap<String, String> hashMap = null;
             if (homePageRecentItems.isReferItem) {
@@ -257,7 +256,7 @@ public class RecentShowAdapter extends RecyclerView.Adapter<RankItemViewHolder> 
                 this.r.setBackground(null);
                 this.r.setPadding(0, 0, 0, 0);
             }
-            DMImageCreator f = C0504a.b().f(homePageRecentItems.projectPic, t60.a(RecentShowAdapter.this.b, 98.0f), t60.a(RecentShowAdapter.this.b, 131.0f));
+            DMImageCreator f = cn.damai.common.image.a.b().f(homePageRecentItems.projectPic, t60.a(RecentShowAdapter.this.b, 98.0f), t60.a(RecentShowAdapter.this.b, 131.0f));
             int i2 = R$drawable.uikit_default_image_bg_gradient;
             this.a.setTag(f.i(i2).c(i2).g(this.a));
             this.b.setText(homePageRecentItems.projectName);
@@ -372,12 +371,11 @@ public class RecentShowAdapter extends RecyclerView.Adapter<RankItemViewHolder> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.adapter.RecentShowAdapter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1850a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1850a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener

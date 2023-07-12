@@ -15,7 +15,6 @@ import cn.damai.projectfilter.bean.CategoryLevelOne;
 import cn.damai.projectfilter.bean.CategoryLevelTwo;
 import cn.damai.projectfilter.bean.FilterData;
 import cn.damai.projectfilter.bean.Type;
-import cn.damai.projectfilter.floatview.AbstractC1515a;
 import cn.damai.projectfilter.model.CategoryDataAssembler;
 import cn.damai.projectfilter.model.CategoryUpdate;
 import cn.damai.projectfilter.model.OnCategoryUpdateListener;
@@ -26,7 +25,7 @@ import org.jetbrains.annotations.Nullable;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
-public final class zg extends AbstractC1515a<CategoryDataAssembler> {
+public final class zg extends cn.damai.projectfilter.floatview.a<CategoryDataAssembler> {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
     private final CategoryDataAssembler d;
@@ -41,12 +40,11 @@ public final class zg extends AbstractC1515a<CategoryDataAssembler> {
     private View i;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.zg$a */
     /* loaded from: classes6.dex */
-    public static final class C10022a implements OnCategoryUpdateListener {
+    public static final class a implements OnCategoryUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C10022a() {
+        a() {
         }
 
         @Override // cn.damai.projectfilter.model.OnCategoryUpdateListener
@@ -67,7 +65,7 @@ public final class zg extends AbstractC1515a<CategoryDataAssembler> {
         super(context);
         b41.i(categoryDataAssembler, "mDataAssembler");
         this.d = categoryDataAssembler;
-        categoryDataAssembler.setMListener(new C10022a());
+        categoryDataAssembler.setMListener(new a());
         this.f = new CategoryMainAdapter(context, new CategoryMainAdapter.OnCategoryMainListener() { // from class: tb.wg
             @Override // cn.damai.projectfilter.adapter.CategoryMainAdapter.OnCategoryMainListener
             public final void onSubClick(int i, CategoryLevelOne categoryLevelOne) {

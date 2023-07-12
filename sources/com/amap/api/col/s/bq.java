@@ -9,19 +9,18 @@ import android.text.TextUtils;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public final class bq {
-    private volatile C4395b a = new C4395b((byte) 0);
+    private volatile b a = new b((byte) 0);
     private co b = new co("HttpsDecisionUtil");
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.bq$a */
     /* loaded from: classes10.dex */
-    public static class C4394a {
+    public static class a {
         static bq a = new bq();
     }
 
     public static bq a() {
-        return C4394a.a;
+        return a.a;
     }
 
     private static boolean c() {
@@ -30,22 +29,21 @@ public final class bq {
 
     public final boolean b() {
         if (this.a == null) {
-            this.a = new C4395b((byte) 0);
+            this.a = new b((byte) 0);
         }
         return this.a.a();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.bq$b */
     /* loaded from: classes10.dex */
-    public static class C4395b {
+    public static class b {
         protected boolean a;
         private int b;
         private final boolean c;
         private boolean d;
 
-        private C4395b() {
+        private b() {
             this.b = 0;
             this.a = true;
             this.c = true;
@@ -120,17 +118,17 @@ public final class bq {
             L2f:
                 return r1
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.amap.api.col.s.bq.C4395b.a():boolean");
+            throw new UnsupportedOperationException("Method not decompiled: com.amap.api.col.s.bq.b.a():boolean");
         }
 
-        /* synthetic */ C4395b(byte b) {
+        /* synthetic */ b(byte b) {
             this();
         }
     }
 
     public final void a(Context context) {
         if (this.a == null) {
-            this.a = new C4395b((byte) 0);
+            this.a = new b((byte) 0);
         }
         this.a.a(co.a(context, "open_common", "a3", true));
         this.a.a(context);
@@ -138,9 +136,9 @@ public final class bq {
     }
 
     private static void b(Context context, boolean z) {
-        SharedPreferences.Editor a = co.a(context, "open_common");
-        co.a(a, "a3", z);
-        co.a(a);
+        SharedPreferences.Editor a2 = co.a(context, "open_common");
+        co.a(a2, "a3", z);
+        co.a(a2);
     }
 
     public final boolean b(boolean z) {
@@ -156,7 +154,7 @@ public final class bq {
 
     public final void a(boolean z) {
         if (this.a == null) {
-            this.a = new C4395b((byte) 0);
+            this.a = new b((byte) 0);
         }
         this.a.b(z);
     }
@@ -164,7 +162,7 @@ public final class bq {
     /* JADX INFO: Access modifiers changed from: package-private */
     public final void a(Context context, boolean z) {
         if (this.a == null) {
-            this.a = new C4395b((byte) 0);
+            this.a = new b((byte) 0);
         }
         b(context, z);
         this.a.a(z);

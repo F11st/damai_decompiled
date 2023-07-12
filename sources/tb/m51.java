@@ -2,7 +2,6 @@ package tb;
 
 import java.util.List;
 import kotlin.Pair;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
@@ -210,7 +209,7 @@ public class m51 extends bx1 implements JavaCallableMemberDescriptor {
         return m51Var;
     }
 
-    @Override // tb.bx1, kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8320b, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
+    @Override // tb.bx1, kotlin.reflect.jvm.internal.impl.descriptors.impl.b, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
     @Nullable
     public <V> V getUserData(CallableDescriptor.UserDataKey<V> userDataKey) {
         Pair<CallableDescriptor.UserDataKey<?>, ?> pair = this.B;
@@ -220,7 +219,7 @@ public class m51 extends bx1 implements JavaCallableMemberDescriptor {
         return (V) this.B.getSecond();
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8320b, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.b, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
     public boolean hasSynthesizedParameterNames() {
         return false;
     }
@@ -249,9 +248,9 @@ public class m51 extends bx1 implements JavaCallableMemberDescriptor {
         return new m51(declarationDescriptor, getAnnotations(), modality, f70Var, isVar(), ni1Var, sourceElement, propertyDescriptor, kind, this.A, this.B);
     }
 
-    @Override // tb.bx1, kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8320b, kotlin.reflect.jvm.internal.impl.descriptors.VariableDescriptor
+    @Override // tb.bx1, kotlin.reflect.jvm.internal.impl.descriptors.impl.b, kotlin.reflect.jvm.internal.impl.descriptors.VariableDescriptor
     public boolean isConst() {
         z71 type = getType();
-        return this.A && dn.a(type) && (!sq2.i(type) || AbstractC8271b.t0(type));
+        return this.A && dn.a(type) && (!sq2.i(type) || kotlin.reflect.jvm.internal.impl.builtins.b.t0(type));
     }
 }

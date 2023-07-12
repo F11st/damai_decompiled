@@ -5,7 +5,6 @@ import android.os.Build;
 import android.text.TextUtils;
 import android.widget.ImageView;
 import androidx.annotation.NonNull;
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.IConfigAdapter;
 import com.taobao.weex.WXSDKInstance;
 import com.taobao.weex.ui.ComponentCreator;
@@ -21,9 +20,8 @@ public class AliWXImage extends WXImage {
     private static final String CONFIG_GROUP = "AliWXImageView";
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.component.AliWXImage$a */
     /* loaded from: classes5.dex */
-    public static class C3024a implements ComponentCreator {
+    public static class a implements ComponentCreator {
         @Override // com.taobao.weex.ui.ComponentCreator
         public WXComponent createInstance(WXSDKInstance wXSDKInstance, WXVContainer wXVContainer, BasicComponentData basicComponentData) throws IllegalAccessException, InvocationTargetException, InstantiationException {
             return new AliWXImage(wXSDKInstance, wXVContainer, basicComponentData);
@@ -38,7 +36,7 @@ public class AliWXImage extends WXImage {
         if (isBlackHC()) {
             return false;
         }
-        IConfigAdapter c = C3004a.l().c();
+        IConfigAdapter c = com.alibaba.aliweex.a.l().c();
         if (c != null ? TextUtils.equals("true", c.getConfig(CONFIG_GROUP, "globalEnableBitmapAutoManage", "false")) : false) {
             return true;
         }
@@ -58,7 +56,7 @@ public class AliWXImage extends WXImage {
             return false;
         }
         try {
-            String config = C3004a.l().c().getConfig(CONFIG_GROUP, "black_domain", "");
+            String config = com.alibaba.aliweex.a.l().c().getConfig(CONFIG_GROUP, "black_domain", "");
             if (!TextUtils.isEmpty(config)) {
                 for (String str : config.split(",")) {
                     if (!TextUtils.isEmpty(bundleUrl) && bundleUrl.contains(str)) {
@@ -82,7 +80,7 @@ public class AliWXImage extends WXImage {
             return false;
         }
         try {
-            String config = C3004a.l().c().getConfig(CONFIG_GROUP, "hc_domain", "");
+            String config = com.alibaba.aliweex.a.l().c().getConfig(CONFIG_GROUP, "hc_domain", "");
             if (!TextUtils.isEmpty(config)) {
                 for (String str : config.split(",")) {
                     if (!TextUtils.isEmpty(bundleUrl) && bundleUrl.contains(str)) {
@@ -98,7 +96,7 @@ public class AliWXImage extends WXImage {
 
     private boolean isOpenBitmapSwitch() {
         IConfigAdapter c;
-        return (getInstance() == null || (c = C3004a.l().c()) == null || !TextUtils.equals("true", c.getConfig(CONFIG_GROUP, "switch_open", ""))) ? false : true;
+        return (getInstance() == null || (c = com.alibaba.aliweex.a.l().c()) == null || !TextUtils.equals("true", c.getConfig(CONFIG_GROUP, "switch_open", ""))) ? false : true;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */

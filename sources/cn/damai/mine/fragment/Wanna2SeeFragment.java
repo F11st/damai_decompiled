@@ -25,12 +25,11 @@ public class Wanna2SeeFragment extends Fragment {
     private ViewPager mViewPager;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.fragment.Wanna2SeeFragment$a */
     /* loaded from: classes6.dex */
-    public class C1439a implements OnWannaBeanListener {
+    public class a implements OnWannaBeanListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1439a(Wanna2SeeFragment wanna2SeeFragment) {
+        a(Wanna2SeeFragment wanna2SeeFragment) {
         }
 
         @Override // cn.damai.mine.listener.OnWannaBeanListener
@@ -78,7 +77,7 @@ public class Wanna2SeeFragment extends Fragment {
         this.mViewPager = (ViewPager) view.findViewById(R$id.live_view_pager);
         ArrayList arrayList = new ArrayList();
         MultipleListFragment instance = MultipleListFragment.instance(PageType.RECORD);
-        instance.setListener(new C1439a(this));
+        instance.setListener(new a(this));
         arrayList.add(instance);
         this.mViewPager.setOffscreenPageLimit(1);
         this.mViewPager.setAdapter(new StatePagerAdapter(getChildFragmentManager(), arrayList));

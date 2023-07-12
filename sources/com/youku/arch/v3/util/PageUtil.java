@@ -27,7 +27,7 @@ import java.util.Objects;
 import kotlin.Metadata;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.joor.C8883a;
+import org.joor.a;
 import tb.b41;
 
 /* compiled from: Taobao */
@@ -51,7 +51,7 @@ public final class PageUtil {
             return (GenericFactory) ipChange.ipc$dispatch("-183575563", new Object[]{this, iContext});
         }
         b41.i(iContext, WPKFactory.INIT_KEY_CONTEXT);
-        Object f = C8883a.j(Constants.CreatorConfig.CLASS_DEFAULT_ADAPTER_CREATOR).c(iContext).f();
+        Object f = a.j(Constants.CreatorConfig.CLASS_DEFAULT_ADAPTER_CREATOR).c(iContext).f();
         Objects.requireNonNull(f, "null cannot be cast to non-null type com.youku.arch.v3.ICreator<com.youku.arch.v3.adapter.VBaseAdapter<com.youku.arch.v3.IItem<com.youku.arch.v3.core.ItemValue>, com.youku.arch.v3.adapter.VBaseHolder<com.youku.arch.v3.IItem<com.youku.arch.v3.core.ItemValue>, com.youku.arch.v3.view.render.GenericRenderConfig>>?, kotlin.collections.Map<kotlin.String, kotlin.Any?>>");
         GenericFactory<VBaseAdapter<IItem<ItemValue>, VBaseHolder<IItem<ItemValue>, GenericRenderConfig>>, Map<String, Object>> genericFactory = new GenericFactory<>((ICreator) f);
         ConfigManager configManager = iContext.getConfigManager();
@@ -89,7 +89,7 @@ public final class PageUtil {
             return (GenericFactory) ipChange.ipc$dispatch("-423695069", new Object[]{this, iContext});
         }
         b41.i(iContext, WPKFactory.INIT_KEY_CONTEXT);
-        GenericFactory<IComponent<ComponentValue>, Node> genericFactory = new GenericFactory<>((ICreator) C8883a.j(Constants.CreatorConfig.CLASS_DEFAULT_COMPONENT_CREATOR).b().f());
+        GenericFactory<IComponent<ComponentValue>, Node> genericFactory = new GenericFactory<>((ICreator) a.j(Constants.CreatorConfig.CLASS_DEFAULT_COMPONENT_CREATOR).b().f());
         ConfigManager configManager = iContext.getConfigManager();
         ConfigManager.CreatorConfig creatorConfig = configManager == null ? null : configManager.getCreatorConfig(2);
         SparseArray<ICreator<?, ?>> creators = creatorConfig == null ? null : creatorConfig.getCreators();
@@ -125,7 +125,7 @@ public final class PageUtil {
             return (GenericFactory) ipChange.ipc$dispatch("500420509", new Object[]{this, iContext});
         }
         b41.i(iContext, WPKFactory.INIT_KEY_CONTEXT);
-        Object f = C8883a.j(Constants.CreatorConfig.CLASS_DEFAULT_ITEM_CREATOR).b().f();
+        Object f = a.j(Constants.CreatorConfig.CLASS_DEFAULT_ITEM_CREATOR).b().f();
         Objects.requireNonNull(f, "null cannot be cast to non-null type com.youku.arch.v3.ICreator<com.youku.arch.v3.IItem<com.youku.arch.v3.core.ItemValue>, com.youku.arch.v3.core.Node>");
         GenericFactory<IItem<ItemValue>, Node> genericFactory = new GenericFactory<>((ICreator) f);
         ConfigManager configManager = iContext.getConfigManager();
@@ -163,7 +163,7 @@ public final class PageUtil {
             return (GenericFactory) ipChange.ipc$dispatch("-134764298", new Object[]{this, iContext});
         }
         b41.i(iContext, WPKFactory.INIT_KEY_CONTEXT);
-        Object f = C8883a.j(Constants.CreatorConfig.CLASS_DEFAULT_MODULE_CREATOR).b().f();
+        Object f = a.j(Constants.CreatorConfig.CLASS_DEFAULT_MODULE_CREATOR).b().f();
         Objects.requireNonNull(f, "null cannot be cast to non-null type com.youku.arch.v3.ICreator<com.youku.arch.v3.IModule<com.youku.arch.v3.core.ModuleValue>, com.youku.arch.v3.core.Node>");
         GenericFactory<IModule<ModuleValue>, Node> genericFactory = new GenericFactory<>((ICreator) f);
         ConfigManager configManager = iContext.getConfigManager();

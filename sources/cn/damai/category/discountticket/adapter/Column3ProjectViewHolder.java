@@ -22,12 +22,11 @@ public abstract class Column3ProjectViewHolder extends DiscountTicketAdapter.Bas
     private static transient /* synthetic */ IpChange $ipChange;
     private final int a;
     private final int b;
-    private List<View$OnClickListenerC0381a> c;
+    private List<a> c;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.discountticket.adapter.Column3ProjectViewHolder$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0381a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         View a;
         private TextView b;
@@ -37,7 +36,7 @@ public abstract class Column3ProjectViewHolder extends DiscountTicketAdapter.Bas
         private View f;
         private View g;
 
-        public View$OnClickListenerC0381a(View view) {
+        public a(View view) {
             this.a = view;
             this.e = (DMPosterView) view.findViewById(R$id.item_poster);
             this.b = (TextView) this.a.findViewById(R$id.item_title);
@@ -114,12 +113,12 @@ public abstract class Column3ProjectViewHolder extends DiscountTicketAdapter.Bas
         View findViewById = view.findViewById(R$id.item_1_layout);
         View findViewById2 = view.findViewById(R$id.item_2_layout);
         View findViewById3 = view.findViewById(R$id.item_3_layout);
-        View$OnClickListenerC0381a view$OnClickListenerC0381a = new View$OnClickListenerC0381a(findViewById);
-        View$OnClickListenerC0381a view$OnClickListenerC0381a2 = new View$OnClickListenerC0381a(findViewById2);
-        View$OnClickListenerC0381a view$OnClickListenerC0381a3 = new View$OnClickListenerC0381a(findViewById3);
-        this.c.add(view$OnClickListenerC0381a);
-        this.c.add(view$OnClickListenerC0381a2);
-        this.c.add(view$OnClickListenerC0381a3);
+        a aVar = new a(findViewById);
+        a aVar2 = new a(findViewById2);
+        a aVar3 = new a(findViewById3);
+        this.c.add(aVar);
+        this.c.add(aVar2);
+        this.c.add(aVar3);
     }
 
     @Override // cn.damai.category.discountticket.adapter.DiscountTicketAdapter.BaseViewHolder

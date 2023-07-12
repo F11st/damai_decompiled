@@ -4,7 +4,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-import com.alibaba.emas.datalab.C3318a;
 import com.alibaba.emas.datalab.DatalabBizType;
 import com.alibaba.emas.datalab.DatalabListener;
 import com.alibaba.emas.datalab.stage.Stage;
@@ -27,7 +26,7 @@ public class DaiUpdateReceiver extends BroadcastReceiver {
         try {
             Log.w("Datalab.Update", "onReceive, action=" + intent.getAction());
             b("dai notify to datalab");
-            final DatalabListener datalabListener = C3318a.b().a.get(DatalabBizType.update);
+            final DatalabListener datalabListener = com.alibaba.emas.datalab.a.b().a.get(DatalabBizType.update);
             if (datalabListener == null) {
                 b("listener is null");
                 return;

@@ -6,5 +6,5 @@ import io.reactivex.annotations.NonNull;
 /* loaded from: classes3.dex */
 public interface CompletableTransformer {
     @NonNull
-    CompletableSource apply(@NonNull AbstractC8146a abstractC8146a);
+    CompletableSource apply(@NonNull a aVar);
 }

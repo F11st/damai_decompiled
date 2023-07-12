@@ -1,6 +1,6 @@
 package com.alibaba.security.realidentity.business.start.model;
 
-import com.alibaba.security.common.d.C3811h;
+import com.alibaba.security.common.d.h;
 import com.alibaba.security.realidentity.business.start.StartHttpResponse;
 import java.io.Serializable;
 import java.util.List;
@@ -162,7 +162,7 @@ public class StepItem implements Serializable {
     }
 
     public JsonAssist getJsonAssistBean() {
-        return (JsonAssist) C3811h.a(this.jsonAssist, JsonAssist.class, false);
+        return (JsonAssist) h.a(this.jsonAssist, JsonAssist.class, false);
     }
 
     public List<StartHttpResponse.Property> getProperties() {

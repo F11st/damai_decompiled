@@ -12,27 +12,23 @@ import com.uc.webview.export.annotations.Interface;
 import com.uc.webview.export.cyclone.Log;
 import com.uc.webview.export.cyclone.UCCyclone;
 import com.uc.webview.export.cyclone.update.UpdateService;
-import com.uc.webview.export.internal.C7250d;
 import com.uc.webview.export.internal.SDKFactory;
-import com.uc.webview.export.internal.cd.C7247a;
+import com.uc.webview.export.internal.d;
 import com.uc.webview.export.internal.interfaces.INetLogger;
 import com.uc.webview.export.internal.interfaces.INetwork;
 import com.uc.webview.export.internal.interfaces.INetworkDecider;
 import com.uc.webview.export.internal.interfaces.INetworkDelegate;
 import com.uc.webview.export.internal.interfaces.InvokeObject;
 import com.uc.webview.export.internal.interfaces.UCMobileWebKit;
-import com.uc.webview.export.internal.setup.AbstractC7282l;
-import com.uc.webview.export.internal.setup.C7285o;
 import com.uc.webview.export.internal.setup.UCSetupException;
 import com.uc.webview.export.internal.setup.af;
 import com.uc.webview.export.internal.setup.am;
 import com.uc.webview.export.internal.setup.by;
-import com.uc.webview.export.internal.uc.C7298a;
-import com.uc.webview.export.internal.uc.startup.C7302b;
-import com.uc.webview.export.internal.update.C7312b;
-import com.uc.webview.export.internal.utility.C7336i;
-import com.uc.webview.export.internal.utility.C7349p;
+import com.uc.webview.export.internal.setup.l;
+import com.uc.webview.export.internal.setup.o;
 import com.uc.webview.export.internal.utility.ReflectionUtil;
+import com.uc.webview.export.internal.utility.i;
+import com.uc.webview.export.internal.utility.p;
 import com.uc.webview.export.media.MediaPlayerFactory;
 import com.uc.webview.export.utility.SetupTask;
 import java.io.File;
@@ -303,13 +299,13 @@ public class UCCore {
     }
 
     public static int checkQuickVerifiedResult(Context context, String str) {
-        return C7349p.c(context, str);
+        return p.c(context, str);
     }
 
     public static void clearDnsCache(String str) {
         Log.i(BaseMonitor.COUNT_POINT_DNS, "UCCore U4 clearDnsCache");
         try {
-            C7250d.a().a(108, new Object[]{str});
+            d.a().a(108, new Object[]{str});
         } catch (Exception e) {
             Log.e(BaseMonitor.COUNT_POINT_DNS, "clearDnsCache", e);
         }
@@ -327,31 +323,31 @@ public class UCCore {
     }
 
     public static Object createJSInterface(JSInterface jSInterface) {
-        return C7250d.a().b(113, new Object[]{jSInterface});
+        return d.a().b(113, new Object[]{jSInterface});
     }
 
     public static void enableJSCoverageInfo(ValueCallback<String> valueCallback) {
         try {
-            C7250d.a().a(111, new Object[]{valueCallback});
+            d.a().a(111, new Object[]{valueCallback});
         } catch (Exception e) {
             Log.e("aot", "enableJSCoverageInfo", e);
         }
     }
 
     public static boolean extractWebCoreLibraryIfNeeded(Context context, String str, String str2, boolean z) throws UCSetupException {
-        C7302b.a(20);
+        com.uc.webview.export.internal.uc.startup.b.a(20);
         File file = new File(str);
         File file2 = new File(str2);
         af.a(file, file2);
         boolean decompressIfNeeded = UCCyclone.decompressIfNeeded(context, true, file, file2, (FilenameFilter) null, z);
-        C7302b.a(21);
-        C7302b.a(19, decompressIfNeeded ? "1" : "0");
+        com.uc.webview.export.internal.uc.startup.b.a(21);
+        com.uc.webview.export.internal.uc.startup.b.a(19, decompressIfNeeded ? "1" : "0");
         return decompressIfNeeded;
     }
 
     public static void generateCodeCache(Map<String, String> map, ValueCallback<Integer> valueCallback) {
         try {
-            C7250d.a().a(109, new Object[]{map, valueCallback});
+            d.a().a(109, new Object[]{map, valueCallback});
         } catch (Exception e) {
             Log.e("aot", "generateCodeCache", e);
         }
@@ -367,27 +363,27 @@ public class UCCore {
     }
 
     public static String getExtractDirPathByUrl(Context context, String str) {
-        return new File(C7349p.a(context, "updates"), UCCyclone.getSourceHash(str)).getAbsolutePath();
+        return new File(p.a(context, "updates"), UCCyclone.getSourceHash(str)).getAbsolutePath();
     }
 
     public static String getExtractRootDirPath(Context context) {
-        return C7349p.a(context, "decompresses2").getAbsolutePath();
+        return p.a(context, "decompresses2").getAbsolutePath();
     }
 
     public static Object getGlobalOption(String str) {
-        return C7336i.a().a(str);
+        return i.a().a(str);
     }
 
     public static Object getJSRoute(Object obj) {
-        return C7250d.a().b(114, new Object[]{obj});
+        return d.a().b(114, new Object[]{obj});
     }
 
     public static String getODexDirPath(Context context, String str) {
-        return C7349p.b(C7349p.a(context, "odexs"), C7349p.e(C7349p.b(context, str))).getAbsolutePath();
+        return p.b(p.a(context, "odexs"), p.e(p.b(context, str))).getAbsolutePath();
     }
 
     public static String getParam(String str) {
-        return C7247a.b(str);
+        return com.uc.webview.export.internal.cd.a.b(str);
     }
 
     public static WebResourceResponse getResponseByUrl(String str) {
@@ -399,7 +395,7 @@ public class UCCore {
     }
 
     public static String getUrlFromJSInterface(Object obj) {
-        return (String) C7250d.a().b(116, new Object[]{obj});
+        return (String) d.a().b(116, new Object[]{obj});
     }
 
     public static void getUsingSoDirPath(ValueCallback<String> valueCallback) {
@@ -411,7 +407,7 @@ public class UCCore {
         if (WebView.getCoreType() == 1 && SDKFactory.d != null) {
             Log.d("notifyCoreEvent", "notifyCoreEvent");
             try {
-                return ReflectionUtil.invoke(SDKFactory.d, "notifyCoreEvent", new Class[]{InvokeObject.class}, new Object[]{new C7298a(i, obj)});
+                return ReflectionUtil.invoke(SDKFactory.d, "notifyCoreEvent", new Class[]{InvokeObject.class}, new Object[]{new com.uc.webview.export.internal.uc.a(i, obj)});
             } catch (Throwable th) {
                 Log.e("notifyCoreEvent", "notifyCoreEvent", th);
                 return null;
@@ -464,12 +460,12 @@ public class UCCore {
     }
 
     public static void sendMessageToJS(Object obj, Object[] objArr, ValueCallback<Boolean> valueCallback) {
-        C7250d.a().b(115, new Object[]{obj, objArr, valueCallback});
+        d.a().b(115, new Object[]{obj, objArr, valueCallback});
     }
 
     public static void setCodeCache(String[] strArr, ValueCallback<Integer> valueCallback) {
         try {
-            C7250d.a().a(110, new Object[]{strArr, valueCallback});
+            d.a().a(110, new Object[]{strArr, valueCallback});
         } catch (Exception e) {
             Log.e("aot", "setCodeCache", e);
         }
@@ -501,7 +497,7 @@ public class UCCore {
     }
 
     public static boolean setGlobalOption(String str, Object obj) {
-        return C7336i.a().a(str, obj);
+        return i.a().a(str, obj);
     }
 
     public static void setInitCallback(InitCallback initCallback) {
@@ -545,14 +541,14 @@ public class UCCore {
 
     public static void setOfflineResourceClient(IOfflineResourceClient iOfflineResourceClient) {
         try {
-            C7250d.a().a(112, new Object[]{iOfflineResourceClient});
+            d.a().a(112, new Object[]{iOfflineResourceClient});
         } catch (Exception e) {
             Log.e("offline", "setOfflineResourceClient", e);
         }
     }
 
     public static void setParam(String str) {
-        C7247a.a(str);
+        com.uc.webview.export.internal.cd.a.a(str);
     }
 
     public static void setPrintLog(boolean z) {
@@ -580,20 +576,20 @@ public class UCCore {
     }
 
     public static SetupTask setup(String str, Object obj) {
-        af.EnumC7264a enumC7264a = af.EnumC7264a.INIT_START;
+        af.a aVar = af.a.INIT_START;
         Object[] objArr = new Object[1];
         objArr[0] = obj instanceof Context ? obj : null;
-        af.a(enumC7264a, objArr);
-        return (SetupTask) C7285o.a().setup(str, obj);
+        af.a(aVar, objArr);
+        return (SetupTask) o.a().setup(str, obj);
     }
 
     @Deprecated
     public static void startDownload() {
-        AbstractC7282l abstractC7282l = C7285o.a().a;
-        if (abstractC7282l == null || !(abstractC7282l instanceof by)) {
+        l lVar = o.a().a;
+        if (lVar == null || !(lVar instanceof by)) {
             return;
         }
-        UpdateService updateService = ((by) abstractC7282l).f;
+        UpdateService updateService = ((by) lVar).f;
         if (updateService != null) {
             updateService.restart();
         } else {
@@ -606,20 +602,20 @@ public class UCCore {
     }
 
     public static void update(Context context, String str, java.util.concurrent.Callable<Boolean> callable) throws UCSetupException {
-        C7285o.a().a(str, callable);
+        o.a().a(str, callable);
     }
 
     public static void updateDnsCache(String[] strArr) {
         Log.i(BaseMonitor.COUNT_POINT_DNS, "UCCore U4 updateDnsCache");
         try {
-            C7250d.a().a(107, strArr);
+            d.a().a(107, strArr);
         } catch (Exception e) {
             Log.e(BaseMonitor.COUNT_POINT_DNS, "updateDnsCache", e);
         }
     }
 
     public static void updateUCCore(Context context, String str, java.util.concurrent.Callable<Boolean> callable, Map<String, ValueCallback> map, Map<String, Object> map2) throws UCSetupException {
-        C7312b.a(context, str, callable, map, map2);
+        com.uc.webview.export.internal.update.b.a(context, str, callable, map, map2);
     }
 
     public static void updateUCPlayer(Context context, String str, java.util.concurrent.Callable<Boolean> callable) throws UCSetupException {
@@ -635,21 +631,21 @@ public class UCCore {
     }
 
     public static void updateUCPlayer(Context context, String str, java.util.concurrent.Callable<Boolean> callable, Map<String, ValueCallback> map) throws UCSetupException {
-        C7312b.a(context, str, callable, map);
+        com.uc.webview.export.internal.update.b.a(context, str, callable, map);
     }
 
     public static String getExtractDirPath(Context context, String str) {
-        return getExtractDirPath(C7349p.a(context, "decompresses2").getAbsolutePath(), str);
+        return getExtractDirPath(p.a(context, "decompresses2").getAbsolutePath(), str);
     }
 
     public static boolean extractWebCoreLibraryIfNeeded(Context context, String str, String str2, String str3, boolean z) throws UCSetupException {
-        C7302b.a(20);
+        com.uc.webview.export.internal.uc.startup.b.a(20);
         File file = new File(str);
         File file2 = new File(str3);
         af.a(file, file2);
         boolean decompressIfNeeded = UCCyclone.decompressIfNeeded(context, str2, file, file2, (FilenameFilter) null, z);
-        C7302b.a(21);
-        C7302b.a(19, decompressIfNeeded ? "1" : "0");
+        com.uc.webview.export.internal.uc.startup.b.a(21);
+        com.uc.webview.export.internal.uc.startup.b.a(19, decompressIfNeeded ? "1" : "0");
         return decompressIfNeeded;
     }
 

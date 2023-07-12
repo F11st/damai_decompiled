@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.Scheduler;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -172,14 +172,14 @@ public final class FlowableDebounceTimed<T> extends AbstractFlowableWithUpstream
         }
     }
 
-    public FlowableDebounceTimed(AbstractC8147b<T> abstractC8147b, long j, TimeUnit timeUnit, Scheduler scheduler) {
-        super(abstractC8147b);
+    public FlowableDebounceTimed(b<T> bVar, long j, TimeUnit timeUnit, Scheduler scheduler) {
+        super(bVar);
         this.timeout = j;
         this.unit = timeUnit;
         this.scheduler = scheduler;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new DebounceTimedSubscriber(new ua2(subscriber), this.timeout, this.unit, this.scheduler.createWorker()));
     }

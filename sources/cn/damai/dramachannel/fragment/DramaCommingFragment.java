@@ -12,7 +12,7 @@ import cn.damai.tetris.request.TetrisRequest;
 import cn.damai.tetris.v2.componentplugin.OnErrClickListener;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import tb.C9039db;
+import tb.db;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
@@ -39,10 +39,10 @@ public class DramaCommingFragment extends AbsFragmentV2 {
             /* compiled from: Taobao */
             /* renamed from: cn.damai.dramachannel.fragment.DramaCommingFragment$1$a */
             /* loaded from: classes5.dex */
-            public class C1074a implements OnErrClickListener {
+            public class a implements OnErrClickListener {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C1074a() {
+                a() {
                 }
 
                 @Override // cn.damai.tetris.v2.componentplugin.OnErrClickListener
@@ -64,7 +64,7 @@ public class DramaCommingFragment extends AbsFragmentV2 {
                     return;
                 }
                 DramaCommingFragment.this.stopProgressDialog();
-                DramaCommingFragment.this.showErrorViewV2(str, str2, new C1074a());
+                DramaCommingFragment.this.showErrorViewV2(str, str2, new a());
             }
 
             @Override // cn.damai.tetris.DMMtopWarningListener
@@ -76,7 +76,7 @@ public class DramaCommingFragment extends AbsFragmentV2 {
                 }
                 DramaCommingFragment.this.stopProgressDialog();
                 DramaCommingFragment.this.hideErrorViewV2();
-                DramaCommingFragment.this.setData(new C9039db().e(baseResponse));
+                DramaCommingFragment.this.setData(new db().e(baseResponse));
                 DramaCommingFragment.this.updateB(baseResponse);
             }
         });

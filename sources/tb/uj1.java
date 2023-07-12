@@ -13,14 +13,13 @@ public class uj1 implements INetworkLifecycle {
     private Lock c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.uj1$b */
     /* loaded from: classes11.dex */
-    private static final class C9780b {
+    private static final class b {
         private static final uj1 a = new uj1();
     }
 
     public static uj1 a() {
-        return C9780b.a;
+        return b.a;
     }
 
     public void b(INetworkLifecycle iNetworkLifecycle) {

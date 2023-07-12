@@ -3,7 +3,6 @@ package tb;
 import android.app.Application;
 import android.util.Log;
 import com.alibaba.ut.comm.ActivityLifecycleCB;
-import com.alibaba.ut.comm.C3932a;
 import java.util.Map;
 
 /* compiled from: Taobao */
@@ -24,7 +23,7 @@ public class ks2 {
                 ActivityLifecycleCB.d().e(application);
                 new mn().a();
                 new up1().a();
-                C3932a.a().b();
+                com.alibaba.ut.comm.a.a().b();
                 Log.i("UT4Aplus", "ut4aplus init success. sdk_version:0.2.29");
             }
         }

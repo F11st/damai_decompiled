@@ -172,9 +172,9 @@ public class AILPChatInputDialog extends BaseInputDialog {
             return ((Integer) ipChange.ipc$dispatch("-417681765", new Object[]{this})).intValue();
         }
         if (this.mOrientation == 2) {
-            return R.C7942layout.dago_pgc_ailp_chat_edit_bar_fullscreen;
+            return R.layout.dago_pgc_ailp_chat_edit_bar_fullscreen;
         }
-        return R.C7942layout.dago_pgc_ailp_chat_edit_bar;
+        return R.layout.dago_pgc_ailp_chat_edit_bar;
     }
 
     @Override // com.youku.live.dago.widgetlib.ailproom.adapter.chatinput.BaseInputDialog
@@ -258,12 +258,12 @@ public class AILPChatInputDialog extends BaseInputDialog {
         }
         if (!TextUtils.isEmpty(this.mYellIconUrl)) {
             wr1 s = ur1.o().s(this.mYellIconUrl);
-            int i = R.C7941drawable.dago_pgc_chat_expression_default_bg;
+            int i = R.drawable.dago_pgc_chat_expression_default_bg;
             s.H(i).k(i).y(this.mExpressionButton);
         } else if (this.mOrientation == 2) {
-            this.mExpressionButton.setImageResource(R.C7941drawable.dago_pgc_yell_landscape_icon);
+            this.mExpressionButton.setImageResource(R.drawable.dago_pgc_yell_landscape_icon);
         } else {
-            this.mExpressionButton.setImageResource(R.C7941drawable.dago_pgc_yell_portrait_icon);
+            this.mExpressionButton.setImageResource(R.drawable.dago_pgc_yell_portrait_icon);
         }
     }
 
@@ -340,12 +340,12 @@ public class AILPChatInputDialog extends BaseInputDialog {
             if (view instanceof TextView) {
                 ((TextView) view).setTextColor(-1);
             }
-            view.setBackground(getContext().getResources().getDrawable(R.C7941drawable.dago_pgc_ailp_chat_fullscreen_btn_background));
+            view.setBackground(getContext().getResources().getDrawable(R.drawable.dago_pgc_ailp_chat_fullscreen_btn_background));
         } else {
             if (view instanceof TextView) {
                 ((TextView) view).setTextColor(-4473925);
             }
-            view.setBackground(getContext().getResources().getDrawable(R.C7941drawable.dago_pgc_ailp_chat_edit_small_send_btn_background));
+            view.setBackground(getContext().getResources().getDrawable(R.drawable.dago_pgc_ailp_chat_edit_small_send_btn_background));
         }
     }
 
@@ -398,15 +398,15 @@ public class AILPChatInputDialog extends BaseInputDialog {
         if (AndroidInstantRuntime.support(ipChange, "1361059243")) {
             ipChange.ipc$dispatch("1361059243", new Object[]{this, Boolean.valueOf(z)});
         } else if (z) {
-            this.mExpressionButton.setImageResource(R.C7941drawable.dago_pgc_keyboard_icon);
+            this.mExpressionButton.setImageResource(R.drawable.dago_pgc_keyboard_icon);
         } else if (!TextUtils.isEmpty(this.mYellIconUrl)) {
             wr1 s = ur1.o().s(this.mYellIconUrl);
-            int i = R.C7941drawable.dago_pgc_chat_expression_default_bg;
+            int i = R.drawable.dago_pgc_chat_expression_default_bg;
             s.H(i).k(i).y(this.mExpressionButton);
         } else if (this.mOrientation == 2) {
-            this.mExpressionButton.setImageResource(R.C7941drawable.dago_pgc_yell_landscape_icon);
+            this.mExpressionButton.setImageResource(R.drawable.dago_pgc_yell_landscape_icon);
         } else {
-            this.mExpressionButton.setImageResource(R.C7941drawable.dago_pgc_yell_portrait_icon);
+            this.mExpressionButton.setImageResource(R.drawable.dago_pgc_yell_portrait_icon);
         }
     }
 }

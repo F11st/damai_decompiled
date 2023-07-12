@@ -21,12 +21,11 @@ public abstract class UiAsyncTask<Params, Progress, Result> extends AsyncTask<Pa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.routine.UiAsyncTask$a */
     /* loaded from: classes11.dex */
-    class C6585a implements PanguActivity.IndividualActivityLifecycleCallback {
+    class a implements PanguActivity.IndividualActivityLifecycleCallback {
         final /* synthetic */ Activity a;
 
-        C6585a(Activity activity) {
+        a(Activity activity) {
             this.a = activity;
         }
 
@@ -60,7 +59,7 @@ public abstract class UiAsyncTask<Params, Progress, Result> extends AsyncTask<Pa
     public UiAsyncTask(Activity activity, UiPostExecutable<Result> uiPostExecutable) {
         if (!getClass().isAnonymousClass()) {
             if (activity instanceof PanguActivity) {
-                ((PanguActivity) activity).registerIndividualActivityLifecycleCallback(new C6585a(activity));
+                ((PanguActivity) activity).registerIndividualActivityLifecycleCallback(new a(activity));
             }
             this.mActivity = new WeakReference<>(activity);
             this.mUiPostExecutable = uiPostExecutable;

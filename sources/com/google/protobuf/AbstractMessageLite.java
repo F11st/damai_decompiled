@@ -54,7 +54,7 @@ public abstract class AbstractMessageLite<MessageType extends AbstractMessageLit
     @Override // com.google.protobuf.MessageLite
     public ByteString toByteString() {
         try {
-            ByteString.C5369c newCodedBuilder = ByteString.newCodedBuilder(getSerializedSize());
+            ByteString.c newCodedBuilder = ByteString.newCodedBuilder(getSerializedSize());
             writeTo(newCodedBuilder.b());
             return newCodedBuilder.a();
         } catch (IOException e) {
@@ -120,27 +120,26 @@ public abstract class AbstractMessageLite<MessageType extends AbstractMessageLit
         protected abstract BuilderType internalMergeFrom(MessageType messagetype);
 
         @Override // com.google.protobuf.MessageLite.Builder
-        public boolean mergeDelimitedFrom(InputStream inputStream, C5401g c5401g) throws IOException {
+        public boolean mergeDelimitedFrom(InputStream inputStream, g gVar) throws IOException {
             int read = inputStream.read();
             if (read == -1) {
                 return false;
             }
-            mergeFrom((InputStream) new C5366a(inputStream, CodedInputStream.q(read, inputStream)), c5401g);
+            mergeFrom((InputStream) new a(inputStream, CodedInputStream.q(read, inputStream)), gVar);
             return true;
         }
 
         @Override // com.google.protobuf.MessageLite.Builder
-        public abstract BuilderType mergeFrom(CodedInputStream codedInputStream, C5401g c5401g) throws IOException;
+        public abstract BuilderType mergeFrom(CodedInputStream codedInputStream, g gVar) throws IOException;
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.protobuf.AbstractMessageLite$Builder$a */
         /* loaded from: classes10.dex */
-        public static final class C5366a extends FilterInputStream {
+        public static final class a extends FilterInputStream {
             private int a;
 
             /* JADX INFO: Access modifiers changed from: package-private */
-            public C5366a(InputStream inputStream, int i) {
+            public a(InputStream inputStream, int i) {
                 super(inputStream);
                 this.a = i;
             }
@@ -187,12 +186,12 @@ public abstract class AbstractMessageLite<MessageType extends AbstractMessageLit
 
         @Override // com.google.protobuf.MessageLite.Builder
         public boolean mergeDelimitedFrom(InputStream inputStream) throws IOException {
-            return mergeDelimitedFrom(inputStream, C5401g.a());
+            return mergeDelimitedFrom(inputStream, g.a());
         }
 
         @Override // com.google.protobuf.MessageLite.Builder
         public BuilderType mergeFrom(CodedInputStream codedInputStream) throws IOException {
-            return mergeFrom(codedInputStream, C5401g.a());
+            return mergeFrom(codedInputStream, g.a());
         }
 
         @Override // com.google.protobuf.MessageLite.Builder
@@ -210,10 +209,10 @@ public abstract class AbstractMessageLite<MessageType extends AbstractMessageLit
         }
 
         @Override // com.google.protobuf.MessageLite.Builder
-        public BuilderType mergeFrom(ByteString byteString, C5401g c5401g) throws InvalidProtocolBufferException {
+        public BuilderType mergeFrom(ByteString byteString, g gVar) throws InvalidProtocolBufferException {
             try {
                 CodedInputStream newCodedInput = byteString.newCodedInput();
-                mergeFrom(newCodedInput, c5401g);
+                mergeFrom(newCodedInput, gVar);
                 newCodedInput.a(0);
                 return this;
             } catch (InvalidProtocolBufferException e) {
@@ -243,15 +242,15 @@ public abstract class AbstractMessageLite<MessageType extends AbstractMessageLit
         }
 
         @Override // com.google.protobuf.MessageLite.Builder
-        public BuilderType mergeFrom(byte[] bArr, C5401g c5401g) throws InvalidProtocolBufferException {
-            return mergeFrom(bArr, 0, bArr.length, c5401g);
+        public BuilderType mergeFrom(byte[] bArr, g gVar) throws InvalidProtocolBufferException {
+            return mergeFrom(bArr, 0, bArr.length, gVar);
         }
 
         @Override // com.google.protobuf.MessageLite.Builder
-        public BuilderType mergeFrom(byte[] bArr, int i, int i2, C5401g c5401g) throws InvalidProtocolBufferException {
+        public BuilderType mergeFrom(byte[] bArr, int i, int i2, g gVar) throws InvalidProtocolBufferException {
             try {
                 CodedInputStream f = CodedInputStream.f(bArr, i, i2);
-                mergeFrom(f, c5401g);
+                mergeFrom(f, gVar);
                 f.a(0);
                 return this;
             } catch (InvalidProtocolBufferException e) {
@@ -270,9 +269,9 @@ public abstract class AbstractMessageLite<MessageType extends AbstractMessageLit
         }
 
         @Override // com.google.protobuf.MessageLite.Builder
-        public BuilderType mergeFrom(InputStream inputStream, C5401g c5401g) throws IOException {
+        public BuilderType mergeFrom(InputStream inputStream, g gVar) throws IOException {
             CodedInputStream c = CodedInputStream.c(inputStream);
-            mergeFrom(c, c5401g);
+            mergeFrom(c, gVar);
             c.a(0);
             return this;
         }

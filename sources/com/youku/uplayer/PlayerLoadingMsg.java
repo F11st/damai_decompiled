@@ -1,8 +1,8 @@
 package com.youku.uplayer;
 
 import android.text.TextUtils;
-import com.youku.player.util.C8059a;
-import com.youku.player.util.C8063c;
+import com.youku.player.util.a;
+import com.youku.player.util.c;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -43,7 +43,7 @@ public class PlayerLoadingMsg {
                 }
             } else {
                 String str2 = LogTag.TAG_PLAYER;
-                C8063c.a(str2, "PlayerLoadingMsg ---> " + str);
+                c.a(str2, "PlayerLoadingMsg ---> " + str);
             }
         } catch (Exception e2) {
             e = e2;
@@ -93,7 +93,7 @@ public class PlayerLoadingMsg {
             return "";
         }
         try {
-            return C8059a.a(Integer.valueOf(this.cdnIP).intValue());
+            return a.a(Integer.valueOf(this.cdnIP).intValue());
         } catch (Exception e) {
             e.printStackTrace();
             return "";

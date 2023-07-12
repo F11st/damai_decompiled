@@ -3,7 +3,6 @@ package tb;
 import android.content.Context;
 import android.content.Intent;
 import com.alimm.xadsdk.base.ut.AdUtConstants;
-import com.heytap.mcssdk.C5462c;
 import com.heytap.mcssdk.constant.MessageConstant$CommandId;
 import com.heytap.msp.push.mode.MessageStat;
 import java.util.ArrayList;
@@ -14,7 +13,7 @@ import java.util.List;
 /* loaded from: classes10.dex */
 public class dg2 {
     private static boolean a(Context context) {
-        String o = C5462c.m().o(context);
+        String o = com.heytap.mcssdk.c.m().o(context);
         return iw2.f(context, o) && iw2.c(context, o) >= 1017;
     }
 
@@ -37,8 +36,8 @@ public class dg2 {
     private static boolean d(Context context, List<MessageStat> list) {
         try {
             Intent intent = new Intent();
-            intent.setAction(C5462c.m().y(context));
-            intent.setPackage(C5462c.m().o(context));
+            intent.setAction(com.heytap.mcssdk.c.m().y(context));
+            intent.setPackage(com.heytap.mcssdk.c.m().o(context));
             intent.putExtra("appPackage", context.getPackageName());
             intent.putExtra("type", MessageConstant$CommandId.COMMAND_STATISTIC);
             intent.putExtra(AdUtConstants.XAD_UT_ARG_COUNT, list.size());

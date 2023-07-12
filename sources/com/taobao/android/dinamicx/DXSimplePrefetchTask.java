@@ -1,9 +1,8 @@
 package com.taobao.android.dinamicx;
 
 import android.view.View;
-import com.taobao.android.dinamicx.C6368e;
-import com.taobao.android.dinamicx.asyncrender.C6363a;
 import com.taobao.android.dinamicx.asyncrender.DXAsyncRenderCallback;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
 import tb.ry;
@@ -15,8 +14,8 @@ public class DXSimplePrefetchTask extends DXSimpleBaseRenderWorkTask {
     protected DXAsyncRenderCallback<DXRuntimeContext> callback;
     protected Runnable callbackRunnable;
 
-    public DXSimplePrefetchTask(DXRuntimeContext dXRuntimeContext, DXRenderOptions dXRenderOptions, C6367d c6367d, C6380h c6380h, View view, DXAsyncRenderCallback<DXRuntimeContext> dXAsyncRenderCallback) {
-        super(dXRuntimeContext, dXRenderOptions, c6367d, c6380h, view);
+    public DXSimplePrefetchTask(DXRuntimeContext dXRuntimeContext, DXRenderOptions dXRenderOptions, d dVar, h hVar, View view, DXAsyncRenderCallback<DXRuntimeContext> dXAsyncRenderCallback) {
+        super(dXRuntimeContext, dXRenderOptions, dVar, hVar, view);
         this.callback = dXAsyncRenderCallback;
     }
 
@@ -35,11 +34,11 @@ public class DXSimplePrefetchTask extends DXSimpleBaseRenderWorkTask {
                 notifyPrefetchSuccess(dXWidgetNode2);
             }
         } catch (Throwable th) {
-            C6368e c6368e = new C6368e(this.runtimeContext.getBizType());
-            C6368e.C6369a c6369a = new C6368e.C6369a("Engine", "Engine_Render", C6368e.DX_SIMPLE_PREFETCH_LISTENER_CRASH);
-            c6369a.e = ry.a(th);
-            c6368e.c.add(c6369a);
-            DXAppMonitor.n(c6368e);
+            e eVar = new e(this.runtimeContext.getBizType());
+            e.a aVar = new e.a("Engine", "Engine_Render", e.DX_SIMPLE_PREFETCH_LISTENER_CRASH);
+            aVar.e = ry.a(th);
+            eVar.c.add(aVar);
+            DXAppMonitor.n(eVar);
         }
     }
 
@@ -54,7 +53,7 @@ public class DXSimplePrefetchTask extends DXSimpleBaseRenderWorkTask {
 
     @Override // com.taobao.android.dinamicx.DXSimpleBaseRenderWorkTask
     protected void onRunTask() {
-        C6363a k;
+        com.taobao.android.dinamicx.asyncrender.a k;
         try {
             getPipeline().h(this.runtimeContext.getWidgetNode(), null, this.viewWeakReference.get(), this.runtimeContext, this.options);
             this.isDone = true;

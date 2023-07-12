@@ -19,7 +19,6 @@ import android.widget.TextView;
 import cn.damai.common.DamaiConstants;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -45,14 +44,13 @@ public class wn2 {
     DMThemeDialog d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.wn2$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9870a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ DMIconFontTextView b;
 
-        View$OnClickListenerC9870a(String str, DMIconFontTextView dMIconFontTextView) {
+        a(String str, DMIconFontTextView dMIconFontTextView) {
             this.a = str;
             this.b = dMIconFontTextView;
         }
@@ -66,23 +64,22 @@ public class wn2 {
                 this.b.setText(R$string.iconfont_duoxuan_weixuan_);
                 this.b.setTextColor(wn2.this.a.getResources().getColor(R$color.color_999999));
                 z20.T(this.a, "false");
-                C0529c.e().x(pl.j().o("0"));
+                cn.damai.common.user.c.e().x(pl.j().o("0"));
             } else {
                 this.b.setText(R$string.iconfont_duihaomian_);
                 this.b.setTextColor(wn2.this.a.getResources().getColor(R$color.color_ff2d79));
                 z20.T(this.a, "true");
-                C0529c.e().x(pl.j().o("1"));
+                cn.damai.common.user.c.e().x(pl.j().o("1"));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.wn2$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9871b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9871b(wn2 wn2Var) {
+        b(wn2 wn2Var) {
         }
 
         @Override // android.view.View.OnClickListener
@@ -91,20 +88,19 @@ public class wn2 {
             if (AndroidInstantRuntime.support(ipChange, "-2025657554")) {
                 ipChange.ipc$dispatch("-2025657554", new Object[]{this, view});
             } else {
-                C0529c.e().x(pl.j().n());
+                cn.damai.common.user.c.e().x(pl.j().n());
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.wn2$c */
     /* loaded from: classes.dex */
-    public class DialogInterface$OnClickListenerC9872c implements DialogInterface.OnClickListener {
+    public class c implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ String b;
 
-        DialogInterface$OnClickListenerC9872c(String str, String str2) {
+        c(String str, String str2) {
             this.a = str;
             this.b = str2;
         }
@@ -127,12 +123,11 @@ public class wn2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.wn2$d */
     /* loaded from: classes.dex */
-    public class HandlerC9873d extends Handler {
+    public class d extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC9873d() {
+        d() {
         }
 
         @Override // android.os.Handler
@@ -203,7 +198,7 @@ public class wn2 {
             ipChange.ipc$dispatch("1606799956", new Object[]{this, str, str2});
             return;
         }
-        C0529c.e().x(pl.j().p(str));
+        cn.damai.common.user.c.e().x(pl.j().p(str));
         Bundle bundle = new Bundle();
         bundle.putString(TicketDetailExtFragment.PERFORM_ID, str);
         bundle.putString(TicketDetailExtFragment.PRODUCT_SYSTEM_ID, str2);
@@ -241,9 +236,9 @@ public class wn2 {
             if (!TextUtils.isEmpty(str2)) {
                 textView.setText(str2);
             }
-            linearLayout.setOnClickListener(new View$OnClickListenerC9870a(str5, dMIconFontTextView));
-            this.d.g(true, new View$OnClickListenerC9871b(this));
-            this.d.i("查看电子票", new DialogInterface$OnClickListenerC9872c(str3, str4));
+            linearLayout.setOnClickListener(new a(str5, dMIconFontTextView));
+            this.d.g(true, new b(this));
+            this.d.i("查看电子票", new c(str3, str4));
             this.d.f(false);
             this.d.show();
         } else {
@@ -292,7 +287,7 @@ public class wn2 {
             intent.setAction(DamaiConstants.TICKLET_EXTERNAL_CALL_BRODCAST_ACTION);
             intent.setPackage("cn.damai");
             intent.putExtra("type", 2);
-            intent.putExtra("messenger", new Messenger(new HandlerC9873d()));
+            intent.putExtra("messenger", new Messenger(new d()));
             this.a.sendBroadcast(intent);
         } catch (Exception e) {
             Log.e("TickletpopHelper", e.getMessage());

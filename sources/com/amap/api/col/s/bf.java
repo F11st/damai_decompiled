@@ -25,10 +25,10 @@ public final class bf implements IRouteSearch {
     private Handler e;
 
     public bf(Context context) throws AMapException {
-        bu a = bt.a(context, C4434h.a(false));
-        if (a.a == bt.EnumC4398c.SuccessCode) {
+        bu a = bt.a(context, h.a(false));
+        if (a.a == bt.c.SuccessCode) {
             this.d = context.getApplicationContext();
-            this.e = HandlerC4447t.a();
+            this.e = t.a();
             return;
         }
         String str = a.b;
@@ -38,11 +38,11 @@ public final class bf implements IRouteSearch {
     @Override // com.amap.api.services.interfaces.IRouteSearch
     public final BusRouteResult calculateBusRoute(RouteSearch.BusRouteQuery busRouteQuery) throws AMapException {
         try {
-            C4444r.a(this.d);
+            r.a(this.d);
             if (busRouteQuery != null) {
                 if (a(busRouteQuery.getFromAndTo())) {
                     RouteSearch.BusRouteQuery m229clone = busRouteQuery.m229clone();
-                    BusRouteResult b = new C4402c(this.d, m229clone).b();
+                    BusRouteResult b = new c(this.d, m229clone).b();
                     if (b != null) {
                         b.setBusQuery(m229clone);
                     }
@@ -52,7 +52,7 @@ public final class bf implements IRouteSearch {
             }
             throw new AMapException("无效的参数 - IllegalArgumentException");
         } catch (AMapException e) {
-            C4435i.a(e, "RouteSearch", "calculateBusRoute");
+            i.a(e, "RouteSearch", "calculateBusRoute");
             throw e;
         }
     }
@@ -63,7 +63,7 @@ public final class bf implements IRouteSearch {
             ao.a().a(new Runnable() { // from class: com.amap.api.col.s.bf.2
                 @Override // java.lang.Runnable
                 public final void run() {
-                    Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                    Message obtainMessage = t.a().obtainMessage();
                     obtainMessage.what = 100;
                     obtainMessage.arg1 = 1;
                     Bundle bundle = new Bundle();
@@ -84,17 +84,17 @@ public final class bf implements IRouteSearch {
                 }
             });
         } catch (Throwable th) {
-            C4435i.a(th, "RouteSearch", "calculateBusRouteAsyn");
+            i.a(th, "RouteSearch", "calculateBusRouteAsyn");
         }
     }
 
     @Override // com.amap.api.services.interfaces.IRouteSearch
     public final DriveRoutePlanResult calculateDrivePlan(RouteSearch.DrivePlanQuery drivePlanQuery) throws AMapException {
         try {
-            C4444r.a(this.d);
+            r.a(this.d);
             if (drivePlanQuery != null) {
                 if (a(drivePlanQuery.getFromAndTo())) {
-                    DriveRoutePlanResult b = new C4438l(this.d, drivePlanQuery.m230clone()).b();
+                    DriveRoutePlanResult b = new l(this.d, drivePlanQuery.m230clone()).b();
                     if (b != null) {
                         b.setDrivePlanQuery(drivePlanQuery);
                     }
@@ -104,7 +104,7 @@ public final class bf implements IRouteSearch {
             }
             throw new AMapException("无效的参数 - IllegalArgumentException");
         } catch (AMapException e) {
-            C4435i.a(e, "RouteSearch", "calculateDrivePlan");
+            i.a(e, "RouteSearch", "calculateDrivePlan");
             throw e;
         }
     }
@@ -115,7 +115,7 @@ public final class bf implements IRouteSearch {
             ao.a().a(new Runnable() { // from class: com.amap.api.col.s.bf.6
                 @Override // java.lang.Runnable
                 public final void run() {
-                    Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                    Message obtainMessage = t.a().obtainMessage();
                     obtainMessage.what = 105;
                     obtainMessage.arg1 = 18;
                     Bundle bundle = new Bundle();
@@ -136,20 +136,20 @@ public final class bf implements IRouteSearch {
                 }
             });
         } catch (Throwable th) {
-            C4435i.a(th, "RouteSearch", "calculateTruckRouteAsyn");
+            i.a(th, "RouteSearch", "calculateTruckRouteAsyn");
         }
     }
 
     @Override // com.amap.api.services.interfaces.IRouteSearch
     public final DriveRouteResult calculateDriveRoute(RouteSearch.DriveRouteQuery driveRouteQuery) throws AMapException {
         try {
-            C4444r.a(this.d);
+            r.a(this.d);
             if (driveRouteQuery != null) {
                 if (a(driveRouteQuery.getFromAndTo())) {
                     ah.a().a(driveRouteQuery.getPassedByPoints());
                     ah.a().b(driveRouteQuery.getAvoidpolygons());
                     RouteSearch.DriveRouteQuery m231clone = driveRouteQuery.m231clone();
-                    DriveRouteResult b = new C4439m(this.d, m231clone).b();
+                    DriveRouteResult b = new m(this.d, m231clone).b();
                     if (b != null) {
                         b.setDriveQuery(m231clone);
                     }
@@ -159,7 +159,7 @@ public final class bf implements IRouteSearch {
             }
             throw new AMapException("无效的参数 - IllegalArgumentException");
         } catch (AMapException e) {
-            C4435i.a(e, "RouteSearch", "calculateDriveRoute");
+            i.a(e, "RouteSearch", "calculateDriveRoute");
             throw e;
         }
     }
@@ -170,7 +170,7 @@ public final class bf implements IRouteSearch {
             ao.a().a(new Runnable() { // from class: com.amap.api.col.s.bf.3
                 @Override // java.lang.Runnable
                 public final void run() {
-                    Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                    Message obtainMessage = t.a().obtainMessage();
                     obtainMessage.what = 101;
                     obtainMessage.arg1 = 1;
                     Bundle bundle = new Bundle();
@@ -191,14 +191,14 @@ public final class bf implements IRouteSearch {
                 }
             });
         } catch (Throwable th) {
-            C4435i.a(th, "RouteSearch", "calculateDriveRouteAsyn");
+            i.a(th, "RouteSearch", "calculateDriveRouteAsyn");
         }
     }
 
     @Override // com.amap.api.services.interfaces.IRouteSearch
     public final RideRouteResult calculateRideRoute(RouteSearch.RideRouteQuery rideRouteQuery) throws AMapException {
         try {
-            C4444r.a(this.d);
+            r.a(this.d);
             if (rideRouteQuery != null) {
                 if (a(rideRouteQuery.getFromAndTo())) {
                     ah.a().a(rideRouteQuery.getFromAndTo());
@@ -213,7 +213,7 @@ public final class bf implements IRouteSearch {
             }
             throw new AMapException("无效的参数 - IllegalArgumentException");
         } catch (AMapException e) {
-            C4435i.a(e, "RouteSearch", "calculaterideRoute");
+            i.a(e, "RouteSearch", "calculaterideRoute");
             throw e;
         }
     }
@@ -224,7 +224,7 @@ public final class bf implements IRouteSearch {
             ao.a().a(new Runnable() { // from class: com.amap.api.col.s.bf.4
                 @Override // java.lang.Runnable
                 public final void run() {
-                    Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                    Message obtainMessage = t.a().obtainMessage();
                     obtainMessage.what = 103;
                     obtainMessage.arg1 = 1;
                     Bundle bundle = new Bundle();
@@ -245,14 +245,14 @@ public final class bf implements IRouteSearch {
                 }
             });
         } catch (Throwable th) {
-            C4435i.a(th, "RouteSearch", "calculateRideRouteAsyn");
+            i.a(th, "RouteSearch", "calculateRideRouteAsyn");
         }
     }
 
     @Override // com.amap.api.services.interfaces.IRouteSearch
     public final TruckRouteRestult calculateTruckRoute(RouteSearch.TruckRouteQuery truckRouteQuery) throws AMapException {
         try {
-            C4444r.a(this.d);
+            r.a(this.d);
             if (truckRouteQuery != null) {
                 if (a(truckRouteQuery.getFromAndTo())) {
                     ah.a().a(truckRouteQuery.getFromAndTo(), truckRouteQuery.getPassedByPoints());
@@ -268,7 +268,7 @@ public final class bf implements IRouteSearch {
             }
             throw new AMapException("无效的参数 - IllegalArgumentException");
         } catch (AMapException e) {
-            C4435i.a(e, "RouteSearch", "calculateDriveRoute");
+            i.a(e, "RouteSearch", "calculateDriveRoute");
             throw e;
         }
     }
@@ -279,7 +279,7 @@ public final class bf implements IRouteSearch {
             ao.a().a(new Runnable() { // from class: com.amap.api.col.s.bf.5
                 @Override // java.lang.Runnable
                 public final void run() {
-                    Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                    Message obtainMessage = t.a().obtainMessage();
                     obtainMessage.what = 104;
                     obtainMessage.arg1 = 17;
                     Bundle bundle = new Bundle();
@@ -300,14 +300,14 @@ public final class bf implements IRouteSearch {
                 }
             });
         } catch (Throwable th) {
-            C4435i.a(th, "RouteSearch", "calculateTruckRouteAsyn");
+            i.a(th, "RouteSearch", "calculateTruckRouteAsyn");
         }
     }
 
     @Override // com.amap.api.services.interfaces.IRouteSearch
     public final WalkRouteResult calculateWalkRoute(RouteSearch.WalkRouteQuery walkRouteQuery) throws AMapException {
         try {
-            C4444r.a(this.d);
+            r.a(this.d);
             if (walkRouteQuery != null) {
                 if (a(walkRouteQuery.getFromAndTo())) {
                     ah.a().b(walkRouteQuery.getFromAndTo());
@@ -322,7 +322,7 @@ public final class bf implements IRouteSearch {
             }
             throw new AMapException("无效的参数 - IllegalArgumentException");
         } catch (AMapException e) {
-            C4435i.a(e, "RouteSearch", "calculateWalkRoute");
+            i.a(e, "RouteSearch", "calculateWalkRoute");
             throw e;
         }
     }
@@ -333,7 +333,7 @@ public final class bf implements IRouteSearch {
             ao.a().a(new Runnable() { // from class: com.amap.api.col.s.bf.1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                    Message obtainMessage = t.a().obtainMessage();
                     obtainMessage.what = 102;
                     obtainMessage.arg1 = 1;
                     Bundle bundle = new Bundle();
@@ -354,7 +354,7 @@ public final class bf implements IRouteSearch {
                 }
             });
         } catch (Throwable th) {
-            C4435i.a(th, "RouteSearch", "calculateWalkRouteAsyn");
+            i.a(th, "RouteSearch", "calculateWalkRouteAsyn");
         }
     }
 

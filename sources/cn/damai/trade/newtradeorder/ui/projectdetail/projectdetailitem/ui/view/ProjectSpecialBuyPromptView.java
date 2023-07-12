@@ -16,9 +16,7 @@ import android.widget.Space;
 import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.res.ResourcesCompat;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.calendar.remind.CalendarsResolver;
 import cn.damai.commonbusiness.yymember.view.MemberAuthPopWindow;
@@ -41,10 +39,9 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import io.flutter.wpkbridge.WPKFactory;
 import kotlin.jvm.JvmOverloads;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tb.C9796v;
 import tb.b41;
 import tb.gb;
 import tb.ir1;
@@ -55,6 +52,7 @@ import tb.mr1;
 import tb.pp2;
 import tb.qv1;
 import tb.s60;
+import tb.v;
 import tb.zn2;
 
 /* compiled from: Taobao */
@@ -130,12 +128,11 @@ public final class ProjectSpecialBuyPromptView extends LineLinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectSpecialBuyPromptView$a */
     /* loaded from: classes16.dex */
-    public final class CountDownTimerC2359a extends CountDownTimer {
+    public final class a extends CountDownTimer {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        public CountDownTimerC2359a(long j, long j2) {
+        public a(long j, long j2) {
             super(j, j2);
         }
 
@@ -161,12 +158,11 @@ public final class ProjectSpecialBuyPromptView extends LineLinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectSpecialBuyPromptView$b */
     /* loaded from: classes8.dex */
-    public static final class C2360b implements OnTimeCountDownListener {
+    public static final class b implements OnTimeCountDownListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2360b() {
+        b() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.helper.OnTimeCountDownListener
@@ -212,12 +208,11 @@ public final class ProjectSpecialBuyPromptView extends LineLinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectSpecialBuyPromptView$c */
     /* loaded from: classes8.dex */
-    public static final class C2361c implements MemberAuthPopWindow.ICustomDialogEventListener {
+    public static final class c implements MemberAuthPopWindow.ICustomDialogEventListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2361c() {
+        c() {
         }
 
         @Override // cn.damai.commonbusiness.yymember.view.MemberAuthPopWindow.ICustomDialogEventListener
@@ -234,12 +229,11 @@ public final class ProjectSpecialBuyPromptView extends LineLinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectSpecialBuyPromptView$d */
     /* loaded from: classes8.dex */
-    public static final class C2362d implements CalendarsResolver.RemindMeListener {
+    public static final class d implements CalendarsResolver.RemindMeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2362d() {
+        d() {
         }
 
         @Override // cn.damai.commonbusiness.calendar.remind.CalendarsResolver.RemindMeListener
@@ -249,7 +243,7 @@ public final class ProjectSpecialBuyPromptView extends LineLinearLayout {
                 ipChange.ipc$dispatch("-1997592909", new Object[]{this});
                 return;
             }
-            C0529c.e().x(pp2.u().c1(ProjectSpecialBuyPromptView.this.getProjectId(), "1"));
+            cn.damai.common.user.c.e().x(pp2.u().c1(ProjectSpecialBuyPromptView.this.getProjectId(), "1"));
             ProjectSpecialBuyPromptView.this.updateProjectReminderBtnText(true);
             ProjectSpecialBuyPromptView.this.addReminderSuccessDialog();
         }
@@ -261,22 +255,21 @@ public final class ProjectSpecialBuyPromptView extends LineLinearLayout {
                 ipChange.ipc$dispatch("-120370649", new Object[]{this});
                 return;
             }
-            C0529c.e().x(pp2.u().c1(ProjectSpecialBuyPromptView.this.getProjectId(), "2"));
+            cn.damai.common.user.c.e().x(pp2.u().c1(ProjectSpecialBuyPromptView.this.getProjectId(), "2"));
             ProjectSpecialBuyPromptView.this.updateProjectReminderBtnText(false);
             ProjectSpecialBuyPromptView.this.cancelReminderSuccess();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectSpecialBuyPromptView$e  reason: invalid class name */
     /* loaded from: classes16.dex */
-    public static final class animationAnimation$AnimationListenerC2363e implements Animation.AnimationListener {
+    public static final class e implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
         final /* synthetic */ View b;
         final /* synthetic */ ProjectSpecialBuyPromptView c;
 
-        animationAnimation$AnimationListenerC2363e(int i, View view, ProjectSpecialBuyPromptView projectSpecialBuyPromptView) {
+        e(int i, View view, ProjectSpecialBuyPromptView projectSpecialBuyPromptView) {
             this.a = i;
             this.b = view;
             this.c = projectSpecialBuyPromptView;
@@ -289,7 +282,7 @@ public final class ProjectSpecialBuyPromptView extends LineLinearLayout {
                 ipChange.ipc$dispatch("-1758832164", new Object[]{this, animation});
                 return;
             }
-            b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+            b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             if (this.a == 8) {
                 this.b.setVisibility(8);
             }
@@ -302,7 +295,7 @@ public final class ProjectSpecialBuyPromptView extends LineLinearLayout {
             if (AndroidInstantRuntime.support(ipChange, "719407128")) {
                 ipChange.ipc$dispatch("719407128", new Object[]{this, animation});
             } else {
-                b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+                b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             }
         }
 
@@ -312,7 +305,7 @@ public final class ProjectSpecialBuyPromptView extends LineLinearLayout {
             if (AndroidInstantRuntime.support(ipChange, "474605109")) {
                 ipChange.ipc$dispatch("474605109", new Object[]{this, animation});
             } else {
-                b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+                b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             }
         }
     }
@@ -346,7 +339,7 @@ public final class ProjectSpecialBuyPromptView extends LineLinearLayout {
             return;
         }
         b41.i(projectSpecialBuyPromptView, "this$0");
-        C0529c.e().x(pp2.u().b2(projectSpecialBuyPromptView.projectId));
+        cn.damai.common.user.c.e().x(pp2.u().b2(projectSpecialBuyPromptView.projectId));
         projectSpecialBuyPromptView.playAnim(projectSpecialBuyPromptView.resetAttendeesLayout, 8);
     }
 
@@ -385,14 +378,14 @@ public final class ProjectSpecialBuyPromptView extends LineLinearLayout {
             this.spaceView.setVisibility(0);
             this.projectTimerDesc.setText(projectMemberPrompt.getPreBuyTime());
             if (this.timerCountDownManager == null) {
-                this.timerCountDownManager = TimeCountDownManagerImpl.c(new C2360b());
+                this.timerCountDownManager = TimeCountDownManagerImpl.c(new b());
             }
             long scd = projectMemberPrompt.getScd();
-            long a = zn2.a();
-            if (scd > 0 && scd > a) {
+            long a2 = zn2.a();
+            if (scd > 0 && scd > a2) {
                 ITimeCountDownManager iTimeCountDownManager = this.timerCountDownManager;
                 if (iTimeCountDownManager != null) {
-                    iTimeCountDownManager.setCountDown(scd - a);
+                    iTimeCountDownManager.setCountDown(scd - a2);
                 }
                 ITimeCountDownManager iTimeCountDownManager2 = this.timerCountDownManager;
                 if (iTimeCountDownManager2 != null) {
@@ -435,11 +428,11 @@ public final class ProjectSpecialBuyPromptView extends LineLinearLayout {
         }
         textView.setText(priorityPurchaseTypeName);
         this.promptExchangeType.getPaint().setFakeBoldText(true);
-        C0504a b = C0504a.b();
+        cn.damai.common.image.a b2 = cn.damai.common.image.a.b();
         String vipLogo = projectMemberPrompt.getVipLogo();
         ImageView imageView = this.promptVipLogoImg;
         int i = R$drawable.trade_tm_vip_icon;
-        b.loadinto(vipLogo, imageView, i, i);
+        b2.loadinto(vipLogo, imageView, i, i);
         this.promptExchangeDesc.setText(projectMemberPrompt.getSnatchTicketsTag());
         this.promptDescIcon.setVisibility(b41.d(projectMemberPrompt.getPrivilegeStart(), Boolean.TRUE) ? 0 : 8);
         this.promptExchangeActionView.setText(projectMemberPrompt.getButtonText());
@@ -486,7 +479,7 @@ public final class ProjectSpecialBuyPromptView extends LineLinearLayout {
         }
         b41.i(projectSpecialBuyPromptView, "this$0");
         b41.i(projectMemberPrompt, "$memberPromptMo");
-        C0529c.e().x(pp2.u().i2(projectSpecialBuyPromptView.projectId, projectMemberPrompt.isPromptBeforeSale() ? "1" : "2", projectMemberPrompt.getButtonStatus()));
+        cn.damai.common.user.c.e().x(pp2.u().i2(projectSpecialBuyPromptView.projectId, projectMemberPrompt.isPromptBeforeSale() ? "1" : "2", projectMemberPrompt.getButtonStatus()));
         if (LoginManager.k().q()) {
             if (projectMemberPrompt.isMemberAuthPage()) {
                 DMNav.from(projectSpecialBuyPromptView.getContext()).toUri(k23.j());
@@ -494,7 +487,7 @@ public final class ProjectSpecialBuyPromptView extends LineLinearLayout {
             } else if (projectMemberPrompt.isSpeedUpCardPage()) {
                 String speedUpCardUrl = projectMemberPrompt.getSpeedUpCardUrl();
                 if (speedUpCardUrl != null) {
-                    s2 = C8604o.s(speedUpCardUrl);
+                    s2 = o.s(speedUpCardUrl);
                     if (!s2) {
                         z = false;
                     }
@@ -507,7 +500,7 @@ public final class ProjectSpecialBuyPromptView extends LineLinearLayout {
             } else if (projectMemberPrompt.isMemberAlipayPage()) {
                 String alipayDetailUrl = projectMemberPrompt.getAlipayDetailUrl();
                 if (alipayDetailUrl != null) {
-                    s = C8604o.s(alipayDetailUrl);
+                    s = o.s(alipayDetailUrl);
                     if (!s) {
                         z = false;
                     }
@@ -520,7 +513,7 @@ public final class ProjectSpecialBuyPromptView extends LineLinearLayout {
             } else if (projectMemberPrompt.isAuthPopWindow()) {
                 Context context = projectSpecialBuyPromptView.getContext();
                 Context context2 = projectSpecialBuyPromptView.getContext();
-                k23.g(context, context2 instanceof Activity ? (Activity) context2 : null, gb.PROJECT_PAGE, new C2361c());
+                k23.g(context, context2 instanceof Activity ? (Activity) context2 : null, gb.PROJECT_PAGE, new c());
                 return;
             } else {
                 SpecialBuyPromptListener specialBuyPromptListener = projectSpecialBuyPromptView.promptListener;
@@ -592,7 +585,7 @@ public final class ProjectSpecialBuyPromptView extends LineLinearLayout {
             view.clearAnimation();
             final TranslateAnimation translateAnimation = new TranslateAnimation(2, 0.0f, 2, 0.0f, 2, i == 8 ? 0.0f : 1.0f, 2, i == 8 ? 1.0f : 0.0f);
             translateAnimation.setDuration(500L);
-            translateAnimation.setAnimationListener(new animationAnimation$AnimationListenerC2363e(i, view, this));
+            translateAnimation.setAnimationListener(new e(i, view, this));
             this.isPlaying = true;
             view.post(new Runnable() { // from class: tb.nw1
                 @Override // java.lang.Runnable
@@ -696,9 +689,9 @@ public final class ProjectSpecialBuyPromptView extends LineLinearLayout {
             ipChange.ipc$dispatch("-1158477358", new Object[]{this});
             return;
         }
-        CountDownTimerC2359a countDownTimerC2359a = new CountDownTimerC2359a(this.downTime, this.intervalTime);
-        this.timeDown = countDownTimerC2359a;
-        countDownTimerC2359a.start();
+        a aVar = new a(this.downTime, this.intervalTime);
+        this.timeDown = aVar;
+        aVar.start();
     }
 
     private final void tmVipCountDownViewHide() {
@@ -990,7 +983,7 @@ public final class ProjectSpecialBuyPromptView extends LineLinearLayout {
                 ProjectSpecialBuyPromptView.m91_init_$lambda2(view);
             }
         });
-        this.calenderRemindMeListener = new C2362d();
+        this.calenderRemindMeListener = new d();
     }
 
     private final void updateProjectReminderBtnText(TextView textView, boolean z) {

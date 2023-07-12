@@ -8,7 +8,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.amap.api.mapcore.util.C4640t;
+import com.amap.api.mapcore.util.t;
 import com.autonavi.amap.mapcore.interfaces.IAMap;
 import com.autonavi.amap.mapcore.interfaces.IMapFragmentDelegate;
 
@@ -43,9 +43,9 @@ public class MapFragment extends Fragment implements BaseMapView {
 
     protected IMapFragmentDelegate getMapFragmentDelegate() {
         if (this.b == null) {
-            C4640t c4640t = new C4640t(0);
-            this.b = c4640t;
-            c4640t.setContext(getActivity());
+            t tVar = new t(0);
+            this.b = tVar;
+            tVar.setContext(getActivity());
         }
         return this.b;
     }

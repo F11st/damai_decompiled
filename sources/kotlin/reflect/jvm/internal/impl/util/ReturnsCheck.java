@@ -1,7 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.util;
 
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor;
 import kotlin.reflect.jvm.internal.impl.resolve.descriptorUtil.DescriptorUtilsKt;
 import kotlin.reflect.jvm.internal.impl.util.Check;
@@ -18,7 +17,7 @@ public abstract class ReturnsCheck implements Check {
     @NotNull
     private final String a;
     @NotNull
-    private final Function1<AbstractC8271b, z71> b;
+    private final Function1<kotlin.reflect.jvm.internal.impl.builtins.b, z71> b;
     @NotNull
     private final String c;
 
@@ -29,12 +28,12 @@ public abstract class ReturnsCheck implements Check {
         public static final ReturnsBoolean INSTANCE = new ReturnsBoolean();
 
         private ReturnsBoolean() {
-            super("Boolean", new Function1<AbstractC8271b, z71>() { // from class: kotlin.reflect.jvm.internal.impl.util.ReturnsCheck.ReturnsBoolean.1
+            super("Boolean", new Function1<kotlin.reflect.jvm.internal.impl.builtins.b, z71>() { // from class: kotlin.reflect.jvm.internal.impl.util.ReturnsCheck.ReturnsBoolean.1
                 @Override // kotlin.jvm.functions.Function1
                 @NotNull
-                public final z71 invoke(@NotNull AbstractC8271b abstractC8271b) {
-                    b41.i(abstractC8271b, "$this$null");
-                    fd2 n = abstractC8271b.n();
+                public final z71 invoke(@NotNull kotlin.reflect.jvm.internal.impl.builtins.b bVar) {
+                    b41.i(bVar, "$this$null");
+                    fd2 n = bVar.n();
                     b41.h(n, "booleanType");
                     return n;
                 }
@@ -49,12 +48,12 @@ public abstract class ReturnsCheck implements Check {
         public static final ReturnsInt INSTANCE = new ReturnsInt();
 
         private ReturnsInt() {
-            super("Int", new Function1<AbstractC8271b, z71>() { // from class: kotlin.reflect.jvm.internal.impl.util.ReturnsCheck.ReturnsInt.1
+            super("Int", new Function1<kotlin.reflect.jvm.internal.impl.builtins.b, z71>() { // from class: kotlin.reflect.jvm.internal.impl.util.ReturnsCheck.ReturnsInt.1
                 @Override // kotlin.jvm.functions.Function1
                 @NotNull
-                public final z71 invoke(@NotNull AbstractC8271b abstractC8271b) {
-                    b41.i(abstractC8271b, "$this$null");
-                    fd2 D = abstractC8271b.D();
+                public final z71 invoke(@NotNull kotlin.reflect.jvm.internal.impl.builtins.b bVar) {
+                    b41.i(bVar, "$this$null");
+                    fd2 D = bVar.D();
                     b41.h(D, "intType");
                     return D;
                 }
@@ -69,12 +68,12 @@ public abstract class ReturnsCheck implements Check {
         public static final ReturnsUnit INSTANCE = new ReturnsUnit();
 
         private ReturnsUnit() {
-            super("Unit", new Function1<AbstractC8271b, z71>() { // from class: kotlin.reflect.jvm.internal.impl.util.ReturnsCheck.ReturnsUnit.1
+            super("Unit", new Function1<kotlin.reflect.jvm.internal.impl.builtins.b, z71>() { // from class: kotlin.reflect.jvm.internal.impl.util.ReturnsCheck.ReturnsUnit.1
                 @Override // kotlin.jvm.functions.Function1
                 @NotNull
-                public final z71 invoke(@NotNull AbstractC8271b abstractC8271b) {
-                    b41.i(abstractC8271b, "$this$null");
-                    fd2 Z = abstractC8271b.Z();
+                public final z71 invoke(@NotNull kotlin.reflect.jvm.internal.impl.builtins.b bVar) {
+                    b41.i(bVar, "$this$null");
+                    fd2 Z = bVar.Z();
                     b41.h(Z, "unitType");
                     return Z;
                 }
@@ -83,7 +82,7 @@ public abstract class ReturnsCheck implements Check {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    private ReturnsCheck(String str, Function1<? super AbstractC8271b, ? extends z71> function1) {
+    private ReturnsCheck(String str, Function1<? super kotlin.reflect.jvm.internal.impl.builtins.b, ? extends z71> function1) {
         this.a = str;
         this.b = function1;
         this.c = b41.r("must return ", str);
@@ -108,6 +107,6 @@ public abstract class ReturnsCheck implements Check {
     @Override // kotlin.reflect.jvm.internal.impl.util.Check
     @Nullable
     public String invoke(@NotNull FunctionDescriptor functionDescriptor) {
-        return Check.C8556a.a(this, functionDescriptor);
+        return Check.a.a(this, functionDescriptor);
     }
 }

@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 import cn.damai.comment.bean.CommentsItemBean;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.evaluate.ui.EvaluateListFragment;
 import cn.damai.evaluate.ui.TickletToCommentFragment;
@@ -39,12 +39,11 @@ public class TicketMyCommentActivity extends DamaiBaseActivity implements Evalua
     private int selectedTab;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TicketMyCommentActivity$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2025a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2025a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -117,7 +116,7 @@ public class TicketMyCommentActivity extends DamaiBaseActivity implements Evalua
         this.mScrollView.setFontColor(R$color.black, R$color.color_9C9CA5);
         this.mScrollView.setFontSize(16, 20);
         this.mScrollView.setSpace(36);
-        this.mScrollView.setOnTitleClickListener(new View$OnClickListenerC2025a());
+        this.mScrollView.setOnTitleClickListener(new a());
         this.mScrollView.commit();
     }
 
@@ -178,7 +177,7 @@ public class TicketMyCommentActivity extends DamaiBaseActivity implements Evalua
                     return;
                 }
                 TicketMyCommentActivity.this.mScrollView.selectTitle(i);
-                C0529c.e().x(un2.k().w(i, i == 0 ? in2.TO_COMMENT : in2.FINISH_COMMENT));
+                c.e().x(un2.k().w(i, i == 0 ? in2.TO_COMMENT : in2.FINISH_COMMENT));
             }
         });
         this.mViewPager.setCurrentItem(this.selectedTab);
@@ -264,7 +263,7 @@ public class TicketMyCommentActivity extends DamaiBaseActivity implements Evalua
             String videoId = (i2 != 0 || commentsItemBean.getVideoDO() == null) ? "" : commentsItemBean.getVideoDO().getVideoId();
             Map<String, String> T = un2.k().T(in2.FINISH_COMMENT);
             T.put("video_id", videoId);
-            C0529c.e().x(un2.k().A(un2.TICKLET_MYCOMMENT_LIST_PAGE, "evaluateed_" + i, "pic_" + i2, T, Boolean.TRUE));
+            c.e().x(un2.k().A(un2.TICKLET_MYCOMMENT_LIST_PAGE, "evaluateed_" + i, "pic_" + i2, T, Boolean.TRUE));
         }
     }
 
@@ -275,7 +274,7 @@ public class TicketMyCommentActivity extends DamaiBaseActivity implements Evalua
             ipChange.ipc$dispatch("-1145317683", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
         } else if (commentsItemBean == null) {
         } else {
-            C0529c e = C0529c.e();
+            c e = c.e();
             un2 k = un2.k();
             e.x(k.A(un2.TICKLET_MYCOMMENT_LIST_PAGE, "evaluateed_" + String.valueOf(i), "card", un2.k().T(in2.FINISH_COMMENT), Boolean.TRUE));
         }
@@ -288,7 +287,7 @@ public class TicketMyCommentActivity extends DamaiBaseActivity implements Evalua
             ipChange.ipc$dispatch("-1248914115", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
             return;
         }
-        C0529c e = C0529c.e();
+        c e = c.e();
         un2 k = un2.k();
         e.x(k.A(un2.TICKLET_MYCOMMENT_LIST_PAGE, "evaluateed_" + String.valueOf(i), "share", un2.k().T(in2.FINISH_COMMENT), Boolean.FALSE));
     }
@@ -300,7 +299,7 @@ public class TicketMyCommentActivity extends DamaiBaseActivity implements Evalua
             ipChange.ipc$dispatch("438334047", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
             return;
         }
-        C0529c e = C0529c.e();
+        c e = c.e();
         un2 k = un2.k();
         e.x(k.A(un2.TICKLET_MYCOMMENT_LIST_PAGE, "evaluateed_" + String.valueOf(i), "likes", un2.k().T(in2.FINISH_COMMENT), Boolean.FALSE));
     }
@@ -312,7 +311,7 @@ public class TicketMyCommentActivity extends DamaiBaseActivity implements Evalua
             ipChange.ipc$dispatch("1060996530", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
             return;
         }
-        C0529c e = C0529c.e();
+        c e = c.e();
         un2 k = un2.k();
         e.x(k.A(un2.TICKLET_MYCOMMENT_LIST_PAGE, "evaluateed_" + String.valueOf(i), "reply_btn", un2.k().T(in2.FINISH_COMMENT), Boolean.TRUE));
     }
@@ -332,7 +331,7 @@ public class TicketMyCommentActivity extends DamaiBaseActivity implements Evalua
             ipChange.ipc$dispatch("604196341", new Object[]{this, Boolean.valueOf(z), commentsItemBean, Integer.valueOf(i)});
             return;
         }
-        C0529c e = C0529c.e();
+        c e = c.e();
         un2 k = un2.k();
         e.x(k.A(un2.TICKLET_MYCOMMENT_LIST_PAGE, "evaluateed_" + String.valueOf(i), "item", un2.k().T(in2.FINISH_COMMENT), Boolean.TRUE));
     }

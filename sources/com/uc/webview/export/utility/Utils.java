@@ -18,7 +18,7 @@ import javax.microedition.khronos.egl.EGLSurface;
 @Interface
 /* loaded from: classes11.dex */
 public class Utils {
-    private static ThreadLocal<Formatter> a = new C7360a();
+    private static ThreadLocal<Formatter> a = new a();
 
     private Utils() {
     }

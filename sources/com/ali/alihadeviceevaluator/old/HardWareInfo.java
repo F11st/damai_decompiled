@@ -5,7 +5,6 @@ import android.opengl.GLSurfaceView;
 import android.os.Build;
 import android.text.TextUtils;
 import android.util.Log;
-import com.alibaba.security.realidentity.a.AbstractC3840a;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -42,23 +41,22 @@ public class HardWareInfo {
     /* compiled from: Taobao */
     /* loaded from: classes17.dex */
     class OnlineGLSurfaceView extends GLSurfaceView {
-        C2939a mRenderer;
+        a mRenderer;
 
         public OnlineGLSurfaceView(Context context) {
             super(context);
             setEGLConfigChooser(8, 8, 8, 8, 0, 0);
             HardWareInfo.this.getClass();
-            C2939a c2939a = new C2939a();
-            this.mRenderer = c2939a;
-            setRenderer(c2939a);
+            a aVar = new a();
+            this.mRenderer = aVar;
+            setRenderer(aVar);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.ali.alihadeviceevaluator.old.HardWareInfo$a */
     /* loaded from: classes17.dex */
-    class C2939a implements GLSurfaceView.Renderer {
-        C2939a() {
+    class a implements GLSurfaceView.Renderer {
+        a() {
         }
 
         @Override // android.opengl.GLSurfaceView.Renderer
@@ -325,7 +323,7 @@ public class HardWareInfo {
                         } else if (str.contains("PXA")) {
                             this.d = "Marvell";
                         } else if (!str.contains("HI") && !str.contains("K3")) {
-                            if (!str.contains("SP") && !str.contains(AbstractC3840a.X)) {
+                            if (!str.contains("SP") && !str.contains(com.alibaba.security.realidentity.a.a.X)) {
                                 if (!str.contains("TEGRA") && !str.contains("NVIDIA")) {
                                     if (str.startsWith("LC")) {
                                         this.d = "联芯科技";

@@ -3,8 +3,8 @@ package com.alibaba.gaiax.utils;
 import com.alibaba.gaiax.GXTemplateEngine;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import kotlin.C8177b;
 import kotlin.Lazy;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -17,22 +17,21 @@ import tb.l81;
 /* loaded from: classes6.dex */
 public final class GXGlobalCache {
     @NotNull
-    public static final C3417a Companion = new C3417a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final Lazy<GXGlobalCache> c;
     @NotNull
-    private final Map<GXTemplateEngine.C3347i, l81> a = new LinkedHashMap();
+    private final Map<GXTemplateEngine.i, l81> a = new LinkedHashMap();
     @NotNull
-    private final Map<GXTemplateEngine.C3347i, l81> b = new LinkedHashMap();
+    private final Map<GXTemplateEngine.i, l81> b = new LinkedHashMap();
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.utils.GXGlobalCache$a */
     /* loaded from: classes6.dex */
-    public static final class C3417a {
-        private C3417a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3417a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -44,7 +43,7 @@ public final class GXGlobalCache {
 
     static {
         Lazy<GXGlobalCache> b;
-        b = C8177b.b(new Function0<GXGlobalCache>() { // from class: com.alibaba.gaiax.utils.GXGlobalCache$Companion$instance$2
+        b = b.b(new Function0<GXGlobalCache>() { // from class: com.alibaba.gaiax.utils.GXGlobalCache$Companion$instance$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull
@@ -61,40 +60,40 @@ public final class GXGlobalCache {
     }
 
     @Nullable
-    public final l81 c(@NotNull GXTemplateEngine.C3347i c3347i) {
-        b41.i(c3347i, "key");
-        return this.a.get(c3347i);
+    public final l81 c(@NotNull GXTemplateEngine.i iVar) {
+        b41.i(iVar, "key");
+        return this.a.get(iVar);
     }
 
     @Nullable
-    public final l81 d(@NotNull GXTemplateEngine.C3347i c3347i) {
-        b41.i(c3347i, "key");
-        return this.b.get(c3347i);
+    public final l81 d(@NotNull GXTemplateEngine.i iVar) {
+        b41.i(iVar, "key");
+        return this.b.get(iVar);
     }
 
-    public final boolean e(@NotNull GXTemplateEngine.C3347i c3347i) {
-        b41.i(c3347i, "key");
-        return this.a.containsKey(c3347i);
+    public final boolean e(@NotNull GXTemplateEngine.i iVar) {
+        b41.i(iVar, "key");
+        return this.a.containsKey(iVar);
     }
 
-    public final boolean f(@NotNull GXTemplateEngine.C3347i c3347i) {
-        b41.i(c3347i, "key");
-        return this.b.containsKey(c3347i);
+    public final boolean f(@NotNull GXTemplateEngine.i iVar) {
+        b41.i(iVar, "key");
+        return this.b.containsKey(iVar);
     }
 
-    public final void g(@NotNull GXTemplateEngine.C3347i c3347i, @NotNull l81 l81Var) {
-        b41.i(c3347i, "key");
+    public final void g(@NotNull GXTemplateEngine.i iVar, @NotNull l81 l81Var) {
+        b41.i(iVar, "key");
         b41.i(l81Var, "value");
-        this.a.put(c3347i, l81Var);
+        this.a.put(iVar, l81Var);
         kr0 kr0Var = kr0.INSTANCE;
         if (kr0Var.b()) {
-            kr0Var.a("putLayoutForPrepareView key=" + c3347i.hashCode() + " value=" + l81Var);
+            kr0Var.a("putLayoutForPrepareView key=" + iVar.hashCode() + " value=" + l81Var);
         }
     }
 
-    public final void h(@NotNull GXTemplateEngine.C3347i c3347i, @NotNull l81 l81Var) {
-        b41.i(c3347i, "key");
+    public final void h(@NotNull GXTemplateEngine.i iVar, @NotNull l81 l81Var) {
+        b41.i(iVar, "key");
         b41.i(l81Var, "value");
-        this.b.put(c3347i, l81Var);
+        this.b.put(iVar, l81Var);
     }
 }

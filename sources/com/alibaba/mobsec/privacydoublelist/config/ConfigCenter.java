@@ -5,11 +5,9 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.util.Log;
 import com.alibaba.mobsec.privacydoublelist.PdlEnvUtils;
-import com.alibaba.mobsec.privacydoublelist.b.C3422a;
-import com.alibaba.mobsec.privacydoublelist.b.C3423b;
-import com.alibaba.mobsec.privacydoublelist.b.C3424c;
-import com.alibaba.mobsec.privacydoublelist.c.C3426a;
-import com.alibaba.mobsec.privacydoublelist.e.C3438e;
+import com.alibaba.mobsec.privacydoublelist.b.b;
+import com.alibaba.mobsec.privacydoublelist.b.c;
+import com.alibaba.mobsec.privacydoublelist.e.e;
 import com.alibaba.mobsec.privacydoublelist.report.PrivacyDoubleListReporter;
 import java.lang.reflect.Proxy;
 import java.util.Map;
@@ -27,14 +25,13 @@ public class ConfigCenter {
     public static ConfigCenter a;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.mobsec.privacydoublelist.config.ConfigCenter$a */
     /* loaded from: classes6.dex */
-    public class C3429a implements C3424c.InterfaceC3425a {
-        public C3429a() {
+    public class a implements c.a {
+        public a() {
         }
 
         public void a(String str, Map<String, String> map) {
-            ConfigCenter.this.a(C3424c.a(str));
+            ConfigCenter.this.a(c.a(str));
         }
     }
 
@@ -104,13 +101,13 @@ public class ConfigCenter {
                     } else if (c == 2) {
                         PdlEnvUtils.setEnabled(str2.equals("1"));
                     } else if (c == 3) {
-                        C3438e.b().a(Integer.parseInt(str2));
+                        e.b().a(Integer.parseInt(str2));
                     } else if (c == 4) {
-                        C3426a.a().a(str2);
+                        com.alibaba.mobsec.privacydoublelist.c.a.a().a(str2);
                     } else if (c != 5) {
                         Log.e("DL-CONFIG", "Unknown key in config: " + str);
                     } else {
-                        C3438e.b().c = Integer.parseInt(str2);
+                        e.b().c = Integer.parseInt(str2);
                     }
                 } catch (Throwable th) {
                     if (PdlEnvUtils.a) {
@@ -122,13 +119,13 @@ public class ConfigCenter {
     }
 
     public void initConfig(Context context) {
-        C3429a c3429a = new C3429a();
-        if (!C3424c.b) {
-            C3424c.a();
+        a aVar = new a();
+        if (!c.b) {
+            c.a();
         }
-        if (C3424c.c != null && C3424c.e != null && C3424c.d != null) {
+        if (c.c != null && c.e != null && c.d != null) {
             try {
-                C3424c.e.invoke(C3424c.c, C3424c.a, Proxy.newProxyInstance(C3424c.d.getClassLoader(), new Class[]{C3424c.d}, new C3423b(c3429a)), Boolean.TRUE);
+                c.e.invoke(c.c, c.a, Proxy.newProxyInstance(c.d.getClassLoader(), new Class[]{c.d}, new b(aVar)), Boolean.TRUE);
                 if (PdlEnvUtils.a) {
                     Log.d("AOP-OrangeConfigHelper", "Orange listener register success");
                 }
@@ -142,9 +139,9 @@ public class ConfigCenter {
             Log.e("AOP-OrangeConfigHelper", "Finish registerOrangeListener!");
         }
         if (!PdlEnvUtils.a(context) && context != null) {
-            context.registerReceiver(new C3422a(this), new IntentFilter("com.alibaba.mobsec.privacydoublelist.config.update"));
+            context.registerReceiver(new com.alibaba.mobsec.privacydoublelist.b.a(this), new IntentFilter("com.alibaba.mobsec.privacydoublelist.config.update"));
         }
-        a(C3424c.a("pdl_orange_namespace"));
+        a(c.a("pdl_orange_namespace"));
     }
 
     public void updateConfig(Map<String, String> map) {

@@ -15,9 +15,8 @@ final class d71 implements JvmTypeFactory<c71> {
     public static final d71 INSTANCE = new d71();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.d71$a */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C9030a {
+    public /* synthetic */ class a {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -42,10 +41,10 @@ final class d71 implements JvmTypeFactory<c71> {
     /* renamed from: a */
     public c71 boxType(@NotNull c71 c71Var) {
         b41.i(c71Var, "possiblyPrimitiveType");
-        if (c71Var instanceof c71.C8993d) {
-            c71.C8993d c8993d = (c71.C8993d) c71Var;
-            if (c8993d.i() != null) {
-                String f = t61.c(c8993d.i().getWrapperFqName()).f();
+        if (c71Var instanceof c71.d) {
+            c71.d dVar = (c71.d) c71Var;
+            if (dVar.i() != null) {
+                String f = t61.c(dVar.i().getWrapperFqName()).f();
                 b41.h(f, "byFqNameWithoutInnerClas…apperFqName).internalName");
                 return createObjectType(f);
             }
@@ -59,7 +58,7 @@ final class d71 implements JvmTypeFactory<c71> {
     /* renamed from: b */
     public c71 createFromString(@NotNull String str) {
         JvmPrimitiveType jvmPrimitiveType;
-        c71 c8992c;
+        c71 cVar;
         b41.i(str, "representation");
         str.length();
         char charAt = str.charAt(0);
@@ -79,31 +78,31 @@ final class d71 implements JvmTypeFactory<c71> {
         }
         if (jvmPrimitiveType == null) {
             if (charAt == 'V') {
-                return new c71.C8993d(null);
+                return new c71.d(null);
             }
             if (charAt == '[') {
                 String substring = str.substring(1);
                 b41.h(substring, "(this as java.lang.String).substring(startIndex)");
-                c8992c = new c71.C8990a(createFromString(substring));
+                cVar = new c71.a(createFromString(substring));
             } else {
                 if (charAt == 'L') {
                     StringsKt__StringsKt.P(str, b90.TokenSEM, false, 2, null);
                 }
                 String substring2 = str.substring(1, str.length() - 1);
                 b41.h(substring2, "(this as java.lang.Strin…ing(startIndex, endIndex)");
-                c8992c = new c71.C8992c(substring2);
+                cVar = new c71.c(substring2);
             }
-            return c8992c;
+            return cVar;
         }
-        return new c71.C8993d(jvmPrimitiveType);
+        return new c71.d(jvmPrimitiveType);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.kotlin.JvmTypeFactory
     @NotNull
     /* renamed from: c */
-    public c71.C8992c createObjectType(@NotNull String str) {
+    public c71.c createObjectType(@NotNull String str) {
         b41.i(str, "internalName");
-        return new c71.C8992c(str);
+        return new c71.c(str);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.kotlin.JvmTypeFactory
@@ -111,7 +110,7 @@ final class d71 implements JvmTypeFactory<c71> {
     /* renamed from: d */
     public c71 createPrimitiveType(@NotNull PrimitiveType primitiveType) {
         b41.i(primitiveType, "primitiveType");
-        switch (C9030a.$EnumSwitchMapping$0[primitiveType.ordinal()]) {
+        switch (a.$EnumSwitchMapping$0[primitiveType.ordinal()]) {
             case 1:
                 return c71.Companion.a();
             case 2:
@@ -146,14 +145,14 @@ final class d71 implements JvmTypeFactory<c71> {
     public String toString(@NotNull c71 c71Var) {
         String desc;
         b41.i(c71Var, "type");
-        if (c71Var instanceof c71.C8990a) {
-            return b41.r(jn1.ARRAY_START_STR, toString(((c71.C8990a) c71Var).i()));
+        if (c71Var instanceof c71.a) {
+            return b41.r(jn1.ARRAY_START_STR, toString(((c71.a) c71Var).i()));
         }
-        if (c71Var instanceof c71.C8993d) {
-            JvmPrimitiveType i = ((c71.C8993d) c71Var).i();
+        if (c71Var instanceof c71.d) {
+            JvmPrimitiveType i = ((c71.d) c71Var).i();
             return (i == null || (desc = i.getDesc()) == null) ? "V" : desc;
-        } else if (c71Var instanceof c71.C8992c) {
-            return qb1.LEVEL_L + ((c71.C8992c) c71Var).i() + b90.TokenSEM;
+        } else if (c71Var instanceof c71.c) {
+            return qb1.LEVEL_L + ((c71.c) c71Var).i() + b90.TokenSEM;
         } else {
             throw new NoWhenBranchMatchedException();
         }

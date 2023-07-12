@@ -21,7 +21,7 @@ public final class kg implements Inner_3dMap_locationManagerBase {
     ArrayList<Inner_3dMap_locationListener> b = new ArrayList<>();
     Object c = new Object();
     Handler d = null;
-    HandlerThreadC4601a e = null;
+    a e = null;
     Handler f = null;
     Inner_3dMap_locationOption g = new Inner_3dMap_locationOption();
     kk h = null;
@@ -30,12 +30,11 @@ public final class kg implements Inner_3dMap_locationManagerBase {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.kg$a */
     /* loaded from: classes10.dex */
-    public static class HandlerThreadC4601a extends HandlerThread {
+    public static class a extends HandlerThread {
         kg a;
 
-        public HandlerThreadC4601a(String str, kg kgVar) {
+        public a(String str, kg kgVar) {
             super(str);
             this.a = kgVar;
         }
@@ -105,9 +104,9 @@ public final class kg implements Inner_3dMap_locationManagerBase {
             jy.a(th, "MapLocationManager", "initResultHandler");
         }
         try {
-            HandlerThreadC4601a handlerThreadC4601a = new HandlerThreadC4601a("locaitonClientActionThread", this);
-            this.e = handlerThreadC4601a;
-            handlerThreadC4601a.setPriority(5);
+            a aVar = new a("locaitonClientActionThread", this);
+            this.e = aVar;
+            aVar.setPriority(5);
             this.e.start();
             this.f = a(this.e.getLooper());
         } catch (Throwable th2) {
@@ -272,16 +271,16 @@ public final class kg implements Inner_3dMap_locationManagerBase {
             this.b = null;
         }
         f();
-        HandlerThreadC4601a handlerThreadC4601a = this.e;
-        if (handlerThreadC4601a != null) {
+        a aVar = this.e;
+        if (aVar != null) {
             if (Build.VERSION.SDK_INT >= 18) {
                 try {
-                    ka.a(handlerThreadC4601a, HandlerThread.class, "quitSafely", new Object[0]);
+                    ka.a(aVar, HandlerThread.class, "quitSafely", new Object[0]);
                 } catch (Throwable unused) {
-                    handlerThreadC4601a = this.e;
+                    aVar = this.e;
                 }
             }
-            handlerThreadC4601a.quit();
+            aVar.quit();
         }
         this.e = null;
         Handler handler = this.d;

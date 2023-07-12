@@ -151,7 +151,7 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
     private ArrayList<Float> values;
     private int widgetHeight;
     private static final String TAG = BaseSlider.class.getSimpleName();
-    static final int DEF_STYLE_RES = R.C4819style.Widget_MaterialComponents_Slider;
+    static final int DEF_STYLE_RES = R.style.Widget_MaterialComponents_Slider;
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
@@ -781,7 +781,7 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
     /* JADX INFO: Access modifiers changed from: private */
     @NonNull
     public static TooltipDrawable parseLabelDrawable(@NonNull Context context, @NonNull TypedArray typedArray) {
-        return TooltipDrawable.createFromAttributes(context, null, 0, typedArray.getResourceId(R.styleable.Slider_labelStyle, R.C4819style.Widget_MaterialComponents_Tooltip));
+        return TooltipDrawable.createFromAttributes(context, null, 0, typedArray.getResourceId(R.styleable.Slider_labelStyle, R.style.Widget_MaterialComponents_Tooltip));
     }
 
     private static int pivotIndex(float[] fArr, float f) {
@@ -802,12 +802,12 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
         }
         ColorStateList colorStateList = MaterialResources.getColorStateList(context, obtainStyledAttributes, i3);
         if (colorStateList == null) {
-            colorStateList = AppCompatResources.getColorStateList(context, R.C4815color.material_slider_inactive_track_color);
+            colorStateList = AppCompatResources.getColorStateList(context, R.color.material_slider_inactive_track_color);
         }
         setTrackInactiveTintList(colorStateList);
         ColorStateList colorStateList2 = MaterialResources.getColorStateList(context, obtainStyledAttributes, i2);
         if (colorStateList2 == null) {
-            colorStateList2 = AppCompatResources.getColorStateList(context, R.C4815color.material_slider_active_track_color);
+            colorStateList2 = AppCompatResources.getColorStateList(context, R.color.material_slider_active_track_color);
         }
         setTrackActiveTintList(colorStateList2);
         this.thumbDrawable.setFillColor(MaterialResources.getColorStateList(context, obtainStyledAttributes, R.styleable.Slider_thumbColor));
@@ -818,7 +818,7 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
         setThumbStrokeWidth(obtainStyledAttributes.getDimension(R.styleable.Slider_thumbStrokeWidth, 0.0f));
         ColorStateList colorStateList3 = MaterialResources.getColorStateList(context, obtainStyledAttributes, R.styleable.Slider_haloColor);
         if (colorStateList3 == null) {
-            colorStateList3 = AppCompatResources.getColorStateList(context, R.C4815color.material_slider_halo_color);
+            colorStateList3 = AppCompatResources.getColorStateList(context, R.color.material_slider_halo_color);
         }
         setHaloTintList(colorStateList3);
         this.tickVisible = obtainStyledAttributes.getBoolean(R.styleable.Slider_tickVisible, true);
@@ -830,12 +830,12 @@ public abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOn
         }
         ColorStateList colorStateList4 = MaterialResources.getColorStateList(context, obtainStyledAttributes, i6);
         if (colorStateList4 == null) {
-            colorStateList4 = AppCompatResources.getColorStateList(context, R.C4815color.material_slider_inactive_tick_marks_color);
+            colorStateList4 = AppCompatResources.getColorStateList(context, R.color.material_slider_inactive_tick_marks_color);
         }
         setTickInactiveTintList(colorStateList4);
         ColorStateList colorStateList5 = MaterialResources.getColorStateList(context, obtainStyledAttributes, i5);
         if (colorStateList5 == null) {
-            colorStateList5 = AppCompatResources.getColorStateList(context, R.C4815color.material_slider_active_tick_marks_color);
+            colorStateList5 = AppCompatResources.getColorStateList(context, R.color.material_slider_active_tick_marks_color);
         }
         setTickActiveTintList(colorStateList5);
         setThumbRadius(obtainStyledAttributes.getDimensionPixelSize(R.styleable.Slider_thumbRadius, 0));

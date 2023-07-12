@@ -5,7 +5,6 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.List;
 import kotlin.collections.CollectionsKt___CollectionsKt;
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -13,17 +12,16 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes7.dex */
 public final class vc {
     @NotNull
-    public static final C9815a Companion = new C9815a(null);
+    public static final a Companion = new a(null);
     private static String a;
     private static String b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.vc$a */
     /* loaded from: classes7.dex */
-    public static final class C9815a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9815a() {
+        private a() {
         }
 
         public final boolean a(@Nullable List<String> list) {
@@ -39,7 +37,7 @@ public final class vc {
             if (vc.b == null) {
                 vc.b = Build.getMODEL();
             }
-            r = C8604o.r(vc.a, "10", false, 2, null);
+            r = kotlin.text.o.r(vc.a, "10", false, 2, null);
             if (r && list != null) {
                 J = CollectionsKt___CollectionsKt.J(list, vc.b);
                 if (J) {
@@ -49,7 +47,7 @@ public final class vc {
             return false;
         }
 
-        public /* synthetic */ C9815a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

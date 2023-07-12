@@ -74,7 +74,7 @@ public abstract class HuaweiApiAvailability {
     }
 
     public static HuaweiApiAvailability getInstance() {
-        return C5527b.getInstance();
+        return b.getInstance();
     }
 
     public static int getServicesVersionCode() {

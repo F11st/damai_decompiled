@@ -31,12 +31,11 @@ public class ClipImageActivity extends Activity {
     private int d;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.ClipImageActivity$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0727a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0727a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -53,12 +52,11 @@ public class ClipImageActivity extends Activity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.ClipImageActivity$b */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0728b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0728b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -103,8 +101,8 @@ public class ClipImageActivity extends Activity {
         this.c = (ClipImageView) findViewById(R$id.process_img);
         this.a = (FrameLayout) findViewById(R$id.btn_confirm);
         this.b = (FrameLayout) findViewById(R$id.btn_back);
-        this.a.setOnClickListener(new View$OnClickListenerC0727a());
-        this.b.setOnClickListener(new View$OnClickListenerC0728b());
+        this.a.setOnClickListener(new a());
+        this.b.setOnClickListener(new b());
     }
 
     private void f() {
@@ -127,9 +125,9 @@ public class ClipImageActivity extends Activity {
         }
         super.onActivityResult(i, i2, intent);
         if (intent != null && i == this.d) {
-            Bitmap b = a21.b(intent.getStringArrayListExtra(s11.SELECT_RESULT).get(0), LoginConstant.RESULT_WINDWANE_CLOSEW, 1080);
-            if (b != null) {
-                this.c.setBitmapData(b);
+            Bitmap b2 = a21.b(intent.getStringArrayListExtra(s11.SELECT_RESULT).get(0), LoginConstant.RESULT_WINDWANE_CLOSEW, 1080);
+            if (b2 != null) {
+                this.c.setBitmapData(b2);
                 return;
             } else {
                 finish();

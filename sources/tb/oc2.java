@@ -1,13 +1,12 @@
 package tb;
 
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
+import cn.damai.common.user.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
-public class oc2 extends C0528b {
+public class oc2 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final String DISCOUNT_TICKET_PAGE = "discount";
     private static oc2 b;
@@ -103,8 +102,8 @@ public class oc2 extends C0528b {
         return b;
     }
 
-    public C0525a.C0527b g(String str) {
+    public a.b g(String str) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1545393535") ? (C0525a.C0527b) ipChange.ipc$dispatch("1545393535", new Object[]{this, str}) : new C0525a.C0527b().i(f(str));
+        return AndroidInstantRuntime.support(ipChange, "1545393535") ? (a.b) ipChange.ipc$dispatch("1545393535", new Object[]{this, str}) : new a.b().i(f(str));
     }
 }

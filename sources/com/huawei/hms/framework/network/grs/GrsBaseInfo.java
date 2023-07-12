@@ -4,9 +4,6 @@ import android.content.Context;
 import android.text.TextUtils;
 import com.alimm.xadsdk.request.builder.IRequestConst;
 import com.huawei.hms.framework.common.Logger;
-import com.huawei.hms.framework.network.grs.f.C5568b;
-import com.huawei.hms.framework.network.grs.h.C5593b;
-import com.huawei.hms.framework.network.grs.local.model.C5600a;
 import com.youku.live.livesdk.wkit.component.Constants;
 import java.util.Locale;
 
@@ -148,8 +145,8 @@ public class GrsBaseInfo implements Cloneable {
 
     public String getGrsParasKey(boolean z, boolean z2, Context context) {
         StringBuffer stringBuffer = new StringBuffer();
-        C5568b a = C5568b.a(context.getPackageName(), this);
-        C5600a a2 = a != null ? a.a() : null;
+        com.huawei.hms.framework.network.grs.f.b a = com.huawei.hms.framework.network.grs.f.b.a(context.getPackageName(), this);
+        com.huawei.hms.framework.network.grs.local.model.a a2 = a != null ? a.a() : null;
         String grsReqParamJoint = getGrsReqParamJoint(z, z2, a2 != null ? a2.b() : "", context);
         if (!TextUtils.isEmpty(grsReqParamJoint)) {
             if (!TextUtils.isEmpty(stringBuffer.toString())) {
@@ -193,9 +190,9 @@ public class GrsBaseInfo implements Cloneable {
             stringBuffer.append("uid");
             stringBuffer.append("=");
             if (z) {
-                a = C5593b.b(uid);
+                a = com.huawei.hms.framework.network.grs.h.b.b(uid);
             } else if (z2) {
-                a = C5593b.a(uid);
+                a = com.huawei.hms.framework.network.grs.h.b.a(uid);
             } else {
                 stringBuffer.append(uid);
             }

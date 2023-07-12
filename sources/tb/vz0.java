@@ -14,7 +14,7 @@ public final class vz0 {
     public static final int ALIGN_RIGHT = 2;
     public static final int ALIGN_UNDEFINE = -1;
     @NotNull
-    public static final C9831a Companion = new C9831a(null);
+    public static final a Companion = new a(null);
     public static final int DEC_LINE_THROUGH = 2;
     public static final int DEC_NONE = 0;
     public static final int DEC_UNDEFINE = -1;
@@ -24,24 +24,22 @@ public final class vz0 {
     private String b;
     private int c;
     @Nullable
-    private C9832b d;
+    private b d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.vz0$a */
     /* loaded from: classes7.dex */
-    public static final class C9831a {
-        private C9831a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9831a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.vz0$b */
     /* loaded from: classes7.dex */
-    public static final class C9832b {
+    public static final class b {
         private static transient /* synthetic */ IpChange $ipChange;
         @Nullable
         private String a;
@@ -257,19 +255,19 @@ public final class vz0 {
         }
     }
 
-    public vz0(int i, @NotNull String str, @Nullable C9832b c9832b) {
+    public vz0(int i, @NotNull String str, @Nullable b bVar) {
         b41.i(str, "name");
         this.a = -1;
         this.c = -1;
         this.a = i;
         this.b = str;
-        this.d = c9832b;
+        this.d = bVar;
     }
 
     @Nullable
-    public final C9832b a() {
+    public final b a() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1720652065") ? (C9832b) ipChange.ipc$dispatch("-1720652065", new Object[]{this}) : this.d;
+        return AndroidInstantRuntime.support(ipChange, "-1720652065") ? (b) ipChange.ipc$dispatch("-1720652065", new Object[]{this}) : this.d;
     }
 
     @NotNull
@@ -288,12 +286,12 @@ public final class vz0 {
         return AndroidInstantRuntime.support(ipChange, "-1493420657") ? ((Integer) ipChange.ipc$dispatch("-1493420657", new Object[]{this})).intValue() : this.a;
     }
 
-    public final void e(@Nullable C9832b c9832b) {
+    public final void e(@Nullable b bVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "797895697")) {
-            ipChange.ipc$dispatch("797895697", new Object[]{this, c9832b});
+            ipChange.ipc$dispatch("797895697", new Object[]{this, bVar});
         } else {
-            this.d = c9832b;
+            this.d = bVar;
         }
     }
 

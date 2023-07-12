@@ -7,10 +7,9 @@ import android.view.ViewConfiguration;
 import androidx.annotation.UiThread;
 import androidx.recyclerview.widget.RecyclerView;
 
-/* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
-public final class FakeDrag {
+final class FakeDrag {
     private int mActualDraggedDistance;
     private long mFakeDragBeginTime;
     private int mMaximumVelocity;

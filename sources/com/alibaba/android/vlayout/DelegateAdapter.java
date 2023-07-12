@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
-import com.alibaba.android.vlayout.layout.C3308h;
+import com.alibaba.android.vlayout.layout.h;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -40,14 +40,13 @@ public class DelegateAdapter extends VirtualLayoutAdapter<RecyclerView.ViewHolde
             onBindViewHolderWithOffset(vh, i, i2);
         }
 
-        public abstract AbstractC3289a onCreateLayoutHelper();
+        public abstract com.alibaba.android.vlayout.a onCreateLayoutHelper();
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.vlayout.DelegateAdapter$b */
     /* loaded from: classes6.dex */
-    static class C3279b extends RecyclerView.ViewHolder {
-        public C3279b(View view) {
+    static class b extends RecyclerView.ViewHolder {
+        public b(View view) {
             super(view);
         }
     }
@@ -57,7 +56,7 @@ public class DelegateAdapter extends VirtualLayoutAdapter<RecyclerView.ViewHolde
     }
 
     public static Adapter<? extends RecyclerView.ViewHolder> simpleAdapter(@NonNull View view) {
-        return new C3278a(view);
+        return new a(view);
     }
 
     public void addAdapter(int i, @Nullable Adapter adapter) {
@@ -330,7 +329,7 @@ public class DelegateAdapter extends VirtualLayoutAdapter<RecyclerView.ViewHolde
             AdapterDataObserver adapterDataObserver = new AdapterDataObserver(i, incrementAndGet);
             adapter.registerAdapterDataObserver(adapterDataObserver);
             z = z && adapter.hasStableIds();
-            AbstractC3289a onCreateLayoutHelper = adapter.onCreateLayoutHelper();
+            com.alibaba.android.vlayout.a onCreateLayoutHelper = adapter.onCreateLayoutHelper();
             onCreateLayoutHelper.setItemCount(adapter.getItemCount());
             this.mTotal += onCreateLayoutHelper.getItemCount();
             linkedList.add(onCreateLayoutHelper);
@@ -350,7 +349,7 @@ public class DelegateAdapter extends VirtualLayoutAdapter<RecyclerView.ViewHolde
 
     @Override // com.alibaba.android.vlayout.VirtualLayoutAdapter
     @Deprecated
-    public void setLayoutHelpers(List<AbstractC3289a> list) {
+    public void setLayoutHelpers(List<com.alibaba.android.vlayout.a> list) {
         throw new UnsupportedOperationException("DelegateAdapter doesn't support setLayoutHelpers directly");
     }
 
@@ -373,9 +372,9 @@ public class DelegateAdapter extends VirtualLayoutAdapter<RecyclerView.ViewHolde
             if (i >= 0 && (findAdapterPositionByIndex = DelegateAdapter.this.findAdapterPositionByIndex(i)) >= 0) {
                 Pair pair = (Pair) DelegateAdapter.this.mAdapters.get(findAdapterPositionByIndex);
                 LinkedList linkedList = new LinkedList(DelegateAdapter.this.getLayoutHelpers());
-                AbstractC3289a abstractC3289a = (AbstractC3289a) linkedList.get(findAdapterPositionByIndex);
-                if (abstractC3289a.getItemCount() != ((Adapter) pair.second).getItemCount()) {
-                    abstractC3289a.setItemCount(((Adapter) pair.second).getItemCount());
+                com.alibaba.android.vlayout.a aVar = (com.alibaba.android.vlayout.a) linkedList.get(findAdapterPositionByIndex);
+                if (aVar.getItemCount() != ((Adapter) pair.second).getItemCount()) {
+                    aVar.setItemCount(((Adapter) pair.second).getItemCount());
                     DelegateAdapter.this.mTotal = this.a + ((Adapter) pair.second).getItemCount();
                     for (int i2 = findAdapterPositionByIndex + 1; i2 < DelegateAdapter.this.mAdapters.size(); i2++) {
                         Pair pair2 = (Pair) DelegateAdapter.this.mAdapters.get(i2);
@@ -438,8 +437,8 @@ public class DelegateAdapter extends VirtualLayoutAdapter<RecyclerView.ViewHolde
         this(virtualLayoutManager, z, false);
     }
 
-    public static Adapter<? extends RecyclerView.ViewHolder> simpleAdapter(@NonNull View view, @NonNull AbstractC3289a abstractC3289a) {
-        return new C3278a(view, abstractC3289a);
+    public static Adapter<? extends RecyclerView.ViewHolder> simpleAdapter(@NonNull View view, @NonNull com.alibaba.android.vlayout.a aVar) {
+        return new a(view, aVar);
     }
 
     public void addAdapter(@Nullable Adapter adapter) {
@@ -447,15 +446,14 @@ public class DelegateAdapter extends VirtualLayoutAdapter<RecyclerView.ViewHolde
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.vlayout.DelegateAdapter$a */
     /* loaded from: classes6.dex */
-    static class C3278a extends Adapter<RecyclerView.ViewHolder> {
+    static class a extends Adapter<RecyclerView.ViewHolder> {
         private View a;
-        private AbstractC3289a b;
+        private com.alibaba.android.vlayout.a b;
 
-        public C3278a(@NonNull View view, @NonNull AbstractC3289a abstractC3289a) {
+        public a(@NonNull View view, @NonNull com.alibaba.android.vlayout.a aVar) {
             this.a = view;
-            this.b = abstractC3289a;
+            this.b = aVar;
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
@@ -468,17 +466,17 @@ public class DelegateAdapter extends VirtualLayoutAdapter<RecyclerView.ViewHolde
         }
 
         @Override // com.alibaba.android.vlayout.DelegateAdapter.Adapter
-        public AbstractC3289a onCreateLayoutHelper() {
+        public com.alibaba.android.vlayout.a onCreateLayoutHelper() {
             return this.b;
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            return new C3279b(this.a);
+            return new b(this.a);
         }
 
-        public C3278a(@NonNull View view) {
-            this(view, new C3308h());
+        public a(@NonNull View view) {
+            this(view, new h());
         }
     }
 

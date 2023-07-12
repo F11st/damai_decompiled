@@ -36,16 +36,15 @@ public abstract class AbstractMessageLite implements MessageLite {
         public abstract BuilderType clone();
 
         @Override // kotlin.reflect.jvm.internal.impl.protobuf.MessageLite.Builder
-        public abstract BuilderType mergeFrom(CodedInputStream codedInputStream, C8447c c8447c) throws IOException;
+        public abstract BuilderType mergeFrom(CodedInputStream codedInputStream, c cVar) throws IOException;
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.protobuf.AbstractMessageLite$Builder$a */
         /* loaded from: classes3.dex */
-        static final class C8435a extends FilterInputStream {
+        static final class a extends FilterInputStream {
             private int a;
 
             /* JADX INFO: Access modifiers changed from: package-private */
-            public C8435a(InputStream inputStream, int i) {
+            public a(InputStream inputStream, int i) {
                 super(inputStream);
                 this.a = i;
             }

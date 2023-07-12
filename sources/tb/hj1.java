@@ -17,9 +17,7 @@ import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
-import cn.damai.common.util.toastutil.C0537a;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
@@ -75,12 +73,11 @@ public class hj1 {
     private int z = 1;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hj1$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9215a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9215a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -95,12 +92,11 @@ public class hj1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hj1$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9216b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9216b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -118,12 +114,11 @@ public class hj1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hj1$c */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9217c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9217c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -138,12 +133,11 @@ public class hj1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hj1$d */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9218d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9218d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -158,12 +152,11 @@ public class hj1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hj1$e */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9219e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9219e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -178,13 +171,12 @@ public class hj1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hj1$f */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9220f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ PriceBean a;
 
-        View$OnClickListenerC9220f(hj1 hj1Var, PriceBean priceBean) {
+        f(hj1 hj1Var, PriceBean priceBean) {
             this.a = priceBean;
         }
 
@@ -200,14 +192,13 @@ public class hj1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hj1$g */
     /* loaded from: classes.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC9221g implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class g implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
         final /* synthetic */ PromotionTagView b;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC9221g(View view, PromotionTagView promotionTagView) {
+        g(View view, PromotionTagView promotionTagView) {
             this.a = view;
             this.b = promotionTagView;
         }
@@ -233,12 +224,11 @@ public class hj1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hj1$h */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9222h implements View.OnClickListener {
+    public class h implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9222h() {
+        h() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -313,9 +303,9 @@ public class hj1 {
                     textView2.setTextColor(ContextCompat.getColor(this.s, i2));
                 }
                 if (priceBean.clickable) {
-                    inflate.setOnClickListener(new View$OnClickListenerC9219e());
+                    inflate.setOnClickListener(new e());
                 } else if (!TextUtils.isEmpty(priceBean.toastTips)) {
-                    inflate.setOnClickListener(new View$OnClickListenerC9220f(this, priceBean));
+                    inflate.setOnClickListener(new f(this, priceBean));
                 }
                 inflate.setTag(priceBean);
                 this.d.addView(inflate);
@@ -378,7 +368,7 @@ public class hj1 {
             }
             linearLayout2.addView(textView2);
         }
-        promotionTagView.getCurrentView().getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC9221g(view, promotionTagView));
+        promotionTagView.getCurrentView().getViewTreeObserver().addOnGlobalLayoutListener(new g(view, promotionTagView));
     }
 
     private boolean f() {
@@ -388,7 +378,7 @@ public class hj1 {
         }
         if (this.v.mq == 0) {
             this.z = 0;
-            C0537a.i(this.s, "余票不足");
+            cn.damai.common.util.toastutil.a.i(this.s, "余票不足");
             u(this.z, false);
             this.y.isCanClickable = false;
             z();
@@ -448,11 +438,11 @@ public class hj1 {
         this.c = (TextView) this.a.findViewById(R$id.tv_price_name);
         View findViewById = this.a.findViewById(R$id.tv_promotion_text);
         this.q = findViewById;
-        findViewById.setOnClickListener(new View$OnClickListenerC9215a());
+        findViewById.setOnClickListener(new a());
         this.r = this.a.findViewById(R$id.tv_promotion_text_line);
         View findViewById2 = this.a.findViewById(R$id.tv_seat_text);
         this.p = findViewById2;
-        findViewById2.setOnClickListener(new View$OnClickListenerC9216b());
+        findViewById2.setOnClickListener(new b());
         this.d = (FlowLayout) this.a.findViewById(R$id.project_detail_perform_price_flowlayout);
         this.e = (TextView) this.a.findViewById(R$id.tv_preferential_tip);
         this.f = (TextView) this.a.findViewById(R$id.tv_kssj_tip);
@@ -467,8 +457,8 @@ public class hj1 {
         this.m = (TextView) this.b.findViewById(R$id.tv_num);
         this.n = (TextView) this.b.findViewById(R$id.tv_num_detail);
         this.o = (ImageView) this.b.findViewById(R$id.img_jia);
-        this.l.setOnClickListener(new View$OnClickListenerC9217c());
-        this.o.setOnClickListener(new View$OnClickListenerC9218d());
+        this.l.setOnClickListener(new c());
+        this.o.setOnClickListener(new d());
     }
 
     private void p(View view) {
@@ -580,15 +570,15 @@ public class hj1 {
                                 SpannableString spannableString = new SpannableString(str);
                                 Drawable drawable = ResourcesCompat.getDrawable(this.s.getResources(), R$drawable.commonbusiness_help_icon, null);
                                 if (drawable != null) {
-                                    int a = t60.a(this.s, 14.0f);
-                                    int a2 = t60.a(this.s, 0.5f);
-                                    int a3 = t60.a(this.s, 1.5f);
-                                    drawable.setBounds(a3, a2, a + a3, a + a2);
+                                    int a2 = t60.a(this.s, 14.0f);
+                                    int a3 = t60.a(this.s, 0.5f);
+                                    int a4 = t60.a(this.s, 1.5f);
+                                    drawable.setBounds(a4, a3, a2 + a4, a2 + a3);
                                     drawable.setTint(Color.parseColor("#9C9CA5"));
                                     spannableString.setSpan(new VerticalImageSpan(drawable), i - 1, i, 33);
                                 }
                                 this.k.setText(spannableString);
-                                this.k.setOnClickListener(new View$OnClickListenerC9222h());
+                                this.k.setOnClickListener(new h());
                             } else {
                                 this.k.setText(str);
                             }
@@ -598,9 +588,9 @@ public class hj1 {
                             }
                             u(this.z, false);
                             NcovSkuBottomInfo ncovSkuBottomInfo3 = this.y;
-                            double d = this.v.price;
+                            double d2 = this.v.price;
                             int i7 = this.z;
-                            ncovSkuBottomInfo3.allPrice = d * i7;
+                            ncovSkuBottomInfo3.allPrice = d2 * i7;
                             ncovSkuBottomInfo3.promotionAmount = 0.0d;
                             CalculatePriceControlBean calculatePriceControlBean = this.w;
                             if (calculatePriceControlBean != null && calculatePriceControlBean.needCalc && i7 > 0) {
@@ -648,11 +638,11 @@ public class hj1 {
                     }
                 }
             }
-            C0529c e = C0529c.e();
+            cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
             td2 i9 = td2.i();
             long j = this.x;
             PriceBean priceBean5 = this.v;
-            e.x(i9.o(j, priceBean5, priceBean5.index));
+            e2.x(i9.o(j, priceBean5, priceBean5.index));
             q();
             z();
         }
@@ -753,30 +743,30 @@ public class hj1 {
         if ((ncovSkuBottomInfo != null && ncovSkuBottomInfo.pageType == 2) || this.t == null || this.v == null || ncovSkuBottomInfo == null) {
             return;
         }
-        String[] b = x8.Companion.b(this.x + "", this.s);
-        if (b.length != 0) {
-            if (b.length == 1 && TextUtils.isEmpty(b[0])) {
+        String[] b2 = x8.Companion.b(this.x + "", this.s);
+        if (b2.length != 0) {
+            if (b2.length == 1 && TextUtils.isEmpty(b2[0])) {
                 return;
             }
-            int length = b.length;
-            int g = g();
+            int length = b2.length;
+            int g2 = g();
             int j = j();
             PriceBean priceBean = this.v;
             if (priceBean.packagesFlag && priceBean.auctionUnit != 0) {
-                this.z = Math.min(j, Math.min(g, length) / this.v.auctionUnit);
+                this.z = Math.min(j, Math.min(g2, length) / this.v.auctionUnit);
             } else {
-                this.z = Math.min(j, Math.min(g, length));
+                this.z = Math.min(j, Math.min(g2, length));
             }
             int i = this.z;
             this.z = i > 0 ? i : 1;
-            int h = h();
-            if (h < g) {
+            int h2 = h();
+            if (h2 < g2) {
                 str = "余票不足";
             } else {
-                str = "最多购买" + g + "张";
+                str = "最多购买" + g2 + "张";
             }
-            if ((g < length || h < length) && j() > 0) {
-                C0537a.i(this.s, str);
+            if ((g2 < length || h2 < length) && j() > 0) {
+                cn.damai.common.util.toastutil.a.i(this.s, str);
             }
         }
     }
@@ -824,22 +814,22 @@ public class hj1 {
         } else if (this.t == null || this.v == null || this.y == null) {
         } else {
             if (i == 1) {
-                C0529c.e().x(td2.i().h(this.x, this.t, this.v));
-                int g = g();
-                if (h() < g) {
+                cn.damai.common.user.c.e().x(td2.i().h(this.x, this.t, this.v));
+                int g2 = g();
+                if (h() < g2) {
                     str = "余票不足";
                 } else {
-                    str = "最多购买" + g + "张";
+                    str = "最多购买" + g2 + "张";
                 }
                 if (this.z < j()) {
                     this.z++;
                 } else {
-                    C0537a.i(this.s, str);
+                    cn.damai.common.util.toastutil.a.i(this.s, str);
                     return;
                 }
             } else if (i == 2 && (i2 = this.z) > 1) {
                 this.z = i2 - 1;
-                C0529c.e().x(td2.i().g(this.x, this.t, this.v));
+                cn.damai.common.user.c.e().x(td2.i().g(this.x, this.t, this.v));
             }
             boolean u = u(this.z, true);
             CalculatePriceControlBean calculatePriceControlBean = this.w;

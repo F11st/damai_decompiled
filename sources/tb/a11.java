@@ -20,12 +20,11 @@ public class a11 {
     private final ThreadPoolExecutor c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.a11$b */
     /* loaded from: classes11.dex */
-    private static class ThreadFactoryC8893b implements ThreadFactory {
+    private static class b implements ThreadFactory {
         private final AtomicInteger a;
 
-        private ThreadFactoryC8893b() {
+        private b() {
             this.a = new AtomicInteger();
         }
 
@@ -36,7 +35,7 @@ public class a11 {
     }
 
     private a11() {
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(3, 4, 10L, TimeUnit.SECONDS, new LinkedBlockingQueue(), new ThreadFactoryC8893b());
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(3, 4, 10L, TimeUnit.SECONDS, new LinkedBlockingQueue(), new b());
         this.c = threadPoolExecutor;
         threadPoolExecutor.allowCoreThreadTimeOut(true);
     }

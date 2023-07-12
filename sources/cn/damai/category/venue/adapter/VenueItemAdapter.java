@@ -14,8 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.category.venue.bean.VenueListBean;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
 import cn.damai.uikit.iconfont.DMIconFontTextView;
@@ -66,13 +66,12 @@ public class VenueItemAdapter extends RecyclerView.Adapter<VenueItemViewHolder> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.venue.adapter.VenueItemAdapter$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0441a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        View$OnClickListenerC0441a(int i) {
+        a(int i) {
             this.a = i;
         }
 
@@ -93,12 +92,12 @@ public class VenueItemAdapter extends RecyclerView.Adapter<VenueItemViewHolder> 
             hashMap.put("titlelabel", ((VenueListBean) VenueItemAdapter.this.b.get(this.a)).name);
             hashMap.put("venue_id", String.valueOf(((VenueListBean) VenueItemAdapter.this.b.get(this.a)).id));
             if (VenueItemAdapter.this.e == 1) {
-                C0528b c0528b = new C0528b();
-                C0529c.e().x(c0528b.e("venue", "venue_card_" + this.a, "venue", hashMap, Boolean.TRUE));
+                b bVar = new b();
+                c.e().x(bVar.e("venue", "venue_card_" + this.a, "venue", hashMap, Boolean.TRUE));
                 return;
             }
-            C0528b c0528b2 = new C0528b();
-            C0529c.e().x(c0528b2.e("venue", "nearby_venue_card_" + this.a, "venue", hashMap, Boolean.TRUE));
+            b bVar2 = new b();
+            c.e().x(bVar2.e("venue", "nearby_venue_card_" + this.a, "venue", hashMap, Boolean.TRUE));
         }
     }
 
@@ -161,7 +160,7 @@ public class VenueItemAdapter extends RecyclerView.Adapter<VenueItemViewHolder> 
                 }
             }
         });
-        venueItemViewHolder.f.setOnClickListener(new View$OnClickListenerC0441a(i));
+        venueItemViewHolder.f.setOnClickListener(new a(i));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

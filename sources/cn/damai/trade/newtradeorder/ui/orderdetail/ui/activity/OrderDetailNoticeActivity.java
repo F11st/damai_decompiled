@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
@@ -41,12 +40,11 @@ public class OrderDetailNoticeActivity extends SimpleBaseActivity {
     private View v_outside;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailNoticeActivity$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2173a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2173a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -61,34 +59,32 @@ public class OrderDetailNoticeActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailNoticeActivity$b */
     /* loaded from: classes8.dex */
-    public class C2174b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2174b() {
+        b() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-159302077")) {
-                ipChange.ipc$dispatch("-159302077", new Object[]{this, c0502e});
-            } else if (c0502e == null || (bitmap = c0502e.b) == null || bitmap.isRecycled()) {
+                ipChange.ipc$dispatch("-159302077", new Object[]{this, eVar});
+            } else if (eVar == null || (bitmap = eVar.b) == null || bitmap.isRecycled()) {
             } else {
-                OrderDetailNoticeActivity.this.mTvNoticeImg.setImageBitmap(c0502e.b);
+                OrderDetailNoticeActivity.this.mTvNoticeImg.setImageBitmap(eVar.b);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.OrderDetailNoticeActivity$c  reason: invalid class name */
     /* loaded from: classes16.dex */
-    public class animationAnimation$AnimationListenerC2175c implements Animation.AnimationListener {
+    public class c implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        animationAnimation$AnimationListenerC2175c() {
+        c() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -191,8 +187,8 @@ public class OrderDetailNoticeActivity extends SimpleBaseActivity {
             this.mTvNoticeContent.setText(statusNotice.getPopupContent());
             if (!TextUtils.isEmpty(this.mStatusNotice.imageUrl)) {
                 this.mTvNoticeImg.setVisibility(0);
-                this.mTvNoticeImg.setOnClickListener(new View$OnClickListenerC2173a());
-                C0504a.b().f(this.mStatusNotice.imageUrl, 650, 900).n(new C2174b()).f();
+                this.mTvNoticeImg.setOnClickListener(new a());
+                cn.damai.common.image.a.b().f(this.mStatusNotice.imageUrl, 650, 900).n(new b()).f();
                 return;
             }
             this.mTvNoticeImg.setVisibility(8);
@@ -208,7 +204,7 @@ public class OrderDetailNoticeActivity extends SimpleBaseActivity {
         } else {
             Animation loadAnimation = AnimationUtils.loadAnimation(this, R$anim.activity_item_animexit);
             this.mAnimView.startAnimation(loadAnimation);
-            loadAnimation.setAnimationListener(new animationAnimation$AnimationListenerC2175c());
+            loadAnimation.setAnimationListener(new c());
         }
     }
 

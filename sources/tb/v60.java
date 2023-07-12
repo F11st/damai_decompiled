@@ -7,13 +7,12 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes3.dex */
 public final class v60 {
     @NotNull
-    private static final CallableDescriptor.UserDataKey<Object> a = new C9809a();
+    private static final CallableDescriptor.UserDataKey<Object> a = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.v60$a */
     /* loaded from: classes3.dex */
-    public static final class C9809a implements CallableDescriptor.UserDataKey<Object> {
-        C9809a() {
+    public static final class a implements CallableDescriptor.UserDataKey<Object> {
+        a() {
         }
     }
 

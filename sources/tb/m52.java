@@ -1,7 +1,6 @@
 package tb;
 
 import androidx.annotation.Nullable;
-import com.caverock.androidsvg.C4761f;
 import com.caverock.androidsvg.SVG;
 import com.caverock.ext.SVGTransform;
 import java.io.ByteArrayInputStream;
@@ -12,7 +11,7 @@ import java.io.InputStream;
 /* loaded from: classes10.dex */
 public class m52 {
     @Nullable
-    public C4761f a(InputStream inputStream, boolean z) {
+    public com.caverock.androidsvg.f a(InputStream inputStream, boolean z) {
         if (inputStream == null) {
             return null;
         }
@@ -28,14 +27,14 @@ public class m52 {
                 inputStream.reset();
                 float a = SVGTransform.a(inputStream);
                 inputStream.reset();
-                C4761f c4761f = new C4761f(SVG.h(inputStream));
-                c4761f.u(a);
+                com.caverock.androidsvg.f fVar = new com.caverock.androidsvg.f(SVG.h(inputStream));
+                fVar.u(a);
                 try {
                     inputStream.close();
                 } catch (IOException e2) {
                     e2.printStackTrace();
                 }
-                return c4761f;
+                return fVar;
             } catch (Exception e3) {
                 e3.printStackTrace();
                 try {

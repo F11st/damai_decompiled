@@ -33,7 +33,7 @@ public class LogStoreMgr implements UTServerAppStatusTrigger.UTServerAppStatusCh
             LogStoreMgr.this.n();
         }
     };
-    private ILogStore a = new C3126a(Variables.n().j());
+    private ILogStore a = new a(Variables.n().j());
 
     /* compiled from: Taobao */
     /* loaded from: classes15.dex */

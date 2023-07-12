@@ -20,10 +20,9 @@ public class yj2 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.yj2$a */
     /* loaded from: classes11.dex */
-    public static class C9991a implements IAppMonitor {
-        C9991a() {
+    public static class a implements IAppMonitor {
+        a() {
         }
 
         @Override // anet.channel.appmonitor.IAppMonitor
@@ -52,7 +51,7 @@ public class yj2 {
     }
 
     public static void a() {
-        x6.c(new C9991a());
+        x6.c(new a());
     }
 
     public static void b(RequestStatistic requestStatistic) {

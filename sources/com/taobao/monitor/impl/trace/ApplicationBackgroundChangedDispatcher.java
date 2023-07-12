@@ -25,13 +25,12 @@ public class ApplicationBackgroundChangedDispatcher extends AbsDispatcher<Backgr
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.ApplicationBackgroundChangedDispatcher$a */
     /* loaded from: classes11.dex */
-    class C6774a implements AbsDispatcher.ListenerCaller<BackgroundChangedListener> {
+    class a implements AbsDispatcher.ListenerCaller<BackgroundChangedListener> {
         final /* synthetic */ int a;
         final /* synthetic */ long b;
 
-        C6774a(ApplicationBackgroundChangedDispatcher applicationBackgroundChangedDispatcher, int i, long j) {
+        a(ApplicationBackgroundChangedDispatcher applicationBackgroundChangedDispatcher, int i, long j) {
             this.a = i;
             this.b = j;
         }
@@ -44,6 +43,6 @@ public class ApplicationBackgroundChangedDispatcher extends AbsDispatcher<Backgr
     }
 
     public void f(int i, long j) {
-        c(new C6774a(this, i, j));
+        c(new a(this, i, j));
     }
 }

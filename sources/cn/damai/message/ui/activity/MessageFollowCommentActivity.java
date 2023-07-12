@@ -15,7 +15,7 @@ import androidx.viewpager.widget.ViewPager;
 import cn.damai.category.category.ui.StarFragment;
 import cn.damai.common.badge.DMBadgeListener;
 import cn.damai.common.badge.bean.BadgeNodeItem;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -54,15 +54,14 @@ public class MessageFollowCommentActivity extends DamaiBaseActivity {
             add(MessageFollowCommentActivity.this.DM_MSGBOX_REPLY);
         }
     };
-    private DMBadgeListener listenerBadge = new C1346b();
+    private DMBadgeListener listenerBadge = new b();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.message.ui.activity.MessageFollowCommentActivity$a */
     /* loaded from: classes6.dex */
-    public class C1345a implements PagerIndicator.TabViewFactory {
+    public class a implements PagerIndicator.TabViewFactory {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1345a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.indicator.PagerIndicator.TabViewFactory
@@ -86,12 +85,11 @@ public class MessageFollowCommentActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.message.ui.activity.MessageFollowCommentActivity$b */
     /* loaded from: classes6.dex */
-    public class C1346b implements DMBadgeListener {
+    public class b implements DMBadgeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1346b() {
+        b() {
         }
 
         @Override // cn.damai.common.badge.DMBadgeListener
@@ -150,7 +148,7 @@ public class MessageFollowCommentActivity extends DamaiBaseActivity {
         this.mainAdapter = messageListMainAdapter;
         this.viewPager.setAdapter(messageListMainAdapter);
         this.pagerIndicator.setViewPager(this.viewPager);
-        this.pagerIndicator.setTabViewFactory(new C1345a());
+        this.pagerIndicator.setTabViewFactory(new a());
         this.pagerIndicator.setOnPageChangeListener(new ViewPager.OnPageChangeListener() { // from class: cn.damai.message.ui.activity.MessageFollowCommentActivity.3
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -179,12 +177,12 @@ public class MessageFollowCommentActivity extends DamaiBaseActivity {
                     xr.c(StarFragment.KEY_FOLLOW, "5");
                     MessageFollowCommentActivity messageFollowCommentActivity = MessageFollowCommentActivity.this;
                     messageFollowCommentActivity.markNode(messageFollowCommentActivity.DM_MSGBOX_ATTENTION);
-                    C0529c.e().x(te1.m().j(z20.E()));
+                    c.e().x(te1.m().j(z20.E()));
                 } else {
                     xr.c("comment", "6");
                     MessageFollowCommentActivity messageFollowCommentActivity2 = MessageFollowCommentActivity.this;
                     messageFollowCommentActivity2.markNode(messageFollowCommentActivity2.DM_MSGBOX_REPLY);
-                    C0529c.e().x(te1.m().h(z20.E()));
+                    c.e().x(te1.m().h(z20.E()));
                 }
             }
         });

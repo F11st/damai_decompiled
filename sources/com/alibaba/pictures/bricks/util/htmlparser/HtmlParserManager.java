@@ -19,7 +19,7 @@ import tb.tm;
 public final class HtmlParserManager {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C3554a Companion = new C3554a(null);
+    public static final a Companion = new a(null);
     private final int a;
     private final float b;
     private final int c;
@@ -30,7 +30,7 @@ public final class HtmlParserManager {
     /* compiled from: Taobao */
     /* loaded from: classes7.dex */
     public interface OnParseFinishedListener {
-        void onParseFinished(@Nullable List<C3555b> list);
+        void onParseFinished(@Nullable List<b> list);
     }
 
     /* compiled from: Taobao */
@@ -40,15 +40,14 @@ public final class HtmlParserManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.util.htmlparser.HtmlParserManager$a */
     /* loaded from: classes7.dex */
-    public static final class C3554a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3554a() {
+        private a() {
         }
 
-        public /* synthetic */ C3554a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -60,9 +59,8 @@ public final class HtmlParserManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.util.htmlparser.HtmlParserManager$b */
     /* loaded from: classes7.dex */
-    public static final class C3555b {
+    public static final class b {
         private static transient /* synthetic */ IpChange $ipChange;
         private int a;
         @Nullable
@@ -208,13 +206,13 @@ public final class HtmlParserManager {
             ipChange.ipc$dispatch("-315271360", new Object[]{this});
             return;
         }
-        tm a = tm.Companion.a();
-        a.i(this.c);
-        a.h(this.d);
-        a.e(this.e);
-        a.d(this.f);
-        a.g(this.b);
-        a.f(this.a);
+        tm a2 = tm.Companion.a();
+        a2.i(this.c);
+        a2.h(this.d);
+        a2.e(this.e);
+        a2.d(this.f);
+        a2.g(this.b);
+        a2.f(this.a);
     }
 
     public final void b(@NotNull Context context, @NotNull String str, @NotNull OnSpanClickListener onSpanClickListener, @NotNull OnParseFinishedListener onParseFinishedListener) {

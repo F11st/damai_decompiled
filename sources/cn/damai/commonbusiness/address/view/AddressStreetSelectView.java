@@ -48,12 +48,11 @@ public class AddressStreetSelectView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.view.AddressStreetSelectView$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0574a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0574a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -69,12 +68,11 @@ public class AddressStreetSelectView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.view.AddressStreetSelectView$b */
     /* loaded from: classes4.dex */
-    public class C0575b implements OnWheelScrollListener {
+    public class b implements OnWheelScrollListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0575b() {
+        b() {
         }
 
         @Override // cn.damai.uikit.wheel.OnWheelScrollListener
@@ -148,8 +146,8 @@ public class AddressStreetSelectView extends FrameLayout {
             ipChange.ipc$dispatch("-396580396", new Object[]{this});
             return;
         }
-        this.mOnCompletedClickListener = new View$OnClickListenerC0574a();
-        this.mOnStreetWheelScrollListener = new C0575b();
+        this.mOnCompletedClickListener = new a();
+        this.mOnStreetWheelScrollListener = new b();
     }
 
     private void setupListeners() {

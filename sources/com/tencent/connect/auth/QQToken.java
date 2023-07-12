@@ -5,12 +5,10 @@ import android.content.SharedPreferences;
 import android.text.TextUtils;
 import android.util.Base64;
 import com.tencent.connect.common.Constants;
-import com.tencent.open.b.C7081b;
 import com.tencent.open.log.SLog;
-import com.tencent.open.utils.C7111a;
-import com.tencent.open.utils.C7119g;
-import com.tencent.open.utils.C7123k;
-import com.tencent.open.utils.C7126m;
+import com.tencent.open.utils.g;
+import com.tencent.open.utils.k;
+import com.tencent.open.utils.m;
 import com.tencent.open.web.security.JniInterface;
 import org.json.JSONObject;
 
@@ -26,7 +24,7 @@ public class QQToken {
     private String c;
     private int d = 1;
     private long e = -1;
-    private C7111a f;
+    private com.tencent.open.utils.a f;
 
     public QQToken(String str) {
         this.a = str;
@@ -37,7 +35,7 @@ public class QQToken {
         SharedPreferences sharedPreferences;
         synchronized (QQToken.class) {
             if (g == null) {
-                g = C7119g.a().getSharedPreferences("token_info_file", 0);
+                g = g.a().getSharedPreferences("token_info_file", 0);
             }
             sharedPreferences = g;
         }
@@ -46,12 +44,12 @@ public class QQToken {
 
     @Deprecated
     private static String b(String str) {
-        return Base64.encodeToString(C7126m.j(str), 2);
+        return Base64.encodeToString(m.j(str), 2);
     }
 
     @Deprecated
     private static String c(String str) {
-        return Base64.encodeToString(C7126m.j(str), 2) + "_spkey";
+        return Base64.encodeToString(m.j(str), 2) + "_spkey";
     }
 
     public String getAccessToken() {
@@ -102,7 +100,7 @@ public class QQToken {
     public JSONObject loadSession(String str) {
         try {
             if (this.f == null) {
-                this.f = new C7111a(C7119g.a());
+                this.f = new com.tencent.open.utils.a(g.a());
             }
             return a(str, this.f);
         } catch (Exception e) {
@@ -123,7 +121,7 @@ public class QQToken {
     public boolean saveSession(JSONObject jSONObject) {
         try {
             if (this.f == null) {
-                this.f = new C7111a(C7119g.a());
+                this.f = new com.tencent.open.utils.a(g.a());
             }
             return a(this.a, jSONObject, this.f);
         } catch (Exception e) {
@@ -150,13 +148,13 @@ public class QQToken {
 
     public void setOpenId(String str) {
         this.c = str;
-        C7081b.a().a(str);
+        com.tencent.open.b.b.a().a(str);
     }
 
-    private static synchronized JSONObject a(String str, C7111a c7111a) {
+    private static synchronized JSONObject a(String str, com.tencent.open.utils.a aVar) {
         String b;
         synchronized (QQToken.class) {
-            if (C7119g.a() == null) {
+            if (g.a() == null) {
                 SLog.i("QQToken", "loadJsonPreference context null");
                 return null;
             } else if (str == null) {
@@ -166,7 +164,7 @@ public class QQToken {
                 String string = a().getString(a(str), "");
                 if (TextUtils.isEmpty(string)) {
                     if (!JniInterface.isJniOk) {
-                        C7123k.a(AuthAgent.SECURE_LIB_FILE_NAME, AuthAgent.SECURE_LIB_NAME, 5);
+                        k.a(AuthAgent.SECURE_LIB_FILE_NAME, AuthAgent.SECURE_LIB_NAME, 5);
                         JniInterface.loadSo();
                     }
                     if (!JniInterface.isJniOk) {
@@ -189,7 +187,7 @@ public class QQToken {
                                 a().edit().remove(b2).apply();
                                 return null;
                             }
-                            a(str, new JSONObject(b), c7111a);
+                            a(str, new JSONObject(b), aVar);
                             a().edit().remove(b2).apply();
                         } catch (Exception e) {
                             SLog.e("QQToken", "Catch Exception", e);
@@ -199,7 +197,7 @@ public class QQToken {
                     } else {
                         try {
                             b = JniInterface.d2(string2);
-                            a(str, new JSONObject(b), c7111a);
+                            a(str, new JSONObject(b), aVar);
                             a().edit().remove(c).apply();
                         } catch (Exception e2) {
                             SLog.e("QQToken", "Catch Exception", e2);
@@ -208,7 +206,7 @@ public class QQToken {
                         }
                     }
                 } else {
-                    b = c7111a.b(string);
+                    b = aVar.b(string);
                 }
                 try {
                     JSONObject jSONObject = new JSONObject(b);
@@ -222,9 +220,9 @@ public class QQToken {
         }
     }
 
-    private static synchronized boolean a(String str, JSONObject jSONObject, C7111a c7111a) {
+    private static synchronized boolean a(String str, JSONObject jSONObject, com.tencent.open.utils.a aVar) {
         synchronized (QQToken.class) {
-            if (C7119g.a() == null) {
+            if (g.a() == null) {
                 SLog.i("QQToken", "saveJsonPreference context null");
                 return false;
             } else if (str != null && jSONObject != null) {
@@ -233,7 +231,7 @@ public class QQToken {
                     if (!TextUtils.isEmpty(string)) {
                         jSONObject.put(Constants.PARAM_EXPIRES_TIME, System.currentTimeMillis() + (Long.parseLong(string) * 1000));
                         String a = a(str);
-                        String a2 = c7111a.a(jSONObject.toString());
+                        String a2 = aVar.a(jSONObject.toString());
                         if (a.length() > 6 && a2 != null) {
                             a().edit().putString(a, a2).commit();
                             SLog.i("QQToken", "saveJsonPreference sucess");
@@ -256,6 +254,6 @@ public class QQToken {
     }
 
     private static String a(String str) {
-        return Base64.encodeToString(C7126m.j(str), 2) + "_aes_google";
+        return Base64.encodeToString(m.j(str), 2) + "_aes_google";
     }
 }

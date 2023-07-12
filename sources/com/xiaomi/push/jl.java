@@ -14,21 +14,20 @@ public class jl extends jb {
     private static int f = 104857600;
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.jl$a */
     /* loaded from: classes11.dex */
-    public static class C7682a extends jb.C7681a {
-        public C7682a() {
+    public static class a extends jb.a {
+        public a() {
             super(false, true);
         }
 
-        public C7682a(boolean z, boolean z2, int i) {
+        public a(boolean z, boolean z2, int i) {
             super(z, z2, i);
         }
 
-        @Override // com.xiaomi.push.jb.C7681a, com.xiaomi.push.jh
+        @Override // com.xiaomi.push.jb.a, com.xiaomi.push.jh
         public jf a(jp jpVar) {
-            jl jlVar = new jl(jpVar, ((jb.C7681a) this).f799a, this.b);
-            int i = ((jb.C7681a) this).a;
+            jl jlVar = new jl(jpVar, ((jb.a) this).f799a, this.b);
+            int i = ((jb.a) this).a;
             if (i != 0) {
                 jlVar.b(i);
             }
@@ -43,10 +42,10 @@ public class jl extends jb {
     @Override // com.xiaomi.push.jb, com.xiaomi.push.jf
     /* renamed from: a */
     public jd mo1103a() {
-        byte a = a();
+        byte a2 = a();
         int mo1100a = mo1100a();
         if (mo1100a <= c) {
-            return new jd(a, mo1100a);
+            return new jd(a2, mo1100a);
         }
         throw new jg(3, "Thrift list size " + mo1100a + " out of range!");
     }
@@ -54,11 +53,11 @@ public class jl extends jb {
     @Override // com.xiaomi.push.jb, com.xiaomi.push.jf
     /* renamed from: a */
     public je mo1104a() {
-        byte a = a();
         byte a2 = a();
+        byte a3 = a();
         int mo1100a = mo1100a();
         if (mo1100a <= b) {
-            return new je(a, a2, mo1100a);
+            return new je(a2, a3, mo1100a);
         }
         throw new jg(3, "Thrift map size " + mo1100a + " out of range!");
     }
@@ -66,10 +65,10 @@ public class jl extends jb {
     @Override // com.xiaomi.push.jb, com.xiaomi.push.jf
     /* renamed from: a */
     public jj mo1105a() {
-        byte a = a();
+        byte a2 = a();
         int mo1100a = mo1100a();
         if (mo1100a <= d) {
-            return new jj(a, mo1100a);
+            return new jj(a2, mo1100a);
         }
         throw new jg(3, "Thrift set size " + mo1100a + " out of range!");
     }

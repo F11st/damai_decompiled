@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.SequentialDisposable;
 import io.reactivex.internal.functions.ObjectHelper;
@@ -27,12 +27,12 @@ public final class ObservableCache<T> extends AbstractObservableWithUpstream<T, 
         final SequentialDisposable connection;
         volatile boolean isConnected;
         final AtomicReference<ReplayDisposable<T>[]> observers;
-        final AbstractC8149d<? extends T> source;
+        final d<? extends T> source;
         boolean sourceDone;
 
-        CacheState(AbstractC8149d<? extends T> abstractC8149d, int i) {
+        CacheState(d<? extends T> dVar, int i) {
             super(i);
-            this.source = abstractC8149d;
+            this.source = dVar;
             this.observers = new AtomicReference<>(EMPTY);
             this.connection = new SequentialDisposable();
         }
@@ -214,14 +214,14 @@ public final class ObservableCache<T> extends AbstractObservableWithUpstream<T, 
         }
     }
 
-    private ObservableCache(AbstractC8149d<T> abstractC8149d, CacheState<T> cacheState) {
-        super(abstractC8149d);
+    private ObservableCache(d<T> dVar, CacheState<T> cacheState) {
+        super(dVar);
         this.state = cacheState;
         this.once = new AtomicBoolean();
     }
 
-    public static <T> AbstractC8149d<T> from(AbstractC8149d<T> abstractC8149d) {
-        return from(abstractC8149d, 16);
+    public static <T> d<T> from(d<T> dVar) {
+        return from(dVar, 16);
     }
 
     int cachedEventCount() {
@@ -236,7 +236,7 @@ public final class ObservableCache<T> extends AbstractObservableWithUpstream<T, 
         return this.state.isConnected;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super T> observer) {
         ReplayDisposable<T> replayDisposable = new ReplayDisposable<>(observer, this.state);
         observer.onSubscribe(replayDisposable);
@@ -247,8 +247,8 @@ public final class ObservableCache<T> extends AbstractObservableWithUpstream<T, 
         replayDisposable.replay();
     }
 
-    public static <T> AbstractC8149d<T> from(AbstractC8149d<T> abstractC8149d, int i) {
+    public static <T> d<T> from(d<T> dVar, int i) {
         ObjectHelper.verifyPositive(i, "capacityHint");
-        return i42.n(new ObservableCache(abstractC8149d, new CacheState(abstractC8149d, i)));
+        return i42.n(new ObservableCache(dVar, new CacheState(dVar, i)));
     }
 }

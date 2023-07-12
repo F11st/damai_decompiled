@@ -17,7 +17,7 @@ import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.arch.v3.IItem;
 import com.youku.arch.v3.core.ItemValue;
 import java.util.ArrayList;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
 import tb.k62;
@@ -116,7 +116,7 @@ public final class HistoryIPCardViewHolder extends BaseViewHolder<HistoryIPBean>
             for (Object obj : arrayList2) {
                 int i3 = i + 1;
                 if (i < 0) {
-                    C8214m.p();
+                    m.p();
                 }
                 ArrayList<TextInfo> arrayList3 = (ArrayList) obj;
                 if (arrayList3 != null) {

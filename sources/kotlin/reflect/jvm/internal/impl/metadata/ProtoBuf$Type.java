@@ -5,10 +5,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
-import kotlin.reflect.jvm.internal.impl.protobuf.AbstractC8443a;
 import kotlin.reflect.jvm.internal.impl.protobuf.AbstractMessageLite;
 import kotlin.reflect.jvm.internal.impl.protobuf.ByteString;
-import kotlin.reflect.jvm.internal.impl.protobuf.C8447c;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedOutputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite;
@@ -16,11 +14,12 @@ import kotlin.reflect.jvm.internal.impl.protobuf.Internal;
 import kotlin.reflect.jvm.internal.impl.protobuf.InvalidProtocolBufferException;
 import kotlin.reflect.jvm.internal.impl.protobuf.MessageLiteOrBuilder;
 import kotlin.reflect.jvm.internal.impl.protobuf.Parser;
+import kotlin.reflect.jvm.internal.impl.protobuf.c;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class ProtoBuf$Type extends GeneratedMessageLite.ExtendableMessage<ProtoBuf$Type> implements ProtoBuf$TypeOrBuilder {
-    public static Parser<ProtoBuf$Type> PARSER = new C8414a();
+    public static Parser<ProtoBuf$Type> PARSER = new a();
     private static final ProtoBuf$Type defaultInstance;
     private int abbreviatedTypeId_;
     private ProtoBuf$Type abbreviatedType_;
@@ -44,7 +43,7 @@ public final class ProtoBuf$Type extends GeneratedMessageLite.ExtendableMessage<
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
     public static final class Argument extends GeneratedMessageLite implements ArgumentOrBuilder {
-        public static Parser<Argument> PARSER = new C8413a();
+        public static Parser<Argument> PARSER = new a();
         private static final Argument defaultInstance;
         private int bitField0_;
         private byte memoizedIsInitialized;
@@ -173,7 +172,7 @@ public final class ProtoBuf$Type extends GeneratedMessageLite.ExtendableMessage<
                 Code decompiled incorrectly, please refer to instructions dump.
                 To view partially-correct code enable 'Show inconsistent code' option in preferences
             */
-            public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Type.Argument.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.C8447c r4) throws java.io.IOException {
+            public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf.Type.Argument.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.c r4) throws java.io.IOException {
                 /*
                     r2 = this;
                     r0 = 0
@@ -213,14 +212,13 @@ public final class ProtoBuf$Type extends GeneratedMessageLite.ExtendableMessage<
             INV(2, 2),
             STAR(3, 3);
             
-            private static Internal.EnumLiteMap<Projection> internalValueMap = new C8412a();
+            private static Internal.EnumLiteMap<Projection> internalValueMap = new a();
             private final int value;
 
             /* compiled from: Taobao */
-            /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Type$Argument$Projection$a */
             /* loaded from: classes3.dex */
-            static class C8412a implements Internal.EnumLiteMap<Projection> {
-                C8412a() {
+            static class a implements Internal.EnumLiteMap<Projection> {
+                a() {
                 }
 
                 @Override // kotlin.reflect.jvm.internal.impl.protobuf.Internal.EnumLiteMap
@@ -257,16 +255,15 @@ public final class ProtoBuf$Type extends GeneratedMessageLite.ExtendableMessage<
         }
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Type$Argument$a */
         /* loaded from: classes3.dex */
-        static class C8413a extends AbstractC8443a<Argument> {
-            C8413a() {
+        static class a extends kotlin.reflect.jvm.internal.impl.protobuf.a<Argument> {
+            a() {
             }
 
             @Override // kotlin.reflect.jvm.internal.impl.protobuf.Parser
             /* renamed from: i */
-            public Argument parsePartialFrom(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
-                return new Argument(codedInputStream, c8447c);
+            public Argument parsePartialFrom(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
+                return new Argument(codedInputStream, cVar);
             }
         }
 
@@ -401,11 +398,11 @@ public final class ProtoBuf$Type extends GeneratedMessageLite.ExtendableMessage<
             this.unknownFields = ByteString.EMPTY;
         }
 
-        private Argument(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
+        private Argument(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
             this.memoizedIsInitialized = (byte) -1;
             this.memoizedSerializedSize = -1;
             initFields();
-            ByteString.C8436a n = ByteString.n();
+            ByteString.a n = ByteString.n();
             CodedOutputStream J = CodedOutputStream.J(n, 1);
             boolean z = false;
             while (!z) {
@@ -426,7 +423,7 @@ public final class ProtoBuf$Type extends GeneratedMessageLite.ExtendableMessage<
                                     }
                                 } else if (K == 18) {
                                     Builder builder = (this.bitField0_ & 2) == 2 ? this.type_.toBuilder() : null;
-                                    ProtoBuf$Type protoBuf$Type = (ProtoBuf$Type) codedInputStream.u(ProtoBuf$Type.PARSER, c8447c);
+                                    ProtoBuf$Type protoBuf$Type = (ProtoBuf$Type) codedInputStream.u(ProtoBuf$Type.PARSER, cVar);
                                     this.type_ = protoBuf$Type;
                                     if (builder != null) {
                                         builder.mergeFrom(protoBuf$Type);
@@ -434,7 +431,7 @@ public final class ProtoBuf$Type extends GeneratedMessageLite.ExtendableMessage<
                                     }
                                     this.bitField0_ |= 2;
                                 } else if (K != 24) {
-                                    if (!parseUnknownField(codedInputStream, J, c8447c, K)) {
+                                    if (!parseUnknownField(codedInputStream, J, cVar, K)) {
                                     }
                                 } else {
                                     this.bitField0_ |= 4;
@@ -802,7 +799,7 @@ public final class ProtoBuf$Type extends GeneratedMessageLite.ExtendableMessage<
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Type.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.C8447c r4) throws java.io.IOException {
+        public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Type.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.c r4) throws java.io.IOException {
             /*
                 r2 = this;
                 r0 = 0
@@ -835,16 +832,15 @@ public final class ProtoBuf$Type extends GeneratedMessageLite.ExtendableMessage<
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Type$a */
     /* loaded from: classes3.dex */
-    static class C8414a extends AbstractC8443a<ProtoBuf$Type> {
-        C8414a() {
+    static class a extends kotlin.reflect.jvm.internal.impl.protobuf.a<ProtoBuf$Type> {
+        a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.protobuf.Parser
         /* renamed from: i */
-        public ProtoBuf$Type parsePartialFrom(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
-            return new ProtoBuf$Type(codedInputStream, c8447c);
+        public ProtoBuf$Type parsePartialFrom(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
+            return new ProtoBuf$Type(codedInputStream, cVar);
         }
     }
 
@@ -1087,7 +1083,7 @@ public final class ProtoBuf$Type extends GeneratedMessageLite.ExtendableMessage<
     @Override // kotlin.reflect.jvm.internal.impl.protobuf.MessageLite
     public void writeTo(CodedOutputStream codedOutputStream) throws IOException {
         getSerializedSize();
-        GeneratedMessageLite.ExtendableMessage<MessageType>.C8438a newExtensionWriter = newExtensionWriter();
+        GeneratedMessageLite.ExtendableMessage<MessageType>.a newExtensionWriter = newExtensionWriter();
         if ((this.bitField0_ & 4096) == 4096) {
             codedOutputStream.a0(1, this.flags_);
         }
@@ -1167,12 +1163,12 @@ public final class ProtoBuf$Type extends GeneratedMessageLite.ExtendableMessage<
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    private ProtoBuf$Type(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
+    private ProtoBuf$Type(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
         Builder builder;
         this.memoizedIsInitialized = (byte) -1;
         this.memoizedSerializedSize = -1;
         initFields();
-        ByteString.C8436a n = ByteString.n();
+        ByteString.a n = ByteString.n();
         CodedOutputStream J = CodedOutputStream.J(n, 1);
         boolean z = false;
         boolean z2 = false;
@@ -1192,7 +1188,7 @@ public final class ProtoBuf$Type extends GeneratedMessageLite.ExtendableMessage<
                                 this.argument_ = new ArrayList();
                                 z2 |= true;
                             }
-                            this.argument_.add(codedInputStream.u(Argument.PARSER, c8447c));
+                            this.argument_.add(codedInputStream.u(Argument.PARSER, cVar));
                             continue;
                         case 24:
                             this.bitField0_ |= 1;
@@ -1204,7 +1200,7 @@ public final class ProtoBuf$Type extends GeneratedMessageLite.ExtendableMessage<
                             continue;
                         case 42:
                             builder = (this.bitField0_ & 4) == 4 ? this.flexibleUpperBound_.toBuilder() : null;
-                            ProtoBuf$Type protoBuf$Type = (ProtoBuf$Type) codedInputStream.u(PARSER, c8447c);
+                            ProtoBuf$Type protoBuf$Type = (ProtoBuf$Type) codedInputStream.u(PARSER, cVar);
                             this.flexibleUpperBound_ = protoBuf$Type;
                             if (builder != null) {
                                 builder.mergeFrom(protoBuf$Type);
@@ -1230,7 +1226,7 @@ public final class ProtoBuf$Type extends GeneratedMessageLite.ExtendableMessage<
                             continue;
                         case 82:
                             builder = (this.bitField0_ & 256) == 256 ? this.outerType_.toBuilder() : null;
-                            ProtoBuf$Type protoBuf$Type2 = (ProtoBuf$Type) codedInputStream.u(PARSER, c8447c);
+                            ProtoBuf$Type protoBuf$Type2 = (ProtoBuf$Type) codedInputStream.u(PARSER, cVar);
                             this.outerType_ = protoBuf$Type2;
                             if (builder != null) {
                                 builder.mergeFrom(protoBuf$Type2);
@@ -1248,7 +1244,7 @@ public final class ProtoBuf$Type extends GeneratedMessageLite.ExtendableMessage<
                             continue;
                         case 106:
                             builder = (this.bitField0_ & 1024) == 1024 ? this.abbreviatedType_.toBuilder() : null;
-                            ProtoBuf$Type protoBuf$Type3 = (ProtoBuf$Type) codedInputStream.u(PARSER, c8447c);
+                            ProtoBuf$Type protoBuf$Type3 = (ProtoBuf$Type) codedInputStream.u(PARSER, cVar);
                             this.abbreviatedType_ = protoBuf$Type3;
                             if (builder != null) {
                                 builder.mergeFrom(protoBuf$Type3);
@@ -1261,7 +1257,7 @@ public final class ProtoBuf$Type extends GeneratedMessageLite.ExtendableMessage<
                             this.abbreviatedTypeId_ = codedInputStream.s();
                             continue;
                         default:
-                            if (!parseUnknownField(codedInputStream, J, c8447c, K)) {
+                            if (!parseUnknownField(codedInputStream, J, cVar, K)) {
                                 break;
                             } else {
                                 continue;

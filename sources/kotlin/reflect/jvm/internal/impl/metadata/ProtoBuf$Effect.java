@@ -6,21 +6,20 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Expression;
-import kotlin.reflect.jvm.internal.impl.protobuf.AbstractC8443a;
 import kotlin.reflect.jvm.internal.impl.protobuf.AbstractMessageLite;
 import kotlin.reflect.jvm.internal.impl.protobuf.ByteString;
-import kotlin.reflect.jvm.internal.impl.protobuf.C8447c;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedOutputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite;
 import kotlin.reflect.jvm.internal.impl.protobuf.Internal;
 import kotlin.reflect.jvm.internal.impl.protobuf.InvalidProtocolBufferException;
 import kotlin.reflect.jvm.internal.impl.protobuf.Parser;
+import kotlin.reflect.jvm.internal.impl.protobuf.c;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class ProtoBuf$Effect extends GeneratedMessageLite implements ProtoBuf$EffectOrBuilder {
-    public static Parser<ProtoBuf$Effect> PARSER = new C8398a();
+    public static Parser<ProtoBuf$Effect> PARSER = new a();
     private static final ProtoBuf$Effect defaultInstance;
     private int bitField0_;
     private ProtoBuf$Expression conclusionOfConditionalEffect_;
@@ -186,7 +185,7 @@ public final class ProtoBuf$Effect extends GeneratedMessageLite implements Proto
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Effect.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.C8447c r4) throws java.io.IOException {
+        public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Effect.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.c r4) throws java.io.IOException {
             /*
                 r2 = this;
                 r0 = 0
@@ -225,14 +224,13 @@ public final class ProtoBuf$Effect extends GeneratedMessageLite implements Proto
         CALLS(1, 1),
         RETURNS_NOT_NULL(2, 2);
         
-        private static Internal.EnumLiteMap<EffectType> internalValueMap = new C8396a();
+        private static Internal.EnumLiteMap<EffectType> internalValueMap = new a();
         private final int value;
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Effect$EffectType$a */
         /* loaded from: classes3.dex */
-        static class C8396a implements Internal.EnumLiteMap<EffectType> {
-            C8396a() {
+        static class a implements Internal.EnumLiteMap<EffectType> {
+            a() {
             }
 
             @Override // kotlin.reflect.jvm.internal.impl.protobuf.Internal.EnumLiteMap
@@ -272,14 +270,13 @@ public final class ProtoBuf$Effect extends GeneratedMessageLite implements Proto
         EXACTLY_ONCE(1, 1),
         AT_LEAST_ONCE(2, 2);
         
-        private static Internal.EnumLiteMap<InvocationKind> internalValueMap = new C8397a();
+        private static Internal.EnumLiteMap<InvocationKind> internalValueMap = new a();
         private final int value;
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Effect$InvocationKind$a */
         /* loaded from: classes3.dex */
-        static class C8397a implements Internal.EnumLiteMap<InvocationKind> {
-            C8397a() {
+        static class a implements Internal.EnumLiteMap<InvocationKind> {
+            a() {
             }
 
             @Override // kotlin.reflect.jvm.internal.impl.protobuf.Internal.EnumLiteMap
@@ -313,16 +310,15 @@ public final class ProtoBuf$Effect extends GeneratedMessageLite implements Proto
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Effect$a */
     /* loaded from: classes3.dex */
-    static class C8398a extends AbstractC8443a<ProtoBuf$Effect> {
-        C8398a() {
+    static class a extends kotlin.reflect.jvm.internal.impl.protobuf.a<ProtoBuf$Effect> {
+        a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.protobuf.Parser
         /* renamed from: i */
-        public ProtoBuf$Effect parsePartialFrom(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
-            return new ProtoBuf$Effect(codedInputStream, c8447c);
+        public ProtoBuf$Effect parsePartialFrom(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
+            return new ProtoBuf$Effect(codedInputStream, cVar);
         }
     }
 
@@ -479,11 +475,11 @@ public final class ProtoBuf$Effect extends GeneratedMessageLite implements Proto
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    private ProtoBuf$Effect(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
+    private ProtoBuf$Effect(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
         this.memoizedIsInitialized = (byte) -1;
         this.memoizedSerializedSize = -1;
         initFields();
-        ByteString.C8436a n = ByteString.n();
+        ByteString.a n = ByteString.n();
         CodedOutputStream J = CodedOutputStream.J(n, 1);
         boolean z = false;
         boolean z2 = false;
@@ -507,10 +503,10 @@ public final class ProtoBuf$Effect extends GeneratedMessageLite implements Proto
                                 this.effectConstructorArgument_ = new ArrayList();
                                 z2 |= true;
                             }
-                            this.effectConstructorArgument_.add(codedInputStream.u(ProtoBuf$Expression.PARSER, c8447c));
+                            this.effectConstructorArgument_.add(codedInputStream.u(ProtoBuf$Expression.PARSER, cVar));
                         } else if (K == 26) {
                             ProtoBuf$Expression.Builder builder = (this.bitField0_ & 2) == 2 ? this.conclusionOfConditionalEffect_.toBuilder() : null;
-                            ProtoBuf$Expression protoBuf$Expression = (ProtoBuf$Expression) codedInputStream.u(ProtoBuf$Expression.PARSER, c8447c);
+                            ProtoBuf$Expression protoBuf$Expression = (ProtoBuf$Expression) codedInputStream.u(ProtoBuf$Expression.PARSER, cVar);
                             this.conclusionOfConditionalEffect_ = protoBuf$Expression;
                             if (builder != null) {
                                 builder.mergeFrom(protoBuf$Expression);
@@ -518,7 +514,7 @@ public final class ProtoBuf$Effect extends GeneratedMessageLite implements Proto
                             }
                             this.bitField0_ |= 2;
                         } else if (K != 32) {
-                            if (!parseUnknownField(codedInputStream, J, c8447c, K)) {
+                            if (!parseUnknownField(codedInputStream, J, cVar, K)) {
                             }
                         } else {
                             int n3 = codedInputStream.n();

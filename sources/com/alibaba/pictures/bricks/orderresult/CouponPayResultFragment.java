@@ -28,7 +28,7 @@ import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import java.util.ArrayList;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -48,7 +48,7 @@ public final class CouponPayResultFragment extends BricksBaseFragment {
     @NotNull
     public static final String CITYID = "cityId";
     @NotNull
-    public static final C3539a Companion = new C3539a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String HOME_CLICK = "home_action";
     @NotNull
@@ -77,13 +77,12 @@ public final class CouponPayResultFragment extends BricksBaseFragment {
     };
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.orderresult.CouponPayResultFragment$a */
     /* loaded from: classes7.dex */
-    public static final class C3539a {
-        private C3539a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3539a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -159,10 +158,10 @@ public final class CouponPayResultFragment extends BricksBaseFragment {
             if (mGaiaXRecyclerView != null) {
                 mGaiaXRecyclerView.setRefreshing(true);
             }
-            rb0.C9647a c9647a = rb0.Companion;
+            rb0.a aVar = rb0.Companion;
             PaySuccessRequest paySuccessRequest = new PaySuccessRequest();
             paySuccessRequest.setOrderId(this.orderId);
-            c9647a.b(paySuccessRequest).c(getContext()).a().doOnKTSuccess(new Function1<DmCouponPaySuccessBean, wt2>() { // from class: com.alibaba.pictures.bricks.orderresult.CouponPayResultFragment$requestPayResultData$2
+            aVar.b(paySuccessRequest).c(getContext()).a().doOnKTSuccess(new Function1<DmCouponPaySuccessBean, wt2>() { // from class: com.alibaba.pictures.bricks.orderresult.CouponPayResultFragment$requestPayResultData$2
                 private static transient /* synthetic */ IpChange $ipChange;
 
                 /* JADX INFO: Access modifiers changed from: package-private */
@@ -428,7 +427,7 @@ public final class CouponPayResultFragment extends BricksBaseFragment {
         this.cityID = arguments2 != null ? arguments2.getString("cityId") : null;
         String str = this.orderId;
         if (str != null) {
-            C8604o.s(str);
+            o.s(str);
         }
     }
 

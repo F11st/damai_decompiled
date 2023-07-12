@@ -766,7 +766,7 @@ public final class DMH5Fragment extends TaoMaiUCH5Fragment implements ILoginList
             if (r0 == 0) goto L78
             java.lang.String r0 = r0.getUrl()
             if (r0 == 0) goto L78
-            boolean r7 = kotlin.text.C8596g.K(r0, r7, r5, r3, r1)
+            boolean r7 = kotlin.text.g.K(r0, r7, r5, r3, r1)
             if (r7 != r4) goto L78
             goto L79
         L78:

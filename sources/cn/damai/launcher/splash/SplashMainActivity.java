@@ -33,7 +33,7 @@ import cn.damai.common.image.blur.ImageBlurHelper;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.PriorityTask;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.update.UpdateUtil;
@@ -213,7 +213,7 @@ public class SplashMainActivity extends DamaiBaseActivity {
                         }
                         long currentTimeMillis = System.currentTimeMillis() - SplashMainActivity.this.mAdsDisplayStartTs;
                         LauncherUTHelper.getInstance().i(currentTimeMillis, splashResponse.getPic(), splashResponse.getSchema());
-                        C0529c.e().x(LauncherUTHelper.getInstance().h(splashResponse, z20.d(), splashResponse.getPic()));
+                        c.e().x(LauncherUTHelper.getInstance().h(splashResponse, z20.d(), splashResponse.getPic()));
                         SplashMainActivity.this.setAPMAdTime(currentTimeMillis);
                     }
                 });
@@ -403,7 +403,7 @@ public class SplashMainActivity extends DamaiBaseActivity {
             ipChange.ipc$dispatch("1177923231", new Object[]{this, Boolean.valueOf(z)});
             return;
         }
-        C0529c.e().x(pl.j().t("首页", 0));
+        c.e().x(pl.j().t("首页", 0));
         Bundle bundle = new Bundle();
         bundle.putString(HOMEPAGE_OUTER_URL, getIntent().getStringExtra(HOMEPAGE_OUTER_URL));
         DMNav.from(this).withExtras(bundle).setTransition(0, 0).toUri(NavUri.b(cs.n));
@@ -815,7 +815,7 @@ public class SplashMainActivity extends DamaiBaseActivity {
         super.onCreate(bundle);
         if (ru1.d()) {
             setDamaiUTKeyBuilder(LauncherUTHelper.getInstance().g("welcome"));
-            C0529c.e().K(this);
+            c.e().K(this);
         }
         fd.a("Splash onCreate finish", 201);
     }

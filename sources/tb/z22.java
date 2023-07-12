@@ -17,7 +17,7 @@ import org.jetbrains.annotations.Nullable;
 public final class z22 {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C10010a Companion = new C10010a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final View a;
     private int b;
@@ -33,15 +33,14 @@ public final class z22 {
     private y22 i;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.z22$a */
     /* loaded from: classes7.dex */
-    public static final class C10010a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C10010a() {
+        private a() {
         }
 
-        public /* synthetic */ C10010a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -111,12 +110,12 @@ public final class z22 {
             if (y22Var2 != null) {
                 y22Var2.a();
             }
-            y22 a = n41.INSTANCE.a(e32.c(this.a), this.b, View.MeasureSpec.getSize(i), View.MeasureSpec.getSize(i2), c(), b(), this.e, this.i);
-            if ((d != a.d() || b != a.b()) && (onResponsiveListener = this.h) != null) {
-                onResponsiveListener.onResponsive(a);
+            y22 a2 = n41.INSTANCE.a(e32.c(this.a), this.b, View.MeasureSpec.getSize(i), View.MeasureSpec.getSize(i2), c(), b(), this.e, this.i);
+            if ((d != a2.d() || b != a2.b()) && (onResponsiveListener = this.h) != null) {
+                onResponsiveListener.onResponsive(a2);
             }
             wt2 wt2Var = wt2.INSTANCE;
-            this.i = a;
+            this.i = a2;
         }
         y22 y22Var3 = this.i;
         b41.f(y22Var3);

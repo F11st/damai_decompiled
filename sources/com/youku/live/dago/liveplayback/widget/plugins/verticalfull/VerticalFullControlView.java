@@ -32,7 +32,7 @@ public class VerticalFullControlView extends LazyInflatedView implements Vertica
     private PlayerSeekBar mSeekBar;
 
     public VerticalFullControlView(Context context, ILMLayerManager<ViewGroup> iLMLayerManager, String str, ViewPlaceholder viewPlaceholder) {
-        super(context, iLMLayerManager, str, R.C7935layout.player_vertical_fullscreen_plugin, viewPlaceholder);
+        super(context, iLMLayerManager, str, R.layout.player_vertical_fullscreen_plugin, viewPlaceholder);
     }
 
     private void refreshLayout() {
@@ -161,7 +161,7 @@ public class VerticalFullControlView extends LazyInflatedView implements Vertica
         IAlixPlayer.State currentState = playerContainer.getPlayer().getCurrentState();
         this.mControlButton.setVisibility(0);
         refreshLayout();
-        this.mControlButton.setImageResource(currentState == IAlixPlayer.State.STATE_VIDEO_STARTED ? R.C7933drawable.btn_pause_live : R.C7933drawable.btn_play_live);
+        this.mControlButton.setImageResource(currentState == IAlixPlayer.State.STATE_VIDEO_STARTED ? R.drawable.btn_pause_live : R.drawable.btn_play_live);
         this.mSeekBar.setVisibility(0);
         this.mLeftText.setVisibility(0);
         this.mRightText.setVisibility(0);

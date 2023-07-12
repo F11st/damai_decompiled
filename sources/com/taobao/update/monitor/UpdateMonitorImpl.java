@@ -19,7 +19,7 @@ import tb.pu2;
 public class UpdateMonitorImpl implements UpdateMonitor {
     private final String PERF_KEY = "update_unique_monit";
     private Map<String, Set<iu2>> updateAlarmDatas = new HashMap();
-    private C6938a updateStatMonitor = new C6938a();
+    private a updateStatMonitor = new a();
 
     private void clear() {
         UpdateRuntime.getContext().getSharedPreferences("update_point", 0).edit().clear().commit();

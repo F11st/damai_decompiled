@@ -11,7 +11,7 @@ import android.os.SystemClock;
 import android.text.TextUtils;
 import android.util.Log;
 import com.alibaba.analytics.core.sync.UploadQueueMgr;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
+import com.alibaba.security.realidentity.jsbridge.a;
 import com.alipay.ma.MaBuryRecord;
 import com.alipay.ma.MaLogger;
 import com.alipay.ma.analyze.api.MaEngineAPI;
@@ -24,7 +24,7 @@ import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -357,11 +357,11 @@ public class MaDecode {
         hashMap.put("scanMode", Integer.valueOf(i2));
         hashMap.put("resultCode", Integer.valueOf(i));
         if (str != null) {
-            hashMap.put(AbstractC3893a.V, str);
+            hashMap.put(a.V, str);
         }
         if (i3 > 0 && i4 > 0) {
             hashMap.put("originWidth", Integer.valueOf(i3));
-            hashMap.put(C9796v.TAK_ABILITY_SHOW_POP_INIT_SHOW_HEIGHT, Integer.valueOf(i4));
+            hashMap.put(v.TAK_ABILITY_SHOW_POP_INIT_SHOW_HEIGHT, Integer.valueOf(i4));
         }
         if (i == 0) {
             MaBuryRecord.recordScanDecodeTrack("SCAN_IMAGE_CODE", "SCAN_IMAGE_SUCCEED", hashMap);

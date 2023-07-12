@@ -10,7 +10,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.text.TextUtils;
-import com.tencent.open.b.C7084e;
+import com.tencent.open.b.e;
 import com.tencent.open.log.SLog;
 import org.json.JSONObject;
 
@@ -103,7 +103,7 @@ public class AssistActivity extends Activity {
         L3c:
             r5 = r4
         L3d:
-            boolean r13 = com.tencent.open.utils.C7126m.a(r12, r1)
+            boolean r13 = com.tencent.open.utils.m.a(r12, r1)
             if (r13 != 0) goto L6e
             com.tencent.connect.common.UIListenerManager r13 = com.tencent.connect.common.UIListenerManager.getInstance()
             com.tencent.tauth.IUiListener r13 = r13.getListnerWithAction(r0)
@@ -115,7 +115,7 @@ public class AssistActivity extends Activity {
             r0.<init>(r1, r7, r6)
             r13.onError(r0)
         L59:
-            com.tencent.open.b.e r1 = com.tencent.open.b.C7084e.a()
+            com.tencent.open.b.e r1 = com.tencent.open.b.e.a()
             java.lang.String r6 = "3"
             java.lang.String r7 = "1"
             java.lang.String r9 = "0"
@@ -125,7 +125,7 @@ public class AssistActivity extends Activity {
             r12.finish()
             goto L7f
         L6e:
-            com.tencent.open.b.e r1 = com.tencent.open.b.C7084e.a()
+            com.tencent.open.b.e r1 = com.tencent.open.b.e.a()
             java.lang.String r6 = "3"
             java.lang.String r7 = "0"
             java.lang.String r9 = "0"
@@ -334,7 +334,7 @@ public class AssistActivity extends Activity {
             SLog.w("openSDK_LOG.AssistActivity", "--setResultData--intent is null, setResult ACTIVITY_CANCEL");
             setResult(0);
             if (i == 11101) {
-                C7084e.a().a("", this.d, "2", "1", "7", "2");
+                e.a().a("", this.d, "2", "1", "7", "2");
                 return;
             }
             return;
@@ -351,14 +351,14 @@ public class AssistActivity extends Activity {
                 if (!TextUtils.isEmpty(optString) && !TextUtils.isEmpty(optString2)) {
                     SLog.i("openSDK_LOG.AssistActivity", "--setResultData--openid and token not empty, setResult ACTIVITY_OK");
                     setResult(-1, intent);
-                    C7084e.a().a(optString, this.d, "2", "1", "7", "0");
+                    e.a().a(optString, this.d, "2", "1", "7", "0");
                 } else if (!TextUtils.isEmpty(optString3) && optLong != 0) {
                     SLog.i("openSDK_LOG.AssistActivity", "--setResultData--proxy_code and proxy_expires_in are valid");
                     setResult(-1, intent);
                 } else {
                     SLog.w("openSDK_LOG.AssistActivity", "--setResultData--openid or token is empty, setResult ACTIVITY_CANCEL");
                     setResult(0, intent);
-                    C7084e.a().a("", this.d, "2", "1", "7", "1");
+                    e.a().a("", this.d, "2", "1", "7", "1");
                 }
             } else {
                 SLog.w("openSDK_LOG.AssistActivity", "--setResultData--response is empty, setResult ACTIVITY_OK");

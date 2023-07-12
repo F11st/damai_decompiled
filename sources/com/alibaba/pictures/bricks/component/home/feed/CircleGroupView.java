@@ -81,7 +81,7 @@ public final class CircleGroupView extends AbsView<GenericItem<ItemValue>, Circl
         }
         ArrayList arrayList = new ArrayList();
         for (String str : list) {
-            arrayList.add(new AvatarRecyclerView.C3565b(str));
+            arrayList.add(new AvatarRecyclerView.b(str));
             i2++;
             if (i2 >= i) {
                 break;

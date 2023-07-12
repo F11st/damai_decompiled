@@ -8,13 +8,13 @@ public class ju2 {
     public boolean apkUpdateEnabled;
     public boolean bundleUpdateEnabled;
     public boolean checkUpdateOnStartUp;
-    public C9444mm config;
+    public mm config;
     public boolean enableNativeLibUpdate;
     public boolean hasTest;
     public boolean lightApkEnabled;
 
-    public ju2(C9444mm c9444mm) {
-        this.config = c9444mm;
+    public ju2(mm mmVar) {
+        this.config = mmVar;
     }
 
     private Class a(String str) {
@@ -43,7 +43,7 @@ public class ju2 {
         } else if (updateMonitor != null) {
             wb.registerInstance(updateMonitor);
         } else {
-            wb.registerInstance(new UpdateMonitor.C6914a());
+            wb.registerInstance(new UpdateMonitor.a());
         }
         return this;
     }

@@ -13,7 +13,7 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 import java.util.List;
-import tb.C9548pb;
+import tb.pb;
 import tb.th2;
 
 /* compiled from: Taobao */
@@ -84,8 +84,8 @@ public class BannerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                     hashMap.put("contentlabel", liveHeaderCardItemBean.name);
                 }
                 if (liveHeaderCardItemBean.type == 2) {
-                    hashMap.put(C9548pb.PRE_CONTENT_ID, liveHeaderCardItemBean.id);
-                    hashMap.put(C9548pb.PRE_CONTENT_TYPE, "theme");
+                    hashMap.put(pb.PRE_CONTENT_ID, liveHeaderCardItemBean.id);
+                    hashMap.put(pb.PRE_CONTENT_TYPE, "theme");
                 }
                 BannerPresenter bannerPresenter2 = this.c;
                 TrackType trackType = TrackType.expose;

@@ -2,8 +2,8 @@ package com.amap.api.location;
 
 import android.content.Context;
 import android.os.Handler;
-import com.loc.C5861o;
 import com.loc.j1;
+import com.loc.o;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -15,10 +15,9 @@ public class UmidtokenInfo {
     static boolean c = true;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.location.UmidtokenInfo$a */
     /* loaded from: classes10.dex */
-    static class C4466a implements AMapLocationListener {
-        C4466a() {
+    static class a implements AMapLocationListener {
+        a() {
         }
 
         @Override // com.amap.api.location.AMapLocationListener
@@ -46,15 +45,15 @@ public class UmidtokenInfo {
         synchronized (UmidtokenInfo.class) {
             try {
                 b = str;
-                C5861o.B(str);
+                o.B(str);
                 if (d == null && c) {
-                    C4466a c4466a = new C4466a();
+                    a aVar = new a();
                     d = new AMapLocationClient(context);
                     AMapLocationClientOption aMapLocationClientOption = new AMapLocationClientOption();
                     aMapLocationClientOption.setOnceLocation(true);
                     aMapLocationClientOption.setNeedAddress(false);
                     d.setLocationOption(aMapLocationClientOption);
-                    d.setLocationListener(c4466a);
+                    d.setLocationListener(aVar);
                     d.startLocation();
                     a.postDelayed(new Runnable() { // from class: com.amap.api.location.UmidtokenInfo.1
                         @Override // java.lang.Runnable

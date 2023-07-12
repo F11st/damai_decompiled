@@ -32,7 +32,6 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import com.alibaba.pictures.picpermission.Permission;
 import com.alibaba.pictures.picpermission.custom.IPermissionListener;
 import com.alibaba.pictures.picpermission.manage.PermissionModel;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
 import com.taobao.tao.remotebusiness.js.MtopJSBridge;
 import com.taobao.weex.common.Constants;
 import com.taobao.weex.ui.view.gesture.WXGestureType;
@@ -61,20 +60,19 @@ public class TMCamera extends WVApiPlugin {
     private long lastAccess = 0;
     private boolean useCN = false;
     private String[] mPopupMenuTags = {"拍照", "从相册选择"};
-    protected View.OnClickListener popupClickListener = new View$OnClickListenerC6984c();
+    protected View.OnClickListener popupClickListener = new c();
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMCamera$a */
     /* loaded from: classes11.dex */
-    public class C6982a implements IPermissionListener {
-        C6982a() {
+    public class a implements IPermissionListener {
+        a() {
         }
 
         @Override // com.alibaba.pictures.picpermission.custom.IPermissionListener
         public void onPermissionDenied(@NotNull String[] strArr) {
             WVResult wVResult = new WVResult();
-            wVResult.addData("msg", AbstractC3893a.al);
+            wVResult.addData("msg", com.alibaba.security.realidentity.jsbridge.a.al);
             if (TMCamera.this.mCallback != null) {
                 TMCamera.this.mCallback.error(wVResult);
             }
@@ -88,7 +86,7 @@ public class TMCamera extends WVApiPlugin {
         @Override // com.alibaba.pictures.picpermission.custom.IPermissionListener
         public void onShowRationale(@NotNull String[] strArr) {
             WVResult wVResult = new WVResult();
-            wVResult.addData("msg", AbstractC3893a.al);
+            wVResult.addData("msg", com.alibaba.security.realidentity.jsbridge.a.al);
             if (TMCamera.this.mCallback != null) {
                 TMCamera.this.mCallback.error(wVResult);
             }
@@ -97,16 +95,15 @@ public class TMCamera extends WVApiPlugin {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMCamera$b */
     /* loaded from: classes11.dex */
-    public class C6983b implements IPermissionListener {
-        C6983b() {
+    public class b implements IPermissionListener {
+        b() {
         }
 
         @Override // com.alibaba.pictures.picpermission.custom.IPermissionListener
         public void onPermissionDenied(@NotNull String[] strArr) {
             WVResult wVResult = new WVResult();
-            wVResult.addData("msg", AbstractC3893a.al);
+            wVResult.addData("msg", com.alibaba.security.realidentity.jsbridge.a.al);
             if (TMCamera.this.mCallback != null) {
                 TMCamera.this.mCallback.error(wVResult);
             }
@@ -120,7 +117,7 @@ public class TMCamera extends WVApiPlugin {
         @Override // com.alibaba.pictures.picpermission.custom.IPermissionListener
         public void onShowRationale(@NotNull String[] strArr) {
             WVResult wVResult = new WVResult();
-            wVResult.addData("msg", AbstractC3893a.al);
+            wVResult.addData("msg", com.alibaba.security.realidentity.jsbridge.a.al);
             if (TMCamera.this.mCallback != null) {
                 TMCamera.this.mCallback.error(wVResult);
             }
@@ -128,10 +125,9 @@ public class TMCamera extends WVApiPlugin {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMCamera$c */
     /* loaded from: classes11.dex */
-    class View$OnClickListenerC6984c implements View.OnClickListener {
-        View$OnClickListenerC6984c() {
+    class c implements View.OnClickListener {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -156,7 +152,7 @@ public class TMCamera extends WVApiPlugin {
             chosePhotoInternal();
             return;
         }
-        new Permission(yk2.a, new PermissionModel(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE", "android.permission.READ_EXTERNAL_STORAGE"}, null, null, "授权获取存储权限，用于选取、上传、发布及分享图片/视频")).a(new C6983b()).b();
+        new Permission(yk2.a, new PermissionModel(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE", "android.permission.READ_EXTERNAL_STORAGE"}, null, null, "授权获取存储权限，用于选取、上传、发布及分享图片/视频")).a(new b()).b();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -263,7 +259,7 @@ public class TMCamera extends WVApiPlugin {
             openCamaraInternal();
             return;
         }
-        new Permission(yk2.a, new PermissionModel(new String[]{"android.permission.CAMERA"}, null, null, null)).a(new C6982a()).b();
+        new Permission(yk2.a, new PermissionModel(new String[]{"android.permission.CAMERA"}, null, null, null)).a(new a()).b();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -271,7 +267,7 @@ public class TMCamera extends WVApiPlugin {
         if (!isHasCamaraPermission()) {
             if (this.mCallback != null) {
                 WVResult wVResult = new WVResult();
-                wVResult.addData("msg", AbstractC3893a.al);
+                wVResult.addData("msg", com.alibaba.security.realidentity.jsbridge.a.al);
                 this.mCallback.error(wVResult);
                 return;
             }
@@ -391,9 +387,9 @@ public class TMCamera extends WVApiPlugin {
         try {
             try {
                 if (this.mParams.needZoom) {
-                    Uri a = Build.VERSION.SDK_INT >= 29 ? ImageTool.a(this.mContext, str) : null;
-                    int c = ImageTool.c(this.mContext, str, a);
-                    Bitmap e = ImageTool.e(this.mContext, str, maxLength, a);
+                    Uri a2 = Build.VERSION.SDK_INT >= 29 ? ImageTool.a(this.mContext, str) : null;
+                    int c2 = ImageTool.c(this.mContext, str, a2);
+                    Bitmap e = ImageTool.e(this.mContext, str, maxLength, a2);
                     if (e == null) {
                         if (e == null || e.isRecycled()) {
                             return;
@@ -402,7 +398,7 @@ public class TMCamera extends WVApiPlugin {
                         return;
                     }
                     try {
-                        bitmap = ImageTool.f(ImageTool.k(e, maxLength), c);
+                        bitmap = ImageTool.f(ImageTool.k(e, maxLength), c2);
                     } catch (Exception unused) {
                         bitmap4 = bitmap3;
                         WVResult wVResult = new WVResult();
@@ -552,7 +548,7 @@ public class TMCamera extends WVApiPlugin {
         WVCamera.UploadParams createUploadParams = createUploadParams(null);
         try {
             JSONObject jSONObject = new JSONObject(str);
-            String string = jSONObject.getString(AbstractC3893a.V);
+            String string = jSONObject.getString(com.alibaba.security.realidentity.jsbridge.a.V);
             createUploadParams.identifier = jSONObject.optString(WXGestureType.GestureInfo.POINTER_ID);
             createUploadParams.v = jSONObject.optString("v");
             createUploadParams.bizCode = jSONObject.optString("bizCode");

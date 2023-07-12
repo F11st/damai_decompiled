@@ -15,19 +15,18 @@ import org.jetbrains.annotations.Nullable;
 public final class p42 extends SQLiteOpenHelper {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C9544a Companion = new C9544a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String Lock = "dblock";
     private final String a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.p42$a */
     /* loaded from: classes7.dex */
-    public static final class C9544a {
-        private C9544a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9544a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

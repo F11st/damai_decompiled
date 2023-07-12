@@ -15,7 +15,7 @@ public class DanmuView extends LazyInflatedView {
     private static transient /* synthetic */ IpChange $ipChange;
 
     public DanmuView(Context context, ILMLayerManager<ViewGroup> iLMLayerManager, String str) {
-        super(context, iLMLayerManager, str, R.C7935layout.dago_danmu_view);
+        super(context, iLMLayerManager, str, R.layout.dago_danmu_view);
     }
 
     @Override // com.youku.alixplugin.view.LazyInflatedView

@@ -604,9 +604,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: androidx.constraintlayout.widget.R$color */
     /* loaded from: classes.dex */
-    public static final class C0027color {
+    public static final class color {
         public static final int abc_background_cache_hint_selector_material_dark = 0x7f06003a;
         public static final int abc_background_cache_hint_selector_material_light = 0x7f06003b;
         public static final int abc_btn_colored_borderless_text_material = 0x7f06003c;
@@ -695,7 +694,7 @@ public final class R {
         public static final int tooltip_background_dark = 0x7f060520;
         public static final int tooltip_background_light = 0x7f060521;
 
-        private C0027color() {
+        private color() {
         }
     }
 
@@ -825,9 +824,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: androidx.constraintlayout.widget.R$drawable */
     /* loaded from: classes.dex */
-    public static final class C0028drawable {
+    public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha = 0x7f080006;
         public static final int abc_action_bar_item_background_material = 0x7f080007;
         public static final int abc_btn_borderless_material = 0x7f080009;
@@ -925,7 +923,7 @@ public final class R {
         public static final int tooltip_frame_dark = 0x7f080f06;
         public static final int tooltip_frame_light = 0x7f080f07;
 
-        private C0028drawable() {
+        private drawable() {
         }
     }
 
@@ -1203,9 +1201,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: androidx.constraintlayout.widget.R$interpolator */
     /* loaded from: classes.dex */
-    public static final class C0029interpolator {
+    public static final class interpolator {
         public static final int btn_checkbox_checked_mtrl_animation_interpolator_0 = 0x7f0b0000;
         public static final int btn_checkbox_checked_mtrl_animation_interpolator_1 = 0x7f0b0001;
         public static final int btn_checkbox_unchecked_mtrl_animation_interpolator_0 = 0x7f0b0002;
@@ -1214,14 +1211,13 @@ public final class R {
         public static final int btn_radio_to_on_mtrl_animation_interpolator_0 = 0x7f0b0005;
         public static final int fast_out_slow_in = 0x7f0b000a;
 
-        private C0029interpolator() {
+        private interpolator() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: androidx.constraintlayout.widget.R$layout */
     /* loaded from: classes.dex */
-    public static final class C0030layout {
+    public static final class layout {
         public static final int abc_action_bar_title_item = 0x7f0c0000;
         public static final int abc_action_bar_up_container = 0x7f0c0001;
         public static final int abc_action_menu_item_layout = 0x7f0c0002;
@@ -1262,7 +1258,7 @@ public final class R {
         public static final int select_dialog_singlechoice_material = 0x7f0c072e;
         public static final int support_simple_spinner_dropdown_item = 0x7f0c0758;
 
-        private C0030layout() {
+        private layout() {
         }
     }
 
@@ -1304,9 +1300,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: androidx.constraintlayout.widget.R$style */
     /* loaded from: classes.dex */
-    public static final class C0031style {
+    public static final class style {
         public static final int AlertDialog_AppCompat = 0x7f120009;
         public static final int AlertDialog_AppCompat_Light = 0x7f12000a;
         public static final int Animation_AppCompat_Dialog = 0x7f120020;
@@ -1658,7 +1653,7 @@ public final class R {
         public static final int Widget_Compat_NotificationActionContainer = 0x7f120354;
         public static final int Widget_Compat_NotificationActionText = 0x7f120355;
 
-        private C0031style() {
+        private style() {
         }
     }
 

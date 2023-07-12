@@ -33,13 +33,12 @@ public class OrangeConfigCenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.OrangeConfigCenter$a */
     /* loaded from: classes4.dex */
-    public class C0465a implements IInitProxy<ICloudConfig> {
+    public class a implements IInitProxy<ICloudConfig> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context a;
 
-        C0465a(Context context) {
+        a(Context context) {
             this.a = context;
         }
 
@@ -79,12 +78,11 @@ public class OrangeConfigCenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.OrangeConfigCenter$b */
     /* loaded from: classes4.dex */
-    public class C0466b implements ICloudConfig.OnGroupUpdateListener {
+    public class b implements ICloudConfig.OnGroupUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0466b(OrangeConfigCenter orangeConfigCenter) {
+        b(OrangeConfigCenter orangeConfigCenter) {
         }
 
         @Override // com.alibaba.pictures.cornerstone.protocol.ICloudConfig.OnGroupUpdateListener
@@ -102,13 +100,12 @@ public class OrangeConfigCenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.OrangeConfigCenter$c */
     /* loaded from: classes4.dex */
-    public class C0467c implements ICloudConfig.OnGroupUpdateListener {
+    public class c implements ICloudConfig.OnGroupUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DMOrangeConfigListener a;
 
-        C0467c(OrangeConfigCenter orangeConfigCenter, DMOrangeConfigListener dMOrangeConfigListener) {
+        c(OrangeConfigCenter orangeConfigCenter, DMOrangeConfigListener dMOrangeConfigListener) {
             this.a = dMOrangeConfigListener;
         }
 
@@ -149,7 +146,7 @@ public class OrangeConfigCenter {
             ipChange.ipc$dispatch("-1374459499", new Object[]{context});
             return;
         }
-        ko.d().e(new ck(), new C0465a(context));
+        ko.d().e(new ck(), new a(context));
         ko.d().c(context);
         ko.d().i(DamaiConstants.APP_STARTUP_CACHEABLE_ORANGE_KEY_SETS);
     }
@@ -188,7 +185,7 @@ public class OrangeConfigCenter {
         if (AndroidInstantRuntime.support(ipChange, "573374954")) {
             ipChange.ipc$dispatch("573374954", new Object[]{this, str});
         } else {
-            ko.d().registerGroupConfigUpdateListener(str, new C0466b(this), false);
+            ko.d().registerGroupConfigUpdateListener(str, new b(this), false);
         }
     }
 
@@ -197,7 +194,7 @@ public class OrangeConfigCenter {
         if (AndroidInstantRuntime.support(ipChange, "-1570651884")) {
             ipChange.ipc$dispatch("-1570651884", new Object[]{this, str, dMOrangeConfigListener});
         } else {
-            ko.d().registerGroupConfigUpdateListener(str, new C0467c(this, dMOrangeConfigListener), false);
+            ko.d().registerGroupConfigUpdateListener(str, new c(this, dMOrangeConfigListener), false);
         }
     }
 

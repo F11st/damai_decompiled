@@ -30,9 +30,9 @@ interface FlexContainer {
 
     int getFlexItemCount();
 
-    List<C4810a> getFlexLines();
+    List<a> getFlexLines();
 
-    List<C4810a> getFlexLinesInternal();
+    List<a> getFlexLinesInternal();
 
     int getFlexWrap();
 
@@ -60,9 +60,9 @@ interface FlexContainer {
 
     boolean isMainAxisDirectionHorizontal();
 
-    void onNewFlexItemAdded(View view, int i, int i2, C4810a c4810a);
+    void onNewFlexItemAdded(View view, int i, int i2, a aVar);
 
-    void onNewFlexLineAdded(C4810a c4810a);
+    void onNewFlexLineAdded(a aVar);
 
     void removeAllViews();
 
@@ -74,7 +74,7 @@ interface FlexContainer {
 
     void setFlexDirection(int i);
 
-    void setFlexLines(List<C4810a> list);
+    void setFlexLines(List<a> list);
 
     void setFlexWrap(int i);
 

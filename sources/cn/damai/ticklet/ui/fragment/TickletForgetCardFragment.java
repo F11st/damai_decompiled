@@ -30,10 +30,10 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.update.utils.ErrorCode;
 import java.util.ArrayList;
-import tb.C9796v;
 import tb.py2;
 import tb.t60;
 import tb.un2;
+import tb.v;
 import tb.xh2;
 
 /* compiled from: Taobao */
@@ -99,7 +99,7 @@ public class TickletForgetCardFragment extends DamaiBaseMvpFragment {
             }
         }
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        Display.getMetrics(((WindowManager) getContext().getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+        Display.getMetrics(((WindowManager) getContext().getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
         int e = t60.e(getContext(), com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(displayMetrics)) + ErrorCode.ERROR_MD5_UPDATE;
         LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) this.irc.getLayoutParams();
         if (this.forgetCardResult.forgotCardInfos.size() > 2) {

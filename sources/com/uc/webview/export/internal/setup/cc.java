@@ -2,8 +2,6 @@ package com.uc.webview.export.internal.setup;
 
 import android.util.Pair;
 import android.webkit.ValueCallback;
-import com.uc.webview.export.internal.utility.C7337j;
-import com.uc.webview.export.internal.utility.C7349p;
 import com.uc.webview.export.internal.utility.Log;
 
 /* compiled from: Taobao */
@@ -29,18 +27,18 @@ final class cc implements Runnable {
         String str3;
         try {
             if (this.a.a()) {
-                String d = C7337j.d(this.d.getContext().getApplicationContext());
+                String d = com.uc.webview.export.internal.utility.j.d(this.d.getContext().getApplicationContext());
                 str2 = by.a;
                 Log.d(str2, ".shareCoreWaitTimeout localDir:" + d + " isWaitting:" + this.a.a());
-                if (!C7349p.a(d) && this.a.a()) {
+                if (!com.uc.webview.export.internal.utility.p.a(d) && this.a.a()) {
                     this.d.d = d;
                     this.b.onReceiveValue(this.d);
                     this.a.a(8, null);
                 } else if (this.a.a()) {
-                    String e = C7337j.e(this.d.getContext().getApplicationContext());
+                    String e = com.uc.webview.export.internal.utility.j.e(this.d.getContext().getApplicationContext());
                     str3 = by.a;
                     Log.d(str3, ".shareCoreWaitTimeout decFile:" + e + " isWaitting:" + this.a.a());
-                    if (!C7349p.a(e) && this.a.a()) {
+                    if (!com.uc.webview.export.internal.utility.p.a(e) && this.a.a()) {
                         this.d.e = e;
                         this.b.onReceiveValue(this.d);
                         this.a.a(8, null);

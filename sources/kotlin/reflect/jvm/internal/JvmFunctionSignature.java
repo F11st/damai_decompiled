@@ -29,9 +29,8 @@ public abstract class JvmFunctionSignature {
         private final Class<?> b;
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.JvmFunctionSignature$FakeJavaAnnotationConstructor$a */
         /* loaded from: classes3.dex */
-        public static final class C8247a<T> implements Comparator {
+        public static final class a<T> implements Comparator {
             @Override // java.util.Comparator
             public final int compare(T t, T t2) {
                 int a;
@@ -53,7 +52,7 @@ public abstract class JvmFunctionSignature {
             this.b = cls;
             Method[] declaredMethods = cls.getDeclaredMethods();
             b41.h(declaredMethods, "jClass.declaredMethods");
-            P = ArraysKt___ArraysKt.P(declaredMethods, new C8247a());
+            P = ArraysKt___ArraysKt.P(declaredMethods, new a());
             this.a = P;
         }
 
@@ -117,14 +116,13 @@ public abstract class JvmFunctionSignature {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.JvmFunctionSignature$a */
     /* loaded from: classes3.dex */
-    public static final class C8248a extends JvmFunctionSignature {
+    public static final class a extends JvmFunctionSignature {
         @NotNull
         private final Method a;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C8248a(@NotNull Method method) {
+        public a(@NotNull Method method) {
             super(null);
             b41.i(method, "method");
             this.a = method;
@@ -145,19 +143,18 @@ public abstract class JvmFunctionSignature {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.JvmFunctionSignature$b */
     /* loaded from: classes3.dex */
-    public static final class C8249b extends JvmFunctionSignature {
+    public static final class b extends JvmFunctionSignature {
         private final String a;
         @NotNull
-        private final w61.C9846b b;
+        private final w61.b b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C8249b(@NotNull w61.C9846b c9846b) {
+        public b(@NotNull w61.b bVar) {
             super(null);
-            b41.i(c9846b, SocialOperation.GAME_SIGNATURE);
-            this.b = c9846b;
-            this.a = c9846b.a();
+            b41.i(bVar, SocialOperation.GAME_SIGNATURE);
+            this.b = bVar;
+            this.a = bVar.a();
         }
 
         @Override // kotlin.reflect.jvm.internal.JvmFunctionSignature
@@ -173,19 +170,18 @@ public abstract class JvmFunctionSignature {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.JvmFunctionSignature$c */
     /* loaded from: classes3.dex */
-    public static final class C8250c extends JvmFunctionSignature {
+    public static final class c extends JvmFunctionSignature {
         private final String a;
         @NotNull
-        private final w61.C9846b b;
+        private final w61.b b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C8250c(@NotNull w61.C9846b c9846b) {
+        public c(@NotNull w61.b bVar) {
             super(null);
-            b41.i(c9846b, SocialOperation.GAME_SIGNATURE);
-            this.b = c9846b;
-            this.a = c9846b.a();
+            b41.i(bVar, SocialOperation.GAME_SIGNATURE);
+            this.b = bVar;
+            this.a = bVar.a();
         }
 
         @Override // kotlin.reflect.jvm.internal.JvmFunctionSignature

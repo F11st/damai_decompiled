@@ -64,13 +64,12 @@ public class DmUltronRequestErrorUtils {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.utils.DmUltronRequestErrorUtils$a */
     /* loaded from: classes17.dex */
-    public class DialogInterface$OnClickListenerC2644a implements DialogInterface.OnClickListener {
+    public class a implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DmOrderActivity a;
 
-        DialogInterface$OnClickListenerC2644a(DmUltronRequestErrorUtils dmUltronRequestErrorUtils, DmOrderActivity dmOrderActivity) {
+        a(DmUltronRequestErrorUtils dmUltronRequestErrorUtils, DmOrderActivity dmOrderActivity) {
             this.a = dmOrderActivity;
         }
 
@@ -86,13 +85,12 @@ public class DmUltronRequestErrorUtils {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.utils.DmUltronRequestErrorUtils$b */
     /* loaded from: classes17.dex */
-    public class DialogInterface$OnClickListenerC2645b implements DialogInterface.OnClickListener {
+    public class b implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DmOrderActivity a;
 
-        DialogInterface$OnClickListenerC2645b(DmUltronRequestErrorUtils dmUltronRequestErrorUtils, DmOrderActivity dmOrderActivity) {
+        b(DmUltronRequestErrorUtils dmUltronRequestErrorUtils, DmOrderActivity dmOrderActivity) {
             this.a = dmOrderActivity;
         }
 
@@ -109,13 +107,12 @@ public class DmUltronRequestErrorUtils {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.utils.DmUltronRequestErrorUtils$c */
     /* loaded from: classes17.dex */
-    public class DialogInterface$OnClickListenerC2646c implements DialogInterface.OnClickListener {
+    public class c implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DmOrderActivity a;
 
-        DialogInterface$OnClickListenerC2646c(DmUltronRequestErrorUtils dmUltronRequestErrorUtils, DmOrderActivity dmOrderActivity) {
+        c(DmUltronRequestErrorUtils dmUltronRequestErrorUtils, DmOrderActivity dmOrderActivity) {
             this.a = dmOrderActivity;
         }
 
@@ -132,9 +129,8 @@ public class DmUltronRequestErrorUtils {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.utils.DmUltronRequestErrorUtils$d */
     /* loaded from: classes17.dex */
-    public static /* synthetic */ class C2647d {
+    public static /* synthetic */ class d {
         static final /* synthetic */ int[] a;
         static final /* synthetic */ int[] b;
 
@@ -220,7 +216,7 @@ public class DmUltronRequestErrorUtils {
                 return ErrorType.NO_NETWORK_TOAST;
             }
         }
-        int i = C2647d.a[this.a.ordinal()];
+        int i = d.a[this.a.ordinal()];
         if (i == 1 || i == 2) {
             for (String str2 : ib0.d) {
                 if (str2.equalsIgnoreCase(str)) {
@@ -311,7 +307,7 @@ public class DmUltronRequestErrorUtils {
             r0 = 0
             boolean r1 = android.text.TextUtils.isEmpty(r10)
             if (r1 != 0) goto L55
-            int[] r1 = cn.damai.ultron.utils.DmUltronRequestErrorUtils.C2647d.a
+            int[] r1 = cn.damai.ultron.utils.DmUltronRequestErrorUtils.d.a
             cn.damai.ultron.utils.DmUltronRequestErrorUtils$BizType r2 = r8.a
             int r2 = r2.ordinal()
             r1 = r1[r2]
@@ -380,7 +376,7 @@ public class DmUltronRequestErrorUtils {
             ipChange.ipc$dispatch("-78504397", new Object[]{this, dmOrderActivity, errorType, str, str2, str3});
             return;
         }
-        switch (C2647d.b[errorType.ordinal()]) {
+        switch (d.b[errorType.ordinal()]) {
             case 1:
                 if (dmOrderActivity != null) {
                     dmOrderActivity.dmErrorViewHolder.f(this.a, 0, str, str2, str3);
@@ -397,13 +393,13 @@ public class DmUltronRequestErrorUtils {
             case 5:
             case 6:
                 if (dmOrderActivity != null) {
-                    new DMThemeDialog(dmOrderActivity).r(DMThemeDialog.DMDialogTheme.THEME_ORDER_FAILURE).k(str2).i("我知道了", new DialogInterface$OnClickListenerC2644a(this, dmOrderActivity)).show();
+                    new DMThemeDialog(dmOrderActivity).r(DMThemeDialog.DMDialogTheme.THEME_ORDER_FAILURE).k(str2).i("我知道了", new a(this, dmOrderActivity)).show();
                     return;
                 }
                 return;
             case 7:
                 if (dmOrderActivity != null) {
-                    new DMThemeDialog(dmOrderActivity).r(DMThemeDialog.DMDialogTheme.THEME_ORDER_FAILURE).k(str2).i("查看订单", new DialogInterface$OnClickListenerC2645b(this, dmOrderActivity)).show();
+                    new DMThemeDialog(dmOrderActivity).r(DMThemeDialog.DMDialogTheme.THEME_ORDER_FAILURE).k(str2).i("查看订单", new b(this, dmOrderActivity)).show();
                     return;
                 }
                 return;
@@ -428,7 +424,7 @@ public class DmUltronRequestErrorUtils {
                 return;
             case 12:
                 if (dmOrderActivity != null) {
-                    new DMThemeDialog(dmOrderActivity).r(DMThemeDialog.DMDialogTheme.THEME_ORDER_FAILURE).k("亲，您当前账户或购票人已超出限购数量，您可以调整数量、更换购票账户或购票人").i("我知道了", new DialogInterface$OnClickListenerC2646c(this, dmOrderActivity)).show();
+                    new DMThemeDialog(dmOrderActivity).r(DMThemeDialog.DMDialogTheme.THEME_ORDER_FAILURE).k("亲，您当前账户或购票人已超出限购数量，您可以调整数量、更换购票账户或购票人").i("我知道了", new c(this, dmOrderActivity)).show();
                     return;
                 }
                 return;

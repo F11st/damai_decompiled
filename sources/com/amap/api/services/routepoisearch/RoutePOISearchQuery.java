@@ -1,6 +1,6 @@
 package com.amap.api.services.routepoisearch;
 
-import com.amap.api.col.s.C4435i;
+import com.amap.api.col.s.i;
 import com.amap.api.services.core.LatLonPoint;
 import com.amap.api.services.routepoisearch.RoutePOISearch;
 import java.util.List;
@@ -53,7 +53,7 @@ public class RoutePOISearchQuery implements Cloneable {
         try {
             super.clone();
         } catch (CloneNotSupportedException e) {
-            C4435i.a(e, "RoutePOISearchQuery", "RoutePOISearchQueryclone");
+            i.a(e, "RoutePOISearchQuery", "RoutePOISearchQueryclone");
         }
         List<LatLonPoint> list = this.f;
         if (list != null && list.size() > 0) {

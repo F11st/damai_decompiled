@@ -26,7 +26,7 @@ import io.flutter.wpkbridge.WPKFactory;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import tb.C9556pm;
+import tb.pm;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
@@ -81,7 +81,7 @@ public class MCChatConnection implements IChatConnection {
         this.mEngine = MCEngine.getInstance(Long.valueOf(this.mAppId).longValue());
         JSONObject jSONObject = (JSONObject) chatRoomConfig.ext.get("connectionMode");
         if (jSONObject != null) {
-            JSONObject jSONObject2 = jSONObject.getJSONObject(C9556pm.TAG);
+            JSONObject jSONObject2 = jSONObject.getJSONObject(pm.TAG);
             JSONObject jSONObject3 = jSONObject.getJSONObject(ConnType.PK_CDN);
             JSONObject jSONObject4 = jSONObject.getJSONObject("accsMass");
             if (jSONObject2 != null || jSONObject3 != null || jSONObject4 != null) {

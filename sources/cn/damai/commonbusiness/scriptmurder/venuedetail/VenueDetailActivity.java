@@ -5,7 +5,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import androidx.fragment.app.FragmentTransaction;
-import cn.damai.common.user.C0525a;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.scriptmurder.CommonNavbarActivity;
@@ -62,7 +62,7 @@ public final class VenueDetailActivity extends CommonNavbarActivity {
         if (AndroidInstantRuntime.support(ipChange, "1302916250")) {
             ipChange.ipc$dispatch("1302916250", new Object[]{this});
         } else {
-            setDamaiUTKeyBuilder(new C0525a.C0527b().i("venue_new").a(z20.d()));
+            setDamaiUTKeyBuilder(new a.b().i("venue_new").a(z20.d()));
         }
     }
 

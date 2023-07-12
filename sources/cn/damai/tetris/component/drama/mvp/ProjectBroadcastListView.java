@@ -38,12 +38,11 @@ public class ProjectBroadcastListView extends AbsView<ProjectBroadcastListContra
     private TextView mTotalTv;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.drama.mvp.ProjectBroadcastListView$a */
     /* loaded from: classes7.dex */
-    public class C1828a implements OnItemBindListener<ProjectShowBean> {
+    public class a implements OnItemBindListener<ProjectShowBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1828a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -74,13 +73,12 @@ public class ProjectBroadcastListView extends AbsView<ProjectBroadcastListContra
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.drama.mvp.ProjectBroadcastListView$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1829b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        View$OnClickListenerC1829b(String str) {
+        b(String str) {
             this.a = str;
         }
 
@@ -98,9 +96,9 @@ public class ProjectBroadcastListView extends AbsView<ProjectBroadcastListContra
     public ProjectBroadcastListView(View view) {
         super(view);
         this.isShowNumSwiped = false;
-        Application a = mu0.a();
-        this.mEdgePadding = m62.a(a, 21.0f);
-        this.mItemOffset = m62.a(a, 12.0f);
+        Application a2 = mu0.a();
+        this.mEdgePadding = m62.a(a2, 21.0f);
+        this.mItemOffset = m62.a(a2, 12.0f);
         this.mNowTv = (TextView) view.findViewById(R$id.item_now_tv);
         this.mTotalTv = (TextView) view.findViewById(R$id.item_total_tv);
         this.mTitleLayout = view.findViewById(R$id.card_title_layout);
@@ -108,8 +106,8 @@ public class ProjectBroadcastListView extends AbsView<ProjectBroadcastListContra
         this.mPanel = new mg(this.mTitleLayout);
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R$id.project_broadcast_recycler);
         this.mRecyclerView = recyclerView;
-        recyclerView.setLayoutManager(new LinearLayoutManager(a, 0, false));
-        this.mAdapter = new ProjectBroadcastHorAdapter(new C1828a());
+        recyclerView.setLayoutManager(new LinearLayoutManager(a2, 0, false));
+        this.mAdapter = new ProjectBroadcastHorAdapter(new a());
         this.mRecyclerView.setItemViewCacheSize(-1);
         this.mRecyclerView.setAdapter(this.mAdapter);
         this.mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() { // from class: cn.damai.tetris.component.drama.mvp.ProjectBroadcastListView.2
@@ -190,7 +188,7 @@ public class ProjectBroadcastListView extends AbsView<ProjectBroadcastListContra
             CardTitleBean cardTitleBean = projectListBean.mTitleBean;
             this.mPanel.h(cardTitleBean);
             if (cardTitleBean != null && cardTitleBean.hasUrl()) {
-                this.mPanel.a(new View$OnClickListenerC1829b(cardTitleBean.url));
+                this.mPanel.a(new b(cardTitleBean.url));
             } else {
                 this.mPanel.a(null);
             }

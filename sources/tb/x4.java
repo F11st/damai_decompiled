@@ -2,8 +2,6 @@ package tb;
 
 import android.content.Context;
 import android.text.TextUtils;
-import com.taobao.alivfssdk.cache.C6258a;
-import com.taobao.alivfssdk.cache.C6261b;
 import com.taobao.alivfssdk.cache.IAVFSCache;
 import com.taobao.phenix.cache.disk.DiskCache;
 import java.io.ByteArrayInputStream;
@@ -25,11 +23,11 @@ public class x4 implements DiskCache {
     }
 
     private synchronized boolean a() {
-        C6258a a;
-        if (this.c == null && (a = C6261b.d().a(this.b)) != null) {
-            C9152g0 c9152g0 = new C9152g0();
-            c9152g0.a = Long.valueOf(this.d);
-            a.f(c9152g0);
+        com.taobao.alivfssdk.cache.a a;
+        if (this.c == null && (a = com.taobao.alivfssdk.cache.b.d().a(this.b)) != null) {
+            g0 g0Var = new g0();
+            g0Var.a = Long.valueOf(this.d);
+            a.f(g0Var);
             this.c = a.c();
         }
         return this.c != null;
@@ -37,7 +35,7 @@ public class x4 implements DiskCache {
 
     @Override // com.taobao.phenix.cache.disk.DiskCache
     public synchronized void clear() {
-        C6261b.d().g(this.b);
+        com.taobao.alivfssdk.cache.b.d().g(this.b);
         xt2.f("DiskCache", "remove alivfs cache module(%s)", this.b);
         this.c = null;
     }

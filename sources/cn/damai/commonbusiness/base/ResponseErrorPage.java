@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
@@ -207,7 +207,7 @@ public class ResponseErrorPage extends LinearLayout implements View.OnClickListe
             r11 = 0
             android.graphics.Bitmap r2 = android.graphics.Bitmap.createBitmap(r5, r6, r7, r8, r9, r10, r11)     // Catch: java.lang.Throwable -> L99 java.lang.Exception -> La0
             if (r2 == 0) goto L93
-            java.lang.String r0 = cn.damai.common.util.C0535a.m()     // Catch: java.lang.Throwable -> L99 java.lang.Exception -> La0
+            java.lang.String r0 = cn.damai.common.util.a.m()     // Catch: java.lang.Throwable -> L99 java.lang.Exception -> La0
             boolean r4 = android.text.TextUtils.isEmpty(r0)     // Catch: java.lang.Throwable -> L99 java.lang.Exception -> La0
             if (r4 != 0) goto L93
             java.lang.StringBuilder r4 = new java.lang.StringBuilder     // Catch: java.lang.Throwable -> L99 java.lang.Exception -> La0
@@ -216,14 +216,14 @@ public class ResponseErrorPage extends LinearLayout implements View.OnClickListe
             java.lang.String r5 = "/feedback"
             r4.append(r5)     // Catch: java.lang.Throwable -> L99 java.lang.Exception -> La0
             java.lang.String r4 = r4.toString()     // Catch: java.lang.Throwable -> L99 java.lang.Exception -> La0
-            cn.damai.common.util.C0535a.t(r4, r3)     // Catch: java.lang.Throwable -> L99 java.lang.Exception -> La0
+            cn.damai.common.util.a.t(r4, r3)     // Catch: java.lang.Throwable -> L99 java.lang.Exception -> La0
             java.lang.StringBuilder r3 = new java.lang.StringBuilder     // Catch: java.lang.Throwable -> L99 java.lang.Exception -> La0
             r3.<init>()     // Catch: java.lang.Throwable -> L99 java.lang.Exception -> La0
             r3.append(r0)     // Catch: java.lang.Throwable -> L99 java.lang.Exception -> La0
             java.lang.String r0 = "/feedback/screen.jpg"
             r3.append(r0)     // Catch: java.lang.Throwable -> L99 java.lang.Exception -> La0
             java.lang.String r0 = r3.toString()     // Catch: java.lang.Throwable -> L99 java.lang.Exception -> La0
-            cn.damai.common.util.C0535a.d(r0)     // Catch: java.lang.Throwable -> L99 java.lang.Exception -> La0
+            cn.damai.common.util.a.d(r0)     // Catch: java.lang.Throwable -> L99 java.lang.Exception -> La0
             java.io.FileOutputStream r3 = new java.io.FileOutputStream     // Catch: java.lang.Throwable -> L99 java.lang.Exception -> La0
             r3.<init>(r0)     // Catch: java.lang.Throwable -> L99 java.lang.Exception -> La0
             android.graphics.Bitmap$CompressFormat r4 = android.graphics.Bitmap.CompressFormat.JPEG     // Catch: java.lang.Throwable -> L99 java.lang.Exception -> La0
@@ -508,7 +508,7 @@ public class ResponseErrorPage extends LinearLayout implements View.OnClickListe
             }
         }
         bundle.putString("screenView", str);
-        C0529c.e().x(pl.j().q(z20.E(), this.mErrorMsg));
+        c.e().x(pl.j().q(z20.E(), this.mErrorMsg));
         DMNav.from(this.mContext).withExtras(bundle).toUri(NavUri.b("feed_back_report"));
     }
 

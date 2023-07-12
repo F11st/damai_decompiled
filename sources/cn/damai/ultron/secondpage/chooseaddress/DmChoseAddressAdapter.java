@@ -64,12 +64,11 @@ public class DmChoseAddressAdapter extends RecyclerView.Adapter<AddressViewHolde
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.secondpage.chooseaddress.DmChoseAddressAdapter$a */
     /* loaded from: classes17.dex */
-    public class C2631a extends ClickableSpan {
+    public class a extends ClickableSpan {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2631a() {
+        a() {
         }
 
         @Override // android.text.style.ClickableSpan
@@ -94,14 +93,13 @@ public class DmChoseAddressAdapter extends RecyclerView.Adapter<AddressViewHolde
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.secondpage.chooseaddress.DmChoseAddressAdapter$b */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2632b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ AddressBean a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC2632b(AddressBean addressBean, int i) {
+        b(AddressBean addressBean, int i) {
             this.a = addressBean;
             this.b = i;
         }
@@ -123,13 +121,12 @@ public class DmChoseAddressAdapter extends RecyclerView.Adapter<AddressViewHolde
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.secondpage.chooseaddress.DmChoseAddressAdapter$c */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2633c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ AddressBean a;
 
-        View$OnClickListenerC2633c(AddressBean addressBean) {
+        c(AddressBean addressBean) {
             this.a = addressBean;
         }
 
@@ -199,7 +196,7 @@ public class DmChoseAddressAdapter extends RecyclerView.Adapter<AddressViewHolde
             SpannableString spannableString = new SpannableString(sb.toString());
             if (sb.toString().contains("[默认地址]")) {
                 int indexOf = sb.toString().indexOf("[默认地址]");
-                spannableString.setSpan(new C2631a(), indexOf, indexOf + 6, 17);
+                spannableString.setSpan(new a(), indexOf, indexOf + 6, 17);
                 addressViewHolder.e.setText(spannableString);
                 addressViewHolder.e.setHighlightColor(0);
             }
@@ -211,8 +208,8 @@ public class DmChoseAddressAdapter extends RecyclerView.Adapter<AddressViewHolde
             addressViewHolder.f.setText(this.b.getString(R$string.iconfont_danxuanweixuanzhong24));
             addressViewHolder.f.setTextColor(ContextCompat.getColor(this.b, R$color.color_999999));
         }
-        addressViewHolder.a.setOnClickListener(new View$OnClickListenerC2632b(addressBean, i));
-        addressViewHolder.b.setOnClickListener(new View$OnClickListenerC2633c(addressBean));
+        addressViewHolder.a.setOnClickListener(new b(addressBean, i));
+        addressViewHolder.b.setOnClickListener(new c(addressBean));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

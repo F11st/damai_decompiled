@@ -20,9 +20,7 @@ import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
@@ -105,7 +103,7 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
                 return;
             }
             super.dismiss();
-            C0529c.e().C("item", "guide_alert", "brand", "1.0", System.currentTimeMillis() - BrandActivity.this.dialogMillis, this.args, 2201);
+            cn.damai.common.user.c.e().C("item", "guide_alert", "brand", "1.0", System.currentTimeMillis() - BrandActivity.this.dialogMillis, this.args, 2201);
         }
 
         public void setMap(Map map) {
@@ -119,14 +117,13 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.brand.BrandActivity$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2664a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Map a;
         final /* synthetic */ ProjectItemBean b;
 
-        View$OnClickListenerC2664a(Map map, ProjectItemBean projectItemBean) {
+        a(Map map, ProjectItemBean projectItemBean) {
             this.a = map;
             this.b = projectItemBean;
         }
@@ -138,7 +135,7 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
                 ipChange.ipc$dispatch("-542155836", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(new C0528b().e("brand", "guide_alert", "item", this.a, Boolean.TRUE));
+            cn.damai.common.user.c.e().x(new cn.damai.common.user.b().e("brand", "guide_alert", "item", this.a, Boolean.TRUE));
             BrandActivity.this.popupWindow.forceDismis();
             if (!TextUtils.isEmpty(this.b.schema)) {
                 NavProxy.from(BrandActivity.this).toUri(this.b.schema);
@@ -151,12 +148,11 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.brand.BrandActivity$b */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2665b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2665b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -171,12 +167,11 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.brand.BrandActivity$c */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2666c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2666c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -192,19 +187,17 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.brand.BrandActivity$d */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2667d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ActivityInfo a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.user.brand.BrandActivity$d$a */
         /* loaded from: classes17.dex */
-        public class DialogInterface$OnClickListenerC2668a implements DialogInterface.OnClickListener {
+        public class a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC2668a() {
+            a() {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -219,12 +212,11 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.user.brand.BrandActivity$d$b */
         /* loaded from: classes17.dex */
-        public class DialogInterface$OnClickListenerC2669b implements DialogInterface.OnClickListener {
+        public class b implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC2669b(View$OnClickListenerC2667d view$OnClickListenerC2667d) {
+            b(d dVar) {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -238,7 +230,7 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
             }
         }
 
-        View$OnClickListenerC2667d(ActivityInfo activityInfo) {
+        d(ActivityInfo activityInfo) {
             this.a = activityInfo;
         }
 
@@ -248,7 +240,7 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
             if (AndroidInstantRuntime.support(ipChange, "1115638946")) {
                 ipChange.ipc$dispatch("1115638946", new Object[]{this, view});
             } else if (BrandActivity.this.attentionView.followed()) {
-                new DMDialog(BrandActivity.this.mContext).o(false).v(PurchaseConstants.NORMAL_WARNING_TITLE).q("确认取消关注？取消后将无法获取厂牌号最新权益。").t(3).i("取消", new DialogInterface$OnClickListenerC2669b(this)).n("确定", new DialogInterface$OnClickListenerC2668a()).show();
+                new DMDialog(BrandActivity.this.mContext).o(false).v(PurchaseConstants.NORMAL_WARNING_TITLE).q("确认取消关注？取消后将无法获取厂牌号最新权益。").t(3).i("取消", new b(this)).n("确定", new a()).show();
             } else {
                 ActivityInfo activityInfo = this.a;
                 if (activityInfo != null && !TextUtils.isEmpty(activityInfo.couponId)) {
@@ -261,12 +253,11 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.brand.BrandActivity$e */
     /* loaded from: classes9.dex */
-    public class C2670e implements AttentionView.StateListener {
+    public class e implements AttentionView.StateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2670e() {
+        e() {
         }
 
         @Override // cn.damai.commonbusiness.view.AttentionView.StateListener
@@ -290,15 +281,14 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.brand.BrandActivity$f */
     /* loaded from: classes17.dex */
-    public class DialogInterface$OnDismissListenerC2671f implements DialogInterface.OnDismissListener {
+    public class f implements DialogInterface.OnDismissListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Map a;
         final /* synthetic */ String b;
         final /* synthetic */ DrawReward c;
 
-        DialogInterface$OnDismissListenerC2671f(Map map, String str, DrawReward drawReward) {
+        f(Map map, String str, DrawReward drawReward) {
             this.a = map;
             this.b = str;
             this.c = drawReward;
@@ -312,19 +302,18 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
                 return;
             }
             ((DMGiftDialog) dialogInterface).setOnDismissListener(null);
-            C0529c.e().C("use_btn", "redpaper", "brand", "1.0", System.currentTimeMillis() - BrandActivity.this.startDialogSeeTimeMillis, this.a, 2201);
+            cn.damai.common.user.c.e().C("use_btn", "redpaper", "brand", "1.0", System.currentTimeMillis() - BrandActivity.this.startDialogSeeTimeMillis, this.a, 2201);
             BrandActivity.this.requestProject(this.b, this.c.rewardId);
             dialogInterface.dismiss();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.brand.BrandActivity$g */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2672g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2672g() {
+        g() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -539,8 +528,8 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
                 } else {
                     str = (i / 100) + "";
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
             if (i <= 0 && !TextUtils.isEmpty(str)) {
                 dMGiftDialog.d("恭喜您获得" + str + "元优惠券");
@@ -551,7 +540,7 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
                 utArgs.put("brand_id", this.headerModel.userid);
                 utArgs.put("coupon_id", drawReward.rewardId);
                 this.startDialogSeeTimeMillis = System.currentTimeMillis();
-                dMGiftDialog.setOnDismissListener(new DialogInterface$OnDismissListenerC2671f(utArgs, str, drawReward));
+                dMGiftDialog.setOnDismissListener(new f(utArgs, str, drawReward));
                 return;
             }
             showErrorToast("抱歉来晚了～券已经发完了");
@@ -571,12 +560,12 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
             return;
         }
         ViewGroup viewGroup = (ViewGroup) LayoutInflater.from(this).inflate(R$layout.brand_pop_gift_project, (ViewGroup) null);
-        int a = t60.a(this, 196.0f);
+        int a2 = t60.a(this, 196.0f);
         NPopupWindow nPopupWindow = this.popupWindow;
         if (nPopupWindow != null && nPopupWindow.isShowing()) {
             this.popupWindow.forceDismis();
         }
-        NPopupWindow nPopupWindow2 = new NPopupWindow(viewGroup, -1, a);
+        NPopupWindow nPopupWindow2 = new NPopupWindow(viewGroup, -1, a2);
         this.popupWindow = nPopupWindow2;
         if (Build.VERSION.SDK_INT > 21) {
             nPopupWindow2.setClippingEnabled(false);
@@ -635,8 +624,8 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
             setTime(projectItemBean.showTime, viewGroup);
         }
         setProjectPrice(projectItemBean.priceLow, projectItemBean.promotionPrice, projectItemBean.displayStatus, true, projectItemBean.showStatus.colorGrey(), viewGroup);
-        viewGroup.findViewById(R$id.popproj_close).setOnClickListener(new View$OnClickListenerC2672g());
-        viewGroup.setOnClickListener(new View$OnClickListenerC2664a(utArgs, projectItemBean));
+        viewGroup.findViewById(R$id.popproj_close).setOnClickListener(new g());
+        viewGroup.setOnClickListener(new a(utArgs, projectItemBean));
     }
 
     public void autoFollow() {
@@ -665,8 +654,8 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
             strArr[0] = (((float) (j / 1000)) / 10.0f) + "";
             strArr[1] = "万粉丝";
             return strArr[0] + strArr[1];
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
             return "";
         }
     }
@@ -702,26 +691,26 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
     }
 
     @Override // cn.damai.user.star.view.ScrollAlphaListener
-    public void onAlphaChanged(float f) {
+    public void onAlphaChanged(float f2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1046282387")) {
-            ipChange.ipc$dispatch("1046282387", new Object[]{this, Float.valueOf(f)});
+            ipChange.ipc$dispatch("1046282387", new Object[]{this, Float.valueOf(f2)});
             return;
         }
-        if (f > 0.3d) {
-            f = 1.0f;
+        if (f2 > 0.3d) {
+            f2 = 1.0f;
         }
         View view = this.navBar;
         if (view != null) {
-            view.setAlpha(f);
-            if (f >= 1.0f) {
+            view.setAlpha(f2);
+            if (f2 >= 1.0f) {
                 setDarkStatusBarFontColor();
                 this.status = 1;
                 cn.damai.user.repertoite.view.AttentionView attentionView = this.attentionView;
                 if (attentionView != null) {
                     attentionView.setVisibility(0);
                 }
-            } else if (f == 0.0f) {
+            } else if (f2 == 0.0f) {
                 setLightStatusBarFontColor();
                 this.status = 0;
                 cn.damai.user.repertoite.view.AttentionView attentionView2 = this.attentionView;
@@ -771,18 +760,18 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
         }
         super.onCreate(bundle);
         setContentView(R$layout.user_newbrand_activity_layout);
-        C0529c.e().K(this);
+        cn.damai.common.user.c.e().K(this);
         hideBaseLayout();
         setImmersionStyle();
         if (getIntent() == null || getIntent().getExtras() == null) {
             return;
         }
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i("brand"));
+        setDamaiUTKeyBuilder(new a.b().i("brand"));
         View findViewById = findViewById(R$id.nav_bar);
         this.navBar = findViewById;
         findViewById.setAlpha(this.alpha);
-        findViewById(R$id.ll_share).setOnClickListener(new View$OnClickListenerC2665b());
-        findViewById(R$id.brand_back).setOnClickListener(new View$OnClickListenerC2666c());
+        findViewById(R$id.ll_share).setOnClickListener(new b());
+        findViewById(R$id.brand_back).setOnClickListener(new c());
         initFragment();
     }
 
@@ -819,15 +808,15 @@ public class BrandActivity extends SimpleBaseActivity implements AttentionView.S
             attentionView.setInitParams(brandHeaderInfoBean.getBid(), "4");
             this.attentionView.setVisibility(0);
             this.attentionView.setState(brandHeaderInfoBean.getFavoriteFlag());
-            this.attentionView.setOnAttentionClickDelegate(new View$OnClickListenerC2667d(activityInfo));
-            this.attentionView.setStateListener(new C2670e());
+            this.attentionView.setOnAttentionClickDelegate(new d(activityInfo));
+            this.attentionView.setStateListener(new e());
             ((DMAvatar) findViewById(R$id.user_icon)).setAvatar(brandHeaderInfoBean.getHeadImg());
             ((TextView) findViewById(R$id.user_name)).setText(brandHeaderInfoBean.getNickname());
             long j = 0;
             try {
                 j = Long.parseLong(brandHeaderInfoBean.getFansNum());
-            } catch (NumberFormatException e) {
-                e.printStackTrace();
+            } catch (NumberFormatException e2) {
+                e2.printStackTrace();
             }
             textView.setText(getFansNum(j));
             if (this.headerModel.followLottery && this.firstLoaded) {

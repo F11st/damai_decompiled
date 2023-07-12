@@ -13,8 +13,8 @@ import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.update.UpdateSDK;
 import com.taobao.update.framework.UpdateRuntime;
 import java.util.List;
-import tb.C9444mm;
 import tb.ju2;
+import tb.mm;
 import tb.pu2;
 
 /* compiled from: Taobao */
@@ -25,16 +25,15 @@ public class DMUpdateManager {
     private Application a;
     private ActivityManager b;
     private volatile UpdateSDK c;
-    private Application.ActivityLifecycleCallbacks d = new C0942a();
-    private ComponentCallbacks2 e = new ComponentCallbacks2C0943b();
+    private Application.ActivityLifecycleCallbacks d = new a();
+    private ComponentCallbacks2 e = new b();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.update.DMUpdateManager$a */
     /* loaded from: classes.dex */
-    public class C0942a implements Application.ActivityLifecycleCallbacks {
+    public class a implements Application.ActivityLifecycleCallbacks {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0942a() {
+        a() {
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
@@ -98,12 +97,11 @@ public class DMUpdateManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.update.DMUpdateManager$b */
     /* loaded from: classes.dex */
-    public class ComponentCallbacks2C0943b implements ComponentCallbacks2 {
+    public class b implements ComponentCallbacks2 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ComponentCallbacks2C0943b() {
+        b() {
         }
 
         @Override // android.content.ComponentCallbacks
@@ -182,18 +180,18 @@ public class DMUpdateManager {
         return AndroidInstantRuntime.support(ipChange, "946516523") ? (UpdateSDK) ipChange.ipc$dispatch("946516523", new Object[]{this}) : this.c;
     }
 
-    public void i(final C9444mm c9444mm, boolean z) {
+    public void i(final mm mmVar, boolean z) {
         Application application;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-2119994505")) {
-            ipChange.ipc$dispatch("-2119994505", new Object[]{this, c9444mm, Boolean.valueOf(z)});
-        } else if (c9444mm != null && (application = c9444mm.application) != null) {
+            ipChange.ipc$dispatch("-2119994505", new Object[]{this, mmVar, Boolean.valueOf(z)});
+        } else if (mmVar != null && (application = mmVar.application) != null) {
             this.a = application;
             String processName = pu2.getProcessName(application);
             UpdateRuntime.processName = processName;
-            if (processName.equals(c9444mm.application.getPackageName())) {
+            if (processName.equals(mmVar.application.getPackageName())) {
                 Log.d("update-sdk", "initialize app in process " + UpdateRuntime.processName);
-                UpdateRuntime.init(this.a, c9444mm);
+                UpdateRuntime.init(this.a, mmVar);
                 UpdateRuntime.execute(new Runnable() { // from class: cn.damai.commonbusiness.update.DMUpdateManager.3
                     private static transient /* synthetic */ IpChange $ipChange;
 
@@ -204,8 +202,8 @@ public class DMUpdateManager {
                             ipChange2.ipc$dispatch("-1616871555", new Object[]{this});
                             return;
                         }
-                        ju2 enableMonitor = new ju2(c9444mm).enableMonitor(null);
-                        if (c9444mm.autoStart) {
+                        ju2 enableMonitor = new ju2(mmVar).enableMonitor(null);
+                        if (mmVar.autoStart) {
                             enableMonitor.enableCheckUpdateOnStartup();
                         }
                         DMUpdateManager.this.c = new UpdateSDK(enableMonitor);
@@ -213,7 +211,7 @@ public class DMUpdateManager {
                     }
                 });
                 if (z) {
-                    c9444mm.application.registerComponentCallbacks(this.e);
+                    mmVar.application.registerComponentCallbacks(this.e);
                 }
             }
         } else {

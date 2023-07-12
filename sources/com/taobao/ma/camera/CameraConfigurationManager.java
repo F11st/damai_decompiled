@@ -15,7 +15,7 @@ import com.taobao.ma.camera.util.CameraConfigurationUtils;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -88,7 +88,7 @@ final class CameraConfigurationManager {
     /* JADX INFO: Access modifiers changed from: package-private */
     public void initFromCameraParameters(Camera camera) {
         Camera.Parameters parameters = camera.getParameters();
-        Display defaultDisplay = ((WindowManager) this.context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
+        Display defaultDisplay = ((WindowManager) this.context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
         Point point = new Point();
         com.alibaba.wireless.security.aopsdk.replace.android.view.Display.getSize(defaultDisplay, point);
         this.screenResolution = point;

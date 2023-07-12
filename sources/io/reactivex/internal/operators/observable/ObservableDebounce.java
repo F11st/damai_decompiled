@@ -6,7 +6,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.functions.ObjectHelper;
-import io.reactivex.observers.AbstractC8160b;
+import io.reactivex.observers.b;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
 import tb.dg0;
@@ -31,7 +31,7 @@ public final class ObservableDebounce<T, U> extends AbstractObservableWithUpstre
 
         /* compiled from: Taobao */
         /* loaded from: classes3.dex */
-        static final class DebounceInnerObserver<T, U> extends AbstractC8160b<U> {
+        static final class DebounceInnerObserver<T, U> extends b<U> {
             boolean done;
             final long index;
             final AtomicBoolean once = new AtomicBoolean();
@@ -160,7 +160,7 @@ public final class ObservableDebounce<T, U> extends AbstractObservableWithUpstre
         this.debounceSelector = function;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new DebounceObserver(new ra2(observer), this.debounceSelector));
     }

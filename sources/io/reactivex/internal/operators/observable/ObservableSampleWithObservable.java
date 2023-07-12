@@ -201,7 +201,7 @@ public final class ObservableSampleWithObservable<T> extends AbstractObservableW
         this.emitLast = z;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         ra2 ra2Var = new ra2(observer);
         if (this.emitLast) {

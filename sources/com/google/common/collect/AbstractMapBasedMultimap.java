@@ -1,9 +1,9 @@
 package com.google.common.collect;
 
 import com.google.common.annotations.GwtCompatible;
-import com.google.common.collect.AbstractC5159c;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Multimaps;
+import com.google.common.collect.c;
 import java.io.Serializable;
 import java.util.AbstractCollection;
 import java.util.Collection;
@@ -28,35 +28,33 @@ import tb.du1;
 /* compiled from: Taobao */
 @GwtCompatible
 /* loaded from: classes10.dex */
-public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V> implements Serializable {
+public abstract class AbstractMapBasedMultimap<K, V> extends com.google.common.collect.c<K, V> implements Serializable {
     private static final long serialVersionUID = 2447537837011683357L;
     private transient Map<K, Collection<V>> map;
     private transient int totalSize;
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$a */
     /* loaded from: classes10.dex */
-    class C4900a extends AbstractMapBasedMultimap<K, V>.AbstractC4905d<V> {
-        C4900a(AbstractMapBasedMultimap abstractMapBasedMultimap) {
+    class a extends AbstractMapBasedMultimap<K, V>.d<V> {
+        a(AbstractMapBasedMultimap abstractMapBasedMultimap) {
             super();
         }
 
-        @Override // com.google.common.collect.AbstractMapBasedMultimap.AbstractC4905d
+        @Override // com.google.common.collect.AbstractMapBasedMultimap.d
         V a(K k, V v) {
             return v;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$b */
     /* loaded from: classes10.dex */
-    class C4901b extends AbstractMapBasedMultimap<K, V>.AbstractC4905d<Map.Entry<K, V>> {
-        C4901b(AbstractMapBasedMultimap abstractMapBasedMultimap) {
+    class b extends AbstractMapBasedMultimap<K, V>.d<Map.Entry<K, V>> {
+        b(AbstractMapBasedMultimap abstractMapBasedMultimap) {
             super();
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.AbstractMapBasedMultimap.AbstractC4905d
+        @Override // com.google.common.collect.AbstractMapBasedMultimap.d
         /* renamed from: b */
         public Map.Entry<K, V> a(K k, V v) {
             return Maps.j(k, v);
@@ -65,34 +63,32 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$c */
     /* loaded from: classes10.dex */
-    public class C4902c extends Maps.AbstractC5070t<K, Collection<V>> {
+    public class c extends Maps.t<K, Collection<V>> {
         final transient Map<K, Collection<V>> d;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$c$a */
         /* loaded from: classes10.dex */
-        class C4903a extends Maps.AbstractC5059j<K, Collection<V>> {
-            C4903a() {
+        class a extends Maps.j<K, Collection<V>> {
+            a() {
             }
 
-            @Override // com.google.common.collect.Maps.AbstractC5059j
+            @Override // com.google.common.collect.Maps.j
             Map<K, Collection<V>> a() {
-                return C4902c.this;
+                return c.this;
             }
 
-            @Override // com.google.common.collect.Maps.AbstractC5059j, java.util.AbstractCollection, java.util.Collection, java.util.Set
+            @Override // com.google.common.collect.Maps.j, java.util.AbstractCollection, java.util.Collection, java.util.Set
             public boolean contains(Object obj) {
-                return C5193l.d(C4902c.this.d.entrySet(), obj);
+                return com.google.common.collect.l.d(c.this.d.entrySet(), obj);
             }
 
             @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
             public Iterator<Map.Entry<K, Collection<V>>> iterator() {
-                return new C4904b();
+                return new b();
             }
 
-            @Override // com.google.common.collect.Maps.AbstractC5059j, java.util.AbstractCollection, java.util.Collection, java.util.Set
+            @Override // com.google.common.collect.Maps.j, java.util.AbstractCollection, java.util.Collection, java.util.Set
             public boolean remove(Object obj) {
                 if (contains(obj)) {
                     AbstractMapBasedMultimap.this.removeValuesForKey(((Map.Entry) obj).getKey());
@@ -103,15 +99,14 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$c$b */
         /* loaded from: classes10.dex */
-        class C4904b implements Iterator<Map.Entry<K, Collection<V>>> {
+        class b implements Iterator<Map.Entry<K, Collection<V>>> {
             final Iterator<Map.Entry<K, Collection<V>>> a;
             @NullableDecl
             Collection<V> b;
 
-            C4904b() {
-                this.a = C4902c.this.d.entrySet().iterator();
+            b() {
+                this.a = c.this.d.entrySet().iterator();
             }
 
             @Override // java.util.Iterator
@@ -119,7 +114,7 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
             public Map.Entry<K, Collection<V>> next() {
                 Map.Entry<K, Collection<V>> next = this.a.next();
                 this.b = next.getValue();
-                return C4902c.this.f(next);
+                return c.this.f(next);
             }
 
             @Override // java.util.Iterator
@@ -129,7 +124,7 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
 
             @Override // java.util.Iterator
             public void remove() {
-                C5191k.e(this.b != null);
+                com.google.common.collect.k.e(this.b != null);
                 this.a.remove();
                 AbstractMapBasedMultimap.this.totalSize -= this.b.size();
                 this.b.clear();
@@ -137,13 +132,13 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
             }
         }
 
-        C4902c(Map<K, Collection<V>> map) {
+        c(Map<K, Collection<V>> map) {
             this.d = map;
         }
 
-        @Override // com.google.common.collect.Maps.AbstractC5070t
+        @Override // com.google.common.collect.Maps.t
         protected Set<Map.Entry<K, Collection<V>>> a() {
-            return new C4903a();
+            return new a();
         }
 
         @Override // java.util.AbstractMap, java.util.Map
@@ -151,7 +146,7 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
             if (this.d == AbstractMapBasedMultimap.this.map) {
                 AbstractMapBasedMultimap.this.clear();
             } else {
-                Iterators.d(new C4904b());
+                Iterators.d(new b());
             }
         }
 
@@ -199,7 +194,7 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
             return this.d.hashCode();
         }
 
-        @Override // com.google.common.collect.Maps.AbstractC5070t, java.util.AbstractMap, java.util.Map
+        @Override // com.google.common.collect.Maps.t, java.util.AbstractMap, java.util.Map
         public Set<K> keySet() {
             return AbstractMapBasedMultimap.this.keySet();
         }
@@ -216,9 +211,8 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$d */
     /* loaded from: classes10.dex */
-    private abstract class AbstractC4905d<T> implements Iterator<T> {
+    private abstract class d<T> implements Iterator<T> {
         final Iterator<Map.Entry<K, Collection<V>>> a;
         @NullableDecl
         K b = null;
@@ -226,7 +220,7 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         Collection<V> c = null;
         Iterator<V> d = Iterators.j();
 
-        AbstractC4905d() {
+        d() {
             this.a = (Iterator<Map.Entry<K, V>>) AbstractMapBasedMultimap.this.map.entrySet().iterator();
         }
 
@@ -260,20 +254,18 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$e */
     /* loaded from: classes10.dex */
-    private class C4906e extends Maps.C5062l<K, Collection<V>> {
+    private class e extends Maps.l<K, Collection<V>> {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$e$a */
         /* loaded from: classes10.dex */
-        public class C4907a implements Iterator<K> {
+        public class a implements Iterator<K> {
             @NullableDecl
             Map.Entry<K, Collection<V>> a;
             final /* synthetic */ Iterator b;
 
-            C4907a(Iterator it) {
+            a(Iterator it) {
                 this.b = it;
             }
 
@@ -291,7 +283,7 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
 
             @Override // java.util.Iterator
             public void remove() {
-                C5191k.e(this.a != null);
+                com.google.common.collect.k.e(this.a != null);
                 Collection<V> value = this.a.getValue();
                 this.b.remove();
                 AbstractMapBasedMultimap.this.totalSize -= value.size();
@@ -300,11 +292,11 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
             }
         }
 
-        C4906e(Map<K, Collection<V>> map) {
+        e(Map<K, Collection<V>> map) {
             super(map);
         }
 
-        @Override // com.google.common.collect.Maps.C5062l, java.util.AbstractCollection, java.util.Collection, java.util.Set
+        @Override // com.google.common.collect.Maps.l, java.util.AbstractCollection, java.util.Collection, java.util.Set
         public void clear() {
             Iterators.d(iterator());
         }
@@ -324,12 +316,12 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
             return a().keySet().hashCode();
         }
 
-        @Override // com.google.common.collect.Maps.C5062l, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+        @Override // com.google.common.collect.Maps.l, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
         public Iterator<K> iterator() {
-            return new C4907a(a().entrySet().iterator());
+            return new a(a().entrySet().iterator());
         }
 
-        @Override // com.google.common.collect.Maps.C5062l, java.util.AbstractCollection, java.util.Collection, java.util.Set
+        @Override // com.google.common.collect.Maps.l, java.util.AbstractCollection, java.util.Collection, java.util.Set
         public boolean remove(Object obj) {
             int i;
             Collection<V> remove = a().remove(obj);
@@ -345,10 +337,9 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$f */
     /* loaded from: classes10.dex */
-    class C4908f extends AbstractMapBasedMultimap<K, V>.C4911i implements NavigableMap<K, Collection<V>> {
-        C4908f(NavigableMap<K, Collection<V>> navigableMap) {
+    class f extends AbstractMapBasedMultimap<K, V>.i implements NavigableMap<K, Collection<V>> {
+        f(NavigableMap<K, Collection<V>> navigableMap) {
             super(navigableMap);
         }
 
@@ -373,7 +364,7 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
 
         @Override // java.util.NavigableMap
         public NavigableMap<K, Collection<V>> descendingMap() {
-            return new C4908f(i().descendingMap());
+            return new f(i().descendingMap());
         }
 
         @Override // java.util.NavigableMap
@@ -414,19 +405,19 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.AbstractMapBasedMultimap.C4911i
+        @Override // com.google.common.collect.AbstractMapBasedMultimap.i
         /* renamed from: j */
         public NavigableSet<K> g() {
-            return new C4909g(i());
+            return new g(i());
         }
 
-        @Override // com.google.common.collect.AbstractMapBasedMultimap.C4911i, java.util.SortedMap, java.util.NavigableMap
+        @Override // com.google.common.collect.AbstractMapBasedMultimap.i, java.util.SortedMap, java.util.NavigableMap
         /* renamed from: k */
         public NavigableMap<K, Collection<V>> headMap(K k) {
             return headMap(k, false);
         }
 
-        @Override // com.google.common.collect.AbstractMapBasedMultimap.C4911i, com.google.common.collect.AbstractMapBasedMultimap.C4902c, com.google.common.collect.Maps.AbstractC5070t, java.util.AbstractMap, java.util.Map
+        @Override // com.google.common.collect.AbstractMapBasedMultimap.i, com.google.common.collect.AbstractMapBasedMultimap.c, com.google.common.collect.Maps.t, java.util.AbstractMap, java.util.Map
         /* renamed from: l */
         public NavigableSet<K> keySet() {
             return (NavigableSet) super.keySet();
@@ -467,7 +458,7 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.AbstractMapBasedMultimap.C4911i
+        @Override // com.google.common.collect.AbstractMapBasedMultimap.i
         /* renamed from: n */
         public NavigableMap<K, Collection<V>> i() {
             return (NavigableMap) super.i();
@@ -478,13 +469,13 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
             return keySet();
         }
 
-        @Override // com.google.common.collect.AbstractMapBasedMultimap.C4911i, java.util.SortedMap, java.util.NavigableMap
+        @Override // com.google.common.collect.AbstractMapBasedMultimap.i, java.util.SortedMap, java.util.NavigableMap
         /* renamed from: o */
         public NavigableMap<K, Collection<V>> subMap(K k, K k2) {
             return subMap(k, true, k2, false);
         }
 
-        @Override // com.google.common.collect.AbstractMapBasedMultimap.C4911i, java.util.SortedMap, java.util.NavigableMap
+        @Override // com.google.common.collect.AbstractMapBasedMultimap.i, java.util.SortedMap, java.util.NavigableMap
         /* renamed from: p */
         public NavigableMap<K, Collection<V>> tailMap(K k) {
             return tailMap(k, true);
@@ -502,30 +493,29 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
 
         @Override // java.util.NavigableMap
         public NavigableMap<K, Collection<V>> headMap(K k, boolean z) {
-            return new C4908f(i().headMap(k, z));
+            return new f(i().headMap(k, z));
         }
 
         @Override // java.util.NavigableMap
         public NavigableMap<K, Collection<V>> subMap(K k, boolean z, K k2, boolean z2) {
-            return new C4908f(i().subMap(k, z, k2, z2));
+            return new f(i().subMap(k, z, k2, z2));
         }
 
         @Override // java.util.NavigableMap
         public NavigableMap<K, Collection<V>> tailMap(K k, boolean z) {
-            return new C4908f(i().tailMap(k, z));
+            return new f(i().tailMap(k, z));
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$g */
     /* loaded from: classes10.dex */
-    public class C4909g extends AbstractMapBasedMultimap<K, V>.C4912j implements NavigableSet<K> {
-        C4909g(NavigableMap<K, Collection<V>> navigableMap) {
+    public class g extends AbstractMapBasedMultimap<K, V>.j implements NavigableSet<K> {
+        g(NavigableMap<K, Collection<V>> navigableMap) {
             super(navigableMap);
         }
 
-        @Override // com.google.common.collect.AbstractMapBasedMultimap.C4912j, java.util.SortedSet, java.util.NavigableSet
+        @Override // com.google.common.collect.AbstractMapBasedMultimap.j, java.util.SortedSet, java.util.NavigableSet
         /* renamed from: c */
         public NavigableSet<K> headSet(K k) {
             return headSet(k, false);
@@ -537,7 +527,7 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.AbstractMapBasedMultimap.C4912j
+        @Override // com.google.common.collect.AbstractMapBasedMultimap.j
         /* renamed from: d */
         public NavigableMap<K, Collection<V>> b() {
             return (NavigableMap) super.b();
@@ -550,16 +540,16 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
 
         @Override // java.util.NavigableSet
         public NavigableSet<K> descendingSet() {
-            return new C4909g(b().descendingMap());
+            return new g(b().descendingMap());
         }
 
-        @Override // com.google.common.collect.AbstractMapBasedMultimap.C4912j, java.util.SortedSet, java.util.NavigableSet
+        @Override // com.google.common.collect.AbstractMapBasedMultimap.j, java.util.SortedSet, java.util.NavigableSet
         /* renamed from: e */
         public NavigableSet<K> subSet(K k, K k2) {
             return subSet(k, true, k2, false);
         }
 
-        @Override // com.google.common.collect.AbstractMapBasedMultimap.C4912j, java.util.SortedSet, java.util.NavigableSet
+        @Override // com.google.common.collect.AbstractMapBasedMultimap.j, java.util.SortedSet, java.util.NavigableSet
         /* renamed from: f */
         public NavigableSet<K> tailSet(K k) {
             return tailSet(k, true);
@@ -592,39 +582,37 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
 
         @Override // java.util.NavigableSet
         public NavigableSet<K> headSet(K k, boolean z) {
-            return new C4909g(b().headMap(k, z));
+            return new g(b().headMap(k, z));
         }
 
         @Override // java.util.NavigableSet
         public NavigableSet<K> subSet(K k, boolean z, K k2, boolean z2) {
-            return new C4909g(b().subMap(k, z, k2, z2));
+            return new g(b().subMap(k, z, k2, z2));
         }
 
         @Override // java.util.NavigableSet
         public NavigableSet<K> tailSet(K k, boolean z) {
-            return new C4909g(b().tailMap(k, z));
+            return new g(b().tailMap(k, z));
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$h */
     /* loaded from: classes10.dex */
-    public class C4910h extends AbstractMapBasedMultimap<K, V>.C4915l implements RandomAccess {
-        C4910h(@NullableDecl AbstractMapBasedMultimap abstractMapBasedMultimap, K k, @NullableDecl List<V> list, AbstractMapBasedMultimap<K, V>.C4913k c4913k) {
-            super(k, list, c4913k);
+    public class h extends AbstractMapBasedMultimap<K, V>.l implements RandomAccess {
+        h(@NullableDecl AbstractMapBasedMultimap abstractMapBasedMultimap, K k, @NullableDecl List<V> list, AbstractMapBasedMultimap<K, V>.k kVar) {
+            super(k, list, kVar);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$i */
     /* loaded from: classes10.dex */
-    public class C4911i extends AbstractMapBasedMultimap<K, V>.C4902c implements SortedMap<K, Collection<V>> {
+    public class i extends AbstractMapBasedMultimap<K, V>.c implements SortedMap<K, Collection<V>> {
         @MonotonicNonNullDecl
         SortedSet<K> f;
 
-        C4911i(SortedMap<K, Collection<V>> sortedMap) {
+        i(SortedMap<K, Collection<V>> sortedMap) {
             super(sortedMap);
         }
 
@@ -639,13 +627,13 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.Maps.AbstractC5070t
+        @Override // com.google.common.collect.Maps.t
         /* renamed from: g */
         public SortedSet<K> b() {
-            return new C4912j(i());
+            return new j(i());
         }
 
-        @Override // com.google.common.collect.AbstractMapBasedMultimap.C4902c, com.google.common.collect.Maps.AbstractC5070t, java.util.AbstractMap, java.util.Map
+        @Override // com.google.common.collect.AbstractMapBasedMultimap.c, com.google.common.collect.Maps.t, java.util.AbstractMap, java.util.Map
         /* renamed from: h */
         public SortedSet<K> keySet() {
             SortedSet<K> sortedSet = this.f;
@@ -658,7 +646,7 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         }
 
         public SortedMap<K, Collection<V>> headMap(K k) {
-            return new C4911i(i().headMap(k));
+            return new i(i().headMap(k));
         }
 
         SortedMap<K, Collection<V>> i() {
@@ -671,20 +659,19 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         }
 
         public SortedMap<K, Collection<V>> subMap(K k, K k2) {
-            return new C4911i(i().subMap(k, k2));
+            return new i(i().subMap(k, k2));
         }
 
         public SortedMap<K, Collection<V>> tailMap(K k) {
-            return new C4911i(i().tailMap(k));
+            return new i(i().tailMap(k));
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$j */
     /* loaded from: classes10.dex */
-    public class C4912j extends AbstractMapBasedMultimap<K, V>.C4906e implements SortedSet<K> {
-        C4912j(SortedMap<K, Collection<V>> sortedMap) {
+    public class j extends AbstractMapBasedMultimap<K, V>.e implements SortedSet<K> {
+        j(SortedMap<K, Collection<V>> sortedMap) {
             super(sortedMap);
         }
 
@@ -703,7 +690,7 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         }
 
         public SortedSet<K> headSet(K k) {
-            return new C4912j(b().headMap(k));
+            return new j(b().headMap(k));
         }
 
         @Override // java.util.SortedSet
@@ -712,25 +699,24 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         }
 
         public SortedSet<K> subSet(K k, K k2) {
-            return new C4912j(b().subMap(k, k2));
+            return new j(b().subMap(k, k2));
         }
 
         public SortedSet<K> tailSet(K k) {
-            return new C4912j(b().tailMap(k));
+            return new j(b().tailMap(k));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$m */
     /* loaded from: classes10.dex */
-    class C4917m extends AbstractMapBasedMultimap<K, V>.C4919o implements NavigableSet<V> {
+    class m extends AbstractMapBasedMultimap<K, V>.o implements NavigableSet<V> {
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C4917m(@NullableDecl K k, NavigableSet<V> navigableSet, @NullableDecl AbstractMapBasedMultimap<K, V>.C4913k c4913k) {
-            super(k, navigableSet, c4913k);
+        public m(@NullableDecl K k, NavigableSet<V> navigableSet, @NullableDecl AbstractMapBasedMultimap<K, V>.k kVar) {
+            super(k, navigableSet, kVar);
         }
 
         private NavigableSet<V> i(NavigableSet<V> navigableSet) {
-            return new C4917m(this.a, navigableSet, b() == null ? this : b());
+            return new m(this.a, navigableSet, b() == null ? this : b());
         }
 
         @Override // java.util.NavigableSet
@@ -740,7 +726,7 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
 
         @Override // java.util.NavigableSet
         public Iterator<V> descendingIterator() {
-            return new C4913k.C4914a(g().descendingIterator());
+            return new k.a(g().descendingIterator());
         }
 
         @Override // java.util.NavigableSet
@@ -754,7 +740,7 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.AbstractMapBasedMultimap.C4919o
+        @Override // com.google.common.collect.AbstractMapBasedMultimap.o
         /* renamed from: h */
         public NavigableSet<V> g() {
             return (NavigableSet) super.g();
@@ -797,15 +783,14 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$n */
     /* loaded from: classes10.dex */
-    class C4918n extends AbstractMapBasedMultimap<K, V>.C4913k implements Set<V> {
+    class n extends AbstractMapBasedMultimap<K, V>.k implements Set<V> {
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C4918n(@NullableDecl K k, Set<V> set) {
+        public n(@NullableDecl K k, Set<V> set) {
             super(k, set, null);
         }
 
-        @Override // com.google.common.collect.AbstractMapBasedMultimap.C4913k, java.util.AbstractCollection, java.util.Collection
+        @Override // com.google.common.collect.AbstractMapBasedMultimap.k, java.util.AbstractCollection, java.util.Collection
         public boolean removeAll(Collection<?> collection) {
             if (collection.isEmpty()) {
                 return false;
@@ -823,12 +808,11 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$o */
     /* loaded from: classes10.dex */
-    public class C4919o extends AbstractMapBasedMultimap<K, V>.C4913k implements SortedSet<V> {
+    public class o extends AbstractMapBasedMultimap<K, V>.k implements SortedSet<V> {
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C4919o(@NullableDecl K k, SortedSet<V> sortedSet, @NullableDecl AbstractMapBasedMultimap<K, V>.C4913k c4913k) {
-            super(k, sortedSet, c4913k);
+        public o(@NullableDecl K k, SortedSet<V> sortedSet, @NullableDecl AbstractMapBasedMultimap<K, V>.k kVar) {
+            super(k, sortedSet, kVar);
         }
 
         @Override // java.util.SortedSet
@@ -849,7 +833,7 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         @Override // java.util.SortedSet
         public SortedSet<V> headSet(V v) {
             e();
-            return new C4919o(d(), g().headSet(v), b() == null ? this : b());
+            return new o(d(), g().headSet(v), b() == null ? this : b());
         }
 
         @Override // java.util.SortedSet
@@ -861,13 +845,13 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         @Override // java.util.SortedSet
         public SortedSet<V> subSet(V v, V v2) {
             e();
-            return new C4919o(d(), g().subSet(v, v2), b() == null ? this : b());
+            return new o(d(), g().subSet(v, v2), b() == null ? this : b());
         }
 
         @Override // java.util.SortedSet
         public SortedSet<V> tailSet(V v) {
             e();
-            return new C4919o(d(), g().tailSet(v), b() == null ? this : b());
+            return new o(d(), g().tailSet(v), b() == null ? this : b());
         }
     }
 
@@ -878,22 +862,22 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
     }
 
     static /* synthetic */ int access$208(AbstractMapBasedMultimap abstractMapBasedMultimap) {
-        int i = abstractMapBasedMultimap.totalSize;
-        abstractMapBasedMultimap.totalSize = i + 1;
-        return i;
+        int i2 = abstractMapBasedMultimap.totalSize;
+        abstractMapBasedMultimap.totalSize = i2 + 1;
+        return i2;
     }
 
     static /* synthetic */ int access$210(AbstractMapBasedMultimap abstractMapBasedMultimap) {
-        int i = abstractMapBasedMultimap.totalSize;
-        abstractMapBasedMultimap.totalSize = i - 1;
-        return i;
+        int i2 = abstractMapBasedMultimap.totalSize;
+        abstractMapBasedMultimap.totalSize = i2 - 1;
+        return i2;
     }
 
-    private Collection<V> getOrCreateCollection(@NullableDecl K k) {
-        Collection<V> collection = this.map.get(k);
+    private Collection<V> getOrCreateCollection(@NullableDecl K k2) {
+        Collection<V> collection = this.map.get(k2);
         if (collection == null) {
-            Collection<V> createCollection = createCollection(k);
-            this.map.put(k, createCollection);
+            Collection<V> createCollection = createCollection(k2);
+            this.map.put(k2, createCollection);
             return createCollection;
         }
         return collection;
@@ -936,96 +920,96 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         return this.map.containsKey(obj);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     Map<K, Collection<V>> createAsMap() {
-        return new C4902c(this.map);
+        return new c(this.map);
     }
 
     abstract Collection<V> createCollection();
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public Collection<V> createCollection(@NullableDecl K k) {
+    public Collection<V> createCollection(@NullableDecl K k2) {
         return createCollection();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     Collection<Map.Entry<K, V>> createEntries() {
         if (this instanceof SetMultimap) {
-            return new AbstractC5159c.C5161b(this);
+            return new c.b(this);
         }
-        return new AbstractC5159c.C5160a();
+        return new c.a();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     Set<K> createKeySet() {
-        return new C4906e(this.map);
+        return new e(this.map);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     Multiset<K> createKeys() {
-        return new Multimaps.C5078c(this);
+        return new Multimaps.c(this);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public final Map<K, Collection<V>> createMaybeNavigableAsMap() {
         Map<K, Collection<V>> map = this.map;
         if (map instanceof NavigableMap) {
-            return new C4908f((NavigableMap) this.map);
+            return new f((NavigableMap) this.map);
         }
         if (map instanceof SortedMap) {
-            return new C4911i((SortedMap) this.map);
+            return new i((SortedMap) this.map);
         }
-        return new C4902c(this.map);
+        return new c(this.map);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public final Set<K> createMaybeNavigableKeySet() {
         Map<K, Collection<V>> map = this.map;
         if (map instanceof NavigableMap) {
-            return new C4909g((NavigableMap) this.map);
+            return new g((NavigableMap) this.map);
         }
         if (map instanceof SortedMap) {
-            return new C4912j((SortedMap) this.map);
+            return new j((SortedMap) this.map);
         }
-        return new C4906e(this.map);
+        return new e(this.map);
     }
 
     Collection<V> createUnmodifiableEmptyCollection() {
         return (Collection<V>) unmodifiableCollectionSubclass(createCollection());
     }
 
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     Collection<V> createValues() {
-        return new AbstractC5159c.C5162c();
+        return new c.C0237c();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public Collection<Map.Entry<K, V>> entries() {
         return super.entries();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     Iterator<Map.Entry<K, V>> entryIterator() {
-        return new C4901b(this);
+        return new b(this);
     }
 
     @Override // com.google.common.collect.Multimap
-    public Collection<V> get(@NullableDecl K k) {
-        Collection<V> collection = this.map.get(k);
+    public Collection<V> get(@NullableDecl K k2) {
+        Collection<V> collection = this.map.get(k2);
         if (collection == null) {
-            collection = createCollection(k);
+            collection = createCollection(k2);
         }
-        return wrapCollection(k, collection);
+        return wrapCollection(k2, collection);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
-    public boolean put(@NullableDecl K k, @NullableDecl V v) {
-        Collection<V> collection = this.map.get(k);
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
+    public boolean put(@NullableDecl K k2, @NullableDecl V v) {
+        Collection<V> collection = this.map.get(k2);
         if (collection == null) {
-            Collection<V> createCollection = createCollection(k);
+            Collection<V> createCollection = createCollection(k2);
             if (createCollection.add(v)) {
                 this.totalSize++;
-                this.map.put(k, createCollection);
+                this.map.put(k2, createCollection);
                 return true;
             }
             throw new AssertionError("New Collection violated the Collection spec");
@@ -1050,13 +1034,13 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         return (Collection<V>) unmodifiableCollectionSubclass(createCollection);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
-    public Collection<V> replaceValues(@NullableDecl K k, Iterable<? extends V> iterable) {
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
+    public Collection<V> replaceValues(@NullableDecl K k2, Iterable<? extends V> iterable) {
         Iterator<? extends V> it = iterable.iterator();
         if (!it.hasNext()) {
-            return removeAll(k);
+            return removeAll(k2);
         }
-        Collection<V> orCreateCollection = getOrCreateCollection(k);
+        Collection<V> orCreateCollection = getOrCreateCollection(k2);
         Collection createCollection = createCollection();
         createCollection.addAll(orCreateCollection);
         this.totalSize -= orCreateCollection.size();
@@ -1088,52 +1072,51 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         return Collections.unmodifiableCollection(collection);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     Iterator<V> valueIterator() {
-        return new C4900a(this);
+        return new a(this);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public Collection<V> values() {
         return super.values();
     }
 
-    Collection<V> wrapCollection(@NullableDecl K k, Collection<V> collection) {
-        return new C4913k(k, collection, null);
+    Collection<V> wrapCollection(@NullableDecl K k2, Collection<V> collection) {
+        return new k(k2, collection, null);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public final List<V> wrapList(@NullableDecl K k, List<V> list, @NullableDecl AbstractMapBasedMultimap<K, V>.C4913k c4913k) {
-        return list instanceof RandomAccess ? new C4910h(this, k, list, c4913k) : new C4915l(k, list, c4913k);
+    public final List<V> wrapList(@NullableDecl K k2, List<V> list, @NullableDecl AbstractMapBasedMultimap<K, V>.k kVar) {
+        return list instanceof RandomAccess ? new h(this, k2, list, kVar) : new l(k2, list, kVar);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$k */
     /* loaded from: classes10.dex */
-    public class C4913k extends AbstractCollection<V> {
+    public class k extends AbstractCollection<V> {
         @NullableDecl
         final K a;
         Collection<V> b;
         @NullableDecl
-        final AbstractMapBasedMultimap<K, V>.C4913k c;
+        final AbstractMapBasedMultimap<K, V>.k c;
         @NullableDecl
         final Collection<V> d;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C4913k(@NullableDecl K k, Collection<V> collection, @NullableDecl AbstractMapBasedMultimap<K, V>.C4913k c4913k) {
+        public k(@NullableDecl K k, Collection<V> collection, @NullableDecl AbstractMapBasedMultimap<K, V>.k kVar) {
             this.a = k;
             this.b = collection;
-            this.c = c4913k;
-            this.d = c4913k == null ? null : c4913k.c();
+            this.c = kVar;
+            this.d = kVar == null ? null : kVar.c();
         }
 
         void a() {
-            AbstractMapBasedMultimap<K, V>.C4913k c4913k = this.c;
-            if (c4913k == null) {
+            AbstractMapBasedMultimap<K, V>.k kVar = this.c;
+            if (kVar == null) {
                 AbstractMapBasedMultimap.this.map.put(this.a, this.b);
             } else {
-                c4913k.a();
+                kVar.a();
             }
         }
 
@@ -1168,7 +1151,7 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
             return addAll;
         }
 
-        AbstractMapBasedMultimap<K, V>.C4913k b() {
+        AbstractMapBasedMultimap<K, V>.k b() {
             return this.c;
         }
 
@@ -1205,9 +1188,9 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
 
         void e() {
             Collection<V> collection;
-            AbstractMapBasedMultimap<K, V>.C4913k c4913k = this.c;
-            if (c4913k != null) {
-                c4913k.e();
+            AbstractMapBasedMultimap<K, V>.k kVar = this.c;
+            if (kVar != null) {
+                kVar.e();
                 if (this.c.c() != this.d) {
                     throw new ConcurrentModificationException();
                 }
@@ -1227,9 +1210,9 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         }
 
         void f() {
-            AbstractMapBasedMultimap<K, V>.C4913k c4913k = this.c;
-            if (c4913k != null) {
-                c4913k.f();
+            AbstractMapBasedMultimap<K, V>.k kVar = this.c;
+            if (kVar != null) {
+                kVar.f();
             } else if (this.b.isEmpty()) {
                 AbstractMapBasedMultimap.this.map.remove(this.a);
             }
@@ -1244,7 +1227,7 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable
         public Iterator<V> iterator() {
             e();
-            return new C4914a();
+            return new a();
         }
 
         @Override // java.util.AbstractCollection, java.util.Collection
@@ -1300,14 +1283,13 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$k$a */
         /* loaded from: classes10.dex */
-        public class C4914a implements Iterator<V> {
+        public class a implements Iterator<V> {
             final Iterator<V> a;
             final Collection<V> b;
 
-            C4914a() {
-                Collection<V> collection = C4913k.this.b;
+            a() {
+                Collection<V> collection = k.this.b;
                 this.b = collection;
                 this.a = AbstractMapBasedMultimap.iteratorOrListIterator(collection);
             }
@@ -1318,8 +1300,8 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
             }
 
             void b() {
-                C4913k.this.e();
-                if (C4913k.this.b != this.b) {
+                k.this.e();
+                if (k.this.b != this.b) {
                     throw new ConcurrentModificationException();
                 }
             }
@@ -1340,11 +1322,11 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
             public void remove() {
                 this.a.remove();
                 AbstractMapBasedMultimap.access$210(AbstractMapBasedMultimap.this);
-                C4913k.this.f();
+                k.this.f();
             }
 
-            C4914a(Iterator<V> it) {
-                this.b = C4913k.this.b;
+            a(Iterator<V> it) {
+                this.b = k.this.b;
                 this.a = it;
             }
         }
@@ -1352,15 +1334,13 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$l */
     /* loaded from: classes10.dex */
-    public class C4915l extends AbstractMapBasedMultimap<K, V>.C4913k implements List<V> {
+    public class l extends AbstractMapBasedMultimap<K, V>.k implements List<V> {
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.AbstractMapBasedMultimap$l$a */
         /* loaded from: classes10.dex */
-        private class C4916a extends AbstractMapBasedMultimap<K, V>.C4913k.C4914a implements ListIterator<V> {
-            C4916a() {
+        private class a extends AbstractMapBasedMultimap<K, V>.k.a implements ListIterator<V> {
+            a() {
                 super();
             }
 
@@ -1370,11 +1350,11 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
 
             @Override // java.util.ListIterator
             public void add(V v) {
-                boolean isEmpty = C4915l.this.isEmpty();
+                boolean isEmpty = l.this.isEmpty();
                 c().add(v);
                 AbstractMapBasedMultimap.access$208(AbstractMapBasedMultimap.this);
                 if (isEmpty) {
-                    C4915l.this.a();
+                    l.this.a();
                 }
             }
 
@@ -1403,13 +1383,13 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
                 c().set(v);
             }
 
-            public C4916a(int i) {
-                super(C4915l.this.g().listIterator(i));
+            public a(int i) {
+                super(l.this.g().listIterator(i));
             }
         }
 
-        C4915l(@NullableDecl K k, List<V> list, @NullableDecl AbstractMapBasedMultimap<K, V>.C4913k c4913k) {
-            super(k, list, c4913k);
+        l(@NullableDecl K k, List<V> list, @NullableDecl AbstractMapBasedMultimap<K, V>.k kVar) {
+            super(k, list, kVar);
         }
 
         @Override // java.util.List
@@ -1465,7 +1445,7 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         @Override // java.util.List
         public ListIterator<V> listIterator() {
             e();
-            return new C4916a();
+            return new a();
         }
 
         @Override // java.util.List
@@ -1493,7 +1473,7 @@ public abstract class AbstractMapBasedMultimap<K, V> extends AbstractC5159c<K, V
         @Override // java.util.List
         public ListIterator<V> listIterator(int i) {
             e();
-            return new C4916a(i);
+            return new a(i);
         }
     }
 }

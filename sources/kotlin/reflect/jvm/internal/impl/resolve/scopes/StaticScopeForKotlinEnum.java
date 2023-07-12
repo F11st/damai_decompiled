@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.resolve.scopes;
 
 import java.util.List;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.PropertyReference1Impl;
@@ -53,7 +53,7 @@ public final class StaticScopeForKotlinEnum extends le1 {
                 List<? extends SimpleFunctionDescriptor> j;
                 classDescriptor2 = StaticScopeForKotlinEnum.this.a;
                 classDescriptor3 = StaticScopeForKotlinEnum.this.a;
-                j = C8214m.j(x60.d(classDescriptor2), x60.e(classDescriptor3));
+                j = m.j(x60.d(classDescriptor2), x60.e(classDescriptor3));
                 return j;
             }
         });

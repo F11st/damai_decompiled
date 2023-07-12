@@ -2,8 +2,6 @@ package tb;
 
 import android.content.Context;
 import android.util.Log;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import cn.damai.player.DMVideoPlayer;
 import cn.damai.player.utils.network.NetworkType;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -12,19 +10,18 @@ import java.util.HashMap;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
-public class sx2 extends C0528b {
+public class sx2 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.sx2$a */
     /* loaded from: classes6.dex */
-    private static class C9702a {
+    private static class a {
         private static final sx2 a = new sx2();
     }
 
     public static final sx2 f() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "3139269") ? (sx2) ipChange.ipc$dispatch("3139269", new Object[0]) : C9702a.a;
+        return AndroidInstantRuntime.support(ipChange, "3139269") ? (sx2) ipChange.ipc$dispatch("3139269", new Object[0]) : a.a;
     }
 
     public void g(Context context, String str, String str2, long j) {
@@ -55,6 +52,6 @@ public class sx2 extends C0528b {
         if (j > 0) {
             hashMap.put("timeConsumed", String.valueOf(j));
         }
-        C0529c.e().D("video_performance", str2, "", "", hashMap, 19999);
+        cn.damai.common.user.c.e().D("video_performance", str2, "", "", hashMap, 19999);
     }
 }

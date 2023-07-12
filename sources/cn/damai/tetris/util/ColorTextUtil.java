@@ -26,15 +26,14 @@ public class ColorTextUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.util.ColorTextUtil$a */
     /* loaded from: classes16.dex */
-    public class C2005a extends ClickableSpan {
+    public class a extends ClickableSpan {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context a;
         final /* synthetic */ int b;
         final /* synthetic */ OnColorTextClickListener c;
 
-        C2005a(Context context, int i, OnColorTextClickListener onColorTextClickListener) {
+        a(Context context, int i, OnColorTextClickListener onColorTextClickListener) {
             this.a = context;
             this.b = i;
             this.c = onColorTextClickListener;
@@ -99,7 +98,7 @@ public class ColorTextUtil {
         Context context = textView.getContext();
         int indexOf = str.indexOf(str2);
         SpannableString spannableString = new SpannableString(str);
-        spannableString.setSpan(new C2005a(context, i, onColorTextClickListener), indexOf, str2.length() + indexOf, 33);
+        spannableString.setSpan(new a(context, i, onColorTextClickListener), indexOf, str2.length() + indexOf, 33);
         textView.setHighlightColor(context.getResources().getColor(R$color.transparent));
         textView.setText(spannableString);
         textView.setMovementMethod(LinkMovementMethod.getInstance());

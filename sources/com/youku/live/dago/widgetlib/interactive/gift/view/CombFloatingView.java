@@ -64,7 +64,7 @@ public class CombFloatingView extends RelativeLayout {
             ipChange.ipc$dispatch("1721709819", new Object[]{this, context});
             return;
         }
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_comb_floating, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_comb_floating, (ViewGroup) this, true);
         this.mCombNumView = (LinearLayout) findViewById(R.id.comb_num_view);
         this.mFirstNumView = (ImageView) findViewById(R.id.comb_num_1);
         this.mSecondNumView = (ImageView) findViewById(R.id.comb_num_2);
@@ -154,25 +154,25 @@ public class CombFloatingView extends RelativeLayout {
         if (AndroidInstantRuntime.support(ipChange, "334305378")) {
             ipChange.ipc$dispatch("334305378", new Object[]{this, str, imageView});
         } else if ("1".equals(str)) {
-            imageView.setImageResource(R.C7941drawable.dago_pgc_combsend_1);
+            imageView.setImageResource(R.drawable.dago_pgc_combsend_1);
         } else if ("2".equals(str)) {
-            imageView.setImageResource(R.C7941drawable.dago_pgc_combsend_2);
+            imageView.setImageResource(R.drawable.dago_pgc_combsend_2);
         } else if ("3".equals(str)) {
-            imageView.setImageResource(R.C7941drawable.dago_pgc_combsend_3);
+            imageView.setImageResource(R.drawable.dago_pgc_combsend_3);
         } else if ("4".equals(str)) {
-            imageView.setImageResource(R.C7941drawable.dago_pgc_combsend_4);
+            imageView.setImageResource(R.drawable.dago_pgc_combsend_4);
         } else if ("5".equals(str)) {
-            imageView.setImageResource(R.C7941drawable.dago_pgc_combsend_5);
+            imageView.setImageResource(R.drawable.dago_pgc_combsend_5);
         } else if ("6".equals(str)) {
-            imageView.setImageResource(R.C7941drawable.dago_pgc_combsend_6);
+            imageView.setImageResource(R.drawable.dago_pgc_combsend_6);
         } else if ("7".equals(str)) {
-            imageView.setImageResource(R.C7941drawable.dago_pgc_combsend_7);
+            imageView.setImageResource(R.drawable.dago_pgc_combsend_7);
         } else if ("8".equals(str)) {
-            imageView.setImageResource(R.C7941drawable.dago_pgc_combsend_8);
+            imageView.setImageResource(R.drawable.dago_pgc_combsend_8);
         } else if ("9".equals(str)) {
-            imageView.setImageResource(R.C7941drawable.dago_pgc_combsend_9);
+            imageView.setImageResource(R.drawable.dago_pgc_combsend_9);
         } else {
-            imageView.setImageResource(R.C7941drawable.dago_pgc_combsend_0);
+            imageView.setImageResource(R.drawable.dago_pgc_combsend_0);
         }
     }
 
@@ -359,11 +359,11 @@ public class CombFloatingView extends RelativeLayout {
         this.mFourNumView.setVisibility(0);
         this.mThirdNumView.setVisibility(0);
         ImageView imageView = this.mFirstNumView;
-        int i2 = R.C7941drawable.dago_pgc_combsend_9;
+        int i2 = R.drawable.dago_pgc_combsend_9;
         imageView.setImageResource(i2);
         this.mSecondNumView.setImageResource(i2);
         this.mFourNumView.setImageResource(i2);
-        this.mThirdNumView.setImageResource(R.C7941drawable.dago_pgc_combsend_add);
+        this.mThirdNumView.setImageResource(R.drawable.dago_pgc_combsend_add);
     }
 
     public void setDataForText(int i) {
@@ -373,13 +373,13 @@ public class CombFloatingView extends RelativeLayout {
             return;
         }
         if (i >= 1 && i <= 10) {
-            this.mCombEffectView.setImageResource(R.C7941drawable.dago_pgc_combsend_rich0);
+            this.mCombEffectView.setImageResource(R.drawable.dago_pgc_combsend_rich0);
         } else if (i > 10 && i <= 30) {
-            this.mCombEffectView.setImageResource(R.C7941drawable.dago_pgc_combsend_rich1);
+            this.mCombEffectView.setImageResource(R.drawable.dago_pgc_combsend_rich1);
         } else if (i > 30 && i <= 60) {
-            this.mCombEffectView.setImageResource(R.C7941drawable.dago_pgc_combsend_rich2);
+            this.mCombEffectView.setImageResource(R.drawable.dago_pgc_combsend_rich2);
         } else {
-            this.mCombEffectView.setImageResource(R.C7941drawable.dago_pgc_combsend_rich3);
+            this.mCombEffectView.setImageResource(R.drawable.dago_pgc_combsend_rich3);
         }
         if (this.isMaxSendNum) {
             ur1.o().s("https://img.alicdn.com/tfs/TB1xxa6JbH1gK0jSZFwXXc7aXXa-344-168.png").y(this.mCombShineView);

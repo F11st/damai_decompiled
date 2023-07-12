@@ -47,10 +47,9 @@ public class QrScanFragment extends BaseLogonFragment implements View.OnClickLis
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.scan.QrScanFragment$a */
     /* loaded from: classes11.dex */
-    public class C6720a implements RpcRequestCallback {
-        C6720a() {
+    public class a implements RpcRequestCallback {
+        a() {
         }
 
         @Override // com.ali.user.mobile.callback.RpcRequestCallback
@@ -116,10 +115,9 @@ public class QrScanFragment extends BaseLogonFragment implements View.OnClickLis
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.scan.QrScanFragment$b */
     /* loaded from: classes11.dex */
-    public class DialogInterface$OnClickListenerC6721b implements DialogInterface.OnClickListener {
-        DialogInterface$OnClickListenerC6721b() {
+    public class b implements DialogInterface.OnClickListener {
+        b() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -129,10 +127,9 @@ public class QrScanFragment extends BaseLogonFragment implements View.OnClickLis
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.scan.QrScanFragment$c */
     /* loaded from: classes11.dex */
-    class DialogInterface$OnClickListenerC6722c implements DialogInterface.OnClickListener {
-        DialogInterface$OnClickListenerC6722c() {
+    class c implements DialogInterface.OnClickListener {
+        c() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -142,10 +139,9 @@ public class QrScanFragment extends BaseLogonFragment implements View.OnClickLis
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.scan.QrScanFragment$d */
     /* loaded from: classes11.dex */
-    class DialogInterface$OnClickListenerC6723d implements DialogInterface.OnClickListener {
-        DialogInterface$OnClickListenerC6723d() {
+    class d implements DialogInterface.OnClickListener {
+        d() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -156,10 +152,9 @@ public class QrScanFragment extends BaseLogonFragment implements View.OnClickLis
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.scan.QrScanFragment$e */
     /* loaded from: classes11.dex */
-    public class C6724e implements RpcRequestCallback {
-        C6724e() {
+    public class e implements RpcRequestCallback {
+        e() {
         }
 
         @Override // com.ali.user.mobile.callback.RpcRequestCallback
@@ -201,10 +196,9 @@ public class QrScanFragment extends BaseLogonFragment implements View.OnClickLis
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.scan.QrScanFragment$f */
     /* loaded from: classes11.dex */
-    public class C6725f implements RpcRequestCallback {
-        C6725f() {
+    public class f implements RpcRequestCallback {
+        f() {
         }
 
         @Override // com.ali.user.mobile.callback.RpcRequestCallback
@@ -260,17 +254,17 @@ public class QrScanFragment extends BaseLogonFragment implements View.OnClickLis
     protected void drawView() {
         this.mHintImageView.setImageResource(getHitImageResource());
         if (this.mUrl != null) {
-            ScanServiceImpl.getInstance().commonScanWithRemoteBiz(getCommonScanParam(), new C6720a());
+            ScanServiceImpl.getInstance().commonScanWithRemoteBiz(getCommonScanParam(), new a());
         }
     }
 
     protected int getHitImageResource() {
-        return R.C6727drawable.aliuser_scan_default_bg;
+        return R.drawable.aliuser_scan_default_bg;
     }
 
     @Override // com.ali.user.mobile.base.ui.BaseFragment
     protected int getLayoutContent() {
-        return R.C6728layout.ali_user_scan_fragment;
+        return R.layout.ali_user_scan_fragment;
     }
 
     @Override // com.ali.user.mobile.base.ui.BaseFragment, com.ali.user.mobile.login.ui.BaseLoginView
@@ -280,18 +274,18 @@ public class QrScanFragment extends BaseLogonFragment implements View.OnClickLis
 
     protected int getSubTitleTextColor(boolean z) {
         if (z) {
-            return R.C6726color.aliuser_cancel_red;
+            return R.color.aliuser_cancel_red;
         }
-        return R.C6726color.aliuser_color_ccc;
+        return R.color.aliuser_color_ccc;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     public void handleBack() {
-        ScanServiceImpl.getInstance().commonCancelWithRemoteBiz(getCommonScanParam(), new C6725f());
+        ScanServiceImpl.getInstance().commonCancelWithRemoteBiz(getCommonScanParam(), new f());
     }
 
     protected void handleConfirm() {
-        ScanServiceImpl.getInstance().commonConfirmWithRemoteBiz(getCommonScanParam(), new C6724e());
+        ScanServiceImpl.getInstance().commonConfirmWithRemoteBiz(getCommonScanParam(), new e());
     }
 
     protected void handleH5(CommonScanResponse commonScanResponse) {
@@ -383,7 +377,7 @@ public class QrScanFragment extends BaseLogonFragment implements View.OnClickLis
             if (TextUtils.isEmpty(this.mConfirmMsg)) {
                 handleConfirm();
             } else {
-                alert("", this.mConfirmMsg, this.mAttachedActivity.getResources().getString(R.string.aliuser_confirm), new DialogInterface$OnClickListenerC6722c(), this.mAttachedActivity.getResources().getString(R.string.aliuser_cancel), new DialogInterface$OnClickListenerC6723d());
+                alert("", this.mConfirmMsg, this.mAttachedActivity.getResources().getString(R.string.aliuser_confirm), new c(), this.mAttachedActivity.getResources().getString(R.string.aliuser_cancel), new d());
             }
         } else if (id == R.id.aliuser_scan_cancelButton) {
             UserTrackAdapter.sendControlUT(getPageName(), "Cancel_Click");
@@ -455,6 +449,6 @@ public class QrScanFragment extends BaseLogonFragment implements View.OnClickLis
         if (TextUtils.isEmpty(str)) {
             return;
         }
-        alert("", str, this.mAttachedActivity.getResources().getString(R.string.aliuser_confirm), new DialogInterface$OnClickListenerC6721b(), null, null);
+        alert("", str, this.mAttachedActivity.getResources().getString(R.string.aliuser_confirm), new b(), null, null);
     }
 }

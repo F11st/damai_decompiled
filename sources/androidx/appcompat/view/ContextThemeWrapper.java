@@ -96,7 +96,7 @@ public class ContextThemeWrapper extends ContextWrapper {
             return theme;
         }
         if (this.mThemeResource == 0) {
-            this.mThemeResource = R.C0014style.Theme_AppCompat_Light;
+            this.mThemeResource = R.style.Theme_AppCompat_Light;
         }
         initializeTheme();
         return this.mTheme;

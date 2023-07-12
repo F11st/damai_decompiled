@@ -2,9 +2,6 @@ package com.google.common.util.concurrent;
 
 import com.google.common.annotations.Beta;
 import com.google.common.annotations.GwtCompatible;
-import com.google.common.base.C4844i;
-import com.google.common.util.concurrent.internal.AbstractC5351a;
-import com.google.common.util.concurrent.internal.C5352b;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import com.google.errorprone.annotations.ForOverride;
 import com.google.j2objc.annotations.ReflectionSupport;
@@ -33,16 +30,16 @@ import tb.jn1;
 @ReflectionSupport(ReflectionSupport.Level.FULL)
 @GwtCompatible(emulated = true)
 /* loaded from: classes10.dex */
-public abstract class AbstractFuture<V> extends AbstractC5351a implements ListenableFuture<V> {
-    private static final AbstractC5295b ATOMIC_HELPER;
+public abstract class AbstractFuture<V> extends com.google.common.util.concurrent.internal.a implements ListenableFuture<V> {
+    private static final b ATOMIC_HELPER;
     private static final Object NULL;
     private static final long SPIN_THRESHOLD_NANOS = 1000;
     @NullableDecl
-    private volatile C5297d listeners;
+    private volatile d listeners;
     @NullableDecl
     private volatile Object value;
     @NullableDecl
-    private volatile C5303i waiters;
+    private volatile i waiters;
     private static final boolean GENERATE_CANCELLATION_CAUSES = Boolean.parseBoolean(System.getProperty("guava.concurrent.generate_cancellation_cause", "false"));
     private static final Logger log = Logger.getLogger(AbstractFuture.class.getName());
 
@@ -94,30 +91,28 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.util.concurrent.AbstractFuture$b */
     /* loaded from: classes10.dex */
-    public static abstract class AbstractC5295b {
-        private AbstractC5295b() {
+    public static abstract class b {
+        private b() {
         }
 
-        abstract boolean a(AbstractFuture<?> abstractFuture, C5297d c5297d, C5297d c5297d2);
+        abstract boolean a(AbstractFuture<?> abstractFuture, d dVar, d dVar2);
 
         abstract boolean b(AbstractFuture<?> abstractFuture, Object obj, Object obj2);
 
-        abstract boolean c(AbstractFuture<?> abstractFuture, C5303i c5303i, C5303i c5303i2);
+        abstract boolean c(AbstractFuture<?> abstractFuture, i iVar, i iVar2);
 
-        abstract void d(C5303i c5303i, C5303i c5303i2);
+        abstract void d(i iVar, i iVar2);
 
-        abstract void e(C5303i c5303i, Thread thread);
+        abstract void e(i iVar, Thread thread);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.util.concurrent.AbstractFuture$c */
     /* loaded from: classes10.dex */
-    public static final class C5296c {
-        static final C5296c c;
-        static final C5296c d;
+    public static final class c {
+        static final c c;
+        static final c d;
         final boolean a;
         @NullableDecl
         final Throwable b;
@@ -128,11 +123,11 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
                 c = null;
                 return;
             }
-            d = new C5296c(false, null);
-            c = new C5296c(true, null);
+            d = new c(false, null);
+            c = new c(true, null);
         }
 
-        C5296c(boolean z, @NullableDecl Throwable th) {
+        c(boolean z, @NullableDecl Throwable th) {
             this.a = z;
             this.b = th;
         }
@@ -140,32 +135,30 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.util.concurrent.AbstractFuture$d */
     /* loaded from: classes10.dex */
-    public static final class C5297d {
-        static final C5297d d = new C5297d(null, null);
+    public static final class d {
+        static final d d = new d(null, null);
         final Runnable a;
         final Executor b;
         @NullableDecl
-        C5297d c;
+        d c;
 
-        C5297d(Runnable runnable, Executor executor) {
+        d(Runnable runnable, Executor executor) {
             this.a = runnable;
             this.b = executor;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.util.concurrent.AbstractFuture$e */
     /* loaded from: classes10.dex */
-    private static final class C5298e extends AbstractC5295b {
-        final AtomicReferenceFieldUpdater<C5303i, Thread> a;
-        final AtomicReferenceFieldUpdater<C5303i, C5303i> b;
-        final AtomicReferenceFieldUpdater<AbstractFuture, C5303i> c;
-        final AtomicReferenceFieldUpdater<AbstractFuture, C5297d> d;
+    private static final class e extends b {
+        final AtomicReferenceFieldUpdater<i, Thread> a;
+        final AtomicReferenceFieldUpdater<i, i> b;
+        final AtomicReferenceFieldUpdater<AbstractFuture, i> c;
+        final AtomicReferenceFieldUpdater<AbstractFuture, d> d;
         final AtomicReferenceFieldUpdater<AbstractFuture, Object> e;
 
-        C5298e(AtomicReferenceFieldUpdater<C5303i, Thread> atomicReferenceFieldUpdater, AtomicReferenceFieldUpdater<C5303i, C5303i> atomicReferenceFieldUpdater2, AtomicReferenceFieldUpdater<AbstractFuture, C5303i> atomicReferenceFieldUpdater3, AtomicReferenceFieldUpdater<AbstractFuture, C5297d> atomicReferenceFieldUpdater4, AtomicReferenceFieldUpdater<AbstractFuture, Object> atomicReferenceFieldUpdater5) {
+        e(AtomicReferenceFieldUpdater<i, Thread> atomicReferenceFieldUpdater, AtomicReferenceFieldUpdater<i, i> atomicReferenceFieldUpdater2, AtomicReferenceFieldUpdater<AbstractFuture, i> atomicReferenceFieldUpdater3, AtomicReferenceFieldUpdater<AbstractFuture, d> atomicReferenceFieldUpdater4, AtomicReferenceFieldUpdater<AbstractFuture, Object> atomicReferenceFieldUpdater5) {
             super();
             this.a = atomicReferenceFieldUpdater;
             this.b = atomicReferenceFieldUpdater2;
@@ -174,52 +167,51 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
             this.e = atomicReferenceFieldUpdater5;
         }
 
-        @Override // com.google.common.util.concurrent.AbstractFuture.AbstractC5295b
-        boolean a(AbstractFuture<?> abstractFuture, C5297d c5297d, C5297d c5297d2) {
-            return this.d.compareAndSet(abstractFuture, c5297d, c5297d2);
+        @Override // com.google.common.util.concurrent.AbstractFuture.b
+        boolean a(AbstractFuture<?> abstractFuture, d dVar, d dVar2) {
+            return this.d.compareAndSet(abstractFuture, dVar, dVar2);
         }
 
-        @Override // com.google.common.util.concurrent.AbstractFuture.AbstractC5295b
+        @Override // com.google.common.util.concurrent.AbstractFuture.b
         boolean b(AbstractFuture<?> abstractFuture, Object obj, Object obj2) {
             return this.e.compareAndSet(abstractFuture, obj, obj2);
         }
 
-        @Override // com.google.common.util.concurrent.AbstractFuture.AbstractC5295b
-        boolean c(AbstractFuture<?> abstractFuture, C5303i c5303i, C5303i c5303i2) {
-            return this.c.compareAndSet(abstractFuture, c5303i, c5303i2);
+        @Override // com.google.common.util.concurrent.AbstractFuture.b
+        boolean c(AbstractFuture<?> abstractFuture, i iVar, i iVar2) {
+            return this.c.compareAndSet(abstractFuture, iVar, iVar2);
         }
 
-        @Override // com.google.common.util.concurrent.AbstractFuture.AbstractC5295b
-        void d(C5303i c5303i, C5303i c5303i2) {
-            this.b.lazySet(c5303i, c5303i2);
+        @Override // com.google.common.util.concurrent.AbstractFuture.b
+        void d(i iVar, i iVar2) {
+            this.b.lazySet(iVar, iVar2);
         }
 
-        @Override // com.google.common.util.concurrent.AbstractFuture.AbstractC5295b
-        void e(C5303i c5303i, Thread thread) {
-            this.a.lazySet(c5303i, thread);
+        @Override // com.google.common.util.concurrent.AbstractFuture.b
+        void e(i iVar, Thread thread) {
+            this.a.lazySet(iVar, thread);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.util.concurrent.AbstractFuture$f */
     /* loaded from: classes10.dex */
-    private static final class C5299f extends AbstractC5295b {
-        private C5299f() {
+    private static final class f extends b {
+        private f() {
             super();
         }
 
-        @Override // com.google.common.util.concurrent.AbstractFuture.AbstractC5295b
-        boolean a(AbstractFuture<?> abstractFuture, C5297d c5297d, C5297d c5297d2) {
+        @Override // com.google.common.util.concurrent.AbstractFuture.b
+        boolean a(AbstractFuture<?> abstractFuture, d dVar, d dVar2) {
             synchronized (abstractFuture) {
-                if (((AbstractFuture) abstractFuture).listeners == c5297d) {
-                    ((AbstractFuture) abstractFuture).listeners = c5297d2;
+                if (((AbstractFuture) abstractFuture).listeners == dVar) {
+                    ((AbstractFuture) abstractFuture).listeners = dVar2;
                     return true;
                 }
                 return false;
             }
         }
 
-        @Override // com.google.common.util.concurrent.AbstractFuture.AbstractC5295b
+        @Override // com.google.common.util.concurrent.AbstractFuture.b
         boolean b(AbstractFuture<?> abstractFuture, Object obj, Object obj2) {
             synchronized (abstractFuture) {
                 if (((AbstractFuture) abstractFuture).value == obj) {
@@ -230,32 +222,31 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
             }
         }
 
-        @Override // com.google.common.util.concurrent.AbstractFuture.AbstractC5295b
-        boolean c(AbstractFuture<?> abstractFuture, C5303i c5303i, C5303i c5303i2) {
+        @Override // com.google.common.util.concurrent.AbstractFuture.b
+        boolean c(AbstractFuture<?> abstractFuture, i iVar, i iVar2) {
             synchronized (abstractFuture) {
-                if (((AbstractFuture) abstractFuture).waiters == c5303i) {
-                    ((AbstractFuture) abstractFuture).waiters = c5303i2;
+                if (((AbstractFuture) abstractFuture).waiters == iVar) {
+                    ((AbstractFuture) abstractFuture).waiters = iVar2;
                     return true;
                 }
                 return false;
             }
         }
 
-        @Override // com.google.common.util.concurrent.AbstractFuture.AbstractC5295b
-        void d(C5303i c5303i, C5303i c5303i2) {
-            c5303i.b = c5303i2;
+        @Override // com.google.common.util.concurrent.AbstractFuture.b
+        void d(i iVar, i iVar2) {
+            iVar.b = iVar2;
         }
 
-        @Override // com.google.common.util.concurrent.AbstractFuture.AbstractC5295b
-        void e(C5303i c5303i, Thread thread) {
-            c5303i.a = thread;
+        @Override // com.google.common.util.concurrent.AbstractFuture.b
+        void e(i iVar, Thread thread) {
+            iVar.a = thread;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.util.concurrent.AbstractFuture$g */
     /* loaded from: classes10.dex */
-    static abstract class AbstractC5300g<V> extends AbstractFuture<V> implements Trusted<V> {
+    static abstract class g<V> extends AbstractFuture<V> implements Trusted<V> {
         @Override // com.google.common.util.concurrent.AbstractFuture, com.google.common.util.concurrent.ListenableFuture
         public final void addListener(Runnable runnable, Executor executor) {
             super.addListener(runnable, executor);
@@ -291,9 +282,8 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.util.concurrent.AbstractFuture$h */
     /* loaded from: classes10.dex */
-    private static final class C5301h extends AbstractC5295b {
+    private static final class h extends b {
         static final Unsafe a;
         static final long b;
         static final long c;
@@ -302,10 +292,9 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
         static final long f;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.util.concurrent.AbstractFuture$h$a */
         /* loaded from: classes10.dex */
-        static class C5302a implements PrivilegedExceptionAction<Unsafe> {
-            C5302a() {
+        static class a implements PrivilegedExceptionAction<Unsafe> {
+            a() {
             }
 
             @Override // java.security.PrivilegedExceptionAction
@@ -329,17 +318,17 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
                 try {
                     unsafe = Unsafe.getUnsafe();
                 } catch (SecurityException unused) {
-                    unsafe = (Unsafe) AccessController.doPrivileged(new C5302a());
+                    unsafe = (Unsafe) AccessController.doPrivileged(new a());
                 }
                 try {
                     c = unsafe.objectFieldOffset(AbstractFuture.class.getDeclaredField("waiters"));
                     b = unsafe.objectFieldOffset(AbstractFuture.class.getDeclaredField("listeners"));
                     d = unsafe.objectFieldOffset(AbstractFuture.class.getDeclaredField("value"));
-                    e = unsafe.objectFieldOffset(C5303i.class.getDeclaredField("a"));
-                    f = unsafe.objectFieldOffset(C5303i.class.getDeclaredField("b"));
+                    e = unsafe.objectFieldOffset(i.class.getDeclaredField("a"));
+                    f = unsafe.objectFieldOffset(i.class.getDeclaredField("b"));
                     a = unsafe;
                 } catch (Exception e2) {
-                    C4844i.f(e2);
+                    com.google.common.base.i.f(e2);
                     throw new RuntimeException(e2);
                 }
             } catch (PrivilegedActionException e3) {
@@ -347,52 +336,51 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
             }
         }
 
-        private C5301h() {
+        private h() {
             super();
         }
 
-        @Override // com.google.common.util.concurrent.AbstractFuture.AbstractC5295b
-        boolean a(AbstractFuture<?> abstractFuture, C5297d c5297d, C5297d c5297d2) {
-            return a.compareAndSwapObject(abstractFuture, b, c5297d, c5297d2);
+        @Override // com.google.common.util.concurrent.AbstractFuture.b
+        boolean a(AbstractFuture<?> abstractFuture, d dVar, d dVar2) {
+            return a.compareAndSwapObject(abstractFuture, b, dVar, dVar2);
         }
 
-        @Override // com.google.common.util.concurrent.AbstractFuture.AbstractC5295b
+        @Override // com.google.common.util.concurrent.AbstractFuture.b
         boolean b(AbstractFuture<?> abstractFuture, Object obj, Object obj2) {
             return a.compareAndSwapObject(abstractFuture, d, obj, obj2);
         }
 
-        @Override // com.google.common.util.concurrent.AbstractFuture.AbstractC5295b
-        boolean c(AbstractFuture<?> abstractFuture, C5303i c5303i, C5303i c5303i2) {
-            return a.compareAndSwapObject(abstractFuture, c, c5303i, c5303i2);
+        @Override // com.google.common.util.concurrent.AbstractFuture.b
+        boolean c(AbstractFuture<?> abstractFuture, i iVar, i iVar2) {
+            return a.compareAndSwapObject(abstractFuture, c, iVar, iVar2);
         }
 
-        @Override // com.google.common.util.concurrent.AbstractFuture.AbstractC5295b
-        void d(C5303i c5303i, C5303i c5303i2) {
-            a.putObject(c5303i, f, c5303i2);
+        @Override // com.google.common.util.concurrent.AbstractFuture.b
+        void d(i iVar, i iVar2) {
+            a.putObject(iVar, f, iVar2);
         }
 
-        @Override // com.google.common.util.concurrent.AbstractFuture.AbstractC5295b
-        void e(C5303i c5303i, Thread thread) {
-            a.putObject(c5303i, e, thread);
+        @Override // com.google.common.util.concurrent.AbstractFuture.b
+        void e(i iVar, Thread thread) {
+            a.putObject(iVar, e, thread);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.util.concurrent.AbstractFuture$i */
     /* loaded from: classes10.dex */
-    public static final class C5303i {
-        static final C5303i c = new C5303i(false);
+    public static final class i {
+        static final i c = new i(false);
         @NullableDecl
         volatile Thread a;
         @NullableDecl
-        volatile C5303i b;
+        volatile i b;
 
-        C5303i(boolean z) {
+        i(boolean z) {
         }
 
-        void a(C5303i c5303i) {
-            AbstractFuture.ATOMIC_HELPER.d(this, c5303i);
+        void a(i iVar) {
+            AbstractFuture.ATOMIC_HELPER.d(this, iVar);
         }
 
         void b() {
@@ -403,27 +391,27 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
             }
         }
 
-        C5303i() {
+        i() {
             AbstractFuture.ATOMIC_HELPER.e(this, Thread.currentThread());
         }
     }
 
     static {
-        AbstractC5295b c5299f;
+        b fVar;
         Throwable th = null;
         try {
-            c5299f = new C5301h();
+            fVar = new h();
             th = null;
         } catch (Throwable th2) {
             th = th2;
             try {
-                c5299f = new C5298e(AtomicReferenceFieldUpdater.newUpdater(C5303i.class, Thread.class, "a"), AtomicReferenceFieldUpdater.newUpdater(C5303i.class, C5303i.class, "b"), AtomicReferenceFieldUpdater.newUpdater(AbstractFuture.class, C5303i.class, "waiters"), AtomicReferenceFieldUpdater.newUpdater(AbstractFuture.class, C5297d.class, "listeners"), AtomicReferenceFieldUpdater.newUpdater(AbstractFuture.class, Object.class, "value"));
+                fVar = new e(AtomicReferenceFieldUpdater.newUpdater(i.class, Thread.class, "a"), AtomicReferenceFieldUpdater.newUpdater(i.class, i.class, "b"), AtomicReferenceFieldUpdater.newUpdater(AbstractFuture.class, i.class, "waiters"), AtomicReferenceFieldUpdater.newUpdater(AbstractFuture.class, d.class, "listeners"), AtomicReferenceFieldUpdater.newUpdater(AbstractFuture.class, Object.class, "value"));
             } catch (Throwable th3) {
-                c5299f = new C5299f();
+                fVar = new f();
                 th = th3;
             }
         }
-        ATOMIC_HELPER = c5299f;
+        ATOMIC_HELPER = fVar;
         if (th != null) {
             Logger logger = log;
             Level level = Level.SEVERE;
@@ -441,13 +429,13 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
             sb.append(jn1.ARRAY_END_STR);
         } catch (CancellationException unused) {
             sb.append("CANCELLED");
-        } catch (RuntimeException e) {
+        } catch (RuntimeException e2) {
             sb.append("UNKNOWN, cause=[");
-            sb.append(e.getClass());
+            sb.append(e2.getClass());
             sb.append(" thrown from get()]");
-        } catch (ExecutionException e2) {
+        } catch (ExecutionException e3) {
             sb.append("FAILURE, cause=[");
-            sb.append(e2.getCause());
+            sb.append(e3.getCause());
             sb.append(jn1.ARRAY_END_STR);
         }
     }
@@ -458,20 +446,20 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
         return cancellationException;
     }
 
-    private C5297d clearListeners(C5297d c5297d) {
-        C5297d c5297d2;
+    private d clearListeners(d dVar) {
+        d dVar2;
         do {
-            c5297d2 = this.listeners;
-        } while (!ATOMIC_HELPER.a(this, c5297d2, C5297d.d));
-        C5297d c5297d3 = c5297d;
-        C5297d c5297d4 = c5297d2;
-        while (c5297d4 != null) {
-            C5297d c5297d5 = c5297d4.c;
-            c5297d4.c = c5297d3;
-            c5297d3 = c5297d4;
-            c5297d4 = c5297d5;
+            dVar2 = this.listeners;
+        } while (!ATOMIC_HELPER.a(this, dVar2, d.d));
+        d dVar3 = dVar;
+        d dVar4 = dVar2;
+        while (dVar4 != null) {
+            d dVar5 = dVar4.c;
+            dVar4.c = dVar3;
+            dVar3 = dVar4;
+            dVar4 = dVar5;
         }
-        return c5297d3;
+        return dVar3;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -481,13 +469,13 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
     /* JADX WARN: Type inference failed for: r4v1, types: [com.google.common.util.concurrent.AbstractFuture] */
     /* JADX WARN: Type inference failed for: r4v6, types: [com.google.common.util.concurrent.AbstractFuture<V>, com.google.common.util.concurrent.AbstractFuture] */
     public static void complete(AbstractFuture<?> abstractFuture) {
-        C5297d c5297d = null;
+        d dVar = null;
         while (true) {
             abstractFuture.releaseWaiters();
             abstractFuture.afterDone();
-            C5297d clearListeners = abstractFuture.clearListeners(c5297d);
+            d clearListeners = abstractFuture.clearListeners(dVar);
             while (clearListeners != null) {
-                c5297d = clearListeners.c;
+                dVar = clearListeners.c;
                 Runnable runnable = clearListeners.a;
                 if (runnable instanceof SetFuture) {
                     SetFuture setFuture = (SetFuture) runnable;
@@ -502,7 +490,7 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
                 } else {
                     executeListener(runnable, clearListeners.b);
                 }
-                clearListeners = c5297d;
+                clearListeners = dVar;
             }
             return;
         }
@@ -511,16 +499,16 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
     private static void executeListener(Runnable runnable, Executor executor) {
         try {
             executor.execute(runnable);
-        } catch (RuntimeException e) {
+        } catch (RuntimeException e2) {
             Logger logger = log;
             Level level = Level.SEVERE;
-            logger.log(level, "RuntimeException while executing runnable " + runnable + " with executor " + executor, (Throwable) e);
+            logger.log(level, "RuntimeException while executing runnable " + runnable + " with executor " + executor, (Throwable) e2);
         }
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     private V getDoneValue(Object obj) throws ExecutionException {
-        if (!(obj instanceof C5296c)) {
+        if (!(obj instanceof c)) {
             if (!(obj instanceof Failure)) {
                 if (obj == NULL) {
                     return null;
@@ -529,42 +517,42 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
             }
             throw new ExecutionException(((Failure) obj).a);
         }
-        throw cancellationExceptionWithCause("Task was cancelled.", ((C5296c) obj).b);
+        throw cancellationExceptionWithCause("Task was cancelled.", ((c) obj).b);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public static Object getFutureValue(ListenableFuture<?> listenableFuture) {
-        Throwable a;
+        Throwable a2;
         if (listenableFuture instanceof Trusted) {
             Object obj = ((AbstractFuture) listenableFuture).value;
-            if (obj instanceof C5296c) {
-                C5296c c5296c = (C5296c) obj;
-                return c5296c.a ? c5296c.b != null ? new C5296c(false, c5296c.b) : C5296c.d : obj;
+            if (obj instanceof c) {
+                c cVar = (c) obj;
+                return cVar.a ? cVar.b != null ? new c(false, cVar.b) : c.d : obj;
             }
             return obj;
-        } else if ((listenableFuture instanceof AbstractC5351a) && (a = C5352b.a((AbstractC5351a) listenableFuture)) != null) {
-            return new Failure(a);
+        } else if ((listenableFuture instanceof com.google.common.util.concurrent.internal.a) && (a2 = com.google.common.util.concurrent.internal.b.a((com.google.common.util.concurrent.internal.a) listenableFuture)) != null) {
+            return new Failure(a2);
         } else {
             boolean isCancelled = listenableFuture.isCancelled();
             if ((!GENERATE_CANCELLATION_CAUSES) & isCancelled) {
-                return C5296c.d;
+                return c.d;
             }
             try {
                 Object uninterruptibly = getUninterruptibly(listenableFuture);
                 if (!isCancelled) {
                     return uninterruptibly == null ? NULL : uninterruptibly;
                 }
-                return new C5296c(false, new IllegalArgumentException("get() did not throw CancellationException, despite reporting isCancelled() == true: " + listenableFuture));
-            } catch (CancellationException e) {
+                return new c(false, new IllegalArgumentException("get() did not throw CancellationException, despite reporting isCancelled() == true: " + listenableFuture));
+            } catch (CancellationException e2) {
                 if (!isCancelled) {
-                    return new Failure(new IllegalArgumentException("get() threw CancellationException, despite reporting isCancelled() == false: " + listenableFuture, e));
+                    return new Failure(new IllegalArgumentException("get() threw CancellationException, despite reporting isCancelled() == false: " + listenableFuture, e2));
                 }
-                return new C5296c(false, e);
-            } catch (ExecutionException e2) {
+                return new c(false, e2);
+            } catch (ExecutionException e3) {
                 if (isCancelled) {
-                    return new C5296c(false, new IllegalArgumentException("get() did not throw CancellationException, despite reporting isCancelled() == true: " + listenableFuture, e2));
+                    return new c(false, new IllegalArgumentException("get() did not throw CancellationException, despite reporting isCancelled() == true: " + listenableFuture, e3));
                 }
-                return new Failure(e2.getCause());
+                return new Failure(e3.getCause());
             } catch (Throwable th) {
                 return new Failure(th);
             }
@@ -594,37 +582,37 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
     }
 
     private void releaseWaiters() {
-        C5303i c5303i;
+        i iVar;
         do {
-            c5303i = this.waiters;
-        } while (!ATOMIC_HELPER.c(this, c5303i, C5303i.c));
-        while (c5303i != null) {
-            c5303i.b();
-            c5303i = c5303i.b;
+            iVar = this.waiters;
+        } while (!ATOMIC_HELPER.c(this, iVar, i.c));
+        while (iVar != null) {
+            iVar.b();
+            iVar = iVar.b;
         }
     }
 
-    private void removeWaiter(C5303i c5303i) {
-        c5303i.a = null;
+    private void removeWaiter(i iVar) {
+        iVar.a = null;
         while (true) {
-            C5303i c5303i2 = this.waiters;
-            if (c5303i2 == C5303i.c) {
+            i iVar2 = this.waiters;
+            if (iVar2 == i.c) {
                 return;
             }
-            C5303i c5303i3 = null;
-            while (c5303i2 != null) {
-                C5303i c5303i4 = c5303i2.b;
-                if (c5303i2.a != null) {
-                    c5303i3 = c5303i2;
-                } else if (c5303i3 != null) {
-                    c5303i3.b = c5303i4;
-                    if (c5303i3.a == null) {
+            i iVar3 = null;
+            while (iVar2 != null) {
+                i iVar4 = iVar2.b;
+                if (iVar2.a != null) {
+                    iVar3 = iVar2;
+                } else if (iVar3 != null) {
+                    iVar3.b = iVar4;
+                    if (iVar3.a == null) {
                         break;
                     }
-                } else if (!ATOMIC_HELPER.c(this, c5303i2, c5303i4)) {
+                } else if (!ATOMIC_HELPER.c(this, iVar2, iVar4)) {
                     break;
                 }
-                c5303i2 = c5303i4;
+                iVar2 = iVar4;
             }
             return;
         }
@@ -636,18 +624,18 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
 
     @Override // com.google.common.util.concurrent.ListenableFuture
     public void addListener(Runnable runnable, Executor executor) {
-        C5297d c5297d;
+        d dVar;
         du1.q(runnable, "Runnable was null.");
         du1.q(executor, "Executor was null.");
-        if (!isDone() && (c5297d = this.listeners) != C5297d.d) {
-            C5297d c5297d2 = new C5297d(runnable, executor);
+        if (!isDone() && (dVar = this.listeners) != d.d) {
+            d dVar2 = new d(runnable, executor);
             do {
-                c5297d2.c = c5297d;
-                if (ATOMIC_HELPER.a(this, c5297d, c5297d2)) {
+                dVar2.c = dVar;
+                if (ATOMIC_HELPER.a(this, dVar, dVar2)) {
                     return;
                 }
-                c5297d = this.listeners;
-            } while (c5297d != C5297d.d);
+                dVar = this.listeners;
+            } while (dVar != d.d);
             executeListener(runnable, executor);
         }
         executeListener(runnable, executor);
@@ -666,11 +654,11 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
         if (!(obj == null) && !(obj instanceof SetFuture)) {
             return false;
         }
-        C5296c c5296c = GENERATE_CANCELLATION_CAUSES ? new C5296c(z, new CancellationException("Future.cancel() was called.")) : z ? C5296c.c : C5296c.d;
+        c cVar = GENERATE_CANCELLATION_CAUSES ? new c(z, new CancellationException("Future.cancel() was called.")) : z ? c.c : c.d;
         boolean z2 = false;
         AbstractFuture<V> abstractFuture = this;
         while (true) {
-            if (ATOMIC_HELPER.b(abstractFuture, obj, c5296c)) {
+            if (ATOMIC_HELPER.b(abstractFuture, obj, cVar)) {
                 if (z) {
                     abstractFuture.interruptTask();
                 }
@@ -711,12 +699,12 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
             }
             long nanoTime = nanos > 0 ? System.nanoTime() + nanos : 0L;
             if (nanos >= 1000) {
-                C5303i c5303i = this.waiters;
-                if (c5303i != C5303i.c) {
-                    C5303i c5303i2 = new C5303i();
+                i iVar = this.waiters;
+                if (iVar != i.c) {
+                    i iVar2 = new i();
                     do {
-                        c5303i2.a(c5303i);
-                        if (ATOMIC_HELPER.c(this, c5303i, c5303i2)) {
+                        iVar2.a(iVar);
+                        if (ATOMIC_HELPER.c(this, iVar, iVar2)) {
                             do {
                                 LockSupport.parkNanos(this, nanos);
                                 if (!Thread.interrupted()) {
@@ -726,15 +714,15 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
                                     }
                                     nanos = nanoTime - System.nanoTime();
                                 } else {
-                                    removeWaiter(c5303i2);
+                                    removeWaiter(iVar2);
                                     throw new InterruptedException();
                                 }
                             } while (nanos >= 1000);
-                            removeWaiter(c5303i2);
+                            removeWaiter(iVar2);
                         } else {
-                            c5303i = this.waiters;
+                            iVar = this.waiters;
                         }
-                    } while (c5303i != C5303i.c);
+                    } while (iVar != i.c);
                     return getDoneValue(this.value);
                 }
                 return getDoneValue(this.value);
@@ -758,9 +746,9 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
                 long j2 = -nanos;
                 long convert = timeUnit.convert(j2, TimeUnit.NANOSECONDS);
                 long nanos2 = j2 - timeUnit.toNanos(convert);
-                int i = (convert > 0L ? 1 : (convert == 0L ? 0 : -1));
-                boolean z = i == 0 || nanos2 > 1000;
-                if (i > 0) {
+                int i2 = (convert > 0L ? 1 : (convert == 0L ? 0 : -1));
+                boolean z = i2 == 0 || nanos2 > 1000;
+                if (i2 > 0) {
                     String str3 = str2 + convert + " " + lowerCase;
                     if (z) {
                         str3 = str3 + ",";
@@ -785,7 +773,7 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
 
     @Override // java.util.concurrent.Future
     public boolean isCancelled() {
-        return this.value instanceof C5296c;
+        return this.value instanceof c;
     }
 
     @Override // java.util.concurrent.Future
@@ -867,8 +855,8 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
             }
             obj = this.value;
         }
-        if (obj instanceof C5296c) {
-            listenableFuture.cancel(((C5296c) obj).a);
+        if (obj instanceof c) {
+            listenableFuture.cancel(((c) obj).a);
         }
         return false;
     }
@@ -885,8 +873,8 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
         } else {
             try {
                 str = pendingToString();
-            } catch (RuntimeException e) {
-                str = "Exception thrown from implementation: " + e.getClass();
+            } catch (RuntimeException e2) {
+                str = "Exception thrown from implementation: " + e2.getClass();
             }
             if (str != null && !str.isEmpty()) {
                 sb.append("PENDING, info=[");
@@ -903,7 +891,7 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.google.common.util.concurrent.internal.AbstractC5351a
+    @Override // com.google.common.util.concurrent.internal.a
     @NullableDecl
     public final Throwable tryInternalFastPathGetFailure() {
         if (this instanceof Trusted) {
@@ -919,7 +907,7 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
     /* JADX INFO: Access modifiers changed from: protected */
     public final boolean wasInterrupted() {
         Object obj = this.value;
-        return (obj instanceof C5296c) && ((C5296c) obj).a;
+        return (obj instanceof c) && ((c) obj).a;
     }
 
     @Override // java.util.concurrent.Future
@@ -931,25 +919,25 @@ public abstract class AbstractFuture<V> extends AbstractC5351a implements Listen
             if ((obj2 != null) & (!(obj2 instanceof SetFuture))) {
                 return getDoneValue(obj2);
             }
-            C5303i c5303i = this.waiters;
-            if (c5303i != C5303i.c) {
-                C5303i c5303i2 = new C5303i();
+            i iVar = this.waiters;
+            if (iVar != i.c) {
+                i iVar2 = new i();
                 do {
-                    c5303i2.a(c5303i);
-                    if (ATOMIC_HELPER.c(this, c5303i, c5303i2)) {
+                    iVar2.a(iVar);
+                    if (ATOMIC_HELPER.c(this, iVar, iVar2)) {
                         do {
                             LockSupport.park(this);
                             if (!Thread.interrupted()) {
                                 obj = this.value;
                             } else {
-                                removeWaiter(c5303i2);
+                                removeWaiter(iVar2);
                                 throw new InterruptedException();
                             }
                         } while (!((obj != null) & (!(obj instanceof SetFuture))));
                         return getDoneValue(obj);
                     }
-                    c5303i = this.waiters;
-                } while (c5303i != C5303i.c);
+                    iVar = this.waiters;
+                } while (iVar != i.c);
                 return getDoneValue(this.value);
             }
             return getDoneValue(this.value);

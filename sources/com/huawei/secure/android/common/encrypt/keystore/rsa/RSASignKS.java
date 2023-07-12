@@ -5,7 +5,7 @@ import android.security.keystore.KeyGenParameterSpec;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
-import com.huawei.secure.android.common.encrypt.utils.C5742b;
+import com.huawei.secure.android.common.encrypt.utils.b;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidAlgorithmParameterException;
@@ -37,12 +37,12 @@ public abstract class RSASignKS {
         byte[] bArr2 = new byte[0];
         if (!TextUtils.isEmpty(str) && bArr != null) {
             if (!isBuildVersionHigherThan22()) {
-                C5742b.b(a, "sdk version is too low");
+                b.b(a, "sdk version is too low");
                 return bArr2;
             }
             KeyStore.Entry b2 = b(str, z);
             if (!(b2 instanceof KeyStore.PrivateKeyEntry)) {
-                C5742b.b(a, "Not an instance of a PrivateKeyEntry");
+                b.b(a, "Not an instance of a PrivateKeyEntry");
                 return bArr2;
             }
             try {
@@ -52,23 +52,23 @@ public abstract class RSASignKS {
                 return signature.sign();
             } catch (InvalidKeyException e2) {
                 String str2 = a;
-                C5742b.b(str2, "InvalidKeyException: " + e2.getMessage());
+                b.b(str2, "InvalidKeyException: " + e2.getMessage());
                 return bArr2;
             } catch (NoSuchAlgorithmException e3) {
                 String str3 = a;
-                C5742b.b(str3, "NoSuchAlgorithmException: " + e3.getMessage());
+                b.b(str3, "NoSuchAlgorithmException: " + e3.getMessage());
                 return bArr2;
             } catch (SignatureException e4) {
                 String str4 = a;
-                C5742b.b(str4, "SignatureException: " + e4.getMessage());
+                b.b(str4, "SignatureException: " + e4.getMessage());
                 return bArr2;
             } catch (Exception e5) {
                 String str5 = a;
-                C5742b.b(str5, "Exception: " + e5.getMessage());
+                b.b(str5, "Exception: " + e5.getMessage());
                 return bArr2;
             }
         }
-        C5742b.b(a, "alias or content is null");
+        b.b(a, "alias or content is null");
         return bArr2;
     }
 
@@ -82,23 +82,23 @@ public abstract class RSASignKS {
             return keyStore.getEntry(str, null);
         } catch (IOException e2) {
             String str2 = a;
-            C5742b.b(str2, "IOException: " + e2.getMessage());
+            b.b(str2, "IOException: " + e2.getMessage());
             return null;
         } catch (KeyStoreException e3) {
             String str3 = a;
-            C5742b.b(str3, "KeyStoreException: " + e3.getMessage());
+            b.b(str3, "KeyStoreException: " + e3.getMessage());
             return null;
         } catch (NoSuchAlgorithmException e4) {
             String str4 = a;
-            C5742b.b(str4, "NoSuchAlgorithmException: " + e4.getMessage());
+            b.b(str4, "NoSuchAlgorithmException: " + e4.getMessage());
             return null;
         } catch (UnrecoverableEntryException e5) {
             String str5 = a;
-            C5742b.b(str5, "UnrecoverableEntryException: " + e5.getMessage());
+            b.b(str5, "UnrecoverableEntryException: " + e5.getMessage());
             return null;
         } catch (CertificateException e6) {
             String str6 = a;
-            C5742b.b(str6, "CertificateException: " + e6.getMessage());
+            b.b(str6, "CertificateException: " + e6.getMessage());
             return null;
         }
     }
@@ -138,7 +138,7 @@ public abstract class RSASignKS {
             return false;
         } catch (Exception e3) {
             String str5 = a;
-            C5742b.b(str5, "base64 decode Exception" + e3.getMessage());
+            b.b(str5, "base64 decode Exception" + e3.getMessage());
             return false;
         }
     }
@@ -152,7 +152,7 @@ public abstract class RSASignKS {
             return false;
         } catch (Exception e3) {
             String str5 = a;
-            C5742b.b(str5, "base64 decode Exception" + e3.getMessage());
+            b.b(str5, "base64 decode Exception" + e3.getMessage());
             return false;
         }
     }
@@ -178,12 +178,12 @@ public abstract class RSASignKS {
     private static boolean a(String str, byte[] bArr, byte[] bArr2, boolean z) {
         if (!TextUtils.isEmpty(str) && bArr != null && bArr2 != null) {
             if (!isBuildVersionHigherThan22()) {
-                C5742b.b(a, "sdk version is too low");
+                b.b(a, "sdk version is too low");
                 return false;
             }
             KeyStore.Entry b2 = b(str, z);
             if (!(b2 instanceof KeyStore.PrivateKeyEntry)) {
-                C5742b.b(a, "Not an instance of a PrivateKeyEntry");
+                b.b(a, "Not an instance of a PrivateKeyEntry");
                 return false;
             }
             try {
@@ -193,23 +193,23 @@ public abstract class RSASignKS {
                 return signature.verify(bArr2);
             } catch (InvalidKeyException e2) {
                 String str2 = a;
-                C5742b.b(str2, "InvalidKeyException: " + e2.getMessage());
+                b.b(str2, "InvalidKeyException: " + e2.getMessage());
                 return false;
             } catch (NoSuchAlgorithmException e3) {
                 String str3 = a;
-                C5742b.b(str3, "NoSuchAlgorithmException: " + e3.getMessage());
+                b.b(str3, "NoSuchAlgorithmException: " + e3.getMessage());
                 return false;
             } catch (SignatureException e4) {
                 String str4 = a;
-                C5742b.b(str4, "SignatureException: " + e4.getMessage());
+                b.b(str4, "SignatureException: " + e4.getMessage());
                 return false;
             } catch (Exception e5) {
                 String str5 = a;
-                C5742b.b(str5, "Exception: " + e5.getMessage());
+                b.b(str5, "Exception: " + e5.getMessage());
                 return false;
             }
         }
-        C5742b.b(a, "alias or content or sign value is null");
+        b.b(a, "alias or content or sign value is null");
         return false;
     }
 
@@ -217,7 +217,7 @@ public abstract class RSASignKS {
         synchronized (RSASignKS.class) {
             KeyPair keyPair = null;
             if (a(str)) {
-                C5742b.b(a, "Key pair exits");
+                b.b(a, "Key pair exits");
                 return null;
             }
             try {
@@ -231,14 +231,14 @@ public abstract class RSASignKS {
                     keyPair = keyPairGenerator.generateKeyPair();
                 } catch (InvalidAlgorithmParameterException e2) {
                     String str2 = a;
-                    C5742b.b(str2, "InvalidAlgorithmParameterException: " + e2.getMessage());
+                    b.b(str2, "InvalidAlgorithmParameterException: " + e2.getMessage());
                 } catch (NoSuchProviderException e3) {
                     String str3 = a;
-                    C5742b.b(str3, "NoSuchProviderException: " + e3.getMessage());
+                    b.b(str3, "NoSuchProviderException: " + e3.getMessage());
                 }
             } catch (NoSuchAlgorithmException e4) {
                 String str4 = a;
-                C5742b.b(str4, "NoSuchAlgorithmException: " + e4.getMessage());
+                b.b(str4, "NoSuchAlgorithmException: " + e4.getMessage());
             }
             return keyPair;
         }
@@ -251,23 +251,23 @@ public abstract class RSASignKS {
             return keyStore.getKey(str, null) != null;
         } catch (IOException e2) {
             String str2 = a;
-            C5742b.b(str2, "IOException: " + e2.getMessage());
+            b.b(str2, "IOException: " + e2.getMessage());
             return false;
         } catch (KeyStoreException e3) {
             String str3 = a;
-            C5742b.b(str3, "KeyStoreException: " + e3.getMessage());
+            b.b(str3, "KeyStoreException: " + e3.getMessage());
             return false;
         } catch (NoSuchAlgorithmException e4) {
             String str4 = a;
-            C5742b.b(str4, "NoSuchAlgorithmException: " + e4.getMessage());
+            b.b(str4, "NoSuchAlgorithmException: " + e4.getMessage());
             return false;
         } catch (UnrecoverableKeyException e5) {
             String str5 = a;
-            C5742b.b(str5, "UnrecoverableKeyException: " + e5.getMessage());
+            b.b(str5, "UnrecoverableKeyException: " + e5.getMessage());
             return false;
         } catch (CertificateException e6) {
             String str6 = a;
-            C5742b.b(str6, "CertificateException: " + e6.getMessage());
+            b.b(str6, "CertificateException: " + e6.getMessage());
             return false;
         }
     }

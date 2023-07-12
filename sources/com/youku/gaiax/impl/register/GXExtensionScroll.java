@@ -55,7 +55,7 @@ public final class GXExtensionScroll implements GXRegisterCenter.GXIExtensionScr
         RecyclerView.LayoutManager layoutManager;
         b41.i(os0Var, "gxTemplateContext");
         b41.i(gXContainer, "container");
-        GXTemplateEngine.C3346h p = os0Var.p();
+        GXTemplateEngine.h p = os0Var.p();
         if (p == null) {
             return;
         }

@@ -57,7 +57,7 @@ public final class MaybeIsEmpty<T> extends AbstractMaybeWithUpstream<T, Boolean>
         super(maybeSource);
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super Boolean> maybeObserver) {
         this.source.subscribe(new IsEmptyMaybeObserver(maybeObserver));
     }

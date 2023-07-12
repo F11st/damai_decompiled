@@ -25,7 +25,7 @@ import tb.qe1;
 public class ImageBlurHelper {
     private static transient /* synthetic */ IpChange $ipChange;
     private static qe1<String, Bitmap> b = new qe1<>(new pc(), KeyTransformer.IDENTITY);
-    private static HandlerC0512a a = new HandlerC0512a();
+    private static a a = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes13.dex */
@@ -34,10 +34,9 @@ public class ImageBlurHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.image.blur.ImageBlurHelper$a */
     /* loaded from: classes13.dex */
-    private static class HandlerC0512a extends Handler {
-        public HandlerC0512a() {
+    private static class a extends Handler {
+        public a() {
             super(Looper.getMainLooper());
         }
     }

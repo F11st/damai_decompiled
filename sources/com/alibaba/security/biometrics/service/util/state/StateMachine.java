@@ -4,7 +4,7 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Message;
-import com.alibaba.security.common.c.C3800a;
+import com.alibaba.security.common.c.a;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Vector;
@@ -198,7 +198,7 @@ public class StateMachine {
                 sb.append(state.getName());
                 sb.append(",parent=");
                 sb.append(state2 == null ? "" : state2.getName());
-                C3800a.a(StateMachine.TAG, sb.toString());
+                a.a(StateMachine.TAG, sb.toString());
             }
             if (state2 != null) {
                 stateInfo = this.mStateInfo.get(state2);
@@ -221,7 +221,7 @@ public class StateMachine {
             stateInfo2.parentStateInfo = stateInfo;
             stateInfo2.active = false;
             if (this.mDbg) {
-                C3800a.a(StateMachine.TAG, "addStateInternal: X stateInfo: ".concat(String.valueOf(stateInfo2)));
+                a.a(StateMachine.TAG, "addStateInternal: X stateInfo: ".concat(String.valueOf(stateInfo2)));
             }
             return stateInfo2;
         }
@@ -229,7 +229,7 @@ public class StateMachine {
         /* JADX INFO: Access modifiers changed from: private */
         public final void completeConstruction() {
             if (this.mDbg) {
-                C3800a.a(StateMachine.TAG, "completeConstruction: E");
+                a.a(StateMachine.TAG, "completeConstruction: E");
             }
             int i = 0;
             for (StateInfo stateInfo : this.mStateInfo.values()) {
@@ -243,7 +243,7 @@ public class StateMachine {
                 }
             }
             if (this.mDbg) {
-                C3800a.a(StateMachine.TAG, "completeConstruction: maxDepth=".concat(String.valueOf(i)));
+                a.a(StateMachine.TAG, "completeConstruction: maxDepth=".concat(String.valueOf(i)));
             }
             this.mStateStack = new StateInfo[i];
             this.mTempStateStack = new StateInfo[i];
@@ -253,14 +253,14 @@ public class StateMachine {
             invokeEnterMethods(0);
             performTransitions();
             if (this.mDbg) {
-                C3800a.a(StateMachine.TAG, "completeConstruction: X");
+                a.a(StateMachine.TAG, "completeConstruction: X");
             }
         }
 
         /* JADX INFO: Access modifiers changed from: private */
         public final void deferMessage(Message message) {
             if (this.mDbg) {
-                C3800a.a(StateMachine.TAG, "deferMessage: msg=" + message.what);
+                a.a(StateMachine.TAG, "deferMessage: msg=" + message.what);
             }
             Message obtainMessage = obtainMessage();
             obtainMessage.copyFrom(message);
@@ -295,7 +295,7 @@ public class StateMachine {
         private final void invokeEnterMethods(int i) {
             while (i <= this.mStateStackTopIndex) {
                 if (this.mDbg) {
-                    C3800a.a(StateMachine.TAG, "invokeEnterMethods: " + this.mStateStack[i].state.getName());
+                    a.a(StateMachine.TAG, "invokeEnterMethods: " + this.mStateStack[i].state.getName());
                 }
                 this.mStateStack[i].state.enter();
                 this.mStateStack[i].active = true;
@@ -315,7 +315,7 @@ public class StateMachine {
                 }
                 State state = stateInfoArr[i].state;
                 if (this.mDbg) {
-                    C3800a.a(StateMachine.TAG, "invokeExitMethods: " + state.getName());
+                    a.a(StateMachine.TAG, "invokeExitMethods: " + state.getName());
                 }
                 state.exit();
                 StateInfo[] stateInfoArr2 = this.mStateStack;
@@ -339,7 +339,7 @@ public class StateMachine {
             for (int size = this.mDeferredMessages.size() - 1; size >= 0; size--) {
                 Message message = this.mDeferredMessages.get(size);
                 if (this.mDbg) {
-                    C3800a.a(StateMachine.TAG, "moveDeferredMessageAtFrontOfQueue; what=" + message.what);
+                    a.a(StateMachine.TAG, "moveDeferredMessageAtFrontOfQueue; what=" + message.what);
                 }
                 sendMessageAtFrontOfQueue(message);
             }
@@ -351,14 +351,14 @@ public class StateMachine {
             int i2 = i;
             for (int i3 = this.mTempStateStackCount - 1; i3 >= 0; i3--) {
                 if (this.mDbg) {
-                    C3800a.a(StateMachine.TAG, "moveTempStackToStateStack: i=" + i3 + ",j=" + i2);
+                    a.a(StateMachine.TAG, "moveTempStackToStateStack: i=" + i3 + ",j=" + i2);
                 }
                 this.mStateStack[i2] = this.mTempStateStack[i3];
                 i2++;
             }
             this.mStateStackTopIndex = i2 - 1;
             if (this.mDbg) {
-                C3800a.a(StateMachine.TAG, "moveTempStackToStateStack: X mStateStackTop=" + this.mStateStackTopIndex + ",startingIndex=" + i + ",Top=" + this.mStateStack[this.mStateStackTopIndex].state.getName());
+                a.a(StateMachine.TAG, "moveTempStackToStateStack: X mStateStackTop=" + this.mStateStackTopIndex + ",startingIndex=" + i + ",Top=" + this.mStateStack[this.mStateStackTopIndex].state.getName());
             }
             return i;
         }
@@ -367,7 +367,7 @@ public class StateMachine {
             State state = null;
             while (this.mDestState != null) {
                 if (this.mDbg) {
-                    C3800a.a(StateMachine.TAG, "handleMessage: new destination call exit");
+                    a.a(StateMachine.TAG, "handleMessage: new destination call exit");
                 }
                 state = this.mDestState;
                 this.mDestState = null;
@@ -391,7 +391,7 @@ public class StateMachine {
         private final void processMsg(Message message) {
             StateInfo stateInfo = this.mStateStack[this.mStateStackTopIndex];
             if (this.mDbg) {
-                C3800a.a(StateMachine.TAG, "processMsg: " + stateInfo.state.getName());
+                a.a(StateMachine.TAG, "processMsg: " + stateInfo.state.getName());
             }
             while (true) {
                 if (stateInfo.state.processMessage(message)) {
@@ -404,7 +404,7 @@ public class StateMachine {
                         transitionTo(this.mQuittingState);
                     }
                 } else if (this.mDbg) {
-                    C3800a.a(StateMachine.TAG, "processMsg: " + stateInfo.state.getName());
+                    a.a(StateMachine.TAG, "processMsg: " + stateInfo.state.getName());
                 }
             }
             if (stateInfo != null) {
@@ -417,7 +417,7 @@ public class StateMachine {
         /* JADX INFO: Access modifiers changed from: private */
         public final void quit() {
             if (this.mDbg) {
-                C3800a.a(StateMachine.TAG, "quit:");
+                a.a(StateMachine.TAG, "quit:");
             }
             sendMessage(obtainMessage(-1, mQuitObj));
         }
@@ -430,7 +430,7 @@ public class StateMachine {
         /* JADX INFO: Access modifiers changed from: private */
         public final void setInitialState(State state) {
             if (this.mDbg) {
-                C3800a.a(StateMachine.TAG, "setInitialState: initialState" + state.getName());
+                a.a(StateMachine.TAG, "setInitialState: initialState" + state.getName());
             }
             this.mInitialState = state;
         }
@@ -442,7 +442,7 @@ public class StateMachine {
 
         private final void setupInitialStateStack() {
             if (this.mDbg) {
-                C3800a.a(StateMachine.TAG, "setupInitialStateStack: E mInitialState=" + this.mInitialState.getName());
+                a.a(StateMachine.TAG, "setupInitialStateStack: E mInitialState=" + this.mInitialState.getName());
             }
             StateInfo stateInfo = this.mStateInfo.get(this.mInitialState);
             this.mTempStateStackCount = 0;
@@ -471,7 +471,7 @@ public class StateMachine {
                 }
             } while (!stateInfo.active);
             if (this.mDbg) {
-                C3800a.a(StateMachine.TAG, "setupTempStateStackWithStatesToEnter: X mTempStateStackCount=" + this.mTempStateStackCount + ",curStateInfo: " + stateInfo);
+                a.a(StateMachine.TAG, "setupTempStateStackWithStatesToEnter: X mTempStateStackCount=" + this.mTempStateStackCount + ",curStateInfo: " + stateInfo);
             }
             return stateInfo;
         }
@@ -480,21 +480,21 @@ public class StateMachine {
         public final void transitionTo(IState iState) {
             this.mDestState = (State) iState;
             if (this.mDbg) {
-                C3800a.a(StateMachine.TAG, "StateMachine.transitionTo EX destState" + this.mDestState.getName());
+                a.a(StateMachine.TAG, "StateMachine.transitionTo EX destState" + this.mDestState.getName());
             }
         }
 
         @Override // android.os.Handler
         public final void handleMessage(Message message) {
             if (this.mDbg) {
-                C3800a.a(StateMachine.TAG, "handleMessage: E msg.what=" + message.what);
+                a.a(StateMachine.TAG, "handleMessage: E msg.what=" + message.what);
             }
             this.mMsg = message;
             if (this.mIsConstructionCompleted) {
                 processMsg(message);
                 performTransitions();
                 if (this.mDbg) {
-                    C3800a.a(StateMachine.TAG, "handleMessage: X");
+                    a.a(StateMachine.TAG, "handleMessage: X");
                 }
             }
         }
@@ -646,7 +646,7 @@ public class StateMachine {
 
     protected void unhandledMessage(Message message) {
         if (this.mSmHandler.mDbg) {
-            C3800a.d(TAG, this.mName + " - unhandledMessage: msg.what=" + message.what);
+            a.d(TAG, this.mName + " - unhandledMessage: msg.what=" + message.what);
         }
     }
 

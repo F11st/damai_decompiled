@@ -3,7 +3,6 @@ package com.google.common.collect;
 import com.google.common.annotations.Beta;
 import com.google.common.annotations.GwtIncompatible;
 import com.google.common.annotations.VisibleForTesting;
-import com.google.common.base.C4834e;
 import java.io.Serializable;
 import java.lang.Comparable;
 import java.util.Collection;
@@ -22,7 +21,7 @@ import tb.du1;
 @Beta
 @GwtIncompatible
 /* loaded from: classes10.dex */
-public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> implements Serializable {
+public class TreeRangeSet<C extends Comparable<?>> extends f<C> implements Serializable {
     @MonotonicNonNullDecl
     private transient Set<Range<C>> asDescendingSetOfRanges;
     @MonotonicNonNullDecl
@@ -36,10 +35,10 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
     /* loaded from: classes10.dex */
     private final class Complement extends TreeRangeSet<C> {
         Complement() {
-            super(new C5142c(TreeRangeSet.this.rangesByLowerBound));
+            super(new c(TreeRangeSet.this.rangesByLowerBound));
         }
 
-        @Override // com.google.common.collect.TreeRangeSet, com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+        @Override // com.google.common.collect.TreeRangeSet, com.google.common.collect.f, com.google.common.collect.RangeSet
         public void add(Range<C> range) {
             TreeRangeSet.this.remove(range);
         }
@@ -49,12 +48,12 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
             return TreeRangeSet.this;
         }
 
-        @Override // com.google.common.collect.TreeRangeSet, com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+        @Override // com.google.common.collect.TreeRangeSet, com.google.common.collect.f, com.google.common.collect.RangeSet
         public boolean contains(C c) {
             return !TreeRangeSet.this.contains(c);
         }
 
-        @Override // com.google.common.collect.TreeRangeSet, com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+        @Override // com.google.common.collect.TreeRangeSet, com.google.common.collect.f, com.google.common.collect.RangeSet
         public void remove(Range<C> range) {
             TreeRangeSet.this.add(range);
         }
@@ -66,33 +65,33 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
         private final Range<C> restriction;
 
         SubRangeSet(Range<C> range) {
-            super(new C5148e(Range.all(), range, TreeRangeSet.this.rangesByLowerBound));
+            super(new e(Range.all(), range, TreeRangeSet.this.rangesByLowerBound));
             this.restriction = range;
         }
 
-        @Override // com.google.common.collect.TreeRangeSet, com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+        @Override // com.google.common.collect.TreeRangeSet, com.google.common.collect.f, com.google.common.collect.RangeSet
         public void add(Range<C> range) {
             du1.l(this.restriction.encloses(range), "Cannot add range %s to subRangeSet(%s)", range, this.restriction);
             super.add(range);
         }
 
-        @Override // com.google.common.collect.TreeRangeSet, com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+        @Override // com.google.common.collect.TreeRangeSet, com.google.common.collect.f, com.google.common.collect.RangeSet
         public void clear() {
             TreeRangeSet.this.remove(this.restriction);
         }
 
-        @Override // com.google.common.collect.TreeRangeSet, com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+        @Override // com.google.common.collect.TreeRangeSet, com.google.common.collect.f, com.google.common.collect.RangeSet
         public boolean contains(C c) {
             return this.restriction.contains(c) && TreeRangeSet.this.contains(c);
         }
 
-        @Override // com.google.common.collect.TreeRangeSet, com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+        @Override // com.google.common.collect.TreeRangeSet, com.google.common.collect.f, com.google.common.collect.RangeSet
         public boolean encloses(Range<C> range) {
             Range rangeEnclosing;
             return (this.restriction.isEmpty() || !this.restriction.encloses(range) || (rangeEnclosing = TreeRangeSet.this.rangeEnclosing(range)) == null || rangeEnclosing.intersection(this.restriction).isEmpty()) ? false : true;
         }
 
-        @Override // com.google.common.collect.TreeRangeSet, com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+        @Override // com.google.common.collect.TreeRangeSet, com.google.common.collect.f, com.google.common.collect.RangeSet
         @NullableDecl
         public Range<C> rangeContaining(C c) {
             Range<C> rangeContaining;
@@ -102,7 +101,7 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
             return null;
         }
 
-        @Override // com.google.common.collect.TreeRangeSet, com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+        @Override // com.google.common.collect.TreeRangeSet, com.google.common.collect.f, com.google.common.collect.RangeSet
         public void remove(Range<C> range) {
             if (range.isConnected(this.restriction)) {
                 TreeRangeSet.this.remove(range.intersection(this.restriction));
@@ -122,12 +121,11 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.TreeRangeSet$b */
     /* loaded from: classes10.dex */
-    final class C5141b extends AbstractC5200o<Range<C>> implements Set<Range<C>> {
+    final class b extends o<Range<C>> implements Set<Range<C>> {
         final Collection<Range<C>> a;
 
-        C5141b(TreeRangeSet treeRangeSet, Collection<Range<C>> collection) {
+        b(TreeRangeSet treeRangeSet, Collection<Range<C>> collection) {
             this.a = collection;
         }
 
@@ -142,7 +140,7 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.google.common.collect.AbstractC5200o, com.google.common.collect.AbstractC5205t
+        @Override // com.google.common.collect.o, com.google.common.collect.t
         public Collection<Range<C>> delegate() {
             return this.a;
         }
@@ -150,23 +148,21 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.TreeRangeSet$c */
     /* loaded from: classes10.dex */
-    public static final class C5142c<C extends Comparable<?>> extends AbstractC5169e<Cut<C>, Range<C>> {
+    public static final class c<C extends Comparable<?>> extends com.google.common.collect.e<Cut<C>, Range<C>> {
         private final NavigableMap<Cut<C>, Range<C>> a;
         private final NavigableMap<Cut<C>, Range<C>> b;
         private final Range<Cut<C>> c;
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.TreeRangeSet$c$a */
         /* loaded from: classes10.dex */
-        public class C5143a extends AbstractIterator<Map.Entry<Cut<C>, Range<C>>> {
+        public class a extends AbstractIterator<Map.Entry<Cut<C>, Range<C>>> {
             Cut<C> c;
             final /* synthetic */ Cut d;
             final /* synthetic */ PeekingIterator e;
 
-            C5143a(Cut cut, PeekingIterator peekingIterator) {
+            a(Cut cut, PeekingIterator peekingIterator) {
                 this.d = cut;
                 this.e = peekingIterator;
                 this.c = cut;
@@ -177,7 +173,7 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
             /* renamed from: d */
             public Map.Entry<Cut<C>, Range<C>> a() {
                 Range create;
-                if (!C5142c.this.c.upperBound.isLessThan(this.c) && this.c != Cut.aboveAll()) {
+                if (!c.this.c.upperBound.isLessThan(this.c) && this.c != Cut.aboveAll()) {
                     if (this.e.hasNext()) {
                         Range range = (Range) this.e.next();
                         create = Range.create(this.c, range.lowerBound);
@@ -193,14 +189,13 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.TreeRangeSet$c$b */
         /* loaded from: classes10.dex */
-        class C5144b extends AbstractIterator<Map.Entry<Cut<C>, Range<C>>> {
+        class b extends AbstractIterator<Map.Entry<Cut<C>, Range<C>>> {
             Cut<C> c;
             final /* synthetic */ Cut d;
             final /* synthetic */ PeekingIterator e;
 
-            C5144b(Cut cut, PeekingIterator peekingIterator) {
+            b(Cut cut, PeekingIterator peekingIterator) {
                 this.d = cut;
                 this.e = peekingIterator;
                 this.c = cut;
@@ -214,7 +209,7 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
                     return (Map.Entry) b();
                 }
                 if (!this.e.hasNext()) {
-                    if (C5142c.this.c.lowerBound.isLessThan(Cut.belowAll())) {
+                    if (c.this.c.lowerBound.isLessThan(Cut.belowAll())) {
                         Range create = Range.create(Cut.belowAll(), this.c);
                         this.c = Cut.belowAll();
                         return Maps.j(Cut.belowAll(), create);
@@ -223,7 +218,7 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
                     Range range = (Range) this.e.next();
                     Range create2 = Range.create(range.upperBound, this.c);
                     this.c = range.lowerBound;
-                    if (C5142c.this.c.lowerBound.isLessThan(create2.lowerBound)) {
+                    if (c.this.c.lowerBound.isLessThan(create2.lowerBound)) {
                         return Maps.j(create2.lowerBound, create2);
                     }
                 }
@@ -231,7 +226,7 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
             }
         }
 
-        C5142c(NavigableMap<Cut<C>, Range<C>> navigableMap) {
+        c(NavigableMap<Cut<C>, Range<C>> navigableMap) {
             this(navigableMap, Range.all());
         }
 
@@ -239,11 +234,11 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
             if (!this.c.isConnected(range)) {
                 return ImmutableSortedMap.of();
             }
-            return new C5142c(this.a, range.intersection(this.c));
+            return new c(this.a, range.intersection(this.c));
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.Maps.AbstractC5060k
+        @Override // com.google.common.collect.Maps.k
         public Iterator<Map.Entry<Cut<C>, Range<C>>> a() {
             Collection<Range<C>> values;
             Cut cut;
@@ -260,10 +255,10 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
             } else {
                 return Iterators.h();
             }
-            return new C5143a(cut, p);
+            return new a(cut, p);
         }
 
-        @Override // com.google.common.collect.AbstractC5169e
+        @Override // com.google.common.collect.e
         Iterator<Map.Entry<Cut<C>, Range<C>>> b() {
             Cut<C> aboveAll;
             Cut<C> higherKey;
@@ -284,7 +279,7 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
             } else {
                 return Iterators.h();
             }
-            return new C5144b((Cut) C4834e.a(higherKey, Cut.aboveAll()), p);
+            return new b((Cut) com.google.common.base.e.a(higherKey, Cut.aboveAll()), p);
         }
 
         @Override // java.util.SortedMap
@@ -337,18 +332,17 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
             return Iterators.u(a());
         }
 
-        private C5142c(NavigableMap<Cut<C>, Range<C>> navigableMap, Range<Cut<C>> range) {
+        private c(NavigableMap<Cut<C>, Range<C>> navigableMap, Range<Cut<C>> range) {
             this.a = navigableMap;
-            this.b = new C5145d(navigableMap);
+            this.b = new d(navigableMap);
             this.c = range;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.TreeRangeSet$e */
     /* loaded from: classes10.dex */
-    public static final class C5148e<C extends Comparable<?>> extends AbstractC5169e<Cut<C>, Range<C>> {
+    public static final class e<C extends Comparable<?>> extends com.google.common.collect.e<Cut<C>, Range<C>> {
         private final Range<Cut<C>> a;
         private final Range<C> b;
         private final NavigableMap<Cut<C>, Range<C>> c;
@@ -356,13 +350,12 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.TreeRangeSet$e$a */
         /* loaded from: classes10.dex */
-        public class C5149a extends AbstractIterator<Map.Entry<Cut<C>, Range<C>>> {
+        public class a extends AbstractIterator<Map.Entry<Cut<C>, Range<C>>> {
             final /* synthetic */ Iterator c;
             final /* synthetic */ Cut d;
 
-            C5149a(Iterator it, Cut cut) {
+            a(Iterator it, Cut cut) {
                 this.c = it;
                 this.d = cut;
             }
@@ -376,7 +369,7 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
                 }
                 Range range = (Range) this.c.next();
                 if (!this.d.isLessThan(range.lowerBound)) {
-                    Range intersection = range.intersection(C5148e.this.b);
+                    Range intersection = range.intersection(e.this.b);
                     return Maps.j(intersection.lowerBound, intersection);
                 }
                 return (Map.Entry) b();
@@ -384,12 +377,11 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.TreeRangeSet$e$b */
         /* loaded from: classes10.dex */
-        class C5150b extends AbstractIterator<Map.Entry<Cut<C>, Range<C>>> {
+        class b extends AbstractIterator<Map.Entry<Cut<C>, Range<C>>> {
             final /* synthetic */ Iterator c;
 
-            C5150b(Iterator it) {
+            b(Iterator it) {
                 this.c = it;
             }
 
@@ -401,9 +393,9 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
                     return (Map.Entry) b();
                 }
                 Range range = (Range) this.c.next();
-                if (C5148e.this.b.lowerBound.compareTo((Cut) range.upperBound) < 0) {
-                    Range intersection = range.intersection(C5148e.this.b);
-                    if (C5148e.this.a.contains(intersection.lowerBound)) {
+                if (e.this.b.lowerBound.compareTo((Cut) range.upperBound) < 0) {
+                    Range intersection = range.intersection(e.this.b);
+                    if (e.this.a.contains(intersection.lowerBound)) {
                         return Maps.j(intersection.lowerBound, intersection);
                     }
                     return (Map.Entry) b();
@@ -416,11 +408,11 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
             if (!range.isConnected(this.a)) {
                 return ImmutableSortedMap.of();
             }
-            return new C5148e(this.a.intersection(range), this.b, this.c);
+            return new e(this.a.intersection(range), this.b, this.c);
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.Maps.AbstractC5060k
+        @Override // com.google.common.collect.Maps.k
         public Iterator<Map.Entry<Cut<C>, Range<C>>> a() {
             Iterator<Range<C>> it;
             if (this.b.isEmpty()) {
@@ -434,17 +426,17 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
             } else {
                 it = this.c.tailMap(this.a.lowerBound.endpoint(), this.a.lowerBoundType() == BoundType.CLOSED).values().iterator();
             }
-            return new C5149a(it, (Cut) Ordering.natural().min(this.a.upperBound, Cut.belowValue(this.b.upperBound)));
+            return new a(it, (Cut) Ordering.natural().min(this.a.upperBound, Cut.belowValue(this.b.upperBound)));
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        @Override // com.google.common.collect.AbstractC5169e
+        @Override // com.google.common.collect.e
         Iterator<Map.Entry<Cut<C>, Range<C>>> b() {
             if (this.b.isEmpty()) {
                 return Iterators.h();
             }
             Cut cut = (Cut) Ordering.natural().min(this.a.upperBound, Cut.belowValue(this.b.upperBound));
-            return new C5150b(this.c.headMap(cut.endpoint(), cut.typeAsUpperBound() == BoundType.CLOSED).descendingMap().values().iterator());
+            return new b(this.c.headMap(cut.endpoint(), cut.typeAsUpperBound() == BoundType.CLOSED).descendingMap().values().iterator());
         }
 
         @Override // java.util.SortedMap
@@ -506,11 +498,11 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
             return Iterators.u(a());
         }
 
-        private C5148e(Range<Cut<C>> range, Range<C> range2, NavigableMap<Cut<C>, Range<C>> navigableMap) {
+        private e(Range<Cut<C>> range, Range<C> range2, NavigableMap<Cut<C>, Range<C>> navigableMap) {
             this.a = (Range) du1.p(range);
             this.b = (Range) du1.p(range2);
             this.c = (NavigableMap) du1.p(navigableMap);
-            this.d = new C5145d(navigableMap);
+            this.d = new d(navigableMap);
         }
     }
 
@@ -537,7 +529,7 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
         }
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public void add(Range<C> range) {
         du1.p(range);
         if (range.isEmpty()) {
@@ -566,7 +558,7 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
         replaceRangeWithSameLowerBound(Range.create(cut, cut2));
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public /* bridge */ /* synthetic */ void addAll(RangeSet rangeSet) {
         super.addAll(rangeSet);
     }
@@ -575,9 +567,9 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
     public Set<Range<C>> asDescendingSetOfRanges() {
         Set<Range<C>> set = this.asDescendingSetOfRanges;
         if (set == null) {
-            C5141b c5141b = new C5141b(this, this.rangesByLowerBound.descendingMap().values());
-            this.asDescendingSetOfRanges = c5141b;
-            return c5141b;
+            b bVar = new b(this, this.rangesByLowerBound.descendingMap().values());
+            this.asDescendingSetOfRanges = bVar;
+            return bVar;
         }
         return set;
     }
@@ -586,14 +578,14 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
     public Set<Range<C>> asRanges() {
         Set<Range<C>> set = this.asRanges;
         if (set == null) {
-            C5141b c5141b = new C5141b(this, this.rangesByLowerBound.values());
-            this.asRanges = c5141b;
-            return c5141b;
+            b bVar = new b(this, this.rangesByLowerBound.values());
+            this.asRanges = bVar;
+            return bVar;
         }
         return set;
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public /* bridge */ /* synthetic */ void clear() {
         super.clear();
     }
@@ -609,29 +601,29 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
         return rangeSet;
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public /* bridge */ /* synthetic */ boolean contains(Comparable comparable) {
         return super.contains(comparable);
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public boolean encloses(Range<C> range) {
         du1.p(range);
         Map.Entry<Cut<C>, Range<C>> floorEntry = this.rangesByLowerBound.floorEntry(range.lowerBound);
         return floorEntry != null && floorEntry.getValue().encloses(range);
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public /* bridge */ /* synthetic */ boolean enclosesAll(RangeSet rangeSet) {
         return super.enclosesAll(rangeSet);
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public /* bridge */ /* synthetic */ boolean equals(@NullableDecl Object obj) {
         return super.equals(obj);
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public boolean intersects(Range<C> range) {
         du1.p(range);
         Map.Entry<Cut<C>, Range<C>> ceilingEntry = this.rangesByLowerBound.ceilingEntry(range.lowerBound);
@@ -642,23 +634,23 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
         return true;
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public /* bridge */ /* synthetic */ boolean isEmpty() {
         return super.isEmpty();
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     @NullableDecl
-    public Range<C> rangeContaining(C c) {
-        du1.p(c);
-        Map.Entry<Cut<C>, Range<C>> floorEntry = this.rangesByLowerBound.floorEntry(Cut.belowValue(c));
-        if (floorEntry == null || !floorEntry.getValue().contains(c)) {
+    public Range<C> rangeContaining(C c2) {
+        du1.p(c2);
+        Map.Entry<Cut<C>, Range<C>> floorEntry = this.rangesByLowerBound.floorEntry(Cut.belowValue(c2));
+        if (floorEntry == null || !floorEntry.getValue().contains(c2)) {
             return null;
         }
         return floorEntry.getValue();
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public void remove(Range<C> range) {
         du1.p(range);
         if (range.isEmpty()) {
@@ -684,7 +676,7 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
         this.rangesByLowerBound.subMap(range.lowerBound, range.upperBound).clear();
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public /* bridge */ /* synthetic */ void removeAll(RangeSet rangeSet) {
         super.removeAll(rangeSet);
     }
@@ -714,17 +706,17 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
         return create;
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public /* bridge */ /* synthetic */ void addAll(Iterable iterable) {
         super.addAll(iterable);
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public /* bridge */ /* synthetic */ boolean enclosesAll(Iterable iterable) {
         return super.enclosesAll(iterable);
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public /* bridge */ /* synthetic */ void removeAll(Iterable iterable) {
         super.removeAll(iterable);
     }
@@ -732,20 +724,18 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     @VisibleForTesting
-    /* renamed from: com.google.common.collect.TreeRangeSet$d */
     /* loaded from: classes10.dex */
-    public static final class C5145d<C extends Comparable<?>> extends AbstractC5169e<Cut<C>, Range<C>> {
+    public static final class d<C extends Comparable<?>> extends com.google.common.collect.e<Cut<C>, Range<C>> {
         private final NavigableMap<Cut<C>, Range<C>> a;
         private final Range<Cut<C>> b;
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.TreeRangeSet$d$a */
         /* loaded from: classes10.dex */
-        public class C5146a extends AbstractIterator<Map.Entry<Cut<C>, Range<C>>> {
+        public class a extends AbstractIterator<Map.Entry<Cut<C>, Range<C>>> {
             final /* synthetic */ Iterator c;
 
-            C5146a(Iterator it) {
+            a(Iterator it) {
                 this.c = it;
             }
 
@@ -757,7 +747,7 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
                     return (Map.Entry) b();
                 }
                 Range range = (Range) this.c.next();
-                if (C5145d.this.b.upperBound.isLessThan(range.upperBound)) {
+                if (d.this.b.upperBound.isLessThan(range.upperBound)) {
                     return (Map.Entry) b();
                 }
                 return Maps.j(range.upperBound, range);
@@ -765,12 +755,11 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.TreeRangeSet$d$b */
         /* loaded from: classes10.dex */
-        class C5147b extends AbstractIterator<Map.Entry<Cut<C>, Range<C>>> {
+        class b extends AbstractIterator<Map.Entry<Cut<C>, Range<C>>> {
             final /* synthetic */ PeekingIterator c;
 
-            C5147b(PeekingIterator peekingIterator) {
+            b(PeekingIterator peekingIterator) {
                 this.c = peekingIterator;
             }
 
@@ -782,27 +771,27 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
                     return (Map.Entry) b();
                 }
                 Range range = (Range) this.c.next();
-                if (C5145d.this.b.lowerBound.isLessThan(range.upperBound)) {
+                if (d.this.b.lowerBound.isLessThan(range.upperBound)) {
                     return Maps.j(range.upperBound, range);
                 }
                 return (Map.Entry) b();
             }
         }
 
-        C5145d(NavigableMap<Cut<C>, Range<C>> navigableMap) {
+        d(NavigableMap<Cut<C>, Range<C>> navigableMap) {
             this.a = navigableMap;
             this.b = Range.all();
         }
 
         private NavigableMap<Cut<C>, Range<C>> g(Range<Cut<C>> range) {
             if (range.isConnected(this.b)) {
-                return new C5145d(this.a, range.intersection(this.b));
+                return new d(this.a, range.intersection(this.b));
             }
             return ImmutableSortedMap.of();
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.Maps.AbstractC5060k
+        @Override // com.google.common.collect.Maps.k
         public Iterator<Map.Entry<Cut<C>, Range<C>>> a() {
             Iterator<Range<C>> it;
             if (!this.b.hasLowerBound()) {
@@ -817,10 +806,10 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
                     it = this.a.tailMap(this.b.lowerEndpoint(), true).values().iterator();
                 }
             }
-            return new C5146a(it);
+            return new a(it);
         }
 
-        @Override // com.google.common.collect.AbstractC5169e
+        @Override // com.google.common.collect.e
         Iterator<Map.Entry<Cut<C>, Range<C>>> b() {
             Collection<Range<C>> values;
             if (this.b.hasUpperBound()) {
@@ -832,7 +821,7 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
             if (p.hasNext() && this.b.upperBound.isLessThan(((Range) p.peek()).upperBound)) {
                 p.next();
             }
-            return new C5147b(p);
+            return new b(p);
         }
 
         @Override // java.util.SortedMap
@@ -895,7 +884,7 @@ public class TreeRangeSet<C extends Comparable<?>> extends AbstractC5173f<C> imp
             return Iterators.u(a());
         }
 
-        private C5145d(NavigableMap<Cut<C>, Range<C>> navigableMap, Range<Cut<C>> range) {
+        private d(NavigableMap<Cut<C>, Range<C>> navigableMap, Range<Cut<C>> range) {
             this.a = navigableMap;
             this.b = range;
         }

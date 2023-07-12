@@ -8,8 +8,6 @@ import android.content.pm.PackageInfo;
 import android.os.IBinder;
 import android.os.Looper;
 import android.os.Parcel;
-import com.alipay.sdk.m.c.C4152b;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
@@ -38,17 +36,16 @@ public class as implements au {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.as$a */
     /* loaded from: classes11.dex */
-    public class ServiceConnectionC7602a implements ServiceConnection {
-        private ServiceConnectionC7602a() {
+    public class a implements ServiceConnection {
+        private a() {
         }
 
         @Override // android.content.ServiceConnection
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
             try {
-                as.this.f103a = C7603b.a(iBinder);
-                as.this.f104b = C7603b.m672a(iBinder);
+                as.this.f103a = b.a(iBinder);
+                as.this.f104b = b.m672a(iBinder);
                 as.this.b();
                 as.this.f99a = 2;
                 synchronized (as.this.f102a) {
@@ -85,14 +82,13 @@ public class as implements au {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.as$b */
     /* loaded from: classes11.dex */
-    private static class C7603b {
+    private static class b {
         static String a(IBinder iBinder) {
             Parcel obtain = Parcel.obtain();
             Parcel obtain2 = Parcel.obtain();
             try {
-                obtain.writeInterfaceToken(C4152b.a);
+                obtain.writeInterfaceToken(com.alipay.sdk.m.c.b.a);
                 iBinder.transact(1, obtain, obtain2, 0);
                 obtain2.readException();
                 return obtain2.readString();
@@ -107,7 +103,7 @@ public class as implements au {
             Parcel obtain = Parcel.obtain();
             Parcel obtain2 = Parcel.obtain();
             try {
-                obtain.writeInterfaceToken(C4152b.a);
+                obtain.writeInterfaceToken(com.alipay.sdk.m.c.b.a);
                 iBinder.transact(2, obtain, obtain2, 0);
                 obtain2.readException();
                 return obtain2.readInt() != 0;
@@ -125,7 +121,7 @@ public class as implements au {
 
     private void a() {
         boolean z;
-        this.f101a = new ServiceConnectionC7602a();
+        this.f101a = new a();
         Intent intent = new Intent("com.uodis.opendevice.OPENIDS_SERVICE");
         intent.setPackage("com.huawei.hwid");
         try {
@@ -142,7 +138,7 @@ public class as implements au {
         }
         synchronized (this.f102a) {
             try {
-                AbstractC7535b.m586a("huawei's " + str + " wait...");
+                com.xiaomi.channel.commonutils.logger.b.m586a("huawei's " + str + " wait...");
                 this.f102a.wait(3000L);
             } catch (Exception unused) {
             }

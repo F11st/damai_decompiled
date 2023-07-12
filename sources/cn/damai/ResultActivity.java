@@ -34,12 +34,11 @@ public class ResultActivity extends Activity implements ILoginListener {
     private boolean b = true;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ResultActivity$a */
     /* loaded from: classes.dex */
-    public class C0266a implements ISsoRemoteParam {
+    public class a implements ISsoRemoteParam {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0266a(ResultActivity resultActivity) {
+        a(ResultActivity resultActivity) {
         }
 
         @Override // com.taobao.android.sso.v2.launch.model.ISsoRemoteParam
@@ -177,6 +176,6 @@ public class ResultActivity extends Activity implements ILoginListener {
             return;
         }
         UserTrackAdapter.sendUT("TaobaoAuth_CallbackSucess");
-        TBSsoLogin.c(this, intent.getExtras(), new C0266a(this));
+        TBSsoLogin.c(this, intent.getExtras(), new a(this));
     }
 }

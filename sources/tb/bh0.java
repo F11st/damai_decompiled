@@ -9,12 +9,11 @@ import android.util.Log;
 import androidx.annotation.RequiresApi;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import ntk.cellular.C8726a;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
-public class bh0 extends C8726a {
-    @Override // ntk.cellular.C8726a
+public class bh0 extends ntk.cellular.a {
+    @Override // ntk.cellular.a
     public int h(Context context) {
         int f = f();
         if (f != 0) {
@@ -33,13 +32,13 @@ public class bh0 extends C8726a {
         return f;
     }
 
-    @Override // ntk.cellular.C8726a
+    @Override // ntk.cellular.a
     @RequiresApi(api = 21)
     public synchronized void i(Context context) {
         if (this.a != null) {
             return;
         }
-        if (C8726a.a(context)) {
+        if (ntk.cellular.a.a(context)) {
             ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService("connectivity");
             if (connectivityManager == null) {
                 return;

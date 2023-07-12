@@ -21,12 +21,11 @@ public class BigVoteView extends AbsView<BigVoteContract.Presenter> implements B
     private BigVoteViewHolder mHolder;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.discover.mvp.BigVoteView$a */
     /* loaded from: classes7.dex */
-    public class C1807a implements VotePanel.VoteActionListener {
+    public class a implements VotePanel.VoteActionListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1807a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.discover.viewholder.VotePanel.VoteActionListener
@@ -109,7 +108,7 @@ public class BigVoteView extends AbsView<BigVoteContract.Presenter> implements B
 
     public BigVoteView(View view) {
         super(view);
-        this.mHolder = new BigVoteViewHolder(view, new C1807a());
+        this.mHolder = new BigVoteViewHolder(view, new a());
     }
 
     @Override // cn.damai.tetris.component.discover.mvp.BigVoteContract.View

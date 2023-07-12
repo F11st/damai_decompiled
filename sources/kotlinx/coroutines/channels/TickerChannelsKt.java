@@ -33,7 +33,7 @@ public final class TickerChannelsKt {
             r0.<init>(r13)
         L18:
             java.lang.Object r13 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 3
             r4 = 2
@@ -79,7 +79,7 @@ public final class TickerChannelsKt {
             r0.J$1 = r10
             r0.L$0 = r12
             r0.label = r5
-            java.lang.Object r13 = kotlinx.coroutines.C8696j.a(r10, r0)
+            java.lang.Object r13 = kotlinx.coroutines.j.a(r10, r0)
             if (r13 != r1) goto L6e
             return r1
         L6e:
@@ -101,7 +101,7 @@ public final class TickerChannelsKt {
             r0.J$1 = r9
             r0.L$0 = r8
             r0.label = r3
-            java.lang.Object r13 = kotlinx.coroutines.C8696j.a(r11, r0)
+            java.lang.Object r13 = kotlinx.coroutines.j.a(r11, r0)
             if (r13 != r1) goto L36
             return r1
         */

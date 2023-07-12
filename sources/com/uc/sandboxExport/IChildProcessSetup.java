@@ -18,12 +18,11 @@ public interface IChildProcessSetup extends IInterface {
     public static abstract class Stub extends Binder implements IChildProcessSetup {
 
         /* compiled from: Taobao */
-        /* renamed from: com.uc.sandboxExport.IChildProcessSetup$Stub$a */
         /* loaded from: classes11.dex */
-        static class C7153a implements IChildProcessSetup {
+        static class a implements IChildProcessSetup {
             private IBinder a;
 
-            C7153a(IBinder iBinder) {
+            a(IBinder iBinder) {
                 this.a = iBinder;
             }
 
@@ -66,7 +65,7 @@ public interface IChildProcessSetup extends IInterface {
             if (queryLocalInterface != null && (queryLocalInterface instanceof IChildProcessSetup)) {
                 return (IChildProcessSetup) queryLocalInterface;
             }
-            return new C7153a(iBinder);
+            return new a(iBinder);
         }
 
         @Override // android.os.IInterface

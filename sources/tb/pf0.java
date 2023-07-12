@@ -18,7 +18,6 @@ import cn.damai.commonbusiness.photoselect.imageselected.entry.Image;
 import cn.damai.issue.net.CommentGradeText;
 import com.airbnb.lottie.LottieAnimationView;
 import com.alibaba.pictures.uploader.FileUploader;
-import com.alipay.sdk.m.u.C4318n;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.io.ByteArrayOutputStream;
@@ -31,13 +30,12 @@ public class pf0 {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.pf0$a */
     /* loaded from: classes4.dex */
-    public class C9549a implements ValueAnimator.AnimatorUpdateListener {
+    public class a implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
 
-        C9549a(View view) {
+        a(View view) {
             this.a = view;
         }
 
@@ -57,13 +55,12 @@ public class pf0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.pf0$b */
     /* loaded from: classes4.dex */
-    public class C9550b implements Animator.AnimatorListener {
+    public class b implements Animator.AnimatorListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
 
-        C9550b(View view) {
+        b(View view) {
             this.a = view;
         }
 
@@ -105,13 +102,12 @@ public class pf0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.pf0$c  reason: invalid class name */
     /* loaded from: classes4.dex */
-    public class animationAnimation$AnimationListenerC9551c implements Animation.AnimationListener {
+    public class c implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
 
-        animationAnimation$AnimationListenerC9551c(View view) {
+        c(View view) {
             this.a = view;
         }
 
@@ -143,15 +139,14 @@ public class pf0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.pf0$d */
     /* loaded from: classes4.dex */
-    public class C9552d implements OnGrantListener {
+    public class d implements OnGrantListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
         final /* synthetic */ int b;
         final /* synthetic */ int c;
 
-        C9552d(Activity activity, int i, int i2) {
+        d(Activity activity, int i, int i2) {
             this.a = activity;
             this.b = i;
             this.c = i2;
@@ -174,22 +169,20 @@ public class pf0 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.pf0$e */
     /* loaded from: classes4.dex */
-    public static class C9553e {
+    public static class e {
         public final ValueAnimator a;
         public final boolean b;
 
-        public C9553e(ValueAnimator valueAnimator, boolean z) {
+        public e(ValueAnimator valueAnimator, boolean z) {
             this.a = valueAnimator;
             this.b = z;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.pf0$f */
     /* loaded from: classes4.dex */
-    private static class C9554f {
+    private static class f {
         private static final pf0 a = new pf0();
     }
 
@@ -202,12 +195,12 @@ public class pf0 {
         }
         Object tag = view.getTag();
         if (Build.VERSION.SDK_INT >= 11) {
-            if (tag instanceof C9553e) {
-                C9553e c9553e = (C9553e) tag;
-                if (c9553e.b == z) {
+            if (tag instanceof e) {
+                e eVar = (e) tag;
+                if (eVar.b == z) {
                     return;
                 }
-                c9553e.a.cancel();
+                eVar.a.cancel();
             }
             if (z) {
                 ofInt = ValueAnimator.ofInt(0, i);
@@ -220,9 +213,9 @@ public class pf0 {
             }
             ofInt.setDuration(300L);
             ofInt.setInterpolator(new LinearInterpolator());
-            ofInt.addUpdateListener(new C9549a(view));
+            ofInt.addUpdateListener(new a(view));
             ofInt.start();
-            view.setTag(new C9553e(ofInt, z));
+            view.setTag(new e(ofInt, z));
         }
     }
 
@@ -270,17 +263,17 @@ public class pf0 {
         String str2 = options.outMimeType;
         if ((str2 != null && str2.toLowerCase().endsWith("gif")) || str.toLowerCase().endsWith(".gif")) {
             try {
-                Bitmap d = w11.d(str, 400, 400);
+                Bitmap d2 = w11.d(str, 400, 400);
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-                d.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+                d2.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
                 File l = l(t6.INSTANCE.getAppContext(), byteArrayOutputStream.toByteArray(), ".png");
-                d.recycle();
+                d2.recycle();
                 byteArrayOutputStream.close();
                 if (l != null) {
                     return l.getAbsolutePath();
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
         }
         return str;
@@ -288,7 +281,7 @@ public class pf0 {
 
     public static final pf0 g() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1014976357") ? (pf0) ipChange.ipc$dispatch("-1014976357", new Object[0]) : C9554f.a;
+        return AndroidInstantRuntime.support(ipChange, "-1014976357") ? (pf0) ipChange.ipc$dispatch("-1014976357", new Object[0]) : f.a;
     }
 
     public static void h(View view, LottieAnimationView lottieAnimationView) {
@@ -301,12 +294,12 @@ public class pf0 {
         view.setVisibility(0);
         LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) lottieAnimationView.getLayoutParams();
         layoutParams.height = 310;
-        layoutParams.width = C4318n.g;
+        layoutParams.width = com.alipay.sdk.m.u.n.g;
         lottieAnimationView.setImageAssetsFolder("imagesissue/");
         lottieAnimationView.setAnimation("lottie_issue_guide.json");
         lottieAnimationView.playAnimation();
         if (Build.VERSION.SDK_INT >= 11) {
-            lottieAnimationView.addAnimatorListener(new C9550b(view));
+            lottieAnimationView.addAnimatorListener(new b(view));
         }
     }
 
@@ -320,7 +313,7 @@ public class pf0 {
         AlphaAnimation alphaAnimation = new AlphaAnimation(1.0f, 0.0f);
         alphaAnimation.setDuration(500L);
         view.startAnimation(alphaAnimation);
-        alphaAnimation.setAnimationListener(new animationAnimation$AnimationListenerC9551c(view));
+        alphaAnimation.setAnimationListener(new c(view));
     }
 
     public static void j(Activity activity, int i, boolean z, int i2, ArrayList<Image> arrayList, String str, int i3) {
@@ -331,8 +324,8 @@ public class pf0 {
         }
         try {
             s11.d(activity, arrayList, arrayList, z, i2, i, str, i3);
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 
@@ -341,7 +334,7 @@ public class pf0 {
         if (AndroidInstantRuntime.support(ipChange, "-1771034700")) {
             ipChange.ipc$dispatch("-1771034700", new Object[]{activity, Integer.valueOf(i), Integer.valueOf(i2)});
         } else {
-            ir1.b(activity, false, mr1.STORAGE, "用于选取视频文件进行发布", new C9552d(activity, i, i2));
+            ir1.b(activity, false, mr1.STORAGE, "用于选取视频文件进行发布", new d(activity, i, i2));
         }
     }
 

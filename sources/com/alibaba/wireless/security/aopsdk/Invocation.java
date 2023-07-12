@@ -1,7 +1,6 @@
 package com.alibaba.wireless.security.aopsdk;
 
 import androidx.constraintlayout.core.motion.utils.TypedValues;
-import com.alibaba.wireless.security.aopsdk.e.HashableArgs;
 import com.taobao.aranger.constant.Constants;
 import tb.m80;
 
@@ -11,7 +10,7 @@ public class Invocation {
     private String a;
     public long aopStartTime;
     public Object[] args;
-    private HashableArgs b;
+    private com.alibaba.wireless.security.aopsdk.e.b b;
     public long basicIncTimeCost;
     private boolean c;
     private Object d;
@@ -152,9 +151,9 @@ public class Invocation {
         return this.args;
     }
 
-    public HashableArgs getHashableArgs() {
+    public com.alibaba.wireless.security.aopsdk.e.b getHashableArgs() {
         if (this.b == null) {
-            this.b = new HashableArgs(this.args);
+            this.b = new com.alibaba.wireless.security.aopsdk.e.b(this.args);
         }
         return this.b;
     }

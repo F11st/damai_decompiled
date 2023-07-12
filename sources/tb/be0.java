@@ -15,10 +15,9 @@ public abstract class be0 implements IUpdater {
     private List<UpdateDataListener> a = new ArrayList();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.be0$a */
     /* loaded from: classes11.dex */
-    class C8958a implements EmasPublishCallback {
-        C8958a() {
+    class a implements EmasPublishCallback {
+        a() {
         }
 
         @Override // com.alibaba.emas.publish.EmasPublishCallback
@@ -40,7 +39,7 @@ public abstract class be0 implements IUpdater {
     public abstract String biz();
 
     public EmasPublishCallback callback() {
-        return new C8958a();
+        return new a();
     }
 
     @Override // com.taobao.update.datasource.IUpdater

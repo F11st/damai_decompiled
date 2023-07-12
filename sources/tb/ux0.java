@@ -2,7 +2,6 @@ package tb;
 
 import android.text.TextUtils;
 import android.view.View;
-import cn.damai.common.user.C0528b;
 import com.alibaba.pictures.ut.ClickCat;
 import com.alibaba.pictures.ut.DogCat;
 import com.alibaba.pictures.ut.ExposureDog;
@@ -16,7 +15,7 @@ import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
-public class ux0 extends C0528b {
+public class ux0 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final String HOME_PAGE = "home";
     private static ux0 d;

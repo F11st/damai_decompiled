@@ -3,7 +3,6 @@ package com.xiaomi.push;
 import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
-import com.xiaomi.clientreport.data.C7537a;
 import com.xiaomi.clientreport.data.EventClientReport;
 import com.xiaomi.clientreport.data.PerfClientReport;
 import com.xiaomi.clientreport.manager.ClientReportClient;
@@ -31,11 +30,11 @@ public class eo {
         return a;
     }
 
-    private void a(C7537a c7537a) {
-        if (c7537a instanceof PerfClientReport) {
-            ClientReportClient.reportPerf(this.f304a, (PerfClientReport) c7537a);
-        } else if (c7537a instanceof EventClientReport) {
-            ClientReportClient.reportEvent(this.f304a, (EventClientReport) c7537a);
+    private void a(com.xiaomi.clientreport.data.a aVar) {
+        if (aVar instanceof PerfClientReport) {
+            ClientReportClient.reportPerf(this.f304a, (PerfClientReport) aVar);
+        } else if (aVar instanceof EventClientReport) {
+            ClientReportClient.reportEvent(this.f304a, (EventClientReport) aVar);
         }
     }
 

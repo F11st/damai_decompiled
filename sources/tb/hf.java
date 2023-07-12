@@ -9,7 +9,6 @@ import cn.damai.commonbusiness.calendarcopy.bean.CalendarBean;
 import cn.damai.projectfiltercopy.bean.CalendarInitBean;
 import cn.damai.projectfiltercopy.bean.FilterData;
 import cn.damai.projectfiltercopy.bean.Type;
-import cn.damai.projectfiltercopy.floatview.AbstractC1530a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.weex.common.Constants;
@@ -17,18 +16,17 @@ import com.youku.middlewareservice.provider.info.AppInfoProviderProxy;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
-public class hf extends AbstractC1530a<CalendarBean> implements View.OnClickListener {
+public class hf extends cn.damai.projectfiltercopy.floatview.a<CalendarBean> implements View.OnClickListener {
     private static transient /* synthetic */ IpChange $ipChange;
     private CalendarPopView d;
     long e;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.hf$a */
     /* loaded from: classes6.dex */
-    public class C9213a implements CalendarPopView.OnDateClickListener {
+    public class a implements CalendarPopView.OnDateClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9213a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.calendarcopy.CalendarPopView.OnDateClickListener
@@ -61,7 +59,7 @@ public class hf extends AbstractC1530a<CalendarBean> implements View.OnClickList
 
     public hf(Context context, CalendarInitBean calendarInitBean) {
         super(context);
-        this.d = new CalendarPopView(AppInfoProviderProxy.getApplication(), true, true, 60, new C9213a(), calendarInitBean);
+        this.d = new CalendarPopView(AppInfoProviderProxy.getApplication(), true, true, 60, new a(), calendarInitBean);
     }
 
     @Override // cn.damai.projectfiltercopy.floatview.FloatLayer

@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.core.view.ViewCompat;
-import com.google.android.flexbox.C4811b;
+import com.google.android.flexbox.b;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
@@ -34,10 +34,10 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
     private int mDividerHorizontalHeight;
     private int mDividerVerticalWidth;
     private int mFlexDirection;
-    private List<C4810a> mFlexLines;
-    private C4811b.C4813b mFlexLinesResult;
+    private List<a> mFlexLines;
+    private b.C0223b mFlexLinesResult;
     private int mFlexWrap;
-    private C4811b mFlexboxHelper;
+    private b mFlexboxHelper;
     private int mJustifyContent;
     private int mMaxLine;
     private SparseIntArray mOrderCache;
@@ -83,9 +83,9 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
         int max = Math.max(0, (getWidth() - getPaddingRight()) - paddingLeft);
         int size = this.mFlexLines.size();
         for (int i3 = 0; i3 < size; i3++) {
-            C4810a c4810a = this.mFlexLines.get(i3);
-            for (int i4 = 0; i4 < c4810a.h; i4++) {
-                int i5 = c4810a.o + i4;
+            a aVar = this.mFlexLines.get(i3);
+            for (int i4 = 0; i4 < aVar.h; i4++) {
+                int i5 = aVar.o + i4;
                 View reorderedChildAt = getReorderedChildAt(i5);
                 if (reorderedChildAt != null && reorderedChildAt.getVisibility() != 8) {
                     LayoutParams layoutParams = (LayoutParams) reorderedChildAt.getLayoutParams();
@@ -95,31 +95,31 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
                         } else {
                             left = (reorderedChildAt.getLeft() - ((ViewGroup.MarginLayoutParams) layoutParams).leftMargin) - this.mDividerVerticalWidth;
                         }
-                        drawVerticalDivider(canvas, left, c4810a.b, c4810a.g);
+                        drawVerticalDivider(canvas, left, aVar.b, aVar.g);
                     }
-                    if (i4 == c4810a.h - 1 && (this.mShowDividerVertical & 4) > 0) {
+                    if (i4 == aVar.h - 1 && (this.mShowDividerVertical & 4) > 0) {
                         if (z) {
                             right = (reorderedChildAt.getLeft() - ((ViewGroup.MarginLayoutParams) layoutParams).leftMargin) - this.mDividerVerticalWidth;
                         } else {
                             right = reorderedChildAt.getRight() + ((ViewGroup.MarginLayoutParams) layoutParams).rightMargin;
                         }
-                        drawVerticalDivider(canvas, right, c4810a.b, c4810a.g);
+                        drawVerticalDivider(canvas, right, aVar.b, aVar.g);
                     }
                 }
             }
             if (hasDividerBeforeFlexLine(i3)) {
                 if (z2) {
-                    i2 = c4810a.d;
+                    i2 = aVar.d;
                 } else {
-                    i2 = c4810a.b - this.mDividerHorizontalHeight;
+                    i2 = aVar.b - this.mDividerHorizontalHeight;
                 }
                 drawHorizontalDivider(canvas, paddingLeft, i2, max);
             }
             if (hasEndDividerAfterFlexLine(i3) && (this.mShowDividerHorizontal & 4) > 0) {
                 if (z2) {
-                    i = c4810a.b - this.mDividerHorizontalHeight;
+                    i = aVar.b - this.mDividerHorizontalHeight;
                 } else {
-                    i = c4810a.d;
+                    i = aVar.d;
                 }
                 drawHorizontalDivider(canvas, paddingLeft, i, max);
             }
@@ -135,9 +135,9 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
         int max = Math.max(0, (getHeight() - getPaddingBottom()) - paddingTop);
         int size = this.mFlexLines.size();
         for (int i3 = 0; i3 < size; i3++) {
-            C4810a c4810a = this.mFlexLines.get(i3);
-            for (int i4 = 0; i4 < c4810a.h; i4++) {
-                int i5 = c4810a.o + i4;
+            a aVar = this.mFlexLines.get(i3);
+            for (int i4 = 0; i4 < aVar.h; i4++) {
+                int i5 = aVar.o + i4;
                 View reorderedChildAt = getReorderedChildAt(i5);
                 if (reorderedChildAt != null && reorderedChildAt.getVisibility() != 8) {
                     LayoutParams layoutParams = (LayoutParams) reorderedChildAt.getLayoutParams();
@@ -147,31 +147,31 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
                         } else {
                             top = (reorderedChildAt.getTop() - ((ViewGroup.MarginLayoutParams) layoutParams).topMargin) - this.mDividerHorizontalHeight;
                         }
-                        drawHorizontalDivider(canvas, c4810a.a, top, c4810a.g);
+                        drawHorizontalDivider(canvas, aVar.a, top, aVar.g);
                     }
-                    if (i4 == c4810a.h - 1 && (this.mShowDividerHorizontal & 4) > 0) {
+                    if (i4 == aVar.h - 1 && (this.mShowDividerHorizontal & 4) > 0) {
                         if (z2) {
                             bottom = (reorderedChildAt.getTop() - ((ViewGroup.MarginLayoutParams) layoutParams).topMargin) - this.mDividerHorizontalHeight;
                         } else {
                             bottom = reorderedChildAt.getBottom() + ((ViewGroup.MarginLayoutParams) layoutParams).bottomMargin;
                         }
-                        drawHorizontalDivider(canvas, c4810a.a, bottom, c4810a.g);
+                        drawHorizontalDivider(canvas, aVar.a, bottom, aVar.g);
                     }
                 }
             }
             if (hasDividerBeforeFlexLine(i3)) {
                 if (z) {
-                    i2 = c4810a.c;
+                    i2 = aVar.c;
                 } else {
-                    i2 = c4810a.a - this.mDividerVerticalWidth;
+                    i2 = aVar.a - this.mDividerVerticalWidth;
                 }
                 drawVerticalDivider(canvas, i2, paddingTop, max);
             }
             if (hasEndDividerAfterFlexLine(i3) && (this.mShowDividerVertical & 4) > 0) {
                 if (z) {
-                    i = c4810a.a - this.mDividerVerticalWidth;
+                    i = aVar.a - this.mDividerVerticalWidth;
                 } else {
-                    i = c4810a.c;
+                    i = aVar.c;
                 }
                 drawVerticalDivider(canvas, i, paddingTop, max);
             }
@@ -260,20 +260,20 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
         this.mFlexLines = this.mFlexLinesResult.a;
         this.mFlexboxHelper.p(i, i2);
         if (this.mAlignItems == 3) {
-            for (C4810a c4810a : this.mFlexLines) {
+            for (a aVar : this.mFlexLines) {
                 int i3 = Integer.MIN_VALUE;
-                for (int i4 = 0; i4 < c4810a.h; i4++) {
-                    View reorderedChildAt = getReorderedChildAt(c4810a.o + i4);
+                for (int i4 = 0; i4 < aVar.h; i4++) {
+                    View reorderedChildAt = getReorderedChildAt(aVar.o + i4);
                     if (reorderedChildAt != null && reorderedChildAt.getVisibility() != 8) {
                         LayoutParams layoutParams = (LayoutParams) reorderedChildAt.getLayoutParams();
                         if (this.mFlexWrap != 2) {
-                            i3 = Math.max(i3, reorderedChildAt.getMeasuredHeight() + Math.max(c4810a.l - reorderedChildAt.getBaseline(), ((ViewGroup.MarginLayoutParams) layoutParams).topMargin) + ((ViewGroup.MarginLayoutParams) layoutParams).bottomMargin);
+                            i3 = Math.max(i3, reorderedChildAt.getMeasuredHeight() + Math.max(aVar.l - reorderedChildAt.getBaseline(), ((ViewGroup.MarginLayoutParams) layoutParams).topMargin) + ((ViewGroup.MarginLayoutParams) layoutParams).bottomMargin);
                         } else {
-                            i3 = Math.max(i3, reorderedChildAt.getMeasuredHeight() + ((ViewGroup.MarginLayoutParams) layoutParams).topMargin + Math.max((c4810a.l - reorderedChildAt.getMeasuredHeight()) + reorderedChildAt.getBaseline(), ((ViewGroup.MarginLayoutParams) layoutParams).bottomMargin));
+                            i3 = Math.max(i3, reorderedChildAt.getMeasuredHeight() + ((ViewGroup.MarginLayoutParams) layoutParams).topMargin + Math.max((aVar.l - reorderedChildAt.getMeasuredHeight()) + reorderedChildAt.getBaseline(), ((ViewGroup.MarginLayoutParams) layoutParams).bottomMargin));
                         }
                     }
                 }
-                c4810a.g = i3;
+                aVar.g = i3;
             }
         }
         this.mFlexboxHelper.o(i, i2, getPaddingTop() + getPaddingBottom());
@@ -440,18 +440,18 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
     }
 
     @Override // com.google.android.flexbox.FlexContainer
-    public List<C4810a> getFlexLines() {
+    public List<a> getFlexLines() {
         ArrayList arrayList = new ArrayList(this.mFlexLines.size());
-        for (C4810a c4810a : this.mFlexLines) {
-            if (c4810a.c() != 0) {
-                arrayList.add(c4810a);
+        for (a aVar : this.mFlexLines) {
+            if (aVar.c() != 0) {
+                arrayList.add(aVar);
             }
         }
         return arrayList;
     }
 
     @Override // com.google.android.flexbox.FlexContainer
-    public List<C4810a> getFlexLinesInternal() {
+    public List<a> getFlexLinesInternal() {
         return this.mFlexLines;
     }
 
@@ -468,8 +468,8 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
     @Override // com.google.android.flexbox.FlexContainer
     public int getLargestMainSize() {
         int i = Integer.MIN_VALUE;
-        for (C4810a c4810a : this.mFlexLines) {
-            i = Math.max(i, c4810a.e);
+        for (a aVar : this.mFlexLines) {
+            i = Math.max(i, aVar.e);
         }
         return i;
     }
@@ -510,7 +510,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
         int size = this.mFlexLines.size();
         int i3 = 0;
         for (int i4 = 0; i4 < size; i4++) {
-            C4810a c4810a = this.mFlexLines.get(i4);
+            a aVar = this.mFlexLines.get(i4);
             if (hasDividerBeforeFlexLine(i4)) {
                 if (isMainAxisDirectionHorizontal()) {
                     i2 = this.mDividerHorizontalHeight;
@@ -527,7 +527,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
                 }
                 i3 += i;
             }
-            i3 += c4810a.g;
+            i3 += aVar.g;
         }
         return i3;
     }
@@ -607,36 +607,36 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
     }
 
     @Override // com.google.android.flexbox.FlexContainer
-    public void onNewFlexItemAdded(View view, int i, int i2, C4810a c4810a) {
+    public void onNewFlexItemAdded(View view, int i, int i2, a aVar) {
         if (hasDividerBeforeChildAtAlongMainAxis(i, i2)) {
             if (isMainAxisDirectionHorizontal()) {
-                int i3 = c4810a.e;
+                int i3 = aVar.e;
                 int i4 = this.mDividerVerticalWidth;
-                c4810a.e = i3 + i4;
-                c4810a.f += i4;
+                aVar.e = i3 + i4;
+                aVar.f += i4;
                 return;
             }
-            int i5 = c4810a.e;
+            int i5 = aVar.e;
             int i6 = this.mDividerHorizontalHeight;
-            c4810a.e = i5 + i6;
-            c4810a.f += i6;
+            aVar.e = i5 + i6;
+            aVar.f += i6;
         }
     }
 
     @Override // com.google.android.flexbox.FlexContainer
-    public void onNewFlexLineAdded(C4810a c4810a) {
+    public void onNewFlexLineAdded(a aVar) {
         if (isMainAxisDirectionHorizontal()) {
             if ((this.mShowDividerVertical & 4) > 0) {
-                int i = c4810a.e;
+                int i = aVar.e;
                 int i2 = this.mDividerVerticalWidth;
-                c4810a.e = i + i2;
-                c4810a.f += i2;
+                aVar.e = i + i2;
+                aVar.f += i2;
             }
         } else if ((this.mShowDividerHorizontal & 4) > 0) {
-            int i3 = c4810a.e;
+            int i3 = aVar.e;
             int i4 = this.mDividerHorizontalHeight;
-            c4810a.e = i3 + i4;
-            c4810a.f += i4;
+            aVar.e = i3 + i4;
+            aVar.f += i4;
         }
     }
 
@@ -698,7 +698,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
     }
 
     @Override // com.google.android.flexbox.FlexContainer
-    public void setFlexLines(List<C4810a> list) {
+    public void setFlexLines(List<a> list) {
         this.mFlexLines = list;
     }
 
@@ -761,9 +761,9 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
     public FlexboxLayout(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         this.mMaxLine = -1;
-        this.mFlexboxHelper = new C4811b(this);
+        this.mFlexboxHelper = new b(this);
         this.mFlexLines = new ArrayList();
-        this.mFlexLinesResult = new C4811b.C4813b();
+        this.mFlexLinesResult = new b.C0223b();
         TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R$styleable.FlexboxLayout, i, 0);
         this.mFlexDirection = obtainStyledAttributes.getInt(R$styleable.FlexboxLayout_flexDirection, 0);
         this.mFlexWrap = obtainStyledAttributes.getInt(R$styleable.FlexboxLayout_flexWrap, 0);
@@ -814,7 +814,7 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
     public static class LayoutParams extends ViewGroup.MarginLayoutParams implements FlexItem {
-        public static final Parcelable.Creator<LayoutParams> CREATOR = new C4804a();
+        public static final Parcelable.Creator<LayoutParams> CREATOR = new a();
         private int mAlignSelf;
         private float mFlexBasisPercent;
         private float mFlexGrow;
@@ -827,10 +827,9 @@ public class FlexboxLayout extends ViewGroup implements FlexContainer {
         private boolean mWrapBefore;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.android.flexbox.FlexboxLayout$LayoutParams$a */
         /* loaded from: classes10.dex */
-        static class C4804a implements Parcelable.Creator<LayoutParams> {
-            C4804a() {
+        static class a implements Parcelable.Creator<LayoutParams> {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator

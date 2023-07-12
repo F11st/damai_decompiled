@@ -8,5 +8,5 @@ import io.reactivex.annotations.NonNull;
 /* loaded from: classes3.dex */
 public interface FlowableConverter<T, R> {
     @NonNull
-    R apply(@NonNull AbstractC8147b<T> abstractC8147b);
+    R apply(@NonNull b<T> bVar);
 }

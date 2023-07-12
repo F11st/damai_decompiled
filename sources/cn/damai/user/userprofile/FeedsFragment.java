@@ -75,12 +75,11 @@ public class FeedsFragment extends BaseFragment implements OnLoadMoreListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.FeedsFragment$a */
     /* loaded from: classes9.dex */
-    public class C2737a implements OnRefreshListener {
+    public class a implements OnRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2737a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.irecycler.OnRefreshListener
@@ -265,7 +264,7 @@ public class FeedsFragment extends BaseFragment implements OnLoadMoreListener {
         iRecyclerView.setHasFixedSize(true);
         this.recyclerview.setLayoutManager(new FullyLinearLayoutManager(getContext()));
         this.recyclerview.setRefreshHeaderView(PullToRefreshHeaderView.getInstance(getActivity()));
-        this.recyclerview.setOnRefreshListener(new C2737a());
+        this.recyclerview.setOnRefreshListener(new a());
         this.emptyView = view.findViewById(R$id.user_empty_view);
         this.emptyTv = (TextView) view.findViewById(R$id.user_empty_tv);
         FeedsAdapter feedsAdapter = new FeedsAdapter(getActivity(), new FeedsResponse(), view, "");

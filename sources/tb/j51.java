@@ -1,6 +1,5 @@
 package tb;
 
-import kotlin.collections.C8212k;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClass;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClassifier;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClassifierType;
@@ -15,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
 public final class j51 {
     private static final boolean a(JavaMethod javaMethod) {
         hp0 fqName;
-        JavaValueParameter javaValueParameter = (JavaValueParameter) C8212k.s0(javaMethod.getValueParameters());
+        JavaValueParameter javaValueParameter = (JavaValueParameter) kotlin.collections.k.s0(javaMethod.getValueParameters());
         JavaType type = javaValueParameter == null ? null : javaValueParameter.getType();
         JavaClassifierType javaClassifierType = type instanceof JavaClassifierType ? (JavaClassifierType) type : null;
         if (javaClassifierType == null) {

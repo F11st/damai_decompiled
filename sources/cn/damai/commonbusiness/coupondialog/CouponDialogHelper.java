@@ -10,7 +10,6 @@ import android.view.View;
 import cn.damai.common.DamaiConstants;
 import cn.damai.common.app.base.BaseActivity;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.coupondialog.net.CouponClearRequest;
 import cn.damai.commonbusiness.coupondialog.net.CouponClearResponse;
@@ -46,12 +45,11 @@ public class CouponDialogHelper {
     private int k;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.coupondialog.CouponDialogHelper$a */
     /* loaded from: classes14.dex */
-    public class CountDownTimerC0635a extends CountDownTimer {
+    public class a extends CountDownTimer {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        CountDownTimerC0635a(long j, long j2) {
+        a(long j, long j2) {
             super(j, j2);
         }
 
@@ -80,12 +78,11 @@ public class CouponDialogHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.coupondialog.CouponDialogHelper$b */
     /* loaded from: classes14.dex */
-    public class DialogInterface$OnDismissListenerC0636b implements DialogInterface.OnDismissListener {
+    public class b implements DialogInterface.OnDismissListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnDismissListenerC0636b() {
+        b() {
         }
 
         @Override // android.content.DialogInterface.OnDismissListener
@@ -108,12 +105,11 @@ public class CouponDialogHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.coupondialog.CouponDialogHelper$c */
     /* loaded from: classes14.dex */
-    public class DialogInterface$OnShowListenerC0637c implements DialogInterface.OnShowListener {
+    public class c implements DialogInterface.OnShowListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnShowListenerC0637c() {
+        c() {
         }
 
         @Override // android.content.DialogInterface.OnShowListener
@@ -152,7 +148,7 @@ public class CouponDialogHelper {
         if (AndroidInstantRuntime.support(ipChange, "-783196252")) {
             ipChange.ipc$dispatch("-783196252", new Object[]{this});
         } else {
-            C0529c.e().A(new HashMap(), "damai_redpacket_layer_event", "redpacket_layer");
+            cn.damai.common.user.c.e().A(new HashMap(), "damai_redpacket_layer_event", "redpacket_layer");
         }
     }
 
@@ -232,8 +228,8 @@ public class CouponDialogHelper {
             this.f.o(this.h, this.i);
             this.f.n(this.a.model);
             cb1.b("CouponDialogHelper", "to show dialog.");
-            this.f.setOnDismissListener(new DialogInterface$OnDismissListenerC0636b());
-            this.f.setOnShowListener(new DialogInterface$OnShowListenerC0637c());
+            this.f.setOnDismissListener(new b());
+            this.f.setOnShowListener(new c());
             Context context = this.d;
             if (context == null || !(context instanceof Activity) || ((BaseActivity) context).isActivityFinsihed()) {
                 return;
@@ -285,7 +281,7 @@ public class CouponDialogHelper {
         if (AndroidInstantRuntime.support(ipChange, "-1266019553")) {
             ipChange.ipc$dispatch("-1266019553", new Object[]{this});
         } else if (this.b) {
-            new CountDownTimerC0635a(3000L, 1000L).start();
+            new a(3000L, 1000L).start();
             cb1.b("CouponDialogHelper", "openTimeCountDown");
         }
     }
@@ -377,7 +373,7 @@ public class CouponDialogHelper {
                 hashMap.put("usercode", z20.E());
             }
             hashMap.put("eventTrack", str2);
-            C0529c.e().C("use", "redpaper", this.h, "1.0", System.currentTimeMillis() - this.j, hashMap, 2201);
+            cn.damai.common.user.c.e().C("use", "redpaper", this.h, "1.0", System.currentTimeMillis() - this.j, hashMap, 2201);
         } catch (Exception e) {
             e.printStackTrace();
         }

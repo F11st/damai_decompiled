@@ -527,9 +527,8 @@ public final class ArtistAppointmentViewHolder extends BaseViewHolder<ArtistFutu
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.artist.wishcity.ArtistAppointmentViewHolder$a */
     /* loaded from: classes7.dex */
-    public /* synthetic */ class C3451a {
+    public /* synthetic */ class a {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -540,12 +539,11 @@ public final class ArtistAppointmentViewHolder extends BaseViewHolder<ArtistFutu
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.artist.wishcity.ArtistAppointmentViewHolder$b */
     /* loaded from: classes7.dex */
-    public static final class C3452b implements CityViewHolderClickListener {
+    public static final class b implements CityViewHolderClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3452b() {
+        b() {
         }
 
         @Override // com.alibaba.pictures.bricks.component.artist.wishcity.ArtistAppointmentViewHolder.CityViewHolderClickListener
@@ -606,12 +604,11 @@ public final class ArtistAppointmentViewHolder extends BaseViewHolder<ArtistFutu
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.artist.wishcity.ArtistAppointmentViewHolder$c */
     /* loaded from: classes7.dex */
-    public static final class C3453c implements QuickUpNumTextView.DataListener {
+    public static final class c implements QuickUpNumTextView.DataListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3453c() {
+        c() {
         }
 
         @Override // com.alibaba.pictures.bricks.view.QuickUpNumTextView.DataListener
@@ -717,7 +714,7 @@ public final class ArtistAppointmentViewHolder extends BaseViewHolder<ArtistFutu
         cityViewAdapter.e(action != null ? action.getTrackInfo() : null);
         Action action2 = getAction("tourCity");
         cityViewAdapter.f(action2 != null ? action2.getTrackInfo() : null);
-        cityViewAdapter.d(new C3452b());
+        cityViewAdapter.d(new b());
         this.cityRecycleView.setAdapter(cityViewAdapter);
     }
 
@@ -766,7 +763,7 @@ public final class ArtistAppointmentViewHolder extends BaseViewHolder<ArtistFutu
         L17:
             java.lang.String r0 = r6.statusDesc
             if (r0 == 0) goto L24
-            boolean r0 = kotlin.text.C8596g.s(r0)
+            boolean r0 = kotlin.text.g.s(r0)
             if (r0 == 0) goto L22
             goto L24
         L22:
@@ -929,7 +926,7 @@ public final class ArtistAppointmentViewHolder extends BaseViewHolder<ArtistFutu
         linkedHashMap.put("cityId", str);
         linkedHashMap.put(RankSquareCMSActivity.PRESET_CITY_NAME, str2);
         if (DoloresLoginHandler.Companion.a().c()) {
-            rb0.C9647a c9647a = rb0.Companion;
+            rb0.a aVar = rb0.Companion;
             CityWantRequest cityWantRequest = new CityWantRequest();
             cityWantRequest.setGroup(CityWantRequest.GroupType.IP_GROUP.getValue());
             cityWantRequest.setTargetType(CityWantRequest.TargetType.IP_CITY_REMIND.getValue());
@@ -939,7 +936,7 @@ public final class ArtistAppointmentViewHolder extends BaseViewHolder<ArtistFutu
             cityWantRequest.setOperateType(str3);
             cityWantRequest.setSubTargetId(str);
             cityWantRequest.setExtras(JSON.toJSONString(linkedHashMap));
-            c9647a.b(cityWantRequest).c(getContext()).a().doOnKTStart(new Function1<DoloresRequest<FollowStateBean>, wt2>() { // from class: com.alibaba.pictures.bricks.component.artist.wishcity.ArtistAppointmentViewHolder$requestPayResultData$2
+            aVar.b(cityWantRequest).c(getContext()).a().doOnKTStart(new Function1<DoloresRequest<FollowStateBean>, wt2>() { // from class: com.alibaba.pictures.bricks.component.artist.wishcity.ArtistAppointmentViewHolder$requestPayResultData$2
                 private static transient /* synthetic */ IpChange $ipChange;
 
                 /* JADX INFO: Access modifiers changed from: package-private */
@@ -988,7 +985,7 @@ public final class ArtistAppointmentViewHolder extends BaseViewHolder<ArtistFutu
                 public final void invoke2(@NotNull FollowStateBean followStateBean) {
                     RecyclerView recyclerView;
                     RecyclerView recyclerView2;
-                    List<ArtistTourCityBean> b;
+                    List<ArtistTourCityBean> b2;
                     IpChange ipChange2 = $ipChange;
                     int i = 0;
                     if (AndroidInstantRuntime.support(ipChange2, "-1430369045")) {
@@ -1026,7 +1023,7 @@ public final class ArtistAppointmentViewHolder extends BaseViewHolder<ArtistFutu
                         recyclerView = ArtistAppointmentViewHolder.this.cityRecycleView;
                         RecyclerView.Adapter adapter = recyclerView.getAdapter();
                         ArtistAppointmentViewHolder.CityViewAdapter cityViewAdapter = adapter instanceof ArtistAppointmentViewHolder.CityViewAdapter ? (ArtistAppointmentViewHolder.CityViewAdapter) adapter : null;
-                        ArtistTourCityBean artistTourCityBean = (cityViewAdapter == null || (b = cityViewAdapter.b()) == null) ? null : b.get(i);
+                        ArtistTourCityBean artistTourCityBean = (cityViewAdapter == null || (b2 = cityViewAdapter.b()) == null) ? null : b2.get(i);
                         if (artistTourCityBean != null) {
                             artistTourCityBean.wantSeeStatus = str5;
                         }

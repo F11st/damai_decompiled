@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
 import android.util.Pair;
-import anet.channel.C0162c;
+import anet.channel.c;
 import com.taobao.accs.ACCSClient;
 import com.taobao.accs.ACCSManager;
 import com.taobao.accs.AccsClientConfig;
@@ -351,7 +351,7 @@ public class ACCSManagerImpl implements IACCSManager {
 
     @Override // com.taobao.accs.IACCSManager
     public Map<String, Boolean> forceReConnectChannel() throws Exception {
-        C0162c.m(getConnection().getAppkey()).g();
+        c.m(getConnection().getAppkey()).g();
         return getChannelState();
     }
 
@@ -360,7 +360,7 @@ public class ACCSManagerImpl implements IACCSManager {
         String host = getConnection().getHost(null);
         HashMap hashMap = new HashMap();
         hashMap.put(host, Boolean.FALSE);
-        if (AccsSessionCenter.getThrowsException(C0162c.m(getConnection().getAppkey()), host, DateUtils.MILLIS_PER_MINUTE) != null) {
+        if (AccsSessionCenter.getThrowsException(c.m(getConnection().getAppkey()), host, DateUtils.MILLIS_PER_MINUTE) != null) {
             hashMap.put(host, Boolean.TRUE);
         }
         String str = TAG;

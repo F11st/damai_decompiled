@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -40,15 +39,14 @@ public class SearchEggRecommendViewHolderV2 extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.viewholder.SearchEggRecommendViewHolderV2$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1623a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
         final /* synthetic */ SearchEggs.SearchEggHeader b;
         final /* synthetic */ int c;
 
-        View$OnClickListenerC1623a(ImageView imageView, SearchEggs.SearchEggHeader searchEggHeader, int i) {
+        a(ImageView imageView, SearchEggs.SearchEggHeader searchEggHeader, int i) {
             this.a = imageView;
             this.b = searchEggHeader;
             this.c = i;
@@ -91,7 +89,7 @@ public class SearchEggRecommendViewHolderV2 extends RecyclerView.ViewHolder {
             if (onEggListener != null) {
                 onEggListener.onImgExpose(imageView, searchEggHeader, i);
             }
-            imageView.setOnClickListener(new View$OnClickListenerC1623a(imageView, searchEggHeader, i));
+            imageView.setOnClickListener(new a(imageView, searchEggHeader, i));
         }
     }
 
@@ -101,7 +99,7 @@ public class SearchEggRecommendViewHolderV2 extends RecyclerView.ViewHolder {
             ipChange.ipc$dispatch("1027317658", new Object[]{this, str, imageView});
             return;
         }
-        DMImageCreator c = C0504a.b().c(str);
+        DMImageCreator c = cn.damai.common.image.a.b().c(str);
         int i = R$drawable.uikit_default_image_bg_gradient;
         c.i(i).c(i).g(imageView);
     }

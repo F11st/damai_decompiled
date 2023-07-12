@@ -10,13 +10,12 @@ import java.util.List;
 /* loaded from: classes10.dex */
 public class gs1 {
     private static final String a = "gs1";
-    private static final List<C9185a> b = Arrays.asList(new C9185a("Micromax", null, "4560MMX", null, 217, 217), new C9185a("HTC", "endeavoru", "HTC One X", null, 312, 312), new C9185a("samsung", null, "SM-G920P", null, 575, 575), new C9185a("samsung", null, "SM-G930", null, 581, 580), new C9185a("samsung", null, "SM-G9300", null, 581, 580), new C9185a("samsung", null, "SM-G930A", null, 581, 580), new C9185a("samsung", null, "SM-G930F", null, 581, 580), new C9185a("samsung", null, "SM-G930P", null, 581, 580), new C9185a("samsung", null, "SM-G930R4", null, 581, 580), new C9185a("samsung", null, "SM-G930T", null, 581, 580), new C9185a("samsung", null, "SM-G930V", null, 581, 580), new C9185a("samsung", null, "SM-G930W8", null, 581, 580), new C9185a("samsung", null, "SM-N915FY", null, 541, 541), new C9185a("samsung", null, "SM-N915A", null, 541, 541), new C9185a("samsung", null, "SM-N915T", null, 541, 541), new C9185a("samsung", null, "SM-N915K", null, 541, 541), new C9185a("samsung", null, "SM-N915T", null, 541, 541), new C9185a("samsung", null, "SM-N915G", null, 541, 541), new C9185a("samsung", null, "SM-N915D", null, 541, 541), new C9185a("BLU", "BLU", "Studio 5.0 HD LTE", "qcom", 294, 294), new C9185a("OnePlus", "A0001", "A0001", "bacon", 401, 401), new C9185a("THL", "THL", "thl 5000", "mt6592", 441, 441));
+    private static final List<a> b = Arrays.asList(new a("Micromax", null, "4560MMX", null, 217, 217), new a("HTC", "endeavoru", "HTC One X", null, 312, 312), new a("samsung", null, "SM-G920P", null, 575, 575), new a("samsung", null, "SM-G930", null, 581, 580), new a("samsung", null, "SM-G9300", null, 581, 580), new a("samsung", null, "SM-G930A", null, 581, 580), new a("samsung", null, "SM-G930F", null, 581, 580), new a("samsung", null, "SM-G930P", null, 581, 580), new a("samsung", null, "SM-G930R4", null, 581, 580), new a("samsung", null, "SM-G930T", null, 581, 580), new a("samsung", null, "SM-G930V", null, 581, 580), new a("samsung", null, "SM-G930W8", null, 581, 580), new a("samsung", null, "SM-N915FY", null, 541, 541), new a("samsung", null, "SM-N915A", null, 541, 541), new a("samsung", null, "SM-N915T", null, 541, 541), new a("samsung", null, "SM-N915K", null, 541, 541), new a("samsung", null, "SM-N915T", null, 541, 541), new a("samsung", null, "SM-N915G", null, 541, 541), new a("samsung", null, "SM-N915D", null, 541, 541), new a("BLU", "BLU", "Studio 5.0 HD LTE", "qcom", 294, 294), new a("OnePlus", "A0001", "A0001", "bacon", 401, 401), new a("THL", "THL", "thl 5000", "mt6592", 441, 441));
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.gs1$a */
     /* loaded from: classes10.dex */
-    public static class C9185a {
+    public static class a {
         String a;
         String b;
         String c;
@@ -24,7 +23,7 @@ public class gs1 {
         int e;
         int f;
 
-        C9185a(String str, String str2, String str3, String str4, int i, int i2) {
+        a(String str, String str2, String str3, String str4, int i, int i2) {
             this.a = str;
             this.b = str2;
             this.c = str3;
@@ -59,12 +58,12 @@ public class gs1 {
         return null;
     }
 
-    static boolean b(List<C9185a> list, String str, String str2, String str3, String str4, Phone.PhoneParams phoneParams) {
-        for (C9185a c9185a : list) {
-            if (c9185a.a(str, str2, str3, str4)) {
-                Log.d(a, String.format("Found override: {MANUFACTURER=%s, DEVICE=%s, MODEL=%s, HARDWARE=%s} : x_ppi=%d, y_ppi=%d", c9185a.a, c9185a.b, c9185a.c, c9185a.d, Integer.valueOf(c9185a.e), Integer.valueOf(c9185a.f)));
-                phoneParams.setXPpi(c9185a.e);
-                phoneParams.setYPpi(c9185a.f);
+    static boolean b(List<a> list, String str, String str2, String str3, String str4, Phone.PhoneParams phoneParams) {
+        for (a aVar : list) {
+            if (aVar.a(str, str2, str3, str4)) {
+                Log.d(a, String.format("Found override: {MANUFACTURER=%s, DEVICE=%s, MODEL=%s, HARDWARE=%s} : x_ppi=%d, y_ppi=%d", aVar.a, aVar.b, aVar.c, aVar.d, Integer.valueOf(aVar.e), Integer.valueOf(aVar.f)));
+                phoneParams.setXPpi(aVar.e);
+                phoneParams.setYPpi(aVar.f);
                 return true;
             }
         }

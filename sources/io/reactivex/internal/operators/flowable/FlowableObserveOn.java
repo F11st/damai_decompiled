@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.Scheduler;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.b;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.internal.fuseable.ConditionalSubscriber;
 import io.reactivex.internal.fuseable.QueueSubscription;
@@ -563,14 +563,14 @@ public final class FlowableObserveOn<T> extends AbstractFlowableWithUpstream<T, 
         }
     }
 
-    public FlowableObserveOn(AbstractC8147b<T> abstractC8147b, Scheduler scheduler, boolean z, int i) {
-        super(abstractC8147b);
+    public FlowableObserveOn(b<T> bVar, Scheduler scheduler, boolean z, int i) {
+        super(bVar);
         this.scheduler = scheduler;
         this.delayError = z;
         this.prefetch = i;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super T> subscriber) {
         Scheduler.Worker createWorker = this.scheduler.createWorker();
         if (subscriber instanceof ConditionalSubscriber) {

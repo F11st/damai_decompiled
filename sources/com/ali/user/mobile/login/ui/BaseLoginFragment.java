@@ -411,7 +411,7 @@ public class BaseLoginFragment extends BaseFragment implements View.OnClickListe
     @Override // androidx.fragment.app.Fragment
     public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
         menu.clear();
-        menuInflater.inflate(R.C2966menu.aliuser_menu, menu);
+        menuInflater.inflate(R.menu.aliuser_menu, menu);
         super.onCreateOptionsMenu(menu, menuInflater);
     }
 
@@ -833,7 +833,7 @@ public class BaseLoginFragment extends BaseFragment implements View.OnClickListe
                         return;
                     }
                     editText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                    imageView.setImageResource(R.C2964drawable.aliuser_ic_visibility);
+                    imageView.setImageResource(R.drawable.aliuser_ic_visibility);
                     imageView.setContentDescription(BaseLoginFragment.this.getString(R.string.aliuser_assist_password_show));
                     imageView.setTag(Boolean.TRUE);
                     UserTrackAdapter.sendControlUT(BaseLoginFragment.this.getPageName(), "Button-ShowPwd");
@@ -909,7 +909,7 @@ public class BaseLoginFragment extends BaseFragment implements View.OnClickListe
                 return;
             }
             new LoadImageTask(DataProviderFactory.getApplicationContext(), this.mAvatarIV, "HeadImages", 160).execute(str);
-            this.mAvatarIV.setImageResource(R.C2964drawable.aliuser_placeholder);
+            this.mAvatarIV.setImageResource(R.drawable.aliuser_placeholder);
         }
     }
 }

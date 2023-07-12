@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.completable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.a;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
@@ -18,7 +18,7 @@ import tb.jm;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class CompletableMerge extends AbstractC8146a {
+public final class CompletableMerge extends a {
     final boolean delayErrors;
     final int maxConcurrency;
     final Publisher<? extends CompletableSource> source;
@@ -186,7 +186,7 @@ public final class CompletableMerge extends AbstractC8146a {
         this.delayErrors = z;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     public void subscribeActual(CompletableObserver completableObserver) {
         this.source.subscribe(new CompletableMergeSubscriber(completableObserver, this.maxConcurrency, this.delayErrors));
     }

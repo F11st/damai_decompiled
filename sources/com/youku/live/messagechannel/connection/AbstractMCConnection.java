@@ -13,7 +13,7 @@ import com.youku.live.messagechannel.message.MCSysMessageName;
 import com.youku.live.messagechannel.utils.MCThreadFactory;
 import com.youku.live.messagechannel.utils.MyLog;
 import com.youku.live.messagechannel.utils.ServerTimeEstimater;
-import io.reactivex.AbstractC8149d;
+import io.reactivex.d;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Predicate;
 import java.util.Comparator;
@@ -77,7 +77,7 @@ public abstract class AbstractMCConnection implements IMCConnection {
             ipChange.ipc$dispatch("2116373354", new Object[]{this, list});
         } else if (list != null && list.size() > 0) {
             MyLog.v(this.TAG, "Deliver receive ", Integer.valueOf(list.size()), " messages.");
-            AbstractC8149d.fromIterable(list).filter(new Predicate<MCMessage>() { // from class: com.youku.live.messagechannel.connection.AbstractMCConnection.4
+            d.fromIterable(list).filter(new Predicate<MCMessage>() { // from class: com.youku.live.messagechannel.connection.AbstractMCConnection.4
                 private static transient /* synthetic */ IpChange $ipChange;
 
                 @Override // io.reactivex.functions.Predicate

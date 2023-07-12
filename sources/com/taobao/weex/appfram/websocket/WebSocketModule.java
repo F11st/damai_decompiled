@@ -17,20 +17,19 @@ public class WebSocketModule extends WXSDKEngine.DestroyableModule {
     private static final String KEY_REASON = "reason";
     private static final String KEY_WAS_CLEAN = "wasClean";
     private static final String TAG = "WebSocketModule";
-    private C6966a eventListener;
+    private a eventListener;
     private IWebSocketAdapter webSocketAdapter;
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.appfram.websocket.WebSocketModule$a */
     /* loaded from: classes11.dex */
-    public class C6966a implements IWebSocketAdapter.EventListener {
+    public class a implements IWebSocketAdapter.EventListener {
         private JSCallback a;
         private JSCallback b;
         private JSCallback c;
         private JSCallback d;
 
-        private C6966a(WebSocketModule webSocketModule) {
+        private a(WebSocketModule webSocketModule) {
         }
 
         @Override // com.taobao.weex.appfram.websocket.IWebSocketAdapter.EventListener
@@ -77,9 +76,9 @@ public class WebSocketModule extends WXSDKEngine.DestroyableModule {
 
     private boolean reportErrorIfNoAdapter() {
         if (this.webSocketAdapter == null) {
-            C6966a c6966a = this.eventListener;
-            if (c6966a != null) {
-                c6966a.onError("No implementation found for IWebSocketAdapter");
+            a aVar = this.eventListener;
+            if (aVar != null) {
+                aVar.onError("No implementation found for IWebSocketAdapter");
             }
             WXLogUtils.e(TAG, "No implementation found for IWebSocketAdapter");
             return true;
@@ -99,9 +98,9 @@ public class WebSocketModule extends WXSDKEngine.DestroyableModule {
         if (reportErrorIfNoAdapter()) {
             return;
         }
-        C6966a c6966a = new C6966a();
-        this.eventListener = c6966a;
-        this.webSocketAdapter.connect(str, str2, c6966a);
+        a aVar = new a();
+        this.eventListener = aVar;
+        this.webSocketAdapter.connect(str, str2, aVar);
     }
 
     @JSMethod(uiThread = false)
@@ -141,33 +140,33 @@ public class WebSocketModule extends WXSDKEngine.DestroyableModule {
 
     @JSMethod(uiThread = false)
     public void onclose(JSCallback jSCallback) {
-        C6966a c6966a = this.eventListener;
-        if (c6966a != null) {
-            c6966a.b = jSCallback;
+        a aVar = this.eventListener;
+        if (aVar != null) {
+            aVar.b = jSCallback;
         }
     }
 
     @JSMethod(uiThread = false)
     public void onerror(JSCallback jSCallback) {
-        C6966a c6966a = this.eventListener;
-        if (c6966a != null) {
-            c6966a.c = jSCallback;
+        a aVar = this.eventListener;
+        if (aVar != null) {
+            aVar.c = jSCallback;
         }
     }
 
     @JSMethod(uiThread = false)
     public void onmessage(JSCallback jSCallback) {
-        C6966a c6966a = this.eventListener;
-        if (c6966a != null) {
-            c6966a.d = jSCallback;
+        a aVar = this.eventListener;
+        if (aVar != null) {
+            aVar.d = jSCallback;
         }
     }
 
     @JSMethod(uiThread = false)
     public void onopen(JSCallback jSCallback) {
-        C6966a c6966a = this.eventListener;
-        if (c6966a != null) {
-            c6966a.a = jSCallback;
+        a aVar = this.eventListener;
+        if (aVar != null) {
+            aVar.a = jSCallback;
         }
     }
 

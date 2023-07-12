@@ -8,9 +8,6 @@ import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8214m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -38,13 +35,13 @@ public final class kk {
         b41.i(arrayList, "<this>");
         int size = arrayList.size();
         if (size == 0) {
-            g = C8214m.g();
+            g = kotlin.collections.m.g();
             return g;
         } else if (size != 1) {
             arrayList.trimToSize();
             return arrayList;
         } else {
-            e = C8213l.e(C8212k.P(arrayList));
+            e = kotlin.collections.l.e(kotlin.collections.k.P(arrayList));
             return e;
         }
     }

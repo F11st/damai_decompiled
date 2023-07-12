@@ -16,7 +16,7 @@ import com.huawei.hms.api.ConnectionResult;
 import com.huawei.hms.api.FailedBinderCallBack;
 import com.huawei.hms.api.HuaweiApiAvailability;
 import com.huawei.hms.api.IPCTransport;
-import com.huawei.hms.core.aidl.InterfaceC5551d;
+import com.huawei.hms.core.aidl.d;
 import com.huawei.hms.support.api.client.AidlApiClient;
 import com.huawei.hms.support.api.client.SubAppInfo;
 import com.huawei.hms.support.log.HMSLog;
@@ -42,7 +42,7 @@ public abstract class BaseHmsClient implements AidlApiClient {
     private final ClientSettings mClientSettings;
     private Handler mConnectTimeoutHandler = null;
     private final Context mContext;
-    private volatile InterfaceC5551d mService;
+    private volatile d mService;
     protected String sessionId;
     private static final Object LOCK_CONNECT_TIMEOUT_HANDLER = new Object();
     private static final AtomicInteger CONN_STATUS = new AtomicInteger(1);
@@ -318,7 +318,7 @@ public abstract class BaseHmsClient implements AidlApiClient {
     }
 
     public void connectedInternal(IBinder iBinder) {
-        this.mService = InterfaceC5551d.AbstractBinderC5552a.a(iBinder);
+        this.mService = d.a.a(iBinder);
         if (this.mService == null) {
             HMSLog.e(TAG, "mService is null, try to unBind.");
             tryUnBind();
@@ -392,7 +392,7 @@ public abstract class BaseHmsClient implements AidlApiClient {
     }
 
     @Override // com.huawei.hms.support.api.client.AidlApiClient
-    public InterfaceC5551d getService() {
+    public d getService() {
         return this.mService;
     }
 
@@ -440,8 +440,8 @@ public abstract class BaseHmsClient implements AidlApiClient {
         }
     }
 
-    public void setService(InterfaceC5551d interfaceC5551d) {
-        this.mService = interfaceC5551d;
+    public void setService(d dVar) {
+        this.mService = dVar;
     }
 
     public void connect(int i, boolean z) {

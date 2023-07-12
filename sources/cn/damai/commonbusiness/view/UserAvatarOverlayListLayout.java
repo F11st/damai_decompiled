@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
@@ -48,14 +47,13 @@ public class UserAvatarOverlayListLayout extends ViewGroup {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.view.UserAvatarOverlayListLayout$a */
     /* loaded from: classes.dex */
-    public class C0959a implements ValueAnimator.AnimatorUpdateListener {
+    public class a implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
         final /* synthetic */ View b;
 
-        C0959a(ImageView imageView, View view) {
+        a(ImageView imageView, View view) {
             this.a = imageView;
             this.b = view;
         }
@@ -79,12 +77,11 @@ public class UserAvatarOverlayListLayout extends ViewGroup {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.view.UserAvatarOverlayListLayout$b */
     /* loaded from: classes.dex */
-    public class C0960b extends AnimatorListenerAdapter {
+    public class b extends AnimatorListenerAdapter {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0960b() {
+        b() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -117,13 +114,12 @@ public class UserAvatarOverlayListLayout extends ViewGroup {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.view.UserAvatarOverlayListLayout$c */
     /* loaded from: classes.dex */
-    public class C0961c implements ValueAnimator.AnimatorUpdateListener {
+    public class c implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
 
-        C0961c(View view) {
+        c(View view) {
             this.a = view;
         }
 
@@ -141,13 +137,12 @@ public class UserAvatarOverlayListLayout extends ViewGroup {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.view.UserAvatarOverlayListLayout$d */
     /* loaded from: classes.dex */
-    public class C0962d extends AnimatorListenerAdapter {
+    public class d extends AnimatorListenerAdapter {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        C0962d(int i) {
+        d(int i) {
             this.a = i;
         }
 
@@ -208,9 +203,9 @@ public class UserAvatarOverlayListLayout extends ViewGroup {
                 inflate.getLayoutParams().height = this.imageSize + t60.a(this.mContext, 2.0f);
                 inflate.getLayoutParams().width = this.imageSize + t60.a(this.mContext, 2.0f);
             }
-            DMImageCreator c = C0504a.b().h(this.mContext).c(this.mAllUris.get(i));
+            DMImageCreator c2 = cn.damai.common.image.a.b().h(this.mContext).c(this.mAllUris.get(i));
             int i3 = R$drawable.uikit_user_default_icon;
-            c.i(i3).c(i3).k(new yq()).g(imageView);
+            c2.i(i3).c(i3).k(new yq()).g(imageView);
             addView(inflate);
         }
     }
@@ -348,8 +343,8 @@ public class UserAvatarOverlayListLayout extends ViewGroup {
             ValueAnimator ofInt = ValueAnimator.ofInt((int) (measuredWidth * this.mImageOffset), 0);
             this.mAnimator = ofInt;
             ofInt.setDuration(1000L);
-            this.mAnimator.addUpdateListener(new C0961c(childAt));
-            this.mAnimator.addListener(new C0962d(childCount));
+            this.mAnimator.addUpdateListener(new c(childAt));
+            this.mAnimator.addListener(new d(childCount));
             this.mAnimator.start();
         }
     }
@@ -412,16 +407,16 @@ public class UserAvatarOverlayListLayout extends ViewGroup {
                 inflate.getLayoutParams().height = this.imageSize + t60.a(this.mContext, 2.0f);
                 inflate.getLayoutParams().width = this.imageSize + t60.a(this.mContext, 2.0f);
             }
-            DMImageCreator c = C0504a.b().h(this.mContext).c(str);
+            DMImageCreator c2 = cn.damai.common.image.a.b().h(this.mContext).c(str);
             int i2 = R$drawable.uikit_user_default_icon;
-            c.i(i2).c(i2).k(new yq()).g(imageView);
+            c2.i(i2).c(i2).k(new yq()).g(imageView);
             addView(inflate);
             View childAt = getChildAt(0);
             ValueAnimator ofInt = ValueAnimator.ofInt(0, (int) (childAt.getMeasuredWidth() * (1.0f - this.mImageOffset)));
             this.mAnimator = ofInt;
             ofInt.setDuration(1000L);
-            this.mAnimator.addUpdateListener(new C0959a(imageView, childAt));
-            this.mAnimator.addListener(new C0960b());
+            this.mAnimator.addUpdateListener(new a(imageView, childAt));
+            this.mAnimator.addListener(new b());
             this.mAnimator.start();
         }
     }

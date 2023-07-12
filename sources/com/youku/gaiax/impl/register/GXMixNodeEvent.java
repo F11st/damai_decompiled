@@ -20,13 +20,13 @@ import tb.vq0;
 /* loaded from: classes2.dex */
 public final class GXMixNodeEvent implements GXINodeEvent {
     @Nullable
-    private GXTemplateEngine.C3342e clickEventByDataBinding;
+    private GXTemplateEngine.e clickEventByDataBinding;
     @Nullable
     private GXJSGesture clickEventByJS;
     @Nullable
     private os0 gxTemplateContext;
     @Nullable
-    private GXTemplateEngine.C3342e longClickEventByDataBinding;
+    private GXTemplateEngine.e longClickEventByDataBinding;
     @Nullable
     private GXJSGesture longClickEventByJS;
     @Nullable
@@ -37,7 +37,7 @@ public final class GXMixNodeEvent implements GXINodeEvent {
     /* compiled from: Taobao */
     @Metadata(bv = {1, 0, 3}, d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\b\u0006\n\u0002\u0010\u000b\n\u0002\b\u0006\n\u0002\u0010\t\n\u0002\b\t\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0017\u0010\u0018R\"\u0010\u0003\u001a\u00020\u00028\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b\u0003\u0010\u0004\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR\"\u0010\n\u001a\u00020\t8\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b\n\u0010\u000b\u001a\u0004\b\f\u0010\r\"\u0004\b\u000e\u0010\u000fR\"\u0010\u0011\u001a\u00020\u00108\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b\u0011\u0010\u0012\u001a\u0004\b\u0013\u0010\u0014\"\u0004\b\u0015\u0010\u0016¨\u0006\u0019"}, d2 = {"Lcom/youku/gaiax/impl/register/GXMixNodeEvent$GXJSGesture;", "Lcom/alibaba/gaiax/GXTemplateEngine$e;", "", "jsOptionLevel", "I", "getJsOptionLevel", "()I", "setJsOptionLevel", "(I)V", "", "jsOptionCover", "Z", "getJsOptionCover", "()Z", "setJsOptionCover", "(Z)V", "", "jsComponentId", "J", "getJsComponentId", "()J", "setJsComponentId", "(J)V", "<init>", "()V", "GaiaX-Android"}, k = 1, mv = {1, 5, 1})
     /* loaded from: classes2.dex */
-    public static final class GXJSGesture extends GXTemplateEngine.C3342e {
+    public static final class GXJSGesture extends GXTemplateEngine.e {
         private long jsComponentId = -1;
         private boolean jsOptionCover;
         private int jsOptionLevel;
@@ -70,72 +70,72 @@ public final class GXMixNodeEvent implements GXINodeEvent {
     /* JADX INFO: Access modifiers changed from: private */
     public final void dispatcherClick() {
         os0 os0Var;
-        GXTemplateEngine.C3346h p;
+        GXTemplateEngine.h p;
         GXTemplateEngine.GXIEventListener c;
         os0 os0Var2;
-        GXTemplateEngine.C3346h p2;
+        GXTemplateEngine.h p2;
         GXTemplateEngine.GXIEventListener c2;
         os0 os0Var3;
-        GXTemplateEngine.C3346h p3;
+        GXTemplateEngine.h p3;
         GXTemplateEngine.GXIEventListener c3;
         GXJSGesture gXJSGesture = this.clickEventByJS;
-        GXTemplateEngine.C3342e c3342e = this.clickEventByDataBinding;
+        GXTemplateEngine.e eVar = this.clickEventByDataBinding;
         if (gXJSGesture == null) {
-            if (c3342e == null || (os0Var = this.gxTemplateContext) == null || (p = os0Var.p()) == null || (c = p.c()) == null) {
+            if (eVar == null || (os0Var = this.gxTemplateContext) == null || (p = os0Var.p()) == null || (c = p.c()) == null) {
                 return;
             }
-            c.onGestureEvent(c3342e);
+            c.onGestureEvent(eVar);
         } else if (gXJSGesture.getJsOptionCover()) {
             GaiaXJSDelegate.INSTANCE.dispatcherEvent(EventParams.Companion.create(gXJSGesture));
         } else if (gXJSGesture.getJsOptionLevel() == 0) {
-            if (c3342e != null && (os0Var3 = this.gxTemplateContext) != null && (p3 = os0Var3.p()) != null && (c3 = p3.c()) != null) {
-                c3.onGestureEvent(c3342e);
+            if (eVar != null && (os0Var3 = this.gxTemplateContext) != null && (p3 = os0Var3.p()) != null && (c3 = p3.c()) != null) {
+                c3.onGestureEvent(eVar);
             }
             GaiaXJSDelegate.INSTANCE.dispatcherEvent(EventParams.Companion.create(gXJSGesture));
         } else {
             GaiaXJSDelegate.INSTANCE.dispatcherEvent(EventParams.Companion.create(gXJSGesture));
-            if (c3342e == null || (os0Var2 = this.gxTemplateContext) == null || (p2 = os0Var2.p()) == null || (c2 = p2.c()) == null) {
+            if (eVar == null || (os0Var2 = this.gxTemplateContext) == null || (p2 = os0Var2.p()) == null || (c2 = p2.c()) == null) {
                 return;
             }
-            c2.onGestureEvent(c3342e);
+            c2.onGestureEvent(eVar);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public final void dispatcherLongClick() {
         os0 os0Var;
-        GXTemplateEngine.C3346h p;
+        GXTemplateEngine.h p;
         GXTemplateEngine.GXIEventListener c;
         os0 os0Var2;
-        GXTemplateEngine.C3346h p2;
+        GXTemplateEngine.h p2;
         GXTemplateEngine.GXIEventListener c2;
         os0 os0Var3;
-        GXTemplateEngine.C3346h p3;
+        GXTemplateEngine.h p3;
         GXTemplateEngine.GXIEventListener c3;
         GXJSGesture gXJSGesture = this.longClickEventByJS;
-        GXTemplateEngine.C3342e c3342e = this.longClickEventByDataBinding;
+        GXTemplateEngine.e eVar = this.longClickEventByDataBinding;
         if (gXJSGesture == null) {
-            if (c3342e == null || (os0Var = this.gxTemplateContext) == null || (p = os0Var.p()) == null || (c = p.c()) == null) {
+            if (eVar == null || (os0Var = this.gxTemplateContext) == null || (p = os0Var.p()) == null || (c = p.c()) == null) {
                 return;
             }
-            c.onGestureEvent(c3342e);
+            c.onGestureEvent(eVar);
         } else if (gXJSGesture.getJsOptionCover()) {
             GaiaXJSDelegate.INSTANCE.dispatcherEvent(EventParams.Companion.create(gXJSGesture));
         } else if (gXJSGesture.getJsOptionLevel() == 0) {
-            if (c3342e != null && (os0Var3 = this.gxTemplateContext) != null && (p3 = os0Var3.p()) != null && (c3 = p3.c()) != null) {
-                c3.onGestureEvent(c3342e);
+            if (eVar != null && (os0Var3 = this.gxTemplateContext) != null && (p3 = os0Var3.p()) != null && (c3 = p3.c()) != null) {
+                c3.onGestureEvent(eVar);
             }
             GaiaXJSDelegate.INSTANCE.dispatcherEvent(EventParams.Companion.create(gXJSGesture));
         } else {
             GaiaXJSDelegate.INSTANCE.dispatcherEvent(EventParams.Companion.create(gXJSGesture));
-            if (c3342e == null || (os0Var2 = this.gxTemplateContext) == null || (p2 = os0Var2.p()) == null || (c2 = p2.c()) == null) {
+            if (eVar == null || (os0Var2 = this.gxTemplateContext) == null || (p2 = os0Var2.p()) == null || (c2 = p2.c()) == null) {
                 return;
             }
-            c2.onGestureEvent(c3342e);
+            c2.onGestureEvent(eVar);
         }
     }
 
-    private final void initViewClickEventDispatcher(final GXTemplateEngine.C3342e c3342e) {
+    private final void initViewClickEventDispatcher(final GXTemplateEngine.e eVar) {
         if (this.onClickListener == null) {
             this.onClickListener = new View.OnClickListener() { // from class: com.youku.gaiax.impl.register.GXMixNodeEvent$initViewClickEventDispatcher$1
                 @Override // android.view.View.OnClickListener
@@ -145,14 +145,14 @@ public final class GXMixNodeEvent implements GXINodeEvent {
             };
         }
         if (GaiaXUiExecutor.INSTANCE.isMainThread()) {
-            View view = c3342e.getView();
+            View view = eVar.getView();
             if (view == null) {
                 return;
             }
             view.setOnClickListener(this.onClickListener);
             return;
         }
-        View view2 = c3342e.getView();
+        View view2 = eVar.getView();
         if (view2 == null) {
             return;
         }
@@ -160,7 +160,7 @@ public final class GXMixNodeEvent implements GXINodeEvent {
             @Override // java.lang.Runnable
             public final void run() {
                 View.OnClickListener onClickListener;
-                View view3 = GXTemplateEngine.C3342e.this.getView();
+                View view3 = GXTemplateEngine.e.this.getView();
                 if (view3 == null) {
                     return;
                 }
@@ -170,13 +170,13 @@ public final class GXMixNodeEvent implements GXINodeEvent {
         });
     }
 
-    private final void initViewEventListener(GXTemplateEngine.C3342e c3342e) {
-        String gestureType = c3342e.getGestureType();
+    private final void initViewEventListener(GXTemplateEngine.e eVar) {
+        String gestureType = eVar.getGestureType();
         int hashCode = gestureType.hashCode();
         if (hashCode != 114595) {
             if (hashCode != 94750088) {
                 if (hashCode == 143756103 && gestureType.equals("longpress")) {
-                    initViewLongClickEventDispatcher(c3342e);
+                    initViewLongClickEventDispatcher(eVar);
                     return;
                 }
                 return;
@@ -186,10 +186,10 @@ public final class GXMixNodeEvent implements GXINodeEvent {
         } else if (!gestureType.equals(EventParams.CLICK_TYPE_TAP)) {
             return;
         }
-        initViewClickEventDispatcher(c3342e);
+        initViewClickEventDispatcher(eVar);
     }
 
-    private final void initViewLongClickEventDispatcher(final GXTemplateEngine.C3342e c3342e) {
+    private final void initViewLongClickEventDispatcher(final GXTemplateEngine.e eVar) {
         if (this.onLongClickListener == null) {
             this.onLongClickListener = new View.OnLongClickListener() { // from class: com.youku.gaiax.impl.register.GXMixNodeEvent$initViewLongClickEventDispatcher$1
                 @Override // android.view.View.OnLongClickListener
@@ -200,14 +200,14 @@ public final class GXMixNodeEvent implements GXINodeEvent {
             };
         }
         if (GaiaXUiExecutor.INSTANCE.isMainThread()) {
-            View view = c3342e.getView();
+            View view = eVar.getView();
             if (view == null) {
                 return;
             }
             view.setOnLongClickListener(this.onLongClickListener);
             return;
         }
-        View view2 = c3342e.getView();
+        View view2 = eVar.getView();
         if (view2 == null) {
             return;
         }
@@ -215,7 +215,7 @@ public final class GXMixNodeEvent implements GXINodeEvent {
             @Override // java.lang.Runnable
             public final void run() {
                 View.OnLongClickListener onLongClickListener;
-                View view3 = GXTemplateEngine.C3342e.this.getView();
+                View view3 = GXTemplateEngine.e.this.getView();
                 if (view3 == null) {
                     return;
                 }
@@ -244,19 +244,19 @@ public final class GXMixNodeEvent implements GXINodeEvent {
         if (!jSONObject2.containsKey("type") || !jSONObject2.containsKey("event") || (str = jSONObject2.getString("type")) == null) {
             str = EventParams.CLICK_TYPE_TAP;
         }
-        GXTemplateEngine.C3342e c3342e = new GXTemplateEngine.C3342e();
-        c3342e.setGestureType(str);
-        c3342e.setView(qr0Var.q());
-        c3342e.setEventParams(jSONObject2);
-        c3342e.setNodeId(qr0Var.o().i().d());
-        c3342e.setTemplateItem(os0Var.r());
-        c3342e.setIndex(-1);
+        GXTemplateEngine.e eVar = new GXTemplateEngine.e();
+        eVar.setGestureType(str);
+        eVar.setView(qr0Var.q());
+        eVar.setEventParams(jSONObject2);
+        eVar.setNodeId(qr0Var.o().i().d());
+        eVar.setTemplateItem(os0Var.r());
+        eVar.setIndex(-1);
         if (b41.d(str, EventParams.CLICK_TYPE_TAP)) {
-            this.clickEventByDataBinding = c3342e;
+            this.clickEventByDataBinding = eVar;
         } else if (b41.d(str, "longpress")) {
-            this.longClickEventByDataBinding = c3342e;
+            this.longClickEventByDataBinding = eVar;
         }
-        initViewEventListener(c3342e);
+        initViewEventListener(eVar);
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:14:0x0071, code lost:

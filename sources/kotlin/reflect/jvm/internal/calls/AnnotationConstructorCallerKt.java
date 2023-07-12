@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.calls;
 
-import com.alipay.sdk.m.n.C4250a;
+import com.alipay.sdk.m.n.a;
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -11,12 +11,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
-import kotlin.C8177b;
 import kotlin.Lazy;
+import kotlin.b;
 import kotlin.collections.ArraysKt___ArraysKt;
-import kotlin.collections.C8202e;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.e;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.KClass;
@@ -33,9 +33,8 @@ import tb.s61;
 public final class AnnotationConstructorCallerKt {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.calls.AnnotationConstructorCallerKt$a */
     /* loaded from: classes3.dex */
-    public static final class C8264a implements InvocationHandler {
+    public static final class a implements InvocationHandler {
         final /* synthetic */ Class a;
         final /* synthetic */ Lazy b;
         final /* synthetic */ KProperty c;
@@ -44,7 +43,7 @@ public final class AnnotationConstructorCallerKt {
         final /* synthetic */ AnnotationConstructorCallerKt$createAnnotationInstance$2 f;
         final /* synthetic */ Map g;
 
-        C8264a(Class cls, Lazy lazy, KProperty kProperty, Lazy lazy2, KProperty kProperty2, AnnotationConstructorCallerKt$createAnnotationInstance$2 annotationConstructorCallerKt$createAnnotationInstance$2, Map map) {
+        a(Class cls, Lazy lazy, KProperty kProperty, Lazy lazy2, KProperty kProperty2, AnnotationConstructorCallerKt$createAnnotationInstance$2 annotationConstructorCallerKt$createAnnotationInstance$2, Map map) {
             this.a = cls;
             this.b = lazy;
             this.c = kProperty;
@@ -74,7 +73,7 @@ public final class AnnotationConstructorCallerKt {
                 }
             }
             if (b41.d(name, "equals") && objArr != null && objArr.length == 1) {
-                return Boolean.valueOf(this.f.invoke2(C8202e.L(objArr)));
+                return Boolean.valueOf(this.f.invoke2(e.L(objArr)));
             }
             if (this.g.containsKey(name)) {
                 return this.g.get(name);
@@ -101,7 +100,7 @@ public final class AnnotationConstructorCallerKt {
         b41.i(map, "values");
         b41.i(list, "methods");
         AnnotationConstructorCallerKt$createAnnotationInstance$2 annotationConstructorCallerKt$createAnnotationInstance$2 = new AnnotationConstructorCallerKt$createAnnotationInstance$2(cls, list, map);
-        b = C8177b.b(new Function0<Integer>() { // from class: kotlin.reflect.jvm.internal.calls.AnnotationConstructorCallerKt$createAnnotationInstance$hashCode$2
+        b = b.b(new Function0<Integer>() { // from class: kotlin.reflect.jvm.internal.calls.AnnotationConstructorCallerKt$createAnnotationInstance$hashCode$2
             /* JADX INFO: Access modifiers changed from: package-private */
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             {
@@ -144,7 +143,7 @@ public final class AnnotationConstructorCallerKt {
                 return Integer.valueOf(invoke2());
             }
         });
-        b2 = C8177b.b(new Function0<String>() { // from class: kotlin.reflect.jvm.internal.calls.AnnotationConstructorCallerKt$createAnnotationInstance$toString$2
+        b2 = b.b(new Function0<String>() { // from class: kotlin.reflect.jvm.internal.calls.AnnotationConstructorCallerKt$createAnnotationInstance$toString$2
             /* JADX INFO: Access modifiers changed from: package-private */
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             {
@@ -184,7 +183,7 @@ public final class AnnotationConstructorCallerKt {
                         } else {
                             arrays = value instanceof Object[] ? Arrays.toString((Object[]) value) : value.toString();
                         }
-                        return key + C4250a.h + arrays;
+                        return key + a.h + arrays;
                     }
 
                     @Override // kotlin.jvm.functions.Function1
@@ -197,7 +196,7 @@ public final class AnnotationConstructorCallerKt {
                 return sb2;
             }
         });
-        T t = (T) Proxy.newProxyInstance(cls.getClassLoader(), new Class[]{cls}, new C8264a(cls, b2, null, b, null, annotationConstructorCallerKt$createAnnotationInstance$2, map));
+        T t = (T) Proxy.newProxyInstance(cls.getClassLoader(), new Class[]{cls}, new a(cls, b2, null, b, null, annotationConstructorCallerKt$createAnnotationInstance$2, map));
         Objects.requireNonNull(t, "null cannot be cast to non-null type T");
         return t;
     }
@@ -206,7 +205,7 @@ public final class AnnotationConstructorCallerKt {
         int q;
         if ((i & 4) != 0) {
             Set<String> keySet = map.keySet();
-            q = C8215n.q(keySet, 10);
+            q = n.q(keySet, 10);
             ArrayList arrayList = new ArrayList(q);
             for (String str : keySet) {
                 arrayList.add(cls.getDeclaredMethod(str, new Class[0]));

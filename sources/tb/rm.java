@@ -7,7 +7,7 @@ import com.android.alibaba.ip.runtime.IpChange;
 /* loaded from: classes4.dex */
 public class rm {
     private static transient /* synthetic */ IpChange $ipChange = null;
-    public static final rm DEFAULT = new C9657b().e(3000).d();
+    public static final rm DEFAULT = new b().e(3000).d();
     public static final int DURATION_INFINITE = -1;
     public static final int DURATION_LONG = 5000;
     public static final int DURATION_SHORT = 3000;
@@ -16,9 +16,8 @@ public class rm {
     final int c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.rm$b */
     /* loaded from: classes4.dex */
-    public static class C9657b {
+    public static class b {
         private static transient /* synthetic */ IpChange $ipChange;
         private int a = 3000;
         private int b = 0;
@@ -29,10 +28,10 @@ public class rm {
             return AndroidInstantRuntime.support(ipChange, "497408257") ? (rm) ipChange.ipc$dispatch("497408257", new Object[]{this}) : new rm(this);
         }
 
-        public C9657b e(int i) {
+        public b e(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1823940573")) {
-                return (C9657b) ipChange.ipc$dispatch("1823940573", new Object[]{this, Integer.valueOf(i)});
+                return (b) ipChange.ipc$dispatch("1823940573", new Object[]{this, Integer.valueOf(i)});
             }
             this.a = i;
             return this;
@@ -47,9 +46,9 @@ public class rm {
         return "Configuration{durationInMilliseconds=" + this.a + ", inAnimationResId=" + this.b + ", outAnimationResId=" + this.c + '}';
     }
 
-    private rm(C9657b c9657b) {
-        this.a = c9657b.a;
-        this.b = c9657b.b;
-        this.c = c9657b.c;
+    private rm(b bVar) {
+        this.a = bVar.a;
+        this.b = bVar.b;
+        this.c = bVar.c;
     }
 }

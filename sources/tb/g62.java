@@ -9,14 +9,13 @@ public class g62 {
     private boolean b = true;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.g62$a */
     /* loaded from: classes.dex */
-    private static class C9157a {
+    private static class a {
         static g62 a = new g62();
     }
 
     public static g62 a() {
-        return C9157a.a;
+        return a.a;
     }
 
     public String b(String str) {

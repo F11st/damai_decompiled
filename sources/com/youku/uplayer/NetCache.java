@@ -1,6 +1,6 @@
 package com.youku.uplayer;
 
-import com.youku.player.util.C8059a;
+import com.youku.player.util.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -20,7 +20,7 @@ public class NetCache {
     }
 
     private static String getIpByHttpDns(String str) {
-        return C8059a.a(str);
+        return a.a(str);
     }
 
     public static int memory_count() {

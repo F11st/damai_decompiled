@@ -4,9 +4,8 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
-import com.tencent.mm.opensdk.channel.a.C7054a;
-import com.tencent.mm.opensdk.utils.C7064a;
 import com.tencent.mm.opensdk.utils.Log;
+import com.tencent.mm.opensdk.utils.a;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -61,7 +60,7 @@ class MMSharedPreferences implements SharedPreferences {
                 r2 = 0
                 if (r1 == 0) goto L14
                 android.content.ContentResolver r1 = r10.cr
-                android.net.Uri r3 = com.tencent.mm.opensdk.utils.C7064a.a
+                android.net.Uri r3 = com.tencent.mm.opensdk.utils.a.a
                 r4 = 0
                 r1.delete(r3, r4, r4)
                 r10.clear = r2
@@ -76,7 +75,7 @@ class MMSharedPreferences implements SharedPreferences {
                 java.lang.Object r3 = r1.next()
                 java.lang.String r3 = (java.lang.String) r3
                 android.content.ContentResolver r6 = r10.cr
-                android.net.Uri r7 = com.tencent.mm.opensdk.utils.C7064a.a
+                android.net.Uri r7 = com.tencent.mm.opensdk.utils.a.a
                 java.lang.String[] r5 = new java.lang.String[r5]
                 r5[r2] = r3
                 r6.delete(r7, r4, r5)
@@ -153,7 +152,7 @@ class MMSharedPreferences implements SharedPreferences {
             Laf:
                 if (r6 == 0) goto L3f
                 android.content.ContentResolver r6 = r10.cr
-                android.net.Uri r7 = com.tencent.mm.opensdk.utils.C7064a.a
+                android.net.Uri r7 = com.tencent.mm.opensdk.utils.a.a
                 java.lang.String[] r8 = new java.lang.String[r5]
                 java.lang.Object r3 = r3.getKey()
                 java.lang.String r3 = (java.lang.String) r3
@@ -219,11 +218,11 @@ class MMSharedPreferences implements SharedPreferences {
 
     private Object getValue(String str) {
         try {
-            Cursor query = this.cr.query(C7064a.a, this.columns, "key = ?", new String[]{str}, null);
+            Cursor query = this.cr.query(a.a, this.columns, "key = ?", new String[]{str}, null);
             if (query == null) {
                 return null;
             }
-            Object a = query.moveToFirst() ? C7054a.a(query.getInt(query.getColumnIndex("type")), query.getString(query.getColumnIndex("value"))) : null;
+            Object a = query.moveToFirst() ? com.tencent.mm.opensdk.channel.a.a.a(query.getInt(query.getColumnIndex("type")), query.getString(query.getColumnIndex("value"))) : null;
             query.close();
             return a;
         } catch (Exception e) {
@@ -248,7 +247,7 @@ class MMSharedPreferences implements SharedPreferences {
     @Override // android.content.SharedPreferences
     public Map<String, ?> getAll() {
         try {
-            Cursor query = this.cr.query(C7064a.a, this.columns, null, null, null);
+            Cursor query = this.cr.query(a.a, this.columns, null, null, null);
             if (query == null) {
                 return null;
             }
@@ -256,7 +255,7 @@ class MMSharedPreferences implements SharedPreferences {
             int columnIndex2 = query.getColumnIndex("type");
             int columnIndex3 = query.getColumnIndex("value");
             while (query.moveToNext()) {
-                this.values.put(query.getString(columnIndex), C7054a.a(query.getInt(columnIndex2), query.getString(columnIndex3)));
+                this.values.put(query.getString(columnIndex), com.tencent.mm.opensdk.channel.a.a.a(query.getInt(columnIndex2), query.getString(columnIndex3)));
             }
             query.close();
             return this.values;

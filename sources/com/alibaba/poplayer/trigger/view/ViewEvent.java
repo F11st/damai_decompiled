@@ -18,7 +18,7 @@ public class ViewEvent extends Event {
         int indexOf = viewEvent.uri.indexOf(63);
         boolean z = -1 == indexOf;
         String substring = z ? viewEvent.uri : viewEvent.uri.substring(0, indexOf);
-        int i = viewEvent.uri.startsWith(C3699d.VIEW_SCHEME) ? 1 : 2;
+        int i = viewEvent.uri.startsWith(d.VIEW_SCHEME) ? 1 : 2;
         boolean z2 = i == viewEvent.source;
         if (!z || !z2) {
             if (z2) {

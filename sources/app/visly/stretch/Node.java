@@ -22,7 +22,7 @@ import tb.wt2;
 /* loaded from: classes.dex */
 public class Node {
     @NotNull
-    public static final C0255a Companion = new C0255a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private List<Node> children;
     @NotNull
@@ -34,13 +34,12 @@ public class Node {
     private Style style;
 
     /* compiled from: Taobao */
-    /* renamed from: app.visly.stretch.Node$a */
     /* loaded from: classes.dex */
-    public static final class C0255a {
-        private C0255a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C0255a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -146,12 +145,12 @@ public class Node {
         b41.i(ld2Var, "size");
         synchronized (Stretch.class) {
             if (this.rustptr != -1) {
-                long a = Stretch.Companion.a();
+                long a2 = Stretch.Companion.a();
                 long j = this.rustptr;
                 Float b = ld2Var.b();
                 float floatValue = b == null ? Float.NaN : b.floatValue() - 0.01f;
-                Float a2 = ld2Var.a();
-                second = l81.Companion.a(nComputeLayout(a, j, floatValue, a2 == null ? Float.NaN : a2.floatValue() - 0.01f), 0).getSecond();
+                Float a3 = ld2Var.a();
+                second = l81.Companion.a(nComputeLayout(a2, j, floatValue, a3 == null ? Float.NaN : a3.floatValue() - 0.01f), 0).getSecond();
             } else {
                 throw new IllegalArgumentException("rustptr is null");
             }
@@ -213,14 +212,14 @@ public class Node {
         b41.i(list, RichTextNode.CHILDREN);
         synchronized (Stretch.class) {
             this.id = str;
-            long a = Stretch.Companion.a();
+            long a2 = Stretch.Companion.a();
             long rustptr = style.getRustptr();
             int size = list.size();
             long[] jArr = new long[size];
             for (int i = 0; i < size; i++) {
                 jArr[i] = list.get(i).rustptr;
             }
-            this.rustptr = nConstruct(a, rustptr, jArr);
+            this.rustptr = nConstruct(a2, rustptr, jArr);
             this.style = style;
             C0 = CollectionsKt___CollectionsKt.C0(list);
             this.children = C0;
@@ -235,14 +234,14 @@ public class Node {
         synchronized (Stretch.class) {
             ArrayList arrayList = new ArrayList();
             this.id = str;
-            long a = Stretch.Companion.a();
+            long a2 = Stretch.Companion.a();
             long rustptr = style.getRustptr();
             int size = arrayList.size();
             long[] jArr = new long[size];
             for (int i = 0; i < size; i++) {
                 jArr[i] = ((Node) arrayList.get(i)).rustptr;
             }
-            this.rustptr = nConstruct(a, rustptr, jArr);
+            this.rustptr = nConstruct(a2, rustptr, jArr);
             this.style = style;
             C0 = CollectionsKt___CollectionsKt.C0(arrayList);
             this.children = C0;

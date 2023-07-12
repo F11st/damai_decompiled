@@ -1,6 +1,5 @@
 package com.google.common.collect;
 
-import com.alipay.sdk.m.n.C4250a;
 import com.google.common.annotations.GwtCompatible;
 import com.google.common.annotations.GwtIncompatible;
 import com.google.common.base.Converter;
@@ -103,7 +102,7 @@ public final class Maps {
             }
         };
 
-        /* synthetic */ EntryFunction(C5051c c5051c) {
+        /* synthetic */ EntryFunction(c cVar) {
             this();
         }
     }
@@ -116,7 +115,7 @@ public final class Maps {
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
-    private static class UnmodifiableBiMap<K, V> extends AbstractC5202q<K, V> implements BiMap<K, V>, Serializable {
+    private static class UnmodifiableBiMap<K, V> extends com.google.common.collect.q<K, V> implements BiMap<K, V>, Serializable {
         private static final long serialVersionUID = 0;
         final BiMap<? extends K, ? extends V> delegate;
         @RetainedWith
@@ -149,12 +148,12 @@ public final class Maps {
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.google.common.collect.AbstractC5202q, com.google.common.collect.AbstractC5205t
+        @Override // com.google.common.collect.q, com.google.common.collect.t
         public Map<K, V> delegate() {
             return this.unmodifiableMap;
         }
 
-        @Override // com.google.common.collect.AbstractC5202q, java.util.Map
+        @Override // com.google.common.collect.q, java.util.Map
         public Set<V> values() {
             Set<V> set = this.values;
             if (set == null) {
@@ -170,7 +169,7 @@ public final class Maps {
     /* compiled from: Taobao */
     @GwtIncompatible
     /* loaded from: classes10.dex */
-    public static class UnmodifiableNavigableMap<K, V> extends AbstractC5208w<K, V> implements NavigableMap<K, V>, Serializable {
+    public static class UnmodifiableNavigableMap<K, V> extends w<K, V> implements NavigableMap<K, V>, Serializable {
         private final NavigableMap<K, ? extends V> delegate;
         @MonotonicNonNullDecl
         private transient UnmodifiableNavigableMap<K, V> descendingMap;
@@ -220,7 +219,7 @@ public final class Maps {
             return this.delegate.floorKey(k);
         }
 
-        @Override // com.google.common.collect.AbstractC5208w, java.util.SortedMap, java.util.NavigableMap
+        @Override // com.google.common.collect.w, java.util.SortedMap, java.util.NavigableMap
         public SortedMap<K, V> headMap(K k) {
             return headMap(k, false);
         }
@@ -235,7 +234,7 @@ public final class Maps {
             return this.delegate.higherKey(k);
         }
 
-        @Override // com.google.common.collect.AbstractC5202q, java.util.Map
+        @Override // com.google.common.collect.q, java.util.Map
         public Set<K> keySet() {
             return navigableKeySet();
         }
@@ -270,12 +269,12 @@ public final class Maps {
             throw new UnsupportedOperationException();
         }
 
-        @Override // com.google.common.collect.AbstractC5208w, java.util.SortedMap, java.util.NavigableMap
+        @Override // com.google.common.collect.w, java.util.SortedMap, java.util.NavigableMap
         public SortedMap<K, V> subMap(K k, K k2) {
             return subMap(k, true, k2, false);
         }
 
-        @Override // com.google.common.collect.AbstractC5208w, java.util.SortedMap, java.util.NavigableMap
+        @Override // com.google.common.collect.w, java.util.SortedMap, java.util.NavigableMap
         public SortedMap<K, V> tailMap(K k) {
             return tailMap(k, true);
         }
@@ -301,7 +300,7 @@ public final class Maps {
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.google.common.collect.AbstractC5208w, com.google.common.collect.AbstractC5202q, com.google.common.collect.AbstractC5205t
+        @Override // com.google.common.collect.w, com.google.common.collect.q, com.google.common.collect.t
         public SortedMap<K, V> delegate() {
             return Collections.unmodifiableSortedMap(this.delegate);
         }
@@ -310,24 +309,23 @@ public final class Maps {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* JADX INFO: Add missing generic type declarations: [K, V2] */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Maps$a */
     /* loaded from: classes10.dex */
-    public static class C5049a<K, V2> extends AbstractC5157b<K, V2> {
+    public static class a<K, V2> extends com.google.common.collect.b<K, V2> {
         final /* synthetic */ Map.Entry a;
         final /* synthetic */ EntryTransformer b;
 
-        C5049a(Map.Entry entry, EntryTransformer entryTransformer) {
+        a(Map.Entry entry, EntryTransformer entryTransformer) {
             this.a = entry;
             this.b = entryTransformer;
         }
 
-        @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+        @Override // com.google.common.collect.b, java.util.Map.Entry
         public K getKey() {
             return (K) this.a.getKey();
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+        @Override // com.google.common.collect.b, java.util.Map.Entry
         public V2 getValue() {
             return (V2) this.b.transformEntry(this.a.getKey(), this.a.getValue());
         }
@@ -336,12 +334,11 @@ public final class Maps {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* JADX INFO: Add missing generic type declarations: [K, V1, V2] */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Maps$b */
     /* loaded from: classes10.dex */
-    public static class C5050b<K, V1, V2> implements Function<Map.Entry<K, V1>, Map.Entry<K, V2>> {
+    public static class b<K, V1, V2> implements Function<Map.Entry<K, V1>, Map.Entry<K, V2>> {
         final /* synthetic */ EntryTransformer a;
 
-        C5050b(EntryTransformer entryTransformer) {
+        b(EntryTransformer entryTransformer) {
             this.a = entryTransformer;
         }
 
@@ -355,15 +352,14 @@ public final class Maps {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* JADX INFO: Add missing generic type declarations: [V, K] */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Maps$c */
     /* loaded from: classes10.dex */
-    public static class C5051c<K, V> extends AbstractC5190j0<Map.Entry<K, V>, K> {
-        C5051c(Iterator it) {
+    public static class c<K, V> extends j0<Map.Entry<K, V>, K> {
+        c(Iterator it) {
             super(it);
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.AbstractC5190j0
+        @Override // com.google.common.collect.j0
         /* renamed from: b */
         public K a(Map.Entry<K, V> entry) {
             return entry.getKey();
@@ -373,15 +369,14 @@ public final class Maps {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* JADX INFO: Add missing generic type declarations: [V, K] */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Maps$d */
     /* loaded from: classes10.dex */
-    public static class C5052d<K, V> extends AbstractC5190j0<Map.Entry<K, V>, V> {
-        C5052d(Iterator it) {
+    public static class d<K, V> extends j0<Map.Entry<K, V>, V> {
+        d(Iterator it) {
             super(it);
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.AbstractC5190j0
+        @Override // com.google.common.collect.j0
         /* renamed from: b */
         public V a(Map.Entry<K, V> entry) {
             return entry.getValue();
@@ -390,19 +385,18 @@ public final class Maps {
 
     /* JADX INFO: Add missing generic type declarations: [V, K] */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Maps$e */
     /* loaded from: classes10.dex */
-    static class C5053e<K, V> extends AbstractC5190j0<K, Map.Entry<K, V>> {
+    static class e<K, V> extends j0<K, Map.Entry<K, V>> {
         final /* synthetic */ Function b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        C5053e(Iterator it, Function function) {
+        e(Iterator it, Function function) {
             super(it);
             this.b = function;
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.AbstractC5190j0
+        @Override // com.google.common.collect.j0
         /* renamed from: b */
         public Map.Entry<K, V> a(K k) {
             return Maps.j(k, this.b.apply(k));
@@ -412,21 +406,20 @@ public final class Maps {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* JADX INFO: Add missing generic type declarations: [V, K] */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Maps$f */
     /* loaded from: classes10.dex */
-    public static class C5054f<K, V> extends AbstractC5157b<K, V> {
+    public static class f<K, V> extends com.google.common.collect.b<K, V> {
         final /* synthetic */ Map.Entry a;
 
-        C5054f(Map.Entry entry) {
+        f(Map.Entry entry) {
             this.a = entry;
         }
 
-        @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+        @Override // com.google.common.collect.b, java.util.Map.Entry
         public K getKey() {
             return (K) this.a.getKey();
         }
 
-        @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+        @Override // com.google.common.collect.b, java.util.Map.Entry
         public V getValue() {
             return (V) this.a.getValue();
         }
@@ -435,12 +428,11 @@ public final class Maps {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* JADX INFO: Add missing generic type declarations: [V, K] */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Maps$g */
     /* loaded from: classes10.dex */
-    public static class C5055g<K, V> extends yt2<Map.Entry<K, V>> {
+    public static class g<K, V> extends yt2<Map.Entry<K, V>> {
         final /* synthetic */ Iterator a;
 
-        C5055g(Iterator it) {
+        g(Iterator it) {
             this.a = it;
         }
 
@@ -459,12 +451,11 @@ public final class Maps {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* JADX INFO: Add missing generic type declarations: [K, V1, V2] */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Maps$h */
     /* loaded from: classes10.dex */
-    public static class C5056h<K, V1, V2> implements EntryTransformer<K, V1, V2> {
+    public static class h<K, V1, V2> implements EntryTransformer<K, V1, V2> {
         final /* synthetic */ Function a;
 
-        C5056h(Function function) {
+        h(Function function) {
             this.a = function;
         }
 
@@ -476,9 +467,8 @@ public final class Maps {
 
     /* compiled from: Taobao */
     @GwtIncompatible
-    /* renamed from: com.google.common.collect.Maps$i */
     /* loaded from: classes10.dex */
-    static abstract class AbstractC5057i<K, V> extends AbstractC5202q<K, V> implements NavigableMap<K, V> {
+    static abstract class i<K, V> extends com.google.common.collect.q<K, V> implements NavigableMap<K, V> {
         @MonotonicNonNullDecl
         private transient Comparator<? super K> a;
         @MonotonicNonNullDecl
@@ -488,20 +478,19 @@ public final class Maps {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.Maps$i$a */
         /* loaded from: classes10.dex */
-        public class C5058a extends AbstractC5059j<K, V> {
-            C5058a() {
+        public class a extends j<K, V> {
+            a() {
             }
 
-            @Override // com.google.common.collect.Maps.AbstractC5059j
+            @Override // com.google.common.collect.Maps.j
             Map<K, V> a() {
-                return AbstractC5057i.this;
+                return i.this;
             }
 
             @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
             public Iterator<Map.Entry<K, V>> iterator() {
-                return AbstractC5057i.this.b();
+                return i.this.b();
             }
         }
 
@@ -510,7 +499,7 @@ public final class Maps {
         }
 
         Set<Map.Entry<K, V>> a() {
-            return new C5058a();
+            return new a();
         }
 
         abstract Iterator<Map.Entry<K, V>> b();
@@ -552,13 +541,13 @@ public final class Maps {
             return c();
         }
 
-        @Override // com.google.common.collect.AbstractC5202q, java.util.Map
+        @Override // com.google.common.collect.q, java.util.Map
         public Set<Map.Entry<K, V>> entrySet() {
             Set<Map.Entry<K, V>> set = this.b;
             if (set == null) {
-                Set<Map.Entry<K, V>> a = a();
-                this.b = a;
-                return a;
+                Set<Map.Entry<K, V>> a2 = a();
+                this.b = a2;
+                return a2;
             }
             return set;
         }
@@ -598,7 +587,7 @@ public final class Maps {
             return c().lowerKey(k);
         }
 
-        @Override // com.google.common.collect.AbstractC5202q, java.util.Map
+        @Override // com.google.common.collect.q, java.util.Map
         public Set<K> keySet() {
             return navigableKeySet();
         }
@@ -627,9 +616,9 @@ public final class Maps {
         public NavigableSet<K> navigableKeySet() {
             NavigableSet<K> navigableSet = this.c;
             if (navigableSet == null) {
-                C5063m c5063m = new C5063m(this);
-                this.c = c5063m;
-                return c5063m;
+                m mVar = new m(this);
+                this.c = mVar;
+                return mVar;
             }
             return navigableSet;
         }
@@ -654,18 +643,18 @@ public final class Maps {
             return c().headMap(k, z).descendingMap();
         }
 
-        @Override // com.google.common.collect.AbstractC5205t
+        @Override // com.google.common.collect.t
         public String toString() {
             return standardToString();
         }
 
-        @Override // com.google.common.collect.AbstractC5202q, java.util.Map
+        @Override // com.google.common.collect.q, java.util.Map
         public Collection<V> values() {
-            return new C5069s(this);
+            return new s(this);
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.google.common.collect.AbstractC5202q, com.google.common.collect.AbstractC5205t
+        @Override // com.google.common.collect.q, com.google.common.collect.t
         public final Map<K, V> delegate() {
             return c();
         }
@@ -688,9 +677,8 @@ public final class Maps {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Maps$j */
     /* loaded from: classes10.dex */
-    public static abstract class AbstractC5059j<K, V> extends Sets.AbstractC5098a<Map.Entry<K, V>> {
+    public static abstract class j<K, V> extends Sets.a<Map.Entry<K, V>> {
         abstract Map<K, V> a();
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
@@ -725,7 +713,7 @@ public final class Maps {
             return false;
         }
 
-        @Override // com.google.common.collect.Sets.AbstractC5098a, java.util.AbstractSet, java.util.AbstractCollection, java.util.Collection, java.util.Set
+        @Override // com.google.common.collect.Sets.a, java.util.AbstractSet, java.util.AbstractCollection, java.util.Collection, java.util.Set
         public boolean removeAll(Collection<?> collection) {
             try {
                 return super.removeAll((Collection) du1.p(collection));
@@ -734,7 +722,7 @@ public final class Maps {
             }
         }
 
-        @Override // com.google.common.collect.Sets.AbstractC5098a, java.util.AbstractCollection, java.util.Collection, java.util.Set
+        @Override // com.google.common.collect.Sets.a, java.util.AbstractCollection, java.util.Collection, java.util.Set
         public boolean retainAll(Collection<?> collection) {
             try {
                 return super.retainAll((Collection) du1.p(collection));
@@ -756,25 +744,23 @@ public final class Maps {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Maps$k */
     /* loaded from: classes10.dex */
-    static abstract class AbstractC5060k<K, V> extends AbstractMap<K, V> {
+    static abstract class k<K, V> extends AbstractMap<K, V> {
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.Maps$k$a */
         /* loaded from: classes10.dex */
-        class C5061a extends AbstractC5059j<K, V> {
-            C5061a() {
+        class a extends j<K, V> {
+            a() {
             }
 
-            @Override // com.google.common.collect.Maps.AbstractC5059j
+            @Override // com.google.common.collect.Maps.j
             Map<K, V> a() {
-                return AbstractC5060k.this;
+                return k.this;
             }
 
             @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
             public Iterator<Map.Entry<K, V>> iterator() {
-                return AbstractC5060k.this.a();
+                return k.this.a();
             }
         }
 
@@ -788,20 +774,19 @@ public final class Maps {
 
         @Override // java.util.AbstractMap, java.util.Map
         public Set<Map.Entry<K, V>> entrySet() {
-            return new C5061a();
+            return new a();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Maps$l */
     /* loaded from: classes10.dex */
-    public static class C5062l<K, V> extends Sets.AbstractC5098a<K> {
+    public static class l<K, V> extends Sets.a<K> {
         @Weak
         final Map<K, V> a;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C5062l(Map<K, V> map) {
+        public l(Map<K, V> map) {
             this.a = (Map) du1.p(map);
         }
 
@@ -848,16 +833,15 @@ public final class Maps {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     @GwtIncompatible
-    /* renamed from: com.google.common.collect.Maps$m */
     /* loaded from: classes10.dex */
-    public static class C5063m<K, V> extends C5064n<K, V> implements NavigableSet<K> {
+    public static class m<K, V> extends n<K, V> implements NavigableSet<K> {
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C5063m(NavigableMap<K, V> navigableMap) {
+        public m(NavigableMap<K, V> navigableMap) {
             super(navigableMap);
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.Maps.C5064n
+        @Override // com.google.common.collect.Maps.n
         /* renamed from: c */
         public NavigableMap<K, V> b() {
             return (NavigableMap) this.a;
@@ -918,33 +902,32 @@ public final class Maps {
             return b().tailMap(k, z).navigableKeySet();
         }
 
-        @Override // com.google.common.collect.Maps.C5064n, java.util.SortedSet, java.util.NavigableSet
+        @Override // com.google.common.collect.Maps.n, java.util.SortedSet, java.util.NavigableSet
         public SortedSet<K> headSet(K k) {
             return headSet(k, false);
         }
 
-        @Override // com.google.common.collect.Maps.C5064n, java.util.SortedSet, java.util.NavigableSet
+        @Override // com.google.common.collect.Maps.n, java.util.SortedSet, java.util.NavigableSet
         public SortedSet<K> subSet(K k, K k2) {
             return subSet(k, true, k2, false);
         }
 
-        @Override // com.google.common.collect.Maps.C5064n, java.util.SortedSet, java.util.NavigableSet
+        @Override // com.google.common.collect.Maps.n, java.util.SortedSet, java.util.NavigableSet
         public SortedSet<K> tailSet(K k) {
             return tailSet(k, true);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Maps$n */
     /* loaded from: classes10.dex */
-    static class C5064n<K, V> extends C5062l<K, V> implements SortedSet<K> {
+    static class n<K, V> extends l<K, V> implements SortedSet<K> {
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C5064n(SortedMap<K, V> sortedMap) {
+        public n(SortedMap<K, V> sortedMap) {
             super(sortedMap);
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.Maps.C5062l
+        @Override // com.google.common.collect.Maps.l
         /* renamed from: b */
         public SortedMap<K, V> a() {
             return (SortedMap) super.a();
@@ -961,7 +944,7 @@ public final class Maps {
         }
 
         public SortedSet<K> headSet(K k) {
-            return new C5064n(a().headMap(k));
+            return new n(a().headMap(k));
         }
 
         @Override // java.util.SortedSet
@@ -970,34 +953,33 @@ public final class Maps {
         }
 
         public SortedSet<K> subSet(K k, K k2) {
-            return new C5064n(a().subMap(k, k2));
+            return new n(a().subMap(k, k2));
         }
 
         public SortedSet<K> tailSet(K k) {
-            return new C5064n(a().tailMap(k));
+            return new n(a().tailMap(k));
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Maps$o */
     /* loaded from: classes10.dex */
-    public static class C5065o<K, V1, V2> extends AbstractC5060k<K, V2> {
+    public static class o<K, V1, V2> extends k<K, V2> {
         final Map<K, V1> a;
         final EntryTransformer<? super K, ? super V1, V2> b;
 
-        C5065o(Map<K, V1> map, EntryTransformer<? super K, ? super V1, V2> entryTransformer) {
+        o(Map<K, V1> map, EntryTransformer<? super K, ? super V1, V2> entryTransformer) {
             this.a = (Map) du1.p(map);
             this.b = (EntryTransformer) du1.p(entryTransformer);
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.Maps.AbstractC5060k
+        @Override // com.google.common.collect.Maps.k
         public Iterator<Map.Entry<K, V2>> a() {
             return Iterators.w(this.a.entrySet().iterator(), Maps.b(this.b));
         }
 
-        @Override // com.google.common.collect.Maps.AbstractC5060k, java.util.AbstractMap, java.util.Map
+        @Override // com.google.common.collect.Maps.k, java.util.AbstractMap, java.util.Map
         public void clear() {
             this.a.clear();
         }
@@ -1036,16 +1018,15 @@ public final class Maps {
 
         @Override // java.util.AbstractMap, java.util.Map
         public Collection<V2> values() {
-            return new C5069s(this);
+            return new s(this);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Maps$p */
     /* loaded from: classes10.dex */
-    public static class C5066p<K, V1, V2> extends C5065o<K, V1, V2> implements SortedMap<K, V2> {
-        C5066p(SortedMap<K, V1> sortedMap, EntryTransformer<? super K, ? super V1, V2> entryTransformer) {
+    public static class p<K, V1, V2> extends o<K, V1, V2> implements SortedMap<K, V2> {
+        p(SortedMap<K, V1> sortedMap, EntryTransformer<? super K, ? super V1, V2> entryTransformer) {
             super(sortedMap, entryTransformer);
         }
 
@@ -1085,43 +1066,41 @@ public final class Maps {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Maps$q */
     /* loaded from: classes10.dex */
-    static class C5067q<K, V> extends AbstractC5200o<Map.Entry<K, V>> {
+    static class q<K, V> extends com.google.common.collect.o<Map.Entry<K, V>> {
         private final Collection<Map.Entry<K, V>> a;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C5067q(Collection<Map.Entry<K, V>> collection) {
+        public q(Collection<Map.Entry<K, V>> collection) {
             this.a = collection;
         }
 
-        @Override // com.google.common.collect.AbstractC5200o, java.util.Collection, java.lang.Iterable, java.util.Set
+        @Override // com.google.common.collect.o, java.util.Collection, java.lang.Iterable, java.util.Set
         public Iterator<Map.Entry<K, V>> iterator() {
             return Maps.G(this.a.iterator());
         }
 
-        @Override // com.google.common.collect.AbstractC5200o, java.util.Collection, java.util.Set
+        @Override // com.google.common.collect.o, java.util.Collection, java.util.Set
         public Object[] toArray() {
             return standardToArray();
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.google.common.collect.AbstractC5200o, com.google.common.collect.AbstractC5205t
+        @Override // com.google.common.collect.o, com.google.common.collect.t
         public Collection<Map.Entry<K, V>> delegate() {
             return this.a;
         }
 
-        @Override // com.google.common.collect.AbstractC5200o, java.util.Collection, java.util.Set
+        @Override // com.google.common.collect.o, java.util.Collection, java.util.Set
         public <T> T[] toArray(T[] tArr) {
             return (T[]) standardToArray(tArr);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Maps$r */
     /* loaded from: classes10.dex */
-    static class C5068r<K, V> extends C5067q<K, V> implements Set<Map.Entry<K, V>> {
-        C5068r(Set<Map.Entry<K, V>> set) {
+    static class r<K, V> extends q<K, V> implements Set<Map.Entry<K, V>> {
+        r(Set<Map.Entry<K, V>> set) {
             super(set);
         }
 
@@ -1138,14 +1117,13 @@ public final class Maps {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Maps$s */
     /* loaded from: classes10.dex */
-    public static class C5069s<K, V> extends AbstractCollection<V> {
+    public static class s<K, V> extends AbstractCollection<V> {
         @Weak
         final Map<K, V> a;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C5069s(Map<K, V> map) {
+        public s(Map<K, V> map) {
             this.a = (Map) du1.p(map);
         }
 
@@ -1227,9 +1205,8 @@ public final class Maps {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     @GwtCompatible
-    /* renamed from: com.google.common.collect.Maps$t */
     /* loaded from: classes10.dex */
-    public static abstract class AbstractC5070t<K, V> extends AbstractMap<K, V> {
+    public static abstract class t<K, V> extends AbstractMap<K, V> {
         @MonotonicNonNullDecl
         private transient Set<Map.Entry<K, V>> a;
         @MonotonicNonNullDecl
@@ -1240,11 +1217,11 @@ public final class Maps {
         abstract Set<Map.Entry<K, V>> a();
 
         Set<K> b() {
-            return new C5062l(this);
+            return new l(this);
         }
 
         Collection<V> c() {
-            return new C5069s(this);
+            return new s(this);
         }
 
         @Override // java.util.AbstractMap, java.util.Map
@@ -1282,17 +1259,17 @@ public final class Maps {
     }
 
     public static <K, V1, V2> Map<K, V2> A(Map<K, V1> map, EntryTransformer<? super K, ? super V1, V2> entryTransformer) {
-        return new C5065o(map, entryTransformer);
+        return new o(map, entryTransformer);
     }
 
     public static <K, V1, V2> SortedMap<K, V2> B(SortedMap<K, V1> sortedMap, EntryTransformer<? super K, ? super V1, V2> entryTransformer) {
-        return new C5066p(sortedMap, entryTransformer);
+        return new p(sortedMap, entryTransformer);
     }
 
     static <V2, K, V1> Map.Entry<K, V2> C(EntryTransformer<? super K, ? super V1, V2> entryTransformer, Map.Entry<K, V1> entry) {
         du1.p(entryTransformer);
         du1.p(entry);
-        return new C5049a(entry, entryTransformer);
+        return new a(entry, entryTransformer);
     }
 
     public static <K, V1, V2> Map<K, V2> D(Map<K, V1> map, Function<? super V1, V2> function) {
@@ -1305,17 +1282,17 @@ public final class Maps {
 
     static <K, V> Map.Entry<K, V> F(Map.Entry<? extends K, ? extends V> entry) {
         du1.p(entry);
-        return new C5054f(entry);
+        return new f(entry);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static <K, V> yt2<Map.Entry<K, V>> G(Iterator<Map.Entry<K, V>> it) {
-        return new C5055g(it);
+        return new g(it);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static <K, V> Set<Map.Entry<K, V>> H(Set<Map.Entry<K, V>> set) {
-        return new C5068r(Collections.unmodifiableSet(set));
+        return new r(Collections.unmodifiableSet(set));
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -1341,7 +1318,7 @@ public final class Maps {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static <K, V> Iterator<V> L(Iterator<Map.Entry<K, V>> it) {
-        return new C5052d(it);
+        return new d(it);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -1360,26 +1337,26 @@ public final class Maps {
 
     static <K, V1, V2> Function<Map.Entry<K, V1>, Map.Entry<K, V2>> b(EntryTransformer<? super K, ? super V1, V2> entryTransformer) {
         du1.p(entryTransformer);
-        return new C5050b(entryTransformer);
+        return new b(entryTransformer);
     }
 
     static <K, V1, V2> EntryTransformer<K, V1, V2> c(Function<? super V1, V2> function) {
         du1.p(function);
-        return new C5056h(function);
+        return new h(function);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static <K, V> Iterator<Map.Entry<K, V>> d(Set<K> set, Function<? super K, V> function) {
-        return new C5053e(set.iterator(), function);
+        return new e(set.iterator(), function);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static int e(int i) {
-        if (i < 3) {
-            C5191k.b(i, "expectedSize");
-            return i + 1;
-        } else if (i < 1073741824) {
-            return (int) ((i / 0.75f) + 1.0f);
+    public static int e(int i2) {
+        if (i2 < 3) {
+            com.google.common.collect.k.b(i2, "expectedSize");
+            return i2 + 1;
+        } else if (i2 < 1073741824) {
+            return (int) ((i2 / 0.75f) + 1.0f);
         } else {
             return Integer.MAX_VALUE;
         }
@@ -1415,19 +1392,19 @@ public final class Maps {
     }
 
     @GwtCompatible(serializable = true)
-    public static <K, V> Map.Entry<K, V> j(@NullableDecl K k, @NullableDecl V v) {
-        return new ImmutableEntry(k, v);
+    public static <K, V> Map.Entry<K, V> j(@NullableDecl K k2, @NullableDecl V v) {
+        return new ImmutableEntry(k2, v);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static <E> ImmutableMap<E, Integer> k(Collection<E> collection) {
-        ImmutableMap.C4977b c4977b = new ImmutableMap.C4977b(collection.size());
-        int i = 0;
-        for (E e : collection) {
-            c4977b.c(e, Integer.valueOf(i));
-            i++;
+        ImmutableMap.b bVar = new ImmutableMap.b(collection.size());
+        int i2 = 0;
+        for (E e2 : collection) {
+            bVar.c(e2, Integer.valueOf(i2));
+            i2++;
         }
-        return c4977b.a();
+        return bVar.a();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -1437,7 +1414,7 @@ public final class Maps {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static <K, V> Iterator<K> m(Iterator<Map.Entry<K, V>> it) {
-        return new C5051c(it);
+        return new c(it);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -1458,8 +1435,8 @@ public final class Maps {
         return new HashMap<>();
     }
 
-    public static <K, V> HashMap<K, V> q(int i) {
-        return new HashMap<>(e(i));
+    public static <K, V> HashMap<K, V> q(int i2) {
+        return new HashMap<>(e(i2));
     }
 
     public static <K, V> IdentityHashMap<K, V> r() {
@@ -1470,8 +1447,8 @@ public final class Maps {
         return new LinkedHashMap<>();
     }
 
-    public static <K, V> LinkedHashMap<K, V> t(int i) {
-        return new LinkedHashMap<>(e(i));
+    public static <K, V> LinkedHashMap<K, V> t(int i2) {
+        return new LinkedHashMap<>(e(i2));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -1521,19 +1498,19 @@ public final class Maps {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static String z(Map<?, ?> map) {
-        StringBuilder c = C5193l.c(map.size());
-        c.append('{');
+        StringBuilder c2 = com.google.common.collect.l.c(map.size());
+        c2.append('{');
         boolean z = true;
         for (Map.Entry<?, ?> entry : map.entrySet()) {
             if (!z) {
-                c.append(AVFSCacheConstants.COMMA_SEP);
+                c2.append(AVFSCacheConstants.COMMA_SEP);
             }
             z = false;
-            c.append(entry.getKey());
-            c.append(C4250a.h);
-            c.append(entry.getValue());
+            c2.append(entry.getKey());
+            c2.append(com.alipay.sdk.m.n.a.h);
+            c2.append(entry.getValue());
         }
-        c.append('}');
-        return c.toString();
+        c2.append('}');
+        return c2.toString();
     }
 }

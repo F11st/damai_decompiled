@@ -2,16 +2,15 @@ package com.alibaba.wireless.security.open;
 
 import android.content.Context;
 import com.alibaba.wireless.security.SecExceptionCode;
-import com.alibaba.wireless.security.framework.C3999d;
 import com.alibaba.wireless.security.framework.ISGPluginManager;
+import com.alibaba.wireless.security.framework.d;
 import com.alibaba.wireless.security.open.atlasencrypt.IAtlasEncryptComponent;
 import com.alibaba.wireless.security.open.compat.ICompatComponent;
 import com.alibaba.wireless.security.open.datacollection.IDataCollectionComponent;
 import com.alibaba.wireless.security.open.dynamicdataencrypt.IDynamicDataEncryptComponent;
 import com.alibaba.wireless.security.open.dynamicdatastore.IDynamicDataStoreComponent;
-import com.alibaba.wireless.security.open.initialize.C4023a;
-import com.alibaba.wireless.security.open.initialize.C4026c;
 import com.alibaba.wireless.security.open.initialize.IInitializeComponent;
+import com.alibaba.wireless.security.open.initialize.c;
 import com.alibaba.wireless.security.open.maldetection.IMalDetect;
 import com.alibaba.wireless.security.open.nocaptcha.INoCaptchaComponent;
 import com.alibaba.wireless.security.open.opensdk.IOpenSDKComponent;
@@ -38,15 +37,14 @@ public class SecurityGuardManager {
     private static boolean g;
     public static final /* synthetic */ int i = 0;
     private ISGPluginManager a;
-    private final Map<Integer, Class> b = new C4022a(this);
+    private final Map<Integer, Class> b = new a(this);
     private static final Object e = new Object();
     private static Object h = new Object();
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.wireless.security.open.SecurityGuardManager$a */
     /* loaded from: classes8.dex */
-    class C4022a extends HashMap<Integer, Class> {
-        C4022a(SecurityGuardManager securityGuardManager) {
+    class a extends HashMap<Integer, Class> {
+        a(SecurityGuardManager securityGuardManager) {
             put(1, ISecureSignatureComponent.class);
             put(2, IDynamicDataStoreComponent.class);
             put(3, IStaticDataStoreComponent.class);
@@ -87,7 +85,7 @@ public class SecurityGuardManager {
         if (d == null) {
             synchronized (e) {
                 if (d == null) {
-                    d = new C4023a(str);
+                    d = new com.alibaba.wireless.security.open.initialize.a(str);
                 }
             }
         }
@@ -105,16 +103,16 @@ public class SecurityGuardManager {
                     return null;
                 }
                 if (c == null && getInitializer(str).initialize(context) == 0) {
-                    ISGPluginManager a = ((C4023a) getInitializer(str)).a();
-                    if (a instanceof C3999d) {
-                        ((C3999d) a).a(g);
+                    ISGPluginManager a2 = ((com.alibaba.wireless.security.open.initialize.a) getInitializer(str)).a();
+                    if (a2 instanceof d) {
+                        ((d) a2).a(g);
                     }
-                    c = new SecurityGuardManager(a);
+                    c = new SecurityGuardManager(a2);
                 }
             }
         }
-        if (c.a instanceof C3999d) {
-            ((C3999d) c.a).a(g);
+        if (c.a instanceof d) {
+            ((d) c.a).a(g);
         }
         return c;
     }
@@ -209,7 +207,7 @@ public class SecurityGuardManager {
     }
 
     public String getSDKVerison() {
-        return C4026c.a();
+        return c.a();
     }
 
     public ISGPluginManager getSGPluginManager() {

@@ -51,10 +51,9 @@ public class WaveView extends View implements ViewTreeObserver.OnPreDrawListener
     protected static final float[][] EXPAND_PHASE_POINTS = {new float[]{0.1655f, 0.0f}, new float[]{0.5909f, 0.0f}, new float[]{0.4557f, 0.1642f}, new float[]{0.3941f, 0.2061f}, new float[]{0.4303f, 0.2889f}, new float[]{0.5f, 0.2889f}};
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.waveswipe.WaveView$a */
     /* loaded from: classes7.dex */
-    class C6174a implements ValueAnimator.AnimatorUpdateListener {
-        C6174a() {
+    class a implements ValueAnimator.AnimatorUpdateListener {
+        a() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -65,10 +64,9 @@ public class WaveView extends View implements ViewTreeObserver.OnPreDrawListener
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.waveswipe.WaveView$b */
     /* loaded from: classes7.dex */
-    public class C6175b implements ValueAnimator.AnimatorUpdateListener {
-        C6175b() {
+    public class b implements ValueAnimator.AnimatorUpdateListener {
+        b() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -84,10 +82,9 @@ public class WaveView extends View implements ViewTreeObserver.OnPreDrawListener
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.waveswipe.WaveView$c */
     /* loaded from: classes7.dex */
-    class C6176c extends AnimatorListenerAdapter {
-        C6176c() {
+    class c extends AnimatorListenerAdapter {
+        c() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -99,10 +96,9 @@ public class WaveView extends View implements ViewTreeObserver.OnPreDrawListener
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.waveswipe.WaveView$d */
     /* loaded from: classes7.dex */
-    public class C6177d implements ValueAnimator.AnimatorUpdateListener {
-        C6177d() {
+    public class d implements ValueAnimator.AnimatorUpdateListener {
+        d() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -131,7 +127,7 @@ public class WaveView extends View implements ViewTreeObserver.OnPreDrawListener
         this.mDropCircleRadius = 100.0f;
         this.mIsManualRefreshing = false;
         this.mDropHeightUpdated = false;
-        this.mAnimatorUpdateListener = new C6174a();
+        this.mAnimatorUpdateListener = new a();
         float f = getResources().getDisplayMetrics().density;
         Paint paint = new Paint();
         this.mPaint = paint;
@@ -335,14 +331,14 @@ public class WaveView extends View implements ViewTreeObserver.OnPreDrawListener
         float f4 = 1.0f + floatValue5;
         rectF.set((f - ((f2 * f3) * floatValue3)) + ((f2 * floatValue5) / 2.0f), (((f2 * f4) * floatValue3) + floatValue2) - ((f2 * floatValue4) / 2.0f), (((f3 * f2) * floatValue3) + f) - ((floatValue5 * f2) / 2.0f), (floatValue2 - ((f4 * f2) * floatValue3)) + ((f2 * floatValue4) / 2.0f));
         this.mDropTangentPath.moveTo(f, ((Float) this.mDropVertexAnimator.getAnimatedValue()).floatValue());
-        double d = floatValue2;
-        double pow = ((Math.pow(this.mDropCircleRadius, 2.0d) + (floatValue2 * floatValue)) - Math.pow(d, 2.0d)) / (floatValue - floatValue2);
-        double d2 = (this.mWidth * (-2.0d)) / 2.0d;
-        double d3 = -d2;
-        double pow2 = (d2 * d2) - (((Math.pow(pow - d, 2.0d) + Math.pow(f, 2.0d)) - Math.pow(this.mDropCircleRadius, 2.0d)) * 4.0d);
+        double d2 = floatValue2;
+        double pow = ((Math.pow(this.mDropCircleRadius, 2.0d) + (floatValue2 * floatValue)) - Math.pow(d2, 2.0d)) / (floatValue - floatValue2);
+        double d3 = (this.mWidth * (-2.0d)) / 2.0d;
+        double d4 = -d3;
+        double pow2 = (d3 * d3) - (((Math.pow(pow - d2, 2.0d) + Math.pow(f, 2.0d)) - Math.pow(this.mDropCircleRadius, 2.0d)) * 4.0d);
         float f5 = (float) pow;
-        this.mDropTangentPath.lineTo((float) ((Math.sqrt(pow2) + d3) / 2.0d), f5);
-        this.mDropTangentPath.lineTo((float) ((d3 - Math.sqrt(pow2)) / 2.0d), f5);
+        this.mDropTangentPath.lineTo((float) ((Math.sqrt(pow2) + d4) / 2.0d), f5);
+        this.mDropTangentPath.lineTo((float) ((d4 - Math.sqrt(pow2)) / 2.0d), f5);
         this.mDropTangentPath.close();
         this.mShadowPath.set(this.mDropTangentPath);
         this.mShadowPath.addOval(this.mDropRect, Path.Direction.CCW);
@@ -404,7 +400,7 @@ public class WaveView extends View implements ViewTreeObserver.OnPreDrawListener
         this.mDisappearCircleAnimator = ofFloat;
         ofFloat.addUpdateListener(this.mAnimatorUpdateListener);
         this.mDisappearCircleAnimator.setDuration(200L);
-        this.mDisappearCircleAnimator.addListener(new C6176c());
+        this.mDisappearCircleAnimator.addListener(new c());
         this.mDisappearCircleAnimator.start();
     }
 
@@ -416,7 +412,7 @@ public class WaveView extends View implements ViewTreeObserver.OnPreDrawListener
         ValueAnimator ofFloat2 = ValueAnimator.ofFloat((this.mWidth / 1440.0f) * 500.0f, this.mMaxDropHeight);
         this.mDropCircleAnimator = ofFloat2;
         ofFloat2.setDuration(500L);
-        this.mDropCircleAnimator.addUpdateListener(new C6175b());
+        this.mDropCircleAnimator.addUpdateListener(new b());
         this.mDropCircleAnimator.setInterpolator(new AccelerateDecelerateInterpolator());
         this.mDropCircleAnimator.start();
         ValueAnimator ofFloat3 = ValueAnimator.ofFloat(0.0f, this.mMaxDropHeight - this.mDropCircleRadius);
@@ -444,7 +440,7 @@ public class WaveView extends View implements ViewTreeObserver.OnPreDrawListener
         ValueAnimator ofFloat = ValueAnimator.ofFloat(Math.min(f, 0.2f) * this.mWidth, 0.0f);
         this.mWaveReverseAnimator = ofFloat;
         ofFloat.setDuration(1000L);
-        this.mWaveReverseAnimator.addUpdateListener(new C6177d());
+        this.mWaveReverseAnimator.addUpdateListener(new d());
         this.mWaveReverseAnimator.setInterpolator(new BounceInterpolator());
         this.mWaveReverseAnimator.start();
     }

@@ -6,11 +6,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMRoundedCornersBitmapProcessor;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
 import cn.damai.login.LoginManager;
@@ -35,12 +33,11 @@ public class xf1 {
     private DMIconFontTextView j;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.xf1$a */
     /* loaded from: classes6.dex */
-    public class View$OnClickListenerC9925a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9925a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -54,18 +51,17 @@ public class xf1 {
             if (TextUtils.isEmpty(str)) {
                 return;
             }
-            C0529c.e().x(vf1.x().g0("myordersfirst"));
+            cn.damai.common.user.c.e().x(vf1.x().g0("myordersfirst"));
             xf1.this.e(str);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.xf1$b */
     /* loaded from: classes6.dex */
-    public class View$OnClickListenerC9926b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9926b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -83,40 +79,38 @@ public class xf1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.xf1$c */
     /* loaded from: classes6.dex */
-    public class C9927c implements DMImageCreator.DMImageFailListener {
+    public class c implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9927c(xf1 xf1Var) {
+        c(xf1 xf1Var) {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "220223168")) {
-                ipChange.ipc$dispatch("220223168", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("220223168", new Object[]{this, dVar});
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.xf1$d */
     /* loaded from: classes6.dex */
-    public class C9928d implements DMImageCreator.DMImageSuccListener {
+    public class d implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9928d() {
+        d() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-908576683")) {
-                ipChange.ipc$dispatch("-908576683", new Object[]{this, c0502e});
-            } else if (c0502e == null || c0502e.a == null) {
+                ipChange.ipc$dispatch("-908576683", new Object[]{this, eVar});
+            } else if (eVar == null || eVar.a == null) {
             } else {
-                xf1.this.d.setImageDrawable(c0502e.a);
+                xf1.this.d.setImageDrawable(eVar.a);
             }
         }
     }
@@ -139,7 +133,7 @@ public class xf1 {
         this.h.setVisibility(8);
         z20.T("closed_announcement", "true");
         z20.T("closed_notice_str", str);
-        C0529c.e().x(vf1.x().h0());
+        cn.damai.common.user.c.e().x(vf1.x().h0());
     }
 
     private UserCenterDataBean.TransitStepInfo d(UserCenterDataBean.LogisticsInfo logisticsInfo) {
@@ -166,7 +160,7 @@ public class xf1 {
         this.e = (TextView) this.c.findViewById(R$id.tv_mine_logistics_status);
         this.f = (TextView) this.c.findViewById(R$id.tv_mine_logistics_action);
         this.g = (TextView) this.c.findViewById(R$id.tv_mine_logistics_status_time);
-        this.c.setOnClickListener(new View$OnClickListenerC9925a());
+        this.c.setOnClickListener(new a());
     }
 
     private void h() {
@@ -181,7 +175,7 @@ public class xf1 {
         this.i = (TextView) this.b.findViewById(R$id.tv_mine_announcement_content);
         DMIconFontTextView dMIconFontTextView = (DMIconFontTextView) this.b.findViewById(R$id.tv_mine_announcement_close);
         this.j = dMIconFontTextView;
-        dMIconFontTextView.setOnClickListener(new View$OnClickListenerC9926b());
+        dMIconFontTextView.setOnClickListener(new b());
     }
 
     private void i() {
@@ -197,9 +191,9 @@ public class xf1 {
             ipChange.ipc$dispatch("1734295118", new Object[]{this, logisticsInfo});
         } else if (logisticsInfo == null || this.a == null) {
         } else {
-            DMImageCreator e = C0504a.b().e(logisticsInfo.getPerformImageUrl());
+            DMImageCreator e = cn.damai.common.image.a.b().e(logisticsInfo.getPerformImageUrl());
             int i = R$drawable.uikit_default_image_bg_gradient;
-            e.i(i).c(i).k(new DMRoundedCornersBitmapProcessor(m62.a(this.a, 6.0f), 0)).n(new C9928d()).e(new C9927c(this)).f();
+            e.i(i).c(i).k(new DMRoundedCornersBitmapProcessor(m62.a(this.a, 6.0f), 0)).n(new d()).e(new c(this)).f();
         }
     }
 
@@ -281,10 +275,10 @@ public class xf1 {
             String waybillName = logisticsInfo.getWaybillName();
             String status = logisticsInfo.getStatus();
             j(logisticsInfo);
-            UserCenterDataBean.TransitStepInfo d = d(logisticsInfo);
-            if (d != null) {
-                str2 = d.getStatusTime();
-                str = d.getStatusDesc();
+            UserCenterDataBean.TransitStepInfo d2 = d(logisticsInfo);
+            if (d2 != null) {
+                str2 = d2.getStatusTime();
+                str = d2.getStatusDesc();
             } else {
                 str = "";
                 str2 = str;

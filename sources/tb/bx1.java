@@ -20,8 +20,6 @@ import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
-import kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a;
-import kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8321c;
 import kotlin.reflect.jvm.internal.impl.resolve.descriptorUtil.DescriptorUtilsKt;
 import kotlin.reflect.jvm.internal.impl.storage.NullableLazyValue;
 import kotlin.reflect.jvm.internal.impl.types.TypeSubstitutor;
@@ -31,7 +29,7 @@ import org.jetbrains.annotations.Nullable;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public class bx1 extends AbstractC8321c implements PropertyDescriptor {
+public class bx1 extends kotlin.reflect.jvm.internal.impl.descriptors.impl.c implements PropertyDescriptor {
     private final Modality h;
     private f70 i;
     private Collection<? extends PropertyDescriptor> j;
@@ -53,9 +51,8 @@ public class bx1 extends AbstractC8321c implements PropertyDescriptor {
     private FieldDescriptor z;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.bx1$a */
     /* loaded from: classes3.dex */
-    public class C8983a {
+    public class a {
         private DeclarationDescriptor a;
         private Modality b;
         private f70 c;
@@ -69,7 +66,7 @@ public class bx1 extends AbstractC8321c implements PropertyDescriptor {
         private boolean h = true;
         private List<TypeParameterDescriptor> j = null;
 
-        public C8983a() {
+        public a() {
             this.a = bx1.this.getContainingDeclaration();
             this.b = bx1.this.getModality();
             this.c = bx1.this.getVisibility();
@@ -217,13 +214,13 @@ public class bx1 extends AbstractC8321c implements PropertyDescriptor {
         }
 
         @NotNull
-        public C8983a q(boolean z) {
+        public a q(boolean z) {
             this.h = z;
             return this;
         }
 
         @NotNull
-        public C8983a r(@NotNull CallableMemberDescriptor.Kind kind) {
+        public a r(@NotNull CallableMemberDescriptor.Kind kind) {
             if (kind == null) {
                 a(10);
             }
@@ -232,7 +229,7 @@ public class bx1 extends AbstractC8321c implements PropertyDescriptor {
         }
 
         @NotNull
-        public C8983a s(@NotNull Modality modality) {
+        public a s(@NotNull Modality modality) {
             if (modality == null) {
                 a(6);
             }
@@ -241,13 +238,13 @@ public class bx1 extends AbstractC8321c implements PropertyDescriptor {
         }
 
         @NotNull
-        public C8983a t(@Nullable CallableMemberDescriptor callableMemberDescriptor) {
+        public a t(@Nullable CallableMemberDescriptor callableMemberDescriptor) {
             this.d = (PropertyDescriptor) callableMemberDescriptor;
             return this;
         }
 
         @NotNull
-        public C8983a u(@NotNull DeclarationDescriptor declarationDescriptor) {
+        public a u(@NotNull DeclarationDescriptor declarationDescriptor) {
             if (declarationDescriptor == null) {
                 a(0);
             }
@@ -256,7 +253,7 @@ public class bx1 extends AbstractC8321c implements PropertyDescriptor {
         }
 
         @NotNull
-        public C8983a v(@NotNull br2 br2Var) {
+        public a v(@NotNull br2 br2Var) {
             if (br2Var == null) {
                 a(15);
             }
@@ -265,7 +262,7 @@ public class bx1 extends AbstractC8321c implements PropertyDescriptor {
         }
 
         @NotNull
-        public C8983a w(@NotNull f70 f70Var) {
+        public a w(@NotNull f70 f70Var) {
             if (f70Var == null) {
                 a(8);
             }
@@ -460,13 +457,13 @@ public class bx1 extends AbstractC8321c implements PropertyDescriptor {
         return this.z;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8320b, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.b, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
     @Nullable
     public ReceiverParameterDescriptor getDispatchReceiverParameter() {
         return this.s;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8320b, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.b, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
     @Nullable
     public ReceiverParameterDescriptor getExtensionReceiverParameter() {
         return this.t;
@@ -505,7 +502,7 @@ public class bx1 extends AbstractC8321c implements PropertyDescriptor {
         return collection;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8320b, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.b, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
     @NotNull
     public z71 getReturnType() {
         z71 type = getType();
@@ -521,7 +518,7 @@ public class bx1 extends AbstractC8321c implements PropertyDescriptor {
         return this.w;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8320b, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.b, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
     @NotNull
     public List<TypeParameterDescriptor> getTypeParameters() {
         List<TypeParameterDescriptor> list = this.u;
@@ -531,7 +528,7 @@ public class bx1 extends AbstractC8321c implements PropertyDescriptor {
         throw new IllegalStateException("typeParameters == null for " + toString());
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8320b, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.b, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
     @Nullable
     public <V> V getUserData(CallableDescriptor.UserDataKey<V> userDataKey) {
         return null;
@@ -575,7 +572,7 @@ public class bx1 extends AbstractC8321c implements PropertyDescriptor {
         return this.p;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8320b, kotlin.reflect.jvm.internal.impl.descriptors.VariableDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.b, kotlin.reflect.jvm.internal.impl.descriptors.VariableDescriptor
     public boolean isConst() {
         return this.n;
     }
@@ -601,24 +598,24 @@ public class bx1 extends AbstractC8321c implements PropertyDescriptor {
     }
 
     @Nullable
-    protected PropertyDescriptor j(@NotNull C8983a c8983a) {
+    protected PropertyDescriptor j(@NotNull a aVar) {
         ReceiverParameterDescriptor receiverParameterDescriptor;
         iz1 iz1Var;
         NullableLazyValue<fn<?>> nullableLazyValue;
-        if (c8983a == null) {
+        if (aVar == null) {
             a(24);
         }
-        bx1 i = i(c8983a.a, c8983a.b, c8983a.c, c8983a.d, c8983a.f, c8983a.k, l(c8983a.e, c8983a.d));
-        List<TypeParameterDescriptor> typeParameters = c8983a.j == null ? getTypeParameters() : c8983a.j;
+        bx1 i = i(aVar.a, aVar.b, aVar.c, aVar.d, aVar.f, aVar.k, l(aVar.e, aVar.d));
+        List<TypeParameterDescriptor> typeParameters = aVar.j == null ? getTypeParameters() : aVar.j;
         ArrayList arrayList = new ArrayList(typeParameters.size());
-        TypeSubstitutor b = b70.b(typeParameters, c8983a.g, i, arrayList);
-        z71 z71Var = c8983a.l;
+        TypeSubstitutor b = b70.b(typeParameters, aVar.g, i, arrayList);
+        z71 z71Var = aVar.l;
         Variance variance = Variance.OUT_VARIANCE;
         z71 q = b.q(z71Var, variance);
         if (q == null) {
             return null;
         }
-        ReceiverParameterDescriptor receiverParameterDescriptor2 = c8983a.i;
+        ReceiverParameterDescriptor receiverParameterDescriptor2 = aVar.i;
         if (receiverParameterDescriptor2 != null) {
             receiverParameterDescriptor = receiverParameterDescriptor2.substitute(b);
             if (receiverParameterDescriptor == null) {
@@ -638,18 +635,18 @@ public class bx1 extends AbstractC8321c implements PropertyDescriptor {
             iz1Var = null;
         }
         i.t(q, arrayList, receiverParameterDescriptor, iz1Var);
-        cx1 cx1Var = this.v == null ? null : new cx1(i, this.v.getAnnotations(), c8983a.b, r(this.v.getVisibility(), c8983a.f), this.v.isDefault(), this.v.isExternal(), this.v.isInline(), c8983a.f, c8983a.o(), SourceElement.NO_SOURCE);
+        cx1 cx1Var = this.v == null ? null : new cx1(i, this.v.getAnnotations(), aVar.b, r(this.v.getVisibility(), aVar.f), this.v.isDefault(), this.v.isExternal(), this.v.isInline(), aVar.f, aVar.o(), SourceElement.NO_SOURCE);
         if (cx1Var != null) {
             z71 returnType = this.v.getReturnType();
             cx1Var.h(m(b, this.v));
             cx1Var.k(returnType != null ? b.q(returnType, variance) : null);
         }
-        dx1 dx1Var = this.w == null ? null : new dx1(i, this.w.getAnnotations(), c8983a.b, r(this.w.getVisibility(), c8983a.f), this.w.isDefault(), this.w.isExternal(), this.w.isInline(), c8983a.f, c8983a.p(), SourceElement.NO_SOURCE);
+        dx1 dx1Var = this.w == null ? null : new dx1(i, this.w.getAnnotations(), aVar.b, r(this.w.getVisibility(), aVar.f), this.w.isDefault(), this.w.isExternal(), this.w.isInline(), aVar.f, aVar.p(), SourceElement.NO_SOURCE);
         if (dx1Var != null) {
-            List<ValueParameterDescriptor> j = AbstractC8316a.j(dx1Var, this.w.getValueParameters(), b, false, false, null);
+            List<ValueParameterDescriptor> j = kotlin.reflect.jvm.internal.impl.descriptors.impl.a.j(dx1Var, this.w.getValueParameters(), b, false, false, null);
             if (j == null) {
                 i.s(true);
-                j = Collections.singletonList(dx1.j(dx1Var, DescriptorUtilsKt.g(c8983a.a).H(), this.w.getValueParameters().get(0).getAnnotations()));
+                j = Collections.singletonList(dx1.j(dx1Var, DescriptorUtilsKt.g(aVar.a).H(), this.w.getValueParameters().get(0).getAnnotations()));
             }
             if (j.size() == 1) {
                 dx1Var.h(m(b, this.w));
@@ -662,12 +659,12 @@ public class bx1 extends AbstractC8321c implements PropertyDescriptor {
         ii0 ii0Var = fieldDescriptor == null ? null : new ii0(fieldDescriptor.getAnnotations(), i);
         FieldDescriptor fieldDescriptor2 = this.z;
         i.o(cx1Var, dx1Var, ii0Var, fieldDescriptor2 != null ? new ii0(fieldDescriptor2.getAnnotations(), i) : null);
-        if (c8983a.h) {
-            yd2 a = yd2.a();
+        if (aVar.h) {
+            yd2 a2 = yd2.a();
             for (PropertyDescriptor propertyDescriptor : getOverriddenDescriptors()) {
-                a.add(propertyDescriptor.substitute(b));
+                a2.add(propertyDescriptor.substitute(b));
             }
-            i.setOverriddenDescriptors(a);
+            i.setOverriddenDescriptors(a2);
         }
         if (isConst() && (nullableLazyValue = this.g) != null) {
             i.e(nullableLazyValue);
@@ -698,8 +695,8 @@ public class bx1 extends AbstractC8321c implements PropertyDescriptor {
     }
 
     @NotNull
-    public C8983a q() {
-        return new C8983a();
+    public a q() {
+        return new a();
     }
 
     public void s(boolean z) {

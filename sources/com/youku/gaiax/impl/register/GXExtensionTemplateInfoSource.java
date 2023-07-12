@@ -19,9 +19,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -63,7 +63,7 @@ public final class GXExtensionTemplateInfoSource implements GXRegisterCenter.GXI
 
     static {
         Lazy<GXExtensionTemplateInfoSource> b;
-        b = C8177b.b(new Function0<GXExtensionTemplateInfoSource>() { // from class: com.youku.gaiax.impl.register.GXExtensionTemplateInfoSource$Companion$instance$2
+        b = b.b(new Function0<GXExtensionTemplateInfoSource>() { // from class: com.youku.gaiax.impl.register.GXExtensionTemplateInfoSource$Companion$instance$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull
@@ -92,17 +92,17 @@ public final class GXExtensionTemplateInfoSource implements GXRegisterCenter.GXI
         }
     }
 
-    private final GXTemplateInfo getData(GXTemplateEngine.C3347i c3347i) {
+    private final GXTemplateInfo getData(GXTemplateEngine.i iVar) {
         GXTemplateInfo g;
-        if (exist(c3347i.a(), c3347i.d())) {
-            ConcurrentHashMap<String, GXTemplateInfo> concurrentHashMap = this.dataCache.get(c3347i.a());
-            GXTemplateInfo gXTemplateInfo = concurrentHashMap == null ? null : concurrentHashMap.get(c3347i.d());
+        if (exist(iVar.a(), iVar.d())) {
+            ConcurrentHashMap<String, GXTemplateInfo> concurrentHashMap = this.dataCache.get(iVar.a());
+            GXTemplateInfo gXTemplateInfo = concurrentHashMap == null ? null : concurrentHashMap.get(iVar.d());
             if (gXTemplateInfo != null) {
                 return gXTemplateInfo;
             }
             throw new IllegalArgumentException("Template exist but reference is null");
         }
-        String r = b41.r(c3347i.a(), c3347i.d());
+        String r = b41.r(iVar.a(), iVar.d());
         Object obj = this.dataLock.get(r);
         if (obj == null) {
             obj = new Object();
@@ -110,17 +110,17 @@ public final class GXExtensionTemplateInfoSource implements GXRegisterCenter.GXI
         }
         synchronized (obj) {
             long elapsedRealtime = SystemClock.elapsedRealtime();
-            g = GXTemplateInfo.Companion.g(c3347i);
-            GaiaXMonitor.INSTANCE.onCreateC(c3347i, elapsedRealtime);
+            g = GXTemplateInfo.Companion.g(iVar);
+            GaiaXMonitor.INSTANCE.onCreateC(iVar, elapsedRealtime);
             wt2 wt2Var = wt2.INSTANCE;
         }
         specialForTemplatePhoneDemand(g);
-        ConcurrentHashMap<String, GXTemplateInfo> concurrentHashMap2 = getDataCache().get(c3347i.a());
+        ConcurrentHashMap<String, GXTemplateInfo> concurrentHashMap2 = getDataCache().get(iVar.a());
         if (concurrentHashMap2 == null) {
             concurrentHashMap2 = new ConcurrentHashMap<>();
-            getDataCache().put(c3347i.a(), concurrentHashMap2);
+            getDataCache().put(iVar.a(), concurrentHashMap2);
         }
-        concurrentHashMap2.put(c3347i.d(), g);
+        concurrentHashMap2.put(iVar.d(), g);
         collectionNestTemplate(concurrentHashMap2, g);
         return g;
     }
@@ -216,11 +216,11 @@ public final class GXExtensionTemplateInfoSource implements GXRegisterCenter.GXI
 
     @Override // com.alibaba.gaiax.GXRegisterCenter.GXIExtensionTemplateInfoSource
     @Nullable
-    public GXTemplateInfo getTemplateInfo(@NotNull GXTemplateEngine.C3347i c3347i) {
+    public GXTemplateInfo getTemplateInfo(@NotNull GXTemplateEngine.i iVar) {
         IProxyApp app2;
         Context applicationContext;
-        b41.i(c3347i, "gxTemplateItem");
-        GXTemplateInfo data = getData(c3347i);
+        b41.i(iVar, "gxTemplateItem");
+        GXTemplateInfo data = getData(iVar);
         boolean z = false;
         if (data != null && data.t()) {
             z = true;

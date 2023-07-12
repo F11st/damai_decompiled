@@ -37,9 +37,8 @@ public class DMRoundedCornersBitmapProcessor implements BitmapProcessor {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.image.DMRoundedCornersBitmapProcessor$a */
     /* loaded from: classes13.dex */
-    public static /* synthetic */ class C0503a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -84,7 +83,7 @@ public class DMRoundedCornersBitmapProcessor implements BitmapProcessor {
         int i3 = this.d;
         float f3 = f - i3;
         float f4 = f2 - i3;
-        int i4 = C0503a.a[this.e.ordinal()];
+        int i4 = a.a[this.e.ordinal()];
         RectF rectF2 = null;
         if (i4 == 1) {
             int i5 = this.d;

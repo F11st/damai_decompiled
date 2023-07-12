@@ -31,10 +31,9 @@ public class UiLayer {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.cardboard.UiLayer$a */
     /* loaded from: classes10.dex */
-    public class View$OnClickListenerC5430a implements View.OnClickListener {
-        View$OnClickListenerC5430a() {
+    public class a implements View.OnClickListener {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -48,10 +47,9 @@ public class UiLayer {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.cardboard.UiLayer$b */
     /* loaded from: classes10.dex */
-    public class View$OnClickListenerC5431b implements View.OnClickListener {
-        View$OnClickListenerC5431b() {
+    public class b implements View.OnClickListener {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -103,11 +101,11 @@ public class UiLayer {
         this.b = imageButton;
         imageButton.setVisibility(k(this.h));
         this.b.setContentDescription("Settings");
-        this.b.setOnClickListener(new View$OnClickListenerC5430a());
+        this.b.setOnClickListener(new a());
         ImageButton imageButton2 = (ImageButton) this.f.findViewById(R$id.ui_back_button);
         this.c = imageButton2;
         imageButton2.setVisibility(k(m()));
-        this.c.setOnClickListener(new View$OnClickListenerC5431b());
+        this.c.setOnClickListener(new b());
         RelativeLayout relativeLayout = (RelativeLayout) this.f.findViewById(R$id.ui_alignment_marker);
         this.d = relativeLayout;
         relativeLayout.setVisibility(k(l()));

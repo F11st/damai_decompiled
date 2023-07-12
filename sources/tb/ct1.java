@@ -12,7 +12,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes8.dex */
 public final class ct1 {
     @NotNull
-    public static final C9015a Companion = new C9015a(null);
+    public static final a Companion = new a(null);
     @Nullable
     private static ct1 f;
     @Nullable
@@ -27,13 +27,12 @@ public final class ct1 {
     private Map<String, ArrayList<PopupDetailBean>> e = new LinkedHashMap();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ct1$a */
     /* loaded from: classes8.dex */
-    public static final class C9015a {
-        private C9015a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9015a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

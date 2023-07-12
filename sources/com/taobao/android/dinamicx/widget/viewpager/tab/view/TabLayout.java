@@ -70,7 +70,7 @@ public class TabLayout extends HorizontalScrollView {
     public static final int MODE_SCROLLABLE = 0;
     static final int MOTION_NON_ADJACENT_OFFSET = 24;
     private static final int TAB_MIN_WIDTH_MARGIN = 56;
-    private C6544b mAdapterChangeListener;
+    private b mAdapterChangeListener;
     private int mContentInsetStart;
     private OnTabSelectedListener mCurrentVpSelectedListener;
     int mMode;
@@ -84,7 +84,7 @@ public class TabLayout extends HorizontalScrollView {
     private int mScrollableTabMinWidth;
     private OnTabSelectedListener mSelectedListener;
     private final ArrayList<OnTabSelectedListener> mSelectedListeners;
-    private C6546d mSelectedTab;
+    private d mSelectedTab;
     private boolean mSetupViewPagerImplicitly;
     int mTabGravity;
     int mTabMaxWidth;
@@ -98,7 +98,7 @@ public class TabLayout extends HorizontalScrollView {
     float mTabTextMultiLineSize;
     float mTabTextSize;
     private final Pools.Pool<TabView> mTabViewPool;
-    private final ArrayList<C6546d> mTabs;
+    private final ArrayList<d> mTabs;
     ViewPager mViewPager;
     boolean mViewPagerSmoothScroll;
     static final Interpolator LINEAR_INTERPOLATOR = new LinearInterpolator();
@@ -106,7 +106,7 @@ public class TabLayout extends HorizontalScrollView {
     static final Interpolator FAST_OUT_LINEAR_IN_INTERPOLATOR = new FastOutLinearInInterpolator();
     static final Interpolator LINEAR_OUT_SLOW_IN_INTERPOLATOR = new LinearOutSlowInInterpolator();
     static final Interpolator DECELERATE_INTERPOLATOR = new DecelerateInterpolator();
-    private static final Pools.Pool<C6546d> sTabPool = new Pools.SynchronizedPool(16);
+    private static final Pools.Pool<d> sTabPool = new Pools.SynchronizedPool(16);
 
     /* compiled from: Taobao */
     @Retention(RetentionPolicy.SOURCE)
@@ -118,17 +118,17 @@ public class TabLayout extends HorizontalScrollView {
     /* compiled from: Taobao */
     /* loaded from: classes12.dex */
     public interface OnTabClickListener {
-        void onTabClick(C6546d c6546d);
+        void onTabClick(d dVar);
     }
 
     /* compiled from: Taobao */
     /* loaded from: classes12.dex */
     public interface OnTabSelectedListener {
-        void onTabReselected(C6546d c6546d);
+        void onTabReselected(d dVar);
 
-        void onTabSelected(C6546d c6546d);
+        void onTabSelected(d dVar);
 
-        void onTabUnselected(C6546d c6546d);
+        void onTabUnselected(d dVar);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -150,15 +150,14 @@ public class TabLayout extends HorizontalScrollView {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.taobao.android.dinamicx.widget.viewpager.tab.view.TabLayout$SlidingTabStrip$a */
         /* loaded from: classes12.dex */
-        public class C6541a implements ValueAnimator.AnimatorUpdateListener {
+        public class a implements ValueAnimator.AnimatorUpdateListener {
             final /* synthetic */ int a;
             final /* synthetic */ int b;
             final /* synthetic */ int c;
             final /* synthetic */ int d;
 
-            C6541a(int i, int i2, int i3, int i4) {
+            a(int i, int i2, int i3, int i4) {
                 this.a = i;
                 this.b = i2;
                 this.c = i3;
@@ -168,18 +167,17 @@ public class TabLayout extends HorizontalScrollView {
             @Override // android.animation.ValueAnimator.AnimatorUpdateListener
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
                 float animatedFraction = valueAnimator.getAnimatedFraction();
-                SlidingTabStrip.this.setIndicatorPosition(C6548a.a(this.a, this.b, animatedFraction), C6548a.a(this.c, this.d, animatedFraction));
+                SlidingTabStrip.this.setIndicatorPosition(com.taobao.android.dinamicx.widget.viewpager.tab.view.a.a(this.a, this.b, animatedFraction), com.taobao.android.dinamicx.widget.viewpager.tab.view.a.a(this.c, this.d, animatedFraction));
             }
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.taobao.android.dinamicx.widget.viewpager.tab.view.TabLayout$SlidingTabStrip$b */
         /* loaded from: classes12.dex */
-        public class C6542b extends AnimatorListenerAdapter {
+        public class b extends AnimatorListenerAdapter {
             final /* synthetic */ int a;
 
-            C6542b(int i) {
+            b(int i) {
                 this.a = i;
             }
 
@@ -251,11 +249,11 @@ public class TabLayout extends HorizontalScrollView {
             }
             ValueAnimator valueAnimator2 = new ValueAnimator();
             this.mIndicatorAnimator = valueAnimator2;
-            valueAnimator2.setInterpolator(C6548a.b);
+            valueAnimator2.setInterpolator(com.taobao.android.dinamicx.widget.viewpager.tab.view.a.b);
             valueAnimator2.setDuration(i2);
             valueAnimator2.setFloatValues(0.0f, 1.0f);
-            valueAnimator2.addUpdateListener(new C6541a(i3, left, i4, right));
-            valueAnimator2.addListener(new C6542b(i));
+            valueAnimator2.addUpdateListener(new a(i3, left, i4, right));
+            valueAnimator2.addListener(new b(i));
             valueAnimator2.start();
         }
 
@@ -503,7 +501,7 @@ public class TabLayout extends HorizontalScrollView {
             }
             int i2 = this.c;
             boolean z = i2 == 0 || (i2 == 2 && this.b == 0);
-            C6546d tabAt = tabLayout.getTabAt(i);
+            d tabAt = tabLayout.getTabAt(i);
             if (tabAt != null) {
                 tabAt.p(false);
             }
@@ -520,7 +518,7 @@ public class TabLayout extends HorizontalScrollView {
         private View mCustomView;
         private int mDefaultMaxLines;
         private ImageView mIconView;
-        private C6546d mTab;
+        private d mTab;
         private TextView mTextView;
 
         public TabView(Context context) {
@@ -538,12 +536,12 @@ public class TabLayout extends HorizontalScrollView {
         }
 
         private void updateTextAndIcon(@Nullable TextView textView, @Nullable ImageView imageView) {
-            C6546d c6546d = this.mTab;
-            Drawable c = c6546d != null ? c6546d.c() : null;
-            C6546d c6546d2 = this.mTab;
-            CharSequence e = c6546d2 != null ? c6546d2.e() : null;
-            C6546d c6546d3 = this.mTab;
-            CharSequence a = c6546d3 != null ? c6546d3.a() : null;
+            d dVar = this.mTab;
+            Drawable c = dVar != null ? dVar.c() : null;
+            d dVar2 = this.mTab;
+            CharSequence e = dVar2 != null ? dVar2.e() : null;
+            d dVar3 = this.mTab;
+            CharSequence a = dVar3 != null ? dVar3.a() : null;
             int i = 0;
             if (imageView != null) {
                 if (c != null) {
@@ -581,7 +579,7 @@ public class TabLayout extends HorizontalScrollView {
             TooltipCompat.setTooltipText(this, z ? null : a);
         }
 
-        public C6546d getTab() {
+        public d getTab() {
             return this.mTab;
         }
 
@@ -678,16 +676,16 @@ public class TabLayout extends HorizontalScrollView {
             }
         }
 
-        void setTab(@Nullable C6546d c6546d) {
-            if (c6546d != this.mTab) {
-                this.mTab = c6546d;
+        void setTab(@Nullable d dVar) {
+            if (dVar != this.mTab) {
+                this.mTab = dVar;
                 update();
             }
         }
 
         final void update() {
-            C6546d c6546d = this.mTab;
-            View b = c6546d != null ? c6546d.b() : null;
+            d dVar = this.mTab;
+            View b = dVar != null ? dVar.b() : null;
             if (b != null) {
                 ViewParent parent = b.getParent();
                 if (parent != this) {
@@ -724,12 +722,12 @@ public class TabLayout extends HorizontalScrollView {
             boolean z = false;
             if (this.mCustomView == null) {
                 if (this.mIconView == null) {
-                    ImageView imageView2 = (ImageView) LayoutInflater.from(getContext()).inflate(R.C4818layout.design_layout_tab_icon, (ViewGroup) this, false);
+                    ImageView imageView2 = (ImageView) LayoutInflater.from(getContext()).inflate(R.layout.design_layout_tab_icon, (ViewGroup) this, false);
                     addView(imageView2, 0);
                     this.mIconView = imageView2;
                 }
                 if (this.mTextView == null) {
-                    TextView textView3 = (TextView) LayoutInflater.from(getContext()).inflate(R.C4818layout.design_layout_tab_text, (ViewGroup) this, false);
+                    TextView textView3 = (TextView) LayoutInflater.from(getContext()).inflate(R.layout.design_layout_tab_text, (ViewGroup) this, false);
                     addView(textView3);
                     this.mTextView = textView3;
                     this.mDefaultMaxLines = TextViewCompat.getMaxLines(textView3);
@@ -746,7 +744,7 @@ public class TabLayout extends HorizontalScrollView {
                     updateTextAndIcon(textView4, this.mCustomIconView);
                 }
             }
-            if (c6546d != null && c6546d.f()) {
+            if (dVar != null && dVar.f()) {
                 z = true;
             }
             setSelected(z);
@@ -755,10 +753,9 @@ public class TabLayout extends HorizontalScrollView {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.viewpager.tab.view.TabLayout$a */
     /* loaded from: classes12.dex */
-    public class C6543a implements ValueAnimator.AnimatorUpdateListener {
-        C6543a() {
+    public class a implements ValueAnimator.AnimatorUpdateListener {
+        a() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -769,12 +766,11 @@ public class TabLayout extends HorizontalScrollView {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.viewpager.tab.view.TabLayout$b */
     /* loaded from: classes11.dex */
-    public class C6544b implements ViewPager.OnAdapterChangeListener {
+    public class b implements ViewPager.OnAdapterChangeListener {
         private boolean a;
 
-        C6544b() {
+        b() {
         }
 
         void a(boolean z) {
@@ -792,10 +788,9 @@ public class TabLayout extends HorizontalScrollView {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.viewpager.tab.view.TabLayout$c */
     /* loaded from: classes12.dex */
-    public class C6545c extends DataSetObserver {
-        C6545c() {
+    public class c extends DataSetObserver {
+        c() {
         }
 
         @Override // android.database.DataSetObserver
@@ -810,9 +805,8 @@ public class TabLayout extends HorizontalScrollView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.viewpager.tab.view.TabLayout$d */
     /* loaded from: classes12.dex */
-    public static final class C6546d {
+    public static final class d {
         public static final int INVALID_POSITION = -1;
         private Drawable a;
         private CharSequence b;
@@ -823,7 +817,7 @@ public class TabLayout extends HorizontalScrollView {
         TabLayout g;
         TabView h;
 
-        C6546d() {
+        d() {
         }
 
         @Nullable
@@ -891,26 +885,26 @@ public class TabLayout extends HorizontalScrollView {
         }
 
         @NonNull
-        public C6546d k(@Nullable CharSequence charSequence) {
+        public d k(@Nullable CharSequence charSequence) {
             this.c = charSequence;
             r();
             return this;
         }
 
         @NonNull
-        public C6546d l(@LayoutRes int i) {
+        public d l(@LayoutRes int i) {
             return m(LayoutInflater.from(this.h.getContext()).inflate(i, (ViewGroup) this.h, false));
         }
 
         @NonNull
-        public C6546d m(@Nullable View view) {
+        public d m(@Nullable View view) {
             this.e = view;
             r();
             return this;
         }
 
         @NonNull
-        public C6546d n(@Nullable Drawable drawable) {
+        public d n(@Nullable Drawable drawable) {
             this.a = drawable;
             r();
             return this;
@@ -925,7 +919,7 @@ public class TabLayout extends HorizontalScrollView {
         }
 
         @NonNull
-        public C6546d q(@Nullable CharSequence charSequence) {
+        public d q(@Nullable CharSequence charSequence) {
             this.b = charSequence;
             r();
             return this;
@@ -940,32 +934,31 @@ public class TabLayout extends HorizontalScrollView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.viewpager.tab.view.TabLayout$e */
     /* loaded from: classes11.dex */
-    public static class C6547e implements OnTabSelectedListener {
+    public static class e implements OnTabSelectedListener {
         private final ViewPager a;
         private final boolean b;
 
-        public C6547e(ViewPager viewPager, boolean z) {
+        public e(ViewPager viewPager, boolean z) {
             this.a = viewPager;
             this.b = z;
         }
 
         @Override // com.taobao.android.dinamicx.widget.viewpager.tab.view.TabLayout.OnTabSelectedListener
-        public void onTabReselected(C6546d c6546d) {
+        public void onTabReselected(d dVar) {
         }
 
         @Override // com.taobao.android.dinamicx.widget.viewpager.tab.view.TabLayout.OnTabSelectedListener
-        public void onTabSelected(C6546d c6546d) {
+        public void onTabSelected(d dVar) {
             if (this.b) {
-                this.a.setCurrentItem(c6546d.d());
+                this.a.setCurrentItem(dVar.d());
             } else {
-                this.a.setCurrentItem(c6546d.d(), false);
+                this.a.setCurrentItem(dVar.d(), false);
             }
         }
 
         @Override // com.taobao.android.dinamicx.widget.viewpager.tab.view.TabLayout.OnTabSelectedListener
-        public void onTabUnselected(C6546d c6546d) {
+        public void onTabUnselected(d dVar) {
         }
     }
 
@@ -974,7 +967,7 @@ public class TabLayout extends HorizontalScrollView {
     }
 
     private void addTabFromItemView(@NonNull TabItem tabItem) {
-        C6546d newTab = newTab();
+        d newTab = newTab();
         CharSequence charSequence = tabItem.mText;
         if (charSequence != null) {
             newTab.q(charSequence);
@@ -993,8 +986,8 @@ public class TabLayout extends HorizontalScrollView {
         addTab(newTab);
     }
 
-    private void addTabView(C6546d c6546d) {
-        this.mTabStrip.addView(c6546d.h, c6546d.d(), createLayoutParamsForTabs());
+    private void addTabView(d dVar) {
+        this.mTabStrip.addView(dVar.h, dVar.d(), createLayoutParamsForTabs());
     }
 
     private void addViewInternal(View view) {
@@ -1048,9 +1041,9 @@ public class TabLayout extends HorizontalScrollView {
         return 0;
     }
 
-    private void configureTab(C6546d c6546d, int i) {
-        c6546d.o(i);
-        this.mTabs.add(i, c6546d);
+    private void configureTab(d dVar, int i) {
+        dVar.o(i);
+        this.mTabs.add(i, dVar);
         int size = this.mTabs.size();
         while (true) {
             i++;
@@ -1071,32 +1064,32 @@ public class TabLayout extends HorizontalScrollView {
         return layoutParams;
     }
 
-    private TabView createTabView(@NonNull C6546d c6546d) {
+    private TabView createTabView(@NonNull d dVar) {
         Pools.Pool<TabView> pool = this.mTabViewPool;
         TabView acquire = pool != null ? pool.acquire() : null;
         if (acquire == null) {
             acquire = new TabView(getContext());
         }
-        acquire.setTab(c6546d);
+        acquire.setTab(dVar);
         acquire.setFocusable(true);
         return acquire;
     }
 
-    private void dispatchTabReselected(@NonNull C6546d c6546d) {
+    private void dispatchTabReselected(@NonNull d dVar) {
         for (int size = this.mSelectedListeners.size() - 1; size >= 0; size--) {
-            this.mSelectedListeners.get(size).onTabReselected(c6546d);
+            this.mSelectedListeners.get(size).onTabReselected(dVar);
         }
     }
 
-    private void dispatchTabSelected(@NonNull C6546d c6546d) {
+    private void dispatchTabSelected(@NonNull d dVar) {
         for (int size = this.mSelectedListeners.size() - 1; size >= 0; size--) {
-            this.mSelectedListeners.get(size).onTabSelected(c6546d);
+            this.mSelectedListeners.get(size).onTabSelected(dVar);
         }
     }
 
-    private void dispatchTabUnselected(@NonNull C6546d c6546d) {
+    private void dispatchTabUnselected(@NonNull d dVar) {
         for (int size = this.mSelectedListeners.size() - 1; size >= 0; size--) {
-            this.mSelectedListeners.get(size).onTabUnselected(c6546d);
+            this.mSelectedListeners.get(size).onTabUnselected(dVar);
         }
     }
 
@@ -1104,9 +1097,9 @@ public class TabLayout extends HorizontalScrollView {
         if (this.mScrollAnimator == null) {
             ValueAnimator valueAnimator = new ValueAnimator();
             this.mScrollAnimator = valueAnimator;
-            valueAnimator.setInterpolator(C6548a.a);
+            valueAnimator.setInterpolator(com.taobao.android.dinamicx.widget.viewpager.tab.view.a.a);
             this.mScrollAnimator.setDuration(300L);
-            this.mScrollAnimator.addUpdateListener(new C6543a());
+            this.mScrollAnimator.addUpdateListener(new a());
         }
     }
 
@@ -1116,8 +1109,8 @@ public class TabLayout extends HorizontalScrollView {
         int i = 0;
         while (true) {
             if (i < size) {
-                C6546d c6546d = this.mTabs.get(i);
-                if (c6546d != null && c6546d.c() != null && !TextUtils.isEmpty(c6546d.e())) {
+                d dVar = this.mTabs.get(i);
+                if (dVar != null && dVar.c() != null && !TextUtils.isEmpty(dVar.e())) {
                     z = true;
                     break;
                 }
@@ -1200,8 +1193,8 @@ public class TabLayout extends HorizontalScrollView {
         this.mSelectedListeners.add(onTabSelectedListener);
     }
 
-    public void addTab(@NonNull C6546d c6546d) {
-        addTab(c6546d, this.mTabs.isEmpty());
+    public void addTab(@NonNull d dVar) {
+        addTab(dVar, this.mTabs.isEmpty());
     }
 
     @Override // android.widget.HorizontalScrollView, android.view.ViewGroup
@@ -1222,15 +1215,15 @@ public class TabLayout extends HorizontalScrollView {
     }
 
     public int getSelectedTabPosition() {
-        C6546d c6546d = this.mSelectedTab;
-        if (c6546d != null) {
-            return c6546d.d();
+        d dVar = this.mSelectedTab;
+        if (dVar != null) {
+            return dVar.d();
         }
         return -1;
     }
 
     @Nullable
-    public C6546d getTabAt(int i) {
+    public d getTabAt(int i) {
         if (i < 0 || i >= getTabCount()) {
             return null;
         }
@@ -1259,10 +1252,10 @@ public class TabLayout extends HorizontalScrollView {
     }
 
     @NonNull
-    public C6546d newTab() {
-        C6546d acquire = sTabPool.acquire();
+    public d newTab() {
+        d acquire = sTabPool.acquire();
         if (acquire == null) {
-            acquire = new C6546d();
+            acquire = new d();
         }
         acquire.g = this;
         acquire.h = createTabView(acquire);
@@ -1291,9 +1284,9 @@ public class TabLayout extends HorizontalScrollView {
 
     @Override // android.widget.HorizontalScrollView, android.widget.FrameLayout, android.view.ViewGroup, android.view.View
     protected void onLayout(boolean z, int i, int i2, int i3, int i4) {
-        C6546d c6546d;
+        d dVar;
         super.onLayout(z, i, i2, i3, i4);
-        if (this.mMode != 0 || (c6546d = this.mSelectedTab) == null || c6546d.d() <= 0) {
+        if (this.mMode != 0 || (dVar = this.mSelectedTab) == null || dVar.d() <= 0) {
             return;
         }
         selectTab(this.mSelectedTab);
@@ -1393,9 +1386,9 @@ public class TabLayout extends HorizontalScrollView {
         throw new UnsupportedOperationException("Method not decompiled: com.taobao.android.dinamicx.widget.viewpager.tab.view.TabLayout.onMeasure(int, int):void");
     }
 
-    void onTabClick(C6546d c6546d) {
+    void onTabClick(d dVar) {
         for (int i = 0; i < this.mOnTabClickListeners.size(); i++) {
-            this.mOnTabClickListeners.get(i).onTabClick(c6546d);
+            this.mOnTabClickListeners.get(i).onTabClick(dVar);
         }
     }
 
@@ -1412,7 +1405,7 @@ public class TabLayout extends HorizontalScrollView {
             if (viewPager == null || count <= 0 || (currentItem = viewPager.getCurrentItem()) == getSelectedTabPosition() || currentItem >= getTabCount()) {
                 return;
             }
-            C6546d tabAt = getTabAt(currentItem);
+            d tabAt = getTabAt(currentItem);
             if (tabAt != null) {
                 tabAt.p(false);
             }
@@ -1424,9 +1417,9 @@ public class TabLayout extends HorizontalScrollView {
         for (int childCount = this.mTabStrip.getChildCount() - 1; childCount >= 0; childCount--) {
             removeTabViewAt(childCount);
         }
-        Iterator<C6546d> it = this.mTabs.iterator();
+        Iterator<d> it = this.mTabs.iterator();
         while (it.hasNext()) {
-            C6546d next = it.next();
+            d next = it.next();
             it.remove();
             next.i();
             sTabPool.release(next);
@@ -1442,19 +1435,19 @@ public class TabLayout extends HorizontalScrollView {
         this.mSelectedListeners.remove(onTabSelectedListener);
     }
 
-    public void removeTab(C6546d c6546d) {
-        if (c6546d.g == this) {
-            removeTabAt(c6546d.d());
+    public void removeTab(d dVar) {
+        if (dVar.g == this) {
+            removeTabAt(dVar.d());
             return;
         }
         throw new IllegalArgumentException("Tab does not belong to this TabLayout.");
     }
 
     public void removeTabAt(int i) {
-        C6546d c6546d = this.mSelectedTab;
-        int d = c6546d != null ? c6546d.d() : 0;
+        d dVar = this.mSelectedTab;
+        int d2 = dVar != null ? dVar.d() : 0;
         removeTabViewAt(i);
-        C6546d remove = this.mTabs.remove(i);
+        d remove = this.mTabs.remove(i);
         if (remove != null) {
             remove.i();
             sTabPool.release(remove);
@@ -1463,17 +1456,17 @@ public class TabLayout extends HorizontalScrollView {
         for (int i2 = i; i2 < size; i2++) {
             this.mTabs.get(i2).o(i2);
         }
-        if (d == i) {
-            C6546d c6546d2 = this.mTabs.isEmpty() ? null : this.mTabs.get(Math.max(0, i - 1));
-            if (c6546d2 != null) {
-                c6546d2.p(false);
+        if (d2 == i) {
+            d dVar2 = this.mTabs.isEmpty() ? null : this.mTabs.get(Math.max(0, i - 1));
+            if (dVar2 != null) {
+                dVar2.p(false);
             }
-            selectTab(c6546d2);
+            selectTab(dVar2);
         }
     }
 
-    public void selectTab(C6546d c6546d) {
-        selectTab(c6546d, true);
+    public void selectTab(d dVar) {
+        selectTab(dVar, true);
     }
 
     void setPagerAdapter(@Nullable PagerAdapter pagerAdapter, boolean z) {
@@ -1485,7 +1478,7 @@ public class TabLayout extends HorizontalScrollView {
         this.mPagerAdapter = pagerAdapter;
         if (z && pagerAdapter != null) {
             if (this.mPagerAdapterObserver == null) {
-                this.mPagerAdapterObserver = new C6545c();
+                this.mPagerAdapterObserver = new c();
             }
             pagerAdapter.registerDataSetObserver(this.mPagerAdapterObserver);
         }
@@ -1501,8 +1494,8 @@ public class TabLayout extends HorizontalScrollView {
         setScrollPosition(i, f, z, true);
     }
 
-    public void setSelectedTab(C6546d c6546d) {
-        this.mSelectedTab = c6546d;
+    public void setSelectedTab(d dVar) {
+        this.mSelectedTab = dVar;
     }
 
     public void setSelectedTabIndicatorBottomGap(int i) {
@@ -1583,8 +1576,8 @@ public class TabLayout extends HorizontalScrollView {
         this(context, attributeSet, 0);
     }
 
-    public void addTab(@NonNull C6546d c6546d, int i) {
-        addTab(c6546d, i, this.mTabs.isEmpty());
+    public void addTab(@NonNull d dVar, int i) {
+        addTab(dVar, i, this.mTabs.isEmpty());
     }
 
     @Override // android.widget.HorizontalScrollView, android.view.ViewGroup
@@ -1597,33 +1590,33 @@ public class TabLayout extends HorizontalScrollView {
         return generateDefaultLayoutParams();
     }
 
-    void selectTab(C6546d c6546d, boolean z) {
-        C6546d c6546d2 = this.mSelectedTab;
-        if (c6546d2 == c6546d) {
-            if (c6546d2 != null) {
-                dispatchTabReselected(c6546d);
-                animateToTab(c6546d.d());
+    void selectTab(d dVar, boolean z) {
+        d dVar2 = this.mSelectedTab;
+        if (dVar2 == dVar) {
+            if (dVar2 != null) {
+                dispatchTabReselected(dVar);
+                animateToTab(dVar.d());
                 return;
             }
             return;
         }
-        int d = c6546d != null ? c6546d.d() : -1;
+        int d2 = dVar != null ? dVar.d() : -1;
         if (z) {
-            if ((c6546d2 == null || c6546d2.d() == -1) && d != -1) {
-                setScrollPosition(d, 0.0f, true);
+            if ((dVar2 == null || dVar2.d() == -1) && d2 != -1) {
+                setScrollPosition(d2, 0.0f, true);
             } else {
-                animateToTab(d);
+                animateToTab(d2);
             }
-            if (d != -1) {
-                setSelectedTabView(d);
+            if (d2 != -1) {
+                setSelectedTabView(d2);
             }
         }
-        if (c6546d2 != null) {
-            dispatchTabUnselected(c6546d2);
+        if (dVar2 != null) {
+            dispatchTabUnselected(dVar2);
         }
-        this.mSelectedTab = c6546d;
-        if (c6546d != null) {
-            dispatchTabSelected(c6546d);
+        this.mSelectedTab = dVar;
+        if (dVar != null) {
+            dispatchTabSelected(dVar);
         }
     }
 
@@ -1646,7 +1639,7 @@ public class TabLayout extends HorizontalScrollView {
         this.mOnTabClickListeners = new ArrayList<>();
         this.mSelectedListeners = new ArrayList<>();
         this.mTabViewPool = new Pools.SimplePool(12);
-        C6549b.a(context);
+        com.taobao.android.dinamicx.widget.viewpager.tab.view.b.a(context);
         setHorizontalScrollBarEnabled(false);
         SlidingTabStrip slidingTabStrip = new SlidingTabStrip(context);
         this.mTabStrip = slidingTabStrip;
@@ -1664,9 +1657,9 @@ public class TabLayout extends HorizontalScrollView {
             if (tabLayoutOnPageChangeListener != null) {
                 viewPager2.removeOnPageChangeListener(tabLayoutOnPageChangeListener);
             }
-            C6544b c6544b = this.mAdapterChangeListener;
-            if (c6544b != null) {
-                this.mViewPager.removeOnAdapterChangeListener(c6544b);
+            b bVar = this.mAdapterChangeListener;
+            if (bVar != null) {
+                this.mViewPager.removeOnAdapterChangeListener(bVar);
             }
         }
         OnTabSelectedListener onTabSelectedListener = this.mCurrentVpSelectedListener;
@@ -1681,15 +1674,15 @@ public class TabLayout extends HorizontalScrollView {
             }
             this.mPageChangeListener.a();
             viewPager.addOnPageChangeListener(this.mPageChangeListener);
-            C6547e c6547e = new C6547e(viewPager, this.mViewPagerSmoothScroll);
-            this.mCurrentVpSelectedListener = c6547e;
-            addOnTabSelectedListener(c6547e);
+            e eVar = new e(viewPager, this.mViewPagerSmoothScroll);
+            this.mCurrentVpSelectedListener = eVar;
+            addOnTabSelectedListener(eVar);
             PagerAdapter adapter = viewPager.getAdapter();
             if (adapter != null) {
                 setPagerAdapter(adapter, z);
             }
             if (this.mAdapterChangeListener == null) {
-                this.mAdapterChangeListener = new C6544b();
+                this.mAdapterChangeListener = new b();
             }
             this.mAdapterChangeListener.a(z);
             viewPager.addOnAdapterChangeListener(this.mAdapterChangeListener);
@@ -1701,8 +1694,8 @@ public class TabLayout extends HorizontalScrollView {
         this.mSetupViewPagerImplicitly = z2;
     }
 
-    public void addTab(@NonNull C6546d c6546d, boolean z) {
-        addTab(c6546d, this.mTabs.size(), z);
+    public void addTab(@NonNull d dVar, boolean z) {
+        addTab(dVar, this.mTabs.size(), z);
     }
 
     @Override // android.widget.HorizontalScrollView, android.view.ViewGroup, android.view.ViewManager
@@ -1739,12 +1732,12 @@ public class TabLayout extends HorizontalScrollView {
         }
     }
 
-    public void addTab(@NonNull C6546d c6546d, int i, boolean z) {
-        if (c6546d.g == this) {
-            configureTab(c6546d, i);
-            addTabView(c6546d);
+    public void addTab(@NonNull d dVar, int i, boolean z) {
+        if (dVar.g == this) {
+            configureTab(dVar, i);
+            addTabView(dVar);
             if (z) {
-                c6546d.j(false);
+                dVar.j(false);
                 return;
             }
             return;

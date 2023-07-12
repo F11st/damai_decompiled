@@ -8,14 +8,13 @@ import java.util.Map;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class l13 implements IApmAdapterFactory {
-    private IWXApmAdapter a = new C9398a(this);
+    private IWXApmAdapter a = new a(this);
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.l13$a */
     /* loaded from: classes11.dex */
-    public class C9398a implements IWXApmAdapter {
-        C9398a(l13 l13Var) {
+    public class a implements IWXApmAdapter {
+        a(l13 l13Var) {
         }
 
         @Override // com.taobao.monitor.performance.IWXApmAdapter
@@ -65,12 +64,11 @@ public class l13 implements IApmAdapterFactory {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.l13$b */
     /* loaded from: classes11.dex */
-    public static class C9399b implements IWXApmAdapter {
+    public static class b implements IWXApmAdapter {
         private final IWXApmAdapter a;
 
-        /* synthetic */ C9399b(IWXApmAdapter iWXApmAdapter, C9398a c9398a) {
+        /* synthetic */ b(IWXApmAdapter iWXApmAdapter, a aVar) {
             this(iWXApmAdapter);
         }
 
@@ -124,7 +122,7 @@ public class l13 implements IApmAdapterFactory {
             this.a.onStop();
         }
 
-        private C9399b(IWXApmAdapter iWXApmAdapter) {
+        private b(IWXApmAdapter iWXApmAdapter) {
             this.a = iWXApmAdapter;
         }
 
@@ -141,6 +139,6 @@ public class l13 implements IApmAdapterFactory {
 
     @Override // com.taobao.monitor.performance.IApmAdapterFactory
     public IWXApmAdapter createApmAdapterByType(String str) {
-        return new C9399b(jd0.f ? new n13(str) : this.a, null);
+        return new b(jd0.f ? new n13(str) : this.a, null);
     }
 }

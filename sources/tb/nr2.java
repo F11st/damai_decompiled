@@ -17,14 +17,13 @@ import org.jetbrains.annotations.NotNull;
 public final class nr2 implements Collection<mr2>, KMappedMarker {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.nr2$a */
     /* loaded from: classes3.dex */
-    private static final class C9479a implements Iterator<mr2>, KMappedMarker {
+    private static final class a implements Iterator<mr2>, KMappedMarker {
         @NotNull
         private final byte[] a;
         private int b;
 
-        public C9479a(@NotNull byte[] bArr) {
+        public a(@NotNull byte[] bArr) {
             b41.i(bArr, "array");
             this.a = bArr;
         }
@@ -57,6 +56,6 @@ public final class nr2 implements Collection<mr2>, KMappedMarker {
 
     @NotNull
     public static Iterator<mr2> a(byte[] bArr) {
-        return new C9479a(bArr);
+        return new a(bArr);
     }
 }

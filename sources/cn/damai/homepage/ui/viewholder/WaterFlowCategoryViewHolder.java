@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
 import cn.damai.homepage.bean.WaterFlowRecommendItem;
@@ -45,12 +45,11 @@ public class WaterFlowCategoryViewHolder extends RecyclerView.ViewHolder {
     private View.OnClickListener m;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.viewholder.WaterFlowCategoryViewHolder$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1191a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1191a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -72,7 +71,7 @@ public class WaterFlowCategoryViewHolder extends RecyclerView.ViewHolder {
             } else {
                 str = id == R$id.homepage_waterflow_category_fourth_keyword_layout ? waterFlowRecommendItem.hotwords.get(3) : "";
             }
-            C0529c.e().x(py0.I().N(WaterFlowCategoryViewHolder.this.a, str, "", waterFlowRecommendItem.alg, waterFlowRecommendItem.scm, waterFlowRecommendItem.cardType, "", "", "", waterFlowRecommendItem.pageNum, waterFlowRecommendItem.index, "", ""));
+            c.e().x(py0.I().N(WaterFlowCategoryViewHolder.this.a, str, "", waterFlowRecommendItem.alg, waterFlowRecommendItem.scm, waterFlowRecommendItem.cardType, "", "", "", waterFlowRecommendItem.pageNum, waterFlowRecommendItem.index, "", ""));
             Bundle bundle = new Bundle();
             bundle.putString("autowords", str);
             bundle.putString(OneArchConstants.LayoutKey.KEY_WORDS, str);
@@ -84,7 +83,7 @@ public class WaterFlowCategoryViewHolder extends RecyclerView.ViewHolder {
 
     public WaterFlowCategoryViewHolder(String str, Context context) {
         super(LayoutInflater.from(context).inflate(R$layout.homepage_waterflow_recommend_category, (ViewGroup) null));
-        this.m = new View$OnClickListenerC1191a();
+        this.m = new a();
         this.b = context;
         this.a = str;
         this.c = (TextView) this.itemView.findViewById(R$id.homepage_waterflow_category_title);

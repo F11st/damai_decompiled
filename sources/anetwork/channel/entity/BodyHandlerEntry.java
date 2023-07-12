@@ -15,20 +15,19 @@ import tb.je;
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
 public class BodyHandlerEntry implements BodyEntry {
-    public static final Parcelable.Creator<BodyHandlerEntry> CREATOR = new C0244a();
+    public static final Parcelable.Creator<BodyHandlerEntry> CREATOR = new a();
     ParcelableBodyHandler bodyHandler;
 
     /* compiled from: Taobao */
-    /* renamed from: anetwork.channel.entity.BodyHandlerEntry$a */
     /* loaded from: classes.dex */
-    static class C0244a implements Parcelable.Creator<BodyHandlerEntry> {
-        C0244a() {
+    static class a implements Parcelable.Creator<BodyHandlerEntry> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
         public BodyHandlerEntry createFromParcel(Parcel parcel) {
-            BodyHandlerEntry bodyHandlerEntry = new BodyHandlerEntry((C0244a) null);
+            BodyHandlerEntry bodyHandlerEntry = new BodyHandlerEntry((a) null);
             bodyHandlerEntry.bodyHandler = ParcelableBodyHandler.Stub.asInterface(parcel.readStrongBinder());
             return bodyHandlerEntry;
         }
@@ -40,7 +39,7 @@ public class BodyHandlerEntry implements BodyEntry {
         }
     }
 
-    /* synthetic */ BodyHandlerEntry(C0244a c0244a) {
+    /* synthetic */ BodyHandlerEntry(a aVar) {
         this();
     }
 

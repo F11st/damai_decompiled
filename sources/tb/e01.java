@@ -1,7 +1,7 @@
 package tb;
 
 import android.text.TextUtils;
-import com.taobao.android.dinamicx.C6368e;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import com.taobao.android.dinamicx.template.download.DXTemplateItem;
 import com.taobao.android.dinamicx.template.download.IDXDownloader;
@@ -19,12 +19,12 @@ public class e01 implements IDXDownloader {
         if (TextUtils.isEmpty(str)) {
             s00.e(str + "下载链接为空");
             try {
-                C6368e c6368e = new C6368e(str2);
-                C6368e.C6369a c6369a = new C6368e.C6369a("Downloader", "Downloader_download", C6368e.DX_TEMPLATE_DOWNLOAD_ERROR_60023);
-                c6369a.e = "下载链接为空" + str;
-                c6368e.b = dXTemplateItem;
-                c6368e.c.add(c6369a);
-                DXAppMonitor.n(c6368e);
+                com.taobao.android.dinamicx.e eVar = new com.taobao.android.dinamicx.e(str2);
+                e.a aVar = new e.a("Downloader", "Downloader_download", com.taobao.android.dinamicx.e.DX_TEMPLATE_DOWNLOAD_ERROR_60023);
+                aVar.e = "下载链接为空" + str;
+                eVar.b = dXTemplateItem;
+                eVar.c.add(aVar);
+                DXAppMonitor.n(eVar);
             } catch (Throwable th) {
                 ry.b(th);
             }
@@ -49,12 +49,12 @@ public class e01 implements IDXDownloader {
             }
         } catch (IOException e) {
             try {
-                C6368e c6368e2 = new C6368e(str2);
-                C6368e.C6369a c6369a2 = new C6368e.C6369a("Downloader", "Downloader_download", C6368e.DX_TEMPLATE_DOWNLOAD_ERROR_60024);
-                c6369a2.e = "url: " + str + " stack: " + ry.a(e);
-                c6368e2.b = dXTemplateItem;
-                c6368e2.c.add(c6369a2);
-                DXAppMonitor.n(c6368e2);
+                com.taobao.android.dinamicx.e eVar2 = new com.taobao.android.dinamicx.e(str2);
+                e.a aVar2 = new e.a("Downloader", "Downloader_download", com.taobao.android.dinamicx.e.DX_TEMPLATE_DOWNLOAD_ERROR_60024);
+                aVar2.e = "url: " + str + " stack: " + ry.a(e);
+                eVar2.b = dXTemplateItem;
+                eVar2.c.add(aVar2);
+                DXAppMonitor.n(eVar2);
             } catch (Throwable th2) {
                 ry.b(th2);
             }

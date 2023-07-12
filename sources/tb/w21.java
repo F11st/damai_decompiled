@@ -10,7 +10,7 @@ import java.net.URL;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class w21 {
-    public C9613qq a;
+    public qq a;
     public id2 b;
     public URL c;
     public File d;
@@ -18,7 +18,7 @@ public class w21 {
 
     public w21(id2 id2Var) {
         this.b = id2Var;
-        this.a = new C9613qq(id2Var);
+        this.a = new qq(id2Var);
     }
 
     public int a() {

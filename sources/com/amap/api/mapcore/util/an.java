@@ -10,7 +10,7 @@ import android.view.ViewConfiguration;
 /* loaded from: classes10.dex */
 public class an {
     private final Context a;
-    private final InterfaceC4475a b;
+    private final a b;
     private boolean c;
     private MotionEvent d;
     private MotionEvent e;
@@ -38,9 +38,8 @@ public class an {
     private int A = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.an$a */
     /* loaded from: classes10.dex */
-    public interface InterfaceC4475a {
+    public interface a {
         boolean a(an anVar);
 
         boolean b(an anVar);
@@ -48,10 +47,10 @@ public class an {
         void c(an anVar);
     }
 
-    public an(Context context, InterfaceC4475a interfaceC4475a) {
+    public an(Context context, a aVar) {
         ViewConfiguration viewConfiguration = ViewConfiguration.get(context);
         this.a = context;
-        this.b = interfaceC4475a;
+        this.b = aVar;
         this.r = viewConfiguration.getScaledEdgeSlop();
     }
 
@@ -182,12 +181,12 @@ public class an {
     }
 
     public boolean a(MotionEvent motionEvent) {
-        int a;
         int a2;
+        int a3;
         int i;
         int i2;
         int i3;
-        int a3;
+        int a4;
         int action = motionEvent.getAction() & 255;
         if (action == 0) {
             l();
@@ -239,10 +238,10 @@ public class an {
                 if (pointerCount > 2) {
                     int i8 = this.w;
                     if (pointerId == i8) {
-                        int a4 = a(motionEvent, this.x, actionIndex);
-                        if (a4 >= 0) {
+                        int a5 = a(motionEvent, this.x, actionIndex);
+                        if (a5 >= 0) {
                             this.b.c(this);
-                            this.w = motionEvent.getPointerId(a4);
+                            this.w = motionEvent.getPointerId(a5);
                             this.y = true;
                             this.d = MotionEvent.obtain(motionEvent);
                             b(motionEvent);
@@ -257,10 +256,10 @@ public class an {
                         b(motionEvent);
                     } else {
                         if (pointerId == this.x) {
-                            int a5 = a(motionEvent, i8, actionIndex);
-                            if (a5 >= 0) {
+                            int a6 = a(motionEvent, i8, actionIndex);
+                            if (a6 >= 0) {
                                 this.b.c(this);
-                                this.x = motionEvent.getPointerId(a5);
+                                this.x = motionEvent.getPointerId(a6);
                                 this.y = false;
                                 this.d = MotionEvent.obtain(motionEvent);
                                 b(motionEvent);
@@ -304,12 +303,12 @@ public class an {
                     if (pointerCount2 > 2) {
                         int i10 = this.w;
                         if (pointerId2 == i10) {
-                            int a6 = a(motionEvent, this.x, actionIndex2);
-                            if (a6 >= 0) {
-                                this.w = motionEvent.getPointerId(a6);
+                            int a7 = a(motionEvent, this.x, actionIndex2);
+                            if (a7 >= 0) {
+                                this.w = motionEvent.getPointerId(a7);
                             }
-                        } else if (pointerId2 == this.x && (a3 = a(motionEvent, i10, actionIndex2)) >= 0) {
-                            this.x = motionEvent.getPointerId(a3);
+                        } else if (pointerId2 == this.x && (a4 = a(motionEvent, i10, actionIndex2)) >= 0) {
+                            this.x = motionEvent.getPointerId(a4);
                         }
                     } else {
                         int i11 = this.w;
@@ -371,12 +370,12 @@ public class an {
                 float f3 = this.r;
                 float f4 = this.s;
                 float f5 = this.t;
-                float a7 = a(motionEvent, i2);
+                float a8 = a(motionEvent, i2);
                 float b = b(motionEvent, i2);
-                float a8 = a(motionEvent, i);
+                float a9 = a(motionEvent, i);
                 float b2 = b(motionEvent, i);
-                boolean z2 = a7 < f3 || b < f3 || a7 > f4 || b > f5;
-                boolean z3 = a8 < f3 || b2 < f3 || a8 > f4 || b2 > f5;
+                boolean z2 = a8 < f3 || b < f3 || a8 > f4 || b > f5;
+                boolean z3 = a9 < f3 || b2 < f3 || a9 > f4 || b2 > f5;
                 if (z2 && z3) {
                     this.f = -1.0f;
                     this.g = -1.0f;
@@ -400,24 +399,24 @@ public class an {
             float f8 = this.t;
             int findPointerIndex4 = motionEvent.findPointerIndex(this.w);
             int findPointerIndex5 = motionEvent.findPointerIndex(this.x);
-            float a9 = a(motionEvent, findPointerIndex4);
+            float a10 = a(motionEvent, findPointerIndex4);
             float b3 = b(motionEvent, findPointerIndex4);
-            float a10 = a(motionEvent, findPointerIndex5);
+            float a11 = a(motionEvent, findPointerIndex5);
             float b4 = b(motionEvent, findPointerIndex5);
-            boolean z4 = a9 < f6 || b3 < f6 || a9 > f7 || b3 > f8;
-            boolean z5 = a10 < f6 || b4 < f6 || a10 > f7 || b4 > f8;
-            if (z4 && (a2 = a(motionEvent, this.x, findPointerIndex4)) >= 0) {
-                this.w = motionEvent.getPointerId(a2);
-                a(motionEvent, a2);
-                b(motionEvent, a2);
-                findPointerIndex4 = a2;
+            boolean z4 = a10 < f6 || b3 < f6 || a10 > f7 || b3 > f8;
+            boolean z5 = a11 < f6 || b4 < f6 || a11 > f7 || b4 > f8;
+            if (z4 && (a3 = a(motionEvent, this.x, findPointerIndex4)) >= 0) {
+                this.w = motionEvent.getPointerId(a3);
+                a(motionEvent, a3);
+                b(motionEvent, a3);
+                findPointerIndex4 = a3;
                 z4 = false;
             }
-            if (z5 && (a = a(motionEvent, this.w, findPointerIndex5)) >= 0) {
-                this.x = motionEvent.getPointerId(a);
-                a(motionEvent, a);
-                b(motionEvent, a);
-                findPointerIndex5 = a;
+            if (z5 && (a2 = a(motionEvent, this.w, findPointerIndex5)) >= 0) {
+                this.x = motionEvent.getPointerId(a2);
+                a(motionEvent, a2);
+                b(motionEvent, a2);
+                findPointerIndex5 = a2;
                 z5 = false;
             }
             if (z4 && z5) {
@@ -449,9 +448,9 @@ public class an {
                 float f = this.r;
                 float f2 = this.s;
                 float f3 = this.t;
-                float a = a(motionEvent, i3);
+                float a2 = a(motionEvent, i3);
                 float b = b(motionEvent, i3);
-                if (a >= f && b >= f && a <= f2 && b <= f3) {
+                if (a2 >= f && b >= f && a2 <= f2 && b <= f3) {
                     return i3;
                 }
             }

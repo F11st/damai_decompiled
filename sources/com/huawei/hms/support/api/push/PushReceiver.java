@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import com.huawei.hms.aaid.constant.ErrorEnum;
 import com.huawei.hms.adapter.internal.CommonCode;
-import com.huawei.hms.push.AbstractC5698s;
-import com.huawei.hms.push.AbstractC5704w;
-import com.huawei.hms.push.C5687h;
-import com.huawei.hms.push.C5703v;
 import com.huawei.hms.push.constant.RemoteMessageConst;
+import com.huawei.hms.push.h;
+import com.huawei.hms.push.s;
 import com.huawei.hms.push.utils.JsonUtil;
+import com.huawei.hms.push.v;
+import com.huawei.hms.push.w;
 import com.huawei.hms.support.log.HMSLog;
 import com.huawei.hms.utils.ResourceLoaderUtil;
 import java.util.concurrent.RejectedExecutionException;
@@ -25,9 +25,8 @@ public final class PushReceiver extends BroadcastReceiver {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.support.api.push.PushReceiver$a */
     /* loaded from: classes10.dex */
-    public static class RunnableC5720a implements Runnable {
+    public static class a implements Runnable {
         public Context a;
         public Intent b;
 
@@ -56,11 +55,11 @@ public final class PushReceiver extends BroadcastReceiver {
                     bundle.putString("message_type", "received_message");
                     bundle.putString("message_id", this.b.getStringExtra("msgIdStr"));
                     bundle.putByteArray(RemoteMessageConst.MSGBODY, this.b.getByteArrayExtra("msg_data"));
-                    bundle.putString(RemoteMessageConst.DEVICE_TOKEN, AbstractC5704w.a(this.b.getByteArrayExtra(RemoteMessageConst.DEVICE_TOKEN)));
+                    bundle.putString(RemoteMessageConst.DEVICE_TOKEN, w.a(this.b.getByteArrayExtra(RemoteMessageConst.DEVICE_TOKEN)));
                     bundle.putInt(RemoteMessageConst.INPUT_TYPE, 1);
                     bundle.putString("message_proxy_type", this.b.getStringExtra("message_proxy_type"));
                 }
-                if (new C5687h().a(this.a, bundle, intent)) {
+                if (new h().a(this.a, bundle, intent)) {
                     StringBuilder sb = new StringBuilder();
                     sb.append("receive ");
                     sb.append(this.b.getAction());
@@ -78,7 +77,7 @@ public final class PushReceiver extends BroadcastReceiver {
             }
         }
 
-        public RunnableC5720a(Context context, Intent intent) {
+        public a(Context context, Intent intent) {
             this.a = context;
             this.b = intent;
         }
@@ -86,9 +85,8 @@ public final class PushReceiver extends BroadcastReceiver {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.support.api.push.PushReceiver$b */
     /* loaded from: classes10.dex */
-    public static class RunnableC5721b implements Runnable {
+    public static class b implements Runnable {
         public Context a;
         public Intent b;
 
@@ -105,12 +103,12 @@ public final class PushReceiver extends BroadcastReceiver {
                     intent.setPackage(this.b.getPackage());
                     Bundle bundle = new Bundle();
                     bundle.putString("message_type", "new_token");
-                    bundle.putString(RemoteMessageConst.DEVICE_TOKEN, AbstractC5704w.a(byteArrayExtra));
+                    bundle.putString(RemoteMessageConst.DEVICE_TOKEN, w.a(byteArrayExtra));
                     bundle.putString(CommonCode.MapKey.TRANSACTION_ID, this.b.getStringExtra(CommonCode.MapKey.TRANSACTION_ID));
                     bundle.putString("subjectId", this.b.getStringExtra("subjectId"));
                     bundle.putInt("error", this.b.getIntExtra("error", ErrorEnum.SUCCESS.getInternalCode()));
                     bundle.putString("belongId", this.b.getStringExtra("belongId"));
-                    if (new C5687h().a(this.a, bundle, intent)) {
+                    if (new h().a(this.a, bundle, intent)) {
                         return;
                     }
                     StringBuilder sb2 = new StringBuilder();
@@ -128,7 +126,7 @@ public final class PushReceiver extends BroadcastReceiver {
             }
         }
 
-        public RunnableC5721b(Context context, Intent intent) {
+        public b(Context context, Intent intent) {
             this.a = context;
             this.b = intent;
         }
@@ -137,7 +135,7 @@ public final class PushReceiver extends BroadcastReceiver {
     public final void b(Context context, Intent intent) {
         try {
             if (intent.hasExtra(RemoteMessageConst.DEVICE_TOKEN)) {
-                C5703v.a().execute(new RunnableC5721b(context, intent));
+                v.a().execute(new b(context, intent));
             } else {
                 HMSLog.i("PushReceiver", "This message dose not sent by hwpush.");
             }
@@ -175,7 +173,7 @@ public final class PushReceiver extends BroadcastReceiver {
     public final void a(Context context, Intent intent) {
         try {
             if (intent.hasExtra("msg_data")) {
-                C5703v.a().execute(new RunnableC5720a(context, intent));
+                v.a().execute(new a(context, intent));
             } else {
                 HMSLog.i("PushReceiver", "This push message dose not sent by hwpush.");
             }
@@ -195,7 +193,7 @@ public final class PushReceiver extends BroadcastReceiver {
 
     public static JSONObject a(byte[] bArr) {
         try {
-            return new JSONObject(AbstractC5704w.a(bArr));
+            return new JSONObject(w.a(bArr));
         } catch (JSONException unused) {
             HMSLog.w("PushReceiver", "JSONException:parse message body failed.");
             return null;
@@ -203,11 +201,11 @@ public final class PushReceiver extends BroadcastReceiver {
     }
 
     public static JSONObject b(Intent intent) throws RuntimeException {
-        JSONObject a = a(intent.getByteArrayExtra("msg_data"));
-        JSONObject a2 = a(a);
-        String string = JsonUtil.getString(a2, "data", null);
-        if (AbstractC5698s.a(a2, b(a2), string)) {
-            return a;
+        JSONObject a2 = a(intent.getByteArrayExtra("msg_data"));
+        JSONObject a3 = a(a2);
+        String string = JsonUtil.getString(a3, "data", null);
+        if (s.a(a3, b(a3), string)) {
+            return a2;
         }
         if (TextUtils.isEmpty(string)) {
             return null;

@@ -53,12 +53,11 @@ public class WaterFlowThemeViewHolder extends RecyclerView.ViewHolder {
     private int[] r;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.viewholder.WaterFlowThemeViewHolder$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1202a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1202a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -80,7 +79,7 @@ public class WaterFlowThemeViewHolder extends RecyclerView.ViewHolder {
 
     public WaterFlowThemeViewHolder(String str, Context context) {
         super(LayoutInflater.from(context).inflate(R$layout.homepage_waterflow_recommend_theme, (ViewGroup) null));
-        this.q = new View$OnClickListenerC1202a();
+        this.q = new a();
         this.r = new int[]{Color.parseColor("#00000000"), Color.parseColor("#0a000000"), Color.parseColor("#1c000000"), Color.parseColor("#35000000"), Color.parseColor("#54000000"), Color.parseColor("#75000000"), Color.parseColor("#99000000"), Color.parseColor("#bc000000"), Color.parseColor("#dd000000"), Color.parseColor("#ff000000")};
         this.j = str;
         this.f = context;
@@ -150,9 +149,9 @@ public class WaterFlowThemeViewHolder extends RecyclerView.ViewHolder {
                     this.c.setText(ih2.b(context, R$drawable.icon_theme_title_prefix, this.m.name));
                 }
                 ThemeBean themeBean2 = this.m;
-                String a = ih2.a(themeBean2.contentCount, themeBean2.ipvuv);
+                String a2 = ih2.a(themeBean2.contentCount, themeBean2.ipvuv);
                 this.d.setTextColor(Color.parseColor("#99FFFFFF"));
-                this.d.setText(a);
+                this.d.setText(a2);
                 this.e.setVisibility(this.m.hasPrize() ? 0 : 8);
                 py0 I = py0.I();
                 View view = this.itemView;

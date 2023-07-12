@@ -13,19 +13,18 @@ import tb.wt2;
 /* loaded from: classes.dex */
 public final class Stretch {
     @NotNull
-    public static final C0256a Companion = new C0256a(null);
+    public static final a Companion = new a(null);
     private static volatile boolean didInit;
     private static volatile boolean initing;
     private static volatile long ptr;
 
     /* compiled from: Taobao */
-    /* renamed from: app.visly.stretch.Stretch$a */
     /* loaded from: classes.dex */
-    public static final class C0256a {
-        private C0256a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C0256a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -44,10 +43,10 @@ public final class Stretch {
             }
             synchronized (Stretch.class) {
                 if (!Stretch.didInit && !Stretch.initing) {
-                    C0256a c0256a = Stretch.Companion;
+                    a aVar = Stretch.Companion;
                     Stretch.initing = true;
                     System.loadLibrary("stretch");
-                    c0256a.d(c0256a.c());
+                    aVar.d(aVar.c());
                     Stretch.didInit = true;
                     Stretch.initing = false;
                     wt2 wt2Var = wt2.INSTANCE;

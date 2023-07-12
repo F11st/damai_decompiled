@@ -97,6 +97,6 @@ public final class t1 {
     }
 
     private static boolean g(Context context) {
-        return C5861o.a0(context) == 0;
+        return o.a0(context) == 0;
     }
 }

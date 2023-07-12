@@ -1,6 +1,5 @@
 package tb;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
@@ -11,9 +10,9 @@ import io.reactivex.internal.util.ConnectConsumer;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public abstract class an<T> extends AbstractC8147b<T> {
+public abstract class an<T> extends io.reactivex.b<T> {
     @NonNull
-    public AbstractC8147b<T> autoConnect() {
+    public io.reactivex.b<T> autoConnect() {
         return autoConnect(1);
     }
 
@@ -26,17 +25,17 @@ public abstract class an<T> extends AbstractC8147b<T> {
     public abstract void connect(@NonNull Consumer<? super Disposable> consumer);
 
     @NonNull
-    public AbstractC8147b<T> refCount() {
+    public io.reactivex.b<T> refCount() {
         return i42.l(new FlowableRefCount(this));
     }
 
     @NonNull
-    public AbstractC8147b<T> autoConnect(int i) {
+    public io.reactivex.b<T> autoConnect(int i) {
         return autoConnect(i, Functions.emptyConsumer());
     }
 
     @NonNull
-    public AbstractC8147b<T> autoConnect(int i, @NonNull Consumer<? super Disposable> consumer) {
+    public io.reactivex.b<T> autoConnect(int i, @NonNull Consumer<? super Disposable> consumer) {
         if (i <= 0) {
             connect(consumer);
             return i42.q(this);

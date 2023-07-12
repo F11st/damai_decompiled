@@ -16,9 +16,8 @@ public enum PageType {
     public final String tabName;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.bean.PageType$a */
     /* loaded from: classes15.dex */
-    static /* synthetic */ class C1431a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -43,7 +42,7 @@ public enum PageType {
 
     public List getListByType(WannaBean wannaBean) {
         if (wannaBean != null) {
-            int i = C1431a.a[ordinal()];
+            int i = a.a[ordinal()];
             if (i != 1) {
                 if (i != 2) {
                     return wannaBean.items;
@@ -56,7 +55,7 @@ public enum PageType {
     }
 
     public String getPageEmptyMsg() {
-        return C1431a.a[ordinal()] != 1 ? "你还没有想看的合辑哦（-.-）" : "你还没有想看的现场记录哦（-.-）";
+        return a.a[ordinal()] != 1 ? "你还没有想看的合辑哦（-.-）" : "你还没有想看的现场记录哦（-.-）";
     }
 
     public String getTabName(String str) {

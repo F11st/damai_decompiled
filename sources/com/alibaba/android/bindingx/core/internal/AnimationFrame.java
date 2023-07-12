@@ -92,14 +92,13 @@ abstract class AnimationFrame {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.internal.AnimationFrame$a */
     /* loaded from: classes5.dex */
-    private static class C3152a extends AnimationFrame implements Handler.Callback {
+    private static class a extends AnimationFrame implements Handler.Callback {
         private Handler a = new Handler(Looper.getMainLooper(), this);
         private Callback b;
         private boolean c;
 
-        C3152a() {
+        a() {
         }
 
         @Override // com.alibaba.android.bindingx.core.internal.AnimationFrame
@@ -152,7 +151,7 @@ abstract class AnimationFrame {
         if (Build.VERSION.SDK_INT >= 16) {
             return new ChoreographerAnimationFrameImpl();
         }
-        return new C3152a();
+        return new a();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */

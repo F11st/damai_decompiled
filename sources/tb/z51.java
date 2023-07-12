@@ -8,7 +8,6 @@ import java.util.List;
 import javax.annotation.Nullable;
 import javax.net.ssl.SSLSocket;
 import okhttp3.Protocol;
-import okhttp3.internal.C8753a;
 
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
@@ -21,14 +20,13 @@ public class z51 extends ps1 {
     private final Class<?> g;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.z51$a */
     /* loaded from: classes2.dex */
-    private static class C10014a implements InvocationHandler {
+    private static class a implements InvocationHandler {
         private final List<String> a;
         boolean b;
         String c;
 
-        C10014a(List<String> list) {
+        a(List<String> list) {
             this.a = list;
         }
 
@@ -37,7 +35,7 @@ public class z51 extends ps1 {
             String name = method.getName();
             Class<?> returnType = method.getReturnType();
             if (objArr == null) {
-                objArr = C8753a.EMPTY_STRING_ARRAY;
+                objArr = okhttp3.internal.a.EMPTY_STRING_ARRAY;
             }
             if (name.equals("supports") && Boolean.TYPE == returnType) {
                 return Boolean.TRUE;
@@ -102,7 +100,7 @@ public class z51 extends ps1 {
     @Override // tb.ps1
     public void g(SSLSocket sSLSocket, String str, List<Protocol> list) {
         try {
-            this.c.invoke(null, sSLSocket, Proxy.newProxyInstance(ps1.class.getClassLoader(), new Class[]{this.f, this.g}, new C10014a(ps1.b(list))));
+            this.c.invoke(null, sSLSocket, Proxy.newProxyInstance(ps1.class.getClassLoader(), new Class[]{this.f, this.g}, new a(ps1.b(list))));
         } catch (IllegalAccessException | InvocationTargetException e) {
             throw new AssertionError("failed to set ALPN", e);
         }
@@ -112,15 +110,15 @@ public class z51 extends ps1 {
     @Nullable
     public String m(SSLSocket sSLSocket) {
         try {
-            C10014a c10014a = (C10014a) Proxy.getInvocationHandler(this.d.invoke(null, sSLSocket));
-            boolean z = c10014a.b;
-            if (!z && c10014a.c == null) {
+            a aVar = (a) Proxy.getInvocationHandler(this.d.invoke(null, sSLSocket));
+            boolean z = aVar.b;
+            if (!z && aVar.c == null) {
                 ps1.j().q(4, "ALPN callback dropped: HTTP/2 is disabled. Is alpn-boot on the boot class path?", null);
                 return null;
             } else if (z) {
                 return null;
             } else {
-                return c10014a.c;
+                return aVar.c;
             }
         } catch (IllegalAccessException | InvocationTargetException e) {
             throw new AssertionError("failed to get ALPN selected protocol", e);

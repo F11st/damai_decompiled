@@ -4,13 +4,12 @@ import android.graphics.PointF;
 import android.view.animation.Interpolator;
 import androidx.annotation.FloatRange;
 import androidx.annotation.Nullable;
-import com.airbnb.lottie.C2821a;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
 public class u71<T> {
     @Nullable
-    private final C2821a a;
+    private final com.airbnb.lottie.a a;
     @Nullable
     public final T b;
     @Nullable
@@ -33,7 +32,7 @@ public class u71<T> {
     public PointF o;
     public PointF p;
 
-    public u71(C2821a c2821a, @Nullable T t, @Nullable T t2, @Nullable Interpolator interpolator, float f, @Nullable Float f2) {
+    public u71(com.airbnb.lottie.a aVar, @Nullable T t, @Nullable T t2, @Nullable Interpolator interpolator, float f, @Nullable Float f2) {
         this.i = -3987645.8f;
         this.j = -3987645.8f;
         this.k = 784923401;
@@ -42,7 +41,7 @@ public class u71<T> {
         this.n = Float.MIN_VALUE;
         this.o = null;
         this.p = null;
-        this.a = c2821a;
+        this.a = aVar;
         this.b = t;
         this.c = t2;
         this.d = interpolator;
@@ -85,12 +84,12 @@ public class u71<T> {
     }
 
     public float e() {
-        C2821a c2821a = this.a;
-        if (c2821a == null) {
+        com.airbnb.lottie.a aVar = this.a;
+        if (aVar == null) {
             return 0.0f;
         }
         if (this.m == Float.MIN_VALUE) {
-            this.m = (this.g - c2821a.o()) / this.a.e();
+            this.m = (this.g - aVar.o()) / this.a.e();
         }
         return this.m;
     }
@@ -117,7 +116,7 @@ public class u71<T> {
         return "Keyframe{startValue=" + this.b + ", endValue=" + this.c + ", startFrame=" + this.g + ", endFrame=" + this.h + ", interpolator=" + this.d + '}';
     }
 
-    public u71(C2821a c2821a, @Nullable T t, @Nullable T t2, @Nullable Interpolator interpolator, @Nullable Interpolator interpolator2, float f, @Nullable Float f2) {
+    public u71(com.airbnb.lottie.a aVar, @Nullable T t, @Nullable T t2, @Nullable Interpolator interpolator, @Nullable Interpolator interpolator2, float f, @Nullable Float f2) {
         this.i = -3987645.8f;
         this.j = -3987645.8f;
         this.k = 784923401;
@@ -126,7 +125,7 @@ public class u71<T> {
         this.n = Float.MIN_VALUE;
         this.o = null;
         this.p = null;
-        this.a = c2821a;
+        this.a = aVar;
         this.b = t;
         this.c = t2;
         this.d = null;
@@ -137,7 +136,7 @@ public class u71<T> {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public u71(C2821a c2821a, @Nullable T t, @Nullable T t2, @Nullable Interpolator interpolator, @Nullable Interpolator interpolator2, @Nullable Interpolator interpolator3, float f, @Nullable Float f2) {
+    public u71(com.airbnb.lottie.a aVar, @Nullable T t, @Nullable T t2, @Nullable Interpolator interpolator, @Nullable Interpolator interpolator2, @Nullable Interpolator interpolator3, float f, @Nullable Float f2) {
         this.i = -3987645.8f;
         this.j = -3987645.8f;
         this.k = 784923401;
@@ -146,7 +145,7 @@ public class u71<T> {
         this.n = Float.MIN_VALUE;
         this.o = null;
         this.p = null;
-        this.a = c2821a;
+        this.a = aVar;
         this.b = t;
         this.c = t2;
         this.d = interpolator;

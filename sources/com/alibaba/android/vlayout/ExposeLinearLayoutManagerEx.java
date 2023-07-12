@@ -33,14 +33,14 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
     private static Method vhSetFlags;
     private Object[] emptyArgs;
     private m81 layoutChunkResultCache;
-    private final C3280a mAnchorInfo;
-    private final C3281b mChildHelperWrapper;
+    private final a mAnchorInfo;
+    private final b mChildHelperWrapper;
     protected Bundle mCurrentPendingSavedState;
     private int mCurrentPendingScrollPosition;
     private final Method mEnsureLayoutStateMethod;
     private boolean mLastStackFromEnd;
-    protected C3282c mLayoutState;
-    private AbstractC3291c mOrientationHelper;
+    protected c mLayoutState;
+    private com.alibaba.android.vlayout.c mOrientationHelper;
     private int mPendingScrollPositionOffset;
     private RecyclerView mRecyclerView;
     private boolean mShouldReverseLayoutExpose;
@@ -48,14 +48,13 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
 
     /* JADX INFO: Access modifiers changed from: protected */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.vlayout.ExposeLinearLayoutManagerEx$a */
     /* loaded from: classes15.dex */
-    public class C3280a {
+    public class a {
         public int a;
         public int b;
         public boolean c;
 
-        protected C3280a() {
+        protected a() {
         }
 
         void a() {
@@ -93,9 +92,8 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.vlayout.ExposeLinearLayoutManagerEx$b */
     /* loaded from: classes15.dex */
-    public class C3281b {
+    public class b {
         private Object a;
         private Method b;
         private Method c;
@@ -109,7 +107,7 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
         private RecyclerView.LayoutManager k;
         private Object[] l = new Object[1];
 
-        C3281b(RecyclerView.LayoutManager layoutManager) {
+        b(RecyclerView.LayoutManager layoutManager) {
             this.k = layoutManager;
             try {
                 Field declaredField = RecyclerView.LayoutManager.class.getDeclaredField("mChildHelper");
@@ -234,9 +232,8 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.vlayout.ExposeLinearLayoutManagerEx$c */
     /* loaded from: classes15.dex */
-    public static class C3282c {
+    public static class c {
         static final int INVALID_LAYOUT = Integer.MIN_VALUE;
         public static final int ITEM_DIRECTION_HEAD = -1;
         public static final int ITEM_DIRECTION_TAIL = 1;
@@ -258,7 +255,7 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
         public boolean mIsPreLayout = false;
         public List<RecyclerView.ViewHolder> mScrapList = null;
 
-        public C3282c() {
+        public c() {
             this.vhIsRemoved = null;
             try {
                 Method declaredMethod = RecyclerView.ViewHolder.class.getDeclaredMethod("isRemoved", new Class[0]);
@@ -346,7 +343,7 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
             L61:
                 return r1
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.alibaba.android.vlayout.ExposeLinearLayoutManagerEx.C3282c.nextFromLimitedList():android.view.View");
+            throw new UnsupportedOperationException("Method not decompiled: com.alibaba.android.vlayout.ExposeLinearLayoutManagerEx.c.nextFromLimitedList():android.view.View");
         }
 
         public boolean hasMore(RecyclerView.State state) {
@@ -371,9 +368,8 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.vlayout.ExposeLinearLayoutManagerEx$d */
     /* loaded from: classes15.dex */
-    public static class C3283d {
+    public static class d {
         private static Method b;
         private static Method c;
         private static Method d;
@@ -407,7 +403,7 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
             }
         }
 
-        public C3283d(RecyclerView.ViewHolder viewHolder) {
+        public d(RecyclerView.ViewHolder viewHolder) {
             this.a = viewHolder;
         }
 
@@ -583,7 +579,7 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
 
     /* JADX INFO: Access modifiers changed from: protected */
     public static boolean isViewHolderUpdated(RecyclerView.ViewHolder viewHolder) {
-        return new C3283d(viewHolder).d();
+        return new d(viewHolder).d();
     }
 
     private void layoutForPredictiveAnimationsExpose(RecyclerView.Recycler recycler, RecyclerView.State state, int i, int i2) {
@@ -611,21 +607,21 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
         this.mLayoutState.mScrapList = scrapList;
         if (i4 > 0) {
             updateLayoutStateToFillStartExpose(getPosition(getChildClosestToStartExpose()), i);
-            C3282c c3282c = this.mLayoutState;
-            c3282c.mExtra = i4;
-            c3282c.mAvailable = 0;
-            c3282c.mCurrentPosition += this.mShouldReverseLayoutExpose ? 1 : -1;
-            c3282c.mOnRefresLayout = true;
-            fill(recycler, c3282c, state, false);
+            c cVar = this.mLayoutState;
+            cVar.mExtra = i4;
+            cVar.mAvailable = 0;
+            cVar.mCurrentPosition += this.mShouldReverseLayoutExpose ? 1 : -1;
+            cVar.mOnRefresLayout = true;
+            fill(recycler, cVar, state, false);
         }
         if (i5 > 0) {
             updateLayoutStateToFillEndExpose(getPosition(getChildClosestToEndExpose()), i2);
-            C3282c c3282c2 = this.mLayoutState;
-            c3282c2.mExtra = i5;
-            c3282c2.mAvailable = 0;
-            c3282c2.mCurrentPosition += this.mShouldReverseLayoutExpose ? -1 : 1;
-            c3282c2.mOnRefresLayout = true;
-            fill(recycler, c3282c2, state, false);
+            c cVar2 = this.mLayoutState;
+            cVar2.mExtra = i5;
+            cVar2.mAvailable = 0;
+            cVar2.mCurrentPosition += this.mShouldReverseLayoutExpose ? -1 : 1;
+            cVar2.mOnRefresLayout = true;
+            fill(recycler, cVar2, state, false);
         }
         this.mLayoutState.mScrapList = null;
     }
@@ -667,12 +663,12 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
         }
     }
 
-    private void recycleByLayoutStateExpose(RecyclerView.Recycler recycler, C3282c c3282c) {
-        if (c3282c.mRecycle) {
-            if (c3282c.mLayoutDirection == -1) {
-                recycleViewsFromEndExpose(recycler, c3282c.mScrollingOffset);
+    private void recycleByLayoutStateExpose(RecyclerView.Recycler recycler, c cVar) {
+        if (cVar.mRecycle) {
+            if (cVar.mLayoutDirection == -1) {
+                recycleViewsFromEndExpose(recycler, cVar.mScrollingOffset);
             } else {
-                recycleViewsFromStartExpose(recycler, c3282c.mScrollingOffset);
+                recycleViewsFromStartExpose(recycler, cVar.mScrollingOffset);
             }
         }
     }
@@ -724,7 +720,7 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
         }
     }
 
-    private boolean updateAnchorFromChildrenExpose(RecyclerView.State state, C3280a c3280a) {
+    private boolean updateAnchorFromChildrenExpose(RecyclerView.State state, a aVar) {
         View myFindReferenceChildClosestToStart;
         int k;
         boolean z = false;
@@ -732,25 +728,25 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
             return false;
         }
         View focusedChild = getFocusedChild();
-        if (focusedChild == null || !c3280a.c(focusedChild, state)) {
+        if (focusedChild == null || !aVar.c(focusedChild, state)) {
             if (this.mLastStackFromEnd != getStackFromEnd()) {
                 return false;
             }
-            if (c3280a.c) {
+            if (aVar.c) {
                 myFindReferenceChildClosestToStart = myFindReferenceChildClosestToEnd(state);
             } else {
                 myFindReferenceChildClosestToStart = myFindReferenceChildClosestToStart(state);
             }
             if (myFindReferenceChildClosestToStart != null) {
-                c3280a.b(myFindReferenceChildClosestToStart);
+                aVar.b(myFindReferenceChildClosestToStart);
                 if (!state.isPreLayout() && supportsPredictiveItemAnimations()) {
                     if ((this.mOrientationHelper.g(myFindReferenceChildClosestToStart) >= this.mOrientationHelper.i() || this.mOrientationHelper.d(myFindReferenceChildClosestToStart) < this.mOrientationHelper.k()) ? true : true) {
-                        if (c3280a.c) {
+                        if (aVar.c) {
                             k = this.mOrientationHelper.i();
                         } else {
                             k = this.mOrientationHelper.k();
                         }
-                        c3280a.b = k;
+                        aVar.b = k;
                     }
                 }
                 return true;
@@ -760,58 +756,58 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
         return true;
     }
 
-    private boolean updateAnchorFromPendingDataExpose(RecyclerView.State state, C3280a c3280a) {
+    private boolean updateAnchorFromPendingDataExpose(RecyclerView.State state, a aVar) {
         int i;
         int g;
         if (!state.isPreLayout() && (i = this.mCurrentPendingScrollPosition) != -1) {
             if (i >= 0 && i < state.getItemCount()) {
-                c3280a.a = this.mCurrentPendingScrollPosition;
+                aVar.a = this.mCurrentPendingScrollPosition;
                 Bundle bundle = this.mCurrentPendingSavedState;
                 if (bundle != null && bundle.getInt("AnchorPosition") >= 0) {
                     boolean z = this.mCurrentPendingSavedState.getBoolean("AnchorLayoutFromEnd");
-                    c3280a.c = z;
+                    aVar.c = z;
                     if (z) {
-                        c3280a.b = this.mOrientationHelper.i() - this.mCurrentPendingSavedState.getInt("AnchorOffset");
+                        aVar.b = this.mOrientationHelper.i() - this.mCurrentPendingSavedState.getInt("AnchorOffset");
                     } else {
-                        c3280a.b = this.mOrientationHelper.k() + this.mCurrentPendingSavedState.getInt("AnchorOffset");
+                        aVar.b = this.mOrientationHelper.k() + this.mCurrentPendingSavedState.getInt("AnchorOffset");
                     }
                     return true;
                 } else if (this.mPendingScrollPositionOffset == Integer.MIN_VALUE) {
                     View findViewByPosition = findViewByPosition(this.mCurrentPendingScrollPosition);
                     if (findViewByPosition != null) {
                         if (this.mOrientationHelper.e(findViewByPosition) > this.mOrientationHelper.l()) {
-                            c3280a.a();
+                            aVar.a();
                             return true;
                         } else if (this.mOrientationHelper.g(findViewByPosition) - this.mOrientationHelper.k() < 0) {
-                            c3280a.b = this.mOrientationHelper.k();
-                            c3280a.c = false;
+                            aVar.b = this.mOrientationHelper.k();
+                            aVar.c = false;
                             return true;
                         } else if (this.mOrientationHelper.i() - this.mOrientationHelper.d(findViewByPosition) < 0) {
-                            c3280a.b = this.mOrientationHelper.i();
-                            c3280a.c = true;
+                            aVar.b = this.mOrientationHelper.i();
+                            aVar.c = true;
                             return true;
                         } else {
-                            if (c3280a.c) {
+                            if (aVar.c) {
                                 g = this.mOrientationHelper.d(findViewByPosition) + this.mOrientationHelper.m();
                             } else {
                                 g = this.mOrientationHelper.g(findViewByPosition);
                             }
-                            c3280a.b = g;
+                            aVar.b = g;
                         }
                     } else {
                         if (getChildCount() > 0) {
-                            c3280a.c = (this.mCurrentPendingScrollPosition < getPosition(getChildAt(0))) == this.mShouldReverseLayoutExpose;
+                            aVar.c = (this.mCurrentPendingScrollPosition < getPosition(getChildAt(0))) == this.mShouldReverseLayoutExpose;
                         }
-                        c3280a.a();
+                        aVar.a();
                     }
                     return true;
                 } else {
                     boolean z2 = this.mShouldReverseLayoutExpose;
-                    c3280a.c = z2;
+                    aVar.c = z2;
                     if (z2) {
-                        c3280a.b = this.mOrientationHelper.i() - this.mPendingScrollPositionOffset;
+                        aVar.b = this.mOrientationHelper.i() - this.mPendingScrollPositionOffset;
                     } else {
-                        c3280a.b = this.mOrientationHelper.k() + this.mPendingScrollPositionOffset;
+                        aVar.b = this.mOrientationHelper.k() + this.mPendingScrollPositionOffset;
                     }
                     return true;
                 }
@@ -822,20 +818,20 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
         return false;
     }
 
-    private void updateAnchorInfoForLayoutExpose(RecyclerView.State state, C3280a c3280a) {
-        if (updateAnchorFromPendingDataExpose(state, c3280a) || updateAnchorFromChildrenExpose(state, c3280a)) {
+    private void updateAnchorInfoForLayoutExpose(RecyclerView.State state, a aVar) {
+        if (updateAnchorFromPendingDataExpose(state, aVar) || updateAnchorFromChildrenExpose(state, aVar)) {
             return;
         }
-        c3280a.a();
-        c3280a.a = getStackFromEnd() ? state.getItemCount() - 1 : 0;
+        aVar.a();
+        aVar.a = getStackFromEnd() ? state.getItemCount() - 1 : 0;
     }
 
-    private void updateLayoutStateToFillEndExpose(C3280a c3280a) {
-        updateLayoutStateToFillEndExpose(c3280a.a, c3280a.b);
+    private void updateLayoutStateToFillEndExpose(a aVar) {
+        updateLayoutStateToFillEndExpose(aVar.a, aVar.b);
     }
 
-    private void updateLayoutStateToFillStartExpose(C3280a c3280a) {
-        updateLayoutStateToFillStartExpose(c3280a.a, c3280a.b);
+    private void updateLayoutStateToFillStartExpose(a aVar) {
+        updateLayoutStateToFillStartExpose(aVar.a, aVar.b);
     }
 
     private void validateChildOrderExpose() {
@@ -916,10 +912,10 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
     /* JADX INFO: Access modifiers changed from: protected */
     public void ensureLayoutStateExpose() {
         if (this.mLayoutState == null) {
-            this.mLayoutState = new C3282c();
+            this.mLayoutState = new c();
         }
         if (this.mOrientationHelper == null) {
-            this.mOrientationHelper = AbstractC3291c.b(this, getOrientation());
+            this.mOrientationHelper = com.alibaba.android.vlayout.c.b(this, getOrientation());
         }
         try {
             this.mEnsureLayoutStateMethod.invoke(this, this.emptyArgs);
@@ -931,37 +927,37 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public int fill(RecyclerView.Recycler recycler, C3282c c3282c, RecyclerView.State state, boolean z) {
-        int i = c3282c.mAvailable;
-        int i2 = c3282c.mScrollingOffset;
+    public int fill(RecyclerView.Recycler recycler, c cVar, RecyclerView.State state, boolean z) {
+        int i = cVar.mAvailable;
+        int i2 = cVar.mScrollingOffset;
         if (i2 != Integer.MIN_VALUE) {
             if (i < 0) {
-                c3282c.mScrollingOffset = i2 + i;
+                cVar.mScrollingOffset = i2 + i;
             }
-            recycleByLayoutStateExpose(recycler, c3282c);
+            recycleByLayoutStateExpose(recycler, cVar);
         }
-        int i3 = c3282c.mAvailable + c3282c.mExtra + this.recycleOffset;
-        while (i3 > 0 && c3282c.hasMore(state)) {
+        int i3 = cVar.mAvailable + cVar.mExtra + this.recycleOffset;
+        while (i3 > 0 && cVar.hasMore(state)) {
             this.layoutChunkResultCache.a();
-            layoutChunk(recycler, state, c3282c, this.layoutChunkResultCache);
+            layoutChunk(recycler, state, cVar, this.layoutChunkResultCache);
             m81 m81Var = this.layoutChunkResultCache;
             if (!m81Var.b) {
-                c3282c.mOffset += m81Var.a * c3282c.mLayoutDirection;
+                cVar.mOffset += m81Var.a * cVar.mLayoutDirection;
                 if (!m81Var.c || this.mLayoutState.mScrapList != null || !state.isPreLayout()) {
-                    int i4 = c3282c.mAvailable;
+                    int i4 = cVar.mAvailable;
                     int i5 = this.layoutChunkResultCache.a;
-                    c3282c.mAvailable = i4 - i5;
+                    cVar.mAvailable = i4 - i5;
                     i3 -= i5;
                 }
-                int i6 = c3282c.mScrollingOffset;
+                int i6 = cVar.mScrollingOffset;
                 if (i6 != Integer.MIN_VALUE) {
                     int i7 = i6 + this.layoutChunkResultCache.a;
-                    c3282c.mScrollingOffset = i7;
-                    int i8 = c3282c.mAvailable;
+                    cVar.mScrollingOffset = i7;
+                    int i8 = cVar.mAvailable;
                     if (i8 < 0) {
-                        c3282c.mScrollingOffset = i7 + i8;
+                        cVar.mScrollingOffset = i7 + i8;
                     }
-                    recycleByLayoutStateExpose(recycler, c3282c);
+                    recycleByLayoutStateExpose(recycler, cVar);
                 }
                 if (z && this.layoutChunkResultCache.d) {
                     break;
@@ -970,7 +966,7 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
                 break;
             }
         }
-        return i - c3282c.mAvailable;
+        return i - cVar.mAvailable;
     }
 
     @Override // androidx.recyclerview.widget.LinearLayoutManager
@@ -1011,25 +1007,25 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
         return this.mChildHelperWrapper.d(view);
     }
 
-    protected void layoutChunk(RecyclerView.Recycler recycler, RecyclerView.State state, C3282c c3282c, m81 m81Var) {
+    protected void layoutChunk(RecyclerView.Recycler recycler, RecyclerView.State state, c cVar, m81 m81Var) {
         int i;
         int i2;
         int i3;
         int i4;
-        View next = c3282c.next(recycler);
+        View next = cVar.next(recycler);
         if (next == null) {
             m81Var.b = true;
             return;
         }
         RecyclerView.LayoutParams layoutParams = (RecyclerView.LayoutParams) next.getLayoutParams();
-        if (c3282c.mScrapList == null) {
-            if (this.mShouldReverseLayoutExpose == (c3282c.mLayoutDirection == -1)) {
+        if (cVar.mScrapList == null) {
+            if (this.mShouldReverseLayoutExpose == (cVar.mLayoutDirection == -1)) {
                 addView(next);
             } else {
                 addView(next, 0);
             }
         } else {
-            if (this.mShouldReverseLayoutExpose == (c3282c.mLayoutDirection == -1)) {
+            if (this.mShouldReverseLayoutExpose == (cVar.mLayoutDirection == -1)) {
                 addDisappearingView(next);
             } else {
                 addDisappearingView(next, 0);
@@ -1045,25 +1041,25 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
                 i = getPaddingLeft();
                 i4 = this.mOrientationHelper.f(next) + i;
             }
-            if (c3282c.mLayoutDirection == -1) {
-                i2 = c3282c.mOffset;
+            if (cVar.mLayoutDirection == -1) {
+                i2 = cVar.mOffset;
                 i3 = i2 - m81Var.a;
             } else {
-                i3 = c3282c.mOffset;
+                i3 = cVar.mOffset;
                 i2 = m81Var.a + i3;
             }
         } else {
             int paddingTop = getPaddingTop();
             int f = this.mOrientationHelper.f(next) + paddingTop;
-            if (c3282c.mLayoutDirection == -1) {
-                int i5 = c3282c.mOffset;
+            if (cVar.mLayoutDirection == -1) {
+                int i5 = cVar.mOffset;
                 int i6 = i5 - m81Var.a;
                 i4 = i5;
                 i2 = f;
                 i = i6;
                 i3 = paddingTop;
             } else {
-                int i7 = c3282c.mOffset;
+                int i7 = cVar.mOffset;
                 int i8 = m81Var.a + i7;
                 i = i7;
                 i2 = f;
@@ -1078,7 +1074,7 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
         m81Var.d = next.isFocusable();
     }
 
-    public void onAnchorReady(RecyclerView.State state, C3280a c3280a) {
+    public void onAnchorReady(RecyclerView.State state, a aVar) {
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.LayoutManager
@@ -1112,11 +1108,11 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
         }
         ensureLayoutStateExpose();
         updateLayoutStateExpose(convertFocusDirectionToLayoutDirectionExpose, (int) (this.mOrientationHelper.l() * MAX_SCROLL_FACTOR), false, state);
-        C3282c c3282c = this.mLayoutState;
-        c3282c.mScrollingOffset = Integer.MIN_VALUE;
-        c3282c.mRecycle = false;
-        c3282c.mOnRefresLayout = false;
-        fill(recycler, c3282c, state, true);
+        c cVar = this.mLayoutState;
+        cVar.mScrollingOffset = Integer.MIN_VALUE;
+        cVar.mRecycle = false;
+        cVar.mOnRefresLayout = false;
+        fill(recycler, cVar, state, true);
         if (convertFocusDirectionToLayoutDirectionExpose == -1) {
             childClosestToEndExpose = getChildClosestToStartExpose();
         } else {
@@ -1178,40 +1174,40 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
         detachAndScrapAttachedViews(recycler);
         this.mLayoutState.mIsPreLayout = state.isPreLayout();
         this.mLayoutState.mOnRefresLayout = true;
-        C3280a c3280a = this.mAnchorInfo;
-        if (c3280a.c) {
-            updateLayoutStateToFillStartExpose(c3280a);
-            C3282c c3282c = this.mLayoutState;
-            c3282c.mExtra = k;
-            fill(recycler, c3282c, state, false);
-            C3282c c3282c2 = this.mLayoutState;
-            i2 = c3282c2.mOffset;
-            int i9 = c3282c2.mAvailable;
+        a aVar = this.mAnchorInfo;
+        if (aVar.c) {
+            updateLayoutStateToFillStartExpose(aVar);
+            c cVar = this.mLayoutState;
+            cVar.mExtra = k;
+            fill(recycler, cVar, state, false);
+            c cVar2 = this.mLayoutState;
+            i2 = cVar2.mOffset;
+            int i9 = cVar2.mAvailable;
             if (i9 > 0) {
                 j += i9;
             }
             updateLayoutStateToFillEndExpose(this.mAnchorInfo);
-            C3282c c3282c3 = this.mLayoutState;
-            c3282c3.mExtra = j;
-            c3282c3.mCurrentPosition += c3282c3.mItemDirection;
-            fill(recycler, c3282c3, state, false);
+            c cVar3 = this.mLayoutState;
+            cVar3.mExtra = j;
+            cVar3.mCurrentPosition += cVar3.mItemDirection;
+            fill(recycler, cVar3, state, false);
             i3 = this.mLayoutState.mOffset;
         } else {
-            updateLayoutStateToFillEndExpose(c3280a);
-            C3282c c3282c4 = this.mLayoutState;
-            c3282c4.mExtra = j;
-            fill(recycler, c3282c4, state, false);
-            C3282c c3282c5 = this.mLayoutState;
-            int i10 = c3282c5.mOffset;
-            int i11 = c3282c5.mAvailable;
+            updateLayoutStateToFillEndExpose(aVar);
+            c cVar4 = this.mLayoutState;
+            cVar4.mExtra = j;
+            fill(recycler, cVar4, state, false);
+            c cVar5 = this.mLayoutState;
+            int i10 = cVar5.mOffset;
+            int i11 = cVar5.mAvailable;
             if (i11 > 0) {
                 k += i11;
             }
             updateLayoutStateToFillStartExpose(this.mAnchorInfo);
-            C3282c c3282c6 = this.mLayoutState;
-            c3282c6.mExtra = k;
-            c3282c6.mCurrentPosition += c3282c6.mItemDirection;
-            fill(recycler, c3282c6, state, false);
+            c cVar6 = this.mLayoutState;
+            cVar6.mExtra = k;
+            cVar6.mCurrentPosition += cVar6.mItemDirection;
+            fill(recycler, cVar6, state, false);
             i2 = this.mLayoutState.mOffset;
             i3 = i10;
         }
@@ -1306,10 +1302,10 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
         int i2 = i > 0 ? 1 : -1;
         int abs = Math.abs(i);
         updateLayoutStateExpose(i2, abs, true, state);
-        C3282c c3282c = this.mLayoutState;
-        int i3 = c3282c.mScrollingOffset;
-        c3282c.mOnRefresLayout = false;
-        int fill = i3 + fill(recycler, c3282c, state, false);
+        c cVar = this.mLayoutState;
+        int i3 = cVar.mScrollingOffset;
+        cVar.mOnRefresLayout = false;
+        int fill = i3 + fill(recycler, cVar, state, false);
         if (fill < 0) {
             return 0;
         }
@@ -1374,35 +1370,35 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
     public void updateLayoutStateExpose(int i, int i2, boolean z, RecyclerView.State state) {
         int k;
         this.mLayoutState.mExtra = getExtraLayoutSpace(state);
-        C3282c c3282c = this.mLayoutState;
-        c3282c.mLayoutDirection = i;
+        c cVar = this.mLayoutState;
+        cVar.mLayoutDirection = i;
         if (i == 1) {
-            c3282c.mExtra += this.mOrientationHelper.j();
+            cVar.mExtra += this.mOrientationHelper.j();
             View childClosestToEndExpose = getChildClosestToEndExpose();
-            C3282c c3282c2 = this.mLayoutState;
-            c3282c2.mItemDirection = this.mShouldReverseLayoutExpose ? -1 : 1;
+            c cVar2 = this.mLayoutState;
+            cVar2.mItemDirection = this.mShouldReverseLayoutExpose ? -1 : 1;
             int position = getPosition(childClosestToEndExpose);
-            C3282c c3282c3 = this.mLayoutState;
-            c3282c2.mCurrentPosition = position + c3282c3.mItemDirection;
-            c3282c3.mOffset = this.mOrientationHelper.d(childClosestToEndExpose) + computeAlignOffset(childClosestToEndExpose, true, false);
+            c cVar3 = this.mLayoutState;
+            cVar2.mCurrentPosition = position + cVar3.mItemDirection;
+            cVar3.mOffset = this.mOrientationHelper.d(childClosestToEndExpose) + computeAlignOffset(childClosestToEndExpose, true, false);
             k = this.mLayoutState.mOffset - this.mOrientationHelper.i();
         } else {
             View childClosestToStartExpose = getChildClosestToStartExpose();
             this.mLayoutState.mExtra += this.mOrientationHelper.k();
-            C3282c c3282c4 = this.mLayoutState;
-            c3282c4.mItemDirection = this.mShouldReverseLayoutExpose ? 1 : -1;
+            c cVar4 = this.mLayoutState;
+            cVar4.mItemDirection = this.mShouldReverseLayoutExpose ? 1 : -1;
             int position2 = getPosition(childClosestToStartExpose);
-            C3282c c3282c5 = this.mLayoutState;
-            c3282c4.mCurrentPosition = position2 + c3282c5.mItemDirection;
-            c3282c5.mOffset = this.mOrientationHelper.g(childClosestToStartExpose) + computeAlignOffset(childClosestToStartExpose, false, false);
+            c cVar5 = this.mLayoutState;
+            cVar4.mCurrentPosition = position2 + cVar5.mItemDirection;
+            cVar5.mOffset = this.mOrientationHelper.g(childClosestToStartExpose) + computeAlignOffset(childClosestToStartExpose, false, false);
             k = (-this.mLayoutState.mOffset) + this.mOrientationHelper.k();
         }
-        C3282c c3282c6 = this.mLayoutState;
-        c3282c6.mAvailable = i2;
+        c cVar6 = this.mLayoutState;
+        cVar6.mAvailable = i2;
         if (z) {
-            c3282c6.mAvailable = i2 - k;
+            cVar6.mAvailable = i2 - k;
         }
-        c3282c6.mScrollingOffset = k;
+        cVar6.mScrollingOffset = k;
     }
 
     public ExposeLinearLayoutManagerEx(Context context, int i, boolean z) {
@@ -1413,10 +1409,10 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
         this.mCurrentPendingSavedState = null;
         this.emptyArgs = new Object[0];
         this.layoutChunkResultCache = new m81();
-        this.mAnchorInfo = new C3280a();
+        this.mAnchorInfo = new a();
         setOrientation(i);
         setReverseLayout(z);
-        this.mChildHelperWrapper = new C3281b(this);
+        this.mChildHelperWrapper = new b(this);
         try {
             Method declaredMethod = LinearLayoutManager.class.getDeclaredMethod("ensureLayoutState", new Class[0]);
             this.mEnsureLayoutStateMethod = declaredMethod;
@@ -1436,21 +1432,21 @@ public class ExposeLinearLayoutManagerEx extends LinearLayoutManager {
 
     private void updateLayoutStateToFillEndExpose(int i, int i2) {
         this.mLayoutState.mAvailable = this.mOrientationHelper.i() - i2;
-        C3282c c3282c = this.mLayoutState;
-        c3282c.mItemDirection = this.mShouldReverseLayoutExpose ? -1 : 1;
-        c3282c.mCurrentPosition = i;
-        c3282c.mLayoutDirection = 1;
-        c3282c.mOffset = i2;
-        c3282c.mScrollingOffset = Integer.MIN_VALUE;
+        c cVar = this.mLayoutState;
+        cVar.mItemDirection = this.mShouldReverseLayoutExpose ? -1 : 1;
+        cVar.mCurrentPosition = i;
+        cVar.mLayoutDirection = 1;
+        cVar.mOffset = i2;
+        cVar.mScrollingOffset = Integer.MIN_VALUE;
     }
 
     private void updateLayoutStateToFillStartExpose(int i, int i2) {
         this.mLayoutState.mAvailable = i2 - this.mOrientationHelper.k();
-        C3282c c3282c = this.mLayoutState;
-        c3282c.mCurrentPosition = i;
-        c3282c.mItemDirection = this.mShouldReverseLayoutExpose ? 1 : -1;
-        c3282c.mLayoutDirection = -1;
-        c3282c.mOffset = i2;
-        c3282c.mScrollingOffset = Integer.MIN_VALUE;
+        c cVar = this.mLayoutState;
+        cVar.mCurrentPosition = i;
+        cVar.mItemDirection = this.mShouldReverseLayoutExpose ? 1 : -1;
+        cVar.mLayoutDirection = -1;
+        cVar.mOffset = i2;
+        cVar.mScrollingOffset = Integer.MIN_VALUE;
     }
 }

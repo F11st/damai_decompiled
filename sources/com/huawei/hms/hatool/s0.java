@@ -11,7 +11,7 @@ public class s0 {
         if (!TextUtils.isEmpty(str2)) {
             return a(str, str2, str3) ? str2 : str4;
         }
-        C5653y.f("hmsSdk", "checkStrParameter() Parameter verification failure! Parameter:" + str);
+        y.f("hmsSdk", "checkStrParameter() Parameter verification failure! Parameter:" + str);
         return str4;
     }
 
@@ -33,7 +33,7 @@ public class s0 {
         }
         sb.append(str3);
         sb.append(str);
-        C5653y.f("hmsSdk", sb.toString());
+        y.f("hmsSdk", sb.toString());
         return false;
     }
 
@@ -51,7 +51,7 @@ public class s0 {
         }
         sb.append(str4);
         sb.append(str);
-        C5653y.f("hmsSdk", sb.toString());
+        y.f("hmsSdk", sb.toString());
         return false;
     }
 
@@ -66,7 +66,7 @@ public class s0 {
         } else {
             str = "checkMap Map data is too big! size: " + map.size() + " length: " + map.toString().length();
         }
-        C5653y.f("hmsSdk", str);
+        y.f("hmsSdk", str);
         return false;
     }
 }

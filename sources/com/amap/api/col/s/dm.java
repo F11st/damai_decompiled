@@ -20,15 +20,14 @@ public class dm {
 
     public static synchronized void a(dl dlVar, Context context) {
         synchronized (dm.class) {
-            ed.a().b(new C4427a(context, C4427a.a, dlVar));
+            ed.a().b(new a(context, a.a, dlVar));
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.dm$a */
     /* loaded from: classes10.dex */
-    public static class C4427a extends ee {
+    public static class a extends ee {
         static int a = 1;
         static int b = 2;
         static int c = 3;
@@ -37,7 +36,7 @@ public class dm {
         private int g;
         private List<dl> h;
 
-        C4427a(Context context, int i) {
+        a(Context context, int i) {
             this.d = context;
             this.g = i;
         }
@@ -70,7 +69,7 @@ public class dm {
                         dh a2 = dn.a(dm.d);
                         dn.a(this.d, a2, cj.h, 1000, 307200, "2");
                         if (a2.g == null) {
-                            a2.g = new Cdo(new ds(this.d, new C4428dp(new dt(new dv()))));
+                            a2.g = new Cdo(new ds(this.d, new dp(new dt(new dv()))));
                         }
                         a2.h = 3600000;
                         if (TextUtils.isEmpty(a2.i)) {
@@ -145,12 +144,12 @@ public class dm {
             }
         }
 
-        C4427a(Context context, int i, List<dl> list) {
+        a(Context context, int i, List<dl> list) {
             this(context, i);
             this.h = list;
         }
 
-        C4427a(Context context, int i, dl dlVar) {
+        a(Context context, int i, dl dlVar) {
             this(context, i);
             this.f = dlVar;
         }
@@ -161,7 +160,7 @@ public class dm {
             if (list != null) {
                 try {
                     if (list.size() != 0) {
-                        ed.a().b(new C4427a(context, C4427a.b, list));
+                        ed.a().b(new a(context, a.b, list));
                     }
                 } catch (Throwable unused) {
                 }
@@ -170,7 +169,7 @@ public class dm {
     }
 
     public static void a(Context context) {
-        ed.a().b(new C4427a(context, C4427a.c));
+        ed.a().b(new a(context, a.c));
     }
 
     static /* synthetic */ void a(Context context, byte[] bArr) throws IOException {

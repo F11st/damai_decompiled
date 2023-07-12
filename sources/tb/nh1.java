@@ -8,9 +8,8 @@ import java.net.URL;
 public class nh1 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.nh1$a */
     /* loaded from: classes11.dex */
-    public static class C9474a {
+    public static class a {
         public URL a;
         public long b;
         public boolean c;
@@ -23,7 +22,7 @@ public class nh1 {
         public String j;
         public String k;
 
-        public C9474a() {
+        public a() {
             System.currentTimeMillis();
         }
     }

@@ -5,7 +5,6 @@ import android.net.TrafficStats;
 import android.os.Process;
 import android.os.SystemClock;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.service.XMPushService;
 
 /* compiled from: Taobao */
@@ -44,7 +43,7 @@ public class fg implements fz {
             this.f = TrafficStats.getUidRxBytes(myUid);
             this.e = TrafficStats.getUidTxBytes(myUid);
         } catch (Exception e) {
-            AbstractC7535b.m586a("Failed to obtain traffic data during initialization: " + e);
+            com.xiaomi.channel.commonutils.logger.b.m586a("Failed to obtain traffic data during initialization: " + e);
             this.f = -1L;
             this.e = -1L;
         }
@@ -65,7 +64,7 @@ public class fg implements fz {
     }
 
     private synchronized void c() {
-        AbstractC7535b.c("stat connpt = " + this.f354a + " netDuration = " + this.b + " ChannelDuration = " + this.d + " channelConnectedTime = " + this.c);
+        com.xiaomi.channel.commonutils.logger.b.c("stat connpt = " + this.f354a + " netDuration = " + this.b + " ChannelDuration = " + this.d + " channelConnectedTime = " + this.c);
         fa faVar = new fa();
         faVar.f329a = (byte) 0;
         faVar.a(ez.CHANNEL_ONLINE_RATE.a());
@@ -137,7 +136,7 @@ public class fg implements fz {
             if (m908a < 0) {
                 m908a = 0;
             }
-            this.d += m908a + (C7662gc.b() / 2);
+            this.d += m908a + (gc.b() / 2);
             this.c = 0L;
         }
         m880a();
@@ -147,10 +146,10 @@ public class fg implements fz {
             j2 = TrafficStats.getUidRxBytes(myUid);
             j = TrafficStats.getUidTxBytes(myUid);
         } catch (Exception e) {
-            AbstractC7535b.m586a("Failed to obtain traffic data: " + e);
+            com.xiaomi.channel.commonutils.logger.b.m586a("Failed to obtain traffic data: " + e);
             j = -1L;
         }
-        AbstractC7535b.c("Stats rx=" + (j2 - this.f) + ", tx=" + (j - this.e));
+        com.xiaomi.channel.commonutils.logger.b.c("Stats rx=" + (j2 - this.f) + ", tx=" + (j - this.e));
         this.f = j2;
         this.e = j;
     }

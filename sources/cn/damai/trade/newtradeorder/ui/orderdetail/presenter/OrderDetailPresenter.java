@@ -29,12 +29,11 @@ public class OrderDetailPresenter extends OrderDetailContract.Presenter {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.presenter.OrderDetailPresenter$a */
     /* loaded from: classes8.dex */
-    public class C2140a implements Action<Object> {
+    public class a implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2140a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -52,12 +51,11 @@ public class OrderDetailPresenter extends OrderDetailContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.presenter.OrderDetailPresenter$b */
     /* loaded from: classes8.dex */
-    public class C2141b implements Action<Object> {
+    public class b implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2141b() {
+        b() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -75,12 +73,11 @@ public class OrderDetailPresenter extends OrderDetailContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.presenter.OrderDetailPresenter$c */
     /* loaded from: classes8.dex */
-    public class C2142c implements Action<Object> {
+    public class c implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2142c() {
+        c() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -95,12 +92,11 @@ public class OrderDetailPresenter extends OrderDetailContract.Presenter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.presenter.OrderDetailPresenter$d */
     /* loaded from: classes8.dex */
-    public class C2143d implements Action<Object> {
+    public class d implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2143d() {
+        d() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -190,7 +186,7 @@ public class OrderDetailPresenter extends OrderDetailContract.Presenter {
         });
     }
 
-    @Override // cn.damai.common.app.base.AbstractC0470a
+    @Override // cn.damai.common.app.base.a
     public void onStart() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "374732866")) {
@@ -198,10 +194,10 @@ public class OrderDetailPresenter extends OrderDetailContract.Presenter {
             return;
         }
         super.onStart();
-        this.mDMMessage.b(mo1.NOTIFY_JUMP_TICKET_SERVICE, new C2140a());
-        this.mDMMessage.b(mo1.REFUND_CHECK_SERVICE, new C2141b());
-        this.mDMMessage.b(mo1.NOTIFY_CANCEL_SELL, new C2142c());
-        this.mDMMessage.b(mo1.NOTIFY_OPEN_NOTICE_POP, new C2143d());
+        this.mDMMessage.b(mo1.NOTIFY_JUMP_TICKET_SERVICE, new a());
+        this.mDMMessage.b(mo1.REFUND_CHECK_SERVICE, new b());
+        this.mDMMessage.b(mo1.NOTIFY_CANCEL_SELL, new c());
+        this.mDMMessage.b(mo1.NOTIFY_OPEN_NOTICE_POP, new d());
     }
 
     @Override // cn.damai.trade.newtradeorder.ui.orderdetail.contract.OrderDetailContract.Presenter

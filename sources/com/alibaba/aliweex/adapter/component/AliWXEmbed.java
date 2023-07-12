@@ -1,8 +1,8 @@
 package com.alibaba.aliweex.adapter.component;
 
 import android.text.TextUtils;
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.IConfigAdapter;
+import com.alibaba.aliweex.a;
 import com.taobao.weex.WXSDKInstance;
 import com.taobao.weex.ui.action.BasicComponentData;
 import com.taobao.weex.ui.component.WXEmbed;
@@ -21,7 +21,7 @@ public class AliWXEmbed extends WXEmbed {
 
     private void doConfigEmbed(WXSDKInstance wXSDKInstance) {
         String[] split;
-        IConfigAdapter c = C3004a.l().c();
+        IConfigAdapter c = a.l().c();
         if (c == null) {
             return;
         }
@@ -54,7 +54,7 @@ public class AliWXEmbed extends WXEmbed {
     @Override // com.taobao.weex.ui.component.WXEmbed, com.taobao.weex.ui.component.NestedContainer
     public void reload() {
         WXSDKInstance wXSDKInstance;
-        IConfigAdapter c = C3004a.l().c();
+        IConfigAdapter c = a.l().c();
         if ((c == null || !TextUtils.equals(c.getConfig("android_weex_ext_config", "embed_reload_destroy", Boolean.TRUE.toString()), Boolean.FALSE.toString())) && (wXSDKInstance = this.mNestedInstance) != null) {
             wXSDKInstance.destroy();
             this.mNestedInstance = null;

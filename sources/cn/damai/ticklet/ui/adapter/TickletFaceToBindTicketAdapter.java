@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.member.R$id;
 import cn.damai.member.R$layout;
 import cn.damai.ticklet.bean.UserTicketTable;
@@ -63,14 +63,13 @@ public class TickletFaceToBindTicketAdapter extends RecyclerView.Adapter<Recycle
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.adapter.TickletFaceToBindTicketAdapter$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2045a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ UserTicketTable a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC2045a(UserTicketTable userTicketTable, int i) {
+        a(UserTicketTable userTicketTable, int i) {
             this.a = userTicketTable;
             this.b = i;
         }
@@ -81,7 +80,7 @@ public class TickletFaceToBindTicketAdapter extends RecyclerView.Adapter<Recycle
             if (AndroidInstantRuntime.support(ipChange, "337103666")) {
                 ipChange.ipc$dispatch("337103666", new Object[]{this, view});
             } else if (this.a != null) {
-                C0529c e = C0529c.e();
+                c e = c.e();
                 un2 k = un2.k();
                 String str = TickletFaceToBindTicketAdapter.this.d;
                 UserTicketTable userTicketTable = this.a;
@@ -170,7 +169,7 @@ public class TickletFaceToBindTicketAdapter extends RecyclerView.Adapter<Recycle
             } else {
                 ticketFaceUnBindViewHolder.d.setVisibility(8);
             }
-            ticketFaceUnBindViewHolder.a.setOnClickListener(new View$OnClickListenerC2045a(userTicketTable, i));
+            ticketFaceUnBindViewHolder.a.setOnClickListener(new a(userTicketTable, i));
         }
     }
 

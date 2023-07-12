@@ -44,12 +44,11 @@ public class DramaChannelFragment extends AbsFragmentV2 implements OnCityChanged
     private String requestErrorMsg = "";
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.dramachannel.fragment.DramaChannelFragment$a */
     /* loaded from: classes5.dex */
-    public class C1073a implements OnErrClickListener {
+    public class a implements OnErrClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1073a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.v2.componentplugin.OnErrClickListener
@@ -167,10 +166,10 @@ public class DramaChannelFragment extends AbsFragmentV2 implements OnCityChanged
             return;
         }
         if (pg.b(baseResponse)) {
-            CategoryItemListInfo a = pg.a(baseResponse);
-            if (a.isCanRequestNextPage(true, 1)) {
+            CategoryItemListInfo a2 = pg.a(baseResponse);
+            if (a2.isCanRequestNextPage(true, 1)) {
                 loadMoreResetV2(true);
-            } else if (a.hasListSize()) {
+            } else if (a2.hasListSize()) {
                 showNoMoreV2();
             } else {
                 showNoMoreV2("没有找到相关演出，换个筛选条件试试吧");
@@ -218,7 +217,7 @@ public class DramaChannelFragment extends AbsFragmentV2 implements OnCityChanged
             str5 = this.requestErrorMsg + AltriaXLaunchTime.SPACE + str3;
         }
         pageAlarm(str4, str5, false);
-        showErrorViewV2(str, str2, new C1073a());
+        showErrorViewV2(str, str2, new a());
         if (e11.b().c(str)) {
             return;
         }
@@ -241,7 +240,7 @@ public class DramaChannelFragment extends AbsFragmentV2 implements OnCityChanged
 
     @Override // cn.damai.tetris.page.AbsFragment
     public void onCdnResponse(String str) {
-        String a;
+        String a2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1382641099")) {
             ipChange.ipc$dispatch("-1382641099", new Object[]{this, str});
@@ -255,13 +254,13 @@ public class DramaChannelFragment extends AbsFragmentV2 implements OnCityChanged
         BaseResponse baseResponse = null;
         try {
             baseResponse = (BaseResponse) JSON.parseObject(str, BaseResponse.class);
-            a = "";
+            a2 = "";
         } catch (Exception e) {
             e.printStackTrace();
-            a = zm2.a(e);
+            a2 = zm2.a(e);
         }
         if (baseResponse == null) {
-            showErrorPage("", "", "cdn返回数据解析后数据为null  " + a);
+            showErrorPage("", "", "cdn返回数据解析后数据为null  " + a2);
             return;
         }
         readResponse(baseResponse);

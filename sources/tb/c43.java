@@ -3,8 +3,6 @@ package tb;
 import android.text.TextUtils;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.efs.sdk.base.a.d.C4786a;
-import com.efs.sdk.base.a.h.a.InterfaceC4799c;
 import java.util.Map;
 import tb.n73;
 
@@ -14,9 +12,8 @@ public final class c43 extends z0 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.c43$a */
     /* loaded from: classes10.dex */
-    public static class C8989a {
+    public static class a {
         private static final c43 a = new c43((byte) 0);
     }
 
@@ -28,17 +25,17 @@ public final class c43 extends z0 {
     }
 
     public static c43 d() {
-        return C8989a.a;
+        return a.a;
     }
 
     private static void e(@NonNull l01 l01Var) {
         n73 n73Var;
-        n73Var = n73.C9462a.a;
+        n73Var = n73.a.a;
         n73Var.d(String.valueOf(l01Var.b()), l01Var.a(), l01Var.c());
     }
 
-    @Override // com.efs.sdk.base.a.h.a.InterfaceC4798b
-    public final /* bridge */ /* synthetic */ void a(@NonNull InterfaceC4799c<l01> interfaceC4799c, @Nullable l01 l01Var) {
+    @Override // com.efs.sdk.base.a.h.a.b
+    public final /* bridge */ /* synthetic */ void a(@NonNull com.efs.sdk.base.a.h.a.c<l01> cVar, @Nullable l01 l01Var) {
         l01 l01Var2 = l01Var;
         if (l01Var2 != null) {
             u23.c();
@@ -64,8 +61,8 @@ public final class c43 extends z0 {
                 return;
             }
             int parseInt = Integer.parseInt(str);
-            n73Var = n73.C9462a.a;
-            if (n73Var.b == null || !C4786a.a().d) {
+            n73Var = n73.a.a;
+            if (n73Var.b == null || !com.efs.sdk.base.a.d.a.a().d) {
                 return;
             }
             o43 o43Var = new o43("efs_core", "config_coverage", n73Var.a.c);

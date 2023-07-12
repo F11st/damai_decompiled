@@ -3,8 +3,6 @@ package tb;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8215n;
 import kotlin.reflect.jvm.internal.impl.types.KotlinTypeFactory;
 import kotlin.reflect.jvm.internal.impl.types.checker.TypeIntersector;
 import org.jetbrains.annotations.NotNull;
@@ -21,7 +19,7 @@ public final class a41 {
         int size = list.size();
         if (size != 0) {
             if (size != 1) {
-                q = C8215n.q(list, 10);
+                q = kotlin.collections.n.q(list, 10);
                 ArrayList arrayList = new ArrayList(q);
                 boolean z = false;
                 boolean z2 = false;
@@ -47,7 +45,7 @@ public final class a41 {
                 } else if (!z2) {
                     return TypeIntersector.INSTANCE.c(arrayList);
                 } else {
-                    q2 = C8215n.q(list, 10);
+                    q2 = kotlin.collections.n.q(list, 10);
                     ArrayList arrayList2 = new ArrayList(q2);
                     for (gu2 gu2Var2 : list) {
                         arrayList2.add(dk0.d(gu2Var2));
@@ -56,7 +54,7 @@ public final class a41 {
                     return KotlinTypeFactory.d(typeIntersector.c(arrayList), typeIntersector.c(arrayList2));
                 }
             }
-            return (gu2) C8212k.q0(list);
+            return (gu2) kotlin.collections.k.q0(list);
         }
         throw new IllegalStateException("Expected some types".toString());
     }

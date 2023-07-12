@@ -5,7 +5,7 @@ import com.xiaomi.push.service.bg;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-class cq implements bg.InterfaceC7736a {
+class cq implements bg.a {
     final /* synthetic */ XMPushService a;
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -13,12 +13,12 @@ class cq implements bg.InterfaceC7736a {
         this.a = xMPushService;
     }
 
-    @Override // com.xiaomi.push.service.bg.InterfaceC7736a
+    @Override // com.xiaomi.push.service.bg.a
     public void a() {
         this.a.e();
         if (bg.a().m1193a() <= 0) {
             XMPushService xMPushService = this.a;
-            xMPushService.a(new XMPushService.C7704g(12, null));
+            xMPushService.a(new XMPushService.g(12, null));
         }
     }
 }

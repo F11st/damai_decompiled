@@ -2,7 +2,6 @@ package tb;
 
 import java.util.HashSet;
 import java.util.Set;
-import kotlin.collections.C8220r;
 import kotlin.reflect.jvm.internal.impl.resolve.scopes.MemberScope;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -19,7 +18,7 @@ public final class me1 {
             if (classifierNames == null) {
                 return null;
             }
-            C8220r.v(hashSet, classifierNames);
+            kotlin.collections.r.v(hashSet, classifierNames);
         }
         return hashSet;
     }

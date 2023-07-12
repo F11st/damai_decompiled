@@ -56,9 +56,8 @@ public class BezierRadarHeader extends InternalAbstract implements RefreshHeader
     protected int mWaveTop;
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.layout.header.BezierRadarHeader$a */
     /* loaded from: classes7.dex */
-    static /* synthetic */ class C6191a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -76,12 +75,11 @@ public class BezierRadarHeader extends InternalAbstract implements RefreshHeader
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.layout.header.BezierRadarHeader$b */
     /* loaded from: classes7.dex */
-    protected class C6192b implements ValueAnimator.AnimatorUpdateListener {
+    protected class b implements ValueAnimator.AnimatorUpdateListener {
         byte a;
 
-        C6192b(byte b) {
+        b(byte b) {
             this.a = b;
         }
 
@@ -221,7 +219,7 @@ public class BezierRadarHeader extends InternalAbstract implements RefreshHeader
         int i = this.mWaveOffsetY;
         ValueAnimator ofFloat = ValueAnimator.ofFloat(this.mRadarRadius, (float) Math.sqrt((width * width) + (i * i)));
         ofFloat.setDuration(400L);
-        ofFloat.addUpdateListener(new C6192b((byte) 3));
+        ofFloat.addUpdateListener(new b((byte) 3));
         ofFloat.start();
         return 400;
     }
@@ -251,21 +249,21 @@ public class BezierRadarHeader extends InternalAbstract implements RefreshHeader
         zd2 zd2Var = new zd2(zd2.INTERPOLATOR_DECELERATE);
         ValueAnimator ofFloat = ValueAnimator.ofFloat(1.0f, 0.0f);
         ofFloat.setInterpolator(zd2Var);
-        ofFloat.addUpdateListener(new C6192b((byte) 2));
+        ofFloat.addUpdateListener(new b((byte) 2));
         ValueAnimator ofFloat2 = ValueAnimator.ofFloat(0.0f, 1.0f);
         ofFloat.setInterpolator(zd2Var);
-        ofFloat2.addUpdateListener(new C6192b((byte) 0));
+        ofFloat2.addUpdateListener(new b((byte) 0));
         ValueAnimator ofInt = ValueAnimator.ofInt(0, 360);
         ofInt.setDuration(720L);
         ofInt.setRepeatCount(-1);
         ofInt.setInterpolator(new AccelerateDecelerateInterpolator());
-        ofInt.addUpdateListener(new C6192b((byte) 4));
+        ofInt.addUpdateListener(new b((byte) 4));
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.playSequentially(ofFloat, ofFloat2, ofInt);
         animatorSet.start();
         int i3 = this.mWaveHeight;
         ValueAnimator ofInt2 = ValueAnimator.ofInt(i3, 0, -((int) (i3 * 0.8f)), 0, -((int) (i3 * 0.4f)), 0);
-        ofInt2.addUpdateListener(new C6192b((byte) 1));
+        ofInt2.addUpdateListener(new b((byte) 1));
         ofInt2.setInterpolator(new zd2(zd2.INTERPOLATOR_DECELERATE));
         ofInt2.setDuration(800L);
         ofInt2.start();
@@ -274,7 +272,7 @@ public class BezierRadarHeader extends InternalAbstract implements RefreshHeader
 
     @Override // com.scwang.smartrefresh.layout.internal.InternalAbstract, com.scwang.smartrefresh.layout.listener.OnStateChangedListener
     public void onStateChanged(@NonNull RefreshLayout refreshLayout, @NonNull RefreshState refreshState, @NonNull RefreshState refreshState2) {
-        int i = C6191a.a[refreshState2.ordinal()];
+        int i = a.a[refreshState2.ordinal()];
         if (i == 1 || i == 2) {
             this.mDotAlpha = 1.0f;
             this.mRadarScale = 0.0f;

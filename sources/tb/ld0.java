@@ -19,7 +19,7 @@ public final class ld0 extends ak0 implements DynamicTypeMarker {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public ld0(@org.jetbrains.annotations.NotNull kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b r3, @org.jetbrains.annotations.NotNull kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations r4) {
+    public ld0(@org.jetbrains.annotations.NotNull kotlin.reflect.jvm.internal.impl.builtins.b r3, @org.jetbrains.annotations.NotNull kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations r4) {
         /*
             r2 = this;
             java.lang.String r0 = "builtIns"

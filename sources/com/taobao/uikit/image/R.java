@@ -54,15 +54,14 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.uikit.image.R$color */
     /* loaded from: classes11.dex */
-    public static final class C6907color {
+    public static final class color {
         public static final int uik_A_orange = 0x7f060539;
         public static final int uik_choice_divider = 0x7f06053a;
         public static final int uik_dialog_bg = 0x7f06053b;
         public static final int uik_text_color = 0x7f06053e;
 
-        private C6907color() {
+        private color() {
         }
     }
 
@@ -83,12 +82,11 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.uikit.image.R$drawable */
     /* loaded from: classes11.dex */
-    public static final class C6908drawable {
+    public static final class drawable {
         public static final int uik_imagesave_btn = 0x7f080f3a;
 
-        private C6908drawable() {
+        private drawable() {
         }
     }
 
@@ -106,14 +104,13 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.uikit.image.R$layout */
     /* loaded from: classes11.dex */
-    public static final class C6909layout {
+    public static final class layout {
         public static final int uik_choice_divider = 0x7f0c0801;
         public static final int uik_image_save_choice = 0x7f0c0802;
         public static final int uik_image_save_dialog = 0x7f0c0803;
 
-        private C6909layout() {
+        private layout() {
         }
     }
 
@@ -133,13 +130,12 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.uikit.image.R$style */
     /* loaded from: classes11.dex */
-    public static final class C6910style {
+    public static final class style {
         public static final int uik_imagesavechoice = 0x7f120574;
         public static final int uik_imagesavedialog = 0x7f120575;
 
-        private C6910style() {
+        private style() {
         }
     }
 

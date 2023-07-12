@@ -16,9 +16,9 @@ import com.alibaba.security.biometrics.skin.model.DialogSkinData;
 import com.alibaba.security.biometrics.skin.model.ImageViewSkinData;
 import com.alibaba.security.biometrics.skin.model.NavigatorSkinData;
 import com.alibaba.security.biometrics.skin.model.TextViewSkinData;
-import com.alibaba.security.common.c.C3800a;
-import com.alibaba.security.common.d.C3808e;
-import com.alibaba.security.common.d.C3811h;
+import com.alibaba.security.common.c.a;
+import com.alibaba.security.common.d.e;
+import com.alibaba.security.common.d.h;
 import com.taobao.accs.common.Constants;
 import com.taobao.weex.annotation.JSMethod;
 import com.taobao.weex.common.Constants;
@@ -146,23 +146,23 @@ public class RPSkinManager implements ISkinParse {
                 if (!key.endsWith("ImageView") && !key.endsWith("imageview")) {
                     if (!key.endsWith("Dialog") && !key.endsWith("dialog")) {
                         if (key.equalsIgnoreCase("detectAnimation")) {
-                            baseSkinData = (BaseSkinData) C3811h.a(C3811h.a(value), DetectAnimSkinData.class, true);
+                            baseSkinData = (BaseSkinData) h.a(h.a(value), DetectAnimSkinData.class, true);
                         } else if (!key.endsWith("navigator") && !key.endsWith("Navigator")) {
-                            baseSkinData = (key.endsWith(Constants.KEY_CONTROL) || key.endsWith("Control")) ? (BaseSkinData) C3811h.a(C3811h.a(value), ControlSkinData.class, true) : null;
+                            baseSkinData = (key.endsWith(Constants.KEY_CONTROL) || key.endsWith("Control")) ? (BaseSkinData) h.a(h.a(value), ControlSkinData.class, true) : null;
                         } else {
-                            baseSkinData = (BaseSkinData) C3811h.a(C3811h.a(value), NavigatorSkinData.class, true);
+                            baseSkinData = (BaseSkinData) h.a(h.a(value), NavigatorSkinData.class, true);
                         }
                     } else {
-                        baseSkinData = (BaseSkinData) C3811h.a(C3811h.a(value), DialogSkinData.class, true);
+                        baseSkinData = (BaseSkinData) h.a(h.a(value), DialogSkinData.class, true);
                     }
                 } else {
-                    baseSkinData = (BaseSkinData) C3811h.a(C3811h.a(value), ImageViewSkinData.class, true);
+                    baseSkinData = (BaseSkinData) h.a(h.a(value), ImageViewSkinData.class, true);
                 }
             } else {
-                baseSkinData = (BaseSkinData) C3811h.a(C3811h.a(value), TextViewSkinData.class, true);
+                baseSkinData = (BaseSkinData) h.a(h.a(value), TextViewSkinData.class, true);
             }
         } else {
-            baseSkinData = (BaseSkinData) C3811h.a(C3811h.a(value), ButtonSkinData.class, true);
+            baseSkinData = (BaseSkinData) h.a(h.a(value), ButtonSkinData.class, true);
         }
         if (baseSkinData != null) {
             baseSkinData.parse(this);
@@ -174,7 +174,7 @@ public class RPSkinManager implements ISkinParse {
     private void parseWebData(Map<String, Object> map) {
         Map map2;
         Map map3;
-        if (map == null || !map.containsKey("web") || (map2 = (Map) map.get("web")) == null || (map3 = (Map) C3811h.a(C3811h.a((Object) map2), Map.class, false)) == null) {
+        if (map == null || !map.containsKey("web") || (map2 = (Map) map.get("web")) == null || (map3 = (Map) h.a(h.a((Object) map2), Map.class, false)) == null) {
             return;
         }
         if (map3.containsKey("global")) {
@@ -215,7 +215,7 @@ public class RPSkinManager implements ISkinParse {
         if (map2 != null && !map2.isEmpty()) {
             hashMap.put("global", this.mGlobalDataPools);
         }
-        return C3811h.a((Object) hashMap);
+        return h.a((Object) hashMap);
     }
 
     public <T extends BaseSkinData> T getGlobalSkinData(String str, Class<T> cls) {
@@ -229,11 +229,11 @@ public class RPSkinManager implements ISkinParse {
             return null;
         }
         try {
-            T t = (T) C3811h.a(C3811h.a(baseSkinData), cls, false);
+            T t = (T) h.a(h.a(baseSkinData), cls, false);
             t.setKey("global_".concat(String.valueOf(str)));
             return t;
         } catch (Exception unused) {
-            C3800a.b();
+            a.b();
             return null;
         }
     }
@@ -249,18 +249,18 @@ public class RPSkinManager implements ISkinParse {
         this.mContext = context;
         this.mIsAssets = z;
         this.mSkinDir = str;
-        String a = C3808e.a(context, str + File.separator + NAME_SKIN, z);
+        String a = e.a(context, str + File.separator + NAME_SKIN, z);
         if (TextUtils.isEmpty(a)) {
             return;
         }
         try {
             JSONObject parseObject = JSON.parseObject(a);
             if (parseObject.containsKey("global")) {
-                for (Map.Entry<String, Object> entry : ((Map) C3811h.a(C3811h.a((Object) ((Map) parseObject.get("global"))), Map.class, false)).entrySet()) {
+                for (Map.Entry<String, Object> entry : ((Map) h.a(h.a((Object) ((Map) parseObject.get("global"))), Map.class, false)).entrySet()) {
                     parseNativeData(this.mGlobalDataPools, entry);
                 }
             }
-            if (parseObject.containsKey("native") && (map = (Map) parseObject.get("native")) != null && (map2 = (Map) C3811h.a(C3811h.a((Object) map), Map.class, false)) != null) {
+            if (parseObject.containsKey("native") && (map = (Map) parseObject.get("native")) != null && (map2 = (Map) h.a(h.a((Object) map), Map.class, false)) != null) {
                 if (map2.get("global") != null) {
                     for (Map.Entry<String, Object> entry2 : ((Map) map2.get("global")).entrySet()) {
                         parseNativeData(this.mNativeGlobalDataPools, entry2);
@@ -276,9 +276,9 @@ public class RPSkinManager implements ISkinParse {
                 }
             }
             parseWebData(parseObject);
-            C3800a.a(TAG, "init skin consume time： " + (System.currentTimeMillis() - currentTimeMillis));
+            a.a(TAG, "init skin consume time： " + (System.currentTimeMillis() - currentTimeMillis));
         } catch (Exception unused) {
-            C3800a.b();
+            a.b();
             release();
         }
     }
@@ -341,28 +341,28 @@ public class RPSkinManager implements ISkinParse {
                 if (!key.endsWith("ImageView") && !key.endsWith("imageview")) {
                     if (!key.endsWith("Dialog") && !key.endsWith("dialog")) {
                         if (key.equalsIgnoreCase("detectAnimation")) {
-                            baseSkinData = (BaseSkinData) C3811h.a(C3811h.a(value), DetectAnimSkinData.class, true);
+                            baseSkinData = (BaseSkinData) h.a(h.a(value), DetectAnimSkinData.class, true);
                         } else {
-                            baseSkinData = (key.endsWith("navigator") || key.endsWith("Navigator")) ? (BaseSkinData) C3811h.a(C3811h.a(value), NavigatorSkinData.class, true) : null;
+                            baseSkinData = (key.endsWith("navigator") || key.endsWith("Navigator")) ? (BaseSkinData) h.a(h.a(value), NavigatorSkinData.class, true) : null;
                         }
                     } else {
-                        baseSkinData = (BaseSkinData) C3811h.a(C3811h.a(value), DialogSkinData.class, true);
+                        baseSkinData = (BaseSkinData) h.a(h.a(value), DialogSkinData.class, true);
                     }
                 } else {
-                    baseSkinData = (BaseSkinData) C3811h.a(C3811h.a(value), ImageViewSkinData.class, true);
+                    baseSkinData = (BaseSkinData) h.a(h.a(value), ImageViewSkinData.class, true);
                 }
             } else {
-                baseSkinData = (BaseSkinData) C3811h.a(C3811h.a(value), TextViewSkinData.class, true);
+                baseSkinData = (BaseSkinData) h.a(h.a(value), TextViewSkinData.class, true);
             }
         } else {
-            baseSkinData = (BaseSkinData) C3811h.a(C3811h.a(value), ButtonSkinData.class, true);
+            baseSkinData = (BaseSkinData) h.a(h.a(value), ButtonSkinData.class, true);
         }
         if (baseSkinData != null) {
             baseSkinData.webConvert(this);
-            map.put(key, C3811h.a(C3811h.a(baseSkinData), Map.class, false));
+            map.put(key, h.a(h.a(baseSkinData), Map.class, false));
         } else if (key.endsWith("Container") || key.endsWith("container")) {
             try {
-                JSONObject parseObject = JSON.parseObject(C3811h.a(value));
+                JSONObject parseObject = JSON.parseObject(h.a(value));
                 for (Map.Entry<String, Object> entry2 : parseObject.entrySet()) {
                     if (!entry2.getKey().endsWith("src") && !entry2.getKey().endsWith("Src")) {
                         if (entry2.getKey().endsWith(Constants.Name.BACKGROUND_IMAGE) || entry2.getKey().endsWith("BackgroundImage")) {

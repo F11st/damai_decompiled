@@ -87,15 +87,14 @@ public class CommentItemMoreUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.util.CommentItemMoreUtil$a */
     /* loaded from: classes13.dex */
-    public class View$OnClickListenerC0450a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CommentsItemBean a;
         final /* synthetic */ String b;
         final /* synthetic */ DamaiBaseActivity c;
 
-        View$OnClickListenerC0450a(CommentsItemBean commentsItemBean, String str, DamaiBaseActivity damaiBaseActivity) {
+        a(CommentsItemBean commentsItemBean, String str, DamaiBaseActivity damaiBaseActivity) {
             this.a = commentsItemBean;
             this.b = str;
             this.c = damaiBaseActivity;
@@ -140,7 +139,7 @@ public class CommentItemMoreUtil {
 
     private static View b(DamaiBaseActivity damaiBaseActivity, String str, CommentsItemBean commentsItemBean) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-957900931") ? (View) ipChange.ipc$dispatch("-957900931", new Object[]{damaiBaseActivity, str, commentsItemBean}) : nb2.e(damaiBaseActivity, new View$OnClickListenerC0450a(commentsItemBean, str, damaiBaseActivity));
+        return AndroidInstantRuntime.support(ipChange, "-957900931") ? (View) ipChange.ipc$dispatch("-957900931", new Object[]{damaiBaseActivity, str, commentsItemBean}) : nb2.e(damaiBaseActivity, new a(commentsItemBean, str, damaiBaseActivity));
     }
 
     private static ArrayList<String> c(List<CommentImageInfoBean> list) {

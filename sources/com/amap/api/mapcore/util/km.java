@@ -35,7 +35,7 @@ public final class km {
         try {
             StringBuilder sb4 = this.a;
             sb4.append("#SHA1AndPackage#");
-            sb4.append(C4554gc.e(context));
+            sb4.append(gc.e(context));
             String str2 = ikVar.b.get("gsid").get(0);
             if (!TextUtils.isEmpty(str2)) {
                 StringBuilder sb5 = this.a;

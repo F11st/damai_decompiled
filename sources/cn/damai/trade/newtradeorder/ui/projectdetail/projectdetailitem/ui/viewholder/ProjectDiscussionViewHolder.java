@@ -25,12 +25,11 @@ public class ProjectDiscussionViewHolder extends RecyclerView.ViewHolder {
     private OnDiscussionClickListener c;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectDiscussionViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2391a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2391a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -67,7 +66,7 @@ public class ProjectDiscussionViewHolder extends RecyclerView.ViewHolder {
         if (AndroidInstantRuntime.support(ipChange, "1448300291")) {
             ipChange.ipc$dispatch("1448300291", new Object[]{this});
         } else {
-            this.itemView.setOnClickListener(new View$OnClickListenerC2391a());
+            this.itemView.setOnClickListener(new a());
         }
     }
 

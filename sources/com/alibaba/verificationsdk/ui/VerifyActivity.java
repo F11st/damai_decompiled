@@ -25,8 +25,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.alibaba.verificationsdk.utils.AsyncTaskC3956a;
-import com.alibaba.verificationsdk.utils.AsyncTaskC3959b;
 import com.alibaba.verificationsdk.utils.DownloadListener;
 import com.alibaba.verificationsdk.utils.ZIPExtracListener;
 import com.alibaba.verificationsdk.widgets.ALiLoadingView;
@@ -34,7 +32,6 @@ import com.alibaba.verificationsdk.widgets.BallView;
 import com.alibaba.verificationsdk.widgets.DrawView;
 import com.alibaba.wireless.security.open.SecurityGuardManager;
 import com.alibaba.wireless.security.open.nocaptcha.INoCaptchaComponent;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.tao.log.statistics.TLogEventConst;
 import com.youku.arch.v3.data.Constants;
 import com.youku.upsplayer.util.YKUpsConvert;
@@ -97,8 +94,8 @@ public class VerifyActivity extends Activity {
     private TextView o = null;
     private View p = null;
     private TextView q = null;
-    private CountDownTimerC3955t r = null;
-    private CountDownTimerC3954s s = null;
+    private t r = null;
+    private s s = null;
     private EditText t = null;
     private EditText u = null;
     private String v = null;
@@ -117,9 +114,9 @@ public class VerifyActivity extends Activity {
             VerifyActivity.this.finish();
         }
     };
-    Handler D = new HandlerC3940h();
-    Handler E = new HandlerC3941i();
-    Handler F = new HandlerC3942j();
+    Handler D = new h();
+    Handler E = new i();
+    Handler F = new j();
     Runnable G = new Runnable() { // from class: com.alibaba.verificationsdk.ui.VerifyActivity.21
         @Override // java.lang.Runnable
         public void run() {
@@ -127,8 +124,8 @@ public class VerifyActivity extends Activity {
             String str = null;
             try {
                 try {
-                    int i = C3946l.a[VerifyActivity.Z.ordinal()];
-                    if (i == 2) {
+                    int i2 = l.a[VerifyActivity.Z.ordinal()];
+                    if (i2 == 2) {
                         HashMap<String, String> hashMap = new HashMap<>();
                         hashMap.put(VerifyActivity.R, "1");
                         hashMap.put(VerifyActivity.S, VerifyActivity.b0);
@@ -137,7 +134,7 @@ public class VerifyActivity extends Activity {
                             hashMap.put("HOSTENV", VerifyActivity.c0);
                         }
                         str = VerifyActivity.this.m.noCaptchaForwardAuth("alibaba.security.jaq.captcha.send", hashMap, VerifyActivity.N, 12);
-                    } else if (i == 3) {
+                    } else if (i2 == 3) {
                         HashMap<String, String> hashMap2 = new HashMap<>();
                         hashMap2.put(VerifyActivity.S, VerifyActivity.b0);
                         hashMap2.put("info_token", VerifyActivity.a0);
@@ -162,12 +159,12 @@ public class VerifyActivity extends Activity {
                         }
                     }
                     message.obj = jSONObject;
-                } catch (Exception e) {
-                    e.printStackTrace();
+                } catch (Exception e2) {
+                    e2.printStackTrace();
                     message.what = 100015;
                     message.arg1 = ERROR_TYPE.ERROR_FROM_CLIENT.ordinal();
                     message.arg2 = VerifyActivity.ALIAUTH_CLIENT_ERROR_GENERIC;
-                    message.obj = e.getMessage();
+                    message.obj = e2.getMessage();
                 }
             } finally {
                 VerifyActivity.this.F.sendMessage(message);
@@ -181,9 +178,9 @@ public class VerifyActivity extends Activity {
             try {
                 try {
                     HashMap<String, String> hashMap = new HashMap<>();
-                    int i = C3946l.a[VerifyActivity.Z.ordinal()];
+                    int i2 = l.a[VerifyActivity.Z.ordinal()];
                     String str = "1";
-                    if (i != 2 && i == 3) {
+                    if (i2 != 2 && i2 == 3) {
                         str = "2";
                     }
                     hashMap.put(VerifyActivity.R, str);
@@ -208,7 +205,7 @@ public class VerifyActivity extends Activity {
                     } else {
                         int optInt = jSONObject2.optInt("verify_status");
                         if (optInt > 0) {
-                            message.what = C6368e.DX_ERROR_CODE_AST_EVENT_EXECUTE_EXCEPTION;
+                            message.what = com.taobao.android.dinamicx.e.DX_ERROR_CODE_AST_EVENT_EXECUTE_EXCEPTION;
                         } else {
                             message.what = 100005;
                             message.arg1 = ERROR_TYPE.ERROR_FROM_BUSSINESS.ordinal();
@@ -216,19 +213,19 @@ public class VerifyActivity extends Activity {
                         }
                     }
                     message.obj = jSONObject2;
-                } catch (Exception e) {
-                    e.printStackTrace();
+                } catch (Exception e2) {
+                    e2.printStackTrace();
                     message.what = 100005;
                     message.arg1 = ERROR_TYPE.ERROR_FROM_CLIENT.ordinal();
                     message.arg2 = VerifyActivity.ALIAUTH_CLIENT_ERROR_GENERIC;
-                    message.obj = e.getMessage();
+                    message.obj = e2.getMessage();
                 }
             } finally {
                 VerifyActivity.this.E.sendMessage(message);
             }
         }
     };
-    Handler I = new HandlerC3943k();
+    Handler I = new k();
     Runnable J = new Runnable() { // from class: com.alibaba.verificationsdk.ui.VerifyActivity.24
         @Override // java.lang.Runnable
         public void run() {
@@ -237,20 +234,20 @@ public class VerifyActivity extends Activity {
                 try {
                     HashMap<String, String> hashMap = new HashMap<>();
                     hashMap.put(VerifyActivity.O, "android");
-                    int i = VerifyActivity.this.getApplicationContext().getResources().getDisplayMetrics().densityDpi;
+                    int i2 = VerifyActivity.this.getApplicationContext().getResources().getDisplayMetrics().densityDpi;
                     String str = "xhdpi";
-                    if (i == 120) {
+                    if (i2 == 120) {
                         str = "ldpi";
-                    } else if (i == 160) {
+                    } else if (i2 == 160) {
                         str = "mdpi";
-                    } else if (i == 213) {
+                    } else if (i2 == 213) {
                         str = "tv";
-                    } else if (i == 240) {
+                    } else if (i2 == 240) {
                         str = "hdpi";
-                    } else if (i != 320) {
-                        if (i == 480) {
+                    } else if (i2 != 320) {
+                        if (i2 == 480) {
                             str = "xxhdpi";
-                        } else if (i == 640) {
+                        } else if (i2 == 640) {
                             str = "xxxhdpi";
                         }
                     }
@@ -270,11 +267,11 @@ public class VerifyActivity extends Activity {
                         message.what = 100024;
                     }
                     message.obj = jSONObject;
-                } catch (Exception e) {
-                    e.printStackTrace();
+                } catch (Exception e2) {
+                    e2.printStackTrace();
                     message.what = 100025;
                     message.arg1 = ERROR_TYPE.ERROR_FROM_CLIENT.ordinal();
-                    message.obj = e.getMessage();
+                    message.obj = e2.getMessage();
                 }
             } finally {
                 VerifyActivity.this.I.sendMessage(message);
@@ -292,10 +289,9 @@ public class VerifyActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$a */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC3933a implements View.OnClickListener {
-        View$OnClickListenerC3933a() {
+    public class a implements View.OnClickListener {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -309,10 +305,9 @@ public class VerifyActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$b */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC3934b implements View.OnClickListener {
-        View$OnClickListenerC3934b() {
+    public class b implements View.OnClickListener {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -323,10 +318,9 @@ public class VerifyActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$c */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC3935c implements View.OnClickListener {
-        View$OnClickListenerC3935c() {
+    public class c implements View.OnClickListener {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -340,10 +334,9 @@ public class VerifyActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$d */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC3936d implements View.OnClickListener {
-        View$OnClickListenerC3936d() {
+    public class d implements View.OnClickListener {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -361,10 +354,9 @@ public class VerifyActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$e */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC3937e implements View.OnClickListener {
-        View$OnClickListenerC3937e() {
+    public class e implements View.OnClickListener {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -375,12 +367,11 @@ public class VerifyActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$f */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC3938f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         final /* synthetic */ Dialog a;
 
-        View$OnClickListenerC3938f(Dialog dialog) {
+        f(Dialog dialog) {
             this.a = dialog;
         }
 
@@ -393,12 +384,11 @@ public class VerifyActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$g */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC3939g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         final /* synthetic */ Dialog a;
 
-        View$OnClickListenerC3939g(VerifyActivity verifyActivity, Dialog dialog) {
+        g(VerifyActivity verifyActivity, Dialog dialog) {
             this.a = dialog;
         }
 
@@ -409,10 +399,9 @@ public class VerifyActivity extends Activity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$h */
     /* loaded from: classes8.dex */
-    class HandlerC3940h extends Handler {
-        HandlerC3940h() {
+    class h extends Handler {
+        h() {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:33:0x0245  */
@@ -427,28 +416,27 @@ public class VerifyActivity extends Activity {
                 Method dump skipped, instructions count: 1708
                 To view this dump change 'Code comments level' option to 'DEBUG'
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.alibaba.verificationsdk.ui.VerifyActivity.HandlerC3940h.handleMessage(android.os.Message):void");
+            throw new UnsupportedOperationException("Method not decompiled: com.alibaba.verificationsdk.ui.VerifyActivity.h.handleMessage(android.os.Message):void");
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$i */
     /* loaded from: classes8.dex */
-    class HandlerC3941i extends Handler {
-        HandlerC3941i() {
+    class i extends Handler {
+        i() {
         }
 
         @Override // android.os.Handler
         public void handleMessage(Message message) {
             HashMap hashMap = new HashMap();
             switch (message.what) {
-                case C6368e.DX_ERROR_CODE_AST_EVENT_HANDLER_NOT_FOUND /* 100003 */:
+                case com.taobao.android.dinamicx.e.DX_ERROR_CODE_AST_EVENT_HANDLER_NOT_FOUND /* 100003 */:
                     VerifyActivity.this.o.setText(VerifyActivity.this.x.h("MSA_submit_button_waiting", VerifyActivity.this.getResources().getIdentifier("ali_vsdk_verify_in_progress", "string", VerifyActivity.this.getPackageName())));
                     VerifyActivity.this.y.setVisibility(0);
                     VerifyActivity.this.y.startRotationAnimation();
                     new Thread(VerifyActivity.this.H).start();
                     return;
-                case C6368e.DX_ERROR_CODE_AST_EVENT_EXECUTE_EXCEPTION /* 100004 */:
+                case com.taobao.android.dinamicx.e.DX_ERROR_CODE_AST_EVENT_EXECUTE_EXCEPTION /* 100004 */:
                     VerifyActivity.this.o.setText(VerifyActivity.this.getResources().getIdentifier("ali_vsdk_verify_submit", "string", VerifyActivity.this.getPackageName()));
                     VerifyActivity.this.y.setVisibility(4);
                     VerifyActivity.this.y.stopRotationAnimation();
@@ -479,7 +467,7 @@ public class VerifyActivity extends Activity {
                         Toast.makeText(verifyActivity2, verifyActivity2.getResources().getIdentifier("ali_vsdk_verify_error", "string", VerifyActivity.this.getPackageName()), 1).show();
                     }
                     ERROR_TYPE error_type = ERROR_TYPE.values()[message.arg1];
-                    int i = C3946l.b[error_type.ordinal()];
+                    int i = l.b[error_type.ordinal()];
                     if (i == 1) {
                         JSONObject jSONObject = (JSONObject) message.obj;
                         ra1.a("VerifyActivity", jSONObject.optString("msg"));
@@ -513,10 +501,9 @@ public class VerifyActivity extends Activity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$j */
     /* loaded from: classes8.dex */
-    class HandlerC3942j extends Handler {
-        HandlerC3942j() {
+    class j extends Handler {
+        j() {
         }
 
         @Override // android.os.Handler
@@ -534,7 +521,7 @@ public class VerifyActivity extends Activity {
                     hashMap.put("code", String.valueOf(message.arg2));
                     ERROR_TYPE error_type = ERROR_TYPE.values()[message.arg1];
                     hashMap.put("errorCode", error_type.name());
-                    int i = C3946l.b[error_type.ordinal()];
+                    int i = l.b[error_type.ordinal()];
                     if (i != 1) {
                         if (i != 2) {
                             return;
@@ -555,28 +542,26 @@ public class VerifyActivity extends Activity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$k */
     /* loaded from: classes8.dex */
-    class HandlerC3943k extends Handler {
+    class k extends Handler {
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$k$a */
         /* loaded from: classes8.dex */
-        class C3944a implements DownloadListener {
+        class a implements DownloadListener {
             final /* synthetic */ String a;
             final /* synthetic */ String b;
 
             /* compiled from: Taobao */
-            /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$k$a$a */
+            /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$k$a$a  reason: collision with other inner class name */
             /* loaded from: classes8.dex */
-            class C3945a implements ZIPExtracListener {
-                C3945a() {
+            class C0177a implements ZIPExtracListener {
+                C0177a() {
                 }
 
                 @Override // com.alibaba.verificationsdk.utils.ZIPExtracListener
                 public void unzipFinished(File file, File file2) {
                     ra1.b("VerifyActivity", "update resources finished! " + file2.getAbsolutePath());
-                    VerifyActivity.this.w.edit().putString("version", C3944a.this.b).apply();
+                    VerifyActivity.this.w.edit().putString("version", a.this.b).apply();
                     if (file != null && file.exists()) {
                         file.delete();
                     }
@@ -588,7 +573,7 @@ public class VerifyActivity extends Activity {
                 }
             }
 
-            C3944a(String str, String str2) {
+            a(String str, String str2) {
                 this.a = str;
                 this.b = str2;
             }
@@ -610,7 +595,7 @@ public class VerifyActivity extends Activity {
                         }
                         if (!TextUtils.isEmpty(this.a) && messageDigest != null) {
                             if (this.a.equals(VerifyActivity.this.s0(messageDigest.digest()).toLowerCase())) {
-                                new AsyncTaskC3959b(file.getAbsolutePath(), VerifyActivity.W, null, true, new C3945a()).execute(new Void[0]);
+                                new com.alibaba.verificationsdk.utils.b(file.getAbsolutePath(), VerifyActivity.W, null, true, new C0177a()).execute(new Void[0]);
                                 return;
                             } else {
                                 VerifyActivity.this.I.sendEmptyMessage(100026);
@@ -633,7 +618,7 @@ public class VerifyActivity extends Activity {
             }
         }
 
-        HandlerC3943k() {
+        k() {
         }
 
         @Override // android.os.Handler
@@ -649,13 +634,13 @@ public class VerifyActivity extends Activity {
                     String string = VerifyActivity.this.w.getString("version", "0.0.0.0");
                     if (!TextUtils.isEmpty(optString2) && kx2.b(string, optString2)) {
                         ra1.b("VerifyActivity", "new resource version is coming, upgrading now!");
-                        new AsyncTaskC3956a(jSONObject.optString("url"), VerifyActivity.this.getFilesDir().getAbsolutePath(), null, new C3944a(optString, optString2)).execute(new Void[0]);
+                        new com.alibaba.verificationsdk.utils.a(jSONObject.optString("url"), VerifyActivity.this.getFilesDir().getAbsolutePath(), null, new a(optString, optString2)).execute(new Void[0]);
                         return;
                     }
                     VerifyActivity.this.I.sendEmptyMessage(100026);
                     return;
                 case 100025:
-                    int i = C3946l.b[ERROR_TYPE.values()[message.arg1].ordinal()];
+                    int i = l.b[ERROR_TYPE.values()[message.arg1].ordinal()];
                     if (i == 1) {
                         JSONObject jSONObject2 = (JSONObject) message.obj;
                         ra1.a("VerifyActivity", jSONObject2.optString("msg"));
@@ -683,9 +668,8 @@ public class VerifyActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$l */
     /* loaded from: classes8.dex */
-    public static /* synthetic */ class C3946l {
+    public static /* synthetic */ class l {
         static final /* synthetic */ int[] a;
         static final /* synthetic */ int[] b;
 
@@ -723,10 +707,9 @@ public class VerifyActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$m */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC3947m implements View.OnClickListener {
-        View$OnClickListenerC3947m() {
+    public class m implements View.OnClickListener {
+        m() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -740,10 +723,9 @@ public class VerifyActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$n */
     /* loaded from: classes8.dex */
-    public class View$OnTouchListenerC3948n implements View.OnTouchListener {
-        View$OnTouchListenerC3948n() {
+    public class n implements View.OnTouchListener {
+        n() {
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:8:0x0034, code lost:
@@ -759,16 +741,15 @@ public class VerifyActivity extends Activity {
                 Method dump skipped, instructions count: 650
                 To view this dump change 'Code comments level' option to 'DEBUG'
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.alibaba.verificationsdk.ui.VerifyActivity.View$OnTouchListenerC3948n.onTouch(android.view.View, android.view.MotionEvent):boolean");
+            throw new UnsupportedOperationException("Method not decompiled: com.alibaba.verificationsdk.ui.VerifyActivity.n.onTouch(android.view.View, android.view.MotionEvent):boolean");
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$o */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC3949o implements View.OnClickListener {
-        View$OnClickListenerC3949o() {
+    public class o implements View.OnClickListener {
+        o() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -783,10 +764,9 @@ public class VerifyActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$p */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC3950p implements View.OnClickListener {
-        View$OnClickListenerC3950p() {
+    public class p implements View.OnClickListener {
+        p() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -800,10 +780,9 @@ public class VerifyActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$q */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC3951q implements View.OnClickListener {
-        View$OnClickListenerC3951q() {
+    public class q implements View.OnClickListener {
+        q() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -820,17 +799,15 @@ public class VerifyActivity extends Activity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$r */
     /* loaded from: classes8.dex */
-    public class C3952r extends PasswordTransformationMethod {
+    public class r extends PasswordTransformationMethod {
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$r$a */
         /* loaded from: classes8.dex */
-        private class C3953a implements CharSequence {
+        private class a implements CharSequence {
             private CharSequence a;
 
-            public C3953a(C3952r c3952r, CharSequence charSequence) {
+            public a(r rVar, CharSequence charSequence) {
                 this.a = charSequence;
             }
 
@@ -853,20 +830,19 @@ public class VerifyActivity extends Activity {
             }
         }
 
-        public C3952r(VerifyActivity verifyActivity) {
+        public r(VerifyActivity verifyActivity) {
         }
 
         @Override // android.text.method.PasswordTransformationMethod, android.text.method.TransformationMethod
         public CharSequence getTransformation(CharSequence charSequence, View view) {
-            return new C3953a(this, charSequence);
+            return new a(this, charSequence);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$s */
     /* loaded from: classes8.dex */
-    class CountDownTimerC3954s extends CountDownTimer {
-        public CountDownTimerC3954s(long j, long j2) {
+    class s extends CountDownTimer {
+        public s(long j, long j2) {
             super(j, j2);
         }
 
@@ -887,10 +863,9 @@ public class VerifyActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.verificationsdk.ui.VerifyActivity$t */
     /* loaded from: classes8.dex */
-    public class CountDownTimerC3955t extends CountDownTimer {
-        public CountDownTimerC3955t(long j, long j2) {
+    public class t extends CountDownTimer {
+        public t(long j, long j2) {
             super(j, j2);
         }
 
@@ -919,9 +894,9 @@ public class VerifyActivity extends Activity {
     }
 
     static /* synthetic */ int E() {
-        int i = X - 1;
-        X = i;
-        return i;
+        int i2 = X - 1;
+        X = i2;
+        return i2;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -935,11 +910,11 @@ public class VerifyActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void k0() {
-        String a = qi0.a(new File(W + File.separator + "config.json"));
-        if (TextUtils.isEmpty(a)) {
+        String a2 = qi0.a(new File(W + File.separator + "config.json"));
+        if (TextUtils.isEmpty(a2)) {
             return;
         }
-        this.x.c(a);
+        this.x.c(a2);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -965,7 +940,7 @@ public class VerifyActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void n0() {
-        this.E.sendEmptyMessage(C6368e.DX_ERROR_CODE_AST_EVENT_HANDLER_NOT_FOUND);
+        this.E.sendEmptyMessage(com.taobao.android.dinamicx.e.DX_ERROR_CODE_AST_EVENT_HANDLER_NOT_FOUND);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -990,16 +965,16 @@ public class VerifyActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void r0() {
-        this.D.sendEmptyMessage(C6368e.DX_ERROR_CODE_METHOD_NODE_EXECUTE_EXCEPTION);
+        this.D.sendEmptyMessage(com.taobao.android.dinamicx.e.DX_ERROR_CODE_METHOD_NODE_EXECUTE_EXCEPTION);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public String s0(byte[] bArr) {
         char[] cArr = {YKUpsConvert.CHAR_ZERO, '1', '2', '3', '4', '5', '6', '7', '8', YKUpsConvert.CHAR_NINE, 'a', 'b', 'c', 'd', 'e', 'f'};
         StringBuilder sb = new StringBuilder(bArr.length * 2);
-        for (int i = 0; i < bArr.length; i++) {
-            sb.append(cArr[(bArr[i] & 240) >>> 4]);
-            sb.append(cArr[bArr[i] & 15]);
+        for (int i2 = 0; i2 < bArr.length; i2++) {
+            sb.append(cArr[(bArr[i2] & 240) >>> 4]);
+            sb.append(cArr[bArr[i2] & 15]);
         }
         return sb.toString();
     }
@@ -1030,22 +1005,22 @@ public class VerifyActivity extends Activity {
         EditText editText = (EditText) findViewById(getResources().getIdentifier("number_et", "id", getPackageName()));
         this.t = editText;
         editText.setText(b0);
-        this.t.setTransformationMethod(new C3952r(this));
+        this.t.setTransformationMethod(new r(this));
         this.u = (EditText) findViewById(getResources().getIdentifier("code_et", "id", getPackageName()));
         View findViewById = findViewById(getResources().getIdentifier("left_top_layout", "id", getPackageName()));
         this.l = findViewById;
-        findViewById.setOnClickListener(new View$OnClickListenerC3935c());
+        findViewById.setOnClickListener(new c());
         View findViewById2 = findViewById(getResources().getIdentifier("btn_submit", "id", getPackageName()));
         this.n = findViewById2;
         findViewById2.setEnabled(false);
         this.n.setClickable(false);
         this.o = (TextView) findViewById(getResources().getIdentifier("submit_tx", "id", getPackageName()));
-        this.n.setOnClickListener(new View$OnClickListenerC3936d());
+        this.n.setOnClickListener(new d());
         this.u.setOnEditorActionListener(new TextView.OnEditorActionListener() { // from class: com.alibaba.verificationsdk.ui.VerifyActivity.14
             @Override // android.widget.TextView.OnEditorActionListener
-            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+            public boolean onEditorAction(TextView textView, int i2, KeyEvent keyEvent) {
                 VerifyActivity.this.e0();
-                if (i == VerifyActivity.this.getResources().getIdentifier("submit", "id", VerifyActivity.this.getPackageName()) || i == 0) {
+                if (i2 == VerifyActivity.this.getResources().getIdentifier("submit", "id", VerifyActivity.this.getPackageName()) || i2 == 0) {
                     if (!TextUtils.isEmpty(VerifyActivity.this.u.getText().toString())) {
                         VerifyActivity.this.n.setClickable(false);
                         VerifyActivity.this.n0();
@@ -1060,14 +1035,14 @@ public class VerifyActivity extends Activity {
         });
         this.y = (ALiLoadingView) findViewById(getResources().getIdentifier("submit_loading", "id", getPackageName()));
         this.q = (TextView) findViewById(getResources().getIdentifier("verify_send_code", "id", getPackageName()));
-        this.r = new CountDownTimerC3955t(DateUtils.MILLIS_PER_MINUTE, 1000L);
-        this.q.setOnClickListener(new View$OnClickListenerC3937e());
+        this.r = new t(DateUtils.MILLIS_PER_MINUTE, 1000L);
+        this.q.setOnClickListener(new e());
         AlertDialog create = new AlertDialog.Builder(this).create();
         create.show();
         create.getWindow().setContentView(getResources().getIdentifier("ali_vsdk_call_tips", "layout", getPackageName()));
         ((TextView) create.getWindow().findViewById(getResources().getIdentifier("message", "id", getPackageName()))).setText(getResources().getIdentifier("ali_vsdk_verify_call_goto_tips", "string", getPackageName()));
-        create.getWindow().findViewById(getResources().getIdentifier("ok", "id", getPackageName())).setOnClickListener(new View$OnClickListenerC3938f(create));
-        create.getWindow().findViewById(getResources().getIdentifier("cancel", "id", getPackageName())).setOnClickListener(new View$OnClickListenerC3939g(this, create));
+        create.getWindow().findViewById(getResources().getIdentifier("ok", "id", getPackageName())).setOnClickListener(new f(create));
+        create.getWindow().findViewById(getResources().getIdentifier("cancel", "id", getPackageName())).setOnClickListener(new g(this, create));
         ImageView imageView = (ImageView) findViewById(getResources().getIdentifier("logo", "id", getPackageName()));
         this.i = imageView;
         this.x.i(imageView, "MSA_logo_power_by", getResources().getIdentifier("ali_vsdk_logo", "drawable", getPackageName()));
@@ -1081,7 +1056,7 @@ public class VerifyActivity extends Activity {
         this.f = (FrameLayout) findViewById(getResources().getIdentifier("root", "id", getPackageName()));
         View findViewById = findViewById(getResources().getIdentifier("left_top_layout", "id", getPackageName()));
         this.l = findViewById;
-        findViewById.setOnClickListener(new View$OnClickListenerC3947m());
+        findViewById.setOnClickListener(new m());
         this.d = (TextView) findViewById(getResources().getIdentifier("tips", "id", getPackageName()));
         this.e = (TextView) findViewById(getResources().getIdentifier("tips_sub", "id", getPackageName()));
         LinearLayout linearLayout = (LinearLayout) findViewById(getResources().getIdentifier("content", "id", getPackageName()));
@@ -1100,8 +1075,8 @@ public class VerifyActivity extends Activity {
         try {
             Class.forName("android.view.Display").getMethod("getRealMetrics", DisplayMetrics.class).invoke(defaultDisplay, displayMetrics2);
             ra1.b("VerifyActivity", "displayMetrics.widthPixels: " + com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(displayMetrics2) + " displayMetrics.heightPixels: " + com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(displayMetrics2));
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
         ra1.b("VerifyActivity", "displayMetrics.densityDpi: " + displayMetrics2.densityDpi);
         ra1.b("VerifyActivity", "onCreate root.getTop(): " + this.f.getTop() + " root.getBottom(): " + this.f.getBottom());
@@ -1109,17 +1084,17 @@ public class VerifyActivity extends Activity {
         sb.append("onCreate orientation: ");
         sb.append(getResources().getConfiguration().orientation == 2 ? "landscape" : "portrait");
         ra1.b("VerifyActivity", sb.toString());
-        int i = K;
-        int i2 = L;
-        if (i > i2) {
-            L = i;
-            K = i2;
+        int i2 = K;
+        int i3 = L;
+        if (i2 > i3) {
+            L = i2;
+            K = i3;
         }
         ImageView imageView = (ImageView) findViewById(getResources().getIdentifier("logo", "id", getPackageName()));
         this.i = imageView;
         this.x.i(imageView, "MSA_logo_power_by", getResources().getIdentifier("ali_vsdk_logo", "drawable", getPackageName()));
         this.h = new DrawView(this);
-        this.g.setOnTouchListener(new View$OnTouchListenerC3948n());
+        this.g.setOnTouchListener(new n());
         FrameLayout frameLayout = new FrameLayout(this);
         this.z = frameLayout;
         frameLayout.setBackgroundColor(-1);
@@ -1137,7 +1112,7 @@ public class VerifyActivity extends Activity {
         this.z.addView(this.A, layoutParams);
         this.z.setClickable(true);
         this.z.setEnabled(true);
-        this.A.setOnClickListener(new View$OnClickListenerC3949o());
+        this.A.setOnClickListener(new o());
         getWindow().getDecorView().post(new Runnable() { // from class: com.alibaba.verificationsdk.ui.VerifyActivity.6
             @Override // java.lang.Runnable
             public void run() {
@@ -1153,19 +1128,19 @@ public class VerifyActivity extends Activity {
         EditText editText = (EditText) findViewById(getResources().getIdentifier("number_et", "id", getPackageName()));
         this.t = editText;
         editText.setText(b0);
-        this.t.setTransformationMethod(new C3952r(this));
+        this.t.setTransformationMethod(new r(this));
         this.u = (EditText) findViewById(getResources().getIdentifier("code_et", "id", getPackageName()));
         View findViewById = findViewById(getResources().getIdentifier("left_top_layout", "id", getPackageName()));
         this.l = findViewById;
-        findViewById.setOnClickListener(new View$OnClickListenerC3950p());
+        findViewById.setOnClickListener(new p());
         this.n = findViewById(getResources().getIdentifier("btn_submit", "id", getPackageName()));
         this.o = (TextView) findViewById(getResources().getIdentifier("submit_tx", "id", getPackageName()));
-        this.n.setOnClickListener(new View$OnClickListenerC3951q());
+        this.n.setOnClickListener(new q());
         this.u.setOnEditorActionListener(new TextView.OnEditorActionListener() { // from class: com.alibaba.verificationsdk.ui.VerifyActivity.9
             @Override // android.widget.TextView.OnEditorActionListener
-            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+            public boolean onEditorAction(TextView textView, int i2, KeyEvent keyEvent) {
                 VerifyActivity.this.e0();
-                if (i == VerifyActivity.this.getResources().getIdentifier("submit", "id", VerifyActivity.this.getPackageName()) || i == 0) {
+                if (i2 == VerifyActivity.this.getResources().getIdentifier("submit", "id", VerifyActivity.this.getPackageName()) || i2 == 0) {
                     if (!TextUtils.isEmpty(VerifyActivity.this.u.getText().toString())) {
                         VerifyActivity.this.n.setClickable(false);
                         VerifyActivity.this.n0();
@@ -1182,10 +1157,10 @@ public class VerifyActivity extends Activity {
         View findViewById2 = findViewById(getResources().getIdentifier("btn_call", "id", getPackageName()));
         this.p = findViewById2;
         findViewById2.setVisibility(4);
-        this.p.setOnClickListener(new View$OnClickListenerC3933a());
+        this.p.setOnClickListener(new a());
         this.q = (TextView) findViewById(getResources().getIdentifier("verify_send_code", "id", getPackageName()));
-        this.r = new CountDownTimerC3955t(DateUtils.MILLIS_PER_MINUTE, 1000L);
-        this.q.setOnClickListener(new View$OnClickListenerC3934b());
+        this.r = new t(DateUtils.MILLIS_PER_MINUTE, 1000L);
+        this.q.setOnClickListener(new b());
         ImageView imageView = (ImageView) findViewById(getResources().getIdentifier("logo", "id", getPackageName()));
         this.i = imageView;
         this.x.i(imageView, "MSA_logo_power_by", getResources().getIdentifier("ali_vsdk_logo", "drawable", getPackageName()));
@@ -1194,19 +1169,19 @@ public class VerifyActivity extends Activity {
 
     void i0(VerifyType verifyType) {
         Z = verifyType;
-        int i = C3946l.a[Z.ordinal()];
-        if (i == 1) {
+        int i2 = l.a[Z.ordinal()];
+        if (i2 == 1) {
             g0();
-        } else if (i == 2) {
+        } else if (i2 == 2) {
             h0();
-        } else if (i != 3) {
+        } else if (i2 != 3) {
         } else {
             f0();
         }
     }
 
-    int j0(int i) {
-        return (i == 104 || i == 105) ? 0 : 1;
+    int j0(int i2) {
+        return (i2 == 104 || i2 == 105) ? 0 : 1;
     }
 
     @Override // android.app.Activity
@@ -1232,22 +1207,22 @@ public class VerifyActivity extends Activity {
         m0();
         try {
             this.m = SecurityGuardManager.getInstance(getApplicationContext()).getNoCaptchaComp();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
-        this.s = new CountDownTimerC3954s(DateUtils.MILLIS_PER_MINUTE, 1000L);
+        this.s = new s(DateUtils.MILLIS_PER_MINUTE, 1000L);
     }
 
     @Override // android.app.Activity
     public void onDestroy() {
         super.onDestroy();
-        CountDownTimerC3955t countDownTimerC3955t = this.r;
-        if (countDownTimerC3955t != null) {
-            countDownTimerC3955t.cancel();
+        t tVar = this.r;
+        if (tVar != null) {
+            tVar.cancel();
         }
-        CountDownTimerC3954s countDownTimerC3954s = this.s;
-        if (countDownTimerC3954s != null) {
-            countDownTimerC3954s.cancel();
+        s sVar = this.s;
+        if (sVar != null) {
+            sVar.cancel();
         }
     }
 

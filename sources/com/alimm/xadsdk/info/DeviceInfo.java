@@ -21,7 +21,7 @@ import com.alimm.xadsdk.base.utils.Utils;
 import com.alimm.xadsdk.info.AdvertisingIdClient;
 import com.taobao.weex.annotation.JSMethod;
 import java.net.NetworkInterface;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -194,7 +194,7 @@ public class DeviceInfo {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         try {
             this.mIsTablet = DeviceInfoHelper.isTablet(this.mAppContext);
-            Display defaultDisplay = ((WindowManager) this.mAppContext.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
+            Display defaultDisplay = ((WindowManager) this.mAppContext.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
             com.alibaba.wireless.security.aopsdk.replace.android.view.Display.getMetrics(defaultDisplay, displayMetrics);
             int i = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(displayMetrics);
             int i2 = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(displayMetrics);

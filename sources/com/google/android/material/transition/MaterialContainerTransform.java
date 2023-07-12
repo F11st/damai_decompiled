@@ -45,7 +45,7 @@ import com.google.android.material.shape.Shapeable;
 import com.google.android.material.transition.TransitionUtils;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -459,7 +459,7 @@ public final class MaterialContainerTransform extends Transition {
             this.progressThresholds = progressThresholdsGroup;
             this.drawDebugEnabled = z3;
             DisplayMetrics displayMetrics = new DisplayMetrics();
-            Display.getMetrics(((WindowManager) view.getContext().getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+            Display.getMetrics(((WindowManager) view.getContext().getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
             this.displayWidth = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(displayMetrics);
             this.displayHeight = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(displayMetrics);
             paint.setColor(i);

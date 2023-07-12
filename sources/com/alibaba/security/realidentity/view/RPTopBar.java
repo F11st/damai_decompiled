@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.alibaba.security.biometrics.R;
-import com.alibaba.security.common.d.C3825q;
+import com.alibaba.security.common.d.q;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
@@ -37,7 +37,7 @@ public class RPTopBar extends RelativeLayout {
     }
 
     private void a() {
-        this.a = ((LayoutInflater) getContext().getSystemService("layout_inflater")).inflate(R.C3736layout.rp_alrealidentity_top_bar, (ViewGroup) null);
+        this.a = ((LayoutInflater) getContext().getSystemService("layout_inflater")).inflate(R.layout.rp_alrealidentity_top_bar, (ViewGroup) null);
         addView(this.a, new LinearLayout.LayoutParams(-1, -1));
         this.b = this.a.findViewById(R.id.status_bar);
         this.c = (ViewGroup) this.a.findViewById(R.id.iv_left_parent);
@@ -52,12 +52,12 @@ public class RPTopBar extends RelativeLayout {
 
     private void b() {
         ViewGroup.LayoutParams layoutParams = this.b.getLayoutParams();
-        layoutParams.height = C3825q.b(getContext());
+        layoutParams.height = q.b(getContext());
         this.b.setLayoutParams(layoutParams);
         this.b.setVisibility(0);
         this.b.requestLayout();
         ViewGroup.LayoutParams layoutParams2 = getLayoutParams();
-        layoutParams2.height = C3825q.b(getContext()) + C3825q.a(getContext());
+        layoutParams2.height = q.b(getContext()) + q.a(getContext());
         setLayoutParams(layoutParams2);
         requestLayout();
     }
@@ -69,7 +69,7 @@ public class RPTopBar extends RelativeLayout {
         this.b.setVisibility(8);
         this.b.requestLayout();
         ViewGroup.LayoutParams layoutParams2 = getLayoutParams();
-        layoutParams2.height = C3825q.a(getContext());
+        layoutParams2.height = q.a(getContext());
         setLayoutParams(layoutParams2);
         requestLayout();
     }
@@ -86,7 +86,7 @@ public class RPTopBar extends RelativeLayout {
         int max = Math.max(((LinearLayout) findViewById(R.id.left)).getMeasuredWidth(), ((LinearLayout) findViewById(R.id.right)).getMeasuredWidth());
         RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) this.f.getLayoutParams();
         layoutParams.leftMargin = max;
-        int c = (int) (C3825q.c(this.l) - (max * 2));
+        int c = (int) (q.c(this.l) - (max * 2));
         layoutParams.width = c > 0 ? c : 0;
         if (this.p != c) {
             this.p = c;
@@ -184,7 +184,7 @@ public class RPTopBar extends RelativeLayout {
         super(context, attributeSet, i);
         this.m = 0;
         this.l = context;
-        this.a = ((LayoutInflater) getContext().getSystemService("layout_inflater")).inflate(R.C3736layout.rp_alrealidentity_top_bar, (ViewGroup) null);
+        this.a = ((LayoutInflater) getContext().getSystemService("layout_inflater")).inflate(R.layout.rp_alrealidentity_top_bar, (ViewGroup) null);
         addView(this.a, new LinearLayout.LayoutParams(-1, -1));
         this.b = this.a.findViewById(R.id.status_bar);
         this.c = (ViewGroup) this.a.findViewById(R.id.iv_left_parent);

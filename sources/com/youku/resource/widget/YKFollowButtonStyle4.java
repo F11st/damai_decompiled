@@ -25,7 +25,7 @@ public class YKFollowButtonStyle4 extends FrameLayout {
     }
 
     private void init(Context context) {
-        this.lottieAnimationView = (LottieAnimationView) LayoutInflater.from(context).inflate(R.C8074layout.resource_yk_follow_button, (ViewGroup) this, true).findViewById(R.id.follow_button);
+        this.lottieAnimationView = (LottieAnimationView) LayoutInflater.from(context).inflate(R.layout.resource_yk_follow_button, (ViewGroup) this, true).findViewById(R.id.follow_button);
         if (!Utils.isDebug(context) && YoukuDeviceInfoProviderProxy.getDeviceScore() <= 80) {
             this.animate = false;
         } else {
@@ -47,19 +47,19 @@ public class YKFollowButtonStyle4 extends FrameLayout {
             this.lottieAnimationView.playAnimation();
             this.clicked = true;
         } else if (this.clicked) {
-            this.lottieAnimationView.setImageResource(R.C8072drawable.yk_button_addfollow4);
+            this.lottieAnimationView.setImageResource(R.drawable.yk_button_addfollow4);
             this.clicked = false;
         } else {
-            this.lottieAnimationView.setImageResource(R.C8072drawable.yk_button_followed3);
+            this.lottieAnimationView.setImageResource(R.drawable.yk_button_followed3);
             this.clicked = true;
         }
     }
 
     public void setInitState(boolean z) {
         if (z) {
-            this.lottieAnimationView.setImageResource(R.C8072drawable.yk_button_followed3);
+            this.lottieAnimationView.setImageResource(R.drawable.yk_button_followed3);
         } else {
-            this.lottieAnimationView.setImageResource(R.C8072drawable.yk_button_addfollow4);
+            this.lottieAnimationView.setImageResource(R.drawable.yk_button_addfollow4);
         }
         this.clicked = z;
     }

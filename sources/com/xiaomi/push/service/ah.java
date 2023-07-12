@@ -3,10 +3,9 @@ package com.xiaomi.push.service;
 import android.content.Context;
 import android.os.Messenger;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.mipush.sdk.ErrorCode;
-import com.xiaomi.push.C7627db;
 import com.xiaomi.push.Cif;
+import com.xiaomi.push.db;
 import com.xiaomi.push.fl;
 import com.xiaomi.push.fw;
 import com.xiaomi.push.gh;
@@ -32,29 +31,29 @@ public final class ah {
         Cif cif = new Cif();
         try {
             it.a(cif, bArr);
-            return a(C7777u.m1238a((Context) xMPushService), xMPushService, cif);
+            return a(u.m1238a((Context) xMPushService), xMPushService, cif);
         } catch (iz e) {
-            AbstractC7535b.a(e);
+            com.xiaomi.channel.commonutils.logger.b.a(e);
             return null;
         }
     }
 
-    static fl a(C7776t c7776t, Context context, Cif cif) {
+    static fl a(t tVar, Context context, Cif cif) {
         try {
             fl flVar = new fl();
             flVar.a(5);
-            flVar.c(c7776t.f996a);
+            flVar.c(tVar.f996a);
             flVar.b(a(cif));
             flVar.a("SECMSG", "message");
-            String str = c7776t.f996a;
+            String str = tVar.f996a;
             cif.f619a.f546a = str.substring(0, str.indexOf(m80.DINAMIC_PREFIX_AT));
             cif.f619a.f550c = str.substring(str.indexOf("/") + 1);
-            flVar.a(it.a(cif), c7776t.c);
+            flVar.a(it.a(cif), tVar.c);
             flVar.a((short) 1);
-            AbstractC7535b.m586a("try send mi push message. packagename:" + cif.f624b + " action:" + cif.f617a);
+            com.xiaomi.channel.commonutils.logger.b.m586a("try send mi push message. packagename:" + cif.f624b + " action:" + cif.f617a);
             return flVar;
         } catch (NullPointerException e) {
-            AbstractC7535b.a(e);
+            com.xiaomi.channel.commonutils.logger.b.a(e);
             return null;
         }
     }
@@ -109,10 +108,10 @@ public final class ah {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static void a(XMPushService xMPushService) {
-        C7776t m1238a = C7777u.m1238a(xMPushService.getApplicationContext());
+        t m1238a = u.m1238a(xMPushService.getApplicationContext());
         if (m1238a != null) {
-            bg.C7737b a = C7777u.m1238a(xMPushService.getApplicationContext()).a(xMPushService);
-            AbstractC7535b.m586a("prepare account. " + a.f925a);
+            bg.b a = u.m1238a(xMPushService.getApplicationContext()).a(xMPushService);
+            com.xiaomi.channel.commonutils.logger.b.m586a("prepare account. " + a.f925a);
             a(xMPushService, a);
             bg.a().a(a);
             bx.a(xMPushService).a(new ai("GAID", 172800L, xMPushService, m1238a));
@@ -122,7 +121,7 @@ public final class ah {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static void a(XMPushService xMPushService, Cif cif) {
-        C7627db.a(cif.b(), xMPushService.getApplicationContext(), cif, -1);
+        db.a(cif.b(), xMPushService.getApplicationContext(), cif, -1);
         fw m1147a = xMPushService.m1147a();
         if (m1147a == null) {
             throw new gh("try send msg while connection is null.");
@@ -130,25 +129,25 @@ public final class ah {
         if (!m1147a.mo902a()) {
             throw new gh("Don't support XMPP connection.");
         }
-        fl a = a(C7777u.m1238a((Context) xMPushService), xMPushService, cif);
+        fl a = a(u.m1238a((Context) xMPushService), xMPushService, cif);
         if (a != null) {
             m1147a.b(a);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static void a(XMPushService xMPushService, bg.C7737b c7737b) {
-        c7737b.a((Messenger) null);
-        c7737b.a(new ak(xMPushService));
+    public static void a(XMPushService xMPushService, bg.b bVar) {
+        bVar.a((Messenger) null);
+        bVar.a(new ak(xMPushService));
     }
 
-    private static void a(XMPushService xMPushService, C7776t c7776t, int i) {
-        bx.a(xMPushService).a(new aj("MSAID", i, xMPushService, c7776t));
+    private static void a(XMPushService xMPushService, t tVar, int i) {
+        bx.a(xMPushService).a(new aj("MSAID", i, xMPushService, tVar));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static void a(XMPushService xMPushService, String str, byte[] bArr) {
-        C7627db.a(str, xMPushService.getApplicationContext(), bArr);
+        db.a(str, xMPushService.getApplicationContext(), bArr);
         fw m1147a = xMPushService.m1147a();
         if (m1147a == null) {
             throw new gh("try send msg while connection is null.");
@@ -160,7 +159,7 @@ public final class ah {
         if (a != null) {
             m1147a.b(a);
         } else {
-            C7781x.a(xMPushService, str, bArr, ErrorCode.ERROR_INVALID_PAYLOAD, "not a valid message");
+            x.a(xMPushService, str, bArr, ErrorCode.ERROR_INVALID_PAYLOAD, "not a valid message");
         }
     }
 

@@ -24,7 +24,7 @@ interface WorkFlow$Flowable<T, R> {
 
     WorkFlow$Flow countFlow(CountDownLatch countDownLatch);
 
-    AbstractC3099b<T, R> currentThread();
+    b<T, R> currentThread();
 
     WorkFlow$Flow flow();
 
@@ -38,7 +38,7 @@ interface WorkFlow$Flowable<T, R> {
 
     boolean isLooping();
 
-    AbstractC3099b<T, R> newThread();
+    b<T, R> newThread();
 
     WorkFlow$Flowable<R, ?> next();
 
@@ -48,9 +48,9 @@ interface WorkFlow$Flowable<T, R> {
 
     void scheduleFlow(T t);
 
-    AbstractC3099b<T, R> serialTask();
+    b<T, R> serialTask();
 
-    AbstractC3099b<T, R> serialTask(int i);
+    b<T, R> serialTask(int i);
 
     <A extends WorkFlow$Action<T, R>> WorkFlow$Flowable<T, R> setAction(A a);
 
@@ -60,7 +60,7 @@ interface WorkFlow$Flowable<T, R> {
 
     WorkFlow$Flowable<T, R> setPrior(WorkFlow$Flowable<?, T> workFlow$Flowable);
 
-    AbstractC3099b<T, R> subThread();
+    b<T, R> subThread();
 
-    AbstractC3099b<T, R> uiThread();
+    b<T, R> uiThread();
 }

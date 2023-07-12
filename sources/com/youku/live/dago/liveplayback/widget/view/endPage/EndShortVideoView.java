@@ -42,7 +42,7 @@ public class EndShortVideoView extends RelativeLayout {
             ipChange.ipc$dispatch("1031307354", new Object[]{this, context});
             return;
         }
-        LayoutInflater.from(context).inflate(R.C7935layout.dago_end_item_view_short_video, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_end_item_view_short_video, (ViewGroup) this, true);
         this.mCoverIv = (ImageView) findViewById(R.id.end_short_video_cover);
         this.mPlayCountTv = (TextView) findViewById(R.id.end_short_video_num);
         this.mCommentTv = (TextView) findViewById(R.id.end_short_video_num2);

@@ -4,12 +4,11 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.text.TextUtils;
-import com.alibaba.android.vlayout.AbstractC3289a;
 import com.alibaba.android.vlayout.layout.BaseLayoutHelper;
-import com.alibaba.android.vlayout.layout.C3302c;
-import com.alibaba.android.vlayout.layout.C3304e;
-import com.alibaba.android.vlayout.layout.C3308h;
 import com.alibaba.android.vlayout.layout.StickyLayoutHelper;
+import com.alibaba.android.vlayout.layout.c;
+import com.alibaba.android.vlayout.layout.e;
+import com.alibaba.android.vlayout.layout.h;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -42,10 +41,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import kotlin.Metadata;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.joor.C8883a;
+import org.joor.a;
 import tb.b41;
 import tb.k50;
 import tb.tq2;
@@ -91,7 +90,7 @@ public final class AdapterCreator implements ICreator<VBaseAdapter<IItem<ItemVal
                 return (VDefaultAdapter) ipChange.ipc$dispatch("1565390946", new Object[]{this, Integer.valueOf(i), str, context});
             }
             if (!TextUtils.isEmpty(str)) {
-                Object f = C8883a.j(str).c(context).f();
+                Object f = a.j(str).c(context).f();
                 b41.h(f, "{\n                Reflec…text).get()\n            }");
                 vDefaultAdapter = (VDefaultAdapter) f;
             } else {
@@ -228,7 +227,7 @@ public final class AdapterCreator implements ICreator<VBaseAdapter<IItem<ItemVal
         } else {
             context = context8;
         }
-        return companion.innerCreateAdapter(i, str, context).setLayoutHelper((AbstractC3289a) feedStaggeredGridLayoutHelper).setData(list).setViewTypeSupport(this.viewTypeSupport).setLevel(3);
+        return companion.innerCreateAdapter(i, str, context).setLayoutHelper((com.alibaba.android.vlayout.a) feedStaggeredGridLayoutHelper).setData(list).setViewTypeSupport(this.viewTypeSupport).setLevel(3);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -277,7 +276,7 @@ public final class AdapterCreator implements ICreator<VBaseAdapter<IItem<ItemVal
         } else {
             context = context2;
         }
-        return companion.innerCreateAdapter(i, str, context).setLayoutHelper((AbstractC3289a) gridFixAutoStatLayoutHelper).setData(list).setLevel(3).setViewTypeSupport(this.viewTypeSupport);
+        return companion.innerCreateAdapter(i, str, context).setLayoutHelper((com.alibaba.android.vlayout.a) gridFixAutoStatLayoutHelper).setData(list).setLevel(3).setViewTypeSupport(this.viewTypeSupport);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -304,10 +303,10 @@ public final class AdapterCreator implements ICreator<VBaseAdapter<IItem<ItemVal
         }
         Object obj = map.get("data");
         List list = tq2.m(obj) ? (List) obj : null;
-        C3302c c3302c = new C3302c(i2);
-        handleMarginParams(c3302c, map);
-        handlePaddingParams(c3302c, map);
-        handleBackground(c3302c, map);
+        c cVar = new c(i2);
+        handleMarginParams(cVar, map);
+        handlePaddingParams(cVar, map);
+        handleBackground(cVar, map);
         Companion companion = Companion;
         Context context4 = this.context;
         if (context4 == null) {
@@ -315,7 +314,7 @@ public final class AdapterCreator implements ICreator<VBaseAdapter<IItem<ItemVal
         } else {
             context2 = context4;
         }
-        return companion.innerCreateAdapter(i, str, context2).setLayoutHelper((AbstractC3289a) c3302c).setData(list).setViewTypeSupport(this.viewTypeSupport);
+        return companion.innerCreateAdapter(i, str, context2).setLayoutHelper((com.alibaba.android.vlayout.a) cVar).setData(list).setViewTypeSupport(this.viewTypeSupport);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -331,9 +330,9 @@ public final class AdapterCreator implements ICreator<VBaseAdapter<IItem<ItemVal
         if (list.size() <= 3) {
             return createGridLayoutAdapter(i, str, map);
         }
-        C3304e c3304e = new C3304e();
-        handleGapParams(c3304e, map);
-        handleMarginParams(c3304e, map);
+        e eVar = new e();
+        handleGapParams(eVar, map);
+        handleMarginParams(eVar, map);
         Companion companion = Companion;
         Context context2 = this.context;
         if (context2 == null) {
@@ -341,7 +340,7 @@ public final class AdapterCreator implements ICreator<VBaseAdapter<IItem<ItemVal
         } else {
             context = context2;
         }
-        return companion.innerCreateAdapter(i, str, context).setLayoutHelper((AbstractC3289a) c3304e).setData(list).setViewTypeSupport(this.viewTypeSupport).setLevel(3);
+        return companion.innerCreateAdapter(i, str, context).setLayoutHelper((com.alibaba.android.vlayout.a) eVar).setData(list).setViewTypeSupport(this.viewTypeSupport).setLevel(3);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -353,10 +352,10 @@ public final class AdapterCreator implements ICreator<VBaseAdapter<IItem<ItemVal
         Object obj = map.get("data");
         Context context = null;
         List list = tq2.m(obj) ? (List) obj : null;
-        C3308h c3308h = new C3308h();
-        handleMarginParams(c3308h, map);
-        handlePaddingParams(c3308h, map);
-        handleBackground(c3308h, map);
+        h hVar = new h();
+        handleMarginParams(hVar, map);
+        handlePaddingParams(hVar, map);
+        handleBackground(hVar, map);
         Companion companion = Companion;
         Context context2 = this.context;
         if (context2 == null) {
@@ -364,7 +363,7 @@ public final class AdapterCreator implements ICreator<VBaseAdapter<IItem<ItemVal
         } else {
             context = context2;
         }
-        return companion.innerCreateAdapter(i, str, context).setLayoutHelper((AbstractC3289a) c3308h).setData(list).setViewTypeSupport(this.viewTypeSupport);
+        return companion.innerCreateAdapter(i, str, context).setLayoutHelper((com.alibaba.android.vlayout.a) hVar).setData(list).setViewTypeSupport(this.viewTypeSupport);
     }
 
     /* JADX WARN: Type inference failed for: r8v4, types: [com.youku.arch.v3.core.ItemValue, com.youku.arch.v3.core.Node] */
@@ -393,12 +392,12 @@ public final class AdapterCreator implements ICreator<VBaseAdapter<IItem<ItemVal
         genericItem.getProperty().setType(i);
         genericItem.getProperty().setData(new JSONObject());
         genericItem.setType(i);
-        C3308h c3308h = new C3308h();
-        handleMarginParams(c3308h, map);
-        handlePaddingParams(c3308h, map);
-        handleBackground(c3308h, map);
-        m = C8214m.m(genericItem);
-        innerCreateAdapter.setData(m).setLayoutHelper((AbstractC3289a) c3308h).setRenderCount(1).setViewTypeSupport(this.viewTypeSupport);
+        h hVar = new h();
+        handleMarginParams(hVar, map);
+        handlePaddingParams(hVar, map);
+        handleBackground(hVar, map);
+        m = m.m(genericItem);
+        innerCreateAdapter.setData(m).setLayoutHelper((com.alibaba.android.vlayout.a) hVar).setRenderCount(1).setViewTypeSupport(this.viewTypeSupport);
         Context context3 = this.context;
         if (context3 == null) {
             b41.A(WPKFactory.INIT_KEY_CONTEXT);
@@ -441,17 +440,17 @@ public final class AdapterCreator implements ICreator<VBaseAdapter<IItem<ItemVal
                 }
             }
         }
-        BaseLayoutHelper c3308h = new C3308h();
+        BaseLayoutHelper hVar = new h();
         Object obj2 = map.get("sticky");
         String str2 = obj2 instanceof String ? (String) obj2 : null;
         if (str2 != null && b41.d(str2, "true")) {
-            c3308h = new StickyLayoutHelper();
+            hVar = new StickyLayoutHelper();
         }
-        handleMarginParams(c3308h, map);
-        handlePaddingParams(c3308h, map);
-        handleBackground(c3308h, map);
-        m = C8214m.m(genericItem);
-        innerCreateAdapter.setData(m).setLayoutHelper((AbstractC3289a) c3308h).setViewTypeSupport(this.viewTypeSupport);
+        handleMarginParams(hVar, map);
+        handlePaddingParams(hVar, map);
+        handleBackground(hVar, map);
+        m = m.m(genericItem);
+        innerCreateAdapter.setData(m).setLayoutHelper((com.alibaba.android.vlayout.a) hVar).setViewTypeSupport(this.viewTypeSupport);
         return innerCreateAdapter;
     }
 
@@ -525,7 +524,7 @@ public final class AdapterCreator implements ICreator<VBaseAdapter<IItem<ItemVal
         } else {
             context = context8;
         }
-        return companion.innerCreateAdapter(i, str, context).setLayoutHelper((AbstractC3289a) staggeredGridLayoutHelper).setData(list).setViewTypeSupport(this.viewTypeSupport).setLevel(3);
+        return companion.innerCreateAdapter(i, str, context).setLayoutHelper((com.alibaba.android.vlayout.a) staggeredGridLayoutHelper).setData(list).setViewTypeSupport(this.viewTypeSupport).setLevel(3);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -551,7 +550,7 @@ public final class AdapterCreator implements ICreator<VBaseAdapter<IItem<ItemVal
         } else {
             context = context2;
         }
-        return companion.innerCreateAdapter(i, str, context).setLayoutHelper((AbstractC3289a) stickyLayoutHelper).setData(list).setRenderCount(1).setViewTypeSupport(this.viewTypeSupport);
+        return companion.innerCreateAdapter(i, str, context).setLayoutHelper((com.alibaba.android.vlayout.a) stickyLayoutHelper).setData(list).setRenderCount(1).setViewTypeSupport(this.viewTypeSupport);
     }
 
     private final int getDimenId(Context context, Map<String, ? extends Object> map, String str) {

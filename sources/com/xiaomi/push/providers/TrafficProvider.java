@@ -51,14 +51,14 @@ public class TrafficProvider extends ContentProvider {
 
     @Override // android.content.ContentProvider
     public boolean onCreate() {
-        this.f814a = new C7692a(getContext());
+        this.f814a = new a(getContext());
         return true;
     }
 
     @Override // android.content.ContentProvider
     public Cursor query(Uri uri, String[] strArr, String str, String[] strArr2, String str2) {
         Cursor query;
-        synchronized (C7692a.f815a) {
+        synchronized (a.f815a) {
             if (a.match(uri) != 1) {
                 throw new IllegalArgumentException("Unknown URI " + uri);
             }

@@ -173,7 +173,7 @@ class z92 implements ISecurity {
 
     @Override // anet.channel.security.ISecurity
     public byte[] getBytes(Context context, String str) {
-        if (C9708t9.P()) {
+        if (t9.P()) {
             return c(context, str);
         }
         return d(context, str);
@@ -187,7 +187,7 @@ class z92 implements ISecurity {
     @Override // anet.channel.security.ISecurity
     public boolean saveBytes(Context context, String str, byte[] bArr) {
         IDynamicDataStoreComponent dynamicDataStoreComp;
-        if (C9708t9.P()) {
+        if (t9.P()) {
             return f(context, str, bArr);
         }
         if (context == null || bArr == null || TextUtils.isEmpty(str)) {

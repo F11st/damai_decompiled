@@ -4,8 +4,8 @@ import androidx.lifecycle.Lifecycle;
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
 import kotlin.jvm.functions.Function2;
-import kotlinx.coroutines.C8658e;
 import kotlinx.coroutines.CoroutineScope;
+import kotlinx.coroutines.e;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -38,7 +38,7 @@ public final class PausingDispatcherKt {
 
     @Nullable
     public static final <T> Object whenStateAtLeast(@NotNull Lifecycle lifecycle, @NotNull Lifecycle.State state, @NotNull Function2<? super CoroutineScope, ? super Continuation<? super T>, ? extends Object> function2, @NotNull Continuation<? super T> continuation) {
-        return C8658e.e(da0.c().a(), new PausingDispatcherKt$whenStateAtLeast$2(lifecycle, state, function2, null), continuation);
+        return e.e(da0.c().a(), new PausingDispatcherKt$whenStateAtLeast$2(lifecycle, state, function2, null), continuation);
     }
 
     @Nullable

@@ -41,14 +41,13 @@ public class CompactHashSet<E> extends AbstractSet<E> implements Serializable {
     private transient int[] table;
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.CompactHashSet$a */
     /* loaded from: classes10.dex */
-    class C4941a implements Iterator<E> {
+    class a implements Iterator<E> {
         int a;
         int b;
         int c = -1;
 
-        C4941a() {
+        a() {
             this.a = CompactHashSet.this.modCount;
             this.b = CompactHashSet.this.firstEntryIndex();
         }
@@ -81,7 +80,7 @@ public class CompactHashSet<E> extends AbstractSet<E> implements Serializable {
         @Override // java.util.Iterator
         public void remove() {
             a();
-            C5191k.e(this.c >= 0);
+            k.e(this.c >= 0);
             this.a++;
             CompactHashSet compactHashSet = CompactHashSet.this;
             compactHashSet.remove(compactHashSet.elements[this.c], CompactHashSet.getHash(compactHashSet.entries[this.c]));
@@ -191,7 +190,7 @@ public class CompactHashSet<E> extends AbstractSet<E> implements Serializable {
         }
         long[] jArr = this.entries;
         Object[] objArr = this.elements;
-        int d = C5211z.d(e);
+        int d = z.d(e);
         int hashTableMask = hashTableMask() & d;
         int i = this.size;
         int[] iArr = this.table;
@@ -218,7 +217,7 @@ public class CompactHashSet<E> extends AbstractSet<E> implements Serializable {
             insertEntry(i, e, d);
             this.size = i3;
             int length = this.table.length;
-            if (C5211z.b(i, length, 1.0d)) {
+            if (z.b(i, length, 1.0d)) {
                 resizeTable(length * 2);
             }
             this.modCount++;
@@ -235,7 +234,7 @@ public class CompactHashSet<E> extends AbstractSet<E> implements Serializable {
     public void allocArrays() {
         du1.x(needsAllocArrays(), "Arrays already allocated");
         int i = this.modCount;
-        this.table = newTable(C5211z.a(i, 1.0d));
+        this.table = newTable(z.a(i, 1.0d));
         this.entries = newEntries(i);
         this.elements = new Object[i];
     }
@@ -257,7 +256,7 @@ public class CompactHashSet<E> extends AbstractSet<E> implements Serializable {
         if (needsAllocArrays()) {
             return false;
         }
-        int d = C5211z.d(obj);
+        int d = z.d(obj);
         int i = this.table[hashTableMask() & d];
         while (i != -1) {
             long j = this.entries[i];
@@ -300,7 +299,7 @@ public class CompactHashSet<E> extends AbstractSet<E> implements Serializable {
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
     public Iterator<E> iterator() {
-        return new C4941a();
+        return new a();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -347,7 +346,7 @@ public class CompactHashSet<E> extends AbstractSet<E> implements Serializable {
         if (needsAllocArrays()) {
             return false;
         }
-        return remove(obj, C5211z.d(obj));
+        return remove(obj, z.d(obj));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -380,9 +379,9 @@ public class CompactHashSet<E> extends AbstractSet<E> implements Serializable {
         if (i < this.entries.length) {
             resizeEntries(i);
         }
-        int a = C5211z.a(i, 1.0d);
-        if (a < this.table.length) {
-            resizeTable(a);
+        int a2 = z.a(i, 1.0d);
+        if (a2 < this.table.length) {
+            resizeTable(a2);
         }
     }
 
@@ -437,7 +436,7 @@ public class CompactHashSet<E> extends AbstractSet<E> implements Serializable {
             }
             return tArr;
         }
-        return (T[]) C5158b0.h(this.elements, 0, this.size, tArr);
+        return (T[]) b0.h(this.elements, 0, this.size, tArr);
     }
 
     public static <E> CompactHashSet<E> create(E... eArr) {

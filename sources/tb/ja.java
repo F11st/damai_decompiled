@@ -23,12 +23,11 @@ public class ja implements IContext {
     private IContainer e;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ja$a */
     /* loaded from: classes7.dex */
-    public class C9303a implements IDXNotificationListener {
+    public class a implements IDXNotificationListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9303a(ja jaVar) {
+        a(ja jaVar) {
         }
 
         @Override // com.taobao.android.dinamicx.notification.IDXNotificationListener
@@ -99,7 +98,7 @@ public class ja implements IContext {
         if (this.d == null) {
             DinamicXEngine dinamicXEngine = new DinamicXEngine(new DXEngineConfig("bizTypeHome"));
             this.d = dinamicXEngine;
-            dinamicXEngine.L(new C9303a(this));
+            dinamicXEngine.L(new a(this));
         }
         return this.d;
     }

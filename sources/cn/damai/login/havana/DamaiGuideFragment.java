@@ -23,7 +23,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import cn.damai.common.app.widget.DMDialog;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -57,12 +56,11 @@ public class DamaiGuideFragment extends GuideFragment {
     private String alertProDesc = "为了更好地保障您的合法权益，请您阅读并同意以下协议《大麦用户服务协议》《隐私权政策》《订票服务条款》。第三方账号首次登录需绑定手机号。";
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.login.havana.DamaiGuideFragment$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1323a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1323a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -79,12 +77,11 @@ public class DamaiGuideFragment extends GuideFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.login.havana.DamaiGuideFragment$b */
     /* loaded from: classes15.dex */
-    public class DialogInterface$OnClickListenerC1324b implements DialogInterface.OnClickListener {
+    public class b implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC1324b() {
+        b() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -101,13 +98,12 @@ public class DamaiGuideFragment extends GuideFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.login.havana.DamaiGuideFragment$c */
     /* loaded from: classes15.dex */
-    public class DialogInterface$OnClickListenerC1325c implements DialogInterface.OnClickListener {
+    public class c implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
 
-        DialogInterface$OnClickListenerC1325c(View view) {
+        c(View view) {
             this.a = view;
         }
 
@@ -182,8 +178,8 @@ public class DamaiGuideFragment extends GuideFragment {
         textView.setHighlightColor(0);
         DMDialog dMDialog = new DMDialog(this.mAttachedActivity);
         dMDialog.setCancelable(false);
-        dMDialog.i("不同意", new DialogInterface$OnClickListenerC1324b());
-        dMDialog.n("同意", new DialogInterface$OnClickListenerC1325c(view));
+        dMDialog.i("不同意", new b());
+        dMDialog.n("同意", new c(view));
         dMDialog.u(textView);
         wu0.g(getActivity(), dMDialog.c());
         dMDialog.show();
@@ -226,21 +222,21 @@ public class DamaiGuideFragment extends GuideFragment {
         }
         int id = view.getId();
         if (id == R$id.login_third_tb_btn) {
-            C0529c.e().x(ew0.f().h("手淘", 1));
+            cn.damai.common.user.c.e().x(ew0.f().h("手淘", 1));
             if (this.ckProSelect.isChecked()) {
                 HavanaProxy.v().q(this);
             } else {
                 threeLoginPro(view);
             }
         } else if (id == R$id.login_third_account_btn) {
-            C0529c.e().x(ew0.f().h("账号", 5));
+            cn.damai.common.user.c.e().x(ew0.f().h("账号", 5));
             if (this.ckProSelect.isChecked()) {
                 onAccountLoginClick(view);
             } else {
                 threeLoginPro(view);
             }
         } else if (id == R$id.login_third_zhifubao_btn) {
-            C0529c.e().x(ew0.f().h("支付宝", 0));
+            cn.damai.common.user.c.e().x(ew0.f().h("支付宝", 0));
             if (this.ckProSelect.isChecked()) {
                 HavanaProxy.v().n(this);
             } else {
@@ -252,21 +248,21 @@ public class DamaiGuideFragment extends GuideFragment {
             this.mBtnQQ.setVisibility(0);
             this.mBtnWeChat.setVisibility(0);
         } else if (id == R$id.login_third_platform_weibo_btn) {
-            C0529c.e().x(ew0.f().h("新浪微博", 2));
+            cn.damai.common.user.c.e().x(ew0.f().h("新浪微博", 2));
             if (this.ckProSelect.isChecked()) {
                 HavanaProxy.v().r(this);
             } else {
                 threeLoginPro(view);
             }
         } else if (id == R$id.login_third_platform_qq_btn) {
-            C0529c.e().x(ew0.f().h(Constants.SOURCE_QQ, 4));
+            cn.damai.common.user.c.e().x(ew0.f().h(Constants.SOURCE_QQ, 4));
             if (this.ckProSelect.isChecked()) {
                 HavanaProxy.v().o(this);
             } else {
                 threeLoginPro(view);
             }
         } else if (id == R$id.login_platform_wechat_btn) {
-            C0529c.e().x(ew0.f().h("微信", 3));
+            cn.damai.common.user.c.e().x(ew0.f().h("微信", 3));
             if (this.ckProSelect.isChecked()) {
                 HavanaProxy.v().s(this);
             } else {
@@ -328,7 +324,7 @@ public class DamaiGuideFragment extends GuideFragment {
         this.tvProDesc.setHighlightColor(0);
         this.tvProDesc.setMovementMethod(LinkMovementMethod.getInstance());
         this.ckProSelect.setChecked(false);
-        this.llProSelect.setOnClickListener(new View$OnClickListenerC1323a());
+        this.llProSelect.setOnClickListener(new a());
         this.ckProSelect.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() { // from class: cn.damai.login.havana.DamaiGuideFragment.3
             private static transient /* synthetic */ IpChange $ipChange;
 

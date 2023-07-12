@@ -13,10 +13,7 @@ import java.util.ServiceLoader;
 import java.util.Set;
 import java.util.jar.JarFile;
 import java.util.zip.ZipEntry;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8220r;
 import kotlin.collections.CollectionsKt___CollectionsKt;
-import kotlin.text.C8604o;
 import kotlin.text.StringsKt__StringsKt;
 import kotlinx.coroutines.internal.MainDispatcherFactory;
 import org.jetbrains.annotations.NotNull;
@@ -53,7 +50,7 @@ public final class zh0 {
         String J0;
         String E02;
         String url2 = url.toString();
-        F = C8604o.F(url2, "jar", false, 2, null);
+        F = kotlin.text.o.F(url2, "jar", false, 2, null);
         if (F) {
             E0 = StringsKt__StringsKt.E0(url2, "jar:file:", null, 2, null);
             J0 = StringsKt__StringsKt.J0(E0, '!', null, 2, null);
@@ -173,11 +170,11 @@ public final class zh0 {
         b41.h(list, "java.util.Collections.list(this)");
         ArrayList arrayList = new ArrayList();
         for (URL url : list) {
-            C8220r.v(arrayList, INSTANCE.e(url));
+            kotlin.collections.r.v(arrayList, INSTANCE.e(url));
         }
         E0 = CollectionsKt___CollectionsKt.E0(arrayList);
         if (!E0.isEmpty()) {
-            q = C8215n.q(E0, 10);
+            q = kotlin.collections.n.q(E0, 10);
             ArrayList arrayList2 = new ArrayList(q);
             for (String str : E0) {
                 arrayList2.add(INSTANCE.a(str, classLoader, cls));

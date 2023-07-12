@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.internal.subscriptions.DeferredScalarSubscription;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import org.reactivestreams.Subscriber;
@@ -54,11 +54,11 @@ public final class FlowableCount<T> extends AbstractFlowableWithUpstream<T, Long
         }
     }
 
-    public FlowableCount(AbstractC8147b<T> abstractC8147b) {
-        super(abstractC8147b);
+    public FlowableCount(b<T> bVar) {
+        super(bVar);
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super Long> subscriber) {
         this.source.subscribe((FlowableSubscriber) new CountSubscriber(subscriber));
     }

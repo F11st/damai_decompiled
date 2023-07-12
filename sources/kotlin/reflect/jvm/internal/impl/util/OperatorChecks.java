@@ -2,9 +2,8 @@ package kotlin.reflect.jvm.internal.impl.util;
 
 import java.util.Collection;
 import java.util.List;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor;
@@ -34,20 +33,20 @@ public final class OperatorChecks extends x1 {
         List j;
         List<Checks> j2;
         ni1 ni1Var = in1.GET;
-        ke1.C9350b c9350b = ke1.C9350b.INSTANCE;
-        Check[] checkArr = {c9350b, new zw2.C10036a(1)};
+        ke1.b bVar = ke1.b.INSTANCE;
+        Check[] checkArr = {bVar, new zw2.a(1)};
         ni1 ni1Var2 = in1.SET;
-        Check[] checkArr2 = {c9350b, new zw2.C10036a(2)};
+        Check[] checkArr2 = {bVar, new zw2.a(2)};
         ni1 ni1Var3 = in1.GET_VALUE;
-        C8559b c8559b = C8559b.INSTANCE;
-        C8558a c8558a = C8558a.INSTANCE;
+        b bVar2 = b.INSTANCE;
+        a aVar = a.INSTANCE;
         ni1 ni1Var4 = in1.CONTAINS;
-        zw2.C10039d c10039d = zw2.C10039d.INSTANCE;
+        zw2.d dVar = zw2.d.INSTANCE;
         ReturnsCheck.ReturnsBoolean returnsBoolean = ReturnsCheck.ReturnsBoolean.INSTANCE;
         ni1 ni1Var5 = in1.ITERATOR;
-        zw2.C10038c c10038c = zw2.C10038c.INSTANCE;
-        j = C8214m.j(in1.INC, in1.DEC);
-        j2 = C8214m.j(new Checks(ni1Var, checkArr, (Function1) null, 4, (k50) null), new Checks(ni1Var2, checkArr2, new Function1<FunctionDescriptor, String>() { // from class: kotlin.reflect.jvm.internal.impl.util.OperatorChecks$checks$1
+        zw2.c cVar = zw2.c.INSTANCE;
+        j = m.j(in1.INC, in1.DEC);
+        j2 = m.j(new Checks(ni1Var, checkArr, (Function1) null, 4, (k50) null), new Checks(ni1Var2, checkArr2, new Function1<FunctionDescriptor, String>() { // from class: kotlin.reflect.jvm.internal.impl.util.OperatorChecks$checks$1
             /* JADX WARN: Code restructure failed: missing block: B:11:0x0029, code lost:
                 if ((!kotlin.reflect.jvm.internal.impl.resolve.descriptorUtil.DescriptorUtilsKt.a(r4) && r4.getVarargElementType() == null) == true) goto L4;
              */
@@ -65,7 +64,7 @@ public final class OperatorChecks extends x1 {
                     java.util.List r4 = r4.getValueParameters()
                     java.lang.String r0 = "valueParameters"
                     tb.b41.h(r4, r0)
-                    java.lang.Object r4 = kotlin.collections.C8212k.d0(r4)
+                    java.lang.Object r4 = kotlin.collections.k.d0(r4)
                     kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor r4 = (kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor) r4
                     r0 = 1
                     r1 = 0
@@ -96,9 +95,9 @@ public final class OperatorChecks extends x1 {
                 */
                 throw new UnsupportedOperationException("Method not decompiled: kotlin.reflect.jvm.internal.impl.util.OperatorChecks$checks$1.invoke(kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor):java.lang.String");
             }
-        }), new Checks(ni1Var3, new Check[]{c9350b, c8559b, new zw2.C10036a(2), c8558a}, (Function1) null, 4, (k50) null), new Checks(in1.SET_VALUE, new Check[]{c9350b, c8559b, new zw2.C10036a(3), c8558a}, (Function1) null, 4, (k50) null), new Checks(in1.PROVIDE_DELEGATE, new Check[]{c9350b, c8559b, new zw2.C10037b(2), c8558a}, (Function1) null, 4, (k50) null), new Checks(in1.INVOKE, new Check[]{c9350b}, (Function1) null, 4, (k50) null), new Checks(ni1Var4, new Check[]{c9350b, c10039d, c8559b, returnsBoolean}, (Function1) null, 4, (k50) null), new Checks(ni1Var5, new Check[]{c9350b, c10038c}, (Function1) null, 4, (k50) null), new Checks(in1.NEXT, new Check[]{c9350b, c10038c}, (Function1) null, 4, (k50) null), new Checks(in1.HAS_NEXT, new Check[]{c9350b, c10038c, returnsBoolean}, (Function1) null, 4, (k50) null), new Checks(in1.RANGE_TO, new Check[]{c9350b, c10039d, c8559b}, (Function1) null, 4, (k50) null), new Checks(in1.EQUALS, new Check[]{ke1.C9349a.INSTANCE}, new Function1<FunctionDescriptor, String>() { // from class: kotlin.reflect.jvm.internal.impl.util.OperatorChecks$checks$2
+        }), new Checks(ni1Var3, new Check[]{bVar, bVar2, new zw2.a(2), aVar}, (Function1) null, 4, (k50) null), new Checks(in1.SET_VALUE, new Check[]{bVar, bVar2, new zw2.a(3), aVar}, (Function1) null, 4, (k50) null), new Checks(in1.PROVIDE_DELEGATE, new Check[]{bVar, bVar2, new zw2.b(2), aVar}, (Function1) null, 4, (k50) null), new Checks(in1.INVOKE, new Check[]{bVar}, (Function1) null, 4, (k50) null), new Checks(ni1Var4, new Check[]{bVar, dVar, bVar2, returnsBoolean}, (Function1) null, 4, (k50) null), new Checks(ni1Var5, new Check[]{bVar, cVar}, (Function1) null, 4, (k50) null), new Checks(in1.NEXT, new Check[]{bVar, cVar}, (Function1) null, 4, (k50) null), new Checks(in1.HAS_NEXT, new Check[]{bVar, cVar, returnsBoolean}, (Function1) null, 4, (k50) null), new Checks(in1.RANGE_TO, new Check[]{bVar, dVar, bVar2}, (Function1) null, 4, (k50) null), new Checks(in1.EQUALS, new Check[]{ke1.a.INSTANCE}, new Function1<FunctionDescriptor, String>() { // from class: kotlin.reflect.jvm.internal.impl.util.OperatorChecks$checks$2
             private static final boolean invoke$isAny(DeclarationDescriptor declarationDescriptor) {
-                return (declarationDescriptor instanceof ClassDescriptor) && AbstractC8271b.a0((ClassDescriptor) declarationDescriptor);
+                return (declarationDescriptor instanceof ClassDescriptor) && kotlin.reflect.jvm.internal.impl.builtins.b.a0((ClassDescriptor) declarationDescriptor);
             }
 
             @Override // kotlin.jvm.functions.Function1
@@ -133,7 +132,7 @@ public final class OperatorChecks extends x1 {
                 }
                 return "must override ''equals()'' in Any";
             }
-        }), new Checks(in1.COMPARE_TO, new Check[]{c9350b, ReturnsCheck.ReturnsInt.INSTANCE, c10039d, c8559b}, (Function1) null, 4, (k50) null), new Checks(in1.BINARY_OPERATION_NAMES, new Check[]{c9350b, c10039d, c8559b}, (Function1) null, 4, (k50) null), new Checks(in1.SIMPLE_UNARY_OPERATION_NAMES, new Check[]{c9350b, c10038c}, (Function1) null, 4, (k50) null), new Checks(j, new Check[]{c9350b}, new Function1<FunctionDescriptor, String>() { // from class: kotlin.reflect.jvm.internal.impl.util.OperatorChecks$checks$3
+        }), new Checks(in1.COMPARE_TO, new Check[]{bVar, ReturnsCheck.ReturnsInt.INSTANCE, dVar, bVar2}, (Function1) null, 4, (k50) null), new Checks(in1.BINARY_OPERATION_NAMES, new Check[]{bVar, dVar, bVar2}, (Function1) null, 4, (k50) null), new Checks(in1.SIMPLE_UNARY_OPERATION_NAMES, new Check[]{bVar, cVar}, (Function1) null, 4, (k50) null), new Checks(j, new Check[]{bVar}, new Function1<FunctionDescriptor, String>() { // from class: kotlin.reflect.jvm.internal.impl.util.OperatorChecks$checks$3
             @Override // kotlin.jvm.functions.Function1
             @Nullable
             public final String invoke(@NotNull FunctionDescriptor functionDescriptor) {
@@ -163,7 +162,7 @@ public final class OperatorChecks extends x1 {
                 }
                 return "receiver must be a supertype of the return type";
             }
-        }), new Checks(in1.ASSIGNMENT_OPERATIONS, new Check[]{c9350b, ReturnsCheck.ReturnsUnit.INSTANCE, c10039d, c8559b}, (Function1) null, 4, (k50) null), new Checks(in1.COMPONENT_REGEX, new Check[]{c9350b, c10038c}, (Function1) null, 4, (k50) null));
+        }), new Checks(in1.ASSIGNMENT_OPERATIONS, new Check[]{bVar, ReturnsCheck.ReturnsUnit.INSTANCE, dVar, bVar2}, (Function1) null, 4, (k50) null), new Checks(in1.COMPONENT_REGEX, new Check[]{bVar, cVar}, (Function1) null, 4, (k50) null));
         a = j2;
     }
 

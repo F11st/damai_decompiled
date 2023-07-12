@@ -24,7 +24,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import com.alibaba.aliweex.AliWXSDKInstance;
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.R$id;
 import com.alibaba.aliweex.R$layout;
 import com.alibaba.aliweex.adapter.INavigationBarModuleAdapter;
@@ -69,7 +68,7 @@ public class WeexPageFragment extends Fragment {
     private WeexPageContract.IProgressBar mProgressBarView;
     private BroadcastReceiver mRefreshReceiver;
     private BroadcastReceiver mReloadReceiver;
-    private C3076b mRenderListener;
+    private b mRenderListener;
     private WeexPageContract.IRenderPresenter mRenderPresenter;
     private FrameLayout mRootView;
     private WeexPageContract.IUTPresenter mUTPresenter;
@@ -80,22 +79,21 @@ public class WeexPageFragment extends Fragment {
     private INavigationBarModuleAdapter.OnItemClickListener mOnBackPressedListener = null;
     private WXAbstractRenderContainer mRenderContainer = null;
     private boolean mIsHeron = false;
-    C3090g mWXRenderListener = null;
+    g mWXRenderListener = null;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.bundle.WeexPageFragment$a */
     /* loaded from: classes5.dex */
-    class C3075a extends C3076b {
-        C3075a() {
+    class a extends b {
+        a() {
         }
 
-        @Override // com.alibaba.aliweex.bundle.WeexPageFragment.C3076b, com.taobao.weex.IWXRenderListener
+        @Override // com.alibaba.aliweex.bundle.WeexPageFragment.b, com.taobao.weex.IWXRenderListener
         public void onException(WXSDKInstance wXSDKInstance, String str, String str2) {
             super.onException(wXSDKInstance, str, str2);
             WeexPageFragment.this.onWXException(wXSDKInstance, str, str2);
         }
 
-        @Override // com.alibaba.aliweex.bundle.WeexPageFragment.C3076b, com.taobao.weex.IWXRenderListener
+        @Override // com.alibaba.aliweex.bundle.WeexPageFragment.b, com.taobao.weex.IWXRenderListener
         public void onViewCreated(WXSDKInstance wXSDKInstance, View view) {
             super.onViewCreated(wXSDKInstance, view);
             WeexPageFragment.this.onWXViewCreated(wXSDKInstance, view);
@@ -103,9 +101,8 @@ public class WeexPageFragment extends Fragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.bundle.WeexPageFragment$b */
     /* loaded from: classes5.dex */
-    public static class C3076b implements IWXRenderListener {
+    public static class b implements IWXRenderListener {
         public boolean a() {
             return true;
         }
@@ -477,18 +474,18 @@ public class WeexPageFragment extends Fragment {
         super.onAttach(context);
         if (this.mUTEnable) {
             if (this.mUTPresenter == null) {
-                this.mUTPresenter = new C3083d(getActivity());
+                this.mUTPresenter = new d(getActivity());
             }
             this.mUTPresenter.skipPage();
         }
         if (this.mDyUrlEnable && this.mDynamicUrlPresenter == null) {
-            this.mDynamicUrlPresenter = new C3080c();
+            this.mDynamicUrlPresenter = new c();
         }
         if (this.mProgressBarView == null) {
-            this.mProgressBarView = new C3079b();
+            this.mProgressBarView = new com.alibaba.aliweex.bundle.b();
         }
         if (this.mUrlValidate == null) {
-            this.mUrlValidate = new C3085e(getActivity());
+            this.mUrlValidate = new e(getActivity());
         }
     }
 
@@ -645,13 +642,13 @@ public class WeexPageFragment extends Fragment {
         if (this.mRenderPresenter == null) {
             HashMap hashMap = new HashMap(1);
             hashMap.put("ListenerValue", this.mRenderListener == null ? "No" : "Yes");
-            C3004a.l().s("createWXRenderListener", hashMap);
-            C3090g c3090g = new C3090g(this.mRootView, this.mProgressBarView, this.mUTPresenter, this.mRenderListener, new C3075a());
-            this.mWXRenderListener = c3090g;
-            WeexPageContract.IRenderPresenter createRenderPresenter = createRenderPresenter(c3090g, this.mUTPresenter, this.mDynamicUrlPresenter, this.mProgressBarView, this.mUrlValidate);
+            com.alibaba.aliweex.a.l().s("createWXRenderListener", hashMap);
+            g gVar = new g(this.mRootView, this.mProgressBarView, this.mUTPresenter, this.mRenderListener, new a());
+            this.mWXRenderListener = gVar;
+            WeexPageContract.IRenderPresenter createRenderPresenter = createRenderPresenter(gVar, this.mUTPresenter, this.mDynamicUrlPresenter, this.mProgressBarView, this.mUrlValidate);
             this.mRenderPresenter = createRenderPresenter;
             if (this.mErrorView == null) {
-                this.mErrorView = new C3077a(createRenderPresenter);
+                this.mErrorView = new com.alibaba.aliweex.bundle.a(createRenderPresenter);
             }
             this.mWXRenderListener.f(this.mErrorView);
             transformUrl();
@@ -719,14 +716,14 @@ public class WeexPageFragment extends Fragment {
         this.mIsHeron = false;
     }
 
-    public void setRenderListener(C3076b c3076b) {
-        this.mRenderListener = c3076b;
-        C3090g c3090g = this.mWXRenderListener;
-        if (c3090g == null || c3090g.a() != null) {
+    public void setRenderListener(b bVar) {
+        this.mRenderListener = bVar;
+        g gVar = this.mWXRenderListener;
+        if (gVar == null || gVar.a() != null) {
             return;
         }
-        C3004a.l().s("ReSetRenderListener", null);
-        this.mWXRenderListener.g(c3076b);
+        com.alibaba.aliweex.a.l().s("ReSetRenderListener", null);
+        this.mWXRenderListener.g(bVar);
     }
 
     public void setUserTrackEnable(boolean z) {

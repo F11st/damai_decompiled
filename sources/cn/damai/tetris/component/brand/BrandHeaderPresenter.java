@@ -16,7 +16,6 @@ import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.R$dimen;
 import cn.damai.commonbusiness.R$drawable;
@@ -38,7 +37,6 @@ import cn.damai.tetris.core.BasePresenter;
 import cn.damai.tetris.core.BaseSection;
 import cn.damai.tetris.core.TrackInfo;
 import cn.damai.tetris.core.msg.Message;
-import cn.damai.uikit.image.C2497a;
 import cn.damai.uikit.view.DMThemeDialog;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -53,7 +51,7 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerInd
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerTitleView;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.indicators.LinePagerIndicator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.DummyPagerTitleView;
-import tb.C9175gc;
+import tb.gc;
 import tb.gy2;
 import tb.h62;
 import tb.ja;
@@ -149,7 +147,7 @@ public class BrandHeaderPresenter extends BasePresenter<BrandHeaderContract.Mode
                             PageChangeListenter.this.a.put("item_id", videoInfo.getProjectInfo().id);
                         }
                     }
-                    C0529c e = C0529c.e();
+                    cn.damai.common.user.c e = cn.damai.common.user.c.e();
                     e.C("video_" + BrandHeaderPresenter.this.position, BrandHeaderPresenter.this.mTrackInfo.trackC, BrandHeaderPresenter.this.mTrackInfo.trackB, "1.0", j, PageChangeListenter.this.a, 2201);
                     BrandHeaderPresenter.this.videoMillis = System.currentTimeMillis();
                     BrandHeaderPresenter.this.position = i;
@@ -159,12 +157,11 @@ public class BrandHeaderPresenter extends BasePresenter<BrandHeaderContract.Mode
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.brand.BrandHeaderPresenter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1770a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1770a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -179,12 +176,11 @@ public class BrandHeaderPresenter extends BasePresenter<BrandHeaderContract.Mode
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.brand.BrandHeaderPresenter$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1771b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1771b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -199,12 +195,11 @@ public class BrandHeaderPresenter extends BasePresenter<BrandHeaderContract.Mode
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.brand.BrandHeaderPresenter$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1772c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1772c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -230,19 +225,17 @@ public class BrandHeaderPresenter extends BasePresenter<BrandHeaderContract.Mode
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.brand.BrandHeaderPresenter$d */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1773d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ BrandHeaderInfoBean a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.tetris.component.brand.BrandHeaderPresenter$d$a */
         /* loaded from: classes16.dex */
-        public class DialogInterface$OnClickListenerC1774a implements DialogInterface.OnClickListener {
+        public class a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC1774a(View$OnClickListenerC1773d view$OnClickListenerC1773d) {
+            a(d dVar) {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -256,7 +249,7 @@ public class BrandHeaderPresenter extends BasePresenter<BrandHeaderContract.Mode
             }
         }
 
-        View$OnClickListenerC1773d(BrandHeaderInfoBean brandHeaderInfoBean) {
+        d(BrandHeaderInfoBean brandHeaderInfoBean) {
             this.a = brandHeaderInfoBean;
         }
 
@@ -269,19 +262,18 @@ public class BrandHeaderPresenter extends BasePresenter<BrandHeaderContract.Mode
             }
             DMThemeDialog dMThemeDialog = new DMThemeDialog(BrandHeaderPresenter.this.getContext().getActivity());
             dMThemeDialog.r(DMThemeDialog.DMDialogTheme.THEME_GUARD_SUCCESS);
-            dMThemeDialog.k(this.a.fansDescription).i("知道了", new DialogInterface$OnClickListenerC1774a(this)).g(false, null);
+            dMThemeDialog.k(this.a.fansDescription).i("知道了", new a(this)).g(false, null);
             dMThemeDialog.show();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.brand.BrandHeaderPresenter$e */
     /* loaded from: classes7.dex */
-    public class C1775e extends jl {
+    public class e extends jl {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ List b;
 
-        C1775e(List list) {
+        e(List list) {
             this.b = list;
         }
 
@@ -319,12 +311,11 @@ public class BrandHeaderPresenter extends BasePresenter<BrandHeaderContract.Mode
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.brand.BrandHeaderPresenter$f */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC1776f implements DialogInterface.OnClickListener {
+    public class f implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC1776f() {
+        f() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -339,12 +330,11 @@ public class BrandHeaderPresenter extends BasePresenter<BrandHeaderContract.Mode
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.brand.BrandHeaderPresenter$g */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC1777g implements DialogInterface.OnClickListener {
+    public class g implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC1777g(BrandHeaderPresenter brandHeaderPresenter) {
+        g(BrandHeaderPresenter brandHeaderPresenter) {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -359,20 +349,18 @@ public class BrandHeaderPresenter extends BasePresenter<BrandHeaderContract.Mode
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.brand.BrandHeaderPresenter$h */
     /* loaded from: classes16.dex */
-    public class C1778h {
+    public class h {
         private static transient /* synthetic */ IpChange $ipChange;
         private HashMap<String, String> a;
         private List<ProjectVideoBean> b;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.tetris.component.brand.BrandHeaderPresenter$h$a */
         /* loaded from: classes16.dex */
-        public class View$OnAttachStateChangeListenerC1779a implements View.OnAttachStateChangeListener {
+        public class a implements View.OnAttachStateChangeListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnAttachStateChangeListenerC1779a() {
+            a() {
             }
 
             @Override // android.view.View.OnAttachStateChangeListener
@@ -382,8 +370,8 @@ public class BrandHeaderPresenter extends BasePresenter<BrandHeaderContract.Mode
                     ipChange.ipc$dispatch("1590168521", new Object[]{this, view});
                 } else if (!BrandHeaderPresenter.this.isSetVideoPlayOptHelper && (view.getParent() instanceof RecyclerView)) {
                     BrandHeaderPresenter.this.isSetVideoPlayOptHelper = true;
-                    C1778h c1778h = C1778h.this;
-                    BrandHeaderPresenter.this.videoAdapter = new BrandHeaderVideoAdapter(c1778h.b, BrandHeaderPresenter.this.getContext().getActivity(), view, BrandHeaderPresenter.this);
+                    h hVar = h.this;
+                    BrandHeaderPresenter.this.videoAdapter = new BrandHeaderVideoAdapter(hVar.b, BrandHeaderPresenter.this.getContext().getActivity(), view, BrandHeaderPresenter.this);
                     BrandHeaderPresenter.this.getView().getViewPager().setVisibility(0);
                     BrandHeaderPresenter.this.getView().getViewPager().setAdapter(BrandHeaderPresenter.this.videoAdapter);
                     BrandHeaderPresenter.this.videoMillis = System.currentTimeMillis();
@@ -403,27 +391,27 @@ public class BrandHeaderPresenter extends BasePresenter<BrandHeaderContract.Mode
                 BrandHeaderVideoAdapter brandHeaderVideoAdapter = brandHeaderPresenter.videoAdapter;
                 if (brandHeaderVideoAdapter != null) {
                     VideoInfo videoInfo = brandHeaderVideoAdapter.e().get(BrandHeaderPresenter.this.position);
-                    if (videoInfo != null && C1778h.this.a != null) {
-                        C1778h.this.a.put("video_id", videoInfo.getVideoId());
+                    if (videoInfo != null && h.this.a != null) {
+                        h.this.a.put("video_id", videoInfo.getVideoId());
                         if (videoInfo.getProjectInfo() != null) {
-                            C1778h.this.a.put("item_id", videoInfo.getProjectInfo().id);
+                            h.this.a.put("item_id", videoInfo.getProjectInfo().id);
                         }
                     }
-                    C0529c e = C0529c.e();
-                    e.C("video_" + BrandHeaderPresenter.this.position, BrandHeaderPresenter.this.mTrackInfo.trackC, BrandHeaderPresenter.this.mTrackInfo.trackB, "1.0", j, C1778h.this.a, 2201);
+                    cn.damai.common.user.c e = cn.damai.common.user.c.e();
+                    e.C("video_" + BrandHeaderPresenter.this.position, BrandHeaderPresenter.this.mTrackInfo.trackC, BrandHeaderPresenter.this.mTrackInfo.trackB, "1.0", j, h.this.a, 2201);
                     BrandHeaderPresenter.this.videoMillis = System.currentTimeMillis();
                 }
             }
         }
 
-        public C1778h(HashMap<String, String> hashMap, List<ProjectVideoBean> list) {
+        public h(HashMap<String, String> hashMap, List<ProjectVideoBean> list) {
             this.a = hashMap;
             this.b = list;
         }
 
         public View.OnAttachStateChangeListener c() {
             IpChange ipChange = $ipChange;
-            return AndroidInstantRuntime.support(ipChange, "573252524") ? (View.OnAttachStateChangeListener) ipChange.ipc$dispatch("573252524", new Object[]{this}) : new View$OnAttachStateChangeListenerC1779a();
+            return AndroidInstantRuntime.support(ipChange, "573252524") ? (View.OnAttachStateChangeListener) ipChange.ipc$dispatch("573252524", new Object[]{this}) : new a();
         }
     }
 
@@ -562,7 +550,7 @@ public class BrandHeaderPresenter extends BasePresenter<BrandHeaderContract.Mode
         }
         CommonNavigator commonNavigator = new CommonNavigator(this.mContext.getActivity());
         commonNavigator.setAdjustMode(true);
-        commonNavigator.setAdapter(new C1775e(list));
+        commonNavigator.setAdapter(new e(list));
         magicIndicator.setNavigator(commonNavigator);
         gy2.a(magicIndicator, viewPager);
     }
@@ -603,7 +591,7 @@ public class BrandHeaderPresenter extends BasePresenter<BrandHeaderContract.Mode
         if (AndroidInstantRuntime.support(ipChange, "-717210507")) {
             ipChange.ipc$dispatch("-717210507", new Object[]{this});
         } else if (getView().getAttentionView().followed()) {
-            new DMDialog(this.mContext.getActivity()).o(false).v(PurchaseConstants.NORMAL_WARNING_TITLE).q("确认取消关注？取消后将无法获取厂牌号最新权益。").t(3).i("取消", new DialogInterface$OnClickListenerC1777g(this)).n("确定", new DialogInterface$OnClickListenerC1776f()).show();
+            new DMDialog(this.mContext.getActivity()).o(false).v(PurchaseConstants.NORMAL_WARNING_TITLE).q("确认取消关注？取消后将无法获取厂牌号最新权益。").t(3).i("取消", new g(this)).n("确定", new f()).show();
         } else {
             if (getModel().getActivityDO() != null && !TextUtils.isEmpty(getModel().getActivityDO().couponId)) {
                 sendMsg(new Message(MsgID.MEDIA_INFO_VIDEO_START_RECOVER, new Pair("4", Pair.create(Integer.valueOf(getView().getAttentionView().getState()), getModel().getHeaderInfo().getBid()))));
@@ -630,8 +618,8 @@ public class BrandHeaderPresenter extends BasePresenter<BrandHeaderContract.Mode
             strArr[0] = (((float) (j / 1000)) / 10.0f) + "";
             strArr[1] = "万粉丝";
             return strArr[0] + strArr[1];
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
             return "";
         }
     }
@@ -779,27 +767,27 @@ public class BrandHeaderPresenter extends BasePresenter<BrandHeaderContract.Mode
         if (headerInfo == null) {
             return;
         }
-        getView().getShareBtn().setOnClickListener(new View$OnClickListenerC1770a());
-        C9175gc.a(getView().getTitle(), headerInfo.getNickname());
+        getView().getShareBtn().setOnClickListener(new a());
+        gc.a(getView().getTitle(), headerInfo.getNickname());
         long j = 0;
         try {
             j = Long.parseLong(headerInfo.getFansNum());
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
+        } catch (NumberFormatException e2) {
+            e2.printStackTrace();
         }
-        C9175gc.a(getView().getSubTitle(), getFansNum(j));
-        C9175gc.a(getView().getDesc2(), getTags(headerInfo.getTagList()));
-        C2497a.a().loadinto(headerInfo.getHeadImg(), getView().getHeader());
-        int a = t60.a(getContext().getActivity(), 6.0f);
-        ns.b(getView().getRootView().findViewById(R$id.brand_header_img_shadow), Color.parseColor("#00ffffff"), t60.a(getContext().getActivity(), 50.0f), Color.parseColor("#1A000000"), a, a, a);
-        int a2 = t60.a(getContext().getActivity(), 12.0f);
+        gc.a(getView().getSubTitle(), getFansNum(j));
+        gc.a(getView().getDesc2(), getTags(headerInfo.getTagList()));
+        cn.damai.uikit.image.a.a().loadinto(headerInfo.getHeadImg(), getView().getHeader());
+        int a2 = t60.a(getContext().getActivity(), 6.0f);
+        ns.b(getView().getRootView().findViewById(R$id.brand_header_img_shadow), Color.parseColor("#00ffffff"), t60.a(getContext().getActivity(), 50.0f), Color.parseColor("#1A000000"), a2, a2, a2);
+        int a3 = t60.a(getContext().getActivity(), 12.0f);
         View rootView = getView().getRootView();
         int i = R$id.brand_index_headerbg_shadow;
-        ns.b(rootView.findViewById(i), Color.parseColor("#00ffffff"), a2, Color.parseColor("#1A000000"), a2, 0, 0);
+        ns.b(rootView.findViewById(i), Color.parseColor("#00ffffff"), a3, Color.parseColor("#1A000000"), a3, 0, 0);
         getView().getAttentionView().setInitParams(headerInfo.getBid(), "4");
         getView().getAttentionView().setVisibility(0);
         getView().getAttentionView().setState(headerInfo.getFavoriteFlag());
-        getView().getAttentionView().setOnAttentionClickDelegate(new View$OnClickListenerC1771b());
+        getView().getAttentionView().setOnAttentionClickDelegate(new b());
         HashMap hashMap = new HashMap();
         if (getModel() != null && getModel().getTrackInfo() != null) {
             hashMap.putAll(getModel().getTrackInfo().getArgsMap());
@@ -818,7 +806,7 @@ public class BrandHeaderPresenter extends BasePresenter<BrandHeaderContract.Mode
             for (int i2 = 0; i2 < projectVideoBean.size() && i2 < 3; i2++) {
                 ProjectVideoBean projectVideoBean2 = projectVideoBean.get(i2);
                 if (projectVideoBean2 != null) {
-                    C2497a.a().loadinto(projectVideoBean2.getBackgroundPic(), imageViewArr[i2]);
+                    cn.damai.uikit.image.a.a().loadinto(projectVideoBean2.getBackgroundPic(), imageViewArr[i2]);
                 }
             }
             getView().getImgBg1().setVisibility(0);
@@ -831,19 +819,19 @@ public class BrandHeaderPresenter extends BasePresenter<BrandHeaderContract.Mode
             } else {
                 getView().getIndicator().setVisibility(8);
             }
-            getView().getRootView().addOnAttachStateChangeListener(new C1778h(hashMap, projectVideoBean).c());
+            getView().getRootView().addOnAttachStateChangeListener(new h(hashMap, projectVideoBean).c());
             getView().getViewPager().addOnPageChangeListener(new PageChangeListenter(hashMap, projectVideoBean).b());
         } else {
             getView().getImgBg().getLayoutParams().height = t60.a(this.mContext.getActivity(), 180.0f);
             getView().getCover().setVisibility(0);
             getView().getCover().getLayoutParams().height = t60.a(this.mContext.getActivity(), 180.0f);
             ((RelativeLayout.LayoutParams) getView().getRootView().findViewById(i).getLayoutParams()).setMargins(dep2px(15), dep2px(103), dep2px(15), 0);
-            C2497a.a().loadinto(headerInfo.getHeadBgImg(), getView().getImgBg());
+            cn.damai.uikit.image.a.a().loadinto(headerInfo.getHeadBgImg(), getView().getImgBg());
             userTrackExpose(getView().getImgBg(), u12.REPERTOITE);
         }
         if (getModel().getCoupons() != null && getModel().getCoupons().size() > 0) {
             getView().getRecyclerView().setVisibility(0);
-            this.commonCardAdapter = new BrandCouponAdapter(this.mContext.getActivity(), headerInfo.getBid(), "4", new View$OnClickListenerC1772c(), this);
+            this.commonCardAdapter = new BrandCouponAdapter(this.mContext.getActivity(), headerInfo.getBid(), "4", new c(), this);
             RecyclerView recyclerView = getView().getRecyclerView();
             recyclerView.setVisibility(0);
             recyclerView.setHasFixedSize(true);
@@ -859,7 +847,7 @@ public class BrandHeaderPresenter extends BasePresenter<BrandHeaderContract.Mode
             View rootView2 = getView().getRootView();
             int i3 = R$id.tv_fans_icon_tip;
             rootView2.findViewById(i3).setVisibility(0);
-            getView().getRootView().findViewById(i3).setOnClickListener(new View$OnClickListenerC1773d(headerInfo));
+            getView().getRootView().findViewById(i3).setOnClickListener(new d(headerInfo));
             return;
         }
         getView().getRootView().findViewById(R$id.tv_fans_icon_tip).setVisibility(8);

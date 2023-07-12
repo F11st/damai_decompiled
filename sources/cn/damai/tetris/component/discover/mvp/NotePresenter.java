@@ -19,9 +19,9 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 import java.util.Map;
-import tb.C9548pb;
 import tb.cs;
 import tb.ja;
+import tb.pb;
 import tb.pl;
 
 /* compiled from: Taobao */
@@ -46,8 +46,8 @@ public class NotePresenter extends BasePresenter<NoteModel, NoteView, BaseSectio
             putMap("titlelabel", string2, map);
             putMap("usercode", string, map);
             if (z) {
-                putMap(C9548pb.PRE_CONTENT_ID, str2, map);
-                putMap(C9548pb.PRE_CONTENT_TYPE, str, map);
+                putMap(pb.PRE_CONTENT_ID, str2, map);
+                putMap(pb.PRE_CONTENT_TYPE, str, map);
             }
         }
     }

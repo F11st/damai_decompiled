@@ -8,8 +8,8 @@ import cn.damai.tetris.core.IModel;
 import cn.damai.tetris.v2.adpater.VBaseViewHolder;
 import cn.damai.tetris.v2.componentplugin.SectionSensitive;
 import cn.damai.tetris.v2.structure.section.ISection;
-import com.alibaba.android.vlayout.AbstractC3289a;
 import com.alibaba.android.vlayout.DelegateAdapter;
+import com.alibaba.android.vlayout.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
@@ -23,7 +23,7 @@ public abstract class VBaseAdapter<T extends ISection, VH extends VBaseViewHolde
     private static transient /* synthetic */ IpChange $ipChange;
     protected final Context a;
     protected IContext b;
-    protected AbstractC3289a c;
+    protected a c;
     protected List<T> d;
     protected int e;
     protected SectionSensitive f;
@@ -142,12 +142,12 @@ public abstract class VBaseAdapter<T extends ISection, VH extends VBaseViewHolde
         return AndroidInstantRuntime.support(ipChange, "1859753203") ? ((Integer) ipChange.ipc$dispatch("1859753203", new Object[]{this, Integer.valueOf(i)})).intValue() : getData().get(i).getType();
     }
 
-    public VBaseAdapter h(AbstractC3289a abstractC3289a) {
+    public VBaseAdapter h(a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1247201127")) {
-            return (VBaseAdapter) ipChange.ipc$dispatch("1247201127", new Object[]{this, abstractC3289a});
+            return (VBaseAdapter) ipChange.ipc$dispatch("1247201127", new Object[]{this, aVar});
         }
-        this.c = abstractC3289a;
+        this.c = aVar;
         return this;
     }
 
@@ -170,8 +170,8 @@ public abstract class VBaseAdapter<T extends ISection, VH extends VBaseViewHolde
     }
 
     @Override // com.alibaba.android.vlayout.DelegateAdapter.Adapter
-    public AbstractC3289a onCreateLayoutHelper() {
+    public a onCreateLayoutHelper() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1822655665") ? (AbstractC3289a) ipChange.ipc$dispatch("1822655665", new Object[]{this}) : this.c;
+        return AndroidInstantRuntime.support(ipChange, "1822655665") ? (a) ipChange.ipc$dispatch("1822655665", new Object[]{this}) : this.c;
     }
 }

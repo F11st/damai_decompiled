@@ -23,7 +23,7 @@ import tb.yt2;
 @Beta
 @GwtIncompatible
 /* loaded from: classes10.dex */
-public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173f<C> implements Serializable {
+public final class ImmutableRangeSet<C extends Comparable> extends f<C> implements Serializable {
     @LazyInit
     private transient ImmutableRangeSet<C> complement;
     private final transient ImmutableList<Range<C>> ranges;
@@ -40,13 +40,12 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.ImmutableRangeSet$AsSet$a */
         /* loaded from: classes10.dex */
-        public class C4986a extends AbstractIterator<C> {
+        public class a extends AbstractIterator<C> {
             final Iterator<Range<C>> c;
             Iterator<C> d = Iterators.h();
 
-            C4986a() {
+            a() {
                 this.c = ImmutableRangeSet.this.ranges.iterator();
             }
 
@@ -67,13 +66,12 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.ImmutableRangeSet$AsSet$b */
         /* loaded from: classes10.dex */
-        public class C4987b extends AbstractIterator<C> {
+        public class b extends AbstractIterator<C> {
             final Iterator<Range<C>> c;
             Iterator<C> d = Iterators.h();
 
-            C4987b() {
+            b() {
                 this.c = ImmutableRangeSet.this.ranges.reverse().iterator();
             }
 
@@ -194,7 +192,7 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
         @Override // com.google.common.collect.ImmutableSortedSet, java.util.NavigableSet
         @GwtIncompatible("NavigableSet")
         public yt2<C> descendingIterator() {
-            return new C4987b();
+            return new b();
         }
 
         ImmutableSortedSet<C> headSetImpl(C c, boolean z) {
@@ -203,7 +201,7 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
 
         @Override // com.google.common.collect.ImmutableSortedSet, com.google.common.collect.ImmutableSet, com.google.common.collect.ImmutableCollection, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set, java.util.NavigableSet, com.google.common.collect.SortedIterable
         public yt2<C> iterator() {
-            return new C4986a();
+            return new a();
         }
 
         ImmutableSortedSet<C> subSetImpl(C c, boolean z, C c2, boolean z2) {
@@ -245,7 +243,7 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
         ComplementRanges() {
             boolean hasLowerBound = ((Range) ImmutableRangeSet.this.ranges.get(0)).hasLowerBound();
             this.positiveBoundedBelow = hasLowerBound;
-            boolean hasUpperBound = ((Range) C5152a0.f(ImmutableRangeSet.this.ranges)).hasUpperBound();
+            boolean hasUpperBound = ((Range) a0.f(ImmutableRangeSet.this.ranges)).hasUpperBound();
             this.positiveBoundedAbove = hasUpperBound;
             int size = ImmutableRangeSet.this.ranges.size() - 1;
             size = hasLowerBound ? size + 1 : size;
@@ -303,20 +301,19 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableRangeSet$a */
     /* loaded from: classes10.dex */
-    public static class C4988a<C extends Comparable<?>> {
+    public static class a<C extends Comparable<?>> {
         private final List<Range<C>> a = Lists.i();
 
         @CanIgnoreReturnValue
-        public C4988a<C> a(Range<C> range) {
+        public a<C> a(Range<C> range) {
             du1.k(!range.isEmpty(), "range must not be empty, but was %s", range);
             this.a.add(range);
             return this;
         }
 
         @CanIgnoreReturnValue
-        public C4988a<C> b(Iterable<Range<C>> iterable) {
+        public a<C> b(Iterable<Range<C>> iterable) {
             for (Range<C> range : iterable) {
                 a(range);
             }
@@ -324,7 +321,7 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
         }
 
         public ImmutableRangeSet<C> c() {
-            ImmutableList.C4971a c4971a = new ImmutableList.C4971a(this.a.size());
+            ImmutableList.a aVar = new ImmutableList.a(this.a.size());
             Collections.sort(this.a, Range.rangeLexOrdering());
             PeekingIterator p = Iterators.p(this.a.iterator());
             while (p.hasNext()) {
@@ -336,13 +333,13 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
                         range = range.span((Range) p.next());
                     }
                 }
-                c4971a.a(range);
+                aVar.a(range);
             }
-            ImmutableList j = c4971a.j();
+            ImmutableList j = aVar.j();
             if (j.isEmpty()) {
                 return ImmutableRangeSet.of();
             }
-            if (j.size() == 1 && ((Range) C5152a0.h(j)).equals(Range.all())) {
+            if (j.size() == 1 && ((Range) a0.h(j)).equals(Range.all())) {
                 return ImmutableRangeSet.all();
             }
             return new ImmutableRangeSet<>(j);
@@ -357,8 +354,8 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
         return ALL;
     }
 
-    public static <C extends Comparable<?>> C4988a<C> builder() {
-        return new C4988a<>();
+    public static <C extends Comparable<?>> a<C> builder() {
+        return new a<>();
     }
 
     public static <C extends Comparable> ImmutableRangeSet<C> copyOf(RangeSet<C> rangeSet) {
@@ -384,13 +381,13 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
             if (range.encloses(span())) {
                 return this.ranges;
             }
-            final int a = range.hasLowerBound() ? SortedLists.a(this.ranges, Range.upperBoundFn(), range.lowerBound, SortedLists.KeyPresentBehavior.FIRST_AFTER, SortedLists.KeyAbsentBehavior.NEXT_HIGHER) : 0;
+            final int a2 = range.hasLowerBound() ? SortedLists.a(this.ranges, Range.upperBoundFn(), range.lowerBound, SortedLists.KeyPresentBehavior.FIRST_AFTER, SortedLists.KeyAbsentBehavior.NEXT_HIGHER) : 0;
             if (range.hasUpperBound()) {
                 size = SortedLists.a(this.ranges, Range.lowerBoundFn(), range.upperBound, SortedLists.KeyPresentBehavior.FIRST_PRESENT, SortedLists.KeyAbsentBehavior.NEXT_HIGHER);
             } else {
                 size = this.ranges.size();
             }
-            final int i = size - a;
+            final int i = size - a2;
             if (i == 0) {
                 return ImmutableList.of();
             }
@@ -409,7 +406,7 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
                 @Override // java.util.List
                 public Range<C> get(int i2) {
                     du1.n(i2, i);
-                    return (i2 == 0 || i2 == i + (-1)) ? ((Range) ImmutableRangeSet.this.ranges.get(i2 + a)).intersection(range) : (Range) ImmutableRangeSet.this.ranges.get(i2 + a);
+                    return (i2 == 0 || i2 == i + (-1)) ? ((Range) ImmutableRangeSet.this.ranges.get(i2 + a2)).intersection(range) : (Range) ImmutableRangeSet.this.ranges.get(i2 + a2);
                 }
             };
         }
@@ -424,13 +421,13 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
         return copyOf(TreeRangeSet.create(iterable));
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     @Deprecated
     public void add(Range<C> range) {
         throw new UnsupportedOperationException();
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     @Deprecated
     public void addAll(RangeSet<C> rangeSet) {
         throw new UnsupportedOperationException();
@@ -455,13 +452,13 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
         throw new IllegalArgumentException("Neither the DiscreteDomain nor this range set are bounded below");
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public /* bridge */ /* synthetic */ void clear() {
         super.clear();
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public /* bridge */ /* synthetic */ boolean contains(Comparable comparable) {
         return super.contains(comparable);
     }
@@ -472,18 +469,18 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
         return copyOf(create);
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public boolean encloses(Range<C> range) {
         int b = SortedLists.b(this.ranges, Range.lowerBoundFn(), range.lowerBound, Ordering.natural(), SortedLists.KeyPresentBehavior.ANY_PRESENT, SortedLists.KeyAbsentBehavior.NEXT_LOWER);
         return b != -1 && this.ranges.get(b).encloses(range);
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public /* bridge */ /* synthetic */ boolean enclosesAll(RangeSet rangeSet) {
         return super.enclosesAll(rangeSet);
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public /* bridge */ /* synthetic */ boolean equals(@NullableDecl Object obj) {
         return super.equals(obj);
     }
@@ -494,7 +491,7 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
         return copyOf(create);
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public boolean intersects(Range<C> range) {
         int b = SortedLists.b(this.ranges, Range.lowerBoundFn(), range.lowerBound, Ordering.natural(), SortedLists.KeyPresentBehavior.ANY_PRESENT, SortedLists.KeyAbsentBehavior.NEXT_HIGHER);
         if (b >= this.ranges.size() || !this.ranges.get(b).isConnected(range) || this.ranges.get(b).intersection(range).isEmpty()) {
@@ -509,7 +506,7 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
         return true;
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public boolean isEmpty() {
         return this.ranges.isEmpty();
     }
@@ -518,7 +515,7 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
         return this.ranges.isPartialView();
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public Range<C> rangeContaining(C c) {
         int b = SortedLists.b(this.ranges, Range.lowerBoundFn(), Cut.belowValue(c), Ordering.natural(), SortedLists.KeyPresentBehavior.ANY_PRESENT, SortedLists.KeyAbsentBehavior.NEXT_LOWER);
         if (b != -1) {
@@ -531,13 +528,13 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
         return null;
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     @Deprecated
     public void remove(Range<C> range) {
         throw new UnsupportedOperationException();
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     @Deprecated
     public void removeAll(RangeSet<C> rangeSet) {
         throw new UnsupportedOperationException();
@@ -554,7 +551,7 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
     }
 
     public ImmutableRangeSet<C> union(RangeSet<C> rangeSet) {
-        return unionOf(C5152a0.c(asRanges(), rangeSet.asRanges()));
+        return unionOf(a0.c(asRanges(), rangeSet.asRanges()));
     }
 
     Object writeReplace() {
@@ -572,7 +569,7 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
         return new ImmutableRangeSet<>(ImmutableList.of(range));
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     @Deprecated
     public void addAll(Iterable<Range<C>> iterable) {
         throw new UnsupportedOperationException();
@@ -615,12 +612,12 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
         }
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     public /* bridge */ /* synthetic */ boolean enclosesAll(Iterable iterable) {
         return super.enclosesAll(iterable);
     }
 
-    @Override // com.google.common.collect.AbstractC5173f, com.google.common.collect.RangeSet
+    @Override // com.google.common.collect.f, com.google.common.collect.RangeSet
     @Deprecated
     public void removeAll(Iterable<Range<C>> iterable) {
         throw new UnsupportedOperationException();
@@ -646,6 +643,6 @@ public final class ImmutableRangeSet<C extends Comparable> extends AbstractC5173
     }
 
     public static <C extends Comparable<?>> ImmutableRangeSet<C> copyOf(Iterable<Range<C>> iterable) {
-        return new C4988a().b(iterable).c();
+        return new a().b(iterable).c();
     }
 }

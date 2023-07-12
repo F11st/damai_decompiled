@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.text.TextUtils;
-import com.heytap.mcssdk.C5462c;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -75,7 +74,7 @@ public class iw2 {
     }
 
     public static boolean h(Context context) {
-        return C5462c.m().D(context);
+        return com.heytap.mcssdk.c.m().D(context);
     }
 
     public static int i(String str) {

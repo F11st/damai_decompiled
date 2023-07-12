@@ -16,7 +16,6 @@ import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.app.base.BaseActivity;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
@@ -66,13 +65,12 @@ public class ProjectProfitViewHolder extends RecyclerView.ViewHolder {
     private StringBuilder z;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.promotion.viewholder.ProjectProfitViewHolder$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0808a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        View$OnClickListenerC0808a(String str) {
+        a(String str) {
             this.a = str;
         }
 
@@ -83,15 +81,14 @@ public class ProjectProfitViewHolder extends RecyclerView.ViewHolder {
                 ipChange.ipc$dispatch("-525187687", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(yw1.f().h(ProjectProfitViewHolder.this.w, this.a));
+            cn.damai.common.user.c.e().x(yw1.f().h(ProjectProfitViewHolder.this.w, this.a));
             ProjectProfitViewHolder.this.k();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.promotion.viewholder.ProjectProfitViewHolder$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0809b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CouponActivityBean a;
         final /* synthetic */ UserProfitInfoBean b;
@@ -99,7 +96,7 @@ public class ProjectProfitViewHolder extends RecyclerView.ViewHolder {
         final /* synthetic */ boolean d;
         final /* synthetic */ CouponSubActBean e;
 
-        View$OnClickListenerC0809b(CouponActivityBean couponActivityBean, UserProfitInfoBean userProfitInfoBean, int i, boolean z, CouponSubActBean couponSubActBean) {
+        b(CouponActivityBean couponActivityBean, UserProfitInfoBean userProfitInfoBean, int i, boolean z, CouponSubActBean couponSubActBean) {
             this.a = couponActivityBean;
             this.b = userProfitInfoBean;
             this.c = i;
@@ -119,7 +116,7 @@ public class ProjectProfitViewHolder extends RecyclerView.ViewHolder {
                 if (this.a.isMaxVipEnable()) {
                     ProjectProfitViewHolder.this.i(this.a, this.b, this.c);
                 } else if (this.a.isNoauthIsVip()) {
-                    C0529c.e().x(yw1.f().i(ProjectProfitViewHolder.this.w, ProjectProfitViewHolder.this.x, String.valueOf(this.b.vipLevel), this.a.getProfitDrawStatus(), this.a.getProfitPoolId(), "1"));
+                    cn.damai.common.user.c.e().x(yw1.f().i(ProjectProfitViewHolder.this.w, ProjectProfitViewHolder.this.x, String.valueOf(this.b.vipLevel), this.a.getProfitDrawStatus(), this.a.getProfitPoolId(), "1"));
                     ProjectProfitViewHolder.this.k();
                 }
             } else if (this.a == null || !this.d) {
@@ -132,12 +129,11 @@ public class ProjectProfitViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.promotion.viewholder.ProjectProfitViewHolder$c */
     /* loaded from: classes.dex */
-    public class C0810c implements MemberAuthPopWindow.ICustomDialogEventListener {
+    public class c implements MemberAuthPopWindow.ICustomDialogEventListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0810c() {
+        c() {
         }
 
         @Override // cn.damai.commonbusiness.yymember.view.MemberAuthPopWindow.ICustomDialogEventListener
@@ -153,14 +149,13 @@ public class ProjectProfitViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.promotion.viewholder.ProjectProfitViewHolder$d */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0811d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ CouponActivityBean b;
 
-        View$OnClickListenerC0811d(String str, CouponActivityBean couponActivityBean) {
+        d(String str, CouponActivityBean couponActivityBean) {
             this.a = str;
             this.b = couponActivityBean;
         }
@@ -171,18 +166,17 @@ public class ProjectProfitViewHolder extends RecyclerView.ViewHolder {
             if (AndroidInstantRuntime.support(ipChange, "1513716124")) {
                 ipChange.ipc$dispatch("1513716124", new Object[]{this, view});
             } else {
-                C0529c.e().x(yw1.f().j(ProjectProfitViewHolder.this.w, ProjectProfitViewHolder.this.x, this.a, this.b.getProfitPoolId()));
+                cn.damai.common.user.c.e().x(yw1.f().j(ProjectProfitViewHolder.this.w, ProjectProfitViewHolder.this.x, this.a, this.b.getProfitPoolId()));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.promotion.viewholder.ProjectProfitViewHolder$e */
     /* loaded from: classes.dex */
-    public class DialogInterface$OnClickListenerC0812e implements DialogInterface.OnClickListener {
+    public class e implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC0812e(ProjectProfitViewHolder projectProfitViewHolder) {
+        e(ProjectProfitViewHolder projectProfitViewHolder) {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -197,15 +191,14 @@ public class ProjectProfitViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.promotion.viewholder.ProjectProfitViewHolder$f */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0813f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ CouponActivityBean b;
         final /* synthetic */ int c;
 
-        View$OnClickListenerC0813f(String str, CouponActivityBean couponActivityBean, int i) {
+        f(String str, CouponActivityBean couponActivityBean, int i) {
             this.a = str;
             this.b = couponActivityBean;
             this.c = i;
@@ -217,7 +210,7 @@ public class ProjectProfitViewHolder extends RecyclerView.ViewHolder {
             if (AndroidInstantRuntime.support(ipChange, "1441329566")) {
                 ipChange.ipc$dispatch("1441329566", new Object[]{this, view});
             } else if (ProjectProfitViewHolder.this.a != null) {
-                C0529c.e().x(yw1.f().k(ProjectProfitViewHolder.this.w, ProjectProfitViewHolder.this.x, this.a, this.b.getProfitPoolId()));
+                cn.damai.common.user.c.e().x(yw1.f().k(ProjectProfitViewHolder.this.w, ProjectProfitViewHolder.this.x, this.a, this.b.getProfitPoolId()));
                 ProjectProfitViewHolder.this.a.onIntegralConvertClick(this.c, this.b.getProfitPoolSpreadId(), this.b.getExchange4Dm(), this.b.getProfitAsac());
             }
         }
@@ -258,7 +251,7 @@ public class ProjectProfitViewHolder extends RecyclerView.ViewHolder {
         } else if (couponActivityBean == null || couponActivityBean.getSubCouponActExs() == null || couponActivityBean.getSubCouponActExs().size() == 0) {
         } else {
             String valueOf = String.valueOf(userProfitInfoBean.vipLevel);
-            C0529c.e().x(yw1.f().i(this.w, this.x, valueOf, couponActivityBean.getProfitDrawStatus(), couponActivityBean.getProfitPoolId(), "0"));
+            cn.damai.common.user.c.e().x(yw1.f().i(this.w, this.x, valueOf, couponActivityBean.getProfitDrawStatus(), couponActivityBean.getProfitPoolId(), "0"));
             int parseColor = Color.parseColor("#F38066");
             int color = ContextCompat.getColor(this.p, R$color.color_582331);
             boolean equals = valueOf.equals("10");
@@ -295,7 +288,7 @@ public class ProjectProfitViewHolder extends RecyclerView.ViewHolder {
             } else {
                 this.y.o(R$drawable.score_icon).r(GridBean.TYPE_PIC_URL, 83).q(GridBean.TYPE_PIC_URL, 55).p(R$drawable.score_bg).l(GravityCompat.START).n("确认兑换此优惠券吗").m(spannableString).k(spannableString2).f(R$drawable.bg_vip_exchange_dialog_cancel).g(R$drawable.sku_promotion_profit_bg);
             }
-            this.y.j("确认兑换", color, new View$OnClickListenerC0813f(valueOf, couponActivityBean, i)).h("放弃优惠", parseColor, new DialogInterface$OnClickListenerC0812e(this)).i(true, new View$OnClickListenerC0811d(valueOf, couponActivityBean));
+            this.y.j("确认兑换", color, new f(valueOf, couponActivityBean, i)).h("放弃优惠", parseColor, new e(this)).i(true, new d(valueOf, couponActivityBean));
             Context context = this.p;
             if (context == null || !(context instanceof Activity) || ((BaseActivity) context).isActivityFinsihed()) {
                 return;
@@ -376,7 +369,7 @@ public class ProjectProfitViewHolder extends RecyclerView.ViewHolder {
         if (context == null || !(context instanceof Activity)) {
             return;
         }
-        k23.g(context, (Activity) context, this.w, new C0810c());
+        k23.g(context, (Activity) context, this.w, new c());
     }
 
     public void f(boolean z) {
@@ -468,7 +461,7 @@ public class ProjectProfitViewHolder extends RecyclerView.ViewHolder {
                     this.o.setText(couponActivityBean.getAuthorizeProfitText());
                     this.n.setVisibility(0);
                     yw1.f().l(this.n, this.w, str3);
-                    this.n.setOnClickListener(new View$OnClickListenerC0808a(str3));
+                    this.n.setOnClickListener(new a(str3));
                 } else {
                     this.n.setVisibility(8);
                 }
@@ -487,7 +480,7 @@ public class ProjectProfitViewHolder extends RecyclerView.ViewHolder {
                     this.i.setBackgroundResource(R$drawable.sku_promotion_coupon_has_bg);
                 }
             }
-            this.h.setOnClickListener(new View$OnClickListenerC0809b(couponActivityBean, userProfitInfoBean, i, h, couponSubActBean));
+            this.h.setOnClickListener(new b(couponActivityBean, userProfitInfoBean, i, h, couponSubActBean));
         }
     }
 

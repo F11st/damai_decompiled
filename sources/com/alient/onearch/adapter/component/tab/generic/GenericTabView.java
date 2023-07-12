@@ -37,7 +37,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -189,7 +189,7 @@ public class GenericTabView extends BaseTabView<GenericItem<ItemValue>, GenericT
         for (Object obj : this.componentViewHolders) {
             int i3 = i2 + 1;
             if (i2 < 0) {
-                C8214m.p();
+                m.p();
             }
             VBaseHolder vBaseHolder = (VBaseHolder) obj;
             ITabSelectedListener iTabSelectedListener = vBaseHolder instanceof ITabSelectedListener ? (ITabSelectedListener) vBaseHolder : null;
@@ -233,7 +233,7 @@ public class GenericTabView extends BaseTabView<GenericItem<ItemValue>, GenericT
         for (Object obj2 : this.componentViewHolders) {
             int i5 = i4 + 1;
             if (i4 < 0) {
-                C8214m.p();
+                m.p();
             }
             VBaseHolder vBaseHolder2 = (VBaseHolder) obj2;
             HashMap hashMap = new HashMap(1);

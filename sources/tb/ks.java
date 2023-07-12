@@ -10,11 +10,9 @@ import androidx.annotation.NonNull;
 import cn.damai.commonbusiness.seatbiz.seat.common.bean.region.RegionData;
 import cn.damai.commonbusiness.seatbiz.seat.common.bean.seat.SeatPrice;
 import cn.damai.commonbusiness.seatbiz.view.model.DMSVG;
-import cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a;
 import cn.damai.commonbusiness.seatbiz.view.svgview.core.helper.parser.model.Shape;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.caverock.androidsvg.C4748d;
 import com.youku.live.livesdk.wkit.component.Constants;
 import java.util.HashMap;
 import java.util.List;
@@ -23,19 +21,18 @@ import java.util.Set;
 
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
-public class ks extends AbstractC0856a {
+public class ks extends cn.damai.commonbusiness.seatbiz.view.render.a {
     private static transient /* synthetic */ IpChange $ipChange;
     private DMSVG a;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.ks$a */
     /* loaded from: classes.dex */
-    public static class C9373a {
+    public static class a {
         public String a;
         public float b;
 
-        C9373a() {
+        a() {
         }
     }
 
@@ -207,10 +204,10 @@ public class ks extends AbstractC0856a {
         throw new UnsupportedOperationException("Method not decompiled: tb.ks.d(java.lang.String, java.lang.String, java.lang.String[], cn.damai.commonbusiness.seatbiz.seat.common.bean.seat.SeatPrice, cn.damai.commonbusiness.seatbiz.seat.common.bean.region.RegionData):void");
     }
 
-    private void e(int i, C9373a c9373a) {
+    private void e(int i, a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "271986493")) {
-            ipChange.ipc$dispatch("271986493", new Object[]{this, Integer.valueOf(i), c9373a});
+            ipChange.ipc$dispatch("271986493", new Object[]{this, Integer.valueOf(i), aVar});
             return;
         }
         int alpha = Color.alpha(i);
@@ -221,9 +218,9 @@ public class ks extends AbstractC0856a {
         String hexString2 = Integer.toHexString(green);
         String hexString3 = Integer.toHexString(blue);
         if (alpha < 255) {
-            c9373a.b = alpha / 255.0f;
+            aVar.b = alpha / 255.0f;
         } else {
-            c9373a.b = 1.0f;
+            aVar.b = 1.0f;
         }
         StringBuilder sb = new StringBuilder();
         sb.append(Constants.TYPE_LIVE_ROOM_BG_COLOR_PREFFIX);
@@ -239,7 +236,7 @@ public class ks extends AbstractC0856a {
             hexString3 = "0" + hexString3;
         }
         sb.append(hexString3);
-        c9373a.a = sb.toString();
+        aVar.a = sb.toString();
     }
 
     private String f(String str) {
@@ -267,7 +264,7 @@ public class ks extends AbstractC0856a {
         return stringBuffer.toString();
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a
+    @Override // cn.damai.commonbusiness.seatbiz.view.render.a
     protected String addAlpha2Color(String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-654419959")) {
@@ -279,9 +276,9 @@ public class ks extends AbstractC0856a {
         return str + ";fill-opacity:0.2";
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a
+    @Override // cn.damai.commonbusiness.seatbiz.view.render.a
     public Picture buildPicture(boolean z) {
-        String a;
+        String a2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1121114750")) {
             return (Picture) ipChange.ipc$dispatch("-1121114750", new Object[]{this, Boolean.valueOf(z)});
@@ -291,32 +288,32 @@ public class ks extends AbstractC0856a {
             return null;
         }
         dmsvg.resetCss();
-        C4748d c4748d = new C4748d();
+        com.caverock.androidsvg.d dVar = new com.caverock.androidsvg.d();
         if (this.regionColorMap != null) {
-            a = b();
+            a2 = b();
         } else {
-            a = this.rainbowColorMap != null ? a() : "";
+            a2 = this.rainbowColorMap != null ? a() : "";
         }
         if (z) {
-            a = a + f("#E0E0E0");
+            a2 = a2 + f("#E0E0E0");
         }
-        if (!TextUtils.isEmpty(a)) {
-            c4748d.a(a);
+        if (!TextUtils.isEmpty(a2)) {
+            dVar.a(a2);
         }
-        return this.a.renderToPicture(c4748d);
+        return this.a.renderToPicture(dVar);
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a
+    @Override // cn.damai.commonbusiness.seatbiz.view.render.a
     public Picture buildPictureWithColorIntercepter(List<f52> list) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1469856801")) {
             return (Picture) ipChange.ipc$dispatch("1469856801", new Object[]{this, list});
         }
         this.a.resetCss();
-        return this.a.renderToPicture(new C4748d());
+        return this.a.renderToPicture(new com.caverock.androidsvg.d());
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a
+    @Override // cn.damai.commonbusiness.seatbiz.view.render.a
     public Picture buildPriceFilterPicture2(SeatPrice seatPrice, RegionData regionData) {
         DMSVG dmsvg;
         Set<String> sVGIds;
@@ -329,7 +326,7 @@ public class ks extends AbstractC0856a {
             return null;
         }
         this.a.resetCss();
-        C4748d c4748d = new C4748d();
+        com.caverock.androidsvg.d dVar = new com.caverock.androidsvg.d();
         String[] strArr = new String[2];
         StringBuilder sb = new StringBuilder();
         for (String str : sVGIds) {
@@ -348,25 +345,25 @@ public class ks extends AbstractC0856a {
         }
         String sb2 = sb.toString();
         if (!TextUtils.isEmpty(sb2)) {
-            c4748d.a(sb2);
+            dVar.a(sb2);
         }
         Log.d("SVG parse", "-------------------- buildPriceFilterPicture2 prepare cost = " + (System.currentTimeMillis() - currentTimeMillis));
-        Picture renderToPicture = this.a.renderToPicture(c4748d);
+        Picture renderToPicture = this.a.renderToPicture(dVar);
         Log.d("SVG parse", "-------------------- buildPriceFilterPicture2 cost = " + (System.currentTimeMillis() - currentTimeMillis));
         return renderToPicture;
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a
+    @Override // cn.damai.commonbusiness.seatbiz.view.render.a
     public Picture buildRegionPicture(String str, RectF rectF, Path path) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "2022756109")) {
             return (Picture) ipChange.ipc$dispatch("2022756109", new Object[]{this, str, rectF, path});
         }
         this.a.resetCss();
-        return this.a.renderToPicture(new C4748d());
+        return this.a.renderToPicture(new com.caverock.androidsvg.d());
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a
+    @Override // cn.damai.commonbusiness.seatbiz.view.render.a
     public Picture buildStrokePicture(List<SeatPrice> list, RegionData regionData) {
         DMSVG dmsvg;
         Set<String> sVGIds;
@@ -378,7 +375,7 @@ public class ks extends AbstractC0856a {
             return null;
         }
         this.a.resetCss();
-        C4748d c4748d = new C4748d();
+        com.caverock.androidsvg.d dVar = new com.caverock.androidsvg.d();
         StringBuilder sb = new StringBuilder();
         for (String str : sVGIds) {
             String[] g = ju1.g(str);
@@ -394,11 +391,11 @@ public class ks extends AbstractC0856a {
                 }
             }
         }
-        c4748d.a(sb.toString());
-        return this.a.renderToPicture(c4748d);
+        dVar.a(sb.toString());
+        return this.a.renderToPicture(dVar);
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a
+    @Override // cn.damai.commonbusiness.seatbiz.view.render.a
     public int getRegionCount() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1626430967")) {
@@ -407,7 +404,7 @@ public class ks extends AbstractC0856a {
         return 0;
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a
+    @Override // cn.damai.commonbusiness.seatbiz.view.render.a
     public int getShapeCount() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1910726718")) {
@@ -416,7 +413,7 @@ public class ks extends AbstractC0856a {
         return 0;
     }
 
-    @Override // cn.damai.commonbusiness.seatbiz.view.render.AbstractC0856a
+    @Override // cn.damai.commonbusiness.seatbiz.view.render.a
     public Picture buildPicture(@NonNull g52 g52Var) {
         Set<String> sVGIds;
         IpChange ipChange = $ipChange;
@@ -428,9 +425,9 @@ public class ks extends AbstractC0856a {
             return null;
         }
         this.a.resetCss();
-        C4748d c4748d = new C4748d();
+        com.caverock.androidsvg.d dVar = new com.caverock.androidsvg.d();
         Shape shape = new Shape();
-        C9373a c9373a = new C9373a();
+        a aVar = new a();
         StringBuilder sb = new StringBuilder();
         for (String str : sVGIds) {
             String[] g = ju1.g(str);
@@ -444,31 +441,31 @@ public class ks extends AbstractC0856a {
                     g52Var.b(shape);
                     int[] iArr = g52Var.a;
                     if (iArr[0] != 0) {
-                        e(iArr[0], c9373a);
-                        if (c9373a.b != 1.0f) {
+                        e(iArr[0], aVar);
+                        if (aVar.b != 1.0f) {
                             sb.append(Constants.TYPE_LIVE_ROOM_BG_COLOR_PREFFIX);
                             sb.append(str);
                             sb.append("{fill:");
-                            sb.append(c9373a.a);
+                            sb.append(aVar.a);
                             sb.append(";fill-opacity:");
-                            sb.append(c9373a.b);
+                            sb.append(aVar.b);
                             sb.append(";stroke-opacity:");
-                            sb.append(c9373a.b);
+                            sb.append(aVar.b);
                             sb.append("!important}");
                         } else {
                             sb.append(Constants.TYPE_LIVE_ROOM_BG_COLOR_PREFFIX);
                             sb.append(str);
                             sb.append("{fill:");
-                            sb.append(c9373a.a);
+                            sb.append(aVar.a);
                             sb.append(";fill-opacity:");
-                            sb.append(c9373a.b);
+                            sb.append(aVar.b);
                             sb.append("!important}");
                         }
                     }
                 }
             }
         }
-        c4748d.a(sb.toString());
-        return this.a.renderToPicture(c4748d);
+        dVar.a(sb.toString());
+        return this.a.renderToPicture(dVar);
     }
 }

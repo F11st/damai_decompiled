@@ -37,29 +37,27 @@ public final class TMNavigationBarPlugin extends TaoMaiApiPlugin {
     @NotNull
     public static final String ACTION_SHOW_TITLE_BAR = "showTitleBar";
     @NotNull
-    public static final C6989a Companion = new C6989a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMNavigationBarPlugin$a */
     /* loaded from: classes11.dex */
-    public static final class C6989a {
-        private C6989a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C6989a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMNavigationBarPlugin$b */
     /* loaded from: classes11.dex */
-    public static final class View$OnClickListenerC6990b implements View.OnClickListener {
+    public static final class b implements View.OnClickListener {
         final /* synthetic */ WVCallBackContext a;
         final /* synthetic */ String b;
 
-        View$OnClickListenerC6990b(WVCallBackContext wVCallBackContext, String str) {
+        b(WVCallBackContext wVCallBackContext, String str) {
             this.a = wVCallBackContext;
             this.b = str;
         }
@@ -99,11 +97,11 @@ public final class TMNavigationBarPlugin extends TaoMaiApiPlugin {
     }
 
     private final boolean setTransparentTitle(String str, WVCallBackContext wVCallBackContext) {
-        JSONObject a;
-        if (str != null && (a = kh2.a(str)) != null) {
+        JSONObject a2;
+        if (str != null && (a2 = kh2.a(str)) != null) {
             INavigationBarProvider navigationBarProvider = navigationBarProvider();
             if (navigationBarProvider != null) {
-                navigationBarProvider.setTransparentTitle(a.getString("transparentTitle"));
+                navigationBarProvider.setTransparentTitle(a2.getString("transparentTitle"));
                 if (wVCallBackContext != null) {
                     wVCallBackContext.success();
                 }
@@ -228,7 +226,7 @@ public final class TMNavigationBarPlugin extends TaoMaiApiPlugin {
     public final boolean setWebOptionMenu(@Nullable String str, @Nullable WVCallBackContext wVCallBackContext) {
         INavigationBarProvider navigationBarProvider = navigationBarProvider();
         if (navigationBarProvider != null) {
-            navigationBarProvider.setWebOptionMenu(str != null ? kh2.a(str) : null, new View$OnClickListenerC6990b(wVCallBackContext, str));
+            navigationBarProvider.setWebOptionMenu(str != null ? kh2.a(str) : null, new b(wVCallBackContext, str));
             return true;
         } else if (wVCallBackContext != null) {
             wVCallBackContext.error();
@@ -247,8 +245,8 @@ public final class TMNavigationBarPlugin extends TaoMaiApiPlugin {
             }
             return true;
         }
-        JSONObject a = kh2.a(str);
-        navigationBarProvider.setWebTitle(a != null ? a.getString("title") : null);
+        JSONObject a2 = kh2.a(str);
+        navigationBarProvider.setWebTitle(a2 != null ? a2.getString("title") : null);
         if (wVCallBackContext != null) {
             wVCallBackContext.success();
             return true;

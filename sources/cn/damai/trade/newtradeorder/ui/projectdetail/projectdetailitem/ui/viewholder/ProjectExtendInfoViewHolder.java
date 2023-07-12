@@ -12,8 +12,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
-import cn.damai.common.image.C0511b;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMImageStrategyConfig;
 import cn.damai.trade.R$drawable;
@@ -28,8 +26,8 @@ import cn.damai.uikit.view.RoundImageView;
 import com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import tb.C9826vr;
 import tb.t60;
+import tb.vr;
 import tb.vv1;
 
 /* compiled from: Taobao */
@@ -41,7 +39,7 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
     private RoundImageView c;
     private LinearLayout d;
     private Context e;
-    private HtmlParserManager.C2244a f;
+    private HtmlParserManager.a f;
     private int g;
     private int h;
     private int i;
@@ -53,21 +51,20 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
     private OnItemExtendInfoItemClickListener o;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectExtendInfoViewHolder$a */
     /* loaded from: classes8.dex */
-    public class C2394a implements DMImageCreator.DMImageFailListener {
+    public class a implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
-        C2394a(ProjectExtendInfoViewHolder projectExtendInfoViewHolder, ImageView imageView) {
+        a(ProjectExtendInfoViewHolder projectExtendInfoViewHolder, ImageView imageView) {
             this.a = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1751653237")) {
-                ipChange.ipc$dispatch("1751653237", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("1751653237", new Object[]{this, dVar});
             } else {
                 this.a.setImageResource(R$drawable.project_default_image_bg);
             }
@@ -75,19 +72,17 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectExtendInfoViewHolder$b */
     /* loaded from: classes8.dex */
-    public class C2395b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectExtendInfoViewHolder$b$a */
         /* loaded from: classes16.dex */
-        public class View$OnClickListenerC2396a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC2396a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -101,25 +96,25 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
             }
         }
 
-        C2395b(ImageView imageView) {
+        b(ImageView imageView) {
             this.a = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "319818")) {
-                ipChange.ipc$dispatch("319818", new Object[]{this, c0502e});
-            } else if (c0502e != null && c0502e.a != null) {
+                ipChange.ipc$dispatch("319818", new Object[]{this, eVar});
+            } else if (eVar != null && eVar.a != null) {
                 ProjectExtendInfoViewHolder.this.d.setVisibility(8);
                 ProjectExtendInfoViewHolder.this.c.setVisibility(0);
-                int intrinsicWidth = c0502e.a.getIntrinsicWidth();
-                int intrinsicHeight = c0502e.a.getIntrinsicHeight();
-                int a = (intrinsicWidth > ProjectExtendInfoViewHolder.this.n || intrinsicWidth == ProjectExtendInfoViewHolder.this.n) ? ProjectExtendInfoViewHolder.this.m : t60.a(ProjectExtendInfoViewHolder.this.e, intrinsicWidth);
-                ProjectExtendInfoViewHolder.this.c.getLayoutParams().width = a;
-                ProjectExtendInfoViewHolder.this.c.getLayoutParams().height = (int) (((intrinsicHeight * a) * 1.0f) / intrinsicWidth);
-                ProjectExtendInfoViewHolder.this.c.setImageDrawable(c0502e.a);
-                ProjectExtendInfoViewHolder.this.c.setOnClickListener(new View$OnClickListenerC2396a());
+                int intrinsicWidth = eVar.a.getIntrinsicWidth();
+                int intrinsicHeight = eVar.a.getIntrinsicHeight();
+                int a2 = (intrinsicWidth > ProjectExtendInfoViewHolder.this.n || intrinsicWidth == ProjectExtendInfoViewHolder.this.n) ? ProjectExtendInfoViewHolder.this.m : t60.a(ProjectExtendInfoViewHolder.this.e, intrinsicWidth);
+                ProjectExtendInfoViewHolder.this.c.getLayoutParams().width = a2;
+                ProjectExtendInfoViewHolder.this.c.getLayoutParams().height = (int) (((intrinsicHeight * a2) * 1.0f) / intrinsicWidth);
+                ProjectExtendInfoViewHolder.this.c.setImageDrawable(eVar.a);
+                ProjectExtendInfoViewHolder.this.c.setOnClickListener(new a());
             } else {
                 this.a.setImageResource(R$drawable.project_default_image_bg);
             }
@@ -127,21 +122,20 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectExtendInfoViewHolder$c */
     /* loaded from: classes8.dex */
-    public class C2397c implements DMImageCreator.DMImageFailListener {
+    public class c implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
-        C2397c(ProjectExtendInfoViewHolder projectExtendInfoViewHolder, ImageView imageView) {
+        c(ProjectExtendInfoViewHolder projectExtendInfoViewHolder, ImageView imageView) {
             this.a = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-581739401")) {
-                ipChange.ipc$dispatch("-581739401", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-581739401", new Object[]{this, dVar});
             } else {
                 this.a.setImageResource(R$drawable.project_default_image_bg);
             }
@@ -149,9 +143,8 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectExtendInfoViewHolder$d */
     /* loaded from: classes8.dex */
-    public class C2398d implements DMImageCreator.DMImageSuccListener {
+    public class d implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
         final /* synthetic */ int b;
@@ -162,12 +155,11 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
         final /* synthetic */ boolean g;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectExtendInfoViewHolder$d$a */
         /* loaded from: classes16.dex */
-        public class View$OnClickListenerC2399a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC2399a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -181,7 +173,7 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
             }
         }
 
-        C2398d(ImageView imageView, int i, int i2, String str, DMImageStrategyConfig.DMImageCropType dMImageCropType, int i3, boolean z) {
+        d(ImageView imageView, int i, int i2, String str, DMImageStrategyConfig.DMImageCropType dMImageCropType, int i3, boolean z) {
             this.a = imageView;
             this.b = i;
             this.c = i2;
@@ -192,15 +184,15 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Drawable drawable;
             int i;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1215833908")) {
-                ipChange.ipc$dispatch("-1215833908", new Object[]{this, c0502e});
-            } else if (c0502e != null && (drawable = c0502e.a) != null) {
+                ipChange.ipc$dispatch("-1215833908", new Object[]{this, eVar});
+            } else if (eVar != null && (drawable = eVar.a) != null) {
                 int intrinsicWidth = drawable.getIntrinsicWidth();
-                int intrinsicHeight = c0502e.a.getIntrinsicHeight();
+                int intrinsicHeight = eVar.a.getIntrinsicHeight();
                 int i2 = this.b;
                 if (intrinsicWidth <= i2 && intrinsicWidth != i2) {
                     i = t60.a(ProjectExtendInfoViewHolder.this.e, intrinsicWidth);
@@ -223,8 +215,8 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
                     this.a.getLayoutParams().height = i3;
                     this.a.requestLayout();
                 }
-                this.a.setImageDrawable(c0502e.a);
-                this.a.setOnClickListener(new View$OnClickListenerC2399a());
+                this.a.setImageDrawable(eVar.a);
+                this.a.setOnClickListener(new a());
             } else {
                 this.a.setImageResource(R$drawable.project_default_image_bg);
             }
@@ -235,46 +227,46 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
         super(LayoutInflater.from(context).inflate(R$layout.project_item_detail_introduce_item_layout, viewGroup, false));
         this.e = context;
         this.o = onItemExtendInfoItemClickListener;
-        int a = DisplayMetrics.getwidthPixels(context.getResources().getDisplayMetrics()) - (t60.a(this.e, 21.0f) * 2);
-        this.m = a;
-        this.n = t60.e(this.e, a);
+        int a2 = DisplayMetrics.getwidthPixels(context.getResources().getDisplayMetrics()) - (t60.a(this.e, 21.0f) * 2);
+        this.m = a2;
+        this.n = t60.e(this.e, a2);
         n();
     }
 
-    private void i(HtmlParserManager.C2244a c2244a) {
+    private void i(HtmlParserManager.a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1439931808")) {
-            ipChange.ipc$dispatch("-1439931808", new Object[]{this, c2244a});
-        } else if (c2244a != null) {
+            ipChange.ipc$dispatch("-1439931808", new Object[]{this, aVar});
+        } else if (aVar != null) {
             q();
             this.b.setVisibility(8);
-            boolean b = vv1.b(c2244a.c(), c2244a.b());
-            boolean d = C0511b.d(c2244a.a().toString());
-            if (b && d) {
+            boolean b2 = vv1.b(aVar.c(), aVar.b());
+            boolean d2 = cn.damai.common.image.b.d(aVar.a().toString());
+            if (b2 && d2) {
                 this.c.setVisibility(8);
                 this.d.setVisibility(0);
                 this.d.removeAllViews();
-                int b2 = c2244a.b() / 500;
-                if (c2244a.b() % 500 > 0) {
-                    b2++;
+                int b3 = aVar.b() / 500;
+                if (aVar.b() % 500 > 0) {
+                    b3++;
                 }
-                for (int i = 0; i < b2; i++) {
+                for (int i = 0; i < b3; i++) {
                     RoundImageView roundImageView = new RoundImageView(this.e);
                     roundImageView.setScaleType(ImageView.ScaleType.FIT_XY);
                     roundImageView.setType(1);
                     roundImageView.setBorderRadius(0);
-                    String obj = c2244a.a().toString();
+                    String obj = aVar.a().toString();
                     DMImageStrategyConfig.DMImageCropType dMImageCropType = DMImageStrategyConfig.DMImageCropType.cy500;
-                    SplitImageSizeCache.ImageSizeCache c = SplitImageSizeCache.c(SplitImageSizeCache.d(obj, dMImageCropType, i));
-                    if (c != null) {
-                        roundImageView.setLayoutParams(new ViewGroup.LayoutParams(c.imgWidth, c.imgHeight));
+                    SplitImageSizeCache.ImageSizeCache c2 = SplitImageSizeCache.c(SplitImageSizeCache.d(obj, dMImageCropType, i));
+                    if (c2 != null) {
+                        roundImageView.setLayoutParams(new ViewGroup.LayoutParams(c2.imgWidth, c2.imgHeight));
                     }
                     this.d.addView(roundImageView);
-                    p(roundImageView, c2244a.a().toString(), dMImageCropType, i, c != null);
+                    p(roundImageView, aVar.a().toString(), dMImageCropType, i, c2 != null);
                 }
                 return;
             }
-            o(this.c, c2244a);
+            o(this.c, aVar);
         }
     }
 
@@ -284,9 +276,9 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
             ipChange.ipc$dispatch("-2004820848", new Object[]{this});
             return;
         }
-        HtmlParserManager.C2244a c2244a = this.f;
-        if (c2244a != null) {
-            k(c2244a.e());
+        HtmlParserManager.a aVar = this.f;
+        if (aVar != null) {
+            k(aVar.e());
         }
     }
 
@@ -340,26 +332,26 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
         this.d = (LinearLayout) this.itemView.findViewById(R$id.rich_text_image_ll);
     }
 
-    private void o(ImageView imageView, HtmlParserManager.C2244a c2244a) {
+    private void o(ImageView imageView, HtmlParserManager.a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "308755981")) {
-            ipChange.ipc$dispatch("308755981", new Object[]{this, imageView, c2244a});
+            ipChange.ipc$dispatch("308755981", new Object[]{this, imageView, aVar});
             return;
         }
-        String obj = c2244a.a().toString();
+        String obj = aVar.a().toString();
         if (imageView == null) {
             return;
         }
-        if (imageView.getTag() instanceof C9826vr) {
-            ((C9826vr) imageView.getTag()).cancel();
+        if (imageView.getTag() instanceof vr) {
+            ((vr) imageView.getTag()).cancel();
         }
-        DMImageStrategyConfig b = C0511b.b(obj, -1, -1);
-        if (b != null) {
-            b.b = false;
+        DMImageStrategyConfig b2 = cn.damai.common.image.b.b(obj, -1, -1);
+        if (b2 != null) {
+            b2.b = false;
         }
-        DMImageCreator h = C0504a.b().g(obj, b).h(null, this.m, 16383);
+        DMImageCreator h = cn.damai.common.image.a.b().g(obj, b2).h(null, this.m, 16383);
         int i = R$drawable.project_default_image_bg;
-        imageView.setTag(h.i(i).c(i).n(new C2395b(imageView)).e(new C2394a(this, imageView)).f());
+        imageView.setTag(h.i(i).c(i).n(new b(imageView)).e(new a(this, imageView)).f());
     }
 
     private void p(ImageView imageView, String str, DMImageStrategyConfig.DMImageCropType dMImageCropType, int i, boolean z) {
@@ -368,21 +360,21 @@ public class ProjectExtendInfoViewHolder extends RecyclerView.ViewHolder {
             ipChange.ipc$dispatch("-1446893842", new Object[]{this, imageView, str, dMImageCropType, Integer.valueOf(i), Boolean.valueOf(z)});
         } else if (imageView == null) {
         } else {
-            if (imageView.getTag() instanceof C9826vr) {
-                ((C9826vr) imageView.getTag()).cancel();
+            if (imageView.getTag() instanceof vr) {
+                ((vr) imageView.getTag()).cancel();
             }
-            int a = DisplayMetrics.getwidthPixels(this.e.getResources().getDisplayMetrics()) - (t60.a(this.e, 21.0f) * 2);
-            int e = t60.e(this.e, a);
-            DMImageStrategyConfig b = C0511b.b(str, -1, -1);
-            if (b != null) {
-                b.b = false;
-                b.c = true;
-                b.d = dMImageCropType;
-                b.e = i;
+            int a2 = DisplayMetrics.getwidthPixels(this.e.getResources().getDisplayMetrics()) - (t60.a(this.e, 21.0f) * 2);
+            int e = t60.e(this.e, a2);
+            DMImageStrategyConfig b2 = cn.damai.common.image.b.b(str, -1, -1);
+            if (b2 != null) {
+                b2.b = false;
+                b2.c = true;
+                b2.d = dMImageCropType;
+                b2.e = i;
             }
-            DMImageCreator g = C0504a.b().g(str, b);
+            DMImageCreator g = cn.damai.common.image.a.b().g(str, b2);
             int i2 = R$drawable.project_default_image_bg;
-            imageView.setTag(g.i(i2).c(i2).n(new C2398d(imageView, e, a, str, dMImageCropType, i, z)).e(new C2397c(this, imageView)).f());
+            imageView.setTag(g.i(i2).c(i2).n(new d(imageView, e, a2, str, dMImageCropType, i, z)).e(new c(this, imageView)).f());
         }
     }
 

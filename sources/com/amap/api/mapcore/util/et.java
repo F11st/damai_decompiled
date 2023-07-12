@@ -11,27 +11,26 @@ import java.lang.ref.WeakReference;
 /* loaded from: classes10.dex */
 public abstract class et {
     private eu a;
-    private eu.C4534a b;
+    private eu.a b;
     protected Resources d;
     private boolean e = false;
     protected boolean c = false;
     private final Object f = new Object();
-    private InterfaceC4533c g = null;
+    private c g = null;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.et$a */
     /* loaded from: classes10.dex */
-    public class C4531a extends dq<Boolean, Void, Bitmap> {
-        private final WeakReference<dc.C4503a> e;
+    public class a extends dq<Boolean, Void, Bitmap> {
+        private final WeakReference<dc.a> e;
 
-        public C4531a(dc.C4503a c4503a) {
-            this.e = new WeakReference<>(c4503a);
+        public a(dc.a aVar) {
+            this.e = new WeakReference<>(aVar);
         }
 
-        private dc.C4503a e() {
-            dc.C4503a c4503a = this.e.get();
-            if (this == et.c(c4503a)) {
-                return c4503a;
+        private dc.a e() {
+            dc.a aVar = this.e.get();
+            if (this == et.c(aVar)) {
+                return aVar;
             }
             return null;
         }
@@ -39,7 +38,7 @@ public abstract class et {
         /* JADX INFO: Access modifiers changed from: protected */
         @Override // com.amap.api.mapcore.util.dq
         public void b(Bitmap bitmap) {
-            super.b((C4531a) bitmap);
+            super.b((a) bitmap);
             synchronized (et.this.f) {
                 try {
                     et.this.f.notifyAll();
@@ -52,11 +51,11 @@ public abstract class et {
         public Bitmap a(Boolean... boolArr) {
             try {
                 boolean booleanValue = boolArr[0].booleanValue();
-                dc.C4503a c4503a = this.e.get();
-                if (c4503a == null) {
+                dc.a aVar = this.e.get();
+                if (aVar == null) {
                     return null;
                 }
-                String str = c4503a.a + "-" + c4503a.b + "-" + c4503a.c;
+                String str = aVar.a + "-" + aVar.b + "-" + aVar.c;
                 synchronized (et.this.f) {
                     while (et.this.c && !d()) {
                         et.this.f.wait();
@@ -65,7 +64,7 @@ public abstract class et {
                 Bitmap b = (et.this.a == null || d() || e() == null || et.this.e) ? null : et.this.a.b(str);
                 if (booleanValue && b == null && !d() && e() != null && !et.this.e) {
                     synchronized (et.class) {
-                        b = et.this.a((Object) c4503a);
+                        b = et.this.a((Object) aVar);
                     }
                 }
                 if (b != null && et.this.a != null) {
@@ -83,7 +82,7 @@ public abstract class et {
         public void a(Bitmap bitmap) {
             try {
                 bitmap = (d() || et.this.e) ? null : null;
-                dc.C4503a e = e();
+                dc.a e = e();
                 if (bitmap == null || bitmap.isRecycled() || e == null) {
                     return;
                 }
@@ -99,10 +98,9 @@ public abstract class et {
 
     /* JADX INFO: Access modifiers changed from: protected */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.et$b */
     /* loaded from: classes10.dex */
-    public class C4532b extends dq<Object, Void, Void> {
-        protected C4532b() {
+    public class b extends dq<Object, Void, Void> {
+        protected b() {
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
@@ -131,9 +129,8 @@ public abstract class et {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.et$c */
     /* loaded from: classes10.dex */
-    public interface InterfaceC4533c {
+    public interface c {
         void a();
     }
 
@@ -153,33 +150,33 @@ public abstract class et {
     }
 
     public void f() {
-        new C4532b().c(0);
+        new b().c(0);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static C4531a c(dc.C4503a c4503a) {
-        if (c4503a != null) {
-            return c4503a.j;
+    public static a c(dc.a aVar) {
+        if (aVar != null) {
+            return aVar.j;
         }
         return null;
     }
 
-    public void a(boolean z, dc.C4503a c4503a) {
-        if (c4503a == null) {
+    public void a(boolean z, dc.a aVar) {
+        if (aVar == null) {
             return;
         }
         Bitmap bitmap = null;
         try {
             if (this.a != null) {
-                bitmap = this.a.a(c4503a.a + "-" + c4503a.b + "-" + c4503a.c);
+                bitmap = this.a.a(aVar.a + "-" + aVar.b + "-" + aVar.c);
             }
             if (bitmap != null) {
-                c4503a.a(bitmap);
+                aVar.a(bitmap);
                 return;
             }
-            C4531a c4531a = new C4531a(c4503a);
-            c4503a.j = c4531a;
-            c4531a.a(dq.c, Boolean.valueOf(z));
+            a aVar2 = new a(aVar);
+            aVar.j = aVar2;
+            aVar2.a(dq.c, Boolean.valueOf(z));
         } catch (Throwable th) {
             th.printStackTrace();
         }
@@ -209,7 +206,7 @@ public abstract class et {
     }
 
     public void d(boolean z) {
-        new C4532b().c(3, Boolean.valueOf(z));
+        new b().c(3, Boolean.valueOf(z));
     }
 
     protected void c(boolean z) {
@@ -227,10 +224,10 @@ public abstract class et {
         }
     }
 
-    public void a(eu.C4534a c4534a) {
-        this.b = c4534a;
-        this.a = eu.a(c4534a);
-        new C4532b().c(1);
+    public void a(eu.a aVar) {
+        this.b = aVar;
+        this.a = eu.a(aVar);
+        new b().c(1);
     }
 
     public void a(boolean z) {
@@ -243,19 +240,19 @@ public abstract class et {
         return this.a;
     }
 
-    public static void a(dc.C4503a c4503a) {
-        C4531a c = c(c4503a);
-        if (c != null) {
-            c.a(true);
+    public static void a(dc.a aVar) {
+        a c2 = c(aVar);
+        if (c2 != null) {
+            c2.a(true);
         }
     }
 
-    public void a(InterfaceC4533c interfaceC4533c) {
-        this.g = interfaceC4533c;
+    public void a(c cVar) {
+        this.g = cVar;
     }
 
     public void a(String str) {
         this.b.b(str);
-        new C4532b().c(4);
+        new b().c(4);
     }
 }

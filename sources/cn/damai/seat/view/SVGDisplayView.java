@@ -23,7 +23,7 @@ public class SVGDisplayView extends View {
     float downChang;
     float downx;
     float downy;
-    private C1735a drawRegion;
+    private a drawRegion;
     float dtop;
     float dwidth;
     private boolean fangda;
@@ -40,9 +40,8 @@ public class SVGDisplayView extends View {
     private float regionImageWidth;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.view.SVGDisplayView$a */
     /* loaded from: classes16.dex */
-    public class C1735a {
+    public class a {
         private static transient /* synthetic */ IpChange $ipChange;
         float a = 0.0f;
         float b = 0.0f;
@@ -50,7 +49,7 @@ public class SVGDisplayView extends View {
         float d = 0.0f;
         float e = 1.0f;
 
-        public C1735a() {
+        public a() {
         }
 
         public void a(float f) {
@@ -95,7 +94,7 @@ public class SVGDisplayView extends View {
         if (Build.VERSION.SDK_INT >= 11) {
             setLayerType(1, null);
         }
-        this.drawRegion = new C1735a();
+        this.drawRegion = new a();
         this.mRegionRect = new Rect();
     }
 
@@ -128,32 +127,32 @@ public class SVGDisplayView extends View {
                 this.regionImageHeight = pictureDrawable.getIntrinsicHeight();
                 float f = this.firstWidth;
                 if (pictureDrawable.getIntrinsicWidth() * this.firstHeight > pictureDrawable.getIntrinsicHeight() * f) {
-                    C1735a c1735a = this.drawRegion;
-                    c1735a.a = f;
-                    c1735a.b = (pictureDrawable.getIntrinsicHeight() * this.firstWidth) / pictureDrawable.getIntrinsicWidth();
+                    a aVar = this.drawRegion;
+                    aVar.a = f;
+                    aVar.b = (pictureDrawable.getIntrinsicHeight() * this.firstWidth) / pictureDrawable.getIntrinsicWidth();
                 } else {
-                    C1735a c1735a2 = this.drawRegion;
-                    c1735a2.b = this.firstHeight;
-                    c1735a2.a = (pictureDrawable.getIntrinsicWidth() * this.firstHeight) / pictureDrawable.getIntrinsicHeight();
+                    a aVar2 = this.drawRegion;
+                    aVar2.b = this.firstHeight;
+                    aVar2.a = (pictureDrawable.getIntrinsicWidth() * this.firstHeight) / pictureDrawable.getIntrinsicHeight();
                 }
-                C1735a c1735a3 = this.drawRegion;
-                float f2 = c1735a3.a;
+                a aVar3 = this.drawRegion;
+                float f2 = aVar3.a;
                 this.firstDrawRegionWidth = f2;
-                float f3 = c1735a3.b;
+                float f3 = aVar3.b;
                 this.firstDrawRegionHeight = f3;
-                c1735a3.c = (this.firstWidth - f2) / 2.0f;
-                c1735a3.d = (this.firstHeight - f3) / 2.0f;
+                aVar3.c = (this.firstWidth - f2) / 2.0f;
+                aVar3.d = (this.firstHeight - f3) / 2.0f;
             }
             Rect rect = this.mRegionRect;
-            C1735a c1735a4 = this.drawRegion;
-            float f4 = c1735a4.c;
-            float f5 = c1735a4.d;
-            rect.set((int) f4, (int) f5, (int) (f4 + c1735a4.a), (int) (f5 + c1735a4.b));
+            a aVar4 = this.drawRegion;
+            float f4 = aVar4.c;
+            float f5 = aVar4.d;
+            rect.set((int) f4, (int) f5, (int) (f4 + aVar4.a), (int) (f5 + aVar4.b));
             canvas.drawPicture(this.pictureData.getPicture(), this.mRegionRect);
             if (this.firstb) {
                 this.firstb = false;
-                C1735a c1735a5 = this.drawRegion;
-                c1735a5.e = this.firstDrawRegionWidth / c1735a5.a;
+                a aVar5 = this.drawRegion;
+                aVar5.e = this.firstDrawRegionWidth / aVar5.a;
             }
             cb1.g("SVG parse", "Region SVG render cost = " + (System.currentTimeMillis() - currentTimeMillis));
         } catch (Exception e) {
@@ -170,14 +169,14 @@ public class SVGDisplayView extends View {
         if (motionEvent.getAction() == 0 && motionEvent.getPointerCount() == 1) {
             this.downx = motionEvent.getX();
             this.downy = motionEvent.getY();
-            C1735a c1735a = this.drawRegion;
-            if (c1735a == null) {
+            a aVar = this.drawRegion;
+            if (aVar == null) {
                 return false;
             }
-            this.dleft = c1735a.c;
-            this.dtop = c1735a.d;
-            this.dwidth = c1735a.a;
-            this.dheight = c1735a.b;
+            this.dleft = aVar.c;
+            this.dtop = aVar.d;
+            this.dwidth = aVar.a;
+            this.dheight = aVar.b;
         }
         if (motionEvent.getAction() == 2) {
             if (motionEvent.getPointerCount() == 1 && !this.fangda) {
@@ -187,13 +186,13 @@ public class SVGDisplayView extends View {
                     this.drawRegion.c = f / 2.0f;
                 } else {
                     float x2 = (motionEvent.getX() - this.downx) + this.dleft;
-                    C1735a c1735a2 = this.drawRegion;
-                    float f2 = c1735a2.a;
+                    a aVar2 = this.drawRegion;
+                    float f2 = aVar2.a;
                     float f3 = this.firstWidth;
                     if (x2 + f2 < f3 / 2.0f) {
-                        c1735a2.c = (f3 / 2.0f) - f2;
+                        aVar2.c = (f3 / 2.0f) - f2;
                     } else {
-                        c1735a2.c = (motionEvent.getX() - this.downx) + this.dleft;
+                        aVar2.c = (motionEvent.getX() - this.downx) + this.dleft;
                     }
                 }
                 float y = (motionEvent.getY() - this.downy) + this.dtop;
@@ -202,13 +201,13 @@ public class SVGDisplayView extends View {
                     this.drawRegion.d = f4 / 2.0f;
                 } else {
                     float y2 = (motionEvent.getY() - this.downy) + this.dtop;
-                    C1735a c1735a3 = this.drawRegion;
-                    float f5 = c1735a3.b;
+                    a aVar3 = this.drawRegion;
+                    float f5 = aVar3.b;
                     float f6 = this.firstHeight;
                     if (y2 + f5 < f6 / 2.0f) {
-                        c1735a3.d = (f6 / 2.0f) - f5;
+                        aVar3.d = (f6 / 2.0f) - f5;
                     } else {
-                        c1735a3.d = (motionEvent.getY() - this.downy) + this.dtop;
+                        aVar3.d = (motionEvent.getY() - this.downy) + this.dtop;
                     }
                 }
                 invalidate();
@@ -229,20 +228,20 @@ public class SVGDisplayView extends View {
                 float spacing = spacing(x3, y4, x4, y5);
                 float f7 = (x3 + x4) / 2.0f;
                 float f8 = (y4 + y5) / 2.0f;
-                C1735a c1735a4 = this.drawRegion;
-                float f9 = c1735a4.c;
-                float f10 = c1735a4.d;
-                float f11 = c1735a4.a;
-                float f12 = c1735a4.b;
+                a aVar4 = this.drawRegion;
+                float f9 = aVar4.c;
+                float f10 = aVar4.d;
+                float f11 = aVar4.a;
+                float f12 = aVar4.b;
                 float f13 = this.dwidth * (spacing / this.downChang);
                 float f14 = this.firstDrawRegionWidth;
                 if (f13 / f14 >= 3.0f || f13 / f14 <= 0.6d) {
                     return true;
                 }
-                c1735a4.a(f13);
-                C1735a c1735a5 = this.drawRegion;
-                c1735a5.c = f7 - (c1735a5.a * ((f7 - f9) / f11));
-                c1735a5.d = f8 - (c1735a5.b * ((f8 - f10) / f12));
+                aVar4.a(f13);
+                a aVar5 = this.drawRegion;
+                aVar5.c = f7 - (aVar5.a * ((f7 - f9) / f11));
+                aVar5.d = f8 - (aVar5.b * ((f8 - f10) / f12));
                 invalidate();
             }
         }

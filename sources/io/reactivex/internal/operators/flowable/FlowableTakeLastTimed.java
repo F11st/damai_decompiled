@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.Scheduler;
+import io.reactivex.b;
 import io.reactivex.internal.queue.SpscLinkedArrayQueue;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import io.reactivex.internal.util.BackpressureHelper;
@@ -180,8 +180,8 @@ public final class FlowableTakeLastTimed<T> extends AbstractFlowableWithUpstream
         }
     }
 
-    public FlowableTakeLastTimed(AbstractC8147b<T> abstractC8147b, long j, long j2, TimeUnit timeUnit, Scheduler scheduler, int i, boolean z) {
-        super(abstractC8147b);
+    public FlowableTakeLastTimed(b<T> bVar, long j, long j2, TimeUnit timeUnit, Scheduler scheduler, int i, boolean z) {
+        super(bVar);
         this.count = j;
         this.time = j2;
         this.unit = timeUnit;
@@ -190,7 +190,7 @@ public final class FlowableTakeLastTimed<T> extends AbstractFlowableWithUpstream
         this.delayError = z;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new TakeLastTimedSubscriber(subscriber, this.count, this.time, this.unit, this.scheduler, this.bufferSize, this.delayError));
     }

@@ -17,10 +17,9 @@ public class lz2 {
     private TextView d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.lz2$a */
     /* loaded from: classes5.dex */
-    class View$OnClickListenerC9427a implements View.OnClickListener {
-        View$OnClickListenerC9427a() {
+    class a implements View.OnClickListener {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -65,7 +64,7 @@ public class lz2 {
         if (view != null) {
             this.c = onClickListener;
             view.setClickable(true);
-            this.b.setOnClickListener(new View$OnClickListenerC9427a());
+            this.b.setOnClickListener(new a());
         }
     }
 

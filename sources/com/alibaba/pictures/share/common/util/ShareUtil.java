@@ -154,7 +154,7 @@ public final class ShareUtil {
         if (android.text.TextUtils.isEmpty(r2) != false) goto L24;
      */
     /* JADX WARN: Code restructure failed: missing block: B:30:0x0056, code lost:
-        r3 = kotlin.text.C8604o.F(r2, "http", false, 2, null);
+        r3 = kotlin.text.o.F(r2, "http", false, 2, null);
      */
     /* JADX WARN: Code restructure failed: missing block: B:31:0x005c, code lost:
         if (r3 != false) goto L23;

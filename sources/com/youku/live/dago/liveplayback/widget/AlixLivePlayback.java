@@ -26,10 +26,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.taobao.phenix.compat.effects.C6855a;
+import com.taobao.phenix.compat.effects.a;
 import com.taobao.uikit.feature.features.FeatureFactory;
 import com.taobao.weex.common.Constants;
 import com.youku.alixplayer.IAlixPlayer;
@@ -2648,7 +2647,7 @@ public class AlixLivePlayback extends BaseWidget implements IDagoLivePlaybackInj
                 }
                 this.mCoverImageView.setAlpha(1.0f);
                 this.mCoverImageView.setVisibility(0);
-                this.mLayoutVariables.phenixTicket = ur1.o().s(this.mPlaybackVariables.coverImageUrl).H(R.C7959drawable.dago_container_live_room_common_bg).h(new ScaleCropBitmapProcessor(80, 45), new C6855a(this.mContext, 15, 1)).y(this.mCoverImageView);
+                this.mLayoutVariables.phenixTicket = ur1.o().s(this.mPlaybackVariables.coverImageUrl).H(R.drawable.dago_container_live_room_common_bg).h(new ScaleCropBitmapProcessor(80, 45), new a(this.mContext, 15, 1)).y(this.mCoverImageView);
                 return;
             }
             ds1 ds1Var2 = this.mLayoutVariables.phenixTicket;
@@ -3193,7 +3192,7 @@ public class AlixLivePlayback extends BaseWidget implements IDagoLivePlaybackInj
         "1".equals(getEngineInstance().getOptions().getString("isFirstLiveRoom", "null"));
         PlayBackCover playBackCover = this.mCoverImageView;
         if (playBackCover != null && this.mPlaybackVariables.coverImageUrl != null) {
-            playBackCover.setPlaceHoldImageResId(com.youku.live.dago.liveplayback.R.C7933drawable.cover_bg);
+            playBackCover.setPlaceHoldImageResId(com.youku.live.dago.liveplayback.R.drawable.cover_bg);
             this.mCoverImageView.setImageUrl(this.mPlaybackVariables.coverImageUrl);
         }
         this.mPlaybackVariables.localSeekBarProgressManager = new LocalSeekBarProgressManager();
@@ -3310,7 +3309,7 @@ public class AlixLivePlayback extends BaseWidget implements IDagoLivePlaybackInj
                 return;
             case 5:
                 if (map != null) {
-                    String str2 = (String) Utils.reinterpretCast(map.get(AbstractC3893a.V));
+                    String str2 = (String) Utils.reinterpretCast(map.get(com.alibaba.security.realidentity.jsbridge.a.V));
                     int intValue = ((Integer) Utils.reinterpretCast(map.get("width"))).intValue();
                     int intValue2 = ((Integer) Utils.reinterpretCast(map.get("height"))).intValue();
                     int videoWidth = getPlayer(0).getVideoWidth();

@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.h5container.h5url.VipUrlGetter;
@@ -24,12 +23,12 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.arch.v3.IItem;
 import com.youku.arch.v3.core.ItemValue;
-import tb.C9826vr;
 import tb.gh1;
 import tb.gi0;
 import tb.nk;
 import tb.t60;
 import tb.ux0;
+import tb.vr;
 import tb.wh2;
 
 /* compiled from: Taobao */
@@ -50,12 +49,11 @@ public class WaterFlowCouponViewHolder extends BaseViewHolder<WaterFlowRecommend
     private TextView mMarktingPrice;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.feed.WaterFlowCouponViewHolder$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1262a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1262a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -70,12 +68,11 @@ public class WaterFlowCouponViewHolder extends BaseViewHolder<WaterFlowRecommend
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.feed.WaterFlowCouponViewHolder$b */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1263b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1263b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -90,12 +87,11 @@ public class WaterFlowCouponViewHolder extends BaseViewHolder<WaterFlowRecommend
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.feed.WaterFlowCouponViewHolder$c */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1264c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1264c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -172,7 +168,7 @@ public class WaterFlowCouponViewHolder extends BaseViewHolder<WaterFlowRecommend
         this.mCouponGetbutton.setTextColor(Color.parseColor("#ffffff"));
         this.mCouponGetbutton.setText("立即领取");
         this.itemView.setTag(waterFlowRecommendItem);
-        this.itemView.setOnClickListener(new View$OnClickListenerC1263b());
+        this.itemView.setOnClickListener(new b());
     }
 
     private void handleMarktingView(WaterFlowRecommendItem waterFlowRecommendItem) {
@@ -186,11 +182,11 @@ public class WaterFlowCouponViewHolder extends BaseViewHolder<WaterFlowRecommend
         this.mCouponPrice.setVisibility(4);
         this.mCouponRMBSymbol.setVisibility(4);
         this.mMarktingPrice.setVisibility(4);
-        if (this.mBackGroundImg.getTag() instanceof C9826vr) {
-            ((C9826vr) this.mBackGroundImg.getTag()).cancel();
+        if (this.mBackGroundImg.getTag() instanceof vr) {
+            ((vr) this.mBackGroundImg.getTag()).cancel();
         }
         this.mBackGroundImg.setImageDrawable(null);
-        DMImageCreator f = C0504a.b().f(waterFlowRecommendItem.pic, this.imageViewWidth, this.imageViewHeight);
+        DMImageCreator f = cn.damai.common.image.a.b().f(waterFlowRecommendItem.pic, this.imageViewWidth, this.imageViewHeight);
         int i = R$drawable.uikit_default_image_bg_gradient;
         this.mBackGroundImg.setTag(f.i(i).c(i).g(this.mBackGroundImg));
         if (!wh2.j(waterFlowRecommendItem.buttonText)) {
@@ -208,7 +204,7 @@ public class WaterFlowCouponViewHolder extends BaseViewHolder<WaterFlowRecommend
             this.mCouponGetbutton.setVisibility(4);
         }
         this.itemView.setTag(waterFlowRecommendItem);
-        this.itemView.setOnClickListener(new View$OnClickListenerC1264c());
+        this.itemView.setOnClickListener(new c());
     }
 
     private void handleVipView(WaterFlowRecommendItem waterFlowRecommendItem) {
@@ -249,7 +245,7 @@ public class WaterFlowCouponViewHolder extends BaseViewHolder<WaterFlowRecommend
         this.mCouponGetbutton.setText("立即开通");
         this.mCouponGetbutton.setTextColor(Color.parseColor("#11172D"));
         this.itemView.setTag(waterFlowRecommendItem);
-        this.itemView.setOnClickListener(new View$OnClickListenerC1262a());
+        this.itemView.setOnClickListener(new a());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -288,9 +284,9 @@ public class WaterFlowCouponViewHolder extends BaseViewHolder<WaterFlowRecommend
             ipChange.ipc$dispatch("-918224700", new Object[]{this, iItem});
             return;
         }
-        int a = gi0.INSTANCE.a(this.itemView.getContext());
-        this.imageViewWidth = a;
-        this.imageViewHeight = (int) (((a * 214) * 1.0f) / 160.0f);
+        int a2 = gi0.INSTANCE.a(this.itemView.getContext());
+        this.imageViewWidth = a2;
+        this.imageViewHeight = (int) (((a2 * 214) * 1.0f) / 160.0f);
         ViewGroup.LayoutParams layoutParams = this.mCouponLayout.getLayoutParams();
         layoutParams.width = this.imageViewWidth;
         layoutParams.height = this.imageViewHeight;

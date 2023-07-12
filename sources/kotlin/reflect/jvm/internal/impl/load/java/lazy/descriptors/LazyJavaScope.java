@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import com.youku.arch.v3.event.Subject;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -10,17 +10,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import kotlin.Pair;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8225w;
-import kotlin.collections.C8226x;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.k;
+import kotlin.collections.m;
+import kotlin.collections.n;
+import kotlin.collections.w;
+import kotlin.collections.x;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.PropertyReference1Impl;
 import kotlin.reflect.KProperty;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.FunctionDescriptor;
@@ -105,9 +104,8 @@ public abstract class LazyJavaScope extends le1 {
     private final MemoizedFunctionToNotNull<ni1, List<PropertyDescriptor>> k;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaScope$a */
     /* loaded from: classes3.dex */
-    protected static final class C8351a {
+    protected static final class a {
         @NotNull
         private final z71 a;
         @Nullable
@@ -121,7 +119,7 @@ public abstract class LazyJavaScope extends le1 {
         private final List<String> f;
 
         /* JADX WARN: Multi-variable type inference failed */
-        public C8351a(@NotNull z71 z71Var, @Nullable z71 z71Var2, @NotNull List<? extends ValueParameterDescriptor> list, @NotNull List<? extends TypeParameterDescriptor> list2, boolean z, @NotNull List<String> list3) {
+        public a(@NotNull z71 z71Var, @Nullable z71 z71Var2, @NotNull List<? extends ValueParameterDescriptor> list, @NotNull List<? extends TypeParameterDescriptor> list2, boolean z, @NotNull List<String> list3) {
             b41.i(z71Var, "returnType");
             b41.i(list, "valueParameters");
             b41.i(list2, "typeParameters");
@@ -162,9 +160,9 @@ public abstract class LazyJavaScope extends le1 {
             if (this == obj) {
                 return true;
             }
-            if (obj instanceof C8351a) {
-                C8351a c8351a = (C8351a) obj;
-                return b41.d(this.a, c8351a.a) && b41.d(this.b, c8351a.b) && b41.d(this.c, c8351a.c) && b41.d(this.d, c8351a.d) && this.e == c8351a.e && b41.d(this.f, c8351a.f);
+            if (obj instanceof a) {
+                a aVar = (a) obj;
+                return b41.d(this.a, aVar.a) && b41.d(this.b, aVar.b) && b41.d(this.c, aVar.c) && b41.d(this.d, aVar.d) && this.e == aVar.e && b41.d(this.f, aVar.f);
             }
             return false;
         }
@@ -195,15 +193,14 @@ public abstract class LazyJavaScope extends le1 {
 
     /* JADX INFO: Access modifiers changed from: protected */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaScope$b */
     /* loaded from: classes3.dex */
-    public static final class C8352b {
+    public static final class b {
         @NotNull
         private final List<ValueParameterDescriptor> a;
         private final boolean b;
 
         /* JADX WARN: Multi-variable type inference failed */
-        public C8352b(@NotNull List<? extends ValueParameterDescriptor> list, boolean z) {
+        public b(@NotNull List<? extends ValueParameterDescriptor> list, boolean z) {
             b41.i(list, "descriptors");
             this.a = list;
             this.b = z;
@@ -229,7 +226,7 @@ public abstract class LazyJavaScope extends le1 {
         final bx1 n = n(javaField);
         n.o(null, null, null, null);
         z71 x = x(javaField);
-        g = C8214m.g();
+        g = m.g();
         n.t(x, g, s(), null);
         if (d70.K(n, n.getType())) {
             n.e(this.a.e().createNullableLazyValue(new Function0<fn<?>>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaScope$resolveProperty$1
@@ -264,7 +261,7 @@ public abstract class LazyJavaScope extends le1 {
         }
         for (List list : linkedHashMap.values()) {
             if (list.size() != 1) {
-                Collection<? extends SimpleFunctionDescriptor> a = OverridingUtilsKt.a(list, new Function1<SimpleFunctionDescriptor, CallableDescriptor>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaScope$retainMostSpecificMethods$mostSpecificMethods$1
+                Collection<? extends SimpleFunctionDescriptor> a2 = OverridingUtilsKt.a(list, new Function1<SimpleFunctionDescriptor, CallableDescriptor>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaScope$retainMostSpecificMethods$mostSpecificMethods$1
                     @Override // kotlin.jvm.functions.Function1
                     @NotNull
                     public final CallableDescriptor invoke(@NotNull SimpleFunctionDescriptor simpleFunctionDescriptor) {
@@ -273,7 +270,7 @@ public abstract class LazyJavaScope extends le1 {
                     }
                 });
                 set.removeAll(list);
-                set.addAll(a);
+                set.addAll(a2);
             }
         }
     }
@@ -299,7 +296,7 @@ public abstract class LazyJavaScope extends le1 {
     private final z71 x(JavaField javaField) {
         boolean z = false;
         z71 o = this.a.g().o(javaField.getType(), u51.d(TypeUsage.COMMON, false, null, 3, null));
-        if ((AbstractC8271b.q0(o) || AbstractC8271b.t0(o)) && y(javaField) && javaField.getHasConstantNotNullInitializer()) {
+        if ((kotlin.reflect.jvm.internal.impl.builtins.b.q0(o) || kotlin.reflect.jvm.internal.impl.builtins.b.t0(o)) && y(javaField) && javaField.getHasConstantNotNullInitializer()) {
             z = true;
         }
         if (z) {
@@ -315,7 +312,7 @@ public abstract class LazyJavaScope extends le1 {
     }
 
     @NotNull
-    protected abstract C8351a A(@NotNull JavaMethod javaMethod, @NotNull List<? extends TypeParameterDescriptor> list, @NotNull z71 z71Var, @NotNull List<? extends ValueParameterDescriptor> list2);
+    protected abstract a A(@NotNull JavaMethod javaMethod, @NotNull List<? extends TypeParameterDescriptor> list, @NotNull z71 z71Var, @NotNull List<? extends ValueParameterDescriptor> list2);
 
     /* JADX INFO: Access modifiers changed from: protected */
     @NotNull
@@ -327,29 +324,29 @@ public abstract class LazyJavaScope extends le1 {
         b41.h(J, "createJavaMethod(\n      …eters.isEmpty()\n        )");
         r81 f = ContextKt.f(this.a, J, javaMethod, 0, 4, null);
         List<JavaTypeParameter> typeParameters = javaMethod.getTypeParameters();
-        q = C8215n.q(typeParameters, 10);
+        q = n.q(typeParameters, 10);
         List<? extends TypeParameterDescriptor> arrayList = new ArrayList<>(q);
         for (JavaTypeParameter javaTypeParameter : typeParameters) {
             TypeParameterDescriptor resolveTypeParameter = f.f().resolveTypeParameter(javaTypeParameter);
             b41.f(resolveTypeParameter);
             arrayList.add(resolveTypeParameter);
         }
-        C8352b D = D(f, J, javaMethod.getValueParameters());
-        C8351a A = A(javaMethod, arrayList, j(javaMethod, f), D.a());
+        b D = D(f, J, javaMethod.getValueParameters());
+        a A = A(javaMethod, arrayList, j(javaMethod, f), D.a());
         z71 c = A.c();
         ReceiverParameterDescriptor f2 = c == null ? null : x60.f(J, c, Annotations.Companion.b());
         ReceiverParameterDescriptor s = s();
         List<TypeParameterDescriptor> e = A.e();
         List<ValueParameterDescriptor> f3 = A.f();
         z71 d = A.d();
-        Modality a = Modality.Companion.a(false, javaMethod.isAbstract(), !javaMethod.isFinal());
-        f70 a2 = mw2.a(javaMethod.getVisibility());
+        Modality a2 = Modality.Companion.a(false, javaMethod.isAbstract(), !javaMethod.isFinal());
+        f70 a3 = mw2.a(javaMethod.getVisibility());
         if (A.c() != null) {
-            i = C8225w.f(hq2.a(JavaMethodDescriptor.ORIGINAL_VALUE_PARAMETER_FOR_EXTENSION_RECEIVER, C8212k.P(D.a())));
+            i = w.f(hq2.a(JavaMethodDescriptor.ORIGINAL_VALUE_PARAMETER_FOR_EXTENSION_RECEIVER, k.P(D.a())));
         } else {
-            i = C8226x.i();
+            i = x.i();
         }
-        J.I(f2, s, e, f3, d, a, a2, i);
+        J.I(f2, s, e, f3, d, a2, a3, i);
         J.M(A.b(), D.b());
         if (!A.a().isEmpty()) {
             f.a().s().reportSignatureErrors(J, A.a());
@@ -359,40 +356,40 @@ public abstract class LazyJavaScope extends le1 {
 
     /* JADX INFO: Access modifiers changed from: protected */
     @NotNull
-    public final C8352b D(@NotNull r81 r81Var, @NotNull FunctionDescriptor functionDescriptor, @NotNull List<? extends JavaValueParameter> list) {
+    public final b D(@NotNull r81 r81Var, @NotNull FunctionDescriptor functionDescriptor, @NotNull List<? extends JavaValueParameter> list) {
         Iterable<i21> G0;
         int q;
         List A0;
-        Pair a;
+        Pair a2;
         ni1 name;
         r81 r81Var2 = r81Var;
-        b41.i(r81Var2, AbstractC5658c.a);
+        b41.i(r81Var2, c.a);
         b41.i(functionDescriptor, Subject.FUNCTION);
         b41.i(list, "jValueParameters");
         G0 = CollectionsKt___CollectionsKt.G0(list);
-        q = C8215n.q(G0, 10);
+        q = n.q(G0, 10);
         ArrayList arrayList = new ArrayList(q);
         boolean z = false;
         boolean z2 = false;
         for (i21 i21Var : G0) {
-            int a2 = i21Var.a();
+            int a3 = i21Var.a();
             JavaValueParameter javaValueParameter = (JavaValueParameter) i21Var.b();
-            Annotations a3 = q81.a(r81Var2, javaValueParameter);
+            Annotations a4 = q81.a(r81Var2, javaValueParameter);
             q51 d = u51.d(TypeUsage.COMMON, z, null, 3, null);
             if (javaValueParameter.isVararg()) {
                 JavaType type = javaValueParameter.getType();
                 JavaArrayType javaArrayType = type instanceof JavaArrayType ? (JavaArrayType) type : null;
                 if (javaArrayType != null) {
                     z71 k = r81Var.g().k(javaArrayType, d, true);
-                    a = hq2.a(k, r81Var.d().getBuiltIns().k(k));
+                    a2 = hq2.a(k, r81Var.d().getBuiltIns().k(k));
                 } else {
                     throw new AssertionError(b41.r("Vararg parameter should be an array: ", javaValueParameter));
                 }
             } else {
-                a = hq2.a(r81Var.g().o(javaValueParameter.getType(), d), null);
+                a2 = hq2.a(r81Var.g().o(javaValueParameter.getType(), d), null);
             }
-            z71 z71Var = (z71) a.component1();
-            z71 z71Var2 = (z71) a.component2();
+            z71 z71Var = (z71) a2.component1();
+            z71 z71Var2 = (z71) a2.component2();
             if (b41.d(functionDescriptor.getName().b(), "equals") && list.size() == 1 && b41.d(r81Var.d().getBuiltIns().I(), z71Var)) {
                 name = ni1.f("other");
             } else {
@@ -401,21 +398,21 @@ public abstract class LazyJavaScope extends le1 {
                     z2 = true;
                 }
                 if (name == null) {
-                    name = ni1.f(b41.r("p", Integer.valueOf(a2)));
+                    name = ni1.f(b41.r("p", Integer.valueOf(a3)));
                     b41.h(name, "identifier(\"p$index\")");
                 }
             }
             ni1 ni1Var = name;
             b41.h(ni1Var, "if (function.name.asStri…(\"p$index\")\n            }");
             ArrayList arrayList2 = arrayList;
-            arrayList2.add(new ValueParameterDescriptorImpl(functionDescriptor, null, a2, a3, ni1Var, z71Var, false, false, false, z71Var2, r81Var.a().t().source(javaValueParameter)));
+            arrayList2.add(new ValueParameterDescriptorImpl(functionDescriptor, null, a3, a4, ni1Var, z71Var, false, false, false, z71Var2, r81Var.a().t().source(javaValueParameter)));
             arrayList = arrayList2;
             z2 = z2;
             z = false;
             r81Var2 = r81Var;
         }
         A0 = CollectionsKt___CollectionsKt.A0(arrayList);
-        return new C8352b(A0, z2);
+        return new b(A0, z2);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -437,14 +434,14 @@ public abstract class LazyJavaScope extends le1 {
                 }
             }
         }
-        if (z60Var.a(z60.Companion.d()) && !z60Var.l().contains(y60.C9951a.INSTANCE)) {
+        if (z60Var.a(z60.Companion.d()) && !z60Var.l().contains(y60.a.INSTANCE)) {
             for (ni1 ni1Var2 : g(z60Var, function1)) {
                 if (function1.invoke(ni1Var2).booleanValue()) {
                     linkedHashSet.addAll(getContributedFunctions(ni1Var2, noLookupLocation));
                 }
             }
         }
-        if (z60Var.a(z60.Companion.i()) && !z60Var.l().contains(y60.C9951a.INSTANCE)) {
+        if (z60Var.a(z60.Companion.i()) && !z60Var.l().contains(y60.a.INSTANCE)) {
             for (ni1 ni1Var3 : m(z60Var, function1)) {
                 if (function1.invoke(ni1Var3).booleanValue()) {
                     linkedHashSet.addAll(getContributedVariables(ni1Var3, noLookupLocation));
@@ -482,7 +479,7 @@ public abstract class LazyJavaScope extends le1 {
         if (getFunctionNames().contains(ni1Var)) {
             return this.g.invoke(ni1Var);
         }
-        g = C8214m.g();
+        g = m.g();
         return g;
     }
 
@@ -495,7 +492,7 @@ public abstract class LazyJavaScope extends le1 {
         if (getVariableNames().contains(ni1Var)) {
             return this.k.invoke(ni1Var);
         }
-        g = C8214m.g();
+        g = m.g();
         return g;
     }
 
@@ -525,7 +522,7 @@ public abstract class LazyJavaScope extends le1 {
     @NotNull
     public final z71 j(@NotNull JavaMethod javaMethod, @NotNull r81 r81Var) {
         b41.i(javaMethod, "method");
-        b41.i(r81Var, AbstractC5658c.a);
+        b41.i(r81Var, c.a);
         return r81Var.g().o(javaMethod.getReturnType(), u51.d(TypeUsage.COMMON, javaMethod.getContainingClass().isAnnotationType(), null, 2, null));
     }
 
@@ -583,7 +580,7 @@ public abstract class LazyJavaScope extends le1 {
 
     public LazyJavaScope(@NotNull r81 r81Var, @Nullable LazyJavaScope lazyJavaScope) {
         List g;
-        b41.i(r81Var, AbstractC5658c.a);
+        b41.i(r81Var, c.a);
         this.a = r81Var;
         this.b = lazyJavaScope;
         StorageManager e = r81Var.e();
@@ -599,7 +596,7 @@ public abstract class LazyJavaScope extends le1 {
                 return LazyJavaScope.this.f(z60.ALL, MemberScope.Companion.a());
             }
         };
-        g = C8214m.g();
+        g = m.g();
         this.c = e.createRecursionTolerantLazyValue(function0, g);
         this.d = r81Var.e().createLazyValue(new Function0<DeclaredMemberIndex>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors.LazyJavaScope$declaredMemberIndex$1
             /* JADX INFO: Access modifiers changed from: package-private */

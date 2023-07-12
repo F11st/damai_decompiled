@@ -1,9 +1,9 @@
 package cn.damai.artist;
 
 import android.os.Bundle;
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseModel;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.app.base.a;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
-public final class ArtistActivity<T extends AbstractC0470a<?, ?>, E extends BaseModel> extends DamaiBaseActivity<T, E> {
+public final class ArtistActivity<T extends a<?, ?>, E extends BaseModel> extends DamaiBaseActivity<T, E> {
     private static transient /* synthetic */ IpChange $ipChange;
 
     @Override // cn.damai.common.app.base.BaseActivity
@@ -54,7 +54,7 @@ public final class ArtistActivity<T extends AbstractC0470a<?, ?>, E extends Base
             ipChange.ipc$dispatch("-724654461", new Object[]{this});
             return;
         }
-        C0529c.e().K(this);
+        c.e().K(this);
         removeHeadTitleView();
         ArtistFragment artistFragment = new ArtistFragment();
         Bundle bundle = new Bundle();

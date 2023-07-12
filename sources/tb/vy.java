@@ -1,7 +1,6 @@
 package tb;
 
 import android.text.TextUtils;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DXRuntimeContext;
 import com.taobao.android.dinamicx.IDXEventHandler;
 import com.taobao.android.dinamicx.expression.expr_v2.DXBuiltinProvider;
@@ -49,7 +48,7 @@ public class vy implements DXBuiltinProvider, DXExprDxMethodProxy, DXJSMethodPro
         if (i == 0) {
             IDXEventHandler eventHandlerWithId = dXRuntimeContext.getEventHandlerWithId(j);
             if (eventHandlerWithId == null) {
-                DXAppMonitor.p(dXRuntimeContext, "DX_SCRIPT", "DX_SCRIPT_ERROR", C6368e.DXSCRIPT_EVENT_NOTFOUND_2, "事件: " + j + "找不到");
+                DXAppMonitor.p(dXRuntimeContext, "DX_SCRIPT", "DX_SCRIPT_ERROR", com.taobao.android.dinamicx.e.DXSCRIPT_EVENT_NOTFOUND_2, "事件: " + j + "找不到");
                 return null;
             }
             if (i2 < 0 || azVarArr == null || azVarArr.length != i2) {
@@ -70,7 +69,7 @@ public class vy implements DXBuiltinProvider, DXExprDxMethodProxy, DXJSMethodPro
         } else if (i == 1) {
             IDXDataParser iDXDataParser = dXRuntimeContext.getParserMap().get(j);
             if (iDXDataParser == null) {
-                DXAppMonitor.p(dXRuntimeContext, "DX_SCRIPT", "DX_SCRIPT_ERROR", C6368e.DXSCRIPT_DATAPARSER_NOTFOUND_2, "表达式: " + j + "找不到");
+                DXAppMonitor.p(dXRuntimeContext, "DX_SCRIPT", "DX_SCRIPT_ERROR", com.taobao.android.dinamicx.e.DXSCRIPT_DATAPARSER_NOTFOUND_2, "表达式: " + j + "找不到");
                 return null;
             }
             if (i2 >= 0) {
@@ -87,7 +86,7 @@ public class vy implements DXBuiltinProvider, DXExprDxMethodProxy, DXJSMethodPro
             }
             return az.d(evalWithArgs);
         } else {
-            DXAppMonitor.p(dXRuntimeContext, "DX_SCRIPT", "DX_SCRIPT_ERROR", C6368e.DXSCRIPT_CALLBACK_ERROR, "调用为不认识的type：  " + i);
+            DXAppMonitor.p(dXRuntimeContext, "DX_SCRIPT", "DX_SCRIPT_ERROR", com.taobao.android.dinamicx.e.DXSCRIPT_CALLBACK_ERROR, "调用为不认识的type：  " + i);
             return null;
         }
     }

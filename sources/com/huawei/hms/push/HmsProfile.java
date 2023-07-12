@@ -94,7 +94,7 @@ public class HmsProfile {
     }
 
     public final boolean b(Context context) {
-        return AbstractC5698s.b(context) >= 110001400;
+        return s.b(context) >= 110001400;
     }
 
     public Task<Void> deleteProfile(String str) {
@@ -102,8 +102,8 @@ public class HmsProfile {
     }
 
     public boolean isSupportProfile() {
-        if (AbstractC5698s.d(this.b)) {
-            if (AbstractC5698s.c()) {
+        if (s.d(this.b)) {
+            if (s.c()) {
                 HMSLog.i(a, "current EMUI version below 9.1, not support profile operation.");
                 return false;
             } else if (b(this.b)) {

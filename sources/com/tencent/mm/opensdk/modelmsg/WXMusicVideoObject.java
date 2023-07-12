@@ -2,8 +2,8 @@ package com.tencent.mm.opensdk.modelmsg;
 
 import android.os.Bundle;
 import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
-import com.tencent.mm.opensdk.utils.C7065b;
 import com.tencent.mm.opensdk.utils.Log;
+import com.tencent.mm.opensdk.utils.b;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -27,29 +27,29 @@ public class WXMusicVideoObject implements WXMediaMessage.IMediaObject {
     public String songLyric;
 
     private int getFileSize(String str) {
-        return C7065b.a(str);
+        return b.a(str);
     }
 
     @Override // com.tencent.mm.opensdk.modelmsg.WXMediaMessage.IMediaObject
     public boolean checkArgs() {
         String str;
-        if (C7065b.b(this.musicUrl) || this.musicUrl.length() > 10240) {
+        if (b.b(this.musicUrl) || this.musicUrl.length() > 10240) {
             str = "musicUrl.length exceeds the limit";
-        } else if (C7065b.b(this.musicDataUrl) || this.musicDataUrl.length() > 10240) {
+        } else if (b.b(this.musicDataUrl) || this.musicDataUrl.length() > 10240) {
             str = "musicDataUrl.length exceeds the limit";
-        } else if (C7065b.b(this.singerName) || this.singerName.length() > 1024) {
+        } else if (b.b(this.singerName) || this.singerName.length() > 1024) {
             str = "singerName.length exceeds the limit";
-        } else if (!C7065b.b(this.songLyric) && this.songLyric.length() > 32768) {
+        } else if (!b.b(this.songLyric) && this.songLyric.length() > 32768) {
             str = "songLyric.length exceeds the limit";
-        } else if (!C7065b.b(this.hdAlbumThumbFilePath) && this.hdAlbumThumbFilePath.length() > 1024) {
+        } else if (!b.b(this.hdAlbumThumbFilePath) && this.hdAlbumThumbFilePath.length() > 1024) {
             str = "hdAlbumThumbFilePath.length exceeds the limit";
-        } else if (!C7065b.b(this.hdAlbumThumbFilePath) && getFileSize(this.hdAlbumThumbFilePath) > HD_ALBUM_FILE_LENGTH) {
+        } else if (!b.b(this.hdAlbumThumbFilePath) && getFileSize(this.hdAlbumThumbFilePath) > HD_ALBUM_FILE_LENGTH) {
             str = "hdAlbumThumbFilePath file length exceeds the limit";
-        } else if (!C7065b.b(this.musicGenre) && this.musicGenre.length() > 1024) {
+        } else if (!b.b(this.musicGenre) && this.musicGenre.length() > 1024) {
             str = "musicGenre.length exceeds the limit";
-        } else if (!C7065b.b(this.identification) && this.identification.length() > 1024) {
+        } else if (!b.b(this.identification) && this.identification.length() > 1024) {
             str = "identification.length exceeds the limit";
-        } else if (C7065b.b(this.musicOperationUrl) || this.musicOperationUrl.length() <= 10240) {
+        } else if (b.b(this.musicOperationUrl) || this.musicOperationUrl.length() <= 10240) {
             return true;
         } else {
             str = "musicOperationUrl.length exceeds the limit";

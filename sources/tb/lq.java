@@ -15,7 +15,7 @@ public class lq implements IPage.PageLifecycleCallback {
 
     public lq(pp1 pp1Var) {
         this.a = pp1Var;
-        IDispatcher a = C8934b0.a(C8934b0.CUSTOM_PAGE_LIFECYCLE_DISPATCHER);
+        IDispatcher a = b0.a(b0.CUSTOM_PAGE_LIFECYCLE_DISPATCHER);
         if (a instanceof CustomPageLifecycleDispatcher) {
             this.b = (CustomPageLifecycleDispatcher) a;
         }

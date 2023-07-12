@@ -7,7 +7,7 @@ import com.alibaba.security.biometrics.jni.VersionKey;
 import com.alibaba.security.biometrics.service.listener.OnLogTrackListener;
 import com.alibaba.security.biometrics.service.model.ABDetectContext;
 import com.alibaba.security.biometrics.service.model.params.ALBiometricsParams;
-import com.alibaba.security.common.c.C3800a;
+import com.alibaba.security.common.c.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
@@ -298,16 +298,16 @@ public class ABLogRecorder implements ABLogRecorderKeys {
                         try {
                             ABLogRecorder.this.mOnLogRecordListener.onOldLogRecord(bundle2);
                         } catch (Exception unused) {
-                            C3800a.b();
+                            a.b();
                         } catch (Throwable unused2) {
-                            C3800a.b();
+                            a.b();
                         }
                     }
                 });
             } catch (Exception unused) {
-                C3800a.b();
+                a.b();
             } catch (Throwable unused2) {
-                C3800a.b();
+                a.b();
             }
         }
     }

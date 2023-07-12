@@ -7,7 +7,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 import androidx.viewpager.widget.ViewPager;
-import cn.damai.common.user.C0525a;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.homepage.R$array;
 import cn.damai.homepage.R$color;
@@ -49,12 +49,11 @@ public class RelationShipActivity extends DamaiBaseActivity {
     private String relationType = "1";
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.relationship.RelationShipActivity$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1450a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1450a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -69,12 +68,11 @@ public class RelationShipActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.relationship.RelationShipActivity$b */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1451b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1451b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -110,9 +108,9 @@ public class RelationShipActivity extends DamaiBaseActivity {
             this.relationType = "1";
         }
         if (isFollowType()) {
-            setDamaiUTKeyBuilder(new C0525a.C0527b().i(vf1.FOLLOW_LIST_PAGE));
+            setDamaiUTKeyBuilder(new a.b().i(vf1.FOLLOW_LIST_PAGE));
         } else {
-            setDamaiUTKeyBuilder(new C0525a.C0527b().i(vf1.FANS_LIST_PAGE));
+            setDamaiUTKeyBuilder(new a.b().i(vf1.FANS_LIST_PAGE));
         }
     }
 
@@ -141,7 +139,7 @@ public class RelationShipActivity extends DamaiBaseActivity {
             scrollTitleBean.name = this.mTitles[i];
             arrayList.add(scrollTitleBean);
         }
-        this.mTitleScroll.setFontColor(R$color.color_000000, R$color.color_333333).setFontSize(16, 16).setTitle(arrayList).setHeight(46).setOnTitleClickListener(new View$OnClickListenerC1451b()).commit();
+        this.mTitleScroll.setFontColor(R$color.color_000000, R$color.color_333333).setFontSize(16, 16).setTitle(arrayList).setHeight(46).setOnTitleClickListener(new b()).commit();
     }
 
     private void initTitleView() {
@@ -155,7 +153,7 @@ public class RelationShipActivity extends DamaiBaseActivity {
         this.mViewStatusBarSpace = findViewById.findViewById(R$id.title_bar_space);
         DMIconFontTextView dMIconFontTextView = (DMIconFontTextView) findViewById.findViewById(R$id.mine_title_left_icon_font_tv);
         this.mTvTitleBack = dMIconFontTextView;
-        dMIconFontTextView.setOnClickListener(new View$OnClickListenerC1450a());
+        dMIconFontTextView.setOnClickListener(new a());
         this.mTvTitle = (TextView) findViewById.findViewById(R$id.mine_title_tv);
         String str = !this.self ? "TA的" : "我的";
         if (isFollowType()) {

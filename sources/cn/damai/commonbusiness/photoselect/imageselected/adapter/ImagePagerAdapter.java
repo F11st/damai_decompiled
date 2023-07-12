@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import androidx.viewpager.widget.PagerAdapter;
-import cn.damai.common.image.C0504a;
 import cn.damai.commonbusiness.photoselect.imageselected.entry.Image;
 import cn.damai.commonbusiness.photoselect.imageselected.utils.ImageTask2;
 import cn.damai.commonbusiness.photoselect.photoview.PhotoView;
@@ -15,7 +14,7 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
 import java.util.List;
-import tb.C9826vr;
+import tb.vr;
 import tb.wh2;
 
 /* compiled from: Taobao */
@@ -34,13 +33,12 @@ public class ImagePagerAdapter extends PagerAdapter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.adapter.ImagePagerAdapter$a */
     /* loaded from: classes4.dex */
-    public class C0758a implements ImageTask2.Listener {
+    public class a implements ImageTask2.Listener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ PhotoView a;
 
-        C0758a(ImagePagerAdapter imagePagerAdapter, PhotoView photoView) {
+        a(ImagePagerAdapter imagePagerAdapter, PhotoView photoView) {
             this.a = photoView;
         }
 
@@ -56,14 +54,13 @@ public class ImagePagerAdapter extends PagerAdapter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.adapter.ImagePagerAdapter$b */
     /* loaded from: classes4.dex */
-    public class View$OnClickListenerC0759b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
         final /* synthetic */ Image b;
 
-        View$OnClickListenerC0759b(int i, Image image) {
+        b(int i, Image image) {
             this.a = i;
             this.b = image;
         }
@@ -159,19 +156,19 @@ public class ImagePagerAdapter extends PagerAdapter {
         Image image = this.c.get(i);
         viewGroup.addView(remove);
         if (image.isNetImage()) {
-            if (remove.getTag() instanceof C9826vr) {
-                ((C9826vr) remove.getTag()).cancel();
+            if (remove.getTag() instanceof vr) {
+                ((vr) remove.getTag()).cancel();
             }
-            remove.setTag(C0504a.b().h(this.a).c(image.getPath()).g(remove));
+            remove.setTag(cn.damai.common.image.a.b().h(this.a).c(image.getPath()).g(remove));
         } else {
             if (remove.getTag() instanceof ImageTask2) {
                 ((ImageTask2) remove.getTag()).cancel(true);
             }
-            ImageTask2 imageTask2 = new ImageTask2(this.a, false, remove, new C0758a(this, remove));
+            ImageTask2 imageTask2 = new ImageTask2(this.a, false, remove, new a(this, remove));
             imageTask2.execute(image.getPath());
             remove.setTag(imageTask2);
         }
-        remove.setOnClickListener(new View$OnClickListenerC0759b(i, image));
+        remove.setOnClickListener(new b(i, image));
         return remove;
     }
 

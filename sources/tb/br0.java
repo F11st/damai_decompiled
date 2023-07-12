@@ -18,7 +18,7 @@ import tb.k80;
 /* loaded from: classes6.dex */
 public final class br0 {
     @NotNull
-    public static final C8974a Companion = new C8974a(null);
+    public static final a Companion = new a(null);
     @Nullable
     private Overflow A;
     @Nullable
@@ -133,13 +133,12 @@ public final class br0 {
     private FlexWrap z;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.br0$a */
     /* loaded from: classes6.dex */
-    public static final class C8974a {
-        private C8974a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8974a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -167,7 +166,7 @@ public final class br0 {
                 Method dump skipped, instructions count: 1074
                 To view this dump change 'Code comments level' option to 'DEBUG'
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.br0.C8974a.a(com.alibaba.fastjson.JSONObject):tb.br0");
+            throw new UnsupportedOperationException("Method not decompiled: tb.br0.a.a(com.alibaba.fastjson.JSONObject):tb.br0");
         }
     }
 
@@ -226,9 +225,9 @@ public final class br0 {
             if (d == null) {
                 d = lz1Var2 == null ? null : lz1Var2.d();
             }
-            hs0 a = lz1Var == null ? null : lz1Var.a();
-            if (a != null) {
-                hs0Var = a;
+            hs0 a2 = lz1Var == null ? null : lz1Var.a();
+            if (a2 != null) {
+                hs0Var = a2;
             } else if (lz1Var2 != null) {
                 hs0Var = lz1Var2.a();
             }
@@ -243,8 +242,8 @@ public final class br0 {
         hs0 c;
         hs0 b;
         hs0 d;
-        hs0 a;
         hs0 a2;
+        hs0 a3;
         hs0 d2;
         hs0 b2;
         hs0 c2;
@@ -260,29 +259,29 @@ public final class br0 {
             if (b3 == null) {
                 b3 = (lz1Var2 == null || (c2 = lz1Var2.c()) == null) ? null : c2.b();
                 if (b3 == null) {
-                    b3 = k80.C9340d.INSTANCE;
+                    b3 = k80.d.INSTANCE;
                 }
             }
             k80 b4 = (lz1Var == null || (b = lz1Var.b()) == null) ? null : b.b();
             if (b4 == null) {
                 b4 = (lz1Var2 == null || (b2 = lz1Var2.b()) == null) ? null : b2.b();
                 if (b4 == null) {
-                    b4 = k80.C9340d.INSTANCE;
+                    b4 = k80.d.INSTANCE;
                 }
             }
             k80 b5 = (lz1Var == null || (d = lz1Var.d()) == null) ? null : d.b();
             if (b5 == null) {
                 b5 = (lz1Var2 == null || (d2 = lz1Var2.d()) == null) ? null : d2.b();
                 if (b5 == null) {
-                    b5 = k80.C9340d.INSTANCE;
+                    b5 = k80.d.INSTANCE;
                 }
             }
-            k80 b6 = (lz1Var == null || (a = lz1Var.a()) == null) ? null : a.b();
+            k80 b6 = (lz1Var == null || (a2 = lz1Var.a()) == null) ? null : a2.b();
             if (b6 == null) {
-                if (lz1Var2 != null && (a2 = lz1Var2.a()) != null) {
-                    k80Var = a2.b();
+                if (lz1Var2 != null && (a3 = lz1Var2.a()) != null) {
+                    k80Var = a3.b();
                 }
-                b6 = k80Var == null ? k80.C9340d.INSTANCE : k80Var;
+                b6 = k80Var == null ? k80.d.INSTANCE : k80Var;
             }
             lz1Var3 = new lz1<>(b3, b4, b5, b6);
             this.V = lz1Var3;
@@ -309,9 +308,9 @@ public final class br0 {
             if (b == null) {
                 b = ld2Var2 == null ? null : ld2Var2.b();
             }
-            hs0 a = ld2Var == null ? null : ld2Var.a();
-            if (a != null) {
-                hs0Var = a;
+            hs0 a2 = ld2Var == null ? null : ld2Var.a();
+            if (a2 != null) {
+                hs0Var = a2;
             } else if (ld2Var2 != null) {
                 hs0Var = ld2Var2.a();
             }
@@ -324,8 +323,8 @@ public final class br0 {
     @Nullable
     public final ld2<k80> F() {
         hs0 b;
-        hs0 a;
         hs0 a2;
+        hs0 a3;
         hs0 b2;
         ld2<hs0> ld2Var = this.O;
         ld2<hs0> ld2Var2 = this.t;
@@ -339,15 +338,15 @@ public final class br0 {
             if (b3 == null) {
                 b3 = (ld2Var2 == null || (b2 = ld2Var2.b()) == null) ? null : b2.b();
                 if (b3 == null) {
-                    b3 = k80.C9337a.INSTANCE;
+                    b3 = k80.a.INSTANCE;
                 }
             }
-            k80 b4 = (ld2Var == null || (a = ld2Var.a()) == null) ? null : a.b();
+            k80 b4 = (ld2Var == null || (a2 = ld2Var.a()) == null) ? null : a2.b();
             if (b4 == null) {
-                if (ld2Var2 != null && (a2 = ld2Var2.a()) != null) {
-                    k80Var = a2.b();
+                if (ld2Var2 != null && (a3 = ld2Var2.a()) != null) {
+                    k80Var = a3.b();
                 }
-                b4 = k80Var == null ? k80.C9337a.INSTANCE : k80Var;
+                b4 = k80Var == null ? k80.a.INSTANCE : k80Var;
             }
             ld2Var3 = new ld2<>(b3, b4);
             this.Q = ld2Var3;
@@ -374,9 +373,9 @@ public final class br0 {
             if (b == null) {
                 b = ld2Var2 == null ? null : ld2Var2.b();
             }
-            hs0 a = ld2Var == null ? null : ld2Var.a();
-            if (a != null) {
-                hs0Var = a;
+            hs0 a2 = ld2Var == null ? null : ld2Var.a();
+            if (a2 != null) {
+                hs0Var = a2;
             } else if (ld2Var2 != null) {
                 hs0Var = ld2Var2.a();
             }
@@ -389,8 +388,8 @@ public final class br0 {
     @Nullable
     public final ld2<k80> I() {
         hs0 b;
-        hs0 a;
         hs0 a2;
+        hs0 a3;
         hs0 b2;
         ld2<hs0> ld2Var = this.N;
         ld2<hs0> ld2Var2 = this.s;
@@ -404,15 +403,15 @@ public final class br0 {
             if (b3 == null) {
                 b3 = (ld2Var2 == null || (b2 = ld2Var2.b()) == null) ? null : b2.b();
                 if (b3 == null) {
-                    b3 = k80.C9337a.INSTANCE;
+                    b3 = k80.a.INSTANCE;
                 }
             }
-            k80 b4 = (ld2Var == null || (a = ld2Var.a()) == null) ? null : a.b();
+            k80 b4 = (ld2Var == null || (a2 = ld2Var.a()) == null) ? null : a2.b();
             if (b4 == null) {
-                if (ld2Var2 != null && (a2 = ld2Var2.a()) != null) {
-                    k80Var = a2.b();
+                if (ld2Var2 != null && (a3 = ld2Var2.a()) != null) {
+                    k80Var = a3.b();
                 }
-                b4 = k80Var == null ? k80.C9337a.INSTANCE : k80Var;
+                b4 = k80Var == null ? k80.a.INSTANCE : k80Var;
             }
             ld2Var3 = new ld2<>(b3, b4);
             this.R = ld2Var3;
@@ -458,9 +457,9 @@ public final class br0 {
             if (d == null) {
                 d = lz1Var2 == null ? null : lz1Var2.d();
             }
-            hs0 a = lz1Var == null ? null : lz1Var.a();
-            if (a != null) {
-                hs0Var = a;
+            hs0 a2 = lz1Var == null ? null : lz1Var.a();
+            if (a2 != null) {
+                hs0Var = a2;
             } else if (lz1Var2 != null) {
                 hs0Var = lz1Var2.a();
             }
@@ -475,8 +474,8 @@ public final class br0 {
         hs0 c;
         hs0 b;
         hs0 d;
-        hs0 a;
         hs0 a2;
+        hs0 a3;
         hs0 d2;
         hs0 b2;
         hs0 c2;
@@ -492,29 +491,29 @@ public final class br0 {
             if (b3 == null) {
                 b3 = (lz1Var2 == null || (c2 = lz1Var2.c()) == null) ? null : c2.b();
                 if (b3 == null) {
-                    b3 = k80.C9340d.INSTANCE;
+                    b3 = k80.d.INSTANCE;
                 }
             }
             k80 b4 = (lz1Var == null || (b = lz1Var.b()) == null) ? null : b.b();
             if (b4 == null) {
                 b4 = (lz1Var2 == null || (b2 = lz1Var2.b()) == null) ? null : b2.b();
                 if (b4 == null) {
-                    b4 = k80.C9340d.INSTANCE;
+                    b4 = k80.d.INSTANCE;
                 }
             }
             k80 b5 = (lz1Var == null || (d = lz1Var.d()) == null) ? null : d.b();
             if (b5 == null) {
                 b5 = (lz1Var2 == null || (d2 = lz1Var2.d()) == null) ? null : d2.b();
                 if (b5 == null) {
-                    b5 = k80.C9340d.INSTANCE;
+                    b5 = k80.d.INSTANCE;
                 }
             }
-            k80 b6 = (lz1Var == null || (a = lz1Var.a()) == null) ? null : a.b();
+            k80 b6 = (lz1Var == null || (a2 = lz1Var.a()) == null) ? null : a2.b();
             if (b6 == null) {
-                if (lz1Var2 != null && (a2 = lz1Var2.a()) != null) {
-                    k80Var = a2.b();
+                if (lz1Var2 != null && (a3 = lz1Var2.a()) != null) {
+                    k80Var = a3.b();
                 }
-                b6 = k80Var == null ? k80.C9340d.INSTANCE : k80Var;
+                b6 = k80Var == null ? k80.d.INSTANCE : k80Var;
             }
             lz1Var3 = new lz1<>(b3, b4, b5, b6);
             this.U = lz1Var3;
@@ -549,9 +548,9 @@ public final class br0 {
             if (d == null) {
                 d = lz1Var2 == null ? null : lz1Var2.d();
             }
-            hs0 a = lz1Var == null ? null : lz1Var.a();
-            if (a != null) {
-                hs0Var = a;
+            hs0 a2 = lz1Var == null ? null : lz1Var.a();
+            if (a2 != null) {
+                hs0Var = a2;
             } else if (lz1Var2 != null) {
                 hs0Var = lz1Var2.a();
             }
@@ -566,8 +565,8 @@ public final class br0 {
         hs0 c;
         hs0 b;
         hs0 d;
-        hs0 a;
         hs0 a2;
+        hs0 a3;
         hs0 d2;
         hs0 b2;
         hs0 c2;
@@ -583,29 +582,29 @@ public final class br0 {
             if (b3 == null) {
                 b3 = (lz1Var2 == null || (c2 = lz1Var2.c()) == null) ? null : c2.b();
                 if (b3 == null) {
-                    b3 = k80.C9340d.INSTANCE;
+                    b3 = k80.d.INSTANCE;
                 }
             }
             k80 b4 = (lz1Var == null || (b = lz1Var.b()) == null) ? null : b.b();
             if (b4 == null) {
                 b4 = (lz1Var2 == null || (b2 = lz1Var2.b()) == null) ? null : b2.b();
                 if (b4 == null) {
-                    b4 = k80.C9340d.INSTANCE;
+                    b4 = k80.d.INSTANCE;
                 }
             }
             k80 b5 = (lz1Var == null || (d = lz1Var.d()) == null) ? null : d.b();
             if (b5 == null) {
                 b5 = (lz1Var2 == null || (d2 = lz1Var2.d()) == null) ? null : d2.b();
                 if (b5 == null) {
-                    b5 = k80.C9340d.INSTANCE;
+                    b5 = k80.d.INSTANCE;
                 }
             }
-            k80 b6 = (lz1Var == null || (a = lz1Var.a()) == null) ? null : a.b();
+            k80 b6 = (lz1Var == null || (a2 = lz1Var.a()) == null) ? null : a2.b();
             if (b6 == null) {
-                if (lz1Var2 != null && (a2 = lz1Var2.a()) != null) {
-                    k80Var = a2.b();
+                if (lz1Var2 != null && (a3 = lz1Var2.a()) != null) {
+                    k80Var = a3.b();
                 }
-                b6 = k80Var == null ? k80.C9340d.INSTANCE : k80Var;
+                b6 = k80Var == null ? k80.d.INSTANCE : k80Var;
             }
             lz1Var3 = new lz1<>(b3, b4, b5, b6);
             this.W = lz1Var3;
@@ -643,9 +642,9 @@ public final class br0 {
             if (b == null) {
                 b = ld2Var2 == null ? null : ld2Var2.b();
             }
-            hs0 a = ld2Var == null ? null : ld2Var.a();
-            if (a != null) {
-                hs0Var = a;
+            hs0 a2 = ld2Var == null ? null : ld2Var.a();
+            if (a2 != null) {
+                hs0Var = a2;
             } else if (ld2Var2 != null) {
                 hs0Var = ld2Var2.a();
             }
@@ -658,8 +657,8 @@ public final class br0 {
     @Nullable
     public final ld2<k80> V() {
         hs0 b;
-        hs0 a;
         hs0 a2;
+        hs0 a3;
         hs0 b2;
         ld2<hs0> ld2Var = this.M;
         ld2<hs0> ld2Var2 = this.r;
@@ -673,15 +672,15 @@ public final class br0 {
             if (b3 == null) {
                 b3 = (ld2Var2 == null || (b2 = ld2Var2.b()) == null) ? null : b2.b();
                 if (b3 == null) {
-                    b3 = k80.C9337a.INSTANCE;
+                    b3 = k80.a.INSTANCE;
                 }
             }
-            k80 b4 = (ld2Var == null || (a = ld2Var.a()) == null) ? null : a.b();
+            k80 b4 = (ld2Var == null || (a2 = ld2Var.a()) == null) ? null : a2.b();
             if (b4 == null) {
-                if (ld2Var2 != null && (a2 = ld2Var2.a()) != null) {
-                    k80Var = a2.b();
+                if (ld2Var2 != null && (a3 = ld2Var2.a()) != null) {
+                    k80Var = a3.b();
                 }
-                b4 = k80Var == null ? k80.C9337a.INSTANCE : k80Var;
+                b4 = k80Var == null ? k80.a.INSTANCE : k80Var;
             }
             ld2Var3 = new ld2<>(b3, b4);
             this.S = ld2Var3;
@@ -895,9 +894,9 @@ public final class br0 {
             if (d == null) {
                 d = lz1Var2 == null ? null : lz1Var2.d();
             }
-            hs0 a = lz1Var == null ? null : lz1Var.a();
-            if (a != null) {
-                hs0Var = a;
+            hs0 a2 = lz1Var == null ? null : lz1Var.a();
+            if (a2 != null) {
+                hs0Var = a2;
             } else if (lz1Var2 != null) {
                 hs0Var = lz1Var2.a();
             }
@@ -916,8 +915,8 @@ public final class br0 {
         hs0 c;
         hs0 b;
         hs0 d;
-        hs0 a;
         hs0 a2;
+        hs0 a3;
         hs0 d2;
         hs0 b2;
         hs0 c2;
@@ -933,29 +932,29 @@ public final class br0 {
             if (b3 == null) {
                 b3 = (lz1Var2 == null || (c2 = lz1Var2.c()) == null) ? null : c2.b();
                 if (b3 == null) {
-                    b3 = k80.C9340d.INSTANCE;
+                    b3 = k80.d.INSTANCE;
                 }
             }
             k80 b4 = (lz1Var == null || (b = lz1Var.b()) == null) ? null : b.b();
             if (b4 == null) {
                 b4 = (lz1Var2 == null || (b2 = lz1Var2.b()) == null) ? null : b2.b();
                 if (b4 == null) {
-                    b4 = k80.C9340d.INSTANCE;
+                    b4 = k80.d.INSTANCE;
                 }
             }
             k80 b5 = (lz1Var == null || (d = lz1Var.d()) == null) ? null : d.b();
             if (b5 == null) {
                 b5 = (lz1Var2 == null || (d2 = lz1Var2.d()) == null) ? null : d2.b();
                 if (b5 == null) {
-                    b5 = k80.C9340d.INSTANCE;
+                    b5 = k80.d.INSTANCE;
                 }
             }
-            k80 b6 = (lz1Var == null || (a = lz1Var.a()) == null) ? null : a.b();
+            k80 b6 = (lz1Var == null || (a2 = lz1Var.a()) == null) ? null : a2.b();
             if (b6 == null) {
-                if (lz1Var2 != null && (a2 = lz1Var2.a()) != null) {
-                    k80Var = a2.b();
+                if (lz1Var2 != null && (a3 = lz1Var2.a()) != null) {
+                    k80Var = a3.b();
                 }
-                b6 = k80Var == null ? k80.C9340d.INSTANCE : k80Var;
+                b6 = k80Var == null ? k80.d.INSTANCE : k80Var;
             }
             lz1Var3 = new lz1<>(b3, b4, b5, b6);
             this.T = lz1Var3;
@@ -1150,9 +1149,9 @@ public final class br0 {
         if (e != null) {
             this.C = e;
         }
-        AlignContent a = br0Var.a();
-        if (a != null) {
-            this.D = a;
+        AlignContent a2 = br0Var.a();
+        if (a2 != null) {
+            this.D = a2;
         }
         JustifyContent z = br0Var.z();
         if (z != null) {

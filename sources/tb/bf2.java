@@ -3,7 +3,6 @@ package tb;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
-import kotlin.collections.C8215n;
 import kotlin.reflect.jvm.internal.impl.types.IntersectionTypeConstructor;
 import kotlin.reflect.jvm.internal.impl.types.TypeConstructor;
 import org.jetbrains.annotations.NotNull;
@@ -13,11 +12,11 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public final class bf2 {
     @Nullable
-    public static final C9429m0 a(@NotNull z71 z71Var) {
+    public static final m0 a(@NotNull z71 z71Var) {
         b41.i(z71Var, "<this>");
         gu2 f = z71Var.f();
-        if (f instanceof C9429m0) {
-            return (C9429m0) f;
+        if (f instanceof m0) {
+            return (m0) f;
         }
         return null;
     }
@@ -25,7 +24,7 @@ public final class bf2 {
     @Nullable
     public static final fd2 b(@NotNull z71 z71Var) {
         b41.i(z71Var, "<this>");
-        C9429m0 a = a(z71Var);
+        m0 a = a(z71Var);
         if (a == null) {
             return null;
         }
@@ -41,7 +40,7 @@ public final class bf2 {
         int q;
         z71 z71Var;
         Collection<z71> supertypes = intersectionTypeConstructor.getSupertypes();
-        q = C8215n.q(supertypes, 10);
+        q = kotlin.collections.n.q(supertypes, 10);
         ArrayList arrayList = new ArrayList(q);
         Iterator<T> it = supertypes.iterator();
         boolean z = false;
@@ -120,7 +119,7 @@ public final class bf2 {
     public static final fd2 j(@NotNull fd2 fd2Var, @NotNull fd2 fd2Var2) {
         b41.i(fd2Var, "<this>");
         b41.i(fd2Var2, "abbreviatedType");
-        return a81.a(fd2Var) ? fd2Var : new C9429m0(fd2Var, fd2Var2);
+        return a81.a(fd2Var) ? fd2Var : new m0(fd2Var, fd2Var2);
     }
 
     @NotNull

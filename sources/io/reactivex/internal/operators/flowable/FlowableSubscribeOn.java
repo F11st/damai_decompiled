@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.Scheduler;
+import io.reactivex.b;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import io.reactivex.internal.util.BackpressureHelper;
 import java.util.concurrent.atomic.AtomicLong;
@@ -122,13 +122,13 @@ public final class FlowableSubscribeOn<T> extends AbstractFlowableWithUpstream<T
         }
     }
 
-    public FlowableSubscribeOn(AbstractC8147b<T> abstractC8147b, Scheduler scheduler, boolean z) {
-        super(abstractC8147b);
+    public FlowableSubscribeOn(b<T> bVar, Scheduler scheduler, boolean z) {
+        super(bVar);
         this.scheduler = scheduler;
         this.nonScheduledRequests = z;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super T> subscriber) {
         Scheduler.Worker createWorker = this.scheduler.createWorker();
         SubscribeOnSubscriber subscribeOnSubscriber = new SubscribeOnSubscriber(subscriber, createWorker, this.source, this.nonScheduledRequests);

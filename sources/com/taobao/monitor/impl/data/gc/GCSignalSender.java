@@ -2,7 +2,7 @@ package com.taobao.monitor.impl.data.gc;
 
 import com.taobao.monitor.impl.trace.ApplicationGCDispatcher;
 import com.taobao.monitor.impl.trace.IDispatcher;
-import tb.C8934b0;
+import tb.b0;
 import tb.e30;
 import tb.fu0;
 
@@ -20,7 +20,7 @@ class GCSignalSender {
         @Override // java.lang.Runnable
         public void run() {
             fu0.e().d().removeCallbacks(GCSignalSender.a);
-            IDispatcher a = C8934b0.a(C8934b0.APPLICATION_GC_DISPATCHER);
+            IDispatcher a = b0.a(b0.APPLICATION_GC_DISPATCHER);
             if (a instanceof ApplicationGCDispatcher) {
                 ((ApplicationGCDispatcher) a).f();
             }

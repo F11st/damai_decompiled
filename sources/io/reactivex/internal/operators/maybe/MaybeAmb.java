@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8148c;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeSource;
+import io.reactivex.c;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.EmptyDisposable;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -12,7 +12,7 @@ import tb.jm;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeAmb<T> extends AbstractC8148c<T> {
+public final class MaybeAmb<T> extends c<T> {
     private final MaybeSource<? extends T>[] sources;
     private final Iterable<? extends MaybeSource<? extends T>> sourcesIterable;
 
@@ -76,7 +76,7 @@ public final class MaybeAmb<T> extends AbstractC8148c<T> {
         this.sourcesIterable = iterable;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         int length;
         MaybeSource<? extends T>[] maybeSourceArr = this.sources;

@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
-import kotlin.collections.C8203e0;
-import kotlin.collections.C8212k;
 import kotlin.reflect.jvm.internal.impl.builtins.BuiltInsPackageFragment;
 import kotlin.reflect.jvm.internal.impl.builtins.FunctionInterfacePackageFragment;
 import kotlin.reflect.jvm.internal.impl.builtins.functions.FunctionClassKind;
@@ -14,7 +12,6 @@ import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.deserialization.ClassDescriptorFactory;
 import kotlin.reflect.jvm.internal.impl.storage.StorageManager;
-import kotlin.text.C8604o;
 import kotlin.text.StringsKt__StringsKt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -48,7 +45,7 @@ public final class zd implements ClassDescriptorFactory {
         if (K) {
             hp0 h = hjVar.h();
             b41.h(h, "classId.packageFqName");
-            FunctionClassKind.C8279a.C8280a c = FunctionClassKind.Companion.c(b, h);
+            FunctionClassKind.a.C0412a c = FunctionClassKind.Companion.c(b, h);
             if (c == null) {
                 return null;
             }
@@ -67,9 +64,9 @@ public final class zd implements ClassDescriptorFactory {
                     arrayList2.add(obj2);
                 }
             }
-            PackageFragmentDescriptor packageFragmentDescriptor = (FunctionInterfacePackageFragment) C8212k.R(arrayList2);
+            PackageFragmentDescriptor packageFragmentDescriptor = (FunctionInterfacePackageFragment) kotlin.collections.k.R(arrayList2);
             if (packageFragmentDescriptor == null) {
-                packageFragmentDescriptor = (BuiltInsPackageFragment) C8212k.P(arrayList);
+                packageFragmentDescriptor = (BuiltInsPackageFragment) kotlin.collections.k.P(arrayList);
             }
             return new qp0(this.a, packageFragmentDescriptor, a, b2);
         }
@@ -81,7 +78,7 @@ public final class zd implements ClassDescriptorFactory {
     public Collection<ClassDescriptor> getAllContributedClassesIfPossible(@NotNull hp0 hp0Var) {
         Set d;
         b41.i(hp0Var, "packageFqName");
-        d = C8203e0.d();
+        d = kotlin.collections.e0.d();
         return d;
     }
 
@@ -95,13 +92,13 @@ public final class zd implements ClassDescriptorFactory {
         b41.i(ni1Var, "name");
         String b = ni1Var.b();
         b41.h(b, "name.asString()");
-        F = C8604o.F(b, "Function", false, 2, null);
+        F = kotlin.text.o.F(b, "Function", false, 2, null);
         if (!F) {
-            F2 = C8604o.F(b, "KFunction", false, 2, null);
+            F2 = kotlin.text.o.F(b, "KFunction", false, 2, null);
             if (!F2) {
-                F3 = C8604o.F(b, "SuspendFunction", false, 2, null);
+                F3 = kotlin.text.o.F(b, "SuspendFunction", false, 2, null);
                 if (!F3) {
-                    F4 = C8604o.F(b, "KSuspendFunction", false, 2, null);
+                    F4 = kotlin.text.o.F(b, "KSuspendFunction", false, 2, null);
                     if (!F4) {
                         return false;
                     }

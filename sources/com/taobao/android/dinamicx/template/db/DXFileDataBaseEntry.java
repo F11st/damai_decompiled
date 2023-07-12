@@ -6,7 +6,7 @@ import com.taobao.android.dinamicx.template.db.DXDataBaseEntry;
 @DXDataBaseEntry.Table("template_info")
 /* loaded from: classes11.dex */
 class DXFileDataBaseEntry extends DXDataBaseEntry {
-    static final C6392a o = new C6392a(DXFileDataBaseEntry.class);
+    static final a o = new a(DXFileDataBaseEntry.class);
     @DXDataBaseEntry.Column(indexed = true, notNull = true, primaryKey = true, value = "biz_type")
     public String a;
     @DXDataBaseEntry.Column(indexed = true, notNull = true, primaryKey = true, value = "name")

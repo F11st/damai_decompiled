@@ -28,9 +28,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.TimeZone;
 import kotlin.Result;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt;
 import kotlin.text.StringsKt__StringsKt;
 import org.jetbrains.annotations.NotNull;
@@ -58,7 +57,7 @@ import tb.z20;
 public final class TopPriortyHandle extends PopupViewHandle {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C1239a Companion = new C1239a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String NO_CITY_CHANGE = "no_city_change";
     @NotNull
@@ -83,24 +82,22 @@ public final class TopPriortyHandle extends PopupViewHandle {
     private final CityLocationUtil.LocaltionListener k;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.util.window.handle.TopPriortyHandle$a */
     /* loaded from: classes14.dex */
-    public static final class C1239a {
-        private C1239a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C1239a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.util.window.handle.TopPriortyHandle$b */
     /* loaded from: classes5.dex */
-    public static final class C1240b implements CityLocationUtil.LocaltionListener {
+    public static final class b implements CityLocationUtil.LocaltionListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1240b() {
+        b() {
         }
 
         @Override // cn.damai.commonbusiness.city.util.CityLocationUtil.LocaltionListener
@@ -140,14 +137,13 @@ public final class TopPriortyHandle extends PopupViewHandle {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.util.window.handle.TopPriortyHandle$c */
     /* loaded from: classes14.dex */
-    public static final class DialogInterface$OnClickListenerC1241c implements DialogInterface.OnClickListener {
+    public static final class c implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Continuation<kt1> b;
 
         /* JADX WARN: Multi-variable type inference failed */
-        DialogInterface$OnClickListenerC1241c(Continuation<? super kt1> continuation) {
+        c(Continuation<? super kt1> continuation) {
             this.b = continuation;
         }
 
@@ -169,20 +165,19 @@ public final class TopPriortyHandle extends PopupViewHandle {
                 popupCallback.cityChangeRefresh();
             }
             Continuation<kt1> continuation = this.b;
-            Result.C8174a c8174a = Result.Companion;
-            continuation.resumeWith(Result.m1271constructorimpl(kt1.C9377c.INSTANCE));
+            Result.a aVar = Result.Companion;
+            continuation.resumeWith(Result.m1271constructorimpl(kt1.c.INSTANCE));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.util.window.handle.TopPriortyHandle$d */
     /* loaded from: classes14.dex */
-    public static final class View$OnClickListenerC1242d implements View.OnClickListener {
+    public static final class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Continuation<kt1> a;
 
         /* JADX WARN: Multi-variable type inference failed */
-        View$OnClickListenerC1242d(Continuation<? super kt1> continuation) {
+        d(Continuation<? super kt1> continuation) {
             this.a = continuation;
         }
 
@@ -194,29 +189,27 @@ public final class TopPriortyHandle extends PopupViewHandle {
                 return;
             }
             Continuation<kt1> continuation = this.a;
-            Result.C8174a c8174a = Result.Companion;
-            continuation.resumeWith(Result.m1271constructorimpl(kt1.C9377c.INSTANCE));
+            Result.a aVar = Result.Companion;
+            continuation.resumeWith(Result.m1271constructorimpl(kt1.c.INSTANCE));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.util.window.handle.TopPriortyHandle$e */
     /* loaded from: classes5.dex */
-    public static final class C1243e implements IPermissionListener {
+    public static final class e implements IPermissionListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Continuation<kt1> a;
         final /* synthetic */ TopPriortyHandle b;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.homepage.util.window.handle.TopPriortyHandle$e$a */
         /* loaded from: classes14.dex */
-        public static final class DialogInterface$OnClickListenerC1244a implements DialogInterface.OnClickListener {
+        public static final class a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ TopPriortyHandle a;
             final /* synthetic */ Continuation<kt1> b;
 
             /* JADX WARN: Multi-variable type inference failed */
-            DialogInterface$OnClickListenerC1244a(TopPriortyHandle topPriortyHandle, Continuation<? super kt1> continuation) {
+            a(TopPriortyHandle topPriortyHandle, Continuation<? super kt1> continuation) {
                 this.a = topPriortyHandle;
                 this.b = continuation;
             }
@@ -231,20 +224,19 @@ public final class TopPriortyHandle extends PopupViewHandle {
                 dialogInterface.dismiss();
                 kr1.f(this.a.b);
                 Continuation<kt1> continuation = this.b;
-                Result.C8174a c8174a = Result.Companion;
-                continuation.resumeWith(Result.m1271constructorimpl(kt1.C9377c.INSTANCE));
+                Result.a aVar = Result.Companion;
+                continuation.resumeWith(Result.m1271constructorimpl(kt1.c.INSTANCE));
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.homepage.util.window.handle.TopPriortyHandle$e$b */
         /* loaded from: classes14.dex */
-        public static final class DialogInterface$OnClickListenerC1245b implements DialogInterface.OnClickListener {
+        public static final class b implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ Continuation<kt1> a;
 
             /* JADX WARN: Multi-variable type inference failed */
-            DialogInterface$OnClickListenerC1245b(Continuation<? super kt1> continuation) {
+            b(Continuation<? super kt1> continuation) {
                 this.a = continuation;
             }
 
@@ -257,13 +249,13 @@ public final class TopPriortyHandle extends PopupViewHandle {
                 }
                 dialogInterface.dismiss();
                 Continuation<kt1> continuation = this.a;
-                Result.C8174a c8174a = Result.Companion;
-                continuation.resumeWith(Result.m1271constructorimpl(kt1.C9377c.INSTANCE));
+                Result.a aVar = Result.Companion;
+                continuation.resumeWith(Result.m1271constructorimpl(kt1.c.INSTANCE));
             }
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        C1243e(Continuation<? super kt1> continuation, TopPriortyHandle topPriortyHandle) {
+        e(Continuation<? super kt1> continuation, TopPriortyHandle topPriortyHandle) {
             this.a = continuation;
             this.b = topPriortyHandle;
         }
@@ -277,8 +269,8 @@ public final class TopPriortyHandle extends PopupViewHandle {
             }
             b41.i(strArr, "permission");
             Continuation<kt1> continuation = this.a;
-            Result.C8174a c8174a = Result.Companion;
-            continuation.resumeWith(Result.m1271constructorimpl(kt1.C9377c.INSTANCE));
+            Result.a aVar = Result.Companion;
+            continuation.resumeWith(Result.m1271constructorimpl(kt1.c.INSTANCE));
         }
 
         @Override // com.alibaba.pictures.picpermission.custom.IPermissionListener
@@ -289,8 +281,8 @@ public final class TopPriortyHandle extends PopupViewHandle {
                 return;
             }
             Continuation<kt1> continuation = this.a;
-            Result.C8174a c8174a = Result.Companion;
-            continuation.resumeWith(Result.m1271constructorimpl(kt1.C9377c.INSTANCE));
+            Result.a aVar = Result.Companion;
+            continuation.resumeWith(Result.m1271constructorimpl(kt1.c.INSTANCE));
         }
 
         @Override // com.alibaba.pictures.picpermission.custom.IPermissionListener
@@ -303,20 +295,19 @@ public final class TopPriortyHandle extends PopupViewHandle {
             }
             b41.i(strArr, "deniedPermissions");
             Activity activity = this.b.b;
-            j = C8214m.j(Arrays.copyOf(strArr, strArr.length));
-            gr1.a(activity, "获取你所在城市的演出赛事信息，帮助你找到附近的演出赛事", j, false, new DialogInterface$OnClickListenerC1244a(this.b, this.a), new DialogInterface$OnClickListenerC1245b(this.a));
+            j = m.j(Arrays.copyOf(strArr, strArr.length));
+            gr1.a(activity, "获取你所在城市的演出赛事信息，帮助你找到附近的演出赛事", j, false, new a(this.b, this.a), new b(this.a));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.util.window.handle.TopPriortyHandle$f */
     /* loaded from: classes14.dex */
-    public static final class DialogInterface$OnDismissListenerC1246f implements DialogInterface.OnDismissListener {
+    public static final class f implements DialogInterface.OnDismissListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Continuation<kt1> b;
 
         /* JADX WARN: Multi-variable type inference failed */
-        DialogInterface$OnDismissListenerC1246f(Continuation<? super kt1> continuation) {
+        f(Continuation<? super kt1> continuation) {
             this.b = continuation;
         }
 
@@ -326,20 +317,19 @@ public final class TopPriortyHandle extends PopupViewHandle {
             if (AndroidInstantRuntime.support(ipChange, "1510643456")) {
                 ipChange.ipc$dispatch("1510643456", new Object[]{this, dialogInterface});
             } else {
-                TopPriortyHandle.this.k(this.b, kt1.C9376b.INSTANCE);
+                TopPriortyHandle.this.k(this.b, kt1.b.INSTANCE);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.util.window.handle.TopPriortyHandle$g */
     /* loaded from: classes5.dex */
-    public static final class C1247g implements TickletBusinessUtil.PopNoShow {
+    public static final class g implements TickletBusinessUtil.PopNoShow {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Continuation<kt1> b;
 
         /* JADX WARN: Multi-variable type inference failed */
-        C1247g(Continuation<? super kt1> continuation) {
+        g(Continuation<? super kt1> continuation) {
             this.b = continuation;
         }
 
@@ -349,21 +339,20 @@ public final class TopPriortyHandle extends PopupViewHandle {
             if (AndroidInstantRuntime.support(ipChange, "-208490207")) {
                 ipChange.ipc$dispatch("-208490207", new Object[]{this});
             } else {
-                TopPriortyHandle.this.k(this.b, kt1.C9377c.INSTANCE);
+                TopPriortyHandle.this.k(this.b, kt1.c.INSTANCE);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.util.window.handle.TopPriortyHandle$h */
     /* loaded from: classes14.dex */
-    public static final class DialogInterface$OnClickListenerC1248h implements DialogInterface.OnClickListener {
+    public static final class h implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String b;
         final /* synthetic */ Continuation<kt1> c;
 
         /* JADX WARN: Multi-variable type inference failed */
-        DialogInterface$OnClickListenerC1248h(String str, Continuation<? super kt1> continuation) {
+        h(String str, Continuation<? super kt1> continuation) {
             this.b = str;
             this.c = continuation;
         }
@@ -377,8 +366,8 @@ public final class TopPriortyHandle extends PopupViewHandle {
             }
             us.b(TopPriortyHandle.this.b, this.b);
             Continuation<kt1> continuation = this.c;
-            Result.C8174a c8174a = Result.Companion;
-            continuation.resumeWith(Result.m1271constructorimpl(kt1.C9377c.INSTANCE));
+            Result.a aVar = Result.Companion;
+            continuation.resumeWith(Result.m1271constructorimpl(kt1.c.INSTANCE));
         }
     }
 
@@ -389,7 +378,7 @@ public final class TopPriortyHandle extends PopupViewHandle {
         this.h = new nt1<>();
         this.i = new nt1<>();
         this.j = new nt1<>();
-        this.k = new C1240b();
+        this.k = new b();
     }
 
     private final void g() {
@@ -421,11 +410,11 @@ public final class TopPriortyHandle extends PopupViewHandle {
                 this.h.b("false");
                 return;
             }
-            String b = OrangeConfigCenter.c().b(on1.HOME_OTHER_TIME_ZONE_IN_CHINA, "otherzone", "");
-            if (!TextUtils.isEmpty(b)) {
-                b41.h(b, "otherTimeZone");
+            String b2 = OrangeConfigCenter.c().b(on1.HOME_OTHER_TIME_ZONE_IN_CHINA, "otherzone", "");
+            if (!TextUtils.isEmpty(b2)) {
+                b41.h(b2, "otherTimeZone");
                 b41.h(id, "currentId");
-                K = StringsKt__StringsKt.K(b, id, false, 2, null);
+                K = StringsKt__StringsKt.K(b2, id, false, 2, null);
                 if (K) {
                     this.h.b("false");
                     return;
@@ -438,9 +427,9 @@ public final class TopPriortyHandle extends PopupViewHandle {
             nt1<String> nt1Var = this.h;
             b41.h(id, "currentId");
             nt1Var.b(id);
-        } catch (Exception e) {
+        } catch (Exception e2) {
             this.h.b("false");
-            cb1.b("checkTimeZone", e.getMessage());
+            cb1.b("checkTimeZone", e2.getMessage());
         }
     }
 
@@ -465,114 +454,114 @@ public final class TopPriortyHandle extends PopupViewHandle {
             ipChange.ipc$dispatch("-1584210499", new Object[]{this, continuation, kt1Var});
         } else if (continuation != null) {
             try {
-                Result.C8174a c8174a = Result.Companion;
+                Result.a aVar = Result.Companion;
                 continuation.resumeWith(Result.m1271constructorimpl(kt1Var));
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
         }
     }
 
     private final Object m(String str, Continuation<? super kt1> continuation) {
-        Continuation c;
-        Object d;
+        Continuation c2;
+        Object d2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1392878424")) {
             return ipChange.ipc$dispatch("-1392878424", new Object[]{this, str, continuation});
         }
-        c = IntrinsicsKt__IntrinsicsJvmKt.c(continuation);
-        o52 o52Var = new o52(c);
+        c2 = IntrinsicsKt__IntrinsicsJvmKt.c(continuation);
+        o52 o52Var = new o52(c2);
         DMThemeDialog dMThemeDialog = new DMThemeDialog(this.b);
-        dMThemeDialog.o("地理位置变更").r(DMThemeDialog.DMDialogTheme.THEME_LOCATION).k(this.b.getString(R$string.change_city_tip, new Object[]{str})).i(this.b.getString(R$string.change_city, new Object[]{str}), new DialogInterface$OnClickListenerC1241c(o52Var)).g(true, new View$OnClickListenerC1242d(o52Var));
+        dMThemeDialog.o("地理位置变更").r(DMThemeDialog.DMDialogTheme.THEME_LOCATION).k(this.b.getString(R$string.change_city_tip, new Object[]{str})).i(this.b.getString(R$string.change_city, new Object[]{str}), new c(o52Var)).g(true, new d(o52Var));
         if (!this.b.isFinishing()) {
             dMThemeDialog.show();
         } else {
-            Result.C8174a c8174a = Result.Companion;
-            o52Var.resumeWith(Result.m1271constructorimpl(kt1.C9377c.INSTANCE));
+            Result.a aVar = Result.Companion;
+            o52Var.resumeWith(Result.m1271constructorimpl(kt1.c.INSTANCE));
         }
-        Object a = o52Var.a();
-        d = C8234b.d();
-        if (a == d) {
-            n40.c(continuation);
-        }
-        return a;
-    }
-
-    private final Object n(Continuation<? super kt1> continuation) {
-        Continuation c;
-        Object d;
-        IpChange ipChange = $ipChange;
-        if (AndroidInstantRuntime.support(ipChange, "158527423")) {
-            return ipChange.ipc$dispatch("158527423", new Object[]{this, continuation});
-        }
-        c = IntrinsicsKt__IntrinsicsJvmKt.c(continuation);
-        o52 o52Var = new o52(c);
-        z20.T(MainActivity.SP_KEY_LOCATION_DIALOG_SHOWED, "locationExaDes");
-        String[] strArr = mr1.LOCATION;
-        b41.h(strArr, "LOCATION");
-        PermissionModel permissionModel = new PermissionModel(strArr, "位置权限使用说明", id.c(R$drawable.permission_location_icon), "用于为你提供所在城市演出和场馆信息及帮助你找到附近的演出");
-        Application a = mu0.a();
-        b41.h(a, "getApplication()");
-        new Permission(a, permissionModel).a(new C1243e(o52Var, this)).b();
         Object a2 = o52Var.a();
-        d = C8234b.d();
-        if (a2 == d) {
+        d2 = kotlin.coroutines.intrinsics.b.d();
+        if (a2 == d2) {
             n40.c(continuation);
         }
         return a2;
     }
 
+    private final Object n(Continuation<? super kt1> continuation) {
+        Continuation c2;
+        Object d2;
+        IpChange ipChange = $ipChange;
+        if (AndroidInstantRuntime.support(ipChange, "158527423")) {
+            return ipChange.ipc$dispatch("158527423", new Object[]{this, continuation});
+        }
+        c2 = IntrinsicsKt__IntrinsicsJvmKt.c(continuation);
+        o52 o52Var = new o52(c2);
+        z20.T(MainActivity.SP_KEY_LOCATION_DIALOG_SHOWED, "locationExaDes");
+        String[] strArr = mr1.LOCATION;
+        b41.h(strArr, "LOCATION");
+        PermissionModel permissionModel = new PermissionModel(strArr, "位置权限使用说明", id.c(R$drawable.permission_location_icon), "用于为你提供所在城市演出和场馆信息及帮助你找到附近的演出");
+        Application a2 = mu0.a();
+        b41.h(a2, "getApplication()");
+        new Permission(a2, permissionModel).a(new e(o52Var, this)).b();
+        Object a3 = o52Var.a();
+        d2 = kotlin.coroutines.intrinsics.b.d();
+        if (a3 == d2) {
+            n40.c(continuation);
+        }
+        return a3;
+    }
+
     private final Object o(Continuation<? super kt1> continuation) {
-        Continuation c;
-        Object d;
+        Continuation c2;
+        Object d2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-653995749")) {
             return ipChange.ipc$dispatch("-653995749", new Object[]{this, continuation});
         }
-        c = IntrinsicsKt__IntrinsicsJvmKt.c(continuation);
-        o52 o52Var = new o52(c);
+        c2 = IntrinsicsKt__IntrinsicsJvmKt.c(continuation);
+        o52 o52Var = new o52(c2);
         if (LoginManager.k().q()) {
             TickletBusinessUtil tickletBusinessUtil = this.d;
             if (tickletBusinessUtil != null) {
-                tickletBusinessUtil.d(new DialogInterface$OnDismissListenerC1246f(o52Var), new C1247g(o52Var));
+                tickletBusinessUtil.d(new f(o52Var), new g(o52Var));
                 tickletBusinessUtil.g(this.e, true);
             }
         } else {
-            k(o52Var, kt1.C9377c.INSTANCE);
+            k(o52Var, kt1.c.INSTANCE);
         }
-        Object a = o52Var.a();
-        d = C8234b.d();
-        if (a == d) {
+        Object a2 = o52Var.a();
+        d2 = kotlin.coroutines.intrinsics.b.d();
+        if (a2 == d2) {
             n40.c(continuation);
         }
-        return a;
+        return a2;
     }
 
     private final Object p(String str, Continuation<? super kt1> continuation) {
-        Continuation c;
-        Object d;
+        Continuation c2;
+        Object d2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1353137369")) {
             return ipChange.ipc$dispatch("1353137369", new Object[]{this, str, continuation});
         }
-        c = IntrinsicsKt__IntrinsicsJvmKt.c(continuation);
-        o52 o52Var = new o52(c);
+        c2 = IntrinsicsKt__IntrinsicsJvmKt.c(continuation);
+        o52 o52Var = new o52(c2);
         DMDialog dMDialog = new DMDialog(this.b);
         dMDialog.o(false);
         dMDialog.q("未特殊提示的，抢票和演出时间均为北京时间为准");
-        dMDialog.n("知道了", new DialogInterface$OnClickListenerC1248h(str, o52Var));
+        dMDialog.n("知道了", new h(str, o52Var));
         if (!this.b.isFinishing()) {
             dMDialog.show();
         } else {
-            Result.C8174a c8174a = Result.Companion;
-            o52Var.resumeWith(Result.m1271constructorimpl(kt1.C9377c.INSTANCE));
+            Result.a aVar = Result.Companion;
+            o52Var.resumeWith(Result.m1271constructorimpl(kt1.c.INSTANCE));
         }
-        Object a = o52Var.a();
-        d = C8234b.d();
-        if (a == d) {
+        Object a2 = o52Var.a();
+        d2 = kotlin.coroutines.intrinsics.b.d();
+        if (a2 == d2) {
             n40.c(continuation);
         }
-        return a;
+        return a2;
     }
 
     @NotNull

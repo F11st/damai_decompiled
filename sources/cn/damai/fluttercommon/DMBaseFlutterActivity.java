@@ -3,9 +3,9 @@ package cn.damai.fluttercommon;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.KeyEvent;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.idlefish.flutterboost.containers.FlutterBoostActivity;
@@ -22,7 +22,7 @@ import tb.wu0;
 public class DMBaseFlutterActivity extends FlutterBoostActivity {
     private static transient /* synthetic */ IpChange $ipChange = null;
     private static final String CHANNEL_NATIVE_BACK = "cn.movieshow.app/flutterback";
-    C0525a.C0527b builder;
+    a.b builder;
 
     private void flutterPlugin() {
         IpChange ipChange = $ipChange;
@@ -102,7 +102,7 @@ public class DMBaseFlutterActivity extends FlutterBoostActivity {
             return;
         }
         super.onPause();
-        C0529c.e().j(this, this.builder);
+        c.e().j(this, this.builder);
     }
 
     @Override // com.idlefish.flutterboost.containers.FlutterBoostActivity, io.flutter.embedding.android.FlutterActivity, android.app.Activity
@@ -113,8 +113,8 @@ public class DMBaseFlutterActivity extends FlutterBoostActivity {
             return;
         }
         super.onResume();
-        this.builder = C0528b.getInstance().b(getPageName());
-        C0529c.e().k(this, this.builder);
+        this.builder = b.getInstance().b(getPageName());
+        c.e().k(this, this.builder);
         k3.b().e(this);
     }
 

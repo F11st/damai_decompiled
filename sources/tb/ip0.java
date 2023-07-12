@@ -3,7 +3,6 @@ package tb;
 import java.util.Collections;
 import java.util.List;
 import java.util.regex.Pattern;
-import kotlin.collections.C8202e;
 import kotlin.jvm.functions.Function1;
 import org.jetbrains.annotations.NotNull;
 
@@ -12,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 public final class ip0 {
     private static final ni1 e = ni1.i("<root>");
     private static final Pattern f = Pattern.compile("\\.");
-    private static final Function1<String, ni1> g = new C9271a();
+    private static final Function1<String, ni1> g = new a();
     @NotNull
     private final String a;
     private transient hp0 b;
@@ -20,10 +19,9 @@ public final class ip0 {
     private transient ni1 d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ip0$a */
     /* loaded from: classes3.dex */
-    static class C9271a implements Function1<String, ni1> {
-        C9271a() {
+    static class a implements Function1<String, ni1> {
+        a() {
         }
 
         @Override // kotlin.jvm.functions.Function1
@@ -282,7 +280,7 @@ public final class ip0 {
 
     @NotNull
     public List<ni1> h() {
-        List<ni1> emptyList = e() ? Collections.emptyList() : C8202e.J(f.split(this.a), g);
+        List<ni1> emptyList = e() ? Collections.emptyList() : kotlin.collections.e.J(f.split(this.a), g);
         if (emptyList == null) {
             a(14);
         }

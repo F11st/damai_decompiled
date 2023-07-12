@@ -31,9 +31,8 @@ public class BaseConfigItem {
     public double modalThreshold = 0.8d;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayer.trigger.BaseConfigItem$a */
     /* loaded from: classes8.dex */
-    public static class C3677a {
+    public static class a {
         public String a;
         public String[] b;
         public String c;

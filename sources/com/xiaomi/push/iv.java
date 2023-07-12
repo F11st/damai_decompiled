@@ -13,13 +13,12 @@ import java.util.TreeSet;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public final class iv {
-    private static final Comparator a = new C7679a();
+    private static final Comparator a = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.iv$a */
     /* loaded from: classes11.dex */
-    private static class C7679a implements Comparator {
-        private C7679a() {
+    private static class a implements Comparator {
+        private a() {
         }
 
         @Override // java.util.Comparator

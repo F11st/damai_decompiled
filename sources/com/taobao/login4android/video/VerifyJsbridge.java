@@ -48,14 +48,13 @@ public class VerifyJsbridge extends WVApiPlugin {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.video.VerifyJsbridge$a */
     /* loaded from: classes11.dex */
-    public class C6740a implements UploadTask.ResultCallback {
+    public class a implements UploadTask.ResultCallback {
         final /* synthetic */ WVResult a;
         final /* synthetic */ WVCallBackContext b;
         final /* synthetic */ long c;
 
-        C6740a(WVResult wVResult, WVCallBackContext wVCallBackContext, long j) {
+        a(WVResult wVResult, WVCallBackContext wVCallBackContext, long j) {
             this.a = wVResult;
             this.b = wVCallBackContext;
             this.c = j;
@@ -81,9 +80,8 @@ public class VerifyJsbridge extends WVApiPlugin {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.video.VerifyJsbridge$b */
     /* loaded from: classes11.dex */
-    static /* synthetic */ class C6741b {
+    static /* synthetic */ class b {
         static final /* synthetic */ int[] a;
 
         static {
@@ -102,14 +100,13 @@ public class VerifyJsbridge extends WVApiPlugin {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.video.VerifyJsbridge$c */
     /* loaded from: classes11.dex */
-    public class C6742c implements CommonCallback {
+    public class c implements CommonCallback {
         final /* synthetic */ WVResult a;
         final /* synthetic */ String b;
         final /* synthetic */ WVCallBackContext c;
 
-        C6742c(VerifyJsbridge verifyJsbridge, WVResult wVResult, String str, WVCallBackContext wVCallBackContext) {
+        c(VerifyJsbridge verifyJsbridge, WVResult wVResult, String str, WVCallBackContext wVCallBackContext) {
             this.a = wVResult;
             this.b = str;
             this.c = wVCallBackContext;
@@ -136,45 +133,42 @@ public class VerifyJsbridge extends WVApiPlugin {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.video.VerifyJsbridge$d */
     /* loaded from: classes11.dex */
-    public class C6743d implements CommonCallback {
+    public class d implements CommonCallback {
         final /* synthetic */ VerifyParam a;
         final /* synthetic */ WVCallBackContext b;
 
         /* compiled from: Taobao */
-        /* renamed from: com.taobao.login4android.video.VerifyJsbridge$d$a */
         /* loaded from: classes11.dex */
-        class DialogInterface$OnClickListenerC6744a implements DialogInterface.OnClickListener {
+        class a implements DialogInterface.OnClickListener {
             final /* synthetic */ Activity a;
 
-            DialogInterface$OnClickListenerC6744a(Activity activity) {
+            a(Activity activity) {
                 this.a = activity;
             }
 
             @Override // android.content.DialogInterface.OnClickListener
             public void onClick(DialogInterface dialogInterface, int i) {
-                C6743d c6743d = C6743d.this;
-                VerifyJsbridge.this.errorCallback(c6743d.b, "openBiometricGoSetting", 4002);
+                d dVar = d.this;
+                VerifyJsbridge.this.errorCallback(dVar.b, "openBiometricGoSetting", 4002);
                 NetworkUtil.goSettings(this.a);
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.taobao.login4android.video.VerifyJsbridge$d$b */
         /* loaded from: classes11.dex */
-        class DialogInterface$OnClickListenerC6745b implements DialogInterface.OnClickListener {
-            DialogInterface$OnClickListenerC6745b() {
+        class b implements DialogInterface.OnClickListener {
+            b() {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
             public void onClick(DialogInterface dialogInterface, int i) {
-                C6743d c6743d = C6743d.this;
-                VerifyJsbridge.this.errorCallback(c6743d.b, "openBiometricCancelSetting", 4002);
+                d dVar = d.this;
+                VerifyJsbridge.this.errorCallback(dVar.b, "openBiometricCancelSetting", 4002);
             }
         }
 
-        C6743d(VerifyParam verifyParam, WVCallBackContext wVCallBackContext) {
+        d(VerifyParam verifyParam, WVCallBackContext wVCallBackContext) {
             this.a = verifyParam;
             this.b = wVCallBackContext;
         }
@@ -186,7 +180,7 @@ public class VerifyJsbridge extends WVApiPlugin {
             if (i == 4004) {
                 if (((WVApiPlugin) VerifyJsbridge.this).mContext instanceof Activity) {
                     Activity activity = (Activity) ((WVApiPlugin) VerifyJsbridge.this).mContext;
-                    new DialogHelper(activity).alert("", activity.getString(R.string.aliuser_finger_not_roll), activity.getString(R.string.aliuser_finger_go_set), new DialogInterface$OnClickListenerC6744a(activity), activity.getString(R.string.aliuser_cancel), new DialogInterface$OnClickListenerC6745b());
+                    new DialogHelper(activity).alert("", activity.getString(R.string.aliuser_finger_not_roll), activity.getString(R.string.aliuser_finger_go_set), new a(activity), activity.getString(R.string.aliuser_cancel), new b());
                     return;
                 }
                 return;
@@ -204,13 +198,12 @@ public class VerifyJsbridge extends WVApiPlugin {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.video.VerifyJsbridge$e */
     /* loaded from: classes11.dex */
-    public class C6746e implements CommonCallback {
+    public class e implements CommonCallback {
         final /* synthetic */ VerifyParam a;
         final /* synthetic */ WVCallBackContext b;
 
-        C6746e(VerifyParam verifyParam, WVCallBackContext wVCallBackContext) {
+        e(VerifyParam verifyParam, WVCallBackContext wVCallBackContext) {
             this.a = verifyParam;
             this.b = wVCallBackContext;
         }
@@ -232,14 +225,13 @@ public class VerifyJsbridge extends WVApiPlugin {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.video.VerifyJsbridge$f */
     /* loaded from: classes11.dex */
-    public class CountDownTimerC6747f extends CountDownTimer {
+    public class f extends CountDownTimer {
         final /* synthetic */ int a;
         final /* synthetic */ WVCallBackContext b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        CountDownTimerC6747f(long j, long j2, int i, WVCallBackContext wVCallBackContext) {
+        f(long j, long j2, int i, WVCallBackContext wVCallBackContext) {
             super(j, j2);
             this.a = i;
             this.b = wVCallBackContext;
@@ -283,7 +275,7 @@ public class VerifyJsbridge extends WVApiPlugin {
                         if (intent == null) {
                             return;
                         }
-                        int i = C6741b.a[LoginAction.valueOf(intent.getAction()).ordinal()];
+                        int i = b.a[LoginAction.valueOf(intent.getAction()).ordinal()];
                         if (i != 1) {
                             if (i != 2) {
                                 return;
@@ -318,7 +310,7 @@ public class VerifyJsbridge extends WVApiPlugin {
         if (ServiceFactory.getService(FingerprintService.class) != null) {
             String fingerValue = SecurityGuardManagerWraper.getFingerValue(optString);
             if (!TextUtils.isEmpty(fingerValue)) {
-                ((NavigatorService) ServiceFactory.getService(NavigatorService.class)).fingerIV(this.mContext, new C6742c(this, wVResult, fingerValue, wVCallBackContext));
+                ((NavigatorService) ServiceFactory.getService(NavigatorService.class)).fingerIV(this.mContext, new c(this, wVResult, fingerValue, wVCallBackContext));
                 return;
             }
             wVResult.addData("code", Integer.valueOf((int) VerifyApi.FINGER_VERIFY_NO_BIO_KEY));
@@ -368,8 +360,8 @@ public class VerifyJsbridge extends WVApiPlugin {
                     try {
                         JSONObject jSONObject = new JSONObject(str);
                         VerifyJsbridge.this.testRecordNoise(wVCallBackContext, jSONObject.getInt("checkSeconds"), jSONObject.getInt("maxVolume"));
-                    } catch (JSONException e) {
-                        e.printStackTrace();
+                    } catch (JSONException e2) {
+                        e2.printStackTrace();
                         VerifyJsbridge.this.errorCallback(wVCallBackContext, UTConstant.Args.UT_VERIFY_CHECKNOISE, RecordErrorCode.E_UNKOWN);
                     }
                 }
@@ -379,8 +371,8 @@ public class VerifyJsbridge extends WVApiPlugin {
                     VerifyJsbridge.this.errorCallback(wVCallBackContext, UTConstant.Args.UT_VERIFY_CHECKNOISE, RecordErrorCode.E_NO_PERMISSION);
                 }
             }).execute();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
             errorCallback(wVCallBackContext, UTConstant.Args.UT_VERIFY_CHECKNOISE, RecordErrorCode.E_UNKOWN);
         }
     }
@@ -390,9 +382,9 @@ public class VerifyJsbridge extends WVApiPlugin {
             VerifyParam buildVerifyParam = buildVerifyParam(str);
             String str2 = buildVerifyParam.requestScene;
             UserTrackAdapter.sendUT(UTConstant.PageName.UT_PAGE_EXTEND, UTConstant.CustomEvent.CLOSE_BIO_C, str2, str2, null);
-            VerifyApi.closeBiometric(buildVerifyParam, new C6746e(buildVerifyParam, wVCallBackContext));
-        } catch (JSONException e) {
-            e.printStackTrace();
+            VerifyApi.closeBiometric(buildVerifyParam, new e(buildVerifyParam, wVCallBackContext));
+        } catch (JSONException e2) {
+            e2.printStackTrace();
             errorCallback(wVCallBackContext, "closeBiometric", 4010);
         }
     }
@@ -427,9 +419,9 @@ public class VerifyJsbridge extends WVApiPlugin {
             VerifyParam buildVerifyParam = buildVerifyParam(str);
             String str2 = buildVerifyParam.requestScene;
             UserTrackAdapter.sendUT(UTConstant.PageName.UT_PAGE_EXTEND, UTConstant.CustomEvent.OPEN_BIO_C, str2, str2, null);
-            VerifyApi.openBiometric(this.mContext, buildVerifyParam, new C6743d(buildVerifyParam, wVCallBackContext));
-        } catch (Exception e) {
-            e.printStackTrace();
+            VerifyApi.openBiometric(this.mContext, buildVerifyParam, new d(buildVerifyParam, wVCallBackContext));
+        } catch (Exception e2) {
+            e2.printStackTrace();
             UserTrackAdapter.sendUT(UTConstant.PageName.UT_PAGE_EXTEND, UTConstant.CustomEvent.OPEN_BIO_S);
             errorCallback(wVCallBackContext, "openBiometric", 4003);
         }
@@ -449,8 +441,8 @@ public class VerifyJsbridge extends WVApiPlugin {
                         audioRecordFunc.setmMinRecordSeconds(i2);
                         audioRecordFunc.startRecordAndFile();
                         VerifyJsbridge.this.successCallback(wVCallBackContext, UTConstant.Args.UT_VERIFY_STARTRECORD);
-                    } catch (JSONException e) {
-                        e.printStackTrace();
+                    } catch (JSONException e2) {
+                        e2.printStackTrace();
                         VerifyJsbridge.this.errorCallback(wVCallBackContext, UTConstant.Args.UT_VERIFY_STARTRECORD, RecordErrorCode.E_UNKOWN);
                     }
                 }
@@ -489,7 +481,7 @@ public class VerifyJsbridge extends WVApiPlugin {
         } else {
             String audioName = audioRecordFunc.getAudioName();
             if (audioName != null) {
-                UploadTask.getInstance().setResultCallback(new C6740a(new WVResult(), wVCallBackContext, currentTimeMillis));
+                UploadTask.getInstance().setResultCallback(new a(new WVResult(), wVCallBackContext, currentTimeMillis));
                 UploadTask.getInstance().uploadAsync(DataProviderFactory.getApplicationContext(), audioName, "a/b");
             } else {
                 errorCallback(wVCallBackContext, UTConstant.Args.UT_VERIFY_STOPRECORD, RecordErrorCode.E_UNKOWN);
@@ -530,7 +522,7 @@ public class VerifyJsbridge extends WVApiPlugin {
         if (1000 != startRecordAndCheckNoise && 1002 != startRecordAndCheckNoise) {
             errorCallback(wVCallBackContext, UTConstant.Args.UT_VERIFY_CHECKNOISE, startRecordAndCheckNoise);
         } else {
-            new CountDownTimerC6747f(i * 1000, 500L, i2, wVCallBackContext).start();
+            new f(i * 1000, 500L, i2, wVCallBackContext).start();
         }
     }
 

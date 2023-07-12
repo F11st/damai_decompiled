@@ -10,21 +10,20 @@ import com.taobao.weex.ui.component.WXWeb;
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
 public class WXWVWeb extends WXWeb {
-    WXSDKInstance.AbstractC6946c handler;
+    WXSDKInstance.c handler;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.component.WXWVWeb$a */
     /* loaded from: classes5.dex */
-    class C3036a extends WXSDKInstance.AbstractC6946c {
+    class a extends WXSDKInstance.c {
         final /* synthetic */ String b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        C3036a(String str, String str2) {
+        a(String str, String str2) {
             super(str);
             this.b = str2;
         }
 
-        @Override // com.taobao.weex.WXSDKInstance.AbstractC6946c
+        @Override // com.taobao.weex.WXSDKInstance.c
         public boolean b(int i, int i2, Intent intent, String str) {
             if (TextUtils.equals(str, this.b) && (((WXWeb) WXWVWeb.this).mWebView instanceof WXWVWebView)) {
                 ((WXWVWebView) ((WXWeb) WXWVWeb.this).mWebView).k(i, i2, intent);
@@ -38,9 +37,9 @@ public class WXWVWeb extends WXWeb {
         super(wXSDKInstance, wXVContainer, z, basicComponentData);
         this.handler = null;
         String valueOf = String.valueOf(hashCode());
-        C3036a c3036a = new C3036a(valueOf, valueOf);
-        this.handler = c3036a;
-        wXSDKInstance.registerOnActivityResultHandler(c3036a);
+        a aVar = new a(valueOf, valueOf);
+        this.handler = aVar;
+        wXSDKInstance.registerOnActivityResultHandler(aVar);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */

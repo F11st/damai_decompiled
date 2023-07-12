@@ -20,12 +20,11 @@ public class i3 {
     private HashMap<Integer, WeakReference<g3>> c = new HashMap<>();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.i3$a */
     /* loaded from: classes8.dex */
-    public class C9250a implements Application.ActivityLifecycleCallbacks {
+    public class a implements Application.ActivityLifecycleCallbacks {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9250a() {
+        a() {
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
@@ -91,9 +90,9 @@ public class i3 {
 
     private i3(Application application) {
         this.b = application;
-        C9250a c9250a = new C9250a();
-        this.a = c9250a;
-        this.b.registerActivityLifecycleCallbacks(c9250a);
+        a aVar = new a();
+        this.a = aVar;
+        this.b.registerActivityLifecycleCallbacks(aVar);
     }
 
     /* JADX INFO: Access modifiers changed from: private */

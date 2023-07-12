@@ -1,7 +1,6 @@
 package tb;
 
 import android.content.Context;
-import com.loc.C5861o;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -17,6 +16,6 @@ public final class k53 extends j53 {
 
     @Override // tb.j53
     protected final boolean c() {
-        return C5861o.a0(this.b) == 1 || this.c;
+        return com.loc.o.a0(this.b) == 1 || this.c;
     }
 }

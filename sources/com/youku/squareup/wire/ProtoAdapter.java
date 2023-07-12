@@ -12,7 +12,7 @@ import okio.Buffer;
 import okio.BufferedSink;
 import okio.BufferedSource;
 import okio.ByteString;
-import okio.C8844h;
+import okio.h;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -685,7 +685,7 @@ public abstract class ProtoAdapter<E> {
 
     public final E decode(InputStream inputStream) throws IOException {
         Preconditions.checkNotNull(inputStream, "stream == null");
-        return decode(C8844h.d(C8844h.k(inputStream)));
+        return decode(h.d(h.k(inputStream)));
     }
 
     public final E decode(BufferedSource bufferedSource) throws IOException {
@@ -696,7 +696,7 @@ public abstract class ProtoAdapter<E> {
     public final void encode(OutputStream outputStream, E e) throws IOException {
         Preconditions.checkNotNull(e, "value == null");
         Preconditions.checkNotNull(outputStream, "stream == null");
-        BufferedSink c = C8844h.c(C8844h.g(outputStream));
+        BufferedSink c = h.c(h.g(outputStream));
         encode(c, (BufferedSink) e);
         c.emit();
     }

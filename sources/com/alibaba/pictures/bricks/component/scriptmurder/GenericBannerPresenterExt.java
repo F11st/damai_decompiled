@@ -36,7 +36,7 @@ import tb.k50;
 public final class GenericBannerPresenterExt extends BaseBannerPresenter {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3501a Companion = new C3501a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String MSG_BANNER_ATTACHED = "EventBus://business/notification/msg_banner_attached";
     @NotNull
@@ -51,13 +51,12 @@ public final class GenericBannerPresenterExt extends BaseBannerPresenter {
     private String totalSize;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.scriptmurder.GenericBannerPresenterExt$a */
     /* loaded from: classes7.dex */
-    public static final class C3501a {
-        private C3501a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3501a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

@@ -30,12 +30,11 @@ public class ProjectSupportServiceFragment extends DamaiBaseMvpFragment {
     private TextView mTvTitle;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.servicenotice.ProjectSupportServiceFragment$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0865a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0865a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -67,7 +66,7 @@ public class ProjectSupportServiceFragment extends DamaiBaseMvpFragment {
         if (AndroidInstantRuntime.support(ipChange, "1222558618")) {
             ipChange.ipc$dispatch("1222558618", new Object[]{this});
         } else {
-            this.mOnCompleteClickListener = new View$OnClickListenerC0865a();
+            this.mOnCompleteClickListener = new a();
         }
     }
 

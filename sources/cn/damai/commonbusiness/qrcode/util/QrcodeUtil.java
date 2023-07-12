@@ -36,13 +36,12 @@ public class QrcodeUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.qrcode.util.QrcodeUtil$a */
     /* loaded from: classes4.dex */
-    public class C0789a implements OnGrantListener {
+    public class a implements OnGrantListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
 
-        C0789a(Activity activity) {
+        a(Activity activity) {
             this.a = activity;
         }
 
@@ -159,7 +158,7 @@ public class QrcodeUtil {
         if (AndroidInstantRuntime.support(ipChange, "-1503026282")) {
             ipChange.ipc$dispatch("-1503026282", new Object[]{activity});
         } else {
-            ir1.b(activity, false, mr1.STORAGE, "用于选取图片进行二维码识别", new C0789a(activity));
+            ir1.b(activity, false, mr1.STORAGE, "用于选取图片进行二维码识别", new a(activity));
         }
     }
 

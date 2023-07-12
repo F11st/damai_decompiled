@@ -9,12 +9,12 @@ import android.media.AudioManager;
 import com.alibaba.security.biometrics.ALBiometricsEventListener;
 import com.alibaba.security.biometrics.service.model.params.ALBiometricsParams;
 import com.alibaba.security.biometrics.theme.ALBiometricsConfig;
-import com.alibaba.security.common.d.C3812i;
+import com.alibaba.security.common.d.i;
 
 /* compiled from: Taobao */
-@InterfaceC3773f(a = 7)
+@f(a = 7)
 /* loaded from: classes8.dex */
-public class AudioSettingComponent extends AbstractC3768a {
+public class AudioSettingComponent extends a {
     public boolean d;
     public AudioManager e;
     private SoundBroadCastReceiver f;
@@ -29,7 +29,7 @@ public class AudioSettingComponent extends AbstractC3768a {
         public void onReceive(Context context, Intent intent) {
             int d = AudioSettingComponent.this.d();
             AudioSettingComponent.this.d = d == 0;
-            ((MediaSystemComponent) C3772e.a(MediaSystemComponent.class)).a(AudioSettingComponent.this.d);
+            ((MediaSystemComponent) e.a(MediaSystemComponent.class)).a(AudioSettingComponent.this.d);
         }
     }
 
@@ -44,11 +44,11 @@ public class AudioSettingComponent extends AbstractC3768a {
         }
     }
 
-    @Override // com.alibaba.security.biometrics.component.AbstractC3768a, com.alibaba.security.biometrics.component.InterfaceC3771d
+    @Override // com.alibaba.security.biometrics.component.a, com.alibaba.security.biometrics.component.d
     public final boolean b() {
         if (this.f != null) {
             try {
-                C3812i.a(this.c).a(this.f);
+                i.a(this.c).a(this.f);
             } catch (Throwable unused) {
             }
             this.f = null;
@@ -68,7 +68,7 @@ public class AudioSettingComponent extends AbstractC3768a {
         }
     }
 
-    @Override // com.alibaba.security.biometrics.component.AbstractC3768a, com.alibaba.security.biometrics.component.InterfaceC3771d
+    @Override // com.alibaba.security.biometrics.component.a, com.alibaba.security.biometrics.component.d
     public final boolean a(Activity activity, ALBiometricsParams aLBiometricsParams, ALBiometricsConfig aLBiometricsConfig, ALBiometricsEventListener aLBiometricsEventListener) {
         super.a(activity, aLBiometricsParams, aLBiometricsConfig, aLBiometricsEventListener);
         this.e = (AudioManager) activity.getSystemService("audio");
@@ -84,11 +84,11 @@ public class AudioSettingComponent extends AbstractC3768a {
         return false;
     }
 
-    @Override // com.alibaba.security.biometrics.component.AbstractC3768a, com.alibaba.security.biometrics.component.InterfaceC3771d
+    @Override // com.alibaba.security.biometrics.component.a, com.alibaba.security.biometrics.component.d
     public final boolean a() {
         if (this.f == null) {
             this.f = new SoundBroadCastReceiver();
-            C3812i.a(this.c).a(this.f, new IntentFilter("android.media.VOLUME_CHANGED_ACTION"));
+            i.a(this.c).a(this.f, new IntentFilter("android.media.VOLUME_CHANGED_ACTION"));
         }
         return super.a();
     }

@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.os.Build;
 import android.text.TextUtils;
 import com.alimm.xadsdk.request.builder.IRequestConst;
-import com.loc.C5846l;
 import java.util.Arrays;
 
 /* compiled from: Taobao */
@@ -141,7 +140,7 @@ public final class b43 {
         }
         byte[] bArr = a;
         if (bArr == null || bArr.length <= 0) {
-            byte[] bytes = C5846l.j(context).getBytes();
+            byte[] bytes = com.loc.l.j(context).getBytes();
             a = bytes;
             return bytes;
         }

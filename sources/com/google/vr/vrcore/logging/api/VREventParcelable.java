@@ -12,19 +12,18 @@ public class VREventParcelable implements Parcelable {
     private Vr$VREvent event;
     private int eventCode;
     private static final String TAG = VREventParcelable.class.getSimpleName();
-    public static final Parcelable.Creator<VREventParcelable> CREATOR = new C5449a();
+    public static final Parcelable.Creator<VREventParcelable> CREATOR = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.vrcore.logging.api.VREventParcelable$a */
     /* loaded from: classes10.dex */
-    class C5449a implements Parcelable.Creator<VREventParcelable> {
-        C5449a() {
+    class a implements Parcelable.Creator<VREventParcelable> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
         public VREventParcelable createFromParcel(Parcel parcel) {
-            return new VREventParcelable(parcel, (C5449a) null);
+            return new VREventParcelable(parcel, (a) null);
         }
 
         @Override // android.os.Parcelable.Creator
@@ -34,7 +33,7 @@ public class VREventParcelable implements Parcelable {
         }
     }
 
-    /* synthetic */ VREventParcelable(Parcel parcel, C5449a c5449a) {
+    /* synthetic */ VREventParcelable(Parcel parcel, a aVar) {
         this(parcel);
     }
 

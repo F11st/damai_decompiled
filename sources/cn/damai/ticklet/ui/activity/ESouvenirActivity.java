@@ -19,8 +19,8 @@ import androidx.viewpager.widget.ViewPager;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.share.ShareManager;
 import cn.damai.commonbusiness.util.Utils;
@@ -174,7 +174,7 @@ public class ESouvenirActivity extends DamaiBaseActivity implements ILoginListen
                     ipChange2.ipc$dispatch("-2014188328", new Object[]{this, Integer.valueOf(i)});
                     return;
                 }
-                C0529c.e().x(un2.k().n(i, ESouvenirActivity.this.performId));
+                c.e().x(un2.k().n(i, ESouvenirActivity.this.performId));
                 ESouvenirActivity.this.refreshIndicator(i);
             }
         });
@@ -469,7 +469,7 @@ public class ESouvenirActivity extends DamaiBaseActivity implements ILoginListen
             ipChange.ipc$dispatch("-488756591", new Object[]{this});
             return;
         }
-        C0529c.e().z(un2.k().p(un2.TICKLET_SOUNENIR_TICKET, this.performId, "top"));
+        c.e().z(un2.k().p(un2.TICKLET_SOUNENIR_TICKET, this.performId, "top"));
         finish();
     }
 
@@ -481,7 +481,7 @@ public class ESouvenirActivity extends DamaiBaseActivity implements ILoginListen
         } else if (view.getId() == R$id.ticklet_iv_left_icon) {
             onBackPresss();
         } else if (view.getId() == R$id.icon_custom_action) {
-            C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_SOUNENIR_TICKET, "bottom", "define", un2.k().s(this.performId), Boolean.TRUE));
+            c.e().x(b.getInstance().e(un2.TICKLET_SOUNENIR_TICKET, "bottom", "define", un2.k().s(this.performId), Boolean.TRUE));
             Bundle bundle = new Bundle();
             bundle.putSerializable("souvenirBean", this.infoBean);
             bundle.putInt("heightImage", this.heightImage);
@@ -490,7 +490,7 @@ public class ESouvenirActivity extends DamaiBaseActivity implements ILoginListen
             bundle.putString(TicketDetailExtFragment.PERFORM_ID, this.performId);
             DMNav.from(this).withExtras(bundle).toUri(NavUri.b("ticklet_custom_sounenvir"));
         } else if (view.getId() == R$id.icon_generate_image) {
-            C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_SOUNENIR_TICKET, "bottom", "share", un2.k().s(this.performId), Boolean.TRUE));
+            c.e().x(b.getInstance().e(un2.TICKLET_SOUNENIR_TICKET, "bottom", "share", un2.k().s(this.performId), Boolean.TRUE));
             createPic(view, this);
         }
     }

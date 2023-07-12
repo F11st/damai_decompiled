@@ -10,8 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DinamicXEngine;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import com.taobao.android.dinamicx.timer.DXTimerListener;
 import com.taobao.android.dinamicx.widget.DXSliderLayout;
@@ -42,7 +42,7 @@ public class DXNativeAutoLoopRecyclerView extends DXNativeRecyclerView {
     private boolean needProcessViewLifeCycle;
     private OnPageChangeListener onPageChangeListener;
     private boolean overrideCanScrollHorizontal;
-    private C6410a runnable;
+    private a runnable;
     private boolean scrollAble;
 
     /* compiled from: Taobao */
@@ -52,12 +52,11 @@ public class DXNativeAutoLoopRecyclerView extends DXNativeRecyclerView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.view.DXNativeAutoLoopRecyclerView$a */
     /* loaded from: classes11.dex */
-    public static class C6410a implements DXTimerListener {
+    public static class a implements DXTimerListener {
         private WeakReference<DXNativeAutoLoopRecyclerView> a;
 
-        public C6410a(DXNativeAutoLoopRecyclerView dXNativeAutoLoopRecyclerView) {
+        public a(DXNativeAutoLoopRecyclerView dXNativeAutoLoopRecyclerView) {
             this.a = new WeakReference<>(dXNativeAutoLoopRecyclerView);
         }
 
@@ -79,10 +78,10 @@ public class DXNativeAutoLoopRecyclerView extends DXNativeRecyclerView {
                     int i = increaseCurrentIndex - a;
                     if (Math.abs(i) > 10) {
                         dXNativeAutoLoopRecyclerView.scrollToPosition(increaseCurrentIndex);
-                        C6368e c6368e = new C6368e(r10.DB_NAME);
-                        C6368e.C6369a c6369a = new C6368e.C6369a("Render", "RENDER_ERROR", C6368e.DX_ERROR_CODE_SLIDER_LAYOUT_RECYCLER_VIEW_ERROR);
-                        c6369a.e = "nextPosition = " + increaseCurrentIndex + ";nowPosition = " + a + ";Math.abs(nextPosition - nowPosition) > ： " + i + ";interval = " + dXNativeAutoLoopRecyclerView.interval + ";needProcessViewLifeCycle = " + dXNativeAutoLoopRecyclerView.needProcessViewLifeCycle;
-                        c6368e.c.add(c6369a);
+                        e eVar = new e(r10.DB_NAME);
+                        e.a aVar = new e.a("Render", "RENDER_ERROR", e.DX_ERROR_CODE_SLIDER_LAYOUT_RECYCLER_VIEW_ERROR);
+                        aVar.e = "nextPosition = " + increaseCurrentIndex + ";nowPosition = " + a + ";Math.abs(nextPosition - nowPosition) > ： " + i + ";interval = " + dXNativeAutoLoopRecyclerView.interval + ";needProcessViewLifeCycle = " + dXNativeAutoLoopRecyclerView.needProcessViewLifeCycle;
+                        eVar.c.add(aVar);
                     } else {
                         dXNativeAutoLoopRecyclerView.smoothScrollToPosition(increaseCurrentIndex);
                     }
@@ -272,11 +271,11 @@ public class DXNativeAutoLoopRecyclerView extends DXNativeRecyclerView {
                 s00.b("DXNativeAutoLoopRecyclerView unregisterReceiver mReceiver" + this.mReceiver);
             }
         } catch (Throwable unused) {
-            C6368e c6368e = new C6368e(r10.DB_NAME);
-            C6368e.C6369a c6369a = new C6368e.C6369a("Render", "Render_Fltten_Crash", C6368e.DXERROR_RENDER_DXNativeAutoLoopRecyclerView_UNRESGISTER_ERROR);
-            c6369a.e = "mReceiver : " + this.mReceiver;
-            c6368e.c.add(c6369a);
-            DXAppMonitor.n(c6368e);
+            e eVar = new e(r10.DB_NAME);
+            e.a aVar = new e.a("Render", "Render_Fltten_Crash", e.DXERROR_RENDER_DXNativeAutoLoopRecyclerView_UNRESGISTER_ERROR);
+            aVar.e = "mReceiver : " + this.mReceiver;
+            eVar.c.add(aVar);
+            DXAppMonitor.n(eVar);
         }
     }
 
@@ -372,7 +371,7 @@ public class DXNativeAutoLoopRecyclerView extends DXNativeRecyclerView {
     public void startTimer() {
         if (this.autoPlay) {
             if (this.runnable == null) {
-                this.runnable = new C6410a(this);
+                this.runnable = new a(this);
             }
             if (this.dinamicXEngine != null) {
                 s00.b("DXNativeAutoLoopRecyclerView startTimer");

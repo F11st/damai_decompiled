@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import cn.damai.uikit.image.C2497a;
+import cn.damai.uikit.image.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import tb.th2;
@@ -44,7 +44,7 @@ public class DMHeaderBackground extends FrameLayout {
             ipChange.ipc$dispatch("360407514", new Object[]{this, str});
         } else if (this.backgroundImage == null || th2.e(str)) {
         } else {
-            C2497a.a().loadinto(str, this.backgroundImage);
+            a.a().loadinto(str, this.backgroundImage);
         }
     }
 

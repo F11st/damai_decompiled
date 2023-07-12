@@ -442,7 +442,7 @@ public class NavigationMenuPresenter implements MenuPresenter {
     /* loaded from: classes10.dex */
     public static class NormalViewHolder extends ViewHolder {
         public NormalViewHolder(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, View.OnClickListener onClickListener) {
-            super(layoutInflater.inflate(R.C4818layout.design_navigation_item, viewGroup, false));
+            super(layoutInflater.inflate(R.layout.design_navigation_item, viewGroup, false));
             this.itemView.setOnClickListener(onClickListener);
         }
     }
@@ -452,7 +452,7 @@ public class NavigationMenuPresenter implements MenuPresenter {
     /* loaded from: classes10.dex */
     public static class SeparatorViewHolder extends ViewHolder {
         public SeparatorViewHolder(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup) {
-            super(layoutInflater.inflate(R.C4818layout.design_navigation_item_separator, viewGroup, false));
+            super(layoutInflater.inflate(R.layout.design_navigation_item_separator, viewGroup, false));
         }
     }
 
@@ -461,7 +461,7 @@ public class NavigationMenuPresenter implements MenuPresenter {
     /* loaded from: classes10.dex */
     public static class SubheaderViewHolder extends ViewHolder {
         public SubheaderViewHolder(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup) {
-            super(layoutInflater.inflate(R.C4818layout.design_navigation_item_subheader, viewGroup, false));
+            super(layoutInflater.inflate(R.layout.design_navigation_item_subheader, viewGroup, false));
         }
     }
 
@@ -559,7 +559,7 @@ public class NavigationMenuPresenter implements MenuPresenter {
     @Override // androidx.appcompat.view.menu.MenuPresenter
     public MenuView getMenuView(ViewGroup viewGroup) {
         if (this.menuView == null) {
-            NavigationMenuView navigationMenuView = (NavigationMenuView) this.layoutInflater.inflate(R.C4818layout.design_navigation_menu, viewGroup, false);
+            NavigationMenuView navigationMenuView = (NavigationMenuView) this.layoutInflater.inflate(R.layout.design_navigation_menu, viewGroup, false);
             this.menuView = navigationMenuView;
             navigationMenuView.setAccessibilityDelegateCompat(new NavigationMenuViewAccessibilityDelegate(this.menuView));
             if (this.adapter == null) {
@@ -569,7 +569,7 @@ public class NavigationMenuPresenter implements MenuPresenter {
             if (i != -1) {
                 this.menuView.setOverScrollMode(i);
             }
-            this.headerLayout = (LinearLayout) this.layoutInflater.inflate(R.C4818layout.design_navigation_item_header, (ViewGroup) this.menuView, false);
+            this.headerLayout = (LinearLayout) this.layoutInflater.inflate(R.layout.design_navigation_item_header, (ViewGroup) this.menuView, false);
             this.menuView.setAdapter(this.adapter);
         }
         return this.menuView;

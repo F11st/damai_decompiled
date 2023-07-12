@@ -40,7 +40,7 @@ public class TrueLoveMedalView extends RelativeLayout {
             ipChange.ipc$dispatch("-627114114", new Object[]{this, context});
             return;
         }
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ykl_truelove_medal, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_ykl_truelove_medal, (ViewGroup) this, true);
         this.mTrueLoveBgIv = (ImageView) findViewById(R.id.truelove_bg_iv);
         this.mTrueLoveLevelTv = (TextView) findViewById(R.id.truelove_level_tv);
         this.mTrueLoveNameTv = (TextView) findViewById(R.id.truelove_name_tv);

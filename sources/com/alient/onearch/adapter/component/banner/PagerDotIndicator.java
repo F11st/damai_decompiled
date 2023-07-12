@@ -23,7 +23,7 @@ import java.util.Iterator;
 import java.util.Objects;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.collections.C8215n;
+import kotlin.collections.n;
 import kotlin.jvm.JvmOverloads;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -80,7 +80,7 @@ public final class PagerDotIndicator extends View {
     }
 
     /* compiled from: Taobao */
-    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0007\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\b\b\u0080\u0004\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0012\u0010\u0013J\n\u0010\u0003\u001a\u0004\u0018\u00010\u0002H\u0002J\u0010\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0004\u001a\u00020\u0002H\u0002J\u0010\u0010\t\u001a\u00020\b2\u0006\u0010\u0007\u001a\u00020\u0002H\u0002J \u0010\u000f\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\f2\u0006\u0010\u000e\u001a\u00020\fH\u0016R\u0018\u0010\u0010\u001a\u0004\u0018\u00010\u00028\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0010\u0010\u0011¨\u0006\u0014"}, d2 = {"Lcom/alient/onearch/adapter/component/banner/PagerDotIndicator$InternalRecyclerScrollListener;", "Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;", "Landroid/view/View;", "getMostVisibleChild", "child", "", "calculatePercentVisible", "mostVisibleChild", "Ltb/wt2;", "setIntermediateSelectedItemPosition", "Landroidx/recyclerview/widget/RecyclerView;", "recyclerView", "", "dx", Constants.Name.DISTANCE_Y, GXTemplateEngine.C3344g.TYPE_ON_SCROLLED, "previousMostVisibleChild", "Landroid/view/View;", "<init>", "(Lcom/alient/onearch/adapter/component/banner/PagerDotIndicator;)V", "onearch-adapter_release"}, k = 1, mv = {1, 5, 1})
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0007\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\b\b\u0080\u0004\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0012\u0010\u0013J\n\u0010\u0003\u001a\u0004\u0018\u00010\u0002H\u0002J\u0010\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0004\u001a\u00020\u0002H\u0002J\u0010\u0010\t\u001a\u00020\b2\u0006\u0010\u0007\u001a\u00020\u0002H\u0002J \u0010\u000f\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\f2\u0006\u0010\u000e\u001a\u00020\fH\u0016R\u0018\u0010\u0010\u001a\u0004\u0018\u00010\u00028\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0010\u0010\u0011¨\u0006\u0014"}, d2 = {"Lcom/alient/onearch/adapter/component/banner/PagerDotIndicator$InternalRecyclerScrollListener;", "Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;", "Landroid/view/View;", "getMostVisibleChild", "child", "", "calculatePercentVisible", "mostVisibleChild", "Ltb/wt2;", "setIntermediateSelectedItemPosition", "Landroidx/recyclerview/widget/RecyclerView;", "recyclerView", "", "dx", Constants.Name.DISTANCE_Y, GXTemplateEngine.g.TYPE_ON_SCROLLED, "previousMostVisibleChild", "Landroid/view/View;", "<init>", "(Lcom/alient/onearch/adapter/component/banner/PagerDotIndicator;)V", "onearch-adapter_release"}, k = 1, mv = {1, 5, 1})
     /* loaded from: classes10.dex */
     public final class InternalRecyclerScrollListener extends RecyclerView.OnScrollListener {
         @Nullable
@@ -287,7 +287,7 @@ public final class PagerDotIndicator extends View {
         b41.i(canvas, "canvas");
         super.onDraw(canvas);
         h = ty1.h(0, getItemCount());
-        q = C8215n.q(h, 10);
+        q = n.q(h, 10);
         ArrayList<Number> arrayList = new ArrayList(q);
         Iterator<Integer> it = h.iterator();
         while (it.hasNext()) {
@@ -316,8 +316,8 @@ public final class PagerDotIndicator extends View {
         this.selectedDotRadiusPx = dpToPx(6.5f);
         this.dotRadiusPx = dpToPx(6.5f);
         this.dotSeparationDistancePx = dpToPx(12.0f);
-        this.dotColor = ContextCompat.getColor(context, R.C4040color.default_indicator_color);
-        this.selectedDotColor = ContextCompat.getColor(context, R.C4040color.default_selected_indicator_color);
+        this.dotColor = ContextCompat.getColor(context, R.color.default_indicator_color);
+        this.selectedDotColor = ContextCompat.getColor(context, R.color.default_selected_indicator_color);
         if (attributeSet != null) {
             TypedArray obtainStyledAttributes = context.getTheme().obtainStyledAttributes(attributeSet, R.styleable.PagerIndicator, 0, 0);
             this.dotCount = obtainStyledAttributes.getInteger(R.styleable.PagerIndicator_dotCount, 5);

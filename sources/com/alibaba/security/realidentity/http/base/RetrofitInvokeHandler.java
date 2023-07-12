@@ -1,6 +1,6 @@
 package com.alibaba.security.realidentity.http.base;
 
-import com.alibaba.security.common.d.C3811h;
+import com.alibaba.security.common.d.h;
 import com.alibaba.security.realidentity.http.AbsRPCInvoker;
 import com.alibaba.security.realidentity.http.annotation.Api;
 import com.alibaba.security.realidentity.http.annotation.Body;
@@ -45,7 +45,7 @@ public class RetrofitInvokeHandler implements InvocationHandler {
         builder.method(str2);
         builder.path(str);
         if (httpRequest != null) {
-            builder.body(C3811h.a(httpRequest));
+            builder.body(h.a(httpRequest));
         }
         return builder.build();
     }

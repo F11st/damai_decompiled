@@ -3,10 +3,8 @@ package kotlinx.coroutines.flow.internal;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function2;
-import kotlinx.coroutines.channels.C8648b;
 import kotlinx.coroutines.channels.ReceiveChannel;
 import kotlinx.coroutines.flow.FlowCollector;
 import kotlinx.coroutines.flow.internal.CombineKt$zipImpl$$inlined$unsafeFlow$1$lambda$1;
@@ -26,13 +24,13 @@ final class CombineKt$zipImpl$$inlined$unsafeFlow$1$lambda$1$3$1$1 extends Suspe
     Object L$2;
     int label;
     private wt2 p$0;
-    final /* synthetic */ CombineKt$zipImpl$$inlined$unsafeFlow$1$lambda$1.AnonymousClass3.C8680a this$0;
+    final /* synthetic */ CombineKt$zipImpl$$inlined$unsafeFlow$1$lambda$1.AnonymousClass3.a this$0;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    CombineKt$zipImpl$$inlined$unsafeFlow$1$lambda$1$3$1$1(Object obj, Continuation continuation, CombineKt$zipImpl$$inlined$unsafeFlow$1$lambda$1.AnonymousClass3.C8680a c8680a) {
+    CombineKt$zipImpl$$inlined$unsafeFlow$1$lambda$1$3$1$1(Object obj, Continuation continuation, CombineKt$zipImpl$$inlined$unsafeFlow$1$lambda$1.AnonymousClass3.a aVar) {
         super(2, continuation);
         this.$value = obj;
-        this.this$0 = c8680a;
+        this.this$0 = aVar;
     }
 
     @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
@@ -52,7 +50,7 @@ final class CombineKt$zipImpl$$inlined$unsafeFlow$1$lambda$1$3$1$1 extends Suspe
     @Nullable
     public final Object invokeSuspend(@NotNull Object obj) {
         Object d;
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         int i = this.label;
         if (i == 0) {
             i32.b(obj);
@@ -60,7 +58,7 @@ final class CombineKt$zipImpl$$inlined$unsafeFlow$1$lambda$1$3$1$1 extends Suspe
             ReceiveChannel receiveChannel = this.this$0.a.$second;
             this.L$0 = wt2Var;
             this.label = 1;
-            obj = C8648b.j0(receiveChannel, this);
+            obj = kotlinx.coroutines.channels.b.j0(receiveChannel, this);
             if (obj == d) {
                 return d;
             }

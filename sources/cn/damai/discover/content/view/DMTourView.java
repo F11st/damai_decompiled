@@ -107,14 +107,13 @@ public class DMTourView extends LinearLayout implements View.OnClickListener {
         private TextView b;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.discover.content.view.DMTourView$TourProjectListViewHolder$a */
         /* loaded from: classes14.dex */
-        public class View$OnClickListenerC1014a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ ContentTour.ContentRelatedTourListItem a;
             final /* synthetic */ int b;
 
-            View$OnClickListenerC1014a(ContentTour.ContentRelatedTourListItem contentRelatedTourListItem, int i) {
+            a(ContentTour.ContentRelatedTourListItem contentRelatedTourListItem, int i) {
                 this.a = contentRelatedTourListItem;
                 this.b = i;
             }
@@ -153,7 +152,7 @@ public class DMTourView extends LinearLayout implements View.OnClickListener {
                 }
                 this.a.setText(contentRelatedTourListItem.cityName);
                 this.b.setText(contentRelatedTourListItem.showTime);
-                this.itemView.setOnClickListener(new View$OnClickListenerC1014a(contentRelatedTourListItem, i));
+                this.itemView.setOnClickListener(new a(contentRelatedTourListItem, i));
             }
         }
     }

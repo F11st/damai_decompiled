@@ -9,7 +9,7 @@ import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.uikit.banner.loader.ViewLoader;
-import cn.damai.uikit.image.C2497a;
+import cn.damai.uikit.image.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 
@@ -32,6 +32,6 @@ public class BannerImageLoader extends ViewLoader {
             return;
         }
         int i = R$drawable.uikit_default_image_bg_gradient;
-        C2497a.a().loadinto((String) obj, (ImageView) view.findViewById(R$id.image_view), i, i);
+        a.a().loadinto((String) obj, (ImageView) view.findViewById(R$id.image_view), i, i);
     }
 }

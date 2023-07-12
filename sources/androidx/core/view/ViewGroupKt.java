@@ -9,8 +9,8 @@ import java.util.Iterator;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
-import kotlin.sequences.C8577e;
 import kotlin.sequences.Sequence;
+import kotlin.sequences.e;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
 import tb.gn1;
@@ -93,7 +93,7 @@ public final class ViewGroupKt {
     public static final Sequence<View> getDescendants(@NotNull ViewGroup viewGroup) {
         Sequence<View> b;
         b41.i(viewGroup, "<this>");
-        b = C8577e.b(new ViewGroupKt$descendants$1(viewGroup, null));
+        b = e.b(new ViewGroupKt$descendants$1(viewGroup, null));
         return b;
     }
 

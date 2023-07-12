@@ -28,10 +28,10 @@ public final class i02 extends k02 implements JavaField {
     @NotNull
     /* renamed from: g */
     public o02 getType() {
-        o02.C9490a c9490a = o02.Factory;
+        o02.a aVar = o02.Factory;
         Type genericType = d().getGenericType();
         b41.h(genericType, "member.genericType");
-        return c9490a.a(genericType);
+        return aVar.a(genericType);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaField

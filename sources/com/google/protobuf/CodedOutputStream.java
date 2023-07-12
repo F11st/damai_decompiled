@@ -1,6 +1,5 @@
 package com.google.protobuf;
 
-import com.alipay.sdk.m.n.C4250a;
 import com.google.protobuf.Utf8;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -11,13 +10,13 @@ import java.util.logging.Logger;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public abstract class CodedOutputStream extends AbstractC5398d {
+public abstract class CodedOutputStream extends com.google.protobuf.d {
     public static final int DEFAULT_BUFFER_SIZE = 4096;
     @Deprecated
     public static final int LITTLE_ENDIAN_32_SIZE = 4;
     private static final Logger a = Logger.getLogger(CodedOutputStream.class.getName());
-    private static final boolean b = C5418n.k();
-    private static final long c = C5418n.e();
+    private static final boolean b = n.k();
+    private static final long c = n.e();
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
@@ -40,15 +39,14 @@ public abstract class CodedOutputStream extends AbstractC5398d {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.CodedOutputStream$b */
     /* loaded from: classes10.dex */
-    public static abstract class AbstractC5373b extends CodedOutputStream {
+    public static abstract class b extends CodedOutputStream {
         final byte[] d;
         final int e;
         int f;
         int g;
 
-        AbstractC5373b(int i) {
+        b(int i) {
             super();
             if (i >= 0) {
                 byte[] bArr = new byte[Math.max(i, 20)];
@@ -96,18 +94,18 @@ public abstract class CodedOutputStream extends AbstractC5398d {
             if (CodedOutputStream.b) {
                 long j = CodedOutputStream.c + this.f;
                 long j2 = j;
-                while ((i & C4250a.g) != 0) {
-                    C5418n.m(this.d, j2, (byte) ((i & 127) | 128));
+                while ((i & com.alipay.sdk.m.n.a.g) != 0) {
+                    n.m(this.d, j2, (byte) ((i & 127) | 128));
                     i >>>= 7;
                     j2 = 1 + j2;
                 }
-                C5418n.m(this.d, j2, (byte) i);
+                n.m(this.d, j2, (byte) i);
                 int i2 = (int) ((1 + j2) - j);
                 this.f += i2;
                 this.g += i2;
                 return;
             }
-            while ((i & C4250a.g) != 0) {
+            while ((i & com.alipay.sdk.m.n.a.g) != 0) {
                 byte[] bArr = this.d;
                 int i3 = this.f;
                 this.f = i3 + 1;
@@ -128,11 +126,11 @@ public abstract class CodedOutputStream extends AbstractC5398d {
                 long j3 = j;
                 long j4 = j2;
                 while ((j3 & (-128)) != 0) {
-                    C5418n.m(this.d, j4, (byte) ((((int) j3) & 127) | 128));
+                    n.m(this.d, j4, (byte) ((((int) j3) & 127) | 128));
                     j3 >>>= 7;
                     j4 = 1 + j4;
                 }
-                C5418n.m(this.d, j4, (byte) j3);
+                n.m(this.d, j4, (byte) j3);
                 int i = (int) ((1 + j4) - j2);
                 this.f += i;
                 this.g += i;
@@ -162,14 +160,13 @@ public abstract class CodedOutputStream extends AbstractC5398d {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.CodedOutputStream$c */
     /* loaded from: classes10.dex */
-    public static class C5374c extends CodedOutputStream {
+    public static class c extends CodedOutputStream {
         private final byte[] d;
         private final int e;
         private int f;
 
-        C5374c(byte[] bArr, int i, int i2) {
+        c(byte[] bArr, int i, int i2) {
             super();
             Objects.requireNonNull(bArr, "buffer");
             int i3 = i + i2;
@@ -210,17 +207,17 @@ public abstract class CodedOutputStream extends AbstractC5398d {
         public final void F(int i) throws IOException {
             if (CodedOutputStream.b && y() >= 10) {
                 long j = CodedOutputStream.c + this.f;
-                while ((i & C4250a.g) != 0) {
-                    C5418n.m(this.d, j, (byte) ((i & 127) | 128));
+                while ((i & com.alipay.sdk.m.n.a.g) != 0) {
+                    n.m(this.d, j, (byte) ((i & 127) | 128));
                     this.f++;
                     i >>>= 7;
                     j = 1 + j;
                 }
-                C5418n.m(this.d, j, (byte) i);
+                n.m(this.d, j, (byte) i);
                 this.f++;
                 return;
             }
-            while ((i & C4250a.g) != 0) {
+            while ((i & com.alipay.sdk.m.n.a.g) != 0) {
                 try {
                     byte[] bArr = this.d;
                     int i2 = this.f;
@@ -331,12 +328,12 @@ public abstract class CodedOutputStream extends AbstractC5398d {
             if (CodedOutputStream.b && y() >= 10) {
                 long j2 = CodedOutputStream.c + this.f;
                 while ((j & (-128)) != 0) {
-                    C5418n.m(this.d, j2, (byte) ((((int) j) & 127) | 128));
+                    n.m(this.d, j2, (byte) ((((int) j) & 127) | 128));
                     this.f++;
                     j >>>= 7;
                     j2 = 1 + j2;
                 }
-                C5418n.m(this.d, j2, (byte) j);
+                n.m(this.d, j2, (byte) j);
                 this.f++;
                 return;
             }
@@ -357,12 +354,12 @@ public abstract class CodedOutputStream extends AbstractC5398d {
             bArr2[i2] = (byte) j;
         }
 
-        @Override // com.google.protobuf.AbstractC5398d
+        @Override // com.google.protobuf.d
         public final void a(ByteBuffer byteBuffer) throws IOException {
             H(byteBuffer);
         }
 
-        @Override // com.google.protobuf.AbstractC5398d
+        @Override // com.google.protobuf.d
         public final void b(byte[] bArr, int i, int i2) throws IOException {
             I(bArr, i, i2);
         }
@@ -378,12 +375,11 @@ public abstract class CodedOutputStream extends AbstractC5398d {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.CodedOutputStream$d */
     /* loaded from: classes10.dex */
-    private static final class C5375d extends AbstractC5373b {
+    private static final class d extends b {
         private final OutputStream h;
 
-        C5375d(OutputStream outputStream, int i) {
+        d(OutputStream outputStream, int i) {
             super(i);
             Objects.requireNonNull(outputStream, "out");
             this.h = outputStream;
@@ -552,12 +548,12 @@ public abstract class CodedOutputStream extends AbstractC5398d {
             F(WireFormat.c(i, i2));
         }
 
-        @Override // com.google.protobuf.AbstractC5398d
+        @Override // com.google.protobuf.d
         public void a(ByteBuffer byteBuffer) throws IOException {
             N(byteBuffer);
         }
 
-        @Override // com.google.protobuf.AbstractC5398d
+        @Override // com.google.protobuf.d
         public void b(byte[] bArr, int i, int i2) throws IOException {
             O(bArr, i, i2);
         }
@@ -570,11 +566,11 @@ public abstract class CodedOutputStream extends AbstractC5398d {
         }
     }
 
-    public static int f(int i, double d) {
-        return o(i) + g(d);
+    public static int f(int i, double d2) {
+        return o(i) + g(d2);
     }
 
-    public static int g(double d) {
+    public static int g(double d2) {
         return 8;
     }
 
@@ -626,7 +622,7 @@ public abstract class CodedOutputStream extends AbstractC5398d {
     }
 
     public static int q(int i) {
-        if ((i & C4250a.g) == 0) {
+        if ((i & com.alipay.sdk.m.n.a.g) == 0) {
             return 1;
         }
         if ((i & (-16384)) == 0) {
@@ -664,7 +660,7 @@ public abstract class CodedOutputStream extends AbstractC5398d {
     }
 
     public static CodedOutputStream v(OutputStream outputStream, int i) {
-        return new C5375d(outputStream, i);
+        return new d(outputStream, i);
     }
 
     public static CodedOutputStream w(byte[] bArr) {
@@ -672,7 +668,7 @@ public abstract class CodedOutputStream extends AbstractC5398d {
     }
 
     public static CodedOutputStream x(byte[] bArr, int i, int i2) {
-        return new C5374c(bArr, i, i2);
+        return new c(bArr, i, i2);
     }
 
     public abstract void A(int i, long j) throws IOException;
@@ -715,8 +711,8 @@ public abstract class CodedOutputStream extends AbstractC5398d {
 
     public abstract int y();
 
-    public final void z(int i, double d) throws IOException {
-        A(i, Double.doubleToRawLongBits(d));
+    public final void z(int i, double d2) throws IOException {
+        A(i, Double.doubleToRawLongBits(d2));
     }
 
     private CodedOutputStream() {

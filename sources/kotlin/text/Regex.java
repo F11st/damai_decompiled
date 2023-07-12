@@ -12,11 +12,9 @@ import kotlin.ExperimentalStdlibApi;
 import kotlin.PublishedApi;
 import kotlin.SinceKotlin;
 import kotlin.WasExperimental;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8220r;
+import kotlin.collections.r;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.sequences.C8576d;
 import kotlin.sequences.Sequence;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -28,7 +26,7 @@ import tb.ty1;
 /* loaded from: classes3.dex */
 public final class Regex implements Serializable {
     @NotNull
-    public static final C8587a Companion = new C8587a(null);
+    public static final a Companion = new a(null);
     @Nullable
     private Set<? extends RegexOption> _options;
     @NotNull
@@ -38,20 +36,19 @@ public final class Regex implements Serializable {
     /* loaded from: classes3.dex */
     private static final class Serialized implements Serializable {
         @NotNull
-        public static final C8586a Companion = new C8586a(null);
+        public static final a Companion = new a(null);
         private static final long serialVersionUID = 0;
         private final int flags;
         @NotNull
         private final String pattern;
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.text.Regex$Serialized$a */
         /* loaded from: classes3.dex */
-        public static final class C8586a {
-            private C8586a() {
+        public static final class a {
+            private a() {
             }
 
-            public /* synthetic */ C8586a(k50 k50Var) {
+            public /* synthetic */ a(k50 k50Var) {
                 this();
             }
         }
@@ -79,13 +76,12 @@ public final class Regex implements Serializable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.text.Regex$a */
     /* loaded from: classes3.dex */
-    public static final class C8587a {
-        private C8587a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8587a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -146,7 +142,7 @@ public final class Regex implements Serializable {
         b41.i(charSequence, "input");
         Matcher matcher = this.nativePattern.matcher(charSequence);
         b41.h(matcher, "nativePattern.matcher(input)");
-        f = C8594e.f(matcher, i, charSequence);
+        f = e.f(matcher, i, charSequence);
         return f;
     }
 
@@ -154,7 +150,7 @@ public final class Regex implements Serializable {
     public final Sequence<MatchResult> findAll(@NotNull final CharSequence charSequence, final int i) {
         b41.i(charSequence, "input");
         if (i >= 0 && i <= charSequence.length()) {
-            return C8576d.j(new Function0<MatchResult>() { // from class: kotlin.text.Regex$findAll$1
+            return kotlin.sequences.d.j(new Function0<MatchResult>() { // from class: kotlin.text.Regex$findAll$1
                 /* JADX INFO: Access modifiers changed from: package-private */
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
                 {
@@ -178,7 +174,7 @@ public final class Regex implements Serializable {
             final int flags = this.nativePattern.flags();
             EnumSet allOf = EnumSet.allOf(RegexOption.class);
             b41.h(allOf, "");
-            C8220r.z(allOf, new Function1<RegexOption, Boolean>() { // from class: kotlin.text.Regex$special$$inlined$fromInt$1
+            r.z(allOf, new Function1<RegexOption, Boolean>() { // from class: kotlin.text.Regex$special$$inlined$fromInt$1
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
                 {
                     super(1);
@@ -225,7 +221,7 @@ public final class Regex implements Serializable {
         b41.i(charSequence, "input");
         Matcher matcher = this.nativePattern.matcher(charSequence);
         b41.h(matcher, "nativePattern.matcher(input)");
-        g = C8594e.g(matcher, charSequence);
+        g = e.g(matcher, charSequence);
         return g;
     }
 
@@ -279,7 +275,7 @@ public final class Regex implements Serializable {
             arrayList.add(charSequence.subSequence(i2, charSequence.length()).toString());
             return arrayList;
         }
-        e = C8213l.e(charSequence.toString());
+        e = kotlin.collections.l.e(charSequence.toString());
         return e;
     }
 
@@ -289,7 +285,7 @@ public final class Regex implements Serializable {
     public final Sequence<String> splitToSequence(@NotNull CharSequence charSequence, int i) {
         b41.i(charSequence, "input");
         StringsKt__StringsKt.q0(i);
-        return C8576d.b(new Regex$splitToSequence$1(this, charSequence, i, null));
+        return kotlin.sequences.d.b(new Regex$splitToSequence$1(this, charSequence, i, null));
     }
 
     @NotNull
@@ -365,7 +361,7 @@ public final class Regex implements Serializable {
             tb.b41.i(r3, r0)
             kotlin.text.Regex$a r0 = kotlin.text.Regex.Companion
             int r3 = r3.getValue()
-            int r3 = kotlin.text.Regex.C8587a.a(r0, r3)
+            int r3 = kotlin.text.Regex.a.a(r0, r3)
             java.util.regex.Pattern r2 = java.util.regex.Pattern.compile(r2, r3)
             java.lang.String r3 = "compile(pattern, ensureUnicodeCase(option.value))"
             tb.b41.h(r2, r3)
@@ -388,8 +384,8 @@ public final class Regex implements Serializable {
             java.lang.String r0 = "options"
             tb.b41.i(r3, r0)
             kotlin.text.Regex$a r0 = kotlin.text.Regex.Companion
-            int r3 = kotlin.text.C8594e.e(r3)
-            int r3 = kotlin.text.Regex.C8587a.a(r0, r3)
+            int r3 = kotlin.text.e.e(r3)
+            int r3 = kotlin.text.Regex.a.a(r0, r3)
             java.util.regex.Pattern r2 = java.util.regex.Pattern.compile(r2, r3)
             java.lang.String r3 = "compile(pattern, ensureU…odeCase(options.toInt()))"
             tb.b41.h(r2, r3)

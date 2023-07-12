@@ -25,21 +25,20 @@ public class ir1 {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ir1$a */
     /* loaded from: classes4.dex */
-    public class C9276a implements IPermissionListener {
+    public class a implements IPermissionListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnGrantListener a;
         final /* synthetic */ Activity b;
         final /* synthetic */ String c;
 
         /* compiled from: Taobao */
-        /* renamed from: tb.ir1$a$a */
+        /* renamed from: tb.ir1$a$a  reason: collision with other inner class name */
         /* loaded from: classes4.dex */
-        public class DialogInterface$OnClickListenerC9277a implements DialogInterface.OnClickListener {
+        public class DialogInterface$OnClickListenerC0455a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC9277a() {
+            DialogInterface$OnClickListenerC0455a() {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -50,17 +49,16 @@ public class ir1 {
                     return;
                 }
                 dialogInterface.dismiss();
-                kr1.f(C9276a.this.b);
+                kr1.f(a.this.b);
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.ir1$a$b */
         /* loaded from: classes4.dex */
-        public class DialogInterface$OnClickListenerC9278b implements DialogInterface.OnClickListener {
+        public class b implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC9278b(C9276a c9276a) {
+            b(a aVar) {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -74,7 +72,7 @@ public class ir1 {
             }
         }
 
-        C9276a(OnGrantListener onGrantListener, Activity activity, String str) {
+        a(OnGrantListener onGrantListener, Activity activity, String str) {
             this.a = onGrantListener;
             this.b = activity;
             this.c = str;
@@ -107,27 +105,25 @@ public class ir1 {
             if (AndroidInstantRuntime.support(ipChange, "-53370189")) {
                 ipChange.ipc$dispatch("-53370189", new Object[]{this, strArr});
             } else {
-                gr1.a(this.b, this.c, Arrays.asList(strArr), false, new DialogInterface$OnClickListenerC9277a(), new DialogInterface$OnClickListenerC9278b(this));
+                gr1.a(this.b, this.c, Arrays.asList(strArr), false, new DialogInterface$OnClickListenerC0455a(), new b(this));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ir1$b */
     /* loaded from: classes4.dex */
-    public class C9279b implements IPermissionListener {
+    public class b implements IPermissionListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnGrantListener a;
         final /* synthetic */ Activity b;
         final /* synthetic */ String c;
 
         /* compiled from: Taobao */
-        /* renamed from: tb.ir1$b$a */
         /* loaded from: classes4.dex */
-        public class DialogInterface$OnClickListenerC9280a implements DialogInterface.OnClickListener {
+        public class a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC9280a() {
+            a() {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -138,17 +134,17 @@ public class ir1 {
                     return;
                 }
                 dialogInterface.dismiss();
-                kr1.f(C9279b.this.b);
+                kr1.f(b.this.b);
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: tb.ir1$b$b */
+        /* renamed from: tb.ir1$b$b  reason: collision with other inner class name */
         /* loaded from: classes4.dex */
-        public class DialogInterface$OnClickListenerC9281b implements DialogInterface.OnClickListener {
+        public class DialogInterface$OnClickListenerC0456b implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC9281b(C9279b c9279b) {
+            DialogInterface$OnClickListenerC0456b(b bVar) {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -162,7 +158,7 @@ public class ir1 {
             }
         }
 
-        C9279b(OnGrantListener onGrantListener, Activity activity, String str) {
+        b(OnGrantListener onGrantListener, Activity activity, String str) {
             this.a = onGrantListener;
             this.b = activity;
             this.c = str;
@@ -195,7 +191,7 @@ public class ir1 {
             if (AndroidInstantRuntime.support(ipChange, "-1989030476")) {
                 ipChange.ipc$dispatch("-1989030476", new Object[]{this, strArr});
             } else {
-                gr1.a(this.b, this.c, Arrays.asList(strArr), false, new DialogInterface$OnClickListenerC9280a(), new DialogInterface$OnClickListenerC9281b(this));
+                gr1.a(this.b, this.c, Arrays.asList(strArr), false, new a(), new DialogInterface$OnClickListenerC0456b(this));
             }
         }
     }
@@ -221,7 +217,7 @@ public class ir1 {
         }
         try {
             String format = String.format("%1$s%2$s", e(Arrays.asList(strArr)), str);
-            new Permission(mu0.a(), new PermissionModel(strArr, "权限使用说明", null, format)).a(new C9276a(onGrantListener, activity, format)).b();
+            new Permission(mu0.a(), new PermissionModel(strArr, "权限使用说明", null, format)).a(new a(onGrantListener, activity, format)).b();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -247,7 +243,7 @@ public class ir1 {
             return;
         }
         try {
-            new Permission(activity, new PermissionModel(strArr, "权限使用说明", null, str)).a(new C9279b(onGrantListener, activity, str)).b();
+            new Permission(activity, new PermissionModel(strArr, "权限使用说明", null, str)).a(new b(onGrantListener, activity, str)).b();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -258,10 +254,10 @@ public class ir1 {
         if (AndroidInstantRuntime.support(ipChange, "-744837753")) {
             return (String) ipChange.ipc$dispatch("-744837753", new Object[]{list});
         }
-        String[] b = mr1.b(list);
+        String[] b2 = mr1.b(list);
         StringBuilder sb = new StringBuilder();
         sb.append("授权获取");
-        for (String str : b) {
+        for (String str : b2) {
             sb.append(str);
             sb.append("、");
         }

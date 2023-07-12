@@ -5,7 +5,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.RemoteException;
 import android.text.TextUtils;
-import anet.channel.fulltrace.C0179a;
+import anet.channel.fulltrace.a;
 import anet.channel.statist.ExceptionStatistic;
 import anet.channel.util.ALog;
 import anetwork.channel.Network;
@@ -93,7 +93,7 @@ public class NetworkProxy implements Network {
         request.setExtProperty("f-netReqStart", String.valueOf(System.currentTimeMillis()));
         String extProperty = request.getExtProperty("f-traceId");
         if (TextUtils.isEmpty(extProperty)) {
-            extProperty = C0179a.e().createRequest();
+            extProperty = a.e().createRequest();
         }
         request.setExtProperty("f-traceId", extProperty);
         request.setExtProperty("f-reqProcess", hu0.d());

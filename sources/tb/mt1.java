@@ -21,7 +21,7 @@ import org.jetbrains.annotations.Nullable;
 public final class mt1 {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C9452a Companion = new C9452a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String EVENT_BACK_TO_HOME = "backToHome";
     @NotNull
@@ -60,13 +60,12 @@ public final class mt1 {
     private PopupCallback j;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.mt1$a */
     /* loaded from: classes5.dex */
-    public static final class C9452a {
-        private C9452a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9452a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

@@ -13,13 +13,12 @@ public final class Callables {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.util.concurrent.Callables$a */
     /* loaded from: classes10.dex */
-    static class CallableC5309a<T> implements Callable<T> {
+    static class a<T> implements Callable<T> {
         final /* synthetic */ Supplier a;
         final /* synthetic */ Callable b;
 
-        CallableC5309a(Supplier supplier, Callable callable) {
+        a(Supplier supplier, Callable callable) {
             this.a = supplier;
             this.b = callable;
         }
@@ -66,7 +65,7 @@ public final class Callables {
     public static <T> Callable<T> c(Callable<T> callable, Supplier<String> supplier) {
         du1.p(supplier);
         du1.p(callable);
-        return new CallableC5309a(supplier, callable);
+        return new a(supplier, callable);
     }
 
     /* JADX INFO: Access modifiers changed from: private */

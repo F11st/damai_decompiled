@@ -75,10 +75,10 @@ public class cw1 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
 
     @Override // cn.damai.tetris.v2.convertor.IConverter
     /* renamed from: a */
-    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, C9039db c9039db) {
+    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, db dbVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-894225724")) {
-            return (List) ipChange.ipc$dispatch("-894225724", new Object[]{this, baseResponse, baseSection, globalConfig, c9039db});
+            return (List) ipChange.ipc$dispatch("-894225724", new Object[]{this, baseResponse, baseSection, globalConfig, dbVar});
         }
         NodeData item = baseSection.getItem();
         boolean z = baseResponse.isShowJuli;
@@ -112,11 +112,11 @@ public class cw1 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
         jSONObject.put("result", (Object) arrayList);
         Daojishi daojishi = new Daojishi();
         daojishi.setServiceTimeAndDiff(baseResponse.serverTime);
-        jSONObject.put(C9039db.KEY_DAOJISHI, (Object) daojishi);
-        jSONObject.put(C9039db.KEY_SHOW_DIS, (Object) Boolean.valueOf(z));
+        jSONObject.put(db.KEY_DAOJISHI, (Object) daojishi);
+        jSONObject.put(db.KEY_SHOW_DIS, (Object) Boolean.valueOf(z));
         jSONObject.put("trackB", (Object) ((globalConfig == null || TextUtils.isEmpty(globalConfig.pageName)) ? "drama" : globalConfig.pageName));
-        jSONObject.put(C9039db.TRACKKEY_CITY, (Object) z20.d());
+        jSONObject.put(db.TRACKKEY_CITY, (Object) z20.d());
         baseSection.setItem(jSONObject);
-        return new ah().convert(baseResponse, baseSection, globalConfig, c9039db);
+        return new ah().convert(baseResponse, baseSection, globalConfig, dbVar);
     }
 }

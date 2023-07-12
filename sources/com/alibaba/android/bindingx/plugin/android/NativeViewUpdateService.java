@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import com.alibaba.android.bindingx.core.PlatformManager;
 import com.alibaba.android.bindingx.core.WeakRunnable;
-import com.alibaba.android.bindingx.core.internal.C3227o;
+import com.alibaba.android.bindingx.core.internal.o;
 import com.taobao.weex.common.Constants;
 import com.taobao.weex.devtools.inspector.elements.W3CStyleConstants;
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ import tb.jn1;
 public final class NativeViewUpdateService {
     private static final Map<String, INativeViewUpdater> a;
     private static final LayoutUpdater b = new LayoutUpdater();
-    private static final C3230b c = new C3230b();
+    private static final b c = new b();
     private static final List<String> d = Arrays.asList("width", "height", W3CStyleConstants.MARGIN_LEFT, W3CStyleConstants.MARGIN_RIGHT, W3CStyleConstants.MARGIN_TOP, W3CStyleConstants.MARGIN_BOTTOM, W3CStyleConstants.PADDING_LEFT, W3CStyleConstants.PADDING_RIGHT, W3CStyleConstants.PADDING_TOP, W3CStyleConstants.PADDING_BOTTOM);
     private static final Handler e = new Handler(Looper.getMainLooper());
 
@@ -353,8 +353,8 @@ public final class NativeViewUpdateService {
                 NativeViewUpdateService.h(new Runnable() { // from class: com.alibaba.android.bindingx.plugin.android.NativeViewUpdateService.RotateUpdater.1
                     @Override // java.lang.Runnable
                     public void run() {
-                        int k = C3227o.k(view.getContext(), NativeViewUpdateService.f(map, Constants.Name.PERSPECTIVE));
-                        Pair<Float, Float> l = C3227o.l(C3227o.h(map, Constants.Name.TRANSFORM_ORIGIN), view);
+                        int k = o.k(view.getContext(), NativeViewUpdateService.f(map, Constants.Name.PERSPECTIVE));
+                        Pair<Float, Float> l = o.l(o.h(map, Constants.Name.TRANSFORM_ORIGIN), view);
                         if (k != 0) {
                             view.setCameraDistance(k);
                         }
@@ -381,8 +381,8 @@ public final class NativeViewUpdateService {
                 NativeViewUpdateService.h(new Runnable() { // from class: com.alibaba.android.bindingx.plugin.android.NativeViewUpdateService.RotateXUpdater.1
                     @Override // java.lang.Runnable
                     public void run() {
-                        int k = C3227o.k(view.getContext(), NativeViewUpdateService.f(map, Constants.Name.PERSPECTIVE));
-                        Pair<Float, Float> l = C3227o.l(C3227o.h(map, Constants.Name.TRANSFORM_ORIGIN), view);
+                        int k = o.k(view.getContext(), NativeViewUpdateService.f(map, Constants.Name.PERSPECTIVE));
+                        Pair<Float, Float> l = o.l(o.h(map, Constants.Name.TRANSFORM_ORIGIN), view);
                         if (k != 0) {
                             view.setCameraDistance(k);
                         }
@@ -409,8 +409,8 @@ public final class NativeViewUpdateService {
                 NativeViewUpdateService.h(new Runnable() { // from class: com.alibaba.android.bindingx.plugin.android.NativeViewUpdateService.RotateYUpdater.1
                     @Override // java.lang.Runnable
                     public void run() {
-                        int k = C3227o.k(view.getContext(), NativeViewUpdateService.f(map, Constants.Name.PERSPECTIVE));
-                        Pair<Float, Float> l = C3227o.l(C3227o.h(map, Constants.Name.TRANSFORM_ORIGIN), view);
+                        int k = o.k(view.getContext(), NativeViewUpdateService.f(map, Constants.Name.PERSPECTIVE));
+                        Pair<Float, Float> l = o.l(o.h(map, Constants.Name.TRANSFORM_ORIGIN), view);
                         if (k != 0) {
                             view.setCameraDistance(k);
                         }
@@ -436,7 +436,7 @@ public final class NativeViewUpdateService {
             NativeViewUpdateService.h(new Runnable() { // from class: com.alibaba.android.bindingx.plugin.android.NativeViewUpdateService.ScaleUpdater.1
                 @Override // java.lang.Runnable
                 public void run() {
-                    Pair<Float, Float> l = C3227o.l(C3227o.h(map, Constants.Name.TRANSFORM_ORIGIN), view);
+                    Pair<Float, Float> l = o.l(o.h(map, Constants.Name.TRANSFORM_ORIGIN), view);
                     if (l != null) {
                         view.setPivotX(((Float) l.first).floatValue());
                         view.setPivotY(((Float) l.second).floatValue());
@@ -472,7 +472,7 @@ public final class NativeViewUpdateService {
                 NativeViewUpdateService.h(new Runnable() { // from class: com.alibaba.android.bindingx.plugin.android.NativeViewUpdateService.ScaleXUpdater.1
                     @Override // java.lang.Runnable
                     public void run() {
-                        Pair<Float, Float> l = C3227o.l(C3227o.h(map, Constants.Name.TRANSFORM_ORIGIN), view);
+                        Pair<Float, Float> l = o.l(o.h(map, Constants.Name.TRANSFORM_ORIGIN), view);
                         if (l != null) {
                             view.setPivotX(((Float) l.first).floatValue());
                             view.setPivotY(((Float) l.second).floatValue());
@@ -496,7 +496,7 @@ public final class NativeViewUpdateService {
                 NativeViewUpdateService.h(new Runnable() { // from class: com.alibaba.android.bindingx.plugin.android.NativeViewUpdateService.ScaleYUpdater.1
                     @Override // java.lang.Runnable
                     public void run() {
-                        Pair<Float, Float> l = C3227o.l(C3227o.h(map, Constants.Name.TRANSFORM_ORIGIN), view);
+                        Pair<Float, Float> l = o.l(o.h(map, Constants.Name.TRANSFORM_ORIGIN), view);
                         if (l != null) {
                             view.setPivotX(((Float) l.first).floatValue());
                             view.setPivotY(((Float) l.second).floatValue());
@@ -574,10 +574,9 @@ public final class NativeViewUpdateService {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.plugin.android.NativeViewUpdateService$b */
     /* loaded from: classes5.dex */
-    private static final class C3230b implements INativeViewUpdater {
-        private C3230b() {
+    private static final class b implements INativeViewUpdater {
+        private b() {
         }
 
         @Override // com.alibaba.android.bindingx.plugin.android.INativeViewUpdater

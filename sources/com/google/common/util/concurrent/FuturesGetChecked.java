@@ -15,7 +15,7 @@ import tb.du1;
 @GwtIncompatible
 /* loaded from: classes10.dex */
 final class FuturesGetChecked {
-    private static final Ordering<Constructor<?>> a = Ordering.natural().onResultOf(new C5314a()).reverse();
+    private static final Ordering<Constructor<?>> a = Ordering.natural().onResultOf(new a()).reverse();
 
     /* compiled from: Taobao */
     @VisibleForTesting
@@ -25,10 +25,9 @@ final class FuturesGetChecked {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.util.concurrent.FuturesGetChecked$a */
     /* loaded from: classes10.dex */
-    static class C5314a implements Function<Constructor<?>, Boolean> {
-        C5314a() {
+    static class a implements Function<Constructor<?>, Boolean> {
+        a() {
         }
 
         @Override // com.google.common.base.Function

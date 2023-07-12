@@ -2,12 +2,12 @@ package com.taobao.android.dinamicx.asyncrender.batch;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.taobao.android.dinamicx.C6380h;
 import com.taobao.android.dinamicx.DXRenderOptions;
 import com.taobao.android.dinamicx.DXRuntimeContext;
 import com.taobao.android.dinamicx.DXTemplateManager;
 import com.taobao.android.dinamicx.asyncrender.DXAsyncRenderCallback;
 import com.taobao.android.dinamicx.asyncrender.DXBaseRenderWorkTask;
+import com.taobao.android.dinamicx.h;
 import com.taobao.android.dinamicx.template.download.DXPriorityRunnable;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,16 +19,16 @@ import tb.y00;
 public abstract class DXBatchRenderWorkTask<T> implements DXAsyncRenderCallback<T>, Runnable {
     protected DXBatchAsyncRenderCallback callback;
     protected bu controlEventCenter;
-    protected C6380h dxPipelineCacheManager;
+    protected h dxPipelineCacheManager;
     protected boolean isBatch;
     protected DXRenderOptions renderOptions;
     protected List<DXBaseRenderWorkTask> renderTasks;
     protected List<DXRuntimeContext> runtimeContexts;
     protected DXTemplateManager templateManager;
 
-    public DXBatchRenderWorkTask(DXTemplateManager dXTemplateManager, C6380h c6380h, bu buVar, @Nullable DXRenderOptions dXRenderOptions, @NonNull List<DXRuntimeContext> list, @Nullable DXBatchAsyncRenderCallback dXBatchAsyncRenderCallback, boolean z) {
+    public DXBatchRenderWorkTask(DXTemplateManager dXTemplateManager, h hVar, bu buVar, @Nullable DXRenderOptions dXRenderOptions, @NonNull List<DXRuntimeContext> list, @Nullable DXBatchAsyncRenderCallback dXBatchAsyncRenderCallback, boolean z) {
         this.templateManager = dXTemplateManager;
-        this.dxPipelineCacheManager = c6380h;
+        this.dxPipelineCacheManager = hVar;
         this.controlEventCenter = buVar;
         this.renderOptions = initRenderOptions(dXRenderOptions);
         this.runtimeContexts = list;
@@ -63,7 +63,7 @@ public abstract class DXBatchRenderWorkTask<T> implements DXAsyncRenderCallback<
     }
 
     public static DXRenderOptions prefetchOptions() {
-        return new DXRenderOptions.C6359b().r(1).s(4).k();
+        return new DXRenderOptions.b().r(1).s(4).k();
     }
 
     private void tryCallbackResult() {
@@ -89,7 +89,7 @@ public abstract class DXBatchRenderWorkTask<T> implements DXAsyncRenderCallback<
     }
 
     protected DXRenderOptions initRenderOptions(@Nullable DXRenderOptions dXRenderOptions) {
-        DXRenderOptions.C6359b prefetchOptionBuilder = prefetchOptionBuilder();
+        DXRenderOptions.b prefetchOptionBuilder = prefetchOptionBuilder();
         if (dXRenderOptions != null) {
             prefetchOptionBuilder.l(dXRenderOptions.a()).s(dXRenderOptions.f()).m(dXRenderOptions.b()).u(dXRenderOptions.h()).p(dXRenderOptions.c()).q(dXRenderOptions.d()).t(dXRenderOptions.g()).o(dXRenderOptions.j()).r(dXRenderOptions.e());
         }
@@ -121,8 +121,8 @@ public abstract class DXBatchRenderWorkTask<T> implements DXAsyncRenderCallback<
         tryCallbackResult();
     }
 
-    protected DXRenderOptions.C6359b prefetchOptionBuilder() {
-        return new DXRenderOptions.C6359b().r(1).s(4);
+    protected DXRenderOptions.b prefetchOptionBuilder() {
+        return new DXRenderOptions.b().r(1).s(4);
     }
 
     @Override // java.lang.Runnable

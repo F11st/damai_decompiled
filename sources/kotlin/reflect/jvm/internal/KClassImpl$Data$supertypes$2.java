@@ -9,7 +9,7 @@ import kotlin.collections.ArraysKt___ArraysKt;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.Lambda;
 import kotlin.reflect.jvm.internal.KClassImpl;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
+import kotlin.reflect.jvm.internal.impl.builtins.b;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassKind;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
@@ -83,7 +83,7 @@ public final class KClassImpl$Data$supertypes$2 extends Lambda implements Functi
                 }
             }));
         }
-        if (!AbstractC8271b.s0(this.this$0.n())) {
+        if (!b.s0(this.this$0.n())) {
             boolean z2 = false;
             if (!arrayList.isEmpty()) {
                 for (KTypeImpl kTypeImpl : arrayList) {

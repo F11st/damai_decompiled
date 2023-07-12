@@ -30,13 +30,12 @@ public class Monitor {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayer.utils.Monitor$a */
     /* loaded from: classes8.dex */
-    public static class C3703a {
+    public static class a {
         public final Object a;
         public final Object b;
 
-        public C3703a(Object obj, String str, Object obj2) {
+        public a(Object obj, String str, Object obj2) {
             this.a = obj;
             this.b = obj2;
         }

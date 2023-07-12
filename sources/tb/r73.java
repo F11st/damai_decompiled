@@ -1,10 +1,9 @@
 package tb;
 
 import com.amap.api.location.AMapLocation;
-import com.huawei.hms.opendevice.AbstractC5658c;
 
 /* compiled from: Taobao */
-@com.loc.as(a = AbstractC5658c.a)
+@com.loc.as(a = com.huawei.hms.opendevice.c.a)
 /* loaded from: classes10.dex */
 public class r73 {
     @com.loc.at(a = "a2", b = 6)

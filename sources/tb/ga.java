@@ -14,28 +14,26 @@ public class ga {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.ga$a */
     /* loaded from: classes5.dex */
-    public static abstract class AbstractC9168a {
+    public static abstract class a {
         public byte[] a;
         public int b;
 
-        AbstractC9168a() {
+        a() {
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.ga$b */
     /* loaded from: classes5.dex */
-    public static class C9169b extends AbstractC9168a {
+    public static class b extends a {
         private static final int[] f = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 62, -1, -1, -1, 63, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, -1, -1, -1, -2, -1, -1, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, -1, -1, -1, -1, -1, -1, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
         private static final int[] g = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 62, -1, -1, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, -1, -1, -1, -2, -1, -1, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, -1, -1, -1, -1, 63, -1, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
         private int c;
         private int d;
         private final int[] e;
 
-        public C9169b(int i, byte[] bArr) {
+        public b(int i, byte[] bArr) {
             this.a = bArr;
             this.e = (i & 8) == 0 ? f : g;
             this.c = 0;
@@ -168,9 +166,8 @@ public class ga {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.ga$c */
     /* loaded from: classes5.dex */
-    public static class C9170c extends AbstractC9168a {
+    public static class c extends a {
         public static final int LINE_GROUPS = 19;
         private static final byte[] j = {65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, km1.OP_MAX_COUNT, 47};
         private static final byte[] k = {65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 45, 95};
@@ -182,7 +179,7 @@ public class ga {
         public final boolean h;
         private final byte[] i;
 
-        public C9170c(int i, byte[] bArr) {
+        public c(int i, byte[] bArr) {
             this.a = bArr;
             this.f = (i & 1) == 0;
             boolean z = (i & 2) == 0;
@@ -212,7 +209,7 @@ public class ga {
                 Method dump skipped, instructions count: 478
                 To view this dump change 'Code comments level' option to 'DEBUG'
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.ga.C9170c.a(byte[], int, int, boolean):boolean");
+            throw new UnsupportedOperationException("Method not decompiled: tb.ga.c.a(byte[], int, int, boolean):boolean");
         }
     }
 
@@ -221,10 +218,10 @@ public class ga {
     }
 
     public static byte[] b(byte[] bArr, int i, int i2, int i3) {
-        C9169b c9169b = new C9169b(i3, new byte[(i2 * 3) / 4]);
-        if (c9169b.a(bArr, i, i2, true)) {
-            int i4 = c9169b.b;
-            byte[] bArr2 = c9169b.a;
+        b bVar = new b(i3, new byte[(i2 * 3) / 4]);
+        if (bVar.a(bArr, i, i2, true)) {
+            int i4 = bVar.b;
+            byte[] bArr2 = bVar.a;
             if (i4 == bArr2.length) {
                 return bArr2;
             }
@@ -240,9 +237,9 @@ public class ga {
     }
 
     public static byte[] d(byte[] bArr, int i, int i2, int i3) {
-        C9170c c9170c = new C9170c(i3, null);
+        c cVar = new c(i3, null);
         int i4 = (i2 / 3) * 4;
-        if (c9170c.f) {
+        if (cVar.f) {
             if (i2 % 3 > 0) {
                 i4 += 4;
             }
@@ -254,12 +251,12 @@ public class ga {
                 i4 += 3;
             }
         }
-        if (c9170c.g && i2 > 0) {
-            i4 += (((i2 - 1) / 57) + 1) * (c9170c.h ? 2 : 1);
+        if (cVar.g && i2 > 0) {
+            i4 += (((i2 - 1) / 57) + 1) * (cVar.h ? 2 : 1);
         }
-        c9170c.a = new byte[i4];
-        c9170c.a(bArr, i, i2, true);
-        return c9170c.a;
+        cVar.a = new byte[i4];
+        cVar.a(bArr, i, i2, true);
+        return cVar.a;
     }
 
     public static String e(byte[] bArr, int i) {

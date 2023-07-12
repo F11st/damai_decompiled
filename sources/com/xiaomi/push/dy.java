@@ -5,7 +5,6 @@ import android.text.TextUtils;
 import android.util.Base64;
 import androidx.exifinterface.media.ExifInterface;
 import com.tencent.open.SocialConstants;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import java.util.HashMap;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -31,7 +30,7 @@ public class dy {
                 jSONObject.put(str, hashMap.get(str));
             }
         } catch (JSONException e) {
-            AbstractC7535b.a(e);
+            com.xiaomi.channel.commonutils.logger.b.a(e);
         }
         return jSONObject.toString();
     }
@@ -57,7 +56,7 @@ public class dy {
                     hashMap2.put("B", String.valueOf(jSONObject.opt("awakened_app")));
                     hashMap2.put("module", String.valueOf(jSONObject.opt("awake_type")));
                 } catch (JSONException e) {
-                    AbstractC7535b.a(e);
+                    com.xiaomi.channel.commonutils.logger.b.a(e);
                 }
             }
         }

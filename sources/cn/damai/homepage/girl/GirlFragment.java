@@ -13,8 +13,8 @@ import androidx.fragment.app.FragmentActivity;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.home.OnCityChangedListener;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
@@ -56,18 +56,17 @@ public class GirlFragment extends AbsFragment implements OnCityChangedListener {
     private boolean mIsCreateView;
     private SearchAdapter mSearchAdapter;
     private String mTitle;
-    public C0525a.C0527b mUTBuilder;
+    public a.b mUTBuilder;
     private int pageIndex = 1;
     private boolean mFirstList = true;
     private String mBdian = "xiannv_tab";
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.girl.GirlFragment$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1141a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1141a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -90,7 +89,7 @@ public class GirlFragment extends AbsFragment implements OnCityChangedListener {
             bundle.putString("projectName", projectItemBean.name);
             bundle.putString("projectImage", projectItemBean.verticalPic);
             DMNav.from(GirlFragment.this.getActivity()).withExtras(bundle).toUri(NavUri.b(pl.PROJECT_DETAIL_PAGE));
-            C0529c.e().x(du0.f().g(projectItemBean.pos, "仙女推荐", projectItemBean.id));
+            c.e().x(du0.f().g(projectItemBean.pos, "仙女推荐", projectItemBean.id));
         }
     }
 
@@ -333,7 +332,7 @@ public class GirlFragment extends AbsFragment implements OnCityChangedListener {
             trackInfo.trackD = "item_";
             trackInfo.put("titlelabel", (Object) "仙女推荐");
             this.mSearchAdapter.f(trackInfo);
-            this.mSearchAdapter.d(new View$OnClickListenerC1141a());
+            this.mSearchAdapter.d(new a());
         }
         requestProject();
     }
@@ -345,9 +344,9 @@ public class GirlFragment extends AbsFragment implements OnCityChangedListener {
             ipChange.ipc$dispatch("849164723", new Object[]{this, Integer.valueOf(i), obj});
         } else if (i != 1) {
         } else {
-            ToastUtil a = ToastUtil.a();
+            ToastUtil a2 = ToastUtil.a();
             FragmentActivity activity = getActivity();
-            a.e(activity, "frag demo: " + obj.toString());
+            a2.e(activity, "frag demo: " + obj.toString());
         }
     }
 
@@ -389,7 +388,7 @@ public class GirlFragment extends AbsFragment implements OnCityChangedListener {
             return;
         }
         super.onViewCreated(view, bundle);
-        this.mUTBuilder = new C0525a.C0527b().i(this.mBdian);
+        this.mUTBuilder = new a.b().i(this.mBdian);
     }
 
     public void pageUtBuild() {
@@ -400,16 +399,16 @@ public class GirlFragment extends AbsFragment implements OnCityChangedListener {
             if (this.arg == null) {
                 this.arg = new HashMap();
             }
-            C0529c.e().o(this, this.mUTBuilder.j(this.arg));
+            c.e().o(this, this.mUTBuilder.j(this.arg));
         }
     }
 
-    public void setUTBuilder(C0525a.C0527b c0527b) {
+    public void setUTBuilder(a.b bVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "982524971")) {
-            ipChange.ipc$dispatch("982524971", new Object[]{this, c0527b});
+            ipChange.ipc$dispatch("982524971", new Object[]{this, bVar});
         } else {
-            this.mUTBuilder = c0527b;
+            this.mUTBuilder = bVar;
         }
     }
 

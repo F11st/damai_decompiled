@@ -15,10 +15,10 @@ import com.youku.arch.v3.event.ArchExceptionEvent;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
@@ -37,7 +37,7 @@ public final class GaiaxComponent extends GenericComponent<ComponentValue> {
         Lazy a;
         b41.i(iContext, Constants.PAGE_CONTEXT);
         b41.i(node, "node");
-        a = C8177b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<BasicComponentParser>() { // from class: com.alient.gaiax.container.component.GaiaxComponent$componentParser$2
+        a = b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<BasicComponentParser>() { // from class: com.alient.gaiax.container.component.GaiaxComponent$componentParser$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull

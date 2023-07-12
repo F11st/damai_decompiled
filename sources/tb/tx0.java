@@ -4,7 +4,6 @@ import android.app.Application;
 import androidx.exifinterface.media.ExifInterface;
 import cn.damai.abtest.ABTestOrangeModel;
 import cn.damai.common.AppConfig;
-import cn.damai.common.util.toastutil.C0537a;
 import com.alibaba.pictures.abtest.provider.ABTestProvider;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -53,7 +52,7 @@ public final class tx0 {
         if (AndroidInstantRuntime.support(ipChange, "553293927")) {
             return (String) ipChange.ipc$dispatch("553293927", new Object[]{this});
         }
-        ABTestOrangeModel a2 = C8933b.INSTANCE.a();
+        ABTestOrangeModel a2 = b.INSTANCE.a();
         if (a2 != null) {
             return a2.homepageBucketId;
         }
@@ -65,7 +64,7 @@ public final class tx0 {
         if (AndroidInstantRuntime.support(ipChange, "-285670193")) {
             return ((Long) ipChange.ipc$dispatch("-285670193", new Object[]{this})).longValue();
         }
-        ABTestOrangeModel a2 = C8933b.INSTANCE.a();
+        ABTestOrangeModel a2 = b.INSTANCE.a();
         if (a2 != null) {
             return a2.homepageExperimentId;
         }
@@ -78,7 +77,7 @@ public final class tx0 {
         if (AndroidInstantRuntime.support(ipChange, "1100157002")) {
             return (String) ipChange.ipc$dispatch("1100157002", new Object[]{this});
         }
-        ABTestOrangeModel a2 = C8933b.INSTANCE.a();
+        ABTestOrangeModel a2 = b.INSTANCE.a();
         String str = a2 != null ? a2.homepageScenarioCode : null;
         return str == null ? "damai_home_ab" : str;
     }
@@ -91,12 +90,12 @@ public final class tx0 {
         String string = ko.f().getString(KEY_HOME_PAGE_FORCE_DEFAULT, VALUE_MODEL_DEFAULT);
         if (b41.d(string, VALUE_MODEL_CMS)) {
             if (AppConfig.v()) {
-                C0537a.i(mu0.a(), "CMS首页");
+                cn.damai.common.util.toastutil.a.i(mu0.a(), "CMS首页");
             }
             return true;
         } else if (b41.d(string, "old")) {
             if (AppConfig.v()) {
-                C0537a.i(mu0.a(), "老首页");
+                cn.damai.common.util.toastutil.a.i(mu0.a(), "老首页");
             }
             return false;
         } else {
@@ -111,7 +110,7 @@ public final class tx0 {
                 }
                 sb.append(str);
                 sb.append((char) 26742);
-                C0537a.i(a2, sb.toString());
+                cn.damai.common.util.toastutil.a.i(a2, sb.toString());
             }
             return !f();
         }

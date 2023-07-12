@@ -160,14 +160,14 @@ public class GenericFooterPresent extends AbsPresenter<GenericItem<ItemValue>, G
             if (styleUtil.hasStyle(genericItem.getComponent().getProperty().getStyle(), StyleConstant.FOOTER_BG_COLOR)) {
                 Activity activity = genericItem.getPageContext().getActivity();
                 if (activity != null) {
-                    String hexString = Integer.toHexString(styleUtil.getColor(activity, genericItem.getComponent().getProperty().getStyle(), StyleConstant.FOOTER_BG_COLOR, R.C4040color.white));
+                    String hexString = Integer.toHexString(styleUtil.getColor(activity, genericItem.getComponent().getProperty().getStyle(), StyleConstant.FOOTER_BG_COLOR, R.color.white));
                     ((GenericFooterView) getView()).renderBackground(ColorUtil.parseColorSafely(hexString), ColorUtil.parseColorSafely(hexString));
                 }
             } else if (styleUtil.hasStyle(genericItem.getComponent().getProperty().getStyle(), StyleConstant.FOOTER_BG_START_COLOR)) {
                 Activity activity2 = genericItem.getPageContext().getActivity();
                 if (activity2 != null) {
                     Style style = genericItem.getComponent().getProperty().getStyle();
-                    int i = R.C4040color.white;
+                    int i = R.color.white;
                     ((GenericFooterView) getView()).renderBackground(ColorUtil.parseColorSafely(Integer.toHexString(styleUtil.getColor(activity2, style, StyleConstant.FOOTER_BG_START_COLOR, i))), ColorUtil.parseColorSafely(Integer.toHexString(styleUtil.getColor(activity2, genericItem.getComponent().getProperty().getStyle(), StyleConstant.FOOTER_BG_END_COLOR, i))));
                 }
             } else {
@@ -182,7 +182,7 @@ public class GenericFooterPresent extends AbsPresenter<GenericItem<ItemValue>, G
             if (styleUtil.hasStyle(genericItem.getComponent().getProperty().getStyle(), StyleConstant.FOOTER_TEXT_COLOR)) {
                 Activity activity3 = genericItem.getPageContext().getActivity();
                 if (activity3 != null) {
-                    ((GenericFooterView) getView()).renderFooterTextColor(ColorUtil.parseColorSafely(Integer.toHexString(styleUtil.getColor(activity3, genericItem.getComponent().getProperty().getStyle(), StyleConstant.FOOTER_TEXT_COLOR, R.C4040color.black))));
+                    ((GenericFooterView) getView()).renderFooterTextColor(ColorUtil.parseColorSafely(Integer.toHexString(styleUtil.getColor(activity3, genericItem.getComponent().getProperty().getStyle(), StyleConstant.FOOTER_TEXT_COLOR, R.color.black))));
                 }
             } else {
                 String string6 = data2.getString(StyleConstant.FOOTER_TEXT_COLOR);

@@ -1,7 +1,7 @@
 package com.youku.middlewareservice.provider;
 
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -11,7 +11,7 @@ public class EggDialogProviderProxy {
     public static String getEggDialogApi() {
         try {
             if (sProxy == null) {
-                sProxy = (EggDialogProvider) C8883a.j("com.youku.middlewareservice_impl.provider.EggDialogProviderImpl").b().f();
+                sProxy = (EggDialogProvider) a.j("com.youku.middlewareservice_impl.provider.EggDialogProviderImpl").b().f();
             }
             return sProxy.getEggDialogApi();
         } catch (Throwable th) {
@@ -22,7 +22,7 @@ public class EggDialogProviderProxy {
 
     public static EggDialogProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (EggDialogProvider) C8883a.j("com.youku.middlewareservice_impl.provider.EggDialogProviderImpl").b().f();
+            sProxy = (EggDialogProvider) a.j("com.youku.middlewareservice_impl.provider.EggDialogProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -40,7 +40,7 @@ public class EggDialogProviderProxy {
     public static boolean isAvailable() {
         try {
             if (sProxy == null) {
-                sProxy = (EggDialogProvider) C8883a.j("com.youku.middlewareservice_impl.provider.EggDialogProviderImpl").b().f();
+                sProxy = (EggDialogProvider) a.j("com.youku.middlewareservice_impl.provider.EggDialogProviderImpl").b().f();
             }
             return sProxy.isAvailable();
         } catch (Throwable th) {

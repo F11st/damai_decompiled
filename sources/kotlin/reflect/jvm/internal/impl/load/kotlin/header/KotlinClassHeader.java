@@ -3,9 +3,9 @@ package kotlin.reflect.jvm.internal.impl.load.kotlin.header;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import kotlin.collections.C8207h;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8225w;
+import kotlin.collections.h;
+import kotlin.collections.m;
+import kotlin.collections.w;
 import kotlin.jvm.JvmStatic;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -42,19 +42,18 @@ public final class KotlinClassHeader {
         MULTIFILE_CLASS_PART(5);
         
         @NotNull
-        public static final C8378a Companion = new C8378a(null);
+        public static final a Companion = new a(null);
         @NotNull
         private static final Map<Integer, Kind> entryById;
         private final int id;
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.load.kotlin.header.KotlinClassHeader$Kind$a */
         /* loaded from: classes3.dex */
-        public static final class C8378a {
-            private C8378a() {
+        public static final class a {
+            private a() {
             }
 
-            public /* synthetic */ C8378a(k50 k50Var) {
+            public /* synthetic */ a(k50 k50Var) {
                 this();
             }
 
@@ -68,11 +67,11 @@ public final class KotlinClassHeader {
 
         static {
             int e;
-            int a;
+            int a2;
             Kind[] values = values();
-            e = C8225w.e(values.length);
-            a = ty1.a(e, 16);
-            LinkedHashMap linkedHashMap = new LinkedHashMap(a);
+            e = w.e(values.length);
+            a2 = ty1.a(e, 16);
+            LinkedHashMap linkedHashMap = new LinkedHashMap(a2);
             for (Kind kind : values) {
                 linkedHashMap.put(Integer.valueOf(kind.getId()), kind);
             }
@@ -146,11 +145,11 @@ public final class KotlinClassHeader {
         if (!(c() == Kind.MULTIFILE_CLASS)) {
             strArr = null;
         }
-        List<String> d = strArr != null ? C8207h.d(strArr) : null;
+        List<String> d = strArr != null ? h.d(strArr) : null;
         if (d != null) {
             return d;
         }
-        g = C8214m.g();
+        g = m.g();
         return g;
     }
 

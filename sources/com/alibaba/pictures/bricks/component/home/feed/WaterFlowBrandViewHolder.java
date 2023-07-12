@@ -14,7 +14,6 @@ import com.alibaba.pictures.R$drawable;
 import com.alibaba.pictures.R$id;
 import com.alibaba.pictures.bricks.bean.WaterFlowRecommendItem;
 import com.alibaba.pictures.bricks.component.home.feed.WaterFlowBrandViewHolder;
-import com.alibaba.pictures.bricks.util.C3550a;
 import com.alibaba.pictures.bricks.util.DMRGBUtil;
 import com.alibaba.pictures.bricks.util.blur.ImageBlurHelper;
 import com.alient.onearch.adapter.view.BaseViewHolder;
@@ -49,12 +48,11 @@ public class WaterFlowBrandViewHolder extends BaseViewHolder<WaterFlowRecommendI
     private TextView mVenueName;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.feed.WaterFlowBrandViewHolder$a */
     /* loaded from: classes7.dex */
-    public class C3473a implements DMRGBUtil.OnFetchColorListener {
+    public class a implements DMRGBUtil.OnFetchColorListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3473a() {
+        a() {
         }
 
         @Override // com.alibaba.pictures.bricks.util.DMRGBUtil.OnFetchColorListener
@@ -69,12 +67,11 @@ public class WaterFlowBrandViewHolder extends BaseViewHolder<WaterFlowRecommendI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.feed.WaterFlowBrandViewHolder$b */
     /* loaded from: classes7.dex */
-    public class C3474b implements ImageBlurHelper.BlurImageCallback {
+    public class b implements ImageBlurHelper.BlurImageCallback {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3474b() {
+        b() {
         }
 
         @Override // com.alibaba.pictures.bricks.util.blur.ImageBlurHelper.BlurImageCallback
@@ -112,8 +109,8 @@ public class WaterFlowBrandViewHolder extends BaseViewHolder<WaterFlowRecommendI
         if (AndroidInstantRuntime.support(ipChange, "-1657884129")) {
             ipChange.ipc$dispatch("-1657884129", new Object[]{this, waterFlowRecommendItem, successEvent});
         } else if (successEvent != null && (bitmap = successEvent.bitmap) != null) {
-            DMRGBUtil.f(0.7f, bitmap, waterFlowRecommendItem.backgroundPic, new C3473a());
-            y11.b(this.mContext, waterFlowRecommendItem.backgroundPic, successEvent.bitmap, new C3474b());
+            DMRGBUtil.f(0.7f, bitmap, waterFlowRecommendItem.backgroundPic, new a());
+            y11.b(this.mContext, waterFlowRecommendItem.backgroundPic, successEvent.bitmap, new b());
         } else {
             this.mVenueBgImage.setImageResource(R$drawable.bricks_homepage_waterflow_venues_default_bg);
             this.mVenueBgShade.setImageResource(R$drawable.bricks_homepage_waterflow_venues_default_shade);
@@ -153,7 +150,7 @@ public class WaterFlowBrandViewHolder extends BaseViewHolder<WaterFlowRecommendI
             ipChange.ipc$dispatch("468032618", new Object[]{this, waterFlowRecommendItem});
         } else if (waterFlowRecommendItem == null) {
         } else {
-            ImageLoaderProviderProxy.getProxy().load(C3550a.c(waterFlowRecommendItem.backgroundPic, this.imageViewWidth, this.imageViewHeight), new IImageSuccListener() { // from class: tb.v03
+            ImageLoaderProviderProxy.getProxy().load(com.alibaba.pictures.bricks.util.a.c(waterFlowRecommendItem.backgroundPic, this.imageViewWidth, this.imageViewHeight), new IImageSuccListener() { // from class: tb.v03
                 @Override // com.alient.oneservice.image.IImageSuccListener
                 public final void onSuccess(SuccessEvent successEvent) {
                     WaterFlowBrandViewHolder.this.lambda$handleView$0(waterFlowRecommendItem, successEvent);
@@ -166,7 +163,7 @@ public class WaterFlowBrandViewHolder extends BaseViewHolder<WaterFlowRecommendI
             });
             String str = waterFlowRecommendItem.pic;
             s60 s60Var = s60.INSTANCE;
-            String c = C3550a.c(str, s60Var.b(this.mContext, 50), s60Var.b(this.mContext, 50));
+            String c = com.alibaba.pictures.bricks.util.a.c(str, s60Var.b(this.mContext, 50), s60Var.b(this.mContext, 50));
             ImageLoaderProvider proxy = ImageLoaderProviderProxy.getProxy();
             ImageView imageView = this.mVenueHeaderIcon;
             int i = R$drawable.bricks_uikit_user_default_icon_trans_white;

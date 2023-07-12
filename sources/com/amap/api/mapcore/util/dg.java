@@ -11,20 +11,19 @@ public class dg implements Runnable {
     private Context a;
     private IAMapDelegate b;
     private df c;
-    private InterfaceC4514a d;
+    private a d;
     private int e;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.dg$a */
     /* loaded from: classes10.dex */
-    public interface InterfaceC4514a {
+    public interface a {
         void a(byte[] bArr, int i);
     }
 
-    public dg(Context context, InterfaceC4514a interfaceC4514a, int i, String str) {
+    public dg(Context context, a aVar, int i, String str) {
         this.e = 0;
         this.a = context;
-        this.d = interfaceC4514a;
+        this.d = aVar;
         this.e = i;
         if (this.c == null) {
             this.c = new df(context, "", i != 0);
@@ -45,15 +44,15 @@ public class dg implements Runnable {
 
     @Override // java.lang.Runnable
     public void run() {
-        df.C4513a e;
+        df.a e;
         byte[] bArr;
         try {
             if (MapsInitializer.getNetWorkEnable()) {
                 df dfVar = this.c;
                 if (dfVar != null && (e = dfVar.e()) != null && (bArr = e.a) != null) {
-                    InterfaceC4514a interfaceC4514a = this.d;
-                    if (interfaceC4514a != null) {
-                        interfaceC4514a.a(bArr, this.e);
+                    a aVar = this.d;
+                    if (aVar != null) {
+                        aVar.a(bArr, this.e);
                     } else {
                         IAMapDelegate iAMapDelegate = this.b;
                         if (iAMapDelegate != null) {

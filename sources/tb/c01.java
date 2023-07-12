@@ -5,21 +5,19 @@ import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-import okhttp3.internal.C8753a;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
 public final class c01 {
     public static final long MAX_DATE = 253402300799999L;
-    private static final ThreadLocal<DateFormat> a = new C8987a();
+    private static final ThreadLocal<DateFormat> a = new a();
     private static final String[] b;
     private static final DateFormat[] c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.c01$a */
     /* loaded from: classes2.dex */
-    class C8987a extends ThreadLocal<DateFormat> {
-        C8987a() {
+    class a extends ThreadLocal<DateFormat> {
+        a() {
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
@@ -28,7 +26,7 @@ public final class c01 {
         public DateFormat initialValue() {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss 'GMT'", Locale.US);
             simpleDateFormat.setLenient(false);
-            simpleDateFormat.setTimeZone(C8753a.UTC);
+            simpleDateFormat.setTimeZone(okhttp3.internal.a.UTC);
             return simpleDateFormat;
         }
     }
@@ -60,7 +58,7 @@ public final class c01 {
                 DateFormat dateFormat = dateFormatArr[i];
                 if (dateFormat == null) {
                     dateFormat = new SimpleDateFormat(b[i], Locale.US);
-                    dateFormat.setTimeZone(C8753a.UTC);
+                    dateFormat.setTimeZone(okhttp3.internal.a.UTC);
                     dateFormatArr[i] = dateFormat;
                 }
                 parsePosition.setIndex(0);

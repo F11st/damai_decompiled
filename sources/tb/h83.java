@@ -70,10 +70,9 @@ public final class h83 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.h83$a */
     /* loaded from: classes10.dex */
-    public final class C9209a extends GnssStatus.Callback {
-        C9209a() {
+    public final class a extends GnssStatus.Callback {
+        a() {
         }
 
         @Override // android.location.GnssStatus.Callback
@@ -99,10 +98,9 @@ public final class h83 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.h83$b */
     /* loaded from: classes10.dex */
-    public final class C9210b implements GpsStatus.Listener {
-        C9210b() {
+    public final class b implements GpsStatus.Listener {
+        b() {
         }
 
         @Override // android.location.GpsStatus.Listener
@@ -133,12 +131,11 @@ public final class h83 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.h83$c */
     /* loaded from: classes10.dex */
-    public static class C9211c implements LocationListener {
+    public static class c implements LocationListener {
         private h83 a;
 
-        C9211c(h83 h83Var) {
+        c(h83 h83Var) {
             this.a = h83Var;
         }
 
@@ -255,9 +252,9 @@ public final class h83 {
         if (com.loc.m1.q(aMapLocation) && com.loc.i1.H()) {
             long time = aMapLocation.getTime();
             long currentTimeMillis = System.currentTimeMillis();
-            long c = x73.c(time, currentTimeMillis, com.loc.i1.I());
-            if (c != time) {
-                aMapLocation.setTime(c);
+            long c2 = x73.c(time, currentTimeMillis, com.loc.i1.I());
+            if (c2 != time) {
+                aMapLocation.setTime(c2);
                 com.loc.l1.b(time, currentTimeMillis);
             }
         }
@@ -285,9 +282,9 @@ public final class h83 {
                     if (com.loc.m1.N(this.b, "WYW5kcm9pZC5wZXJtaXNzaW9uLkFDQ0VTU19MT0NBVElPTl9FWFRSQV9DT01NQU5EUw==")) {
                         this.c.sendExtraCommand(GeocodeSearch.GPS, "force_xtra_injection", null);
                         G = com.loc.m1.g();
-                        SharedPreferences.Editor c = a83.c(this.b, "pref");
-                        a83.i(c, "lagt", G);
-                        a83.f(c);
+                        SharedPreferences.Editor c2 = a83.c(this.b, "pref");
+                        a83.i(c2, "lagt", G);
+                        a83.f(c2);
                     } else {
                         com.loc.j1.h(new Exception("n_alec"), "OPENSDK_GL", "rlu_n_alec");
                     }
@@ -296,17 +293,17 @@ public final class h83 {
                 new StringBuilder("GpsLocation | sendExtraCommand error: ").append(th.getMessage());
             }
             if (this.y == null) {
-                this.y = new C9211c(this);
+                this.y = new c(this);
             }
             com.alibaba.wireless.security.aopsdk.replace.android.location.LocationManager.requestLocationUpdates(this.c, GeocodeSearch.GPS, this.d.getInterval(), this.d.getDeviceModeDistanceFilter(), this.y, looper);
             if (Build.VERSION.SDK_INT >= 24) {
-                C9209a c9209a = new C9209a();
-                this.t = c9209a;
-                this.c.registerGnssStatusCallback(c9209a);
+                a aVar = new a();
+                this.t = aVar;
+                this.c.registerGnssStatusCallback(aVar);
             } else {
-                C9210b c9210b = new C9210b();
-                this.s = c9210b;
-                this.c.addGpsStatusListener(c9210b);
+                b bVar = new b();
+                this.s = bVar;
+                this.c.addGpsStatusListener(bVar);
             }
             e(8, 14, "no enough satellites#1401", this.d.getHttpTimeOut());
         } catch (SecurityException e) {
@@ -710,7 +707,7 @@ public final class h83 {
             LocationListener locationListener = this.y;
             if (locationListener != null) {
                 locationManager.removeUpdates(locationListener);
-                ((C9211c) this.y).a();
+                ((c) this.y).a();
                 this.y = null;
             }
         } catch (Throwable unused) {

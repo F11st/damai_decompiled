@@ -2,8 +2,6 @@ package tb;
 
 import android.text.TextUtils;
 import android.view.View;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import cn.damai.projectfilter.bean.CategoryLevelOne;
 import cn.damai.projectfilter.bean.CategoryLevelTwo;
 import cn.damai.projectfilter.bean.FilterBean;
@@ -17,15 +15,14 @@ import java.util.HashMap;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
-public class lj0 extends C0528b {
+public class lj0 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange;
     public String b;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.lj0$a */
     /* loaded from: classes6.dex */
-    public static /* synthetic */ class C9415a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -72,7 +69,7 @@ public class lj0 extends C0528b {
         if (AndroidInstantRuntime.support(ipChange, "-2130758861")) {
             return (String) ipChange.ipc$dispatch("-2130758861", new Object[]{this, type});
         }
-        switch (C9415a.a[type.ordinal()]) {
+        switch (a.a[type.ordinal()]) {
             case 1:
                 return "more";
             case 2:
@@ -99,7 +96,7 @@ public class lj0 extends C0528b {
         f.put("dateType", i + "");
         f.put("startDate", str);
         f.put("endDate", str2);
-        C0529c.e().x(e(this.b, "date_selector", "confirm", f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(e(this.b, "date_selector", "confirm", f, Boolean.FALSE));
     }
 
     public void g(String str, int i) {
@@ -111,7 +108,7 @@ public class lj0 extends C0528b {
         HashMap<String, String> f = d23.f();
         f.put("titlelabel", str);
         String str2 = this.b;
-        C0529c.e().x(e(str2, "date_selector", "item_" + i, f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(e(str2, "date_selector", "item_" + i, f, Boolean.FALSE));
     }
 
     public void h() {
@@ -119,7 +116,7 @@ public class lj0 extends C0528b {
         if (AndroidInstantRuntime.support(ipChange, "475378866")) {
             ipChange.ipc$dispatch("475378866", new Object[]{this});
         } else {
-            C0529c.e().x(e(this.b, "date_selector", "reset", d23.f(), Boolean.FALSE));
+            cn.damai.common.user.c.e().x(e(this.b, "date_selector", "reset", d23.f(), Boolean.FALSE));
         }
     }
 
@@ -128,7 +125,7 @@ public class lj0 extends C0528b {
         if (AndroidInstantRuntime.support(ipChange, "-423868588")) {
             ipChange.ipc$dispatch("-423868588", new Object[]{this, str});
         } else {
-            C0529c.e().x(e(this.b, "category_selector", str, d23.f(), Boolean.FALSE));
+            cn.damai.common.user.c.e().x(e(this.b, "category_selector", str, d23.f(), Boolean.FALSE));
         }
     }
 
@@ -140,7 +137,7 @@ public class lj0 extends C0528b {
         }
         HashMap<String, String> f = d23.f();
         f.put("titlelabel", str);
-        C0529c.e().x(e(this.b, "city_selector", "city_item", f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(e(this.b, "city_selector", "city_item", f, Boolean.FALSE));
     }
 
     public void k(FilterBean filterBean, int i) {
@@ -153,7 +150,7 @@ public class lj0 extends C0528b {
         HashMap<String, String> f = d23.f();
         f.put("titlelabel", filterBean.name);
         String str = this.b;
-        C0529c.e().x(e(str, Constants.Name.FILTER, y + i, f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(e(str, Constants.Name.FILTER, y + i, f, Boolean.FALSE));
     }
 
     public void l(Type type) {
@@ -161,7 +158,7 @@ public class lj0 extends C0528b {
         if (AndroidInstantRuntime.support(ipChange, "-2022154028")) {
             ipChange.ipc$dispatch("-2022154028", new Object[]{this, type});
         } else {
-            C0529c.e().x(e(this.b, Constants.Name.FILTER, z(type), d23.f(), Boolean.FALSE));
+            cn.damai.common.user.c.e().x(e(this.b, Constants.Name.FILTER, z(type), d23.f(), Boolean.FALSE));
         }
     }
 
@@ -170,7 +167,7 @@ public class lj0 extends C0528b {
         if (AndroidInstantRuntime.support(ipChange, "1190529562")) {
             ipChange.ipc$dispatch("1190529562", new Object[]{this, str});
         } else {
-            C0529c.e().x(e(this.b, "more_selector", str, d23.f(), Boolean.FALSE));
+            cn.damai.common.user.c.e().x(e(this.b, "more_selector", str, d23.f(), Boolean.FALSE));
         }
     }
 
@@ -183,7 +180,7 @@ public class lj0 extends C0528b {
         HashMap<String, String> f = d23.f();
         f.put("titlelabel", filterBean.name);
         String str = this.b;
-        C0529c.e().x(e(str, "more_selector", (filterBean.option + JSMethod.NOT_SET) + i, f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(e(str, "more_selector", (filterBean.option + JSMethod.NOT_SET) + i, f, Boolean.FALSE));
     }
 
     public void o(CategoryLevelOne categoryLevelOne, int i) {
@@ -195,7 +192,7 @@ public class lj0 extends C0528b {
         HashMap<String, String> f = d23.f();
         f.put("titlelabel", categoryLevelOne.name);
         String str = this.b;
-        C0529c.e().x(e(str, "category_filter", "item_" + i, f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(e(str, "category_filter", "item_" + i, f, Boolean.FALSE));
     }
 
     public void p(CategoryLevelTwo categoryLevelTwo, int i, int i2) {
@@ -206,7 +203,7 @@ public class lj0 extends C0528b {
         }
         HashMap<String, String> f = d23.f();
         f.put("titlelabel", categoryLevelTwo.name);
-        C0529c.e().x(e(this.b, "category_filter_item_" + i2, "item_" + i, f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(e(this.b, "category_filter_item_" + i2, "item_" + i, f, Boolean.FALSE));
     }
 
     public void q(SortBean sortBean) {
@@ -219,7 +216,7 @@ public class lj0 extends C0528b {
         HashMap<String, String> f = d23.f();
         f.put("titlelabel", sortBean.name);
         String str = this.b;
-        C0529c.e().x(e(str, "sorttype_selector", "item_" + i, f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(e(str, "sorttype_selector", "item_" + i, f, Boolean.FALSE));
     }
 
     public void r(long j) {
@@ -231,16 +228,16 @@ public class lj0 extends C0528b {
         long currentTimeMillis = System.currentTimeMillis() - j;
         HashMap<String, String> f = d23.f();
         f.put("titlelabel", "一周内");
-        C0529c.e().C("item_1", "date_selector", this.b, "1.0", currentTimeMillis, f, 2201);
+        cn.damai.common.user.c.e().C("item_1", "date_selector", this.b, "1.0", currentTimeMillis, f, 2201);
         HashMap<String, String> f2 = d23.f();
         f2.put("titlelabel", "一月内");
-        C0529c.e().C("item_2", "date_selector", this.b, "1.0", currentTimeMillis, f2, 2201);
+        cn.damai.common.user.c.e().C("item_2", "date_selector", this.b, "1.0", currentTimeMillis, f2, 2201);
         HashMap<String, String> f3 = d23.f();
         f3.put("titlelabel", "本周末");
-        C0529c.e().C("item_3", "date_selector", this.b, "1.0", currentTimeMillis, f3, 2201);
+        cn.damai.common.user.c.e().C("item_3", "date_selector", this.b, "1.0", currentTimeMillis, f3, 2201);
         HashMap<String, String> f4 = d23.f();
         f4.put("titlelabel", "全部时间");
-        C0529c.e().C("item_0", "date_selector", this.b, "1.0", currentTimeMillis, f4, 2201);
+        cn.damai.common.user.c.e().C("item_0", "date_selector", this.b, "1.0", currentTimeMillis, f4, 2201);
     }
 
     public void s(View view, long j) {
@@ -248,7 +245,7 @@ public class lj0 extends C0528b {
         if (AndroidInstantRuntime.support(ipChange, "2114806024")) {
             ipChange.ipc$dispatch("2114806024", new Object[]{this, view, Long.valueOf(j)});
         } else {
-            C0529c.e().C("confirm", "category_selector", this.b, "1.0", j, d23.f(), 2201);
+            cn.damai.common.user.c.e().C("confirm", "category_selector", this.b, "1.0", j, d23.f(), 2201);
         }
     }
 
@@ -260,7 +257,7 @@ public class lj0 extends C0528b {
         }
         HashMap<String, String> f = d23.f();
         f.put("titlelabel", str);
-        C0529c.e().C("city_item", "city_selector", this.b, "1.0", System.currentTimeMillis() - j, f, 2201);
+        cn.damai.common.user.c.e().C("city_item", "city_selector", this.b, "1.0", System.currentTimeMillis() - j, f, 2201);
     }
 
     public void u(View view, FilterBean filterBean, int i) {
@@ -272,7 +269,7 @@ public class lj0 extends C0528b {
         String y = y(filterBean);
         HashMap<String, String> f = d23.f();
         f.put("titlelabel", filterBean.name);
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         e.G(view, y + i, Constants.Name.FILTER, this.b, f);
     }
 
@@ -281,7 +278,7 @@ public class lj0 extends C0528b {
         if (AndroidInstantRuntime.support(ipChange, "589941340")) {
             ipChange.ipc$dispatch("589941340", new Object[]{this, view, type});
         } else {
-            C0529c.e().G(view, z(type), Constants.Name.FILTER, this.b, d23.f());
+            cn.damai.common.user.c.e().G(view, z(type), Constants.Name.FILTER, this.b, d23.f());
         }
     }
 
@@ -290,7 +287,7 @@ public class lj0 extends C0528b {
         if (AndroidInstantRuntime.support(ipChange, "-141723198")) {
             ipChange.ipc$dispatch("-141723198", new Object[]{this, view, Long.valueOf(j)});
         } else {
-            C0529c.e().C("confirm", "more_selector", this.b, "1.0", j, d23.f(), 2201);
+            cn.damai.common.user.c.e().C("confirm", "more_selector", this.b, "1.0", j, d23.f(), 2201);
         }
     }
 
@@ -302,7 +299,7 @@ public class lj0 extends C0528b {
         }
         HashMap<String, String> f = d23.f();
         f.put("titlelabel", sortBean.name);
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         e.C("item_" + i, "sorttype_selector", this.b, "1.0", j, f, 2201);
     }
 }

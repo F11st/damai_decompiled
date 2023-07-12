@@ -14,7 +14,6 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.commonbusiness.model.UserBaseInfoBean;
 import cn.damai.commonbusiness.model.UserData;
@@ -47,15 +46,14 @@ public class TicketGuidePreFillActity extends SimpleBaseActivity {
     private String[] ticketGuideTitle;
     private int[] ids = {R$drawable.icon_pre_custom, R$drawable.icon_pre_address, R$drawable.icon_pre_email};
     private boolean visEmail = false;
-    View.OnClickListener itemClickListener = new View$OnClickListenerC2419b();
+    View.OnClickListener itemClickListener = new b();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.robticketstrategy.TicketGuidePreFillActity$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2418a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2418a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -70,12 +68,11 @@ public class TicketGuidePreFillActity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.robticketstrategy.TicketGuidePreFillActity$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2419b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2419b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -98,12 +95,11 @@ public class TicketGuidePreFillActity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.robticketstrategy.TicketGuidePreFillActity$c */
     /* loaded from: classes8.dex */
-    public class C2420c implements UserInfoUtil.OnUserInfoListener {
+    public class c implements UserInfoUtil.OnUserInfoListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2420c() {
+        c() {
         }
 
         @Override // cn.damai.im.UserInfoUtil.OnUserInfoListener
@@ -141,7 +137,7 @@ public class TicketGuidePreFillActity extends SimpleBaseActivity {
             personalInfoRequest.needUserBaseInfo = "true";
             personalInfoRequest.needCertificationBaseInfo = "true";
             personalInfoRequest.canAcceptDelay = "false";
-            UserInfoUtil.b(personalInfoRequest, new C2420c());
+            UserInfoUtil.b(personalInfoRequest, new c());
         }
     }
 
@@ -201,7 +197,7 @@ public class TicketGuidePreFillActity extends SimpleBaseActivity {
         textView.setTextSize(1, 20.0f);
         DMIconFontTextView dMIconFontTextView = (DMIconFontTextView) findViewById(R$id.ticket_rob_title_back_tv);
         dMIconFontTextView.setTextColor(ContextCompat.getColor(this, i));
-        dMIconFontTextView.setOnClickListener(new View$OnClickListenerC2418a());
+        dMIconFontTextView.setOnClickListener(new a());
     }
 
     private void loadData() {
@@ -236,7 +232,7 @@ public class TicketGuidePreFillActity extends SimpleBaseActivity {
             ipChange.ipc$dispatch("1475513260", new Object[]{this});
             return;
         }
-        C0529c.e().x(pp2.u().A2(this.mProjectId));
+        cn.damai.common.user.c.e().x(pp2.u().A2(this.mProjectId));
         if (LoginManager.k().q()) {
             Bundle bundle = new Bundle();
             bundle.putString("type", "morenpeisong");
@@ -253,7 +249,7 @@ public class TicketGuidePreFillActity extends SimpleBaseActivity {
             ipChange.ipc$dispatch("-1162544816", new Object[]{this});
             return;
         }
-        C0529c.e().x(pp2.u().B2(this.mProjectId));
+        cn.damai.common.user.c.e().x(pp2.u().B2(this.mProjectId));
         if (LoginManager.k().q()) {
             DMNav.from(this).toUri(NavUri.b(cs.R));
         } else {
@@ -268,7 +264,7 @@ public class TicketGuidePreFillActity extends SimpleBaseActivity {
             ipChange.ipc$dispatch("927703475", new Object[]{this});
             return;
         }
-        C0529c.e().x(pp2.u().C2(this.mProjectId));
+        cn.damai.common.user.c.e().x(pp2.u().C2(this.mProjectId));
         if (LoginManager.k().q()) {
             if (TextUtils.isEmpty(this.mEmailContent)) {
                 LoginManager.k().d(this);

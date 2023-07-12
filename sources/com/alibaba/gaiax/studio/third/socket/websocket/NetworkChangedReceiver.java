@@ -30,17 +30,17 @@ public class NetworkChangedReceiver extends BroadcastReceiver {
                 } else if (activeNetworkInfo.getType() == 0) {
                     eb1.d("WSNetworkReceiver", "网络连接发生变化，当前移动连接可用，正在尝试重连。");
                 }
-                if (C3391a.d() != null && C3391a.d().l().k()) {
-                    C3391a.d().n();
+                if (a.d() != null && a.d().l().k()) {
+                    a.d().n();
                 }
-                if (C3391a.c().isEmpty()) {
+                if (a.c().isEmpty()) {
                     return;
                 }
-                Map<String, C3392b> c = C3391a.c();
+                Map<String, b> c = a.c();
                 for (String str : c.keySet()) {
-                    C3392b c3392b = c.get(str);
-                    if (c3392b != null && c3392b.l().k()) {
-                        c3392b.n();
+                    b bVar = c.get(str);
+                    if (bVar != null && bVar.l().k()) {
+                        bVar.n();
                     }
                 }
                 return;

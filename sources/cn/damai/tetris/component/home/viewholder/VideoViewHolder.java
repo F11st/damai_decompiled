@@ -60,12 +60,11 @@ public class VideoViewHolder extends CommonViewHolder {
     protected View userAvatar;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.viewholder.VideoViewHolder$a */
     /* loaded from: classes7.dex */
-    public class C1866a implements OnPlayerUTReportListener {
+    public class a implements OnPlayerUTReportListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1866a() {
+        a() {
         }
 
         @Override // cn.damai.player.listener.OnPlayerUTReportListener
@@ -136,12 +135,11 @@ public class VideoViewHolder extends CommonViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.viewholder.VideoViewHolder$b */
     /* loaded from: classes7.dex */
-    public class C1867b implements IVideoAdapter.OnVideoItemClickListener {
+    public class b implements IVideoAdapter.OnVideoItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1867b() {
+        b() {
         }
 
         @Override // cn.damai.tetris.component.home.adapter.IVideoAdapter.OnVideoItemClickListener
@@ -205,12 +203,11 @@ public class VideoViewHolder extends CommonViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.viewholder.VideoViewHolder$c */
     /* loaded from: classes16.dex */
-    public class View$OnAttachStateChangeListenerC1868c implements View.OnAttachStateChangeListener {
+    public class c implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC1868c() {
+        c() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -242,8 +239,8 @@ public class VideoViewHolder extends CommonViewHolder {
 
     public VideoViewHolder(View view) {
         super(view);
-        this.mOnPlayerUTReportListener = new C1866a();
-        this.mOnVideoItemClickListener = new C1867b();
+        this.mOnPlayerUTReportListener = new a();
+        this.mOnVideoItemClickListener = new b();
         this.reset = true;
         this.mContext = view.getContext();
         this.mModuleTitle = (TextView) this.itemView.findViewById(R$id.homepage_module_title_label);
@@ -269,7 +266,7 @@ public class VideoViewHolder extends CommonViewHolder {
         this.mController.setUTReportListener(this.mOnPlayerUTReportListener);
         fixVideoHeight();
         this.itemView.setLayoutParams(new ViewGroup.LayoutParams(-1, -2));
-        this.mVideoPlayer.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC1868c());
+        this.mVideoPlayer.addOnAttachStateChangeListener(new c());
     }
 
     protected void fixVideoHeight() {
@@ -278,12 +275,12 @@ public class VideoViewHolder extends CommonViewHolder {
             ipChange.ipc$dispatch("-1321136031", new Object[]{this});
             return;
         }
-        int c = qx2.c();
+        int c2 = qx2.c();
         RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) this.mVideoCover.getLayoutParams();
-        layoutParams.topMargin = c;
+        layoutParams.topMargin = c2;
         this.mVideoCover.setLayoutParams(layoutParams);
         RelativeLayout.LayoutParams layoutParams2 = (RelativeLayout.LayoutParams) this.mProjectList.getLayoutParams();
-        layoutParams2.topMargin = c - t60.a(this.mContext, 22.0f);
+        layoutParams2.topMargin = c2 - t60.a(this.mContext, 22.0f);
         this.mProjectList.setLayoutParams(layoutParams2);
     }
 

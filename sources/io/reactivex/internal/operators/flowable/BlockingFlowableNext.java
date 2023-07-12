@@ -1,10 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.internal.util.BlockingHelper;
 import io.reactivex.internal.util.ExceptionHelper;
-import io.reactivex.subscribers.AbstractC8173b;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -40,7 +39,7 @@ public final class BlockingFlowableNext<T> implements Iterable<T> {
                 if (!this.started) {
                     this.started = true;
                     this.observer.setWaiting();
-                    AbstractC8147b.fromPublisher(this.items).materialize().subscribe((FlowableSubscriber<? super ul1<T>>) this.observer);
+                    b.fromPublisher(this.items).materialize().subscribe((FlowableSubscriber<? super ul1<T>>) this.observer);
                 }
                 ul1<T> takeNext = this.observer.takeNext();
                 if (takeNext.h()) {
@@ -99,7 +98,7 @@ public final class BlockingFlowableNext<T> implements Iterable<T> {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    public static final class NextSubscriber<T> extends AbstractC8173b<ul1<T>> {
+    public static final class NextSubscriber<T> extends io.reactivex.subscribers.b<ul1<T>> {
         private final BlockingQueue<ul1<T>> buf = new ArrayBlockingQueue(1);
         final AtomicInteger waiting = new AtomicInteger();
 

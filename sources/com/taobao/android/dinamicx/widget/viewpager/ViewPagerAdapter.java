@@ -5,9 +5,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
-import com.taobao.android.dinamicx.C6368e;
-import com.taobao.android.dinamicx.C6384k;
 import com.taobao.android.dinamicx.DXRuntimeContext;
+import com.taobao.android.dinamicx.e;
+import com.taobao.android.dinamicx.k;
 import com.taobao.android.dinamicx.view.DXNativeFrameLayout;
 import com.taobao.android.dinamicx.widget.DXTemplateWidgetNode;
 import com.taobao.android.dinamicx.widget.DXViewPager;
@@ -23,14 +23,14 @@ import tb.ry;
 public class ViewPagerAdapter extends PagerAdapter {
     protected DXViewPager a;
     protected List<DXWidgetNode> b;
-    protected C6384k c;
+    protected k c;
     protected Context d;
     protected LinkedHashMap<Integer, View> e = new LinkedHashMap<>();
 
     public ViewPagerAdapter(DXViewPager dXViewPager, List<DXWidgetNode> list, Context context) {
         this.a = dXViewPager;
         this.b = list;
-        this.c = new C6384k(dXViewPager.getDXRuntimeContext().getEngineContext(), 3, UUID.randomUUID().toString());
+        this.c = new k(dXViewPager.getDXRuntimeContext().getEngineContext(), 3, UUID.randomUUID().toString());
         this.d = context;
     }
 
@@ -94,9 +94,9 @@ public class ViewPagerAdapter extends PagerAdapter {
         DXWidgetNode dXWidgetNode = list.get(i);
         DXNativeFrameLayout dXNativeFrameLayout = new DXNativeFrameLayout(this.d);
         DXRuntimeContext cloneWithWidgetNode = dXWidgetNode.getDXRuntimeContext().cloneWithWidgetNode(dXWidgetNode);
-        C6368e c6368e = new C6368e(cloneWithWidgetNode.getBizType());
-        c6368e.b = cloneWithWidgetNode.getDxTemplateItem();
-        cloneWithWidgetNode.setDxError(c6368e);
+        e eVar = new e(cloneWithWidgetNode.getBizType());
+        eVar.b = cloneWithWidgetNode.getDxTemplateItem();
+        cloneWithWidgetNode.setDxError(eVar);
         int c = DXWidgetNode.DXMeasureSpec.c(this.a.getMeasuredWidth(), 1073741824);
         int c2 = DXWidgetNode.DXMeasureSpec.c(this.a.getMeasuredHeight(), 1073741824);
         if (dXWidgetNode instanceof DXTemplateWidgetNode) {

@@ -12,8 +12,6 @@ import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
-import com.alibaba.wireless.security.framework.utils.C4012a;
-import com.alibaba.wireless.security.framework.utils.C4017e;
 import com.alibaba.wireless.security.framework.utils.UserTrackMethodJniBridge;
 import com.android.dingtalk.share.ddsharemodule.ShareConstant;
 import com.taobao.accs.common.Constants;
@@ -51,7 +49,7 @@ public class SGApmMonitorManager {
     private static ScheduledExecutorService t;
     private static JSONObject u = new JSONObject();
     private static long v;
-    private C3999d e;
+    private com.alibaba.wireless.security.framework.d e;
     private ConcurrentHashMap<String, Number> a = new ConcurrentHashMap<>();
     private ConcurrentHashMap<String, Number> b = new ConcurrentHashMap<>();
     private volatile int c = 0;
@@ -70,10 +68,9 @@ public class SGApmMonitorManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.wireless.security.framework.SGApmMonitorManager$a */
     /* loaded from: classes8.dex */
-    public class C3986a implements Application.ActivityLifecycleCallbacks {
-        C3986a() {
+    public class a implements Application.ActivityLifecycleCallbacks {
+        a() {
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
@@ -123,10 +120,9 @@ public class SGApmMonitorManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.wireless.security.framework.SGApmMonitorManager$b */
     /* loaded from: classes8.dex */
-    class ThreadFactoryC3987b implements ThreadFactory {
-        ThreadFactoryC3987b(SGApmMonitorManager sGApmMonitorManager) {
+    class b implements ThreadFactory {
+        b(SGApmMonitorManager sGApmMonitorManager) {
         }
 
         @Override // java.util.concurrent.ThreadFactory
@@ -136,10 +132,9 @@ public class SGApmMonitorManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.wireless.security.framework.SGApmMonitorManager$c */
     /* loaded from: classes8.dex */
-    class ThreadFactoryC3988c implements ThreadFactory {
-        ThreadFactoryC3988c(SGApmMonitorManager sGApmMonitorManager) {
+    class c implements ThreadFactory {
+        c(SGApmMonitorManager sGApmMonitorManager) {
         }
 
         @Override // java.util.concurrent.ThreadFactory
@@ -149,10 +144,9 @@ public class SGApmMonitorManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.wireless.security.framework.SGApmMonitorManager$d */
     /* loaded from: classes8.dex */
-    class RunnableC3989d implements Runnable {
-        RunnableC3989d() {
+    class d implements Runnable {
+        d() {
         }
 
         @Override // java.lang.Runnable
@@ -162,10 +156,9 @@ public class SGApmMonitorManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.wireless.security.framework.SGApmMonitorManager$e */
     /* loaded from: classes8.dex */
-    class RunnableC3990e implements Runnable {
-        RunnableC3990e() {
+    class e implements Runnable {
+        e() {
         }
 
         @Override // java.lang.Runnable
@@ -176,14 +169,13 @@ public class SGApmMonitorManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.wireless.security.framework.SGApmMonitorManager$f */
     /* loaded from: classes8.dex */
-    public class RunnableC3991f implements Runnable {
+    public class f implements Runnable {
         final /* synthetic */ boolean a;
         final /* synthetic */ String b;
         final /* synthetic */ String c;
 
-        RunnableC3991f(boolean z, String str, String str2) {
+        f(boolean z, String str, String str2) {
             this.a = z;
             this.b = str;
             this.c = str2;
@@ -198,12 +190,11 @@ public class SGApmMonitorManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.wireless.security.framework.SGApmMonitorManager$g */
     /* loaded from: classes8.dex */
-    class RunnableC3992g implements Runnable {
+    class g implements Runnable {
         private String a;
 
-        public RunnableC3992g(String str, int i) {
+        public g(String str, int i) {
             this.a = Base64.encodeToString(SGApmMonitorManager.this.a(str, i).getBytes(), 2);
         }
 
@@ -218,16 +209,15 @@ public class SGApmMonitorManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.wireless.security.framework.SGApmMonitorManager$h */
     /* loaded from: classes8.dex */
-    class RunnableC3993h implements Runnable {
-        RunnableC3993h() {
+    class h implements Runnable {
+        h() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
             if (SGApmMonitorManager.this.h) {
-                SGApmMonitorManager.t.submit(new RunnableC3992g("always", 1));
+                SGApmMonitorManager.t.submit(new g("always", 1));
             }
             if (SGApmMonitorManager.this.c == 0 && SGApmMonitorManager.this.isAllPluginLoaded()) {
                 SGApmMonitorManager.this.g();
@@ -241,18 +231,16 @@ public class SGApmMonitorManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.wireless.security.framework.SGApmMonitorManager$i */
     /* loaded from: classes8.dex */
-    public class RunnableC3994i implements Runnable {
+    public class i implements Runnable {
         private String a;
         private int b;
         private int c;
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.wireless.security.framework.SGApmMonitorManager$i$a */
         /* loaded from: classes8.dex */
-        class RunnableC3995a implements Runnable {
-            RunnableC3995a() {
+        class a implements Runnable {
+            a() {
             }
 
             @Override // java.lang.Runnable
@@ -261,7 +249,7 @@ public class SGApmMonitorManager {
             }
         }
 
-        public RunnableC3994i(String str, int i, int i2) {
+        public i(String str, int i, int i2) {
             this.a = str;
             this.b = i;
             this.c = i2;
@@ -272,16 +260,16 @@ public class SGApmMonitorManager {
             if (this.a != null && SGApmMonitorManager.this.g && SGApmMonitorManager.u != null && this.b <= 5) {
                 try {
                     if (((Number) SGApmMonitorManager.this.b.get(this.a)) == null) {
-                        SGApmMonitorManager.t.submit(new RunnableC3995a());
+                        SGApmMonitorManager.t.submit(new a());
                         ScheduledExecutorService scheduledExecutorService = SGApmMonitorManager.t;
                         SGApmMonitorManager sGApmMonitorManager = SGApmMonitorManager.this;
-                        scheduledExecutorService.submit(new RunnableC3992g(this.a + "_f", this.b));
+                        scheduledExecutorService.submit(new g(this.a + "_f", this.b));
                         SGApmMonitorManager.i(SGApmMonitorManager.this);
-                        SGApmMonitorManager.s.schedule(new RunnableC3994i(this.a, this.b + 1, this.c), (long) this.c, TimeUnit.MILLISECONDS);
+                        SGApmMonitorManager.s.schedule(new i(this.a, this.b + 1, this.c), (long) this.c, TimeUnit.MILLISECONDS);
                     } else if (this.b > 1) {
                         ScheduledExecutorService scheduledExecutorService2 = SGApmMonitorManager.t;
                         SGApmMonitorManager sGApmMonitorManager2 = SGApmMonitorManager.this;
-                        scheduledExecutorService2.submit(new RunnableC3992g(this.a + "_s", this.b));
+                        scheduledExecutorService2.submit(new g(this.a + "_s", this.b));
                     }
                 } catch (Exception unused) {
                 }
@@ -305,13 +293,13 @@ public class SGApmMonitorManager {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public String a(String str, int i) {
+    public String a(String str, int i2) {
         String str2 = "";
         String packageName = this.d.getPackageName();
         try {
             str2 = this.d.getPackageManager().getPackageInfo(packageName, 0).versionName;
-        } catch (PackageManager.NameNotFoundException e) {
-            Log.e("SGApmMonitor", "", e);
+        } catch (PackageManager.NameNotFoundException e2) {
+            Log.e("SGApmMonitor", "", e2);
         }
         long j = this.k;
         long j2 = this.m;
@@ -337,7 +325,7 @@ public class SGApmMonitorManager {
             jSONObject.put("backgroundtime", j2);
             jSONObject.put("fulltrack", this.o);
             jSONObject.put("sample", this.h);
-            jSONObject.put("tryround", i);
+            jSONObject.put("tryround", i2);
             jSONObject.put("initts", v);
             jSONObject.put("timestamp", System.currentTimeMillis());
             jSONObject.put("appver", str2);
@@ -416,15 +404,15 @@ public class SGApmMonitorManager {
                         BufferedReader bufferedReader2 = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
                         do {
                             try {
-                            } catch (Exception e) {
-                                e = e;
+                            } catch (Exception e2) {
+                                e = e2;
                                 bufferedReader = bufferedReader2;
                                 e.printStackTrace();
                                 if (bufferedReader != null) {
                                     try {
                                         bufferedReader.close();
-                                    } catch (IOException e2) {
-                                        e2.printStackTrace();
+                                    } catch (IOException e3) {
+                                        e3.printStackTrace();
                                     }
                                 }
                                 if (r2 == 0) {
@@ -437,8 +425,8 @@ public class SGApmMonitorManager {
                                 if (bufferedReader != null) {
                                     try {
                                         bufferedReader.close();
-                                    } catch (IOException e3) {
-                                        e3.printStackTrace();
+                                    } catch (IOException e4) {
+                                        e4.printStackTrace();
                                     }
                                 }
                                 if (r2 != 0) {
@@ -448,22 +436,22 @@ public class SGApmMonitorManager {
                             }
                         } while (bufferedReader2.readLine() != null);
                         bufferedReader = bufferedReader2;
-                    } catch (Exception e4) {
-                        e = e4;
+                    } catch (Exception e5) {
+                        e = e5;
                     }
                 }
                 if (bufferedReader != null) {
                     try {
                         bufferedReader.close();
-                    } catch (IOException e5) {
-                        e5.printStackTrace();
+                    } catch (IOException e6) {
+                        e6.printStackTrace();
                     }
                 }
                 if (r2 == 0) {
                     return;
                 }
-            } catch (Exception e6) {
-                e = e6;
+            } catch (Exception e7) {
+                e = e7;
                 r2 = 0;
             } catch (Throwable th2) {
                 th = th2;
@@ -480,7 +468,7 @@ public class SGApmMonitorManager {
             if (TextUtils.equals(str2, "7L2OvtRdxzOJAe7ImU+4I2bAxvq1oDLyTCzRgSPGufNIb7ZY5FsHDFaEzD98Mn7K")) {
                 boolean delete = new File(b(this.d), "init.config").delete();
                 this.e.a(k());
-                t.schedule(new RunnableC3991f(delete, str, str2), 5L, TimeUnit.SECONDS);
+                t.schedule(new f(delete, str, str2), 5L, TimeUnit.SECONDS);
             }
         } catch (Exception unused) {
         }
@@ -490,25 +478,25 @@ public class SGApmMonitorManager {
         if (n()) {
             return true;
         }
-        double d = 0.001d;
-        File b = b(this.d);
-        File file = new File(b, "." + i());
+        double d2 = 0.001d;
+        File b2 = b(this.d);
+        File file = new File(b2, "." + i());
         if (file.exists()) {
-            String a = C4012a.a(file);
+            String a2 = com.alibaba.wireless.security.framework.utils.a.a(file);
             try {
-                if (!TextUtils.isEmpty(a)) {
-                    d = Double.parseDouble(a);
+                if (!TextUtils.isEmpty(a2)) {
+                    d2 = Double.parseDouble(a2);
                 }
             } catch (NumberFormatException unused) {
             }
         }
-        return new Random().nextDouble() < d;
+        return new Random().nextDouble() < d2;
     }
 
     static /* synthetic */ int b(SGApmMonitorManager sGApmMonitorManager) {
-        int i = sGApmMonitorManager.i;
-        sGApmMonitorManager.i = i + 1;
-        return i;
+        int i2 = sGApmMonitorManager.i;
+        sGApmMonitorManager.i = i2 + 1;
+        return i2;
     }
 
     private File b(Context context) {
@@ -540,16 +528,16 @@ public class SGApmMonitorManager {
     }
 
     static /* synthetic */ int c(SGApmMonitorManager sGApmMonitorManager) {
-        int i = sGApmMonitorManager.i;
-        sGApmMonitorManager.i = i - 1;
-        return i;
+        int i2 = sGApmMonitorManager.i;
+        sGApmMonitorManager.i = i2 - 1;
+        return i2;
     }
 
     private void c(Context context) {
         if (!(context instanceof Application)) {
             context = context.getApplicationContext();
         }
-        ((Application) context).registerActivityLifecycleCallbacks(new C3986a());
+        ((Application) context).registerActivityLifecycleCallbacks(new a());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -672,14 +660,14 @@ public class SGApmMonitorManager {
         }
         try {
             SharedPreferences sharedPreferences = context.getSharedPreferences("sgloadfailed", 0);
-            int i = sharedPreferences.getInt(Constants.KEY_TIMES, 0);
-            if (i > 5) {
+            int i2 = sharedPreferences.getInt(Constants.KEY_TIMES, 0);
+            if (i2 > 5) {
                 File file = new File(this.d.getDir("SGLib", 0), ".nt");
                 if (file.exists()) {
                     file.delete();
                 }
             } else {
-                sharedPreferences.edit().putInt(Constants.KEY_TIMES, i + 1).commit();
+                sharedPreferences.edit().putInt(Constants.KEY_TIMES, i2 + 1).commit();
             }
         } catch (Exception unused) {
         }
@@ -706,8 +694,8 @@ public class SGApmMonitorManager {
         if (!file.exists()) {
             try {
                 file.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
+            } catch (IOException e2) {
+                e2.printStackTrace();
             }
         }
         try {
@@ -720,9 +708,9 @@ public class SGApmMonitorManager {
     }
 
     static /* synthetic */ int i(SGApmMonitorManager sGApmMonitorManager) {
-        int i = sGApmMonitorManager.c;
-        sGApmMonitorManager.c = i + 1;
-        return i;
+        int i2 = sGApmMonitorManager.c;
+        sGApmMonitorManager.c = i2 + 1;
+        return i2;
     }
 
     private String i() {
@@ -760,8 +748,8 @@ public class SGApmMonitorManager {
     private String k() {
         if (this.p == null) {
             try {
-                C3997b a = C3997b.a(new File(b(this.d), "init.config"));
-                this.p = "" + a.b();
+                com.alibaba.wireless.security.framework.b a2 = com.alibaba.wireless.security.framework.b.a(new File(b(this.d), "init.config"));
+                this.p = "" + a2.b();
             } catch (Exception unused) {
             }
         }
@@ -769,11 +757,11 @@ public class SGApmMonitorManager {
     }
 
     private boolean l() {
-        File b = b(this.d);
+        File b2 = b(this.d);
         StringBuilder sb = new StringBuilder();
         sb.append(".pma_");
         sb.append(i());
-        return new File(b, sb.toString()).exists();
+        return new File(b2, sb.toString()).exists();
     }
 
     private boolean m() {
@@ -797,11 +785,11 @@ public class SGApmMonitorManager {
     }
 
     private boolean o() {
-        File b = b(this.d);
+        File b2 = b(this.d);
         StringBuilder sb = new StringBuilder();
         sb.append(".istbg_");
         sb.append(i());
-        return new File(b, sb.toString()).exists();
+        return new File(b2, sb.toString()).exists();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -849,8 +837,8 @@ public class SGApmMonitorManager {
                         if (bufferedReader != null) {
                             try {
                                 bufferedReader.close();
-                            } catch (IOException e) {
-                                e.printStackTrace();
+                            } catch (IOException e2) {
+                                e2.printStackTrace();
                             }
                         }
                         if (httpURLConnection == null) {
@@ -863,8 +851,8 @@ public class SGApmMonitorManager {
                         if (bufferedReader != null) {
                             try {
                                 bufferedReader.close();
-                            } catch (IOException e2) {
-                                e2.printStackTrace();
+                            } catch (IOException e3) {
+                                e3.printStackTrace();
                             }
                         }
                         if (httpURLConnection != null) {
@@ -876,8 +864,8 @@ public class SGApmMonitorManager {
                 if (bufferedReader != null) {
                     try {
                         bufferedReader.close();
-                    } catch (IOException e3) {
-                        e3.printStackTrace();
+                    } catch (IOException e4) {
+                        e4.printStackTrace();
                     }
                 }
             } catch (Exception unused3) {
@@ -927,16 +915,16 @@ public class SGApmMonitorManager {
         this.d = context;
         v = System.currentTimeMillis();
         Context context2 = this.d;
-        if (context2 == null || !C4017e.b(context2)) {
+        if (context2 == null || !com.alibaba.wireless.security.framework.utils.e.b(context2)) {
             return;
         }
-        s = Executors.newSingleThreadScheduledExecutor(new ThreadFactoryC3987b(this));
-        ScheduledExecutorService newSingleThreadScheduledExecutor = Executors.newSingleThreadScheduledExecutor(new ThreadFactoryC3988c(this));
+        s = Executors.newSingleThreadScheduledExecutor(new b(this));
+        ScheduledExecutorService newSingleThreadScheduledExecutor = Executors.newSingleThreadScheduledExecutor(new c(this));
         t = newSingleThreadScheduledExecutor;
         if (s == null || newSingleThreadScheduledExecutor == null) {
             return;
         }
-        newSingleThreadScheduledExecutor.schedule(new RunnableC3989d(), 5L, TimeUnit.SECONDS);
+        newSingleThreadScheduledExecutor.schedule(new d(), 5L, TimeUnit.SECONDS);
         boolean l = l();
         this.h = a();
         Log.e("SGApmMonitor", "1 : " + l + ", 2 : " + this.h);
@@ -944,8 +932,8 @@ public class SGApmMonitorManager {
             this.g = true;
             this.o = isEnableFullTrackRecord();
             c(this.d);
-            s.schedule(new RunnableC3993h(), r * 5, TimeUnit.MILLISECONDS);
-            t.submit(new RunnableC3990e());
+            s.schedule(new h(), r * 5, TimeUnit.MILLISECONDS);
+            t.submit(new e());
         }
     }
 
@@ -982,7 +970,7 @@ public class SGApmMonitorManager {
         monitorStartWithTimeout(str, r);
     }
 
-    public void monitorStartWithTimeout(String str, int i) {
+    public void monitorStartWithTimeout(String str, int i2) {
         if (str == null || !this.g) {
             return;
         }
@@ -991,14 +979,14 @@ public class SGApmMonitorManager {
             return;
         }
         this.a.put(str, Long.valueOf(System.currentTimeMillis()));
-        s.schedule(new RunnableC3994i(str, 1, i), i, TimeUnit.MILLISECONDS);
+        s.schedule(new i(str, 1, i2), i2, TimeUnit.MILLISECONDS);
     }
 
     public void setMainPluginVersion(String str) {
         this.f = str;
     }
 
-    public void setSGPluginManager(C3999d c3999d) {
-        this.e = c3999d;
+    public void setSGPluginManager(com.alibaba.wireless.security.framework.d dVar) {
+        this.e = dVar;
     }
 }

@@ -26,7 +26,6 @@ import cn.damai.category.common.bean.CategoryProjectBean;
 import cn.damai.category.common.request.CategoryRequest;
 import cn.damai.category.common.ui.adapter.PerformListAdapter;
 import cn.damai.category.common.utils.CalendarPopUtil;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.base.ResponseErrorPage;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.commonbusiness.search.Daojishi;
@@ -91,15 +90,14 @@ public class PerformCalendarActivity extends SimpleBaseActivity implements OnLoa
     private CategoryRequest mCategoryRequest = new CategoryRequest();
     private boolean mGoRequest = true;
     private Daojishi mDaojishi = new Daojishi();
-    private View.OnClickListener mProjectItemListener = new View$OnClickListenerC0313f();
+    private View.OnClickListener mProjectItemListener = new f();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.calendar.ui.PerformCalendarActivity$a */
     /* loaded from: classes.dex */
-    public class C0308a implements ResponseErrorPage.ErrorRefreshListener {
+    public class a implements ResponseErrorPage.ErrorRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0308a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
@@ -114,12 +112,11 @@ public class PerformCalendarActivity extends SimpleBaseActivity implements OnLoa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.calendar.ui.PerformCalendarActivity$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0309b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0309b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -134,12 +131,11 @@ public class PerformCalendarActivity extends SimpleBaseActivity implements OnLoa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.calendar.ui.PerformCalendarActivity$c */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0310c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0310c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -160,19 +156,18 @@ public class PerformCalendarActivity extends SimpleBaseActivity implements OnLoa
                 PerformCalendarActivity.this.mCalendarPopUtil.o(rf.i(calendarPerformEntity));
                 PerformCalendarActivity.this.mCalendarPopUtil.i();
                 PerformCalendarActivity.this.getDoubleReuqest("0", calendarPerformEntity.dateType, calendarPerformEntity.startDate, calendarPerformEntity.endDate);
-                C0529c.e().x(mf.i().k(calendarPerformEntity.index, PerformCalendarActivity.this.mCityName, calendarPerformEntity.name));
+                cn.damai.common.user.c.e().x(mf.i().k(calendarPerformEntity.index, PerformCalendarActivity.this.mCityName, calendarPerformEntity.name));
             } catch (Exception unused) {
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.calendar.ui.PerformCalendarActivity$d */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0311d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0311d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -187,12 +182,11 @@ public class PerformCalendarActivity extends SimpleBaseActivity implements OnLoa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.calendar.ui.PerformCalendarActivity$e */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0312e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0312e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -209,18 +203,17 @@ public class PerformCalendarActivity extends SimpleBaseActivity implements OnLoa
                 categoryRequest.categoryId = categoryBean.id + "";
                 PerformCalendarActivity.this.mCalendarModel.getProjectListRequest(PerformCalendarActivity.this.mCategoryRequest);
                 PerformCalendarActivity.this.mCurrentCategoryName = categoryBean.name;
-                C0529c.e().x(mf.i().h(categoryBean.id, PerformCalendarActivity.this.mCityName, PerformCalendarActivity.this.mCurrentTopName, PerformCalendarActivity.this.mCurrentCategoryName));
+                cn.damai.common.user.c.e().x(mf.i().h(categoryBean.id, PerformCalendarActivity.this.mCityName, PerformCalendarActivity.this.mCurrentTopName, PerformCalendarActivity.this.mCurrentCategoryName));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.calendar.ui.PerformCalendarActivity$f */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0313f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0313f() {
+        f() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -236,19 +229,18 @@ public class PerformCalendarActivity extends SimpleBaseActivity implements OnLoa
                     return;
                 }
                 PerformCalendarActivity.this.mGoRequest = false;
-                C0529c.e().x(mf.i().j(projectItem.index, PerformCalendarActivity.this.mCityName, PerformCalendarActivity.this.mCurrentTopName, PerformCalendarActivity.this.mCurrentCategoryName, projectItem.projectItemBean.id));
+                cn.damai.common.user.c.e().x(mf.i().j(projectItem.index, PerformCalendarActivity.this.mCityName, PerformCalendarActivity.this.mCurrentTopName, PerformCalendarActivity.this.mCurrentCategoryName, projectItem.projectItemBean.id));
             } catch (Exception unused) {
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.calendar.ui.PerformCalendarActivity$g */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0314g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0314g() {
+        g() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -276,7 +268,7 @@ public class PerformCalendarActivity extends SimpleBaseActivity implements OnLoa
                 PerformCalendarActivity.this.mCalendarPopUtil.o(arrayList);
                 PerformCalendarActivity performCalendarActivity2 = PerformCalendarActivity.this;
                 performCalendarActivity2.getDoubleReuqest("0", 5, performCalendarActivity2.mStartDay, PerformCalendarActivity.this.mEndDay);
-                C0529c e = C0529c.e();
+                cn.damai.common.user.c e = cn.damai.common.user.c.e();
                 mf i = mf.i();
                 int i2 = day.day;
                 String str = PerformCalendarActivity.this.mCityName;
@@ -418,7 +410,7 @@ public class PerformCalendarActivity extends SimpleBaseActivity implements OnLoa
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(0);
         this.mCategoryRlv.setLayoutManager(linearLayoutManager);
-        HorizontalCategoryAdapter horizontalCategoryAdapter = new HorizontalCategoryAdapter(this, new View$OnClickListenerC0312e());
+        HorizontalCategoryAdapter horizontalCategoryAdapter = new HorizontalCategoryAdapter(this, new e());
         this.mCategoryAdapter = horizontalCategoryAdapter;
         this.mCategoryRlv.setAdapter(horizontalCategoryAdapter);
         this.mCategoryRlv.addItemDecoration(new SpaceItemDecoration(ScreenUtil.dip2px(this, 5.0f)));
@@ -526,7 +518,7 @@ public class PerformCalendarActivity extends SimpleBaseActivity implements OnLoa
         this.mMengcengView = findViewById(R$id.view_mengceng);
         ViewGroup viewGroup = (ViewGroup) findViewById(R$id.layout_calendar);
         this.mPopView = viewGroup;
-        this.mCalendarPopUtil = new CalendarPopUtil(this, this.mDateTv, this.mMengcengView, viewGroup, true, false, false, getRealHeight(), new View$OnClickListenerC0314g());
+        this.mCalendarPopUtil = new CalendarPopUtil(this, this.mDateTv, this.mMengcengView, viewGroup, true, false, false, getRealHeight(), new g());
     }
 
     private void initRecyclerView() {
@@ -586,7 +578,7 @@ public class PerformCalendarActivity extends SimpleBaseActivity implements OnLoa
             return;
         }
         removeHeadTitleView();
-        findViewById(R$id.btn_left).setOnClickListener(new View$OnClickListenerC0309b());
+        findViewById(R$id.btn_left).setOnClickListener(new b());
         View findViewById = findViewById(R$id.status_bar_space);
         if (Build.VERSION.SDK_INT >= 23) {
             findViewById.getLayoutParams().height = kg2.a(this);
@@ -611,10 +603,10 @@ public class PerformCalendarActivity extends SimpleBaseActivity implements OnLoa
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(0);
         this.mHeadRlv.setLayoutManager(linearLayoutManager);
-        this.mHeadAdapter = new HorizontalHeadAdapter(this, new View$OnClickListenerC0310c());
+        this.mHeadAdapter = new HorizontalHeadAdapter(this, new c());
         this.mDateTv = (TextView) findViewById(R$id.tv_date);
         this.mDateXiala = (DMIconFontTextView) findViewById(R$id.tv_date_xiala);
-        this.mLayoutDate.setOnClickListener(new View$OnClickListenerC0311d());
+        this.mLayoutDate.setOnClickListener(new d());
         this.mHeadRlv.setAdapter(this.mHeadAdapter);
         this.mHeadRlv.addItemDecoration(new SpaceItemDecoration(ScreenUtil.dip2px(this, 5.0f)));
         List<CalendarPerformEntity> headDates = getHeadDates();
@@ -794,7 +786,7 @@ public class PerformCalendarActivity extends SimpleBaseActivity implements OnLoa
             this.mErrorPage = responseErrorPage2;
             responseErrorPage2.hideTitle();
             this.mErrorPage.setVisibility(0);
-            this.mErrorPage.setRefreshListener(new C0308a());
+            this.mErrorPage.setRefreshListener(new a());
             this.mCalendarLayout.addView(this.mErrorPage);
         }
     }
@@ -812,8 +804,8 @@ public class PerformCalendarActivity extends SimpleBaseActivity implements OnLoa
                 this.mCalendarLayout.removeView(this.mErrorPage);
                 this.mErrorPage = null;
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 

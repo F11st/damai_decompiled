@@ -19,15 +19,14 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes9.dex */
 public final class qf1 implements IAbilityInvoker {
     @NotNull
-    public static final C9602a Companion = new C9602a(null);
+    public static final a Companion = new a(null);
     private final IAbilityMiddleware a;
     private final IAbilityInvoker b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qf1$a */
     /* loaded from: classes9.dex */
-    public static final class C9602a {
-        private C9602a() {
+    public static final class a {
+        private a() {
         }
 
         @JvmStatic
@@ -43,7 +42,7 @@ public final class qf1 implements IAbilityInvoker {
             return iAbilityInvoker;
         }
 
-        public /* synthetic */ C9602a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

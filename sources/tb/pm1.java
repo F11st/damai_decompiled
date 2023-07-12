@@ -10,7 +10,6 @@ import java.util.Locale;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLException;
 import javax.net.ssl.SSLSession;
-import okhttp3.internal.C8753a;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
@@ -71,7 +70,7 @@ public final class pm1 implements HostnameVerifier {
     }
 
     public boolean c(String str, X509Certificate x509Certificate) {
-        if (C8753a.M(str)) {
+        if (okhttp3.internal.a.M(str)) {
             return f(str, x509Certificate);
         }
         return e(str, x509Certificate);

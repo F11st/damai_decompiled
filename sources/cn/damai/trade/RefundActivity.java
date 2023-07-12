@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
@@ -56,7 +56,7 @@ public class RefundActivity extends SimpleBaseActivity {
             this.mProjectNameTv.setText(this.mOrderBean.projectName);
             this.mPlayTimeTv.setText(this.mOrderBean.playTime);
             this.iv_project_image.setTag(this.mOrderBean.projectPicUrl);
-            C0504a.b().c(this.mOrderBean.projectPicUrl).g(this.iv_project_image);
+            a.b().c(this.mOrderBean.projectPicUrl).g(this.iv_project_image);
             this.tv_ticket_num.setText(String.valueOf(this.mOrderBean.quantity));
             StringBuilder sb = this.mBuilder;
             sb.delete(0, sb.length());

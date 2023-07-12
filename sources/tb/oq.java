@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
-import com.taobao.android.dinamic.C6313b;
 import com.taobao.android.dinamic.log.DinamicLog;
 import com.taobao.android.dinamic.property.DAttrConstant;
 import java.util.Map;
@@ -74,8 +73,8 @@ public class oq {
             ViewGroup.MarginLayoutParams marginLayoutParams = new ViewGroup.MarginLayoutParams(b[0], b[1]);
             marginLayoutParams.setMargins(b[2], b[3], b[4], b[5]);
             view.setLayoutParams(marginLayoutParams);
-            if (C6313b.e()) {
-                DinamicLog.a(C6313b.TAG, "reflect layout params fail");
+            if (com.taobao.android.dinamic.b.e()) {
+                DinamicLog.a(com.taobao.android.dinamic.b.TAG, "reflect layout params fail");
                 return;
             }
             return;
@@ -93,8 +92,8 @@ public class oq {
         ViewGroup.MarginLayoutParams marginLayoutParams2 = new ViewGroup.MarginLayoutParams(b[0], b[1]);
         marginLayoutParams2.setMargins(b[2], b[3], b[4], b[5]);
         view.setLayoutParams(marginLayoutParams2);
-        if (C6313b.e()) {
-            DinamicLog.a(C6313b.TAG, "reflect layout params fail");
+        if (com.taobao.android.dinamic.b.e()) {
+            DinamicLog.a(com.taobao.android.dinamic.b.TAG, "reflect layout params fail");
         }
     }
 
@@ -105,8 +104,8 @@ public class oq {
         try {
             return Color.parseColor(str);
         } catch (Throwable th) {
-            if (C6313b.e()) {
-                DinamicLog.i(C6313b.TAG, th, str, "写法错误，解析出错");
+            if (com.taobao.android.dinamic.b.e()) {
+                DinamicLog.i(com.taobao.android.dinamic.b.TAG, th, str, "写法错误，解析出错");
             }
             return i;
         }

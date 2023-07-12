@@ -9,24 +9,23 @@ import tb.du1;
 /* compiled from: Taobao */
 @Immutable
 /* loaded from: classes10.dex */
-public final class ChecksumHashFunction extends AbstractC5229b implements Serializable {
+public final class ChecksumHashFunction extends com.google.common.hash.b implements Serializable {
     private static final long serialVersionUID = 0;
     private final int bits;
     private final ImmutableSupplier<? extends Checksum> checksumSupplier;
     private final String toString;
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.hash.ChecksumHashFunction$b */
     /* loaded from: classes10.dex */
-    private final class C5216b extends AbstractC5228a {
+    private final class b extends com.google.common.hash.a {
         private final Checksum b;
 
-        @Override // com.google.common.hash.AbstractC5228a
+        @Override // com.google.common.hash.a
         protected void b(byte b) {
             this.b.update(b);
         }
 
-        @Override // com.google.common.hash.AbstractC5228a
+        @Override // com.google.common.hash.a
         protected void e(byte[] bArr, int i, int i2) {
             this.b.update(bArr, i, i2);
         }
@@ -40,7 +39,7 @@ public final class ChecksumHashFunction extends AbstractC5229b implements Serial
             return HashCode.fromLong(value);
         }
 
-        private C5216b(Checksum checksum) {
+        private b(Checksum checksum) {
             this.b = (Checksum) du1.p(checksum);
         }
     }
@@ -60,7 +59,7 @@ public final class ChecksumHashFunction extends AbstractC5229b implements Serial
 
     @Override // com.google.common.hash.HashFunction
     public Hasher newHasher() {
-        return new C5216b(this.checksumSupplier.get());
+        return new b(this.checksumSupplier.get());
     }
 
     public String toString() {

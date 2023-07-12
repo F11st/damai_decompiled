@@ -16,7 +16,7 @@ import cn.damai.tetris.v2.common.ContainerArg;
 import com.alibaba.fastjson.JSON;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import tb.C9039db;
+import tb.db;
 import tb.jn1;
 import tb.pg;
 
@@ -168,7 +168,7 @@ public class ProjectFilterModel {
                     } else {
                         ProjectFilterModel.h(ProjectFilterModel.this);
                     }
-                    onModelBizListener.onLoadProjectSuccess(new LoadData(z, isCanRequestNextPage, new C9039db().f(baseResponse)));
+                    onModelBizListener.onLoadProjectSuccess(new LoadData(z, isCanRequestNextPage, new db().f(baseResponse)));
                 }
             }
         }));

@@ -18,7 +18,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.uikit.iconfont.DMIconFontTextView;
 import cn.damai.uikit.view.DMLabelType;
@@ -65,15 +64,14 @@ public class DmUltronPromotionFragment extends DamaiBaseMvpFragment {
     private String selectId;
     private View v_outside;
     private int selectPos = -1;
-    DmChooseSwitchListenerImpl<DmPromotionOptionsBean> itemClickListener = new C2655c();
+    DmChooseSwitchListenerImpl<DmPromotionOptionsBean> itemClickListener = new c();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.view.activity.DmUltronPromotionFragment$a  reason: invalid class name */
     /* loaded from: classes17.dex */
-    public class animationAnimation$AnimationListenerC2653a implements Animation.AnimationListener {
+    public class a implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        animationAnimation$AnimationListenerC2653a() {
+        a() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -104,12 +102,11 @@ public class DmUltronPromotionFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.view.activity.DmUltronPromotionFragment$b */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2654b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2654b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -137,7 +134,7 @@ public class DmUltronPromotionFragment extends DamaiBaseMvpFragment {
                 try {
                     ua0.h(DmUltronPromotionFragment.this.getActivity(), str2);
                     ua0.i(DmUltronPromotionFragment.this.getActivity(), str);
-                    C0529c.e().x(kb0.u().C(DmUltronPromotionFragment.this.getActivity(), str2, str, DmUltronPromotionFragment.this.selectPos));
+                    cn.damai.common.user.c.e().x(kb0.u().C(DmUltronPromotionFragment.this.getActivity(), str2, str, DmUltronPromotionFragment.this.selectPos));
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -157,12 +154,11 @@ public class DmUltronPromotionFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.view.activity.DmUltronPromotionFragment$c */
     /* loaded from: classes9.dex */
-    public class C2655c implements DmChooseSwitchListenerImpl<DmPromotionOptionsBean> {
+    public class c implements DmChooseSwitchListenerImpl<DmPromotionOptionsBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2655c() {
+        c() {
         }
 
         @Override // cn.damai.ultron.utils.DmChooseSwitchListenerImpl
@@ -269,7 +265,7 @@ public class DmUltronPromotionFragment extends DamaiBaseMvpFragment {
                 }
                 Animation loadAnimation = AnimationUtils.loadAnimation(getActivity(), R$anim.activity_item_animexit);
                 this.mAnimView.startAnimation(loadAnimation);
-                loadAnimation.setAnimationListener(new animationAnimation$AnimationListenerC2653a());
+                loadAnimation.setAnimationListener(new a());
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -414,7 +410,7 @@ public class DmUltronPromotionFragment extends DamaiBaseMvpFragment {
         dMLabelView.setVisibility(0);
         findViewById(R$id.rc_bottom).setVisibility(4);
         dMLabelView.setLabelType(DMLabelType.LABEL_TYPE_BUYING).setLabelName("确定").setLabelTextSize(16.0f).setContentGravity(17).setCornerRadii(m62.a(getActivity(), 22.0f), m62.a(getActivity(), 22.0f), m62.a(getActivity(), 22.0f), m62.a(getActivity(), 2.0f));
-        dMLabelView.setOnClickListener(new View$OnClickListenerC2654b());
+        dMLabelView.setOnClickListener(new b());
     }
 
     public void setAnimationView(View view) {

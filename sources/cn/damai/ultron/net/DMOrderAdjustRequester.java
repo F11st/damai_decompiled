@@ -1,8 +1,8 @@
 package cn.damai.ultron.net;
 
 import android.content.Context;
-import com.alibaba.android.ultron.trade.data.request.AbstractC3246a;
 import com.alibaba.android.ultron.trade.data.request.Request;
+import com.alibaba.android.ultron.trade.data.request.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.android.ultron.common.model.IDMComponent;
@@ -15,7 +15,7 @@ import tb.is;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
-public class DMOrderAdjustRequester extends AbstractC3246a {
+public class DMOrderAdjustRequester extends a {
     private static transient /* synthetic */ IpChange $ipChange;
     protected UltronDataManager mDataManager;
     private IDMComponent mTrigger;
@@ -25,7 +25,7 @@ public class DMOrderAdjustRequester extends AbstractC3246a {
         this.mDataManager = ultronDataManager;
     }
 
-    @Override // com.alibaba.android.ultron.trade.data.request.AbstractC3246a
+    @Override // com.alibaba.android.ultron.trade.data.request.a
     public void sendRequest(final f1 f1Var, IDMContext iDMContext, Object obj) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-822800353")) {
@@ -55,7 +55,7 @@ public class DMOrderAdjustRequester extends AbstractC3246a {
                         return;
                     }
                     if (map != null && (map.get("reload") instanceof Boolean) && ((Boolean) map.get("reload")).booleanValue()) {
-                        f30.b(iDMContext2, ((AbstractC3246a) DMOrderAdjustRequester.this).mContext);
+                        f30.b(iDMContext2, ((a) DMOrderAdjustRequester.this).mContext);
                     }
                     DMOrderAdjustRequester dMOrderAdjustRequester = DMOrderAdjustRequester.this;
                     dMOrderAdjustRequester.composeComponents(dMOrderAdjustRequester.mDataManager, iDMContext2);

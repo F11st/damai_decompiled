@@ -116,8 +116,8 @@ public class SeatPrepare4Order {
             return;
         }
         u01.d(j + "", j2);
-        long a = fr1.a(j2);
-        this.b.a(new MtopBBCAreaInfoRequest(str, a, (String) null, cr.c()).request(new MtopRegionDataListener(j, str, j2, a, this.c) { // from class: cn.damai.commonbusiness.seatbiz.seat.qilin.loader.prepare.SeatPrepare4Order.1
+        long a2 = fr1.a(j2);
+        this.b.a(new MtopBBCAreaInfoRequest(str, a2, (String) null, cr.c()).request(new MtopRegionDataListener(j, str, j2, a2, this.c) { // from class: cn.damai.commonbusiness.seatbiz.seat.qilin.loader.prepare.SeatPrepare4Order.1
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // cn.damai.commonbusiness.seatbiz.seat.qilin.listener.net.MtopRegionDataListener
@@ -182,21 +182,20 @@ public class SeatPrepare4Order {
         long i = i(str3);
         long i2 = i(str4);
         long i3 = i(str5);
-        C0815a c0815a = new C0815a(str, str2, i, i2, i3, str6, onLoadListener);
-        c0815a.onLoadStateChanged(true);
+        a aVar = new a(str, str2, i, i2, i3, str6, onLoadListener);
+        aVar.onLoadStateChanged(true);
         if (!cb2.d(list)) {
-            c0815a.h = list;
-            c0815a.k = 1;
+            aVar.h = list;
+            aVar.k = 1;
         } else {
-            e(i, c0815a);
+            e(i, aVar);
         }
-        f(i2, i3, str6, c0815a);
+        f(i2, i3, str6, aVar);
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.seat.qilin.loader.prepare.SeatPrepare4Order$a */
     /* loaded from: classes.dex */
-    public final class C0815a implements OnLoadListener, OnPrepareListener {
+    public final class a implements OnLoadListener, OnPrepareListener {
         private static transient /* synthetic */ IpChange $ipChange = null;
         public static final int TOTAL_API_COUNT = 2;
         private String a;
@@ -211,7 +210,7 @@ public class SeatPrepare4Order {
         private OnLoadListener j;
         private int k = 0;
 
-        C0815a(String str, String str2, long j, long j2, long j3, String str3, OnLoadListener onLoadListener) {
+        a(String str, String str2, long j, long j2, long j3, String str3, OnLoadListener onLoadListener) {
             this.a = str;
             this.b = str2;
             this.c = j;

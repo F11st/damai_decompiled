@@ -16,11 +16,11 @@ public class pb0 {
 
     private static String[] a(String str) {
         LinkedList linkedList = new LinkedList();
-        ArrayList<d01.C9027a> a2 = d01.a(str);
+        ArrayList<d01.a> a2 = d01.a(str);
         if (a2 != null) {
-            Iterator<d01.C9027a> it = a2.iterator();
+            Iterator<d01.a> it = a2.iterator();
             while (it.hasNext()) {
-                d01.C9027a next = it.next();
+                d01.a next = it.next();
                 if (!next.a() && next.c() == 80) {
                     String b = next.b();
                     if (d(b)) {

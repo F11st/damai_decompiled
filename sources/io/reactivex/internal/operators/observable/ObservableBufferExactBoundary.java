@@ -9,7 +9,7 @@ import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.observers.QueueDrainObserver;
 import io.reactivex.internal.queue.MpscLinkedQueue;
 import io.reactivex.internal.util.QueueDrainHelper;
-import io.reactivex.observers.AbstractC8160b;
+import io.reactivex.observers.b;
 import java.util.Collection;
 import java.util.concurrent.Callable;
 import tb.dg0;
@@ -23,7 +23,7 @@ public final class ObservableBufferExactBoundary<T, U extends Collection<? super
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class BufferBoundaryObserver<T, U extends Collection<? super T>, B> extends AbstractC8160b<B> {
+    static final class BufferBoundaryObserver<T, U extends Collection<? super T>, B> extends b<B> {
         final BufferExactBoundaryObserver<T, U, B> parent;
 
         BufferBoundaryObserver(BufferExactBoundaryObserver<T, U, B> bufferExactBoundaryObserver) {
@@ -167,7 +167,7 @@ public final class ObservableBufferExactBoundary<T, U extends Collection<? super
         this.bufferSupplier = callable;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super U> observer) {
         this.source.subscribe(new BufferExactBoundaryObserver(new ra2(observer), this.bufferSupplier, this.boundary));
     }

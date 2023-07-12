@@ -2,10 +2,7 @@ package tb;
 
 import android.content.Context;
 import android.util.Base64;
-import cn.damai.common.user.C0529c;
 import cn.damai.ticklet.ui.fragment.TicketDetailExtFragment;
-import cn.damai.ticklet.utils.C2088a;
-import cn.damai.ticklet.utils.C2089b;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.nio.ByteBuffer;
@@ -28,7 +25,7 @@ public class xh2 {
             }
             byte[] bArr = null;
             try {
-                bArr = C2088a.a(Base64.decode(str, 2), fu1.c(), Base64.decode(fu1.b(context, "salt", ""), 2));
+                bArr = cn.damai.ticklet.utils.a.a(Base64.decode(str, 2), fu1.c(), Base64.decode(fu1.b(context, "salt", ""), 2));
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -64,7 +61,7 @@ public class xh2 {
                     allocate.put(decode);
                     byte[] bArr = null;
                     try {
-                        bArr = C2089b.a(allocate.array(), str2);
+                        bArr = cn.damai.ticklet.utils.b.a(allocate.array(), str2);
                     } catch (Exception e2) {
                         e2.printStackTrace();
                     }
@@ -86,14 +83,14 @@ public class xh2 {
                     hashMap.put("currentTime", x30.g(currentTimeMillis));
                     hashMap.put("sysTime", x30.g(x30.b(currentTimeMillis)));
                     hashMap.put("mBuffer", stringBuffer.toString().trim());
-                    C0529c.e().A(hashMap, "qr_code", "ticklet_qr_encrypte");
+                    cn.damai.common.user.c.e().A(hashMap, "qr_code", "ticklet_qr_encrypte");
                     return stringBuffer.toString().trim();
                 } catch (Exception unused) {
                     HashMap hashMap2 = new HashMap();
                     hashMap2.put("voucherCode", str);
                     hashMap2.put("pubKey", str2);
                     hashMap2.put("userCode", fu1.c());
-                    C0529c.e().A(hashMap2, "qr_code", "ticklet_qr_encrypte_exception");
+                    cn.damai.common.user.c.e().A(hashMap2, "qr_code", "ticklet_qr_encrypte_exception");
                     return str4;
                 }
             }

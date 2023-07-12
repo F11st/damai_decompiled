@@ -11,9 +11,9 @@ import com.taobao.orange.OrangeConfig;
 import io.flutter.wpkbridge.WPKFactory;
 import java.util.Map;
 import java.util.regex.Pattern;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
+import kotlin.b;
 import kotlin.jvm.JvmField;
 import kotlin.jvm.JvmStatic;
 import kotlin.jvm.functions.Function0;
@@ -70,7 +70,7 @@ public final class UniH5ContainerSwitcher {
 
     static {
         Lazy<UniH5ContainerSwitcher> a;
-        a = C8177b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<UniH5ContainerSwitcher>() { // from class: cn.damai.h5container.UniH5ContainerSwitcher$Companion$Instance$2
+        a = b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<UniH5ContainerSwitcher>() { // from class: cn.damai.h5container.UniH5ContainerSwitcher$Companion$Instance$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* JADX WARN: Can't rename method to resolve collision */

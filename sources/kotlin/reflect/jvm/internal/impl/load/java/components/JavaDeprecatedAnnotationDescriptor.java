@@ -1,12 +1,11 @@
 package kotlin.reflect.jvm.internal.impl.load.java.components;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
 import java.util.Map;
-import kotlin.collections.C8225w;
+import kotlin.collections.w;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.PropertyReference1Impl;
 import kotlin.reflect.KProperty;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
+import kotlin.reflect.jvm.internal.impl.builtins.c;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotation;
 import kotlin.reflect.jvm.internal.impl.storage.NotNullLazyValue;
 import org.jetbrains.annotations.NotNull;
@@ -30,14 +29,14 @@ public final class JavaDeprecatedAnnotationDescriptor extends JavaAnnotationDesc
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public JavaDeprecatedAnnotationDescriptor(@Nullable JavaAnnotation javaAnnotation, @NotNull r81 r81Var) {
-        super(r81Var, javaAnnotation, C8277c.C8278a.deprecated);
-        b41.i(r81Var, AbstractC5658c.a);
+        super(r81Var, javaAnnotation, c.a.deprecated);
+        b41.i(r81Var, com.huawei.hms.opendevice.c.a);
         this.g = r81Var.e().createLazyValue(new Function0<Map<ni1, ? extends ai2>>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.components.JavaDeprecatedAnnotationDescriptor$allValueArguments$2
             @Override // kotlin.jvm.functions.Function0
             @NotNull
             public final Map<ni1, ? extends ai2> invoke() {
                 Map<ni1, ? extends ai2> f;
-                f = C8225w.f(hq2.a(z41.INSTANCE.b(), new ai2("Deprecated in Java")));
+                f = w.f(hq2.a(z41.INSTANCE.b(), new ai2("Deprecated in Java")));
                 return f;
             }
         });

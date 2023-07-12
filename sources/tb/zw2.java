@@ -12,9 +12,8 @@ public abstract class zw2 implements Check {
     private final String a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.zw2$a */
     /* loaded from: classes3.dex */
-    public static final class C10036a extends zw2 {
+    public static final class a extends zw2 {
         private final int b;
 
         /* JADX WARN: Illegal instructions before constructor call */
@@ -22,7 +21,7 @@ public abstract class zw2 implements Check {
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        public C10036a(int r3) {
+        public a(int r3) {
             /*
                 r2 = this;
                 java.lang.StringBuilder r0 = new java.lang.StringBuilder
@@ -46,7 +45,7 @@ public abstract class zw2 implements Check {
                 r2.b = r3
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.zw2.C10036a.<init>(int):void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.zw2.a.<init>(int):void");
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.util.Check
@@ -57,12 +56,11 @@ public abstract class zw2 implements Check {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.zw2$b */
     /* loaded from: classes3.dex */
-    public static final class C10037b extends zw2 {
+    public static final class b extends zw2 {
         private final int b;
 
-        public C10037b(int i) {
+        public b(int i) {
             super("must have exactly " + i + " value parameters", null);
             this.b = i;
         }
@@ -75,13 +73,12 @@ public abstract class zw2 implements Check {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.zw2$c */
     /* loaded from: classes3.dex */
-    public static final class C10038c extends zw2 {
+    public static final class c extends zw2 {
         @NotNull
-        public static final C10038c INSTANCE = new C10038c();
+        public static final c INSTANCE = new c();
 
-        private C10038c() {
+        private c() {
             super("must have no value parameters", null);
         }
 
@@ -93,13 +90,12 @@ public abstract class zw2 implements Check {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.zw2$d */
     /* loaded from: classes3.dex */
-    public static final class C10039d extends zw2 {
+    public static final class d extends zw2 {
         @NotNull
-        public static final C10039d INSTANCE = new C10039d();
+        public static final d INSTANCE = new d();
 
-        private C10039d() {
+        private d() {
             super("must have a single value parameter", null);
         }
 
@@ -127,6 +123,6 @@ public abstract class zw2 implements Check {
     @Override // kotlin.reflect.jvm.internal.impl.util.Check
     @Nullable
     public String invoke(@NotNull FunctionDescriptor functionDescriptor) {
-        return Check.C8556a.a(this, functionDescriptor);
+        return Check.a.a(this, functionDescriptor);
     }
 }

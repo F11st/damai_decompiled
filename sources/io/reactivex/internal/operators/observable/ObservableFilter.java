@@ -62,7 +62,7 @@ public final class ObservableFilter<T> extends AbstractObservableWithUpstream<T,
         this.predicate = predicate;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new FilterObserver(observer, this.predicate));
     }

@@ -2,7 +2,7 @@ package com.youku.live.dago.widgetlib.interactive.gift.view.Particle.modifiers;
 
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.youku.live.dago.widgetlib.interactive.gift.view.Particle.C7945Particle;
+import com.youku.live.dago.widgetlib.interactive.gift.view.Particle.Particle;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
@@ -19,14 +19,14 @@ public class AccelerationModifier implements ParticleModifier {
     }
 
     @Override // com.youku.live.dago.widgetlib.interactive.gift.view.Particle.modifiers.ParticleModifier
-    public void apply(C7945Particle c7945Particle, long j) {
+    public void apply(Particle particle, long j) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1749207998")) {
-            ipChange.ipc$dispatch("1749207998", new Object[]{this, c7945Particle, Long.valueOf(j)});
+            ipChange.ipc$dispatch("1749207998", new Object[]{this, particle, Long.valueOf(j)});
             return;
         }
         float f = (float) j;
-        c7945Particle.mCurrentX += this.mVelocityX * f * f;
-        c7945Particle.mCurrentY += this.mVelocityY * f * f;
+        particle.mCurrentX += this.mVelocityX * f * f;
+        particle.mCurrentY += this.mVelocityY * f * f;
     }
 }

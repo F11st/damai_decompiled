@@ -7,7 +7,6 @@ import android.text.TextUtils;
 import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.IConfigAdapter;
 import com.alibaba.aliweex.adapter.IGodEyeStageAdapter;
 import com.alibaba.aliweex.interceptor.phenix.PhenixTracker;
@@ -47,9 +46,8 @@ public class WXImgLoaderAdapter implements IWXImgLoaderAdapter {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.adapter.WXImgLoaderAdapter$a */
     /* loaded from: classes15.dex */
-    public static /* synthetic */ class C3012a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -71,15 +69,14 @@ public class WXImgLoaderAdapter implements IWXImgLoaderAdapter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.adapter.WXImgLoaderAdapter$b */
     /* loaded from: classes5.dex */
-    static class C3013b implements IPhenixListener<nh0> {
+    static class b implements IPhenixListener<nh0> {
         private WXImageStrategy a;
         private WeakReference<ImageView> b;
         private String c;
         private PhenixTracker d;
 
-        C3013b(WXImageStrategy wXImageStrategy, ImageView imageView, String str, PhenixTracker phenixTracker) {
+        b(WXImageStrategy wXImageStrategy, ImageView imageView, String str, PhenixTracker phenixTracker) {
             this.a = wXImageStrategy;
             this.b = new WeakReference<>(imageView);
             this.c = str;
@@ -162,14 +159,13 @@ public class WXImgLoaderAdapter implements IWXImgLoaderAdapter {
             L95:
                 return r1
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.alibaba.aliweex.adapter.adapter.WXImgLoaderAdapter.C3013b.onHappen(tb.nh0):boolean");
+            throw new UnsupportedOperationException("Method not decompiled: com.alibaba.aliweex.adapter.adapter.WXImgLoaderAdapter.b.onHappen(tb.nh0):boolean");
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.adapter.WXImgLoaderAdapter$c */
     /* loaded from: classes5.dex */
-    static class C3014c implements IPhenixListener<ui2> {
+    static class c implements IPhenixListener<ui2> {
         private WXImageStrategy a;
         private WeakReference<ImageView> b;
         private String c;
@@ -177,13 +173,12 @@ public class WXImgLoaderAdapter implements IWXImgLoaderAdapter {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.aliweex.adapter.adapter.WXImgLoaderAdapter$c$a */
         /* loaded from: classes5.dex */
-        public class C3015a implements BlurTool.OnBlurCompleteListener {
+        public class a implements BlurTool.OnBlurCompleteListener {
             final /* synthetic */ ImageView a;
             final /* synthetic */ Drawable b;
 
-            C3015a(C3014c c3014c, ImageView imageView, Drawable drawable) {
+            a(c cVar, ImageView imageView, Drawable drawable) {
                 this.a = imageView;
                 this.b = drawable;
             }
@@ -203,7 +198,7 @@ public class WXImgLoaderAdapter implements IWXImgLoaderAdapter {
             }
         }
 
-        C3014c(WXImageStrategy wXImageStrategy, ImageView imageView, String str, PhenixTracker phenixTracker) {
+        c(WXImageStrategy wXImageStrategy, ImageView imageView, String str, PhenixTracker phenixTracker) {
             this.a = wXImageStrategy;
             this.b = new WeakReference<>(imageView);
             this.c = str;
@@ -227,14 +222,14 @@ public class WXImgLoaderAdapter implements IWXImgLoaderAdapter {
             sb.append("drawable is null?");
             sb.append(f == null);
             WXImgLoaderAdapter.i("weex-image-success", str, sb.toString());
-            imageView.setTag(-308, GXTemplateEngine.C3338b.STATE_END);
+            imageView.setTag(-308, GXTemplateEngine.b.STATE_END);
             if (f != null) {
                 if ((imageView instanceof WXImageView) && (f instanceof AnimatedImageDrawable)) {
                     ((WXImageView) imageView).setImageDrawable(f, true);
                 } else if (this.a.blurRadius <= 0) {
                     imageView.setImageDrawable(f);
                 } else if (f.getBitmap() != null) {
-                    BlurTool.b(f.getBitmap(), this.a.blurRadius, new C3015a(this, imageView, f));
+                    BlurTool.b(f.getBitmap(), this.a.blurRadius, new a(this, imageView, f));
                 } else {
                     try {
                         imageView.setImageDrawable(f);
@@ -257,9 +252,9 @@ public class WXImgLoaderAdapter implements IWXImgLoaderAdapter {
     }
 
     private ImageStrategyConfig g(boolean z, WXImageQuality wXImageQuality) {
-        ImageStrategyConfig.C6898b p = ImageStrategyConfig.p(z ? ImageStrategyConfig.WEAPPSHARPEN : ImageStrategyConfig.WEAPP, 70);
+        ImageStrategyConfig.b p = ImageStrategyConfig.p(z ? ImageStrategyConfig.WEAPPSHARPEN : ImageStrategyConfig.WEAPP, 70);
         if (wXImageQuality != null) {
-            int i = C3012a.a[wXImageQuality.ordinal()];
+            int i = a.a[wXImageQuality.ordinal()];
             if (i == 1) {
                 p.c(TaobaoImageUrlStrategy.ImageQuality.q50);
             } else if (i == 2) {
@@ -274,8 +269,8 @@ public class WXImgLoaderAdapter implements IWXImgLoaderAdapter {
     /* JADX INFO: Access modifiers changed from: private */
     public static void i(String str, String str2, String str3) {
         IGodEyeStageAdapter h;
-        IConfigAdapter c = C3004a.l().c();
-        if ((c == null || Boolean.valueOf(c.getConfig(oz2.WXAPM_CONFIG_GROUP, "recordImageState", "true")).booleanValue()) && (h = C3004a.l().h()) != null) {
+        IConfigAdapter c2 = com.alibaba.aliweex.a.l().c();
+        if ((c2 == null || Boolean.valueOf(c2.getConfig(oz2.WXAPM_CONFIG_GROUP, "recordImageState", "true")).booleanValue()) && (h = com.alibaba.aliweex.a.l().h()) != null) {
             HashMap hashMap = new HashMap();
             hashMap.put("url", str2);
             hashMap.put("msg", str3);
@@ -337,17 +332,17 @@ public class WXImgLoaderAdapter implements IWXImgLoaderAdapter {
                     if (!TextUtils.isEmpty(str2)) {
                         f.f("pageURL", str2);
                     }
-                    IConfigAdapter c = C3004a.l().c();
-                    if (c != null) {
-                        String config = c.getConfig(WXImgLoaderAdapter.WX_IMAGE_RELEASE_CONFIG, WXImgLoaderAdapter.WX_ALLOW_RELEASE_DOMAIN, "");
+                    IConfigAdapter c2 = com.alibaba.aliweex.a.l().c();
+                    if (c2 != null) {
+                        String config = c2.getConfig(WXImgLoaderAdapter.WX_IMAGE_RELEASE_CONFIG, WXImgLoaderAdapter.WX_ALLOW_RELEASE_DOMAIN, "");
                         if (TextUtils.isEmpty(config) || !TextUtils.equals("true", config)) {
                             f.K(false);
                         }
                     }
                     WXImgLoaderAdapter.i("weex-image-start", str, null);
-                    f.Q(new C3014c(wXImageStrategy, imageView, str, WXImgLoaderAdapter.this.a));
-                    f.m(new C3013b(wXImageStrategy, imageView, str, WXImgLoaderAdapter.this.a));
-                    imageView.setTag(-308, GXTemplateEngine.C3338b.STATE_START);
+                    f.Q(new c(wXImageStrategy, imageView, str, WXImgLoaderAdapter.this.a));
+                    f.m(new b(wXImageStrategy, imageView, str, WXImgLoaderAdapter.this.a));
+                    imageView.setTag(-308, GXTemplateEngine.b.STATE_START);
                     if (WXImgLoaderAdapter.this.a != null) {
                         HashMap hashMap = new HashMap();
                         if (WXEnvironment.isApkDebugable()) {

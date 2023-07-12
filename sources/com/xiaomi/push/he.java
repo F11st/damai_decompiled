@@ -2,7 +2,6 @@ package com.xiaomi.push;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,15 +13,14 @@ public class he {
     private static boolean a;
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.he$a */
     /* loaded from: classes11.dex */
-    static class RunnableC7671a implements Runnable {
+    static class a implements Runnable {
         private Context a;
 
         /* renamed from: a  reason: collision with other field name */
         private hh f456a;
 
-        public RunnableC7671a(Context context, hh hhVar) {
+        public a(Context context, hh hhVar) {
             this.f456a = hhVar;
             this.a = context;
         }
@@ -42,7 +40,7 @@ public class he {
     }
 
     public static void a(Context context, hh hhVar) {
-        al.a(context).a(new RunnableC7671a(context, hhVar));
+        al.a(context).a(new a(context, hhVar));
     }
 
     private static void a(Context context, hh hhVar, File file, byte[] bArr) {
@@ -73,18 +71,18 @@ public class he {
                                     str = "TinyData read from cache file failed cause buffer size not equal length. size:" + read2 + "__length:" + a2;
                                     break loop0;
                                 }
-                                byte[] a3 = C7674i.a(bArr, bArr3);
+                                byte[] a3 = i.a(bArr, bArr3);
                                 if (a3 != null && a3.length != 0) {
-                                    C7672hn c7672hn = new C7672hn();
-                                    it.a(c7672hn, a3);
-                                    c7672hn.a("item_size", String.valueOf(a3.length));
-                                    arrayList.add(c7672hn);
+                                    hn hnVar = new hn();
+                                    it.a(hnVar, a3);
+                                    hnVar.a("item_size", String.valueOf(a3.length));
+                                    arrayList.add(hnVar);
                                     i++;
                                     i2 += a3.length;
                                     if (i >= 8 || i2 >= 10240) {
                                     }
                                 }
-                                AbstractC7535b.d("TinyData read from cache file failed cause decrypt fail");
+                                com.xiaomi.channel.commonutils.logger.b.d("TinyData read from cache file failed cause decrypt fail");
                             } else {
                                 str = "TinyData read from cache file failed cause lengthBuffer error. size:" + read;
                                 break loop0;
@@ -92,13 +90,13 @@ public class he {
                         } catch (Exception e) {
                             e = e;
                             bufferedInputStream = bufferedInputStream2;
-                            AbstractC7535b.a(e);
-                            C7594ab.a(bufferedInputStream);
+                            com.xiaomi.channel.commonutils.logger.b.a(e);
+                            ab.a(bufferedInputStream);
                             return;
                         } catch (Throwable th) {
                             th = th;
                             bufferedInputStream = bufferedInputStream2;
-                            C7594ab.a(bufferedInputStream);
+                            ab.a(bufferedInputStream);
                             throw th;
                         }
                     }
@@ -106,12 +104,12 @@ public class he {
                     arrayList.clear();
                 }
                 str = "TinyData read from cache file failed cause lengthBuffer < 1 || too big. length:" + a2;
-                AbstractC7535b.d(str);
+                com.xiaomi.channel.commonutils.logger.b.d(str);
                 hf.a(context, hhVar, arrayList);
                 if (file != null && file.exists() && !file.delete()) {
-                    AbstractC7535b.m586a("TinyData delete reading temp file failed");
+                    com.xiaomi.channel.commonutils.logger.b.m586a("TinyData delete reading temp file failed");
                 }
-                C7594ab.a(bufferedInputStream2);
+                ab.a(bufferedInputStream2);
             } catch (Exception e2) {
                 e = e2;
             }
@@ -148,7 +146,7 @@ public class he {
             boolean r3 = r2.exists()
             java.lang.String r5 = "TinyData no ready file to get data."
             if (r3 != 0) goto L22
-            com.xiaomi.channel.commonutils.logger.AbstractC7535b.m586a(r5)
+            com.xiaomi.channel.commonutils.logger.b.m586a(r5)
             return
         L22:
             a(r11)
@@ -158,7 +156,7 @@ public class he {
             java.io.File r8 = r11.getFilesDir()     // Catch: java.lang.Throwable -> L78 java.lang.Exception -> L7b
             java.lang.String r9 = "tiny_data.lock"
             r7.<init>(r8, r9)     // Catch: java.lang.Throwable -> L78 java.lang.Exception -> L7b
-            com.xiaomi.push.C7594ab.m659a(r7)     // Catch: java.lang.Throwable -> L78 java.lang.Exception -> L7b
+            com.xiaomi.push.ab.m659a(r7)     // Catch: java.lang.Throwable -> L78 java.lang.Exception -> L7b
             java.io.RandomAccessFile r8 = new java.io.RandomAccessFile     // Catch: java.lang.Throwable -> L78 java.lang.Exception -> L7b
             java.lang.String r9 = "rw"
             r8.<init>(r7, r9)     // Catch: java.lang.Throwable -> L78 java.lang.Exception -> L7b
@@ -194,7 +192,7 @@ public class he {
             r2 = move-exception
             r8 = r6
         L7d:
-            com.xiaomi.channel.commonutils.logger.AbstractC7535b.a(r2)     // Catch: java.lang.Throwable -> Lc8
+            com.xiaomi.channel.commonutils.logger.b.a(r2)     // Catch: java.lang.Throwable -> Lc8
             if (r6 == 0) goto L90
             boolean r2 = r6.isValid()
             if (r2 == 0) goto L90
@@ -203,9 +201,9 @@ public class he {
         L8c:
             r2 = move-exception
         L8d:
-            com.xiaomi.channel.commonutils.logger.AbstractC7535b.a(r2)
+            com.xiaomi.channel.commonutils.logger.b.a(r2)
         L90:
-            com.xiaomi.push.C7594ab.a(r8)
+            com.xiaomi.push.ab.a(r8)
             java.io.File r2 = new java.io.File
             java.lang.StringBuilder r6 = new java.lang.StringBuilder
             r6.<init>()
@@ -218,7 +216,7 @@ public class he {
             r2.<init>(r0)
             boolean r0 = r2.exists()
             if (r0 != 0) goto Lbb
-            com.xiaomi.channel.commonutils.logger.AbstractC7535b.m586a(r5)
+            com.xiaomi.channel.commonutils.logger.b.m586a(r5)
             return
         Lbb:
             a(r11, r12, r2, r3)
@@ -237,13 +235,13 @@ public class he {
             goto Ld9
         Ld5:
             r12 = move-exception
-            com.xiaomi.channel.commonutils.logger.AbstractC7535b.a(r12)
+            com.xiaomi.channel.commonutils.logger.b.a(r12)
         Ld9:
-            com.xiaomi.push.C7594ab.a(r8)
+            com.xiaomi.push.ab.a(r8)
             throw r11
         Ldd:
             java.lang.String r11 = "TinyData extractTinyData is running"
-            com.xiaomi.channel.commonutils.logger.AbstractC7535b.m586a(r11)
+            com.xiaomi.channel.commonutils.logger.b.m586a(r11)
             return
         */
         throw new UnsupportedOperationException("Method not decompiled: com.xiaomi.push.he.c(android.content.Context, com.xiaomi.push.hh):void");

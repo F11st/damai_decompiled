@@ -7,8 +7,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.homepage.component.base.HomePageViewFactory;
 import cn.damai.tetris.v2.helper.StaggeredLayoutHelper;
-import com.alibaba.android.vlayout.AbstractC3289a;
 import com.alibaba.android.vlayout.DelegateAdapter;
+import com.alibaba.android.vlayout.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
@@ -115,9 +115,9 @@ public class GuessAdapter extends DelegateAdapter.Adapter {
     }
 
     @Override // com.alibaba.android.vlayout.DelegateAdapter.Adapter
-    public AbstractC3289a onCreateLayoutHelper() {
+    public a onCreateLayoutHelper() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1891227642") ? (AbstractC3289a) ipChange.ipc$dispatch("-1891227642", new Object[]{this}) : this.d;
+        return AndroidInstantRuntime.support(ipChange, "-1891227642") ? (a) ipChange.ipc$dispatch("-1891227642", new Object[]{this}) : this.d;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

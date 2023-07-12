@@ -9,7 +9,7 @@ import org.jetbrains.annotations.Nullable;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
-class DeferredCoroutine<T> extends AbstractC8619a<T> implements Deferred<T>, SelectClause1<T> {
+class DeferredCoroutine<T> extends a<T> implements Deferred<T>, SelectClause1<T> {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* JADX WARN: Removed duplicated region for block: B:10:0x0023  */
     /* JADX WARN: Removed duplicated region for block: B:14:0x0035  */
@@ -35,7 +35,7 @@ class DeferredCoroutine<T> extends AbstractC8619a<T> implements Deferred<T>, Sel
             r0.<init>(r4, r5)
         L18:
             java.lang.Object r5 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L35

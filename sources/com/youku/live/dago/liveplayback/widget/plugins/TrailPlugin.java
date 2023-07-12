@@ -189,7 +189,7 @@ public class TrailPlugin extends AbsPlugin {
         super(alixPlayerContext, pluginConfig, viewGroup);
         this.mEventBus = alixPlayerContext.getEventBus();
         this.mHandler = new Handler(Looper.getMainLooper());
-        View inflate = LayoutInflater.from(alixPlayerContext.getActivity()).inflate(R.C7935layout.trail_plugin, (ViewGroup) null);
+        View inflate = LayoutInflater.from(alixPlayerContext.getActivity()).inflate(R.layout.trail_plugin, (ViewGroup) null);
         this.mHolderView = inflate;
         LinearLayout linearLayout = (LinearLayout) inflate.findViewById(R.id.trail_time_container);
         this.mTrailTimeContainer = linearLayout;

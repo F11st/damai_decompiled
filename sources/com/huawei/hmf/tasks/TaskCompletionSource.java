@@ -1,11 +1,11 @@
 package com.huawei.hmf.tasks;
 
-import com.huawei.hmf.tasks.a.C5503i;
+import com.huawei.hmf.tasks.a.i;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class TaskCompletionSource<TResult> {
-    private final C5503i<TResult> task = new C5503i<>();
+    private final i<TResult> task = new i<>();
 
     public TaskCompletionSource() {
     }
@@ -28,6 +28,6 @@ public class TaskCompletionSource<TResult> {
     }
 
     public void setResult(TResult tresult) {
-        this.task.a((C5503i<TResult>) tresult);
+        this.task.a((i<TResult>) tresult);
     }
 }

@@ -22,7 +22,6 @@ import cn.damai.comment.util.NineImgUtil;
 import cn.damai.comment.util.SoftInputUtils;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.issue.tool.IssueConstants;
 import cn.damai.login.LoginManager;
@@ -54,8 +53,8 @@ public class EvaluateItemDataBinder {
     public static final int COMMENT_SCENE_SCRIPT = 2;
     public static final int COMMENT_SCENE_SCRIPT_STORE = 1;
     private Activity a;
-    private View$OnClickListenerC1093f b;
-    private View$OnClickListenerC1092e c;
+    private f b;
+    private e c;
     private EvaluateItemUTReportListener d;
     private EvaluateItemOtherListener e;
     public SimpleItemClickListener f;
@@ -115,13 +114,12 @@ public class EvaluateItemDataBinder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.ui.item.EvaluateItemDataBinder$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1088a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ EvaluateItemViewHolder a;
 
-        View$OnClickListenerC1088a(EvaluateItemDataBinder evaluateItemDataBinder, EvaluateItemViewHolder evaluateItemViewHolder) {
+        a(EvaluateItemDataBinder evaluateItemDataBinder, EvaluateItemViewHolder evaluateItemViewHolder) {
             this.a = evaluateItemViewHolder;
         }
 
@@ -148,13 +146,12 @@ public class EvaluateItemDataBinder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.ui.item.EvaluateItemDataBinder$b */
     /* loaded from: classes5.dex */
-    public class C1089b implements NineImgUtil.OnClickExtraListener {
+    public class b implements NineImgUtil.OnClickExtraListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CommentsItemBean a;
 
-        C1089b(CommentsItemBean commentsItemBean) {
+        b(CommentsItemBean commentsItemBean) {
             this.a = commentsItemBean;
         }
 
@@ -172,14 +169,13 @@ public class EvaluateItemDataBinder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.ui.item.EvaluateItemDataBinder$c */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1090c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TextView a;
         final /* synthetic */ CommentsItemBean b;
 
-        View$OnClickListenerC1090c(TextView textView, CommentsItemBean commentsItemBean) {
+        c(TextView textView, CommentsItemBean commentsItemBean) {
             this.a = textView;
             this.b = commentsItemBean;
         }
@@ -199,12 +195,11 @@ public class EvaluateItemDataBinder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.ui.item.EvaluateItemDataBinder$d */
     /* loaded from: classes5.dex */
-    public class C1091d implements OnPraiseViewClickListener {
+    public class d implements OnPraiseViewClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1091d() {
+        d() {
         }
 
         @Override // cn.damai.comment.listener.OnPraiseViewClickListener
@@ -223,12 +218,11 @@ public class EvaluateItemDataBinder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.ui.item.EvaluateItemDataBinder$e */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1092e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1092e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -263,12 +257,11 @@ public class EvaluateItemDataBinder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.ui.item.EvaluateItemDataBinder$f */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1093f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1093f() {
+        f() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -307,10 +300,10 @@ public class EvaluateItemDataBinder {
         this.h = 0;
         this.i = 0;
         this.j = false;
-        this.k = new C1091d();
+        this.k = new d();
         this.a = activity;
-        this.b = new View$OnClickListenerC1093f();
-        this.c = new View$OnClickListenerC1092e();
+        this.b = new f();
+        this.c = new e();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -328,7 +321,7 @@ public class EvaluateItemDataBinder {
                 int n = n(this.i, alVar.a());
                 if (n == 1 && alVar.a().getStoreInfo() != null) {
                     String valueOf = alVar.a().getStoreInfo().getStoreId() == null ? "" : String.valueOf(alVar.a().getStoreInfo().getStoreId());
-                    C0529c.e().x(dl.I().J(alVar.a().getCommentId(), null, null, alVar.a().getStoreInfo().getStoreId(), 0));
+                    cn.damai.common.user.c.e().x(dl.I().J(alVar.a().getCommentId(), null, null, alVar.a().getStoreInfo().getStoreId(), 0));
                     if (valueOf.isEmpty()) {
                         return;
                     }
@@ -336,7 +329,7 @@ public class EvaluateItemDataBinder {
                     from.toUri("damai://V1/ScriptPlay?storeId=" + valueOf);
                 } else if (n != 2 || alVar.a().getScriptInfo() == null) {
                 } else {
-                    C0529c.e().x(dl.I().J(alVar.a().getCommentId(), null, alVar.a().getScriptInfo().getId(), null, 0));
+                    cn.damai.common.user.c.e().x(dl.I().J(alVar.a().getCommentId(), null, alVar.a().getScriptInfo().getId(), null, 0));
                     if (TextUtils.isEmpty(alVar.a().getScriptInfo().getActionUrl())) {
                         return;
                     }
@@ -378,24 +371,24 @@ public class EvaluateItemDataBinder {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void m(al alVar) {
-        CommentsItemBean a;
+        CommentsItemBean a2;
         Activity activity;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1922856990")) {
             ipChange.ipc$dispatch("1922856990", new Object[]{this, alVar});
-        } else if (alVar == null || (a = alVar.a()) == null || a.getUserDO() == null || (activity = this.a) == null || activity.isFinishing()) {
+        } else if (alVar == null || (a2 = alVar.a()) == null || a2.getUserDO() == null || (activity = this.a) == null || activity.isFinishing()) {
         } else {
             Activity activity2 = this.a;
             if (activity2 instanceof DamaiBaseActivity) {
                 DamaiBaseActivity damaiBaseActivity = (DamaiBaseActivity) activity2;
                 EvaluateItemUTReportListener evaluateItemUTReportListener = this.d;
                 if (evaluateItemUTReportListener != null) {
-                    evaluateItemUTReportListener.onReportMoreInfoClickEvent(alVar.o(), a, a.getItemIndex());
+                    evaluateItemUTReportListener.onReportMoreInfoClickEvent(alVar.o(), a2, a2.getItemIndex());
                 }
-                if (a.getItemType() == 1 && a.getStoreInfo() != null) {
-                    CommentItemMoreUtil.j(damaiBaseActivity, "evaluateList", cl.b(a.getStoreInfo().getStoreId()), a.getStoreInfo().getStoreImgUrl(), a.getStoreInfo().getStoreName(), a.getStoreInfo().getDes(), "", a, l(a), R$layout.comment_detail_layout, false);
+                if (a2.getItemType() == 1 && a2.getStoreInfo() != null) {
+                    CommentItemMoreUtil.j(damaiBaseActivity, "evaluateList", cl.b(a2.getStoreInfo().getStoreId()), a2.getStoreInfo().getStoreImgUrl(), a2.getStoreInfo().getStoreName(), a2.getStoreInfo().getDes(), "", a2, l(a2), R$layout.comment_detail_layout, false);
                 } else {
-                    CommentItemMoreUtil.j(damaiBaseActivity, "evaluateList", alVar.e(), alVar.f(), alVar.g(), alVar.d(), alVar.h(), a, l(a), R$layout.new_evaluate_activity, a.getItemType() != 2);
+                    CommentItemMoreUtil.j(damaiBaseActivity, "evaluateList", alVar.e(), alVar.f(), alVar.g(), alVar.d(), alVar.h(), a2, l(a2), R$layout.new_evaluate_activity, a2.getItemType() != 2);
                 }
             }
         }
@@ -427,24 +420,24 @@ public class EvaluateItemDataBinder {
                 LoginManager.k().v(this.a);
                 return;
             }
-            CommentsItemBean a = alVar.a();
-            if (a == null || TextUtils.isEmpty(a.getUrl()) || (activity = this.a) == null || activity.isFinishing()) {
+            CommentsItemBean a2 = alVar.a();
+            if (a2 == null || TextUtils.isEmpty(a2.getUrl()) || (activity = this.a) == null || activity.isFinishing()) {
                 return;
             }
             if (alVar.n()) {
                 EvaluateItemOtherListener evaluateItemOtherListener = this.e;
                 if (evaluateItemOtherListener != null) {
-                    evaluateItemOtherListener.replyContentClick(false, a);
+                    evaluateItemOtherListener.replyContentClick(false, a2);
                     return;
                 }
                 return;
             }
             EvaluateItemUTReportListener evaluateItemUTReportListener = this.d;
             if (evaluateItemUTReportListener != null) {
-                evaluateItemUTReportListener.onReportReplyClickEvent(alVar.o(), a, a.getItemIndex());
+                evaluateItemUTReportListener.onReportReplyClickEvent(alVar.o(), a2, a2.getItemIndex());
             }
             Bundle bundle = new Bundle();
-            bundle.putString(g41.ISSUE_PARAM_COMMENT_ID, a.getCommentId());
+            bundle.putString(g41.ISSUE_PARAM_COMMENT_ID, a2.getCommentId());
             bundle.putBoolean("isShowSoftInput", true);
             bundle.putBoolean("isVEvaluate", alVar.o());
             DMNav.from(this.a).withExtras(bundle).toUri(NavUri.b(cs.X));
@@ -458,8 +451,8 @@ public class EvaluateItemDataBinder {
         } else if (commentsItemBean == null) {
             nineGridlayout.setVisibility(8);
         } else {
-            C1089b c1089b = new C1089b(commentsItemBean);
-            NineImgUtil.a().b(this.a, (((int) yr2.d(this.a)) - m62.a(this.a, 42.0f)) - ((int) this.a.getResources().getDimension(R$dimen.evaluate_item_margin_left)), true, nineGridlayout, commentsItemBean, commentsItemBean.getImageDOList(), c1089b);
+            b bVar = new b(commentsItemBean);
+            NineImgUtil.a().b(this.a, (((int) yr2.d(this.a)) - m62.a(this.a, 42.0f)) - ((int) this.a.getResources().getDimension(R$dimen.evaluate_item_margin_left)), true, nineGridlayout, commentsItemBean, commentsItemBean.getImageDOList(), bVar);
         }
     }
 
@@ -490,7 +483,7 @@ public class EvaluateItemDataBinder {
                 spannableString.setSpan(new ForegroundColorSpan(Color.parseColor("#30AEFF")), 0, str.length(), 33);
                 textView.setText(spannableString);
             }
-            relativeLayout.setOnClickListener(new View$OnClickListenerC1090c(textView, commentsItemBean2));
+            relativeLayout.setOnClickListener(new c(textView, commentsItemBean2));
             return;
         }
         textView.setText("该内容已被删除");
@@ -562,20 +555,20 @@ public class EvaluateItemDataBinder {
     }
 
     public void o(al alVar) {
-        CommentsItemBean a;
+        CommentsItemBean a2;
         Activity activity;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-2106028855")) {
             ipChange.ipc$dispatch("-2106028855", new Object[]{this, alVar});
-        } else if (alVar == null || (a = alVar.a()) == null || a.getUserDO() == null || (activity = this.a) == null || activity.isFinishing()) {
+        } else if (alVar == null || (a2 = alVar.a()) == null || a2.getUserDO() == null || (activity = this.a) == null || activity.isFinishing()) {
         } else {
             EvaluateItemUTReportListener evaluateItemUTReportListener = this.d;
             if (evaluateItemUTReportListener != null) {
-                evaluateItemUTReportListener.onReportUserInfoClickEvent(alVar.o(), a, a.getItemIndex());
+                evaluateItemUTReportListener.onReportUserInfoClickEvent(alVar.o(), a2, a2.getItemIndex());
             }
             SoftInputUtils.a(this.a);
             Bundle bundle = new Bundle();
-            bundle.putString(FeedsViewModel.ARG_USERID, a.getUserDO().getDamaiUserId());
+            bundle.putString(FeedsViewModel.ARG_USERID, a2.getUserDO().getDamaiUserId());
             DMNav.from(this.a).withExtras(bundle).toUri(NavUri.b(cs.ARTISTID_THEME));
         }
     }
@@ -621,11 +614,11 @@ public class EvaluateItemDataBinder {
         this.h = 0;
         this.i = 0;
         this.j = false;
-        this.k = new C1091d();
+        this.k = new d();
         this.a = activity;
         this.i = i;
-        this.b = new View$OnClickListenerC1093f();
-        this.c = new View$OnClickListenerC1092e();
+        this.b = new f();
+        this.c = new e();
     }
 
     public EvaluateItemDataBinder(Activity activity) {
@@ -633,10 +626,10 @@ public class EvaluateItemDataBinder {
         this.h = 0;
         this.i = 0;
         this.j = false;
-        this.k = new C1091d();
+        this.k = new d();
         this.a = activity;
-        this.b = new View$OnClickListenerC1093f();
-        this.c = new View$OnClickListenerC1092e();
+        this.b = new f();
+        this.c = new e();
     }
 
     public EvaluateItemDataBinder(Activity activity, int i) {
@@ -644,10 +637,10 @@ public class EvaluateItemDataBinder {
         this.h = 0;
         this.i = 0;
         this.j = false;
-        this.k = new C1091d();
+        this.k = new d();
         this.a = activity;
         this.i = i;
-        this.b = new View$OnClickListenerC1093f();
-        this.c = new View$OnClickListenerC1092e();
+        this.b = new f();
+        this.c = new e();
     }
 }

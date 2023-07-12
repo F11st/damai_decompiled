@@ -5,10 +5,10 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.middlewareservice.provider.info.AppInfoProviderProxy;
 import java.util.concurrent.ConcurrentHashMap;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
@@ -25,7 +25,7 @@ public final class PerformanceLogUtil {
 
     static {
         Lazy a;
-        a = C8177b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<ConcurrentHashMap<String, Long>>() { // from class: com.youku.arch.v3.util.PerformanceLogUtil$instance$2
+        a = b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<ConcurrentHashMap<String, Long>>() { // from class: com.youku.arch.v3.util.PerformanceLogUtil$instance$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // kotlin.jvm.functions.Function0

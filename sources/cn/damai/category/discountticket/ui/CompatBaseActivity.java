@@ -5,8 +5,8 @@ import android.os.Build;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseModel;
+import cn.damai.common.app.base.a;
 import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
@@ -19,7 +19,7 @@ import tb.kg2;
 
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
-public abstract class CompatBaseActivity<P extends AbstractC0470a, M extends BaseModel> extends DamaiBaseActivity<P, M> implements IBaseCompatView {
+public abstract class CompatBaseActivity<P extends a, M extends BaseModel> extends DamaiBaseActivity<P, M> implements IBaseCompatView {
     private static transient /* synthetic */ IpChange $ipChange;
 
     protected void adjustStatusBar() {

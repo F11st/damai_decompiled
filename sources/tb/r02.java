@@ -4,8 +4,6 @@ import java.lang.reflect.Type;
 import java.lang.reflect.WildcardType;
 import java.util.Collection;
 import java.util.List;
-import kotlin.collections.C8202e;
-import kotlin.collections.C8214m;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotation;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaWildcardType;
 import org.jetbrains.annotations.NotNull;
@@ -25,7 +23,7 @@ public final class r02 extends o02 implements JavaWildcardType {
         List g;
         b41.i(wildcardType, "reflectType");
         this.a = wildcardType;
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         this.b = g;
     }
 
@@ -37,20 +35,20 @@ public final class r02 extends o02 implements JavaWildcardType {
         Type[] lowerBounds = a().getLowerBounds();
         if (upperBounds.length <= 1 && lowerBounds.length <= 1) {
             if (lowerBounds.length == 1) {
-                o02.C9490a c9490a = o02.Factory;
+                o02.a aVar = o02.Factory;
                 b41.h(lowerBounds, "lowerBounds");
-                Object L = C8202e.L(lowerBounds);
+                Object L = kotlin.collections.e.L(lowerBounds);
                 b41.h(L, "lowerBounds.single()");
-                return c9490a.a((Type) L);
+                return aVar.a((Type) L);
             } else if (upperBounds.length == 1) {
                 b41.h(upperBounds, "upperBounds");
-                Type type = (Type) C8202e.L(upperBounds);
+                Type type = (Type) kotlin.collections.e.L(upperBounds);
                 if (b41.d(type, Object.class)) {
                     return null;
                 }
-                o02.C9490a c9490a2 = o02.Factory;
+                o02.a aVar2 = o02.Factory;
                 b41.h(type, "ub");
-                return c9490a2.a(type);
+                return aVar2.a(type);
             } else {
                 return null;
             }
@@ -81,6 +79,6 @@ public final class r02 extends o02 implements JavaWildcardType {
     public boolean isExtends() {
         Type[] upperBounds = a().getUpperBounds();
         b41.h(upperBounds, "reflectType.upperBounds");
-        return !b41.d(C8202e.v(upperBounds), Object.class);
+        return !b41.d(kotlin.collections.e.v(upperBounds), Object.class);
     }
 }

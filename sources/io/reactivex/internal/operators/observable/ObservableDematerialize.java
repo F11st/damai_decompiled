@@ -85,7 +85,7 @@ public final class ObservableDematerialize<T> extends AbstractObservableWithUpst
         super(observableSource);
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new DematerializeObserver(observer));
     }

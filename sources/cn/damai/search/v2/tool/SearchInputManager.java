@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.comment.util.SoftInputUtils;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.homepage.R$color;
 import cn.damai.homepage.R$id;
 import cn.damai.search.bean.SearchDataHolder;
@@ -56,12 +56,11 @@ public class SearchInputManager implements View.OnClickListener, InputInfoProvid
     private InputInfo k;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.v2.tool.SearchInputManager$a */
     /* loaded from: classes6.dex */
-    public class C1658a extends a82 {
+    public class a extends a82 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1658a() {
+        a() {
         }
 
         @Override // tb.a82
@@ -81,12 +80,11 @@ public class SearchInputManager implements View.OnClickListener, InputInfoProvid
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.v2.tool.SearchInputManager$b */
     /* loaded from: classes6.dex */
-    public class C1659b implements SuggestAdapter.OnSuggestListener {
+    public class b implements SuggestAdapter.OnSuggestListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1659b() {
+        b() {
         }
 
         @Override // cn.damai.search.v2.adapter.SuggestAdapter.OnSuggestListener
@@ -123,7 +121,7 @@ public class SearchInputManager implements View.OnClickListener, InputInfoProvid
             HashMap<String, String> f = d23.f();
             f.put("keyword", SearchInputManager.this.getCurrentInputInfo().getInput());
             f.put("titlelabel", str);
-            C0529c e = C0529c.e();
+            c e = c.e();
             e.G(view, "item_" + i, "suggestion", "search", f);
         }
     }
@@ -141,9 +139,9 @@ public class SearchInputManager implements View.OnClickListener, InputInfoProvid
         this.h.setVisibility(8);
         ms.a(this.a, findViewById, false);
         q((RecyclerView) view2.findViewById(R$id.search_v2_suggest_recycler));
-        C1658a c1658a = new C1658a();
-        this.g = c1658a;
-        this.c.addTextChangedListener(c1658a);
+        a aVar = new a();
+        this.g = aVar;
+        this.c.addTextChangedListener(aVar);
         this.c.setOnEditorActionListener(new TextView.OnEditorActionListener() { // from class: cn.damai.search.v2.tool.SearchInputManager.2
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -251,7 +249,7 @@ public class SearchInputManager implements View.OnClickListener, InputInfoProvid
         recyclerView.setLayoutManager(new LinearLayoutManager(this.a, 1, false));
         SuggestAdapter suggestAdapter = new SuggestAdapter(this.a);
         this.f = suggestAdapter;
-        suggestAdapter.b(new C1659b());
+        suggestAdapter.b(new b());
         recyclerView.setAdapter(this.f);
     }
 

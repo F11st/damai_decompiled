@@ -4,7 +4,7 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.tetris.component.home.bean.HomeTitleBean;
@@ -35,12 +35,11 @@ public class WaterFlowTitleViewHolder extends CommonViewHolder {
     public List<HomeTitleBean.Title> mainTitles;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.viewholder.WaterFlowTitleViewHolder$a */
     /* loaded from: classes7.dex */
-    public class C1872a implements TabLottieLinearView.OnBindListener {
+    public class a implements TabLottieLinearView.OnBindListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1872a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.home.widget.TabLottieLinearView.OnBindListener
@@ -55,13 +54,12 @@ public class WaterFlowTitleViewHolder extends CommonViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.viewholder.WaterFlowTitleViewHolder$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1873b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         long a;
 
-        View$OnClickListenerC1873b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -121,7 +119,7 @@ public class WaterFlowTitleViewHolder extends CommonViewHolder {
                 i++;
             }
         }
-        this.mScrollView.setFontColor(R$color.color_000000, R$color.color_9C9CA5).setFontSize(16, 20).setTitle(this.mTabList).setHeight(32).setLineType(3).setOnTitleClickListener(new View$OnClickListenerC1873b()).setBindListener(new C1872a()).commit();
+        this.mScrollView.setFontColor(R$color.color_000000, R$color.color_9C9CA5).setFontSize(16, 20).setTitle(this.mTabList).setHeight(32).setLineType(3).setOnTitleClickListener(new b()).setBindListener(new a()).commit();
         if (this.mTabList.size() > 1) {
             this.mScrollView.selectTitle(this.mCurIndex);
         }
@@ -139,7 +137,7 @@ public class WaterFlowTitleViewHolder extends CommonViewHolder {
         if (list != null && i < list.size() && this.mainTitles.get(i) != null) {
             d23.h(g, "titlelabel", this.mainTitles.get(i).name);
         }
-        C0529c e = C0529c.e();
+        c e = c.e();
         e.G(view, "tab_" + i, "bottom", "home", g);
     }
 

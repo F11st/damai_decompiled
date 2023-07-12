@@ -1,7 +1,6 @@
 package tb;
 
 import android.content.Context;
-import com.alibaba.analytics.utils.C3141a;
 import java.util.Random;
 
 /* compiled from: Taobao */
@@ -31,6 +30,6 @@ public class es1 {
         System.arraycopy(a2, 0, bArr, 4, 4);
         System.arraycopy(a3, 0, bArr, 8, 4);
         System.arraycopy(a4, 0, bArr, 12, 4);
-        return C3141a.i(bArr);
+        return com.alibaba.analytics.utils.a.i(bArr);
     }
 }

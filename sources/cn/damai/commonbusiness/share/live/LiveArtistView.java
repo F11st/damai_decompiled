@@ -7,8 +7,8 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.share.live.LiveArtistView;
@@ -45,15 +45,15 @@ public class LiveArtistView extends RelativeLayout {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void lambda$handleView$0(DMImageCreator.DMImageSuccListener dMImageSuccListener, DMImageCreator.C0502e c0502e) {
+    public /* synthetic */ void lambda$handleView$0(DMImageCreator.DMImageSuccListener dMImageSuccListener, DMImageCreator.e eVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1928725132")) {
-            ipChange.ipc$dispatch("-1928725132", new Object[]{this, dMImageSuccListener, c0502e});
+            ipChange.ipc$dispatch("-1928725132", new Object[]{this, dMImageSuccListener, eVar});
             return;
         }
-        this.mAvatarView.setImageBitmap(c0502e.b);
+        this.mAvatarView.setImageBitmap(eVar.b);
         if (dMImageSuccListener != null) {
-            dMImageSuccListener.onSuccess(c0502e);
+            dMImageSuccListener.onSuccess(eVar);
         }
     }
 
@@ -69,10 +69,10 @@ public class LiveArtistView extends RelativeLayout {
         setVisibility(0);
         this.mNameView.setText(shareArtistItem.mArtistName);
         this.mDescView.setText(shareArtistItem.mArtistDesc);
-        C0504a.b().c(shareArtistItem.mArtistAvatar).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.p91
+        a.b().c(shareArtistItem.mArtistAvatar).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.p91
             @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-            public final void onSuccess(DMImageCreator.C0502e c0502e) {
-                LiveArtistView.this.lambda$handleView$0(dMImageSuccListener, c0502e);
+            public final void onSuccess(DMImageCreator.e eVar) {
+                LiveArtistView.this.lambda$handleView$0(dMImageSuccListener, eVar);
             }
         }).e(dMImageFailListener).f();
     }

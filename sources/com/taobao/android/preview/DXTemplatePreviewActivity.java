@@ -24,8 +24,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.taobao.android.dinamic.R$array;
 import com.taobao.android.dinamic.R$id;
 import com.taobao.android.dinamic.R$layout;
-import com.taobao.android.dinamicx.C6387n;
 import com.taobao.android.dinamicx.monitor.DXFontSize;
+import com.taobao.android.dinamicx.n;
 import com.taobao.android.dinamicx.notification.IDXNotificationListener;
 import com.taobao.android.dinamicx.template.download.DXTemplateItem;
 import com.taobao.android.purchase.core.utils.PurchaseConstants;
@@ -51,7 +51,7 @@ public class DXTemplatePreviewActivity extends AppCompatActivity implements IDXN
     JSONArray array;
     private boolean canScrollVertical = true;
     private int currentLevel;
-    C6387n engineRouter;
+    n engineRouter;
     LinearLayout linearLayout;
     private RecyclerView rvMainContainer;
 
@@ -59,14 +59,13 @@ public class DXTemplatePreviewActivity extends AppCompatActivity implements IDXN
     @Keep
     /* loaded from: classes12.dex */
     public interface DXPreviewInterface extends Serializable {
-        void previewEngineDidInitialized(C6387n c6387n);
+        void previewEngineDidInitialized(n nVar);
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.preview.DXTemplatePreviewActivity$a */
     /* loaded from: classes12.dex */
-    class View$OnClickListenerC6555a implements View.OnClickListener {
-        View$OnClickListenerC6555a() {
+    class a implements View.OnClickListener {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -78,10 +77,9 @@ public class DXTemplatePreviewActivity extends AppCompatActivity implements IDXN
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.preview.DXTemplatePreviewActivity$b */
     /* loaded from: classes11.dex */
-    public class C6556b extends StaggeredGridLayoutManager {
-        C6556b(int i, int i2) {
+    public class b extends StaggeredGridLayoutManager {
+        b(int i, int i2) {
             super(i, i2);
         }
 
@@ -93,10 +91,9 @@ public class DXTemplatePreviewActivity extends AppCompatActivity implements IDXN
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.preview.DXTemplatePreviewActivity$c */
     /* loaded from: classes12.dex */
-    public class DialogInterface$OnClickListenerC6557c implements DialogInterface.OnClickListener {
-        DialogInterface$OnClickListenerC6557c() {
+    public class c implements DialogInterface.OnClickListener {
+        c() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -109,10 +106,9 @@ public class DXTemplatePreviewActivity extends AppCompatActivity implements IDXN
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.preview.DXTemplatePreviewActivity$d */
     /* loaded from: classes12.dex */
-    public class DialogInterface$OnClickListenerC6558d implements DialogInterface.OnClickListener {
-        DialogInterface$OnClickListenerC6558d() {
+    public class d implements DialogInterface.OnClickListener {
+        d() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -124,10 +120,9 @@ public class DXTemplatePreviewActivity extends AppCompatActivity implements IDXN
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.preview.DXTemplatePreviewActivity$e */
     /* loaded from: classes12.dex */
-    public class AsyncTaskC6559e extends AsyncTask<String, Void, JSONArray> {
-        AsyncTaskC6559e() {
+    public class e extends AsyncTask<String, Void, JSONArray> {
+        e() {
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
@@ -170,17 +165,16 @@ public class DXTemplatePreviewActivity extends AppCompatActivity implements IDXN
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.preview.DXTemplatePreviewActivity$f */
     /* loaded from: classes12.dex */
-    public static class C6560f {
+    public static class f {
         public String a;
     }
 
-    private void callMethod(C6560f c6560f) {
-        if (c6560f != null && !TextUtils.isEmpty(c6560f.a)) {
+    private void callMethod(f fVar) {
+        if (fVar != null && !TextUtils.isEmpty(fVar.a)) {
             try {
-                Class<?> cls = Class.forName(c6560f.a);
-                cls.getMethod("previewEngineDidInitialized", C6387n.class).invoke(cls.newInstance(), this.engineRouter);
+                Class<?> cls = Class.forName(fVar.a);
+                cls.getMethod("previewEngineDidInitialized", n.class).invoke(cls.newInstance(), this.engineRouter);
             } catch (Throwable unused) {
             }
         }
@@ -188,7 +182,7 @@ public class DXTemplatePreviewActivity extends AppCompatActivity implements IDXN
 
     /* JADX INFO: Access modifiers changed from: private */
     public void downLoadMockData(String str) {
-        new AsyncTaskC6559e().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, str);
+        new e().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -230,7 +224,7 @@ public class DXTemplatePreviewActivity extends AppCompatActivity implements IDXN
         return dXTemplateItem;
     }
 
-    private List<C6560f> getPreviewInfoList(JSONArray jSONArray) {
+    private List<f> getPreviewInfoList(JSONArray jSONArray) {
         JSONArray jSONArray2;
         if (jSONArray == null) {
             return null;
@@ -242,10 +236,10 @@ public class DXTemplatePreviewActivity extends AppCompatActivity implements IDXN
                 for (int i2 = 0; i2 < jSONArray2.size(); i2++) {
                     JSONObject jSONObject2 = jSONArray2.getJSONObject(i2);
                     if (jSONObject2 != null) {
-                        C6560f c6560f = new C6560f();
-                        c6560f.a = jSONObject2.getString(PushClientConstants.TAG_CLASS_NAME);
+                        f fVar = new f();
+                        fVar.a = jSONObject2.getString(PushClientConstants.TAG_CLASS_NAME);
                         jSONObject2.getString("bundlerPath");
-                        arrayList.add(c6560f);
+                        arrayList.add(fVar);
                     }
                 }
             }
@@ -256,7 +250,7 @@ public class DXTemplatePreviewActivity extends AppCompatActivity implements IDXN
     /* JADX INFO: Access modifiers changed from: private */
     public void gotoImplPreviewInterface(JSONArray jSONArray) {
         log("开始进行组建注册");
-        List<C6560f> previewInfoList = getPreviewInfoList(jSONArray);
+        List<f> previewInfoList = getPreviewInfoList(jSONArray);
         if (previewInfoList == null) {
             return;
         }
@@ -316,7 +310,7 @@ public class DXTemplatePreviewActivity extends AppCompatActivity implements IDXN
     }
 
     private void initRecyclerView() {
-        this.rvMainContainer.setLayoutManager(new C6556b(2, 1));
+        this.rvMainContainer.setLayoutManager(new b(2, 1));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -342,8 +336,8 @@ public class DXTemplatePreviewActivity extends AppCompatActivity implements IDXN
     public void showErrorDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("获取mock数据失败，是否重试？").setTitle(PurchaseConstants.NORMAL_WARNING_TITLE);
-        builder.setPositiveButton("重试", new DialogInterface$OnClickListenerC6557c());
-        builder.setNegativeButton(PurchaseConstants.PART_SUCCESS_CANCEL, new DialogInterface$OnClickListenerC6558d());
+        builder.setPositiveButton("重试", new c());
+        builder.setNegativeButton(PurchaseConstants.PART_SUCCESS_CANCEL, new d());
         builder.create().show();
     }
 
@@ -357,7 +351,7 @@ public class DXTemplatePreviewActivity extends AppCompatActivity implements IDXN
         this.currentLevel = DXFontSize.b().a();
         this.rvMainContainer = (RecyclerView) findViewById(R$id.rv_main_container);
         this.linearLayout = (LinearLayout) findViewById(R$id.ll);
-        ((TextView) findViewById(R$id.dinamic_preview_back)).setOnClickListener(new View$OnClickListenerC6555a());
+        ((TextView) findViewById(R$id.dinamic_preview_back)).setOnClickListener(new a());
         Spinner spinner = (Spinner) findViewById(R$id.fontSize_select);
         initEngineRouter(null);
         initRecyclerView();

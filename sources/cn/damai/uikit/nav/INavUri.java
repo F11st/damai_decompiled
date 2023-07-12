@@ -18,12 +18,11 @@ public class INavUri implements Serializable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.nav.INavUri$a */
     /* loaded from: classes8.dex */
-    public static final class C2516a implements Schemed {
+    public static final class a implements Schemed {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2516a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.nav.INavUri.Schemed
@@ -64,7 +63,7 @@ public class INavUri implements Serializable {
         }
         INavUri iNavUri = new INavUri();
         iNavUri.mBuilder.scheme(str);
-        return new C2516a();
+        return new a();
     }
 
     public Uri build() {

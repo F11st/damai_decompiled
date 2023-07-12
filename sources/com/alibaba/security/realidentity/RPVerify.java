@@ -10,21 +10,16 @@ import com.alibaba.fastjson.JSONObject;
 import com.alibaba.security.biometrics.jni.VersionKey;
 import com.alibaba.security.biometrics.service.common.GetCacheDataManager;
 import com.alibaba.security.biometrics.service.constants.GlobalErrorCode;
-import com.alibaba.security.common.c.C3800a;
-import com.alibaba.security.common.d.C3811h;
+import com.alibaba.security.common.d.h;
 import com.alibaba.security.common.track.RPTrack;
-import com.alibaba.security.common.track.a.C3829a;
+import com.alibaba.security.common.track.a.a;
 import com.alibaba.security.realidentity.RPConfig;
-import com.alibaba.security.realidentity.a.C3847g;
-import com.alibaba.security.realidentity.a.C3849h;
-import com.alibaba.security.realidentity.a.C3850i;
+import com.alibaba.security.realidentity.a.g;
+import com.alibaba.security.realidentity.a.i;
 import com.alibaba.security.realidentity.bean.ClientInfo;
-import com.alibaba.security.realidentity.d.C3890b;
 import com.alibaba.security.realidentity.http.RpcInvoker;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
 import com.alibaba.security.realidentity.jsbridge.RP;
-import com.alibaba.security.realidentity.track.C3915a;
-import com.alibaba.security.realidentity.utils.C3925c;
+import com.alibaba.security.realidentity.utils.c;
 import java.util.Objects;
 
 /* compiled from: Taobao */
@@ -69,7 +64,7 @@ public class RPVerify {
             rPEventListener.onFinish(RPResult.AUDIT_NOT, new RPDetail(GlobalErrorCode.mappingResultCode(GlobalErrorCode.ERROR_INIT), "-10400", "sdk init fail", null));
             return;
         }
-        C3847g.C3848a.a.g = rPConfig;
+        g.a.a.g = rPConfig;
         runnable.run();
     }
 
@@ -77,9 +72,9 @@ public class RPVerify {
         JSONObject jSONObject = new JSONObject();
         ClientInfo clientInfo = new ClientInfo();
         clientInfo.setVersionTag("");
-        jSONObject.put(AbstractC3893a.I, (Object) C3811h.a(clientInfo));
-        jSONObject.put("wua", (Object) C3847g.C3848a.a.i.f());
-        jSONObject.put("miniWua", (Object) C3847g.C3848a.a.i.g());
+        jSONObject.put(com.alibaba.security.realidentity.jsbridge.a.I, (Object) h.a(clientInfo));
+        jSONObject.put("wua", (Object) g.a.a.i.f());
+        jSONObject.put("miniWua", (Object) g.a.a.i.g());
         return JSON.toJSONString(jSONObject);
     }
 
@@ -101,28 +96,28 @@ public class RPVerify {
         a(activity, str, build, rPEventListener, new Runnable() { // from class: com.alibaba.security.realidentity.RPVerify.4
             @Override // java.lang.Runnable
             public final void run() {
-                C3847g c3847g = C3847g.C3848a.a;
+                g gVar = g.a.a;
                 Activity activity2 = activity;
                 String str2 = str;
                 RPEventListener rPEventListener2 = rPEventListener;
-                if (!C3925c.a()) {
+                if (!c.a()) {
                     if (rPEventListener2 != null) {
                         RPResult rPResult = RPResult.AUDIT_FAIL;
-                        rPEventListener2.onFinish(rPResult, new RPDetail(C3847g.a(rPResult, "-10415"), "-10415", "CTID SDK NOT EXIST", null));
+                        rPEventListener2.onFinish(rPResult, new RPDetail(g.a(rPResult, "-10415"), "-10415", "CTID SDK NOT EXIST", null));
                         return;
                     }
                     return;
                 }
-                c3847g.a(str2, c3847g.a(), "ctid");
-                c3847g.h = c3847g.a(rPEventListener2);
-                if (c3847g.b(str2)) {
-                    c3847g.m = "ctid";
-                    c3847g.d = str2;
-                    c3847g.l = System.currentTimeMillis();
-                    C3800a.a("RPVerifyManager", "startVerifyByNative token is: ".concat(String.valueOf(str2)));
-                    c3847g.h.onStart();
-                    GetCacheDataManager.getInstance().setUmidToken(c3847g.i.h());
-                    C3847g.a(activity2, str2, rPEventListener2, new C3847g.AnonymousClass4(rPEventListener2, activity2, str2), c3847g.i);
+                gVar.a(str2, gVar.a(), "ctid");
+                gVar.h = gVar.a(rPEventListener2);
+                if (gVar.b(str2)) {
+                    gVar.m = "ctid";
+                    gVar.d = str2;
+                    gVar.l = System.currentTimeMillis();
+                    com.alibaba.security.common.c.a.a("RPVerifyManager", "startVerifyByNative token is: ".concat(String.valueOf(str2)));
+                    gVar.h.onStart();
+                    GetCacheDataManager.getInstance().setUmidToken(gVar.i.h());
+                    g.a(activity2, str2, rPEventListener2, new g.AnonymousClass4(rPEventListener2, activity2, str2), gVar.i);
                 }
             }
         });
@@ -140,7 +135,7 @@ public class RPVerify {
     }
 
     public static String version() {
-        C3847g unused = C3847g.C3848a.a;
+        g unused = g.a.a;
         return VersionKey.RP_SDK_VERSION;
     }
 
@@ -154,25 +149,25 @@ public class RPVerify {
                 str2 = preUrl;
             }
         }
-        C3847g.C3848a.a.f = str2;
-        C3847g c3847g = C3847g.C3848a.a;
-        RPEnv rPEnv2 = c3847g.e;
-        c3847g.c = context.getApplicationContext();
-        c3847g.e = rPEnv2;
-        C3850i c3850i = C3850i.C3851a.a;
-        c3850i.a = new C3849h();
-        c3850i.b();
-        c3847g.i.a(c3847g.c);
-        C3829a.C3830a.a.a(c3847g.c, (RPTrack.TrackStrategy) null);
-        C3829a.C3830a.a.d = new C3915a(c3847g.c);
-        c3847g.j.init(context);
+        g.a.a.f = str2;
+        g gVar = g.a.a;
+        RPEnv rPEnv2 = gVar.e;
+        gVar.c = context.getApplicationContext();
+        gVar.e = rPEnv2;
+        i iVar = i.a.a;
+        iVar.a = new com.alibaba.security.realidentity.a.h();
+        iVar.b();
+        gVar.i.a(gVar.c);
+        a.C0165a.a.a(gVar.c, (RPTrack.TrackStrategy) null);
+        a.C0165a.a.d = new com.alibaba.security.realidentity.track.a(gVar.c);
+        gVar.j.init(context);
         WVPluginManager.registerPlugin("RP", (Class<? extends WVApiPlugin>) RP.class);
-        C3847g c3847g2 = C3847g.C3848a.a;
-        c3847g2.e = rPEnv;
-        C3890b c3890b = c3847g2.i;
-        c3890b.a = rPEnv;
-        c3890b.d = null;
-        c3890b.e = null;
+        g gVar2 = g.a.a;
+        gVar2.e = rPEnv;
+        com.alibaba.security.realidentity.d.b bVar = gVar2.i;
+        bVar.a = rPEnv;
+        bVar.d = null;
+        bVar.e = null;
         RpcInvoker.setMtopInstanceId(str);
         isInit = true;
     }
@@ -181,7 +176,7 @@ public class RPVerify {
         a(context, str, rPConfig, rPEventListener, new Runnable() { // from class: com.alibaba.security.realidentity.RPVerify.1
             @Override // java.lang.Runnable
             public final void run() {
-                C3847g.C3848a.a.a(context, str, "h5", rPEventListener);
+                g.a.a.a(context, str, "h5", rPEventListener);
             }
         });
     }
@@ -202,17 +197,17 @@ public class RPVerify {
             rPEventListener.onFinish(RPResult.AUDIT_NOT, new RPDetail(GlobalErrorCode.mappingResultCode(GlobalErrorCode.ERROR_INIT), "-10400", "sdk init fail", null));
             return;
         }
-        C3847g.C3848a.a.g = rPConfig;
-        C3847g c3847g = C3847g.C3848a.a;
-        String a = C3847g.a(str);
-        c3847g.a(a, c3847g.a(), "url");
-        c3847g.h = c3847g.a(rPEventListener);
-        if (c3847g.b(a)) {
-            c3847g.m = "url";
-            c3847g.d = a;
-            c3847g.l = System.currentTimeMillis();
-            GetCacheDataManager.getInstance().setUmidToken(c3847g.i.h());
-            C3847g.a(context, a, c3847g.h, new C3847g.AnonymousClass2(context, C3847g.a(str, "fromSource", "rpsdk"), a), c3847g.i);
+        g.a.a.g = rPConfig;
+        g gVar = g.a.a;
+        String a = g.a(str);
+        gVar.a(a, gVar.a(), "url");
+        gVar.h = gVar.a(rPEventListener);
+        if (gVar.b(a)) {
+            gVar.m = "url";
+            gVar.d = a;
+            gVar.l = System.currentTimeMillis();
+            GetCacheDataManager.getInstance().setUmidToken(gVar.i.h());
+            g.a(context, a, gVar.h, new g.AnonymousClass2(context, g.a(str, "fromSource", "rpsdk"), a), gVar.i);
         }
     }
 
@@ -220,7 +215,7 @@ public class RPVerify {
         a(context, str, rPConfig, rPEventListener, new Runnable() { // from class: com.alibaba.security.realidentity.RPVerify.2
             @Override // java.lang.Runnable
             public final void run() {
-                C3847g.C3848a.a.a(context, str, str2, rPEventListener);
+                g.a.a.a(context, str, str2, rPEventListener);
             }
         });
     }
@@ -229,20 +224,20 @@ public class RPVerify {
         a(context, str, rPConfig, rPEventListener, new Runnable() { // from class: com.alibaba.security.realidentity.RPVerify.3
             @Override // java.lang.Runnable
             public final void run() {
-                C3847g c3847g = C3847g.C3848a.a;
+                g gVar = g.a.a;
                 Context context2 = context;
                 String str2 = str;
                 RPEventListener rPEventListener2 = rPEventListener;
-                c3847g.a(str2, c3847g.a(), "native");
-                c3847g.h = c3847g.a(rPEventListener2);
-                if (c3847g.b(str2)) {
-                    c3847g.m = "native";
-                    c3847g.d = str2;
-                    c3847g.l = System.currentTimeMillis();
-                    C3800a.a("RPVerifyManager", "startVerifyByNative token is: ".concat(String.valueOf(str2)));
-                    c3847g.h.onStart();
-                    GetCacheDataManager.getInstance().setUmidToken(c3847g.i.h());
-                    C3847g.a(context2, str2, c3847g.h, new C3847g.AnonymousClass3(context2, str2), c3847g.i);
+                gVar.a(str2, gVar.a(), "native");
+                gVar.h = gVar.a(rPEventListener2);
+                if (gVar.b(str2)) {
+                    gVar.m = "native";
+                    gVar.d = str2;
+                    gVar.l = System.currentTimeMillis();
+                    com.alibaba.security.common.c.a.a("RPVerifyManager", "startVerifyByNative token is: ".concat(String.valueOf(str2)));
+                    gVar.h.onStart();
+                    GetCacheDataManager.getInstance().setUmidToken(gVar.i.h());
+                    g.a(context2, str2, gVar.h, new g.AnonymousClass3(context2, str2), gVar.i);
                 }
             }
         });

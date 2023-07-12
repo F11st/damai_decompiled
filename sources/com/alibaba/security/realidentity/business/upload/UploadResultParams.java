@@ -5,12 +5,8 @@ import com.alibaba.security.biometrics.jni.ALBiometricsJni;
 import com.alibaba.security.biometrics.service.common.GetCacheDataManager;
 import com.alibaba.security.biometrics.service.constants.GlobalErrorCode;
 import com.alibaba.security.biometrics.service.model.result.ALBiometricsResult;
-import com.alibaba.security.common.c.C3800a;
-import com.alibaba.security.common.d.C3801a;
-import com.alibaba.security.common.d.C3811h;
+import com.alibaba.security.common.d.h;
 import com.alibaba.security.realidentity.RPResult;
-import com.alibaba.security.realidentity.a.AbstractC3840a;
-import com.alibaba.security.realidentity.business.C3873c;
 import com.alibaba.security.realidentity.business.base.chain.BusinessHeadParams;
 import com.alibaba.security.realidentity.business.bucket.BucketParams;
 import com.alibaba.security.realidentity.business.bucket.HttpBucketParams;
@@ -32,7 +28,7 @@ public class UploadResultParams extends AbsUploadResultParams {
     private BusinessHeadParams mBusinessHeadParams;
     private StartHttpParams startHttpParams;
     public UploadResultResponse uploadResultResponse;
-    private List<AsyncTaskC3885e> uploadTasks;
+    private List<e> uploadTasks;
     private static final String TAG = UploadResultParams.class.getSimpleName();
     public static final String[] NUMERIC_STR_ARRAY = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
 
@@ -64,7 +60,7 @@ public class UploadResultParams extends AbsUploadResultParams {
             data.localRecognize = Integer.valueOf(this.biometricsResult.getRecognizeResult());
             data.recognizeResultScore = this.biometricsResult.getRecognizeResultScore();
         }
-        data.bigImagePath = getUploadTaskByType(this.uploadTasks, AbstractC3840a.K);
+        data.bigImagePath = getUploadTaskByType(this.uploadTasks, com.alibaba.security.realidentity.a.a.K);
         data.v = 2;
         data.isGaze = this.startHttpParams.mOnlyGaze;
         BusinessHeadParams businessHeadParams = this.mBusinessHeadParams;
@@ -80,15 +76,15 @@ public class UploadResultParams extends AbsUploadResultParams {
                 try {
                     UploadResultRequest.Data.class.getField(String.format("movement_%d", Integer.valueOf(i + 1))).set(data, actionType);
                 } catch (IllegalAccessException unused) {
-                    C3800a.b();
+                    com.alibaba.security.common.c.a.b();
                 } catch (NoSuchFieldException unused2) {
-                    C3800a.b();
+                    com.alibaba.security.common.c.a.b();
                 }
             }
         }
-        data.bigSmallPath = getUploadTaskByType(this.uploadTasks, AbstractC3840a.M);
-        data.bigSmallLocalPath = getUploadTaskByType(this.uploadTasks, AbstractC3840a.L);
-        data.originalImage = getUploadTaskByType(this.uploadTasks, AbstractC3840a.N);
+        data.bigSmallPath = getUploadTaskByType(this.uploadTasks, com.alibaba.security.realidentity.a.a.M);
+        data.bigSmallLocalPath = getUploadTaskByType(this.uploadTasks, com.alibaba.security.realidentity.a.a.L);
+        data.originalImage = getUploadTaskByType(this.uploadTasks, com.alibaba.security.realidentity.a.a.N);
         int[] fr = this.biometricsResult.getQi().getFr();
         if (fr != null && fr.length == 4) {
             data.faceRect = String.format("%d,%d,%d,%d", Integer.valueOf(fr[0]), Integer.valueOf(fr[1]), Integer.valueOf(fr[2]), Integer.valueOf(fr[3]));
@@ -101,12 +97,12 @@ public class UploadResultParams extends AbsUploadResultParams {
                 try {
                     EdgeDetectResult.class.getField(i2 == 0 ? "stare" : "action" + NUMERIC_STR_ARRAY[i2]).set(edgeDetectResult, split[i2]);
                 } catch (IllegalAccessException unused3) {
-                    C3800a.b();
+                    com.alibaba.security.common.c.a.b();
                 } catch (NoSuchFieldException unused4) {
-                    C3800a.b();
+                    com.alibaba.security.common.c.a.b();
                 }
             }
-            data.backgroundDetectResult = C3811h.a(edgeDetectResult);
+            data.backgroundDetectResult = h.a(edgeDetectResult);
         }
         data.processDetail = this.biometricsResult.toJson();
         UploadResultRequest uploadResultRequest = new UploadResultRequest();
@@ -117,21 +113,21 @@ public class UploadResultParams extends AbsUploadResultParams {
             UploadResultRequest.Elements elements2 = new UploadResultRequest.Elements();
             elements2.name = "BIOMETRIC_COLORFUL";
             UploadResultRequest.Data data2 = new UploadResultRequest.Data();
-            UploadResultRequest.C3878a c3878a = new UploadResultRequest.C3878a();
-            c3878a.a = this.biometricsResult.getDazzleVideoOssUrl();
-            c3878a.c = this.biometricsResult.getVideoHash();
-            UploadResultRequest.C3879b c3879b = new UploadResultRequest.C3879b();
-            c3879b.a = this.biometricsResult.getDazzleDataConfigs();
-            c3878a.b = c3879b;
-            String a = C3811h.a(c3878a);
+            UploadResultRequest.a aVar = new UploadResultRequest.a();
+            aVar.a = this.biometricsResult.getDazzleVideoOssUrl();
+            aVar.c = this.biometricsResult.getVideoHash();
+            UploadResultRequest.b bVar = new UploadResultRequest.b();
+            bVar.a = this.biometricsResult.getDazzleDataConfigs();
+            aVar.b = bVar;
+            String a = h.a(aVar);
             if (a != null) {
-                data2.data = C3801a.a(ALBiometricsJni.makeResult(a.getBytes(), String.valueOf(new Date().getTime()), GetCacheDataManager.getInstance().getUmidToken()));
+                data2.data = com.alibaba.security.common.d.a.a(ALBiometricsJni.makeResult(a.getBytes(), String.valueOf(new Date().getTime()), GetCacheDataManager.getInstance().getUmidToken()));
             }
             elements2.value = data2;
             arrayList.add(elements2);
         }
         arrayList.add(getRiskActionElements());
-        uploadResultRequest.elements = C3811h.a(arrayList);
+        uploadResultRequest.elements = h.a(arrayList);
         return uploadResultRequest;
     }
 
@@ -149,11 +145,11 @@ public class UploadResultParams extends AbsUploadResultParams {
         return elements;
     }
 
-    private String getUploadTaskByType(List<AsyncTaskC3885e> list, String str) {
+    private String getUploadTaskByType(List<e> list, String str) {
         if (list != null) {
-            for (AsyncTaskC3885e asyncTaskC3885e : list) {
-                if (TextUtils.equals(str, asyncTaskC3885e.a)) {
-                    return asyncTaskC3885e.a();
+            for (e eVar : list) {
+                if (TextUtils.equals(str, eVar.a)) {
+                    return eVar.a();
                 }
             }
             return "";
@@ -175,11 +171,11 @@ public class UploadResultParams extends AbsUploadResultParams {
     }
 
     @Override // com.alibaba.security.realidentity.business.bucket.BucketParams
-    public boolean onDelivering(C3873c c3873c) {
-        this.startHttpParams = c3873c.c;
-        this.biometricsResult = c3873c.d.biometricsResult;
-        this.mBusinessHeadParams = c3873c.b;
-        this.uploadTasks = c3873c.e.getUploadTaskList();
+    public boolean onDelivering(com.alibaba.security.realidentity.business.c cVar) {
+        this.startHttpParams = cVar.c;
+        this.biometricsResult = cVar.d.biometricsResult;
+        this.mBusinessHeadParams = cVar.b;
+        this.uploadTasks = cVar.e.getUploadTaskList();
         return true;
     }
 
@@ -195,6 +191,6 @@ public class UploadResultParams extends AbsUploadResultParams {
         if (!TextUtils.isEmpty(this.uploadResultResponse.getRetCode())) {
             return new BucketParams.ErrorCode(RPResult.AUDIT_NOT, "-10303", this.uploadResultResponse.getRetMsg(), GlobalErrorCode.ERROR_UPLOAD_BIO_DATA);
         }
-        return new BucketParams.ErrorCode(RPResult.AUDIT_NOT, "-10303", C3811h.a(this.uploadResultResponse), GlobalErrorCode.ERROR_UPLOAD_BIO_DATA);
+        return new BucketParams.ErrorCode(RPResult.AUDIT_NOT, "-10303", h.a(this.uploadResultResponse), GlobalErrorCode.ERROR_UPLOAD_BIO_DATA);
     }
 }

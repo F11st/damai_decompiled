@@ -8,7 +8,7 @@ import android.os.Messenger;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public final class g1 {
-    C5819e a;
+    e a;
     Context b;
     Messenger c = null;
 
@@ -16,7 +16,7 @@ public final class g1 {
         this.a = null;
         this.b = null;
         this.b = context.getApplicationContext();
-        this.a = new C5819e(this.b);
+        this.a = new e(this.b);
     }
 
     public final IBinder a(Intent intent) {
@@ -29,7 +29,7 @@ public final class g1 {
 
     public final void b() {
         try {
-            C5819e.C();
+            e.C();
             this.a.n = m1.B();
             this.a.o = m1.g();
             this.a.c();
@@ -40,9 +40,9 @@ public final class g1 {
 
     public final void c() {
         try {
-            C5819e c5819e = this.a;
-            if (c5819e != null) {
-                c5819e.s().sendEmptyMessage(11);
+            e eVar = this.a;
+            if (eVar != null) {
+                eVar.s().sendEmptyMessage(11);
             }
         } catch (Throwable th) {
             j1.h(th, "ApsServiceCore", "onDestroy");

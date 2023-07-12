@@ -39,7 +39,7 @@ public class NestRecyclerView extends RecyclerView {
         }
         int childCount = layoutManager.getChildCount();
         int itemCount = layoutManager.getItemCount();
-        Log.d("nestScrolling", GXTemplateEngine.C3344g.TYPE_ON_SCROLL_STATE_CHANGED);
+        Log.d("nestScrolling", GXTemplateEngine.g.TYPE_ON_SCROLL_STATE_CHANGED);
         if (childCount > 0) {
             if (this.lastVisibleItemPosition == itemCount - 1) {
                 Log.d("nestScrolling", "触底了");

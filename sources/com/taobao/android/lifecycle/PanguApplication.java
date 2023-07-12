@@ -66,10 +66,9 @@ public class PanguApplication extends ApplicationCompat {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.lifecycle.PanguApplication$a */
     /* loaded from: classes11.dex */
-    class C6552a implements ApplicationCompat.ActivityLifecycleCallbacksCompat {
-        C6552a() {
+    class a implements ApplicationCompat.ActivityLifecycleCallbacksCompat {
+        a() {
         }
 
         @Override // com.taobao.android.compat.ApplicationCompat.ActivityLifecycleCallbacksCompat
@@ -170,7 +169,7 @@ public class PanguApplication extends ApplicationCompat {
     public void onCreate() {
         super.onCreate();
         s40.a(this);
-        registerActivityLifecycleCallbacks(new C6552a());
+        registerActivityLifecycleCallbacks(new a());
         SafeAsyncTask.init();
     }
 

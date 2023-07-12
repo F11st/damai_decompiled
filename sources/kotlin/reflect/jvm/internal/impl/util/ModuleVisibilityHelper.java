@@ -10,13 +10,12 @@ import tb.b41;
 public interface ModuleVisibilityHelper {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.util.ModuleVisibilityHelper$a */
     /* loaded from: classes3.dex */
-    public static final class C8557a implements ModuleVisibilityHelper {
+    public static final class a implements ModuleVisibilityHelper {
         @NotNull
-        public static final C8557a INSTANCE = new C8557a();
+        public static final a INSTANCE = new a();
 
-        private C8557a() {
+        private a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.util.ModuleVisibilityHelper

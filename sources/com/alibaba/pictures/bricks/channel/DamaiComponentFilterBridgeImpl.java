@@ -10,8 +10,8 @@ import cn.damai.common.AppConfig;
 import cn.damai.common.app.ShareperfenceConstants;
 import cn.damai.common.net.mtop.Util;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.city.net.CityListRequest;
 import cn.damai.commonbusiness.citycopy.net.CityListResponse;
 import com.alibaba.fastjson.JSON;
@@ -125,28 +125,28 @@ public class DamaiComponentFilterBridgeImpl implements ComponentFilterBridge {
     }
 
     @Override // com.alibaba.pictures.bricks.channel.bridge.ComponentFilterBridge
-    public void reportClick(@NonNull kc.C9346b c9346b) {
+    public void reportClick(@NonNull kc.b bVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "237169644")) {
-            ipChange.ipc$dispatch("237169644", new Object[]{this, c9346b});
+            ipChange.ipc$dispatch("237169644", new Object[]{this, bVar});
             return;
         }
-        kc kcVar = c9346b.a;
+        kc kcVar = bVar.a;
         if (kcVar != null) {
-            C0525a.C0527b c0527b = new C0525a.C0527b();
-            c0527b.d(kcVar.i());
-            c0527b.a(kcVar.f());
-            c0527b.e(kcVar.j());
-            c0527b.h(kcVar.l());
-            c0527b.k(kcVar.o());
-            c0527b.b(kcVar.g());
-            c0527b.i(kcVar.m());
-            c0527b.l(kcVar.p());
-            c0527b.c(kcVar.h());
-            c0527b.f(kcVar.k());
-            c0527b.j(kcVar.n());
-            c0527b.g(kcVar.q());
-            C0529c.e().x(c0527b);
+            a.b bVar2 = new a.b();
+            bVar2.d(kcVar.i());
+            bVar2.a(kcVar.f());
+            bVar2.e(kcVar.j());
+            bVar2.h(kcVar.l());
+            bVar2.k(kcVar.o());
+            bVar2.b(kcVar.g());
+            bVar2.i(kcVar.m());
+            bVar2.l(kcVar.p());
+            bVar2.c(kcVar.h());
+            bVar2.f(kcVar.k());
+            bVar2.j(kcVar.n());
+            bVar2.g(kcVar.q());
+            c.e().x(bVar2);
         }
     }
 
@@ -156,7 +156,7 @@ public class DamaiComponentFilterBridgeImpl implements ComponentFilterBridge {
         if (AndroidInstantRuntime.support(ipChange, "2101425249")) {
             ipChange.ipc$dispatch("2101425249", new Object[]{this, str, str2, str3, str4, Long.valueOf(j), map, Integer.valueOf(i)});
         } else {
-            C0529c.e().C(str, str2, str3, str4, j, map, i);
+            c.e().C(str, str2, str3, str4, j, map, i);
         }
     }
 
@@ -239,7 +239,7 @@ public class DamaiComponentFilterBridgeImpl implements ComponentFilterBridge {
         if (AndroidInstantRuntime.support(ipChange, "265026735")) {
             ipChange.ipc$dispatch("265026735", new Object[]{this, view, str, str2, str3, map});
         } else {
-            C0529c.e().G(view, str, str2, str3, map);
+            c.e().G(view, str, str2, str3, map);
         }
     }
 

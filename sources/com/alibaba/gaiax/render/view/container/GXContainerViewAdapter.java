@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.Pair;
-import kotlin.collections.C8212k;
+import kotlin.collections.k;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -45,129 +45,126 @@ public final class GXContainerViewAdapter extends RecyclerView.Adapter<GXViewHol
     @NotNull
     private JSONArray e;
     @Nullable
-    private GXTemplateEngine.C3347i f;
+    private GXTemplateEngine.i f;
     private boolean g;
     @NotNull
-    private final Map<Integer, GXTemplateEngine.C3347i> h;
+    private final Map<Integer, GXTemplateEngine.i> h;
     @NotNull
-    private final Map<Integer, GXTemplateEngine.C3347i> i;
+    private final Map<Integer, GXTemplateEngine.i> i;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.view.container.GXContainerViewAdapter$a */
     /* loaded from: classes6.dex */
-    public static final class C3369a implements GXTemplateEngine.GXIEventListener {
+    public static final class a implements GXTemplateEngine.GXIEventListener {
         final /* synthetic */ int a;
         final /* synthetic */ GXContainerViewAdapter b;
 
-        C3369a(int i, GXContainerViewAdapter gXContainerViewAdapter) {
+        a(int i, GXContainerViewAdapter gXContainerViewAdapter) {
             this.a = i;
             this.b = gXContainerViewAdapter;
         }
 
         @Override // com.alibaba.gaiax.GXTemplateEngine.GXIEventListener
-        public void onAnimationEvent(@NotNull GXTemplateEngine.C3338b c3338b) {
+        public void onAnimationEvent(@NotNull GXTemplateEngine.b bVar) {
             GXTemplateEngine.GXIEventListener c;
-            b41.i(c3338b, "gxAnimation");
-            GXTemplateEngine.GXIEventListener.C3335a.a(this, c3338b);
-            GXTemplateEngine.C3346h p = this.b.e().p();
+            b41.i(bVar, "gxAnimation");
+            GXTemplateEngine.GXIEventListener.a.a(this, bVar);
+            GXTemplateEngine.h p = this.b.e().p();
             if (p == null || (c = p.c()) == null) {
                 return;
             }
-            c.onAnimationEvent(c3338b);
+            c.onAnimationEvent(bVar);
         }
 
         @Override // com.alibaba.gaiax.GXTemplateEngine.GXIEventListener
-        public void onGestureEvent(@NotNull GXTemplateEngine.C3342e c3342e) {
+        public void onGestureEvent(@NotNull GXTemplateEngine.e eVar) {
             GXTemplateEngine.GXIEventListener c;
-            b41.i(c3342e, "gxGesture");
-            GXTemplateEngine.GXIEventListener.C3335a.b(this, c3342e);
-            c3342e.setIndex(Integer.valueOf(this.a));
-            GXTemplateEngine.C3346h p = this.b.e().p();
+            b41.i(eVar, "gxGesture");
+            GXTemplateEngine.GXIEventListener.a.b(this, eVar);
+            eVar.setIndex(Integer.valueOf(this.a));
+            GXTemplateEngine.h p = this.b.e().p();
             if (p == null || (c = p.c()) == null) {
                 return;
             }
-            c.onGestureEvent(c3342e);
+            c.onGestureEvent(eVar);
         }
 
         @Override // com.alibaba.gaiax.GXTemplateEngine.GXIEventListener
-        public void onScrollEvent(@NotNull GXTemplateEngine.C3344g c3344g) {
+        public void onScrollEvent(@NotNull GXTemplateEngine.g gVar) {
             GXTemplateEngine.GXIEventListener c;
-            b41.i(c3344g, "gxScroll");
-            GXTemplateEngine.GXIEventListener.C3335a.c(this, c3344g);
-            GXTemplateEngine.C3346h p = this.b.e().p();
+            b41.i(gVar, "gxScroll");
+            GXTemplateEngine.GXIEventListener.a.c(this, gVar);
+            GXTemplateEngine.h p = this.b.e().p();
             if (p == null || (c = p.c()) == null) {
                 return;
             }
-            c.onScrollEvent(c3344g);
+            c.onScrollEvent(gVar);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.view.container.GXContainerViewAdapter$b */
     /* loaded from: classes6.dex */
-    public static final class C3370b implements GXTemplateEngine.GXITrackListener {
+    public static final class b implements GXTemplateEngine.GXITrackListener {
         final /* synthetic */ int a;
         final /* synthetic */ GXContainerViewAdapter b;
 
-        C3370b(int i, GXContainerViewAdapter gXContainerViewAdapter) {
+        b(int i, GXContainerViewAdapter gXContainerViewAdapter) {
             this.a = i;
             this.b = gXContainerViewAdapter;
         }
 
         @Override // com.alibaba.gaiax.GXTemplateEngine.GXITrackListener
-        public void onManualClickTrackEvent(@NotNull GXTemplateEngine.C3349k c3349k) {
+        public void onManualClickTrackEvent(@NotNull GXTemplateEngine.k kVar) {
             GXTemplateEngine.GXITrackListener f;
-            b41.i(c3349k, "gxTrack");
-            c3349k.e(Integer.valueOf(this.a));
-            GXTemplateEngine.C3346h p = this.b.e().p();
+            b41.i(kVar, "gxTrack");
+            kVar.e(Integer.valueOf(this.a));
+            GXTemplateEngine.h p = this.b.e().p();
             if (p == null || (f = p.f()) == null) {
                 return;
             }
-            f.onManualClickTrackEvent(c3349k);
+            f.onManualClickTrackEvent(kVar);
         }
 
         @Override // com.alibaba.gaiax.GXTemplateEngine.GXITrackListener
-        public void onManualExposureTrackEvent(@NotNull GXTemplateEngine.C3349k c3349k) {
+        public void onManualExposureTrackEvent(@NotNull GXTemplateEngine.k kVar) {
             GXTemplateEngine.GXITrackListener f;
-            b41.i(c3349k, "gxTrack");
-            c3349k.e(Integer.valueOf(this.a));
-            GXTemplateEngine.C3346h p = this.b.e().p();
+            b41.i(kVar, "gxTrack");
+            kVar.e(Integer.valueOf(this.a));
+            GXTemplateEngine.h p = this.b.e().p();
             if (p == null || (f = p.f()) == null) {
                 return;
             }
-            f.onManualExposureTrackEvent(c3349k);
+            f.onManualExposureTrackEvent(kVar);
         }
 
         @Override // com.alibaba.gaiax.GXTemplateEngine.GXITrackListener
-        public void onTrackEvent(@NotNull GXTemplateEngine.C3349k c3349k) {
+        public void onTrackEvent(@NotNull GXTemplateEngine.k kVar) {
             GXTemplateEngine.GXITrackListener f;
-            b41.i(c3349k, "gxTrack");
-            c3349k.e(Integer.valueOf(this.a));
-            GXTemplateEngine.C3346h p = this.b.e().p();
+            b41.i(kVar, "gxTrack");
+            kVar.e(Integer.valueOf(this.a));
+            GXTemplateEngine.h p = this.b.e().p();
             if (p == null || (f = p.f()) == null) {
                 return;
             }
-            f.onTrackEvent(c3349k);
+            f.onTrackEvent(kVar);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.view.container.GXContainerViewAdapter$c */
     /* loaded from: classes6.dex */
-    public static final class C3371c implements GXTemplateEngine.GXIDataListener {
-        C3371c() {
+    public static final class c implements GXTemplateEngine.GXIDataListener {
+        c() {
         }
 
         @Override // com.alibaba.gaiax.GXTemplateEngine.GXIDataListener
         @Nullable
-        public CharSequence onTextProcess(@NotNull GXTemplateEngine.C3348j c3348j) {
+        public CharSequence onTextProcess(@NotNull GXTemplateEngine.j jVar) {
             GXTemplateEngine.GXIDataListener b;
-            b41.i(c3348j, "gxTextData");
-            GXTemplateEngine.C3346h p = GXContainerViewAdapter.this.e().p();
+            b41.i(jVar, "gxTextData");
+            GXTemplateEngine.h p = GXContainerViewAdapter.this.e().p();
             if (p == null || (b = p.b()) == null) {
                 return null;
             }
-            return b.onTextProcess(c3348j);
+            return b.onTextProcess(jVar);
         }
     }
 
@@ -184,13 +181,13 @@ public final class GXContainerViewAdapter extends RecyclerView.Adapter<GXViewHol
     private final void a(GXViewHolder gXViewHolder) {
         JSONObject jSONObject;
         View f;
-        GXTemplateEngine.C3347i a = gXViewHolder.a();
-        if (a != null) {
-            boolean d = b41.d(a, this.f);
-            qs0 j = j(a);
+        GXTemplateEngine.i a2 = gXViewHolder.a();
+        if (a2 != null) {
+            boolean d = b41.d(a2, this.f);
+            qs0 j = j(a2);
             ld2<Float> h = h(d);
-            GXTemplateEngine.C3343f i = i(h);
-            FrameLayout.LayoutParams f2 = f(g(d, a, j, h));
+            GXTemplateEngine.f i = i(h);
+            FrameLayout.LayoutParams f2 = f(g(d, a2, j, h));
             GXItemContainer gXItemContainer = (GXItemContainer) gXViewHolder.itemView;
             fs0 h2 = d().o().i().h();
             if (h2 != null && h2.j()) {
@@ -209,45 +206,45 @@ public final class GXContainerViewAdapter extends RecyclerView.Adapter<GXViewHol
             JSONObject jSONObject2 = jSONObject;
             GXRegisterCenter.GXIExtensionContainerItemBind f3 = GXRegisterCenter.Companion.a().f();
             if (f3 != null) {
-                GXTemplateEngine.C3346h p = this.a.p();
+                GXTemplateEngine.h p = this.a.p();
                 Object e = p == null ? null : p.e();
-                GXTemplateEngine.C3341d c3341d = new GXTemplateEngine.C3341d();
-                c3341d.g(Integer.valueOf(adapterPosition));
-                c3341d.f(jSONObject2);
-                c3341d.e(e());
-                c3341d.h(j);
+                GXTemplateEngine.d dVar = new GXTemplateEngine.d();
+                dVar.g(Integer.valueOf(adapterPosition));
+                dVar.f(jSONObject2);
+                dVar.e(e());
+                dVar.h(j);
                 wt2 wt2Var = wt2.INSTANCE;
-                gXViewHolder.b(f3.bindViewHolder(e, gXItemContainer, i, a, c3341d));
+                gXViewHolder.b(f3.bindViewHolder(e, gXItemContainer, i, a2, dVar));
                 return;
             }
             if (gXItemContainer.getChildCount() != 0) {
                 f = gXItemContainer.getChildAt(0);
             } else {
-                GXTemplateEngine.C3337a c3337a = GXTemplateEngine.Companion;
-                GXTemplateEngine.v(c3337a.a(), a, i, null, 4, null);
-                GXTemplateEngine a2 = c3337a.a();
-                GXTemplateEngine.C3341d c3341d2 = new GXTemplateEngine.C3341d();
-                c3341d2.g(Integer.valueOf(adapterPosition));
-                c3341d2.f(jSONObject2);
-                c3341d2.e(e());
-                c3341d2.h(j);
+                GXTemplateEngine.a aVar = GXTemplateEngine.Companion;
+                GXTemplateEngine.v(aVar.a(), a2, i, null, 4, null);
+                GXTemplateEngine a3 = aVar.a();
+                GXTemplateEngine.d dVar2 = new GXTemplateEngine.d();
+                dVar2.g(Integer.valueOf(adapterPosition));
+                dVar2.f(jSONObject2);
+                dVar2.e(e());
+                dVar2.h(j);
                 wt2 wt2Var2 = wt2.INSTANCE;
-                os0 e2 = a2.e(a, i, c3341d2);
+                os0 e2 = a3.e(a2, i, dVar2);
                 if (e2 != null) {
-                    f = c3337a.a().f(e2);
+                    f = aVar.a().f(e2);
                     gXItemContainer.addView(f);
                 } else {
                     throw new IllegalArgumentException("Create GXTemplateContext fail, please check");
                 }
             }
-            GXTemplateEngine.C3346h c3346h = new GXTemplateEngine.C3346h(jSONObject2);
-            c3346h.h(new C3369a(adapterPosition, this));
-            c3346h.k(new C3370b(adapterPosition, this));
-            c3346h.g(new C3371c());
+            GXTemplateEngine.h hVar = new GXTemplateEngine.h(jSONObject2);
+            hVar.h(new a(adapterPosition, this));
+            hVar.k(new b(adapterPosition, this));
+            hVar.g(new c());
             if (f != null) {
-                GXTemplateEngine.C3337a c3337a2 = GXTemplateEngine.Companion;
-                c3337a2.a().b(f, c3346h, i);
-                c3337a2.a().c(f, c3346h, i);
+                GXTemplateEngine.a aVar2 = GXTemplateEngine.Companion;
+                aVar2.a().b(f, hVar, i);
+                aVar2.a().c(f, hVar, i);
                 gXItemContainer.getLayoutParams().width = f.getLayoutParams().width;
                 return;
             }
@@ -257,10 +254,10 @@ public final class GXContainerViewAdapter extends RecyclerView.Adapter<GXViewHol
     }
 
     private final GXViewHolder b(int i, ViewGroup viewGroup) {
-        GXTemplateEngine.C3347i c3347i = this.h.get(Integer.valueOf(i));
-        if (c3347i != null) {
-            boolean d = b41.d(c3347i, this.f);
-            FrameLayout.LayoutParams f = f(g(d, c3347i, j(c3347i), h(d)));
+        GXTemplateEngine.i iVar = this.h.get(Integer.valueOf(i));
+        if (iVar != null) {
+            boolean d = b41.d(iVar, this.f);
+            FrameLayout.LayoutParams f = f(g(d, iVar, j(iVar), h(d)));
             Context context = viewGroup.getContext();
             b41.h(context, "parent.context");
             GXItemContainer gXItemContainer = new GXItemContainer(context);
@@ -270,32 +267,32 @@ public final class GXContainerViewAdapter extends RecyclerView.Adapter<GXViewHol
             }
             gXItemContainer.setLayoutParams(f);
             GXViewHolder gXViewHolder = new GXViewHolder(gXItemContainer);
-            gXViewHolder.c(c3347i);
+            gXViewHolder.c(iVar);
             return gXViewHolder;
         }
         throw new IllegalArgumentException("GXTemplateItem not exist, viewType = " + i + ", viewTypeMap = " + this.h);
     }
 
-    private final GXTemplateEngine.C3347i c(int i) {
+    private final GXTemplateEngine.i c(int i) {
         Object obj;
-        List<Pair<GXTemplateEngine.C3347i, qs0>> c = d().c();
-        if (c == null) {
+        List<Pair<GXTemplateEngine.i, qs0>> c2 = d().c();
+        if (c2 == null) {
             return null;
         }
-        if (c.size() > 1) {
+        if (c2.size() > 1) {
             JSONObject jSONObject = this.e.getJSONObject(i);
             d().o().C();
             JSONObject h = d().o().h(jSONObject);
             if (h != null) {
                 String g = yq0.g(h, b41.r("item-type.config.", yq0.g(h, vr0.ITEM_PATH)));
-                Iterator<T> it = c.iterator();
+                Iterator<T> it = c2.iterator();
                 while (true) {
                     if (!it.hasNext()) {
                         obj = null;
                         break;
                     }
                     obj = it.next();
-                    if (b41.d(((GXTemplateEngine.C3347i) ((Pair) obj).getFirst()).d(), g)) {
+                    if (b41.d(((GXTemplateEngine.i) ((Pair) obj).getFirst()).d(), g)) {
                         break;
                     }
                 }
@@ -303,15 +300,15 @@ public final class GXContainerViewAdapter extends RecyclerView.Adapter<GXViewHol
                 if (pair == null) {
                     return null;
                 }
-                return (GXTemplateEngine.C3347i) pair.getFirst();
+                return (GXTemplateEngine.i) pair.getFirst();
             }
             return null;
         }
-        Pair pair2 = (Pair) C8212k.R(c);
+        Pair pair2 = (Pair) k.R(c2);
         if (pair2 == null) {
             return null;
         }
-        return (GXTemplateEngine.C3347i) pair2.getFirst();
+        return (GXTemplateEngine.i) pair2.getFirst();
     }
 
     private final FrameLayout.LayoutParams f(l81 l81Var) {
@@ -348,7 +345,7 @@ public final class GXContainerViewAdapter extends RecyclerView.Adapter<GXViewHol
         return new FrameLayout.LayoutParams(e, i2);
     }
 
-    private final l81 g(boolean z, GXTemplateEngine.C3347i c3347i, qs0 qs0Var, ld2<Float> ld2Var) {
+    private final l81 g(boolean z, GXTemplateEngine.i iVar, qs0 qs0Var, ld2<Float> ld2Var) {
         Object obj = this.e.get(this.c);
         JSONObject jSONObject = obj instanceof JSONObject ? (JSONObject) obj : null;
         if (jSONObject == null) {
@@ -356,7 +353,7 @@ public final class GXContainerViewAdapter extends RecyclerView.Adapter<GXViewHol
         }
         JSONObject jSONObject2 = jSONObject;
         if (z) {
-            return vr0.INSTANCE.l(this.a, ld2Var, c3347i, qs0Var, jSONObject2, this.c);
+            return vr0.INSTANCE.l(this.a, ld2Var, iVar, qs0Var, jSONObject2, this.c);
         }
         return vr0.INSTANCE.n(this.a, d(), jSONObject2, this.c);
     }
@@ -368,19 +365,19 @@ public final class GXContainerViewAdapter extends RecyclerView.Adapter<GXViewHol
         return vr0.INSTANCE.o(this.a, d());
     }
 
-    private final GXTemplateEngine.C3343f i(ld2<Float> ld2Var) {
-        return new GXTemplateEngine.C3343f(ld2Var.b(), ld2Var.a());
+    private final GXTemplateEngine.f i(ld2<Float> ld2Var) {
+        return new GXTemplateEngine.f(ld2Var.b(), ld2Var.a());
     }
 
-    private final qs0 j(GXTemplateEngine.C3347i c3347i) {
-        List<Pair<GXTemplateEngine.C3347i, qs0>> c = d().c();
-        if (c == null) {
+    private final qs0 j(GXTemplateEngine.i iVar) {
+        List<Pair<GXTemplateEngine.i, qs0>> c2 = d().c();
+        if (c2 == null) {
             return null;
         }
-        Iterator<T> it = c.iterator();
+        Iterator<T> it = c2.iterator();
         while (it.hasNext()) {
             Pair pair = (Pair) it.next();
-            if (b41.d(((GXTemplateEngine.C3347i) pair.getFirst()).d(), c3347i.d())) {
+            if (b41.d(((GXTemplateEngine.i) pair.getFirst()).d(), iVar.d())) {
                 return (qs0) pair.getSecond();
             }
         }
@@ -412,19 +409,19 @@ public final class GXContainerViewAdapter extends RecyclerView.Adapter<GXViewHol
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public int getItemViewType(int i) {
-        GXTemplateEngine.C3347i c3347i = this.f;
-        if (this.g && c3347i != null && i == this.e.size()) {
-            int hashCode = c3347i.hashCode();
-            this.h.put(Integer.valueOf(hashCode), c3347i);
-            this.i.put(Integer.valueOf(i), c3347i);
+        GXTemplateEngine.i iVar = this.f;
+        if (this.g && iVar != null && i == this.e.size()) {
+            int hashCode = iVar.hashCode();
+            this.h.put(Integer.valueOf(hashCode), iVar);
+            this.i.put(Integer.valueOf(i), iVar);
             return hashCode;
         }
         this.c = i;
-        GXTemplateEngine.C3347i c = c(i);
-        if (c != null) {
-            int hashCode2 = c.d().hashCode();
-            this.h.put(Integer.valueOf(hashCode2), c);
-            this.i.put(Integer.valueOf(i), c);
+        GXTemplateEngine.i c2 = c(i);
+        if (c2 != null) {
+            int hashCode2 = c2.d().hashCode();
+            this.h.put(Integer.valueOf(hashCode2), c2);
+            this.i.put(Integer.valueOf(i), c2);
             return hashCode2;
         }
         return super.getItemViewType(i);
@@ -435,19 +432,19 @@ public final class GXContainerViewAdapter extends RecyclerView.Adapter<GXViewHol
     }
 
     public final void l() {
-        GXTemplateEngine.C3346h p = this.a.p();
-        JSONObject a = p == null ? null : p.a();
-        if (a == null) {
+        GXTemplateEngine.h p = this.a.p();
+        JSONObject a2 = p == null ? null : p.a();
+        if (a2 == null) {
             return;
         }
-        JSONObject h = d().o().h(a);
+        JSONObject h = d().o().h(a2);
         JSONObject jSONObject = h != null ? h.getJSONObject("item-footer-type") : null;
         if (jSONObject != null) {
             String string = jSONObject.getString("id");
             Context e = this.a.e();
-            String a2 = this.a.r().a();
+            String a3 = this.a.r().a();
             b41.h(string, "templateId");
-            this.f = new GXTemplateEngine.C3347i(e, a2, string);
+            this.f = new GXTemplateEngine.i(e, a3, string);
             Boolean bool = jSONObject.getBoolean("hasMore");
             this.g = bool == null ? false : bool.booleanValue();
         }

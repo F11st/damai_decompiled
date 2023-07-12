@@ -39,13 +39,12 @@ public class ScrollThickLinearView extends ScrollLinearView {
     private TextView mTv;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.snake.ScrollThickLinearView$a */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC2553a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View.OnClickListener a;
 
-        View$OnClickListenerC2553a(ScrollThickLinearView scrollThickLinearView, View.OnClickListener onClickListener) {
+        a(ScrollThickLinearView scrollThickLinearView, View.OnClickListener onClickListener) {
             this.a = onClickListener;
         }
 
@@ -61,16 +60,15 @@ public class ScrollThickLinearView extends ScrollLinearView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.snake.ScrollThickLinearView$b */
     /* loaded from: classes8.dex */
-    public class C2554b implements ValueAnimator.AnimatorUpdateListener {
+    public class b implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ float a;
         final /* synthetic */ float b;
         final /* synthetic */ float c;
         final /* synthetic */ float d;
 
-        C2554b(float f, float f2, float f3, float f4) {
+        b(float f, float f2, float f3, float f4) {
             this.a = f;
             this.b = f2;
             this.c = f3;
@@ -310,7 +308,7 @@ public class ScrollThickLinearView extends ScrollLinearView {
                     LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(-2, -1);
                     layoutParams.gravity = 16;
                     textView.setLayoutParams(layoutParams);
-                    textView.setOnClickListener(new View$OnClickListenerC2553a(this, onClickListener));
+                    textView.setOnClickListener(new a(this, onClickListener));
                     addView(textView);
                 }
             }
@@ -332,7 +330,7 @@ public class ScrollThickLinearView extends ScrollLinearView {
         } else {
             ValueAnimator ofInt = ValueAnimator.ofInt(0, 100);
             ofInt.setDuration(200L);
-            ofInt.addUpdateListener(new C2554b(f, f4, f2, f3));
+            ofInt.addUpdateListener(new b(f, f4, f2, f3));
             ofInt.start();
             this.mIsMove = true;
         }

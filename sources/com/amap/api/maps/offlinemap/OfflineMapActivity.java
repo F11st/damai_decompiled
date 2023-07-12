@@ -8,13 +8,13 @@ import com.amap.api.mapcore.util.fp;
 import com.amap.api.mapcore.util.fq;
 import com.amap.api.mapcore.util.fs;
 import com.amap.api.offlineservice.AMapPermissionActivity;
-import com.amap.api.offlineservice.AbstractC4659a;
+import com.amap.api.offlineservice.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class OfflineMapActivity extends AMapPermissionActivity implements View.OnClickListener {
     private static int a;
-    private AbstractC4659a b;
+    private a b;
     private fp c;
     private fp[] d = new fp[32];
     private int e = -1;
@@ -22,12 +22,12 @@ public class OfflineMapActivity extends AMapPermissionActivity implements View.O
 
     private void a(fp fpVar) {
         try {
-            AbstractC4659a abstractC4659a = this.b;
-            if (abstractC4659a != null) {
-                abstractC4659a.d();
+            a aVar = this.b;
+            if (aVar != null) {
+                aVar.d();
                 this.b = null;
             }
-            AbstractC4659a c = c(fpVar);
+            a c = c(fpVar);
             this.b = c;
             if (c != null) {
                 this.c = fpVar;
@@ -52,7 +52,7 @@ public class OfflineMapActivity extends AMapPermissionActivity implements View.O
         }
     }
 
-    private AbstractC4659a c(fp fpVar) {
+    private a c(fp fpVar) {
         try {
             if (fpVar.a != 1) {
                 return null;
@@ -72,9 +72,9 @@ public class OfflineMapActivity extends AMapPermissionActivity implements View.O
             if (a((Bundle) null)) {
                 return;
             }
-            AbstractC4659a abstractC4659a = this.b;
-            if (abstractC4659a != null) {
-                abstractC4659a.d();
+            a aVar = this.b;
+            if (aVar != null) {
+                aVar.d();
             }
             finish();
         } catch (Throwable th) {
@@ -85,9 +85,9 @@ public class OfflineMapActivity extends AMapPermissionActivity implements View.O
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
         try {
-            AbstractC4659a abstractC4659a = this.b;
-            if (abstractC4659a != null) {
-                abstractC4659a.a(view);
+            a aVar = this.b;
+            if (aVar != null) {
+                aVar.a(view);
             }
         } catch (Throwable th) {
             th.printStackTrace();
@@ -123,9 +123,9 @@ public class OfflineMapActivity extends AMapPermissionActivity implements View.O
     protected void onDestroy() {
         try {
             super.onDestroy();
-            AbstractC4659a abstractC4659a = this.b;
-            if (abstractC4659a != null) {
-                abstractC4659a.d();
+            a aVar = this.b;
+            if (aVar != null) {
+                aVar.d();
                 this.b = null;
             }
             this.c = null;
@@ -144,8 +144,8 @@ public class OfflineMapActivity extends AMapPermissionActivity implements View.O
     public boolean onKeyDown(int i, KeyEvent keyEvent) {
         if (i == 4) {
             try {
-                AbstractC4659a abstractC4659a = this.b;
-                if (abstractC4659a != null && !abstractC4659a.b()) {
+                a aVar = this.b;
+                if (aVar != null && !aVar.b()) {
                     return true;
                 }
                 if (a((Bundle) null)) {
@@ -170,9 +170,9 @@ public class OfflineMapActivity extends AMapPermissionActivity implements View.O
     protected void onPause() {
         try {
             super.onPause();
-            AbstractC4659a abstractC4659a = this.b;
-            if (abstractC4659a != null) {
-                abstractC4659a.h();
+            a aVar = this.b;
+            if (aVar != null) {
+                aVar.h();
             }
         } catch (Throwable th) {
             th.printStackTrace();
@@ -184,9 +184,9 @@ public class OfflineMapActivity extends AMapPermissionActivity implements View.O
     public void onResume() {
         try {
             super.onResume();
-            AbstractC4659a abstractC4659a = this.b;
-            if (abstractC4659a != null) {
-                abstractC4659a.f();
+            a aVar = this.b;
+            if (aVar != null) {
+                aVar.f();
             }
         } catch (Throwable th) {
             th.printStackTrace();
@@ -197,9 +197,9 @@ public class OfflineMapActivity extends AMapPermissionActivity implements View.O
     protected void onStart() {
         try {
             super.onStart();
-            AbstractC4659a abstractC4659a = this.b;
-            if (abstractC4659a != null) {
-                abstractC4659a.e();
+            a aVar = this.b;
+            if (aVar != null) {
+                aVar.e();
             }
         } catch (Throwable th) {
             th.printStackTrace();
@@ -210,9 +210,9 @@ public class OfflineMapActivity extends AMapPermissionActivity implements View.O
     protected void onStop() {
         try {
             super.onStop();
-            AbstractC4659a abstractC4659a = this.b;
-            if (abstractC4659a != null) {
-                abstractC4659a.g();
+            a aVar = this.b;
+            if (aVar != null) {
+                aVar.g();
             }
         } catch (Throwable th) {
             th.printStackTrace();
@@ -232,9 +232,9 @@ public class OfflineMapActivity extends AMapPermissionActivity implements View.O
             if (a(bundle)) {
                 return;
             }
-            AbstractC4659a abstractC4659a = this.b;
-            if (abstractC4659a != null) {
-                abstractC4659a.d();
+            a aVar = this.b;
+            if (aVar != null) {
+                aVar.d();
             }
             finish();
         } catch (Throwable th) {

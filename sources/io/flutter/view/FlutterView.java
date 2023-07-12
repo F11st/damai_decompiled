@@ -66,9 +66,9 @@ import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
-import tb.C9796v;
 import tb.hm2;
 import tb.im2;
+import tb.v;
 
 /* compiled from: Taobao */
 @Deprecated
@@ -217,7 +217,7 @@ public class FlutterView extends SurfaceView implements BinaryMessenger, MouseCu
     private ZeroSides calculateShouldZeroSides() {
         Context context = getContext();
         int i = context.getResources().getConfiguration().orientation;
-        int rotation = ((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getRotation();
+        int rotation = ((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getRotation();
         if (i == 2) {
             if (rotation == 1) {
                 return ZeroSides.RIGHT;

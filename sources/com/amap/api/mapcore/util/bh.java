@@ -56,9 +56,9 @@ public class bh extends by<String, List<OfflineMapProvince>> {
     }
 
     @Override // com.amap.api.mapcore.util.by
-    protected JSONObject a(gd.C4555a c4555a) {
+    protected JSONObject a(gd.a aVar) {
         JSONObject jSONObject;
-        if (c4555a == null || (jSONObject = c4555a.w) == null) {
+        if (aVar == null || (jSONObject = aVar.w) == null) {
             return null;
         }
         JSONObject optJSONObject = jSONObject.optJSONObject("015");

@@ -27,13 +27,12 @@ public class fh1 {
     BasePresenter g;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.fh1$a */
     /* loaded from: classes7.dex */
-    public class C9137a implements HavanaProxy.UccTrustLoginListener {
+    public class a implements HavanaProxy.UccTrustLoginListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ModuleTitleModel.OperationBean a;
 
-        C9137a(ModuleTitleModel.OperationBean operationBean) {
+        a(ModuleTitleModel.OperationBean operationBean) {
             this.a = operationBean;
         }
 
@@ -80,7 +79,7 @@ public class fh1 {
                 return;
             }
             this.g.userTrackClick("myorder", true);
-            HavanaProxy.v().P(this.a, new C9137a(operationBean));
+            HavanaProxy.v().P(this.a, new a(operationBean));
             return;
         }
         DMNav.from(this.a).toUri(operationBean.opUrl);

@@ -23,28 +23,27 @@ import tb.nm1;
 @Beta
 @GwtCompatible(emulated = true)
 /* loaded from: classes10.dex */
-public final class ArrayTable<R, C, V> extends AbstractC5180h<R, C, V> implements Serializable {
+public final class ArrayTable<R, C, V> extends com.google.common.collect.h<R, C, V> implements Serializable {
     private static final long serialVersionUID = 0;
     private final V[][] array;
     private final ImmutableMap<C, Integer> columnKeyToIndex;
     private final ImmutableList<C> columnList;
     @MonotonicNonNullDecl
-    private transient ArrayTable<R, C, V>.C4930f columnMap;
+    private transient ArrayTable<R, C, V>.f columnMap;
     private final ImmutableMap<R, Integer> rowKeyToIndex;
     private final ImmutableList<R> rowList;
     @MonotonicNonNullDecl
-    private transient ArrayTable<R, C, V>.C4932h rowMap;
+    private transient ArrayTable<R, C, V>.h rowMap;
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ArrayTable$a */
     /* loaded from: classes10.dex */
-    class C4923a extends AbstractC5151a<Table.Cell<R, C, V>> {
-        C4923a(int i) {
+    class a extends com.google.common.collect.a<Table.Cell<R, C, V>> {
+        a(int i) {
             super(i);
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.google.common.collect.AbstractC5151a
+        @Override // com.google.common.collect.a
         /* renamed from: b */
         public Table.Cell<R, C, V> a(int i) {
             return ArrayTable.this.getCell(i);
@@ -53,14 +52,13 @@ public final class ArrayTable<R, C, V> extends AbstractC5180h<R, C, V> implement
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ArrayTable$b */
     /* loaded from: classes10.dex */
-    public class C4924b extends Tables.AbstractC5130b<R, C, V> {
+    public class b extends Tables.b<R, C, V> {
         final int a;
         final int b;
         final /* synthetic */ int c;
 
-        C4924b(int i) {
+        b(int i) {
             this.c = i;
             this.a = i / ArrayTable.this.columnList.size();
             this.b = i % ArrayTable.this.columnList.size();
@@ -83,14 +81,13 @@ public final class ArrayTable<R, C, V> extends AbstractC5180h<R, C, V> implement
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ArrayTable$c */
     /* loaded from: classes10.dex */
-    class C4925c extends AbstractC5151a<V> {
-        C4925c(int i) {
+    class c extends com.google.common.collect.a<V> {
+        c(int i) {
             super(i);
         }
 
-        @Override // com.google.common.collect.AbstractC5151a
+        @Override // com.google.common.collect.a
         protected V a(int i) {
             return (V) ArrayTable.this.getValue(i);
         }
@@ -98,74 +95,71 @@ public final class ArrayTable<R, C, V> extends AbstractC5180h<R, C, V> implement
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ArrayTable$d */
     /* loaded from: classes10.dex */
-    public static abstract class AbstractC4926d<K, V> extends Maps.AbstractC5060k<K, V> {
+    public static abstract class d<K, V> extends Maps.k<K, V> {
         private final ImmutableMap<K, Integer> a;
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.ArrayTable$d$a */
         /* loaded from: classes10.dex */
-        public class C4927a extends AbstractC5157b<K, V> {
+        public class a extends com.google.common.collect.b<K, V> {
             final /* synthetic */ int a;
 
-            C4927a(int i) {
+            a(int i) {
                 this.a = i;
             }
 
-            @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+            @Override // com.google.common.collect.b, java.util.Map.Entry
             public K getKey() {
-                return (K) AbstractC4926d.this.c(this.a);
+                return (K) d.this.c(this.a);
             }
 
-            @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+            @Override // com.google.common.collect.b, java.util.Map.Entry
             public V getValue() {
-                return (V) AbstractC4926d.this.e(this.a);
+                return (V) d.this.e(this.a);
             }
 
-            @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+            @Override // com.google.common.collect.b, java.util.Map.Entry
             public V setValue(V v) {
-                return (V) AbstractC4926d.this.f(this.a, v);
+                return (V) d.this.f(this.a, v);
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.ArrayTable$d$b */
         /* loaded from: classes10.dex */
-        class C4928b extends AbstractC5151a<Map.Entry<K, V>> {
-            C4928b(int i) {
+        class b extends com.google.common.collect.a<Map.Entry<K, V>> {
+            b(int i) {
                 super(i);
             }
 
             /* JADX INFO: Access modifiers changed from: protected */
-            @Override // com.google.common.collect.AbstractC5151a
+            @Override // com.google.common.collect.a
             /* renamed from: b */
             public Map.Entry<K, V> a(int i) {
-                return AbstractC4926d.this.b(i);
+                return d.this.b(i);
             }
         }
 
-        /* synthetic */ AbstractC4926d(ImmutableMap immutableMap, C4923a c4923a) {
+        /* synthetic */ d(ImmutableMap immutableMap, a aVar) {
             this(immutableMap);
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.Maps.AbstractC5060k
+        @Override // com.google.common.collect.Maps.k
         public Iterator<Map.Entry<K, V>> a() {
-            return new C4928b(size());
+            return new b(size());
         }
 
         Map.Entry<K, V> b(int i) {
             du1.n(i, size());
-            return new C4927a(i);
+            return new a(i);
         }
 
         K c(int i) {
             return this.a.keySet().asList().get(i);
         }
 
-        @Override // com.google.common.collect.Maps.AbstractC5060k, java.util.AbstractMap, java.util.Map
+        @Override // com.google.common.collect.Maps.k, java.util.AbstractMap, java.util.Map
         public void clear() {
             throw new UnsupportedOperationException();
         }
@@ -221,139 +215,135 @@ public final class ArrayTable<R, C, V> extends AbstractC5180h<R, C, V> implement
             return this.a.size();
         }
 
-        private AbstractC4926d(ImmutableMap<K, Integer> immutableMap) {
+        private d(ImmutableMap<K, Integer> immutableMap) {
             this.a = immutableMap;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ArrayTable$e */
     /* loaded from: classes10.dex */
-    public class C4929e extends AbstractC4926d<R, V> {
+    public class e extends d<R, V> {
         final int b;
 
-        C4929e(int i) {
+        e(int i) {
             super(ArrayTable.this.rowKeyToIndex, null);
             this.b = i;
         }
 
-        @Override // com.google.common.collect.ArrayTable.AbstractC4926d
+        @Override // com.google.common.collect.ArrayTable.d
         String d() {
             return "Row";
         }
 
-        @Override // com.google.common.collect.ArrayTable.AbstractC4926d
+        @Override // com.google.common.collect.ArrayTable.d
         V e(int i) {
             return (V) ArrayTable.this.at(i, this.b);
         }
 
-        @Override // com.google.common.collect.ArrayTable.AbstractC4926d
+        @Override // com.google.common.collect.ArrayTable.d
         V f(int i, V v) {
             return (V) ArrayTable.this.set(i, this.b, v);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ArrayTable$f */
     /* loaded from: classes10.dex */
-    private class C4930f extends AbstractC4926d<C, Map<R, V>> {
-        /* synthetic */ C4930f(ArrayTable arrayTable, C4923a c4923a) {
+    private class f extends d<C, Map<R, V>> {
+        /* synthetic */ f(ArrayTable arrayTable, a aVar) {
             this();
         }
 
-        @Override // com.google.common.collect.ArrayTable.AbstractC4926d
+        @Override // com.google.common.collect.ArrayTable.d
         String d() {
             return "Column";
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.ArrayTable.AbstractC4926d
+        @Override // com.google.common.collect.ArrayTable.d
         /* renamed from: g */
         public Map<R, V> e(int i) {
-            return new C4929e(i);
+            return new e(i);
         }
 
-        @Override // com.google.common.collect.ArrayTable.AbstractC4926d, java.util.AbstractMap, java.util.Map
+        @Override // com.google.common.collect.ArrayTable.d, java.util.AbstractMap, java.util.Map
         /* renamed from: h */
         public Map<R, V> put(C c, Map<R, V> map) {
             throw new UnsupportedOperationException();
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.ArrayTable.AbstractC4926d
+        @Override // com.google.common.collect.ArrayTable.d
         /* renamed from: i */
         public Map<R, V> f(int i, Map<R, V> map) {
             throw new UnsupportedOperationException();
         }
 
-        private C4930f() {
+        private f() {
             super(ArrayTable.this.columnKeyToIndex, null);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ArrayTable$g */
     /* loaded from: classes10.dex */
-    public class C4931g extends AbstractC4926d<C, V> {
+    public class g extends d<C, V> {
         final int b;
 
-        C4931g(int i) {
+        g(int i) {
             super(ArrayTable.this.columnKeyToIndex, null);
             this.b = i;
         }
 
-        @Override // com.google.common.collect.ArrayTable.AbstractC4926d
+        @Override // com.google.common.collect.ArrayTable.d
         String d() {
             return "Column";
         }
 
-        @Override // com.google.common.collect.ArrayTable.AbstractC4926d
+        @Override // com.google.common.collect.ArrayTable.d
         V e(int i) {
             return (V) ArrayTable.this.at(this.b, i);
         }
 
-        @Override // com.google.common.collect.ArrayTable.AbstractC4926d
+        @Override // com.google.common.collect.ArrayTable.d
         V f(int i, V v) {
             return (V) ArrayTable.this.set(this.b, i, v);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ArrayTable$h */
     /* loaded from: classes10.dex */
-    private class C4932h extends AbstractC4926d<R, Map<C, V>> {
-        /* synthetic */ C4932h(ArrayTable arrayTable, C4923a c4923a) {
+    private class h extends d<R, Map<C, V>> {
+        /* synthetic */ h(ArrayTable arrayTable, a aVar) {
             this();
         }
 
-        @Override // com.google.common.collect.ArrayTable.AbstractC4926d
+        @Override // com.google.common.collect.ArrayTable.d
         String d() {
             return "Row";
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.ArrayTable.AbstractC4926d
+        @Override // com.google.common.collect.ArrayTable.d
         /* renamed from: g */
         public Map<C, V> e(int i) {
-            return new C4931g(i);
+            return new g(i);
         }
 
-        @Override // com.google.common.collect.ArrayTable.AbstractC4926d, java.util.AbstractMap, java.util.Map
+        @Override // com.google.common.collect.ArrayTable.d, java.util.AbstractMap, java.util.Map
         /* renamed from: h */
         public Map<C, V> put(R r, Map<C, V> map) {
             throw new UnsupportedOperationException();
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.common.collect.ArrayTable.AbstractC4926d
+        @Override // com.google.common.collect.ArrayTable.d
         /* renamed from: i */
         public Map<C, V> f(int i, Map<C, V> map) {
             throw new UnsupportedOperationException();
         }
 
-        private C4932h() {
+        private h() {
             super(ArrayTable.this.rowKeyToIndex, null);
         }
     }
@@ -376,7 +366,7 @@ public final class ArrayTable<R, C, V> extends AbstractC5180h<R, C, V> implement
 
     /* JADX INFO: Access modifiers changed from: private */
     public Table.Cell<R, C, V> getCell(int i) {
-        return new C4924b(i);
+        return new b(i);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -390,27 +380,27 @@ public final class ArrayTable<R, C, V> extends AbstractC5180h<R, C, V> implement
         return this.array[i][i2];
     }
 
-    @Override // com.google.common.collect.AbstractC5180h
+    @Override // com.google.common.collect.h
     Iterator<Table.Cell<R, C, V>> cellIterator() {
-        return new C4923a(size());
+        return new a(size());
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public Set<Table.Cell<R, C, V>> cellSet() {
         return super.cellSet();
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     @Deprecated
     public void clear() {
         throw new UnsupportedOperationException();
     }
 
     @Override // com.google.common.collect.Table
-    public Map<R, V> column(C c) {
-        du1.p(c);
-        Integer num = this.columnKeyToIndex.get(c);
-        return num == null ? ImmutableMap.of() : new C4929e(num.intValue());
+    public Map<R, V> column(C c2) {
+        du1.p(c2);
+        Integer num = this.columnKeyToIndex.get(c2);
+        return num == null ? ImmutableMap.of() : new e(num.intValue());
     }
 
     public ImmutableList<C> columnKeyList() {
@@ -419,31 +409,31 @@ public final class ArrayTable<R, C, V> extends AbstractC5180h<R, C, V> implement
 
     @Override // com.google.common.collect.Table
     public Map<C, Map<R, V>> columnMap() {
-        ArrayTable<R, C, V>.C4930f c4930f = this.columnMap;
-        if (c4930f == null) {
-            ArrayTable<R, C, V>.C4930f c4930f2 = new C4930f(this, null);
-            this.columnMap = c4930f2;
-            return c4930f2;
+        ArrayTable<R, C, V>.f fVar = this.columnMap;
+        if (fVar == null) {
+            ArrayTable<R, C, V>.f fVar2 = new f(this, null);
+            this.columnMap = fVar2;
+            return fVar2;
         }
-        return c4930f;
+        return fVar;
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public boolean contains(@NullableDecl Object obj, @NullableDecl Object obj2) {
         return containsRow(obj) && containsColumn(obj2);
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public boolean containsColumn(@NullableDecl Object obj) {
         return this.columnKeyToIndex.containsKey(obj);
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public boolean containsRow(@NullableDecl Object obj) {
         return this.rowKeyToIndex.containsKey(obj);
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public boolean containsValue(@NullableDecl Object obj) {
         V[][] vArr;
         for (V[] vArr2 : this.array) {
@@ -456,7 +446,7 @@ public final class ArrayTable<R, C, V> extends AbstractC5180h<R, C, V> implement
         return false;
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public /* bridge */ /* synthetic */ boolean equals(@NullableDecl Object obj) {
         return super.equals(obj);
     }
@@ -477,7 +467,7 @@ public final class ArrayTable<R, C, V> extends AbstractC5180h<R, C, V> implement
         }
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public V get(@NullableDecl Object obj, @NullableDecl Object obj2) {
         Integer num = this.rowKeyToIndex.get(obj);
         Integer num2 = this.columnKeyToIndex.get(obj2);
@@ -487,34 +477,34 @@ public final class ArrayTable<R, C, V> extends AbstractC5180h<R, C, V> implement
         return at(num.intValue(), num2.intValue());
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public /* bridge */ /* synthetic */ int hashCode() {
         return super.hashCode();
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public boolean isEmpty() {
         return this.rowList.isEmpty() || this.columnList.isEmpty();
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     @CanIgnoreReturnValue
-    public V put(R r, C c, @NullableDecl V v) {
+    public V put(R r, C c2, @NullableDecl V v) {
         du1.p(r);
-        du1.p(c);
+        du1.p(c2);
         Integer num = this.rowKeyToIndex.get(r);
         du1.l(num != null, "Row %s not in %s", r, this.rowList);
-        Integer num2 = this.columnKeyToIndex.get(c);
-        du1.l(num2 != null, "Column %s not in %s", c, this.columnList);
+        Integer num2 = this.columnKeyToIndex.get(c2);
+        du1.l(num2 != null, "Column %s not in %s", c2, this.columnList);
         return set(num.intValue(), num2.intValue(), v);
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public void putAll(Table<? extends R, ? extends C, ? extends V> table) {
         super.putAll(table);
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     @CanIgnoreReturnValue
     @Deprecated
     public V remove(Object obj, Object obj2) {
@@ -525,7 +515,7 @@ public final class ArrayTable<R, C, V> extends AbstractC5180h<R, C, V> implement
     public Map<C, V> row(R r) {
         du1.p(r);
         Integer num = this.rowKeyToIndex.get(r);
-        return num == null ? ImmutableMap.of() : new C4931g(num.intValue());
+        return num == null ? ImmutableMap.of() : new g(num.intValue());
     }
 
     public ImmutableList<R> rowKeyList() {
@@ -534,13 +524,13 @@ public final class ArrayTable<R, C, V> extends AbstractC5180h<R, C, V> implement
 
     @Override // com.google.common.collect.Table
     public Map<R, Map<C, V>> rowMap() {
-        ArrayTable<R, C, V>.C4932h c4932h = this.rowMap;
-        if (c4932h == null) {
-            ArrayTable<R, C, V>.C4932h c4932h2 = new C4932h(this, null);
-            this.rowMap = c4932h2;
-            return c4932h2;
+        ArrayTable<R, C, V>.h hVar = this.rowMap;
+        if (hVar == null) {
+            ArrayTable<R, C, V>.h hVar2 = new h(this, null);
+            this.rowMap = hVar2;
+            return hVar2;
         }
-        return c4932h;
+        return hVar;
     }
 
     @CanIgnoreReturnValue
@@ -568,31 +558,31 @@ public final class ArrayTable<R, C, V> extends AbstractC5180h<R, C, V> implement
         return vArr;
     }
 
-    @Override // com.google.common.collect.AbstractC5180h
+    @Override // com.google.common.collect.h
     public /* bridge */ /* synthetic */ String toString() {
         return super.toString();
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public Collection<V> values() {
         return super.values();
     }
 
-    @Override // com.google.common.collect.AbstractC5180h
+    @Override // com.google.common.collect.h
     Iterator<V> valuesIterator() {
-        return new C4925c(size());
+        return new c(size());
     }
 
     public static <R, C, V> ArrayTable<R, C, V> create(Table<R, C, V> table) {
         return table instanceof ArrayTable ? new ArrayTable<>((ArrayTable) table) : new ArrayTable<>(table);
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public ImmutableSet<C> columnKeySet() {
         return this.columnKeyToIndex.keySet();
     }
 
-    @Override // com.google.common.collect.AbstractC5180h, com.google.common.collect.Table
+    @Override // com.google.common.collect.h, com.google.common.collect.Table
     public ImmutableSet<R> rowKeySet() {
         return this.rowKeyToIndex.keySet();
     }

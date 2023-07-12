@@ -14,7 +14,7 @@ import com.alibaba.pictures.bricks.bean.TuanItemBean;
 import com.alibaba.pictures.bricks.component.script.ScriptShopPresenter;
 import com.alibaba.pictures.bricks.component.script.ScriptShopView;
 import com.alibaba.pictures.bricks.onearch.AbsView;
-import com.alibaba.pictures.bricks.util.C3550a;
+import com.alibaba.pictures.bricks.util.a;
 import com.alibaba.pictures.bricks.view.DMCategroyTagView;
 import com.alibaba.pictures.bricks.view.DMRatingBar;
 import com.alibaba.pictures.bricks.view.HighlightTextView;
@@ -178,7 +178,7 @@ public final class ScriptShopView extends AbsView<GenericItem<ItemValue>, Script
             Context context = this.itemView.getContext();
             b41.h(context, "itemView.context");
             int a = s60Var.a(context, 63.0f);
-            String c2 = C3550a.c(shopInfoBean.getUrl(), a, a);
+            String c2 = a.c(shopInfoBean.getUrl(), a, a);
             b41.h(c2, "getImageUrl(url, picSize,picSize)");
             ImageLoaderProvider proxy = ImageLoaderProviderProxy.getProxy();
             ImageView imageView = this.mPicImg;

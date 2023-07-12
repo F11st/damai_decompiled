@@ -13,11 +13,10 @@ import tb.eb1;
 public class WebSocketEngine {
     private OptionThread a;
 
-    /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
     /* loaded from: classes6.dex */
-    public class OptionThread extends Thread {
-        private HandlerC3390b mHandler;
+    private class OptionThread extends Thread {
+        private b mHandler;
 
         private OptionThread() {
         }
@@ -26,15 +25,14 @@ public class WebSocketEngine {
         public void run() {
             super.run();
             Looper.prepare();
-            this.mHandler = new HandlerC3390b();
+            this.mHandler = new b();
             Looper.loop();
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
     /* loaded from: classes6.dex */
-    public static class ReRunnable implements Runnable {
+    private static class ReRunnable implements Runnable {
         private static Queue<ReRunnable> POOL = new ArrayDeque(10);
         private Request request;
         private int type;
@@ -77,12 +75,10 @@ public class WebSocketEngine {
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.studio.third.socket.websocket.WebSocketEngine$b */
     /* loaded from: classes6.dex */
-    public static class HandlerC3390b extends Handler {
-        private HandlerC3390b() {
+    private static class b extends Handler {
+        private b() {
         }
 
         @Override // android.os.Handler

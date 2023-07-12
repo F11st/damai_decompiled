@@ -13,7 +13,6 @@ import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
-import kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Function;
 import kotlin.reflect.jvm.internal.impl.metadata.deserialization.NameResolver;
 import kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedCallableMemberDescriptor;
@@ -67,9 +66,9 @@ public final class q70 extends cd2 implements DeserializedCallableMemberDescript
         return I;
     }
 
-    @Override // tb.cd2, kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a
+    @Override // tb.cd2, kotlin.reflect.jvm.internal.impl.descriptors.impl.a
     @NotNull
-    protected AbstractC8316a f(@NotNull DeclarationDescriptor declarationDescriptor, @Nullable FunctionDescriptor functionDescriptor, @NotNull CallableMemberDescriptor.Kind kind, @Nullable ni1 ni1Var, @NotNull Annotations annotations, @NotNull SourceElement sourceElement) {
+    protected kotlin.reflect.jvm.internal.impl.descriptors.impl.a f(@NotNull DeclarationDescriptor declarationDescriptor, @Nullable FunctionDescriptor functionDescriptor, @NotNull CallableMemberDescriptor.Kind kind, @Nullable ni1 ni1Var, @NotNull Annotations annotations, @NotNull SourceElement sourceElement) {
         ni1 ni1Var2;
         b41.i(declarationDescriptor, "newOwner");
         b41.i(kind, "kind");
@@ -116,7 +115,7 @@ public final class q70 extends cd2 implements DeserializedCallableMemberDescript
     @Override // kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedMemberDescriptor
     @NotNull
     public List<hx2> getVersionRequirements() {
-        return DeserializedCallableMemberDescriptor.C8511a.a(this);
+        return DeserializedCallableMemberDescriptor.a.a(this);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

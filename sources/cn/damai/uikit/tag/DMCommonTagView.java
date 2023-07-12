@@ -47,9 +47,8 @@ public class DMCommonTagView extends FrameLayout {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.tag.DMCommonTagView$a */
     /* loaded from: classes8.dex */
-    public static /* synthetic */ class C2559a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -294,7 +293,7 @@ public class DMCommonTagView extends FrameLayout {
             this.mPrefixImg.setVisibility(8);
             this.mTagName.setVisibility(0);
             this.mTagImage.setVisibility(8);
-            switch (C2559a.a[dMTagType.ordinal()]) {
+            switch (a.a[dMTagType.ordinal()]) {
                 case 1:
                     this.mTagName.setBackgroundResource(R$drawable.bricks_common_promotion_tagview_bg);
                     this.mTagName.setTextColor(this.mContext.getResources().getColor(R$color.white));

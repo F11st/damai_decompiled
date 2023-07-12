@@ -13,13 +13,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.uikit.snake.ScrollTitleBean;
-import com.airbnb.lottie.C2821a;
-import com.airbnb.lottie.C2861b;
 import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.LottieListener;
 import com.airbnb.lottie.LottieTask;
@@ -52,13 +49,12 @@ public class ScrollSkipLinearView extends TabLottieLinearView {
     private float mStopX;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.widget.ScrollSkipLinearView$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1875a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View.OnClickListener a;
 
-        View$OnClickListenerC1875a(ScrollSkipLinearView scrollSkipLinearView, View.OnClickListener onClickListener) {
+        a(ScrollSkipLinearView scrollSkipLinearView, View.OnClickListener onClickListener) {
             this.a = onClickListener;
         }
 
@@ -74,37 +70,35 @@ public class ScrollSkipLinearView extends TabLottieLinearView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.widget.ScrollSkipLinearView$b */
     /* loaded from: classes7.dex */
-    public class C1876b implements LottieListener<C2821a> {
+    public class b implements LottieListener<com.airbnb.lottie.a> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ LottieAnimationView a;
 
-        C1876b(ScrollSkipLinearView scrollSkipLinearView, LottieAnimationView lottieAnimationView) {
+        b(ScrollSkipLinearView scrollSkipLinearView, LottieAnimationView lottieAnimationView) {
             this.a = lottieAnimationView;
         }
 
         @Override // com.airbnb.lottie.LottieListener
         /* renamed from: a */
-        public void onResult(C2821a c2821a) {
+        public void onResult(com.airbnb.lottie.a aVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "825153516")) {
-                ipChange.ipc$dispatch("825153516", new Object[]{this, c2821a});
+                ipChange.ipc$dispatch("825153516", new Object[]{this, aVar});
                 return;
             }
-            this.a.setComposition(c2821a);
+            this.a.setComposition(aVar);
             this.a.playAnimation();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.widget.ScrollSkipLinearView$c */
     /* loaded from: classes7.dex */
-    public class C1877c implements LottieListener {
+    public class c implements LottieListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ LottieAnimationView a;
 
-        C1877c(ScrollSkipLinearView scrollSkipLinearView, LottieAnimationView lottieAnimationView) {
+        c(ScrollSkipLinearView scrollSkipLinearView, LottieAnimationView lottieAnimationView) {
             this.a = lottieAnimationView;
         }
 
@@ -120,21 +114,20 @@ public class ScrollSkipLinearView extends TabLottieLinearView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.widget.ScrollSkipLinearView$d */
     /* loaded from: classes7.dex */
-    public class C1878d implements DMImageCreator.DMImageFailListener {
+    public class d implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ LottieAnimationView a;
 
-        C1878d(ScrollSkipLinearView scrollSkipLinearView, LottieAnimationView lottieAnimationView) {
+        d(ScrollSkipLinearView scrollSkipLinearView, LottieAnimationView lottieAnimationView) {
             this.a = lottieAnimationView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1915419418")) {
-                ipChange.ipc$dispatch("-1915419418", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-1915419418", new Object[]{this, dVar});
             } else {
                 this.a.setVisibility(8);
             }
@@ -142,23 +135,22 @@ public class ScrollSkipLinearView extends TabLottieLinearView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.widget.ScrollSkipLinearView$e */
     /* loaded from: classes7.dex */
-    public class C1879e implements DMImageCreator.DMImageSuccListener {
+    public class e implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ LottieAnimationView a;
 
-        C1879e(ScrollSkipLinearView scrollSkipLinearView, LottieAnimationView lottieAnimationView) {
+        e(ScrollSkipLinearView scrollSkipLinearView, LottieAnimationView lottieAnimationView) {
             this.a = lottieAnimationView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Drawable drawable;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1241461243")) {
-                ipChange.ipc$dispatch("1241461243", new Object[]{this, c0502e});
-            } else if (c0502e == null || (drawable = c0502e.a) == null) {
+                ipChange.ipc$dispatch("1241461243", new Object[]{this, eVar});
+            } else if (eVar == null || (drawable = eVar.a) == null) {
             } else {
                 this.a.setImageDrawable(drawable);
             }
@@ -166,12 +158,11 @@ public class ScrollSkipLinearView extends TabLottieLinearView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.widget.ScrollSkipLinearView$f */
     /* loaded from: classes7.dex */
-    public class C1880f implements IPhenixListener<ui2> {
+    public class f implements IPhenixListener<ui2> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1880f(ScrollSkipLinearView scrollSkipLinearView) {
+        f(ScrollSkipLinearView scrollSkipLinearView) {
         }
 
         @Override // com.taobao.phenix.intf.event.IPhenixListener
@@ -205,9 +196,9 @@ public class ScrollSkipLinearView extends TabLottieLinearView {
             return (String) ipChange.ipc$dispatch("1409574058", new Object[]{this, messageDigest});
         }
         StringBuilder sb = new StringBuilder();
-        for (byte b : messageDigest.digest()) {
-            sb.append(Integer.toHexString((b >> 4) & 15));
-            sb.append(Integer.toHexString(b & 15));
+        for (byte b2 : messageDigest.digest()) {
+            sb.append(Integer.toHexString((b2 >> 4) & 15));
+            sb.append(Integer.toHexString(b2 & 15));
         }
         return sb.toString();
     }
@@ -221,8 +212,8 @@ public class ScrollSkipLinearView extends TabLottieLinearView {
             MessageDigest messageDigest = MessageDigest.getInstance(MessageDigestAlgorithms.MD5);
             messageDigest.update(str.getBytes(Charset.forName("UTF-8")));
             return getHashString(messageDigest);
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e2) {
+            e2.printStackTrace();
             return null;
         }
     }
@@ -233,7 +224,7 @@ public class ScrollSkipLinearView extends TabLottieLinearView {
         if (AndroidInstantRuntime.support(ipChange, "1970099518")) {
             ipChange.ipc$dispatch("1970099518", new Object[]{this});
         } else {
-            this.listener = new C1880f(this);
+            this.listener = new f(this);
         }
     }
 
@@ -298,7 +289,7 @@ public class ScrollSkipLinearView extends TabLottieLinearView {
                     layoutParams.gravity = 16;
                     inflate.setPadding(dip2px(this.mSpace / 2), 0, dip2px(this.mSpace / 2), 0);
                     inflate.setLayoutParams(layoutParams);
-                    inflate.setOnClickListener(new View$OnClickListenerC1875a(this, onClickListener));
+                    inflate.setOnClickListener(new a(this, onClickListener));
                     LottieAnimationView lottieAnimationView = (LottieAnimationView) inflate.findViewById(R$id.lottie_view);
                     if (TextUtils.isEmpty(scrollTitleBean.picUrl) && TextUtils.isEmpty(scrollTitleBean.picJson)) {
                         lottieAnimationView.setVisibility(8);
@@ -306,11 +297,11 @@ public class ScrollSkipLinearView extends TabLottieLinearView {
                         lottieAnimationView.setVisibility(0);
                         if (!TextUtils.isEmpty(scrollTitleBean.picJson)) {
                             String str = scrollTitleBean.picJson;
-                            LottieTask<C2821a> m = C2861b.m(str, getMD5(str));
-                            m.f(new C1876b(this, lottieAnimationView));
-                            m.e(new C1877c(this, lottieAnimationView));
+                            LottieTask<com.airbnb.lottie.a> m = com.airbnb.lottie.b.m(str, getMD5(str));
+                            m.f(new b(this, lottieAnimationView));
+                            m.e(new c(this, lottieAnimationView));
                         } else if (!TextUtils.isEmpty(scrollTitleBean.picUrl)) {
-                            C0504a.b().h(this.mContext).c(scrollTitleBean.picUrl).n(new C1879e(this, lottieAnimationView)).e(new C1878d(this, lottieAnimationView)).f();
+                            cn.damai.common.image.a.b().h(this.mContext).c(scrollTitleBean.picUrl).n(new e(this, lottieAnimationView)).e(new d(this, lottieAnimationView)).f();
                         }
                     }
                     addView(inflate);
@@ -320,10 +311,10 @@ public class ScrollSkipLinearView extends TabLottieLinearView {
     }
 
     @Override // cn.damai.tetris.component.home.widget.TabLottieLinearView, cn.damai.tetris.component.home.widget.TabLinearView
-    public void startAnim(int i, float f, float f2, float f3, float f4) {
+    public void startAnim(int i, float f2, float f3, float f4, float f5) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "142618879")) {
-            ipChange.ipc$dispatch("142618879", new Object[]{this, Integer.valueOf(i), Float.valueOf(f), Float.valueOf(f2), Float.valueOf(f3), Float.valueOf(f4)});
+            ipChange.ipc$dispatch("142618879", new Object[]{this, Integer.valueOf(i), Float.valueOf(f2), Float.valueOf(f3), Float.valueOf(f4), Float.valueOf(f5)});
         }
     }
 

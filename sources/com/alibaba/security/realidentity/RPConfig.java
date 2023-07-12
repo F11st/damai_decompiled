@@ -2,7 +2,7 @@ package com.alibaba.security.realidentity;
 
 import com.alibaba.security.biometrics.theme.ALBiometricsConfig;
 import com.alibaba.security.biometrics.transition.TransitionMode;
-import com.alibaba.security.realidentity.a.C3847g;
+import com.alibaba.security.realidentity.a.g;
 import java.io.Serializable;
 
 /* compiled from: Taobao */
@@ -41,7 +41,7 @@ public class RPConfig implements Serializable {
         builder2.setIsSkinInAssets(builder.f);
         this.fromSource = builder.h;
         this.biometricsConfig = builder2.build();
-        C3847g.C3848a.a.o = builder.g;
+        g.a.a.o = builder.g;
     }
 
     /* compiled from: Taobao */

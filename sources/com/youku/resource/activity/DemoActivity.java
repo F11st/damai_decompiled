@@ -19,7 +19,7 @@ import com.youku.resource.widget.YKImageLayout;
 import com.youku.resource.widget.YKImageView;
 import com.youku.resource.widget.YKPageErrorView;
 import java.util.ArrayList;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -136,7 +136,7 @@ public class DemoActivity extends FragmentActivity {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             if (i == 0) {
-                return new ImageViewHolder(View.inflate(this.context, R.C8074layout.resource_item_three_program_view, null));
+                return new ImageViewHolder(View.inflate(this.context, R.layout.resource_item_three_program_view, null));
             }
             if (i == 1) {
                 return new LayoutViewHolder(new YKImageLayout(this.context));
@@ -179,7 +179,7 @@ public class DemoActivity extends FragmentActivity {
     }
 
     public static int getWidth(Context context) {
-        return ((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getWidth();
+        return ((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getWidth();
     }
 
     private void initAdapter() {
@@ -273,7 +273,7 @@ public class DemoActivity extends FragmentActivity {
         getActionBar().hide();
         super.onCreate(null);
         setTitle("");
-        setContentView(R.C8074layout.activity_resource_demo);
+        setContentView(R.layout.activity_resource_demo);
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.resource_recyclerview);
         this.mRecyclerview = recyclerView;
         recyclerView.setLayoutManager(new GridLayoutManager((Context) this, 3, 1, false));

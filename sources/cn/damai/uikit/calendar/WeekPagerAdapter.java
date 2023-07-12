@@ -14,14 +14,13 @@ public class WeekPagerAdapter extends CalendarPagerAdapter<WeekView> {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.calendar.WeekPagerAdapter$a */
     /* loaded from: classes8.dex */
-    public static class C2489a implements DateRangeIndex {
+    public static class a implements DateRangeIndex {
         private static transient /* synthetic */ IpChange $ipChange;
         private final CalendarDay a;
         private final int b;
 
-        public C2489a(@NonNull CalendarDay calendarDay, @NonNull CalendarDay calendarDay2, int i) {
+        public a(@NonNull CalendarDay calendarDay, @NonNull CalendarDay calendarDay2, int i) {
             CalendarDay a = a(calendarDay, i);
             this.a = a;
             this.b = b(a, calendarDay2) + 1;
@@ -87,7 +86,7 @@ public class WeekPagerAdapter extends CalendarPagerAdapter<WeekView> {
     @Override // cn.damai.uikit.calendar.CalendarPagerAdapter
     protected DateRangeIndex b(CalendarDay calendarDay, CalendarDay calendarDay2) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1829583180") ? (DateRangeIndex) ipChange.ipc$dispatch("1829583180", new Object[]{this, calendarDay, calendarDay2}) : new C2489a(calendarDay, calendarDay2, this.b.getFirstDayOfWeek());
+        return AndroidInstantRuntime.support(ipChange, "1829583180") ? (DateRangeIndex) ipChange.ipc$dispatch("1829583180", new Object[]{this, calendarDay, calendarDay2}) : new a(calendarDay, calendarDay2, this.b.getFirstDayOfWeek());
     }
 
     @Override // cn.damai.uikit.calendar.CalendarPagerAdapter

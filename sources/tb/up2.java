@@ -15,14 +15,13 @@ public final class up2<T, R> implements Sequence<R> {
     private final Function1<T, R> b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.up2$a */
     /* loaded from: classes3.dex */
-    public static final class C9783a implements Iterator<R>, KMappedMarker {
+    public static final class a implements Iterator<R>, KMappedMarker {
         @NotNull
         private final Iterator<T> a;
         final /* synthetic */ up2<T, R> b;
 
-        C9783a(up2<T, R> up2Var) {
+        a(up2<T, R> up2Var) {
             this.b = up2Var;
             this.a = ((up2) up2Var).a.iterator();
         }
@@ -60,6 +59,6 @@ public final class up2<T, R> implements Sequence<R> {
     @Override // kotlin.sequences.Sequence
     @NotNull
     public Iterator<R> iterator() {
-        return new C9783a(this);
+        return new a(this);
     }
 }

@@ -3,8 +3,8 @@ package com.amap.api.col.s;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
-import com.amap.api.col.s.HandlerC4447t;
 import com.amap.api.col.s.bt;
+import com.amap.api.col.s.t;
 import com.amap.api.services.busline.BusStationQuery;
 import com.amap.api.services.busline.BusStationResult;
 import com.amap.api.services.busline.BusStationSearch;
@@ -24,11 +24,11 @@ public final class aw implements IBusStationSearch {
     private Handler g;
 
     public aw(Context context, BusStationQuery busStationQuery) throws AMapException {
-        bu a = bt.a(context, C4434h.a(false));
-        if (a.a == bt.EnumC4398c.SuccessCode) {
+        bu a = bt.a(context, h.a(false));
+        if (a.a == bt.c.SuccessCode) {
             this.a = context.getApplicationContext();
             this.c = busStationQuery;
-            this.g = HandlerC4447t.a();
+            this.g = t.a();
             return;
         }
         String str = a.b;
@@ -43,7 +43,7 @@ public final class aw implements IBusStationSearch {
     @Override // com.amap.api.services.interfaces.IBusStationSearch
     public final BusStationResult searchBusStation() throws AMapException {
         try {
-            C4444r.a(this.a);
+            r.a(this.a);
             if (a()) {
                 if (!this.c.weakEquals(this.d)) {
                     this.d = this.c.m222clone();
@@ -54,14 +54,14 @@ public final class aw implements IBusStationSearch {
                     }
                 }
                 if (this.f == 0) {
-                    BusStationResult busStationResult = (BusStationResult) new C4410d(this.a, this.c).b();
+                    BusStationResult busStationResult = (BusStationResult) new d(this.a, this.c).b();
                     this.f = busStationResult.getPageCount();
                     a(busStationResult);
                     return busStationResult;
                 }
                 BusStationResult b = b(this.c.getPageNumber());
                 if (b == null) {
-                    BusStationResult busStationResult2 = (BusStationResult) new C4410d(this.a, this.c).b();
+                    BusStationResult busStationResult2 = (BusStationResult) new d(this.a, this.c).b();
                     this.e.set(this.c.getPageNumber(), busStationResult2);
                     return busStationResult2;
                 }
@@ -69,10 +69,10 @@ public final class aw implements IBusStationSearch {
             }
             throw new AMapException("无效的参数 - IllegalArgumentException");
         } catch (AMapException e) {
-            C4435i.a(e, "BusStationSearch", "searchBusStation");
+            i.a(e, "BusStationSearch", "searchBusStation");
             throw new AMapException(e.getErrorMessage());
         } catch (Throwable th) {
-            C4435i.a(th, "BusStationSearch", "searchBusStation");
+            i.a(th, "BusStationSearch", "searchBusStation");
             return null;
         }
     }
@@ -83,16 +83,16 @@ public final class aw implements IBusStationSearch {
             ao.a().a(new Runnable() { // from class: com.amap.api.col.s.aw.1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                    Message obtainMessage = t.a().obtainMessage();
                     try {
                         try {
                             obtainMessage.arg1 = 7;
-                            HandlerC4447t.C4449b c4449b = new HandlerC4447t.C4449b();
-                            c4449b.b = aw.this.b;
-                            obtainMessage.obj = c4449b;
+                            t.b bVar = new t.b();
+                            bVar.b = aw.this.b;
+                            obtainMessage.obj = bVar;
                             BusStationResult searchBusStation = aw.this.searchBusStation();
                             obtainMessage.what = 1000;
-                            c4449b.a = searchBusStation;
+                            bVar.a = searchBusStation;
                         } catch (AMapException e) {
                             obtainMessage.what = e.getErrorCode();
                         }
@@ -149,6 +149,6 @@ public final class aw implements IBusStationSearch {
 
     private boolean a() {
         BusStationQuery busStationQuery = this.c;
-        return (busStationQuery == null || C4435i.a(busStationQuery.getQueryString())) ? false : true;
+        return (busStationQuery == null || i.a(busStationQuery.getQueryString())) ? false : true;
     }
 }

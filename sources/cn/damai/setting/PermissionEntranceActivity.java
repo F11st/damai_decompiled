@@ -25,12 +25,11 @@ public class PermissionEntranceActivity extends DamaiBaseActivity {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.PermissionEntranceActivity$a */
     /* loaded from: classes7.dex */
-    public class C1744a implements SimpleTitleLayout.OnBtnClickListener {
+    public class a implements SimpleTitleLayout.OnBtnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1744a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.view.SimpleTitleLayout.OnBtnClickListener
@@ -53,12 +52,11 @@ public class PermissionEntranceActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.setting.PermissionEntranceActivity$b */
     /* loaded from: classes7.dex */
-    public class C1745b implements OnItemClickListener<PermissionBean> {
+    public class b implements OnItemClickListener<PermissionBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1745b() {
+        b() {
         }
 
         @Override // cn.damai.commonbusiness.discover.viewholder.OnItemClickListener
@@ -152,7 +150,7 @@ public class PermissionEntranceActivity extends DamaiBaseActivity {
         simpleTitleLayout.showShareBtn(false);
         simpleTitleLayout.switchMode(true);
         simpleTitleLayout.setAlpha(1.0f);
-        simpleTitleLayout.setListener(new C1744a());
+        simpleTitleLayout.setListener(new a());
         simpleTitleLayout.setTitle("系统权限");
         RecyclerView recyclerView = (RecyclerView) findViewById(R$id.p_entrance_list);
         recyclerView.addItemDecoration(new RecyclerView.ItemDecoration(this) { // from class: cn.damai.setting.PermissionEntranceActivity.2
@@ -169,7 +167,7 @@ public class PermissionEntranceActivity extends DamaiBaseActivity {
             }
         });
         recyclerView.setLayoutManager(new LinearLayoutManager(this, 1, false));
-        PEntranceAdapter pEntranceAdapter = new PEntranceAdapter(this, new C1745b());
+        PEntranceAdapter pEntranceAdapter = new PEntranceAdapter(this, new b());
         recyclerView.setAdapter(pEntranceAdapter);
         pEntranceAdapter.d(PermissionBean.getShowList());
     }

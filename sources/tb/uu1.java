@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Handler;
 import android.os.HandlerThread;
-import com.taobao.monitor.procedure.C6820e;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -15,7 +14,7 @@ public class uu1 {
     @SuppressLint({"StaticFieldLeak"})
     private static final uu1 d = new uu1();
     public static final dq1 PROCEDURE_MANAGER = new dq1();
-    public static final C6820e PROCEDURE_FACTORY = new C6820e();
+    public static final com.taobao.monitor.procedure.e PROCEDURE_FACTORY = new com.taobao.monitor.procedure.e();
 
     private uu1() {
         HandlerThread handlerThread = new HandlerThread("APM-Procedure");

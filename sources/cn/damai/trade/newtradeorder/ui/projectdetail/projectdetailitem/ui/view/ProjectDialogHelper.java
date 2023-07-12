@@ -14,7 +14,6 @@ import android.view.KeyEvent;
 import android.view.View;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.contacts.bean.IdCardTypes;
 import cn.damai.commonbusiness.share.generateimage.GenerateImageUtil;
 import cn.damai.login.LoginManager;
@@ -60,13 +59,12 @@ public class ProjectDialogHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectDialogHelper$a */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC2347a implements DialogInterface.OnClickListener {
+    public class a implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        DialogInterface$OnClickListenerC2347a(String str) {
+        a(String str) {
             this.a = str;
         }
 
@@ -82,12 +80,11 @@ public class ProjectDialogHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectDialogHelper$b */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnKeyListenerC2348b implements DialogInterface.OnKeyListener {
+    public class b implements DialogInterface.OnKeyListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnKeyListenerC2348b() {
+        b() {
         }
 
         @Override // android.content.DialogInterface.OnKeyListener
@@ -105,13 +102,12 @@ public class ProjectDialogHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectDialogHelper$c */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC2349c implements DialogInterface.OnClickListener {
+    public class c implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ long a;
 
-        DialogInterface$OnClickListenerC2349c(long j) {
+        c(long j) {
             this.a = j;
         }
 
@@ -126,20 +122,19 @@ public class ProjectDialogHelper {
             if (ProjectDialogHelper.this.e != null && ProjectDialogHelper.this.e.itemBase != null) {
                 ProjectDialogHelper projectDialogHelper = ProjectDialogHelper.this;
                 projectDialogHelper.k(this.a, projectDialogHelper.d);
-                C0529c.e().x(pp2.u().W0(ProjectDialogHelper.this.d, "known_btn", false));
+                cn.damai.common.user.c.e().x(pp2.u().W0(ProjectDialogHelper.this.d, "known_btn", false));
             }
             ProjectDialogHelper.this.j.dismiss();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectDialogHelper$d */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC2350d implements DialogInterface.OnClickListener {
+    public class d implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ long a;
 
-        DialogInterface$OnClickListenerC2350d(long j) {
+        d(long j) {
             this.a = j;
         }
 
@@ -153,7 +148,7 @@ public class ProjectDialogHelper {
                 if (ProjectDialogHelper.this.e != null && ProjectDialogHelper.this.e.itemBase != null) {
                     ProjectDialogHelper projectDialogHelper = ProjectDialogHelper.this;
                     projectDialogHelper.k(this.a, projectDialogHelper.d);
-                    C0529c.e().x(pp2.u().W0(ProjectDialogHelper.this.d, "fill_btn", false));
+                    cn.damai.common.user.c.e().x(pp2.u().W0(ProjectDialogHelper.this.d, "fill_btn", false));
                 }
                 if (LoginManager.k().q()) {
                     ArrayList<IdCardTypes> b = yb.b(ProjectDialogHelper.this.e);
@@ -170,12 +165,11 @@ public class ProjectDialogHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.ProjectDialogHelper$e */
     /* loaded from: classes16.dex */
-    public class C2351e implements ValueAnimator.AnimatorUpdateListener {
+    public class e implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2351e() {
+        e() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -209,7 +203,7 @@ public class ProjectDialogHelper {
                 ofObject.setDuration(500L);
             }
             ofObject.setRepeatCount(3);
-            ofObject.addUpdateListener(new C2351e());
+            ofObject.addUpdateListener(new e());
             ofObject.start();
         }
     }
@@ -223,7 +217,7 @@ public class ProjectDialogHelper {
         }
         HashMap hashMap = new HashMap();
         hashMap.put("item_id", str);
-        C0529c.e().C("fill_btn", AgooConstants.MESSAGE_POPUP, gb.PROJECT_PAGE, "1.0", System.currentTimeMillis() - j, hashMap, 2201);
+        cn.damai.common.user.c.e().C("fill_btn", AgooConstants.MESSAGE_POPUP, gb.PROJECT_PAGE, "1.0", System.currentTimeMillis() - j, hashMap, 2201);
     }
 
     private String l() {
@@ -353,8 +347,8 @@ public class ProjectDialogHelper {
                         fromHtml = Html.fromHtml(str);
                     }
                     this.i.setDMThemeDialogContent(fromHtml);
-                    this.i.setDMThemeDialogConfirmButton("确认并知悉", new DialogInterface$OnClickListenerC2347a(str));
-                    this.i.setOnKeyListener(new DialogInterface$OnKeyListenerC2348b());
+                    this.i.setDMThemeDialogConfirmButton("确认并知悉", new a(str));
+                    this.i.setOnKeyListener(new b());
                     this.i.setDMThemeDialogCancelable(false);
                     this.i.show();
                     ProjectDialogShowListener projectDialogShowListener = this.h;
@@ -409,8 +403,8 @@ public class ProjectDialogHelper {
             if (!TextUtils.isEmpty(realNamePopup.getTitle())) {
                 this.j.o(realNamePopup.getTitle());
             }
-            this.j.e("知道了", new DialogInterface$OnClickListenerC2349c(currentTimeMillis));
-            this.j.i("预填实名观演人", new DialogInterface$OnClickListenerC2350d(currentTimeMillis));
+            this.j.e("知道了", new c(currentTimeMillis));
+            this.j.i("预填实名观演人", new d(currentTimeMillis));
             this.j.f(false);
             this.j.show();
             ProjectDialogShowListener projectDialogShowListener = this.h;

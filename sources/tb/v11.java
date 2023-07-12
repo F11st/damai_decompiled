@@ -40,35 +40,35 @@ public final class v11 {
         return AndroidInstantRuntime.support(ipChange, "-56233250") ? ((Boolean) ipChange.ipc$dispatch("-56233250", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2)})).booleanValue() : i > 0 && i2 > 0 && ((long) (i2 * i)) > 640000;
     }
 
-    private final List<HtmlParserManager.C3555b> d(HtmlParserManager.C3555b c3555b, int i) {
+    private final List<HtmlParserManager.b> d(HtmlParserManager.b bVar, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1881265819")) {
-            return (List) ipChange.ipc$dispatch("1881265819", new Object[]{this, c3555b, Integer.valueOf(i)});
+            return (List) ipChange.ipc$dispatch("1881265819", new Object[]{this, bVar, Integer.valueOf(i)});
         }
         ArrayList arrayList = new ArrayList();
-        if (b(c3555b.c(), c3555b.b()) && x11.INSTANCE.d(String.valueOf(c3555b.a()))) {
-            int b = c3555b.b() / 500;
-            if (c3555b.b() % 500 > 0) {
+        if (b(bVar.c(), bVar.b()) && x11.INSTANCE.d(String.valueOf(bVar.a()))) {
+            int b = bVar.b() / 500;
+            if (bVar.b() % 500 > 0) {
                 b++;
             }
             for (int i2 = 0; i2 < b; i2++) {
-                String a = a(String.valueOf(c3555b.a()), i2);
-                if (!a.equals(String.valueOf(c3555b.a()))) {
-                    HtmlParserManager.C3555b c3555b2 = new HtmlParserManager.C3555b();
-                    c3555b2.m(c3555b.f());
-                    c3555b2.l(i);
-                    c3555b2.h(new SpannableStringBuilder().append((CharSequence) new SpannableString(a)));
-                    arrayList.add(c3555b2);
+                String a = a(String.valueOf(bVar.a()), i2);
+                if (!a.equals(String.valueOf(bVar.a()))) {
+                    HtmlParserManager.b bVar2 = new HtmlParserManager.b();
+                    bVar2.m(bVar.f());
+                    bVar2.l(i);
+                    bVar2.h(new SpannableStringBuilder().append((CharSequence) new SpannableString(a)));
+                    arrayList.add(bVar2);
                 }
             }
         } else {
-            arrayList.add(c3555b);
+            arrayList.add(bVar);
         }
         return arrayList;
     }
 
     @NotNull
-    public final List<HtmlParserManager.C3555b> c(@Nullable List<HtmlParserManager.C3555b> list) {
+    public final List<HtmlParserManager.b> c(@Nullable List<HtmlParserManager.b> list) {
         IpChange ipChange = $ipChange;
         int i = 0;
         if (AndroidInstantRuntime.support(ipChange, "-1991370257")) {
@@ -76,11 +76,11 @@ public final class v11 {
         }
         ArrayList arrayList = new ArrayList();
         if (list != null) {
-            for (HtmlParserManager.C3555b c3555b : list) {
-                if (c3555b.f() == 2) {
-                    arrayList.addAll(INSTANCE.d(c3555b, i));
+            for (HtmlParserManager.b bVar : list) {
+                if (bVar.f() == 2) {
+                    arrayList.addAll(INSTANCE.d(bVar, i));
                 } else {
-                    arrayList.add(c3555b);
+                    arrayList.add(bVar);
                 }
                 i++;
             }

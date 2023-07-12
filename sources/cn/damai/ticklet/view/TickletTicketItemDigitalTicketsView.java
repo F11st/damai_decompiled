@@ -10,8 +10,7 @@ import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.member.R$color;
 import cn.damai.member.R$drawable;
 import cn.damai.member.R$id;
@@ -61,12 +60,11 @@ public class TickletTicketItemDigitalTicketsView extends LinearLayout implements
     private View[] views;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletTicketItemDigitalTicketsView$a  reason: invalid class name */
     /* loaded from: classes7.dex */
-    public class animationAnimation$AnimationListenerC2124a implements Animation.AnimationListener {
+    public class a implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        animationAnimation$AnimationListenerC2124a() {
+        a() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -103,12 +101,11 @@ public class TickletTicketItemDigitalTicketsView extends LinearLayout implements
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletTicketItemDigitalTicketsView$b  reason: invalid class name */
     /* loaded from: classes7.dex */
-    public class animationAnimation$AnimationListenerC2125b implements Animation.AnimationListener {
+    public class b implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        animationAnimation$AnimationListenerC2125b() {
+        b() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -220,8 +217,8 @@ public class TickletTicketItemDigitalTicketsView extends LinearLayout implements
                 rotate3dAnimation2.setDuration(ANIM_DURATION);
                 this.backAnim.setFillAfter(true);
                 this.backAnim.setInterpolator(new LinearInterpolator());
-                this.frontAnim.setAnimationListener(new animationAnimation$AnimationListenerC2124a());
-                this.backAnim.setAnimationListener(new animationAnimation$AnimationListenerC2125b());
+                this.frontAnim.setAnimationListener(new a());
+                this.backAnim.setAnimationListener(new b());
             }
             this.views[this.index].startAnimation(this.frontAnim);
         }
@@ -270,9 +267,9 @@ public class TickletTicketItemDigitalTicketsView extends LinearLayout implements
         } else if (view.getId() == R$id.ticklet_ticket_rl_translate) {
             HashMap hashMap = new HashMap();
             hashMap.put("type", this.index + "");
-            C0529c e = C0529c.e();
-            C0528b c0528b = C0528b.getInstance();
-            e.x(c0528b.e(un2.TICKLET_DETAIL_PAGE, "nft", "reverse_" + this.mPosition, hashMap, Boolean.FALSE));
+            c e = c.e();
+            cn.damai.common.user.b bVar = cn.damai.common.user.b.getInstance();
+            e.x(bVar.e(un2.TICKLET_DETAIL_PAGE, "nft", "reverse_" + this.mPosition, hashMap, Boolean.FALSE));
             startAnimation(view);
         }
     }

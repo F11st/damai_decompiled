@@ -59,7 +59,7 @@ public class HtmlView implements ViewChangeNotify {
         if (this.b == null) {
             this.b = new DefaultImageGetter("", sm.b().a(), context);
         }
-        C2252f.c(this.a, this.b, new C2246b(onSpanClickListener), onParseFinishedListener);
+        f.c(this.a, this.b, new b(onSpanClickListener), onParseFinishedListener);
     }
 
     @Override // cn.damai.trade.newtradeorder.ui.projectdetail.htmlparser.callback.ViewChangeNotify

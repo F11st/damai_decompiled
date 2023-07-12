@@ -53,7 +53,7 @@ public class ea0 {
 
     public static int f() {
         try {
-            Display defaultDisplay = ((WindowManager) d().getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
+            Display defaultDisplay = ((WindowManager) d().getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
             int i = Build.VERSION.SDK_INT;
             if (i < 13) {
                 return defaultDisplay.getWidth();

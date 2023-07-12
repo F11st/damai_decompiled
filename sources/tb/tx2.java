@@ -1,9 +1,7 @@
 package tb;
 
 import android.text.TextUtils;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
@@ -11,19 +9,18 @@ import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
-public class tx2 extends C0528b {
+public class tx2 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.tx2$a */
     /* loaded from: classes9.dex */
-    private static class C9736a {
+    private static class a {
         private static final tx2 a = new tx2();
     }
 
     public static final tx2 g() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-402524231") ? (tx2) ipChange.ipc$dispatch("-402524231", new Object[0]) : C9736a.a;
+        return AndroidInstantRuntime.support(ipChange, "-402524231") ? (tx2) ipChange.ipc$dispatch("-402524231", new Object[0]) : a.a;
     }
 
     private Map<String, String> h(String str, String str2, String str3) {
@@ -38,10 +35,10 @@ public class tx2 extends C0528b {
         return hashMap;
     }
 
-    public C0525a.C0527b f(String str, String str2, String str3) {
+    public a.b f(String str, String str2, String str3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "868801282")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("868801282", new Object[]{this, str, str2, str3});
+            return (a.b) ipChange.ipc$dispatch("868801282", new Object[]{this, str, str2, str3});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("item_id", str);
@@ -49,7 +46,7 @@ public class tx2 extends C0528b {
         if (!TextUtils.isEmpty(str2)) {
             hashMap.put("video_id", str2);
         }
-        return new C0525a.C0527b().j(hashMap).i("video");
+        return new a.b().j(hashMap).i("video");
     }
 
     public void i(String str, String str2, boolean z, String str3, String str4, String str5) {
@@ -57,7 +54,7 @@ public class tx2 extends C0528b {
         if (AndroidInstantRuntime.support(ipChange, "1931453826")) {
             ipChange.ipc$dispatch("1931453826", new Object[]{this, str, str2, Boolean.valueOf(z), str3, str4, str5});
         } else {
-            C0529c.e().x(e("video", str, str2, h(str3, str5, str4), Boolean.valueOf(z)));
+            cn.damai.common.user.c.e().x(e("video", str, str2, h(str3, str5, str4), Boolean.valueOf(z)));
         }
     }
 
@@ -69,7 +66,7 @@ public class tx2 extends C0528b {
         }
         Map<String, String> h = h(str3, str5, str4);
         h.put("status", String.valueOf(str6));
-        C0529c.e().x(e("video", str, str2, h, Boolean.valueOf(z)));
+        cn.damai.common.user.c.e().x(e("video", str, str2, h, Boolean.valueOf(z)));
     }
 
     public void k(String str, String str2, String str3, String str4, String str5, String str6) {
@@ -84,6 +81,6 @@ public class tx2 extends C0528b {
         hashMap.put("video_id", str4);
         hashMap.put("video_title", str5);
         hashMap.put("duration", str6);
-        C0529c.e().D("video", "page_video_playend", str3, "", hashMap, 12003);
+        cn.damai.common.user.c.e().D("video", "page_video_playend", str3, "", hashMap, 12003);
     }
 }

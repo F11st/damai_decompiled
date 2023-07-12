@@ -10,8 +10,8 @@ import anet.channel.thread.ThreadPoolExecutorFactory;
 import com.taobao.android.tlog.protocol.model.joint.point.ForegroundJointPoint;
 import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArraySet;
-import tb.C9708t9;
 import tb.hu0;
+import tb.t9;
 
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
@@ -19,8 +19,8 @@ public class AppLifecycle {
     private static CopyOnWriteArraySet<AppLifecycleListener> a = new CopyOnWriteArraySet<>();
     public static volatile long b = 0;
     public static volatile boolean c = false;
-    private static Application.ActivityLifecycleCallbacks d = new C0237a();
-    private static ComponentCallbacks2 e = new ComponentCallbacks2C0238b();
+    private static Application.ActivityLifecycleCallbacks d = new a();
+    private static ComponentCallbacks2 e = new b();
 
     /* compiled from: Taobao */
     /* loaded from: classes.dex */
@@ -31,10 +31,9 @@ public class AppLifecycle {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.util.AppLifecycle$a */
     /* loaded from: classes.dex */
-    static class C0237a implements Application.ActivityLifecycleCallbacks {
-        C0237a() {
+    static class a implements Application.ActivityLifecycleCallbacks {
+        a() {
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
@@ -74,10 +73,9 @@ public class AppLifecycle {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.util.AppLifecycle$b */
     /* loaded from: classes.dex */
-    static class ComponentCallbacks2C0238b implements ComponentCallbacks2 {
-        ComponentCallbacks2C0238b() {
+    static class b implements ComponentCallbacks2 {
+        b() {
         }
 
         @Override // android.content.ComponentCallbacks
@@ -98,7 +96,7 @@ public class AppLifecycle {
     }
 
     public static void b() {
-        if (Build.VERSION.SDK_INT < 14 || !C9708t9.m()) {
+        if (Build.VERSION.SDK_INT < 14 || !t9.m()) {
             return;
         }
         ((Application) hu0.c().getApplicationContext()).registerActivityLifecycleCallbacks(d);

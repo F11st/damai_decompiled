@@ -27,7 +27,6 @@ import cn.damai.comment.util.NineImgUtil;
 import cn.damai.comment.view.DMTagView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.scriptmurder.bean.ScriptBean;
 import cn.damai.issue.tool.IssueConstants;
 import cn.damai.uikit.flowlayout.FlowLayout;
@@ -37,9 +36,9 @@ import cn.damai.user.repertoite.ui.RepertoireDetailFragment;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.List;
-import tb.C9532os;
 import tb.cs;
 import tb.dl;
+import tb.os;
 import tb.pl;
 import tb.q60;
 import tb.u12;
@@ -55,8 +54,8 @@ public class DMEvaluateDetailHeadView extends RelativeLayout {
     private NineGridlayout gridlayout;
     private ImageView ivLuxury;
     private Context mContext;
-    private C9532os mScriptUi;
-    private C9532os mStoreUi;
+    private os mScriptUi;
+    private os mStoreUi;
     private FlowLayout mTagLayout;
     private TextView paddindView;
     private View playedIcon;
@@ -66,13 +65,12 @@ public class DMEvaluateDetailHeadView extends RelativeLayout {
     private TextView tvScore;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.view.DMEvaluateDetailHeadView$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1094a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CommentsItemBean a;
 
-        View$OnClickListenerC1094a(CommentsItemBean commentsItemBean) {
+        a(CommentsItemBean commentsItemBean) {
             this.a = commentsItemBean;
         }
 
@@ -90,14 +88,13 @@ public class DMEvaluateDetailHeadView extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.view.DMEvaluateDetailHeadView$b */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1095b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CommentsItemBean a;
         final /* synthetic */ ScriptBean b;
 
-        View$OnClickListenerC1095b(CommentsItemBean commentsItemBean, ScriptBean scriptBean) {
+        b(CommentsItemBean commentsItemBean, ScriptBean scriptBean) {
             this.a = commentsItemBean;
             this.b = scriptBean;
         }
@@ -109,20 +106,19 @@ public class DMEvaluateDetailHeadView extends RelativeLayout {
                 ipChange.ipc$dispatch("1031961923", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(dl.I().J(this.a.getCommentId(), this.a.getUserDO().getDamaiUserId(), this.a.getScriptInfo().getId(), null, 1));
+            cn.damai.common.user.c.e().x(dl.I().J(this.a.getCommentId(), this.a.getUserDO().getDamaiUserId(), this.a.getScriptInfo().getId(), null, 1));
             DMEvaluateDetailHeadView.this.openScriptActivity(this.b);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.view.DMEvaluateDetailHeadView$c */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1096c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CommentsItemBean a;
         final /* synthetic */ CommentProjectInfoBean b;
 
-        View$OnClickListenerC1096c(CommentsItemBean commentsItemBean, CommentProjectInfoBean commentProjectInfoBean) {
+        c(CommentsItemBean commentsItemBean, CommentProjectInfoBean commentProjectInfoBean) {
             this.a = commentsItemBean;
             this.b = commentProjectInfoBean;
         }
@@ -139,14 +135,13 @@ public class DMEvaluateDetailHeadView extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.view.DMEvaluateDetailHeadView$d */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1097d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CommentsItemBean a;
         final /* synthetic */ CommentRepertoireInfoBean b;
 
-        View$OnClickListenerC1097d(CommentsItemBean commentsItemBean, CommentRepertoireInfoBean commentRepertoireInfoBean) {
+        d(CommentsItemBean commentsItemBean, CommentRepertoireInfoBean commentRepertoireInfoBean) {
             this.a = commentsItemBean;
             this.b = commentRepertoireInfoBean;
         }
@@ -163,14 +158,13 @@ public class DMEvaluateDetailHeadView extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.view.DMEvaluateDetailHeadView$e */
     /* loaded from: classes5.dex */
-    public class C1098e implements NineImgUtil.OnClickExtraListener {
+    public class e implements NineImgUtil.OnClickExtraListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CommentsItemBean a;
         final /* synthetic */ String b;
 
-        C1098e(DMEvaluateDetailHeadView dMEvaluateDetailHeadView, CommentsItemBean commentsItemBean, String str) {
+        e(DMEvaluateDetailHeadView dMEvaluateDetailHeadView, CommentsItemBean commentsItemBean, String str) {
             this.a = commentsItemBean;
             this.b = str;
         }
@@ -181,7 +175,7 @@ public class DMEvaluateDetailHeadView extends RelativeLayout {
             if (AndroidInstantRuntime.support(ipChange, "1853101738")) {
                 ipChange.ipc$dispatch("1853101738", new Object[]{this, Integer.valueOf(i)});
             } else {
-                C0529c.e().x(dl.I().o(this.a.getCommentId(), this.a.getUserDO().getDamaiUserId(), i, this.b, this.a.getScriptInfo() != null ? this.a.getScriptInfo().getId() : ""));
+                cn.damai.common.user.c.e().x(dl.I().o(this.a.getCommentId(), this.a.getUserDO().getDamaiUserId(), i, this.b, this.a.getScriptInfo() != null ? this.a.getScriptInfo().getId() : ""));
             }
         }
     }
@@ -197,17 +191,17 @@ public class DMEvaluateDetailHeadView extends RelativeLayout {
         if (AndroidInstantRuntime.support(ipChange, "762437736")) {
             ipChange.ipc$dispatch("762437736", new Object[]{this, commentsItemBean, str, str2});
         } else if ("1".equals(str)) {
-            C0529c.e().x(dl.I().u(str2, null, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), null));
+            cn.damai.common.user.c.e().x(dl.I().u(str2, null, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), null));
             Bundle bundle = new Bundle();
             bundle.putString(IssueConstants.ProjectID, str2);
             DMNav.from(this.mContext).withExtras(bundle).toUri(NavUri.b(pl.PROJECT_DETAIL_PAGE));
         } else if ("2".equals(str)) {
-            C0529c.e().x(dl.I().u(null, str2, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), null));
+            cn.damai.common.user.c.e().x(dl.I().u(null, str2, commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), null));
             Bundle bundle2 = new Bundle();
             bundle2.putString(RepertoireDetailFragment.REPERTOIREID, str2);
             DMNav.from(this.mContext).withExtras(bundle2).toUri(NavUri.b(u12.REPERTOITE));
         } else if ("3".equals(str)) {
-            C0529c.e().x(dl.I().J(commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), null, commentsItemBean.getStoreInfo().getStoreId(), 1));
+            cn.damai.common.user.c.e().x(dl.I().J(commentsItemBean.getCommentId(), commentsItemBean.getUserDO().getDamaiUserId(), null, commentsItemBean.getStoreInfo().getStoreId(), 1));
             Bundle bundle3 = new Bundle();
             bundle3.putString("storeId", str2);
             DMNav.from(this.mContext).withExtras(bundle3).toUri(NavUri.b(cs.SCRIPT_SHOP_DETAIL));
@@ -247,8 +241,8 @@ public class DMEvaluateDetailHeadView extends RelativeLayout {
         this.spoilers = (ImageView) inflate.findViewById(R$id.has_spoilers);
         this.playedIcon = inflate.findViewById(R$id.comment_has_played_icon);
         View findViewById = inflate.findViewById(R$id.evaluate_script_info_v1);
-        this.mStoreUi = new C9532os(inflate.findViewById(R$id.evaluate_store_info_v1));
-        this.mScriptUi = new C9532os(findViewById);
+        this.mStoreUi = new os(inflate.findViewById(R$id.evaluate_store_info_v1));
+        this.mScriptUi = new os(findViewById);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -274,7 +268,7 @@ public class DMEvaluateDetailHeadView extends RelativeLayout {
         }
         List<CommentImageInfoBean> imageDOList = commentsItemBean.getImageDOList();
         this.gridlayout.setVisibility(0);
-        NineImgUtil.a().b(this.mContext, ((int) yr2.d(this.mContext)) - (yr2.a(this.mContext, 21.0f) * 2), false, this.gridlayout, commentsItemBean, imageDOList, new C1098e(this, commentsItemBean, str));
+        NineImgUtil.a().b(this.mContext, ((int) yr2.d(this.mContext)) - (yr2.a(this.mContext, 21.0f) * 2), false, this.gridlayout, commentsItemBean, imageDOList, new e(this, commentsItemBean, str));
     }
 
     private void setRatingBarData(CommentsItemBean commentsItemBean) {
@@ -375,11 +369,11 @@ public class DMEvaluateDetailHeadView extends RelativeLayout {
                     String storeName = commentsItemBean.getStoreInfo().getStoreName();
                     sb.append(commentsItemBean.getStoreInfo().getDes());
                     this.mStoreUi.a(storeImgUrl, storeName, sb.toString(), true, storeInfo.getStoreId());
-                    this.mStoreUi.c(new View$OnClickListenerC1094a(commentsItemBean));
+                    this.mStoreUi.c(new a(commentsItemBean));
                 }
                 if (scriptInfo != null) {
                     this.mScriptUi.a(scriptInfo.getPosterUrl(), scriptInfo.getName(), scriptInfo.getDes(), false, scriptInfo.getId());
-                    this.mScriptUi.c(new View$OnClickListenerC1095b(commentsItemBean, scriptInfo));
+                    this.mScriptUi.c(new b(commentsItemBean, scriptInfo));
                 }
             } else if (commentProjectInfoBean != null) {
                 this.projectCardView.setVisibility(0);
@@ -402,11 +396,11 @@ public class DMEvaluateDetailHeadView extends RelativeLayout {
                     sb2.append(commentProjectInfoBean.getVenueName());
                 }
                 this.projectCardView.setData(projectPoster, projectName, sb2.toString(), 0);
-                this.projectCardView.setOnClickListener(new View$OnClickListenerC1096c(commentsItemBean, commentProjectInfoBean));
+                this.projectCardView.setOnClickListener(new c(commentsItemBean, commentProjectInfoBean));
             } else if (commentRepertoireInfoBean != null) {
                 this.projectCardView.setVisibility(0);
                 this.projectCardView.setData(commentRepertoireInfoBean.getRepertoirePic(), commentRepertoireInfoBean.getRepertoireName(), commentRepertoireInfoBean.getArtsDesc());
-                this.projectCardView.setOnClickListener(new View$OnClickListenerC1097d(commentsItemBean, commentRepertoireInfoBean));
+                this.projectCardView.setOnClickListener(new d(commentsItemBean, commentRepertoireInfoBean));
             }
             if (commentsItemBean.isFeature()) {
                 this.ivLuxury.setVisibility(0);

@@ -76,12 +76,11 @@ public class BrandFragment extends AbsFragmentV2 implements View.OnClickListener
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.brand.BrandFragment$a */
     /* loaded from: classes9.dex */
-    public class C2676a implements Action<Object> {
+    public class a implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2676a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -96,12 +95,11 @@ public class BrandFragment extends AbsFragmentV2 implements View.OnClickListener
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.brand.BrandFragment$b */
     /* loaded from: classes9.dex */
-    public class C2677b implements Action<Bundle> {
+    public class b implements Action<Bundle> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2677b() {
+        b() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -199,9 +197,9 @@ public class BrandFragment extends AbsFragmentV2 implements View.OnClickListener
         }
         ViewGroup viewGroup2 = (ViewGroup) layoutInflater.inflate(R$layout.user_brand_fragment, viewGroup, false);
         viewGroup2.addView(super.onCreateView(layoutInflater, viewGroup2, bundle), 0);
-        this.action = new C2676a();
+        this.action = new a();
         yr.c().e(StarSecondActivity.FORCE_TAG, this.action);
-        this.actionAttenChanged = new C2677b();
+        this.actionAttenChanged = new b();
         yr.c().e("brand_state_changed", this.actionAttenChanged);
         return viewGroup2;
     }
@@ -386,10 +384,10 @@ public class BrandFragment extends AbsFragmentV2 implements View.OnClickListener
             /* compiled from: Taobao */
             /* renamed from: cn.damai.user.brand.BrandFragment$3$a */
             /* loaded from: classes17.dex */
-            public class View$OnClickListenerC2675a implements View.OnClickListener {
+            public class a implements View.OnClickListener {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                View$OnClickListenerC2675a() {
+                a() {
                 }
 
                 @Override // android.view.View.OnClickListener
@@ -499,7 +497,7 @@ public class BrandFragment extends AbsFragmentV2 implements View.OnClickListener
                 }
                 ViewGroup viewGroup = BrandFragment.this.navBar;
                 if (viewGroup != null) {
-                    viewGroup.findViewById(R$id.ll_share).setOnClickListener(new View$OnClickListenerC2675a());
+                    viewGroup.findViewById(R$id.ll_share).setOnClickListener(new a());
                 }
             }
         });

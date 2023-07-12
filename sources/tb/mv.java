@@ -3,13 +3,12 @@ package tb;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.android.dinamicx.DXRuntimeContext;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
-public class mv extends AbstractC6375a {
+public class mv extends com.taobao.android.dinamicx.expression.parser.a {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final long DX_PARSER_DMRANDOMEQUAL = 8723552886362424055L;
 
@@ -30,7 +29,7 @@ public class mv extends AbstractC6375a {
         return String.valueOf(obj);
     }
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "63761656")) {

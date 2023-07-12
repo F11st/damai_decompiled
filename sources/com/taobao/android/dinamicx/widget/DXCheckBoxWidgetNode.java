@@ -40,9 +40,8 @@ public class DXCheckBoxWidgetNode extends DXWidgetNode {
     public static final int NEED_INT_DIS_UNCHECK_IMG = R$id.need_int_dis_uncheck_img;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXCheckBoxWidgetNode$a */
     /* loaded from: classes11.dex */
-    public static class C6436a implements IDXBuilderWidgetNode {
+    public static class a implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(@Nullable Object obj) {
             return new DXCheckBoxWidgetNode();
@@ -50,9 +49,8 @@ public class DXCheckBoxWidgetNode extends DXWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXCheckBoxWidgetNode$b */
     /* loaded from: classes12.dex */
-    public static class AsyncTaskC6437b extends AsyncTask<Void, Void, Drawable[]> {
+    public static class b extends AsyncTask<Void, Void, Drawable[]> {
         String a;
         String b;
         String c;
@@ -63,7 +61,7 @@ public class DXCheckBoxWidgetNode extends DXWidgetNode {
         private WeakReference<AppCompatCheckBox> h;
         private boolean i;
 
-        public AsyncTaskC6437b(AppCompatCheckBox appCompatCheckBox, String str, String str2, String str3, String str4, int i, int i2, boolean z) {
+        public b(AppCompatCheckBox appCompatCheckBox, String str, String str2, String str3, String str4, int i, int i2, boolean z) {
             this.a = null;
             this.b = null;
             this.c = null;
@@ -226,10 +224,10 @@ public class DXCheckBoxWidgetNode extends DXWidgetNode {
         if (str9.equals(str2) && str10.equals(str4) && str12.equals(str6) && str11.equals(str8)) {
             return;
         }
-        AsyncTaskC6437b asyncTaskC6437b = new AsyncTaskC6437b(appCompatCheckBox, str9, str10, str12, str11, getMeasuredWidth(), getMeasuredHeight(), needHandleDark());
+        b bVar = new b(appCompatCheckBox, str9, str10, str12, str11, getMeasuredWidth(), getMeasuredHeight(), needHandleDark());
         if (!this.f) {
-            Drawable[] f = asyncTaskC6437b.f();
-            asyncTaskC6437b.i(appCompatCheckBox, f[0], f[1], f[2], f[3]);
+            Drawable[] f = bVar.f();
+            bVar.i(appCompatCheckBox, f[0], f[1], f[2], f[3]);
             appCompatCheckBox.setTag(i, str9);
             appCompatCheckBox.setTag(i2, str10);
             appCompatCheckBox.setTag(i3, str12);
@@ -240,7 +238,7 @@ public class DXCheckBoxWidgetNode extends DXWidgetNode {
         appCompatCheckBox.setTag(NEED_INT_UNCHECK_IMG, str10);
         appCompatCheckBox.setTag(NEED_INT_DIS_CHECK_IMG, str12);
         appCompatCheckBox.setTag(NEED_INT_DIS_UNCHECK_IMG, str11);
-        y00.q(asyncTaskC6437b, new Void[0]);
+        y00.q(bVar, new Void[0]);
     }
 
     @Override // com.taobao.android.dinamicx.widget.DXWidgetNode, com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
@@ -313,9 +311,9 @@ public class DXCheckBoxWidgetNode extends DXWidgetNode {
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onMeasure(int i, int i2) {
-        int a = DXWidgetNode.DXMeasureSpec.a(i);
-        int a2 = DXWidgetNode.DXMeasureSpec.a(i2);
-        setMeasuredDimension(a == 1073741824 ? DXWidgetNode.DXMeasureSpec.b(i) : 0, a2 == 1073741824 ? DXWidgetNode.DXMeasureSpec.b(i2) : 0);
+        int a2 = DXWidgetNode.DXMeasureSpec.a(i);
+        int a3 = DXWidgetNode.DXMeasureSpec.a(i2);
+        setMeasuredDimension(a2 == 1073741824 ? DXWidgetNode.DXMeasureSpec.b(i) : 0, a3 == 1073741824 ? DXWidgetNode.DXMeasureSpec.b(i2) : 0);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */

@@ -120,10 +120,10 @@ public class YKLayout extends FrameLayout {
 
     private void init(Context context) {
         setWillNotDraw(false);
-        View inflate = LayoutInflater.from(context).inflate(R.C8074layout.resource_yklayout, (ViewGroup) this, true);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.resource_yklayout, (ViewGroup) this, true);
         TUrlImageView tUrlImageView = (TUrlImageView) inflate.findViewById(R.id.resource_image);
         this.resource_image = tUrlImageView;
-        tUrlImageView.setPlaceHoldForeground(getResources().getDrawable(R.C8071color.soku_default_video_bg));
+        tUrlImageView.setPlaceHoldForeground(getResources().getDrawable(R.color.soku_default_video_bg));
         this.top_left = (TextView) inflate.findViewById(R.id.top_left);
         this.top_right = (TextView) inflate.findViewById(R.id.top_right);
         this.bottom_bg = inflate.findViewById(R.id.bottom_bg);
@@ -170,7 +170,7 @@ public class YKLayout extends FrameLayout {
     public void setReputation(String str) {
         this.bottom_bg.setVisibility(0);
         this.bottom_right.setVisibility(0);
-        this.bottom_right.setTextColor(getResources().getColor(R.C8071color.color_ff6600));
+        this.bottom_right.setTextColor(getResources().getColor(R.color.color_ff6600));
         this.bottom_right.setTextSize(0, getResources().getDimensionPixelSize(R.dimen.resource_size_13));
         this.bottom_right.setText(str);
     }

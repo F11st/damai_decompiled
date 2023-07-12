@@ -48,14 +48,13 @@ public class SVGAImageView extends ImageView {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.SVGAImageView$a */
     /* loaded from: classes10.dex */
-    public static final class C6105a implements ValueAnimator.AnimatorUpdateListener {
+    public static final class a implements ValueAnimator.AnimatorUpdateListener {
         final /* synthetic */ ValueAnimator a;
         final /* synthetic */ SVGAImageView b;
         final /* synthetic */ s42 c;
 
-        C6105a(ValueAnimator valueAnimator, SVGAImageView sVGAImageView, y42 y42Var, s42 s42Var, boolean z) {
+        a(ValueAnimator valueAnimator, SVGAImageView sVGAImageView, y42 y42Var, s42 s42Var, boolean z) {
             this.a = valueAnimator;
             this.b = sVGAImageView;
             this.c = s42Var;
@@ -79,15 +78,14 @@ public class SVGAImageView extends ImageView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.SVGAImageView$b */
     /* loaded from: classes10.dex */
-    public static final class C6106b implements Animator.AnimatorListener {
+    public static final class b implements Animator.AnimatorListener {
         final /* synthetic */ int a;
         final /* synthetic */ int b;
         final /* synthetic */ SVGAImageView c;
         final /* synthetic */ s42 d;
 
-        C6106b(int i, int i2, SVGAImageView sVGAImageView, y42 y42Var, s42 s42Var, boolean z) {
+        b(int i, int i2, SVGAImageView sVGAImageView, y42 y42Var, s42 s42Var, boolean z) {
             this.a = i;
             this.b = i2;
             this.c = sVGAImageView;
@@ -312,10 +310,10 @@ public class SVGAImageView extends ImageView {
             ImageView.ScaleType scaleType = getScaleType();
             b41.e(scaleType, "scaleType");
             s42Var.e(scaleType);
-            SVGAVideoEntity b = s42Var.b();
-            if (b != null) {
+            SVGAVideoEntity b2 = s42Var.b();
+            if (b2 != null) {
                 int max = Math.max(0, 0);
-                int min = Math.min(b.d() - 1, (Integer.MAX_VALUE + 0) - 1);
+                int min = Math.min(b2.d() - 1, (Integer.MAX_VALUE + 0) - 1);
                 ValueAnimator ofInt = ValueAnimator.ofInt(max, min);
                 double d = 1.0d;
                 try {
@@ -336,11 +334,11 @@ public class SVGAImageView extends ImageView {
                 } catch (Exception unused2) {
                 }
                 ofInt.setInterpolator(new LinearInterpolator());
-                ofInt.setDuration((long) ((((min - max) + 1) * (1000 / b.c())) / d));
+                ofInt.setDuration((long) ((((min - max) + 1) * (1000 / b2.c())) / d));
                 int i = this.loops;
                 ofInt.setRepeatCount(i <= 0 ? 99999 : i - 1);
-                ofInt.addUpdateListener(new C6105a(ofInt, this, y42Var, s42Var, z));
-                ofInt.addListener(new C6106b(max, min, this, y42Var, s42Var, z));
+                ofInt.addUpdateListener(new a(ofInt, this, y42Var, s42Var, z));
+                ofInt.addListener(new b(max, min, this, y42Var, s42Var, z));
                 if (z) {
                     ofInt.reverse();
                 } else {

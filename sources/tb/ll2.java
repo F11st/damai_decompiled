@@ -25,10 +25,9 @@ public class ll2 {
     private yu0 b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ll2$a */
     /* loaded from: classes5.dex */
-    class C9417a implements OnTaskFinishedListener {
-        C9417a() {
+    class a implements OnTaskFinishedListener {
+        a() {
         }
 
         @Override // com.alibaba.android.onescheduler.event.OnTaskFinishedListener
@@ -51,10 +50,9 @@ public class ll2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ll2$b */
     /* loaded from: classes5.dex */
-    class C9418b implements ITaskTools {
-        C9418b() {
+    class b implements ITaskTools {
+        b() {
         }
 
         @Override // com.alibaba.android.onescheduler.group.ITaskTools
@@ -72,19 +70,18 @@ public class ll2 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.ll2$c */
     /* loaded from: classes5.dex */
-    public static class C9419c {
+    public static class c {
         private static final ll2 a = new ll2(null);
     }
 
-    /* synthetic */ ll2(C9417a c9417a) {
+    /* synthetic */ ll2(a aVar) {
         this();
     }
 
     @NonNull
     public static ll2 f() {
-        return C9419c.a;
+        return c.a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -139,7 +136,7 @@ public class ll2 {
     private ll2() {
         this.a = new ConcurrentHashMap();
         this.b = new yu0(new SimpleScheduler());
-        tf0.a().j(new C9417a());
-        tf0.a().k(new C9418b());
+        tf0.a().j(new a());
+        tf0.a().k(new b());
     }
 }

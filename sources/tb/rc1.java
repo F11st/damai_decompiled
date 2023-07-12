@@ -10,10 +10,9 @@ public class rc1 {
     private static volatile LogProvider b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.rc1$b */
     /* loaded from: classes11.dex */
-    private static final class C9650b implements LogProvider {
-        private C9650b() {
+    private static final class b implements LogProvider {
+        private b() {
         }
 
         @Override // com.taobao.android.modular.LogProvider
@@ -43,9 +42,9 @@ public class rc1 {
     }
 
     static {
-        C9650b c9650b = new C9650b();
-        a = c9650b;
-        b = c9650b;
+        b bVar = new b();
+        a = bVar;
+        b = bVar;
     }
 
     public static void a(String str, String str2) {

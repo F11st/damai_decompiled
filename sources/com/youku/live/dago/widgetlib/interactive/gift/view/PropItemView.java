@@ -62,8 +62,8 @@ public class PropItemView extends LinearLayout {
         } else if (giftPropBean == null) {
         } else {
             if (giftPropBean.isMoreBtn) {
-                this.imageViewIcon.setBackgroundResource(R.C7941drawable.dago_pgc_ykl_more_pro_btn_bg);
-                this.imageViewIcon.setImageResource(R.C7941drawable.dago_pgc_more_prop_icon);
+                this.imageViewIcon.setBackgroundResource(R.drawable.dago_pgc_ykl_more_pro_btn_bg);
+                this.imageViewIcon.setImageResource(R.drawable.dago_pgc_more_prop_icon);
                 this.textViewName.setText(giftPropBean.name);
                 return;
             }
@@ -120,7 +120,7 @@ public class PropItemView extends LinearLayout {
         }
         this.checkableImageView.setTag(giftPropBean.id);
         if (giftPropBean.isChecked) {
-            setBackgroundResource(R.C7941drawable.dago_pgc_ykl_gift_item_bg);
+            setBackgroundResource(R.drawable.dago_pgc_ykl_gift_item_bg);
             showScaleAnim();
             return;
         }
@@ -134,7 +134,7 @@ public class PropItemView extends LinearLayout {
 
     public PropItemView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ykl_prop_item_layout, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_ykl_prop_item_layout, (ViewGroup) this, true);
         setOrientation(1);
         this.imageViewIcon = (ImageView) findViewById(R.id.id_prop_image_icon);
         this.checkableImageView = (GiftCheckableImageView) findViewById(R.id.id_iv_prop_check_state);

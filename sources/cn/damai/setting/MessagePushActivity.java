@@ -13,7 +13,7 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.base.PermissionsHelper;
@@ -202,7 +202,7 @@ public class MessagePushActivity extends DamaiBaseActivity {
                     ToastUtil.f(MessagePushActivity.this.localErrorMsg);
                     MessagePushActivity.this.setSwitchRecode(false);
                 } else {
-                    C0529c.e().x(gb2.g().j());
+                    c.e().x(gb2.g().j());
                     if (messagePushConfigBean.result) {
                         MessagePushActivity.this.setSwitchRecode(true);
                     } else if (!TextUtils.isEmpty(messagePushConfigBean.message)) {
@@ -221,7 +221,7 @@ public class MessagePushActivity extends DamaiBaseActivity {
             ipChange.ipc$dispatch("375692131", new Object[]{this});
             return;
         }
-        C0529c.e().x(gb2.g().h());
+        c.e().x(gb2.g().h());
         Intent intent = new Intent("android.settings.APPLICATION_DETAILS_SETTINGS");
         intent.setData(Uri.parse("package:" + getPackageName()));
         startActivityForResult(intent, 100);

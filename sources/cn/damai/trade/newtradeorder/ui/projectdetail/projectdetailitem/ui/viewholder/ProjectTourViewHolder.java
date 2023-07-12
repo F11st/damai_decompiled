@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.issue.tool.IssueConstants;
 import cn.damai.trade.R$drawable;
 import cn.damai.trade.R$id;
@@ -39,12 +39,11 @@ public class ProjectTourViewHolder extends RecyclerView.ViewHolder {
     private String j;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectTourViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2414a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2414a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -58,7 +57,7 @@ public class ProjectTourViewHolder extends RecyclerView.ViewHolder {
             if (projectTour == null || projectTour.itemId.equals(ProjectTourViewHolder.this.j)) {
                 return;
             }
-            C0529c.e().x(pp2.u().Q0(ProjectTourViewHolder.this.j, projectTour.index));
+            c.e().x(pp2.u().Q0(ProjectTourViewHolder.this.j, projectTour.index));
             Bundle bundle = new Bundle();
             bundle.putString(IssueConstants.ProjectID, projectTour.itemId);
             qd2.a(ProjectTourViewHolder.this.h, projectTour.schema, bundle);
@@ -67,7 +66,7 @@ public class ProjectTourViewHolder extends RecyclerView.ViewHolder {
 
     public ProjectTourViewHolder(Context context, LayoutInflater layoutInflater) {
         super(layoutInflater.inflate(R$layout.project_item_tour_child, (ViewGroup) null));
-        this.i = new View$OnClickListenerC2414a();
+        this.i = new a();
         this.itemView.setLayoutParams(new RecyclerView.LayoutParams(-2, -2));
         this.h = context;
         d(this.itemView);

@@ -1,6 +1,6 @@
 package tb;
 
-import cn.damai.common.user.C0525a;
+import cn.damai.common.user.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.Map;
@@ -11,9 +11,9 @@ public class at2 extends vq {
     private static transient /* synthetic */ IpChange $ipChange = null;
     private static String c = "cn.movieshow.app/UT";
 
-    private C0525a.C0527b c(String str, String str2, String str3, String str4, Map map, boolean z) {
+    private a.b c(String str, String str2, String str3, String str4, Map map, boolean z) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-102940703") ? (C0525a.C0527b) ipChange.ipc$dispatch("-102940703", new Object[]{this, str, str2, str3, str4, map, Boolean.valueOf(z)}) : new C0525a.C0527b().i(str).f(str2).l(str3).c(str4).g(z).j(map);
+        return AndroidInstantRuntime.support(ipChange, "-102940703") ? (a.b) ipChange.ipc$dispatch("-102940703", new Object[]{this, str, str2, str3, str4, map, Boolean.valueOf(z)}) : new a.b().i(str).f(str2).l(str3).c(str4).g(z).j(map);
     }
 
     @Override // tb.vq

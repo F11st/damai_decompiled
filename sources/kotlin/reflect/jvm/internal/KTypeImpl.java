@@ -4,7 +4,7 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 import java.util.List;
 import kotlin.NotImplementedError;
-import kotlin.collections.C8212k;
+import kotlin.collections.k;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.KTypeBase;
 import kotlin.jvm.internal.PropertyReference1Impl;
@@ -33,25 +33,25 @@ import tb.zv2;
 /* loaded from: classes3.dex */
 public final class KTypeImpl implements KTypeBase {
     static final /* synthetic */ KProperty[] e = {a12.i(new PropertyReference1Impl(a12.b(KTypeImpl.class), "classifier", "getClassifier()Lkotlin/reflect/KClassifier;")), a12.i(new PropertyReference1Impl(a12.b(KTypeImpl.class), "arguments", "getArguments()Ljava/util/List;"))};
-    private final x02.C9894a<Type> a;
+    private final x02.a<Type> a;
     @Nullable
-    private final x02.C9894a b;
+    private final x02.a b;
     @NotNull
-    private final x02.C9894a c;
+    private final x02.a c;
     @NotNull
     private final z71 d;
 
     public KTypeImpl(@NotNull z71 z71Var, @Nullable Function0<? extends Type> function0) {
         b41.i(z71Var, "type");
         this.d = z71Var;
-        x02.C9894a<Type> c9894a = null;
-        x02.C9894a<Type> c9894a2 = (x02.C9894a) (!(function0 instanceof x02.C9894a) ? null : function0);
-        if (c9894a2 != null) {
-            c9894a = c9894a2;
+        x02.a<Type> aVar = null;
+        x02.a<Type> aVar2 = (x02.a) (!(function0 instanceof x02.a) ? null : function0);
+        if (aVar2 != null) {
+            aVar = aVar2;
         } else if (function0 != null) {
-            c9894a = x02.d(function0);
+            aVar = x02.d(function0);
         }
-        this.a = c9894a;
+        this.a = aVar;
         this.b = x02.d(new Function0<KClassifier>() { // from class: kotlin.reflect.jvm.internal.KTypeImpl$classifier$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
@@ -78,7 +78,7 @@ public final class KTypeImpl implements KTypeBase {
             Class<?> p = zv2.p((ClassDescriptor) declarationDescriptor);
             if (p != null) {
                 if (p.isArray()) {
-                    TypeProjection typeProjection = (TypeProjection) C8212k.s0(z71Var.b());
+                    TypeProjection typeProjection = (TypeProjection) k.s0(z71Var.b());
                     if (typeProjection != null && (type = typeProjection.getType()) != null) {
                         b41.h(type, "type.arguments.singleOrN…return KClassImpl(jClass)");
                         KClassifier b = b(type);
@@ -139,9 +139,9 @@ public final class KTypeImpl implements KTypeBase {
     @Override // kotlin.jvm.internal.KTypeBase
     @Nullable
     public Type getJavaType() {
-        x02.C9894a<Type> c9894a = this.a;
-        if (c9894a != null) {
-            return c9894a.invoke();
+        x02.a<Type> aVar = this.a;
+        if (aVar != null) {
+            return aVar.invoke();
         }
         return null;
     }

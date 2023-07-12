@@ -14,15 +14,14 @@ public final class ControllerBatteryEvent extends ControllerEvent {
     public static final int BATTERY_LEVEL_LOW = 2;
     public static final int BATTERY_LEVEL_MEDIUM = 3;
     public static final int BATTERY_LEVEL_UNKNOWN = 0;
-    public static final Parcelable.Creator<ControllerBatteryEvent> CREATOR = new C5439a();
+    public static final Parcelable.Creator<ControllerBatteryEvent> CREATOR = new a();
     public int batteryLevelBucket;
     public boolean charging;
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.vrcore.controller.api.ControllerBatteryEvent$a */
     /* loaded from: classes10.dex */
-    class C5439a implements Parcelable.Creator<ControllerBatteryEvent> {
-        C5439a() {
+    class a implements Parcelable.Creator<ControllerBatteryEvent> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

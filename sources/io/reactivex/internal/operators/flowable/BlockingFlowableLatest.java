@@ -1,10 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.internal.util.BlockingHelper;
 import io.reactivex.internal.util.ExceptionHelper;
-import io.reactivex.subscribers.AbstractC8173b;
+import io.reactivex.subscribers.b;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.concurrent.Semaphore;
@@ -20,7 +19,7 @@ public final class BlockingFlowableLatest<T> implements Iterable<T> {
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class LatestSubscriberIterator<T> extends AbstractC8173b<ul1<T>> implements Iterator<T> {
+    static final class LatestSubscriberIterator<T> extends b<ul1<T>> implements Iterator<T> {
         ul1<T> iteratorNotification;
         final Semaphore notify = new Semaphore(0);
         final AtomicReference<ul1<T>> value = new AtomicReference<>();
@@ -96,7 +95,7 @@ public final class BlockingFlowableLatest<T> implements Iterable<T> {
     @Override // java.lang.Iterable
     public Iterator<T> iterator() {
         LatestSubscriberIterator latestSubscriberIterator = new LatestSubscriberIterator();
-        AbstractC8147b.fromPublisher(this.source).materialize().subscribe((FlowableSubscriber<? super ul1<T>>) latestSubscriberIterator);
+        io.reactivex.b.fromPublisher(this.source).materialize().subscribe((FlowableSubscriber<? super ul1<T>>) latestSubscriberIterator);
         return latestSubscriberIterator;
     }
 }

@@ -13,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import cn.damai.tetris.component.online.bean.ArtistItemBean;
 import cn.damai.uikit.R$drawable;
-import cn.damai.uikit.image.C2497a;
 import cn.damai.uikit.image.IImageLoader;
 import cn.damai.uikit.tag.DMCategroyTagView;
 import cn.damai.uikit.view.RoundImageView;
@@ -37,40 +36,38 @@ public class OnLinePosterView extends FrameLayout {
     private ImageView videoIcon;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.online.viewholder.OnLinePosterView$a */
     /* loaded from: classes7.dex */
-    public class C1941a implements IImageLoader.IImageSuccListener {
+    public class a implements IImageLoader.IImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1941a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageSuccListener
-        public void onSuccess(IImageLoader.C2496b c2496b) {
+        public void onSuccess(IImageLoader.b bVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1766262949")) {
-                ipChange.ipc$dispatch("1766262949", new Object[]{this, c2496b});
+                ipChange.ipc$dispatch("1766262949", new Object[]{this, bVar});
                 return;
             }
-            OnLinePosterView.this.imageView.setImageDrawable(c2496b.a);
+            OnLinePosterView.this.imageView.setImageDrawable(bVar.a);
             OnLinePosterView.this.setPlaceholder(0);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.online.viewholder.OnLinePosterView$b */
     /* loaded from: classes7.dex */
-    public class C1942b implements IImageLoader.IImageFailListener {
+    public class b implements IImageLoader.IImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1942b() {
+        b() {
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageFailListener
-        public void onFail(IImageLoader.C2495a c2495a) {
+        public void onFail(IImageLoader.a aVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-600020786")) {
-                ipChange.ipc$dispatch("-600020786", new Object[]{this, c2495a});
+                ipChange.ipc$dispatch("-600020786", new Object[]{this, aVar});
                 return;
             }
             OnLinePosterView.this.imageView.setImageDrawable(null);
@@ -202,7 +199,7 @@ public class OnLinePosterView extends FrameLayout {
             ipChange.ipc$dispatch("-369228171", new Object[]{this, str});
         } else if (this.imageView == null) {
         } else {
-            C2497a.a().loadinto(str, this.imageView);
+            cn.damai.uikit.image.a.a().loadinto(str, this.imageView);
         }
     }
 
@@ -291,7 +288,7 @@ public class OnLinePosterView extends FrameLayout {
             ipChange.ipc$dispatch("-1909284508", new Object[]{this, str, Integer.valueOf(i), Integer.valueOf(i2)});
         } else if (this.imageView == null) {
         } else {
-            C2497a.a().load(str, 0, i, i2, new C1941a(), new C1942b());
+            cn.damai.uikit.image.a.a().load(str, 0, i, i2, new a(), new b());
         }
     }
 

@@ -3,12 +3,11 @@ package com.google.common.collect;
 import com.google.common.annotations.Beta;
 import com.google.common.annotations.GwtCompatible;
 import com.google.common.annotations.GwtIncompatible;
-import com.google.common.base.C4834e;
-import com.google.common.collect.C5174f0;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.ImmutableSortedSet;
+import com.google.common.collect.f0;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import com.google.errorprone.annotations.concurrent.LazyInit;
 import com.google.j2objc.annotations.RetainedWith;
@@ -78,12 +77,11 @@ public class ImmutableSetMultimap<K, V> extends ImmutableMultimap<K, V> implemen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableSetMultimap$a */
     /* loaded from: classes10.dex */
-    public static final class C4990a<K, V> extends ImmutableMultimap.C4981c<K, V> {
-        @Override // com.google.common.collect.ImmutableMultimap.C4981c
+    public static final class a<K, V> extends ImmutableMultimap.c<K, V> {
+        @Override // com.google.common.collect.ImmutableMultimap.c
         Collection<V> b() {
-            return C5172e0.g();
+            return e0.g();
         }
 
         public ImmutableSetMultimap<K, V> f() {
@@ -95,25 +93,25 @@ public class ImmutableSetMultimap<K, V> extends ImmutableMultimap<K, V> implemen
             return ImmutableSetMultimap.fromMapEntries(entrySet, this.c);
         }
 
-        @Override // com.google.common.collect.ImmutableMultimap.C4981c
+        @Override // com.google.common.collect.ImmutableMultimap.c
         @CanIgnoreReturnValue
         /* renamed from: g */
-        public C4990a<K, V> c(K k, V v) {
+        public a<K, V> c(K k, V v) {
             super.c(k, v);
             return this;
         }
 
-        @Override // com.google.common.collect.ImmutableMultimap.C4981c
+        @Override // com.google.common.collect.ImmutableMultimap.c
         @CanIgnoreReturnValue
         /* renamed from: h */
-        public C4990a<K, V> d(Map.Entry<? extends K, ? extends V> entry) {
+        public a<K, V> d(Map.Entry<? extends K, ? extends V> entry) {
             super.d(entry);
             return this;
         }
 
         @CanIgnoreReturnValue
         @Beta
-        public C4990a<K, V> i(Iterable<? extends Map.Entry<? extends K, ? extends V>> iterable) {
+        public a<K, V> i(Iterable<? extends Map.Entry<? extends K, ? extends V>> iterable) {
             super.e(iterable);
             return this;
         }
@@ -121,10 +119,9 @@ public class ImmutableSetMultimap<K, V> extends ImmutableMultimap<K, V> implemen
 
     /* compiled from: Taobao */
     @GwtIncompatible
-    /* renamed from: com.google.common.collect.ImmutableSetMultimap$b */
     /* loaded from: classes10.dex */
-    private static final class C4991b {
-        static final C5174f0.C5176b<ImmutableSetMultimap> a = C5174f0.a(ImmutableSetMultimap.class, "emptySet");
+    private static final class b {
+        static final f0.b<ImmutableSetMultimap> a = f0.a(ImmutableSetMultimap.class, "emptySet");
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -133,8 +130,8 @@ public class ImmutableSetMultimap<K, V> extends ImmutableMultimap<K, V> implemen
         this.emptySet = emptySet(comparator);
     }
 
-    public static <K, V> C4990a<K, V> builder() {
-        return new C4990a<>();
+    public static <K, V> a<K, V> builder() {
+        return new a<>();
     }
 
     public static <K, V> ImmutableSetMultimap<K, V> copyOf(Multimap<? extends K, ? extends V> multimap) {
@@ -152,22 +149,22 @@ public class ImmutableSetMultimap<K, V> extends ImmutableMultimap<K, V> implemen
         if (collection.isEmpty()) {
             return of();
         }
-        ImmutableMap.C4977b c4977b = new ImmutableMap.C4977b(collection.size());
+        ImmutableMap.b bVar = new ImmutableMap.b(collection.size());
         int i = 0;
         for (Map.Entry<? extends K, ? extends Collection<? extends V>> entry : collection) {
             K key = entry.getKey();
             ImmutableSet valueSet = valueSet(comparator, entry.getValue());
             if (!valueSet.isEmpty()) {
-                c4977b.c(key, valueSet);
+                bVar.c(key, valueSet);
                 i += valueSet.size();
             }
         }
-        return new ImmutableSetMultimap<>(c4977b.a(), i, comparator);
+        return new ImmutableSetMultimap<>(bVar.a(), i, comparator);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     private ImmutableSetMultimap<V, K> invert() {
-        C4990a builder = builder();
+        a builder = builder();
         yt2 it = entries().iterator();
         while (it.hasNext()) {
             Map.Entry entry = (Map.Entry) it.next();
@@ -189,13 +186,13 @@ public class ImmutableSetMultimap<K, V> extends ImmutableMultimap<K, V> implemen
         Comparator comparator = (Comparator) objectInputStream.readObject();
         int readInt = objectInputStream.readInt();
         if (readInt >= 0) {
-            ImmutableMap.C4977b builder = ImmutableMap.builder();
+            ImmutableMap.b builder = ImmutableMap.builder();
             int i = 0;
             for (int i2 = 0; i2 < readInt; i2++) {
                 Object readObject = objectInputStream.readObject();
                 int readInt2 = objectInputStream.readInt();
                 if (readInt2 > 0) {
-                    ImmutableSet.C4989a valuesBuilder = valuesBuilder(comparator);
+                    ImmutableSet.a valuesBuilder = valuesBuilder(comparator);
                     for (int i3 = 0; i3 < readInt2; i3++) {
                         valuesBuilder.a(objectInputStream.readObject());
                     }
@@ -211,9 +208,9 @@ public class ImmutableSetMultimap<K, V> extends ImmutableMultimap<K, V> implemen
                 }
             }
             try {
-                ImmutableMultimap.C4982d.a.b(this, builder.a());
-                ImmutableMultimap.C4982d.b.a(this, i);
-                C4991b.a.b(this, emptySet(comparator));
+                ImmutableMultimap.d.a.b(this, builder.a());
+                ImmutableMultimap.d.b.a(this, i);
+                b.a.b(this, emptySet(comparator));
                 return;
             } catch (IllegalArgumentException e) {
                 throw ((InvalidObjectException) new InvalidObjectException(e.getMessage()).initCause(e));
@@ -229,15 +226,15 @@ public class ImmutableSetMultimap<K, V> extends ImmutableMultimap<K, V> implemen
         return ImmutableSortedSet.copyOf((Comparator) comparator, (Collection) collection);
     }
 
-    private static <V> ImmutableSet.C4989a<V> valuesBuilder(@NullableDecl Comparator<? super V> comparator) {
-        return comparator == null ? new ImmutableSet.C4989a<>() : new ImmutableSortedSet.C4995a(comparator);
+    private static <V> ImmutableSet.a<V> valuesBuilder(@NullableDecl Comparator<? super V> comparator) {
+        return comparator == null ? new ImmutableSet.a<>() : new ImmutableSortedSet.a(comparator);
     }
 
     @GwtIncompatible
     private void writeObject(ObjectOutputStream objectOutputStream) throws IOException {
         objectOutputStream.defaultWriteObject();
         objectOutputStream.writeObject(valueComparator());
-        C5174f0.j(this, objectOutputStream);
+        f0.j(this, objectOutputStream);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -247,7 +244,7 @@ public class ImmutableSetMultimap<K, V> extends ImmutableMultimap<K, V> implemen
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // com.google.common.collect.ImmutableMultimap, com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.ImmutableMultimap, com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     @Deprecated
     public /* bridge */ /* synthetic */ ImmutableCollection replaceValues(Object obj, Iterable iterable) {
@@ -278,7 +275,7 @@ public class ImmutableSetMultimap<K, V> extends ImmutableMultimap<K, V> implemen
     }
 
     public static <K, V> ImmutableSetMultimap<K, V> of(K k, V v) {
-        C4990a builder = builder();
+        a builder = builder();
         builder.c(k, v);
         return builder.f();
     }
@@ -301,7 +298,7 @@ public class ImmutableSetMultimap<K, V> extends ImmutableMultimap<K, V> implemen
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // com.google.common.collect.ImmutableMultimap, com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.ImmutableMultimap, com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     @Deprecated
     public /* bridge */ /* synthetic */ Collection replaceValues(Object obj, Iterable iterable) {
@@ -315,14 +312,14 @@ public class ImmutableSetMultimap<K, V> extends ImmutableMultimap<K, V> implemen
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // com.google.common.collect.ImmutableMultimap, com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.ImmutableMultimap, com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     @Deprecated
     public /* bridge */ /* synthetic */ Set replaceValues(Object obj, Iterable iterable) {
         return replaceValues((ImmutableSetMultimap<K, V>) obj, iterable);
     }
 
-    @Override // com.google.common.collect.ImmutableMultimap, com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.ImmutableMultimap, com.google.common.collect.c, com.google.common.collect.Multimap
     public ImmutableSet<Map.Entry<K, V>> entries() {
         ImmutableSet<Map.Entry<K, V>> immutableSet = this.entries;
         if (immutableSet == null) {
@@ -335,7 +332,7 @@ public class ImmutableSetMultimap<K, V> extends ImmutableMultimap<K, V> implemen
 
     @Override // com.google.common.collect.ImmutableMultimap, com.google.common.collect.Multimap
     public ImmutableSet<V> get(@NullableDecl K k) {
-        return (ImmutableSet) C4834e.a((ImmutableSet) this.map.get(k), this.emptySet);
+        return (ImmutableSet) com.google.common.base.e.a((ImmutableSet) this.map.get(k), this.emptySet);
     }
 
     @Override // com.google.common.collect.ImmutableMultimap, com.google.common.collect.Multimap
@@ -345,7 +342,7 @@ public class ImmutableSetMultimap<K, V> extends ImmutableMultimap<K, V> implemen
         throw new UnsupportedOperationException();
     }
 
-    @Override // com.google.common.collect.ImmutableMultimap, com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.ImmutableMultimap, com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     @Deprecated
     public ImmutableSet<V> replaceValues(K k, Iterable<? extends V> iterable) {
@@ -353,7 +350,7 @@ public class ImmutableSetMultimap<K, V> extends ImmutableMultimap<K, V> implemen
     }
 
     public static <K, V> ImmutableSetMultimap<K, V> of(K k, V v, K k2, V v2) {
-        C4990a builder = builder();
+        a builder = builder();
         builder.c(k, v);
         builder.c(k2, v2);
         return builder.f();
@@ -361,11 +358,11 @@ public class ImmutableSetMultimap<K, V> extends ImmutableMultimap<K, V> implemen
 
     @Beta
     public static <K, V> ImmutableSetMultimap<K, V> copyOf(Iterable<? extends Map.Entry<? extends K, ? extends V>> iterable) {
-        return new C4990a().i(iterable).f();
+        return new a().i(iterable).f();
     }
 
     public static <K, V> ImmutableSetMultimap<K, V> of(K k, V v, K k2, V v2, K k3, V v3) {
-        C4990a builder = builder();
+        a builder = builder();
         builder.c(k, v);
         builder.c(k2, v2);
         builder.c(k3, v3);
@@ -373,7 +370,7 @@ public class ImmutableSetMultimap<K, V> extends ImmutableMultimap<K, V> implemen
     }
 
     public static <K, V> ImmutableSetMultimap<K, V> of(K k, V v, K k2, V v2, K k3, V v3, K k4, V v4) {
-        C4990a builder = builder();
+        a builder = builder();
         builder.c(k, v);
         builder.c(k2, v2);
         builder.c(k3, v3);
@@ -382,7 +379,7 @@ public class ImmutableSetMultimap<K, V> extends ImmutableMultimap<K, V> implemen
     }
 
     public static <K, V> ImmutableSetMultimap<K, V> of(K k, V v, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5) {
-        C4990a builder = builder();
+        a builder = builder();
         builder.c(k, v);
         builder.c(k2, v2);
         builder.c(k3, v3);

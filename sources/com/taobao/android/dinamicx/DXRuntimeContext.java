@@ -6,7 +6,7 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import com.alibaba.fastjson.JSONObject;
 import com.taobao.analysis.v3.FalcoContainerSpan;
-import com.taobao.android.dinamicx.C6368e;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.expression.parser.IDXDataParser;
 import com.taobao.android.dinamicx.model.DXLongSparseArray;
 import com.taobao.android.dinamicx.notification.DXNotificationCenter;
@@ -40,7 +40,7 @@ public class DXRuntimeContext implements Cloneable {
     private JSONObject data;
     private WeakReference<JSONObject> dataWRef;
     protected WeakReference<bu> dxControlEventCenterWeakReference;
-    protected C6368e dxError;
+    protected e dxError;
     protected WeakReference<DXNotificationCenter> dxNotificationCenterWeakReference;
     private d00 dxPerformInfo;
     private Map<String, String> dxPerformTrackerData;
@@ -48,7 +48,7 @@ public class DXRuntimeContext implements Cloneable {
     protected DXTemplateItem dxTemplateItem;
     @Deprecated
     protected Object dxUserContext;
-    protected C6367d engineContext;
+    protected d engineContext;
     private Map<String, az> env;
     private my eventChainExpressionSourceContext;
     protected WeakReference<DXLongSparseArray<IDXEventHandler>> eventHandlerMapWeakReference;
@@ -85,9 +85,9 @@ public class DXRuntimeContext implements Cloneable {
     public @interface DXRefreshType {
     }
 
-    public DXRuntimeContext(@NonNull C6367d c6367d) {
-        this.engineContext = c6367d;
-        DXEngineConfig dXEngineConfig = c6367d.a;
+    public DXRuntimeContext(@NonNull d dVar) {
+        this.engineContext = dVar;
+        DXEngineConfig dXEngineConfig = dVar.a;
         this.config = dXEngineConfig;
         this.bizType = dXEngineConfig.a;
     }
@@ -189,7 +189,7 @@ public class DXRuntimeContext implements Cloneable {
         return weakReference.get();
     }
 
-    public C6368e getDxError() {
+    public e getDxError() {
         return this.dxError;
     }
 
@@ -228,7 +228,7 @@ public class DXRuntimeContext implements Cloneable {
         return this.dxUserContext;
     }
 
-    public C6367d getEngineContext() {
+    public d getEngineContext() {
         return this.engineContext;
     }
 
@@ -350,9 +350,9 @@ public class DXRuntimeContext implements Cloneable {
     }
 
     public boolean hasError() {
-        List<C6368e.C6369a> list;
-        C6368e c6368e = this.dxError;
-        return (c6368e == null || (list = c6368e.c) == null || list.size() <= 0) ? false : true;
+        List<e.a> list;
+        e eVar = this.dxError;
+        return (eVar == null || (list = eVar.c) == null || list.size() <= 0) ? false : true;
     }
 
     public boolean isNeedChildThread() {
@@ -384,8 +384,8 @@ public class DXRuntimeContext implements Cloneable {
         }
     }
 
-    public void setDxError(C6368e c6368e) {
-        this.dxError = c6368e;
+    public void setDxError(e eVar) {
+        this.dxError = eVar;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */

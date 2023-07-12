@@ -52,9 +52,9 @@ public final class EventParams {
         }
 
         @NotNull
-        public final EventParams create(@NotNull GXTemplateEngine.C3342e c3342e) {
-            b41.i(c3342e, "gxGesture");
-            GXMixNodeEvent.GXJSGesture gXJSGesture = (GXMixNodeEvent.GXJSGesture) c3342e;
+        public final EventParams create(@NotNull GXTemplateEngine.e eVar) {
+            b41.i(eVar, "gxGesture");
+            GXMixNodeEvent.GXJSGesture gXJSGesture = (GXMixNodeEvent.GXJSGesture) eVar;
             EventParams eventParams = new EventParams();
             eventParams.setType(gXJSGesture.getGestureType());
             eventParams.setData(gXJSGesture.getEventParams());

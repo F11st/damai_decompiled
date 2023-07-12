@@ -3,7 +3,7 @@ package com.youku.middlewareservice.provider.ut;
 import android.util.Log;
 import com.taobao.statistic.CT;
 import java.util.Map;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -13,7 +13,7 @@ public class UserTrackProviderProxy {
     public static void commitEvent(String str, int i, Object obj, Object obj2, Object obj3, String[] strArr) {
         try {
             if (sProxy == null) {
-                sProxy = (UserTrackProvider) C8883a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
+                sProxy = (UserTrackProvider) a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
             }
             sProxy.commitEvent(str, i, obj, obj2, obj3, strArr);
         } catch (Throwable th) {
@@ -24,7 +24,7 @@ public class UserTrackProviderProxy {
     public static void ctrlClicked(String str, CT ct, String str2, String str3) {
         try {
             if (sProxy == null) {
-                sProxy = (UserTrackProvider) C8883a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
+                sProxy = (UserTrackProvider) a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
             }
             sProxy.ctrlClicked(str, ct, str2, str3);
         } catch (Throwable th) {
@@ -34,7 +34,7 @@ public class UserTrackProviderProxy {
 
     public static UserTrackProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (UserTrackProvider) C8883a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
+            sProxy = (UserTrackProvider) a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -42,7 +42,7 @@ public class UserTrackProviderProxy {
     public static String getUtdid() {
         try {
             if (sProxy == null) {
-                sProxy = (UserTrackProvider) C8883a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
+                sProxy = (UserTrackProvider) a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
             }
             return sProxy.getUtdid();
         } catch (Throwable th) {
@@ -64,7 +64,7 @@ public class UserTrackProviderProxy {
     public static void pageAppear(Object obj) {
         try {
             if (sProxy == null) {
-                sProxy = (UserTrackProvider) C8883a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
+                sProxy = (UserTrackProvider) a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
             }
             sProxy.pageAppear(obj);
         } catch (Throwable th) {
@@ -75,7 +75,7 @@ public class UserTrackProviderProxy {
     public static void pageDisappear(Object obj) {
         try {
             if (sProxy == null) {
-                sProxy = (UserTrackProvider) C8883a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
+                sProxy = (UserTrackProvider) a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
             }
             sProxy.pageDisappear(obj);
         } catch (Throwable th) {
@@ -86,7 +86,7 @@ public class UserTrackProviderProxy {
     public static void registTrackPage(String str, String str2, String str3) {
         try {
             if (sProxy == null) {
-                sProxy = (UserTrackProvider) C8883a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
+                sProxy = (UserTrackProvider) a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
             }
             sProxy.registTrackPage(str, str2, str3);
         } catch (Throwable th) {
@@ -97,7 +97,7 @@ public class UserTrackProviderProxy {
     public static void updateNextPageProperties(Map<String, String> map) {
         try {
             if (sProxy == null) {
-                sProxy = (UserTrackProvider) C8883a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
+                sProxy = (UserTrackProvider) a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
             }
             sProxy.updateNextPageProperties(map);
         } catch (Throwable th) {
@@ -108,7 +108,7 @@ public class UserTrackProviderProxy {
     public static void updatePageInfo(Object obj) {
         try {
             if (sProxy == null) {
-                sProxy = (UserTrackProvider) C8883a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
+                sProxy = (UserTrackProvider) a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
             }
             sProxy.updatePageInfo(obj);
         } catch (Throwable th) {
@@ -119,7 +119,7 @@ public class UserTrackProviderProxy {
     public static void updatePageName(Object obj, String str) {
         try {
             if (sProxy == null) {
-                sProxy = (UserTrackProvider) C8883a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
+                sProxy = (UserTrackProvider) a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
             }
             sProxy.updatePageName(obj, str);
         } catch (Throwable th) {
@@ -130,7 +130,7 @@ public class UserTrackProviderProxy {
     public static void updatePageProperties(Object obj, Map<String, String> map) {
         try {
             if (sProxy == null) {
-                sProxy = (UserTrackProvider) C8883a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
+                sProxy = (UserTrackProvider) a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
             }
             sProxy.updatePageProperties(obj, map);
         } catch (Throwable th) {
@@ -141,7 +141,7 @@ public class UserTrackProviderProxy {
     public static void updateNextPageProperties(String str, String str2) {
         try {
             if (sProxy == null) {
-                sProxy = (UserTrackProvider) C8883a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
+                sProxy = (UserTrackProvider) a.j("com.youku.middlewareservice_impl.provider.ut.UserTrackProviderImpl").b().f();
             }
             sProxy.updateNextPageProperties(str, str2);
         } catch (Throwable th) {

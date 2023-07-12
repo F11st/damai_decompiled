@@ -1,13 +1,13 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy.types;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import com.taobao.weex.ui.component.richtext.node.RichTextNode;
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.k;
+import kotlin.collections.l;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function0;
 import kotlin.reflect.jvm.internal.impl.builtins.PrimitiveType;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -61,7 +61,7 @@ public final class JavaTypeResolver {
     private final RawSubstitution d;
 
     public JavaTypeResolver(@NotNull r81 r81Var, @NotNull TypeParameterResolver typeParameterResolver) {
-        b41.i(r81Var, AbstractC5658c.a);
+        b41.i(r81Var, c.a);
         b41.i(typeParameterResolver, "typeParameterResolver");
         this.a = r81Var;
         this.b = typeParameterResolver;
@@ -71,10 +71,10 @@ public final class JavaTypeResolver {
     }
 
     private final boolean b(JavaClassifierType javaClassifierType, ClassDescriptor classDescriptor) {
-        if (v51.a((JavaType) C8212k.d0(javaClassifierType.getTypeArguments()))) {
+        if (v51.a((JavaType) k.d0(javaClassifierType.getTypeArguments()))) {
             List<TypeParameterDescriptor> parameters = p51.INSTANCE.b(classDescriptor).getTypeConstructor().getParameters();
             b41.h(parameters, "JavaToKotlinClassMapper.…ypeConstructor.parameters");
-            TypeParameterDescriptor typeParameterDescriptor = (TypeParameterDescriptor) C8212k.d0(parameters);
+            TypeParameterDescriptor typeParameterDescriptor = (TypeParameterDescriptor) k.d0(parameters);
             Variance variance = typeParameterDescriptor == null ? null : typeParameterDescriptor.getVariance();
             return (variance == null || variance == Variance.OUT_VARIANCE) ? false : true;
         }
@@ -120,7 +120,7 @@ public final class JavaTypeResolver {
             r2 = 10
             if (r8 == r9) goto L75
             java.util.ArrayList r7 = new java.util.ArrayList
-            int r8 = kotlin.collections.C8212k.q(r0, r2)
+            int r8 = kotlin.collections.k.q(r0, r2)
             r7.<init>(r8)
             java.util.Iterator r8 = r0.iterator()
         L4f:
@@ -136,13 +136,13 @@ public final class JavaTypeResolver {
             r7.add(r0)
             goto L4f
         L70:
-            java.util.List r7 = kotlin.collections.C8212k.A0(r7)
+            java.util.List r7 = kotlin.collections.k.A0(r7)
             return r7
         L75:
             java.util.List r7 = r7.getTypeArguments()
-            java.lang.Iterable r7 = kotlin.collections.C8212k.G0(r7)
+            java.lang.Iterable r7 = kotlin.collections.k.G0(r7)
             java.util.ArrayList r8 = new java.util.ArrayList
-            int r9 = kotlin.collections.C8212k.q(r7, r2)
+            int r9 = kotlin.collections.k.q(r7, r2)
             r8.<init>(r9)
             java.util.Iterator r7 = r7.iterator()
         L8a:
@@ -166,7 +166,7 @@ public final class JavaTypeResolver {
             r8.add(r9)
             goto L8a
         Lbe:
-            java.util.List r7 = kotlin.collections.C8212k.A0(r8)
+            java.util.List r7 = kotlin.collections.k.A0(r8)
             return r7
         */
         throw new UnsupportedOperationException("Method not decompiled: kotlin.reflect.jvm.internal.impl.load.java.lazy.types.JavaTypeResolver.c(kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClassifierType, tb.q51, kotlin.reflect.jvm.internal.impl.types.TypeConstructor):java.util.List");
@@ -175,7 +175,7 @@ public final class JavaTypeResolver {
     private final List<TypeProjection> d(final JavaClassifierType javaClassifierType, List<? extends TypeParameterDescriptor> list, final TypeConstructor typeConstructor, final q51 q51Var) {
         int q;
         TypeProjection j;
-        q = C8215n.q(list, 10);
+        q = n.q(list, 10);
         ArrayList arrayList = new ArrayList(q);
         for (final TypeParameterDescriptor typeParameterDescriptor : list) {
             if (TypeUtilsKt.k(typeParameterDescriptor, null, q51Var.f())) {
@@ -258,7 +258,7 @@ public final class JavaTypeResolver {
         hj m = hj.m(new hp0(javaClassifierType.getClassifierQualifiedName()));
         b41.h(m, "topLevel(FqName(javaType.classifierQualifiedName))");
         NotFoundClasses q = this.a.a().b().e().q();
-        e = C8213l.e(0);
+        e = l.e(0);
         TypeConstructor typeConstructor = q.d(m, e).getTypeConstructor();
         b41.h(typeConstructor, "c.components.deserialize…istOf(0)).typeConstructor");
         return typeConstructor;
@@ -343,9 +343,9 @@ public final class JavaTypeResolver {
         if (type != null) {
             fd2 O = this.a.d().getBuiltIns().O(type);
             b41.h(O, "c.module.builtIns.getPri…KotlinType(primitiveType)");
-            Annotations.C8302a c8302a = Annotations.Companion;
+            Annotations.a aVar = Annotations.Companion;
             k0 = CollectionsKt___CollectionsKt.k0(lazyJavaAnnotations, O.getAnnotations());
-            O.k(c8302a.a(k0));
+            O.k(aVar.a(k0));
             return q51Var.g() ? O : KotlinTypeFactory.d(O, O.j(true));
         }
         z71 o = o(componentType, u51.d(TypeUsage.COMMON, q51Var.g(), null, 2, null));

@@ -1,7 +1,6 @@
 package tb;
 
 import android.text.TextUtils;
-import anet.channel.request.C0193a;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -10,13 +9,12 @@ import java.util.List;
 import java.util.Map;
 import mtopsdk.common.util.HttpHeaderConstant;
 import mtopsdk.network.util.Constants;
-import okhttp3.internal.http2.C8789a;
 
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
 public class h01 {
-    public static boolean a(C0193a c0193a, int i) {
-        return c0193a.s() && i >= 300 && i < 400 && i != 304 && c0193a.m() < 10;
+    public static boolean a(anet.channel.request.a aVar, int i) {
+        return aVar.s() && i >= 300 && i < 400 && i != 304 && aVar.m() < 10;
     }
 
     public static Map<String, List<String>> b(Map<String, List<String>> map) {
@@ -89,7 +87,7 @@ public class h01 {
 
     public static int i(Map<String, List<String>> map) {
         try {
-            List<String> list = map.get(C8789a.RESPONSE_STATUS_UTF8);
+            List<String> list = map.get(okhttp3.internal.http2.a.RESPONSE_STATUS_UTF8);
             if (list != null && !list.isEmpty()) {
                 return Integer.parseInt(list.get(0));
             }

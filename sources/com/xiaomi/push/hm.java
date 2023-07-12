@@ -10,14 +10,14 @@ import tb.jn1;
 public class hm implements iu<hm, Object>, Serializable, Cloneable {
 
     /* renamed from: a  reason: collision with other field name */
-    public List<C7672hn> f466a;
+    public List<hn> f466a;
 
     /* renamed from: a  reason: collision with other field name */
     private static final jk f465a = new jk("ClientUploadData");
     private static final jc a = new jc("", (byte) 15, 1);
 
     public int a() {
-        List<C7672hn> list = this.f466a;
+        List<hn> list = this.f466a;
         if (list == null) {
             return 0;
         }
@@ -49,11 +49,11 @@ public class hm implements iu<hm, Object>, Serializable, Cloneable {
         throw new jg("Required field 'uploadDataItems' was not present! Struct: " + toString());
     }
 
-    public void a(C7672hn c7672hn) {
+    public void a(hn hnVar) {
         if (this.f466a == null) {
             this.f466a = new ArrayList();
         }
-        this.f466a.add(c7672hn);
+        this.f466a.add(hnVar);
     }
 
     @Override // com.xiaomi.push.iu
@@ -71,9 +71,9 @@ public class hm implements iu<hm, Object>, Serializable, Cloneable {
                 jd mo1103a = jfVar.mo1103a();
                 this.f466a = new ArrayList(mo1103a.f802a);
                 for (int i = 0; i < mo1103a.f802a; i++) {
-                    C7672hn c7672hn = new C7672hn();
-                    c7672hn.a(jfVar);
-                    this.f466a.add(c7672hn);
+                    hn hnVar = new hn();
+                    hnVar.a(jfVar);
+                    this.f466a.add(hnVar);
                 }
                 jfVar.i();
             } else {
@@ -108,8 +108,8 @@ public class hm implements iu<hm, Object>, Serializable, Cloneable {
         if (this.f466a != null) {
             jfVar.a(a);
             jfVar.a(new jd((byte) 12, this.f466a.size()));
-            for (C7672hn c7672hn : this.f466a) {
-                c7672hn.b(jfVar);
+            for (hn hnVar : this.f466a) {
+                hnVar.b(jfVar);
             }
             jfVar.e();
             jfVar.b();
@@ -132,7 +132,7 @@ public class hm implements iu<hm, Object>, Serializable, Cloneable {
     public String toString() {
         StringBuilder sb = new StringBuilder("ClientUploadData(");
         sb.append("uploadDataItems:");
-        List<C7672hn> list = this.f466a;
+        List<hn> list = this.f466a;
         if (list == null) {
             sb.append("null");
         } else {

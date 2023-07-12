@@ -17,9 +17,7 @@ import cn.damai.category.calendar.bean.TabLine;
 import cn.damai.category.venue.adapter.VenueItemAdapter;
 import cn.damai.category.venue.bean.VenueQueryResponse;
 import cn.damai.category.venue.viewmodel.VenueViewModel;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.base.ResponseErrorPage;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.commonbusiness.scriptmurder.venuedetail.VenueDetailFragment;
@@ -68,12 +66,11 @@ public class VenueActivity extends SimpleBaseActivity {
     private int mCurrentTab = 1;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.venue.activity.VenueActivity$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0438a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0438a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -88,12 +85,11 @@ public class VenueActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.venue.activity.VenueActivity$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0439b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0439b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -113,12 +109,11 @@ public class VenueActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.venue.activity.VenueActivity$c */
     /* loaded from: classes.dex */
-    public class C0440c implements ResponseErrorPage.ErrorRefreshListener {
+    public class c implements ResponseErrorPage.ErrorRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0440c() {
+        c() {
         }
 
         @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
@@ -356,8 +351,8 @@ public class VenueActivity extends SimpleBaseActivity {
             kg2.f(this, false, R$color.black);
             findViewById.setVisibility(8);
         }
-        findViewById(R$id.btn_left).setOnClickListener(new View$OnClickListenerC0438a());
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i("venue"));
+        findViewById(R$id.btn_left).setOnClickListener(new a());
+        setDamaiUTKeyBuilder(new a.b().i("venue"));
         Intent intent = getIntent();
         if (intent != null) {
             this.mCityId = intent.getStringExtra("cityId");
@@ -375,7 +370,7 @@ public class VenueActivity extends SimpleBaseActivity {
         this.mTabSecondTv = (TextView) findViewById(R$id.tv_tab_second);
         this.mTabFirstTv.setOnClickListener(this);
         this.mTabSecondTv.setOnClickListener(this);
-        this.mTopIv.setOnClickListener(new View$OnClickListenerC0439b());
+        this.mTopIv.setOnClickListener(new b());
         this.mTopAnimValueY = m62.a(this, 20.0f);
         initData();
         initRecyclerView();
@@ -430,7 +425,7 @@ public class VenueActivity extends SimpleBaseActivity {
                 }, 400L);
                 HashMap hashMap = new HashMap();
                 hashMap.put("city", this.mCityName);
-                C0529c.e().x(new C0528b().e("venue", "venuetab", "nearbybtn", hashMap, Boolean.FALSE));
+                cn.damai.common.user.c.e().x(new cn.damai.common.user.b().e("venue", "venuetab", "nearbybtn", hashMap, Boolean.FALSE));
             }
         } else if (view.getId() == R$id.tv_tab_second) {
             setLineRed(2, this.mCurrentTab);
@@ -452,7 +447,7 @@ public class VenueActivity extends SimpleBaseActivity {
             }, 400L);
             HashMap hashMap2 = new HashMap();
             hashMap2.put("city", this.mCityName);
-            C0529c.e().x(new C0528b().e("venue", "venuetab", "hotbtn", hashMap2, Boolean.FALSE));
+            cn.damai.common.user.c.e().x(new cn.damai.common.user.b().e("venue", "venuetab", "hotbtn", hashMap2, Boolean.FALSE));
         }
     }
 
@@ -467,7 +462,7 @@ public class VenueActivity extends SimpleBaseActivity {
             ResponseErrorPage responseErrorPage2 = new ResponseErrorPage(this, str, str2, str3);
             this.mErrorPage = responseErrorPage2;
             responseErrorPage2.hideTitle();
-            this.mErrorPage.setRefreshListener(new C0440c());
+            this.mErrorPage.setRefreshListener(new c());
             if (this.mllVenuelayout instanceof ViewGroup) {
                 this.mllVenuelayout.addView(this.mErrorPage, new ViewGroup.LayoutParams(-1, -1));
             }

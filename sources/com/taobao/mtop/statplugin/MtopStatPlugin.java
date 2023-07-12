@@ -4,7 +4,7 @@ import android.taobao.windvane.jsbridge.WVApiPlugin;
 import android.taobao.windvane.jsbridge.WVCallBackContext;
 import android.taobao.windvane.jsbridge.WVPluginManager;
 import android.taobao.windvane.jsbridge.WindVaneInterface;
-import anetwork.channel.stat.C0246a;
+import anetwork.channel.stat.a;
 import com.ut.mini.behavior.edgecomputing.datacollector.core.UTDataCollectorNodeColumn;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -78,7 +78,7 @@ public class MtopStatPlugin extends WVApiPlugin {
     public void getStat(WVCallBackContext wVCallBackContext, String str) {
         try {
             String string = new JSONObject(str).getString("url");
-            String str2 = C0246a.a().get(string);
+            String str2 = a.a().get(string);
             if (TBSdkLog.isPrintLog()) {
                 TBSdkLog.d(TAG, "[getStat] url=" + string + " stat=" + str2);
             }

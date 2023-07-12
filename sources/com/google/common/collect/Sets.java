@@ -22,9 +22,8 @@ import tb.du1;
 public final class Sets {
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.Sets$a */
     /* loaded from: classes10.dex */
-    static abstract class AbstractC5098a<E> extends AbstractSet<E> {
+    static abstract class a<E> extends AbstractSet<E> {
         @Override // java.util.AbstractSet, java.util.AbstractCollection, java.util.Collection, java.util.Set
         public boolean removeAll(Collection<?> collection) {
             return Sets.h(this, collection);
@@ -115,7 +114,7 @@ public final class Sets {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
-    public static final class UnmodifiableNavigableSet<E> extends AbstractC5209x<E> implements NavigableSet<E>, Serializable {
+    public static final class UnmodifiableNavigableSet<E> extends x<E> implements NavigableSet<E>, Serializable {
         private static final long serialVersionUID = 0;
         private final NavigableSet<E> delegate;
         @MonotonicNonNullDecl
@@ -190,7 +189,7 @@ public final class Sets {
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.google.common.collect.AbstractC5209x, com.google.common.collect.AbstractC5207v, com.google.common.collect.AbstractC5200o, com.google.common.collect.AbstractC5205t
+        @Override // com.google.common.collect.x, com.google.common.collect.v, com.google.common.collect.o, com.google.common.collect.t
         public SortedSet<E> delegate() {
             return this.unmodifiableDelegate;
         }

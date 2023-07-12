@@ -24,7 +24,7 @@ import cn.damai.seat.bean.biz.CompressSeatStatus;
 import cn.damai.seat.bean.biz.Price;
 import cn.damai.seat.bean.biz.SeatDynamic;
 import cn.damai.seat.contract.TbSeatContract;
-import cn.damai.seat.helper.C1667b;
+import cn.damai.seat.helper.b;
 import cn.damai.seat.listener.Action;
 import cn.damai.seat.listener.OnSubmitListener;
 import cn.damai.seat.listener.RegionSeatRequestChecker;
@@ -82,7 +82,7 @@ public class TSeatModel2 extends SeatModelImpl implements TbSeatContract.TbSeatM
     private RegionData mRegionData;
     private List<Region> mRegions;
     private q82 mSeat3DVrOption;
-    private C1667b mSeatBasket;
+    private b mSeatBasket;
     private w82 mSeatCombiner;
     private l92 mSeatOption;
     private p92 mUiListener = new p92();
@@ -363,9 +363,9 @@ public class TSeatModel2 extends SeatModelImpl implements TbSeatContract.TbSeatM
             if (w82Var != null) {
                 w82Var.h();
             }
-            C1667b c1667b = this.mSeatBasket;
-            if (c1667b != null) {
-                c1667b.A();
+            b bVar = this.mSeatBasket;
+            if (bVar != null) {
+                bVar.A();
             }
             k92 r = k92.r();
             h82 r2 = h82.r();
@@ -449,11 +449,11 @@ public class TSeatModel2 extends SeatModelImpl implements TbSeatContract.TbSeatM
             this.mSeatCombiner = new w82(this, tbParams2.itemId, tbParams2.performId, this.mRegionData.ri.vesion);
             this.mPicCombiner = new ls1(this.mRegionData, this);
             this.mSeatViewData.c(getIconProvider(), this.mRegionData, this.mRegions);
-            C1667b c1667b = new C1667b(tbParams);
-            this.mSeatBasket = c1667b;
+            b bVar = new b(tbParams);
+            this.mSeatBasket = bVar;
             List<Region> list = this.mRegions;
             TbParams tbParams3 = this.mParams;
-            c1667b.f(list, tbParams3.limitCount, tbParams3.itemLimitPerOrder, this.mRegionData.isNeedPreCheck);
+            bVar.f(list, tbParams3.limitCount, tbParams3.itemLimitPerOrder, this.mRegionData.isNeedPreCheck);
             TbParams tbParams4 = this.mParams;
             if (!tbParams4.firstPayChooseSeat) {
                 this.mPrice = f92.D(tbParams4.itemId);

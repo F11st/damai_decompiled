@@ -49,7 +49,7 @@ public class DemoActivity extends AppCompatActivity {
             return;
         }
         super.onCreate(bundle);
-        setContentView(R.C7942layout.demo_activity_layout);
+        setContentView(R.layout.demo_activity_layout);
         findViewById(R.id.tv_show_dialog).setOnClickListener(new View.OnClickListener() { // from class: com.youku.live.dago.widgetlib.DemoActivity.1
             private static transient /* synthetic */ IpChange $ipChange;
 

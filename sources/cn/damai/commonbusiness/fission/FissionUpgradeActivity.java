@@ -19,7 +19,6 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.R$dimen;
 import cn.damai.commonbusiness.R$id;
@@ -71,12 +70,11 @@ public class FissionUpgradeActivity extends DamaiBaseActivity implements Fission
     private final String SHARE_SAVE_IMAGE = "save_image";
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.FissionUpgradeActivity$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0704a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0704a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -86,7 +84,7 @@ public class FissionUpgradeActivity extends DamaiBaseActivity implements Fission
                 ipChange.ipc$dispatch("-1019243284", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(rj0.h().l(0, "weixin", false));
+            cn.damai.common.user.c.e().x(rj0.h().l(0, "weixin", false));
             FissionUpgradeActivity fissionUpgradeActivity = FissionUpgradeActivity.this;
             fissionUpgradeActivity.toShare(0, fissionUpgradeActivity.getShareUrl(), FissionUpgradeActivity.this.fissionParam.subMessage, FissionUpgradeActivity.this.fissionParam.getUniqueIdent());
             FissionUpgradeActivity.this.onBackPresss();
@@ -94,12 +92,11 @@ public class FissionUpgradeActivity extends DamaiBaseActivity implements Fission
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.FissionUpgradeActivity$b */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0705b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0705b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -109,7 +106,7 @@ public class FissionUpgradeActivity extends DamaiBaseActivity implements Fission
                 ipChange.ipc$dispatch("1092047085", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(rj0.h().l(1, "pengyouquan", false));
+            cn.damai.common.user.c.e().x(rj0.h().l(1, "pengyouquan", false));
             FissionUpgradeActivity fissionUpgradeActivity = FissionUpgradeActivity.this;
             fissionUpgradeActivity.createPic("weixin_friend", view, fissionUpgradeActivity, fissionUpgradeActivity.getShareUrl(), FissionUpgradeActivity.this.fissionParam.imageUrl, FissionUpgradeActivity.this.fissionParam.projectName, FissionUpgradeActivity.this.fissionParam.subMessage, FissionUpgradeActivity.this.fissionParam.getUniqueIdent(), FissionUpgradeActivity.this.getImageUrl());
             FissionUpgradeActivity.this.onBackPresss();
@@ -117,12 +114,11 @@ public class FissionUpgradeActivity extends DamaiBaseActivity implements Fission
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.FissionUpgradeActivity$c */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0706c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0706c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -132,7 +128,7 @@ public class FissionUpgradeActivity extends DamaiBaseActivity implements Fission
                 ipChange.ipc$dispatch("-1091629842", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(rj0.h().l(2, Site.WEIBO, false));
+            cn.damai.common.user.c.e().x(rj0.h().l(2, Site.WEIBO, false));
             FissionUpgradeActivity fissionUpgradeActivity = FissionUpgradeActivity.this;
             fissionUpgradeActivity.createPic(Site.WEIBO, view, fissionUpgradeActivity, fissionUpgradeActivity.getShareUrl(), FissionUpgradeActivity.this.fissionParam.imageUrl, FissionUpgradeActivity.this.fissionParam.projectName, FissionUpgradeActivity.this.fissionParam.subMessage, FissionUpgradeActivity.this.fissionParam.getUniqueIdent(), FissionUpgradeActivity.this.getImageUrl());
             FissionUpgradeActivity.this.onBackPresss();
@@ -140,12 +136,11 @@ public class FissionUpgradeActivity extends DamaiBaseActivity implements Fission
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.FissionUpgradeActivity$d */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0707d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0707d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -155,21 +150,20 @@ public class FissionUpgradeActivity extends DamaiBaseActivity implements Fission
                 ipChange.ipc$dispatch("1019660527", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(rj0.h().l(3, "savepic", false));
+            cn.damai.common.user.c.e().x(rj0.h().l(3, "savepic", false));
             FissionUpgradeActivity fissionUpgradeActivity = FissionUpgradeActivity.this;
             fissionUpgradeActivity.createPic("save_image", view, fissionUpgradeActivity, fissionUpgradeActivity.getShareUrl(), FissionUpgradeActivity.this.fissionParam.imageUrl, FissionUpgradeActivity.this.fissionParam.projectName, FissionUpgradeActivity.this.fissionParam.subMessage, FissionUpgradeActivity.this.fissionParam.getUniqueIdent(), FissionUpgradeActivity.this.getImageUrl());
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.fission.FissionUpgradeActivity$e */
     /* loaded from: classes4.dex */
-    public class C0708e implements GenerateImageUtil.OnImageGenerateListener {
+    public class e implements GenerateImageUtil.OnImageGenerateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
         final /* synthetic */ String b;
 
-        C0708e(View view, String str) {
+        e(View view, String str) {
             this.a = view;
             this.b = str;
         }
@@ -222,7 +216,7 @@ public class FissionUpgradeActivity extends DamaiBaseActivity implements Fission
                     z = false;
                 }
                 GenerateImageUtil.q(activity, dMShareMessage, z);
-                GenerateImageUtil.G(new C0708e(view, str));
+                GenerateImageUtil.G(new e(view, str));
             }
         }
     }
@@ -328,9 +322,9 @@ public class FissionUpgradeActivity extends DamaiBaseActivity implements Fission
             ipChange.ipc$dispatch("591108289", new Object[]{activity, view});
             return;
         }
-        DisplayMetrics b = t60.b(activity);
-        int i = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(b);
-        int i2 = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(b);
+        DisplayMetrics b2 = t60.b(activity);
+        int i = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(b2);
+        int i2 = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(b2);
         view.layout(0, 0, i, i2);
         view.measure(View.MeasureSpec.makeMeasureSpec(i, 1073741824), View.MeasureSpec.makeMeasureSpec(i2, Integer.MIN_VALUE));
         view.layout(0, 0, view.getMeasuredWidth(), view.getMeasuredHeight());
@@ -353,10 +347,10 @@ public class FissionUpgradeActivity extends DamaiBaseActivity implements Fission
             ipChange.ipc$dispatch("1065749725", new Object[]{this});
             return;
         }
-        this.icon_wx.setOnClickListener(new View$OnClickListenerC0704a());
-        this.icon_friend.setOnClickListener(new View$OnClickListenerC0705b());
-        this.icon_weibo.setOnClickListener(new View$OnClickListenerC0706c());
-        this.savePic.setOnClickListener(new View$OnClickListenerC0707d());
+        this.icon_wx.setOnClickListener(new a());
+        this.icon_friend.setOnClickListener(new b());
+        this.icon_weibo.setOnClickListener(new c());
+        this.savePic.setOnClickListener(new d());
     }
 
     private void setStatusBar() {
@@ -462,7 +456,7 @@ public class FissionUpgradeActivity extends DamaiBaseActivity implements Fission
             if (this.infoBean == null || this.mContext == null) {
                 return;
             }
-            C0529c.e().x(rj0.h().l(4, "copy_url", false));
+            cn.damai.common.user.c.e().x(rj0.h().l(4, "copy_url", false));
             Context context = this.mContext;
             nb2.a(context, getShareUrl());
         } else if (view.getId() == R$id.fission_upgrade_close) {

@@ -26,6 +26,6 @@ final class ChannelsKt__Channels_commonKt$consumes$1 extends Lambda implements F
 
     /* renamed from: invoke  reason: avoid collision after fix types in other method */
     public final void invoke2(@Nullable Throwable th) {
-        C8648b.j(this.$this_consumes, th);
+        b.j(this.$this_consumes, th);
     }
 }

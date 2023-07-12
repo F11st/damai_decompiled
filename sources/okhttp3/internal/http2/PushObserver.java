@@ -7,13 +7,12 @@ import okio.BufferedSource;
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
 public interface PushObserver {
-    public static final PushObserver CANCEL = new C8788a();
+    public static final PushObserver CANCEL = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: okhttp3.internal.http2.PushObserver$a */
     /* loaded from: classes2.dex */
-    class C8788a implements PushObserver {
-        C8788a() {
+    class a implements PushObserver {
+        a() {
         }
 
         @Override // okhttp3.internal.http2.PushObserver
@@ -23,12 +22,12 @@ public interface PushObserver {
         }
 
         @Override // okhttp3.internal.http2.PushObserver
-        public boolean onHeaders(int i, List<C8789a> list, boolean z) {
+        public boolean onHeaders(int i, List<okhttp3.internal.http2.a> list, boolean z) {
             return true;
         }
 
         @Override // okhttp3.internal.http2.PushObserver
-        public boolean onRequest(int i, List<C8789a> list) {
+        public boolean onRequest(int i, List<okhttp3.internal.http2.a> list) {
             return true;
         }
 
@@ -39,9 +38,9 @@ public interface PushObserver {
 
     boolean onData(int i, BufferedSource bufferedSource, int i2, boolean z) throws IOException;
 
-    boolean onHeaders(int i, List<C8789a> list, boolean z);
+    boolean onHeaders(int i, List<okhttp3.internal.http2.a> list, boolean z);
 
-    boolean onRequest(int i, List<C8789a> list);
+    boolean onRequest(int i, List<okhttp3.internal.http2.a> list);
 
     void onReset(int i, ErrorCode errorCode);
 }

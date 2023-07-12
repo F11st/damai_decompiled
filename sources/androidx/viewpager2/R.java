@@ -35,15 +35,14 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: androidx.viewpager2.R$color */
     /* loaded from: classes.dex */
-    public static final class C0150color {
+    public static final class color {
         public static final int notification_action_color_filter = 0x7f060417;
         public static final int notification_icon_bg_color = 0x7f060418;
         public static final int ripple_material_light = 0x7f060478;
         public static final int secondary_text_default_material_light = 0x7f06049b;
 
-        private C0150color() {
+        private color() {
         }
     }
 
@@ -84,9 +83,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: androidx.viewpager2.R$drawable */
     /* loaded from: classes.dex */
-    public static final class C0151drawable {
+    public static final class drawable {
         public static final int notification_action_background = 0x7f080b1d;
         public static final int notification_bg = 0x7f080b1e;
         public static final int notification_bg_low = 0x7f080b1f;
@@ -100,7 +98,7 @@ public final class R {
         public static final int notification_tile_bg = 0x7f080b28;
         public static final int notify_panel_notification_icon_bg = 0x7f080b29;
 
-        private C0151drawable() {
+        private drawable() {
         }
     }
 
@@ -189,9 +187,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: androidx.viewpager2.R$layout */
     /* loaded from: classes.dex */
-    public static final class C0152layout {
+    public static final class layout {
         public static final int custom_dialog = 0x7f0c0244;
         public static final int notification_action = 0x7f0c05c4;
         public static final int notification_action_tombstone = 0x7f0c05c5;
@@ -200,7 +197,7 @@ public final class R {
         public static final int notification_template_part_chronometer = 0x7f0c05d1;
         public static final int notification_template_part_time = 0x7f0c05d2;
 
-        private C0152layout() {
+        private layout() {
         }
     }
 
@@ -214,9 +211,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: androidx.viewpager2.R$style */
     /* loaded from: classes.dex */
-    public static final class C0153style {
+    public static final class style {
         public static final int TextAppearance_Compat_Notification = 0x7f12023a;
         public static final int TextAppearance_Compat_Notification_Info = 0x7f12023b;
         public static final int TextAppearance_Compat_Notification_Line2 = 0x7f12023d;
@@ -225,7 +221,7 @@ public final class R {
         public static final int Widget_Compat_NotificationActionContainer = 0x7f120354;
         public static final int Widget_Compat_NotificationActionText = 0x7f120355;
 
-        private C0153style() {
+        private style() {
         }
     }
 

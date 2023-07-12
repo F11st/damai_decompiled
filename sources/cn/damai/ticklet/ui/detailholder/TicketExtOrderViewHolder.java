@@ -2,8 +2,8 @@ package cn.damai.ticklet.ui.detailholder;
 
 import android.os.Bundle;
 import android.view.View;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import cn.damai.ticklet.ui.fragment.TicketDetailExtFragment;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -34,7 +34,7 @@ public final class TicketExtOrderViewHolder extends TicketExtServiceViewHolder {
             ipChange.ipc$dispatch("1298194835", new Object[]{this, str, str2, str3, str4});
         } else if (b41.d("0", str4)) {
         } else {
-            C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "ticket_info", "orderinfo", un2.k().t(str2, str), Boolean.TRUE));
+            c.e().x(b.getInstance().e(un2.TICKLET_DETAIL_PAGE, "ticket_info", "orderinfo", un2.k().t(str2, str), Boolean.TRUE));
             if (!(str3 == null || str3.length() == 0)) {
                 if (str4 != null && str4.length() != 0) {
                     z = false;

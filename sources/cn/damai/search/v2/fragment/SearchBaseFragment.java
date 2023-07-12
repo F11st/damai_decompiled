@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import cn.damai.common.AppConfig;
 import cn.damai.common.net.mtop.Util;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.live.LiveActivity;
 import cn.damai.onearch.errpage.ErrClickListener;
@@ -92,12 +92,11 @@ public abstract class SearchBaseFragment extends BaseFragment implements ISearch
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.search.v2.fragment.SearchBaseFragment$SearchPageLoader$a */
         /* loaded from: classes6.dex */
-        public class C1644a implements ErrClickListener {
+        public class a implements ErrClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1644a() {
+            a() {
             }
 
             @Override // cn.damai.onearch.errpage.ErrClickListener
@@ -112,12 +111,11 @@ public abstract class SearchBaseFragment extends BaseFragment implements ISearch
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.search.v2.fragment.SearchBaseFragment$SearchPageLoader$b */
         /* loaded from: classes6.dex */
-        public class C1645b implements ErrClickListener {
+        public class b implements ErrClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1645b() {
+            b() {
             }
 
             @Override // cn.damai.onearch.errpage.ErrClickListener
@@ -445,7 +443,7 @@ public abstract class SearchBaseFragment extends BaseFragment implements ISearch
                 if (z) {
                     hashMap.put("hasItem", "ture");
                 }
-                C0529c.e().A(hashMap, "LoadingViewState", "search");
+                c.e().A(hashMap, "LoadingViewState", "search");
                 if (getLoadingPage() <= 1) {
                     if (z) {
                         if (z2) {
@@ -456,7 +454,7 @@ public abstract class SearchBaseFragment extends BaseFragment implements ISearch
                                 getLoadingViewManager().onAllPageLoaded();
                             }
                         } else if (iResponse != null) {
-                            SearchBaseFragment.this.host.showErrView(ErrControlViewInfo.errNetInfo(iResponse.getRetCode(), Util.getErrorMsg(iResponse.getRetCode(), iResponse.getRetMessage()), "", new C1645b()));
+                            SearchBaseFragment.this.host.showErrView(ErrControlViewInfo.errNetInfo(iResponse.getRetCode(), Util.getErrorMsg(iResponse.getRetCode(), iResponse.getRetMessage()), "", new b()));
                         }
                     } else if (z2) {
                         getLoadingViewManager().onNoData();
@@ -467,7 +465,7 @@ public abstract class SearchBaseFragment extends BaseFragment implements ISearch
                     } else {
                         getLoadingViewManager().onFailure("response fails or is null");
                         if (iResponse != null) {
-                            SearchBaseFragment.this.host.showErrView(ErrControlViewInfo.errNetInfo(iResponse.getRetCode(), Util.getErrorMsg(iResponse.getRetCode(), iResponse.getRetMessage()), "", new C1644a()));
+                            SearchBaseFragment.this.host.showErrView(ErrControlViewInfo.errNetInfo(iResponse.getRetCode(), Util.getErrorMsg(iResponse.getRetCode(), iResponse.getRetMessage()), "", new a()));
                         }
                     }
                 } else if (z2) {
@@ -514,7 +512,7 @@ public abstract class SearchBaseFragment extends BaseFragment implements ISearch
             if (getLoadingPage() > 1 || !SearchBaseFragment.this.isCurrentPageTriggerSearch) {
                 return;
             }
-            C0529c.e().u();
+            c.e().u();
             SearchBaseFragment.this.isCurrentPageTriggerSearch = false;
         }
     }
@@ -570,7 +568,7 @@ public abstract class SearchBaseFragment extends BaseFragment implements ISearch
             }
             HashMap hashMap3 = new HashMap();
             hashMap3.put("requestArgs", jSONString);
-            C0529c.e().A(hashMap3, "RequestBuilder", "search");
+            c.e().A(hashMap3, "RequestBuilder", "search");
             Object obj2 = map.get("reduce");
             Bundle bundle = null;
             if ((obj2 instanceof Boolean) && ((Boolean) obj2).booleanValue()) {
@@ -722,7 +720,7 @@ public abstract class SearchBaseFragment extends BaseFragment implements ISearch
             ipChange.ipc$dispatch("-1474676854", new Object[]{this});
             return;
         }
-        C0529c.e().u();
+        c.e().u();
         if (this.currentSearchInputInfo == null && getActivity() != null) {
             this.currentSearchInputInfo = ((SearchActivity) getActivity()).getSearchInputManager().getCurrentInputInfo();
         }
@@ -785,7 +783,7 @@ public abstract class SearchBaseFragment extends BaseFragment implements ISearch
                 hashMap.put("ABTrackInfo", globalConfig.pabBucket);
             }
             if (getUserVisibleHint()) {
-                C0529c.e().O(getActivity(), hashMap);
+                c.e().O(getActivity(), hashMap);
             }
         }
     }

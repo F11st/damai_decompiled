@@ -55,12 +55,11 @@ public class VideoViewHolderV2 extends CommonViewHolder {
     private ProxyVideoView mVideoPlayer;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.viewholder.VideoViewHolderV2$a */
     /* loaded from: classes7.dex */
-    public class C1869a implements IVideoAdapter.OnVideoItemClickListener {
+    public class a implements IVideoAdapter.OnVideoItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1869a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.home.adapter.IVideoAdapter.OnVideoItemClickListener
@@ -122,12 +121,11 @@ public class VideoViewHolderV2 extends CommonViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.viewholder.VideoViewHolderV2$b */
     /* loaded from: classes16.dex */
-    public class View$OnAttachStateChangeListenerC1870b implements View.OnAttachStateChangeListener {
+    public class b implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC1870b() {
+        b() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -157,12 +155,11 @@ public class VideoViewHolderV2 extends CommonViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.viewholder.VideoViewHolderV2$c */
     /* loaded from: classes7.dex */
-    public class C1871c implements VideoListener {
+    public class c implements VideoListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1871c() {
+        c() {
         }
 
         @Override // cn.damai.player.video.listener.VideoOperateListener
@@ -226,11 +223,11 @@ public class VideoViewHolderV2 extends CommonViewHolder {
         super(view);
         this.isPageShowing = true;
         this.isSetVideoPlayOptHelper = false;
-        this.mOnVideoItemClickListener = new C1869a();
+        this.mOnVideoItemClickListener = new a();
         this.mContext = view.getContext();
         this.mModuleTitle = (TextView) this.itemView.findViewById(R$id.homepage_module_title_label);
         this.mVideoPlayer = (ProxyVideoView) this.itemView.findViewById(R$id.homepage_video_player_v2);
-        this.itemView.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC1870b());
+        this.itemView.addOnAttachStateChangeListener(new b());
         this.mTitleLayout = this.itemView.findViewById(R$id.module_title_layout);
         this.mProjectList = (RecyclerView) this.itemView.findViewById(R$id.homepage_video_project_list_v2);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.mContext);
@@ -241,7 +238,7 @@ public class VideoViewHolderV2 extends CommonViewHolder {
         this.mAdapter = videoAdapter;
         videoAdapter.setOnVideoItemClickListener(this.mOnVideoItemClickListener);
         this.mProjectList.setAdapter((RecyclerView.Adapter) this.mAdapter);
-        this.mVideoPlayer.setListener(new C1871c());
+        this.mVideoPlayer.setListener(new c());
     }
 
     @Override // cn.damai.tetris.mvp.CommonViewHolder

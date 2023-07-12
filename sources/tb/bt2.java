@@ -15,21 +15,20 @@ import org.json.JSONObject;
 /* loaded from: classes5.dex */
 public class bt2 extends zs2 {
     private static bt2 e;
-    private Map<String, C8982a> a = new HashMap();
+    private Map<String, a> a = new HashMap();
     private int b = 10;
     private int c = 0;
     private int d = -1;
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.bt2$a */
     /* loaded from: classes5.dex */
-    public static class C8982a {
+    public static class a {
         private Map<String, String> a = new HashMap();
         private Map<String, String> b = new HashMap();
         private int c = 0;
 
-        private C8982a() {
+        private a() {
         }
 
         private String b(Map<String, String> map, String str) {
@@ -48,12 +47,12 @@ public class bt2 extends zs2 {
             return null;
         }
 
-        public static C8982a c(String str) {
+        public static a c(String str) {
             try {
-                C8982a c8982a = new C8982a();
+                a aVar = new a();
                 JSONObject jSONObject = new JSONObject(str);
                 if (jSONObject.has("tp")) {
-                    c8982a.c = bt2.e(jSONObject.optString("tp"));
+                    aVar.c = bt2.e(jSONObject.optString("tp"));
                 }
                 if (jSONObject.has("pg")) {
                     HashMap hashMap = new HashMap();
@@ -65,7 +64,7 @@ public class bt2 extends zs2 {
                             hashMap.put(next, optJSONObject.optString(next));
                         }
                     }
-                    c8982a.a = hashMap;
+                    aVar.a = hashMap;
                 }
                 if (jSONObject.has("arg1")) {
                     HashMap hashMap2 = new HashMap();
@@ -77,9 +76,9 @@ public class bt2 extends zs2 {
                             hashMap2.put(next2, optJSONObject2.optString(next2));
                         }
                     }
-                    c8982a.b = hashMap2;
+                    aVar.b = hashMap2;
                 }
-                return c8982a;
+                return aVar;
             } catch (Exception e) {
                 e.printStackTrace();
                 return null;
@@ -120,12 +119,12 @@ public class bt2 extends zs2 {
     }
 
     private int h(String str, String str2, String str3) {
-        C8982a c8982a;
-        if (TextUtils.isEmpty(str) || !this.a.containsKey(str) || (c8982a = this.a.get(str)) == null) {
+        a aVar;
+        if (TextUtils.isEmpty(str) || !this.a.containsKey(str) || (aVar = this.a.get(str)) == null) {
             return 0;
         }
         if (!TextUtils.isEmpty(str2) || !TextUtils.isEmpty(str3)) {
-            return c8982a.a(str2, str3);
+            return aVar.a(str2, str3);
         }
         return 0;
     }
@@ -158,7 +157,7 @@ public class bt2 extends zs2 {
                         this.c = e3;
                     }
                 } else {
-                    C8982a c = C8982a.c(str3);
+                    a c = a.c(str3);
                     if (c != null) {
                         this.a.put(str2, c);
                     }

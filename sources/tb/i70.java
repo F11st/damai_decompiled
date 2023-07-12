@@ -2,8 +2,6 @@ package tb;
 
 import com.youku.live.dago.liveplayback.widget.pip.PipUtils;
 import java.util.List;
-import kotlin.collections.C8214m;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.builtins.jvm.JvmBuiltIns;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.NotFoundClasses;
@@ -11,7 +9,6 @@ import kotlin.reflect.jvm.internal.impl.descriptors.deserialization.AdditionalCl
 import kotlin.reflect.jvm.internal.impl.descriptors.deserialization.PlatformDependentDeclarationFilter;
 import kotlin.reflect.jvm.internal.impl.incremental.components.LookupTracker;
 import kotlin.reflect.jvm.internal.impl.load.java.lazy.LazyJavaPackageFragmentProvider;
-import kotlin.reflect.jvm.internal.impl.protobuf.C8447c;
 import kotlin.reflect.jvm.internal.impl.serialization.deserialization.ContractDeserializer;
 import kotlin.reflect.jvm.internal.impl.serialization.deserialization.DeserializationConfiguration;
 import kotlin.reflect.jvm.internal.impl.serialization.deserialization.ErrorReporter;
@@ -40,18 +37,18 @@ public final class i70 {
         b41.i(lookupTracker, "lookupTracker");
         b41.i(contractDeserializer, "contractDeserializer");
         b41.i(newKotlinTypeChecker, "kotlinTypeChecker");
-        AbstractC8271b builtIns = moduleDescriptor.getBuiltIns();
+        kotlin.reflect.jvm.internal.impl.builtins.b builtIns = moduleDescriptor.getBuiltIns();
         JvmBuiltIns jvmBuiltIns = builtIns instanceof JvmBuiltIns ? (JvmBuiltIns) builtIns : null;
-        LocalClassifierTypeSettings.C8510a c8510a = LocalClassifierTypeSettings.C8510a.INSTANCE;
+        LocalClassifierTypeSettings.a aVar = LocalClassifierTypeSettings.a.INSTANCE;
         g51 g51Var = g51.INSTANCE;
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         AdditionalClassPartsProvider G0 = jvmBuiltIns == null ? null : jvmBuiltIns.G0();
-        AdditionalClassPartsProvider additionalClassPartsProvider = G0 == null ? AdditionalClassPartsProvider.C8307a.INSTANCE : G0;
+        AdditionalClassPartsProvider additionalClassPartsProvider = G0 == null ? AdditionalClassPartsProvider.a.INSTANCE : G0;
         PlatformDependentDeclarationFilter G02 = jvmBuiltIns != null ? jvmBuiltIns.G0() : null;
-        PlatformDependentDeclarationFilter platformDependentDeclarationFilter = G02 == null ? PlatformDependentDeclarationFilter.C8309b.INSTANCE : G02;
-        C8447c a = b71.INSTANCE.a();
-        g2 = C8214m.g();
-        this.a = new h70(storageManager, moduleDescriptor, deserializationConfiguration, b51Var, ecVar, lazyJavaPackageFragmentProvider, c8510a, errorReporter, lookupTracker, g51Var, g, notFoundClasses, contractDeserializer, additionalClassPartsProvider, platformDependentDeclarationFilter, a, newKotlinTypeChecker, new u52(storageManager, g2), null, 262144, null);
+        PlatformDependentDeclarationFilter platformDependentDeclarationFilter = G02 == null ? PlatformDependentDeclarationFilter.b.INSTANCE : G02;
+        kotlin.reflect.jvm.internal.impl.protobuf.c a = b71.INSTANCE.a();
+        g2 = kotlin.collections.m.g();
+        this.a = new h70(storageManager, moduleDescriptor, deserializationConfiguration, b51Var, ecVar, lazyJavaPackageFragmentProvider, aVar, errorReporter, lookupTracker, g51Var, g, notFoundClasses, contractDeserializer, additionalClassPartsProvider, platformDependentDeclarationFilter, a, newKotlinTypeChecker, new u52(storageManager, g2), null, 262144, null);
     }
 
     @NotNull

@@ -143,7 +143,7 @@ public class DialogHelper {
             public void run() {
                 try {
                     DialogHelper.this.mToast = new Toast(DialogHelper.this.mActivity);
-                    View inflate = LayoutInflater.from(DialogHelper.this.mActivity.getApplicationContext()).inflate(R.C2952layout.aliuser_transient_notification, (ViewGroup) null);
+                    View inflate = LayoutInflater.from(DialogHelper.this.mActivity.getApplicationContext()).inflate(R.layout.aliuser_transient_notification, (ViewGroup) null);
                     ((TextView) inflate.findViewById(16908299)).setText(str);
                     DialogHelper.this.mToast.setView(inflate);
                     DialogHelper.this.mToast.setDuration(i);

@@ -3,7 +3,7 @@ package com.youku.middlewareservice.provider.config;
 import android.util.Log;
 import com.youku.middlewareservice.provider.config.OneConfigProvider;
 import java.util.Map;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -13,7 +13,7 @@ public class OneConfigProviderProxy {
     public static boolean containsNamespace(String str) {
         try {
             if (sProxy == null) {
-                sProxy = (OneConfigProvider) C8883a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
+                sProxy = (OneConfigProvider) a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
             }
             return sProxy.containsNamespace(str);
         } catch (Throwable th) {
@@ -25,7 +25,7 @@ public class OneConfigProviderProxy {
     public static String[] getAllNamespaces() {
         try {
             if (sProxy == null) {
-                sProxy = (OneConfigProvider) C8883a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
+                sProxy = (OneConfigProvider) a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
             }
             return sProxy.getAllNamespaces();
         } catch (Throwable th) {
@@ -37,7 +37,7 @@ public class OneConfigProviderProxy {
     public static String getConfig(String str, String str2, String str3) {
         try {
             if (sProxy == null) {
-                sProxy = (OneConfigProvider) C8883a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
+                sProxy = (OneConfigProvider) a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
             }
             return sProxy.getConfig(str, str2, str3);
         } catch (Throwable th) {
@@ -49,7 +49,7 @@ public class OneConfigProviderProxy {
     public static Map getConfigs(String str) {
         try {
             if (sProxy == null) {
-                sProxy = (OneConfigProvider) C8883a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
+                sProxy = (OneConfigProvider) a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
             }
             return sProxy.getConfigs(str);
         } catch (Throwable th) {
@@ -61,7 +61,7 @@ public class OneConfigProviderProxy {
     public static String getCurrentOccVersion() {
         try {
             if (sProxy == null) {
-                sProxy = (OneConfigProvider) C8883a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
+                sProxy = (OneConfigProvider) a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
             }
             return sProxy.getCurrentOccVersion();
         } catch (Throwable th) {
@@ -72,7 +72,7 @@ public class OneConfigProviderProxy {
 
     public static OneConfigProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (OneConfigProvider) C8883a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
+            sProxy = (OneConfigProvider) a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -90,7 +90,7 @@ public class OneConfigProviderProxy {
     public static boolean registerListener(String str, OneConfigProvider.IUpdateListenerInterface iUpdateListenerInterface) {
         try {
             if (sProxy == null) {
-                sProxy = (OneConfigProvider) C8883a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
+                sProxy = (OneConfigProvider) a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
             }
             return sProxy.registerListener(str, iUpdateListenerInterface);
         } catch (Throwable th) {
@@ -102,7 +102,7 @@ public class OneConfigProviderProxy {
     public static boolean unregisterListener(String str, OneConfigProvider.IUpdateListenerInterface iUpdateListenerInterface) {
         try {
             if (sProxy == null) {
-                sProxy = (OneConfigProvider) C8883a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
+                sProxy = (OneConfigProvider) a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
             }
             return sProxy.unregisterListener(str, iUpdateListenerInterface);
         } catch (Throwable th) {
@@ -114,7 +114,7 @@ public class OneConfigProviderProxy {
     public static int getConfig(String str, String str2, int i) {
         try {
             if (sProxy == null) {
-                sProxy = (OneConfigProvider) C8883a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
+                sProxy = (OneConfigProvider) a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
             }
             return sProxy.getConfig(str, str2, i);
         } catch (Throwable th) {
@@ -126,7 +126,7 @@ public class OneConfigProviderProxy {
     public static boolean getConfig(String str, String str2, boolean z) {
         try {
             if (sProxy == null) {
-                sProxy = (OneConfigProvider) C8883a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
+                sProxy = (OneConfigProvider) a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
             }
             return sProxy.getConfig(str, str2, z);
         } catch (Throwable th) {
@@ -138,7 +138,7 @@ public class OneConfigProviderProxy {
     public static Object getConfig(String str, String str2, Object obj) {
         try {
             if (sProxy == null) {
-                sProxy = (OneConfigProvider) C8883a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
+                sProxy = (OneConfigProvider) a.j("com.youku.middlewareservice_impl.provider.config.OneConfigProviderImpl").b().f();
             }
             return sProxy.getConfig(str, str2, obj);
         } catch (Throwable th) {

@@ -212,7 +212,7 @@ public class DagoVipHongbaoView extends FrameLayout implements IHongbaoCountdown
 
     public DagoVipHongbaoView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        this.LAYOUT_ID = R.C7942layout.dago_youku_vip_hongbao_small_layout;
+        this.LAYOUT_ID = R.layout.dago_youku_vip_hongbao_small_layout;
         initView(context);
     }
 }

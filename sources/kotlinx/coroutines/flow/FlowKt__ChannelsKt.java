@@ -1,7 +1,6 @@
 package kotlinx.coroutines.flow;
 
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlinx.coroutines.channels.ReceiveChannel;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -15,7 +14,7 @@ public final /* synthetic */ class FlowKt__ChannelsKt {
     public static final <T> Object a(@NotNull FlowCollector<? super T> flowCollector, @NotNull ReceiveChannel<? extends T> receiveChannel, @NotNull Continuation<? super wt2> continuation) {
         Object d;
         Object b = b(flowCollector, receiveChannel, true, continuation);
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         return b == d ? b : wt2.INSTANCE;
     }
 
@@ -60,7 +59,7 @@ public final /* synthetic */ class FlowKt__ChannelsKt {
             r0.<init>(r11)
         L18:
             java.lang.Object r11 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 2
             r4 = 1
@@ -129,7 +128,7 @@ public final /* synthetic */ class FlowKt__ChannelsKt {
             java.lang.Throwable r11 = tb.yw2.d(r11)     // Catch: java.lang.Throwable -> L5d
             if (r11 != 0) goto L91
             if (r9 == 0) goto L8e
-            kotlinx.coroutines.channels.C8648b.j(r10, r8)
+            kotlinx.coroutines.channels.b.j(r10, r8)
         L8e:
             tb.wt2 r8 = tb.wt2.INSTANCE
             return r8
@@ -156,7 +155,7 @@ public final /* synthetic */ class FlowKt__ChannelsKt {
         Lae:
             r11 = move-exception
             if (r9 == 0) goto Lb4
-            kotlinx.coroutines.channels.C8648b.j(r10, r8)
+            kotlinx.coroutines.channels.b.j(r10, r8)
         Lb4:
             throw r11
         */

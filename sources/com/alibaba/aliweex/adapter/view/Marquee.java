@@ -39,10 +39,9 @@ public class Marquee extends FrameLayout {
     private List<View> viewList;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.view.Marquee$a */
     /* loaded from: classes15.dex */
-    public class HandlerC3072a extends Handler {
-        public HandlerC3072a(Looper looper) {
+    public class a extends Handler {
+        public a(Looper looper) {
             super(looper);
         }
 
@@ -184,7 +183,7 @@ public class Marquee extends FrameLayout {
 
     public Marquee(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.handler = new HandlerC3072a(Looper.getMainLooper());
+        this.handler = new a(Looper.getMainLooper());
         this.mLogic = new Runnable() { // from class: com.alibaba.aliweex.adapter.view.Marquee.1
             @Override // java.lang.Runnable
             public void run() {

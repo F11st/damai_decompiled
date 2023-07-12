@@ -10,19 +10,17 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.collections.C8205f0;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.f0;
+import kotlin.collections.k;
+import kotlin.collections.l;
+import kotlin.collections.m;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
+import kotlin.reflect.jvm.internal.impl.builtins.c;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor;
@@ -61,13 +59,11 @@ import kotlin.reflect.jvm.internal.impl.types.IntersectionTypeConstructor;
 import kotlin.reflect.jvm.internal.impl.types.TypeConstructor;
 import kotlin.reflect.jvm.internal.impl.types.TypeProjection;
 import kotlin.reflect.jvm.internal.impl.types.Variance;
-import kotlin.text.C8590b;
-import kotlin.text.C8604o;
-import kotlin.text.C8606q;
 import kotlin.text.StringsKt__StringsKt;
+import kotlin.text.o;
+import kotlin.text.q;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tb.C9429m0;
 import tb.a81;
 import tb.af2;
 import tb.ak0;
@@ -91,6 +87,7 @@ import tb.jf0;
 import tb.jg;
 import tb.jn1;
 import tb.kf0;
+import tb.m0;
 import tb.m80;
 import tb.ni1;
 import tb.q12;
@@ -110,15 +107,14 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     private final Lazy b;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRendererImpl$a */
     /* loaded from: classes3.dex */
-    private final class C8477a implements DeclarationDescriptorVisitor<wt2, StringBuilder> {
+    private final class a implements DeclarationDescriptorVisitor<wt2, StringBuilder> {
         final /* synthetic */ DescriptorRendererImpl a;
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRendererImpl$a$a */
+        /* renamed from: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRendererImpl$a$a  reason: collision with other inner class name */
         /* loaded from: classes3.dex */
-        public /* synthetic */ class C8478a {
+        public /* synthetic */ class C0428a {
             public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
             static {
@@ -130,13 +126,13 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             }
         }
 
-        public C8477a(DescriptorRendererImpl descriptorRendererImpl) {
+        public a(DescriptorRendererImpl descriptorRendererImpl) {
             b41.i(descriptorRendererImpl, "this$0");
             this.a = descriptorRendererImpl;
         }
 
         private final void g(PropertyAccessorDescriptor propertyAccessorDescriptor, StringBuilder sb, String str) {
-            int i = C8478a.$EnumSwitchMapping$0[this.a.W().ordinal()];
+            int i = C0428a.$EnumSwitchMapping$0[this.a.W().ordinal()];
             if (i != 1) {
                 if (i != 2) {
                     return;
@@ -310,9 +306,8 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRendererImpl$b */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C8479b {
+    public /* synthetic */ class b {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
         public static final /* synthetic */ int[] $EnumSwitchMapping$1;
 
@@ -330,11 +325,11 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     }
 
     public DescriptorRendererImpl(@NotNull DescriptorRendererOptionsImpl descriptorRendererOptionsImpl) {
-        Lazy b;
+        Lazy b2;
         b41.i(descriptorRendererOptionsImpl, WXBridgeManager.OPTIONS);
         this.a = descriptorRendererOptionsImpl;
         descriptorRendererOptionsImpl.U();
-        b = C8177b.b(new Function0<DescriptorRendererImpl>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRendererImpl$functionTypeAnnotationsRenderer$2
+        b2 = kotlin.b.b(new Function0<DescriptorRendererImpl>() { // from class: kotlin.reflect.jvm.internal.impl.renderer.DescriptorRendererImpl$functionTypeAnnotationsRenderer$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -356,14 +351,14 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
                         Set<hp0> i;
                         b41.i(descriptorRendererOptions, "$this$withOptions");
                         Set<hp0> excludedTypeAnnotationClasses = descriptorRendererOptions.getExcludedTypeAnnotationClasses();
-                        e = C8213l.e(C8277c.C8278a.extensionFunctionType);
-                        i = C8205f0.i(excludedTypeAnnotationClasses, e);
+                        e = l.e(c.a.extensionFunctionType);
+                        i = f0.i(excludedTypeAnnotationClasses, e);
                         descriptorRendererOptions.setExcludedTypeAnnotationClasses(i);
                     }
                 });
             }
         });
-        this.b = b;
+        this.b = b2;
     }
 
     private final boolean A0(CallableMemberDescriptor callableMemberDescriptor) {
@@ -377,14 +372,14 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
         descriptorRendererImpl.z1(variableDescriptor, sb, z);
     }
 
-    private final void B0(StringBuilder sb, C9429m0 c9429m0) {
+    private final void B0(StringBuilder sb, m0 m0Var) {
         RenderingFormat k0 = k0();
         RenderingFormat renderingFormat = RenderingFormat.HTML;
         if (k0 == renderingFormat) {
             sb.append("<font color=\"808080\"><i>");
         }
         sb.append(" /* = ");
-        d1(sb, c9429m0.getExpandedType());
+        d1(sb, m0Var.getExpandedType());
         sb.append(" */");
         if (k0() == renderingFormat) {
             sb.append("</i></font>");
@@ -645,7 +640,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
                     arrayList.add(obj);
                 }
             }
-            q3 = C8215n.q(arrayList, 10);
+            q3 = n.q(arrayList, 10);
             ArrayList arrayList2 = new ArrayList(q3);
             for (ValueParameterDescriptor valueParameterDescriptor : arrayList) {
                 arrayList2.add(valueParameterDescriptor.getName());
@@ -653,7 +648,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             list = arrayList2;
         }
         if (list == null) {
-            list = C8214m.g();
+            list = m.g();
         }
         ArrayList<ni1> arrayList3 = new ArrayList();
         for (Object obj2 : list) {
@@ -663,13 +658,13 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
                 arrayList3.add(obj2);
             }
         }
-        q = C8215n.q(arrayList3, 10);
+        q = n.q(arrayList3, 10);
         ArrayList arrayList4 = new ArrayList(q);
         for (ni1 ni1Var2 : arrayList3) {
             arrayList4.add(b41.r(ni1Var2.b(), " = ..."));
         }
         Set<Map.Entry<ni1, fn<?>>> entrySet = allValueArguments.entrySet();
-        q2 = C8215n.q(entrySet, 10);
+        q2 = n.q(entrySet, 10);
         ArrayList arrayList5 = new ArrayList(q2);
         Iterator<T> it = entrySet.iterator();
         while (it.hasNext()) {
@@ -761,9 +756,9 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     private final String G1(String str, String str2, String str3, String str4, String str5) {
         boolean F;
         boolean F2;
-        F = C8604o.F(str, str2, false, 2, null);
+        F = o.F(str, str2, false, 2, null);
         if (F) {
-            F2 = C8604o.F(str3, str4, false, 2, null);
+            F2 = o.F(str3, str4, false, 2, null);
             if (F2) {
                 int length = str2.length();
                 Objects.requireNonNull(str, "null cannot be cast to non-null type java.lang.String");
@@ -800,9 +795,9 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     private final boolean H1(z71 z71Var) {
         boolean z;
         if (up0.m(z71Var)) {
-            List<TypeProjection> b = z71Var.b();
-            if (!(b instanceof Collection) || !b.isEmpty()) {
-                for (TypeProjection typeProjection : b) {
+            List<TypeProjection> b2 = z71Var.b();
+            if (!(b2 instanceof Collection) || !b2.isEmpty()) {
+                for (TypeProjection typeProjection : b2) {
                     if (typeProjection.isStarProjection()) {
                         z = false;
                         break;
@@ -870,7 +865,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     }
 
     private final boolean I1(boolean z) {
-        int i = C8479b.$EnumSwitchMapping$1[T().ordinal()];
+        int i = b.$EnumSwitchMapping$1[T().ordinal()];
         if (i != 1) {
             if (i != 2) {
                 if (i == 3) {
@@ -941,17 +936,17 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             o0 = StringsKt__StringsKt.o0(DescriptorRenderer.c(this, ((d6) fnVar).b(), null, 2, null), m80.DINAMIC_PREFIX_AT);
             return o0;
         } else if (fnVar instanceof g71) {
-            g71.AbstractC9159b b = ((g71) fnVar).b();
-            if (b instanceof g71.AbstractC9159b.C9160a) {
-                return ((g71.AbstractC9159b.C9160a) b).a() + "::class";
-            } else if (b instanceof g71.AbstractC9159b.C9161b) {
-                g71.AbstractC9159b.C9161b c9161b = (g71.AbstractC9159b.C9161b) b;
-                String b2 = c9161b.b().b().b();
-                b41.h(b2, "classValue.classId.asSingleFqName().asString()");
-                for (int i = 0; i < c9161b.a(); i++) {
-                    b2 = "kotlin.Array<" + b2 + '>';
+            g71.b b2 = ((g71) fnVar).b();
+            if (b2 instanceof g71.b.a) {
+                return ((g71.b.a) b2).a() + "::class";
+            } else if (b2 instanceof g71.b.C0453b) {
+                g71.b.C0453b c0453b = (g71.b.C0453b) b2;
+                String b3 = c0453b.b().b().b();
+                b41.h(b3, "classValue.classId.asSingleFqName().asString()");
+                for (int i = 0; i < c0453b.a(); i++) {
+                    b3 = "kotlin.Array<" + b3 + '>';
                 }
-                return b41.r(b2, "::class");
+                return b41.r(b3, "::class");
             } else {
                 throw new NoWhenBranchMatchedException();
             }
@@ -1008,7 +1003,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     }
 
     private final String P0(String str) {
-        int i = C8479b.$EnumSwitchMapping$0[k0().ordinal()];
+        int i = b.$EnumSwitchMapping$0[k0().ordinal()];
         if (i != 1) {
             if (i == 2) {
                 return "<font color=red><b>" + str + "</b></font>";
@@ -1063,7 +1058,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
         C1(valueParameters, functionDescriptor.hasSynthesizedParameterNames(), sb);
         m1(functionDescriptor, sb);
         z71 returnType = functionDescriptor.getReturnType();
-        if (!s0() && (n0() || returnType == null || !AbstractC8271b.A0(returnType))) {
+        if (!s0() && (n0() || returnType == null || !kotlin.reflect.jvm.internal.impl.builtins.b.A0(returnType))) {
             sb.append(": ");
             sb.append(returnType == null ? "[NULL]" : g(returnType));
         }
@@ -1090,8 +1085,8 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
                 sb.insert(length, '(');
             } else {
                 if (z2) {
-                    O0 = C8606q.O0(sb);
-                    C8590b.c(O0);
+                    O0 = q.O0(sb);
+                    kotlin.text.b.c(O0);
                     T = StringsKt__StringsKt.T(sb);
                     if (sb.charAt(T - 1) != ')') {
                         T2 = StringsKt__StringsKt.T(sb);
@@ -1158,7 +1153,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     }
 
     private final String U0(String str) {
-        int i = C8479b.$EnumSwitchMapping$0[k0().ordinal()];
+        int i = b.$EnumSwitchMapping$0[k0().ordinal()];
         if (i != 1) {
             if (i == 2) {
                 if (D()) {
@@ -1220,15 +1215,15 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
 
     private final void c1(StringBuilder sb, z71 z71Var) {
         gu2 f = z71Var.f();
-        C9429m0 c9429m0 = f instanceof C9429m0 ? (C9429m0) f : null;
-        if (c9429m0 != null) {
+        m0 m0Var = f instanceof m0 ? (m0) f : null;
+        if (m0Var != null) {
             if (f0()) {
-                d1(sb, c9429m0.getExpandedType());
+                d1(sb, m0Var.getExpandedType());
                 return;
             }
-            d1(sb, c9429m0.o());
+            d1(sb, m0Var.o());
             if (g0()) {
-                B0(sb, c9429m0);
+                B0(sb, m0Var);
                 return;
             }
             return;
@@ -1370,7 +1365,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
                 F0(sb, setter, AnnotationUseSiteTarget.PROPERTY_SETTER);
                 List<ValueParameterDescriptor> valueParameters = setter.getValueParameters();
                 b41.h(valueParameters, "setter.valueParameters");
-                ValueParameterDescriptor valueParameterDescriptor = (ValueParameterDescriptor) C8212k.q0(valueParameters);
+                ValueParameterDescriptor valueParameterDescriptor = (ValueParameterDescriptor) k.q0(valueParameters);
                 b41.h(valueParameterDescriptor, AdvanceSetting.NETWORK_TYPE);
                 F0(sb, valueParameterDescriptor, AnnotationUseSiteTarget.SETTER_PARAMETER);
             }
@@ -1406,7 +1401,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
         if (!b41.d(fd2Var, fr2.CANT_INFER_FUNCTION_PARAM_TYPE) && !fr2.l(fd2Var)) {
             if (kf0.t(fd2Var)) {
                 if (m0()) {
-                    String ni1Var = ((kf0.C9356f) fd2Var.c()).b().getName().toString();
+                    String ni1Var = ((kf0.f) fd2Var.c()).b().getName().toString();
                     b41.h(ni1Var, "type.constructor as Unin…escriptor.name.toString()");
                     sb.append(P0(ni1Var));
                     return;
@@ -1435,7 +1430,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     }
 
     private final void p1(ClassDescriptor classDescriptor, StringBuilder sb) {
-        if (t0() || AbstractC8271b.l0(classDescriptor.getDefaultType())) {
+        if (t0() || kotlin.reflect.jvm.internal.impl.builtins.b.l0(classDescriptor.getDefaultType())) {
             return;
         }
         Collection<z71> supertypes = classDescriptor.getTypeConstructor().getSupertypes();
@@ -1443,7 +1438,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
         if (supertypes.isEmpty()) {
             return;
         }
-        if (supertypes.size() == 1 && AbstractC8271b.b0(supertypes.iterator().next())) {
+        if (supertypes.size() == 1 && kotlin.reflect.jvm.internal.impl.builtins.b.b0(supertypes.iterator().next())) {
             return;
         }
         o1(sb);
@@ -1487,13 +1482,13 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     }
 
     private final void u1(StringBuilder sb, z71 z71Var, TypeConstructor typeConstructor) {
-        tt1 a = TypeParameterUtilsKt.a(z71Var);
-        if (a == null) {
+        tt1 a2 = TypeParameterUtilsKt.a(z71Var);
+        if (a2 == null) {
             sb.append(t1(typeConstructor));
             sb.append(s1(z71Var.b()));
             return;
         }
-        i1(sb, a);
+        i1(sb, a2);
     }
 
     private final void v(StringBuilder sb, DeclarationDescriptor declarationDescriptor) {
@@ -1576,14 +1571,14 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
         int size = typeParameterDescriptor.getUpperBounds().size();
         if ((size > 1 && !z) || size == 1) {
             z71 next = typeParameterDescriptor.getUpperBounds().iterator().next();
-            if (!AbstractC8271b.h0(next)) {
+            if (!kotlin.reflect.jvm.internal.impl.builtins.b.h0(next)) {
                 sb.append(" : ");
                 b41.h(next, "upperBound");
                 sb.append(g(next));
             }
         } else if (z) {
             for (z71 z71Var : typeParameterDescriptor.getUpperBounds()) {
-                if (!AbstractC8271b.h0(z71Var)) {
+                if (!kotlin.reflect.jvm.internal.impl.builtins.b.h0(z71Var)) {
                     if (z2) {
                         sb.append(" : ");
                     } else {
@@ -1601,7 +1596,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     }
 
     private final String x() {
-        int i = C8479b.$EnumSwitchMapping$0[k0().ordinal()];
+        int i = b.$EnumSwitchMapping$0[k0().ordinal()];
         if (i != 1) {
             if (i == 2) {
                 return "&rarr;";
@@ -1647,9 +1642,9 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     private final boolean y(String str, String str2) {
         String z;
         boolean p;
-        z = C8604o.z(str2, "?", "", false, 4, null);
+        z = o.z(str2, "?", "", false, 4, null);
         if (!b41.d(str, z)) {
-            p = C8604o.p(str2, "?", false, 2, null);
+            p = o.p(str2, "?", false, 2, null);
             if (!p || !b41.d(b41.r(str, "?"), str2)) {
                 if (!b41.d('(' + str + ")?", str2)) {
                     return false;
@@ -1660,7 +1655,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     }
 
     private final boolean y0(AnnotationDescriptor annotationDescriptor) {
-        return b41.d(annotationDescriptor.getFqName(), C8277c.C8278a.parameterName);
+        return b41.d(annotationDescriptor.getFqName(), c.a.parameterName);
     }
 
     private final void y1(List<? extends TypeParameterDescriptor> list, StringBuilder sb, boolean z) {
@@ -1802,7 +1797,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     @NotNull
     public String X0(@NotNull String str) {
         b41.i(str, "message");
-        int i = C8479b.$EnumSwitchMapping$0[k0().ordinal()];
+        int i = b.$EnumSwitchMapping$0[k0().ordinal()];
         if (i != 1) {
             if (i == 2) {
                 return "<i>" + str + "</i>";
@@ -1825,7 +1820,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
     public String a(@NotNull DeclarationDescriptor declarationDescriptor) {
         b41.i(declarationDescriptor, "declarationDescriptor");
         StringBuilder sb = new StringBuilder();
-        declarationDescriptor.accept(new C8477a(this), sb);
+        declarationDescriptor.accept(new a(this), sb);
         if (q0()) {
             v(sb, declarationDescriptor);
         }
@@ -1855,7 +1850,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
                 CollectionsKt___CollectionsKt.X(E0, sb, AVFSCacheConstants.COMMA_SEP, jn1.BRACKET_START_STR, jn1.BRACKET_END_STR, 0, null, null, 112, null);
             }
         }
-        if (p0() && (a81.a(type) || (type.c().getDeclarationDescriptor() instanceof NotFoundClasses.C8294b))) {
+        if (p0() && (a81.a(type) || (type.c().getDeclarationDescriptor() instanceof NotFoundClasses.b))) {
             sb.append(" /* annotation class not found */");
         }
         String sb2 = sb.toString();
@@ -1873,22 +1868,22 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
 
     @Override // kotlin.reflect.jvm.internal.impl.renderer.DescriptorRenderer
     @NotNull
-    public String d(@NotNull String str, @NotNull String str2, @NotNull AbstractC8271b abstractC8271b) {
+    public String d(@NotNull String str, @NotNull String str2, @NotNull kotlin.reflect.jvm.internal.impl.builtins.b bVar) {
         String K0;
         String K02;
         boolean F;
         b41.i(str, "lowerRendered");
         b41.i(str2, "upperRendered");
-        b41.i(abstractC8271b, "builtIns");
+        b41.i(bVar, "builtIns");
         if (y(str, str2)) {
-            F = C8604o.F(str2, jn1.BRACKET_START_STR, false, 2, null);
+            F = o.F(str2, jn1.BRACKET_START_STR, false, 2, null);
             if (F) {
                 return '(' + str + ")!";
             }
             return b41.r(str, jn1.AND_NOT);
         }
         ClassifierNamePolicy F2 = F();
-        ClassDescriptor w = abstractC8271b.w();
+        ClassDescriptor w = bVar.w();
         b41.h(w, "builtIns.collection");
         K0 = StringsKt__StringsKt.K0(F2.renderClassifier(w, this), "Collection", null, 2, null);
         String r = b41.r(K0, "Mutable");
@@ -1901,7 +1896,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
             return G12;
         }
         ClassifierNamePolicy F3 = F();
-        ClassDescriptor j = abstractC8271b.j();
+        ClassDescriptor j = bVar.j();
         b41.h(j, "builtIns.array");
         K02 = StringsKt__StringsKt.K0(F3.renderClassifier(j, this), "Array", null, 2, null);
         String G13 = G1(str, b41.r(K02, z("Array<")), str2, b41.r(K02, z("Array<out ")), b41.r(K02, z("Array<(out) ")));
@@ -1986,7 +1981,7 @@ public final class DescriptorRendererImpl extends DescriptorRenderer implements 
         List<? extends TypeProjection> e;
         b41.i(typeProjection, "typeProjection");
         StringBuilder sb = new StringBuilder();
-        e = C8213l.e(typeProjection);
+        e = l.e(typeProjection);
         w(sb, e);
         String sb2 = sb.toString();
         b41.h(sb2, "StringBuilder().apply(builderAction).toString()");

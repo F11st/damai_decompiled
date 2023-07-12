@@ -19,12 +19,11 @@ public class OrderInvoicePresenter extends OrderInvoiceContract.Presenter {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.presenter.OrderInvoicePresenter$a */
     /* loaded from: classes8.dex */
-    public class C2144a implements Action<String> {
+    public class a implements Action<String> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2144a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -39,7 +38,7 @@ public class OrderInvoicePresenter extends OrderInvoiceContract.Presenter {
         }
     }
 
-    @Override // cn.damai.common.app.base.AbstractC0470a
+    @Override // cn.damai.common.app.base.a
     public void onStart() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-2005798136")) {
@@ -47,7 +46,7 @@ public class OrderInvoicePresenter extends OrderInvoiceContract.Presenter {
             return;
         }
         super.onStart();
-        this.mDMMessage.b("1", new C2144a());
+        this.mDMMessage.b("1", new a());
     }
 
     @Override // cn.damai.trade.newtradeorder.ui.orderdetail.contract.OrderInvoiceContract.Presenter

@@ -1,7 +1,7 @@
 package com.taobao.android.dinamicx.template.download;
 
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DinamicXEngine;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import com.taobao.android.dinamicx.notification.DXNotificationCenter;
 import com.taobao.android.dinamicx.thread.DXDownLoadRunnable;
@@ -47,7 +47,7 @@ public class DXDownloadManager {
     public void f(String str, DXTemplateItem dXTemplateItem, IDXUnzipCallback iDXUnzipCallback, IDXDownloadCallback iDXDownloadCallback) {
         byte[] download;
         t00<DXTemplateItem> t00Var = new t00<>();
-        C6368e c6368e = new C6368e(str);
+        e eVar = new e(str);
         IDXDownloader iDXDownloader = this.a;
         if (iDXDownloader instanceof e01) {
             download = ((e01) iDXDownloader).a(dXTemplateItem.templateUrl, str, dXTemplateItem);
@@ -55,20 +55,20 @@ public class DXDownloadManager {
             download = iDXDownloader.download(dXTemplateItem.templateUrl);
         }
         if (download == null) {
-            C6368e.C6369a c6369a = new C6368e.C6369a("Downloader", "Downloader_download", 60000);
+            e.a aVar = new e.a("Downloader", "Downloader_download", 60000);
             t00Var.a = dXTemplateItem;
-            c6368e.b = dXTemplateItem;
-            c6368e.c.add(c6369a);
-            t00Var.d(c6368e);
+            eVar.b = dXTemplateItem;
+            eVar.c.add(aVar);
+            t00Var.d(eVar);
             iDXDownloadCallback.onFailed(t00Var);
             return;
         }
-        if (C6399b.g(dXTemplateItem, download, dz.c().b() + r10.DIR + str + r10.DIR + dXTemplateItem.name + r10.DIR + dXTemplateItem.version + r10.DIR, iDXUnzipCallback, c6368e)) {
+        if (b.g(dXTemplateItem, download, dz.c().b() + r10.DIR + str + r10.DIR + dXTemplateItem.name + r10.DIR + dXTemplateItem.version + r10.DIR, iDXUnzipCallback, eVar)) {
             iDXDownloadCallback.onFinished(dXTemplateItem);
             return;
         }
         t00Var.a = dXTemplateItem;
-        t00Var.d(c6368e);
+        t00Var.d(eVar);
         iDXDownloadCallback.onFailed(t00Var);
     }
 
@@ -95,8 +95,8 @@ public class DXDownloadManager {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void j(C6368e c6368e) {
-        DXAppMonitor.n(c6368e);
+    public void j(e eVar) {
+        DXAppMonitor.n(eVar);
     }
 
     public void g(final String str, final List<DXTemplateItem> list, final IDXUnzipCallback iDXUnzipCallback, final boolean z) {
@@ -108,12 +108,12 @@ public class DXDownloadManager {
             /* compiled from: Taobao */
             /* renamed from: com.taobao.android.dinamicx.template.download.DXDownloadManager$1$a */
             /* loaded from: classes11.dex */
-            class C6397a implements IDXDownloadCallback {
-                final /* synthetic */ C6398a a;
+            class a implements IDXDownloadCallback {
+                final /* synthetic */ com.taobao.android.dinamicx.template.download.a a;
                 final /* synthetic */ long b;
 
-                C6397a(C6398a c6398a, long j) {
-                    this.a = c6398a;
+                a(com.taobao.android.dinamicx.template.download.a aVar, long j) {
+                    this.a = aVar;
                     this.b = j;
                 }
 
@@ -122,9 +122,9 @@ public class DXDownloadManager {
                     if (wt.i0()) {
                         DXDownloadManager.this.h(t00Var.a);
                     }
-                    C6398a c6398a = this.a;
-                    c6398a.b = false;
-                    c6398a.a = t00Var.a;
+                    com.taobao.android.dinamicx.template.download.a aVar = this.a;
+                    aVar.b = false;
+                    aVar.a = t00Var.a;
                     DXNotificationCenter dXNotificationCenter = (DXNotificationCenter) DXDownloadManager.this.b.get();
                     if (dXNotificationCenter != null && z) {
                         dXNotificationCenter.d(this.a);
@@ -139,9 +139,9 @@ public class DXDownloadManager {
                     if (wt.i0()) {
                         DXDownloadManager.this.h(dXTemplateItem);
                     }
-                    C6398a c6398a = this.a;
-                    c6398a.b = true;
-                    c6398a.a = dXTemplateItem;
+                    com.taobao.android.dinamicx.template.download.a aVar = this.a;
+                    aVar.b = true;
+                    aVar.a = dXTemplateItem;
                     DXNotificationCenter dXNotificationCenter = (DXNotificationCenter) DXDownloadManager.this.b.get();
                     if (dXNotificationCenter != null && z) {
                         dXNotificationCenter.d(this.a);
@@ -155,8 +155,8 @@ public class DXDownloadManager {
             public void run() {
                 for (DXTemplateItem dXTemplateItem : list) {
                     long nanoTime = System.nanoTime();
-                    C6398a c6398a = new C6398a();
-                    DXDownloadManager.this.f(str, dXTemplateItem, iDXUnzipCallback, new C6397a(c6398a, nanoTime));
+                    com.taobao.android.dinamicx.template.download.a aVar = new com.taobao.android.dinamicx.template.download.a();
+                    DXDownloadManager.this.f(str, dXTemplateItem, iDXUnzipCallback, new a(aVar, nanoTime));
                 }
             }
         });

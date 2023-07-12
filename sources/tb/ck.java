@@ -20,13 +20,12 @@ public final class ck implements ICloudConfig, OConfigListener {
     private Map<String, String[]> b = new HashMap();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ck$a */
     /* loaded from: classes7.dex */
-    public static final class C9011a implements OConfigListener {
+    public static final class a implements OConfigListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ICloudConfig.OnGroupUpdateListener a;
 
-        C9011a(ICloudConfig.OnGroupUpdateListener onGroupUpdateListener) {
+        a(ICloudConfig.OnGroupUpdateListener onGroupUpdateListener) {
             this.a = onGroupUpdateListener;
         }
 
@@ -298,7 +297,7 @@ public final class ck implements ICloudConfig, OConfigListener {
             ipChange.ipc$dispatch("553689647", new Object[]{this, str, onGroupUpdateListener, Boolean.valueOf(z)});
         } else if (str == null || onGroupUpdateListener == null) {
         } else {
-            OrangeConfig.getInstance().registerListener(new String[]{str}, new C9011a(onGroupUpdateListener), z);
+            OrangeConfig.getInstance().registerListener(new String[]{str}, new a(onGroupUpdateListener), z);
         }
     }
 

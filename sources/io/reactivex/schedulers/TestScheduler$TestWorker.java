@@ -10,9 +10,9 @@ final class TestScheduler$TestWorker extends Scheduler.Worker {
     /* loaded from: classes3.dex */
     final class QueueRemove implements Runnable {
         final /* synthetic */ TestScheduler$TestWorker this$1;
-        final C8171b timedAction;
+        final b timedAction;
 
-        QueueRemove(TestScheduler$TestWorker testScheduler$TestWorker, C8171b c8171b) {
+        QueueRemove(TestScheduler$TestWorker testScheduler$TestWorker, b bVar) {
         }
 
         @Override // java.lang.Runnable

@@ -6,7 +6,7 @@ import android.os.Bundle;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.h5container.UniH5ContainerSwitcher;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import tb.cs;
@@ -45,7 +45,7 @@ public class NavHandler implements DMNav.NavExceptionHandler {
                 if (UniH5ContainerSwitcher.getInstance().shouldInterceptUrl(dataString)) {
                     DMNav.from(mu0.a()).stack(getStackUriProxy(intent)).withExtras(bundle).toUri(NavUri.b(cs.u));
                 } else {
-                    DMNav.from(mu0.a()).stack(getStackUriProxy(intent)).withExtras(bundle).toUri(NavUri.b(C3834a.C3837c.d));
+                    DMNav.from(mu0.a()).stack(getStackUriProxy(intent)).withExtras(bundle).toUri(NavUri.b(a.c.d));
                 }
             }
         }

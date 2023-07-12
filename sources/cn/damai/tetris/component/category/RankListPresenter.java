@@ -14,10 +14,10 @@ import cn.damai.uikit.nav.NavProxy;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
-import tb.C9039db;
-import tb.C9548pb;
 import tb.d23;
+import tb.db;
 import tb.ja;
+import tb.pb;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -26,14 +26,13 @@ public class RankListPresenter extends BasePresenter<RankListContract.Model, Ran
     private TrackInfo mTrackInfo;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.category.RankListPresenter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1791a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ RankListContract.Model a;
         final /* synthetic */ String b;
 
-        View$OnClickListenerC1791a(RankListContract.Model model, String str) {
+        a(RankListContract.Model model, String str) {
             this.a = model;
             this.b = str;
         }
@@ -80,7 +79,7 @@ public class RankListPresenter extends BasePresenter<RankListContract.Model, Ran
         }
         TrackInfo trackInfo = model.getTrackInfo();
         this.mTrackInfo = trackInfo;
-        String string = trackInfo != null ? trackInfo.getString(C9039db.TRACKKEY_CATEGORY_NAME) : "";
+        String string = trackInfo != null ? trackInfo.getString(db.TRACKKEY_CATEGORY_NAME) : "";
         if (getView().getHolder() == null || model.getBean() == null) {
             return;
         }
@@ -88,13 +87,13 @@ public class RankListPresenter extends BasePresenter<RankListContract.Model, Ran
         RankItemBean bean = model.getBean();
         holder.a(bean);
         HashMap<String, String> f = d23.f();
-        d23.h(f, C9548pb.PRE_CONTENT_ID, bean.id);
-        d23.h(f, C9548pb.PRE_CONTENT_TYPE, "ranklist");
+        d23.h(f, pb.PRE_CONTENT_ID, bean.id);
+        d23.h(f, pb.PRE_CONTENT_TYPE, "ranklist");
         if (getContext().getActivity().getClass().getName().equals("cn.damai.homepage.MainActivity")) {
             holder.b();
         }
         View view = holder.itemView;
         userTrackExpose(view, "item_" + model.getIndex(), f, false);
-        getView().getRootView().setOnClickListener(new View$OnClickListenerC1791a(model, string));
+        getView().getRootView().setOnClickListener(new a(model, string));
     }
 }

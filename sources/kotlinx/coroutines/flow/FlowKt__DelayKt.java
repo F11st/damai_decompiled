@@ -24,6 +24,6 @@ public final /* synthetic */ class FlowKt__DelayKt {
         if ((i & 2) != 0) {
             j2 = j;
         }
-        return C8672c.p(coroutineScope, j, j2);
+        return c.p(coroutineScope, j, j2);
     }
 }

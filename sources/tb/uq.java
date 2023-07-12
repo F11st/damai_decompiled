@@ -4,7 +4,6 @@ import cn.damai.common.badge.DMBadgeListener;
 import cn.damai.common.badge.listener.BadgeListenerManager;
 import cn.damai.common.badge.update.BadgeLoginMonitor;
 import cn.damai.common.badge.update.BadgeLoginMonitorImpl;
-import cn.damai.common.badge.update.C0488a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.List;
@@ -16,7 +15,7 @@ public class uq {
     private static uq e = null;
     public static String f = "MARK_QUERY_NOLOGIN";
     private boolean a = false;
-    private C0488a b;
+    private cn.damai.common.badge.update.a b;
     private BadgeListenerManager c;
     private BadgeLoginMonitor d;
 
@@ -47,7 +46,7 @@ public class uq {
         } else {
             aa aaVar = new aa();
             this.c = aaVar;
-            this.b = new C0488a(aaVar);
+            this.b = new cn.damai.common.badge.update.a(aaVar);
             BadgeLoginMonitorImpl badgeLoginMonitorImpl = new BadgeLoginMonitorImpl();
             this.d = badgeLoginMonitorImpl;
             badgeLoginMonitorImpl.setLoginCallback(this.b);

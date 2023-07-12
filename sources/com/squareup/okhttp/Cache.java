@@ -24,15 +24,15 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 import mtopsdk.network.util.Constants;
-import okio.AbstractC8839c;
-import okio.AbstractC8840d;
 import okio.Buffer;
 import okio.BufferedSink;
 import okio.BufferedSource;
 import okio.ByteString;
-import okio.C8844h;
 import okio.Sink;
 import okio.Source;
+import okio.c;
+import okio.d;
+import okio.h;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -92,8 +92,8 @@ public final class Cache {
             this.editor = editor;
             Sink newSink = editor.newSink(1);
             this.cacheOut = newSink;
-            this.body = new AbstractC8839c(newSink) { // from class: com.squareup.okhttp.Cache.CacheRequestImpl.1
-                @Override // okio.AbstractC8839c, okio.Sink, java.io.Closeable, java.lang.AutoCloseable
+            this.body = new c(newSink) { // from class: com.squareup.okhttp.Cache.CacheRequestImpl.1
+                @Override // okio.c, okio.Sink, java.io.Closeable, java.lang.AutoCloseable
                 public void close() throws IOException {
                     synchronized (Cache.this) {
                         if (CacheRequestImpl.this.done) {
@@ -143,8 +143,8 @@ public final class Cache {
             this.snapshot = snapshot;
             this.contentType = str;
             this.contentLength = str2;
-            this.bodySource = C8844h.d(new AbstractC8840d(snapshot.getSource(1)) { // from class: com.squareup.okhttp.Cache.CacheResponseBody.1
-                @Override // okio.AbstractC8840d, okio.Source, java.io.Closeable, java.lang.AutoCloseable
+            this.bodySource = h.d(new d(snapshot.getSource(1)) { // from class: com.squareup.okhttp.Cache.CacheResponseBody.1
+                @Override // okio.d, okio.Source, java.io.Closeable, java.lang.AutoCloseable
                 public void close() throws IOException {
                     snapshot.close();
                     super.close();
@@ -387,7 +387,7 @@ public final class Cache {
                 while (this.delegate.hasNext()) {
                     DiskLruCache.Snapshot next = this.delegate.next();
                     try {
-                        this.nextUrl = C8844h.d(next.getSource(0)).readUtf8LineStrict();
+                        this.nextUrl = h.d(next.getSource(0)).readUtf8LineStrict();
                         return true;
                     } catch (IOException unused) {
                     } finally {
@@ -434,7 +434,7 @@ public final class Cache {
 
         public Entry(Source source) throws IOException {
             try {
-                BufferedSource d = C8844h.d(source);
+                BufferedSource d = h.d(source);
                 this.url = d.readUtf8LineStrict();
                 this.requestMethod = d.readUtf8LineStrict();
                 Headers.Builder builder = new Headers.Builder();
@@ -517,7 +517,7 @@ public final class Cache {
         }
 
         public void writeTo(DiskLruCache.Editor editor) throws IOException {
-            BufferedSink c = C8844h.c(editor.newSink(0));
+            BufferedSink c = h.c(editor.newSink(0));
             c.writeUtf8(this.url);
             c.writeByte(10);
             c.writeUtf8(this.requestMethod);

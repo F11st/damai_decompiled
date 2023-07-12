@@ -2,7 +2,6 @@ package kotlinx.coroutines.flow.internal;
 
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.functions.Function3;
@@ -50,7 +49,7 @@ public final class ChannelFlowTransformLatest$flowCollect$3$invokeSuspend$$inlin
     public final Object invokeSuspend(@NotNull Object obj) {
         Object d;
         Function3 function3;
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         int i = this.label;
         if (i == 0) {
             i32.b(obj);

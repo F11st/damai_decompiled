@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.trade.R$drawable;
 import cn.damai.trade.R$id;
@@ -28,7 +27,7 @@ import tb.og1;
 public final class CreditExchangeHeaderViewHolder extends RecyclerView.ViewHolder {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C2434a Companion = new C2434a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final MoImageView a;
     @NotNull
@@ -37,15 +36,14 @@ public final class CreditExchangeHeaderViewHolder extends RecyclerView.ViewHolde
     private final TextView c;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.ui.viewholder.CreditExchangeHeaderViewHolder$a */
     /* loaded from: classes16.dex */
-    public static final class C2434a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C2434a() {
+        private a() {
         }
 
-        public /* synthetic */ C2434a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -78,21 +76,21 @@ public final class CreditExchangeHeaderViewHolder extends RecyclerView.ViewHolde
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static final void e(CreditExchangeHeaderViewHolder creditExchangeHeaderViewHolder, DMImageCreator.C0502e c0502e) {
+    public static final void e(CreditExchangeHeaderViewHolder creditExchangeHeaderViewHolder, DMImageCreator.e eVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1535110500")) {
-            ipChange.ipc$dispatch("1535110500", new Object[]{creditExchangeHeaderViewHolder, c0502e});
+            ipChange.ipc$dispatch("1535110500", new Object[]{creditExchangeHeaderViewHolder, eVar});
             return;
         }
         b41.i(creditExchangeHeaderViewHolder, "this$0");
-        creditExchangeHeaderViewHolder.g(c0502e.b);
+        creditExchangeHeaderViewHolder.g(eVar.b);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static final void f(CreditExchangeHeaderViewHolder creditExchangeHeaderViewHolder, DMImageCreator.C0501d c0501d) {
+    public static final void f(CreditExchangeHeaderViewHolder creditExchangeHeaderViewHolder, DMImageCreator.d dVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "768469912")) {
-            ipChange.ipc$dispatch("768469912", new Object[]{creditExchangeHeaderViewHolder, c0501d});
+            ipChange.ipc$dispatch("768469912", new Object[]{creditExchangeHeaderViewHolder, dVar});
             return;
         }
         b41.i(creditExchangeHeaderViewHolder, "this$0");
@@ -100,16 +98,16 @@ public final class CreditExchangeHeaderViewHolder extends RecyclerView.ViewHolde
     }
 
     private final void g(final Bitmap bitmap) {
-        og1.C9521a j;
+        og1.a j;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "350662216")) {
             ipChange.ipc$dispatch("350662216", new Object[]{this, bitmap});
             return;
         }
         final MoImageView moImageView = this.a;
-        og1.C9521a roundingParams = moImageView.getRoundingParams();
+        og1.a roundingParams = moImageView.getRoundingParams();
         if (roundingParams == null || (j = roundingParams.j(ea0.b(6.0f), ea0.b(6.0f), 0.0f, 0.0f)) == null) {
-            j = new og1.C9521a().j(ea0.b(6.0f), ea0.b(6.0f), 0.0f, 0.0f);
+            j = new og1.a().j(ea0.b(6.0f), ea0.b(6.0f), 0.0f, 0.0f);
         }
         moImageView.setRoundingParams(j);
         moImageView.post(new Runnable() { // from class: tb.yp
@@ -164,15 +162,15 @@ public final class CreditExchangeHeaderViewHolder extends RecyclerView.ViewHolde
             ipChange.ipc$dispatch("-691043426", new Object[]{this, str, str2, str3});
             return;
         }
-        C0504a.b().c(str).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.xp
+        cn.damai.common.image.a.b().c(str).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.xp
             @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-            public final void onSuccess(DMImageCreator.C0502e c0502e) {
-                CreditExchangeHeaderViewHolder.e(CreditExchangeHeaderViewHolder.this, c0502e);
+            public final void onSuccess(DMImageCreator.e eVar) {
+                CreditExchangeHeaderViewHolder.e(CreditExchangeHeaderViewHolder.this, eVar);
             }
         }).e(new DMImageCreator.DMImageFailListener() { // from class: tb.wp
             @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-            public final void onFail(DMImageCreator.C0501d c0501d) {
-                CreditExchangeHeaderViewHolder.f(CreditExchangeHeaderViewHolder.this, c0501d);
+            public final void onFail(DMImageCreator.d dVar) {
+                CreditExchangeHeaderViewHolder.f(CreditExchangeHeaderViewHolder.this, dVar);
             }
         }).f();
         TextView textView = this.b;

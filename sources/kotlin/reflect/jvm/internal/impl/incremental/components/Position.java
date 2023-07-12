@@ -9,20 +9,19 @@ import tb.k50;
 /* loaded from: classes3.dex */
 public final class Position implements Serializable {
     @NotNull
-    public static final C8325a Companion = new C8325a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final Position NO_POSITION = new Position(-1, -1);
     private final int column;
     private final int line;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.incremental.components.Position$a */
     /* loaded from: classes3.dex */
-    public static final class C8325a {
-        private C8325a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8325a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

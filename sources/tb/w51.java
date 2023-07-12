@@ -33,6 +33,6 @@ public final class w51 extends uy2 {
     @Override // tb.uy2
     @NotNull
     public uy2 d() {
-        return ty2.C9743g.INSTANCE;
+        return ty2.g.INSTANCE;
     }
 }

@@ -2,7 +2,7 @@ package com.youku.live.dago.widgetlib.interactive.gift.view.Particle.initializer
 
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import com.youku.live.dago.widgetlib.interactive.gift.view.Particle.C7945Particle;
+import com.youku.live.dago.widgetlib.interactive.gift.view.Particle.Particle;
 import java.util.Random;
 
 /* compiled from: Taobao */
@@ -42,10 +42,10 @@ public class SpeedModuleAndRangeInitializer implements ParticleInitializer {
     }
 
     @Override // com.youku.live.dago.widgetlib.interactive.gift.view.Particle.initializers.ParticleInitializer
-    public void initParticle(C7945Particle c7945Particle, Random random) {
+    public void initParticle(Particle particle, Random random) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-599344959")) {
-            ipChange.ipc$dispatch("-599344959", new Object[]{this, c7945Particle, random});
+            ipChange.ipc$dispatch("-599344959", new Object[]{this, particle, random});
             return;
         }
         float nextFloat = random.nextFloat();
@@ -59,8 +59,8 @@ public class SpeedModuleAndRangeInitializer implements ParticleInitializer {
         }
         double radians = Math.toRadians(i2);
         double d = f3;
-        c7945Particle.mSpeedX = (float) (Math.cos(radians) * d);
-        c7945Particle.mSpeedY = (float) (d * Math.sin(radians));
-        c7945Particle.mInitialRotation = i2 + 90;
+        particle.mSpeedX = (float) (Math.cos(radians) * d);
+        particle.mSpeedY = (float) (d * Math.sin(radians));
+        particle.mInitialRotation = i2 + 90;
     }
 }

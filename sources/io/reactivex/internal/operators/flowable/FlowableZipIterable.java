@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.subscriptions.EmptySubscription;
@@ -104,13 +104,13 @@ public final class FlowableZipIterable<T, U, V> extends AbstractFlowableWithUpst
         }
     }
 
-    public FlowableZipIterable(AbstractC8147b<T> abstractC8147b, Iterable<U> iterable, BiFunction<? super T, ? super U, ? extends V> biFunction) {
-        super(abstractC8147b);
+    public FlowableZipIterable(b<T> bVar, Iterable<U> iterable, BiFunction<? super T, ? super U, ? extends V> biFunction) {
+        super(bVar);
         this.other = iterable;
         this.zipper = biFunction;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super V> subscriber) {
         try {
             Iterator it = (Iterator) ObjectHelper.requireNonNull(this.other.iterator(), "The iterator returned by other is null");

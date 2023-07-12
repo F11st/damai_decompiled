@@ -1,6 +1,6 @@
 package com.huawei.hmf.tasks;
 
-import com.huawei.hmf.tasks.a.C5494a;
+import com.huawei.hmf.tasks.a.a;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 
@@ -8,9 +8,9 @@ import java.util.concurrent.ExecutorService;
 /* loaded from: classes10.dex */
 public final class TaskExecutors {
     private static final TaskExecutors INSTANCE = new TaskExecutors();
-    private final ExecutorService mBackground = C5494a.a();
+    private final ExecutorService mBackground = a.a();
     private final Executor mImmediate = new ImmediateExecutor();
-    private final Executor mUiThread = C5494a.b();
+    private final Executor mUiThread = a.b();
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */

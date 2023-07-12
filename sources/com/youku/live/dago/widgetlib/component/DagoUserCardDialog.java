@@ -72,7 +72,7 @@ public class DagoUserCardDialog extends Dialog {
     private DagoUserCardView.OnUserCardListener userCardListener;
 
     public DagoUserCardDialog(Context context, boolean z) {
-        super(context, R.C7944style.dago_pgc_user_card_dialog);
+        super(context, R.style.dago_pgc_user_card_dialog);
         this.isLinkLiving = false;
         this.mUTPageName = "";
         this.mScreenId = "";
@@ -422,7 +422,7 @@ public class DagoUserCardDialog extends Dialog {
                 attributes.width = -1;
                 attributes.height = -2;
                 window.setAttributes(attributes);
-                window.setWindowAnimations(R.C7944style.dago_pgc_user_card_bottom_anim);
+                window.setWindowAnimations(R.style.dago_pgc_user_card_bottom_anim);
                 return;
             }
             WindowManager.LayoutParams attributes2 = window.getAttributes();
@@ -435,7 +435,7 @@ public class DagoUserCardDialog extends Dialog {
             }
             attributes2.width = -2;
             window.setAttributes(attributes2);
-            window.setWindowAnimations(R.C7944style.dago_pgc_user_card_right_anim);
+            window.setWindowAnimations(R.style.dago_pgc_user_card_right_anim);
         }
     }
 

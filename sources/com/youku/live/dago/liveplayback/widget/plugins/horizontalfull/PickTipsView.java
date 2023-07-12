@@ -71,7 +71,7 @@ public class PickTipsView extends PopupWindow implements View.OnClickListener {
             ipChange.ipc$dispatch("-42455784", new Object[]{this, activity});
             return;
         }
-        View inflate = LayoutInflater.from(activity).inflate(R.C7935layout.dago_pick_tips, (ViewGroup) null);
+        View inflate = LayoutInflater.from(activity).inflate(R.layout.dago_pick_tips, (ViewGroup) null);
         this.mText = (TextView) inflate.findViewById(R.id.iv_multi_tip);
         inflate.measure(0, 0);
         setContentView(inflate);
@@ -80,7 +80,7 @@ public class PickTipsView extends PopupWindow implements View.OnClickListener {
         setFocusable(false);
         setTouchable(true);
         setOutsideTouchable(true);
-        setAnimationStyle(R.C7938style.dago_popup_anim);
+        setAnimationStyle(R.style.dago_popup_anim);
         this.mActivity = activity;
     }
 

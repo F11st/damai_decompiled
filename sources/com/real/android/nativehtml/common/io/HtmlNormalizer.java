@@ -2,7 +2,7 @@ package com.real.android.nativehtml.common.io;
 
 import com.alibaba.aliweex.adapter.module.location.ILocatable;
 import com.alibaba.poplayer.trigger.view.TrackingService;
-import com.alipay.sdk.m.l.C4232c;
+import com.alipay.sdk.m.l.c;
 import com.meizu.cloud.pushsdk.notification.model.AppIconSetting;
 import com.meizu.cloud.pushsdk.notification.model.BrightRemindSetting;
 import com.meizu.cloud.pushsdk.notification.model.TimeDisplaySetting;
@@ -23,8 +23,8 @@ import org.xmlpull.v1.XmlPullParserFactory;
 /* loaded from: classes5.dex */
 public class HtmlNormalizer {
     private static final String[] f = {"acute", "´", "apos", "'", "Auml", "Ä", "auml", "ä", "nbsp", " ", "Ouml", "Ö", "ouml", "ö", "szlig", "ß", "Uuml", "Ü", "uuml", "ü"};
-    private static final C6144b g = new C6144b(false, new String[0]);
-    private static final LinkedHashMap<String, C6144b> h;
+    private static final b g = new b(false, new String[0]);
+    private static final LinkedHashMap<String, b> h;
     private XmlPullParser a;
     private int b;
     private String c;
@@ -41,42 +41,41 @@ public class HtmlNormalizer {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.real.android.nativehtml.common.io.HtmlNormalizer$b */
     /* loaded from: classes5.dex */
-    public static class C6144b {
+    public static class b {
         private final boolean a;
         private final String[] b;
 
-        private C6144b(boolean z, String... strArr) {
+        private b(boolean z, String... strArr) {
             this.a = z;
             this.b = strArr;
         }
     }
 
     static {
-        LinkedHashMap<String, C6144b> linkedHashMap = new LinkedHashMap<>();
+        LinkedHashMap<String, b> linkedHashMap = new LinkedHashMap<>();
         h = linkedHashMap;
-        linkedHashMap.put(Constants.ACTION_PARAMS_AREA, new C6144b(true, new String[0]));
-        linkedHashMap.put("base", new C6144b(true, new String[0]));
-        linkedHashMap.put(BrightRemindSetting.BRIGHT_REMIND, new C6144b(true, new String[0]));
-        linkedHashMap.put("col", new C6144b(true, new String[0]));
-        linkedHashMap.put("command", new C6144b(true, new String[0]));
-        linkedHashMap.put(WXBasicComponentType.EMBED, new C6144b(true, new String[0]));
-        linkedHashMap.put("hr", new C6144b(true, new String[0]));
-        linkedHashMap.put("img", new C6144b(true, new String[0]));
-        linkedHashMap.put("input", new C6144b(true, new String[0]));
-        linkedHashMap.put("keygen", new C6144b(true, new String[0]));
-        linkedHashMap.put(AppIconSetting.LARGE_ICON_URL, new C6144b(false, new String[]{AppIconSetting.LARGE_ICON_URL}));
-        linkedHashMap.put(URIAdapter.LINK, new C6144b(true, new String[0]));
-        linkedHashMap.put("meta", new C6144b(true, new String[0]));
-        linkedHashMap.put("p", new C6144b(false, new String[]{ILocatable.ADDRESS, "article", "aside", "blockquote", "dir", WXBasicComponentType.DIV, "dl", "fieldset", WXBasicComponentType.FOOTER, C4232c.c, "h1", "h2", "h3", "h4", "h5", "h6", "header", "hr", "menu", "nav", "ol", "p", "pre", "section", "table", "ul"}));
-        linkedHashMap.put("param", new C6144b(true, new String[0]));
-        linkedHashMap.put("source", new C6144b(true, new String[0]));
-        linkedHashMap.put(TimeDisplaySetting.TIME_DISPLAY, new C6144b(false, new String[]{TimeDisplaySetting.TIME_DISPLAY, "th", "tr"}));
-        linkedHashMap.put("th", new C6144b(false, new String[]{TimeDisplaySetting.TIME_DISPLAY, "th", "tr"}));
-        linkedHashMap.put("tr", new C6144b(false, new String[]{"tr"}));
-        linkedHashMap.put(TrackingService.OPER_TRACK, new C6144b(true, new String[0]));
-        linkedHashMap.put("wbr", new C6144b(true, new String[0]));
+        linkedHashMap.put(Constants.ACTION_PARAMS_AREA, new b(true, new String[0]));
+        linkedHashMap.put("base", new b(true, new String[0]));
+        linkedHashMap.put(BrightRemindSetting.BRIGHT_REMIND, new b(true, new String[0]));
+        linkedHashMap.put("col", new b(true, new String[0]));
+        linkedHashMap.put("command", new b(true, new String[0]));
+        linkedHashMap.put(WXBasicComponentType.EMBED, new b(true, new String[0]));
+        linkedHashMap.put("hr", new b(true, new String[0]));
+        linkedHashMap.put("img", new b(true, new String[0]));
+        linkedHashMap.put("input", new b(true, new String[0]));
+        linkedHashMap.put("keygen", new b(true, new String[0]));
+        linkedHashMap.put(AppIconSetting.LARGE_ICON_URL, new b(false, new String[]{AppIconSetting.LARGE_ICON_URL}));
+        linkedHashMap.put(URIAdapter.LINK, new b(true, new String[0]));
+        linkedHashMap.put("meta", new b(true, new String[0]));
+        linkedHashMap.put("p", new b(false, new String[]{ILocatable.ADDRESS, "article", "aside", "blockquote", "dir", WXBasicComponentType.DIV, "dl", "fieldset", WXBasicComponentType.FOOTER, c.c, "h1", "h2", "h3", "h4", "h5", "h6", "header", "hr", "menu", "nav", "ol", "p", "pre", "section", "table", "ul"}));
+        linkedHashMap.put("param", new b(true, new String[0]));
+        linkedHashMap.put("source", new b(true, new String[0]));
+        linkedHashMap.put(TimeDisplaySetting.TIME_DISPLAY, new b(false, new String[]{TimeDisplaySetting.TIME_DISPLAY, "th", "tr"}));
+        linkedHashMap.put("th", new b(false, new String[]{TimeDisplaySetting.TIME_DISPLAY, "th", "tr"}));
+        linkedHashMap.put("tr", new b(false, new String[]{"tr"}));
+        linkedHashMap.put(TrackingService.OPER_TRACK, new b(true, new String[0]));
+        linkedHashMap.put("wbr", new b(true, new String[0]));
     }
 
     public HtmlNormalizer() throws XmlPullParserException {
@@ -85,9 +84,9 @@ public class HtmlNormalizer {
         newPullParser.setFeature("http://xmlpull.org/v1/doc/features.html#relaxed", true);
     }
 
-    private static C6144b d(String str) {
-        C6144b c6144b = h.get(str);
-        return c6144b == null ? g : c6144b;
+    private static b d(String str) {
+        b bVar = h.get(str);
+        return bVar == null ? g : bVar;
     }
 
     public int a() {

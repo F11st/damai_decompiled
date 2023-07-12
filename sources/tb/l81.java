@@ -11,7 +11,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes.dex */
 public final class l81 {
     @NotNull
-    public static final C9406a Companion = new C9406a(null);
+    public static final a Companion = new a(null);
     private float a;
     private float b;
     private final float c;
@@ -22,13 +22,12 @@ public final class l81 {
     private String f;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.l81$a */
     /* loaded from: classes.dex */
-    public static final class C9406a {
-        private C9406a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9406a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

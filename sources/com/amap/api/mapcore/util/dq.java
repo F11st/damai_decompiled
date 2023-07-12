@@ -26,11 +26,11 @@ public abstract class dq<Params, Progress, Result> {
     public static final Executor c;
     private static final ThreadFactory d;
     private static final BlockingQueue<Runnable> e;
-    private static final HandlerC4520c f;
+    private static final c f;
     private static volatile Executor g;
-    private final AbstractCallableC4518a<Params, Result> h;
+    private final a<Params, Result> h;
     private final FutureTask<Result> i;
-    private volatile EnumC4522e j = EnumC4522e.PENDING;
+    private volatile e j = e.PENDING;
     private final AtomicBoolean k = new AtomicBoolean();
     private final AtomicBoolean l = new AtomicBoolean();
 
@@ -42,14 +42,14 @@ public abstract class dq<Params, Progress, Result> {
         static final /* synthetic */ int[] a;
 
         static {
-            int[] iArr = new int[EnumC4522e.values().length];
+            int[] iArr = new int[e.values().length];
             a = iArr;
             try {
-                iArr[EnumC4522e.RUNNING.ordinal()] = 1;
+                iArr[e.RUNNING.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                a[EnumC4522e.FINISHED.ordinal()] = 2;
+                a[e.FINISHED.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
         }
@@ -57,24 +57,22 @@ public abstract class dq<Params, Progress, Result> {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.dq$a */
     /* loaded from: classes10.dex */
-    public static abstract class AbstractCallableC4518a<Params, Result> implements Callable<Result> {
+    public static abstract class a<Params, Result> implements Callable<Result> {
         Params[] b;
 
-        private AbstractCallableC4518a() {
+        private a() {
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.dq$b */
     /* loaded from: classes10.dex */
-    public static class C4519b<Data> {
+    public static class b<Data> {
         final dq a;
         final Data[] b;
 
-        C4519b(dq dqVar, Data... dataArr) {
+        b(dq dqVar, Data... dataArr) {
             this.a = dqVar;
             this.b = dataArr;
         }
@@ -82,38 +80,36 @@ public abstract class dq<Params, Progress, Result> {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.dq$c */
     /* loaded from: classes10.dex */
-    public static class HandlerC4520c extends Handler {
-        public HandlerC4520c(Looper looper) {
+    public static class c extends Handler {
+        public c(Looper looper) {
             super(looper);
         }
 
         @Override // android.os.Handler
         public void handleMessage(Message message) {
             Object obj = message.obj;
-            if (obj == null || !(obj instanceof C4519b)) {
+            if (obj == null || !(obj instanceof b)) {
                 return;
             }
-            C4519b c4519b = (C4519b) obj;
+            b bVar = (b) obj;
             int i = message.what;
             if (i == 1) {
-                c4519b.a.e(c4519b.b[0]);
+                bVar.a.e(bVar.b[0]);
             } else if (i != 2) {
             } else {
-                c4519b.a.b((Object[]) c4519b.b);
+                bVar.a.b((Object[]) bVar.b);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.dq$d */
     /* loaded from: classes10.dex */
-    private static class ExecutorC4521d implements Executor {
+    private static class d implements Executor {
         final ArrayDeque<Runnable> a;
         Runnable b;
 
-        private ExecutorC4521d() {
+        private d() {
             this.a = new ArrayDeque<>();
         }
 
@@ -133,7 +129,7 @@ public abstract class dq<Params, Progress, Result> {
                     try {
                         runnable.run();
                     } finally {
-                        ExecutorC4521d.this.a();
+                        d.this.a();
                     }
                 }
             });
@@ -144,9 +140,8 @@ public abstract class dq<Params, Progress, Result> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.dq$e */
     /* loaded from: classes10.dex */
-    public enum EnumC4522e {
+    public enum e {
         PENDING,
         RUNNING,
         FINISHED
@@ -166,15 +161,15 @@ public abstract class dq<Params, Progress, Result> {
         e = linkedBlockingQueue;
         TimeUnit timeUnit = TimeUnit.SECONDS;
         a = new ThreadPoolExecutor(5, 128, 1L, timeUnit, linkedBlockingQueue, threadFactory, new ThreadPoolExecutor.DiscardOldestPolicy());
-        Executor executorC4521d = eq.c() ? new ExecutorC4521d() : new ThreadPoolExecutor(1, 2, 1L, timeUnit, new LinkedBlockingQueue(), new ed("AMapSERIAL_EXECUTOR"), new ThreadPoolExecutor.AbortPolicy());
-        b = executorC4521d;
+        Executor dVar = eq.c() ? new d() : new ThreadPoolExecutor(1, 2, 1L, timeUnit, new LinkedBlockingQueue(), new ed("AMapSERIAL_EXECUTOR"), new ThreadPoolExecutor.AbortPolicy());
+        b = dVar;
         c = new ThreadPoolExecutor(2, 2, 1L, timeUnit, new LinkedBlockingQueue(), new ed("AMapDUAL_THREAD_EXECUTOR"), new ThreadPoolExecutor.AbortPolicy());
-        f = new HandlerC4520c(Looper.getMainLooper());
-        g = executorC4521d;
+        f = new c(Looper.getMainLooper());
+        g = dVar;
     }
 
     public dq() {
-        AbstractCallableC4518a<Params, Result> abstractCallableC4518a = new AbstractCallableC4518a<Params, Result>() { // from class: com.amap.api.mapcore.util.dq.2
+        a<Params, Result> aVar = new a<Params, Result>() { // from class: com.amap.api.mapcore.util.dq.2
             @Override // java.util.concurrent.Callable
             public Result call() throws Exception {
                 dq.this.l.set(true);
@@ -182,8 +177,8 @@ public abstract class dq<Params, Progress, Result> {
                 return (Result) dqVar.d(dqVar.a((Object[]) this.b));
             }
         };
-        this.h = abstractCallableC4518a;
-        this.i = new FutureTask<Result>(abstractCallableC4518a) { // from class: com.amap.api.mapcore.util.dq.3
+        this.h = aVar;
+        this.i = new FutureTask<Result>(aVar) { // from class: com.amap.api.mapcore.util.dq.3
             @Override // java.util.concurrent.FutureTask
             protected void done() {
                 try {
@@ -202,7 +197,7 @@ public abstract class dq<Params, Progress, Result> {
 
     /* JADX INFO: Access modifiers changed from: private */
     public Result d(Result result) {
-        f.obtainMessage(1, new C4519b(this, result)).sendToTarget();
+        f.obtainMessage(1, new b(this, result)).sendToTarget();
         return result;
     }
 
@@ -213,7 +208,7 @@ public abstract class dq<Params, Progress, Result> {
         } else {
             a((dq<Params, Progress, Result>) result);
         }
-        this.j = EnumC4522e.FINISHED;
+        this.j = e.FINISHED;
     }
 
     protected abstract Result a(Params... paramsArr);
@@ -238,7 +233,7 @@ public abstract class dq<Params, Progress, Result> {
         d(result);
     }
 
-    public final EnumC4522e a() {
+    public final e a() {
         return this.j;
     }
 
@@ -261,7 +256,7 @@ public abstract class dq<Params, Progress, Result> {
     }
 
     public final dq<Params, Progress, Result> a(Executor executor, Params... paramsArr) {
-        if (this.j != EnumC4522e.PENDING) {
+        if (this.j != e.PENDING) {
             int i = AnonymousClass4.a[this.j.ordinal()];
             if (i == 1) {
                 throw new IllegalStateException("Cannot execute task: the task is already running.");
@@ -270,7 +265,7 @@ public abstract class dq<Params, Progress, Result> {
                 throw new IllegalStateException("Cannot execute task: the task has already been executed (a task can be executed only once)");
             }
         }
-        this.j = EnumC4522e.RUNNING;
+        this.j = e.RUNNING;
         b();
         this.h.b = paramsArr;
         executor.execute(this.i);

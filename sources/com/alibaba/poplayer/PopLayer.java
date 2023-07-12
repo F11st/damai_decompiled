@@ -7,15 +7,15 @@ import android.content.Intent;
 import android.view.View;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import com.alibaba.poplayer.factory.view.base.PopLayerBaseView;
-import com.alibaba.poplayer.layermanager.C3660e;
 import com.alibaba.poplayer.layermanager.ILayerMgrAdapter;
 import com.alibaba.poplayer.layermanager.PopRequest;
+import com.alibaba.poplayer.layermanager.e;
 import com.alibaba.poplayer.norm.IConfigAdapter;
 import com.alibaba.poplayer.norm.IFaceAdapter;
 import com.alibaba.poplayer.norm.ILogAdapter;
 import com.alibaba.poplayer.trigger.BaseConfigItem;
 import com.alibaba.poplayer.trigger.InternalTriggerController;
-import com.alibaba.poplayer.trigger.view.C3699d;
+import com.alibaba.poplayer.trigger.view.d;
 import com.alibaba.poplayer.utils.Monitor;
 import com.youku.css.constraint.CssConst;
 import java.lang.annotation.ElementType;
@@ -76,7 +76,7 @@ public class PopLayer<K extends BaseConfigItem> {
     @Monitor.TargetField(name = "version")
     private String mVersion;
     @Monitor.TargetField(prefix = CssConst.CssScenes.VIEW)
-    private C3699d mViewTriggerService;
+    private d mViewTriggerService;
 
     /* compiled from: Taobao */
     @Target({ElementType.TYPE})
@@ -119,7 +119,7 @@ public class PopLayer<K extends BaseConfigItem> {
     }
 
     public void acceptMsg(String str, Map<String, String> map, View view) {
-        C3699d.M().y(view, str, map);
+        d.M().y(view, str, map);
     }
 
     public String getActivityInfo(Activity activity) {
@@ -274,7 +274,7 @@ public class PopLayer<K extends BaseConfigItem> {
     }
 
     public void removeMsg(String str, View view) {
-        C3699d.M().P(str, view);
+        d.M().P(str, view);
     }
 
     public void removeRequest(PopRequest popRequest) {
@@ -285,7 +285,7 @@ public class PopLayer<K extends BaseConfigItem> {
             gq1.A().q(popRequest);
         } else if (b != 3) {
         } else {
-            C3699d.M().q(popRequest);
+            d.M().q(popRequest);
         }
     }
 
@@ -299,8 +299,8 @@ public class PopLayer<K extends BaseConfigItem> {
             this.mTriggleController = new InternalTriggerController(application);
             this.mAppTriggerService = d7.A();
             this.mPageTriggerService = gq1.A();
-            this.mViewTriggerService = C3699d.M();
-            new C3660e(this.mLayerMgrAdapter).e(application);
+            this.mViewTriggerService = d.M();
+            new e(this.mLayerMgrAdapter).e(application);
             this.mFaceAdapter.registerNavPreprocessor(application, this);
             this.mFaceAdapter.registerTrackViewTypes(application, this);
             for (Integer num : this.mConfigContainers.keySet()) {
@@ -346,7 +346,7 @@ public class PopLayer<K extends BaseConfigItem> {
             } else if (i == 2) {
                 gq1.A().v(false, this.mContext);
             } else if (i == 3) {
-                C3699d.M().v(false, this.mContext);
+                d.M().v(false, this.mContext);
             }
         } catch (Throwable th) {
             dt1.c("PopLayer.updateCacheConfigAsync.fail." + th.toString(), th);

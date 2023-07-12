@@ -11,7 +11,6 @@ import android.view.ViewTreeObserver;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
@@ -54,13 +53,12 @@ public class fj1 {
     private long o = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.fj1$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9140a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ArrayList a;
 
-        View$OnClickListenerC9140a(ArrayList arrayList) {
+        a(ArrayList arrayList) {
             this.a = arrayList;
         }
 
@@ -76,12 +74,11 @@ public class fj1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.fj1$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC9141b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9141b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -105,14 +102,13 @@ public class fj1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.fj1$c */
     /* loaded from: classes.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC9142c implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class c implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
         final /* synthetic */ PromotionTagView b;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC9142c(View view, PromotionTagView promotionTagView) {
+        c(View view, PromotionTagView promotionTagView) {
             this.a = view;
             this.b = promotionTagView;
         }
@@ -187,7 +183,7 @@ public class fj1 {
             }
             linearLayout2.addView(textView2);
         }
-        promotionTagView.getCurrentView().getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC9142c(view, promotionTagView));
+        promotionTagView.getCurrentView().getViewTreeObserver().addOnGlobalLayoutListener(new c(view, promotionTagView));
     }
 
     private String f() {
@@ -332,7 +328,7 @@ public class fj1 {
                 k(inflate);
                 if (performSummaryBean.clickable) {
                     textView.setTextColor(ContextCompat.getColor(this.f, R$color.color_666666));
-                    inflate.setOnClickListener(new View$OnClickListenerC9141b());
+                    inflate.setOnClickListener(new b());
                 } else {
                     textView.setTextColor(ContextCompat.getColor(this.f, R$color.color_cccccc));
                 }
@@ -367,7 +363,7 @@ public class fj1 {
         if (this.i == null || this.h == null) {
             return;
         }
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         td2 i2 = td2.i();
         long j = this.k;
         PerformSummaryBean performSummaryBean3 = this.h;
@@ -427,10 +423,10 @@ public class fj1 {
             if (!cb2.d(arrayList)) {
                 this.a.findViewById(R$id.tv_perform_changetip_icon).setVisibility(0);
                 this.d.setVisibility(0);
-                this.d.setOnClickListener(new View$OnClickListenerC9140a(arrayList));
+                this.d.setOnClickListener(new a(arrayList));
                 HashMap hashMap = new HashMap();
                 hashMap.put("item_id", this.k + "");
-                C0529c.e().G(this.d, "showchange", "top", "screenings", hashMap);
+                cn.damai.common.user.c.e().G(this.d, "showchange", "top", "screenings", hashMap);
                 return;
             }
             this.a.findViewById(R$id.tv_perform_changetip_icon).setVisibility(8);

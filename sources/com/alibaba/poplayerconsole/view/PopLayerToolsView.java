@@ -24,8 +24,7 @@ import android.widget.FrameLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.alibaba.poplayer.trigger.view.C3698c;
-import com.alibaba.poplayerconsole.C3705a;
+import com.alibaba.poplayer.trigger.view.c;
 import com.alibaba.poplayerconsole.R$id;
 import com.alibaba.poplayerconsole.R$layout;
 import java.lang.ref.WeakReference;
@@ -37,24 +36,22 @@ import tb.jn1;
 /* loaded from: classes8.dex */
 public class PopLayerToolsView extends ScrollView implements View.OnClickListener, ILogView {
     private boolean mIsTrackMode;
-    private C3698c mSelector;
+    private c mSelector;
     private Button mTrackBtn;
     private TextView mTrackResult;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayerconsole.view.PopLayerToolsView$b */
     /* loaded from: classes8.dex */
-    private class View$OnTouchListenerC3725b implements View.OnTouchListener {
+    private class b implements View.OnTouchListener {
         private View[] a;
         private final Drawable b;
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.poplayerconsole.view.PopLayerToolsView$b$a */
         /* loaded from: classes8.dex */
-        class C3726a extends ClickableSpan {
+        class a extends ClickableSpan {
             final /* synthetic */ String a;
 
-            C3726a(String str) {
+            a(String str) {
                 this.a = str;
             }
 
@@ -65,7 +62,7 @@ public class PopLayerToolsView extends ScrollView implements View.OnClickListene
             }
         }
 
-        private View$OnTouchListenerC3725b() {
+        private b() {
             this.b = new ColorDrawable(-2013265920);
         }
 
@@ -105,7 +102,7 @@ public class PopLayerToolsView extends ScrollView implements View.OnClickListene
                 String hierarchy = PopLayerToolsView.this.getHierarchy(view3, 3);
                 int length3 = spannableStringBuilder.length();
                 spannableStringBuilder.append((CharSequence) hierarchy);
-                spannableStringBuilder.setSpan(new C3726a(hierarchy), length3, spannableStringBuilder.length(), 33);
+                spannableStringBuilder.setSpan(new a(hierarchy), length3, spannableStringBuilder.length(), 33);
                 spannableStringBuilder.append((CharSequence) "\n\n");
                 i++;
             }
@@ -117,7 +114,7 @@ public class PopLayerToolsView extends ScrollView implements View.OnClickListene
 
     public PopLayerToolsView(Context context) {
         super(context);
-        this.mSelector = new C3698c();
+        this.mSelector = new c();
         ((LayoutInflater) context.getSystemService("layout_inflater")).inflate(R$layout.console_tools, (ViewGroup) this, true);
         this.mTrackBtn = (Button) findViewById(R$id.track_pick_btn);
         this.mTrackResult = (TextView) findViewById(R$id.track_result);
@@ -244,7 +241,7 @@ public class PopLayerToolsView extends ScrollView implements View.OnClickListene
             try {
                 this.mIsTrackMode = !this.mIsTrackMode;
                 updateButton();
-                Activity activity = (Activity) gw2.a((WeakReference) C3705a.d().get("page").b);
+                Activity activity = (Activity) gw2.a((WeakReference) com.alibaba.poplayerconsole.a.d().get("page").b);
                 if (activity == null) {
                     Toast.makeText(getContext().getApplicationContext(), "Current Activity is null", 0).show();
                     return;
@@ -260,7 +257,7 @@ public class PopLayerToolsView extends ScrollView implements View.OnClickListene
                 frameLayout.setBackgroundColor(1157562368);
                 frameLayout.setId(i);
                 activity.getWindow().addContentView(frameLayout, new ViewGroup.LayoutParams(-1, -1));
-                frameLayout.setOnTouchListener(new View$OnTouchListenerC3725b());
+                frameLayout.setOnTouchListener(new b());
             } catch (Exception e) {
                 Log.e("PopLayer", "Toggle_view_tracker.error", e);
             }

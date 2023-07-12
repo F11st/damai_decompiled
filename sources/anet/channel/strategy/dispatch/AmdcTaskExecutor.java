@@ -6,9 +6,9 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicBoolean;
-import tb.C9708t9;
 import tb.a5;
 import tb.hu0;
+import tb.t9;
 
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
@@ -26,7 +26,7 @@ public class AmdcTaskExecutor {
                 Map<String, Object> map2 = this.a;
                 if (map2 == null) {
                     this.a = map;
-                    int nextInt = (C9708t9.E() && this.b.compareAndSet(true, false)) ? 0 : c.nextInt(3000) + 2000;
+                    int nextInt = (t9.E() && this.b.compareAndSet(true, false)) ? 0 : c.nextInt(3000) + 2000;
                     ALog.f(TAG, "merge amdc request", null, "delay", Integer.valueOf(nextInt));
                     a5.c(new AmdcTask(), nextInt);
                 } else {
@@ -72,7 +72,7 @@ public class AmdcTaskExecutor {
                     if (hu0.e() != map2.get("Env")) {
                         ALog.k(AmdcTaskExecutor.TAG, "task's env changed", null, new Object[0]);
                     } else {
-                        C0231a.g(C0233b.a(map2));
+                        a.g(b.a(map2));
                     }
                 }
             } catch (Exception e) {

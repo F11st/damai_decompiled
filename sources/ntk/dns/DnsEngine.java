@@ -11,9 +11,8 @@ public class DnsEngine {
     private Context mAppContext;
 
     /* compiled from: Taobao */
-    /* renamed from: ntk.dns.DnsEngine$b */
     /* loaded from: classes2.dex */
-    private static class C8730b {
+    private static class b {
         private static final DnsEngine a = new DnsEngine();
     }
 
@@ -29,7 +28,7 @@ public class DnsEngine {
     private native void dns_init();
 
     public static DnsEngine getInstance() {
-        return C8730b.a;
+        return b.a;
     }
 
     public native String dumpDnsCacheInfo(String str);

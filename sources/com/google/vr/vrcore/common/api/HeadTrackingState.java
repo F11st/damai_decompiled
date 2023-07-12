@@ -9,13 +9,12 @@ import java.util.Arrays;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class HeadTrackingState extends ParcelableProto<Session.TrackerState> {
-    public static final Parcelable.Creator<HeadTrackingState> CREATOR = new C5437a();
+    public static final Parcelable.Creator<HeadTrackingState> CREATOR = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.vrcore.common.api.HeadTrackingState$a */
     /* loaded from: classes10.dex */
-    class C5437a implements Parcelable.Creator<HeadTrackingState> {
-        C5437a() {
+    class a implements Parcelable.Creator<HeadTrackingState> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator
@@ -31,7 +30,7 @@ public class HeadTrackingState extends ParcelableProto<Session.TrackerState> {
         }
     }
 
-    /* synthetic */ HeadTrackingState(Parcel parcel, C5437a c5437a) {
+    /* synthetic */ HeadTrackingState(Parcel parcel, a aVar) {
         this(parcel);
     }
 

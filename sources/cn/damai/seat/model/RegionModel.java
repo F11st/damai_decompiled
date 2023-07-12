@@ -17,7 +17,7 @@ import cn.damai.seat.bean.HeadBean;
 import cn.damai.seat.bean.biz.Price;
 import cn.damai.seat.bean.biz.SeatDynamic;
 import cn.damai.seat.contract.RegionContract;
-import cn.damai.seat.helper.C1667b;
+import cn.damai.seat.helper.b;
 import cn.damai.seat.listener.OnPerformListener;
 import cn.damai.seat.listener.SimpleCallBack;
 import cn.damai.seat.listener.net.ImageListener;
@@ -55,7 +55,7 @@ public class RegionModel extends SeatModelImpl implements RegionContract.RegionM
     private String mPrivilegeSkuIds;
     private RegionData mRegionData;
     private List<Region> mRegions;
-    private C1667b mSeatBasket;
+    private b mSeatBasket;
     private PriceLevel mSelected;
     private g61 mUiListener = new g61();
     private Map<String, String> pageAlarmExt = new HashMap();

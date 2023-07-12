@@ -134,7 +134,7 @@ public class GiftNumTemplateAdapter extends RecyclerView.Adapter<ViewHolder> {
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1441111155") ? (ViewHolder) ipChange.ipc$dispatch("-1441111155", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.C7942layout.dago_pgc_ykl_gift_num_item, (ViewGroup) null));
+        return AndroidInstantRuntime.support(ipChange, "-1441111155") ? (ViewHolder) ipChange.ipc$dispatch("-1441111155", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.dago_pgc_ykl_gift_num_item, (ViewGroup) null));
     }
 
     public GiftNumTemplateAdapter(Context context, List<GiftNumBean> list) {

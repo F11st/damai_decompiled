@@ -1,7 +1,7 @@
 package com.youku.middlewareservice.provider.lightwidget;
 
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -10,7 +10,7 @@ public class LightWidgetProviderProxy {
 
     public static LightWidgetProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (LightWidgetProvider) C8883a.j("com.youku.middlewareservice_impl.provider.lightwidget.LightWidgetProviderImpl").b().f();
+            sProxy = (LightWidgetProvider) a.j("com.youku.middlewareservice_impl.provider.lightwidget.LightWidgetProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -28,7 +28,7 @@ public class LightWidgetProviderProxy {
     public static void releasePreloadImage(long j) {
         try {
             if (sProxy == null) {
-                sProxy = (LightWidgetProvider) C8883a.j("com.youku.middlewareservice_impl.provider.lightwidget.LightWidgetProviderImpl").b().f();
+                sProxy = (LightWidgetProvider) a.j("com.youku.middlewareservice_impl.provider.lightwidget.LightWidgetProviderImpl").b().f();
             }
             sProxy.releasePreloadImage(j);
         } catch (Throwable th) {

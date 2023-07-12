@@ -130,7 +130,7 @@ public class TransformParser {
     public static Map<Property<View, Float>, Float> parseTransForm(String str, @Nullable String str2, final int i, final int i2, final int i3) {
         try {
             if (!TextUtils.isEmpty(str2)) {
-                return new FunctionParser(str2, new FunctionParser.InterfaceC6978Mapper<Property<View, Float>, Float>() { // from class: com.taobao.weex.ui.animation.TransformParser.1
+                return new FunctionParser(str2, new FunctionParser.Mapper<Property<View, Float>, Float>() { // from class: com.taobao.weex.ui.animation.TransformParser.1
                     private Map<Property<View, Float>, Float> convertParam(int i4, int i5, int i6, @NonNull List<Property<View, Float>> list, @NonNull List<String> list2) {
                         HashMap newHashMapWithExpectedSize = WXDataStructureUtil.newHashMapWithExpectedSize(list.size());
                         ArrayList arrayList = new ArrayList(list.size());
@@ -223,7 +223,7 @@ public class TransformParser {
                         return arrayList;
                     }
 
-                    @Override // com.taobao.weex.utils.FunctionParser.InterfaceC6978Mapper
+                    @Override // com.taobao.weex.utils.FunctionParser.Mapper
                     public Map<Property<View, Float>, Float> map(String str3, List<String> list) {
                         if (list != null && !list.isEmpty() && TransformParser.wxToAndroidMap.containsKey(str3)) {
                             return convertParam(i, i2, i3, TransformParser.wxToAndroidMap.get(str3), list);

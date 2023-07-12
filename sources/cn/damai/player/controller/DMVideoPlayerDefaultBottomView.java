@@ -12,7 +12,6 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import androidx.fragment.app.FragmentActivity;
-import cn.damai.common.image.C0504a;
 import cn.damai.player.base.IVideoController;
 import cn.damai.player.base.IVideoPlayer;
 import cn.damai.player.listener.OnPlayerUTReportListener;
@@ -45,7 +44,7 @@ public class DMVideoPlayerDefaultBottomView extends FrameLayout implements View.
     private ImageView mCoverPauseImg;
     private xs mDataHolder;
     private TextView mDuration;
-    private HandlerC1497a mHandler;
+    private a mHandler;
     private AtomicBoolean mHasDone;
     private LoadingView mLoading;
     private IVideoPlayer mPlayer;
@@ -59,12 +58,11 @@ public class DMVideoPlayerDefaultBottomView extends FrameLayout implements View.
     private int position;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.player.controller.DMVideoPlayerDefaultBottomView$a */
     /* loaded from: classes15.dex */
-    public class HandlerC1497a extends Handler {
+    public class a extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC1497a() {
+        a() {
         }
 
         @Override // android.os.Handler
@@ -124,7 +122,7 @@ public class DMVideoPlayerDefaultBottomView extends FrameLayout implements View.
         ImageView imageView = (ImageView) inflate.findViewById(R$id.yk_player_video_bofang_btn);
         this.mCoverPauseImg = imageView;
         imageView.setOnClickListener(this);
-        this.mHandler = new HandlerC1497a();
+        this.mHandler = new a();
         this.mBoFangBtn.setOnClickListener(this);
         this.mVoiceBtn.setOnClickListener(this);
         this.mAllScreenBtn.setOnClickListener(this);
@@ -523,7 +521,7 @@ public class DMVideoPlayerDefaultBottomView extends FrameLayout implements View.
         }
         if (this.mDataHolder.e() != null) {
             if (!TextUtils.isEmpty(this.mDataHolder.e().getPicUrl())) {
-                C0504a.b().c(this.mDataHolder.e().getPicUrl()).c(R$color.color_111111).g(this.mCoverImg);
+                cn.damai.common.image.a.b().c(this.mDataHolder.e().getPicUrl()).c(R$color.color_111111).g(this.mCoverImg);
             } else if ("1".equals(this.mDataHolder.e().getVideoThumbnailType()) && !TextUtils.isEmpty(this.mDataHolder.e().getVideoUrl())) {
                 try {
                     this.mCoverImg.setImageBitmap(ThumbnailUtils.createVideoThumbnail(this.mDataHolder.e().getVideoUrl(), 1));

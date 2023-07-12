@@ -9,7 +9,6 @@ import cn.damai.commonbusiness.calendar.bean.CalendarBean;
 import cn.damai.commonbusiness.calendar.bean.CalendarYearBean;
 import cn.damai.projectfilter.bean.FilterData;
 import cn.damai.projectfilter.bean.Type;
-import cn.damai.projectfilter.floatview.AbstractC1515a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.weex.common.Constants;
@@ -18,7 +17,7 @@ import java.util.List;
 /* compiled from: Taobao */
 /* renamed from: tb.if  reason: invalid class name */
 /* loaded from: classes6.dex */
-public class Cif extends AbstractC1515a<CalendarBean> implements View.OnClickListener {
+public class Cif extends cn.damai.projectfilter.floatview.a<CalendarBean> implements View.OnClickListener {
     private static transient /* synthetic */ IpChange $ipChange;
     private CalendarPopView d;
     long e;
@@ -26,10 +25,10 @@ public class Cif extends AbstractC1515a<CalendarBean> implements View.OnClickLis
     /* compiled from: Taobao */
     /* renamed from: tb.if$a */
     /* loaded from: classes6.dex */
-    public class C9260a implements CalendarPopView.OnDateClickListener {
+    public class a implements CalendarPopView.OnDateClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9260a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.calendar.CalendarPopView.OnDateClickListener
@@ -62,7 +61,7 @@ public class Cif extends AbstractC1515a<CalendarBean> implements View.OnClickLis
 
     public Cif(Context context, List<CalendarYearBean> list) {
         super(context);
-        this.d = new CalendarPopView(mu0.a(), true, true, 60, new C9260a(), list);
+        this.d = new CalendarPopView(mu0.a(), true, true, 60, new a(), list);
     }
 
     @Override // cn.damai.projectfilter.floatview.FloatLayer

@@ -13,7 +13,6 @@ import java.net.URLDecoder;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
@@ -28,7 +27,7 @@ import tb.k50;
 /* loaded from: classes6.dex */
 public final class GXClientToStudio {
     @NotNull
-    public static final C3381a Companion = new C3381a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String TAG = "[GaiaX][GXStudio]";
     @NotNull
@@ -47,7 +46,7 @@ public final class GXClientToStudio {
     @NotNull
     private String f = "auto";
     @NotNull
-    private final GXSocket.GXSocketListener h = new C3382b();
+    private final GXSocket.GXSocketListener h = new b();
 
     /* compiled from: Taobao */
     @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\bf\u0018\u00002\u00020\u0001J\u0018\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u0004H&J\u0018\u0010\b\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u0004H&¨\u0006\t"}, d2 = {"Lcom/alibaba/gaiax/studio/GXClientToStudio$GXSocketToStudioListener;", "", "", "templateId", "Lcom/alibaba/fastjson/JSONObject;", "templateData", "Ltb/wt2;", "onAddData", "onUpdate", "GaiaXAndroidClientToStudio_release"}, k = 1, mv = {1, 5, 1})
@@ -59,13 +58,12 @@ public final class GXClientToStudio {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.studio.GXClientToStudio$a */
     /* loaded from: classes6.dex */
-    public static final class C3381a {
-        private C3381a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3381a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -76,10 +74,9 @@ public final class GXClientToStudio {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.studio.GXClientToStudio$b */
     /* loaded from: classes6.dex */
-    public static final class C3382b implements GXSocket.GXSocketListener {
-        C3382b() {
+    public static final class b implements GXSocket.GXSocketListener {
+        b() {
         }
 
         @Override // com.alibaba.gaiax.studio.GXSocket.GXSocketListener
@@ -130,8 +127,8 @@ public final class GXClientToStudio {
     }
 
     static {
-        Lazy<GXClientToStudio> b;
-        b = C8177b.b(new Function0<GXClientToStudio>() { // from class: com.alibaba.gaiax.studio.GXClientToStudio$Companion$instance$2
+        Lazy<GXClientToStudio> b2;
+        b2 = kotlin.b.b(new Function0<GXClientToStudio>() { // from class: com.alibaba.gaiax.studio.GXClientToStudio$Companion$instance$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull
@@ -139,7 +136,7 @@ public final class GXClientToStudio {
                 return new GXClientToStudio();
             }
         });
-        i = b;
+        i = b2;
     }
 
     private final boolean n(Context context) {

@@ -260,9 +260,9 @@ public class FavorLayout extends View implements IFavorHandler {
         }
         CopyOnWriteArrayList copyOnWriteArrayList = new CopyOnWriteArrayList();
         this.mDrawables = copyOnWriteArrayList;
-        copyOnWriteArrayList.add(getResources().getDrawable(R.C7941drawable.dago_pgc_ykl_like_favor_anim_1));
-        this.mDrawables.add(getResources().getDrawable(R.C7941drawable.dago_pgc_ykl_like_favor_anim_2));
-        this.mDrawables.add(getResources().getDrawable(R.C7941drawable.dago_pgc_ykl_like_favor_anim_3));
+        copyOnWriteArrayList.add(getResources().getDrawable(R.drawable.dago_pgc_ykl_like_favor_anim_1));
+        this.mDrawables.add(getResources().getDrawable(R.drawable.dago_pgc_ykl_like_favor_anim_2));
+        this.mDrawables.add(getResources().getDrawable(R.drawable.dago_pgc_ykl_like_favor_anim_3));
         int dimension = (int) getResources().getDimension(R.dimen.dago_pgc_ykl_like_favor_size);
         this.mDrawableWidth = dimension;
         this.mDrawableHeight = dimension;

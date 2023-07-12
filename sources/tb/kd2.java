@@ -1,7 +1,6 @@
 package tb;
 
 import android.text.TextUtils;
-import anet.channel.strategy.C0213a;
 import anet.channel.strategy.IConnStrategy;
 import anet.channel.strategy.IStrategyFilter;
 import com.ali.user.open.tbauth.TbAuthConstants;
@@ -26,10 +25,9 @@ public class kd2 {
     private Set<String> b = new HashSet();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kd2$a */
     /* loaded from: classes5.dex */
-    class C9347a implements Comparator<jd2> {
-        C9347a(kd2 kd2Var) {
+    class a implements Comparator<jd2> {
+        a(kd2 kd2Var) {
         }
 
         @Override // java.util.Comparator
@@ -40,10 +38,9 @@ public class kd2 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kd2$b */
     /* loaded from: classes5.dex */
-    class C9348b implements IStrategyFilter {
-        C9348b(kd2 kd2Var) {
+    class b implements IStrategyFilter {
+        b(kd2 kd2Var) {
         }
 
         @Override // anet.channel.strategy.IStrategyFilter
@@ -55,8 +52,8 @@ public class kd2 {
     public kd2() {
         this.d = null;
         this.e = null;
-        this.d = new C9347a(this);
-        this.e = new C9348b(this);
+        this.d = new a(this);
+        this.e = new b(this);
     }
 
     private void a() {
@@ -84,7 +81,7 @@ public class kd2 {
     }
 
     private List<IConnStrategy> c() {
-        return C0213a.a().getConnStrategyListByHost(ro2.a().getTnetHostPort().a(), this.e);
+        return anet.channel.strategy.a.a().getConnStrategyListByHost(ro2.a().getTnetHostPort().a(), this.e);
     }
 
     private void e(List<IConnStrategy> list) {

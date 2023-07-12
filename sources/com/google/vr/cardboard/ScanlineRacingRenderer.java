@@ -7,7 +7,7 @@ import com.google.vr.ndk.base.GvrApi;
 import com.google.vr.ndk.base.GvrSurfaceView;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
-import tb.C9201h5;
+import tb.h5;
 import tb.wm2;
 
 /* compiled from: Taobao */
@@ -69,7 +69,7 @@ public class ScanlineRacingRenderer implements GLSurfaceView.Renderer {
     @Override // android.opengl.GLSurfaceView.Renderer
     public void onSurfaceCreated(GL10 gl10, EGLConfig eGLConfig) {
         Thread.currentThread().setPriority(10);
-        C9201h5.j(Process.myTid());
+        h5.j(Process.myTid());
         this.a.onSurfaceCreatedReprojectionThread();
     }
 }

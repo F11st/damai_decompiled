@@ -150,7 +150,7 @@ public final class ObservableSkipLastTimed<T> extends AbstractObservableWithUpst
         this.delayError = z;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new SkipLastTimedObserver(observer, this.time, this.unit, this.scheduler, this.bufferSize, this.delayError));
     }

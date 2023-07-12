@@ -39,7 +39,7 @@ import tb.x50;
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
 public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements LayoutManagerHelper {
-    private static AbstractC3289a DEFAULT_LAYOUT_HELPER = new x50();
+    private static com.alibaba.android.vlayout.a DEFAULT_LAYOUT_HELPER = new x50();
     public static final int HORIZONTAL = 0;
     private static final int MAX_NO_SCROLLING_SIZE = 134217727;
     private static final String PHASE_LAYOUT = "layout";
@@ -53,10 +53,10 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
     private boolean mCanScrollHorizontally;
     private boolean mCanScrollVertically;
     private Rect mDecorInsets;
-    private AbstractC3289a mDefaultLayoutHelper;
+    private com.alibaba.android.vlayout.a mDefaultLayoutHelper;
     private boolean mEnableMarginOverlapping;
     private wj0 mFixAreaAdjustor;
-    private AbstractC3290b mHelperFinder;
+    private com.alibaba.android.vlayout.b mHelperFinder;
     private BaseLayoutHelper.LayoutViewBindListener mLayoutViewBindListener;
     private LayoutViewFactory mLayoutViewFatory;
     private int mMaxMeasureSize;
@@ -64,19 +64,19 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
     private int mNested;
     private boolean mNestedScrolling;
     private boolean mNoScrolling;
-    protected AbstractC3291c mOrientationHelper;
+    protected com.alibaba.android.vlayout.c mOrientationHelper;
     private PerformanceMonitor mPerformanceMonitor;
     private Comparator<Pair<py1<Integer>, Integer>> mRangeComparator;
     private List<Pair<py1<Integer>, Integer>> mRangeLengths;
     private RecyclerView mRecyclerView;
-    protected AbstractC3291c mSecondaryOrientationHelper;
+    protected com.alibaba.android.vlayout.c mSecondaryOrientationHelper;
     private boolean mSpaceMeasured;
     private boolean mSpaceMeasuring;
-    private C3286c mTempAnchorInfoWrapper;
-    private C3287d mTempLayoutStateWrapper;
+    private c mTempAnchorInfoWrapper;
+    private d mTempLayoutStateWrapper;
     private ViewLifeCycleHelper mViewLifeCycleHelper;
-    private HashMap<Integer, AbstractC3289a> newHelpersSet;
-    private HashMap<Integer, AbstractC3289a> oldHelpersSet;
+    private HashMap<Integer, com.alibaba.android.vlayout.a> newHelpersSet;
+    private HashMap<Integer, com.alibaba.android.vlayout.a> oldHelpersSet;
 
     /* compiled from: Taobao */
     /* loaded from: classes15.dex */
@@ -93,10 +93,9 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.vlayout.VirtualLayoutManager$a */
     /* loaded from: classes15.dex */
-    class C3284a implements Comparator<Pair<py1<Integer>, Integer>> {
-        C3284a(VirtualLayoutManager virtualLayoutManager) {
+    class a implements Comparator<Pair<py1<Integer>, Integer>> {
+        a(VirtualLayoutManager virtualLayoutManager) {
         }
 
         @Override // java.util.Comparator
@@ -116,10 +115,9 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.vlayout.VirtualLayoutManager$b */
     /* loaded from: classes6.dex */
-    class C3285b implements LayoutViewFactory {
-        C3285b(VirtualLayoutManager virtualLayoutManager) {
+    class b implements LayoutViewFactory {
+        b(VirtualLayoutManager virtualLayoutManager) {
         }
 
         @Override // com.alibaba.android.vlayout.LayoutViewFactory
@@ -129,28 +127,26 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.vlayout.VirtualLayoutManager$c */
     /* loaded from: classes15.dex */
-    public static class C3286c {
+    public static class c {
         public int a;
         public int b;
         public boolean c;
 
-        C3286c() {
+        c() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.vlayout.VirtualLayoutManager$d */
     /* loaded from: classes15.dex */
-    public static class C3287d {
+    public static class d {
         public static final int ITEM_DIRECTION_HEAD = -1;
         public static final int ITEM_DIRECTION_TAIL = 1;
         public static final int LAYOUT_END = 1;
         public static final int LAYOUT_START = -1;
-        private ExposeLinearLayoutManagerEx.C3282c a;
+        private ExposeLinearLayoutManagerEx.c a;
 
-        C3287d() {
+        d() {
         }
 
         public int b() {
@@ -198,25 +194,24 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
         }
 
         public View m(RecyclerView.Recycler recycler, int i) {
-            ExposeLinearLayoutManagerEx.C3282c c3282c = this.a;
-            int i2 = c3282c.mCurrentPosition;
-            c3282c.mCurrentPosition = i;
+            ExposeLinearLayoutManagerEx.c cVar = this.a;
+            int i2 = cVar.mCurrentPosition;
+            cVar.mCurrentPosition = i;
             View l = l(recycler);
             this.a.mCurrentPosition = i2;
             return l;
         }
 
         public void n() {
-            ExposeLinearLayoutManagerEx.C3282c c3282c = this.a;
-            c3282c.mCurrentPosition += c3282c.mItemDirection;
+            ExposeLinearLayoutManagerEx.c cVar = this.a;
+            cVar.mCurrentPosition += cVar.mItemDirection;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.vlayout.VirtualLayoutManager$e */
     /* loaded from: classes6.dex */
-    private static class C3288e extends RecyclerView.ViewHolder {
-        public C3288e(View view) {
+    private static class e extends RecyclerView.ViewHolder {
+        public e(View view) {
             super(view);
         }
     }
@@ -312,12 +307,12 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
             this.mNested = 0;
             int findFirstVisibleItemPosition = findFirstVisibleItemPosition();
             int findLastVisibleItemPosition = findLastVisibleItemPosition();
-            for (AbstractC3289a abstractC3289a : this.mHelperFinder.b()) {
+            for (com.alibaba.android.vlayout.a aVar : this.mHelperFinder.b()) {
                 try {
-                    abstractC3289a.afterLayout(recycler, state, findFirstVisibleItemPosition, findLastVisibleItemPosition, i, this);
-                } catch (Exception e) {
+                    aVar.afterLayout(recycler, state, findFirstVisibleItemPosition, findLastVisibleItemPosition, i, this);
+                } catch (Exception e2) {
                     if (sDebuggable) {
-                        throw e;
+                        throw e2;
                     }
                 }
             }
@@ -330,16 +325,16 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
 
     private void runPreLayout(RecyclerView.Recycler recycler, RecyclerView.State state) {
         if (this.mNested == 0) {
-            for (AbstractC3289a abstractC3289a : this.mHelperFinder.c()) {
-                abstractC3289a.beforeLayout(recycler, state, this);
+            for (com.alibaba.android.vlayout.a aVar : this.mHelperFinder.c()) {
+                aVar.beforeLayout(recycler, state, this);
             }
         }
         this.mNested++;
     }
 
-    private void setDefaultLayoutHelper(@NonNull AbstractC3289a abstractC3289a) {
-        if (abstractC3289a != null) {
-            this.mDefaultLayoutHelper = abstractC3289a;
+    private void setDefaultLayoutHelper(@NonNull com.alibaba.android.vlayout.a aVar) {
+        if (aVar != null) {
+            this.mDefaultLayoutHelper = aVar;
             return;
         }
         throw new IllegalArgumentException("layoutHelper should not be null");
@@ -418,7 +413,7 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
         for (int childCount = getChildCount() - 1; childCount >= 0; childCount--) {
             RecyclerView.ViewHolder childViewHolder = getChildViewHolder(getChildAt(childCount));
             if ((childViewHolder instanceof CacheViewHolder) && ((CacheViewHolder) childViewHolder).needCached()) {
-                ExposeLinearLayoutManagerEx.C3283d.e(childViewHolder, 0, 6);
+                ExposeLinearLayoutManagerEx.d.e(childViewHolder, 0, 6);
             }
         }
         super.detachAndScrapAttachedViews(recycler);
@@ -433,7 +428,7 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
     public void detachAndScrapViewAt(int i, RecyclerView.Recycler recycler) {
         RecyclerView.ViewHolder childViewHolder = getChildViewHolder(getChildAt(i));
         if ((childViewHolder instanceof CacheViewHolder) && ((CacheViewHolder) childViewHolder).needCached()) {
-            ExposeLinearLayoutManagerEx.C3283d.e(childViewHolder, 0, 4);
+            ExposeLinearLayoutManagerEx.d.e(childViewHolder, 0, 4);
         }
         super.detachAndScrapViewAt(i, recycler);
     }
@@ -455,22 +450,22 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
     }
 
     @Override // com.alibaba.android.vlayout.LayoutManagerHelper
-    public AbstractC3289a findLayoutHelperByPosition(int i) {
+    public com.alibaba.android.vlayout.a findLayoutHelperByPosition(int i) {
         return this.mHelperFinder.a(i);
     }
 
-    public AbstractC3289a findNeighbourNonfixLayoutHelper(AbstractC3289a abstractC3289a, boolean z) {
-        List<AbstractC3289a> b;
+    public com.alibaba.android.vlayout.a findNeighbourNonfixLayoutHelper(com.alibaba.android.vlayout.a aVar, boolean z) {
+        List<com.alibaba.android.vlayout.a> b2;
         int indexOf;
-        AbstractC3289a abstractC3289a2;
-        if (abstractC3289a == null || (indexOf = (b = this.mHelperFinder.b()).indexOf(abstractC3289a)) == -1) {
+        com.alibaba.android.vlayout.a aVar2;
+        if (aVar == null || (indexOf = (b2 = this.mHelperFinder.b()).indexOf(aVar)) == -1) {
             return null;
         }
         int i = z ? indexOf - 1 : indexOf + 1;
-        if (i < 0 || i >= b.size() || (abstractC3289a2 = b.get(i)) == null || abstractC3289a2.isFixLayout()) {
+        if (i < 0 || i >= b2.size() || (aVar2 = b2.get(i)) == null || aVar2.isFixLayout()) {
             return null;
         }
-        return abstractC3289a2;
+        return aVar2;
     }
 
     @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.LayoutManager
@@ -515,7 +510,7 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
         }
         View generateLayoutView = this.mLayoutViewFatory.generateLayoutView(recyclerView.getContext());
         LayoutParams layoutParams = new LayoutParams(-2, -2);
-        ExposeLinearLayoutManagerEx.attachViewHolder(layoutParams, new C3288e(generateLayoutView));
+        ExposeLinearLayoutManagerEx.attachViewHolder(layoutParams, new e(generateLayoutView));
         generateLayoutView.setLayoutParams(layoutParams);
         return generateLayoutView;
     }
@@ -549,8 +544,8 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
             return Collections.emptyList();
         }
         LinkedList linkedList = new LinkedList();
-        for (AbstractC3289a abstractC3289a : this.mHelperFinder.b()) {
-            View fixedView = abstractC3289a.getFixedView();
+        for (com.alibaba.android.vlayout.a aVar : this.mHelperFinder.b()) {
+            View fixedView = aVar.getFixedView();
             if (fixedView != null) {
                 linkedList.add(fixedView);
             }
@@ -559,12 +554,12 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
     }
 
     @NonNull
-    public List<AbstractC3289a> getLayoutHelpers() {
+    public List<com.alibaba.android.vlayout.a> getLayoutHelpers() {
         return this.mHelperFinder.b();
     }
 
     @Override // com.alibaba.android.vlayout.LayoutManagerHelper
-    public AbstractC3291c getMainOrientationHelper() {
+    public com.alibaba.android.vlayout.c getMainOrientationHelper() {
         return this.mOrientationHelper;
     }
 
@@ -602,7 +597,7 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
     }
 
     @Override // com.alibaba.android.vlayout.LayoutManagerHelper
-    public AbstractC3291c getSecondaryOrientationHelper() {
+    public com.alibaba.android.vlayout.c getSecondaryOrientationHelper() {
         return this.mSecondaryOrientationHelper;
     }
 
@@ -659,25 +654,25 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
     }
 
     @Override // com.alibaba.android.vlayout.ExposeLinearLayoutManagerEx
-    protected void layoutChunk(RecyclerView.Recycler recycler, RecyclerView.State state, ExposeLinearLayoutManagerEx.C3282c c3282c, m81 m81Var) {
-        int i = c3282c.mCurrentPosition;
-        this.mTempLayoutStateWrapper.a = c3282c;
-        AbstractC3290b abstractC3290b = this.mHelperFinder;
-        AbstractC3289a a = abstractC3290b == null ? null : abstractC3290b.a(i);
-        if (a == null) {
-            a = this.mDefaultLayoutHelper;
+    protected void layoutChunk(RecyclerView.Recycler recycler, RecyclerView.State state, ExposeLinearLayoutManagerEx.c cVar, m81 m81Var) {
+        int i = cVar.mCurrentPosition;
+        this.mTempLayoutStateWrapper.a = cVar;
+        com.alibaba.android.vlayout.b bVar = this.mHelperFinder;
+        com.alibaba.android.vlayout.a a2 = bVar == null ? null : bVar.a(i);
+        if (a2 == null) {
+            a2 = this.mDefaultLayoutHelper;
         }
-        a.doLayout(recycler, state, this.mTempLayoutStateWrapper, m81Var, this);
+        a2.doLayout(recycler, state, this.mTempLayoutStateWrapper, m81Var, this);
         this.mTempLayoutStateWrapper.a = null;
-        int i2 = c3282c.mCurrentPosition;
+        int i2 = cVar.mCurrentPosition;
         if (i2 == i) {
             if (sDebuggable) {
-                Log.w(TAG, "layoutHelper[" + a.getClass().getSimpleName() + m80.DINAMIC_PREFIX_AT + a.toString() + "] consumes no item!");
+                Log.w(TAG, "layoutHelper[" + a2.getClass().getSimpleName() + m80.DINAMIC_PREFIX_AT + a2.toString() + "] consumes no item!");
             }
             m81Var.b = true;
             return;
         }
-        int i3 = i2 - c3282c.mItemDirection;
+        int i3 = i2 - cVar.mItemDirection;
         int i4 = m81Var.c ? 0 : m81Var.a;
         py1<Integer> py1Var = new py1<>(Integer.valueOf(Math.min(i, i3)), Integer.valueOf(Math.max(i, i3)));
         int findRangeLength = findRangeLength(py1Var);
@@ -714,16 +709,16 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
     @Override // androidx.recyclerview.widget.RecyclerView.LayoutManager
     public void offsetChildrenHorizontal(int i) {
         super.offsetChildrenHorizontal(i);
-        for (AbstractC3289a abstractC3289a : this.mHelperFinder.b()) {
-            abstractC3289a.onOffsetChildrenHorizontal(i, this);
+        for (com.alibaba.android.vlayout.a aVar : this.mHelperFinder.b()) {
+            aVar.onOffsetChildrenHorizontal(i, this);
         }
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.LayoutManager
     public void offsetChildrenVertical(int i) {
         super.offsetChildrenVertical(i);
-        for (AbstractC3289a abstractC3289a : this.mHelperFinder.b()) {
-            abstractC3289a.onOffsetChildrenVertical(i, this);
+        for (com.alibaba.android.vlayout.a aVar : this.mHelperFinder.b()) {
+            aVar.onOffsetChildrenVertical(i, this);
         }
         ViewLifeCycleHelper viewLifeCycleHelper = this.mViewLifeCycleHelper;
         if (viewLifeCycleHelper != null) {
@@ -737,34 +732,34 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
     }
 
     @Override // com.alibaba.android.vlayout.ExposeLinearLayoutManagerEx
-    public void onAnchorReady(RecyclerView.State state, ExposeLinearLayoutManagerEx.C3280a c3280a) {
-        super.onAnchorReady(state, c3280a);
+    public void onAnchorReady(RecyclerView.State state, ExposeLinearLayoutManagerEx.a aVar) {
+        super.onAnchorReady(state, aVar);
         boolean z = true;
         while (z) {
-            C3286c c3286c = this.mTempAnchorInfoWrapper;
-            int i = c3280a.a;
-            c3286c.a = i;
-            c3286c.b = c3280a.b;
-            c3286c.c = c3280a.c;
-            AbstractC3289a a = this.mHelperFinder.a(i);
-            if (a != null) {
-                a.checkAnchorInfo(state, this.mTempAnchorInfoWrapper, this);
+            c cVar = this.mTempAnchorInfoWrapper;
+            int i = aVar.a;
+            cVar.a = i;
+            cVar.b = aVar.b;
+            cVar.c = aVar.c;
+            com.alibaba.android.vlayout.a a2 = this.mHelperFinder.a(i);
+            if (a2 != null) {
+                a2.checkAnchorInfo(state, this.mTempAnchorInfoWrapper, this);
             }
-            C3286c c3286c2 = this.mTempAnchorInfoWrapper;
-            int i2 = c3286c2.a;
-            if (i2 == c3280a.a) {
+            c cVar2 = this.mTempAnchorInfoWrapper;
+            int i2 = cVar2.a;
+            if (i2 == aVar.a) {
                 z = false;
             } else {
-                c3280a.a = i2;
+                aVar.a = i2;
             }
-            c3280a.b = c3286c2.b;
-            c3286c2.a = -1;
+            aVar.b = cVar2.b;
+            cVar2.a = -1;
         }
-        C3286c c3286c3 = this.mTempAnchorInfoWrapper;
-        c3286c3.a = c3280a.a;
-        c3286c3.b = c3280a.b;
-        for (AbstractC3289a abstractC3289a : this.mHelperFinder.b()) {
-            abstractC3289a.onRefreshLayout(state, this.mTempAnchorInfoWrapper, this);
+        c cVar3 = this.mTempAnchorInfoWrapper;
+        cVar3.a = aVar.a;
+        cVar3.b = aVar.b;
+        for (com.alibaba.android.vlayout.a aVar2 : this.mHelperFinder.b()) {
+            aVar2.onRefreshLayout(state, this.mTempAnchorInfoWrapper, this);
         }
     }
 
@@ -777,8 +772,8 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
     @Override // com.alibaba.android.vlayout.ExposeLinearLayoutManagerEx, androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.LayoutManager
     public void onDetachedFromWindow(RecyclerView recyclerView, RecyclerView.Recycler recycler) {
         super.onDetachedFromWindow(recyclerView, recycler);
-        for (AbstractC3289a abstractC3289a : this.mHelperFinder.b()) {
-            abstractC3289a.clear(this);
+        for (com.alibaba.android.vlayout.a aVar : this.mHelperFinder.b()) {
+            aVar.clear(this);
         }
         this.mRecyclerView = null;
     }
@@ -795,8 +790,8 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
 
     @Override // androidx.recyclerview.widget.RecyclerView.LayoutManager
     public void onItemsChanged(RecyclerView recyclerView) {
-        for (AbstractC3289a abstractC3289a : this.mHelperFinder.b()) {
-            abstractC3289a.onItemsChanged(this);
+        for (com.alibaba.android.vlayout.a aVar : this.mHelperFinder.b()) {
+            aVar.onItemsChanged(this);
         }
     }
 
@@ -860,9 +855,9 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
                 if (i >= 18) {
                     Trace.endSection();
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
-                throw e;
+            } catch (Exception e2) {
+                e2.printStackTrace();
+                throw e2;
             }
         } catch (Throwable th) {
             runPostLayout(recycler, state, Integer.MAX_VALUE);
@@ -990,8 +985,8 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
         super.onScrollStateChanged(i);
         int findFirstVisibleItemPosition = findFirstVisibleItemPosition();
         int findLastVisibleItemPosition = findLastVisibleItemPosition();
-        for (AbstractC3289a abstractC3289a : this.mHelperFinder.b()) {
-            abstractC3289a.onScrollStateChanged(i, findFirstVisibleItemPosition, findLastVisibleItemPosition, this);
+        for (com.alibaba.android.vlayout.a aVar : this.mHelperFinder.b()) {
+            aVar.onScrollStateChanged(i, findFirstVisibleItemPosition, findLastVisibleItemPosition, this);
         }
     }
 
@@ -1011,8 +1006,8 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
             while (i < i2) {
                 int position3 = getPosition(getChildAt(i3));
                 if (position3 != -1) {
-                    AbstractC3289a a = this.mHelperFinder.a(position3);
-                    if (a == null || a.isRecyclable(position3, position, position2, this, true)) {
+                    com.alibaba.android.vlayout.a a2 = this.mHelperFinder.a(position3);
+                    if (a2 == null || a2.isRecyclable(position3, position, position2, this, true)) {
                         removeAndRecycleViewAt(i3, recycler);
                     } else {
                         i3++;
@@ -1030,8 +1025,8 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
         while (i > i2) {
             int position6 = getPosition(getChildAt(i));
             if (position6 != -1) {
-                AbstractC3289a a2 = this.mHelperFinder.a(position6);
-                if (a2 == null || a2.isRecyclable(position6, position4, position5, this, false)) {
+                com.alibaba.android.vlayout.a a3 = this.mHelperFinder.a(position6);
+                if (a3 == null || a3.isRecyclable(position6, position4, position5, this, false)) {
                     removeAndRecycleViewAt(i, recycler);
                 }
             } else {
@@ -1058,17 +1053,17 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
 
     public void runAdjustLayout() {
         int findFirstVisibleItemPosition = findFirstVisibleItemPosition();
-        AbstractC3289a a = this.mHelperFinder.a(findFirstVisibleItemPosition);
+        com.alibaba.android.vlayout.a a2 = this.mHelperFinder.a(findFirstVisibleItemPosition);
         int findLastVisibleItemPosition = findLastVisibleItemPosition();
-        AbstractC3289a a2 = this.mHelperFinder.a(findLastVisibleItemPosition);
-        List<AbstractC3289a> b = this.mHelperFinder.b();
-        int indexOf = b.indexOf(a2);
-        for (int indexOf2 = b.indexOf(a); indexOf2 <= indexOf; indexOf2++) {
+        com.alibaba.android.vlayout.a a3 = this.mHelperFinder.a(findLastVisibleItemPosition);
+        List<com.alibaba.android.vlayout.a> b2 = this.mHelperFinder.b();
+        int indexOf = b2.indexOf(a3);
+        for (int indexOf2 = b2.indexOf(a2); indexOf2 <= indexOf; indexOf2++) {
             try {
-                b.get(indexOf2).adjustLayout(findFirstVisibleItemPosition, findLastVisibleItemPosition, this);
-            } catch (Exception e) {
+                b2.get(indexOf2).adjustLayout(findFirstVisibleItemPosition, findLastVisibleItemPosition, this);
+            } catch (Exception e2) {
                 if (sDebuggable) {
-                    throw e;
+                    throw e2;
                 }
             }
         }
@@ -1097,8 +1092,8 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
                         int i3 = i > 0 ? 1 : -1;
                         int abs = Math.abs(i);
                         updateLayoutStateExpose(i3, abs, true, state);
-                        ExposeLinearLayoutManagerEx.C3282c c3282c = ((ExposeLinearLayoutManagerEx) this).mLayoutState;
-                        int fill = c3282c.mScrollingOffset + fill(recycler, c3282c, state, false);
+                        ExposeLinearLayoutManagerEx.c cVar = ((ExposeLinearLayoutManagerEx) this).mLayoutState;
+                        int fill = cVar.mScrollingOffset + fill(recycler, cVar, state, false);
                         if (fill < 0) {
                             return 0;
                         }
@@ -1109,10 +1104,10 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
                     return 0;
                 }
                 i2 = i;
-            } catch (Exception e) {
-                Log.w(TAG, Log.getStackTraceString(e), e);
+            } catch (Exception e2) {
+                Log.w(TAG, Log.getStackTraceString(e2), e2);
                 if (sDebuggable) {
-                    throw e;
+                    throw e2;
                 }
             }
             if (Build.VERSION.SDK_INT >= 18) {
@@ -1155,16 +1150,16 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
         this.mFixAreaAdjustor = new wj0(i, i2, i3, i4);
     }
 
-    public void setHelperFinder(@NonNull AbstractC3290b abstractC3290b) {
-        if (abstractC3290b != null) {
+    public void setHelperFinder(@NonNull com.alibaba.android.vlayout.b bVar) {
+        if (bVar != null) {
             LinkedList linkedList = new LinkedList();
-            AbstractC3290b abstractC3290b2 = this.mHelperFinder;
-            if (abstractC3290b2 != null) {
-                for (AbstractC3289a abstractC3289a : abstractC3290b2.b()) {
-                    linkedList.add(abstractC3289a);
+            com.alibaba.android.vlayout.b bVar2 = this.mHelperFinder;
+            if (bVar2 != null) {
+                for (com.alibaba.android.vlayout.a aVar : bVar2.b()) {
+                    linkedList.add(aVar);
                 }
             }
-            this.mHelperFinder = abstractC3290b;
+            this.mHelperFinder = bVar;
             if (linkedList.size() > 0) {
                 this.mHelperFinder.d(linkedList);
             }
@@ -1175,33 +1170,33 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
         throw new IllegalArgumentException("finder is null");
     }
 
-    public void setLayoutHelpers(@Nullable List<AbstractC3289a> list) {
+    public void setLayoutHelpers(@Nullable List<com.alibaba.android.vlayout.a> list) {
         BaseLayoutHelper.LayoutViewBindListener layoutViewBindListener;
-        for (AbstractC3289a abstractC3289a : this.mHelperFinder.b()) {
-            this.oldHelpersSet.put(Integer.valueOf(System.identityHashCode(abstractC3289a)), abstractC3289a);
+        for (com.alibaba.android.vlayout.a aVar : this.mHelperFinder.b()) {
+            this.oldHelpersSet.put(Integer.valueOf(System.identityHashCode(aVar)), aVar);
         }
         if (list != null) {
             int i = 0;
-            for (AbstractC3289a abstractC3289a2 : list) {
-                if (abstractC3289a2 instanceof FixAreaLayoutHelper) {
-                    ((FixAreaLayoutHelper) abstractC3289a2).a(this.mFixAreaAdjustor);
+            for (com.alibaba.android.vlayout.a aVar2 : list) {
+                if (aVar2 instanceof FixAreaLayoutHelper) {
+                    ((FixAreaLayoutHelper) aVar2).a(this.mFixAreaAdjustor);
                 }
-                if ((abstractC3289a2 instanceof BaseLayoutHelper) && (layoutViewBindListener = this.mLayoutViewBindListener) != null) {
-                    ((BaseLayoutHelper) abstractC3289a2).setLayoutViewBindListener(layoutViewBindListener);
+                if ((aVar2 instanceof BaseLayoutHelper) && (layoutViewBindListener = this.mLayoutViewBindListener) != null) {
+                    ((BaseLayoutHelper) aVar2).setLayoutViewBindListener(layoutViewBindListener);
                 }
-                if (abstractC3289a2.getItemCount() > 0) {
-                    abstractC3289a2.setRange(i, (abstractC3289a2.getItemCount() + i) - 1);
+                if (aVar2.getItemCount() > 0) {
+                    aVar2.setRange(i, (aVar2.getItemCount() + i) - 1);
                 } else {
-                    abstractC3289a2.setRange(-1, -1);
+                    aVar2.setRange(-1, -1);
                 }
-                i += abstractC3289a2.getItemCount();
+                i += aVar2.getItemCount();
             }
         }
         this.mHelperFinder.d(list);
-        for (AbstractC3289a abstractC3289a3 : this.mHelperFinder.b()) {
-            this.newHelpersSet.put(Integer.valueOf(System.identityHashCode(abstractC3289a3)), abstractC3289a3);
+        for (com.alibaba.android.vlayout.a aVar3 : this.mHelperFinder.b()) {
+            this.newHelpersSet.put(Integer.valueOf(System.identityHashCode(aVar3)), aVar3);
         }
-        Iterator<Map.Entry<Integer, AbstractC3289a>> it = this.oldHelpersSet.entrySet().iterator();
+        Iterator<Map.Entry<Integer, com.alibaba.android.vlayout.a>> it = this.oldHelpersSet.entrySet().iterator();
         while (it.hasNext()) {
             Integer key = it.next().getKey();
             if (this.newHelpersSet.containsKey(key)) {
@@ -1209,8 +1204,8 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
                 it.remove();
             }
         }
-        for (AbstractC3289a abstractC3289a4 : this.oldHelpersSet.values()) {
-            abstractC3289a4.clear(this);
+        for (com.alibaba.android.vlayout.a aVar4 : this.oldHelpersSet.values()) {
+            aVar4.clear(this);
         }
         if (!this.oldHelpersSet.isEmpty() || !this.newHelpersSet.isEmpty()) {
             this.mSpaceMeasured = false;
@@ -1245,7 +1240,7 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
 
     @Override // com.alibaba.android.vlayout.ExposeLinearLayoutManagerEx, androidx.recyclerview.widget.LinearLayoutManager
     public void setOrientation(int i) {
-        this.mOrientationHelper = AbstractC3291c.b(this, i);
+        this.mOrientationHelper = com.alibaba.android.vlayout.c.b(this, i);
         super.setOrientation(i);
     }
 
@@ -1336,17 +1331,17 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
     }
 
     @Override // com.alibaba.android.vlayout.LayoutManagerHelper
-    public void addChildView(C3287d c3287d, View view) {
-        addChildView(c3287d, view, c3287d.e() == 1 ? -1 : 0);
+    public void addChildView(d dVar, View view) {
+        addChildView(dVar, view, dVar.e() == 1 ? -1 : 0);
     }
 
     @Override // com.alibaba.android.vlayout.ExposeLinearLayoutManagerEx
     protected int computeAlignOffset(int i, boolean z, boolean z2) {
-        AbstractC3289a a;
-        if (i == -1 || (a = this.mHelperFinder.a(i)) == null) {
+        com.alibaba.android.vlayout.a a2;
+        if (i == -1 || (a2 = this.mHelperFinder.a(i)) == null) {
             return 0;
         }
-        return a.computeAlignOffset(i - a.getRange().d().intValue(), z, z2, this);
+        return a2.computeAlignOffset(i - a2.getRange().d().intValue(), z, z2, this);
     }
 
     public int obtainExtraMargin(View view, boolean z, boolean z2) {
@@ -1369,31 +1364,31 @@ public class VirtualLayoutManager extends ExposeLinearLayoutManagerEx implements
         this.mNestedScrolling = false;
         this.mEnableMarginOverlapping = false;
         this.mMaxMeasureSize = -1;
-        this.mRangeComparator = new C3284a(this);
+        this.mRangeComparator = new a(this);
         this.mFixAreaAdjustor = wj0.mDefaultAdjuster;
         this.newHelpersSet = new HashMap<>();
         this.oldHelpersSet = new HashMap<>();
-        this.mTempAnchorInfoWrapper = new C3286c();
+        this.mTempAnchorInfoWrapper = new c();
         this.mNested = 0;
-        this.mTempLayoutStateWrapper = new C3287d();
+        this.mTempLayoutStateWrapper = new d();
         this.mRangeLengths = new ArrayList();
         this.mDefaultLayoutHelper = DEFAULT_LAYOUT_HELPER;
-        this.mLayoutViewFatory = new C3285b(this);
+        this.mLayoutViewFatory = new b(this);
         this.mDecorInsets = new Rect();
         this.mSpaceMeasured = false;
         this.mMeasuredFullSpace = 0;
         this.mSpaceMeasuring = false;
-        this.mOrientationHelper = AbstractC3291c.b(this, i);
-        this.mSecondaryOrientationHelper = AbstractC3291c.b(this, i != 1 ? 1 : 0);
+        this.mOrientationHelper = com.alibaba.android.vlayout.c.b(this, i);
+        this.mSecondaryOrientationHelper = com.alibaba.android.vlayout.c.b(this, i != 1 ? 1 : 0);
         this.mCanScrollVertically = super.canScrollVertically();
         this.mCanScrollHorizontally = super.canScrollHorizontally();
-        setHelperFinder(new C3294d());
+        setHelperFinder(new com.alibaba.android.vlayout.d());
     }
 
     @Override // com.alibaba.android.vlayout.LayoutManagerHelper
-    public void addChildView(C3287d c3287d, View view, int i) {
+    public void addChildView(d dVar, View view, int i) {
         showView(view);
-        if (!c3287d.i()) {
+        if (!dVar.i()) {
             addView(view, i);
         } else {
             addDisappearingView(view, i);

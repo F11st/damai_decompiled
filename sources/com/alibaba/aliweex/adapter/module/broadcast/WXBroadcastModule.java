@@ -22,12 +22,11 @@ public class WXBroadcastModule extends WXModule {
     private Map<String, MessageChannel> messageTokenChannels = new HashMap();
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.module.broadcast.WXBroadcastModule$a */
     /* loaded from: classes15.dex */
-    class C3057a implements MessageCallback {
+    class a implements MessageCallback {
         final /* synthetic */ JSCallback a;
 
-        C3057a(WXBroadcastModule wXBroadcastModule, JSCallback jSCallback) {
+        a(WXBroadcastModule wXBroadcastModule, JSCallback jSCallback) {
             this.a = jSCallback;
         }
     }
@@ -113,7 +112,7 @@ public class WXBroadcastModule extends WXModule {
         }
         MessageChannel messageChannel = this.messageTokenChannels.get(string);
         if (messageChannel != null) {
-            messageChannel.setCallback(new C3057a(this, jSCallback));
+            messageChannel.setCallback(new a(this, jSCallback));
         } else if (jSCallback2 != null) {
             JSONObject jSONObject3 = new JSONObject();
             jSONObject3.put("result", (Object) "-1");

@@ -34,7 +34,7 @@ public final class i62 {
         xd2<MemberScope> xd2Var = new xd2<>();
         for (MemberScope memberScope : iterable) {
             MemberScope memberScope2 = memberScope;
-            if ((memberScope2 == null || memberScope2 == MemberScope.C8499b.INSTANCE) ? false : true) {
+            if ((memberScope2 == null || memberScope2 == MemberScope.b.INSTANCE) ? false : true) {
                 xd2Var.add(memberScope);
             }
         }

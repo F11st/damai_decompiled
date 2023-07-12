@@ -19,9 +19,8 @@ public class TbAuthJsBridge extends WVApiPlugin {
     private BroadcastReceiver mLoginReceiver;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.jsbridge.TbAuthJsBridge$a */
     /* loaded from: classes12.dex */
-    static /* synthetic */ class C6619a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -72,7 +71,7 @@ public class TbAuthJsBridge extends WVApiPlugin {
                 if (intent == null || (valueOf = LoginAction.valueOf(intent.getAction())) == null) {
                     return;
                 }
-                int i = C6619a.a[valueOf.ordinal()];
+                int i = a.a[valueOf.ordinal()];
                 if (i == 1) {
                     TbAuthJsBridge.this.doWhenReceiveSuccess(wVCallBackContext);
                 } else if (i == 2 || i == 3 || i == 4) {

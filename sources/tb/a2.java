@@ -52,20 +52,20 @@ public final class a2 {
             return true;
         }
         a2 a2Var = INSTANCE;
-        if (a2Var.a(abstractTypeCheckerContext, simpleTypeMarker, AbstractTypeCheckerContext.AbstractC8531a.C8533b.INSTANCE)) {
+        if (a2Var.a(abstractTypeCheckerContext, simpleTypeMarker, AbstractTypeCheckerContext.a.b.INSTANCE)) {
             return true;
         }
-        if (j.isDefinitelyNotNullType(simpleTypeMarker2) || a2Var.a(abstractTypeCheckerContext, simpleTypeMarker2, AbstractTypeCheckerContext.AbstractC8531a.C8535d.INSTANCE) || j.isClassType(simpleTypeMarker)) {
+        if (j.isDefinitelyNotNullType(simpleTypeMarker2) || a2Var.a(abstractTypeCheckerContext, simpleTypeMarker2, AbstractTypeCheckerContext.a.d.INSTANCE) || j.isClassType(simpleTypeMarker)) {
             return false;
         }
         return a2Var.b(abstractTypeCheckerContext, simpleTypeMarker, j.typeConstructor(simpleTypeMarker2));
     }
 
-    public final boolean a(@NotNull AbstractTypeCheckerContext abstractTypeCheckerContext, @NotNull SimpleTypeMarker simpleTypeMarker, @NotNull AbstractTypeCheckerContext.AbstractC8531a abstractC8531a) {
+    public final boolean a(@NotNull AbstractTypeCheckerContext abstractTypeCheckerContext, @NotNull SimpleTypeMarker simpleTypeMarker, @NotNull AbstractTypeCheckerContext.a aVar) {
         String Z;
         b41.i(abstractTypeCheckerContext, "<this>");
         b41.i(simpleTypeMarker, "type");
-        b41.i(abstractC8531a, "supertypesPolicy");
+        b41.i(aVar, "supertypesPolicy");
         TypeSystemContext j = abstractTypeCheckerContext.j();
         if (!((j.isClassType(simpleTypeMarker) && !j.isMarkedNullable(simpleTypeMarker)) || j.isDefinitelyNotNullType(simpleTypeMarker))) {
             abstractTypeCheckerContext.k();
@@ -79,16 +79,16 @@ public final class a2 {
                     SimpleTypeMarker pop = h.pop();
                     b41.h(pop, "current");
                     if (i.add(pop)) {
-                        AbstractTypeCheckerContext.AbstractC8531a abstractC8531a2 = j.isMarkedNullable(pop) ? AbstractTypeCheckerContext.AbstractC8531a.C8534c.INSTANCE : abstractC8531a;
-                        if (!(!b41.d(abstractC8531a2, AbstractTypeCheckerContext.AbstractC8531a.C8534c.INSTANCE))) {
-                            abstractC8531a2 = null;
+                        AbstractTypeCheckerContext.a aVar2 = j.isMarkedNullable(pop) ? AbstractTypeCheckerContext.a.c.INSTANCE : aVar;
+                        if (!(!b41.d(aVar2, AbstractTypeCheckerContext.a.c.INSTANCE))) {
+                            aVar2 = null;
                         }
-                        if (abstractC8531a2 == null) {
+                        if (aVar2 == null) {
                             continue;
                         } else {
                             TypeSystemContext j2 = abstractTypeCheckerContext.j();
                             for (KotlinTypeMarker kotlinTypeMarker : j2.supertypes(j2.typeConstructor(pop))) {
-                                SimpleTypeMarker a = abstractC8531a2.a(abstractTypeCheckerContext, kotlinTypeMarker);
+                                SimpleTypeMarker a = aVar2.a(abstractTypeCheckerContext, kotlinTypeMarker);
                                 if ((j.isClassType(a) && !j.isMarkedNullable(a)) || j.isDefinitelyNotNullType(a)) {
                                     abstractTypeCheckerContext.e();
                                 } else {
@@ -134,16 +134,16 @@ public final class a2 {
                 SimpleTypeMarker pop = h.pop();
                 b41.h(pop, "current");
                 if (i.add(pop)) {
-                    AbstractTypeCheckerContext.AbstractC8531a abstractC8531a = j.isMarkedNullable(pop) ? AbstractTypeCheckerContext.AbstractC8531a.C8534c.INSTANCE : AbstractTypeCheckerContext.AbstractC8531a.C8533b.INSTANCE;
-                    if (!(!b41.d(abstractC8531a, AbstractTypeCheckerContext.AbstractC8531a.C8534c.INSTANCE))) {
-                        abstractC8531a = null;
+                    AbstractTypeCheckerContext.a aVar = j.isMarkedNullable(pop) ? AbstractTypeCheckerContext.a.c.INSTANCE : AbstractTypeCheckerContext.a.b.INSTANCE;
+                    if (!(!b41.d(aVar, AbstractTypeCheckerContext.a.c.INSTANCE))) {
+                        aVar = null;
                     }
-                    if (abstractC8531a == null) {
+                    if (aVar == null) {
                         continue;
                     } else {
                         TypeSystemContext j2 = abstractTypeCheckerContext.j();
                         for (KotlinTypeMarker kotlinTypeMarker : j2.supertypes(j2.typeConstructor(pop))) {
-                            SimpleTypeMarker a = abstractC8531a.a(abstractTypeCheckerContext, kotlinTypeMarker);
+                            SimpleTypeMarker a = aVar.a(abstractTypeCheckerContext, kotlinTypeMarker);
                             if (INSTANCE.c(abstractTypeCheckerContext, a, typeConstructorMarker)) {
                                 abstractTypeCheckerContext.e();
                                 return true;

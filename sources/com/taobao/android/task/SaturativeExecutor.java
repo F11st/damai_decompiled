@@ -30,7 +30,7 @@ public class SaturativeExecutor extends ThreadPoolExecutor {
     static final String TAG = "SatuExec";
     private static SaturationAwareBlockingQueue<Runnable> mQueue;
     private static final Pattern PATTERN_CPU_ENTRIES = Pattern.compile("cpu[0-9]+");
-    private static final ThreadFactory sThreadFactory = new ThreadFactoryC6653b();
+    private static final ThreadFactory sThreadFactory = new b();
     private static final HashSet<Thread> mThreads = new HashSet<>();
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -101,10 +101,9 @@ public class SaturativeExecutor extends ThreadPoolExecutor {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.task.SaturativeExecutor$a */
     /* loaded from: classes12.dex */
-    public static class C6652a implements FileFilter {
-        C6652a() {
+    public static class a implements FileFilter {
+        a() {
         }
 
         @Override // java.io.FileFilter
@@ -114,12 +113,11 @@ public class SaturativeExecutor extends ThreadPoolExecutor {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.task.SaturativeExecutor$b */
     /* loaded from: classes12.dex */
-    static class ThreadFactoryC6653b implements ThreadFactory {
+    static class b implements ThreadFactory {
         private final AtomicInteger a = new AtomicInteger(1);
 
-        ThreadFactoryC6653b() {
+        b() {
         }
 
         @Override // java.util.concurrent.ThreadFactory
@@ -143,7 +141,7 @@ public class SaturativeExecutor extends ThreadPoolExecutor {
 
     private static int countCpuCores() {
         try {
-            return new File("/sys/devices/system/cpu/").listFiles(new C6652a()).length;
+            return new File("/sys/devices/system/cpu/").listFiles(new a()).length;
         } catch (Exception unused) {
             return 0;
         }

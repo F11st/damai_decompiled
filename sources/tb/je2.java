@@ -10,14 +10,13 @@ public class je2 {
     private final Map<String, ie2> a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.je2$b */
     /* loaded from: classes11.dex */
-    private static class C9309b {
+    private static class b {
         private static final je2 a = new je2();
     }
 
     public static je2 c() {
-        return C9309b.a;
+        return b.a;
     }
 
     public void a() {

@@ -23,12 +23,11 @@ public class BannerView extends AbsView<BannerContract$Presenter> implements Ban
     private HorizontalRecyclerView mGalleyView;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.girl.mvp.BannerView$a */
     /* loaded from: classes7.dex */
-    public class C1840a implements OnItemBindListener<BannerBean> {
+    public class a implements OnItemBindListener<BannerBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1840a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -82,7 +81,7 @@ public class BannerView extends AbsView<BannerContract$Presenter> implements Ban
         }
         Activity activity = getPresenter().getContext().getActivity();
         this.mContext = activity;
-        BannerAdapter bannerAdapter = new BannerAdapter(activity, (BannerPresenter) getPresenter(), new C1840a());
+        BannerAdapter bannerAdapter = new BannerAdapter(activity, (BannerPresenter) getPresenter(), new a());
         this.mAdapter = bannerAdapter;
         this.mGalleyView.setAdapter(bannerAdapter);
     }

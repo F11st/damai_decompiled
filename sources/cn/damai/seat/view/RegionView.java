@@ -52,7 +52,7 @@ public class RegionView extends AppCompatImageView {
     private Paint mPaint;
     private Paint mRegionBorderPaint;
     private Path mRegionBorderPath;
-    private C1731c mRegionConfig;
+    private c mRegionConfig;
     private int mRegionImageHeight;
     private int mRegionImageWidth;
     private Bitmap mRegionLayerBitmap;
@@ -83,12 +83,11 @@ public class RegionView extends AppCompatImageView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.view.RegionView$a */
     /* loaded from: classes16.dex */
-    public class ScaleGestureDetector$OnScaleGestureListenerC1729a implements ScaleGestureDetector.OnScaleGestureListener {
+    public class a implements ScaleGestureDetector.OnScaleGestureListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ScaleGestureDetector$OnScaleGestureListenerC1729a() {
+        a() {
         }
 
         /* JADX WARN: Removed duplicated region for block: B:19:0x005f  */
@@ -100,7 +99,7 @@ public class RegionView extends AppCompatImageView {
         public boolean onScale(android.view.ScaleGestureDetector r8) {
             /*
                 r7 = this;
-                com.android.alibaba.ip.runtime.IpChange r0 = cn.damai.seat.view.RegionView.ScaleGestureDetector$OnScaleGestureListenerC1729a.$ipChange
+                com.android.alibaba.ip.runtime.IpChange r0 = cn.damai.seat.view.RegionView.a.$ipChange
                 java.lang.String r1 = "-1947645834"
                 boolean r2 = com.android.alibaba.ip.runtime.AndroidInstantRuntime.support(r0, r1)
                 r3 = 1
@@ -173,7 +172,7 @@ public class RegionView extends AppCompatImageView {
             L97:
                 return r3
             */
-            throw new UnsupportedOperationException("Method not decompiled: cn.damai.seat.view.RegionView.ScaleGestureDetector$OnScaleGestureListenerC1729a.onScale(android.view.ScaleGestureDetector):boolean");
+            throw new UnsupportedOperationException("Method not decompiled: cn.damai.seat.view.RegionView.a.onScale(android.view.ScaleGestureDetector):boolean");
         }
 
         @Override // android.view.ScaleGestureDetector.OnScaleGestureListener
@@ -197,14 +196,13 @@ public class RegionView extends AppCompatImageView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.view.RegionView$b */
     /* loaded from: classes16.dex */
-    public class C1730b extends GestureDetector.SimpleOnGestureListener {
+    public class b extends GestureDetector.SimpleOnGestureListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private float a;
         private float b;
 
-        C1730b() {
+        b() {
         }
 
         @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnGestureListener
@@ -268,9 +266,8 @@ public class RegionView extends AppCompatImageView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.view.RegionView$c */
     /* loaded from: classes16.dex */
-    public class C1731c {
+    public class c {
         private static transient /* synthetic */ IpChange $ipChange;
         float a;
         float b;
@@ -278,7 +275,7 @@ public class RegionView extends AppCompatImageView {
         float d;
         float e;
 
-        private C1731c() {
+        private c() {
             this.a = 0.0f;
             this.b = 0.0f;
             this.c = 0.0f;
@@ -299,12 +296,11 @@ public class RegionView extends AppCompatImageView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.view.RegionView$d */
     /* loaded from: classes16.dex */
-    public class C1732d implements ValueAnimator.AnimatorUpdateListener {
+    public class d implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1732d() {
+        d() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -319,12 +315,11 @@ public class RegionView extends AppCompatImageView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.view.RegionView$e */
     /* loaded from: classes16.dex */
-    public class C1733e implements TypeEvaluator {
+    public class e implements TypeEvaluator {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1733e(RegionView regionView) {
+        e(RegionView regionView) {
         }
 
         @Override // android.animation.TypeEvaluator
@@ -342,12 +337,11 @@ public class RegionView extends AppCompatImageView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.view.RegionView$f */
     /* loaded from: classes16.dex */
-    public class C1734f implements Animator.AnimatorListener, ValueAnimator.AnimatorUpdateListener {
+    public class f implements Animator.AnimatorListener, ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1734f() {
+        f() {
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -415,8 +409,8 @@ public class RegionView extends AppCompatImageView {
                 RegionView.this.invalidate();
             }
         };
-        this.scaleGestureDetector = new ScaleGestureDetector(getContext(), new ScaleGestureDetector$OnScaleGestureListenerC1729a());
-        this.mGestureDetector = new GestureDetector(getContext(), new C1730b());
+        this.scaleGestureDetector = new ScaleGestureDetector(getContext(), new a());
+        this.mGestureDetector = new GestureDetector(getContext(), new b());
         init(context);
     }
 
@@ -426,14 +420,14 @@ public class RegionView extends AppCompatImageView {
             return ((Boolean) ipChange.ipc$dispatch("-604360158", new Object[]{this})).booleanValue();
         }
         float currentScale = getCurrentScale();
-        float f = this.mMaxScale;
-        if (currentScale > f) {
-            zoomAnimate(currentScale, f);
+        float f2 = this.mMaxScale;
+        if (currentScale > f2) {
+            zoomAnimate(currentScale, f2);
             return true;
         }
-        float f2 = this.mMinScale;
-        if (currentScale < f2) {
-            zoomAnimate(currentScale, f2);
+        float f3 = this.mMinScale;
+        if (currentScale < f3) {
+            zoomAnimate(currentScale, f3);
             return true;
         }
         return false;
@@ -446,44 +440,44 @@ public class RegionView extends AppCompatImageView {
         if (AndroidInstantRuntime.support(ipChange, "741740473")) {
             return ((Boolean) ipChange.ipc$dispatch("741740473", new Object[]{this})).booleanValue();
         }
-        float f = 0.0f;
+        float f2 = 0.0f;
         if (this.mRegionConfig.a <= getWidth()) {
             width = (getWidth() - this.mRegionConfig.a) / 2.0f;
         } else {
-            C1731c c1731c = this.mRegionConfig;
-            float f2 = c1731c.c;
-            if (f2 < 0.0f && f2 + c1731c.a > getWidth()) {
+            c cVar = this.mRegionConfig;
+            float f3 = cVar.c;
+            if (f3 < 0.0f && f3 + cVar.a > getWidth()) {
                 width = this.mRegionConfig.c;
             } else {
-                C1731c c1731c2 = this.mRegionConfig;
-                width = c1731c2.c + c1731c2.a <= ((float) getWidth()) ? getWidth() - this.mRegionConfig.a : 0.0f;
+                c cVar2 = this.mRegionConfig;
+                width = cVar2.c + cVar2.a <= ((float) getWidth()) ? getWidth() - this.mRegionConfig.a : 0.0f;
             }
         }
         if (this.mRegionConfig.b <= getHeight()) {
-            f = (getHeight() - this.mRegionConfig.b) / 2.0f;
+            f2 = (getHeight() - this.mRegionConfig.b) / 2.0f;
         } else {
-            C1731c c1731c3 = this.mRegionConfig;
-            float f3 = c1731c3.d;
-            if (f3 < 0.0f && f3 + c1731c3.b > getHeight()) {
-                f = this.mRegionConfig.d;
+            c cVar3 = this.mRegionConfig;
+            float f4 = cVar3.d;
+            if (f4 < 0.0f && f4 + cVar3.b > getHeight()) {
+                f2 = this.mRegionConfig.d;
             } else {
-                C1731c c1731c4 = this.mRegionConfig;
-                if (c1731c4.d + c1731c4.b <= getHeight()) {
-                    f = getHeight() - this.mRegionConfig.b;
+                c cVar4 = this.mRegionConfig;
+                if (cVar4.d + cVar4.b <= getHeight()) {
+                    f2 = getHeight() - this.mRegionConfig.b;
                 }
             }
         }
-        C1731c c1731c5 = this.mRegionConfig;
-        if (width == c1731c5.c && f == c1731c5.d) {
+        c cVar5 = this.mRegionConfig;
+        if (width == cVar5.c && f2 == cVar5.d) {
             return false;
         }
         Point point = new Point();
-        C1731c c1731c6 = this.mRegionConfig;
-        point.x = (int) c1731c6.c;
-        point.y = (int) c1731c6.d;
+        c cVar6 = this.mRegionConfig;
+        point.x = (int) cVar6.c;
+        point.y = (int) cVar6.d;
         Point point2 = new Point();
         point2.x = (int) width;
-        point2.y = (int) f;
+        point2.y = (int) f2;
         moveAnimate(point, point2);
         return true;
     }
@@ -493,44 +487,44 @@ public class RegionView extends AppCompatImageView {
         if (AndroidInstantRuntime.support(ipChange, "-1113198082")) {
             return ((Boolean) ipChange.ipc$dispatch("-1113198082", new Object[]{this})).booleanValue();
         }
-        C1731c c1731c = this.mRegionConfig;
-        if (c1731c == null) {
+        c cVar = this.mRegionConfig;
+        if (cVar == null) {
             return false;
         }
-        float max = Math.max(0.0f, c1731c.d);
+        float max = Math.max(0.0f, cVar.d);
         float max2 = Math.max(0.0f, this.mRegionConfig.c);
-        C1731c c1731c2 = this.mRegionConfig;
-        float min = Math.min(this.mViewHeight, c1731c2.b + c1731c2.d);
-        C1731c c1731c3 = this.mRegionConfig;
-        float min2 = Math.min(this.mViewWidth, c1731c3.c + c1731c3.a);
-        C1731c c1731c4 = this.mRegionConfig;
-        float f = c1731c4.e;
-        float f2 = (min - max) / f;
-        float f3 = (min2 - max2) / f;
-        float f4 = c1731c4.d;
-        float abs = max == f4 ? 0.0f : Math.abs(f4 / f);
-        C1731c c1731c5 = this.mRegionConfig;
-        float f5 = c1731c5.c;
-        float abs2 = max2 != f5 ? Math.abs(f5 / c1731c5.e) : 0.0f;
-        this.mSrcBitmapRect.set((int) abs2, (int) abs, (int) (abs2 + f3), (int) (abs + f2));
+        c cVar2 = this.mRegionConfig;
+        float min = Math.min(this.mViewHeight, cVar2.b + cVar2.d);
+        c cVar3 = this.mRegionConfig;
+        float min2 = Math.min(this.mViewWidth, cVar3.c + cVar3.a);
+        c cVar4 = this.mRegionConfig;
+        float f2 = cVar4.e;
+        float f3 = (min - max) / f2;
+        float f4 = (min2 - max2) / f2;
+        float f5 = cVar4.d;
+        float abs = max == f5 ? 0.0f : Math.abs(f5 / f2);
+        c cVar5 = this.mRegionConfig;
+        float f6 = cVar5.c;
+        float abs2 = max2 != f6 ? Math.abs(f6 / cVar5.e) : 0.0f;
+        this.mSrcBitmapRect.set((int) abs2, (int) abs, (int) (abs2 + f4), (int) (abs + f3));
         this.mRegionRect.set((int) max2, (int) max, (int) min2, (int) min);
         return true;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void click(float f, float f2) {
+    public void click(float f2, float f3) {
         Region clickedRegion;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1642888209")) {
-            ipChange.ipc$dispatch("1642888209", new Object[]{this, Float.valueOf(f), Float.valueOf(f2)});
+            ipChange.ipc$dispatch("1642888209", new Object[]{this, Float.valueOf(f2), Float.valueOf(f3)});
             return;
         }
         try {
-            if (this.mListener != null && (clickedRegion = getClickedRegion(f, f2)) != null && clickedRegion.state != 0) {
-                this.mListener.onRegion(getClickedRegion(f, f2));
+            if (this.mListener != null && (clickedRegion = getClickedRegion(f2, f3)) != null && clickedRegion.state != 0) {
+                this.mListener.onRegion(getClickedRegion(f2, f3));
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 
@@ -549,12 +543,12 @@ public class RegionView extends AppCompatImageView {
                     this.mRegionBorderPath.reset();
                     for (int i = 0; i < arrayList.size(); i++) {
                         RegionLocation regionLocation = arrayList.get(i);
-                        float f = regionLocation.x;
-                        float f2 = regionLocation.y;
+                        float f2 = regionLocation.x;
+                        float f3 = regionLocation.y;
                         if (i == 0) {
-                            this.mRegionBorderPath.moveTo(f, f2);
+                            this.mRegionBorderPath.moveTo(f2, f3);
                         }
-                        this.mRegionBorderPath.lineTo(f, f2);
+                        this.mRegionBorderPath.lineTo(f2, f3);
                     }
                     this.mRegionBorderPath.close();
                     this.mRegionLayerCanvas.drawPath(this.mRegionBorderPath, this.mInvalidRegionPaint);
@@ -569,12 +563,12 @@ public class RegionView extends AppCompatImageView {
                             this.mRegionBorderPath.reset();
                             for (int i3 = 0; i3 < arrayList2.size(); i3++) {
                                 RegionLocation regionLocation2 = arrayList2.get(i3);
-                                float f3 = regionLocation2.x;
-                                float f4 = regionLocation2.y;
+                                float f4 = regionLocation2.x;
+                                float f5 = regionLocation2.y;
                                 if (i3 == 0) {
-                                    this.mRegionBorderPath.moveTo(f3, f4);
+                                    this.mRegionBorderPath.moveTo(f4, f5);
                                 }
-                                this.mRegionBorderPath.lineTo(f3, f4);
+                                this.mRegionBorderPath.lineTo(f4, f5);
                             }
                             this.mRegionBorderPath.close();
                             this.mRegionLayerCanvas.drawPath(this.mRegionBorderPath, this.mRegionPaint);
@@ -592,10 +586,10 @@ public class RegionView extends AppCompatImageView {
         canvas.drawBitmap(this.mRegionLayerBitmap, rect, rect2, this.mPaint);
     }
 
-    private Region getClickedRegion(float f, float f2) {
+    private Region getClickedRegion(float f2, float f3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1425424283")) {
-            return (Region) ipChange.ipc$dispatch("-1425424283", new Object[]{this, Float.valueOf(f), Float.valueOf(f2)});
+            return (Region) ipChange.ipc$dispatch("-1425424283", new Object[]{this, Float.valueOf(f2), Float.valueOf(f3)});
         }
         List<Region> list = this.mRegions;
         if (list == null || list.isEmpty()) {
@@ -604,8 +598,8 @@ public class RegionView extends AppCompatImageView {
         this.mClickPosition = -1;
         for (int i = 0; i < this.mRegions.size(); i++) {
             Region region = this.mRegions.get(i);
-            C1731c c1731c = this.mRegionConfig;
-            if (Boolean.valueOf(isPointInPolygon2(f, f2, c1731c.c, c1731c.d, c1731c.e, region.regionLocationList)).booleanValue()) {
+            c cVar = this.mRegionConfig;
+            if (Boolean.valueOf(isPointInPolygon2(f2, f3, cVar.c, cVar.d, cVar.e, region.regionLocationList)).booleanValue()) {
                 this.mClickPosition = i;
                 return region;
             }
@@ -619,11 +613,11 @@ public class RegionView extends AppCompatImageView {
         if (AndroidInstantRuntime.support(ipChange, "754638498")) {
             return ((Float) ipChange.ipc$dispatch("754638498", new Object[]{this})).floatValue();
         }
-        C1731c c1731c = this.mRegionConfig;
-        if (c1731c == null) {
+        c cVar = this.mRegionConfig;
+        if (cVar == null) {
             return 1.0f;
         }
-        return c1731c.e;
+        return cVar.e;
     }
 
     private void init(Context context) {
@@ -644,7 +638,7 @@ public class RegionView extends AppCompatImageView {
             return;
         }
         this.mFirstDraw = true;
-        this.mRegionConfig = new C1731c();
+        this.mRegionConfig = new c();
         this.mRegionRect = new Rect();
         this.mSrcBitmapRect = new Rect();
         this.mLeftRightPadding = m62.a(context, 15.0f);
@@ -696,12 +690,12 @@ public class RegionView extends AppCompatImageView {
             this.mRegionBorderPath.reset();
             for (int i2 = 0; i2 < arrayList.size(); i2++) {
                 Path path = this.mRegionBorderPath;
-                float f = arrayList.get(i2).x;
-                C1731c c1731c = this.mRegionConfig;
-                float f2 = (f * c1731c.e) + c1731c.c;
-                float f3 = arrayList.get(i2).y;
-                C1731c c1731c2 = this.mRegionConfig;
-                path.lineTo(f2, (f3 * c1731c2.e) + c1731c2.d);
+                float f2 = arrayList.get(i2).x;
+                c cVar = this.mRegionConfig;
+                float f3 = (f2 * cVar.e) + cVar.c;
+                float f4 = arrayList.get(i2).y;
+                c cVar2 = this.mRegionConfig;
+                path.lineTo(f3, (f4 * cVar2.e) + cVar2.d);
             }
             this.mRegionBorderPath.close();
             paint.setColor(Color.parseColor(region.color));
@@ -710,12 +704,12 @@ public class RegionView extends AppCompatImageView {
         }
     }
 
-    public static boolean isPointInPolygon2(float f, float f2, float f3, float f4, float f5, List<RegionLocation> list) {
+    public static boolean isPointInPolygon2(float f2, float f3, float f4, float f5, float f6, List<RegionLocation> list) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-412939745")) {
-            return ((Boolean) ipChange.ipc$dispatch("-412939745", new Object[]{Float.valueOf(f), Float.valueOf(f2), Float.valueOf(f3), Float.valueOf(f4), Float.valueOf(f5), list})).booleanValue();
+            return ((Boolean) ipChange.ipc$dispatch("-412939745", new Object[]{Float.valueOf(f2), Float.valueOf(f3), Float.valueOf(f4), Float.valueOf(f5), Float.valueOf(f6), list})).booleanValue();
         }
-        float f6 = f5 == 0.0f ? 1.0f : f5;
+        float f7 = f6 == 0.0f ? 1.0f : f6;
         int size = list.size();
         int i = 0;
         int i2 = 0;
@@ -723,28 +717,28 @@ public class RegionView extends AppCompatImageView {
             RegionLocation regionLocation = list.get(i);
             i++;
             RegionLocation regionLocation2 = list.get(i % size);
-            float f7 = (regionLocation.x * f6) + f3;
-            float f8 = (regionLocation.y * f6) + f4;
-            float f9 = (regionLocation2.x * f6) + f3;
-            float f10 = (regionLocation2.y * f6) + f4;
-            if (f8 != f10 && f2 >= Math.min(f8, f10) && f2 < Math.max(f8, f10) && (((f2 - f8) * (f9 - f7)) / (f10 - f8)) + f7 > f) {
+            float f8 = (regionLocation.x * f7) + f4;
+            float f9 = (regionLocation.y * f7) + f5;
+            float f10 = (regionLocation2.x * f7) + f4;
+            float f11 = (regionLocation2.y * f7) + f5;
+            if (f9 != f11 && f3 >= Math.min(f9, f11) && f3 < Math.max(f9, f11) && (((f3 - f9) * (f10 - f8)) / (f11 - f9)) + f8 > f2) {
                 i2++;
             }
         }
         return i2 % 2 == 1;
     }
 
-    private void keydown(float f, float f2) {
+    private void keydown(float f2, float f3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-769748808")) {
-            ipChange.ipc$dispatch("-769748808", new Object[]{this, Float.valueOf(f), Float.valueOf(f2)});
+            ipChange.ipc$dispatch("-769748808", new Object[]{this, Float.valueOf(f2), Float.valueOf(f3)});
             return;
         }
         for (int i = 0; i < this.mRegions.size(); i++) {
             try {
                 Region region = this.mRegions.get(i);
-                C1731c c1731c = this.mRegionConfig;
-                if (Boolean.valueOf(isPointInPolygon2(f, f2, c1731c.c, c1731c.d, c1731c.e, region.regionLocationList)).booleanValue()) {
+                c cVar = this.mRegionConfig;
+                if (Boolean.valueOf(isPointInPolygon2(f2, f3, cVar.c, cVar.d, cVar.e, region.regionLocationList)).booleanValue()) {
                     region.flag = true;
                     return;
                 }
@@ -781,12 +775,12 @@ public class RegionView extends AppCompatImageView {
         if (xVar > i) {
             this.mRegionConfig.c = i;
         } else {
-            C1731c c1731c = this.mRegionConfig;
-            float f = c1731c.a;
-            if (xVar + f < i) {
-                c1731c.c = i - f;
+            c cVar = this.mRegionConfig;
+            float f2 = cVar.a;
+            if (xVar + f2 < i) {
+                cVar.c = i - f2;
             } else {
-                c1731c.c = xVar;
+                cVar.c = xVar;
             }
         }
         int yVar = com.alibaba.wireless.security.aopsdk.replace.android.graphics.Point.gety(point);
@@ -794,12 +788,12 @@ public class RegionView extends AppCompatImageView {
         if (yVar > i2) {
             this.mRegionConfig.d = i2;
         } else {
-            C1731c c1731c2 = this.mRegionConfig;
-            float f2 = c1731c2.b;
-            if (yVar + f2 < i2) {
-                c1731c2.d = i2 - f2;
+            c cVar2 = this.mRegionConfig;
+            float f3 = cVar2.b;
+            if (yVar + f3 < i2) {
+                cVar2.d = i2 - f3;
             } else {
-                c1731c2.d = yVar;
+                cVar2.d = yVar;
             }
         }
         invalidate();
@@ -811,45 +805,45 @@ public class RegionView extends AppCompatImageView {
             ipChange.ipc$dispatch("-402744235", new Object[]{this, point, point2, Long.valueOf(j)});
             return;
         }
-        ValueAnimator ofObject = ValueAnimator.ofObject(new C1733e(this), point, point2);
+        ValueAnimator ofObject = ValueAnimator.ofObject(new e(this), point, point2);
         ofObject.setInterpolator(new DecelerateInterpolator());
-        ofObject.addUpdateListener(new C1732d());
+        ofObject.addUpdateListener(new d());
         ofObject.setDuration(j);
         ofObject.start();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void zoom(float f) {
+    public void zoom(float f2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "738003106")) {
-            ipChange.ipc$dispatch("738003106", new Object[]{this, Float.valueOf(f)});
+            ipChange.ipc$dispatch("738003106", new Object[]{this, Float.valueOf(f2)});
             return;
         }
-        C1731c c1731c = this.mRegionConfig;
-        float f2 = c1731c.c;
-        float f3 = c1731c.d;
-        float f4 = c1731c.a;
-        float f5 = c1731c.b;
-        c1731c.a(this.mRegionImageWidth * f);
-        C1731c c1731c2 = this.mRegionConfig;
-        float f6 = this.scaleX;
-        c1731c2.c = f6 - (c1731c2.a * ((f6 - f2) / f4));
-        float f7 = this.scaleY;
-        c1731c2.d = f7 - (c1731c2.b * ((f7 - f3) / f5));
+        c cVar = this.mRegionConfig;
+        float f3 = cVar.c;
+        float f4 = cVar.d;
+        float f5 = cVar.a;
+        float f6 = cVar.b;
+        cVar.a(this.mRegionImageWidth * f2);
+        c cVar2 = this.mRegionConfig;
+        float f7 = this.scaleX;
+        cVar2.c = f7 - (cVar2.a * ((f7 - f3) / f5));
+        float f8 = this.scaleY;
+        cVar2.d = f8 - (cVar2.b * ((f8 - f4) / f6));
         invalidate();
     }
 
-    private void zoomAnimate(float f, float f2) {
+    private void zoomAnimate(float f2, float f3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1101887179")) {
-            ipChange.ipc$dispatch("1101887179", new Object[]{this, Float.valueOf(f), Float.valueOf(f2)});
+            ipChange.ipc$dispatch("1101887179", new Object[]{this, Float.valueOf(f2), Float.valueOf(f3)});
             return;
         }
-        ValueAnimator ofFloat = ValueAnimator.ofFloat(f, f2);
+        ValueAnimator ofFloat = ValueAnimator.ofFloat(f2, f3);
         ofFloat.setInterpolator(new DecelerateInterpolator());
-        C1734f c1734f = new C1734f();
-        ofFloat.addUpdateListener(c1734f);
-        ofFloat.addListener(c1734f);
+        f fVar = new f();
+        ofFloat.addUpdateListener(fVar);
+        ofFloat.addListener(fVar);
         ofFloat.setDuration(300L);
         ofFloat.start();
     }
@@ -876,37 +870,37 @@ public class RegionView extends AppCompatImageView {
                     this.mRegionImageHeight = this.mContentBitmap.getHeight();
                     int i = this.mLeftRightPadding * 2;
                     this.mRegionConfig.a = e80.d() - i;
-                    C1731c c1731c = this.mRegionConfig;
-                    float f = c1731c.a;
+                    c cVar = this.mRegionConfig;
+                    float f2 = cVar.a;
                     int i2 = this.mRegionImageHeight;
                     int i3 = this.mRegionImageWidth;
-                    float f2 = (f * i2) / i3;
-                    c1731c.b = f2;
+                    float f3 = (f2 * i2) / i3;
+                    cVar.b = f3;
                     int i4 = this.mViewHeight;
-                    if (f2 > i4 - i) {
-                        float f3 = this.mViewWidth - i;
-                        c1731c.b = f3;
-                        c1731c.a = (f3 * i3) / i2;
+                    if (f3 > i4 - i) {
+                        float f4 = this.mViewWidth - i;
+                        cVar.b = f4;
+                        cVar.a = (f4 * i3) / i2;
                     }
-                    c1731c.c = i / 2;
-                    c1731c.d = (i4 - c1731c.b) / 2.0f;
-                    float f4 = c1731c.a / i3;
-                    this.mMinScale = f4;
-                    c1731c.e = f4;
-                    float f5 = 3.0f * f4;
-                    this.mMaxScale = f5;
-                    float f6 = this.offsetScale;
-                    this.minOffsetScale = f4 * (1.0f - f6);
-                    this.maxOffsetScale = f5 * (f6 + 1.0f);
+                    cVar.c = i / 2;
+                    cVar.d = (i4 - cVar.b) / 2.0f;
+                    float f5 = cVar.a / i3;
+                    this.mMinScale = f5;
+                    cVar.e = f5;
+                    float f6 = 3.0f * f5;
+                    this.mMaxScale = f6;
+                    float f7 = this.offsetScale;
+                    this.minOffsetScale = f5 * (1.0f - f7);
+                    this.maxOffsetScale = f6 * (f7 + 1.0f);
                 }
                 if (buildDrawArea()) {
                     drawLayer(this.mSrcBitmapRect, this.mRegionRect, canvas, this.mContentBitmap);
                 } else {
                     Rect rect = this.mRegionRect;
-                    C1731c c1731c2 = this.mRegionConfig;
-                    float f7 = c1731c2.c;
-                    float f8 = c1731c2.d;
-                    rect.set((int) f7, (int) f8, (int) (f7 + c1731c2.a), (int) (f8 + c1731c2.b));
+                    c cVar2 = this.mRegionConfig;
+                    float f8 = cVar2.c;
+                    float f9 = cVar2.d;
+                    rect.set((int) f8, (int) f9, (int) (f8 + cVar2.a), (int) (f9 + cVar2.b));
                     drawLayer(null, this.mRegionRect, canvas, this.mContentBitmap);
                 }
                 if (this.mFirstDraw) {
@@ -1011,8 +1005,8 @@ public class RegionView extends AppCompatImageView {
                 RegionView.this.invalidate();
             }
         };
-        this.scaleGestureDetector = new ScaleGestureDetector(getContext(), new ScaleGestureDetector$OnScaleGestureListenerC1729a());
-        this.mGestureDetector = new GestureDetector(getContext(), new C1730b());
+        this.scaleGestureDetector = new ScaleGestureDetector(getContext(), new a());
+        this.mGestureDetector = new GestureDetector(getContext(), new b());
         init(context);
     }
 
@@ -1036,8 +1030,8 @@ public class RegionView extends AppCompatImageView {
                 RegionView.this.invalidate();
             }
         };
-        this.scaleGestureDetector = new ScaleGestureDetector(getContext(), new ScaleGestureDetector$OnScaleGestureListenerC1729a());
-        this.mGestureDetector = new GestureDetector(getContext(), new C1730b());
+        this.scaleGestureDetector = new ScaleGestureDetector(getContext(), new a());
+        this.mGestureDetector = new GestureDetector(getContext(), new b());
         init(context);
     }
 }

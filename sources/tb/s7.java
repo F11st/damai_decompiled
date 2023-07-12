@@ -12,7 +12,7 @@ public final class s7 {
     }
 
     @NotNull
-    public static final AbstractC9439me b(@NotNull byte[] bArr) {
+    public static final me b(@NotNull byte[] bArr) {
         b41.i(bArr, "array");
         return new i7(bArr);
     }

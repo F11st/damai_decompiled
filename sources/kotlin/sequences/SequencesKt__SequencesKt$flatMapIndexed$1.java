@@ -1,9 +1,8 @@
 package kotlin.sequences;
 
 import java.util.Iterator;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.RestrictedSuspendLambda;
 import kotlin.jvm.functions.Function1;
@@ -57,7 +56,7 @@ final class SequencesKt__SequencesKt$flatMapIndexed$1 extends RestrictedSuspendL
         int i;
         Iterator<Object> it;
         pa2 pa2Var;
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         int i2 = this.label;
         if (i2 == 0) {
             i32.b(obj);
@@ -77,7 +76,7 @@ final class SequencesKt__SequencesKt$flatMapIndexed$1 extends RestrictedSuspendL
             Function2<Integer, Object, Object> function2 = this.$transform;
             int i3 = i + 1;
             if (i < 0) {
-                C8214m.p();
+                m.p();
             }
             Object invoke = function2.invoke(id.c(i), next);
             this.L$0 = pa2Var;

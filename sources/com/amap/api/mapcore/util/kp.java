@@ -12,24 +12,23 @@ public final class kp {
     private static Object h = new Object();
     private Object e = new Object();
     private Object f = new Object();
-    private LongSparseArray<C4605a> a = new LongSparseArray<>();
-    private LongSparseArray<C4605a> b = new LongSparseArray<>();
-    private LongSparseArray<C4605a> c = new LongSparseArray<>();
-    private LongSparseArray<C4605a> d = new LongSparseArray<>();
+    private LongSparseArray<a> a = new LongSparseArray<>();
+    private LongSparseArray<a> b = new LongSparseArray<>();
+    private LongSparseArray<a> c = new LongSparseArray<>();
+    private LongSparseArray<a> d = new LongSparseArray<>();
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.kp$a */
     /* loaded from: classes10.dex */
-    public static class C4605a {
+    public static class a {
         int a;
         long b;
         boolean c;
 
-        private C4605a() {
+        private a() {
         }
 
-        /* synthetic */ C4605a(byte b) {
+        /* synthetic */ a(byte b) {
             this();
         }
     }
@@ -48,34 +47,34 @@ public final class kp {
         return g;
     }
 
-    private static void a(List<ko> list, LongSparseArray<C4605a> longSparseArray, LongSparseArray<C4605a> longSparseArray2) {
+    private static void a(List<ko> list, LongSparseArray<a> longSparseArray, LongSparseArray<a> longSparseArray2) {
         long b = b();
         int size = longSparseArray.size();
         Iterator<ko> it = list.iterator();
         if (size == 0) {
             while (it.hasNext()) {
                 ko next = it.next();
-                C4605a c4605a = new C4605a((byte) 0);
-                c4605a.a = next.b();
-                c4605a.b = b;
-                c4605a.c = false;
-                longSparseArray2.put(next.a(), c4605a);
+                a aVar = new a((byte) 0);
+                aVar.a = next.b();
+                aVar.b = b;
+                aVar.c = false;
+                longSparseArray2.put(next.a(), aVar);
             }
             return;
         }
         while (it.hasNext()) {
             ko next2 = it.next();
-            long a = next2.a();
-            C4605a c4605a2 = longSparseArray.get(a);
-            if (c4605a2 == null) {
-                c4605a2 = new C4605a((byte) 0);
-            } else if (c4605a2.a == next2.b()) {
-                longSparseArray2.put(a, c4605a2);
+            long a2 = next2.a();
+            a aVar2 = longSparseArray.get(a2);
+            if (aVar2 == null) {
+                aVar2 = new a((byte) 0);
+            } else if (aVar2.a == next2.b()) {
+                longSparseArray2.put(a2, aVar2);
             }
-            c4605a2.a = next2.b();
-            c4605a2.b = b;
-            c4605a2.c = true;
-            longSparseArray2.put(a, c4605a2);
+            aVar2.a = next2.b();
+            aVar2.b = b;
+            aVar2.c = true;
+            longSparseArray2.put(a2, aVar2);
         }
     }
 
@@ -90,7 +89,7 @@ public final class kp {
         }
         synchronized (this.e) {
             a(list, this.a, this.b);
-            LongSparseArray<C4605a> longSparseArray = this.a;
+            LongSparseArray<a> longSparseArray = this.a;
             this.a = this.b;
             this.b = longSparseArray;
             longSparseArray.clear();

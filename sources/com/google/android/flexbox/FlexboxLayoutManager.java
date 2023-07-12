@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.OrientationHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics;
-import com.google.android.flexbox.C4811b;
+import com.google.android.flexbox.b;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,12 +28,12 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     private int e;
     private boolean f;
     private boolean g;
-    private List<C4810a> h;
-    private final C4811b i;
+    private List<com.google.android.flexbox.a> h;
+    private final com.google.android.flexbox.b i;
     private RecyclerView.Recycler j;
     private RecyclerView.State k;
-    private C4809c l;
-    private C4808b m;
+    private c l;
+    private b m;
     private OrientationHelper n;
     private OrientationHelper o;
     private SavedState p;
@@ -46,13 +46,12 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     private final Context w;
     private View x;
     private int y;
-    private C4811b.C4813b z;
+    private b.C0223b z;
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.android.flexbox.FlexboxLayoutManager$b */
     /* loaded from: classes10.dex */
-    public class C4808b {
+    public class b {
         private int a;
         private int b;
         private int c;
@@ -61,7 +60,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         private boolean f;
         private boolean g;
 
-        private C4808b() {
+        private b() {
             this.d = 0;
         }
 
@@ -97,7 +96,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
             int i2 = iArr[i];
             this.b = i2 != -1 ? i2 : 0;
             if (FlexboxLayoutManager.this.h.size() > this.b) {
-                this.a = ((C4810a) FlexboxLayoutManager.this.h.get(this.b)).o;
+                this.a = ((com.google.android.flexbox.a) FlexboxLayoutManager.this.h.get(this.b)).o;
             }
         }
 
@@ -128,9 +127,8 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.android.flexbox.FlexboxLayoutManager$c */
     /* loaded from: classes10.dex */
-    public static class C4809c {
+    public static class c {
         private int a;
         private boolean b;
         private int c;
@@ -142,25 +140,25 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         private int i;
         private boolean j;
 
-        private C4809c() {
+        private c() {
             this.h = 1;
             this.i = 1;
         }
 
-        static /* synthetic */ int i(C4809c c4809c) {
-            int i = c4809c.c;
-            c4809c.c = i + 1;
+        static /* synthetic */ int i(c cVar) {
+            int i = cVar.c;
+            cVar.c = i + 1;
             return i;
         }
 
-        static /* synthetic */ int j(C4809c c4809c) {
-            int i = c4809c.c;
-            c4809c.c = i - 1;
+        static /* synthetic */ int j(c cVar) {
+            int i = cVar.c;
+            cVar.c = i - 1;
             return i;
         }
 
         /* JADX INFO: Access modifiers changed from: private */
-        public boolean w(RecyclerView.State state, List<C4810a> list) {
+        public boolean w(RecyclerView.State state, List<com.google.android.flexbox.a> list) {
             int i;
             int i2 = this.d;
             return i2 >= 0 && i2 < state.getItemCount() && (i = this.c) >= 0 && i < list.size();
@@ -175,11 +173,11 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         this(context, 0, 1);
     }
 
-    private int A(C4810a c4810a, C4809c c4809c) {
+    private int A(com.google.android.flexbox.a aVar, c cVar) {
         if (isMainAxisDirectionHorizontal()) {
-            return B(c4810a, c4809c);
+            return B(aVar, cVar);
         }
-        return C(c4810a, c4809c);
+        return C(aVar, cVar);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:40:0x00ce  */
@@ -187,7 +185,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private int B(com.google.android.flexbox.C4810a r22, com.google.android.flexbox.FlexboxLayoutManager.C4809c r23) {
+    private int B(com.google.android.flexbox.a r22, com.google.android.flexbox.FlexboxLayoutManager.c r23) {
         /*
             Method dump skipped, instructions count: 428
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -200,7 +198,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private int C(com.google.android.flexbox.C4810a r26, com.google.android.flexbox.FlexboxLayoutManager.C4809c r27) {
+    private int C(com.google.android.flexbox.a r26, com.google.android.flexbox.FlexboxLayoutManager.c r27) {
         /*
             Method dump skipped, instructions count: 544
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -208,22 +206,22 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         throw new UnsupportedOperationException("Method not decompiled: com.google.android.flexbox.FlexboxLayoutManager.C(com.google.android.flexbox.a, com.google.android.flexbox.FlexboxLayoutManager$c):int");
     }
 
-    private void D(RecyclerView.Recycler recycler, C4809c c4809c) {
-        if (c4809c.j) {
-            if (c4809c.i == -1) {
-                E(recycler, c4809c);
+    private void D(RecyclerView.Recycler recycler, c cVar) {
+        if (cVar.j) {
+            if (cVar.i == -1) {
+                E(recycler, cVar);
             } else {
-                F(recycler, c4809c);
+                F(recycler, cVar);
             }
         }
     }
 
-    private void E(RecyclerView.Recycler recycler, C4809c c4809c) {
-        if (c4809c.f < 0) {
+    private void E(RecyclerView.Recycler recycler, c cVar) {
+        if (cVar.f < 0) {
             return;
         }
         this.n.getEnd();
-        int unused = c4809c.f;
+        int unused = cVar.f;
         int childCount = getChildCount();
         if (childCount == 0) {
             return;
@@ -233,23 +231,23 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         if (i2 == -1) {
             return;
         }
-        C4810a c4810a = this.h.get(i2);
+        com.google.android.flexbox.a aVar = this.h.get(i2);
         int i3 = i;
         while (true) {
             if (i3 < 0) {
                 break;
             }
             View childAt = getChildAt(i3);
-            if (!g(childAt, c4809c.f)) {
+            if (!g(childAt, cVar.f)) {
                 break;
             }
-            if (c4810a.o == getPosition(childAt)) {
+            if (aVar.o == getPosition(childAt)) {
                 if (i2 <= 0) {
                     childCount = i3;
                     break;
                 }
-                i2 += c4809c.i;
-                c4810a = this.h.get(i2);
+                i2 += cVar.i;
+                aVar = this.h.get(i2);
                 childCount = i3;
             }
             i3--;
@@ -257,31 +255,31 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         recycleChildren(recycler, childCount, i);
     }
 
-    private void F(RecyclerView.Recycler recycler, C4809c c4809c) {
+    private void F(RecyclerView.Recycler recycler, c cVar) {
         int childCount;
-        if (c4809c.f >= 0 && (childCount = getChildCount()) != 0) {
+        if (cVar.f >= 0 && (childCount = getChildCount()) != 0) {
             int i = this.i.c[getPosition(getChildAt(0))];
             int i2 = -1;
             if (i == -1) {
                 return;
             }
-            C4810a c4810a = this.h.get(i);
+            com.google.android.flexbox.a aVar = this.h.get(i);
             int i3 = 0;
             while (true) {
                 if (i3 >= childCount) {
                     break;
                 }
                 View childAt = getChildAt(i3);
-                if (!h(childAt, c4809c.f)) {
+                if (!h(childAt, cVar.f)) {
                     break;
                 }
-                if (c4810a.p == getPosition(childAt)) {
+                if (aVar.p == getPosition(childAt)) {
                     if (i >= this.h.size() - 1) {
                         i2 = i3;
                         break;
                     }
-                    i += c4809c.i;
-                    c4810a = this.h.get(i);
+                    i += cVar.i;
+                    aVar = this.h.get(i);
                     i2 = i3;
                 }
                 i3++;
@@ -329,28 +327,28 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         }
     }
 
-    private boolean I(RecyclerView.State state, C4808b c4808b) {
+    private boolean I(RecyclerView.State state, b bVar) {
         View l;
         int startAfterPadding;
         boolean z = false;
         if (getChildCount() == 0) {
             return false;
         }
-        if (c4808b.e) {
+        if (bVar.e) {
             l = n(state.getItemCount());
         } else {
             l = l(state.getItemCount());
         }
         if (l != null) {
-            c4808b.r(l);
+            bVar.r(l);
             if (!state.isPreLayout() && supportsPredictiveItemAnimations()) {
                 if ((this.n.getDecoratedStart(l) >= this.n.getEndAfterPadding() || this.n.getDecoratedEnd(l) < this.n.getStartAfterPadding()) ? true : true) {
-                    if (c4808b.e) {
+                    if (bVar.e) {
                         startAfterPadding = this.n.getEndAfterPadding();
                     } else {
                         startAfterPadding = this.n.getStartAfterPadding();
                     }
-                    c4808b.c = startAfterPadding;
+                    bVar.c = startAfterPadding;
                 }
             }
             return true;
@@ -358,53 +356,53 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         return false;
     }
 
-    private boolean J(RecyclerView.State state, C4808b c4808b, SavedState savedState) {
+    private boolean J(RecyclerView.State state, b bVar, SavedState savedState) {
         int i;
         int decoratedStart;
         if (!state.isPreLayout() && (i = this.q) != -1) {
             if (i >= 0 && i < state.getItemCount()) {
-                c4808b.a = this.q;
-                c4808b.b = this.i.c[c4808b.a];
+                bVar.a = this.q;
+                bVar.b = this.i.c[bVar.a];
                 SavedState savedState2 = this.p;
                 if (savedState2 != null && savedState2.hasValidAnchor(state.getItemCount())) {
-                    c4808b.c = this.n.getStartAfterPadding() + savedState.mAnchorOffset;
-                    c4808b.g = true;
-                    c4808b.b = -1;
+                    bVar.c = this.n.getStartAfterPadding() + savedState.mAnchorOffset;
+                    bVar.g = true;
+                    bVar.b = -1;
                     return true;
                 } else if (this.r == Integer.MIN_VALUE) {
                     View findViewByPosition = findViewByPosition(this.q);
                     if (findViewByPosition != null) {
                         if (this.n.getDecoratedMeasurement(findViewByPosition) > this.n.getTotalSpace()) {
-                            c4808b.q();
+                            bVar.q();
                             return true;
                         } else if (this.n.getDecoratedStart(findViewByPosition) - this.n.getStartAfterPadding() < 0) {
-                            c4808b.c = this.n.getStartAfterPadding();
-                            c4808b.e = false;
+                            bVar.c = this.n.getStartAfterPadding();
+                            bVar.e = false;
                             return true;
                         } else if (this.n.getEndAfterPadding() - this.n.getDecoratedEnd(findViewByPosition) < 0) {
-                            c4808b.c = this.n.getEndAfterPadding();
-                            c4808b.e = true;
+                            bVar.c = this.n.getEndAfterPadding();
+                            bVar.e = true;
                             return true;
                         } else {
-                            if (c4808b.e) {
+                            if (bVar.e) {
                                 decoratedStart = this.n.getDecoratedEnd(findViewByPosition) + this.n.getTotalSpaceChange();
                             } else {
                                 decoratedStart = this.n.getDecoratedStart(findViewByPosition);
                             }
-                            c4808b.c = decoratedStart;
+                            bVar.c = decoratedStart;
                         }
                     } else {
                         if (getChildCount() > 0) {
-                            c4808b.e = this.q < getPosition(getChildAt(0));
+                            bVar.e = this.q < getPosition(getChildAt(0));
                         }
-                        c4808b.q();
+                        bVar.q();
                     }
                     return true;
                 } else {
                     if (isMainAxisDirectionHorizontal() || !this.f) {
-                        c4808b.c = this.n.getStartAfterPadding() + this.r;
+                        bVar.c = this.n.getStartAfterPadding() + this.r;
                     } else {
-                        c4808b.c = this.r - this.n.getEndPadding();
+                        bVar.c = this.r - this.n.getEndPadding();
                     }
                     return true;
                 }
@@ -415,13 +413,13 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         return false;
     }
 
-    private void K(RecyclerView.State state, C4808b c4808b) {
-        if (J(state, c4808b, this.p) || I(state, c4808b)) {
+    private void K(RecyclerView.State state, b bVar) {
+        if (J(state, bVar, this.p) || I(state, bVar)) {
             return;
         }
-        c4808b.q();
-        c4808b.a = 0;
-        c4808b.b = 0;
+        bVar.q();
+        bVar.a = 0;
+        bVar.b = 0;
     }
 
     private void L(int i) {
@@ -509,8 +507,8 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
             this.h = this.z.a;
             this.i.p(makeMeasureSpec, makeMeasureSpec2);
             this.i.W();
-            C4808b c4808b = this.m;
-            c4808b.b = this.i.c[c4808b.a];
+            b bVar = this.m;
+            bVar.b = this.i.c[bVar.a];
             this.l.c = this.m.b;
         }
     }
@@ -527,19 +525,19 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
             int position = getPosition(childAt);
             View o = o(childAt, this.h.get(this.i.c[position]));
             this.l.h = 1;
-            C4809c c4809c = this.l;
-            c4809c.d = position + c4809c.h;
+            c cVar = this.l;
+            cVar.d = position + cVar.h;
             if (this.i.c.length <= this.l.d) {
                 this.l.c = -1;
             } else {
-                C4809c c4809c2 = this.l;
-                c4809c2.c = this.i.c[c4809c2.d];
+                c cVar2 = this.l;
+                cVar2.c = this.i.c[cVar2.d];
             }
             if (z) {
                 this.l.e = this.n.getDecoratedStart(o);
                 this.l.f = (-this.n.getDecoratedStart(o)) + this.n.getStartAfterPadding();
-                C4809c c4809c3 = this.l;
-                c4809c3.f = c4809c3.f >= 0 ? this.l.f : 0;
+                c cVar3 = this.l;
+                cVar3.f = cVar3.f >= 0 ? this.l.f : 0;
             } else {
                 this.l.e = this.n.getDecoratedEnd(o);
                 this.l.f = this.n.getDecoratedEnd(o) - this.n.getEndAfterPadding();
@@ -576,63 +574,63 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
             if (z) {
                 this.l.e = this.n.getDecoratedEnd(m);
                 this.l.f = this.n.getDecoratedEnd(m) - this.n.getEndAfterPadding();
-                C4809c c4809c4 = this.l;
-                c4809c4.f = c4809c4.f >= 0 ? this.l.f : 0;
+                c cVar4 = this.l;
+                cVar4.f = cVar4.f >= 0 ? this.l.f : 0;
             } else {
                 this.l.e = this.n.getDecoratedStart(m);
                 this.l.f = (-this.n.getDecoratedStart(m)) + this.n.getStartAfterPadding();
             }
         }
-        C4809c c4809c5 = this.l;
-        c4809c5.a = i2 - c4809c5.f;
+        c cVar5 = this.l;
+        cVar5.a = i2 - cVar5.f;
     }
 
-    private void O(C4808b c4808b, boolean z, boolean z2) {
+    private void O(b bVar, boolean z, boolean z2) {
         if (z2) {
             G();
         } else {
             this.l.b = false;
         }
         if (!isMainAxisDirectionHorizontal() && this.f) {
-            this.l.a = c4808b.c - getPaddingRight();
+            this.l.a = bVar.c - getPaddingRight();
         } else {
-            this.l.a = this.n.getEndAfterPadding() - c4808b.c;
+            this.l.a = this.n.getEndAfterPadding() - bVar.c;
         }
-        this.l.d = c4808b.a;
+        this.l.d = bVar.a;
         this.l.h = 1;
         this.l.i = 1;
-        this.l.e = c4808b.c;
+        this.l.e = bVar.c;
         this.l.f = Integer.MIN_VALUE;
-        this.l.c = c4808b.b;
-        if (!z || this.h.size() <= 1 || c4808b.b < 0 || c4808b.b >= this.h.size() - 1) {
+        this.l.c = bVar.b;
+        if (!z || this.h.size() <= 1 || bVar.b < 0 || bVar.b >= this.h.size() - 1) {
             return;
         }
-        C4809c.i(this.l);
-        this.l.d += this.h.get(c4808b.b).b();
+        c.i(this.l);
+        this.l.d += this.h.get(bVar.b).b();
     }
 
-    private void P(C4808b c4808b, boolean z, boolean z2) {
+    private void P(b bVar, boolean z, boolean z2) {
         if (z2) {
             G();
         } else {
             this.l.b = false;
         }
         if (!isMainAxisDirectionHorizontal() && this.f) {
-            this.l.a = (this.x.getWidth() - c4808b.c) - this.n.getStartAfterPadding();
+            this.l.a = (this.x.getWidth() - bVar.c) - this.n.getStartAfterPadding();
         } else {
-            this.l.a = c4808b.c - this.n.getStartAfterPadding();
+            this.l.a = bVar.c - this.n.getStartAfterPadding();
         }
-        this.l.d = c4808b.a;
+        this.l.d = bVar.a;
         this.l.h = 1;
         this.l.i = -1;
-        this.l.e = c4808b.c;
+        this.l.e = bVar.c;
         this.l.f = Integer.MIN_VALUE;
-        this.l.c = c4808b.b;
-        if (!z || c4808b.b <= 0 || this.h.size() <= c4808b.b) {
+        this.l.c = bVar.b;
+        if (!z || bVar.b <= 0 || this.h.size() <= bVar.b) {
             return;
         }
-        C4809c.j(this.l);
-        this.l.d -= this.h.get(c4808b.b).b();
+        c.j(this.l);
+        this.l.d -= this.h.get(bVar.b).b();
     }
 
     private int computeScrollExtent(RecyclerView.State state) {
@@ -685,7 +683,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
 
     private void ensureLayoutState() {
         if (this.l == null) {
-            this.l = new C4809c();
+            this.l = new c();
         }
     }
 
@@ -791,39 +789,39 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         }
     }
 
-    private int k(RecyclerView.Recycler recycler, RecyclerView.State state, C4809c c4809c) {
-        if (c4809c.f != Integer.MIN_VALUE) {
-            if (c4809c.a < 0) {
-                c4809c.f += c4809c.a;
+    private int k(RecyclerView.Recycler recycler, RecyclerView.State state, c cVar) {
+        if (cVar.f != Integer.MIN_VALUE) {
+            if (cVar.a < 0) {
+                cVar.f += cVar.a;
             }
-            D(recycler, c4809c);
+            D(recycler, cVar);
         }
-        int i = c4809c.a;
-        int i2 = c4809c.a;
+        int i = cVar.a;
+        int i2 = cVar.a;
         int i3 = 0;
         boolean isMainAxisDirectionHorizontal = isMainAxisDirectionHorizontal();
         while (true) {
-            if ((i2 > 0 || this.l.b) && c4809c.w(state, this.h)) {
-                C4810a c4810a = this.h.get(c4809c.c);
-                c4809c.d = c4810a.o;
-                i3 += A(c4810a, c4809c);
+            if ((i2 > 0 || this.l.b) && cVar.w(state, this.h)) {
+                com.google.android.flexbox.a aVar = this.h.get(cVar.c);
+                cVar.d = aVar.o;
+                i3 += A(aVar, cVar);
                 if (isMainAxisDirectionHorizontal || !this.f) {
-                    c4809c.e += c4810a.a() * c4809c.i;
+                    cVar.e += aVar.a() * cVar.i;
                 } else {
-                    c4809c.e -= c4810a.a() * c4809c.i;
+                    cVar.e -= aVar.a() * cVar.i;
                 }
-                i2 -= c4810a.a();
+                i2 -= aVar.a();
             }
         }
-        c4809c.a -= i3;
-        if (c4809c.f != Integer.MIN_VALUE) {
-            c4809c.f += i3;
-            if (c4809c.a < 0) {
-                c4809c.f += c4809c.a;
+        cVar.a -= i3;
+        if (cVar.f != Integer.MIN_VALUE) {
+            cVar.f += i3;
+            if (cVar.a < 0) {
+                cVar.f += cVar.a;
             }
-            D(recycler, c4809c);
+            D(recycler, cVar);
         }
-        return i - c4809c.a;
+        return i - cVar.a;
     }
 
     private View l(int i) {
@@ -838,9 +836,9 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         return m(q, this.h.get(i2));
     }
 
-    private View m(View view, C4810a c4810a) {
+    private View m(View view, com.google.android.flexbox.a aVar) {
         boolean isMainAxisDirectionHorizontal = isMainAxisDirectionHorizontal();
-        int i = c4810a.h;
+        int i = aVar.h;
         for (int i2 = 1; i2 < i; i2++) {
             View childAt = getChildAt(i2);
             if (childAt != null && childAt.getVisibility() != 8) {
@@ -866,9 +864,9 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         return o(q, this.h.get(this.i.c[getPosition(q)]));
     }
 
-    private View o(View view, C4810a c4810a) {
+    private View o(View view, com.google.android.flexbox.a aVar) {
         boolean isMainAxisDirectionHorizontal = isMainAxisDirectionHorizontal();
-        int childCount = (getChildCount() - c4810a.h) - 1;
+        int childCount = (getChildCount() - aVar.h) - 1;
         for (int childCount2 = getChildCount() - 2; childCount2 > childCount; childCount2--) {
             View childAt = getChildAt(childCount2);
             if (childAt != null && childAt.getVisibility() != 8) {
@@ -1175,20 +1173,20 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     }
 
     @Override // com.google.android.flexbox.FlexContainer
-    public List<C4810a> getFlexLines() {
+    public List<com.google.android.flexbox.a> getFlexLines() {
         ArrayList arrayList = new ArrayList(this.h.size());
         int size = this.h.size();
         for (int i = 0; i < size; i++) {
-            C4810a c4810a = this.h.get(i);
-            if (c4810a.b() != 0) {
-                arrayList.add(c4810a);
+            com.google.android.flexbox.a aVar = this.h.get(i);
+            if (aVar.b() != 0) {
+                arrayList.add(aVar);
             }
         }
         return arrayList;
     }
 
     @Override // com.google.android.flexbox.FlexContainer
-    public List<C4810a> getFlexLinesInternal() {
+    public List<com.google.android.flexbox.a> getFlexLinesInternal() {
         return this.h;
     }
 
@@ -1352,21 +1350,21 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     }
 
     @Override // com.google.android.flexbox.FlexContainer
-    public void onNewFlexItemAdded(View view, int i, int i2, C4810a c4810a) {
+    public void onNewFlexItemAdded(View view, int i, int i2, com.google.android.flexbox.a aVar) {
         calculateItemDecorationsForChild(view, A);
         if (isMainAxisDirectionHorizontal()) {
             int leftDecorationWidth = getLeftDecorationWidth(view) + getRightDecorationWidth(view);
-            c4810a.e += leftDecorationWidth;
-            c4810a.f += leftDecorationWidth;
+            aVar.e += leftDecorationWidth;
+            aVar.f += leftDecorationWidth;
             return;
         }
         int topDecorationHeight = getTopDecorationHeight(view) + getBottomDecorationHeight(view);
-        c4810a.e += topDecorationHeight;
-        c4810a.f += topDecorationHeight;
+        aVar.e += topDecorationHeight;
+        aVar.f += topDecorationHeight;
     }
 
     @Override // com.google.android.flexbox.FlexContainer
-    public void onNewFlexLineAdded(C4810a c4810a) {
+    public void onNewFlexLineAdded(com.google.android.flexbox.a aVar) {
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.LayoutManager
@@ -1461,7 +1459,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     }
 
     @Override // com.google.android.flexbox.FlexContainer
-    public void setFlexLines(List<C4810a> list) {
+    public void setFlexLines(List<com.google.android.flexbox.a> list) {
         this.h = list;
     }
 
@@ -1527,15 +1525,14 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
     public static class SavedState implements Parcelable {
-        public static final Parcelable.Creator<SavedState> CREATOR = new C4806a();
+        public static final Parcelable.Creator<SavedState> CREATOR = new a();
         private int mAnchorOffset;
         private int mAnchorPosition;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.android.flexbox.FlexboxLayoutManager$SavedState$a */
         /* loaded from: classes10.dex */
-        static class C4806a implements Parcelable.Creator<SavedState> {
-            C4806a() {
+        static class a implements Parcelable.Creator<SavedState> {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator
@@ -1594,15 +1591,15 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     public FlexboxLayoutManager(Context context, int i, int i2) {
         this.e = -1;
         this.h = new ArrayList();
-        this.i = new C4811b(this);
-        this.m = new C4808b();
+        this.i = new com.google.android.flexbox.b(this);
+        this.m = new b();
         this.q = -1;
         this.r = Integer.MIN_VALUE;
         this.s = Integer.MIN_VALUE;
         this.t = Integer.MIN_VALUE;
         this.v = new SparseArray<>();
         this.y = -1;
-        this.z = new C4811b.C4813b();
+        this.z = new b.C0223b();
         setFlexDirection(i);
         setFlexWrap(i2);
         setAlignItems(4);
@@ -1619,7 +1616,7 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
     public static class LayoutParams extends RecyclerView.LayoutParams implements FlexItem {
-        public static final Parcelable.Creator<LayoutParams> CREATOR = new C4805a();
+        public static final Parcelable.Creator<LayoutParams> CREATOR = new a();
         private int mAlignSelf;
         private float mFlexBasisPercent;
         private float mFlexGrow;
@@ -1631,10 +1628,9 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
         private boolean mWrapBefore;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.android.flexbox.FlexboxLayoutManager$LayoutParams$a */
         /* loaded from: classes10.dex */
-        static class C4805a implements Parcelable.Creator<LayoutParams> {
-            C4805a() {
+        static class a implements Parcelable.Creator<LayoutParams> {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator
@@ -1912,15 +1908,15 @@ public class FlexboxLayoutManager extends RecyclerView.LayoutManager implements 
     public FlexboxLayoutManager(Context context, AttributeSet attributeSet, int i, int i2) {
         this.e = -1;
         this.h = new ArrayList();
-        this.i = new C4811b(this);
-        this.m = new C4808b();
+        this.i = new com.google.android.flexbox.b(this);
+        this.m = new b();
         this.q = -1;
         this.r = Integer.MIN_VALUE;
         this.s = Integer.MIN_VALUE;
         this.t = Integer.MIN_VALUE;
         this.v = new SparseArray<>();
         this.y = -1;
-        this.z = new C4811b.C4813b();
+        this.z = new b.C0223b();
         RecyclerView.LayoutManager.Properties properties = RecyclerView.LayoutManager.getProperties(context, attributeSet, i, i2);
         int i3 = properties.orientation;
         if (i3 != 0) {

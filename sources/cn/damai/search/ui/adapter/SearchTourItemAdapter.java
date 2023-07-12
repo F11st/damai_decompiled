@@ -41,14 +41,13 @@ public class SearchTourItemAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         private ImageView d;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.search.ui.adapter.SearchTourItemAdapter$tourItemViewHolder$a */
         /* loaded from: classes15.dex */
-        public class View$OnClickListenerC1611a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ SearchTourItem a;
             final /* synthetic */ int b;
 
-            View$OnClickListenerC1611a(tourItemViewHolder touritemviewholder, SearchTourItem searchTourItem, int i) {
+            a(tourItemViewHolder touritemviewholder, SearchTourItem searchTourItem, int i) {
                 this.a = searchTourItem;
                 this.b = i;
             }
@@ -100,7 +99,7 @@ public class SearchTourItemAdapter extends RecyclerView.Adapter<RecyclerView.Vie
             } else {
                 this.b.setText(searchTourItem.liveStartTime);
             }
-            this.c.setOnClickListener(new View$OnClickListenerC1611a(this, searchTourItem, i));
+            this.c.setOnClickListener(new a(this, searchTourItem, i));
         }
     }
 

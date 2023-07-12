@@ -2,7 +2,7 @@ package com.youku.alixplayer.opensdk;
 
 import android.content.Context;
 import android.text.TextUtils;
-import anet.channel.strategy.C0213a;
+import anet.channel.strategy.a;
 import com.ali.user.open.tbauth.TbAuthConstants;
 import com.alibaba.mtl.appmonitor.AppMonitor;
 import com.alibaba.mtl.appmonitor.model.DimensionValueSet;
@@ -266,7 +266,7 @@ public class AXPParamsProvider {
             }
             return "";
         } else if ("1".equals(DslRemoteConfig.getInstance().getConfig("YKLiveRoom_ABTest", "enable_maldives", "1"))) {
-            String clientIp = C0213a.a().getClientIp();
+            String clientIp = a.a().getClientIp();
             if (TextUtils.isEmpty(clientIp)) {
                 clientIp = "127.0.0.1";
             }

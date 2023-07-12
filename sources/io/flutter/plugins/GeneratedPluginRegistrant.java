@@ -2,8 +2,8 @@ package io.flutter.plugins;
 
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
-import com.idlefish.flutterboost.C5775b;
-import dev.fluttercommunity.plus.packageinfo.C8109a;
+import com.idlefish.flutterboost.b;
+import dev.fluttercommunity.plus.packageinfo.a;
 import io.flutter.Log;
 import io.flutter.embedding.engine.FlutterEngine;
 import io.flutter.plugins.connectivity.ConnectivityPlugin;
@@ -33,7 +33,7 @@ public final class GeneratedPluginRegistrant {
             Log.e(TAG, "Error registering plugin device_info, io.flutter.plugins.deviceinfo.DeviceInfoPlugin", e2);
         }
         try {
-            flutterEngine.getPlugins().add(new C5775b());
+            flutterEngine.getPlugins().add(new b());
         } catch (Exception e3) {
             Log.e(TAG, "Error registering plugin flutter_boost, com.idlefish.flutterboost.FlutterBoostPlugin", e3);
         }
@@ -43,7 +43,7 @@ public final class GeneratedPluginRegistrant {
             Log.e(TAG, "Error registering plugin high_available, com.taobao.highavailable.HighAvailablePlugin", e4);
         }
         try {
-            flutterEngine.getPlugins().add(new C8109a());
+            flutterEngine.getPlugins().add(new a());
         } catch (Exception e5) {
             Log.e(TAG, "Error registering plugin package_info_plus, dev.fluttercommunity.plus.packageinfo.PackageInfoPlugin", e5);
         }

@@ -73,7 +73,7 @@ public class UserTrackMethodJniBridge {
                 hashMap.put("tid", String.valueOf(Thread.currentThread().getId()));
                 hashMap.put("time", String.valueOf(j2));
                 if (d == 0) {
-                    c = C4017e.b(a) ? 1 : 0;
+                    c = e.b(a) ? 1 : 0;
                     d = 1;
                 }
                 hashMap.put("ui", String.valueOf(c));

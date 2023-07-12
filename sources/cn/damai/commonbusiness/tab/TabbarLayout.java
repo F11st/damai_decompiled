@@ -20,7 +20,6 @@ import android.widget.TextView;
 import androidx.annotation.AttrRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -75,51 +74,48 @@ public class TabbarLayout extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.tab.TabbarLayout$a */
     /* loaded from: classes.dex */
-    public class C0934a implements DMImageCreator.DMImageFailListener {
+    public class a implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0934a(TabbarLayout tabbarLayout) {
+        a(TabbarLayout tabbarLayout) {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-13488016")) {
-                ipChange.ipc$dispatch("-13488016", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-13488016", new Object[]{this, dVar});
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.tab.TabbarLayout$b */
     /* loaded from: classes.dex */
-    public class C0935b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0935b() {
+        b() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1314124283")) {
-                ipChange.ipc$dispatch("-1314124283", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("-1314124283", new Object[]{this, eVar});
             } else {
-                TabbarLayout.this.mTabBackImg.setImageDrawable(c0502e.a);
+                TabbarLayout.this.mTabBackImg.setImageDrawable(eVar.a);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.tab.TabbarLayout$c */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0936c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TabItem a;
 
-        View$OnClickListenerC0936c(TabItem tabItem) {
+        c(TabItem tabItem) {
             this.a = tabItem;
         }
 
@@ -140,13 +136,12 @@ public class TabbarLayout extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.tab.TabbarLayout$d */
     /* loaded from: classes.dex */
-    public class View$OnLongClickListenerC0937d implements View.OnLongClickListener {
+    public class d implements View.OnLongClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TabItem a;
 
-        View$OnLongClickListenerC0937d(TabItem tabItem) {
+        d(TabItem tabItem) {
             this.a = tabItem;
         }
 
@@ -208,11 +203,11 @@ public class TabbarLayout extends RelativeLayout {
         this.mTabViewsContainer = linearLayout;
         linearLayout.setOrientation(0);
         this.mTabViewsContainer.setGravity(80);
-        int a = m62.a(mu0.a(), 60.0f);
+        int a2 = m62.a(mu0.a(), 60.0f);
         ImageView imageView = new ImageView(getContext());
         this.mTabBackImg = imageView;
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        addView(this.mTabBackImg, new RelativeLayout.LayoutParams(-1, a));
+        addView(this.mTabBackImg, new RelativeLayout.LayoutParams(-1, a2));
         addView(this.mTabViewsContainer, new RelativeLayout.LayoutParams(-1, -2));
         View view = new View(getContext());
         this.mTopLineView = view;
@@ -253,17 +248,17 @@ public class TabbarLayout extends RelativeLayout {
             ipChange.ipc$dispatch("1436512837", new Object[]{this, tabItem});
             return;
         }
-        ITabView a = this.mTabViewFactory.a(getContext(), tabItem);
-        tabItem.tabView = a;
-        a.setUpTabItem(tabItem, this.mCurrentTab);
-        this.mTabViewsContainer.addView(a.getTabView(), new LinearLayout.LayoutParams(0, -2, 1.0f));
-        this.mTabViews.add(a);
+        ITabView a2 = this.mTabViewFactory.a(getContext(), tabItem);
+        tabItem.tabView = a2;
+        a2.setUpTabItem(tabItem, this.mCurrentTab);
+        this.mTabViewsContainer.addView(a2.getTabView(), new LinearLayout.LayoutParams(0, -2, 1.0f));
+        this.mTabViews.add(a2);
         if (TextUtils.equals(tabItem.tab, this.mCurrentTab)) {
             this.mCurrentTabItem = tabItem;
-            this.mCurentTabView = a;
+            this.mCurentTabView = a2;
         }
-        a.getClickView().setOnClickListener(new View$OnClickListenerC0936c(tabItem));
-        a.getClickView().setOnLongClickListener(new View$OnLongClickListenerC0937d(tabItem));
+        a2.getClickView().setOnClickListener(new c(tabItem));
+        a2.getClickView().setOnLongClickListener(new d(tabItem));
         drawTabPopView(tabItem, this.mTabItems.size());
     }
 
@@ -382,7 +377,7 @@ public class TabbarLayout extends RelativeLayout {
         if (isEmpty) {
             return;
         }
-        C0504a.b().f(str, DisplayMetrics.getwidthPixels(m62.b(mu0.a())), m62.a(mu0.a(), 60.0f)).n(new C0935b()).e(new C0934a(this)).f();
+        cn.damai.common.image.a.b().f(str, DisplayMetrics.getwidthPixels(m62.b(mu0.a())), m62.a(mu0.a(), 60.0f)).n(new b()).e(new a(this)).f();
     }
 
     public void setTabBarListener(TabBarListener tabBarListener) {

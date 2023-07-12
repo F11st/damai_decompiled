@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.annotations.Experimental;
+import io.reactivex.b;
 import io.reactivex.internal.subscriptions.EmptySubscription;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import java.util.concurrent.atomic.AtomicLong;
@@ -97,12 +97,12 @@ public final class FlowableLimit<T> extends AbstractFlowableWithUpstream<T, T> {
         }
     }
 
-    public FlowableLimit(AbstractC8147b<T> abstractC8147b, long j) {
-        super(abstractC8147b);
+    public FlowableLimit(b<T> bVar, long j) {
+        super(bVar);
         this.n = j;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new LimitSubscriber(subscriber, this.n));
     }

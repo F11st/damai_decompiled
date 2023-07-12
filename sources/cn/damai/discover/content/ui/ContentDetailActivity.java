@@ -23,7 +23,6 @@ import cn.damai.comment.bean.StoreInfo;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.commonbusiness.bean.FollowEvent;
@@ -51,7 +50,6 @@ import cn.damai.discover.content.net.ContentPraiseRequest;
 import cn.damai.discover.content.net.ContentPraiseResponse;
 import cn.damai.discover.content.net.PublishCommentRequest;
 import cn.damai.discover.content.ui.decoration.StaggeredGridItemDecoration;
-import cn.damai.discover.content.ui.viewholder.C1011a;
 import cn.damai.discover.content.ui.viewholder.ContentBannerViewHolder;
 import cn.damai.discover.content.ui.viewholder.ContentCommentViewHolder;
 import cn.damai.discover.content.ui.viewholder.ContentShareViewHolder;
@@ -85,8 +83,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import tb.C9548pb;
-import tb.C9799v3;
 import tb.cs;
 import tb.ew1;
 import tb.g03;
@@ -97,11 +93,13 @@ import tb.m62;
 import tb.m91;
 import tb.nn;
 import tb.on;
+import tb.pb;
 import tb.pn;
 import tb.q91;
 import tb.s62;
 import tb.t60;
 import tb.un;
+import tb.v3;
 import tb.vn;
 import tb.wh2;
 import tb.wn;
@@ -145,7 +143,7 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
     private ew1 mProjectRelateViewHolder;
     private TextView mPublishBtn;
     private un mRecommendTitle;
-    private C1011a mRichTextViewHolder;
+    private cn.damai.discover.content.ui.viewholder.a mRichTextViewHolder;
     private s62 mScriptCardViewHolder;
     private int mScrollDistance;
     private Wanna2SeePanel mSeePanel;
@@ -162,23 +160,22 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
     private q91 mUt = new q91();
     private Integer currentPageIndex = 1;
     private boolean hasMore = false;
-    private C9799v3 mMultiListClickListener = new C9799v3(this, new C0996c());
-    private MultiAdapter.Exposure mExposure = new C0997d();
+    private v3 mMultiListClickListener = new v3(this, new c());
+    private MultiAdapter.Exposure mExposure = new d();
     private boolean keyBoardShowd = false;
-    private ContentCommentViewHolder.OnCommentClickListener mOnCommentClickListener = new C0998e();
-    private ContentCommentViewHolder.OnLoadMoreClickListener onLoadMoreClickListener = new C0999f();
+    private ContentCommentViewHolder.OnCommentClickListener mOnCommentClickListener = new e();
+    private ContentCommentViewHolder.OnLoadMoreClickListener onLoadMoreClickListener = new f();
     private boolean scrollToAncr = false;
     float x = 0.0f;
     float y = 0.0f;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.content.ui.ContentDetailActivity$a */
     /* loaded from: classes5.dex */
-    public class C0994a implements UserInfoView.DnaClickListener {
+    public class a implements UserInfoView.DnaClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C0994a(String str) {
+        a(String str) {
             this.a = str;
         }
 
@@ -189,7 +186,7 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
                 ipChange.ipc$dispatch("2106105653", new Object[]{this});
                 return;
             }
-            C0529c.e().x(ContentDetailActivity.this.mUt.I());
+            cn.damai.common.user.c.e().x(ContentDetailActivity.this.mUt.I());
             if (TextUtils.isEmpty(this.a)) {
                 DialogUtil.b(ContentDetailActivity.this).show();
             } else {
@@ -199,12 +196,11 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.content.ui.ContentDetailActivity$b */
     /* loaded from: classes5.dex */
-    public class C0995b implements GuideUtProvider {
+    public class b implements GuideUtProvider {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0995b() {
+        b() {
         }
 
         @Override // cn.damai.wantsee.GuideUtProvider
@@ -222,7 +218,7 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
                 return (Map) ipChange.ipc$dispatch("704302315", new Object[]{this});
             }
             HashMap hashMap = new HashMap();
-            hashMap.put(C9548pb.CNT_CONTENT_ID, ContentDetailActivity.this.mContentId);
+            hashMap.put(pb.CNT_CONTENT_ID, ContentDetailActivity.this.mContentId);
             return hashMap;
         }
 
@@ -242,12 +238,11 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.content.ui.ContentDetailActivity$c */
     /* loaded from: classes5.dex */
-    public class C0996c extends x3 {
+    public class c extends x3 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0996c() {
+        c() {
         }
 
         @Override // cn.damai.commonbusiness.wannasee.listener.MultiClickUt
@@ -256,18 +251,17 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
             if (AndroidInstantRuntime.support(ipChange, "-1338432598")) {
                 ipChange.ipc$dispatch("-1338432598", new Object[]{this, noteBean, Integer.valueOf(i)});
             } else {
-                C0529c.e().x(ContentDetailActivity.this.mUt.D(noteBean.content, noteBean.id, i));
+                cn.damai.common.user.c.e().x(ContentDetailActivity.this.mUt.D(noteBean.content, noteBean.id, i));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.content.ui.ContentDetailActivity$d */
     /* loaded from: classes5.dex */
-    public class C0997d extends MultiAdapter.C0968f {
+    public class d extends MultiAdapter.f {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0997d() {
+        d() {
         }
 
         @Override // cn.damai.commonbusiness.wannasee.adapter.MultiAdapter.Exposure
@@ -282,12 +276,11 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.content.ui.ContentDetailActivity$e */
     /* loaded from: classes5.dex */
-    public class C0998e implements ContentCommentViewHolder.OnCommentClickListener {
+    public class e implements ContentCommentViewHolder.OnCommentClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0998e() {
+        e() {
         }
 
         @Override // cn.damai.discover.content.ui.viewholder.ContentCommentViewHolder.OnCommentClickListener
@@ -316,12 +309,11 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.content.ui.ContentDetailActivity$f */
     /* loaded from: classes5.dex */
-    public class C0999f implements ContentCommentViewHolder.OnLoadMoreClickListener {
+    public class f implements ContentCommentViewHolder.OnLoadMoreClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0999f() {
+        f() {
         }
 
         @Override // cn.damai.discover.content.ui.viewholder.ContentCommentViewHolder.OnLoadMoreClickListener
@@ -342,12 +334,11 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.content.ui.ContentDetailActivity$g */
     /* loaded from: classes5.dex */
-    public class C1000g implements KeyboardObservable.OnSoftKeyboardChangeListener {
+    public class g implements KeyboardObservable.OnSoftKeyboardChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1000g() {
+        g() {
         }
 
         @Override // cn.damai.discover.content.util.KeyboardObservable.OnSoftKeyboardChangeListener
@@ -371,12 +362,11 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.content.ui.ContentDetailActivity$h */
     /* loaded from: classes14.dex */
-    public class C1001h implements TextWatcher {
+    public class h implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1001h() {
+        h() {
         }
 
         @Override // android.text.TextWatcher
@@ -444,8 +434,8 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
         this.mDianZanView.setOnClickListener(this);
         this.mPublishBtn.setOnClickListener(this);
         findViewById.setOnClickListener(this);
-        new KeyboardObservable().e(this, new C1000g());
-        this.mInput.addTextChangedListener(new C1001h());
+        new KeyboardObservable().e(this, new g());
+        this.mInput.addTextChangedListener(new h());
     }
 
     private void initContentView() {
@@ -491,9 +481,9 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
         xn xnVar = new xn(this);
         this.mTextViewHolder = xnVar;
         this.mContentDetailList.addHeaderView(xnVar.b);
-        C1011a c1011a = new C1011a(this);
-        this.mRichTextViewHolder = c1011a;
-        this.mContentDetailList.addHeaderView(c1011a.b);
+        cn.damai.discover.content.ui.viewholder.a aVar = new cn.damai.discover.content.ui.viewholder.a(this);
+        this.mRichTextViewHolder = aVar;
+        this.mContentDetailList.addHeaderView(aVar.b);
         pn pnVar = new pn(this);
         this.mDMTagViewHolder = pnVar;
         this.mContentDetailList.addHeaderView(pnVar.b);
@@ -536,7 +526,7 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
         this.mContentDetailList.addHeaderView(unVar.b);
         WantSeeTips wantSeeTips = (WantSeeTips) findViewById(R$id.want_see_tips_content_detail);
         this.wantSeeTips = wantSeeTips;
-        wantSeeTips.setPageSource(WantSeeTips.AbstractC1562a.C1563a.INSTANCE);
+        wantSeeTips.setPageSource(WantSeeTips.a.C0065a.INSTANCE);
         this.mBannerViewHolder.setLiveUt(this.mUt);
         this.mTextViewHolder.setLiveUt(this.mUt);
         this.mTopicViewHolder.setLiveUt(this.mUt);
@@ -673,10 +663,10 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
                 contentUserInfo.focus = followDataBean.getStatus() != 0;
                 ContentDetailActivity.this.updateFollow(contentUserInfo.focus);
                 xr.c(FollowEvent.LIVE_FOLLOW_EVENT, Boolean.valueOf(contentUserInfo.focus));
-                C0529c e = C0529c.e();
+                cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
                 q91 q91Var = ContentDetailActivity.this.mUt;
                 ContentDetail.ContentUserInfo contentUserInfo2 = contentUserInfo;
-                e.x(q91Var.J(contentUserInfo2.havanaIdStr, contentUserInfo2.focus ? "1" : "0"));
+                e2.x(q91Var.J(contentUserInfo2.havanaIdStr, contentUserInfo2.focus ? "1" : "0"));
                 ContentDetailActivity.this.stopProgressDialog();
             }
         });
@@ -770,7 +760,7 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
                     }
                     praiseInfo2.praiseCount = i;
                     ContentDetailActivity.this.updatePraise(z, i, true);
-                    C0529c.e().x(ContentDetailActivity.this.mUt.r());
+                    cn.damai.common.user.c.e().x(ContentDetailActivity.this.mUt.r());
                 }
             });
             startProgressDialog();
@@ -821,7 +811,7 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
                     ContentDetailActivity.this.stopProgressDialog();
                     ContentDetailActivity.this.mInputContent = "";
                     SoftInputUtils.a(ContentDetailActivity.this);
-                    C0529c.e().x(ContentDetailActivity.this.mUt.s());
+                    cn.damai.common.user.c.e().x(ContentDetailActivity.this.mUt.s());
                 }
             });
             startProgressDialog();
@@ -831,7 +821,7 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
     /* JADX INFO: Access modifiers changed from: private */
     public void setUpView(ContentDetailResponse contentDetailResponse) {
         String str;
-        String h;
+        String h2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-16916651")) {
             ipChange.ipc$dispatch("-16916651", new Object[]{this, contentDetailResponse});
@@ -855,11 +845,11 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
                     PerformFilmVipDO performFilmVipDO = contentUserInfo.performFilmVipDO;
                     if (performFilmVipDO != null) {
                         int i2 = contentUserInfo.userTypeCode;
-                        h = i2 == 2 ? String.valueOf(i2) : performFilmVipDO.memberFlag;
+                        h2 = i2 == 2 ? String.valueOf(i2) : performFilmVipDO.memberFlag;
                     } else {
-                        h = k23.h();
+                        h2 = k23.h();
                     }
-                    userInfoView.setVip(false, h);
+                    userInfoView.setVip(false, h2);
                     this.mUserInfoView.setIsOldVip(contentUserInfo.vip);
                     this.mUserInfoView.setUserName(contentUserInfo.nickname);
                     int i3 = contentUserInfo.userTypeCode;
@@ -964,7 +954,7 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
                                     }
                                     ContentDetailActivity.this.mContentDetailList.smoothScrollBy(0, ContentDetailActivity.this.mCommentViewHolder.f());
                                     ContentDetailActivity.this.scrollToAncr = true;
-                                    Log.d(GXTemplateEngine.C3344g.TYPE_ON_SCROLL_STATE_CHANGED, "scrollToAncr ===== : " + ContentDetailActivity.this.scrollToAncr);
+                                    Log.d(GXTemplateEngine.g.TYPE_ON_SCROLL_STATE_CHANGED, "scrollToAncr ===== : " + ContentDetailActivity.this.scrollToAncr);
                                 }
                             }, 100L);
                             ContentDetailActivity contentDetailActivity = ContentDetailActivity.this;
@@ -1010,7 +1000,7 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
             ipChange.ipc$dispatch("587087882", new Object[]{this, Boolean.valueOf(z), str, str2, str3});
         } else if (z) {
             this.mUserInfoView.setDna(true, str + "%");
-            this.mUserInfoView.setDnaClickListener(new C0994a(str2));
+            this.mUserInfoView.setDnaClickListener(new a(str2));
             this.mUt.P(this.mUserInfoView.getDnaView());
         } else {
             this.mUserInfoView.setDna(false, null);
@@ -1074,7 +1064,7 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
         } else if (this.mBuilder != null) {
             this.mUt.R(str);
             this.mBuilder.j(this.mUt.C());
-            C0529c.e().l(this, this.mBuilder);
+            cn.damai.common.user.c.e().l(this, this.mBuilder);
         }
     }
 
@@ -1095,7 +1085,7 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
             if (Math.abs((motionEvent.getX() - this.x) + (motionEvent.getY() - this.y)) > t60.a(this, 10.0f)) {
                 this.scrollToAncr = false;
             }
-            Log.d(GXTemplateEngine.C3344g.TYPE_ON_SCROLL_STATE_CHANGED, "scrollToAncr dispatchKeyEvent ===== : " + this.scrollToAncr);
+            Log.d(GXTemplateEngine.g.TYPE_ON_SCROLL_STATE_CHANGED, "scrollToAncr dispatchKeyEvent ===== : " + this.scrollToAncr);
         }
         return super.dispatchTouchEvent(motionEvent);
     }
@@ -1242,7 +1232,7 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
             if (contentUserInfo == null || this.mContentResponse == null) {
                 return;
             }
-            C0529c.e().x(this.mUt.K(contentUserInfo.havanaIdStr));
+            cn.damai.common.user.c.e().x(this.mUt.K(contentUserInfo.havanaIdStr));
             Bundle bundle = new Bundle();
             String str = contentUserInfo.bid;
             String str2 = contentUserInfo.btype;
@@ -1281,14 +1271,14 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
         } else if (id == R$id.content_detail_bottom_follow_layout) {
             ContentShareViewHolder contentShareViewHolder = this.mWanna2SeeViewHolder;
             if (contentShareViewHolder != null) {
-                C0529c.e().x(this.mUt.t(contentShareViewHolder.i()));
+                cn.damai.common.user.c.e().x(this.mUt.t(contentShareViewHolder.i()));
                 this.mWanna2SeeViewHolder.j();
             }
         } else if (id == R$id.content_detail_share_btn) {
             Object tag2 = view.getTag();
             if (tag2 instanceof ContentShareInfo) {
                 ContentShareInfo contentShareInfo = (ContentShareInfo) tag2;
-                C0529c.e().x(this.mUt.F());
+                cn.damai.common.user.c.e().x(this.mUt.F());
                 Bundle bundle2 = new Bundle();
                 bundle2.putString("imageurl", contentShareInfo.shareImage);
                 bundle2.putString("title", contentShareInfo.shareTitle);
@@ -1314,7 +1304,7 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
         this.mContentId = string;
         this.mUt.Q(string);
         setDamaiUTKeyBuilder(this.mUt.B());
-        C0529c.e().K(this);
+        cn.damai.common.user.c.e().K(this);
         super.onCreate(bundle);
     }
 
@@ -1405,7 +1395,7 @@ public class ContentDetailActivity extends SimpleBaseActivity implements IImageS
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1579532616")) {
             ipChange.ipc$dispatch("-1579532616", new Object[]{this});
-        } else if (g03.INSTANCE.e(this, new C0995b()) || (wantSeeTips = this.wantSeeTips) == null) {
+        } else if (g03.INSTANCE.e(this, new b()) || (wantSeeTips = this.wantSeeTips) == null) {
         } else {
             wantSeeTips.showAnim();
         }

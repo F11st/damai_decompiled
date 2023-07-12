@@ -18,12 +18,11 @@ public class zi {
     private List<WeakReference<CityListener>> b = new ArrayList();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.zi$a */
     /* loaded from: classes.dex */
-    public class C10023a implements Action<String> {
+    public class a implements Action<String> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C10023a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -46,7 +45,7 @@ public class zi {
     public zi() {
         xr xrVar = new xr();
         this.a = xrVar;
-        xrVar.b(CATEGORY_CITY_CHANGED_EVENT, new C10023a());
+        xrVar.b(CATEGORY_CITY_CHANGED_EVENT, new a());
     }
 
     public static synchronized zi c() {

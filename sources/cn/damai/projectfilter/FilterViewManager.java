@@ -52,12 +52,11 @@ public class FilterViewManager implements FilterBtnAction {
     private lj0 l;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.projectfilter.FilterViewManager$a */
     /* loaded from: classes6.dex */
-    public class C1506a implements OnItemBindListener<FilterBean> {
+    public class a implements OnItemBindListener<FilterBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1506a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -85,12 +84,11 @@ public class FilterViewManager implements FilterBtnAction {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.projectfilter.FilterViewManager$b */
     /* loaded from: classes6.dex */
-    public class C1507b implements UiBizListener {
+    public class b implements UiBizListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1507b() {
+        b() {
         }
 
         @Override // cn.damai.projectfilter.listener.UiBizListener
@@ -119,12 +117,11 @@ public class FilterViewManager implements FilterBtnAction {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.projectfilter.FilterViewManager$c */
     /* loaded from: classes6.dex */
-    public class C1508c implements OnItemBindListener<Type> {
+    public class c implements OnItemBindListener<Type> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1508c() {
+        c() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -183,11 +180,11 @@ public class FilterViewManager implements FilterBtnAction {
         });
         this.f.setItemAnimator(null);
         this.f.setLayoutManager(new LinearLayoutManager(this.a, 0, false));
-        FastFilterAdapter fastFilterAdapter = new FastFilterAdapter(this.a, new C1506a());
+        FastFilterAdapter fastFilterAdapter = new FastFilterAdapter(this.a, new a());
         this.g = fastFilterAdapter;
         this.f.setAdapter(fastFilterAdapter);
         this.e = new hk0(context, viewGroup);
-        this.i = new FilterModel(new C1507b());
+        this.i = new FilterModel(new b());
     }
 
     @Override // cn.damai.projectfilter.listener.FilterBtnAction
@@ -277,7 +274,7 @@ public class FilterViewManager implements FilterBtnAction {
             this.j.add(gj0.d(context3, floatContainer3, filterModel3, filterModel3.getFilterBean()));
         }
         for (gj0 gj0Var : this.j) {
-            gj0Var.g(new C1508c());
+            gj0Var.g(new c());
             gj0Var.e.setFilterUt(this.l);
             gj0Var.a(this.c, this.d, this);
         }

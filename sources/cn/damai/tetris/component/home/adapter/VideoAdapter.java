@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMImageStrategyConfig;
 import cn.damai.commonbusiness.R$drawable;
@@ -29,12 +28,12 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
 import java.util.List;
-import tb.C9826vr;
 import tb.cb2;
 import tb.m62;
 import tb.mu0;
 import tb.oy0;
 import tb.t60;
+import tb.vr;
 import tb.wh2;
 
 /* compiled from: Taobao */
@@ -68,12 +67,11 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoItemViewHolder> impl
         private View o;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.tetris.component.home.adapter.VideoAdapter$VideoItemViewHolder$a */
         /* loaded from: classes16.dex */
-        public class View$OnClickListenerC1852a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC1852a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -91,12 +89,11 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoItemViewHolder> impl
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.tetris.component.home.adapter.VideoAdapter$VideoItemViewHolder$b */
         /* loaded from: classes16.dex */
-        public class View$OnClickListenerC1853b implements View.OnClickListener {
+        public class b implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC1853b() {
+            b() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -158,10 +155,10 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoItemViewHolder> impl
             if (homePageVideoItem == null) {
                 return;
             }
-            int a = m62.a(mu0.a(), 20.0f);
+            int a2 = m62.a(mu0.a(), 20.0f);
             DMImageStrategyConfig dMImageStrategyConfig = new DMImageStrategyConfig();
-            dMImageStrategyConfig.g = a;
-            dMImageStrategyConfig.h = a;
+            dMImageStrategyConfig.g = a2;
+            dMImageStrategyConfig.h = a2;
             List<ArtistHeadBean> list = homePageVideoItem.artistVOS;
             if (cb2.d(list)) {
                 this.k.setVisibility(8);
@@ -202,10 +199,10 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoItemViewHolder> impl
                 VideoAdapter.this.e = homePageVideoItem;
                 VideoAdapter.this.c = homePageVideoItem.index;
             }
-            if (this.b.getTag() instanceof C9826vr) {
-                ((C9826vr) this.b.getTag()).cancel();
+            if (this.b.getTag() instanceof vr) {
+                ((vr) this.b.getTag()).cancel();
             }
-            DMImageCreator f = C0504a.b().f(homePageVideoItem.projectPic, t60.a(this.a, 98.0f), t60.a(this.a, 131.0f));
+            DMImageCreator f = cn.damai.common.image.a.b().f(homePageVideoItem.projectPic, t60.a(this.a, 98.0f), t60.a(this.a, 131.0f));
             int i4 = R$drawable.uikit_default_image_bg_gradient;
             this.b.setTag(f.i(i4).c(i4).g(this.b));
             if (homePageVideoItem.isLiveRoom()) {
@@ -239,32 +236,31 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoItemViewHolder> impl
             this.o.setVisibility((z && homePageVideoItem.isPlay) ? 8 : 8);
             this.h.setTag(homePageVideoItem);
             this.itemView.setTag(homePageVideoItem);
-            this.h.setOnClickListener(new View$OnClickListenerC1852a());
-            this.itemView.setOnClickListener(new View$OnClickListenerC1853b());
+            this.h.setOnClickListener(new a());
+            this.itemView.setOnClickListener(new b());
             oy0.B().M(VideoAdapter.this.d, this.b, homePageVideoItem.projectId, homePageVideoItem.index);
             oy0.B().N(VideoAdapter.this.d, this.h, homePageVideoItem.projectId, homePageVideoItem.index);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.adapter.VideoAdapter$a */
     /* loaded from: classes7.dex */
-    public class C1854a implements DMImageCreator.DMImageSuccListener {
+    public class a implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
-        C1854a(VideoAdapter videoAdapter, ImageView imageView) {
+        a(VideoAdapter videoAdapter, ImageView imageView) {
             this.a = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "295435640")) {
-                ipChange.ipc$dispatch("295435640", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("295435640", new Object[]{this, eVar});
                 return;
             }
-            Bitmap bitmap = c0502e.b;
+            Bitmap bitmap = eVar.b;
             if (bitmap != null) {
                 this.a.setImageBitmap(bitmap);
             }
@@ -278,8 +274,8 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoItemViewHolder> impl
             ipChange.ipc$dispatch("1004469458", new Object[]{this, str, imageView});
             return;
         }
-        int a = m62.a(mu0.a(), 20.0f);
-        C0504a.b().f(str, a, a).n(new C1854a(this, imageView)).f();
+        int a2 = m62.a(mu0.a(), 20.0f);
+        cn.damai.common.image.a.b().f(str, a2, a2).n(new a(this, imageView)).f();
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

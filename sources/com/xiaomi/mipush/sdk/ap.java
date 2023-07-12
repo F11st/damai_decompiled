@@ -74,7 +74,7 @@ public class ap extends Handler {
                         if ("syncing".equals(af.a(context10).a(auVar2))) {
                             aoVar = this.a;
                             context11 = aoVar.f48a;
-                            m648a = C7572i.m648a(context11, EnumC7568e.ASSEMBLE_PUSH_HUAWEI);
+                            m648a = i.m648a(context11, e.ASSEMBLE_PUSH_HUAWEI);
                             aoVar.a(str, auVar2, false, m648a);
                             context13 = this.a.f48a;
                             af.a(context13).b(str);
@@ -86,7 +86,7 @@ public class ap extends Handler {
                         if ("syncing".equals(af.a(context8).a(auVar2))) {
                             aoVar = this.a;
                             context9 = aoVar.f48a;
-                            m648a = C7572i.m648a(context9, EnumC7568e.ASSEMBLE_PUSH_FCM);
+                            m648a = i.m648a(context9, e.ASSEMBLE_PUSH_FCM);
                             aoVar.a(str, auVar2, false, m648a);
                             context13 = this.a.f48a;
                             af.a(context13).b(str);
@@ -98,7 +98,7 @@ public class ap extends Handler {
                         if ("syncing".equals(af.a(context6).a(auVar2))) {
                             aoVar = this.a;
                             context7 = aoVar.f48a;
-                            m648a = C7572i.m648a(context7, EnumC7568e.ASSEMBLE_PUSH_COS);
+                            m648a = i.m648a(context7, e.ASSEMBLE_PUSH_COS);
                             aoVar.a(str, auVar2, false, m648a);
                             context13 = this.a.f48a;
                             af.a(context13).b(str);
@@ -110,7 +110,7 @@ public class ap extends Handler {
                         if ("syncing".equals(af.a(context4).a(auVar2))) {
                             aoVar = this.a;
                             context5 = aoVar.f48a;
-                            m648a = C7572i.m648a(context5, EnumC7568e.ASSEMBLE_PUSH_FTOS);
+                            m648a = i.m648a(context5, e.ASSEMBLE_PUSH_FTOS);
                             aoVar.a(str, auVar2, false, m648a);
                         }
                     }

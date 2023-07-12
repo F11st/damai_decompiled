@@ -15,8 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -52,12 +51,11 @@ public class DMDXHomeGrabTicketNoticeView extends FrameLayout {
     private int pointSize;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.temp.DMDXHomeGrabTicketNoticeView$a  reason: invalid class name */
     /* loaded from: classes14.dex */
-    public class animationAnimation$AnimationListenerC0669a implements Animation.AnimationListener {
+    public class a implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        animationAnimation$AnimationListenerC0669a() {
+        a() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -93,7 +91,7 @@ public class DMDXHomeGrabTicketNoticeView extends FrameLayout {
                 if (TextUtils.isEmpty(string3)) {
                     string3 = "0";
                 }
-                C0529c e = C0529c.e();
+                cn.damai.common.user.c e = cn.damai.common.user.c.e();
                 e.G(currentView, "more_item_" + string3, ou0.GRAB_PAGE, "home", hashMap);
             } catch (Exception e2) {
                 cb1.c("DMDXHomeGrabTicketNoticeView", e2.getMessage());
@@ -118,12 +116,11 @@ public class DMDXHomeGrabTicketNoticeView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.temp.DMDXHomeGrabTicketNoticeView$b */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0670b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0670b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -138,12 +135,11 @@ public class DMDXHomeGrabTicketNoticeView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.temp.DMDXHomeGrabTicketNoticeView$c */
     /* loaded from: classes4.dex */
-    public class C0671c implements DMUpMarqueeView.OnItemClickListener {
+    public class c implements DMUpMarqueeView.OnItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0671c() {
+        c() {
         }
 
         @Override // cn.damai.commonbusiness.dynamicx.customwidget.temp.DMUpMarqueeView.OnItemClickListener
@@ -159,9 +155,9 @@ public class DMDXHomeGrabTicketNoticeView extends FrameLayout {
 
     public DMDXHomeGrabTicketNoticeView(@NonNull Context context) {
         super(context);
-        this.mAnimationListener = new animationAnimation$AnimationListenerC0669a();
-        this.mOnClickListener = new View$OnClickListenerC0670b();
-        this.mOnItemClickListener = new C0671c();
+        this.mAnimationListener = new a();
+        this.mOnClickListener = new b();
+        this.mOnItemClickListener = new c();
         initView();
     }
 
@@ -255,8 +251,8 @@ public class DMDXHomeGrabTicketNoticeView extends FrameLayout {
                 if (TextUtils.isEmpty(string4)) {
                     string4 = "0";
                 }
-                C0525a.C0527b f = new C0525a.C0527b().i("home").f(ou0.GRAB_PAGE);
-                C0529c.e().x(f.l("more_item_" + string4).g(true).j(hashMap));
+                a.b f = new a.b().i("home").f(ou0.GRAB_PAGE);
+                cn.damai.common.user.c.e().x(f.l("more_item_" + string4).g(true).j(hashMap));
             }
         } catch (Exception e) {
             cb1.b("DMDXHomeGrabTicketNoticeView", e.getMessage());
@@ -285,9 +281,9 @@ public class DMDXHomeGrabTicketNoticeView extends FrameLayout {
             return;
         }
         this.goodsNum = 0;
-        int b = t41.b(jSONArray);
+        int b2 = t41.b(jSONArray);
         ArrayList arrayList = new ArrayList();
-        for (int i = 0; i < b; i++) {
+        for (int i = 0; i < b2; i++) {
             JSONObject jSONObject = jSONArray.getJSONObject(i);
             if (jSONObject != null) {
                 if (jSONObject.containsKey("itemId")) {
@@ -322,7 +318,7 @@ public class DMDXHomeGrabTicketNoticeView extends FrameLayout {
     }
 
     public void setDataStatus(String str) {
-        int a;
+        int a2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "579874874")) {
             ipChange.ipc$dispatch("579874874", new Object[]{this, str});
@@ -330,14 +326,14 @@ public class DMDXHomeGrabTicketNoticeView extends FrameLayout {
         }
         if (TextUtils.equals("1", str)) {
             this.marqueeLabel.setImageResource(R$drawable.icon_yiqi_beng);
-            a = m62.a(mu0.a(), 95.0f);
+            a2 = m62.a(mu0.a(), 95.0f);
         } else {
-            a = m62.a(mu0.a(), 92.0f);
+            a2 = m62.a(mu0.a(), 92.0f);
             this.marqueeLabel.setImageResource(R$drawable.ic_home_grab_ticket_logo);
         }
         ViewGroup.LayoutParams layoutParams = this.marqueeLabel.getLayoutParams();
         if (layoutParams != null) {
-            layoutParams.width = a;
+            layoutParams.width = a2;
             this.marqueeLabel.requestLayout();
         }
     }
@@ -395,17 +391,17 @@ public class DMDXHomeGrabTicketNoticeView extends FrameLayout {
 
     public DMDXHomeGrabTicketNoticeView(@NonNull Context context, @Nullable AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.mAnimationListener = new animationAnimation$AnimationListenerC0669a();
-        this.mOnClickListener = new View$OnClickListenerC0670b();
-        this.mOnItemClickListener = new C0671c();
+        this.mAnimationListener = new a();
+        this.mOnClickListener = new b();
+        this.mOnItemClickListener = new c();
         initView();
     }
 
     public DMDXHomeGrabTicketNoticeView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        this.mAnimationListener = new animationAnimation$AnimationListenerC0669a();
-        this.mOnClickListener = new View$OnClickListenerC0670b();
-        this.mOnItemClickListener = new C0671c();
+        this.mAnimationListener = new a();
+        this.mOnClickListener = new b();
+        this.mOnItemClickListener = new c();
         initView();
     }
 }

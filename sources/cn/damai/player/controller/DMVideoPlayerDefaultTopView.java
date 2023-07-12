@@ -28,18 +28,17 @@ public class DMVideoPlayerDefaultTopView extends FrameLayout implements View.OnC
     private FragmentActivity mActivity;
     private IVideoController mController;
     private xs mDataHolder;
-    private HandlerC1502e mHandler;
+    private e mHandler;
     private IVideoPlayer mPlayer;
     private DMIconFontTextView mToSmallScreen;
     private OnPlayerUTReportListener mUTReportListener;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.player.controller.DMVideoPlayerDefaultTopView$a */
     /* loaded from: classes6.dex */
-    public class C1498a implements Action<Object> {
+    public class a implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1498a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -54,12 +53,11 @@ public class DMVideoPlayerDefaultTopView extends FrameLayout implements View.OnC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.player.controller.DMVideoPlayerDefaultTopView$b */
     /* loaded from: classes6.dex */
-    public class C1499b implements Action<Object> {
+    public class b implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1499b() {
+        b() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -74,12 +72,11 @@ public class DMVideoPlayerDefaultTopView extends FrameLayout implements View.OnC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.player.controller.DMVideoPlayerDefaultTopView$c */
     /* loaded from: classes6.dex */
-    public class C1500c implements Action<Object> {
+    public class c implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1500c() {
+        c() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -94,12 +91,11 @@ public class DMVideoPlayerDefaultTopView extends FrameLayout implements View.OnC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.player.controller.DMVideoPlayerDefaultTopView$d */
     /* loaded from: classes6.dex */
-    public class C1501d implements Action<Object> {
+    public class d implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1501d() {
+        d() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -114,12 +110,11 @@ public class DMVideoPlayerDefaultTopView extends FrameLayout implements View.OnC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.player.controller.DMVideoPlayerDefaultTopView$e */
     /* loaded from: classes15.dex */
-    public class HandlerC1502e extends Handler {
+    public class e extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC1502e() {
+        e() {
         }
 
         @Override // android.os.Handler
@@ -152,7 +147,7 @@ public class DMVideoPlayerDefaultTopView extends FrameLayout implements View.OnC
         this.mToSmallScreen = dMIconFontTextView;
         dMIconFontTextView.setOnClickListener(this);
         setVisibility(8);
-        this.mHandler = new HandlerC1502e();
+        this.mHandler = new e();
         registerDMMessage();
     }
 
@@ -164,10 +159,10 @@ public class DMVideoPlayerDefaultTopView extends FrameLayout implements View.OnC
         }
         xr xrVar = new xr();
         this.dmMessage = xrVar;
-        xrVar.b("topbar_show", new C1498a());
-        this.dmMessage.b("topbar_hide", new C1499b());
-        this.dmMessage.b("remove_show_message", new C1500c());
-        this.dmMessage.b("topbar_delay_hide", new C1501d());
+        xrVar.b("topbar_show", new a());
+        this.dmMessage.b("topbar_hide", new b());
+        this.dmMessage.b("remove_show_message", new c());
+        this.dmMessage.b("topbar_delay_hide", new d());
     }
 
     /* JADX INFO: Access modifiers changed from: private */

@@ -1,13 +1,13 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import kotlin.Pair;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8226x;
+import kotlin.collections.n;
+import kotlin.collections.x;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.PropertyReference1Impl;
 import kotlin.reflect.KProperty;
@@ -78,7 +78,7 @@ public final class LazyJavaAnnotationDescriptor implements AnnotationDescriptor,
     private final boolean h;
 
     public LazyJavaAnnotationDescriptor(@NotNull r81 r81Var, @NotNull JavaAnnotation javaAnnotation, boolean z) {
-        b41.i(r81Var, AbstractC5658c.a);
+        b41.i(r81Var, c.a);
         b41.i(javaAnnotation, "javaAnnotation");
         this.a = r81Var;
         this.b = javaAnnotation;
@@ -165,7 +165,7 @@ public final class LazyJavaAnnotationDescriptor implements AnnotationDescriptor,
                         arrayList.add(a);
                     }
                 }
-                r = C8226x.r(arrayList);
+                r = x.r(arrayList);
                 return r;
             }
         });
@@ -227,7 +227,7 @@ public final class LazyJavaAnnotationDescriptor implements AnnotationDescriptor,
             type2 = this.a.a().m().getBuiltIns().l(Variance.INVARIANT, kf0.j("Unknown array element type"));
         }
         b41.h(type2, "DescriptorResolverUtils.… type\")\n                )");
-        q = C8215n.q(list, 10);
+        q = n.q(list, 10);
         ArrayList arrayList = new ArrayList(q);
         for (JavaAnnotationArgument javaAnnotationArgument : list) {
             fn<?> i2 = i(javaAnnotationArgument);

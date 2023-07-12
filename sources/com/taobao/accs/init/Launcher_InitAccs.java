@@ -36,8 +36,8 @@ import java.util.concurrent.TimeUnit;
 import org.android.agoo.common.AgooConstants;
 import org.android.agoo.common.Config;
 import org.android.agoo.control.NotifManager;
-import tb.C9708t9;
 import tb.e22;
+import tb.t9;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
@@ -268,7 +268,7 @@ public class Launcher_InitAccs implements Serializable {
         boolean isAllWeather = ConnectionServiceManager.getInstance().isAllWeather();
         ALog.e(TAG, "initAwcnBgConfig", "isChannelMode", Boolean.valueOf(isChannelModeEnable), "isMainProcess", Boolean.valueOf(isMainProcess), "isAllWeather", Boolean.valueOf(isAllWeather));
         if (!isChannelModeEnable || (isMainProcess && !isAllWeather)) {
-            C9708t9.V(true);
+            t9.V(true);
         }
     }
 

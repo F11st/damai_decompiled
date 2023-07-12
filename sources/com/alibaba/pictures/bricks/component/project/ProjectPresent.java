@@ -26,13 +26,12 @@ public class ProjectPresent extends AbsPresenter<IItem<ItemValue>, ProjectContra
     public Daojishi mDaojishi;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.project.ProjectPresent$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC3489a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ IItem a;
 
-        View$OnClickListenerC3489a(IItem iItem) {
+        a(IItem iItem) {
             this.a = iItem;
         }
 
@@ -118,7 +117,7 @@ public class ProjectPresent extends AbsPresenter<IItem<ItemValue>, ProjectContra
         BricksProjectViewHolder holder = ((ProjectContract.View) this.view).getHolder();
         s60 s60Var = s60.INSTANCE;
         holder.x(s60Var.b(this.item.getPageContext().getActivity(), 63), s60Var.b(this.item.getPageContext().getActivity(), 84));
-        ((ProjectContract.View) this.view).getRenderView().setOnClickListener(new View$OnClickListenerC3489a(iItem));
+        ((ProjectContract.View) this.view).getRenderView().setOnClickListener(new a(iItem));
         userTrackExpose(((ProjectContract.View) this.view).getRenderView(), dName(), getTrackArgsTemp());
         w72.a(this, ((ProjectContract.View) this.view).getHolder().itemView);
         if (this.item.getComponent().getChildCount() - 1 != this.item.getIndex()) {

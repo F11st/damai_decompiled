@@ -13,7 +13,7 @@ import android.telephony.CellInfoLte;
 import android.telephony.CellInfoWcdma;
 import android.telephony.TelephonyManager;
 import com.alibaba.wireless.security.aopsdk.replace.android.net.ConnectivityManager;
-import com.youku.e.C7901a;
+import com.youku.e.a;
 import java.util.List;
 
 /* compiled from: Taobao */
@@ -32,7 +32,7 @@ public class SystemInfoWrap {
 
     public static int getMobileNetDbm() {
         List<CellInfo> allCellInfo;
-        Context context = C7901a.a;
+        Context context = a.a;
         int i = 1;
         if (context == null) {
             return 1;
@@ -59,7 +59,7 @@ public class SystemInfoWrap {
 
     @SuppressLint({"MissingPermission"})
     public static int getNetType() {
-        Context context = C7901a.a;
+        Context context = a.a;
         if (context == null) {
             return -1;
         }
@@ -71,7 +71,7 @@ public class SystemInfoWrap {
                     return 1;
                 }
                 if (type == 0) {
-                    TelephonyManager telephonyManager = (TelephonyManager) C7901a.a.getSystemService("phone");
+                    TelephonyManager telephonyManager = (TelephonyManager) a.a.getSystemService("phone");
                     return getNetworkClassByType(Build.VERSION.SDK_INT < 30 ? com.alibaba.wireless.security.aopsdk.replace.android.telephony.TelephonyManager.getNetworkType(telephonyManager) : com.alibaba.wireless.security.aopsdk.replace.android.telephony.TelephonyManager.getDataNetworkType(telephonyManager));
                 }
                 return -1;
@@ -107,7 +107,7 @@ public class SystemInfoWrap {
     }
 
     public static int getSimOperatorInfo() {
-        Context context = C7901a.a;
+        Context context = a.a;
         if (context == null) {
             return -1;
         }
@@ -130,7 +130,7 @@ public class SystemInfoWrap {
     }
 
     public static int getWifiSignalStrength() {
-        Context context = C7901a.a;
+        Context context = a.a;
         if (context == null) {
             return 1;
         }

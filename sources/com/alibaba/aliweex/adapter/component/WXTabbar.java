@@ -38,13 +38,12 @@ public class WXTabbar extends WXVContainer<TabLayout> implements TabLayout.OnTab
     public static final String SELECT_INDEX = "selectedIndex";
     public static final String TAB_ITEMS = "tabItems";
     private BorderDrawable mBackgroundDrawable;
-    protected List<C3035a> mItems;
+    protected List<a> mItems;
 
     /* JADX INFO: Access modifiers changed from: protected */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.component.WXTabbar$a */
     /* loaded from: classes15.dex */
-    public static class C3035a {
+    public static class a {
         public static final int DEFAULT_FONTSIZE = 24;
         public static final int DEFAULT_ICON_SIZE = 68;
         public static final String FONT_SIZE = "fontSize";
@@ -60,12 +59,12 @@ public class WXTabbar extends WXVContainer<TabLayout> implements TabLayout.OnTab
         String i;
         WXSDKInstance j;
 
-        private C3035a() {
+        private a() {
         }
 
-        public static C3035a a(JSONObject jSONObject, Context context, WXSDKInstance wXSDKInstance) {
-            C3035a c3035a = new C3035a();
-            c3035a.j = wXSDKInstance;
+        public static a a(JSONObject jSONObject, Context context, WXSDKInstance wXSDKInstance) {
+            a aVar = new a();
+            aVar.j = wXSDKInstance;
             String string = jSONObject.getString("title");
             int color = WXResourceUtils.getColor(jSONObject.getString("titleColor"));
             int color2 = WXResourceUtils.getColor(jSONObject.getString("titleSelectedColor"));
@@ -74,11 +73,11 @@ public class WXTabbar extends WXVContainer<TabLayout> implements TabLayout.OnTab
             int intValue = jSONObject.getIntValue("badge");
             int intValue2 = jSONObject.containsKey(ICON_SIZE) ? jSONObject.getIntValue(ICON_SIZE) : 68;
             int intValue3 = jSONObject.containsKey("fontSize") ? jSONObject.getIntValue("fontSize") : 24;
-            c3035a.i = jSONObject.getString("itemId");
-            c3035a.e = color;
-            c3035a.f = color2;
-            c3035a.g = string2;
-            c3035a.h = string3;
+            aVar.i = jSONObject.getString("itemId");
+            aVar.e = color;
+            aVar.f = color2;
+            aVar.g = string2;
+            aVar.h = string3;
             LinearLayout linearLayout = new LinearLayout(context);
             linearLayout.setOrientation(1);
             linearLayout.setHorizontalGravity(17);
@@ -119,11 +118,11 @@ public class WXTabbar extends WXVContainer<TabLayout> implements TabLayout.OnTab
             textView2.setLayoutParams(layoutParams4);
             textView2.setTextColor(color);
             linearLayout.addView(textView2);
-            c3035a.b = textView2;
-            c3035a.c = imageView;
-            c3035a.d = textView;
-            c3035a.a = linearLayout;
-            return c3035a;
+            aVar.b = textView2;
+            aVar.c = imageView;
+            aVar.d = textView;
+            aVar.a = linearLayout;
+            return aVar;
         }
 
         private void d(boolean z) {
@@ -171,31 +170,31 @@ public class WXTabbar extends WXVContainer<TabLayout> implements TabLayout.OnTab
     }
 
     @Override // com.alibaba.aliweex.adapter.component.TabLayout.OnTabSelectedListener
-    public void onTabReselected(TabLayout.C3026b c3026b) {
+    public void onTabReselected(TabLayout.b bVar) {
     }
 
     @Override // com.alibaba.aliweex.adapter.component.TabLayout.OnTabSelectedListener
-    public void onTabSelected(TabLayout.C3026b c3026b) {
-        updateTabState(c3026b.c(), true);
+    public void onTabSelected(TabLayout.b bVar) {
+        updateTabState(bVar.c(), true);
         HashMap hashMap = new HashMap(2);
-        hashMap.put("index", Integer.valueOf(c3026b.c()));
+        hashMap.put("index", Integer.valueOf(bVar.c()));
         hashMap.put("timeStamp", Long.valueOf(System.currentTimeMillis()));
         HashMap hashMap2 = new HashMap();
         HashMap hashMap3 = new HashMap();
-        hashMap3.put(SELECT_INDEX, Integer.valueOf(c3026b.c()));
+        hashMap3.put(SELECT_INDEX, Integer.valueOf(bVar.c()));
         hashMap2.put(TemplateDom.KEY_ATTRS, hashMap3);
         getInstance().fireEvent(getRef(), EVENT_TABSELECTED, hashMap, hashMap2);
     }
 
     @Override // com.alibaba.aliweex.adapter.component.TabLayout.OnTabSelectedListener
-    public void onTabUnselected(TabLayout.C3026b c3026b) {
-        updateTabState(c3026b.c(), false);
+    public void onTabUnselected(TabLayout.b bVar) {
+        updateTabState(bVar.c(), false);
     }
 
     @WXComponentProp(name = SELECT_INDEX)
     public void setSelectIndex(int i) {
         TabLayout tabLayout;
-        TabLayout.C3026b tabAt;
+        TabLayout.b tabAt;
         if (i < 0 || i >= this.mItems.size() || (tabLayout = (TabLayout) getHostView()) == null || (tabAt = tabLayout.getTabAt(i)) == null) {
             return;
         }
@@ -215,10 +214,10 @@ public class WXTabbar extends WXVContainer<TabLayout> implements TabLayout.OnTab
         int size = parseArray.size();
         int i = 0;
         while (i < size) {
-            C3035a a = C3035a.a(parseArray.getJSONObject(i), getContext(), getInstance());
-            a.e(false);
-            this.mItems.add(a);
-            tabLayout.addTab(tabLayout.newTab().e(a.c()), i == selectedIndex);
+            a a2 = a.a(parseArray.getJSONObject(i), getContext(), getInstance());
+            a2.e(false);
+            this.mItems.add(a2);
+            tabLayout.addTab(tabLayout.newTab().e(a2.c()), i == selectedIndex);
             i++;
         }
     }
@@ -232,12 +231,12 @@ public class WXTabbar extends WXVContainer<TabLayout> implements TabLayout.OnTab
         WXEmbed.EmbedManager embedManager;
         WXEmbed embed;
         TextView textView;
-        C3035a c3035a = this.mItems.get(i);
-        c3035a.e(z);
-        if (!z && (textView = c3035a.d) != null) {
+        a aVar = this.mItems.get(i);
+        aVar.e(z);
+        if (!z && (textView = aVar.d) != null) {
             textView.setVisibility(4);
         }
-        if (!(getInstance() instanceof WXEmbed.EmbedManager) || (embedManager = (WXEmbed.EmbedManager) getInstance()) == null || (embed = embedManager.getEmbed(c3035a.b())) == null) {
+        if (!(getInstance() instanceof WXEmbed.EmbedManager) || (embedManager = (WXEmbed.EmbedManager) getInstance()) == null || (embed = embedManager.getEmbed(aVar.b())) == null) {
             return;
         }
         embed.setVisibility(z ? "visible" : "hidden");

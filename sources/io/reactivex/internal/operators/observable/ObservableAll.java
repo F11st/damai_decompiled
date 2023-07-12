@@ -90,7 +90,7 @@ public final class ObservableAll<T> extends AbstractObservableWithUpstream<T, Bo
         this.predicate = predicate;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super Boolean> observer) {
         this.source.subscribe(new AllObserver(observer, this.predicate));
     }

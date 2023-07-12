@@ -21,7 +21,7 @@ public final class x51 extends uy2 {
         if (b41.d(this, uy2Var)) {
             return 0;
         }
-        if (uy2Var == ty2.C9738b.INSTANCE) {
+        if (uy2Var == ty2.b.INSTANCE) {
             return null;
         }
         return Integer.valueOf(ty2.INSTANCE.b(uy2Var) ? 1 : -1);
@@ -36,6 +36,6 @@ public final class x51 extends uy2 {
     @Override // tb.uy2
     @NotNull
     public uy2 d() {
-        return ty2.C9743g.INSTANCE;
+        return ty2.g.INSTANCE;
     }
 }

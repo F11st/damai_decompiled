@@ -4,8 +4,8 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import com.amap.api.col.s.HandlerC4447t;
 import com.amap.api.col.s.bt;
+import com.amap.api.col.s.t;
 import com.amap.api.services.core.AMapException;
 import com.amap.api.services.core.LatLonPoint;
 import com.amap.api.services.core.PoiItem;
@@ -31,11 +31,11 @@ public final class bd implements IPoiSearch {
 
     public bd(Context context, PoiSearch.Query query) throws AMapException {
         this.j = null;
-        bu a = bt.a(context, C4434h.a(false));
-        if (a.a == bt.EnumC4398c.SuccessCode) {
+        bu a = bt.a(context, h.a(false));
+        if (a.a == bt.c.SuccessCode) {
             this.c = context.getApplicationContext();
             setQuery(query);
-            this.j = HandlerC4447t.a();
+            this.j = t.a();
             return;
         }
         String str = a.b;
@@ -87,7 +87,7 @@ public final class bd implements IPoiSearch {
     @Override // com.amap.api.services.interfaces.IPoiSearch
     public final PoiResult searchPOI() throws AMapException {
         try {
-            C4444r.a(this.c);
+            r.a(this.c);
             if (!b() && !a()) {
                 throw new AMapException("无效的参数 - IllegalArgumentException");
             }
@@ -112,13 +112,13 @@ public final class bd implements IPoiSearch {
                     this.b.setPageNum(ah.a().k(this.b.getPageNum()));
                     this.b.setPageSize(ah.a().l(this.b.getPageSize()));
                     if (this.h == 0) {
-                        PoiResult b = new C4465z(this.c, new ac(this.b.m226clone(), m227clone)).b();
+                        PoiResult b = new z(this.c, new ac(this.b.m226clone(), m227clone)).b();
                         a(b);
                         return b;
                     }
                     PoiResult a = a(this.b.getPageNum());
                     if (a == null) {
-                        PoiResult b2 = new C4465z(this.c, new ac(this.b.m226clone(), m227clone)).b();
+                        PoiResult b2 = new z(this.c, new ac(this.b.m226clone(), m227clone)).b();
                         i.put(Integer.valueOf(this.b.getPageNum()), b2);
                         return b2;
                     }
@@ -128,7 +128,7 @@ public final class bd implements IPoiSearch {
             }
             throw new AMapException("无效的参数 - IllegalArgumentException");
         } catch (AMapException e) {
-            C4435i.a(e, "PoiSearch", "searchPOI");
+            i.a(e, "PoiSearch", "searchPOI");
             throw new AMapException(e.getErrorMessage());
         }
     }
@@ -139,7 +139,7 @@ public final class bd implements IPoiSearch {
             ao.a().a(new Runnable() { // from class: com.amap.api.col.s.bd.1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    HandlerC4447t.C4455h c4455h;
+                    t.h hVar;
                     Message obtainMessage = bd.this.j.obtainMessage();
                     obtainMessage.arg1 = 6;
                     obtainMessage.what = 600;
@@ -149,21 +149,21 @@ public final class bd implements IPoiSearch {
                         try {
                             poiResult = bd.this.searchPOI();
                             bundle.putInt("errorCode", 1000);
-                            c4455h = new HandlerC4447t.C4455h();
+                            hVar = new t.h();
                         } catch (AMapException e) {
                             bundle.putInt("errorCode", e.getErrorCode());
-                            c4455h = new HandlerC4447t.C4455h();
+                            hVar = new t.h();
                         }
-                        c4455h.b = bd.this.d;
-                        c4455h.a = poiResult;
-                        obtainMessage.obj = c4455h;
+                        hVar.b = bd.this.d;
+                        hVar.a = poiResult;
+                        obtainMessage.obj = hVar;
                         obtainMessage.setData(bundle);
                         bd.this.j.sendMessage(obtainMessage);
                     } catch (Throwable th) {
-                        HandlerC4447t.C4455h c4455h2 = new HandlerC4447t.C4455h();
-                        c4455h2.b = bd.this.d;
-                        c4455h2.a = poiResult;
-                        obtainMessage.obj = c4455h2;
+                        t.h hVar2 = new t.h();
+                        hVar2.b = bd.this.d;
+                        hVar2.a = poiResult;
+                        obtainMessage.obj = hVar2;
                         obtainMessage.setData(bundle);
                         bd.this.j.sendMessage(obtainMessage);
                         throw th;
@@ -177,9 +177,9 @@ public final class bd implements IPoiSearch {
 
     @Override // com.amap.api.services.interfaces.IPoiSearch
     public final PoiItem searchPOIId(String str) throws AMapException {
-        C4444r.a(this.c);
+        r.a(this.c);
         PoiSearch.Query query = this.b;
-        return new C4464y(this.c, str, query != null ? query.m226clone() : null).b();
+        return new y(this.c, str, query != null ? query.m226clone() : null).b();
     }
 
     @Override // com.amap.api.services.interfaces.IPoiSearch
@@ -187,8 +187,8 @@ public final class bd implements IPoiSearch {
         ao.a().a(new Runnable() { // from class: com.amap.api.col.s.bd.2
             @Override // java.lang.Runnable
             public final void run() {
-                HandlerC4447t.C4454g c4454g;
-                Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                t.g gVar;
+                Message obtainMessage = t.a().obtainMessage();
                 obtainMessage.arg1 = 6;
                 obtainMessage.what = 602;
                 Bundle bundle = new Bundle();
@@ -197,22 +197,22 @@ public final class bd implements IPoiSearch {
                     try {
                         poiItem = bd.this.searchPOIId(str);
                         bundle.putInt("errorCode", 1000);
-                        c4454g = new HandlerC4447t.C4454g();
+                        gVar = new t.g();
                     } catch (AMapException e) {
-                        C4435i.a(e, "PoiSearch", "searchPOIIdAsyn");
+                        i.a(e, "PoiSearch", "searchPOIIdAsyn");
                         bundle.putInt("errorCode", e.getErrorCode());
-                        c4454g = new HandlerC4447t.C4454g();
+                        gVar = new t.g();
                     }
-                    c4454g.b = bd.this.d;
-                    c4454g.a = poiItem;
-                    obtainMessage.obj = c4454g;
+                    gVar.b = bd.this.d;
+                    gVar.a = poiItem;
+                    obtainMessage.obj = gVar;
                     obtainMessage.setData(bundle);
                     bd.this.j.sendMessage(obtainMessage);
                 } catch (Throwable th) {
-                    HandlerC4447t.C4454g c4454g2 = new HandlerC4447t.C4454g();
-                    c4454g2.b = bd.this.d;
-                    c4454g2.a = poiItem;
-                    obtainMessage.obj = c4454g2;
+                    t.g gVar2 = new t.g();
+                    gVar2.b = bd.this.d;
+                    gVar2.a = poiItem;
+                    obtainMessage.obj = gVar2;
                     obtainMessage.setData(bundle);
                     bd.this.j.sendMessage(obtainMessage);
                     throw th;
@@ -250,7 +250,7 @@ public final class bd implements IPoiSearch {
         if (query == null) {
             return false;
         }
-        return (C4435i.a(query.getQueryString()) && C4435i.a(this.b.getCategory())) ? false : true;
+        return (i.a(query.getQueryString()) && i.a(this.b.getCategory())) ? false : true;
     }
 
     private boolean b() {

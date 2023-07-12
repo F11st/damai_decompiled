@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.trade.R$array;
 import cn.damai.trade.R$color;
@@ -91,12 +91,11 @@ public class OrderListActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderlist.ui.activity.OrderListActivity$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2230a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2230a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -111,12 +110,11 @@ public class OrderListActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderlist.ui.activity.OrderListActivity$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2231b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2231b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -223,7 +221,7 @@ public class OrderListActivity extends DamaiBaseActivity {
             scrollTitleBean.name = this.mTitles[i];
             arrayList.add(scrollTitleBean);
         }
-        this.mTabView.setFontColor(R$color.color_000000, R$color.color_9C9CA5).setFontSize(16, 16).setTitle(arrayList).setHeight(44).setOnTitleClickListener(new View$OnClickListenerC2231b()).commit();
+        this.mTabView.setFontColor(R$color.color_000000, R$color.color_9C9CA5).setFontSize(16, 16).setTitle(arrayList).setHeight(44).setOnTitleClickListener(new b()).commit();
     }
 
     @Override // cn.damai.common.app.base.BaseActivity
@@ -268,7 +266,7 @@ public class OrderListActivity extends DamaiBaseActivity {
         this.mViewPager = (ViewPager) findViewById(R$id.view_pager);
         DMIconFontTextView dMIconFontTextView = (DMIconFontTextView) findViewById(R$id.tv_back);
         this.mTvBack = dMIconFontTextView;
-        dMIconFontTextView.setOnClickListener(new View$OnClickListenerC2230a());
+        dMIconFontTextView.setOnClickListener(new a());
         this.mTabView = (EqualLinearView) findViewById(R$id.indicator);
         setupTabsView();
     }
@@ -319,7 +317,7 @@ public class OrderListActivity extends DamaiBaseActivity {
         handleIntent(getIntent());
         initOrderPage();
         setDamaiUTKeyBuilder(pp2.u().b1());
-        C0529c.e().K(this);
+        c.e().K(this);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */

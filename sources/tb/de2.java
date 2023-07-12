@@ -7,7 +7,6 @@ import android.net.Uri;
 import android.text.TextUtils;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.util.ToastUtil;
-import cn.damai.solid.C1768a;
 import cn.damai.solid.bean.SoGroupEnum;
 import cn.damai.solid.listener.SoInstallListener;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -22,14 +21,13 @@ public class de2 implements DMNav.NavPreprocessor {
     private static volatile boolean a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.de2$a */
     /* loaded from: classes7.dex */
-    public class C9042a implements SoInstallListener {
+    public class a implements SoInstallListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context a;
         final /* synthetic */ Intent b;
 
-        C9042a(Context context, Intent intent) {
+        a(Context context, Intent intent) {
             this.a = context;
             this.b = intent;
         }
@@ -109,8 +107,8 @@ public class de2 implements DMNav.NavPreprocessor {
         if (data == null || !TextUtils.equals("liveroom", data.getHost())) {
             return false;
         }
-        C1768a.d().b(context, SoGroupEnum.WEEX, new C9042a(context, intent));
-        C1768a.f("WeexNavProcessor 启动了 Weex DMNav 拦截");
+        cn.damai.solid.a.d().b(context, SoGroupEnum.WEEX, new a(context, intent));
+        cn.damai.solid.a.f("WeexNavProcessor 启动了 Weex DMNav 拦截");
         return true;
     }
 }

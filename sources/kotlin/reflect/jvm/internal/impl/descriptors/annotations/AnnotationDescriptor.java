@@ -18,9 +18,8 @@ import tb.z71;
 public interface AnnotationDescriptor {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationDescriptor$a */
     /* loaded from: classes3.dex */
-    public static final class C8301a {
+    public static final class a {
         @Nullable
         public static hp0 a(@NotNull AnnotationDescriptor annotationDescriptor) {
             b41.i(annotationDescriptor, "this");

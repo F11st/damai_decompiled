@@ -1,13 +1,13 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.Observer;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.d;
 import io.reactivex.internal.observers.BasicIntQueueDisposable;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableRange extends AbstractC8149d<Integer> {
+public final class ObservableRange extends d<Integer> {
     private final long end;
     private final int start;
 
@@ -89,7 +89,7 @@ public final class ObservableRange extends AbstractC8149d<Integer> {
         this.end = i + i2;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super Integer> observer) {
         RangeDisposable rangeDisposable = new RangeDisposable(observer, this.start, this.end);
         observer.onSubscribe(rangeDisposable);

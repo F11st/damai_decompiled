@@ -21,7 +21,7 @@ public interface FileCache extends DiskTrimmable, Closeable {
 
     long getCount();
 
-    DiskStorage.C6281a getDumpInfo() throws IOException;
+    DiskStorage.a getDumpInfo() throws IOException;
 
     Collection<DiskStorage.Entry> getEntries() throws IOException;
 

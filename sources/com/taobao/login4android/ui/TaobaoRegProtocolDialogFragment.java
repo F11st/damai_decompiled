@@ -53,10 +53,9 @@ public class TaobaoRegProtocolDialogFragment extends DialogFragment {
     protected String mPageName = UTConstans.PageName.UT_PAGE_ONEKEY_REG_NEW;
     protected boolean first = false;
 
-    /* renamed from: com.taobao.login4android.ui.TaobaoRegProtocolDialogFragment$a */
     /* loaded from: classes11.dex */
-    class View$OnClickListenerC6732a implements View.OnClickListener {
-        View$OnClickListenerC6732a() {
+    class a implements View.OnClickListener {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -74,10 +73,9 @@ public class TaobaoRegProtocolDialogFragment extends DialogFragment {
         }
     }
 
-    /* renamed from: com.taobao.login4android.ui.TaobaoRegProtocolDialogFragment$b */
     /* loaded from: classes11.dex */
-    class View$OnClickListenerC6733b implements View.OnClickListener {
-        View$OnClickListenerC6733b() {
+    class b implements View.OnClickListener {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -90,10 +88,9 @@ public class TaobaoRegProtocolDialogFragment extends DialogFragment {
         }
     }
 
-    /* renamed from: com.taobao.login4android.ui.TaobaoRegProtocolDialogFragment$c */
     /* loaded from: classes11.dex */
-    class View$OnClickListenerC6734c implements View.OnClickListener {
-        View$OnClickListenerC6734c() {
+    class c implements View.OnClickListener {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -141,9 +138,9 @@ public class TaobaoRegProtocolDialogFragment extends DialogFragment {
         protocolModel.protocolTitle = string;
         protocolModel.protocolItems = hashMap;
         if (this.useOrangeColor) {
-            protocolModel.protocolItemColor = R.C2963color.aliuser_edittext_bg_color_activated;
+            protocolModel.protocolItemColor = R.color.aliuser_edittext_bg_color_activated;
         } else {
-            protocolModel.protocolItemColor = R.C2963color.aliuser_new_edit_text_color;
+            protocolModel.protocolItemColor = R.color.aliuser_new_edit_text_color;
         }
         ProtocolHelper.generateProtocol(protocolModel, this.mAttachedActivity, this.mContentTV, this.mPageName, this.mPageSpm, false);
     }
@@ -153,7 +150,7 @@ public class TaobaoRegProtocolDialogFragment extends DialogFragment {
     }
 
     protected int getLayoutContent() {
-        return R.C2965layout.aliuser_reg_protocol_dialog;
+        return R.layout.aliuser_reg_protocol_dialog;
     }
 
     public String getLogoUrl() {
@@ -176,7 +173,7 @@ public class TaobaoRegProtocolDialogFragment extends DialogFragment {
     @Override // androidx.fragment.app.DialogFragment, androidx.fragment.app.Fragment
     public void onCreate(@Nullable Bundle bundle) {
         super.onCreate(bundle);
-        setStyle(0, R.C2967style.AliUserDialogTheme);
+        setStyle(0, R.style.AliUserDialogTheme);
     }
 
     @Override // androidx.fragment.app.Fragment
@@ -186,7 +183,7 @@ public class TaobaoRegProtocolDialogFragment extends DialogFragment {
         View findViewById = inflate.findViewById(R.id.aliuser_protocal_inset_ll);
         this.aliuser_protocal_inset_ll = findViewById;
         if (findViewById != null) {
-            findViewById.setOnClickListener(new View$OnClickListenerC6732a());
+            findViewById.setOnClickListener(new a());
         }
         TextView textView = (TextView) inflate.findViewById(R.id.aliuser_operation_tip);
         this.mTitleTV = textView;
@@ -210,7 +207,7 @@ public class TaobaoRegProtocolDialogFragment extends DialogFragment {
         Button button = (Button) inflate.findViewById(R.id.aliuser_operation_agree);
         if (button != null) {
             button.requestFocus();
-            button.setOnClickListener(new View$OnClickListenerC6733b());
+            button.setOnClickListener(new b());
             if (!TextUtils.isEmpty(this.mPostiveBtnText)) {
                 button.setText(this.mPostiveBtnText);
             }
@@ -223,7 +220,7 @@ public class TaobaoRegProtocolDialogFragment extends DialogFragment {
         }
         Button button2 = (Button) inflate.findViewById(R.id.aliuser_operation_disagree);
         if (button2 != null) {
-            button2.setOnClickListener(new View$OnClickListenerC6734c());
+            button2.setOnClickListener(new c());
             if (this.negativeVisible) {
                 button2.setVisibility(0);
             } else {

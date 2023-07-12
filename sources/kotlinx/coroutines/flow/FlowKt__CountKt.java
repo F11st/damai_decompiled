@@ -13,12 +13,11 @@ public final /* synthetic */ class FlowKt__CountKt {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.flow.FlowKt__CountKt$a */
     /* loaded from: classes11.dex */
-    public static final class C8661a<T> implements FlowCollector<T> {
+    public static final class a<T> implements FlowCollector<T> {
         final /* synthetic */ Ref$IntRef a;
 
-        public C8661a(Ref$IntRef ref$IntRef) {
+        public a(Ref$IntRef ref$IntRef) {
             this.a = ref$IntRef;
         }
 
@@ -55,7 +54,7 @@ public final /* synthetic */ class FlowKt__CountKt {
             r0.<init>(r5)
         L18:
             java.lang.Object r5 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L3d
@@ -123,7 +122,7 @@ public final /* synthetic */ class FlowKt__CountKt {
             r0.<init>(r6)
         L18:
             java.lang.Object r6 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L41

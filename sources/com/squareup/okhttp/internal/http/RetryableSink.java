@@ -5,8 +5,8 @@ import com.squareup.okhttp.internal.Util;
 import java.io.IOException;
 import java.net.ProtocolException;
 import okio.Buffer;
-import okio.C8857o;
 import okio.Sink;
+import okio.o;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -41,8 +41,8 @@ public final class RetryableSink implements Sink {
     }
 
     @Override // okio.Sink
-    public C8857o timeout() {
-        return C8857o.NONE;
+    public o timeout() {
+        return o.NONE;
     }
 
     @Override // okio.Sink

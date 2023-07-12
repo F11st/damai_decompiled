@@ -10,7 +10,7 @@ class AppLaunchListenerGroup implements IAppLaunchListener, IListenerGroup<IAppL
     private final List<IAppLaunchListener> a = new ArrayList(2);
 
     private void c(Runnable runnable) {
-        C6674a.g().h(runnable);
+        a.g().h(runnable);
     }
 
     @Override // com.taobao.application.common.impl.IListenerGroup

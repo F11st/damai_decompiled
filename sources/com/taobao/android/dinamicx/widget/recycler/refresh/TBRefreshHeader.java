@@ -34,9 +34,8 @@ public class TBRefreshHeader extends TBAbsRefreshHeader {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.recycler.refresh.TBRefreshHeader$a */
     /* loaded from: classes12.dex */
-    public static /* synthetic */ class C6520a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -146,7 +145,7 @@ public class TBRefreshHeader extends TBAbsRefreshHeader {
             onPullRefreshListener.onRefreshStateChanged(refreshState2, refreshState);
         }
         this.mState = refreshState;
-        int i = C6520a.a[refreshState.ordinal()];
+        int i = a.a[refreshState.ordinal()];
         if (i == 1) {
             this.mRefreshProgressView.stopLoadingAnimation();
             TextView textView = this.mRefreshTipView;

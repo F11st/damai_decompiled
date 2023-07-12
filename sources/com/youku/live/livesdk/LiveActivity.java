@@ -138,8 +138,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
-import tb.C9796v;
 import tb.m80;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -694,7 +694,7 @@ public class LiveActivity extends WidgetActivity implements IYoukuLiveMethodBrid
             return ((Integer) ipChange.ipc$dispatch("1117013815", new Object[]{this})).intValue();
         }
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        WindowManager windowManager = (WindowManager) getSystemService(C9796v.ATTACH_MODE_WINDOW);
+        WindowManager windowManager = (WindowManager) getSystemService(v.ATTACH_MODE_WINDOW);
         if (windowManager != null) {
             Display.getMetrics(windowManager.getDefaultDisplay(), displayMetrics);
             return com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(displayMetrics);
@@ -1853,7 +1853,7 @@ public class LiveActivity extends WidgetActivity implements IYoukuLiveMethodBrid
         if (iYoukuLiveInterface != null) {
             iYoukuLiveInterface.finish();
         }
-        this.root.setBackground(getApplication().getResources().getDrawable(R.C7959drawable.dago_container_live_room_bg_online_class));
+        this.root.setBackground(getApplication().getResources().getDrawable(R.drawable.dago_container_live_room_bg_online_class));
         super.finish();
     }
 
@@ -2152,11 +2152,11 @@ public class LiveActivity extends WidgetActivity implements IYoukuLiveMethodBrid
         });
         perfMonitorEnd("onCreateWidgetEngineContext");
         perfMonitorBegin("onCreateSetContentView");
-        setTheme(R.C7961style.Theme_AppCompat_Light_NoActionBar);
-        setTheme(R.C7961style.LiveAppCompatTheme);
+        setTheme(R.style.Theme_AppCompat_Light_NoActionBar);
+        setTheme(R.style.LiveAppCompatTheme);
         Uri uri = null;
         getWindow().setBackgroundDrawable(null);
-        ViewGroup viewGroup = (ViewGroup) LayoutInflater.from(this).inflate(R.C7960layout.dago_container_activity_layout, (ViewGroup) null);
+        ViewGroup viewGroup = (ViewGroup) LayoutInflater.from(this).inflate(R.layout.dago_container_activity_layout, (ViewGroup) null);
         this.root = viewGroup;
         setContentView(viewGroup);
         try {

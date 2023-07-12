@@ -1,6 +1,5 @@
 package tb;
 
-import com.alibaba.android.ultron.trade.presenter.AbstractC3258a;
 import com.alibaba.android.ultron.vfw.web.IWebEventBridge;
 import com.taobao.android.ultron.common.model.IDMComponent;
 import com.taobao.vessel.base.ResultCallback;
@@ -11,7 +10,7 @@ import java.util.Map;
 public class yt0 implements IWebEventBridge {
     public static final String BRIDGE_TAG = "getComponentData";
 
-    public yt0(AbstractC3258a abstractC3258a) {
+    public yt0(com.alibaba.android.ultron.trade.presenter.a aVar) {
     }
 
     @Override // com.alibaba.android.ultron.vfw.web.IWebEventBridge

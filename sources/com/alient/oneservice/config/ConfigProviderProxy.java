@@ -1,7 +1,7 @@
 package com.alient.oneservice.config;
 
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -10,7 +10,7 @@ public class ConfigProviderProxy {
 
     public static ConfigProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (ConfigProvider) C8883a.j("com.alient.oneservice.provider.impl.config.ConfigProviderImpl").b().f();
+            sProxy = (ConfigProvider) a.j("com.alient.oneservice.provider.impl.config.ConfigProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -28,7 +28,7 @@ public class ConfigProviderProxy {
     public static boolean isAppRecommendAvailability() {
         try {
             if (sProxy == null) {
-                sProxy = (ConfigProvider) C8883a.j("com.alient.oneservice.provider.impl.config.ConfigProviderImpl").b().f();
+                sProxy = (ConfigProvider) a.j("com.alient.oneservice.provider.impl.config.ConfigProviderImpl").b().f();
             }
             return sProxy.isAppRecommendAvailability();
         } catch (Throwable th) {
@@ -40,7 +40,7 @@ public class ConfigProviderProxy {
     public static boolean isHomepageCndRequestEnable() {
         try {
             if (sProxy == null) {
-                sProxy = (ConfigProvider) C8883a.j("com.alient.oneservice.provider.impl.config.ConfigProviderImpl").b().f();
+                sProxy = (ConfigProvider) a.j("com.alient.oneservice.provider.impl.config.ConfigProviderImpl").b().f();
             }
             return sProxy.isHomepageCndRequestEnable();
         } catch (Throwable th) {
@@ -52,7 +52,7 @@ public class ConfigProviderProxy {
     public static boolean isOpenSearchCdnDowngrade() {
         try {
             if (sProxy == null) {
-                sProxy = (ConfigProvider) C8883a.j("com.alient.oneservice.provider.impl.config.ConfigProviderImpl").b().f();
+                sProxy = (ConfigProvider) a.j("com.alient.oneservice.provider.impl.config.ConfigProviderImpl").b().f();
             }
             return sProxy.isOpenSearchCdnDowngrade();
         } catch (Throwable th) {

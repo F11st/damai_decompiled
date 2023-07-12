@@ -4,9 +4,6 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 import androidx.core.os.TraceCompat;
-import com.airbnb.lottie.network.C2886b;
-import com.airbnb.lottie.network.C2887c;
-import com.airbnb.lottie.network.C2888d;
 import com.airbnb.lottie.network.LottieNetworkCacheProvider;
 import com.airbnb.lottie.network.LottieNetworkFetcher;
 import java.io.File;
@@ -24,17 +21,16 @@ public class f81 {
     private static int f;
     private static LottieNetworkFetcher g;
     private static LottieNetworkCacheProvider h;
-    private static volatile C2888d i;
-    private static volatile C2887c j;
+    private static volatile com.airbnb.lottie.network.d i;
+    private static volatile com.airbnb.lottie.network.c j;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.f81$a */
     /* loaded from: classes9.dex */
-    public class C9130a implements LottieNetworkCacheProvider {
+    public class a implements LottieNetworkCacheProvider {
         final /* synthetic */ Context a;
 
-        C9130a(Context context) {
+        a(Context context) {
             this.a = context;
         }
 
@@ -81,41 +77,41 @@ public class f81 {
     }
 
     @NonNull
-    public static C2887c c(@NonNull Context context) {
-        C2887c c2887c = j;
-        if (c2887c == null) {
-            synchronized (C2887c.class) {
-                c2887c = j;
-                if (c2887c == null) {
+    public static com.airbnb.lottie.network.c c(@NonNull Context context) {
+        com.airbnb.lottie.network.c cVar = j;
+        if (cVar == null) {
+            synchronized (com.airbnb.lottie.network.c.class) {
+                cVar = j;
+                if (cVar == null) {
                     LottieNetworkCacheProvider lottieNetworkCacheProvider = h;
                     if (lottieNetworkCacheProvider == null) {
-                        lottieNetworkCacheProvider = new C9130a(context);
+                        lottieNetworkCacheProvider = new a(context);
                     }
-                    c2887c = new C2887c(lottieNetworkCacheProvider);
-                    j = c2887c;
+                    cVar = new com.airbnb.lottie.network.c(lottieNetworkCacheProvider);
+                    j = cVar;
                 }
             }
         }
-        return c2887c;
+        return cVar;
     }
 
     @NonNull
-    public static C2888d d(@NonNull Context context) {
-        C2888d c2888d = i;
-        if (c2888d == null) {
-            synchronized (C2888d.class) {
-                c2888d = i;
-                if (c2888d == null) {
-                    C2887c c2 = c(context);
+    public static com.airbnb.lottie.network.d d(@NonNull Context context) {
+        com.airbnb.lottie.network.d dVar = i;
+        if (dVar == null) {
+            synchronized (com.airbnb.lottie.network.d.class) {
+                dVar = i;
+                if (dVar == null) {
+                    com.airbnb.lottie.network.c c2 = c(context);
                     LottieNetworkFetcher lottieNetworkFetcher = g;
                     if (lottieNetworkFetcher == null) {
-                        lottieNetworkFetcher = new C2886b();
+                        lottieNetworkFetcher = new com.airbnb.lottie.network.b();
                     }
-                    c2888d = new C2888d(c2, lottieNetworkFetcher);
-                    i = c2888d;
+                    dVar = new com.airbnb.lottie.network.d(c2, lottieNetworkFetcher);
+                    i = dVar;
                 }
             }
         }
-        return c2888d;
+        return dVar;
     }
 }

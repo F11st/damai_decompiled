@@ -14,7 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.homepage.R$color;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -52,14 +52,13 @@ public class CouponListNewAdapter extends RecyclerView.Adapter<RecyclerView.View
         TextView g;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.mine.adapter.CouponListNewAdapter$CouponsViewHolder$a */
         /* loaded from: classes15.dex */
-        public class View$OnClickListenerC1421a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ CouponData.Coupon a;
             final /* synthetic */ int b;
 
-            View$OnClickListenerC1421a(CouponData.Coupon coupon, int i) {
+            a(CouponData.Coupon coupon, int i) {
                 this.a = coupon;
                 this.b = i;
             }
@@ -71,7 +70,7 @@ public class CouponListNewAdapter extends RecyclerView.Adapter<RecyclerView.View
                     ipChange.ipc$dispatch("-913144223", new Object[]{this, view});
                 } else if (this.a == null) {
                 } else {
-                    C0529c.e().x(vf1.x().E(this.a.id, this.b));
+                    c.e().x(vf1.x().E(this.a.id, this.b));
                     if (!TextUtils.isEmpty(this.a.useCouponUrlMobile)) {
                         DMNav.from(CouponListNewAdapter.this.f).toUri(this.a.useCouponUrlMobile);
                         return;
@@ -92,13 +91,12 @@ public class CouponListNewAdapter extends RecyclerView.Adapter<RecyclerView.View
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.mine.adapter.CouponListNewAdapter$CouponsViewHolder$b */
         /* loaded from: classes15.dex */
-        public class View$OnClickListenerC1422b implements View.OnClickListener {
+        public class b implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ CouponData.Coupon a;
 
-            View$OnClickListenerC1422b(CouponData.Coupon coupon) {
+            b(CouponData.Coupon coupon) {
                 this.a = coupon;
             }
 
@@ -246,8 +244,8 @@ public class CouponListNewAdapter extends RecyclerView.Adapter<RecyclerView.View
                     this.f.setVisibility(8);
                     c(CouponListNewAdapter.this.a, false, false);
                 }
-                this.f.setOnClickListener(new View$OnClickListenerC1421a(coupon, i));
-                this.itemView.setOnClickListener(new View$OnClickListenerC1422b(coupon));
+                this.f.setOnClickListener(new a(coupon, i));
+                this.itemView.setOnClickListener(new b(coupon));
             }
         }
     }

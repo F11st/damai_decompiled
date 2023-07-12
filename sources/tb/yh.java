@@ -1,7 +1,6 @@
 package tb;
 
 import android.text.TextUtils;
-import cn.damai.common.util.C0535a;
 import cn.damai.commonbusiness.home.bean.HomeTabBean;
 import cn.damai.homepage.R$raw;
 import cn.damai.homepage.bean.HomeTabListBean;
@@ -41,7 +40,7 @@ public class yh {
         if (AndroidInstantRuntime.support(ipChange, "-66508108")) {
             return (List) ipChange.ipc$dispatch("-66508108", new Object[0]);
         }
-        List<HomeTabBean> a = a(((HomeTabListBean) m61.a(C0535a.n(mu0.a().getResources().openRawResource(R$raw.default_home_tab)), HomeTabListBean.class)).data);
+        List<HomeTabBean> a = a(((HomeTabListBean) m61.a(cn.damai.common.util.a.n(mu0.a().getResources().openRawResource(R$raw.default_home_tab)), HomeTabListBean.class)).data);
         String str = null;
         try {
             str = JSON.toJSONString(a);

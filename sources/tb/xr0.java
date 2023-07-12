@@ -9,7 +9,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes6.dex */
 public final class xr0 {
     @NotNull
-    public static final C9938a Companion = new C9938a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final mq0 a;
     @NotNull
@@ -25,13 +25,12 @@ public final class xr0 {
     private Boolean g;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.xr0$a */
     /* loaded from: classes6.dex */
-    public static final class C9938a {
-        private C9938a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9938a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -134,16 +133,16 @@ public final class xr0 {
     public final void i(@NotNull JSONObject jSONObject) {
         b41.i(jSONObject, "extendCssData");
         String string = jSONObject.getString("stroke-color");
-        mq0 a = string == null ? null : mq0.Companion.a(string);
+        mq0 a2 = string == null ? null : mq0.Companion.a(string);
         String string2 = jSONObject.getString("trail-color");
-        mq0 a2 = string2 != null ? mq0.Companion.a(string2) : null;
+        mq0 a3 = string2 != null ? mq0.Companion.a(string2) : null;
         jSONObject.getString("progress-type");
         Boolean bool = jSONObject.getBoolean(Constants.Name.ANIMATED);
-        if (a != null) {
-            this.e = a;
-        }
         if (a2 != null) {
-            this.f = a2;
+            this.e = a2;
+        }
+        if (a3 != null) {
+            this.f = a3;
         }
         if (bool != null) {
             this.g = bool;

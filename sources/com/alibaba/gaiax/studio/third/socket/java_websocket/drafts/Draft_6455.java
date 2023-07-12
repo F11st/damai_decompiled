@@ -31,7 +31,6 @@ import com.alibaba.gaiax.studio.third.socket.java_websocket.protocols.Protocol;
 import com.alibaba.gaiax.studio.third.socket.java_websocket.util.Base64;
 import com.alibaba.gaiax.studio.third.socket.java_websocket.util.Charsetfunctions;
 import com.alipay.android.phone.mobilesdk.socketcraft.util.WsMessageConstants;
-import com.alipay.sdk.m.n.C4250a;
 import com.google.common.primitives.SignedBytes;
 import com.squareup.okhttp.internal.ws.WebSocketProtocol;
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
@@ -77,13 +76,12 @@ public class Draft_6455 extends Draft {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.studio.third.socket.java_websocket.drafts.Draft_6455$a */
     /* loaded from: classes6.dex */
-    public class C3385a {
+    public class a {
         private int a;
         private int b;
 
-        C3385a(Draft_6455 draft_6455, int i, int i2) {
+        a(Draft_6455 draft_6455, int i, int i2) {
             this.a = i;
             this.b = i2;
         }
@@ -141,7 +139,7 @@ public class Draft_6455 extends Draft {
         boolean z = this.role == Role.CLIENT;
         int sizeBytes = getSizeBytes(payloadData);
         ByteBuffer allocate = ByteBuffer.allocate((sizeBytes > 1 ? sizeBytes + 1 : sizeBytes) + 1 + (z ? 4 : 0) + payloadData.remaining());
-        allocate.put((byte) (((byte) (framedata.isFin() ? C4250a.g : 0)) | fromOpcode(framedata.getOpcode())));
+        allocate.put((byte) (((byte) (framedata.isFin() ? com.alipay.sdk.m.n.a.g : 0)) | fromOpcode(framedata.getOpcode())));
         byte[] byteArray = toByteArray(payloadData.remaining(), sizeBytes);
         if (sizeBytes == 1) {
             allocate.put((byte) (byteArray[0] | getMaskByte(z)));
@@ -395,7 +393,7 @@ public class Draft_6455 extends Draft {
             int i2 = (byte) (b2 & m8.DEL);
             Opcode opcode = toOpcode((byte) (b & 15));
             if (i2 < 0 || i2 > 125) {
-                C3385a translateSingleFramePayloadLength = translateSingleFramePayloadLength(byteBuffer, opcode, i2, remaining, 2);
+                a translateSingleFramePayloadLength = translateSingleFramePayloadLength(byteBuffer, opcode, i2, remaining, 2);
                 i2 = translateSingleFramePayloadLength.c();
                 i = translateSingleFramePayloadLength.d();
             }
@@ -451,7 +449,7 @@ public class Draft_6455 extends Draft {
         throw new IncompleteException(i2);
     }
 
-    private C3385a translateSingleFramePayloadLength(ByteBuffer byteBuffer, Opcode opcode, int i, int i2, int i3) throws InvalidFrameException, IncompleteException, LimitExceededException {
+    private a translateSingleFramePayloadLength(ByteBuffer byteBuffer, Opcode opcode, int i, int i2, int i3) throws InvalidFrameException, IncompleteException, LimitExceededException {
         int i4;
         int i5;
         if (opcode != Opcode.PING && opcode != Opcode.PONG && opcode != Opcode.CLOSING) {
@@ -470,7 +468,7 @@ public class Draft_6455 extends Draft {
                 translateSingleFrameCheckLengthLimit(longValue);
                 i5 = (int) longValue;
             }
-            return new C3385a(this, i5, i4);
+            return new a(this, i5, i4);
         }
         Log.e("[GaiaX]", "Invalid frame: more than 125 octets");
         throw new InvalidFrameException("more than 125 octets");

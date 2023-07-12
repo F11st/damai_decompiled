@@ -61,7 +61,7 @@ class FloatingActionButtonImplLollipop extends FloatingActionButtonImpl {
     BorderDrawable createBorderDrawable(int i, ColorStateList colorStateList) {
         Context context = this.view.getContext();
         BorderDrawable borderDrawable = new BorderDrawable((ShapeAppearanceModel) Preconditions.checkNotNull(this.shapeAppearance));
-        borderDrawable.setGradientColors(ContextCompat.getColor(context, R.C4815color.design_fab_stroke_top_outer_color), ContextCompat.getColor(context, R.C4815color.design_fab_stroke_top_inner_color), ContextCompat.getColor(context, R.C4815color.design_fab_stroke_end_inner_color), ContextCompat.getColor(context, R.C4815color.design_fab_stroke_end_outer_color));
+        borderDrawable.setGradientColors(ContextCompat.getColor(context, R.color.design_fab_stroke_top_outer_color), ContextCompat.getColor(context, R.color.design_fab_stroke_top_inner_color), ContextCompat.getColor(context, R.color.design_fab_stroke_end_inner_color), ContextCompat.getColor(context, R.color.design_fab_stroke_end_outer_color));
         borderDrawable.setBorderWidth(i);
         borderDrawable.setBorderTint(colorStateList);
         return borderDrawable;

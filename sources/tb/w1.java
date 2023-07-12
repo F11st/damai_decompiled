@@ -2,12 +2,11 @@ package tb;
 
 import java.util.Map;
 import java.util.Map.Entry;
-import kotlin.collections.AbstractC8198c;
 import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public abstract class w1<E extends Map.Entry<? extends K, ? extends V>, K, V> extends AbstractC8198c<E> {
+public abstract class w1<E extends Map.Entry<? extends K, ? extends V>, K, V> extends kotlin.collections.c<E> {
     public final boolean a(@NotNull E e) {
         b41.i(e, "element");
         return b(e);

@@ -270,9 +270,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.usercenter.passport.R$color */
     /* loaded from: classes3.dex */
-    public static final class C8090color {
+    public static final class color {
         public static final int abc_background_cache_hint_selector_material_dark = 0x7f06003a;
         public static final int abc_background_cache_hint_selector_material_light = 0x7f06003b;
         public static final int abc_btn_colored_borderless_text_material = 0x7f06003c;
@@ -358,7 +357,7 @@ public final class R {
         public static final int switch_thumb_normal_material_dark = 0x7f0604c4;
         public static final int switch_thumb_normal_material_light = 0x7f0604c5;
 
-        private C8090color() {
+        private color() {
         }
     }
 
@@ -473,9 +472,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.usercenter.passport.R$drawable */
     /* loaded from: classes3.dex */
-    public static final class C8091drawable {
+    public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha = 0x7f080006;
         public static final int abc_action_bar_item_background_material = 0x7f080007;
         public static final int abc_btn_borderless_material = 0x7f080009;
@@ -581,7 +579,7 @@ public final class R {
         public static final int notification_tile_bg = 0x7f080b28;
         public static final int notify_panel_notification_icon_bg = 0x7f080b29;
 
-        private C8091drawable() {
+        private drawable() {
         }
     }
 
@@ -750,9 +748,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.usercenter.passport.R$layout */
     /* loaded from: classes3.dex */
-    public static final class C8092layout {
+    public static final class layout {
         public static final int abc_action_bar_title_item = 0x7f0c0000;
         public static final int abc_action_bar_up_container = 0x7f0c0001;
         public static final int abc_action_menu_item_layout = 0x7f0c0002;
@@ -809,17 +806,16 @@ public final class R {
         public static final int select_dialog_singlechoice_material = 0x7f0c072e;
         public static final int support_simple_spinner_dropdown_item = 0x7f0c0758;
 
-        private C8092layout() {
+        private layout() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.usercenter.passport.R$raw */
     /* loaded from: classes3.dex */
-    public static final class C8093raw {
+    public static final class raw {
         public static final int keep = 0x7f100071;
 
-        private C8093raw() {
+        private raw() {
         }
     }
 
@@ -899,9 +895,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.youku.usercenter.passport.R$style */
     /* loaded from: classes3.dex */
-    public static final class C8094style {
+    public static final class style {
         public static final int AlertDialog_AppCompat = 0x7f120009;
         public static final int AlertDialog_AppCompat_Light = 0x7f12000a;
         public static final int AliMember_Base_AppTheme = 0x7f12000b;
@@ -1232,7 +1227,7 @@ public final class R {
         public static final int Widget_AppCompat_Toolbar_Button_Navigation = 0x7f120353;
         public static final int ali_auth_qr_activity_style = 0x7f1203ec;
 
-        private C8094style() {
+        private style() {
         }
     }
 

@@ -10,8 +10,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.view.AttentionView;
 import cn.damai.homepage.R$layout;
@@ -53,7 +53,7 @@ public class StarIndexFragment extends AbsFragmentV2 implements View.OnClickList
     public static final String TAG = "StarIndexFragment";
     Action action;
     public long id;
-    public C0525a.C0527b mUTBuilder;
+    public a.b mUTBuilder;
     ViewGroup navBar;
     ViewGroup parent;
     ScrollAlphaListener scrollAlphaListener;
@@ -66,12 +66,11 @@ public class StarIndexFragment extends AbsFragmentV2 implements View.OnClickList
     boolean visiableRefreshed = false;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.star.StarIndexFragment$a */
     /* loaded from: classes9.dex */
-    public class C2705a implements Action<Object> {
+    public class a implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2705a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -176,8 +175,8 @@ public class StarIndexFragment extends AbsFragmentV2 implements View.OnClickList
         } else {
             this.pageB = "ace_artist";
         }
-        this.mUTBuilder = new C0525a.C0527b().i(this.pageB);
-        this.action = new C2705a();
+        this.mUTBuilder = new a.b().i(this.pageB);
+        this.action = new a();
         yr.c().e(StarSecondActivity.FORCE_TAG, this.action);
         return viewGroup2;
     }
@@ -316,7 +315,7 @@ public class StarIndexFragment extends AbsFragmentV2 implements View.OnClickList
         if (AndroidInstantRuntime.support(ipChange, "1790595353")) {
             ipChange.ipc$dispatch("1790595353", new Object[]{this});
         } else if (this.mUTBuilder != null) {
-            C0529c.e().o(this, this.mUTBuilder);
+            c.e().o(this, this.mUTBuilder);
         }
     }
 
@@ -335,10 +334,10 @@ public class StarIndexFragment extends AbsFragmentV2 implements View.OnClickList
             /* compiled from: Taobao */
             /* renamed from: cn.damai.user.star.StarIndexFragment$2$a */
             /* loaded from: classes17.dex */
-            public class View$OnClickListenerC2704a implements View.OnClickListener {
+            public class a implements View.OnClickListener {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                View$OnClickListenerC2704a() {
+                a() {
                 }
 
                 @Override // android.view.View.OnClickListener
@@ -418,7 +417,7 @@ public class StarIndexFragment extends AbsFragmentV2 implements View.OnClickList
                 ((AbsFragment) StarIndexFragment.this).mRecyclerView.addOnScrollListener(StarIndexFragment.this.starScroller);
                 ViewGroup viewGroup = StarIndexFragment.this.navBar;
                 if (viewGroup != null) {
-                    viewGroup.findViewById(cn.damai.homepage.R$id.ll_share).setOnClickListener(new View$OnClickListenerC2704a());
+                    viewGroup.findViewById(cn.damai.homepage.R$id.ll_share).setOnClickListener(new a());
                 }
             }
         });

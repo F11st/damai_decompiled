@@ -8,5 +8,5 @@ import io.reactivex.annotations.NonNull;
 /* loaded from: classes3.dex */
 public interface SingleConverter<T, R> {
     @NonNull
-    R apply(@NonNull AbstractC8152e<T> abstractC8152e);
+    R apply(@NonNull e<T> eVar);
 }

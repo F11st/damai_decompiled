@@ -48,11 +48,11 @@ public final class HexUtil {
                 }
                 return bArr;
             } catch (UnsupportedEncodingException | NumberFormatException e) {
-                C5742b.b(b, "hex string 2 byte array exception : " + e.getMessage());
+                b.b(b, "hex string 2 byte array exception : " + e.getMessage());
                 return new byte[0];
             }
         } catch (Throwable th) {
-            C5742b.b(b, "hex string toUpperCase exception : " + th.getMessage());
+            b.b(b, "hex string toUpperCase exception : " + th.getMessage());
             return new byte[0];
         }
     }
@@ -64,7 +64,7 @@ public final class HexUtil {
         try {
             return byteArray2HexStr(str.getBytes("UTF-8"));
         } catch (UnsupportedEncodingException e) {
-            C5742b.b(b, "byte array 2 hex string exception : " + e.getMessage());
+            b.b(b, "byte array 2 hex string exception : " + e.getMessage());
             return "";
         }
     }

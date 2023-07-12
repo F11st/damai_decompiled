@@ -12,9 +12,9 @@ import io.flutter.wpkbridge.WPKFactory;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
@@ -59,7 +59,7 @@ public class GXExtensionTemplateAssetsSource extends cq0 {
 
     static {
         Lazy<GXExtensionTemplateAssetsSource> b;
-        b = C8177b.b(new Function0<GXExtensionTemplateAssetsSource>() { // from class: com.youku.gaiax.impl.register.GXExtensionTemplateAssetsSource$Companion$instance$2
+        b = b.b(new Function0<GXExtensionTemplateAssetsSource>() { // from class: com.youku.gaiax.impl.register.GXExtensionTemplateAssetsSource$Companion$instance$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull
@@ -85,7 +85,7 @@ public class GXExtensionTemplateAssetsSource extends cq0 {
     public final boolean exist(@NotNull String str, @NotNull String str2) {
         b41.i(str, "templateBiz");
         b41.i(str2, "templateId");
-        return getTemplate(new GXTemplateEngine.C3347i(getContext(), str, str2)) != null;
+        return getTemplate(new GXTemplateEngine.i(getContext(), str, str2)) != null;
     }
 
     @NotNull
@@ -104,7 +104,7 @@ public class GXExtensionTemplateAssetsSource extends cq0 {
         b41.i(str, "templateBiz");
         b41.i(str2, "templateId");
         JSONObject jSONObject = new JSONObject();
-        ns0 template = getTemplate(new GXTemplateEngine.C3347i(getContext(), str, str2));
+        ns0 template = getTemplate(new GXTemplateEngine.i(getContext(), str, str2));
         if (template != null) {
             JSONObject jSONObject2 = new JSONObject();
             GXTemplateInfo.Companion companion = GXTemplateInfo.Companion;

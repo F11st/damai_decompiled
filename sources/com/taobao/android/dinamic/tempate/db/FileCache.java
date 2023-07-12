@@ -21,12 +21,12 @@ public class FileCache {
     private static final String[] i = {String.format("sum(%s)", "size")};
     private static final String[] j = {"_id", "filename", "tag", "size"};
     private static final String k = String.format("%s ASC", "last_access");
-    private final LruCache<String, C6343b> a;
+    private final LruCache<String, b> a;
     private File b;
     private boolean c;
     private long d;
     private long e;
-    private C6344c f;
+    private c f;
     private OnDeleteFileListener g;
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -34,7 +34,7 @@ public class FileCache {
     @Entry.Table("file_cache")
     /* loaded from: classes11.dex */
     public static class FileEntry extends Entry {
-        public static final C6345a SCHEMA = new C6345a(FileEntry.class);
+        public static final com.taobao.android.dinamic.tempate.db.a SCHEMA = new com.taobao.android.dinamic.tempate.db.a(FileEntry.class);
         @Entry.Column(indexed = true, value = "hash_code")
         public long b;
         @Entry.Column("tag")
@@ -73,13 +73,12 @@ public class FileCache {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamic.tempate.db.FileCache$b */
     /* loaded from: classes12.dex */
-    public static final class C6343b {
+    public static final class b {
         private long a;
         public File b;
 
-        private C6343b(long j, String str, File file) {
+        private b(long j, String str, File file) {
             this.a = j;
             this.b = file;
         }
@@ -87,12 +86,11 @@ public class FileCache {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamic.tempate.db.FileCache$c */
     /* loaded from: classes12.dex */
-    public final class C6344c extends SQLiteOpenHelper {
+    public final class c extends SQLiteOpenHelper {
         public static final int DATABASE_VERSION = 1;
 
-        public C6344c(Context context, String str) {
+        public c(Context context, String str) {
             super(context, str, (SQLiteDatabase.CursorFactory) null, 1);
         }
 
@@ -176,13 +174,13 @@ public class FileCache {
 
     private FileEntry f(String str) {
         Cursor cursor;
-        C6345a c6345a;
+        com.taobao.android.dinamic.tempate.db.a aVar;
         String[] strArr = {String.valueOf(kw2.b(str)), str};
         try {
             SQLiteDatabase readableDatabase = this.f.getReadableDatabase();
             String str2 = h;
-            c6345a = FileEntry.SCHEMA;
-            cursor = readableDatabase.query(str2, c6345a.d(), "hash_code=? AND tag=?", strArr, null, null, null);
+            aVar = FileEntry.SCHEMA;
+            cursor = readableDatabase.query(str2, aVar.d(), "hash_code=? AND tag=?", strArr, null, null, null);
         } catch (Throwable th) {
             th = th;
             cursor = null;
@@ -193,7 +191,7 @@ public class FileCache {
                 return null;
             }
             FileEntry fileEntry = new FileEntry();
-            c6345a.b(cursor, fileEntry);
+            aVar.b(cursor, fileEntry);
             h(fileEntry.a);
             cursor.close();
             return fileEntry;
@@ -273,7 +271,7 @@ public class FileCache {
         }
     }
 
-    public C6343b e(String str) {
+    public b e(String str) {
         if (!this.c) {
             try {
                 d();
@@ -282,13 +280,13 @@ public class FileCache {
                 return null;
             }
         }
-        C6343b c6343b = this.a.get(str);
-        if (c6343b != null) {
-            if (c6343b.b.isFile()) {
+        b bVar = this.a.get(str);
+        if (bVar != null) {
+            if (bVar.b.isFile()) {
                 synchronized (this) {
-                    h(c6343b.a);
+                    h(bVar.a);
                 }
-                return c6343b;
+                return bVar;
             }
             this.a.remove(str);
         }
@@ -297,14 +295,14 @@ public class FileCache {
             if (f == null) {
                 return null;
             }
-            C6343b c6343b2 = new C6343b(f.a, str, new File(this.b, f.d));
-            if (!c6343b2.b.isFile()) {
+            b bVar2 = new b(f.a, str, new File(this.b, f.d));
+            if (!bVar2.b.isFile()) {
                 this.f.getWritableDatabase().delete(h, "_id=?", new String[]{String.valueOf(f.a)});
                 this.e -= f.e;
                 return null;
             }
-            this.a.put(str, c6343b2);
-            return c6343b2;
+            this.a.put(str, bVar2);
+            return bVar2;
         }
     }
 
@@ -349,6 +347,6 @@ public class FileCache {
         this.b = file;
         this.d = j2;
         this.a = new LruCache<>(i2);
-        this.f = new C6344c(context, str);
+        this.f = new c(context, str);
     }
 }

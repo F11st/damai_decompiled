@@ -16,8 +16,6 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import cn.damai.common.app.widget.ProtocolDialog;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.login.LoginManager;
 import cn.damai.login.YouKuTrustListener;
@@ -75,13 +73,12 @@ public class TicketDetailAcceptTransferActivity extends TickletBaseActivity impl
     private int mCurrentPageIndex = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TicketDetailAcceptTransferActivity$a */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC2021a implements DialogInterface.OnClickListener {
+    public class a implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Map a;
 
-        DialogInterface$OnClickListenerC2021a(TicketDetailAcceptTransferActivity ticketDetailAcceptTransferActivity, Map map) {
+        a(TicketDetailAcceptTransferActivity ticketDetailAcceptTransferActivity, Map map) {
             this.a = map;
         }
 
@@ -92,19 +89,18 @@ public class TicketDetailAcceptTransferActivity extends TickletBaseActivity impl
                 ipChange.ipc$dispatch("306452739", new Object[]{this, dialogInterface, Integer.valueOf(i)});
                 return;
             }
-            C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_TRANSFER_CONDIRM_PAGE, "center", "cancel_receiver", this.a, Boolean.FALSE));
+            cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(un2.TICKLET_TRANSFER_CONDIRM_PAGE, "center", "cancel_receiver", this.a, Boolean.FALSE));
             dialogInterface.dismiss();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TicketDetailAcceptTransferActivity$b */
     /* loaded from: classes7.dex */
-    public class C2022b implements ProtocolDialog.OnConfirmListener {
+    public class b implements ProtocolDialog.OnConfirmListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Map a;
 
-        C2022b(Map map) {
+        b(Map map) {
             this.a = map;
         }
 
@@ -115,7 +111,7 @@ public class TicketDetailAcceptTransferActivity extends TickletBaseActivity impl
                 ipChange.ipc$dispatch("930015175", new Object[]{this, Boolean.valueOf(z), dialogInterface});
             } else if (z) {
                 dialogInterface.dismiss();
-                C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_TRANSFER_CONDIRM_PAGE, "center", "confim_receiver_btn", this.a, Boolean.FALSE));
+                cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(un2.TICKLET_TRANSFER_CONDIRM_PAGE, "center", "confim_receiver_btn", this.a, Boolean.FALSE));
                 TicketDetailAcceptTransferActivity.this.checkLiveBind();
             } else {
                 ToastUtil.a().j(mu0.a(), "请您认真阅读转送规则及《订票服务条款》，接受后可开始使用我们的服务");
@@ -124,13 +120,12 @@ public class TicketDetailAcceptTransferActivity extends TickletBaseActivity impl
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TicketDetailAcceptTransferActivity$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2023c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Map a;
 
-        View$OnClickListenerC2023c(Map map) {
+        c(Map map) {
             this.a = map;
         }
 
@@ -141,18 +136,17 @@ public class TicketDetailAcceptTransferActivity extends TickletBaseActivity impl
                 ipChange.ipc$dispatch("1907354094", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_TRANSFER_CONDIRM_PAGE, "center", "transfermanager_notice", this.a, Boolean.TRUE));
+            cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(un2.TICKLET_TRANSFER_CONDIRM_PAGE, "center", "transfermanager_notice", this.a, Boolean.TRUE));
             py2.f().n(TicketDetailAcceptTransferActivity.this, in2.DAMAI_PROTOCOL_TIPS_URL);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TicketDetailAcceptTransferActivity$d */
     /* loaded from: classes7.dex */
-    public class C2024d implements YouKuTrustListener {
+    public class d implements YouKuTrustListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2024d() {
+        d() {
         }
 
         @Override // cn.damai.login.YouKuTrustListener
@@ -195,7 +189,7 @@ public class TicketDetailAcceptTransferActivity extends TickletBaseActivity impl
         if (AndroidInstantRuntime.support(ipChange, "-1754816148")) {
             ipChange.ipc$dispatch("-1754816148", new Object[]{this});
         } else if ("1".equals(this.confirmAcceptData.isNeedLiveBind)) {
-            LoginManager.k().i(this, 0, new C2024d());
+            LoginManager.k().i(this, 0, new d());
         } else {
             confirmAcceptOnclick();
         }
@@ -402,7 +396,7 @@ public class TicketDetailAcceptTransferActivity extends TickletBaseActivity impl
         this.confirmAcceptData = ticketPerformTransferData;
         HashMap hashMap = new HashMap();
         hashMap.put("screening_id", this.confirmAcceptData.performId);
-        C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_TRANSFER_CONDIRM_PAGE, "center", "confimbtn", hashMap, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(un2.TICKLET_TRANSFER_CONDIRM_PAGE, "center", "confimbtn", hashMap, Boolean.FALSE));
         SpannableString spannableString = new SpannableString(getResources().getString(R$string.ticklet_transfer_agree_rule_content));
         spannableString.setSpan(new ForegroundColorSpan(getResources().getColor(R$color.color_ff2d79)), 0, spannableString.length(), 33);
         Tips tips = this.confirmAcceptData.recvProtocolTips;
@@ -412,7 +406,7 @@ public class TicketDetailAcceptTransferActivity extends TickletBaseActivity impl
         } else {
             str = tips.getText();
         }
-        ProtocolDialog.C(this, getResources().getString(R$string.ticklet_warm_tip), str, spannableString, getResources().getString(R$string.ticklet_transfer_cancel_button_thought), -16777216, new DialogInterface$OnClickListenerC2021a(this, hashMap), getResources().getString(R$string.ticklet_simple_accept), Color.parseColor("#ff2d79"), new C2022b(hashMap), new View$OnClickListenerC2023c(hashMap)).show();
+        ProtocolDialog.C(this, getResources().getString(R$string.ticklet_warm_tip), str, spannableString, getResources().getString(R$string.ticklet_transfer_cancel_button_thought), -16777216, new a(this, hashMap), getResources().getString(R$string.ticklet_simple_accept), Color.parseColor("#ff2d79"), new b(hashMap), new c(hashMap)).show();
     }
 
     @Override // cn.damai.ticklet.net.TickletDetailConfirmAcceptUtil.TickletTransferConfirmAcceptCallBack

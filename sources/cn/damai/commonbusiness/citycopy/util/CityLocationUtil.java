@@ -42,12 +42,11 @@ public class CityLocationUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.citycopy.util.CityLocationUtil$a */
     /* loaded from: classes4.dex */
-    public class C0612a implements LocateGpsPicListener {
+    public class a implements LocateGpsPicListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0612a() {
+        a() {
         }
 
         @Override // com.alibaba.pictures.piclocation.listener.LocateGpsPicListener
@@ -172,7 +171,7 @@ public class CityLocationUtil {
         if (AndroidInstantRuntime.support(ipChange, "-190255887")) {
             ipChange.ipc$dispatch("-190255887", new Object[]{this});
         } else if (ap2.INSTANCE.e(this.a)) {
-            ia1.INSTANCE.c().startLocationWithCacheTime(new C0612a(), 0L);
+            ia1.INSTANCE.c().startLocationWithCacheTime(new a(), 0L);
         }
     }
 

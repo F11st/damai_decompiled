@@ -14,10 +14,6 @@ import kotlin.Function;
 import kotlin.KotlinNothingValueException;
 import kotlin.Pair;
 import kotlin.SinceKotlin;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8225w;
-import kotlin.collections.C8226x;
 import kotlin.jvm.KotlinReflectionNotSupportedError;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -57,7 +53,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public final class kj implements KClass<Object>, ClassBasedDeclarationContainer {
     @NotNull
-    public static final C9364a Companion = new C9364a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final Map<Class<? extends Function<?>>, Integer> b;
     @NotNull
@@ -72,13 +68,12 @@ public final class kj implements KClass<Object>, ClassBasedDeclarationContainer 
     private final Class<?> a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kj$a */
     /* loaded from: classes3.dex */
-    public static final class C9364a {
-        private C9364a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9364a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -169,18 +164,18 @@ public final class kj implements KClass<Object>, ClassBasedDeclarationContainer 
         String G0;
         String G02;
         int i = 0;
-        j = C8214m.j(Function0.class, Function1.class, Function2.class, Function3.class, Function4.class, Function5.class, Function6.class, Function7.class, Function8.class, Function9.class, Function10.class, Function11.class, Function12.class, Function13.class, Function14.class, Function15.class, Function16.class, Function17.class, Function18.class, Function19.class, Function20.class, Function21.class, Function22.class);
-        q = C8215n.q(j, 10);
+        j = kotlin.collections.m.j(Function0.class, Function1.class, Function2.class, Function3.class, Function4.class, Function5.class, Function6.class, Function7.class, Function8.class, Function9.class, Function10.class, Function11.class, Function12.class, Function13.class, Function14.class, Function15.class, Function16.class, Function17.class, Function18.class, Function19.class, Function20.class, Function21.class, Function22.class);
+        q = kotlin.collections.n.q(j, 10);
         ArrayList arrayList = new ArrayList(q);
         for (Object obj : j) {
             int i2 = i + 1;
             if (i < 0) {
-                C8214m.p();
+                kotlin.collections.m.p();
             }
             arrayList.add(hq2.a((Class) obj, Integer.valueOf(i)));
             i = i2;
         }
-        r = C8226x.r(arrayList);
+        r = kotlin.collections.x.r(arrayList);
         b = r;
         HashMap<String, String> hashMap = new HashMap<>();
         hashMap.put(TypedValues.Custom.S_BOOLEAN, "kotlin.Boolean");
@@ -233,15 +228,15 @@ public final class kj implements KClass<Object>, ClassBasedDeclarationContainer 
             G02 = StringsKt__StringsKt.G0(str, '.', null, 2, null);
             sb.append(G02);
             sb.append("CompanionObject");
-            Pair a = hq2.a(sb.toString(), str + ".Companion");
-            hashMap3.put(a.getFirst(), a.getSecond());
+            Pair a2 = hq2.a(sb.toString(), str + ".Companion");
+            hashMap3.put(a2.getFirst(), a2.getSecond());
         }
         for (Map.Entry<Class<? extends Function<?>>, Integer> entry : b.entrySet()) {
             int intValue = entry.getValue().intValue();
             hashMap3.put(entry.getKey().getName(), "kotlin.Function" + intValue);
         }
         e = hashMap3;
-        e2 = C8225w.e(hashMap3.size());
+        e2 = kotlin.collections.w.e(hashMap3.size());
         LinkedHashMap linkedHashMap = new LinkedHashMap(e2);
         for (Map.Entry entry2 : hashMap3.entrySet()) {
             Object key = entry2.getKey();

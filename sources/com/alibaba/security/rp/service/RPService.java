@@ -5,9 +5,9 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.os.RemoteException;
 import com.alibaba.security.biometrics.jni.VersionKey;
-import com.alibaba.security.common.track.a.C3829a;
+import com.alibaba.security.common.track.a.a;
 import com.alibaba.security.common.track.model.TrackLog;
-import com.alibaba.security.realidentity.a.C3847g;
+import com.alibaba.security.realidentity.a.g;
 import com.alibaba.security.rp.RPSDK;
 import com.alibaba.security.rp.scanface.AuditResultCallback;
 import com.alibaba.security.rp.service.aidl.IRPCompletedListener;
@@ -78,11 +78,11 @@ public class RPService extends Service {
     /* JADX INFO: Access modifiers changed from: private */
     public static void collectUsingLog(String str, String str2) {
         TrackLog createClassInvokedMonitor = TrackLog.createClassInvokedMonitor(str, str2);
-        createClassInvokedMonitor.setVerifyToken(C3847g.C3848a.a.d);
+        createClassInvokedMonitor.setVerifyToken(g.a.a.d);
         createClassInvokedMonitor.addTag9(VersionKey.RP_SDK_VERSION + "/3.3.0");
         createClassInvokedMonitor.addTag10("Android");
-        C3829a.C3830a.a.a(createClassInvokedMonitor);
-        C3829a.C3830a.a.a(false);
+        a.C0165a.a.a(createClassInvokedMonitor);
+        a.C0165a.a.a(false);
     }
 
     @Override // android.app.Service

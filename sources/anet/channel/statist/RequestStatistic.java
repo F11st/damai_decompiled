@@ -5,13 +5,13 @@ import anet.channel.entity.ConnType;
 import anet.channel.fulltrace.IFullTraceAnalysisV3;
 import anet.channel.status.NetworkStatusHelper;
 import anet.channel.util.AppLifecycle;
-import anet.channel.util.C0241c;
 import anet.channel.util.Inet64Util;
+import anet.channel.util.c;
 import java.util.concurrent.atomic.AtomicBoolean;
 import org.json.JSONException;
 import org.json.JSONObject;
-import tb.C9708t9;
 import tb.hu0;
+import tb.t9;
 
 /* compiled from: Taobao */
 @Monitor(module = "networkPrefer", monitorPoint = "network")
@@ -240,14 +240,14 @@ public class RequestStatistic extends StatObject {
         this.mnc = NetworkStatusHelper.h();
         this.bizId = str2;
         this.ipStackType = Inet64Util.n();
-        this.isHttpDetectEnable = C9708t9.v();
+        this.isHttpDetectEnable = t9.v();
         this.multiNetworkStatus = NetworkStatusHelper.d() != null ? 1 : 0;
-        if (C0241c.k()) {
+        if (c.k()) {
             this.isHarmonyOS = 1;
-            this.harmonyVersion = C0241c.d();
+            this.harmonyVersion = c.d();
         }
-        this.isComplexEnable = C9708t9.p();
-        this.isStrategyUpgrade = C9708t9.N();
+        this.isComplexEnable = t9.p();
+        this.isStrategyUpgrade = t9.N();
     }
 
     public void appendErrorTrace(String str) {

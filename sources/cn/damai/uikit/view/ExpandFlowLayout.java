@@ -24,13 +24,13 @@ public class ExpandFlowLayout<T> extends FrameLayout {
     private static final int ZIP_LINE_COUNT = 2;
     public static final Rect mTemp = new Rect();
     private boolean isExpand;
-    private AbstractC2583a<T> mAdapter;
+    private a<T> mAdapter;
     private ExpandBtnView mBtnViewImpl;
     private View mExpandBtnView;
-    private final List<C2584b> mLineViewsList;
-    private final Pools.SimplePool<C2584b> mPool;
+    private final List<b> mLineViewsList;
+    private final Pools.SimplePool<b> mPool;
     private final Stack<View> mRemovedViewStack;
-    private final List<C2584b> mTempList;
+    private final List<b> mTempList;
     private final List<View> mViewShouldBeRemovedList;
 
     /* compiled from: Taobao */
@@ -42,9 +42,8 @@ public class ExpandFlowLayout<T> extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.ExpandFlowLayout$a */
     /* loaded from: classes8.dex */
-    public static abstract class AbstractC2583a<T> {
+    public static abstract class a<T> {
         private static transient /* synthetic */ IpChange $ipChange;
         private final List<T> a = new ArrayList();
         private ExpandFlowLayout<T> b;
@@ -106,9 +105,8 @@ public class ExpandFlowLayout<T> extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.ExpandFlowLayout$b */
     /* loaded from: classes8.dex */
-    public static class C2584b {
+    public static class b {
         private static transient /* synthetic */ IpChange $ipChange;
         public final ArrayList<View> a = new ArrayList<>();
         public int b;
@@ -174,14 +172,14 @@ public class ExpandFlowLayout<T> extends FrameLayout {
         this(context, null);
     }
 
-    private C2584b acquireEmptyLine() {
+    private b acquireEmptyLine() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1027245145")) {
-            return (C2584b) ipChange.ipc$dispatch("-1027245145", new Object[]{this});
+            return (b) ipChange.ipc$dispatch("-1027245145", new Object[]{this});
         }
-        C2584b acquire = this.mPool.acquire();
+        b acquire = this.mPool.acquire();
         if (acquire == null) {
-            return new C2584b();
+            return new b();
         }
         acquire.c();
         return acquire;
@@ -212,10 +210,10 @@ public class ExpandFlowLayout<T> extends FrameLayout {
         }
         int paddingTop = getPaddingTop();
         for (int i = 0; i < size; i++) {
-            C2584b c2584b = this.mLineViewsList.get(i);
-            if (c2584b != null && c2584b.d() != 0) {
-                int d = c2584b.d();
-                ArrayList<View> arrayList = c2584b.a;
+            b bVar = this.mLineViewsList.get(i);
+            if (bVar != null && bVar.d() != 0) {
+                int d = bVar.d();
+                ArrayList<View> arrayList = bVar.a;
                 int paddingLeft = getPaddingLeft();
                 for (int i2 = 0; i2 < d; i2++) {
                     View view = arrayList.get(i2);
@@ -229,19 +227,19 @@ public class ExpandFlowLayout<T> extends FrameLayout {
                     view.layout(i4, i3, measuredWidth + i4, measuredHeight + i3);
                     paddingLeft += com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.width(rect);
                 }
-                paddingTop += c2584b.b;
+                paddingTop += bVar.b;
             }
         }
     }
 
-    private void releaseViewLine(List<C2584b> list) {
+    private void releaseViewLine(List<b> list) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1236754062")) {
             ipChange.ipc$dispatch("-1236754062", new Object[]{this, list});
         } else if (list != null && list.size() > 0) {
-            for (C2584b c2584b : list) {
-                c2584b.c();
-                this.mPool.release(c2584b);
+            for (b bVar : list) {
+                bVar.c();
+                this.mPool.release(bVar);
             }
         }
     }
@@ -274,16 +272,16 @@ public class ExpandFlowLayout<T> extends FrameLayout {
             this.mViewShouldBeRemovedList.clear();
             releaseViewLine(this.mLineViewsList);
             this.mLineViewsList.clear();
-            AbstractC2583a<T> abstractC2583a = this.mAdapter;
-            if (abstractC2583a != null && abstractC2583a.b() > 0) {
-                int b = this.mAdapter.b();
-                for (int i3 = 0; i3 < b; i3++) {
-                    T a = this.mAdapter.a(i3);
+            a<T> aVar = this.mAdapter;
+            if (aVar != null && aVar.b() > 0) {
+                int b2 = this.mAdapter.b();
+                for (int i3 = 0; i3 < b2; i3++) {
+                    T a2 = this.mAdapter.a(i3);
                     View view = null;
                     if (!this.mRemovedViewStack.empty()) {
                         view = this.mRemovedViewStack.pop();
                     }
-                    addView(this.mAdapter.c(this, view, a, i3));
+                    addView(this.mAdapter.c(this, view, a2, i3));
                 }
                 View view2 = this.mExpandBtnView;
                 if (view2 != null) {
@@ -295,7 +293,7 @@ public class ExpandFlowLayout<T> extends FrameLayout {
                 }
                 int size = View.MeasureSpec.getSize(i);
                 int paddingLeft = (size - getPaddingLeft()) - getPaddingRight();
-                C2584b acquireEmptyLine = acquireEmptyLine();
+                b acquireEmptyLine = acquireEmptyLine();
                 this.mLineViewsList.add(acquireEmptyLine);
                 int i5 = paddingLeft;
                 for (int i6 = 0; i6 < childCount; i6++) {
@@ -316,42 +314,42 @@ public class ExpandFlowLayout<T> extends FrameLayout {
                 if (!this.isExpand && size2 >= 2) {
                     this.mTempList.clear();
                     for (int i7 = 0; i7 < size2; i7++) {
-                        C2584b c2584b = this.mLineViewsList.get(i7);
+                        b bVar = this.mLineViewsList.get(i7);
                         if (i7 < 2) {
-                            this.mTempList.add(c2584b);
+                            this.mTempList.add(bVar);
                         } else {
-                            this.mViewShouldBeRemovedList.addAll(c2584b.a);
+                            this.mViewShouldBeRemovedList.addAll(bVar.a);
                         }
                     }
                     this.mLineViewsList.clear();
                     this.mLineViewsList.addAll(this.mTempList);
                 }
-                List<C2584b> list = this.mLineViewsList;
-                C2584b c2584b2 = list.get(list.size() - 1);
-                ArrayList<View> arrayList = c2584b2.a;
+                List<b> list = this.mLineViewsList;
+                b bVar2 = list.get(list.size() - 1);
+                ArrayList<View> arrayList = bVar2.a;
                 View view3 = this.mExpandBtnView;
                 if (view3 != null) {
                     if (this.isExpand) {
                         boolean z2 = size2 <= 2;
-                        if (size2 != 3 || c2584b2.d() != 1) {
+                        if (size2 != 3 || bVar2.d() != 1) {
                             z = false;
                         }
                         if ((z2 || z) && arrayList.contains(this.mExpandBtnView)) {
                             arrayList.remove(this.mExpandBtnView);
-                            if (c2584b2.d() == 0) {
-                                this.mLineViewsList.remove(c2584b2);
+                            if (bVar2.d() == 0) {
+                                this.mLineViewsList.remove(bVar2);
                             } else {
-                                c2584b2.e();
+                                bVar2.e();
                             }
                             this.mViewShouldBeRemovedList.add(this.mExpandBtnView);
                         }
                     } else if (size2 <= 2) {
                         if (arrayList.contains(view3)) {
                             arrayList.remove(this.mExpandBtnView);
-                            if (c2584b2.d() == 0) {
-                                this.mLineViewsList.remove(c2584b2);
+                            if (bVar2.d() == 0) {
+                                this.mLineViewsList.remove(bVar2);
                             } else {
-                                c2584b2.e();
+                                bVar2.e();
                             }
                             this.mViewShouldBeRemovedList.add(this.mExpandBtnView);
                         }
@@ -360,23 +358,23 @@ public class ExpandFlowLayout<T> extends FrameLayout {
                         Rect rect2 = mTemp;
                         computeViewBound(view4, rect2);
                         int width2 = com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.width(rect2);
-                        int b2 = paddingLeft - c2584b2.b();
-                        if (c2584b2.d() > 0 && b2 < width2) {
-                            ListIterator<View> listIterator = arrayList.listIterator(c2584b2.d());
+                        int b3 = paddingLeft - bVar2.b();
+                        if (bVar2.d() > 0 && b3 < width2) {
+                            ListIterator<View> listIterator = arrayList.listIterator(bVar2.d());
                             while (listIterator.hasPrevious()) {
                                 View previous = listIterator.previous();
                                 Rect rect3 = mTemp;
                                 computeViewBound(previous, rect3);
-                                b2 += com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.width(rect3);
+                                b3 += com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.width(rect3);
                                 listIterator.remove();
                                 this.mViewShouldBeRemovedList.add(previous);
-                                if (b2 >= width2) {
+                                if (b3 >= width2) {
                                     break;
                                 }
                             }
                         }
                         arrayList.add(this.mExpandBtnView);
-                        c2584b2.e();
+                        bVar2.e();
                         this.mViewShouldBeRemovedList.remove(this.mExpandBtnView);
                     }
                 }
@@ -414,19 +412,19 @@ public class ExpandFlowLayout<T> extends FrameLayout {
         }
     }
 
-    public void setAdapter(AbstractC2583a<T> abstractC2583a) {
+    public void setAdapter(a<T> aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1309995588")) {
-            ipChange.ipc$dispatch("-1309995588", new Object[]{this, abstractC2583a});
+            ipChange.ipc$dispatch("-1309995588", new Object[]{this, aVar});
             return;
         }
-        AbstractC2583a<T> abstractC2583a2 = this.mAdapter;
-        if (abstractC2583a2 != null) {
-            abstractC2583a2.d();
+        a<T> aVar2 = this.mAdapter;
+        if (aVar2 != null) {
+            aVar2.d();
         }
-        this.mAdapter = abstractC2583a;
-        if (abstractC2583a != null) {
-            abstractC2583a.f(this);
+        this.mAdapter = aVar;
+        if (aVar != null) {
+            aVar.f(this);
         }
         requestLayout();
     }

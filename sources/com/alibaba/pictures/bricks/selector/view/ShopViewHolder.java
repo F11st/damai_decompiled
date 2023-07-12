@@ -30,7 +30,7 @@ import tb.k50;
 public final class ShopViewHolder extends RecyclerView.ViewHolder {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C3546a Companion = new C3546a(null);
+    public static final a Companion = new a(null);
     @Nullable
     private OnEventListener a;
     private final RoundRadiusImageView b;
@@ -39,15 +39,14 @@ public final class ShopViewHolder extends RecyclerView.ViewHolder {
     private final BricksIconFontTextView e;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.selector.view.ShopViewHolder$a */
     /* loaded from: classes7.dex */
-    public static final class C3546a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3546a() {
+        private a() {
         }
 
-        public /* synthetic */ C3546a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -115,7 +114,7 @@ public final class ShopViewHolder extends RecyclerView.ViewHolder {
             return
         L1a:
             if (r7 == 0) goto L25
-            boolean r0 = kotlin.text.C8596g.s(r7)
+            boolean r0 = kotlin.text.g.s(r7)
             if (r0 == 0) goto L23
             goto L25
         L23:
@@ -126,7 +125,7 @@ public final class ShopViewHolder extends RecyclerView.ViewHolder {
         L26:
             if (r0 != 0) goto L78
             if (r6 == 0) goto L32
-            boolean r0 = kotlin.text.C8596g.s(r6)
+            boolean r0 = kotlin.text.g.s(r6)
             if (r0 == 0) goto L31
             goto L32
         L31:

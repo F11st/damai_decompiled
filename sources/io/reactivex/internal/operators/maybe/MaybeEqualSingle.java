@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeSource;
 import io.reactivex.SingleObserver;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.functions.BiPredicate;
 import io.reactivex.internal.disposables.DisposableHelper;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -14,7 +14,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeEqualSingle<T> extends AbstractC8152e<Boolean> {
+public final class MaybeEqualSingle<T> extends e<Boolean> {
     final BiPredicate<? super T, ? super T> isEqual;
     final MaybeSource<? extends T> source1;
     final MaybeSource<? extends T> source2;
@@ -128,7 +128,7 @@ public final class MaybeEqualSingle<T> extends AbstractC8152e<Boolean> {
         this.isEqual = biPredicate;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super Boolean> singleObserver) {
         EqualCoordinator equalCoordinator = new EqualCoordinator(singleObserver, this.isEqual);
         singleObserver.onSubscribe(equalCoordinator);

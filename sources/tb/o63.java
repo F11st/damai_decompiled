@@ -8,14 +8,13 @@ import java.util.List;
 public final class o63 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.o63$a */
     /* loaded from: classes10.dex */
-    public static class C9509a implements com.loc.dl {
+    public static class a implements com.loc.dl {
         private int a;
         private int b;
         private int c;
 
-        C9509a(int i, int i2, int i3) {
+        a(int i, int i2, int i3) {
             this.a = i;
             this.b = i2;
             this.c = i3;
@@ -33,13 +32,12 @@ public final class o63 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.o63$b */
     /* loaded from: classes10.dex */
-    public static class C9510b implements com.loc.dl {
+    public static class b implements com.loc.dl {
         private long a;
         private int b;
 
-        C9510b(long j, int i) {
+        b(long j, int i) {
             this.a = j;
             this.b = i;
         }
@@ -60,15 +58,15 @@ public final class o63 {
     }
 
     public static synchronized short b(long j) {
-        short b;
+        short b2;
         synchronized (o63.class) {
-            b = n63.a().b(j);
+            b2 = n63.a().b(j);
         }
-        return b;
+        return b2;
     }
 
     public static synchronized void c(List<com.loc.dr> list) {
-        C9509a c9509a;
+        a aVar;
         synchronized (o63.class) {
             if (list != null) {
                 if (!list.isEmpty()) {
@@ -76,18 +74,18 @@ public final class o63 {
                     for (com.loc.dr drVar : list) {
                         if (drVar instanceof com.loc.dt) {
                             com.loc.dt dtVar = (com.loc.dt) drVar;
-                            c9509a = new C9509a(dtVar.j, dtVar.k, dtVar.c);
+                            aVar = new a(dtVar.j, dtVar.k, dtVar.c);
                         } else if (drVar instanceof com.loc.du) {
                             com.loc.du duVar = (com.loc.du) drVar;
-                            c9509a = new C9509a(duVar.j, duVar.k, duVar.c);
+                            aVar = new a(duVar.j, duVar.k, duVar.c);
                         } else if (drVar instanceof com.loc.dv) {
                             com.loc.dv dvVar = (com.loc.dv) drVar;
-                            c9509a = new C9509a(dvVar.j, dvVar.k, dvVar.c);
+                            aVar = new a(dvVar.j, dvVar.k, dvVar.c);
                         } else if (drVar instanceof com.loc.ds) {
                             com.loc.ds dsVar = (com.loc.ds) drVar;
-                            c9509a = new C9509a(dsVar.k, dsVar.l, dsVar.c);
+                            aVar = new a(dsVar.k, dsVar.l, dsVar.c);
                         }
-                        arrayList.add(c9509a);
+                        arrayList.add(aVar);
                     }
                     n63.a().d(arrayList);
                 }
@@ -109,7 +107,7 @@ public final class o63 {
                 if (!list.isEmpty()) {
                     ArrayList arrayList = new ArrayList(list.size());
                     for (com.loc.y0 y0Var : list) {
-                        arrayList.add(new C9510b(y0Var.a, y0Var.c));
+                        arrayList.add(new b(y0Var.a, y0Var.c));
                     }
                     n63.a().h(arrayList);
                 }

@@ -12,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.search.Daojishi;
@@ -27,7 +26,7 @@ import com.android.alibaba.ip.runtime.IpChange;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import tb.C9826vr;
+import tb.vr;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
@@ -43,19 +42,18 @@ public class SearchWordProjectViewHolder extends RecyclerView.ViewHolder {
     private Daojishi h;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.viewholder.SearchWordProjectViewHolder$a */
     /* loaded from: classes6.dex */
-    public class C1632a implements DMImageCreator.DMImageFailListener {
+    public class a implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1632a() {
+        a() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1746633878")) {
-                ipChange.ipc$dispatch("1746633878", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("1746633878", new Object[]{this, dVar});
             } else {
                 SearchWordProjectViewHolder.this.d.setVisibility(8);
             }
@@ -63,22 +61,21 @@ public class SearchWordProjectViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.viewholder.SearchWordProjectViewHolder$b */
     /* loaded from: classes6.dex */
-    public class C1633b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1633b() {
+        b() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1836264875")) {
-                ipChange.ipc$dispatch("1836264875", new Object[]{this, c0502e});
-            } else if (c0502e == null || c0502e.a == null) {
+                ipChange.ipc$dispatch("1836264875", new Object[]{this, eVar});
+            } else if (eVar == null || eVar.a == null) {
             } else {
-                SearchWordProjectViewHolder.this.d.setImageDrawable(c0502e.a);
+                SearchWordProjectViewHolder.this.d.setImageDrawable(eVar.a);
                 SearchWordProjectViewHolder.this.d.setVisibility(0);
             }
         }
@@ -115,7 +112,7 @@ public class SearchWordProjectViewHolder extends RecyclerView.ViewHolder {
         } else if (!z) {
             this.d.setVisibility(8);
         } else {
-            C0504a.b().c(str).n(new C1633b()).e(new C1632a()).f();
+            cn.damai.common.image.a.b().c(str).n(new b()).e(new a()).f();
         }
     }
 
@@ -172,10 +169,10 @@ public class SearchWordProjectViewHolder extends RecyclerView.ViewHolder {
             ipChange.ipc$dispatch("-1967593139", new Object[]{this, projectItemBean});
         } else if (projectItemBean == null) {
         } else {
-            if (this.c.getTag() instanceof C9826vr) {
-                ((C9826vr) this.c.getTag()).cancel();
+            if (this.c.getTag() instanceof vr) {
+                ((vr) this.c.getTag()).cancel();
             }
-            DMImageCreator c = C0504a.b().c(projectItemBean.verticalPic);
+            DMImageCreator c = cn.damai.common.image.a.b().c(projectItemBean.verticalPic);
             int i = R$drawable.uikit_default_image_bg_gradient;
             this.c.setTag(c.i(i).c(i).g(this.c));
             d(projectItemBean.isAtmospheric, projectItemBean.atmosphericPic);

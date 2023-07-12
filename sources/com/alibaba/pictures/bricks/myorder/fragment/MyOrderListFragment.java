@@ -27,7 +27,6 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.youku.kubus.Event;
 import com.youku.kubus.EventBus;
 import com.youku.kubus.Subscribe;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
@@ -45,7 +44,7 @@ import tb.yb1;
 public final class MyOrderListFragment extends BricksBaseFragment implements OnLoadMoreListener, OnRefreshListener {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3529a Companion = new C3529a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String KEY_PAGE_TYPE = "pageType";
     public static final int REQUEST_CODE_LOGIN = 10;
@@ -63,24 +62,22 @@ public final class MyOrderListFragment extends BricksBaseFragment implements OnL
     private SmartRefreshLayout refreshLayout;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.myorder.fragment.MyOrderListFragment$a */
     /* loaded from: classes7.dex */
-    public static final class C3529a {
-        private C3529a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3529a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.myorder.fragment.MyOrderListFragment$b */
     /* loaded from: classes7.dex */
-    public static final class C3530b implements BricksBaseFragment.IClickListener {
+    public static final class b implements BricksBaseFragment.IClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3530b() {
+        b() {
         }
 
         @Override // com.alibaba.pictures.bricks.base.BricksBaseFragment.IClickListener
@@ -99,11 +96,11 @@ public final class MyOrderListFragment extends BricksBaseFragment implements OnL
     }
 
     public MyOrderListFragment(int i) {
-        Lazy b;
+        Lazy b2;
         this.pageType = i;
         this.pageNumber = 1;
         this.isRefresh = true;
-        b = C8177b.b(new Function0<MyOrderListAdapter>() { // from class: com.alibaba.pictures.bricks.myorder.fragment.MyOrderListFragment$adapter$2
+        b2 = kotlin.b.b(new Function0<MyOrderListAdapter>() { // from class: com.alibaba.pictures.bricks.myorder.fragment.MyOrderListFragment$adapter$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* JADX INFO: Access modifiers changed from: package-private */
@@ -124,7 +121,7 @@ public final class MyOrderListFragment extends BricksBaseFragment implements OnL
                 return new MyOrderListAdapter(context);
             }
         });
-        this.adapter$delegate = b;
+        this.adapter$delegate = b2;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -372,13 +369,12 @@ public final class MyOrderListFragment extends BricksBaseFragment implements OnL
                 private static transient /* synthetic */ IpChange $ipChange;
 
                 /* compiled from: Taobao */
-                /* renamed from: com.alibaba.pictures.bricks.myorder.fragment.MyOrderListFragment$requestOrderList$4$a */
                 /* loaded from: classes7.dex */
-                public static final class C3531a implements BricksBaseFragment.IClickListener {
+                public static final class a implements BricksBaseFragment.IClickListener {
                     private static transient /* synthetic */ IpChange $ipChange;
                     final /* synthetic */ MyOrderListFragment a;
 
-                    C3531a(MyOrderListFragment myOrderListFragment) {
+                    a(MyOrderListFragment myOrderListFragment) {
                         this.a = myOrderListFragment;
                     }
 
@@ -447,7 +443,7 @@ public final class MyOrderListFragment extends BricksBaseFragment implements OnL
                         } else {
                             viewGroup3 = viewGroup2;
                         }
-                        myOrderListFragment.showErrorView(1, str, str2, viewGroup3, true, false, true, new C3531a(this));
+                        myOrderListFragment.showErrorView(1, str, str2, viewGroup3, true, false, true, new a(this));
                         return;
                     }
                     smartRefreshLayout = this.refreshLayout;
@@ -486,7 +482,7 @@ public final class MyOrderListFragment extends BricksBaseFragment implements OnL
         } else {
             viewGroup = viewGroup3;
         }
-        showErrorView(3, "暂无相关内容", "", viewGroup, false, false, true, new C3530b());
+        showErrorView(3, "暂无相关内容", "", viewGroup, false, false, true, new b());
     }
 
     @Override // androidx.fragment.app.Fragment

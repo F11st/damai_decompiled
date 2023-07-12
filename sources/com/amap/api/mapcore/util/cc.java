@@ -2,12 +2,12 @@ package com.amap.api.mapcore.util;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public abstract class cc extends AbstractC4497cd {
+public abstract class cc extends cd {
     public cc(int i, az azVar) {
         super(i, azVar);
     }
 
-    @Override // com.amap.api.mapcore.util.AbstractC4497cd
+    @Override // com.amap.api.mapcore.util.cd
     public void a() {
         b(this.b.a);
         this.b.setCompleteCode(0);

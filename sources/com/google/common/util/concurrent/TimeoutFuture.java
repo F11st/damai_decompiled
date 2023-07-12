@@ -1,7 +1,7 @@
 package com.google.common.util.concurrent;
 
 import com.google.common.annotations.GwtIncompatible;
-import com.google.common.util.concurrent.AbstractC5344e;
+import com.google.common.util.concurrent.e;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -14,7 +14,7 @@ import tb.jn1;
 /* compiled from: Taobao */
 @GwtIncompatible
 /* loaded from: classes10.dex */
-public final class TimeoutFuture<V> extends AbstractC5344e.AbstractC5345a<V> {
+public final class TimeoutFuture<V> extends e.a<V> {
     @NullableDecl
     private ListenableFuture<V> a;
     @NullableDecl

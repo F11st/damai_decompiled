@@ -5,9 +5,9 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import io.flutter.wpkbridge.WPKFactory;
 import java.util.HashMap;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -20,22 +20,21 @@ import tb.k50;
 public final class ResponsivePageStateCache {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C3627a Companion = new C3627a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final HashMap<Integer, c32> a = new HashMap<>();
     @NotNull
     private static final Lazy<ResponsivePageStateCache> b;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.responsive.state.ResponsivePageStateCache$a */
     /* loaded from: classes7.dex */
-    public static final class C3627a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3627a() {
+        private a() {
         }
 
-        public /* synthetic */ C3627a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -48,7 +47,7 @@ public final class ResponsivePageStateCache {
 
     static {
         Lazy<ResponsivePageStateCache> a2;
-        a2 = C8177b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<ResponsivePageStateCache>() { // from class: com.alibaba.pictures.responsive.state.ResponsivePageStateCache$Companion$instance$2
+        a2 = b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<ResponsivePageStateCache>() { // from class: com.alibaba.pictures.responsive.state.ResponsivePageStateCache$Companion$instance$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* JADX WARN: Can't rename method to resolve collision */

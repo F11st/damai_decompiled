@@ -59,7 +59,7 @@ public final class ObservableCount<T> extends AbstractObservableWithUpstream<T, 
         super(observableSource);
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super Long> observer) {
         this.source.subscribe(new CountObserver(observer));
     }

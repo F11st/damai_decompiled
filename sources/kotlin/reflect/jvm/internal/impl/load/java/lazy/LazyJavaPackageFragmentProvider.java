@@ -3,9 +3,9 @@ package kotlin.reflect.jvm.internal.impl.load.java.lazy;
 import com.youku.arch.v3.data.Constants;
 import java.util.Collection;
 import java.util.List;
-import kotlin.C8179c;
 import kotlin.Lazy;
-import kotlin.collections.C8214m;
+import kotlin.c;
+import kotlin.collections.m;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.PackageFragmentDescriptor;
@@ -33,9 +33,9 @@ public final class LazyJavaPackageFragmentProvider implements PackageFragmentPro
     public LazyJavaPackageFragmentProvider(@NotNull n51 n51Var) {
         Lazy c;
         b41.i(n51Var, Constants.COMPONENT);
-        TypeParameterResolver.C8342a c8342a = TypeParameterResolver.C8342a.INSTANCE;
-        c = C8179c.c(null);
-        r81 r81Var = new r81(n51Var, c8342a, c);
+        TypeParameterResolver.a aVar = TypeParameterResolver.a.INSTANCE;
+        c = c.c(null);
+        r81 r81Var = new r81(n51Var, aVar, c);
         this.a = r81Var;
         this.b = r81Var.e().createCacheWithNotNullValues();
     }
@@ -74,7 +74,7 @@ public final class LazyJavaPackageFragmentProvider implements PackageFragmentPro
         if (i != null) {
             return i;
         }
-        g = C8214m.g();
+        g = m.g();
         return g;
     }
 
@@ -90,7 +90,7 @@ public final class LazyJavaPackageFragmentProvider implements PackageFragmentPro
     public List<LazyJavaPackageFragment> getPackageFragments(@NotNull hp0 hp0Var) {
         List<LazyJavaPackageFragment> k;
         b41.i(hp0Var, "fqName");
-        k = C8214m.k(b(hp0Var));
+        k = m.k(b(hp0Var));
         return k;
     }
 

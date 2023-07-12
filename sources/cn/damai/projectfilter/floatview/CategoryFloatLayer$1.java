@@ -11,7 +11,7 @@ import com.android.alibaba.ip.runtime.IpChange;
 /* loaded from: classes6.dex */
 public class CategoryFloatLayer$1 extends RecyclerView.ItemDecoration {
     private static transient /* synthetic */ IpChange $ipChange;
-    final /* synthetic */ View$OnClickListenerC1517b a;
+    final /* synthetic */ b a;
 
     @Override // androidx.recyclerview.widget.RecyclerView.ItemDecoration
     public void getItemOffsets(@NonNull Rect rect, @NonNull View view, @NonNull RecyclerView recyclerView, @NonNull RecyclerView.State state) {

@@ -15,7 +15,7 @@ public class YKRadioButton extends AppCompatRadioButton implements YKCustomizedV
 
     @Override // com.youku.resource.widget.YKCustomizedView
     public void init(Context context, AttributeSet attributeSet) {
-        setButtonDrawable(R.C8072drawable.radiobutton_style);
+        setButtonDrawable(R.drawable.radiobutton_style);
     }
 
     public YKRadioButton(Context context, AttributeSet attributeSet) {

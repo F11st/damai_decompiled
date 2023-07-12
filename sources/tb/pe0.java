@@ -308,7 +308,7 @@ public final class pe0 {
         for (int i2 = 1; i2 <= 40; i2++) {
             ex2 e = ex2.e(i2);
             int d = e.d();
-            ex2.C9119b c = e.c(df0Var);
+            ex2.b c = e.c(df0Var);
             int d2 = c.d();
             int c2 = c.c();
             int i3 = d - d2;

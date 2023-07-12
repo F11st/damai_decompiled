@@ -5,8 +5,8 @@ import com.alibaba.gaiax.GXTemplateEngine;
 import com.alibaba.gaiax.template.GXTemplateInfo;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
-import kotlin.C8177b;
 import kotlin.Lazy;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -18,7 +18,7 @@ import tb.wt2;
 /* loaded from: classes6.dex */
 public final class GXTemplateInfoSource implements GXRegisterCenter.GXIExtensionTemplateInfoSource {
     @NotNull
-    public static final C3359a Companion = new C3359a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final Lazy<GXTemplateInfoSource> c;
     @NotNull
@@ -27,13 +27,12 @@ public final class GXTemplateInfoSource implements GXRegisterCenter.GXIExtension
     private final ConcurrentHashMap<String, ConcurrentHashMap<String, GXTemplateInfo>> b = new ConcurrentHashMap<>();
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.data.cache.GXTemplateInfoSource$a */
     /* loaded from: classes6.dex */
-    public static final class C3359a {
-        private C3359a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3359a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -45,7 +44,7 @@ public final class GXTemplateInfoSource implements GXRegisterCenter.GXIExtension
 
     static {
         Lazy<GXTemplateInfoSource> b;
-        b = C8177b.b(new Function0<GXTemplateInfoSource>() { // from class: com.alibaba.gaiax.data.cache.GXTemplateInfoSource$Companion$instance$2
+        b = b.b(new Function0<GXTemplateInfoSource>() { // from class: com.alibaba.gaiax.data.cache.GXTemplateInfoSource$Companion$instance$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull
@@ -86,33 +85,33 @@ public final class GXTemplateInfoSource implements GXRegisterCenter.GXIExtension
 
     @Override // com.alibaba.gaiax.GXRegisterCenter.GXIExtensionTemplateInfoSource
     @Nullable
-    public GXTemplateInfo getTemplateInfo(@NotNull GXTemplateEngine.C3347i c3347i) {
+    public GXTemplateInfo getTemplateInfo(@NotNull GXTemplateEngine.i iVar) {
         GXTemplateInfo g;
-        b41.i(c3347i, "gxTemplateItem");
-        if (d(c3347i.a(), c3347i.d())) {
-            ConcurrentHashMap<String, GXTemplateInfo> concurrentHashMap = this.b.get(c3347i.a());
-            GXTemplateInfo gXTemplateInfo = concurrentHashMap == null ? null : concurrentHashMap.get(c3347i.d());
+        b41.i(iVar, "gxTemplateItem");
+        if (d(iVar.a(), iVar.d())) {
+            ConcurrentHashMap<String, GXTemplateInfo> concurrentHashMap = this.b.get(iVar.a());
+            GXTemplateInfo gXTemplateInfo = concurrentHashMap == null ? null : concurrentHashMap.get(iVar.d());
             if (gXTemplateInfo != null) {
                 return gXTemplateInfo;
             }
             throw new IllegalArgumentException("Template exist but reference is null");
         }
-        String r = b41.r(c3347i.a(), c3347i.d());
+        String r = b41.r(iVar.a(), iVar.d());
         Object obj = this.a.get(r);
         if (obj == null) {
             obj = new Object();
             this.a.put(r, obj);
         }
         synchronized (obj) {
-            g = GXTemplateInfo.Companion.g(c3347i);
+            g = GXTemplateInfo.Companion.g(iVar);
             wt2 wt2Var = wt2.INSTANCE;
         }
-        ConcurrentHashMap<String, GXTemplateInfo> concurrentHashMap2 = this.b.get(c3347i.a());
+        ConcurrentHashMap<String, GXTemplateInfo> concurrentHashMap2 = this.b.get(iVar.a());
         if (concurrentHashMap2 == null) {
             concurrentHashMap2 = new ConcurrentHashMap<>();
-            this.b.put(c3347i.a(), concurrentHashMap2);
+            this.b.put(iVar.a(), concurrentHashMap2);
         }
-        concurrentHashMap2.put(c3347i.d(), g);
+        concurrentHashMap2.put(iVar.d(), g);
         c(concurrentHashMap2, g);
         return g;
     }

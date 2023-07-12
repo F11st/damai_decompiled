@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -16,7 +16,7 @@ import tb.dg0;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableCombineLatest<T, R> extends AbstractC8149d<R> {
+public final class ObservableCombineLatest<T, R> extends d<R> {
     final int bufferSize;
     final Function<? super Object[], ? extends R> combiner;
     final boolean delayError;
@@ -320,12 +320,12 @@ public final class ObservableCombineLatest<T, R> extends AbstractC8149d<R> {
         this.delayError = z;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super R> observer) {
         int length;
         ObservableSource<? extends T>[] observableSourceArr = this.sources;
         if (observableSourceArr == null) {
-            observableSourceArr = new AbstractC8149d[8];
+            observableSourceArr = new d[8];
             length = 0;
             for (ObservableSource<? extends T> observableSource : this.sourcesIterable) {
                 if (length == observableSourceArr.length) {

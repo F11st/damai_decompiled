@@ -2,8 +2,6 @@ package tb;
 
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Type;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$TypeTable;
 import org.jetbrains.annotations.NotNull;
@@ -22,13 +20,13 @@ public final class er2 {
             int firstNullable = protoBuf$TypeTable.getFirstNullable();
             List<ProtoBuf$Type> typeList2 = protoBuf$TypeTable.getTypeList();
             b41.h(typeList2, "typeTable.typeList");
-            q = C8215n.q(typeList2, 10);
+            q = kotlin.collections.n.q(typeList2, 10);
             ArrayList arrayList = new ArrayList(q);
             int i = 0;
             for (Object obj : typeList2) {
                 int i2 = i + 1;
                 if (i < 0) {
-                    C8214m.p();
+                    kotlin.collections.m.p();
                 }
                 ProtoBuf$Type protoBuf$Type = (ProtoBuf$Type) obj;
                 if (i >= firstNullable) {

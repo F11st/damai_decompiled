@@ -31,12 +31,11 @@ public class AnnouncementViewHolder extends CommonViewHolder {
     private TrackInfo mTrackInfo;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.viewholder.AnnouncementViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1855a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1855a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -58,7 +57,7 @@ public class AnnouncementViewHolder extends CommonViewHolder {
 
     public AnnouncementViewHolder(View view) {
         super(view);
-        this.mOnClickListener = new View$OnClickListenerC1855a();
+        this.mOnClickListener = new a();
         this.mContext = view.getContext();
         this.mAnnouncementLayout = this.itemView.findViewById(R$id.homepage_announcement_layout);
         this.mAnnouncementContent = (TextView) this.itemView.findViewById(R$id.homepage_announcement_content);
@@ -77,8 +76,8 @@ public class AnnouncementViewHolder extends CommonViewHolder {
         } else {
             this.mTrackInfo = commonBean.trackInfo;
             WarningMessageBean warningMessageBean = (WarningMessageBean) commonBean;
-            String a = g6.a(this.mContext);
-            if (a != null && (str = warningMessageBean.warningMessage) != null && a.equals(str) && (B = z20.B("remove_announcement")) != null && "true".equals(B)) {
+            String a2 = g6.a(this.mContext);
+            if (a2 != null && (str = warningMessageBean.warningMessage) != null && a2.equals(str) && (B = z20.B("remove_announcement")) != null && "true".equals(B)) {
                 this.mAnnouncementLayout.setVisibility(8);
                 return;
             }

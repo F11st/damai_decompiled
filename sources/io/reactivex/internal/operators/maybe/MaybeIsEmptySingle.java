@@ -1,11 +1,11 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8148c;
-import io.reactivex.AbstractC8152e;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeSource;
 import io.reactivex.SingleObserver;
+import io.reactivex.c;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.fuseable.FuseToMaybe;
 import io.reactivex.internal.fuseable.HasUpstreamMaybeSource;
@@ -13,7 +13,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeIsEmptySingle<T> extends AbstractC8152e<Boolean> implements HasUpstreamMaybeSource<T>, FuseToMaybe<Boolean> {
+public final class MaybeIsEmptySingle<T> extends e<Boolean> implements HasUpstreamMaybeSource<T>, FuseToMaybe<Boolean> {
     final MaybeSource<T> source;
 
     /* compiled from: Taobao */
@@ -69,7 +69,7 @@ public final class MaybeIsEmptySingle<T> extends AbstractC8152e<Boolean> impleme
     }
 
     @Override // io.reactivex.internal.fuseable.FuseToMaybe
-    public AbstractC8148c<Boolean> fuseToMaybe() {
+    public c<Boolean> fuseToMaybe() {
         return i42.m(new MaybeIsEmpty(this.source));
     }
 
@@ -78,7 +78,7 @@ public final class MaybeIsEmptySingle<T> extends AbstractC8152e<Boolean> impleme
         return this.source;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super Boolean> singleObserver) {
         this.source.subscribe(new IsEmptyMaybeObserver(singleObserver));
     }

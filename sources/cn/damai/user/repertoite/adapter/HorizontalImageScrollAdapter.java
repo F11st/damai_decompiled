@@ -11,9 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
-import cn.damai.common.user.C0529c;
 import cn.damai.homepage.R$drawable;
 import cn.damai.uikit.view.RoundImageView;
 import cn.damai.user.repertoite.bean.RepertoireDetailDataBean;
@@ -24,13 +22,13 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
 import java.util.List;
-import tb.C9826vr;
 import tb.t60;
 import tb.u12;
+import tb.vr;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
-public class HorizontalImageScrollAdapter extends RecyclerView.Adapter<C2696c> {
+public class HorizontalImageScrollAdapter extends RecyclerView.Adapter<c> {
     private static transient /* synthetic */ IpChange $ipChange;
     private List<RepertoireDetailDataBean.RepertoireInfoBean.StoryPicsInfoBean.PicInfosBean> a;
     private Context c;
@@ -43,21 +41,20 @@ public class HorizontalImageScrollAdapter extends RecyclerView.Adapter<C2696c> {
     int i = SecExceptionCode.SEC_ERROR_INIT_INDEX_ERROR;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.repertoite.adapter.HorizontalImageScrollAdapter$a */
     /* loaded from: classes9.dex */
-    public class C2692a implements DMImageCreator.DMImageFailListener {
+    public class a implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ RepertoireDetailDataBean.RepertoireInfoBean.StoryPicsInfoBean.PicInfosBean a;
-        final /* synthetic */ C2696c b;
+        final /* synthetic */ c b;
         final /* synthetic */ int c;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.user.repertoite.adapter.HorizontalImageScrollAdapter$a$a */
+        /* renamed from: cn.damai.user.repertoite.adapter.HorizontalImageScrollAdapter$a$a  reason: collision with other inner class name */
         /* loaded from: classes17.dex */
-        public class View$OnClickListenerC2693a implements View.OnClickListener {
+        public class View$OnClickListenerC0093a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC2693a() {
+            View$OnClickListenerC0093a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -69,7 +66,7 @@ public class HorizontalImageScrollAdapter extends RecyclerView.Adapter<C2696c> {
                 }
                 Intent intent = new Intent(HorizontalImageScrollAdapter.this.c, GalleryImagesActivity.class);
                 intent.putExtra("images", HorizontalImageScrollAdapter.this.b);
-                intent.putExtra("location", C2692a.this.c);
+                intent.putExtra("location", a.this.c);
                 if (HorizontalImageScrollAdapter.this.c == null || ((Activity) HorizontalImageScrollAdapter.this.c).isFinishing()) {
                     return;
                 }
@@ -77,17 +74,17 @@ public class HorizontalImageScrollAdapter extends RecyclerView.Adapter<C2696c> {
             }
         }
 
-        C2692a(RepertoireDetailDataBean.RepertoireInfoBean.StoryPicsInfoBean.PicInfosBean picInfosBean, C2696c c2696c, int i) {
+        a(RepertoireDetailDataBean.RepertoireInfoBean.StoryPicsInfoBean.PicInfosBean picInfosBean, c cVar, int i) {
             this.a = picInfosBean;
-            this.b = c2696c;
+            this.b = cVar;
             this.c = i;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "313019305")) {
-                ipChange.ipc$dispatch("313019305", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("313019305", new Object[]{this, dVar});
                 return;
             }
             if (this.a.getWidth() == null || this.a.getHeight() == null || Double.valueOf(this.a.getWidth()).doubleValue() <= 0.0d || Double.valueOf(this.a.getHeight()).doubleValue() <= 0.0d) {
@@ -110,26 +107,24 @@ public class HorizontalImageScrollAdapter extends RecyclerView.Adapter<C2696c> {
                 this.b.a.setLayoutParams(layoutParams);
             }
             this.b.a.setImageResource(R$drawable.uikit_default_image_bg_gradient);
-            this.b.a.setOnClickListener(new View$OnClickListenerC2693a());
+            this.b.a.setOnClickListener(new View$OnClickListenerC0093a());
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.repertoite.adapter.HorizontalImageScrollAdapter$b */
     /* loaded from: classes9.dex */
-    public class C2694b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ RepertoireDetailDataBean.RepertoireInfoBean.StoryPicsInfoBean.PicInfosBean a;
-        final /* synthetic */ C2696c b;
+        final /* synthetic */ c b;
         final /* synthetic */ int c;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.user.repertoite.adapter.HorizontalImageScrollAdapter$b$a */
         /* loaded from: classes17.dex */
-        public class View$OnClickListenerC2695a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC2695a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -141,29 +136,29 @@ public class HorizontalImageScrollAdapter extends RecyclerView.Adapter<C2696c> {
                 }
                 Intent intent = new Intent(HorizontalImageScrollAdapter.this.c, GalleryImagesActivity.class);
                 intent.putExtra("images", HorizontalImageScrollAdapter.this.b);
-                intent.putExtra("location", C2694b.this.c);
+                intent.putExtra("location", b.this.c);
                 if (HorizontalImageScrollAdapter.this.c == null || ((Activity) HorizontalImageScrollAdapter.this.c).isFinishing()) {
                     return;
                 }
                 HorizontalImageScrollAdapter.this.c.startActivity(intent);
-                C0529c.e().x(u12.h().o(HorizontalImageScrollAdapter.this.d, HorizontalImageScrollAdapter.this.e, HorizontalImageScrollAdapter.this.f, C2694b.this.c));
+                cn.damai.common.user.c.e().x(u12.h().o(HorizontalImageScrollAdapter.this.d, HorizontalImageScrollAdapter.this.e, HorizontalImageScrollAdapter.this.f, b.this.c));
             }
         }
 
-        C2694b(RepertoireDetailDataBean.RepertoireInfoBean.StoryPicsInfoBean.PicInfosBean picInfosBean, C2696c c2696c, int i) {
+        b(RepertoireDetailDataBean.RepertoireInfoBean.StoryPicsInfoBean.PicInfosBean picInfosBean, c cVar, int i) {
             this.a = picInfosBean;
-            this.b = c2696c;
+            this.b = cVar;
             this.c = i;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-467330434")) {
-                ipChange.ipc$dispatch("-467330434", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("-467330434", new Object[]{this, eVar});
                 return;
             }
-            Drawable drawable = c0502e.a;
+            Drawable drawable = eVar.a;
             if (drawable != null) {
                 Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
                 if (this.a.getWidth() == null || this.a.getHeight() == null || Double.valueOf(this.a.getWidth()).doubleValue() <= 0.0d || Double.valueOf(this.a.getHeight()).doubleValue() <= 0.0d) {
@@ -185,19 +180,18 @@ public class HorizontalImageScrollAdapter extends RecyclerView.Adapter<C2696c> {
                     this.b.a.setLayoutParams(layoutParams);
                 }
                 this.b.a.setImageBitmap(bitmap);
-                this.b.a.setOnClickListener(new View$OnClickListenerC2695a());
+                this.b.a.setOnClickListener(new a());
             }
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.repertoite.adapter.HorizontalImageScrollAdapter$c */
     /* loaded from: classes9.dex */
-    public class C2696c extends RecyclerView.ViewHolder {
+    public class c extends RecyclerView.ViewHolder {
         private ImageView a;
 
-        public C2696c(HorizontalImageScrollAdapter horizontalImageScrollAdapter, View view, ImageView imageView) {
+        public c(HorizontalImageScrollAdapter horizontalImageScrollAdapter, View view, ImageView imageView) {
             super(view);
             this.a = imageView;
         }
@@ -233,15 +227,15 @@ public class HorizontalImageScrollAdapter extends RecyclerView.Adapter<C2696c> {
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     /* renamed from: g */
-    public void onBindViewHolder(C2696c c2696c, int i) {
+    public void onBindViewHolder(c cVar, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1699739103")) {
-            ipChange.ipc$dispatch("-1699739103", new Object[]{this, c2696c, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-1699739103", new Object[]{this, cVar, Integer.valueOf(i)});
             return;
         }
         RepertoireDetailDataBean.RepertoireInfoBean.StoryPicsInfoBean.PicInfosBean picInfosBean = this.a.get(i);
         if (picInfosBean.getWidth() != null && picInfosBean.getHeight() != null && Double.valueOf(picInfosBean.getWidth()).doubleValue() > 0.0d && Double.valueOf(picInfosBean.getHeight()).doubleValue() > 0.0d) {
-            RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) c2696c.a.getLayoutParams();
+            RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) cVar.a.getLayoutParams();
             layoutParams.width = (int) ((this.g * Double.valueOf(picInfosBean.getWidth()).doubleValue()) / Double.valueOf(picInfosBean.getHeight()).doubleValue());
             layoutParams.height = this.g;
             if (i == 0) {
@@ -254,13 +248,13 @@ public class HorizontalImageScrollAdapter extends RecyclerView.Adapter<C2696c> {
             } else {
                 layoutParams.rightMargin = 0;
             }
-            c2696c.a.setLayoutParams(layoutParams);
+            cVar.a.setLayoutParams(layoutParams);
         }
-        if (c2696c.a.getTag() instanceof C9826vr) {
-            ((C9826vr) c2696c.a.getTag()).cancel();
+        if (cVar.a.getTag() instanceof vr) {
+            ((vr) cVar.a.getTag()).cancel();
         }
-        c2696c.a.setOnClickListener(null);
-        c2696c.a.setTag(C0504a.b().c(picInfosBean.getPicUrl()).i(R$drawable.uikit_default_image_bg_gradient).n(new C2694b(picInfosBean, c2696c, i)).e(new C2692a(picInfosBean, c2696c, i)).f());
+        cVar.a.setOnClickListener(null);
+        cVar.a.setTag(cn.damai.common.image.a.b().c(picInfosBean.getPicUrl()).i(R$drawable.uikit_default_image_bg_gradient).n(new b(picInfosBean, cVar, i)).e(new a(picInfosBean, cVar, i)).f());
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
@@ -278,17 +272,17 @@ public class HorizontalImageScrollAdapter extends RecyclerView.Adapter<C2696c> {
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     /* renamed from: h */
-    public C2696c onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public c onCreateViewHolder(ViewGroup viewGroup, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-9529355")) {
-            return (C2696c) ipChange.ipc$dispatch("-9529355", new Object[]{this, viewGroup, Integer.valueOf(i)});
+            return (c) ipChange.ipc$dispatch("-9529355", new Object[]{this, viewGroup, Integer.valueOf(i)});
         }
         RelativeLayout relativeLayout = new RelativeLayout(viewGroup.getContext());
         RoundImageView roundImageView = new RoundImageView(viewGroup.getContext());
         roundImageView.setBorderRadius(3);
         roundImageView.setType(1);
         relativeLayout.addView(roundImageView);
-        return new C2696c(this, relativeLayout, roundImageView);
+        return new c(this, relativeLayout, roundImageView);
     }
 
     public void i(String str) {

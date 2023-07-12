@@ -4,7 +4,6 @@ import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
-import com.taobao.android.dinamicx.template.download.C6400c;
 import com.taobao.android.dinamicx.template.download.DXPriorityRunnable;
 import com.taobao.android.dinamicx.thread.DXDownLoadRunnable;
 import com.taobao.android.dinamicx.thread.DXMonitorRunnable;
@@ -18,23 +17,22 @@ public class y00 {
     private static String m = "monitor_thread";
     private static String n = "render_thread";
     private Handler a;
-    private C6400c b;
-    private C6400c c;
-    private C6400c d;
+    private com.taobao.android.dinamicx.template.download.c b;
+    private com.taobao.android.dinamicx.template.download.c c;
+    private com.taobao.android.dinamicx.template.download.c d;
     private ScheduledExecutorService e;
     private HandlerThread f;
     private Handler g;
-    private C6400c h;
+    private com.taobao.android.dinamicx.template.download.c h;
     private HandlerThread i;
-    private C6400c j;
-    private C6400c k;
-    private C6400c l;
+    private com.taobao.android.dinamicx.template.download.c j;
+    private com.taobao.android.dinamicx.template.download.c k;
+    private com.taobao.android.dinamicx.template.download.c l;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.y00$a */
     /* loaded from: classes11.dex */
-    class ThreadFactoryC9941a implements ThreadFactory {
-        ThreadFactoryC9941a(y00 y00Var) {
+    class a implements ThreadFactory {
+        a(y00 y00Var) {
         }
 
         @Override // java.util.concurrent.ThreadFactory
@@ -44,10 +42,9 @@ public class y00 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.y00$b */
     /* loaded from: classes11.dex */
-    static class ThreadFactoryC9942b implements ThreadFactory {
-        ThreadFactoryC9942b() {
+    static class b implements ThreadFactory {
+        b() {
         }
 
         @Override // java.util.concurrent.ThreadFactory
@@ -58,13 +55,12 @@ public class y00 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.y00$c */
     /* loaded from: classes11.dex */
-    public static class C9943c {
+    public static class c {
         private static final y00 a = new y00(null);
     }
 
-    /* synthetic */ y00(ThreadFactoryC9941a threadFactoryC9941a) {
+    /* synthetic */ y00(a aVar) {
         this();
     }
 
@@ -82,7 +78,7 @@ public class y00 {
     }
 
     public static y00 d() {
-        return C9943c.a;
+        return c.a;
     }
 
     public static boolean e(Runnable runnable) {
@@ -111,7 +107,7 @@ public class y00 {
 
     public static void k(Runnable runnable) {
         if (d().h == null) {
-            d().h = new C6400c(2, true, new ThreadFactoryC9942b());
+            d().h = new com.taobao.android.dinamicx.template.download.c(2, true, new b());
         }
         d().h.execute(runnable);
     }
@@ -149,9 +145,9 @@ public class y00 {
 
     private y00() {
         this.a = new Handler(Looper.getMainLooper());
-        this.b = new C6400c(true);
-        this.d = new C6400c(true);
-        this.e = new ScheduledThreadPoolExecutor(1, new ThreadFactoryC9941a(this));
+        this.b = new com.taobao.android.dinamicx.template.download.c(true);
+        this.d = new com.taobao.android.dinamicx.template.download.c(true);
+        this.e = new ScheduledThreadPoolExecutor(1, new a(this));
         HandlerThread handlerThread = new HandlerThread(m);
         this.f = handlerThread;
         handlerThread.start();
@@ -159,9 +155,9 @@ public class y00 {
         HandlerThread handlerThread2 = new HandlerThread(n);
         this.i = handlerThread2;
         handlerThread2.start();
-        this.j = new C6400c(1, true);
-        this.l = new C6400c(1, true);
-        this.k = new C6400c(2, true);
-        this.c = new C6400c(2, true);
+        this.j = new com.taobao.android.dinamicx.template.download.c(1, true);
+        this.l = new com.taobao.android.dinamicx.template.download.c(1, true);
+        this.k = new com.taobao.android.dinamicx.template.download.c(2, true);
+        this.c = new com.taobao.android.dinamicx.template.download.c(2, true);
     }
 }

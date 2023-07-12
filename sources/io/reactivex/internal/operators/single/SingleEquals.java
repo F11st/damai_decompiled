@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.single;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.functions.ObjectHelper;
 import java.util.concurrent.atomic.AtomicInteger;
 import tb.i42;
@@ -11,7 +11,7 @@ import tb.jm;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SingleEquals<T> extends AbstractC8152e<Boolean> {
+public final class SingleEquals<T> extends e<Boolean> {
     final SingleSource<? extends T> first;
     final SingleSource<? extends T> second;
 
@@ -67,7 +67,7 @@ public final class SingleEquals<T> extends AbstractC8152e<Boolean> {
         this.second = singleSource2;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super Boolean> singleObserver) {
         AtomicInteger atomicInteger = new AtomicInteger();
         Object[] objArr = {null, null};

@@ -28,6 +28,6 @@ public final class FlowKt__LimitKt$collectWhile$1 extends ContinuationImpl {
     public final Object invokeSuspend(@NotNull Object obj) {
         this.result = obj;
         this.label |= Integer.MIN_VALUE;
-        return C8672c.g(null, null, this);
+        return c.g(null, null, this);
     }
 }

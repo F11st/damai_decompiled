@@ -39,12 +39,11 @@ public class AnchorManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.anchor.AnchorManager$a */
     /* loaded from: classes16.dex */
-    public class C2274a implements Comparator<c5> {
+    public class a implements Comparator<c5> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2274a(AnchorManager anchorManager) {
+        a(AnchorManager anchorManager) {
         }
 
         @Override // java.util.Comparator
@@ -129,7 +128,7 @@ public class AnchorManager {
         }
         ArrayList arrayList = new ArrayList();
         arrayList.addAll(this.a.values());
-        Collections.sort(arrayList, new C2274a(this));
+        Collections.sort(arrayList, new a(this));
         return arrayList;
     }
 

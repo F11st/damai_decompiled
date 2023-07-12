@@ -1,7 +1,6 @@
 package com.alibaba.aliweex.adapter.module;
 
 import android.text.TextUtils;
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.adapter.IConfigGeneratorAdapter;
 import com.alibaba.aliweex.adapter.IConfigModuleAdapter;
 import com.alibaba.aliweex.adapter.IConfigModuleListener;
@@ -26,10 +25,9 @@ public class WXConfigModule extends WXModule implements IConfigModuleListener, D
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.module.WXConfigModule$a */
     /* loaded from: classes5.dex */
-    public class C3046a implements IConfigModuleAdapter {
-        C3046a(WXConfigModule wXConfigModule) {
+    public class a implements IConfigModuleAdapter {
+        a(WXConfigModule wXConfigModule) {
         }
 
         @Override // com.alibaba.aliweex.IConfigAdapter
@@ -62,11 +60,11 @@ public class WXConfigModule extends WXModule implements IConfigModuleListener, D
 
     private IConfigModuleAdapter getConfigAdapter() {
         IConfigGeneratorAdapter d;
-        if (this.adapter == null && (d = C3004a.l().d()) != null) {
+        if (this.adapter == null && (d = com.alibaba.aliweex.a.l().d()) != null) {
             this.adapter = d.generateConfigInstance("");
         }
         if (this.adapter == null) {
-            this.adapter = new C3046a(this);
+            this.adapter = new a(this);
         }
         return this.adapter;
     }

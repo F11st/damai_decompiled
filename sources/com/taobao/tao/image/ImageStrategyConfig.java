@@ -40,9 +40,8 @@ public class ImageStrategyConfig {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.tao.image.ImageStrategyConfig$b */
     /* loaded from: classes11.dex */
-    public static class C6898b {
+    public static class b {
         boolean a;
         String b;
         int c;
@@ -58,7 +57,7 @@ public class ImageStrategyConfig {
         TaobaoImageUrlStrategy.ImageQuality m;
         SizeLimitType n;
 
-        public C6898b(String str, int i) {
+        public b(String str, int i) {
             this.b = str;
             this.c = i;
         }
@@ -67,28 +66,28 @@ public class ImageStrategyConfig {
             return new ImageStrategyConfig(this);
         }
 
-        public C6898b b(boolean z) {
+        public b b(boolean z) {
             this.g = Boolean.valueOf(z);
             return this;
         }
 
-        public C6898b c(TaobaoImageUrlStrategy.ImageQuality imageQuality) {
+        public b c(TaobaoImageUrlStrategy.ImageQuality imageQuality) {
             this.m = imageQuality;
             return this;
         }
 
-        public C6898b d(SizeLimitType sizeLimitType) {
+        public b d(SizeLimitType sizeLimitType) {
             this.n = sizeLimitType;
             return this;
         }
     }
 
-    public static C6898b o(String str) {
-        return new C6898b(str, 0);
+    public static b o(String str) {
+        return new b(str, 0);
     }
 
-    public static C6898b p(String str, int i) {
-        return new C6898b(str, i);
+    public static b p(String str, int i) {
+        return new b(str, i);
     }
 
     public int a() {
@@ -200,24 +199,24 @@ public class ImageStrategyConfig {
         return String.valueOf(this.c);
     }
 
-    private ImageStrategyConfig(C6898b c6898b) {
-        this.b = c6898b.b;
-        this.c = c6898b.c;
-        this.a = c6898b.a;
-        this.d = c6898b.d;
-        this.e = c6898b.e;
-        this.g = c6898b.f;
-        this.h = c6898b.g;
-        this.i = c6898b.h;
-        this.j = c6898b.i;
-        this.k = c6898b.j;
-        this.l = c6898b.k;
-        this.m = c6898b.m;
-        Boolean bool = c6898b.l;
+    private ImageStrategyConfig(b bVar) {
+        this.b = bVar.b;
+        this.c = bVar.c;
+        this.a = bVar.a;
+        this.d = bVar.d;
+        this.e = bVar.e;
+        this.g = bVar.f;
+        this.h = bVar.g;
+        this.i = bVar.h;
+        this.j = bVar.i;
+        this.k = bVar.j;
+        this.l = bVar.k;
+        this.m = bVar.m;
+        Boolean bool = bVar.l;
         if (bool != null) {
             this.f = bool.booleanValue();
         }
-        SizeLimitType sizeLimitType = c6898b.n;
+        SizeLimitType sizeLimitType = bVar.n;
         this.n = sizeLimitType;
         if (sizeLimitType == null) {
             this.n = SizeLimitType.ALL_LIMIT;

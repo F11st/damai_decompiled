@@ -16,7 +16,6 @@ import com.alibaba.emas.publish.channel.mtop.PublishMtopUpdateInfo;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.taobao.update.datasource.data.UpdateDataListener;
-import com.taobao.update.datasource.local.C6922a;
 import com.taobao.update.datasource.local.UpdateInfo;
 import com.taobao.update.datasource.logger.Log;
 import com.taobao.update.datasource.mtop.MtopUpdater;
@@ -26,7 +25,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import tb.C9798v2;
 import tb.ae0;
 import tb.be0;
 import tb.hu2;
@@ -37,6 +35,7 @@ import tb.pu2;
 import tb.qp;
 import tb.qu1;
 import tb.ub1;
+import tb.v2;
 import tb.wd0;
 import tb.xd0;
 
@@ -61,10 +60,9 @@ public class UpdateDataSource implements UpdateDataListener {
     volatile boolean j = false;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.update.datasource.UpdateDataSource$a */
     /* loaded from: classes11.dex */
-    class HandlerC6920a extends Handler {
-        HandlerC6920a(Looper looper) {
+    class a extends Handler {
+        a(Looper looper) {
             super(looper);
         }
 
@@ -133,12 +131,11 @@ public class UpdateDataSource implements UpdateDataListener {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.update.datasource.UpdateDataSource$b */
     /* loaded from: classes11.dex */
-    public class C6921b implements MtopUpdater.MtopDataListener {
+    public class b implements MtopUpdater.MtopDataListener {
         final /* synthetic */ boolean a;
 
-        C6921b(boolean z) {
+        b(boolean z) {
             this.a = z;
         }
 
@@ -160,7 +157,7 @@ public class UpdateDataSource implements UpdateDataListener {
         HandlerThread handlerThread = new HandlerThread(UpdateDataSource.class.getName());
         this.f = handlerThread;
         handlerThread.start();
-        this.h = new HandlerC6920a(this.f.getLooper());
+        this.h = new a(this.f.getLooper());
     }
 
     public static UpdateDataSource getInstance() {
@@ -293,7 +290,7 @@ public class UpdateDataSource implements UpdateDataListener {
         }
         MtopUpdater mtopUpdater = (MtopUpdater) this.e.get(lu2.MTOP_SOURCE);
         if (mtopUpdater != null) {
-            mtopUpdater.setMtopDataListener(new C6921b(z)).startUpdate(!z);
+            mtopUpdater.setMtopDataListener(new b(z)).startUpdate(!z);
         }
     }
 
@@ -301,11 +298,11 @@ public class UpdateDataSource implements UpdateDataListener {
     public synchronized void m(UpdateInfo.UpdateData updateData, PatchType patchType) {
         Map<String, UpdateInfo.UpdateData> map;
         if (!TextUtils.isEmpty(updateData.subFrom) && updateData.subFrom.equals(lu2.CACHE_SOURCE)) {
-            UpdateInfo data = C6922a.getInstance(sContext).getData();
+            UpdateInfo data = com.taobao.update.datasource.local.a.getInstance(sContext).getData();
             if (data != null && (map = data.updateList) != null) {
                 map.remove(patchType.getKey());
             }
-            C6922a.getInstance(sContext).resetData(data);
+            com.taobao.update.datasource.local.a.getInstance(sContext).resetData(data);
         }
     }
 
@@ -349,7 +346,7 @@ public class UpdateDataSource implements UpdateDataListener {
     }
 
     public void clearCache() {
-        C6922a.getInstance(sContext).clearCache();
+        com.taobao.update.datasource.local.a.getInstance(sContext).clearCache();
     }
 
     public Application getApplication() {
@@ -365,7 +362,7 @@ public class UpdateDataSource implements UpdateDataListener {
             l(true);
             return;
         }
-        UpdateInfo data = C6922a.getInstance(sContext).getData();
+        UpdateInfo data = com.taobao.update.datasource.local.a.getInstance(sContext).getData();
         if (this.a.isLocalDataValid(data)) {
             String str = null;
             if (data != null && (map = data.updateList) != null) {
@@ -405,22 +402,22 @@ public class UpdateDataSource implements UpdateDataListener {
         mtopUpdater.registerDataListener(this);
         this.e.put(lu2.MTOP_SOURCE, mtopUpdater);
         if (hu2Var.hasAccs()) {
-            C9798v2 c9798v2 = new C9798v2(sUpdateAdapter);
-            c9798v2.registerDataListener(this);
-            this.e.put(lu2.ACCS_SOURCE, c9798v2);
-            sUpdateAdapter.registerPushApi(application, c9798v2);
+            v2 v2Var = new v2(sUpdateAdapter);
+            v2Var.registerDataListener(this);
+            this.e.put(lu2.ACCS_SOURCE, v2Var);
+            sUpdateAdapter.registerPushApi(application, v2Var);
         }
         this.i.d(" inited ");
     }
 
     public void invalidUpdateInfo(String str) {
         UpdateInfo.UpdateData updateData;
-        UpdateInfo data = C6922a.getInstance(sContext).getData();
+        UpdateInfo data = com.taobao.update.datasource.local.a.getInstance(sContext).getData();
         if (data == null || (updateData = data.updateList.get(str)) == null) {
             return;
         }
         updateData.valid = false;
-        C6922a.getInstance(sContext).updateData(data);
+        com.taobao.update.datasource.local.a.getInstance(sContext).updateData(data);
     }
 
     @Override // com.taobao.update.datasource.data.UpdateDataListener
@@ -456,11 +453,11 @@ public class UpdateDataSource implements UpdateDataListener {
             }
             this.a.startUpdate();
             if (str.equals(lu2.SLIDE)) {
-                C6922a.getInstance(sContext).resetMemoryData(j);
+                com.taobao.update.datasource.local.a.getInstance(sContext).resetMemoryData(j);
             } else if ((str.equals(lu2.ACCS_SOURCE) || str.equals(lu2.MTOP_SOURCE)) && TextUtils.isEmpty(str2)) {
-                C6922a.getInstance(sContext).resetData(j);
+                com.taobao.update.datasource.local.a.getInstance(sContext).resetData(j);
             } else if (str.equals(lu2.EMAS_PUBLISH) && TextUtils.isEmpty(str2)) {
-                C6922a.getInstance(sContext).resetData(j);
+                com.taobao.update.datasource.local.a.getInstance(sContext).resetData(j);
             }
             if (k()) {
                 this.i.e("handling msg......");

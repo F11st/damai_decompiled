@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.viewpager.widget.PagerAdapter;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
@@ -15,8 +14,8 @@ import cn.damai.uikit.view.photoview.PhotoView;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.List;
-import tb.C9826vr;
 import tb.cb1;
+import tb.vr;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
@@ -34,13 +33,12 @@ public class ImageBrowseAdapter extends PagerAdapter {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.imagebrowse.adapter.ImageBrowseAdapter$a */
     /* loaded from: classes14.dex */
-    public class View$OnLongClickListenerC0715a implements View.OnLongClickListener {
+    public class a implements View.OnLongClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        View$OnLongClickListenerC0715a(int i) {
+        a(int i) {
             this.a = i;
         }
 
@@ -103,11 +101,11 @@ public class ImageBrowseAdapter extends PagerAdapter {
         }
         View inflate = LayoutInflater.from(this.a).inflate(R$layout.image_browse_item_layout, (ViewGroup) null);
         PhotoView photoView = (PhotoView) inflate.findViewById(R$id.poster);
-        photoView.setOnLongClickListener(new View$OnLongClickListenerC0715a(i));
-        if (photoView.getTag() instanceof C9826vr) {
-            ((C9826vr) photoView.getTag()).cancel();
+        photoView.setOnLongClickListener(new a(i));
+        if (photoView.getTag() instanceof vr) {
+            ((vr) photoView.getTag()).cancel();
         }
-        DMImageCreator c = C0504a.b().c(this.b.get(i).getPicUrl());
+        DMImageCreator c = cn.damai.common.image.a.b().c(this.b.get(i).getPicUrl());
         int i2 = R$drawable.damai_image_defalut;
         photoView.setTag(c.i(i2).c(i2).g(photoView));
         viewGroup.addView(inflate);

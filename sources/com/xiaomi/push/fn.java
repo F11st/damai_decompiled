@@ -2,7 +2,6 @@ package com.xiaomi.push;
 
 import android.content.Context;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.dx;
 import java.io.BufferedInputStream;
 import java.io.EOFException;
@@ -80,22 +79,22 @@ public class fn {
         this.f373a = false;
         fl m896a = m896a();
         if ("CONN".equals(m896a.m888a())) {
-            dx.C7640f a = dx.C7640f.a(m896a.m892a());
+            dx.f a = dx.f.a(m896a.m892a());
             if (a.m827a()) {
                 this.f369a.a(a.m826a());
                 z = true;
             }
             if (a.c()) {
-                dx.C7636b m825a = a.m825a();
+                dx.b m825a = a.m825a();
                 fl flVar = new fl();
                 flVar.a("SYNC", "CONF");
                 flVar.a(m825a.m852a(), (String) null);
                 this.f369a.a(flVar);
             }
-            AbstractC7535b.m586a("[Slim] CONN: host = " + a.m828b());
+            com.xiaomi.channel.commonutils.logger.b.m586a("[Slim] CONN: host = " + a.m828b());
         }
         if (!z) {
-            AbstractC7535b.m586a("[Slim] Invalid CONN");
+            com.xiaomi.channel.commonutils.logger.b.m586a("[Slim] Invalid CONN");
             throw new IOException("Invalid Connection");
         }
         this.f374a = this.f369a.m903a();
@@ -107,7 +106,7 @@ public class fn {
                 if (m890a != 2) {
                     if (m890a != 3) {
                         str = "[Slim] unknow blob type " + ((int) m896a2.m890a());
-                        AbstractC7535b.m586a(str);
+                        com.xiaomi.channel.commonutils.logger.b.m586a(str);
                     } else {
                         try {
                             this.f369a.b(this.f368a.a(m896a2.m892a(), this.f369a));
@@ -121,7 +120,7 @@ public class fn {
                             sb.append(" failure:");
                             sb.append(e.getMessage());
                             str = sb.toString();
-                            AbstractC7535b.m586a(str);
+                            com.xiaomi.channel.commonutils.logger.b.m586a(str);
                         }
                     }
                 } else if ("SECMSG".equals(m896a2.m888a()) && ((m896a2.a() == 2 || m896a2.a() == 3) && TextUtils.isEmpty(m896a2.m894b()))) {
@@ -137,14 +136,14 @@ public class fn {
                         sb.append(" failure:");
                         sb.append(e.getMessage());
                         str = sb.toString();
-                        AbstractC7535b.m586a(str);
+                        com.xiaomi.channel.commonutils.logger.b.m586a(str);
                     }
                 } else if (m896a2.a() == 10) {
                     m896a2.b(10);
-                    m896a2.f364a.f893a = C7787w.a(this.a);
+                    m896a2.f364a.f893a = w.a(this.a);
                     m896a2.f364a.f895b = bj.e(this.a);
                     m896a2.f364a.f892a = System.currentTimeMillis();
-                    AbstractC7535b.c("rcv blob from chid 10");
+                    com.xiaomi.channel.commonutils.logger.b.c("rcv blob from chid 10");
                 }
             }
             this.f369a.a(m896a2);
@@ -161,7 +160,7 @@ public class fn {
                 a.flip();
                 a.position(8);
                 fl frVar = i == 8 ? new fr() : fl.a(a.slice());
-                AbstractC7535b.c("[Slim] Read {cmd=" + frVar.m888a() + ";chid=" + frVar.a() + ";len=" + i + "}");
+                com.xiaomi.channel.commonutils.logger.b.c("[Slim] Read {cmd=" + frVar.m888a() + ";chid=" + frVar.a() + ";len=" + i + "}");
                 return frVar;
             } catch (IOException e) {
                 e = e;
@@ -177,7 +176,7 @@ public class fn {
                 sb.append(ai.a(array, 0, i));
                 sb.append("] Err:");
                 sb.append(e.getMessage());
-                AbstractC7535b.m586a(sb.toString());
+                com.xiaomi.channel.commonutils.logger.b.m586a(sb.toString());
                 throw e;
             }
         } catch (IOException e2) {

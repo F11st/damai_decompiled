@@ -7,7 +7,7 @@ import tb.jn1;
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
 public class ALog {
-    public static C0236a a;
+    public static a a;
     private static volatile ILog b;
     private static Object c;
     private static boolean d;
@@ -36,9 +36,8 @@ public class ALog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.util.ALog$a */
     /* loaded from: classes.dex */
-    public static class C0236a implements ILog {
+    public static class a implements ILog {
         int a = 1;
 
         @Override // anet.channel.util.ALog.ILog
@@ -92,9 +91,9 @@ public class ALog {
     }
 
     static {
-        C0236a c0236a = new C0236a();
-        a = c0236a;
-        b = c0236a;
+        a aVar = new a();
+        a = aVar;
+        b = aVar;
         c = "|";
         d = true;
         e = true;

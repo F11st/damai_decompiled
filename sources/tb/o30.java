@@ -12,14 +12,13 @@ public class o30 {
     private List<DatalabMetricListener> a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.o30$b */
     /* loaded from: classes6.dex */
-    private static class C9503b {
+    private static class b {
         private static o30 a = new o30();
     }
 
     public static o30 a() {
-        return C9503b.a;
+        return b.a;
     }
 
     public List<DatalabMetricListener> b() {

@@ -7,11 +7,7 @@ import android.net.Proxy;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
-import com.tencent.connect.a.C7036a;
 import com.tencent.connect.auth.QQToken;
-import com.tencent.open.a.C7074f;
-import com.tencent.open.a.InterfaceC7075g;
-import com.tencent.open.log.C7102d;
 import com.tencent.open.log.SLog;
 import com.tencent.tauth.IRequestListener;
 import java.io.CharConversionException;
@@ -69,13 +65,12 @@ public class HttpUtils {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.tencent.open.utils.HttpUtils$a */
     /* loaded from: classes11.dex */
-    public static class C7110a {
+    public static class a {
         public final String a;
         public final int b;
 
-        private C7110a(String str, int i) {
+        private a(String str, int i) {
             this.a = str;
             this.b = i;
         }
@@ -86,7 +81,7 @@ public class HttpUtils {
 
     private static void a(Context context, QQToken qQToken, String str) {
         if (str.indexOf("add_share") > -1 || str.indexOf("upload_pic") > -1 || str.indexOf("add_topic") > -1 || str.indexOf("set_user_face") > -1 || str.indexOf("add_t") > -1 || str.indexOf("add_pic_t") > -1 || str.indexOf("add_pic_url") > -1 || str.indexOf("add_video") > -1) {
-            C7036a.a(context, qQToken, "requireApi", str);
+            com.tencent.connect.a.a.a(context, qQToken, "requireApi", str);
         }
     }
 
@@ -207,7 +202,7 @@ public class HttpUtils {
         return iOException instanceof ZipException ? -54 : -2;
     }
 
-    public static C7110a getProxy(Context context) {
+    public static a getProxy(Context context) {
         ConnectivityManager connectivityManager;
         NetworkInfo networkInfo;
         if (context == null || (connectivityManager = (ConnectivityManager) context.getSystemService("connectivity")) == null) {
@@ -220,9 +215,9 @@ public class HttpUtils {
         }
         if (networkInfo != null && networkInfo.getType() == 0) {
             String b = b(context);
-            int a = a(context);
-            if (!TextUtils.isEmpty(b) && a >= 0) {
-                return new C7110a(b, a);
+            int a2 = a(context);
+            if (!TextUtils.isEmpty(b) && a2 >= 0) {
+                return new a(b, a2);
             }
         }
         return null;
@@ -244,7 +239,7 @@ public class HttpUtils {
 
     public static void requestAsync(final QQToken qQToken, final Context context, final String str, final Bundle bundle, final String str2, final IRequestListener iRequestListener) {
         SLog.i("openSDK_LOG.HttpUtils", "OpenApi requestAsync");
-        C7124l.a(new Runnable() { // from class: com.tencent.open.utils.HttpUtils.1
+        l.a(new Runnable() { // from class: com.tencent.open.utils.HttpUtils.1
             @Override // java.lang.Runnable
             public void run() {
                 try {
@@ -348,7 +343,7 @@ public class HttpUtils {
         return System.getProperty("http.proxyHost");
     }
 
-    private static InterfaceC7075g a(String str, String str2, Bundle bundle) throws IOException {
+    private static com.tencent.open.a.g a(String str, String str2, Bundle bundle) throws IOException {
         Bundle bundle2;
         if (bundle != null) {
             bundle2 = new Bundle(bundle);
@@ -356,22 +351,22 @@ public class HttpUtils {
             bundle2 = new Bundle();
         }
         if (str2.equalsIgnoreCase("GET")) {
-            Map<String, String> a = a(bundle2);
-            Bundle b = C7102d.b(bundle2);
+            Map<String, String> a2 = a(bundle2);
+            Bundle b = com.tencent.open.log.d.b(bundle2);
             if (b != bundle2) {
                 SLog.i("openSDK_LOG.HttpUtils", "-->openUrl encodedParam =" + b.toString() + " -- url = " + str);
             } else {
-                SLog.i("openSDK_LOG.HttpUtils", "-->openUrl encodedParam =" + a.toString() + " -- url = " + str);
+                SLog.i("openSDK_LOG.HttpUtils", "-->openUrl encodedParam =" + a2.toString() + " -- url = " + str);
             }
-            return C7074f.a().a(str, a);
+            return com.tencent.open.a.f.a().a(str, a2);
         } else if (str2.equalsIgnoreCase("POST")) {
-            Map<String, String> a2 = a(bundle2);
+            Map<String, String> a3 = a(bundle2);
             Map<String, byte[]> b2 = b(bundle2);
             if (b2 != null && b2.size() != 0) {
                 SLog.w("openSDK_LOG.HttpUtils", "openUrl: has binary " + b2.size());
-                return C7074f.a().a(str, a2, b2);
+                return com.tencent.open.a.f.a().a(str, a3, b2);
             }
-            return C7074f.a().b(str, a2);
+            return com.tencent.open.a.f.a().b(str, a3);
         } else {
             SLog.e("openSDK_LOG.HttpUtils", "openUrl: http method " + str2 + " is not supported.");
             throw new IOException("http method is not supported.");

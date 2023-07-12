@@ -54,13 +54,13 @@ public class TitleBar extends LinearLayout implements View.OnClickListener {
     public static final int TYPE_OVERLAY_MINE = 4;
     public static final int TYPE_SUB = 2;
     private boolean firstClick;
-    private C7033a left2Item;
-    private C7033a leftItem;
+    private a left2Item;
+    private a leftItem;
     private View lineView;
     private OnDoubleClickListener listener;
     private boolean preventTouch;
-    private C7033a right2Item;
-    private C7033a rightItem;
+    private a right2Item;
+    private a rightItem;
     protected LinearLayout titleContainer;
     private TextView titleTv;
     private int type;
@@ -73,12 +73,11 @@ public class TitleBar extends LinearLayout implements View.OnClickListener {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.widget.TitleBar$a */
     /* loaded from: classes11.dex */
-    public class C7033a {
+    public class a {
         private View a;
 
-        public C7033a(TitleBar titleBar, View view) {
+        public a(TitleBar titleBar, View view) {
             this.a = view;
         }
 
@@ -238,16 +237,16 @@ public class TitleBar extends LinearLayout implements View.OnClickListener {
         setOrientation(1);
         this.titleContainer = (LinearLayout) findViewById(R$id.titlebar_title_container);
         this.titleTv = (TextView) findViewById(R$id.titlebar_title);
-        this.leftItem = new C7033a(this, findViewById(R$id.titlebar_left_btn));
-        C7033a c7033a = new C7033a(this, findViewById(R$id.titlebar_left_btn2));
-        this.left2Item = c7033a;
-        c7033a.l(8);
-        C7033a c7033a2 = new C7033a(this, findViewById(R$id.titlebar_right_btn));
-        this.rightItem = c7033a2;
-        c7033a2.l(8);
-        C7033a c7033a3 = new C7033a(this, findViewById(R$id.titlebar_right_btn2));
-        this.right2Item = c7033a3;
-        c7033a3.l(8);
+        this.leftItem = new a(this, findViewById(R$id.titlebar_left_btn));
+        a aVar = new a(this, findViewById(R$id.titlebar_left_btn2));
+        this.left2Item = aVar;
+        aVar.l(8);
+        a aVar2 = new a(this, findViewById(R$id.titlebar_right_btn));
+        this.rightItem = aVar2;
+        aVar2.l(8);
+        a aVar3 = new a(this, findViewById(R$id.titlebar_right_btn2));
+        this.right2Item = aVar3;
+        aVar3.l(8);
         setBackgroundColor(COLOR_SUB_BG);
         this.titleTv.setTextColor(COLOR_SUB_TITLE_TEXT);
         this.leftItem.i(COLOR_SUB_BTN_TEXT);

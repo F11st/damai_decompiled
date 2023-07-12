@@ -18,10 +18,10 @@ public class vy1 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
 
     @Override // cn.damai.tetris.v2.convertor.IConverter
     /* renamed from: a */
-    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, C9039db c9039db) {
+    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, db dbVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1091065955")) {
-            return (List) ipChange.ipc$dispatch("-1091065955", new Object[]{this, baseResponse, baseSection, globalConfig, c9039db});
+            return (List) ipChange.ipc$dispatch("-1091065955", new Object[]{this, baseResponse, baseSection, globalConfig, dbVar});
         }
         RankFilterExtraInfo obtainFromBaseRes = RankFilterExtraInfo.obtainFromBaseRes(baseResponse);
         NodeData item = baseSection.getItem();
@@ -29,6 +29,6 @@ public class vy1 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
             item = new NodeData();
         }
         item.put("itemInfo", (Object) obtainFromBaseRes);
-        return new g32().convert(baseResponse, baseSection, globalConfig, c9039db);
+        return new g32().convert(baseResponse, baseSection, globalConfig, dbVar);
     }
 }

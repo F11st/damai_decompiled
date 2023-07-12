@@ -2,7 +2,6 @@ package tb;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import com.alipay.sdk.m.u.C4300c;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -30,7 +29,7 @@ public final class a83 {
     }
 
     public static String d(Context context) {
-        return context == null ? C4300c.b : e(context, "pref", "smac", C4300c.b);
+        return context == null ? com.alipay.sdk.m.u.c.b : e(context, "pref", "smac", com.alipay.sdk.m.u.c.b);
     }
 
     public static String e(Context context, String str, String str2, String str3) {

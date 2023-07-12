@@ -10,11 +10,11 @@ final class MultimapBuilder$HashSetSupplier<V> implements Supplier<Set<V>>, Seri
     private final int expectedValuesPerKey;
 
     MultimapBuilder$HashSetSupplier(int i) {
-        this.expectedValuesPerKey = C5191k.b(i, "expectedValuesPerKey");
+        this.expectedValuesPerKey = k.b(i, "expectedValuesPerKey");
     }
 
     @Override // com.google.common.base.Supplier
     public Set<V> get() {
-        return C5172e0.d(this.expectedValuesPerKey);
+        return e0.d(this.expectedValuesPerKey);
     }
 }

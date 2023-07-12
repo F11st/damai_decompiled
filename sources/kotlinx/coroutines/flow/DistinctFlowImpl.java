@@ -1,7 +1,6 @@
 package kotlinx.coroutines.flow;
 
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.jvm.JvmField;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
@@ -39,7 +38,7 @@ public final class DistinctFlowImpl<T> implements Flow<T> {
         Ref$ObjectRef ref$ObjectRef = new Ref$ObjectRef();
         ref$ObjectRef.element = (T) cm1.NULL;
         Object collect = this.a.collect(new DistinctFlowImpl$collect$$inlined$collect$1(this, ref$ObjectRef, flowCollector), continuation);
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         return collect == d ? collect : wt2.INSTANCE;
     }
 }

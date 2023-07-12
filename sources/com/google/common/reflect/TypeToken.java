@@ -2,16 +2,15 @@ package com.google.common.reflect;
 
 import com.google.common.annotations.Beta;
 import com.google.common.annotations.VisibleForTesting;
-import com.google.common.base.C4832d;
 import com.google.common.base.Predicate;
-import com.google.common.collect.AbstractC5196n;
-import com.google.common.collect.AbstractC5207v;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Ordering;
-import com.google.common.reflect.AbstractC5278b;
+import com.google.common.collect.n;
+import com.google.common.collect.v;
 import com.google.common.reflect.Types;
+import com.google.common.reflect.b;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
 import java.io.Serializable;
@@ -41,12 +40,12 @@ import tb.yt2;
 /* compiled from: Taobao */
 @Beta
 /* loaded from: classes10.dex */
-public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializable {
+public abstract class TypeToken<T> extends com.google.common.reflect.c<T> implements Serializable {
     private static final long serialVersionUID = 3637540370352322684L;
     @MonotonicNonNullDecl
-    private transient C5283e covariantTypeResolver;
+    private transient com.google.common.reflect.e covariantTypeResolver;
     @MonotonicNonNullDecl
-    private transient C5283e invariantTypeResolver;
+    private transient com.google.common.reflect.e invariantTypeResolver;
     private final Type runtimeType;
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -77,19 +76,19 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
 
         @Override // com.google.common.reflect.TypeToken.TypeSet
         public Set<Class<? super T>> rawTypes() {
-            return ImmutableSet.copyOf((Collection) AbstractC5262f.b.a().c(TypeToken.this.getRawTypes()));
+            return ImmutableSet.copyOf((Collection) f.b.a().c(TypeToken.this.getRawTypes()));
         }
 
-        /* synthetic */ ClassSet(TypeToken typeToken, C5257a c5257a) {
+        /* synthetic */ ClassSet(TypeToken typeToken, a aVar) {
             this();
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.google.common.reflect.TypeToken.TypeSet, com.google.common.collect.AbstractC5207v, com.google.common.collect.AbstractC5200o, com.google.common.collect.AbstractC5205t
+        @Override // com.google.common.reflect.TypeToken.TypeSet, com.google.common.collect.v, com.google.common.collect.o, com.google.common.collect.t
         public Set<TypeToken<? super T>> delegate() {
             ImmutableSet<TypeToken<? super T>> immutableSet = this.classes;
             if (immutableSet == null) {
-                ImmutableSet<TypeToken<? super T>> f = AbstractC5196n.d(AbstractC5262f.a.a().d(TypeToken.this)).c(TypeFilter.IGNORE_TYPE_VARIABLE_OR_WILDCARD).f();
+                ImmutableSet<TypeToken<? super T>> f = n.d(f.a.a().d(TypeToken.this)).c(TypeFilter.IGNORE_TYPE_VARIABLE_OR_WILDCARD).f();
                 this.classes = f;
                 return f;
             }
@@ -125,79 +124,76 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
             }
         };
 
-        /* synthetic */ TypeFilter(C5257a c5257a) {
+        /* synthetic */ TypeFilter(a aVar) {
             this();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.reflect.TypeToken$a */
     /* loaded from: classes10.dex */
-    public class C5257a extends AbstractC5278b.C5280b<T> {
-        C5257a(Method method) {
+    public class a extends b.C0240b<T> {
+        a(Method method) {
             super(method);
         }
 
-        @Override // com.google.common.reflect.C5277a
+        @Override // com.google.common.reflect.a
         public TypeToken<T> a() {
             return TypeToken.this;
         }
 
-        @Override // com.google.common.reflect.C5277a
+        @Override // com.google.common.reflect.a
         public String toString() {
             return a() + "." + super.toString();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.reflect.TypeToken$b */
     /* loaded from: classes10.dex */
-    class C5258b extends AbstractC5278b.C5279a<T> {
-        C5258b(Constructor constructor) {
+    class b extends b.a<T> {
+        b(Constructor constructor) {
             super(constructor);
         }
 
-        @Override // com.google.common.reflect.C5277a
+        @Override // com.google.common.reflect.a
         public TypeToken<T> a() {
             return TypeToken.this;
         }
 
-        @Override // com.google.common.reflect.AbstractC5278b.C5279a
+        @Override // com.google.common.reflect.b.a
         Type[] b() {
             return TypeToken.this.getInvariantTypeResolver().l(super.b());
         }
 
-        @Override // com.google.common.reflect.C5277a
+        @Override // com.google.common.reflect.a
         public String toString() {
-            return a() + jn1.BRACKET_START_STR + C4832d.g(AVFSCacheConstants.COMMA_SEP).e(b()) + jn1.BRACKET_END_STR;
+            return a() + jn1.BRACKET_START_STR + com.google.common.base.d.g(AVFSCacheConstants.COMMA_SEP).e(b()) + jn1.BRACKET_END_STR;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.reflect.TypeToken$c */
     /* loaded from: classes10.dex */
-    class C5259c extends AbstractC5291f {
-        C5259c() {
+    class c extends com.google.common.reflect.f {
+        c() {
         }
 
-        @Override // com.google.common.reflect.AbstractC5291f
+        @Override // com.google.common.reflect.f
         void c(GenericArrayType genericArrayType) {
             a(genericArrayType.getGenericComponentType());
         }
 
-        @Override // com.google.common.reflect.AbstractC5291f
+        @Override // com.google.common.reflect.f
         void d(ParameterizedType parameterizedType) {
             a(parameterizedType.getActualTypeArguments());
             a(parameterizedType.getOwnerType());
         }
 
-        @Override // com.google.common.reflect.AbstractC5291f
+        @Override // com.google.common.reflect.f
         void e(TypeVariable<?> typeVariable) {
             throw new IllegalArgumentException(TypeToken.this.runtimeType + "contains a type variable and is not safe for the operation");
         }
 
-        @Override // com.google.common.reflect.AbstractC5291f
+        @Override // com.google.common.reflect.f
         void f(WildcardType wildcardType) {
             a(wildcardType.getLowerBounds());
             a(wildcardType.getUpperBounds());
@@ -206,36 +202,35 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.reflect.TypeToken$d */
     /* loaded from: classes10.dex */
-    public class C5260d extends AbstractC5291f {
-        final /* synthetic */ ImmutableSet.C4989a b;
+    public class d extends com.google.common.reflect.f {
+        final /* synthetic */ ImmutableSet.a b;
 
-        C5260d(TypeToken typeToken, ImmutableSet.C4989a c4989a) {
-            this.b = c4989a;
+        d(TypeToken typeToken, ImmutableSet.a aVar) {
+            this.b = aVar;
         }
 
-        @Override // com.google.common.reflect.AbstractC5291f
+        @Override // com.google.common.reflect.f
         void b(Class<?> cls) {
             this.b.a(cls);
         }
 
-        @Override // com.google.common.reflect.AbstractC5291f
+        @Override // com.google.common.reflect.f
         void c(GenericArrayType genericArrayType) {
             this.b.a(Types.i(TypeToken.of(genericArrayType.getGenericComponentType()).getRawType()));
         }
 
-        @Override // com.google.common.reflect.AbstractC5291f
+        @Override // com.google.common.reflect.f
         void d(ParameterizedType parameterizedType) {
             this.b.a((Class) parameterizedType.getRawType());
         }
 
-        @Override // com.google.common.reflect.AbstractC5291f
+        @Override // com.google.common.reflect.f
         void e(TypeVariable<?> typeVariable) {
             a(typeVariable.getBounds());
         }
 
-        @Override // com.google.common.reflect.AbstractC5291f
+        @Override // com.google.common.reflect.f
         void f(WildcardType wildcardType) {
             a(wildcardType.getUpperBounds());
         }
@@ -243,13 +238,12 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.reflect.TypeToken$e */
     /* loaded from: classes10.dex */
-    public static class C5261e {
+    public static class e {
         private final Type[] a;
         private final boolean b;
 
-        C5261e(Type[] typeArr, boolean z) {
+        e(Type[] typeArr, boolean z) {
             this.a = typeArr;
             this.b = z;
         }
@@ -280,36 +274,34 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.reflect.TypeToken$f */
     /* loaded from: classes10.dex */
-    public static abstract class AbstractC5262f<K> {
-        static final AbstractC5262f<TypeToken<?>> a = new C5263a();
-        static final AbstractC5262f<Class<?>> b = new C5264b();
+    public static abstract class f<K> {
+        static final f<TypeToken<?>> a = new a();
+        static final f<Class<?>> b = new b();
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.reflect.TypeToken$f$a */
         /* loaded from: classes10.dex */
-        static class C5263a extends AbstractC5262f<TypeToken<?>> {
-            C5263a() {
+        static class a extends f<TypeToken<?>> {
+            a() {
                 super(null);
             }
 
             /* JADX INFO: Access modifiers changed from: package-private */
-            @Override // com.google.common.reflect.TypeToken.AbstractC5262f
+            @Override // com.google.common.reflect.TypeToken.f
             /* renamed from: i */
             public Iterable<? extends TypeToken<?>> e(TypeToken<?> typeToken) {
                 return typeToken.getGenericInterfaces();
             }
 
             /* JADX INFO: Access modifiers changed from: package-private */
-            @Override // com.google.common.reflect.TypeToken.AbstractC5262f
+            @Override // com.google.common.reflect.TypeToken.f
             /* renamed from: j */
             public Class<?> f(TypeToken<?> typeToken) {
                 return typeToken.getRawType();
             }
 
             /* JADX INFO: Access modifiers changed from: package-private */
-            @Override // com.google.common.reflect.TypeToken.AbstractC5262f
+            @Override // com.google.common.reflect.TypeToken.f
             @NullableDecl
             /* renamed from: k */
             public TypeToken<?> g(TypeToken<?> typeToken) {
@@ -318,29 +310,28 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.reflect.TypeToken$f$b */
         /* loaded from: classes10.dex */
-        static class C5264b extends AbstractC5262f<Class<?>> {
-            C5264b() {
+        static class b extends f<Class<?>> {
+            b() {
                 super(null);
             }
 
             /* JADX INFO: Access modifiers changed from: package-private */
-            @Override // com.google.common.reflect.TypeToken.AbstractC5262f
+            @Override // com.google.common.reflect.TypeToken.f
             /* renamed from: i */
             public Iterable<? extends Class<?>> e(Class<?> cls) {
                 return Arrays.asList(cls.getInterfaces());
             }
 
             /* JADX INFO: Access modifiers changed from: package-private */
-            @Override // com.google.common.reflect.TypeToken.AbstractC5262f
+            @Override // com.google.common.reflect.TypeToken.f
             /* renamed from: j */
             public Class<?> f(Class<?> cls) {
                 return cls;
             }
 
             /* JADX INFO: Access modifiers changed from: package-private */
-            @Override // com.google.common.reflect.TypeToken.AbstractC5262f
+            @Override // com.google.common.reflect.TypeToken.f
             @NullableDecl
             /* renamed from: k */
             public Class<?> g(Class<?> cls) {
@@ -350,16 +341,15 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.reflect.TypeToken$f$c */
         /* loaded from: classes10.dex */
-        public class C5265c extends C5267e<K> {
-            C5265c(AbstractC5262f abstractC5262f, AbstractC5262f abstractC5262f2) {
-                super(abstractC5262f2);
+        public class c extends e<K> {
+            c(f fVar, f fVar2) {
+                super(fVar2);
             }
 
-            @Override // com.google.common.reflect.TypeToken.AbstractC5262f
+            @Override // com.google.common.reflect.TypeToken.f
             ImmutableList<K> c(Iterable<? extends K> iterable) {
-                ImmutableList.C4971a builder = ImmutableList.builder();
+                ImmutableList.a builder = ImmutableList.builder();
                 for (K k : iterable) {
                     if (!f(k).isInterface()) {
                         builder.a(k);
@@ -368,7 +358,7 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
                 return super.c(builder.j());
             }
 
-            @Override // com.google.common.reflect.TypeToken.AbstractC5262f
+            @Override // com.google.common.reflect.TypeToken.f
             Iterable<? extends K> e(K k) {
                 return ImmutableSet.of();
             }
@@ -376,13 +366,12 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.reflect.TypeToken$f$d */
         /* loaded from: classes10.dex */
-        public static class C5266d extends Ordering<K> {
+        public static class d extends Ordering<K> {
             final /* synthetic */ Comparator a;
             final /* synthetic */ Map b;
 
-            C5266d(Comparator comparator, Map map) {
+            d(Comparator comparator, Map map) {
                 this.a = comparator;
                 this.b = map;
             }
@@ -395,28 +384,27 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.reflect.TypeToken$f$e */
         /* loaded from: classes10.dex */
-        private static class C5267e<K> extends AbstractC5262f<K> {
-            private final AbstractC5262f<K> c;
+        private static class e<K> extends f<K> {
+            private final f<K> c;
 
-            C5267e(AbstractC5262f<K> abstractC5262f) {
+            e(f<K> fVar) {
                 super(null);
-                this.c = abstractC5262f;
+                this.c = fVar;
             }
 
-            @Override // com.google.common.reflect.TypeToken.AbstractC5262f
+            @Override // com.google.common.reflect.TypeToken.f
             Class<?> f(K k) {
                 return this.c.f(k);
             }
 
-            @Override // com.google.common.reflect.TypeToken.AbstractC5262f
+            @Override // com.google.common.reflect.TypeToken.f
             K g(K k) {
                 return this.c.g(k);
             }
         }
 
-        private AbstractC5262f() {
+        private f() {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
@@ -442,11 +430,11 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
         }
 
         private static <K, V> ImmutableList<K> h(Map<K, V> map, Comparator<? super V> comparator) {
-            return (ImmutableList<K>) new C5266d(comparator, map).immutableSortedCopy(map.keySet());
+            return (ImmutableList<K>) new d(comparator, map).immutableSortedCopy(map.keySet());
         }
 
-        final AbstractC5262f<K> a() {
-            return new C5265c(this, this);
+        final f<K> a() {
+            return new c(this, this);
         }
 
         ImmutableList<K> c(Iterable<? extends K> iterable) {
@@ -468,17 +456,17 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
         @NullableDecl
         abstract K g(K k);
 
-        /* synthetic */ AbstractC5262f(C5257a c5257a) {
+        /* synthetic */ f(a aVar) {
             this();
         }
     }
 
-    /* synthetic */ TypeToken(Type type, C5257a c5257a) {
+    /* synthetic */ TypeToken(Type type, a aVar) {
         this(type);
     }
 
-    private static C5261e any(Type[] typeArr) {
-        return new C5261e(typeArr, true);
+    private static e any(Type[] typeArr) {
+        return new e(typeArr, true);
     }
 
     @NullableDecl
@@ -491,7 +479,7 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
     }
 
     private ImmutableList<TypeToken<? super T>> boundsAsInterfaces(Type[] typeArr) {
-        ImmutableList.C4971a builder = ImmutableList.builder();
+        ImmutableList.a builder = ImmutableList.builder();
         for (Type type : typeArr) {
             TypeToken<?> of = of(type);
             if (of.getRawType().isInterface()) {
@@ -537,8 +525,8 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
         return type instanceof GenericArrayType ? Types.k(canonicalizeWildcardsInType(((GenericArrayType) type).getGenericComponentType())) : type;
     }
 
-    private static C5261e every(Type[] typeArr) {
-        return new C5261e(typeArr, false);
+    private static e every(Type[] typeArr) {
+        return new e(typeArr, false);
     }
 
     private TypeToken<? extends T> getArraySubtype(Class<?> cls) {
@@ -551,25 +539,25 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public C5283e getCovariantTypeResolver() {
-        C5283e c5283e = this.covariantTypeResolver;
-        if (c5283e == null) {
-            C5283e d = C5283e.d(this.runtimeType);
-            this.covariantTypeResolver = d;
-            return d;
+    public com.google.common.reflect.e getCovariantTypeResolver() {
+        com.google.common.reflect.e eVar = this.covariantTypeResolver;
+        if (eVar == null) {
+            com.google.common.reflect.e d2 = com.google.common.reflect.e.d(this.runtimeType);
+            this.covariantTypeResolver = d2;
+            return d2;
         }
-        return c5283e;
+        return eVar;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public C5283e getInvariantTypeResolver() {
-        C5283e c5283e = this.invariantTypeResolver;
-        if (c5283e == null) {
-            C5283e f = C5283e.f(this.runtimeType);
-            this.invariantTypeResolver = f;
-            return f;
+    public com.google.common.reflect.e getInvariantTypeResolver() {
+        com.google.common.reflect.e eVar = this.invariantTypeResolver;
+        if (eVar == null) {
+            com.google.common.reflect.e f2 = com.google.common.reflect.e.f(this.runtimeType);
+            this.invariantTypeResolver = f2;
+            return f2;
         }
-        return c5283e;
+        return eVar;
     }
 
     @NullableDecl
@@ -586,8 +574,8 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
 
     /* JADX INFO: Access modifiers changed from: private */
     public ImmutableSet<Class<? super T>> getRawTypes() {
-        ImmutableSet.C4989a builder = ImmutableSet.builder();
-        new C5260d(this, builder).a(this.runtimeType);
+        ImmutableSet.a builder = ImmutableSet.builder();
+        new d(this, builder).a(this.runtimeType);
         return builder.l();
     }
 
@@ -697,7 +685,7 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
     private Type resolveTypeArgsForSubclass(Class<?> cls) {
         if (!(this.runtimeType instanceof Class) || (cls.getTypeParameters().length != 0 && getRawType().getTypeParameters().length == 0)) {
             TypeToken genericType = toGenericType(cls);
-            return new C5283e().n(genericType.getSupertype(getRawType()).runtimeType, this.runtimeType).j(genericType.runtimeType);
+            return new com.google.common.reflect.e().n(genericType.getSupertype(getRawType()).runtimeType, this.runtimeType).j(genericType.runtimeType);
         }
         return cls;
     }
@@ -725,9 +713,9 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
         return (TypeToken<? extends T>) of(Types.n(type, cls, typeParameters));
     }
 
-    public final AbstractC5278b<T, T> constructor(Constructor<?> constructor) {
+    public final com.google.common.reflect.b<T, T> constructor(Constructor<?> constructor) {
         du1.l(constructor.getDeclaringClass() == getRawType(), "%s not declared by %s", constructor, getRawType());
-        return new C5258b(constructor);
+        return new b(constructor);
     }
 
     public boolean equals(@NullableDecl Object obj) {
@@ -754,7 +742,7 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
         if (type instanceof WildcardType) {
             return boundsAsInterfaces(((WildcardType) type).getUpperBounds());
         }
-        ImmutableList.C4971a builder = ImmutableList.builder();
+        ImmutableList.a builder = ImmutableList.builder();
         for (Type type2 : getRawType().getGenericInterfaces()) {
             builder.a(resolveSupertype(type2));
         }
@@ -840,14 +828,14 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
         return typeToken.isSubtypeOf(getType());
     }
 
-    public final AbstractC5278b<T, Object> method(Method method) {
+    public final com.google.common.reflect.b<T, Object> method(Method method) {
         du1.l(someRawTypeIsSubclassOf(method.getDeclaringClass()), "%s not declared by %s", method, this);
-        return new C5257a(method);
+        return new a(method);
     }
 
     @CanIgnoreReturnValue
     final TypeToken<T> rejectTypeVariables() {
-        new C5259c().a(this.runtimeType);
+        new c().a(this.runtimeType);
         return this;
     }
 
@@ -864,8 +852,8 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
         return isWrapper() ? of(lu1.c((Class) this.runtimeType)) : this;
     }
 
-    public final <X> TypeToken<T> where(AbstractC5282d<X> abstractC5282d, TypeToken<X> typeToken) {
-        new C5283e();
+    public final <X> TypeToken<T> where(com.google.common.reflect.d<X> dVar, TypeToken<X> typeToken) {
+        new com.google.common.reflect.e();
         throw null;
     }
 
@@ -874,7 +862,7 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
     }
 
     protected Object writeReplace() {
-        return of(new C5283e().j(this.runtimeType));
+        return of(new com.google.common.reflect.e().j(this.runtimeType));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -887,10 +875,9 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
         private transient ImmutableSet<TypeToken<? super T>> interfaces;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.reflect.TypeToken$InterfaceSet$a */
         /* loaded from: classes10.dex */
-        class C5256a implements Predicate<Class<?>> {
-            C5256a(InterfaceSet interfaceSet) {
+        class a implements Predicate<Class<?>> {
+            a(InterfaceSet interfaceSet) {
             }
 
             @Override // com.google.common.base.Predicate
@@ -921,15 +908,15 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
 
         @Override // com.google.common.reflect.TypeToken.TypeSet
         public Set<Class<? super T>> rawTypes() {
-            return AbstractC5196n.d(AbstractC5262f.b.c(TypeToken.this.getRawTypes())).c(new C5256a(this)).f();
+            return n.d(f.b.c(TypeToken.this.getRawTypes())).c(new a(this)).f();
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.google.common.reflect.TypeToken.TypeSet, com.google.common.collect.AbstractC5207v, com.google.common.collect.AbstractC5200o, com.google.common.collect.AbstractC5205t
+        @Override // com.google.common.reflect.TypeToken.TypeSet, com.google.common.collect.v, com.google.common.collect.o, com.google.common.collect.t
         public Set<TypeToken<? super T>> delegate() {
             ImmutableSet<TypeToken<? super T>> immutableSet = this.interfaces;
             if (immutableSet == null) {
-                ImmutableSet<TypeToken<? super T>> f = AbstractC5196n.d(this.allTypes).c(TypeFilter.INTERFACE_ONLY).f();
+                ImmutableSet<TypeToken<? super T>> f = n.d(this.allTypes).c(TypeFilter.INTERFACE_ONLY).f();
                 this.interfaces = f;
                 return f;
             }
@@ -939,7 +926,7 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
-    public class TypeSet extends AbstractC5207v<TypeToken<? super T>> implements Serializable {
+    public class TypeSet extends v<TypeToken<? super T>> implements Serializable {
         private static final long serialVersionUID = 0;
         @MonotonicNonNullDecl
         private transient ImmutableSet<TypeToken<? super T>> types;
@@ -956,15 +943,15 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
         }
 
         public Set<Class<? super T>> rawTypes() {
-            return ImmutableSet.copyOf((Collection) AbstractC5262f.b.c(TypeToken.this.getRawTypes()));
+            return ImmutableSet.copyOf((Collection) f.b.c(TypeToken.this.getRawTypes()));
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.google.common.collect.AbstractC5207v, com.google.common.collect.AbstractC5200o, com.google.common.collect.AbstractC5205t
+        @Override // com.google.common.collect.v, com.google.common.collect.o, com.google.common.collect.t
         public Set<TypeToken<? super T>> delegate() {
             ImmutableSet<TypeToken<? super T>> immutableSet = this.types;
             if (immutableSet == null) {
-                ImmutableSet<TypeToken<? super T>> f = AbstractC5196n.d(AbstractC5262f.a.d(TypeToken.this)).c(TypeFilter.IGNORE_TYPE_VARIABLE_OR_WILDCARD).f();
+                ImmutableSet<TypeToken<? super T>> f = n.d(f.a.d(TypeToken.this)).c(TypeFilter.IGNORE_TYPE_VARIABLE_OR_WILDCARD).f();
                 this.types = f;
                 return f;
             }
@@ -1013,8 +1000,8 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
         return of(type).isSubtypeOf(getType());
     }
 
-    public final <X> TypeToken<T> where(AbstractC5282d<X> abstractC5282d, Class<X> cls) {
-        return where(abstractC5282d, of((Class) cls));
+    public final <X> TypeToken<T> where(com.google.common.reflect.d<X> dVar, Class<X> cls) {
+        return where(dVar, of((Class) cls));
     }
 
     protected TypeToken(Class<?> cls) {
@@ -1022,7 +1009,7 @@ public abstract class TypeToken<T> extends AbstractC5281c<T> implements Serializ
         if (capture instanceof Class) {
             this.runtimeType = capture;
         } else {
-            this.runtimeType = C5283e.d(cls).j(capture);
+            this.runtimeType = com.google.common.reflect.e.d(cls).j(capture);
         }
     }
 

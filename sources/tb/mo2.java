@@ -15,7 +15,6 @@ import androidx.core.graphics.ColorUtils;
 import com.taomai.android.h5container.widget.H5ToolBar;
 import com.taomai.android.h5container.widget.TitleBar;
 import com.youku.media.arch.instruments.statistics.ConfigReporter;
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -23,7 +22,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes11.dex */
 public final class mo2 {
     @NotNull
-    public static final C9447a Companion = new C9447a(null);
+    public static final a Companion = new a(null);
     private final TitleBar a;
     private String b;
     private boolean c;
@@ -42,10 +41,9 @@ public final class mo2 {
     private final WebView n;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.mo2$a */
     /* loaded from: classes11.dex */
-    public static final class C9447a {
-        private C9447a() {
+    public static final class a {
+        private a() {
         }
 
         @TargetApi(21)
@@ -56,24 +54,23 @@ public final class mo2 {
             Window window = activity.getWindow();
             window.clearFlags(ConfigReporter.BIT_GETTER_IMP);
             window.addFlags(Integer.MIN_VALUE);
-            b41.h(window, C9796v.ATTACH_MODE_WINDOW);
+            b41.h(window, v.ATTACH_MODE_WINDOW);
             View decorView = window.getDecorView();
             b41.h(decorView, "window.decorView");
             decorView.setSystemUiVisibility(1280);
             window.setStatusBarColor(i);
         }
 
-        public /* synthetic */ C9447a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.mo2$b */
     /* loaded from: classes11.dex */
-    public static final class View$OnScrollChangeListenerC9448b implements View.OnScrollChangeListener {
-        View$OnScrollChangeListenerC9448b() {
+    public static final class b implements View.OnScrollChangeListener {
+        b() {
         }
 
         @Override // android.view.View.OnScrollChangeListener
@@ -240,7 +237,7 @@ public final class mo2 {
         if (!TextUtils.equals(str, "auto") || Build.VERSION.SDK_INT < 23) {
             return;
         }
-        this.n.setOnScrollChangeListener(new View$OnScrollChangeListenerC9448b());
+        this.n.setOnScrollChangeListener(new b());
     }
 
     public final void j(@Nullable String str) {
@@ -261,8 +258,8 @@ public final class mo2 {
         }
         if (this.c) {
             if (b41.d(this.b, "auto")) {
-                String b = dv0Var.b(this.n.getUrl(), "scrollDistance");
-                int parseInt = b != null ? Integer.parseInt(b) : 255;
+                String b2 = dv0Var.b(this.n.getUrl(), "scrollDistance");
+                int parseInt = b2 != null ? Integer.parseInt(b2) : 255;
                 this.d = parseInt;
                 int i = parseInt / 255;
                 if (i == 0) {
@@ -273,7 +270,7 @@ public final class mo2 {
                 k(parseInt, i, false);
                 q(-1, this.e, false);
                 this.h = this.n.getScrollY();
-                q = C8604o.q("YES", dv0Var.b(this.n.getUrl(), "transparentTitleTextAuto"), true);
+                q = kotlin.text.o.q("YES", dv0Var.b(this.n.getUrl(), "transparentTitleTextAuto"), true);
                 this.i = q;
             } else {
                 this.g = 0.0f;

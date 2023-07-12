@@ -6,10 +6,10 @@ import android.view.Menu;
 import androidx.annotation.NonNull;
 import com.alibaba.fastjson.JSONArray;
 import com.taobao.orange.OConstant;
-import com.taobao.weex.C6967b;
 import com.taobao.weex.WXSDKInstance;
 import com.taobao.weex.WXSDKManager;
 import com.taobao.weex.adapter.IWXUserTrackAdapter;
+import com.taobao.weex.b;
 import com.taobao.weex.common.Destroyable;
 import com.taobao.weex.common.TypeModuleFactory;
 import com.taobao.weex.common.WXErrorCode;
@@ -470,7 +470,7 @@ public class WXModuleManager {
             WXLogUtils.e("Cannot registered module with name 'dom'.");
             return false;
         }
-        C6967b.b().h(str, moduleFactory, z);
+        b.b().h(str, moduleFactory, z);
         if (RegisterCache.getInstance().cacheModule(str, moduleFactory, z)) {
             return true;
         }

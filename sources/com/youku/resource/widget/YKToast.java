@@ -24,7 +24,7 @@ public class YKToast {
     @TargetApi(21)
     public YKToast makeText(Context context, CharSequence charSequence, int i) {
         this.toast = Toast.makeText(context, charSequence, i);
-        View inflate = LayoutInflater.from(context).inflate(R.C8074layout.resource_yk_toast, (ViewGroup) null);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.resource_yk_toast, (ViewGroup) null);
         TextView textView = (TextView) inflate.findViewById(R.id.yk_toast_text);
         this.textView = textView;
         textView.setText(charSequence);

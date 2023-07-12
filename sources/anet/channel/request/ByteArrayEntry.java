@@ -8,23 +8,22 @@ import java.io.OutputStream;
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
 public class ByteArrayEntry implements BodyEntry {
-    public static final Parcelable.Creator<ByteArrayEntry> CREATOR = new C0192a();
+    public static final Parcelable.Creator<ByteArrayEntry> CREATOR = new a();
     private byte[] bytes;
     private String contentType;
     private int count;
     private int offset;
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.request.ByteArrayEntry$a */
     /* loaded from: classes.dex */
-    static class C0192a implements Parcelable.Creator<ByteArrayEntry> {
-        C0192a() {
+    static class a implements Parcelable.Creator<ByteArrayEntry> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
         public ByteArrayEntry createFromParcel(Parcel parcel) {
-            ByteArrayEntry byteArrayEntry = new ByteArrayEntry((C0192a) null);
+            ByteArrayEntry byteArrayEntry = new ByteArrayEntry((a) null);
             byteArrayEntry.bytes = new byte[parcel.readInt()];
             parcel.readByteArray(byteArrayEntry.bytes);
             byteArrayEntry.offset = parcel.readInt();
@@ -40,7 +39,7 @@ public class ByteArrayEntry implements BodyEntry {
         }
     }
 
-    /* synthetic */ ByteArrayEntry(C0192a c0192a) {
+    /* synthetic */ ByteArrayEntry(a aVar) {
         this();
     }
 

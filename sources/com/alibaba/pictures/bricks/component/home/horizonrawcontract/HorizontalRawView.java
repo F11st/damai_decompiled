@@ -19,7 +19,7 @@ import com.youku.arch.v3.util.ViewUtil;
 import com.youku.arch.v3.view.render.GenericRenderConfig;
 import java.util.List;
 import java.util.Map;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -108,7 +108,7 @@ public class HorizontalRawView extends RawView<HorizontalRawModel, HorizontalRaw
         for (Object obj : list) {
             int i2 = i + 1;
             if (i < 0) {
-                C8214m.p();
+                m.p();
             }
             VBaseHolder vBaseHolder = (VBaseHolder) obj;
             IItem data3 = vBaseHolder.getData();

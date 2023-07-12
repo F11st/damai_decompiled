@@ -8,7 +8,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.discover.viewholder.BaseViewHolder;
@@ -57,12 +56,11 @@ public class ProjectBroadCastViewHolder extends BaseViewHolder<ProjectShowBean> 
     private List<View> w;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.drama.viewholder.ProjectBroadCastViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnAttachStateChangeListenerC1836a implements View.OnAttachStateChangeListener {
+    public class a implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC1836a() {
+        a() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -89,12 +87,11 @@ public class ProjectBroadCastViewHolder extends BaseViewHolder<ProjectShowBean> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.drama.viewholder.ProjectBroadCastViewHolder$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1837b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1837b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -110,19 +107,17 @@ public class ProjectBroadCastViewHolder extends BaseViewHolder<ProjectShowBean> 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.drama.viewholder.ProjectBroadCastViewHolder$c */
     /* loaded from: classes7.dex */
-    public class C1838c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.tetris.component.drama.viewholder.ProjectBroadCastViewHolder$c$a */
         /* loaded from: classes7.dex */
-        public class C1839a implements DMRGBUtil.OnFetchColorListener {
+        public class a implements DMRGBUtil.OnFetchColorListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1839a() {
+            a() {
             }
 
             @Override // cn.damai.commonbusiness.util.DMRGBUtil.OnFetchColorListener
@@ -131,8 +126,8 @@ public class ProjectBroadCastViewHolder extends BaseViewHolder<ProjectShowBean> 
                 if (AndroidInstantRuntime.support(ipChange, "212982192")) {
                     ipChange.ipc$dispatch("212982192", new Object[]{this, Integer.valueOf(i)});
                 } else if (ProjectBroadCastViewHolder.this.t != null) {
-                    C1838c c1838c = C1838c.this;
-                    if (TextUtils.equals(c1838c.a, ProjectBroadCastViewHolder.this.t.verticalPic)) {
+                    c cVar = c.this;
+                    if (TextUtils.equals(cVar.a, ProjectBroadCastViewHolder.this.t.verticalPic)) {
                         ProjectBroadCastViewHolder.this.t.postColor = i;
                         Drawable background = ProjectBroadCastViewHolder.this.itemView.getBackground();
                         if (background instanceof GradientDrawable) {
@@ -143,22 +138,22 @@ public class ProjectBroadCastViewHolder extends BaseViewHolder<ProjectShowBean> 
             }
         }
 
-        C1838c(String str) {
+        c(String str) {
             this.a = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1853594277")) {
-                ipChange.ipc$dispatch("1853594277", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("1853594277", new Object[]{this, eVar});
                 return;
             }
-            Bitmap bitmap = c0502e.b;
+            Bitmap bitmap = eVar.b;
             if (bitmap == null || bitmap.isRecycled()) {
                 return;
             }
-            DMRGBUtil.g(1.0f, bitmap, this.a, new C1839a());
+            DMRGBUtil.g(1.0f, bitmap, this.a, new a());
         }
     }
 
@@ -177,7 +172,7 @@ public class ProjectBroadCastViewHolder extends BaseViewHolder<ProjectShowBean> 
         this.q = view.findViewById(R$id.project_with_price_pending);
         View findViewById = view.findViewById(R$id.project_state_count_down);
         this.d = findViewById;
-        findViewById.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC1836a());
+        findViewById.addOnAttachStateChangeListener(new a());
         this.e = (TextView) view.findViewById(R$id.project_state_count_down_day);
         this.f = (TextView) view.findViewById(R$id.project_state_count_down_day_tag);
         this.g = (TextView) view.findViewById(R$id.project_state_count_down_hour);
@@ -187,7 +182,7 @@ public class ProjectBroadCastViewHolder extends BaseViewHolder<ProjectShowBean> 
         this.b = (TextView) view.findViewById(R$id.project_state_none_ticket);
         this.r = l62.a(mu0.a(), 86.0f);
         this.s = l62.a(mu0.a(), 115.0f);
-        view.setOnClickListener(new View$OnClickListenerC1837b());
+        view.setOnClickListener(new b());
     }
 
     private void h(ProjectShowBean projectShowBean, String str) {
@@ -200,7 +195,7 @@ public class ProjectBroadCastViewHolder extends BaseViewHolder<ProjectShowBean> 
                 ((GradientDrawable) background).setColor(projectShowBean.postColor);
             }
         } else {
-            C0504a.b().f(str, this.r, this.s).n(new C1838c(str)).f();
+            cn.damai.common.image.a.b().f(str, this.r, this.s).n(new c(str)).f();
         }
     }
 

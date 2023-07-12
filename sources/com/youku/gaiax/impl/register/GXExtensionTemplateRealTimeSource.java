@@ -8,9 +8,9 @@ import com.taobao.tao.log.TLogConstant;
 import com.youku.live.livesdk.wkit.component.Constants;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -48,7 +48,7 @@ public final class GXExtensionTemplateRealTimeSource implements GXRegisterCenter
 
     static {
         Lazy<GXExtensionTemplateRealTimeSource> b;
-        b = C8177b.b(new Function0<GXExtensionTemplateRealTimeSource>() { // from class: com.youku.gaiax.impl.register.GXExtensionTemplateRealTimeSource$Companion$instance$2
+        b = b.b(new Function0<GXExtensionTemplateRealTimeSource>() { // from class: com.youku.gaiax.impl.register.GXExtensionTemplateRealTimeSource$Companion$instance$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull
@@ -85,8 +85,8 @@ public final class GXExtensionTemplateRealTimeSource implements GXRegisterCenter
 
     @Override // com.alibaba.gaiax.GXRegisterCenter.GXIExtensionTemplateSource
     @Nullable
-    public ns0 getTemplate(@NotNull GXTemplateEngine.C3347i c3347i) {
-        b41.i(c3347i, "gxTemplateItem");
-        return this.cache.get(c3347i.d());
+    public ns0 getTemplate(@NotNull GXTemplateEngine.i iVar) {
+        b41.i(iVar, "gxTemplateItem");
+        return this.cache.get(iVar.d());
     }
 }

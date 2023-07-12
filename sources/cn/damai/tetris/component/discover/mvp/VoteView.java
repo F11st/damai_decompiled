@@ -21,12 +21,11 @@ public class VoteView extends AbsView<VoteContract.Presenter> implements VoteCon
     private VoteViewHolder mHolder;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.discover.mvp.VoteView$a */
     /* loaded from: classes7.dex */
-    public class C1821a implements VotePanel.VoteActionListener {
+    public class a implements VotePanel.VoteActionListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1821a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.discover.viewholder.VotePanel.VoteActionListener
@@ -109,7 +108,7 @@ public class VoteView extends AbsView<VoteContract.Presenter> implements VoteCon
 
     public VoteView(View view) {
         super(view);
-        this.mHolder = new VoteViewHolder(view, new C1821a());
+        this.mHolder = new VoteViewHolder(view, new a());
     }
 
     @Override // cn.damai.tetris.component.discover.mvp.VoteContract.View

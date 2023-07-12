@@ -2,7 +2,6 @@ package com.xiaomi.push.service;
 
 import android.text.TextUtils;
 import android.util.Base64;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import java.io.ByteArrayOutputStream;
 import java.security.KeyFactory;
 import java.security.interfaces.RSAPublicKey;
@@ -24,7 +23,7 @@ public class bs {
         try {
             a = (RSAPublicKey) KeyFactory.getInstance("RSA").generatePublic(new X509EncodedKeySpec(bArr));
         } catch (Throwable unused) {
-            AbstractC7535b.d("rsa key pair init failure!!!");
+            com.xiaomi.channel.commonutils.logger.b.d("rsa key pair init failure!!!");
         }
     }
 

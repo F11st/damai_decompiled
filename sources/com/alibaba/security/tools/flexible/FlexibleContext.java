@@ -6,7 +6,7 @@ import android.content.ContextWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.alibaba.security.common.c.C3800a;
+import com.alibaba.security.common.c.a;
 import com.alibaba.security.tools.flexible.component.IFlexibleComp;
 import java.math.BigDecimal;
 
@@ -47,7 +47,7 @@ public class FlexibleContext<T> {
                 try {
                     throw new Exception("Context is not an Activity, can't set content view");
                 } catch (Exception unused) {
-                    C3800a.b();
+                    a.b();
                     return;
                 }
             }

@@ -10,7 +10,6 @@ import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
 import com.alibaba.analytics.core.network.NetworkUtil;
-import com.alibaba.analytics.utils.C3141a;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
 import com.alibaba.wireless.security.aopsdk.replace.android.view.Display;
 import com.ut.device.UTDevice;
@@ -120,7 +119,7 @@ public class x70 {
                         }
                         try {
                             DisplayMetrics displayMetrics = new DisplayMetrics();
-                            Display.getMetrics(((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+                            Display.getMetrics(((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
                             int i2 = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(displayMetrics);
                             int i3 = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(displayMetrics);
                             b.t(i2);
@@ -179,13 +178,13 @@ public class x70 {
         }
         String str4 = null;
         try {
-            str3 = C3141a.i(str.getBytes("UTF-8"));
+            str3 = com.alibaba.analytics.utils.a.i(str.getBytes("UTF-8"));
         } catch (UnsupportedEncodingException e) {
             e = e;
             str3 = null;
         }
         try {
-            str4 = C3141a.i(str2.getBytes("UTF-8"));
+            str4 = com.alibaba.analytics.utils.a.i(str2.getBytes("UTF-8"));
         } catch (UnsupportedEncodingException e2) {
             e = e2;
             e.printStackTrace();

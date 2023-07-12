@@ -2,7 +2,7 @@ package anet.channel.strategy;
 
 import anet.channel.entity.ConnType;
 import anet.channel.statist.AmdcResultStat;
-import anet.channel.strategy.C0214b;
+import anet.channel.strategy.b;
 import anet.channel.strategy.utils.SerialLruCache;
 import anet.channel.util.ALog;
 import java.io.Serializable;
@@ -40,15 +40,14 @@ public class StrategyList implements Serializable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.strategy.StrategyList$a */
     /* loaded from: classes.dex */
-    public class C0210a implements Predicate<IPConnStrategy> {
-        final /* synthetic */ C0214b.C0215a a;
+    public class a implements Predicate<IPConnStrategy> {
+        final /* synthetic */ b.a a;
         final /* synthetic */ String b;
         final /* synthetic */ ConnProtocol c;
 
-        C0210a(StrategyList strategyList, C0214b.C0215a c0215a, String str, ConnProtocol connProtocol) {
-            this.a = c0215a;
+        a(StrategyList strategyList, b.a aVar, String str, ConnProtocol connProtocol) {
+            this.a = aVar;
             this.b = str;
             this.c = connProtocol;
         }
@@ -62,10 +61,9 @@ public class StrategyList implements Serializable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.strategy.StrategyList$b */
     /* loaded from: classes.dex */
-    public class C0211b implements Comparator<IPConnStrategy> {
-        C0211b() {
+    public class b implements Comparator<IPConnStrategy> {
+        b() {
         }
 
         @Override // java.util.Comparator
@@ -124,19 +122,19 @@ public class StrategyList implements Serializable {
 
     private Comparator getDefaultComparator() {
         if (this.defaultComparator == null) {
-            this.defaultComparator = new C0211b();
+            this.defaultComparator = new b();
         }
         return this.defaultComparator;
     }
 
-    private void handleUpdate(String str, int i, C0214b.C0215a c0215a) {
-        ConnProtocol valueOf = ConnProtocol.valueOf(c0215a);
-        int find = find(this.ipStrategyList, new C0210a(this, c0215a, str, valueOf));
+    private void handleUpdate(String str, int i, b.a aVar) {
+        ConnProtocol valueOf = ConnProtocol.valueOf(aVar);
+        int find = find(this.ipStrategyList, new a(this, aVar, str, valueOf));
         if (find != -1) {
             IPConnStrategy iPConnStrategy = this.ipStrategyList.get(find);
-            iPConnStrategy.cto = c0215a.c;
-            iPConnStrategy.rto = c0215a.d;
-            iPConnStrategy.heartbeat = c0215a.f;
+            iPConnStrategy.cto = aVar.c;
+            iPConnStrategy.rto = aVar.d;
+            iPConnStrategy.heartbeat = aVar.f;
             iPConnStrategy.ipType = i;
             iPConnStrategy.ipSource = 0;
             iPConnStrategy.isToRemove = false;
@@ -146,7 +144,7 @@ public class StrategyList implements Serializable {
             this.historyItemMap.put(Integer.valueOf(iPConnStrategy.getUniqueId()), new ConnHistoryItem());
             return;
         }
-        IPConnStrategy create = IPConnStrategy.create(str, c0215a);
+        IPConnStrategy create = IPConnStrategy.create(str, aVar);
         if (create != null) {
             create.ipType = i;
             create.ipSource = 0;
@@ -249,28 +247,28 @@ public class StrategyList implements Serializable {
         return new ArrayList(this.ipStrategyList).toString();
     }
 
-    public void update(C0214b.C0219e c0219e) {
+    public void update(b.e eVar) {
         for (IPConnStrategy iPConnStrategy : this.ipStrategyList) {
             iPConnStrategy.isToRemove = true;
         }
         this.amdcResultStat = new AmdcResultStat();
-        for (int i = 0; i < c0219e.h.length; i++) {
+        for (int i = 0; i < eVar.h.length; i++) {
             int i2 = 0;
             while (true) {
-                String[] strArr = c0219e.f;
+                String[] strArr = eVar.f;
                 if (i2 >= strArr.length) {
                     break;
                 }
-                handleUpdate(strArr[i2], 1, c0219e.h[i]);
+                handleUpdate(strArr[i2], 1, eVar.h[i]);
                 i2++;
             }
-            if (c0219e.g != null) {
+            if (eVar.g != null) {
                 this.containsStaticIp = true;
                 int i3 = 0;
                 while (true) {
-                    String[] strArr2 = c0219e.g;
+                    String[] strArr2 = eVar.g;
                     if (i3 < strArr2.length) {
-                        handleUpdate(strArr2[i3], 0, c0219e.h[i]);
+                        handleUpdate(strArr2[i3], 0, eVar.h[i]);
                         i3++;
                     }
                 }
@@ -278,16 +276,16 @@ public class StrategyList implements Serializable {
                 this.containsStaticIp = false;
             }
         }
-        if (c0219e.i != null) {
+        if (eVar.i != null) {
             int i4 = 0;
             while (true) {
-                C0214b.C0224j[] c0224jArr = c0219e.i;
-                if (i4 >= c0224jArr.length) {
+                b.j[] jVarArr = eVar.i;
+                if (i4 >= jVarArr.length) {
                     break;
                 }
-                C0214b.C0224j c0224j = c0224jArr[i4];
-                String str = c0224j.a;
-                handleUpdate(str, lw2.a(str) ? -1 : 1, c0224j.b);
+                b.j jVar = jVarArr[i4];
+                String str = jVar.a;
+                handleUpdate(str, lw2.a(str) ? -1 : 1, jVar.b);
                 i4++;
             }
         }
@@ -304,7 +302,7 @@ public class StrategyList implements Serializable {
             ALog.d(TAG, "strategy sort error!", null, e, new Object[0]);
         }
         AmdcResultStat amdcResultStat = this.amdcResultStat;
-        amdcResultStat.host = c0219e.a;
+        amdcResultStat.host = eVar.a;
         amdcResultStat.trace = TAG;
         ALog.c(TAG, amdcResultStat.toString(), null, new Object[0]);
         x6.b().commitStat(this.amdcResultStat);

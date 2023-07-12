@@ -17,23 +17,22 @@ public class fr extends ContextThemeWrapper {
     private Resources a;
     private LayoutInflater b;
     private ClassLoader c;
-    private C4547a e;
+    private a e;
     private LayoutInflater.Factory f;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.fr$a */
     /* loaded from: classes10.dex */
-    public class C4547a {
+    public class a {
         public HashSet<String> a = new HashSet<>();
         public HashMap<String, Constructor<?>> b = new HashMap<>();
 
-        public C4547a() {
+        public a() {
         }
     }
 
     public fr(Context context, int i, ClassLoader classLoader) {
         super(context, i);
-        this.e = new C4547a();
+        this.e = new a();
         this.f = new LayoutInflater.Factory() { // from class: com.amap.api.mapcore.util.fr.1
             @Override // android.view.LayoutInflater.Factory
             public View onCreateView(String str, Context context2, AttributeSet attributeSet) {

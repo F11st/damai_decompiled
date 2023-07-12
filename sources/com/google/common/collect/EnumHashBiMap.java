@@ -36,14 +36,14 @@ public final class EnumHashBiMap<K extends Enum<K>, V> extends AbstractBiMap<K, 
         objectInputStream.defaultReadObject();
         this.keyType = (Class) objectInputStream.readObject();
         setDelegates(new EnumMap(this.keyType), new HashMap((this.keyType.getEnumConstants().length * 3) / 2));
-        C5174f0.b(this, objectInputStream);
+        f0.b(this, objectInputStream);
     }
 
     @GwtIncompatible
     private void writeObject(ObjectOutputStream objectOutputStream) throws IOException {
         objectOutputStream.defaultWriteObject();
         objectOutputStream.writeObject(this.keyType);
-        C5174f0.i(this, objectOutputStream);
+        f0.i(this, objectOutputStream);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -52,17 +52,17 @@ public final class EnumHashBiMap<K extends Enum<K>, V> extends AbstractBiMap<K, 
         return checkKey((EnumHashBiMap<K, V>) ((Enum) obj));
     }
 
-    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.AbstractC5202q, java.util.Map
+    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.q, java.util.Map
     public /* bridge */ /* synthetic */ void clear() {
         super.clear();
     }
 
-    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.AbstractC5202q, java.util.Map
+    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.q, java.util.Map
     public /* bridge */ /* synthetic */ boolean containsValue(@NullableDecl Object obj) {
         return super.containsValue(obj);
     }
 
-    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.AbstractC5202q, java.util.Map
+    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.q, java.util.Map
     public /* bridge */ /* synthetic */ Set entrySet() {
         return super.entrySet();
     }
@@ -79,7 +79,7 @@ public final class EnumHashBiMap<K extends Enum<K>, V> extends AbstractBiMap<K, 
         return super.inverse();
     }
 
-    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.AbstractC5202q, java.util.Map
+    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.q, java.util.Map
     public /* bridge */ /* synthetic */ Set keySet() {
         return super.keySet();
     }
@@ -89,24 +89,24 @@ public final class EnumHashBiMap<K extends Enum<K>, V> extends AbstractBiMap<K, 
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.AbstractC5202q, java.util.Map, com.google.common.collect.BiMap
+    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.q, java.util.Map, com.google.common.collect.BiMap
     @CanIgnoreReturnValue
     public /* bridge */ /* synthetic */ Object put(Object obj, @NullableDecl Object obj2) {
         return put((EnumHashBiMap<K, V>) ((Enum) obj), (Enum) obj2);
     }
 
-    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.AbstractC5202q, java.util.Map, com.google.common.collect.BiMap
+    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.q, java.util.Map, com.google.common.collect.BiMap
     public /* bridge */ /* synthetic */ void putAll(Map map) {
         super.putAll(map);
     }
 
-    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.AbstractC5202q, java.util.Map
+    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.q, java.util.Map
     @CanIgnoreReturnValue
     public /* bridge */ /* synthetic */ Object remove(@NullableDecl Object obj) {
         return super.remove(obj);
     }
 
-    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.AbstractC5202q, java.util.Map
+    @Override // com.google.common.collect.AbstractBiMap, com.google.common.collect.q, java.util.Map
     public /* bridge */ /* synthetic */ Set values() {
         return super.values();
     }

@@ -9,8 +9,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.homepage.R$drawable;
@@ -54,7 +54,7 @@ public class LogisticsDetailActivity extends DamaiBaseActivity {
                 if (AndroidInstantRuntime.support(ipChange2, "1133150262")) {
                     ipChange2.ipc$dispatch("1133150262", new Object[]{this, logisticsDetailResponse});
                 } else if (logisticsDetailResponse != null) {
-                    DMImageCreator c = C0504a.b().c(logisticsDetailResponse.getIconUrl());
+                    DMImageCreator c = a.b().c(logisticsDetailResponse.getIconUrl());
                     int i = R$drawable.uikit_default_image_bg_gradient;
                     c.i(i).c(i).g(LogisticsDetailActivity.this.iv_header_image);
                     LogisticsDetailActivity.this.tv_info_state.setText(logisticsDetailResponse.getStatus());

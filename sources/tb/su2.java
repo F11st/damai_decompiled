@@ -69,13 +69,13 @@ public final class su2 {
             tb.b41.h(r0, r3)
             java.lang.String r6 = "heif"
             r7 = 0
-            boolean r0 = kotlin.text.C8596g.p(r0, r6, r5, r4, r7)
+            boolean r0 = kotlin.text.g.p(r0, r6, r5, r4, r7)
             if (r0 != 0) goto L71
             java.util.Objects.requireNonNull(r8, r2)
             java.lang.String r0 = r8.toLowerCase()
             tb.b41.h(r0, r3)
             java.lang.String r2 = ".heif"
-            boolean r0 = kotlin.text.C8596g.p(r0, r2, r5, r4, r7)
+            boolean r0 = kotlin.text.g.p(r0, r2, r5, r4, r7)
             if (r0 == 0) goto Lcb
         L71:
             android.graphics.Bitmap r0 = android.graphics.BitmapFactory.decodeFile(r8)
@@ -141,11 +141,11 @@ public final class su2 {
         }
         FileOutputStream fileOutputStream2 = null;
         try {
-            FileUploader.C3645a c3645a = FileUploader.Companion;
+            FileUploader.a aVar = FileUploader.Companion;
             StringBuilder sb = new StringBuilder();
             sb.append("decode:after decode this file size = ");
             sb.append((bArr != null ? bArr.length : 0) / 1024);
-            c3645a.h(sb.toString());
+            aVar.h(sb.toString());
             createTempFile = File.createTempFile("upload_decode", str, context.getCacheDir());
             fileOutputStream = new FileOutputStream(createTempFile);
         } catch (IOException e) {

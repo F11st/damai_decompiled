@@ -42,12 +42,11 @@ public class LiveHouseFragment extends AbsFragmentV2 implements OnCityChangedLis
     private HomeTopBgListener mTopBgListener;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.livehouse.fragment.LiveHouseFragment$a */
     /* loaded from: classes5.dex */
-    public class C1319a implements Action<Object> {
+    public class a implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1319a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -377,7 +376,7 @@ public class LiveHouseFragment extends AbsFragmentV2 implements OnCityChangedLis
         obtainBundleArgs();
         super.onViewCreated(view, bundle);
         this.isViewCreated = true;
-        this.mDMMessage.b("refreshData", new C1319a());
+        this.mDMMessage.b("refreshData", new a());
         enableDividerLine(false);
         enableRefresh();
         addScrollListener();
@@ -409,10 +408,10 @@ public class LiveHouseFragment extends AbsFragmentV2 implements OnCityChangedLis
             /* compiled from: Taobao */
             /* renamed from: cn.damai.livehouse.fragment.LiveHouseFragment$2$a */
             /* loaded from: classes5.dex */
-            public class C1318a implements OnErrClickListener {
+            public class a implements OnErrClickListener {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C1318a() {
+                a() {
                 }
 
                 @Override // cn.damai.tetris.v2.componentplugin.OnErrClickListener
@@ -437,7 +436,7 @@ public class LiveHouseFragment extends AbsFragmentV2 implements OnCityChangedLis
                     LiveHouseFragment.this.stopProgressDialog();
                 }
                 LiveHouseFragment.this.refreshFinish();
-                LiveHouseFragment.this.showErrorViewV2(str, str2, new C1318a());
+                LiveHouseFragment.this.showErrorViewV2(str, str2, new a());
             }
 
             @Override // cn.damai.tetris.DMMtopWarningListener

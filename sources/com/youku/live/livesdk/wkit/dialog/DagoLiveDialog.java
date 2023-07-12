@@ -47,7 +47,7 @@ public class DagoLiveDialog extends Dialog {
     }
 
     public DagoLiveDialog(@NonNull Context context, DialogConfig dialogConfig) {
-        super(context, R.C7961style.lfcontainer_DialogStyleCommon);
+        super(context, R.style.lfcontainer_DialogStyleCommon);
         this.mDialogConfig = dialogConfig;
     }
 
@@ -187,7 +187,7 @@ public class DagoLiveDialog extends Dialog {
         requestWindowFeature(1);
         setCanceledOnTouchOutside(false);
         setCancelable(true);
-        setContentView(R.C7960layout.dago_dialog_account_security);
+        setContentView(R.layout.dago_dialog_account_security);
         initView();
     }
 

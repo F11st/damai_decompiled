@@ -55,7 +55,7 @@ import tb.z20;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
-public class CityFloatLayer extends AbstractC1515a<CityBean> {
+public class CityFloatLayer extends cn.damai.projectfilter.floatview.a<CityBean> {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final String FILTER_CITY_CACHED_LASTTIME = "filter_city_cached_lasttime";
     View d;
@@ -74,12 +74,11 @@ public class CityFloatLayer extends AbstractC1515a<CityBean> {
     private cj q;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.projectfilter.floatview.CityFloatLayer$a */
     /* loaded from: classes6.dex */
-    public class C1509a implements OnCityListItemClickListener {
+    public class a implements OnCityListItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1509a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.city.listener.OnCityListItemClickListener
@@ -124,12 +123,11 @@ public class CityFloatLayer extends AbstractC1515a<CityBean> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.projectfilter.floatview.CityFloatLayer$b */
     /* loaded from: classes6.dex */
-    public class C1510b implements LetterSortBar.OnTouchingLetterChangedListener {
+    public class b implements LetterSortBar.OnTouchingLetterChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1510b() {
+        b() {
         }
 
         @Override // cn.damai.commonbusiness.city.view.LetterSortBar.OnTouchingLetterChangedListener
@@ -178,20 +176,18 @@ public class CityFloatLayer extends AbstractC1515a<CityBean> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.projectfilter.floatview.CityFloatLayer$c */
     /* loaded from: classes6.dex */
-    public class C1511c implements IPermissionListener {
+    public class c implements IPermissionListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ boolean a;
         final /* synthetic */ cj b;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.projectfilter.floatview.CityFloatLayer$c$a */
         /* loaded from: classes15.dex */
-        public class DialogInterface$OnClickListenerC1512a implements DialogInterface.OnClickListener {
+        public class a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC1512a() {
+            a() {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -207,12 +203,11 @@ public class CityFloatLayer extends AbstractC1515a<CityBean> {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.projectfilter.floatview.CityFloatLayer$c$b */
         /* loaded from: classes15.dex */
-        public class DialogInterface$OnClickListenerC1513b implements DialogInterface.OnClickListener {
+        public class b implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC1513b(C1511c c1511c) {
+            b(c cVar) {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -226,7 +221,7 @@ public class CityFloatLayer extends AbstractC1515a<CityBean> {
             }
         }
 
-        C1511c(boolean z, cj cjVar) {
+        c(boolean z, cj cjVar) {
             this.a = z;
             this.b = cjVar;
         }
@@ -258,19 +253,18 @@ public class CityFloatLayer extends AbstractC1515a<CityBean> {
             if (AndroidInstantRuntime.support(ipChange, "2066748516")) {
                 ipChange.ipc$dispatch("2066748516", new Object[]{this, strArr});
             } else {
-                gr1.a(CityFloatLayer.this.a, "获取你所在城市的演出赛事信息，帮助你找到附近的演出赛事", Arrays.asList(strArr), false, new DialogInterface$OnClickListenerC1512a(), new DialogInterface$OnClickListenerC1513b(this));
+                gr1.a(CityFloatLayer.this.a, "获取你所在城市的演出赛事信息，帮助你找到附近的演出赛事", Arrays.asList(strArr), false, new a(), new b(this));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.projectfilter.floatview.CityFloatLayer$d */
     /* loaded from: classes6.dex */
-    public class C1514d implements CityLocationUtil.LocaltionListener {
+    public class d implements CityLocationUtil.LocaltionListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ cj a;
 
-        C1514d(cj cjVar) {
+        d(cj cjVar) {
             this.a = cjVar;
         }
 
@@ -458,7 +452,7 @@ public class CityFloatLayer extends AbstractC1515a<CityBean> {
         }
         LetterSortBar letterSortBar = (LetterSortBar) l(R$id.city_select_sort_letter);
         this.o = letterSortBar;
-        letterSortBar.setOnTouchingLetterChangedListener(new C1510b());
+        letterSortBar.setOnTouchingLetterChangedListener(new b());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -468,7 +462,7 @@ public class CityFloatLayer extends AbstractC1515a<CityBean> {
             ipChange.ipc$dispatch("106829139", new Object[]{this, cjVar});
             return;
         }
-        CityLocationUtil cityLocationUtil = new CityLocationUtil(this.a, new C1514d(cjVar));
+        CityLocationUtil cityLocationUtil = new CityLocationUtil(this.a, new d(cjVar));
         this.n = cityLocationUtil;
         cityLocationUtil.p(true);
         this.n.n();
@@ -486,7 +480,7 @@ public class CityFloatLayer extends AbstractC1515a<CityBean> {
         this.l.setLayoutManager(linearLayoutManager);
         CitySelectAdapter citySelectAdapter = new CitySelectAdapter(this.a, this.i);
         this.m = citySelectAdapter;
-        citySelectAdapter.g(new C1509a());
+        citySelectAdapter.g(new a());
         this.l.setAdapter(this.m);
         this.l.addOnScrollListener(new RecyclerView.OnScrollListener(this) { // from class: cn.damai.projectfilter.floatview.CityFloatLayer.2
             private static transient /* synthetic */ IpChange $ipChange;
@@ -618,7 +612,7 @@ public class CityFloatLayer extends AbstractC1515a<CityBean> {
             return;
         }
         String[] strArr = mr1.LOCATION;
-        new Permission(this.a, new PermissionModel(strArr, "位置权限使用说明", Integer.valueOf(R$drawable.permission_location_icon), "用于为你提供所在城市演出和场馆信息及帮助你找到附近的演出")).a(new C1511c(ir1.i(strArr), cjVar)).b();
+        new Permission(this.a, new PermissionModel(strArr, "位置权限使用说明", Integer.valueOf(R$drawable.permission_location_icon), "用于为你提供所在城市演出和场馆信息及帮助你找到附近的演出")).a(new c(ir1.i(strArr), cjVar)).b();
     }
 
     /* JADX INFO: Access modifiers changed from: private */

@@ -3,7 +3,7 @@ package org.apache.commons.codec.language;
 import androidx.exifinterface.media.ExifInterface;
 import com.ali.user.mobile.app.constant.UTConstant;
 import com.alibaba.motu.crashreporter.Constants;
-import com.alibaba.security.realidentity.a.AbstractC3840a;
+import com.alibaba.security.realidentity.a.a;
 import com.youku.upsplayer.util.YKUpsConvert;
 import java.util.Locale;
 import org.apache.commons.codec.EncoderException;
@@ -365,7 +365,7 @@ public class DoubleMetaphone implements StringEncoder {
                     if (i != 0 || !contains(str, i + 1, 1, "M", "N", "L", ExifInterface.LONGITUDE_WEST)) {
                         int i2 = i + 1;
                         if (!contains(str, i2, 1, "Z")) {
-                            if (contains(str, i, 2, AbstractC3840a.X)) {
+                            if (contains(str, i, 2, a.X)) {
                                 return handleSC(str, doubleMetaphoneResult, i);
                             }
                             if (i == str.length() - 1 && contains(str, i - 2, 2, "AI", "OI")) {

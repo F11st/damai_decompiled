@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
-import cn.damai.common.image.C0504a;
 import cn.damai.commonbusiness.imagebrowse.bean.VideoInfo;
 import cn.damai.player.video.listener.VideoOperateListener;
 import cn.damai.player.video.view.ApiPlayer;
@@ -32,12 +31,11 @@ public class HomeVideoUiFacade extends BaseVideoUiFacade implements View.OnClick
     private View mPlay;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.player.video.decor.HomeVideoUiFacade$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1505a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1505a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -65,7 +63,7 @@ public class HomeVideoUiFacade extends BaseVideoUiFacade implements View.OnClick
         this.mMuteTv = (TextView) this.mFacade.findViewById(R$id.video_voice_btn);
         this.mErrorUi = this.mFacade.findViewById(R$id.video_error_ui);
         this.mErrorTip = (TextView) this.mFacade.findViewById(R$id.video_error_tips);
-        this.mFacade.setOnClickListener(new View$OnClickListenerC1505a());
+        this.mFacade.setOnClickListener(new a());
         this.mMuteTv.setOnClickListener(this);
         this.mFacade.findViewById(R$id.video_error_refresh).setOnClickListener(this);
     }
@@ -90,7 +88,7 @@ public class HomeVideoUiFacade extends BaseVideoUiFacade implements View.OnClick
                     if (AndroidInstantRuntime.support(ipChange2, "1711233083")) {
                         ipChange2.ipc$dispatch("1711233083", new Object[]{this});
                     } else {
-                        C0504a.b().f(picUrl, HomeVideoUiFacade.this.mCover.getWidth(), HomeVideoUiFacade.this.mCover.getHeight()).g(HomeVideoUiFacade.this.mCover);
+                        cn.damai.common.image.a.b().f(picUrl, HomeVideoUiFacade.this.mCover.getWidth(), HomeVideoUiFacade.this.mCover.getHeight()).g(HomeVideoUiFacade.this.mCover);
                     }
                 }
             });

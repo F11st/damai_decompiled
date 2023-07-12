@@ -425,7 +425,7 @@ public final class ObservableConcatMap<T, U> extends AbstractObservableWithUpstr
         this.bufferSize = Math.max(8, i);
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super U> observer) {
         if (ObservableScalarXMap.tryScalarXMapSubscribe(this.source, observer, this.mapper)) {
             return;

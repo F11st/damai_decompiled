@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.functions.ObjectHelper;
@@ -43,7 +43,7 @@ public final class FlowableBufferBoundary<T, U extends Collection<? super T>, Op
         volatile boolean done;
         long emitted;
         long index;
-        final SpscLinkedArrayQueue<C> queue = new SpscLinkedArrayQueue<>(AbstractC8147b.bufferSize());
+        final SpscLinkedArrayQueue<C> queue = new SpscLinkedArrayQueue<>(b.bufferSize());
         final jm subscribers = new jm();
         final AtomicLong requested = new AtomicLong();
         final AtomicReference<Subscription> upstream = new AtomicReference<>();
@@ -430,14 +430,14 @@ public final class FlowableBufferBoundary<T, U extends Collection<? super T>, Op
         }
     }
 
-    public FlowableBufferBoundary(AbstractC8147b<T> abstractC8147b, Publisher<? extends Open> publisher, Function<? super Open, ? extends Publisher<? extends Close>> function, Callable<U> callable) {
-        super(abstractC8147b);
+    public FlowableBufferBoundary(b<T> bVar, Publisher<? extends Open> publisher, Function<? super Open, ? extends Publisher<? extends Close>> function, Callable<U> callable) {
+        super(bVar);
         this.bufferOpen = publisher;
         this.bufferClose = function;
         this.bufferSupplier = callable;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super U> subscriber) {
         BufferBoundarySubscriber bufferBoundarySubscriber = new BufferBoundarySubscriber(subscriber, this.bufferOpen, this.bufferClose, this.bufferSupplier);
         subscriber.onSubscribe(bufferBoundarySubscriber);

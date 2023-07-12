@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.Log;
 import com.google.common.logging.nano.Vr$VREvent;
 import com.google.vr.cardboard.VrParamsProvider;
-import com.google.vr.vrcore.nano.C5450a;
+import com.google.vr.vrcore.nano.a;
 import tb.az2;
 
 /* compiled from: Taobao */
@@ -66,7 +66,7 @@ public class SdkConfigurationReader {
     }
 
     private static Vr$VREvent.SdkConfigurationParams readParamsFromProvider(VrParamsProvider vrParamsProvider) {
-        Vr$VREvent.SdkConfigurationParams readSdkConfigurationParams = vrParamsProvider.readSdkConfigurationParams(new C5450a());
+        Vr$VREvent.SdkConfigurationParams readSdkConfigurationParams = vrParamsProvider.readSdkConfigurationParams(new a());
         if (readSdkConfigurationParams == null) {
             Log.w("SdkConfigurationReader", "VrParamsProvider returned null params, using defaults.");
             return DEFAULT_PARAMS;

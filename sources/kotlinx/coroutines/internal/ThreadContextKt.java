@@ -41,24 +41,24 @@ public final class ThreadContextKt {
             return (ThreadContextElement) element;
         }
     };
-    private static final Function2<C8695b, CoroutineContext.Element, C8695b> d = new Function2<C8695b, CoroutineContext.Element, C8695b>() { // from class: kotlinx.coroutines.internal.ThreadContextKt$updateState$1
+    private static final Function2<b, CoroutineContext.Element, b> d = new Function2<b, CoroutineContext.Element, b>() { // from class: kotlinx.coroutines.internal.ThreadContextKt$updateState$1
         @Override // kotlin.jvm.functions.Function2
         @NotNull
-        public final C8695b invoke(@NotNull C8695b c8695b, @NotNull CoroutineContext.Element element) {
+        public final b invoke(@NotNull b bVar, @NotNull CoroutineContext.Element element) {
             if (element instanceof ThreadContextElement) {
-                c8695b.a(((ThreadContextElement) element).updateThreadContext(c8695b.b()));
+                bVar.a(((ThreadContextElement) element).updateThreadContext(bVar.b()));
             }
-            return c8695b;
+            return bVar;
         }
     };
-    private static final Function2<C8695b, CoroutineContext.Element, C8695b> e = new Function2<C8695b, CoroutineContext.Element, C8695b>() { // from class: kotlinx.coroutines.internal.ThreadContextKt$restoreState$1
+    private static final Function2<b, CoroutineContext.Element, b> e = new Function2<b, CoroutineContext.Element, b>() { // from class: kotlinx.coroutines.internal.ThreadContextKt$restoreState$1
         @Override // kotlin.jvm.functions.Function2
         @NotNull
-        public final C8695b invoke(@NotNull C8695b c8695b, @NotNull CoroutineContext.Element element) {
+        public final b invoke(@NotNull b bVar, @NotNull CoroutineContext.Element element) {
             if (element instanceof ThreadContextElement) {
-                ((ThreadContextElement) element).restoreThreadContext(c8695b.b(), c8695b.d());
+                ((ThreadContextElement) element).restoreThreadContext(bVar.b(), bVar.d());
             }
-            return c8695b;
+            return bVar;
         }
     };
 
@@ -66,8 +66,8 @@ public final class ThreadContextKt {
         if (obj == a) {
             return;
         }
-        if (obj instanceof C8695b) {
-            ((C8695b) obj).c();
+        if (obj instanceof b) {
+            ((b) obj).c();
             coroutineContext.fold(obj, e);
             return;
         }
@@ -92,7 +92,7 @@ public final class ThreadContextKt {
             return a;
         }
         if (obj instanceof Integer) {
-            return coroutineContext.fold(new C8695b(coroutineContext, ((Number) obj).intValue()), d);
+            return coroutineContext.fold(new b(coroutineContext, ((Number) obj).intValue()), d);
         }
         Objects.requireNonNull(obj, "null cannot be cast to non-null type kotlinx.coroutines.ThreadContextElement<kotlin.Any?>");
         return ((ThreadContextElement) obj).updateThreadContext(coroutineContext);

@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.completable;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
+import io.reactivex.a;
 import io.reactivex.annotations.Experimental;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -10,7 +10,7 @@ import io.reactivex.internal.disposables.DisposableHelper;
 /* compiled from: Taobao */
 @Experimental
 /* loaded from: classes3.dex */
-public final class CompletableDetach extends AbstractC8146a {
+public final class CompletableDetach extends a {
     final CompletableSource source;
 
     /* compiled from: Taobao */
@@ -68,7 +68,7 @@ public final class CompletableDetach extends AbstractC8146a {
         this.source = completableSource;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     protected void subscribeActual(CompletableObserver completableObserver) {
         this.source.subscribe(new DetachCompletableObserver(completableObserver));
     }

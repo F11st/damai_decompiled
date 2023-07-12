@@ -6,7 +6,7 @@ import java.lang.ref.WeakReference;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class z10 extends C9703t {
+public class z10 extends t {
     public void i(DXRootView dXRootView) {
         new WeakReference(dXRootView);
     }

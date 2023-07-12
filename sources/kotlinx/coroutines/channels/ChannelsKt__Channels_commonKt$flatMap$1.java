@@ -59,7 +59,7 @@ final class ChannelsKt__Channels_commonKt$flatMap$1 extends SuspendLambda implem
     public final java.lang.Object invokeSuspend(@org.jetbrains.annotations.NotNull java.lang.Object r10) {
         /*
             r9 = this;
-            java.lang.Object r0 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r0 = kotlin.coroutines.intrinsics.a.d()
             int r1 = r9.label
             r2 = 3
             r3 = 2
@@ -147,7 +147,7 @@ final class ChannelsKt__Channels_commonKt$flatMap$1 extends SuspendLambda implem
             r0.L$1 = r7
             r0.L$2 = r5
             r0.label = r2
-            java.lang.Object r10 = kotlinx.coroutines.channels.C8648b.s0(r10, r6, r0)
+            java.lang.Object r10 = kotlinx.coroutines.channels.b.s0(r10, r6, r0)
             if (r10 != r1) goto L98
             return r1
         L98:

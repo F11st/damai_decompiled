@@ -262,7 +262,7 @@ public final class ObservableObserveOn<T> extends AbstractObservableWithUpstream
         this.bufferSize = i;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super T> observer) {
         Scheduler scheduler = this.scheduler;
         if (scheduler instanceof TrampolineScheduler) {

@@ -30,12 +30,11 @@ public class TickletAnimWindow extends PopupWindow {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletAnimWindow$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2095a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2095a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -50,13 +49,12 @@ public class TickletAnimWindow extends PopupWindow {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletAnimWindow$b */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2096b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ICustomDialogEventListener a;
 
-        View$OnClickListenerC2096b(ICustomDialogEventListener iCustomDialogEventListener) {
+        b(ICustomDialogEventListener iCustomDialogEventListener) {
             this.a = iCustomDialogEventListener;
         }
 
@@ -76,12 +74,11 @@ public class TickletAnimWindow extends PopupWindow {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletAnimWindow$c  reason: invalid class name */
     /* loaded from: classes7.dex */
-    public class animationAnimation$AnimationListenerC2097c implements Animation.AnimationListener {
+    public class c implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        animationAnimation$AnimationListenerC2097c() {
+        c() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -114,7 +111,7 @@ public class TickletAnimWindow extends PopupWindow {
     public TickletAnimWindow(Context context, View view, View view2, Activity activity) {
         super(context);
         init(context, view, view2, activity);
-        this.contentView.setOnClickListener(new View$OnClickListenerC2095a());
+        this.contentView.setOnClickListener(new a());
     }
 
     private void init(Context context, View view, View view2, Activity activity) {
@@ -154,7 +151,7 @@ public class TickletAnimWindow extends PopupWindow {
             callSuperDismiss();
         } else {
             Animation loadAnimation = AnimationUtils.loadAnimation(this.mContext, R$anim.push_top_out_500);
-            loadAnimation.setAnimationListener(new animationAnimation$AnimationListenerC2097c());
+            loadAnimation.setAnimationListener(new c());
             this.contentView.startAnimation(loadAnimation);
         }
     }
@@ -192,6 +189,6 @@ public class TickletAnimWindow extends PopupWindow {
     public TickletAnimWindow(Context context, View view, View view2, Activity activity, ICustomDialogEventListener iCustomDialogEventListener) {
         super(context);
         init(context, view, view2, activity);
-        this.contentView.setOnClickListener(new View$OnClickListenerC2096b(iCustomDialogEventListener));
+        this.contentView.setOnClickListener(new b(iCustomDialogEventListener));
     }
 }

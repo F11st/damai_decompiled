@@ -3,7 +3,6 @@ package com.xiaomi.push;
 import android.content.Context;
 import android.text.TextUtils;
 import com.tencent.open.SocialConstants;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import java.util.HashMap;
 
 /* compiled from: Taobao */
@@ -50,7 +49,7 @@ public class dz {
             }
             b(context, hashMap);
         } catch (Exception e) {
-            AbstractC7535b.a(e);
+            com.xiaomi.channel.commonutils.logger.b.a(e);
         }
     }
 

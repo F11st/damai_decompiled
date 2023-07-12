@@ -2,12 +2,9 @@ package com.xiaomi.push.service;
 
 import android.content.Context;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.mipush.sdk.Constants;
-import com.xiaomi.push.C7594ab;
-import com.xiaomi.push.C7672hn;
-import com.xiaomi.push.C7786v;
 import com.xiaomi.push.hm;
+import com.xiaomi.push.hn;
 import com.xiaomi.push.ht;
 import com.xiaomi.push.ii;
 import com.xiaomi.push.it;
@@ -35,7 +32,7 @@ public class bz {
     }
 
     private static ii a(String str, String str2, hm hmVar) {
-        return new ii("-1", false).d(str).b(str2).a(C7594ab.a(it.a(hmVar))).c(ht.UploadTinyData.f497a);
+        return new ii("-1", false).d(str).b(str2).a(com.xiaomi.push.ab.a(it.a(hmVar))).c(ht.UploadTinyData.f497a);
     }
 
     public static synchronized String a() {
@@ -57,13 +54,13 @@ public class bz {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public static java.util.ArrayList<com.xiaomi.push.ii> a(java.util.List<com.xiaomi.push.C7672hn> r11, java.lang.String r12, java.lang.String r13, int r14) {
+    public static java.util.ArrayList<com.xiaomi.push.ii> a(java.util.List<com.xiaomi.push.hn> r11, java.lang.String r12, java.lang.String r13, int r14) {
         /*
             r0 = 0
             if (r11 != 0) goto L9
             java.lang.String r11 = "requests can not be null in TinyDataHelper.transToThriftObj()."
         L5:
-            com.xiaomi.channel.commonutils.logger.AbstractC7535b.d(r11)
+            com.xiaomi.channel.commonutils.logger.b.d(r11)
             return r0
         L9:
             int r1 = r11.size()
@@ -82,7 +79,7 @@ public class bz {
             int r6 = r11.size()
             if (r4 >= r6) goto Laa
             java.lang.Object r6 = r11.get(r4)
-            com.xiaomi.push.hn r6 = (com.xiaomi.push.C7672hn) r6
+            com.xiaomi.push.hn r6 = (com.xiaomi.push.hn) r6
             if (r6 != 0) goto L2f
             goto La6
         L2f:
@@ -127,7 +124,7 @@ public class bz {
             java.lang.String r6 = r6.d()
             r7.append(r6)
             java.lang.String r6 = r7.toString()
-            com.xiaomi.channel.commonutils.logger.AbstractC7535b.d(r6)
+            com.xiaomi.channel.commonutils.logger.b.d(r6)
             goto La6
         L91:
             int r8 = r5 + r7
@@ -155,29 +152,29 @@ public class bz {
     }
 
     public static void a(Context context, String str, String str2, long j, String str3) {
-        C7672hn c7672hn = new C7672hn();
-        c7672hn.d(str);
-        c7672hn.c(str2);
-        c7672hn.a(j);
-        c7672hn.b(str3);
-        c7672hn.a("push_sdk_channel");
-        c7672hn.g(context.getPackageName());
-        c7672hn.e(context.getPackageName());
-        c7672hn.a(true);
-        c7672hn.b(System.currentTimeMillis());
-        c7672hn.f(a());
-        ca.a(context, c7672hn);
+        hn hnVar = new hn();
+        hnVar.d(str);
+        hnVar.c(str2);
+        hnVar.a(j);
+        hnVar.b(str3);
+        hnVar.a("push_sdk_channel");
+        hnVar.g(context.getPackageName());
+        hnVar.e(context.getPackageName());
+        hnVar.a(true);
+        hnVar.b(System.currentTimeMillis());
+        hnVar.f(a());
+        ca.a(context, hnVar);
     }
 
     public static void a(String str, String str2, String str3, ao aoVar) {
         if (aoVar == null) {
             return;
         }
-        C7672hn c7672hn = new C7672hn();
-        c7672hn.d(str);
-        c7672hn.c(str2);
-        c7672hn.g(str3);
-        c7672hn.e(str3);
+        hn hnVar = new hn();
+        hnVar.d(str);
+        hnVar.c(str2);
+        hnVar.g(str3);
+        hnVar.e(str3);
         HashMap hashMap = new HashMap();
         hashMap.put("chid", String.valueOf(aoVar.a));
         hashMap.put("screen_on", String.valueOf(aoVar.f893a));
@@ -187,36 +184,36 @@ public class bz {
         hashMap.put(GiftNumBean.KEY_NUM, String.valueOf(aoVar.b));
         hashMap.put("run", String.valueOf(aoVar.c));
         hashMap.put("send", String.valueOf(System.currentTimeMillis()));
-        c7672hn.a(hashMap);
-        ca.a(c7672hn);
+        hnVar.a(hashMap);
+        ca.a(hnVar);
     }
 
-    public static boolean a(C7672hn c7672hn, boolean z) {
+    public static boolean a(hn hnVar, boolean z) {
         String str;
-        if (c7672hn == null) {
+        if (hnVar == null) {
             str = "item is null, verfiy ClientUploadDataItem failed.";
-        } else if (!z && TextUtils.isEmpty(c7672hn.f469a)) {
+        } else if (!z && TextUtils.isEmpty(hnVar.f469a)) {
             str = "item.channel is null or empty, verfiy ClientUploadDataItem failed.";
-        } else if (TextUtils.isEmpty(c7672hn.f476d)) {
+        } else if (TextUtils.isEmpty(hnVar.f476d)) {
             str = "item.category is null or empty, verfiy ClientUploadDataItem failed.";
-        } else if (TextUtils.isEmpty(c7672hn.f475c)) {
+        } else if (TextUtils.isEmpty(hnVar.f475c)) {
             str = "item.name is null or empty, verfiy ClientUploadDataItem failed.";
-        } else if (!com.xiaomi.push.bp.m703a(c7672hn.f476d)) {
+        } else if (!com.xiaomi.push.bp.m703a(hnVar.f476d)) {
             str = "item.category can only contain ascii char, verfiy ClientUploadDataItem failed.";
-        } else if (com.xiaomi.push.bp.m703a(c7672hn.f475c)) {
-            String str2 = c7672hn.f474b;
+        } else if (com.xiaomi.push.bp.m703a(hnVar.f475c)) {
+            String str2 = hnVar.f474b;
             if (str2 == null || str2.length() <= 10240) {
                 return false;
             }
-            str = "item.data is too large(" + c7672hn.f474b.length() + "), max size for data is " + MsgID.MEDIA_INFO_VIDEO_START_RECOVER + " , verfiy ClientUploadDataItem failed.";
+            str = "item.data is too large(" + hnVar.f474b.length() + "), max size for data is " + MsgID.MEDIA_INFO_VIDEO_START_RECOVER + " , verfiy ClientUploadDataItem failed.";
         } else {
             str = "item.name can only contain ascii char, verfiy ClientUploadDataItem failed.";
         }
-        AbstractC7535b.m586a(str);
+        com.xiaomi.channel.commonutils.logger.b.m586a(str);
         return true;
     }
 
     public static boolean a(String str) {
-        return !C7786v.m1249b() || Constants.HYBRID_PACKAGE_NAME.equals(str);
+        return !com.xiaomi.push.v.m1249b() || Constants.HYBRID_PACKAGE_NAME.equals(str);
     }
 }

@@ -19,9 +19,9 @@ final class SharedFlowImpl$collect$1 extends ContinuationImpl {
     Object L$4;
     int label;
     /* synthetic */ Object result;
-    final /* synthetic */ C8685j this$0;
+    final /* synthetic */ j this$0;
 
-    SharedFlowImpl$collect$1(C8685j c8685j, Continuation continuation) {
+    SharedFlowImpl$collect$1(j jVar, Continuation continuation) {
         super(continuation);
     }
 

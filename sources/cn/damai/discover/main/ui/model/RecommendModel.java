@@ -17,8 +17,8 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.weex.annotation.JSMethod;
 import java.util.HashMap;
-import tb.C9039db;
 import tb.cb1;
+import tb.db;
 import tb.ir1;
 import tb.m61;
 import tb.mr1;
@@ -131,8 +131,8 @@ public class RecommendModel extends AbsModel {
                     RecommendModel.this.mHighLightCard = null;
                 }
                 if (baseResponse != null) {
-                    C9039db.d(baseResponse, z91.q());
-                    onBizListener.onBizSuccess(PageData.success(z, C9039db.k(baseResponse), baseResponse));
+                    db.d(baseResponse, z91.q());
+                    onBizListener.onBizSuccess(PageData.success(z, db.k(baseResponse), baseResponse));
                     if (z) {
                         RecommendModel.this.alarm(tetrisRequest, "2000", JSMethod.NOT_SET, true);
                         return;

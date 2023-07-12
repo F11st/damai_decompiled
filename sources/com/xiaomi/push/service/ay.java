@@ -12,8 +12,6 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import androidx.core.app.NotificationCompat;
 import com.huawei.hms.support.hianalytics.HiAnalyticsConstant;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
-import com.xiaomi.push.C7667h;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
@@ -27,22 +25,21 @@ public class ay {
 
     /* renamed from: a  reason: collision with other field name */
     private static String f908a = null;
-    public static final C7732a<String, String, String> a = new C7732a<>("setSound", "canSound", "canSound");
-    public static final C7732a<String, String, String> b = new C7732a<>("setVibrate", "canVibrate", "canVibrate");
-    public static final C7732a<String, String, String> c = new C7732a<>("setLights", "canLights", "canLights");
-    public static final C7732a<String, String, String> d = new C7732a<>("setShowOnKeyguard", "canShowOnKeyguard", "canShowOnKeyguard");
-    public static final C7732a<String, String, String> e = new C7732a<>("setFloat", "canFloat", "canShowFloat");
-    public static final C7732a<String, String, String> f = new C7732a<>("setShowBadge", "canShowBadge", "canShowBadge");
+    public static final a<String, String, String> a = new a<>("setSound", "canSound", "canSound");
+    public static final a<String, String, String> b = new a<>("setVibrate", "canVibrate", "canVibrate");
+    public static final a<String, String, String> c = new a<>("setLights", "canLights", "canLights");
+    public static final a<String, String, String> d = new a<>("setShowOnKeyguard", "canShowOnKeyguard", "canShowOnKeyguard");
+    public static final a<String, String, String> e = new a<>("setFloat", "canFloat", "canShowFloat");
+    public static final a<String, String, String> f = new a<>("setShowBadge", "canShowBadge", "canShowBadge");
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.service.ay$a */
     /* loaded from: classes11.dex */
-    public static class C7732a<F, S, T> {
+    public static class a<F, S, T> {
         F a;
         S b;
         T c;
 
-        private C7732a(F f, S s, T t) {
+        private a(F f, S s, T t) {
             this.a = f;
             this.b = s;
             this.c = t;
@@ -53,24 +50,24 @@ public class ay {
         try {
             return Settings.Global.getInt(contentResolver, "user_aggregate", 0);
         } catch (Exception e2) {
-            AbstractC7535b.m586a("get user aggregate failed, " + e2);
+            com.xiaomi.channel.commonutils.logger.b.m586a("get user aggregate failed, " + e2);
             return 0;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static int a(Context context, String str) {
-        return C7667h.b(context, str);
+        return com.xiaomi.push.h.b(context, str);
     }
 
-    public static int a(Context context, String str, String str2, C7732a<String, String, String> c7732a) {
-        if (c7732a != null) {
+    public static int a(Context context, String str, String str2, a<String, String, String> aVar) {
+        if (aVar != null) {
             try {
-                Bundle a2 = a(context, c7732a.b, str, str2, (Bundle) null);
-                if (a2 == null || !a2.containsKey(c7732a.c)) {
+                Bundle a2 = a(context, aVar.b, str, str2, (Bundle) null);
+                if (a2 == null || !a2.containsKey(aVar.c)) {
                     return -1;
                 }
-                return a2.getBoolean(c7732a.c) ? 1 : 0;
+                return a2.getBoolean(aVar.c) ? 1 : 0;
             } catch (Exception unused) {
                 return -1;
             }
@@ -141,7 +138,7 @@ public class ay {
             r3.append(r1)     // Catch: java.lang.Exception -> L38
             r3.append(r2)     // Catch: java.lang.Exception -> L38
             java.lang.String r2 = r3.toString()     // Catch: java.lang.Exception -> L38
-            com.xiaomi.channel.commonutils.logger.AbstractC7535b.m586a(r2)     // Catch: java.lang.Exception -> L38
+            com.xiaomi.channel.commonutils.logger.b.m586a(r2)     // Catch: java.lang.Exception -> L38
             goto L4d
         L38:
             r2 = move-exception
@@ -151,7 +148,7 @@ public class ay {
             r3.append(r1)
             r3.append(r2)
             java.lang.String r2 = r3.toString()
-            com.xiaomi.channel.commonutils.logger.AbstractC7535b.m586a(r2)
+            com.xiaomi.channel.commonutils.logger.b.m586a(r2)
         L4d:
             if (r0 != 0) goto L50
             goto L51
@@ -264,7 +261,7 @@ public class ay {
                     }
                     continue;
                 } catch (Exception e2) {
-                    AbstractC7535b.m586a("can't match url intent. " + e2);
+                    com.xiaomi.channel.commonutils.logger.b.m586a("can't match url intent. " + e2);
                 }
             }
         }
@@ -273,7 +270,7 @@ public class ay {
 
     public static void a(Map<String, String> map, Bundle bundle, String str) {
         if (map == null || bundle == null || TextUtils.isEmpty(str)) {
-            AbstractC7535b.m586a("cp map to b fail:" + str);
+            com.xiaomi.channel.commonutils.logger.b.m586a("cp map to b fail:" + str);
         } else if (TextUtils.isEmpty(map.get(str))) {
             bundle.remove(str);
         } else {
@@ -286,7 +283,7 @@ public class ay {
             builder.setGroupAlertBehavior(z ? 2 : 1);
             return true;
         }
-        AbstractC7535b.b("not support setGroupAlertBehavior");
+        com.xiaomi.channel.commonutils.logger.b.b("not support setGroupAlertBehavior");
         return false;
     }
 
@@ -296,12 +293,12 @@ public class ay {
         return a2 == 1 || a2 == 2;
     }
 
-    public static boolean a(Context context, String str, String str2, C7732a<String, String, String> c7732a, boolean z) {
-        if (c7732a != null) {
+    public static boolean a(Context context, String str, String str2, a<String, String, String> aVar, boolean z) {
+        if (aVar != null) {
             try {
                 Bundle bundle = new Bundle();
-                bundle.putBoolean(c7732a.c, z);
-                a(context, c7732a.a, str, str2, bundle);
+                bundle.putBoolean(aVar.c, z);
+                a(context, aVar.a, str, str2, bundle);
                 return true;
             } catch (Exception unused) {
             }

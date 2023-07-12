@@ -3,7 +3,6 @@ package tb;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.taobao.update.adapter.UpdateMonitor;
-import com.taobao.update.apk.C6915a;
 import com.taobao.update.apk.MainUpdateData;
 import com.taobao.update.apk.history.ApkUpdateHistory;
 import com.taobao.update.datasource.UpdateDataSource;
@@ -108,7 +107,7 @@ public class l6 extends mu2 implements UpdateListener {
                 }
             }
             android.util.Log.e("main_update", JSON.toJSONString(mainUpdateData));
-            el2 execute = new C6915a().execute(z, mainUpdateData);
+            el2 execute = new com.taobao.update.apk.a().execute(z, mainUpdateData);
             if (execute != null && execute.success) {
                 UpdateDataSource.getInstance().clearCache();
                 UpdateListener.PatchListener patchListener2 = this.a;

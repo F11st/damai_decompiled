@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.share.generateimage.GenerateImageUtil;
 import cn.damai.trade.R$layout;
 import cn.damai.trade.newtradeorder.ui.orderdetail.bean.OrderDetailShareBean;
@@ -24,13 +24,12 @@ public class OrderDetailShareViewHolder extends RecyclerView.ViewHolder {
     private Context a;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailShareViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2216a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OrderDetailShareBean a;
 
-        View$OnClickListenerC2216a(OrderDetailShareBean orderDetailShareBean) {
+        a(OrderDetailShareBean orderDetailShareBean) {
             this.a = orderDetailShareBean;
         }
 
@@ -41,7 +40,7 @@ public class OrderDetailShareViewHolder extends RecyclerView.ViewHolder {
                 ipChange.ipc$dispatch("-785046009", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(pp2.u().x1(this.a.projectId));
+            c.e().x(pp2.u().x1(this.a.projectId));
             Bundle bundle = new Bundle();
             bundle.putString("imageUrl", this.a.projectImage);
             bundle.putString("uniqueIdent", this.a.projectId);
@@ -70,7 +69,7 @@ public class OrderDetailShareViewHolder extends RecyclerView.ViewHolder {
         } else if (orderDetailShareBean == null) {
         } else {
             pp2.u().L1(this.itemView, orderDetailShareBean.projectId);
-            this.itemView.setOnClickListener(new View$OnClickListenerC2216a(orderDetailShareBean));
+            this.itemView.setOnClickListener(new a(orderDetailShareBean));
         }
     }
 }

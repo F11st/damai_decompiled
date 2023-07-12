@@ -26,10 +26,9 @@ public final class ConnectService {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.support.api.core.ConnectService$a */
     /* loaded from: classes10.dex */
-    public static class C5715a extends PendingResultImpl<ResolveResult<ConnectResp>, ConnectResp> {
-        C5715a(ApiClient apiClient, String str, IMessageEntity iMessageEntity) {
+    public static class a extends PendingResultImpl<ResolveResult<ConnectResp>, ConnectResp> {
+        a(ApiClient apiClient, String str, IMessageEntity iMessageEntity) {
             super(apiClient, str, iMessageEntity);
         }
 
@@ -50,10 +49,9 @@ public final class ConnectService {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.support.api.core.ConnectService$b */
     /* loaded from: classes10.dex */
-    public static class C5716b extends PendingResultImpl<ResolveResult<ConnectResp>, ConnectResp> {
-        C5716b(ApiClient apiClient, String str, IMessageEntity iMessageEntity) {
+    public static class b extends PendingResultImpl<ResolveResult<ConnectResp>, ConnectResp> {
+        b(ApiClient apiClient, String str, IMessageEntity iMessageEntity) {
             super(apiClient, str, iMessageEntity);
         }
 
@@ -74,10 +72,9 @@ public final class ConnectService {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.support.api.core.ConnectService$c */
     /* loaded from: classes10.dex */
-    public static class C5717c extends PendingResultImpl<ResolveResult<JosGetNoticeResp>, JosGetNoticeResp> {
-        C5717c(ApiClient apiClient, String str, IMessageEntity iMessageEntity) {
+    public static class c extends PendingResultImpl<ResolveResult<JosGetNoticeResp>, JosGetNoticeResp> {
+        c(ApiClient apiClient, String str, IMessageEntity iMessageEntity) {
             super(apiClient, str, iMessageEntity);
         }
 
@@ -103,7 +100,7 @@ public final class ConnectService {
     }
 
     public static PendingResult<ResolveResult<ConnectResp>> connect(ApiClient apiClient, ConnectInfo connectInfo) {
-        return new C5715a(apiClient, CoreNaming.CONNECT, connectInfo);
+        return new a(apiClient, CoreNaming.CONNECT, connectInfo);
     }
 
     public static ResolvePendingResult<DisconnectResp> disconnect(ApiClient apiClient, DisconnectInfo disconnectInfo) {
@@ -111,7 +108,7 @@ public final class ConnectService {
     }
 
     public static PendingResult<ResolveResult<ConnectResp>> forceConnect(ApiClient apiClient, ConnectInfo connectInfo) {
-        return new C5716b(apiClient, CoreNaming.FORECONNECT, connectInfo);
+        return new b(apiClient, CoreNaming.FORECONNECT, connectInfo);
     }
 
     public static PendingResult<ResolveResult<JosGetNoticeResp>> getNotice(ApiClient apiClient, int i, String str) {
@@ -121,6 +118,6 @@ public final class ConnectService {
         if (!TextUtils.isEmpty(apiClient.getCpID())) {
             josGetNoticeReq.setCpID(apiClient.getCpID());
         }
-        return new C5717c(apiClient, CoreNaming.GETNOTICE, josGetNoticeReq);
+        return new c(apiClient, CoreNaming.GETNOTICE, josGetNoticeReq);
     }
 }

@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.b;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.fuseable.ConditionalSubscriber;
 import io.reactivex.internal.subscriptions.BasicQueueSubscription;
@@ -12,7 +12,7 @@ import org.reactivestreams.Subscriber;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableFromArray<T> extends AbstractC8147b<T> {
+public final class FlowableFromArray<T> extends b<T> {
     final T[] array;
 
     /* compiled from: Taobao */
@@ -224,7 +224,7 @@ public final class FlowableFromArray<T> extends AbstractC8147b<T> {
         this.array = tArr;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super T> subscriber) {
         if (subscriber instanceof ConditionalSubscriber) {
             subscriber.onSubscribe(new ArrayConditionalSubscription((ConditionalSubscriber) subscriber, this.array));

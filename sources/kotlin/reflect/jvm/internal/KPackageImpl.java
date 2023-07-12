@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.List;
 import kotlin.Pair;
 import kotlin.Triple;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.PropertyReference1Impl;
 import kotlin.reflect.KCallable;
@@ -23,7 +23,7 @@ import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$TypeTable;
 import kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf;
 import kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite;
 import kotlin.reflect.jvm.internal.impl.resolve.scopes.MemberScope;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.a12;
@@ -42,7 +42,7 @@ import tb.zv2;
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class KPackageImpl extends KDeclarationContainerImpl {
-    private final x02.C9895b<Data> c;
+    private final x02.b<Data> c;
     @NotNull
     private final Class<?> d;
 
@@ -51,15 +51,15 @@ public final class KPackageImpl extends KDeclarationContainerImpl {
     /* loaded from: classes3.dex */
     public final class Data extends KDeclarationContainerImpl.Data {
         static final /* synthetic */ KProperty[] j = {a12.i(new PropertyReference1Impl(a12.b(Data.class), "kotlinClass", "getKotlinClass()Lorg/jetbrains/kotlin/descriptors/runtime/components/ReflectKotlinClass;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "scope", "getScope()Lorg/jetbrains/kotlin/resolve/scopes/MemberScope;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "multifileFacade", "getMultifileFacade()Ljava/lang/Class;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "metadata", "getMetadata()Lkotlin/Triple;")), a12.i(new PropertyReference1Impl(a12.b(Data.class), "members", "getMembers()Ljava/util/Collection;"))};
-        private final x02.C9894a d;
+        private final x02.a d;
         @NotNull
-        private final x02.C9894a e;
+        private final x02.a e;
         @Nullable
-        private final x02.C9895b f;
+        private final x02.b f;
         @Nullable
-        private final x02.C9895b g;
+        private final x02.b g;
         @NotNull
-        private final x02.C9894a h;
+        private final x02.a h;
 
         public Data() {
             super();
@@ -88,7 +88,7 @@ public final class KPackageImpl extends KDeclarationContainerImpl {
                     if (c != null) {
                         return KPackageImpl.Data.this.a().c().a(c);
                     }
-                    return MemberScope.C8499b.INSTANCE;
+                    return MemberScope.b.INSTANCE;
                 }
             });
             this.f = x02.b(new Function0<Class<?>>() { // from class: kotlin.reflect.jvm.internal.KPackageImpl$Data$multifileFacade$2
@@ -109,7 +109,7 @@ public final class KPackageImpl extends KDeclarationContainerImpl {
                     if (e != null) {
                         if (e.length() > 0) {
                             ClassLoader classLoader = KPackageImpl.this.getJClass().getClassLoader();
-                            y = C8604o.y(e, r10.DIR, '.', false, 4, null);
+                            y = o.y(e, r10.DIR, '.', false, 4, null);
                             return classLoader.loadClass(y);
                         }
                         return null;
@@ -184,7 +184,7 @@ public final class KPackageImpl extends KDeclarationContainerImpl {
     public KPackageImpl(@NotNull Class<?> cls, @Nullable String str) {
         b41.i(cls, "jClass");
         this.d = cls;
-        x02.C9895b<Data> b = x02.b(new Function0<Data>() { // from class: kotlin.reflect.jvm.internal.KPackageImpl$data$1
+        x02.b<Data> b = x02.b(new Function0<Data>() { // from class: kotlin.reflect.jvm.internal.KPackageImpl$data$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -227,7 +227,7 @@ public final class KPackageImpl extends KDeclarationContainerImpl {
     @NotNull
     public Collection<ConstructorDescriptor> i() {
         List g;
-        g = C8214m.g();
+        g = m.g();
         return g;
     }
 
@@ -246,9 +246,9 @@ public final class KPackageImpl extends KDeclarationContainerImpl {
             y61 component1 = e.component1();
             ProtoBuf$Package component2 = e.component2();
             x61 component3 = e.component3();
-            GeneratedMessageLite.C8441c<ProtoBuf$Package, List<ProtoBuf$Property>> c8441c = JvmProtoBuf.packageLocalVariable;
-            b41.h(c8441c, "JvmProtoBuf.packageLocalVariable");
-            ProtoBuf$Property protoBuf$Property = (ProtoBuf$Property) fx1.b(component2, c8441c, i);
+            GeneratedMessageLite.c<ProtoBuf$Package, List<ProtoBuf$Property>> cVar = JvmProtoBuf.packageLocalVariable;
+            b41.h(cVar, "JvmProtoBuf.packageLocalVariable");
+            ProtoBuf$Property protoBuf$Property = (ProtoBuf$Property) fx1.b(component2, cVar, i);
             if (protoBuf$Property != null) {
                 Class<?> jClass = getJClass();
                 ProtoBuf$TypeTable typeTable = component2.getTypeTable();

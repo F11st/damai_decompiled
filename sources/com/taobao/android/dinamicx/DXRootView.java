@@ -33,12 +33,11 @@ public class DXRootView extends DXNativeFrameLayout implements DXPools$DXPoolIte
     int parentHeightSpec;
     int parentWidthSpec;
     private int position;
-    AbstractC6360a rootViewLifeCycle;
+    a rootViewLifeCycle;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.DXRootView$a */
     /* loaded from: classes12.dex */
-    public static abstract class AbstractC6360a {
+    public static abstract class a {
         public void a(int i) {
         }
 
@@ -124,12 +123,12 @@ public class DXRootView extends DXNativeFrameLayout implements DXPools$DXPoolIte
     public void dispatchWindowVisibilityChanged(int i) {
         try {
             super.dispatchWindowVisibilityChanged(i);
-            AbstractC6360a abstractC6360a = this.rootViewLifeCycle;
-            if (abstractC6360a != null) {
-                abstractC6360a.b(this, i);
+            a aVar = this.rootViewLifeCycle;
+            if (aVar != null) {
+                aVar.b(this, i);
             }
         } catch (Throwable th) {
-            trackError(C6368e.DX_NATIVE_CRASH_7, th);
+            trackError(e.DX_NATIVE_CRASH_7, th);
         }
     }
 
@@ -181,12 +180,12 @@ public class DXRootView extends DXNativeFrameLayout implements DXPools$DXPoolIte
     protected void onAttachedToWindow() {
         try {
             super.onAttachedToWindow();
-            AbstractC6360a abstractC6360a = this.rootViewLifeCycle;
-            if (abstractC6360a != null) {
-                abstractC6360a.c(this);
+            a aVar = this.rootViewLifeCycle;
+            if (aVar != null) {
+                aVar.c(this);
             }
         } catch (Throwable th) {
-            trackError(C6368e.DX_NATIVE_CRASH_11, th);
+            trackError(e.DX_NATIVE_CRASH_11, th);
         }
     }
 
@@ -194,12 +193,12 @@ public class DXRootView extends DXNativeFrameLayout implements DXPools$DXPoolIte
     protected void onDetachedFromWindow() {
         try {
             super.onDetachedFromWindow();
-            AbstractC6360a abstractC6360a = this.rootViewLifeCycle;
-            if (abstractC6360a != null) {
-                abstractC6360a.d(this);
+            a aVar = this.rootViewLifeCycle;
+            if (aVar != null) {
+                aVar.d(this);
             }
         } catch (Throwable th) {
-            trackError(C6368e.DX_NATIVE_CRASH_10, th);
+            trackError(e.DX_NATIVE_CRASH_10, th);
         }
     }
 
@@ -207,12 +206,12 @@ public class DXRootView extends DXNativeFrameLayout implements DXPools$DXPoolIte
     public void onFinishTemporaryDetach() {
         try {
             super.onFinishTemporaryDetach();
-            AbstractC6360a abstractC6360a = this.rootViewLifeCycle;
-            if (abstractC6360a != null) {
-                abstractC6360a.f(this);
+            a aVar = this.rootViewLifeCycle;
+            if (aVar != null) {
+                aVar.f(this);
             }
         } catch (Throwable th) {
-            trackError(C6368e.DX_NATIVE_CRASH_13, th);
+            trackError(e.DX_NATIVE_CRASH_13, th);
         }
     }
 
@@ -242,12 +241,12 @@ public class DXRootView extends DXNativeFrameLayout implements DXPools$DXPoolIte
     public void onStartTemporaryDetach() {
         try {
             super.onStartTemporaryDetach();
-            AbstractC6360a abstractC6360a = this.rootViewLifeCycle;
-            if (abstractC6360a != null) {
-                abstractC6360a.h(this);
+            a aVar = this.rootViewLifeCycle;
+            if (aVar != null) {
+                aVar.h(this);
             }
         } catch (Throwable th) {
-            trackError(C6368e.DX_NATIVE_CRASH_12, th);
+            trackError(e.DX_NATIVE_CRASH_12, th);
         }
     }
 
@@ -255,12 +254,12 @@ public class DXRootView extends DXNativeFrameLayout implements DXPools$DXPoolIte
     protected void onVisibilityChanged(@NonNull View view, int i) {
         try {
             super.onVisibilityChanged(view, i);
-            AbstractC6360a abstractC6360a = this.rootViewLifeCycle;
-            if (abstractC6360a != null) {
-                abstractC6360a.i(view, i);
+            a aVar = this.rootViewLifeCycle;
+            if (aVar != null) {
+                aVar.i(view, i);
             }
         } catch (Throwable th) {
-            trackError(C6368e.DX_NATIVE_CRASH_9, th);
+            trackError(e.DX_NATIVE_CRASH_9, th);
         }
     }
 
@@ -268,12 +267,12 @@ public class DXRootView extends DXNativeFrameLayout implements DXPools$DXPoolIte
     protected void onWindowVisibilityChanged(int i) {
         try {
             super.onWindowVisibilityChanged(i);
-            AbstractC6360a abstractC6360a = this.rootViewLifeCycle;
-            if (abstractC6360a != null) {
-                abstractC6360a.j(this, i);
+            a aVar = this.rootViewLifeCycle;
+            if (aVar != null) {
+                aVar.j(this, i);
             }
         } catch (Throwable th) {
-            trackError(C6368e.DX_NATIVE_CRASH_8, th);
+            trackError(e.DX_NATIVE_CRASH_8, th);
         }
     }
 
@@ -309,13 +308,13 @@ public class DXRootView extends DXNativeFrameLayout implements DXPools$DXPoolIte
             if (TextUtils.isEmpty(str)) {
                 str = r10.DB_NAME;
             }
-            DXAppMonitor.q(str, null, "DX_BindingX", "DX_BindingX_Crash", C6368e.BINDINGX_POST_MSG_CRASH, ry.a(th));
+            DXAppMonitor.q(str, null, "DX_BindingX", "DX_BindingX_Crash", e.BINDINGX_POST_MSG_CRASH, ry.a(th));
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public void registerDXRootViewLifeCycle(AbstractC6360a abstractC6360a) {
-        this.rootViewLifeCycle = abstractC6360a;
+    public void registerDXRootViewLifeCycle(a aVar) {
+        this.rootViewLifeCycle = aVar;
     }
 
     public void setBindingXManagerWeakReference(kt ktVar) {

@@ -14,8 +14,8 @@ import com.alibaba.security.biometrics.skin.model.TextViewSkinData;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
-public abstract class BaseWidget extends RelativeLayout implements InterfaceC3789c {
-    protected ALBiometricsActivityParentView.InterfaceC3778a a;
+public abstract class BaseWidget extends RelativeLayout implements c {
+    protected ALBiometricsActivityParentView.a a;
     private RPSkinManager b;
 
     public BaseWidget(Context context) {
@@ -74,23 +74,23 @@ public abstract class BaseWidget extends RelativeLayout implements InterfaceC378
         b();
     }
 
-    public void setOnBioMainHandlerListener(ALBiometricsActivityParentView.InterfaceC3778a interfaceC3778a) {
-        this.a = interfaceC3778a;
+    public void setOnBioMainHandlerListener(ALBiometricsActivityParentView.a aVar) {
+        this.a = aVar;
     }
 
-    @Override // com.alibaba.security.biometrics.logic.view.widget.InterfaceC3789c
+    @Override // com.alibaba.security.biometrics.logic.view.widget.c
     public void a(String... strArr) {
         b();
         setVisibility(0);
     }
 
-    @Override // com.alibaba.security.biometrics.logic.view.widget.InterfaceC3789c
+    @Override // com.alibaba.security.biometrics.logic.view.widget.c
     public final void e() {
         c();
         setVisibility(8);
     }
 
-    @Override // com.alibaba.security.biometrics.logic.view.widget.InterfaceC3789c
+    @Override // com.alibaba.security.biometrics.logic.view.widget.c
     public final boolean f() {
         return getVisibility() == 0;
     }

@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.search.bean.BaccountInfo;
 import cn.damai.homepage.R$color;
@@ -31,15 +30,14 @@ public class r72 {
     private ImageView f;
     private TextView g;
     private ImageView h;
-    private View.OnClickListener i = new View$OnClickListenerC9646a(this);
+    private View.OnClickListener i = new a(this);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.r72$a */
     /* loaded from: classes6.dex */
-    public class View$OnClickListenerC9646a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9646a(r72 r72Var) {
+        a(r72 r72Var) {
         }
 
         @Override // android.view.View.OnClickListener
@@ -83,13 +81,13 @@ public class r72 {
         }
         ImageView imageView = this.b;
         if (imageView != null) {
-            if (imageView.getTag() instanceof C9826vr) {
-                ((C9826vr) this.b.getTag()).cancel();
+            if (imageView.getTag() instanceof vr) {
+                ((vr) this.b.getTag()).cancel();
             }
             if (!z && !z3) {
-                DMImageCreator c = C0504a.b().h(this.a).c(str);
+                DMImageCreator c = cn.damai.common.image.a.b().h(this.a).c(str);
                 int i = R$drawable.uikit_user_default_icon_trans_white;
-                C9826vr g = c.i(i).c(i).k(new yq()).g(this.b);
+                vr g = c.i(i).c(i).k(new yq()).g(this.b);
                 this.b.setVisibility(0);
                 this.b.setTag(g);
             } else {
@@ -99,7 +97,7 @@ public class r72 {
         ViewGroup.LayoutParams layoutParams = this.f.getLayoutParams();
         layoutParams.height = a(z2);
         this.f.setLayoutParams(layoutParams);
-        C0504a b = C0504a.b();
+        cn.damai.common.image.a b = cn.damai.common.image.a.b();
         if (!z) {
             str = str2;
         }

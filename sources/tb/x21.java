@@ -21,15 +21,14 @@ public class x21 extends q80 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.x21$a */
     /* loaded from: classes11.dex */
-    public class View$OnTouchListenerC9902a implements View.OnTouchListener {
+    public class a implements View.OnTouchListener {
         final /* synthetic */ View a;
         final /* synthetic */ Map b;
         final /* synthetic */ v80 c;
         final /* synthetic */ x80 d;
 
-        View$OnTouchListenerC9902a(View view, Map map, v80 v80Var, x80 x80Var) {
+        a(View view, Map map, v80 v80Var, x80 x80Var) {
             this.a = view;
             this.b = map;
             this.c = v80Var;
@@ -41,7 +40,7 @@ public class x21 extends q80 {
             if (motionEvent.getActionMasked() == 1) {
                 View view2 = this.a;
                 int i = a90.KEY_BOARD_LISTENER;
-                if (((ViewTreeObserver$OnGlobalLayoutListenerC9904c) view2.getTag(i)) == null) {
+                if (((c) view2.getTag(i)) == null) {
                     ((InputMethodManager) this.a.getContext().getSystemService("input_method")).showSoftInput(this.a, 0);
                     if (this.b.containsKey(DAttrConstant.VIEW_EVENT_BEGIN)) {
                         String str = (String) this.b.get(DAttrConstant.VIEW_EVENT_BEGIN);
@@ -52,10 +51,10 @@ public class x21 extends q80 {
                             q80.d(this.a, this.c, this.d, str);
                         }
                     }
-                    ViewTreeObserver$OnGlobalLayoutListenerC9904c viewTreeObserver$OnGlobalLayoutListenerC9904c = new ViewTreeObserver$OnGlobalLayoutListenerC9904c(x21.this, this.a, this.d);
-                    viewTreeObserver$OnGlobalLayoutListenerC9904c.e(this.c);
-                    this.a.getViewTreeObserver().addOnGlobalLayoutListener(viewTreeObserver$OnGlobalLayoutListenerC9904c);
-                    this.a.setTag(i, viewTreeObserver$OnGlobalLayoutListenerC9904c);
+                    c cVar = new c(x21.this, this.a, this.d);
+                    cVar.e(this.c);
+                    this.a.getViewTreeObserver().addOnGlobalLayoutListener(cVar);
+                    this.a.setTag(i, cVar);
                 }
             }
             return false;
@@ -63,15 +62,14 @@ public class x21 extends q80 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.x21$b */
     /* loaded from: classes11.dex */
-    public class C9903b implements TextWatcher {
+    public class b implements TextWatcher {
         private v80 a;
         private x80 b;
         private String c;
         private View d;
 
-        public C9903b(x21 x21Var, View view, x80 x80Var) {
+        public b(x21 x21Var, View view, x80 x80Var) {
             this.b = x80Var;
             this.d = view;
             Map<String, String> map = x80Var.d;
@@ -107,9 +105,8 @@ public class x21 extends q80 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.x21$c */
     /* loaded from: classes11.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC9904c implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class c implements ViewTreeObserver.OnGlobalLayoutListener {
         private v80 a;
         private x80 b;
         private String c;
@@ -118,22 +115,21 @@ public class x21 extends q80 {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: tb.x21$c$a */
         /* loaded from: classes11.dex */
-        public class View$OnFocusChangeListenerC9905a implements View.OnFocusChangeListener {
-            View$OnFocusChangeListenerC9905a() {
+        public class a implements View.OnFocusChangeListener {
+            a() {
             }
 
             @Override // android.view.View.OnFocusChangeListener
             public void onFocusChange(View view, boolean z) {
-                if (z || ViewTreeObserver$OnGlobalLayoutListenerC9904c.this.e) {
+                if (z || c.this.e) {
                     return;
                 }
-                ViewTreeObserver$OnGlobalLayoutListenerC9904c.this.c();
+                c.this.c();
             }
         }
 
-        public ViewTreeObserver$OnGlobalLayoutListenerC9904c(x21 x21Var, View view, x80 x80Var) {
+        public c(x21 x21Var, View view, x80 x80Var) {
             this.b = x80Var;
             this.d = view;
             Map<String, String> map = x80Var.d;
@@ -166,7 +162,7 @@ public class x21 extends q80 {
 
         public void e(v80 v80Var) {
             this.a = v80Var;
-            this.d.setOnFocusChangeListener(new View$OnFocusChangeListenerC9905a());
+            this.d.setOnFocusChangeListener(new a());
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -206,25 +202,25 @@ public class x21 extends q80 {
         if (view.isFocusable()) {
             if (map.containsKey(DAttrConstant.VIEW_EVENT_CHANGE)) {
                 int i = a90.TEXT_WATCHER;
-                C9903b c9903b = (C9903b) view.getTag(i);
-                if (c9903b != null) {
-                    ((EditText) view).removeTextChangedListener(c9903b);
+                b bVar = (b) view.getTag(i);
+                if (bVar != null) {
+                    ((EditText) view).removeTextChangedListener(bVar);
                 }
-                C9903b c9903b2 = new C9903b(this, view, x80Var);
-                c9903b2.a(v80Var);
-                view.setTag(i, c9903b2);
-                ((EditText) view).addTextChangedListener(c9903b2);
+                b bVar2 = new b(this, view, x80Var);
+                bVar2.a(v80Var);
+                view.setTag(i, bVar2);
+                ((EditText) view).addTextChangedListener(bVar2);
             }
             if (map.containsKey(DAttrConstant.VIEW_EVENT_FINISH) || map.containsKey(DAttrConstant.VIEW_EVENT_BEGIN)) {
-                view.setOnTouchListener(new View$OnTouchListenerC9902a(view, map, v80Var, x80Var));
+                view.setOnTouchListener(new a(view, map, v80Var, x80Var));
                 return;
             }
             return;
         }
         view.setOnTouchListener(null);
-        C9903b c9903b3 = (C9903b) view.getTag(a90.TEXT_WATCHER);
-        if (c9903b3 != null) {
-            ((EditText) view).removeTextChangedListener(c9903b3);
+        b bVar3 = (b) view.getTag(a90.TEXT_WATCHER);
+        if (bVar3 != null) {
+            ((EditText) view).removeTextChangedListener(bVar3);
         }
         view.setOnFocusChangeListener(null);
     }

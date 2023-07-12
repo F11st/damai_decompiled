@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.search.viewholder.ProjectItemViewHolder;
 import cn.damai.user.show.bean.ShowDataHolder;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -70,12 +70,12 @@ public class ShowAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                     this.d.put("alg", showDataHolder.mProjectItem.alg);
                 }
                 if (!showDataHolder.isRecommendProject) {
-                    C0529c e = C0529c.e();
+                    c e = c.e();
                     View view = viewHolder.itemView;
                     e.G(view, "item_" + i, "list", "search", this.d);
                     return;
                 }
-                C0529c e2 = C0529c.e();
+                c e2 = c.e();
                 View view2 = viewHolder.itemView;
                 e2.G(view2, "item_" + i, "keywordother", "search", this.d);
             }

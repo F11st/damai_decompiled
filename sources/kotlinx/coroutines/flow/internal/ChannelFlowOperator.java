@@ -3,7 +3,6 @@ package kotlinx.coroutines.flow.internal;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.ContinuationInterceptor;
 import kotlin.coroutines.CoroutineContext;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.jvm.JvmField;
 import kotlinx.coroutines.channels.BufferOverflow;
 import kotlinx.coroutines.channels.ProducerScope;
@@ -37,25 +36,25 @@ public abstract class ChannelFlowOperator<S, T> extends ChannelFlow<T> {
             CoroutineContext plus = context.plus(channelFlowOperator.a);
             if (b41.d(plus, context)) {
                 Object k = channelFlowOperator.k(flowCollector, continuation);
-                d3 = C8234b.d();
+                d3 = kotlin.coroutines.intrinsics.b.d();
                 return k == d3 ? k : wt2.INSTANCE;
             }
-            ContinuationInterceptor.C8231b c8231b = ContinuationInterceptor.Key;
-            if (b41.d((ContinuationInterceptor) plus.get(c8231b), (ContinuationInterceptor) context.get(c8231b))) {
+            ContinuationInterceptor.b bVar = ContinuationInterceptor.Key;
+            if (b41.d((ContinuationInterceptor) plus.get(bVar), (ContinuationInterceptor) context.get(bVar))) {
                 Object j = channelFlowOperator.j(flowCollector, plus, continuation);
-                d2 = C8234b.d();
+                d2 = kotlin.coroutines.intrinsics.b.d();
                 return j == d2 ? j : wt2.INSTANCE;
             }
         }
         Object collect = super.collect(flowCollector, continuation);
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         return collect == d ? collect : wt2.INSTANCE;
     }
 
     static /* synthetic */ Object i(ChannelFlowOperator channelFlowOperator, ProducerScope producerScope, Continuation continuation) {
         Object d;
         Object k = channelFlowOperator.k(new la2(producerScope), continuation);
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         return k == d ? k : wt2.INSTANCE;
     }
 
@@ -75,8 +74,8 @@ public abstract class ChannelFlowOperator<S, T> extends ChannelFlow<T> {
     @Nullable
     final /* synthetic */ Object j(@NotNull FlowCollector<? super T> flowCollector, @NotNull CoroutineContext coroutineContext, @NotNull Continuation<? super wt2> continuation) {
         Object d;
-        Object c = C8682a.c(coroutineContext, C8682a.a(flowCollector, continuation.getContext()), null, new ChannelFlowOperator$collectWithContextUndispatched$2(this, null), continuation, 4, null);
-        d = C8234b.d();
+        Object c = a.c(coroutineContext, a.a(flowCollector, continuation.getContext()), null, new ChannelFlowOperator$collectWithContextUndispatched$2(this, null), continuation, 4, null);
+        d = kotlin.coroutines.intrinsics.b.d();
         return c == d ? c : wt2.INSTANCE;
     }
 

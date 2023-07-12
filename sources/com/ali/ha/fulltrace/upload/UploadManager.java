@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.net.NetworkInfo;
 import android.text.TextUtils;
 import android.util.Base64;
-import com.ali.ha.fulltrace.C2940a;
 import com.ali.ha.fulltrace.dump.DumpManager;
 import com.alibaba.wireless.security.aopsdk.replace.android.net.ConnectivityManager;
 import com.youku.live.livesdk.wkit.component.Constants;
@@ -45,10 +44,9 @@ public class UploadManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.ali.ha.fulltrace.upload.UploadManager$a */
     /* loaded from: classes17.dex */
-    public class C2942a implements FileFilter {
-        C2942a() {
+    public class a implements FileFilter {
+        a() {
         }
 
         @Override // java.io.FileFilter
@@ -59,10 +57,9 @@ public class UploadManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.ali.ha.fulltrace.upload.UploadManager$b */
     /* loaded from: classes17.dex */
-    public class C2943b implements Comparator<File> {
-        C2943b() {
+    public class b implements Comparator<File> {
+        b() {
         }
 
         @Override // java.util.Comparator
@@ -78,10 +75,9 @@ public class UploadManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.ali.ha.fulltrace.upload.UploadManager$c */
     /* loaded from: classes17.dex */
-    public class C2944c implements FileFilter {
-        C2944c(UploadManager uploadManager) {
+    public class c implements FileFilter {
+        c(UploadManager uploadManager) {
         }
 
         @Override // java.io.FileFilter
@@ -92,10 +88,9 @@ public class UploadManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.ali.ha.fulltrace.upload.UploadManager$d */
     /* loaded from: classes17.dex */
-    public class C2945d implements FileFilter {
-        C2945d(UploadManager uploadManager) {
+    public class d implements FileFilter {
+        d(UploadManager uploadManager) {
         }
 
         @Override // java.io.FileFilter
@@ -106,10 +101,9 @@ public class UploadManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.ali.ha.fulltrace.upload.UploadManager$e */
     /* loaded from: classes17.dex */
-    public class C2946e implements FileFilter {
-        C2946e() {
+    public class e implements FileFilter {
+        e() {
         }
 
         @Override // java.io.FileFilter
@@ -120,10 +114,9 @@ public class UploadManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.ali.ha.fulltrace.upload.UploadManager$f */
     /* loaded from: classes17.dex */
-    public class C2947f implements Comparator<File> {
-        C2947f() {
+    public class f implements Comparator<File> {
+        f() {
         }
 
         @Override // java.util.Comparator
@@ -139,10 +132,9 @@ public class UploadManager {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.ali.ha.fulltrace.upload.UploadManager$g */
     /* loaded from: classes17.dex */
-    public class C2948g implements FileFilter {
-        C2948g() {
+    public class g implements FileFilter {
+        g() {
         }
 
         @Override // java.io.FileFilter
@@ -152,9 +144,8 @@ public class UploadManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.ali.ha.fulltrace.upload.UploadManager$h */
     /* loaded from: classes17.dex */
-    private static final class C2949h {
+    private static final class h {
         private static final UploadManager a = new UploadManager();
     }
 
@@ -168,7 +159,7 @@ public class UploadManager {
         int i2 = size - 1;
         while (i2 > -1) {
             File file = list.get(i2);
-            if (file.isDirectory() && (listFiles = file.listFiles(new C2944c(this))) != null) {
+            if (file.isDirectory() && (listFiles = file.listFiles(new c(this))) != null) {
                 int length = listFiles.length;
                 int i3 = 0;
                 while (i3 < length) {
@@ -184,8 +175,8 @@ public class UploadManager {
                             lb1.b("UploadManager", "file size is to large! " + file2.getAbsolutePath() + " " + file2.length());
                             file2.delete();
                         } else {
-                            long e = e(file2, ".trace");
-                            if (e > 0 && currentTimeMillis - e > this.i) {
+                            long e2 = e(file2, ".trace");
+                            if (e2 > 0 && currentTimeMillis - e2 > this.i) {
                                 lb1.d("UploadManager", "file date is expired! " + file2.getAbsolutePath());
                                 file2.delete();
                                 i3++;
@@ -219,7 +210,7 @@ public class UploadManager {
     }
 
     public static final UploadManager f() {
-        return C2949h.a;
+        return h.a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -235,12 +226,12 @@ public class UploadManager {
     private List<File> h() {
         File[] listFiles;
         File file = new File(DumpManager.e(this.a));
-        if (!file.exists() || (listFiles = file.listFiles(new C2946e())) == null || listFiles.length <= 1) {
+        if (!file.exists() || (listFiles = file.listFiles(new e())) == null || listFiles.length <= 1) {
             return null;
         }
         List asList = Arrays.asList(listFiles);
         if (asList.size() > 1) {
-            Collections.sort(asList, new C2947f());
+            Collections.sort(asList, new f());
         }
         ArrayList arrayList = new ArrayList(asList);
         arrayList.remove(0);
@@ -248,9 +239,9 @@ public class UploadManager {
     }
 
     private void k() {
-        SharedPreferences a = vu2.b().a(this.a, "com.ali.fulltrace");
-        this.b = a;
-        long j = a.getLong("date", 0L);
+        SharedPreferences a2 = vu2.b().a(this.a, "com.ali.fulltrace");
+        this.b = a2;
+        long j = a2.getLong("date", 0L);
         this.c = this.b.getLong("size", 0L);
         long currentTimeMillis = System.currentTimeMillis() / 86400000;
         if (currentTimeMillis != j) {
@@ -267,10 +258,10 @@ public class UploadManager {
 
     private void l() {
         File[] listFiles;
-        String d = DumpManager.d(this.a);
-        String e = DumpManager.e(this.a);
-        File file = new File(d);
-        if (!file.exists() || (listFiles = file.listFiles(new C2948g())) == null || listFiles.length <= 0) {
+        String d2 = DumpManager.d(this.a);
+        String e2 = DumpManager.e(this.a);
+        File file = new File(d2);
+        if (!file.exists() || (listFiles = file.listFiles(new g())) == null || listFiles.length <= 0) {
             return;
         }
         for (File file2 : listFiles) {
@@ -279,11 +270,11 @@ public class UploadManager {
             String str = File.separator;
             sb.append(str);
             sb.append(HOTDATA);
-            String str2 = e + str + file2.getName();
+            String str2 = e2 + str + file2.getName();
             if (new File(sb.toString()).exists()) {
                 DumpManager.c().g(file2.getAbsolutePath(), str2);
             }
-            C2940a.a(file2);
+            com.ali.ha.fulltrace.a.a(file2);
         }
     }
 
@@ -291,7 +282,7 @@ public class UploadManager {
         File[] listFiles;
         long j = 0;
         for (File file : list) {
-            if (file.isDirectory() && (listFiles = file.listFiles(new C2945d(this))) != null) {
+            if (file.isDirectory() && (listFiles = file.listFiles(new d(this))) != null) {
                 for (File file2 : listFiles) {
                     if (file2.isFile()) {
                         j += file2.length();
@@ -309,19 +300,19 @@ public class UploadManager {
         }
         this.f = true;
         l();
-        List<File> h = h();
-        if (h != null && h.size() > 0) {
-            d(h, m(h));
+        List<File> h2 = h();
+        if (h2 != null && h2.size() > 0) {
+            d(h2, m(h2));
             lb1.a("start upload", new Object[0]);
-            this.e = p(h);
+            this.e = p(h2);
             if (!this.e && this.d) {
                 pp0.a().b().postDelayed(new Runnable() { // from class: com.ali.ha.fulltrace.upload.UploadManager.2
                     @Override // java.lang.Runnable
                     public void run() {
                         try {
                             UploadManager.this.n();
-                        } catch (Exception e) {
-                            e.printStackTrace();
+                        } catch (Exception e2) {
+                            e2.printStackTrace();
                         }
                     }
                 }, this.j);
@@ -338,7 +329,7 @@ public class UploadManager {
     private boolean o(File file, String str) {
         byte[] bArr;
         GZIPOutputStream gZIPOutputStream;
-        boolean a;
+        boolean a2;
         ByteArrayOutputStream byteArrayOutputStream;
         byte[] byteArray;
         long j = 0;
@@ -354,8 +345,8 @@ public class UploadManager {
                     return false;
                 }
             }
-            byte[] e = C2940a.e(file);
-            if (e == null) {
+            byte[] e2 = com.ali.ha.fulltrace.a.e(file);
+            if (e2 == null) {
                 lb1.b("UploadManager", "read file failed! " + file.getAbsolutePath() + " " + file.length());
                 return true;
             }
@@ -365,7 +356,7 @@ public class UploadManager {
                 try {
                     gZIPOutputStream = new GZIPOutputStream(byteArrayOutputStream);
                     try {
-                        gZIPOutputStream.write(e);
+                        gZIPOutputStream.write(e2);
                         gZIPOutputStream.flush();
                         gZIPOutputStream.close();
                         byteArray = byteArrayOutputStream.toByteArray();
@@ -394,52 +385,52 @@ public class UploadManager {
                         if (byteArrayOutputStream2 != null) {
                             try {
                                 byteArrayOutputStream2.close();
-                            } catch (IOException e2) {
-                                lb1.b("baOS close failed", e2);
+                            } catch (IOException e3) {
+                                lb1.b("baOS close failed", e3);
                             }
                         }
                         if (gZIPOutputStream != null) {
                             try {
                                 gZIPOutputStream.close();
-                            } catch (IOException e3) {
-                                lb1.b("gzipOS close failed", e3);
+                            } catch (IOException e4) {
+                                lb1.b("gzipOS close failed", e4);
                             }
                         }
                         bArr2 = bArr;
-                        a = ka2.a(str, new String(bArr2));
-                        if (a) {
+                        a2 = ka2.a(str, new String(bArr2));
+                        if (a2) {
                             this.c = j;
                             this.b.edit().putLong("size", this.c).apply();
                         }
-                        return a;
+                        return a2;
                     }
                     if (bArr2.length != 0) {
                         try {
                             byteArrayOutputStream.close();
-                        } catch (IOException e4) {
-                            lb1.b("baOS close failed", e4);
+                        } catch (IOException e5) {
+                            lb1.b("baOS close failed", e5);
                         }
-                        a = ka2.a(str, new String(bArr2));
-                        if (a && j2) {
+                        a2 = ka2.a(str, new String(bArr2));
+                        if (a2 && j2) {
                             this.c = j;
                             this.b.edit().putLong("size", this.c).apply();
                         }
-                        return a;
+                        return a2;
                     }
                 }
                 lb1.b("UploadManager", "base64 failed!");
                 try {
                     byteArrayOutputStream.close();
-                } catch (IOException e5) {
-                    lb1.b("baOS close failed", e5);
+                } catch (IOException e6) {
+                    lb1.b("baOS close failed", e6);
                 }
                 return true;
             }
             lb1.b("UploadManager", "gzip failed!");
             try {
                 byteArrayOutputStream.close();
-            } catch (IOException e6) {
-                lb1.b("baOS close failed", e6);
+            } catch (IOException e7) {
+                lb1.b("baOS close failed", e7);
             }
             return true;
         } catch (OutOfMemoryError unused5) {
@@ -455,11 +446,11 @@ public class UploadManager {
     private boolean p(List<File> list) {
         for (File file : list) {
             if (file.isDirectory()) {
-                File[] listFiles = file.listFiles(new C2942a());
+                File[] listFiles = file.listFiles(new a());
                 if (listFiles != null && listFiles.length > 0) {
                     List asList = Arrays.asList(listFiles);
                     if (asList.size() > 1) {
-                        Collections.sort(asList, new C2943b());
+                        Collections.sort(asList, new b());
                     }
                     String substring = file.getAbsolutePath().substring(file.getAbsolutePath().lastIndexOf("/") + 1);
                     String num = Integer.toString((substring + ih0.g).hashCode());
@@ -490,10 +481,10 @@ public class UploadManager {
                     if (!z) {
                         return false;
                     }
-                    C2940a.a(file);
+                    com.ali.ha.fulltrace.a.a(file);
                 } else {
                     lb1.d("UploadManager", "upload dir is empty=" + file.getAbsolutePath());
-                    C2940a.a(file);
+                    com.ali.ha.fulltrace.a.a(file);
                 }
             }
         }
@@ -508,8 +499,8 @@ public class UploadManager {
             public void run() {
                 try {
                     UploadManager.this.n();
-                } catch (Exception e) {
-                    e.printStackTrace();
+                } catch (Exception e2) {
+                    e2.printStackTrace();
                 }
             }
         }, this.g);

@@ -39,26 +39,23 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import com.alibaba.security.biometrics.R;
-import com.alibaba.security.common.d.C3805b;
-import com.alibaba.security.common.d.C3808e;
-import com.alibaba.security.common.d.C3810g;
-import com.alibaba.security.common.d.C3811h;
-import com.alibaba.security.common.d.C3812i;
-import com.alibaba.security.common.d.C3818l;
-import com.alibaba.security.common.d.C3819m;
-import com.alibaba.security.common.d.C3825q;
-import com.alibaba.security.common.track.a.C3829a;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.d.e;
+import com.alibaba.security.common.d.g;
+import com.alibaba.security.common.d.h;
+import com.alibaba.security.common.d.i;
+import com.alibaba.security.common.d.l;
+import com.alibaba.security.common.d.m;
+import com.alibaba.security.common.d.q;
+import com.alibaba.security.common.track.a.a;
 import com.alibaba.security.common.track.model.LastExitTrackMsg;
 import com.alibaba.security.common.track.model.LastExitTrackMsgPage;
 import com.alibaba.security.common.track.model.TrackLog;
-import com.alibaba.security.realidentity.a.AbstractC3841b;
-import com.alibaba.security.realidentity.a.C3847g;
-import com.alibaba.security.realidentity.b.C3855b;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
-import com.alibaba.security.realidentity.utils.C3922a;
+import com.alibaba.security.common.track.model.a;
+import com.alibaba.security.realidentity.a.g;
+import com.alibaba.security.realidentity.b.b;
 import com.alibaba.security.realidentity.utils.ImageData;
-import com.alibaba.security.realidentity.view.C3927a;
+import com.alibaba.security.realidentity.utils.a;
+import com.alibaba.security.realidentity.view.a;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
 import com.alibaba.wireless.security.aopsdk.replace.android.view.Display;
 import com.youku.live.dago.liveplayback.widget.plugins.resize.AntiShakeOrientationEventListener;
@@ -71,11 +68,11 @@ import java.util.Iterator;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
-public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterface.OnClickListener, SensorEventListener, SurfaceHolder.Callback, View.OnClickListener, ActivityCompat.OnRequestPermissionsResultCallback, C3922a.InterfaceC3923a {
+public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterface.OnClickListener, SensorEventListener, SurfaceHolder.Callback, View.OnClickListener, ActivityCompat.OnRequestPermissionsResultCallback, a.InterfaceC0174a {
     private static final int A = 102;
     private static final int B = 103;
     private static final int C = 1;
@@ -105,8 +102,8 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
     private static final int x = 6;
     private static final int y = 100;
     private static final int z = 101;
-    private C3855b F;
-    private C3922a G;
+    private b F;
+    private com.alibaba.security.realidentity.utils.a G;
     private WindowManager H;
     private SurfaceView I;
     private SurfaceHolder J;
@@ -133,7 +130,7 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
     private ImageView al;
     private TextView am;
     private boolean aq;
-    private HandlerC3852a ar;
+    private a ar;
     private SensorManager av;
     private Sensor aw;
     private int D = 0;
@@ -160,24 +157,24 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
                 return;
             }
             try {
-                Bitmap a2 = RPTakePhotoActivity.a(C3810g.a(C3810g.a(bArr, RPTakePhotoActivity.this)));
-                RPTakePhotoActivity.this.W = C3810g.a(C3810g.a(a2), RPTakePhotoActivity.this);
+                Bitmap a2 = RPTakePhotoActivity.a(g.a(g.a(bArr, RPTakePhotoActivity.this)));
+                RPTakePhotoActivity.this.W = g.a(g.a(a2), RPTakePhotoActivity.this);
                 if (RPTakePhotoActivity.this.W != null) {
                     RPTakePhotoActivity.this.S = "camera";
                     RPTakePhotoActivity.this.ar.sendEmptyMessage(2);
                     return;
                 }
                 RPTakePhotoActivity.b(new TakePhotoTrackParams("exit", RPTakePhotoActivity.this.R), new TakePhotoResult("Camera.PictureCallback filePath is null"));
-                AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(RPTakePhotoActivity.this.R), "error", "5", null);
-                RPTakePhotoActivity.this.L.putExtra("errorMsg", AbstractC3893a.aj);
+                com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(RPTakePhotoActivity.this.R), "error", "5", null);
+                RPTakePhotoActivity.this.L.putExtra("errorMsg", com.alibaba.security.realidentity.jsbridge.a.aj);
                 RPTakePhotoActivity rPTakePhotoActivity = RPTakePhotoActivity.this;
                 rPTakePhotoActivity.a(rPTakePhotoActivity.L);
                 RPTakePhotoActivity.this.finish();
             } catch (Exception e2) {
-                RPTakePhotoActivity.b("Take Photo Camera.PictureCallback", C3805b.a(e2));
+                RPTakePhotoActivity.b("Take Photo Camera.PictureCallback", com.alibaba.security.common.d.b.a(e2));
                 RPTakePhotoActivity.b(new TakePhotoTrackParams("exit", RPTakePhotoActivity.this.R), new TakePhotoResult("Camera.PictureCallback exception"));
-                AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(RPTakePhotoActivity.this.R), "error", "5", null);
-                RPTakePhotoActivity.this.L.putExtra("errorMsg", AbstractC3893a.aj);
+                com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(RPTakePhotoActivity.this.R), "error", "5", null);
+                RPTakePhotoActivity.this.L.putExtra("errorMsg", com.alibaba.security.realidentity.jsbridge.a.aj);
                 RPTakePhotoActivity rPTakePhotoActivity2 = RPTakePhotoActivity.this;
                 rPTakePhotoActivity2.a(rPTakePhotoActivity2.L);
                 RPTakePhotoActivity.this.finish();
@@ -261,12 +258,11 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.security.realidentity.activity.RPTakePhotoActivity$a */
     /* loaded from: classes8.dex */
-    public static class HandlerC3852a extends Handler {
+    public static class a extends Handler {
         private final RPTakePhotoActivity a;
 
-        public HandlerC3852a(RPTakePhotoActivity rPTakePhotoActivity) {
+        public a(RPTakePhotoActivity rPTakePhotoActivity) {
             super(Looper.getMainLooper());
             this.a = rPTakePhotoActivity;
         }
@@ -293,24 +289,24 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
         if (intent != null) {
             this.Y = new HashMap<>();
             this.X = new ArrayList<>();
-            String stringExtra = this.L.getStringExtra(AbstractC3893a.J);
-            this.V = this.L.getStringArrayExtra(AbstractC3893a.B);
-            this.aq = this.L.getBooleanExtra(AbstractC3893a.A, false);
+            String stringExtra = this.L.getStringExtra(com.alibaba.security.realidentity.jsbridge.a.J);
+            this.V = this.L.getStringArrayExtra(com.alibaba.security.realidentity.jsbridge.a.B);
+            this.aq = this.L.getBooleanExtra(com.alibaba.security.realidentity.jsbridge.a.A, false);
             this.L.setAction(stringExtra);
-            int[] intArrayExtra = this.L.getIntArrayExtra(AbstractC3893a.C);
+            int[] intArrayExtra = this.L.getIntArrayExtra(com.alibaba.security.realidentity.jsbridge.a.C);
             this.Q = intArrayExtra;
             int i2 = (intArrayExtra == null || intArrayExtra.length <= 0) ? -1000 : intArrayExtra[0];
             this.R = i2;
             if (i2 == -1000) {
                 b(new TakePhotoTrackParams("exit", i2), new TakePhotoResult("NoType"));
-                AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "4", null);
+                com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "4", null);
                 finish();
                 return;
             }
             return;
         }
         b(new TakePhotoTrackParams("exit", this.R), new TakePhotoResult("Intent is null"));
-        AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "4", null);
+        com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "4", null);
         finish();
     }
 
@@ -379,7 +375,7 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
     }
 
     private void o() {
-        AbstractC3841b.a().a("RPPreviewPhotoPage", "ViewExit", String.valueOf(this.R), "cancel", null, null);
+        com.alibaba.security.realidentity.a.b.a().a("RPPreviewPhotoPage", "ViewExit", String.valueOf(this.R), "cancel", null, null);
         this.ag.setEnabled(false);
         this.O = false;
         if (this.R == 3) {
@@ -405,7 +401,7 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
             imageData.c = strArr[this.U];
         }
         this.X.add(imageData);
-        this.L.putExtra(AbstractC3893a.K, this.X);
+        this.L.putExtra(com.alibaba.security.realidentity.jsbridge.a.K, this.X);
     }
 
     private void q() {
@@ -441,7 +437,7 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
             String str = this.Y.get(strArr[i2]);
             if (!TextUtils.isEmpty(str)) {
                 this.al.setImageURI(Uri.fromFile(new File(str)));
-                this.al.setBackgroundColor(getResources().getColor(R.C3734color.rpsdk_transparency_65));
+                this.al.setBackgroundColor(getResources().getColor(R.color.rpsdk_transparency_65));
                 this.al.setScaleType(ImageView.ScaleType.FIT_CENTER);
                 this.ac.setVisibility(0);
                 this.U = i2;
@@ -450,7 +446,7 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
             }
             if (i2 == this.V.length - 1) {
                 b(new TakePhotoTrackParams("exit", this.R), new TakePhotoResult("imgDownloadFail"));
-                AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "2", null);
+                com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "2", null);
                 Toast.makeText(this, getString(R.string.load_gesture_img_faild), 0).show();
                 a(this.L);
                 finish();
@@ -462,9 +458,9 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
     /* JADX INFO: Access modifiers changed from: private */
     public void s() {
         String[] strArr = {"android.permission.READ_EXTERNAL_STORAGE"};
-        if (this.E <= 0 && !C3819m.a(this, strArr)) {
+        if (this.E <= 0 && !m.a(this, strArr)) {
             this.E++;
-            C3819m.a(this, strArr, 103, "人脸识别服务需要您授权存储权限", new Runnable() { // from class: com.alibaba.security.realidentity.activity.RPTakePhotoActivity.13
+            m.a(this, strArr, 103, "人脸识别服务需要您授权存储权限", new Runnable() { // from class: com.alibaba.security.realidentity.activity.RPTakePhotoActivity.13
                 @Override // java.lang.Runnable
                 public final void run() {
                     RPTakePhotoActivity.this.s();
@@ -475,7 +471,7 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
                     RPTakePhotoActivity.this.s();
                 }
             });
-        } else if (!C3819m.a(this, strArr)) {
+        } else if (!m.a(this, strArr)) {
             AlertDialog create = new AlertDialog.Builder(this).setTitle("无法打开相册").setMessage("无法读取相册图片，请检查是否开启了存储读取权限").setPositiveButton("确定", this).setNeutralButton("退出", new DialogInterface.OnClickListener() { // from class: com.alibaba.security.realidentity.activity.RPTakePhotoActivity.2
                 @Override // android.content.DialogInterface.OnClickListener
                 public final void onClick(DialogInterface dialogInterface, int i2) {
@@ -506,9 +502,9 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
             return;
         }
         String[] strArr = {"android.permission.CAMERA"};
-        if (this.D <= 0 && !C3819m.a(this, strArr)) {
+        if (this.D <= 0 && !m.a(this, strArr)) {
             this.D++;
-            C3819m.a(this, strArr, 102, "人脸识别服务需要您授权相机权限", new Runnable() { // from class: com.alibaba.security.realidentity.activity.RPTakePhotoActivity.3
+            m.a(this, strArr, 102, "人脸识别服务需要您授权相机权限", new Runnable() { // from class: com.alibaba.security.realidentity.activity.RPTakePhotoActivity.3
                 @Override // java.lang.Runnable
                 public final void run() {
                     RPTakePhotoActivity.this.u();
@@ -519,7 +515,7 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
                     RPTakePhotoActivity.this.u();
                 }
             });
-        } else if (!C3819m.a(this, strArr)) {
+        } else if (!m.a(this, strArr)) {
             AlertDialog create = new AlertDialog.Builder(this).setTitle("无法连接相机").setMessage("无法打开摄像头，请检查是否开启了相关权限").setPositiveButton("确定", this).setNeutralButton("退出", new DialogInterface.OnClickListener() { // from class: com.alibaba.security.realidentity.activity.RPTakePhotoActivity.5
                 @Override // android.content.DialogInterface.OnClickListener
                 public final void onClick(DialogInterface dialogInterface, int i2) {
@@ -530,13 +526,13 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
             create.show();
         } else {
             this.F = null;
-            this.F = new C3855b(this);
-            this.F.a(C3855b.d());
+            this.F = new b(this);
+            this.F.a(b.d());
             Build.getMODEL().toLowerCase(Locale.US).replace(" ", "");
             try {
-                C3855b c3855b = this.F;
-                if (c3855b != null) {
-                    c3855b.a(this.J);
+                b bVar = this.F;
+                if (bVar != null) {
+                    bVar.a(this.J);
                     this.P = true;
                     this.F.b();
                     this.K.setEnabled(true);
@@ -551,8 +547,8 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
 
     private void v() {
         String valueOf = String.valueOf(this.R);
-        AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", valueOf, "goPreview", null, null);
-        AbstractC3841b.a().a("RPPreviewPhotoPage", "ViewEnter", valueOf, null, null, null);
+        com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", valueOf, "goPreview", null, null);
+        com.alibaba.security.realidentity.a.b.a().a("RPPreviewPhotoPage", "ViewEnter", valueOf, null, null, null);
         this.I.setVisibility(8);
         this.ai.setEnabled(true);
         this.ag.setEnabled(true);
@@ -577,12 +573,12 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
             Sensor defaultSensor = com.alibaba.wireless.security.aopsdk.replace.android.hardware.SensorManager.getDefaultSensor(sensorManager, 1);
             this.aw = defaultSensor;
             this.av.registerListener(this, defaultSensor, 3);
-            this.G = new C3922a(this);
+            this.G = new com.alibaba.security.realidentity.utils.a(this);
         }
     }
 
     private void x() {
-        AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "1", null);
+        com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "1", null);
         finish();
     }
 
@@ -599,15 +595,15 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
                 if (DocumentsContract.isDocumentUri(this, data)) {
                     String documentId = DocumentsContract.getDocumentId(data);
                     if ("com.android.providers.media.documents".equals(data.getAuthority())) {
-                        a2 = C3808e.a(this, MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "_id=?", new String[]{documentId.split(":")[1]});
+                        a2 = e.a(this, MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "_id=?", new String[]{documentId.split(":")[1]});
                     } else {
                         if ("com.android.providers.downloads.documents".equals(data.getAuthority())) {
-                            a2 = C3808e.a(this, ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), Long.valueOf(documentId).longValue()), null, null);
+                            a2 = e.a(this, ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), Long.valueOf(documentId).longValue()), null, null);
                         }
                         a2 = null;
                     }
                 } else if ("content".equalsIgnoreCase(data.getScheme())) {
-                    a2 = C3808e.a(this, data, null, null);
+                    a2 = e.a(this, data, null, null);
                 } else {
                     if ("file".equals(data.getScheme())) {
                         a2 = data.getPath();
@@ -615,7 +611,7 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
                     a2 = null;
                 }
             } else {
-                a2 = C3808e.a(this, data, null, null);
+                a2 = e.a(this, data, null, null);
             }
             this.W = a2;
             if (a2 != null) {
@@ -623,8 +619,8 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
                 this.ar.sendEmptyMessage(2);
             } else {
                 b(new TakePhotoTrackParams("exit", this.R), new TakePhotoResult("onActivityResult filePath is null"));
-                AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "5", null);
-                this.L.putExtra("errorMsg", AbstractC3893a.aj);
+                com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "5", null);
+                this.L.putExtra("errorMsg", com.alibaba.security.realidentity.jsbridge.a.aj);
                 finish();
                 a(this.L);
             }
@@ -638,8 +634,8 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
         int id = view.getId();
         if (id == R.id.cancel_text) {
             b(new TakePhotoTrackParams("exit", this.R), new TakePhotoResult("cancel"));
-            AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "cancel", null, null);
-            this.L.putExtra(AbstractC3893a.ac, true);
+            com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "cancel", null, null);
+            this.L.putExtra(com.alibaba.security.realidentity.jsbridge.a.ac, true);
             a(this.L);
             finish();
         } else if (id == R.id.tv_close_examples) {
@@ -685,32 +681,32 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
         } else if (id == R.id.reget_button) {
             o();
         } else if (id == R.id.pick_photo_text && this.an) {
-            C3927a.C3928a c3928a = new C3927a.C3928a(this);
-            c3928a.b = "图片上传说明";
-            c3928a.c = "请确保图片符合以下要求：";
-            c3928a.d = "1. 身份证正反面分开上传\n2. 图片需原件拍照件或扫描件";
-            c3928a.h = true;
-            c3928a.i = false;
-            C3927a.InterfaceC3930c interfaceC3930c = new C3927a.InterfaceC3930c() { // from class: com.alibaba.security.realidentity.activity.RPTakePhotoActivity.12
-                @Override // com.alibaba.security.realidentity.view.C3927a.InterfaceC3930c
+            a.C0175a c0175a = new a.C0175a(this);
+            c0175a.b = "图片上传说明";
+            c0175a.c = "请确保图片符合以下要求：";
+            c0175a.d = "1. 身份证正反面分开上传\n2. 图片需原件拍照件或扫描件";
+            c0175a.h = true;
+            c0175a.i = false;
+            a.c cVar = new a.c() { // from class: com.alibaba.security.realidentity.activity.RPTakePhotoActivity.12
+                @Override // com.alibaba.security.realidentity.view.a.c
                 public final void a(Dialog dialog) {
                     dialog.dismiss();
                     RPTakePhotoActivity.this.s();
                 }
             };
-            c3928a.j = "继续";
-            c3928a.l = interfaceC3930c;
-            C3927a.InterfaceC3929b interfaceC3929b = new C3927a.InterfaceC3929b() { // from class: com.alibaba.security.realidentity.activity.RPTakePhotoActivity.11
-                @Override // com.alibaba.security.realidentity.view.C3927a.InterfaceC3929b
+            c0175a.j = "继续";
+            c0175a.l = cVar;
+            a.b bVar = new a.b() { // from class: com.alibaba.security.realidentity.activity.RPTakePhotoActivity.11
+                @Override // com.alibaba.security.realidentity.view.a.b
                 public final void a(Dialog dialog) {
                     dialog.dismiss();
                 }
             };
-            c3928a.m = "取消";
-            c3928a.o = interfaceC3929b;
-            new C3927a(c3928a);
+            c0175a.m = "取消";
+            c0175a.o = bVar;
+            new com.alibaba.security.realidentity.view.a(c0175a);
         } else if (id == R.id.next_button) {
-            AbstractC3841b.a().a("RPPreviewPhotoPage", "ViewExit", String.valueOf(this.R), "confirm", null, null);
+            com.alibaba.security.realidentity.a.b.a().a("RPPreviewPhotoPage", "ViewExit", String.valueOf(this.R), "confirm", null, null);
             this.ai.setEnabled(false);
             this.O = false;
             a(this.ah);
@@ -724,7 +720,7 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
                 imageData.c = strArr[this.U];
             }
             this.X.add(imageData);
-            this.L.putExtra(AbstractC3893a.K, this.X);
+            this.L.putExtra(com.alibaba.security.realidentity.jsbridge.a.K, this.X);
             int[] iArr = this.Q;
             if (iArr.length > 0) {
                 int i6 = this.aj;
@@ -756,9 +752,9 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
         if (Build.VERSION.SDK_INT != 26) {
             setRequestedOrientation(1);
         }
-        setContentView(R.C3736layout.rp_alrealidentity_activity_rp_take_photo);
-        this.H = (WindowManager) getApplicationContext().getSystemService(C9796v.ATTACH_MODE_WINDOW);
-        this.ar = new HandlerC3852a(this);
+        setContentView(R.layout.rp_alrealidentity_activity_rp_take_photo);
+        this.H = (WindowManager) getApplicationContext().getSystemService(v.ATTACH_MODE_WINDOW);
+        this.ar = new a(this);
         this.ae = (ViewGroup) findViewById(R.id.rp_take_photo_layout);
         this.ak = (ViewGroup) findViewById(R.id.take_modle_parent);
         this.ad = findViewById(R.id.detile_parent);
@@ -797,22 +793,22 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
         if (intent != null) {
             this.Y = new HashMap<>();
             this.X = new ArrayList<>();
-            String stringExtra = this.L.getStringExtra(AbstractC3893a.J);
-            this.V = this.L.getStringArrayExtra(AbstractC3893a.B);
-            this.aq = this.L.getBooleanExtra(AbstractC3893a.A, false);
+            String stringExtra = this.L.getStringExtra(com.alibaba.security.realidentity.jsbridge.a.J);
+            this.V = this.L.getStringArrayExtra(com.alibaba.security.realidentity.jsbridge.a.B);
+            this.aq = this.L.getBooleanExtra(com.alibaba.security.realidentity.jsbridge.a.A, false);
             this.L.setAction(stringExtra);
-            int[] intArrayExtra = this.L.getIntArrayExtra(AbstractC3893a.C);
+            int[] intArrayExtra = this.L.getIntArrayExtra(com.alibaba.security.realidentity.jsbridge.a.C);
             this.Q = intArrayExtra;
             int i2 = (intArrayExtra == null || intArrayExtra.length <= 0) ? -1000 : intArrayExtra[0];
             this.R = i2;
             if (i2 == -1000) {
                 b(new TakePhotoTrackParams("exit", i2), new TakePhotoResult("NoType"));
-                AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "4", null);
+                com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "4", null);
                 finish();
             }
         } else {
             b(new TakePhotoTrackParams("exit", this.R), new TakePhotoResult("Intent is null"));
-            AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "4", null);
+            com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "4", null);
             finish();
         }
         a(this.R);
@@ -825,9 +821,9 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
             }
         });
         a();
-        C3825q.a(getWindow().getDecorView());
+        q.a(getWindow().getDecorView());
         b(new TakePhotoTrackParams("enter", this.R), (TakePhotoResult) null);
-        C3829a.C3830a.a.a = null;
+        a.C0165a.a.a = null;
     }
 
     @Override // android.app.Activity
@@ -841,9 +837,9 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
         this.Y = null;
         this.X.clear();
         this.X = null;
-        C3855b c3855b = this.F;
-        if (c3855b != null) {
-            c3855b.a();
+        b bVar = this.F;
+        if (bVar != null) {
+            bVar.a();
             this.F = null;
         }
         this.L = null;
@@ -864,15 +860,15 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
                 o();
                 return true;
             }
-            AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "cancel", null, null);
+            com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "cancel", null, null);
             b(new TakePhotoTrackParams("exit", this.R), new TakePhotoResult("album cancel"));
-            this.L.putExtra(AbstractC3893a.ac, true);
+            this.L.putExtra(com.alibaba.security.realidentity.jsbridge.a.ac, true);
             a(this.L);
             LastExitTrackMsg lastExitTrackMsg = new LastExitTrackMsg();
             lastExitTrackMsg.setPage(LastExitTrackMsgPage.TAKE_PHOTO.getMsg());
             lastExitTrackMsg.setView("");
             lastExitTrackMsg.setParams("");
-            C3829a.C3830a.a.a = lastExitTrackMsg;
+            a.C0165a.a.a = lastExitTrackMsg;
         }
         return super.onKeyDown(i2, keyEvent);
     }
@@ -899,52 +895,52 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
     @Override // android.hardware.SensorEventListener
     public void onSensorChanged(SensorEvent sensorEvent) {
         Sensor sensor;
-        C3922a c3922a = this.G;
-        if (c3922a == null || (sensor = sensorEvent.sensor) == null) {
+        com.alibaba.security.realidentity.utils.a aVar = this.G;
+        if (aVar == null || (sensor = sensorEvent.sensor) == null) {
             return;
         }
-        if (c3922a.f) {
-            c3922a.m = 0;
-            c3922a.g = false;
-            c3922a.a = 0;
-            c3922a.b = 0;
-            c3922a.c = 0;
+        if (aVar.f) {
+            aVar.m = 0;
+            aVar.g = false;
+            aVar.a = 0;
+            aVar.b = 0;
+            aVar.c = 0;
         } else if (sensor.getType() == 1) {
             float[] fArr = sensorEvent.values;
             int i2 = (int) fArr[0];
             int i3 = (int) fArr[1];
             int i4 = (int) fArr[2];
             Calendar calendar = Calendar.getInstance();
-            c3922a.e = calendar;
+            aVar.e = calendar;
             long timeInMillis = calendar.getTimeInMillis();
-            c3922a.e.get(13);
-            if (c3922a.m != 0) {
-                int abs = Math.abs(c3922a.a - i2);
-                int abs2 = Math.abs(c3922a.b - i3);
-                int abs3 = Math.abs(c3922a.c - i4);
+            aVar.e.get(13);
+            if (aVar.m != 0) {
+                int abs = Math.abs(aVar.a - i2);
+                int abs2 = Math.abs(aVar.b - i3);
+                int abs3 = Math.abs(aVar.c - i4);
                 if (Math.sqrt((abs * abs) + (abs2 * abs2) + (abs3 * abs3)) > 1.4d) {
-                    c3922a.m = 2;
+                    aVar.m = 2;
                 } else {
-                    if (c3922a.m == 2) {
-                        c3922a.d = timeInMillis;
-                        c3922a.g = true;
+                    if (aVar.m == 2) {
+                        aVar.d = timeInMillis;
+                        aVar.g = true;
                     }
-                    if (c3922a.g && timeInMillis - c3922a.d > 500 && !c3922a.f) {
-                        c3922a.g = false;
-                        C3922a.InterfaceC3923a interfaceC3923a = c3922a.n;
-                        if (interfaceC3923a != null) {
-                            interfaceC3923a.a();
+                    if (aVar.g && timeInMillis - aVar.d > 500 && !aVar.f) {
+                        aVar.g = false;
+                        a.InterfaceC0174a interfaceC0174a = aVar.n;
+                        if (interfaceC0174a != null) {
+                            interfaceC0174a.a();
                         }
                     }
-                    c3922a.m = 1;
+                    aVar.m = 1;
                 }
             } else {
-                c3922a.d = timeInMillis;
-                c3922a.m = 1;
+                aVar.d = timeInMillis;
+                aVar.m = 1;
             }
-            c3922a.a = i2;
-            c3922a.b = i3;
-            c3922a.c = i4;
+            aVar.a = i2;
+            aVar.b = i3;
+            aVar.c = i4;
         }
     }
 
@@ -974,7 +970,7 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
             Sensor defaultSensor = com.alibaba.wireless.security.aopsdk.replace.android.hardware.SensorManager.getDefaultSensor(sensorManager, 1);
             this.aw = defaultSensor;
             this.av.registerListener(this, defaultSensor, 3);
-            this.G = new C3922a(this);
+            this.G = new com.alibaba.security.realidentity.utils.a(this);
         }
         this.au = true;
     }
@@ -988,9 +984,9 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
         if (sensorManager != null) {
             sensorManager.unregisterListener(this);
         }
-        C3855b c3855b = this.F;
-        if (c3855b != null) {
-            c3855b.c();
+        b bVar = this.F;
+        if (bVar != null) {
+            bVar.c();
             this.F.a();
             this.F = null;
             this.P = false;
@@ -1114,9 +1110,9 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
             try {
                 this.F.a.takePicture(this.as, null, this.at);
             } catch (Exception e2) {
-                C3847g.C3848a.a.a(TrackLog.createSdkExceptionLog("takePhoto camera exception", C3805b.a(e2), ""));
+                g.a.a.a(TrackLog.createSdkExceptionLog("takePhoto camera exception", com.alibaba.security.common.d.b.a(e2), ""));
                 a(this.L);
-                AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "3", null);
+                com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "3", null);
                 finish();
             }
         }
@@ -1130,9 +1126,9 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
 
     private static Bitmap b(Bitmap bitmap) {
         if (com.alibaba.wireless.security.aopsdk.replace.android.os.Build.getMODEL().toLowerCase(Locale.US).replace(" ", "").contains("nexus5x")) {
-            return C3810g.a(bitmap, (int) AntiShakeOrientationEventListener.SCREEN_ORIENTATION_LANDSCAPE);
+            return com.alibaba.security.common.d.g.a(bitmap, (int) AntiShakeOrientationEventListener.SCREEN_ORIENTATION_LANDSCAPE);
         }
-        return C3810g.a(bitmap, 90);
+        return com.alibaba.security.common.d.g.a(bitmap, 90);
     }
 
     private void a(String[] strArr) {
@@ -1140,7 +1136,7 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
             for (String str : strArr) {
                 new AsyncTask<String, Void, Void>() { // from class: com.alibaba.security.realidentity.activity.RPTakePhotoActivity.7
                     private Void a(String... strArr2) {
-                        String a2 = C3810g.a(strArr2[0], RPTakePhotoActivity.this);
+                        String a2 = com.alibaba.security.common.d.g.a(strArr2[0], RPTakePhotoActivity.this);
                         if (TextUtils.isEmpty(a2) || RPTakePhotoActivity.this.Y == null) {
                             return null;
                         }
@@ -1151,7 +1147,7 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
                     @Override // android.os.AsyncTask
                     protected final /* synthetic */ Void doInBackground(String[] strArr2) {
                         String[] strArr3 = strArr2;
-                        String a2 = C3810g.a(strArr3[0], RPTakePhotoActivity.this);
+                        String a2 = com.alibaba.security.common.d.g.a(strArr3[0], RPTakePhotoActivity.this);
                         if (TextUtils.isEmpty(a2) || RPTakePhotoActivity.this.Y == null) {
                             return null;
                         }
@@ -1164,7 +1160,7 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
     }
 
     static /* synthetic */ void l(RPTakePhotoActivity rPTakePhotoActivity) {
-        AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(rPTakePhotoActivity.R), "error", "1", null);
+        com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(rPTakePhotoActivity.R), "error", "1", null);
         rPTakePhotoActivity.finish();
     }
 
@@ -1179,13 +1175,13 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
     public static void b(String str, String str2) {
         TrackLog createSdkExceptionLog = TrackLog.createSdkExceptionLog(str, str2, "");
         createSdkExceptionLog.setCode(-1);
-        C3847g.C3848a.a.a(createSdkExceptionLog);
+        g.a.a.a(createSdkExceptionLog);
     }
 
     static /* synthetic */ void k(RPTakePhotoActivity rPTakePhotoActivity) {
         String valueOf = String.valueOf(rPTakePhotoActivity.R);
-        AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", valueOf, "goPreview", null, null);
-        AbstractC3841b.a().a("RPPreviewPhotoPage", "ViewEnter", valueOf, null, null, null);
+        com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", valueOf, "goPreview", null, null);
+        com.alibaba.security.realidentity.a.b.a().a("RPPreviewPhotoPage", "ViewEnter", valueOf, null, null, null);
         rPTakePhotoActivity.I.setVisibility(8);
         rPTakePhotoActivity.ai.setEnabled(true);
         rPTakePhotoActivity.ag.setEnabled(true);
@@ -1204,8 +1200,8 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
 
     private void a(int i2) {
         String valueOf = String.valueOf(i2);
-        AbstractC3841b.a().a("RPTakePhotoPage", "ViewEnter", valueOf, null, null, null);
-        this.ad.setBackgroundResource(R.C3734color.rpsdk_detile_parent_normalbg);
+        com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewEnter", valueOf, null, null, null);
+        this.ad.setBackgroundResource(R.color.rpsdk_detile_parent_normalbg);
         this.ab.setVisibility(8);
         this.ac.setVisibility(8);
         this.ad.setVisibility(0);
@@ -1218,13 +1214,13 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
         if (i2 == 1) {
             this.Z.setText(getString(R.string.identity_front_title));
             this.aa.setText(getString(R.string.identity_hint));
-            this.al.setImageResource(R.C3735drawable.rp_frontcardpic);
+            this.al.setImageResource(R.drawable.rp_frontcardpic);
             a(true);
             e();
         } else if (i2 == 2) {
             this.Z.setText(getString(R.string.identity_back_title));
             this.aa.setText(getString(R.string.identity_hint));
-            this.al.setImageResource(R.C3735drawable.rp_backcardpic);
+            this.al.setImageResource(R.drawable.rp_backcardpic);
             a(true);
             e();
         } else if (i2 == 3) {
@@ -1239,57 +1235,57 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
         } else if (i2 == 4) {
             this.Z.setText(getString(R.string.passport_tips_title));
             this.aa.setText(getString(R.string.passport_tips_hint));
-            this.al.setImageResource(R.C3735drawable.rp_backcardhk);
+            this.al.setImageResource(R.drawable.rp_backcardhk);
             f();
         } else if (i2 == 5) {
             this.Z.setText(getString(R.string.id_hk_front_title));
             this.aa.setText(getString(R.string.id_hk_hint));
-            this.al.setImageResource(R.C3735drawable.rp_hkpassport_bg);
+            this.al.setImageResource(R.drawable.rp_hkpassport_bg);
             e();
         } else if (i2 == 6) {
             this.Z.setText(getString(R.string.hk_id_tips_title));
             this.aa.setText(getString(R.string.hk_id_tips_hint));
-            this.al.setImageResource(R.C3735drawable.rp_hkpassport_bg);
+            this.al.setImageResource(R.drawable.rp_hkpassport_bg);
             e();
         } else if (i2 == 7) {
             this.Z.setText(getString(R.string.id_tw_back_title));
             this.aa.setText(getString(R.string.id_tw_hint));
-            this.al.setImageResource(R.C3735drawable.rp_backcardhk);
+            this.al.setImageResource(R.drawable.rp_backcardhk);
             e();
         } else if (i2 == 8) {
             this.Z.setText(getString(R.string.id_hk_back_title));
             this.aa.setText(getString(R.string.id_hk_hint));
-            this.al.setImageResource(R.C3735drawable.rp_backcardhk);
+            this.al.setImageResource(R.drawable.rp_backcardhk);
             e();
         } else if (i2 == 9) {
             this.Z.setText(getString(R.string.identity_fg_front_title));
             this.aa.setText(getString(R.string.identity_fg_hint));
-            this.al.setImageResource(R.C3735drawable.rp_backcardpic);
+            this.al.setImageResource(R.drawable.rp_backcardpic);
             e();
         } else if (i2 == 10) {
             this.Z.setText(getString(R.string.identity_fg_back_title));
             this.aa.setText(getString(R.string.identity_fg_hint));
-            this.al.setImageResource(R.C3735drawable.rp_backcardpic);
+            this.al.setImageResource(R.drawable.rp_backcardpic);
             e();
         } else if (i2 == 11) {
             this.Z.setText(getString(R.string.identity_hk_front_title));
             this.aa.setText(getString(R.string.identity_hk_hint));
-            this.al.setImageResource(R.C3735drawable.rp_frontcardpic);
+            this.al.setImageResource(R.drawable.rp_frontcardpic);
             e();
         } else if (i2 == 12) {
             this.Z.setText(getString(R.string.identity_hk_back_title));
             this.aa.setText(getString(R.string.identity_hk_hint));
-            this.al.setImageResource(R.C3735drawable.rp_backcardpic);
+            this.al.setImageResource(R.drawable.rp_backcardpic);
             e();
         } else if (i2 == 13) {
             this.Z.setText(getString(R.string.identity_tw_front_title));
             this.aa.setText(getString(R.string.identity_tw_hint));
-            this.al.setImageResource(R.C3735drawable.rp_frontcardpic);
+            this.al.setImageResource(R.drawable.rp_frontcardpic);
             e();
         } else if (i2 == 14) {
             this.Z.setText(getString(R.string.identity_tw_back_title));
             this.aa.setText(getString(R.string.identity_tw_hint));
-            this.al.setImageResource(R.C3735drawable.rp_backcardpic);
+            this.al.setImageResource(R.drawable.rp_backcardpic);
             e();
         } else if (i2 == -1) {
             this.al.setVisibility(8);
@@ -1297,7 +1293,7 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
             f();
         } else {
             Toast.makeText(getApplicationContext(), "没有该拍照类型，type=".concat(String.valueOf(i2)), 0).show();
-            AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", valueOf, "error", null, null);
+            com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", valueOf, "error", null, null);
             finish();
         }
     }
@@ -1305,13 +1301,13 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
     /* JADX INFO: Access modifiers changed from: private */
     public static void b(TakePhotoTrackParams takePhotoTrackParams, TakePhotoResult takePhotoResult) {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.a);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.a);
         trackLog.setMethod("takePhoto");
-        trackLog.setParams(C3811h.a(takePhotoTrackParams));
+        trackLog.setParams(h.a(takePhotoTrackParams));
         trackLog.setMsg("");
-        trackLog.setResult(takePhotoResult != null ? C3811h.a(takePhotoResult) : "");
-        C3847g.C3848a.a.a(trackLog);
+        trackLog.setResult(takePhotoResult != null ? h.a(takePhotoResult) : "");
+        g.a.a.a(trackLog);
     }
 
     static /* synthetic */ void j(RPTakePhotoActivity rPTakePhotoActivity) {
@@ -1329,9 +1325,9 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
             try {
                 rPTakePhotoActivity.F.a.takePicture(rPTakePhotoActivity.as, null, rPTakePhotoActivity.at);
             } catch (Exception e2) {
-                C3847g.C3848a.a.a(TrackLog.createSdkExceptionLog("takePhoto camera exception", C3805b.a(e2), ""));
+                g.a.a.a(TrackLog.createSdkExceptionLog("takePhoto camera exception", com.alibaba.security.common.d.b.a(e2), ""));
                 rPTakePhotoActivity.a(rPTakePhotoActivity.L);
-                AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(rPTakePhotoActivity.R), "error", "3", null);
+                com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(rPTakePhotoActivity.R), "error", "3", null);
                 rPTakePhotoActivity.finish();
             }
         }
@@ -1339,12 +1335,12 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
 
     @Override // android.content.DialogInterface.OnClickListener
     public void onClick(DialogInterface dialogInterface, int i2) {
-        this.L.putExtra("errorMsg", AbstractC3893a.al);
-        AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "1", null);
+        this.L.putExtra("errorMsg", com.alibaba.security.realidentity.jsbridge.a.al);
+        com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "1", null);
         if (i2 == -1) {
             Intent intent = new Intent();
             intent.setAction("android.settings.APPLICATION_DETAILS_SETTINGS");
-            intent.setData(Uri.fromParts("package", C3818l.a(this), null));
+            intent.setData(Uri.fromParts("package", l.a(this), null));
             startActivity(intent);
         }
         a(this.L);
@@ -1366,7 +1362,7 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
 
     /* JADX INFO: Access modifiers changed from: private */
     public void a(Intent intent) {
-        C3812i.a(this).a(intent);
+        i.a(this).a(intent);
     }
 
     private static void a(ImageView imageView) {
@@ -1383,20 +1379,20 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
         }
     }
 
-    @Override // com.alibaba.security.realidentity.utils.C3922a.InterfaceC3923a
+    @Override // com.alibaba.security.realidentity.utils.a.InterfaceC0174a
     public final void a() {
         try {
-            C3855b c3855b = this.F;
-            if (c3855b != null) {
-                c3855b.a(this.ax);
+            b bVar = this.F;
+            if (bVar != null) {
+                bVar.a(this.ax);
             }
         } catch (Exception e2) {
-            b("onFocus exception", C3805b.a(e2));
+            b("onFocus exception", com.alibaba.security.common.d.b.a(e2));
         }
     }
 
     private static void a(String str, Exception exc) {
-        C3847g.C3848a.a.a(TrackLog.createSdkExceptionLog(str, C3805b.a(exc), ""));
+        g.a.a.a(TrackLog.createSdkExceptionLog(str, com.alibaba.security.common.d.b.a(exc), ""));
     }
 
     private void a(Message message) {
@@ -1426,7 +1422,7 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
                 String str = this.Y.get(strArr[i3]);
                 if (!TextUtils.isEmpty(str)) {
                     this.al.setImageURI(Uri.fromFile(new File(str)));
-                    this.al.setBackgroundColor(getResources().getColor(R.C3734color.rpsdk_transparency_65));
+                    this.al.setBackgroundColor(getResources().getColor(R.color.rpsdk_transparency_65));
                     this.al.setScaleType(ImageView.ScaleType.FIT_CENTER);
                     this.ac.setVisibility(0);
                     this.U = i3;
@@ -1435,7 +1431,7 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
                 }
                 if (i3 == this.V.length - 1) {
                     b(new TakePhotoTrackParams("exit", this.R), new TakePhotoResult("imgDownloadFail"));
-                    AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "2", null);
+                    com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(this.R), "error", "2", null);
                     Toast.makeText(this, getString(R.string.load_gesture_img_faild), 0).show();
                     a(this.L);
                     finish();
@@ -1446,14 +1442,14 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
     }
 
     private static void a(TrackLog trackLog) {
-        C3847g.C3848a.a.a(trackLog);
+        g.a.a.a(trackLog);
     }
 
     static /* synthetic */ Bitmap a(Bitmap bitmap) {
         if (com.alibaba.wireless.security.aopsdk.replace.android.os.Build.getMODEL().toLowerCase(Locale.US).replace(" ", "").contains("nexus5x")) {
-            return C3810g.a(bitmap, (int) AntiShakeOrientationEventListener.SCREEN_ORIENTATION_LANDSCAPE);
+            return com.alibaba.security.common.d.g.a(bitmap, (int) AntiShakeOrientationEventListener.SCREEN_ORIENTATION_LANDSCAPE);
         }
-        return C3810g.a(bitmap, 90);
+        return com.alibaba.security.common.d.g.a(bitmap, 90);
     }
 
     static /* synthetic */ void a(RPTakePhotoActivity rPTakePhotoActivity, Message message) {
@@ -1483,7 +1479,7 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
                 String str = rPTakePhotoActivity.Y.get(strArr[i3]);
                 if (!TextUtils.isEmpty(str)) {
                     rPTakePhotoActivity.al.setImageURI(Uri.fromFile(new File(str)));
-                    rPTakePhotoActivity.al.setBackgroundColor(rPTakePhotoActivity.getResources().getColor(R.C3734color.rpsdk_transparency_65));
+                    rPTakePhotoActivity.al.setBackgroundColor(rPTakePhotoActivity.getResources().getColor(R.color.rpsdk_transparency_65));
                     rPTakePhotoActivity.al.setScaleType(ImageView.ScaleType.FIT_CENTER);
                     rPTakePhotoActivity.ac.setVisibility(0);
                     rPTakePhotoActivity.U = i3;
@@ -1492,7 +1488,7 @@ public class RPTakePhotoActivity extends RPBaseActivity implements DialogInterfa
                 }
                 if (i3 == rPTakePhotoActivity.V.length - 1) {
                     b(new TakePhotoTrackParams("exit", rPTakePhotoActivity.R), new TakePhotoResult("imgDownloadFail"));
-                    AbstractC3841b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(rPTakePhotoActivity.R), "error", "2", null);
+                    com.alibaba.security.realidentity.a.b.a().a("RPTakePhotoPage", "ViewExit", String.valueOf(rPTakePhotoActivity.R), "error", "2", null);
                     Toast.makeText(rPTakePhotoActivity, rPTakePhotoActivity.getString(R.string.load_gesture_img_faild), 0).show();
                     rPTakePhotoActivity.a(rPTakePhotoActivity.L);
                     rPTakePhotoActivity.finish();

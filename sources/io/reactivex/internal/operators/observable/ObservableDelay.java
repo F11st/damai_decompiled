@@ -127,7 +127,7 @@ public final class ObservableDelay<T> extends AbstractObservableWithUpstream<T, 
         this.delayError = z;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new DelayObserver(this.delayError ? observer : new ra2(observer), this.delay, this.unit, this.scheduler.createWorker(), this.delayError));
     }

@@ -11,7 +11,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 import java.util.PriorityQueue;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
@@ -30,23 +29,22 @@ public final class GXDataImpl {
     private final Lazy c;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.data.GXDataImpl$a */
     /* loaded from: classes6.dex */
-    public static final class C3351a implements GXRegisterCenter.GXIExtensionTemplateInfoSource {
+    public static final class a implements GXRegisterCenter.GXIExtensionTemplateInfoSource {
         @NotNull
-        private final PriorityQueue<C3352a> a;
+        private final PriorityQueue<C0140a> a;
         @NotNull
-        private final List<C3352a> b;
+        private final List<C0140a> b;
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.data.GXDataImpl$a$a */
+        /* renamed from: com.alibaba.gaiax.data.GXDataImpl$a$a  reason: collision with other inner class name */
         /* loaded from: classes6.dex */
-        public static final class C3352a {
+        public static final class C0140a {
             private final int a;
             @NotNull
             private final GXRegisterCenter.GXIExtensionTemplateInfoSource b;
 
-            public C3352a(int i, @NotNull GXRegisterCenter.GXIExtensionTemplateInfoSource gXIExtensionTemplateInfoSource) {
+            public C0140a(int i, @NotNull GXRegisterCenter.GXIExtensionTemplateInfoSource gXIExtensionTemplateInfoSource) {
                 b41.i(gXIExtensionTemplateInfoSource, "source");
                 this.a = i;
                 this.b = gXIExtensionTemplateInfoSource;
@@ -65,9 +63,9 @@ public final class GXDataImpl {
                 if (this == obj) {
                     return true;
                 }
-                if (b41.d(C3352a.class, obj == null ? null : obj.getClass())) {
+                if (b41.d(C0140a.class, obj == null ? null : obj.getClass())) {
                     Objects.requireNonNull(obj, "null cannot be cast to non-null type com.alibaba.gaiax.data.GXDataImpl.GXTemplateInfoSource.Value");
-                    return this.a == ((C3352a) obj).a;
+                    return this.a == ((C0140a) obj).a;
                 }
                 return false;
             }
@@ -83,60 +81,58 @@ public final class GXDataImpl {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.data.GXDataImpl$a$b */
         /* loaded from: classes6.dex */
-        static final class C3353b<T> implements Comparator {
-            public static final C3353b<T> INSTANCE = new C3353b<>();
+        static final class b<T> implements Comparator {
+            public static final b<T> INSTANCE = new b<>();
 
-            C3353b() {
+            b() {
             }
 
             @Override // java.util.Comparator
             /* renamed from: a */
-            public final int compare(C3352a c3352a, C3352a c3352a2) {
-                return (c3352a2 == null ? 0 : c3352a2.a()) - (c3352a != null ? c3352a.a() : 0);
+            public final int compare(C0140a c0140a, C0140a c0140a2) {
+                return (c0140a2 == null ? 0 : c0140a2.a()) - (c0140a != null ? c0140a.a() : 0);
             }
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.data.GXDataImpl$a$c */
         /* loaded from: classes6.dex */
-        public static final class C3354c<T> implements Comparator {
-            public static final C3354c<T> INSTANCE = new C3354c<>();
+        public static final class c<T> implements Comparator {
+            public static final c<T> INSTANCE = new c<>();
 
-            C3354c() {
+            c() {
             }
 
             @Override // java.util.Comparator
             /* renamed from: a */
-            public final int compare(C3352a c3352a, C3352a c3352a2) {
-                return (c3352a2 == null ? 0 : c3352a2.a()) - (c3352a != null ? c3352a.a() : 0);
+            public final int compare(C0140a c0140a, C0140a c0140a2) {
+                return (c0140a2 == null ? 0 : c0140a2.a()) - (c0140a != null ? c0140a.a() : 0);
             }
         }
 
-        public C3351a(@NotNull Context context) {
+        public a(@NotNull Context context) {
             b41.i(context, WPKFactory.INIT_KEY_CONTEXT);
-            this.a = new PriorityQueue<>(11, C3353b.INSTANCE);
+            this.a = new PriorityQueue<>(11, b.INSTANCE);
             this.b = new ArrayList();
         }
 
         /* JADX WARN: Multi-variable type inference failed */
         public final void a(@NotNull GXRegisterCenter.GXIExtensionTemplateInfoSource gXIExtensionTemplateInfoSource, int i) {
             b41.i(gXIExtensionTemplateInfoSource, "source");
-            C3352a c3352a = null;
-            for (C3352a c3352a2 : this.a) {
-                if (c3352a2.a() == i) {
-                    c3352a = c3352a2;
+            C0140a c0140a = null;
+            for (C0140a c0140a2 : this.a) {
+                if (c0140a2.a() == i) {
+                    c0140a = c0140a2;
                 }
             }
-            this.a.remove(c3352a);
-            this.a.add(new C3352a(i, gXIExtensionTemplateInfoSource));
-            PriorityQueue priorityQueue = new PriorityQueue(11, C3354c.INSTANCE);
+            this.a.remove(c0140a);
+            this.a.add(new C0140a(i, gXIExtensionTemplateInfoSource));
+            PriorityQueue priorityQueue = new PriorityQueue(11, c.INSTANCE);
             priorityQueue.addAll(this.a);
             this.b.clear();
             while (!priorityQueue.isEmpty()) {
-                List<C3352a> list = this.b;
+                List<C0140a> list = this.b;
                 Object poll = priorityQueue.poll();
                 b41.h(poll, "dataSource.poll()");
                 list.add(poll);
@@ -145,36 +141,34 @@ public final class GXDataImpl {
 
         @Override // com.alibaba.gaiax.GXRegisterCenter.GXIExtensionTemplateInfoSource
         @NotNull
-        public GXTemplateInfo getTemplateInfo(@NotNull GXTemplateEngine.C3347i c3347i) {
-            b41.i(c3347i, "gxTemplateItem");
-            for (C3352a c3352a : this.b) {
-                GXTemplateInfo templateInfo = c3352a.b().getTemplateInfo(c3347i);
+        public GXTemplateInfo getTemplateInfo(@NotNull GXTemplateEngine.i iVar) {
+            b41.i(iVar, "gxTemplateItem");
+            for (C0140a c0140a : this.b) {
+                GXTemplateInfo templateInfo = c0140a.b().getTemplateInfo(iVar);
                 if (templateInfo != null) {
                     return templateInfo;
                 }
             }
-            throw new IllegalArgumentException(b41.r("Not found target gxTemplateInfo, templateItem = ", c3347i));
+            throw new IllegalArgumentException(b41.r("Not found target gxTemplateInfo, templateItem = ", iVar));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.data.GXDataImpl$b */
     /* loaded from: classes6.dex */
-    public static final class C3355b implements GXRegisterCenter.GXIExtensionTemplateSource {
+    public static final class b implements GXRegisterCenter.GXIExtensionTemplateSource {
         @NotNull
-        private final PriorityQueue<C3356a> a;
+        private final PriorityQueue<a> a;
         @NotNull
-        private final List<C3356a> b;
+        private final List<a> b;
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.data.GXDataImpl$b$a */
         /* loaded from: classes6.dex */
-        public static final class C3356a {
+        public static final class a {
             private final int a;
             @NotNull
             private final GXRegisterCenter.GXIExtensionTemplateSource b;
 
-            public C3356a(int i, @NotNull GXRegisterCenter.GXIExtensionTemplateSource gXIExtensionTemplateSource) {
+            public a(int i, @NotNull GXRegisterCenter.GXIExtensionTemplateSource gXIExtensionTemplateSource) {
                 b41.i(gXIExtensionTemplateSource, "source");
                 this.a = i;
                 this.b = gXIExtensionTemplateSource;
@@ -193,9 +187,9 @@ public final class GXDataImpl {
                 if (this == obj) {
                     return true;
                 }
-                if (b41.d(C3356a.class, obj == null ? null : obj.getClass())) {
+                if (b41.d(a.class, obj == null ? null : obj.getClass())) {
                     Objects.requireNonNull(obj, "null cannot be cast to non-null type com.alibaba.gaiax.data.GXDataImpl.GXTemplateSource.Value");
-                    return this.a == ((C3356a) obj).a;
+                    return this.a == ((a) obj).a;
                 }
                 return false;
             }
@@ -211,60 +205,59 @@ public final class GXDataImpl {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.data.GXDataImpl$b$b */
+        /* renamed from: com.alibaba.gaiax.data.GXDataImpl$b$b  reason: collision with other inner class name */
         /* loaded from: classes6.dex */
-        static final class C3357b<T> implements Comparator {
-            public static final C3357b<T> INSTANCE = new C3357b<>();
+        static final class C0141b<T> implements Comparator {
+            public static final C0141b<T> INSTANCE = new C0141b<>();
 
-            C3357b() {
+            C0141b() {
             }
 
             @Override // java.util.Comparator
             /* renamed from: a */
-            public final int compare(C3356a c3356a, C3356a c3356a2) {
-                return (c3356a2 == null ? 0 : c3356a2.a()) - (c3356a != null ? c3356a.a() : 0);
+            public final int compare(a aVar, a aVar2) {
+                return (aVar2 == null ? 0 : aVar2.a()) - (aVar != null ? aVar.a() : 0);
             }
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.data.GXDataImpl$b$c */
         /* loaded from: classes6.dex */
-        public static final class C3358c<T> implements Comparator {
-            public static final C3358c<T> INSTANCE = new C3358c<>();
+        public static final class c<T> implements Comparator {
+            public static final c<T> INSTANCE = new c<>();
 
-            C3358c() {
+            c() {
             }
 
             @Override // java.util.Comparator
             /* renamed from: a */
-            public final int compare(C3356a c3356a, C3356a c3356a2) {
-                return (c3356a2 == null ? 0 : c3356a2.a()) - (c3356a != null ? c3356a.a() : 0);
+            public final int compare(a aVar, a aVar2) {
+                return (aVar2 == null ? 0 : aVar2.a()) - (aVar != null ? aVar.a() : 0);
             }
         }
 
-        public C3355b(@NotNull Context context) {
+        public b(@NotNull Context context) {
             b41.i(context, WPKFactory.INIT_KEY_CONTEXT);
-            this.a = new PriorityQueue<>(11, C3357b.INSTANCE);
+            this.a = new PriorityQueue<>(11, C0141b.INSTANCE);
             this.b = new ArrayList();
         }
 
         /* JADX WARN: Multi-variable type inference failed */
         public final void a(@NotNull GXRegisterCenter.GXIExtensionTemplateSource gXIExtensionTemplateSource, int i) {
             b41.i(gXIExtensionTemplateSource, "source");
-            C3356a c3356a = null;
-            for (C3356a c3356a2 : this.a) {
-                if (c3356a2.a() == i) {
-                    c3356a = c3356a2;
+            a aVar = null;
+            for (a aVar2 : this.a) {
+                if (aVar2.a() == i) {
+                    aVar = aVar2;
                 }
             }
-            this.a.remove(c3356a);
-            this.a.add(new C3356a(i, gXIExtensionTemplateSource));
-            PriorityQueue priorityQueue = new PriorityQueue(11, C3358c.INSTANCE);
+            this.a.remove(aVar);
+            this.a.add(new a(i, gXIExtensionTemplateSource));
+            PriorityQueue priorityQueue = new PriorityQueue(11, c.INSTANCE);
             priorityQueue.addAll(this.a);
             this.b.clear();
             while (!priorityQueue.isEmpty()) {
-                List<C3356a> list = this.b;
+                List<a> list = this.b;
                 Object poll = priorityQueue.poll();
                 b41.h(poll, "dataSource.poll()");
                 list.add(poll);
@@ -273,24 +266,24 @@ public final class GXDataImpl {
 
         @Override // com.alibaba.gaiax.GXRegisterCenter.GXIExtensionTemplateSource
         @NotNull
-        public ns0 getTemplate(@NotNull GXTemplateEngine.C3347i c3347i) {
-            b41.i(c3347i, "gxTemplateItem");
-            for (C3356a c3356a : this.b) {
-                ns0 template = c3356a.b().getTemplate(c3347i);
+        public ns0 getTemplate(@NotNull GXTemplateEngine.i iVar) {
+            b41.i(iVar, "gxTemplateItem");
+            for (a aVar : this.b) {
+                ns0 template = aVar.b().getTemplate(iVar);
                 if (template != null) {
                     return template;
                 }
             }
-            throw new IllegalArgumentException(b41.r("Not found target gxTemplate, templateItem = ", c3347i));
+            throw new IllegalArgumentException(b41.r("Not found target gxTemplate, templateItem = ", iVar));
         }
     }
 
     public GXDataImpl(@NotNull Context context) {
-        Lazy b;
         Lazy b2;
+        Lazy b3;
         b41.i(context, WPKFactory.INIT_KEY_CONTEXT);
         this.a = context;
-        b = C8177b.b(new Function0<C3351a>() { // from class: com.alibaba.gaiax.data.GXDataImpl$templateInfoSource$2
+        b2 = kotlin.b.b(new Function0<a>() { // from class: com.alibaba.gaiax.data.GXDataImpl$templateInfoSource$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -299,12 +292,12 @@ public final class GXDataImpl {
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull
-            public final GXDataImpl.C3351a invoke() {
-                return new GXDataImpl.C3351a(GXDataImpl.this.a());
+            public final GXDataImpl.a invoke() {
+                return new GXDataImpl.a(GXDataImpl.this.a());
             }
         });
-        this.b = b;
-        b2 = C8177b.b(new Function0<C3355b>() { // from class: com.alibaba.gaiax.data.GXDataImpl$templateSource$2
+        this.b = b2;
+        b3 = kotlin.b.b(new Function0<b>() { // from class: com.alibaba.gaiax.data.GXDataImpl$templateSource$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -313,11 +306,11 @@ public final class GXDataImpl {
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull
-            public final GXDataImpl.C3355b invoke() {
-                return new GXDataImpl.C3355b(GXDataImpl.this.a());
+            public final GXDataImpl.b invoke() {
+                return new GXDataImpl.b(GXDataImpl.this.a());
             }
         });
-        this.c = b2;
+        this.c = b3;
     }
 
     @NotNull
@@ -326,22 +319,22 @@ public final class GXDataImpl {
     }
 
     @NotNull
-    public final GXTemplateInfo b(@NotNull GXTemplateEngine.C3347i c3347i) {
-        b41.i(c3347i, "templateItem");
-        GXRegisterCenter.GXIExtensionBizMap b = GXRegisterCenter.Companion.a().b();
-        if (b != null) {
-            b.convert(c3347i);
+    public final GXTemplateInfo b(@NotNull GXTemplateEngine.i iVar) {
+        b41.i(iVar, "templateItem");
+        GXRegisterCenter.GXIExtensionBizMap b2 = GXRegisterCenter.Companion.a().b();
+        if (b2 != null) {
+            b2.convert(iVar);
         }
-        return c().getTemplateInfo(c3347i);
+        return c().getTemplateInfo(iVar);
     }
 
     @NotNull
-    public final C3351a c() {
-        return (C3351a) this.b.getValue();
+    public final a c() {
+        return (a) this.b.getValue();
     }
 
     @NotNull
-    public final C3355b d() {
-        return (C3355b) this.c.getValue();
+    public final b d() {
+        return (b) this.c.getValue();
     }
 }

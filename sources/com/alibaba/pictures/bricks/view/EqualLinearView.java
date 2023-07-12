@@ -45,13 +45,12 @@ public class EqualLinearView extends LinearLayout {
     private int mXiaoSize;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.EqualLinearView$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC3578a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TextView a;
 
-        View$OnClickListenerC3578a(TextView textView) {
+        a(TextView textView) {
             this.a = textView;
         }
 
@@ -67,15 +66,14 @@ public class EqualLinearView extends LinearLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.EqualLinearView$b */
     /* loaded from: classes7.dex */
-    public class C3579b implements ValueAnimator.AnimatorUpdateListener {
+    public class b implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ float a;
         final /* synthetic */ float b;
         final /* synthetic */ float c;
 
-        C3579b(float f, float f2, float f3) {
+        b(float f, float f2, float f3) {
             this.a = f;
             this.b = f2;
             this.c = f3;
@@ -170,7 +168,7 @@ public class EqualLinearView extends LinearLayout {
                     layoutParams.gravity = 16;
                     layoutParams.weight = 1.0f;
                     textView.setLayoutParams(layoutParams);
-                    textView.setOnClickListener(new View$OnClickListenerC3578a(textView));
+                    textView.setOnClickListener(new a(textView));
                     addView(textView);
                 }
             }
@@ -313,7 +311,7 @@ public class EqualLinearView extends LinearLayout {
         } else {
             ValueAnimator ofInt = ValueAnimator.ofInt(0, 100);
             ofInt.setDuration(200L);
-            ofInt.addUpdateListener(new C3579b(f, f3, f4));
+            ofInt.addUpdateListener(new b(f, f3, f4));
             ofInt.start();
         }
     }

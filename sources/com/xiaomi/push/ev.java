@@ -6,13 +6,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import androidx.core.app.NotificationCompat;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.eu;
 
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class ev implements eu.InterfaceC7648a {
+public class ev implements eu.a {
 
     /* renamed from: a  reason: collision with other field name */
     protected Context f321a;
@@ -30,11 +29,11 @@ public class ev implements eu.InterfaceC7648a {
         try {
             AlarmManager.class.getMethod("setExact", Integer.TYPE, Long.TYPE, PendingIntent.class).invoke(alarmManager, 2, Long.valueOf(j), pendingIntent);
         } catch (Exception e) {
-            AbstractC7535b.d("[Alarm] invoke setExact method meet error. " + e);
+            com.xiaomi.channel.commonutils.logger.b.d("[Alarm] invoke setExact method meet error. " + e);
         }
     }
 
-    @Override // com.xiaomi.push.eu.InterfaceC7648a
+    @Override // com.xiaomi.push.eu.a
     public void a() {
         if (this.f320a != null) {
             try {
@@ -42,12 +41,12 @@ public class ev implements eu.InterfaceC7648a {
             } catch (Exception unused) {
             } catch (Throwable th) {
                 this.f320a = null;
-                AbstractC7535b.c("[Alarm] unregister timer");
+                com.xiaomi.channel.commonutils.logger.b.c("[Alarm] unregister timer");
                 this.a = 0L;
                 throw th;
             }
             this.f320a = null;
-            AbstractC7535b.c("[Alarm] unregister timer");
+            com.xiaomi.channel.commonutils.logger.b.c("[Alarm] unregister timer");
             this.a = 0L;
         }
         this.a = 0L;
@@ -62,13 +61,13 @@ public class ev implements eu.InterfaceC7648a {
         } else {
             a(alarmManager, j, this.f320a);
         }
-        AbstractC7535b.c("[Alarm] register timer " + j);
+        com.xiaomi.channel.commonutils.logger.b.c("[Alarm] register timer " + j);
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:17:0x0036, code lost:
         if (r8.a < r4) goto L17;
      */
-    @Override // com.xiaomi.push.eu.InterfaceC7648a
+    @Override // com.xiaomi.push.eu.a
     /*
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
@@ -77,7 +76,7 @@ public class ev implements eu.InterfaceC7648a {
         /*
             r8 = this;
             android.content.Context r0 = r8.f321a
-            com.xiaomi.push.service.o r0 = com.xiaomi.push.service.C7764o.a(r0)
+            com.xiaomi.push.service.o r0 = com.xiaomi.push.service.o.a(r0)
             long r0 = r0.m1221a()
             r2 = 0
             if (r9 != 0) goto L15
@@ -126,7 +125,7 @@ public class ev implements eu.InterfaceC7648a {
         throw new UnsupportedOperationException("Method not decompiled: com.xiaomi.push.ev.a(boolean):void");
     }
 
-    @Override // com.xiaomi.push.eu.InterfaceC7648a
+    @Override // com.xiaomi.push.eu.a
     /* renamed from: a */
     public boolean mo873a() {
         return this.a != 0;

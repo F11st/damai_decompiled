@@ -21,7 +21,7 @@ public class to1 extends wi1 {
     @NotNull
     public static final String BIZ_ID = "damai";
     @NotNull
-    public static final C9729a Companion = new C9729a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String TEMPLATE_ID = "damai_script_order_list_cell";
     @NotNull
@@ -34,13 +34,12 @@ public class to1 extends wi1 {
     private String g;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.to1$a */
     /* loaded from: classes7.dex */
-    public static final class C9729a {
-        private C9729a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9729a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

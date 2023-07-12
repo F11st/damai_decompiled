@@ -7,8 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import kotlin.collections.ArraysKt___ArraysKt;
-import kotlin.collections.C8226x;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.x;
 import org.jetbrains.annotations.NotNull;
 import tb.hq2;
 import tb.k50;
@@ -68,18 +68,17 @@ public enum KotlinTarget {
     private final String description;
     private final boolean isDefault;
     @NotNull
-    public static final C8305a Companion = new C8305a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final HashMap<String, KotlinTarget> map = new HashMap<>();
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.annotations.KotlinTarget$a */
     /* loaded from: classes3.dex */
-    public static final class C8305a {
-        private C8305a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8305a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -111,7 +110,7 @@ public enum KotlinTarget {
         KotlinTarget kotlinTarget3 = VALUE_PARAMETER;
         AnnotationUseSiteTarget annotationUseSiteTarget2 = AnnotationUseSiteTarget.FIELD;
         KotlinTarget kotlinTarget4 = FIELD;
-        l = C8226x.l(hq2.a(annotationUseSiteTarget, kotlinTarget3), hq2.a(annotationUseSiteTarget2, kotlinTarget4), hq2.a(AnnotationUseSiteTarget.PROPERTY, PROPERTY), hq2.a(AnnotationUseSiteTarget.FILE, FILE), hq2.a(AnnotationUseSiteTarget.PROPERTY_GETTER, PROPERTY_GETTER), hq2.a(AnnotationUseSiteTarget.PROPERTY_SETTER, PROPERTY_SETTER), hq2.a(AnnotationUseSiteTarget.RECEIVER, kotlinTarget3), hq2.a(AnnotationUseSiteTarget.SETTER_PARAMETER, kotlinTarget3), hq2.a(AnnotationUseSiteTarget.PROPERTY_DELEGATE_FIELD, kotlinTarget4));
+        l = x.l(hq2.a(annotationUseSiteTarget, kotlinTarget3), hq2.a(annotationUseSiteTarget2, kotlinTarget4), hq2.a(AnnotationUseSiteTarget.PROPERTY, PROPERTY), hq2.a(AnnotationUseSiteTarget.FILE, FILE), hq2.a(AnnotationUseSiteTarget.PROPERTY_GETTER, PROPERTY_GETTER), hq2.a(AnnotationUseSiteTarget.PROPERTY_SETTER, PROPERTY_SETTER), hq2.a(AnnotationUseSiteTarget.RECEIVER, kotlinTarget3), hq2.a(AnnotationUseSiteTarget.SETTER_PARAMETER, kotlinTarget3), hq2.a(AnnotationUseSiteTarget.PROPERTY_DELEGATE_FIELD, kotlinTarget4));
         USE_SITE_MAPPING = l;
     }
 

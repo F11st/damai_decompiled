@@ -4,7 +4,6 @@ import java.util.Iterator;
 import kotlin.SinceKotlin;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.RestrictsSuspension;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.sequences.Sequence;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -24,7 +23,7 @@ public abstract class pa2<T> {
     public final Object c(@NotNull Sequence<? extends T> sequence, @NotNull Continuation<? super wt2> continuation) {
         Object d;
         Object b = b(sequence.iterator(), continuation);
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         return b == d ? b : wt2.INSTANCE;
     }
 }

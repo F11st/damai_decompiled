@@ -25,9 +25,9 @@ final class LongAdder extends Striped64 implements LongAddable {
     @Override // com.google.common.hash.LongAddable
     public void add(long j) {
         int length;
-        Striped64.C5227b c5227b;
-        Striped64.C5227b[] c5227bArr = this.cells;
-        if (c5227bArr == null) {
+        Striped64.b bVar;
+        Striped64.b[] bVarArr = this.cells;
+        if (bVarArr == null) {
             long j2 = this.base;
             if (casBase(j2, j2 + j)) {
                 return;
@@ -35,9 +35,9 @@ final class LongAdder extends Striped64 implements LongAddable {
         }
         int[] iArr = Striped64.threadHashCode.get();
         boolean z = true;
-        if (iArr != null && c5227bArr != null && (length = c5227bArr.length) >= 1 && (c5227b = c5227bArr[(length - 1) & iArr[0]]) != null) {
-            long j3 = c5227b.a;
-            z = c5227b.a(j3, j3 + j);
+        if (iArr != null && bVarArr != null && (length = bVarArr.length) >= 1 && (bVar = bVarArr[(length - 1) & iArr[0]]) != null) {
+            long j3 = bVar.a;
+            z = bVar.a(j3, j3 + j);
             if (z) {
                 return;
             }
@@ -86,11 +86,11 @@ final class LongAdder extends Striped64 implements LongAddable {
     @Override // com.google.common.hash.LongAddable
     public long sum() {
         long j = this.base;
-        Striped64.C5227b[] c5227bArr = this.cells;
-        if (c5227bArr != null) {
-            for (Striped64.C5227b c5227b : c5227bArr) {
-                if (c5227b != null) {
-                    j += c5227b.a;
+        Striped64.b[] bVarArr = this.cells;
+        if (bVarArr != null) {
+            for (Striped64.b bVar : bVarArr) {
+                if (bVar != null) {
+                    j += bVar.a;
                 }
             }
         }
@@ -99,13 +99,13 @@ final class LongAdder extends Striped64 implements LongAddable {
 
     public long sumThenReset() {
         long j = this.base;
-        Striped64.C5227b[] c5227bArr = this.cells;
+        Striped64.b[] bVarArr = this.cells;
         this.base = 0L;
-        if (c5227bArr != null) {
-            for (Striped64.C5227b c5227b : c5227bArr) {
-                if (c5227b != null) {
-                    j += c5227b.a;
-                    c5227b.a = 0L;
+        if (bVarArr != null) {
+            for (Striped64.b bVar : bVarArr) {
+                if (bVar != null) {
+                    j += bVar.a;
+                    bVar.a = 0L;
                 }
             }
         }

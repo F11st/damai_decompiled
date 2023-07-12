@@ -1,7 +1,6 @@
 package tb;
 
 import android.os.AsyncTask;
-import com.taobao.android.dinamic.expression.parser.resolver.C6330e;
 import java.util.List;
 import java.util.StringTokenizer;
 
@@ -10,10 +9,9 @@ import java.util.StringTokenizer;
 public class b7 extends v0 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.b7$a */
     /* loaded from: classes11.dex */
-    class AsyncTaskC8954a extends AsyncTask<Void, Void, Void> {
-        AsyncTaskC8954a(b7 b7Var) {
+    class a extends AsyncTask<Void, Void, Void> {
+        a(b7 b7Var) {
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
@@ -26,7 +24,7 @@ public class b7 extends v0 {
     }
 
     public b7() {
-        new AsyncTaskC8954a(this).execute(new Void[0]);
+        new a(this).execute(new Void[0]);
     }
 
     @Override // com.taobao.android.dinamic.expression.parser.DinamicDataParser
@@ -41,7 +39,7 @@ public class b7 extends v0 {
                         if (stringTokenizer.hasMoreTokens()) {
                             obj = c7.a().c();
                             while (stringTokenizer.hasMoreTokens()) {
-                                obj = C6330e.a(obj, stringTokenizer.nextToken());
+                                obj = com.taobao.android.dinamic.expression.parser.resolver.e.a(obj, stringTokenizer.nextToken());
                             }
                             return (obj != null && list.size() > 1) ? list.get(1) : obj;
                         }

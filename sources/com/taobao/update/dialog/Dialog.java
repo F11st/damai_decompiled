@@ -37,10 +37,9 @@ public class Dialog extends android.app.Dialog {
     private View o;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.update.dialog.Dialog$a */
     /* loaded from: classes11.dex */
-    class View$OnTouchListenerC6931a implements View.OnTouchListener {
-        View$OnTouchListenerC6931a() {
+    class a implements View.OnTouchListener {
+        a() {
         }
 
         @Override // android.view.View.OnTouchListener
@@ -62,10 +61,9 @@ public class Dialog extends android.app.Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.update.dialog.Dialog$b */
     /* loaded from: classes11.dex */
-    class View$OnClickListenerC6932b implements View.OnClickListener {
-        View$OnClickListenerC6932b() {
+    class b implements View.OnClickListener {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -79,10 +77,9 @@ public class Dialog extends android.app.Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.update.dialog.Dialog$c */
     /* loaded from: classes11.dex */
-    class View$OnClickListenerC6933c implements View.OnClickListener {
-        View$OnClickListenerC6933c() {
+    class c implements View.OnClickListener {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -190,7 +187,7 @@ public class Dialog extends android.app.Dialog {
         this.b = (RelativeLayout) findViewById(R$id.update_contentDialog);
         FrameLayout frameLayout = (FrameLayout) findViewById(R$id.update_dialog_rootView);
         this.c = frameLayout;
-        frameLayout.setOnTouchListener(new View$OnTouchListenerC6931a());
+        frameLayout.setOnTouchListener(new a());
         this.g = (TextView) findViewById(R$id.update_title);
         setTitle(this.f);
         if (this.o != null) {
@@ -205,14 +202,14 @@ public class Dialog extends android.app.Dialog {
             this.i = buttonFlat;
             buttonFlat.setVisibility(0);
             this.i.setText(this.j);
-            this.i.setOnClickListener(new View$OnClickListenerC6932b());
+            this.i.setOnClickListener(new b());
         }
         if (this.k != null) {
             ButtonFlat buttonFlat2 = (ButtonFlat) findViewById(R$id.update_button_accept);
             this.h = buttonFlat2;
             buttonFlat2.setVisibility(0);
             this.h.setText(this.k);
-            this.h.setOnClickListener(new View$OnClickListenerC6933c());
+            this.h.setOnClickListener(new c());
         }
     }
 

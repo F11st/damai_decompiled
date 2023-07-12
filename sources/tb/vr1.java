@@ -12,10 +12,10 @@ import tb.og1;
 /* loaded from: classes7.dex */
 public final class vr1 implements BitmapProcessor {
     private static transient /* synthetic */ IpChange $ipChange;
-    private og1.C9521a a;
+    private og1.a a;
 
-    public vr1(int i, int i2, @Nullable og1.C9521a c9521a) {
-        this.a = c9521a;
+    public vr1(int i, int i2, @Nullable og1.a aVar) {
+        this.a = aVar;
     }
 
     @Override // com.taobao.phenix.bitmap.BitmapProcessor
@@ -35,13 +35,13 @@ public final class vr1 implements BitmapProcessor {
         b41.i(str, "s");
         b41.i(bitmapSupplier, "bitmapSupplier");
         b41.i(bitmap, "toTransform");
-        og1.C9521a c9521a = this.a;
-        if (c9521a == null) {
+        og1.a aVar = this.a;
+        if (aVar == null) {
             return bitmap;
         }
         sg1 sg1Var = sg1.INSTANCE;
-        b41.f(c9521a);
-        Bitmap b = sg1Var.b(bitmapSupplier, bitmap, c9521a);
+        b41.f(aVar);
+        Bitmap b = sg1Var.b(bitmapSupplier, bitmap, aVar);
         return b != null ? b : bitmap;
     }
 }

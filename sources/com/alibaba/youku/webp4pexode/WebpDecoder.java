@@ -2,16 +2,14 @@ package com.alibaba.youku.webp4pexode;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import com.taobao.pexode.C6827a;
 import com.taobao.pexode.Pexode;
 import com.taobao.pexode.PexodeOptions;
 import com.taobao.pexode.common.DegradeEventListener;
 import com.taobao.pexode.decoder.Decoder;
-import com.taobao.pexode.entity.C6835a;
 import com.taobao.pexode.entity.RewindableStream;
 import com.taobao.pexode.exception.PexodeException;
-import com.taobao.pexode.mimetype.C6838a;
 import com.taobao.pexode.mimetype.MimeType;
+import com.taobao.pexode.mimetype.a;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,7 +27,7 @@ public class WebpDecoder implements Decoder {
     private static boolean sIsSoInstalled = true;
 
     static {
-        C6838a.ALL_EXTENSION_TYPES.add(WebpMimeType.WEBPD);
+        a.ALL_EXTENSION_TYPES.add(WebpMimeType.WEBPD);
         String libraryName = getLibraryName();
         try {
             System.loadLibrary(libraryName);
@@ -76,7 +74,7 @@ public class WebpDecoder implements Decoder {
             pexodeOptions.outWidth = 1;
             return null;
         } else if (pexodeOptions.forceStaticIfAnimation) {
-            List<Decoder> g = Pexode.g(C6838a.WEBP);
+            List<Decoder> g = Pexode.g(a.WEBP);
             if (g == null || g.size() <= 0 || (decoder = g.get(0)) == null) {
                 return null;
             }
@@ -84,9 +82,9 @@ public class WebpDecoder implements Decoder {
         } else {
             if (rewindableStream.getInputType() != 1) {
                 byte[] IS2Bytes = IS2Bytes(rewindableStream);
-                C6835a c6835a = new C6835a(IS2Bytes, 0, IS2Bytes.length);
-                ByteBuffer allocateDirect = ByteBuffer.allocateDirect(c6835a.getBuffer().length);
-                allocateDirect.put(c6835a.getBuffer());
+                com.taobao.pexode.entity.a aVar = new com.taobao.pexode.entity.a(IS2Bytes, 0, IS2Bytes.length);
+                ByteBuffer allocateDirect = ByteBuffer.allocateDirect(aVar.getBuffer().length);
+                allocateDirect.put(aVar.getBuffer());
                 allocateDirect.rewind();
                 nativeCreateFromDirectByteBuffer = WebpImage.nativeCreateFromDirectByteBuffer(allocateDirect);
             } else {
@@ -103,7 +101,7 @@ public class WebpDecoder implements Decoder {
                 }
                 int width = frame.getWidth();
                 int height = frame.getHeight();
-                z = (!pexodeOptions.enableAshmem || C6827a.f().b) ? false : false;
+                z = (!pexodeOptions.enableAshmem || com.taobao.pexode.a.f().b) ? false : false;
                 Bitmap newBitmapWithPin = z ? n8.a().newBitmapWithPin(width, height, Bitmap.Config.ARGB_8888) : null;
                 if (!z || (newBitmapWithPin == null && pexodeOptions.allowDegrade2NoAshmem)) {
                     newBitmapWithPin = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);

@@ -12,8 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.category.ranking.bean.ItemBean;
-import cn.damai.common.image.C0504a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -50,12 +49,11 @@ public class DetailedItemHolder extends RecyclerView.ViewHolder {
     View.OnClickListener p;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.inventory.ui.viewholder.DetailedItemHolder$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0417a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0417a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -74,7 +72,7 @@ public class DetailedItemHolder extends RecyclerView.ViewHolder {
 
     public DetailedItemHolder(LayoutInflater layoutInflater) {
         super(layoutInflater.inflate(R$layout.inventory_project_item, (ViewGroup) null));
-        this.p = new View$OnClickListenerC0417a();
+        this.p = new a();
         this.itemView.setLayoutParams(new RecyclerView.LayoutParams(-1, -2));
         this.a = this.itemView.getContext();
         b(this.itemView);
@@ -112,7 +110,7 @@ public class DetailedItemHolder extends RecyclerView.ViewHolder {
         } else {
             itemBean.index = i;
             this.b.setTag(itemBean);
-            C0504a.b().f(itemBean.verticalPic, m62.a(this.a, 111.0f), m62.a(this.a, 148.0f)).c(R$drawable.uikit_default_image_bg_gradient).g(this.c);
+            cn.damai.common.image.a.b().f(itemBean.verticalPic, m62.a(this.a, 111.0f), m62.a(this.a, 148.0f)).c(R$drawable.uikit_default_image_bg_gradient).g(this.c);
             if (!TextUtils.isEmpty(itemBean.categoryName)) {
                 this.d.setVisibility(0);
                 this.d.setTagName(itemBean.categoryName);
@@ -161,7 +159,7 @@ public class DetailedItemHolder extends RecyclerView.ViewHolder {
             ipChange.ipc$dispatch("-1039027265", new Object[]{this, itemBean});
         } else if (itemBean == null) {
         } else {
-            C0529c.e().x(u70.g().i(this.m, itemBean.id, this.n, itemBean.index + this.o));
+            c.e().x(u70.g().i(this.m, itemBean.id, this.n, itemBean.index + this.o));
             Bundle bundle = new Bundle();
             bundle.putString(IssueConstants.ProjectID, itemBean.id);
             bundle.putString("projectName", itemBean.name);

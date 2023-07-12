@@ -37,16 +37,15 @@ public class ScrollLineView extends View {
     private float mStopX;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.ScrollLineView$a */
     /* loaded from: classes8.dex */
-    public class C2601a implements ValueAnimator.AnimatorUpdateListener {
+    public class a implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ float a;
         final /* synthetic */ float b;
         final /* synthetic */ float c;
         final /* synthetic */ float d;
 
-        C2601a(float f, float f2, float f3, float f4) {
+        a(float f, float f2, float f3, float f4) {
             this.a = f;
             this.b = f2;
             this.c = f3;
@@ -197,7 +196,7 @@ public class ScrollLineView extends View {
         }
         ValueAnimator ofInt = ValueAnimator.ofInt(0, 100);
         ofInt.setDuration(300L);
-        ofInt.addUpdateListener(new C2601a(f, f4, f2, f3));
+        ofInt.addUpdateListener(new a(f, f4, f2, f3));
         ofInt.start();
         this.mIsMove = true;
     }

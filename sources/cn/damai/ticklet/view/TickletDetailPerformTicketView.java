@@ -14,8 +14,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.viewpager.widget.ViewPager;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import cn.damai.member.R$color;
 import cn.damai.member.R$drawable;
 import cn.damai.member.R$id;
@@ -64,13 +62,12 @@ public class TickletDetailPerformTicketView extends RelativeLayout {
     View vpBottpmLine;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletDetailPerformTicketView$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2103a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TicketDeatilResult a;
 
-        View$OnClickListenerC2103a(TicketDeatilResult ticketDeatilResult) {
+        a(TicketDeatilResult ticketDeatilResult) {
             this.a = ticketDeatilResult;
         }
 
@@ -89,12 +86,11 @@ public class TickletDetailPerformTicketView extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletDetailPerformTicketView$b */
     /* loaded from: classes7.dex */
-    public class View$OnAttachStateChangeListenerC2104b implements View.OnAttachStateChangeListener {
+    public class b implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC2104b() {
+        b() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -136,13 +132,12 @@ public class TickletDetailPerformTicketView extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletDetailPerformTicketView$c */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2105c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ AnnouncementVO a;
 
-        View$OnClickListenerC2105c(AnnouncementVO announcementVO) {
+        c(AnnouncementVO announcementVO) {
             this.a = announcementVO;
         }
 
@@ -158,12 +153,11 @@ public class TickletDetailPerformTicketView extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.view.TickletDetailPerformTicketView$d */
     /* loaded from: classes7.dex */
-    public class C2106d implements Action<Object> {
+    public class d implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2106d() {
+        d() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -233,7 +227,7 @@ public class TickletDetailPerformTicketView extends RelativeLayout {
         if (AndroidInstantRuntime.support(ipChange, "1609948989")) {
             ipChange.ipc$dispatch("1609948989", new Object[]{this});
         } else {
-            this.mDMMessage.b(in2.COUPON_NUM_STATE_UPDATE, new C2106d());
+            this.mDMMessage.b(in2.COUPON_NUM_STATE_UPDATE, new d());
         }
     }
 
@@ -263,9 +257,9 @@ public class TickletDetailPerformTicketView extends RelativeLayout {
                         LottieAnimationView lottieAnimationView = this.splashView;
                         lottieAnimationView.removeOnAttachStateChangeListener((View.OnAttachStateChangeListener) lottieAnimationView.getTag());
                     }
-                    View$OnAttachStateChangeListenerC2104b view$OnAttachStateChangeListenerC2104b = new View$OnAttachStateChangeListenerC2104b();
-                    this.splashView.addOnAttachStateChangeListener(view$OnAttachStateChangeListenerC2104b);
-                    this.splashView.setTag(view$OnAttachStateChangeListenerC2104b);
+                    b bVar = new b();
+                    this.splashView.addOnAttachStateChangeListener(bVar);
+                    this.splashView.setTag(bVar);
                 }
             } catch (Exception unused) {
             }
@@ -291,7 +285,7 @@ public class TickletDetailPerformTicketView extends RelativeLayout {
         } else if (announcementVO != null && !TextUtils.isEmpty(announcementVO.getAnnouncementText())) {
             this.ellipsisTextView.setText(announcementVO.getAnnouncementText());
             this.rlEmergency.setVisibility(0);
-            this.rlEmergency.setOnClickListener(new View$OnClickListenerC2105c(announcementVO));
+            this.rlEmergency.setOnClickListener(new c(announcementVO));
         } else {
             this.rlEmergency.setVisibility(8);
         }
@@ -350,14 +344,14 @@ public class TickletDetailPerformTicketView extends RelativeLayout {
             un2.k().f(this.partent.findViewById(R$id.ll_coupon_list_container), i, userTicketTable.getPerformId(), userTicketTable.tradeOrderId, "couponlist");
             if (z) {
                 if (this.showAll) {
-                    C0529c e = C0529c.e();
-                    C0528b c0528b = C0528b.getInstance();
-                    e.x(c0528b.e(un2.TICKLET_DETAIL_PAGE, "center_" + i, "expand", un2.k().u(userTicketTable.tradeOrderId, userTicketTable.getPerformId()), Boolean.FALSE));
+                    cn.damai.common.user.c e = cn.damai.common.user.c.e();
+                    cn.damai.common.user.b bVar = cn.damai.common.user.b.getInstance();
+                    e.x(bVar.e(un2.TICKLET_DETAIL_PAGE, "center_" + i, "expand", un2.k().u(userTicketTable.tradeOrderId, userTicketTable.getPerformId()), Boolean.FALSE));
                     return;
                 }
-                C0529c e2 = C0529c.e();
-                C0528b c0528b2 = C0528b.getInstance();
-                e2.x(c0528b2.e(un2.TICKLET_DETAIL_PAGE, "center_" + i, "collapse", un2.k().u(userTicketTable.tradeOrderId, userTicketTable.getPerformId()), Boolean.FALSE));
+                cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
+                cn.damai.common.user.b bVar2 = cn.damai.common.user.b.getInstance();
+                e2.x(bVar2.e(un2.TICKLET_DETAIL_PAGE, "center_" + i, "collapse", un2.k().u(userTicketTable.tradeOrderId, userTicketTable.getPerformId()), Boolean.FALSE));
             }
         } else {
             this.partent.findViewById(R$id.ll_coupon_list_view).setVisibility(8);
@@ -431,7 +425,7 @@ public class TickletDetailPerformTicketView extends RelativeLayout {
         this.viewPager.update(ticketDeatilResult);
         this.showAll = false;
         updateCouponCodeList(0, ticketDeatilResult, false);
-        this.partent.findViewById(R$id.tv_coupon_list_view_showall).setOnClickListener(new View$OnClickListenerC2103a(ticketDeatilResult));
+        this.partent.findViewById(R$id.tv_coupon_list_view_showall).setOnClickListener(new a(ticketDeatilResult));
         this.viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() { // from class: cn.damai.ticklet.view.TickletDetailPerformTicketView.2
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -476,9 +470,9 @@ public class TickletDetailPerformTicketView extends RelativeLayout {
         this.isShowNftBgAnim = false;
         this.showAll = false;
         this.context = context;
-        int a = t60.a(context, 18.0f);
-        this.paddintTop = a;
-        setPadding(0, a, 0, 0);
+        int a2 = t60.a(context, 18.0f);
+        this.paddintTop = a2;
+        setPadding(0, a2, 0, 0);
         initView();
         onListenerCouponStateAccsSuccess();
     }

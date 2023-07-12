@@ -13,7 +13,6 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import cn.damai.common.AppConfig;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.uikit.view.RoundImageView;
@@ -33,7 +32,7 @@ import tb.wh2;
 public class DMDXScaleAnimationImage extends FrameLayout {
     private static transient /* synthetic */ IpChange $ipChange;
     private long duration;
-    private HandlerC0666c imageHandler;
+    private c imageHandler;
     private List<String> imageList;
     private RoundImageView imageView;
     private int index;
@@ -45,42 +44,40 @@ public class DMDXScaleAnimationImage extends FrameLayout {
     private AnimatorSet scaleOutAnimation;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.scaleimage.DMDXScaleAnimationImage$a */
     /* loaded from: classes4.dex */
-    public class C0664a implements DMImageCreator.DMImageSuccListener {
+    public class a implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C0664a(String str) {
+        a(String str) {
             this.a = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-581837523")) {
-                ipChange.ipc$dispatch("-581837523", new Object[]{this, c0502e});
-            } else if (c0502e.a != null) {
-                DMDXScaleAnimationImage.this.mCacheDrawable.put(this.a, c0502e.a);
-                DMDXScaleAnimationImage.this.imageView.setImageDrawable(c0502e.a);
+                ipChange.ipc$dispatch("-581837523", new Object[]{this, eVar});
+            } else if (eVar.a != null) {
+                DMDXScaleAnimationImage.this.mCacheDrawable.put(this.a, eVar.a);
+                DMDXScaleAnimationImage.this.imageView.setImageDrawable(eVar.a);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.scaleimage.DMDXScaleAnimationImage$b */
     /* loaded from: classes4.dex */
-    public class C0665b implements DMImageCreator.DMImageFailListener {
+    public class b implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0665b() {
+        b() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-2022195558")) {
-                ipChange.ipc$dispatch("-2022195558", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-2022195558", new Object[]{this, dVar});
             } else {
                 DMDXScaleAnimationImage.this.imageView.setImageResource(R$drawable.uikit_default_image_bg_gradient);
             }
@@ -88,13 +85,12 @@ public class DMDXScaleAnimationImage extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.scaleimage.DMDXScaleAnimationImage$c */
     /* loaded from: classes14.dex */
-    public static class HandlerC0666c extends Handler {
+    public static class c extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
         private final WeakReference<DMDXScaleAnimationImage> a;
 
-        public HandlerC0666c(DMDXScaleAnimationImage dMDXScaleAnimationImage) {
+        public c(DMDXScaleAnimationImage dMDXScaleAnimationImage) {
             this.a = new WeakReference<>(dMDXScaleAnimationImage);
         }
 
@@ -112,7 +108,7 @@ public class DMDXScaleAnimationImage extends FrameLayout {
 
     public DMDXScaleAnimationImage(@NonNull Context context) {
         super(context);
-        this.imageHandler = new HandlerC0666c(this);
+        this.imageHandler = new c(this);
         this.imageList = new ArrayList();
         this.interval = DanmakuFactory.DEFAULT_DANMAKU_DURATION_V;
         this.duration = 300L;
@@ -233,7 +229,7 @@ public class DMDXScaleAnimationImage extends FrameLayout {
             return;
         }
         this.imageView.setImageResource(R$drawable.uikit_default_image_bg_gradient);
-        C0504a.b().e(str).e(new C0665b()).n(new C0664a(str)).f();
+        cn.damai.common.image.a.b().e(str).e(new b()).n(new a(str)).f();
     }
 
     public void delNoUseCache(List<String> list) {
@@ -368,7 +364,7 @@ public class DMDXScaleAnimationImage extends FrameLayout {
 
     public DMDXScaleAnimationImage(@NonNull Context context, @Nullable AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.imageHandler = new HandlerC0666c(this);
+        this.imageHandler = new c(this);
         this.imageList = new ArrayList();
         this.interval = DanmakuFactory.DEFAULT_DANMAKU_DURATION_V;
         this.duration = 300L;
@@ -395,7 +391,7 @@ public class DMDXScaleAnimationImage extends FrameLayout {
 
     public DMDXScaleAnimationImage(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        this.imageHandler = new HandlerC0666c(this);
+        this.imageHandler = new c(this);
         this.imageList = new ArrayList();
         this.interval = DanmakuFactory.DEFAULT_DANMAKU_DURATION_V;
         this.duration = 300L;

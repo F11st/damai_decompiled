@@ -14,12 +14,12 @@ import android.text.TextUtils;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-import com.youku.e.C7901a;
-import com.youku.player.util.C8063c;
-import com.youku.player.util.C8064d;
-import com.youku.player.util.C8068f;
-import com.youku.player.util.C8070g;
+import com.youku.e.a;
 import com.youku.player.util.TLogUtilNative;
+import com.youku.player.util.c;
+import com.youku.player.util.d;
+import com.youku.player.util.f;
+import com.youku.player.util.g;
 import com.youku.uplayer.bridging.SystemDelegate;
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
@@ -353,17 +353,17 @@ public class AliMediaPlayer extends OriginalMediaPlayer {
 
     public AliMediaPlayer() {
         this.mEventHandler = null;
-        C8063c.a(TAG, "AliMediaPlayer is created");
+        c.a(TAG, "AliMediaPlayer is created");
         Looper mainLooper = Looper.getMainLooper();
         this.mEventHandler = mainLooper != null ? new EventHandler(this, mainLooper) : null;
         try {
             native_setup(new WeakReference(this));
         } catch (Exception unused) {
-            C8068f.a().a(TAG, "native_setup recall initPlayerNative!");
+            f.a().a(TAG, "native_setup recall initPlayerNative!");
             initPlayerNative();
             native_setup(new WeakReference(this));
         }
-        SystemDelegate.init(C7901a.a);
+        SystemDelegate.init(a.a);
         sendBroadCast();
     }
 
@@ -439,7 +439,7 @@ public class AliMediaPlayer extends OriginalMediaPlayer {
 
     public static String getHostForSingleSlice(Object obj, String str, String str2) {
         String str3 = TAG;
-        C8063c.a(str3, "get host for single slice called with:" + str);
+        c.a(str3, "get host for single slice called with:" + str);
         AliMediaPlayer aliMediaPlayer = (AliMediaPlayer) ((WeakReference) obj).get();
         if (aliMediaPlayer == null || aliMediaPlayer.mOnPlayerHostListener == null) {
             return null;
@@ -464,17 +464,17 @@ public class AliMediaPlayer extends OriginalMediaPlayer {
         String str2;
         long j = 0;
         try {
-            if (!"mounted".equals(Environment.getExternalStorageState()) || C7901a.a.getExternalCacheDir() == null) {
+            if (!"mounted".equals(Environment.getExternalStorageState()) || a.a.getExternalCacheDir() == null) {
                 str = TAG;
                 str2 = "not mounted";
             } else {
-                j = (long) (((C8070g.a() * 0.02d) / 1024.0d) / 1024.0d);
+                j = (long) (((g.a() * 0.02d) / 1024.0d) / 1024.0d);
                 str = TAG;
                 str2 = "size:" + j;
             }
-            C8063c.a(str, str2);
+            c.a(str, str2);
         } catch (Exception e) {
-            C8063c.a(TAG, "initPlayer().Exception");
+            c.a(TAG, "initPlayer().Exception");
             e.printStackTrace();
         }
         long j2 = j;
@@ -557,11 +557,11 @@ public class AliMediaPlayer extends OriginalMediaPlayer {
         int i5 = obtainMessage.what;
         if (i5 == 309) {
             String obj3 = obj2.toString();
-            C8063c.a(TAG, obj3);
+            c.a(TAG, obj3);
             TLogUtilNative.aliplayerLog(obj3);
         } else if (i5 == 1011) {
             TLogUtilNative.loge("YKPlayer.PlayFlow.Track", "MEDIA_INFO_PRE_AD_START  Native");
-            C8063c.a(TAG, "MEDIA_INFO_PRE_AD_START is received");
+            c.a(TAG, "MEDIA_INFO_PRE_AD_START is received");
             obtainMessage.what = 1011;
             obtainMessage.arg1 = i2;
             obtainMessage.arg2 = i3;
@@ -575,22 +575,22 @@ public class AliMediaPlayer extends OriginalMediaPlayer {
                 onFirstFrameListener.onFirstFrame();
             }
         } else if (i5 == 1000) {
-            C8063c.a(TAG, "MEDIA_INFO_PREPARED is received");
+            c.a(TAG, "MEDIA_INFO_PREPARED is received");
             obtainMessage.what = 1;
         } else if (i5 != 1001) {
             if (i5 == 1030) {
                 String str = TAG;
-                C8063c.a(str, "MEDIA_INFO_SET_VIDEO_SIZE is received width:" + i2 + " height:" + i3);
+                c.a(str, "MEDIA_INFO_SET_VIDEO_SIZE is received width:" + i2 + " height:" + i3);
                 i4 = 5;
             } else if (i5 == 1031) {
-                C8063c.a(TAG, "MEDIA_INFO_BUFFERING_UPDATE is received");
+                c.a(TAG, "MEDIA_INFO_BUFFERING_UPDATE is received");
                 i4 = 3;
             }
             obtainMessage.what = i4;
             obtainMessage.arg1 = i2;
             obtainMessage.arg2 = i3;
         } else {
-            C8063c.a(TAG, "MEDIA_INFO_COMPLETED is received");
+            c.a(TAG, "MEDIA_INFO_COMPLETED is received");
             obtainMessage.what = 2;
         }
         int i6 = obtainMessage.what;
@@ -599,7 +599,7 @@ public class AliMediaPlayer extends OriginalMediaPlayer {
         } else if (i6 == 1003) {
             int i7 = 100;
             try {
-                i7 = Integer.parseInt(C8064d.a().a("youku_player_config", "loading_start_delay", String.valueOf(100)));
+                i7 = Integer.parseInt(d.a().a("youku_player_config", "loading_start_delay", String.valueOf(100)));
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -617,9 +617,9 @@ public class AliMediaPlayer extends OriginalMediaPlayer {
     public static native int preloadDataSource(String str, int i);
 
     private static void preloadSourceCallback(int i, int i2, int i3, Object obj) {
-        if (C8063c.d) {
+        if (c.d) {
             String str = TAG;
-            C8063c.b(str, "preloadSourceCallback() called with: what = [" + i + "], arg1 = [" + i2 + "], arg2 = [" + i3 + "], obj = [" + obj + jn1.ARRAY_END_STR);
+            c.b(str, "preloadSourceCallback() called with: what = [" + i + "], arg1 = [" + i2 + "], arg2 = [" + i3 + "], obj = [" + obj + jn1.ARRAY_END_STR);
         }
         Message obtain = Message.obtain();
         obtain.what = i;
@@ -658,7 +658,7 @@ public class AliMediaPlayer extends OriginalMediaPlayer {
                         AliMediaPlayer.this.mSurfaceHolder.setKeepScreenOn(AliMediaPlayer.this.mScreenOnWhilePlaying && AliMediaPlayer.this.mStayAwake);
                     }
                 } catch (Exception e) {
-                    C8063c.a(AliMediaPlayer.TAG, e);
+                    c.a(AliMediaPlayer.TAG, e);
                 }
             }
         });
@@ -761,7 +761,7 @@ public class AliMediaPlayer extends OriginalMediaPlayer {
     public void onSeekStart() {
         int i = 300;
         try {
-            i = Integer.parseInt(C8064d.a().a("youku_player_config", "seek_loading_delay", String.valueOf(300)));
+            i = Integer.parseInt(d.a().a("youku_player_config", "seek_loading_delay", String.valueOf(300)));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -819,7 +819,7 @@ public class AliMediaPlayer extends OriginalMediaPlayer {
         });
         EventHandler eventHandler = this.mEventHandler;
         if (eventHandler != null && eventHandler.hasMessages(2000)) {
-            C8063c.a(TAG, "MSG MEDIA_INFO_CURRENT_POSITION_UPDATE DELAY! REMOVE MANUALLY!");
+            c.a(TAG, "MSG MEDIA_INFO_CURRENT_POSITION_UPDATE DELAY! REMOVE MANUALLY!");
             this.mEventHandler.removeMessages(2000);
         }
         TLogUtilNative.playLog("AliMediaPlayer release");
@@ -861,8 +861,8 @@ public class AliMediaPlayer extends OriginalMediaPlayer {
         String obj = toString();
         intent.putExtra("PlayerInstance", obj);
         String str = TAG;
-        C8063c.a(str, "AliMediaPlayer com.youku.phone.force.quit.pip playerInstance: " + obj);
-        LocalBroadcastManager.getInstance(C7901a.a).sendBroadcast(intent);
+        c.a(str, "AliMediaPlayer com.youku.phone.force.quit.pip playerInstance: " + obj);
+        LocalBroadcastManager.getInstance(a.a).sendBroadcast(intent);
     }
 
     @Override // com.youku.uplayer.OriginalMediaPlayer
@@ -1190,7 +1190,7 @@ public class AliMediaPlayer extends OriginalMediaPlayer {
     @Override // com.youku.uplayer.OriginalMediaPlayer
     public void setSurface(Surface surface) {
         String str = TAG;
-        C8063c.a(str, "<********> alimediaplayer.surface()---" + surface);
+        c.a(str, "<********> alimediaplayer.surface()---" + surface);
         this.mTextureSurface = surface;
         if (this.useHardwareDecode) {
             setHWVideoSurface(surface);
@@ -1280,21 +1280,21 @@ public class AliMediaPlayer extends OriginalMediaPlayer {
 
     public void testGetKey() {
         String str = TAG;
-        C8063c.a(str, "testGetKey:{\"key3\":\"1\",\"hw_audio_dec_ac3\":\"true\",\"key4\":\"asdfgk4k4k4\"}");
+        c.a(str, "testGetKey:{\"key3\":\"1\",\"hw_audio_dec_ac3\":\"true\",\"key4\":\"asdfgk4k4k4\"}");
         String configParameter = getConfigParameter("{\"key3\":\"1\",\"hw_audio_dec_ac3\":\"true\",\"key4\":\"asdfgk4k4k4\"}");
-        C8063c.a(str, "testGetKey res=" + configParameter);
-        C8063c.a(str, "testGetKey:null");
+        c.a(str, "testGetKey res=" + configParameter);
+        c.a(str, "testGetKey:null");
         String configParameter2 = getConfigParameter(null);
-        C8063c.a(str, "testGetKey res=" + configParameter2);
+        c.a(str, "testGetKey res=" + configParameter2);
     }
 
     public void testPutKey() {
         String str = TAG;
-        C8063c.a(str, "tesyPutKey:{\"hw_audio_dec_ac3\":\"enable:1\",\"hw_video_dec_h263\":\"adf\",\"key3\":\"asdfgh\"}");
+        c.a(str, "tesyPutKey:{\"hw_audio_dec_ac3\":\"enable:1\",\"hw_video_dec_h263\":\"adf\",\"key3\":\"asdfgh\"}");
         int configParameter = setConfigParameter("{\"hw_audio_dec_ac3\":\"enable:1\",\"hw_video_dec_h263\":\"adf\",\"key3\":\"asdfgh\"}");
-        C8063c.a(str, "testPutKey res=" + configParameter);
-        C8063c.a(str, "tesyPutKey:{\"hw_audio_dec_ac3\":\"enable:0\",\"hw_video_dec_h263\":\"adf\",\"key3\":\"asdfgh\"}");
+        c.a(str, "testPutKey res=" + configParameter);
+        c.a(str, "tesyPutKey:{\"hw_audio_dec_ac3\":\"enable:0\",\"hw_video_dec_h263\":\"adf\",\"key3\":\"asdfgh\"}");
         int configParameter2 = setConfigParameter("{\"hw_audio_dec_ac3\":\"enable:0\",\"hw_video_dec_h263\":\"adf\",\"key3\":\"asdfgh\"}");
-        C8063c.a(str, "testPutKey res=" + configParameter2);
+        c.a(str, "testPutKey res=" + configParameter2);
     }
 }

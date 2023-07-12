@@ -19,8 +19,8 @@ import com.youku.middlewareservice.provider.info.AppInfoProviderProxy;
 import com.youku.middlewareservice.provider.info.DeviceInfoProvider;
 import java.io.File;
 import java.io.FileFilter;
-import tb.C9796v;
 import tb.b80;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -128,7 +128,7 @@ public class DeviceInfoProviderImpl implements DeviceInfoProvider {
     public int getWindowHeight() {
         try {
             DisplayMetrics displayMetrics = new DisplayMetrics();
-            Display.getMetrics(((WindowManager) OneContext.getApplicationContext().getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+            Display.getMetrics(((WindowManager) OneContext.getApplicationContext().getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
             return com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(displayMetrics);
         } catch (Exception unused) {
             return 0;
@@ -139,7 +139,7 @@ public class DeviceInfoProviderImpl implements DeviceInfoProvider {
     public int getWindowWidth() {
         try {
             DisplayMetrics displayMetrics = new DisplayMetrics();
-            Display.getMetrics(((WindowManager) OneContext.getApplicationContext().getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
+            Display.getMetrics(((WindowManager) OneContext.getApplicationContext().getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay(), displayMetrics);
             return com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getwidthPixels(displayMetrics);
         } catch (Exception unused) {
             return 0;

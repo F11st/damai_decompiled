@@ -9,18 +9,17 @@ import com.android.alibaba.ip.runtime.IpChange;
 /* loaded from: classes4.dex */
 public class RankInfo implements Parcelable {
     private static transient /* synthetic */ IpChange $ipChange;
-    public static final Parcelable.Creator<RankInfo> CREATOR = new C0793a();
+    public static final Parcelable.Creator<RankInfo> CREATOR = new a();
     private String id;
     private String name;
     private String order;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.rank.RankInfo$a */
     /* loaded from: classes4.dex */
-    public class C0793a implements Parcelable.Creator<RankInfo> {
+    public class a implements Parcelable.Creator<RankInfo> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0793a() {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

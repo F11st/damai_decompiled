@@ -49,12 +49,11 @@ public class ProxyVideoView extends FrameLayout implements ApiPlayer, Runnable {
     private VideoListener mVideoListener;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.player.video.ProxyVideoView$a */
     /* loaded from: classes6.dex */
-    public class C1503a implements NetStateReceiver.OnNetStateChangeListener {
+    public class a implements NetStateReceiver.OnNetStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1503a() {
+        a() {
         }
 
         @Override // cn.damai.player.video.NetStateReceiver.OnNetStateChangeListener
@@ -354,7 +353,7 @@ public class ProxyVideoView extends FrameLayout implements ApiPlayer, Runnable {
         this.mHandler = new Handler(Looper.getMainLooper());
         this.isToasted = false;
         this.NET_TIP = "当前处于非WIFI环境";
-        this.mListener = new C1503a();
+        this.mListener = new a();
         TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R$styleable.ProxyVideoView);
         int i2 = R$styleable.ProxyVideoView_fade_full_class_name;
         if (obtainStyledAttributes.hasValue(i2)) {

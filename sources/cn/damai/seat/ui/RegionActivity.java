@@ -33,12 +33,11 @@ public class RegionActivity extends BaseSeatActivity<RegionPresenter, RegionMode
     private FrameLayout mRegionViewLayout;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.RegionActivity$a */
     /* loaded from: classes7.dex */
-    public class C1701a implements RegionView.OnRegionClickListener {
+    public class a implements RegionView.OnRegionClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1701a() {
+        a() {
         }
 
         @Override // cn.damai.seat.view.RegionView.OnRegionClickListener
@@ -197,7 +196,7 @@ public class RegionActivity extends BaseSeatActivity<RegionPresenter, RegionMode
             this.mRegionViewLayout.removeAllViews();
             RegionView regionView = new RegionView(this);
             this.mRegionView = regionView;
-            regionView.setListener(new C1701a());
+            regionView.setListener(new a());
             this.mRegionViewLayout.addView(this.mRegionView, new ViewGroup.LayoutParams(-1, -1));
             this.mRegionView.setBitmap(bitmap);
         }

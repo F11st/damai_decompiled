@@ -34,7 +34,7 @@ import com.youku.arch.v3.data.Constants;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.concurrent.atomic.AtomicInteger;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -161,7 +161,7 @@ public class WXViewUtils {
         WindowManager windowManager;
         if (context != null) {
             Resources resources = context.getResources();
-            if (Build.VERSION.SDK_INT >= 17 && (windowManager = (WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)) != null && windowManager.getDefaultDisplay() != null) {
+            if (Build.VERSION.SDK_INT >= 17 && (windowManager = (WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)) != null && windowManager.getDefaultDisplay() != null) {
                 Point point = new Point();
                 Display.getRealSize(windowManager.getDefaultDisplay(), point);
                 c = com.alibaba.wireless.security.aopsdk.replace.android.graphics.Point.gety(point);

@@ -248,11 +248,11 @@ public class di1 extends fj {
         if (b81Var == null) {
             c(16);
         }
-        MemberScope.C8499b c8499b = MemberScope.C8499b.INSTANCE;
-        if (c8499b == null) {
+        MemberScope.b bVar = MemberScope.b.INSTANCE;
+        if (bVar == null) {
             c(17);
         }
-        return c8499b;
+        return bVar;
     }
 
     public void e() {
@@ -346,11 +346,11 @@ public class di1 extends fj {
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor
     @NotNull
     public MemberScope getStaticScope() {
-        MemberScope.C8499b c8499b = MemberScope.C8499b.INSTANCE;
-        if (c8499b == null) {
+        MemberScope.b bVar = MemberScope.b.INSTANCE;
+        if (bVar == null) {
             c(18);
         }
-        return c8499b;
+        return bVar;
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor

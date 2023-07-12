@@ -24,8 +24,8 @@ final class DebugProbesImpl$startWeakRefCleanerThread$1 extends Lambda implement
     /* renamed from: invoke  reason: avoid collision after fix types in other method */
     public final void invoke2() {
         ConcurrentWeakMap concurrentWeakMap;
-        C8655b c8655b = C8655b.INSTANCE;
-        concurrentWeakMap = C8655b.c;
+        b bVar = b.INSTANCE;
+        concurrentWeakMap = b.c;
         concurrentWeakMap.j();
     }
 }

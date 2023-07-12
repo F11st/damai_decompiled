@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassOrPackageFragmentDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
@@ -50,7 +50,7 @@ public final class ContextKt {
         Lazy a;
         b41.i(r81Var, "<this>");
         b41.i(classOrPackageFragmentDescriptor, "containingDeclaration");
-        a = C8177b.a(LazyThreadSafetyMode.NONE, new Function0<t51>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.ContextKt$childForClassOrPackage$1
+        a = b.a(LazyThreadSafetyMode.NONE, new Function0<t51>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.ContextKt$childForClassOrPackage$1
             /* JADX INFO: Access modifiers changed from: package-private */
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             {
@@ -138,7 +138,7 @@ public final class ContextKt {
         }
         n51 a2 = r81Var.a();
         TypeParameterResolver f = r81Var.f();
-        a = C8177b.a(LazyThreadSafetyMode.NONE, new Function0<t51>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.ContextKt$copyWithNewDefaultTypeQualifiers$1
+        a = b.a(LazyThreadSafetyMode.NONE, new Function0<t51>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.lazy.ContextKt$copyWithNewDefaultTypeQualifiers$1
             /* JADX INFO: Access modifiers changed from: package-private */
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             {
@@ -158,7 +158,7 @@ public final class ContextKt {
         AnnotationTypeQualifierResolver a = r81Var.a().a();
         c51 l = a.l(annotationDescriptor);
         if (l == null) {
-            AnnotationTypeQualifierResolver.C8326a n = a.n(annotationDescriptor);
+            AnnotationTypeQualifierResolver.a n = a.n(annotationDescriptor);
             if (n == null) {
                 return null;
             }

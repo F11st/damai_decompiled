@@ -4,11 +4,9 @@ import android.content.ComponentName;
 import android.text.TextUtils;
 import com.taobao.aranger.ARanger;
 import com.taobao.aranger.core.entity.Call;
-import com.taobao.aranger.core.handler.reply.AbstractC6690a;
 import com.taobao.aranger.core.ipc.channel.DefaultRemoteChannel;
 import com.taobao.aranger.exception.IPCException;
 import com.taobao.aranger.intf.IServiceProxy;
-import com.taobao.aranger.utils.C6702d;
 import com.taobao.aranger.utils.IPCUtils;
 import com.taobao.aranger.utils.ProxyRecoverProvider;
 import com.taobao.aranger.utils.TypeUtils;
@@ -16,7 +14,7 @@ import java.lang.reflect.Method;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class kf1 extends AbstractC6690a {
+public class kf1 extends com.taobao.aranger.core.handler.reply.a {
     private static final String f = "kf1";
     private String b;
     private Object c;
@@ -35,11 +33,11 @@ public class kf1 extends AbstractC6690a {
         if (c != null && (c instanceof IServiceProxy)) {
             this.d = TypeUtils.getMethodId(this.a.getMethodWrapper().getName(), this.a.getParameterWrappers());
         } else {
-            this.e = C6702d.e().f(C6702d.e().a(this.a.getServiceWrapper()), this.a.getMethodWrapper(), this.a.getParameterWrappers());
+            this.e = com.taobao.aranger.utils.d.e().f(com.taobao.aranger.utils.d.e().a(this.a.getServiceWrapper()), this.a.getMethodWrapper(), this.a.getParameterWrappers());
         }
     }
 
-    @Override // com.taobao.aranger.core.handler.reply.AbstractC6690a
+    @Override // com.taobao.aranger.core.handler.reply.a
     public Object a(Object[] objArr) throws IPCException {
         if (this.c == null) {
             try {

@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.alipay.sdk.m.s.C4293a;
+import com.alipay.sdk.m.s.a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.weex.bridge.JSCallback;
@@ -866,7 +866,7 @@ public class AnchorInfoWidget extends BaseWidget implements ILoginChangedListene
             if (MC_MSG_TYPE_ATTENTION.equals(str)) {
                 if (this.dataTypeInt == 1) {
                     try {
-                        j = JSON.parseObject(message.data).getJSONArray("args").getJSONObject(0).getJSONObject("body").getLongValue(C4293a.u);
+                        j = JSON.parseObject(message.data).getJSONArray("args").getJSONObject(0).getJSONObject("body").getLongValue(a.u);
                     } catch (Throwable th) {
                         th.printStackTrace();
                     }

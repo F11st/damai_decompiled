@@ -77,19 +77,18 @@ public class ScrollThinLinearView extends ScrollLinearView {
             }
         }
 
-        /* synthetic */ PageListener(ScrollThinLinearView scrollThinLinearView, View$OnClickListenerC2555a view$OnClickListenerC2555a) {
+        /* synthetic */ PageListener(ScrollThinLinearView scrollThinLinearView, a aVar) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.snake.ScrollThinLinearView$a */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC2555a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View.OnClickListener a;
 
-        View$OnClickListenerC2555a(ScrollThinLinearView scrollThinLinearView, View.OnClickListener onClickListener) {
+        a(ScrollThinLinearView scrollThinLinearView, View.OnClickListener onClickListener) {
             this.a = onClickListener;
         }
 
@@ -105,15 +104,14 @@ public class ScrollThinLinearView extends ScrollLinearView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.snake.ScrollThinLinearView$b */
     /* loaded from: classes8.dex */
-    public class C2556b implements ValueAnimator.AnimatorUpdateListener {
+    public class b implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ float a;
         final /* synthetic */ float b;
         final /* synthetic */ float c;
 
-        C2556b(float f, float f2, float f3) {
+        b(float f, float f2, float f3) {
             this.a = f;
             this.b = f2;
             this.c = f3;
@@ -350,7 +348,7 @@ public class ScrollThinLinearView extends ScrollLinearView {
                         textView.setPadding(dip2px(this.mSpace / 2), 0, dip2px(this.mSpace / 2), 0);
                     }
                     textView.setLayoutParams(layoutParams);
-                    textView.setOnClickListener(new View$OnClickListenerC2555a(this, onClickListener));
+                    textView.setOnClickListener(new a(this, onClickListener));
                     addView(textView);
                 }
             }
@@ -390,7 +388,7 @@ public class ScrollThinLinearView extends ScrollLinearView {
         } else {
             ValueAnimator ofInt = ValueAnimator.ofInt(0, 100);
             ofInt.setDuration(200L);
-            ofInt.addUpdateListener(new C2556b(f, f3, f4));
+            ofInt.addUpdateListener(new b(f, f3, f4));
             ofInt.start();
         }
     }

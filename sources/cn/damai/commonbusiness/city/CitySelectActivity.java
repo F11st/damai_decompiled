@@ -12,7 +12,6 @@ import cn.damai.common.DamaiConstants;
 import cn.damai.common.app.ShareperfenceConstants;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
@@ -101,15 +100,14 @@ public class CitySelectActivity extends DamaiBaseActivity {
             }
         }
     };
-    private OnCityListItemClickListener mOnCityListItemClickListener = new C0599a();
+    private OnCityListItemClickListener mOnCityListItemClickListener = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.city.CitySelectActivity$a */
     /* loaded from: classes4.dex */
-    public class C0599a implements OnCityListItemClickListener {
+    public class a implements OnCityListItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0599a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.city.listener.OnCityListItemClickListener
@@ -119,7 +117,7 @@ public class CitySelectActivity extends DamaiBaseActivity {
                 ipChange.ipc$dispatch("1024050003", new Object[]{this, str, str2});
                 return;
             }
-            C0529c.e().x(pl.j().f(str2));
+            cn.damai.common.user.c.e().x(pl.j().f(str2));
             if (CitySelectActivity.this.trySetCityResultAndFinish(str, str2)) {
                 return;
             }
@@ -168,7 +166,7 @@ public class CitySelectActivity extends DamaiBaseActivity {
                     CitySelectActivity.this.finish();
                     return;
                 }
-                C0529c.e().x(pl.j().f(str));
+                cn.damai.common.user.c.e().x(pl.j().f(str));
                 DMNav.from(CitySelectActivity.this.mContext).toUri(str3);
                 CitySelectActivity.this.finish();
             }
@@ -181,7 +179,7 @@ public class CitySelectActivity extends DamaiBaseActivity {
                 ipChange.ipc$dispatch("95853369", new Object[]{this, str, str2});
                 return;
             }
-            C0529c.e().x(pl.j().f(str2));
+            cn.damai.common.user.c.e().x(pl.j().f(str2));
             if (CitySelectActivity.this.trySetCityResultAndFinish(str, str2)) {
                 return;
             }
@@ -224,12 +222,11 @@ public class CitySelectActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.city.CitySelectActivity$b */
     /* loaded from: classes4.dex */
-    public class C0600b implements LetterSortBar.OnTouchingLetterChangedListener {
+    public class b implements LetterSortBar.OnTouchingLetterChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0600b() {
+        b() {
         }
 
         @Override // cn.damai.commonbusiness.city.view.LetterSortBar.OnTouchingLetterChangedListener
@@ -278,20 +275,18 @@ public class CitySelectActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.city.CitySelectActivity$c */
     /* loaded from: classes4.dex */
-    public class C0601c implements IPermissionListener {
+    public class c implements IPermissionListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ boolean a;
         final /* synthetic */ cj b;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.commonbusiness.city.CitySelectActivity$c$a */
         /* loaded from: classes14.dex */
-        public class DialogInterface$OnClickListenerC0602a implements DialogInterface.OnClickListener {
+        public class a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC0602a() {
+            a() {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -307,12 +302,11 @@ public class CitySelectActivity extends DamaiBaseActivity {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.commonbusiness.city.CitySelectActivity$c$b */
         /* loaded from: classes14.dex */
-        public class DialogInterface$OnClickListenerC0603b implements DialogInterface.OnClickListener {
+        public class b implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC0603b(C0601c c0601c) {
+            b(c cVar) {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -326,7 +320,7 @@ public class CitySelectActivity extends DamaiBaseActivity {
             }
         }
 
-        C0601c(boolean z, cj cjVar) {
+        c(boolean z, cj cjVar) {
             this.a = z;
             this.b = cjVar;
         }
@@ -358,19 +352,18 @@ public class CitySelectActivity extends DamaiBaseActivity {
             if (AndroidInstantRuntime.support(ipChange, "-2111142993")) {
                 ipChange.ipc$dispatch("-2111142993", new Object[]{this, strArr});
             } else {
-                gr1.a(CitySelectActivity.this, "获取你所在城市的演出赛事信息，帮助你找到附近的演出赛事", Arrays.asList(strArr), false, new DialogInterface$OnClickListenerC0602a(), new DialogInterface$OnClickListenerC0603b(this));
+                gr1.a(CitySelectActivity.this, "获取你所在城市的演出赛事信息，帮助你找到附近的演出赛事", Arrays.asList(strArr), false, new a(), new b(this));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.city.CitySelectActivity$d */
     /* loaded from: classes4.dex */
-    public class C0604d implements CityLocationUtil.LocaltionListener {
+    public class d implements CityLocationUtil.LocaltionListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ cj a;
 
-        C0604d(cj cjVar) {
+        d(cj cjVar) {
             this.a = cjVar;
         }
 
@@ -508,7 +501,7 @@ public class CitySelectActivity extends DamaiBaseActivity {
         }
         LetterSortBar letterSortBar = (LetterSortBar) findViewById(R$id.city_select_sort_letter);
         this.mLetterSortBar = letterSortBar;
-        letterSortBar.setOnTouchingLetterChangedListener(new C0600b());
+        letterSortBar.setOnTouchingLetterChangedListener(new b());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -518,7 +511,7 @@ public class CitySelectActivity extends DamaiBaseActivity {
             ipChange.ipc$dispatch("1227674141", new Object[]{this, cjVar});
             return;
         }
-        CityLocationUtil cityLocationUtil = new CityLocationUtil(this.mContext, new C0604d(cjVar));
+        CityLocationUtil cityLocationUtil = new CityLocationUtil(this.mContext, new d(cjVar));
         this.mCityLocationUtil = cityLocationUtil;
         cityLocationUtil.p(true);
         this.mCityLocationUtil.n();
@@ -639,7 +632,7 @@ public class CitySelectActivity extends DamaiBaseActivity {
             return;
         }
         String[] strArr = mr1.LOCATION;
-        new Permission(this, new PermissionModel(strArr, "位置权限使用说明", Integer.valueOf(R$drawable.permission_location_icon), "用于为你提供所在城市演出和场馆信息及帮助你找到附近的演出")).a(new C0601c(ir1.i(strArr), cjVar)).b();
+        new Permission(this, new PermissionModel(strArr, "位置权限使用说明", Integer.valueOf(R$drawable.permission_location_icon), "用于为你提供所在城市演出和场馆信息及帮助你找到附近的演出")).a(new c(ir1.i(strArr), cjVar)).b();
     }
 
     /* JADX INFO: Access modifiers changed from: private */

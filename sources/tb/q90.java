@@ -21,11 +21,11 @@ public class q90 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
 
     @Override // cn.damai.tetris.v2.convertor.IConverter
     /* renamed from: a */
-    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, C9039db c9039db) {
+    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, db dbVar) {
         JSONArray jSONArray;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1006184708")) {
-            return (List) ipChange.ipc$dispatch("-1006184708", new Object[]{this, baseResponse, baseSection, globalConfig, c9039db});
+            return (List) ipChange.ipc$dispatch("-1006184708", new Object[]{this, baseResponse, baseSection, globalConfig, dbVar});
         }
         ArrayList arrayList = new ArrayList();
         NodeData item = baseSection.getItem();
@@ -38,21 +38,21 @@ public class q90 implements IConverter<BaseResponse, BaseSection, GlobalConfig, 
                     if (TextUtils.equals("1", string)) {
                         baseSection.setComponentId(xl2.NOTE_C_ID);
                         baseSection.setItem(jSONObject);
-                        List<Node> l = c9039db.l(baseSection, globalConfig);
+                        List<Node> l = dbVar.l(baseSection, globalConfig);
                         if (l != null) {
                             arrayList.addAll(l);
                         }
                     } else if (TextUtils.equals("2", string)) {
                         baseSection.setComponentId(xl2.THEME_C_ID);
                         baseSection.setItem(jSONObject);
-                        List<Node> l2 = c9039db.l(baseSection, globalConfig);
+                        List<Node> l2 = dbVar.l(baseSection, globalConfig);
                         if (l2 != null) {
                             arrayList.addAll(l2);
                         }
                     } else if (TextUtils.equals("5", string)) {
                         baseSection.setComponentId(xl2.VOTE_C_ID);
                         baseSection.setItem(jSONObject);
-                        List<Node> l3 = c9039db.l(baseSection, globalConfig);
+                        List<Node> l3 = dbVar.l(baseSection, globalConfig);
                         if (l3 != null) {
                             arrayList.addAll(l3);
                         }

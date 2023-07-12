@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
@@ -70,7 +70,7 @@ public class ArtistListViewHolder extends BaseViewHolderV2<ArtistItemBean> imple
                 this.c.setVisibility(4);
                 this.g.setTextColor(this.j.getResources().getColor(R$color.color_333333));
             }
-            DMImageCreator f = C0504a.b().h(mu0.a()).f(artistItemBean.artistVo.headPic, m62.a(mu0.a(), 40.0f), m62.a(mu0.a(), 40.0f));
+            DMImageCreator f = a.b().h(mu0.a()).f(artistItemBean.artistVo.headPic, m62.a(mu0.a(), 40.0f), m62.a(mu0.a(), 40.0f));
             int i3 = R$drawable.artist_grey_bg;
             f.i(i3).c(i3).k(new yq()).g(this.d);
         }

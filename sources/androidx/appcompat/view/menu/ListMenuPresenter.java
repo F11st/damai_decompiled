@@ -138,7 +138,7 @@ public class ListMenuPresenter implements AdapterView.OnItemClickListener, MenuP
     @Override // androidx.appcompat.view.menu.MenuPresenter
     public MenuView getMenuView(ViewGroup viewGroup) {
         if (this.mMenuView == null) {
-            this.mMenuView = (ExpandedMenuView) this.mInflater.inflate(R.C0013layout.abc_expanded_menu_layout, viewGroup, false);
+            this.mMenuView = (ExpandedMenuView) this.mInflater.inflate(R.layout.abc_expanded_menu_layout, viewGroup, false);
             if (this.mAdapter == null) {
                 this.mAdapter = new MenuAdapter();
             }

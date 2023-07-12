@@ -3,7 +3,6 @@ package com.amap.api.mapcore.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
-import com.alipay.sdk.m.u.C4300c;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -18,7 +17,7 @@ public final class kb {
     }
 
     public static String a(Context context) {
-        return context == null ? C4300c.b : a(context, "pref", "smac", C4300c.b);
+        return context == null ? com.alipay.sdk.m.u.c.b : a(context, "pref", "smac", com.alipay.sdk.m.u.c.b);
     }
 
     private static String a(Context context, String str, String str2, String str3) {

@@ -3,7 +3,6 @@ package tb;
 import android.taobao.windvane.jsbridge.utils.WVUtils;
 import android.text.TextUtils;
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
-import com.taobao.phenix.request.C6865a;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -45,9 +44,9 @@ public class xt2 extends hh0 {
         sb.append(str.replace("%", "%%"));
     }
 
-    public static void k(String str, C6865a c6865a, String str2, Object... objArr) {
+    public static void k(String str, com.taobao.phenix.request.a aVar, String str2, Object... objArr) {
         if (hh0.g(3)) {
-            hh0.a("RxPhenix", u(str2, c6865a, str, true), objArr);
+            hh0.a("RxPhenix", u(str2, aVar, str, true), objArr);
         }
     }
 
@@ -57,29 +56,29 @@ public class xt2 extends hh0 {
         }
     }
 
-    public static void m(String str, C6865a c6865a, String str2, Object... objArr) {
+    public static void m(String str, com.taobao.phenix.request.a aVar, String str2, Object... objArr) {
         if (hh0.g(6)) {
-            hh0.c("RxPhenix", u(str2, c6865a, str, false), objArr);
+            hh0.c("RxPhenix", u(str2, aVar, str, false), objArr);
         }
     }
 
-    public static void n(String str, String str2, C6865a c6865a) {
-        o(str, str2, c6865a, false);
+    public static void n(String str, String str2, com.taobao.phenix.request.a aVar) {
+        o(str, str2, aVar, false);
     }
 
-    public static void o(String str, String str2, C6865a c6865a, boolean z) {
+    public static void o(String str, String str2, com.taobao.phenix.request.a aVar, boolean z) {
         if (hh0.g(6)) {
             StringBuilder sb = new StringBuilder();
             sb.append("[traceId:");
-            sb.append(c6865a.U().q);
+            sb.append(aVar.U().q);
             sb.append("] | ");
             sb.append("[requestId:");
-            sb.append(c6865a.d());
+            sb.append(aVar.d());
             sb.append("] |");
             sb.append(str2);
             if (z) {
                 sb.append("| ");
-                sb.append(c6865a.N());
+                sb.append(aVar.N());
             }
             hh0.b(6, str, sb.toString());
         }
@@ -91,9 +90,9 @@ public class xt2 extends hh0 {
         }
     }
 
-    public static void q(String str, C6865a c6865a, String str2, Object... objArr) {
+    public static void q(String str, com.taobao.phenix.request.a aVar, String str2, Object... objArr) {
         if (hh0.g(4)) {
-            hh0.f("RxPhenix", u(str2, c6865a, str, true), objArr);
+            hh0.f("RxPhenix", u(str2, aVar, str, true), objArr);
         }
     }
 
@@ -147,9 +146,9 @@ public class xt2 extends hh0 {
         return sb.substring(0);
     }
 
-    private static String u(String str, C6865a c6865a, String str2, boolean z) {
-        if (c6865a != null) {
-            return t(str, c6865a.d(), c6865a.M(), c6865a.N(), str2, z);
+    private static String u(String str, com.taobao.phenix.request.a aVar, String str2, boolean z) {
+        if (aVar != null) {
+            return t(str, aVar.d(), aVar.M(), aVar.N(), str2, z);
         }
         return t(str, -1, null, null, str2, false);
     }
@@ -162,9 +161,9 @@ public class xt2 extends hh0 {
         return t(str2, -1, null, str3, str, z);
     }
 
-    public static void x(String str, C6865a c6865a, String str2, Object... objArr) {
+    public static void x(String str, com.taobao.phenix.request.a aVar, String str2, Object... objArr) {
         if (hh0.g(5)) {
-            hh0.i("RxPhenix", u(str2, c6865a, str, false), objArr);
+            hh0.i("RxPhenix", u(str2, aVar, str, false), objArr);
         }
     }
 

@@ -35,7 +35,7 @@ public class OtherPersonLotteryGiftView extends RelativeLayout {
             ipChange.ipc$dispatch("-1894639404", new Object[]{this});
             return;
         }
-        LayoutInflater.from(this.mContext).inflate(R.C7942layout.dago_pgc_gift_lottery_other_person_layout, this);
+        LayoutInflater.from(this.mContext).inflate(R.layout.dago_pgc_gift_lottery_other_person_layout, this);
         this.mLotteryBg = (ImageView) findViewById(R.id.slash_background);
         this.mLotteryStar = (ImageView) findViewById(R.id.slash_star);
         this.mLotteryTimesTitleView = (ImageView) findViewById(R.id.lottery_title);
@@ -49,12 +49,12 @@ public class OtherPersonLotteryGiftView extends RelativeLayout {
             ipChange.ipc$dispatch("624816558", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2)});
             return;
         }
-        this.mLotteryBg.setImageResource(R.C7941drawable.fivehundred_anim);
-        this.mLotteryStar.setImageResource(R.C7941drawable.fivehundred_star_anim);
+        this.mLotteryBg.setImageResource(R.drawable.fivehundred_anim);
+        this.mLotteryStar.setImageResource(R.drawable.fivehundred_star_anim);
         this.mStarAnimDrawable = (AnimationDrawable) this.mLotteryStar.getDrawable();
         this.mBgAnimDrawable = (AnimationDrawable) this.mLotteryBg.getDrawable();
-        this.mLotteryTimesTitleView.setImageResource(R.C7941drawable.five_hundred_title);
-        this.mLotteryTimesView.setImageResource(R.C7941drawable.five_hundred_count);
+        this.mLotteryTimesTitleView.setImageResource(R.drawable.five_hundred_title);
+        this.mLotteryTimesView.setImageResource(R.drawable.five_hundred_count);
         if (i2 != 0) {
             this.mLotteryCountView.setVisibility(0);
             LotteryCountSmallView lotteryCountSmallView = this.mLotteryCountView;

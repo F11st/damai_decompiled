@@ -1,7 +1,6 @@
 package com.airbnb.lottie.model.layer;
 
 import androidx.annotation.Nullable;
-import com.airbnb.lottie.C2821a;
 import com.airbnb.lottie.model.content.ContentModel;
 import com.airbnb.lottie.model.content.Mask;
 import java.util.List;
@@ -17,7 +16,7 @@ import tb.u71;
 /* loaded from: classes17.dex */
 public class Layer {
     private final List<ContentModel> a;
-    private final C2821a b;
+    private final com.airbnb.lottie.a b;
     private final String c;
     private final long d;
     private final LayerType e;
@@ -66,9 +65,9 @@ public class Layer {
         UNKNOWN
     }
 
-    public Layer(List<ContentModel> list, C2821a c2821a, String str, long j, LayerType layerType, long j2, @Nullable String str2, List<Mask> list2, u5 u5Var, int i, int i2, int i3, float f, float f2, int i4, int i5, @Nullable s5 s5Var, @Nullable t5 t5Var, List<u71<Float>> list3, MatteType matteType, @Nullable k5 k5Var, boolean z) {
+    public Layer(List<ContentModel> list, com.airbnb.lottie.a aVar, String str, long j, LayerType layerType, long j2, @Nullable String str2, List<Mask> list2, u5 u5Var, int i, int i2, int i3, float f, float f2, int i4, int i5, @Nullable s5 s5Var, @Nullable t5 t5Var, List<u71<Float>> list3, MatteType matteType, @Nullable k5 k5Var, boolean z) {
         this.a = list;
-        this.b = c2821a;
+        this.b = aVar;
         this.c = str;
         this.d = j;
         this.e = layerType;
@@ -92,7 +91,7 @@ public class Layer {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public C2821a a() {
+    public com.airbnb.lottie.a a() {
         return this.b;
     }
 

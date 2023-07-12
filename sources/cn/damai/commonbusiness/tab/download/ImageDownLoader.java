@@ -23,7 +23,7 @@ public class ImageDownLoader {
     private static transient /* synthetic */ IpChange $ipChange;
     private static final String e = dw2.f(ImageDownLoader.class);
     private File d;
-    private LruCache<String, Bitmap> b = new C0940a(this, ((int) Runtime.getRuntime().maxMemory()) / 8);
+    private LruCache<String, Bitmap> b = new a(this, ((int) Runtime.getRuntime().maxMemory()) / 8);
     private Hashtable<String, Integer> a = new Hashtable<>();
     private ExecutorService c = Executors.newFixedThreadPool(10);
 
@@ -34,12 +34,11 @@ public class ImageDownLoader {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.tab.download.ImageDownLoader$a */
     /* loaded from: classes.dex */
-    public class C0940a extends LruCache<String, Bitmap> {
+    public class a extends LruCache<String, Bitmap> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0940a(ImageDownLoader imageDownLoader, int i) {
+        a(ImageDownLoader imageDownLoader, int i) {
             super(i);
         }
 
@@ -53,13 +52,12 @@ public class ImageDownLoader {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.tab.download.ImageDownLoader$b */
     /* loaded from: classes.dex */
-    public static class HandlerC0941b extends Handler {
+    public static class b extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
         private AsyncImageLoaderListener a;
 
-        public HandlerC0941b(AsyncImageLoaderListener asyncImageLoaderListener) {
+        public b(AsyncImageLoaderListener asyncImageLoaderListener) {
             this.a = asyncImageLoaderListener;
         }
 
@@ -134,8 +132,8 @@ public class ImageDownLoader {
         if (!dw2.e(this.d, replaceAll) || dw2.c(new File(this.d, replaceAll)) <= 0) {
             return null;
         }
-        Application a = mu0.a();
-        Bitmap c = Utils.c(a, this.d.getPath() + File.separator + replaceAll);
+        Application a2 = mu0.a();
+        Bitmap c = Utils.c(a2, this.d.getPath() + File.separator + replaceAll);
         f(str, c);
         return c;
     }
@@ -148,7 +146,7 @@ public class ImageDownLoader {
         }
         String str2 = e;
         Log.i(str2, "download: " + str);
-        final HandlerC0941b handlerC0941b = new HandlerC0941b(asyncImageLoaderListener);
+        final b bVar = new b(asyncImageLoaderListener);
         Runnable runnable = new Runnable() { // from class: cn.damai.commonbusiness.tab.download.ImageDownLoader.2
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -165,9 +163,9 @@ public class ImageDownLoader {
                     Log.d(str3, "download failure: " + str);
                     return;
                 }
-                Message obtainMessage = handlerC0941b.obtainMessage();
+                Message obtainMessage = bVar.obtainMessage();
                 obtainMessage.obj = g;
-                handlerC0941b.sendMessage(obtainMessage);
+                bVar.sendMessage(obtainMessage);
                 ImageDownLoader.this.f(str, g);
                 long c = dw2.c(ImageDownLoader.this.d);
                 if (c > 10485760) {

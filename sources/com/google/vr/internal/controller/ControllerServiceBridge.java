@@ -32,8 +32,8 @@ public class ControllerServiceBridge implements ServiceConnection {
     private final Context a;
     private final Handler b;
     private IControllerService c;
-    private C5436a d;
-    private final SparseArray<C5436a> e;
+    private a d;
+    private final SparseArray<a> e;
     private boolean f;
     private final Runnable g;
     private final Runnable h;
@@ -64,10 +64,10 @@ public class ControllerServiceBridge implements ServiceConnection {
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
     static class ControllerListener extends IControllerListener.Stub {
-        private final WeakReference<C5436a> listener;
+        private final WeakReference<a> listener;
 
-        public ControllerListener(C5436a c5436a) {
-            this.listener = new WeakReference<>(c5436a);
+        public ControllerListener(a aVar) {
+            this.listener = new WeakReference<>(aVar);
         }
 
         @Override // com.google.vr.vrcore.controller.api.IControllerListener
@@ -77,62 +77,61 @@ public class ControllerServiceBridge implements ServiceConnection {
 
         @Override // com.google.vr.vrcore.controller.api.IControllerListener
         public ControllerListenerOptions getOptions() throws RemoteException {
-            C5436a c5436a = this.listener.get();
-            if (c5436a == null) {
+            a aVar = this.listener.get();
+            if (aVar == null) {
                 return null;
             }
-            return c5436a.b;
+            return aVar.b;
         }
 
         @Override // com.google.vr.vrcore.controller.api.IControllerListener
         public void onControllerEventPacket(ControllerEventPacket controllerEventPacket) throws RemoteException {
-            C5436a c5436a = this.listener.get();
-            if (c5436a == null) {
+            a aVar = this.listener.get();
+            if (aVar == null) {
                 return;
             }
-            c5436a.a.onControllerEventPacket(controllerEventPacket);
+            aVar.a.onControllerEventPacket(controllerEventPacket);
             controllerEventPacket.recycle();
         }
 
         @Override // com.google.vr.vrcore.controller.api.IControllerListener
         public void onControllerEventPacket2(ControllerEventPacket2 controllerEventPacket2) throws RemoteException {
-            C5436a c5436a = this.listener.get();
-            if (c5436a == null) {
+            a aVar = this.listener.get();
+            if (aVar == null) {
                 return;
             }
             ControllerServiceBridge.e(controllerEventPacket2);
-            c5436a.a.onControllerEventPacket2(controllerEventPacket2);
+            aVar.a.onControllerEventPacket2(controllerEventPacket2);
             controllerEventPacket2.recycle();
         }
 
         @Override // com.google.vr.vrcore.controller.api.IControllerListener
         public void onControllerRecentered(ControllerOrientationEvent controllerOrientationEvent) {
-            C5436a c5436a = this.listener.get();
-            if (c5436a == null) {
+            a aVar = this.listener.get();
+            if (aVar == null) {
                 return;
             }
-            c5436a.a.onControllerRecentered(controllerOrientationEvent);
+            aVar.a.onControllerRecentered(controllerOrientationEvent);
         }
 
         @Override // com.google.vr.vrcore.controller.api.IControllerListener
         public void onControllerStateChanged(int i, int i2) throws RemoteException {
-            C5436a c5436a = this.listener.get();
-            if (c5436a == null) {
+            a aVar = this.listener.get();
+            if (aVar == null) {
                 return;
             }
-            c5436a.a.onControllerStateChanged(i, i2);
+            aVar.a.onControllerStateChanged(i, i2);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.internal.controller.ControllerServiceBridge$a */
     /* loaded from: classes10.dex */
-    public static class C5436a {
+    public static class a {
         public final Callbacks a;
         public final ControllerListenerOptions b;
 
-        public C5436a(Callbacks callbacks, ControllerListenerOptions controllerListenerOptions) {
+        public a(Callbacks callbacks, ControllerListenerOptions controllerListenerOptions) {
             this.a = callbacks;
             this.b = controllerListenerOptions;
         }
@@ -140,7 +139,7 @@ public class ControllerServiceBridge implements ServiceConnection {
 
     @UsedByNative
     public ControllerServiceBridge(Context context, Callbacks callbacks) {
-        SparseArray<C5436a> sparseArray = new SparseArray<>();
+        SparseArray<a> sparseArray = new SparseArray<>();
         this.e = sparseArray;
         this.g = new Runnable() { // from class: com.google.vr.internal.controller.ControllerServiceBridge.1
             @Override // java.lang.Runnable
@@ -155,9 +154,9 @@ public class ControllerServiceBridge implements ServiceConnection {
             }
         };
         this.a = context.getApplicationContext();
-        C5436a c5436a = new C5436a(callbacks, new ControllerListenerOptions());
-        this.d = c5436a;
-        sparseArray.put(0, c5436a);
+        a aVar = new a(callbacks, new ControllerListenerOptions());
+        this.d = aVar;
+        sparseArray.put(0, aVar);
         this.b = new Handler(Looper.getMainLooper());
     }
 

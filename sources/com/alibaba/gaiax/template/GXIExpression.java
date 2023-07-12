@@ -12,9 +12,8 @@ import org.jetbrains.annotations.Nullable;
 public interface GXIExpression {
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.template.GXIExpression$a */
     /* loaded from: classes6.dex */
-    public static final class C3398a {
+    public static final class a {
         public static /* synthetic */ Object a(GXIExpression gXIExpression, JSON json, int i, Object obj) {
             if (obj == null) {
                 if ((i & 1) != 0) {

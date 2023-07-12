@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.discover.viewholder.NoteViewHolder;
 import cn.damai.commonbusiness.discover.viewholder.OnItemClickListener;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
@@ -30,15 +30,14 @@ public class WaterFlowAdapter extends RecyclerView.Adapter {
     private int c;
     private String d;
     private String e;
-    private OnItemClickListener<NoteBean> f = new C1612a();
+    private OnItemClickListener<NoteBean> f = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.adapter.WaterFlowAdapter$a */
     /* loaded from: classes6.dex */
-    public class C1612a implements OnItemClickListener<NoteBean> {
+    public class a implements OnItemClickListener<NoteBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1612a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.discover.viewholder.OnItemClickListener
@@ -58,7 +57,7 @@ public class WaterFlowAdapter extends RecyclerView.Adapter {
                 ipChange.ipc$dispatch("-507144533", new Object[]{this, noteBean, Integer.valueOf(i)});
                 return;
             }
-            C0529c.e().x(b82.C().u(WaterFlowAdapter.this.d, "", noteBean.id, WaterFlowAdapter.this.c, i, ""));
+            c.e().x(b82.C().u(WaterFlowAdapter.this.d, "", noteBean.id, WaterFlowAdapter.this.c, i, ""));
             Bundle bundle = new Bundle();
             bundle.putString("contentId", noteBean.id);
             bundle.putFloat("picWhRatio", noteBean.localPicWhRatio);

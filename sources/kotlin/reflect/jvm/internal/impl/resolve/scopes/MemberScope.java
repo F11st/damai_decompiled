@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.resolve.scopes;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import java.util.Collection;
 import java.util.Set;
-import kotlin.collections.C8203e0;
+import kotlin.collections.e0;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.PropertyDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.SimpleFunctionDescriptor;
@@ -45,32 +45,30 @@ public interface MemberScope extends ResolutionScope {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.resolve.scopes.MemberScope$a */
     /* loaded from: classes3.dex */
-    public static final class C8498a {
+    public static final class a {
         public static void a(@NotNull MemberScope memberScope, @NotNull ni1 ni1Var, @NotNull LookupLocation lookupLocation) {
             b41.i(memberScope, "this");
             b41.i(ni1Var, "name");
             b41.i(lookupLocation, "location");
-            ResolutionScope.C8500a.b(memberScope, ni1Var, lookupLocation);
+            ResolutionScope.a.b(memberScope, ni1Var, lookupLocation);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.resolve.scopes.MemberScope$b */
     /* loaded from: classes3.dex */
-    public static final class C8499b extends le1 {
+    public static final class b extends le1 {
         @NotNull
-        public static final C8499b INSTANCE = new C8499b();
+        public static final b INSTANCE = new b();
 
-        private C8499b() {
+        private b() {
         }
 
         @Override // tb.le1, kotlin.reflect.jvm.internal.impl.resolve.scopes.MemberScope
         @NotNull
         public Set<ni1> getClassifierNames() {
             Set<ni1> d;
-            d = C8203e0.d();
+            d = e0.d();
             return d;
         }
 
@@ -78,7 +76,7 @@ public interface MemberScope extends ResolutionScope {
         @NotNull
         public Set<ni1> getFunctionNames() {
             Set<ni1> d;
-            d = C8203e0.d();
+            d = e0.d();
             return d;
         }
 
@@ -86,7 +84,7 @@ public interface MemberScope extends ResolutionScope {
         @NotNull
         public Set<ni1> getVariableNames() {
             Set<ni1> d;
-            d = C8203e0.d();
+            d = e0.d();
             return d;
         }
     }

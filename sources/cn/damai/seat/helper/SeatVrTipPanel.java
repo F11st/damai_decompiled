@@ -11,7 +11,6 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import androidx.core.graphics.drawable.RoundedBitmapDrawable;
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMRoundedCornersBitmapProcessor;
 import cn.damai.commonbusiness.seatbiz.seat.common.bean.seat.SeatNew;
@@ -47,12 +46,11 @@ public abstract class SeatVrTipPanel implements View.OnClickListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.helper.SeatVrTipPanel$a */
     /* loaded from: classes16.dex */
-    public class C1662a extends AnimatorListenerAdapter {
+    public class a extends AnimatorListenerAdapter {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1662a() {
+        a() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -82,12 +80,11 @@ public abstract class SeatVrTipPanel implements View.OnClickListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.helper.SeatVrTipPanel$b */
     /* loaded from: classes16.dex */
-    public class C1663b extends AnimatorListenerAdapter {
+    public class b extends AnimatorListenerAdapter {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1663b() {
+        b() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -107,42 +104,40 @@ public abstract class SeatVrTipPanel implements View.OnClickListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.helper.SeatVrTipPanel$c */
     /* loaded from: classes7.dex */
-    public class C1664c implements DMImageCreator.DMImageFailListener {
+    public class c implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1664c(SeatVrTipPanel seatVrTipPanel) {
+        c(SeatVrTipPanel seatVrTipPanel) {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-590111989")) {
-                ipChange.ipc$dispatch("-590111989", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-590111989", new Object[]{this, dVar});
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.helper.SeatVrTipPanel$d */
     /* loaded from: classes7.dex */
-    public class C1665d implements DMImageCreator.DMImageSuccListener {
+    public class d implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C1665d(String str) {
+        d(String str) {
             this.a = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1853610080")) {
-                ipChange.ipc$dispatch("1853610080", new Object[]{this, c0502e});
-            } else if (!this.a.equals(SeatVrTipPanel.this.g) || c0502e == null || c0502e.b == null) {
+                ipChange.ipc$dispatch("1853610080", new Object[]{this, eVar});
+            } else if (!this.a.equals(SeatVrTipPanel.this.g) || eVar == null || eVar.b == null) {
             } else {
-                SeatVrTipPanel.this.b.setImageBitmap(c0502e.b);
+                SeatVrTipPanel.this.b.setImageBitmap(eVar.b);
             }
         }
     }
@@ -166,9 +161,9 @@ public abstract class SeatVrTipPanel implements View.OnClickListener {
             ipChange.ipc$dispatch("-471098944", new Object[]{this});
             return;
         }
-        ObjectAnimator a = AnimatorHelper.a(this.c, this.d, 0, this.e, 0, 1, 0, 400, new C1663b());
-        this.i = a;
-        a.setInterpolator(new DecelerateInterpolator());
+        ObjectAnimator a2 = AnimatorHelper.a(this.c, this.d, 0, this.e, 0, 1, 0, 400, new b());
+        this.i = a2;
+        a2.setInterpolator(new DecelerateInterpolator());
     }
 
     private void i(View view) {
@@ -192,9 +187,9 @@ public abstract class SeatVrTipPanel implements View.OnClickListener {
             ipChange.ipc$dispatch("-1466283739", new Object[]{this});
             return;
         }
-        ObjectAnimator a = AnimatorHelper.a(this.c, 0, this.d, 0, this.e, 0, 1, 400, new C1662a());
-        this.h = a;
-        a.setInterpolator(new DecelerateInterpolator());
+        ObjectAnimator a2 = AnimatorHelper.a(this.c, 0, this.d, 0, this.e, 0, 1, 400, new a());
+        this.h = a2;
+        a2.setInterpolator(new DecelerateInterpolator());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -252,9 +247,9 @@ public abstract class SeatVrTipPanel implements View.OnClickListener {
         } else if (TextUtils.isEmpty(str)) {
         } else {
             this.g = str;
-            DMImageCreator c = C0504a.b().c(str);
+            DMImageCreator c2 = cn.damai.common.image.a.b().c(str);
             int i = R$drawable.bg_border_corner_6_solid_f5f5f5;
-            c.i(i).c(i).k(new DMRoundedCornersBitmapProcessor(m62.a(this.a, 12.0f), 0)).n(new C1665d(str)).e(new C1664c(this)).f();
+            c2.i(i).c(i).k(new DMRoundedCornersBitmapProcessor(m62.a(this.a, 12.0f), 0)).n(new d(str)).e(new c(this)).f();
             m();
         }
     }

@@ -67,13 +67,12 @@ public class BricksThemeDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.BricksThemeDialog$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC3566a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DialogInterface.OnClickListener a;
 
-        View$OnClickListenerC3566a(DialogInterface.OnClickListener onClickListener) {
+        a(DialogInterface.OnClickListener onClickListener) {
             this.a = onClickListener;
         }
 
@@ -93,13 +92,12 @@ public class BricksThemeDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.BricksThemeDialog$b */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC3567b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View.OnClickListener a;
 
-        View$OnClickListenerC3567b(View.OnClickListener onClickListener) {
+        b(View.OnClickListener onClickListener) {
             this.a = onClickListener;
         }
 
@@ -119,13 +117,12 @@ public class BricksThemeDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.BricksThemeDialog$c */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC3568c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View.OnClickListener a;
 
-        View$OnClickListenerC3568c(View.OnClickListener onClickListener) {
+        c(View.OnClickListener onClickListener) {
             this.a = onClickListener;
         }
 
@@ -157,8 +154,8 @@ public class BricksThemeDialog extends Dialog {
             return 0;
         }
         s60 s60Var = s60.INSTANCE;
-        int b = DisplayMetrics.getwidthPixels(s60Var.d(context)) - s60Var.b(context, i2 + i2);
-        return (b * i3) / i4 >= i ? (i * i4) / i3 : b;
+        int b2 = DisplayMetrics.getwidthPixels(s60Var.d(context)) - s60Var.b(context, i2 + i2);
+        return (b2 * i3) / i4 >= i ? (i * i4) / i3 : b2;
     }
 
     private void d() {
@@ -262,7 +259,7 @@ public class BricksThemeDialog extends Dialog {
             this.n++;
             TextView textView = this.j;
             if (textView != null) {
-                textView.setOnClickListener(new View$OnClickListenerC3566a(onClickListener));
+                textView.setOnClickListener(new a(onClickListener));
             }
         }
         return this;
@@ -279,7 +276,7 @@ public class BricksThemeDialog extends Dialog {
         }
         if (z) {
             bricksIconFontTextView.setVisibility(0);
-            this.k.setOnClickListener(new View$OnClickListenerC3568c(onClickListener));
+            this.k.setOnClickListener(new c(onClickListener));
         } else {
             bricksIconFontTextView.setVisibility(8);
         }
@@ -298,7 +295,7 @@ public class BricksThemeDialog extends Dialog {
             }
             this.i.setVisibility(0);
             this.n++;
-            this.i.setOnClickListener(new View$OnClickListenerC3567b(onClickListener));
+            this.i.setOnClickListener(new b(onClickListener));
         }
         return this;
     }

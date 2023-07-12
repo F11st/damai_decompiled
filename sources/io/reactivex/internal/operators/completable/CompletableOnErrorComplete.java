@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.completable;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
+import io.reactivex.a;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.CompositeException;
 import io.reactivex.functions.Predicate;
@@ -10,7 +10,7 @@ import tb.dg0;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class CompletableOnErrorComplete extends AbstractC8146a {
+public final class CompletableOnErrorComplete extends a {
     final Predicate<? super Throwable> predicate;
     final CompletableSource source;
 
@@ -53,7 +53,7 @@ public final class CompletableOnErrorComplete extends AbstractC8146a {
         this.predicate = predicate;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     protected void subscribeActual(CompletableObserver completableObserver) {
         this.source.subscribe(new OnError(completableObserver));
     }

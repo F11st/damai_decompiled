@@ -8,6 +8,6 @@ public class n1 {
     }
 
     public static void a(int i) {
-        C5653y.a(i);
+        y.a(i);
     }
 }

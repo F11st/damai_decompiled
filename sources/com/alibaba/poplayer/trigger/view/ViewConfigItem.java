@@ -6,7 +6,7 @@ import com.alibaba.poplayer.trigger.BaseConfigItem;
 /* loaded from: classes8.dex */
 public class ViewConfigItem extends BaseConfigItem {
     public static String LOG = "ViewConfigItem";
-    public BaseConfigItem.C3677a pageInfo;
+    public BaseConfigItem.a pageInfo;
     public String viewuri;
     public boolean continuousSelect = true;
     public boolean selectFromCache = true;

@@ -11,13 +11,13 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import kotlin.collections.C8205f0;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8220r;
-import kotlin.collections.C8225w;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.f0;
+import kotlin.collections.k;
+import kotlin.collections.m;
+import kotlin.collections.n;
+import kotlin.collections.r;
+import kotlin.collections.w;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
@@ -67,7 +67,6 @@ import kotlin.reflect.jvm.internal.impl.storage.StorageManager;
 import kotlin.reflect.jvm.internal.impl.types.TypeConstructor;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tb.AbstractC9135fc;
 import tb.al1;
 import tb.b41;
 import tb.b81;
@@ -75,6 +74,7 @@ import tb.dj;
 import tb.el1;
 import tb.er2;
 import tb.f70;
+import tb.fc;
 import tb.fd2;
 import tb.gx1;
 import tb.h70;
@@ -108,7 +108,7 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
     @NotNull
     private final ProtoBuf$Class e;
     @NotNull
-    private final AbstractC9135fc f;
+    private final fc f;
     @NotNull
     private final SourceElement g;
     @NotNull
@@ -142,7 +142,7 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
     @NotNull
     private final NullableLazyValue<p21<fd2>> v;
     @NotNull
-    private final gx1.C9189a w;
+    private final gx1.a w;
     @NotNull
     private final Annotations x;
 
@@ -159,12 +159,11 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
         final /* synthetic */ DeserializedClassDescriptor i;
 
         /* compiled from: Taobao */
-        /* renamed from: kotlin.reflect.jvm.internal.impl.serialization.deserialization.descriptors.DeserializedClassDescriptor$DeserializedClassMemberScope$a */
         /* loaded from: classes3.dex */
-        public static final class C8512a extends el1 {
+        public static final class a extends el1 {
             final /* synthetic */ List<D> a;
 
-            C8512a(List<D> list) {
+            a(List<D> list) {
                 this.a = list;
             }
 
@@ -216,7 +215,7 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
                 kotlin.reflect.jvm.internal.impl.metadata.deserialization.NameResolver r8 = r8.g()
                 java.util.ArrayList r1 = new java.util.ArrayList
                 r6 = 10
-                int r6 = kotlin.collections.C8212k.q(r0, r6)
+                int r6 = kotlin.collections.k.q(r0, r6)
                 r1.<init>(r6)
                 java.util.Iterator r0 = r0.iterator()
             L5b:
@@ -252,7 +251,7 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
         }
 
         private final <D extends CallableMemberDescriptor> void u(ni1 ni1Var, Collection<? extends D> collection, List<D> list) {
-            j().c().m().getOverridingUtil().w(ni1Var, collection, new ArrayList(list), v(), new C8512a(list));
+            j().c().m().getOverridingUtil().w(ni1Var, collection, new ArrayList(list), v(), new a(list));
         }
 
         /* JADX INFO: Access modifiers changed from: private */
@@ -267,7 +266,7 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
             EnumEntryClassDescriptors enumEntryClassDescriptors = v().p;
             Collection<ClassDescriptor> d = enumEntryClassDescriptors == null ? null : enumEntryClassDescriptors.d();
             if (d == null) {
-                d = C8214m.g();
+                d = m.g();
             }
             collection.addAll(d);
         }
@@ -352,7 +351,7 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
                 if (classifierNames == null) {
                     return null;
                 }
-                C8220r.v(linkedHashSet, classifierNames);
+                r.v(linkedHashSet, classifierNames);
             }
             return linkedHashSet;
         }
@@ -364,7 +363,7 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
             List<z71> supertypes = v().n.getSupertypes();
             LinkedHashSet linkedHashSet = new LinkedHashSet();
             for (z71 z71Var : supertypes) {
-                C8220r.v(linkedHashSet, z71Var.getMemberScope().getFunctionNames());
+                r.v(linkedHashSet, z71Var.getMemberScope().getFunctionNames());
             }
             linkedHashSet.addAll(j().c().c().getFunctionsNames(this.i));
             return linkedHashSet;
@@ -377,7 +376,7 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
             List<z71> supertypes = v().n.getSupertypes();
             LinkedHashSet linkedHashSet = new LinkedHashSet();
             for (z71 z71Var : supertypes) {
-                C8220r.v(linkedHashSet, z71Var.getMemberScope().getVariableNames());
+                r.v(linkedHashSet, z71Var.getMemberScope().getVariableNames());
             }
             return linkedHashSet;
         }
@@ -434,34 +433,34 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
             hp0 b;
             List<ProtoBuf$Type> l = jx1.l(this.e.t(), this.e.s().j());
             DeserializedClassDescriptor deserializedClassDescriptor = this.e;
-            q = C8215n.q(l, 10);
+            q = n.q(l, 10);
             ArrayList arrayList = new ArrayList(q);
             for (ProtoBuf$Type protoBuf$Type : l) {
                 arrayList.add(deserializedClassDescriptor.s().i().q(protoBuf$Type));
             }
             m0 = CollectionsKt___CollectionsKt.m0(arrayList, this.e.s().c().c().getSupertypes(this.e));
-            ArrayList<NotFoundClasses.C8294b> arrayList2 = new ArrayList();
+            ArrayList<NotFoundClasses.b> arrayList2 = new ArrayList();
             Iterator it = m0.iterator();
             while (true) {
                 if (!it.hasNext()) {
                     break;
                 }
                 ClassifierDescriptor declarationDescriptor = ((z71) it.next()).c().getDeclarationDescriptor();
-                NotFoundClasses.C8294b c8294b = declarationDescriptor instanceof NotFoundClasses.C8294b ? (NotFoundClasses.C8294b) declarationDescriptor : null;
-                if (c8294b != null) {
-                    arrayList2.add(c8294b);
+                NotFoundClasses.b bVar = declarationDescriptor instanceof NotFoundClasses.b ? (NotFoundClasses.b) declarationDescriptor : null;
+                if (bVar != null) {
+                    arrayList2.add(bVar);
                 }
             }
             if (!arrayList2.isEmpty()) {
                 ErrorReporter i = this.e.s().c().i();
                 DeserializedClassDescriptor deserializedClassDescriptor2 = this.e;
-                q2 = C8215n.q(arrayList2, 10);
+                q2 = n.q(arrayList2, 10);
                 ArrayList arrayList3 = new ArrayList(q2);
-                for (NotFoundClasses.C8294b c8294b2 : arrayList2) {
-                    hj h = DescriptorUtilsKt.h(c8294b2);
+                for (NotFoundClasses.b bVar2 : arrayList2) {
+                    hj h = DescriptorUtilsKt.h(bVar2);
                     String b2 = (h == null || (b = h.b()) == null) ? null : b.b();
                     if (b2 == null) {
-                        b2 = c8294b2.getName().b();
+                        b2 = bVar2.getName().b();
                     }
                     arrayList3.add(b2);
                 }
@@ -486,7 +485,7 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
         @Override // kotlin.reflect.jvm.internal.impl.types.AbstractTypeConstructor
         @NotNull
         public SupertypeLoopChecker j() {
-            return SupertypeLoopChecker.C8298a.INSTANCE;
+            return SupertypeLoopChecker.a.INSTANCE;
         }
 
         @Override // tb.m1
@@ -524,8 +523,8 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
             this.d = deserializedClassDescriptor;
             List<ProtoBuf$EnumEntry> enumEntryList = deserializedClassDescriptor.t().getEnumEntryList();
             b41.h(enumEntryList, "classProto.enumEntryList");
-            q = C8215n.q(enumEntryList, 10);
-            e = C8225w.e(q);
+            q = n.q(enumEntryList, 10);
+            e = w.e(q);
             a = ty1.a(e, 16);
             LinkedHashMap linkedHashMap = new LinkedHashMap(a);
             for (Object obj : enumEntryList) {
@@ -594,7 +593,7 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
             Set<ni1> i;
             HashSet hashSet = new HashSet();
             for (z71 z71Var : this.d.getTypeConstructor().getSupertypes()) {
-                for (DeclarationDescriptor declarationDescriptor : ResolutionScope.C8500a.a(z71Var.getMemberScope(), null, null, 3, null)) {
+                for (DeclarationDescriptor declarationDescriptor : ResolutionScope.a.a(z71Var.getMemberScope(), null, null, 3, null)) {
                     if ((declarationDescriptor instanceof SimpleFunctionDescriptor) || (declarationDescriptor instanceof PropertyDescriptor)) {
                         hashSet.add(declarationDescriptor.getName());
                     }
@@ -612,7 +611,7 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
             for (ProtoBuf$Property protoBuf$Property : propertyList) {
                 hashSet.add(pi1.b(deserializedClassDescriptor2.s().g(), protoBuf$Property.getName()));
             }
-            i = C8205f0.i(hashSet, hashSet);
+            i = f0.i(hashSet, hashSet);
             return i;
         }
 
@@ -637,16 +636,16 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public DeserializedClassDescriptor(@NotNull j70 j70Var, @NotNull ProtoBuf$Class protoBuf$Class, @NotNull NameResolver nameResolver, @NotNull AbstractC9135fc abstractC9135fc, @NotNull SourceElement sourceElement) {
+    public DeserializedClassDescriptor(@NotNull j70 j70Var, @NotNull ProtoBuf$Class protoBuf$Class, @NotNull NameResolver nameResolver, @NotNull fc fcVar, @NotNull SourceElement sourceElement) {
         super(j70Var.h(), pi1.a(nameResolver, protoBuf$Class.getFqName()).j());
         Annotations al1Var;
         b41.i(j70Var, "outerContext");
         b41.i(protoBuf$Class, "classProto");
         b41.i(nameResolver, "nameResolver");
-        b41.i(abstractC9135fc, "metadataVersion");
+        b41.i(fcVar, "metadataVersion");
         b41.i(sourceElement, "sourceElement");
         this.e = protoBuf$Class;
-        this.f = abstractC9135fc;
+        this.f = fcVar;
         this.g = sourceElement;
         this.h = pi1.a(nameResolver, protoBuf$Class.getFqName());
         hx1 hx1Var = hx1.INSTANCE;
@@ -659,13 +658,13 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
         ProtoBuf$TypeTable typeTable = protoBuf$Class.getTypeTable();
         b41.h(typeTable, "classProto.typeTable");
         er2 er2Var = new er2(typeTable);
-        ix2.C9291a c9291a = ix2.Companion;
+        ix2.a aVar = ix2.Companion;
         ProtoBuf$VersionRequirementTable versionRequirementTable = protoBuf$Class.getVersionRequirementTable();
         b41.h(versionRequirementTable, "classProto.versionRequirementTable");
-        j70 a2 = j70Var.a(this, typeParameterList, nameResolver, er2Var, c9291a.a(versionRequirementTable), abstractC9135fc);
+        j70 a2 = j70Var.a(this, typeParameterList, nameResolver, er2Var, aVar.a(versionRequirementTable), fcVar);
         this.l = a2;
         ClassKind classKind = ClassKind.ENUM_CLASS;
-        this.m = a == classKind ? new StaticScopeForKotlinEnum(a2.h(), this) : MemberScope.C8499b.INSTANCE;
+        this.m = a == classKind ? new StaticScopeForKotlinEnum(a2.h(), this) : MemberScope.b.INSTANCE;
         this.n = new DeserializedClassTypeConstructor(this);
         this.o = ScopesHolderForClass.Companion.a(this, a2.h(), a2.c().m().getKotlinTypeRefiner(), new DeserializedClassDescriptor$memberScopeHolder$1(this));
         this.p = a == classKind ? new EnumEntryClassDescriptors(this) : null;
@@ -744,7 +743,7 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
         NameResolver g = a2.g();
         er2 j = a2.j();
         DeserializedClassDescriptor deserializedClassDescriptor = e instanceof DeserializedClassDescriptor ? (DeserializedClassDescriptor) e : null;
-        this.w = new gx1.C9189a(protoBuf$Class, g, j, sourceElement, deserializedClassDescriptor != null ? deserializedClassDescriptor.w : null);
+        this.w = new gx1.a(protoBuf$Class, g, j, sourceElement, deserializedClassDescriptor != null ? deserializedClassDescriptor.w : null);
         if (!yj0.HAS_ANNOTATIONS.d(protoBuf$Class.getFlags()).booleanValue()) {
             al1Var = Annotations.Companion.b();
         } else {
@@ -784,7 +783,7 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
         List m0;
         List m02;
         List<ClassConstructorDescriptor> q = q();
-        k = C8214m.k(getUnsubstitutedPrimaryConstructor());
+        k = m.k(getUnsubstitutedPrimaryConstructor());
         m0 = CollectionsKt___CollectionsKt.m0(q, k);
         m02 = CollectionsKt___CollectionsKt.m0(m0, this.l.c().c().getConstructors(this));
         return m02;
@@ -802,7 +801,7 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
                 if (unsubstitutedPrimaryConstructor != null) {
                     List<ValueParameterDescriptor> valueParameters = unsubstitutedPrimaryConstructor.getValueParameters();
                     b41.h(valueParameters, "constructor.valueParameters");
-                    name = ((ValueParameterDescriptor) C8212k.P(valueParameters)).getName();
+                    name = ((ValueParameterDescriptor) k.P(valueParameters)).getName();
                     b41.h(name, "{\n                // Bef…irst().name\n            }");
                 } else {
                     throw new IllegalStateException(b41.r("Inline class has no primary constructor: ", this).toString());
@@ -882,7 +881,7 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
                 arrayList.add(obj);
             }
         }
-        q = C8215n.q(arrayList, 10);
+        q = n.q(arrayList, 10);
         ArrayList arrayList2 = new ArrayList(q);
         for (ProtoBuf$Constructor protoBuf$Constructor : arrayList) {
             MemberDeserializer f = s().f();
@@ -896,7 +895,7 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
     public final Collection<ClassDescriptor> r() {
         List g;
         if (this.i != Modality.SEALED) {
-            g = C8214m.g();
+            g = m.g();
             return g;
         }
         List<Integer> sealedSubclassFqNameList = this.e.getSealedSubclassFqNameList();
@@ -1087,7 +1086,7 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
     }
 
     @NotNull
-    public final AbstractC9135fc v() {
+    public final fc v() {
         return this.f;
     }
 
@@ -1099,7 +1098,7 @@ public final class DeserializedClassDescriptor extends l1 implements Deserialize
     }
 
     @NotNull
-    public final gx1.C9189a x() {
+    public final gx1.a x() {
         return this.w;
     }
 

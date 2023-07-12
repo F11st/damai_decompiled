@@ -3,9 +3,7 @@ package tb;
 import android.text.TextUtils;
 import android.view.View;
 import androidx.constraintlayout.core.motion.utils.TypedValues;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.discover.bean.VoteBean;
 import cn.damai.commonbusiness.discover.bean.VoteInfoBean;
 import cn.damai.commonbusiness.search.bean.MarketTagBean;
@@ -24,7 +22,7 @@ import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
-public class py0 extends C0528b {
+public class py0 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final String CHANNEL_PAGE = "new_category";
     public static final String CUSTOM_PUSH = "recstate";
@@ -68,7 +66,7 @@ public class py0 extends C0528b {
         }
         HashMap<String, String> f = d23.f();
         f.put("vip_status", str);
-        C0529c.e().x(I().e("home", "vip_becomevipalert", "enter", f, Boolean.TRUE));
+        cn.damai.common.user.c.e().x(I().e("home", "vip_becomevipalert", "enter", f, Boolean.TRUE));
     }
 
     public static void g(String str) {
@@ -79,7 +77,7 @@ public class py0 extends C0528b {
         }
         HashMap<String, String> f = d23.f();
         f.put("pop_type", str);
-        C0529c.e().x(I().e("home", "vip_pop", "close", f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(I().e("home", "vip_pop", "close", f, Boolean.FALSE));
     }
 
     public static void h(String str) {
@@ -90,7 +88,7 @@ public class py0 extends C0528b {
         }
         HashMap<String, String> f = d23.f();
         f.put("pop_type", str);
-        C0529c.e().x(I().e("home", "vip_pop", "enter", f, Boolean.TRUE));
+        cn.damai.common.user.c.e().x(I().e("home", "vip_pop", "enter", f, Boolean.TRUE));
     }
 
     public static void o(long j, String str, String str2, String str3) {
@@ -105,7 +103,7 @@ public class py0 extends C0528b {
         if (!TextUtils.isEmpty(str3)) {
             f.put("imageUrl", str3);
         }
-        C0529c.e().C("aditem", "advertsalert", "home", "1.0", j, f, 2201);
+        cn.damai.common.user.c.e().C("aditem", "advertsalert", "home", "1.0", j, f, 2201);
     }
 
     public static void p(long j, String str, String str2, String str3, String str4) {
@@ -120,7 +118,7 @@ public class py0 extends C0528b {
         if (!TextUtils.isEmpty(str4)) {
             f.put("imageUrl", str4);
         }
-        C0529c.e().C("close", "newfun_alert", "home", "1.0", j, f, 2201);
+        cn.damai.common.user.c.e().C("close", "newfun_alert", "home", "1.0", j, f, 2201);
     }
 
     public static void q(long j, String str) {
@@ -131,7 +129,7 @@ public class py0 extends C0528b {
         }
         HashMap<String, String> g = d23.g();
         g.put("vip_status", str);
-        C0529c.e().C("enter", "vip_becomevipalert", "home", "1.0", j, g, 2201);
+        cn.damai.common.user.c.e().C("enter", "vip_becomevipalert", "home", "1.0", j, g, 2201);
     }
 
     public static void r(long j, String str) {
@@ -142,7 +140,7 @@ public class py0 extends C0528b {
         }
         HashMap<String, String> g = d23.g();
         g.put("pop_type", str);
-        C0529c.e().C("enter", "vip_pop", "home", "1.0", j, g, 2201);
+        cn.damai.common.user.c.e().C("enter", "vip_pop", "home", "1.0", j, g, 2201);
     }
 
     private String v() {
@@ -162,20 +160,20 @@ public class py0 extends C0528b {
         return (list == null || this.b >= list.size() || this.c.get(this.b) == null || TextUtils.isEmpty(this.c.get(this.b).dispatchCardCode)) ? "default" : this.c.get(this.b).dispatchCardCode;
     }
 
-    public C0525a.C0527b A() {
+    public a.b A() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "703814265")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("703814265", new Object[]{this});
+            return (a.b) ipChange.ipc$dispatch("703814265", new Object[]{this});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("city", z20.d() + "市");
         return e("home", "top", "city", hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b B(String str) {
+    public a.b B(String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1348724028")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1348724028", new Object[]{this, str});
+            return (a.b) ipChange.ipc$dispatch("1348724028", new Object[]{this, str});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("city", z20.d() + "市");
@@ -201,15 +199,15 @@ public class py0 extends C0528b {
         return hashMap;
     }
 
-    public C0525a.C0527b D() {
+    public a.b D() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1266496679") ? (C0525a.C0527b) ipChange.ipc$dispatch("1266496679", new Object[]{this}) : c("home", "top", fy1.HOME_SCAN_PAGE, Boolean.TRUE);
+        return AndroidInstantRuntime.support(ipChange, "1266496679") ? (a.b) ipChange.ipc$dispatch("1266496679", new Object[]{this}) : c("home", "top", fy1.HOME_SCAN_PAGE, Boolean.TRUE);
     }
 
-    public C0525a.C0527b E(String str) {
+    public a.b E(String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-39156034")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-39156034", new Object[]{this, str});
+            return (a.b) ipChange.ipc$dispatch("-39156034", new Object[]{this, str});
         }
         HashMap<String, String> f = d23.f();
         f.put("presetword", str);
@@ -217,10 +215,10 @@ public class py0 extends C0528b {
         return e("home", "top", "search", f, Boolean.TRUE);
     }
 
-    public C0525a.C0527b F(String str, KeyWord keyWord) {
+    public a.b F(String str, KeyWord keyWord) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1847529669")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1847529669", new Object[]{this, str, keyWord});
+            return (a.b) ipChange.ipc$dispatch("1847529669", new Object[]{this, str, keyWord});
         }
         HashMap<String, String> f = d23.f();
         f.put("city", z20.d() + "市");
@@ -238,10 +236,10 @@ public class py0 extends C0528b {
         return e("home", "top", "searchtext", f, Boolean.TRUE);
     }
 
-    public C0525a.C0527b G(String str, String str2) {
+    public a.b G(String str, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1876078395")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1876078395", new Object[]{this, str, str2});
+            return (a.b) ipChange.ipc$dispatch("1876078395", new Object[]{this, str, str2});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("usercode", z20.E());
@@ -250,10 +248,10 @@ public class py0 extends C0528b {
         return e("home", "evaluate_alert", "close", hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b H(String str, String str2, String str3) {
+    public a.b H(String str, String str2, String str3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1311972164")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1311972164", new Object[]{this, str, str2, str3});
+            return (a.b) ipChange.ipc$dispatch("1311972164", new Object[]{this, str, str2, str3});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("usercode", z20.E());
@@ -278,10 +276,10 @@ public class py0 extends C0528b {
         return hashMap;
     }
 
-    public C0525a.C0527b K(NoteBean noteBean, int i, int i2, String str, String str2) {
+    public a.b K(NoteBean noteBean, int i, int i2, String str, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "465215157")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("465215157", new Object[]{this, noteBean, Integer.valueOf(i), Integer.valueOf(i2), str, str2});
+            return (a.b) ipChange.ipc$dispatch("465215157", new Object[]{this, noteBean, Integer.valueOf(i), Integer.valueOf(i2), str, str2});
         }
         HashMap<String, String> d2 = d23.d();
         d23.h(d2, "usercode", z20.E());
@@ -293,8 +291,8 @@ public class py0 extends C0528b {
         d23.h(d2, "card_type", str2);
         d23.h(d2, "content_id", noteBean.id);
         d23.h(d2, "content_type", str2);
-        d23.h(d2, C9548pb.PRE_CONTENT_ID, noteBean.id);
-        d23.h(d2, C9548pb.PRE_CONTENT_TYPE, "note");
+        d23.h(d2, pb.PRE_CONTENT_ID, noteBean.id);
+        d23.h(d2, pb.PRE_CONTENT_TYPE, "note");
         d23.h(d2, "pagenum", i + "");
         if (!TextUtils.isEmpty(str)) {
             d23.h(d2, "item_id", str);
@@ -302,10 +300,10 @@ public class py0 extends C0528b {
         return e("home", "bottom", v() + i2, d2, Boolean.TRUE);
     }
 
-    public C0525a.C0527b L(NoteBean noteBean, int i, int i2, String str, String str2) {
+    public a.b L(NoteBean noteBean, int i, int i2, String str, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "764653242")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("764653242", new Object[]{this, noteBean, Integer.valueOf(i), Integer.valueOf(i2), str, str2});
+            return (a.b) ipChange.ipc$dispatch("764653242", new Object[]{this, noteBean, Integer.valueOf(i), Integer.valueOf(i2), str, str2});
         }
         HashMap<String, String> d2 = d23.d();
         d23.h(d2, "usercode", z20.E());
@@ -317,8 +315,8 @@ public class py0 extends C0528b {
         d23.h(d2, "card_type", str2);
         d23.h(d2, "content_id", noteBean.id);
         d23.h(d2, "content_type", str2);
-        d23.h(d2, C9548pb.PRE_CONTENT_ID, noteBean.id);
-        d23.h(d2, C9548pb.PRE_CONTENT_TYPE, "note");
+        d23.h(d2, pb.PRE_CONTENT_ID, noteBean.id);
+        d23.h(d2, pb.PRE_CONTENT_TYPE, "note");
         d23.h(d2, "pagenum", i + "");
         if (!TextUtils.isEmpty(str)) {
             d23.h(d2, "item_id", str);
@@ -326,10 +324,10 @@ public class py0 extends C0528b {
         return e("home", "bottom", x() + "_item_product_" + i2, d2, Boolean.TRUE);
     }
 
-    public C0525a.C0527b M(String str, String str2, String str3, String str4, String str5, String str6, int i, int i2, String str7, String str8) {
+    public a.b M(String str, String str2, String str3, String str4, String str5, String str6, int i, int i2, String str7, String str8) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "2133542365")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("2133542365", new Object[]{this, str, str2, str3, str4, str5, str6, Integer.valueOf(i), Integer.valueOf(i2), str7, str8});
+            return (a.b) ipChange.ipc$dispatch("2133542365", new Object[]{this, str, str2, str3, str4, str5, str6, Integer.valueOf(i), Integer.valueOf(i2), str7, str8});
         }
         String str9 = TextUtils.isEmpty(str7) ? str8 : str7;
         if (!TextUtils.isEmpty(str5)) {
@@ -344,10 +342,10 @@ public class py0 extends C0528b {
         return N(str, str9, str2, str3, str4, str5, str6, "", "", i, i2, "", "");
     }
 
-    public C0525a.C0527b N(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, int i, int i2, String str10, String str11) {
+    public a.b N(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, int i, int i2, String str10, String str11) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-812273221")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-812273221", new Object[]{this, str, str2, str3, str4, str5, str6, str7, str8, str9, Integer.valueOf(i), Integer.valueOf(i2), str10, str11});
+            return (a.b) ipChange.ipc$dispatch("-812273221", new Object[]{this, str, str2, str3, str4, str5, str6, str7, str8, str9, Integer.valueOf(i), Integer.valueOf(i2), str10, str11});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("city", z20.d() + "市");
@@ -368,10 +366,10 @@ public class py0 extends C0528b {
         return e("home", "bottom", v() + i2, hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b O(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10, int i, int i2) {
+    public a.b O(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10, int i, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "203411953")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("203411953", new Object[]{this, str, str2, str3, str4, str5, str6, str7, str8, str9, str10, Integer.valueOf(i), Integer.valueOf(i2)});
+            return (a.b) ipChange.ipc$dispatch("203411953", new Object[]{this, str, str2, str3, str4, str5, str6, str7, str8, str9, str10, Integer.valueOf(i), Integer.valueOf(i2)});
         }
         return N(str, TextUtils.isEmpty(str2) ? str3 : str2, str4, str5, str6, str7, str8, str9, str10, i, i2, "", "");
     }
@@ -384,7 +382,7 @@ public class py0 extends C0528b {
         }
         HashMap<String, String> f = d23.f();
         f.put("titlelabel", str);
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         py0 I = I();
         e.x(I.e("home", "bottom", "tab_" + i, f, Boolean.FALSE));
     }
@@ -402,14 +400,14 @@ public class py0 extends C0528b {
         d23.h(d2, GrougId, x());
         d23.h(d2, "card_id", str);
         d23.h(d2, "card_type", "11");
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         e.x(e("home", "bottom", v() + i, d2, Boolean.TRUE));
     }
 
-    public C0525a.C0527b S(String str) {
+    public a.b S(String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "284595976")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("284595976", new Object[]{this, str});
+            return (a.b) ipChange.ipc$dispatch("284595976", new Object[]{this, str});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("usercode", z20.E());
@@ -472,12 +470,12 @@ public class py0 extends C0528b {
             hashMap.put("content_id", str7);
             hashMap.put("biz_id", str8);
             hashMap.put("biz_type", str9);
-            hashMap.put(C9548pb.PRE_CONTENT_ID, str10);
-            hashMap.put(C9548pb.PRE_CONTENT_TYPE, str11);
+            hashMap.put(pb.PRE_CONTENT_ID, str10);
+            hashMap.put(pb.PRE_CONTENT_TYPE, str11);
             if (!TextUtils.isEmpty(str12)) {
                 hashMap.put("discount_type", str12);
             }
-            C0529c e = C0529c.e();
+            cn.damai.common.user.c e = cn.damai.common.user.c.e();
             e.G(view, v() + i, "bottom", "home", hashMap);
         } catch (Exception e2) {
             e2.printStackTrace();
@@ -517,7 +515,7 @@ public class py0 extends C0528b {
         try {
             HashMap<String, String> f = d23.f();
             f.put("presetword", str);
-            C0529c.e().G(view, "searchtext", "top", "home", f);
+            cn.damai.common.user.c.e().G(view, "searchtext", "top", "home", f);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -533,7 +531,7 @@ public class py0 extends C0528b {
             HashMap<String, String> f = d23.f();
             f.put("city", z20.d() + "市");
             f.put("presetword", str);
-            C0529c.e().G(view, "search", "top", str2, f);
+            cn.damai.common.user.c.e().G(view, "search", "top", str2, f);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -550,7 +548,7 @@ public class py0 extends C0528b {
         if (!TextUtils.isEmpty(str)) {
             hashMap.put(str, str);
         }
-        C0529c.e().G(view, "live_item", TypedValues.Custom.S_FLOAT, "home", hashMap);
+        cn.damai.common.user.c.e().G(view, "live_item", TypedValues.Custom.S_FLOAT, "home", hashMap);
     }
 
     public void c0(int i) {
@@ -581,7 +579,7 @@ public class py0 extends C0528b {
         f.put("titlelabel", R());
         f.put(GrougId, x());
         f.put("id", voteInfoBean.id);
-        C0529c.e().x(I().e("home", "vote_cancel", "dbtn", f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(I().e("home", "vote_cancel", "dbtn", f, Boolean.FALSE));
     }
 
     public void j(VoteInfoBean voteInfoBean, VoteBean voteBean, int i, String str) {
@@ -598,7 +596,7 @@ public class py0 extends C0528b {
         f.put(Preloader.KEY_SESSION, voteBean.posInVoteList + "");
         f.put("card_type", "12");
         f.put("card_id", voteInfoBean.id);
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         py0 I = I();
         e.x(I.e("home", "bottom", "dvote_" + i, f, Boolean.FALSE));
     }
@@ -621,7 +619,7 @@ public class py0 extends C0528b {
         if (!TextUtils.isEmpty(str2)) {
             d23.h(d2, "item_id", str2);
         }
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         e.G(view, v() + i, "bottom", "home", d2);
     }
 
@@ -630,7 +628,7 @@ public class py0 extends C0528b {
         if (AndroidInstantRuntime.support(ipChange, "1316853552")) {
             ipChange.ipc$dispatch("1316853552", new Object[]{this, view});
         } else {
-            C0529c.e().G(view, "DNAshow", "card", "home", d23.g());
+            cn.damai.common.user.c.e().G(view, "DNAshow", "card", "home", d23.g());
         }
     }
 
@@ -644,7 +642,7 @@ public class py0 extends C0528b {
         f.put("titlelabel", R());
         f.put(GrougId, x());
         f.put("id", voteInfoBean.id);
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         e.G(view, "dvote_" + i, v(), "home", f);
     }
 
@@ -664,8 +662,8 @@ public class py0 extends C0528b {
         d23.h(d2, "card_type", "14");
         d23.h(d2, "content_id", noteBean.id);
         d23.h(d2, "content_type", "14");
-        d23.h(d2, C9548pb.PRE_CONTENT_ID, noteBean.id);
-        d23.h(d2, C9548pb.PRE_CONTENT_TYPE, "note");
+        d23.h(d2, pb.PRE_CONTENT_ID, noteBean.id);
+        d23.h(d2, pb.PRE_CONTENT_TYPE, "note");
         d23.h(d2, "pagenum", i + "");
         d23.h(d2, "usercode", z20.E());
         ProjectInNote projectInNote = noteBean.project;
@@ -676,19 +674,19 @@ public class py0 extends C0528b {
             d23.h(d2, "item_id", str);
             int i3 = R$id.ll_card_note_proj;
             if (view.findViewById(i3) != null) {
-                C0529c e = C0529c.e();
+                cn.damai.common.user.c e = cn.damai.common.user.c.e();
                 View findViewById = view.findViewById(i3);
                 e.G(findViewById, x() + "_item_product_" + i2, "bottom", "home", d2);
             }
         }
-        C0529c e2 = C0529c.e();
+        cn.damai.common.user.c e2 = cn.damai.common.user.c.e();
         e2.G(view, v() + i2, "bottom", "home", d2);
     }
 
-    public C0525a.C0527b s(String str) {
+    public a.b s(String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1128981500")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1128981500", new Object[]{this, str});
+            return (a.b) ipChange.ipc$dispatch("1128981500", new Object[]{this, str});
         }
         HashMap<String, String> f = d23.f();
         f.put("city", z20.d() + "市");
@@ -696,20 +694,20 @@ public class py0 extends C0528b {
         return e(CHANNEL_PAGE, "top", "search", f, Boolean.TRUE);
     }
 
-    public C0525a.C0527b t(String str) {
+    public a.b t(String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-502921496")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-502921496", new Object[]{this, str});
+            return (a.b) ipChange.ipc$dispatch("-502921496", new Object[]{this, str});
         }
         HashMap<String, String> f = d23.f();
         f.put("city", z20.d() + "市");
         return e(CHANNEL_PAGE, "top", "searchtext", f, Boolean.TRUE);
     }
 
-    public C0525a.C0527b u(String str, int i, String str2, String str3) {
+    public a.b u(String str, int i, String str2, String str3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1421665824")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1421665824", new Object[]{this, str, Integer.valueOf(i), str2, str3});
+            return (a.b) ipChange.ipc$dispatch("1421665824", new Object[]{this, str, Integer.valueOf(i), str2, str3});
         }
         HashMap<String, String> d2 = d23.d();
         d23.h(d2, "usercode", z20.E());
@@ -726,15 +724,15 @@ public class py0 extends C0528b {
         return e("home", "bottom", v() + i, d2, Boolean.TRUE);
     }
 
-    public C0525a.C0527b w() {
+    public a.b w() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1873695603") ? (C0525a.C0527b) ipChange.ipc$dispatch("1873695603", new Object[]{this}) : e("home", "card", "DNAshow", d23.g(), Boolean.FALSE);
+        return AndroidInstantRuntime.support(ipChange, "1873695603") ? (a.b) ipChange.ipc$dispatch("1873695603", new Object[]{this}) : e("home", "card", "DNAshow", d23.g(), Boolean.FALSE);
     }
 
-    public C0525a.C0527b y(String str, String str2, String str3, String str4, String str5) {
+    public a.b y(String str, String str2, String str3, String str4, String str5) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-158305126")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-158305126", new Object[]{this, str, str2, str3, str4, str5});
+            return (a.b) ipChange.ipc$dispatch("-158305126", new Object[]{this, str, str2, str3, str4, str5});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("city", z20.d() + "市");
@@ -747,12 +745,12 @@ public class py0 extends C0528b {
         return e("home", "advertsalert", "aditem_0", hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b z(String str, String str2, int i, String str3) {
+    public a.b z(String str, String str2, int i, String str3) {
         String str4;
         IpChange ipChange = $ipChange;
         boolean z = true;
         if (AndroidInstantRuntime.support(ipChange, "-1321244977")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-1321244977", new Object[]{this, str, str2, Integer.valueOf(i), str3});
+            return (a.b) ipChange.ipc$dispatch("-1321244977", new Object[]{this, str, str2, Integer.valueOf(i), str3});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("type", str2);

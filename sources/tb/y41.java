@@ -15,18 +15,17 @@ final class y41 {
     @NotNull
     public static final y41 INSTANCE = new y41();
     @Nullable
-    private static C9950a a;
+    private static a a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.y41$a */
     /* loaded from: classes3.dex */
-    public static final class C9950a {
+    public static final class a {
         @Nullable
         private final Method a;
         @Nullable
         private final Method b;
 
-        public C9950a(@Nullable Method method, @Nullable Method method2) {
+        public a(@Nullable Method method, @Nullable Method method2) {
             this.a = method;
             this.b = method2;
         }
@@ -46,13 +45,13 @@ final class y41 {
     }
 
     @NotNull
-    public final C9950a a(@NotNull Member member) {
+    public final a a(@NotNull Member member) {
         b41.i(member, "member");
         Class<?> cls = member.getClass();
         try {
-            return new C9950a(cls.getMethod("getParameters", new Class[0]), ReflectClassUtilKt.f(cls).loadClass("java.lang.reflect.Parameter").getMethod("getName", new Class[0]));
+            return new a(cls.getMethod("getParameters", new Class[0]), ReflectClassUtilKt.f(cls).loadClass("java.lang.reflect.Parameter").getMethod("getName", new Class[0]));
         } catch (NoSuchMethodException unused) {
-            return new C9950a(null, null);
+            return new a(null, null);
         }
     }
 
@@ -60,13 +59,13 @@ final class y41 {
     public final List<String> b(@NotNull Member member) {
         Method a2;
         b41.i(member, "member");
-        C9950a c9950a = a;
-        if (c9950a == null) {
-            c9950a = a(member);
-            a = c9950a;
+        a aVar = a;
+        if (aVar == null) {
+            aVar = a(member);
+            a = aVar;
         }
-        Method b = c9950a.b();
-        if (b == null || (a2 = c9950a.a()) == null) {
+        Method b = aVar.b();
+        if (b == null || (a2 = aVar.a()) == null) {
             return null;
         }
         Object invoke = b.invoke(member, new Object[0]);

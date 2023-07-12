@@ -156,7 +156,7 @@ public interface IWebView extends ICommonExtension {
 
     void postUrl(String str, byte[] bArr);
 
-    void postVisualStateCallback(long j, WebView.AbstractC7176b abstractC7176b);
+    void postVisualStateCallback(long j, WebView.b bVar);
 
     void postWebMessageInner(WebMessage webMessage, Uri uri);
 

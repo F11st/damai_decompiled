@@ -1,16 +1,16 @@
 package io.reactivex.internal.operators.completable;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
 import io.reactivex.SingleObserver;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import java.util.concurrent.Callable;
 import tb.dg0;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class CompletableToSingle<T> extends AbstractC8152e<T> {
+public final class CompletableToSingle<T> extends e<T> {
     final T completionValue;
     final Callable<? extends T> completionValueSupplier;
     final CompletableSource source;
@@ -64,7 +64,7 @@ public final class CompletableToSingle<T> extends AbstractC8152e<T> {
         this.completionValueSupplier = callable;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super T> singleObserver) {
         this.source.subscribe(new ToSingle(singleObserver));
     }

@@ -36,7 +36,7 @@ import tb.xr0;
 /* loaded from: classes6.dex */
 public final class GXProgressView extends View implements GXIViewBindData {
     @NotNull
-    public static final C3364a Companion = new C3364a(null);
+    public static final a Companion = new a(null);
     private static final float PADDING = 1.0f;
     @NotNull
     private static final String PROGRESS_WIDTH_VALUE_HOLDER = "PROGRESS_WIDTH_VALUE_HOLDER";
@@ -54,23 +54,21 @@ public final class GXProgressView extends View implements GXIViewBindData {
     private final Path progressPath;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.view.basic.GXProgressView$a */
     /* loaded from: classes6.dex */
-    public static final class C3364a {
-        private C3364a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3364a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.view.basic.GXProgressView$b */
     /* loaded from: classes6.dex */
-    public static final class C3365b implements ValueAnimator.AnimatorUpdateListener {
-        C3365b() {
+    public static final class b implements ValueAnimator.AnimatorUpdateListener {
+        b() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -136,7 +134,7 @@ public final class GXProgressView extends View implements GXIViewBindData {
             valueAnimator.setValues(PropertyValuesHolder.ofFloat(PROGRESS_WIDTH_VALUE_HOLDER, this.currentProgressWidth, measuredWidth));
             valueAnimator.setDuration(300L);
             valueAnimator.setInterpolator(new AccelerateDecelerateInterpolator());
-            valueAnimator.addUpdateListener(new C3365b());
+            valueAnimator.addUpdateListener(new b());
             valueAnimator.start();
             wt2 wt2Var = wt2.INSTANCE;
             this.animator = valueAnimator;
@@ -192,7 +190,7 @@ public final class GXProgressView extends View implements GXIViewBindData {
 
     @Override // com.alibaba.gaiax.render.view.GXIViewBindData
     public void onResetData() {
-        GXIViewBindData.C3361a.a(this);
+        GXIViewBindData.a.a(this);
     }
 
     @Override // android.view.View

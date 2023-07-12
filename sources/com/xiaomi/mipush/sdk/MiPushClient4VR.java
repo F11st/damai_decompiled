@@ -13,7 +13,7 @@ public class MiPushClient4VR {
     public static void uploadData(Context context, String str) {
         ii iiVar = new ii();
         iiVar.c(ht.VRUpload.f497a);
-        iiVar.b(C7564b.m629a(context).m630a());
+        iiVar.b(b.m629a(context).m630a());
         iiVar.d(context.getPackageName());
         iiVar.a("data", str);
         iiVar.a(bd.a());

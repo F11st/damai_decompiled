@@ -44,7 +44,7 @@ public final class cw implements Closeable {
     private int p;
     private long l = 0;
     private int n = 1000;
-    private final LinkedHashMap<String, C4408c> o = new LinkedHashMap<>(0, 0.75f, true);
+    private final LinkedHashMap<String, c> o = new LinkedHashMap<>(0, 0.75f, true);
     private long q = 0;
     private final Callable<Void> s = new Callable<Void>() { // from class: com.amap.api.col.s.cw.2
         /* JADX INFO: Access modifiers changed from: private */
@@ -68,19 +68,18 @@ public final class cw implements Closeable {
     private final int k = 1;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.cw$a */
     /* loaded from: classes10.dex */
-    public final class C4405a {
-        private final C4408c b;
+    public final class a {
+        private final c b;
         private final boolean[] c;
         private boolean d;
         private boolean e;
 
         /* compiled from: Taobao */
-        /* renamed from: com.amap.api.col.s.cw$a$a */
+        /* renamed from: com.amap.api.col.s.cw$a$a  reason: collision with other inner class name */
         /* loaded from: classes10.dex */
-        private class C4406a extends FilterOutputStream {
-            /* synthetic */ C4406a(C4405a c4405a, OutputStream outputStream, byte b) {
+        private class C0209a extends FilterOutputStream {
+            /* synthetic */ C0209a(a aVar, OutputStream outputStream, byte b) {
                 this(outputStream);
             }
 
@@ -89,7 +88,7 @@ public final class cw implements Closeable {
                 try {
                     ((FilterOutputStream) this).out.close();
                 } catch (IOException unused) {
-                    C4405a.c(C4405a.this);
+                    a.c(a.this);
                 }
             }
 
@@ -98,7 +97,7 @@ public final class cw implements Closeable {
                 try {
                     ((FilterOutputStream) this).out.flush();
                 } catch (IOException unused) {
-                    C4405a.c(C4405a.this);
+                    a.c(a.this);
                 }
             }
 
@@ -107,11 +106,11 @@ public final class cw implements Closeable {
                 try {
                     ((FilterOutputStream) this).out.write(i);
                 } catch (IOException unused) {
-                    C4405a.c(C4405a.this);
+                    a.c(a.this);
                 }
             }
 
-            private C4406a(OutputStream outputStream) {
+            private C0209a(OutputStream outputStream) {
                 super(outputStream);
             }
 
@@ -120,28 +119,28 @@ public final class cw implements Closeable {
                 try {
                     ((FilterOutputStream) this).out.write(bArr, i, i2);
                 } catch (IOException unused) {
-                    C4405a.c(C4405a.this);
+                    a.c(a.this);
                 }
             }
         }
 
-        /* synthetic */ C4405a(cw cwVar, C4408c c4408c, byte b) {
-            this(c4408c);
+        /* synthetic */ a(cw cwVar, c cVar, byte b) {
+            this(cVar);
         }
 
-        static /* synthetic */ boolean c(C4405a c4405a) {
-            c4405a.d = true;
+        static /* synthetic */ boolean c(a aVar) {
+            aVar.d = true;
             return true;
         }
 
-        private C4405a(C4408c c4408c) {
-            this.b = c4408c;
-            this.c = c4408c.d ? null : new boolean[cw.this.k];
+        private a(c cVar) {
+            this.b = cVar;
+            this.c = cVar.d ? null : new boolean[cw.this.k];
         }
 
         public final OutputStream a() throws IOException {
             FileOutputStream fileOutputStream;
-            C4406a c4406a;
+            C0209a c0209a;
             if (cw.this.k <= 0) {
                 throw new IllegalArgumentException("Expected index 0 to be greater than 0 and less than the maximum value count of " + cw.this.k);
             }
@@ -161,12 +160,12 @@ public final class cw implements Closeable {
                             return cw.t;
                         }
                     }
-                    c4406a = new C4406a(this, fileOutputStream, (byte) 0);
+                    c0209a = new C0209a(this, fileOutputStream, (byte) 0);
                 } else {
                     throw new IllegalStateException();
                 }
             }
-            return c4406a;
+            return c0209a;
         }
 
         public final void b() throws IOException {
@@ -185,15 +184,14 @@ public final class cw implements Closeable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.cw$b */
     /* loaded from: classes10.dex */
-    public final class C4407b implements Closeable {
+    public final class b implements Closeable {
         private final String b;
         private final long c;
         private final InputStream[] d;
         private final long[] e;
 
-        /* synthetic */ C4407b(cw cwVar, String str, long j, InputStream[] inputStreamArr, long[] jArr, byte b) {
+        /* synthetic */ b(cw cwVar, String str, long j, InputStream[] inputStreamArr, long[] jArr, byte b) {
             this(str, j, inputStreamArr, jArr);
         }
 
@@ -208,7 +206,7 @@ public final class cw implements Closeable {
             }
         }
 
-        private C4407b(String str, long j, InputStream[] inputStreamArr, long[] jArr) {
+        private b(String str, long j, InputStream[] inputStreamArr, long[] jArr) {
             this.b = str;
             this.c = j;
             this.d = inputStreamArr;
@@ -218,20 +216,19 @@ public final class cw implements Closeable {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.cw$c */
     /* loaded from: classes10.dex */
-    public final class C4408c {
+    public final class c {
         private final String b;
         private final long[] c;
         private boolean d;
-        private C4405a e;
+        private a e;
         private long f;
 
-        /* synthetic */ C4408c(cw cwVar, String str, byte b) {
+        /* synthetic */ c(cw cwVar, String str, byte b) {
             this(str);
         }
 
-        private C4408c(String str) {
+        private c(String str) {
             this.b = str;
             this.c = new long[cw.this.k];
         }
@@ -241,8 +238,8 @@ public final class cw implements Closeable {
             return new File(file, this.b + "." + i + ".tmp");
         }
 
-        static /* synthetic */ boolean a(C4408c c4408c) {
-            c4408c.d = true;
+        static /* synthetic */ boolean a(c cVar) {
+            cVar.d = true;
             return true;
         }
 
@@ -265,11 +262,11 @@ public final class cw implements Closeable {
             return new File(file, this.b + "." + i);
         }
 
-        static /* synthetic */ void a(C4408c c4408c, String[] strArr) throws IOException {
+        static /* synthetic */ void a(c cVar, String[] strArr) throws IOException {
             if (strArr.length == cw.this.k) {
                 for (int i = 0; i < strArr.length; i++) {
                     try {
-                        c4408c.c[i] = Long.parseLong(strArr[i]);
+                        cVar.c[i] = Long.parseLong(strArr[i]);
                     } catch (NumberFormatException unused) {
                         throw a(strArr);
                     }
@@ -327,11 +324,11 @@ public final class cw implements Closeable {
         bufferedWriter.write(Integer.toString(this.k));
         bufferedWriter.write(StringUtils.LF);
         bufferedWriter.write(StringUtils.LF);
-        for (C4408c c4408c : this.o.values()) {
-            if (c4408c.e != null) {
-                bufferedWriter.write("DIRTY " + c4408c.b + '\n');
+        for (c cVar : this.o.values()) {
+            if (cVar.e != null) {
+                bufferedWriter.write("DIRTY " + cVar.b + '\n');
             } else {
-                bufferedWriter.write("CLEAN " + c4408c.b + c4408c.a() + '\n');
+                bufferedWriter.write("CLEAN " + cVar.b + cVar.a() + '\n');
             }
         }
         bufferedWriter.close();
@@ -372,9 +369,9 @@ public final class cw implements Closeable {
         }
         Iterator it = new ArrayList(this.o.values()).iterator();
         while (it.hasNext()) {
-            C4408c c4408c = (C4408c) it.next();
-            if (c4408c.e != null) {
-                c4408c.e.c();
+            c cVar = (c) it.next();
+            if (cVar.e != null) {
+                cVar.e.c();
             }
         }
         k();
@@ -411,9 +408,9 @@ public final class cw implements Closeable {
 
     private void g() throws IOException {
         a(this.g);
-        Iterator<C4408c> it = this.o.values().iterator();
+        Iterator<c> it = this.o.values().iterator();
         while (it.hasNext()) {
-            C4408c next = it.next();
+            c next = it.next();
             int i = 0;
             if (next.e != null) {
                 next.e = null;
@@ -432,22 +429,22 @@ public final class cw implements Closeable {
         }
     }
 
-    public final C4405a b(String str) throws IOException {
+    public final a b(String str) throws IOException {
         return d(str);
     }
 
     public final synchronized boolean c(String str) throws IOException {
         j();
         e(str);
-        C4408c c4408c = this.o.get(str);
-        if (c4408c != null && c4408c.e == null) {
+        c cVar = this.o.get(str);
+        if (cVar != null && cVar.e == null) {
             for (int i = 0; i < this.k; i++) {
-                File a2 = c4408c.a(i);
+                File a2 = cVar.a(i);
                 if (a2.exists() && !a2.delete()) {
                     throw new IOException("failed to delete ".concat(String.valueOf(a2)));
                 }
-                this.l -= c4408c.c[i];
-                c4408c.c[i] = 0;
+                this.l -= cVar.c[i];
+                cVar.c[i] = 0;
             }
             this.p++;
             this.m.append((CharSequence) ("REMOVE " + str + '\n'));
@@ -460,24 +457,24 @@ public final class cw implements Closeable {
         return false;
     }
 
-    private synchronized C4405a d(String str) throws IOException {
+    private synchronized a d(String str) throws IOException {
         j();
         e(str);
-        C4408c c4408c = this.o.get(str);
-        if (c4408c != null) {
-            if (c4408c.e != null) {
+        c cVar = this.o.get(str);
+        if (cVar != null) {
+            if (cVar.e != null) {
                 return null;
             }
         } else {
-            c4408c = new C4408c(this, str, (byte) 0);
-            this.o.put(str, c4408c);
+            cVar = new c(this, str, (byte) 0);
+            this.o.put(str, cVar);
         }
-        C4405a c4405a = new C4405a(this, c4408c, (byte) 0);
-        c4408c.e = c4405a;
+        a aVar = new a(this, cVar, (byte) 0);
+        cVar.e = aVar;
         Writer writer = this.m;
         writer.write("DIRTY " + str + '\n');
         this.m.flush();
-        return c4405a;
+        return aVar;
     }
 
     public final void a(int i) {
@@ -568,18 +565,18 @@ public final class cw implements Closeable {
         }
     }
 
-    public final synchronized C4407b a(String str) throws IOException {
+    public final synchronized b a(String str) throws IOException {
         j();
         e(str);
-        C4408c c4408c = this.o.get(str);
-        if (c4408c == null) {
+        c cVar = this.o.get(str);
+        if (cVar == null) {
             return null;
         }
-        if (c4408c.d) {
+        if (cVar.d) {
             InputStream[] inputStreamArr = new InputStream[this.k];
             for (int i = 0; i < this.k; i++) {
                 try {
-                    inputStreamArr[i] = new FileInputStream(c4408c.a(i));
+                    inputStreamArr[i] = new FileInputStream(cVar.a(i));
                 } catch (FileNotFoundException unused) {
                     for (int i2 = 0; i2 < this.k && inputStreamArr[i2] != null; i2++) {
                         a(inputStreamArr[i2]);
@@ -592,7 +589,7 @@ public final class cw implements Closeable {
             if (i()) {
                 e().submit(this.s);
             }
-            return new C4407b(this, str, c4408c.f, inputStreamArr, c4408c.c, (byte) 0);
+            return new b(this, str, cVar.f, inputStreamArr, cVar.c, (byte) 0);
         }
         return null;
     }
@@ -602,31 +599,31 @@ public final class cw implements Closeable {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public synchronized void a(C4405a c4405a, boolean z) throws IOException {
-        C4408c c4408c = c4405a.b;
-        if (c4408c.e == c4405a) {
-            if (z && !c4408c.d) {
+    public synchronized void a(a aVar, boolean z) throws IOException {
+        c cVar = aVar.b;
+        if (cVar.e == aVar) {
+            if (z && !cVar.d) {
                 for (int i = 0; i < this.k; i++) {
-                    if (c4405a.c[i]) {
-                        if (!c4408c.b(i).exists()) {
-                            c4405a.c();
+                    if (aVar.c[i]) {
+                        if (!cVar.b(i).exists()) {
+                            aVar.c();
                             return;
                         }
                     } else {
-                        c4405a.c();
+                        aVar.c();
                         throw new IllegalStateException("Newly created entry didn't create value for index ".concat(String.valueOf(i)));
                     }
                 }
             }
             for (int i2 = 0; i2 < this.k; i2++) {
-                File b2 = c4408c.b(i2);
+                File b2 = cVar.b(i2);
                 if (z) {
                     if (b2.exists()) {
-                        File a2 = c4408c.a(i2);
+                        File a2 = cVar.a(i2);
                         b2.renameTo(a2);
-                        long j = c4408c.c[i2];
+                        long j = cVar.c[i2];
                         long length = a2.length();
-                        c4408c.c[i2] = length;
+                        cVar.c[i2] = length;
                         this.l = (this.l - j) + length;
                     }
                 } else {
@@ -634,17 +631,17 @@ public final class cw implements Closeable {
                 }
             }
             this.p++;
-            c4408c.e = null;
-            if (!(c4408c.d | z)) {
-                this.o.remove(c4408c.b);
-                this.m.write("REMOVE " + c4408c.b + '\n');
+            cVar.e = null;
+            if (!(cVar.d | z)) {
+                this.o.remove(cVar.b);
+                this.m.write("REMOVE " + cVar.b + '\n');
             } else {
-                C4408c.a(c4408c);
-                this.m.write("CLEAN " + c4408c.b + c4408c.a() + '\n');
+                c.a(cVar);
+                this.m.write("CLEAN " + cVar.b + cVar.a() + '\n');
                 if (z) {
                     long j2 = this.q;
                     this.q = 1 + j2;
-                    c4408c.f = j2;
+                    cVar.f = j2;
                 }
             }
             this.m.flush();

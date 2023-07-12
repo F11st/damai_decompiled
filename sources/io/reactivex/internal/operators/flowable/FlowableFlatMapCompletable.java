@@ -1,11 +1,11 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -193,14 +193,14 @@ public final class FlowableFlatMapCompletable<T> extends AbstractFlowableWithUps
         }
     }
 
-    public FlowableFlatMapCompletable(AbstractC8147b<T> abstractC8147b, Function<? super T, ? extends CompletableSource> function, boolean z, int i) {
-        super(abstractC8147b);
+    public FlowableFlatMapCompletable(b<T> bVar, Function<? super T, ? extends CompletableSource> function, boolean z, int i) {
+        super(bVar);
         this.mapper = function;
         this.delayErrors = z;
         this.maxConcurrency = i;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new FlatMapCompletableMainSubscriber(subscriber, this.mapper, this.delayErrors, this.maxConcurrency));
     }

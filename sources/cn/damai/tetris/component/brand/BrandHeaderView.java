@@ -34,12 +34,11 @@ public class BrandHeaderView extends AbsView<BrandHeaderContract.Presenter> impl
     DmViewPager viewPager;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.brand.BrandHeaderView$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1782a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1782a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -69,7 +68,7 @@ public class BrandHeaderView extends AbsView<BrandHeaderContract.Presenter> impl
         this.indicator = (MagicIndicator) view.findViewById(R$id.brand_header_indicator);
         this.shareBtn = view.findViewById(R$id.brand_header_share);
         this.scrollView = (RecyclerView) view.findViewById(R$id.brand_header_couponview);
-        view.findViewById(R$id.brand_header_back).setOnClickListener(new View$OnClickListenerC1782a());
+        view.findViewById(R$id.brand_header_back).setOnClickListener(new a());
     }
 
     @Override // cn.damai.tetris.component.brand.BrandHeaderContract.View

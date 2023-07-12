@@ -1,11 +1,10 @@
 package com.taobao.android.dinamicx.notification;
 
 import androidx.annotation.NonNull;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DXEngineConfig;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import com.taobao.android.dinamicx.notification.DXSignalProduce;
-import com.taobao.android.dinamicx.template.download.C6398a;
 import com.taobao.android.dinamicx.template.download.DXTemplateItem;
 import java.util.ArrayList;
 import java.util.List;
@@ -55,14 +54,14 @@ public class DXNotificationCenter implements DXSignalProduce.SignalReceiver {
         this.h = new ArrayList();
     }
 
-    public synchronized void d(C6398a c6398a) {
-        if (c6398a == null) {
+    public synchronized void d(com.taobao.android.dinamicx.template.download.a aVar) {
+        if (aVar == null) {
             return;
         }
-        if (c6398a.b() && c6398a.a() != null) {
-            this.f.add(c6398a.a());
-        } else if (c6398a.a() != null) {
-            this.g.add(c6398a.a());
+        if (aVar.b() && aVar.a() != null) {
+            this.f.add(aVar.a());
+        } else if (aVar.a() != null) {
+            this.g.add(aVar.a());
         }
     }
 
@@ -120,7 +119,7 @@ public class DXNotificationCenter implements DXSignalProduce.SignalReceiver {
                             }
                         } catch (Throwable th) {
                             ry.b(th);
-                            DXAppMonitor.q(nz.TAG, null, "Signal", "Signal_Exception", C6368e.DX_ERROR_CODE_SIGNAL_EXCEPTION_CRASH_2, ry.a(th));
+                            DXAppMonitor.q(nz.TAG, null, "Signal", "Signal_Exception", e.DX_ERROR_CODE_SIGNAL_EXCEPTION_CRASH_2, ry.a(th));
                         }
                     }
                 }

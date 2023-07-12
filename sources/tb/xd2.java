@@ -16,15 +16,14 @@ public class xd2<E> extends AbstractList<E> implements RandomAccess {
     private Object b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.xd2$b */
     /* loaded from: classes3.dex */
-    private static class C9921b<T> implements Iterator<T> {
-        private static final C9921b a = new C9921b();
+    private static class b<T> implements Iterator<T> {
+        private static final b a = new b();
 
-        private C9921b() {
+        private b() {
         }
 
-        public static <T> C9921b<T> a() {
+        public static <T> b<T> a() {
             return a;
         }
 
@@ -45,17 +44,16 @@ public class xd2<E> extends AbstractList<E> implements RandomAccess {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.xd2$c */
     /* loaded from: classes3.dex */
-    private class C9922c extends AbstractC9923d<E> {
+    private class c extends d<E> {
         private final int b;
 
-        public C9922c() {
+        public c() {
             super();
             this.b = ((AbstractList) xd2.this).modCount;
         }
 
-        @Override // tb.xd2.AbstractC9923d
+        @Override // tb.xd2.d
         protected void a() {
             if (((AbstractList) xd2.this).modCount == this.b) {
                 return;
@@ -63,7 +61,7 @@ public class xd2<E> extends AbstractList<E> implements RandomAccess {
             throw new ConcurrentModificationException("ModCount: " + ((AbstractList) xd2.this).modCount + "; expected: " + this.b);
         }
 
-        @Override // tb.xd2.AbstractC9923d
+        @Override // tb.xd2.d
         protected E b() {
             return (E) xd2.this.b;
         }
@@ -76,12 +74,11 @@ public class xd2<E> extends AbstractList<E> implements RandomAccess {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.xd2$d */
     /* loaded from: classes3.dex */
-    private static abstract class AbstractC9923d<T> implements Iterator<T> {
+    private static abstract class d<T> implements Iterator<T> {
         private boolean a;
 
-        private AbstractC9923d() {
+        private d() {
         }
 
         protected abstract void a();
@@ -202,13 +199,13 @@ public class xd2<E> extends AbstractList<E> implements RandomAccess {
     public Iterator<E> iterator() {
         int i = this.a;
         if (i == 0) {
-            C9921b a = C9921b.a();
-            if (a == null) {
+            b a2 = b.a();
+            if (a2 == null) {
                 a(2);
             }
-            return a;
+            return a2;
         } else if (i == 1) {
-            return new C9922c();
+            return new c();
         } else {
             Iterator<E> it = super.iterator();
             if (it == null) {

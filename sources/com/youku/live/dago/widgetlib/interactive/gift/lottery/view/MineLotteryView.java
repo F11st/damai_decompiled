@@ -73,7 +73,7 @@ public class MineLotteryView extends RelativeLayout implements View.OnClickListe
             ipChange.ipc$dispatch("-1909899128", new Object[]{this});
             return;
         }
-        LayoutInflater.from(this.mContext).inflate(R.C7942layout.dago_pgc_mine_lottery_view, this);
+        LayoutInflater.from(this.mContext).inflate(R.layout.dago_pgc_mine_lottery_view, this);
         this.mLightImage = (ImageView) findViewById(R.id.lottery_bg_light);
         this.mLotteryContainer = (LinearLayout) findViewById(R.id.lottery_num_container);
         this.mLotteryImage = (ImageView) findViewById(R.id.lottery_img);
@@ -131,13 +131,13 @@ public class MineLotteryView extends RelativeLayout implements View.OnClickListe
             ((ILog) Dsl.getService(ILog.class)).d("liulei-lottery", "data.getLotteryTimes() = " + mineLotteryData2.getLotteryTimes());
             int lotteryTimes = mineLotteryData2.getLotteryTimes();
             if (lotteryTimes == 10) {
-                i = R.C7941drawable.mine_lottery_ten;
+                i = R.drawable.mine_lottery_ten;
             } else if (lotteryTimes == 100) {
-                i = R.C7941drawable.mine_lottery_one_hundred;
+                i = R.drawable.mine_lottery_one_hundred;
             } else if (lotteryTimes == 500) {
-                i = R.C7941drawable.mine_lottery_five_hundred;
+                i = R.drawable.mine_lottery_five_hundred;
             } else if (lotteryTimes == 5000) {
-                i = R.C7941drawable.mine_lottery_five_thousand;
+                i = R.drawable.mine_lottery_five_thousand;
             } else if (lotteryTimes == 10000) {
                 this.mLotteryTitle.setVisibility(4);
                 this.mLotteryContainer.setVisibility(4);
@@ -258,8 +258,8 @@ public class MineLotteryView extends RelativeLayout implements View.OnClickListe
         if (list == null) {
             return;
         }
-        this.mStartImage.setImageResource(R.C7941drawable.dagp_pgc_lottery_star_bg);
-        this.mLightImage.setImageResource(R.C7941drawable.dago_pgc_lottery_light_bg);
+        this.mStartImage.setImageResource(R.drawable.dagp_pgc_lottery_star_bg);
+        this.mLightImage.setImageResource(R.drawable.dago_pgc_lottery_light_bg);
         ((AnimationDrawable) this.mLightImage.getDrawable()).start();
         ((AnimationDrawable) this.mStartImage.getDrawable()).start();
         this.step = 1;
@@ -295,7 +295,7 @@ public class MineLotteryView extends RelativeLayout implements View.OnClickListe
         }
         ImageView imageView = this.mLotteryTitle;
         if (imageView != null) {
-            imageView.setImageResource(R.C7941drawable.dago_third_view_lottery_title);
+            imageView.setImageResource(R.drawable.dago_third_view_lottery_title);
         }
     }
 

@@ -27,9 +27,9 @@ import com.youku.arch.v3.core.ItemValue;
 import com.youku.arch.v3.core.item.GenericItem;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tb.C9796v;
 import tb.b41;
 import tb.s60;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -53,13 +53,12 @@ public final class HomeBallView extends AbsView<GenericItem<ItemValue>, HomeBall
     private final TextView tvLabel;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.ball.HomeBallView$a */
     /* loaded from: classes7.dex */
-    public static final class View$OnAttachStateChangeListenerC3463a implements View.OnAttachStateChangeListener {
+    public static final class a implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ HomeBallBean b;
 
-        View$OnAttachStateChangeListenerC3463a(HomeBallBean homeBallBean) {
+        a(HomeBallBean homeBallBean) {
             this.b = homeBallBean;
         }
 
@@ -102,13 +101,12 @@ public final class HomeBallView extends AbsView<GenericItem<ItemValue>, HomeBall
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.ball.HomeBallView$b  reason: invalid class name */
     /* loaded from: classes7.dex */
-    public static final class animationAnimation$AnimationListenerC3464b implements Animation.AnimationListener {
+    public static final class b implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ HomeBallBean b;
 
-        animationAnimation$AnimationListenerC3464b(HomeBallBean homeBallBean) {
+        b(HomeBallBean homeBallBean) {
             this.b = homeBallBean;
         }
 
@@ -134,7 +132,7 @@ public final class HomeBallView extends AbsView<GenericItem<ItemValue>, HomeBall
                 ipChange.ipc$dispatch("1179353020", new Object[]{this, animation});
                 return;
             }
-            b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+            b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             System.out.println((Object) "onAnimationEnd 动画复用记录ddddddddd");
             if (HomeBallView.this.handler == null) {
                 HomeBallView.this.handler = new Handler();
@@ -146,7 +144,7 @@ public final class HomeBallView extends AbsView<GenericItem<ItemValue>, HomeBall
                 handler.postDelayed(new Runnable() { // from class: tb.ax0
                     @Override // java.lang.Runnable
                     public final void run() {
-                        HomeBallView.animationAnimation$AnimationListenerC3464b.b(HomeBallView.this, homeBallBean);
+                        HomeBallView.b.b(HomeBallView.this, homeBallBean);
                     }
                 }, 2000L);
             }
@@ -158,7 +156,7 @@ public final class HomeBallView extends AbsView<GenericItem<ItemValue>, HomeBall
             if (AndroidInstantRuntime.support(ipChange, "760731192")) {
                 ipChange.ipc$dispatch("760731192", new Object[]{this, animation});
             } else {
-                b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+                b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             }
         }
 
@@ -169,7 +167,7 @@ public final class HomeBallView extends AbsView<GenericItem<ItemValue>, HomeBall
                 ipChange.ipc$dispatch("-2017913835", new Object[]{this, animation});
                 return;
             }
-            b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+            b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             HomeBallView.this.setChange(true);
             HomeBallView homeBallView = HomeBallView.this;
             homeBallView.setPos((homeBallView.getPos() + 1) % 2);
@@ -179,13 +177,12 @@ public final class HomeBallView extends AbsView<GenericItem<ItemValue>, HomeBall
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.ball.HomeBallView$c  reason: invalid class name */
     /* loaded from: classes7.dex */
-    public static final class animationAnimation$AnimationListenerC3465c implements Animation.AnimationListener {
+    public static final class c implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ HomeBallBean b;
 
-        animationAnimation$AnimationListenerC3465c(HomeBallBean homeBallBean) {
+        c(HomeBallBean homeBallBean) {
             this.b = homeBallBean;
         }
 
@@ -196,7 +193,7 @@ public final class HomeBallView extends AbsView<GenericItem<ItemValue>, HomeBall
                 ipChange.ipc$dispatch("-1050799910", new Object[]{this, animation});
                 return;
             }
-            b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+            b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             String str = HomeBallView.this.isChange() ? "需要执行动画" : "不需要执行动画";
             System.out.println((Object) ("onAnimationEnd 开始文字onAnimationEnd  " + str));
             if (HomeBallView.this.isChange()) {
@@ -213,7 +210,7 @@ public final class HomeBallView extends AbsView<GenericItem<ItemValue>, HomeBall
             if (AndroidInstantRuntime.support(ipChange, "1123895386")) {
                 ipChange.ipc$dispatch("1123895386", new Object[]{this, animation});
             } else {
-                b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+                b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             }
         }
 
@@ -223,7 +220,7 @@ public final class HomeBallView extends AbsView<GenericItem<ItemValue>, HomeBall
             if (AndroidInstantRuntime.support(ipChange, "-2006198861")) {
                 ipChange.ipc$dispatch("-2006198861", new Object[]{this, animation});
             } else {
-                b41.i(animation, C9796v.TAK_ABILITY_SHOW_POP_ANIMATION);
+                b41.i(animation, v.TAK_ABILITY_SHOW_POP_ANIMATION);
             }
         }
     }
@@ -301,7 +298,7 @@ public final class HomeBallView extends AbsView<GenericItem<ItemValue>, HomeBall
         if (brickRotateAnim != null) {
             brickRotateAnim.setDuration(this.bgDuration);
             brickRotateAnim.setRepeatCount(0);
-            brickRotateAnim.setAnimationListener(new animationAnimation$AnimationListenerC3464b(homeBallBean));
+            brickRotateAnim.setAnimationListener(new b(homeBallBean));
             brickRotateAnim.setInterpolator(new LinearInterpolator());
             this.rlLabel.startAnimation(brickRotateAnim);
         }
@@ -331,15 +328,15 @@ public final class HomeBallView extends AbsView<GenericItem<ItemValue>, HomeBall
         s60 s60Var = s60.INSTANCE;
         Context context = this.itemView.getContext();
         b41.h(context, "itemView.context");
-        int b = i + s60Var.b(context, 11);
+        int b2 = i + s60Var.b(context, 11);
         Context context2 = this.itemView.getContext();
         b41.h(context2, "itemView.context");
-        int b2 = s60Var.b(context2, 52);
+        int b3 = s60Var.b(context2, 52);
         ViewGroup.LayoutParams layoutParams = this.tvLabel.getLayoutParams();
-        if (b >= b2) {
-            b = b2;
+        if (b2 >= b3) {
+            b2 = b3;
         }
-        layoutParams.width = b;
+        layoutParams.width = b2;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -365,7 +362,7 @@ public final class HomeBallView extends AbsView<GenericItem<ItemValue>, HomeBall
         scaleAnimation.setRepeatCount(0);
         scaleAnimation.setDuration(this.textDuration);
         scaleAnimation.setFillAfter(true);
-        scaleAnimation.setAnimationListener(new animationAnimation$AnimationListenerC3465c(homeBallBean));
+        scaleAnimation.setAnimationListener(new c(homeBallBean));
         this.tvLabel.startAnimation(scaleAnimation);
     }
 

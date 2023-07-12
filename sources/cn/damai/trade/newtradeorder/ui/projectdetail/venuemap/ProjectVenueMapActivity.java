@@ -69,12 +69,11 @@ public class ProjectVenueMapActivity extends DamaiBaseActivity<VenuePresenter, V
     private String mVenueName;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.venuemap.ProjectVenueMapActivity$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2437a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2437a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -89,12 +88,11 @@ public class ProjectVenueMapActivity extends DamaiBaseActivity<VenuePresenter, V
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.venuemap.ProjectVenueMapActivity$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2438b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2438b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -282,7 +280,7 @@ public class ProjectVenueMapActivity extends DamaiBaseActivity<VenuePresenter, V
         if (AndroidInstantRuntime.support(ipChange, "-95470146")) {
             ipChange.ipc$dispatch("-95470146", new Object[]{this});
         } else {
-            this.mOnInfoNavigationClickListener = new View$OnClickListenerC2438b();
+            this.mOnInfoNavigationClickListener = new b();
         }
     }
 
@@ -585,7 +583,7 @@ public class ProjectVenueMapActivity extends DamaiBaseActivity<VenuePresenter, V
         this.mLvVenueTitleView = (LinearLayout) findViewById(R$id.trade_project_venue_title_lv);
         this.mTvVenueTitleBack = (DMIconFontTextView) findViewById(R$id.trade_project_venue_title_left_icon);
         this.mTvVenueMainTitle = (TextView) findViewById(R$id.trade_project_venue_title_main_tv);
-        this.mTvVenueTitleBack.setOnClickListener(new View$OnClickListenerC2437a());
+        this.mTvVenueTitleBack.setOnClickListener(new a());
         if (!wh2.j(this.mVenueName)) {
             this.mTvVenueMainTitle.setText(this.mVenueName);
         } else {

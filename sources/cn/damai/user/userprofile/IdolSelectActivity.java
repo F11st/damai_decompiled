@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import androidx.viewpager.widget.ViewPager;
-import cn.damai.common.user.C0525a;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.view.PagerSlidingTabStrip;
 import cn.damai.homepage.R$id;
@@ -26,12 +26,11 @@ public class IdolSelectActivity extends DamaiBaseActivity {
     PagerSlidingTabStrip tabs;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.IdolSelectActivity$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2740a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2740a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -47,12 +46,11 @@ public class IdolSelectActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.IdolSelectActivity$b */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2741b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2741b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -72,7 +70,7 @@ public class IdolSelectActivity extends DamaiBaseActivity {
             ipChange.ipc$dispatch("737898323", new Object[]{this});
             return;
         }
-        findViewById(R$id.select_null).setOnClickListener(new View$OnClickListenerC2740a());
+        findViewById(R$id.select_null).setOnClickListener(new a());
         this.mCategoryListFragments = new ArrayList();
         int size = IdolSelectRequest.tabs.size();
         for (int i = 0; i < size; i++) {
@@ -159,7 +157,7 @@ public class IdolSelectActivity extends DamaiBaseActivity {
         this.myViewpager = (ViewPager) findViewById(R$id.vPager);
         this.tabs = (PagerSlidingTabStrip) findViewById(R$id.indicator);
         initPage();
-        this.base_header_left.setOnClickListener(new View$OnClickListenerC2741b());
+        this.base_header_left.setOnClickListener(new b());
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -171,7 +169,7 @@ public class IdolSelectActivity extends DamaiBaseActivity {
             return;
         }
         super.onCreate(bundle);
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i("circle_list"));
+        setDamaiUTKeyBuilder(new a.b().i("circle_list"));
     }
 
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity

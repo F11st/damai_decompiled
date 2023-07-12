@@ -14,13 +14,12 @@ public class j82 {
     private String b;
     private boolean c;
     private String d;
-    private C9302a e;
+    private a e;
     private RegionSeat3DVrInfo f;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.j82$a */
     /* loaded from: classes7.dex */
-    public static class C9302a {
+    public static class a {
         private static transient /* synthetic */ IpChange $ipChange;
         private String a;
         private long b;
@@ -85,9 +84,9 @@ public class j82 {
         }
     }
 
-    public C9302a a() {
+    public a a() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1692412129") ? (C9302a) ipChange.ipc$dispatch("-1692412129", new Object[]{this}) : this.e;
+        return AndroidInstantRuntime.support(ipChange, "-1692412129") ? (a) ipChange.ipc$dispatch("-1692412129", new Object[]{this}) : this.e;
     }
 
     public String b() {
@@ -115,12 +114,12 @@ public class j82 {
         return AndroidInstantRuntime.support(ipChange, "-1430786878") ? ((Boolean) ipChange.ipc$dispatch("-1430786878", new Object[]{this})).booleanValue() : this.c;
     }
 
-    public void g(C9302a c9302a) {
+    public void g(a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "2095981167")) {
-            ipChange.ipc$dispatch("2095981167", new Object[]{this, c9302a});
+            ipChange.ipc$dispatch("2095981167", new Object[]{this, aVar});
         } else {
-            this.e = c9302a;
+            this.e = aVar;
         }
     }
 

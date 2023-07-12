@@ -22,7 +22,6 @@ import cn.damai.tetris.component.star.bean.TourInfoItem;
 import cn.damai.tetris.core.BasePresenter;
 import cn.damai.tetris.core.BaseSection;
 import cn.damai.tetris.core.TrackInfo;
-import cn.damai.uikit.image.C2497a;
 import cn.damai.uikit.nav.INav;
 import cn.damai.uikit.nav.NavProxy;
 import cn.damai.uikit.view.DMLabelType;
@@ -32,7 +31,7 @@ import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 import java.util.List;
-import tb.C9175gc;
+import tb.gc;
 import tb.ja;
 import tb.ol;
 import tb.q60;
@@ -46,13 +45,12 @@ public class TourInfoPresenter extends BasePresenter<TourInfoContract.Model, Tou
     private ProxyVideoView mVideoView;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.TourInfoPresenter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1955a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TourInfoBean a;
 
-        View$OnClickListenerC1955a(TourInfoBean tourInfoBean) {
+        a(TourInfoBean tourInfoBean) {
             this.a = tourInfoBean;
         }
 
@@ -69,12 +67,11 @@ public class TourInfoPresenter extends BasePresenter<TourInfoContract.Model, Tou
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.TourInfoPresenter$b */
     /* loaded from: classes16.dex */
-    public class View$OnAttachStateChangeListenerC1956b implements View.OnAttachStateChangeListener {
+    public class b implements View.OnAttachStateChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnAttachStateChangeListenerC1956b() {
+        b() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -99,14 +96,13 @@ public class TourInfoPresenter extends BasePresenter<TourInfoContract.Model, Tou
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.TourInfoPresenter$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1957c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TourCityItem a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC1957c(TourCityItem tourCityItem, int i) {
+        c(TourCityItem tourCityItem, int i) {
             this.a = tourCityItem;
             this.b = i;
         }
@@ -183,9 +179,9 @@ public class TourInfoPresenter extends BasePresenter<TourInfoContract.Model, Tou
             ipChange.ipc$dispatch("1138365841", new Object[]{this, tourInfoItem, viewGroup});
             return;
         }
-        C9175gc.a((TextView) viewGroup.findViewById(R$id.kv_star_tour_info_pricevalue), tourInfoItem.getTourPriceLow());
-        C9175gc.a((TextView) viewGroup.findViewById(R$id.kv_star_tour_info_name), tourInfoItem.getTourName());
-        C9175gc.a((TextView) viewGroup.findViewById(R$id.kv_star_tour_info_desc), tourInfoItem.getTourDesc());
+        gc.a((TextView) viewGroup.findViewById(R$id.kv_star_tour_info_pricevalue), tourInfoItem.getTourPriceLow());
+        gc.a((TextView) viewGroup.findViewById(R$id.kv_star_tour_info_name), tourInfoItem.getTourName());
+        gc.a((TextView) viewGroup.findViewById(R$id.kv_star_tour_info_desc), tourInfoItem.getTourDesc());
     }
 
     private void bindCity(View view, TourCityItem tourCityItem, boolean z, int i) {
@@ -194,20 +190,20 @@ public class TourInfoPresenter extends BasePresenter<TourInfoContract.Model, Tou
             ipChange.ipc$dispatch("219739084", new Object[]{this, view, tourCityItem, Boolean.valueOf(z), Integer.valueOf(i)});
             return;
         }
-        C9175gc.a((TextView) view.findViewById(R$id.star_tour_info_cityname), tourCityItem.getCityName());
-        C9175gc.a((TextView) view.findViewById(R$id.star_tour_info_citydesc), tourCityItem.getVenueName());
-        C9175gc.a((TextView) view.findViewById(R$id.star_tour_info_citydate), tourCityItem.getShowTime());
+        gc.a((TextView) view.findViewById(R$id.star_tour_info_cityname), tourCityItem.getCityName());
+        gc.a((TextView) view.findViewById(R$id.star_tour_info_citydesc), tourCityItem.getVenueName());
+        gc.a((TextView) view.findViewById(R$id.star_tour_info_citydate), tourCityItem.getShowTime());
         HashMap hashMap = new HashMap();
         hashMap.put("item_id", tourCityItem.getItemId() + "");
         if (this.mTrackInfo.getArgsMap() != null) {
             hashMap.putAll(this.mTrackInfo.getArgsMap());
         }
         userTrackExpose(view, "tour_item_" + i);
-        view.setOnClickListener(new View$OnClickListenerC1957c(tourCityItem, i));
+        view.setOnClickListener(new c(tourCityItem, i));
         if (!TextUtils.isEmpty(tourCityItem.tourCityPic)) {
             int i2 = R$id.star_tour_info_cityimg;
             view.findViewById(i2).setVisibility(0);
-            C2497a.a().loadinto(tourCityItem.tourCityPic, (ImageView) view.findViewById(i2));
+            cn.damai.uikit.image.a.a().loadinto(tourCityItem.tourCityPic, (ImageView) view.findViewById(i2));
         } else if (z) {
             view.findViewById(R$id.star_tour_info_cityimg).setVisibility(0);
         } else {
@@ -222,7 +218,7 @@ public class TourInfoPresenter extends BasePresenter<TourInfoContract.Model, Tou
             return;
         }
         int i = R$id.tv_ipinfo_tagleft;
-        C9175gc.a((TextView) view.findViewById(i), str);
+        gc.a((TextView) view.findViewById(i), str);
         ((TextView) view.findViewById(i)).setTextColor(this.mContext.getActivity().getResources().getColor(R$color.color_FF993A));
         view.findViewById(R$id.tv_ipinfo_tagbg).setBackground(this.mContext.getActivity().getResources().getDrawable(R$drawable.bg_border_iptag_ff993a));
     }
@@ -250,7 +246,7 @@ public class TourInfoPresenter extends BasePresenter<TourInfoContract.Model, Tou
         this.mVideoView.mute(true);
         TrackInfo trackInfo = this.mTrackInfo;
         this.mVideoView.setListener(new ol(getContext().getActivity(), this.mVideoView, trackInfo == null ? StarIndexFragment.Default_PAGE : trackInfo.trackB, trackInfo == null ? "anchor_tour" : trackInfo.trackC));
-        getView().getView().addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC1956b());
+        getView().getView().addOnAttachStateChangeListener(new b());
         VideoInfo videoInfo = new VideoInfo();
         if (!TextUtils.isEmpty(tourInfoBean.contentVideoUrl)) {
             videoInfo.setVideoUrl(tourInfoBean.contentVideoUrl);
@@ -357,8 +353,8 @@ public class TourInfoPresenter extends BasePresenter<TourInfoContract.Model, Tou
             return;
         }
         addCities(data.getTourCities());
-        View$OnClickListenerC1955a view$OnClickListenerC1955a = new View$OnClickListenerC1955a(data);
-        getView().getKVInfoView().setOnClickListener(view$OnClickListenerC1955a);
-        getView().getNKVInfoView().setOnClickListener(view$OnClickListenerC1955a);
+        a aVar = new a(data);
+        getView().getKVInfoView().setOnClickListener(aVar);
+        getView().getNKVInfoView().setOnClickListener(aVar);
     }
 }

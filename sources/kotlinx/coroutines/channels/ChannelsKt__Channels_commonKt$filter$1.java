@@ -58,7 +58,7 @@ final class ChannelsKt__Channels_commonKt$filter$1 extends SuspendLambda impleme
     public final java.lang.Object invokeSuspend(@org.jetbrains.annotations.NotNull java.lang.Object r10) {
         /*
             r9 = this;
-            java.lang.Object r0 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r0 = kotlin.coroutines.intrinsics.a.d()
             int r1 = r9.label
             r2 = 3
             r3 = 2

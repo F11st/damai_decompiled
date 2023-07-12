@@ -12,7 +12,6 @@ import android.provider.MediaStore;
 import android.text.TextUtils;
 import androidx.exifinterface.media.ExifInterface;
 import com.alibaba.pictures.uploader.FileUploader;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.live.dago.liveplayback.widget.plugins.resize.AntiShakeOrientationEventListener;
@@ -66,7 +65,7 @@ public final class pi0 {
             r8 = 6
             r9 = 0
             r4 = r13
-            int r1 = kotlin.text.C8596g.f0(r4, r5, r6, r7, r8, r9)     // Catch: java.io.IOException -> L89
+            int r1 = kotlin.text.g.f0(r4, r5, r6, r7, r8, r9)     // Catch: java.io.IOException -> L89
             if (r1 < 0) goto L45
             java.lang.String r5 = "."
             r6 = 0
@@ -74,7 +73,7 @@ public final class pi0 {
             r8 = 6
             r9 = 0
             r4 = r13
-            int r1 = kotlin.text.C8596g.f0(r4, r5, r6, r7, r8, r9)     // Catch: java.io.IOException -> L89
+            int r1 = kotlin.text.g.f0(r4, r5, r6, r7, r8, r9)     // Catch: java.io.IOException -> L89
             java.lang.String r13 = r13.substring(r1)     // Catch: java.io.IOException -> L89
             java.lang.String r1 = "(this as java.lang.String).substring(startIndex)"
             tb.b41.h(r13, r1)     // Catch: java.io.IOException -> L89
@@ -170,8 +169,8 @@ public final class pi0 {
                 return decodeFileDescriptor;
             }
         } catch (Exception e2) {
-            FileUploader.C3645a c3645a = FileUploader.Companion;
-            c3645a.h("MoImageDecodeHelper.decodeImageFile:" + e2);
+            FileUploader.a aVar = FileUploader.Companion;
+            aVar.h("MoImageDecodeHelper.decodeImageFile:" + e2);
         }
         return null;
     }
@@ -183,7 +182,7 @@ public final class pi0 {
             return (Uri) ipChange.ipc$dispatch("173529916", new Object[]{this, context, str});
         }
         b41.i(context, WPKFactory.INIT_KEY_CONTEXT);
-        b41.i(str, AbstractC3893a.V);
+        b41.i(str, com.alibaba.security.realidentity.jsbridge.a.V);
         Cursor query = context.getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, new String[]{"_id"}, "_data=? ", new String[]{str}, null);
         if (query == null || !query.moveToFirst()) {
             if (query != null) {
@@ -219,7 +218,7 @@ public final class pi0 {
             return (Uri) ipChange.ipc$dispatch("-1624635812", new Object[]{this, context, str});
         }
         b41.i(context, WPKFactory.INIT_KEY_CONTEXT);
-        b41.i(str, AbstractC3893a.V);
+        b41.i(str, com.alibaba.security.realidentity.jsbridge.a.V);
         Cursor query = context.getContentResolver().query(MediaStore.Video.Media.EXTERNAL_CONTENT_URI, new String[]{"_id"}, "_data=? ", new String[]{str}, null);
         if (query == null || !query.moveToFirst()) {
             if (query != null) {
@@ -250,8 +249,8 @@ public final class pi0 {
             }
             return false;
         } catch (Exception e) {
-            FileUploader.C3645a c3645a = FileUploader.Companion;
-            c3645a.h("MoImageDecodeHelper:isFileNotAccess:" + e);
+            FileUploader.a aVar = FileUploader.Companion;
+            aVar.h("MoImageDecodeHelper:isFileNotAccess:" + e);
             return false;
         }
     }
@@ -274,8 +273,8 @@ public final class pi0 {
                 xj.a(e, null);
             }
         } catch (Exception e2) {
-            FileUploader.C3645a c3645a = FileUploader.Companion;
-            c3645a.h("MoImageDecodeHelper:readImageRotation:" + e2);
+            FileUploader.a aVar = FileUploader.Companion;
+            aVar.h("MoImageDecodeHelper:readImageRotation:" + e2);
         }
         return i;
     }

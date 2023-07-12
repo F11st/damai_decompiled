@@ -55,8 +55,8 @@ public class ScalpelFrameLayout extends FrameLayout {
     private float lastOneY;
     private float lastTwoX;
     private float lastTwoY;
-    private final AbstractC3729c<C3728b> layeredViewPool;
-    private final Deque<C3728b> layeredViewQueue;
+    private final c<b> layeredViewPool;
+    private final Deque<b> layeredViewQueue;
     private final int[] location;
     private final Matrix matrix;
     private int multiTouchTracking;
@@ -75,30 +75,28 @@ public class ScalpelFrameLayout extends FrameLayout {
     private float zoom;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayerconsole.view.ScalpelFrameLayout$a */
     /* loaded from: classes8.dex */
-    class C3727a extends AbstractC3729c<C3728b> {
-        C3727a(ScalpelFrameLayout scalpelFrameLayout, int i) {
+    class a extends c<b> {
+        a(ScalpelFrameLayout scalpelFrameLayout, int i) {
             super(i);
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.alibaba.poplayerconsole.view.ScalpelFrameLayout.AbstractC3729c
+        @Override // com.alibaba.poplayerconsole.view.ScalpelFrameLayout.c
         /* renamed from: d */
-        public C3728b a() {
-            return new C3728b(null);
+        public b a() {
+            return new b(null);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayerconsole.view.ScalpelFrameLayout$b */
     /* loaded from: classes8.dex */
-    public static class C3728b {
+    public static class b {
         View a;
         int b;
 
-        private C3728b() {
+        private b() {
         }
 
         void a() {
@@ -111,18 +109,17 @@ public class ScalpelFrameLayout extends FrameLayout {
             this.b = i;
         }
 
-        /* synthetic */ C3728b(C3727a c3727a) {
+        /* synthetic */ b(a aVar) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayerconsole.view.ScalpelFrameLayout$c */
     /* loaded from: classes8.dex */
-    private static abstract class AbstractC3729c<T> {
+    private static abstract class c<T> {
         private final Deque<T> a;
 
-        AbstractC3729c(int i) {
+        c(int i) {
             this.a = new ArrayDeque(i);
             for (int i2 = 0; i2 < i; i2++) {
                 this.a.addLast(a());
@@ -187,12 +184,12 @@ public class ScalpelFrameLayout extends FrameLayout {
         if (this.layeredViewQueue.isEmpty()) {
             int childCount = getChildCount();
             for (int i = 0; i < childCount; i++) {
-                C3728b b = this.layeredViewPool.b();
-                b.b(getChildAt(i), 0);
-                this.layeredViewQueue.add(b);
+                b b2 = this.layeredViewPool.b();
+                b2.b(getChildAt(i), 0);
+                this.layeredViewQueue.add(b2);
             }
             while (!this.layeredViewQueue.isEmpty()) {
-                C3728b removeFirst = this.layeredViewQueue.removeFirst();
+                b removeFirst = this.layeredViewQueue.removeFirst();
                 View view = removeFirst.a;
                 int i2 = removeFirst.b;
                 removeFirst.a();
@@ -233,9 +230,9 @@ public class ScalpelFrameLayout extends FrameLayout {
                         if (this.visibilities.get(i4)) {
                             View childAt2 = viewGroup2.getChildAt(i4);
                             childAt2.setVisibility(0);
-                            C3728b b2 = this.layeredViewPool.b();
-                            b2.b(childAt2, i2 + 1);
-                            this.layeredViewQueue.add(b2);
+                            b b3 = this.layeredViewPool.b();
+                            b3.b(childAt2, i2 + 1);
+                            this.layeredViewQueue.add(b3);
                         }
                     }
                 }
@@ -340,7 +337,7 @@ public class ScalpelFrameLayout extends FrameLayout {
         this.visibilities = new BitSet(50);
         this.idNames = new SparseArray<>();
         this.layeredViewQueue = new ArrayDeque();
-        this.layeredViewPool = new C3727a(this, 50);
+        this.layeredViewPool = new a(this, 50);
         this.drawViews = true;
         this.pointerOne = -1;
         this.pointerTwo = -1;

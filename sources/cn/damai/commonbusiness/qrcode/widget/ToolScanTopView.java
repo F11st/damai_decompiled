@@ -79,12 +79,11 @@ public class ToolScanTopView extends RelativeLayout implements ScaleFinderView.O
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.qrcode.widget.ToolScanTopView$a */
     /* loaded from: classes4.dex */
-    public class DialogInterface$OnCancelListenerC0792a implements DialogInterface.OnCancelListener {
+    public class a implements DialogInterface.OnCancelListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnCancelListenerC0792a() {
+        a() {
         }
 
         @Override // android.content.DialogInterface.OnCancelListener
@@ -229,7 +228,7 @@ public class ToolScanTopView extends RelativeLayout implements ScaleFinderView.O
         if (qRCodeActivity == null || qRCodeActivity.isFinishing()) {
             return;
         }
-        new AlertDialog.Builder(this.mActivity).setTitle(ErrControlViewInfo.TYPE_ALL).setMessage(jSONArray).setCancelable(true).setOnCancelListener(new DialogInterface$OnCancelListenerC0792a()).create().show();
+        new AlertDialog.Builder(this.mActivity).setTitle(ErrControlViewInfo.TYPE_ALL).setMessage(jSONArray).setCancelable(true).setOnCancelListener(new a()).create().show();
     }
 
     /* JADX INFO: Access modifiers changed from: private */

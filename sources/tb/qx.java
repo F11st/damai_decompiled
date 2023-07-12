@@ -96,7 +96,7 @@ public class qx extends cz {
         return e(dXRuntimeContext);
     }
 
-    @Override // tb.cz, com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // tb.cz, com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         return super.evalWithArgs(objArr, dXRuntimeContext);
     }

@@ -2,8 +2,6 @@ package tb;
 
 import android.graphics.PointF;
 import com.airbnb.lottie.animation.keyframe.BaseKeyframeAnimation;
-import com.airbnb.lottie.animation.keyframe.C2853g;
-import com.airbnb.lottie.animation.keyframe.C2854h;
 import com.airbnb.lottie.model.animatable.AnimatableValue;
 import java.util.List;
 
@@ -19,9 +17,9 @@ public class n5 implements AnimatableValue<PointF, PointF> {
     @Override // com.airbnb.lottie.model.animatable.AnimatableValue
     public BaseKeyframeAnimation<PointF, PointF> createAnimation() {
         if (this.a.get(0).h()) {
-            return new C2854h(this.a);
+            return new com.airbnb.lottie.animation.keyframe.h(this.a);
         }
-        return new C2853g(this.a);
+        return new com.airbnb.lottie.animation.keyframe.g(this.a);
     }
 
     @Override // com.airbnb.lottie.model.animatable.AnimatableValue

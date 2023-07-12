@@ -36,7 +36,7 @@ public class TickletDetailViewPagerAdapter extends PagerAdapter {
     private List<UserTicketTable> b;
     private ViewGroup c;
     private String d;
-    private CountDownTimerC2044a e;
+    private a e;
     private int f;
     private TickletExtraInfo g;
     private TickletTicketCallback h;
@@ -46,12 +46,11 @@ public class TickletDetailViewPagerAdapter extends PagerAdapter {
     private int l;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.adapter.TickletDetailViewPagerAdapter$a */
     /* loaded from: classes7.dex */
-    public class CountDownTimerC2044a extends CountDownTimer {
+    public class a extends CountDownTimer {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        public CountDownTimerC2044a(long j, long j2) {
+        public a(long j, long j2) {
             super(j, j2);
         }
 
@@ -79,7 +78,7 @@ public class TickletDetailViewPagerAdapter extends PagerAdapter {
                 TickletDetailViewPagerAdapter.this.e = null;
             }
             TickletDetailViewPagerAdapter tickletDetailViewPagerAdapter = TickletDetailViewPagerAdapter.this;
-            tickletDetailViewPagerAdapter.e = new CountDownTimerC2044a(60800L, 500L);
+            tickletDetailViewPagerAdapter.e = new a(60800L, 500L);
             TickletDetailViewPagerAdapter.this.e.start();
         }
 
@@ -99,9 +98,9 @@ public class TickletDetailViewPagerAdapter extends PagerAdapter {
         this.l = -1;
         this.a = context;
         Activity activity = (Activity) context;
-        CountDownTimerC2044a countDownTimerC2044a = new CountDownTimerC2044a(60800L, 500L);
-        this.e = countDownTimerC2044a;
-        countDownTimerC2044a.start();
+        a aVar = new a(60800L, 500L);
+        this.e = aVar;
+        aVar.start();
     }
 
     @Override // androidx.viewpager.widget.PagerAdapter
@@ -120,9 +119,9 @@ public class TickletDetailViewPagerAdapter extends PagerAdapter {
             ipChange.ipc$dispatch("-1218727830", new Object[]{this});
             return;
         }
-        CountDownTimerC2044a countDownTimerC2044a = this.e;
-        if (countDownTimerC2044a != null) {
-            countDownTimerC2044a.cancel();
+        a aVar = this.e;
+        if (aVar != null) {
+            aVar.cancel();
             this.e = null;
         }
     }
@@ -351,8 +350,8 @@ public class TickletDetailViewPagerAdapter extends PagerAdapter {
         this.a = context;
         this.d = str;
         Activity activity = (Activity) context;
-        CountDownTimerC2044a countDownTimerC2044a = new CountDownTimerC2044a(60800L, 500L);
-        this.e = countDownTimerC2044a;
-        countDownTimerC2044a.start();
+        a aVar = new a(60800L, 500L);
+        this.e = aVar;
+        aVar.start();
     }
 }

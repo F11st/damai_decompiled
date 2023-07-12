@@ -22,7 +22,6 @@ import cn.damai.common.OrangeConfigCenter;
 import cn.damai.common.app.widget.DMProgressDialog;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.PriorityTask;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
@@ -120,7 +119,7 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
     private boolean isHasCalendarPermission = false;
     private int barStatusBarHeight = 0;
     private String currentPageUserCode = "";
-    private Handler mHandler = new HandlerC2084d();
+    private Handler mHandler = new d();
     private boolean isPulling = false;
     private boolean isMoreThanZero = false;
     private int movedDistance = 0;
@@ -129,13 +128,12 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
     private boolean isRefreshing = false;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.TickletListFragment$a */
     /* loaded from: classes7.dex */
-    public class C2079a implements CalendarsResolver.RemindMeListener {
+    public class a implements CalendarsResolver.RemindMeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ PerformTable a;
 
-        C2079a(PerformTable performTable) {
+        a(PerformTable performTable) {
             this.a = performTable;
         }
 
@@ -161,19 +159,18 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
             hashMap.put("titlelabel", this.a.performId);
             hashMap.put("contentlabel", this.a.getProjectName());
             hashMap.put("begintime", this.a.getStartTimeByLong() + "");
-            C0529c.e().A(hashMap, "calendar_delete", un2.TICKLET_LIST_PAGE);
+            cn.damai.common.user.c.e().A(hashMap, "calendar_delete", un2.TICKLET_LIST_PAGE);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.TickletListFragment$b */
     /* loaded from: classes7.dex */
-    public class C2080b implements CalendarsResolver.RemindMeListener {
+    public class b implements CalendarsResolver.RemindMeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CalenderBean a;
         final /* synthetic */ PerformTable b;
 
-        C2080b(CalenderBean calenderBean, PerformTable performTable) {
+        b(CalenderBean calenderBean, PerformTable performTable) {
             this.a = calenderBean;
             this.b = performTable;
         }
@@ -190,7 +187,7 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
                 hashMap.put("titlelabel", this.b.performId);
                 hashMap.put("contentlabel", this.b.getProjectName());
                 hashMap.put("begintime", this.b.getStartTimeByLong() + "");
-                C0529c.e().A(hashMap, "calendar_add", un2.TICKLET_LIST_PAGE);
+                cn.damai.common.user.c.e().A(hashMap, "calendar_add", un2.TICKLET_LIST_PAGE);
             }
         }
 
@@ -204,18 +201,16 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.TickletListFragment$c */
     /* loaded from: classes7.dex */
-    public class C2081c implements IPermissionListener {
+    public class c implements IPermissionListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.ticklet.ui.fragment.TickletListFragment$c$a */
         /* loaded from: classes7.dex */
-        public class DialogInterface$OnClickListenerC2082a implements DialogInterface.OnClickListener {
+        public class a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC2082a() {
+            a() {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -231,12 +226,11 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.ticklet.ui.fragment.TickletListFragment$c$b */
         /* loaded from: classes7.dex */
-        public class DialogInterface$OnClickListenerC2083b implements DialogInterface.OnClickListener {
+        public class b implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            DialogInterface$OnClickListenerC2083b(C2081c c2081c) {
+            b(c cVar) {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -250,7 +244,7 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
             }
         }
 
-        C2081c() {
+        c() {
         }
 
         @Override // com.alibaba.pictures.picpermission.custom.IPermissionListener
@@ -280,18 +274,17 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
             if (AndroidInstantRuntime.support(ipChange, "-467915689")) {
                 ipChange.ipc$dispatch("-467915689", new Object[]{this, strArr});
             } else {
-                gr1.a(TickletListFragment.this.getActivity(), "授权获取日历权限，将购买的演出票添加到日历提醒", Arrays.asList(strArr), false, new DialogInterface$OnClickListenerC2082a(), new DialogInterface$OnClickListenerC2083b(this));
+                gr1.a(TickletListFragment.this.getActivity(), "授权获取日历权限，将购买的演出票添加到日历提醒", Arrays.asList(strArr), false, new a(), new b(this));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.TickletListFragment$d */
     /* loaded from: classes7.dex */
-    public class HandlerC2084d extends Handler {
+    public class d extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC2084d() {
+        d() {
         }
 
         @Override // android.os.Handler
@@ -316,12 +309,11 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.TickletListFragment$e */
     /* loaded from: classes7.dex */
-    public class C2085e implements PullToRefreshHeaderView.PullToRefreshListener {
+    public class e implements PullToRefreshHeaderView.PullToRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2085e() {
+        e() {
         }
 
         @Override // cn.damai.uikit.irecycler.widget.PullToRefreshHeaderView.PullToRefreshListener
@@ -363,12 +355,11 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.TickletListFragment$f */
     /* loaded from: classes7.dex */
-    public class C2086f implements Action<Object> {
+    public class f implements Action<Object> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2086f() {
+        f() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -576,7 +567,7 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
             }
             fetchTickletLisServertData();
         } else {
-            C0529c.e().A(un2.k().q("-1", z20.E()), un2.CUSTOM_TICKLET_LIST_STATUS, un2.TICKLET_LIST_PAGE);
+            cn.damai.common.user.c.e().A(un2.k().q("-1", z20.E()), un2.CUSTOM_TICKLET_LIST_STATUS, un2.TICKLET_LIST_PAGE);
             refreshLoginUI();
         }
     }
@@ -677,7 +668,7 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
                             return;
                         }
                         TickletListFragment.this.fetchTickletListData();
-                        C0529c.e().A(un2.k().i(z20.E()), un2.CUSTOM_TICKLET_3DTOUCH, un2.TICKLET_LIST_PAGE);
+                        cn.damai.common.user.c.e().A(un2.k().i(z20.E()), un2.CUSTOM_TICKLET_3DTOUCH, un2.TICKLET_LIST_PAGE);
                     }
                 }, 100L);
                 return;
@@ -731,7 +722,7 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
         this.irc.setHasFixedSize(true);
         PullToRefreshHeaderView pullToRefreshHeaderView = PullToRefreshHeaderView.getInstance(this.mActivity);
         this.irc.setRefreshHeaderView(pullToRefreshHeaderView);
-        pullToRefreshHeaderView.setPullToRefreshListener(new C2085e());
+        pullToRefreshHeaderView.setPullToRefreshListener(new e());
         this.irc.addOnScrollListener(new RecyclerView.OnScrollListener() { // from class: cn.damai.ticklet.ui.fragment.TickletListFragment.4
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -922,7 +913,7 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
         if (AndroidInstantRuntime.support(ipChange, "-75806727")) {
             ipChange.ipc$dispatch("-75806727", new Object[]{this});
         } else {
-            this.mDMMessage.b("comment_publish_success", new C2086f());
+            this.mDMMessage.b("comment_publish_success", new f());
         }
     }
 
@@ -1043,8 +1034,8 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
                     this.page = this.page + 1;
                 } else {
                     this.utTimeUtils.q(queryPerformListResultEntryData.getLoadTime());
-                    boolean a = Utils.a();
-                    if (ir1.i(mr1.CALENDAR) && a) {
+                    boolean a2 = Utils.a();
+                    if (ir1.i(mr1.CALENDAR) && a2) {
                         this.mllSeeTip.setVisibility(8);
                         addCalendarEvent(userPerformVOList);
                     } else {
@@ -1052,7 +1043,7 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
                         HashMap hashMap = new HashMap();
                         hashMap.put("usercode", z20.E());
                         hashMap.put("city", z20.d());
-                        C0529c.e().G(this.mllSeeTip, NotificationCompat.CATEGORY_REMINDER, "top", un2.TICKLET_LIST_PAGE, hashMap);
+                        cn.damai.common.user.c.e().G(this.mllSeeTip, NotificationCompat.CATEGORY_REMINDER, "top", un2.TICKLET_LIST_PAGE, hashMap);
                     }
                     this.irc.getFooterContainer().setVisibility(0);
                     this.ticklet_perform_list_footer.setText(py2.f().i(getContext(), this.mBaseActivity, R$string.ticklet_perform_data_load_more));
@@ -1079,9 +1070,9 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
             return;
         }
         if (isHaveTicklet()) {
-            C0529c.e().A(un2.k().q("1", z20.E()), un2.CUSTOM_TICKLET_LIST_STATUS, un2.TICKLET_LIST_PAGE);
+            cn.damai.common.user.c.e().A(un2.k().q("1", z20.E()), un2.CUSTOM_TICKLET_LIST_STATUS, un2.TICKLET_LIST_PAGE);
         } else {
-            C0529c.e().A(un2.k().q("0", z20.E()), un2.CUSTOM_TICKLET_LIST_STATUS, un2.TICKLET_LIST_PAGE);
+            cn.damai.common.user.c.e().A(un2.k().q("0", z20.E()), un2.CUSTOM_TICKLET_LIST_STATUS, un2.TICKLET_LIST_PAGE);
         }
     }
 
@@ -1090,7 +1081,7 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
         if (AndroidInstantRuntime.support(ipChange, "27981597")) {
             ipChange.ipc$dispatch("27981597", new Object[]{this});
         } else {
-            new Permission(getContext(), new PermissionModel(mr1.CALENDAR, "日历权限使用说明", Integer.valueOf(R$drawable.pemission_calendar_icon), "观演提醒服务需要获取您的日历权限，以便开演前自动提醒您准时观演。您同意授权日历权限开启该服务后，票夹里未观演场次（含日后新增场次）将会收到观演提醒。")).a(new C2081c()).b();
+            new Permission(getContext(), new PermissionModel(mr1.CALENDAR, "日历权限使用说明", Integer.valueOf(R$drawable.pemission_calendar_icon), "观演提醒服务需要获取您的日历权限，以便开演前自动提醒您准时观演。您同意授权日历权限开启该服务后，票夹里未观演场次（含日后新增场次）将会收到观演提醒。")).a(new c()).b();
         }
     }
 
@@ -1201,7 +1192,7 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
         }
         HashMap hashMap = new HashMap();
         hashMap.put("titlelabel", str);
-        C0529c.e().G(this.bannerLoginView.getJaiTransferView(), "transferother_msg", "top", un2.TICKLET_LIST_PAGE, hashMap);
+        cn.damai.common.user.c.e().G(this.bannerLoginView.getJaiTransferView(), "transferother_msg", "top", un2.TICKLET_LIST_PAGE, hashMap);
     }
 
     private void showHeadTip(String str, boolean z) {
@@ -1304,7 +1295,7 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
         } else if (LoginManager.k().q() && jn2.a().booleanValue() && (deatilList = DataHelper.getInstance().getDeatilList(1, str2, str3)) != null && deatilList.getUserPerformVO() != null) {
             bundle.putSerializable("ticketDeatilResult", deatilList);
         }
-        C0529c.e().x(un2.k().H(i, map));
+        cn.damai.common.user.c.e().x(un2.k().H(i, map));
         bundle.putString(TicketDetailExtFragment.PERFORM_ID, str2);
         bundle.putString(TicketDetailExtFragment.PRODUCT_SYSTEM_ID, str3);
         bundle.putString("from", TicketDeatilActivity.FROM_LIST);
@@ -1319,7 +1310,7 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
             ipChange.ipc$dispatch("1695630259", new Object[]{this});
             return;
         }
-        C0529c.e().x(un2.k().I());
+        cn.damai.common.user.c.e().x(un2.k().I());
         LoginManager.k().y(this, new Intent(), 2000);
     }
 
@@ -1330,7 +1321,7 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
             ipChange.ipc$dispatch("1520905563", new Object[]{this});
             return;
         }
-        C0529c.e().x(un2.k().R());
+        cn.damai.common.user.c.e().x(un2.k().R());
         Intent intent = new Intent(this.mActivity, TicketDetailAcceptTransferActivity.class);
         intent.putExtra("from", TicketDeatilActivity.FROM_LIST);
         this.mActivity.startActivity(intent);
@@ -1343,7 +1334,7 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
             ipChange.ipc$dispatch("-382105015", new Object[]{this});
             return;
         }
-        C0529c.e().x(un2.k().O());
+        cn.damai.common.user.c.e().x(un2.k().O());
         this.utTimeUtils.k();
         DMNav.from(this.mActivity).toUri("damai://V1/Flutter?flutter_path=dm_ticket_nfc");
     }
@@ -1397,7 +1388,7 @@ public class TickletListFragment extends DamaiBaseMvpFragment implements ILoginL
             gotoVerifyTicket();
         } else if (id == R$id.ticklet_list_ll_see_tip) {
             requestCalendarPermission();
-            C0529c.e().x(un2.k().S());
+            cn.damai.common.user.c.e().x(un2.k().S());
         } else if (id == R$id.ticklet_transfer_message_layout) {
             gotoTransferAccept();
         }

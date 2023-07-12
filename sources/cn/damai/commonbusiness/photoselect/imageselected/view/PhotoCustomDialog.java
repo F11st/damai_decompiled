@@ -29,12 +29,11 @@ public class PhotoCustomDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.view.PhotoCustomDialog$a */
     /* loaded from: classes4.dex */
-    public class View$OnClickListenerC0762a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0762a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -50,12 +49,11 @@ public class PhotoCustomDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.view.PhotoCustomDialog$b */
     /* loaded from: classes4.dex */
-    public class View$OnClickListenerC0763b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0763b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -93,8 +91,8 @@ public class PhotoCustomDialog extends Dialog {
             ipChange.ipc$dispatch("-213266672", new Object[]{this, view});
             return;
         }
-        view.findViewById(R$id.tv_delete).setOnClickListener(new View$OnClickListenerC0762a());
-        view.findViewById(R$id.tv_cancle).setOnClickListener(new View$OnClickListenerC0763b());
+        view.findViewById(R$id.tv_delete).setOnClickListener(new a());
+        view.findViewById(R$id.tv_cancle).setOnClickListener(new b());
     }
 
     private void d() {

@@ -32,8 +32,6 @@ import cn.damai.common.app.widget.DMProgressDialog;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.R$array;
 import cn.damai.commonbusiness.R$color;
@@ -155,7 +153,7 @@ public class ShareManager {
     private String H = "chat_h5";
     public boolean n0 = true;
     long p0 = System.currentTimeMillis();
-    private View.OnClickListener r0 = new View$OnClickListenerC0888f();
+    private View.OnClickListener r0 = new f();
 
     /* compiled from: Taobao */
     /* loaded from: classes.dex */
@@ -164,12 +162,11 @@ public class ShareManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.ShareManager$a */
     /* loaded from: classes.dex */
-    public class C0883a implements DownloadImgListener<Bitmap> {
+    public class a implements DownloadImgListener<Bitmap> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0883a() {
+        a() {
         }
 
         @Override // com.alibaba.pictures.moimage.DownloadImgListener
@@ -198,16 +195,15 @@ public class ShareManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.ShareManager$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0884b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context a;
         final /* synthetic */ int b;
         final /* synthetic */ String c;
         final /* synthetic */ int d;
 
-        View$OnClickListenerC0884b(Context context, int i, String str, int i2) {
+        b(Context context, int i, String str, int i2) {
             this.a = context;
             this.b = i;
             this.c = str;
@@ -226,12 +222,11 @@ public class ShareManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.ShareManager$c */
     /* loaded from: classes.dex */
-    public class DialogInterface$OnDismissListenerC0885c implements DialogInterface.OnDismissListener {
+    public class c implements DialogInterface.OnDismissListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnDismissListenerC0885c(ShareManager shareManager) {
+        c(ShareManager shareManager) {
         }
 
         @Override // android.content.DialogInterface.OnDismissListener
@@ -244,12 +239,11 @@ public class ShareManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.ShareManager$d */
     /* loaded from: classes.dex */
-    public class C0886d implements MyScrollView.ScrollYListener {
+    public class d implements MyScrollView.ScrollYListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0886d() {
+        d() {
         }
 
         @Override // cn.damai.uikit.view.MyScrollView.ScrollYListener
@@ -264,12 +258,11 @@ public class ShareManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.ShareManager$e */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0887e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0887e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -280,17 +273,16 @@ public class ShareManager {
                 return;
             }
             DMNav.from(ShareManager.this.s).toUri(k23.j());
-            C0529c.e().x(C0528b.getInstance().e("share_pic", "share", "point", ShareManager.this.I(), Boolean.TRUE));
+            cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e("share_pic", "share", "point", ShareManager.this.I(), Boolean.TRUE));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.ShareManager$f */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0888f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0888f() {
+        f() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -302,19 +294,19 @@ public class ShareManager {
             }
             int id = view.getId();
             if (id == R$id.share_sina_btn) {
-                C0529c.e().x(pl.j().s(ShareManager.this.p, "微博", ShareManager.this.k0(Site.WEIBO, "sinawb"), "item_2"));
+                cn.damai.common.user.c.e().x(pl.j().s(ShareManager.this.p, "微博", ShareManager.this.k0(Site.WEIBO, "sinawb"), "item_2"));
                 ShareManager.this.a.setProducturl(ShareManager.this.H(Site.WEIBO, "sinawb"));
                 ShareManager.this.a.shareByWay(ShareManager.this.b[0]);
             } else if (id == R$id.share_wechat_btn) {
-                C0529c.e().x(pl.j().s(ShareManager.this.p, "微信", ShareManager.this.k0("weixin", "wxpeople"), "item_0"));
+                cn.damai.common.user.c.e().x(pl.j().s(ShareManager.this.p, "微信", ShareManager.this.k0("weixin", "wxpeople"), "item_0"));
                 ShareManager.this.a.setProducturl(ShareManager.this.H("weixin", "wxpeople"));
                 ShareManager.this.a.shareByWay(ShareManager.this.b[1]);
             } else if (id == R$id.share_qq_btn) {
-                C0529c.e().x(pl.j().s(ShareManager.this.p, "QQ好友", ShareManager.this.k0(Site.QQ, "qqfriends"), "item_3"));
+                cn.damai.common.user.c.e().x(pl.j().s(ShareManager.this.p, "QQ好友", ShareManager.this.k0(Site.QQ, "qqfriends"), "item_3"));
                 ShareManager.this.a.setProducturl(ShareManager.this.H(Site.QQ, "qqfriends"));
                 ShareManager.this.a.shareByWay(ShareManager.this.b[5]);
             } else if (id == R$id.share_wechat_circle_btn) {
-                C0529c.e().x(pl.j().s(ShareManager.this.p, "朋友圈", ShareManager.this.k0("weixin", "wxfriends"), "item_1"));
+                cn.damai.common.user.c.e().x(pl.j().s(ShareManager.this.p, "朋友圈", ShareManager.this.k0("weixin", "wxfriends"), "item_1"));
                 if (!Utils.b(ShareManager.this.s, false)) {
                     return;
                 }
@@ -332,9 +324,9 @@ public class ShareManager {
             } else if (id == R$id.share_dingding_circle_btn) {
                 ShareManager.this.a.setProducturl(ShareManager.this.H(Site.DING, "dingdingapp"));
                 ShareManager.this.a.shareByWay(ShareManager.this.b[2]);
-                C0529c.e().x(pl.j().s(ShareManager.this.p, "钉钉", ShareManager.this.k0(Site.DING, "dingdingapp"), "item_4"));
+                cn.damai.common.user.c.e().x(pl.j().s(ShareManager.this.p, "钉钉", ShareManager.this.k0(Site.DING, "dingdingapp"), "item_4"));
             } else if (id == R$id.share_save_btn) {
-                C0529c.e().x(pl.j().s(ShareManager.this.p, "保存图片", "", "save_img"));
+                cn.damai.common.user.c.e().x(pl.j().s(ShareManager.this.p, "保存图片", "", "save_img"));
                 ShareManager.this.c0();
             } else if (id != R$id.share_cancel_area && id != R$id.share_cancel_btn) {
                 if (id == R$id.icon_back) {
@@ -346,11 +338,11 @@ public class ShareManager {
                     hashMap.put("titlelabel", ShareManager.this.j);
                     hashMap.put("contentlabel", ShareManager.this.g);
                     hashMap.put("usercode", z20.E());
-                    C0529c.e().x(pl.j().e("share", "item", "send_fans", hashMap, Boolean.FALSE));
+                    cn.damai.common.user.c.e().x(pl.j().e("share", "item", "send_fans", hashMap, Boolean.FALSE));
                 }
             } else {
                 ShareManager.this.C();
-                C0529c.e().x(pl.j().r(ShareManager.this.p, "item"));
+                cn.damai.common.user.c.e().x(pl.j().r(ShareManager.this.p, "item"));
             }
             if (!TextUtils.isEmpty(ShareManager.this.F) || ShareManager.this.k0 || ShareManager.this.l0) {
                 return;
@@ -360,12 +352,11 @@ public class ShareManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.ShareManager$g */
     /* loaded from: classes.dex */
-    public class DialogInterface$OnClickListenerC0889g implements DialogInterface.OnClickListener {
+    public class g implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC0889g(ShareManager shareManager) {
+        g(ShareManager shareManager) {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -378,12 +369,11 @@ public class ShareManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.ShareManager$h */
     /* loaded from: classes.dex */
-    public class DialogInterface$OnClickListenerC0890h implements DialogInterface.OnClickListener {
+    public class h implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC0890h() {
+        h() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -398,12 +388,11 @@ public class ShareManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.ShareManager$i */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0891i implements View.OnClickListener {
+    public class i implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0891i() {
+        i() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -413,7 +402,7 @@ public class ShareManager {
                 ipChange.ipc$dispatch("643020193", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(pl.j().s(ShareManager.this.p, "生成图片", "", "generate_img"));
+            cn.damai.common.user.c.e().x(pl.j().s(ShareManager.this.p, "生成图片", "", "generate_img"));
             if (ShareManager.this.s0 != null) {
                 ShareManager.this.s0.onGenerateClick();
             } else {
@@ -423,13 +412,12 @@ public class ShareManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.ShareManager$j */
     /* loaded from: classes.dex */
-    public class C0892j implements GenerateImageUtil.OnImageGenerateListener {
+    public class j implements GenerateImageUtil.OnImageGenerateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
 
-        C0892j(View view) {
+        j(View view) {
             this.a = view;
         }
 
@@ -674,7 +662,7 @@ public class ShareManager {
         this.e0 = (RelativeLayout) this.t.findViewById(R$id.share_title_layout);
         MyScrollView myScrollView = this.d0;
         if (myScrollView != null) {
-            myScrollView.setOnScrollYListener(new C0886d());
+            myScrollView.setOnScrollYListener(new d());
         }
     }
 
@@ -683,9 +671,9 @@ public class ShareManager {
         if (AndroidInstantRuntime.support(ipChange, "187317250")) {
             ipChange.ipc$dispatch("187317250", new Object[]{this, bundle});
         } else if (bundle == null) {
-            ToastUtil a = ToastUtil.a();
+            ToastUtil a2 = ToastUtil.a();
             Activity activity = this.s;
-            a.e(activity, cm2.b(activity, R$string.damai_sharesina_parameter_error_toast));
+            a2.e(activity, cm2.b(activity, R$string.damai_sharesina_parameter_error_toast));
         } else {
             String string = bundle.getString("title", "");
             this.f = string;
@@ -823,7 +811,7 @@ public class ShareManager {
                 spannableString.setSpan(new ForegroundColorSpan(Color.parseColor("#FDA277")), "评价获得".length(), "评价获得".length() + this.q0.oriScore.length(), 33);
                 this.D.setText(spannableString);
                 this.E.setText(str2);
-                this.C.setOnClickListener(new View$OnClickListenerC0887e());
+                this.C.setOnClickListener(new e());
                 return;
             }
             this.C.setVisibility(8);
@@ -882,7 +870,7 @@ public class ShareManager {
         } else {
             GenerateImageUtil.q(this.s, dMShareMessage, this.l0);
         }
-        GenerateImageUtil.G(new C0892j(view));
+        GenerateImageUtil.G(new j(view));
     }
 
     private void a0(Bundle bundle) {
@@ -900,8 +888,8 @@ public class ShareManager {
                     return;
                 }
                 bundle.putString("message", string2.substring(0, 100));
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
         }
     }
@@ -920,20 +908,20 @@ public class ShareManager {
                         t0();
                         this.a.saveToLocal();
                     } else {
-                        MoImageDownloader.i(this.s).e(this.F).c(new C0883a());
+                        MoImageDownloader.i(this.s).e(this.F).c(new a());
                     }
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
         } else {
             this.a.saveToLocal();
         }
     }
 
-    public static int d0(float f, int i) {
+    public static int d0(float f2, int i2) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-665414333") ? ((Integer) ipChange.ipc$dispatch("-665414333", new Object[]{Float.valueOf(f), Integer.valueOf(i)})).intValue() : Color.argb((int) f, (16711680 & i) >> 16, (65280 & i) >> 8, i & 255);
+        return AndroidInstantRuntime.support(ipChange, "-665414333") ? ((Integer) ipChange.ipc$dispatch("-665414333", new Object[]{Float.valueOf(f2), Integer.valueOf(i2)})).intValue() : Color.argb((int) f2, (16711680 & i2) >> 16, (65280 & i2) >> 8, i2 & 255);
     }
 
     private void h0(View view, int... iArr) {
@@ -942,8 +930,8 @@ public class ShareManager {
             ipChange.ipc$dispatch("-247317222", new Object[]{this, view, iArr});
             return;
         }
-        for (int i : iArr) {
-            view.findViewById(i).setOnClickListener(this.r0);
+        for (int i2 : iArr) {
+            view.findViewById(i2).setOnClickListener(this.r0);
         }
     }
 
@@ -1014,8 +1002,8 @@ public class ShareManager {
         h4 h4Var = new h4(this.s);
         h4Var.e("分享给你的全部粉丝吗");
         h4Var.c(false);
-        h4Var.f("取消", new DialogInterface$OnClickListenerC0889g(this));
-        h4Var.h("确定", new DialogInterface$OnClickListenerC0890h());
+        h4Var.f("取消", new g(this));
+        h4Var.h("确定", new h());
         h4Var.j();
     }
 
@@ -1048,24 +1036,24 @@ public class ShareManager {
             ipChange.ipc$dispatch("-425098203", new Object[]{this, str});
             return;
         }
-        String e = b21.e(this.s);
-        if (!TextUtils.isEmpty(e)) {
+        String e2 = b21.e(this.s);
+        if (!TextUtils.isEmpty(e2)) {
             FileInputStream fileInputStream = null;
             try {
-            } catch (IOException e2) {
-                e2.printStackTrace();
+            } catch (IOException e3) {
+                e3.printStackTrace();
                 fileInputStream = fileInputStream;
             }
             try {
                 try {
-                    FileInputStream fileInputStream2 = new FileInputStream(new File(e));
+                    FileInputStream fileInputStream2 = new FileInputStream(new File(e2));
                     try {
                         Bitmap decodeStream = BitmapFactory.decodeStream(fileInputStream2);
                         Bundle bundle = new Bundle();
                         bundle.putString("imageTitle", "分享");
                         bundle.putString("shareType", "chat_image");
                         bundle.putBoolean("hideCopyLink", true);
-                        bundle.putString("imageModeUrl", e);
+                        bundle.putString("imageModeUrl", e2);
                         V(bundle);
                         this.a.setImageBitmap(decodeStream);
                         ?? r1 = 4;
@@ -1083,8 +1071,8 @@ public class ShareManager {
                         }
                         fileInputStream2.close();
                         fileInputStream = r1;
-                    } catch (Exception e3) {
-                        e = e3;
+                    } catch (Exception e4) {
+                        e = e4;
                         fileInputStream = fileInputStream2;
                         e.printStackTrace();
                         fileInputStream = fileInputStream;
@@ -1098,14 +1086,14 @@ public class ShareManager {
                         if (fileInputStream != null) {
                             try {
                                 fileInputStream.close();
-                            } catch (IOException e4) {
-                                e4.printStackTrace();
+                            } catch (IOException e5) {
+                                e5.printStackTrace();
                             }
                         }
                         throw th;
                     }
-                } catch (Exception e5) {
-                    e = e5;
+                } catch (Exception e6) {
+                    e = e6;
                 }
             } catch (Throwable th2) {
                 th = th2;
@@ -1116,46 +1104,46 @@ public class ShareManager {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void u0(float f) {
+    public void u0(float f2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "137286323")) {
-            ipChange.ipc$dispatch("137286323", new Object[]{this, Float.valueOf(f)});
-        } else if (f <= 0.0f) {
+            ipChange.ipc$dispatch("137286323", new Object[]{this, Float.valueOf(f2)});
+        } else if (f2 <= 0.0f) {
             DMIconFontTextView dMIconFontTextView = this.K;
             Resources resources = this.s.getResources();
-            int i = R$color.color_ffffff;
-            dMIconFontTextView.setTextColor(resources.getColor(i));
-            this.x.setTextColor(this.s.getResources().getColor(i));
+            int i2 = R$color.color_ffffff;
+            dMIconFontTextView.setTextColor(resources.getColor(i2));
+            this.x.setTextColor(this.s.getResources().getColor(i2));
             this.e0.setBackgroundColor(this.s.getResources().getColor(R$color.transparent));
-        } else if (f >= 1.0f) {
+        } else if (f2 >= 1.0f) {
             DMIconFontTextView dMIconFontTextView2 = this.K;
             Resources resources2 = this.s.getResources();
-            int i2 = R$color.color_111111;
-            dMIconFontTextView2.setTextColor(resources2.getColor(i2));
-            this.x.setTextColor(this.s.getResources().getColor(i2));
+            int i3 = R$color.color_111111;
+            dMIconFontTextView2.setTextColor(resources2.getColor(i3));
+            this.x.setTextColor(this.s.getResources().getColor(i3));
             this.e0.setBackgroundColor(this.s.getResources().getColor(R$color.color_ffffff));
         } else {
-            float f2 = f * 255.0f;
-            this.e0.setBackgroundColor(d0(f2, this.s.getResources().getColor(R$color.color_ffffff)));
+            float f3 = f2 * 255.0f;
+            this.e0.setBackgroundColor(d0(f3, this.s.getResources().getColor(R$color.color_ffffff)));
             DMIconFontTextView dMIconFontTextView3 = this.K;
             Resources resources3 = this.s.getResources();
-            int i3 = R$color.color_111111;
-            dMIconFontTextView3.setTextColor(d0(f2, resources3.getColor(i3)));
-            this.x.setTextColor(d0(f2, this.s.getResources().getColor(i3)));
+            int i4 = R$color.color_111111;
+            dMIconFontTextView3.setTextColor(d0(f3, resources3.getColor(i4)));
+            this.x.setTextColor(d0(f3, this.s.getResources().getColor(i4)));
         }
     }
 
-    private void w0(long j) {
+    private void w0(long j2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1579180128")) {
-            ipChange.ipc$dispatch("1579180128", new Object[]{this, Long.valueOf(j)});
+            ipChange.ipc$dispatch("1579180128", new Object[]{this, Long.valueOf(j2)});
             return;
         }
         DMShareMessage.YYMemberIntegrate yYMemberIntegrate = this.q0;
         if (yYMemberIntegrate == null || TextUtils.isEmpty(yYMemberIntegrate.oriScore) || !this.m0) {
             return;
         }
-        C0529c.e().C("point", "share", "share_pic", "1.0", System.currentTimeMillis() - j, I(), 2201);
+        cn.damai.common.user.c.e().C("point", "share", "share_pic", "1.0", System.currentTimeMillis() - j2, I(), 2201);
     }
 
     public void A() {
@@ -1182,7 +1170,7 @@ public class ShareManager {
             this.h0.setVisibility(0);
             this.i0.setVisibility(0);
             this.h0.removeAllViews();
-            this.h0.addView(nb2.f(this.s, new View$OnClickListenerC0891i()));
+            this.h0.addView(nb2.f(this.s, new i()));
         } else {
             M();
         }
@@ -1210,9 +1198,9 @@ public class ShareManager {
         this.l0 = false;
     }
 
-    public View F(Context context, int i, String str, int i2) {
+    public View F(Context context, int i2, String str, int i3) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "98926561") ? (View) ipChange.ipc$dispatch("98926561", new Object[]{this, context, Integer.valueOf(i), str, Integer.valueOf(i2)}) : nb2.g(context, new View$OnClickListenerC0884b(context, i, str, i2));
+        return AndroidInstantRuntime.support(ipChange, "98926561") ? (View) ipChange.ipc$dispatch("98926561", new Object[]{this, context, Integer.valueOf(i2), str, Integer.valueOf(i3)}) : nb2.g(context, new b(context, i2, str, i3));
     }
 
     public PopupWindow J() {
@@ -1272,12 +1260,12 @@ public class ShareManager {
         this.i0.setVisibility(8);
     }
 
-    public void O(Activity activity, Bundle bundle, int i) {
+    public void O(Activity activity, Bundle bundle, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1922499597")) {
-            ipChange.ipc$dispatch("1922499597", new Object[]{this, activity, bundle, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("1922499597", new Object[]{this, activity, bundle, Integer.valueOf(i2)});
         } else {
-            P(activity, bundle, LayoutInflater.from(activity).inflate(i, (ViewGroup) null));
+            P(activity, bundle, LayoutInflater.from(activity).inflate(i2, (ViewGroup) null));
         }
     }
 
@@ -1313,11 +1301,11 @@ public class ShareManager {
         this.k = bundle;
         View inflate = LayoutInflater.from(activity).inflate(R$layout.share_activity, (ViewGroup) null);
         this.t = inflate;
-        int i = R$id.share_save_btn;
-        int i2 = R$id.share_cancel_btn;
-        int i3 = R$id.share_cancel_area;
-        int i4 = R$id.icon_back;
-        h0(inflate, i, R$id.share_wechat_btn, R$id.share_wechat_circle_btn, R$id.share_dingding_circle_btn, R$id.share_sina_btn, R$id.share_qq_btn, i2, i3, i4);
+        int i2 = R$id.share_save_btn;
+        int i3 = R$id.share_cancel_btn;
+        int i4 = R$id.share_cancel_area;
+        int i5 = R$id.icon_back;
+        h0(inflate, i2, R$id.share_wechat_btn, R$id.share_wechat_circle_btn, R$id.share_dingding_circle_btn, R$id.share_sina_btn, R$id.share_qq_btn, i3, i4, i5);
         PopupWindow popupWindow = new PopupWindow(this.t, -1, -1, true);
         this.q = popupWindow;
         popupWindow.setAnimationStyle(R$style.share_popwindow_anim_style);
@@ -1342,12 +1330,12 @@ public class ShareManager {
             }
         });
         this.v = this.t.findViewById(R$id.layout_image);
-        this.u = this.t.findViewById(i3);
-        this.K = (DMIconFontTextView) this.t.findViewById(i4);
-        this.a0 = this.t.findViewById(i);
+        this.u = this.t.findViewById(i4);
+        this.K = (DMIconFontTextView) this.t.findViewById(i5);
+        this.a0 = this.t.findViewById(i2);
         this.w = (ImageView) this.t.findViewById(R$id.image_share);
         this.Y = this.t.findViewById(R$id.text_share);
-        this.Z = this.t.findViewById(i2);
+        this.Z = this.t.findViewById(i3);
         this.x = (TextView) this.t.findViewById(R$id.text_title);
         this.b0 = this.t.findViewById(R$id.layout_channel);
         this.f0 = (LinearLayout) this.t.findViewById(R$id.layout_extra);
@@ -1372,21 +1360,21 @@ public class ShareManager {
         B();
     }
 
-    public void b0(Context context, int i, String str, int i2) {
+    public void b0(Context context, int i2, String str, int i3) {
         Bundle bundle;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-412457477")) {
-            ipChange.ipc$dispatch("-412457477", new Object[]{this, context, Integer.valueOf(i), str, Integer.valueOf(i2)});
+            ipChange.ipc$dispatch("-412457477", new Object[]{this, context, Integer.valueOf(i2), str, Integer.valueOf(i3)});
             return;
         }
         try {
             try {
                 bundle = new Bundle();
                 bundle.putString("targetId", str);
-                bundle.putInt("targetType", i2);
-                bundle.putInt("type", i);
-            } catch (NumberFormatException e) {
-                e.printStackTrace();
+                bundle.putInt("targetType", i3);
+                bundle.putInt("type", i2);
+            } catch (NumberFormatException e2) {
+                e2.printStackTrace();
             }
             if (context == null) {
                 return;
@@ -1475,9 +1463,9 @@ public class ShareManager {
         if (activity != null) {
             this.s = activity;
         }
-        String[] a = cm2.a(activity, R$array.share_title);
-        this.b = a;
-        n0(a[0]);
+        String[] a2 = cm2.a(activity, R$array.share_title);
+        this.b = a2;
+        n0(a2[0]);
     }
 
     public void q0() {
@@ -1490,10 +1478,10 @@ public class ShareManager {
         this.i0.setVisibility(0);
     }
 
-    public void r0(int i, int i2, Intent intent) {
+    public void r0(int i2, int i3, Intent intent) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-429517739")) {
-            ipChange.ipc$dispatch("-429517739", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), intent});
+            ipChange.ipc$dispatch("-429517739", new Object[]{this, Integer.valueOf(i2), Integer.valueOf(i3), intent});
         }
     }
 
@@ -1508,7 +1496,7 @@ public class ShareManager {
                 if (!wh2.j(str)) {
                     this.t0.c(str);
                 }
-                this.t0.setOnDismissListener(new DialogInterface$OnDismissListenerC0885c(this));
+                this.t0.setOnDismissListener(new c(this));
             }
             this.t0.show();
         }

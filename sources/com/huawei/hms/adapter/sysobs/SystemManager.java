@@ -10,7 +10,7 @@ import java.util.List;
 public final class SystemManager {
     public static SystemManager a = new SystemManager();
     public static final Object b = new Object();
-    public static SystemNotifier c = new C5509a();
+    public static SystemNotifier c = new a();
 
     public static SystemManager getInstance() {
         return a;
@@ -33,9 +33,8 @@ public final class SystemManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.adapter.sysobs.SystemManager$a */
     /* loaded from: classes10.dex */
-    public static class C5509a implements SystemNotifier {
+    public static class a implements SystemNotifier {
         public final List<SystemObserver> a = new ArrayList();
 
         @Override // com.huawei.hms.adapter.sysobs.SystemNotifier

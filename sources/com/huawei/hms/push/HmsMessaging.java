@@ -72,12 +72,12 @@ public class HmsMessaging {
                 return ProxyCenter.getProxy().unsubscribe(this.b, str, reportEntry);
             }
             try {
-                ErrorEnum a2 = C5683d.a(this.b);
+                ErrorEnum a2 = d.a(this.b);
                 if (a2 == ErrorEnum.SUCCESS) {
                     if (NetWorkUtil.getNetworkType(this.b) != 0) {
                         SubscribeReq subscribeReq = new SubscribeReq(this.b, str2, str);
                         subscribeReq.setToken(BaseUtils.getLocalToken(this.b, null));
-                        if (AbstractC5698s.b()) {
+                        if (s.b()) {
                             return this.c.doWrite(new BaseVoidTask(PushNaming.SUBSCRIBE, JsonUtil.createJsonString(subscribeReq), reportEntry));
                         }
                         return this.c.doWrite(new SubscribeTask(PushNaming.SUBSCRIBE, JsonUtil.createJsonString(subscribeReq), reportEntry));
@@ -152,7 +152,7 @@ public class HmsMessaging {
 
     public final void a(RemoteMessage remoteMessage) {
         String reportEntry = PushBiUtil.reportEntry(this.b, PushNaming.UPSEND_MSG);
-        ErrorEnum a2 = C5683d.a(this.b);
+        ErrorEnum a2 = d.a(this.b);
         if (a2 == ErrorEnum.SUCCESS) {
             if (!TextUtils.isEmpty(remoteMessage.getTo())) {
                 if (!TextUtils.isEmpty(remoteMessage.getMessageId())) {
@@ -167,7 +167,7 @@ public class HmsMessaging {
                         upSendMsgReq.setCollapseKey(remoteMessage.getCollapseKey());
                         upSendMsgReq.setSendMode(remoteMessage.getSendMode());
                         upSendMsgReq.setReceiptMode(remoteMessage.getReceiptMode());
-                        if (AbstractC5698s.b()) {
+                        if (s.b()) {
                             this.c.doWrite(new BaseVoidTask(PushNaming.UPSEND_MSG, JsonUtil.createJsonString(upSendMsgReq), reportEntry));
                             return;
                         } else {
@@ -194,7 +194,7 @@ public class HmsMessaging {
 
     public final Task<Void> a(boolean z) {
         String reportEntry = PushBiUtil.reportEntry(this.b, PushNaming.SET_NOTIFY_FLAG);
-        if (AbstractC5698s.d(this.b) && !AbstractC5698s.b()) {
+        if (s.d(this.b) && !s.b()) {
             if (HwBuildEx.VERSION.EMUI_SDK_INT < 12) {
                 HMSLog.e("HmsMessaging", "operation not available on Huawei device with EMUI lower than 5.1");
                 TaskCompletionSource taskCompletionSource = new TaskCompletionSource();
@@ -202,7 +202,7 @@ public class HmsMessaging {
                 taskCompletionSource.setException(errorEnum.toApiException());
                 PushBiUtil.reportExit(this.b, PushNaming.SET_NOTIFY_FLAG, reportEntry, errorEnum);
                 return taskCompletionSource.getTask();
-            } else if (AbstractC5698s.b(this.b) < 90101310) {
+            } else if (s.b(this.b) < 90101310) {
                 HMSLog.i("HmsMessaging", "turn on/off with broadcast v1");
                 Context context = this.b;
                 Intent putExtra = new Intent("com.huawei.intent.action.SELF_SHOW_FLAG").putExtra("enalbeFlag", PushEncrypter.encrypterOld(context, this.b.getPackageName() + Constants.TYPE_LIVE_ROOM_BG_COLOR_PREFFIX + z));

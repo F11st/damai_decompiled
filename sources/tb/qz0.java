@@ -12,10 +12,9 @@ import java.util.Map;
 public class qz0 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qz0$a */
     /* loaded from: classes11.dex */
-    static class C9635a implements OrangeConfigListenerV1 {
-        C9635a() {
+    static class a implements OrangeConfigListenerV1 {
+        a() {
         }
 
         @Override // com.taobao.orange.OrangeConfigListenerV1
@@ -43,6 +42,6 @@ public class qz0 {
     }
 
     public static void a(Context context) {
-        OrangeConfig.getInstance().registerListener(new String[]{"android_hotpatch_configcenter"}, new C9635a());
+        OrangeConfig.getInstance().registerListener(new String[]{"android_hotpatch_configcenter"}, new a());
     }
 }

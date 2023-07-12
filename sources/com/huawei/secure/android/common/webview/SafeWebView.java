@@ -39,12 +39,11 @@ public class SafeWebView extends WebView {
     private WebViewLoadCallBack e;
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.secure.android.common.webview.SafeWebView$b */
     /* loaded from: classes10.dex */
-    private static class DialogInterface$OnClickListenerC5767b implements DialogInterface.OnClickListener {
+    private static class b implements DialogInterface.OnClickListener {
         private final SslErrorHandler a;
 
-        DialogInterface$OnClickListenerC5767b(SslErrorHandler sslErrorHandler) {
+        b(SslErrorHandler sslErrorHandler) {
             this.a = sslErrorHandler;
         }
 
@@ -55,12 +54,11 @@ public class SafeWebView extends WebView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.secure.android.common.webview.SafeWebView$c */
     /* loaded from: classes10.dex */
-    private static class DialogInterface$OnClickListenerC5768c implements DialogInterface.OnClickListener {
+    private static class c implements DialogInterface.OnClickListener {
         private final SslErrorHandler a;
 
-        DialogInterface$OnClickListenerC5768c(SslErrorHandler sslErrorHandler) {
+        c(SslErrorHandler sslErrorHandler) {
             this.a = sslErrorHandler;
         }
 
@@ -72,9 +70,8 @@ public class SafeWebView extends WebView {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.secure.android.common.webview.SafeWebView$d */
     /* loaded from: classes10.dex */
-    public final class C5769d extends WebViewClient {
+    public final class d extends WebViewClient {
         private WebViewClient a;
         private boolean b;
 
@@ -284,7 +281,7 @@ public class SafeWebView extends WebView {
             return super.shouldOverrideUrlLoading(webView, str);
         }
 
-        private C5769d(WebViewClient webViewClient, boolean z) {
+        private d(WebViewClient webViewClient, boolean z) {
             this.a = webViewClient;
             this.b = z;
         }
@@ -467,7 +464,7 @@ public class SafeWebView extends WebView {
 
     @Override // android.webkit.WebView
     public void setWebViewClient(WebViewClient webViewClient) {
-        super.setWebViewClient(new C5769d(webViewClient, true));
+        super.setWebViewClient(new d(webViewClient, true));
     }
 
     public void setWebViewLoadCallBack(WebViewLoadCallBack webViewLoadCallBack) {
@@ -500,11 +497,11 @@ public class SafeWebView extends WebView {
         if (!TextUtils.isEmpty(str)) {
             builder.setTitle(str);
         }
-        DialogInterface$OnClickListenerC5768c dialogInterface$OnClickListenerC5768c = new DialogInterface$OnClickListenerC5768c(sslErrorHandler);
-        DialogInterface$OnClickListenerC5767b dialogInterface$OnClickListenerC5767b = new DialogInterface$OnClickListenerC5767b(sslErrorHandler);
+        c cVar = new c(sslErrorHandler);
+        b bVar = new b(sslErrorHandler);
         builder.setMessage(str2);
-        builder.setPositiveButton(str3, dialogInterface$OnClickListenerC5768c);
-        builder.setNegativeButton(str4, dialogInterface$OnClickListenerC5767b);
+        builder.setPositiveButton(str3, cVar);
+        builder.setNegativeButton(str4, bVar);
         builder.create().show();
     }
 
@@ -514,7 +511,7 @@ public class SafeWebView extends WebView {
     }
 
     public void setWebViewClient(WebViewClient webViewClient, boolean z) {
-        super.setWebViewClient(new C5769d(webViewClient, z));
+        super.setWebViewClient(new d(webViewClient, z));
     }
 
     public SafeWebView(Context context, AttributeSet attributeSet) {

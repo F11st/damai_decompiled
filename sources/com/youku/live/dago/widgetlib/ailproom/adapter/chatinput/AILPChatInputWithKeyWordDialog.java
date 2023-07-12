@@ -215,7 +215,7 @@ public class AILPChatInputWithKeyWordDialog extends Dialog {
             int spaceCount = this.maxLength - BaseInputDialog.getSpaceCount(str);
             setSumTextView(this.mSumTextView, spaceCount < 0, Math.abs(spaceCount));
         }
-        int parseColor = parseColor(this.keywordChatInputDto.bgColor, ContextCompat.getColor(getContext(), R.C7940color.dago_pgc_chat_input_normal_bg_color));
+        int parseColor = parseColor(this.keywordChatInputDto.bgColor, ContextCompat.getColor(getContext(), R.color.dago_pgc_chat_input_normal_bg_color));
         this.mKeywordBgView.setBackgroundColor(parseColor);
         this.mInputLayout.setBackgroundColor(parseColor);
         if (!TextUtils.isEmpty(this.keywordChatInputDto.inputBgImg)) {
@@ -228,7 +228,7 @@ public class AILPChatInputWithKeyWordDialog extends Dialog {
             if (!TextUtils.isEmpty(this.keywordChatInputDto.title)) {
                 SpannableString spannableString = new SpannableString(this.keywordChatInputDto.title);
                 if (!TextUtils.isEmpty(this.keywordChatInputDto.titleColor)) {
-                    spannableString.setSpan(new ForegroundColorSpan(parseColor(this.keywordChatInputDto.titleColor, ContextCompat.getColor(getContext(), R.C7940color.dago_pgc_chat_input_keyword_title_text_color))), 0, spannableString.length(), 33);
+                    spannableString.setSpan(new ForegroundColorSpan(parseColor(this.keywordChatInputDto.titleColor, ContextCompat.getColor(getContext(), R.color.dago_pgc_chat_input_keyword_title_text_color))), 0, spannableString.length(), 33);
                 }
                 spannableStringBuilder.append((CharSequence) spannableString);
             }
@@ -236,7 +236,7 @@ public class AILPChatInputWithKeyWordDialog extends Dialog {
             if (!TextUtils.isEmpty(this.keywordChatInputDto.keyword)) {
                 SpannableString spannableString2 = new SpannableString(this.keywordChatInputDto.keyword);
                 if (!TextUtils.isEmpty(this.keywordChatInputDto.keywordColor)) {
-                    spannableString2.setSpan(new ForegroundColorSpan(parseColor(this.keywordChatInputDto.keywordColor, ContextCompat.getColor(getContext(), R.C7940color.dago_pgc_chat_input_keyword_desc_text_color))), 0, spannableString2.length(), 33);
+                    spannableString2.setSpan(new ForegroundColorSpan(parseColor(this.keywordChatInputDto.keywordColor, ContextCompat.getColor(getContext(), R.color.dago_pgc_chat_input_keyword_desc_text_color))), 0, spannableString2.length(), 33);
                 }
                 spannableStringBuilder.append((CharSequence) spannableString2);
             }
@@ -302,9 +302,9 @@ public class AILPChatInputWithKeyWordDialog extends Dialog {
             return ((Integer) ipChange.ipc$dispatch("303667556", new Object[]{this})).intValue();
         }
         if (this.mOrientation == 2) {
-            return R.C7942layout.dago_pgc_ailp_chat_edit_bar_with_keyword_fullscreen;
+            return R.layout.dago_pgc_ailp_chat_edit_bar_with_keyword_fullscreen;
         }
-        return R.C7942layout.dago_pgc_ailp_chat_edit_bar_with_keyword;
+        return R.layout.dago_pgc_ailp_chat_edit_bar_with_keyword;
     }
 
     protected void initView() {

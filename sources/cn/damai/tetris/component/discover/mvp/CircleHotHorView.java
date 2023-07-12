@@ -17,12 +17,11 @@ public class CircleHotHorView extends AbsView<CircleHotHorContract.Presenter> im
     private final CircleHotHorViewHolder mViewHolder;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.discover.mvp.CircleHotHorView$a */
     /* loaded from: classes7.dex */
-    public class C1816a implements OnItemBindListener<CircleBean> {
+    public class a implements OnItemBindListener<CircleBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1816a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -56,7 +55,7 @@ public class CircleHotHorView extends AbsView<CircleHotHorContract.Presenter> im
 
     public CircleHotHorView(View view) {
         super(view);
-        this.mViewHolder = new CircleHotHorViewHolder(view, new C1816a());
+        this.mViewHolder = new CircleHotHorViewHolder(view, new a());
     }
 
     @Override // cn.damai.tetris.component.discover.mvp.CircleHotHorContract.View

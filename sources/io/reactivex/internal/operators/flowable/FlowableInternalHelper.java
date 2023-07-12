@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.Emitter;
 import io.reactivex.Scheduler;
+import io.reactivex.b;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.BiConsumer;
 import io.reactivex.functions.BiFunction;
@@ -28,10 +28,10 @@ public final class FlowableInternalHelper {
     /* loaded from: classes3.dex */
     public static final class BufferedReplayCallable<T> implements Callable<an<T>> {
         private final int bufferSize;
-        private final AbstractC8147b<T> parent;
+        private final b<T> parent;
 
-        BufferedReplayCallable(AbstractC8147b<T> abstractC8147b, int i) {
-            this.parent = abstractC8147b;
+        BufferedReplayCallable(b<T> bVar, int i) {
+            this.parent = bVar;
             this.bufferSize = i;
         }
 
@@ -46,13 +46,13 @@ public final class FlowableInternalHelper {
     /* loaded from: classes3.dex */
     public static final class BufferedTimedReplay<T> implements Callable<an<T>> {
         private final int bufferSize;
-        private final AbstractC8147b<T> parent;
+        private final b<T> parent;
         private final Scheduler scheduler;
         private final long time;
         private final TimeUnit unit;
 
-        BufferedTimedReplay(AbstractC8147b<T> abstractC8147b, int i, long j, TimeUnit timeUnit, Scheduler scheduler) {
-            this.parent = abstractC8147b;
+        BufferedTimedReplay(b<T> bVar, int i, long j, TimeUnit timeUnit, Scheduler scheduler) {
+            this.parent = bVar;
             this.bufferSize = i;
             this.time = j;
             this.unit = timeUnit;
@@ -155,10 +155,10 @@ public final class FlowableInternalHelper {
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
     public static final class ReplayCallable<T> implements Callable<an<T>> {
-        private final AbstractC8147b<T> parent;
+        private final b<T> parent;
 
-        ReplayCallable(AbstractC8147b<T> abstractC8147b) {
-            this.parent = abstractC8147b;
+        ReplayCallable(b<T> bVar) {
+            this.parent = bVar;
         }
 
         @Override // java.util.concurrent.Callable
@@ -170,22 +170,22 @@ public final class FlowableInternalHelper {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    public static final class ReplayFunction<T, R> implements Function<AbstractC8147b<T>, Publisher<R>> {
+    public static final class ReplayFunction<T, R> implements Function<b<T>, Publisher<R>> {
         private final Scheduler scheduler;
-        private final Function<? super AbstractC8147b<T>, ? extends Publisher<R>> selector;
+        private final Function<? super b<T>, ? extends Publisher<R>> selector;
 
-        ReplayFunction(Function<? super AbstractC8147b<T>, ? extends Publisher<R>> function, Scheduler scheduler) {
+        ReplayFunction(Function<? super b<T>, ? extends Publisher<R>> function, Scheduler scheduler) {
             this.selector = function;
             this.scheduler = scheduler;
         }
 
         @Override // io.reactivex.functions.Function
         public /* bridge */ /* synthetic */ Object apply(Object obj) throws Exception {
-            return apply((AbstractC8147b) ((AbstractC8147b) obj));
+            return apply((b) ((b) obj));
         }
 
-        public Publisher<R> apply(AbstractC8147b<T> abstractC8147b) throws Exception {
-            return AbstractC8147b.fromPublisher((Publisher) ObjectHelper.requireNonNull(this.selector.apply(abstractC8147b), "The selector returned a null Publisher")).observeOn(this.scheduler);
+        public Publisher<R> apply(b<T> bVar) throws Exception {
+            return b.fromPublisher((Publisher) ObjectHelper.requireNonNull(this.selector.apply(bVar), "The selector returned a null Publisher")).observeOn(this.scheduler);
         }
     }
 
@@ -296,13 +296,13 @@ public final class FlowableInternalHelper {
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
     public static final class TimedReplay<T> implements Callable<an<T>> {
-        private final AbstractC8147b<T> parent;
+        private final b<T> parent;
         private final Scheduler scheduler;
         private final long time;
         private final TimeUnit unit;
 
-        TimedReplay(AbstractC8147b<T> abstractC8147b, long j, TimeUnit timeUnit, Scheduler scheduler) {
-            this.parent = abstractC8147b;
+        TimedReplay(b<T> bVar, long j, TimeUnit timeUnit, Scheduler scheduler) {
+            this.parent = bVar;
             this.time = j;
             this.unit = timeUnit;
             this.scheduler = scheduler;
@@ -330,7 +330,7 @@ public final class FlowableInternalHelper {
         }
 
         public Publisher<? extends R> apply(List<Publisher<? extends T>> list) {
-            return AbstractC8147b.zipIterable(list, this.zipper, false, AbstractC8147b.bufferSize());
+            return b.zipIterable(list, this.zipper, false, b.bufferSize());
         }
     }
 
@@ -350,11 +350,11 @@ public final class FlowableInternalHelper {
         return new ItemDelayFunction(function);
     }
 
-    public static <T> Callable<an<T>> replayCallable(AbstractC8147b<T> abstractC8147b) {
-        return new ReplayCallable(abstractC8147b);
+    public static <T> Callable<an<T>> replayCallable(b<T> bVar) {
+        return new ReplayCallable(bVar);
     }
 
-    public static <T, R> Function<AbstractC8147b<T>, Publisher<R>> replayFunction(Function<? super AbstractC8147b<T>, ? extends Publisher<R>> function, Scheduler scheduler) {
+    public static <T, R> Function<b<T>, Publisher<R>> replayFunction(Function<? super b<T>, ? extends Publisher<R>> function, Scheduler scheduler) {
         return new ReplayFunction(function, scheduler);
     }
 
@@ -382,15 +382,15 @@ public final class FlowableInternalHelper {
         return new ZipIterableFunction(function);
     }
 
-    public static <T> Callable<an<T>> replayCallable(AbstractC8147b<T> abstractC8147b, int i) {
-        return new BufferedReplayCallable(abstractC8147b, i);
+    public static <T> Callable<an<T>> replayCallable(b<T> bVar, int i) {
+        return new BufferedReplayCallable(bVar, i);
     }
 
-    public static <T> Callable<an<T>> replayCallable(AbstractC8147b<T> abstractC8147b, int i, long j, TimeUnit timeUnit, Scheduler scheduler) {
-        return new BufferedTimedReplay(abstractC8147b, i, j, timeUnit, scheduler);
+    public static <T> Callable<an<T>> replayCallable(b<T> bVar, int i, long j, TimeUnit timeUnit, Scheduler scheduler) {
+        return new BufferedTimedReplay(bVar, i, j, timeUnit, scheduler);
     }
 
-    public static <T> Callable<an<T>> replayCallable(AbstractC8147b<T> abstractC8147b, long j, TimeUnit timeUnit, Scheduler scheduler) {
-        return new TimedReplay(abstractC8147b, j, timeUnit, scheduler);
+    public static <T> Callable<an<T>> replayCallable(b<T> bVar, long j, TimeUnit timeUnit, Scheduler scheduler) {
+        return new TimedReplay(bVar, j, timeUnit, scheduler);
     }
 }

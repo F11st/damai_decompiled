@@ -3,17 +3,15 @@ package cn.damai.commonbusiness.dynamicx.customwidget.temp;
 import android.content.Context;
 import android.text.TextUtils;
 import android.view.View;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$drawable;
-import cn.damai.commonbusiness.util.AbstractC0948a;
 import cn.damai.commonbusiness.util.Bitmap12ColorHex;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
-import tb.C9826vr;
 import tb.m62;
 import tb.mu0;
+import tb.vr;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
@@ -22,23 +20,22 @@ public class DXDMPicConvertViewWidgetNode extends DXWidgetNode implements Runnab
     public static final long DXDMPICCONVERTVIEW_DMPICCONVERTVIEW = -4809976646969178823L;
     public static final long DXDMPICCONVERTVIEW_IMGURL = 9421724166673910L;
     private String imgUrl;
-    private C9826vr mLastTicket;
+    private vr mLastTicket;
     private View mWeakView;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.temp.DXDMPicConvertViewWidgetNode$a */
     /* loaded from: classes4.dex */
-    public class C0673a implements DMImageCreator.DMImageFailListener {
+    public class a implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0673a() {
+        a() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1205974100")) {
-                ipChange.ipc$dispatch("-1205974100", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-1205974100", new Object[]{this, dVar});
             } else {
                 DXDMPicConvertViewWidgetNode.this.setBackGroundRes(R$drawable.abg_b_purple_default_4);
             }
@@ -46,21 +43,19 @@ public class DXDMPicConvertViewWidgetNode extends DXWidgetNode implements Runnab
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.temp.DXDMPicConvertViewWidgetNode$b */
     /* loaded from: classes4.dex */
-    public class C0674b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.temp.DXDMPicConvertViewWidgetNode$b$a */
         /* loaded from: classes4.dex */
-        public class C0675a extends AbstractC0948a {
+        public class a extends cn.damai.commonbusiness.util.a {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C0675a() {
+            a() {
             }
 
-            @Override // cn.damai.commonbusiness.util.AbstractC0948a
+            @Override // cn.damai.commonbusiness.util.a
             public void a(int i) {
                 IpChange ipChange = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange, "1869236672")) {
@@ -71,18 +66,18 @@ public class DXDMPicConvertViewWidgetNode extends DXWidgetNode implements Runnab
             }
         }
 
-        C0674b() {
+        b() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1211249599")) {
-                ipChange.ipc$dispatch("-1211249599", new Object[]{this, c0502e});
-            } else if (c0502e == null || c0502e.b == null) {
+                ipChange.ipc$dispatch("-1211249599", new Object[]{this, eVar});
+            } else if (eVar == null || eVar.b == null) {
                 DXDMPicConvertViewWidgetNode.this.setBackGroundRes(R$drawable.abg_b_purple_default_4);
             } else {
-                Bitmap12ColorHex.e().f(c0502e.b, DXDMPicConvertViewWidgetNode.this.imgUrl, new C0675a());
+                Bitmap12ColorHex.e().f(eVar.b, DXDMPicConvertViewWidgetNode.this.imgUrl, new a());
             }
         }
     }
@@ -158,9 +153,9 @@ public class DXDMPicConvertViewWidgetNode extends DXWidgetNode implements Runnab
         super.onRenderView(context, view);
         this.mWeakView = view;
         if (view != null) {
-            C9826vr c9826vr = this.mLastTicket;
-            if (c9826vr != null) {
-                c9826vr.cancel();
+            vr vrVar = this.mLastTicket;
+            if (vrVar != null) {
+                vrVar.cancel();
                 this.mLastTicket = null;
             }
             if (TextUtils.isEmpty(this.imgUrl)) {
@@ -198,7 +193,7 @@ public class DXDMPicConvertViewWidgetNode extends DXWidgetNode implements Runnab
                 measuredWidth = m62.a(mu0.a(), 208.0f);
                 measuredHeight = m62.a(mu0.a(), 64.0f);
             }
-            this.mLastTicket = C0504a.b().f(this.imgUrl, measuredWidth, measuredHeight).n(new C0674b()).e(new C0673a()).f();
+            this.mLastTicket = cn.damai.common.image.a.b().f(this.imgUrl, measuredWidth, measuredHeight).n(new b()).e(new a()).f();
         }
     }
 }

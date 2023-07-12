@@ -6,7 +6,7 @@ import android.os.Parcelable;
 import com.taobao.aranger.core.wrapper.MethodWrapper;
 import com.taobao.aranger.core.wrapper.ParameterWrapper;
 import com.taobao.aranger.core.wrapper.ServiceWrapper;
-import com.taobao.aranger.utils.C6699b;
+import com.taobao.aranger.utils.b;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -47,7 +47,7 @@ public class Call implements Parcelable {
     public void readFromParcel(Parcel parcel) {
         this.mServiceWrapper = ServiceWrapper.CREATOR.createFromParcel(parcel);
         this.mMethodWrapper = MethodWrapper.CREATOR.createFromParcel(parcel);
-        this.mParameterWrappers = (ParameterWrapper[]) C6699b.e(getClass().getClassLoader(), parcel);
+        this.mParameterWrappers = (ParameterWrapper[]) b.e(getClass().getClassLoader(), parcel);
         if (parcel.readInt() == 1) {
             this.mCallingPackage = parcel.readString();
         }
@@ -138,7 +138,7 @@ public class Call implements Parcelable {
     public void writeToParcel(Parcel parcel, int i) {
         this.mServiceWrapper.writeToParcel(parcel, i);
         this.mMethodWrapper.writeToParcel(parcel, i);
-        this.mDataSize = C6699b.g(parcel, this.mParameterWrappers, i, true);
+        this.mDataSize = b.g(parcel, this.mParameterWrappers, i, true);
         if (this.isSameApp) {
             parcel.writeInt(0);
             return;

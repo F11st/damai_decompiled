@@ -1,14 +1,14 @@
 package kotlin.reflect.jvm.internal.impl.load.java.lazy.descriptors;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
 import kotlin.collections.ArraysKt___ArraysKt;
-import kotlin.collections.C8203e0;
-import kotlin.collections.C8220r;
+import kotlin.collections.e0;
+import kotlin.collections.r;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.PropertyReference1Impl;
@@ -51,7 +51,7 @@ public final class JvmPackageScope implements MemberScope {
     private final NotNullLazyValue d;
 
     public JvmPackageScope(@NotNull r81 r81Var, @NotNull JavaPackage javaPackage, @NotNull LazyJavaPackageFragment lazyJavaPackageFragment) {
-        b41.i(r81Var, AbstractC5658c.a);
+        b41.i(r81Var, c.a);
         b41.i(javaPackage, "jPackage");
         b41.i(lazyJavaPackageFragment, "packageFragment");
         this.a = r81Var;
@@ -158,7 +158,7 @@ public final class JvmPackageScope implements MemberScope {
             contributedDescriptors = i62.a(contributedDescriptors, memberScope.getContributedDescriptors(z60Var, function1));
         }
         if (contributedDescriptors == null) {
-            d = C8203e0.d();
+            d = e0.d();
             return d;
         }
         return contributedDescriptors;
@@ -183,7 +183,7 @@ public final class JvmPackageScope implements MemberScope {
             collection = i62.a(collection, memberScope.getContributedFunctions(ni1Var, lookupLocation));
         }
         if (collection == null) {
-            d = C8203e0.d();
+            d = e0.d();
             return d;
         }
         return collection;
@@ -208,7 +208,7 @@ public final class JvmPackageScope implements MemberScope {
             collection = i62.a(collection, memberScope.getContributedVariables(ni1Var, lookupLocation));
         }
         if (collection == null) {
-            d = C8203e0.d();
+            d = e0.d();
             return d;
         }
         return collection;
@@ -220,7 +220,7 @@ public final class JvmPackageScope implements MemberScope {
         MemberScope[] d = d();
         LinkedHashSet linkedHashSet = new LinkedHashSet();
         for (MemberScope memberScope : d) {
-            C8220r.v(linkedHashSet, memberScope.getFunctionNames());
+            r.v(linkedHashSet, memberScope.getFunctionNames());
         }
         linkedHashSet.addAll(c().getFunctionNames());
         return linkedHashSet;
@@ -232,7 +232,7 @@ public final class JvmPackageScope implements MemberScope {
         MemberScope[] d = d();
         LinkedHashSet linkedHashSet = new LinkedHashSet();
         for (MemberScope memberScope : d) {
-            C8220r.v(linkedHashSet, memberScope.getVariableNames());
+            r.v(linkedHashSet, memberScope.getVariableNames());
         }
         linkedHashSet.addAll(c().getVariableNames());
         return linkedHashSet;

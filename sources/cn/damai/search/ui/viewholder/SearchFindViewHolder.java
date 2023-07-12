@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -37,12 +36,11 @@ public class SearchFindViewHolder extends RecyclerView.ViewHolder {
     private SearchListener f;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.viewholder.SearchFindViewHolder$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1624a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1624a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -83,7 +81,7 @@ public class SearchFindViewHolder extends RecyclerView.ViewHolder {
             ipChange.ipc$dispatch("434987572", new Object[]{this, str, imageView});
             return;
         }
-        DMImageCreator c = C0504a.b().c(str);
+        DMImageCreator c = cn.damai.common.image.a.b().c(str);
         int i = cn.damai.homepage.R$drawable.search_hot_item_pic;
         c.i(i).c(i).g(imageView);
     }
@@ -136,7 +134,7 @@ public class SearchFindViewHolder extends RecyclerView.ViewHolder {
             ipChange.ipc$dispatch("-1150923769", new Object[]{this, view});
         } else if (view == null) {
         } else {
-            view.setOnClickListener(new View$OnClickListenerC1624a());
+            view.setOnClickListener(new a());
         }
     }
 

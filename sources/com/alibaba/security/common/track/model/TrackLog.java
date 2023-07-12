@@ -1,10 +1,9 @@
 package com.alibaba.security.common.track.model;
 
 import com.ali.ha.fulltrace.dump.DumpManager;
-import com.alibaba.security.common.d.C3811h;
-import com.alibaba.security.common.track.a.C3829a;
-import com.alibaba.security.common.track.model.C3834a;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
+import com.alibaba.security.common.d.h;
+import com.alibaba.security.common.track.a.a;
+import com.alibaba.security.common.track.model.a;
 import com.vivo.push.PushClientConstants;
 import com.youku.vpm.data.ExtrasInfo;
 import java.io.Serializable;
@@ -30,9 +29,8 @@ public class TrackLog implements Serializable {
     private long rt = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.security.common.track.model.TrackLog$a */
     /* loaded from: classes8.dex */
-    public static final class C3833a {
+    public static final class a {
         public static final int a = 0;
         public static final int b = -1;
         public static final int c = -2;
@@ -51,8 +49,8 @@ public class TrackLog implements Serializable {
 
     public static TrackLog createBioActivityEnterLog(String str, String str2) {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.e);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.e);
         trackLog.setMethod("enter");
         trackLog.setParams(str);
         trackLog.setMsg(str2);
@@ -61,8 +59,8 @@ public class TrackLog implements Serializable {
 
     public static TrackLog createBioActivityExitLog(String str) {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.e);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.e);
         trackLog.setMethod("exit");
         trackLog.setMsg(str);
         return trackLog;
@@ -70,26 +68,26 @@ public class TrackLog implements Serializable {
 
     public static TrackLog createBioGuidePageLog(String str) {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.e);
-        trackLog.setMethod(C3834a.C3836b.m);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.e);
+        trackLog.setMethod(a.b.m);
         trackLog.setParams(str);
         return trackLog;
     }
 
     public static TrackLog createBioMonitorAlgoStartLog(String str) {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.e);
-        trackLog.setMethod(C3834a.C3836b.b);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.e);
+        trackLog.setMethod(a.b.b);
         trackLog.setParams(str);
         return trackLog;
     }
 
     public static TrackLog createBioMonitorExpLog(int i, String str) {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.e);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.e);
         trackLog.setMethod("exception");
         trackLog.addTag1(String.valueOf(i));
         trackLog.setMsg(str);
@@ -98,18 +96,18 @@ public class TrackLog implements Serializable {
 
     public static TrackLog createBioMonitorStartLog() {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.e);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.e);
         trackLog.setMethod("start");
         return trackLog;
     }
 
     public static TrackLog createBioMonitorUploadFinishLog(CommonTrackResult commonTrackResult, boolean z, long j) {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.e);
-        trackLog.setMethod(C3834a.C3836b.d);
-        trackLog.setResult(C3811h.a(commonTrackResult));
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.e);
+        trackLog.setMethod(a.b.d);
+        trackLog.setResult(h.a(commonTrackResult));
         trackLog.setCode(z ? 0 : -1);
         trackLog.setRt(j);
         return trackLog;
@@ -117,17 +115,17 @@ public class TrackLog implements Serializable {
 
     public static TrackLog createBioMonitorUploadStartLog() {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.e);
-        trackLog.setMethod(C3834a.C3836b.c);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.e);
+        trackLog.setMethod(a.b.c);
         return trackLog;
     }
 
     public static TrackLog createBioPrivacyPageLog(String str) {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.e);
-        trackLog.setMethod(C3834a.C3836b.n);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.e);
+        trackLog.setMethod(a.b.n);
         trackLog.setParams(str);
         return trackLog;
     }
@@ -137,10 +135,10 @@ public class TrackLog implements Serializable {
         hashMap.put(PushClientConstants.TAG_CLASS_NAME, str);
         hashMap.put("methodName", str2);
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.e);
-        trackLog.setMethod(C3834a.C3836b.V);
-        trackLog.setParams(C3811h.a((Object) hashMap));
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.e);
+        trackLog.setMethod(a.b.V);
+        trackLog.setParams(h.a((Object) hashMap));
         return trackLog;
     }
 
@@ -148,10 +146,10 @@ public class TrackLog implements Serializable {
         HashMap hashMap = new HashMap();
         hashMap.put("activityName", str);
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.a);
-        trackLog.setMethod(C3834a.C3836b.Z);
-        trackLog.setResult(C3811h.a((Map) hashMap));
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.a);
+        trackLog.setMethod(a.b.Z);
+        trackLog.setResult(h.a((Map) hashMap));
         return trackLog;
     }
 
@@ -159,46 +157,46 @@ public class TrackLog implements Serializable {
         HashMap hashMap = new HashMap();
         hashMap.put("activityName", str);
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.a);
-        trackLog.setMethod(C3834a.C3836b.Y);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.a);
+        trackLog.setMethod(a.b.Y);
         trackLog.setCode(0);
-        trackLog.setParams(C3811h.a((Map) hashMap));
+        trackLog.setParams(h.a((Map) hashMap));
         return trackLog;
     }
 
     public static TrackLog createCtidAppEndLog(String str) {
         TrackLog trackLog = new TrackLog();
-        trackLog.layer = C3834a.C3835a.a;
-        trackLog.service = C3834a.C3837c.a;
-        trackLog.method = C3834a.C3836b.R;
+        trackLog.layer = a.C0166a.a;
+        trackLog.service = a.c.a;
+        trackLog.method = a.b.R;
         trackLog.result = str;
         return trackLog;
     }
 
     public static TrackLog createCtidAppStartLog(String str) {
         TrackLog trackLog = new TrackLog();
-        trackLog.layer = C3834a.C3835a.a;
-        trackLog.service = C3834a.C3837c.a;
-        trackLog.method = C3834a.C3836b.Q;
+        trackLog.layer = a.C0166a.a;
+        trackLog.service = a.c.a;
+        trackLog.method = a.b.Q;
         trackLog.params = str;
         return trackLog;
     }
 
     public static TrackLog createDataCollectionExceptionLog(String str) {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
+        trackLog.setLayer(a.C0166a.a);
         trackLog.setService("exception");
-        trackLog.setMethod(C3834a.C3836b.F);
+        trackLog.setMethod(a.b.F);
         trackLog.setMsg(str);
         return trackLog;
     }
 
     public static TrackLog createDynamicBegin(String str, String str2, String str3) {
         TrackLog trackLog = new TrackLog();
-        trackLog.layer = C3834a.C3835a.a;
-        trackLog.service = C3834a.C3837c.a;
-        trackLog.method = C3834a.C3836b.u;
+        trackLog.layer = a.C0166a.a;
+        trackLog.service = a.c.a;
+        trackLog.method = a.b.u;
         trackLog.msg = str;
         trackLog.params = str2;
         trackLog.result = str3;
@@ -207,9 +205,9 @@ public class TrackLog implements Serializable {
 
     public static TrackLog createDynamicEnd(String str, String str2, String str3) {
         TrackLog trackLog = new TrackLog();
-        trackLog.layer = C3834a.C3835a.a;
-        trackLog.service = C3834a.C3837c.a;
-        trackLog.method = C3834a.C3836b.v;
+        trackLog.layer = a.C0166a.a;
+        trackLog.service = a.c.a;
+        trackLog.method = a.b.v;
         trackLog.msg = str;
         trackLog.params = str2;
         trackLog.result = str3;
@@ -218,9 +216,9 @@ public class TrackLog implements Serializable {
 
     public static TrackLog createFinishCameraParametersLog(String str) {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.e);
-        trackLog.setMethod(C3834a.C3836b.r);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.e);
+        trackLog.setMethod(a.b.r);
         trackLog.setParams(str);
         return trackLog;
     }
@@ -230,20 +228,20 @@ public class TrackLog implements Serializable {
         hashMap.put("api", str);
         hashMap.put("costTime", Long.valueOf(j));
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.h);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.h);
         trackLog.setMethod("costTime");
         trackLog.setRt(j);
         trackLog.setMsg(str2);
-        trackLog.setParams(C3811h.a((Object) hashMap));
+        trackLog.setParams(h.a((Object) hashMap));
         return trackLog;
     }
 
     public static TrackLog createOssUploadFileBeginLog(String str) {
         TrackLog trackLog = new TrackLog();
-        trackLog.layer = C3834a.C3835a.a;
-        trackLog.service = C3834a.C3837c.a;
-        trackLog.method = C3834a.C3836b.M;
+        trackLog.layer = a.C0166a.a;
+        trackLog.service = a.c.a;
+        trackLog.method = a.b.M;
         trackLog.msg = "";
         trackLog.params = str;
         trackLog.result = "";
@@ -252,9 +250,9 @@ public class TrackLog implements Serializable {
 
     public static TrackLog createOssUploadFileEndLog(String str, String str2, long j) {
         TrackLog trackLog = new TrackLog();
-        trackLog.layer = C3834a.C3835a.a;
-        trackLog.service = C3834a.C3837c.a;
-        trackLog.method = C3834a.C3836b.N;
+        trackLog.layer = a.C0166a.a;
+        trackLog.service = a.c.a;
+        trackLog.method = a.b.N;
         trackLog.msg = "";
         trackLog.params = str;
         trackLog.result = str2;
@@ -268,31 +266,31 @@ public class TrackLog implements Serializable {
         hashMap.put("errorCode", str);
         hashMap.put("errorMsg", str2);
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.a);
-        trackLog.setMethod(C3834a.C3836b.X);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.a);
+        trackLog.setMethod(a.b.X);
         trackLog.setCode(i);
-        trackLog.setResult(C3811h.a((Map) hashMap));
+        trackLog.setResult(h.a((Map) hashMap));
         return trackLog;
     }
 
     public static TrackLog createRiskStartLog(boolean z, List<String> list, String str) {
         HashMap hashMap = new HashMap();
         hashMap.put("isSessionless", Boolean.valueOf(z));
-        hashMap.put("actionLogKeys", C3811h.a(list));
+        hashMap.put("actionLogKeys", h.a(list));
         hashMap.put("eventCode", str);
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.a);
-        trackLog.setMethod(C3834a.C3836b.W);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.a);
+        trackLog.setMethod(a.b.W);
         trackLog.setCode(0);
-        trackLog.setParams(C3811h.a((Map) hashMap));
+        trackLog.setParams(h.a((Map) hashMap));
         return trackLog;
     }
 
     public static TrackLog createSdkExceptionLog(String str, String str2, String str3) {
         TrackLog trackLog = new TrackLog();
-        trackLog.layer = C3834a.C3835a.a;
+        trackLog.layer = a.C0166a.a;
         trackLog.service = "exception";
         trackLog.method = "exception";
         trackLog.msg = str;
@@ -303,8 +301,8 @@ public class TrackLog implements Serializable {
 
     public static TrackLog createSdkWebViewEnterLog(String str) {
         TrackLog trackLog = new TrackLog();
-        trackLog.layer = C3834a.C3835a.a;
-        trackLog.service = C3834a.C3837c.d;
+        trackLog.layer = a.C0166a.a;
+        trackLog.service = a.c.d;
         trackLog.method = "enter";
         trackLog.params = str;
         return trackLog;
@@ -312,8 +310,8 @@ public class TrackLog implements Serializable {
 
     public static TrackLog createSdkWebViewErrorLog(String str, String str2, String str3) {
         TrackLog trackLog = new TrackLog();
-        trackLog.layer = C3834a.C3835a.a;
-        trackLog.service = C3834a.C3837c.d;
+        trackLog.layer = a.C0166a.a;
+        trackLog.service = a.c.d;
         trackLog.method = "error";
         trackLog.msg = str;
         trackLog.params = str2;
@@ -323,16 +321,16 @@ public class TrackLog implements Serializable {
 
     public static TrackLog createSdkWebViewExitLog() {
         TrackLog trackLog = new TrackLog();
-        trackLog.layer = C3834a.C3835a.a;
-        trackLog.service = C3834a.C3837c.d;
+        trackLog.layer = a.C0166a.a;
+        trackLog.service = a.c.d;
         trackLog.method = "exit";
         return trackLog;
     }
 
     public static TrackLog createSdkWebViewLoadLog(String str, String str2, String str3) {
         TrackLog trackLog = new TrackLog();
-        trackLog.layer = C3834a.C3835a.a;
-        trackLog.service = C3834a.C3837c.d;
+        trackLog.layer = a.C0166a.a;
+        trackLog.service = a.c.d;
         trackLog.method = "load";
         trackLog.msg = str;
         trackLog.params = str2;
@@ -346,20 +344,20 @@ public class TrackLog implements Serializable {
         hashMap.put("method", str2);
         hashMap.put(ExtrasInfo.EXTRAS, str3);
         TrackLog trackLog = new TrackLog();
-        trackLog.layer = C3834a.C3835a.a;
-        trackLog.service = C3834a.C3837c.g;
+        trackLog.layer = a.C0166a.a;
+        trackLog.service = a.c.g;
         trackLog.method = "";
         trackLog.msg = "";
-        trackLog.params = C3811h.a((Object) hashMap);
+        trackLog.params = h.a((Object) hashMap);
         trackLog.result = "";
         return trackLog;
     }
 
     public static TrackLog createSoundClickLog(String str) {
         TrackLog trackLog = new TrackLog();
-        trackLog.layer = C3834a.C3835a.a;
-        trackLog.service = C3834a.C3837c.e;
-        trackLog.method = C3834a.C3836b.f;
+        trackLog.layer = a.C0166a.a;
+        trackLog.service = a.c.e;
+        trackLog.method = a.b.f;
         trackLog.msg = "";
         trackLog.params = str;
         trackLog.result = "";
@@ -368,14 +366,14 @@ public class TrackLog implements Serializable {
 
     public static TrackLog createStartBeginLog(String str, String str2, boolean z) {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.a);
-        trackLog.setMethod(C3834a.C3836b.s);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.a);
+        trackLog.setMethod(a.b.s);
         HashMap hashMap = new HashMap();
         hashMap.put("startType", str);
         hashMap.put("fromSouce", str2);
         hashMap.put("isCustomUi", Integer.valueOf(z ? 1 : 0));
-        trackLog.setParams(C3811h.a((Map) hashMap));
+        trackLog.setParams(h.a((Map) hashMap));
         trackLog.setMsg("call start");
         trackLog.setResult("");
         trackLog.addTag1(str);
@@ -384,27 +382,27 @@ public class TrackLog implements Serializable {
 
     public static TrackLog createStartCameraParametersLog(String str) {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.e);
-        trackLog.setMethod(C3834a.C3836b.q);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.e);
+        trackLog.setMethod(a.b.q);
         trackLog.setParams(str);
         return trackLog;
     }
 
     public static TrackLog createStartEndLog(String str, String str2, long j, String str3, String str4, String str5) {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.a);
-        trackLog.setMethod(C3834a.C3836b.t);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.a);
+        trackLog.setMethod(a.b.t);
         trackLog.setParams("{\"startType\":" + str + "}");
         trackLog.setMsg(str2);
         HashMap hashMap = new HashMap();
-        hashMap.put(AbstractC3893a.af, C3829a.C3830a.a.a);
+        hashMap.put(com.alibaba.security.realidentity.jsbridge.a.af, a.C0165a.a.a);
         hashMap.put("state", str3);
         hashMap.put("errorCode", str4);
         hashMap.put("subCode", str5);
         hashMap.put("message", str2);
-        trackLog.setResult(C3811h.a((Object) hashMap));
+        trackLog.setResult(h.a((Object) hashMap));
         trackLog.setRt(System.currentTimeMillis() - j);
         trackLog.addTag1(str);
         trackLog.addTag2(str3);
@@ -414,17 +412,17 @@ public class TrackLog implements Serializable {
 
     public static TrackLog createTakePhotoFinishLog(CommonTrackResult commonTrackResult, boolean z) {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
+        trackLog.setLayer(a.C0166a.a);
         trackLog.setService("takePhoto");
         trackLog.setMethod("finish");
-        trackLog.setResult(C3811h.a(commonTrackResult));
+        trackLog.setResult(h.a(commonTrackResult));
         trackLog.setCode(z ? 0 : -1);
         return trackLog;
     }
 
     public static TrackLog createTakePhotoStartLog() {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
+        trackLog.setLayer(a.C0166a.a);
         trackLog.setService("takePhoto");
         trackLog.setMethod("start");
         return trackLog;
@@ -432,17 +430,17 @@ public class TrackLog implements Serializable {
 
     public static TrackLog createTakePhotoUploadLog(CommonTrackResult commonTrackResult) {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
+        trackLog.setLayer(a.C0166a.a);
         trackLog.setService("takePhoto");
-        trackLog.setMethod(C3834a.C3836b.d);
+        trackLog.setMethod(a.b.d);
         return trackLog;
     }
 
     public static TrackLog createVmEncryptLog(int i, String str, String str2) {
         TrackLog trackLog = new TrackLog();
-        trackLog.layer = C3834a.C3835a.a;
-        trackLog.service = C3834a.C3837c.a;
-        trackLog.method = C3834a.C3836b.P;
+        trackLog.layer = a.C0166a.a;
+        trackLog.service = a.c.a;
+        trackLog.method = a.b.P;
         trackLog.code = i;
         trackLog.msg = str;
         trackLog.result = str2;
@@ -454,11 +452,11 @@ public class TrackLog implements Serializable {
         hashMap.put(DumpManager.LOG_PATH, str2);
         hashMap.put("timestamp", String.valueOf(j));
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.e);
-        trackLog.setMethod(C3834a.C3836b.aa);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.e);
+        trackLog.setMethod(a.b.aa);
         trackLog.setMsg(str);
-        trackLog.setParams(C3811h.a((Map) hashMap));
+        trackLog.setParams(h.a((Map) hashMap));
         return trackLog;
     }
 
@@ -475,11 +473,11 @@ public class TrackLog implements Serializable {
         hashMap.put("isEmpty", Boolean.toString(z));
         hashMap.put("size", Integer.toString(i));
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.e);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.e);
         trackLog.setMethod("exception");
         trackLog.setMsg("record exception");
-        trackLog.setParams(C3811h.a((Map) hashMap));
+        trackLog.setParams(h.a((Map) hashMap));
         return trackLog;
     }
 
@@ -490,21 +488,21 @@ public class TrackLog implements Serializable {
         hashMap2.put("isRecording", str3);
         hashMap2.put("costTime", String.valueOf(j));
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.e);
-        trackLog.setMethod(C3834a.C3836b.T);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.e);
+        trackLog.setMethod(a.b.T);
         trackLog.setMsg(str);
-        trackLog.setParams(C3811h.a((Map) hashMap));
-        trackLog.setResult(C3811h.a((Map) hashMap2));
+        trackLog.setParams(h.a((Map) hashMap));
+        trackLog.setResult(h.a((Map) hashMap2));
         trackLog.setRt(j);
         return trackLog;
     }
 
     public static TrackLog startShowDazzleView(String str, String str2, String str3) {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.e);
-        trackLog.setMethod(C3834a.C3836b.o);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.e);
+        trackLog.setMethod(a.b.o);
         trackLog.setMsg(str3);
         trackLog.setParams(str);
         trackLog.setResult(str2);
@@ -518,21 +516,21 @@ public class TrackLog implements Serializable {
         hashMap2.put("isRecording", str3);
         hashMap2.put("costTime", String.valueOf(j));
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.e);
-        trackLog.setMethod(C3834a.C3836b.U);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.e);
+        trackLog.setMethod(a.b.U);
         trackLog.setMsg(str);
-        trackLog.setParams(C3811h.a((Map) hashMap));
-        trackLog.setResult(C3811h.a((Map) hashMap2));
+        trackLog.setParams(h.a((Map) hashMap));
+        trackLog.setResult(h.a((Map) hashMap2));
         trackLog.setRt(j);
         return trackLog;
     }
 
     public static TrackLog stopShowDazzleView(String str, String str2) {
         TrackLog trackLog = new TrackLog();
-        trackLog.setLayer(C3834a.C3835a.a);
-        trackLog.setService(C3834a.C3837c.e);
-        trackLog.setMethod(C3834a.C3836b.p);
+        trackLog.setLayer(a.C0166a.a);
+        trackLog.setService(a.c.e);
+        trackLog.setMethod(a.b.p);
         trackLog.setParams(str2);
         trackLog.setMsg(str);
         return trackLog;
@@ -678,7 +676,7 @@ public class TrackLog implements Serializable {
 
     public static TrackLog createSdkExceptionLog(String str) {
         TrackLog trackLog = new TrackLog();
-        trackLog.layer = C3834a.C3835a.a;
+        trackLog.layer = a.C0166a.a;
         trackLog.service = "exception";
         trackLog.method = "exception";
         trackLog.msg = "";

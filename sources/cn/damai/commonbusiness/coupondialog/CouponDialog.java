@@ -16,8 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.R$style;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.coupondialog.net.CouponListResponse;
@@ -142,12 +141,11 @@ public class CouponDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.coupondialog.CouponDialog$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0633a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0633a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -166,12 +164,11 @@ public class CouponDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.coupondialog.CouponDialog$b */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0634b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0634b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -208,9 +205,9 @@ public class CouponDialog extends Dialog {
         recyclerView.setAdapter(couponListAdapter);
         TextView textView = (TextView) this.c.findViewById(R$id.dialog_coupon_use_btn);
         this.f = textView;
-        textView.setOnClickListener(new View$OnClickListenerC0633a());
+        textView.setOnClickListener(new a());
         this.g = (TextView) this.c.findViewById(R$id.dialog_coupon_use_tip);
-        ((ImageView) this.c.findViewById(R$id.dialog_coupon_close_btn)).setOnClickListener(new View$OnClickListenerC0634b());
+        ((ImageView) this.c.findViewById(R$id.dialog_coupon_close_btn)).setOnClickListener(new b());
         setContentView(this.c);
     }
 
@@ -247,7 +244,7 @@ public class CouponDialog extends Dialog {
                 hashMap.put("item_id", this.m);
                 hashMap.put("usercode", z20.E());
             }
-            C0529c.e().x(C0528b.getInstance().e(this.l, "redpaper", "use", hashMap, Boolean.TRUE));
+            c.e().x(cn.damai.common.user.b.getInstance().e(this.l, "redpaper", "use", hashMap, Boolean.TRUE));
         }
     }
 

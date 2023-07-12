@@ -16,14 +16,13 @@ public final class wk2<T> implements Sequence<T>, DropTakeSequence<T> {
     private final int b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.wk2$a */
     /* loaded from: classes3.dex */
-    public static final class C9869a implements Iterator<T>, KMappedMarker {
+    public static final class a implements Iterator<T>, KMappedMarker {
         private int a;
         @NotNull
         private final Iterator<T> b;
 
-        C9869a(wk2<T> wk2Var) {
+        a(wk2<T> wk2Var) {
             this.a = ((wk2) wk2Var).b;
             this.b = ((wk2) wk2Var).a.iterator();
         }
@@ -75,7 +74,7 @@ public final class wk2<T> implements Sequence<T>, DropTakeSequence<T> {
     @Override // kotlin.sequences.Sequence
     @NotNull
     public Iterator<T> iterator() {
-        return new C9869a(this);
+        return new a(this);
     }
 
     @Override // kotlin.sequences.DropTakeSequence

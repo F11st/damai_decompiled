@@ -8,5 +8,5 @@ import io.reactivex.annotations.NonNull;
 /* loaded from: classes3.dex */
 public interface CompletableConverter<R> {
     @NonNull
-    R apply(@NonNull AbstractC8146a abstractC8146a);
+    R apply(@NonNull a aVar);
 }

@@ -27,12 +27,11 @@ public class DMBreatheView extends View {
     private boolean isUp;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.DMBreatheView$a */
     /* loaded from: classes8.dex */
-    public class C2571a implements Animator.AnimatorListener {
+    public class a implements Animator.AnimatorListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2571a() {
+        a() {
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -116,7 +115,7 @@ public class DMBreatheView extends View {
                 this.isUp = true;
             }
             this.animSet.start();
-            this.animSet.addListener(new C2571a());
+            this.animSet.addListener(new a());
         }
     }
 

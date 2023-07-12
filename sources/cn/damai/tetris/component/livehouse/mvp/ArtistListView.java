@@ -37,12 +37,11 @@ public class ArtistListView extends AbsView<ArtistListContract.Presenter> implem
     private String mTitleName;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.livehouse.mvp.ArtistListView$a */
     /* loaded from: classes7.dex */
-    public class C1922a implements OnItemBindListener<ArtistItemBean> {
+    public class a implements OnItemBindListener<ArtistItemBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1922a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -109,7 +108,7 @@ public class ArtistListView extends AbsView<ArtistListContract.Presenter> implem
             }
         });
         recyclerView.setLayoutManager(new LinearLayoutManager(mu0.a(), 0, false));
-        ArtistRecycleAdapter artistRecycleAdapter = new ArtistRecycleAdapter(new C1922a());
+        ArtistRecycleAdapter artistRecycleAdapter = new ArtistRecycleAdapter(new a());
         this.mAdapter = artistRecycleAdapter;
         recyclerView.setAdapter(artistRecycleAdapter);
         this.mMutiAdapter = new ArtistProMutiRecycleAdapter(mu0.a(), this.mPresenter, this.mTitleName);

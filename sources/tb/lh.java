@@ -6,9 +6,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import kotlin.collections.ArraysKt___ArraysKt;
-import kotlin.collections.C8203e0;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8220r;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptorWithTypeParameters;
@@ -24,20 +21,19 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public final class lh implements MemberScope {
     @NotNull
-    public static final C9410a Companion = new C9410a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final String a;
     @NotNull
     private final MemberScope[] b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.lh$a */
     /* loaded from: classes3.dex */
-    public static final class C9410a {
-        private C9410a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9410a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -47,9 +43,9 @@ public final class lh implements MemberScope {
             b41.i(iterable, "scopes");
             xd2 xd2Var = new xd2();
             for (MemberScope memberScope : iterable) {
-                if (memberScope != MemberScope.C8499b.INSTANCE) {
+                if (memberScope != MemberScope.b.INSTANCE) {
                     if (memberScope instanceof lh) {
-                        C8220r.w(xd2Var, ((lh) memberScope).b);
+                        kotlin.collections.r.w(xd2Var, ((lh) memberScope).b);
                     } else {
                         xd2Var.add(memberScope);
                     }
@@ -71,7 +67,7 @@ public final class lh implements MemberScope {
                 }
                 return list.get(0);
             }
-            return MemberScope.C8499b.INSTANCE;
+            return MemberScope.b.INSTANCE;
         }
     }
 
@@ -127,7 +123,7 @@ public final class lh implements MemberScope {
         MemberScope[] memberScopeArr = this.b;
         int length = memberScopeArr.length;
         if (length == 0) {
-            g = C8214m.g();
+            g = kotlin.collections.m.g();
             return g;
         }
         int i = 0;
@@ -140,7 +136,7 @@ public final class lh implements MemberScope {
                 collection = i62.a(collection, memberScope.getContributedDescriptors(z60Var, function1));
             }
             if (collection == null) {
-                d = C8203e0.d();
+                d = kotlin.collections.e0.d();
                 return d;
             }
             return collection;
@@ -158,7 +154,7 @@ public final class lh implements MemberScope {
         MemberScope[] memberScopeArr = this.b;
         int length = memberScopeArr.length;
         if (length == 0) {
-            g = C8214m.g();
+            g = kotlin.collections.m.g();
             return g;
         }
         int i = 0;
@@ -171,7 +167,7 @@ public final class lh implements MemberScope {
                 collection = i62.a(collection, memberScope.getContributedFunctions(ni1Var, lookupLocation));
             }
             if (collection == null) {
-                d = C8203e0.d();
+                d = kotlin.collections.e0.d();
                 return d;
             }
             return collection;
@@ -189,7 +185,7 @@ public final class lh implements MemberScope {
         MemberScope[] memberScopeArr = this.b;
         int length = memberScopeArr.length;
         if (length == 0) {
-            g = C8214m.g();
+            g = kotlin.collections.m.g();
             return g;
         }
         int i = 0;
@@ -202,7 +198,7 @@ public final class lh implements MemberScope {
                 collection = i62.a(collection, memberScope.getContributedVariables(ni1Var, lookupLocation));
             }
             if (collection == null) {
-                d = C8203e0.d();
+                d = kotlin.collections.e0.d();
                 return d;
             }
             return collection;
@@ -216,7 +212,7 @@ public final class lh implements MemberScope {
         MemberScope[] memberScopeArr = this.b;
         LinkedHashSet linkedHashSet = new LinkedHashSet();
         for (MemberScope memberScope : memberScopeArr) {
-            C8220r.v(linkedHashSet, memberScope.getFunctionNames());
+            kotlin.collections.r.v(linkedHashSet, memberScope.getFunctionNames());
         }
         return linkedHashSet;
     }
@@ -227,7 +223,7 @@ public final class lh implements MemberScope {
         MemberScope[] memberScopeArr = this.b;
         LinkedHashSet linkedHashSet = new LinkedHashSet();
         for (MemberScope memberScope : memberScopeArr) {
-            C8220r.v(linkedHashSet, memberScope.getVariableNames());
+            kotlin.collections.r.v(linkedHashSet, memberScope.getVariableNames());
         }
         return linkedHashSet;
     }

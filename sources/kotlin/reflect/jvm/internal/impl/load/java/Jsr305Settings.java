@@ -3,10 +3,10 @@ package kotlin.reflect.jvm.internal.impl.load.java;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import kotlin.C8177b;
 import kotlin.Lazy;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8226x;
+import kotlin.b;
+import kotlin.collections.l;
+import kotlin.collections.x;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -36,7 +36,7 @@ public final class Jsr305Settings {
         this.a = reportLevel;
         this.b = reportLevel2;
         this.c = map;
-        b = C8177b.b(new Function0<String[]>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.Jsr305Settings$description$2
+        b = b.b(new Function0<String[]>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.Jsr305Settings$description$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -48,7 +48,7 @@ public final class Jsr305Settings {
                 List c;
                 List a;
                 Jsr305Settings jsr305Settings = Jsr305Settings.this;
-                c = C8213l.c();
+                c = l.c();
                 c.add(jsr305Settings.a().getDescription());
                 ReportLevel b2 = jsr305Settings.b();
                 if (b2 != null) {
@@ -57,7 +57,7 @@ public final class Jsr305Settings {
                 for (Map.Entry<hp0, ReportLevel> entry : jsr305Settings.c().entrySet()) {
                     c.add('@' + entry.getKey() + jn1.CONDITION_IF_MIDDLE + entry.getValue().getDescription());
                 }
-                a = C8213l.a(c);
+                a = l.a(c);
                 Object[] array = a.toArray(new String[0]);
                 Objects.requireNonNull(array, "null cannot be cast to non-null type kotlin.Array<T>");
                 return (String[]) array;
@@ -110,6 +110,6 @@ public final class Jsr305Settings {
     }
 
     public /* synthetic */ Jsr305Settings(ReportLevel reportLevel, ReportLevel reportLevel2, Map map, int i, k50 k50Var) {
-        this(reportLevel, (i & 2) != 0 ? null : reportLevel2, (i & 4) != 0 ? C8226x.i() : map);
+        this(reportLevel, (i & 2) != 0 ? null : reportLevel2, (i & 4) != 0 ? x.i() : map);
     }
 }

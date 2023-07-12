@@ -18,10 +18,10 @@ public final class bg implements IRouteSearchV2 {
     private Handler c;
 
     public bg(Context context) throws AMapException {
-        bu a = bt.a(context, C4434h.a(false));
-        if (a.a == bt.EnumC4398c.SuccessCode) {
+        bu a = bt.a(context, h.a(false));
+        if (a.a == bt.c.SuccessCode) {
             this.b = context.getApplicationContext();
-            this.c = HandlerC4447t.a();
+            this.c = t.a();
             return;
         }
         String str = a.b;
@@ -31,13 +31,13 @@ public final class bg implements IRouteSearchV2 {
     @Override // com.amap.api.services.interfaces.IRouteSearchV2
     public final DriveRouteResultV2 calculateDriveRoute(RouteSearchV2.DriveRouteQuery driveRouteQuery) throws AMapException {
         try {
-            C4444r.a(this.b);
+            r.a(this.b);
             if (driveRouteQuery != null) {
                 if (a(driveRouteQuery.getFromAndTo())) {
                     ah.a().a(driveRouteQuery.getPassedByPoints());
                     ah.a().b(driveRouteQuery.getAvoidpolygons());
                     RouteSearchV2.DriveRouteQuery m236clone = driveRouteQuery.m236clone();
-                    DriveRouteResultV2 b = new C4440n(this.b, m236clone).b();
+                    DriveRouteResultV2 b = new n(this.b, m236clone).b();
                     if (b != null) {
                         b.setDriveQuery(m236clone);
                     }
@@ -47,7 +47,7 @@ public final class bg implements IRouteSearchV2 {
             }
             throw new AMapException("无效的参数 - IllegalArgumentException");
         } catch (AMapException e) {
-            C4435i.a(e, "RouteSearch", "calculateDriveRoute");
+            i.a(e, "RouteSearch", "calculateDriveRoute");
             throw e;
         }
     }
@@ -58,7 +58,7 @@ public final class bg implements IRouteSearchV2 {
             ao.a().a(new Runnable() { // from class: com.amap.api.col.s.bg.1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                    Message obtainMessage = t.a().obtainMessage();
                     obtainMessage.what = 101;
                     obtainMessage.arg1 = 101;
                     Bundle bundle = new Bundle();
@@ -79,7 +79,7 @@ public final class bg implements IRouteSearchV2 {
                 }
             });
         } catch (Throwable th) {
-            C4435i.a(th, "RouteSearch", "calculateDriveRouteAsyn");
+            i.a(th, "RouteSearch", "calculateDriveRouteAsyn");
         }
     }
 

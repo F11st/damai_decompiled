@@ -32,7 +32,7 @@ import com.ali.user.mobile.service.ServiceFactory;
 import com.ali.user.mobile.service.StorageService;
 import com.ali.user.mobile.utils.ResourceUtil;
 import com.alibaba.fastjson.JSON;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
+import com.alibaba.security.realidentity.jsbridge.a;
 import com.taobao.login4android.config.LoginSwitch;
 import java.util.HashMap;
 import java.util.Map;
@@ -102,7 +102,7 @@ public class RegisterComponent {
         rpcRequest.API_NAME = str;
         rpcRequest.VERSION = "1.0";
         rpcRequest.requestSite = DataProviderFactory.getDataProvider().getSite();
-        rpcRequest.addParam(AbstractC3893a.f, JSON.toJSONString(getOceanRegisterMemberRequestBase()));
+        rpcRequest.addParam(a.f, JSON.toJSONString(getOceanRegisterMemberRequestBase()));
         rpcRequest.addParam("token", str2);
         rpcRequest.addParam(ApiConstants.ApiField.RISK_INFO, JSON.toJSONString(UserLoginServiceImpl.getScanFaceWSecurityData()));
         if (map == null) {
@@ -119,7 +119,7 @@ public class RegisterComponent {
         rpcRequest.VERSION = "1.0";
         rpcRequest.requestSite = DataProviderFactory.getDataProvider().getSite();
         RegisterRequestBase oceanRegisterMemberRequestBase = getOceanRegisterMemberRequestBase();
-        rpcRequest.addParam(AbstractC3893a.f, JSON.toJSONString(oceanRegisterMemberRequestBase));
+        rpcRequest.addParam(a.f, JSON.toJSONString(oceanRegisterMemberRequestBase));
         encryptPassword(oceanRegisterParam);
         rpcRequest.addParam("info", JSON.toJSONString(oceanRegisterParam.toInfo()));
         rpcRequest.addParam(ApiConstants.ApiField.RISK_INFO, JSON.toJSONString(UserLoginServiceImpl.getScanFaceWSecurityData()));
@@ -151,7 +151,7 @@ public class RegisterComponent {
         rpcRequest.API_NAME = "mtop.havana.register.sdk.email.checkcode.send";
         rpcRequest.VERSION = "1.0";
         rpcRequest.requestSite = DataProviderFactory.getDataProvider().getSite();
-        rpcRequest.addParam(AbstractC3893a.f, JSON.toJSONString(getOceanRegisterMemberRequestBase()));
+        rpcRequest.addParam(a.f, JSON.toJSONString(getOceanRegisterMemberRequestBase()));
         OceanRegisterParam oceanRegisterParam2 = new OceanRegisterParam();
         oceanRegisterParam2.email = oceanRegisterParam.email;
         if (LoginSwitch.isInABTestRegion(LoginSwitch.EMAILCODE_LENGTH, 10000)) {
@@ -179,7 +179,7 @@ public class RegisterComponent {
         rpcRequest.VERSION = "1.0";
         rpcRequest.requestSite = DataProviderFactory.getDataProvider().getSite();
         RegisterRequestBase oceanRegisterMemberRequestBase = getOceanRegisterMemberRequestBase();
-        rpcRequest.addParam(AbstractC3893a.f, JSON.toJSONString(oceanRegisterMemberRequestBase));
+        rpcRequest.addParam(a.f, JSON.toJSONString(oceanRegisterMemberRequestBase));
         encryptPassword(oceanRegisterParam);
         OceanRegisterParam info = oceanRegisterParam.toInfo();
         if (!LoginSwitch.isInABTestRegion(LoginSwitch.SMSCODE_LENGTH, -1) && DataProviderFactory.getDataProvider().getSmsLength() != 4) {
@@ -217,7 +217,7 @@ public class RegisterComponent {
         rpcRequest.API_NAME = ApiConstants.ApiName.API_NICK_VERIFY;
         rpcRequest.VERSION = "1.0";
         rpcRequest.requestSite = DataProviderFactory.getDataProvider().getSite();
-        rpcRequest.addParam(AbstractC3893a.f, JSON.toJSONString(getOceanRegisterMemberRequestBase()));
+        rpcRequest.addParam(a.f, JSON.toJSONString(getOceanRegisterMemberRequestBase()));
         OceanRegisterParam oceanRegisterParam2 = new OceanRegisterParam();
         oceanRegisterParam2.nick = oceanRegisterParam.nick;
         rpcRequest.addParam("info", JSON.toJSONString(oceanRegisterParam2.toInfo()));
@@ -271,7 +271,7 @@ public class RegisterComponent {
         rpcRequest.VERSION = "1.0";
         RegisterRequestBase oceanRegisterMemberRequestBase = getOceanRegisterMemberRequestBase(null);
         new HashMap().put("ncAppkey", ((StorageService) ServiceFactory.getService(StorageService.class)).getAppKey(0));
-        rpcRequest.addParam(AbstractC3893a.f, JSON.toJSONString(oceanRegisterMemberRequestBase));
+        rpcRequest.addParam(a.f, JSON.toJSONString(oceanRegisterMemberRequestBase));
         rpcRequest.addParam("info", JSON.toJSONString(registerUserInfo));
         rpcRequest.addParam(ApiConstants.ApiField.RISK_INFO, JSON.toJSONString(SecurityGuardManagerWraper.buildWSecurityData()));
         rpcRequest.addParam("token", str);
@@ -309,7 +309,7 @@ public class RegisterComponent {
         rpcRequest.API_NAME = ApiConstants.ApiName.API_AUTH_NUM_REIGSTER;
         rpcRequest.VERSION = "1.0";
         rpcRequest.addParam("vendorRequest", JSON.toJSONString(aliValidRequest));
-        rpcRequest.addParam(AbstractC3893a.f, JSON.toJSONString(getOceanRegisterMemberRequestBase()));
+        rpcRequest.addParam(a.f, JSON.toJSONString(getOceanRegisterMemberRequestBase()));
         rpcRequest.addParam(ApiConstants.ApiField.RISK_INFO, JSON.toJSONString(UserLoginServiceImpl.getScanFaceWSecurityData()));
         encryptPassword(oceanRegisterParam);
         rpcRequest.addParam("registerUserInfo", JSON.toJSON(oceanRegisterParam.toInfo()));
@@ -351,7 +351,7 @@ public class RegisterComponent {
         if (DataProviderFactory.getDataProvider().getRegisterExternalData("directRegister") != null) {
             hashMap.putAll(DataProviderFactory.getDataProvider().getRegisterExternalData("directRegister"));
         }
-        rpcRequest.addParam(AbstractC3893a.f, JSON.toJSONString(oceanRegisterMemberRequestBase));
+        rpcRequest.addParam(a.f, JSON.toJSONString(oceanRegisterMemberRequestBase));
         rpcRequest.addParam("token", str);
         rpcRequest.addParam(ApiConstants.ApiField.RISK_INFO, JSON.toJSONString(SecurityGuardManagerWraper.buildWSecurityData()));
         rpcRequest.addParam("extra", JSON.toJSONString(hashMap));

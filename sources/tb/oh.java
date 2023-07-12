@@ -3,7 +3,6 @@ package tb;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
 import kotlin.coroutines.EmptyCoroutineContext;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlinx.coroutines.channels.BufferOverflow;
 import kotlinx.coroutines.flow.Flow;
 import kotlinx.coroutines.flow.FlowCollector;
@@ -31,7 +30,7 @@ public final class oh<T> extends ChannelFlowOperator<T, T> {
     public Object k(@NotNull FlowCollector<? super T> flowCollector, @NotNull Continuation<? super wt2> continuation) {
         Object d;
         Object collect = this.d.collect(flowCollector, continuation);
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         return collect == d ? collect : wt2.INSTANCE;
     }
 

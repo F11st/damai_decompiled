@@ -3,7 +3,6 @@ package kotlin.sequences;
 import com.taobao.weex.ui.component.AbstractEditComponent;
 import java.util.Iterator;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.RestrictedSuspendLambda;
 import kotlin.jvm.functions.Function2;
@@ -52,7 +51,7 @@ final class SequencesKt___SequencesKt$zipWithNext$2 extends RestrictedSuspendLam
         pa2 pa2Var;
         Object next;
         Iterator<Object> it;
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         int i = this.label;
         if (i == 0) {
             i32.b(obj);

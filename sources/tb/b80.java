@@ -29,7 +29,7 @@ public class b80 {
     public static double b(Context context) {
         WindowManager windowManager;
         Display defaultDisplay;
-        if (context == null || (windowManager = (WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)) == null || (defaultDisplay = windowManager.getDefaultDisplay()) == null) {
+        if (context == null || (windowManager = (WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)) == null || (defaultDisplay = windowManager.getDefaultDisplay()) == null) {
             return 0.0d;
         }
         DisplayMetrics displayMetrics = new DisplayMetrics();

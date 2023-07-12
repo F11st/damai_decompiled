@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.exceptions.CompositeException;
 import io.reactivex.functions.Predicate;
 import io.reactivex.internal.subscriptions.SubscriptionArbiter;
@@ -94,13 +94,13 @@ public final class FlowableRetryPredicate<T> extends AbstractFlowableWithUpstrea
         }
     }
 
-    public FlowableRetryPredicate(AbstractC8147b<T> abstractC8147b, long j, Predicate<? super Throwable> predicate) {
-        super(abstractC8147b);
+    public FlowableRetryPredicate(b<T> bVar, long j, Predicate<? super Throwable> predicate) {
+        super(bVar);
         this.predicate = predicate;
         this.count = j;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super T> subscriber) {
         SubscriptionArbiter subscriptionArbiter = new SubscriptionArbiter();
         subscriber.onSubscribe(subscriptionArbiter);

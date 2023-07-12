@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.common.nav.DMNav;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
@@ -87,7 +87,7 @@ public class ProductShopDelegate {
                     }
                 });
                 if (!TextUtils.isEmpty(goodBean.pic)) {
-                    C0504a.b().loadinto(goodBean.pic, this.e);
+                    a.b().loadinto(goodBean.pic, this.e);
                 } else {
                     this.e.setImageResource(R$drawable.uikit_default_image_bg_grey);
                 }

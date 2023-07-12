@@ -2,9 +2,7 @@ package tb;
 
 import android.text.TextUtils;
 import android.view.View;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.search.bean.MarketTagBean;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
 import cn.damai.search.bean.IRankWordBean;
@@ -18,7 +16,7 @@ import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
-public class c82 extends C0528b {
+public class c82 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final String PAGE_NAME = "search";
     private static c82 b = new c82();
@@ -26,9 +24,9 @@ public class c82 extends C0528b {
     private c82() {
     }
 
-    public static C0525a.C0527b f(String str) {
+    public static a.b f(String str) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "763456872") ? (C0525a.C0527b) ipChange.ipc$dispatch("763456872", new Object[]{str}) : new C0525a.C0527b().a(z20.d()).e(str).i("search");
+        return AndroidInstantRuntime.support(ipChange, "763456872") ? (a.b) ipChange.ipc$dispatch("763456872", new Object[]{str}) : new a.b().a(z20.d()).e(str).i("search");
     }
 
     public static void g(View view, String str, int i) {
@@ -39,7 +37,7 @@ public class c82 extends C0528b {
         }
         HashMap<String, String> f = d23.f();
         f.put("searchhistory", str);
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         e.G(view, "item_" + i, "searchhistory", "search", f);
     }
 
@@ -54,7 +52,7 @@ public class c82 extends C0528b {
         d23.h(f, "wordtype", iRankWordBean.getType());
         d23.h(f, "trend", iRankWordBean.getTrend4Ut());
         d23.h(f, "hotword", iRankWordBean.getRankWord());
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         e.G(view, "hotword_" + i, "hotsearch_list", "search", f);
     }
 
@@ -70,7 +68,7 @@ public class c82 extends C0528b {
             f.put("keyword", inputInfoProvider.getInput());
             f.put("type", inputInfoProvider.getType4Ut());
         }
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         e.G(view, "tab_" + i, "top", "search", f);
     }
 
@@ -119,7 +117,7 @@ public class c82 extends C0528b {
             f.putAll(map);
         }
         c82 c82Var = b;
-        C0529c.e().x(c82Var.e("search", "top", "item_" + i, f, Boolean.TRUE));
+        cn.damai.common.user.c.e().x(c82Var.e("search", "top", "item_" + i, f, Boolean.TRUE));
     }
 
     public static void m(InputInfoProvider inputInfoProvider, Map<String, String> map) {
@@ -134,7 +132,7 @@ public class c82 extends C0528b {
         if (map != null) {
             f.putAll(map);
         }
-        C0529c.e().x(b.e("search", "suggestion", "item_0", f, Boolean.TRUE));
+        cn.damai.common.user.c.e().x(b.e("search", "suggestion", "item_0", f, Boolean.TRUE));
     }
 
     public static void n(ProjectItemBean projectItemBean, InputInfoProvider inputInfoProvider, int i, Map<String, String> map) {
@@ -151,7 +149,7 @@ public class c82 extends C0528b {
             f.putAll(map);
         }
         c82 c82Var = b;
-        C0529c.e().x(c82Var.e("search", "list", "item_" + i, f, Boolean.TRUE));
+        cn.damai.common.user.c.e().x(c82Var.e("search", "list", "item_" + i, f, Boolean.TRUE));
     }
 
     public static void o() {
@@ -160,7 +158,7 @@ public class c82 extends C0528b {
             ipChange.ipc$dispatch("-876750964", new Object[0]);
             return;
         }
-        C0529c.e().x(b.e("search", "clearhistory", Constants.TAG_CLEAR_STRING, d23.f(), Boolean.FALSE));
+        cn.damai.common.user.c.e().x(b.e("search", "clearhistory", Constants.TAG_CLEAR_STRING, d23.f(), Boolean.FALSE));
     }
 
     public static void p(String str, int i) {
@@ -172,7 +170,7 @@ public class c82 extends C0528b {
         HashMap<String, String> f = d23.f();
         f.put("searchhistory", str);
         c82 c82Var = b;
-        C0529c.e().x(c82Var.e("search", "searchhistory", "item_" + i, f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(c82Var.e("search", "searchhistory", "item_" + i, f, Boolean.FALSE));
     }
 
     public static void q(String str) {
@@ -183,7 +181,7 @@ public class c82 extends C0528b {
         }
         HashMap<String, String> f = d23.f();
         f.put("titlelabel", str);
-        C0529c.e().x(b.e("search", "cleartext", Constants.TAG_CLEAR_STRING, f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(b.e("search", "cleartext", Constants.TAG_CLEAR_STRING, f, Boolean.FALSE));
     }
 
     public static void r(IRankWordBean iRankWordBean, int i) {
@@ -198,7 +196,7 @@ public class c82 extends C0528b {
         f.put("wordtype", iRankWordBean.getType());
         f.put("trend", iRankWordBean.getTrend4Ut());
         c82 c82Var = b;
-        C0529c.e().x(c82Var.e("search", "hotsearch_list", "hotword_" + i, f, Boolean.TRUE));
+        cn.damai.common.user.c.e().x(c82Var.e("search", "hotsearch_list", "hotword_" + i, f, Boolean.TRUE));
     }
 
     public static void s(InputInfoProvider inputInfoProvider) {
@@ -210,7 +208,7 @@ public class c82 extends C0528b {
         HashMap<String, String> f = d23.f();
         f.put("keyword", inputInfoProvider.getInput());
         f.put("type", inputInfoProvider.getType4Ut());
-        C0529c.e().x(b.e("search", "top", "searchbtn", f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(b.e("search", "top", "searchbtn", f, Boolean.FALSE));
     }
 
     public static void t(InputInfoProvider inputInfoProvider, String str, int i) {
@@ -223,6 +221,6 @@ public class c82 extends C0528b {
         f.put("keyword", inputInfoProvider.getInput());
         f.put("titlelabel", str);
         c82 c82Var = b;
-        C0529c.e().x(c82Var.e("search", "suggestion", "item_" + i, f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(c82Var.e("search", "suggestion", "item_" + i, f, Boolean.FALSE));
     }
 }

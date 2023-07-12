@@ -1,6 +1,5 @@
 package tb;
 
-import cn.damai.common.user.C0529c;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
@@ -40,14 +39,14 @@ public class hr1 {
             } else {
                 hashMap.put("titlelabel", sb.toString());
                 hashMap.put("status", sb2.toString());
-                C0529c.e().A(hashMap, "state", "overview");
+                cn.damai.common.user.c.e().A(hashMap, "state", "overview");
                 try {
                     HashMap hashMap2 = new HashMap();
-                    int a = C9659rp.a(mu0.a());
+                    int a = rp.a(mu0.a());
                     hashMap2.put("cpu_arch", a + "");
-                    hashMap2.put("apk_arch", C9659rp.b(mu0.a()) + "");
-                    hashMap2.put("runtime_arch", C9659rp.e(mu0.a()) + "");
-                    C0529c.e().A(hashMap2, "userstate", "cpu_state");
+                    hashMap2.put("apk_arch", rp.b(mu0.a()) + "");
+                    hashMap2.put("runtime_arch", rp.e(mu0.a()) + "");
+                    cn.damai.common.user.c.e().A(hashMap2, "userstate", "cpu_state");
                     return;
                 } catch (Exception e) {
                     e.printStackTrace();

@@ -1,11 +1,10 @@
 package kotlin.reflect.jvm.internal.impl.descriptors.annotations;
 
 import java.util.Map;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
 import kotlin.jvm.functions.Function0;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
+import kotlin.reflect.jvm.internal.impl.builtins.b;
 import kotlin.reflect.jvm.internal.impl.descriptors.SourceElement;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
@@ -19,7 +18,7 @@ import tb.z71;
 /* loaded from: classes3.dex */
 public final class BuiltInAnnotationDescriptor implements AnnotationDescriptor {
     @NotNull
-    private final AbstractC8271b a;
+    private final b a;
     @NotNull
     private final hp0 b;
     @NotNull
@@ -28,15 +27,15 @@ public final class BuiltInAnnotationDescriptor implements AnnotationDescriptor {
     private final Lazy d;
 
     /* JADX WARN: Multi-variable type inference failed */
-    public BuiltInAnnotationDescriptor(@NotNull AbstractC8271b abstractC8271b, @NotNull hp0 hp0Var, @NotNull Map<ni1, ? extends fn<?>> map) {
+    public BuiltInAnnotationDescriptor(@NotNull b bVar, @NotNull hp0 hp0Var, @NotNull Map<ni1, ? extends fn<?>> map) {
         Lazy a;
-        b41.i(abstractC8271b, "builtIns");
+        b41.i(bVar, "builtIns");
         b41.i(hp0Var, "fqName");
         b41.i(map, "allValueArguments");
-        this.a = abstractC8271b;
+        this.a = bVar;
         this.b = hp0Var;
         this.c = map;
-        a = C8177b.a(LazyThreadSafetyMode.PUBLICATION, new Function0<fd2>() { // from class: kotlin.reflect.jvm.internal.impl.descriptors.annotations.BuiltInAnnotationDescriptor$type$2
+        a = kotlin.b.a(LazyThreadSafetyMode.PUBLICATION, new Function0<fd2>() { // from class: kotlin.reflect.jvm.internal.impl.descriptors.annotations.BuiltInAnnotationDescriptor$type$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -45,9 +44,9 @@ public final class BuiltInAnnotationDescriptor implements AnnotationDescriptor {
             @Override // kotlin.jvm.functions.Function0
             @NotNull
             public final fd2 invoke() {
-                AbstractC8271b abstractC8271b2;
-                abstractC8271b2 = BuiltInAnnotationDescriptor.this.a;
-                return abstractC8271b2.o(BuiltInAnnotationDescriptor.this.getFqName()).getDefaultType();
+                b bVar2;
+                bVar2 = BuiltInAnnotationDescriptor.this.a;
+                return bVar2.o(BuiltInAnnotationDescriptor.this.getFqName()).getDefaultType();
             }
         });
         this.d = a;

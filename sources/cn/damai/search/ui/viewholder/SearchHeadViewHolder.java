@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.brand.BrandOptimizationDO;
 import cn.damai.commonbusiness.search.Daojishi;
 import cn.damai.commonbusiness.search.bean.BaccountInfo;
@@ -55,13 +55,12 @@ public class SearchHeadViewHolder extends RecyclerView.ViewHolder {
     private String o;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.viewholder.SearchHeadViewHolder$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1628a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ArtificialProxy a;
 
-        View$OnClickListenerC1628a(ArtificialProxy artificialProxy) {
+        a(ArtificialProxy artificialProxy) {
             this.a = artificialProxy;
         }
 
@@ -77,12 +76,11 @@ public class SearchHeadViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.viewholder.SearchHeadViewHolder$b */
     /* loaded from: classes6.dex */
-    public class C1629b implements OnItemBindListener<ArtificialProxy> {
+    public class b implements OnItemBindListener<ArtificialProxy> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1629b() {
+        b() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -165,7 +163,7 @@ public class SearchHeadViewHolder extends RecyclerView.ViewHolder {
             if (TextUtils.isEmpty(toPageSpec.url)) {
                 return;
             }
-            C0529c.e().x(b82.C().B(this.n, this.o, i));
+            c.e().x(b82.C().B(this.n, this.o, i));
             if (toPageSpec.mBundle != null) {
                 DMNav.from(this.h).withExtras(toPageSpec.mBundle).toUri(toPageSpec.url);
             } else {
@@ -181,7 +179,7 @@ public class SearchHeadViewHolder extends RecyclerView.ViewHolder {
             return;
         }
         if (this.i == null) {
-            this.i = new ArtificialAdapter(this.h, new C1629b());
+            this.i = new ArtificialAdapter(this.h, new b());
             RecyclerView recyclerView = (RecyclerView) this.g.findViewById(R$id.item_multi_artificial);
             recyclerView.setLayoutManager(new LinearLayoutManager(this.h, 0, false));
             recyclerView.setAdapter(this.i);
@@ -221,7 +219,7 @@ public class SearchHeadViewHolder extends RecyclerView.ViewHolder {
         this.f.findViewById(R$id.item_single_video_tag).setVisibility(artificialProxy.isShowVideoTag() ? 0 : 8);
         textView.setText(artificialProxy.getTitle());
         SearchHelper.s(imageView, artificialProxy.getImgUrl(), DisplayMetrics.getwidthPixels(m62.b(mu0.a())) - (m62.a(mu0.a(), 36.0f) * 2), m62.a(mu0.a(), 170.0f));
-        this.f.setOnClickListener(new View$OnClickListenerC1628a(artificialProxy));
+        this.f.setOnClickListener(new a(artificialProxy));
         g(this.f, artificialProxy, 0);
     }
 

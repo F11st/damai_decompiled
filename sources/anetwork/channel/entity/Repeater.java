@@ -2,8 +2,8 @@ package anetwork.channel.entity;
 
 import android.os.RemoteException;
 import anet.channel.detect.NetworkDetector;
-import anet.channel.fulltrace.C0179a;
 import anet.channel.fulltrace.IFullTraceAnalysis;
+import anet.channel.fulltrace.a;
 import anet.channel.statist.LongRequestMonitorStat;
 import anet.channel.statist.RequestMonitor;
 import anet.channel.statist.RequestMonitorFullSampling;
@@ -17,7 +17,6 @@ import anetwork.channel.aidl.ParcelableHeader;
 import anetwork.channel.aidl.ParcelableNetworkListener;
 import anetwork.channel.aidl.adapter.ParcelableInputStreamImpl;
 import anetwork.channel.interceptor.Callback;
-import anetwork.channel.stat.C0246a;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -177,7 +176,7 @@ public class Repeater implements Callback {
                         RequestStatistic requestStatistic = defaultFinishEvent.rs;
                         if (requestStatistic != null) {
                             requestStatistic.rspCbStart = currentTimeMillis;
-                            C0179a.f().log(requestStatistic.span, "netRspCbStart", null);
+                            a.f().log(requestStatistic.span, "netRspCbStart", null);
                             requestStatistic.lastProcessTime = currentTimeMillis - requestStatistic.rspEnd;
                             requestStatistic.oneWayTime = requestStatistic.retryCostTime + (currentTimeMillis - requestStatistic.start);
                             defaultFinishEvent.getStatisticData().filledBy(requestStatistic);
@@ -186,11 +185,11 @@ public class Repeater implements Callback {
                         if (requestStatistic != null) {
                             long currentTimeMillis2 = System.currentTimeMillis();
                             requestStatistic.rspCbEnd = currentTimeMillis2;
-                            C0179a.f().log(requestStatistic.span, "netRspCbEnd", null);
+                            a.f().log(requestStatistic.span, "netRspCbEnd", null);
                             requestStatistic.callbackTime = currentTimeMillis2 - currentTimeMillis;
-                            C0179a.e().commitRequest(requestStatistic.falcoId, requestStatistic);
+                            a.e().commitRequest(requestStatistic.falcoId, requestStatistic);
                             if (requestStatistic.span != null) {
-                                C0179a.f().finishRequest(requestStatistic.span, requestStatistic);
+                                a.f().finishRequest(requestStatistic.span, requestStatistic);
                             }
                         }
                         if (Repeater.this.c != null) {
@@ -198,7 +197,7 @@ public class Repeater implements Callback {
                         }
                         if (requestStatistic != null) {
                             ALog.e("anet.Repeater", "[falcoId:" + requestStatistic.falcoId + jn1.ARRAY_END_STR + "end, " + requestStatistic.toString(), Repeater.this.b, new Object[0]);
-                            C0179a.f().log(requestStatistic.span, IFullTraceAnalysis.Stage.FINISH, requestStatistic.toString());
+                            a.f().log(requestStatistic.span, IFullTraceAnalysis.Stage.FINISH, requestStatistic.toString());
                             CopyOnWriteArrayList<String> b = hu0.b();
                             if (b != null) {
                                 int size = b.size();
@@ -209,7 +208,7 @@ public class Repeater implements Callback {
                             if (hu0.i()) {
                                 requestStatistic.putExtra("restrictBg", Integer.valueOf(NetworkStatusHelper.g()));
                             }
-                            c62 sceneInfo = C0179a.e().getSceneInfo();
+                            c62 sceneInfo = a.e().getSceneInfo();
                             if (sceneInfo != null) {
                                 ALog.f("anet.Repeater", sceneInfo.toString(), Repeater.this.b, new Object[0]);
                                 long j = requestStatistic.start;
@@ -242,7 +241,7 @@ public class Repeater implements Callback {
                                 }
                             } catch (Exception unused) {
                             }
-                            C0246a.a().put(Repeater.this.e.h(), defaultFinishEvent.getStatisticData());
+                            anetwork.channel.stat.a.a().put(Repeater.this.e.h(), defaultFinishEvent.getStatisticData());
                             NetworkDetector.a(requestStatistic);
                             Repeater.this.h(requestStatistic);
                         }
@@ -253,7 +252,7 @@ public class Repeater implements Callback {
             RequestStatistic requestStatistic = defaultFinishEvent.rs;
             if (requestStatistic != null) {
                 requestStatistic.rspCbDispatch = System.currentTimeMillis();
-                C0179a.f().log(requestStatistic.span, "netRspCbDispatch", null);
+                a.f().log(requestStatistic.span, "netRspCbDispatch", null);
             }
             i(runnable);
         }

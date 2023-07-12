@@ -42,13 +42,13 @@ public class EncodeUtil {
         }
         try {
             StringBuilder sb = new StringBuilder();
-            C5761a c5761a = new C5761a(str);
-            while (c5761a.a()) {
-                Character a2 = a(c5761a);
+            a aVar = new a(str);
+            while (aVar.a()) {
+                Character a2 = a(aVar);
                 if (a2 != null) {
                     sb.append(a2);
                 } else {
-                    sb.append(c5761a.d());
+                    sb.append(aVar.d());
                 }
             }
             return sb.toString();
@@ -106,19 +106,19 @@ public class EncodeUtil {
         return b(c2);
     }
 
-    private static Character a(C5761a c5761a) {
-        c5761a.c();
-        Character d = c5761a.d();
+    private static Character a(a aVar) {
+        aVar.c();
+        Character d = aVar.d();
         if (d == null) {
-            c5761a.i();
+            aVar.i();
             return null;
         } else if (d.charValue() != '\\') {
-            c5761a.i();
+            aVar.i();
             return null;
         } else {
-            Character d2 = c5761a.d();
+            Character d2 = aVar.d();
             if (d2 == null) {
-                c5761a.i();
+                aVar.i();
                 return null;
             } else if (d2.charValue() == 'b') {
                 return '\b';
@@ -151,12 +151,12 @@ public class EncodeUtil {
                 if (Character.toLowerCase(d2.charValue()) == 'x') {
                     StringBuilder sb = new StringBuilder();
                     while (i < 2) {
-                        Character e = c5761a.e();
+                        Character e = aVar.e();
                         if (e != null) {
                             sb.append(e);
                             i++;
                         } else {
-                            c5761a.i();
+                            aVar.i();
                             return null;
                         }
                     }
@@ -166,18 +166,18 @@ public class EncodeUtil {
                             return Character.valueOf((char) parseInt);
                         }
                     } catch (NumberFormatException unused) {
-                        c5761a.i();
+                        aVar.i();
                         return null;
                     }
                 } else if (Character.toLowerCase(d2.charValue()) == 'u') {
                     StringBuilder sb2 = new StringBuilder();
                     while (i < 4) {
-                        Character e2 = c5761a.e();
+                        Character e2 = aVar.e();
                         if (e2 != null) {
                             sb2.append(e2);
                             i++;
                         } else {
-                            c5761a.i();
+                            aVar.i();
                             return null;
                         }
                     }
@@ -187,20 +187,20 @@ public class EncodeUtil {
                             return Character.valueOf((char) parseInt2);
                         }
                     } catch (NumberFormatException unused2) {
-                        c5761a.i();
+                        aVar.i();
                         return null;
                     }
-                } else if (C5761a.c(d2)) {
+                } else if (a.c(d2)) {
                     StringBuilder sb3 = new StringBuilder();
                     sb3.append(d2);
-                    Character d3 = c5761a.d();
-                    if (!C5761a.c(d3)) {
-                        c5761a.a(d3);
+                    Character d3 = aVar.d();
+                    if (!a.c(d3)) {
+                        aVar.a(d3);
                     } else {
                         sb3.append(d3);
-                        Character d4 = c5761a.d();
-                        if (!C5761a.c(d4)) {
-                            c5761a.a(d4);
+                        Character d4 = aVar.d();
+                        if (!a.c(d4)) {
+                            aVar.a(d4);
                         } else {
                             sb3.append(d4);
                         }
@@ -211,7 +211,7 @@ public class EncodeUtil {
                             return Character.valueOf((char) parseInt3);
                         }
                     } catch (NumberFormatException unused3) {
-                        c5761a.i();
+                        aVar.i();
                         return null;
                     }
                 }

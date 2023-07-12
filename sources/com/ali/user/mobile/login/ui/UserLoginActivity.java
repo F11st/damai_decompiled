@@ -543,7 +543,7 @@ public class UserLoginActivity extends BaseActivity {
 
     @Override // com.ali.user.mobile.base.ui.BaseActivity
     protected int getLayoutContent() {
-        return R.C2965layout.aliuser_activity_frame_content;
+        return R.layout.aliuser_activity_frame_content;
     }
 
     protected Fragment getMobileFragment(LoginApprearanceExtensions loginApprearanceExtensions) throws IllegalAccessException, InstantiationException {

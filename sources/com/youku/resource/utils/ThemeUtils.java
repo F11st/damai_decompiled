@@ -33,9 +33,9 @@ public class ThemeUtils {
 
     public static void setTheme(Context context) {
         if (AppPerfABUtils.isForbidRoundCorner()) {
-            context.setTheme(R.C8077style.YoukuResourceTheme_ThemeLowPref);
+            context.setTheme(R.style.YoukuResourceTheme_ThemeLowPref);
         } else {
-            context.setTheme(R.C8077style.YoukuResourceTheme_Theme2);
+            context.setTheme(R.style.YoukuResourceTheme_Theme2);
         }
     }
 }

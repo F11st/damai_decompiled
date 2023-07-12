@@ -2,7 +2,6 @@ package tb;
 
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.collections.C8215n;
 import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
@@ -21,7 +20,7 @@ public final class c81 {
         int q;
         b41.i(b81Var, "<this>");
         b41.i(iterable, "types");
-        q = C8215n.q(iterable, 10);
+        q = kotlin.collections.n.q(iterable, 10);
         ArrayList arrayList = new ArrayList(q);
         for (z71 z71Var : iterable) {
             arrayList.add(b81Var.g(z71Var));

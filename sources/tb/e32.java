@@ -80,7 +80,7 @@ public final class e32 {
             }
             defaultDisplay = ((Activity) context).getWindowManager().getDefaultDisplay();
         } else {
-            Object systemService = context.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+            Object systemService = context.getSystemService(v.ATTACH_MODE_WINDOW);
             Objects.requireNonNull(systemService, "null cannot be cast to non-null type android.view.WindowManager");
             defaultDisplay = ((WindowManager) systemService).getDefaultDisplay();
         }
@@ -107,7 +107,7 @@ public final class e32 {
             }
             defaultDisplay = ((Activity) context).getWindowManager().getDefaultDisplay();
         } else {
-            Object systemService = context.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+            Object systemService = context.getSystemService(v.ATTACH_MODE_WINDOW);
             Objects.requireNonNull(systemService, "null cannot be cast to non-null type android.view.WindowManager");
             defaultDisplay = ((WindowManager) systemService).getDefaultDisplay();
         }

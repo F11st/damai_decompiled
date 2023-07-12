@@ -54,7 +54,7 @@ public final class es0 {
             c = com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics.getheightPixels(displayMetrics);
             return;
         }
-        Object systemService = GXTemplateEngine.Companion.a().g().getSystemService(C9796v.ATTACH_MODE_WINDOW);
+        Object systemService = GXTemplateEngine.Companion.a().g().getSystemService(v.ATTACH_MODE_WINDOW);
         WindowManager windowManager = systemService instanceof WindowManager ? (WindowManager) systemService : null;
         if (windowManager != null) {
             android.view.Display defaultDisplay = windowManager.getDefaultDisplay();

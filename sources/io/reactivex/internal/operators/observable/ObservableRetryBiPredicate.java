@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.CompositeException;
 import io.reactivex.functions.BiPredicate;
@@ -78,12 +78,12 @@ public final class ObservableRetryBiPredicate<T> extends AbstractObservableWithU
         }
     }
 
-    public ObservableRetryBiPredicate(AbstractC8149d<T> abstractC8149d, BiPredicate<? super Integer, ? super Throwable> biPredicate) {
-        super(abstractC8149d);
+    public ObservableRetryBiPredicate(d<T> dVar, BiPredicate<? super Integer, ? super Throwable> biPredicate) {
+        super(dVar);
         this.predicate = biPredicate;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         SequentialDisposable sequentialDisposable = new SequentialDisposable();
         observer.onSubscribe(sequentialDisposable);

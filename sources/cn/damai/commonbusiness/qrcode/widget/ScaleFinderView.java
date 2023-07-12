@@ -79,12 +79,11 @@ public class ScaleFinderView extends View implements View.OnTouchListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.qrcode.widget.ScaleFinderView$a */
     /* loaded from: classes4.dex */
-    public class HandlerC0790a extends Handler {
+    public class a extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC0790a(Looper looper) {
+        a(Looper looper) {
             super(looper);
         }
 
@@ -161,7 +160,7 @@ public class ScaleFinderView extends View implements View.OnTouchListener {
         if (TextUtils.equals(Build.getBRAND() + "/" + e80.b(), "GiONEE/GN5001S")) {
             this.ZOOM_PACE = 10;
         }
-        this.handler = new HandlerC0790a(Looper.getMainLooper());
+        this.handler = new a(Looper.getMainLooper());
     }
 
     private void initAngleBitmap(Context context) {

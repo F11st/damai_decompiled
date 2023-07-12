@@ -1082,9 +1082,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alient.gaiax.container.R$color */
     /* loaded from: classes12.dex */
-    public static final class C4033color {
+    public static final class color {
         public static final int abc_background_cache_hint_selector_material_dark = 0x7f06003a;
         public static final int abc_background_cache_hint_selector_material_light = 0x7f06003b;
         public static final int abc_btn_colored_borderless_text_material = 0x7f06003c;
@@ -1427,7 +1426,7 @@ public final class R {
         public static final int white95unalpha = 0x7f060570;
         public static final int ykn_primary_background = 0x7f060593;
 
-        private C4033color() {
+        private color() {
         }
     }
 
@@ -2072,9 +2071,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alient.gaiax.container.R$drawable */
     /* loaded from: classes12.dex */
-    public static final class C4034drawable {
+    public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha = 0x7f080006;
         public static final int abc_action_bar_item_background_material = 0x7f080007;
         public static final int abc_btn_borderless_material = 0x7f080009;
@@ -2213,7 +2211,7 @@ public final class R {
         public static final int tooltip_frame_light = 0x7f080f07;
         public static final int transparent = 0x7f080f33;
 
-        private C4034drawable() {
+        private drawable() {
         }
     }
 
@@ -2655,9 +2653,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alient.gaiax.container.R$interpolator */
     /* loaded from: classes12.dex */
-    public static final class C4035interpolator {
+    public static final class interpolator {
         public static final int btn_checkbox_checked_mtrl_animation_interpolator_0 = 0x7f0b0000;
         public static final int btn_checkbox_checked_mtrl_animation_interpolator_1 = 0x7f0b0001;
         public static final int btn_checkbox_unchecked_mtrl_animation_interpolator_0 = 0x7f0b0002;
@@ -2670,14 +2667,13 @@ public final class R {
         public static final int mtrl_linear = 0x7f0b000d;
         public static final int mtrl_linear_out_slow_in = 0x7f0b000e;
 
-        private C4035interpolator() {
+        private interpolator() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alient.gaiax.container.R$layout */
     /* loaded from: classes12.dex */
-    public static final class C4036layout {
+    public static final class layout {
         public static final int abc_action_bar_title_item = 0x7f0c0000;
         public static final int abc_action_bar_up_container = 0x7f0c0001;
         public static final int abc_action_menu_item_layout = 0x7f0c0002;
@@ -2814,7 +2810,7 @@ public final class R {
         public static final int text_view_with_theme_line_height = 0x7f0c0772;
         public static final int text_view_without_line_height = 0x7f0c0773;
 
-        private C4036layout() {
+        private layout() {
         }
     }
 
@@ -2828,12 +2824,11 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alient.gaiax.container.R$raw */
     /* loaded from: classes12.dex */
-    public static final class C4037raw {
+    public static final class raw {
         public static final int token = 0x7f1000a2;
 
-        private C4037raw() {
+        private raw() {
         }
     }
 
@@ -2968,9 +2963,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alient.gaiax.container.R$style */
     /* loaded from: classes12.dex */
-    public static final class C4038style {
+    public static final class style {
         public static final int AlertDialog_AppCompat = 0x7f120009;
         public static final int AlertDialog_AppCompat_Light = 0x7f12000a;
         public static final int AndroidThemeColorAccentYellow = 0x7f12001d;
@@ -3704,7 +3698,7 @@ public final class R {
         public static final int Widget_MaterialComponents_Tooltip = 0x7f1203d7;
         public static final int Widget_Support_CoordinatorLayout = 0x7f1203d9;
 
-        private C4038style() {
+        private style() {
         }
     }
 
@@ -5547,16 +5541,15 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alient.gaiax.container.R$xml */
     /* loaded from: classes12.dex */
-    public static final class C4039xml {
+    public static final class xml {
         public static final int standalone_badge = 0x7f14000c;
         public static final int standalone_badge_gravity_bottom_end = 0x7f14000d;
         public static final int standalone_badge_gravity_bottom_start = 0x7f14000e;
         public static final int standalone_badge_gravity_top_start = 0x7f14000f;
         public static final int standalone_badge_offset = 0x7f140010;
 
-        private C4039xml() {
+        private xml() {
         }
     }
 

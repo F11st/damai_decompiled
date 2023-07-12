@@ -27,9 +27,8 @@ public class gk2 extends DXTextViewWidgetNode {
     private static final long D = iz.a("decimalScale");
 
     /* compiled from: Taobao */
-    /* renamed from: tb.gk2$a */
     /* loaded from: classes6.dex */
-    public static class C9178a implements IDXBuilderWidgetNode {
+    public static class a implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(@Nullable Object obj) {
             return new gk2();

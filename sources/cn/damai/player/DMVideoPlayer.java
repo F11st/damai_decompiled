@@ -56,12 +56,11 @@ public class DMVideoPlayer extends FrameLayout implements OnNetWorkChangeListene
     private int videoPlayerHeight;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.player.DMVideoPlayer$a */
     /* loaded from: classes6.dex */
-    public class C1494a implements PlayerEventListener.OnRealVideoStartListener {
+    public class a implements PlayerEventListener.OnRealVideoStartListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1494a() {
+        a() {
         }
 
         @Override // cn.damai.player.PlayerEventListener.OnRealVideoStartListener
@@ -96,12 +95,11 @@ public class DMVideoPlayer extends FrameLayout implements OnNetWorkChangeListene
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.player.DMVideoPlayer$b */
     /* loaded from: classes15.dex */
-    public class ViewTreeObserver$OnScrollChangedListenerC1495b implements ViewTreeObserver.OnScrollChangedListener {
+    public class b implements ViewTreeObserver.OnScrollChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ViewTreeObserver$OnScrollChangedListenerC1495b() {
+        b() {
         }
 
         @Override // android.view.ViewTreeObserver.OnScrollChangedListener
@@ -553,7 +551,7 @@ public class DMVideoPlayer extends FrameLayout implements OnNetWorkChangeListene
         PlayerEventListener playerEventListener = new PlayerEventListener(this.mController, this.mDataHolder, this.mContext);
         this.playerEventListener = playerEventListener;
         if (this.autoAdaptSize) {
-            playerEventListener.h(new C1494a());
+            playerEventListener.h(new a());
         }
         this.mPlayer.addPlayerEventListener(this.playerEventListener);
     }
@@ -641,7 +639,7 @@ public class DMVideoPlayer extends FrameLayout implements OnNetWorkChangeListene
         this.adaptWidth = 0;
         this.autoStopByLocation = false;
         this.autoPaused = false;
-        this.onScrollChangedListener = new ViewTreeObserver$OnScrollChangedListenerC1495b();
+        this.onScrollChangedListener = new b();
         this.mOptHelper = new fl1();
         this.mContext = context;
         init();

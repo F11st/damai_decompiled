@@ -4,7 +4,7 @@ import android.net.Uri;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.util.Preconditions;
-import com.alipay.sdk.m.n.C4250a;
+import com.alipay.sdk.m.n.a;
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
 import java.util.HashMap;
 import java.util.Locale;
@@ -103,7 +103,7 @@ public final class MailTo {
         sb.append(jn1.CONDITION_IF);
         for (Map.Entry<String, String> entry : this.mHeaders.entrySet()) {
             sb.append(Uri.encode(entry.getKey()));
-            sb.append(C4250a.h);
+            sb.append(a.h);
             sb.append(Uri.encode(entry.getValue()));
             sb.append('&');
         }

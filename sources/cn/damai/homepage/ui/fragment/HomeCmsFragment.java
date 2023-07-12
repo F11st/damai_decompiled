@@ -17,8 +17,8 @@ import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMBaseMtopRequest;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
-import cn.damai.common.util.C0535a;
+import cn.damai.common.user.c;
+import cn.damai.common.util.a;
 import cn.damai.commonbusiness.home.OnCityChangedListener;
 import cn.damai.commonbusiness.home.bean.HomeHeaderBg;
 import cn.damai.commonbusiness.home.bean.HomeMessage;
@@ -247,7 +247,7 @@ public class HomeCmsFragment extends AbsFragmentV3 implements OnCityChangedListe
         if (TextUtils.isEmpty(str)) {
             str = ny0.b(ny0.HOMEPAGE_GET, "", getContext());
             if (TextUtils.isEmpty(str)) {
-                str = C0535a.n(mu0.a().getResources().openRawResource(R$raw.default_home_cms));
+                str = a.n(mu0.a().getResources().openRawResource(R$raw.default_home_cms));
                 z = false;
             } else {
                 z = true;
@@ -632,7 +632,7 @@ public class HomeCmsFragment extends AbsFragmentV3 implements OnCityChangedListe
         if (AndroidInstantRuntime.support(ipChange, "1089372164")) {
             ipChange.ipc$dispatch("1089372164", new Object[]{this});
         } else if (getProperties() != null) {
-            C0529c.e().O(getActivity(), getProperties());
+            c.e().O(getActivity(), getProperties());
             Log.e("abtest", "  home updateHomeAB updatePageProperties size: " + getProperties().size());
         }
     }
@@ -869,7 +869,7 @@ public class HomeCmsFragment extends AbsFragmentV3 implements OnCityChangedListe
         this.isRequest = false;
         Log.e("abtest", "  home onResume :" + getUserVisibleHint());
         if (getProperties() != null) {
-            C0529c.e().O(getActivity(), getProperties());
+            c.e().O(getActivity(), getProperties());
             Log.e("abtest", "abs onResume updatePageProperties : size : " + getProperties().size());
         }
     }

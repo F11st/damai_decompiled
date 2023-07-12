@@ -1,7 +1,7 @@
 package anet.channel.strategy;
 
 import android.text.TextUtils;
-import anet.channel.strategy.C0214b;
+import anet.channel.strategy.b;
 import java.io.Serializable;
 
 /* compiled from: Taobao */
@@ -37,12 +37,12 @@ class IPConnStrategy implements IConnStrategy, Serializable {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static IPConnStrategy create(String str, C0214b.C0215a c0215a) {
-        ConnProtocol valueOf = ConnProtocol.valueOf(c0215a);
+    public static IPConnStrategy create(String str, b.a aVar) {
+        ConnProtocol valueOf = ConnProtocol.valueOf(aVar);
         if (valueOf == null) {
             return null;
         }
-        return create(str, c0215a.a, valueOf, c0215a.c, c0215a.d, c0215a.e, c0215a.f);
+        return create(str, aVar.a, valueOf, aVar.c, aVar.d, aVar.e, aVar.f);
     }
 
     public boolean equals(Object obj) {
@@ -130,12 +130,12 @@ class IPConnStrategy implements IConnStrategy, Serializable {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public static IPConnStrategy create(String str, C0214b.C0217c c0217c) {
-        ConnProtocol valueOf = ConnProtocol.valueOf(c0217c);
+    public static IPConnStrategy create(String str, b.c cVar) {
+        ConnProtocol valueOf = ConnProtocol.valueOf(cVar);
         if (valueOf == null) {
             return null;
         }
-        return create(str, c0217c.a, valueOf, c0217c.c, c0217c.d, c0217c.e, c0217c.f);
+        return create(str, cVar.a, valueOf, cVar.c, cVar.d, cVar.e, cVar.f);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */

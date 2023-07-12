@@ -5,8 +5,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import androidx.fragment.app.FragmentTransaction;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.trade.R$color;
 import cn.damai.trade.R$id;
@@ -30,30 +30,28 @@ import tb.z20;
 public final class CouponPayResultActivity extends SimpleBaseActivity {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C2145a Companion = new C2145a(null);
+    public static final a Companion = new a(null);
     public static final int DM_REQUEST_CODE_PAY_SUCCESS = 100001;
     @Nullable
     private final String mOrderId;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.CouponPayResultActivity$a */
     /* loaded from: classes16.dex */
-    public static final class C2145a {
-        private C2145a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C2145a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.activity.CouponPayResultActivity$b */
     /* loaded from: classes8.dex */
-    public static final class C2146b implements PayResultUtListener {
+    public static final class b implements PayResultUtListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2146b() {
+        b() {
         }
 
         @Override // com.alibaba.pictures.bricks.orderresult.couponpayresult.PayResultUtListener
@@ -78,7 +76,7 @@ public final class CouponPayResultActivity extends SimpleBaseActivity {
         }
         Intent intent = getIntent();
         String string = (intent == null || (extras = intent.getExtras()) == null) ? null : extras.getString("orderId");
-        C2146b c2146b = new C2146b();
+        b bVar = new b();
         FragmentTransaction beginTransaction = getSupportFragmentManager().beginTransaction();
         int i = R$id.coupon_result_container;
         CouponPayResultFragment couponPayResultFragment = new CouponPayResultFragment();
@@ -88,7 +86,7 @@ public final class CouponPayResultActivity extends SimpleBaseActivity {
             bundle.putString("cityId", z20.c());
         }
         couponPayResultFragment.setArguments(bundle);
-        couponPayResultFragment.setUtListener(c2146b);
+        couponPayResultFragment.setUtListener(bVar);
         wt2 wt2Var = wt2.INSTANCE;
         beginTransaction.add(i, couponPayResultFragment);
         beginTransaction.commit();
@@ -105,7 +103,7 @@ public final class CouponPayResultActivity extends SimpleBaseActivity {
         hashMap.put("orderid", this.mOrderId);
         hashMap.put("titlelable", str);
         hashMap.put("contentlabel", str2);
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i("scriptkill_payresult").j(hashMap));
+        setDamaiUTKeyBuilder(new a.b().i("scriptkill_payresult").j(hashMap));
     }
 
     private final void fixStatusBar(View view) {
@@ -170,7 +168,7 @@ public final class CouponPayResultActivity extends SimpleBaseActivity {
         setContentView(getLayoutId());
         setImmersionStyle();
         addFragment();
-        C0529c.e().K(this);
+        c.e().K(this);
     }
 
     @Override // cn.damai.common.app.base.BaseActivity

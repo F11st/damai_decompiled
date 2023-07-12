@@ -9,8 +9,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseModel;
+import cn.damai.common.app.base.a;
 import cn.damai.common.app.widget.DMProgressDialog;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -19,7 +19,7 @@ import tb.xr;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
-public abstract class BaseFragment<T extends AbstractC0470a, E extends BaseModel> extends Fragment implements View.OnClickListener {
+public abstract class BaseFragment<T extends cn.damai.common.app.base.a, E extends BaseModel> extends Fragment implements View.OnClickListener {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final int CONMENTS_REQUEST = 5001;
     public static final int FINISH_ACTIVITY = 1000;
@@ -37,12 +37,11 @@ public abstract class BaseFragment<T extends AbstractC0470a, E extends BaseModel
     private boolean isLazyLoaded = false;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.app.base.BaseFragment$a */
     /* loaded from: classes13.dex */
-    public class DialogInterface$OnDismissListenerC0469a implements DialogInterface.OnDismissListener {
+    public class a implements DialogInterface.OnDismissListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnDismissListenerC0469a(BaseFragment baseFragment) {
+        a(BaseFragment baseFragment) {
         }
 
         @Override // android.content.DialogInterface.OnDismissListener
@@ -179,9 +178,9 @@ public abstract class BaseFragment<T extends AbstractC0470a, E extends BaseModel
         } else if (getActivity() == null || getActivity().isFinishing()) {
         } else {
             if (this.progressDialog == null) {
-                DMProgressDialog a = new DMProgressDialog(getActivity()).a();
-                this.progressDialog = a;
-                a.setOnDismissListener(new DialogInterface$OnDismissListenerC0469a(this));
+                DMProgressDialog a2 = new DMProgressDialog(getActivity()).a();
+                this.progressDialog = a2;
+                a2.setOnDismissListener(new a(this));
             }
             if (!isAdded() || this.progressDialog.isShowing()) {
                 return;

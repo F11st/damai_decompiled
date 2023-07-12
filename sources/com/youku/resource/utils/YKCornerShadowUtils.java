@@ -8,7 +8,7 @@ import com.youku.resource.R;
 public final class YKCornerShadowUtils {
     public static void addCornerShadow(View view) {
         if (view != null) {
-            view.setBackgroundResource(R.C8072drawable.shadow);
+            view.setBackgroundResource(R.drawable.shadow);
         }
     }
 }

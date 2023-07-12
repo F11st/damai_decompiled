@@ -29,14 +29,13 @@ public final class ad1 extends Handler {
     private final Queue<dq> a = new LinkedBlockingQueue();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ad1$a */
     /* loaded from: classes4.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC8905a implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class a implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
         final /* synthetic */ dq b;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC8905a(View view, dq dqVar) {
+        a(View view, dq dqVar) {
             this.a = view;
             this.b = dqVar;
         }
@@ -102,7 +101,7 @@ public final class ad1 extends Handler {
             k.requestLayout();
             ViewTreeObserver viewTreeObserver = k.getViewTreeObserver();
             if (viewTreeObserver != null) {
-                viewTreeObserver.addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC8905a(k, dqVar));
+                viewTreeObserver.addOnGlobalLayoutListener(new a(k, dqVar));
             }
         }
     }

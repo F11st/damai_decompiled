@@ -18,42 +18,37 @@ public final class v41 implements IJSONParser {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     /* compiled from: Taobao */
-    /* renamed from: tb.v41$a */
     /* loaded from: classes7.dex */
-    public static final class C9802a<T> extends TypeReference<ArrayList<T>> {
-        C9802a() {
+    public static final class a<T> extends TypeReference<ArrayList<T>> {
+        a() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.v41$b */
     /* loaded from: classes7.dex */
-    public static final class C9803b extends TypeReference<Boolean[]> {
-        C9803b() {
+    public static final class b extends TypeReference<Boolean[]> {
+        b() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.v41$c */
     /* loaded from: classes7.dex */
-    public static final class C9804c extends TypeReference<Integer[]> {
-        C9804c() {
+    public static final class c extends TypeReference<Integer[]> {
+        c() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.v41$d */
     /* loaded from: classes7.dex */
-    public static final class C9805d extends TypeReference<Long[]> {
-        C9805d() {
+    public static final class d extends TypeReference<Long[]> {
+        d() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.v41$e */
     /* loaded from: classes7.dex */
-    public static final class C9806e extends TypeReference<String[]> {
-        C9806e() {
+    public static final class e extends TypeReference<String[]> {
+        e() {
         }
     }
 
@@ -73,10 +68,10 @@ public final class v41 implements IJSONParser {
             return null;
         }
         try {
-            return (ArrayList) JSON.parseObject(str, new C9802a(), new Feature[0]);
-        } catch (Exception e) {
+            return (ArrayList) JSON.parseObject(str, new a(), new Feature[0]);
+        } catch (Exception e2) {
             ab1 ab1Var = ab1.INSTANCE;
-            ab1Var.e("JSONParerImpl", "parseArray:" + e);
+            ab1Var.e("JSONParerImpl", "parseArray:" + e2);
             return null;
         }
     }
@@ -96,10 +91,10 @@ public final class v41 implements IJSONParser {
             return null;
         }
         try {
-            return (Boolean[]) JSON.parseObject(str, new C9803b(), new Feature[0]);
-        } catch (Exception e) {
+            return (Boolean[]) JSON.parseObject(str, new b(), new Feature[0]);
+        } catch (Exception e2) {
             ab1 ab1Var = ab1.INSTANCE;
-            ab1Var.e("JSONParerImpl", "parseIntArray-type:" + e);
+            ab1Var.e("JSONParerImpl", "parseIntArray-type:" + e2);
             return null;
         }
     }
@@ -119,10 +114,10 @@ public final class v41 implements IJSONParser {
             return null;
         }
         try {
-            return (Integer[]) JSON.parseObject(str, new C9804c(), new Feature[0]);
-        } catch (Exception e) {
+            return (Integer[]) JSON.parseObject(str, new c(), new Feature[0]);
+        } catch (Exception e2) {
             ab1 ab1Var = ab1.INSTANCE;
-            ab1Var.e("JSONParerImpl", "parseIntArray-type:" + e);
+            ab1Var.e("JSONParerImpl", "parseIntArray-type:" + e2);
             return null;
         }
     }
@@ -144,9 +139,9 @@ public final class v41 implements IJSONParser {
         }
         try {
             return (T) JSON.parseObject(str, cls);
-        } catch (Exception e) {
+        } catch (Exception e2) {
             ab1 ab1Var = ab1.INSTANCE;
-            ab1Var.e("JSONParerImpl", "parseJson-cls:" + e);
+            ab1Var.e("JSONParerImpl", "parseJson-cls:" + e2);
             return null;
         }
     }
@@ -167,9 +162,9 @@ public final class v41 implements IJSONParser {
         }
         try {
             return JSON.parseObject(str);
-        } catch (Exception e) {
+        } catch (Exception e2) {
             ab1 ab1Var = ab1.INSTANCE;
-            ab1Var.e("JSONParerImpl", "parseJsonObject:" + e);
+            ab1Var.e("JSONParerImpl", "parseJsonObject:" + e2);
             return null;
         }
     }
@@ -189,10 +184,10 @@ public final class v41 implements IJSONParser {
             return null;
         }
         try {
-            return (Long[]) JSON.parseObject(str, new C9805d(), new Feature[0]);
-        } catch (Exception e) {
+            return (Long[]) JSON.parseObject(str, new d(), new Feature[0]);
+        } catch (Exception e2) {
             ab1 ab1Var = ab1.INSTANCE;
-            ab1Var.e("JSONParerImpl", "parseIntArray-type:" + e);
+            ab1Var.e("JSONParerImpl", "parseIntArray-type:" + e2);
             return null;
         }
     }
@@ -212,10 +207,10 @@ public final class v41 implements IJSONParser {
             return null;
         }
         try {
-            return (String[]) JSON.parseObject(str, new C9806e(), new Feature[0]);
-        } catch (Exception e) {
+            return (String[]) JSON.parseObject(str, new e(), new Feature[0]);
+        } catch (Exception e2) {
             ab1 ab1Var = ab1.INSTANCE;
-            ab1Var.e("JSONParerImpl", "parseStringArray-type:" + e);
+            ab1Var.e("JSONParerImpl", "parseStringArray-type:" + e2);
             return null;
         }
     }
@@ -229,9 +224,9 @@ public final class v41 implements IJSONParser {
         }
         try {
             return JSON.toJSONString(obj);
-        } catch (Exception e) {
+        } catch (Exception e2) {
             ab1 ab1Var = ab1.INSTANCE;
-            ab1Var.e("JSONParerImpl", "toJsonString:" + e);
+            ab1Var.e("JSONParerImpl", "toJsonString:" + e2);
             return null;
         }
     }
@@ -253,9 +248,9 @@ public final class v41 implements IJSONParser {
         }
         try {
             return (T) JSON.parseObject(str, type, new Feature[0]);
-        } catch (Exception e) {
+        } catch (Exception e2) {
             ab1 ab1Var = ab1.INSTANCE;
-            ab1Var.e("JSONParerImpl", "parseJson-type:" + e);
+            ab1Var.e("JSONParerImpl", "parseJson-type:" + e2);
             return null;
         }
     }

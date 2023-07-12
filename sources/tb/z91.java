@@ -4,8 +4,7 @@ import android.text.TextUtils;
 import android.view.View;
 import androidx.annotation.Nullable;
 import cn.damai.category.category.ui.StarFragment;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.wannasee.ut.CardType;
 import cn.damai.tetris.core.TrackInfo;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -14,7 +13,7 @@ import java.util.HashMap;
 
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
-public class z91 extends C9548pb {
+public class z91 extends pb {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final String LIVE = "live";
     public static final String RECMMEND = "recommend";
@@ -28,7 +27,7 @@ public class z91 extends C9548pb {
         }
         HashMap<String, String> f = d23.f();
         f.put("titlelabel", str2);
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         e.G(view, "tab_" + i, "favorite_tab", str, f);
     }
 
@@ -39,11 +38,11 @@ public class z91 extends C9548pb {
             return;
         }
         HashMap hashMap = new HashMap();
-        C9548pb.f(hashMap);
-        C9548pb.h("titlelabel", str4, hashMap);
-        C9548pb.h("item_id", str5, hashMap);
-        C9548pb.g(hashMap);
-        C0529c.e().G(view, str3, str2, str, hashMap);
+        pb.f(hashMap);
+        pb.h("titlelabel", str4, hashMap);
+        pb.h("item_id", str5, hashMap);
+        pb.g(hashMap);
+        cn.damai.common.user.c.e().G(view, str3, str2, str, hashMap);
     }
 
     public static void m(View view, int i, String str) {
@@ -53,11 +52,11 @@ public class z91 extends C9548pb {
             return;
         }
         HashMap hashMap = new HashMap();
-        C9548pb.f(hashMap);
-        C9548pb.g(hashMap);
-        C9548pb.h("titlelabel", "关注", hashMap);
-        C9548pb.h("rec_usercode", str, hashMap);
-        C0529c e = C0529c.e();
+        pb.f(hashMap);
+        pb.g(hashMap);
+        pb.h("titlelabel", "关注", hashMap);
+        pb.h("rec_usercode", str, hashMap);
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         e.G(view, "card_" + i, "follow_recommend", "live", hashMap);
     }
 
@@ -68,12 +67,12 @@ public class z91 extends C9548pb {
             return;
         }
         HashMap hashMap = new HashMap();
-        C9548pb.f(hashMap);
-        C9548pb.g(hashMap);
-        C9548pb.h("titlelabel", "关注", hashMap);
-        C9548pb.h(C9548pb.PRE_CONTENT_ID, str, hashMap);
-        C9548pb.h(C9548pb.PRE_CONTENT_TYPE, "note", hashMap);
-        C0529c e = C0529c.e();
+        pb.f(hashMap);
+        pb.g(hashMap);
+        pb.h("titlelabel", "关注", hashMap);
+        pb.h(pb.PRE_CONTENT_ID, str, hashMap);
+        pb.h(pb.PRE_CONTENT_TYPE, "note", hashMap);
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         e.G(view, "card_" + i, StarFragment.KEY_FOLLOW, "live", hashMap);
     }
 
@@ -84,16 +83,16 @@ public class z91 extends C9548pb {
             return;
         }
         HashMap hashMap = new HashMap();
-        C9548pb.f(hashMap);
-        C9548pb.h("titlelabel", str2, hashMap);
-        C9548pb.g(hashMap);
+        pb.f(hashMap);
+        pb.h("titlelabel", str2, hashMap);
+        pb.g(hashMap);
         if (cardType != null) {
-            C9548pb.h(C9548pb.PRE_CONTENT_TYPE, cardType.name(), hashMap);
-            C9548pb.h(C9548pb.PRE_CONTENT_ID, str3, hashMap);
+            pb.h(pb.PRE_CONTENT_TYPE, cardType.name(), hashMap);
+            pb.h(pb.PRE_CONTENT_ID, str3, hashMap);
         } else {
-            C9548pb.h("item_id", str3, hashMap);
+            pb.h("item_id", str3, hashMap);
         }
-        C0529c.e().G(view, "card_" + i2, "favorite_tab_" + i, str, hashMap);
+        cn.damai.common.user.c.e().G(view, "card_" + i2, "favorite_tab_" + i, str, hashMap);
     }
 
     public static void p(View view, String str, int i, String str2, String str3, int i2, CardType cardType, String str4, String str5) {
@@ -103,20 +102,20 @@ public class z91 extends C9548pb {
             return;
         }
         HashMap hashMap = new HashMap();
-        C9548pb.f(hashMap);
-        C9548pb.h("titlelabel", str2, hashMap);
-        C9548pb.g(hashMap);
-        C9548pb.h("type", str4, hashMap);
+        pb.f(hashMap);
+        pb.h("titlelabel", str2, hashMap);
+        pb.g(hashMap);
+        pb.h("type", str4, hashMap);
         if (!TextUtils.isEmpty(str5)) {
-            C9548pb.h("discount_type", str5, hashMap);
+            pb.h("discount_type", str5, hashMap);
         }
         if (cardType != null) {
-            C9548pb.h(C9548pb.PRE_CONTENT_TYPE, cardType.name(), hashMap);
-            C9548pb.h(C9548pb.PRE_CONTENT_ID, str3, hashMap);
+            pb.h(pb.PRE_CONTENT_TYPE, cardType.name(), hashMap);
+            pb.h(pb.PRE_CONTENT_ID, str3, hashMap);
         } else {
-            C9548pb.h("item_id", str3, hashMap);
+            pb.h("item_id", str3, hashMap);
         }
-        C0529c.e().G(view, "card_" + i2, "favorite_tab_" + i, str, hashMap);
+        cn.damai.common.user.c.e().G(view, "card_" + i2, "favorite_tab_" + i, str, hashMap);
     }
 
     public static TrackInfo q() {
@@ -145,104 +144,104 @@ public class z91 extends C9548pb {
         return b;
     }
 
-    public C0525a.C0527b A(String str, @Nullable String str2, int i, String str3, int i2, String str4) {
+    public a.b A(String str, @Nullable String str2, int i, String str3, int i2, String str4) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1666184903")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1666184903", new Object[]{this, str, str2, Integer.valueOf(i), str3, Integer.valueOf(i2), str4});
+            return (a.b) ipChange.ipc$dispatch("1666184903", new Object[]{this, str, str2, Integer.valueOf(i), str3, Integer.valueOf(i2), str4});
         }
         HashMap hashMap = new HashMap();
-        C9548pb.f(hashMap);
-        C9548pb.h("titlelabel", str3, hashMap);
-        C9548pb.g(hashMap);
-        C9548pb.h("type", str4 + "", hashMap);
+        pb.f(hashMap);
+        pb.h("titlelabel", str3, hashMap);
+        pb.g(hashMap);
+        pb.h("type", str4 + "", hashMap);
         if (!TextUtils.isEmpty(str2)) {
-            C9548pb.h("item_id", str2, hashMap);
+            pb.h("item_id", str2, hashMap);
         }
-        return e(str, "favorite_tab_" + i, "card_" + i2, hashMap, Boolean.valueOf(C9548pb.i(2001)));
+        return e(str, "favorite_tab_" + i, "card_" + i2, hashMap, Boolean.valueOf(pb.i(2001)));
     }
 
-    public C0525a.C0527b B(String str, String str2, String str3, String str4, String str5) {
+    public a.b B(String str, String str2, String str3, String str4, String str5) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-648787655")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-648787655", new Object[]{this, str, str2, str3, str4, str5});
+            return (a.b) ipChange.ipc$dispatch("-648787655", new Object[]{this, str, str2, str3, str4, str5});
         }
         HashMap hashMap = new HashMap();
-        C9548pb.f(hashMap);
-        C9548pb.h("titlelabel", str4, hashMap);
-        C9548pb.h("item_id", str5, hashMap);
-        C9548pb.g(hashMap);
+        pb.f(hashMap);
+        pb.h("titlelabel", str4, hashMap);
+        pb.h("item_id", str5, hashMap);
+        pb.g(hashMap);
         return e(str, str2, str3, hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b C(String str, String str2, String str3, String str4, String str5) {
+    public a.b C(String str, String str2, String str3, String str4, String str5) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "217858779")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("217858779", new Object[]{this, str, str2, str3, str4, str5});
+            return (a.b) ipChange.ipc$dispatch("217858779", new Object[]{this, str, str2, str3, str4, str5});
         }
         HashMap hashMap = new HashMap();
-        C9548pb.f(hashMap);
-        C9548pb.h("titlelabel", str4, hashMap);
-        C9548pb.h("item_id", str5, hashMap);
-        C9548pb.g(hashMap);
+        pb.f(hashMap);
+        pb.h("titlelabel", str4, hashMap);
+        pb.h("item_id", str5, hashMap);
+        pb.g(hashMap);
         return e(str, str2, str3, hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b D(String str, String str2, String str3, String str4, String str5) {
+    public a.b D(String str, String str2, String str3, String str4, String str5) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1922815225")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1922815225", new Object[]{this, str, str2, str3, str4, str5});
+            return (a.b) ipChange.ipc$dispatch("1922815225", new Object[]{this, str, str2, str3, str4, str5});
         }
         HashMap hashMap = new HashMap();
-        C9548pb.f(hashMap);
-        C9548pb.h("titlelabel", str4, hashMap);
-        C9548pb.h("item_id", str5, hashMap);
-        C9548pb.g(hashMap);
+        pb.f(hashMap);
+        pb.h("titlelabel", str4, hashMap);
+        pb.h("item_id", str5, hashMap);
+        pb.g(hashMap);
         return e(str, str2, str3, hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b E(String str, int i, String str2) {
+    public a.b E(String str, int i, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-582156510")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-582156510", new Object[]{this, str, Integer.valueOf(i), str2});
+            return (a.b) ipChange.ipc$dispatch("-582156510", new Object[]{this, str, Integer.valueOf(i), str2});
         }
         HashMap hashMap = new HashMap();
-        C9548pb.f(hashMap);
-        C9548pb.g(hashMap);
-        C9548pb.h("titlelabel", str2, hashMap);
-        return e(str, "favorite_tab", "tab_" + i, hashMap, Boolean.valueOf(C9548pb.i(2101)));
+        pb.f(hashMap);
+        pb.g(hashMap);
+        pb.h("titlelabel", str2, hashMap);
+        return e(str, "favorite_tab", "tab_" + i, hashMap, Boolean.valueOf(pb.i(2101)));
     }
 
-    public C0525a.C0527b r(int i, String str, int i2) {
+    public a.b r(int i, String str, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-507144250")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-507144250", new Object[]{this, Integer.valueOf(i), str, Integer.valueOf(i2)});
+            return (a.b) ipChange.ipc$dispatch("-507144250", new Object[]{this, Integer.valueOf(i), str, Integer.valueOf(i2)});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("usercode", z20.E());
         hashMap.put("city", z20.d());
         hashMap.put("titlelabel", "关注");
-        C9548pb.h("rec_userode", str, hashMap);
+        pb.h("rec_userode", str, hashMap);
         hashMap.put("status", i2 + "");
         return e("live", "follow_recommend", "follow_btn_" + i, hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b s(int i, String str) {
+    public a.b s(int i, String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "182845867")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("182845867", new Object[]{this, Integer.valueOf(i), str});
+            return (a.b) ipChange.ipc$dispatch("182845867", new Object[]{this, Integer.valueOf(i), str});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("usercode", z20.E());
         hashMap.put("city", z20.d());
         hashMap.put("titlelabel", "关注");
-        C9548pb.h("rec_usercode", str, hashMap);
+        pb.h("rec_usercode", str, hashMap);
         return e("live", "follow_recommend", "card_" + i, hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b t(int i, String str) {
+    public a.b t(int i, String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1925614792")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1925614792", new Object[]{this, Integer.valueOf(i), str});
+            return (a.b) ipChange.ipc$dispatch("1925614792", new Object[]{this, Integer.valueOf(i), str});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("usercode", z20.E());
@@ -251,43 +250,43 @@ public class z91 extends C9548pb {
         return e("live", StarFragment.KEY_FOLLOW, "card_" + i, hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b v(String str, String str2) {
+    public a.b v(String str, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1206325126")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1206325126", new Object[]{this, str, str2});
+            return (a.b) ipChange.ipc$dispatch("1206325126", new Object[]{this, str, str2});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("usercode", str);
         hashMap.put("city", str2);
-        return new C0525a.C0527b().j(hashMap).i("live");
+        return new a.b().j(hashMap).i("live");
     }
 
-    public C0525a.C0527b w() {
+    public a.b w() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "917673534")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("917673534", new Object[]{this});
+            return (a.b) ipChange.ipc$dispatch("917673534", new Object[]{this});
         }
         HashMap hashMap = new HashMap();
-        C9548pb.f(hashMap);
-        C9548pb.g(hashMap);
+        pb.f(hashMap);
+        pb.g(hashMap);
         return e("live", "top", "mine", hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b x() {
+    public a.b x() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1446853849")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1446853849", new Object[]{this});
+            return (a.b) ipChange.ipc$dispatch("1446853849", new Object[]{this});
         }
         HashMap hashMap = new HashMap();
-        C9548pb.f(hashMap);
-        C9548pb.g(hashMap);
+        pb.f(hashMap);
+        pb.g(hashMap);
         return e("live", "bottom", "submitbtn", hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b y(int i, String str) {
+    public a.b y(int i, String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "28363157")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("28363157", new Object[]{this, Integer.valueOf(i), str});
+            return (a.b) ipChange.ipc$dispatch("28363157", new Object[]{this, Integer.valueOf(i), str});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("usercode", z20.E());
@@ -296,18 +295,18 @@ public class z91 extends C9548pb {
         return e("live", "center", "tab_" + i, hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b z(String str, @Nullable String str2, int i, String str3, int i2) {
+    public a.b z(String str, @Nullable String str2, int i, String str3, int i2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "903193797")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("903193797", new Object[]{this, str, str2, Integer.valueOf(i), str3, Integer.valueOf(i2)});
+            return (a.b) ipChange.ipc$dispatch("903193797", new Object[]{this, str, str2, Integer.valueOf(i), str3, Integer.valueOf(i2)});
         }
         HashMap hashMap = new HashMap();
-        C9548pb.f(hashMap);
-        C9548pb.h("titlelabel", str3, hashMap);
-        C9548pb.g(hashMap);
+        pb.f(hashMap);
+        pb.h("titlelabel", str3, hashMap);
+        pb.g(hashMap);
         if (!TextUtils.isEmpty(str2)) {
-            C9548pb.h("item_id", str2, hashMap);
+            pb.h("item_id", str2, hashMap);
         }
-        return e(str, "favorite_tab_" + i, "card_" + i2, hashMap, Boolean.valueOf(C9548pb.i(2001)));
+        return e(str, "favorite_tab_" + i, "card_" + i2, hashMap, Boolean.valueOf(pb.i(2001)));
     }
 }

@@ -26,9 +26,8 @@ public final class ci implements ThreadFactory {
     private final int j;
 
     /* compiled from: Taobao */
-    /* renamed from: com.loc.ci$a */
     /* loaded from: classes10.dex */
-    public static class C5810a {
+    public static class a {
         private ThreadFactory a;
         private Thread.UncaughtExceptionHandler b;
         private String c;
@@ -38,7 +37,7 @@ public final class ci implements ThreadFactory {
         private int g;
         private BlockingQueue<Runnable> h;
 
-        public C5810a() {
+        public a() {
             int unused = ci.m;
             this.g = 30;
         }
@@ -51,7 +50,7 @@ public final class ci implements ThreadFactory {
             this.e = null;
         }
 
-        public final C5810a a(String str) {
+        public final a a(String str) {
             this.c = str;
             return this;
         }
@@ -70,26 +69,26 @@ public final class ci implements ThreadFactory {
         m = (availableProcessors * 2) + 1;
     }
 
-    private ci(C5810a c5810a) {
-        this.b = c5810a.a == null ? Executors.defaultThreadFactory() : c5810a.a;
-        int i = c5810a.f;
+    private ci(a aVar) {
+        this.b = aVar.a == null ? Executors.defaultThreadFactory() : aVar.a;
+        int i = aVar.f;
         this.g = i;
         int i2 = m;
         this.h = i2;
         if (i2 < i) {
             throw new NullPointerException("maxPoolSize must > corePoolSize!");
         }
-        this.j = c5810a.g;
-        this.i = c5810a.h == null ? new LinkedBlockingQueue<>(256) : c5810a.h;
-        this.d = TextUtils.isEmpty(c5810a.c) ? "amap-threadpool" : c5810a.c;
-        this.e = c5810a.d;
-        this.f = c5810a.e;
-        this.c = c5810a.b;
+        this.j = aVar.g;
+        this.i = aVar.h == null ? new LinkedBlockingQueue<>(256) : aVar.h;
+        this.d = TextUtils.isEmpty(aVar.c) ? "amap-threadpool" : aVar.c;
+        this.e = aVar.d;
+        this.f = aVar.e;
+        this.c = aVar.b;
         this.a = new AtomicLong();
     }
 
-    /* synthetic */ ci(C5810a c5810a, byte b) {
-        this(c5810a);
+    /* synthetic */ ci(a aVar, byte b) {
+        this(aVar);
     }
 
     private ThreadFactory g() {

@@ -83,7 +83,7 @@ public class AliUserRegisterChoiceRegionActivity extends BaseActivity implements
 
     private void setupAdapter() {
         this.mListView.setAdapter((ListAdapter) new RegionAdapter(this, this.mList));
-        this.mListView.setPinnedHeaderView(LayoutInflater.from(this).inflate(R.C2965layout.aliuser_contact_list_head, (ViewGroup) this.mListView, false));
+        this.mListView.setPinnedHeaderView(LayoutInflater.from(this).inflate(R.layout.aliuser_contact_list_head, (ViewGroup) this.mListView, false));
         this.mListView.setOnItemClickListener(this);
         this.mLetterView.setOnItemClickListener(new AUBladeView.OnItemClickListener() { // from class: com.ali.user.mobile.register.ui.AliUserRegisterChoiceRegionActivity.1
             @Override // com.ali.user.mobile.ui.widget.AUBladeView.OnItemClickListener
@@ -149,7 +149,7 @@ public class AliUserRegisterChoiceRegionActivity extends BaseActivity implements
 
     @Override // com.ali.user.mobile.base.ui.BaseActivity
     protected int getLayoutContent() {
-        return R.C2965layout.aliuser_register_region;
+        return R.layout.aliuser_register_region;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */

@@ -32,7 +32,7 @@ import com.youku.live.dago.model.PlayerInteract;
 import java.util.Map;
 import java.util.Objects;
 import kotlin.Metadata;
-import kotlin.collections.C8226x;
+import kotlin.collections.x;
 import kotlin.jvm.JvmField;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -49,7 +49,7 @@ import tb.yb2;
 public abstract class BaseShareDialogFragment extends DialogFragment implements View.OnClickListener, IShareMenu.MenuCallback, ShareHelperCallback {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3638a Companion = new C3638a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String PARAMS_SHARE_CHANNELS = "params_shareChannels";
     @NotNull
@@ -83,13 +83,12 @@ public abstract class BaseShareDialogFragment extends DialogFragment implements 
     protected int defaultHeight = 800;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.share.common.ui.BaseShareDialogFragment$a */
     /* loaded from: classes8.dex */
-    public static final class C3638a {
-        private C3638a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3638a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -324,7 +323,7 @@ public abstract class BaseShareDialogFragment extends DialogFragment implements 
                     message = "";
                 }
                 pairArr[0] = hq2.a("error", message);
-                m = C8226x.m(pairArr);
+                m = x.m(pairArr);
                 yb2Var.c("BaseDialogFragment", m);
             }
         }
@@ -355,7 +354,7 @@ public abstract class BaseShareDialogFragment extends DialogFragment implements 
                     message = "";
                 }
                 pairArr[0] = hq2.a("error", message);
-                m = C8226x.m(pairArr);
+                m = x.m(pairArr);
                 yb2Var.c("BaseDialogFragment", m);
             }
         }

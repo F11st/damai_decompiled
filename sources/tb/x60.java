@@ -1,7 +1,6 @@
 package tb;
 
 import java.util.Collections;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -24,11 +23,10 @@ public class x60 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.x60$a */
     /* loaded from: classes3.dex */
-    public static class C9909a extends dj {
+    public static class a extends dj {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C9909a(@NotNull ClassDescriptor classDescriptor, @NotNull SourceElement sourceElement, boolean z) {
+        public a(@NotNull ClassDescriptor classDescriptor, @NotNull SourceElement sourceElement, boolean z) {
             super(classDescriptor, null, Annotations.Companion.b(), true, CallableMemberDescriptor.Kind.DECLARATION, sourceElement);
             if (classDescriptor == null) {
                 a(0);
@@ -210,9 +208,9 @@ public class x60 {
         if (classDescriptor == null) {
             a(24);
         }
-        Annotations.C8302a c8302a = Annotations.Companion;
-        cd2 F = cd2.F(classDescriptor, c8302a.b(), C8277c.ENUM_VALUE_OF, CallableMemberDescriptor.Kind.SYNTHESIZED, classDescriptor.getSource());
-        cd2 l = F.l(null, null, Collections.emptyList(), Collections.singletonList(new ValueParameterDescriptorImpl(F, null, 0, c8302a.b(), ni1.f("value"), DescriptorUtilsKt.g(classDescriptor).W(), false, false, false, null, classDescriptor.getSource())), classDescriptor.getDefaultType(), Modality.FINAL, e70.PUBLIC);
+        Annotations.a aVar = Annotations.Companion;
+        cd2 F = cd2.F(classDescriptor, aVar.b(), kotlin.reflect.jvm.internal.impl.builtins.c.ENUM_VALUE_OF, CallableMemberDescriptor.Kind.SYNTHESIZED, classDescriptor.getSource());
+        cd2 l = F.l(null, null, Collections.emptyList(), Collections.singletonList(new ValueParameterDescriptorImpl(F, null, 0, aVar.b(), ni1.f("value"), DescriptorUtilsKt.g(classDescriptor).W(), false, false, false, null, classDescriptor.getSource())), classDescriptor.getDefaultType(), Modality.FINAL, e70.PUBLIC);
         if (l == null) {
             a(25);
         }
@@ -224,7 +222,7 @@ public class x60 {
         if (classDescriptor == null) {
             a(22);
         }
-        cd2 l = cd2.F(classDescriptor, Annotations.Companion.b(), C8277c.ENUM_VALUES, CallableMemberDescriptor.Kind.SYNTHESIZED, classDescriptor.getSource()).l(null, null, Collections.emptyList(), Collections.emptyList(), DescriptorUtilsKt.g(classDescriptor).l(Variance.INVARIANT, classDescriptor.getDefaultType()), Modality.FINAL, e70.PUBLIC);
+        cd2 l = cd2.F(classDescriptor, Annotations.Companion.b(), kotlin.reflect.jvm.internal.impl.builtins.c.ENUM_VALUES, CallableMemberDescriptor.Kind.SYNTHESIZED, classDescriptor.getSource()).l(null, null, Collections.emptyList(), Collections.emptyList(), DescriptorUtilsKt.g(classDescriptor).l(Variance.INVARIANT, classDescriptor.getDefaultType()), Modality.FINAL, e70.PUBLIC);
         if (l == null) {
             a(23);
         }
@@ -278,7 +276,7 @@ public class x60 {
         if (sourceElement == null) {
             a(21);
         }
-        return new C9909a(classDescriptor, sourceElement, false);
+        return new a(classDescriptor, sourceElement, false);
     }
 
     @NotNull
@@ -331,13 +329,13 @@ public class x60 {
         if (functionDescriptor == null) {
             a(27);
         }
-        return functionDescriptor.getName().equals(C8277c.ENUM_VALUE_OF) && l(functionDescriptor);
+        return functionDescriptor.getName().equals(kotlin.reflect.jvm.internal.impl.builtins.c.ENUM_VALUE_OF) && l(functionDescriptor);
     }
 
     public static boolean n(@NotNull FunctionDescriptor functionDescriptor) {
         if (functionDescriptor == null) {
             a(26);
         }
-        return functionDescriptor.getName().equals(C8277c.ENUM_VALUES) && l(functionDescriptor);
+        return functionDescriptor.getName().equals(kotlin.reflect.jvm.internal.impl.builtins.c.ENUM_VALUES) && l(functionDescriptor);
     }
 }

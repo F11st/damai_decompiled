@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.observable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.Scheduler;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.observers.QueueDrainObserver;
@@ -19,7 +19,7 @@ import tb.ra2;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableWindowTimed<T> extends AbstractObservableWithUpstream<T, AbstractC8149d<T>> {
+public final class ObservableWindowTimed<T> extends AbstractObservableWithUpstream<T, d<T>> {
     final int bufferSize;
     final long maxSize;
     final boolean restartTimerOnMaxSize;
@@ -30,7 +30,7 @@ public final class ObservableWindowTimed<T> extends AbstractObservableWithUpstre
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class WindowExactBoundedObserver<T> extends QueueDrainObserver<T, Object, AbstractC8149d<T>> implements Disposable {
+    static final class WindowExactBoundedObserver<T> extends QueueDrainObserver<T, Object, d<T>> implements Disposable {
         final int bufferSize;
         long count;
         final long maxSize;
@@ -72,7 +72,7 @@ public final class ObservableWindowTimed<T> extends AbstractObservableWithUpstre
             }
         }
 
-        WindowExactBoundedObserver(Observer<? super AbstractC8149d<T>> observer, long j, TimeUnit timeUnit, Scheduler scheduler, int i, long j2, boolean z) {
+        WindowExactBoundedObserver(Observer<? super d<T>> observer, long j, TimeUnit timeUnit, Scheduler scheduler, int i, long j2, boolean z) {
             super(observer, new MpscLinkedQueue());
             this.timer = new AtomicReference<>();
             this.timespan = j;
@@ -263,7 +263,7 @@ public final class ObservableWindowTimed<T> extends AbstractObservableWithUpstre
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class WindowExactUnboundedObserver<T> extends QueueDrainObserver<T, Object, AbstractC8149d<T>> implements Observer<T>, Disposable {
+    static final class WindowExactUnboundedObserver<T> extends QueueDrainObserver<T, Object, d<T>> implements Observer<T>, Disposable {
         static final Object NEXT = new Object();
         final int bufferSize;
         Disposable s;
@@ -274,7 +274,7 @@ public final class ObservableWindowTimed<T> extends AbstractObservableWithUpstre
         final TimeUnit unit;
         UnicastSubject<T> window;
 
-        WindowExactUnboundedObserver(Observer<? super AbstractC8149d<T>> observer, long j, TimeUnit timeUnit, Scheduler scheduler, int i) {
+        WindowExactUnboundedObserver(Observer<? super d<T>> observer, long j, TimeUnit timeUnit, Scheduler scheduler, int i) {
             super(observer, new MpscLinkedQueue());
             this.timer = new AtomicReference<>();
             this.timespan = j;
@@ -451,7 +451,7 @@ public final class ObservableWindowTimed<T> extends AbstractObservableWithUpstre
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class WindowSkipObserver<T> extends QueueDrainObserver<T, Object, AbstractC8149d<T>> implements Disposable, Runnable {
+    static final class WindowSkipObserver<T> extends QueueDrainObserver<T, Object, d<T>> implements Disposable, Runnable {
         final int bufferSize;
         Disposable s;
         volatile boolean terminated;
@@ -490,7 +490,7 @@ public final class ObservableWindowTimed<T> extends AbstractObservableWithUpstre
             }
         }
 
-        WindowSkipObserver(Observer<? super AbstractC8149d<T>> observer, long j, long j2, TimeUnit timeUnit, Scheduler.Worker worker, int i) {
+        WindowSkipObserver(Observer<? super d<T>> observer, long j, long j2, TimeUnit timeUnit, Scheduler.Worker worker, int i) {
             super(observer, new MpscLinkedQueue());
             this.timespan = j;
             this.timeskip = j2;
@@ -659,8 +659,8 @@ public final class ObservableWindowTimed<T> extends AbstractObservableWithUpstre
         this.restartTimerOnMaxSize = z;
     }
 
-    @Override // io.reactivex.AbstractC8149d
-    public void subscribeActual(Observer<? super AbstractC8149d<T>> observer) {
+    @Override // io.reactivex.d
+    public void subscribeActual(Observer<? super d<T>> observer) {
         ra2 ra2Var = new ra2(observer);
         long j = this.timespan;
         long j2 = this.timeskip;

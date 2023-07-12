@@ -12,12 +12,11 @@ import com.taobao.android.riverlogger.RVLRemoteInfo;
 public class RemoteApiPlugin extends WVApiPlugin {
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.riverlogger.remote.RemoteApiPlugin$a */
     /* loaded from: classes11.dex */
-    class C6578a implements RVLRemoteConnectCallback {
+    class a implements RVLRemoteConnectCallback {
         final /* synthetic */ WVCallBackContext a;
 
-        C6578a(RemoteApiPlugin remoteApiPlugin, WVCallBackContext wVCallBackContext) {
+        a(RemoteApiPlugin remoteApiPlugin, WVCallBackContext wVCallBackContext) {
             this.a = wVCallBackContext;
         }
 
@@ -36,7 +35,7 @@ public class RemoteApiPlugin extends WVApiPlugin {
     @Override // android.taobao.windvane.jsbridge.WVApiPlugin
     public boolean execute(String str, String str2, WVCallBackContext wVCallBackContext) {
         if (TextUtils.equals(str, "openRemote")) {
-            C6581b.d(RVLRemoteInfo.f(str2), new C6578a(this, wVCallBackContext));
+            b.d(RVLRemoteInfo.f(str2), new a(this, wVCallBackContext));
             return true;
         }
         return false;

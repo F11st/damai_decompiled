@@ -97,7 +97,7 @@ public class OneKeyLoginFragment extends BaseLoginFragment implements OneKeyLogi
 
     @Override // com.ali.user.mobile.base.ui.BaseFragment
     protected int getLayoutContent() {
-        return R.C2965layout.aliuser_fragment_onekey_login;
+        return R.layout.aliuser_fragment_onekey_login;
     }
 
     @Override // com.ali.user.mobile.login.ui.BaseLoginFragment, com.ali.user.mobile.login.ui.BaseLoginView

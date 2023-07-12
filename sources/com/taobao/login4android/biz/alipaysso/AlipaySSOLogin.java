@@ -30,14 +30,13 @@ public class AlipaySSOLogin {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.login4android.biz.alipaysso.AlipaySSOLogin$a */
     /* loaded from: classes11.dex */
-    public static class C6709a implements DataCallback<Boolean> {
+    public static class a implements DataCallback<Boolean> {
         final /* synthetic */ Map a;
         final /* synthetic */ String b;
         final /* synthetic */ LoginParam c;
 
-        C6709a(Map map, String str, LoginParam loginParam) {
+        a(Map map, String str, LoginParam loginParam) {
             this.a = map;
             this.b = str;
             this.c = loginParam;
@@ -92,7 +91,7 @@ public class AlipaySSOLogin {
             LoginResultHelper.gotoH5PlaceHolder(DataProviderFactory.getApplicationContext(), loginReturnData2, loginParam2);
         } else if (rpcResponse != null && ApiConstants.ResultActionType.ALERT.equals(rpcResponse.actionType) && rpcResponse.code == 14077) {
             if (LoginApprearanceExtensions.AsoLoginFlow.getAsoLoginCallback() != null) {
-                LoginApprearanceExtensions.AsoLoginFlow.getAsoLoginCallback().onNeedSwitch(rpcResponse.message, new C6709a(map, str, loginParam));
+                LoginApprearanceExtensions.AsoLoginFlow.getAsoLoginCallback().onNeedSwitch(rpcResponse.message, new a(map, str, loginParam));
             }
             LoginStatus.resetLoginFlag();
         } else {

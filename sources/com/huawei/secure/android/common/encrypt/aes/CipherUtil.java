@@ -1,8 +1,8 @@
 package com.huawei.secure.android.common.encrypt.aes;
 
-import com.huawei.secure.android.common.encrypt.utils.C5742b;
 import com.huawei.secure.android.common.encrypt.utils.EncryptUtil;
 import com.huawei.secure.android.common.encrypt.utils.HexUtil;
+import com.huawei.secure.android.common.encrypt.utils.b;
 import java.security.GeneralSecurityException;
 import java.security.spec.AlgorithmParameterSpec;
 import javax.crypto.BadPaddingException;
@@ -50,7 +50,7 @@ public class CipherUtil {
 
     public static Cipher getAesGcmEncryptCipher(byte[] bArr) {
         byte[] generateSecureRandom = EncryptUtil.generateSecureRandom(12);
-        C5742b.a(a, "getEncryptCipher: iv is : " + HexUtil.byteArray2HexStr(generateSecureRandom));
+        b.a(a, "getEncryptCipher: iv is : " + HexUtil.byteArray2HexStr(generateSecureRandom));
         return getAesGcmEncryptCipher(bArr, generateSecureRandom);
     }
 
@@ -63,17 +63,17 @@ public class CipherUtil {
             try {
                 return cipher.doFinal(bArr, 0, bArr.length, bArr2);
             } catch (BadPaddingException unused) {
-                C5742b.b(a, "getContent: BadPaddingException");
+                b.b(a, "getContent: BadPaddingException");
                 return -1;
             } catch (IllegalBlockSizeException unused2) {
-                C5742b.b(a, "getContent: IllegalBlockSizeException");
+                b.b(a, "getContent: IllegalBlockSizeException");
                 return -1;
             } catch (ShortBufferException unused3) {
-                C5742b.b(a, "getContent: ShortBufferException");
+                b.b(a, "getContent: ShortBufferException");
                 return -1;
             }
         }
-        C5742b.b(a, "getEncryptCOntent: cipher is null or content is null");
+        b.b(a, "getEncryptCOntent: cipher is null or content is null");
         return -1;
     }
 
@@ -91,11 +91,11 @@ public class CipherUtil {
                 cipher.init(i, secretKeySpec, ivParameterSpec);
                 return cipher;
             } catch (GeneralSecurityException e2) {
-                C5742b.b(a, "GCM encrypt data error" + e2.getMessage());
+                b.b(a, "GCM encrypt data error" + e2.getMessage());
                 return null;
             }
         }
-        C5742b.b(a, "gcm encrypt param is not right");
+        b.b(a, "gcm encrypt param is not right");
         return null;
     }
 
@@ -127,7 +127,7 @@ public class CipherUtil {
         if (cipher != null && bArr != null) {
             return cipher.doFinal(bArr, i, i2, bArr2, i3);
         }
-        C5742b.b(a, "getEncryptCOntent: cipher is null or content is null");
+        b.b(a, "getEncryptCOntent: cipher is null or content is null");
         return -1;
     }
 
@@ -136,14 +136,14 @@ public class CipherUtil {
             try {
                 return cipher.doFinal(bArr, 0, bArr.length);
             } catch (BadPaddingException unused) {
-                C5742b.b(a, "getContent: BadPaddingException");
+                b.b(a, "getContent: BadPaddingException");
                 return new byte[0];
             } catch (IllegalBlockSizeException unused2) {
-                C5742b.b(a, "getContent: IllegalBlockSizeException");
+                b.b(a, "getContent: IllegalBlockSizeException");
                 return new byte[0];
             }
         }
-        C5742b.b(a, "getEncryptCOntent: cipher is null or content is null");
+        b.b(a, "getEncryptCOntent: cipher is null or content is null");
         return new byte[0];
     }
 

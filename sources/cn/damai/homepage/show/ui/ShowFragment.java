@@ -11,8 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.AppConfig;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.base.ResponseErrorPage;
 import cn.damai.commonbusiness.calendar.CalendarPopView;
 import cn.damai.commonbusiness.home.OnCityChangedListener;
@@ -48,7 +47,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import tb.C9039db;
+import tb.db;
 import tb.jn1;
 import tb.oc2;
 import tb.pc2;
@@ -80,7 +79,7 @@ public class ShowFragment extends AbsFragmentV2 implements OnCityChangedListener
     private HomeTabBean mTitleBean;
     private View mTitleLineView;
     private View mTopView;
-    C0525a.C0527b mUTBuilder;
+    a.b mUTBuilder;
     ViewGroup rootView;
     String spmB = "";
     private boolean mHasNextPage = true;
@@ -93,12 +92,11 @@ public class ShowFragment extends AbsFragmentV2 implements OnCityChangedListener
     private int mSortType = 3;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.show.ui.ShowFragment$a */
     /* loaded from: classes5.dex */
-    public class C1150a implements CalendarPopView.OnDateClickListener {
+    public class a implements CalendarPopView.OnDateClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1150a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.calendar.CalendarPopView.OnDateClickListener
@@ -131,12 +129,11 @@ public class ShowFragment extends AbsFragmentV2 implements OnCityChangedListener
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.show.ui.ShowFragment$b */
     /* loaded from: classes5.dex */
-    public class C1151b implements ScreenView.OnScreenClickListener {
+    public class b implements ScreenView.OnScreenClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1151b() {
+        b() {
         }
 
         @Override // cn.damai.homepage.show.view.ScreenView.OnScreenClickListener
@@ -173,12 +170,11 @@ public class ShowFragment extends AbsFragmentV2 implements OnCityChangedListener
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.show.ui.ShowFragment$c */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1152c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1152c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -191,17 +187,16 @@ public class ShowFragment extends AbsFragmentV2 implements OnCityChangedListener
             ShowFragment.this.mRecyclerView.scrollToPosition(0);
             HashMap hashMap = new HashMap();
             hashMap.put("titlelabel", ShowFragment.this.spmB);
-            C0529c.e().x(new C0525a.C0527b().i(ShowFragment.this.spmB).f("bottom").l("anchor").g(false).j(hashMap));
+            cn.damai.common.user.c.e().x(new a.b().i(ShowFragment.this.spmB).f("bottom").l("anchor").g(false).j(hashMap));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.show.ui.ShowFragment$d */
     /* loaded from: classes5.dex */
-    public class C1153d implements ResponseErrorPage.ErrorRefreshListener {
+    public class d implements ResponseErrorPage.ErrorRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1153d() {
+        d() {
         }
 
         @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
@@ -216,13 +211,12 @@ public class ShowFragment extends AbsFragmentV2 implements OnCityChangedListener
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.show.ui.ShowFragment$e */
     /* loaded from: classes14.dex */
-    public class C1154e {
+    public class e {
         private static transient /* synthetic */ IpChange $ipChange;
         private BaseResponse a;
 
-        public C1154e(BaseResponse baseResponse) {
+        public e(BaseResponse baseResponse) {
             this.a = baseResponse;
         }
 
@@ -358,11 +352,11 @@ public class ShowFragment extends AbsFragmentV2 implements OnCityChangedListener
                         List<ShowShowItem> a = a((ShowBean) JSON.parseObject(baseSection.getItem().toJSONString(), ShowBean.class));
                         JSONObject jSONObject = new JSONObject();
                         jSONObject.put("result", (Object) a);
-                        jSONObject.put(C9039db.KEY_DAOJISHI, (Object) ShowFragment.this.mDaojishi);
-                        jSONObject.put(C9039db.KEY_SHOW_DIS, (Object) Boolean.valueOf(ShowFragment.this.mIsShowJuli));
-                        jSONObject.put(C9039db.TRACKKEY_CATEGORY_NAME, (Object) ShowFragment.this.mCategoryName);
+                        jSONObject.put(db.KEY_DAOJISHI, (Object) ShowFragment.this.mDaojishi);
+                        jSONObject.put(db.KEY_SHOW_DIS, (Object) Boolean.valueOf(ShowFragment.this.mIsShowJuli));
+                        jSONObject.put(db.TRACKKEY_CATEGORY_NAME, (Object) ShowFragment.this.mCategoryName);
                         jSONObject.put("trackB", (Object) oc2.f(ShowFragment.this.mCategoryId));
-                        jSONObject.put(C9039db.TRACKKEY_CITY, (Object) z20.d());
+                        jSONObject.put(db.TRACKKEY_CITY, (Object) z20.d());
                         baseSection.setItem(jSONObject);
                     }
                 }
@@ -466,14 +460,14 @@ public class ShowFragment extends AbsFragmentV2 implements OnCityChangedListener
             ipChange.ipc$dispatch("1545917180", new Object[]{this});
             return;
         }
-        this.mScreenView = new ScreenView(this.rootView.findViewById(R$id.layout_screen), new C1151b());
+        this.mScreenView = new ScreenView(this.rootView.findViewById(R$id.layout_screen), new b());
         this.mTitleLineView = this.rootView.findViewById(R$id.title_line);
         DamaiRootRecyclerView damaiRootRecyclerView = (DamaiRootRecyclerView) this.rootView.findViewById(R$id.teris_page_irecyclerview);
         this.mRecyclerView = damaiRootRecyclerView;
         this.mRecycleViewLayout = (ViewGroup) damaiRootRecyclerView.getParent();
         View findViewById = this.rootView.findViewById(R$id.category_image_gotop);
         this.mTopView = findViewById;
-        findViewById.setOnClickListener(new View$OnClickListenerC1152c());
+        findViewById.setOnClickListener(new c());
         View findViewById2 = this.rootView.findViewById(R$id.ll_empty);
         this.emptyView = findViewById2;
         findViewById2.setVisibility(8);
@@ -550,7 +544,7 @@ public class ShowFragment extends AbsFragmentV2 implements OnCityChangedListener
         FrameLayout frameLayout = (FrameLayout) viewGroup2.findViewById(R$id.layout_list);
         this.mListLayout = frameLayout;
         this.mListLayout.addView(super.onCreateView(layoutInflater, frameLayout, bundle), 0);
-        CalendarPopView calendarPopView = new CalendarPopView(this.mActivity, true, true, 60, new C1150a());
+        CalendarPopView calendarPopView = new CalendarPopView(this.mActivity, true, true, 60, new a());
         this.mCalendarView = calendarPopView;
         this.mListLayout.addView(calendarPopView.s(), -1, -1);
         this.mUTBuilder = oc2.h().g(this.mCategoryId);
@@ -653,7 +647,7 @@ public class ShowFragment extends AbsFragmentV2 implements OnCityChangedListener
             this.mErrorPage = responseErrorPage2;
             responseErrorPage2.setVisibility(0);
             this.mErrorPage.hideTitle();
-            this.mErrorPage.setRefreshListener(new C1153d());
+            this.mErrorPage.setRefreshListener(new d());
             this.mListLayout.addView(this.mErrorPage);
         }
     }
@@ -891,17 +885,17 @@ public class ShowFragment extends AbsFragmentV2 implements OnCityChangedListener
                                 return;
                             }
                         }
-                        new C1154e(baseResponse).b();
-                        Node e = new C9039db().e(baseResponse);
+                        new e(baseResponse).b();
+                        Node e2 = new db().e(baseResponse);
                         if (z) {
-                            ShowFragment.this.setData(e);
+                            ShowFragment.this.setData(e2);
                             GlobalConfig globalConfig = baseResponse.globalConfig;
                             if (globalConfig != null) {
                                 ShowFragment.this.updateAB(globalConfig);
                             }
                         } else {
-                            List<Node> list3 = e.children;
-                            if (list3 != null && list3.size() == 1 && (node = e.children.get(0)) != null && (list = node.children) != null && list.size() == 1 && (node2 = node.children.get(0)) != null && (list2 = node2.children) != null) {
+                            List<Node> list3 = e2.children;
+                            if (list3 != null && list3.size() == 1 && (node = e2.children.get(0)) != null && (list = node.children) != null && list.size() == 1 && (node2 = node.children.get(0)) != null && (list2 = node2.children) != null) {
                                 ShowFragment.this.addSectionList(list2, true, false);
                             }
                         }

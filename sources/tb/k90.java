@@ -2,14 +2,13 @@ package tb;
 
 import android.view.View;
 import com.alibaba.android.ultron.vfw.event.OnDynamicEventListener;
-import com.taobao.android.dinamicx.AbstractC6362a;
 import com.taobao.android.dinamicx.DXRuntimeContext;
 import java.util.ArrayList;
 import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
-public class k90 extends AbstractC6362a {
+public class k90 extends com.taobao.android.dinamicx.a {
     public static final String DISPATCHER_TAG = "handleDinamicXEvent";
 
     @Override // com.taobao.android.dinamicx.IDXEventHandler

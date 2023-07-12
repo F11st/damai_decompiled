@@ -1,7 +1,5 @@
 package com.xiaomi.mipush.sdk;
 
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
-
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 class ac implements Runnable {
@@ -14,7 +12,7 @@ class ac implements Runnable {
 
     @Override // java.lang.Runnable
     public void run() {
-        AbstractC7535b.e("clicked activity finish by timeout.");
+        com.xiaomi.channel.commonutils.logger.b.e("clicked activity finish by timeout.");
         this.a.finish();
     }
 }

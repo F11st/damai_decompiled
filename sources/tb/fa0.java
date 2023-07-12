@@ -59,7 +59,7 @@ public final class fa0 {
         }
         try {
             Application a = ShareManager.INSTANCE.a();
-            Object systemService = a != null ? a.getSystemService(C9796v.ATTACH_MODE_WINDOW) : null;
+            Object systemService = a != null ? a.getSystemService(v.ATTACH_MODE_WINDOW) : null;
             if (systemService != null) {
                 Display defaultDisplay = ((WindowManager) systemService).getDefaultDisplay();
                 int i = Build.VERSION.SDK_INT;

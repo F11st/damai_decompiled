@@ -4,10 +4,9 @@ import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
 import kotlin.reflect.jvm.internal.impl.builtins.PrimitiveType;
+import kotlin.reflect.jvm.internal.impl.builtins.c;
 import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
@@ -24,18 +23,18 @@ public final class ql {
         List n02;
         List<hp0> n03;
         Set<PrimitiveType> set = PrimitiveType.NUMBER_TYPES;
-        q = C8215n.q(set, 10);
+        q = kotlin.collections.n.q(set, 10);
         ArrayList arrayList = new ArrayList(q);
         for (PrimitiveType primitiveType : set) {
-            arrayList.add(C8277c.c(primitiveType));
+            arrayList.add(kotlin.reflect.jvm.internal.impl.builtins.c.c(primitiveType));
         }
-        hp0 l = C8277c.C8278a.string.l();
+        hp0 l = c.a.string.l();
         b41.h(l, "string.toSafe()");
         n0 = CollectionsKt___CollectionsKt.n0(arrayList, l);
-        hp0 l2 = C8277c.C8278a._boolean.l();
+        hp0 l2 = c.a._boolean.l();
         b41.h(l2, "_boolean.toSafe()");
         n02 = CollectionsKt___CollectionsKt.n0(n0, l2);
-        hp0 l3 = C8277c.C8278a._enum.l();
+        hp0 l3 = c.a._enum.l();
         b41.h(l3, "_enum.toSafe()");
         n03 = CollectionsKt___CollectionsKt.n0(n02, l3);
         LinkedHashSet linkedHashSet = new LinkedHashSet();

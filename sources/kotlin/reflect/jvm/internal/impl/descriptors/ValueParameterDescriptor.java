@@ -12,9 +12,8 @@ import tb.z71;
 public interface ValueParameterDescriptor extends ParameterDescriptor, VariableDescriptor {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.ValueParameterDescriptor$a */
     /* loaded from: classes3.dex */
-    public static final class C8299a {
+    public static final class a {
         public static boolean a(@NotNull ValueParameterDescriptor valueParameterDescriptor) {
             b41.i(valueParameterDescriptor, "this");
             return false;

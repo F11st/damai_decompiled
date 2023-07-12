@@ -9,8 +9,8 @@ import java.util.Objects;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicBoolean;
 import okio.BufferedSource;
-import okio.C8842f;
-import okio.C8844h;
+import okio.f;
+import okio.h;
 import tb.jn1;
 import tb.km1;
 import tb.ps1;
@@ -196,7 +196,7 @@ public final class PublicSuffixDatabase {
         if (resourceAsStream == null) {
             return;
         }
-        BufferedSource d = C8844h.d(new C8842f(C8844h.k(resourceAsStream)));
+        BufferedSource d = h.d(new f(h.k(resourceAsStream)));
         try {
             byte[] bArr = new byte[d.readInt()];
             d.readFully(bArr);

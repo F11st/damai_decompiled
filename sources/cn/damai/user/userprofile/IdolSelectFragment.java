@@ -31,12 +31,11 @@ public class IdolSelectFragment extends BaseFragment {
     String type;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.userprofile.IdolSelectFragment$a */
     /* loaded from: classes9.dex */
-    public class C2742a implements OnLoadMoreListener {
+    public class a implements OnLoadMoreListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2742a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.irecycler.OnLoadMoreListener
@@ -134,7 +133,7 @@ public class IdolSelectFragment extends BaseFragment {
         this.adapter = idolListAdapter;
         this.recyclerView.setAdapter(idolListAdapter);
         this.recyclerView.setLoadMoreEnabled(true);
-        this.recyclerView.setOnLoadMoreListener(new C2742a());
+        this.recyclerView.setOnLoadMoreListener(new a());
         requestData();
     }
 

@@ -1,11 +1,11 @@
 package com.tencent.open.web.security;
 
-import com.tencent.open.C7077b;
+import com.tencent.open.b;
 import com.tencent.open.log.SLog;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class SecureJsInterface extends C7077b.C7079b {
+public class SecureJsInterface extends b.C0344b {
     public static boolean isPWDEdit;
     private String a;
 
@@ -29,16 +29,16 @@ public class SecureJsInterface extends C7077b.C7079b {
             i = -1;
         }
         if (i >= 0) {
-            boolean z = C7130a.c;
-            boolean z2 = C7130a.b;
+            boolean z = a.c;
+            boolean z2 = a.b;
             if (z2) {
                 if (Boolean.valueOf(JniInterface.BackSpaceChar(z2, i)).booleanValue()) {
-                    C7130a.b = false;
+                    a.b = false;
                     return;
                 }
                 return;
             }
-            String str2 = C7130a.a;
+            String str2 = a.a;
             this.a = str2;
             JniInterface.insetTextToArray(i, str2, str2.length());
             SLog.v("openSDK_LOG.SecureJsInterface", "curPosFromJS mKey: " + this.a);
@@ -47,7 +47,7 @@ public class SecureJsInterface extends C7077b.C7079b {
         throw new RuntimeException("position is illegal.");
     }
 
-    @Override // com.tencent.open.C7077b.C7079b
+    @Override // com.tencent.open.b.C0344b
     public boolean customCallback() {
         return true;
     }

@@ -29,11 +29,9 @@ import cn.damai.category.inventory.bean.DetailedDataHolder;
 import cn.damai.category.inventory.bean.DetailedFollowResponse;
 import cn.damai.category.inventory.model.DetailedModel;
 import cn.damai.category.inventory.ui.adapter.DetailedAdapter;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.commonbusiness.search.bean.FollowDataBean;
@@ -125,15 +123,14 @@ public class DetailedActivity extends SimpleBaseActivity {
     final int defaultGreen = SecExceptionCode.SEC_ERROR_INIT_CLAZZ_NULL_ERROR;
     final int defaultBlue = 202;
     private final int requestFollowLogin = 1010;
-    View.OnClickListener mTitleClickListener = new View$OnClickListenerC0416h();
+    View.OnClickListener mTitleClickListener = new h();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.inventory.ui.DetailedActivity$a */
     /* loaded from: classes.dex */
-    public class CountDownTimerC0409a extends CountDownTimer {
+    public class a extends CountDownTimer {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        CountDownTimerC0409a(long j, long j2) {
+        a(long j, long j2) {
             super(j, j2);
         }
 
@@ -157,12 +154,11 @@ public class DetailedActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.inventory.ui.DetailedActivity$b */
     /* loaded from: classes.dex */
-    public class C0410b implements AppBarLayout.OnOffsetChangedListener {
+    public class b implements AppBarLayout.OnOffsetChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0410b() {
+        b() {
         }
 
         @Override // com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener, com.google.android.material.appbar.AppBarLayout.BaseOnOffsetChangedListener
@@ -183,19 +179,18 @@ public class DetailedActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.inventory.ui.DetailedActivity$c */
     /* loaded from: classes.dex */
-    public class C0411c implements DMImageCreator.DMImageFailListener {
+    public class c implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0411c() {
+        c() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "926491873")) {
-                ipChange.ipc$dispatch("926491873", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("926491873", new Object[]{this, dVar});
                 return;
             }
             DetailedActivity.this.mIvProjectImage.setImageResource(R$drawable.category_999999_bg);
@@ -204,35 +199,33 @@ public class DetailedActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.inventory.ui.DetailedActivity$d */
     /* loaded from: classes.dex */
-    public class C0412d implements DMImageCreator.DMImageSuccListener {
+    public class d implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C0412d(String str) {
+        d(String str) {
             this.a = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "390867382")) {
-                ipChange.ipc$dispatch("390867382", new Object[]{this, c0502e});
-            } else if (c0502e != null) {
-                DetailedActivity.this.mIvProjectImage.setImageBitmap(c0502e.b);
-                DetailedActivity.this.updateDetailedBg(this.a, c0502e.b);
+                ipChange.ipc$dispatch("390867382", new Object[]{this, eVar});
+            } else if (eVar != null) {
+                DetailedActivity.this.mIvProjectImage.setImageBitmap(eVar.b);
+                DetailedActivity.this.updateDetailedBg(this.a, eVar.b);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.inventory.ui.DetailedActivity$e */
     /* loaded from: classes.dex */
-    public class C0413e implements DMRGBUtil.OnFetchColorListener {
+    public class e implements DMRGBUtil.OnFetchColorListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0413e() {
+        e() {
         }
 
         @Override // cn.damai.commonbusiness.util.DMRGBUtil.OnFetchColorListener
@@ -253,23 +246,22 @@ public class DetailedActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.inventory.ui.DetailedActivity$f */
     /* loaded from: classes.dex */
-    public class C0414f implements DMImageCreator.DMImageFailListener {
+    public class f implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ DetailedBean b;
 
-        C0414f(String str, DetailedBean detailedBean) {
+        f(String str, DetailedBean detailedBean) {
             this.a = str;
             this.b = detailedBean;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1721370212")) {
-                ipChange.ipc$dispatch("1721370212", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("1721370212", new Object[]{this, dVar});
             } else {
                 DetailedActivity.this.updateShareLayout(this.a, this.b);
             }
@@ -277,25 +269,24 @@ public class DetailedActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.inventory.ui.DetailedActivity$g */
     /* loaded from: classes.dex */
-    public class C0415g implements DMImageCreator.DMImageSuccListener {
+    public class g implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DetailedBean a;
         final /* synthetic */ String b;
 
-        C0415g(DetailedBean detailedBean, String str) {
+        g(DetailedBean detailedBean, String str) {
             this.a = detailedBean;
             this.b = str;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Drawable drawable;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1433363207")) {
-                ipChange.ipc$dispatch("-1433363207", new Object[]{this, c0502e});
-            } else if (c0502e == null || (drawable = c0502e.a) == null) {
+                ipChange.ipc$dispatch("-1433363207", new Object[]{this, eVar});
+            } else if (eVar == null || (drawable = eVar.a) == null) {
                 DetailedActivity.this.updateShareLayout(this.b, this.a);
             } else {
                 int intrinsicWidth = drawable.getIntrinsicWidth();
@@ -310,18 +301,17 @@ public class DetailedActivity extends SimpleBaseActivity {
                 DetailedActivity.this.mShareLayout.setVisibility(8);
                 DetailedActivity.this.mShareImage.setTag(this.a);
                 DetailedActivity.this.mShareImage.setVisibility(0);
-                DetailedActivity.this.mShareImage.setImageDrawable(c0502e.a);
+                DetailedActivity.this.mShareImage.setImageDrawable(eVar.a);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.inventory.ui.DetailedActivity$h */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0416h implements View.OnClickListener {
+    public class h implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0416h() {
+        h() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -336,7 +326,7 @@ public class DetailedActivity extends SimpleBaseActivity {
                 if (id == R$id.ll_fans) {
                     if (view.getTag() != null) {
                         boolean booleanValue = ((Boolean) view.getTag()).booleanValue();
-                        C0529c.e().x(u70.g().h(DetailedActivity.this.mDetailTitle, DetailedActivity.this.mDetailId, booleanValue));
+                        cn.damai.common.user.c.e().x(u70.g().h(DetailedActivity.this.mDetailTitle, DetailedActivity.this.mDetailId, booleanValue));
                         if (!LoginManager.k().q()) {
                             DetailedActivity.this.loginIsFollow = booleanValue;
                             LoginManager.k().x(DetailedActivity.this, new Intent(), 1010);
@@ -350,11 +340,11 @@ public class DetailedActivity extends SimpleBaseActivity {
                     }
                     return;
                 } else if (id == R$id.ll_share) {
-                    C0529c.e().x(u70.g().j(DetailedActivity.this.mDetailTitle, DetailedActivity.this.mDetailId));
+                    cn.damai.common.user.c.e().x(u70.g().j(DetailedActivity.this.mDetailTitle, DetailedActivity.this.mDetailId));
                     DetailedActivity.this.openShare((DetailedBean) view.getTag());
                     return;
                 } else if (id == R$id.iv_share) {
-                    C0529c.e().x(u70.g().j(DetailedActivity.this.mDetailTitle, DetailedActivity.this.mDetailId));
+                    cn.damai.common.user.c.e().x(u70.g().j(DetailedActivity.this.mDetailTitle, DetailedActivity.this.mDetailId));
                     DetailedActivity.this.openShare((DetailedBean) view.getTag());
                     return;
                 } else {
@@ -418,7 +408,7 @@ public class DetailedActivity extends SimpleBaseActivity {
         }
         this.mTvDetailedTitle = (TextView) this.mParHeadBar.findViewById(R$id.tv_detail_title);
         this.mTvSubHeaderTitle = (TextView) this.mParHeadBar.findViewById(R$id.tv_sub_title);
-        ((AppBarLayout) findViewById(R$id.appbar_layout)).addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new C0410b());
+        ((AppBarLayout) findViewById(R$id.appbar_layout)).addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new b());
     }
 
     private void initIRecycleView() {
@@ -460,9 +450,9 @@ public class DetailedActivity extends SimpleBaseActivity {
         this.topShapeHeight = m62.a(this, 81.0f);
         this.imageShapeHeight = this.mStatusBarHeight + m62.a(this, 126.0f);
         if (z) {
-            int a = this.mStatusBarHeight + m62.a(this.mContext, 44.0f);
-            this.mTitleMinHeight = a;
-            this.mToolbarLayout.setMinimumHeight(a);
+            int a2 = this.mStatusBarHeight + m62.a(this.mContext, 44.0f);
+            this.mTitleMinHeight = a2;
+            this.mToolbarLayout.setMinimumHeight(a2);
             FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) this.mParHeadBar.getLayoutParams();
             layoutParams.topMargin = this.mTitleMinHeight;
             this.mParHeadBar.setLayoutParams(layoutParams);
@@ -503,7 +493,7 @@ public class DetailedActivity extends SimpleBaseActivity {
         } else if (TextUtils.isEmpty(str2)) {
             updateShareLayout(str, detailedBean);
         } else {
-            C0504a.b().c(str2).n(new C0415g(detailedBean, str)).e(new C0414f(str, detailedBean)).f();
+            cn.damai.common.image.a.b().c(str2).n(new g(detailedBean, str)).e(new f(str, detailedBean)).f();
         }
     }
 
@@ -568,9 +558,9 @@ public class DetailedActivity extends SimpleBaseActivity {
         if (AndroidInstantRuntime.support(ipChange, "-495808345")) {
             ipChange.ipc$dispatch("-495808345", new Object[]{this, detailedBean});
         } else if (detailedBean != null) {
-            int e = wh2.e(detailedBean.topItems);
-            int e2 = wh2.e(detailedBean.items);
-            if (e <= 0 && e2 <= 0) {
+            int e2 = wh2.e(detailedBean.topItems);
+            int e3 = wh2.e(detailedBean.items);
+            if (e2 <= 0 && e3 <= 0) {
                 returnDetailedEmpty();
                 return;
             }
@@ -581,13 +571,13 @@ public class DetailedActivity extends SimpleBaseActivity {
             updateFansData(detailedBean.isFollow());
             visCollectTip();
             this.mDataHolderList.clear();
-            if (e > 0) {
+            if (e2 > 0) {
                 DetailedDataHolder detailedDataHolder = new DetailedDataHolder();
                 detailedDataHolder.mType = 2;
                 detailedDataHolder.topItems = detailedBean.topItems;
                 this.mDataHolderList.add(detailedDataHolder);
             }
-            for (int i = 0; i < e2; i++) {
+            for (int i = 0; i < e3; i++) {
                 DetailedDataHolder detailedDataHolder2 = new DetailedDataHolder();
                 detailedDataHolder2.mType = 0;
                 detailedDataHolder2.itemsBean = detailedBean.items.get(i);
@@ -598,16 +588,16 @@ public class DetailedActivity extends SimpleBaseActivity {
             this.mDataHolderList.add(detailedDataHolder3);
             DetailedAdapter detailedAdapter = this.mAdapter;
             if (detailedAdapter != null) {
-                detailedAdapter.b(this.mDetailTitle, this.mDetailId, e);
+                detailedAdapter.b(this.mDetailTitle, this.mDetailId, e2);
                 this.mAdapter.notifyDataSetChanged();
             }
             updateDetailedHeaderData(detailedBean.subTitle, detailedBean.title, detailedBean.bgPic);
         }
     }
 
-    public static int setAlphaColor(@FloatRange(from = 0.0d, to = 1.0d) float f, int i) {
+    public static int setAlphaColor(@FloatRange(from = 0.0d, to = 1.0d) float f2, int i) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1960050357") ? ((Integer) ipChange.ipc$dispatch("-1960050357", new Object[]{Float.valueOf(f), Integer.valueOf(i)})).intValue() : Color.argb(Math.round(f * 255.0f), (16711680 & i) >> 16, (65280 & i) >> 8, i & 255);
+        return AndroidInstantRuntime.support(ipChange, "-1960050357") ? ((Integer) ipChange.ipc$dispatch("-1960050357", new Object[]{Float.valueOf(f2), Integer.valueOf(i)})).intValue() : Color.argb(Math.round(f2 * 255.0f), (16711680 & i) >> 16, (65280 & i) >> 8, i & 255);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -629,7 +619,7 @@ public class DetailedActivity extends SimpleBaseActivity {
         }
         cancelCountDown();
         if (this.mTimeCountDown == null) {
-            this.mTimeCountDown = new CountDownTimerC0409a(3000L, 3000L);
+            this.mTimeCountDown = new a(3000L, 3000L);
         }
         this.mTimeCountDown.start();
     }
@@ -642,7 +632,7 @@ public class DetailedActivity extends SimpleBaseActivity {
         }
         this.mTvDetailedTitle.setText(str2);
         this.mTvSubHeaderTitle.setText(str);
-        C0504a.b().e(str3).n(new C0412d(str3)).e(new C0411c()).f();
+        cn.damai.common.image.a.b().e(str3).n(new d(str3)).e(new c()).f();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -854,7 +844,7 @@ public class DetailedActivity extends SimpleBaseActivity {
         if (AndroidInstantRuntime.support(ipChange, "-230141196")) {
             ipChange.ipc$dispatch("-230141196", new Object[]{this, str, bitmap});
         } else if (bitmap != null) {
-            DMRGBUtil.h(bitmap, str, new C0413e());
+            DMRGBUtil.h(bitmap, str, new e());
         } else {
             defaultTopBackground();
         }

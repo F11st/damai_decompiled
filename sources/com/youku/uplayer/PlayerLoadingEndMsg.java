@@ -1,7 +1,7 @@
 package com.youku.uplayer;
 
 import android.text.TextUtils;
-import com.youku.player.util.C8063c;
+import com.youku.player.util.c;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -28,7 +28,7 @@ public class PlayerLoadingEndMsg {
                 playerLoadingEndMsg = playerLoadingEndMsg2;
             } else {
                 String str2 = LogTag.TAG_PLAYER;
-                C8063c.a(str2, "PlayerLoadingEndMsg ---> " + str);
+                c.a(str2, "PlayerLoadingEndMsg ---> " + str);
             }
         } catch (Exception unused2) {
         }

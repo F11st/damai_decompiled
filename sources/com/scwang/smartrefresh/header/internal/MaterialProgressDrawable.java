@@ -31,7 +31,7 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
     static final Interpolator k = new FastOutSlowInInterpolator();
     private static final int[] l = {-16777216};
     private final List<Animation> a = new ArrayList();
-    private final C6172b b = new C6172b(this);
+    private final b b = new b(this);
     private float c;
     private View d;
     private Animation e;
@@ -48,13 +48,12 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.internal.MaterialProgressDrawable$a  reason: invalid class name */
     /* loaded from: classes6.dex */
-    public class animationAnimation$AnimationListenerC6171a implements Animation.AnimationListener {
-        final /* synthetic */ C6172b a;
+    public class a implements Animation.AnimationListener {
+        final /* synthetic */ b a;
 
-        animationAnimation$AnimationListenerC6171a(C6172b c6172b) {
-            this.a = c6172b;
+        a(b bVar) {
+            this.a = bVar;
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -65,8 +64,8 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
         public void onAnimationRepeat(Animation animation) {
             this.a.j();
             this.a.f();
-            C6172b c6172b = this.a;
-            c6172b.d = c6172b.e;
+            b bVar = this.a;
+            bVar.d = bVar.e;
             MaterialProgressDrawable materialProgressDrawable = MaterialProgressDrawable.this;
             if (materialProgressDrawable.i) {
                 materialProgressDrawable.i = false;
@@ -85,9 +84,8 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.internal.MaterialProgressDrawable$b */
     /* loaded from: classes6.dex */
-    public class C6172b {
+    public class b {
         final RectF a = new RectF();
         final Paint b;
         final Paint c;
@@ -112,7 +110,7 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
         int v;
         int w;
 
-        C6172b(MaterialProgressDrawable materialProgressDrawable) {
+        b(MaterialProgressDrawable materialProgressDrawable) {
             Paint paint = new Paint();
             this.b = paint;
             Paint paint2 = new Paint();
@@ -243,36 +241,36 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
         this.b.h(0);
         float f6 = f2 * f5;
         this.b.b.setStrokeWidth(f6);
-        C6172b c6172b = this.b;
-        c6172b.g = f6;
-        c6172b.q = f * f5;
-        c6172b.r = (int) (f3 * f5);
-        c6172b.s = (int) (f4 * f5);
-        c6172b.i((int) this.g, (int) this.h);
+        b bVar = this.b;
+        bVar.g = f6;
+        bVar.q = f * f5;
+        bVar.r = (int) (f3 * f5);
+        bVar.s = (int) (f4 * f5);
+        bVar.i((int) this.g, (int) this.h);
         invalidateSelf();
     }
 
     private void k() {
-        final C6172b c6172b = this.b;
+        final b bVar = this.b;
         Animation animation = new Animation() { // from class: com.scwang.smartrefresh.header.internal.MaterialProgressDrawable.1
             @Override // android.view.animation.Animation
             public void applyTransformation(float f, Transformation transformation) {
                 MaterialProgressDrawable materialProgressDrawable = MaterialProgressDrawable.this;
                 if (materialProgressDrawable.i) {
-                    materialProgressDrawable.a(f, c6172b);
+                    materialProgressDrawable.a(f, bVar);
                     return;
                 }
-                float c = materialProgressDrawable.c(c6172b);
-                C6172b c6172b2 = c6172b;
-                float f2 = c6172b2.l;
-                float f3 = c6172b2.k;
-                float f4 = c6172b2.m;
-                MaterialProgressDrawable.this.m(f, c6172b2);
+                float c = materialProgressDrawable.c(bVar);
+                b bVar2 = bVar;
+                float f2 = bVar2.l;
+                float f3 = bVar2.k;
+                float f4 = bVar2.m;
+                MaterialProgressDrawable.this.m(f, bVar2);
                 if (f <= 0.5f) {
-                    c6172b.d = f3 + ((0.8f - c) * MaterialProgressDrawable.k.getInterpolation(f / 0.5f));
+                    bVar.d = f3 + ((0.8f - c) * MaterialProgressDrawable.k.getInterpolation(f / 0.5f));
                 }
                 if (f > 0.5f) {
-                    c6172b.e = f2 + ((0.8f - c) * MaterialProgressDrawable.k.getInterpolation((f - 0.5f) / 0.5f));
+                    bVar.e = f2 + ((0.8f - c) * MaterialProgressDrawable.k.getInterpolation((f - 0.5f) / 0.5f));
                 }
                 MaterialProgressDrawable.this.g(f4 + (0.25f * f));
                 MaterialProgressDrawable materialProgressDrawable2 = MaterialProgressDrawable.this;
@@ -282,28 +280,28 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
         animation.setRepeatCount(-1);
         animation.setRepeatMode(1);
         animation.setInterpolator(j);
-        animation.setAnimationListener(new animationAnimation$AnimationListenerC6171a(c6172b));
+        animation.setAnimationListener(new a(bVar));
         this.e = animation;
     }
 
-    void a(float f, C6172b c6172b) {
-        m(f, c6172b);
-        float c = c(c6172b);
-        float f2 = c6172b.k;
-        float f3 = c6172b.l;
+    void a(float f, b bVar) {
+        m(f, bVar);
+        float c = c(bVar);
+        float f2 = bVar.k;
+        float f3 = bVar.l;
         j(f2 + (((f3 - c) - f2) * f), f3);
-        float f4 = c6172b.m;
-        g(f4 + ((((float) (Math.floor(c6172b.m / 0.8f) + 1.0d)) - f4) * f));
+        float f4 = bVar.m;
+        g(f4 + ((((float) (Math.floor(bVar.m / 0.8f) + 1.0d)) - f4) * f));
     }
 
-    float c(C6172b c6172b) {
-        return (float) Math.toRadians(c6172b.g / (c6172b.q * 6.283185307179586d));
+    float c(b bVar) {
+        return (float) Math.toRadians(bVar.g / (bVar.q * 6.283185307179586d));
     }
 
     public void d(float f) {
-        C6172b c6172b = this.b;
-        if (c6172b.p != f) {
-            c6172b.p = f;
+        b bVar = this.b;
+        if (bVar.p != f) {
+            bVar.p = f;
             invalidateSelf();
         }
     }
@@ -322,9 +320,9 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
     }
 
     public void f(int... iArr) {
-        C6172b c6172b = this.b;
-        c6172b.i = iArr;
-        c6172b.h(0);
+        b bVar = this.b;
+        bVar.i = iArr;
+        bVar.h(0);
     }
 
     public void g(float f) {
@@ -371,23 +369,23 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
     }
 
     public void j(float f, float f2) {
-        C6172b c6172b = this.b;
-        c6172b.d = f;
-        c6172b.e = f2;
+        b bVar = this.b;
+        bVar.d = f;
+        bVar.e = f2;
         invalidateSelf();
     }
 
     public void l(boolean z) {
-        C6172b c6172b = this.b;
-        if (c6172b.n != z) {
-            c6172b.n = z;
+        b bVar = this.b;
+        if (bVar.n != z) {
+            bVar.n = z;
             invalidateSelf();
         }
     }
 
-    void m(float f, C6172b c6172b) {
+    void m(float f, b bVar) {
         if (f > 0.75f) {
-            c6172b.w = b((f - 0.75f) / 0.25f, c6172b.e(), c6172b.c());
+            bVar.w = b((f - 0.75f) / 0.25f, bVar.e(), bVar.c());
         }
     }
 
@@ -414,14 +412,14 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
     public void start() {
         this.e.reset();
         this.b.j();
-        C6172b c6172b = this.b;
-        if (c6172b.e != c6172b.d) {
+        b bVar = this.b;
+        if (bVar.e != bVar.d) {
             this.i = true;
             this.e.setDuration(666L);
             this.d.startAnimation(this.e);
             return;
         }
-        c6172b.h(0);
+        bVar.h(0);
         this.b.g();
         this.e.setDuration(1332L);
         this.d.startAnimation(this.e);

@@ -16,13 +16,12 @@ import org.jetbrains.annotations.Nullable;
 public abstract class b81 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.b81$a */
     /* loaded from: classes3.dex */
-    public static final class C8955a extends b81 {
+    public static final class a extends b81 {
         @NotNull
-        public static final C8955a INSTANCE = new C8955a();
+        public static final a INSTANCE = new a();
 
-        private C8955a() {
+        private a() {
         }
 
         @Override // tb.b81

@@ -18,14 +18,13 @@ public class dk {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.dk$a */
     /* loaded from: classes10.dex */
-    public static class C4426a extends ee {
+    public static class a extends ee {
         private int a = 2;
         private Context b;
         private dj c;
 
-        C4426a(Context context) {
+        a(Context context) {
             this.b = context;
         }
 
@@ -68,6 +67,6 @@ public class dk {
     }
 
     public static void a(Context context) {
-        ed.a().b(new C4426a(context));
+        ed.a().b(new a(context));
     }
 }

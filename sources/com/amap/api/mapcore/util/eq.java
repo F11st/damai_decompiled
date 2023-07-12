@@ -141,10 +141,10 @@ public class eq {
 
     public static gm e() {
         try {
-            if (C4614m.e == null) {
-                C4614m.e = new gm.C4569a("3dmap", "7.4.0", C4614m.c).a(new String[]{"com.amap.api.maps", "com.amap.api.mapcore", "com.autonavi.amap.mapcore", "com.autonavi.amap", "com.autonavi.ae", "com.autonavi.base", "com.autonavi.patch", "com.amap.api.3dmap.admic", "com.amap.api.trace", "com.amap.api.trace.core"}).a("7.4.0").a();
+            if (m.e == null) {
+                m.e = new gm.a("3dmap", "7.4.0", m.c).a(new String[]{"com.amap.api.maps", "com.amap.api.mapcore", "com.autonavi.amap.mapcore", "com.autonavi.amap", "com.autonavi.ae", "com.autonavi.base", "com.autonavi.patch", "com.amap.api.3dmap.admic", "com.amap.api.trace", "com.amap.api.trace.core"}).a("7.4.0").a();
             }
-            return C4614m.e;
+            return m.e;
         } catch (Throwable unused) {
             return null;
         }

@@ -7,7 +7,7 @@ import java.util.Date;
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class dg extends df.C7630b {
+public class dg extends df.b {
     final /* synthetic */ int a;
 
     /* renamed from: a  reason: collision with other field name */
@@ -42,28 +42,28 @@ public class dg extends df.C7630b {
         this.f209a = z;
     }
 
-    @Override // com.xiaomi.push.df.C7630b, com.xiaomi.push.ao.AbstractC7600b
+    @Override // com.xiaomi.push.df.b, com.xiaomi.push.ao.b
     public void b() {
-        if (C7595ad.d()) {
+        if (ad.d()) {
             try {
                 File file = new File(this.f205a.f198a.getExternalFilesDir(null) + "/.logcache");
                 file.mkdirs();
                 if (file.isDirectory()) {
-                    C7628de c7628de = new C7628de();
-                    c7628de.a(this.a);
-                    this.f206a = c7628de.a(this.f205a.f198a, this.f208a, this.f210b, file);
+                    de deVar = new de();
+                    deVar.a(this.a);
+                    this.f206a = deVar.a(this.f205a.f198a, this.f208a, this.f210b, file);
                 }
             } catch (NullPointerException unused) {
             }
         }
     }
 
-    @Override // com.xiaomi.push.ao.AbstractC7600b
+    @Override // com.xiaomi.push.ao.b
     /* renamed from: c */
     public void mo765c() {
         File file = this.f206a;
         if (file != null && file.exists()) {
-            this.f205a.f199a.add(new df.C7631c(this.f207a, this.b, this.f206a, this.f209a));
+            this.f205a.f199a.add(new df.c(this.f207a, this.b, this.f206a, this.f209a));
         }
         this.f205a.a(0L);
     }

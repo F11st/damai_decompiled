@@ -2,9 +2,7 @@ package tb;
 
 import java.util.List;
 import kotlin.Pair;
-import kotlin.collections.C8212k;
 import kotlin.collections.CollectionsKt___CollectionsKt;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
@@ -28,16 +26,15 @@ import tb.c71;
 /* loaded from: classes3.dex */
 public final class i51 implements ExternalOverridabilityCondition {
     @NotNull
-    public static final C9254a Companion = new C9254a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.i51$a */
     /* loaded from: classes3.dex */
-    public static final class C9254a {
-        private C9254a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9254a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -52,9 +49,9 @@ public final class i51 implements ExternalOverridabilityCondition {
             }
             List<ValueParameterDescriptor> valueParameters = functionDescriptor.getValueParameters();
             b41.h(valueParameters, "f.valueParameters");
-            ClassifierDescriptor declarationDescriptor = ((ValueParameterDescriptor) C8212k.q0(valueParameters)).getType().c().getDeclarationDescriptor();
+            ClassifierDescriptor declarationDescriptor = ((ValueParameterDescriptor) kotlin.collections.k.q0(valueParameters)).getType().c().getDeclarationDescriptor();
             ClassDescriptor classDescriptor2 = declarationDescriptor instanceof ClassDescriptor ? (ClassDescriptor) declarationDescriptor : null;
-            return classDescriptor2 != null && AbstractC8271b.p0(classDescriptor) && b41.d(DescriptorUtilsKt.i(classDescriptor), DescriptorUtilsKt.i(classDescriptor2));
+            return classDescriptor2 != null && kotlin.reflect.jvm.internal.impl.builtins.b.p0(classDescriptor) && b41.d(DescriptorUtilsKt.i(classDescriptor), DescriptorUtilsKt.i(classDescriptor2));
         }
 
         private final c71 c(FunctionDescriptor functionDescriptor, ValueParameterDescriptor valueParameterDescriptor) {
@@ -86,9 +83,9 @@ public final class i51 implements ExternalOverridabilityCondition {
                     ValueParameterDescriptor valueParameterDescriptor = (ValueParameterDescriptor) pair.component1();
                     ValueParameterDescriptor valueParameterDescriptor2 = (ValueParameterDescriptor) pair.component2();
                     b41.h(valueParameterDescriptor, "subParameter");
-                    boolean z = c((FunctionDescriptor) callableDescriptor2, valueParameterDescriptor) instanceof c71.C8993d;
+                    boolean z = c((FunctionDescriptor) callableDescriptor2, valueParameterDescriptor) instanceof c71.d;
                     b41.h(valueParameterDescriptor2, "superParameter");
-                    if (z != (c(functionDescriptor, valueParameterDescriptor2) instanceof c71.C8993d)) {
+                    if (z != (c(functionDescriptor, valueParameterDescriptor2) instanceof c71.d)) {
                         return true;
                     }
                 }
@@ -98,16 +95,16 @@ public final class i51 implements ExternalOverridabilityCondition {
     }
 
     private final boolean a(CallableDescriptor callableDescriptor, CallableDescriptor callableDescriptor2, ClassDescriptor classDescriptor) {
-        if ((callableDescriptor instanceof CallableMemberDescriptor) && (callableDescriptor2 instanceof FunctionDescriptor) && !AbstractC8271b.e0(callableDescriptor2)) {
+        if ((callableDescriptor instanceof CallableMemberDescriptor) && (callableDescriptor2 instanceof FunctionDescriptor) && !kotlin.reflect.jvm.internal.impl.builtins.b.e0(callableDescriptor2)) {
             BuiltinMethodsWithSpecialGenericSignature builtinMethodsWithSpecialGenericSignature = BuiltinMethodsWithSpecialGenericSignature.INSTANCE;
             FunctionDescriptor functionDescriptor = (FunctionDescriptor) callableDescriptor2;
             ni1 name = functionDescriptor.getName();
             b41.h(name, "subDescriptor.name");
             if (!builtinMethodsWithSpecialGenericSignature.l(name)) {
-                SpecialGenericSignatures.C8333a c8333a = SpecialGenericSignatures.Companion;
+                SpecialGenericSignatures.a aVar = SpecialGenericSignatures.Companion;
                 ni1 name2 = functionDescriptor.getName();
                 b41.h(name2, "subDescriptor.name");
-                if (!c8333a.k(name2)) {
+                if (!aVar.k(name2)) {
                     return false;
                 }
             }

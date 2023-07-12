@@ -5,7 +5,7 @@ import com.uc.webview.export.internal.utility.Log;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-final class ca implements ValueCallback<AbstractC7282l> {
+final class ca implements ValueCallback<l> {
     final ValueCallback a;
     final /* synthetic */ by b;
 
@@ -16,14 +16,14 @@ final class ca implements ValueCallback<AbstractC7282l> {
     }
 
     @Override // android.webkit.ValueCallback
-    public final /* synthetic */ void onReceiveValue(AbstractC7282l abstractC7282l) {
+    public final /* synthetic */ void onReceiveValue(l lVar) {
         String str;
-        AbstractC7282l abstractC7282l2 = abstractC7282l;
+        l lVar2 = lVar;
         str = by.a;
         Log.d(str, "switch callback.");
         ValueCallback valueCallback = this.a;
         if (valueCallback != null) {
-            valueCallback.onReceiveValue(abstractC7282l2);
+            valueCallback.onReceiveValue(lVar2);
         }
     }
 }

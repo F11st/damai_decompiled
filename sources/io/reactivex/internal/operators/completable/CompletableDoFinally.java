@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.completable;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
+import io.reactivex.a;
 import io.reactivex.annotations.Experimental;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Action;
@@ -14,7 +14,7 @@ import tb.i42;
 /* compiled from: Taobao */
 @Experimental
 /* loaded from: classes3.dex */
-public final class CompletableDoFinally extends AbstractC8146a {
+public final class CompletableDoFinally extends a {
     final Action onFinally;
     final CompletableSource source;
 
@@ -79,7 +79,7 @@ public final class CompletableDoFinally extends AbstractC8146a {
         this.onFinally = action;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     protected void subscribeActual(CompletableObserver completableObserver) {
         this.source.subscribe(new DoFinallyObserver(completableObserver, this.onFinally));
     }

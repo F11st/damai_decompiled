@@ -34,7 +34,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import org.apache.commons.lang3.StringUtils;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -333,7 +333,7 @@ public class FlutterLoader {
             if (Build.VERSION.SDK_INT >= 17) {
                 vsyncWaiter = VsyncWaiter.getInstance((DisplayManager) applicationContext.getSystemService("display"), this.flutterJNI);
             } else {
-                vsyncWaiter = VsyncWaiter.getInstance(((WindowManager) applicationContext.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getRefreshRate(), this.flutterJNI);
+                vsyncWaiter = VsyncWaiter.getInstance(((WindowManager) applicationContext.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay().getRefreshRate(), this.flutterJNI);
             }
             vsyncWaiter.init();
             this.initResultFuture = Executors.newSingleThreadExecutor().submit(new Callable<InitResult>() { // from class: io.flutter.embedding.engine.loader.FlutterLoader.1

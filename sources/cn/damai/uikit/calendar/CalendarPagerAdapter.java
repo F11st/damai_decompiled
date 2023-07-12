@@ -36,7 +36,7 @@ public abstract class CalendarPagerAdapter<V extends CalendarPagerView> extends 
     private WeekDayFormatter m = WeekDayFormatter.DEFAULT;
     private DayFormatter n = DayFormatter.DEFAULT;
     private List<DayViewDecorator> o = new ArrayList();
-    private List<C2492b> p = null;
+    private List<b> p = null;
     private boolean q = true;
     private final CalendarDay c = CalendarDay.today();
 
@@ -258,10 +258,10 @@ public abstract class CalendarPagerAdapter<V extends CalendarPagerView> extends 
         }
         this.p = new ArrayList();
         for (DayViewDecorator dayViewDecorator : this.o) {
-            C2490a c2490a = new C2490a();
-            dayViewDecorator.decorate(c2490a);
-            if (c2490a.o()) {
-                this.p.add(new C2492b(dayViewDecorator, c2490a));
+            a aVar = new a();
+            dayViewDecorator.decorate(aVar);
+            if (aVar.o()) {
+                this.p.add(new b(dayViewDecorator, aVar));
             }
         }
         Iterator<V> it = this.a.iterator();

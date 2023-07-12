@@ -84,7 +84,7 @@ public class DlnaDevTipsView extends PopupWindow {
             ipChange.ipc$dispatch("199805229", new Object[]{this, context, Boolean.valueOf(z)});
             return;
         }
-        View inflate = LayoutInflater.from(context).inflate(R.C7935layout.dago_dlna_dev_tips, (ViewGroup) null);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.dago_dlna_dev_tips, (ViewGroup) null);
         this.mText = (TextView) inflate.findViewById(R.id.dlna_dev_highlight);
         this.mKidTipView = (ImageView) inflate.findViewById(R.id.dlna_kid_tips);
         if (z) {

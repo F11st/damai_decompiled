@@ -11,14 +11,13 @@ public class tz2 {
     private Map<String, WXSDKInstance> a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.tz2$b */
     /* loaded from: classes5.dex */
-    private static class C9748b {
+    private static class b {
         private static final tz2 a = new tz2();
     }
 
     public static tz2 a() {
-        return C9748b.a;
+        return b.a;
     }
 
     public WXSDKInstance b(String str, Context context) {

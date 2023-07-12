@@ -10,30 +10,26 @@ import android.os.HandlerThread;
 import android.os.IBinder;
 import android.os.Looper;
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
-import com.uc.sandboxExport.InterfaceC7165h;
-import com.uc.sandboxExport.helper.C7167a;
-import com.uc.sandboxExport.helper.C7169c;
-import com.uc.sandboxExport.helper.C7173f;
+import com.uc.sandboxExport.h;
 import java.util.concurrent.Executor;
 import tb.jn1;
 
 /* compiled from: Taobao */
 @Api
 /* loaded from: classes11.dex */
-public class PreStartup implements InterfaceC7165h {
-    private static C7156c a;
-    private static C7155b[] b;
-    private static ServiceConnectionC7154a[] c;
+public class PreStartup implements h {
+    private static c a;
+    private static b[] b;
+    private static a[] c;
     private static boolean d;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.uc.sandboxExport.PreStartup$a */
     /* loaded from: classes11.dex */
-    public static class ServiceConnectionC7154a implements ServiceConnection {
+    public static class a implements ServiceConnection {
         private static Handler k;
         Context a;
-        C7157d b;
+        d b;
         Handler c;
         boolean d;
         ComponentName f;
@@ -41,13 +37,13 @@ public class PreStartup implements InterfaceC7165h {
         ServiceConnection h;
         final String i;
         int e = 0;
-        final Executor j = new ExecutorC7158a(this);
+        final Executor j = new com.uc.sandboxExport.a(this);
 
-        ServiceConnectionC7154a(Context context, C7157d c7157d) {
-            this.i = "sandbox.PreStartup." + InterfaceC7165h.C7166a.a(c7157d.a);
+        a(Context context, d dVar) {
+            this.i = "sandbox.PreStartup." + h.a.a(dVar.a);
             this.a = context;
-            this.b = c7157d;
-            this.c = PreStartup.a(c7157d.a);
+            this.b = dVar;
+            this.c = PreStartup.a(dVar.a);
         }
 
         private static String a(int i) {
@@ -75,7 +71,7 @@ public class PreStartup implements InterfaceC7165h {
         /* JADX INFO: Access modifiers changed from: private */
         public void c() {
             if (this.d) {
-                C7169c.a(this.i, "unbindService %s", this.f);
+                com.uc.sandboxExport.helper.c.a(this.i, "unbindService %s", this.f);
                 this.a.unbindService(this);
                 this.d = false;
             }
@@ -83,14 +79,14 @@ public class PreStartup implements InterfaceC7165h {
 
         @Override // android.content.ServiceConnection
         public final void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-            C7169c.a(4, this.i, "onServiceConnected", null);
-            this.c.post(new RunnableC7162e(this, iBinder));
+            com.uc.sandboxExport.helper.c.a(4, this.i, "onServiceConnected", null);
+            this.c.post(new e(this, iBinder));
         }
 
         @Override // android.content.ServiceConnection
         public final void onServiceDisconnected(ComponentName componentName) {
-            C7169c.a(4, this.i, "onServiceDisconnected", null);
-            this.c.post(new RunnableC7163f(this));
+            com.uc.sandboxExport.helper.c.a(4, this.i, "onServiceDisconnected", null);
+            this.c.post(new f(this));
         }
 
         public final String toString() {
@@ -98,7 +94,7 @@ public class PreStartup implements InterfaceC7165h {
         }
 
         private void b(int i) {
-            C7169c.a(this.i, "state changed: %s -> %s", a(this.e), a(i));
+            com.uc.sandboxExport.helper.c.a(this.i, "state changed: %s -> %s", a(this.e), a(i));
             this.e = i;
         }
 
@@ -108,18 +104,18 @@ public class PreStartup implements InterfaceC7165h {
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public static /* synthetic */ void a(ServiceConnectionC7154a serviceConnectionC7154a) {
-            if (serviceConnectionC7154a.e != 0) {
-                C7169c.a(5, serviceConnectionC7154a.i, "call ChildServiceConnection.start() again!", null);
+        public static /* synthetic */ void a(a aVar) {
+            if (aVar.e != 0) {
+                com.uc.sandboxExport.helper.c.a(5, aVar.i, "call ChildServiceConnection.start() again!", null);
                 return;
             }
-            serviceConnectionC7154a.f = new ComponentName(serviceConnectionC7154a.a.getPackageName(), serviceConnectionC7154a.b.b);
+            aVar.f = new ComponentName(aVar.a.getPackageName(), aVar.b.b);
             Intent intent = new Intent();
-            intent.setComponent(serviceConnectionC7154a.f);
-            serviceConnectionC7154a.b(1);
-            C7169c.a(serviceConnectionC7154a.i, "bindService %s...", serviceConnectionC7154a.f);
-            Context context = serviceConnectionC7154a.a;
-            Handler handler = serviceConnectionC7154a.c;
+            intent.setComponent(aVar.f);
+            aVar.b(1);
+            com.uc.sandboxExport.helper.c.a(aVar.i, "bindService %s...", aVar.f);
+            Context context = aVar.a;
+            Handler handler = aVar.c;
             if (Build.VERSION.SDK_INT >= 24) {
                 if (k == null) {
                     HandlerThread handlerThread = new HandlerThread("U4SvcBindHandler");
@@ -128,70 +124,69 @@ public class PreStartup implements InterfaceC7165h {
                 }
                 handler = k;
             }
-            boolean a = C7167a.a(context, intent, serviceConnectionC7154a, handler);
-            serviceConnectionC7154a.d = a;
+            boolean a = com.uc.sandboxExport.helper.a.a(context, intent, aVar, handler);
+            aVar.d = a;
             if (a) {
-                serviceConnectionC7154a.b(2);
+                aVar.b(2);
             } else {
-                serviceConnectionC7154a.b(3);
+                aVar.b(3);
             }
         }
 
         final void b() {
             if (Looper.myLooper() != this.c.getLooper()) {
-                this.c.post(new RunnableC7160c(this));
+                this.c.post(new com.uc.sandboxExport.c(this));
             } else {
                 c();
             }
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public static /* synthetic */ void c(ServiceConnectionC7154a serviceConnectionC7154a) {
-            C7169c.a(4, serviceConnectionC7154a.i, "onServiceDisconnectedOnLauncherThread", null);
-            serviceConnectionC7154a.b(5);
-            ServiceConnection serviceConnection = serviceConnectionC7154a.h;
+        public static /* synthetic */ void c(a aVar) {
+            com.uc.sandboxExport.helper.c.a(4, aVar.i, "onServiceDisconnectedOnLauncherThread", null);
+            aVar.b(5);
+            ServiceConnection serviceConnection = aVar.h;
             if (serviceConnection != null) {
-                serviceConnection.onServiceDisconnected(serviceConnectionC7154a.f);
+                serviceConnection.onServiceDisconnected(aVar.f);
             }
-            serviceConnectionC7154a.b();
+            aVar.b();
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public static /* synthetic */ void a(ServiceConnectionC7154a serviceConnectionC7154a, IBinder iBinder) {
-            C7169c.a(4, serviceConnectionC7154a.i, "onServiceConnectedOnLauncherThread", null);
-            serviceConnectionC7154a.g = iBinder;
-            serviceConnectionC7154a.b(4);
-            ServiceConnection serviceConnection = serviceConnectionC7154a.h;
+        public static /* synthetic */ void a(a aVar, IBinder iBinder) {
+            com.uc.sandboxExport.helper.c.a(4, aVar.i, "onServiceConnectedOnLauncherThread", null);
+            aVar.g = iBinder;
+            aVar.b(4);
+            ServiceConnection serviceConnection = aVar.h;
             if (serviceConnection != null) {
-                serviceConnection.onServiceConnected(serviceConnectionC7154a.f, serviceConnectionC7154a.g);
+                serviceConnection.onServiceConnected(aVar.f, aVar.g);
             }
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.uc.sandboxExport.PreStartup$b */
     /* loaded from: classes11.dex */
-    public static class C7155b {
+    public static class b {
         final Object a;
         final HandlerThread b;
         final Handler c;
 
-        C7155b(String str) {
+        b(String str) {
             Object obj = new Object();
             this.a = obj;
-            HandlerThreadC7164g handlerThreadC7164g = new HandlerThreadC7164g(this, str);
-            this.b = handlerThreadC7164g;
-            handlerThreadC7164g.start();
-            if (handlerThreadC7164g.getLooper() == null) {
+            g gVar = new g(this, str);
+            this.b = gVar;
+            gVar.start();
+            if (gVar.getLooper() == null) {
                 try {
                     synchronized (obj) {
-                        if (handlerThreadC7164g.getLooper() == null) {
+                        if (gVar.getLooper() == null) {
                             obj.wait(10000L);
                         }
                     }
                 } catch (Throwable th) {
-                    C7169c.a("sandbox.PreStartup", "mThread.getLooper() failed", th);
+                    com.uc.sandboxExport.helper.c.a("sandbox.PreStartup", "mThread.getLooper() failed", th);
                 }
             }
             this.c = new Handler(this.b.getLooper());
@@ -200,92 +195,90 @@ public class PreStartup implements InterfaceC7165h {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.uc.sandboxExport.PreStartup$c */
     /* loaded from: classes11.dex */
-    public static class C7156c {
-        boolean a = C7173f.a("ESUDLT");
+    public static class c {
+        boolean a = com.uc.sandboxExport.helper.f.a("ESUDLT");
 
-        C7156c() {
+        c() {
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:43:0x00c7, code lost:
-            com.uc.sandboxExport.helper.C7169c.b("sandbox.PreStartup", "No. %d proc id(%d) is invalid", java.lang.Integer.valueOf(r7), java.lang.Integer.valueOf(r9));
+            com.uc.sandboxExport.helper.c.b("sandbox.PreStartup", "No. %d proc id(%d) is invalid", java.lang.Integer.valueOf(r7), java.lang.Integer.valueOf(r9));
          */
         /* JADX WARN: Code restructure failed: missing block: B:44:0x00db, code lost:
-            com.uc.sandboxExport.helper.C7169c.b("sandbox.PreStartup", "No. %d proc id is empty", java.lang.Integer.valueOf(r7));
+            com.uc.sandboxExport.helper.c.b("sandbox.PreStartup", "No. %d proc id is empty", java.lang.Integer.valueOf(r7));
          */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        static com.uc.sandboxExport.PreStartup.C7157d[] a() {
+        static com.uc.sandboxExport.PreStartup.d[] a() {
             /*
                 Method dump skipped, instructions count: 249
                 To view this dump change 'Code comments level' option to 'DEBUG'
             */
-            throw new UnsupportedOperationException("Method not decompiled: com.uc.sandboxExport.PreStartup.C7156c.a():com.uc.sandboxExport.PreStartup$d[]");
+            throw new UnsupportedOperationException("Method not decompiled: com.uc.sandboxExport.PreStartup.c.a():com.uc.sandboxExport.PreStartup$d[]");
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.uc.sandboxExport.PreStartup$d */
     /* loaded from: classes11.dex */
-    public static class C7157d {
+    public static class d {
         int a;
         String b;
 
-        C7157d(int i, String str) {
+        d(int i, String str) {
             this.a = i;
             this.b = str;
         }
 
         public final String toString() {
-            return jn1.ARRAY_START_STR + InterfaceC7165h.C7166a.a(this.a) + AVFSCacheConstants.COMMA_SEP + this.b + jn1.ARRAY_END_STR;
+            return jn1.ARRAY_START_STR + h.a.a(this.a) + AVFSCacheConstants.COMMA_SEP + this.b + jn1.ARRAY_END_STR;
         }
     }
 
     static /* synthetic */ Handler a(int i) {
-        C7155b b2 = b(i);
+        b b2 = b(i);
         if (b2 == null) {
             return null;
         }
         return b2.c;
     }
 
-    private static C7155b b(int i) {
-        C7155b[] c7155bArr = b;
-        if (c7155bArr == null) {
+    private static b b(int i) {
+        b[] bVarArr = b;
+        if (bVarArr == null) {
             return null;
         }
         boolean z = a.a;
         if (!z) {
             i = 0;
         }
-        if (c7155bArr[i] == null) {
-            c7155bArr[i] = new C7155b(z ? i == 0 ? "U4_RNProcLauncherThread" : i == 1 ? "U4_RIProcLauncherThread" : "U4_GProcLauncherThread" : "U4_ProLauncherThread");
+        if (bVarArr[i] == null) {
+            bVarArr[i] = new b(z ? i == 0 ? "U4_RNProcLauncherThread" : i == 1 ? "U4_RIProcLauncherThread" : "U4_GProcLauncherThread" : "U4_ProLauncherThread");
         }
         return b[i];
     }
 
     public static int bind(int i, ServiceConnection serviceConnection) {
-        ServiceConnectionC7154a serviceConnectionC7154a;
+        a aVar;
         int i2;
         synchronized (PreStartup.class) {
-            ServiceConnectionC7154a[] serviceConnectionC7154aArr = c;
-            if (serviceConnectionC7154aArr == null || i < 0 || i >= serviceConnectionC7154aArr.length || (serviceConnectionC7154a = serviceConnectionC7154aArr[i]) == null || !serviceConnectionC7154a.a()) {
+            a[] aVarArr = c;
+            if (aVarArr == null || i < 0 || i >= aVarArr.length || (aVar = aVarArr[i]) == null || !aVar.a()) {
                 return -1;
             }
-            if (Looper.myLooper() == serviceConnectionC7154a.c.getLooper()) {
-                String str = serviceConnectionC7154a.i;
-                C7169c.a(4, str, "bindService " + serviceConnectionC7154a.f, null);
-                serviceConnectionC7154a.h = serviceConnection;
-                int i3 = serviceConnectionC7154a.e;
+            if (Looper.myLooper() == aVar.c.getLooper()) {
+                String str = aVar.i;
+                com.uc.sandboxExport.helper.c.a(4, str, "bindService " + aVar.f, null);
+                aVar.h = serviceConnection;
+                int i3 = aVar.e;
                 if (i3 == 3) {
                     i2 = 0;
                 } else {
                     if (i3 == 4) {
-                        serviceConnectionC7154a.c.post(new RunnableC7161d(serviceConnectionC7154a));
+                        aVar.c.post(new com.uc.sandboxExport.d(aVar));
                     }
                     i2 = 1;
                 }
@@ -298,21 +291,21 @@ public class PreStartup implements InterfaceC7165h {
     public static boolean connectionValid(int i) {
         synchronized (PreStartup.class) {
             d = true;
-            ServiceConnectionC7154a[] serviceConnectionC7154aArr = c;
-            if (serviceConnectionC7154aArr != null && i >= 0 && i < serviceConnectionC7154aArr.length) {
-                ServiceConnectionC7154a serviceConnectionC7154a = serviceConnectionC7154aArr[i];
-                if (serviceConnectionC7154a == null) {
+            a[] aVarArr = c;
+            if (aVarArr != null && i >= 0 && i < aVarArr.length) {
+                a aVar = aVarArr[i];
+                if (aVar == null) {
                     Object[] objArr = {Integer.valueOf(i)};
-                    String a2 = C7169c.a("Can't find connection for proc id %d", objArr);
-                    Throwable a3 = C7169c.a(objArr);
+                    String a2 = com.uc.sandboxExport.helper.c.a("Can't find connection for proc id %d", objArr);
+                    Throwable a3 = com.uc.sandboxExport.helper.c.a(objArr);
                     if (a3 != null) {
-                        C7169c.a(5, "sandbox.PreStartup", a2, a3);
+                        com.uc.sandboxExport.helper.c.a(5, "sandbox.PreStartup", a2, a3);
                     } else {
-                        C7169c.a(5, "sandbox.PreStartup", a2, null);
+                        com.uc.sandboxExport.helper.c.a(5, "sandbox.PreStartup", a2, null);
                     }
                 } else {
-                    C7169c.a("sandbox.PreStartup", "check connection: %s", serviceConnectionC7154a.toString());
-                    return serviceConnectionC7154a.a();
+                    com.uc.sandboxExport.helper.c.a("sandbox.PreStartup", "check connection: %s", aVar.toString());
+                    return aVar.a();
                 }
             }
             return false;
@@ -323,49 +316,49 @@ public class PreStartup implements InterfaceC7165h {
         HandlerThread handlerThread;
         synchronized (PreStartup.class) {
             d = true;
-            C7155b b2 = b(i);
+            b b2 = b(i);
             handlerThread = b2 == null ? null : b2.b;
         }
         return handlerThread;
     }
 
     public static void setContext(Context context) {
-        C7173f.a(context);
+        com.uc.sandboxExport.helper.f.a(context);
     }
 
     public static void setEnable(boolean z) {
-        if (C7173f.a() == null) {
+        if (com.uc.sandboxExport.helper.f.a() == null) {
             return;
         }
-        C7173f.a("enable", z);
+        com.uc.sandboxExport.helper.f.a("enable", z);
     }
 
     public static void startup() {
-        startup(C7173f.a());
+        startup(com.uc.sandboxExport.helper.f.a());
     }
 
     public static void unbind(int i) {
-        ServiceConnectionC7154a serviceConnectionC7154a;
+        a aVar;
         synchronized (PreStartup.class) {
-            ServiceConnectionC7154a[] serviceConnectionC7154aArr = c;
-            if (serviceConnectionC7154aArr != null && i >= 0 && i < serviceConnectionC7154aArr.length && (serviceConnectionC7154a = serviceConnectionC7154aArr[i]) != null) {
-                serviceConnectionC7154a.b();
+            a[] aVarArr = c;
+            if (aVarArr != null && i >= 0 && i < aVarArr.length && (aVar = aVarArr[i]) != null) {
+                aVar.b();
                 c[i] = null;
             }
         }
     }
 
     public static void updateSetting(int i, int[] iArr, String[] strArr, boolean z) {
-        if (C7173f.a() == null) {
+        if (com.uc.sandboxExport.helper.f.a() == null) {
             return;
         }
         setEnable(i > 0);
         synchronized (PreStartup.class) {
-            C7173f.a("ESUDLT", z);
+            com.uc.sandboxExport.helper.f.a("ESUDLT", z);
             if (i <= 0) {
-                C7173f.b("proc_ids", "");
-                C7173f.b("svc_names", "");
-                C7169c.a(4, "sandbox.PreStartup", "updateSetting: disable", null);
+                com.uc.sandboxExport.helper.f.b("proc_ids", "");
+                com.uc.sandboxExport.helper.f.b("svc_names", "");
+                com.uc.sandboxExport.helper.c.a(4, "sandbox.PreStartup", "updateSetting: disable", null);
             } else {
                 StringBuilder sb = new StringBuilder();
                 for (int i2 = 0; i2 < i; i2++) {
@@ -374,7 +367,7 @@ public class PreStartup implements InterfaceC7165h {
                 }
                 sb.setLength(sb.length() - 1);
                 String sb2 = sb.toString();
-                C7173f.b("proc_ids", sb2);
+                com.uc.sandboxExport.helper.f.b("proc_ids", sb2);
                 sb.setLength(0);
                 for (int i3 = 0; i3 < i; i3++) {
                     sb.append(strArr[i3]);
@@ -382,31 +375,31 @@ public class PreStartup implements InterfaceC7165h {
                 }
                 sb.setLength(sb.length() - 1);
                 String sb3 = sb.toString();
-                C7173f.b("svc_names", sb3);
-                C7169c.a("sandbox.PreStartup", "updateSetting: [%s][%s]", sb2, sb3);
+                com.uc.sandboxExport.helper.f.b("svc_names", sb3);
+                com.uc.sandboxExport.helper.c.a("sandbox.PreStartup", "updateSetting: [%s][%s]", sb2, sb3);
             }
         }
     }
 
     public static void updateSettingAndStopUnwantedService(int i, int[] iArr, String[] strArr, boolean z) {
         boolean z2;
-        if (C7173f.a() == null) {
+        if (com.uc.sandboxExport.helper.f.a() == null) {
             return;
         }
         updateSetting(i, iArr, strArr, z);
-        if (C7173f.a() != null) {
+        if (com.uc.sandboxExport.helper.f.a() != null) {
             synchronized (PreStartup.class) {
                 int i2 = 0;
                 if (i <= 0) {
                     if (c != null) {
                         while (true) {
-                            ServiceConnectionC7154a[] serviceConnectionC7154aArr = c;
-                            if (i2 >= serviceConnectionC7154aArr.length) {
+                            a[] aVarArr = c;
+                            if (i2 >= aVarArr.length) {
                                 break;
                             }
-                            ServiceConnectionC7154a serviceConnectionC7154a = serviceConnectionC7154aArr[i2];
-                            if (serviceConnectionC7154a != null) {
-                                serviceConnectionC7154a.b();
+                            a aVar = aVarArr[i2];
+                            if (aVar != null) {
+                                aVar.b();
                                 c[i2] = null;
                             }
                             i2++;
@@ -416,19 +409,19 @@ public class PreStartup implements InterfaceC7165h {
                 } else if (c != null) {
                     int i3 = 0;
                     while (true) {
-                        ServiceConnectionC7154a[] serviceConnectionC7154aArr2 = c;
-                        if (i3 >= serviceConnectionC7154aArr2.length) {
+                        a[] aVarArr2 = c;
+                        if (i3 >= aVarArr2.length) {
                             break;
                         }
-                        ServiceConnectionC7154a serviceConnectionC7154a2 = serviceConnectionC7154aArr2[i3];
-                        if (serviceConnectionC7154a2 != null) {
+                        a aVar2 = aVarArr2[i3];
+                        if (aVar2 != null) {
                             int length = iArr.length;
                             int i4 = 0;
                             while (true) {
                                 if (i4 >= length) {
                                     z2 = true;
                                     break;
-                                } else if (iArr[i4] == serviceConnectionC7154a2.b.a) {
+                                } else if (iArr[i4] == aVar2.b.a) {
                                     z2 = false;
                                     break;
                                 } else {
@@ -436,8 +429,8 @@ public class PreStartup implements InterfaceC7165h {
                                 }
                             }
                             if (z2) {
-                                C7169c.a(serviceConnectionC7154a2.i, "no need anymore - %s", serviceConnectionC7154a2.b);
-                                serviceConnectionC7154a2.b();
+                                com.uc.sandboxExport.helper.c.a(aVar2.i, "no need anymore - %s", aVar2.b);
+                                aVar2.b();
                                 c[i3] = null;
                             }
                         }
@@ -450,15 +443,15 @@ public class PreStartup implements InterfaceC7165h {
 
     public static void startup(Context context) {
         String b2;
-        if (context == null || (b2 = C7173f.b(context)) == null || b2.length() == 0 || b2.contains(":")) {
+        if (context == null || (b2 = com.uc.sandboxExport.helper.f.b(context)) == null || b2.length() == 0 || b2.contains(":")) {
             return;
         }
         synchronized (PreStartup.class) {
             Context context2 = null;
             if (d) {
-                C7169c.a(5, "sandbox.PreStartup", "U4 core is running, ignore startup", null);
+                com.uc.sandboxExport.helper.c.a(5, "sandbox.PreStartup", "U4 core is running, ignore startup", null);
             } else if (a == null) {
-                C7173f.a(context);
+                com.uc.sandboxExport.helper.f.a(context);
                 try {
                     context2 = context.getApplicationContext();
                 } catch (Throwable unused) {
@@ -466,16 +459,16 @@ public class PreStartup implements InterfaceC7165h {
                 if (context2 != null) {
                     context = context2;
                 }
-                a = new C7156c();
-                C7157d[] a2 = C7156c.a();
+                a = new c();
+                d[] a2 = c.a();
                 if (a2 != null) {
-                    b = new C7155b[3];
-                    c = new ServiceConnectionC7154a[3];
-                    for (C7157d c7157d : a2) {
-                        if (c7157d != null) {
-                            ServiceConnectionC7154a serviceConnectionC7154a = new ServiceConnectionC7154a(context, c7157d);
-                            c[c7157d.a] = serviceConnectionC7154a;
-                            serviceConnectionC7154a.c.post(new RunnableC7159b(serviceConnectionC7154a));
+                    b = new b[3];
+                    c = new a[3];
+                    for (d dVar : a2) {
+                        if (dVar != null) {
+                            a aVar = new a(context, dVar);
+                            c[dVar.a] = aVar;
+                            aVar.c.post(new com.uc.sandboxExport.b(aVar));
                         }
                     }
                 }

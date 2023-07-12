@@ -3,11 +3,6 @@ package tb;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
-import kotlin.collections.C8201d0;
-import kotlin.collections.C8203e0;
-import kotlin.collections.C8214m;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.resolve.descriptorUtil.DescriptorUtilsKt;
 import org.jetbrains.annotations.NotNull;
@@ -22,11 +17,11 @@ public final class p51 {
     private p51() {
     }
 
-    public static /* synthetic */ ClassDescriptor h(p51 p51Var, hp0 hp0Var, AbstractC8271b abstractC8271b, Integer num, int i, Object obj) {
+    public static /* synthetic */ ClassDescriptor h(p51 p51Var, hp0 hp0Var, kotlin.reflect.jvm.internal.impl.builtins.b bVar, Integer num, int i, Object obj) {
         if ((i & 4) != 0) {
             num = null;
         }
-        return p51Var.g(hp0Var, abstractC8271b, num);
+        return p51Var.g(hp0Var, bVar, num);
     }
 
     @NotNull
@@ -76,36 +71,36 @@ public final class p51 {
     }
 
     @Nullable
-    public final ClassDescriptor g(@NotNull hp0 hp0Var, @NotNull AbstractC8271b abstractC8271b, @Nullable Integer num) {
+    public final ClassDescriptor g(@NotNull hp0 hp0Var, @NotNull kotlin.reflect.jvm.internal.impl.builtins.b bVar, @Nullable Integer num) {
         b41.i(hp0Var, "fqName");
-        b41.i(abstractC8271b, "builtIns");
-        hj n = (num == null || !b41.d(hp0Var, o51.INSTANCE.i())) ? o51.INSTANCE.n(hp0Var) : C8277c.a(num.intValue());
+        b41.i(bVar, "builtIns");
+        hj n = (num == null || !b41.d(hp0Var, o51.INSTANCE.i())) ? o51.INSTANCE.n(hp0Var) : kotlin.reflect.jvm.internal.impl.builtins.c.a(num.intValue());
         if (n != null) {
-            return abstractC8271b.o(n.b());
+            return bVar.o(n.b());
         }
         return null;
     }
 
     @NotNull
-    public final Collection<ClassDescriptor> i(@NotNull hp0 hp0Var, @NotNull AbstractC8271b abstractC8271b) {
+    public final Collection<ClassDescriptor> i(@NotNull hp0 hp0Var, @NotNull kotlin.reflect.jvm.internal.impl.builtins.b bVar) {
         List j;
         Set c;
         Set d;
         b41.i(hp0Var, "fqName");
-        b41.i(abstractC8271b, "builtIns");
-        ClassDescriptor h = h(this, hp0Var, abstractC8271b, null, 4, null);
+        b41.i(bVar, "builtIns");
+        ClassDescriptor h = h(this, hp0Var, bVar, null, 4, null);
         if (h == null) {
-            d = C8203e0.d();
+            d = kotlin.collections.e0.d();
             return d;
         }
         hp0 q = o51.INSTANCE.q(DescriptorUtilsKt.j(h));
         if (q == null) {
-            c = C8201d0.c(h);
+            c = kotlin.collections.d0.c(h);
             return c;
         }
-        ClassDescriptor o = abstractC8271b.o(q);
+        ClassDescriptor o = bVar.o(q);
         b41.h(o, "builtIns.getBuiltInClass…otlinMutableAnalogFqName)");
-        j = C8214m.j(h, o);
+        j = kotlin.collections.m.j(h, o);
         return j;
     }
 }

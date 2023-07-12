@@ -13,7 +13,7 @@ public class PopRequest {
     private final String c;
     private View d;
     private View e;
-    private C3655a f;
+    private a f;
     private Object g;
     private PopRequestStatusCallBack h;
     public WeakReference<View> i;
@@ -46,7 +46,7 @@ public class PopRequest {
         this.c = str;
         this.h = popRequestStatusCallBack;
         k(activity);
-        p(new C3655a(i2, z, z2, z3));
+        p(new a(i2, z, z2, z3));
     }
 
     public Activity a() {
@@ -77,7 +77,7 @@ public class PopRequest {
         return (View) fw2.c(this.i);
     }
 
-    public C3655a h() {
+    public a h() {
         return this.f;
     }
 
@@ -110,8 +110,8 @@ public class PopRequest {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public void p(C3655a c3655a) {
-        this.f = c3655a;
+    public void p(a aVar) {
+        this.f = aVar;
     }
 
     public void q(Status status) {
@@ -120,22 +120,21 @@ public class PopRequest {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayer.layermanager.PopRequest$a */
     /* loaded from: classes8.dex */
-    public static class C3655a {
+    public static class a {
         public int a;
         public boolean b;
         public boolean c;
         public boolean d;
 
-        public C3655a(int i, boolean z, boolean z2, boolean z3) {
+        public a(int i, boolean z, boolean z2, boolean z3) {
             this.a = i;
             this.b = z;
             this.c = z2;
             this.d = z3;
         }
 
-        public C3655a() {
+        public a() {
         }
     }
 }

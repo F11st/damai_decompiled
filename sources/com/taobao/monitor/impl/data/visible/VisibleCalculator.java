@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewConfiguration;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import com.taobao.application.common.IPageListener;
-import com.taobao.application.common.impl.C6674a;
+import com.taobao.application.common.impl.a;
 import com.taobao.monitor.impl.data.IExecutor;
 import com.taobao.monitor.impl.data.PageLoadCalculate;
 import com.taobao.monitor.impl.trace.IDispatcher;
@@ -19,7 +19,7 @@ import com.taobao.monitor.impl.trace.RenderDispatcher;
 import com.taobao.monitor.impl.trace.WindowEventDispatcher;
 import com.youku.arch.v3.event.Subject;
 import java.lang.ref.WeakReference;
-import tb.C8934b0;
+import tb.b0;
 import tb.ca0;
 import tb.e30;
 import tb.fu0;
@@ -60,7 +60,7 @@ public class VisibleCalculator implements PageLoadCalculate.IPageLoadPercent, Wi
     private int lastPageRenderError = 1;
 
     public VisibleCalculator(pp1 pp1Var) {
-        IPageListener e = C6674a.g().e();
+        IPageListener e = a.g().e();
         this.pageListener = e;
         this.timeoutRunnable = new Runnable() { // from class: com.taobao.monitor.impl.data.visible.VisibleCalculator.1
             @Override // java.lang.Runnable
@@ -187,11 +187,11 @@ public class VisibleCalculator implements PageLoadCalculate.IPageLoadPercent, Wi
     }
 
     protected void initDispatcher() {
-        IDispatcher a = C8934b0.a(C8934b0.PAGE_RENDER_DISPATCHER);
+        IDispatcher a = b0.a(b0.PAGE_RENDER_DISPATCHER);
         if (a instanceof RenderDispatcher) {
             this.usableVisibleDispatcher = (RenderDispatcher) a;
         }
-        IDispatcher b = ca0.b(C8934b0.WINDOW_EVENT_DISPATCHER);
+        IDispatcher b = ca0.b(b0.WINDOW_EVENT_DISPATCHER);
         if (b instanceof WindowEventDispatcher) {
             WindowEventDispatcher windowEventDispatcher = (WindowEventDispatcher) b;
             this.windowEventDispatcher = windowEventDispatcher;

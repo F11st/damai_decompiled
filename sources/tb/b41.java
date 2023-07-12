@@ -11,10 +11,9 @@ public class b41 {
 
     /* compiled from: Taobao */
     @SinceKotlin(version = "1.4")
-    /* renamed from: tb.b41$a */
     /* loaded from: classes3.dex */
-    public static class C8949a {
-        private C8949a() {
+    public static class a {
+        private a() {
         }
     }
 

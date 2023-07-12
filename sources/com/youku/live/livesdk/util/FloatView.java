@@ -10,7 +10,7 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -43,7 +43,7 @@ public class FloatView extends LinearLayout {
             ipChange.ipc$dispatch("172589729", new Object[]{this, view, Integer.valueOf(i), Integer.valueOf(i2)});
             return;
         }
-        this.wm = (WindowManager) getContext().getSystemService(C9796v.ATTACH_MODE_WINDOW);
+        this.wm = (WindowManager) getContext().getSystemService(v.ATTACH_MODE_WINDOW);
         WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
         this.wmParams = layoutParams;
         if (Build.VERSION.SDK_INT >= 26) {

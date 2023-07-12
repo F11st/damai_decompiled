@@ -49,31 +49,29 @@ public final class CouponInfoPresent extends AbsPresenter<GenericItem<ItemValue>
     public static final String CHANGE_BAR_EVENT = "EventBus://business/BannerStatus";
     public static final int COUPON_TOP_BANNER_TYPE = 7521;
     @NotNull
-    public static final C3498a Companion = new C3498a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String NO_BANNER = "-1";
     @NotNull
     private String currentBannerStatus;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.scriptcoupon.CouponInfoPresent$a */
     /* loaded from: classes7.dex */
-    public static final class C3498a {
-        private C3498a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3498a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.scriptcoupon.CouponInfoPresent$b */
     /* loaded from: classes7.dex */
-    public static final class C3499b implements CouponInfoViewHolder.OnScriptCouponInfoListener {
+    public static final class b implements CouponInfoViewHolder.OnScriptCouponInfoListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3499b() {
+        b() {
         }
 
         @Override // com.alibaba.pictures.bricks.component.scriptcoupon.CouponInfoViewHolder.OnScriptCouponInfoListener
@@ -274,7 +272,7 @@ public final class CouponInfoPresent extends AbsPresenter<GenericItem<ItemValue>
                 }
             });
         }
-        viewHolder.d(new C3499b());
+        viewHolder.d(new b());
         viewHolder.b(((CouponInfoModel) getModel()).getValue());
         HashMap hashMap2 = new HashMap();
         hashMap2.put("value", ((CouponInfoModel) getModel()).getValue());

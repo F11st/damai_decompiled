@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeSource;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.SequentialDisposable;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
@@ -16,7 +16,7 @@ import org.reactivestreams.Subscription;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeConcatArray<T> extends AbstractC8147b<T> {
+public final class MaybeConcatArray<T> extends b<T> {
     final MaybeSource<? extends T>[] sources;
 
     /* compiled from: Taobao */
@@ -118,7 +118,7 @@ public final class MaybeConcatArray<T> extends AbstractC8147b<T> {
         this.sources = maybeSourceArr;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         ConcatMaybeObserver concatMaybeObserver = new ConcatMaybeObserver(subscriber, this.sources);
         subscriber.onSubscribe(concatMaybeObserver);

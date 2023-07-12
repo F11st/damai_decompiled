@@ -1,7 +1,6 @@
 package com.xiaomi.push;
 
 import android.content.Context;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import java.lang.reflect.Method;
 
 /* compiled from: Taobao */
@@ -38,14 +37,14 @@ class ay implements au {
             }
             return null;
         } catch (Exception e) {
-            AbstractC7535b.a("miui invoke error", e);
+            com.xiaomi.channel.commonutils.logger.b.a("miui invoke error", e);
             return null;
         }
     }
 
     private void a(Context context) {
         try {
-            Class<?> a = C7786v.a(context, "com.android.id.impl.IdProviderImpl");
+            Class<?> a = v.a(context, "com.android.id.impl.IdProviderImpl");
             this.f115a = a;
             this.f116a = a.newInstance();
             this.f117a = this.f115a.getMethod("getUDID", Context.class);
@@ -53,7 +52,7 @@ class ay implements au {
             this.c = this.f115a.getMethod("getVAID", Context.class);
             this.d = this.f115a.getMethod("getAAID", Context.class);
         } catch (Exception e) {
-            AbstractC7535b.a("miui load class error", e);
+            com.xiaomi.channel.commonutils.logger.b.a("miui load class error", e);
         }
     }
 

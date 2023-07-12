@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.b;
 import io.reactivex.functions.BiPredicate;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.fuseable.ConditionalSubscriber;
@@ -179,13 +179,13 @@ public final class FlowableDistinctUntilChanged<T, K> extends AbstractFlowableWi
         }
     }
 
-    public FlowableDistinctUntilChanged(AbstractC8147b<T> abstractC8147b, Function<? super T, K> function, BiPredicate<? super K, ? super K> biPredicate) {
-        super(abstractC8147b);
+    public FlowableDistinctUntilChanged(b<T> bVar, Function<? super T, K> function, BiPredicate<? super K, ? super K> biPredicate) {
+        super(bVar);
         this.keySelector = function;
         this.comparer = biPredicate;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         if (subscriber instanceof ConditionalSubscriber) {
             this.source.subscribe((FlowableSubscriber) new DistinctUntilChangedConditionalSubscriber((ConditionalSubscriber) subscriber, this.keySelector, this.comparer));

@@ -35,9 +35,8 @@ public class HttpDispatcher {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.strategy.dispatch.HttpDispatcher$b */
     /* loaded from: classes.dex */
-    public static class C0230b {
+    public static class b {
         static HttpDispatcher a = new HttpDispatcher();
     }
 
@@ -52,7 +51,7 @@ public class HttpDispatcher {
     }
 
     public static HttpDispatcher f() {
-        return C0230b.a;
+        return b.a;
     }
 
     public synchronized void a(List<String> list) {

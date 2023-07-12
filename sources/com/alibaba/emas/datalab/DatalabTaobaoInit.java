@@ -22,7 +22,7 @@ public class DatalabTaobaoInit implements Serializable {
             }
             try {
                 Log.e(tag, ">>>>>>> init start >>>>>>>>");
-                C3318a b = C3318a.b();
+                a b = a.b();
                 b.c(application, valueOf + "@android");
                 Log.e(tag, ">>>>>>> init success >>>>>>>>");
             } catch (Exception e) {

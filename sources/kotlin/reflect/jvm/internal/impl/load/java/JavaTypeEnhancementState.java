@@ -11,7 +11,7 @@ import tb.k51;
 /* loaded from: classes3.dex */
 public final class JavaTypeEnhancementState {
     @NotNull
-    public static final C8330a Companion = new C8330a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final JavaTypeEnhancementState d = new JavaTypeEnhancementState(k51.b(null, 1, null), JavaTypeEnhancementState$Companion$DEFAULT$1.INSTANCE);
     @NotNull
@@ -21,13 +21,12 @@ public final class JavaTypeEnhancementState {
     private final boolean c;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.JavaTypeEnhancementState$a */
     /* loaded from: classes3.dex */
-    public static final class C8330a {
-        private C8330a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8330a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

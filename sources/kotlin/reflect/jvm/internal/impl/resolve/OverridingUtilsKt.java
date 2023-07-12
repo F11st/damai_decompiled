@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.resolve;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import java.util.Collection;
 import java.util.LinkedList;
-import kotlin.collections.C8212k;
+import kotlin.collections.k;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
 import org.jetbrains.annotations.NotNull;
@@ -25,7 +25,7 @@ public final class OverridingUtilsKt {
         LinkedList linkedList = new LinkedList(collection);
         yd2 a = yd2.Companion.a();
         while (!linkedList.isEmpty()) {
-            Object P = C8212k.P(linkedList);
+            Object P = k.P(linkedList);
             final yd2 a2 = yd2.Companion.a();
             Collection<? super H> q = OverridingUtil.q(P, linkedList, function1, new Function1<H, wt2>() { // from class: kotlin.reflect.jvm.internal.impl.resolve.OverridingUtilsKt$selectMostSpecificInEachOverridableGroup$overridableGroup$1
                 /* JADX INFO: Access modifiers changed from: package-private */
@@ -50,7 +50,7 @@ public final class OverridingUtilsKt {
             });
             b41.h(q, "val conflictedHandles = …nflictedHandles.add(it) }");
             if (q.size() == 1 && a2.isEmpty()) {
-                Object p0 = C8212k.p0(q);
+                Object p0 = k.p0(q);
                 b41.h(p0, "overridableGroup.single()");
                 a.add(p0);
             } else {

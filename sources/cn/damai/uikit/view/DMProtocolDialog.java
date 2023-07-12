@@ -22,7 +22,7 @@ import cn.damai.uikit.R$id;
 import cn.damai.uikit.R$layout;
 import cn.damai.uikit.R$style;
 import cn.damai.uikit.view.DMProtocolDialog;
-import com.alipay.sdk.m.u.C4318n;
+import com.alipay.sdk.m.u.n;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
@@ -70,12 +70,11 @@ public class DMProtocolDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.DMProtocolDialog$a */
     /* loaded from: classes8.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC2572a implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class a implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC2572a() {
+        a() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -92,12 +91,11 @@ public class DMProtocolDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.DMProtocolDialog$b */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC2573b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2573b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -113,12 +111,11 @@ public class DMProtocolDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.DMProtocolDialog$c */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC2574c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2574c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -134,12 +131,11 @@ public class DMProtocolDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.DMProtocolDialog$d */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC2575d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2575d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -155,12 +151,11 @@ public class DMProtocolDialog extends Dialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.DMProtocolDialog$e */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC2576e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2576e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -204,33 +199,33 @@ public class DMProtocolDialog extends Dialog {
         }
         View inflate = getLayoutInflater().inflate(R$layout.damai_protocol_dialog, (ViewGroup) null);
         MaxHeightLinearLayout maxHeightLinearLayout = (MaxHeightLinearLayout) inflate.findViewById(R$id.damai_protocol_dialog_layout);
-        int c = yr2.c(getContext(), maxHeightLinearLayout.getMaxHeight(), 50, C4318n.g, GridBean.TYPE_PIC_URL);
+        int c2 = yr2.c(getContext(), maxHeightLinearLayout.getMaxHeight(), 50, n.g, GridBean.TYPE_PIC_URL);
         this.a = (ImageView) inflate.findViewById(R$id.iv_background);
-        int i = (c * C4318n.g) / GridBean.TYPE_PIC_URL;
+        int i = (c2 * n.g) / GridBean.TYPE_PIC_URL;
         FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) maxHeightLinearLayout.getLayoutParams();
         RelativeLayout.LayoutParams layoutParams2 = (RelativeLayout.LayoutParams) this.a.getLayoutParams();
-        layoutParams.width = c;
+        layoutParams.width = c2;
         layoutParams.height = i;
-        layoutParams2.width = c;
+        layoutParams2.width = c2;
         layoutParams2.height = i;
         this.a.setLayoutParams(layoutParams2);
         maxHeightLinearLayout.setLayoutParams(layoutParams);
         FrameLayout frameLayout = (FrameLayout) inflate.findViewById(R$id.fl_cancel_btn);
         this.h = frameLayout;
         RelativeLayout.LayoutParams layoutParams3 = (RelativeLayout.LayoutParams) frameLayout.getLayoutParams();
-        double d = i;
-        double d2 = 0.1087d * d;
-        layoutParams3.height = Double.valueOf(d2).intValue();
+        double d2 = i;
+        double d3 = 0.1087d * d2;
+        layoutParams3.height = Double.valueOf(d3).intValue();
         this.h.setLayoutParams(layoutParams3);
         FrameLayout frameLayout2 = (FrameLayout) inflate.findViewById(R$id.fl_ok_btn);
         this.g = frameLayout2;
         RelativeLayout.LayoutParams layoutParams4 = (RelativeLayout.LayoutParams) frameLayout2.getLayoutParams();
-        layoutParams4.height = Double.valueOf(d2).intValue();
+        layoutParams4.height = Double.valueOf(d3).intValue();
         this.g.setLayoutParams(layoutParams4);
         LinearLayout linearLayout = (LinearLayout) inflate.findViewById(R$id.ll_text_content);
         this.b = linearLayout;
         RelativeLayout.LayoutParams layoutParams5 = (RelativeLayout.LayoutParams) linearLayout.getLayoutParams();
-        layoutParams5.height = Double.valueOf(d * 0.2174d).intValue();
+        layoutParams5.height = Double.valueOf(d2 * 0.2174d).intValue();
         this.b.setLayoutParams(layoutParams5);
         this.c = (DMProtocolDialogTextItemView) inflate.findViewById(R$id.tips1);
         this.d = (DMProtocolDialogTextItemView) inflate.findViewById(R$id.tips2);
@@ -328,7 +323,7 @@ public class DMProtocolDialog extends Dialog {
         this.e.setData(ya0Var3.a(), ya0Var3.b(), ya0Var3.f(), ya0Var3.e(), ya0Var3.c(), ya0Var3.d());
         ya0 ya0Var4 = (ya0) arrayList.get(3);
         this.f.setData(ya0Var4.a(), ya0Var4.b(), ya0Var4.f(), ya0Var4.e(), ya0Var4.c(), ya0Var4.d());
-        this.b.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC2572a());
+        this.b.getViewTreeObserver().addOnGlobalLayoutListener(new a());
         return this;
     }
 
@@ -375,16 +370,16 @@ public class DMProtocolDialog extends Dialog {
             });
         }
         if (this.c.getIsCheck() != null) {
-            this.c.setProtocolClick(new View$OnClickListenerC2573b());
+            this.c.setProtocolClick(new b());
         }
         if (this.d.getIsCheck() != null) {
-            this.d.setProtocolClick(new View$OnClickListenerC2574c());
+            this.d.setProtocolClick(new c());
         }
         if (this.e.getIsCheck() != null) {
-            this.e.setProtocolClick(new View$OnClickListenerC2575d());
+            this.e.setProtocolClick(new d());
         }
         if (this.f.getIsCheck() != null) {
-            this.f.setProtocolClick(new View$OnClickListenerC2576e());
+            this.f.setProtocolClick(new e());
         }
         return this;
     }

@@ -28,13 +28,12 @@ public class nk1 extends BaseOauthServiceProviderImpl {
     Activity b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.nk1$a */
     /* loaded from: classes5.dex */
-    public static class C9475a implements WbAuthListener {
+    public static class a implements WbAuthListener {
         private static transient /* synthetic */ IpChange $ipChange;
         OauthCallback a;
 
-        public C9475a(OauthCallback oauthCallback) {
+        public a(OauthCallback oauthCallback) {
             this.a = oauthCallback;
         }
 
@@ -120,7 +119,7 @@ public class nk1 extends BaseOauthServiceProviderImpl {
                 IWBAPI createWBAPI = WBAPIFactory.createWBAPI(activity);
                 this.a = createWBAPI;
                 createWBAPI.registerApp(activity, authInfo);
-                this.a.authorize(activity, new C9475a(oauthCallback));
+                this.a.authorize(activity, new a(oauthCallback));
             } catch (Throwable th) {
                 th.printStackTrace();
             }

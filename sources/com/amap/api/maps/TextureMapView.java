@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import com.amap.api.mapcore.util.C4640t;
+import com.amap.api.mapcore.util.t;
 import com.autonavi.amap.mapcore.interfaces.IAMap;
 import com.autonavi.amap.mapcore.interfaces.IMapFragmentDelegate;
 
@@ -39,7 +39,7 @@ public class TextureMapView extends FrameLayout implements BaseMapView {
 
     protected IMapFragmentDelegate getMapFragmentDelegate() {
         if (this.a == null) {
-            this.a = new C4640t(1);
+            this.a = new t(1);
         }
         return this.a;
     }

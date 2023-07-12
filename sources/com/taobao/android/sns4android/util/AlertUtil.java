@@ -16,10 +16,9 @@ import com.taobao.android.sns4android.R;
 public class AlertUtil {
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.util.AlertUtil$a */
     /* loaded from: classes12.dex */
-    static class DialogInterface$OnClickListenerC6627a implements DialogInterface.OnClickListener {
-        DialogInterface$OnClickListenerC6627a() {
+    static class a implements DialogInterface.OnClickListener {
+        a() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -28,7 +27,7 @@ public class AlertUtil {
     }
 
     public static void alertConfirm(Context context, AlertModel alertModel, IDialogHelper iDialogHelper) {
-        View inflate = LayoutInflater.from(context).inflate(R.C6590layout.aliuser_alert_confirm_dialog, (ViewGroup) null);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.aliuser_alert_confirm_dialog, (ViewGroup) null);
         TextView textView = (TextView) inflate.findViewById(R.id.dialog_title);
         TextView textView2 = (TextView) inflate.findViewById(R.id.dialog_content);
         if (!TextUtils.isEmpty(alertModel.title)) {
@@ -38,6 +37,6 @@ public class AlertUtil {
         if (str != null) {
             textView2.setText(str);
         }
-        iDialogHelper.alert((Activity) context, "", inflate, context.getString(R.string.aliuser_i_know), new DialogInterface$OnClickListenerC6627a(), null, null, Boolean.FALSE, null);
+        iDialogHelper.alert((Activity) context, "", inflate, context.getString(R.string.aliuser_i_know), new a(), null, null, Boolean.FALSE, null);
     }
 }

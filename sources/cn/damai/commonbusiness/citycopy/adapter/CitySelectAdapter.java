@@ -35,7 +35,7 @@ public class CitySelectAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     private int d;
     private int e;
     private String f;
-    private View.OnClickListener g = new View$OnClickListenerC0610a();
+    private View.OnClickListener g = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes4.dex */
@@ -75,13 +75,12 @@ public class CitySelectAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         private FlowLayout a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.commonbusiness.citycopy.adapter.CitySelectAdapter$HotViewHolder$a */
         /* loaded from: classes14.dex */
-        public class View$OnClickListenerC0609a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ HotCityBean a;
 
-            View$OnClickListenerC0609a(HotCityBean hotCityBean) {
+            a(HotCityBean hotCityBean) {
                 this.a = hotCityBean;
             }
 
@@ -109,12 +108,12 @@ public class CitySelectAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
                 ipChange.ipc$dispatch("-66195741", new Object[]{this, bjVar});
                 return;
             }
-            List<HotCityBean> a = bjVar.a();
-            int c = bb2.c(a);
+            List<HotCityBean> a2 = bjVar.a();
+            int c = bb2.c(a2);
             this.a.removeAllViews();
             if (c > 0) {
                 for (int i = 0; i < c; i++) {
-                    HotCityBean hotCityBean = a.get(i);
+                    HotCityBean hotCityBean = a2.get(i);
                     if (hotCityBean != null) {
                         View inflate = LayoutInflater.from(CitySelectAdapter.this.b).inflate(R$layout.copy_layout_select_city_hot_list_item, (ViewGroup) null);
                         TextView textView = (TextView) inflate.findViewById(R$id.select_city_hot_list_item);
@@ -133,7 +132,7 @@ public class CitySelectAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
                             textView.setTextColor(Color.parseColor("#000000"));
                         }
                         textView.setText(hotCityBean.getCityName());
-                        inflate.setOnClickListener(new View$OnClickListenerC0609a(hotCityBean));
+                        inflate.setOnClickListener(new a(hotCityBean));
                         this.a.addView(inflate);
                     }
                 }
@@ -189,12 +188,11 @@ public class CitySelectAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.citycopy.adapter.CitySelectAdapter$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0610a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0610a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener

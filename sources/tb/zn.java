@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.discover.content.bean.ContentDetail;
 import cn.damai.homepage.R$drawable;
@@ -39,19 +38,18 @@ public class zn extends cp2<ContentDetail> {
     private int p;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.zn$a */
     /* loaded from: classes5.dex */
-    public class C10029a implements DMImageCreator.DMImageFailListener {
+    public class a implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C10029a() {
+        a() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1696460249")) {
-                ipChange.ipc$dispatch("1696460249", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("1696460249", new Object[]{this, dVar});
             } else {
                 zn.this.d.setImageResource(R$drawable.uikit_default_image_bg_grey);
             }
@@ -59,31 +57,30 @@ public class zn extends cp2<ContentDetail> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.zn$b */
     /* loaded from: classes5.dex */
-    public class C10030b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C10030b() {
+        b() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1736726702")) {
-                ipChange.ipc$dispatch("1736726702", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("1736726702", new Object[]{this, eVar});
                 return;
             }
-            Bitmap bitmap = c0502e.b;
+            Bitmap bitmap = eVar.b;
             if (bitmap != null) {
                 int f = zn.this.f((bitmap.getWidth() * 1.0f) / bitmap.getHeight());
                 ViewGroup.LayoutParams layoutParams = zn.this.d.getLayoutParams();
                 layoutParams.height = f;
                 zn.this.d.setLayoutParams(layoutParams);
-                zn.this.d.setImageDrawable(c0502e.a);
+                zn.this.d.setImageDrawable(eVar.a);
                 return;
             }
-            Drawable drawable = c0502e.a;
+            Drawable drawable = eVar.a;
             if (drawable != null) {
                 int f2 = zn.this.f((drawable.getIntrinsicWidth() * 1.0f) / drawable.getIntrinsicHeight());
                 ViewGroup.LayoutParams layoutParams2 = zn.this.d.getLayoutParams();
@@ -161,9 +158,9 @@ public class zn extends cp2<ContentDetail> {
                     ViewGroup.LayoutParams layoutParams = this.d.getLayoutParams();
                     layoutParams.height = f;
                     this.d.setLayoutParams(layoutParams);
-                    C0504a.b().c(coverImage2.url).g(this.d);
+                    cn.damai.common.image.a.b().c(coverImage2.url).g(this.d);
                 } else {
-                    C0504a.b().c(coverImage2.url).n(new C10030b()).e(new C10029a()).f();
+                    cn.damai.common.image.a.b().c(coverImage2.url).n(new b()).e(new a()).f();
                 }
             }
             if (TextUtils.isEmpty(contentDetail.relateTitle)) {
@@ -197,7 +194,7 @@ public class zn extends cp2<ContentDetail> {
                     this.i.setVisibility(8);
                 }
                 if (!wh2.j(fromInfo2.headImg)) {
-                    C0504a.b().c(fromInfo2.headImg).g(this.h);
+                    cn.damai.common.image.a.b().c(fromInfo2.headImg).g(this.h);
                     this.h.setVisibility(0);
                 } else {
                     this.h.setVisibility(8);

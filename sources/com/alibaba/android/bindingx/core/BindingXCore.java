@@ -5,13 +5,8 @@ import android.text.TextUtils;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
-import com.alibaba.android.bindingx.core.internal.C3211b;
-import com.alibaba.android.bindingx.core.internal.C3215e;
-import com.alibaba.android.bindingx.core.internal.C3216f;
-import com.alibaba.android.bindingx.core.internal.C3227o;
-import com.alibaba.android.bindingx.core.internal.GestureDetector$OnGestureListenerC3217g;
-import com.alibaba.android.bindingx.core.internal.ScaleGestureDetector$OnScaleGestureListenerC3213c;
-import com.alibaba.android.bindingx.core.internal.View$OnTouchListenerC3214d;
+import com.alibaba.android.bindingx.core.internal.g;
+import com.alibaba.android.bindingx.core.internal.o;
 import com.taobao.weex.bridge.WXBridgeManager;
 import java.util.HashMap;
 import java.util.List;
@@ -43,97 +38,91 @@ public class BindingXCore implements IHandlerCleanable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.BindingXCore$a */
     /* loaded from: classes5.dex */
-    class C3144a implements ObjectCreator<IEventHandler, Context, PlatformManager> {
-        C3144a(BindingXCore bindingXCore) {
+    class a implements ObjectCreator<IEventHandler, Context, PlatformManager> {
+        a(BindingXCore bindingXCore) {
         }
 
         @Override // com.alibaba.android.bindingx.core.BindingXCore.ObjectCreator
         /* renamed from: a */
         public IEventHandler createWith(@NonNull Context context, @NonNull PlatformManager platformManager, Object... objArr) {
-            return new GestureDetector$OnGestureListenerC3217g(context, platformManager, objArr);
+            return new g(context, platformManager, objArr);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.BindingXCore$b */
     /* loaded from: classes5.dex */
-    class C3145b implements ObjectCreator<IEventHandler, Context, PlatformManager> {
-        C3145b(BindingXCore bindingXCore) {
+    class b implements ObjectCreator<IEventHandler, Context, PlatformManager> {
+        b(BindingXCore bindingXCore) {
         }
 
         @Override // com.alibaba.android.bindingx.core.BindingXCore.ObjectCreator
         /* renamed from: a */
         public IEventHandler createWith(@NonNull Context context, @NonNull PlatformManager platformManager, Object... objArr) {
-            return new ScaleGestureDetector$OnScaleGestureListenerC3213c(context, platformManager, objArr);
+            return new com.alibaba.android.bindingx.core.internal.c(context, platformManager, objArr);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.BindingXCore$c */
     /* loaded from: classes5.dex */
-    class C3146c implements ObjectCreator<IEventHandler, Context, PlatformManager> {
-        C3146c(BindingXCore bindingXCore) {
+    class c implements ObjectCreator<IEventHandler, Context, PlatformManager> {
+        c(BindingXCore bindingXCore) {
         }
 
         @Override // com.alibaba.android.bindingx.core.BindingXCore.ObjectCreator
         /* renamed from: a */
         public IEventHandler createWith(@NonNull Context context, @NonNull PlatformManager platformManager, Object... objArr) {
-            return new View$OnTouchListenerC3214d(context, platformManager, objArr);
+            return new com.alibaba.android.bindingx.core.internal.d(context, platformManager, objArr);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.BindingXCore$d */
     /* loaded from: classes5.dex */
-    class C3147d implements ObjectCreator<IEventHandler, Context, PlatformManager> {
-        C3147d(BindingXCore bindingXCore) {
+    class d implements ObjectCreator<IEventHandler, Context, PlatformManager> {
+        d(BindingXCore bindingXCore) {
         }
 
         @Override // com.alibaba.android.bindingx.core.BindingXCore.ObjectCreator
         /* renamed from: a */
         public IEventHandler createWith(@NonNull Context context, @NonNull PlatformManager platformManager, Object... objArr) {
-            return new C3211b(context, platformManager, objArr);
+            return new com.alibaba.android.bindingx.core.internal.b(context, platformManager, objArr);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.BindingXCore$e */
     /* loaded from: classes5.dex */
-    class C3148e implements ObjectCreator<IEventHandler, Context, PlatformManager> {
-        C3148e(BindingXCore bindingXCore) {
+    class e implements ObjectCreator<IEventHandler, Context, PlatformManager> {
+        e(BindingXCore bindingXCore) {
         }
 
         @Override // com.alibaba.android.bindingx.core.BindingXCore.ObjectCreator
         /* renamed from: a */
         public IEventHandler createWith(@NonNull Context context, @NonNull PlatformManager platformManager, Object... objArr) {
-            return new C3216f(context, platformManager, objArr);
+            return new com.alibaba.android.bindingx.core.internal.f(context, platformManager, objArr);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.bindingx.core.BindingXCore$f */
     /* loaded from: classes5.dex */
-    class C3149f implements ObjectCreator<IEventHandler, Context, PlatformManager> {
-        C3149f(BindingXCore bindingXCore) {
+    class f implements ObjectCreator<IEventHandler, Context, PlatformManager> {
+        f(BindingXCore bindingXCore) {
         }
 
         @Override // com.alibaba.android.bindingx.core.BindingXCore.ObjectCreator
         /* renamed from: a */
         public IEventHandler createWith(@NonNull Context context, @NonNull PlatformManager platformManager, Object... objArr) {
-            return new C3215e(context, platformManager, objArr);
+            return new com.alibaba.android.bindingx.core.internal.e(context, platformManager, objArr);
         }
     }
 
     public BindingXCore(@NonNull PlatformManager platformManager) {
         this.c = platformManager;
-        i("pan", new C3144a(this));
-        i(BindingXEventType.TYPE_PINCH, new C3145b(this));
-        i("rotation", new C3146c(this));
-        i("orientation", new C3147d(this));
-        i(BindingXEventType.TYPE_TIMING, new C3148e(this));
-        i(BindingXEventType.TYPE_SPRING, new C3149f(this));
+        i("pan", new a(this));
+        i(BindingXEventType.TYPE_PINCH, new b(this));
+        i("rotation", new c(this));
+        i("orientation", new d(this));
+        i(BindingXEventType.TYPE_TIMING, new e(this));
+        i(BindingXEventType.TYPE_SPRING, new f(this));
     }
 
     @Nullable
@@ -157,22 +146,22 @@ public class BindingXCore implements IHandlerCleanable {
 
     public String b(@Nullable Context context, @Nullable String str, @NonNull Map<String, Object> map, @NonNull JavaScriptCallback javaScriptCallback, Object... objArr) {
         Map<String, Object> map2;
-        String h = C3227o.h(map, "eventType");
-        String h2 = C3227o.h(map, "instanceId");
+        String h = o.h(map, "eventType");
+        String h2 = o.h(map, "instanceId");
         bb1.d(map);
         Object obj = map.get(WXBridgeManager.OPTIONS);
         if (obj != null && (obj instanceof Map)) {
             try {
-                map2 = C3227o.n(new JSONObject((Map) obj));
-            } catch (Exception e) {
-                bb1.c("parse external config failed.\n", e);
+                map2 = o.n(new JSONObject((Map) obj));
+            } catch (Exception e2) {
+                bb1.c("parse external config failed.\n", e2);
             }
-            xg0 e2 = C3227o.e(map, "exitExpression");
-            return c(C3227o.h(map, "anchor"), h2, h, map2, e2, C3227o.g(map), C3227o.c(map), javaScriptCallback, context, str, map, objArr);
+            xg0 e3 = o.e(map, "exitExpression");
+            return c(o.h(map, "anchor"), h2, h, map2, e3, o.g(map), o.c(map), javaScriptCallback, context, str, map, objArr);
         }
         map2 = null;
-        xg0 e22 = C3227o.e(map, "exitExpression");
-        return c(C3227o.h(map, "anchor"), h2, h, map2, e22, C3227o.g(map), C3227o.c(map), javaScriptCallback, context, str, map, objArr);
+        xg0 e32 = o.e(map, "exitExpression");
+        return c(o.h(map, "anchor"), h2, h, map2, e32, o.g(map), o.c(map), javaScriptCallback, context, str, map, objArr);
     }
 
     @RestrictTo({RestrictTo.Scope.LIBRARY})
@@ -253,15 +242,15 @@ public class BindingXCore implements IHandlerCleanable {
                     map3 = new HashMap<>(4);
                     this.a.put(str2, map3);
                 }
-                IEventHandler a = a(context, str, str4);
-                if (a != null) {
-                    a.setAnchorInstanceId(str3);
-                    a.setToken(str2);
-                    a.setGlobalConfig(map);
-                    a.setExtensionParams(objArr);
-                    if (a.onCreate(str2, str4)) {
-                        a.onStart(str2, str4);
-                        map3.put(str4, a);
+                IEventHandler a2 = a(context, str, str4);
+                if (a2 != null) {
+                    a2.setAnchorInstanceId(str3);
+                    a2.setToken(str2);
+                    a2.setGlobalConfig(map);
+                    a2.setExtensionParams(objArr);
+                    if (a2.onCreate(str2, str4)) {
+                        a2.onStart(str2, str4);
+                        map3.put(str4, a2);
                         if (bb1.a) {
                             bb1.a("enableBinding success.[token:" + str2 + ",type:" + str4 + jn1.ARRAY_END_STR);
                         }
@@ -295,8 +284,8 @@ public class BindingXCore implements IHandlerCleanable {
                 }
                 this.a.clear();
                 this.a = null;
-            } catch (Exception e) {
-                bb1.c("release failed", e);
+            } catch (Exception e2) {
+                bb1.c("release failed", e2);
             }
         }
     }
@@ -334,7 +323,7 @@ public class BindingXCore implements IHandlerCleanable {
         if (map == null) {
             return;
         }
-        f(C3227o.h(map, "token"), C3227o.h(map, "eventType"));
+        f(o.h(map, "token"), o.h(map, "eventType"));
     }
 
     public void i(String str, ObjectCreator<IEventHandler, Context, PlatformManager> objectCreator) {

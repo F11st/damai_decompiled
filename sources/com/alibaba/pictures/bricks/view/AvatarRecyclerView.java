@@ -114,14 +114,13 @@ public class AvatarRecyclerView extends RecyclerView implements RecyclerView.Chi
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.AvatarRecyclerView$a */
     /* loaded from: classes7.dex */
-    public static class C3564a implements AvatarBinder {
+    public static class a implements AvatarBinder {
         private static transient /* synthetic */ IpChange $ipChange;
         private Context a;
         int b;
 
-        public C3564a(Context context) {
+        public a(Context context) {
             this.a = context;
         }
 
@@ -166,13 +165,12 @@ public class AvatarRecyclerView extends RecyclerView implements RecyclerView.Chi
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.AvatarRecyclerView$b */
     /* loaded from: classes7.dex */
-    public static class C3565b implements AvatarItem {
+    public static class b implements AvatarItem {
         private static transient /* synthetic */ IpChange $ipChange;
         private final String a;
 
-        public C3565b(String str) {
+        public b(String str) {
             this.a = str;
         }
 
@@ -226,7 +224,7 @@ public class AvatarRecyclerView extends RecyclerView implements RecyclerView.Chi
             return;
         }
         if (avatarBinder == null) {
-            avatarBinder = new C3564a(this.mContext);
+            avatarBinder = new a(this.mContext);
         }
         this.mAvatarBinder = avatarBinder;
     }
@@ -239,10 +237,10 @@ public class AvatarRecyclerView extends RecyclerView implements RecyclerView.Chi
         }
         this.height = i;
         AvatarBinder avatarBinder = this.mAvatarBinder;
-        if (avatarBinder == null || !(avatarBinder instanceof C3564a)) {
+        if (avatarBinder == null || !(avatarBinder instanceof a)) {
             return;
         }
-        ((C3564a) avatarBinder).a(i);
+        ((a) avatarBinder).a(i);
     }
 
     public AvatarRecyclerView(Context context, @Nullable AttributeSet attributeSet) {
@@ -259,7 +257,7 @@ public class AvatarRecyclerView extends RecyclerView implements RecyclerView.Chi
         super(context, attributeSet, i);
         this.height = 0;
         this.mContext = context;
-        this.mAvatarBinder = new C3564a(context);
+        this.mAvatarBinder = new a(context);
         setDrawingCacheEnabled(true);
         setChildDrawingOrderCallback(this);
         setLayoutManager(new LinearLayoutManager(context, 0, false));

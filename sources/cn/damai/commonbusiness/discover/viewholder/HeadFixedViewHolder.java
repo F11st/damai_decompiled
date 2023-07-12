@@ -5,7 +5,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.discover.bean.HeadFixedBean;
@@ -86,7 +86,7 @@ public class HeadFixedViewHolder extends BaseViewHolderV2<HeadFixedWrapBean> imp
                 textView2.setText(TextUtils.isEmpty(headFixedBean.subTitle) ? "" : headFixedBean.subTitle);
                 imageView2.setVisibility(headFixedBean.hasActivity ? 0 : 8);
                 view.setOnClickListener(this);
-                C0504a.b().loadinto(headFixedBean.iconUrl, imageView);
+                a.b().loadinto(headFixedBean.iconUrl, imageView);
                 this.h.exposeItem(view, headFixedBean, i);
             }
         }
@@ -144,7 +144,7 @@ public class HeadFixedViewHolder extends BaseViewHolderV2<HeadFixedWrapBean> imp
                 }
                 headFixedBean.pos = i2;
                 view.setOnClickListener(this);
-                C0504a.b().f(headFixedBean.getIndexBgImgUrl(i2), i3, i4).i(R$drawable.img_corners_4_gradient_placeholder).g(imageView);
+                a.b().f(headFixedBean.getIndexBgImgUrl(i2), i3, i4).i(R$drawable.img_corners_4_gradient_placeholder).g(imageView);
             }
             if (headFixedBean != null) {
                 this.h.exposeItem(view, headFixedBean, i2);

@@ -9,10 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RelativeLayout;
 import com.alibaba.security.biometrics.R;
-import com.alibaba.security.biometrics.a.InterfaceC3740a;
 import com.alibaba.security.biometrics.activity.BaseAlBioActivity;
 import com.alibaba.security.biometrics.logic.model.DazzleCollectDataUIConfigItem;
-import com.alibaba.security.biometrics.logic.view.a.InterfaceC3779a;
 import com.alibaba.security.biometrics.logic.view.custom.RPDetectCoreView;
 import com.alibaba.security.biometrics.logic.view.widget.CameraActivityWidgetParent;
 import com.alibaba.security.biometrics.logic.view.widget.DetectActionResultWidget;
@@ -48,32 +46,31 @@ public class ALBiometricsActivityParentView extends RelativeLayout {
     protected String o;
     private View q;
     private String r;
-    private InterfaceC3778a s;
+    private a s;
 
     /* compiled from: Taobao */
     /* renamed from: com.alibaba.security.biometrics.logic.view.ALBiometricsActivityParentView$3  reason: invalid class name */
     /* loaded from: classes8.dex */
-    public class AnonymousClass3 implements RPDetectCoreView.InterfaceC3781a {
+    public class AnonymousClass3 implements RPDetectCoreView.a {
         final /* synthetic */ Runnable a;
 
         public AnonymousClass3(Runnable runnable) {
             this.a = runnable;
         }
 
-        @Override // com.alibaba.security.biometrics.logic.view.custom.RPDetectCoreView.InterfaceC3781a
+        @Override // com.alibaba.security.biometrics.logic.view.custom.RPDetectCoreView.a
         public final void a() {
             this.a.run();
         }
 
-        @Override // com.alibaba.security.biometrics.logic.view.custom.RPDetectCoreView.InterfaceC3781a
+        @Override // com.alibaba.security.biometrics.logic.view.custom.RPDetectCoreView.a
         public final void b() {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.security.biometrics.logic.view.ALBiometricsActivityParentView$a */
     /* loaded from: classes8.dex */
-    public interface InterfaceC3778a {
+    public interface a {
         void c(boolean z);
 
         void d();
@@ -89,7 +86,7 @@ public class ALBiometricsActivityParentView extends RelativeLayout {
         this.r = "";
         this.m = (BaseAlBioActivity) context;
         this.n = aLBiometricsParams;
-        View inflate = LayoutInflater.from(context).inflate(R.C3736layout.rp_face_liveness_activity, this);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.rp_face_liveness_activity, this);
         this.q = inflate;
         this.a = (CameraActivityWidgetParent) inflate.findViewById(R.id.abfl_widget_camera);
         this.b = (TitleBarWidget) this.q.findViewById(R.id.widget_title_bar);
@@ -103,7 +100,7 @@ public class ALBiometricsActivityParentView extends RelativeLayout {
     }
 
     private void a(Context context) {
-        View inflate = LayoutInflater.from(context).inflate(R.C3736layout.rp_face_liveness_activity, this);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.rp_face_liveness_activity, this);
         this.q = inflate;
         this.a = (CameraActivityWidgetParent) inflate.findViewById(R.id.abfl_widget_camera);
         this.b = (TitleBarWidget) this.q.findViewById(R.id.widget_title_bar);
@@ -258,23 +255,23 @@ public class ALBiometricsActivityParentView extends RelativeLayout {
         this.n = aLBiometricsParams;
     }
 
-    public void setOnButtonClickListener(InterfaceC3778a interfaceC3778a) {
-        this.s = interfaceC3778a;
+    public void setOnButtonClickListener(a aVar) {
+        this.s = aVar;
         TitleBarWidget titleBarWidget = this.b;
         if (titleBarWidget != null) {
-            titleBarWidget.setOnBioMainHandlerListener(interfaceC3778a);
+            titleBarWidget.setOnBioMainHandlerListener(aVar);
         }
         GuideWidget guideWidget = this.c;
         if (guideWidget != null) {
-            guideWidget.setOnBioMainHandlerListener(interfaceC3778a);
+            guideWidget.setOnBioMainHandlerListener(aVar);
         }
         PrivacyWidget privacyWidget = this.d;
         if (privacyWidget != null) {
-            privacyWidget.setOnBioMainHandlerListener(interfaceC3778a);
+            privacyWidget.setOnBioMainHandlerListener(aVar);
         }
         DetectActionWidget detectActionWidget = this.e;
         if (detectActionWidget != null) {
-            detectActionWidget.setOnBioMainHandlerListener(interfaceC3778a);
+            detectActionWidget.setOnBioMainHandlerListener(aVar);
         }
     }
 
@@ -282,8 +279,8 @@ public class ALBiometricsActivityParentView extends RelativeLayout {
         this.b.setOnCloseListener(onClickListener);
     }
 
-    public void setOnDetectActionResultListener(InterfaceC3740a interfaceC3740a) {
-        this.f.setOnDetectActionResultListener(interfaceC3740a);
+    public void setOnDetectActionResultListener(com.alibaba.security.biometrics.a.a aVar) {
+        this.f.setOnDetectActionResultListener(aVar);
     }
 
     public void setRenderer(GLSurfaceView.Renderer renderer) {
@@ -389,21 +386,21 @@ public class ALBiometricsActivityParentView extends RelativeLayout {
         rPDetectCoreView.invalidate();
     }
 
-    public final void a(final List<DazzleCollectDataUIConfigItem> list, final InterfaceC3779a interfaceC3779a) {
+    public final void a(final List<DazzleCollectDataUIConfigItem> list, final com.alibaba.security.biometrics.logic.view.a.a aVar) {
         if (this.e == null || list.isEmpty()) {
             return;
         }
         o();
         final int size = list.size();
-        this.e.a(list.get(0), new DetectActionWidget.InterfaceC3782a() { // from class: com.alibaba.security.biometrics.logic.view.ALBiometricsActivityParentView.1
-            @Override // com.alibaba.security.biometrics.logic.view.widget.DetectActionWidget.InterfaceC3782a
+        this.e.a(list.get(0), new DetectActionWidget.a() { // from class: com.alibaba.security.biometrics.logic.view.ALBiometricsActivityParentView.1
+            @Override // com.alibaba.security.biometrics.logic.view.widget.DetectActionWidget.a
             public final DazzleCollectDataUIConfigItem a(int i2) {
                 if (i2 >= size) {
-                    interfaceC3779a.a();
+                    aVar.a();
                     return null;
                 }
                 if (i2 == 1) {
-                    interfaceC3779a.b();
+                    aVar.b();
                 }
                 return (DazzleCollectDataUIConfigItem) list.get(i2);
             }

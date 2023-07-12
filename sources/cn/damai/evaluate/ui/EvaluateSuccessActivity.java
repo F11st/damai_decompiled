@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import cn.damai.comment.R$color;
 import cn.damai.comment.R$id;
 import cn.damai.comment.R$layout;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.share.ShareManager;
 import cn.damai.commonbusiness.share.generateimage.DMShareMessage;
@@ -142,7 +142,7 @@ public class EvaluateSuccessActivity extends DamaiBaseActivity {
             bundle.putString("shareType", "chat_h5");
             bundle.putBoolean("showGenerateImage", false);
             ShareManager.E().P(this, bundle, getWindow().getDecorView());
-            C0529c.e().x(dl.I().O(this.itemType, this.issueResponse.getCommentsDO().getCommentId()));
+            c.e().x(dl.I().O(this.itemType, this.issueResponse.getCommentsDO().getCommentId()));
         }
     }
 

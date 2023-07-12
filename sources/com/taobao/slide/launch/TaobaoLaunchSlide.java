@@ -42,7 +42,7 @@ public class TaobaoLaunchSlide implements Serializable {
                             env = env2;
                             m42.d(TAG, UCCore.LEGACY_EVENT_INIT, th, new Object[0]);
                             str2 = "21646297";
-                            SlideLoad.h().j(application, new SlideConfig.C6884b().b(str2).c(str).e(env).f((String) hashMap.get("ttid")).d(false).a());
+                            SlideLoad.h().j(application, new SlideConfig.b().b(str2).c(str).e(env).f((String) hashMap.get("ttid")).d(false).a());
                         }
                     } else {
                         env = SlideConfig.ENV.TEST;
@@ -56,6 +56,6 @@ public class TaobaoLaunchSlide implements Serializable {
             str = jn1.MUL;
             th = th4;
         }
-        SlideLoad.h().j(application, new SlideConfig.C6884b().b(str2).c(str).e(env).f((String) hashMap.get("ttid")).d(false).a());
+        SlideLoad.h().j(application, new SlideConfig.b().b(str2).c(str).e(env).f((String) hashMap.get("ttid")).d(false).a());
     }
 }

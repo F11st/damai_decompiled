@@ -6,7 +6,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.SystemClock;
 import android.text.TextUtils;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
 import com.amap.api.col.s.dc;
 import com.amap.api.col.s.df;
 import com.taobao.update.datasource.mtop.MtopUpdater;
@@ -46,14 +45,14 @@ public final class bl {
     private static String m = "9";
     private static String n = "8";
     private static volatile boolean o = true;
-    private static Vector<C4387e> p = new Vector<>();
+    private static Vector<e> p = new Vector<>();
     private static Map<String, Integer> q = new HashMap();
     private static String r = null;
     private static long s = 0;
     public static volatile boolean d = false;
     private static volatile ConcurrentHashMap<String, Long> t = new ConcurrentHashMap<>(8);
     private static volatile ConcurrentHashMap<String, Long> u = new ConcurrentHashMap<>(8);
-    private static volatile ConcurrentHashMap<String, C4386d> v = new ConcurrentHashMap<>(8);
+    private static volatile ConcurrentHashMap<String, d> v = new ConcurrentHashMap<>(8);
     private static boolean w = false;
     public static int e = 5000;
     public static boolean f = true;
@@ -65,20 +64,18 @@ public final class bl {
     public static boolean j = false;
     private static ConcurrentHashMap<String, Boolean> z = new ConcurrentHashMap<>();
     private static ConcurrentHashMap<String, Boolean> A = new ConcurrentHashMap<>();
-    private static ArrayList<dc.C4415a> B = new ArrayList<>();
-    private static Queue<dc.C4417c> D = new LinkedList();
+    private static ArrayList<dc.a> B = new ArrayList<>();
+    private static Queue<dc.c> D = new LinkedList();
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.bl$a */
     /* loaded from: classes10.dex */
-    public interface InterfaceC4381a {
-        void a(C4382b c4382b);
+    public interface a {
+        void a(b bVar);
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.bl$b */
     /* loaded from: classes10.dex */
-    public static class C4382b {
+    public static class b {
         @Deprecated
         public JSONObject a;
         @Deprecated
@@ -87,47 +84,45 @@ public final class bl {
         public int d = -1;
         public long e = 0;
         public JSONObject f;
-        public C4383a g;
-        public C4384b h;
+        public a g;
+        public C0208b h;
         private boolean i;
 
         /* compiled from: Taobao */
-        /* renamed from: com.amap.api.col.s.bl$b$a */
         /* loaded from: classes10.dex */
-        public static class C4383a {
+        public static class a {
             public boolean a;
             public boolean b;
             public JSONObject c;
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.amap.api.col.s.bl$b$b */
+        /* renamed from: com.amap.api.col.s.bl$b$b  reason: collision with other inner class name */
         /* loaded from: classes10.dex */
-        public static class C4384b {
+        public static class C0208b {
             public boolean a;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.bl$c */
     /* loaded from: classes10.dex */
-    public static class C4385c extends da {
+    public static class c extends da {
         private String d;
         private Map<String, String> e;
         private String f;
         private String k;
         private String l;
 
-        C4385c(Context context, bv bvVar, String str, String str2, String str3, String str4) {
+        c(Context context, bv bvVar, String str, String str2, String str3, String str4) {
             super(context, bvVar);
             this.d = str;
             this.e = null;
             this.f = str2;
             this.k = str3;
             this.l = str4;
-            a(df.EnumC4425c.HTTPS);
-            a(df.EnumC4423a.FIX);
+            a(df.c.HTTPS);
+            a(df.a.FIX);
         }
 
         @Override // com.amap.api.col.s.br, com.amap.api.col.s.df
@@ -201,30 +196,28 @@ public final class bl {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.bl$d */
     /* loaded from: classes10.dex */
-    public static class C4386d {
+    public static class d {
         bv a;
         String b;
-        InterfaceC4381a c;
+        a c;
 
-        private C4386d() {
+        private d() {
         }
 
-        /* synthetic */ C4386d(byte b) {
+        /* synthetic */ d(byte b) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.bl$e */
     /* loaded from: classes10.dex */
-    public static class C4387e {
+    public static class e {
         private String a;
         private String b;
         private AtomicInteger c;
 
-        public C4387e(String str, String str2, int i) {
+        public e(String str, String str2, int i) {
             this.a = str;
             this.b = str2;
             this.c = new AtomicInteger(i);
@@ -254,13 +247,13 @@ public final class bl {
             return atomicInteger.get();
         }
 
-        public static C4387e b(String str) {
+        public static e b(String str) {
             if (TextUtils.isEmpty(str)) {
                 return null;
             }
             try {
                 JSONObject jSONObject = new JSONObject(str);
-                return new C4387e(jSONObject.optString("a"), jSONObject.optString("f"), jSONObject.optInt("h"));
+                return new e(jSONObject.optString("a"), jSONObject.optString("f"), jSONObject.optInt("h"));
             } catch (Throwable unused) {
                 return null;
             }
@@ -268,9 +261,8 @@ public final class bl {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.bl$f */
     /* loaded from: classes10.dex */
-    public static class C4388f {
+    public static class f {
         public static boolean a = true;
         public static boolean b = false;
         public static boolean c = true;
@@ -297,7 +289,7 @@ public final class bl {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private static com.amap.api.col.s.bl.C4382b b(android.content.Context r22, com.amap.api.col.s.bv r23, java.lang.String r24, java.lang.String r25, java.lang.String r26, java.lang.String r27) {
+    private static com.amap.api.col.s.bl.b b(android.content.Context r22, com.amap.api.col.s.bv r23, java.lang.String r24, java.lang.String r25, java.lang.String r26, java.lang.String r27) {
         /*
             Method dump skipped, instructions count: 635
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -332,18 +324,18 @@ public final class bl {
             bq.a().a(context);
             b(context);
             c(context);
-            C4388f.a = co.a(context, "open_common", "ucf", C4388f.a);
-            C4388f.b = co.a(context, "open_common", "fsv2", C4388f.b);
-            C4388f.c = co.a(context, "open_common", "usc", C4388f.c);
-            C4388f.d = co.a(context, "open_common", "umv", C4388f.d);
-            C4388f.e = co.a(context, "open_common", "ust", C4388f.e);
-            C4388f.f = co.a(context, "open_common", "ustv", C4388f.f);
+            f.a = co.a(context, "open_common", "ucf", f.a);
+            f.b = co.a(context, "open_common", "fsv2", f.b);
+            f.c = co.a(context, "open_common", "usc", f.c);
+            f.d = co.a(context, "open_common", "umv", f.d);
+            f.e = co.a(context, "open_common", "ust", f.e);
+            f.f = co.a(context, "open_common", "ustv", f.f);
         } catch (Throwable unused) {
         }
     }
 
     public static boolean e(String str) {
-        C4387e a2;
+        e a2;
         if (!TextUtils.isEmpty(str) && i) {
             if (A.get(str) == null) {
                 Context context = c;
@@ -357,9 +349,9 @@ public final class bl {
         return false;
     }
 
-    public static dc.C4417c f() {
+    public static dc.c f() {
         synchronized (D) {
-            dc.C4417c poll = D.poll();
+            dc.c poll = D.poll();
             if (poll != null) {
                 return poll;
             }
@@ -426,7 +418,7 @@ public final class bl {
         return (TextUtils.isEmpty(p2) || (num = q.get(p2.toUpperCase())) == null || num.intValue() != 2) ? false : true;
     }
 
-    public static dc.C4415a e() {
+    public static dc.a e() {
         if (C) {
             return null;
         }
@@ -436,7 +428,7 @@ public final class bl {
             }
             Collections.sort(B);
             if (B.size() > 0) {
-                dc.C4415a clone = B.get(0).clone();
+                dc.a clone = B.get(0).clone();
                 C = true;
                 return clone;
             }
@@ -444,7 +436,7 @@ public final class bl {
         }
     }
 
-    public static C4382b a(Context context, bv bvVar, String str, String str2, String str3, String str4) {
+    public static b a(Context context, bv bvVar, String str, String str2, String str3, String str4) {
         return b(context, bvVar, str, str2, str3, str4);
     }
 
@@ -478,7 +470,7 @@ public final class bl {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private static void a(android.content.Context r20, com.amap.api.col.s.bv r21, java.lang.String r22, com.amap.api.col.s.bl.C4382b r23, org.json.JSONObject r24) throws org.json.JSONException {
+    private static void a(android.content.Context r20, com.amap.api.col.s.bv r21, java.lang.String r22, com.amap.api.col.s.bl.b r23, org.json.JSONObject r24) throws org.json.JSONException {
         /*
             Method dump skipped, instructions count: 759
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -498,17 +490,17 @@ public final class bl {
         }
     }
 
-    public static void c(dc.C4417c c4417c) {
-        if (c4417c != null && j) {
+    public static void c(dc.c cVar) {
+        if (cVar != null && j) {
             synchronized (D) {
-                D.offer(c4417c);
+                D.offer(cVar);
                 dc.a();
             }
         }
     }
 
     public static boolean d(String str) {
-        C4387e a2;
+        e a2;
         try {
             if (TextUtils.isEmpty(str)) {
                 return true;
@@ -531,7 +523,7 @@ public final class bl {
 
     public static void c() {
         try {
-            C4387e a2 = a(c, "IPV6_CONFIG_NAME", "open_common");
+            e a2 = a(c, "IPV6_CONFIG_NAME", "open_common");
             String a3 = bw.a(System.currentTimeMillis(), "yyyyMMdd");
             if (!a3.equals(a2.b)) {
                 a2.a(a3);
@@ -603,25 +595,25 @@ public final class bl {
         return str2 + JSMethod.NOT_SET + a2;
     }
 
-    public static void b(dc.C4417c c4417c) {
+    public static void b(dc.c cVar) {
         synchronized (B) {
             boolean z2 = false;
             for (int i2 = 0; i2 < B.size(); i2++) {
-                dc.C4415a c4415a = B.get(i2);
-                if (c4417c.c.equals(c4415a.b) && c4417c.d.equals(c4415a.e)) {
-                    int i3 = c4417c.m;
-                    int i4 = c4415a.f;
+                dc.a aVar = B.get(i2);
+                if (cVar.c.equals(aVar.b) && cVar.d.equals(aVar.e)) {
+                    int i3 = cVar.m;
+                    int i4 = aVar.f;
                     if (i3 == i4) {
                         if (i4 == 1) {
-                            c4415a.i = ((c4415a.j.get() * c4415a.i) + c4417c.f) / (c4415a.j.get() + 1);
+                            aVar.i = ((aVar.j.get() * aVar.i) + cVar.f) / (aVar.j.get() + 1);
                         }
-                        c4415a.j.getAndIncrement();
+                        aVar.j.getAndIncrement();
                         z2 = true;
                     }
                 }
             }
             if (!z2) {
-                B.add(new dc.C4415a(c4417c));
+                B.add(new dc.a(cVar));
             }
             dc.a();
         }
@@ -657,23 +649,23 @@ public final class bl {
         }
     }
 
-    public static void a(dc.C4417c c4417c) {
-        if (c4417c == null || c == null) {
+    public static void a(dc.c cVar) {
+        if (cVar == null || c == null) {
             return;
         }
         HashMap hashMap = new HashMap();
-        hashMap.put("serverip", c4417c.c);
-        hashMap.put("hostname", c4417c.e);
-        hashMap.put(AbstractC3893a.V, c4417c.d);
-        hashMap.put("csid", c4417c.a);
-        hashMap.put(MtopUpdater.DEGRADE, String.valueOf(c4417c.b.a()));
-        hashMap.put("errorcode", String.valueOf(c4417c.m));
-        hashMap.put("errorsubcode", String.valueOf(c4417c.n));
-        hashMap.put("connecttime", String.valueOf(c4417c.h));
-        hashMap.put("writetime", String.valueOf(c4417c.i));
-        hashMap.put("readtime", String.valueOf(c4417c.j));
-        hashMap.put("datasize", String.valueOf(c4417c.l));
-        hashMap.put("totaltime", String.valueOf(c4417c.f));
+        hashMap.put("serverip", cVar.c);
+        hashMap.put("hostname", cVar.e);
+        hashMap.put(com.alibaba.security.realidentity.jsbridge.a.V, cVar.d);
+        hashMap.put("csid", cVar.a);
+        hashMap.put(MtopUpdater.DEGRADE, String.valueOf(cVar.b.a()));
+        hashMap.put("errorcode", String.valueOf(cVar.m));
+        hashMap.put("errorsubcode", String.valueOf(cVar.n));
+        hashMap.put("connecttime", String.valueOf(cVar.h));
+        hashMap.put("writetime", String.valueOf(cVar.i));
+        hashMap.put("readtime", String.valueOf(cVar.j));
+        hashMap.put("datasize", String.valueOf(cVar.l));
+        hashMap.put("totaltime", String.valueOf(cVar.f));
         String jSONObject = new JSONObject(hashMap).toString();
         "--埋点--".concat(String.valueOf(jSONObject));
         dc.a();
@@ -707,7 +699,7 @@ public final class bl {
     }
 
     public static boolean a() {
-        C4387e a2;
+        e a2;
         if (c != null) {
             h();
             if (!b()) {
@@ -724,11 +716,11 @@ public final class bl {
         return inetAddress.isLoopbackAddress() || inetAddress.isLinkLocalAddress() || inetAddress.isAnyLocalAddress();
     }
 
-    private static void a(Context context, String str, String str2, C4387e c4387e) {
-        if (c4387e == null || TextUtils.isEmpty(c4387e.a)) {
+    private static void a(Context context, String str, String str2, e eVar) {
+        if (eVar == null || TextUtils.isEmpty(eVar.a)) {
             return;
         }
-        String b2 = c4387e.b();
+        String b2 = eVar.b();
         if (TextUtils.isEmpty(b2) || context == null) {
             return;
         }
@@ -737,7 +729,7 @@ public final class bl {
         co.a(a2);
     }
 
-    public static synchronized void a(Context context, bv bvVar, String str, InterfaceC4381a interfaceC4381a) {
+    public static synchronized void a(Context context, bv bvVar, String str, a aVar) {
         synchronized (bl.class) {
             if (context == null || bvVar == null) {
                 return;
@@ -761,11 +753,11 @@ public final class bl {
                     t = new ConcurrentHashMap<>(8);
                 }
                 if (!v.containsKey(b2)) {
-                    C4386d c4386d = new C4386d((byte) 0);
-                    c4386d.a = bvVar;
-                    c4386d.b = str;
-                    c4386d.c = interfaceC4381a;
-                    v.put(b2, c4386d);
+                    d dVar = new d((byte) 0);
+                    dVar.a = bvVar;
+                    dVar.b = str;
+                    dVar.c = aVar;
+                    v.put(b2, dVar);
                     t.put(b2, Long.valueOf(co.b(c, "open_common", b2)));
                     d(c);
                 }
@@ -812,21 +804,21 @@ public final class bl {
                         return;
                     }
                     if (z2) {
-                        C4411db.a(true, str);
+                        db.a(true, str);
                     }
                     ed.a().b(new ee() { // from class: com.amap.api.col.s.bl.1
                         @Override // com.amap.api.col.s.ee
                         public final void a() {
-                            C4386d c4386d = (C4386d) bl.v.get(str);
-                            if (c4386d == null) {
+                            d dVar = (d) bl.v.get(str);
+                            if (dVar == null) {
                                 return;
                             }
-                            InterfaceC4381a interfaceC4381a = c4386d.c;
-                            C4382b a2 = bl.a(bl.c, c4386d.a, c4386d.b, str2, str3, str4);
-                            if (a2 == null || interfaceC4381a == null) {
+                            a aVar = dVar.c;
+                            b a2 = bl.a(bl.c, dVar.a, dVar.b, str2, str3, str4);
+                            if (a2 == null || aVar == null) {
                                 return;
                             }
-                            interfaceC4381a.a(a2);
+                            aVar.a(a2);
                         }
                     });
                 }
@@ -902,7 +894,7 @@ public final class bl {
     }
 
     private static void a(String str, String str2) {
-        C4387e a2 = a(c, str, str2);
+        e a2 = a(c, str, str2);
         String a3 = bw.a(System.currentTimeMillis(), "yyyyMMdd");
         if (!a3.equals(a2.b)) {
             a2.a(a3);
@@ -912,31 +904,31 @@ public final class bl {
         a(c, str, str2, a2);
     }
 
-    public static void a(boolean z2, dc.C4415a c4415a) {
-        if (!C || c4415a == null) {
+    public static void a(boolean z2, dc.a aVar) {
+        if (!C || aVar == null) {
             return;
         }
         synchronized (B) {
             if (z2) {
-                Iterator<dc.C4415a> it = B.iterator();
+                Iterator<dc.a> it = B.iterator();
                 while (it.hasNext()) {
-                    dc.C4415a next = it.next();
-                    if (next.b.equals(c4415a.b) && next.e.equals(c4415a.e) && next.f == c4415a.f) {
-                        if (next.j == c4415a.j) {
+                    dc.a next = it.next();
+                    if (next.b.equals(aVar.b) && next.e.equals(aVar.e) && next.f == aVar.f) {
+                        if (next.j == aVar.j) {
                             it.remove();
                             dc.a();
                         } else {
-                            next.j.set(next.j.get() - c4415a.j.get());
+                            next.j.set(next.j.get() - aVar.j.get());
                             dc.a();
                         }
                     }
                 }
             }
             C = false;
-            Iterator<dc.C4415a> it2 = B.iterator();
+            Iterator<dc.a> it2 = B.iterator();
             dc.a();
             while (it2.hasNext()) {
-                dc.C4415a next2 = it2.next();
+                dc.a next2 = it2.next();
                 String str = next2.e;
                 Objects.toString(next2.j);
                 dc.a();
@@ -945,28 +937,28 @@ public final class bl {
         }
     }
 
-    private static synchronized C4387e a(Context context, String str, String str2) {
-        C4387e c4387e;
+    private static synchronized e a(Context context, String str, String str2) {
+        e eVar;
         synchronized (bl.class) {
             if (!TextUtils.isEmpty(str)) {
                 for (int i2 = 0; i2 < p.size(); i2++) {
-                    c4387e = p.get(i2);
-                    if (c4387e != null && str.equals(c4387e.a)) {
+                    eVar = p.get(i2);
+                    if (eVar != null && str.equals(eVar.a)) {
                         break;
                     }
                 }
             }
-            c4387e = null;
-            if (c4387e != null) {
-                return c4387e;
+            eVar = null;
+            if (eVar != null) {
+                return eVar;
             }
             if (context == null) {
                 return null;
             }
-            C4387e b2 = C4387e.b(co.b(context, str2, str, ""));
+            e b2 = e.b(co.b(context, str2, str, ""));
             String a2 = bw.a(System.currentTimeMillis(), "yyyyMMdd");
             if (b2 == null) {
-                b2 = new C4387e(str, a2, 0);
+                b2 = new e(str, a2, 0);
             }
             if (!a2.equals(b2.b)) {
                 b2.a(a2);

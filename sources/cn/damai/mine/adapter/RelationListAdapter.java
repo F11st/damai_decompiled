@@ -51,15 +51,14 @@ public class RelationListAdapter extends RecyclerView.Adapter<ViewHolder> implem
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.adapter.RelationListAdapter$a */
     /* loaded from: classes6.dex */
-    public class C1430a extends PictureGaiaXEventProvider {
+    public class a extends PictureGaiaXEventProvider {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ RelationItemData a;
         final /* synthetic */ int b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        C1430a(Context context, RelationItemData relationItemData, int i) {
+        a(Context context, RelationItemData relationItemData, int i) {
             super(context);
             this.a = relationItemData;
             this.b = i;
@@ -196,7 +195,7 @@ public class RelationListAdapter extends RecyclerView.Adapter<ViewHolder> implem
         GaiaXBuilder gaiaXBuilder = new GaiaXBuilder();
         FrameLayout frameLayout = viewHolder.a;
         Context context = this.a;
-        gaiaXBuilder.renderGaiaXSimple(frameLayout, context, "damai_followfans_cell", jSONObject, ScreenUtils.INSTANCE.getScreenWidthPx(context) - t60.a(this.a, 24.0f), i, new C1430a(this.a, relationItemData, i), false, false);
+        gaiaXBuilder.renderGaiaXSimple(frameLayout, context, "damai_followfans_cell", jSONObject, ScreenUtils.INSTANCE.getScreenWidthPx(context) - t60.a(this.a, 24.0f), i, new a(this.a, relationItemData, i), false, false);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

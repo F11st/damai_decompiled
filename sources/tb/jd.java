@@ -22,10 +22,10 @@ public class jd implements IConverter<BaseResponse, BaseSection, GlobalConfig, L
 
     @Override // cn.damai.tetris.v2.convertor.IConverter
     /* renamed from: a */
-    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, C9039db c9039db) {
+    public List<Node> convert(BaseResponse baseResponse, BaseSection baseSection, GlobalConfig globalConfig, db dbVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "455710367")) {
-            return (List) ipChange.ipc$dispatch("455710367", new Object[]{this, baseResponse, baseSection, globalConfig, c9039db});
+            return (List) ipChange.ipc$dispatch("455710367", new Object[]{this, baseResponse, baseSection, globalConfig, dbVar});
         }
         ArrayList arrayList = new ArrayList();
         NodeData item = baseSection.getItem();
@@ -40,7 +40,7 @@ public class jd implements IConverter<BaseResponse, BaseSection, GlobalConfig, L
             baseSection2.setItem(jSONObject);
             JSONArray jSONArray = item.getJSONArray("content");
             if (jSONArray != null && jSONArray.size() > 0) {
-                arrayList.addAll(new C9039db().l(baseSection2, globalConfig));
+                arrayList.addAll(new db().l(baseSection2, globalConfig));
                 for (int i = 0; i < jSONArray.size(); i++) {
                     JSONObject jSONObject2 = jSONArray.getJSONObject(i);
                     if (jSONObject2 != null) {
@@ -50,11 +50,11 @@ public class jd implements IConverter<BaseResponse, BaseSection, GlobalConfig, L
                         }
                         trackInfo.trackB = item.getString("trackB");
                         JSONObject jSONObject3 = new JSONObject();
-                        jSONObject3.put(C9039db.KEY_PROJECT, (Object) jSONObject2);
+                        jSONObject3.put(db.KEY_PROJECT, (Object) jSONObject2);
                         baseSection.setItem(jSONObject3);
                         baseSection.setTrackInfo(trackInfo);
                         baseSection.setComponentId(xl2.DM_PROJECT_HORIZONTAL);
-                        List<Node> l = c9039db.l(baseSection, globalConfig);
+                        List<Node> l = dbVar.l(baseSection, globalConfig);
                         if (l != null) {
                             arrayList.addAll(l);
                         }

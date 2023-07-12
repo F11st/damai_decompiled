@@ -4,7 +4,6 @@ import android.os.SystemClock;
 import android.text.TextUtils;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.efs.sdk.base.a.h.b.C4802b;
 import com.youku.usercenter.passport.RefreshTask;
 import io.flutter.wpkbridge.WPKFactory;
 import java.io.File;
@@ -19,9 +18,8 @@ public final class u23 {
     public boolean a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.u23$a */
     /* loaded from: classes10.dex */
-    static class C9763a {
+    static class a {
         private static final u23 a = new u23((byte) 0);
     }
 
@@ -47,7 +45,7 @@ public final class u23 {
     }
 
     public static u23 c() {
-        return C9763a.a;
+        return a.a;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -81,15 +79,15 @@ public final class u23 {
     @NonNull
     public final l01 b(String str, e53 e53Var, File file, boolean z) {
         String b2 = e53Var.b();
-        String a = a(str, e53Var);
+        String a2 = a(str, e53Var);
         if (this.a) {
-            w63.a("efs.px.api", "Upload file, url is ".concat(String.valueOf(a)));
+            w63.a("efs.px.api", "Upload file, url is ".concat(String.valueOf(a2)));
         }
         HashMap hashMap = new HashMap(1);
         hashMap.put("wpk-header", b2);
-        C4802b c = new C4802b(a).c(hashMap);
+        com.efs.sdk.base.a.h.b.b c = new com.efs.sdk.base.a.h.b.b(a2).c(hashMap);
         c.a.d = file;
-        C4802b b3 = c.b("type", e53Var.h);
+        com.efs.sdk.base.a.h.b.b b3 = c.b("type", e53Var.h);
         StringBuilder sb = new StringBuilder();
         sb.append(e53Var.k);
         return b3.b("size", sb.toString()).b("flow_limit", Boolean.toString(z)).d(s53.d()).a().b();

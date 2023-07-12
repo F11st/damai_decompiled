@@ -1,7 +1,5 @@
 package com.xiaomi.push.service;
 
-import com.alipay.sdk.m.e0.C4186a;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.fh;
 import com.xiaomi.push.service.XMPushService;
 
@@ -26,7 +24,7 @@ public class bq {
 
     private int a() {
         if (this.b > 8) {
-            return C4186a.a;
+            return com.alipay.sdk.m.e0.a.a;
         }
         double random = (Math.random() * 2.0d) + 1.0d;
         int i = this.b;
@@ -67,7 +65,7 @@ public class bq {
 
     public void a(boolean z) {
         if (!this.f939a.m1150a()) {
-            AbstractC7535b.c("should not reconnect as no client or network.");
+            com.xiaomi.channel.commonutils.logger.b.c("should not reconnect as no client or network.");
         } else if (z) {
             if (!this.f939a.m1151a(1)) {
                 this.b++;
@@ -75,15 +73,15 @@ public class bq {
             this.f939a.a(1);
             XMPushService xMPushService = this.f939a;
             xMPushService.getClass();
-            xMPushService.a(new XMPushService.C7702e());
+            xMPushService.a(new XMPushService.e());
         } else if (this.f939a.m1151a(1)) {
         } else {
             int a = a();
             this.b++;
-            AbstractC7535b.m586a("schedule reconnect in " + a + "ms");
+            com.xiaomi.channel.commonutils.logger.b.m586a("schedule reconnect in " + a + "ms");
             XMPushService xMPushService2 = this.f939a;
             xMPushService2.getClass();
-            xMPushService2.a(new XMPushService.C7702e(), (long) a);
+            xMPushService2.a(new XMPushService.e(), (long) a);
             if (this.b == 2 && fh.m881a().m886a()) {
                 ap.b();
             }

@@ -8,7 +8,7 @@ import java.util.List;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class ce extends cj.AbstractC7618b<Long> {
+public class ce extends cj.b<Long> {
     private long a;
 
     /* renamed from: a  reason: collision with other field name */
@@ -27,18 +27,18 @@ public class ce extends cj.AbstractC7618b<Long> {
     }
 
     /* JADX WARN: Can't rename method to resolve collision */
-    @Override // com.xiaomi.push.cj.AbstractC7618b
+    @Override // com.xiaomi.push.cj.b
     public Long a(Context context, Cursor cursor) {
         return Long.valueOf(cursor.getLong(0));
     }
 
-    @Override // com.xiaomi.push.cj.AbstractRunnableC7617a
+    @Override // com.xiaomi.push.cj.a
     /* renamed from: a */
     public Object mo737a() {
         return Long.valueOf(this.a);
     }
 
-    @Override // com.xiaomi.push.cj.AbstractC7618b
+    @Override // com.xiaomi.push.cj.b
     public void a(Context context, List<Long> list) {
         if (context == null || list == null || list.size() <= 0) {
             return;

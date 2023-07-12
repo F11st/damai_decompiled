@@ -77,12 +77,11 @@ public final class RankFilterViewManager implements TabLayout.BaseOnTabSelectedL
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.rank.RankFilterViewManager$a */
     /* loaded from: classes7.dex */
-    public static final class C1946a implements OnItemBindListener<TypeTabBean> {
+    public static final class a implements OnItemBindListener<TypeTabBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1946a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -183,7 +182,7 @@ public final class RankFilterViewManager implements TabLayout.BaseOnTabSelectedL
                 rect.right = z2 ? rankFilterViewManager.n : rankFilterViewManager.o;
             }
         });
-        RankTypeAdapter rankTypeAdapter = new RankTypeAdapter(context, new C1946a());
+        RankTypeAdapter rankTypeAdapter = new RankTypeAdapter(context, new a());
         this.j = rankTypeAdapter;
         recyclerView.setAdapter(rankTypeAdapter);
         tabLayout.setSelectedTabIndicator(new rk2(22));

@@ -51,7 +51,7 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
     private final MotionStrategy showStrategy;
     @NonNull
     private final MotionStrategy shrinkStrategy;
-    private static final int DEF_STYLE_RES = R.C4819style.Widget_MaterialComponents_ExtendedFloatingActionButton_Icon;
+    private static final int DEF_STYLE_RES = R.style.Widget_MaterialComponents_ExtendedFloatingActionButton_Icon;
     static final Property<View, Float> WIDTH = new Property<View, Float>(Float.class, "width") { // from class: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton.4
         @Override // android.util.Property
         @NonNull

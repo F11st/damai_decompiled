@@ -44,14 +44,14 @@ public class cu extends BaseOverlayImp implements IMarkerAction, IMarkerDelegate
     private MarkerOptions D;
     private float P;
     private float Q;
-    private C4645x T;
+    private x T;
     private String W;
     private LatLng X;
     private LatLng Y;
     private String Z;
     float[] a;
     private String aa;
-    private C4641u af;
+    private u af;
     private Object ag;
     private int aq;
     private int ar;
@@ -91,7 +91,7 @@ public class cu extends BaseOverlayImp implements IMarkerAction, IMarkerDelegate
     private Point O = new Point();
     private int R = 0;
     private int S = 0;
-    private C4645x[] U = null;
+    private x[] U = null;
     Rect c = new Rect(0, 0, 0, 0);
     private boolean V = false;
     private float ab = 0.5f;
@@ -116,8 +116,8 @@ public class cu extends BaseOverlayImp implements IMarkerAction, IMarkerDelegate
     private float av = Float.MIN_VALUE;
     private float aw = Float.MAX_VALUE;
 
-    public cu(MarkerOptions markerOptions, C4641u c4641u) {
-        this.af = c4641u;
+    public cu(MarkerOptions markerOptions, u uVar) {
+        this.af = uVar;
         setMarkerOptions(markerOptions);
     }
 
@@ -309,8 +309,8 @@ public class cu extends BaseOverlayImp implements IMarkerAction, IMarkerDelegate
     @Override // com.autonavi.base.amap.api.mapcore.overlays.IOverlayImageDelegate
     public boolean calFPoint() {
         try {
-            C4641u c4641u = this.af;
-            if (c4641u != null && c4641u.c() != null && this.af.c().getMapProjection() != null) {
+            u uVar = this.af;
+            if (uVar != null && uVar.c() != null && this.af.c().getMapProjection() != null) {
                 if (this.x == null) {
                     this.x = FPoint.obtain();
                 }
@@ -378,14 +378,14 @@ public class cu extends BaseOverlayImp implements IMarkerAction, IMarkerDelegate
             if (this.af != null) {
                 int i3 = 0;
                 while (true) {
-                    C4645x[] c4645xArr = this.U;
-                    if (c4645xArr == null || i3 >= c4645xArr.length) {
+                    x[] xVarArr = this.U;
+                    if (xVarArr == null || i3 >= xVarArr.length) {
                         break;
                     }
-                    C4645x c4645x = c4645xArr[i3];
-                    if (c4645x != null) {
-                        this.af.a(c4645x);
-                        this.af.c().removeTextureItem(c4645x.p());
+                    x xVar = xVarArr[i3];
+                    if (xVar != null) {
+                        this.af.a(xVar);
+                        this.af.c().removeTextureItem(xVar.p());
                     }
                     i3++;
                 }
@@ -881,9 +881,9 @@ public class cu extends BaseOverlayImp implements IMarkerAction, IMarkerDelegate
     public boolean remove() {
         c();
         this.ae = false;
-        C4641u c4641u = this.af;
-        if (c4641u != null) {
-            return c4641u.a((IOverlayImageDelegate) this);
+        u uVar = this.af;
+        if (uVar != null) {
+            return uVar.a((IOverlayImageDelegate) this);
         }
         return false;
     }
@@ -1313,8 +1313,8 @@ public class cu extends BaseOverlayImp implements IMarkerAction, IMarkerDelegate
         List<BitmapDescriptor> list = this.ai;
         if (list != null && list.size() > 0) {
             if (this.j) {
-                C4645x[] c4645xArr = this.U;
-                int length = c4645xArr.length;
+                x[] xVarArr = this.U;
+                int length = xVarArr.length;
                 float f7 = this.o;
                 float f8 = this.k;
                 int i4 = (int) (f7 / f8);
@@ -1323,7 +1323,7 @@ public class cu extends BaseOverlayImp implements IMarkerAction, IMarkerDelegate
                 } else {
                     f6 = f7 % f8;
                 }
-                this.T = c4645xArr[(i4 + length) % length];
+                this.T = xVarArr[(i4 + length) % length];
             } else {
                 this.an++;
                 if (this.an >= this.ao * this.ai.size()) {
@@ -1386,8 +1386,8 @@ public class cu extends BaseOverlayImp implements IMarkerAction, IMarkerDelegate
     }
 
     private void a(float[] fArr, int i2) {
-        C4645x[] c4645xArr = this.U;
-        if (c4645xArr == null || c4645xArr.length <= 0) {
+        x[] xVarArr = this.U;
+        if (xVarArr == null || xVarArr.length <= 0) {
             return;
         }
         float[] fArr2 = this.y;
@@ -1412,8 +1412,8 @@ public class cu extends BaseOverlayImp implements IMarkerAction, IMarkerDelegate
         DPoint obtain = DPoint.obtain();
         GLMapState.geo2LonLat(this.v, this.w, obtain);
         this.X = new LatLng(obtain.y, obtain.x, false);
-        C4641u c4641u = this.af;
-        if (c4641u != null && c4641u.c() != null) {
+        u uVar = this.af;
+        if (uVar != null && uVar.c() != null) {
             ((PointF) this.x).x = this.v - ((int) this.af.c().getMapConfig().getSX());
             ((PointF) this.x).y = this.w - ((int) this.af.c().getMapConfig().getSY());
         }

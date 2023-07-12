@@ -1,12 +1,12 @@
 package com.amap.api.services.core;
 
 import android.content.Context;
-import com.amap.api.col.s.C4389bm;
-import com.amap.api.col.s.C4434h;
-import com.amap.api.col.s.C4435i;
 import com.amap.api.col.s.ao;
+import com.amap.api.col.s.bm;
 import com.amap.api.col.s.bq;
 import com.amap.api.col.s.bt;
+import com.amap.api.col.s.h;
+import com.amap.api.col.s.i;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -33,13 +33,13 @@ public class ServiceSettings {
 
     public static synchronized void updatePrivacyAgree(Context context, boolean z) {
         synchronized (ServiceSettings.class) {
-            bt.a(context, z, C4434h.a(false));
+            bt.a(context, z, h.a(false));
         }
     }
 
     public static synchronized void updatePrivacyShow(Context context, boolean z, boolean z2) {
         synchronized (ServiceSettings.class) {
-            bt.a(context, z, z2, C4434h.a(false));
+            bt.a(context, z, z2, h.a(false));
         }
     }
 
@@ -47,7 +47,7 @@ public class ServiceSettings {
         try {
             ao.b();
         } catch (Throwable th) {
-            C4435i.a(th, "ServiceSettings", "destroyInnerAsynThreadPool");
+            i.a(th, "ServiceSettings", "destroyInnerAsynThreadPool");
         }
     }
 
@@ -68,7 +68,7 @@ public class ServiceSettings {
     }
 
     public void setApiKey(String str) {
-        C4389bm.a(str);
+        bm.a(str);
     }
 
     public void setConnectionTimeOut(int i) {

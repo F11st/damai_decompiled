@@ -26,19 +26,18 @@ public class DiscountTicketPresenter extends DiscountTicketContract.DtPresenter 
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.discountticket.presenter.DiscountTicketPresenter$a */
     /* loaded from: classes.dex */
-    public class C0386a implements BaseListener<FirstPageData> {
+    public class a implements BaseListener<FirstPageData> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ boolean a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.category.discountticket.presenter.DiscountTicketPresenter$a$a */
+        /* renamed from: cn.damai.category.discountticket.presenter.DiscountTicketPresenter$a$a  reason: collision with other inner class name */
         /* loaded from: classes.dex */
-        public class C0387a implements OnErrorClickListener {
+        public class C0021a implements OnErrorClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C0387a() {
+            C0021a() {
             }
 
             @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
@@ -52,7 +51,7 @@ public class DiscountTicketPresenter extends DiscountTicketContract.DtPresenter 
             }
         }
 
-        C0386a(boolean z) {
+        a(boolean z) {
             this.a = z;
         }
 
@@ -80,17 +79,16 @@ public class DiscountTicketPresenter extends DiscountTicketContract.DtPresenter 
             if (this.a) {
                 ((DiscountTicketContract.DtView) DiscountTicketPresenter.this.mView).showDialogLoading(false);
             }
-            ((DiscountTicketContract.DtView) DiscountTicketPresenter.this.mView).showErrorView(str, str2, null, new C0387a());
+            ((DiscountTicketContract.DtView) DiscountTicketPresenter.this.mView).showErrorView(str, str2, null, new C0021a());
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.discountticket.presenter.DiscountTicketPresenter$b */
     /* loaded from: classes.dex */
-    public class C0388b implements OnTListener<MorePageData> {
+    public class b implements OnTListener<MorePageData> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0388b() {
+        b() {
         }
 
         @Override // cn.damai.category.discountticket.model.OnTListener
@@ -106,12 +104,11 @@ public class DiscountTicketPresenter extends DiscountTicketContract.DtPresenter 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.discountticket.presenter.DiscountTicketPresenter$c */
     /* loaded from: classes.dex */
-    public class C0389c implements OnShareListener {
+    public class c implements OnShareListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0389c() {
+        c() {
         }
 
         @Override // cn.damai.category.discountticket.model.OnShareListener
@@ -146,13 +143,12 @@ public class DiscountTicketPresenter extends DiscountTicketContract.DtPresenter 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.discountticket.presenter.DiscountTicketPresenter$d */
     /* loaded from: classes.dex */
-    public class C0390d implements OnApplyCouponListener {
+    public class d implements OnApplyCouponListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ HeaderCouponBean a;
 
-        C0390d(HeaderCouponBean headerCouponBean) {
+        d(HeaderCouponBean headerCouponBean) {
             this.a = headerCouponBean;
         }
 
@@ -188,7 +184,7 @@ public class DiscountTicketPresenter extends DiscountTicketContract.DtPresenter 
             return;
         }
         ((DiscountTicketContract.DtView) this.mView).showDialogLoading(true);
-        ((DiscountTicketContract.DtModel) this.mModel).applyCoupon(headerCouponBean, couponActivityBean, new C0390d(headerCouponBean));
+        ((DiscountTicketContract.DtModel) this.mModel).applyCoupon(headerCouponBean, couponActivityBean, new d(headerCouponBean));
     }
 
     @Override // cn.damai.category.discountticket.contract.DiscountTicketContract.DtPresenter
@@ -211,7 +207,7 @@ public class DiscountTicketPresenter extends DiscountTicketContract.DtPresenter 
         if (z) {
             ((DiscountTicketContract.DtView) this.mView).showDialogLoading(true);
         }
-        ((DiscountTicketContract.DtModel) this.mModel).load(new C0386a(z));
+        ((DiscountTicketContract.DtModel) this.mModel).load(new a(z));
     }
 
     @Override // cn.damai.category.discountticket.contract.DiscountTicketContract.DtPresenter
@@ -220,11 +216,11 @@ public class DiscountTicketPresenter extends DiscountTicketContract.DtPresenter 
         if (AndroidInstantRuntime.support(ipChange, "16487554")) {
             ipChange.ipc$dispatch("16487554", new Object[]{this});
         } else {
-            ((DiscountTicketContract.DtModel) this.mModel).loadMore(new C0388b());
+            ((DiscountTicketContract.DtModel) this.mModel).loadMore(new b());
         }
     }
 
-    @Override // cn.damai.common.app.base.AbstractC0470a
+    @Override // cn.damai.common.app.base.a
     public void onDestroy() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-46703310")) {
@@ -260,7 +256,7 @@ public class DiscountTicketPresenter extends DiscountTicketContract.DtPresenter 
         if (AndroidInstantRuntime.support(ipChange, "63513582")) {
             ipChange.ipc$dispatch("63513582", new Object[]{this});
         } else {
-            ((DiscountTicketContract.DtModel) this.mModel).share(new C0389c());
+            ((DiscountTicketContract.DtModel) this.mModel).share(new c());
         }
     }
 }

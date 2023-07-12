@@ -3,7 +3,6 @@ package tb;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
@@ -122,7 +121,7 @@ public abstract class m1 extends AbstractTypeConstructor {
     @Override // kotlin.reflect.jvm.internal.impl.types.AbstractTypeConstructor
     @Nullable
     public z71 g() {
-        if (AbstractC8271b.s0(p())) {
+        if (kotlin.reflect.jvm.internal.impl.builtins.b.s0(p())) {
             return null;
         }
         return getBuiltIns().i();
@@ -130,8 +129,8 @@ public abstract class m1 extends AbstractTypeConstructor {
 
     @Override // kotlin.reflect.jvm.internal.impl.types.TypeConstructor
     @NotNull
-    public AbstractC8271b getBuiltIns() {
-        AbstractC8271b g = DescriptorUtilsKt.g(p());
+    public kotlin.reflect.jvm.internal.impl.builtins.b getBuiltIns() {
+        kotlin.reflect.jvm.internal.impl.builtins.b g = DescriptorUtilsKt.g(p());
         if (g == null) {
             o(1);
         }

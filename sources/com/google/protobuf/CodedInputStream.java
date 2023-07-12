@@ -401,12 +401,12 @@ public final class CodedInputStream {
         return Double.longBitsToDouble(o());
     }
 
-    public <T extends MessageLite> T l(Parser<T> parser, C5401g c5401g) throws IOException {
+    public <T extends MessageLite> T l(Parser<T> parser, g gVar) throws IOException {
         int p = p();
         if (this.k < this.l) {
             int i = i(p);
             this.k++;
-            T parsePartialFrom = parser.parsePartialFrom(this, c5401g);
+            T parsePartialFrom = parser.parsePartialFrom(this, gVar);
             a(0);
             this.k--;
             h(i);

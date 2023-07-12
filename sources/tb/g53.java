@@ -2,7 +2,6 @@ package tb;
 
 import android.content.Context;
 import android.text.TextUtils;
-import com.loc.C5861o;
 import mtopsdk.common.util.SymbolExpUtil;
 
 /* compiled from: Taobao */
@@ -34,7 +33,7 @@ public final class g53 extends j53 {
 
     @Override // tb.j53
     public final void a(int i) {
-        if (C5861o.a0(this.c) == 1) {
+        if (com.loc.o.a0(this.c) == 1) {
             return;
         }
         String c = com.loc.v1.c(System.currentTimeMillis(), "yyyyMMdd");
@@ -54,7 +53,7 @@ public final class g53 extends j53 {
 
     @Override // tb.j53
     protected final boolean c() {
-        if (C5861o.a0(this.c) == 1) {
+        if (com.loc.o.a0(this.c) == 1) {
             return true;
         }
         if (this.d) {
@@ -76,7 +75,7 @@ public final class g53 extends j53 {
     public final int d() {
         int i;
         int i2 = Integer.MAX_VALUE;
-        if ((C5861o.a0(this.c) != 1 && (i = this.e) > 0) || ((i = this.g) > 0 && i < Integer.MAX_VALUE)) {
+        if ((com.loc.o.a0(this.c) != 1 && (i = this.e) > 0) || ((i = this.g) > 0 && i < Integer.MAX_VALUE)) {
             i2 = i;
         }
         j53 j53Var = this.a;

@@ -41,7 +41,7 @@ import com.taobao.weex.common.Constants;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 @TargetApi(26)
@@ -418,7 +418,7 @@ public class Camera2Manager implements Camera2FocusManager.Camera2Operation, Cam
         MPaasLogger.d("Camera2Manager", objArr);
         if (this.d != null && (camera2CharacteristicsCache = this.v) != null && this.a != null && this.b != null && camera2CharacteristicsCache.valid()) {
             if (H()) {
-                Display defaultDisplay = ((WindowManager) this.a.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
+                Display defaultDisplay = ((WindowManager) this.a.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
                 Point point = new Point();
                 com.alibaba.wireless.security.aopsdk.replace.android.view.Display.getSize(defaultDisplay, point);
                 Camera2Config camera2Config = this.d;
@@ -476,7 +476,7 @@ public class Camera2Manager implements Camera2FocusManager.Camera2Operation, Cam
             return false;
         }
         if (camera2Config.valid()) {
-            Display defaultDisplay = ((WindowManager) this.a.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
+            Display defaultDisplay = ((WindowManager) this.a.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
             Point point = new Point();
             com.alibaba.wireless.security.aopsdk.replace.android.view.Display.getSize(defaultDisplay, point);
             return (this.d.screenResolution.equals(point) && (this.d.needDowngradeCameraParams ^ true) == this.F) ? false : true;

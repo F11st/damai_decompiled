@@ -11,13 +11,13 @@ import com.taobao.update.framework.UpdateRuntime;
 import com.taobao.update.instantpatch.InstantPatchUpdater;
 import java.util.ArrayList;
 import java.util.List;
-import tb.C9444mm;
 import tb.fk;
 import tb.hu2;
 import tb.i30;
 import tb.ju2;
 import tb.l6;
 import tb.lu2;
+import tb.mm;
 import tb.mu2;
 import tb.ne2;
 import tb.pu2;
@@ -30,12 +30,11 @@ public class UpdateSDK {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.update.UpdateSDK$a */
     /* loaded from: classes11.dex */
-    public class C6913a implements OrangeConfigListener {
+    public class a implements OrangeConfigListener {
         final /* synthetic */ ju2 a;
 
-        C6913a(UpdateSDK updateSDK, ju2 ju2Var) {
+        a(UpdateSDK updateSDK, ju2 ju2Var) {
             this.a = ju2Var;
         }
 
@@ -50,36 +49,36 @@ public class UpdateSDK {
     }
 
     public UpdateSDK(ju2 ju2Var) {
-        C9444mm c9444mm = ju2Var.config;
-        if (c9444mm == null) {
+        mm mmVar = ju2Var.config;
+        if (mmVar == null) {
             return;
         }
         if (!UpdateDataSource.inited) {
-            UpdateDataSource.getInstance().init(c9444mm.application, c9444mm.group, c9444mm.ttid, c9444mm.isOutApk, new hu2());
-            this.a.add(new i30(c9444mm));
+            UpdateDataSource.getInstance().init(mmVar.application, mmVar.group, mmVar.ttid, mmVar.isOutApk, new hu2());
+            this.a.add(new i30(mmVar));
         }
-        b(c9444mm);
+        b(mmVar);
         if (ju2Var.apkUpdateEnabled) {
             this.a.add(new l6());
         }
         this.a.add(new fk());
-        InstantPatchUpdater.instance().init(c9444mm.application);
+        InstantPatchUpdater.instance().init(mmVar.application);
         UpdateDataSource.getInstance().registerListener(lu2.HOTPATCH, InstantPatchUpdater.instance());
         this.a.add(InstantPatchUpdater.instance());
-        if (c9444mm.enabledSoLoader) {
+        if (mmVar.enabledSoLoader) {
             ne2 instance = ne2.instance();
-            instance.init(c9444mm.application);
+            instance.init(mmVar.application);
             UpdateDataSource.getInstance().registerListener(instance.registerName(), instance);
             this.a.add(instance);
         }
     }
 
-    private void b(C9444mm c9444mm) {
-        int currentRuntimeCpuArchValue = qp.getCurrentRuntimeCpuArchValue(c9444mm.application);
+    private void b(mm mmVar) {
+        int currentRuntimeCpuArchValue = qp.getCurrentRuntimeCpuArchValue(mmVar.application);
         String versionName = pu2.getVersionName();
-        if (PreferenceManager.getDefaultSharedPreferences(c9444mm.application).getInt(versionName.concat("_bit_runtime"), 0) == 0) {
+        if (PreferenceManager.getDefaultSharedPreferences(mmVar.application).getInt(versionName.concat("_bit_runtime"), 0) == 0) {
             AppMonitor.Counter.commit("update-sdk", "bit-runtime", currentRuntimeCpuArchValue);
-            PreferenceManager.getDefaultSharedPreferences(c9444mm.application).edit().putInt(versionName.concat("_bit_runtime"), currentRuntimeCpuArchValue).apply();
+            PreferenceManager.getDefaultSharedPreferences(mmVar.application).edit().putInt(versionName.concat("_bit_runtime"), currentRuntimeCpuArchValue).apply();
         }
     }
 
@@ -94,7 +93,7 @@ public class UpdateSDK {
         if (ju2Var.checkUpdateOnStartUp) {
             UpdateDataSource.getInstance().startUpdate(true, false);
         }
-        OrangeConfig.getInstance().registerListener(new String[]{lu2.UPDATE_CONFIG_GROUP}, new C6913a(this, ju2Var));
+        OrangeConfig.getInstance().registerListener(new String[]{lu2.UPDATE_CONFIG_GROUP}, new a(this, ju2Var));
     }
 
     public void onBackground() {

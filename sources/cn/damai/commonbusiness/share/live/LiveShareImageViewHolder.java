@@ -15,7 +15,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import cn.damai.comment.bean.DmInfo;
 import cn.damai.comment.bean.StoreInfo;
 import cn.damai.comment.view.DMTagView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$color;
 import cn.damai.commonbusiness.R$dimen;
@@ -77,14 +76,13 @@ public class LiveShareImageViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.live.LiveShareImageViewHolder$a */
     /* loaded from: classes.dex */
-    public class C0921a implements DMAvatar.OnImageLoadListener {
+    public class a implements DMAvatar.OnImageLoadListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ AtomicInteger a;
         final /* synthetic */ IFinishCallBack b;
 
-        C0921a(AtomicInteger atomicInteger, IFinishCallBack iFinishCallBack) {
+        a(AtomicInteger atomicInteger, IFinishCallBack iFinishCallBack) {
             this.a = atomicInteger;
             this.b = iFinishCallBack;
         }
@@ -111,14 +109,13 @@ public class LiveShareImageViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.live.LiveShareImageViewHolder$b */
     /* loaded from: classes.dex */
-    public class C0922b implements Function0<wt2> {
+    public class b implements Function0<wt2> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ AtomicInteger a;
         final /* synthetic */ IFinishCallBack b;
 
-        C0922b(AtomicInteger atomicInteger, IFinishCallBack iFinishCallBack) {
+        b(AtomicInteger atomicInteger, IFinishCallBack iFinishCallBack) {
             this.a = atomicInteger;
             this.b = iFinishCallBack;
         }
@@ -136,23 +133,22 @@ public class LiveShareImageViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.share.live.LiveShareImageViewHolder$c */
     /* loaded from: classes.dex */
-    public class C0923c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ AtomicInteger a;
         final /* synthetic */ IFinishCallBack b;
 
-        C0923c(AtomicInteger atomicInteger, IFinishCallBack iFinishCallBack) {
+        c(AtomicInteger atomicInteger, IFinishCallBack iFinishCallBack) {
             this.a = atomicInteger;
             this.b = iFinishCallBack;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "2089033990")) {
-                ipChange.ipc$dispatch("2089033990", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("2089033990", new Object[]{this, eVar});
             } else {
                 LiveShareImageViewHolder.this.i(this.a.incrementAndGet(), this.b);
             }
@@ -201,56 +197,56 @@ public class LiveShareImageViewHolder {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void j(AtomicInteger atomicInteger, IFinishCallBack iFinishCallBack, DMImageCreator.C0501d c0501d) {
+    public /* synthetic */ void j(AtomicInteger atomicInteger, IFinishCallBack iFinishCallBack, DMImageCreator.d dVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1226719105")) {
-            ipChange.ipc$dispatch("-1226719105", new Object[]{this, atomicInteger, iFinishCallBack, c0501d});
+            ipChange.ipc$dispatch("-1226719105", new Object[]{this, atomicInteger, iFinishCallBack, dVar});
         } else {
             i(atomicInteger.incrementAndGet(), iFinishCallBack);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void k(AtomicInteger atomicInteger, IFinishCallBack iFinishCallBack, DMImageCreator.C0502e c0502e) {
+    public /* synthetic */ void k(AtomicInteger atomicInteger, IFinishCallBack iFinishCallBack, DMImageCreator.e eVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1886847775")) {
-            ipChange.ipc$dispatch("1886847775", new Object[]{this, atomicInteger, iFinishCallBack, c0502e});
+            ipChange.ipc$dispatch("1886847775", new Object[]{this, atomicInteger, iFinishCallBack, eVar});
             return;
         }
-        this.d.setImageBitmap(c0502e.b);
+        this.d.setImageBitmap(eVar.b);
         i(atomicInteger.incrementAndGet(), iFinishCallBack);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void l(AtomicInteger atomicInteger, IFinishCallBack iFinishCallBack, DMImageCreator.C0502e c0502e) {
+    public /* synthetic */ void l(AtomicInteger atomicInteger, IFinishCallBack iFinishCallBack, DMImageCreator.e eVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1896618336")) {
-            ipChange.ipc$dispatch("1896618336", new Object[]{this, atomicInteger, iFinishCallBack, c0502e});
+            ipChange.ipc$dispatch("1896618336", new Object[]{this, atomicInteger, iFinishCallBack, eVar});
             return;
         }
-        this.q.setImageBitmap(c0502e.b);
+        this.q.setImageBitmap(eVar.b);
         i(atomicInteger.incrementAndGet(), iFinishCallBack);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void m(AtomicInteger atomicInteger, IFinishCallBack iFinishCallBack, DMImageCreator.C0502e c0502e) {
+    public /* synthetic */ void m(AtomicInteger atomicInteger, IFinishCallBack iFinishCallBack, DMImageCreator.e eVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1906388897")) {
-            ipChange.ipc$dispatch("1906388897", new Object[]{this, atomicInteger, iFinishCallBack, c0502e});
+            ipChange.ipc$dispatch("1906388897", new Object[]{this, atomicInteger, iFinishCallBack, eVar});
             return;
         }
-        this.r.setImageBitmap(c0502e.b);
+        this.r.setImageBitmap(eVar.b);
         i(atomicInteger.incrementAndGet(), iFinishCallBack);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void n(AtomicInteger atomicInteger, IFinishCallBack iFinishCallBack, DMImageCreator.C0502e c0502e) {
+    public /* synthetic */ void n(AtomicInteger atomicInteger, IFinishCallBack iFinishCallBack, DMImageCreator.e eVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1916159458")) {
-            ipChange.ipc$dispatch("1916159458", new Object[]{this, atomicInteger, iFinishCallBack, c0502e});
+            ipChange.ipc$dispatch("1916159458", new Object[]{this, atomicInteger, iFinishCallBack, eVar});
             return;
         }
-        this.s.setImageBitmap(c0502e.b);
+        this.s.setImageBitmap(eVar.b);
         i(atomicInteger.incrementAndGet(), iFinishCallBack);
     }
 
@@ -265,13 +261,13 @@ public class LiveShareImageViewHolder {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void p(AtomicInteger atomicInteger, IFinishCallBack iFinishCallBack, DMImageCreator.C0502e c0502e) {
+    public /* synthetic */ void p(AtomicInteger atomicInteger, IFinishCallBack iFinishCallBack, DMImageCreator.e eVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1935700580")) {
-            ipChange.ipc$dispatch("1935700580", new Object[]{this, atomicInteger, iFinishCallBack, c0502e});
+            ipChange.ipc$dispatch("1935700580", new Object[]{this, atomicInteger, iFinishCallBack, eVar});
             return;
         }
-        this.l.setImageBitmap(c0502e.b);
+        this.l.setImageBitmap(eVar.b);
         i(atomicInteger.incrementAndGet(), iFinishCallBack);
     }
 
@@ -282,13 +278,13 @@ public class LiveShareImageViewHolder {
         if (AndroidInstantRuntime.support(ipChange, "-471894375")) {
             ipChange.ipc$dispatch("-471894375", new Object[]{this, liveShareImageBean, iFinishCallBack});
         } else if (liveShareImageBean != null) {
-            C0504a h = C0504a.b().h(this.a);
+            cn.damai.common.image.a h = cn.damai.common.image.a.b().h(this.a);
             final AtomicInteger atomicInteger = new AtomicInteger(0);
             int imageCount = liveShareImageBean.getImageCount();
             DMImageCreator.DMImageFailListener dMImageFailListener = new DMImageCreator.DMImageFailListener() { // from class: tb.r91
                 @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-                public final void onFail(DMImageCreator.C0501d c0501d) {
-                    LiveShareImageViewHolder.this.j(atomicInteger, iFinishCallBack, c0501d);
+                public final void onFail(DMImageCreator.d dVar) {
+                    LiveShareImageViewHolder.this.j(atomicInteger, iFinishCallBack, dVar);
                 }
             };
             if (!wh2.j(liveShareImageBean.mProjectImage) || (liveShareImageBean.itemType == 1 && (storeInfo = liveShareImageBean.storeInfo) != null && !TextUtils.isEmpty(storeInfo.getStoreImgUrl()))) {
@@ -319,8 +315,8 @@ public class LiveShareImageViewHolder {
                     this.z = i + 2;
                     h.c(liveShareImageBean.mLivePicList.get(0)).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.u91
                         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-                        public final void onSuccess(DMImageCreator.C0502e c0502e) {
-                            LiveShareImageViewHolder.this.k(atomicInteger, iFinishCallBack, c0502e);
+                        public final void onSuccess(DMImageCreator.e eVar) {
+                            LiveShareImageViewHolder.this.k(atomicInteger, iFinishCallBack, eVar);
                         }
                     }).e(dMImageFailListener).f();
                     this.d.setVisibility(0);
@@ -329,20 +325,20 @@ public class LiveShareImageViewHolder {
                     this.z = i + 4;
                     h.c(liveShareImageBean.mLivePicList.get(0)).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.w91
                         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-                        public final void onSuccess(DMImageCreator.C0502e c0502e) {
-                            LiveShareImageViewHolder.this.l(atomicInteger, iFinishCallBack, c0502e);
+                        public final void onSuccess(DMImageCreator.e eVar) {
+                            LiveShareImageViewHolder.this.l(atomicInteger, iFinishCallBack, eVar);
                         }
                     }).e(dMImageFailListener).f();
                     h.c(liveShareImageBean.mLivePicList.get(1)).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.v91
                         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-                        public final void onSuccess(DMImageCreator.C0502e c0502e) {
-                            LiveShareImageViewHolder.this.m(atomicInteger, iFinishCallBack, c0502e);
+                        public final void onSuccess(DMImageCreator.e eVar) {
+                            LiveShareImageViewHolder.this.m(atomicInteger, iFinishCallBack, eVar);
                         }
                     }).e(dMImageFailListener).f();
                     h.c(liveShareImageBean.mLivePicList.get(2)).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.s91
                         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-                        public final void onSuccess(DMImageCreator.C0502e c0502e) {
-                            LiveShareImageViewHolder.this.n(atomicInteger, iFinishCallBack, c0502e);
+                        public final void onSuccess(DMImageCreator.e eVar) {
+                            LiveShareImageViewHolder.this.n(atomicInteger, iFinishCallBack, eVar);
                         }
                     }).e(dMImageFailListener).f();
                     this.d.setVisibility(8);
@@ -361,12 +357,12 @@ public class LiveShareImageViewHolder {
             this.k.setText(liveShareImageBean.mNoteText);
             this.h.setAvatarBorderVisibility(liveShareImageBean.mIsVip ? 0 : 8);
             this.h.setAvatarCrownVisibility(liveShareImageBean.mIsVip ? 0 : 8);
-            this.h.setOnImageLoadListener(new C0921a(atomicInteger, iFinishCallBack));
+            this.h.setOnImageLoadListener(new a(atomicInteger, iFinishCallBack));
             this.h.setAvatar(liveShareImageBean.mIvAccountImage);
             if (liveShareImageBean.itemType == 1 && liveShareImageBean.storeInfo != null) {
                 DmInfo dmInfo = liveShareImageBean.dmInfo;
                 if (dmInfo != null) {
-                    this.y.setDmBaseData(dmInfo.dmHeadImageUrl, dmInfo.dmName, new C0922b(atomicInteger, iFinishCallBack));
+                    this.y.setDmBaseData(dmInfo.dmHeadImageUrl, dmInfo.dmName, new b(atomicInteger, iFinishCallBack));
                     this.y.setDmTagData(liveShareImageBean.dmInfo.dmTags);
                     this.y.setVisibility(0);
                 } else {
@@ -401,8 +397,8 @@ public class LiveShareImageViewHolder {
                 this.o.setText(liveShareImageBean.mProjectInfo);
                 h.c(liveShareImageBean.mProjectImage).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.t91
                     @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-                    public final void onSuccess(DMImageCreator.C0502e c0502e) {
-                        LiveShareImageViewHolder.this.p(atomicInteger, iFinishCallBack, c0502e);
+                    public final void onSuccess(DMImageCreator.e eVar) {
+                        LiveShareImageViewHolder.this.p(atomicInteger, iFinishCallBack, eVar);
                     }
                 }).e(dMImageFailListener).f();
             }
@@ -421,7 +417,7 @@ public class LiveShareImageViewHolder {
             for (int i2 = 0; i2 < size; i2++) {
                 try {
                     this.w[i2].setVisibility(0);
-                    this.w[i2].handleView(liveShareImageBean.mArtistList.get(i2), new C0923c(atomicInteger, iFinishCallBack), dMImageFailListener);
+                    this.w[i2].handleView(liveShareImageBean.mArtistList.get(i2), new c(atomicInteger, iFinishCallBack), dMImageFailListener);
                 } catch (IndexOutOfBoundsException unused) {
                     this.w[i2].setVisibility(8);
                 }

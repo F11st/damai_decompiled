@@ -8,7 +8,7 @@ import io.reactivex.functions.LongConsumer;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.subscriptions.EmptySubscription;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
-import io.reactivex.parallel.AbstractC8161a;
+import io.reactivex.parallel.a;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 import tb.dg0;
@@ -16,7 +16,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ParallelPeek<T> extends AbstractC8161a<T> {
+public final class ParallelPeek<T> extends a<T> {
     final Consumer<? super T> onAfterNext;
     final Action onAfterTerminated;
     final Action onCancel;
@@ -25,7 +25,7 @@ public final class ParallelPeek<T> extends AbstractC8161a<T> {
     final Consumer<? super T> onNext;
     final LongConsumer onRequest;
     final Consumer<? super Subscription> onSubscribe;
-    final AbstractC8161a<T> source;
+    final a<T> source;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -142,8 +142,8 @@ public final class ParallelPeek<T> extends AbstractC8161a<T> {
         }
     }
 
-    public ParallelPeek(AbstractC8161a<T> abstractC8161a, Consumer<? super T> consumer, Consumer<? super T> consumer2, Consumer<? super Throwable> consumer3, Action action, Action action2, Consumer<? super Subscription> consumer4, LongConsumer longConsumer, Action action3) {
-        this.source = abstractC8161a;
+    public ParallelPeek(a<T> aVar, Consumer<? super T> consumer, Consumer<? super T> consumer2, Consumer<? super Throwable> consumer3, Action action, Action action2, Consumer<? super Subscription> consumer4, LongConsumer longConsumer, Action action3) {
+        this.source = aVar;
         this.onNext = (Consumer) ObjectHelper.requireNonNull(consumer, "onNext is null");
         this.onAfterNext = (Consumer) ObjectHelper.requireNonNull(consumer2, "onAfterNext is null");
         this.onError = (Consumer) ObjectHelper.requireNonNull(consumer3, "onError is null");
@@ -154,12 +154,12 @@ public final class ParallelPeek<T> extends AbstractC8161a<T> {
         this.onCancel = (Action) ObjectHelper.requireNonNull(action3, "onCancel is null");
     }
 
-    @Override // io.reactivex.parallel.AbstractC8161a
+    @Override // io.reactivex.parallel.a
     public int parallelism() {
         return this.source.parallelism();
     }
 
-    @Override // io.reactivex.parallel.AbstractC8161a
+    @Override // io.reactivex.parallel.a
     public void subscribe(Subscriber<? super T>[] subscriberArr) {
         if (validate(subscriberArr)) {
             int length = subscriberArr.length;

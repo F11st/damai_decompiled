@@ -4,9 +4,8 @@ import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
@@ -41,13 +40,12 @@ public abstract class AbstractTypeAliasDescriptor extends u40 implements TypeAli
     private final f70 e;
     private List<? extends TypeParameterDescriptor> f;
     @NotNull
-    private final C8311a g;
+    private final a g;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractTypeAliasDescriptor$a */
     /* loaded from: classes3.dex */
-    public static final class C8311a implements TypeConstructor {
-        C8311a() {
+    public static final class a implements TypeConstructor {
+        a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.types.TypeConstructor
@@ -59,7 +57,7 @@ public abstract class AbstractTypeAliasDescriptor extends u40 implements TypeAli
 
         @Override // kotlin.reflect.jvm.internal.impl.types.TypeConstructor
         @NotNull
-        public AbstractC8271b getBuiltIns() {
+        public kotlin.reflect.jvm.internal.impl.builtins.b getBuiltIns() {
             return DescriptorUtilsKt.g(getDeclarationDescriptor());
         }
 
@@ -104,7 +102,7 @@ public abstract class AbstractTypeAliasDescriptor extends u40 implements TypeAli
         b41.i(sourceElement, "sourceElement");
         b41.i(f70Var, "visibilityImpl");
         this.e = f70Var;
-        this.g = new C8311a();
+        this.g = new a();
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor
@@ -119,7 +117,7 @@ public abstract class AbstractTypeAliasDescriptor extends u40 implements TypeAli
         ClassDescriptor classDescriptor = getClassDescriptor();
         MemberScope unsubstitutedMemberScope = classDescriptor == null ? null : classDescriptor.getUnsubstitutedMemberScope();
         if (unsubstitutedMemberScope == null) {
-            unsubstitutedMemberScope = MemberScope.C8499b.INSTANCE;
+            unsubstitutedMemberScope = MemberScope.b.INSTANCE;
         }
         fd2 u = fr2.u(this, unsubstitutedMemberScope, new Function1<b81, fd2>() { // from class: kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractTypeAliasDescriptor$computeDefaultType$1
             /* JADX INFO: Access modifiers changed from: package-private */
@@ -152,17 +150,17 @@ public abstract class AbstractTypeAliasDescriptor extends u40 implements TypeAli
         List g;
         ClassDescriptor classDescriptor = getClassDescriptor();
         if (classDescriptor == null) {
-            g = C8214m.g();
+            g = m.g();
             return g;
         }
         Collection<ClassConstructorDescriptor> constructors = classDescriptor.getConstructors();
         b41.h(constructors, "classDescriptor.constructors");
         ArrayList arrayList = new ArrayList();
         for (ClassConstructorDescriptor classConstructorDescriptor : constructors) {
-            TypeAliasConstructorDescriptorImpl.C8314a c8314a = TypeAliasConstructorDescriptorImpl.Companion;
+            TypeAliasConstructorDescriptorImpl.a aVar = TypeAliasConstructorDescriptorImpl.Companion;
             StorageManager storageManager = getStorageManager();
             b41.h(classConstructorDescriptor, AdvanceSetting.NETWORK_TYPE);
-            TypeAliasConstructorDescriptor b = c8314a.b(storageManager, this, classConstructorDescriptor);
+            TypeAliasConstructorDescriptor b = aVar.b(storageManager, this, classConstructorDescriptor);
             if (b != null) {
                 arrayList.add(b);
             }

@@ -107,7 +107,7 @@ public class ProjectDetailXFlushUtil {
 
     private static String c(String str, String str2, String str3, String str4, String str5) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-610037385") ? (String) ipChange.ipc$dispatch("-610037385", new Object[]{str, str2, str3, str4, str5}) : C2446a.a().b(pl.PROJECT_DETAIL_PAGE).i().a(str3).j().e(str).j().f(str2).g(str4).j().h(str5).d().c();
+        return AndroidInstantRuntime.support(ipChange, "-610037385") ? (String) ipChange.ipc$dispatch("-610037385", new Object[]{str, str2, str3, str4, str5}) : a.a().b(pl.PROJECT_DETAIL_PAGE).i().a(str3).j().e(str).j().f(str2).g(str4).j().h(str5).d().c();
     }
 
     private static String d(String str, String str2, String str3) {

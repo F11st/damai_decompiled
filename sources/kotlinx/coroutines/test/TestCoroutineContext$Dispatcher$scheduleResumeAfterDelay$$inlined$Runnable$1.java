@@ -9,9 +9,9 @@ import tb.wt2;
 /* loaded from: classes11.dex */
 public final class TestCoroutineContext$Dispatcher$scheduleResumeAfterDelay$$inlined$Runnable$1 implements Runnable {
     final /* synthetic */ CancellableContinuation $continuation$inlined;
-    final /* synthetic */ C8718a this$0;
+    final /* synthetic */ a this$0;
 
-    public TestCoroutineContext$Dispatcher$scheduleResumeAfterDelay$$inlined$Runnable$1(C8718a c8718a, CancellableContinuation cancellableContinuation) {
+    public TestCoroutineContext$Dispatcher$scheduleResumeAfterDelay$$inlined$Runnable$1(a aVar, CancellableContinuation cancellableContinuation) {
         this.$continuation$inlined = cancellableContinuation;
     }
 

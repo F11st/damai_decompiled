@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.a;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -19,7 +19,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableConcatMapCompletable<T> extends AbstractC8146a {
+public final class ObservableConcatMapCompletable<T> extends a {
     final int bufferSize;
     final Function<? super T, ? extends CompletableSource> mapper;
     final ObservableSource<T> source;
@@ -206,7 +206,7 @@ public final class ObservableConcatMapCompletable<T> extends AbstractC8146a {
         this.bufferSize = Math.max(8, i);
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     public void subscribeActual(CompletableObserver completableObserver) {
         this.source.subscribe(new SourceObserver(completableObserver, this.mapper, this.bufferSize));
     }

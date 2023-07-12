@@ -34,12 +34,11 @@ public class HorizontalTitleAdapter extends RecyclerView.Adapter<ViewHolder> {
         private View c;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.category.common.ui.adapter.HorizontalTitleAdapter$ViewHolder$a */
         /* loaded from: classes.dex */
-        public class View$OnClickListenerC0374a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC0374a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -85,7 +84,7 @@ public class HorizontalTitleAdapter extends RecyclerView.Adapter<ViewHolder> {
                 }
                 this.a.setText(categoryNewTitleBean.name);
                 this.itemView.setTag(categoryNewTitleBean);
-                this.itemView.setOnClickListener(new View$OnClickListenerC0374a());
+                this.itemView.setOnClickListener(new a());
             }
         }
     }

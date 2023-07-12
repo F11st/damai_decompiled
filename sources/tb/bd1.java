@@ -46,14 +46,14 @@ public final class bd1<K, V> extends w1<Map.Entry<K, V>, K, V> {
         return this.a.containsAllEntries$kotlin_stdlib(collection);
     }
 
-    @Override // kotlin.collections.AbstractC8198c, java.util.AbstractCollection, java.util.Collection, java.util.Set
+    @Override // kotlin.collections.c, java.util.AbstractCollection, java.util.Collection, java.util.Set
     /* renamed from: d */
     public boolean add(@NotNull Map.Entry<K, V> entry) {
         b41.i(entry, "element");
         throw new UnsupportedOperationException();
     }
 
-    @Override // kotlin.collections.AbstractC8198c
+    @Override // kotlin.collections.c
     public int getSize() {
         return this.a.size();
     }

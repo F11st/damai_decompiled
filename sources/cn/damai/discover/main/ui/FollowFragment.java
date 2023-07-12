@@ -17,7 +17,6 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.bean.FollowEvent;
 import cn.damai.commonbusiness.search.bean.FollowDataBean;
 import cn.damai.commonbusiness.wannasee.adapter.MultiAdapter;
@@ -46,12 +45,12 @@ import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.weex.annotation.JSMethod;
 import in.srain.cube.views.ptr.PtrFrameLayout;
 import java.util.HashMap;
-import tb.C9548pb;
-import tb.C9799v3;
 import tb.cs;
 import tb.m62;
+import tb.pb;
 import tb.t3;
 import tb.t60;
+import tb.v3;
 import tb.wo0;
 import tb.x3;
 import tb.xr;
@@ -96,29 +95,28 @@ public class FollowFragment extends Fragment implements PtrChildHandler, OnLoadM
                 return;
             }
             ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-            int a = m62.a(FollowFragment.this.mActivity, 6.0f);
-            int a2 = m62.a(FollowFragment.this.mActivity, 10.0f);
+            int a2 = m62.a(FollowFragment.this.mActivity, 6.0f);
+            int a3 = m62.a(FollowFragment.this.mActivity, 10.0f);
             if (layoutParams instanceof RecyclerView.LayoutParams) {
                 int viewAdapterPosition = ((RecyclerView.LayoutParams) layoutParams).getViewAdapterPosition();
                 if (viewAdapterPosition > 1) {
-                    rect.set(a, a, a, a);
+                    rect.set(a2, a2, a2, a2);
                 } else if (viewAdapterPosition == 0) {
-                    rect.set(0, a2, 0, 0);
+                    rect.set(0, a3, 0, 0);
                 }
             }
         }
     };
-    private View.OnClickListener mFollowClickListener = new View$OnClickListenerC1024h();
-    private View.OnClickListener mFollowItemClickListener = new View$OnClickListenerC1025i();
-    private t3 mLoginListener = new C1017a();
+    private View.OnClickListener mFollowClickListener = new h();
+    private View.OnClickListener mFollowItemClickListener = new i();
+    private t3 mLoginListener = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.FollowFragment$a */
     /* loaded from: classes5.dex */
-    public class C1017a extends t3 {
+    public class a extends t3 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1017a() {
+        a() {
         }
 
         @Override // tb.t3, cn.damai.login.havana.ILoginListener
@@ -133,12 +131,11 @@ public class FollowFragment extends Fragment implements PtrChildHandler, OnLoadM
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.FollowFragment$b */
     /* loaded from: classes5.dex */
-    public class C1018b implements OnErrClickListener {
+    public class b implements OnErrClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1018b() {
+        b() {
         }
 
         @Override // cn.damai.commonbusiness.wannasee.listener.OnErrClickListener
@@ -154,12 +151,11 @@ public class FollowFragment extends Fragment implements PtrChildHandler, OnLoadM
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.FollowFragment$c */
     /* loaded from: classes5.dex */
-    public class C1019c implements OnErrClickListener {
+    public class c implements OnErrClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1019c() {
+        c() {
         }
 
         @Override // cn.damai.commonbusiness.wannasee.listener.OnErrClickListener
@@ -174,13 +170,12 @@ public class FollowFragment extends Fragment implements PtrChildHandler, OnLoadM
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.FollowFragment$d */
     /* loaded from: classes5.dex */
-    public class C1020d implements OnBizListener<FollowBean> {
+    public class d implements OnBizListener<FollowBean> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ PtrFrameLayout a;
 
-        C1020d(FollowFragment followFragment, PtrFrameLayout ptrFrameLayout) {
+        d(FollowFragment followFragment, PtrFrameLayout ptrFrameLayout) {
             this.a = ptrFrameLayout;
         }
 
@@ -207,12 +202,11 @@ public class FollowFragment extends Fragment implements PtrChildHandler, OnLoadM
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.FollowFragment$e */
     /* loaded from: classes5.dex */
-    public class C1021e implements Action<Boolean> {
+    public class e implements Action<Boolean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1021e() {
+        e() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -228,12 +222,11 @@ public class FollowFragment extends Fragment implements PtrChildHandler, OnLoadM
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.FollowFragment$f */
     /* loaded from: classes5.dex */
-    public class C1022f extends x3 {
+    public class f extends x3 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1022f(FollowFragment followFragment) {
+        f(FollowFragment followFragment) {
         }
 
         @Override // cn.damai.commonbusiness.wannasee.listener.MultiClickUt
@@ -242,18 +235,17 @@ public class FollowFragment extends Fragment implements PtrChildHandler, OnLoadM
             if (AndroidInstantRuntime.support(ipChange, "-1097607586")) {
                 ipChange.ipc$dispatch("-1097607586", new Object[]{this, noteBean, Integer.valueOf(i)});
             } else {
-                C9548pb.j(z91.u().t(i, noteBean.id));
+                pb.j(z91.u().t(i, noteBean.id));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.FollowFragment$g */
     /* loaded from: classes5.dex */
-    public class C1023g extends MultiAdapter.C0968f {
+    public class g extends MultiAdapter.f {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1023g(FollowFragment followFragment) {
+        g(FollowFragment followFragment) {
         }
 
         @Override // cn.damai.commonbusiness.wannasee.adapter.MultiAdapter.Exposure
@@ -268,12 +260,11 @@ public class FollowFragment extends Fragment implements PtrChildHandler, OnLoadM
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.FollowFragment$h */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1024h implements View.OnClickListener {
+    public class h implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1024h() {
+        h() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -295,17 +286,16 @@ public class FollowFragment extends Fragment implements PtrChildHandler, OnLoadM
                 FollowFragment followFragment2 = FollowFragment.this;
                 followFragment2.followRequest(i, followFragment2.mFollowUserInfoBean.id, FollowFragment.this.mFollowUserInfoBean.targetType);
             }
-            C0529c.e().x(z91.u().r(FollowFragment.this.mFollowUserInfoBean.index, FollowFragment.this.mFollowUserInfoBean.id, i));
+            cn.damai.common.user.c.e().x(z91.u().r(FollowFragment.this.mFollowUserInfoBean.index, FollowFragment.this.mFollowUserInfoBean.id, i));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.FollowFragment$i */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1025i implements View.OnClickListener {
+    public class i implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1025i() {
+        i() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -328,7 +318,7 @@ public class FollowFragment extends Fragment implements PtrChildHandler, OnLoadM
             }
             bundle.putString("usertype", followUserInfoBean.targetType);
             DMNav.from(FollowFragment.this.mActivity).withExtras(bundle).toUri(NavUri.b(cs.ARTISTID_THEME));
-            C0529c.e().x(z91.u().s(followUserInfoBean.index, followUserInfoBean.id));
+            cn.damai.common.user.c.e().x(z91.u().s(followUserInfoBean.index, followUserInfoBean.id));
         }
     }
 
@@ -460,17 +450,17 @@ public class FollowFragment extends Fragment implements PtrChildHandler, OnLoadM
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // androidx.recyclerview.widget.RecyclerView.OnScrollListener
-            public void onScrolled(RecyclerView recyclerView, int i, int i2) {
+            public void onScrolled(RecyclerView recyclerView, int i2, int i3) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "-1715691986")) {
-                    ipChange2.ipc$dispatch("-1715691986", new Object[]{this, recyclerView, Integer.valueOf(i), Integer.valueOf(i2)});
+                    ipChange2.ipc$dispatch("-1715691986", new Object[]{this, recyclerView, Integer.valueOf(i2), Integer.valueOf(i3)});
                 }
             }
         });
         this.mFollowAdapter = new FollowAdapter(getContext(), this.mFollowClickListener, this.mFollowItemClickListener);
-        MultiAdapter multiAdapter = new MultiAdapter(getContext(), new C9799v3(this.mActivity, new C1022f(this)));
+        MultiAdapter multiAdapter = new MultiAdapter(getContext(), new v3(this.mActivity, new f(this)));
         this.mMultiAdapter = multiAdapter;
-        multiAdapter.i(new C1023g(this));
+        multiAdapter.i(new g(this));
         this.mHeaderView = new wo0(LayoutInflater.from(getContext()).inflate(R$layout.live_follow_people_layout, (ViewGroup) null));
     }
 
@@ -484,10 +474,10 @@ public class FollowFragment extends Fragment implements PtrChildHandler, OnLoadM
         if (this.mRlView.getItemDecorationCount() == 0) {
             this.mRlView.addItemDecoration(this.mItemDecoration);
         }
-        int i = followBean.dataType;
-        if (i == 1) {
-            int a = m62.a(this.mActivity, 15.0f);
-            this.mRlView.setPadding(a, 0, a, 0);
+        int i2 = followBean.dataType;
+        if (i2 == 1) {
+            int a2 = m62.a(this.mActivity, 15.0f);
+            this.mRlView.setPadding(a2, 0, a2, 0);
             if (this.mFirstRequest) {
                 if (this.mRlView.getHeaderContainer() != null) {
                     this.mRlView.getHeaderContainer().removeAllViews();
@@ -500,9 +490,9 @@ public class FollowFragment extends Fragment implements PtrChildHandler, OnLoadM
                 return;
             }
             this.mMultiAdapter.e(followBean.contentList);
-        } else if (i == 2) {
-            int a2 = m62.a(this.mActivity, 15.0f);
-            this.mRlView.setPadding(a2, 0, a2, 0);
+        } else if (i2 == 2) {
+            int a3 = m62.a(this.mActivity, 15.0f);
+            this.mRlView.setPadding(a3, 0, a3, 0);
             if (this.mFirstRequest) {
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.mActivity, 1, false);
                 this.mLinearLayoutManager = linearLayoutManager;
@@ -553,7 +543,7 @@ public class FollowFragment extends Fragment implements PtrChildHandler, OnLoadM
         }
         NestScrollErrResView nestScrollErrResView = this.mResView;
         if (nestScrollErrResView != null) {
-            nestScrollErrResView.showErrorView("", "", new C1019c());
+            nestScrollErrResView.showErrorView("", "", new c());
         }
     }
 
@@ -601,7 +591,7 @@ public class FollowFragment extends Fragment implements PtrChildHandler, OnLoadM
         }
         NestScrollErrResView nestScrollErrResView2 = this.mResView;
         if (nestScrollErrResView2 != null) {
-            nestScrollErrResView2.showLoginView(new C1018b());
+            nestScrollErrResView2.showLoginView(new b());
         }
         return false;
     }
@@ -618,15 +608,15 @@ public class FollowFragment extends Fragment implements PtrChildHandler, OnLoadM
         this.mFirstRequest = true;
     }
 
-    public void followRequest(int i, String str, String str2) {
+    public void followRequest(int i2, String str, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1986684751")) {
-            ipChange.ipc$dispatch("-1986684751", new Object[]{this, Integer.valueOf(i), str, str2});
+            ipChange.ipc$dispatch("-1986684751", new Object[]{this, Integer.valueOf(i2), str, str2});
         } else if (TextUtils.isEmpty(str) || TextUtils.isEmpty(str2)) {
         } else {
             this.mActivity.startProgressDialog();
             FollowPeopleRequest followPeopleRequest = new FollowPeopleRequest();
-            followPeopleRequest.operateType = i;
+            followPeopleRequest.operateType = i2;
             followPeopleRequest.targetId = str;
             followPeopleRequest.targetType = str2;
             followPeopleRequest.request(this.mFollowPeopleListener);
@@ -654,7 +644,7 @@ public class FollowFragment extends Fragment implements PtrChildHandler, OnLoadM
         this.mView = layoutInflater.inflate(R$layout.live_follow_fragment, (ViewGroup) null);
         this.mActivity = (TabLiveActivity) getActivity();
         initView();
-        this.mFollowMessage.b(FollowEvent.LIVE_FOLLOW_EVENT, new C1021e());
+        this.mFollowMessage.b(FollowEvent.LIVE_FOLLOW_EVENT, new e());
         initData();
         this.isViewCreated = true;
         return this.mView;
@@ -705,7 +695,7 @@ public class FollowFragment extends Fragment implements PtrChildHandler, OnLoadM
             ipChange.ipc$dispatch("1992440605", new Object[]{this, ptrFrameLayout, refreshCallBack});
             return;
         }
-        this.mOnceListener = new C1020d(this, ptrFrameLayout);
+        this.mOnceListener = new d(this, ptrFrameLayout);
         request(true);
     }
 

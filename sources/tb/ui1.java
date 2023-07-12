@@ -8,7 +8,6 @@ import androidx.annotation.Nullable;
 import com.alibaba.android.bindingx.core.BindingXCore;
 import com.alibaba.android.bindingx.core.IEventHandler;
 import com.alibaba.android.bindingx.core.PlatformManager;
-import com.alibaba.android.bindingx.core.internal.C3227o;
 import com.alibaba.android.bindingx.plugin.android.INativeViewUpdater;
 import com.alibaba.android.bindingx.plugin.android.NativeCallback;
 import com.alibaba.android.bindingx.plugin.android.NativeViewFinder;
@@ -23,10 +22,9 @@ public class ui1 {
     private BindingXCore a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ui1$a */
     /* loaded from: classes5.dex */
-    class C9772a implements NativeViewFinder {
-        C9772a(ui1 ui1Var) {
+    class a implements NativeViewFinder {
+        a(ui1 ui1Var) {
         }
 
         @Override // com.alibaba.android.bindingx.plugin.android.NativeViewFinder
@@ -49,10 +47,9 @@ public class ui1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ui1$b */
     /* loaded from: classes5.dex */
-    class C9773b implements PlatformManager.IDeviceResolutionTranslator {
-        C9773b(ui1 ui1Var) {
+    class b implements PlatformManager.IDeviceResolutionTranslator {
+        b(ui1 ui1Var) {
         }
 
         @Override // com.alibaba.android.bindingx.core.PlatformManager.IDeviceResolutionTranslator
@@ -67,10 +64,9 @@ public class ui1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ui1$c */
     /* loaded from: classes5.dex */
-    class C9774c implements PlatformManager.IViewUpdater {
-        C9774c(ui1 ui1Var) {
+    class c implements PlatformManager.IViewUpdater {
+        c(ui1 ui1Var) {
         }
 
         @Override // com.alibaba.android.bindingx.core.PlatformManager.IViewUpdater
@@ -80,10 +76,9 @@ public class ui1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ui1$d */
     /* loaded from: classes5.dex */
-    class C9775d implements BindingXCore.ObjectCreator<IEventHandler, Context, PlatformManager> {
-        C9775d(ui1 ui1Var) {
+    class d implements BindingXCore.ObjectCreator<IEventHandler, Context, PlatformManager> {
+        d(ui1 ui1Var) {
         }
 
         @Override // com.alibaba.android.bindingx.core.BindingXCore.ObjectCreator
@@ -95,12 +90,11 @@ public class ui1 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.ui1$e */
     /* loaded from: classes5.dex */
-    public class C9776e implements BindingXCore.JavaScriptCallback {
+    public class e implements BindingXCore.JavaScriptCallback {
         final /* synthetic */ NativeCallback a;
 
-        C9776e(ui1 ui1Var, NativeCallback nativeCallback) {
+        e(ui1 ui1Var, NativeCallback nativeCallback) {
             this.a = nativeCallback;
         }
 
@@ -115,12 +109,11 @@ public class ui1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ui1$f */
     /* loaded from: classes5.dex */
-    static class C9777f implements PlatformManager.IViewFinder {
+    static class f implements PlatformManager.IViewFinder {
         private NativeViewFinder a;
 
-        C9777f(@NonNull NativeViewFinder nativeViewFinder) {
+        f(@NonNull NativeViewFinder nativeViewFinder) {
             this.a = nativeViewFinder;
         }
 
@@ -135,12 +128,11 @@ public class ui1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ui1$g */
     /* loaded from: classes5.dex */
-    static class C9778g implements PlatformManager.IViewUpdater {
+    static class g implements PlatformManager.IViewUpdater {
         private INativeViewUpdater a;
 
-        C9778g(@NonNull INativeViewUpdater iNativeViewUpdater) {
+        g(@NonNull INativeViewUpdater iNativeViewUpdater) {
             this.a = iNativeViewUpdater;
         }
 
@@ -154,17 +146,17 @@ public class ui1 {
     }
 
     private ui1(@Nullable NativeViewFinder nativeViewFinder, @Nullable PlatformManager.IDeviceResolutionTranslator iDeviceResolutionTranslator, @Nullable INativeViewUpdater iNativeViewUpdater, @Nullable PlatformManager.IScrollFactory iScrollFactory) {
-        PlatformManager.IViewUpdater c9778g;
-        nativeViewFinder = nativeViewFinder == null ? new C9772a(this) : nativeViewFinder;
-        iDeviceResolutionTranslator = iDeviceResolutionTranslator == null ? new C9773b(this) : iDeviceResolutionTranslator;
+        PlatformManager.IViewUpdater gVar;
+        nativeViewFinder = nativeViewFinder == null ? new a(this) : nativeViewFinder;
+        iDeviceResolutionTranslator = iDeviceResolutionTranslator == null ? new b(this) : iDeviceResolutionTranslator;
         if (iNativeViewUpdater == null) {
-            c9778g = new C9774c(this);
+            gVar = new c(this);
         } else {
-            c9778g = new C9778g(iNativeViewUpdater);
+            gVar = new g(iNativeViewUpdater);
         }
-        BindingXCore bindingXCore = new BindingXCore(c(new C9777f(nativeViewFinder), iDeviceResolutionTranslator, c9778g, iScrollFactory));
+        BindingXCore bindingXCore = new BindingXCore(c(new f(nativeViewFinder), iDeviceResolutionTranslator, gVar, iScrollFactory));
         this.a = bindingXCore;
-        bindingXCore.i("scroll", new C9775d(this));
+        bindingXCore.i("scroll", new d(this));
     }
 
     public static ui1 b(@Nullable NativeViewFinder nativeViewFinder, @Nullable PlatformManager.IDeviceResolutionTranslator iDeviceResolutionTranslator, @Nullable INativeViewUpdater iNativeViewUpdater, @Nullable PlatformManager.IScrollFactory iScrollFactory) {
@@ -172,7 +164,7 @@ public class ui1 {
     }
 
     private PlatformManager c(@NonNull PlatformManager.IViewFinder iViewFinder, @NonNull PlatformManager.IDeviceResolutionTranslator iDeviceResolutionTranslator, @NonNull PlatformManager.IViewUpdater iViewUpdater, @Nullable PlatformManager.IScrollFactory iScrollFactory) {
-        return new PlatformManager.C3151b().d(iViewFinder).b(iDeviceResolutionTranslator).e(iViewUpdater).c(iScrollFactory).a();
+        return new PlatformManager.b().d(iViewFinder).b(iDeviceResolutionTranslator).e(iViewUpdater).c(iScrollFactory).a();
     }
 
     public Map<String, Object> a(View view, Map<String, Object> map, NativeCallback nativeCallback) {
@@ -183,10 +175,10 @@ public class ui1 {
         if (map == null) {
             map = Collections.emptyMap();
         }
-        String b = this.a.b(view.getContext(), null, map, new C9776e(this, nativeCallback), view);
+        String b2 = this.a.b(view.getContext(), null, map, new e(this, nativeCallback), view);
         HashMap hashMap = new HashMap(2);
-        hashMap.put("token", b);
-        hashMap.put("eventType", C3227o.h(map, "eventType"));
+        hashMap.put("token", b2);
+        hashMap.put("eventType", com.alibaba.android.bindingx.core.internal.o.h(map, "eventType"));
         return hashMap;
     }
 

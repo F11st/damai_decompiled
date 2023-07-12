@@ -1,18 +1,18 @@
 package com.baseproject.utils.speedtest;
 
-import com.baseproject.utils.speedtest.C4669f;
+import com.baseproject.utils.speedtest.f;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 class DNSResolver$1 implements Runnable {
-    final /* synthetic */ C4669f.C4670a val$record;
+    final /* synthetic */ f.a val$record;
 
-    DNSResolver$1(C4669f.C4670a c4670a) {
-        this.val$record = c4670a;
+    DNSResolver$1(f.a aVar) {
+        this.val$record = aVar;
     }
 
     @Override // java.lang.Runnable
     public void run() {
-        C4669f.c(this.val$record);
+        f.c(this.val$record);
     }
 }

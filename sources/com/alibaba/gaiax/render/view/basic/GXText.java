@@ -59,12 +59,11 @@ public class GXText extends AppCompatTextView implements GXIRoundCorner, GXIView
     private Integer lastTopPadding;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.view.basic.GXText$a */
     /* loaded from: classes6.dex */
-    public static final class C3366a extends ViewOutlineProvider {
+    public static final class a extends ViewOutlineProvider {
         final /* synthetic */ float b;
 
-        C3366a(float f) {
+        a(float f) {
             this.b = f;
         }
 
@@ -123,13 +122,13 @@ public class GXText extends AppCompatTextView implements GXIRoundCorner, GXIView
         Integer num;
         Integer num2;
         Integer num3;
-        hs0 a;
+        hs0 a2;
         int i = 0;
         int d2 = (lz1Var == null || (c = lz1Var.c()) == null) ? 0 : c.d();
         int d3 = (lz1Var == null || (d = lz1Var.d()) == null) ? 0 : d.d();
         int d4 = (lz1Var == null || (b = lz1Var.b()) == null) ? 0 : b.d();
-        if (lz1Var != null && (a = lz1Var.a()) != null) {
-            i = a.d();
+        if (lz1Var != null && (a2 = lz1Var.a()) != null) {
+            i = a2.d();
         }
         Integer num4 = this.lastLeftPadding;
         if (num4 != null && num4.intValue() == d2 && (num = this.lastTopPadding) != null && num.intValue() == d3 && (num2 = this.lastRightPadding) != null && num2.intValue() == d4 && (num3 = this.lastBottomPadding) != null && num3.intValue() == i) {
@@ -159,10 +158,10 @@ public class GXText extends AppCompatTextView implements GXIRoundCorner, GXIView
         }
         GXRegisterCenter.GXIExtensionDynamicProperty h = GXRegisterCenter.Companion.a().h();
         if (h != null) {
-            GXRegisterCenter.GXIExtensionDynamicProperty.C3331a c3331a = new GXRegisterCenter.GXIExtensionDynamicProperty.C3331a("line-height", valueOf);
-            c3331a.e(ls0Var);
+            GXRegisterCenter.GXIExtensionDynamicProperty.a aVar = new GXRegisterCenter.GXIExtensionDynamicProperty.a("line-height", valueOf);
+            aVar.e(ls0Var);
             wt2 wt2Var = wt2.INSTANCE;
-            obj = h.convert(c3331a);
+            obj = h.convert(aVar);
         }
         if (obj != null) {
             GXViewExtKt.x(this, ((Float) obj).floatValue());
@@ -258,7 +257,7 @@ public class GXText extends AppCompatTextView implements GXIRoundCorner, GXIView
                     if (f2 == f3) {
                         if ((f3 == f4) && f > 0.0f) {
                             setClipToOutline(true);
-                            setOutlineProvider(new C3366a(f));
+                            setOutlineProvider(new a(f));
                             return;
                         }
                     }

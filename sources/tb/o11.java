@@ -5,7 +5,6 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.member.R$drawable;
 import cn.damai.ticklet.bean.UserTicketTable;
@@ -19,24 +18,23 @@ public class o11 {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.o11$a */
     /* loaded from: classes7.dex */
-    public class C9493a implements DMImageCreator.DMImageSuccListener {
+    public class a implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
-        C9493a(ImageView imageView) {
+        a(ImageView imageView) {
             this.a = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1427224189")) {
-                ipChange.ipc$dispatch("1427224189", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("1427224189", new Object[]{this, eVar});
                 return;
             }
-            Drawable drawable = c0502e.a;
+            Drawable drawable = eVar.a;
             if (drawable != null) {
                 this.a.setImageBitmap(((BitmapDrawable) drawable).getBitmap());
             }
@@ -44,9 +42,8 @@ public class o11 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.o11$b */
     /* loaded from: classes7.dex */
-    public class C9494b implements DMImageCreator.DMImageFailListener {
+    public class b implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ UserTicketTable a;
         final /* synthetic */ ImageView b;
@@ -54,12 +51,11 @@ public class o11 {
         final /* synthetic */ String d;
 
         /* compiled from: Taobao */
-        /* renamed from: tb.o11$b$a */
         /* loaded from: classes7.dex */
-        public class View$OnClickListenerC9495a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC9495a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -69,12 +65,12 @@ public class o11 {
                     ipChange.ipc$dispatch("1361961925", new Object[]{this, view});
                     return;
                 }
-                C9494b c9494b = C9494b.this;
-                o11.c(c9494b.c, c9494b.a, c9494b.b, c9494b.d);
+                b bVar = b.this;
+                o11.c(bVar.c, bVar.a, bVar.b, bVar.d);
             }
         }
 
-        C9494b(UserTicketTable userTicketTable, ImageView imageView, Context context, String str) {
+        b(UserTicketTable userTicketTable, ImageView imageView, Context context, String str) {
             this.a = userTicketTable;
             this.b = imageView;
             this.c = context;
@@ -82,14 +78,14 @@ public class o11 {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1562956778")) {
-                ipChange.ipc$dispatch("1562956778", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("1562956778", new Object[]{this, dVar});
             } else if (this.a.hasAvailableTicket()) {
                 this.b.setImageResource(R$drawable.detail_static_zxing_fail_icon);
-                this.b.setOnClickListener(new View$OnClickListenerC9495a());
-                String valueOf = c0501d != null ? String.valueOf(c0501d.a) : "";
+                this.b.setOnClickListener(new a());
+                String valueOf = dVar != null ? String.valueOf(dVar.a) : "";
                 if (in2.TICKLET_TICKET_VIEW_FLOAT_LAYER.equals(this.d)) {
                     String performId = this.a.getPerformId();
                     UserTicketTable userTicketTable = this.a;
@@ -113,7 +109,7 @@ public class o11 {
                 imageView.setImageResource(R$drawable.detail_zing_userd);
             } else if (xh2.c(userTicketTable.getVerifyCode()) && userTicketTable.isStaticQrcode()) {
                 qa0.a(imageView);
-                imageView.setTag(C0504a.b().c(userTicketTable.getStaticUrl()).e(new C9494b(userTicketTable, imageView, context, str)).n(new C9493a(imageView)).f());
+                imageView.setTag(cn.damai.common.image.a.b().c(userTicketTable.getStaticUrl()).e(new b(userTicketTable, imageView, context, str)).n(new a(imageView)).f());
             } else {
                 new DecodeQRImage(context, userTicketTable, imageView, str).start();
             }

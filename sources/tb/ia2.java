@@ -41,22 +41,22 @@ public class ia2<E> extends ha2 {
     public void v(@NotNull zj<?> zjVar) {
         CancellableContinuation<wt2> cancellableContinuation = this.e;
         Throwable B = zjVar.B();
-        Result.C8174a c8174a = Result.Companion;
+        Result.a aVar = Result.Companion;
         cancellableContinuation.resumeWith(Result.m1271constructorimpl(i32.a(B)));
     }
 
     @Override // tb.ha2
     @Nullable
-    public kj2 w(@Nullable ma1.C9437d c9437d) {
-        Object tryResume = this.e.tryResume(wt2.INSTANCE, c9437d != null ? c9437d.c : null);
+    public kj2 w(@Nullable ma1.d dVar) {
+        Object tryResume = this.e.tryResume(wt2.INSTANCE, dVar != null ? dVar.c : null);
         if (tryResume != null) {
             if (k40.a()) {
                 if (!(tryResume == cg.RESUME_TOKEN)) {
                     throw new AssertionError();
                 }
             }
-            if (c9437d != null) {
-                c9437d.d();
+            if (dVar != null) {
+                dVar.d();
             }
             return cg.RESUME_TOKEN;
         }

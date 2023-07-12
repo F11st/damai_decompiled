@@ -17,7 +17,6 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.address.bean.AddressBean;
 import cn.damai.commonbusiness.address.bean.AddressListBean;
@@ -68,12 +67,11 @@ public class AddressListMVPActivity extends DamaiBaseActivity<AddressListPresent
     private String isAbleAdd = "false";
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.AddressListMVPActivity$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1359a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1359a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -88,12 +86,11 @@ public class AddressListMVPActivity extends DamaiBaseActivity<AddressListPresent
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.AddressListMVPActivity$b */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1360b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1360b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -109,12 +106,11 @@ public class AddressListMVPActivity extends DamaiBaseActivity<AddressListPresent
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.AddressListMVPActivity$c */
     /* loaded from: classes6.dex */
-    public class C1361c implements OnRefreshListener {
+    public class c implements OnRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1361c() {
+        c() {
         }
 
         @Override // cn.damai.uikit.irecycler.OnRefreshListener
@@ -129,19 +125,17 @@ public class AddressListMVPActivity extends DamaiBaseActivity<AddressListPresent
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.AddressListMVPActivity$d */
     /* loaded from: classes6.dex */
-    public class C1362d implements AddressListAdapter.OnAddressItemClickListener {
+    public class d implements AddressListAdapter.OnAddressItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.mine.activity.AddressListMVPActivity$d$a */
         /* loaded from: classes15.dex */
-        public class DialogInterface$OnClickListenerC1363a implements DialogInterface.OnClickListener {
+        public class a implements DialogInterface.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ long a;
 
-            DialogInterface$OnClickListenerC1363a(long j) {
+            a(long j) {
                 this.a = j;
             }
 
@@ -160,7 +154,7 @@ public class AddressListMVPActivity extends DamaiBaseActivity<AddressListPresent
             }
         }
 
-        C1362d() {
+        d() {
         }
 
         @Override // cn.damai.mine.adapter.AddressListAdapter.OnAddressItemClickListener
@@ -192,19 +186,18 @@ public class AddressListMVPActivity extends DamaiBaseActivity<AddressListPresent
                 String[] strArr = {new String(AddressListMVPActivity.this.getResources().getString(R$string.damai_addresslist_del))};
                 if (addressBean != null) {
                     AddressListMVPActivity.this.mDeletedAddress = addressBean;
-                    new AlertDialog.Builder(AddressListMVPActivity.this.mContext).setTitle(AddressListMVPActivity.this.getResources().getString(R$string.damai_addresslist_operation)).setItems(strArr, new DialogInterface$OnClickListenerC1363a(Long.parseLong(AddressListMVPActivity.this.mDeletedAddress.getAddressId()))).show();
+                    new AlertDialog.Builder(AddressListMVPActivity.this.mContext).setTitle(AddressListMVPActivity.this.getResources().getString(R$string.damai_addresslist_operation)).setItems(strArr, new a(Long.parseLong(AddressListMVPActivity.this.mDeletedAddress.getAddressId()))).show();
                 }
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.activity.AddressListMVPActivity$e */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1364e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1364e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -221,7 +214,7 @@ public class AddressListMVPActivity extends DamaiBaseActivity<AddressListPresent
                 Bundle bundle = new Bundle();
                 bundle.putInt(AddAddressActivity.KEY_OPERATION_ADDRESS, 1);
                 DMNav.from(AddressListMVPActivity.this).withExtras(bundle).forResult(101).toUri(cs.b());
-                C0529c.e().x(vf1.x().n());
+                cn.damai.common.user.c.e().x(vf1.x().n());
             }
         }
     }
@@ -272,7 +265,7 @@ public class AddressListMVPActivity extends DamaiBaseActivity<AddressListPresent
         this.mTvPromptContent = (TextView) this.mLvInvalidPromptLayout.findViewById(R$id.mine_address_invalid_prompt_content_tv);
         this.mTvPromptClose = (DMIconFontTextView) this.mLvInvalidPromptLayout.findViewById(R$id.mine_address_invalid_close_prompt_tv);
         this.mRvInvalidPrompt.setVisibility(8);
-        this.mTvPromptClose.setOnClickListener(new View$OnClickListenerC1360b());
+        this.mTvPromptClose.setOnClickListener(new b());
     }
 
     private void initTitle() {
@@ -286,7 +279,7 @@ public class AddressListMVPActivity extends DamaiBaseActivity<AddressListPresent
         TextView textView = (TextView) findViewById(R$id.mine_title_tv);
         this.mTitleTV = textView;
         textView.setText("设置");
-        this.mTvTitleBack.setOnClickListener(new View$OnClickListenerC1359a());
+        this.mTvTitleBack.setOnClickListener(new a());
         if (!wh2.j(this.type)) {
             this.mTitleTV.setText("收货地址");
         } else {
@@ -325,9 +318,9 @@ public class AddressListMVPActivity extends DamaiBaseActivity<AddressListPresent
             ipChange.ipc$dispatch("79469673", new Object[]{this});
             return;
         }
-        this.mAddressRecyclerView.setOnRefreshListener(new C1361c());
-        this.mAddressListAdapter.e(new C1362d());
-        this.tv_add_main.setOnClickListener(new View$OnClickListenerC1364e());
+        this.mAddressRecyclerView.setOnRefreshListener(new c());
+        this.mAddressListAdapter.e(new d());
+        this.tv_add_main.setOnClickListener(new e());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -368,8 +361,8 @@ public class AddressListMVPActivity extends DamaiBaseActivity<AddressListPresent
             ipChange.ipc$dispatch("1833582176", new Object[]{this, str});
             return;
         }
-        boolean e = z20.e();
-        if (!TextUtils.isEmpty(str) && !e) {
+        boolean e2 = z20.e();
+        if (!TextUtils.isEmpty(str) && !e2) {
             this.mRvInvalidPrompt.setVisibility(0);
             this.mTvPromptContent.setText(str);
             return;

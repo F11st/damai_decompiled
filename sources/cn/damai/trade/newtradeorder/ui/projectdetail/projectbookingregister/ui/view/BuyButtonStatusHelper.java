@@ -34,12 +34,11 @@ public class BuyButtonStatusHelper {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectbookingregister.ui.view.BuyButtonStatusHelper$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2267a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2267a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -109,7 +108,7 @@ public class BuyButtonStatusHelper {
             g(str2, "暂不可售", "", false, null);
             return;
         }
-        g(str2, "预定登记", "", true, new View$OnClickListenerC2267a());
+        g(str2, "预定登记", "", true, new a());
         kv1.h().j(this.b, String.valueOf(this.f));
     }
 

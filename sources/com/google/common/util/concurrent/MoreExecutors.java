@@ -4,10 +4,9 @@ import com.google.common.annotations.Beta;
 import com.google.common.annotations.GwtCompatible;
 import com.google.common.annotations.GwtIncompatible;
 import com.google.common.annotations.VisibleForTesting;
-import com.google.common.base.C4844i;
 import com.google.common.base.Supplier;
-import com.google.common.util.concurrent.AbstractC5348h;
 import com.google.common.util.concurrent.AbstractFuture;
+import com.google.common.util.concurrent.h;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
@@ -80,14 +79,14 @@ public final class MoreExecutors {
     /* compiled from: Taobao */
     @GwtIncompatible
     /* loaded from: classes10.dex */
-    private static final class ScheduledListeningDecorator extends C5321d implements ListeningScheduledExecutorService {
+    private static final class ScheduledListeningDecorator extends d implements ListeningScheduledExecutorService {
         final ScheduledExecutorService b;
 
         /* JADX INFO: Access modifiers changed from: private */
         /* compiled from: Taobao */
         @GwtIncompatible
         /* loaded from: classes10.dex */
-        public static final class NeverSuccessfulListenableFutureTask extends AbstractFuture.AbstractC5300g<Void> implements Runnable {
+        public static final class NeverSuccessfulListenableFutureTask extends AbstractFuture.g<Void> implements Runnable {
             private final Runnable delegate;
 
             public NeverSuccessfulListenableFutureTask(Runnable runnable) {
@@ -100,19 +99,18 @@ public final class MoreExecutors {
                     this.delegate.run();
                 } catch (Throwable th) {
                     setException(th);
-                    throw C4844i.e(th);
+                    throw com.google.common.base.i.e(th);
                 }
             }
         }
 
         /* JADX INFO: Access modifiers changed from: private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.util.concurrent.MoreExecutors$ScheduledListeningDecorator$a */
         /* loaded from: classes10.dex */
-        public static final class C5317a<V> extends AbstractC5348h.AbstractC5349a<V> implements ListenableScheduledFuture<V> {
+        public static final class a<V> extends h.a<V> implements ListenableScheduledFuture<V> {
             private final ScheduledFuture<?> b;
 
-            public C5317a(ListenableFuture<V> listenableFuture, ScheduledFuture<?> scheduledFuture) {
+            public a(ListenableFuture<V> listenableFuture, ScheduledFuture<?> scheduledFuture) {
                 super(listenableFuture);
                 this.b = scheduledFuture;
             }
@@ -123,7 +121,7 @@ public final class MoreExecutors {
                 return this.b.compareTo(delayed);
             }
 
-            @Override // com.google.common.util.concurrent.AbstractFutureC5347g, java.util.concurrent.Future
+            @Override // com.google.common.util.concurrent.g, java.util.concurrent.Future
             public boolean cancel(boolean z) {
                 boolean cancel = super.cancel(z);
                 if (cancel) {
@@ -146,36 +144,35 @@ public final class MoreExecutors {
         @Override // java.util.concurrent.ScheduledExecutorService
         public ListenableScheduledFuture<?> scheduleAtFixedRate(Runnable runnable, long j, long j2, TimeUnit timeUnit) {
             NeverSuccessfulListenableFutureTask neverSuccessfulListenableFutureTask = new NeverSuccessfulListenableFutureTask(runnable);
-            return new C5317a(neverSuccessfulListenableFutureTask, this.b.scheduleAtFixedRate(neverSuccessfulListenableFutureTask, j, j2, timeUnit));
+            return new a(neverSuccessfulListenableFutureTask, this.b.scheduleAtFixedRate(neverSuccessfulListenableFutureTask, j, j2, timeUnit));
         }
 
         @Override // java.util.concurrent.ScheduledExecutorService
         public ListenableScheduledFuture<?> scheduleWithFixedDelay(Runnable runnable, long j, long j2, TimeUnit timeUnit) {
             NeverSuccessfulListenableFutureTask neverSuccessfulListenableFutureTask = new NeverSuccessfulListenableFutureTask(runnable);
-            return new C5317a(neverSuccessfulListenableFutureTask, this.b.scheduleWithFixedDelay(neverSuccessfulListenableFutureTask, j, j2, timeUnit));
+            return new a(neverSuccessfulListenableFutureTask, this.b.scheduleWithFixedDelay(neverSuccessfulListenableFutureTask, j, j2, timeUnit));
         }
 
         @Override // java.util.concurrent.ScheduledExecutorService
         public ListenableScheduledFuture<?> schedule(Runnable runnable, long j, TimeUnit timeUnit) {
             TrustedListenableFutureTask create = TrustedListenableFutureTask.create(runnable, null);
-            return new C5317a(create, this.b.schedule(create, j, timeUnit));
+            return new a(create, this.b.schedule(create, j, timeUnit));
         }
 
         @Override // java.util.concurrent.ScheduledExecutorService
         public <V> ListenableScheduledFuture<V> schedule(Callable<V> callable, long j, TimeUnit timeUnit) {
             TrustedListenableFutureTask create = TrustedListenableFutureTask.create(callable);
-            return new C5317a(create, this.b.schedule(create, j, timeUnit));
+            return new a(create, this.b.schedule(create, j, timeUnit));
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.util.concurrent.MoreExecutors$a */
     /* loaded from: classes10.dex */
-    static class ExecutorC5318a implements Executor {
+    static class a implements Executor {
         final /* synthetic */ Executor a;
         final /* synthetic */ Supplier b;
 
-        ExecutorC5318a(Executor executor, Supplier supplier) {
+        a(Executor executor, Supplier supplier) {
             this.a = executor;
             this.b = supplier;
         }
@@ -187,25 +184,24 @@ public final class MoreExecutors {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.util.concurrent.MoreExecutors$b */
     /* loaded from: classes10.dex */
-    static class C5319b extends AbstractScheduledExecutorServiceC5365s {
+    static class b extends s {
         final /* synthetic */ Supplier c;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        C5319b(ScheduledExecutorService scheduledExecutorService, Supplier supplier) {
+        b(ScheduledExecutorService scheduledExecutorService, Supplier supplier) {
             super(scheduledExecutorService);
             this.c = supplier;
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.google.common.util.concurrent.AbstractExecutorServiceC5364r
+        @Override // com.google.common.util.concurrent.r
         public Runnable a(Runnable runnable) {
             return Callables.b(runnable, this.c);
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
-        @Override // com.google.common.util.concurrent.AbstractExecutorServiceC5364r
+        @Override // com.google.common.util.concurrent.r
         public <T> Callable<T> b(Callable<T> callable) {
             return Callables.c(callable, this.c);
         }
@@ -214,19 +210,17 @@ public final class MoreExecutors {
     /* compiled from: Taobao */
     @VisibleForTesting
     @GwtIncompatible
-    /* renamed from: com.google.common.util.concurrent.MoreExecutors$c */
     /* loaded from: classes10.dex */
-    static class C5320c {
+    static class c {
     }
 
     /* compiled from: Taobao */
     @GwtIncompatible
-    /* renamed from: com.google.common.util.concurrent.MoreExecutors$d */
     /* loaded from: classes10.dex */
-    private static class C5321d extends AbstractC5326b {
+    private static class d extends com.google.common.util.concurrent.b {
         private final ExecutorService a;
 
-        C5321d(ExecutorService executorService) {
+        d(ExecutorService executorService) {
             this.a = (ExecutorService) du1.p(executorService);
         }
 
@@ -282,7 +276,7 @@ public final class MoreExecutors {
         if (executorService instanceof ListeningExecutorService) {
             return (ListeningExecutorService) executorService;
         }
-        return executorService instanceof ScheduledExecutorService ? new ScheduledListeningDecorator((ScheduledExecutorService) executorService) : new C5321d(executorService);
+        return executorService instanceof ScheduledExecutorService ? new ScheduledListeningDecorator((ScheduledExecutorService) executorService) : new d(executorService);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -313,7 +307,7 @@ public final class MoreExecutors {
         } catch (NoSuchMethodException e3) {
             throw new RuntimeException("Couldn't invoke ThreadManager.currentRequestThreadFactory", e3);
         } catch (InvocationTargetException e4) {
-            throw C4844i.e(e4.getCause());
+            throw com.google.common.base.i.e(e4.getCause());
         }
     }
 
@@ -329,7 +323,7 @@ public final class MoreExecutors {
     public static Executor g(Executor executor, Supplier<String> supplier) {
         du1.p(executor);
         du1.p(supplier);
-        return b() ? executor : new ExecutorC5318a(executor, supplier);
+        return b() ? executor : new a(executor, supplier);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -337,6 +331,6 @@ public final class MoreExecutors {
     public static ScheduledExecutorService h(ScheduledExecutorService scheduledExecutorService, Supplier<String> supplier) {
         du1.p(scheduledExecutorService);
         du1.p(supplier);
-        return b() ? scheduledExecutorService : new C5319b(scheduledExecutorService, supplier);
+        return b() ? scheduledExecutorService : new b(scheduledExecutorService, supplier);
     }
 }

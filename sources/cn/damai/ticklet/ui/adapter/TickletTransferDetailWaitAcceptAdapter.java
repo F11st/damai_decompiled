@@ -56,13 +56,12 @@ public class TickletTransferDetailWaitAcceptAdapter extends RecyclerView.Adapter
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.adapter.TickletTransferDetailWaitAcceptAdapter$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2052a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TicketPerformTransferAcceptResult.TicketPerformTransferData a;
 
-        View$OnClickListenerC2052a(TicketPerformTransferAcceptResult.TicketPerformTransferData ticketPerformTransferData) {
+        a(TicketPerformTransferAcceptResult.TicketPerformTransferData ticketPerformTransferData) {
             this.a = ticketPerformTransferData;
         }
 
@@ -144,7 +143,7 @@ public class TickletTransferDetailWaitAcceptAdapter extends RecyclerView.Adapter
         } else {
             viewHolder.g.setVisibility(8);
         }
-        viewHolder.i.setOnClickListener(new View$OnClickListenerC2052a(ticketPerformTransferData));
+        viewHolder.i.setOnClickListener(new a(ticketPerformTransferData));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.d;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.disposables.EmptyDisposable;
 import io.reactivex.internal.functions.ObjectHelper;
@@ -97,7 +97,7 @@ public final class ObservableScalarXMap {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    public static final class ScalarXMapObservable<T, R> extends AbstractC8149d<R> {
+    public static final class ScalarXMapObservable<T, R> extends d<R> {
         final Function<? super T, ? extends ObservableSource<? extends R>> mapper;
         final T value;
 
@@ -106,7 +106,7 @@ public final class ObservableScalarXMap {
             this.mapper = function;
         }
 
-        @Override // io.reactivex.AbstractC8149d
+        @Override // io.reactivex.d
         public void subscribeActual(Observer<? super R> observer) {
             try {
                 ObservableSource observableSource = (ObservableSource) ObjectHelper.requireNonNull(this.mapper.apply((T) this.value), "The mapper returned a null ObservableSource");
@@ -138,7 +138,7 @@ public final class ObservableScalarXMap {
         throw new IllegalStateException("No instances!");
     }
 
-    public static <T, U> AbstractC8149d<U> scalarXMap(T t, Function<? super T, ? extends ObservableSource<? extends U>> function) {
+    public static <T, U> d<U> scalarXMap(T t, Function<? super T, ? extends ObservableSource<? extends U>> function) {
         return i42.n(new ScalarXMapObservable(t, function));
     }
 

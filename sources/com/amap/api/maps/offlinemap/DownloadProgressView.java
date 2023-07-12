@@ -9,7 +9,7 @@ import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.View;
 import androidx.core.internal.view.SupportMenu;
-import com.amap.api.mapcore.util.C4467a;
+import com.amap.api.mapcore.util.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -34,7 +34,7 @@ public class DownloadProgressView extends View {
     }
 
     private void a(AttributeSet attributeSet, int i) {
-        TypedArray obtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, C4467a.C4468a.a, i, 0);
+        TypedArray obtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, a.C0211a.a, i, 0);
         this.a = obtainStyledAttributes.getString(0);
         this.b = obtainStyledAttributes.getColor(3, this.b);
         this.d = obtainStyledAttributes.getDimension(1, this.d);

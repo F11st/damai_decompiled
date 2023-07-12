@@ -32,13 +32,12 @@ public class ScrollLottieLinearView extends ScrollLinearView {
     private float mStopX;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.snake.ScrollLottieLinearView$a */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC2550a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View.OnClickListener a;
 
-        View$OnClickListenerC2550a(ScrollLottieLinearView scrollLottieLinearView, View.OnClickListener onClickListener) {
+        a(ScrollLottieLinearView scrollLottieLinearView, View.OnClickListener onClickListener) {
             this.a = onClickListener;
         }
 
@@ -133,7 +132,7 @@ public class ScrollLottieLinearView extends ScrollLinearView {
                     RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(-2, -1);
                     inflate.setPadding(dip2px(this.mSpace / 2), 0, dip2px(this.mSpace / 2), 0);
                     inflate.setLayoutParams(layoutParams);
-                    inflate.setOnClickListener(new View$OnClickListenerC2550a(this, onClickListener));
+                    inflate.setOnClickListener(new a(this, onClickListener));
                     addView(inflate);
                 }
             }

@@ -13,11 +13,10 @@ public class ss1 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.ss1$a */
     /* loaded from: classes3.dex */
-    public static final class C9699a {
+    public static final class a {
         @NotNull
-        public static final C9699a INSTANCE = new C9699a();
+        public static final a INSTANCE = new a();
         @JvmField
         @Nullable
         public static final Method addSuppressed;
@@ -31,7 +30,7 @@ public class ss1 {
             /*
                 tb.ss1$a r0 = new tb.ss1$a
                 r0.<init>()
-                tb.ss1.C9699a.INSTANCE = r0
+                tb.ss1.a.INSTANCE = r0
                 java.lang.Class<java.lang.Throwable> r0 = java.lang.Throwable.class
                 java.lang.reflect.Method[] r1 = r0.getMethods()
                 java.lang.String r2 = "throwableMethods"
@@ -50,7 +49,7 @@ public class ss1 {
                 java.lang.Class[] r7 = r6.getParameterTypes()
                 java.lang.String r8 = "it.parameterTypes"
                 tb.b41.h(r7, r8)
-                java.lang.Object r7 = kotlin.collections.C8202e.M(r7)
+                java.lang.Object r7 = kotlin.collections.e.M(r7)
                 boolean r7 = tb.b41.d(r7, r0)
                 if (r7 == 0) goto L3b
                 r7 = 1
@@ -66,7 +65,7 @@ public class ss1 {
             L42:
                 r6 = r5
             L43:
-                tb.ss1.C9699a.addSuppressed = r6
+                tb.ss1.a.addSuppressed = r6
                 int r0 = r1.length
             L46:
                 if (r3 >= r0) goto L5b
@@ -81,20 +80,20 @@ public class ss1 {
                 int r3 = r3 + 1
                 goto L46
             L5b:
-                tb.ss1.C9699a.getSuppressed = r5
+                tb.ss1.a.getSuppressed = r5
                 return
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.ss1.C9699a.<clinit>():void");
+            throw new UnsupportedOperationException("Method not decompiled: tb.ss1.a.<clinit>():void");
         }
 
-        private C9699a() {
+        private a() {
         }
     }
 
     public void a(@NotNull Throwable th, @NotNull Throwable th2) {
         b41.i(th, "cause");
         b41.i(th2, "exception");
-        Method method = C9699a.addSuppressed;
+        Method method = a.addSuppressed;
         if (method != null) {
             method.invoke(th, th2);
         }

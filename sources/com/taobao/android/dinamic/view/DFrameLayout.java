@@ -5,7 +5,7 @@ import android.graphics.Canvas;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
-import com.taobao.android.dinamic.C6313b;
+import com.taobao.android.dinamic.b;
 import com.taobao.android.dinamic.property.DAttrConstant;
 import java.util.Map;
 import tb.d90;
@@ -42,7 +42,7 @@ public class DFrameLayout extends FrameLayout {
 
     @Override // android.widget.FrameLayout, android.view.ViewGroup
     public FrameLayout.LayoutParams generateLayoutParams(AttributeSet attributeSet) {
-        Map<String, Object> map = C6313b.d(m80.D_FRAME_LAYOUT).handleAttributeSet(attributeSet).b;
+        Map<String, Object> map = b.d(m80.D_FRAME_LAYOUT).handleAttributeSet(attributeSet).b;
         int a = oq.a(map);
         String str = (String) map.get(DAttrConstant.VIEW_WIDTH);
         String str2 = (String) map.get(DAttrConstant.VIEW_HEIGHT);

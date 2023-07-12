@@ -8,13 +8,13 @@ import com.android.alibaba.ip.runtime.IpChange;
 /* loaded from: classes13.dex */
 public class ReLinkerInstance$1 implements Runnable {
     private static transient /* synthetic */ IpChange $ipChange;
-    final /* synthetic */ C0523a this$0;
+    final /* synthetic */ a this$0;
     final /* synthetic */ Context val$context;
     final /* synthetic */ String val$library;
     final /* synthetic */ ReLinker$LoadListener val$listener;
     final /* synthetic */ String val$version;
 
-    ReLinkerInstance$1(C0523a c0523a, Context context, String str, String str2, ReLinker$LoadListener reLinker$LoadListener) {
+    ReLinkerInstance$1(a aVar, Context context, String str, String str2, ReLinker$LoadListener reLinker$LoadListener) {
         this.val$context = context;
         this.val$library = str;
         this.val$version = str2;
@@ -29,7 +29,7 @@ public class ReLinkerInstance$1 implements Runnable {
             return;
         }
         try {
-            C0523a.a(this.this$0, this.val$context, this.val$library, this.val$version);
+            a.a(this.this$0, this.val$context, this.val$library, this.val$version);
             this.val$listener.success();
         } catch (MissingLibraryException e) {
             this.val$listener.failure(e);

@@ -3,7 +3,7 @@ package com.youku.tinywindow.floatwindow.permission.rom;
 import android.text.TextUtils;
 import android.util.Log;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
-import com.alipay.sdk.m.c.C4151a;
+import com.alipay.sdk.m.c.a;
 import com.taobao.weex.annotation.JSMethod;
 
 /* compiled from: Taobao */
@@ -39,7 +39,7 @@ public class RomUtils {
 
     public static double getEmuiVersion() {
         try {
-            String systemProperty = getSystemProperty(C4151a.a);
+            String systemProperty = getSystemProperty(a.a);
             return Double.parseDouble(systemProperty.substring(systemProperty.indexOf(JSMethod.NOT_SET) + 1));
         } catch (Exception e) {
             e.printStackTrace();

@@ -3,7 +3,6 @@ package tb;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import com.idlefish.flutterboost.C5775b;
 import com.taobao.weex.annotation.JSMethod;
 import io.flutter.embedding.android.FlutterView;
 import io.flutter.embedding.engine.FlutterEngine;
@@ -50,11 +49,11 @@ public class bo0 {
         return null;
     }
 
-    public static C5775b d(FlutterEngine flutterEngine) {
+    public static com.idlefish.flutterboost.b d(FlutterEngine flutterEngine) {
         if (flutterEngine != null) {
             try {
-                int i = C5775b.i;
-                return (C5775b) flutterEngine.getPlugins().get(C5775b.class);
+                int i = com.idlefish.flutterboost.b.i;
+                return (com.idlefish.flutterboost.b) flutterEngine.getPlugins().get(com.idlefish.flutterboost.b.class);
             } catch (Throwable th) {
                 th.printStackTrace();
                 return null;

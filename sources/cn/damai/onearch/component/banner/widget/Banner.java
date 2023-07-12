@@ -277,13 +277,12 @@ public class Banner extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.onearch.component.banner.widget.Banner$a */
     /* loaded from: classes15.dex */
-    public class C1488a extends ViewOutlineProvider {
+    public class a extends ViewOutlineProvider {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ float a;
 
-        C1488a(Banner banner, float f) {
+        a(Banner banner, float f) {
             this.a = f;
         }
 
@@ -614,7 +613,7 @@ public class Banner extends RelativeLayout {
         if (AndroidInstantRuntime.support(ipChange, "-1879337738")) {
             return (Banner) ipChange.ipc$dispatch("-1879337738", new Object[]{this, Float.valueOf(f)});
         }
-        setOutlineProvider(new C1488a(this, f));
+        setOutlineProvider(new a(this, f));
         setClipToOutline(true);
         return this;
     }

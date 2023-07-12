@@ -33,7 +33,7 @@ public final class HorizontalPageView extends GenericHorizontalView implements H
     @NotNull
     private final View itemView;
     @NotNull
-    public static final C3455a Companion = new C3455a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final String SCROLLER_TAG_KEY = "HOME_CALENDAR_SCROLLER";
 
@@ -85,15 +85,14 @@ public final class HorizontalPageView extends GenericHorizontalView implements H
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.home.HorizontalPageView$a */
     /* loaded from: classes7.dex */
-    public static final class C3455a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3455a() {
+        private a() {
         }
 
-        public /* synthetic */ C3455a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -236,7 +235,7 @@ public final class HorizontalPageView extends GenericHorizontalView implements H
             r4.<init>(r7, r8, r0)
             r5 = 3
             r6 = 0
-            kotlinx.coroutines.C8658e.b(r1, r2, r3, r4, r5, r6)
+            kotlinx.coroutines.e.b(r1, r2, r3, r4, r5, r6)
         Lbf:
             return
         */

@@ -4,18 +4,18 @@ import io.reactivex.functions.BiFunction;
 import io.reactivex.functions.Function;
 import io.reactivex.internal.fuseable.ConditionalSubscriber;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
-import io.reactivex.parallel.AbstractC8161a;
 import io.reactivex.parallel.ParallelFailureHandling;
+import io.reactivex.parallel.a;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ParallelMapTry<T, R> extends AbstractC8161a<R> {
+public final class ParallelMapTry<T, R> extends a<R> {
     final BiFunction<? super Long, ? super Throwable, ParallelFailureHandling> errorHandler;
     final Function<? super T, ? extends R> mapper;
-    final AbstractC8161a<T> source;
+    final a<T> source;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
@@ -296,18 +296,18 @@ public final class ParallelMapTry<T, R> extends AbstractC8161a<R> {
         }
     }
 
-    public ParallelMapTry(AbstractC8161a<T> abstractC8161a, Function<? super T, ? extends R> function, BiFunction<? super Long, ? super Throwable, ParallelFailureHandling> biFunction) {
-        this.source = abstractC8161a;
+    public ParallelMapTry(a<T> aVar, Function<? super T, ? extends R> function, BiFunction<? super Long, ? super Throwable, ParallelFailureHandling> biFunction) {
+        this.source = aVar;
         this.mapper = function;
         this.errorHandler = biFunction;
     }
 
-    @Override // io.reactivex.parallel.AbstractC8161a
+    @Override // io.reactivex.parallel.a
     public int parallelism() {
         return this.source.parallelism();
     }
 
-    @Override // io.reactivex.parallel.AbstractC8161a
+    @Override // io.reactivex.parallel.a
     public void subscribe(Subscriber<? super R>[] subscriberArr) {
         if (validate(subscriberArr)) {
             int length = subscriberArr.length;

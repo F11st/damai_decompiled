@@ -2,7 +2,6 @@ package tb;
 
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
 import java.util.List;
-import kotlin.collections.C8214m;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.jvm.JvmOverloads;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
@@ -42,7 +41,7 @@ public class jf0 extends fd2 {
     }
 
     public /* synthetic */ jf0(TypeConstructor typeConstructor, MemberScope memberScope, List list, boolean z, String str, int i, k50 k50Var) {
-        this(typeConstructor, memberScope, (i & 4) != 0 ? C8214m.g() : list, (i & 8) != 0 ? false : z, (i & 16) != 0 ? "???" : str);
+        this(typeConstructor, memberScope, (i & 4) != 0 ? kotlin.collections.m.g() : list, (i & 8) != 0 ? false : z, (i & 16) != 0 ? "???" : str);
     }
 
     @Override // tb.z71

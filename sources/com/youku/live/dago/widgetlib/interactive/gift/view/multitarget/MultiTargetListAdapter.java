@@ -99,7 +99,7 @@ public class MultiTargetListAdapter extends RecyclerView.Adapter {
             avaterViewHolder.mSeat.setBackground(ThemeUtils.getDrawable(this.bgRingColor, 0, 0, this.basePx * 7));
         } else {
             avaterViewHolder.mOval.setVisibility(8);
-            avaterViewHolder.mSeat.setBackground(this.mContext.getResources().getDrawable(R.C7941drawable.dago_pgc_ykl_gift_target_mic_item_unchecked_text_bg));
+            avaterViewHolder.mSeat.setBackground(this.mContext.getResources().getDrawable(R.drawable.dago_pgc_ykl_gift_target_mic_item_unchecked_text_bg));
         }
         avaterViewHolder.itemView.setOnClickListener(new View.OnClickListener() { // from class: com.youku.live.dago.widgetlib.interactive.gift.view.multitarget.MultiTargetListAdapter.1
             private static transient /* synthetic */ IpChange $ipChange;
@@ -122,7 +122,7 @@ public class MultiTargetListAdapter extends RecyclerView.Adapter {
         if (AndroidInstantRuntime.support(ipChange, "-386829588")) {
             return (RecyclerView.ViewHolder) ipChange.ipc$dispatch("-386829588", new Object[]{this, viewGroup, Integer.valueOf(i)});
         }
-        AvaterViewHolder avaterViewHolder = new AvaterViewHolder(View.inflate(this.mContext, R.C7942layout.dago_pgc_ykl_gift_target_mic_avatar_item, null));
+        AvaterViewHolder avaterViewHolder = new AvaterViewHolder(View.inflate(this.mContext, R.layout.dago_pgc_ykl_gift_target_mic_avatar_item, null));
         avaterViewHolder.updateTheme(this.mContext, this.bgRingColor);
         return avaterViewHolder;
     }

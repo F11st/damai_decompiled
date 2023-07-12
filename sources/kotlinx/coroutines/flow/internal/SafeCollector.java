@@ -7,7 +7,6 @@ import kotlin.Result;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
 import kotlin.coroutines.EmptyCoroutineContext;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.ContinuationImpl;
 import kotlin.coroutines.jvm.internal.CoroutineStackFrame;
 import kotlin.jvm.JvmField;
@@ -39,7 +38,7 @@ public final class SafeCollector<T> extends ContinuationImpl implements FlowColl
 
     /* JADX WARN: Multi-variable type inference failed */
     public SafeCollector(@NotNull FlowCollector<? super T> flowCollector, @NotNull CoroutineContext coroutineContext) {
-        super(C8683b.INSTANCE, EmptyCoroutineContext.INSTANCE);
+        super(b.INSTANCE, EmptyCoroutineContext.INSTANCE);
         this.collector = flowCollector;
         this.collectContext = coroutineContext;
         this.collectContextSize = ((Number) coroutineContext.fold(0, new Function2<Integer, CoroutineContext.Element, Integer>() { // from class: kotlinx.coroutines.flow.internal.SafeCollector$collectContextSize$1
@@ -75,11 +74,11 @@ public final class SafeCollector<T> extends ContinuationImpl implements FlowColl
         Object d2;
         try {
             Object emit = emit(continuation, (Continuation<? super wt2>) t);
-            d = C8234b.d();
+            d = kotlin.coroutines.intrinsics.b.d();
             if (emit == d) {
                 n40.c(continuation);
             }
-            d2 = C8234b.d();
+            d2 = kotlin.coroutines.intrinsics.b.d();
             return emit == d2 ? emit : wt2.INSTANCE;
         } catch (Throwable th) {
             this.lastEmissionContext = new uc0(th);
@@ -123,7 +122,7 @@ public final class SafeCollector<T> extends ContinuationImpl implements FlowColl
         if (continuation != null) {
             continuation.resumeWith(obj);
         }
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         return d;
     }
 

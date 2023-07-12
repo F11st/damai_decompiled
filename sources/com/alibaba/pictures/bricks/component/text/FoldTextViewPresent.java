@@ -32,12 +32,11 @@ public final class FoldTextViewPresent extends AbsPresenter<GenericItem<ItemValu
     public FoldTextView curentView;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.text.FoldTextViewPresent$a */
     /* loaded from: classes7.dex */
-    public static final class C3510a implements FoldTextView.OnChangeListener {
+    public static final class a implements FoldTextView.OnChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3510a() {
+        a() {
         }
 
         @Override // com.alibaba.pictures.bricks.component.text.FoldTextView.OnChangeListener
@@ -162,7 +161,7 @@ public final class FoldTextViewPresent extends AbsPresenter<GenericItem<ItemValu
         Integer num = null;
         if (this.curentView == null) {
             setCurentView(((FoldTextViewView) getView()).getTextView());
-            getCurentView().setChangeListener(new C3510a());
+            getCurentView().setChangeListener(new a());
             FoldTextView textView = ((FoldTextViewView) getView()).getTextView();
             Activity activity = genericItem.getPageContext().getActivity();
             if (activity != null && (screenInfo2 = getScreenInfo(activity)) != null) {

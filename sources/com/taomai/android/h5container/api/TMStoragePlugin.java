@@ -37,25 +37,24 @@ public final class TMStoragePlugin extends TaoMaiApiPlugin {
     @NotNull
     public static final String ACTION_SET_SHARED_DATA = "setSharedData";
     @NotNull
-    public static final C6999a Companion = new C6999a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final HashMap<String, String> dataCache = new HashMap<>();
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMStoragePlugin$a */
     /* loaded from: classes11.dex */
-    public static final class C6999a {
-        private C6999a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C6999a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     private final boolean getMemoryCache(String str, WVCallBackContext wVCallBackContext) {
-        JSONObject a;
-        JSONArray jSONArray = (str == null || (a = kh2.a(str)) == null) ? null : a.getJSONArray(Constants.PARAM_KEYS);
+        JSONObject a2;
+        JSONArray jSONArray = (str == null || (a2 = kh2.a(str)) == null) ? null : a2.getJSONArray(Constants.PARAM_KEYS);
         if (jSONArray != null) {
             JSONObject jSONObject = new JSONObject();
             Iterator<Object> it = jSONArray.iterator();
@@ -82,9 +81,9 @@ public final class TMStoragePlugin extends TaoMaiApiPlugin {
         new Thread(new Runnable() { // from class: com.taomai.android.h5container.api.TMStoragePlugin$getSharedData$1
             @Override // java.lang.Runnable
             public final void run() {
-                JSONObject a;
+                JSONObject a2;
                 String str2 = str;
-                JSONArray jSONArray = (str2 == null || (a = kh2.a(str2)) == null) ? null : a.getJSONArray(Constants.PARAM_KEYS);
+                JSONArray jSONArray = (str2 == null || (a2 = kh2.a(str2)) == null) ? null : a2.getJSONArray(Constants.PARAM_KEYS);
                 if (jSONArray != null) {
                     JSONObject jSONObject = new JSONObject();
                     Iterator<Object> it = jSONArray.iterator();
@@ -109,8 +108,8 @@ public final class TMStoragePlugin extends TaoMaiApiPlugin {
     }
 
     private final boolean removeMemoryCache(String str, WVCallBackContext wVCallBackContext) {
-        JSONObject a;
-        JSONArray jSONArray = (str == null || (a = kh2.a(str)) == null) ? null : a.getJSONArray(Constants.PARAM_KEYS);
+        JSONObject a2;
+        JSONArray jSONArray = (str == null || (a2 = kh2.a(str)) == null) ? null : a2.getJSONArray(Constants.PARAM_KEYS);
         if (jSONArray != null) {
             Iterator<Object> it = jSONArray.iterator();
             while (it.hasNext()) {
@@ -136,9 +135,9 @@ public final class TMStoragePlugin extends TaoMaiApiPlugin {
         new Thread(new Runnable() { // from class: com.taomai.android.h5container.api.TMStoragePlugin$removeSharedData$1
             @Override // java.lang.Runnable
             public final void run() {
-                JSONObject a;
+                JSONObject a2;
                 String str2 = str;
-                JSONArray jSONArray = (str2 == null || (a = kh2.a(str2)) == null) ? null : a.getJSONArray(Constants.PARAM_KEYS);
+                JSONArray jSONArray = (str2 == null || (a2 = kh2.a(str2)) == null) ? null : a2.getJSONArray(Constants.PARAM_KEYS);
                 if (jSONArray != null) {
                     Iterator<Object> it = jSONArray.iterator();
                     while (it.hasNext()) {
@@ -163,8 +162,8 @@ public final class TMStoragePlugin extends TaoMaiApiPlugin {
 
     private final boolean setMemoryCache(String str, WVCallBackContext wVCallBackContext) {
         String jSONString;
-        JSONObject a;
-        JSONObject jSONObject = (str == null || (a = kh2.a(str)) == null) ? null : a.getJSONObject("data");
+        JSONObject a2;
+        JSONObject jSONObject = (str == null || (a2 = kh2.a(str)) == null) ? null : a2.getJSONObject("data");
         if (jSONObject != null && (r5 = jSONObject.entrySet().iterator()) != null) {
             for (Map.Entry<String, Object> entry : jSONObject.entrySet()) {
                 if (entry.getKey() != null) {
@@ -195,9 +194,9 @@ public final class TMStoragePlugin extends TaoMaiApiPlugin {
         new Thread(new Runnable() { // from class: com.taomai.android.h5container.api.TMStoragePlugin$setSharedData$1
             @Override // java.lang.Runnable
             public final void run() {
-                JSONObject a;
+                JSONObject a2;
                 String str2 = str;
-                JSONObject jSONObject = (str2 == null || (a = kh2.a(str2)) == null) ? null : a.getJSONObject("data");
+                JSONObject jSONObject = (str2 == null || (a2 = kh2.a(str2)) == null) ? null : a2.getJSONObject("data");
                 if (jSONObject != null && (r0 = jSONObject.entrySet().iterator()) != null) {
                     for (Map.Entry<String, Object> entry : jSONObject.entrySet()) {
                         if (entry.getKey() != null && (entry.getValue() instanceof String)) {

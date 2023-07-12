@@ -4,9 +4,9 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import com.youku.danmaku.engine.danmaku.model.android.DanmakuFactory;
-import com.youku.e.C7901a;
-import com.youku.player.util.C8063c;
-import com.youku.player.util.C8070g;
+import com.youku.e.a;
+import com.youku.player.util.c;
+import com.youku.player.util.g;
 import java.lang.ref.WeakReference;
 
 /* compiled from: Taobao */
@@ -31,7 +31,7 @@ public class PreLoadJNI {
                 }
             } else {
                 String str = PreLoadJNI.TAG;
-                C8063c.b(str, "Unknown message type " + message.what);
+                c.b(str, "Unknown message type " + message.what);
             }
         }
     };
@@ -46,16 +46,16 @@ public class PreLoadJNI {
 
     private static void initPlayerNative() {
         try {
-            if (!"mounted".equals(Environment.getExternalStorageState()) || C7901a.a.getExternalCacheDir() == null) {
-                C8063c.a(TAG, "not mounted");
+            if (!"mounted".equals(Environment.getExternalStorageState()) || a.a.getExternalCacheDir() == null) {
+                c.a(TAG, "not mounted");
             } else {
-                String absolutePath = C7901a.a.getExternalCacheDir().getAbsolutePath();
+                String absolutePath = a.a.getExternalCacheDir().getAbsolutePath();
                 String str = TAG;
-                C8063c.a(str, "getExternalCacheDir().getAbsolutePath():" + absolutePath);
-                C8063c.a(str, "size:" + ((long) (((((double) C8070g.a()) * 0.02d) / 1024.0d) / 1024.0d)));
+                c.a(str, "getExternalCacheDir().getAbsolutePath():" + absolutePath);
+                c.a(str, "size:" + ((long) (((((double) g.a()) * 0.02d) / 1024.0d) / 1024.0d)));
             }
         } catch (Exception e) {
-            C8063c.a(TAG, "initPlayer().Exception");
+            c.a(TAG, "initPlayer().Exception");
             e.printStackTrace();
         }
     }
@@ -80,7 +80,7 @@ public class PreLoadJNI {
             }
         } else {
             String str = TAG;
-            C8063c.b(str, "Unknown message type " + obtainMessage.what);
+            c.b(str, "Unknown message type " + obtainMessage.what);
         }
     }
 

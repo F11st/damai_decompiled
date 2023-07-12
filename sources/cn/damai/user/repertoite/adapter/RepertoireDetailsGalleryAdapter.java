@@ -5,8 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.viewpager.widget.PagerAdapter;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -14,7 +14,7 @@ import cn.damai.uikit.view.photoview.PhotoView;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.List;
-import tb.C9826vr;
+import tb.vr;
 
 /* compiled from: Taobao */
 /* loaded from: classes9.dex */
@@ -59,10 +59,10 @@ public class RepertoireDetailsGalleryAdapter extends PagerAdapter {
         }
         View inflate = LayoutInflater.from(this.a).inflate(R$layout.image_browse_item_layout, (ViewGroup) null);
         PhotoView photoView = (PhotoView) inflate.findViewById(R$id.poster);
-        if (photoView.getTag() instanceof C9826vr) {
-            ((C9826vr) photoView.getTag()).cancel();
+        if (photoView.getTag() instanceof vr) {
+            ((vr) photoView.getTag()).cancel();
         }
-        DMImageCreator c = C0504a.b().c(this.b.get(i));
+        DMImageCreator c = a.b().c(this.b.get(i));
         int i2 = R$drawable.uikit_default_image_bg_grey;
         photoView.setTag(c.i(i2).c(i2).g(photoView));
         viewGroup.addView(inflate);

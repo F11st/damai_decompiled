@@ -36,11 +36,11 @@ import com.autonavi.base.amap.mapcore.MapConfig;
 /* loaded from: classes10.dex */
 public class fd extends ViewGroup implements IInfoWindowAction {
     fe a;
-    C4479ar b;
+    ar b;
     private IAMapDelegate c;
     private Context d;
     private fg e;
-    private C4541fc f;
+    private fc f;
     private fa g;
     private ff h;
     private ez i;
@@ -56,15 +56,14 @@ public class fd extends ViewGroup implements IInfoWindowAction {
     private boolean s;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.fd$a */
     /* loaded from: classes10.dex */
-    public static class C4542a extends ViewGroup.LayoutParams {
+    public static class a extends ViewGroup.LayoutParams {
         public FPoint a;
         public int b;
         public int c;
         public int d;
 
-        public C4542a(int i, int i2, FPoint fPoint, int i3, int i4, int i5) {
+        public a(int i, int i2, FPoint fPoint, int i3, int i4, int i5) {
             super(i, i2);
             this.a = null;
             this.b = 0;
@@ -152,9 +151,9 @@ public class fd extends ViewGroup implements IInfoWindowAction {
         if (fgVar != null) {
             fgVar.a();
         }
-        C4541fc c4541fc = this.f;
-        if (c4541fc != null) {
-            c4541fc.a();
+        fc fcVar = this.f;
+        if (fcVar != null) {
+            fcVar.a();
         }
         fa faVar = this.g;
         if (faVar != null) {
@@ -250,8 +249,8 @@ public class fd extends ViewGroup implements IInfoWindowAction {
             for (int i5 = 0; i5 < childCount; i5++) {
                 View childAt = getChildAt(i5);
                 if (childAt != null) {
-                    if (childAt.getLayoutParams() instanceof C4542a) {
-                        a(childAt, (C4542a) childAt.getLayoutParams());
+                    if (childAt.getLayoutParams() instanceof a) {
+                        a(childAt, (a) childAt.getLayoutParams());
                     } else {
                         a(childAt, childAt.getLayoutParams());
                     }
@@ -274,18 +273,18 @@ public class fd extends ViewGroup implements IInfoWindowAction {
                 if (this.o) {
                     int realInfoWindowOffsetX = this.m.getRealInfoWindowOffsetX() + this.m.getInfoWindowOffsetX();
                     int realInfoWindowOffsetY = this.m.getRealInfoWindowOffsetY() + this.m.getInfoWindowOffsetY() + 2;
-                    View a = a(this.m);
-                    if (a == null) {
+                    View a2 = a(this.m);
+                    if (a2 == null) {
                         return;
                     }
-                    a(a, realInfoWindowOffsetX, realInfoWindowOffsetY);
+                    a(a2, realInfoWindowOffsetX, realInfoWindowOffsetY);
                     View view = this.l;
                     if (view != null) {
-                        C4542a c4542a = (C4542a) view.getLayoutParams();
-                        if (c4542a != null) {
-                            c4542a.a = FPoint.obtain(((PointF) this.m.getGeoPosition()).x, ((PointF) this.m.getGeoPosition()).y);
-                            c4542a.b = realInfoWindowOffsetX;
-                            c4542a.c = realInfoWindowOffsetY;
+                        a aVar = (a) view.getLayoutParams();
+                        if (aVar != null) {
+                            aVar.a = FPoint.obtain(((PointF) this.m.getGeoPosition()).x, ((PointF) this.m.getGeoPosition()).y);
+                            aVar.b = realInfoWindowOffsetX;
+                            aVar.c = realInfoWindowOffsetY;
                         }
                         onLayout(false, 0, 0, 0, 0);
                         if (this.b.a()) {
@@ -313,8 +312,8 @@ public class fd extends ViewGroup implements IInfoWindowAction {
     }
 
     @Override // com.autonavi.base.amap.api.mapcore.infowindow.IInfoWindowAction
-    public void setInfoWindowAdapterManager(C4479ar c4479ar) {
-        this.b = c4479ar;
+    public void setInfoWindowAdapterManager(ar arVar) {
+        this.b = arVar;
     }
 
     @Override // com.autonavi.base.amap.api.mapcore.infowindow.IInfoWindowAction
@@ -323,8 +322,8 @@ public class fd extends ViewGroup implements IInfoWindowAction {
             return;
         }
         try {
-            C4479ar c4479ar = this.b;
-            if (!(c4479ar != null && c4479ar.a() && baseOverlayImp.getTitle() == null && baseOverlayImp.getSnippet() == null) && baseOverlayImp.isInfoWindowEnable()) {
+            ar arVar = this.b;
+            if (!(arVar != null && arVar.a() && baseOverlayImp.getTitle() == null && baseOverlayImp.getSnippet() == null) && baseOverlayImp.isInfoWindowEnable()) {
                 BaseOverlayImp baseOverlayImp2 = this.m;
                 if (baseOverlayImp2 != null && !baseOverlayImp2.getId().equals(baseOverlayImp.getId())) {
                     hideInfoWindow();
@@ -383,15 +382,15 @@ public class fd extends ViewGroup implements IInfoWindowAction {
         this.h = new ff(context, this.c);
         this.j = new fb(context);
         this.k = new fh(context, this.c);
-        this.f = new C4541fc(context, this.c);
+        this.f = new fc(context, this.c);
         this.g = new fa(context, this.c);
         ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(-1, -1);
         addView(this.e, layoutParams);
         addView(this.h, layoutParams);
         addView(this.j, new ViewGroup.LayoutParams(-2, -2));
-        addView(this.k, new C4542a(-2, -2, new FPoint(0.0f, 0.0f), 0, 0, 83));
-        addView(this.f, new C4542a(-2, -2, FPoint.obtain(0.0f, 0.0f), 0, 0, 83));
-        addView(this.g, new C4542a(-2, -2, FPoint.obtain(0.0f, 0.0f), 0, 0, 51));
+        addView(this.k, new a(-2, -2, new FPoint(0.0f, 0.0f), 0, 0, 83));
+        addView(this.f, new a(-2, -2, FPoint.obtain(0.0f, 0.0f), 0, 0, 83));
+        addView(this.g, new a(-2, -2, FPoint.obtain(0.0f, 0.0f), 0, 0, 51));
         this.g.setVisibility(8);
         this.c.setMapWidgetListener(new AMapWidgetListener() { // from class: com.amap.api.mapcore.util.fd.1
             @Override // com.autonavi.base.ae.gmap.listener.AMapWidgetListener
@@ -448,7 +447,7 @@ public class fd extends ViewGroup implements IInfoWindowAction {
         }
     }
 
-    public C4541fc f() {
+    public fc f() {
         return this.f;
     }
 
@@ -522,11 +521,11 @@ public class fd extends ViewGroup implements IInfoWindowAction {
     }
 
     public void h(Boolean bool) {
-        C4541fc c4541fc = this.f;
-        if (c4541fc == null) {
+        fc fcVar = this.f;
+        if (fcVar == null) {
             this.a.a(this, bool);
         } else {
-            c4541fc.a(bool.booleanValue());
+            fcVar.a(bool.booleanValue());
         }
     }
 
@@ -630,32 +629,32 @@ public class fd extends ViewGroup implements IInfoWindowAction {
         }
     }
 
-    private void a(View view, C4542a c4542a) {
+    private void a(View view, a aVar) {
         int[] iArr = new int[2];
-        a(view, ((ViewGroup.LayoutParams) c4542a).width, ((ViewGroup.LayoutParams) c4542a).height, iArr);
+        a(view, ((ViewGroup.LayoutParams) aVar).width, ((ViewGroup.LayoutParams) aVar).height, iArr);
         if (view instanceof fh) {
-            a(view, iArr[0], iArr[1], getWidth() - iArr[0], getHeight(), c4542a.d);
-        } else if (view instanceof C4541fc) {
-            a(view, iArr[0], iArr[1], getWidth() - iArr[0], iArr[1], c4542a.d);
+            a(view, iArr[0], iArr[1], getWidth() - iArr[0], getHeight(), aVar.d);
+        } else if (view instanceof fc) {
+            a(view, iArr[0], iArr[1], getWidth() - iArr[0], iArr[1], aVar.d);
         } else if (view instanceof fa) {
-            a(view, iArr[0], iArr[1], 0, 0, c4542a.d);
-        } else if (c4542a.a != null) {
+            a(view, iArr[0], iArr[1], 0, 0, aVar.d);
+        } else if (aVar.a != null) {
             IPoint obtain = IPoint.obtain();
             MapConfig mapConfig = this.c.getMapConfig();
             GLMapState mapProjection = this.c.getMapProjection();
             if (mapConfig != null && mapProjection != null) {
                 FPoint obtain2 = FPoint.obtain();
-                FPoint fPoint = c4542a.a;
+                FPoint fPoint = aVar.a;
                 mapProjection.p20ToScreenPoint((int) ((PointF) fPoint).x, (int) ((PointF) fPoint).y, obtain2);
                 ((Point) obtain).x = (int) ((PointF) obtain2).x;
                 ((Point) obtain).y = (int) ((PointF) obtain2).y;
                 obtain2.recycle();
             }
-            int xVar = com.alibaba.wireless.security.aopsdk.replace.android.graphics.Point.getx(obtain) + c4542a.b;
+            int xVar = com.alibaba.wireless.security.aopsdk.replace.android.graphics.Point.getx(obtain) + aVar.b;
             ((Point) obtain).x = xVar;
-            int yVar = com.alibaba.wireless.security.aopsdk.replace.android.graphics.Point.gety(obtain) + c4542a.c;
+            int yVar = com.alibaba.wireless.security.aopsdk.replace.android.graphics.Point.gety(obtain) + aVar.c;
             ((Point) obtain).y = yVar;
-            a(view, iArr[0], iArr[1], xVar, yVar, c4542a.d);
+            a(view, iArr[0], iArr[1], xVar, yVar, aVar.d);
             obtain.recycle();
         }
     }
@@ -782,7 +781,7 @@ public class fd extends ViewGroup implements IInfoWindowAction {
             i3 = -2;
             i4 = -2;
         }
-        addView(this.l, new C4542a(i3, i4, this.m.getGeoPosition(), i, i2, 81));
+        addView(this.l, new a(i3, i4, this.m.getGeoPosition(), i, i2, 81));
     }
 
     private void a(View view, int i, int i2, int[] iArr) {
@@ -845,13 +844,13 @@ public class fd extends ViewGroup implements IInfoWindowAction {
         canvas.drawBitmap(drawingCache, this.l.getLeft(), this.l.getTop(), new Paint());
     }
 
-    public void a(fb.InterfaceC4540a interfaceC4540a) {
+    public void a(fb.a aVar) {
         fb fbVar = this.j;
         if (fbVar == null) {
-            this.a.a(this, interfaceC4540a);
+            this.a.a(this, aVar);
             return;
         }
-        fbVar.a(interfaceC4540a);
+        fbVar.a(aVar);
         Log.d("MapOverlayViewGroup", "setOnIndoorFloorSwitchListener");
     }
 }

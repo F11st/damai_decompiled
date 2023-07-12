@@ -13,7 +13,7 @@ import io.flutter.wpkbridge.WPKFactory;
 import java.util.ArrayList;
 import kotlin.Metadata;
 import kotlin.collections.CollectionsKt___CollectionsKt;
-import kotlin.text.C8590b;
+import kotlin.text.b;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
 import tb.k50;
@@ -37,7 +37,7 @@ public final class ShareChannelAdapter extends ArrayList<ob2> {
         int length = str.length();
         for (int i = 0; i < length; i++) {
             String valueOf = String.valueOf(str.charAt(i));
-            a = C8590b.a(16);
+            a = b.a(16);
             initChannelItems(Integer.parseInt(valueOf, a));
         }
     }

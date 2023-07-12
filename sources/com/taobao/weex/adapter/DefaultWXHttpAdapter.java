@@ -3,7 +3,7 @@ package com.taobao.weex.adapter;
 import android.text.TextUtils;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import anet.channel.request.C0193a;
+import anet.channel.request.a;
 import com.taobao.weex.WXSDKInstance;
 import com.taobao.weex.WXSDKManager;
 import com.taobao.weex.adapter.IWXHttpAdapter;
@@ -84,7 +84,7 @@ public class DefaultWXHttpAdapter implements IWXHttpAdapter {
                 createConnection.addRequestProperty(str, wXRequest.paramMap.get(str));
             }
         }
-        if (!"POST".equals(wXRequest.method) && !C0193a.C0196c.PUT.equals(wXRequest.method) && !"PATCH".equals(wXRequest.method)) {
+        if (!"POST".equals(wXRequest.method) && !a.c.PUT.equals(wXRequest.method) && !"PATCH".equals(wXRequest.method)) {
             if (!TextUtils.isEmpty(wXRequest.method)) {
                 createConnection.setRequestMethod(wXRequest.method);
             } else {

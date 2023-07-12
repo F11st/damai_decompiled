@@ -4,11 +4,10 @@ import android.util.Pair;
 import com.uc.webview.export.annotations.Api;
 import com.uc.webview.export.extension.UCCore;
 import com.uc.webview.export.internal.SDKFactory;
-import com.uc.webview.export.internal.uc.wa.C7303a;
-import com.uc.webview.export.internal.uc.wa.RunnableC7307c;
-import com.uc.webview.export.internal.uc.wa.RunnableC7308d;
-import com.uc.webview.export.internal.utility.C7326c;
+import com.uc.webview.export.internal.uc.wa.a;
+import com.uc.webview.export.internal.uc.wa.d;
 import com.uc.webview.export.internal.utility.Log;
+import com.uc.webview.export.internal.utility.c;
 import io.flutter.wpkbridge.U4WPKAdapter;
 import java.util.ArrayList;
 import java.util.Date;
@@ -288,8 +287,8 @@ public interface IWaStat {
 
         private static void a(String str) {
             try {
-                if (C7303a.a() != null) {
-                    C7303a.a().a(str);
+                if (a.a() != null) {
+                    a.a().a(str);
                 } else {
                     Log.w("SDKWaStat", "stat>>WaStatImp not inited");
                 }
@@ -299,7 +298,7 @@ public interface IWaStat {
         }
 
         public static boolean getPrintLogEnable() {
-            return C7303a.b;
+            return a.b;
         }
 
         public static void saveData() {
@@ -307,13 +306,13 @@ public interface IWaStat {
             if (iSaveListener != null) {
                 iSaveListener.onWillSave();
             }
-            if (C7303a.a() != null) {
-                C7303a.a().a(false);
+            if (a.a() != null) {
+                a.a().a(false);
             }
         }
 
         public static void setPrintLogEnable(boolean z) {
-            C7303a.b = z;
+            a.b = z;
         }
 
         public static void setSaveListener(ISaveListener iSaveListener) {
@@ -321,7 +320,7 @@ public interface IWaStat {
         }
 
         public static void setUploadInterval(int i) {
-            C7303a.c = i;
+            a.c = i;
         }
 
         public static void stat(String str) {
@@ -334,11 +333,11 @@ public interface IWaStat {
 
         public static void statAKV(Pair<String, HashMap<String, String>> pair) {
             try {
-                if (C7303a.a() != null) {
-                    C7303a a2 = C7303a.a();
-                    C7303a.a(pair);
-                    if (C7303a.c()) {
-                        if (100 < ((HashMap) pair.second).toString().length() && C7303a.b) {
+                if (a.a() != null) {
+                    a a2 = a.a();
+                    a.a(pair);
+                    if (a.c()) {
+                        if (100 < ((HashMap) pair.second).toString().length() && a.b) {
                             Log.d("SDKWaStat", "second length(" + ((HashMap) pair.second).toString().length() + ") more then 100");
                         }
                         synchronized (a2.i) {
@@ -346,8 +345,8 @@ public interface IWaStat {
                                 a2.d = new ArrayList();
                             }
                             ((HashMap) pair.second).put(U4WPKAdapter.KEY_TM, a2.h.format(new Date(System.currentTimeMillis())));
-                            C7303a.a((Map) pair.second);
-                            a2.d.add(new C7303a.C7305b((String) pair.first, (Map) pair.second));
+                            a.a((Map) pair.second);
+                            a2.d.add(new a.b((String) pair.first, (Map) pair.second));
                         }
                         return;
                     }
@@ -361,9 +360,9 @@ public interface IWaStat {
 
         public static void statAdd(String str, int i) {
             try {
-                if (C7303a.a() != null) {
-                    C7303a a2 = C7303a.a();
-                    if (C7303a.c()) {
+                if (a.a() != null) {
+                    a a2 = a.a();
+                    if (a.c()) {
                         a2.a(str, 0, 0, i, null);
                         return;
                     }
@@ -377,9 +376,9 @@ public interface IWaStat {
 
         public static void statAverage(String str, int i) {
             try {
-                if (C7303a.a() != null) {
-                    C7303a a2 = C7303a.a();
-                    if (C7303a.c()) {
+                if (a.a() != null) {
+                    a a2 = a.a();
+                    if (a.c()) {
                         a2.a(str, 2, 0, i, null);
                         return;
                     }
@@ -393,28 +392,28 @@ public interface IWaStat {
 
         public static void statPV(String str) {
             int intValue;
-            if (C7303a.a() != null) {
-                C7303a a2 = C7303a.a();
-                if (C7303a.c()) {
-                    if (C7326c.a(str)) {
+            if (a.a() != null) {
+                a a2 = a.a();
+                if (a.c()) {
+                    if (c.a(str)) {
                         a2.a("ill_upv");
                         return;
                     }
-                    if (C7303a.a) {
-                        C7303a.a = false;
+                    if (a.a) {
+                        a.a = false;
                         IGlobalSettings f = SDKFactory.f();
-                        if (f != null && (intValue = f.getIntValue("SdkStatFileLimit")) != 0 && intValue < C7303a.f) {
-                            C7303a.e = intValue;
-                            C7303a.g = intValue + 1024;
+                        if (f != null && (intValue = f.getIntValue("SdkStatFileLimit")) != 0 && intValue < a.f) {
+                            a.e = intValue;
+                            a.g = intValue + 1024;
                         }
-                        a2.b().a(new RunnableC7307c(a2), 1000L);
+                        a2.b().a(new com.uc.webview.export.internal.uc.wa.c(a2), 1000L);
                     }
                     String lowerCase = str.toLowerCase();
                     if (!lowerCase.startsWith("http://") && !lowerCase.startsWith("https://")) {
                         a2.a("ill_upv");
                         return;
                     }
-                    if (C7303a.b) {
+                    if (a.b) {
                         Log.d("SDKWaStat", "statPV:" + lowerCase);
                     }
                     a2.a("sum_pv");
@@ -430,20 +429,20 @@ public interface IWaStat {
         }
 
         public static void upload() {
-            if (C7303a.a() != null) {
-                C7303a a2 = C7303a.a();
-                if (!C7303a.c() || C7326c.a((String) UCCore.getGlobalOption(UCCore.PROCESS_PRIVATE_DATA_DIR_SUFFIX_OPTION))) {
+            if (a.a() != null) {
+                a a2 = a.a();
+                if (!a.c() || c.a((String) UCCore.getGlobalOption(UCCore.PROCESS_PRIVATE_DATA_DIR_SUFFIX_OPTION))) {
                     return;
                 }
-                a2.b().a(new RunnableC7308d(a2), 15000L);
+                a2.b().a(new d(a2), 15000L);
             }
         }
 
         public static void stat(String str, String str2) {
             try {
-                if (C7303a.a() != null) {
-                    C7303a a2 = C7303a.a();
-                    if (C7303a.c()) {
+                if (a.a() != null) {
+                    a a2 = a.a();
+                    if (a.c()) {
                         a2.a(str, 1, 1, 0, str2);
                         return;
                     }
@@ -460,16 +459,16 @@ public interface IWaStat {
             if (iSaveListener != null) {
                 iSaveListener.onWillSave();
             }
-            if (C7303a.a() != null) {
-                C7303a.a().a(z);
+            if (a.a() != null) {
+                a.a().a(z);
             }
         }
 
         public static void stat(String str, String str2, int i) {
             try {
-                if (C7303a.a() != null) {
-                    C7303a a2 = C7303a.a();
-                    if (C7303a.c()) {
+                if (a.a() != null) {
+                    a a2 = a.a();
+                    if (a.c()) {
                         a2.a(str, 1, i, 0, str2);
                         return;
                     }

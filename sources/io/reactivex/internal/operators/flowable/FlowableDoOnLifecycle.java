@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.LongConsumer;
@@ -95,14 +95,14 @@ public final class FlowableDoOnLifecycle<T> extends AbstractFlowableWithUpstream
         }
     }
 
-    public FlowableDoOnLifecycle(AbstractC8147b<T> abstractC8147b, Consumer<? super Subscription> consumer, LongConsumer longConsumer, Action action) {
-        super(abstractC8147b);
+    public FlowableDoOnLifecycle(b<T> bVar, Consumer<? super Subscription> consumer, LongConsumer longConsumer, Action action) {
+        super(bVar);
         this.onSubscribe = consumer;
         this.onRequest = longConsumer;
         this.onCancel = action;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new SubscriptionLambdaSubscriber(subscriber, this.onSubscribe, this.onRequest, this.onCancel));
     }

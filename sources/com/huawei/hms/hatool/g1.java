@@ -5,12 +5,12 @@ import org.json.JSONObject;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public class g1 extends AbstractC5640p {
+public class g1 extends p {
     public String f;
     public String g;
     public String h;
 
-    @Override // com.huawei.hms.hatool.InterfaceC5646s
+    @Override // com.huawei.hms.hatool.s
     public JSONObject a() {
         JSONObject jSONObject = new JSONObject();
         jSONObject.put("_rom_ver", this.h);

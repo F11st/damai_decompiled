@@ -1,10 +1,10 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8152e;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.SingleObserver;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
@@ -14,7 +14,7 @@ import tb.dg0;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableReduceSeedSingle<T, R> extends AbstractC8152e<R> {
+public final class FlowableReduceSeedSingle<T, R> extends e<R> {
     final BiFunction<R, ? super T, R> reducer;
     final R seed;
     final Publisher<T> source;
@@ -87,7 +87,7 @@ public final class FlowableReduceSeedSingle<T, R> extends AbstractC8152e<R> {
         this.reducer = biFunction;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super R> singleObserver) {
         this.source.subscribe(new ReduceSeedObserver(singleObserver, this.reducer, this.seed));
     }

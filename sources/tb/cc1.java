@@ -7,19 +7,18 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes3.dex */
 public class cc1 implements Iterable<Long>, KMappedMarker {
     @NotNull
-    public static final C8998a Companion = new C8998a(null);
+    public static final a Companion = new a(null);
     private final long a;
     private final long b;
     private final long c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.cc1$a */
     /* loaded from: classes3.dex */
-    public static final class C8998a {
-        private C8998a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8998a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

@@ -104,7 +104,7 @@ public class YoukuPipHelper {
         }
         IPlayerContainer iPlayerContainer = this.mPlayerContainer;
         if (iPlayerContainer != null) {
-            updatePictureInPictureActions(iPlayerContainer.getPlayer().isMuted() ? R.C7933drawable.btn_pip_voice_off : R.C7933drawable.btn_pip_voice_on, "静音", 2, 2);
+            updatePictureInPictureActions(iPlayerContainer.getPlayer().isMuted() ? R.drawable.btn_pip_voice_off : R.drawable.btn_pip_voice_on, "静音", 2, 2);
         }
     }
 

@@ -89,42 +89,41 @@ public abstract class ImmutableMap<K, V> implements Map<K, V>, Serializable {
     private final class MapViewOfValuesAsSingletonSets extends IteratorBasedImmutableMap<K, ImmutableSet<V>> {
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.ImmutableMap$MapViewOfValuesAsSingletonSets$a */
         /* loaded from: classes10.dex */
-        class C4974a extends yt2<Map.Entry<K, ImmutableSet<V>>> {
+        class a extends yt2<Map.Entry<K, ImmutableSet<V>>> {
             final /* synthetic */ Iterator a;
 
             /* JADX INFO: Access modifiers changed from: package-private */
             /* compiled from: Taobao */
-            /* renamed from: com.google.common.collect.ImmutableMap$MapViewOfValuesAsSingletonSets$a$a */
+            /* renamed from: com.google.common.collect.ImmutableMap$MapViewOfValuesAsSingletonSets$a$a  reason: collision with other inner class name */
             /* loaded from: classes10.dex */
-            public class C4975a extends AbstractC5157b<K, ImmutableSet<V>> {
+            public class C0228a extends com.google.common.collect.b<K, ImmutableSet<V>> {
                 final /* synthetic */ Map.Entry a;
 
-                C4975a(C4974a c4974a, Map.Entry entry) {
+                C0228a(a aVar, Map.Entry entry) {
                     this.a = entry;
                 }
 
-                @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+                @Override // com.google.common.collect.b, java.util.Map.Entry
                 /* renamed from: a */
                 public ImmutableSet<V> getValue() {
                     return ImmutableSet.of(this.a.getValue());
                 }
 
-                @Override // com.google.common.collect.AbstractC5157b, java.util.Map.Entry
+                @Override // com.google.common.collect.b, java.util.Map.Entry
                 public K getKey() {
                     return (K) this.a.getKey();
                 }
             }
 
-            C4974a(MapViewOfValuesAsSingletonSets mapViewOfValuesAsSingletonSets, Iterator it) {
+            a(MapViewOfValuesAsSingletonSets mapViewOfValuesAsSingletonSets, Iterator it) {
                 this.a = it;
             }
 
             @Override // java.util.Iterator
             /* renamed from: a */
             public Map.Entry<K, ImmutableSet<V>> next() {
-                return new C4975a(this, (Map.Entry) this.a.next());
+                return new C0228a(this, (Map.Entry) this.a.next());
             }
 
             @Override // java.util.Iterator
@@ -149,7 +148,7 @@ public abstract class ImmutableMap<K, V> implements Map<K, V>, Serializable {
 
         @Override // com.google.common.collect.ImmutableMap.IteratorBasedImmutableMap
         yt2<Map.Entry<K, ImmutableSet<V>>> entryIterator() {
-            return new C4974a(this, ImmutableMap.this.entrySet().iterator());
+            return new a(this, ImmutableMap.this.entrySet().iterator());
         }
 
         @Override // com.google.common.collect.ImmutableMap, java.util.Map
@@ -172,7 +171,7 @@ public abstract class ImmutableMap<K, V> implements Map<K, V>, Serializable {
             return ImmutableMap.this.size();
         }
 
-        /* synthetic */ MapViewOfValuesAsSingletonSets(ImmutableMap immutableMap, C4976a c4976a) {
+        /* synthetic */ MapViewOfValuesAsSingletonSets(ImmutableMap immutableMap, a aVar) {
             this();
         }
 
@@ -208,32 +207,31 @@ public abstract class ImmutableMap<K, V> implements Map<K, V>, Serializable {
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public Object createMap(C4977b<Object, Object> c4977b) {
+        public Object createMap(b<Object, Object> bVar) {
             int i = 0;
             while (true) {
                 Object[] objArr = this.keys;
                 if (i < objArr.length) {
-                    c4977b.c(objArr[i], this.values[i]);
+                    bVar.c(objArr[i], this.values[i]);
                     i++;
                 } else {
-                    return c4977b.a();
+                    return bVar.a();
                 }
             }
         }
 
         Object readResolve() {
-            return createMap(new C4977b<>(this.keys.length));
+            return createMap(new b<>(this.keys.length));
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableMap$a */
     /* loaded from: classes10.dex */
-    public class C4976a extends yt2<K> {
+    public class a extends yt2<K> {
         final /* synthetic */ yt2 a;
 
-        C4976a(ImmutableMap immutableMap, yt2 yt2Var) {
+        a(ImmutableMap immutableMap, yt2 yt2Var) {
             this.a = yt2Var;
         }
 
@@ -249,16 +247,15 @@ public abstract class ImmutableMap<K, V> implements Map<K, V>, Serializable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableMap$b */
     /* loaded from: classes10.dex */
-    public static class C4977b<K, V> {
+    public static class b<K, V> {
         @MonotonicNonNullDecl
         Comparator<? super V> a;
         Object[] b;
         int c;
         boolean d;
 
-        public C4977b() {
+        public b() {
             this(4);
         }
 
@@ -266,7 +263,7 @@ public abstract class ImmutableMap<K, V> implements Map<K, V>, Serializable {
             int i2 = i * 2;
             Object[] objArr = this.b;
             if (i2 > objArr.length) {
-                this.b = Arrays.copyOf(objArr, ImmutableCollection.AbstractC4968b.e(objArr.length, i2));
+                this.b = Arrays.copyOf(objArr, ImmutableCollection.b.e(objArr.length, i2));
                 this.d = false;
             }
         }
@@ -278,9 +275,9 @@ public abstract class ImmutableMap<K, V> implements Map<K, V>, Serializable {
         }
 
         @CanIgnoreReturnValue
-        public C4977b<K, V> c(K k, V v) {
+        public b<K, V> c(K k, V v) {
             b(this.c + 1);
-            C5191k.a(k, v);
+            k.a(k, v);
             Object[] objArr = this.b;
             int i = this.c;
             objArr[i * 2] = k;
@@ -290,13 +287,13 @@ public abstract class ImmutableMap<K, V> implements Map<K, V>, Serializable {
         }
 
         @CanIgnoreReturnValue
-        public C4977b<K, V> d(Map.Entry<? extends K, ? extends V> entry) {
+        public b<K, V> d(Map.Entry<? extends K, ? extends V> entry) {
             return c(entry.getKey(), entry.getValue());
         }
 
         @CanIgnoreReturnValue
         @Beta
-        public C4977b<K, V> e(Iterable<? extends Map.Entry<? extends K, ? extends V>> iterable) {
+        public b<K, V> e(Iterable<? extends Map.Entry<? extends K, ? extends V>> iterable) {
             if (iterable instanceof Collection) {
                 b(this.c + ((Collection) iterable).size());
             }
@@ -307,7 +304,7 @@ public abstract class ImmutableMap<K, V> implements Map<K, V>, Serializable {
         }
 
         @CanIgnoreReturnValue
-        public C4977b<K, V> f(Map<? extends K, ? extends V> map) {
+        public b<K, V> f(Map<? extends K, ? extends V> map) {
             return e(map.entrySet());
         }
 
@@ -340,21 +337,21 @@ public abstract class ImmutableMap<K, V> implements Map<K, V>, Serializable {
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C4977b(int i) {
+        public b(int i) {
             this.b = new Object[i * 2];
             this.c = 0;
             this.d = false;
         }
     }
 
-    public static <K, V> C4977b<K, V> builder() {
-        return new C4977b<>();
+    public static <K, V> b<K, V> builder() {
+        return new b<>();
     }
 
     @Beta
-    public static <K, V> C4977b<K, V> builderWithExpectedSize(int i) {
-        C5191k.b(i, "expectedSize");
-        return new C4977b<>(i);
+    public static <K, V> b<K, V> builderWithExpectedSize(int i) {
+        k.b(i, "expectedSize");
+        return new b<>(i);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -380,7 +377,7 @@ public abstract class ImmutableMap<K, V> implements Map<K, V>, Serializable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static <K, V> Map.Entry<K, V> entryOf(K k, V v) {
-        C5191k.a(k, v);
+        k.a(k, v);
         return new AbstractMap.SimpleImmutableEntry(k, v);
     }
 
@@ -457,7 +454,7 @@ public abstract class ImmutableMap<K, V> implements Map<K, V>, Serializable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public yt2<K> keyIterator() {
-        return new C4976a(this, entrySet().iterator());
+        return new a(this, entrySet().iterator());
     }
 
     @Override // java.util.Map
@@ -489,7 +486,7 @@ public abstract class ImmutableMap<K, V> implements Map<K, V>, Serializable {
     }
 
     public static <K, V> ImmutableMap<K, V> of(K k, V v) {
-        C5191k.a(k, v);
+        k.a(k, v);
         return RegularImmutableMap.create(1, new Object[]{k, v});
     }
 
@@ -527,39 +524,39 @@ public abstract class ImmutableMap<K, V> implements Map<K, V>, Serializable {
     }
 
     public static <K, V> ImmutableMap<K, V> of(K k, V v, K k2, V v2) {
-        C5191k.a(k, v);
-        C5191k.a(k2, v2);
+        k.a(k, v);
+        k.a(k2, v2);
         return RegularImmutableMap.create(2, new Object[]{k, v, k2, v2});
     }
 
     @Beta
     public static <K, V> ImmutableMap<K, V> copyOf(Iterable<? extends Map.Entry<? extends K, ? extends V>> iterable) {
-        C4977b c4977b = new C4977b(iterable instanceof Collection ? ((Collection) iterable).size() : 4);
-        c4977b.e(iterable);
-        return c4977b.a();
+        b bVar = new b(iterable instanceof Collection ? ((Collection) iterable).size() : 4);
+        bVar.e(iterable);
+        return bVar.a();
     }
 
     public static <K, V> ImmutableMap<K, V> of(K k, V v, K k2, V v2, K k3, V v3) {
-        C5191k.a(k, v);
-        C5191k.a(k2, v2);
-        C5191k.a(k3, v3);
+        k.a(k, v);
+        k.a(k2, v2);
+        k.a(k3, v3);
         return RegularImmutableMap.create(3, new Object[]{k, v, k2, v2, k3, v3});
     }
 
     public static <K, V> ImmutableMap<K, V> of(K k, V v, K k2, V v2, K k3, V v3, K k4, V v4) {
-        C5191k.a(k, v);
-        C5191k.a(k2, v2);
-        C5191k.a(k3, v3);
-        C5191k.a(k4, v4);
+        k.a(k, v);
+        k.a(k2, v2);
+        k.a(k3, v3);
+        k.a(k4, v4);
         return RegularImmutableMap.create(4, new Object[]{k, v, k2, v2, k3, v3, k4, v4});
     }
 
     public static <K, V> ImmutableMap<K, V> of(K k, V v, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5) {
-        C5191k.a(k, v);
-        C5191k.a(k2, v2);
-        C5191k.a(k3, v3);
-        C5191k.a(k4, v4);
-        C5191k.a(k5, v5);
+        k.a(k, v);
+        k.a(k2, v2);
+        k.a(k3, v3);
+        k.a(k4, v4);
+        k.a(k5, v5);
         return RegularImmutableMap.create(5, new Object[]{k, v, k2, v2, k3, v3, k4, v4, k5, v5});
     }
 }

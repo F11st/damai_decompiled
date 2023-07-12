@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.collections.C8215n;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.PropertyReference1Impl;
 import kotlin.reflect.KClass;
@@ -39,7 +39,7 @@ import tb.zv2;
 public final class KTypeParameterImpl implements KTypeParameter, KClassifierImpl {
     static final /* synthetic */ KProperty[] d = {a12.i(new PropertyReference1Impl(a12.b(KTypeParameterImpl.class), "upperBounds", "getUpperBounds()Ljava/util/List;"))};
     @NotNull
-    private final x02.C9894a a;
+    private final x02.a a;
     private final KTypeParameterOwnerImpl b;
     @NotNull
     private final TypeParameterDescriptor c;
@@ -60,7 +60,7 @@ public final class KTypeParameterImpl implements KTypeParameter, KClassifierImpl
                 int q;
                 List<z71> upperBounds = KTypeParameterImpl.this.getDescriptor().getUpperBounds();
                 b41.h(upperBounds, "descriptor.upperBounds");
-                q = C8215n.q(upperBounds, 10);
+                q = n.q(upperBounds, 10);
                 ArrayList arrayList = new ArrayList(q);
                 for (z71 z71Var : upperBounds) {
                     arrayList.add(new KTypeImpl(z71Var, null, 2, null));

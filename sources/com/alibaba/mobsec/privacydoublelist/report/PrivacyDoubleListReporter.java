@@ -3,13 +3,11 @@ package com.alibaba.mobsec.privacydoublelist.report;
 import android.util.Log;
 import com.alibaba.mobsec.privacydoublelist.PdlEnvUtils;
 import com.alibaba.mobsec.privacydoublelist.PrivacyDoubleList;
-import com.alibaba.mobsec.privacydoublelist.d.C3432c;
-import com.alibaba.mobsec.privacydoublelist.d.InterfaceC3430a;
-import com.alibaba.mobsec.privacydoublelist.e.AbstractC3434b;
-import com.alibaba.mobsec.privacydoublelist.e.C3433a;
-import com.alibaba.mobsec.privacydoublelist.e.C3435c;
-import com.alibaba.mobsec.privacydoublelist.e.C3436d;
-import com.alibaba.mobsec.privacydoublelist.e.C3438e;
+import com.alibaba.mobsec.privacydoublelist.d.a;
+import com.alibaba.mobsec.privacydoublelist.d.c;
+import com.alibaba.mobsec.privacydoublelist.e.b;
+import com.alibaba.mobsec.privacydoublelist.e.d;
+import com.alibaba.mobsec.privacydoublelist.e.e;
 import com.alibaba.wireless.security.aopsdk.report.ReportManager;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -27,7 +25,7 @@ public class PrivacyDoubleListReporter {
     public static PrivacyDoubleListReporter b;
     public int reportInitDelay = 300;
     public int reportDelay = 300;
-    public InterfaceC3430a a = new C3432c();
+    public a a = new c();
 
     public static synchronized PrivacyDoubleListReporter getInstance() {
         PrivacyDoubleListReporter privacyDoubleListReporter;
@@ -48,12 +46,12 @@ public class PrivacyDoubleListReporter {
         return this.reportInitDelay;
     }
 
-    public InterfaceC3430a getReporter() {
+    public a getReporter() {
         return this.a;
     }
 
     public void report() {
-        Map<String, C3436d> map;
+        Map<String, d> map;
         String str;
         String str2;
         Matcher matcher;
@@ -63,11 +61,11 @@ public class PrivacyDoubleListReporter {
             if (PdlEnvUtils.a) {
                 Log.d("DL-REPORT", "Start report");
             }
-            C3435c a = C3438e.b().a();
-            Map<String, C3436d> map2 = a.a;
+            com.alibaba.mobsec.privacydoublelist.e.c a = e.b().a();
+            Map<String, d> map2 = a.a;
             ArrayList arrayList = new ArrayList(a.b.values());
             long currentTimeMillis = System.currentTimeMillis() / 1000;
-            InterfaceC3430a interfaceC3430a = this.a;
+            a aVar = this.a;
             if (arrayList.size() > 0) {
                 JSONObject jSONObject = new JSONObject();
                 map = map2;
@@ -76,7 +74,7 @@ public class PrivacyDoubleListReporter {
                     jSONObject.put(ReportManager.k, "1.1.2");
                     JSONArray jSONArray = new JSONArray();
                     for (Iterator it = arrayList.iterator(); it.hasNext(); it = it) {
-                        jSONArray.put(((C3433a) it.next()).toString());
+                        jSONArray.put(((com.alibaba.mobsec.privacydoublelist.e.a) it.next()).toString());
                     }
                     jSONObject.put("a", jSONArray);
                     jSONObject.put("t", currentTimeMillis);
@@ -86,7 +84,7 @@ public class PrivacyDoubleListReporter {
                 if (PdlEnvUtils.a) {
                     StringBuilder sb = new StringBuilder();
                     sb.append("type=");
-                    ((C3433a) arrayList.get(0)).b();
+                    ((com.alibaba.mobsec.privacydoublelist.e.a) arrayList.get(0)).b();
                     sb.append("a");
                     sb.append("; cached records=");
                     sb.append(jSONObject.toString());
@@ -100,8 +98,8 @@ public class PrivacyDoubleListReporter {
                 }
                 str = null;
             }
-            ((C3432c) interfaceC3430a).a(str);
-            InterfaceC3430a interfaceC3430a2 = this.a;
+            ((c) aVar).a(str);
+            a aVar2 = this.a;
             if (map.size() > 0) {
                 JSONObject jSONObject2 = new JSONObject();
                 try {
@@ -110,9 +108,9 @@ public class PrivacyDoubleListReporter {
                     JSONObject jSONObject3 = new JSONObject();
                     for (String str5 : map.keySet()) {
                         if (str5.contains(jn1.BRACKET_START_STR)) {
-                            matcher = AbstractC3434b.f.matcher(str5);
+                            matcher = b.f.matcher(str5);
                         } else {
-                            matcher = AbstractC3434b.g.matcher(str5);
+                            matcher = b.g.matcher(str5);
                         }
                         if (matcher.find()) {
                             str4 = matcher.group(1);
@@ -121,13 +119,13 @@ public class PrivacyDoubleListReporter {
                             str3 = str5;
                             str4 = "";
                         }
-                        Map<String, C3436d> map3 = map;
-                        C3436d c3436d = map3.get(str5);
-                        if (c3436d != null) {
+                        Map<String, d> map3 = map;
+                        d dVar = map3.get(str5);
+                        if (dVar != null) {
                             String str6 = str4 + "|" + str3;
                             JSONArray jSONArray2 = new JSONArray();
-                            for (C3436d.C3437a c3437a : c3436d.i.values()) {
-                                jSONArray2.put(c3437a.toString());
+                            for (d.a aVar3 : dVar.i.values()) {
+                                jSONArray2.put(aVar3.toString());
                             }
                             jSONObject3.put(str6, jSONArray2);
                         }
@@ -148,7 +146,7 @@ public class PrivacyDoubleListReporter {
                 }
                 str2 = null;
             }
-            ((C3432c) interfaceC3430a2).a(str2);
+            ((c) aVar2).a(str2);
         }
     }
 
@@ -164,7 +162,7 @@ public class PrivacyDoubleListReporter {
         this.reportInitDelay = i;
     }
 
-    public void setReporter(InterfaceC3430a interfaceC3430a) {
-        this.a = interfaceC3430a;
+    public void setReporter(a aVar) {
+        this.a = aVar;
     }
 }

@@ -29,7 +29,7 @@ import org.json.JSONObject;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public class AccsH5Connector implements InterfaceC7962Connector {
+public class AccsH5Connector implements Connector {
     private static transient /* synthetic */ IpChange $ipChange = null;
     private static final String TAG = "com.youku.live.messagechannel.connection.Connector.AccsH5Connector";
     private static AccsH5Connector accsH5Connector;
@@ -399,13 +399,13 @@ public class AccsH5Connector implements InterfaceC7962Connector {
         return AndroidInstantRuntime.support(ipChange, "-1904912438") ? (ConnectorStatus) ipChange.ipc$dispatch("-1904912438", new Object[]{this}) : this.connectorStatus;
     }
 
-    @Override // com.youku.live.messagechannel.connection.Connector.InterfaceC7962Connector
+    @Override // com.youku.live.messagechannel.connection.Connector.Connector
     public boolean isSubscribe(String str) {
         IpChange ipChange = $ipChange;
         return AndroidInstantRuntime.support(ipChange, "254281444") ? ((Boolean) ipChange.ipc$dispatch("254281444", new Object[]{this, str})).booleanValue() : this.registeredListeners.containsKey(str);
     }
 
-    @Override // com.youku.live.messagechannel.connection.Connector.InterfaceC7962Connector
+    @Override // com.youku.live.messagechannel.connection.Connector.Connector
     public void reconnect() {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "977253215")) {
@@ -416,7 +416,7 @@ public class AccsH5Connector implements InterfaceC7962Connector {
         connect();
     }
 
-    @Override // com.youku.live.messagechannel.connection.Connector.InterfaceC7962Connector
+    @Override // com.youku.live.messagechannel.connection.Connector.Connector
     public void subscribe(String str, ConnectorListener connectorListener) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "187816915")) {
@@ -436,7 +436,7 @@ public class AccsH5Connector implements InterfaceC7962Connector {
         }
     }
 
-    @Override // com.youku.live.messagechannel.connection.Connector.InterfaceC7962Connector
+    @Override // com.youku.live.messagechannel.connection.Connector.Connector
     public void unsubscribe(String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "510955503")) {

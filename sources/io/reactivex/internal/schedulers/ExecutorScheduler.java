@@ -8,8 +8,8 @@ import io.reactivex.internal.disposables.EmptyDisposable;
 import io.reactivex.internal.disposables.SequentialDisposable;
 import io.reactivex.internal.functions.Functions;
 import io.reactivex.internal.queue.MpscLinkedQueue;
-import io.reactivex.schedulers.C8162a;
 import io.reactivex.schedulers.SchedulerRunnableIntrospection;
+import io.reactivex.schedulers.a;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
@@ -25,7 +25,7 @@ import tb.jm;
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class ExecutorScheduler extends Scheduler {
-    static final Scheduler HELPER = C8162a.b();
+    static final Scheduler HELPER = a.b();
     @NonNull
     final Executor executor;
 

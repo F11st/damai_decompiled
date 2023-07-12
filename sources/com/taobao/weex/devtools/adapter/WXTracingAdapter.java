@@ -30,7 +30,7 @@ import tb.wz2;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class WXTracingAdapter implements ITracingAdapter {
-    private volatile SparseArray<wz2.C9890a> traceEvents = new SparseArray<>();
+    private volatile SparseArray<wz2.a> traceEvents = new SparseArray<>();
 
     public WXTracingAdapter() {
         WXSDKManager.v().Q(new WXSDKManager.InstanceLifeCycleCallbacks() { // from class: com.taobao.weex.devtools.adapter.WXTracingAdapter.1
@@ -48,10 +48,10 @@ public class WXTracingAdapter implements ITracingAdapter {
         });
     }
 
-    private void collectNativeTracingData(wz2.C9890a c9890a, JSONArray jSONArray) {
-        if (c9890a.m != null) {
-            for (int i = 0; i < c9890a.m.size(); i++) {
-                wz2.C9890a valueAt = c9890a.m.valueAt(i);
+    private void collectNativeTracingData(wz2.a aVar, JSONArray jSONArray) {
+        if (aVar.m != null) {
+            for (int i = 0; i < aVar.m.size(); i++) {
+                wz2.a valueAt = aVar.m.valueAt(i);
                 if (!valueAt.p) {
                     "domBatch".equals(valueAt.a);
                     JSONObject parseToJSONObject = parseToJSONObject(valueAt);
@@ -90,21 +90,21 @@ public class WXTracingAdapter implements ITracingAdapter {
         }
     }
 
-    private JSONObject parseToJSONObject(wz2.C9890a c9890a) {
+    private JSONObject parseToJSONObject(wz2.a aVar) {
         JSONObject jSONObject = new JSONObject();
         try {
-            jSONObject.put("parentId", c9890a.k);
-            jSONObject.put("ref", c9890a.g);
-            jSONObject.put("parentRef", c9890a.h);
-            jSONObject.put(PushClientConstants.TAG_CLASS_NAME, c9890a.j);
-            jSONObject.put("ts", c9890a.e);
-            jSONObject.put(ParamsConstants.Key.PARAM_TRACE_ID, c9890a.d);
-            jSONObject.put("iid", c9890a.f);
-            jSONObject.put("duration", c9890a.l);
-            jSONObject.put("fName", c9890a.a);
-            jSONObject.put("ph", c9890a.c);
-            jSONObject.put("name", c9890a.i);
-            jSONObject.put("tName", c9890a.b);
+            jSONObject.put("parentId", aVar.k);
+            jSONObject.put("ref", aVar.g);
+            jSONObject.put("parentRef", aVar.h);
+            jSONObject.put(PushClientConstants.TAG_CLASS_NAME, aVar.j);
+            jSONObject.put("ts", aVar.e);
+            jSONObject.put(ParamsConstants.Key.PARAM_TRACE_ID, aVar.d);
+            jSONObject.put("iid", aVar.f);
+            jSONObject.put("duration", aVar.l);
+            jSONObject.put("fName", aVar.a);
+            jSONObject.put("ph", aVar.c);
+            jSONObject.put("name", aVar.i);
+            jSONObject.put("tName", aVar.b);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -178,63 +178,63 @@ public class WXTracingAdapter implements ITracingAdapter {
     public void enable() {
     }
 
-    public wz2.C9890a getTraceEventByInstanceId(int i) {
+    public wz2.a getTraceEventByInstanceId(int i) {
         return this.traceEvents.get(i);
     }
 
     @Override // com.taobao.weex.adapter.ITracingAdapter
-    public void submitTracingEvent(wz2.C9890a c9890a) {
-        int parseInt = Integer.parseInt(c9890a.f);
+    public void submitTracingEvent(wz2.a aVar) {
+        int parseInt = Integer.parseInt(aVar.f);
         if (parseInt == -1) {
             WXLogUtils.e("Wrong instance id: " + parseInt);
         }
-        wz2.C9890a c9890a2 = this.traceEvents.get(parseInt);
-        if (c9890a2 == null) {
-            c9890a2 = new wz2.C9890a();
-            c9890a2.d = parseInt;
-            c9890a2.e = c9890a.e;
-            c9890a2.m = new SparseArray<>();
-            c9890a2.q = new HashMap();
-            this.traceEvents.append(parseInt, c9890a2);
+        wz2.a aVar2 = this.traceEvents.get(parseInt);
+        if (aVar2 == null) {
+            aVar2 = new wz2.a();
+            aVar2.d = parseInt;
+            aVar2.e = aVar.e;
+            aVar2.m = new SparseArray<>();
+            aVar2.q = new HashMap();
+            this.traceEvents.append(parseInt, aVar2);
         }
-        if ("renderFinish".equals(c9890a.a)) {
-            c9890a2.l = c9890a.l;
-            SparseArray<wz2.C9890a> sparseArray = c9890a2.m;
+        if ("renderFinish".equals(aVar.a)) {
+            aVar2.l = aVar.l;
+            SparseArray<wz2.a> sparseArray = aVar2.m;
             if (sparseArray != null) {
-                c9890a.l = 0.0d;
-                sparseArray.append(c9890a.d, c9890a);
-                sendTracingData(c9890a.f);
+                aVar.l = 0.0d;
+                sparseArray.append(aVar.d, aVar);
+                sendTracingData(aVar.f);
                 return;
             }
             return;
         }
-        int i = c9890a.k;
+        int i = aVar.k;
         if (i == -1) {
-            if (c9890a2.m == null) {
-                c9890a2.m = new SparseArray<>();
+            if (aVar2.m == null) {
+                aVar2.m = new SparseArray<>();
             }
-            if (!"B".equals(c9890a.c) && !"X".equals(c9890a.c)) {
-                if (ExifInterface.LONGITUDE_EAST.equals(c9890a.c)) {
-                    wz2.C9890a c9890a3 = c9890a2.m.get(c9890a.d);
-                    if (c9890a3 == null) {
-                        WXLogUtils.w("WXTracingAdapter", "begin event not found: " + c9890a.a + m80.DINAMIC_PREFIX_AT + c9890a.d);
+            if (!"B".equals(aVar.c) && !"X".equals(aVar.c)) {
+                if (ExifInterface.LONGITUDE_EAST.equals(aVar.c)) {
+                    wz2.a aVar3 = aVar2.m.get(aVar.d);
+                    if (aVar3 == null) {
+                        WXLogUtils.w("WXTracingAdapter", "begin event not found: " + aVar.a + m80.DINAMIC_PREFIX_AT + aVar.d);
                         return;
                     }
-                    c9890a3.l = c9890a.e - c9890a3.e;
-                    c9890a3.c = "X";
+                    aVar3.l = aVar.e - aVar3.e;
+                    aVar3.c = "X";
                     return;
                 }
                 return;
             }
-            c9890a2.m.append(c9890a.d, c9890a);
+            aVar2.m.append(aVar.d, aVar);
             return;
         }
-        wz2.C9890a c9890a4 = c9890a2.m.get(i);
-        if (c9890a4 != null) {
-            if (c9890a4.m == null) {
-                c9890a4.m = new SparseArray<>();
+        wz2.a aVar4 = aVar2.m.get(i);
+        if (aVar4 != null) {
+            if (aVar4.m == null) {
+                aVar4.m = new SparseArray<>();
             }
-            c9890a4.m.append(c9890a.d, c9890a);
+            aVar4.m.append(aVar.d, aVar);
         }
     }
 }

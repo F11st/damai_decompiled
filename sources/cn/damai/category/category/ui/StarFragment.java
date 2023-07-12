@@ -86,19 +86,18 @@ public class StarFragment extends Fragment implements OnLoadMoreListener, OnRefr
     private int mFollowIndex = 0;
     private String mType = "推荐";
     public Daojishi daojishi = new Daojishi();
-    private View.OnClickListener mStarItemListener = new View$OnClickListenerC0347d();
-    private View.OnClickListener mFollowListener = new View$OnClickListenerC0348e();
-    private View.OnClickListener mProjectItemListener = new View$OnClickListenerC0349f();
-    private View.OnClickListener mCityProjectClickListener = new View$OnClickListenerC0350g();
+    private View.OnClickListener mStarItemListener = new d();
+    private View.OnClickListener mFollowListener = new e();
+    private View.OnClickListener mProjectItemListener = new f();
+    private View.OnClickListener mCityProjectClickListener = new g();
     private boolean hasFollowData = false;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.StarFragment$a */
     /* loaded from: classes.dex */
-    public class C0344a implements ResponseErrorPage.ErrorRefreshListener {
+    public class a implements ResponseErrorPage.ErrorRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0344a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
@@ -114,12 +113,11 @@ public class StarFragment extends Fragment implements OnLoadMoreListener, OnRefr
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.StarFragment$b */
     /* loaded from: classes.dex */
-    public class C0345b implements ResponseErrorPage.ErrorRefreshListener {
+    public class b implements ResponseErrorPage.ErrorRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0345b() {
+        b() {
         }
 
         @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
@@ -134,12 +132,11 @@ public class StarFragment extends Fragment implements OnLoadMoreListener, OnRefr
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.StarFragment$c */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0346c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0346c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -154,12 +151,11 @@ public class StarFragment extends Fragment implements OnLoadMoreListener, OnRefr
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.StarFragment$d */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0347d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0347d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -192,12 +188,11 @@ public class StarFragment extends Fragment implements OnLoadMoreListener, OnRefr
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.StarFragment$e */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0348e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0348e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -224,12 +219,11 @@ public class StarFragment extends Fragment implements OnLoadMoreListener, OnRefr
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.StarFragment$f */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0349f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0349f() {
+        f() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -254,12 +248,11 @@ public class StarFragment extends Fragment implements OnLoadMoreListener, OnRefr
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.StarFragment$g */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0350g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0350g() {
+        g() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -501,7 +494,7 @@ public class StarFragment extends Fragment implements OnLoadMoreListener, OnRefr
         this.mNoLoginLayout = responseErrorPage;
         responseErrorPage.setLeftBtnVisibility(8);
         this.mLayout.addView(this.mNoLoginLayout);
-        this.mNoLoginLayout.setRefreshListener(new C0345b());
+        this.mNoLoginLayout.setRefreshListener(new b());
         this.mLineView = this.mView.findViewById(R$id.view_line);
         this.mEmptyView = this.mView.findViewById(R$id.ll_empty);
         this.mEmptyTip = (TextView) this.mView.findViewById(R$id.tv_empty_tip);
@@ -551,7 +544,7 @@ public class StarFragment extends Fragment implements OnLoadMoreListener, OnRefr
         });
         View findViewById = this.mView.findViewById(R$id.image_gotop);
         this.mGoTopView = findViewById;
-        findViewById.setOnClickListener(new View$OnClickListenerC0346c());
+        findViewById.setOnClickListener(new c());
     }
 
     @Override // androidx.fragment.app.Fragment
@@ -641,7 +634,7 @@ public class StarFragment extends Fragment implements OnLoadMoreListener, OnRefr
             ResponseErrorPage responseErrorPage2 = new ResponseErrorPage(this.mActivity, null, null, null);
             this.mErrorPage = responseErrorPage2;
             responseErrorPage2.hideTitle();
-            this.mErrorPage.setRefreshListener(new C0344a());
+            this.mErrorPage.setRefreshListener(new a());
             this.mLayout.addView(this.mErrorPage);
         }
     }
@@ -659,8 +652,8 @@ public class StarFragment extends Fragment implements OnLoadMoreListener, OnRefr
                 this.mLayout.removeView(this.mErrorPage);
                 this.mErrorPage = null;
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e2) {
+            e2.printStackTrace();
         }
     }
 

@@ -14,12 +14,11 @@ public class ScreenUtil {
     private static final int b = 524288;
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.secure.android.common.util.ScreenUtil$a */
     /* loaded from: classes10.dex */
-    private static class C5760a implements PrivilegedAction {
+    private static class a implements PrivilegedAction {
         Method a;
 
-        public C5760a(Method method) {
+        public a(Method method) {
             this.a = method;
         }
 
@@ -65,7 +64,7 @@ public class ScreenUtil {
         try {
             Window window = activity.getWindow();
             Method declaredMethod = Class.forName("android.view.Window").getDeclaredMethod("addPrivateFlags", Integer.TYPE);
-            AccessController.doPrivileged(new C5760a(declaredMethod));
+            AccessController.doPrivileged(new a(declaredMethod));
             declaredMethod.invoke(window, 524288);
         } catch (ClassNotFoundException unused) {
             LogsUtil.e(a, "hideOverlayWindows ClassNotFoundException");

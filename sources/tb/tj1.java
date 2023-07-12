@@ -16,7 +16,7 @@ public class tj1 implements IMtopLifecycle, INetworkLifecycle {
     }
 
     private void a() {
-        IDispatcher b = ca0.b(C8934b0.NETWORK_STAGE_DISPATCHER);
+        IDispatcher b = ca0.b(b0.NETWORK_STAGE_DISPATCHER);
         if (b instanceof NetworkStageDispatcher) {
             this.a = (NetworkStageDispatcher) b;
         }

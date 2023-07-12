@@ -3,7 +3,6 @@ package com.xiaomi.mipush.sdk;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.mipush.sdk.MessageHandleService;
 import com.xiaomi.push.eo;
 
@@ -22,9 +21,9 @@ public abstract class PushMessageReceiver extends BroadcastReceiver {
     @Override // android.content.BroadcastReceiver
     public final void onReceive(Context context, Intent intent) {
         if (intent != null) {
-            AbstractC7535b.e("[CRcv] receive a msg broadcast: " + intent.getAction());
+            com.xiaomi.channel.commonutils.logger.b.e("[CRcv] receive a msg broadcast: " + intent.getAction());
         }
-        MessageHandleService.addJob(context.getApplicationContext(), new MessageHandleService.C7554a(intent, this));
+        MessageHandleService.addJob(context.getApplicationContext(), new MessageHandleService.a(intent, this));
         try {
             int intExtra = intent.getIntExtra("eventMessageType", -1);
             if (intExtra == 2000) {
@@ -33,7 +32,7 @@ public abstract class PushMessageReceiver extends BroadcastReceiver {
                 eo.a(context.getApplicationContext()).a(context.getPackageName(), intent, 6005, (String) null);
             }
         } catch (Exception e) {
-            AbstractC7535b.d("meet error in PushMessageReceiver. " + e);
+            com.xiaomi.channel.commonutils.logger.b.d("meet error in PushMessageReceiver. " + e);
         }
     }
 

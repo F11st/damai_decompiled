@@ -155,9 +155,8 @@ public class Base64 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.studio.third.socket.java_websocket.util.Base64$a */
     /* loaded from: classes6.dex */
-    public static class C3388a extends FilterOutputStream {
+    public static class a extends FilterOutputStream {
         private boolean a;
         private int b;
         private byte[] c;
@@ -169,7 +168,7 @@ public class Base64 {
         private int i;
         private byte[] j;
 
-        public C3388a(OutputStream outputStream, int i) {
+        public a(OutputStream outputStream, int i) {
             super(outputStream);
             this.f = (i & 8) != 0;
             boolean z = (i & 1) != 0;

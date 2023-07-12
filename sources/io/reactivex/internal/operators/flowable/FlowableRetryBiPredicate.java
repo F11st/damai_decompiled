@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.exceptions.CompositeException;
 import io.reactivex.functions.BiPredicate;
 import io.reactivex.internal.subscriptions.SubscriptionArbiter;
@@ -86,12 +86,12 @@ public final class FlowableRetryBiPredicate<T> extends AbstractFlowableWithUpstr
         }
     }
 
-    public FlowableRetryBiPredicate(AbstractC8147b<T> abstractC8147b, BiPredicate<? super Integer, ? super Throwable> biPredicate) {
-        super(abstractC8147b);
+    public FlowableRetryBiPredicate(b<T> bVar, BiPredicate<? super Integer, ? super Throwable> biPredicate) {
+        super(bVar);
         this.predicate = biPredicate;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super T> subscriber) {
         SubscriptionArbiter subscriptionArbiter = new SubscriptionArbiter();
         subscriber.onSubscribe(subscriptionArbiter);

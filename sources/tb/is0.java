@@ -10,7 +10,7 @@ import tb.hs0;
 /* loaded from: classes6.dex */
 public final class is0 {
     @NotNull
-    public static final C9282a Companion = new C9282a(null);
+    public static final a Companion = new a(null);
     private final long a;
     private final boolean b;
     private final boolean c;
@@ -45,13 +45,12 @@ public final class is0 {
     private String r;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.is0$a */
     /* loaded from: classes6.dex */
-    public static final class C9282a {
-        private C9282a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9282a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -90,8 +89,8 @@ public final class is0 {
             String string3 = jSONObject.getString("slider-indicator-margin");
             lz1<hs0> b = string3 != null ? oq0.INSTANCE.b(string3) : null;
             if (b == null) {
-                hs0.C9232f c9232f = hs0.C9232f.INSTANCE;
-                lz1Var = new lz1<>(c9232f, c9232f, c9232f, c9232f);
+                hs0.f fVar = hs0.f.INSTANCE;
+                lz1Var = new lz1<>(fVar, fVar, fVar, fVar);
             } else {
                 lz1Var = b;
             }
@@ -248,18 +247,18 @@ public final class is0 {
     public final void t(@NotNull JSONObject jSONObject) {
         b41.i(jSONObject, "extendCssData");
         Long l = jSONObject.getLong("slider-scroll-time-interval");
-        C9282a c9282a = Companion;
-        Boolean c = c9282a.c(jSONObject, "slider-infinity-scroll");
-        Boolean c2 = c9282a.c(jSONObject, "slider-has-indicator");
+        a aVar = Companion;
+        Boolean c = aVar.c(jSONObject, "slider-infinity-scroll");
+        Boolean c2 = aVar.c(jSONObject, "slider-has-indicator");
         Integer integer = jSONObject.getInteger("slider-selected-index");
         String string = jSONObject.getString("slider-indicator-selected-color");
-        mq0 a = string == null ? null : mq0.Companion.a(string);
+        mq0 a2 = string == null ? null : mq0.Companion.a(string);
         String string2 = jSONObject.getString("slider-indicator-unselected-color");
-        mq0 a2 = string2 == null ? null : mq0.Companion.a(string2);
+        mq0 a3 = string2 == null ? null : mq0.Companion.a(string2);
         String string3 = jSONObject.getString("slider-indicator-margin");
         lz1<hs0> b = string3 == null ? null : oq0.INSTANCE.b(string3);
         String string4 = jSONObject.getString("slider-indicator-position");
-        GXSliderView.IndicatorPosition a3 = string4 != null ? GXSliderView.IndicatorPosition.Companion.a(string4) : null;
+        GXSliderView.IndicatorPosition a4 = string4 != null ? GXSliderView.IndicatorPosition.Companion.a(string4) : null;
         String string5 = jSONObject.getString("slider-indicator-class-android");
         if (l != null) {
             this.j = l;
@@ -273,17 +272,17 @@ public final class is0 {
         if (integer != null) {
             this.m = integer;
         }
-        if (a != null) {
-            this.n = a;
-        }
         if (a2 != null) {
-            this.o = a2;
+            this.n = a2;
+        }
+        if (a3 != null) {
+            this.o = a3;
         }
         if (b != null) {
             this.p = b;
         }
-        if (a3 != null) {
-            this.q = a3;
+        if (a4 != null) {
+            this.q = a4;
         }
         if (string5 != null) {
             this.r = string5;

@@ -56,12 +56,11 @@ public class RecentShowViewHolder extends CommonViewHolder {
     private List<ScrollTitleBean> tabs;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.viewholder.RecentShowViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1862a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1862a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -84,12 +83,11 @@ public class RecentShowViewHolder extends CommonViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.home.viewholder.RecentShowViewHolder$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1863b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1863b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -143,8 +141,8 @@ public class RecentShowViewHolder extends CommonViewHolder {
                 }
             }
         };
-        this.mOnClickListener = new View$OnClickListenerC1862a();
-        this.mOnTabItemClickListener = new View$OnClickListenerC1863b();
+        this.mOnClickListener = new a();
+        this.mOnTabItemClickListener = new b();
         this.mContext = mu0.a();
         this.mModuleTitleMoreLayout = (LinearLayout) this.itemView.findViewById(R$id.homepage_recent_more_layout);
         this.mModuleTitleMoreText = (TextView) this.itemView.findViewById(R$id.homepage_recent_more_text);

@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.annotations.Experimental;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.b;
 import io.reactivex.functions.Action;
 import io.reactivex.internal.fuseable.ConditionalSubscriber;
 import io.reactivex.internal.fuseable.QueueSubscription;
@@ -223,12 +223,12 @@ public final class FlowableDoFinally<T> extends AbstractFlowableWithUpstream<T, 
         }
     }
 
-    public FlowableDoFinally(AbstractC8147b<T> abstractC8147b, Action action) {
-        super(abstractC8147b);
+    public FlowableDoFinally(b<T> bVar, Action action) {
+        super(bVar);
         this.onFinally = action;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         if (subscriber instanceof ConditionalSubscriber) {
             this.source.subscribe((FlowableSubscriber) new DoFinallyConditionalSubscriber((ConditionalSubscriber) subscriber, this.onFinally));

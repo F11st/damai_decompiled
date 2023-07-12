@@ -22,13 +22,12 @@ public class TickletTransferTipsViewHolder extends ViewHolder {
     private Activity c;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.adapter.TickletTransferTipsViewHolder$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2054a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ rp2 a;
 
-        View$OnClickListenerC2054a(rp2 rp2Var) {
+        a(rp2 rp2Var) {
             this.a = rp2Var;
         }
 
@@ -60,10 +59,10 @@ public class TickletTransferTipsViewHolder extends ViewHolder {
         }
         this.a.setText(rp2Var.b());
         if (!TextUtils.isEmpty(rp2Var.e().getLink())) {
-            View$OnClickListenerC2054a view$OnClickListenerC2054a = new View$OnClickListenerC2054a(rp2Var);
+            a aVar = new a(rp2Var);
             this.b.setVisibility(0);
-            this.a.setOnClickListener(view$OnClickListenerC2054a);
-            this.b.setOnClickListener(view$OnClickListenerC2054a);
+            this.a.setOnClickListener(aVar);
+            this.b.setOnClickListener(aVar);
             return;
         }
         this.b.setVisibility(8);

@@ -77,7 +77,7 @@ public final class ObservableOnErrorReturn<T> extends AbstractObservableWithUpst
         this.valueSupplier = function;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         this.source.subscribe(new OnErrorReturnObserver(observer, this.valueSupplier));
     }

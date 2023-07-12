@@ -12,13 +12,12 @@ public abstract class ke1 implements Check {
     private final String a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ke1$a */
     /* loaded from: classes3.dex */
-    public static final class C9349a extends ke1 {
+    public static final class a extends ke1 {
         @NotNull
-        public static final C9349a INSTANCE = new C9349a();
+        public static final a INSTANCE = new a();
 
-        private C9349a() {
+        private a() {
             super("must be a member function", null);
         }
 
@@ -30,13 +29,12 @@ public abstract class ke1 implements Check {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ke1$b */
     /* loaded from: classes3.dex */
-    public static final class C9350b extends ke1 {
+    public static final class b extends ke1 {
         @NotNull
-        public static final C9350b INSTANCE = new C9350b();
+        public static final b INSTANCE = new b();
 
-        private C9350b() {
+        private b() {
             super("must be a member or an extension function", null);
         }
 
@@ -64,6 +62,6 @@ public abstract class ke1 implements Check {
     @Override // kotlin.reflect.jvm.internal.impl.util.Check
     @Nullable
     public String invoke(@NotNull FunctionDescriptor functionDescriptor) {
-        return Check.C8556a.a(this, functionDescriptor);
+        return Check.a.a(this, functionDescriptor);
     }
 }

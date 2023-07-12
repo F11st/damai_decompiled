@@ -3,64 +3,63 @@ package com.taobao.android.abilitykit;
 import com.alibaba.ability.MegaUtils;
 import com.alibaba.fastjson.JSONObject;
 import com.taobao.analysis.v3.FalcoAbilitySpan;
-import tb.C9292j;
-import tb.C9327k;
-import tb.C9392l;
-import tb.C9428m;
-import tb.C9586q;
-import tb.C9636r;
+import tb.j;
+import tb.k;
+import tb.l;
 import tb.l61;
+import tb.m;
+import tb.q;
+import tb.r;
 import tb.y6;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
-public abstract class AKBaseAbility<T extends C9586q> {
+public abstract class AKBaseAbility<T extends q> {
     public static final String CALLBACK_FAILURE = "failure";
     public static final String CALLBACK_SUCCESS = "success";
     private FalcoAbilitySpan a;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.abilitykit.AKBaseAbility$a */
     /* loaded from: classes8.dex */
-    public class C6295a implements AKIAbilityCallback {
+    public class a implements AKIAbilityCallback {
         final /* synthetic */ AKIAbilityCallback a;
-        final /* synthetic */ C9586q b;
-        final /* synthetic */ C9636r c;
+        final /* synthetic */ q b;
+        final /* synthetic */ r c;
 
-        C6295a(AKBaseAbility aKBaseAbility, AKIAbilityCallback aKIAbilityCallback, C9586q c9586q, C9636r c9636r) {
+        a(AKBaseAbility aKBaseAbility, AKIAbilityCallback aKIAbilityCallback, q qVar, r rVar) {
             this.a = aKIAbilityCallback;
-            this.b = c9586q;
-            this.c = c9636r;
+            this.b = qVar;
+            this.c = rVar;
         }
 
         @Override // com.taobao.android.abilitykit.AKIAbilityCallback
-        public void callback(String str, C9392l c9392l) {
+        public void callback(String str, l lVar) {
             AKIAbilityCallback aKIAbilityCallback = this.a;
             if (aKIAbilityCallback != null) {
-                aKIAbilityCallback.callback(str, c9392l);
+                aKIAbilityCallback.callback(str, lVar);
             }
-            if (c9392l instanceof C9327k) {
-                y6.a(this.b, this.c, (C9327k) c9392l);
+            if (lVar instanceof k) {
+                y6.a(this.b, this.c, (k) lVar);
             }
         }
     }
 
-    public C9392l a(JSONObject jSONObject, T t, AKIAbilityCallback aKIAbilityCallback) {
+    public l a(JSONObject jSONObject, T t, AKIAbilityCallback aKIAbilityCallback) {
         if (jSONObject == null) {
-            C9327k c9327k = new C9327k(new C9292j(10002, "NULL"), true);
-            y6.a(t, null, c9327k);
-            return c9327k;
+            k kVar = new k(new j(10002, "NULL"), true);
+            y6.a(t, null, kVar);
+            return kVar;
         }
-        return b(new C9636r(jSONObject), t, aKIAbilityCallback);
+        return b(new r(jSONObject), t, aKIAbilityCallback);
     }
 
-    public C9392l b(final C9636r c9636r, final T t, AKIAbilityCallback aKIAbilityCallback) {
-        final C6295a c6295a = new C6295a(this, aKIAbilityCallback, t, c9636r);
-        if (l61.b(c9636r != null ? c9636r.b() : null, "isMainThread", true)) {
-            C9392l c = c(c9636r, t, c6295a);
-            if (c instanceof C9327k) {
-                y6.a(t, c9636r, (C9327k) c);
+    public l b(final r rVar, final T t, AKIAbilityCallback aKIAbilityCallback) {
+        final a aVar = new a(this, aKIAbilityCallback, t, rVar);
+        if (l61.b(rVar != null ? rVar.b() : null, "isMainThread", true)) {
+            l c = c(rVar, t, aVar);
+            if (c instanceof k) {
+                y6.a(t, rVar, (k) c);
             }
             return c;
         }
@@ -68,22 +67,22 @@ public abstract class AKBaseAbility<T extends C9586q> {
             /* JADX WARN: Multi-variable type inference failed */
             @Override // java.lang.Runnable
             public void run() {
-                final C9392l c2 = AKBaseAbility.this.c(c9636r, t, c6295a);
-                if (c2 == null || (c2 instanceof C9428m)) {
+                final l c2 = AKBaseAbility.this.c(rVar, t, aVar);
+                if (c2 == null || (c2 instanceof m)) {
                     return;
                 }
                 MegaUtils.d(new Runnable() { // from class: com.taobao.android.abilitykit.AKBaseAbility.2.1
                     @Override // java.lang.Runnable
                     public void run() {
-                        c6295a.callback("_onResult", c2);
+                        aVar.callback("_onResult", c2);
                     }
                 }, 0L);
             }
         });
-        return new C9428m();
+        return new m();
     }
 
-    protected abstract C9392l c(C9636r c9636r, T t, AKIAbilityCallback aKIAbilityCallback);
+    protected abstract l c(r rVar, T t, AKIAbilityCallback aKIAbilityCallback);
 
     public void d(FalcoAbilitySpan falcoAbilitySpan) {
         this.a = falcoAbilitySpan;

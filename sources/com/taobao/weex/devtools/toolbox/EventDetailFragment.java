@@ -30,7 +30,7 @@ import tb.wz2;
 public class EventDetailFragment extends Fragment {
     private TextView eventName;
     private TextView eventPayload;
-    private wz2.C9890a rootEvent;
+    private wz2.a rootEvent;
     private View rootView;
     private LinearLayout subEvents;
 
@@ -87,14 +87,14 @@ public class EventDetailFragment extends Fragment {
         instantiationViews();
         this.eventName.setText(this.rootEvent.a);
         for (int i3 = 0; i3 < this.rootEvent.m.size(); i3++) {
-            wz2.C9890a valueAt = this.rootEvent.m.valueAt(i3);
+            wz2.a valueAt = this.rootEvent.m.valueAt(i3);
             if (!"DomExecute".equals(valueAt.a) && !"UIExecute".equals(valueAt.a)) {
                 EventView eventView = new EventView(getContext());
                 eventView.desc.setText(valueAt.a);
                 this.subEvents.addView(eventView);
                 long j = valueAt.e;
-                wz2.C9890a c9890a = this.rootEvent;
-                int screenWidth = (int) (((j - c9890a.e) / c9890a.l) * (WXViewUtils.getScreenWidth(getContext()) - WXViewUtils.dip2px(8.0f)));
+                wz2.a aVar = this.rootEvent;
+                int screenWidth = (int) (((j - aVar.e) / aVar.l) * (WXViewUtils.getScreenWidth(getContext()) - WXViewUtils.dip2px(8.0f)));
                 ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) eventView.indicator.getLayoutParams();
                 marginLayoutParams.width = ((int) ((valueAt.l / this.rootEvent.l) * WXViewUtils.getScreenWidth(getContext()))) + WXViewUtils.dip2px(2.0f);
                 marginLayoutParams.height = -1;

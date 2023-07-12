@@ -9,10 +9,9 @@ public class aa2 {
     private static volatile ISecurityFactory a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.aa2$a */
     /* loaded from: classes.dex */
-    static class C8902a implements ISecurityFactory {
-        C8902a() {
+    static class a implements ISecurityFactory {
+        a() {
         }
 
         @Override // anet.channel.security.ISecurityFactory
@@ -28,7 +27,7 @@ public class aa2 {
 
     public static ISecurityFactory a() {
         if (a == null) {
-            a = new C8902a();
+            a = new a();
         }
         return a;
     }

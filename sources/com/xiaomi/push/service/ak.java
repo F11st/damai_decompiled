@@ -1,13 +1,12 @@
 package com.xiaomi.push.service;
 
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.mipush.sdk.ErrorCode;
 import com.xiaomi.push.service.bg;
 
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public final class ak implements bg.C7737b.InterfaceC7738a {
+public final class ak implements bg.b.a {
     final /* synthetic */ XMPushService a;
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -15,14 +14,14 @@ public final class ak implements bg.C7737b.InterfaceC7738a {
         this.a = xMPushService;
     }
 
-    @Override // com.xiaomi.push.service.bg.C7737b.InterfaceC7738a
-    public void a(bg.EnumC7741c enumC7741c, bg.EnumC7741c enumC7741c2, int i) {
-        if (enumC7741c2 == bg.EnumC7741c.binded) {
-            C7781x.a(this.a, true);
-            C7781x.a(this.a);
-        } else if (enumC7741c2 == bg.EnumC7741c.unbind) {
-            AbstractC7535b.m586a("onChange unbind");
-            C7781x.a(this.a, ErrorCode.ERROR_SERVICE_UNAVAILABLE, " the push is not connected.");
+    @Override // com.xiaomi.push.service.bg.b.a
+    public void a(bg.c cVar, bg.c cVar2, int i) {
+        if (cVar2 == bg.c.binded) {
+            x.a(this.a, true);
+            x.a(this.a);
+        } else if (cVar2 == bg.c.unbind) {
+            com.xiaomi.channel.commonutils.logger.b.m586a("onChange unbind");
+            x.a(this.a, ErrorCode.ERROR_SERVICE_UNAVAILABLE, " the push is not connected.");
         }
     }
 }

@@ -113,13 +113,13 @@ public final class GaiaXMonitor {
         onCreateB(gaiaXContext, "1020");
     }
 
-    public final void onCreateC(@NotNull GXTemplateEngine.C3347i c3347i, long j) {
-        b41.i(c3347i, "gxTemplateItem");
+    public final void onCreateC(@NotNull GXTemplateEngine.i iVar, long j) {
+        b41.i(iVar, "gxTemplateItem");
         IProxyMonitor monitor = GaiaXProxy.Companion.getInstance().getMonitor();
         if (monitor == null) {
             return;
         }
-        IProxyMonitor.DefaultImpls.monitor$default(monitor, "template_time", c3347i.a(), c3347i.d(), "1031", null, SystemClock.elapsedRealtime() - j, null, null, null, 464, null);
+        IProxyMonitor.DefaultImpls.monitor$default(monitor, "template_time", iVar.a(), iVar.d(), "1031", null, SystemClock.elapsedRealtime() - j, null, null, null, 464, null);
     }
 
     public final void onExpressionTimeUpLoad(@NotNull GaiaXContext gaiaXContext) {

@@ -18,14 +18,13 @@ public class WindowEventDispatcher extends AbsDispatcher<OnEventListener> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.WindowEventDispatcher$a */
     /* loaded from: classes11.dex */
-    class C6803a implements AbsDispatcher.ListenerCaller<OnEventListener> {
+    class a implements AbsDispatcher.ListenerCaller<OnEventListener> {
         final /* synthetic */ Activity a;
         final /* synthetic */ KeyEvent b;
         final /* synthetic */ long c;
 
-        C6803a(WindowEventDispatcher windowEventDispatcher, Activity activity, KeyEvent keyEvent, long j) {
+        a(WindowEventDispatcher windowEventDispatcher, Activity activity, KeyEvent keyEvent, long j) {
             this.a = activity;
             this.b = keyEvent;
             this.c = j;
@@ -39,14 +38,13 @@ public class WindowEventDispatcher extends AbsDispatcher<OnEventListener> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.WindowEventDispatcher$b */
     /* loaded from: classes11.dex */
-    class C6804b implements AbsDispatcher.ListenerCaller<OnEventListener> {
+    class b implements AbsDispatcher.ListenerCaller<OnEventListener> {
         final /* synthetic */ Activity a;
         final /* synthetic */ MotionEvent b;
         final /* synthetic */ long c;
 
-        C6804b(WindowEventDispatcher windowEventDispatcher, Activity activity, MotionEvent motionEvent, long j) {
+        b(WindowEventDispatcher windowEventDispatcher, Activity activity, MotionEvent motionEvent, long j) {
             this.a = activity;
             this.b = motionEvent;
             this.c = j;
@@ -60,10 +58,10 @@ public class WindowEventDispatcher extends AbsDispatcher<OnEventListener> {
     }
 
     public void f(Activity activity, KeyEvent keyEvent, long j) {
-        c(new C6803a(this, activity, keyEvent, j));
+        c(new a(this, activity, keyEvent, j));
     }
 
     public void g(Activity activity, MotionEvent motionEvent, long j) {
-        c(new C6804b(this, activity, motionEvent, j));
+        c(new b(this, activity, motionEvent, j));
     }
 }

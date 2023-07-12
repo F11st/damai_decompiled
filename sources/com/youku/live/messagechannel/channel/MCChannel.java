@@ -38,7 +38,7 @@ import mtopsdk.mtop.common.MtopCallback;
 import mtopsdk.mtop.common.MtopFinishEvent;
 import mtopsdk.mtop.domain.MtopResponse;
 import org.json.JSONObject;
-import tb.C9556pm;
+import tb.pm;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -325,7 +325,7 @@ public class MCChannel {
                             MCChannel.this.mcChannelInfo.channelId = optString;
                             MCChannel.this.mcChannelInfo.serverTime = valueOf2.longValue();
                             ServerTimeEstimater.syncEstimaterByServerTime(currentTimeMillis, MCChannel.this.mcChannelInfo.serverTime);
-                            JSONObject optJSONObject2 = optJSONObject.optJSONObject(C9556pm.TAG);
+                            JSONObject optJSONObject2 = optJSONObject.optJSONObject(pm.TAG);
                             if (optJSONObject2 != null) {
                                 MCChannel.this.mcChannelInfo.PMInfo.bizCode = optJSONObject2.optInt("bizCode");
                                 MCChannel.this.mcChannelInfo.PMInfo.topic = optJSONObject2.optString("topic");

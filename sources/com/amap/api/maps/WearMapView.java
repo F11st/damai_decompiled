@@ -11,10 +11,10 @@ import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import com.amap.api.mapcore.util.C4640t;
+import com.amap.api.mapcore.util.t;
 import com.autonavi.amap.mapcore.interfaces.IAMap;
 import com.autonavi.amap.mapcore.interfaces.IMapFragmentDelegate;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 @TargetApi(20)
@@ -47,7 +47,7 @@ public class WearMapView extends ViewGroup implements BaseMapView {
     }
 
     private void a(Context context) {
-        WindowManager windowManager = (WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+        WindowManager windowManager = (WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW);
         if (windowManager != null) {
             Display defaultDisplay = windowManager.getDefaultDisplay();
             Point point = new Point();
@@ -85,7 +85,7 @@ public class WearMapView extends ViewGroup implements BaseMapView {
     protected IMapFragmentDelegate getMapFragmentDelegate() {
         IMapFragmentDelegate iMapFragmentDelegate = this.b;
         if (iMapFragmentDelegate == null && iMapFragmentDelegate == null) {
-            this.b = new C4640t(1);
+            this.b = new t(1);
         }
         return this.b;
     }

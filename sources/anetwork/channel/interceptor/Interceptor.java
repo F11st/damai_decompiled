@@ -1,6 +1,6 @@
 package anetwork.channel.interceptor;
 
-import anet.channel.request.C0193a;
+import anet.channel.request.a;
 import java.util.concurrent.Future;
 
 /* compiled from: Taobao */
@@ -12,9 +12,9 @@ public interface Interceptor {
     public interface Chain {
         Callback callback();
 
-        Future proceed(C0193a c0193a, Callback callback);
+        Future proceed(a aVar, Callback callback);
 
-        C0193a request();
+        a request();
     }
 
     Future intercept(Chain chain);

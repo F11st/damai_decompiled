@@ -4,7 +4,6 @@ import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
-import kotlin.collections.C8214m;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
@@ -39,7 +38,7 @@ public abstract class le1 implements MemberScope {
         List g;
         b41.i(z60Var, "kindFilter");
         b41.i(function1, "nameFilter");
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         return g;
     }
 
@@ -49,7 +48,7 @@ public abstract class le1 implements MemberScope {
         List g;
         b41.i(ni1Var, "name");
         b41.i(lookupLocation, "location");
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         return g;
     }
 
@@ -59,7 +58,7 @@ public abstract class le1 implements MemberScope {
         List g;
         b41.i(ni1Var, "name");
         b41.i(lookupLocation, "location");
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         return g;
     }
 
@@ -95,6 +94,6 @@ public abstract class le1 implements MemberScope {
 
     @Override // kotlin.reflect.jvm.internal.impl.resolve.scopes.ResolutionScope
     public void recordLookup(@NotNull ni1 ni1Var, @NotNull LookupLocation lookupLocation) {
-        MemberScope.C8498a.a(this, ni1Var, lookupLocation);
+        MemberScope.a.a(this, ni1Var, lookupLocation);
     }
 }

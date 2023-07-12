@@ -12,7 +12,7 @@ import com.ali.user.mobile.utils.NetworkUtil;
 public class AliUserBindMobileDialog extends TaobaoRegProtocolDialogFragment {
     @Override // com.taobao.login4android.ui.TaobaoRegProtocolDialogFragment
     protected int getLayoutContent() {
-        return R.C2965layout.aliuser_bind_mobile_dialog;
+        return R.layout.aliuser_bind_mobile_dialog;
     }
 
     @Override // com.taobao.login4android.ui.TaobaoRegProtocolDialogFragment

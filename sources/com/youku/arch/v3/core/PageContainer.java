@@ -51,9 +51,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.JvmField;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.Ref$IntRef;
@@ -125,7 +125,7 @@ public class PageContainer<VALUE extends ModelValue> implements IContainer<VALUE
         this.pageContext = iContext;
         this.node = node;
         this.adapters = new ArrayList();
-        b = C8177b.b(new Function0<GenericFactory<IModule<ModuleValue>, Node>>(this) { // from class: com.youku.arch.v3.core.PageContainer$moduleFactory$2
+        b = b.b(new Function0<GenericFactory<IModule<ModuleValue>, Node>>(this) { // from class: com.youku.arch.v3.core.PageContainer$moduleFactory$2
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ PageContainer<VALUE> this$0;
 

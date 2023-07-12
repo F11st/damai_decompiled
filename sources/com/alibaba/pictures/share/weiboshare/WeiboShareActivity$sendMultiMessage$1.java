@@ -12,7 +12,7 @@ import com.sina.weibo.sdk.api.WeiboMultiMessage;
 import com.sina.weibo.sdk.openapi.IWBAPI;
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
+import kotlin.coroutines.intrinsics.b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function2;
@@ -75,7 +75,7 @@ public final class WeiboShareActivity$sendMultiMessage$1 extends SuspendLambda i
         if (AndroidInstantRuntime.support(ipChange, "-1525137057")) {
             return ipChange.ipc$dispatch("-1525137057", new Object[]{this, obj});
         }
-        C8234b.d();
+        b.d();
         if (this.label == 0) {
             i32.b(obj);
             WeiboMultiMessage weiboMultiMessage = new WeiboMultiMessage();

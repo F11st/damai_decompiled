@@ -81,29 +81,27 @@ public class DXImageWidgetNode extends DXWidgetNode implements PrefetchListener 
     /* compiled from: Taobao */
     /* loaded from: classes12.dex */
     public interface ImageLoadListener {
-        boolean onHappen(C6441d c6441d);
+        boolean onHappen(d dVar);
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXImageWidgetNode$a */
     /* loaded from: classes11.dex */
-    class C6438a implements ImageLoadListener {
+    class a implements ImageLoadListener {
         final /* synthetic */ String a;
 
-        C6438a(String str) {
+        a(String str) {
             this.a = str;
         }
 
         @Override // com.taobao.android.dinamicx.widget.DXImageWidgetNode.ImageLoadListener
-        public boolean onHappen(C6441d c6441d) {
+        public boolean onHappen(d dVar) {
             throw null;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXImageWidgetNode$b */
     /* loaded from: classes11.dex */
-    public static class C6439b implements IDXBuilderWidgetNode {
+    public static class b implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(@Nullable Object obj) {
             return new DXImageWidgetNode();
@@ -111,9 +109,8 @@ public class DXImageWidgetNode extends DXWidgetNode implements PrefetchListener 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXImageWidgetNode$c */
     /* loaded from: classes12.dex */
-    public static class C6440c {
+    public static class c {
         public int[] a;
         public int b;
         private boolean c;
@@ -154,20 +151,18 @@ public class DXImageWidgetNode extends DXWidgetNode implements PrefetchListener 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXImageWidgetNode$d */
     /* loaded from: classes12.dex */
-    public static class C6441d {
+    public static class d {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXImageWidgetNode$e */
     /* loaded from: classes12.dex */
-    public static class AsyncTaskC6442e extends AsyncTask<Void, Void, Drawable> {
+    public static class e extends AsyncTask<Void, Void, Drawable> {
         private String a;
         private WeakReference<ImageView> b;
         private Context c;
 
-        public AsyncTaskC6442e(ImageView imageView, String str) {
+        public e(ImageView imageView, String str) {
             this.b = new WeakReference<>(imageView);
             this.a = str;
             this.c = imageView.getContext().getApplicationContext();
@@ -229,7 +224,7 @@ public class DXImageWidgetNode extends DXWidgetNode implements PrefetchListener 
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private com.taobao.android.dinamicx.widget.DXImageWidgetNode.C6440c b(boolean r12) {
+    private com.taobao.android.dinamicx.widget.DXImageWidgetNode.c b(boolean r12) {
         /*
             Method dump skipped, instructions count: 269
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -253,37 +248,37 @@ public class DXImageWidgetNode extends DXWidgetNode implements PrefetchListener 
         return num.intValue();
     }
 
-    private void g(ImageView imageView, C6440c c6440c) {
-        if (c6440c == null || imageView == null) {
+    private void g(ImageView imageView, c cVar) {
+        if (cVar == null || imageView == null) {
             return;
         }
         int i = R$id.dx_imageview_renderview_timestamp_key;
         boolean z = imageView.getTag(i) != null;
         long currentTimeMillis = System.currentTimeMillis();
         imageView.setTag(i, Long.valueOf(currentTimeMillis));
-        c6440c.n("DXImageViewOnCreateTimestampKey", String.valueOf(imageView.getTag(R$id.dx_imageview_createview_timestamp_key)));
-        c6440c.n("DXImageViewOnRenderTimestampKey", String.valueOf(currentTimeMillis));
-        c6440c.n("DXImageViewIsReuseKey", String.valueOf(z));
-        c6440c.n("DXImageViewRenderTypeKey", String.valueOf(getDXRuntimeContext().getRenderType()));
-        c6440c.n("DXImageViewIsMainKey", String.valueOf(Looper.getMainLooper().getThread().getId() == Thread.currentThread().getId()));
+        cVar.n("DXImageViewOnCreateTimestampKey", String.valueOf(imageView.getTag(R$id.dx_imageview_createview_timestamp_key)));
+        cVar.n("DXImageViewOnRenderTimestampKey", String.valueOf(currentTimeMillis));
+        cVar.n("DXImageViewIsReuseKey", String.valueOf(z));
+        cVar.n("DXImageViewRenderTypeKey", String.valueOf(getDXRuntimeContext().getRenderType()));
+        cVar.n("DXImageViewIsMainKey", String.valueOf(Looper.getMainLooper().getThread().getId() == Thread.currentThread().getId()));
         if (DinamicXEngine.x()) {
-            nz.b("DXImageOption", JSON.toJSONString(c6440c.k()));
+            nz.b("DXImageOption", JSON.toJSONString(cVar.k()));
         }
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public C6440c a() {
-        C6440c c6440c = new C6440c();
+    public c a() {
+        c cVar = new c();
         getDXRuntimeContext().getConfig().g();
         getDXRuntimeContext().getConfig().f();
-        c6440c.k = this.m;
+        cVar.k = this.m;
         int i = this.layoutWidth;
         if (i == -2 && this.layoutHeight != -2) {
-            c6440c.g = true;
+            cVar.g = true;
         } else if (i != -2 && this.layoutHeight == -2) {
-            c6440c.g = true;
+            cVar.g = true;
         }
-        return c6440c;
+        return cVar;
     }
 
     @Override // com.taobao.android.dinamicx.widget.DXWidgetNode, com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
@@ -345,13 +340,13 @@ public class DXImageWidgetNode extends DXWidgetNode implements PrefetchListener 
         if (str.equals((String) imageView.getTag(i))) {
             return;
         }
-        AsyncTaskC6442e asyncTaskC6442e = new AsyncTaskC6442e(imageView, str);
+        e eVar = new e(imageView, str);
         if (this.i) {
             imageView.setTag(a90.TAG_CURRENT_IMAGE_NAME, str);
-            y00.q(asyncTaskC6442e, new Void[0]);
+            y00.q(eVar, new Void[0]);
             return;
         }
-        imageView.setImageDrawable(asyncTaskC6442e.b());
+        imageView.setImageDrawable(eVar.b());
         imageView.setTag(i, str);
     }
 
@@ -396,21 +391,21 @@ public class DXImageWidgetNode extends DXWidgetNode implements PrefetchListener 
         int i3;
         int max;
         int i4;
-        int a = DXWidgetNode.DXMeasureSpec.a(i);
-        int a2 = DXWidgetNode.DXMeasureSpec.a(i2);
+        int a2 = DXWidgetNode.DXMeasureSpec.a(i);
+        int a3 = DXWidgetNode.DXMeasureSpec.a(i2);
         int i5 = 0;
-        boolean z = a != 1073741824;
-        boolean z2 = a2 != 1073741824;
+        boolean z = a2 != 1073741824;
+        boolean z2 = a3 != 1073741824;
         if (!z && !z2) {
             i4 = DXWidgetNode.DXMeasureSpec.b(i);
             max = DXWidgetNode.DXMeasureSpec.b(i2);
         } else {
-            double d = this.d;
-            if (d <= 0.0d) {
+            double d2 = this.d;
+            if (d2 <= 0.0d) {
                 if (!TextUtils.isEmpty(this.a)) {
-                    Double d2 = t.get(this.a);
-                    if (d2 != null) {
-                        d = d2.doubleValue();
+                    Double d3 = t.get(this.a);
+                    if (d3 != null) {
+                        d2 = d3.doubleValue();
                     }
                 } else {
                     Drawable drawable = this.c;
@@ -418,7 +413,7 @@ public class DXImageWidgetNode extends DXWidgetNode implements PrefetchListener 
                         int intrinsicWidth = drawable.getIntrinsicWidth();
                         int intrinsicHeight = this.c.getIntrinsicHeight();
                         if (intrinsicHeight > 0) {
-                            d = intrinsicWidth / intrinsicHeight;
+                            d2 = intrinsicWidth / intrinsicHeight;
                         }
                     }
                 }
@@ -426,9 +421,9 @@ public class DXImageWidgetNode extends DXWidgetNode implements PrefetchListener 
             if (!z || z2) {
                 if (!z && z2) {
                     int size = View.MeasureSpec.getSize(i);
-                    if (d > 0.0d) {
+                    if (d2 > 0.0d) {
                         i5 = size;
-                        i3 = (int) (size / d);
+                        i3 = (int) (size / d2);
                     } else {
                         i5 = size;
                     }
@@ -436,8 +431,8 @@ public class DXImageWidgetNode extends DXWidgetNode implements PrefetchListener 
                 i3 = 0;
             } else {
                 i3 = View.MeasureSpec.getSize(i2);
-                if (d > 0.0d) {
-                    i5 = (int) (i3 * d);
+                if (d2 > 0.0d) {
+                    i5 = (int) (i3 * d2);
                 }
             }
             int max2 = Math.max(i5, getSuggestedMinimumWidth());
@@ -459,11 +454,11 @@ public class DXImageWidgetNode extends DXWidgetNode implements PrefetchListener 
     public void onRenderView(Context context, View view) {
         ImageView imageView = (ImageView) view;
         int[] iArr = null;
-        C6440c b = (f() && this.k == null) ? b(false) : null;
-        if (b == null) {
-            b = a();
+        c b2 = (f() && this.k == null) ? b(false) : null;
+        if (b2 == null) {
+            b2 = a();
         }
-        b.n = this.k != null;
+        b2.n = this.k != null;
         h(imageView, this.b);
         m11.b(imageView, this.s);
         String str = this.k;
@@ -481,15 +476,15 @@ public class DXImageWidgetNode extends DXWidgetNode implements PrefetchListener 
         try {
             FalcoTracer falcoTracer = FalcoGlobalTracer.get();
             if (falcoTracer != null && getDXRuntimeContext().getOpenTracerSpan() != null) {
-                b.o(falcoTracer.injectContextToMap(getDXRuntimeContext().getOpenTracerSpan().context()));
+                b2.o(falcoTracer.injectContextToMap(getDXRuntimeContext().getOpenTracerSpan().context()));
             }
         } catch (Throwable th) {
             ry.b(th);
         }
         if (!TextUtils.isEmpty(str)) {
-            b.h = true;
+            b2.h = true;
             if (getMeasuredHeight() == 0 || getMeasuredWidth() == 0) {
-                new C6438a(str);
+                new a(str);
             }
         } else {
             Drawable drawable = this.c;
@@ -499,58 +494,58 @@ public class DXImageWidgetNode extends DXWidgetNode implements PrefetchListener 
                 j(imageView, this.e);
             } else {
                 imageView.setImageDrawable(null);
-                b.h = true;
+                b2.h = true;
             }
         }
-        if (b.h) {
-            b.b = d(context, this.f);
+        if (b2.h) {
+            b2.b = d(context, this.f);
         }
         if (this.needSetBackground) {
             int tryFetchDarkModeColor = tryFetchDarkModeColor("borderColor", 2, this.borderColor);
             this.borderColor = tryFetchDarkModeColor;
             if (tryFetchDarkModeColor != 0) {
-                b.d = true;
+                b2.d = true;
             }
             if (this.borderWidth > 0) {
-                b.e = true;
+                b2.e = true;
             }
             int i = this.cornerRadius;
             if (i > 0) {
                 iArr = new int[]{i, i, i, i};
-            } else if (this.cornerRadiusLeftTop > 0 || this.cornerRadiusRightTop > 0 || this.cornerRadiusLeftBottom > 0 || this.cornerRadiusRightBottom > 0 || b.d || b.e) {
+            } else if (this.cornerRadiusLeftTop > 0 || this.cornerRadiusRightTop > 0 || this.cornerRadiusLeftBottom > 0 || this.cornerRadiusRightBottom > 0 || b2.d || b2.e) {
                 iArr = new int[]{this.cornerRadiusLeftTop, this.cornerRadiusRightTop, this.cornerRadiusRightBottom, this.cornerRadiusLeftBottom};
             }
             if (iArr != null) {
-                b.a = iArr;
-                b.f = true;
+                b2.a = iArr;
+                b2.f = true;
             }
         }
         if (getDXRuntimeContext().getEngineContext() != null && getDXRuntimeContext().getEngineContext().b() != null && this.j) {
             getDXRuntimeContext().getEngineContext().b().o();
         }
-        b.c = this.l;
-        b.j = this.r;
-        b.i = this.q;
+        b2.c = this.l;
+        b2.j = this.r;
+        b2.i = this.q;
         IDXWebImageInterface f = DXGlobalCenter.f(getDXRuntimeContext());
         if (f == null) {
             return;
         }
         try {
-            g(imageView, b);
+            g(imageView, b2);
         } catch (Throwable th2) {
             nz.d(TAG, "setImagePerformanceOption", th2);
             ry.b(th2);
         }
-        f.setImage(imageView, str, b);
+        f.setImage(imageView, str, b2);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.taobao.android.dinamicx.widget.DXWidgetNode
-    public void onSetDoubleAttribute(long j, double d) {
+    public void onSetDoubleAttribute(long j, double d2) {
         if (7594222789952419722L == j) {
-            this.d = d;
+            this.d = d2;
         } else if (j == 1360906811535693304L) {
-            this.r = d;
+            this.r = d2;
         }
     }
 

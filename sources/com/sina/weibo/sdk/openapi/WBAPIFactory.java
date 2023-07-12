@@ -6,6 +6,6 @@ import android.content.Context;
 /* loaded from: classes7.dex */
 public class WBAPIFactory {
     public static IWBAPI createWBAPI(Context context) {
-        return new C6226a(context);
+        return new a(context);
     }
 }

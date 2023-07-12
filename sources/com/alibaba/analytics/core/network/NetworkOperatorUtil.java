@@ -20,12 +20,11 @@ public class NetworkOperatorUtil {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.analytics.core.network.NetworkOperatorUtil$a */
     /* loaded from: classes15.dex */
-    public static class C3123a extends SubscriptionManager.OnSubscriptionsChangedListener {
+    public static class a extends SubscriptionManager.OnSubscriptionsChangedListener {
         final /* synthetic */ Context a;
 
-        C3123a(Context context) {
+        a(Context context) {
             this.a = context;
         }
 
@@ -40,10 +39,9 @@ public class NetworkOperatorUtil {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.analytics.core.network.NetworkOperatorUtil$b */
     /* loaded from: classes15.dex */
-    private static class HandlerC3124b extends Handler {
-        public HandlerC3124b(Looper looper) {
+    private static class b extends Handler {
+        public b(Looper looper) {
             super(looper);
         }
 
@@ -96,7 +94,7 @@ public class NetworkOperatorUtil {
                 if (subscriptionManager == null) {
                     Logger.f("NetworkOperatorUtil", "SubscriptionManager is null");
                 } else {
-                    b.addOnSubscriptionsChangedListener(new C3123a(context));
+                    b.addOnSubscriptionsChangedListener(new a(context));
                     Logger.f("NetworkOperatorUtil", "addOnSubscriptionsChangedListener");
                 }
             }
@@ -111,7 +109,7 @@ public class NetworkOperatorUtil {
             }
             if (b == null) {
                 Looper.prepare();
-                new HandlerC3124b(Looper.getMainLooper()).a(new Runnable() { // from class: com.alibaba.analytics.core.network.NetworkOperatorUtil.1
+                new b(Looper.getMainLooper()).a(new Runnable() { // from class: com.alibaba.analytics.core.network.NetworkOperatorUtil.1
                     @Override // java.lang.Runnable
                     public void run() {
                         NetworkOperatorUtil.d(context);

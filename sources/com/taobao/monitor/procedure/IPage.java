@@ -8,7 +8,7 @@ import java.util.Map;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public interface IPage {
-    public static final IPage DEFAULT_PAGE = new C6810b();
+    public static final IPage DEFAULT_PAGE = new b();
     public static final int STATUS_BACK = -4;
     public static final int STATUS_DEFAULT = 1;
     public static final int STATUS_F2B = -3;

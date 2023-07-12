@@ -10,8 +10,6 @@ import android.os.Parcelable;
 import android.text.TextUtils;
 import com.uc.crashsdk.export.CrashApi;
 import com.uc.sandboxExport.IChildProcessSetup;
-import com.uc.sandboxExport.helper.C7168b;
-import com.uc.sandboxExport.helper.C7169c;
 import com.youku.arch.solid.monitor.SolidMonitor;
 import dalvik.system.DexFile;
 import java.io.File;
@@ -45,7 +43,7 @@ public class SandboxedProcessService extends Service {
     private final String b = "SandboxedProcessService";
     private String c = "SandboxedProcessService";
     private boolean e = false;
-    private final IChildProcessSetup.Stub m = new BinderC7174i(this);
+    private final IChildProcessSetup.Stub m = new i(this);
 
     /* JADX INFO: Access modifiers changed from: protected */
     /* JADX WARN: Multi-variable type inference failed */
@@ -67,8 +65,8 @@ public class SandboxedProcessService extends Service {
         if (this.d) {
             return;
         }
-        this.e = C7168b.a();
-        C7169c.a(this.c, "doInit 1/4 - initCrashSdkIfNeeded, crashFD: %s", parcelFileDescriptor2);
+        this.e = com.uc.sandboxExport.helper.b.a();
+        com.uc.sandboxExport.helper.c.a(this.c, "doInit 1/4 - initCrashSdkIfNeeded, crashFD: %s", parcelFileDescriptor2);
         if (!a && parcelFileDescriptor2 == null) {
             throw new AssertionError();
         }
@@ -85,10 +83,10 @@ public class SandboxedProcessService extends Service {
                     declaredMethod.invoke(invoke, parcelFileDescriptor2);
                 }
             } catch (Throwable th) {
-                C7169c.a(this.c, "initCrashSdkIfNeeded: init crashsdk failed.", th);
+                com.uc.sandboxExport.helper.c.a(this.c, "initCrashSdkIfNeeded: init crashsdk failed.", th);
             }
         }
-        C7169c.a(this.c, "doInit 2/4 - initServiceClassIfNeeded, dexFd: %s, libFdInfos: %s", parcelFileDescriptor, String.valueOf(parcelableArr));
+        com.uc.sandboxExport.helper.c.a(this.c, "doInit 2/4 - initServiceClassIfNeeded, dexFd: %s, libFdInfos: %s", parcelFileDescriptor, String.valueOf(parcelableArr));
         String stringExtra = this.l.getStringExtra("dex.path");
         String stringExtra2 = this.l.getStringExtra("odex.path");
         String stringExtra3 = this.l.getStringExtra("lib.path");
@@ -118,8 +116,8 @@ public class SandboxedProcessService extends Service {
         String stringExtra7 = this.l.getStringExtra("info.sdk.version");
         String a2 = a(dexFileClassLoader, "webviewSdkVersion");
         String a3 = a(dexFileClassLoader, "coreVersion");
-        C7169c.a(this.c, "main process version: %s, %s", stringExtra7, stringExtra6);
-        C7169c.a(this.c, "this process version: %s, %s", a2, a3);
+        com.uc.sandboxExport.helper.c.a(this.c, "main process version: %s, %s", stringExtra7, stringExtra6);
+        com.uc.sandboxExport.helper.c.a(this.c, "this process version: %s, %s", a2, a3);
         try {
             if (dexFileClassLoader != null) {
                 cls = Class.forName("org.chromium.content.app.SandboxedProcessService0", false, dexFileClassLoader);
@@ -172,7 +170,7 @@ public class SandboxedProcessService extends Service {
                 a("initServiceClassIfNeeded: new SandboxedProcessService failed.", e);
             }
         }
-        C7169c.a(4, this.c, "doInit 3/4 - attachSandboxedProcessService", null);
+        com.uc.sandboxExport.helper.c.a(4, this.c, "doInit 3/4 - attachSandboxedProcessService", null);
         try {
             Class<?> cls2 = Class.forName("android.app.Service");
             Field declaredField = cls2.getDeclaredField("mThread");
@@ -191,7 +189,7 @@ public class SandboxedProcessService extends Service {
         } catch (Exception e2) {
             a("attachSandboxedProcessService: attach service failed.", e2);
         }
-        C7169c.a(this.c, "doInit 4/4 - doInitService, libFdInfos: %s", String.valueOf(parcelableArr));
+        com.uc.sandboxExport.helper.c.a(this.c, "doInit 4/4 - doInitService, libFdInfos: %s", String.valueOf(parcelableArr));
         Object obj = this.k;
         if (obj != null && (method2 = this.h) != null) {
             try {
@@ -208,13 +206,13 @@ public class SandboxedProcessService extends Service {
                 a("doInitService: invoke initialize failed.", e4);
             }
         }
-        C7169c.a(4, this.c, "doInit done.", null);
+        com.uc.sandboxExport.helper.c.a(4, this.c, "doInit done.", null);
         this.d = true;
     }
 
     @Override // android.app.Service
     public IBinder onBind(Intent intent) {
-        C7169c.a(4, this.c, "onBind", null);
+        com.uc.sandboxExport.helper.c.a(4, this.c, "onBind", null);
         this.l = intent;
         stopSelf();
         a();
@@ -223,13 +221,13 @@ public class SandboxedProcessService extends Service {
 
     @Override // android.app.Service
     public void onCreate() {
-        C7169c.a(4, this.c, "onCreate", null);
+        com.uc.sandboxExport.helper.c.a(4, this.c, "onCreate", null);
         super.onCreate();
     }
 
     @Override // android.app.Service
     public void onDestroy() {
-        C7169c.a(4, this.c, "onDestroy", null);
+        com.uc.sandboxExport.helper.c.a(4, this.c, "onDestroy", null);
         super.onDestroy();
         if (this.j != null) {
             Method method = this.g;
@@ -237,7 +235,7 @@ public class SandboxedProcessService extends Service {
                 try {
                     method.invoke(this.k, new Object[0]);
                 } catch (Throwable th) {
-                    C7169c.a(this.c, "onDestroy: onDestroy failed.", th);
+                    com.uc.sandboxExport.helper.c.a(this.c, "onDestroy: onDestroy failed.", th);
                 }
             }
             this.k = null;
@@ -248,7 +246,7 @@ public class SandboxedProcessService extends Service {
 
     private void a(String str, Throwable th) {
         a(true, true);
-        C7169c.a(this.c, str, th);
+        com.uc.sandboxExport.helper.c.a(this.c, str, th);
         throw new Error(str, th);
     }
 
@@ -280,7 +278,7 @@ public class SandboxedProcessService extends Service {
             method.setAccessible(true);
             return (String) method.invoke(null, new Object[0]);
         } catch (Throwable th) {
-            C7169c.a(this.c, "getVersion exception", th);
+            com.uc.sandboxExport.helper.c.a(this.c, "getVersion exception", th);
             return "";
         }
     }
@@ -292,7 +290,7 @@ public class SandboxedProcessService extends Service {
         String stringExtra3 = this.l.getStringExtra("lib.path");
         String stringExtra4 = this.l.getStringExtra("source.dir");
         String stringExtra5 = this.l.getStringExtra("source.dir.prior");
-        C7169c.a(this.c, "core info:\n        dexPath: %s\n       odexPath: %s\n        libPath: %s\n      sourceDir: %s\n sourceDirPrior: %s", stringExtra, stringExtra2, stringExtra3, stringExtra4, stringExtra5);
+        com.uc.sandboxExport.helper.c.a(this.c, "core info:\n        dexPath: %s\n       odexPath: %s\n        libPath: %s\n      sourceDir: %s\n sourceDirPrior: %s", stringExtra, stringExtra2, stringExtra3, stringExtra4, stringExtra5);
         if (z) {
             ArrayList<String> arrayList = new ArrayList<>();
             arrayList.add(stringExtra);
@@ -316,22 +314,22 @@ public class SandboxedProcessService extends Service {
     }
 
     private void a(ArrayList<String> arrayList, boolean z) {
-        C7169c.a(4, this.c, "file info:", null);
+        com.uc.sandboxExport.helper.c.a(4, this.c, "file info:", null);
         Iterator<String> it = arrayList.iterator();
         while (it.hasNext()) {
             String next = it.next();
             if (!TextUtils.isEmpty(next)) {
-                C7169c.a(this.c, " %s", next);
+                com.uc.sandboxExport.helper.c.a(this.c, " %s", next);
                 try {
                     File file = new File(next);
                     if (!file.exists()) {
-                        C7169c.a(4, this.c, " | not exists", null);
+                        com.uc.sandboxExport.helper.c.a(4, this.c, " | not exists", null);
                     } else if (file.isDirectory()) {
-                        C7169c.a(4, this.c, " | is directory", null);
+                        com.uc.sandboxExport.helper.c.a(4, this.c, " | is directory", null);
                     } else if (!file.isFile()) {
-                        C7169c.a(4, this.c, " | is not file", null);
+                        com.uc.sandboxExport.helper.c.a(4, this.c, " | is not file", null);
                     } else {
-                        C7169c.a(this.c, " | size: %d, last modify time: %s", Long.valueOf(file.length()), a(file.lastModified()));
+                        com.uc.sandboxExport.helper.c.a(this.c, " | size: %d, last modify time: %s", Long.valueOf(file.length()), a(file.lastModified()));
                         if (z) {
                             MessageDigest messageDigest = MessageDigest.getInstance(MessageDigestAlgorithms.MD5);
                             FileInputStream fileInputStream = new FileInputStream(file);
@@ -345,12 +343,12 @@ public class SandboxedProcessService extends Service {
                             }
                             byte[] digest = messageDigest.digest();
                             String str = this.c;
-                            C7169c.a(4, str, " |  md5: " + a(digest), null);
+                            com.uc.sandboxExport.helper.c.a(4, str, " |  md5: " + a(digest), null);
                             fileInputStream.close();
                         }
                     }
                 } catch (Throwable th) {
-                    C7169c.a(this.c, " | get info exception", th);
+                    com.uc.sandboxExport.helper.c.a(this.c, " | get info exception", th);
                 }
             }
         }

@@ -20,20 +20,19 @@ public class kz1 extends wi1 {
     @NotNull
     public static final String BIZ_ID = "damai";
     @NotNull
-    public static final C9391a Companion = new C9391a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String TEMPLATE_ID = "damai_recommend_project_card";
     @NotNull
     public static final String VERSION = "4";
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kz1$a */
     /* loaded from: classes7.dex */
-    public static final class C9391a {
-        private C9391a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9391a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

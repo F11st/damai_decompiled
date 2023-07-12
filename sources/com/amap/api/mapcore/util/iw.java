@@ -12,7 +12,7 @@ import javax.crypto.NoSuchPaddingException;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class iw extends jb {
-    private AbstractC4579hv a;
+    private hv a;
 
     public iw() {
         this.a = new hx();

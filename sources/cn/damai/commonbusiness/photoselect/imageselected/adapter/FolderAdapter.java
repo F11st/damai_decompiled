@@ -20,7 +20,7 @@ import tb.vo0;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
-public class FolderAdapter extends RecyclerView.Adapter<C0752b> {
+public class FolderAdapter extends RecyclerView.Adapter<b> {
     private static transient /* synthetic */ IpChange $ipChange;
     private ArrayList<vo0> a;
     private LayoutInflater b;
@@ -35,13 +35,12 @@ public class FolderAdapter extends RecyclerView.Adapter<C0752b> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.adapter.FolderAdapter$a */
     /* loaded from: classes4.dex */
-    public class View$OnClickListenerC0751a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        View$OnClickListenerC0751a(int i) {
+        a(int i) {
             this.a = i;
         }
 
@@ -61,15 +60,14 @@ public class FolderAdapter extends RecyclerView.Adapter<C0752b> {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.adapter.FolderAdapter$b */
     /* loaded from: classes4.dex */
-    public static class C0752b extends RecyclerView.ViewHolder {
+    public static class b extends RecyclerView.ViewHolder {
         DMPosterView a;
         TextView b;
         TextView c;
         TextView d;
 
-        public C0752b(View view) {
+        public b(View view) {
             super(view);
             this.a = (DMPosterView) view.findViewById(R$id.iv_image);
             this.b = (TextView) view.findViewById(R$id.tv_select_num);
@@ -85,45 +83,45 @@ public class FolderAdapter extends RecyclerView.Adapter<C0752b> {
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     /* renamed from: b */
-    public void onBindViewHolder(C0752b c0752b, int i) {
+    public void onBindViewHolder(b bVar, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1930929821")) {
-            ipChange.ipc$dispatch("1930929821", new Object[]{this, c0752b, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("1930929821", new Object[]{this, bVar, Integer.valueOf(i)});
             return;
         }
         vo0 vo0Var = this.a.get(i);
-        ArrayList<Image> b = vo0Var.b();
-        c0752b.c.setText(vo0Var.c());
-        if (b != null && !b.isEmpty()) {
-            TextView textView = c0752b.d;
-            textView.setText(jn1.BRACKET_START_STR + b.size() + jn1.BRACKET_END_STR);
-            c0752b.a.setPlaceholder(R$drawable.uikit_default_image_bg_trans_white);
-            c0752b.a.setImageUrl(h62.q(b.get(0).getPath()));
+        ArrayList<Image> b2 = vo0Var.b();
+        bVar.c.setText(vo0Var.c());
+        if (b2 != null && !b2.isEmpty()) {
+            TextView textView = bVar.d;
+            textView.setText(jn1.BRACKET_START_STR + b2.size() + jn1.BRACKET_END_STR);
+            bVar.a.setPlaceholder(R$drawable.uikit_default_image_bg_trans_white);
+            bVar.a.setImageUrl(h62.q(b2.get(0).getPath()));
         } else {
-            c0752b.d.setText("(0)");
+            bVar.d.setText("(0)");
         }
         OnFolderSelectListener onFolderSelectListener = this.c;
         if (onFolderSelectListener != null) {
             int OnFolderSelect = onFolderSelectListener.OnFolderSelect(vo0Var);
             if (OnFolderSelect > 0) {
-                if (c0752b.b.getVisibility() == 8) {
-                    c0752b.b.setVisibility(0);
+                if (bVar.b.getVisibility() == 8) {
+                    bVar.b.setVisibility(0);
                 }
-                c0752b.b.setText(String.valueOf(OnFolderSelect));
-            } else if (c0752b.b.getVisibility() == 0) {
-                c0752b.b.setVisibility(8);
+                bVar.b.setText(String.valueOf(OnFolderSelect));
+            } else if (bVar.b.getVisibility() == 0) {
+                bVar.b.setVisibility(8);
             }
-        } else if (c0752b.b.getVisibility() == 0) {
-            c0752b.b.setVisibility(8);
+        } else if (bVar.b.getVisibility() == 0) {
+            bVar.b.setVisibility(8);
         }
-        c0752b.itemView.setOnClickListener(new View$OnClickListenerC0751a(i));
+        bVar.itemView.setOnClickListener(new a(i));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     /* renamed from: c */
-    public C0752b onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public b onCreateViewHolder(ViewGroup viewGroup, int i) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1122169351") ? (C0752b) ipChange.ipc$dispatch("-1122169351", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new C0752b(this.b.inflate(R$layout.adapter_folder, viewGroup, false));
+        return AndroidInstantRuntime.support(ipChange, "-1122169351") ? (b) ipChange.ipc$dispatch("-1122169351", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new b(this.b.inflate(R$layout.adapter_folder, viewGroup, false));
     }
 
     public void d(OnFolderSelectListener onFolderSelectListener) {

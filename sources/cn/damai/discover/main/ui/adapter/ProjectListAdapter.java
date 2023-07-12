@@ -35,13 +35,12 @@ public class ProjectListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.adapter.ProjectListAdapter$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1066a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        View$OnClickListenerC1066a(int i) {
+        a(int i) {
             this.a = i;
         }
 
@@ -109,7 +108,7 @@ public class ProjectListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         ((ProjectItemViewHolder) viewHolder).l(this.d.get(i), BricksProjectViewHolder.PageType.SEARCH_PAGE);
         if (this.b != null) {
             viewHolder.itemView.setTag(Integer.valueOf(i));
-            viewHolder.itemView.setOnClickListener(new View$OnClickListenerC1066a(i));
+            viewHolder.itemView.setOnClickListener(new a(i));
         }
         this.c.exposureProject(viewHolder.itemView, this.d.get(i), i);
     }

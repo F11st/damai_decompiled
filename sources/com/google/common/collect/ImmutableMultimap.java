@@ -3,8 +3,8 @@ package com.google.common.collect;
 import com.google.common.annotations.Beta;
 import com.google.common.annotations.GwtCompatible;
 import com.google.common.annotations.GwtIncompatible;
-import com.google.common.collect.C5174f0;
 import com.google.common.collect.Multiset;
+import com.google.common.collect.f0;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import com.google.j2objc.annotations.Weak;
 import java.io.Serializable;
@@ -21,7 +21,7 @@ import tb.yt2;
 /* compiled from: Taobao */
 @GwtCompatible(emulated = true)
 /* loaded from: classes10.dex */
-public abstract class ImmutableMultimap<K, V> extends AbstractC5187i<K, V> implements Serializable {
+public abstract class ImmutableMultimap<K, V> extends i<K, V> implements Serializable {
     private static final long serialVersionUID = 0;
     final transient ImmutableMap<K, ? extends ImmutableCollection<V>> map;
     final transient int size;
@@ -176,14 +176,13 @@ public abstract class ImmutableMultimap<K, V> extends AbstractC5187i<K, V> imple
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableMultimap$a */
     /* loaded from: classes10.dex */
-    public class C4979a extends yt2<Map.Entry<K, V>> {
+    public class a extends yt2<Map.Entry<K, V>> {
         final Iterator<? extends Map.Entry<K, ? extends ImmutableCollection<V>>> a;
         K b = null;
         Iterator<V> c = Iterators.h();
 
-        C4979a() {
+        a() {
             this.a = ImmutableMultimap.this.map.entrySet().iterator();
         }
 
@@ -206,13 +205,12 @@ public abstract class ImmutableMultimap<K, V> extends AbstractC5187i<K, V> imple
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableMultimap$b */
     /* loaded from: classes10.dex */
-    public class C4980b extends yt2<V> {
+    public class b extends yt2<V> {
         Iterator<? extends ImmutableCollection<V>> a;
         Iterator<V> b = Iterators.h();
 
-        C4980b() {
+        b() {
             this.a = ImmutableMultimap.this.map.values().iterator();
         }
 
@@ -231,10 +229,9 @@ public abstract class ImmutableMultimap<K, V> extends AbstractC5187i<K, V> imple
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableMultimap$c */
     /* loaded from: classes10.dex */
-    public static class C4981c<K, V> {
-        Map<K, Collection<V>> a = C5172e0.h();
+    public static class c<K, V> {
+        Map<K, Collection<V>> a = e0.h();
         @MonotonicNonNullDecl
         Comparator<? super K> b;
         @MonotonicNonNullDecl
@@ -254,8 +251,8 @@ public abstract class ImmutableMultimap<K, V> extends AbstractC5187i<K, V> imple
         }
 
         @CanIgnoreReturnValue
-        public C4981c<K, V> c(K k, V v) {
-            C5191k.a(k, v);
+        public c<K, V> c(K k, V v) {
+            k.a(k, v);
             Collection<V> collection = this.a.get(k);
             if (collection == null) {
                 Map<K, Collection<V>> map = this.a;
@@ -268,13 +265,13 @@ public abstract class ImmutableMultimap<K, V> extends AbstractC5187i<K, V> imple
         }
 
         @CanIgnoreReturnValue
-        public C4981c<K, V> d(Map.Entry<? extends K, ? extends V> entry) {
+        public c<K, V> d(Map.Entry<? extends K, ? extends V> entry) {
             return c(entry.getKey(), entry.getValue());
         }
 
         @CanIgnoreReturnValue
         @Beta
-        public C4981c<K, V> e(Iterable<? extends Map.Entry<? extends K, ? extends V>> iterable) {
+        public c<K, V> e(Iterable<? extends Map.Entry<? extends K, ? extends V>> iterable) {
             for (Map.Entry<? extends K, ? extends V> entry : iterable) {
                 d(entry);
             }
@@ -284,11 +281,10 @@ public abstract class ImmutableMultimap<K, V> extends AbstractC5187i<K, V> imple
 
     /* compiled from: Taobao */
     @GwtIncompatible
-    /* renamed from: com.google.common.collect.ImmutableMultimap$d */
     /* loaded from: classes10.dex */
-    static class C4982d {
-        static final C5174f0.C5176b<ImmutableMultimap> a = C5174f0.a(ImmutableMultimap.class, "map");
-        static final C5174f0.C5176b<ImmutableMultimap> b = C5174f0.a(ImmutableMultimap.class, "size");
+    static class d {
+        static final f0.b<ImmutableMultimap> a = f0.a(ImmutableMultimap.class, "map");
+        static final f0.b<ImmutableMultimap> b = f0.a(ImmutableMultimap.class, "size");
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -297,8 +293,8 @@ public abstract class ImmutableMultimap<K, V> extends AbstractC5187i<K, V> imple
         this.size = i;
     }
 
-    public static <K, V> C4981c<K, V> builder() {
-        return new C4981c<>();
+    public static <K, V> c<K, V> builder() {
+        return new c<>();
     }
 
     public static <K, V> ImmutableMultimap<K, V> copyOf(Multimap<? extends K, ? extends V> multimap) {
@@ -321,7 +317,7 @@ public abstract class ImmutableMultimap<K, V> extends AbstractC5187i<K, V> imple
         throw new UnsupportedOperationException();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public /* bridge */ /* synthetic */ boolean containsEntry(@NullableDecl Object obj, @NullableDecl Object obj2) {
         return super.containsEntry(obj, obj2);
     }
@@ -331,22 +327,22 @@ public abstract class ImmutableMultimap<K, V> extends AbstractC5187i<K, V> imple
         return this.map.containsKey(obj);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public boolean containsValue(@NullableDecl Object obj) {
         return obj != null && super.containsValue(obj);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     Map<K, Collection<V>> createAsMap() {
         throw new AssertionError("should never be called");
     }
 
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     Set<K> createKeySet() {
         throw new AssertionError("unreachable");
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap, com.google.common.collect.ListMultimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap, com.google.common.collect.ListMultimap
     public /* bridge */ /* synthetic */ boolean equals(@NullableDecl Object obj) {
         return super.equals(obj);
     }
@@ -360,14 +356,14 @@ public abstract class ImmutableMultimap<K, V> extends AbstractC5187i<K, V> imple
         return get((ImmutableMultimap<K, V>) obj);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public /* bridge */ /* synthetic */ int hashCode() {
         return super.hashCode();
     }
 
     public abstract ImmutableMultimap<V, K> inverse();
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public /* bridge */ /* synthetic */ boolean isEmpty() {
         return super.isEmpty();
     }
@@ -377,21 +373,21 @@ public abstract class ImmutableMultimap<K, V> extends AbstractC5187i<K, V> imple
         return this.map.isPartialView();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     @Deprecated
     public boolean put(K k, V v) {
         throw new UnsupportedOperationException();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     @Deprecated
     public boolean putAll(K k, Iterable<? extends V> iterable) {
         throw new UnsupportedOperationException();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     @Deprecated
     public boolean remove(Object obj, Object obj2) {
@@ -399,7 +395,7 @@ public abstract class ImmutableMultimap<K, V> extends AbstractC5187i<K, V> imple
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     @Deprecated
     public /* bridge */ /* synthetic */ Collection replaceValues(Object obj, Iterable iterable) {
@@ -411,7 +407,7 @@ public abstract class ImmutableMultimap<K, V> extends AbstractC5187i<K, V> imple
         return this.size;
     }
 
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     public /* bridge */ /* synthetic */ String toString() {
         return super.toString();
     }
@@ -420,51 +416,51 @@ public abstract class ImmutableMultimap<K, V> extends AbstractC5187i<K, V> imple
         return ImmutableListMultimap.of((Object) k, (Object) v);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap, com.google.common.collect.ListMultimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap, com.google.common.collect.ListMultimap
     public ImmutableMap<K, Collection<V>> asMap() {
         return (ImmutableMap<K, ? extends ImmutableCollection<V>>) this.map;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     public ImmutableCollection<Map.Entry<K, V>> createEntries() {
         return new EntryCollection(this);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     public ImmutableMultiset<K> createKeys() {
         return new Keys();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     public ImmutableCollection<V> createValues() {
         return new Values(this);
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public ImmutableCollection<Map.Entry<K, V>> entries() {
         return (ImmutableCollection) super.entries();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     public yt2<Map.Entry<K, V>> entryIterator() {
-        return new C4979a();
+        return new a();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public ImmutableSet<K> keySet() {
         return this.map.keySet();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public ImmutableMultiset<K> keys() {
         return (ImmutableMultiset) super.keys();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     @Deprecated
     public boolean putAll(Multimap<? extends K, ? extends V> multimap) {
@@ -478,7 +474,7 @@ public abstract class ImmutableMultimap<K, V> extends AbstractC5187i<K, V> imple
         throw new UnsupportedOperationException();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     @CanIgnoreReturnValue
     @Deprecated
     public ImmutableCollection<V> replaceValues(K k, Iterable<? extends V> iterable) {
@@ -486,12 +482,12 @@ public abstract class ImmutableMultimap<K, V> extends AbstractC5187i<K, V> imple
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    @Override // com.google.common.collect.AbstractC5159c
+    @Override // com.google.common.collect.c
     public yt2<V> valueIterator() {
-        return new C4980b();
+        return new b();
     }
 
-    @Override // com.google.common.collect.AbstractC5159c, com.google.common.collect.Multimap
+    @Override // com.google.common.collect.c, com.google.common.collect.Multimap
     public ImmutableCollection<V> values() {
         return (ImmutableCollection) super.values();
     }

@@ -9,9 +9,8 @@ import tb.b41;
 public interface ClosedRange<T extends Comparable<? super T>> {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.ranges.ClosedRange$a */
     /* loaded from: classes3.dex */
-    public static final class C8240a {
+    public static final class a {
         public static <T extends Comparable<? super T>> boolean a(@NotNull ClosedRange<T> closedRange, @NotNull T t) {
             b41.i(t, "value");
             return t.compareTo(closedRange.getStart()) >= 0 && t.compareTo(closedRange.getEndInclusive()) <= 0;

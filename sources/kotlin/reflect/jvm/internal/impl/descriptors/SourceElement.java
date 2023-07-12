@@ -5,13 +5,12 @@ import org.jetbrains.annotations.NotNull;
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public interface SourceElement {
-    public static final SourceElement NO_SOURCE = new C8296a();
+    public static final SourceElement NO_SOURCE = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.SourceElement$a */
     /* loaded from: classes3.dex */
-    static class C8296a implements SourceElement {
-        C8296a() {
+    static class a implements SourceElement {
+        a() {
         }
 
         private static /* synthetic */ void a(int i) {

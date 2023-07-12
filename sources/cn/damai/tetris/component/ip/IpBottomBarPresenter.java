@@ -22,7 +22,6 @@ import android.widget.TextView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.user.UTExposureInfo;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.R$color;
@@ -47,7 +46,7 @@ import com.android.alibaba.ip.runtime.IpChange;
 import com.youku.alixplayer.MsgID;
 import java.util.ArrayList;
 import java.util.Map;
-import tb.C9175gc;
+import tb.gc;
 import tb.ja;
 import tb.pl;
 import tb.q60;
@@ -64,12 +63,11 @@ public class IpBottomBarPresenter extends BasePresenter<IpBottomBarContract.Mode
     private long startShowTimeMillis;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.ip.IpBottomBarPresenter$a */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC1894a implements DialogInterface.OnClickListener {
+    public class a implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC1894a() {
+        a() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -85,7 +83,7 @@ public class IpBottomBarPresenter extends BasePresenter<IpBottomBarContract.Mode
                 Map<String, String> argsMap = IpBottomBarPresenter.this.mTrackInfo.getArgsMap();
                 argsMap.put("spm-url", "a2o4t." + IpBottomBarPresenter.this.mTrackInfo.trackB + ".tips.gotoopen");
             }
-            C0529c.e().C("gotoopen", "tips", IpBottomBarPresenter.this.mTrackInfo.trackB, "1.0", currentTimeMillis, IpBottomBarPresenter.this.mTrackInfo.getArgsMap(), 2201);
+            cn.damai.common.user.c.e().C("gotoopen", "tips", IpBottomBarPresenter.this.mTrackInfo.trackB, "1.0", currentTimeMillis, IpBottomBarPresenter.this.mTrackInfo.getArgsMap(), 2201);
             Intent intent = new Intent("android.settings.APPLICATION_DETAILS_SETTINGS");
             intent.setData(Uri.parse("package:" + IpBottomBarPresenter.this.getContext().getActivity().getPackageName()));
             IpBottomBarPresenter.this.getContext().getActivity().startActivity(intent);
@@ -93,14 +91,13 @@ public class IpBottomBarPresenter extends BasePresenter<IpBottomBarContract.Mode
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.ip.IpBottomBarPresenter$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1895b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ PopupWindow a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC1895b(PopupWindow popupWindow, int i) {
+        b(PopupWindow popupWindow, int i) {
             this.a = popupWindow;
             this.b = i;
         }
@@ -118,14 +115,13 @@ public class IpBottomBarPresenter extends BasePresenter<IpBottomBarContract.Mode
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.ip.IpBottomBarPresenter$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1896c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ PopupWindow a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC1896c(PopupWindow popupWindow, int i) {
+        c(PopupWindow popupWindow, int i) {
             this.a = popupWindow;
             this.b = i;
         }
@@ -143,14 +139,13 @@ public class IpBottomBarPresenter extends BasePresenter<IpBottomBarContract.Mode
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.ip.IpBottomBarPresenter$d */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1897d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ BottomItem a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC1897d(BottomItem bottomItem, int i) {
+        d(BottomItem bottomItem, int i) {
             this.a = bottomItem;
             this.b = i;
         }
@@ -190,23 +185,23 @@ public class IpBottomBarPresenter extends BasePresenter<IpBottomBarContract.Mode
         TextView textView2 = (TextView) viewGroup.findViewById(R$id.ip_tour_item_buy_desc);
         TextView textView3 = (TextView) viewGroup.findViewById(R$id.ip_tour_item_month);
         TextView textView4 = (TextView) viewGroup.findViewById(R$id.ip_tour_item_city);
-        C9175gc.a(textView3, bottomItem.getStartDate());
-        C9175gc.a(textView4, bottomItem.getCityName());
-        C9175gc.a((TextView) viewGroup.findViewById(R$id.ip_tour_item_date), "时间 " + bottomItem.getShowTime());
-        C9175gc.a((TextView) viewGroup.findViewById(R$id.ip_tour_item_place), "地点 " + bottomItem.getVenueName());
-        C9175gc.a((TextView) viewGroup.findViewById(R$id.ip_tour_item_time), "场次 " + bottomItem.getTotal() + "场");
+        gc.a(textView3, bottomItem.getStartDate());
+        gc.a(textView4, bottomItem.getCityName());
+        gc.a((TextView) viewGroup.findViewById(R$id.ip_tour_item_date), "时间 " + bottomItem.getShowTime());
+        gc.a((TextView) viewGroup.findViewById(R$id.ip_tour_item_place), "地点 " + bottomItem.getVenueName());
+        gc.a((TextView) viewGroup.findViewById(R$id.ip_tour_item_time), "场次 " + bottomItem.getTotal() + "场");
         if (bottomItem.getType() == 2) {
             findViewById.setVisibility(4);
             findViewById2.setVisibility(0);
             findViewById2.setBackground(getContext().getActivity().getResources().getDrawable(R$drawable.buy_btn_normal_blue_bg));
             textView.setTextColor(getContext().getActivity().getResources().getColor(R$color.white));
-            C9175gc.a(textView, "去预约");
+            gc.a(textView, "去预约");
         } else if (bottomItem.getType() == 3) {
             findViewById.setVisibility(4);
             findViewById2.setVisibility(0);
             findViewById2.setBackground(getContext().getActivity().getResources().getDrawable(R$drawable.buy_btn_normal_white_bg));
             textView.setTextColor(getContext().getActivity().getResources().getColor(R$color.color_9C9CA5));
-            C9175gc.a(textView, "筹备中");
+            gc.a(textView, "筹备中");
         } else {
             findViewById.setVisibility(0);
             findViewById2.setVisibility(4);
@@ -227,7 +222,7 @@ public class IpBottomBarPresenter extends BasePresenter<IpBottomBarContract.Mode
             viewGroup.findViewById(R$id.ip_tour_item_city_nearest).setVisibility(0);
             ((ImageView) viewGroup.findViewById(R$id.ip_tour_item_divline_dot)).setImageResource(R$drawable.shape_circle_ff2869);
         }
-        viewGroup.setOnClickListener(new View$OnClickListenerC1897d(bottomItem, i2));
+        viewGroup.setOnClickListener(new d(bottomItem, i2));
     }
 
     private String getTourStr(IpBottomBarBean ipBottomBarBean) {
@@ -289,7 +284,7 @@ public class IpBottomBarPresenter extends BasePresenter<IpBottomBarContract.Mode
                 uTExposureBean.spm = str2;
                 arrayList.add(uTExposureBean);
             }
-            C0529c e = C0529c.e();
+            cn.damai.common.user.c e = cn.damai.common.user.c.e();
             TrackInfo trackInfo = this.mTrackInfo;
             e.B(trackInfo.trackC, trackInfo.trackB, arrayList, 2201);
         }
@@ -304,27 +299,27 @@ public class IpBottomBarPresenter extends BasePresenter<IpBottomBarContract.Mode
         }
         View inflate = LayoutInflater.from(this.mContext.getActivity()).inflate(R$layout.layout_popup_ip_tour, (ViewGroup) null);
         ((TextView) inflate.findViewById(R$id.ip_tour_top_title)).setText(spannableStringBuilder);
-        int a = q60.a(this.mContext.getActivity(), 92.0f);
+        int a2 = q60.a(this.mContext.getActivity(), 92.0f);
         int size = getModel().getBottomBarBean().getItems().size();
         for (int i = 0; i < size; i++) {
             ViewGroup viewGroup = (ViewGroup) LayoutInflater.from(this.mContext.getActivity()).inflate(R$layout.layout_popup_ip_tour_item, (ViewGroup) null);
-            ((LinearLayout) inflate.findViewById(R$id.ip_tour_scroll_content)).addView(viewGroup, new LinearLayout.LayoutParams(-1, a));
+            ((LinearLayout) inflate.findViewById(R$id.ip_tour_scroll_content)).addView(viewGroup, new LinearLayout.LayoutParams(-1, a2));
             bindItem(viewGroup, i, getModel().getBottomBarBean().getItems().get(i), size);
         }
-        int a2 = (a * size) + q60.a(this.mContext.getActivity(), 80.0f);
+        int a3 = (a2 * size) + q60.a(this.mContext.getActivity(), 80.0f);
         if (size == 1) {
-            a2 += q60.a(this.mContext.getActivity(), 34.0f);
+            a3 += q60.a(this.mContext.getActivity(), 34.0f);
         }
-        rt1 g = new rt1(inflate, a2).g(this.mContext.getActivity());
-        PopupWindow c = g.c();
+        rt1 g = new rt1(inflate, a3).g(this.mContext.getActivity());
+        PopupWindow c2 = g.c();
         int f = g.f();
         recordStartShowTimeMillis();
         int i2 = R$id.sub_content;
         RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) inflate.findViewById(i2).getLayoutParams();
         layoutParams.height = f;
         inflate.findViewById(i2).setLayoutParams(layoutParams);
-        inflate.setOnClickListener(new View$OnClickListenerC1895b(c, size));
-        inflate.findViewById(R$id.ip_tour_top_close).setOnClickListener(new View$OnClickListenerC1896c(c, size));
+        inflate.setOnClickListener(new b(c2, size));
+        inflate.findViewById(R$id.ip_tour_top_close).setOnClickListener(new c(c2, size));
     }
 
     @Override // cn.damai.tetris.core.BasePresenter, cn.damai.tetris.core.msg.IMessage
@@ -345,7 +340,7 @@ public class IpBottomBarPresenter extends BasePresenter<IpBottomBarContract.Mode
                     argsMap.put("spm-url", "a2o4t." + this.mTrackInfo.trackB + ".tips.gotosee");
                 }
                 if (this.mTrackInfo != null) {
-                    C0529c e = C0529c.e();
+                    cn.damai.common.user.c e = cn.damai.common.user.c.e();
                     TrackInfo trackInfo2 = this.mTrackInfo;
                     e.C("gotosee", "tips", trackInfo2.trackB, "1.0", currentTimeMillis, trackInfo2.getArgsMap(), 2201);
                 }
@@ -383,7 +378,7 @@ public class IpBottomBarPresenter extends BasePresenter<IpBottomBarContract.Mode
                         if (getModel().getBottomBarBean().focus) {
                             if (getContext().getActivity() != null && !PermissionsHelper.a(getContext().getActivity())) {
                                 DMThemeDialog dMThemeDialog = new DMThemeDialog(getContext().getActivity());
-                                dMThemeDialog.o("赞～已收到你的想看").r(DMThemeDialog.DMDialogTheme.THEME_GUARD_SUCCESS).k(Html.fromHtml("目前暂无可售项目,建议您先<font color='#FF0000'>开启消息提醒</font>，方便第一时间捕获可售项目")).i("去开启", new DialogInterface$OnClickListenerC1894a()).g(false, null);
+                                dMThemeDialog.o("赞～已收到你的想看").r(DMThemeDialog.DMDialogTheme.THEME_GUARD_SUCCESS).k(Html.fromHtml("目前暂无可售项目,建议您先<font color='#FF0000'>开启消息提醒</font>，方便第一时间捕获可售项目")).i("去开启", new a()).g(false, null);
                                 dMThemeDialog.show();
                                 this.startDialogOpenTimeMillis = System.currentTimeMillis();
                                 return;
@@ -437,7 +432,7 @@ public class IpBottomBarPresenter extends BasePresenter<IpBottomBarContract.Mode
             if (!TextUtils.isEmpty(getModel().getBottomBarBean().getIpvuv())) {
                 str2 = "暂无演出计划," + getModel().getBottomBarBean().getIpvuv() + "人求演出";
             }
-            C9175gc.a(getView().getDescView(), str2);
+            gc.a(getView().getDescView(), str2);
             if (!TextUtils.isEmpty(getModel().getBottomBarBean().getIpvuv())) {
                 ColorTextUtil.a(getView().getDescView(), getModel().getBottomBarBean().getIpvuv(), R$color.color_FF2869);
             }

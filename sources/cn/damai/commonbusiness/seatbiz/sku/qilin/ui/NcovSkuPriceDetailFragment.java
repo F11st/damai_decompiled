@@ -42,12 +42,11 @@ public class NcovSkuPriceDetailFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuPriceDetailFragment$a */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0849a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0849a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -62,12 +61,11 @@ public class NcovSkuPriceDetailFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuPriceDetailFragment$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0850b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0850b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -115,10 +113,10 @@ public class NcovSkuPriceDetailFragment extends DamaiBaseMvpFragment {
         }
         View findViewById = this.rootView.findViewById(R$id.view_top);
         this.mTopView = findViewById;
-        findViewById.setOnClickListener(new View$OnClickListenerC0849a());
+        findViewById.setOnClickListener(new a());
         View findViewById2 = this.rootView.findViewById(R$id.btn_close);
         this.mCloseBtn = findViewById2;
-        findViewById2.setOnClickListener(new View$OnClickListenerC0850b());
+        findViewById2.setOnClickListener(new b());
         this.mContainer = (LinearLayout) this.rootView.findViewById(R$id.container);
         TicketCalcBean ticketCalcBean = this.mBean;
         if (ticketCalcBean == null || m91.a(ticketCalcBean.calculateModuleVOS)) {

@@ -2,15 +2,14 @@ package tb;
 
 import com.alibaba.fastjson.JSONArray;
 import com.taobao.android.dinamicx.DXRuntimeContext;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 import java.util.List;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class px extends AbstractC6375a {
+public class px extends com.taobao.android.dinamicx.expression.parser.a {
     public static final long DX_PARSER_SUB_ARRAY = -6848818898485245999L;
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         int i;
         List<Object> subList;
@@ -39,7 +38,7 @@ public class px extends AbstractC6375a {
         return null;
     }
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
     public String getDxFunctionName() {
         return "sub_array";
     }

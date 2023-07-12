@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.subscriptions.DeferredScalarSubscription;
 import io.reactivex.internal.subscriptions.EmptySubscription;
@@ -65,12 +65,12 @@ public final class FlowableToList<T, U extends Collection<? super T>> extends Ab
         }
     }
 
-    public FlowableToList(AbstractC8147b<T> abstractC8147b, Callable<U> callable) {
-        super(abstractC8147b);
+    public FlowableToList(b<T> bVar, Callable<U> callable) {
+        super(bVar);
         this.collectionSupplier = callable;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super U> subscriber) {
         try {
             this.source.subscribe((FlowableSubscriber) new ToListSubscriber(subscriber, (Collection) ObjectHelper.requireNonNull(this.collectionSupplier.call(), "The collectionSupplier returned a null collection. Null values are generally not allowed in 2.x operators and sources.")));

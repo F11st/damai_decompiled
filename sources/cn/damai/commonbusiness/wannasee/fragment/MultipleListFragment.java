@@ -51,12 +51,12 @@ import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.weex.common.Constants;
 import in.srain.cube.views.ptr.PtrFrameLayout;
 import java.util.List;
-import tb.C9548pb;
-import tb.C9799v3;
 import tb.cb2;
 import tb.m62;
 import tb.mu0;
+import tb.pb;
 import tb.t3;
+import tb.v3;
 import tb.x3;
 import tb.xr;
 import tb.z91;
@@ -84,16 +84,15 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
     private boolean isViewCreated = false;
     private boolean isFocusChanged = false;
     private xr mFocusSubscriber = new xr();
-    private t3 mLoginListener = new C0973c();
+    private t3 mLoginListener = new c();
     private boolean ensureInitRecyclerView = false;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.fragment.MultipleListFragment$a */
     /* loaded from: classes.dex */
-    public class C0971a implements OnErrClickListener {
+    public class a implements OnErrClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0971a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.wannasee.listener.OnErrClickListener
@@ -108,19 +107,18 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.fragment.MultipleListFragment$b */
     /* loaded from: classes.dex */
-    public class C0972b extends C0981k {
+    public class b extends k {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ PtrFrameLayout c;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        C0972b(MultipleListFragment multipleListFragment, boolean z, PtrFrameLayout ptrFrameLayout) {
+        b(MultipleListFragment multipleListFragment, boolean z, PtrFrameLayout ptrFrameLayout) {
             super(z);
             this.c = ptrFrameLayout;
         }
 
-        @Override // cn.damai.commonbusiness.wannasee.fragment.MultipleListFragment.C0981k, cn.damai.commonbusiness.wannasee.listener.OnBizListener
+        @Override // cn.damai.commonbusiness.wannasee.fragment.MultipleListFragment.k, cn.damai.commonbusiness.wannasee.listener.OnBizListener
         /* renamed from: a */
         public void onBizSuccess(PageData<List> pageData) {
             IpChange ipChange = $ipChange;
@@ -135,7 +133,7 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
             }
         }
 
-        @Override // cn.damai.commonbusiness.wannasee.fragment.MultipleListFragment.C0981k, cn.damai.commonbusiness.wannasee.listener.OnBizListener
+        @Override // cn.damai.commonbusiness.wannasee.fragment.MultipleListFragment.k, cn.damai.commonbusiness.wannasee.listener.OnBizListener
         public void onBizFail(String str, String str2) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1387122915")) {
@@ -151,12 +149,11 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.fragment.MultipleListFragment$c */
     /* loaded from: classes.dex */
-    public class C0973c extends t3 {
+    public class c extends t3 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0973c() {
+        c() {
         }
 
         @Override // tb.t3, cn.damai.login.havana.ILoginListener
@@ -174,12 +171,11 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.fragment.MultipleListFragment$d */
     /* loaded from: classes.dex */
-    public class C0974d implements Action<FocusEvent> {
+    public class d implements Action<FocusEvent> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0974d() {
+        d() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -195,12 +191,11 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.fragment.MultipleListFragment$e */
     /* loaded from: classes.dex */
-    public class C0975e extends x3 {
+    public class e extends x3 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0975e() {
+        e() {
         }
 
         @Override // cn.damai.commonbusiness.wannasee.listener.MultiClickUt
@@ -209,7 +204,7 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
             if (AndroidInstantRuntime.support(ipChange, "741628448")) {
                 ipChange.ipc$dispatch("741628448", new Object[]{this, noteBean, Integer.valueOf(i)});
             } else {
-                C9548pb.j(z91.u().z(MultipleListFragment.this.mUtPageName, null, MultipleListFragment.this.mType.tabIndex, MultipleListFragment.this.mType.tabName, i));
+                pb.j(z91.u().z(MultipleListFragment.this.mUtPageName, null, MultipleListFragment.this.mType.tabIndex, MultipleListFragment.this.mType.tabName, i));
             }
         }
 
@@ -219,7 +214,7 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
             if (AndroidInstantRuntime.support(ipChange, "-1347248474")) {
                 ipChange.ipc$dispatch("-1347248474", new Object[]{this, projectItemBean, Integer.valueOf(i)});
             } else {
-                C9548pb.j(z91.u().A(MultipleListFragment.this.mUtPageName, projectItemBean.id, MultipleListFragment.this.mType.tabIndex, MultipleListFragment.this.mType.tabName, i, projectItemBean.recommendHintType));
+                pb.j(z91.u().A(MultipleListFragment.this.mUtPageName, projectItemBean.id, MultipleListFragment.this.mType.tabIndex, MultipleListFragment.this.mType.tabName, i, projectItemBean.recommendHintType));
             }
         }
 
@@ -229,7 +224,7 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
             if (AndroidInstantRuntime.support(ipChange, "794618506")) {
                 ipChange.ipc$dispatch("794618506", new Object[]{this, rankBean, Integer.valueOf(i)});
             } else {
-                C9548pb.j(z91.u().z(MultipleListFragment.this.mUtPageName, null, MultipleListFragment.this.mType.tabIndex, MultipleListFragment.this.mType.tabName, i));
+                pb.j(z91.u().z(MultipleListFragment.this.mUtPageName, null, MultipleListFragment.this.mType.tabIndex, MultipleListFragment.this.mType.tabName, i));
             }
         }
 
@@ -244,7 +239,7 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
                 z91 u = z91.u();
                 String str = MultipleListFragment.this.mUtPageName;
                 String spmc = recommendProjects.getSpmc();
-                C9548pb.j(u.C(str, spmc, "item_" + i, MultipleListFragment.this.mType.tabName, bricksBean != null ? bricksBean.id : null));
+                pb.j(u.C(str, spmc, "item_" + i, MultipleListFragment.this.mType.tabName, bricksBean != null ? bricksBean.id : null));
             }
         }
 
@@ -256,7 +251,7 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
             } else if (recommendProjects == null) {
             } else {
                 ProjectItemBean bricksBean = ProjectItemBean.toBricksBean(recommendProjects.getItem(i));
-                C9548pb.j(z91.u().B(MultipleListFragment.this.mUtPageName, recommendProjects.getSpmc(), "favorite", MultipleListFragment.this.mType.tabName, bricksBean != null ? bricksBean.id : null));
+                pb.j(z91.u().B(MultipleListFragment.this.mUtPageName, recommendProjects.getSpmc(), "favorite", MultipleListFragment.this.mType.tabName, bricksBean != null ? bricksBean.id : null));
             }
         }
 
@@ -268,22 +263,21 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
             } else if (recommendProjects == null) {
             } else {
                 ProjectItemBean bricksBean = ProjectItemBean.toBricksBean(recommendProjects.getItem(i));
-                C9548pb.j(z91.u().D(MultipleListFragment.this.mUtPageName, recommendProjects.getSpmc(), Constants.Event.CHANGE, MultipleListFragment.this.mType.tabName, bricksBean != null ? bricksBean.id : null));
+                pb.j(z91.u().D(MultipleListFragment.this.mUtPageName, recommendProjects.getSpmc(), Constants.Event.CHANGE, MultipleListFragment.this.mType.tabName, bricksBean != null ? bricksBean.id : null));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.fragment.MultipleListFragment$f */
     /* loaded from: classes.dex */
-    public class C0976f extends C9799v3 {
+    public class f extends v3 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0976f(Activity activity, MultiClickUt multiClickUt) {
+        f(Activity activity, MultiClickUt multiClickUt) {
             super(activity, multiClickUt);
         }
 
-        @Override // tb.C9799v3, cn.damai.commonbusiness.wannasee.listener.OnMultiListClickListener
+        @Override // tb.v3, cn.damai.commonbusiness.wannasee.listener.OnMultiListClickListener
         public void onRecommendFollowSuccessClick(RecommendProjects recommendProjects, int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1323144834")) {
@@ -294,22 +288,21 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
             if (bricksBean == null) {
                 return;
             }
-            WantSeePosterTips.AbstractC1555b.C1558c c1558c = WantSeePosterTips.AbstractC1555b.C1558c.INSTANCE;
-            c1558c.p(bricksBean.schema);
-            c1558c.r(bricksBean.verticalPic);
-            MultipleListFragment.this.wantSeePosterTips.setPageSource(c1558c);
+            WantSeePosterTips.b.c cVar = WantSeePosterTips.b.c.INSTANCE;
+            cVar.p(bricksBean.schema);
+            cVar.r(bricksBean.verticalPic);
+            MultipleListFragment.this.wantSeePosterTips.setPageSource(cVar);
             MultipleListFragment.this.wantSeePosterTips.hideCloseView();
             MultipleListFragment.this.wantSeePosterTips.showAnim();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.fragment.MultipleListFragment$g */
     /* loaded from: classes.dex */
-    public class C0977g implements OnItemBindListener<JSONObject> {
+    public class g implements OnItemBindListener<JSONObject> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0977g() {
+        g() {
         }
 
         @Override // cn.damai.tetris.component.drama.viewholder.OnItemBindListener
@@ -330,18 +323,17 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
             if (AndroidInstantRuntime.support(ipChange, "-827417970")) {
                 ipChange.ipc$dispatch("-827417970", new Object[]{this, jSONObject, Integer.valueOf(i)});
             } else {
-                C9548pb.j(z91.u().z(MultipleListFragment.this.mUtPageName, null, MultipleListFragment.this.mType.tabIndex, MultipleListFragment.this.mType.tabName, i));
+                pb.j(z91.u().z(MultipleListFragment.this.mUtPageName, null, MultipleListFragment.this.mType.tabIndex, MultipleListFragment.this.mType.tabName, i));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.fragment.MultipleListFragment$h */
     /* loaded from: classes.dex */
-    public class C0978h implements MultiAdapter.Exposure {
+    public class h implements MultiAdapter.Exposure {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0978h() {
+        h() {
         }
 
         @Override // cn.damai.commonbusiness.wannasee.adapter.MultiAdapter.Exposure
@@ -397,12 +389,11 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.fragment.MultipleListFragment$i */
     /* loaded from: classes.dex */
-    public class View$OnLongClickListenerC0979i implements View.OnLongClickListener {
+    public class i implements View.OnLongClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnLongClickListenerC0979i() {
+        i() {
         }
 
         @Override // android.view.View.OnLongClickListener
@@ -430,15 +421,14 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.fragment.MultipleListFragment$j */
     /* loaded from: classes.dex */
-    public class DialogInterface$OnClickListenerC0980j implements DialogInterface.OnClickListener {
+    public class j implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ int b;
         final /* synthetic */ int c;
 
-        DialogInterface$OnClickListenerC0980j(String str, int i, int i2) {
+        j(String str, int i, int i2) {
             this.a = str;
             this.b = i;
             this.c = i2;
@@ -457,19 +447,17 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.fragment.MultipleListFragment$k */
     /* loaded from: classes.dex */
-    public class C0981k implements OnBizListener<PageData<List>> {
+    public class k implements OnBizListener<PageData<List>> {
         private static transient /* synthetic */ IpChange $ipChange;
         final boolean a;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.commonbusiness.wannasee.fragment.MultipleListFragment$k$a */
         /* loaded from: classes.dex */
-        public class C0982a implements OnErrClickListener {
+        public class a implements OnErrClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C0982a() {
+            a() {
             }
 
             @Override // cn.damai.commonbusiness.wannasee.listener.OnErrClickListener
@@ -483,7 +471,7 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
             }
         }
 
-        public C0981k(boolean z) {
+        public k(boolean z) {
             this.a = z;
         }
 
@@ -515,7 +503,7 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
             if (AndroidInstantRuntime.support(ipChange, "-2011771039")) {
                 ipChange.ipc$dispatch("-2011771039", new Object[]{this, str, str2});
             } else if (this.a) {
-                MultipleListFragment.this.showErrorView(str, str2, new C0982a());
+                MultipleListFragment.this.showErrorView(str, str2, new a());
             } else {
                 ToastUtil.i(str2);
                 MultipleListFragment.this.mMorePanel.d();
@@ -541,8 +529,8 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
             PageType pageType2 = this.mType;
             if (pageType == pageType2) {
                 this.mItemOffset = m62.a(this.mActivity, 6.0f);
-                int a = m62.a(this.mActivity, 15.0f);
-                damaiRootRecyclerView.setPadding(a, 0, a, 0);
+                int a2 = m62.a(this.mActivity, 15.0f);
+                damaiRootRecyclerView.setPadding(a2, 0, a2, 0);
                 damaiRootRecyclerView.addItemDecoration(new RecyclerView.ItemDecoration() { // from class: cn.damai.commonbusiness.wannasee.fragment.MultipleListFragment.9
                     private static transient /* synthetic */ IpChange $ipChange;
 
@@ -621,13 +609,13 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void requestCancelFollow(String str, int i, final int i2) {
+    public void requestCancelFollow(String str, int i2, final int i3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "695512114")) {
-            ipChange.ipc$dispatch("695512114", new Object[]{this, str, Integer.valueOf(i), Integer.valueOf(i2)});
+            ipChange.ipc$dispatch("695512114", new Object[]{this, str, Integer.valueOf(i2), Integer.valueOf(i3)});
         } else if (this.mModel != null) {
             startProgressDialog();
-            this.mModel.cancelFollowData(str, String.valueOf(i), new DMMtopRequestListener<FollowDataBean>(FollowDataBean.class) { // from class: cn.damai.commonbusiness.wannasee.fragment.MultipleListFragment.13
+            this.mModel.cancelFollowData(str, String.valueOf(i2), new DMMtopRequestListener<FollowDataBean>(FollowDataBean.class) { // from class: cn.damai.commonbusiness.wannasee.fragment.MultipleListFragment.13
                 private static transient /* synthetic */ IpChange $ipChange;
 
                 @Override // cn.damai.common.net.mtop.netfit.DMMtopRequestListener
@@ -646,7 +634,7 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
 
                 @Override // cn.damai.common.net.mtop.netfit.DMMtopRequestListener
                 public void onSuccess(FollowDataBean followDataBean) {
-                    int i3;
+                    int i4;
                     IpChange ipChange2 = $ipChange;
                     if (AndroidInstantRuntime.support(ipChange2, "-1993189575")) {
                         ipChange2.ipc$dispatch("-1993189575", new Object[]{this, followDataBean});
@@ -654,10 +642,10 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
                     }
                     MultipleListFragment.this.stopProgressDialog();
                     ToastUtil.f(MultipleListFragment.this.getString(R$string.damai_mycollect_delete_success));
-                    if (MultipleListFragment.this.mAdapter == null || (i3 = i2) <= -1 || i3 >= MultipleListFragment.this.mAdapter.getItemCount()) {
+                    if (MultipleListFragment.this.mAdapter == null || (i4 = i3) <= -1 || i4 >= MultipleListFragment.this.mAdapter.getItemCount()) {
                         return;
                     }
-                    MultipleListFragment.this.mAdapter.f().remove(i2);
+                    MultipleListFragment.this.mAdapter.f().remove(i3);
                     if (MultipleListFragment.this.mAdapter != null) {
                         MultipleListFragment.this.mAdapter.notifyDataSetChanged();
                     }
@@ -667,16 +655,16 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void showFollowDialog(String str, int i, int i2) {
+    public void showFollowDialog(String str, int i2, int i3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-2140353732")) {
-            ipChange.ipc$dispatch("-2140353732", new Object[]{this, str, Integer.valueOf(i), Integer.valueOf(i2)});
+            ipChange.ipc$dispatch("-2140353732", new Object[]{this, str, Integer.valueOf(i2), Integer.valueOf(i3)});
             return;
         }
         DMDialog dMDialog = new DMDialog(getActivity());
         dMDialog.v("是否取消想看?");
         dMDialog.i("否", null);
-        dMDialog.n("是", new DialogInterface$OnClickListenerC0980j(str, i, i2));
+        dMDialog.n("是", new j(str, i2, i3));
         dMDialog.show();
     }
 
@@ -687,12 +675,12 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
             ipChange.ipc$dispatch("1215764115", new Object[]{this, Boolean.valueOf(z)});
         } else if (this.isNeedLogin) {
             if (!LoginManager.k().q()) {
-                showLoginView(new C0971a());
+                showLoginView(new a());
             } else {
-                this.mModel.load(z, new C0981k(z));
+                this.mModel.load(z, new k(z));
             }
         } else {
-            this.mModel.load(z, new C0981k(z));
+            this.mModel.load(z, new k(z));
         }
     }
 
@@ -744,18 +732,18 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
         this.wantSeePosterTips = (WantSeePosterTips) this.rootView.findViewById(R$id.want_see_poster_tips);
         this.mRecyclerView = (DamaiRootRecyclerView) this.rootView.findViewById(R$id.multi_list);
         if (isStaggeredLayout()) {
-            int a = m62.a(mu0.a(), 21.0f);
-            this.mRecyclerView.setPadding(a, 0, a, 0);
+            int a2 = m62.a(mu0.a(), 21.0f);
+            this.mRecyclerView.setPadding(a2, 0, a2, 0);
             this.mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, 1));
         } else {
             this.mRecyclerView.setLayoutManager(new LinearLayoutManager(this.mActivity, 1, false));
         }
         FragmentActivity fragmentActivity = this.mActivity;
-        MultiAdapter multiAdapter = new MultiAdapter(fragmentActivity, new C0976f(fragmentActivity, new C0975e()), true);
+        MultiAdapter multiAdapter = new MultiAdapter(fragmentActivity, new f(fragmentActivity, new e()), true);
         this.mAdapter = multiAdapter;
-        multiAdapter.l(new C0977g());
-        this.mAdapter.i(new C0978h());
-        this.mAdapter.k(new View$OnLongClickListenerC0979i());
+        multiAdapter.l(new g());
+        this.mAdapter.i(new h());
+        this.mAdapter.k(new i());
         this.mRecyclerView.setAdapter(this.mAdapter);
         RefreshHeaderLayout refreshHeaderLayout = this.mRecyclerView.mRefreshHeaderContainer;
         if (refreshHeaderLayout != null && (layoutParams = refreshHeaderLayout.getLayoutParams()) != null) {
@@ -783,7 +771,7 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
         this.mModel = wannaSeeModel;
         wannaSeeModel.setUtPageName(this.mUtPageName);
         LoginManager.k().c(this.mLoginListener);
-        this.mFocusSubscriber.b(this.mType.isProject() ? FocusEvent.EVENT_NAME_PROJECT_FOCUS_CHANGED : FocusEvent.EVENT_NAME_NOTE_FOCUS_CHANGED, new C0974d());
+        this.mFocusSubscriber.b(this.mType.isProject() ? FocusEvent.EVENT_NAME_PROJECT_FOCUS_CHANGED : FocusEvent.EVENT_NAME_NOTE_FOCUS_CHANGED, new d());
         super.onCreate(bundle);
     }
 
@@ -819,7 +807,7 @@ public class MultipleListFragment extends BaseFuncFragment implements PtrChildHa
         if (AndroidInstantRuntime.support(ipChange, "1874066331")) {
             ipChange.ipc$dispatch("1874066331", new Object[]{this, ptrFrameLayout, refreshCallBack});
         } else {
-            this.mModel.load(true, new C0972b(this, true, ptrFrameLayout));
+            this.mModel.load(true, new b(this, true, ptrFrameLayout));
         }
     }
 

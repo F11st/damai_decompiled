@@ -2,7 +2,7 @@ package kotlin.reflect.jvm.internal.impl.descriptors.deserialization;
 
 import java.util.Collection;
 import java.util.List;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassConstructorDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.SimpleFunctionDescriptor;
@@ -16,13 +16,12 @@ import tb.z71;
 public interface AdditionalClassPartsProvider {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.deserialization.AdditionalClassPartsProvider$a */
     /* loaded from: classes3.dex */
-    public static final class C8307a implements AdditionalClassPartsProvider {
+    public static final class a implements AdditionalClassPartsProvider {
         @NotNull
-        public static final C8307a INSTANCE = new C8307a();
+        public static final a INSTANCE = new a();
 
-        private C8307a() {
+        private a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.descriptors.deserialization.AdditionalClassPartsProvider
@@ -30,7 +29,7 @@ public interface AdditionalClassPartsProvider {
         public Collection<ClassConstructorDescriptor> getConstructors(@NotNull ClassDescriptor classDescriptor) {
             List g;
             b41.i(classDescriptor, "classDescriptor");
-            g = C8214m.g();
+            g = m.g();
             return g;
         }
 
@@ -40,7 +39,7 @@ public interface AdditionalClassPartsProvider {
             List g;
             b41.i(ni1Var, "name");
             b41.i(classDescriptor, "classDescriptor");
-            g = C8214m.g();
+            g = m.g();
             return g;
         }
 
@@ -49,7 +48,7 @@ public interface AdditionalClassPartsProvider {
         public Collection<ni1> getFunctionsNames(@NotNull ClassDescriptor classDescriptor) {
             List g;
             b41.i(classDescriptor, "classDescriptor");
-            g = C8214m.g();
+            g = m.g();
             return g;
         }
 
@@ -58,7 +57,7 @@ public interface AdditionalClassPartsProvider {
         public Collection<z71> getSupertypes(@NotNull ClassDescriptor classDescriptor) {
             List g;
             b41.i(classDescriptor, "classDescriptor");
-            g = C8214m.g();
+            g = m.g();
             return g;
         }
     }

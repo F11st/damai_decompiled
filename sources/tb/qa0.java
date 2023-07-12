@@ -13,8 +13,8 @@ public class qa0 {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1990732884")) {
             ipChange.ipc$dispatch("1990732884", new Object[]{imageView});
-        } else if (imageView.getTag() instanceof C9826vr) {
-            ((C9826vr) imageView.getTag()).cancel();
+        } else if (imageView.getTag() instanceof vr) {
+            ((vr) imageView.getTag()).cancel();
         }
     }
 }

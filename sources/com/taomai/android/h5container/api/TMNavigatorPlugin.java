@@ -29,16 +29,15 @@ public final class TMNavigatorPlugin extends TaoMaiApiPlugin {
     @NotNull
     public static final String ACTION_PUSH_WINDOW = "pushWindow";
     @NotNull
-    public static final C6991a Companion = new C6991a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.api.TMNavigatorPlugin$a */
     /* loaded from: classes11.dex */
-    public static final class C6991a {
-        private C6991a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C6991a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -89,9 +88,9 @@ public final class TMNavigatorPlugin extends TaoMaiApiPlugin {
     }
 
     public final boolean popTo(@Nullable String str, @Nullable WVCallBackContext wVCallBackContext) {
-        JSONObject a;
-        if (str != null && (a = kh2.a(str)) != null) {
-            if (ActivityStackManager.Companion.a().d(a.getIntValue("index"), a.getString("data"))) {
+        JSONObject a2;
+        if (str != null && (a2 = kh2.a(str)) != null) {
+            if (ActivityStackManager.Companion.a().d(a2.getIntValue("index"), a2.getString("data"))) {
                 if (wVCallBackContext != null) {
                     wVCallBackContext.success();
                 }
@@ -103,9 +102,9 @@ public final class TMNavigatorPlugin extends TaoMaiApiPlugin {
     }
 
     public final boolean popWindow(@Nullable String str, @Nullable WVCallBackContext wVCallBackContext) {
-        JSONObject a;
-        if (str != null && (a = kh2.a(str)) != null) {
-            String string = a.getString("data");
+        JSONObject a2;
+        if (str != null && (a2 = kh2.a(str)) != null) {
+            String string = a2.getString("data");
             if (string != null && !b41.d("{}", string)) {
                 if (ActivityStackManager.Companion.a().d(-1, string)) {
                     if (wVCallBackContext != null) {
@@ -132,9 +131,9 @@ public final class TMNavigatorPlugin extends TaoMaiApiPlugin {
     }
 
     public final boolean pushWindow(@Nullable String str, @Nullable WVCallBackContext wVCallBackContext) {
-        JSONObject a;
+        JSONObject a2;
         String string;
-        if (str != null && (a = kh2.a(str)) != null && (string = a.getString("url")) != null) {
+        if (str != null && (a2 = kh2.a(str)) != null && (string = a2.getString("url")) != null) {
             TaoMaiH5Container.NavHandler b = TaoMaiH5Container.b();
             if (b != null) {
                 Context context = this.mContext;

@@ -12,13 +12,12 @@ public class rm2 {
     private static ThreadPoolExecutor a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.rm2$a */
     /* loaded from: classes11.dex */
-    private static class ThreadFactoryC9658a implements ThreadFactory {
+    private static class a implements ThreadFactory {
         AtomicInteger a = new AtomicInteger(0);
         String b;
 
-        ThreadFactoryC9658a(String str) {
+        a(String str) {
             this.b = str;
         }
 
@@ -31,7 +30,7 @@ public class rm2 {
     }
 
     static {
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(1, 1, 30L, TimeUnit.SECONDS, new LinkedBlockingDeque(), new ThreadFactoryC9658a("phenix-stat"));
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(1, 1, 30L, TimeUnit.SECONDS, new LinkedBlockingDeque(), new a("phenix-stat"));
         a = threadPoolExecutor;
         threadPoolExecutor.allowCoreThreadTimeOut(true);
     }

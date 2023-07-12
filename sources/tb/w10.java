@@ -14,18 +14,17 @@ import java.util.concurrent.CopyOnWriteArrayList;
 /* loaded from: classes11.dex */
 public class w10 {
     private boolean a = true;
-    private HandlerC9841a b = new HandlerC9841a(this);
+    private a b = new a(this);
     private List<v10> c;
     private long d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.w10$a */
     /* loaded from: classes11.dex */
-    public static class HandlerC9841a extends Handler {
+    public static class a extends Handler {
         private WeakReference<w10> a;
         private long b;
 
-        HandlerC9841a(w10 w10Var) {
+        a(w10 w10Var) {
             super(Looper.getMainLooper());
             this.a = new WeakReference<>(w10Var);
         }
@@ -107,8 +106,8 @@ public class w10 {
         if (this.a) {
             this.a = false;
             this.b.a(SystemClock.elapsedRealtime());
-            HandlerC9841a handlerC9841a = this.b;
-            handlerC9841a.sendMessage(handlerC9841a.obtainMessage(1));
+            a aVar = this.b;
+            aVar.sendMessage(aVar.obtainMessage(1));
         }
     }
 

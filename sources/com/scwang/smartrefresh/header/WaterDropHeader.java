@@ -34,12 +34,11 @@ public class WaterDropHeader extends InternalAbstract implements RefreshHeader {
     protected WaterDropView mWaterDropView;
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.WaterDropHeader$a */
     /* loaded from: classes6.dex */
-    class C6164a extends AnimatorListenerAdapter {
+    class a extends AnimatorListenerAdapter {
         final /* synthetic */ View a;
 
-        C6164a(WaterDropHeader waterDropHeader, View view) {
+        a(WaterDropHeader waterDropHeader, View view) {
             this.a = view;
         }
 
@@ -51,9 +50,8 @@ public class WaterDropHeader extends InternalAbstract implements RefreshHeader {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.WaterDropHeader$b */
     /* loaded from: classes6.dex */
-    static /* synthetic */ class C6165b {
+    static /* synthetic */ class b {
         static final /* synthetic */ int[] a;
 
         static {
@@ -171,14 +169,14 @@ public class WaterDropHeader extends InternalAbstract implements RefreshHeader {
         WaterDropView waterDropView = this.mWaterDropView;
         this.mProgressDrawable.start();
         this.mWaterDropView.createAnimator().start();
-        waterDropView.animate().setDuration(150L).alpha(0.0f).setListener(new C6164a(this, waterDropView));
+        waterDropView.animate().setDuration(150L).alpha(0.0f).setListener(new a(this, waterDropView));
     }
 
     @Override // com.scwang.smartrefresh.layout.internal.InternalAbstract, com.scwang.smartrefresh.layout.listener.OnStateChangedListener
     public void onStateChanged(@NonNull RefreshLayout refreshLayout, @NonNull RefreshState refreshState, @NonNull RefreshState refreshState2) {
         WaterDropView waterDropView = this.mWaterDropView;
         this.mState = refreshState2;
-        int i = C6165b.a[refreshState2.ordinal()];
+        int i = b.a[refreshState2.ordinal()];
         if (i == 1) {
             waterDropView.setVisibility(0);
         } else if (i == 2) {

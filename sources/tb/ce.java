@@ -13,16 +13,15 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes3.dex */
 public final class ce extends DeserializedPackageFragmentImpl implements BuiltInsPackageFragment {
     @NotNull
-    public static final C9000a Companion = new C9000a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ce$a */
     /* loaded from: classes3.dex */
-    public static final class C9000a {
-        private C9000a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9000a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -42,7 +41,7 @@ public final class ce extends DeserializedPackageFragmentImpl implements BuiltIn
                     beVar = a;
                 }
                 if (beVar.h()) {
-                    ProtoBuf$PackageFragment parseFrom = ProtoBuf$PackageFragment.parseFrom(inputStream, C8906ae.INSTANCE.e());
+                    ProtoBuf$PackageFragment parseFrom = ProtoBuf$PackageFragment.parseFrom(inputStream, ae.INSTANCE.e());
                     xj.a(inputStream, null);
                     b41.h(parseFrom, "proto");
                     return new ce(hp0Var, storageManager, moduleDescriptor, parseFrom, a, z, null);

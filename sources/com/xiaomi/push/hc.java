@@ -8,7 +8,7 @@ import java.util.List;
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public final class hc extends ao.AbstractC7600b {
+public final class hc extends ao.b {
     final /* synthetic */ Context a;
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -16,7 +16,7 @@ public final class hc extends ao.AbstractC7600b {
         this.a = context;
     }
 
-    @Override // com.xiaomi.push.ao.AbstractC7600b
+    @Override // com.xiaomi.push.ao.b
     public void b() {
         Object obj;
         ArrayList arrayList;

@@ -28,7 +28,7 @@ import tb.k50;
 public final class TicketDetailPerformViewHolder extends BaseViewHolder<Object> {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C2059a Companion = new C2059a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String PERFORM_TICKET_DATA = "performTicketData";
     private boolean isInited;
@@ -38,13 +38,12 @@ public final class TicketDetailPerformViewHolder extends BaseViewHolder<Object> 
     private final TickletDetailPerformTicketView performTicketView;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.detailholder.TicketDetailPerformViewHolder$a */
     /* loaded from: classes7.dex */
-    public static final class C2059a {
-        private C2059a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C2059a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

@@ -1,7 +1,7 @@
 package cn.damai.trade.newtradeorder.ui.projectdetail.venuemap;
 
-import cn.damai.common.app.base.AbstractC0470a;
 import cn.damai.common.app.base.BaseModel;
+import cn.damai.common.app.base.a;
 import cn.damai.commonbusiness.base.BaseDamaiView;
 
 /* compiled from: Taobao */
@@ -15,7 +15,7 @@ public interface VenueContract {
 
     /* compiled from: Taobao */
     /* loaded from: classes8.dex */
-    public static abstract class Presenter extends AbstractC0470a<View, Model> {
+    public static abstract class Presenter extends a<View, Model> {
         public abstract void retrieveVenueDetailInfo(String str);
     }
 

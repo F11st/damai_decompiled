@@ -6,9 +6,9 @@ import anetwork.channel.Header;
 import anetwork.channel.NetworkEvent$ProgressEvent;
 import anetwork.channel.Param;
 import anetwork.channel.Request;
-import com.alibaba.aliweex.interceptor.C3093a;
 import com.alibaba.aliweex.interceptor.IWeexAnalyzerInspector;
-import com.alibaba.poplayer.trigger.C3684c;
+import com.alibaba.aliweex.interceptor.a;
+import com.alibaba.poplayer.trigger.c;
 import com.huawei.hms.support.hianalytics.HiAnalyticsConstant;
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
 import com.taobao.weex.WXEnvironment;
@@ -49,7 +49,7 @@ public class NetworkTracker {
     private NetworkTracker() {
         if (WXEnvironment.isApkDebugable()) {
             this.a = sj1.d();
-            this.f = C3093a.a();
+            this.f = a.a();
             WXLogUtils.d("NetworkTracker", "Create new instance " + toString());
         }
     }
@@ -154,7 +154,7 @@ public class NetworkTracker {
             String str = TextUtils.isEmpty((CharSequence) b31Var.f().get("url")) ? "unknown" : (String) this.e.f().get("url");
             String str2 = new String(bArr);
             int intValue = ((Integer) this.e.f().get(HiAnalyticsConstant.HaKey.BI_KEY_RESULT)).intValue();
-            iWeexAnalyzerInspector2.onResponse("http", new IWeexAnalyzerInspector.C3092b(str, str2, intValue, Collections.singletonMap(Constants.Protocol.CONTENT_LENGTH, Collections.singletonList(bArr.length + ""))));
+            iWeexAnalyzerInspector2.onResponse("http", new IWeexAnalyzerInspector.b(str, str2, intValue, Collections.singletonMap(Constants.Protocol.CONTENT_LENGTH, Collections.singletonList(bArr.length + ""))));
         } catch (Throwable th) {
             t("Exception on onFinished()", th);
         }
@@ -243,7 +243,7 @@ public class NetworkTracker {
                         a31Var.a("charset", request.getCharset());
                         a31Var.a("connectTimeout", String.valueOf(request.getConnectTimeout()));
                         a31Var.a("readTimeout", String.valueOf(request.getReadTimeout()));
-                        a31Var.a(C3684c.KEY_RETRY_TIME, String.valueOf(request.getRetryTime()));
+                        a31Var.a(c.KEY_RETRY_TIME, String.valueOf(request.getRetryTime()));
                         NetworkTracker.this.d = request.getURL().toString();
                         a31Var.i(NetworkTracker.this.d);
                         a31Var.h(NetworkTracker.this.k());
@@ -272,13 +272,13 @@ public class NetworkTracker {
                     hashMap.put("charset", request.getCharset());
                     hashMap.put("connectTimeout", String.valueOf(request.getConnectTimeout()));
                     hashMap.put("readTimeout", String.valueOf(request.getReadTimeout()));
-                    hashMap.put(C3684c.KEY_RETRY_TIME, String.valueOf(request.getRetryTime()));
+                    hashMap.put(c.KEY_RETRY_TIME, String.valueOf(request.getRetryTime()));
                     if (request.getHeaders() != null) {
                         for (Header header : request.getHeaders()) {
                             hashMap.put(header.getName(), header.getValue());
                         }
                     }
-                    this.f.onRequest("http", new IWeexAnalyzerInspector.C3091a(TextUtils.isEmpty(this.d) ? "unknown" : this.d, "GET", hashMap));
+                    this.f.onRequest("http", new IWeexAnalyzerInspector.a(TextUtils.isEmpty(this.d) ? "unknown" : this.d, "GET", hashMap));
                 } catch (Exception e) {
                     WXLogUtils.e("NetworkTracker", e.getMessage());
                 }

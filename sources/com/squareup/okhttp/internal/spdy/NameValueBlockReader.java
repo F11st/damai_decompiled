@@ -5,23 +5,23 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;
-import okio.AbstractC8840d;
 import okio.Buffer;
 import okio.BufferedSource;
 import okio.ByteString;
-import okio.C8843g;
-import okio.C8844h;
+import okio.d;
+import okio.g;
+import okio.h;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
 class NameValueBlockReader {
     private int compressedLimit;
-    private final C8843g inflaterSource;
+    private final g inflaterSource;
     private final BufferedSource source;
 
     public NameValueBlockReader(BufferedSource bufferedSource) {
-        C8843g c8843g = new C8843g(new AbstractC8840d(bufferedSource) { // from class: com.squareup.okhttp.internal.spdy.NameValueBlockReader.1
-            @Override // okio.AbstractC8840d, okio.Source
+        g gVar = new g(new d(bufferedSource) { // from class: com.squareup.okhttp.internal.spdy.NameValueBlockReader.1
+            @Override // okio.d, okio.Source
             public long read(Buffer buffer, long j) throws IOException {
                 if (NameValueBlockReader.this.compressedLimit == 0) {
                     return -1L;
@@ -45,8 +45,8 @@ class NameValueBlockReader {
                 return inflate;
             }
         });
-        this.inflaterSource = c8843g;
-        this.source = C8844h.d(c8843g);
+        this.inflaterSource = gVar;
+        this.source = h.d(gVar);
     }
 
     private void doneReading() throws IOException {

@@ -2,7 +2,7 @@ package com.alient.oneservice.userinfo;
 
 import android.util.Log;
 import com.alibaba.fastjson.JSONObject;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -12,7 +12,7 @@ public class MemberProviderProxy {
     public static JSONObject getCurrentUserInfo() {
         try {
             if (sProxy == null) {
-                sProxy = (MemberProvider) C8883a.j("com.alient.oneservice.provider.impl.userinfo.MemberProviderImpl").b().f();
+                sProxy = (MemberProvider) a.j("com.alient.oneservice.provider.impl.userinfo.MemberProviderImpl").b().f();
             }
             return sProxy.getCurrentUserInfo();
         } catch (Throwable th) {
@@ -23,7 +23,7 @@ public class MemberProviderProxy {
 
     public static MemberProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (MemberProvider) C8883a.j("com.alient.oneservice.provider.impl.userinfo.MemberProviderImpl").b().f();
+            sProxy = (MemberProvider) a.j("com.alient.oneservice.provider.impl.userinfo.MemberProviderImpl").b().f();
         }
         return sProxy;
     }

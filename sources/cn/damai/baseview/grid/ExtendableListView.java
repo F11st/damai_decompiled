@@ -51,8 +51,8 @@ public abstract class ExtendableListView extends AbsListView {
     protected int mFirstPosition;
     private FlingRunnable mFlingRunnable;
     private int mFlingVelocity;
-    private ArrayList<C0290c> mFooterViewInfos;
-    private ArrayList<C0290c> mHeaderViewInfos;
+    private ArrayList<c> mFooterViewInfos;
+    private ArrayList<c> mHeaderViewInfos;
     private boolean mInLayout;
     private boolean mIsAttached;
     final boolean[] mIsScrap;
@@ -65,11 +65,11 @@ public abstract class ExtendableListView extends AbsListView {
     private int mMotionX;
     private int mMotionY;
     boolean mNeedSync;
-    private C0289b mObserver;
+    private b mObserver;
     private int mOldItemCount;
     private AbsListView.OnScrollListener mOnScrollListener;
     private PerformClick mPerformClick;
-    private C0291d mRecycleBin;
+    private d mRecycleBin;
     private int mScrollState;
     protected int mSpecificTop;
     long mSyncHeight;
@@ -174,7 +174,7 @@ public abstract class ExtendableListView extends AbsListView {
     /* loaded from: classes.dex */
     public static class ListSavedState extends ClassLoaderSavedState {
         private static transient /* synthetic */ IpChange $ipChange;
-        public static final Parcelable.Creator<ListSavedState> CREATOR = new C0287a();
+        public static final Parcelable.Creator<ListSavedState> CREATOR = new a();
         protected long firstId;
         protected int height;
         protected int position;
@@ -182,12 +182,11 @@ public abstract class ExtendableListView extends AbsListView {
         protected int viewTop;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.baseview.grid.ExtendableListView$ListSavedState$a */
         /* loaded from: classes.dex */
-        public static final class C0287a implements Parcelable.Creator<ListSavedState> {
+        public static final class a implements Parcelable.Creator<ListSavedState> {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C0287a() {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator
@@ -244,7 +243,7 @@ public abstract class ExtendableListView extends AbsListView {
 
     /* compiled from: Taobao */
     /* loaded from: classes.dex */
-    public class PerformClick extends C0292e implements Runnable {
+    public class PerformClick extends e implements Runnable {
         private static transient /* synthetic */ IpChange $ipChange;
         int mClickMotionPosition;
 
@@ -273,13 +272,12 @@ public abstract class ExtendableListView extends AbsListView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.grid.ExtendableListView$b */
     /* loaded from: classes.dex */
-    public class C0289b extends DataSetObserver {
+    public class b extends DataSetObserver {
         private static transient /* synthetic */ IpChange $ipChange;
         private Parcelable a = null;
 
-        C0289b() {
+        b() {
         }
 
         @Override // android.database.DataSetObserver
@@ -327,21 +325,19 @@ public abstract class ExtendableListView extends AbsListView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.grid.ExtendableListView$c */
     /* loaded from: classes.dex */
-    public class C0290c {
+    public class c {
         public View a;
         public Object b;
         public boolean c;
 
-        public C0290c(ExtendableListView extendableListView) {
+        public c(ExtendableListView extendableListView) {
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.grid.ExtendableListView$d */
     /* loaded from: classes.dex */
-    public class C0291d {
+    public class d {
         private static transient /* synthetic */ IpChange $ipChange;
         private int a;
         private View[] b = new View[0];
@@ -351,7 +347,7 @@ public abstract class ExtendableListView extends AbsListView {
         private ArrayList<View> f;
         private SparseArrayCompat<View> g;
 
-        C0291d() {
+        d() {
         }
 
         private void h() {
@@ -627,13 +623,12 @@ public abstract class ExtendableListView extends AbsListView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.grid.ExtendableListView$e */
     /* loaded from: classes.dex */
-    public class C0292e {
+    public class e {
         private static transient /* synthetic */ IpChange $ipChange;
         private int mOriginalAttachCount;
 
-        private C0292e() {
+        private e() {
         }
 
         public void rememberWindowAttachCount() {
@@ -667,8 +662,8 @@ public abstract class ExtendableListView extends AbsListView {
         this.mTouchSlop = viewConfiguration.getScaledTouchSlop();
         this.mMaximumVelocity = viewConfiguration.getScaledMaximumFlingVelocity();
         this.mFlingVelocity = viewConfiguration.getScaledMinimumFlingVelocity();
-        this.mRecycleBin = new C0291d();
-        this.mObserver = new C0289b();
+        this.mRecycleBin = new d();
+        this.mObserver = new b();
         this.mHeaderViewInfos = new ArrayList<>();
         this.mFooterViewInfos = new ArrayList<>();
         this.mLayoutMode = 0;
@@ -687,13 +682,13 @@ public abstract class ExtendableListView extends AbsListView {
         }
     }
 
-    private void clearRecycledState(ArrayList<C0290c> arrayList) {
+    private void clearRecycledState(ArrayList<c> arrayList) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1207638114")) {
             ipChange.ipc$dispatch("-1207638114", new Object[]{this, arrayList});
         } else if (arrayList == null) {
         } else {
-            Iterator<C0290c> it = arrayList.iterator();
+            Iterator<c> it = arrayList.iterator();
             while (it.hasNext()) {
                 LayoutParams layoutParams = (LayoutParams) it.next().a.getLayoutParams();
                 if (layoutParams != null) {
@@ -891,15 +886,15 @@ public abstract class ExtendableListView extends AbsListView {
     }
 
     private View makeAndAddView(int i, int i2, boolean z, boolean z2) {
-        View e;
+        View e2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-446241820")) {
             return (View) ipChange.ipc$dispatch("-446241820", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), Boolean.valueOf(z), Boolean.valueOf(z2)});
         }
         onChildCreated(i, z);
-        if (!this.mDataChanged && (e = this.mRecycleBin.e(i)) != null) {
-            setupChild(e, i, i2, z, z2, true);
-            return e;
+        if (!this.mDataChanged && (e2 = this.mRecycleBin.e(i)) != null) {
+            setupChild(e2, i, i2, z, z2, true);
+            return e2;
         }
         View obtainView = obtainView(i, this.mIsScrap);
         setupChild(obtainView, i, i2, z, z2, this.mIsScrap[0]);
@@ -1215,7 +1210,7 @@ public abstract class ExtendableListView extends AbsListView {
         }
     }
 
-    private void removeFixedViewInfo(View view, ArrayList<C0290c> arrayList) {
+    private void removeFixedViewInfo(View view, ArrayList<c> arrayList) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-728464640")) {
             ipChange.ipc$dispatch("-728464640", new Object[]{this, view, arrayList});
@@ -1421,25 +1416,25 @@ public abstract class ExtendableListView extends AbsListView {
     }
 
     public void addFooterView(View view, Object obj, boolean z) {
-        C0289b c0289b;
+        b bVar;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1819057040")) {
             ipChange.ipc$dispatch("1819057040", new Object[]{this, view, obj, Boolean.valueOf(z)});
             return;
         }
-        C0290c c0290c = new C0290c(this);
-        c0290c.a = view;
-        c0290c.b = obj;
-        c0290c.c = z;
-        this.mFooterViewInfos.add(c0290c);
-        if (this.mAdapter == null || (c0289b = this.mObserver) == null) {
+        c cVar = new c(this);
+        cVar.a = view;
+        cVar.b = obj;
+        cVar.c = z;
+        this.mFooterViewInfos.add(cVar);
+        if (this.mAdapter == null || (bVar = this.mObserver) == null) {
             return;
         }
-        c0289b.onChanged();
+        bVar.onChanged();
     }
 
     public void addHeaderView(View view, Object obj, boolean z) {
-        C0289b c0289b;
+        b bVar;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-323891234")) {
             ipChange.ipc$dispatch("-323891234", new Object[]{this, view, obj, Boolean.valueOf(z)});
@@ -1449,15 +1444,15 @@ public abstract class ExtendableListView extends AbsListView {
         if (listAdapter != null && !(listAdapter instanceof HeaderViewListAdapter)) {
             throw new IllegalStateException("Cannot add header view to list -- setAdapter has already been called.");
         }
-        C0290c c0290c = new C0290c(this);
-        c0290c.a = view;
-        c0290c.b = obj;
-        c0290c.c = z;
-        this.mHeaderViewInfos.add(c0290c);
-        if (this.mAdapter == null || (c0289b = this.mObserver) == null) {
+        c cVar = new c(this);
+        cVar.a = view;
+        cVar.b = obj;
+        cVar.c = z;
+        this.mHeaderViewInfos.add(cVar);
+        if (this.mAdapter == null || (bVar = this.mObserver) == null) {
             return;
         }
-        c0289b.onChanged();
+        bVar.onChanged();
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -1733,16 +1728,16 @@ public abstract class ExtendableListView extends AbsListView {
                     clearState();
                 } else if (i == this.mAdapter.getCount()) {
                     int i2 = this.mFirstPosition;
-                    C0291d c0291d = this.mRecycleBin;
+                    d dVar = this.mRecycleBin;
                     if (z) {
                         for (int i3 = 0; i3 < childCount; i3++) {
-                            c0291d.a(getChildAt(i3), i2 + i3);
+                            dVar.a(getChildAt(i3), i2 + i3);
                         }
                     } else {
-                        c0291d.d(childCount, i2);
+                        dVar.d(childCount, i2);
                     }
                     detachAllViewsFromParent();
-                    c0291d.i();
+                    dVar.i();
                     int i4 = this.mLayoutMode;
                     if (i4 == 1) {
                         this.mFirstPosition = 0;
@@ -1765,7 +1760,7 @@ public abstract class ExtendableListView extends AbsListView {
                             fillSpecific(0, listPaddingTop);
                         }
                     }
-                    c0291d.j();
+                    dVar.j();
                     this.mDataChanged = false;
                     this.mNeedSync = false;
                     this.mLayoutMode = 0;
@@ -2135,9 +2130,9 @@ public abstract class ExtendableListView extends AbsListView {
             if (listAdapter == null || !((HeaderViewListAdapter) listAdapter).removeFooter(view)) {
                 z = false;
             } else {
-                C0289b c0289b = this.mObserver;
-                if (c0289b != null) {
-                    c0289b.onChanged();
+                b bVar = this.mObserver;
+                if (bVar != null) {
+                    bVar.onChanged();
                 }
             }
             removeFixedViewInfo(view, this.mFooterViewInfos);
@@ -2157,9 +2152,9 @@ public abstract class ExtendableListView extends AbsListView {
             if (listAdapter == null || !((HeaderViewListAdapter) listAdapter).removeHeader(view)) {
                 z = false;
             } else {
-                C0289b c0289b = this.mObserver;
-                if (c0289b != null) {
-                    c0289b.onChanged();
+                b bVar = this.mObserver;
+                if (bVar != null) {
+                    bVar.onChanged();
                 }
             }
             removeFixedViewInfo(view, this.mHeaderViewInfos);

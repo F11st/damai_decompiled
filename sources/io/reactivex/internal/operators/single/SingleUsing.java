@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.single;
 
-import io.reactivex.AbstractC8152e;
 import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.exceptions.CompositeException;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
@@ -17,7 +17,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class SingleUsing<T, U> extends AbstractC8152e<T> {
+public final class SingleUsing<T, U> extends e<T> {
     final Consumer<? super U> disposer;
     final boolean eager;
     final Callable<U> resourceSupplier;
@@ -124,7 +124,7 @@ public final class SingleUsing<T, U> extends AbstractC8152e<T> {
         this.eager = z;
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     protected void subscribeActual(SingleObserver<? super T> singleObserver) {
         try {
             U call = this.resourceSupplier.call();

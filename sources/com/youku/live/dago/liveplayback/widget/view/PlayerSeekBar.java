@@ -623,7 +623,7 @@ public class PlayerSeekBar extends View {
             r8.dx = r5
             r8.isDown = r2
             android.content.res.Resources r6 = r8.getResources()
-            int r7 = com.youku.live.dago.liveplayback.R.C7933drawable.dago_back_to_live
+            int r7 = com.youku.live.dago.liveplayback.R.drawable.dago_back_to_live
             android.graphics.Bitmap r6 = android.graphics.BitmapFactory.decodeResource(r6, r7)
             r8.mBackToLive = r6
             r6 = 1104150528(0x41d00000, float:26.0)

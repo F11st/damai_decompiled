@@ -5,7 +5,6 @@ import androidx.annotation.NonNull;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.taobao.analysis.v3.FalcoSpan;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DXRuntimeContext;
 import com.taobao.android.dinamicx.widget.DXRecyclerLayout;
 import com.taobao.android.dinamicx.widget.DXTemplateWidgetNode;
@@ -192,7 +191,7 @@ public class p00 extends o00 {
             }
             return true;
         }
-        m(dXRecyclerLayout, C6368e.DX_ERROR_CODE_RECYCLER_LAYOUT_230004, "index: " + i + " dataSource.size() " + e(dXRecyclerLayout).size());
+        m(dXRecyclerLayout, com.taobao.android.dinamicx.e.DX_ERROR_CODE_RECYCLER_LAYOUT_230004, "index: " + i + " dataSource.size() " + e(dXRecyclerLayout).size());
         return false;
     }
 
@@ -677,7 +676,7 @@ public class p00 extends o00 {
         }
         int indexOfItem = f.indexOfItem(h);
         if (indexOfItem < 0) {
-            m(dXRecyclerLayout, C6368e.DX_ERROR_CODE_RECYCLER_LAYOUT_230005, "index: " + indexOfItem);
+            m(dXRecyclerLayout, com.taobao.android.dinamicx.e.DX_ERROR_CODE_RECYCLER_LAYOUT_230005, "index: " + indexOfItem);
             return false;
         }
         s00.e(" updateCurrent 获取到的index 为" + indexOfItem);

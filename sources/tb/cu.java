@@ -1,11 +1,10 @@
 package tb;
 
 import com.android.alibaba.ip.runtime.IpChange;
-import com.taobao.android.dinamicx.AbstractC6362a;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
-public class cu extends AbstractC6362a {
+public class cu extends com.taobao.android.dinamicx.a {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final long DX_EVENT_DMAUTOJUMP = -6351583547649020464L;
 

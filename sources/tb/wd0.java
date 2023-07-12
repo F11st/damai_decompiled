@@ -10,14 +10,13 @@ public class wd0 extends yd0 {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.wd0$b */
     /* loaded from: classes11.dex */
-    public static class C9856b {
+    public static class b {
         private static wd0 a = new wd0();
     }
 
     public static wd0 INSTANCE() {
-        return C9856b.a;
+        return b.a;
     }
 
     @Override // tb.be0

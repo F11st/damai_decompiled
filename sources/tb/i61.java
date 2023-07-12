@@ -92,7 +92,7 @@ public final class i61 {
             r8 = 0
             java.lang.String r4 = "["
             r3 = r10
-            int r0 = kotlin.text.C8596g.Z(r3, r4, r5, r6, r7, r8)
+            int r0 = kotlin.text.g.Z(r3, r4, r5, r6, r7, r8)
             if (r0 >= 0) goto L21
             goto L2a
         L21:

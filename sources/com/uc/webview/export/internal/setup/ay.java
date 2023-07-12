@@ -15,7 +15,7 @@ public final class ay implements Callable<Object> {
 
     @Override // java.util.concurrent.Callable
     public final Object call() throws Exception {
-        C7279j.a(af.a);
+        j.a(af.a);
         return null;
     }
 }

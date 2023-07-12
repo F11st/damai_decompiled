@@ -24,8 +24,8 @@ import cn.damai.category.discountticket.bean.biz.Column3WrapBean;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
@@ -75,7 +75,7 @@ public class GuideActivity extends SimpleBaseActivity {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final String TAG = "GuideActivity";
     private TextView btnGetCoupon;
-    private C0525a.C0527b builder;
+    private a.b builder;
     private GetCouponResponse couponResponse;
     private ViewGroup getCouponList;
     private GridView gridView;
@@ -875,10 +875,10 @@ public class GuideActivity extends SimpleBaseActivity {
         }
         overridePendingTransition(R$anim.activity_launcher_bottom_in, 0);
         super.onCreate(bundle);
-        C0525a.C0527b g = LauncherUTHelper.getInstance().g(GuidePageUTHelper.GUIDE_PAGE);
+        a.b g = LauncherUTHelper.getInstance().g(GuidePageUTHelper.GUIDE_PAGE);
         this.builder = g;
         setDamaiUTKeyBuilder(g);
-        C0529c.e().K(this);
+        c.e().K(this);
         setContentView(R$layout.damai_launcher_activity_guide);
         cb1.b("GuideTActivityTAG", "GuideTActivityTAG onCreate!");
         hideBaseLayout();

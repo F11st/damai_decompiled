@@ -3,7 +3,7 @@ package com.youku.middlewareservice.provider.info;
 import android.app.Application;
 import android.content.Context;
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -13,7 +13,7 @@ public class AppInfoProviderProxy {
     public static String getAppActiveTime() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.getAppActiveTime();
         } catch (Throwable th) {
@@ -25,7 +25,7 @@ public class AppInfoProviderProxy {
     public static String getAppActiveVersion() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.getAppActiveVersion();
         } catch (Throwable th) {
@@ -37,7 +37,7 @@ public class AppInfoProviderProxy {
     public static Context getAppContext() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.getAppContext();
         } catch (Throwable th) {
@@ -49,7 +49,7 @@ public class AppInfoProviderProxy {
     public static String getAppKey() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.getAppKey();
         } catch (Throwable th) {
@@ -61,7 +61,7 @@ public class AppInfoProviderProxy {
     public static String getAppType() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.getAppType();
         } catch (Throwable th) {
@@ -73,7 +73,7 @@ public class AppInfoProviderProxy {
     public static Application getApplication() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.getApplication();
         } catch (Throwable th) {
@@ -85,7 +85,7 @@ public class AppInfoProviderProxy {
     public static String getChannel() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.getChannel();
         } catch (Throwable th) {
@@ -97,7 +97,7 @@ public class AppInfoProviderProxy {
     public static String getCurrentProcessName() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.getCurrentProcessName();
         } catch (Throwable th) {
@@ -109,7 +109,7 @@ public class AppInfoProviderProxy {
     public static String getManufacturedAppType() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.getManufacturedAppType();
         } catch (Throwable th) {
@@ -121,7 +121,7 @@ public class AppInfoProviderProxy {
     public static String getPackageName() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.getPackageName();
         } catch (Throwable th) {
@@ -133,7 +133,7 @@ public class AppInfoProviderProxy {
     public static String getPreInstallBrand() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.getPreInstallBrand();
         } catch (Throwable th) {
@@ -144,7 +144,7 @@ public class AppInfoProviderProxy {
 
     public static AppInfoProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+            sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -152,7 +152,7 @@ public class AppInfoProviderProxy {
     public static String getTTID() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.getTTID();
         } catch (Throwable th) {
@@ -164,7 +164,7 @@ public class AppInfoProviderProxy {
     public static int getVersionCode() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.getVersionCode();
         } catch (Throwable th) {
@@ -176,7 +176,7 @@ public class AppInfoProviderProxy {
     public static String getVersionName() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.getVersionName();
         } catch (Throwable th) {
@@ -198,7 +198,7 @@ public class AppInfoProviderProxy {
     public static boolean isAbi64FromApk() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.isAbi64FromApk();
         } catch (Throwable th) {
@@ -210,7 +210,7 @@ public class AppInfoProviderProxy {
     public static boolean isDebuggable() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.isDebuggable();
         } catch (Throwable th) {
@@ -222,7 +222,7 @@ public class AppInfoProviderProxy {
     public static boolean isFullApp() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.isFullApp();
         } catch (Throwable th) {
@@ -234,7 +234,7 @@ public class AppInfoProviderProxy {
     public static boolean isHuaweiCarPreInstall() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.isHuaweiCarPreInstall();
         } catch (Throwable th) {
@@ -246,7 +246,7 @@ public class AppInfoProviderProxy {
     public static boolean isHuaweiPreInstall() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.isHuaweiPreInstall();
         } catch (Throwable th) {
@@ -258,7 +258,7 @@ public class AppInfoProviderProxy {
     public static boolean isManufacturedApp() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.isManufacturedApp();
         } catch (Throwable th) {
@@ -270,7 +270,7 @@ public class AppInfoProviderProxy {
     public static boolean isMicroApp() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.isMicroApp();
         } catch (Throwable th) {
@@ -282,7 +282,7 @@ public class AppInfoProviderProxy {
     public static boolean isPreInstallPackage() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.isPreInstallPackage();
         } catch (Throwable th) {
@@ -294,7 +294,7 @@ public class AppInfoProviderProxy {
     public static boolean isTudou() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.isTudou();
         } catch (Throwable th) {
@@ -306,7 +306,7 @@ public class AppInfoProviderProxy {
     public static boolean isYouku() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.youku.middlewareservice_impl.provider.info.AppInfoProviderImpl").b().f();
             }
             return sProxy.isYouku();
         } catch (Throwable th) {

@@ -2,16 +2,12 @@ package anet.channel.session;
 
 import android.content.Context;
 import android.text.TextUtils;
-import anet.channel.C0159a;
 import anet.channel.DataFrameCb;
 import anet.channel.IAuth;
 import anet.channel.RequestCb;
 import anet.channel.Session;
-import anet.channel.fulltrace.C0179a;
-import anet.channel.heartbeat.C0182a;
 import anet.channel.heartbeat.IHeartbeat;
 import anet.channel.heartbeat.SelfKillHeartbeatImpl;
-import anet.channel.request.C0193a;
 import anet.channel.security.ISecurity;
 import anet.channel.statist.CustomFrameStat;
 import anet.channel.statist.ExceptionStatistic;
@@ -19,7 +15,6 @@ import anet.channel.statist.RequestStatistic;
 import anet.channel.statist.SessionMonitor;
 import anet.channel.statist.SessionStatistic;
 import anet.channel.status.NetworkStatusHelper;
-import anet.channel.strategy.C0213a;
 import anet.channel.util.ALog;
 import com.huawei.hms.support.hianalytics.HiAnalyticsConstant;
 import com.youku.live.livesdk.preloader.Preloader;
@@ -38,7 +33,6 @@ import org.android.spdy.SpdySessionKind;
 import org.android.spdy.SpdyVersion;
 import org.android.spdy.SuperviseConnectInfo;
 import org.android.spdy.SuperviseData;
-import tb.C9708t9;
 import tb.cf0;
 import tb.g80;
 import tb.h01;
@@ -46,6 +40,7 @@ import tb.he;
 import tb.je;
 import tb.lw2;
 import tb.sf0;
+import tb.t9;
 import tb.x6;
 import tb.xa2;
 import tb.ym;
@@ -72,10 +67,9 @@ public class TnetSpdySession extends Session implements SessionCb {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.session.TnetSpdySession$a */
     /* loaded from: classes.dex */
-    public class C0198a implements IAuth.AuthCallback {
-        C0198a() {
+    public class a implements IAuth.AuthCallback {
+        a() {
         }
 
         @Override // anet.channel.IAuth.AuthCallback
@@ -111,10 +105,9 @@ public class TnetSpdySession extends Session implements SessionCb {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.session.TnetSpdySession$b */
     /* loaded from: classes.dex */
-    public class C0199b implements AccsSSLCallback {
-        C0199b() {
+    public class b implements AccsSSLCallback {
+        b() {
         }
 
         @Override // org.android.spdy.AccsSSLCallback
@@ -143,23 +136,22 @@ public class TnetSpdySession extends Session implements SessionCb {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.session.TnetSpdySession$c */
     /* loaded from: classes.dex */
-    private class C0200c extends g80 {
-        private C0193a a;
+    private class c extends g80 {
+        private anet.channel.request.a a;
         private RequestCb b;
         private int c = 0;
         private long d = 0;
 
-        public C0200c(C0193a c0193a, RequestCb requestCb) {
-            this.a = c0193a;
+        public c(anet.channel.request.a aVar, RequestCb requestCb) {
+            this.a = aVar;
             this.b = requestCb;
         }
 
         private void a(SuperviseData superviseData, int i, String str) {
             try {
                 this.a.r.rspEnd = System.currentTimeMillis();
-                C0179a.f().log(this.a.r.span, "netRspRecvEnd", null);
+                anet.channel.fulltrace.a.f().log(this.a.r.span, "netRspRecvEnd", null);
                 if (this.a.r.isDone.get()) {
                     return;
                 }
@@ -274,7 +266,7 @@ public class TnetSpdySession extends Session implements SessionCb {
                     ym ymVar = new ym();
                     ymVar.a = false;
                     ymVar.b = TnetSpdySession.this.N;
-                    C0213a.a().notifyConnEvent(((Session) TnetSpdySession.this).e, ((Session) TnetSpdySession.this).l, ymVar);
+                    anet.channel.strategy.a.a().notifyConnEvent(((Session) TnetSpdySession.this).e, ((Session) TnetSpdySession.this).l, ymVar);
                     TnetSpdySession.this.c(true);
                 }
             }
@@ -307,9 +299,9 @@ public class TnetSpdySession extends Session implements SessionCb {
         this.B = SpdyAgent.getInstance(this.a, SpdyVersion.SPDY3, SpdySessionKind.NONE_SESSION);
         ISecurity iSecurity = this.M;
         if (iSecurity != null && !iSecurity.isSecOff()) {
-            this.B.setAccsSslCallback(new C0199b());
+            this.B.setAccsSslCallback(new b());
         }
-        if (C9708t9.Q()) {
+        if (t9.Q()) {
             return;
         }
         try {
@@ -330,7 +322,7 @@ public class TnetSpdySession extends Session implements SessionCb {
     protected void P() {
         IAuth iAuth = this.K;
         if (iAuth != null) {
-            iAuth.auth(this, new C0198a());
+            iAuth.auth(this, new a());
             return;
         }
         r(4, null);
@@ -341,10 +333,10 @@ public class TnetSpdySession extends Session implements SessionCb {
         }
     }
 
-    public void Q(C0159a c0159a) {
-        if (c0159a != null) {
-            this.L = c0159a.i();
-            this.M = c0159a.m();
+    public void Q(anet.channel.a aVar) {
+        if (aVar != null) {
+            this.L = aVar.i();
+            this.M = aVar.m();
         }
     }
 
@@ -360,15 +352,15 @@ public class TnetSpdySession extends Session implements SessionCb {
                 boolean z = xa2Var.c;
                 this.N = z;
                 if (iHeartbeat == null) {
-                    if (z && !C9708t9.i()) {
-                        this.J = C0182a.a();
+                    if (z && !t9.i()) {
+                        this.J = anet.channel.heartbeat.a.a();
                     } else {
-                        this.J = C0182a.b();
+                        this.J = anet.channel.heartbeat.a.b();
                     }
                 }
             }
         }
-        if (C9708t9.x() && this.J == null) {
+        if (t9.x() && this.J == null) {
             this.J = new SelfKillHeartbeatImpl();
         }
     }
@@ -456,7 +448,7 @@ public class TnetSpdySession extends Session implements SessionCb {
                         ym ymVar = new ym();
                         ymVar.a = false;
                         ymVar.b = TnetSpdySession.this.N;
-                        C0213a.a().notifyConnEvent(((Session) TnetSpdySession.this).e, ((Session) TnetSpdySession.this).l, ymVar);
+                        anet.channel.strategy.a.a().notifyConnEvent(((Session) TnetSpdySession.this).e, ((Session) TnetSpdySession.this).l, ymVar);
                         TnetSpdySession.this.c(true);
                     } catch (Exception unused) {
                     }
@@ -568,7 +560,7 @@ public class TnetSpdySession extends Session implements SessionCb {
         if (i == -3516 || i == -5004) {
             ym ymVar = new ym();
             ymVar.a = false;
-            C0213a.a().notifyConnEvent(this.e, this.l, ymVar);
+            anet.channel.strategy.a.a().notifyConnEvent(this.e, this.l, ymVar);
         }
         r(6, new sf0(2));
         if (superviseConnectInfo != null) {
@@ -715,7 +707,7 @@ public class TnetSpdySession extends Session implements SessionCb {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public anet.channel.request.Cancelable w(anet.channel.request.C0193a r24, anet.channel.RequestCb r25) {
+    public anet.channel.request.Cancelable w(anet.channel.request.a r24, anet.channel.RequestCb r25) {
         /*
             Method dump skipped, instructions count: 630
             To view this dump change 'Code comments level' option to 'DEBUG'

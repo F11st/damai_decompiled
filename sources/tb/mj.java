@@ -16,7 +16,7 @@ import tb.b81;
 /* loaded from: classes3.dex */
 public class mj extends AbstractTypeCheckerContext {
     @NotNull
-    public static final C9442a Companion = new C9442a(null);
+    public static final a Companion = new a(null);
     private final boolean e;
     private final boolean f;
     private final boolean g;
@@ -28,23 +28,22 @@ public class mj extends AbstractTypeCheckerContext {
     private final ClassicTypeSystemContext j;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.mj$a */
     /* loaded from: classes3.dex */
-    public static final class C9442a {
+    public static final class a {
 
         /* compiled from: Taobao */
-        /* renamed from: tb.mj$a$a */
+        /* renamed from: tb.mj$a$a  reason: collision with other inner class name */
         /* loaded from: classes3.dex */
-        public static final class C9443a extends AbstractTypeCheckerContext.AbstractC8531a.AbstractC8532a {
+        public static final class C0459a extends AbstractTypeCheckerContext.a.AbstractC0430a {
             final /* synthetic */ ClassicTypeSystemContext a;
             final /* synthetic */ TypeSubstitutor b;
 
-            C9443a(ClassicTypeSystemContext classicTypeSystemContext, TypeSubstitutor typeSubstitutor) {
+            C0459a(ClassicTypeSystemContext classicTypeSystemContext, TypeSubstitutor typeSubstitutor) {
                 this.a = classicTypeSystemContext;
                 this.b = typeSubstitutor;
             }
 
-            @Override // kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext.AbstractC8531a
+            @Override // kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext.a
             @NotNull
             public SimpleTypeMarker a(@NotNull AbstractTypeCheckerContext abstractTypeCheckerContext, @NotNull KotlinTypeMarker kotlinTypeMarker) {
                 b41.i(abstractTypeCheckerContext, WPKFactory.INIT_KEY_CONTEXT);
@@ -58,15 +57,15 @@ public class mj extends AbstractTypeCheckerContext {
             }
         }
 
-        private C9442a() {
+        private a() {
         }
 
-        public /* synthetic */ C9442a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
         @NotNull
-        public final AbstractTypeCheckerContext.AbstractC8531a.AbstractC8532a a(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull SimpleTypeMarker simpleTypeMarker) {
+        public final AbstractTypeCheckerContext.a.AbstractC0430a a(@NotNull ClassicTypeSystemContext classicTypeSystemContext, @NotNull SimpleTypeMarker simpleTypeMarker) {
             String b;
             b41.i(classicTypeSystemContext, "<this>");
             b41.i(simpleTypeMarker, "type");
@@ -74,12 +73,12 @@ public class mj extends AbstractTypeCheckerContext {
                 b = nj.b(simpleTypeMarker);
                 throw new IllegalArgumentException(b.toString());
             }
-            return new C9443a(classicTypeSystemContext, oq2.Companion.b((z71) simpleTypeMarker).c());
+            return new C0459a(classicTypeSystemContext, oq2.Companion.b((z71) simpleTypeMarker).c());
         }
     }
 
     public /* synthetic */ mj(boolean z, boolean z2, boolean z3, b81 b81Var, KotlinTypePreparator kotlinTypePreparator, ClassicTypeSystemContext classicTypeSystemContext, int i, k50 k50Var) {
-        this(z, (i & 2) != 0 ? true : z2, (i & 4) == 0 ? z3 : true, (i & 8) != 0 ? b81.C8955a.INSTANCE : b81Var, (i & 16) != 0 ? KotlinTypePreparator.C8547a.INSTANCE : kotlinTypePreparator, (i & 32) != 0 ? xc2.INSTANCE : classicTypeSystemContext);
+        this(z, (i & 2) != 0 ? true : z2, (i & 4) == 0 ? z3 : true, (i & 8) != 0 ? b81.a.INSTANCE : b81Var, (i & 16) != 0 ? KotlinTypePreparator.a.INSTANCE : kotlinTypePreparator, (i & 32) != 0 ? xc2.INSTANCE : classicTypeSystemContext);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext
@@ -132,7 +131,7 @@ public class mj extends AbstractTypeCheckerContext {
     @Override // kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext
     @NotNull
     /* renamed from: t */
-    public AbstractTypeCheckerContext.AbstractC8531a.AbstractC8532a r(@NotNull SimpleTypeMarker simpleTypeMarker) {
+    public AbstractTypeCheckerContext.a.AbstractC0430a r(@NotNull SimpleTypeMarker simpleTypeMarker) {
         b41.i(simpleTypeMarker, "type");
         return Companion.a(j(), simpleTypeMarker);
     }

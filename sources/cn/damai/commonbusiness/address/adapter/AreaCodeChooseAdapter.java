@@ -34,13 +34,12 @@ public class AreaCodeChooseAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.adapter.AreaCodeChooseAdapter$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0542a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        View$OnClickListenerC0542a(int i) {
+        a(int i) {
             this.a = i;
         }
 
@@ -56,13 +55,12 @@ public class AreaCodeChooseAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.address.adapter.AreaCodeChooseAdapter$b */
     /* loaded from: classes4.dex */
-    private static class C0543b extends RecyclerView.ViewHolder {
+    private static class b extends RecyclerView.ViewHolder {
         public TextView a;
         public CheckBox b;
 
-        public C0543b(View view) {
+        public b(View view) {
             super(view);
             this.a = (TextView) view.findViewById(R$id.area_code_text_name_tv);
             this.b = (CheckBox) view.findViewById(R$id.area_code_select_ck);
@@ -114,17 +112,17 @@ public class AreaCodeChooseAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         if (phoneAllowableBean == null) {
             return;
         }
-        C0543b c0543b = (C0543b) viewHolder;
-        TextView textView = c0543b.a;
+        b bVar = (b) viewHolder;
+        TextView textView = bVar.a;
         textView.setText(phoneAllowableBean.areaName + " " + jn1.PLUS + phoneAllowableBean.code);
-        c0543b.b.setOnCheckedChangeListener(null);
-        c0543b.b.setChecked(TextUtils.isEmpty(this.b) ? false : this.b.equalsIgnoreCase(phoneAllowableBean.code));
-        c0543b.itemView.setOnClickListener(new View$OnClickListenerC0542a(i));
+        bVar.b.setOnCheckedChangeListener(null);
+        bVar.b.setChecked(TextUtils.isEmpty(this.b) ? false : this.b.equalsIgnoreCase(phoneAllowableBean.code));
+        bVar.itemView.setOnClickListener(new a(i));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "889816577") ? (RecyclerView.ViewHolder) ipChange.ipc$dispatch("889816577", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new C0543b(LayoutInflater.from(this.d).inflate(R$layout.area_code_choose_item, viewGroup, false));
+        return AndroidInstantRuntime.support(ipChange, "889816577") ? (RecyclerView.ViewHolder) ipChange.ipc$dispatch("889816577", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new b(LayoutInflater.from(this.d).inflate(R$layout.area_code_choose_item, viewGroup, false));
     }
 }

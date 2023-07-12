@@ -10,14 +10,13 @@ public class ne2 extends mu2 implements UpdateListener {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.ne2$a */
     /* loaded from: classes11.dex */
-    public static class C9471a {
+    public static class a {
         private static final ne2 a = new ne2();
     }
 
     public static ne2 instance() {
-        return C9471a.a;
+        return a.a;
     }
 
     public void init(Application application) {

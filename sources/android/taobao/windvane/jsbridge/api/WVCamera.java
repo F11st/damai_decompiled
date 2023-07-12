@@ -33,7 +33,7 @@ import android.taobao.windvane.view.PopupWindowController;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
+import com.alibaba.security.realidentity.jsbridge.a;
 import com.taobao.tao.remotebusiness.js.MtopJSBridge;
 import com.taobao.weex.common.Constants;
 import com.taobao.weex.ui.view.gesture.WXGestureType;
@@ -93,7 +93,7 @@ public class WVCamera extends WVApiPlugin {
                     public void run() {
                         WVCamera.this.chosePhotoInternal();
                     }
-                }).setTaskOnPermissionDenied(new WVDeniedRunnable(this.mCallback, AbstractC3893a.al)).execute();
+                }).setTaskOnPermissionDenied(new WVDeniedRunnable(this.mCallback, a.al)).execute();
                 return;
             }
         }
@@ -198,7 +198,7 @@ public class WVCamera extends WVApiPlugin {
                 public void run() {
                     WVCamera.this.openCamaraInternal();
                 }
-            }, new WVDeniedRunnable(this.mCallback, AbstractC3893a.al));
+            }, new WVDeniedRunnable(this.mCallback, a.al));
         } else {
             openCamaraInternal();
         }
@@ -209,7 +209,7 @@ public class WVCamera extends WVApiPlugin {
         if (!isHasCamaraPermission()) {
             if (this.mCallback != null) {
                 WVResult wVResult = new WVResult();
-                wVResult.addData("msg", AbstractC3893a.al);
+                wVResult.addData("msg", a.al);
                 this.mCallback.error(wVResult);
                 return;
             }
@@ -508,7 +508,7 @@ public class WVCamera extends WVApiPlugin {
         UploadParams uploadParams = new UploadParams();
         try {
             JSONObject jSONObject = new JSONObject(str);
-            String string = jSONObject.getString(AbstractC3893a.V);
+            String string = jSONObject.getString(a.V);
             uploadParams.identifier = jSONObject.optString(WXGestureType.GestureInfo.POINTER_ID);
             uploadParams.v = jSONObject.optString("v");
             uploadParams.bizCode = jSONObject.optString("bizCode");
@@ -540,7 +540,7 @@ public class WVCamera extends WVApiPlugin {
                             ((WVApiPlugin) WVCamera.this).isAlive = true;
                             WVCamera.this.takePhoto(wVCallBackContext, str2);
                         }
-                    }, new WVDeniedRunnable(wVCallBackContext, AbstractC3893a.al));
+                    }, new WVDeniedRunnable(wVCallBackContext, a.al));
                 } else {
                     this.isAlive = true;
                     initTakePhoto(wVCallBackContext, str2);
@@ -553,7 +553,7 @@ public class WVCamera extends WVApiPlugin {
                                 ((WVApiPlugin) WVCamera.this).isAlive = true;
                                 WVCamera.this.takePhoto(wVCallBackContext, str2);
                             }
-                        }, new WVDeniedRunnable(wVCallBackContext, AbstractC3893a.al));
+                        }, new WVDeniedRunnable(wVCallBackContext, a.al));
                     }
                 }
             } catch (Throwable th) {

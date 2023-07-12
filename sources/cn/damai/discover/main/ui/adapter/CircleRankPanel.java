@@ -48,17 +48,16 @@ public class CircleRankPanel implements WeakRefCountDownTimer.OnTickListener {
     private String u;
     private long[] s = new long[4];
     private String[] t = new String[4];
-    private View.OnClickListener v = new View$OnClickListenerC1065a();
+    private View.OnClickListener v = new a();
     private int q = m62.a(mu0.a(), 11.0f);
     private int r = m62.a(mu0.a(), 6.0f);
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.adapter.CircleRankPanel$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1065a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1065a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener

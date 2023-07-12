@@ -121,12 +121,11 @@ public class SearchAccountFragment extends DamaiBaseMvpFragment implements OnLoa
     };
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.fragment.SearchAccountFragment$a */
     /* loaded from: classes6.dex */
-    public class C1617a implements Action<BaccountInfo> {
+    public class a implements Action<BaccountInfo> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1617a() {
+        a() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -142,12 +141,11 @@ public class SearchAccountFragment extends DamaiBaseMvpFragment implements OnLoa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.fragment.SearchAccountFragment$b */
     /* loaded from: classes6.dex */
-    public class C1618b implements Action<ArtistFollowResultBean> {
+    public class b implements Action<ArtistFollowResultBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1618b() {
+        b() {
         }
 
         @Override // cn.damai.message.observer.Action
@@ -222,8 +220,8 @@ public class SearchAccountFragment extends DamaiBaseMvpFragment implements OnLoa
             ipChange.ipc$dispatch("-334727155", new Object[]{this});
             return;
         }
-        this.mDMMessage.b(SearchHelper.ACCOUNT_MORE_ATTENTION, new C1617a());
-        this.mDMMessage.b("artist_follow_status", new C1618b());
+        this.mDMMessage.b(SearchHelper.ACCOUNT_MORE_ATTENTION, new a());
+        this.mDMMessage.b("artist_follow_status", new b());
     }
 
     /* JADX INFO: Access modifiers changed from: private */

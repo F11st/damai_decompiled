@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.Scheduler;
+import io.reactivex.b;
 import io.reactivex.internal.disposables.SequentialDisposable;
 import io.reactivex.internal.subscriptions.SubscriptionArbiter;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
@@ -253,15 +253,15 @@ public final class FlowableTimeoutTimed<T> extends AbstractFlowableWithUpstream<
         }
     }
 
-    public FlowableTimeoutTimed(AbstractC8147b<T> abstractC8147b, long j, TimeUnit timeUnit, Scheduler scheduler, Publisher<? extends T> publisher) {
-        super(abstractC8147b);
+    public FlowableTimeoutTimed(b<T> bVar, long j, TimeUnit timeUnit, Scheduler scheduler, Publisher<? extends T> publisher) {
+        super(bVar);
         this.timeout = j;
         this.unit = timeUnit;
         this.scheduler = scheduler;
         this.other = publisher;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         if (this.other == null) {
             TimeoutSubscriber timeoutSubscriber = new TimeoutSubscriber(subscriber, this.timeout, this.unit, this.scheduler.createWorker());

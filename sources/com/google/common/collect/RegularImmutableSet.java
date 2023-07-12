@@ -34,7 +34,7 @@ public final class RegularImmutableSet<E> extends ImmutableSet<E> {
         if (obj == null || objArr == null) {
             return false;
         }
-        int d = C5211z.d(obj);
+        int d = z.d(obj);
         while (true) {
             int i = d & this.mask;
             Object obj2 = objArr[i];

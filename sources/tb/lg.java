@@ -2,9 +2,6 @@ package tb;
 
 import java.util.Collection;
 import java.util.List;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8214m;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.resolve.calls.inference.CapturedTypeConstructor;
@@ -55,8 +52,8 @@ public final class lg implements CapturedTypeConstructor {
 
     @Override // kotlin.reflect.jvm.internal.impl.types.TypeConstructor
     @NotNull
-    public AbstractC8271b getBuiltIns() {
-        AbstractC8271b builtIns = getProjection().getType().c().getBuiltIns();
+    public kotlin.reflect.jvm.internal.impl.builtins.b getBuiltIns() {
+        kotlin.reflect.jvm.internal.impl.builtins.b builtIns = getProjection().getType().c().getBuiltIns();
         b41.h(builtIns, "projection.type.constructor.builtIns");
         return builtIns;
     }
@@ -70,7 +67,7 @@ public final class lg implements CapturedTypeConstructor {
     @NotNull
     public List<TypeParameterDescriptor> getParameters() {
         List<TypeParameterDescriptor> g;
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         return g;
     }
 
@@ -91,7 +88,7 @@ public final class lg implements CapturedTypeConstructor {
             I = getBuiltIns().I();
         }
         b41.h(I, "if (projection.projectio… builtIns.nullableAnyType");
-        e = C8213l.e(I);
+        e = kotlin.collections.l.e(I);
         return e;
     }
 

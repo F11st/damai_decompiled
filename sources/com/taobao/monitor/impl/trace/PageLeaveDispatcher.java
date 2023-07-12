@@ -27,13 +27,12 @@ public class PageLeaveDispatcher extends AbsDispatcher<PageLeaveListener> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.PageLeaveDispatcher$a */
     /* loaded from: classes11.dex */
-    class C6797a implements AbsDispatcher.ListenerCaller<PageLeaveListener> {
+    class a implements AbsDispatcher.ListenerCaller<PageLeaveListener> {
         final /* synthetic */ pp1 a;
         final /* synthetic */ int b;
 
-        C6797a(PageLeaveDispatcher pageLeaveDispatcher, pp1 pp1Var, int i) {
+        a(PageLeaveDispatcher pageLeaveDispatcher, pp1 pp1Var, int i) {
             this.a = pp1Var;
             this.b = i;
         }
@@ -46,6 +45,6 @@ public class PageLeaveDispatcher extends AbsDispatcher<PageLeaveListener> {
     }
 
     public void f(pp1 pp1Var, int i) {
-        c(new C6797a(this, pp1Var, i));
+        c(new a(this, pp1Var, i));
     }
 }

@@ -27,12 +27,11 @@ public class ProtocolDialog extends DMDialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.app.widget.ProtocolDialog$a */
     /* loaded from: classes13.dex */
-    public class View$OnClickListenerC0479a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0479a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -47,14 +46,13 @@ public class ProtocolDialog extends DMDialog {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.common.app.widget.ProtocolDialog$b */
     /* loaded from: classes13.dex */
-    public static class DialogInterface$OnClickListenerC0480b implements DialogInterface.OnClickListener {
+    public static class b implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private OnConfirmListener a;
         private ProtocolDialog b;
 
-        public DialogInterface$OnClickListenerC0480b(OnConfirmListener onConfirmListener, ProtocolDialog protocolDialog) {
+        public b(OnConfirmListener onConfirmListener, ProtocolDialog protocolDialog) {
             this.a = onConfirmListener;
             this.b = protocolDialog;
         }
@@ -78,7 +76,7 @@ public class ProtocolDialog extends DMDialog {
         View inflate = LayoutInflater.from(context).inflate(R$layout.item_bottom_check_box_ui, (ViewGroup) null);
         z(inflate);
         this.q = (CheckBox) inflate.findViewById(R$id.icb_check);
-        inflate.findViewById(R$id.icb_check_container).setOnClickListener(new View$OnClickListenerC0479a());
+        inflate.findViewById(R$id.icb_check_container).setOnClickListener(new a());
         this.p = (TextView) inflate.findViewById(R$id.icb_protocol_text);
     }
 
@@ -88,7 +86,7 @@ public class ProtocolDialog extends DMDialog {
             return (ProtocolDialog) ipChange.ipc$dispatch("1360066436", new Object[]{context, charSequence, charSequence2, charSequence3, charSequence4, Integer.valueOf(i), onClickListener, charSequence5, Integer.valueOf(i2), onConfirmListener, onClickListener2});
         }
         ProtocolDialog protocolDialog = new ProtocolDialog(context);
-        protocolDialog.m(charSequence5, i2, new DialogInterface$OnClickListenerC0480b(onConfirmListener, protocolDialog));
+        protocolDialog.m(charSequence5, i2, new b(onConfirmListener, protocolDialog));
         protocolDialog.h(charSequence4, i, onClickListener);
         protocolDialog.v(charSequence);
         protocolDialog.q(charSequence2);

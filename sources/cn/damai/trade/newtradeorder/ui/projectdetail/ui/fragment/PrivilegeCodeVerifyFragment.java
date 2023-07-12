@@ -14,7 +14,6 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.commonbusiness.seatbiz.sku.qilin.ui.NcovSkuActivity;
@@ -64,12 +63,11 @@ public class PrivilegeCodeVerifyFragment extends DamaiBaseMvpFragment<PrivilegeC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.ui.fragment.PrivilegeCodeVerifyFragment$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2429a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2429a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -85,14 +83,13 @@ public class PrivilegeCodeVerifyFragment extends DamaiBaseMvpFragment<PrivilegeC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.ui.fragment.PrivilegeCodeVerifyFragment$b */
     /* loaded from: classes16.dex */
-    public class C2430b implements TextWatcher {
+    public class b implements TextWatcher {
         private static transient /* synthetic */ IpChange $ipChange;
         private int a;
         private int b;
 
-        C2430b() {
+        b() {
         }
 
         @Override // android.text.TextWatcher
@@ -144,12 +141,11 @@ public class PrivilegeCodeVerifyFragment extends DamaiBaseMvpFragment<PrivilegeC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.ui.fragment.PrivilegeCodeVerifyFragment$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2431c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2431c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -166,9 +162,9 @@ public class PrivilegeCodeVerifyFragment extends DamaiBaseMvpFragment<PrivilegeC
             PrivilegeCodeVerifyFragment privilegeCodeVerifyFragment = PrivilegeCodeVerifyFragment.this;
             privilegeCodeVerifyFragment.mInputPrivilegeCode = privilegeCodeVerifyFragment.mEtPrivilegeCodeInput.getText().toString().trim();
             if (TextUtils.isEmpty(PrivilegeCodeVerifyFragment.this.mPrivilegeId)) {
-                C0529c.e().x(pp2.u().T0(PrivilegeCodeVerifyFragment.this.mProjectId, wh2.j(PrivilegeCodeVerifyFragment.this.mInputPrivilegeCode) ? "" : PrivilegeCodeVerifyFragment.this.mInputPrivilegeCode));
+                cn.damai.common.user.c.e().x(pp2.u().T0(PrivilegeCodeVerifyFragment.this.mProjectId, wh2.j(PrivilegeCodeVerifyFragment.this.mInputPrivilegeCode) ? "" : PrivilegeCodeVerifyFragment.this.mInputPrivilegeCode));
             } else {
-                C0529c.e().x(pp2.u().I0(PrivilegeCodeVerifyFragment.this.mProjectId, PrivilegeCodeVerifyFragment.this.mPrivilegeId, wh2.j(PrivilegeCodeVerifyFragment.this.mInputPrivilegeCode) ? "" : PrivilegeCodeVerifyFragment.this.mInputPrivilegeCode));
+                cn.damai.common.user.c.e().x(pp2.u().I0(PrivilegeCodeVerifyFragment.this.mProjectId, PrivilegeCodeVerifyFragment.this.mPrivilegeId, wh2.j(PrivilegeCodeVerifyFragment.this.mInputPrivilegeCode) ? "" : PrivilegeCodeVerifyFragment.this.mInputPrivilegeCode));
             }
             if (wh2.j(PrivilegeCodeVerifyFragment.this.mInputPrivilegeCode)) {
                 ToastUtil.i(PrivilegeCodeVerifyFragment.this.getString(R$string.choose_privilege_code));
@@ -182,14 +178,13 @@ public class PrivilegeCodeVerifyFragment extends DamaiBaseMvpFragment<PrivilegeC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.ui.fragment.PrivilegeCodeVerifyFragment$d */
     /* loaded from: classes16.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC2432d implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class d implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
         final /* synthetic */ View b;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC2432d(PrivilegeCodeVerifyFragment privilegeCodeVerifyFragment, View view, View view2) {
+        d(PrivilegeCodeVerifyFragment privilegeCodeVerifyFragment, View view, View view2) {
             this.a = view;
             this.b = view2;
         }
@@ -218,7 +213,7 @@ public class PrivilegeCodeVerifyFragment extends DamaiBaseMvpFragment<PrivilegeC
         if (AndroidInstantRuntime.support(ipChange, "1936609440")) {
             ipChange.ipc$dispatch("1936609440", new Object[]{this, view, view2});
         } else {
-            view.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC2432d(this, view, view2));
+            view.getViewTreeObserver().addOnGlobalLayoutListener(new d(this, view, view2));
         }
     }
 
@@ -259,9 +254,9 @@ public class PrivilegeCodeVerifyFragment extends DamaiBaseMvpFragment<PrivilegeC
             ipChange.ipc$dispatch("1469647568", new Object[]{this});
             return;
         }
-        this.mOnCompleteClickListener = new View$OnClickListenerC2429a();
-        this.mPrivilegeCodeWatcher = new C2430b();
-        this.mOnPrivilegeCodeVerifyClickListener = new View$OnClickListenerC2431c();
+        this.mOnCompleteClickListener = new a();
+        this.mPrivilegeCodeWatcher = new b();
+        this.mOnPrivilegeCodeVerifyClickListener = new c();
     }
 
     private void initViews(View view) {

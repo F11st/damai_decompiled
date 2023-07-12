@@ -22,7 +22,7 @@ import com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics;
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
 final class StandardMenuPopup extends MenuPopup implements View.OnKeyListener, PopupWindow.OnDismissListener {
-    private static final int ITEM_LAYOUT = R.C0013layout.abc_popup_menu_item_layout;
+    private static final int ITEM_LAYOUT = R.layout.abc_popup_menu_item_layout;
     private final MenuAdapter mAdapter;
     private View mAnchorView;
     private int mContentWidth;
@@ -121,7 +121,7 @@ final class StandardMenuPopup extends MenuPopup implements View.OnKeyListener, P
         ListView listView = this.mPopup.getListView();
         listView.setOnKeyListener(this);
         if (this.mShowTitle && this.mMenu.getHeaderTitle() != null) {
-            FrameLayout frameLayout = (FrameLayout) LayoutInflater.from(this.mContext).inflate(R.C0013layout.abc_popup_menu_header_item_layout, (ViewGroup) listView, false);
+            FrameLayout frameLayout = (FrameLayout) LayoutInflater.from(this.mContext).inflate(R.layout.abc_popup_menu_header_item_layout, (ViewGroup) listView, false);
             TextView textView = (TextView) frameLayout.findViewById(16908310);
             if (textView != null) {
                 textView.setText(this.mMenu.getHeaderTitle());

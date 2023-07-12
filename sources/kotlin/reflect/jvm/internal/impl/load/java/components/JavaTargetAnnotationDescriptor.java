@@ -1,15 +1,14 @@
 package kotlin.reflect.jvm.internal.impl.load.java.components;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
 import java.util.List;
 import java.util.Map;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8225w;
-import kotlin.collections.C8226x;
+import kotlin.collections.l;
+import kotlin.collections.w;
+import kotlin.collections.x;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.PropertyReference1Impl;
 import kotlin.reflect.KProperty;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
+import kotlin.reflect.jvm.internal.impl.builtins.c;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotation;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotationArgument;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaArrayAnnotationArgument;
@@ -34,9 +33,9 @@ public final class JavaTargetAnnotationDescriptor extends JavaAnnotationDescript
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public JavaTargetAnnotationDescriptor(@NotNull JavaAnnotation javaAnnotation, @NotNull r81 r81Var) {
-        super(r81Var, javaAnnotation, C8277c.C8278a.target);
+        super(r81Var, javaAnnotation, c.a.target);
         b41.i(javaAnnotation, "annotation");
-        b41.i(r81Var, AbstractC5658c.a);
+        b41.i(r81Var, com.huawei.hms.opendevice.c.a);
         this.g = r81Var.e().createLazyValue(new Function0<Map<ni1, ? extends fn<? extends Object>>>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.components.JavaTargetAnnotationDescriptor$allValueArguments$2
             /* JADX INFO: Access modifiers changed from: package-private */
             {
@@ -54,16 +53,16 @@ public final class JavaTargetAnnotationDescriptor extends JavaAnnotationDescript
                     fnVar = JavaAnnotationTargetMapper.INSTANCE.c(((JavaArrayAnnotationArgument) JavaTargetAnnotationDescriptor.this.a()).getElements());
                 } else if (a instanceof JavaEnumValueAnnotationArgument) {
                     JavaAnnotationTargetMapper javaAnnotationTargetMapper = JavaAnnotationTargetMapper.INSTANCE;
-                    e = C8213l.e(JavaTargetAnnotationDescriptor.this.a());
+                    e = l.e(JavaTargetAnnotationDescriptor.this.a());
                     fnVar = javaAnnotationTargetMapper.c(e);
                 } else {
                     fnVar = null;
                 }
-                Map<ni1, ? extends fn<? extends Object>> f = fnVar != null ? C8225w.f(hq2.a(z41.INSTANCE.d(), fnVar)) : null;
+                Map<ni1, ? extends fn<? extends Object>> f = fnVar != null ? w.f(hq2.a(z41.INSTANCE.d(), fnVar)) : null;
                 if (f != null) {
                     return f;
                 }
-                i = C8226x.i();
+                i = x.i();
                 return i;
             }
         });

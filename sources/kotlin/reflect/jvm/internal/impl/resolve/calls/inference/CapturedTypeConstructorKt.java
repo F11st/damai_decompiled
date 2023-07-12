@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Objects;
 import kotlin.Pair;
 import kotlin.collections.ArraysKt___ArraysKt;
-import kotlin.collections.C8215n;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function0;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
@@ -29,13 +29,12 @@ import tb.zq2;
 public final class CapturedTypeConstructorKt {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.resolve.calls.inference.CapturedTypeConstructorKt$a */
     /* loaded from: classes3.dex */
-    public static final class C8491a extends n60 {
+    public static final class a extends n60 {
         final /* synthetic */ boolean b;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        C8491a(boolean z, br2 br2Var) {
+        a(boolean z, br2 br2Var) {
             super(br2Var);
             this.b = z;
         }
@@ -107,7 +106,7 @@ public final class CapturedTypeConstructorKt {
             h21 h21Var = (h21) br2Var;
             TypeParameterDescriptor[] j = h21Var.j();
             l0 = ArraysKt___ArraysKt.l0(h21Var.i(), h21Var.j());
-            q = C8215n.q(l0, 10);
+            q = n.q(l0, 10);
             ArrayList arrayList = new ArrayList(q);
             for (Pair pair : l0) {
                 arrayList.add(b((TypeProjection) pair.getFirst(), (TypeParameterDescriptor) pair.getSecond()));
@@ -116,7 +115,7 @@ public final class CapturedTypeConstructorKt {
             Objects.requireNonNull(array, "null cannot be cast to non-null type kotlin.Array<T>");
             return new h21(j, (TypeProjection[]) array, z);
         }
-        return new C8491a(z, br2Var);
+        return new a(z, br2Var);
     }
 
     public static /* synthetic */ br2 f(br2 br2Var, boolean z, int i, Object obj) {

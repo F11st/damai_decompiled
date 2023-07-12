@@ -15,13 +15,12 @@ import tb.hp0;
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public interface JavaResolverCache {
-    public static final JavaResolverCache EMPTY = new C8336a();
+    public static final JavaResolverCache EMPTY = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.components.JavaResolverCache$a */
     /* loaded from: classes3.dex */
-    static class C8336a implements JavaResolverCache {
-        C8336a() {
+    static class a implements JavaResolverCache {
+        a() {
         }
 
         private static /* synthetic */ void a(int i) {

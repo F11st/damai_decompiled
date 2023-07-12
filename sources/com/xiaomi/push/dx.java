@@ -7,9 +7,8 @@ import java.util.Objects;
 public final class dx {
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.dx$a */
     /* loaded from: classes11.dex */
-    public static final class C7635a extends AbstractC7646e {
+    public static final class a extends com.xiaomi.push.e {
 
         /* renamed from: a  reason: collision with other field name */
         private boolean f233a;
@@ -58,7 +57,7 @@ public final class dx {
         private String f = "";
         private int e = -1;
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int a() {
             if (this.e < 0) {
                 b();
@@ -72,66 +71,66 @@ public final class dx {
         }
 
         /* renamed from: a  reason: collision with other method in class */
-        public C7635a m782a() {
+        public a m782a() {
             this.f242f = false;
             this.f238d = "";
             return this;
         }
 
-        public C7635a a(int i) {
+        public a a(int i) {
             this.f233a = true;
             this.a = i;
             return this;
         }
 
-        public C7635a a(long j) {
+        public a a(long j) {
             this.f235b = true;
             this.f231a = j;
             return this;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public C7635a a(C7605b c7605b) {
+        @Override // com.xiaomi.push.e
+        public a a(com.xiaomi.push.b bVar) {
             while (true) {
-                int m673a = c7605b.m673a();
+                int m673a = bVar.m673a();
                 switch (m673a) {
                     case 0:
                         return this;
                     case 8:
-                        a(c7605b.m682b());
+                        a(bVar.m682b());
                         break;
                     case 16:
-                        a(c7605b.m683b());
+                        a(bVar.m683b());
                         break;
                     case 26:
-                        a(c7605b.m676a());
+                        a(bVar.m676a());
                         break;
                     case 34:
-                        b(c7605b.m676a());
+                        b(bVar.m676a());
                         break;
                     case 42:
-                        c(c7605b.m676a());
+                        c(bVar.m676a());
                         break;
                     case 50:
-                        d(c7605b.m676a());
+                        d(bVar.m676a());
                         break;
                     case 58:
-                        e(c7605b.m676a());
+                        e(bVar.m676a());
                         break;
                     case 64:
-                        b(c7605b.m682b());
+                        b(bVar.m682b());
                         break;
                     case 72:
-                        c(c7605b.m682b());
+                        c(bVar.m682b());
                         break;
                     case 80:
-                        d(c7605b.m682b());
+                        d(bVar.m682b());
                         break;
                     case 90:
-                        f(c7605b.m676a());
+                        f(bVar.m676a());
                         break;
                     default:
-                        if (a(c7605b, m673a)) {
+                        if (a(bVar, m673a)) {
                             break;
                         } else {
                             return this;
@@ -140,7 +139,7 @@ public final class dx {
             }
         }
 
-        public C7635a a(String str) {
+        public a a(String str) {
             this.f237c = true;
             this.f232a = str;
             return this;
@@ -151,40 +150,40 @@ public final class dx {
             return this.f232a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public void a(C7614c c7614c) {
+        @Override // com.xiaomi.push.e
+        public void a(com.xiaomi.push.c cVar) {
             if (m784a()) {
-                c7614c.m717a(1, c());
+                cVar.m717a(1, c());
             }
             if (m786b()) {
-                c7614c.m731b(2, m781a());
+                cVar.m731b(2, m781a());
             }
             if (m788c()) {
-                c7614c.m721a(3, m783a());
+                cVar.m721a(3, m783a());
             }
             if (m790d()) {
-                c7614c.m721a(4, m785b());
+                cVar.m721a(4, m785b());
             }
             if (m792e()) {
-                c7614c.m721a(5, m787c());
+                cVar.m721a(5, m787c());
             }
             if (m794f()) {
-                c7614c.m721a(6, m789d());
+                cVar.m721a(6, m789d());
             }
             if (g()) {
-                c7614c.m721a(7, m791e());
+                cVar.m721a(7, m791e());
             }
             if (h()) {
-                c7614c.m717a(8, d());
+                cVar.m717a(8, d());
             }
             if (i()) {
-                c7614c.m717a(9, e());
+                cVar.m717a(9, e());
             }
             if (j()) {
-                c7614c.m717a(10, f());
+                cVar.m717a(10, f());
             }
             if (k()) {
-                c7614c.m721a(11, m793f());
+                cVar.m721a(11, m793f());
             }
         }
 
@@ -193,50 +192,50 @@ public final class dx {
             return this.f233a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int b() {
-            int a = m784a() ? 0 + C7614c.a(1, c()) : 0;
+            int a = m784a() ? 0 + com.xiaomi.push.c.a(1, c()) : 0;
             if (m786b()) {
-                a += C7614c.b(2, m781a());
+                a += com.xiaomi.push.c.b(2, m781a());
             }
             if (m788c()) {
-                a += C7614c.a(3, m783a());
+                a += com.xiaomi.push.c.a(3, m783a());
             }
             if (m790d()) {
-                a += C7614c.a(4, m785b());
+                a += com.xiaomi.push.c.a(4, m785b());
             }
             if (m792e()) {
-                a += C7614c.a(5, m787c());
+                a += com.xiaomi.push.c.a(5, m787c());
             }
             if (m794f()) {
-                a += C7614c.a(6, m789d());
+                a += com.xiaomi.push.c.a(6, m789d());
             }
             if (g()) {
-                a += C7614c.a(7, m791e());
+                a += com.xiaomi.push.c.a(7, m791e());
             }
             if (h()) {
-                a += C7614c.a(8, d());
+                a += com.xiaomi.push.c.a(8, d());
             }
             if (i()) {
-                a += C7614c.a(9, e());
+                a += com.xiaomi.push.c.a(9, e());
             }
             if (j()) {
-                a += C7614c.a(10, f());
+                a += com.xiaomi.push.c.a(10, f());
             }
             if (k()) {
-                a += C7614c.a(11, m793f());
+                a += com.xiaomi.push.c.a(11, m793f());
             }
             this.e = a;
             return a;
         }
 
-        public C7635a b(int i) {
+        public a b(int i) {
             this.h = true;
             this.b = i;
             return this;
         }
 
-        public C7635a b(String str) {
+        public a b(String str) {
             this.f239d = true;
             this.f234b = str;
             return this;
@@ -256,13 +255,13 @@ public final class dx {
             return this.a;
         }
 
-        public C7635a c(int i) {
+        public a c(int i) {
             this.i = true;
             this.c = i;
             return this;
         }
 
-        public C7635a c(String str) {
+        public a c(String str) {
             this.f241e = true;
             this.f236c = str;
             return this;
@@ -282,13 +281,13 @@ public final class dx {
             return this.b;
         }
 
-        public C7635a d(int i) {
+        public a d(int i) {
             this.j = true;
             this.d = i;
             return this;
         }
 
-        public C7635a d(String str) {
+        public a d(String str) {
             this.f242f = true;
             this.f238d = str;
             return this;
@@ -308,7 +307,7 @@ public final class dx {
             return this.c;
         }
 
-        public C7635a e(String str) {
+        public a e(String str) {
             this.g = true;
             this.f240e = str;
             return this;
@@ -328,7 +327,7 @@ public final class dx {
             return this.d;
         }
 
-        public C7635a f(String str) {
+        public a f(String str) {
             this.k = true;
             this.f = str;
             return this;
@@ -366,9 +365,8 @@ public final class dx {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.dx$b */
     /* loaded from: classes11.dex */
-    public static final class C7636b extends AbstractC7646e {
+    public static final class b extends com.xiaomi.push.e {
 
         /* renamed from: a  reason: collision with other field name */
         private boolean f243a;
@@ -387,11 +385,11 @@ public final class dx {
         private int c = 0;
         private int d = -1;
 
-        public static C7636b a(byte[] bArr) {
-            return (C7636b) new C7636b().a(bArr);
+        public static b a(byte[] bArr) {
+            return (b) new b().a(bArr);
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int a() {
             if (this.d < 0) {
                 b();
@@ -399,52 +397,52 @@ public final class dx {
             return this.d;
         }
 
-        public C7636b a(int i) {
+        public b a(int i) {
             this.f245c = true;
             this.a = i;
             return this;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public C7636b a(C7605b c7605b) {
+        @Override // com.xiaomi.push.e
+        public b a(com.xiaomi.push.b bVar) {
             while (true) {
-                int m673a = c7605b.m673a();
+                int m673a = bVar.m673a();
                 if (m673a == 0) {
                     return this;
                 }
                 if (m673a == 8) {
-                    a(c7605b.m679a());
+                    a(bVar.m679a());
                 } else if (m673a == 24) {
-                    a(c7605b.m682b());
+                    a(bVar.m682b());
                 } else if (m673a == 32) {
-                    b(c7605b.m682b());
+                    b(bVar.m682b());
                 } else if (m673a == 40) {
-                    c(c7605b.m682b());
-                } else if (!a(c7605b, m673a)) {
+                    c(bVar.m682b());
+                } else if (!a(bVar, m673a)) {
                     return this;
                 }
             }
         }
 
-        public C7636b a(boolean z) {
+        public b a(boolean z) {
             this.f243a = true;
             this.f244b = z;
             return this;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public void a(C7614c c7614c) {
+        @Override // com.xiaomi.push.e
+        public void a(com.xiaomi.push.c cVar) {
             if (m796b()) {
-                c7614c.m722a(1, m795a());
+                cVar.m722a(1, m795a());
             }
             if (m797c()) {
-                c7614c.m717a(3, c());
+                cVar.m717a(3, c());
             }
             if (m798d()) {
-                c7614c.m717a(4, d());
+                cVar.m717a(4, d());
             }
             if (m799e()) {
-                c7614c.m717a(5, e());
+                cVar.m717a(5, e());
             }
         }
 
@@ -453,23 +451,23 @@ public final class dx {
             return this.f244b;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int b() {
-            int a = m796b() ? 0 + C7614c.a(1, m795a()) : 0;
+            int a = m796b() ? 0 + com.xiaomi.push.c.a(1, m795a()) : 0;
             if (m797c()) {
-                a += C7614c.a(3, c());
+                a += com.xiaomi.push.c.a(3, c());
             }
             if (m798d()) {
-                a += C7614c.a(4, d());
+                a += com.xiaomi.push.c.a(4, d());
             }
             if (m799e()) {
-                a += C7614c.a(5, e());
+                a += com.xiaomi.push.c.a(5, e());
             }
             this.d = a;
             return a;
         }
 
-        public C7636b b(int i) {
+        public b b(int i) {
             this.f246d = true;
             this.b = i;
             return this;
@@ -484,7 +482,7 @@ public final class dx {
             return this.a;
         }
 
-        public C7636b c(int i) {
+        public b c(int i) {
             this.e = true;
             this.c = i;
             return this;
@@ -515,9 +513,8 @@ public final class dx {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.dx$c */
     /* loaded from: classes11.dex */
-    public static final class C7637c extends AbstractC7646e {
+    public static final class c extends com.xiaomi.push.e {
 
         /* renamed from: a  reason: collision with other field name */
         private boolean f248a;
@@ -546,7 +543,7 @@ public final class dx {
         private String f = "";
         private int a = -1;
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int a() {
             if (this.a < 0) {
                 b();
@@ -554,32 +551,32 @@ public final class dx {
             return this.a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public C7637c a(C7605b c7605b) {
+        @Override // com.xiaomi.push.e
+        public c a(com.xiaomi.push.b bVar) {
             while (true) {
-                int m673a = c7605b.m673a();
+                int m673a = bVar.m673a();
                 if (m673a == 0) {
                     return this;
                 }
                 if (m673a == 10) {
-                    a(c7605b.m676a());
+                    a(bVar.m676a());
                 } else if (m673a == 18) {
-                    b(c7605b.m676a());
+                    b(bVar.m676a());
                 } else if (m673a == 26) {
-                    c(c7605b.m676a());
+                    c(bVar.m676a());
                 } else if (m673a == 34) {
-                    d(c7605b.m676a());
+                    d(bVar.m676a());
                 } else if (m673a == 42) {
-                    e(c7605b.m676a());
+                    e(bVar.m676a());
                 } else if (m673a == 50) {
-                    f(c7605b.m676a());
-                } else if (!a(c7605b, m673a)) {
+                    f(bVar.m676a());
+                } else if (!a(bVar, m673a)) {
                     return this;
                 }
             }
         }
 
-        public C7637c a(String str) {
+        public c a(String str) {
             this.f248a = true;
             this.f247a = str;
             return this;
@@ -590,25 +587,25 @@ public final class dx {
             return this.f247a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public void a(C7614c c7614c) {
+        @Override // com.xiaomi.push.e
+        public void a(com.xiaomi.push.c cVar) {
             if (m801a()) {
-                c7614c.m721a(1, m800a());
+                cVar.m721a(1, m800a());
             }
             if (m803b()) {
-                c7614c.m721a(2, m802b());
+                cVar.m721a(2, m802b());
             }
             if (m804c()) {
-                c7614c.m721a(3, c());
+                cVar.m721a(3, c());
             }
             if (m805d()) {
-                c7614c.m721a(4, d());
+                cVar.m721a(4, d());
             }
             if (m806e()) {
-                c7614c.m721a(5, e());
+                cVar.m721a(5, e());
             }
             if (m807f()) {
-                c7614c.m721a(6, f());
+                cVar.m721a(6, f());
             }
         }
 
@@ -617,29 +614,29 @@ public final class dx {
             return this.f248a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int b() {
-            int a = m801a() ? 0 + C7614c.a(1, m800a()) : 0;
+            int a = m801a() ? 0 + com.xiaomi.push.c.a(1, m800a()) : 0;
             if (m803b()) {
-                a += C7614c.a(2, m802b());
+                a += com.xiaomi.push.c.a(2, m802b());
             }
             if (m804c()) {
-                a += C7614c.a(3, c());
+                a += com.xiaomi.push.c.a(3, c());
             }
             if (m805d()) {
-                a += C7614c.a(4, d());
+                a += com.xiaomi.push.c.a(4, d());
             }
             if (m806e()) {
-                a += C7614c.a(5, e());
+                a += com.xiaomi.push.c.a(5, e());
             }
             if (m807f()) {
-                a += C7614c.a(6, f());
+                a += com.xiaomi.push.c.a(6, f());
             }
             this.a = a;
             return a;
         }
 
-        public C7637c b(String str) {
+        public c b(String str) {
             this.f249b = true;
             this.b = str;
             return this;
@@ -655,7 +652,7 @@ public final class dx {
             return this.f249b;
         }
 
-        public C7637c c(String str) {
+        public c c(String str) {
             this.f250c = true;
             this.c = str;
             return this;
@@ -670,7 +667,7 @@ public final class dx {
             return this.f250c;
         }
 
-        public C7637c d(String str) {
+        public c d(String str) {
             this.f251d = true;
             this.d = str;
             return this;
@@ -685,7 +682,7 @@ public final class dx {
             return this.f251d;
         }
 
-        public C7637c e(String str) {
+        public c e(String str) {
             this.f252e = true;
             this.e = str;
             return this;
@@ -700,7 +697,7 @@ public final class dx {
             return this.f252e;
         }
 
-        public C7637c f(String str) {
+        public c f(String str) {
             this.f253f = true;
             this.f = str;
             return this;
@@ -717,9 +714,8 @@ public final class dx {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.dx$d */
     /* loaded from: classes11.dex */
-    public static final class C7638d extends AbstractC7646e {
+    public static final class d extends com.xiaomi.push.e {
 
         /* renamed from: a  reason: collision with other field name */
         private boolean f255a;
@@ -738,11 +734,11 @@ public final class dx {
         private String c = "";
         private int a = -1;
 
-        public static C7638d a(byte[] bArr) {
-            return (C7638d) new C7638d().a(bArr);
+        public static d a(byte[] bArr) {
+            return (d) new d().a(bArr);
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int a() {
             if (this.a < 0) {
                 b();
@@ -750,34 +746,34 @@ public final class dx {
             return this.a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public C7638d a(C7605b c7605b) {
+        @Override // com.xiaomi.push.e
+        public d a(com.xiaomi.push.b bVar) {
             while (true) {
-                int m673a = c7605b.m673a();
+                int m673a = bVar.m673a();
                 if (m673a == 0) {
                     return this;
                 }
                 if (m673a == 8) {
-                    a(c7605b.m679a());
+                    a(bVar.m679a());
                 } else if (m673a == 18) {
-                    a(c7605b.m676a());
+                    a(bVar.m676a());
                 } else if (m673a == 26) {
-                    b(c7605b.m676a());
+                    b(bVar.m676a());
                 } else if (m673a == 34) {
-                    c(c7605b.m676a());
-                } else if (!a(c7605b, m673a)) {
+                    c(bVar.m676a());
+                } else if (!a(bVar, m673a)) {
                     return this;
                 }
             }
         }
 
-        public C7638d a(String str) {
+        public d a(String str) {
             this.f257c = true;
             this.f254a = str;
             return this;
         }
 
-        public C7638d a(boolean z) {
+        public d a(boolean z) {
             this.f255a = true;
             this.f256b = z;
             return this;
@@ -788,19 +784,19 @@ public final class dx {
             return this.f254a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public void a(C7614c c7614c) {
+        @Override // com.xiaomi.push.e
+        public void a(com.xiaomi.push.c cVar) {
             if (m811b()) {
-                c7614c.m722a(1, m809a());
+                cVar.m722a(1, m809a());
             }
             if (m812c()) {
-                c7614c.m721a(2, m808a());
+                cVar.m721a(2, m808a());
             }
             if (d()) {
-                c7614c.m721a(3, m810b());
+                cVar.m721a(3, m810b());
             }
             if (e()) {
-                c7614c.m721a(4, c());
+                cVar.m721a(4, c());
             }
         }
 
@@ -809,23 +805,23 @@ public final class dx {
             return this.f256b;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int b() {
-            int a = m811b() ? 0 + C7614c.a(1, m809a()) : 0;
+            int a = m811b() ? 0 + com.xiaomi.push.c.a(1, m809a()) : 0;
             if (m812c()) {
-                a += C7614c.a(2, m808a());
+                a += com.xiaomi.push.c.a(2, m808a());
             }
             if (d()) {
-                a += C7614c.a(3, m810b());
+                a += com.xiaomi.push.c.a(3, m810b());
             }
             if (e()) {
-                a += C7614c.a(4, c());
+                a += com.xiaomi.push.c.a(4, c());
             }
             this.a = a;
             return a;
         }
 
-        public C7638d b(String str) {
+        public d b(String str) {
             this.d = true;
             this.b = str;
             return this;
@@ -841,7 +837,7 @@ public final class dx {
             return this.f255a;
         }
 
-        public C7638d c(String str) {
+        public d c(String str) {
             this.e = true;
             this.c = str;
             return this;
@@ -866,9 +862,8 @@ public final class dx {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.dx$e */
     /* loaded from: classes11.dex */
-    public static final class C7639e extends AbstractC7646e {
+    public static final class e extends com.xiaomi.push.e {
 
         /* renamed from: a  reason: collision with other field name */
         private boolean f260a;
@@ -909,11 +904,11 @@ public final class dx {
         private String f = "";
 
         /* renamed from: a  reason: collision with other field name */
-        private C7636b f258a = null;
+        private b f258a = null;
         private int c = 0;
         private int d = -1;
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int a() {
             if (this.d < 0) {
                 b();
@@ -922,57 +917,57 @@ public final class dx {
         }
 
         /* renamed from: a  reason: collision with other method in class */
-        public C7636b m813a() {
+        public b m813a() {
             return this.f258a;
         }
 
-        public C7639e a(int i) {
+        public e a(int i) {
             this.f260a = true;
             this.a = i;
             return this;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public C7639e a(C7605b c7605b) {
+        @Override // com.xiaomi.push.e
+        public e a(com.xiaomi.push.b bVar) {
             while (true) {
-                int m673a = c7605b.m673a();
+                int m673a = bVar.m673a();
                 switch (m673a) {
                     case 0:
                         return this;
                     case 8:
-                        a(c7605b.c());
+                        a(bVar.c());
                         break;
                     case 18:
-                        a(c7605b.m676a());
+                        a(bVar.m676a());
                         break;
                     case 26:
-                        b(c7605b.m676a());
+                        b(bVar.m676a());
                         break;
                     case 34:
-                        c(c7605b.m676a());
+                        c(bVar.m676a());
                         break;
                     case 40:
-                        b(c7605b.m682b());
+                        b(bVar.m682b());
                         break;
                     case 50:
-                        d(c7605b.m676a());
+                        d(bVar.m676a());
                         break;
                     case 58:
-                        e(c7605b.m676a());
+                        e(bVar.m676a());
                         break;
                     case 66:
-                        f(c7605b.m676a());
+                        f(bVar.m676a());
                         break;
                     case 74:
-                        C7636b c7636b = new C7636b();
-                        c7605b.a(c7636b);
-                        a(c7636b);
+                        b bVar2 = new b();
+                        bVar.a(bVar2);
+                        a(bVar2);
                         break;
                     case 80:
-                        c(c7605b.m682b());
+                        c(bVar.m682b());
                         break;
                     default:
-                        if (a(c7605b, m673a)) {
+                        if (a(bVar, m673a)) {
                             break;
                         } else {
                             return this;
@@ -981,14 +976,14 @@ public final class dx {
             }
         }
 
-        public C7639e a(C7636b c7636b) {
-            Objects.requireNonNull(c7636b);
+        public e a(b bVar) {
+            Objects.requireNonNull(bVar);
             this.i = true;
-            this.f258a = c7636b;
+            this.f258a = bVar;
             return this;
         }
 
-        public C7639e a(String str) {
+        public e a(String str) {
             this.f262b = true;
             this.f259a = str;
             return this;
@@ -999,37 +994,37 @@ public final class dx {
             return this.f259a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public void a(C7614c c7614c) {
+        @Override // com.xiaomi.push.e
+        public void a(com.xiaomi.push.c cVar) {
             if (m815a()) {
-                c7614c.m730b(1, c());
+                cVar.m730b(1, c());
             }
             if (m817b()) {
-                c7614c.m721a(2, m814a());
+                cVar.m721a(2, m814a());
             }
             if (m819c()) {
-                c7614c.m721a(3, m816b());
+                cVar.m721a(3, m816b());
             }
             if (m821d()) {
-                c7614c.m721a(4, m818c());
+                cVar.m721a(4, m818c());
             }
             if (m823e()) {
-                c7614c.m717a(5, d());
+                cVar.m717a(5, d());
             }
             if (m824f()) {
-                c7614c.m721a(6, m820d());
+                cVar.m721a(6, m820d());
             }
             if (g()) {
-                c7614c.m721a(7, m822e());
+                cVar.m721a(7, m822e());
             }
             if (h()) {
-                c7614c.m721a(8, f());
+                cVar.m721a(8, f());
             }
             if (i()) {
-                c7614c.m720a(9, (AbstractC7646e) m813a());
+                cVar.m720a(9, (com.xiaomi.push.e) m813a());
             }
             if (j()) {
-                c7614c.m717a(10, e());
+                cVar.m717a(10, e());
             }
         }
 
@@ -1038,47 +1033,47 @@ public final class dx {
             return this.f260a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int b() {
-            int b = m815a() ? 0 + C7614c.b(1, c()) : 0;
+            int b = m815a() ? 0 + com.xiaomi.push.c.b(1, c()) : 0;
             if (m817b()) {
-                b += C7614c.a(2, m814a());
+                b += com.xiaomi.push.c.a(2, m814a());
             }
             if (m819c()) {
-                b += C7614c.a(3, m816b());
+                b += com.xiaomi.push.c.a(3, m816b());
             }
             if (m821d()) {
-                b += C7614c.a(4, m818c());
+                b += com.xiaomi.push.c.a(4, m818c());
             }
             if (m823e()) {
-                b += C7614c.a(5, d());
+                b += com.xiaomi.push.c.a(5, d());
             }
             if (m824f()) {
-                b += C7614c.a(6, m820d());
+                b += com.xiaomi.push.c.a(6, m820d());
             }
             if (g()) {
-                b += C7614c.a(7, m822e());
+                b += com.xiaomi.push.c.a(7, m822e());
             }
             if (h()) {
-                b += C7614c.a(8, f());
+                b += com.xiaomi.push.c.a(8, f());
             }
             if (i()) {
-                b += C7614c.a(9, (AbstractC7646e) m813a());
+                b += com.xiaomi.push.c.a(9, (com.xiaomi.push.e) m813a());
             }
             if (j()) {
-                b += C7614c.a(10, e());
+                b += com.xiaomi.push.c.a(10, e());
             }
             this.d = b;
             return b;
         }
 
-        public C7639e b(int i) {
+        public e b(int i) {
             this.f267e = true;
             this.b = i;
             return this;
         }
 
-        public C7639e b(String str) {
+        public e b(String str) {
             this.f264c = true;
             this.f261b = str;
             return this;
@@ -1098,13 +1093,13 @@ public final class dx {
             return this.a;
         }
 
-        public C7639e c(int i) {
+        public e c(int i) {
             this.j = true;
             this.c = i;
             return this;
         }
 
-        public C7639e c(String str) {
+        public e c(String str) {
             this.f266d = true;
             this.f263c = str;
             return this;
@@ -1124,7 +1119,7 @@ public final class dx {
             return this.b;
         }
 
-        public C7639e d(String str) {
+        public e d(String str) {
             this.f268f = true;
             this.f265d = str;
             return this;
@@ -1144,7 +1139,7 @@ public final class dx {
             return this.c;
         }
 
-        public C7639e e(String str) {
+        public e e(String str) {
             this.g = true;
             this.e = str;
             return this;
@@ -1160,7 +1155,7 @@ public final class dx {
             return this.f267e;
         }
 
-        public C7639e f(String str) {
+        public e f(String str) {
             this.h = true;
             this.f = str;
             return this;
@@ -1193,9 +1188,8 @@ public final class dx {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.dx$f */
     /* loaded from: classes11.dex */
-    public static final class C7640f extends AbstractC7646e {
+    public static final class f extends com.xiaomi.push.e {
 
         /* renamed from: a  reason: collision with other field name */
         private boolean f271a;
@@ -1209,14 +1203,14 @@ public final class dx {
         private String b = "";
 
         /* renamed from: a  reason: collision with other field name */
-        private C7636b f269a = null;
+        private b f269a = null;
         private int a = -1;
 
-        public static C7640f a(byte[] bArr) {
-            return (C7640f) new C7640f().a(bArr);
+        public static f a(byte[] bArr) {
+            return (f) new f().a(bArr);
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int a() {
             if (this.a < 0) {
                 b();
@@ -1225,39 +1219,39 @@ public final class dx {
         }
 
         /* renamed from: a  reason: collision with other method in class */
-        public C7636b m825a() {
+        public b m825a() {
             return this.f269a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public C7640f a(C7605b c7605b) {
+        @Override // com.xiaomi.push.e
+        public f a(com.xiaomi.push.b bVar) {
             while (true) {
-                int m673a = c7605b.m673a();
+                int m673a = bVar.m673a();
                 if (m673a == 0) {
                     return this;
                 }
                 if (m673a == 10) {
-                    a(c7605b.m676a());
+                    a(bVar.m676a());
                 } else if (m673a == 18) {
-                    b(c7605b.m676a());
+                    b(bVar.m676a());
                 } else if (m673a == 26) {
-                    C7636b c7636b = new C7636b();
-                    c7605b.a(c7636b);
-                    a(c7636b);
-                } else if (!a(c7605b, m673a)) {
+                    b bVar2 = new b();
+                    bVar.a(bVar2);
+                    a(bVar2);
+                } else if (!a(bVar, m673a)) {
                     return this;
                 }
             }
         }
 
-        public C7640f a(C7636b c7636b) {
-            Objects.requireNonNull(c7636b);
+        public f a(b bVar) {
+            Objects.requireNonNull(bVar);
             this.c = true;
-            this.f269a = c7636b;
+            this.f269a = bVar;
             return this;
         }
 
-        public C7640f a(String str) {
+        public f a(String str) {
             this.f271a = true;
             this.f270a = str;
             return this;
@@ -1268,16 +1262,16 @@ public final class dx {
             return this.f270a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public void a(C7614c c7614c) {
+        @Override // com.xiaomi.push.e
+        public void a(com.xiaomi.push.c cVar) {
             if (m827a()) {
-                c7614c.m721a(1, m826a());
+                cVar.m721a(1, m826a());
             }
             if (m829b()) {
-                c7614c.m721a(2, m828b());
+                cVar.m721a(2, m828b());
             }
             if (c()) {
-                c7614c.m720a(3, (AbstractC7646e) m825a());
+                cVar.m720a(3, (com.xiaomi.push.e) m825a());
             }
         }
 
@@ -1286,20 +1280,20 @@ public final class dx {
             return this.f271a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int b() {
-            int a = m827a() ? 0 + C7614c.a(1, m826a()) : 0;
+            int a = m827a() ? 0 + com.xiaomi.push.c.a(1, m826a()) : 0;
             if (m829b()) {
-                a += C7614c.a(2, m828b());
+                a += com.xiaomi.push.c.a(2, m828b());
             }
             if (c()) {
-                a += C7614c.a(3, (AbstractC7646e) m825a());
+                a += com.xiaomi.push.c.a(3, (com.xiaomi.push.e) m825a());
             }
             this.a = a;
             return a;
         }
 
-        public C7640f b(String str) {
+        public f b(String str) {
             this.f272b = true;
             this.b = str;
             return this;
@@ -1321,9 +1315,8 @@ public final class dx {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.dx$g */
     /* loaded from: classes11.dex */
-    public static final class C7641g extends AbstractC7646e {
+    public static final class g extends com.xiaomi.push.e {
 
         /* renamed from: a  reason: collision with other field name */
         private boolean f274a;
@@ -1340,11 +1333,11 @@ public final class dx {
         private String c = "";
         private int a = -1;
 
-        public static C7641g a(byte[] bArr) {
-            return (C7641g) new C7641g().a(bArr);
+        public static g a(byte[] bArr) {
+            return (g) new g().a(bArr);
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int a() {
             if (this.a < 0) {
                 b();
@@ -1352,26 +1345,26 @@ public final class dx {
             return this.a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public C7641g a(C7605b c7605b) {
+        @Override // com.xiaomi.push.e
+        public g a(com.xiaomi.push.b bVar) {
             while (true) {
-                int m673a = c7605b.m673a();
+                int m673a = bVar.m673a();
                 if (m673a == 0) {
                     return this;
                 }
                 if (m673a == 10) {
-                    a(c7605b.m676a());
+                    a(bVar.m676a());
                 } else if (m673a == 18) {
-                    b(c7605b.m676a());
+                    b(bVar.m676a());
                 } else if (m673a == 26) {
-                    c(c7605b.m676a());
-                } else if (!a(c7605b, m673a)) {
+                    c(bVar.m676a());
+                } else if (!a(bVar, m673a)) {
                     return this;
                 }
             }
         }
 
-        public C7641g a(String str) {
+        public g a(String str) {
             this.f274a = true;
             this.f273a = str;
             return this;
@@ -1382,16 +1375,16 @@ public final class dx {
             return this.f273a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public void a(C7614c c7614c) {
+        @Override // com.xiaomi.push.e
+        public void a(com.xiaomi.push.c cVar) {
             if (m831a()) {
-                c7614c.m721a(1, m830a());
+                cVar.m721a(1, m830a());
             }
             if (m833b()) {
-                c7614c.m721a(2, m832b());
+                cVar.m721a(2, m832b());
             }
             if (m834c()) {
-                c7614c.m721a(3, c());
+                cVar.m721a(3, c());
             }
         }
 
@@ -1400,20 +1393,20 @@ public final class dx {
             return this.f274a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int b() {
-            int a = m831a() ? 0 + C7614c.a(1, m830a()) : 0;
+            int a = m831a() ? 0 + com.xiaomi.push.c.a(1, m830a()) : 0;
             if (m833b()) {
-                a += C7614c.a(2, m832b());
+                a += com.xiaomi.push.c.a(2, m832b());
             }
             if (m834c()) {
-                a += C7614c.a(3, c());
+                a += com.xiaomi.push.c.a(3, c());
             }
             this.a = a;
             return a;
         }
 
-        public C7641g b(String str) {
+        public g b(String str) {
             this.f275b = true;
             this.b = str;
             return this;
@@ -1429,7 +1422,7 @@ public final class dx {
             return this.f275b;
         }
 
-        public C7641g c(String str) {
+        public g c(String str) {
             this.f276c = true;
             this.c = str;
             return this;
@@ -1446,9 +1439,8 @@ public final class dx {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.dx$h */
     /* loaded from: classes11.dex */
-    public static final class C7642h extends AbstractC7646e {
+    public static final class h extends com.xiaomi.push.e {
 
         /* renamed from: a  reason: collision with other field name */
         private boolean f278a;
@@ -1461,11 +1453,11 @@ public final class dx {
         private String f277a = "";
         private int b = -1;
 
-        public static C7642h a(byte[] bArr) {
-            return (C7642h) new C7642h().a(bArr);
+        public static h a(byte[] bArr) {
+            return (h) new h().a(bArr);
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int a() {
             if (this.b < 0) {
                 b();
@@ -1473,30 +1465,30 @@ public final class dx {
             return this.b;
         }
 
-        public C7642h a(int i) {
+        public h a(int i) {
             this.f278a = true;
             this.a = i;
             return this;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public C7642h a(C7605b c7605b) {
+        @Override // com.xiaomi.push.e
+        public h a(com.xiaomi.push.b bVar) {
             while (true) {
-                int m673a = c7605b.m673a();
+                int m673a = bVar.m673a();
                 if (m673a == 0) {
                     return this;
                 }
                 if (m673a == 8) {
-                    a(c7605b.m682b());
+                    a(bVar.m682b());
                 } else if (m673a == 18) {
-                    a(c7605b.m676a());
-                } else if (!a(c7605b, m673a)) {
+                    a(bVar.m676a());
+                } else if (!a(bVar, m673a)) {
                     return this;
                 }
             }
         }
 
-        public C7642h a(String str) {
+        public h a(String str) {
             this.f279b = true;
             this.f277a = str;
             return this;
@@ -1507,13 +1499,13 @@ public final class dx {
             return this.f277a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public void a(C7614c c7614c) {
+        @Override // com.xiaomi.push.e
+        public void a(com.xiaomi.push.c cVar) {
             if (m836a()) {
-                c7614c.m717a(1, c());
+                cVar.m717a(1, c());
             }
             if (m837b()) {
-                c7614c.m721a(2, m835a());
+                cVar.m721a(2, m835a());
             }
         }
 
@@ -1522,11 +1514,11 @@ public final class dx {
             return this.f278a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int b() {
-            int a = m836a() ? 0 + C7614c.a(1, c()) : 0;
+            int a = m836a() ? 0 + com.xiaomi.push.c.a(1, c()) : 0;
             if (m837b()) {
-                a += C7614c.a(2, m835a());
+                a += com.xiaomi.push.c.a(2, m835a());
             }
             this.b = a;
             return a;
@@ -1543,22 +1535,21 @@ public final class dx {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.dx$i */
     /* loaded from: classes11.dex */
-    public static final class C7643i extends AbstractC7646e {
+    public static final class i extends com.xiaomi.push.e {
 
         /* renamed from: a  reason: collision with other field name */
         private boolean f281a;
 
         /* renamed from: a  reason: collision with other field name */
-        private C7593a f280a = C7593a.a;
+        private com.xiaomi.push.a f280a = com.xiaomi.push.a.a;
         private int a = -1;
 
-        public static C7643i a(byte[] bArr) {
-            return (C7643i) new C7643i().a(bArr);
+        public static i a(byte[] bArr) {
+            return (i) new i().a(bArr);
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int a() {
             if (this.a < 0) {
                 b();
@@ -1567,35 +1558,35 @@ public final class dx {
         }
 
         /* renamed from: a  reason: collision with other method in class */
-        public C7593a m838a() {
+        public com.xiaomi.push.a m838a() {
             return this.f280a;
         }
 
-        public C7643i a(C7593a c7593a) {
+        public i a(com.xiaomi.push.a aVar) {
             this.f281a = true;
-            this.f280a = c7593a;
+            this.f280a = aVar;
             return this;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public C7643i a(C7605b c7605b) {
+        @Override // com.xiaomi.push.e
+        public i a(com.xiaomi.push.b bVar) {
             while (true) {
-                int m673a = c7605b.m673a();
+                int m673a = bVar.m673a();
                 if (m673a == 0) {
                     return this;
                 }
                 if (m673a == 10) {
-                    a(c7605b.m675a());
-                } else if (!a(c7605b, m673a)) {
+                    a(bVar.m675a());
+                } else if (!a(bVar, m673a)) {
                     return this;
                 }
             }
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public void a(C7614c c7614c) {
+        @Override // com.xiaomi.push.e
+        public void a(com.xiaomi.push.c cVar) {
             if (m839a()) {
-                c7614c.m719a(1, m838a());
+                cVar.m719a(1, m838a());
             }
         }
 
@@ -1604,35 +1595,34 @@ public final class dx {
             return this.f281a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int b() {
-            int a = m839a() ? 0 + C7614c.a(1, m838a()) : 0;
+            int a = m839a() ? 0 + com.xiaomi.push.c.a(1, m838a()) : 0;
             this.a = a;
             return a;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.dx$j */
     /* loaded from: classes11.dex */
-    public static final class C7644j extends AbstractC7646e {
+    public static final class j extends com.xiaomi.push.e {
 
         /* renamed from: a  reason: collision with other field name */
         private boolean f284a;
         private boolean b;
 
         /* renamed from: a  reason: collision with other field name */
-        private C7593a f282a = C7593a.a;
+        private com.xiaomi.push.a f282a = com.xiaomi.push.a.a;
 
         /* renamed from: a  reason: collision with other field name */
-        private C7636b f283a = null;
+        private b f283a = null;
         private int a = -1;
 
-        public static C7644j a(byte[] bArr) {
-            return (C7644j) new C7644j().a(bArr);
+        public static j a(byte[] bArr) {
+            return (j) new j().a(bArr);
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int a() {
             if (this.a < 0) {
                 b();
@@ -1641,54 +1631,54 @@ public final class dx {
         }
 
         /* renamed from: a  reason: collision with other method in class */
-        public C7593a m840a() {
+        public com.xiaomi.push.a m840a() {
             return this.f282a;
         }
 
         /* renamed from: a  reason: collision with other method in class */
-        public C7636b m841a() {
+        public b m841a() {
             return this.f283a;
         }
 
-        public C7644j a(C7593a c7593a) {
+        public j a(com.xiaomi.push.a aVar) {
             this.f284a = true;
-            this.f282a = c7593a;
+            this.f282a = aVar;
             return this;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public C7644j a(C7605b c7605b) {
+        @Override // com.xiaomi.push.e
+        public j a(com.xiaomi.push.b bVar) {
             while (true) {
-                int m673a = c7605b.m673a();
+                int m673a = bVar.m673a();
                 if (m673a == 0) {
                     return this;
                 }
                 if (m673a == 10) {
-                    a(c7605b.m675a());
+                    a(bVar.m675a());
                 } else if (m673a == 18) {
-                    C7636b c7636b = new C7636b();
-                    c7605b.a(c7636b);
-                    a(c7636b);
-                } else if (!a(c7605b, m673a)) {
+                    b bVar2 = new b();
+                    bVar.a(bVar2);
+                    a(bVar2);
+                } else if (!a(bVar, m673a)) {
                     return this;
                 }
             }
         }
 
-        public C7644j a(C7636b c7636b) {
-            Objects.requireNonNull(c7636b);
+        public j a(b bVar) {
+            Objects.requireNonNull(bVar);
             this.b = true;
-            this.f283a = c7636b;
+            this.f283a = bVar;
             return this;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public void a(C7614c c7614c) {
+        @Override // com.xiaomi.push.e
+        public void a(com.xiaomi.push.c cVar) {
             if (m842a()) {
-                c7614c.m719a(1, m840a());
+                cVar.m719a(1, m840a());
             }
             if (m843b()) {
-                c7614c.m720a(2, (AbstractC7646e) m841a());
+                cVar.m720a(2, (com.xiaomi.push.e) m841a());
             }
         }
 
@@ -1697,11 +1687,11 @@ public final class dx {
             return this.f284a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int b() {
-            int a = m842a() ? 0 + C7614c.a(1, m840a()) : 0;
+            int a = m842a() ? 0 + com.xiaomi.push.c.a(1, m840a()) : 0;
             if (m843b()) {
-                a += C7614c.a(2, (AbstractC7646e) m841a());
+                a += com.xiaomi.push.c.a(2, (com.xiaomi.push.e) m841a());
             }
             this.a = a;
             return a;
@@ -1714,9 +1704,8 @@ public final class dx {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.dx$k */
     /* loaded from: classes11.dex */
-    public static final class C7645k extends AbstractC7646e {
+    public static final class k extends com.xiaomi.push.e {
 
         /* renamed from: a  reason: collision with other field name */
         private boolean f287a;
@@ -1743,11 +1732,11 @@ public final class dx {
         private int a = 0;
         private int b = -1;
 
-        public static C7645k a(byte[] bArr) {
-            return (C7645k) new C7645k().a(bArr);
+        public static k a(byte[] bArr) {
+            return (k) new k().a(bArr);
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int a() {
             if (this.b < 0) {
                 b();
@@ -1760,50 +1749,50 @@ public final class dx {
             return this.f285a;
         }
 
-        public C7645k a(int i) {
+        public k a(int i) {
             this.g = true;
             this.a = i;
             return this;
         }
 
-        public C7645k a(long j) {
+        public k a(long j) {
             this.c = true;
             this.f285a = j;
             return this;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public C7645k a(C7605b c7605b) {
+        @Override // com.xiaomi.push.e
+        public k a(com.xiaomi.push.b bVar) {
             while (true) {
-                int m673a = c7605b.m673a();
+                int m673a = bVar.m673a();
                 if (m673a == 0) {
                     return this;
                 }
                 if (m673a == 10) {
-                    a(c7605b.m676a());
+                    a(bVar.m676a());
                 } else if (m673a == 18) {
-                    b(c7605b.m676a());
+                    b(bVar.m676a());
                 } else if (m673a == 24) {
-                    a(c7605b.m674a());
+                    a(bVar.m674a());
                 } else if (m673a == 32) {
-                    b(c7605b.m674a());
+                    b(bVar.m674a());
                 } else if (m673a == 40) {
-                    a(c7605b.m679a());
+                    a(bVar.m679a());
                 } else if (m673a == 48) {
-                    a(c7605b.m682b());
-                } else if (!a(c7605b, m673a)) {
+                    a(bVar.m682b());
+                } else if (!a(bVar, m673a)) {
                     return this;
                 }
             }
         }
 
-        public C7645k a(String str) {
+        public k a(String str) {
             this.f287a = true;
             this.f286a = str;
             return this;
         }
 
-        public C7645k a(boolean z) {
+        public k a(boolean z) {
             this.e = true;
             this.f = z;
             return this;
@@ -1814,25 +1803,25 @@ public final class dx {
             return this.f286a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
-        public void a(C7614c c7614c) {
+        @Override // com.xiaomi.push.e
+        public void a(com.xiaomi.push.c cVar) {
             if (m846a()) {
-                c7614c.m721a(1, m845a());
+                cVar.m721a(1, m845a());
             }
             if (m849b()) {
-                c7614c.m721a(2, m848b());
+                cVar.m721a(2, m848b());
             }
             if (m850c()) {
-                c7614c.m718a(3, m844a());
+                cVar.m718a(3, m844a());
             }
             if (d()) {
-                c7614c.m718a(4, m847b());
+                cVar.m718a(4, m847b());
             }
             if (f()) {
-                c7614c.m722a(5, e());
+                cVar.m722a(5, e());
             }
             if (g()) {
-                c7614c.m717a(6, c());
+                cVar.m717a(6, c());
             }
         }
 
@@ -1841,23 +1830,23 @@ public final class dx {
             return this.f287a;
         }
 
-        @Override // com.xiaomi.push.AbstractC7646e
+        @Override // com.xiaomi.push.e
         public int b() {
-            int a = m846a() ? 0 + C7614c.a(1, m845a()) : 0;
+            int a = m846a() ? 0 + com.xiaomi.push.c.a(1, m845a()) : 0;
             if (m849b()) {
-                a += C7614c.a(2, m848b());
+                a += com.xiaomi.push.c.a(2, m848b());
             }
             if (m850c()) {
-                a += C7614c.a(3, m844a());
+                a += com.xiaomi.push.c.a(3, m844a());
             }
             if (d()) {
-                a += C7614c.a(4, m847b());
+                a += com.xiaomi.push.c.a(4, m847b());
             }
             if (f()) {
-                a += C7614c.a(5, e());
+                a += com.xiaomi.push.c.a(5, e());
             }
             if (g()) {
-                a += C7614c.a(6, c());
+                a += com.xiaomi.push.c.a(6, c());
             }
             this.b = a;
             return a;
@@ -1868,13 +1857,13 @@ public final class dx {
             return this.f288b;
         }
 
-        public C7645k b(long j) {
+        public k b(long j) {
             this.d = true;
             this.f288b = j;
             return this;
         }
 
-        public C7645k b(String str) {
+        public k b(String str) {
             this.f290b = true;
             this.f289b = str;
             return this;

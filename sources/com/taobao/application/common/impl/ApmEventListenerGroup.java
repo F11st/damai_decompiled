@@ -10,7 +10,7 @@ public class ApmEventListenerGroup implements IApmEventListener, IListenerGroup<
     private final ArrayList<IApmEventListener> a = new ArrayList<>();
 
     private void c(Runnable runnable) {
-        C6674a.g().h(runnable);
+        a.g().h(runnable);
     }
 
     @Override // com.taobao.application.common.impl.IListenerGroup

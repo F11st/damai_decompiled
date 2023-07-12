@@ -21,12 +21,11 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.taobao.android.dinamic.R$id;
-import com.taobao.android.dinamicx.C6368e;
-import com.taobao.android.dinamicx.C6380h;
 import com.taobao.android.dinamicx.DXDarkModeCenter;
 import com.taobao.android.dinamicx.DXRenderPipeline;
 import com.taobao.android.dinamicx.DXRuntimeContext;
 import com.taobao.android.dinamicx.DinamicXEngine;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.model.DXLongSparseArray;
 import com.taobao.android.dinamicx.monitor.DXAppMonitor;
 import com.taobao.android.dinamicx.template.download.DXTemplateItem;
@@ -127,7 +126,7 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
     String animation;
     private gt animationHolder;
     private int autoId;
-    private C6475d backgroundGradient;
+    private d backgroundGradient;
     Map<String, nt> bindingXExecutingMap;
     Map<String, nt> bindingXSpecMap;
     int bottom;
@@ -261,10 +260,9 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXWidgetNode$a */
     /* loaded from: classes12.dex */
-    public class View$OnClickListenerC6472a implements View.OnClickListener {
-        View$OnClickListenerC6472a() {
+    public class a implements View.OnClickListener {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -275,10 +273,9 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXWidgetNode$b */
     /* loaded from: classes12.dex */
-    public class View$OnLongClickListenerC6473b implements View.OnLongClickListener {
-        View$OnLongClickListenerC6473b() {
+    public class b implements View.OnLongClickListener {
+        b() {
         }
 
         @Override // android.view.View.OnLongClickListener
@@ -289,9 +286,8 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXWidgetNode$c */
     /* loaded from: classes11.dex */
-    public static class C6474c implements IDXBuilderWidgetNode {
+    public static class c implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(Object obj) {
             return new DXWidgetNode();
@@ -299,9 +295,8 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXWidgetNode$d */
     /* loaded from: classes12.dex */
-    public static class C6475d {
+    public static class d {
         private int a = -1;
         private GradientDrawable.Orientation b;
         private int[] c;
@@ -462,7 +457,7 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
 
     private boolean isMarkContainerLayout() {
         if ((this instanceof DXAbsContainerBaseLayout) || (this instanceof DXScrollLayoutBase)) {
-            return ((C6493f) this).isMarkContainer();
+            return ((f) this).isMarkContainer();
         }
         return false;
     }
@@ -492,8 +487,8 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
             return this;
         }
         DXWidgetNode queryRootWidgetNode = queryRootWidgetNode();
-        if (queryRootWidgetNode instanceof C6493f) {
-            Map<String, WeakReference<DXWidgetNode>> dxUserIdMap = ((C6493f) queryRootWidgetNode).getDxUserIdMap();
+        if (queryRootWidgetNode instanceof f) {
+            Map<String, WeakReference<DXWidgetNode>> dxUserIdMap = ((f) queryRootWidgetNode).getDxUserIdMap();
             if (dxUserIdMap == null) {
                 return queryWTByUserId(str);
             }
@@ -524,14 +519,14 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
     }
 
     public static int resolveSizeAndState(int i, int i2, int i3) {
-        int a = DXMeasureSpec.a(i2);
-        int b = DXMeasureSpec.b(i2);
-        if (a != Integer.MIN_VALUE) {
-            if (a == 1073741824) {
-                i = b;
+        int a2 = DXMeasureSpec.a(i2);
+        int b2 = DXMeasureSpec.b(i2);
+        if (a2 != Integer.MIN_VALUE) {
+            if (a2 == 1073741824) {
+                i = b2;
             }
-        } else if (b < i) {
-            i = 16777216 | b;
+        } else if (b2 < i) {
+            i = 16777216 | b2;
         }
         return i | ((-16777216) & i3);
     }
@@ -546,7 +541,7 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
         if (dxRenderPipeline == null || dxControlEventCenter == null) {
             return;
         }
-        C6380h j = dxRenderPipeline.j();
+        com.taobao.android.dinamicx.h j = dxRenderPipeline.j();
         if (j != null) {
             j.j(dXRuntimeContext.getCacheIdentify());
         }
@@ -572,7 +567,7 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
         if (dxRenderPipeline == null || dxControlEventCenter == null) {
             return;
         }
-        C6380h j = dxRenderPipeline.j();
+        com.taobao.android.dinamicx.h j = dxRenderPipeline.j();
         if (j != null) {
             j.j(dXRuntimeContext.getCacheIdentify());
         }
@@ -601,22 +596,22 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
             String string = jSONObject.getString("transform");
             String string2 = jSONObject.getString("transition");
             try {
-                List<x10.C9898a> b = x10.b(string);
+                List<x10.a> b2 = x10.b(string);
                 float f3 = 1.0f;
-                if (b != null) {
+                if (b2 != null) {
                     f = 1.0f;
-                    for (x10.C9898a c9898a : b) {
-                        int i = c9898a.a;
+                    for (x10.a aVar : b2) {
+                        int i = aVar.a;
                         if (i == 6) {
-                            float[] fArr = c9898a.b;
+                            float[] fArr = aVar.b;
                             f3 *= fArr[0];
                             f2 = fArr[1];
                         } else if (i == 7) {
-                            f3 *= c9898a.b[0];
+                            f3 *= aVar.b[0];
                         } else if (i == 8) {
-                            f2 = c9898a.b[0];
+                            f2 = aVar.b[0];
                         } else {
-                            throw new IllegalArgumentException("Invalid Transform method: " + c9898a.a);
+                            throw new IllegalArgumentException("Invalid Transform method: " + aVar.a);
                         }
                         f *= f2;
                     }
@@ -625,7 +620,7 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
                 }
                 view.setScaleX(f3);
                 view.setScaleY(f);
-                List<y10.C9948e> e = y10.e(string2, null, null, null, null);
+                List<y10.e> e = y10.e(string2, null, null, null, null);
                 float floatValue = jSONObject.getFloatValue("opacity");
                 String string3 = jSONObject.getString("backgroundColor");
                 list = y10.g(e, view, floatValue, TextUtils.isEmpty(string3) ? 0 : Color.parseColor(string3));
@@ -766,7 +761,7 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
         return this.backGroundColor;
     }
 
-    public C6475d getBackgroundGradient() {
+    public d getBackgroundGradient() {
         return this.backgroundGradient;
     }
 
@@ -1223,15 +1218,15 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
             int measuredHeight = nativeView.getMeasuredHeight();
             int[] iArr = new int[2];
             nativeView.getLocationOnScreen(iArr);
-            float c = p62.c(getDXRuntimeContext().getContext()) / 375.0f;
-            jSONObject.put(Constants.Name.X, (Object) Float.valueOf(iArr[0] / c));
-            jSONObject.put(Constants.Name.Y, (Object) Float.valueOf(iArr[1] / c));
-            jSONObject.put("left", (Object) Float.valueOf(iArr[0] / c));
-            jSONObject.put("top", (Object) Float.valueOf(iArr[1] / c));
-            jSONObject.put("width", (Object) Float.valueOf(measuredWidth / c));
-            jSONObject.put("height", (Object) Float.valueOf(measuredHeight / c));
-            jSONObject.put("right", (Object) Float.valueOf((iArr[0] + measuredWidth) / c));
-            jSONObject.put("bottom", (Object) Float.valueOf((iArr[1] + measuredHeight) / c));
+            float c2 = p62.c(getDXRuntimeContext().getContext()) / 375.0f;
+            jSONObject.put(Constants.Name.X, (Object) Float.valueOf(iArr[0] / c2));
+            jSONObject.put(Constants.Name.Y, (Object) Float.valueOf(iArr[1] / c2));
+            jSONObject.put("left", (Object) Float.valueOf(iArr[0] / c2));
+            jSONObject.put("top", (Object) Float.valueOf(iArr[1] / c2));
+            jSONObject.put("width", (Object) Float.valueOf(measuredWidth / c2));
+            jSONObject.put("height", (Object) Float.valueOf(measuredHeight / c2));
+            jSONObject.put("right", (Object) Float.valueOf((iArr[0] + measuredWidth) / c2));
+            jSONObject.put("bottom", (Object) Float.valueOf((iArr[1] + measuredHeight) / c2));
             return jSONObject;
         } else if (!"commit".equals(str) || getDXRuntimeContext() == null || getDXRuntimeContext().getNativeView() == null) {
             return null;
@@ -1307,9 +1302,9 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
             if (dXRuntimeContext2 == null || dXRuntimeContext2.getDxError() == null) {
                 return;
             }
-            C6368e.C6369a c6369a = new C6368e.C6369a("Pipeline_Detail", "Pipeline_Detail_PerformLayout", C6368e.DXERROR_DETAIL_ON_LAYOUT_ERROR);
-            c6369a.e = ry.a(e);
-            dXRuntimeContext2.getDxError().c.add(c6369a);
+            e.a aVar = new e.a("Pipeline_Detail", "Pipeline_Detail_PerformLayout", com.taobao.android.dinamicx.e.DXERROR_DETAIL_ON_LAYOUT_ERROR);
+            aVar.e = ry.a(e);
+            dXRuntimeContext2.getDxError().c.add(aVar);
         }
     }
 
@@ -1468,9 +1463,9 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
     public void onBindEvent(Context context, View view, long j) {
         if (this.enabled == 1) {
             if (j == 18903999933159L) {
-                view.setOnClickListener(new View$OnClickListenerC6472a());
+                view.setOnClickListener(new a());
             } else if (j == -6544685697300501093L) {
-                view.setOnLongClickListener(new View$OnLongClickListenerC6473b());
+                view.setOnLongClickListener(new b());
             }
         }
         if (j == 2683803675109176030L) {
@@ -1592,7 +1587,7 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
             if ((getDXRuntimeContext() == null || !getDXRuntimeContext().isOpenNewFastReturnLogic()) && !(wyVar2 instanceof qy) && !(wyVar2 instanceof f10) && !(wyVar2 instanceof b10)) {
                 DXRuntimeContext dXRuntimeContext = getDXRuntimeContext();
                 if (dXRuntimeContext != null && dXRuntimeContext.getDxError() != null) {
-                    new C6368e.C6369a("Event", "Event_Cast_Exception", C6368e.EVENT_DXEXPRNODE_CAST_ERROR, "eventid" + hyVar.b() + " exprNode id " + wyVar2.b + " exprNode name " + wyVar2.d);
+                    new e.a("Event", "Event_Cast_Exception", com.taobao.android.dinamicx.e.EVENT_DXEXPRNODE_CAST_ERROR, "eventid" + hyVar.b() + " exprNode id " + wyVar2.b + " exprNode name " + wyVar2.d);
                 }
                 return false;
             }
@@ -1615,7 +1610,7 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
                     str2 = str2 + " exprNode id " + wyVar.b + " exprNode name " + wyVar.d;
                 }
             }
-            DXAppMonitor.q(str, dXTemplateItem, "Pipeline", "Pipeline_Stage_ON_EVENT", C6368e.ONEVENT_CRASH, str2 + " crash stack: " + ry.a(e));
+            DXAppMonitor.q(str, dXTemplateItem, "Pipeline", "Pipeline_Stage_ON_EVENT", com.taobao.android.dinamicx.e.ONEVENT_CRASH, str2 + " crash stack: " + ry.a(e));
             return false;
         }
     }
@@ -1638,7 +1633,7 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public void onSetDoubleAttribute(long j, double d) {
+    public void onSetDoubleAttribute(long j, double d2) {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -1688,8 +1683,8 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
             return;
         }
         DXWidgetNode queryRootWidgetNode = queryRootWidgetNode();
-        if (queryRootWidgetNode instanceof C6493f) {
-            Map<String, WeakReference<DXWidgetNode>> dxUserIdMap = ((C6493f) queryRootWidgetNode).getDxUserIdMap();
+        if (queryRootWidgetNode instanceof f) {
+            Map<String, WeakReference<DXWidgetNode>> dxUserIdMap = ((f) queryRootWidgetNode).getDxUserIdMap();
             WeakReference<DXWidgetNode> weakReference = dxUserIdMap.get(this.userId);
             if (weakReference == null || weakReference.get() == null) {
                 dxUserIdMap.put(this.userId, new WeakReference<>(this));
@@ -1871,14 +1866,14 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
             if (dXRuntimeContext == null || dXRuntimeContext.getDxError() == null) {
                 return;
             }
-            C6368e.C6369a c6369a = new C6368e.C6369a("Render", "Pipeline_Detail_Render_Detail", 90002);
-            c6369a.e = ry.a(e);
-            dXRuntimeContext.getDxError().c.add(c6369a);
+            e.a aVar = new e.a("Render", "Pipeline_Detail_Render_Detail", 90002);
+            aVar.e = ry.a(e);
+            dXRuntimeContext.getDxError().c.add(aVar);
         }
     }
 
     public int replaceChild(DXWidgetNode dXWidgetNode, DXWidgetNode dXWidgetNode2) {
-        if (!(this instanceof C6493f) || dXWidgetNode2 == null) {
+        if (!(this instanceof f) || dXWidgetNode2 == null) {
             return -1;
         }
         int i = 0;
@@ -2007,8 +2002,8 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
                 } else if (i8 > 0 && tryFetchDarkModeColor2 == 0) {
                     gradientDrawable.setStroke(0, 0, 0.0f, 0.0f);
                 }
-                C6475d c6475d = this.backgroundGradient;
-                if (c6475d == null || c6475d.a() != 0) {
+                d dVar = this.backgroundGradient;
+                if (dVar == null || dVar.a() != 0) {
                     return;
                 }
                 gradientDrawable.setGradientType(this.backgroundGradient.a());
@@ -2038,8 +2033,8 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
                 } else if (i14 > 0 && tryFetchDarkModeColor2 == 0) {
                     gradientDrawable2.setStroke(0, 0, 0.0f, 0.0f);
                 }
-                C6475d c6475d2 = this.backgroundGradient;
-                if (c6475d2 != null && c6475d2.a() == 0) {
+                d dVar2 = this.backgroundGradient;
+                if (dVar2 != null && dVar2.a() == 0) {
                     gradientDrawable2.setGradientType(this.backgroundGradient.a());
                     if (Build.VERSION.SDK_INT >= 16) {
                         gradientDrawable2.setOrientation(this.backgroundGradient.c());
@@ -2055,8 +2050,8 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
         }
     }
 
-    public void setBackgroundGradient(C6475d c6475d) {
-        this.backgroundGradient = c6475d;
+    public void setBackgroundGradient(d dVar) {
+        this.backgroundGradient = dVar;
     }
 
     public void setBindingXExecutingMap(Map<String, nt> map) {
@@ -2135,13 +2130,13 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
         this.disableDarkMode = z;
     }
 
-    public void setDoubleAttribute(long j, double d) {
+    public void setDoubleAttribute(long j, double d2) {
         if (10439708918555150L == j) {
-            this.weight = d;
+            this.weight = d2;
         } else if (16887479372907L == j) {
-            this.alpha = (float) d;
+            this.alpha = (float) d2;
         } else {
-            onSetDoubleAttribute(j, d);
+            onSetDoubleAttribute(j, d2);
         }
     }
 
@@ -2390,7 +2385,7 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
         if (dxRenderPipeline == null || dxControlEventCenter == null) {
             return;
         }
-        C6380h j = dxRenderPipeline.j();
+        com.taobao.android.dinamicx.h j = dxRenderPipeline.j();
         if (j != null) {
             j.j(dXRuntimeContext.getCacheIdentify());
         }
@@ -2414,7 +2409,7 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
             return;
         }
         if (j == 3436950829494956384L) {
-            this.backgroundGradient = (C6475d) obj;
+            this.backgroundGradient = (d) obj;
             this.needSetBackground = true;
         } else if (j == -396946557348092076L) {
             this.darkModeColorMap = (HashMap) obj;
@@ -2453,7 +2448,7 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
             return;
         }
         DXWidgetNode dXWidgetNode = this.parentWidget;
-        if (dXWidgetNode != null && (dXWidgetNode instanceof C6493f)) {
+        if (dXWidgetNode != null && (dXWidgetNode instanceof f)) {
             lz lzVar = attributeThreadLocal.get();
             this.realLayoutAttribute = lzVar;
             if (lzVar == null) {
@@ -2463,12 +2458,12 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
             }
             this.realLayoutAttribute.a = getMeasuredWidth();
             this.realLayoutAttribute.b = getMeasuredHeight();
-            C6493f c6493f = (C6493f) this.parentWidget;
+            f fVar = (f) this.parentWidget;
             ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
             if (layoutParams == null) {
-                generateLayoutParams = c6493f.generateLayoutParams(this.realLayoutAttribute);
+                generateLayoutParams = fVar.generateLayoutParams(this.realLayoutAttribute);
             } else {
-                generateLayoutParams = c6493f.generateLayoutParams(this.realLayoutAttribute, layoutParams);
+                generateLayoutParams = fVar.generateLayoutParams(this.realLayoutAttribute, layoutParams);
             }
             view.setLayoutParams(generateLayoutParams);
             return;
@@ -2604,8 +2599,8 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
         this.weakView = weakReference;
     }
 
-    public void setWeight(double d) {
-        this.weight = d;
+    public void setWeight(double d2) {
+        this.weight = d2;
     }
 
     public Object shallowClone(@NonNull DXRuntimeContext dXRuntimeContext, boolean z) {
@@ -2748,7 +2743,7 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
         if (dxRenderPipeline == null || dxControlEventCenter == null) {
             return;
         }
-        C6380h j = dxRenderPipeline.j();
+        com.taobao.android.dinamicx.h j = dxRenderPipeline.j();
         if (j != null) {
             j.j(dXRuntimeContext.getCacheIdentify());
         }
@@ -2809,7 +2804,7 @@ public class DXWidgetNode implements IDXBuilderWidgetNode {
         if (dxRenderPipeline == null || dxControlEventCenter == null) {
             return;
         }
-        C6380h j = dxRenderPipeline.j();
+        com.taobao.android.dinamicx.h j = dxRenderPipeline.j();
         if (j != null) {
             j.j(dXRuntimeContext.getCacheIdentify());
         }

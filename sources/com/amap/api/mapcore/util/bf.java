@@ -9,7 +9,7 @@ import java.io.IOException;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public class bf extends jk implements bu.InterfaceC4486a {
+public class bf extends jk implements bu.a {
     private bu a;
     private bw b;
     private bz c;
@@ -62,7 +62,7 @@ public class bf extends jk implements bu.InterfaceC4486a {
         }
     }
 
-    @Override // com.amap.api.mapcore.util.bu.InterfaceC4486a
+    @Override // com.amap.api.mapcore.util.bu.a
     public void c() {
         bw bwVar = this.b;
         if (bwVar != null) {
@@ -73,7 +73,7 @@ public class bf extends jk implements bu.InterfaceC4486a {
     @Override // com.amap.api.mapcore.util.jk
     public void runTask() {
         if (this.c.y()) {
-            this.c.a(ca.EnumC4496a.file_io_exception);
+            this.c.a(ca.a.file_io_exception);
             return;
         }
         try {

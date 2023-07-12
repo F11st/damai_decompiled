@@ -14,7 +14,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import cn.damai.baseview.RCRelativeLayoutView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
@@ -69,12 +68,11 @@ public class WaterFlowGoodsViewHolder extends BaseViewHolder<WaterFlowRecommendI
     private TextView mWantSeeView;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.feed.WaterFlowGoodsViewHolder$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1265a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1265a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -112,30 +110,29 @@ public class WaterFlowGoodsViewHolder extends BaseViewHolder<WaterFlowRecommendI
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.v2.feed.WaterFlowGoodsViewHolder$b */
     /* loaded from: classes5.dex */
-    public class C1266b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ SpannableStringBuilder a;
 
-        C1266b(SpannableStringBuilder spannableStringBuilder) {
+        b(SpannableStringBuilder spannableStringBuilder) {
             this.a = spannableStringBuilder;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "2084312832")) {
-                ipChange.ipc$dispatch("2084312832", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("2084312832", new Object[]{this, eVar});
             } else {
-                WaterFlowGoodsViewHolder.this.showAtmospheric(this.a, c0502e.b);
+                WaterFlowGoodsViewHolder.this.showAtmospheric(this.a, eVar.b);
             }
         }
     }
 
     public WaterFlowGoodsViewHolder(View view) {
         super(view);
-        this.mOnClickListener = new View$OnClickListenerC1265a();
+        this.mOnClickListener = new a();
         this.mContext = view.getContext();
         this.mFeedBackLayer = (FrameLayout) this.itemView.findViewById(R$id.homepage_waterflow_goods_feedback_layer);
         this.mFeedBackBtn = this.itemView.findViewById(R$id.homepage_waterflow_goods_feedback_btn);
@@ -147,8 +144,8 @@ public class WaterFlowGoodsViewHolder extends BaseViewHolder<WaterFlowRecommendI
         this.mPosterView.setCategoryMargin(6.0f, 6.0f);
         DMLabelView labelView = this.mPosterView.getLabelView();
         if (labelView != null) {
-            float a = t60.a(this.mContext, 12.0f);
-            labelView.setCornerRadii(a, a, a, 0.0f);
+            float a2 = t60.a(this.mContext, 12.0f);
+            labelView.setCornerRadii(a2, a2, a2, 0.0f);
         }
         this.mGoodsTagView = (DMCommonTagView) this.itemView.findViewById(R$id.homepage_waterflow_goodscard_tag);
         this.mGoodsTitle = (TextView) this.itemView.findViewById(R$id.homepage_waterflow_goods_title);
@@ -179,8 +176,8 @@ public class WaterFlowGoodsViewHolder extends BaseViewHolder<WaterFlowRecommendI
         spannableStringBuilder.insert(0, "123");
         int height = bitmap.getHeight();
         int width = bitmap.getWidth();
-        int a = t60.a(this.mContext, 16.0f);
-        spannableStringBuilder.setSpan(new ImageSpan(this.mContext, a21.f(bitmap, (width * a) / height, a), 1), 0, 3, 18);
+        int a2 = t60.a(this.mContext, 16.0f);
+        spannableStringBuilder.setSpan(new ImageSpan(this.mContext, a21.f(bitmap, (width * a2) / height, a2), 1), 0, 3, 18);
         this.mGoodsTitle.setText(spannableStringBuilder);
     }
 
@@ -246,7 +243,7 @@ public class WaterFlowGoodsViewHolder extends BaseViewHolder<WaterFlowRecommendI
                 try {
                     if (waterFlowRecommendItem.atmospheric) {
                         if (!wh2.j(waterFlowRecommendItem.atmosphericPic)) {
-                            C0504a.b().h(this.mContext).c(waterFlowRecommendItem.atmosphericPic).n(new C1266b(spannableStringBuilder)).f();
+                            cn.damai.common.image.a.b().h(this.mContext).c(waterFlowRecommendItem.atmosphericPic).n(new b(spannableStringBuilder)).f();
                         }
                     } else {
                         if (waterFlowRecommendItem.projectName.contains("【")) {

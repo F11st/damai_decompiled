@@ -26,7 +26,7 @@ import tb.k50;
 public final class PromotionTagView extends FrameLayout {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C0855a Companion = new C0855a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String HALF_PRICE = "1004";
     @NotNull
@@ -45,13 +45,12 @@ public final class PromotionTagView extends FrameLayout {
     private final TextView vipTagDes;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.view.PromotionTagView$a */
     /* loaded from: classes.dex */
-    public static final class C0855a {
-        private C0855a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C0855a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

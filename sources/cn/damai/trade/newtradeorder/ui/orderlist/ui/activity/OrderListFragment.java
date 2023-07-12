@@ -10,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.commonbusiness.seatbiz.orderlist.bean.OrderFirstPayChooseSeat;
@@ -63,17 +62,16 @@ public class OrderListFragment extends DamaiBaseMvpFragment<OrderListPresenter, 
     private final int mPageSize = 20;
     private List<OrderListBean> mOrderListBeanList = new ArrayList();
     private int mScrollTotal = 0;
-    private View.OnClickListener jumpOrderDetailListener = new View$OnClickListenerC2232a();
-    private OrderPayChooseImpl firstPayChooseListener = new C2233b();
-    private View.OnClickListener jumpRefundListener = new View$OnClickListenerC2235c();
+    private View.OnClickListener jumpOrderDetailListener = new a();
+    private OrderPayChooseImpl firstPayChooseListener = new b();
+    private View.OnClickListener jumpRefundListener = new c();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderlist.ui.activity.OrderListFragment$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2232a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2232a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -88,19 +86,17 @@ public class OrderListFragment extends DamaiBaseMvpFragment<OrderListPresenter, 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderlist.ui.activity.OrderListFragment$b */
     /* loaded from: classes8.dex */
-    public class C2233b implements OrderPayChooseImpl {
+    public class b implements OrderPayChooseImpl {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.trade.newtradeorder.ui.orderlist.ui.activity.OrderListFragment$b$a */
         /* loaded from: classes8.dex */
-        public class C2234a implements SeatPrepare4Order.OnLoadListener {
+        public class a implements SeatPrepare4Order.OnLoadListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ OrderListBean a;
 
-            C2234a(OrderListBean orderListBean) {
+            a(OrderListBean orderListBean) {
                 this.a = orderListBean;
             }
 
@@ -123,12 +119,12 @@ public class OrderListFragment extends DamaiBaseMvpFragment<OrderListPresenter, 
                 if (AndroidInstantRuntime.support(ipChange, "-336395516")) {
                     ipChange.ipc$dispatch("-336395516", new Object[]{this, Long.valueOf(j)});
                 } else {
-                    C0529c.e().x(pp2.u().U(OrderListFragment.this.mUserCode, String.valueOf(j), this.a.index));
+                    cn.damai.common.user.c.e().x(pp2.u().U(OrderListFragment.this.mUserCode, String.valueOf(j), this.a.index));
                 }
             }
         }
 
-        C2233b() {
+        b() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.orderlist.helper.OrderPayChooseImpl
@@ -149,7 +145,7 @@ public class OrderListFragment extends DamaiBaseMvpFragment<OrderListPresenter, 
             if (orderFirstPayChooseSeat == null) {
                 OrderListFragment.this.enableChooseSeatBtn();
             } else {
-                OrderListFragment.this.mChooseSeat.g(orderListBean.projectName, orderFirstPayChooseSeat.performName, String.valueOf(orderListBean.orderId), String.valueOf(orderListBean.projectId), String.valueOf(orderFirstPayChooseSeat.performId), String.valueOf(orderFirstPayChooseSeat.showCityId), new C2234a(orderListBean));
+                OrderListFragment.this.mChooseSeat.g(orderListBean.projectName, orderFirstPayChooseSeat.performName, String.valueOf(orderListBean.orderId), String.valueOf(orderListBean.projectId), String.valueOf(orderFirstPayChooseSeat.performId), String.valueOf(orderFirstPayChooseSeat.showCityId), new a(orderListBean));
             }
         }
 
@@ -162,7 +158,7 @@ public class OrderListFragment extends DamaiBaseMvpFragment<OrderListPresenter, 
             }
             OrderListBean orderListBean = (OrderListBean) view.getTag();
             if (orderListBean != null) {
-                C0529c.e().x(pp2.u().V(OrderListFragment.this.mUserCode, String.valueOf(orderListBean.orderId), orderListBean.index));
+                cn.damai.common.user.c.e().x(pp2.u().V(OrderListFragment.this.mUserCode, String.valueOf(orderListBean.orderId), orderListBean.index));
             }
             mo1.l(OrderListFragment.this.getContext());
             view.setClickable(true);
@@ -170,12 +166,11 @@ public class OrderListFragment extends DamaiBaseMvpFragment<OrderListPresenter, 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderlist.ui.activity.OrderListFragment$c */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2235c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2235c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -187,7 +182,7 @@ public class OrderListFragment extends DamaiBaseMvpFragment<OrderListPresenter, 
             }
             OrderListBean orderListBean = (OrderListBean) view.getTag();
             if (orderListBean != null) {
-                C0529c.e().x(pp2.u().i1(OrderListFragment.this.mUserCode, String.valueOf(orderListBean.orderId), orderListBean.index));
+                cn.damai.common.user.c.e().x(pp2.u().i1(OrderListFragment.this.mUserCode, String.valueOf(orderListBean.orderId), orderListBean.index));
                 Intent intent = new Intent(OrderListFragment.this.getActivity(), RefundActivity.class);
                 intent.putExtra("order", orderListBean);
                 OrderListFragment.this.startActivity(intent);
@@ -294,7 +289,7 @@ public class OrderListFragment extends DamaiBaseMvpFragment<OrderListPresenter, 
                 mu0.e = false;
                 mu0.f = j2;
             }
-            C0529c.e().x(pp2.u().h1(this.mUserCode, String.valueOf(orderListBean.orderId), orderListBean.index));
+            cn.damai.common.user.c.e().x(pp2.u().h1(this.mUserCode, String.valueOf(orderListBean.orderId), orderListBean.index));
             DMNav.from(getContext()).forResult(1101).toUri(orderListBean.detailUrl);
         }
     }

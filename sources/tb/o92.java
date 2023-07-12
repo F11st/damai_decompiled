@@ -1,8 +1,7 @@
 package tb;
 
 import android.text.TextUtils;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.commonbusiness.seatbiz.seat.qilin.bean.TbParams;
 import cn.damai.seat.bean.UtCalculator;
 import cn.damai.seat.bean.UtDynamic;
@@ -23,15 +22,14 @@ public class o92 extends gb {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: tb.o92$a */
     /* loaded from: classes7.dex */
-    public static class C9515a {
+    public static class a {
         private static final o92 a = new o92();
     }
 
     public static final o92 l() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1996080149") ? (o92) ipChange.ipc$dispatch("-1996080149", new Object[0]) : C9515a.a;
+        return AndroidInstantRuntime.support(ipChange, "-1996080149") ? (o92) ipChange.ipc$dispatch("-1996080149", new Object[0]) : a.a;
     }
 
     @Override // tb.gb
@@ -46,10 +44,10 @@ public class o92 extends gb {
         return hashMap;
     }
 
-    public C0525a.C0527b j(String str, String str2) {
+    public a.b j(String str, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1688172804")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1688172804", new Object[]{this, str, str2});
+            return (a.b) ipChange.ipc$dispatch("1688172804", new Object[]{this, str, str2});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("item_id", str);
@@ -57,10 +55,10 @@ public class o92 extends gb {
         return e("seatselect", "seat", "preareabtn", hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b k(String str, String str2) {
+    public a.b k(String str, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1385278019")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-1385278019", new Object[]{this, str, str2});
+            return (a.b) ipChange.ipc$dispatch("-1385278019", new Object[]{this, str, str2});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("item_id", str);
@@ -68,10 +66,10 @@ public class o92 extends gb {
         return e("seatselect", "center", IRequestConst.VR, hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b m(String str, String str2) {
+    public a.b m(String str, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-149518873")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-149518873", new Object[]{this, str, str2});
+            return (a.b) ipChange.ipc$dispatch("-149518873", new Object[]{this, str, str2});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("item_id", str);
@@ -79,10 +77,10 @@ public class o92 extends gb {
         return e("seatselect", "discountinfor", "layer", hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b n(String str, String str2) {
+    public a.b n(String str, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1216491922")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1216491922", new Object[]{this, str, str2});
+            return (a.b) ipChange.ipc$dispatch("1216491922", new Object[]{this, str, str2});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("item_id", str);
@@ -90,10 +88,10 @@ public class o92 extends gb {
         return e("seatselect", "bottom", "openselectedlistbtn", hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b o(String str, String str2, String str3) {
+    public a.b o(String str, String str2, String str3) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1690119047")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("1690119047", new Object[]{this, str, str2, str3});
+            return (a.b) ipChange.ipc$dispatch("1690119047", new Object[]{this, str, str2, str3});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("item_id", str);
@@ -102,10 +100,10 @@ public class o92 extends gb {
         return e("seatselect", "seatselected", "delselect", hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b p(long j, int i, String str, String str2) {
+    public a.b p(long j, int i, String str, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1189066326")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-1189066326", new Object[]{this, Long.valueOf(j), Integer.valueOf(i), str, str2});
+            return (a.b) ipChange.ipc$dispatch("-1189066326", new Object[]{this, Long.valueOf(j), Integer.valueOf(i), str, str2});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("item_id", String.valueOf(j));
@@ -116,10 +114,10 @@ public class o92 extends gb {
         return e("seatselect", "pricelist", "imgprice_" + i, hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b q(String str, String str2) {
+    public a.b q(String str, String str2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1521080413")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-1521080413", new Object[]{this, str, str2});
+            return (a.b) ipChange.ipc$dispatch("-1521080413", new Object[]{this, str, str2});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("item_id", str);
@@ -127,10 +125,10 @@ public class o92 extends gb {
         return e("seatselect", "bottom", "confirm", hashMap, Boolean.TRUE);
     }
 
-    public C0525a.C0527b r(long j, String str) {
+    public a.b r(long j, String str) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1570995800")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("-1570995800", new Object[]{this, Long.valueOf(j), str});
+            return (a.b) ipChange.ipc$dispatch("-1570995800", new Object[]{this, Long.valueOf(j), str});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("item_id", String.valueOf(j));
@@ -138,14 +136,14 @@ public class o92 extends gb {
         return e("seatselect", "seat", "item_" + str, hashMap, Boolean.FALSE);
     }
 
-    public C0525a.C0527b s(long j, boolean z) {
+    public a.b s(long j, boolean z) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "602195765")) {
-            return (C0525a.C0527b) ipChange.ipc$dispatch("602195765", new Object[]{this, Long.valueOf(j), Boolean.valueOf(z)});
+            return (a.b) ipChange.ipc$dispatch("602195765", new Object[]{this, Long.valueOf(j), Boolean.valueOf(z)});
         }
         HashMap hashMap = new HashMap();
         hashMap.put("is_seat", z ? "1" : "0");
-        return new C0525a.C0527b().i("seatselect").d(String.valueOf(j)).j(hashMap);
+        return new a.b().i("seatselect").d(String.valueOf(j)).j(hashMap);
     }
 
     public void t(UtCalculator utCalculator) {
@@ -164,7 +162,7 @@ public class o92 extends gb {
                 hashMap.put("errMsg", utCalculator.errMsg);
             }
             hashMap.put("calcuInfo", utCalculator.getParamsInfo());
-            C0529c.e().x(e("seatselect", "seat_calculate", "result", hashMap, Boolean.FALSE));
+            cn.damai.common.user.c.e().x(e("seatselect", "seat_calculate", "result", hashMap, Boolean.FALSE));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -187,7 +185,7 @@ public class o92 extends gb {
                 hashMap.put("errCode", utDynamic.errorCode);
                 hashMap.put("errMsg", utDynamic.errorMsg);
             }
-            C0529c.e().x(e("seatselect", "dynamic_mtop", "result", hashMap, Boolean.FALSE));
+            cn.damai.common.user.c.e().x(e("seatselect", "dynamic_mtop", "result", hashMap, Boolean.FALSE));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -213,7 +211,7 @@ public class o92 extends gb {
                 hashMap.put("errCode", utExtra.errorCode);
                 hashMap.put("errMsg", utExtra.errorMsg);
             }
-            C0529c.e().x(e("seatselect", "pic_load", "result", hashMap, Boolean.FALSE));
+            cn.damai.common.user.c.e().x(e("seatselect", "pic_load", "result", hashMap, Boolean.FALSE));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -239,7 +237,7 @@ public class o92 extends gb {
                 hashMap.put("errCode", utExtra.errorCode);
                 hashMap.put("errMsg", utExtra.errorMsg);
             }
-            C0529c.e().x(e("seatselect", "seat_load", "result", hashMap, Boolean.FALSE));
+            cn.damai.common.user.c.e().x(e("seatselect", "seat_load", "result", hashMap, Boolean.FALSE));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -262,7 +260,7 @@ public class o92 extends gb {
                 hashMap.put("errCode", utStatus.errorCode);
                 hashMap.put("errMsg", utStatus.errorMsg);
             }
-            C0529c.e().x(e("seatselect", "status_mtop", "result", hashMap, Boolean.FALSE));
+            cn.damai.common.user.c.e().x(e("seatselect", "status_mtop", "result", hashMap, Boolean.FALSE));
         } catch (Exception e) {
             e.printStackTrace();
         }

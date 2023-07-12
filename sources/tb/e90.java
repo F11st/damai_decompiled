@@ -3,7 +3,6 @@ package tb;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
-import com.taobao.android.dinamic.C6313b;
 import com.taobao.android.dinamic.dinamic.DinamicViewAdvancedConstructor;
 import com.taobao.android.dinamic.view.DLoopLinearLayout;
 import java.util.ArrayList;
@@ -13,7 +12,7 @@ import java.util.ArrayList;
 public final class e90 {
     public static View a(Context context, View view, iy2 iy2Var, v80 v80Var) {
         x80 c = f90.c(view);
-        DinamicViewAdvancedConstructor d = C6313b.d(c.a);
+        DinamicViewAdvancedConstructor d = com.taobao.android.dinamic.b.d(c.a);
         if (d == null) {
             v80Var.e().b().a(p80.ERROR_CODE_VIEW_NOT_FOUND, c.a);
             return null;
@@ -38,7 +37,7 @@ public final class e90 {
     }
 
     public static View b(String str, Context context, AttributeSet attributeSet, v80 v80Var) {
-        DinamicViewAdvancedConstructor d = C6313b.d(str);
+        DinamicViewAdvancedConstructor d = com.taobao.android.dinamic.b.d(str);
         if (d == null) {
             v80Var.e().b().a(p80.ERROR_CODE_VIEW_NOT_FOUND, str);
             return null;

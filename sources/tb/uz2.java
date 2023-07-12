@@ -9,9 +9,7 @@ import android.text.TextUtils;
 import android.util.Pair;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.IConfigAdapter;
-import com.alibaba.aliweex.adapter.module.net.C3063a;
 import com.alibaba.aliweex.adapter.module.net.IWXConnection;
 import com.alibaba.aliweex.plugin.MtopPreloader;
 import com.alibaba.fastjson.JSON;
@@ -56,14 +54,13 @@ public class uz2 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.uz2$a */
     /* loaded from: classes5.dex */
-    public static class C9794a implements IWXStorageAdapter.OnResultReceivedListener {
+    public static class a implements IWXStorageAdapter.OnResultReceivedListener {
         final /* synthetic */ String a;
         final /* synthetic */ WXSDKInstance b;
         final /* synthetic */ String c;
 
-        C9794a(String str, WXSDKInstance wXSDKInstance, String str2) {
+        a(String str, WXSDKInstance wXSDKInstance, String str2) {
             this.a = str;
             this.b = wXSDKInstance;
             this.c = str2;
@@ -87,7 +84,7 @@ public class uz2 {
             JSONObject jSONObject2 = new JSONObject();
             jSONObject2.put("info", (Object) (TextUtils.isEmpty(this.a) ? "UNKOWN" : this.a));
             WXSDKInstance wXSDKInstance = this.b;
-            jSONObject2.put("network", (Object) ((wXSDKInstance == null || (a = C3063a.a(wXSDKInstance.getContext())) == null) ? "" : a.getNetworkType()));
+            jSONObject2.put("network", (Object) ((wXSDKInstance == null || (a = com.alibaba.aliweex.adapter.module.net.a.a(wXSDKInstance.getContext())) == null) ? "" : a.getNetworkType()));
             jSONObject.put("errorExt", (Object) jSONObject2);
             uz2.s(this.b, this.c, JSON.toJSONString(jSONObject));
         }
@@ -95,14 +92,13 @@ public class uz2 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.uz2$b */
     /* loaded from: classes5.dex */
-    public static class C9795b implements IWXStorageAdapter.OnResultReceivedListener {
+    public static class b implements IWXStorageAdapter.OnResultReceivedListener {
         final /* synthetic */ String a;
         final /* synthetic */ String b;
         final /* synthetic */ WXSDKInstance c;
 
-        C9795b(String str, String str2, WXSDKInstance wXSDKInstance) {
+        b(String str, String str2, WXSDKInstance wXSDKInstance) {
             this.a = str;
             this.b = str2;
             this.c = wXSDKInstance;
@@ -145,7 +141,7 @@ public class uz2 {
         }
         boolean z = true;
         try {
-            IConfigAdapter c2 = C3004a.l().c();
+            IConfigAdapter c2 = com.alibaba.aliweex.a.l().c();
             if (c2 != null) {
                 z = "true".equalsIgnoreCase(c2.getConfig("weex_adaper_url_intercept", "mtop_prefetch_status", "true"));
             }
@@ -157,7 +153,7 @@ public class uz2 {
     }
 
     public static boolean b() {
-        IConfigAdapter c2 = C3004a.l().c();
+        IConfigAdapter c2 = com.alibaba.aliweex.a.l().c();
         if (c2 != null) {
             String config = c2.getConfig("weex_adaper_url_intercept", "weex_prefetch_mtop_switch", "true");
             if (config == null || !"true".equalsIgnoreCase(config)) {
@@ -266,7 +262,7 @@ public class uz2 {
         }
         ArrayList arrayList = new ArrayList();
         try {
-            IConfigAdapter c2 = C3004a.l().c();
+            IConfigAdapter c2 = com.alibaba.aliweex.a.l().c();
             if (c2 != null && (parseArray = JSON.parseArray(c2.getConfig("weex_adaper_url_intercept", "mtop_prefetch_url_contains_white_list", "[]"))) != null) {
                 for (Object obj : parseArray.toArray()) {
                     arrayList.add(obj.toString());
@@ -309,7 +305,7 @@ public class uz2 {
         if (TextUtils.isEmpty(str)) {
             return null;
         }
-        IConfigAdapter c2 = C3004a.l().c();
+        IConfigAdapter c2 = com.alibaba.aliweex.a.l().c();
         String config = c2 != null ? c2.getConfig("weex_adaper_url_intercept", "weex_prefetch_map_url", "http://h5.m.taobao.com/app/prefetchmap/prefetch.js") : "http://h5.m.taobao.com/app/prefetchmap/prefetch.js";
         int i2 = 20;
         try {
@@ -521,7 +517,7 @@ public class uz2 {
             if (iWXStorageAdapter == null) {
                 return;
             }
-            iWXStorageAdapter.getItem(str, new C9794a(str2, wXSDKInstance, str));
+            iWXStorageAdapter.getItem(str, new a(str2, wXSDKInstance, str));
         } catch (Exception e2) {
             WXLogUtils.e("mtop预加载 mtop失败场景下，读取storage出错", e2);
         }
@@ -590,7 +586,7 @@ public class uz2 {
             if (iWXStorageAdapter == null) {
                 return;
             }
-            iWXStorageAdapter.setItem(str, str2, new C9795b(str, str2, wXSDKInstance));
+            iWXStorageAdapter.setItem(str, str2, new b(str, str2, wXSDKInstance));
         } catch (Exception e2) {
             e2.printStackTrace();
             c("save to storage error", e2.getMessage());
@@ -611,13 +607,13 @@ public class uz2 {
 
     public static boolean u() {
         String config;
-        IConfigAdapter c2 = C3004a.l().c();
+        IConfigAdapter c2 = com.alibaba.aliweex.a.l().c();
         return (c2 == null || (config = c2.getConfig("weex_adaper_url_intercept", "use_prefetchx", "true")) == null || !"true".equalsIgnoreCase(config)) ? false : true;
     }
 
     public static boolean v() {
         String config;
-        IConfigAdapter c2 = C3004a.l().c();
+        IConfigAdapter c2 = com.alibaba.aliweex.a.l().c();
         return (c2 == null || (config = c2.getConfig("weex_adaper_url_intercept", "use_prefetchx_embed_jsmodule", "false")) == null || !"true".equalsIgnoreCase(config)) ? false : true;
     }
 }

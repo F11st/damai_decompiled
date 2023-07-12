@@ -27,10 +27,9 @@ public class WXTabHeader extends WXVContainer {
     public Elevator mElevator;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.component.WXTabHeader$a */
     /* loaded from: classes5.dex */
-    class C3033a implements Elevator.IWATabHeaderChanged {
-        C3033a() {
+    class a implements Elevator.IWATabHeaderChanged {
+        a() {
         }
 
         @Override // com.alibaba.aliweex.adapter.view.Elevator.IWATabHeaderChanged
@@ -40,10 +39,9 @@ public class WXTabHeader extends WXVContainer {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.component.WXTabHeader$b */
     /* loaded from: classes5.dex */
-    class C3034b implements Elevator.ElevatorOnClicklistener {
-        C3034b() {
+    class b implements Elevator.ElevatorOnClicklistener {
+        b() {
         }
 
         @Override // com.alibaba.aliweex.adapter.view.Elevator.ElevatorOnClicklistener
@@ -101,7 +99,7 @@ public class WXTabHeader extends WXVContainer {
             return;
         }
         getEvents().add(str);
-        this.mElevator.p(new C3034b());
+        this.mElevator.p(new b());
     }
 
     @Override // com.taobao.weex.ui.component.WXVContainer, com.taobao.weex.ui.component.WXComponent
@@ -114,7 +112,7 @@ public class WXTabHeader extends WXVContainer {
     protected View initComponentHostView(@NonNull Context context) {
         Elevator elevator = new Elevator(context);
         this.mElevator = elevator;
-        elevator.q(new C3033a());
+        elevator.q(new a());
         return this.mElevator.m();
     }
 

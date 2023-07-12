@@ -23,7 +23,7 @@ public abstract class ContiguousSet<C extends Comparable> extends ImmutableSorte
     }
 
     @Deprecated
-    public static <E> ImmutableSortedSet.C4995a<E> builder() {
+    public static <E> ImmutableSortedSet.a<E> builder() {
         throw new UnsupportedOperationException();
     }
 

@@ -19,9 +19,8 @@ public class cz {
     private static cz f;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.cz$a */
     /* loaded from: classes10.dex */
-    public interface InterfaceC4409a {
+    public interface a {
         URLConnection a();
     }
 
@@ -37,15 +36,15 @@ public class cz {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public static df.EnumC4424b b(df dfVar, boolean z) {
-        return dfVar.o() == df.EnumC4423a.FIX ? z ? df.EnumC4424b.FIX_DEGRADE_BYERROR : df.EnumC4424b.FIX_DEGRADE_ONLY : z ? df.EnumC4424b.DEGRADE_BYERROR : df.EnumC4424b.DEGRADE_ONLY;
+    public static df.b b(df dfVar, boolean z) {
+        return dfVar.o() == df.a.FIX ? z ? df.b.FIX_DEGRADE_BYERROR : df.b.FIX_DEGRADE_ONLY : z ? df.b.DEGRADE_BYERROR : df.b.DEGRADE_ONLY;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     public static boolean c(df dfVar) throws bj {
         d(dfVar);
         if (b(dfVar)) {
-            if (dfVar.h().equals(dfVar.a()) || dfVar.o() == df.EnumC4423a.SINGLE) {
+            if (dfVar.h().equals(dfVar.a()) || dfVar.o() == df.a.SINGLE) {
                 return false;
             }
             return bl.h;
@@ -57,7 +56,7 @@ public class cz {
     private static dg d(df dfVar, boolean z) throws bj {
         byte[] bArr;
         d(dfVar);
-        dfVar.a(z ? df.EnumC4425c.HTTPS : df.EnumC4425c.HTTP);
+        dfVar.a(z ? df.c.HTTPS : df.c.HTTP);
         dg dgVar = null;
         long j = 0;
         boolean z2 = false;
@@ -67,7 +66,7 @@ public class cz {
                 j = SystemClock.elapsedRealtime();
                 dgVar = a(dfVar, a(dfVar, c2), c(dfVar, c2));
             } catch (bj e2) {
-                if (e2.f() == 21 && dfVar.o() == df.EnumC4423a.INTERRUPT_IO) {
+                if (e2.f() == 21 && dfVar.o() == df.a.INTERRUPT_IO) {
                     throw e2;
                 }
                 if (!c2) {
@@ -108,10 +107,10 @@ public class cz {
         }
     }
 
-    private static dg a(df dfVar, df.EnumC4424b enumC4424b, int i) throws bj {
+    private static dg a(df dfVar, df.b bVar, int i) throws bj {
         try {
             d(dfVar);
-            dfVar.a(enumC4424b);
+            dfVar.a(bVar);
             dfVar.c(i);
             return new dc().b(dfVar);
         } catch (bj e2) {
@@ -128,8 +127,8 @@ public class cz {
             d(dfVar);
             int m = dfVar.m();
             int i = bl.e;
-            if (dfVar.o() != df.EnumC4423a.FIX) {
-                if (dfVar.o() != df.EnumC4423a.SINGLE && m >= i && z) {
+            if (dfVar.o() != df.a.FIX) {
+                if (dfVar.o() != df.a.SINGLE && m >= i && z) {
                     return i;
                 }
             }
@@ -140,14 +139,14 @@ public class cz {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public static df.EnumC4424b a(df dfVar, boolean z) {
-        if (dfVar.o() == df.EnumC4423a.FIX) {
-            return df.EnumC4424b.FIX_NONDEGRADE;
+    public static df.b a(df dfVar, boolean z) {
+        if (dfVar.o() == df.a.FIX) {
+            return df.b.FIX_NONDEGRADE;
         }
-        if (dfVar.o() == df.EnumC4423a.SINGLE) {
-            return df.EnumC4424b.NEVER_GRADE;
+        if (dfVar.o() == df.a.SINGLE) {
+            return df.b.NEVER_GRADE;
         }
-        return z ? df.EnumC4424b.FIRST_NONDEGRADE : df.EnumC4424b.NEVER_GRADE;
+        return z ? df.b.FIRST_NONDEGRADE : df.b.NEVER_GRADE;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -170,7 +169,7 @@ public class cz {
                 j2 = SystemClock.elapsedRealtime() - j;
             }
             int m = dfVar.m();
-            if (dfVar.o() != df.EnumC4423a.FIX && dfVar.o() != df.EnumC4423a.SINGLE) {
+            if (dfVar.o() != df.a.FIX && dfVar.o() != df.a.SINGLE) {
                 long j3 = m;
                 if (j2 < j3) {
                     long j4 = j3 - j2;

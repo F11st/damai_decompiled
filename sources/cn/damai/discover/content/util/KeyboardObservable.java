@@ -22,12 +22,11 @@ public class KeyboardObservable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.content.util.KeyboardObservable$a */
     /* loaded from: classes14.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC1013a implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class a implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC1013a() {
+        a() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -61,7 +60,7 @@ public class KeyboardObservable {
             this.c = onSoftKeyboardChangeListener;
             View decorView = activity.getWindow().getDecorView();
             this.a = decorView;
-            decorView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC1013a());
+            decorView.getViewTreeObserver().addOnGlobalLayoutListener(new a());
         }
     }
 }

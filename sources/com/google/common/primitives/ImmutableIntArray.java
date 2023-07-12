@@ -111,13 +111,12 @@ public final class ImmutableIntArray implements Serializable {
 
     /* compiled from: Taobao */
     @CanIgnoreReturnValue
-    /* renamed from: com.google.common.primitives.ImmutableIntArray$b */
     /* loaded from: classes10.dex */
-    public static final class C5251b {
+    public static final class b {
         private int[] a;
         private int b = 0;
 
-        C5251b(int i) {
+        b(int i) {
             this.a = new int[i];
         }
 
@@ -145,7 +144,7 @@ public final class ImmutableIntArray implements Serializable {
             throw new AssertionError("cannot store more than MAX_VALUE elements");
         }
 
-        public C5251b a(int i) {
+        public b a(int i) {
             e(1);
             int[] iArr = this.a;
             int i2 = this.b;
@@ -154,7 +153,7 @@ public final class ImmutableIntArray implements Serializable {
             return this;
         }
 
-        public C5251b b(Iterable<Integer> iterable) {
+        public b b(Iterable<Integer> iterable) {
             if (iterable instanceof Collection) {
                 return c((Collection) iterable);
             }
@@ -164,7 +163,7 @@ public final class ImmutableIntArray implements Serializable {
             return this;
         }
 
-        public C5251b c(Collection<Integer> collection) {
+        public b c(Collection<Integer> collection) {
             e(collection.size());
             for (Integer num : collection) {
                 int[] iArr = this.a;
@@ -181,9 +180,9 @@ public final class ImmutableIntArray implements Serializable {
         }
     }
 
-    public static C5251b builder(int i) {
+    public static b builder(int i) {
         du1.f(i >= 0, "Invalid initialCapacity: %s", i);
-        return new C5251b(i);
+        return new b(i);
     }
 
     public static ImmutableIntArray copyOf(int[] iArr) {
@@ -333,8 +332,8 @@ public final class ImmutableIntArray implements Serializable {
         this.end = i2;
     }
 
-    public static C5251b builder() {
-        return new C5251b(10);
+    public static b builder() {
+        return new b(10);
     }
 
     public static ImmutableIntArray copyOf(Iterable<Integer> iterable) {

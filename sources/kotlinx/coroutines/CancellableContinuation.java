@@ -13,9 +13,8 @@ import tb.wt2;
 public interface CancellableContinuation<T> extends Continuation<T> {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.CancellableContinuation$a */
     /* loaded from: classes8.dex */
-    public static final class C8608a {
+    public static final class a {
         public static /* synthetic */ Object a(CancellableContinuation cancellableContinuation, Object obj, Object obj2, int i, Object obj3) {
             if (obj3 == null) {
                 if ((i & 2) != 0) {

@@ -67,14 +67,13 @@ public class WXCalendarModule extends WXModule {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.module.WXCalendarModule$a */
     /* loaded from: classes5.dex */
-    class C3043a implements PermissionCallback {
+    class a implements PermissionCallback {
         final /* synthetic */ JSONObject a;
         final /* synthetic */ JSCallback b;
         final /* synthetic */ JSCallback c;
 
-        C3043a(JSONObject jSONObject, JSCallback jSCallback, JSCallback jSCallback2) {
+        a(JSONObject jSONObject, JSCallback jSCallback, JSCallback jSCallback2) {
             this.a = jSONObject;
             this.b = jSCallback;
             this.c = jSCallback2;
@@ -103,14 +102,13 @@ public class WXCalendarModule extends WXModule {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.module.WXCalendarModule$b */
     /* loaded from: classes5.dex */
-    class C3044b implements PermissionCallback {
+    class b implements PermissionCallback {
         final /* synthetic */ JSONObject a;
         final /* synthetic */ JSCallback b;
         final /* synthetic */ JSCallback c;
 
-        C3044b(JSONObject jSONObject, JSCallback jSCallback, JSCallback jSCallback2) {
+        b(JSONObject jSONObject, JSCallback jSCallback, JSCallback jSCallback2) {
             this.a = jSONObject;
             this.b = jSCallback;
             this.c = jSCallback2;
@@ -144,14 +142,13 @@ public class WXCalendarModule extends WXModule {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.module.WXCalendarModule$c */
     /* loaded from: classes5.dex */
-    class C3045c implements PermissionCallback {
+    class c implements PermissionCallback {
         final /* synthetic */ JSONObject a;
         final /* synthetic */ JSCallback b;
         final /* synthetic */ JSCallback c;
 
-        C3045c(JSONObject jSONObject, JSCallback jSCallback, JSCallback jSCallback2) {
+        c(JSONObject jSONObject, JSCallback jSCallback, JSCallback jSCallback2) {
             this.a = jSONObject;
             this.b = jSCallback;
             this.c = jSCallback2;
@@ -251,12 +248,12 @@ public class WXCalendarModule extends WXModule {
 
     @JSMethod
     public void addEvent(JSONObject jSONObject, JSCallback jSCallback, JSCallback jSCallback2) {
-        requestPermission(new C3043a(jSONObject, jSCallback, jSCallback2), "android.permission.READ_CALENDAR", "android.permission.WRITE_CALENDAR");
+        requestPermission(new a(jSONObject, jSCallback, jSCallback2), "android.permission.READ_CALENDAR", "android.permission.WRITE_CALENDAR");
     }
 
     @JSMethod
     public void checkEvent(JSONObject jSONObject, JSCallback jSCallback, JSCallback jSCallback2) {
-        requestPermission(new C3044b(jSONObject, jSCallback, jSCallback2), "android.permission.READ_CALENDAR");
+        requestPermission(new b(jSONObject, jSCallback, jSCallback2), "android.permission.READ_CALENDAR");
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:27:0x005f, code lost:
@@ -380,6 +377,6 @@ public class WXCalendarModule extends WXModule {
 
     @JSMethod
     public void removeEvent(JSONObject jSONObject, JSCallback jSCallback, JSCallback jSCallback2) {
-        requestPermission(new C3045c(jSONObject, jSCallback, jSCallback2), "android.permission.READ_CALENDAR", "android.permission.WRITE_CALENDAR");
+        requestPermission(new c(jSONObject, jSCallback, jSCallback2), "android.permission.READ_CALENDAR", "android.permission.WRITE_CALENDAR");
     }
 }

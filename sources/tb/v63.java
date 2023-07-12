@@ -1,7 +1,5 @@
 package tb;
 
-import com.efs.sdk.base.a.e.HandlerC4788a;
-import com.efs.sdk.base.a.e.HandlerC4790b;
 import tb.n73;
 
 /* compiled from: Taobao */
@@ -14,10 +12,10 @@ public final class v63 extends p33 {
             b(j43Var);
             return;
         }
-        HandlerC4788a a2 = HandlerC4788a.a();
-        if (!j43Var.b.b || HandlerC4790b.b().e(j43Var.a.a, j43Var.a())) {
-            n73.C9462a.a().c.b();
-            n73.C9462a.a().c.c();
+        com.efs.sdk.base.a.e.a a2 = com.efs.sdk.base.a.e.a.a();
+        if (!j43Var.b.b || com.efs.sdk.base.a.e.b.b().e(j43Var.a.a, j43Var.a())) {
+            n73.a.a().c.b();
+            n73.a.a().c.c();
             a = a2.b.a(j43Var, false);
         } else {
             a = new l01();

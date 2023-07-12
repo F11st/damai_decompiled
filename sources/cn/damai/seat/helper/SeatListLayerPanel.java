@@ -18,10 +18,10 @@ import tb.m62;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
-public class SeatListLayerPanel extends C1666a implements View.OnClickListener {
+public class SeatListLayerPanel extends cn.damai.seat.helper.a implements View.OnClickListener {
     private static transient /* synthetic */ IpChange $ipChange;
     private ViewStub b;
-    private C1660a c;
+    private a c;
     private List<TicketMainUiModel> d;
     private View e;
     private SeatListDetailV2Adapter f;
@@ -34,13 +34,12 @@ public class SeatListLayerPanel extends C1666a implements View.OnClickListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.helper.SeatListLayerPanel$a */
     /* loaded from: classes7.dex */
-    public static class C1660a implements OnPanelStateListener {
+    public static class a implements OnPanelStateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private OnPanelStateListener a;
 
-        public C1660a(OnPanelStateListener onPanelStateListener) {
+        public a(OnPanelStateListener onPanelStateListener) {
             this.a = onPanelStateListener;
         }
 
@@ -61,7 +60,7 @@ public class SeatListLayerPanel extends C1666a implements View.OnClickListener {
     public SeatListLayerPanel(Activity activity, ViewStub viewStub, OnPanelStateListener onPanelStateListener) {
         super(activity);
         this.b = viewStub;
-        this.c = new C1660a(onPanelStateListener);
+        this.c = new a(onPanelStateListener);
         this.g = m62.a(activity, 18.0f);
     }
 

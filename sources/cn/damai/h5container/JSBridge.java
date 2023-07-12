@@ -16,7 +16,7 @@ import cn.damai.weex.WeexActivity;
 import cn.damai.wxapi.WXEntryActivity;
 import cn.damai.wxapi.WXPayEntryActivity;
 import com.alipay.sdk.app.PayTask;
-import com.alipay.sdk.m.u.C4316l;
+import com.alipay.sdk.m.u.l;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.tencent.mm.opensdk.modelbase.BaseResp;
@@ -50,9 +50,9 @@ public class JSBridge {
                 Result2 result2 = new Result2((String) message.obj);
                 try {
                     JSONObject jSONObject = new JSONObject();
-                    jSONObject.put(C4316l.a, result2.resultStatus);
+                    jSONObject.put(l.a, result2.resultStatus);
                     jSONObject.put("result", result2.result);
-                    jSONObject.put(C4316l.b, result2.memo);
+                    jSONObject.put(l.b, result2.memo);
                     JSBridge jSBridge = JSBridge.this;
                     jSBridge.onAlipay(jSBridge.mAliPayJSCallBack, jSONObject.toString());
                 } catch (Exception e) {

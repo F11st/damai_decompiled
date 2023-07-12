@@ -89,7 +89,7 @@ class BasePagerIndicator extends LinearLayout {
         config.margin = obtainStyledAttributes.getDimensionPixelSize(R.styleable.BasePagerIndicator_indicator_margin, -1);
         config.animatorResId = obtainStyledAttributes.getResourceId(R.styleable.BasePagerIndicator_indicator_animator, R.animator.indicator_scale);
         config.animatorReverseResId = obtainStyledAttributes.getResourceId(R.styleable.BasePagerIndicator_indicator_animator_reverse, 0);
-        int resourceId = obtainStyledAttributes.getResourceId(R.styleable.BasePagerIndicator_indicator_drawable, R.C4041drawable.indicator_white_dot);
+        int resourceId = obtainStyledAttributes.getResourceId(R.styleable.BasePagerIndicator_indicator_drawable, R.drawable.indicator_white_dot);
         config.backgroundResId = resourceId;
         config.unselectedBackgroundId = obtainStyledAttributes.getResourceId(R.styleable.BasePagerIndicator_indicator_drawable_unselected, resourceId);
         config.orientation = obtainStyledAttributes.getInt(R.styleable.BasePagerIndicator_indicator_orientation, -1);
@@ -249,7 +249,7 @@ class BasePagerIndicator extends LinearLayout {
         this.mImmediateAnimatorIn = createAnimatorIn;
         createAnimatorIn.setDuration(0L);
         int i4 = config.backgroundResId;
-        this.mIndicatorBackgroundResId = i4 == 0 ? R.C4041drawable.indicator_white_dot : i4;
+        this.mIndicatorBackgroundResId = i4 == 0 ? R.drawable.indicator_white_dot : i4;
         int i5 = config.unselectedBackgroundId;
         if (i5 != 0) {
             i4 = i5;

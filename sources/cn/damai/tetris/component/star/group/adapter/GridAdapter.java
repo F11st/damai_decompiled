@@ -29,15 +29,14 @@ public class GridAdapter extends BaseAdapter {
     private List<StarInfoItem> starInfoItems;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.star.group.adapter.GridAdapter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1969a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ViewGroup a;
         final /* synthetic */ StarInfoItem b;
         final /* synthetic */ int c;
 
-        View$OnClickListenerC1969a(ViewGroup viewGroup, StarInfoItem starInfoItem, int i) {
+        a(ViewGroup viewGroup, StarInfoItem starInfoItem, int i) {
             this.a = viewGroup;
             this.b = starInfoItem;
             this.c = i;
@@ -105,7 +104,7 @@ public class GridAdapter extends BaseAdapter {
         }
         BasePresenter basePresenter = this.mPresenter;
         basePresenter.userTrackExpose(inflate, "artist_item_" + i);
-        inflate.setOnClickListener(new View$OnClickListenerC1969a(viewGroup, item, i));
+        inflate.setOnClickListener(new a(viewGroup, item, i));
         return inflate;
     }
 

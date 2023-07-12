@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.user.C0529c;
 import cn.damai.ultron.R$id;
 import cn.damai.ultron.R$layout;
 import cn.damai.ultron.custom.ExpandState;
@@ -31,7 +30,7 @@ import java.util.List;
 /* loaded from: classes9.dex */
 public class nb0 extends j1 {
     private static transient /* synthetic */ IpChange $ipChange;
-    public static final IViewHolderCreator CREATOR = new C9468b();
+    public static final IViewHolderCreator CREATOR = new b();
     private RecyclerView c;
     private DmBuyerViewAdapter d;
     private LinearLayout e;
@@ -44,12 +43,11 @@ public class nb0 extends j1 {
     private boolean l;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.nb0$a */
     /* loaded from: classes9.dex */
-    public class View$OnClickListenerC9467a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9467a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -61,18 +59,17 @@ public class nb0 extends j1 {
                 nb0.this.l();
                 nb0.this.d.f(nb0.this.g);
                 nb0.this.d.notifyDataSetChanged();
-                C0529c.e().x(kb0.u().q(nb0.this.h));
+                cn.damai.common.user.c.e().x(kb0.u().q(nb0.this.h));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.nb0$b */
     /* loaded from: classes9.dex */
-    public static final class C9468b implements IViewHolderCreator {
+    public static final class b implements IViewHolderCreator {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9468b() {
+        b() {
         }
 
         @Override // com.alibaba.android.ultron.vfw.viewholder.IViewHolderCreator
@@ -86,7 +83,7 @@ public class nb0 extends j1 {
         super(ay2Var);
         this.g = ExpandState.HIDE;
         this.j = 2;
-        this.k = new View$OnClickListenerC9467a();
+        this.k = new a();
         this.l = true;
     }
 
@@ -145,26 +142,26 @@ public class nb0 extends j1 {
                 db0 db0Var = new db0((DMComponent) iDMComponent);
                 this.i = db0Var;
                 int e = wh2.e(db0Var.e());
-                int b = this.i.b();
+                int b2 = this.i.b();
                 this.j = e;
                 m(e);
                 DmBuyerViewAdapter dmBuyerViewAdapter = new DmBuyerViewAdapter(this.h);
                 this.d = dmBuyerViewAdapter;
                 dmBuyerViewAdapter.h(this.i);
-                this.d.g(b);
+                this.d.g(b2);
                 this.d.e(this.j);
                 this.d.f(this.g);
                 this.c.setAdapter(this.d);
-                String[] b2 = x8.Companion.b(ua0.b(this.h) + "", this.h);
-                if (!this.l || b2.length <= 0 || e <= 0) {
+                String[] b3 = x8.Companion.b(ua0.b(this.h) + "", this.h);
+                if (!this.l || b3.length <= 0 || e <= 0) {
                     return;
                 }
                 this.l = false;
                 List<DmViewerBean> e2 = this.i.e();
                 HashMap hashMap = new HashMap();
                 int i = 0;
-                for (String str : b2) {
-                    if (!TextUtils.isEmpty(str) && i < b) {
+                for (String str : b3) {
+                    if (!TextUtils.isEmpty(str) && i < b2) {
                         Iterator<DmViewerBean> it = e2.iterator();
                         while (true) {
                             if (it.hasNext()) {

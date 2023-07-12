@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import com.alibaba.security.biometrics.R;
-import com.alibaba.security.common.track.model.C3834a;
+import com.alibaba.security.common.track.model.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
@@ -39,8 +39,8 @@ public class PrivacyWidget extends BaseWidget {
 
     @Override // com.alibaba.security.biometrics.logic.view.widget.BaseWidget
     protected final void b() {
-        C3788b.a(this.b, c("mainButton"));
-        C3788b.a(this.c, a("logoImageView"), R.C3735drawable.rp_face_privacy_logo);
+        b.a(this.b, c("mainButton"));
+        b.a(this.c, a("logoImageView"), R.drawable.rp_face_privacy_logo);
     }
 
     @Override // com.alibaba.security.biometrics.logic.view.widget.BaseWidget
@@ -49,7 +49,7 @@ public class PrivacyWidget extends BaseWidget {
 
     @Override // com.alibaba.security.biometrics.logic.view.widget.BaseWidget
     protected String getSkinParentKey() {
-        return C3834a.C3836b.n;
+        return a.b.n;
     }
 
     public PrivacyWidget(Context context, AttributeSet attributeSet) {

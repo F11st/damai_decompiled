@@ -42,12 +42,11 @@ public final class QuickUpNumTextView extends AppCompatTextView implements Anima
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.QuickUpNumTextView$a */
     /* loaded from: classes7.dex */
-    public static final class C3582a implements DataListener {
+    public static final class a implements DataListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3582a() {
+        a() {
         }
 
         @Override // com.alibaba.pictures.bricks.view.QuickUpNumTextView.DataListener
@@ -59,13 +58,12 @@ public final class QuickUpNumTextView extends AppCompatTextView implements Anima
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.QuickUpNumTextView$b */
     /* loaded from: classes7.dex */
-    public static final class C3583b implements DataListener {
+    public static final class b implements DataListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C3583b(String str) {
+        b(String str) {
             this.a = str;
         }
 
@@ -87,7 +85,7 @@ public final class QuickUpNumTextView extends AppCompatTextView implements Anima
         super(context);
         b41.i(context, WPKFactory.INIT_KEY_CONTEXT);
         this.valueAnimator = new ValueAnimator();
-        this.mListen = new C3582a();
+        this.mListen = new a();
     }
 
     public static /* synthetic */ void animatorStart$default(QuickUpNumTextView quickUpNumTextView, float f, long j, float f2, int i, Object obj) {
@@ -238,7 +236,7 @@ public final class QuickUpNumTextView extends AppCompatTextView implements Anima
             return;
         }
         b41.i(str, "patterns");
-        this.mListen = new C3583b(str);
+        this.mListen = new b(str);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -246,7 +244,7 @@ public final class QuickUpNumTextView extends AppCompatTextView implements Anima
         super(context, attributeSet);
         b41.i(context, WPKFactory.INIT_KEY_CONTEXT);
         this.valueAnimator = new ValueAnimator();
-        this.mListen = new C3582a();
+        this.mListen = new a();
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -254,6 +252,6 @@ public final class QuickUpNumTextView extends AppCompatTextView implements Anima
         super(context, attributeSet, i);
         b41.i(context, WPKFactory.INIT_KEY_CONTEXT);
         this.valueAnimator = new ValueAnimator();
-        this.mListen = new C3582a();
+        this.mListen = new a();
     }
 }

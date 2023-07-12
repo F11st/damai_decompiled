@@ -6,7 +6,6 @@ import cn.damai.common.db.DbManager;
 import cn.damai.common.db.ex.DbException;
 import cn.damai.ticklet.bean.UserTicketTable;
 import cn.damai.ticklet.ui.fragment.TicketDetailExtFragment;
-import cn.damai.ticklet.utils.C2088a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
@@ -29,7 +28,7 @@ public class cn2 {
         } else if (userTicketTable != null) {
             try {
                 if ("1".equals(userTicketTable.getVoucherType()) && !xh2.c(userTicketTable.getVerifyCode())) {
-                    userTicketTable.setVerifyCode(new String(Base64.encode(C2088a.b(userTicketTable.getVerifyCode().getBytes(), fu1.c(), Base64.decode(C2088a.d(mu0.a()), 2)), 2)));
+                    userTicketTable.setVerifyCode(new String(Base64.encode(cn.damai.ticklet.utils.a.b(userTicketTable.getVerifyCode().getBytes(), fu1.c(), Base64.decode(cn.damai.ticklet.utils.a.d(mu0.a()), 2)), 2)));
                 }
                 userTicketTable.setOrderby(qn1.a(userTicketTable));
                 userTicketTable.setUserCode(fu1.c());
@@ -114,7 +113,7 @@ public class cn2 {
         }
         try {
             if ("1".equals(userTicketTable.getVoucherType()) && !xh2.c(userTicketTable.getVerifyCode())) {
-                userTicketTable.setVerifyCode(new String(Base64.encode(C2088a.b(userTicketTable.getVerifyCode().getBytes(), fu1.c(), Base64.decode(C2088a.d(mu0.a()), 2)), 2)));
+                userTicketTable.setVerifyCode(new String(Base64.encode(cn.damai.ticklet.utils.a.b(userTicketTable.getVerifyCode().getBytes(), fu1.c(), Base64.decode(cn.damai.ticklet.utils.a.d(mu0.a()), 2)), 2)));
             }
             userTicketTable.setOrderby(qn1.a(userTicketTable));
             userTicketTable.setUserCode(fu1.c());

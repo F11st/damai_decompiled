@@ -17,16 +17,15 @@ import com.taobao.android.ultron.common.model.IDMComponent;
 /* loaded from: classes9.dex */
 public class wa0 extends j1 {
     private static transient /* synthetic */ IpChange $ipChange;
-    public static final IViewHolderCreator CREATOR = new C9849a();
+    public static final IViewHolderCreator CREATOR = new a();
     private PayTypeView c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.wa0$a */
     /* loaded from: classes9.dex */
-    public static final class C9849a implements IViewHolderCreator {
+    public static final class a implements IViewHolderCreator {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9849a() {
+        a() {
         }
 
         @Override // com.alibaba.android.ultron.vfw.viewholder.IViewHolderCreator

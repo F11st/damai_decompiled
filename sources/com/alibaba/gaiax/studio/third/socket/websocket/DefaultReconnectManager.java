@@ -9,7 +9,7 @@ import tb.eb1;
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
 public class DefaultReconnectManager implements ReconnectManager {
-    private C3392b b;
+    private b b;
     private ReconnectManager.OnConnectListener c;
     private final Object a = new Object();
     private volatile boolean f = false;
@@ -20,8 +20,8 @@ public class DefaultReconnectManager implements ReconnectManager {
     private volatile boolean d = false;
     private volatile boolean e = false;
 
-    public DefaultReconnectManager(C3392b c3392b, ReconnectManager.OnConnectListener onConnectListener) {
-        this.b = c3392b;
+    public DefaultReconnectManager(b bVar, ReconnectManager.OnConnectListener onConnectListener) {
+        this.b = bVar;
         this.c = onConnectListener;
     }
 

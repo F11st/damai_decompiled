@@ -166,7 +166,7 @@ public abstract class WXComponent<T extends View> extends WXBasicComponent imple
     private GraphicSize mPseudoResetGraphicSize;
     private Drawable mRippleBackground;
     private int mStickyOffset;
-    public wz2.C9891b mTraceInfo;
+    public wz2.b mTraceInfo;
     private WXTransition mTransition;
     private int mType;
     private String mViewTreeKey;
@@ -1298,7 +1298,7 @@ public abstract class WXComponent<T extends View> extends WXBasicComponent imple
         if (wz2.b()) {
             double a = sg2.a(this.mTraceInfo.e);
             if (i == 2 || i == 0) {
-                wz2.C9890a c = wz2.c("DomExecute", getInstanceId(), this.mTraceInfo.a);
+                wz2.a c = wz2.c("DomExecute", getInstanceId(), this.mTraceInfo.a);
                 c.c = "X";
                 c.e = this.mTraceInfo.c;
                 c.b = "DOMThread";
@@ -1311,7 +1311,7 @@ public abstract class WXComponent<T extends View> extends WXBasicComponent imple
             }
             if (i == 2 || i == 1) {
                 if (this.mTraceInfo.d != -1) {
-                    wz2.C9890a c2 = wz2.c("UIExecute", getInstanceId(), this.mTraceInfo.a);
+                    wz2.a c2 = wz2.c("UIExecute", getInstanceId(), this.mTraceInfo.a);
                     c2.c = "X";
                     c2.l = a;
                     c2.e = this.mTraceInfo.d;
@@ -2735,7 +2735,7 @@ public abstract class WXComponent<T extends View> extends WXBasicComponent imple
         this.interactionAbsoluteY = 0;
         this.mChildrensWidth = 0;
         this.mHasAddFocusListener = false;
-        this.mTraceInfo = new wz2.C9891b();
+        this.mTraceInfo = new wz2.b();
         this.waste = false;
         this.isIgnoreInteraction = false;
         this.mLazy = false;

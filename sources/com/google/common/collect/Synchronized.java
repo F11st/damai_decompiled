@@ -95,15 +95,14 @@ public final class Synchronized {
         private static final long serialVersionUID = 0;
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.Synchronized$SynchronizedAsMapValues$a */
         /* loaded from: classes10.dex */
-        class C5125a extends AbstractC5190j0<Collection<V>, Collection<V>> {
-            C5125a(Iterator it) {
+        class a extends j0<Collection<V>, Collection<V>> {
+            a(Iterator it) {
                 super(it);
             }
 
             /* JADX INFO: Access modifiers changed from: package-private */
-            @Override // com.google.common.collect.AbstractC5190j0
+            @Override // com.google.common.collect.j0
             /* renamed from: b */
             public Collection<V> a(Collection<V> collection) {
                 return Synchronized.q(collection, SynchronizedAsMapValues.this.mutex);
@@ -116,7 +115,7 @@ public final class Synchronized {
 
         @Override // com.google.common.collect.Synchronized.SynchronizedCollection, java.util.Collection, java.lang.Iterable, java.util.Set
         public Iterator<Collection<V>> iterator() {
-            return new C5125a(super.iterator());
+            return new a(super.iterator());
         }
     }
 
@@ -1103,10 +1102,9 @@ public final class Synchronized {
     public static final class SynchronizedTable<R, C, V> extends SynchronizedObject implements Table<R, C, V> {
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.Synchronized$SynchronizedTable$a */
         /* loaded from: classes10.dex */
-        class C5126a implements Function<Map<C, V>, Map<C, V>> {
-            C5126a() {
+        class a implements Function<Map<C, V>, Map<C, V>> {
+            a() {
             }
 
             @Override // com.google.common.base.Function
@@ -1117,10 +1115,9 @@ public final class Synchronized {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.Synchronized$SynchronizedTable$b */
         /* loaded from: classes10.dex */
-        class C5127b implements Function<Map<R, V>, Map<R, V>> {
-            C5127b() {
+        class b implements Function<Map<R, V>, Map<R, V>> {
+            b() {
             }
 
             @Override // com.google.common.base.Function
@@ -1172,7 +1169,7 @@ public final class Synchronized {
         public Map<C, Map<R, V>> columnMap() {
             Map<C, Map<R, V>> i;
             synchronized (this.mutex) {
-                i = Synchronized.i(Maps.D(delegate().columnMap(), new C5127b()), this.mutex);
+                i = Synchronized.i(Maps.D(delegate().columnMap(), new b()), this.mutex);
             }
             return i;
         }
@@ -1299,7 +1296,7 @@ public final class Synchronized {
         public Map<R, Map<C, V>> rowMap() {
             Map<R, Map<C, V>> i;
             synchronized (this.mutex) {
-                i = Synchronized.i(Maps.D(delegate().rowMap(), new C5126a()), this.mutex);
+                i = Synchronized.i(Maps.D(delegate().rowMap(), new a()), this.mutex);
             }
             return i;
         }
@@ -1689,23 +1686,22 @@ public final class Synchronized {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: com.google.common.collect.Synchronized$SynchronizedAsMapEntries$a */
         /* loaded from: classes10.dex */
-        public class C5123a extends AbstractC5190j0<Map.Entry<K, Collection<V>>, Map.Entry<K, Collection<V>>> {
+        public class a extends j0<Map.Entry<K, Collection<V>>, Map.Entry<K, Collection<V>>> {
 
             /* JADX INFO: Access modifiers changed from: package-private */
             /* compiled from: Taobao */
-            /* renamed from: com.google.common.collect.Synchronized$SynchronizedAsMapEntries$a$a */
+            /* renamed from: com.google.common.collect.Synchronized$SynchronizedAsMapEntries$a$a  reason: collision with other inner class name */
             /* loaded from: classes10.dex */
-            public class C5124a extends gp0<K, Collection<V>> {
+            public class C0236a extends gp0<K, Collection<V>> {
                 final /* synthetic */ Map.Entry a;
 
-                C5124a(Map.Entry entry) {
+                C0236a(Map.Entry entry) {
                     this.a = entry;
                 }
 
                 /* JADX INFO: Access modifiers changed from: protected */
-                @Override // com.google.common.collect.AbstractC5205t
+                @Override // com.google.common.collect.t
                 /* renamed from: a */
                 public Map.Entry<K, Collection<V>> delegate() {
                     return this.a;
@@ -1718,15 +1714,15 @@ public final class Synchronized {
                 }
             }
 
-            C5123a(Iterator it) {
+            a(Iterator it) {
                 super(it);
             }
 
             /* JADX INFO: Access modifiers changed from: package-private */
-            @Override // com.google.common.collect.AbstractC5190j0
+            @Override // com.google.common.collect.j0
             /* renamed from: b */
             public Map.Entry<K, Collection<V>> a(Map.Entry<K, Collection<V>> entry) {
-                return new C5124a(entry);
+                return new C0236a(entry);
             }
         }
 
@@ -1747,26 +1743,26 @@ public final class Synchronized {
         public boolean containsAll(Collection<?> collection) {
             boolean b;
             synchronized (this.mutex) {
-                b = C5193l.b(delegate(), collection);
+                b = l.b(delegate(), collection);
             }
             return b;
         }
 
         @Override // com.google.common.collect.Synchronized.SynchronizedSet, java.util.Collection, java.util.Set
         public boolean equals(Object obj) {
-            boolean a;
+            boolean a2;
             if (obj == this) {
                 return true;
             }
             synchronized (this.mutex) {
-                a = Sets.a(delegate(), obj);
+                a2 = Sets.a(delegate(), obj);
             }
-            return a;
+            return a2;
         }
 
         @Override // com.google.common.collect.Synchronized.SynchronizedCollection, java.util.Collection, java.lang.Iterable, java.util.Set
         public Iterator<Map.Entry<K, Collection<V>>> iterator() {
-            return new C5123a(super.iterator());
+            return new a(super.iterator());
         }
 
         @Override // com.google.common.collect.Synchronized.SynchronizedCollection, java.util.Collection, java.util.Set
@@ -1800,7 +1796,7 @@ public final class Synchronized {
         public Object[] toArray() {
             Object[] f;
             synchronized (this.mutex) {
-                f = C5158b0.f(delegate());
+                f = b0.f(delegate());
             }
             return f;
         }
@@ -1809,7 +1805,7 @@ public final class Synchronized {
         public <T> T[] toArray(T[] tArr) {
             T[] tArr2;
             synchronized (this.mutex) {
-                tArr2 = (T[]) C5158b0.g(delegate(), tArr);
+                tArr2 = (T[]) b0.g(delegate(), tArr);
             }
             return tArr2;
         }

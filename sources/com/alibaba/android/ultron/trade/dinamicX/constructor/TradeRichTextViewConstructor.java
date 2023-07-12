@@ -41,9 +41,8 @@ public class TradeRichTextViewConstructor extends DTextViewConstructor {
     public static final String VIEW_TAG = "TradeRichTextView";
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.ultron.trade.dinamicX.constructor.TradeRichTextViewConstructor$a */
     /* loaded from: classes15.dex */
-    public static class C3247a {
+    public static class a {
         public int a;
         public int b;
         public int c = 33;
@@ -51,13 +50,12 @@ public class TradeRichTextViewConstructor extends DTextViewConstructor {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.ultron.trade.dinamicX.constructor.TradeRichTextViewConstructor$b */
     /* loaded from: classes15.dex */
-    public static class C3248b extends ClickableSpan {
+    public static class b extends ClickableSpan {
         private String a;
         private int b;
 
-        public C3248b(String str, int i) {
+        public b(String str, int i) {
             this.a = str;
             this.b = i;
         }
@@ -93,17 +91,17 @@ public class TradeRichTextViewConstructor extends DTextViewConstructor {
         return jSONObject.getJSONObject("event");
     }
 
-    private C3247a getEventSpan(Map<String, Object> map, JSONObject jSONObject, String str, String str2, C3247a c3247a) {
+    private a getEventSpan(Map<String, Object> map, JSONObject jSONObject, String str, String str2, a aVar) {
         Object obj;
         if (jSONObject == null) {
             return null;
         }
         JSONObject eventObj = getEventObj(jSONObject);
-        C3247a c3247a2 = new C3247a();
+        a aVar2 = new a();
         int indexOf = str.indexOf(str2);
-        c3247a2.a = indexOf;
-        c3247a2.b = indexOf + str2.length();
-        ForegroundColorSpan richTextColor = getRichTextColor(c3247a);
+        aVar2.a = indexOf;
+        aVar2.b = indexOf + str2.length();
+        ForegroundColorSpan richTextColor = getRichTextColor(aVar);
         int i = -16776961;
         if (map != null && (obj = map.get("dTextColor")) != null) {
             i = rk.e(obj.toString(), -16776961);
@@ -113,10 +111,10 @@ public class TradeRichTextViewConstructor extends DTextViewConstructor {
         }
         Object openUrlSpan = getOpenUrlSpan(eventObj, i);
         if (openUrlSpan != null) {
-            c3247a2.d.add(openUrlSpan);
+            aVar2.d.add(openUrlSpan);
         }
-        if (c3247a2.d.size() > 0) {
-            return c3247a2;
+        if (aVar2.d.size() > 0) {
+            return aVar2;
         }
         return null;
     }
@@ -136,13 +134,13 @@ public class TradeRichTextViewConstructor extends DTextViewConstructor {
         if (TextUtils.isEmpty(string)) {
             return null;
         }
-        return new C3248b(string, i);
+        return new b(string, i);
     }
 
     private SpannableString getRichText(Map<String, Object> map, JSONArray jSONArray) {
         String str = "";
         if (jSONArray != null) {
-            ArrayList<C3247a> arrayList = new ArrayList();
+            ArrayList<a> arrayList = new ArrayList();
             int size = jSONArray.size();
             for (int i = 0; i < size; i++) {
                 JSONObject jSONObject = jSONArray.getJSONObject(i);
@@ -150,11 +148,11 @@ public class TradeRichTextViewConstructor extends DTextViewConstructor {
                     String string = jSONObject.getString("text");
                     if (!TextUtils.isEmpty(string)) {
                         str = str + string;
-                        C3247a styleSpan = getStyleSpan(map, jSONObject, str, string);
+                        a styleSpan = getStyleSpan(map, jSONObject, str, string);
                         if (styleSpan != null) {
                             arrayList.add(styleSpan);
                         }
-                        C3247a eventSpan = getEventSpan(map, jSONObject, str, string, styleSpan);
+                        a eventSpan = getEventSpan(map, jSONObject, str, string, styleSpan);
                         if (eventSpan != null) {
                             arrayList.add(eventSpan);
                         }
@@ -163,9 +161,9 @@ public class TradeRichTextViewConstructor extends DTextViewConstructor {
             }
             if (arrayList.size() > 0) {
                 SpannableString spannableString = new SpannableString(str);
-                for (C3247a c3247a : arrayList) {
-                    for (Object obj : c3247a.d) {
-                        spannableString.setSpan(obj, c3247a.a, c3247a.b, c3247a.c);
+                for (a aVar : arrayList) {
+                    for (Object obj : aVar.d) {
+                        spannableString.setSpan(obj, aVar.a, aVar.b, aVar.c);
                     }
                 }
                 return spannableString;
@@ -174,10 +172,10 @@ public class TradeRichTextViewConstructor extends DTextViewConstructor {
         return new SpannableString(str);
     }
 
-    private ForegroundColorSpan getRichTextColor(C3247a c3247a) {
+    private ForegroundColorSpan getRichTextColor(a aVar) {
         List<Object> list;
-        if (c3247a != null && (list = c3247a.d) != null && list.size() > 0) {
-            for (Object obj : c3247a.d) {
+        if (aVar != null && (list = aVar.d) != null && list.size() > 0) {
+            for (Object obj : aVar.d) {
                 if (obj instanceof ForegroundColorSpan) {
                     return (ForegroundColorSpan) obj;
                 }
@@ -208,37 +206,37 @@ public class TradeRichTextViewConstructor extends DTextViewConstructor {
         return jSONObject.getJSONObject("style");
     }
 
-    private C3247a getStyleSpan(Map<String, Object> map, JSONObject jSONObject, String str, String str2) {
+    private a getStyleSpan(Map<String, Object> map, JSONObject jSONObject, String str, String str2) {
         if (jSONObject == null) {
             return null;
         }
         JSONObject styleObj = getStyleObj(jSONObject);
-        C3247a c3247a = new C3247a();
+        a aVar = new a();
         int indexOf = str.indexOf(str2);
-        c3247a.a = indexOf;
-        c3247a.b = indexOf + str2.length();
+        aVar.a = indexOf;
+        aVar.b = indexOf + str2.length();
         Object sizeSpan = getSizeSpan(styleObj);
         if (sizeSpan != null) {
-            c3247a.d.add(sizeSpan);
+            aVar.d.add(sizeSpan);
         }
         Object colorSpan = getColorSpan(styleObj);
         if (colorSpan != null) {
-            c3247a.d.add(colorSpan);
+            aVar.d.add(colorSpan);
         }
         Object boldSpan = getBoldSpan(styleObj);
         if (boldSpan != null) {
-            c3247a.d.add(boldSpan);
+            aVar.d.add(boldSpan);
         }
         Object italicSpan = getItalicSpan(styleObj);
         if (italicSpan != null) {
-            c3247a.d.add(italicSpan);
+            aVar.d.add(italicSpan);
         }
         Object strikeThroughSpan = getStrikeThroughSpan(styleObj);
         if (strikeThroughSpan != null) {
-            c3247a.d.add(strikeThroughSpan);
+            aVar.d.add(strikeThroughSpan);
         }
-        if (c3247a.d.size() > 0) {
-            return c3247a;
+        if (aVar.d.size() > 0) {
+            return aVar;
         }
         return null;
     }

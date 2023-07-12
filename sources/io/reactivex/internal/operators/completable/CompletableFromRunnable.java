@@ -1,23 +1,22 @@
 package io.reactivex.internal.operators.completable;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
-import io.reactivex.disposables.C8151a;
+import io.reactivex.a;
 import io.reactivex.disposables.Disposable;
 import tb.dg0;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class CompletableFromRunnable extends AbstractC8146a {
+public final class CompletableFromRunnable extends a {
     final Runnable runnable;
 
     public CompletableFromRunnable(Runnable runnable) {
         this.runnable = runnable;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     protected void subscribeActual(CompletableObserver completableObserver) {
-        Disposable b = C8151a.b();
+        Disposable b = io.reactivex.disposables.a.b();
         completableObserver.onSubscribe(b);
         try {
             this.runnable.run();

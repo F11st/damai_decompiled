@@ -319,11 +319,11 @@ public class gj extends fj {
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor
     @NotNull
     public MemberScope getStaticScope() {
-        MemberScope.C8499b c8499b = MemberScope.C8499b.INSTANCE;
-        if (c8499b == null) {
+        MemberScope.b bVar = MemberScope.b.INSTANCE;
+        if (bVar == null) {
             c(14);
         }
-        return c8499b;
+        return bVar;
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor

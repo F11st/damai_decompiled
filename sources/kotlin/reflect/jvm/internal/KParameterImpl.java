@@ -29,9 +29,9 @@ import tb.zv2;
 /* loaded from: classes3.dex */
 public final class KParameterImpl implements KParameter {
     static final /* synthetic */ KProperty[] f = {a12.i(new PropertyReference1Impl(a12.b(KParameterImpl.class), "descriptor", "getDescriptor()Lorg/jetbrains/kotlin/descriptors/ParameterDescriptor;")), a12.i(new PropertyReference1Impl(a12.b(KParameterImpl.class), "annotations", "getAnnotations()Ljava/util/List;"))};
-    private final x02.C9894a a;
+    private final x02.a a;
     @NotNull
-    private final x02.C9894a b;
+    private final x02.a b;
     @NotNull
     private final KCallableImpl<?> c;
     private final int d;

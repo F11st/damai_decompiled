@@ -11,13 +11,12 @@ public class fp1 {
     public boolean d;
     public int a = 10;
     public long c = 0;
-    public C9143a e = new C9143a();
-    public nh1.C9474a f = new nh1.C9474a();
+    public a e = new a();
+    public nh1.a f = new nh1.a();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.fp1$a */
     /* loaded from: classes11.dex */
-    public static class C9143a {
+    public static class a {
         public boolean a = true;
         public boolean b;
         public boolean c;
@@ -27,7 +26,7 @@ public class fp1 {
         public int g;
         public String h;
 
-        public C9143a a(int i, int i2, String str) {
+        public a a(int i, int i2, String str) {
             this.a = false;
             this.f = i;
             this.g = i2;
@@ -45,16 +44,16 @@ public class fp1 {
             return;
         }
         id2 id2Var = w21Var.b;
-        C9143a c9143a = this.e;
-        if (c9143a.a) {
+        a aVar = this.e;
+        if (aVar.a) {
             id2Var.a = true;
             id2Var.d = w21Var.e.getAbsolutePath();
             id2Var.b = this.a;
             id2Var.c = "下载成功";
         } else {
             id2Var.a = false;
-            id2Var.b = c9143a.f;
-            id2Var.h.a(c9143a.c);
+            id2Var.b = aVar.f;
+            id2Var.h.a(aVar.c);
             int i = id2Var.b;
             if (i == -21) {
                 id2Var.c = "手机剩余空间不足";
@@ -77,24 +76,24 @@ public class fp1 {
                 id2Var.c = "文件校验失败";
             }
         }
-        nh1.C9474a c9474a = this.f;
-        c9474a.a = w21Var.c;
-        c9474a.b = id2Var.e.b;
-        long j = c9474a.f;
+        nh1.a aVar2 = this.f;
+        aVar2.a = w21Var.c;
+        aVar2.b = id2Var.e.b;
+        long j = aVar2.f;
         if (0 != j) {
-            c9474a.g = (c9474a.i / 1024.0d) / (j / 1000.0d);
+            aVar2.g = (aVar2.i / 1024.0d) / (j / 1000.0d);
         }
         boolean z = id2Var.a;
-        c9474a.c = z;
+        aVar2.c = z;
         if (z) {
-            c9474a.j = String.valueOf(this.a);
+            aVar2.j = String.valueOf(this.a);
         } else {
-            C9143a c9143a2 = this.e;
-            c9474a.j = String.valueOf((c9143a2.f * 1000) - c9143a2.g);
+            a aVar3 = this.e;
+            aVar2.j = String.valueOf((aVar3.f * 1000) - aVar3.g);
         }
-        nh1.C9474a c9474a2 = this.f;
-        c9474a2.k = this.e.h;
-        c9474a2.h = id2Var.f.a;
+        nh1.a aVar4 = this.f;
+        aVar4.k = this.e.h;
+        aVar4.h = id2Var.f.a;
         this.b.onResult(id2Var);
     }
 

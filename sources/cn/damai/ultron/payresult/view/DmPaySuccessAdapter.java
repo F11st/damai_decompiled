@@ -15,10 +15,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.banner.bean.PageBanner;
 import cn.damai.commonbusiness.banner.bean.PayAdvertBean;
 import cn.damai.commonbusiness.search.bean.BaccountInfo;
@@ -81,12 +80,11 @@ public class DmPaySuccessAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         private String i;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.ultron.payresult.view.DmPaySuccessAdapter$BannerViewHolder$a */
         /* loaded from: classes17.dex */
-        public class View$OnClickListenerC2624a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC2624a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -96,26 +94,24 @@ public class DmPaySuccessAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                     ipChange.ipc$dispatch("-1056155823", new Object[]{this, view});
                     return;
                 }
-                C0529c.e().x(xa0.h().k(BannerViewHolder.this.i));
+                cn.damai.common.user.c.e().x(xa0.h().k(BannerViewHolder.this.i));
                 DMNav.from(DmPaySuccessAdapter.this.b).toUri(k23.j());
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.ultron.payresult.view.DmPaySuccessAdapter$BannerViewHolder$b */
         /* loaded from: classes17.dex */
-        public class View$OnClickListenerC2625b implements View.OnClickListener {
+        public class b implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ PayAdvertBean a;
 
             /* compiled from: Taobao */
-            /* renamed from: cn.damai.ultron.payresult.view.DmPaySuccessAdapter$BannerViewHolder$b$a */
             /* loaded from: classes9.dex */
-            public class C2626a implements MemberAuthPopWindow.ICustomDialogEventListener {
+            public class a implements MemberAuthPopWindow.ICustomDialogEventListener {
                 private static transient /* synthetic */ IpChange $ipChange;
                 final /* synthetic */ DmPayResultActivity a;
 
-                C2626a(View$OnClickListenerC2625b view$OnClickListenerC2625b, DmPayResultActivity dmPayResultActivity) {
+                a(b bVar, DmPayResultActivity dmPayResultActivity) {
                     this.a = dmPayResultActivity;
                 }
 
@@ -134,7 +130,7 @@ public class DmPaySuccessAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                 }
             }
 
-            View$OnClickListenerC2625b(PayAdvertBean payAdvertBean) {
+            b(PayAdvertBean payAdvertBean) {
                 this.a = payAdvertBean;
             }
 
@@ -145,13 +141,13 @@ public class DmPaySuccessAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                     ipChange.ipc$dispatch("1055134546", new Object[]{this, view});
                     return;
                 }
-                C0529c.e().x(xa0.h().k(BannerViewHolder.this.i));
+                cn.damai.common.user.c.e().x(xa0.h().k(BannerViewHolder.this.i));
                 if (this.a.vipScore.memberThreshold) {
                     if (DmPaySuccessAdapter.this.b == null || !(DmPaySuccessAdapter.this.b instanceof DmPayResultActivity)) {
                         return;
                     }
                     DmPayResultActivity dmPayResultActivity = (DmPayResultActivity) DmPaySuccessAdapter.this.b;
-                    k23.g(DmPaySuccessAdapter.this.b, dmPayResultActivity, xa0.DM_PAY_SUCCESS, new C2626a(this, dmPayResultActivity));
+                    k23.g(DmPaySuccessAdapter.this.b, dmPayResultActivity, xa0.DM_PAY_SUCCESS, new a(this, dmPayResultActivity));
                     return;
                 }
                 DMNav.from(DmPaySuccessAdapter.this.b).toUri(k23.j());
@@ -159,15 +155,14 @@ public class DmPaySuccessAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.ultron.payresult.view.DmPaySuccessAdapter$BannerViewHolder$c */
         /* loaded from: classes17.dex */
-        public class View$OnClickListenerC2627c implements View.OnClickListener {
+        public class c implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ String a;
             final /* synthetic */ String b;
             final /* synthetic */ PayAdvertBean c;
 
-            View$OnClickListenerC2627c(String str, String str2, PayAdvertBean payAdvertBean) {
+            c(String str, String str2, PayAdvertBean payAdvertBean) {
                 this.a = str;
                 this.b = str2;
                 this.c = payAdvertBean;
@@ -180,19 +175,18 @@ public class DmPaySuccessAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                     ipChange.ipc$dispatch("-1128542381", new Object[]{this, view});
                     return;
                 }
-                C0529c.e().x(xa0.h().l(this.a, this.b, String.valueOf(this.c.vipScore.memberFlag)));
+                cn.damai.common.user.c.e().x(xa0.h().l(this.a, this.b, String.valueOf(this.c.vipScore.memberFlag)));
                 DMNav.from(DmPaySuccessAdapter.this.b).toUri(k23.j());
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.ultron.payresult.view.DmPaySuccessAdapter$BannerViewHolder$d */
         /* loaded from: classes17.dex */
-        public class View$OnClickListenerC2628d implements View.OnClickListener {
+        public class d implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ String a;
 
-            View$OnClickListenerC2628d(String str) {
+            d(String str) {
                 this.a = str;
             }
 
@@ -207,7 +201,7 @@ public class DmPaySuccessAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                 if (TextUtils.isEmpty(str)) {
                     return;
                 }
-                C0529c.e().x(xa0.h().i(str, this.a));
+                cn.damai.common.user.c.e().x(xa0.h().i(str, this.a));
                 DMNav.from(BannerViewHolder.this.a).toUri(str);
             }
         }
@@ -275,7 +269,7 @@ public class DmPaySuccessAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                         this.g.setText(payAdvertBean.vipScore.secondaryContent);
                         this.h.setText("升级会员");
                         this.e.setImageResource(R$drawable.score_upgrade_icon);
-                        this.c.setOnClickListener(new View$OnClickListenerC2624a());
+                        this.c.setOnClickListener(new a());
                     } else if (payAdvertBean.vipScore.isbindNotAuth()) {
                         if (payAdvertBean.vipScore.memberThreshold) {
                             this.i = "1";
@@ -287,7 +281,7 @@ public class DmPaySuccessAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                         this.g.setText(payAdvertBean.vipScore.secondaryContent);
                         this.h.setText("升级会员");
                         this.e.setImageResource(R$drawable.score_upgrade_icon);
-                        this.c.setOnClickListener(new View$OnClickListenerC2625b(payAdvertBean));
+                        this.c.setOnClickListener(new b(payAdvertBean));
                     } else if (!payAdvertBean.vipScore.isEmpty()) {
                         this.e.setImageResource(R$drawable.score_icon);
                         d(payAdvertBean.vipScore.memberFlag);
@@ -299,7 +293,7 @@ public class DmPaySuccessAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                             this.g.setText("升级会员可免费兑换代金券哦~");
                             this.h.setText("去看看");
                         }
-                        this.c.setOnClickListener(new View$OnClickListenerC2627c(str, str2, payAdvertBean));
+                        this.c.setOnClickListener(new c(str, str2, payAdvertBean));
                     } else {
                         this.c.setVisibility(8);
                     }
@@ -314,13 +308,13 @@ public class DmPaySuccessAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                     hashMap.put("city", z20.d());
                     hashMap.put(FeedsViewModel.ARG_USERID, z20.i());
                     hashMap.put("usercode", z20.E());
-                    C0529c.e().G(this.b, "bannerimg", "banners", xa0.DM_PAY_SUCCESS, hashMap);
+                    cn.damai.common.user.c.e().G(this.b, "bannerimg", "banners", xa0.DM_PAY_SUCCESS, hashMap);
                     this.b.setVisibility(0);
-                    DMImageCreator c = C0504a.b().c(pageBanner.picUrl);
+                    DMImageCreator c2 = cn.damai.common.image.a.b().c(pageBanner.picUrl);
                     int i = R$drawable.uikit_default_image_bg_gradient;
-                    c.i(i).c(i).g(this.b);
+                    c2.i(i).c(i).g(this.b);
                     this.b.setTag(pageBanner.schema);
-                    this.b.setOnClickListener(new View$OnClickListenerC2628d(str2));
+                    this.b.setOnClickListener(new d(str2));
                     return;
                 }
                 this.b.setVisibility(8);
@@ -344,14 +338,13 @@ public class DmPaySuccessAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         private String j;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.ultron.payresult.view.DmPaySuccessAdapter$PayStateViewHolder$a */
         /* loaded from: classes17.dex */
-        public class View$OnClickListenerC2629a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ String a;
             final /* synthetic */ String b;
 
-            View$OnClickListenerC2629a(String str, String str2) {
+            a(String str, String str2) {
                 this.a = str;
                 this.b = str2;
             }
@@ -363,7 +356,7 @@ public class DmPaySuccessAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                     ipChange.ipc$dispatch("-1741861330", new Object[]{this, view});
                     return;
                 }
-                C0529c.e().x(xa0.h().j(PayStateViewHolder.this.j, PayStateViewHolder.this.i, this.a));
+                c.e().x(xa0.h().j(PayStateViewHolder.this.j, PayStateViewHolder.this.i, this.a));
                 String str = this.b;
                 if (str != null && str.contains("HNOrderDetailPage")) {
                     str = this.b + "&HNCreateOrderPage=true";
@@ -494,18 +487,17 @@ public class DmPaySuccessAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                 ipChange.ipc$dispatch("-446991664", new Object[]{this, view, str, str2});
             } else if (view == null || str == null) {
             } else {
-                view.setOnClickListener(new View$OnClickListenerC2629a(str2, str));
+                view.setOnClickListener(new a(str2, str));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.payresult.view.DmPaySuccessAdapter$a */
     /* loaded from: classes9.dex */
-    public class C2630a extends kz1 {
+    public class a extends kz1 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2630a(Context context) {
+        a(Context context) {
             super(context);
         }
 
@@ -517,7 +509,7 @@ public class DmPaySuccessAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                 return;
             }
             super.f(view, jSONObject, i);
-            C0529c e = C0529c.e();
+            c e = c.e();
             e.G(view, "item_" + i, "otherperform", xa0.DM_PAY_SUCCESS, DmPaySuccessAdapter.this.d);
         }
     }
@@ -634,7 +626,7 @@ public class DmPaySuccessAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                     if (i != 3) {
                         return null;
                     }
-                    return new NativeGaiaXViewHolder(viewGroup.getContext(), new C2630a(viewGroup.getContext()));
+                    return new NativeGaiaXViewHolder(viewGroup.getContext(), new a(viewGroup.getContext()));
                 }
                 return new RecommendTitleViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R$layout.bricks_coupon_order_result_recommend_title, viewGroup, false));
             }

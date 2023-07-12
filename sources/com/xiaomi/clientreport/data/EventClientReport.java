@@ -1,12 +1,11 @@
 package com.xiaomi.clientreport.data;
 
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class EventClientReport extends C7537a {
+public class EventClientReport extends a {
     public String eventContent;
     public String eventId;
     public long eventTime;
@@ -16,7 +15,7 @@ public class EventClientReport extends C7537a {
         return new EventClientReport();
     }
 
-    @Override // com.xiaomi.clientreport.data.C7537a
+    @Override // com.xiaomi.clientreport.data.a
     public JSONObject toJson() {
         try {
             JSONObject json = super.toJson();
@@ -33,12 +32,12 @@ public class EventClientReport extends C7537a {
             json.put("eventContent", str);
             return json;
         } catch (JSONException e) {
-            AbstractC7535b.a(e);
+            com.xiaomi.channel.commonutils.logger.b.a(e);
             return null;
         }
     }
 
-    @Override // com.xiaomi.clientreport.data.C7537a
+    @Override // com.xiaomi.clientreport.data.a
     public String toJsonString() {
         return super.toJsonString();
     }

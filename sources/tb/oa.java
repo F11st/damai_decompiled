@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import cn.damai.common.AppConfig;
 import cn.damai.commonbusiness.seatbiz.seat.qilin.loader.listener.RequestListener;
-import cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.AbstractC0818a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
@@ -16,7 +15,7 @@ import java.util.List;
 public abstract class oa<T, E> implements RequestListener<T, E> {
     private static transient /* synthetic */ IpChange $ipChange;
     private final wc2<T> a = new wc2<>();
-    private final HashMap<String, AbstractC0818a> b = new HashMap<>();
+    private final HashMap<String, cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.a> b = new HashMap<>();
     private final HashMap<String, List<RequestListener<T, E>>> c = new HashMap<>();
 
     private synchronized void a(String str, RequestListener<T, E> requestListener) {
@@ -44,7 +43,7 @@ public abstract class oa<T, E> implements RequestListener<T, E> {
         }
         k(kn1Var);
         String b = kn1Var.b();
-        AbstractC0818a<T, E> e = e(kn1Var);
+        cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.a<T, E> e = e(kn1Var);
         if (e != null) {
             this.b.put(b, e);
             a(b, requestListener);
@@ -134,9 +133,9 @@ public abstract class oa<T, E> implements RequestListener<T, E> {
         } else if (kn1Var == null) {
         } else {
             String b = kn1Var.b();
-            AbstractC0818a abstractC0818a = this.b.get(b);
-            if (abstractC0818a != null) {
-                abstractC0818a.a();
+            cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.a aVar = this.b.get(b);
+            if (aVar != null) {
+                aVar.a();
             }
             this.c.remove(b);
         }
@@ -164,7 +163,7 @@ public abstract class oa<T, E> implements RequestListener<T, E> {
         }
     }
 
-    public abstract AbstractC0818a<T, E> e(@NonNull kn1<E> kn1Var);
+    public abstract cn.damai.commonbusiness.seatbiz.seat.qilin.loader.request.a<T, E> e(@NonNull kn1<E> kn1Var);
 
     public synchronized void h(kn1<E> kn1Var, @Nullable RequestListener<T, E> requestListener) {
         IpChange ipChange = $ipChange;

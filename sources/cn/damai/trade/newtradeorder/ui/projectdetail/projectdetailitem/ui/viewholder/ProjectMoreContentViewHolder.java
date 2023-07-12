@@ -26,12 +26,11 @@ public class ProjectMoreContentViewHolder extends RecyclerView.ViewHolder {
     private int e;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectMoreContentViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2401a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2401a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -59,7 +58,7 @@ public class ProjectMoreContentViewHolder extends RecyclerView.ViewHolder {
         }
         this.b = (TextView) this.itemView.findViewById(R$id.project_item_more_text_tv);
         this.a = this.itemView.findViewById(R$id.line);
-        this.b.setOnClickListener(new View$OnClickListenerC2401a());
+        this.b.setOnClickListener(new a());
     }
 
     public void d(ProjectDataHolder projectDataHolder) {

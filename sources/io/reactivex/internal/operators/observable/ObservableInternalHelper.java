@@ -1,11 +1,11 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.Emitter;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.Scheduler;
 import io.reactivex.SingleSource;
+import io.reactivex.d;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.BiConsumer;
 import io.reactivex.functions.BiFunction;
@@ -31,10 +31,10 @@ public final class ObservableInternalHelper {
     /* loaded from: classes3.dex */
     public static final class BufferedReplayCallable<T> implements Callable<bn<T>> {
         private final int bufferSize;
-        private final AbstractC8149d<T> parent;
+        private final d<T> parent;
 
-        BufferedReplayCallable(AbstractC8149d<T> abstractC8149d, int i) {
-            this.parent = abstractC8149d;
+        BufferedReplayCallable(d<T> dVar, int i) {
+            this.parent = dVar;
             this.bufferSize = i;
         }
 
@@ -49,13 +49,13 @@ public final class ObservableInternalHelper {
     /* loaded from: classes3.dex */
     public static final class BufferedTimedReplayCallable<T> implements Callable<bn<T>> {
         private final int bufferSize;
-        private final AbstractC8149d<T> parent;
+        private final d<T> parent;
         private final Scheduler scheduler;
         private final long time;
         private final TimeUnit unit;
 
-        BufferedTimedReplayCallable(AbstractC8149d<T> abstractC8149d, int i, long j, TimeUnit timeUnit, Scheduler scheduler) {
-            this.parent = abstractC8149d;
+        BufferedTimedReplayCallable(d<T> dVar, int i, long j, TimeUnit timeUnit, Scheduler scheduler) {
+            this.parent = dVar;
             this.bufferSize = i;
             this.time = j;
             this.unit = timeUnit;
@@ -186,7 +186,7 @@ public final class ObservableInternalHelper {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    public static final class ObservableMapper<T, R> implements Function<T, AbstractC8149d<R>> {
+    public static final class ObservableMapper<T, R> implements Function<T, d<R>> {
         final Function<? super T, ? extends SingleSource<? extends R>> mapper;
 
         ObservableMapper(Function<? super T, ? extends SingleSource<? extends R>> function) {
@@ -200,7 +200,7 @@ public final class ObservableInternalHelper {
         }
 
         @Override // io.reactivex.functions.Function
-        public AbstractC8149d<R> apply(T t) throws Exception {
+        public d<R> apply(T t) throws Exception {
             return i42.n(new SingleToObservable((SingleSource) ObjectHelper.requireNonNull(this.mapper.apply(t), "The mapper returned a null SingleSource")));
         }
     }
@@ -255,16 +255,16 @@ public final class ObservableInternalHelper {
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class RepeatWhenOuterHandler implements Function<AbstractC8149d<ul1<Object>>, ObservableSource<?>> {
-        private final Function<? super AbstractC8149d<Object>, ? extends ObservableSource<?>> handler;
+    static final class RepeatWhenOuterHandler implements Function<d<ul1<Object>>, ObservableSource<?>> {
+        private final Function<? super d<Object>, ? extends ObservableSource<?>> handler;
 
-        RepeatWhenOuterHandler(Function<? super AbstractC8149d<Object>, ? extends ObservableSource<?>> function) {
+        RepeatWhenOuterHandler(Function<? super d<Object>, ? extends ObservableSource<?>> function) {
             this.handler = function;
         }
 
         @Override // io.reactivex.functions.Function
-        public ObservableSource<?> apply(AbstractC8149d<ul1<Object>> abstractC8149d) throws Exception {
-            return this.handler.apply(abstractC8149d.map(MapToInt.INSTANCE));
+        public ObservableSource<?> apply(d<ul1<Object>> dVar) throws Exception {
+            return this.handler.apply(dVar.map(MapToInt.INSTANCE));
         }
     }
 
@@ -272,10 +272,10 @@ public final class ObservableInternalHelper {
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
     public static final class ReplayCallable<T> implements Callable<bn<T>> {
-        private final AbstractC8149d<T> parent;
+        private final d<T> parent;
 
-        ReplayCallable(AbstractC8149d<T> abstractC8149d) {
-            this.parent = abstractC8149d;
+        ReplayCallable(d<T> dVar) {
+            this.parent = dVar;
         }
 
         @Override // java.util.concurrent.Callable
@@ -287,38 +287,38 @@ public final class ObservableInternalHelper {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    public static final class ReplayFunction<T, R> implements Function<AbstractC8149d<T>, ObservableSource<R>> {
+    public static final class ReplayFunction<T, R> implements Function<d<T>, ObservableSource<R>> {
         private final Scheduler scheduler;
-        private final Function<? super AbstractC8149d<T>, ? extends ObservableSource<R>> selector;
+        private final Function<? super d<T>, ? extends ObservableSource<R>> selector;
 
-        ReplayFunction(Function<? super AbstractC8149d<T>, ? extends ObservableSource<R>> function, Scheduler scheduler) {
+        ReplayFunction(Function<? super d<T>, ? extends ObservableSource<R>> function, Scheduler scheduler) {
             this.selector = function;
             this.scheduler = scheduler;
         }
 
         @Override // io.reactivex.functions.Function
         public /* bridge */ /* synthetic */ Object apply(Object obj) throws Exception {
-            return apply((AbstractC8149d) ((AbstractC8149d) obj));
+            return apply((d) ((d) obj));
         }
 
-        public ObservableSource<R> apply(AbstractC8149d<T> abstractC8149d) throws Exception {
-            return AbstractC8149d.wrap((ObservableSource) ObjectHelper.requireNonNull(this.selector.apply(abstractC8149d), "The selector returned a null ObservableSource")).observeOn(this.scheduler);
+        public ObservableSource<R> apply(d<T> dVar) throws Exception {
+            return d.wrap((ObservableSource) ObjectHelper.requireNonNull(this.selector.apply(dVar), "The selector returned a null ObservableSource")).observeOn(this.scheduler);
         }
     }
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    static final class RetryWhenInner implements Function<AbstractC8149d<ul1<Object>>, ObservableSource<?>> {
-        private final Function<? super AbstractC8149d<Throwable>, ? extends ObservableSource<?>> handler;
+    static final class RetryWhenInner implements Function<d<ul1<Object>>, ObservableSource<?>> {
+        private final Function<? super d<Throwable>, ? extends ObservableSource<?>> handler;
 
-        RetryWhenInner(Function<? super AbstractC8149d<Throwable>, ? extends ObservableSource<?>> function) {
+        RetryWhenInner(Function<? super d<Throwable>, ? extends ObservableSource<?>> function) {
             this.handler = function;
         }
 
         @Override // io.reactivex.functions.Function
-        public ObservableSource<?> apply(AbstractC8149d<ul1<Object>> abstractC8149d) throws Exception {
+        public ObservableSource<?> apply(d<ul1<Object>> dVar) throws Exception {
             ErrorMapperFilter errorMapperFilter = ErrorMapperFilter.INSTANCE;
-            return this.handler.apply(abstractC8149d.takeWhile(errorMapperFilter).map(errorMapperFilter));
+            return this.handler.apply(dVar.takeWhile(errorMapperFilter).map(errorMapperFilter));
         }
     }
 
@@ -370,13 +370,13 @@ public final class ObservableInternalHelper {
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
     public static final class TimedReplayCallable<T> implements Callable<bn<T>> {
-        private final AbstractC8149d<T> parent;
+        private final d<T> parent;
         private final Scheduler scheduler;
         private final long time;
         private final TimeUnit unit;
 
-        TimedReplayCallable(AbstractC8149d<T> abstractC8149d, long j, TimeUnit timeUnit, Scheduler scheduler) {
-            this.parent = abstractC8149d;
+        TimedReplayCallable(d<T> dVar, long j, TimeUnit timeUnit, Scheduler scheduler) {
+            this.parent = dVar;
             this.time = j;
             this.unit = timeUnit;
             this.scheduler = scheduler;
@@ -404,7 +404,7 @@ public final class ObservableInternalHelper {
         }
 
         public ObservableSource<? extends R> apply(List<ObservableSource<? extends T>> list) {
-            return AbstractC8149d.zipIterable(list, this.zipper, false, AbstractC8149d.bufferSize());
+            return d.zipIterable(list, this.zipper, false, d.bufferSize());
         }
     }
 
@@ -412,7 +412,7 @@ public final class ObservableInternalHelper {
         throw new IllegalStateException("No instances!");
     }
 
-    private static <T, R> Function<T, AbstractC8149d<R>> convertSingleMapperToObservableMapper(Function<? super T, ? extends SingleSource<? extends R>> function) {
+    private static <T, R> Function<T, d<R>> convertSingleMapperToObservableMapper(Function<? super T, ? extends SingleSource<? extends R>> function) {
         ObjectHelper.requireNonNull(function, "mapper is null");
         return new ObservableMapper(function);
     }
@@ -441,19 +441,19 @@ public final class ObservableInternalHelper {
         return new ObserverOnNext(observer);
     }
 
-    public static Function<AbstractC8149d<ul1<Object>>, ObservableSource<?>> repeatWhenHandler(Function<? super AbstractC8149d<Object>, ? extends ObservableSource<?>> function) {
+    public static Function<d<ul1<Object>>, ObservableSource<?>> repeatWhenHandler(Function<? super d<Object>, ? extends ObservableSource<?>> function) {
         return new RepeatWhenOuterHandler(function);
     }
 
-    public static <T> Callable<bn<T>> replayCallable(AbstractC8149d<T> abstractC8149d) {
-        return new ReplayCallable(abstractC8149d);
+    public static <T> Callable<bn<T>> replayCallable(d<T> dVar) {
+        return new ReplayCallable(dVar);
     }
 
-    public static <T, R> Function<AbstractC8149d<T>, ObservableSource<R>> replayFunction(Function<? super AbstractC8149d<T>, ? extends ObservableSource<R>> function, Scheduler scheduler) {
+    public static <T, R> Function<d<T>, ObservableSource<R>> replayFunction(Function<? super d<T>, ? extends ObservableSource<R>> function, Scheduler scheduler) {
         return new ReplayFunction(function, scheduler);
     }
 
-    public static <T> Function<AbstractC8149d<ul1<Object>>, ObservableSource<?>> retryWhenHandler(Function<? super AbstractC8149d<Throwable>, ? extends ObservableSource<?>> function) {
+    public static <T> Function<d<ul1<Object>>, ObservableSource<?>> retryWhenHandler(Function<? super d<Throwable>, ? extends ObservableSource<?>> function) {
         return new RetryWhenInner(function);
     }
 
@@ -465,27 +465,27 @@ public final class ObservableInternalHelper {
         return new SimpleGenerator(consumer);
     }
 
-    public static <T, R> AbstractC8149d<R> switchMapSingle(AbstractC8149d<T> abstractC8149d, Function<? super T, ? extends SingleSource<? extends R>> function) {
-        return abstractC8149d.switchMap(convertSingleMapperToObservableMapper(function), 1);
+    public static <T, R> d<R> switchMapSingle(d<T> dVar, Function<? super T, ? extends SingleSource<? extends R>> function) {
+        return dVar.switchMap(convertSingleMapperToObservableMapper(function), 1);
     }
 
-    public static <T, R> AbstractC8149d<R> switchMapSingleDelayError(AbstractC8149d<T> abstractC8149d, Function<? super T, ? extends SingleSource<? extends R>> function) {
-        return abstractC8149d.switchMapDelayError(convertSingleMapperToObservableMapper(function), 1);
+    public static <T, R> d<R> switchMapSingleDelayError(d<T> dVar, Function<? super T, ? extends SingleSource<? extends R>> function) {
+        return dVar.switchMapDelayError(convertSingleMapperToObservableMapper(function), 1);
     }
 
     public static <T, R> Function<List<ObservableSource<? extends T>>, ObservableSource<? extends R>> zipIterable(Function<? super Object[], ? extends R> function) {
         return new ZipIterableFunction(function);
     }
 
-    public static <T> Callable<bn<T>> replayCallable(AbstractC8149d<T> abstractC8149d, int i) {
-        return new BufferedReplayCallable(abstractC8149d, i);
+    public static <T> Callable<bn<T>> replayCallable(d<T> dVar, int i) {
+        return new BufferedReplayCallable(dVar, i);
     }
 
-    public static <T> Callable<bn<T>> replayCallable(AbstractC8149d<T> abstractC8149d, int i, long j, TimeUnit timeUnit, Scheduler scheduler) {
-        return new BufferedTimedReplayCallable(abstractC8149d, i, j, timeUnit, scheduler);
+    public static <T> Callable<bn<T>> replayCallable(d<T> dVar, int i, long j, TimeUnit timeUnit, Scheduler scheduler) {
+        return new BufferedTimedReplayCallable(dVar, i, j, timeUnit, scheduler);
     }
 
-    public static <T> Callable<bn<T>> replayCallable(AbstractC8149d<T> abstractC8149d, long j, TimeUnit timeUnit, Scheduler scheduler) {
-        return new TimedReplayCallable(abstractC8149d, j, timeUnit, scheduler);
+    public static <T> Callable<bn<T>> replayCallable(d<T> dVar, long j, TimeUnit timeUnit, Scheduler scheduler) {
+        return new TimedReplayCallable(dVar, j, timeUnit, scheduler);
     }
 }

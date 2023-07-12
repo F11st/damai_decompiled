@@ -2,9 +2,7 @@ package tb;
 
 import android.text.TextUtils;
 import android.view.View;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.issue.view.CorrelationView;
 import cn.damai.model.IssueViewModel;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -14,7 +12,7 @@ import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
-public class i41 extends C0528b {
+public class i41 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final String PAGE_EVALUATE_SUBMIT = "evaluate_submit";
     private static i41 b;
@@ -31,7 +29,7 @@ public class i41 extends C0528b {
         f.put("dm_tag", str);
         f.put("dm_id", str2);
         m(f);
-        C0529c.e().G(view, "dm_tag_" + i, "dm_" + i2, b.k(), f);
+        cn.damai.common.user.c.e().G(view, "dm_tag_" + i, "dm_" + i2, b.k(), f);
     }
 
     public static void g(boolean z, long j) {
@@ -43,7 +41,7 @@ public class i41 extends C0528b {
         HashMap<String, String> f = d23.f();
         f.put("type", z ? "2" : "1");
         m(f);
-        C0529c.e().C("popups", "top", i().k(), "1.0", j, f, 2201);
+        cn.damai.common.user.c.e().C("popups", "top", i().k(), "1.0", j, f, 2201);
     }
 
     public static void h(View view, String str, int i) {
@@ -55,7 +53,7 @@ public class i41 extends C0528b {
         HashMap<String, String> f = d23.f();
         f.put("tag", str);
         m(f);
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         e.G(view, "tag_" + i, "tag", b.k(), f);
     }
 
@@ -103,7 +101,7 @@ public class i41 extends C0528b {
         HashMap<String, String> f = d23.f();
         m(f);
         f.put("dm_id", str);
-        C0529c.e().x(i.e(i.k(), "dm", "dm", f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(i.e(i.k(), "dm", "dm", f, Boolean.FALSE));
     }
 
     public static void o(String str, Integer num, String str2, int i) {
@@ -117,7 +115,7 @@ public class i41 extends C0528b {
             m(f);
             f.put("dm_id", str);
             f.put("dm_tag", str2);
-            C0529c.e().x(i2.e(i2.k(), "dm_" + num, "dm_tag_" + i, f, Boolean.FALSE));
+            cn.damai.common.user.c.e().x(i2.e(i2.k(), "dm_" + num, "dm_tag_" + i, f, Boolean.FALSE));
         }
     }
 
@@ -132,7 +130,7 @@ public class i41 extends C0528b {
         m(f);
         i41 i2 = i();
         String k = i().k();
-        C0529c.e().x(i2.e(k, "tag", "tag_" + i, f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(i2.e(k, "tag", "tag_" + i, f, Boolean.FALSE));
     }
 
     public static void v() {
@@ -144,7 +142,7 @@ public class i41 extends C0528b {
         i41 i = i();
         HashMap<String, String> f = d23.f();
         m(f);
-        C0529c.e().x(i.e(i.k(), "popups", "cancel", f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(i.e(i.k(), "popups", "cancel", f, Boolean.FALSE));
     }
 
     public static void w() {
@@ -156,7 +154,7 @@ public class i41 extends C0528b {
         i41 i = i();
         HashMap<String, String> f = d23.f();
         m(f);
-        C0529c.e().x(i.e(i.k(), "popups", "confirm", f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(i.e(i.k(), "popups", "confirm", f, Boolean.FALSE));
     }
 
     public static void x() {
@@ -168,7 +166,7 @@ public class i41 extends C0528b {
         i41 i = i();
         HashMap<String, String> f = d23.f();
         m(f);
-        C0529c.e().x(i.e(i.k(), "popups", "delete", f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(i.e(i.k(), "popups", "delete", f, Boolean.FALSE));
     }
 
     public static void y() {
@@ -180,12 +178,12 @@ public class i41 extends C0528b {
         i41 i = i();
         HashMap<String, String> f = d23.f();
         m(f);
-        C0529c.e().x(i.e(i.k(), "popups", "load", f, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(i.e(i.k(), "popups", "load", f, Boolean.FALSE));
     }
 
-    public C0525a.C0527b j() {
+    public a.b j() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1592266519") ? (C0525a.C0527b) ipChange.ipc$dispatch("-1592266519", new Object[]{this}) : b(k());
+        return AndroidInstantRuntime.support(ipChange, "-1592266519") ? (a.b) ipChange.ipc$dispatch("-1592266519", new Object[]{this}) : b(k());
     }
 
     public void l(IssueViewModel issueViewModel, CorrelationView correlationView) {
@@ -207,7 +205,7 @@ public class i41 extends C0528b {
         HashMap hashMap = new HashMap();
         hashMap.put("usercode", z20.E());
         m(hashMap);
-        C0529c.e().x(e(k(), "bottom", str, hashMap, Boolean.TRUE));
+        cn.damai.common.user.c.e().x(e(k(), "bottom", str, hashMap, Boolean.TRUE));
     }
 
     public void r() {
@@ -218,7 +216,7 @@ public class i41 extends C0528b {
         }
         HashMap hashMap = new HashMap();
         hashMap.put("usercode", z20.E());
-        C0529c.e().x(e(k(), "top", b82.SEARCH_ITEM_ASSOCIATE, hashMap, Boolean.TRUE));
+        cn.damai.common.user.c.e().x(e(k(), "top", b82.SEARCH_ITEM_ASSOCIATE, hashMap, Boolean.TRUE));
     }
 
     public void s(String str, String str2) {
@@ -232,7 +230,7 @@ public class i41 extends C0528b {
         if (!TextUtils.isEmpty(str2)) {
             hashMap.put("item_id", str2);
         }
-        C0529c.e().x(e(k(), "top", "cancel_comment", hashMap, Boolean.FALSE));
+        cn.damai.common.user.c.e().x(e(k(), "top", "cancel_comment", hashMap, Boolean.FALSE));
     }
 
     public void t(Map<String, String> map) {
@@ -242,7 +240,7 @@ public class i41 extends C0528b {
             return;
         }
         m(map);
-        C0529c.e().z(e(k(), "bottom", "release", map, Boolean.TRUE));
+        cn.damai.common.user.c.e().z(e(k(), "bottom", "release", map, Boolean.TRUE));
     }
 
     public void u(String str, String str2) {
@@ -256,6 +254,6 @@ public class i41 extends C0528b {
         if (!TextUtils.isEmpty(str2)) {
             hashMap.put("item_id", str2);
         }
-        C0529c.e().x(e(k(), "top", "tips", hashMap, Boolean.TRUE));
+        cn.damai.common.user.c.e().x(e(k(), "top", "tips", hashMap, Boolean.TRUE));
     }
 }

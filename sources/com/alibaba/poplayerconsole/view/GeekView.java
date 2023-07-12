@@ -9,9 +9,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.Toast;
-import com.alibaba.poplayerconsole.C3705a;
 import com.alibaba.poplayerconsole.R$id;
 import com.alibaba.poplayerconsole.R$layout;
+import com.alibaba.poplayerconsole.a;
 import com.alibaba.poplayerconsole.lib.Window;
 import java.lang.ref.WeakReference;
 import tb.gw2;
@@ -50,7 +50,7 @@ public class GeekView extends ScrollView implements View.OnClickListener, ILogVi
         if (view.getId() == R$id.track_pick_btn) {
             try {
                 this.mIsTrackMode = !this.mIsTrackMode;
-                Activity activity = (Activity) gw2.a((WeakReference) C3705a.d().get("page").b);
+                Activity activity = (Activity) gw2.a((WeakReference) a.d().get("page").b);
                 if (activity == null) {
                     Toast.makeText(getContext().getApplicationContext(), "Current Activity is null", 0).show();
                     return;

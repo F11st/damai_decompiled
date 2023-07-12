@@ -12,10 +12,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import kotlin.collections.C8202e;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8219q;
+import kotlin.collections.e;
+import kotlin.collections.k;
+import kotlin.collections.n;
+import kotlin.collections.q;
 import kotlin.coroutines.Continuation;
 import kotlin.jvm.functions.Function0;
 import kotlin.reflect.KCallable;
@@ -48,13 +48,13 @@ import tb.zv2;
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOwnerImpl {
-    private final x02.C9894a<List<Annotation>> a;
-    private final x02.C9894a<ArrayList<KParameter>> b;
-    private final x02.C9894a<KTypeImpl> c;
-    private final x02.C9894a<List<KTypeParameterImpl>> d;
+    private final x02.a<List<Annotation>> a;
+    private final x02.a<ArrayList<KParameter>> b;
+    private final x02.a<KTypeImpl> c;
+    private final x02.a<List<KTypeParameterImpl>> d;
 
     public KCallableImpl() {
-        x02.C9894a<List<Annotation>> d = x02.d(new Function0<List<? extends Annotation>>() { // from class: kotlin.reflect.jvm.internal.KCallableImpl$_annotations$1
+        x02.a<List<Annotation>> d = x02.d(new Function0<List<? extends Annotation>>() { // from class: kotlin.reflect.jvm.internal.KCallableImpl$_annotations$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -67,12 +67,11 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
         });
         b41.h(d, "ReflectProperties.lazySo…or.computeAnnotations() }");
         this.a = d;
-        x02.C9894a<ArrayList<KParameter>> d2 = x02.d(new Function0<ArrayList<KParameter>>() { // from class: kotlin.reflect.jvm.internal.KCallableImpl$_parameters$1
+        x02.a<ArrayList<KParameter>> d2 = x02.d(new Function0<ArrayList<KParameter>>() { // from class: kotlin.reflect.jvm.internal.KCallableImpl$_parameters$1
 
             /* compiled from: Taobao */
-            /* renamed from: kotlin.reflect.jvm.internal.KCallableImpl$_parameters$1$a */
             /* loaded from: classes3.dex */
-            public static final class C8251a<T> implements Comparator {
+            public static final class a<T> implements Comparator {
                 @Override // java.util.Comparator
                 public final int compare(T t, T t2) {
                     int a;
@@ -150,7 +149,7 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
                     i++;
                 }
                 if (KCallableImpl.this.j() && (i2 instanceof JavaCallableMemberDescriptor) && arrayList.size() > 1) {
-                    C8219q.u(arrayList, new C8251a());
+                    q.u(arrayList, new a());
                 }
                 arrayList.trimToSize();
                 return arrayList;
@@ -158,7 +157,7 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
         });
         b41.h(d2, "ReflectProperties.lazySo…ze()\n        result\n    }");
         this.b = d2;
-        x02.C9894a<KTypeImpl> d3 = x02.d(new Function0<KTypeImpl>() { // from class: kotlin.reflect.jvm.internal.KCallableImpl$_returnType$1
+        x02.a<KTypeImpl> d3 = x02.d(new Function0<KTypeImpl>() { // from class: kotlin.reflect.jvm.internal.KCallableImpl$_returnType$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -186,7 +185,7 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
         });
         b41.h(d3, "ReflectProperties.lazySo…eturnType\n        }\n    }");
         this.c = d3;
-        x02.C9894a<List<KTypeParameterImpl>> d4 = x02.d(new Function0<List<? extends KTypeParameterImpl>>() { // from class: kotlin.reflect.jvm.internal.KCallableImpl$_typeParameters$1
+        x02.a<List<KTypeParameterImpl>> d4 = x02.d(new Function0<List<? extends KTypeParameterImpl>>() { // from class: kotlin.reflect.jvm.internal.KCallableImpl$_typeParameters$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(0);
@@ -197,7 +196,7 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
                 int q;
                 List<TypeParameterDescriptor> typeParameters = KCallableImpl.this.i().getTypeParameters();
                 b41.h(typeParameters, "descriptor.typeParameters");
-                q = C8215n.q(typeParameters, 10);
+                q = n.q(typeParameters, 10);
                 ArrayList arrayList = new ArrayList(q);
                 for (TypeParameterDescriptor typeParameterDescriptor : typeParameters) {
                     KCallableImpl kCallableImpl = KCallableImpl.this;
@@ -215,7 +214,7 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
         int q;
         Object d;
         List<KParameter> parameters = getParameters();
-        q = C8215n.q(parameters, 10);
+        q = n.q(parameters, 10);
         ArrayList arrayList = new ArrayList(q);
         for (KParameter kParameter : parameters) {
             if (map.containsKey(kParameter)) {
@@ -268,7 +267,7 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
         if (functionDescriptor == null || !functionDescriptor.isSuspend()) {
             return null;
         }
-        Object d0 = C8212k.d0(f().getParameterTypes());
+        Object d0 = k.d0(f().getParameterTypes());
         if (!(d0 instanceof ParameterizedType)) {
             d0 = null;
         }
@@ -276,7 +275,7 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
         if (b41.d(parameterizedType != null ? parameterizedType.getRawType() : null, Continuation.class)) {
             Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();
             b41.h(actualTypeArguments, "continuationType.actualTypeArguments");
-            Object L = C8202e.L(actualTypeArguments);
+            Object L = e.L(actualTypeArguments);
             if (!(L instanceof WildcardType)) {
                 L = null;
             }
@@ -284,7 +283,7 @@ public abstract class KCallableImpl<R> implements KCallable<R>, KTypeParameterOw
             if (wildcardType == null || (lowerBounds = wildcardType.getLowerBounds()) == null) {
                 return null;
             }
-            return (Type) C8202e.u(lowerBounds);
+            return (Type) e.u(lowerBounds);
         }
         return null;
     }

@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.text.TextUtils;
 import cn.damai.common.askpermission.OnGrantListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.calendar.remind.CalendarsResolver;
 import cn.damai.uikit.view.DMThemeDialog;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -19,12 +18,11 @@ public class ao1 {
     public static final String SHOW_CALENDER_POP_TAG = "show_poptip";
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ao1$a */
     /* loaded from: classes8.dex */
-    public class C8918a implements CalendarsResolver.RemindMeListener {
+    public class a implements CalendarsResolver.RemindMeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C8918a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.calendar.remind.CalendarsResolver.RemindMeListener
@@ -45,16 +43,15 @@ public class ao1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ao1$b */
     /* loaded from: classes8.dex */
-    public class C8919b implements OnGrantListener {
+    public class b implements OnGrantListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ long b;
         final /* synthetic */ CalendarsResolver.RemindMeListener c;
         final /* synthetic */ Activity d;
 
-        C8919b(String str, long j, CalendarsResolver.RemindMeListener remindMeListener, Activity activity) {
+        b(String str, long j, CalendarsResolver.RemindMeListener remindMeListener, Activity activity) {
             this.a = str;
             this.b = j;
             this.c = remindMeListener;
@@ -75,16 +72,15 @@ public class ao1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ao1$c */
     /* loaded from: classes8.dex */
-    public class C8920c implements OnGrantListener {
+    public class c implements OnGrantListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ long b;
         final /* synthetic */ CalendarsResolver.RemindMeListener c;
         final /* synthetic */ Activity d;
 
-        C8920c(String str, long j, CalendarsResolver.RemindMeListener remindMeListener, Activity activity) {
+        c(String str, long j, CalendarsResolver.RemindMeListener remindMeListener, Activity activity) {
             this.a = str;
             this.b = j;
             this.c = remindMeListener;
@@ -110,7 +106,7 @@ public class ao1 {
             ipChange.ipc$dispatch("-1064089548", new Object[]{activity, str, Long.valueOf(j), remindMeListener});
         } else if (activity == null) {
         } else {
-            ir1.b(activity, false, mr1.CALENDAR, "用于帮助您设置开演提醒", new C8919b(str, j, remindMeListener, activity));
+            ir1.b(activity, false, mr1.CALENDAR, "用于帮助您设置开演提醒", new b(str, j, remindMeListener, activity));
         }
     }
 
@@ -119,7 +115,7 @@ public class ao1 {
         if (AndroidInstantRuntime.support(ipChange, "586230207")) {
             ipChange.ipc$dispatch("586230207", new Object[]{activity, str, Long.valueOf(j), str2});
         } else if (activity != null && ir1.i(mr1.CALENDAR) && d(activity, str, j)) {
-            c(activity, str, j, new C8918a());
+            c(activity, str, j, new a());
         }
     }
 
@@ -129,7 +125,7 @@ public class ao1 {
             ipChange.ipc$dispatch("1070001081", new Object[]{activity, str, Long.valueOf(j), remindMeListener});
         } else if (activity == null) {
         } else {
-            ir1.b(activity, false, mr1.CALENDAR, "用于帮助您取消开演提醒", new C8920c(str, j, remindMeListener, activity));
+            ir1.b(activity, false, mr1.CALENDAR, "用于帮助您取消开演提醒", new c(str, j, remindMeListener, activity));
         }
     }
 
@@ -161,7 +157,7 @@ public class ao1 {
             } else {
                 a(activity, str, j, remindMeListener);
             }
-            C0529c.e().x(pp2.u().m1(str2, str3, j));
+            cn.damai.common.user.c.e().x(pp2.u().m1(str2, str3, j));
         }
     }
 

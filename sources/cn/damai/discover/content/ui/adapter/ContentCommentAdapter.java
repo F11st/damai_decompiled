@@ -18,7 +18,7 @@ import cn.damai.comment.listener.OnPraiseViewClickListenerNew;
 import cn.damai.comment.view.PraiseView;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.yymember.bean.PerformFilmVipDO;
 import cn.damai.discover.content.bean.ContentCommentList;
 import cn.damai.discover.content.ui.viewholder.ContentCommentViewHolder;
@@ -57,13 +57,12 @@ public class ContentCommentAdapter extends RecyclerView.Adapter<CommentItemViewH
         private View g;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.discover.content.ui.adapter.ContentCommentAdapter$CommentItemViewHolder$a */
         /* loaded from: classes5.dex */
-        public class C1002a implements OnPraiseViewClickListenerNew {
+        public class a implements OnPraiseViewClickListenerNew {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ ContentCommentList.CommentListItem.CommentPraiseInfo a;
 
-            C1002a(ContentCommentList.CommentListItem.CommentPraiseInfo commentPraiseInfo) {
+            a(ContentCommentList.CommentListItem.CommentPraiseInfo commentPraiseInfo) {
                 this.a = commentPraiseInfo;
             }
 
@@ -73,7 +72,7 @@ public class ContentCommentAdapter extends RecyclerView.Adapter<CommentItemViewH
                 if (AndroidInstantRuntime.support(ipChange, "-1764164660")) {
                     ipChange.ipc$dispatch("-1764164660", new Object[]{this, Boolean.valueOf(z), str});
                 } else {
-                    C0529c.e().x(ContentCommentAdapter.this.getLiveUt().x(this.a.position));
+                    c.e().x(ContentCommentAdapter.this.getLiveUt().x(this.a.position));
                 }
             }
         }
@@ -156,7 +155,7 @@ public class ContentCommentAdapter extends RecyclerView.Adapter<CommentItemViewH
                 commentPraiseInfoBean.setPraiseCount(commentPraiseInfo.praiseCount + "");
                 commentPraiseInfoBean.setHasPraised(commentPraiseInfo.hasPraised);
                 this.f.setData(commentPraiseInfoBean, commentPraiseInfo.commentId);
-                this.f.setOnPraiseLayoutClickListenerCommon(new C1002a(commentPraiseInfo));
+                this.f.setOnPraiseLayoutClickListenerCommon(new a(commentPraiseInfo));
             }
             if (wh2.e(ContentCommentAdapter.this.b) <= 5 && i == wh2.e(ContentCommentAdapter.this.b) - 1) {
                 this.g.setVisibility(8);
@@ -189,7 +188,7 @@ public class ContentCommentAdapter extends RecyclerView.Adapter<CommentItemViewH
                 if (commentListItem == null) {
                     return;
                 }
-                C0529c.e().x(ContentCommentAdapter.this.getLiveUt().y(commentListItem.position));
+                c.e().x(ContentCommentAdapter.this.getLiveUt().y(commentListItem.position));
                 if (ContentCommentAdapter.this.a != null) {
                     ContentCommentAdapter.this.a.onClick(view);
                 }

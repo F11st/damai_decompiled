@@ -7,15 +7,13 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
-import com.alibaba.android.vlayout.AbstractC3289a;
-import com.alibaba.android.vlayout.AbstractC3291c;
 import com.alibaba.android.vlayout.LayoutManagerHelper;
 import com.alibaba.android.vlayout.VirtualLayoutManager;
 import tb.m81;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
-public abstract class BaseLayoutHelper extends AbstractC3303d {
+public abstract class BaseLayoutHelper extends d {
     public static boolean DEBUG = false;
     private static final String TAG = "BaseLayoutHelper";
     int mBgColor;
@@ -45,9 +43,8 @@ public abstract class BaseLayoutHelper extends AbstractC3303d {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.vlayout.layout.BaseLayoutHelper$a */
     /* loaded from: classes6.dex */
-    public static class C3297a implements LayoutViewBindListener, LayoutViewHelper, LayoutViewUnBindListener {
+    public static class a implements LayoutViewBindListener, LayoutViewHelper, LayoutViewUnBindListener {
     }
 
     private int calGap(int i, int i2) {
@@ -57,11 +54,11 @@ public abstract class BaseLayoutHelper extends AbstractC3303d {
         return 0;
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public void adjustLayout(int i, int i2, LayoutManagerHelper layoutManagerHelper) {
         if (requireLayoutView()) {
             Rect rect = new Rect();
-            AbstractC3291c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
+            com.alibaba.android.vlayout.c mainOrientationHelper = layoutManagerHelper.getMainOrientationHelper();
             for (int i3 = 0; i3 < layoutManagerHelper.getChildCount(); i3++) {
                 View childAt = layoutManagerHelper.getChildAt(i3);
                 if (getRange().a(Integer.valueOf(layoutManagerHelper.getPosition(childAt)))) {
@@ -90,7 +87,7 @@ public abstract class BaseLayoutHelper extends AbstractC3303d {
         }
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public void afterLayout(RecyclerView.Recycler recycler, RecyclerView.State state, int i, int i2, int i3, LayoutManagerHelper layoutManagerHelper) {
         View view;
         if (DEBUG) {
@@ -144,7 +141,7 @@ public abstract class BaseLayoutHelper extends AbstractC3303d {
         }
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public void beforeLayout(RecyclerView.Recycler recycler, RecyclerView.State state, LayoutManagerHelper layoutManagerHelper) {
         View view;
         if (DEBUG) {
@@ -161,7 +158,7 @@ public abstract class BaseLayoutHelper extends AbstractC3303d {
         this.mLayoutView = null;
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public void bindLayoutView(@NonNull View view) {
         view.measure(View.MeasureSpec.makeMeasureSpec(com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.width(this.mLayoutRegion), 1073741824), View.MeasureSpec.makeMeasureSpec(com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.height(this.mLayoutRegion), 1073741824));
         Rect rect = this.mLayoutRegion;
@@ -174,7 +171,7 @@ public abstract class BaseLayoutHelper extends AbstractC3303d {
         this.mLayoutRegion.set(0, 0, 0, 0);
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public final void clear(LayoutManagerHelper layoutManagerHelper) {
         View view = this.mLayoutView;
         if (view != null) {
@@ -214,10 +211,10 @@ public abstract class BaseLayoutHelper extends AbstractC3303d {
         int i7;
         int i8;
         int i9;
-        AbstractC3303d abstractC3303d = null;
-        AbstractC3289a findNeighbourNonfixLayoutHelper = layoutManagerHelper instanceof VirtualLayoutManager ? ((VirtualLayoutManager) layoutManagerHelper).findNeighbourNonfixLayoutHelper(this, z2) : null;
-        if (findNeighbourNonfixLayoutHelper != null && (findNeighbourNonfixLayoutHelper instanceof AbstractC3303d)) {
-            abstractC3303d = findNeighbourNonfixLayoutHelper;
+        d dVar = null;
+        com.alibaba.android.vlayout.a findNeighbourNonfixLayoutHelper = layoutManagerHelper instanceof VirtualLayoutManager ? ((VirtualLayoutManager) layoutManagerHelper).findNeighbourNonfixLayoutHelper(this, z2) : null;
+        if (findNeighbourNonfixLayoutHelper != null && (findNeighbourNonfixLayoutHelper instanceof d)) {
+            dVar = findNeighbourNonfixLayoutHelper;
         }
         if (findNeighbourNonfixLayoutHelper == this) {
             return 0;
@@ -232,7 +229,7 @@ public abstract class BaseLayoutHelper extends AbstractC3303d {
             }
             return i8 + i9;
         }
-        if (abstractC3303d == null) {
+        if (dVar == null) {
             if (z) {
                 i6 = this.mMarginTop;
                 i7 = this.mPaddingTop;
@@ -243,19 +240,19 @@ public abstract class BaseLayoutHelper extends AbstractC3303d {
             calGap = i6 + i7;
         } else if (z) {
             if (z2) {
-                i3 = abstractC3303d.mMarginBottom;
+                i3 = dVar.mMarginBottom;
                 i4 = this.mMarginTop;
             } else {
-                i3 = abstractC3303d.mMarginTop;
+                i3 = dVar.mMarginTop;
                 i4 = this.mMarginBottom;
             }
             calGap = calGap(i3, i4);
         } else {
             if (z2) {
-                i = abstractC3303d.mMarginRight;
+                i = dVar.mMarginRight;
                 i2 = this.mMarginLeft;
             } else {
-                i = abstractC3303d.mMarginLeft;
+                i = dVar.mMarginLeft;
                 i2 = this.mMarginRight;
             }
             calGap = calGap(i, i2);
@@ -268,9 +265,9 @@ public abstract class BaseLayoutHelper extends AbstractC3303d {
         return calGap + i5 + 0;
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
-    public void doLayout(RecyclerView.Recycler recycler, RecyclerView.State state, VirtualLayoutManager.C3287d c3287d, m81 m81Var, LayoutManagerHelper layoutManagerHelper) {
-        layoutViews(recycler, state, c3287d, m81Var, layoutManagerHelper);
+    @Override // com.alibaba.android.vlayout.a
+    public void doLayout(RecyclerView.Recycler recycler, RecyclerView.State state, VirtualLayoutManager.d dVar, m81 m81Var, LayoutManagerHelper layoutManagerHelper) {
+        layoutViews(recycler, state, dVar, m81Var, layoutManagerHelper);
     }
 
     public float getAspectRatio() {
@@ -281,7 +278,7 @@ public abstract class BaseLayoutHelper extends AbstractC3303d {
         return this.mBgColor;
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public int getItemCount() {
         return this.mItemCount;
     }
@@ -302,7 +299,7 @@ public abstract class BaseLayoutHelper extends AbstractC3303d {
         m81Var.d = z;
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public boolean isFixLayout() {
         return false;
     }
@@ -320,19 +317,19 @@ public abstract class BaseLayoutHelper extends AbstractC3303d {
         layoutChildWithMargin(view, i, i2, i3, i4, layoutManagerHelper, false);
     }
 
-    public abstract void layoutViews(RecyclerView.Recycler recycler, RecyclerView.State state, VirtualLayoutManager.C3287d c3287d, m81 m81Var, LayoutManagerHelper layoutManagerHelper);
+    public abstract void layoutViews(RecyclerView.Recycler recycler, RecyclerView.State state, VirtualLayoutManager.d dVar, m81 m81Var, LayoutManagerHelper layoutManagerHelper);
 
     @Nullable
-    public final View nextView(RecyclerView.Recycler recycler, VirtualLayoutManager.C3287d c3287d, LayoutManagerHelper layoutManagerHelper, m81 m81Var) {
-        View l = c3287d.l(recycler);
+    public final View nextView(RecyclerView.Recycler recycler, VirtualLayoutManager.d dVar, LayoutManagerHelper layoutManagerHelper, m81 m81Var) {
+        View l = dVar.l(recycler);
         if (l == null) {
-            if (DEBUG && !c3287d.i()) {
+            if (DEBUG && !dVar.i()) {
                 throw new RuntimeException("received null view when unexpected");
             }
             m81Var.b = true;
             return null;
         }
-        layoutManagerHelper.addChildView(c3287d, l);
+        layoutManagerHelper.addChildView(dVar, l);
         return l;
     }
 
@@ -340,7 +337,7 @@ public abstract class BaseLayoutHelper extends AbstractC3303d {
     public void onClear(LayoutManagerHelper layoutManagerHelper) {
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public boolean requireLayoutView() {
         return (this.mBgColor == 0 && this.mLayoutViewBindListener == null) ? false : true;
     }
@@ -353,7 +350,7 @@ public abstract class BaseLayoutHelper extends AbstractC3303d {
         this.mBgColor = i;
     }
 
-    @Override // com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.a
     public void setItemCount(int i) {
         this.mItemCount = i;
     }
@@ -362,9 +359,9 @@ public abstract class BaseLayoutHelper extends AbstractC3303d {
         this.mLayoutViewBindListener = layoutViewBindListener;
     }
 
-    public void setLayoutViewHelper(C3297a c3297a) {
-        this.mLayoutViewBindListener = c3297a;
-        this.mLayoutViewUnBindListener = c3297a;
+    public void setLayoutViewHelper(a aVar) {
+        this.mLayoutViewBindListener = aVar;
+        this.mLayoutViewUnBindListener = aVar;
     }
 
     public void setLayoutViewUnBindListener(LayoutViewUnBindListener layoutViewUnBindListener) {

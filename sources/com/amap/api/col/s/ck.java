@@ -15,8 +15,8 @@ public final class ck extends br {
         this.b = "1";
         this.a = (byte[]) bArr.clone();
         this.b = str;
-        a(df.EnumC4423a.SINGLE);
-        a(df.EnumC4425c.HTTP);
+        a(df.a.SINGLE);
+        a(df.c.HTTP);
     }
 
     @Override // com.amap.api.col.s.df

@@ -3,8 +3,7 @@ package kotlin.reflect.jvm.internal.impl.types;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
+import kotlin.reflect.jvm.internal.impl.builtins.c;
 import kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.CompositeAnnotations;
@@ -64,10 +63,9 @@ public class TypeSubstitutor {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.types.TypeSubstitutor$a */
     /* loaded from: classes3.dex */
-    public static class C8540a implements Function1<hp0, Boolean> {
-        C8540a() {
+    public static class a implements Function1<hp0, Boolean> {
+        a() {
         }
 
         private static /* synthetic */ void a(int i) {
@@ -80,15 +78,14 @@ public class TypeSubstitutor {
             if (hp0Var == null) {
                 a(0);
             }
-            return Boolean.valueOf(!hp0Var.equals(C8277c.C8278a.unsafeVariance));
+            return Boolean.valueOf(!hp0Var.equals(c.a.unsafeVariance));
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.types.TypeSubstitutor$b */
     /* loaded from: classes3.dex */
-    public static /* synthetic */ class C8541b {
+    public static /* synthetic */ class b {
         static final /* synthetic */ int[] a;
 
         static {
@@ -257,7 +254,7 @@ public class TypeSubstitutor {
         if (annotations == null) {
             a(33);
         }
-        return !annotations.hasAnnotation(C8277c.C8278a.unsafeVariance) ? annotations : new nj0(annotations, new C8540a());
+        return !annotations.hasAnnotation(c.a.unsafeVariance) ? annotations : new nj0(annotations, new a());
     }
 
     @NotNull
@@ -271,7 +268,7 @@ public class TypeSubstitutor {
         if (typeProjection2 == null) {
             a(28);
         }
-        if (!z71Var.getAnnotations().hasAnnotation(C8277c.C8278a.unsafeVariance)) {
+        if (!z71Var.getAnnotations().hasAnnotation(c.a.unsafeVariance)) {
             if (typeProjection == null) {
                 a(29);
             }
@@ -308,13 +305,13 @@ public class TypeSubstitutor {
         if (type.c().getDeclarationDescriptor() instanceof TypeParameterDescriptor) {
             return typeProjection;
         }
-        fd2 b = bf2.b(type);
-        z71 q = b != null ? m().q(b, Variance.INVARIANT) : null;
-        z71 b2 = cr2.b(type, s(type.c().getParameters(), type.b(), i), this.a.d(type.getAnnotations()));
-        if ((b2 instanceof fd2) && (q instanceof fd2)) {
-            b2 = bf2.j((fd2) b2, (fd2) q);
+        fd2 b2 = bf2.b(type);
+        z71 q = b2 != null ? m().q(b2, Variance.INVARIANT) : null;
+        z71 b3 = cr2.b(type, s(type.c().getParameters(), type.b(), i), this.a.d(type.getAnnotations()));
+        if ((b3 instanceof fd2) && (q instanceof fd2)) {
+            b3 = bf2.j((fd2) b3, (fd2) q);
         }
-        return new zq2(projectionKind, b2);
+        return new zq2(projectionKind, b3);
     }
 
     private List<TypeProjection> s(List<TypeParameterDescriptor> list, List<TypeProjection> list2, int i) throws SubstitutionException {
@@ -324,7 +321,7 @@ public class TypeSubstitutor {
             TypeParameterDescriptor typeParameterDescriptor = list.get(i2);
             TypeProjection typeProjection = list2.get(i2);
             TypeProjection u = u(typeProjection, typeParameterDescriptor, i + 1);
-            int i3 = C8541b.a[e(typeParameterDescriptor.getVariance(), u.getProjectionKind()).ordinal()];
+            int i3 = b.a[e(typeParameterDescriptor.getVariance(), u.getProjectionKind()).ordinal()];
             if (i3 == 1 || i3 == 2) {
                 u = fr2.t(typeParameterDescriptor);
             } else if (i3 == 3) {
@@ -373,16 +370,16 @@ public class TypeSubstitutor {
             TypeProjection l = e != null ? l(type, e, typeParameterDescriptor, typeProjection) : null;
             Variance projectionKind = typeProjection.getProjectionKind();
             if (l == null && dk0.b(type) && !kq2.b(type)) {
-                ak0 a = dk0.a(type);
+                ak0 a2 = dk0.a(type);
                 int i2 = i + 1;
-                TypeProjection u2 = u(new zq2(projectionKind, a.k()), typeParameterDescriptor, i2);
-                TypeProjection u3 = u(new zq2(projectionKind, a.l()), typeParameterDescriptor, i2);
-                return (u2.getType() == a.k() && u3.getType() == a.l()) ? typeProjection : new zq2(u2.getProjectionKind(), KotlinTypeFactory.d(cr2.a(u2.getType()), cr2.a(u3.getType())));
-            } else if (!AbstractC8271b.l0(type) && !a81.a(type)) {
+                TypeProjection u2 = u(new zq2(projectionKind, a2.k()), typeParameterDescriptor, i2);
+                TypeProjection u3 = u(new zq2(projectionKind, a2.l()), typeParameterDescriptor, i2);
+                return (u2.getType() == a2.k() && u3.getType() == a2.l()) ? typeProjection : new zq2(u2.getProjectionKind(), KotlinTypeFactory.d(cr2.a(u2.getType()), cr2.a(u3.getType())));
+            } else if (!kotlin.reflect.jvm.internal.impl.builtins.b.l0(type) && !a81.a(type)) {
                 if (l != null) {
                     VarianceConflictType e2 = e(projectionKind, l.getProjectionKind());
                     if (!CapturedTypeConstructorKt.d(type)) {
-                        int i3 = C8541b.a[e2.ordinal()];
+                        int i3 = b.a[e2.ordinal()];
                         if (i3 == 1) {
                             throw new SubstitutionException("Out-projection in in-position");
                         }
@@ -390,12 +387,12 @@ public class TypeSubstitutor {
                             return new zq2(Variance.OUT_VARIANCE, type.c().getBuiltIns().I());
                         }
                     }
-                    CustomTypeVariable a2 = kq2.a(type);
+                    CustomTypeVariable a3 = kq2.a(type);
                     if (l.isStarProjection()) {
                         return l;
                     }
-                    if (a2 != null) {
-                        r = a2.substitutionResult(l.getType());
+                    if (a3 != null) {
+                        r = a3.substitutionResult(l.getType());
                     } else {
                         r = fr2.r(l.getType(), type.d());
                     }

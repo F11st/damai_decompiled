@@ -94,7 +94,7 @@ import com.uc.crashsdk.export.LogType;
 import java.lang.Thread;
 import java.util.List;
 import org.xmlpull.v1.XmlPullParser;
-import tb.C9796v;
+import tb.v;
 
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
@@ -633,7 +633,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements LayoutIn
                 return null;
             }
             if (this.listMenuPresenter == null) {
-                ListMenuPresenter listMenuPresenter = new ListMenuPresenter(this.listPresenterContext, R.C0013layout.abc_list_menu_item_layout);
+                ListMenuPresenter listMenuPresenter = new ListMenuPresenter(this.listPresenterContext, R.layout.abc_list_menu_item_layout);
                 this.listMenuPresenter = listMenuPresenter;
                 listMenuPresenter.setCallback(callback);
                 this.menu.addMenuPresenter(this.listMenuPresenter);
@@ -699,7 +699,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements LayoutIn
             if (i2 != 0) {
                 newTheme.applyStyle(i2, true);
             } else {
-                newTheme.applyStyle(R.C0014style.Theme_AppCompat_CompactMenu, true);
+                newTheme.applyStyle(R.style.Theme_AppCompat_CompactMenu, true);
             }
             androidx.appcompat.view.ContextThemeWrapper contextThemeWrapper = new androidx.appcompat.view.ContextThemeWrapper(context, 0);
             contextThemeWrapper.getTheme().setTo(newTheme);
@@ -897,7 +897,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements LayoutIn
             LayoutInflater from = LayoutInflater.from(this.mContext);
             if (!this.mWindowNoTitle) {
                 if (this.mIsFloating) {
-                    viewGroup = (ViewGroup) from.inflate(R.C0013layout.abc_dialog_title_material, (ViewGroup) null);
+                    viewGroup = (ViewGroup) from.inflate(R.layout.abc_dialog_title_material, (ViewGroup) null);
                     this.mOverlayActionBar = false;
                     this.mHasActionBar = false;
                 } else if (this.mHasActionBar) {
@@ -908,7 +908,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements LayoutIn
                     } else {
                         context = this.mContext;
                     }
-                    viewGroup = (ViewGroup) LayoutInflater.from(context).inflate(R.C0013layout.abc_screen_toolbar, (ViewGroup) null);
+                    viewGroup = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.abc_screen_toolbar, (ViewGroup) null);
                     DecorContentParent decorContentParent = (DecorContentParent) viewGroup.findViewById(R.id.decor_content_parent);
                     this.mDecorContentParent = decorContentParent;
                     decorContentParent.setWindowCallback(getWindowCallback());
@@ -925,7 +925,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements LayoutIn
                     viewGroup = null;
                 }
             } else {
-                viewGroup = this.mOverlayActionMode ? (ViewGroup) from.inflate(R.C0013layout.abc_screen_simple_overlay_action_mode, (ViewGroup) null) : (ViewGroup) from.inflate(R.C0013layout.abc_screen_simple, (ViewGroup) null);
+                viewGroup = this.mOverlayActionMode ? (ViewGroup) from.inflate(R.layout.abc_screen_simple_overlay_action_mode, (ViewGroup) null) : (ViewGroup) from.inflate(R.layout.abc_screen_simple, (ViewGroup) null);
             }
             if (viewGroup != null) {
                 if (Build.VERSION.SDK_INT >= 21) {
@@ -1324,7 +1324,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements LayoutIn
             closePanel(panelFeatureState, true);
             return;
         }
-        WindowManager windowManager = (WindowManager) this.mContext.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+        WindowManager windowManager = (WindowManager) this.mContext.getSystemService(v.ATTACH_MODE_WINDOW);
         if (windowManager != null && preparePanel(panelFeatureState, keyEvent)) {
             ViewGroup viewGroup = panelFeatureState.decorView;
             if (viewGroup != null && !panelFeatureState.refreshDecorView) {
@@ -1638,9 +1638,9 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements LayoutIn
     private void updateStatusGuardColor(View view) {
         int color;
         if ((ViewCompat.getWindowSystemUiVisibility(view) & 8192) != 0) {
-            color = ContextCompat.getColor(this.mContext, R.C0010color.abc_decor_view_status_guard_light);
+            color = ContextCompat.getColor(this.mContext, R.color.abc_decor_view_status_guard_light);
         } else {
-            color = ContextCompat.getColor(this.mContext, R.C0010color.abc_decor_view_status_guard);
+            color = ContextCompat.getColor(this.mContext, R.color.abc_decor_view_status_guard);
         }
         view.setBackgroundColor(color);
     }
@@ -1693,7 +1693,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements LayoutIn
             }
         }
         Configuration createOverrideConfigurationForDayNight = createOverrideConfigurationForDayNight(context, mapNightMode, configuration);
-        androidx.appcompat.view.ContextThemeWrapper contextThemeWrapper = new androidx.appcompat.view.ContextThemeWrapper(context, R.C0014style.Theme_AppCompat_Empty);
+        androidx.appcompat.view.ContextThemeWrapper contextThemeWrapper = new androidx.appcompat.view.ContextThemeWrapper(context, R.style.Theme_AppCompat_Empty);
         contextThemeWrapper.applyOverrideConfiguration(createOverrideConfigurationForDayNight);
         boolean z = false;
         try {
@@ -2529,7 +2529,7 @@ public class AppCompatDelegateImpl extends AppCompatDelegate implements LayoutIn
             checkCloseActionMenu(panelFeatureState.menu);
             return;
         }
-        WindowManager windowManager = (WindowManager) this.mContext.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+        WindowManager windowManager = (WindowManager) this.mContext.getSystemService(v.ATTACH_MODE_WINDOW);
         if (windowManager != null && panelFeatureState.isOpen && (viewGroup = panelFeatureState.decorView) != null) {
             windowManager.removeView(viewGroup);
             if (z) {

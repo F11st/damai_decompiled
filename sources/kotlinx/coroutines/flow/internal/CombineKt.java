@@ -2,7 +2,6 @@ package kotlinx.coroutines.flow.internal;
 
 import kotlin.PublishedApi;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function3;
 import kotlinx.coroutines.flow.Flow;
@@ -20,7 +19,7 @@ public final class CombineKt {
     public static final <R, T> Object a(@NotNull FlowCollector<? super R> flowCollector, @NotNull Flow<? extends T>[] flowArr, @NotNull Function0<T[]> function0, @NotNull Function3<? super FlowCollector<? super R>, ? super T[], ? super Continuation<? super wt2>, ? extends Object> function3, @NotNull Continuation<? super wt2> continuation) {
         Object d;
         Object a = nk0.a(new CombineKt$combineInternal$2(flowCollector, flowArr, function0, function3, null), continuation);
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         return a == d ? a : wt2.INSTANCE;
     }
 }

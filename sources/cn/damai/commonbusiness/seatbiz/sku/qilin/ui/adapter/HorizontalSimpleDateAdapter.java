@@ -39,12 +39,11 @@ public class HorizontalSimpleDateAdapter extends RecyclerView.Adapter<ViewHolder
         private TextView f;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.commonbusiness.seatbiz.sku.qilin.ui.adapter.HorizontalSimpleDateAdapter$ViewHolder$a */
         /* loaded from: classes.dex */
-        public class View$OnClickListenerC0851a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC0851a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -128,7 +127,7 @@ public class HorizontalSimpleDateAdapter extends RecyclerView.Adapter<ViewHolder
                     this.f.setTextColor(HorizontalSimpleDateAdapter.this.a.getResources().getColor(i4));
                 }
                 this.itemView.setTag(dayEntity);
-                this.itemView.setOnClickListener(new View$OnClickListenerC0851a());
+                this.itemView.setOnClickListener(new a());
             }
         }
     }

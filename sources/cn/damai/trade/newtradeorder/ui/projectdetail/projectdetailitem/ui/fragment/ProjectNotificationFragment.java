@@ -9,7 +9,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
@@ -37,12 +36,11 @@ public class ProjectNotificationFragment extends DamaiBaseMvpFragment {
     private TextView mTvNotificationTitle;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectNotificationFragment$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2331a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2331a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -57,12 +55,11 @@ public class ProjectNotificationFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectNotificationFragment$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2332b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2332b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -77,23 +74,22 @@ public class ProjectNotificationFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectNotificationFragment$c */
     /* loaded from: classes8.dex */
-    public class C2333c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2333c() {
+        c() {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "701113964")) {
-                ipChange.ipc$dispatch("701113964", new Object[]{this, c0502e});
-            } else if (c0502e == null || (bitmap = c0502e.b) == null || bitmap.isRecycled()) {
+                ipChange.ipc$dispatch("701113964", new Object[]{this, eVar});
+            } else if (eVar == null || (bitmap = eVar.b) == null || bitmap.isRecycled()) {
             } else {
-                ProjectNotificationFragment.this.mTvNotificationImg.setImageBitmap(c0502e.b);
+                ProjectNotificationFragment.this.mTvNotificationImg.setImageBitmap(eVar.b);
             }
         }
     }
@@ -117,7 +113,7 @@ public class ProjectNotificationFragment extends DamaiBaseMvpFragment {
         if (AndroidInstantRuntime.support(ipChange, "-1383818571")) {
             ipChange.ipc$dispatch("-1383818571", new Object[]{this});
         } else {
-            this.mOnCompleteClickListener = new View$OnClickListenerC2331a();
+            this.mOnCompleteClickListener = new a();
         }
     }
 
@@ -181,8 +177,8 @@ public class ProjectNotificationFragment extends DamaiBaseMvpFragment {
             this.mTvNotificationContent.setText(popupContent);
             if (!TextUtils.isEmpty(this.mStatusNotice.imageUrl)) {
                 this.mTvNotificationImg.setVisibility(0);
-                this.mTvNotificationImg.setOnClickListener(new View$OnClickListenerC2332b());
-                C0504a.b().f(this.mStatusNotice.imageUrl, 650, 900).n(new C2333c()).f();
+                this.mTvNotificationImg.setOnClickListener(new b());
+                cn.damai.common.image.a.b().f(this.mStatusNotice.imageUrl, 650, 900).n(new c()).f();
                 return;
             }
             this.mTvNotificationImg.setVisibility(8);

@@ -15,18 +15,17 @@ import org.jetbrains.annotations.Nullable;
 public final class mw0 extends MetricAffectingSpan implements LineBackgroundSpan, LineHeightSpan {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C9454a Companion = new C9454a(null);
+    public static final a Companion = new a(null);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.mw0$a */
     /* loaded from: classes7.dex */
-    public static final class C9454a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9454a() {
+        private a() {
         }
 
-        public /* synthetic */ C9454a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

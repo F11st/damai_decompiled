@@ -11,7 +11,7 @@ import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
 import java.util.concurrent.ConcurrentLinkedQueue;
-import tb.C9121f0;
+import tb.f0;
 import tb.n71;
 import tb.r71;
 
@@ -73,13 +73,13 @@ public class LSDB extends NativeBridgedObject {
     private static native long nativeOpen(String str, Config config);
 
     public static LSDB open(String str, Config config) {
-        Application a = C9121f0.a();
+        Application a = f0.a();
         if (a != null) {
             if (!NativeBridgedObject.sNativeLibraryLoaded) {
-                return new C6562a(a);
+                return new a(a);
             }
             LSDB openInternal = openInternal(a.getFilesDir() + File.separator + "lsdb-" + str, config);
-            return openInternal != null ? openInternal : new C6562a(a);
+            return openInternal != null ? openInternal : new a(a);
         }
         throw new RuntimeException("failed to get android context!");
     }
@@ -232,9 +232,9 @@ public class LSDB extends NativeBridgedObject {
 
     public static LSDB open(Context context, String str, Config config) {
         if (!NativeBridgedObject.sNativeLibraryLoaded) {
-            return new C6562a(context);
+            return new a(context);
         }
         LSDB openInternal = openInternal(context.getFilesDir() + File.separator + "lsdb-" + str, config);
-        return openInternal != null ? openInternal : new C6562a(context);
+        return openInternal != null ? openInternal : new a(context);
     }
 }

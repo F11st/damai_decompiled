@@ -13,13 +13,10 @@ import android.os.Message;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
-import com.alibaba.security.biometrics.component.C3772e;
-import com.alibaba.security.biometrics.logic.C3775a;
-import com.alibaba.security.biometrics.logic.a.C3776a;
+import com.alibaba.security.biometrics.component.e;
 import com.alibaba.security.biometrics.service.constants.GlobalErrorCode;
 import com.alibaba.security.biometrics.service.model.params.ALBiometricsKeys;
-import com.alibaba.security.common.c.C3800a;
-import com.alibaba.security.common.d.C3812i;
+import com.alibaba.security.common.d.i;
 import com.youku.danmaku.engine.danmaku.model.android.DanmakuFactory;
 
 /* compiled from: Taobao */
@@ -28,7 +25,7 @@ public abstract class BaseAlBioActivity extends Activity {
     public static final String c = "BaseBroadcastsActivity";
     protected RestartBiometricsBroadcast d;
     protected FinishBiometricsBroadcast e;
-    protected HandlerC3741a f;
+    protected a f;
 
     /* compiled from: Taobao */
     /* loaded from: classes8.dex */
@@ -62,10 +59,10 @@ public abstract class BaseAlBioActivity extends Activity {
                     BaseAlBioActivity.this.f.post(new Runnable() { // from class: com.alibaba.security.biometrics.activity.BaseAlBioActivity.RestartBiometricsBroadcast.1
                         @Override // java.lang.Runnable
                         public final void run() {
-                            ((C3775a) C3772e.a(C3775a.class)).a(i, "RestartBiometricsBroadcast", str);
-                            C3776a c3776a = ((C3775a) C3772e.a(C3775a.class)).d;
-                            if (c3776a != null) {
-                                c3776a.c = 0;
+                            ((com.alibaba.security.biometrics.logic.a) e.a(com.alibaba.security.biometrics.logic.a.class)).a(i, "RestartBiometricsBroadcast", str);
+                            com.alibaba.security.biometrics.logic.a.a aVar = ((com.alibaba.security.biometrics.logic.a) e.a(com.alibaba.security.biometrics.logic.a.class)).d;
+                            if (aVar != null) {
+                                aVar.c = 0;
                             }
                         }
                     });
@@ -78,12 +75,11 @@ public abstract class BaseAlBioActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.security.biometrics.activity.BaseAlBioActivity$a */
     /* loaded from: classes8.dex */
-    public static class HandlerC3741a extends Handler {
+    public static class a extends Handler {
         private final BaseAlBioActivity a;
 
-        public HandlerC3741a(BaseAlBioActivity baseAlBioActivity) {
+        public a(BaseAlBioActivity baseAlBioActivity) {
             super(Looper.getMainLooper());
             this.a = baseAlBioActivity;
         }
@@ -97,21 +93,21 @@ public abstract class BaseAlBioActivity extends Activity {
     private void c() {
         if (this.d == null) {
             this.d = new RestartBiometricsBroadcast();
-            C3812i.a(this).a(this.d, new IntentFilter(ALBiometricsKeys.KEY_ACTION_RESTART_BIOMETRICS));
+            i.a(this).a(this.d, new IntentFilter(ALBiometricsKeys.KEY_ACTION_RESTART_BIOMETRICS));
         }
         if (this.e == null) {
             this.e = new FinishBiometricsBroadcast();
-            C3812i.a(this).a(this.e, new IntentFilter(ALBiometricsKeys.KEY_ACTION_FINISH_BIOMETRICS));
+            i.a(this).a(this.e, new IntentFilter(ALBiometricsKeys.KEY_ACTION_FINISH_BIOMETRICS));
         }
     }
 
     private void d() {
         if (this.d != null) {
-            C3812i.a(this).a(this.d);
+            i.a(this).a(this.d);
             this.d = null;
         }
         if (this.e != null) {
-            C3812i.a(this).a(this.e);
+            i.a(this).a(this.e);
             this.e = null;
         }
     }
@@ -132,14 +128,14 @@ public abstract class BaseAlBioActivity extends Activity {
     @Override // android.app.Activity
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        this.f = new HandlerC3741a(this);
+        this.f = new a(this);
         if (this.d == null) {
             this.d = new RestartBiometricsBroadcast();
-            C3812i.a(this).a(this.d, new IntentFilter(ALBiometricsKeys.KEY_ACTION_RESTART_BIOMETRICS));
+            i.a(this).a(this.d, new IntentFilter(ALBiometricsKeys.KEY_ACTION_RESTART_BIOMETRICS));
         }
         if (this.e == null) {
             this.e = new FinishBiometricsBroadcast();
-            C3812i.a(this).a(this.e, new IntentFilter(ALBiometricsKeys.KEY_ACTION_FINISH_BIOMETRICS));
+            i.a(this).a(this.e, new IntentFilter(ALBiometricsKeys.KEY_ACTION_FINISH_BIOMETRICS));
         }
     }
 
@@ -148,11 +144,11 @@ public abstract class BaseAlBioActivity extends Activity {
     public void onDestroy() {
         super.onDestroy();
         if (this.d != null) {
-            C3812i.a(this).a(this.d);
+            i.a(this).a(this.d);
             this.d = null;
         }
         if (this.e != null) {
-            C3812i.a(this).a(this.e);
+            i.a(this).a(this.e);
             this.e = null;
         }
     }
@@ -163,7 +159,7 @@ public abstract class BaseAlBioActivity extends Activity {
                 View decorView = window.getDecorView();
                 decorView.getClass().getMethod("setForceDarkAllowed", Boolean.TYPE).invoke(decorView, Boolean.FALSE);
             } catch (Throwable unused) {
-                C3800a.b();
+                com.alibaba.security.common.c.a.b();
             }
         }
     }

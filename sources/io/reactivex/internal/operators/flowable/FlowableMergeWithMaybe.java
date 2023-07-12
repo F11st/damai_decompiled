@@ -1,9 +1,9 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeSource;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.fuseable.SimplePlainQueue;
@@ -77,7 +77,7 @@ public final class FlowableMergeWithMaybe<T> extends AbstractFlowableWithUpstrea
 
         MergeWithObserver(Subscriber<? super T> subscriber) {
             this.actual = subscriber;
-            int bufferSize = AbstractC8147b.bufferSize();
+            int bufferSize = b.bufferSize();
             this.prefetch = bufferSize;
             this.limit = bufferSize - (bufferSize >> 2);
         }
@@ -181,7 +181,7 @@ public final class FlowableMergeWithMaybe<T> extends AbstractFlowableWithUpstrea
         SimplePlainQueue<T> getOrCreateQueue() {
             SimplePlainQueue<T> simplePlainQueue = this.queue;
             if (simplePlainQueue == null) {
-                SpscArrayQueue spscArrayQueue = new SpscArrayQueue(AbstractC8147b.bufferSize());
+                SpscArrayQueue spscArrayQueue = new SpscArrayQueue(b.bufferSize());
                 this.queue = spscArrayQueue;
                 return spscArrayQueue;
             }
@@ -290,12 +290,12 @@ public final class FlowableMergeWithMaybe<T> extends AbstractFlowableWithUpstrea
         }
     }
 
-    public FlowableMergeWithMaybe(AbstractC8147b<T> abstractC8147b, MaybeSource<? extends T> maybeSource) {
-        super(abstractC8147b);
+    public FlowableMergeWithMaybe(b<T> bVar, MaybeSource<? extends T> maybeSource) {
+        super(bVar);
         this.other = maybeSource;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         MergeWithObserver mergeWithObserver = new MergeWithObserver(subscriber);
         subscriber.onSubscribe(mergeWithObserver);

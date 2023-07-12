@@ -136,7 +136,7 @@ public class WXSDKInstance implements View.OnLayoutChangeListener, IWXActivitySt
     private WXGlobalEventReceiver mGlobalEventReceiver;
     private HashMap<String, List<String>> mGlobalEvents;
     public boolean mHasCreateFinish;
-    private C6970c mHttpListener;
+    private com.taobao.weex.c mHttpListener;
     private ImageNetworkHandler mImageNetworkHandler;
     private final String mInstanceId;
     private List<c31> mInstanceOnFireEventInterceptorList;
@@ -144,7 +144,7 @@ public class WXSDKInstance implements View.OnLayoutChangeListener, IWXActivitySt
     private WXRefreshData mLastRefreshData;
     private List<String> mLayerOverFlowListeners;
     private int mMaxDeepLayer;
-    private ConcurrentHashMap<String, C6944a> mModuleInterceptMap;
+    private ConcurrentHashMap<String, a> mModuleInterceptMap;
     private NativeInvokeHelper mNativeInvokeHelper;
     private boolean mNeedReLoad;
     private boolean mNeedValidate;
@@ -171,7 +171,7 @@ public class WXSDKInstance implements View.OnLayoutChangeListener, IWXActivitySt
     private List<OnInstanceVisibleListener> mVisibleListeners;
     private List<ActionBarHandler> mWXActionbarHandlers;
     private List<OnBackPressedHandler> mWXBackPressedHandlers;
-    private List<AbstractC6946c> mWXOnActivityResultHandlers;
+    private List<c> mWXOnActivityResultHandlers;
     private WXPerformance mWXPerformance;
     private List<OnWXScrollListener> mWXScrollListeners;
     private WXScrollView.WXScrollViewListener mWXScrollViewListener;
@@ -204,7 +204,7 @@ public class WXSDKInstance implements View.OnLayoutChangeListener, IWXActivitySt
     /* compiled from: Taobao */
     /* loaded from: classes11.dex */
     public interface ModuleInterceptCallback {
-        C6945b CallModuleMethod(String str, String str2, JSONArray jSONArray, JSONObject jSONObject);
+        b CallModuleMethod(String str, String str2, JSONArray jSONArray, JSONObject jSONObject);
     }
 
     /* compiled from: Taobao */
@@ -243,29 +243,26 @@ public class WXSDKInstance implements View.OnLayoutChangeListener, IWXActivitySt
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.WXSDKInstance$a */
     /* loaded from: classes11.dex */
-    public static class C6944a {
+    public static class a {
         public ModuleInterceptCallback a;
 
-        public C6944a(String str, ModuleInterceptCallback moduleInterceptCallback) {
+        public a(String str, ModuleInterceptCallback moduleInterceptCallback) {
             this.a = moduleInterceptCallback;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.WXSDKInstance$b */
     /* loaded from: classes11.dex */
-    public static class C6945b {
+    public static class b {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.weex.WXSDKInstance$c */
     /* loaded from: classes11.dex */
-    public static abstract class AbstractC6946c {
+    public static abstract class c {
         private String a;
 
-        public AbstractC6946c(String str) {
+        public c(String str) {
             this.a = str;
         }
 
@@ -377,13 +374,13 @@ public class WXSDKInstance implements View.OnLayoutChangeListener, IWXActivitySt
     }
 
     private String filterUrlByEaglePlugin(String str) {
-        Pair<String, WXEaglePlugin> a = C6967b.b().a(str);
-        if (a != null) {
-            String str2 = (String) a.first;
-            this.mEaglePlugin = (WXEaglePlugin) a.second;
+        Pair<String, WXEaglePlugin> a2 = com.taobao.weex.b.b().a(str);
+        if (a2 != null) {
+            String str2 = (String) a2.first;
+            this.mEaglePlugin = (WXEaglePlugin) a2.second;
             String pluginName = this.mEaglePlugin.getPluginName();
             this.mEaglePluginName = pluginName;
-            this.mRenderStrategy = C6967b.e(pluginName);
+            this.mRenderStrategy = com.taobao.weex.b.e(pluginName);
             return str2;
         }
         return null;
@@ -468,10 +465,10 @@ public class WXSDKInstance implements View.OnLayoutChangeListener, IWXActivitySt
         wXRequest.instanceId = getInstanceId();
         wXRequest.paramMap.put("user-agent", nz2.a(this.mContext, WXEnvironment.getConfig()));
         wXRequest.paramMap.put("isBundleRequest", "true");
-        C6970c c6970c = new C6970c(this, wrapPageName, map2, str3, wXRenderStrategy2, System.currentTimeMillis());
-        this.mHttpListener = c6970c;
-        c6970c.isPreDownLoadMode = this.isPreDownLoad;
-        c6970c.setSDKInstance(this);
+        com.taobao.weex.c cVar = new com.taobao.weex.c(this, wrapPageName, map2, str3, wXRenderStrategy2, System.currentTimeMillis());
+        this.mHttpListener = cVar;
+        cVar.isPreDownLoadMode = this.isPreDownLoad;
+        cVar.setSDKInstance(this);
         this.mApmForInstance.r(WXInstanceApm.KEY_PAGE_STAGES_DOWN_BUNDLE_START);
         n.sendRequest(wXRequest, this.mHttpListener);
         createLogDetail.taskEnd();
@@ -490,12 +487,12 @@ public class WXSDKInstance implements View.OnLayoutChangeListener, IWXActivitySt
 
     private void setEaglePlugin(String str) {
         this.mEaglePluginName = str;
-        this.mEaglePlugin = C6967b.b().c(this.mEaglePluginName);
+        this.mEaglePlugin = com.taobao.weex.b.b().c(this.mEaglePluginName);
     }
 
     private void setRenderStrategy(WXRenderStrategy wXRenderStrategy) {
         this.mRenderStrategy = wXRenderStrategy;
-        setEaglePlugin(C6967b.d(wXRenderStrategy));
+        setEaglePlugin(com.taobao.weex.b.d(wXRenderStrategy));
     }
 
     private String wrapPageName(String str, String str2) {
@@ -676,7 +673,7 @@ public class WXSDKInstance implements View.OnLayoutChangeListener, IWXActivitySt
             if (list != null) {
                 list.clear();
             }
-            List<AbstractC6946c> list2 = this.mWXOnActivityResultHandlers;
+            List<c> list2 = this.mWXOnActivityResultHandlers;
             if (list2 != null && !list2.isEmpty()) {
                 this.mWXOnActivityResultHandlers.clear();
             }
@@ -1149,10 +1146,10 @@ public class WXSDKInstance implements View.OnLayoutChangeListener, IWXActivitySt
         return this.isViewDisAppear;
     }
 
-    public C6945b moduleIntercept(String str, String str2, JSONArray jSONArray, JSONObject jSONObject) {
+    public b moduleIntercept(String str, String str2, JSONArray jSONArray, JSONObject jSONObject) {
         ModuleInterceptCallback moduleInterceptCallback;
-        C6944a c6944a = this.mModuleInterceptMap.get(str);
-        if (c6944a == null || (moduleInterceptCallback = c6944a.a) == null) {
+        a aVar = this.mModuleInterceptMap.get(str);
+        if (aVar == null || (moduleInterceptCallback = aVar.a) == null) {
             return null;
         }
         return moduleInterceptCallback.CallModuleMethod(str, str2, jSONArray, jSONObject);
@@ -1275,11 +1272,11 @@ public class WXSDKInstance implements View.OnLayoutChangeListener, IWXActivitySt
         } else if (WXEnvironment.isApkDebugable()) {
             WXLogUtils.w("Warning :Component tree has not build completely, onActivityResult can not be call!");
         }
-        List<AbstractC6946c> list = this.mWXOnActivityResultHandlers;
+        List<c> list = this.mWXOnActivityResultHandlers;
         if (list == null || list.isEmpty()) {
             return;
         }
-        Iterator<AbstractC6946c> it = this.mWXOnActivityResultHandlers.iterator();
+        Iterator<c> it = this.mWXOnActivityResultHandlers.iterator();
         while (it.hasNext() && !it.next().a(i, i2, intent)) {
         }
     }
@@ -1668,17 +1665,17 @@ public class WXSDKInstance implements View.OnLayoutChangeListener, IWXActivitySt
         if (TextUtils.isEmpty(str) || moduleInterceptCallback == null) {
             return;
         }
-        this.mModuleInterceptMap.put(str, new C6944a(str, moduleInterceptCallback));
+        this.mModuleInterceptMap.put(str, new a(str, moduleInterceptCallback));
     }
 
-    public synchronized void registerOnActivityResultHandler(AbstractC6946c abstractC6946c) {
-        if (abstractC6946c == null) {
+    public synchronized void registerOnActivityResultHandler(c cVar) {
+        if (cVar == null) {
             return;
         }
         if (this.mWXOnActivityResultHandlers == null) {
             this.mWXOnActivityResultHandlers = new ArrayList();
         }
-        this.mWXOnActivityResultHandlers.add(abstractC6946c);
+        this.mWXOnActivityResultHandlers.add(cVar);
     }
 
     public synchronized void registerOnWXScrollListener(OnWXScrollListener onWXScrollListener) {
@@ -2059,10 +2056,10 @@ public class WXSDKInstance implements View.OnLayoutChangeListener, IWXActivitySt
         this.mModuleInterceptMap.remove(str);
     }
 
-    public synchronized void unRegisterOnActivityResultHandler(AbstractC6946c abstractC6946c) {
-        List<AbstractC6946c> list = this.mWXOnActivityResultHandlers;
-        if (list != null && abstractC6946c != null) {
-            list.remove(abstractC6946c);
+    public synchronized void unRegisterOnActivityResultHandler(c cVar) {
+        List<c> list = this.mWXOnActivityResultHandlers;
+        if (list != null && cVar != null) {
+            list.remove(cVar);
         }
     }
 
@@ -2129,12 +2126,12 @@ public class WXSDKInstance implements View.OnLayoutChangeListener, IWXActivitySt
             this.mBundleUrl = this.mWXPerformance.pageName;
         }
         if (wz2.b()) {
-            wz2.C9890a c = wz2.c("executeBundleJS", this.mInstanceId, -1);
-            c.d = this.mExecJSTraceId;
-            c.f = this.mInstanceId;
-            c.b = "JSThread";
-            c.c = "B";
-            c.a();
+            wz2.a c2 = wz2.c("executeBundleJS", this.mInstanceId, -1);
+            c2.d = this.mExecJSTraceId;
+            c2.f = this.mInstanceId;
+            c2.b = "JSThread";
+            c2.c = "B";
+            c2.a();
             this.mRenderStartNanos = System.nanoTime();
         }
         ensureRenderArchor();

@@ -11,8 +11,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
-import cn.damai.common.image.C0511b;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMImageStrategyConfig;
 import cn.damai.trade.R$drawable;
@@ -28,10 +26,10 @@ import com.alibaba.wireless.security.aopsdk.replace.android.util.DisplayMetrics;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.List;
-import tb.C9826vr;
 import tb.cb1;
 import tb.pp2;
 import tb.t60;
+import tb.vr;
 import tb.vv1;
 import tb.wh2;
 
@@ -49,7 +47,7 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
     private TextView g;
     private View h;
     private View.OnClickListener i;
-    private List<HtmlParserManager.C2244a> j;
+    private List<HtmlParserManager.a> j;
     private int k;
     private IRichTextManager l;
     private int m;
@@ -62,12 +60,11 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
     private int t;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectRichShrinkViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2403a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2403a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -82,12 +79,11 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectRichShrinkViewHolder$b */
     /* loaded from: classes16.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC2404b implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class b implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC2404b() {
+        b() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -102,12 +98,11 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectRichShrinkViewHolder$c */
     /* loaded from: classes16.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC2405c implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class c implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC2405c() {
+        c() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -122,12 +117,11 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectRichShrinkViewHolder$d */
     /* loaded from: classes16.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC2406d implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class d implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC2406d() {
+        d() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -142,21 +136,20 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectRichShrinkViewHolder$e */
     /* loaded from: classes8.dex */
-    public class C2407e implements DMImageCreator.DMImageFailListener {
+    public class e implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
-        C2407e(ProjectRichShrinkViewHolder projectRichShrinkViewHolder, ImageView imageView) {
+        e(ProjectRichShrinkViewHolder projectRichShrinkViewHolder, ImageView imageView) {
             this.a = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1925983338")) {
-                ipChange.ipc$dispatch("-1925983338", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-1925983338", new Object[]{this, dVar});
             } else {
                 this.a.setImageResource(R$drawable.project_default_image_bg);
             }
@@ -164,9 +157,8 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectRichShrinkViewHolder$f */
     /* loaded from: classes8.dex */
-    public class C2408f implements DMImageCreator.DMImageSuccListener {
+    public class f implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
         final /* synthetic */ int b;
@@ -178,12 +170,11 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
         final /* synthetic */ String h;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectRichShrinkViewHolder$f$a */
         /* loaded from: classes16.dex */
-        public class View$OnClickListenerC2409a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC2409a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -194,13 +185,13 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
                 } else if (ProjectRichShrinkViewHolder.this.r != null) {
                     OnItemExtendInfoItemClickListener onItemExtendInfoItemClickListener = ProjectRichShrinkViewHolder.this.r;
                     int i = ProjectRichShrinkViewHolder.this.k;
-                    C2408f c2408f = C2408f.this;
-                    onItemExtendInfoItemClickListener.onExtendInfoImageItemClick(view, i, c2408f.h, c2408f.d);
+                    f fVar = f.this;
+                    onItemExtendInfoItemClickListener.onExtendInfoImageItemClick(view, i, fVar.h, fVar.d);
                 }
             }
         }
 
-        C2408f(ImageView imageView, int i, int i2, String str, DMImageStrategyConfig.DMImageCropType dMImageCropType, int i3, boolean z, String str2) {
+        f(ImageView imageView, int i, int i2, String str, DMImageStrategyConfig.DMImageCropType dMImageCropType, int i3, boolean z, String str2) {
             this.a = imageView;
             this.b = i;
             this.c = i2;
@@ -212,15 +203,15 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Drawable drawable;
             int i;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1825848491")) {
-                ipChange.ipc$dispatch("1825848491", new Object[]{this, c0502e});
-            } else if (c0502e != null && (drawable = c0502e.a) != null) {
+                ipChange.ipc$dispatch("1825848491", new Object[]{this, eVar});
+            } else if (eVar != null && (drawable = eVar.a) != null) {
                 int intrinsicWidth = drawable.getIntrinsicWidth();
-                int intrinsicHeight = c0502e.a.getIntrinsicHeight();
+                int intrinsicHeight = eVar.a.getIntrinsicHeight();
                 int i2 = this.b;
                 if (intrinsicWidth <= i2 && intrinsicWidth != i2) {
                     i = t60.a(ProjectRichShrinkViewHolder.this.a, intrinsicWidth);
@@ -239,8 +230,8 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
                     SplitImageSizeCache.a(d, new SplitImageSizeCache.ImageSizeCache(d, i, i3));
                     ProjectRichShrinkViewHolder.this.y(this.a, i, i3);
                 }
-                this.a.setImageDrawable(c0502e.a);
-                this.a.setOnClickListener(new View$OnClickListenerC2409a());
+                this.a.setImageDrawable(eVar.a);
+                this.a.setOnClickListener(new a());
             } else {
                 this.a.setImageResource(R$drawable.project_default_image_bg);
             }
@@ -248,21 +239,20 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectRichShrinkViewHolder$g */
     /* loaded from: classes8.dex */
-    public class C2410g implements DMImageCreator.DMImageFailListener {
+    public class g implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
-        C2410g(ProjectRichShrinkViewHolder projectRichShrinkViewHolder, ImageView imageView) {
+        g(ProjectRichShrinkViewHolder projectRichShrinkViewHolder, ImageView imageView) {
             this.a = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "35591320")) {
-                ipChange.ipc$dispatch("35591320", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("35591320", new Object[]{this, dVar});
             } else {
                 this.a.setImageResource(R$drawable.project_default_image_bg);
             }
@@ -270,9 +260,8 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectRichShrinkViewHolder$h */
     /* loaded from: classes8.dex */
-    public class C2411h implements DMImageCreator.DMImageSuccListener {
+    public class h implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
         final /* synthetic */ boolean b;
@@ -281,12 +270,11 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
         final /* synthetic */ String e;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectRichShrinkViewHolder$h$a */
         /* loaded from: classes16.dex */
-        public class View$OnClickListenerC2412a implements View.OnClickListener {
+        public class a implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            View$OnClickListenerC2412a() {
+            a() {
             }
 
             @Override // android.view.View.OnClickListener
@@ -297,13 +285,13 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
                 } else if (ProjectRichShrinkViewHolder.this.r != null) {
                     OnItemExtendInfoItemClickListener onItemExtendInfoItemClickListener = ProjectRichShrinkViewHolder.this.r;
                     int i = ProjectRichShrinkViewHolder.this.k;
-                    C2411h c2411h = C2411h.this;
-                    onItemExtendInfoItemClickListener.onExtendInfoImageItemClick(view, i, c2411h.e, c2411h.d);
+                    h hVar = h.this;
+                    onItemExtendInfoItemClickListener.onExtendInfoImageItemClick(view, i, hVar.e, hVar.d);
                 }
             }
         }
 
-        C2411h(ImageView imageView, boolean z, LinearLayout linearLayout, String str, String str2) {
+        h(ImageView imageView, boolean z, LinearLayout linearLayout, String str, String str2) {
             this.a = imageView;
             this.b = z;
             this.c = linearLayout;
@@ -312,12 +300,12 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Drawable drawable;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "609694765")) {
-                ipChange.ipc$dispatch("609694765", new Object[]{this, c0502e});
-            } else if (c0502e != null && (drawable = c0502e.a) != null) {
+                ipChange.ipc$dispatch("609694765", new Object[]{this, eVar});
+            } else if (eVar != null && (drawable = eVar.a) != null) {
                 if (this.b) {
                     int intrinsicHeight = drawable.getIntrinsicHeight();
                     int i = intrinsicHeight / 500;
@@ -343,11 +331,11 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
                     return;
                 }
                 int intrinsicWidth = drawable.getIntrinsicWidth();
-                int intrinsicHeight2 = c0502e.a.getIntrinsicHeight();
-                int a = (intrinsicWidth > ProjectRichShrinkViewHolder.this.t || intrinsicWidth == ProjectRichShrinkViewHolder.this.t) ? ProjectRichShrinkViewHolder.this.s : t60.a(ProjectRichShrinkViewHolder.this.a, intrinsicWidth);
-                ProjectRichShrinkViewHolder.this.y(this.a, a, (int) (((intrinsicHeight2 * a) * 1.0f) / intrinsicWidth));
-                this.a.setImageDrawable(c0502e.a);
-                this.a.setOnClickListener(new View$OnClickListenerC2412a());
+                int intrinsicHeight2 = eVar.a.getIntrinsicHeight();
+                int a2 = (intrinsicWidth > ProjectRichShrinkViewHolder.this.t || intrinsicWidth == ProjectRichShrinkViewHolder.this.t) ? ProjectRichShrinkViewHolder.this.s : t60.a(ProjectRichShrinkViewHolder.this.a, intrinsicWidth);
+                ProjectRichShrinkViewHolder.this.y(this.a, a2, (int) (((intrinsicHeight2 * a2) * 1.0f) / intrinsicWidth));
+                this.a.setImageDrawable(eVar.a);
+                this.a.setOnClickListener(new a());
             } else {
                 this.a.setImageResource(R$drawable.project_default_image_bg);
             }
@@ -358,9 +346,9 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
         super(LayoutInflater.from(context).inflate(R$layout.project_rich_text_item_layout, viewGroup, false));
         this.a = context;
         u = t60.a(context, 450.0f);
-        int a = DisplayMetrics.getwidthPixels(this.a.getResources().getDisplayMetrics()) - (t60.a(this.a, 21.0f) * 2);
-        this.s = a;
-        this.t = t60.e(this.a, a);
+        int a2 = DisplayMetrics.getwidthPixels(this.a.getResources().getDisplayMetrics()) - (t60.a(this.a, 21.0f) * 2);
+        this.s = a2;
+        this.t = t60.e(this.a, a2);
         this.b = (LinearLayout) this.itemView.findViewById(R$id.rich_info_container_lv);
         this.r = onItemExtendInfoItemClickListener;
         LinearLayout linearLayout = (LinearLayout) this.itemView.findViewById(R$id.rich_image_text_ll);
@@ -377,7 +365,7 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
         this.h = this.itemView.findViewById(R$id.line);
         this.g.setVisibility(8);
         this.h.setVisibility(8);
-        this.i = new View$OnClickListenerC2403a();
+        this.i = new a();
         x();
     }
 
@@ -410,46 +398,46 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
         pp2.u().U1(this.f, this.q);
     }
 
-    private void k(HtmlParserManager.C2244a c2244a) {
+    private void k(HtmlParserManager.a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "467898564")) {
-            ipChange.ipc$dispatch("467898564", new Object[]{this, c2244a});
+            ipChange.ipc$dispatch("467898564", new Object[]{this, aVar});
             return;
         }
         this.c.setVisibility(0);
         this.d.setVisibility(8);
         this.e.setVisibility(8);
-        u(c2244a, this.c);
+        u(aVar, this.c);
     }
 
-    private void l(HtmlParserManager.C2244a c2244a, HtmlParserManager.C2244a c2244a2) {
+    private void l(HtmlParserManager.a aVar, HtmlParserManager.a aVar2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1096566591")) {
-            ipChange.ipc$dispatch("-1096566591", new Object[]{this, c2244a, c2244a2});
+            ipChange.ipc$dispatch("-1096566591", new Object[]{this, aVar, aVar2});
             return;
         }
         this.c.setVisibility(0);
         this.d.setVisibility(8);
         this.e.setVisibility(0);
-        u(c2244a, this.c);
-        u(c2244a2, this.e);
+        u(aVar, this.c);
+        u(aVar2, this.e);
     }
 
-    private void m(HtmlParserManager.C2244a c2244a, HtmlParserManager.C2244a c2244a2) {
+    private void m(HtmlParserManager.a aVar, HtmlParserManager.a aVar2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1534026581")) {
-            ipChange.ipc$dispatch("-1534026581", new Object[]{this, c2244a, c2244a2});
+            ipChange.ipc$dispatch("-1534026581", new Object[]{this, aVar, aVar2});
             return;
         }
         this.c.setVisibility(0);
         this.e.setVisibility(8);
-        if (c2244a2 != null) {
-            this.d.setText(c2244a2.a());
+        if (aVar2 != null) {
+            this.d.setText(aVar2.a());
             this.d.setVisibility(0);
         } else {
             this.d.setVisibility(8);
         }
-        u(c2244a, this.c);
+        u(aVar, this.c);
     }
 
     private void n() {
@@ -464,49 +452,49 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
             } else if (q == 2) {
                 k(this.j.get(0));
             } else {
-                HtmlParserManager.C2244a c2244a = this.j.get(0);
-                HtmlParserManager.C2244a c2244a2 = this.j.get(1);
+                HtmlParserManager.a aVar = this.j.get(0);
+                HtmlParserManager.a aVar2 = this.j.get(1);
                 int i = this.m;
                 if (i == 3) {
-                    p(c2244a, c2244a2);
+                    p(aVar, aVar2);
                 } else if (i == 4) {
-                    m(c2244a, c2244a2);
+                    m(aVar, aVar2);
                 } else if (i == 5) {
-                    l(c2244a, c2244a2);
+                    l(aVar, aVar2);
                 }
             }
         }
     }
 
-    private void o(HtmlParserManager.C2244a c2244a) {
+    private void o(HtmlParserManager.a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1733251788")) {
-            ipChange.ipc$dispatch("-1733251788", new Object[]{this, c2244a});
+            ipChange.ipc$dispatch("-1733251788", new Object[]{this, aVar});
             return;
         }
         this.c.setVisibility(8);
         this.e.setVisibility(8);
-        if (c2244a != null) {
-            this.d.setText(c2244a.a());
+        if (aVar != null) {
+            this.d.setText(aVar.a());
             this.d.setVisibility(0);
         }
     }
 
-    private void p(HtmlParserManager.C2244a c2244a, HtmlParserManager.C2244a c2244a2) {
+    private void p(HtmlParserManager.a aVar, HtmlParserManager.a aVar2) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "44859697")) {
-            ipChange.ipc$dispatch("44859697", new Object[]{this, c2244a, c2244a2});
+            ipChange.ipc$dispatch("44859697", new Object[]{this, aVar, aVar2});
             return;
         }
         this.e.setVisibility(0);
         this.c.setVisibility(8);
-        if (c2244a != null) {
-            this.d.setText(c2244a.a());
+        if (aVar != null) {
+            this.d.setText(aVar.a());
             this.d.setVisibility(0);
         } else {
             this.d.setVisibility(8);
         }
-        u(c2244a2, this.e);
+        u(aVar2, this.e);
     }
 
     private int q() {
@@ -514,26 +502,26 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
         if (AndroidInstantRuntime.support(ipChange, "-2045219711")) {
             return ((Integer) ipChange.ipc$dispatch("-2045219711", new Object[]{this})).intValue();
         }
-        int e = wh2.e(this.j);
-        if (e > 0) {
-            if (e == 1) {
+        int e2 = wh2.e(this.j);
+        if (e2 > 0) {
+            if (e2 == 1) {
                 if (this.j.get(0) != null) {
                     return this.j.get(0).e();
                 }
                 return -1;
-            } else if (e > 1) {
-                HtmlParserManager.C2244a c2244a = this.j.get(0);
-                HtmlParserManager.C2244a c2244a2 = this.j.get(1);
-                if (c2244a == null || c2244a2 == null) {
+            } else if (e2 > 1) {
+                HtmlParserManager.a aVar = this.j.get(0);
+                HtmlParserManager.a aVar2 = this.j.get(1);
+                if (aVar == null || aVar2 == null) {
                     return -1;
                 }
-                if (c2244a.e() == 1) {
-                    return c2244a2.e() == 2 ? 3 : -1;
-                } else if (c2244a.e() == 2) {
-                    if (c2244a2.e() == 1) {
+                if (aVar.e() == 1) {
+                    return aVar2.e() == 2 ? 3 : -1;
+                } else if (aVar.e() == 2) {
+                    if (aVar2.e() == 1) {
                         return 4;
                     }
-                    return c2244a2.e() == 2 ? 5 : -1;
+                    return aVar2.e() == 2 ? 5 : -1;
                 } else {
                     return -1;
                 }
@@ -567,65 +555,65 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
         this.f.setOnClickListener(null);
     }
 
-    private void u(HtmlParserManager.C2244a c2244a, LinearLayout linearLayout) {
+    private void u(HtmlParserManager.a aVar, LinearLayout linearLayout) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1734553337")) {
-            ipChange.ipc$dispatch("1734553337", new Object[]{this, c2244a, linearLayout});
-        } else if (c2244a != null && c2244a.a() != null && linearLayout != null) {
+            ipChange.ipc$dispatch("1734553337", new Object[]{this, aVar, linearLayout});
+        } else if (aVar != null && aVar.a() != null && linearLayout != null) {
             linearLayout.removeAllViews();
-            boolean b = vv1.b(c2244a.c(), c2244a.b());
-            boolean d = C0511b.d(c2244a.a().toString());
-            if (b && d) {
-                int b2 = c2244a.b() / 500;
-                if (c2244a.b() % 500 > 0) {
-                    b2++;
+            boolean b2 = vv1.b(aVar.c(), aVar.b());
+            boolean d2 = cn.damai.common.image.b.d(aVar.a().toString());
+            if (b2 && d2) {
+                int b3 = aVar.b() / 500;
+                if (aVar.b() % 500 > 0) {
+                    b3++;
                 }
-                for (int i = 0; i < b2; i++) {
+                for (int i = 0; i < b3; i++) {
                     RoundImageView roundImageView = new RoundImageView(this.a);
                     roundImageView.setScaleType(ImageView.ScaleType.FIT_XY);
                     roundImageView.setType(1);
                     roundImageView.setBorderRadius(0);
                     roundImageView.setBackgroundResource(R$drawable.project_image_bg);
-                    String obj = c2244a.a().toString();
+                    String obj = aVar.a().toString();
                     DMImageStrategyConfig.DMImageCropType dMImageCropType = DMImageStrategyConfig.DMImageCropType.cy500;
-                    SplitImageSizeCache.ImageSizeCache c = SplitImageSizeCache.c(SplitImageSizeCache.d(obj, dMImageCropType, i));
-                    if (c != null) {
-                        roundImageView.setLayoutParams(new ViewGroup.LayoutParams(c.imgWidth, c.imgHeight));
+                    SplitImageSizeCache.ImageSizeCache c2 = SplitImageSizeCache.c(SplitImageSizeCache.d(obj, dMImageCropType, i));
+                    if (c2 != null) {
+                        roundImageView.setLayoutParams(new ViewGroup.LayoutParams(c2.imgWidth, c2.imgHeight));
                     }
                     linearLayout.addView(roundImageView);
-                    w(c2244a.a().toString(), roundImageView, c2244a.d(), dMImageCropType, i, c != null);
+                    w(aVar.a().toString(), roundImageView, aVar.d(), dMImageCropType, i, c2 != null);
                 }
                 return;
             }
-            cb1.c("RichShrink", "load loadSingleImage " + c2244a.a().toString());
+            cb1.c("RichShrink", "load loadSingleImage " + aVar.a().toString());
             RoundImageView roundImageView2 = new RoundImageView(this.a);
             roundImageView2.setScaleType(ImageView.ScaleType.FIT_XY);
             roundImageView2.setType(1);
             roundImageView2.setBorderRadius(0);
             roundImageView2.setBackgroundResource(R$drawable.project_image_bg);
             linearLayout.addView(roundImageView2);
-            v(c2244a, d, roundImageView2, linearLayout);
+            v(aVar, d2, roundImageView2, linearLayout);
         }
     }
 
-    private void v(HtmlParserManager.C2244a c2244a, boolean z, ImageView imageView, LinearLayout linearLayout) {
+    private void v(HtmlParserManager.a aVar, boolean z, ImageView imageView, LinearLayout linearLayout) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1188613009")) {
-            ipChange.ipc$dispatch("-1188613009", new Object[]{this, c2244a, Boolean.valueOf(z), imageView, linearLayout});
+            ipChange.ipc$dispatch("-1188613009", new Object[]{this, aVar, Boolean.valueOf(z), imageView, linearLayout});
             return;
         }
-        String obj = c2244a.a().toString();
-        String d = c2244a.d();
-        if (imageView.getTag() instanceof C9826vr) {
-            ((C9826vr) imageView.getTag()).cancel();
+        String obj = aVar.a().toString();
+        String d2 = aVar.d();
+        if (imageView.getTag() instanceof vr) {
+            ((vr) imageView.getTag()).cancel();
         }
-        DMImageStrategyConfig b = C0511b.b(obj, -1, -1);
-        if (b != null) {
-            b.b = false;
+        DMImageStrategyConfig b2 = cn.damai.common.image.b.b(obj, -1, -1);
+        if (b2 != null) {
+            b2.b = false;
         }
-        DMImageCreator g = C0504a.b().g(obj, b);
+        DMImageCreator g2 = cn.damai.common.image.a.b().g(obj, b2);
         int i = R$drawable.project_default_image_bg;
-        imageView.setTag(g.i(i).c(i).h(null, this.s, 16383).n(new C2411h(imageView, z, linearLayout, obj, d)).e(new C2410g(this, imageView)).f());
+        imageView.setTag(g2.i(i).c(i).h(null, this.s, 16383).n(new h(imageView, z, linearLayout, obj, d2)).e(new g(this, imageView)).f());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -636,21 +624,21 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
             return;
         }
         cb1.c("RichShrink", "hasCache " + z + " index=" + i + " url=" + str);
-        if (imageView.getTag() instanceof C9826vr) {
-            ((C9826vr) imageView.getTag()).cancel();
+        if (imageView.getTag() instanceof vr) {
+            ((vr) imageView.getTag()).cancel();
         }
-        int a = DisplayMetrics.getwidthPixels(this.a.getResources().getDisplayMetrics()) - (t60.a(this.a, 21.0f) * 2);
-        int e = t60.e(this.a, a);
-        DMImageStrategyConfig b = C0511b.b(str, -1, -1);
-        if (b != null) {
-            b.b = false;
-            b.c = true;
-            b.d = dMImageCropType;
-            b.e = i;
+        int a2 = DisplayMetrics.getwidthPixels(this.a.getResources().getDisplayMetrics()) - (t60.a(this.a, 21.0f) * 2);
+        int e2 = t60.e(this.a, a2);
+        DMImageStrategyConfig b2 = cn.damai.common.image.b.b(str, -1, -1);
+        if (b2 != null) {
+            b2.b = false;
+            b2.c = true;
+            b2.d = dMImageCropType;
+            b2.e = i;
         }
-        DMImageCreator g = C0504a.b().g(str, b);
+        DMImageCreator g2 = cn.damai.common.image.a.b().g(str, b2);
         int i2 = R$drawable.project_default_image_bg;
-        imageView.setTag(g.i(i2).c(i2).n(new C2408f(imageView, e, a, str, dMImageCropType, i, z, str2)).e(new C2407e(this, imageView)).f());
+        imageView.setTag(g2.i(i2).c(i2).n(new f(imageView, e2, a2, str, dMImageCropType, i, z, str2)).e(new e(this, imageView)).f());
     }
 
     private void x() {
@@ -660,11 +648,11 @@ public class ProjectRichShrinkViewHolder extends RecyclerView.ViewHolder {
             return;
         }
         ViewTreeObserver viewTreeObserver = this.d.getViewTreeObserver();
-        this.n = new ViewTreeObserver$OnGlobalLayoutListenerC2404b();
+        this.n = new b();
         ViewTreeObserver viewTreeObserver2 = this.c.getViewTreeObserver();
-        this.o = new ViewTreeObserver$OnGlobalLayoutListenerC2405c();
+        this.o = new c();
         ViewTreeObserver viewTreeObserver3 = this.e.getViewTreeObserver();
-        this.p = new ViewTreeObserver$OnGlobalLayoutListenerC2406d();
+        this.p = new d();
         if (viewTreeObserver.isAlive()) {
             viewTreeObserver.addOnGlobalLayoutListener(this.n);
         }

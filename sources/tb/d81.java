@@ -15,19 +15,18 @@ public final class d81 implements Comparable<d81> {
     private final int c;
     private final int d;
     @NotNull
-    public static final C9031a Companion = new C9031a(null);
+    public static final a Companion = new a(null);
     @JvmField
     @NotNull
     public static final d81 CURRENT = e81.a();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.d81$a */
     /* loaded from: classes3.dex */
-    public static final class C9031a {
-        private C9031a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9031a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

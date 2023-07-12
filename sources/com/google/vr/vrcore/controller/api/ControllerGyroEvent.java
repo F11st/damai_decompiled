@@ -6,16 +6,15 @@ import android.os.Parcelable;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public final class ControllerGyroEvent extends ControllerEvent {
-    public static final Parcelable.Creator<ControllerGyroEvent> CREATOR = new C5443a();
+    public static final Parcelable.Creator<ControllerGyroEvent> CREATOR = new a();
     public float x;
     public float y;
     public float z;
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.vr.vrcore.controller.api.ControllerGyroEvent$a */
     /* loaded from: classes10.dex */
-    class C5443a implements Parcelable.Creator<ControllerGyroEvent> {
-        C5443a() {
+    class a implements Parcelable.Creator<ControllerGyroEvent> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator

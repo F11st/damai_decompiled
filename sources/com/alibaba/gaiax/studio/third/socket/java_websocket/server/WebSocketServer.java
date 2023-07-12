@@ -69,10 +69,9 @@ public abstract class WebSocketServer extends AbstractWebSocket implements Runna
         private BlockingQueue<WebSocketImpl> iqueue = new LinkedBlockingQueue();
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.studio.third.socket.java_websocket.server.WebSocketServer$WebSocketWorker$a */
         /* loaded from: classes6.dex */
-        class C3387a implements Thread.UncaughtExceptionHandler {
-            C3387a(WebSocketWorker webSocketWorker, WebSocketServer webSocketServer) {
+        class a implements Thread.UncaughtExceptionHandler {
+            a(WebSocketWorker webSocketWorker, WebSocketServer webSocketServer) {
             }
 
             @Override // java.lang.Thread.UncaughtExceptionHandler
@@ -83,7 +82,7 @@ public abstract class WebSocketServer extends AbstractWebSocket implements Runna
 
         public WebSocketWorker() {
             setName("WebSocketWorker-" + getId());
-            setUncaughtExceptionHandler(new C3387a(this, WebSocketServer.this));
+            setUncaughtExceptionHandler(new a(this, WebSocketServer.this));
         }
 
         private void doDecode(WebSocketImpl webSocketImpl, ByteBuffer byteBuffer) throws InterruptedException {

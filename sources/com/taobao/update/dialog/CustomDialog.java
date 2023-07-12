@@ -18,9 +18,8 @@ public class CustomDialog extends android.app.Dialog {
     private DialogInterface.OnClickListener b;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.update.dialog.CustomDialog$b */
     /* loaded from: classes11.dex */
-    public static class C6927b {
+    public static class b {
         private Context a;
         private String b;
         private View c;
@@ -28,58 +27,56 @@ public class CustomDialog extends android.app.Dialog {
         private DialogInterface.OnClickListener e;
 
         /* compiled from: Taobao */
-        /* renamed from: com.taobao.update.dialog.CustomDialog$b$a */
         /* loaded from: classes11.dex */
-        class DialogInterface$OnCancelListenerC6928a implements DialogInterface.OnCancelListener {
-            DialogInterface$OnCancelListenerC6928a() {
+        class a implements DialogInterface.OnCancelListener {
+            a() {
             }
 
             @Override // android.content.DialogInterface.OnCancelListener
             public void onCancel(DialogInterface dialogInterface) {
                 dialogInterface.dismiss();
-                if (C6927b.this.e != null) {
-                    C6927b.this.e.onClick(dialogInterface, -2);
+                if (b.this.e != null) {
+                    b.this.e.onClick(dialogInterface, -2);
                 }
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.taobao.update.dialog.CustomDialog$b$b */
+        /* renamed from: com.taobao.update.dialog.CustomDialog$b$b  reason: collision with other inner class name */
         /* loaded from: classes11.dex */
-        class View$OnClickListenerC6929b implements View.OnClickListener {
+        class View$OnClickListenerC0328b implements View.OnClickListener {
             final /* synthetic */ CustomDialog a;
 
-            View$OnClickListenerC6929b(CustomDialog customDialog) {
+            View$OnClickListenerC0328b(CustomDialog customDialog) {
                 this.a = customDialog;
             }
 
             @Override // android.view.View.OnClickListener
             public void onClick(View view) {
                 this.a.dismiss();
-                if (C6927b.this.e != null) {
-                    C6927b.this.e.onClick(this.a, -2);
+                if (b.this.e != null) {
+                    b.this.e.onClick(this.a, -2);
                 }
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.taobao.update.dialog.CustomDialog$b$c */
         /* loaded from: classes11.dex */
-        class View$OnClickListenerC6930c implements View.OnClickListener {
+        class c implements View.OnClickListener {
             final /* synthetic */ CustomDialog a;
 
-            View$OnClickListenerC6930c(CustomDialog customDialog) {
+            c(CustomDialog customDialog) {
                 this.a = customDialog;
             }
 
             @Override // android.view.View.OnClickListener
             public void onClick(View view) {
                 this.a.dismiss();
-                C6927b.this.d.onClick(this.a, -1);
+                b.this.d.onClick(this.a, -1);
             }
         }
 
-        public C6927b(Context context) {
+        public b(Context context) {
             this.a = context;
         }
 
@@ -98,10 +95,10 @@ public class CustomDialog extends android.app.Dialog {
             }
             customDialog.setCanceledOnTouchOutside(true);
             customDialog.setCancelable(true);
-            customDialog.setOnCancelListener(new DialogInterface$OnCancelListenerC6928a());
-            inflate.findViewById(R$id.close_btn).setOnClickListener(new View$OnClickListenerC6929b(customDialog));
+            customDialog.setOnCancelListener(new a());
+            inflate.findViewById(R$id.close_btn).setOnClickListener(new View$OnClickListenerC0328b(customDialog));
             if (this.d != null) {
-                findViewById.findViewById(R$id.image_button).setOnClickListener(new View$OnClickListenerC6930c(customDialog));
+                findViewById.findViewById(R$id.image_button).setOnClickListener(new c(customDialog));
             }
             if (!TextUtils.isEmpty(this.b)) {
                 ((TextView) inflate.findViewById(R$id.text_content)).setText(this.b);
@@ -110,42 +107,42 @@ public class CustomDialog extends android.app.Dialog {
             return customDialog;
         }
 
-        public C6927b setContentView(View view) {
+        public b setContentView(View view) {
             this.c = view;
             return this;
         }
 
-        public C6927b setMessage(String str) {
+        public b setMessage(String str) {
             this.b = str;
             return this;
         }
 
-        public C6927b setNegativeButton(DialogInterface.OnClickListener onClickListener) {
+        public b setNegativeButton(DialogInterface.OnClickListener onClickListener) {
             this.e = onClickListener;
             return this;
         }
 
-        public C6927b setPositiveButton(int i, DialogInterface.OnClickListener onClickListener) {
+        public b setPositiveButton(int i, DialogInterface.OnClickListener onClickListener) {
             String str = (String) this.a.getText(i);
             this.d = onClickListener;
             return this;
         }
 
-        public C6927b setTitle(int i) {
+        public b setTitle(int i) {
             String str = (String) this.a.getText(i);
             return this;
         }
 
-        public C6927b setTitle(String str) {
+        public b setTitle(String str) {
             return this;
         }
 
-        public C6927b setMessage(int i) {
+        public b setMessage(int i) {
             this.b = (String) this.a.getText(i);
             return this;
         }
 
-        public C6927b setPositiveButton(String str, DialogInterface.OnClickListener onClickListener) {
+        public b setPositiveButton(String str, DialogInterface.OnClickListener onClickListener) {
             this.d = onClickListener;
             return this;
         }

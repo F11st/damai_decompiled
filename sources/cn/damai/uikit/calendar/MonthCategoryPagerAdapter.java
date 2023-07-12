@@ -33,7 +33,7 @@ public class MonthCategoryPagerAdapter extends CalendarPagerAdapter<MonthCategor
     @Override // cn.damai.uikit.calendar.CalendarPagerAdapter
     protected DateRangeIndex b(CalendarDay calendarDay, CalendarDay calendarDay2) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1575202092") ? (DateRangeIndex) ipChange.ipc$dispatch("1575202092", new Object[]{this, calendarDay, calendarDay2}) : new MonthPagerAdapter.C2488a(calendarDay, calendarDay2);
+        return AndroidInstantRuntime.support(ipChange, "1575202092") ? (DateRangeIndex) ipChange.ipc$dispatch("1575202092", new Object[]{this, calendarDay, calendarDay2}) : new MonthPagerAdapter.a(calendarDay, calendarDay2);
     }
 
     @Override // cn.damai.uikit.calendar.CalendarPagerAdapter

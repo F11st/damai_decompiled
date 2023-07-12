@@ -7,8 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import androidx.fragment.app.FragmentTransaction;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
@@ -94,7 +94,7 @@ public final class ScriptDetailActivity extends SimpleBaseActivity {
         if (intent != null && (stringExtra = intent.getStringExtra("scriptId")) != null) {
             hashMap.put("scriptkillid", stringExtra);
         }
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i("scriptkill").a(z20.d()).j(hashMap));
+        setDamaiUTKeyBuilder(new a.b().i("scriptkill").a(z20.d()).j(hashMap));
     }
 
     @Override // cn.damai.common.app.base.BaseActivity
@@ -147,7 +147,7 @@ public final class ScriptDetailActivity extends SimpleBaseActivity {
         setImmersionStyle();
         addFragment();
         addUtPage();
-        C0529c.e().K(this);
+        c.e().K(this);
     }
 
     public final void setImmersionStyle() {

@@ -1,7 +1,6 @@
 package tb;
 
 import com.taobao.phenix.builder.Builder;
-import com.taobao.phenix.loader.file.C6860a;
 import com.taobao.phenix.loader.file.FileLoader;
 
 /* compiled from: Taobao */
@@ -18,7 +17,7 @@ public class li0 implements Builder<FileLoader> {
         }
         this.a = true;
         if (this.b == null) {
-            this.b = new C6860a();
+            this.b = new com.taobao.phenix.loader.file.a();
         }
         return this.b;
     }

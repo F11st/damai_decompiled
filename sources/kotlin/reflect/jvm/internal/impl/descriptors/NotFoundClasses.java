@@ -5,12 +5,12 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import kotlin.collections.C8201d0;
-import kotlin.collections.C8203e0;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.d0;
+import kotlin.collections.e0;
+import kotlin.collections.k;
+import kotlin.collections.m;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.NotFoundClasses;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
@@ -48,19 +48,18 @@ public final class NotFoundClasses {
     @NotNull
     private final MemoizedFunctionToNotNull<hp0, PackageFragmentDescriptor> c;
     @NotNull
-    private final MemoizedFunctionToNotNull<C8293a, ClassDescriptor> d;
+    private final MemoizedFunctionToNotNull<a, ClassDescriptor> d;
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.NotFoundClasses$a */
     /* loaded from: classes3.dex */
-    public static final class C8293a {
+    public static final class a {
         @NotNull
         private final hj a;
         @NotNull
         private final List<Integer> b;
 
-        public C8293a(@NotNull hj hjVar, @NotNull List<Integer> list) {
+        public a(@NotNull hj hjVar, @NotNull List<Integer> list) {
             b41.i(hjVar, "classId");
             b41.i(list, "typeParametersCount");
             this.a = hjVar;
@@ -81,9 +80,9 @@ public final class NotFoundClasses {
             if (this == obj) {
                 return true;
             }
-            if (obj instanceof C8293a) {
-                C8293a c8293a = (C8293a) obj;
-                return b41.d(this.a, c8293a.a) && b41.d(this.b, c8293a.b);
+            if (obj instanceof a) {
+                a aVar = (a) obj;
+                return b41.d(this.a, aVar.a) && b41.d(this.b, aVar.b);
             }
             return false;
         }
@@ -99,9 +98,8 @@ public final class NotFoundClasses {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.NotFoundClasses$b */
     /* loaded from: classes3.dex */
-    public static final class C8294b extends fj {
+    public static final class b extends fj {
         private final boolean h;
         @NotNull
         private final List<TypeParameterDescriptor> i;
@@ -109,7 +107,7 @@ public final class NotFoundClasses {
         private final lj j;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C8294b(@NotNull StorageManager storageManager, @NotNull DeclarationDescriptor declarationDescriptor, @NotNull ni1 ni1Var, boolean z, int i) {
+        public b(@NotNull StorageManager storageManager, @NotNull DeclarationDescriptor declarationDescriptor, @NotNull ni1 ni1Var, boolean z, int i) {
             super(storageManager, declarationDescriptor, ni1Var, SourceElement.NO_SOURCE, false);
             n31 h;
             int q;
@@ -119,7 +117,7 @@ public final class NotFoundClasses {
             b41.i(ni1Var, "name");
             this.h = z;
             h = ty1.h(0, i);
-            q = C8215n.q(h, 10);
+            q = n.q(h, 10);
             ArrayList arrayList = new ArrayList(q);
             Iterator<Integer> it = h.iterator();
             while (it.hasNext()) {
@@ -128,15 +126,15 @@ public final class NotFoundClasses {
             }
             this.i = arrayList;
             List<TypeParameterDescriptor> d = TypeParameterUtilsKt.d(this);
-            c = C8201d0.c(DescriptorUtilsKt.l(this).getBuiltIns().i());
+            c = d0.c(DescriptorUtilsKt.l(this).getBuiltIns().i());
             this.j = new lj(this, d, c, storageManager);
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor
         @NotNull
         /* renamed from: e */
-        public MemberScope.C8499b getStaticScope() {
-            return MemberScope.C8499b.INSTANCE;
+        public MemberScope.b getStaticScope() {
+            return MemberScope.b.INSTANCE;
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor
@@ -150,9 +148,9 @@ public final class NotFoundClasses {
         @Override // tb.wg1
         @NotNull
         /* renamed from: g */
-        public MemberScope.C8499b b(@NotNull b81 b81Var) {
+        public MemberScope.b b(@NotNull b81 b81Var) {
             b41.i(b81Var, "kotlinTypeRefiner");
-            return MemberScope.C8499b.INSTANCE;
+            return MemberScope.b.INSTANCE;
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotated
@@ -171,7 +169,7 @@ public final class NotFoundClasses {
         @NotNull
         public Collection<ClassConstructorDescriptor> getConstructors() {
             Set d;
-            d = C8203e0.d();
+            d = e0.d();
             return d;
         }
 
@@ -203,7 +201,7 @@ public final class NotFoundClasses {
         @NotNull
         public Collection<ClassDescriptor> getSealedSubclasses() {
             List g;
-            g = C8214m.g();
+            g = m.g();
             return g;
         }
 
@@ -292,7 +290,7 @@ public final class NotFoundClasses {
                 return new ie0(moduleDescriptor2, hp0Var);
             }
         });
-        this.d = storageManager.createMemoizedFunction(new Function1<C8293a, ClassDescriptor>() { // from class: kotlin.reflect.jvm.internal.impl.descriptors.NotFoundClasses$classes$1
+        this.d = storageManager.createMemoizedFunction(new Function1<a, ClassDescriptor>() { // from class: kotlin.reflect.jvm.internal.impl.descriptors.NotFoundClasses$classes$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(1);
@@ -300,38 +298,38 @@ public final class NotFoundClasses {
 
             @Override // kotlin.jvm.functions.Function1
             @NotNull
-            public final ClassDescriptor invoke(@NotNull NotFoundClasses.C8293a c8293a) {
+            public final ClassDescriptor invoke(@NotNull NotFoundClasses.a aVar) {
                 List<Integer> L;
                 DeclarationDescriptorWithSource d;
                 StorageManager storageManager2;
                 MemoizedFunctionToNotNull memoizedFunctionToNotNull;
-                b41.i(c8293a, "$dstr$classId$typeParametersCount");
-                hj a = c8293a.a();
-                List<Integer> b = c8293a.b();
-                if (!a.k()) {
-                    hj g = a.g();
+                b41.i(aVar, "$dstr$classId$typeParametersCount");
+                hj a2 = aVar.a();
+                List<Integer> b2 = aVar.b();
+                if (!a2.k()) {
+                    hj g = a2.g();
                     if (g == null) {
                         d = null;
                     } else {
                         NotFoundClasses notFoundClasses = NotFoundClasses.this;
-                        L = CollectionsKt___CollectionsKt.L(b, 1);
+                        L = CollectionsKt___CollectionsKt.L(b2, 1);
                         d = notFoundClasses.d(g, L);
                     }
                     if (d == null) {
                         memoizedFunctionToNotNull = NotFoundClasses.this.c;
-                        hp0 h = a.h();
+                        hp0 h = a2.h();
                         b41.h(h, "classId.packageFqName");
                         d = (ClassOrPackageFragmentDescriptor) memoizedFunctionToNotNull.invoke(h);
                     }
                     DeclarationDescriptorWithSource declarationDescriptorWithSource = d;
-                    boolean l = a.l();
+                    boolean l = a2.l();
                     storageManager2 = NotFoundClasses.this.a;
-                    ni1 j = a.j();
+                    ni1 j = a2.j();
                     b41.h(j, "classId.shortClassName");
-                    Integer num = (Integer) C8212k.R(b);
-                    return new NotFoundClasses.C8294b(storageManager2, declarationDescriptorWithSource, j, l, num == null ? 0 : num.intValue());
+                    Integer num = (Integer) k.R(b2);
+                    return new NotFoundClasses.b(storageManager2, declarationDescriptorWithSource, j, l, num == null ? 0 : num.intValue());
                 }
-                throw new UnsupportedOperationException(b41.r("Unresolved local class: ", a));
+                throw new UnsupportedOperationException(b41.r("Unresolved local class: ", a2));
             }
         });
     }
@@ -340,6 +338,6 @@ public final class NotFoundClasses {
     public final ClassDescriptor d(@NotNull hj hjVar, @NotNull List<Integer> list) {
         b41.i(hjVar, "classId");
         b41.i(list, "typeParametersCount");
-        return this.d.invoke(new C8293a(hjVar, list));
+        return this.d.invoke(new a(hjVar, list));
     }
 }

@@ -23,8 +23,8 @@ public class WheelScroller {
     private int e;
     private float f;
     private boolean g;
-    private GestureDetector.SimpleOnGestureListener h = new C2618a();
-    private Handler i = new HandlerC2619b();
+    private GestureDetector.SimpleOnGestureListener h = new a();
+    private Handler i = new b();
 
     /* compiled from: Taobao */
     /* loaded from: classes8.dex */
@@ -39,12 +39,11 @@ public class WheelScroller {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.wheel.WheelScroller$a */
     /* loaded from: classes8.dex */
-    public class C2618a extends GestureDetector.SimpleOnGestureListener {
+    public class a extends GestureDetector.SimpleOnGestureListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2618a() {
+        a() {
         }
 
         @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnGestureListener
@@ -70,12 +69,11 @@ public class WheelScroller {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.wheel.WheelScroller$b */
     /* loaded from: classes8.dex */
-    public class HandlerC2619b extends Handler {
+    public class b extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC2619b() {
+        b() {
         }
 
         @Override // android.os.Handler

@@ -17,12 +17,11 @@ public class pa0 {
     private DmOrderActivity d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.pa0$a */
     /* loaded from: classes9.dex */
-    public class C9545a implements ResponseErrorPage.ErrorRefreshListener {
+    public class a implements ResponseErrorPage.ErrorRefreshListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9545a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.base.ResponseErrorPage.ErrorRefreshListener
@@ -70,7 +69,7 @@ public class pa0 {
         if (this.b == 5) {
             responseErrorPage2.updateRefreshBtn(true, "努力刷新");
         }
-        responseErrorPage2.setRefreshListener(new C9545a());
+        responseErrorPage2.setRefreshListener(new a());
         responseErrorPage2.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
         this.c.addView(responseErrorPage2, 0);
     }

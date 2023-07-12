@@ -7,20 +7,19 @@ import java.util.Collections;
 import java.util.List;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$TypeTable;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$VersionRequirementTable;
-import kotlin.reflect.jvm.internal.impl.protobuf.AbstractC8443a;
 import kotlin.reflect.jvm.internal.impl.protobuf.AbstractMessageLite;
 import kotlin.reflect.jvm.internal.impl.protobuf.ByteString;
-import kotlin.reflect.jvm.internal.impl.protobuf.C8447c;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.CodedOutputStream;
 import kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite;
 import kotlin.reflect.jvm.internal.impl.protobuf.InvalidProtocolBufferException;
 import kotlin.reflect.jvm.internal.impl.protobuf.Parser;
+import kotlin.reflect.jvm.internal.impl.protobuf.c;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class ProtoBuf$Package extends GeneratedMessageLite.ExtendableMessage<ProtoBuf$Package> implements ProtoBuf$PackageOrBuilder {
-    public static Parser<ProtoBuf$Package> PARSER = new C8405a();
+    public static Parser<ProtoBuf$Package> PARSER = new a();
     private static final ProtoBuf$Package defaultInstance;
     private int bitField0_;
     private List<ProtoBuf$Function> function_;
@@ -246,7 +245,7 @@ public final class ProtoBuf$Package extends GeneratedMessageLite.ExtendableMessa
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Package.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.C8447c r4) throws java.io.IOException {
+        public kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Package.Builder mergeFrom(kotlin.reflect.jvm.internal.impl.protobuf.CodedInputStream r3, kotlin.reflect.jvm.internal.impl.protobuf.c r4) throws java.io.IOException {
             /*
                 r2 = this;
                 r0 = 0
@@ -279,16 +278,15 @@ public final class ProtoBuf$Package extends GeneratedMessageLite.ExtendableMessa
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Package$a */
     /* loaded from: classes3.dex */
-    static class C8405a extends AbstractC8443a<ProtoBuf$Package> {
-        C8405a() {
+    static class a extends kotlin.reflect.jvm.internal.impl.protobuf.a<ProtoBuf$Package> {
+        a() {
         }
 
         @Override // kotlin.reflect.jvm.internal.impl.protobuf.Parser
         /* renamed from: i */
-        public ProtoBuf$Package parsePartialFrom(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
-            return new ProtoBuf$Package(codedInputStream, c8447c);
+        public ProtoBuf$Package parsePartialFrom(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
+            return new ProtoBuf$Package(codedInputStream, cVar);
         }
     }
 
@@ -314,8 +312,8 @@ public final class ProtoBuf$Package extends GeneratedMessageLite.ExtendableMessa
         return Builder.access$11100();
     }
 
-    public static ProtoBuf$Package parseFrom(InputStream inputStream, C8447c c8447c) throws IOException {
-        return PARSER.parseFrom(inputStream, c8447c);
+    public static ProtoBuf$Package parseFrom(InputStream inputStream, c cVar) throws IOException {
+        return PARSER.parseFrom(inputStream, cVar);
     }
 
     public ProtoBuf$Function getFunction(int i) {
@@ -444,7 +442,7 @@ public final class ProtoBuf$Package extends GeneratedMessageLite.ExtendableMessa
     @Override // kotlin.reflect.jvm.internal.impl.protobuf.MessageLite
     public void writeTo(CodedOutputStream codedOutputStream) throws IOException {
         getSerializedSize();
-        GeneratedMessageLite.ExtendableMessage<MessageType>.C8438a newExtensionWriter = newExtensionWriter();
+        GeneratedMessageLite.ExtendableMessage<MessageType>.a newExtensionWriter = newExtensionWriter();
         for (int i = 0; i < this.function_.size(); i++) {
             codedOutputStream.d0(3, this.function_.get(i));
         }
@@ -497,11 +495,11 @@ public final class ProtoBuf$Package extends GeneratedMessageLite.ExtendableMessa
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    private ProtoBuf$Package(CodedInputStream codedInputStream, C8447c c8447c) throws InvalidProtocolBufferException {
+    private ProtoBuf$Package(CodedInputStream codedInputStream, c cVar) throws InvalidProtocolBufferException {
         this.memoizedIsInitialized = (byte) -1;
         this.memoizedSerializedSize = -1;
         initFields();
-        ByteString.C8436a n = ByteString.n();
+        ByteString.a n = ByteString.n();
         CodedOutputStream J = CodedOutputStream.J(n, 1);
         boolean z = false;
         boolean z2 = false;
@@ -516,17 +514,17 @@ public final class ProtoBuf$Package extends GeneratedMessageLite.ExtendableMessa
                                     this.function_ = new ArrayList();
                                     z2 |= true;
                                 }
-                                this.function_.add(codedInputStream.u(ProtoBuf$Function.PARSER, c8447c));
+                                this.function_.add(codedInputStream.u(ProtoBuf$Function.PARSER, cVar));
                             } else if (K == 34) {
                                 if (!(z2 & true)) {
                                     this.property_ = new ArrayList();
                                     z2 |= true;
                                 }
-                                this.property_.add(codedInputStream.u(ProtoBuf$Property.PARSER, c8447c));
+                                this.property_.add(codedInputStream.u(ProtoBuf$Property.PARSER, cVar));
                             } else if (K != 42) {
                                 if (K == 242) {
                                     ProtoBuf$TypeTable.Builder builder = (this.bitField0_ & 1) == 1 ? this.typeTable_.toBuilder() : null;
-                                    ProtoBuf$TypeTable protoBuf$TypeTable = (ProtoBuf$TypeTable) codedInputStream.u(ProtoBuf$TypeTable.PARSER, c8447c);
+                                    ProtoBuf$TypeTable protoBuf$TypeTable = (ProtoBuf$TypeTable) codedInputStream.u(ProtoBuf$TypeTable.PARSER, cVar);
                                     this.typeTable_ = protoBuf$TypeTable;
                                     if (builder != null) {
                                         builder.mergeFrom(protoBuf$TypeTable);
@@ -534,11 +532,11 @@ public final class ProtoBuf$Package extends GeneratedMessageLite.ExtendableMessa
                                     }
                                     this.bitField0_ |= 1;
                                 } else if (K != 258) {
-                                    if (!parseUnknownField(codedInputStream, J, c8447c, K)) {
+                                    if (!parseUnknownField(codedInputStream, J, cVar, K)) {
                                     }
                                 } else {
                                     ProtoBuf$VersionRequirementTable.Builder builder2 = (this.bitField0_ & 2) == 2 ? this.versionRequirementTable_.toBuilder() : null;
-                                    ProtoBuf$VersionRequirementTable protoBuf$VersionRequirementTable = (ProtoBuf$VersionRequirementTable) codedInputStream.u(ProtoBuf$VersionRequirementTable.PARSER, c8447c);
+                                    ProtoBuf$VersionRequirementTable protoBuf$VersionRequirementTable = (ProtoBuf$VersionRequirementTable) codedInputStream.u(ProtoBuf$VersionRequirementTable.PARSER, cVar);
                                     this.versionRequirementTable_ = protoBuf$VersionRequirementTable;
                                     if (builder2 != null) {
                                         builder2.mergeFrom(protoBuf$VersionRequirementTable);
@@ -551,7 +549,7 @@ public final class ProtoBuf$Package extends GeneratedMessageLite.ExtendableMessa
                                     this.typeAlias_ = new ArrayList();
                                     z2 |= true;
                                 }
-                                this.typeAlias_.add(codedInputStream.u(ProtoBuf$TypeAlias.PARSER, c8447c));
+                                this.typeAlias_.add(codedInputStream.u(ProtoBuf$TypeAlias.PARSER, cVar));
                             }
                         }
                         z = true;

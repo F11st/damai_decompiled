@@ -44,13 +44,13 @@ public class DSwitchConstructor extends DinamicViewAdvancedConstructor {
     /* loaded from: classes12.dex */
     public static class OnChangeListener implements CompoundButton.OnCheckedChangeListener {
         private v80 mDinamicParams;
-        private C6321b mHandler;
+        private b mHandler;
         private String mOnChangeExpression;
         private x80 mProperty;
         private View mView;
 
-        public OnChangeListener(C6321b c6321b, v80 v80Var, x80 x80Var, View view) {
-            this.mHandler = c6321b;
+        public OnChangeListener(b bVar, v80 v80Var, x80 x80Var, View view) {
+            this.mHandler = bVar;
             this.mDinamicParams = v80Var;
             this.mProperty = x80Var;
             this.mView = view;
@@ -75,10 +75,9 @@ public class DSwitchConstructor extends DinamicViewAdvancedConstructor {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamic.constructor.DSwitchConstructor$b */
     /* loaded from: classes11.dex */
-    private static class C6321b extends q80 {
-        private C6321b() {
+    private static class b extends q80 {
+        private b() {
         }
 
         @Override // tb.q80
@@ -143,18 +142,18 @@ public class DSwitchConstructor extends DinamicViewAdvancedConstructor {
             Object obj3 = map.get(D_OFF_COLOR);
             String str = obj2 instanceof String ? (String) obj2 : STRING_CHECKED_COLOR;
             String str2 = obj3 instanceof String ? (String) obj3 : STRING_UNCHECKED_COLOR;
-            int b = p62.b(view.getContext(), obj, -1);
-            if (b != -1) {
-                updateInternalStatus(switchCompat, getTrackDrawable(view.getContext(), str, CHECKED_COLOR, b), getTrackDrawable(view.getContext(), str2, UNCHECKED_COLOR, b), getThumbDrawable(view.getContext(), b));
+            int b2 = p62.b(view.getContext(), obj, -1);
+            if (b2 != -1) {
+                updateInternalStatus(switchCompat, getTrackDrawable(view.getContext(), str, CHECKED_COLOR, b2), getTrackDrawable(view.getContext(), str2, UNCHECKED_COLOR, b2), getThumbDrawable(view.getContext(), b2));
             }
         }
         if (arrayList.contains("dWidth")) {
             Object obj4 = map.get("dWidth");
             Object obj5 = map.get("dHeight");
-            int b2 = p62.b(view.getContext(), obj4, -1);
-            int b3 = p62.b(view.getContext(), obj5, -1);
-            if (b2 != -1 && b3 != -1 && b2 >= b3 * 2) {
-                setSwitchMinWidth(switchCompat, b2);
+            int b3 = p62.b(view.getContext(), obj4, -1);
+            int b4 = p62.b(view.getContext(), obj5, -1);
+            if (b3 != -1 && b4 != -1 && b3 >= b4 * 2) {
+                setSwitchMinWidth(switchCompat, b3);
             }
         }
         if (arrayList.contains(D_SWITCH_ON)) {
@@ -181,7 +180,7 @@ public class DSwitchConstructor extends DinamicViewAdvancedConstructor {
 
     @Override // com.taobao.android.dinamic.dinamic.DinamicViewAdvancedConstructor
     public void setEvents(View view, v80 v80Var) {
-        new C6321b().b(view, v80Var);
+        new b().b(view, v80Var);
     }
 
     public void setSwitchMinWidth(SwitchCompat switchCompat, int i) {

@@ -32,7 +32,7 @@ public class PinnedSectionListView extends ListView {
     private AbsListView.OnScrollListener mDelegateOnScrollListener;
     private MotionEvent mDownEvent;
     private final AbsListView.OnScrollListener mOnScrollListener;
-    private C0274b mPinnedSection;
+    private b mPinnedSection;
     public PinnedSectionListAdapter mPinnedSectionListAdapter;
     private int mScreenWidth;
     private int mSectionsDistanceY;
@@ -53,12 +53,11 @@ public class PinnedSectionListView extends ListView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.PinnedSectionListView$a */
     /* loaded from: classes.dex */
-    public class C0273a extends DataSetObserver {
+    public class a extends DataSetObserver {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0273a() {
+        a() {
         }
 
         @Override // android.database.DataSetObserver
@@ -84,14 +83,13 @@ public class PinnedSectionListView extends ListView {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.baseview.PinnedSectionListView$b */
     /* loaded from: classes.dex */
-    public static class C0274b {
+    public static class b {
         public View a;
         public int b;
         public long c;
 
-        private C0274b() {
+        private b() {
         }
     }
 
@@ -140,7 +138,7 @@ public class PinnedSectionListView extends ListView {
                 }
             }
         };
-        this.mDataSetObserver = new C0273a();
+        this.mDataSetObserver = new a();
         initView();
     }
 
@@ -164,8 +162,8 @@ public class PinnedSectionListView extends ListView {
             ipChange.ipc$dispatch("-526988856", new Object[]{this, Integer.valueOf(i)});
             return;
         }
-        C0274b c0274b = new C0274b();
-        View view = getAdapter().getView(i, c0274b.a, this);
+        b bVar = new b();
+        View view = getAdapter().getView(i, bVar.a, this);
         View titleView = this.mPinnedSectionListAdapter.getTitleView(i);
         AbsListView.LayoutParams layoutParams = (AbsListView.LayoutParams) view.getLayoutParams();
         if (layoutParams == null) {
@@ -177,18 +175,18 @@ public class PinnedSectionListView extends ListView {
         getListPaddingTop();
         getListPaddingBottom();
         this.mTranslateY = 0;
-        int a = l62.a(getContext(), 40.0f);
+        int a2 = l62.a(getContext(), 40.0f);
         ImageView imageView = new ImageView(getContext());
         imageView.setBackgroundColor(Color.parseColor("#e6e6e6"));
         ((LinearLayout) titleView).addView(imageView, this.mScreenWidth, 1);
         titleView.setBackgroundColor(Color.argb(242, 255, 255, 255));
-        int i2 = a + 1;
+        int i2 = a2 + 1;
         titleView.measure(this.mScreenWidth, i2);
         titleView.layout(0, 0, this.mScreenWidth, i2);
-        c0274b.a = titleView;
-        c0274b.b = i;
-        c0274b.c = getAdapter().getItemId(i);
-        this.mPinnedSection = c0274b;
+        bVar.a = titleView;
+        bVar.b = i;
+        bVar.c = getAdapter().getItemId(i);
+        this.mPinnedSection = bVar;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -199,8 +197,8 @@ public class PinnedSectionListView extends ListView {
         } else if (i3 < 2) {
             this.mPinnedSection = null;
         } else {
-            C0274b c0274b = this.mPinnedSection;
-            if (c0274b != null && c0274b.b != i) {
+            b bVar = this.mPinnedSection;
+            if (bVar != null && bVar.b != i) {
                 this.mPinnedSection = null;
             }
             if (this.mPinnedSection == null) {
@@ -331,8 +329,8 @@ public class PinnedSectionListView extends ListView {
         if (view != null) {
             view.sendAccessibilityEvent(1);
         }
-        C0274b c0274b = this.mPinnedSection;
-        onItemClickListener.onItemClick(this, view, c0274b.b, c0274b.c);
+        b bVar = this.mPinnedSection;
+        onItemClickListener.onItemClick(this, view, bVar.b, bVar.c);
         return true;
     }
 
@@ -380,7 +378,7 @@ public class PinnedSectionListView extends ListView {
 
     @Override // android.view.ViewGroup, android.view.View
     public boolean dispatchTouchEvent(MotionEvent motionEvent) {
-        C0274b c0274b;
+        b bVar;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "968705555")) {
             return ((Boolean) ipChange.ipc$dispatch("968705555", new Object[]{this, motionEvent})).booleanValue();
@@ -388,7 +386,7 @@ public class PinnedSectionListView extends ListView {
         float x = motionEvent.getX();
         float y = motionEvent.getY();
         int action = motionEvent.getAction();
-        if (action == 0 && this.mTouchTarget == null && (c0274b = this.mPinnedSection) != null && isPinnedViewTouched(c0274b.a, x, y)) {
+        if (action == 0 && this.mTouchTarget == null && (bVar = this.mPinnedSection) != null && isPinnedViewTouched(bVar.a, x, y)) {
             this.mTouchTarget = this.mPinnedSection.a;
             PointF pointF = this.mTouchPoint;
             pointF.x = x;
@@ -477,9 +475,9 @@ public class PinnedSectionListView extends ListView {
         }
         this.mScreenWidth = i;
         initShadow(z);
-        C0274b c0274b = this.mPinnedSection;
-        if (c0274b != null) {
-            View view = c0274b.a;
+        b bVar = this.mPinnedSection;
+        if (bVar != null) {
+            View view = bVar.a;
             invalidate(view.getLeft(), view.getTop(), view.getRight(), view.getBottom() + this.mShadowHeight);
         }
     }
@@ -559,7 +557,7 @@ public class PinnedSectionListView extends ListView {
                 }
             }
         };
-        this.mDataSetObserver = new C0273a();
+        this.mDataSetObserver = new a();
         initView();
     }
 }

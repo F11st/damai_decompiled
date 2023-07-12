@@ -16,15 +16,15 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes6.dex */
 public final class os0 {
     @NotNull
-    public static final C9533a Companion = new C9533a(null);
+    public static final a Companion = new a(null);
     public static final int FLAG_EXTEND_FLEXBOX = 1;
     public static final int FLAG_FLEX_GROW_UPDATE = 2;
     @NotNull
     private final Context a;
     @NotNull
-    private GXTemplateEngine.C3343f b;
+    private GXTemplateEngine.f b;
     @NotNull
-    private final GXTemplateEngine.C3347i c;
+    private final GXTemplateEngine.i c;
     @NotNull
     private final GXTemplateInfo d;
     @Nullable
@@ -34,7 +34,7 @@ public final class os0 {
     private int h;
     private boolean i;
     @Nullable
-    private Map<String, GXTemplateEngine.C3349k> j;
+    private Map<String, GXTemplateEngine.k> j;
     @Nullable
     private Set<uq0> k;
     @Nullable
@@ -51,29 +51,28 @@ public final class os0 {
     @Nullable
     private qr0 r;
     @Nullable
-    private GXTemplateEngine.C3346h s;
+    private GXTemplateEngine.h s;
     private int t;
     @Nullable
     private CopyOnWriteArraySet<GXIContainer> u;
     private int v;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.os0$a */
     /* loaded from: classes6.dex */
-    public static final class C9533a {
-        private C9533a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9533a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
         @NotNull
-        public final os0 a(@NotNull GXTemplateEngine.C3347i c3347i, @NotNull GXTemplateEngine.C3343f c3343f, @NotNull GXTemplateInfo gXTemplateInfo, @Nullable qs0 qs0Var) {
-            b41.i(c3347i, "gxTemplateItem");
-            b41.i(c3343f, "gxMeasureSize");
+        public final os0 a(@NotNull GXTemplateEngine.i iVar, @NotNull GXTemplateEngine.f fVar, @NotNull GXTemplateInfo gXTemplateInfo, @Nullable qs0 qs0Var) {
+            b41.i(iVar, "gxTemplateItem");
+            b41.i(fVar, "gxMeasureSize");
             b41.i(gXTemplateInfo, "gxTemplateInfo");
-            return new os0(c3347i.c(), c3343f, c3347i, gXTemplateInfo, qs0Var, null);
+            return new os0(iVar.c(), fVar, iVar, gXTemplateInfo, qs0Var, null);
         }
 
         @Nullable
@@ -85,31 +84,31 @@ public final class os0 {
         }
     }
 
-    private os0(Context context, GXTemplateEngine.C3343f c3343f, GXTemplateEngine.C3347i c3347i, GXTemplateInfo gXTemplateInfo, qs0 qs0Var) {
+    private os0(Context context, GXTemplateEngine.f fVar, GXTemplateEngine.i iVar, GXTemplateInfo gXTemplateInfo, qs0 qs0Var) {
         this.a = context;
-        this.b = c3343f;
-        this.c = c3347i;
+        this.b = fVar;
+        this.c = iVar;
         this.d = gXTemplateInfo;
         this.e = qs0Var;
         this.t = -1;
     }
 
-    public /* synthetic */ os0(Context context, GXTemplateEngine.C3343f c3343f, GXTemplateEngine.C3347i c3347i, GXTemplateInfo gXTemplateInfo, qs0 qs0Var, k50 k50Var) {
-        this(context, c3343f, c3347i, gXTemplateInfo, qs0Var);
+    public /* synthetic */ os0(Context context, GXTemplateEngine.f fVar, GXTemplateEngine.i iVar, GXTemplateInfo gXTemplateInfo, qs0 qs0Var, k50 k50Var) {
+        this(context, fVar, iVar, gXTemplateInfo, qs0Var);
     }
 
     public final void A() {
         GXTemplateEngine.GXITrackListener f;
-        Map<String, GXTemplateEngine.C3349k> map = this.j;
+        Map<String, GXTemplateEngine.k> map = this.j;
         if (map != null) {
-            for (Map.Entry<String, GXTemplateEngine.C3349k> entry : map.entrySet()) {
-                GXTemplateEngine.C3346h p = p();
+            for (Map.Entry<String, GXTemplateEngine.k> entry : map.entrySet()) {
+                GXTemplateEngine.h p = p();
                 if (p != null && (f = p.f()) != null) {
                     f.onManualExposureTrackEvent(entry.getValue());
                 }
             }
         }
-        Map<String, GXTemplateEngine.C3349k> map2 = this.j;
+        Map<String, GXTemplateEngine.k> map2 = this.j;
         if (map2 == null) {
             return;
         }
@@ -174,7 +173,7 @@ public final class os0 {
         this.n = l81Var;
     }
 
-    public final void I(@Nullable Map<String, GXTemplateEngine.C3349k> map) {
+    public final void I(@Nullable Map<String, GXTemplateEngine.k> map) {
         this.j = map;
     }
 
@@ -202,17 +201,17 @@ public final class os0 {
         this.o = map;
     }
 
-    public final void P(@NotNull GXTemplateEngine.C3343f c3343f) {
-        b41.i(c3343f, "<set-?>");
-        this.b = c3343f;
+    public final void P(@NotNull GXTemplateEngine.f fVar) {
+        b41.i(fVar, "<set-?>");
+        this.b = fVar;
     }
 
     public final void Q(@Nullable l81 l81Var) {
         this.m = l81Var;
     }
 
-    public final void R(@Nullable GXTemplateEngine.C3346h c3346h) {
-        this.s = c3346h;
+    public final void R(@Nullable GXTemplateEngine.h hVar) {
+        this.s = hVar;
     }
 
     public final void a() {
@@ -252,7 +251,7 @@ public final class os0 {
     }
 
     @Nullable
-    public final Map<String, GXTemplateEngine.C3349k> i() {
+    public final Map<String, GXTemplateEngine.k> i() {
         return this.j;
     }
 
@@ -277,7 +276,7 @@ public final class os0 {
     }
 
     @NotNull
-    public final GXTemplateEngine.C3343f n() {
+    public final GXTemplateEngine.f n() {
         return this.b;
     }
 
@@ -287,7 +286,7 @@ public final class os0 {
     }
 
     @Nullable
-    public final GXTemplateEngine.C3346h p() {
+    public final GXTemplateEngine.h p() {
         return this.s;
     }
 
@@ -297,7 +296,7 @@ public final class os0 {
     }
 
     @NotNull
-    public final GXTemplateEngine.C3347i r() {
+    public final GXTemplateEngine.i r() {
         return this.c;
     }
 

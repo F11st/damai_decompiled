@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import cn.damai.common.AppConfig;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$drawable;
 import cn.damai.commonbusiness.R$id;
@@ -25,16 +24,15 @@ import java.util.List;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
-public class qk1 extends NineGridView.AbstractC2586a<View$OnClickListenerC9607a> {
+public class qk1 extends NineGridView.a<a> {
     private static transient /* synthetic */ IpChange $ipChange;
     private List<GridBean> b = new ArrayList();
     private Context c;
     private OnItemBindListener<GridBean> d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qk1$a */
     /* loaded from: classes4.dex */
-    public static class View$OnClickListenerC9607a extends NineGridView.C2588c implements View.OnClickListener {
+    public static class a extends NineGridView.c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         private ImageView c;
         private View d;
@@ -45,7 +43,7 @@ public class qk1 extends NineGridView.AbstractC2586a<View$OnClickListenerC9607a>
         private int i;
         private OnItemBindListener<GridBean> j;
 
-        public View$OnClickListenerC9607a(View view, OnItemBindListener<GridBean> onItemBindListener) {
+        public a(View view, OnItemBindListener<GridBean> onItemBindListener) {
             super(view);
             this.d = view.findViewById(R$id.item_nine_one_play_top_right);
             this.e = (TextView) view.findViewById(R$id.item_nine_one_video_status);
@@ -104,13 +102,13 @@ public class qk1 extends NineGridView.AbstractC2586a<View$OnClickListenerC9607a>
                     str = gridBean.picUrl;
                 }
                 Object tag = this.c.getTag();
-                if (tag instanceof C9826vr) {
-                    ((C9826vr) tag).cancel();
+                if (tag instanceof vr) {
+                    ((vr) tag).cancel();
                 }
                 this.c.setTag(null);
                 if (!TextUtils.isEmpty(str)) {
                     int a2 = gridBean.itemCount > 1 ? 400 : l62.a(mu0.a(), 321.0f);
-                    DMImageCreator f = C0504a.b().f(str, a2, a2);
+                    DMImageCreator f = cn.damai.common.image.a.b().f(str, a2, a2);
                     this.c.setTag(f.i(cn.damai.uikit.R$drawable.uikit_default_image_bg_grey).g(this.c));
                     if (AppConfig.v()) {
                         try {
@@ -152,28 +150,28 @@ public class qk1 extends NineGridView.AbstractC2586a<View$OnClickListenerC9607a>
         this.d = onItemBindListener;
     }
 
-    @Override // cn.damai.uikit.view.NineGridView.AbstractC2586a
+    @Override // cn.damai.uikit.view.NineGridView.a
     public int e() {
         IpChange ipChange = $ipChange;
         return AndroidInstantRuntime.support(ipChange, "-760239428") ? ((Integer) ipChange.ipc$dispatch("-760239428", new Object[]{this})).intValue() : this.b.size();
     }
 
-    @Override // cn.damai.uikit.view.NineGridView.AbstractC2586a
+    @Override // cn.damai.uikit.view.NineGridView.a
     /* renamed from: h */
-    public void b(View$OnClickListenerC9607a view$OnClickListenerC9607a, int i) {
+    public void b(a aVar, int i) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "2105897042")) {
-            ipChange.ipc$dispatch("2105897042", new Object[]{this, view$OnClickListenerC9607a, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("2105897042", new Object[]{this, aVar, Integer.valueOf(i)});
         } else {
-            view$OnClickListenerC9607a.a(this.b.get(i), i);
+            aVar.a(this.b.get(i), i);
         }
     }
 
-    @Override // cn.damai.uikit.view.NineGridView.AbstractC2586a
+    @Override // cn.damai.uikit.view.NineGridView.a
     /* renamed from: i */
-    public View$OnClickListenerC9607a c(@NonNull ViewGroup viewGroup, int i) {
+    public a c(@NonNull ViewGroup viewGroup, int i) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "87853208") ? (View$OnClickListenerC9607a) ipChange.ipc$dispatch("87853208", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new View$OnClickListenerC9607a(LayoutInflater.from(this.c).inflate(R$layout.item_nine_single_item, viewGroup, false), this.d);
+        return AndroidInstantRuntime.support(ipChange, "87853208") ? (a) ipChange.ipc$dispatch("87853208", new Object[]{this, viewGroup, Integer.valueOf(i)}) : new a(LayoutInflater.from(this.c).inflate(R$layout.item_nine_single_item, viewGroup, false), this.d);
     }
 
     public void j(List<GridBean> list) {

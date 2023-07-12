@@ -29,7 +29,7 @@ import tb.z71;
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public class JavaMethodDescriptor extends cd2 implements JavaCallableMemberDescriptor {
-    public static final CallableDescriptor.UserDataKey<ValueParameterDescriptor> ORIGINAL_VALUE_PARAMETER_FOR_EXTENSION_RECEIVER = new C8339a();
+    public static final CallableDescriptor.UserDataKey<ValueParameterDescriptor> ORIGINAL_VALUE_PARAMETER_FOR_EXTENSION_RECEIVER = new a();
     private ParameterNamesStatus D;
     private final boolean E;
 
@@ -70,10 +70,9 @@ public class JavaMethodDescriptor extends cd2 implements JavaCallableMemberDescr
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.descriptors.JavaMethodDescriptor$a */
     /* loaded from: classes3.dex */
-    static class C8339a implements CallableDescriptor.UserDataKey<ValueParameterDescriptor> {
-        C8339a() {
+    static class a implements CallableDescriptor.UserDataKey<ValueParameterDescriptor> {
+        a() {
         }
     }
 
@@ -233,7 +232,7 @@ public class JavaMethodDescriptor extends cd2 implements JavaCallableMemberDescr
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // tb.cd2, kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a
+    @Override // tb.cd2, kotlin.reflect.jvm.internal.impl.descriptors.impl.a
     @NotNull
     /* renamed from: K */
     public JavaMethodDescriptor f(@NotNull DeclarationDescriptor declarationDescriptor, @Nullable FunctionDescriptor functionDescriptor, @NotNull CallableMemberDescriptor.Kind kind, @Nullable ni1 ni1Var, @NotNull Annotations annotations, @NotNull SourceElement sourceElement) {
@@ -282,12 +281,12 @@ public class JavaMethodDescriptor extends cd2 implements JavaCallableMemberDescr
         this.D = ParameterNamesStatus.get(z, z2);
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a, kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor
     public boolean hasSynthesizedParameterNames() {
         return this.D.isSynthesized;
     }
 
-    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractC8316a
+    @Override // kotlin.reflect.jvm.internal.impl.descriptors.impl.a
     public boolean k() {
         return this.D.isStable;
     }

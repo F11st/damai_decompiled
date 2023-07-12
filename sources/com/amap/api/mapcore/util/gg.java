@@ -29,7 +29,6 @@ import com.alibaba.wireless.security.aopsdk.replace.android.net.wifi.WifiInfo;
 import com.alibaba.wireless.security.aopsdk.replace.android.os.Build;
 import com.alibaba.wireless.security.aopsdk.replace.android.provider.Settings;
 import com.alibaba.wireless.security.aopsdk.replace.android.view.Display;
-import com.alipay.sdk.m.c.C4152b;
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.Closeable;
@@ -46,7 +45,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import org.xmlpull.v1.XmlPullParser;
-import tb.C9796v;
 import tb.jn1;
 
 /* compiled from: Taobao */
@@ -58,7 +56,7 @@ public class gg {
     public static boolean d = false;
     static String e = "";
     static boolean f = false;
-    public static InterfaceC4565a g = null;
+    public static a g = null;
     static int h = -1;
     static String i = "";
     static String j = "";
@@ -80,9 +78,8 @@ public class gg {
     private static String z = "";
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.gg$a */
     /* loaded from: classes10.dex */
-    public interface InterfaceC4565a {
+    public interface a {
         String a();
 
         String a(Context context, String str);
@@ -94,10 +91,9 @@ public class gg {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.gg$b */
     /* loaded from: classes10.dex */
-    public static class ServiceConnectionC4566b implements ServiceConnection {
-        ServiceConnectionC4566b() {
+    public static class b implements ServiceConnection {
+        b() {
         }
 
         @Override // android.content.ServiceConnection
@@ -105,7 +101,7 @@ public class gg {
             Parcel obtain = Parcel.obtain();
             Parcel obtain2 = Parcel.obtain();
             try {
-                obtain.writeInterfaceToken(C4152b.a);
+                obtain.writeInterfaceToken(com.alipay.sdk.m.c.b.a);
                 iBinder.transact(1, obtain, obtain2, 0);
                 obtain2.readException();
                 String unused = gg.n = obtain2.readString();
@@ -206,17 +202,17 @@ public class gg {
                 Intent intent = new Intent();
                 intent.setAction(gn.c("WY29tLnVvZGlzLm9wZW5kZXZpY2UuT1BFTklEU19TRVJWSUNF"));
                 intent.setPackage(gn.c("UY29tLmh1YXdlaS5od2lk"));
-                ServiceConnectionC4566b serviceConnectionC4566b = new ServiceConnectionC4566b();
-                if (context.bindService(intent, serviceConnectionC4566b, 1)) {
+                b bVar = new b();
+                if (context.bindService(intent, bVar, 1)) {
                     while (i2 < 100 && TextUtils.isEmpty(n)) {
                         i2++;
                         Thread.sleep(15L);
                     }
-                    context.unbindService(serviceConnectionC4566b);
+                    context.unbindService(bVar);
                 }
                 return n;
             } catch (Throwable th) {
-                C4573ha.a(th, "oa", "hw");
+                ha.a(th, "oa", "hw");
                 o = true;
             }
         } else if ("OPPO".equalsIgnoreCase(manufacturer)) {
@@ -390,7 +386,7 @@ public class gg {
         return "";
     }
 
-    public static InterfaceC4565a b() {
+    public static a b() {
         return g;
     }
 
@@ -658,7 +654,7 @@ public class gg {
             return s;
         }
         DisplayMetrics displayMetrics = new DisplayMetrics();
-        WindowManager windowManager = (WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW);
+        WindowManager windowManager = (WindowManager) context.getSystemService(tb.v.ATTACH_MODE_WINDOW);
         if (windowManager == null) {
             return "";
         }
@@ -896,8 +892,8 @@ public class gg {
             if (!TextUtils.isEmpty(e)) {
                 return e;
             }
-            InterfaceC4565a interfaceC4565a = g;
-            return interfaceC4565a == null ? "" : interfaceC4565a.a();
+            a aVar = g;
+            return aVar == null ? "" : aVar.a();
         } catch (Throwable unused) {
             return "";
         }
@@ -926,9 +922,9 @@ public class gg {
         return w;
     }
 
-    public static void a(InterfaceC4565a interfaceC4565a) {
+    public static void a(a aVar) {
         if (g == null) {
-            g = interfaceC4565a;
+            g = aVar;
         }
     }
 

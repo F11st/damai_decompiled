@@ -35,7 +35,7 @@ public class GiftTrackContainerView extends FrameLayout {
             ipChange.ipc$dispatch("-1407357252", new Object[]{this, context});
             return;
         }
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ykl_gift_track_container, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_ykl_gift_track_container, (ViewGroup) this, true);
         this.mGiftTrackController = new GiftTrackViewController(context, this, (LinearLayout) findViewById(R.id.top_show_gift_layout), (LinearLayout) findViewById(R.id.bottom_show_gift_layout), 0);
     }
 

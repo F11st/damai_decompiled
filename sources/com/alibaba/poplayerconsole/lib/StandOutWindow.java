@@ -32,12 +32,12 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
-import tb.C9796v;
 import tb.ep2;
 import tb.hw2;
 import tb.r10;
 import tb.rf2;
 import tb.s13;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
@@ -62,14 +62,13 @@ public abstract class StandOutWindow extends Service {
     private boolean g;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayerconsole.lib.StandOutWindow$a */
     /* loaded from: classes8.dex */
-    class View$OnClickListenerC3709a implements View.OnClickListener {
-        final /* synthetic */ C3712d a;
+    class a implements View.OnClickListener {
+        final /* synthetic */ d a;
         final /* synthetic */ PopupWindow b;
 
-        View$OnClickListenerC3709a(StandOutWindow standOutWindow, C3712d c3712d, PopupWindow popupWindow) {
-            this.a = c3712d;
+        a(StandOutWindow standOutWindow, d dVar, PopupWindow popupWindow) {
+            this.a = dVar;
             this.b = popupWindow;
         }
 
@@ -82,12 +81,11 @@ public abstract class StandOutWindow extends Service {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayerconsole.lib.StandOutWindow$b  reason: invalid class name */
     /* loaded from: classes8.dex */
-    public class animationAnimation$AnimationListenerC3710b implements Animation.AnimationListener {
+    public class b implements Animation.AnimationListener {
         final /* synthetic */ Window a;
 
-        animationAnimation$AnimationListenerC3710b(Window window) {
+        b(Window window) {
             this.a = window;
         }
 
@@ -108,13 +106,12 @@ public abstract class StandOutWindow extends Service {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayerconsole.lib.StandOutWindow$c  reason: invalid class name */
     /* loaded from: classes8.dex */
-    public class animationAnimation$AnimationListenerC3711c implements Animation.AnimationListener {
+    public class c implements Animation.AnimationListener {
         final /* synthetic */ Window a;
         final /* synthetic */ int b;
 
-        animationAnimation$AnimationListenerC3711c(Window window, int i) {
+        c(Window window, int i) {
             this.a = window;
             this.b = i;
         }
@@ -142,13 +139,12 @@ public abstract class StandOutWindow extends Service {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayerconsole.lib.StandOutWindow$d */
     /* loaded from: classes8.dex */
-    protected class C3712d {
+    protected class d {
         public String a;
         public Runnable b;
 
-        public C3712d(StandOutWindow standOutWindow, int i, String str, Runnable runnable) {
+        public d(StandOutWindow standOutWindow, int i, String str, Runnable runnable) {
             this.a = str;
             this.b = runnable;
         }
@@ -180,9 +176,9 @@ public abstract class StandOutWindow extends Service {
 
     public static Intent q(Context context, Class<? extends StandOutWindow> cls, int i2) {
         Uri uri;
-        boolean d = h.d(i2, cls);
-        String str = d ? ACTION_RESTORE : ACTION_SHOW;
-        if (d) {
+        boolean d2 = h.d(i2, cls);
+        String str = d2 ? ACTION_RESTORE : ACTION_SHOW;
+        if (d2) {
             uri = Uri.parse("standout://" + cls + r10.DIR + i2);
         } else {
             uri = null;
@@ -337,7 +333,7 @@ public abstract class StandOutWindow extends Service {
             Animation loadAnimation = AnimationUtils.loadAnimation(this, 17432577);
             try {
                 if (loadAnimation != null) {
-                    loadAnimation.setAnimationListener(new animationAnimation$AnimationListenerC3711c(r, i2));
+                    loadAnimation.setAnimationListener(new c(r, i2));
                     r.getChildAt(0).startAnimation(loadAnimation);
                 } else {
                     this.d.removeView(r);
@@ -390,24 +386,24 @@ public abstract class StandOutWindow extends Service {
 
     @SuppressLint({"InflateParams"})
     public PopupWindow i(int i2) {
-        List<C3712d> j = j(i2);
+        List<d> j = j(i2);
         if (j == null) {
             j = new ArrayList<>();
         }
         LinearLayout linearLayout = new LinearLayout(this);
         linearLayout.setOrientation(1);
         PopupWindow popupWindow = new PopupWindow((View) linearLayout, -2, -2, true);
-        for (C3712d c3712d : j) {
+        for (d dVar : j) {
             ViewGroup viewGroup = (ViewGroup) this.f.inflate(R$layout.console_drop_down_item, (ViewGroup) null);
             linearLayout.addView(viewGroup);
-            ((TextView) viewGroup.findViewById(R$id.description)).setText(c3712d.a);
-            viewGroup.setOnClickListener(new View$OnClickListenerC3709a(this, c3712d, popupWindow));
+            ((TextView) viewGroup.findViewById(R$id.description)).setText(dVar.a);
+            viewGroup.setOnClickListener(new a(this, dVar, popupWindow));
         }
         popupWindow.setBackgroundDrawable(getResources().getDrawable(17301530));
         return popupWindow;
     }
 
-    public List<C3712d> j(int i2) {
+    public List<d> j(int i2) {
         return null;
     }
 
@@ -448,7 +444,7 @@ public abstract class StandOutWindow extends Service {
     @Override // android.app.Service
     public void onCreate() {
         super.onCreate();
-        this.d = (WindowManager) getSystemService(C9796v.ATTACH_MODE_WINDOW);
+        this.d = (WindowManager) getSystemService(v.ATTACH_MODE_WINDOW);
         this.e = (NotificationManager) getSystemService("notification");
         this.f = (LayoutInflater) getSystemService("layout_inflater");
         this.g = false;
@@ -517,7 +513,7 @@ public abstract class StandOutWindow extends Service {
                 Animation loadAnimation = AnimationUtils.loadAnimation(this, R$anim.console_hide);
                 try {
                     if (loadAnimation != null) {
-                        loadAnimation.setAnimationListener(new animationAnimation$AnimationListenerC3710b(r));
+                        loadAnimation.setAnimationListener(new b(r));
                         r.getChildAt(0).startAnimation(loadAnimation);
                     } else {
                         this.d.removeView(r);

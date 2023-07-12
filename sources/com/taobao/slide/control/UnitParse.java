@@ -46,9 +46,8 @@ public class UnitParse {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.slide.control.UnitParse$a */
     /* loaded from: classes11.dex */
-    static /* synthetic */ class C6886a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -137,29 +136,29 @@ public class UnitParse {
         if (this.a.equals("NONE") || da1Var == null || da1Var.a() == null) {
             return false;
         }
-        ICompare a = da1Var.a();
+        ICompare a2 = da1Var.a();
         String c = da1Var.c();
-        switch (C6886a.a[this.c.ordinal()]) {
+        switch (a.a[this.c.ordinal()]) {
             case 1:
-                return a.equals(c, this.b);
+                return a2.equals(c, this.b);
             case 2:
-                return a.equalsNot(c, this.b);
+                return a2.equalsNot(c, this.b);
             case 3:
-                return a.greater(c, this.b);
+                return a2.greater(c, this.b);
             case 4:
-                return a.greaterEquals(c, this.b);
+                return a2.greaterEquals(c, this.b);
             case 5:
-                return a.less(c, this.b);
+                return a2.less(c, this.b);
             case 6:
-                return a.lessEquals(c, this.b);
+                return a2.lessEquals(c, this.b);
             case 7:
-                return a.fuzzy(c, this.b);
+                return a2.fuzzy(c, this.b);
             case 8:
-                return a.fuzzyNot(c, this.b);
+                return a2.fuzzyNot(c, this.b);
             case 9:
-                return a.in(c, this.b);
+                return a2.in(c, this.b);
             case 10:
-                return a.notIn(c, this.b);
+                return a2.notIn(c, this.b);
             default:
                 return false;
         }

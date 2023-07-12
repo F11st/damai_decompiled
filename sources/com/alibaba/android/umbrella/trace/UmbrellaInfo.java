@@ -24,9 +24,8 @@ public class UmbrellaInfo implements Serializable {
     public String tagVersion;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.android.umbrella.trace.UmbrellaInfo$b */
     /* loaded from: classes15.dex */
-    public static final class C3276b {
+    public static final class b {
         private String a;
         private String b;
         private String c;
@@ -37,7 +36,7 @@ public class UmbrellaInfo implements Serializable {
         private String h;
         private Map<String, String> i;
 
-        public C3276b(String str, String str2, String str3, String str4, String str5) {
+        public b(String str, String str2, String str3, String str4, String str5) {
             this.a = str;
             this.b = str2;
             this.e = str3;
@@ -59,7 +58,7 @@ public class UmbrellaInfo implements Serializable {
             return umbrellaInfo;
         }
 
-        public C3276b b(Map<String, String> map) {
+        public b b(Map<String, String> map) {
             if (map == null) {
                 return this;
             }
@@ -70,7 +69,7 @@ public class UmbrellaInfo implements Serializable {
             return this;
         }
 
-        public C3276b c(String str) {
+        public b c(String str) {
             this.b = str;
             return this;
         }

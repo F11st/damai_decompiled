@@ -16,9 +16,8 @@ public class DXAdaptiveLinearLayoutWidgetNode extends DXLinearLayoutWidgetNode {
     private String moreIndicatorUserId;
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXAdaptiveLinearLayoutWidgetNode$a */
     /* loaded from: classes11.dex */
-    public static class C6435a implements IDXBuilderWidgetNode {
+    public static class a implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(Object obj) {
             return new DXAdaptiveLinearLayoutWidgetNode();
@@ -181,7 +180,7 @@ public class DXAdaptiveLinearLayoutWidgetNode extends DXLinearLayoutWidgetNode {
         }
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onBeforeBindChildData() {
         boolean z;
         if ((this.propertyInitFlag & 2) == 0) {
@@ -212,7 +211,7 @@ public class DXAdaptiveLinearLayoutWidgetNode extends DXLinearLayoutWidgetNode {
                         DXRuntimeContext cloneWithWidgetNode = dXWidgetNode2.getDXRuntimeContext().cloneWithWidgetNode(dXWidgetNode2);
                         cloneWithWidgetNode.setSubData(obj);
                         cloneWithWidgetNode.setSubdataIndex(i);
-                        arrayList2.add(C6494g.b(dXWidgetNode2, cloneWithWidgetNode));
+                        arrayList2.add(g.b(dXWidgetNode2, cloneWithWidgetNode));
                     }
                 }
             }
@@ -227,7 +226,7 @@ public class DXAdaptiveLinearLayoutWidgetNode extends DXLinearLayoutWidgetNode {
         removeAllChild();
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onClone(DXWidgetNode dXWidgetNode, boolean z) {
         if (dXWidgetNode == null || !(dXWidgetNode instanceof DXAdaptiveLinearLayoutWidgetNode)) {
             return;
@@ -244,7 +243,7 @@ public class DXAdaptiveLinearLayoutWidgetNode extends DXLinearLayoutWidgetNode {
         return new DXNativeAdaptiveLinearLayout(context);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.DXLinearLayoutWidgetNode, com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetIntAttribute(long j, int i) {
         if (j == DXADAPTIVELINEARLAYOUT_ALWAYSSHOWINDICATOR) {
             this.alwaysShowIndicator = i != 0;

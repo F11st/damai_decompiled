@@ -10,7 +10,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes6.dex */
 public class mr0 implements GXIAnimation {
     @NotNull
-    public static final C9450a Companion = new C9450a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final String KEY_LOOP = "loop";
     @NotNull
@@ -26,13 +26,12 @@ public class mr0 implements GXIAnimation {
     private int loopCount;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.mr0$a */
     /* loaded from: classes6.dex */
-    public static final class C9450a {
-        private C9450a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9450a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

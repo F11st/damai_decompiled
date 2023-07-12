@@ -70,7 +70,7 @@ public class PlayerHorizontalGuideTipsView extends FrameLayout {
     }
 
     private void initView() {
-        this.mTipsHolder = (ViewGroup) LayoutInflater.from(getContext()).inflate(R.C8074layout.resource_yk_horizontal_guide_tips_layout, this);
+        this.mTipsHolder = (ViewGroup) LayoutInflater.from(getContext()).inflate(R.layout.resource_yk_horizontal_guide_tips_layout, this);
         this.mTipsView = (TextView) findViewById(R.id.tv_tips);
         setTipsType(HorizontalGuideTipsType.RIGHT);
     }
@@ -93,10 +93,10 @@ public class PlayerHorizontalGuideTipsView extends FrameLayout {
         this.mType = horizontalGuideTipsType;
         int i = AnonymousClass1.$SwitchMap$com$youku$resource$widget$PlayerHorizontalGuideTipsView$HorizontalGuideTipsType[horizontalGuideTipsType.ordinal()];
         if (i == 1) {
-            this.mTipsHolder.setBackgroundResource(R.C8072drawable.yk_guide_tips_left);
+            this.mTipsHolder.setBackgroundResource(R.drawable.yk_guide_tips_left);
         } else if (i != 2) {
         } else {
-            this.mTipsHolder.setBackgroundResource(R.C8072drawable.yk_guide_tips_right);
+            this.mTipsHolder.setBackgroundResource(R.drawable.yk_guide_tips_right);
         }
     }
 

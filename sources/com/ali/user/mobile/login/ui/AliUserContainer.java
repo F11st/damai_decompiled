@@ -60,6 +60,6 @@ public class AliUserContainer extends BaseActivity {
         this.activityIsTranslucent = true;
         this.mFragmentManager = getSupportFragmentManager();
         super.onCreate(bundle);
-        setContentView(R.C2965layout.aliuser_activity_frame_content);
+        setContentView(R.layout.aliuser_activity_frame_content);
     }
 }

@@ -12,7 +12,7 @@ import org.json.JSONObject;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public final class ak extends AbstractC4379b<RoutePOISearchQuery, RoutePOISearchResult> {
+public final class ak extends b<RoutePOISearchQuery, RoutePOISearchResult> {
 
     /* compiled from: Taobao */
     /* renamed from: com.amap.api.col.s.ak$1  reason: invalid class name */
@@ -55,30 +55,30 @@ public final class ak extends AbstractC4379b<RoutePOISearchQuery, RoutePOISearch
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    @Override // com.amap.api.col.s.AbstractC4379b, com.amap.api.col.s.AbstractC4370a
+    @Override // com.amap.api.col.s.b, com.amap.api.col.s.a
     /* renamed from: c */
     public RoutePOISearchResult a(String str) throws AMapException {
         ArrayList<RoutePOIItem> arrayList = new ArrayList<>();
         try {
-            arrayList = C4443q.i(new JSONObject(str));
+            arrayList = q.i(new JSONObject(str));
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return new RoutePOISearchResult(arrayList, (RoutePOISearchQuery) ((AbstractC4370a) this).b);
+        return new RoutePOISearchResult(arrayList, (RoutePOISearchQuery) ((a) this).b);
     }
 
-    @Override // com.amap.api.col.s.AbstractC4379b, com.amap.api.col.s.AbstractC4370a
+    @Override // com.amap.api.col.s.b, com.amap.api.col.s.a
     protected final String a_() {
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append("key=");
-        stringBuffer.append(bk.f(((AbstractC4370a) this).e));
+        stringBuffer.append(bk.f(((a) this).e));
         stringBuffer.append("&range=");
         StringBuilder sb = new StringBuilder();
-        sb.append(((RoutePOISearchQuery) ((AbstractC4370a) this).b).getRange());
+        sb.append(((RoutePOISearchQuery) ((a) this).b).getRange());
         stringBuffer.append(sb.toString());
         String str = "";
         try {
-            switch (AnonymousClass1.a[((RoutePOISearchQuery) ((AbstractC4370a) this).b).getSearchType().ordinal()]) {
+            switch (AnonymousClass1.a[((RoutePOISearchQuery) ((a) this).b).getSearchType().ordinal()]) {
                 case 1:
                     str = "010100";
                     break;
@@ -100,17 +100,17 @@ public final class ak extends AbstractC4379b<RoutePOISearchQuery, RoutePOISearch
             }
         } catch (Exception unused) {
         }
-        if (((RoutePOISearchQuery) ((AbstractC4370a) this).b).getPolylines() != null && ((RoutePOISearchQuery) ((AbstractC4370a) this).b).getPolylines().size() > 0) {
+        if (((RoutePOISearchQuery) ((a) this).b).getPolylines() != null && ((RoutePOISearchQuery) ((a) this).b).getPolylines().size() > 0) {
             stringBuffer.append("&polyline=");
-            stringBuffer.append(C4435i.a(((RoutePOISearchQuery) ((AbstractC4370a) this).b).getPolylines()));
+            stringBuffer.append(i.a(((RoutePOISearchQuery) ((a) this).b).getPolylines()));
         } else {
             stringBuffer.append("&origin=");
-            stringBuffer.append(C4435i.a(((RoutePOISearchQuery) ((AbstractC4370a) this).b).getFrom()));
+            stringBuffer.append(i.a(((RoutePOISearchQuery) ((a) this).b).getFrom()));
             stringBuffer.append("&destination=");
-            stringBuffer.append(C4435i.a(((RoutePOISearchQuery) ((AbstractC4370a) this).b).getTo()));
+            stringBuffer.append(i.a(((RoutePOISearchQuery) ((a) this).b).getTo()));
             stringBuffer.append("&strategy=");
             StringBuilder sb2 = new StringBuilder();
-            sb2.append(((RoutePOISearchQuery) ((AbstractC4370a) this).b).getMode());
+            sb2.append(((RoutePOISearchQuery) ((a) this).b).getMode());
             stringBuffer.append(sb2.toString());
         }
         stringBuffer.append("&types=");
@@ -120,6 +120,6 @@ public final class ak extends AbstractC4379b<RoutePOISearchQuery, RoutePOISearch
 
     @Override // com.amap.api.col.s.df
     public final String h() {
-        return C4434h.a() + "/place/route?";
+        return h.a() + "/place/route?";
     }
 }

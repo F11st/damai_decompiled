@@ -11,7 +11,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes6.dex */
 public final class ls0 {
     @NotNull
-    public static final C9420a Companion = new C9420a(null);
+    public static final a Companion = new a(null);
     @Nullable
     private Integer A;
     @Nullable
@@ -108,13 +108,12 @@ public final class ls0 {
     private Typeface z;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ls0$a */
     /* loaded from: classes6.dex */
-    public static final class C9420a {
-        private C9420a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9420a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -132,7 +131,7 @@ public final class ls0 {
                 Method dump skipped, instructions count: 974
                 To view this dump change 'Code comments level' option to 'DEBUG'
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.ls0.C9420a.a(com.alibaba.fastjson.JSONObject):tb.ls0");
+            throw new UnsupportedOperationException("Method not decompiled: tb.ls0.a.a(com.alibaba.fastjson.JSONObject):tb.ls0");
         }
     }
 
@@ -546,7 +545,7 @@ public final class ls0 {
 
     @Nullable
     public final Boolean q() {
-        GXRegisterCenter.C3334b d = GXRegisterCenter.Companion.a().d();
+        GXRegisterCenter.b d = GXRegisterCenter.Companion.a().d();
         boolean z = false;
         if (d != null && d.c()) {
             z = true;
@@ -723,11 +722,11 @@ public final class ls0 {
         if (m != null) {
             this.R = m;
         }
-        dq0 a = ls0Var.a();
-        if (a == null) {
+        dq0 a2 = ls0Var.a();
+        if (a2 == null) {
             return;
         }
-        this.S = a;
+        this.S = a2;
     }
 
     @Nullable

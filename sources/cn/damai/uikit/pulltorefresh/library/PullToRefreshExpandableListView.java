@@ -63,7 +63,7 @@ public class PullToRefreshExpandableListView extends PullToRefreshAdapterViewBas
                 return ((Boolean) ipChange.ipc$dispatch("-306556642", new Object[]{this, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4), Integer.valueOf(i5), Integer.valueOf(i6), Integer.valueOf(i7), Integer.valueOf(i8), Boolean.valueOf(z)})).booleanValue();
             }
             boolean overScrollBy = super.overScrollBy(i, i2, i3, i4, i5, i6, i7, i8, z);
-            C2536b.d(PullToRefreshExpandableListView.this, i, i3, i2, i4, z);
+            b.d(PullToRefreshExpandableListView.this, i, i3, i2, i4, z);
             return overScrollBy;
         }
     }

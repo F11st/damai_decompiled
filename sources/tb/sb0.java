@@ -24,7 +24,7 @@ import org.jetbrains.annotations.Nullable;
 public final class sb0 {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C9690a Companion = new C9690a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final String g = "DoloresBusiness";
     @Nullable
@@ -52,12 +52,11 @@ public final class sb0 {
     private Context f;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.sb0$a */
     /* loaded from: classes7.dex */
-    public static final class C9690a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9690a() {
+        private a() {
         }
 
         @Nullable
@@ -123,7 +122,7 @@ public final class sb0 {
             throw new RuntimeException("DoloresManager need init with context first!");
         }
 
-        public /* synthetic */ C9690a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

@@ -16,15 +16,14 @@ public class h80 {
     private static h80 d;
     private Dialog a;
     private final List<Dialog> b = new ArrayList();
-    private final DialogInterface.OnDismissListener c = new DialogInterface$OnDismissListenerC9208a();
+    private final DialogInterface.OnDismissListener c = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: tb.h80$a */
     /* loaded from: classes5.dex */
-    public class DialogInterface$OnDismissListenerC9208a implements DialogInterface.OnDismissListener {
+    public class a implements DialogInterface.OnDismissListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnDismissListenerC9208a() {
+        a() {
         }
 
         @Override // android.content.DialogInterface.OnDismissListener

@@ -4,12 +4,12 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.alibaba.fastjson.JSONObject;
-import tb.C9586q;
-import tb.C9833w;
+import tb.q;
+import tb.w;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
-public interface IAKPopPresenter<PARAMS extends C9833w, CONTEXT extends C9586q> {
+public interface IAKPopPresenter<PARAMS extends w, CONTEXT extends q> {
 
     /* compiled from: Taobao */
     /* loaded from: classes8.dex */

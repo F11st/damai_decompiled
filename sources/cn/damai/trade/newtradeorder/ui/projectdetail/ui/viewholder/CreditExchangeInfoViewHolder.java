@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.trade.R$id;
@@ -29,7 +28,7 @@ import tb.og1;
 public final class CreditExchangeInfoViewHolder extends RecyclerView.ViewHolder {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C2435a Companion = new C2435a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final TextView a;
     @NotNull
@@ -40,15 +39,14 @@ public final class CreditExchangeInfoViewHolder extends RecyclerView.ViewHolder 
     private final LinearLayout d;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.ui.viewholder.CreditExchangeInfoViewHolder$a */
     /* loaded from: classes16.dex */
-    public static final class C2435a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C2435a() {
+        private a() {
         }
 
-        public /* synthetic */ C2435a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -96,22 +94,22 @@ public final class CreditExchangeInfoViewHolder extends RecyclerView.ViewHolder 
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static final void g(CreditExchangeInfoViewHolder creditExchangeInfoViewHolder, MoImageView moImageView, boolean z, DMImageCreator.C0502e c0502e) {
+    public static final void g(CreditExchangeInfoViewHolder creditExchangeInfoViewHolder, MoImageView moImageView, boolean z, DMImageCreator.e eVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "158348285")) {
-            ipChange.ipc$dispatch("158348285", new Object[]{creditExchangeInfoViewHolder, moImageView, Boolean.valueOf(z), c0502e});
+            ipChange.ipc$dispatch("158348285", new Object[]{creditExchangeInfoViewHolder, moImageView, Boolean.valueOf(z), eVar});
             return;
         }
         b41.i(creditExchangeInfoViewHolder, "this$0");
         b41.i(moImageView, "$imageView");
-        creditExchangeInfoViewHolder.i(moImageView, c0502e.b, z);
+        creditExchangeInfoViewHolder.i(moImageView, eVar.b, z);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static final void h(CreditExchangeInfoViewHolder creditExchangeInfoViewHolder, MoImageView moImageView, boolean z, DMImageCreator.C0501d c0501d) {
+    public static final void h(CreditExchangeInfoViewHolder creditExchangeInfoViewHolder, MoImageView moImageView, boolean z, DMImageCreator.d dVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1973035327")) {
-            ipChange.ipc$dispatch("-1973035327", new Object[]{creditExchangeInfoViewHolder, moImageView, Boolean.valueOf(z), c0501d});
+            ipChange.ipc$dispatch("-1973035327", new Object[]{creditExchangeInfoViewHolder, moImageView, Boolean.valueOf(z), dVar});
             return;
         }
         b41.i(creditExchangeInfoViewHolder, "this$0");
@@ -153,27 +151,27 @@ public final class CreditExchangeInfoViewHolder extends RecyclerView.ViewHolder 
 
     @NotNull
     public final MoImageView f(@Nullable String str, final boolean z) {
-        og1.C9521a a;
+        og1.a a2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "737491050")) {
             return (MoImageView) ipChange.ipc$dispatch("737491050", new Object[]{this, str, Boolean.valueOf(z)});
         }
         final MoImageView moImageView = new MoImageView(this.a.getContext(), null, 0, 6, null);
-        og1.C9521a roundingParams = moImageView.getRoundingParams();
-        if (roundingParams == null || (a = roundingParams.k(ea0.b(6.0f))) == null) {
-            a = og1.C9521a.Companion.a(ea0.c(6.0f));
+        og1.a roundingParams = moImageView.getRoundingParams();
+        if (roundingParams == null || (a2 = roundingParams.k(ea0.b(6.0f))) == null) {
+            a2 = og1.a.Companion.a(ea0.c(6.0f));
         }
-        moImageView.setRoundingParams(a);
+        moImageView.setRoundingParams(a2);
         moImageView.setLayoutParams(new LinearLayout.LayoutParams(-1, -2));
-        C0504a.b().c(str).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.bq
+        cn.damai.common.image.a.b().c(str).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.bq
             @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-            public final void onSuccess(DMImageCreator.C0502e c0502e) {
-                CreditExchangeInfoViewHolder.g(CreditExchangeInfoViewHolder.this, moImageView, z, c0502e);
+            public final void onSuccess(DMImageCreator.e eVar) {
+                CreditExchangeInfoViewHolder.g(CreditExchangeInfoViewHolder.this, moImageView, z, eVar);
             }
         }).e(new DMImageCreator.DMImageFailListener() { // from class: tb.aq
             @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-            public final void onFail(DMImageCreator.C0501d c0501d) {
-                CreditExchangeInfoViewHolder.h(CreditExchangeInfoViewHolder.this, moImageView, z, c0501d);
+            public final void onFail(DMImageCreator.d dVar) {
+                CreditExchangeInfoViewHolder.h(CreditExchangeInfoViewHolder.this, moImageView, z, dVar);
             }
         }).f();
         return moImageView;

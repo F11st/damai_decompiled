@@ -64,16 +64,15 @@ public class SeatPrepare implements OnAreaInfoListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.seatbiz.seat.qilin.loader.prepare.SeatPrepare$a */
     /* loaded from: classes.dex */
-    public class C0814a implements OnAreaInfoListener {
+    public class a implements OnAreaInfoListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnSeatPrepareListener a;
         final /* synthetic */ ClickedPerform b;
         final /* synthetic */ String c;
         final /* synthetic */ int d;
 
-        C0814a(OnSeatPrepareListener onSeatPrepareListener, ClickedPerform clickedPerform, String str, int i) {
+        a(OnSeatPrepareListener onSeatPrepareListener, ClickedPerform clickedPerform, String str, int i) {
             this.a = onSeatPrepareListener;
             this.b = clickedPerform;
             this.c = str;
@@ -267,16 +266,16 @@ public class SeatPrepare implements OnAreaInfoListener {
         } else if (!clickedPerform.isHasPerform() || onSeatPrepareListener == null) {
         } else {
             long j = clickedPerform.perform.performId;
-            long a = fr1.a(j);
-            RegionData a2 = this.a.a(a);
-            if (a == this.c && a2 != null) {
+            long a2 = fr1.a(j);
+            RegionData a3 = this.a.a(a2);
+            if (a2 == this.c && a3 != null) {
                 onSeatPrepareListener.onSeatPageOpened();
-                g(clickedPerform, str, str2, i, a2);
+                g(clickedPerform, str, str2, i, a3);
                 return;
             }
             onSeatPrepareListener.showLoading(true);
             this.i = false;
-            e(str, j, a, new C0814a(onSeatPrepareListener, clickedPerform, str2, i));
+            e(str, j, a2, new a(onSeatPrepareListener, clickedPerform, str2, i));
         }
     }
 
@@ -285,24 +284,24 @@ public class SeatPrepare implements OnAreaInfoListener {
         if (AndroidInstantRuntime.support(ipChange, "-1225883769")) {
             ipChange.ipc$dispatch("-1225883769", new Object[]{this, Integer.valueOf(i), str, Long.valueOf(j)});
         } else if (this.f) {
-            long a = fr1.a(j);
-            if (this.c != a) {
+            long a2 = fr1.a(j);
+            if (this.c != a2) {
                 this.i = true;
-                this.d.put(a, e(str, j, a, this));
+                this.d.put(a2, e(str, j, a2, this));
             } else {
                 if (i == 18) {
-                    Long l = this.e.get(a);
+                    Long l = this.e.get(a2);
                     if (System.currentTimeMillis() - (l != null ? l.longValue() : 0L) < 300000) {
                         return;
                     }
                 }
-                if (this.d.get(a) != null) {
+                if (this.d.get(a2) != null) {
                     return;
                 }
                 this.i = true;
-                this.d.put(a, e(str, j, a, this));
+                this.d.put(a2, e(str, j, a2, this));
             }
-            this.c = a;
+            this.c = a2;
         }
     }
 

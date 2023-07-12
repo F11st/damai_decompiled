@@ -1,6 +1,6 @@
 package com.squareup.okhttp.internal.http;
 
-import anet.channel.request.C0193a;
+import anet.channel.request.a;
 import com.alimm.xadsdk.request.builder.IRequestConst;
 import com.squareup.okhttp.Address;
 import com.squareup.okhttp.CertificatePinner;
@@ -38,11 +38,11 @@ import mtopsdk.network.util.Constants;
 import okio.Buffer;
 import okio.BufferedSink;
 import okio.BufferedSource;
-import okio.C8842f;
-import okio.C8844h;
-import okio.C8857o;
 import okio.Sink;
 import okio.Source;
+import okio.f;
+import okio.h;
+import okio.o;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -120,7 +120,7 @@ public final class HttpEngine {
             if (this.index >= HttpEngine.this.client.networkInterceptors().size()) {
                 HttpEngine.this.transport.writeRequestHeaders(request);
                 if (HttpEngine.this.permitsRequestBody() && request.body() != null) {
-                    BufferedSink c = C8844h.c(HttpEngine.this.transport.createRequestBody(request, request.body().contentLength()));
+                    BufferedSink c = h.c(HttpEngine.this.transport.createRequestBody(request, request.body().contentLength()));
                     request.body().writeTo(c);
                     c.close();
                 }
@@ -165,8 +165,8 @@ public final class HttpEngine {
             return response;
         }
         final BufferedSource source = response.body().source();
-        final BufferedSink c = C8844h.c(body);
-        return response.newBuilder().body(new RealResponseBody(response.headers(), C8844h.d(new Source() { // from class: com.squareup.okhttp.internal.http.HttpEngine.2
+        final BufferedSink c = h.c(body);
+        return response.newBuilder().body(new RealResponseBody(response.headers(), h.d(new Source() { // from class: com.squareup.okhttp.internal.http.HttpEngine.2
             boolean cacheRequestClosed;
 
             @Override // okio.Source, java.io.Closeable, java.lang.AutoCloseable
@@ -202,7 +202,7 @@ public final class HttpEngine {
             }
 
             @Override // okio.Source
-            public C8857o timeout() {
+            public o timeout() {
                 return source.timeout();
             }
         }))).build();
@@ -312,7 +312,7 @@ public final class HttpEngine {
     }
 
     public static boolean hasBody(Response response) {
-        if (response.request().method().equals(C0193a.C0196c.HEAD)) {
+        if (response.request().method().equals(a.c.HEAD)) {
             return false;
         }
         int code = response.code();
@@ -395,9 +395,9 @@ public final class HttpEngine {
 
     private Response unzip(Response response) throws IOException {
         if (this.transparentGzip && "gzip".equalsIgnoreCase(this.userResponse.header(Constants.Protocol.CONTENT_ENCODING)) && response.body() != null) {
-            C8842f c8842f = new C8842f(response.body().source());
+            f fVar = new f(response.body().source());
             Headers build = response.headers().newBuilder().removeAll(Constants.Protocol.CONTENT_ENCODING).removeAll(Constants.Protocol.CONTENT_LENGTH).build();
-            return response.newBuilder().headers(build).body(new RealResponseBody(build, C8844h.d(c8842f))).build();
+            return response.newBuilder().headers(build).body(new RealResponseBody(build, h.d(fVar))).build();
         }
         return response;
     }
@@ -483,7 +483,7 @@ public final class HttpEngine {
                     }
                 }
                 return OkHeaders.processAuthHeader(this.client.getAuthenticator(), this.userResponse, proxy);
-            } else if (!this.userRequest.method().equals("GET") && !this.userRequest.method().equals(C0193a.C0196c.HEAD)) {
+            } else if (!this.userRequest.method().equals("GET") && !this.userRequest.method().equals(a.c.HEAD)) {
                 return null;
             }
             if (this.client.getFollowRedirects() && (header = this.userResponse.header("Location")) != null) {
@@ -518,7 +518,7 @@ public final class HttpEngine {
         }
         Sink requestBody = getRequestBody();
         if (requestBody != null) {
-            BufferedSink c = C8844h.c(requestBody);
+            BufferedSink c = h.c(requestBody);
             this.bufferedRequestBody = c;
             return c;
         }

@@ -2,7 +2,6 @@ package tb;
 
 import com.youku.live.dago.liveplayback.widget.pip.PipUtils;
 import java.util.List;
-import kotlin.collections.C8214m;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.NotFoundClasses;
@@ -15,7 +14,6 @@ import kotlin.reflect.jvm.internal.impl.descriptors.deserialization.PlatformDepe
 import kotlin.reflect.jvm.internal.impl.descriptors.deserialization.PlatformDependentTypeTransformer;
 import kotlin.reflect.jvm.internal.impl.incremental.components.LookupTracker;
 import kotlin.reflect.jvm.internal.impl.metadata.deserialization.NameResolver;
-import kotlin.reflect.jvm.internal.impl.protobuf.C8447c;
 import kotlin.reflect.jvm.internal.impl.resolve.sam.SamConversionResolver;
 import kotlin.reflect.jvm.internal.impl.serialization.deserialization.AnnotationAndConstantLoader;
 import kotlin.reflect.jvm.internal.impl.serialization.deserialization.ClassDataFinder;
@@ -65,7 +63,7 @@ public final class h70 {
     @NotNull
     private final PlatformDependentDeclarationFilter o;
     @NotNull
-    private final C8447c p;
+    private final kotlin.reflect.jvm.internal.impl.protobuf.c p;
     @NotNull
     private final NewKotlinTypeChecker q;
     @NotNull
@@ -76,7 +74,7 @@ public final class h70 {
     private final ClassDeserializer t;
 
     /* JADX WARN: Multi-variable type inference failed */
-    public h70(@NotNull StorageManager storageManager, @NotNull ModuleDescriptor moduleDescriptor, @NotNull DeserializationConfiguration deserializationConfiguration, @NotNull ClassDataFinder classDataFinder, @NotNull AnnotationAndConstantLoader<? extends AnnotationDescriptor, ? extends fn<?>> annotationAndConstantLoader, @NotNull PackageFragmentProvider packageFragmentProvider, @NotNull LocalClassifierTypeSettings localClassifierTypeSettings, @NotNull ErrorReporter errorReporter, @NotNull LookupTracker lookupTracker, @NotNull FlexibleTypeDeserializer flexibleTypeDeserializer, @NotNull Iterable<? extends ClassDescriptorFactory> iterable, @NotNull NotFoundClasses notFoundClasses, @NotNull ContractDeserializer contractDeserializer, @NotNull AdditionalClassPartsProvider additionalClassPartsProvider, @NotNull PlatformDependentDeclarationFilter platformDependentDeclarationFilter, @NotNull C8447c c8447c, @NotNull NewKotlinTypeChecker newKotlinTypeChecker, @NotNull SamConversionResolver samConversionResolver, @NotNull PlatformDependentTypeTransformer platformDependentTypeTransformer) {
+    public h70(@NotNull StorageManager storageManager, @NotNull ModuleDescriptor moduleDescriptor, @NotNull DeserializationConfiguration deserializationConfiguration, @NotNull ClassDataFinder classDataFinder, @NotNull AnnotationAndConstantLoader<? extends AnnotationDescriptor, ? extends fn<?>> annotationAndConstantLoader, @NotNull PackageFragmentProvider packageFragmentProvider, @NotNull LocalClassifierTypeSettings localClassifierTypeSettings, @NotNull ErrorReporter errorReporter, @NotNull LookupTracker lookupTracker, @NotNull FlexibleTypeDeserializer flexibleTypeDeserializer, @NotNull Iterable<? extends ClassDescriptorFactory> iterable, @NotNull NotFoundClasses notFoundClasses, @NotNull ContractDeserializer contractDeserializer, @NotNull AdditionalClassPartsProvider additionalClassPartsProvider, @NotNull PlatformDependentDeclarationFilter platformDependentDeclarationFilter, @NotNull kotlin.reflect.jvm.internal.impl.protobuf.c cVar, @NotNull NewKotlinTypeChecker newKotlinTypeChecker, @NotNull SamConversionResolver samConversionResolver, @NotNull PlatformDependentTypeTransformer platformDependentTypeTransformer) {
         b41.i(storageManager, "storageManager");
         b41.i(moduleDescriptor, "moduleDescriptor");
         b41.i(deserializationConfiguration, PipUtils.DAGO_PIP_MODE_CONFIGURATION);
@@ -92,7 +90,7 @@ public final class h70 {
         b41.i(contractDeserializer, "contractDeserializer");
         b41.i(additionalClassPartsProvider, "additionalClassPartsProvider");
         b41.i(platformDependentDeclarationFilter, "platformDependentDeclarationFilter");
-        b41.i(c8447c, "extensionRegistryLite");
+        b41.i(cVar, "extensionRegistryLite");
         b41.i(newKotlinTypeChecker, "kotlinTypeChecker");
         b41.i(samConversionResolver, "samConversionResolver");
         b41.i(platformDependentTypeTransformer, "platformDependentTypeTransformer");
@@ -111,7 +109,7 @@ public final class h70 {
         this.m = contractDeserializer;
         this.n = additionalClassPartsProvider;
         this.o = platformDependentDeclarationFilter;
-        this.p = c8447c;
+        this.p = cVar;
         this.q = newKotlinTypeChecker;
         this.r = samConversionResolver;
         this.s = platformDependentTypeTransformer;
@@ -119,15 +117,15 @@ public final class h70 {
     }
 
     @NotNull
-    public final j70 a(@NotNull PackageFragmentDescriptor packageFragmentDescriptor, @NotNull NameResolver nameResolver, @NotNull er2 er2Var, @NotNull ix2 ix2Var, @NotNull AbstractC9135fc abstractC9135fc, @Nullable DeserializedContainerSource deserializedContainerSource) {
+    public final j70 a(@NotNull PackageFragmentDescriptor packageFragmentDescriptor, @NotNull NameResolver nameResolver, @NotNull er2 er2Var, @NotNull ix2 ix2Var, @NotNull fc fcVar, @Nullable DeserializedContainerSource deserializedContainerSource) {
         List g;
         b41.i(packageFragmentDescriptor, "descriptor");
         b41.i(nameResolver, "nameResolver");
         b41.i(er2Var, "typeTable");
         b41.i(ix2Var, "versionRequirementTable");
-        b41.i(abstractC9135fc, "metadataVersion");
-        g = C8214m.g();
-        return new j70(this, nameResolver, packageFragmentDescriptor, er2Var, ix2Var, abstractC9135fc, deserializedContainerSource, null, g);
+        b41.i(fcVar, "metadataVersion");
+        g = kotlin.collections.m.g();
+        return new j70(this, nameResolver, packageFragmentDescriptor, er2Var, ix2Var, fcVar, deserializedContainerSource, null, g);
     }
 
     @Nullable
@@ -172,7 +170,7 @@ public final class h70 {
     }
 
     @NotNull
-    public final C8447c j() {
+    public final kotlin.reflect.jvm.internal.impl.protobuf.c j() {
         return this.p;
     }
 
@@ -231,7 +229,7 @@ public final class h70 {
         return this.a;
     }
 
-    public /* synthetic */ h70(StorageManager storageManager, ModuleDescriptor moduleDescriptor, DeserializationConfiguration deserializationConfiguration, ClassDataFinder classDataFinder, AnnotationAndConstantLoader annotationAndConstantLoader, PackageFragmentProvider packageFragmentProvider, LocalClassifierTypeSettings localClassifierTypeSettings, ErrorReporter errorReporter, LookupTracker lookupTracker, FlexibleTypeDeserializer flexibleTypeDeserializer, Iterable iterable, NotFoundClasses notFoundClasses, ContractDeserializer contractDeserializer, AdditionalClassPartsProvider additionalClassPartsProvider, PlatformDependentDeclarationFilter platformDependentDeclarationFilter, C8447c c8447c, NewKotlinTypeChecker newKotlinTypeChecker, SamConversionResolver samConversionResolver, PlatformDependentTypeTransformer platformDependentTypeTransformer, int i, k50 k50Var) {
-        this(storageManager, moduleDescriptor, deserializationConfiguration, classDataFinder, annotationAndConstantLoader, packageFragmentProvider, localClassifierTypeSettings, errorReporter, lookupTracker, flexibleTypeDeserializer, iterable, notFoundClasses, contractDeserializer, (i & 8192) != 0 ? AdditionalClassPartsProvider.C8307a.INSTANCE : additionalClassPartsProvider, (i & 16384) != 0 ? PlatformDependentDeclarationFilter.C8308a.INSTANCE : platformDependentDeclarationFilter, c8447c, (65536 & i) != 0 ? NewKotlinTypeChecker.Companion.a() : newKotlinTypeChecker, samConversionResolver, (i & 262144) != 0 ? PlatformDependentTypeTransformer.C8310a.INSTANCE : platformDependentTypeTransformer);
+    public /* synthetic */ h70(StorageManager storageManager, ModuleDescriptor moduleDescriptor, DeserializationConfiguration deserializationConfiguration, ClassDataFinder classDataFinder, AnnotationAndConstantLoader annotationAndConstantLoader, PackageFragmentProvider packageFragmentProvider, LocalClassifierTypeSettings localClassifierTypeSettings, ErrorReporter errorReporter, LookupTracker lookupTracker, FlexibleTypeDeserializer flexibleTypeDeserializer, Iterable iterable, NotFoundClasses notFoundClasses, ContractDeserializer contractDeserializer, AdditionalClassPartsProvider additionalClassPartsProvider, PlatformDependentDeclarationFilter platformDependentDeclarationFilter, kotlin.reflect.jvm.internal.impl.protobuf.c cVar, NewKotlinTypeChecker newKotlinTypeChecker, SamConversionResolver samConversionResolver, PlatformDependentTypeTransformer platformDependentTypeTransformer, int i, k50 k50Var) {
+        this(storageManager, moduleDescriptor, deserializationConfiguration, classDataFinder, annotationAndConstantLoader, packageFragmentProvider, localClassifierTypeSettings, errorReporter, lookupTracker, flexibleTypeDeserializer, iterable, notFoundClasses, contractDeserializer, (i & 8192) != 0 ? AdditionalClassPartsProvider.a.INSTANCE : additionalClassPartsProvider, (i & 16384) != 0 ? PlatformDependentDeclarationFilter.a.INSTANCE : platformDependentDeclarationFilter, cVar, (65536 & i) != 0 ? NewKotlinTypeChecker.Companion.a() : newKotlinTypeChecker, samConversionResolver, (i & 262144) != 0 ? PlatformDependentTypeTransformer.a.INSTANCE : platformDependentTypeTransformer);
     }
 }

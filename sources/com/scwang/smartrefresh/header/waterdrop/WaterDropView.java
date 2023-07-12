@@ -25,10 +25,9 @@ public class WaterDropView extends View {
     protected qi topCircle;
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.header.waterdrop.WaterDropView$a */
     /* loaded from: classes6.dex */
-    class C6173a implements ValueAnimator.AnimatorUpdateListener {
-        C6173a() {
+    class a implements ValueAnimator.AnimatorUpdateListener {
+        a() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -124,7 +123,7 @@ public class WaterDropView extends View {
     public ValueAnimator createAnimator() {
         ValueAnimator duration = ValueAnimator.ofFloat(1.0f, 0.001f).setDuration(180L);
         duration.setInterpolator(new DecelerateInterpolator());
-        duration.addUpdateListener(new C6173a());
+        duration.addUpdateListener(new a());
         return duration;
     }
 

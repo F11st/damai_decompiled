@@ -7,7 +7,6 @@ import com.taobao.android.tlog.protocol.Constants;
 import java.lang.ref.WeakReference;
 import java.util.Iterator;
 import java.util.LinkedList;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
 import kotlin.Metadata;
@@ -24,12 +23,12 @@ import tb.wt2;
 /* loaded from: classes11.dex */
 public final class ActivityStackManager implements Application.ActivityLifecycleCallbacks {
     @NotNull
-    public static final C7020b Companion = new C7020b(null);
+    public static final b Companion = new b(null);
     @NotNull
     public static final String TAG = "ActivityStackManager";
     @NotNull
     private static final Lazy b;
-    private final LinkedList<C7019a> a;
+    private final LinkedList<a> a;
 
     /* compiled from: Taobao */
     @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\bf\u0018\u00002\u00020\u0001J\u0012\u0010\u0005\u001a\u00020\u00042\b\u0010\u0003\u001a\u0004\u0018\u00010\u0002H&¨\u0006\u0006"}, d2 = {"Lcom/taomai/android/h5container/utils/ActivityStackManager$IActivityStackBackEvent;", "", "", "jsonData", "Ltb/wt2;", "onPageBackResult", "h5container_release"}, k = 1, mv = {1, 4, 2})
@@ -39,15 +38,14 @@ public final class ActivityStackManager implements Application.ActivityLifecycle
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.utils.ActivityStackManager$a */
     /* loaded from: classes11.dex */
-    public static final class C7019a {
+    public static final class a {
         @Nullable
         private WeakReference<Activity> a;
         @Nullable
         private String b;
 
-        public C7019a(@Nullable Activity activity, @Nullable String str) {
+        public a(@Nullable Activity activity, @Nullable String str) {
             this.a = new WeakReference<>(activity);
             this.b = str;
         }
@@ -81,27 +79,26 @@ public final class ActivityStackManager implements Application.ActivityLifecycle
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taomai.android.h5container.utils.ActivityStackManager$b */
     /* loaded from: classes11.dex */
-    public static final class C7020b {
-        private C7020b() {
+    public static final class b {
+        private b() {
         }
 
         @NotNull
         public final ActivityStackManager a() {
             Lazy lazy = ActivityStackManager.b;
-            C7020b c7020b = ActivityStackManager.Companion;
+            b bVar = ActivityStackManager.Companion;
             return (ActivityStackManager) lazy.getValue();
         }
 
-        public /* synthetic */ C7020b(k50 k50Var) {
+        public /* synthetic */ b(k50 k50Var) {
             this();
         }
     }
 
     static {
-        Lazy a;
-        a = C8177b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<ActivityStackManager>() { // from class: com.taomai.android.h5container.utils.ActivityStackManager$Companion$instance$2
+        Lazy a2;
+        a2 = kotlin.b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<ActivityStackManager>() { // from class: com.taomai.android.h5container.utils.ActivityStackManager$Companion$instance$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull
@@ -109,7 +106,7 @@ public final class ActivityStackManager implements Application.ActivityLifecycle
                 return new ActivityStackManager(null);
             }
         });
-        b = a;
+        b = a2;
     }
 
     private ActivityStackManager() {
@@ -118,7 +115,7 @@ public final class ActivityStackManager implements Application.ActivityLifecycle
 
     private final void b(Activity activity, String str) {
         synchronized (this.a) {
-            this.a.add(new C7019a(activity, str));
+            this.a.add(new a(activity, str));
         }
     }
 
@@ -131,19 +128,19 @@ public final class ActivityStackManager implements Application.ActivityLifecycle
 
     private final void e(Activity activity) {
         Activity activity2;
-        WeakReference<Activity> a;
+        WeakReference<Activity> a2;
         synchronized (this.a) {
-            Iterator<C7019a> it = this.a.iterator();
+            Iterator<a> it = this.a.iterator();
             while (true) {
                 if (!it.hasNext()) {
                     break;
                 }
-                C7019a next = it.next();
-                if (next == null || (a = next.a()) == null) {
+                a next = it.next();
+                if (next == null || (a2 = next.a()) == null) {
                     activity2 = null;
                     continue;
                 } else {
-                    activity2 = a.get();
+                    activity2 = a2.get();
                     continue;
                 }
                 if (activity == activity2) {
@@ -157,14 +154,14 @@ public final class ActivityStackManager implements Application.ActivityLifecycle
 
     public final boolean d(int i, @Nullable String str) {
         boolean z;
-        WeakReference<Activity> a;
         WeakReference<Activity> a2;
+        WeakReference<Activity> a3;
         if (i < 0 || Math.abs(i) <= this.a.size()) {
             synchronized (this.a) {
                 int size = this.a.size() + i;
                 z = true;
-                C7019a c7019a = this.a.get(size - 1);
-                LinkedList<C7019a> linkedList = new LinkedList();
+                a aVar = this.a.get(size - 1);
+                LinkedList<a> linkedList = new LinkedList();
                 int size2 = this.a.size();
                 while (true) {
                     size2--;
@@ -172,15 +169,15 @@ public final class ActivityStackManager implements Application.ActivityLifecycle
                         z = false;
                         break;
                     }
-                    C7019a c7019a2 = this.a.get(size2);
-                    if (c7019a2 != null && c7019a == c7019a2) {
+                    a aVar2 = this.a.get(size2);
+                    if (aVar2 != null && aVar == aVar2) {
                         break;
                     }
-                    linkedList.add(c7019a2);
+                    linkedList.add(aVar2);
                 }
                 if (z) {
                     if (str != null) {
-                        Activity activity = (c7019a == null || (a2 = c7019a.a()) == null) ? null : a2.get();
+                        Activity activity = (aVar == null || (a3 = aVar.a()) == null) ? null : a3.get();
                         if (!(activity instanceof IActivityStackBackEvent)) {
                             activity = null;
                         }
@@ -193,8 +190,8 @@ public final class ActivityStackManager implements Application.ActivityLifecycle
                         sb.append(String.valueOf(iActivityStackBackEvent != null ? iActivityStackBackEvent.hashCode() : 0));
                         fb1.a(TAG, sb.toString());
                     }
-                    for (C7019a c7019a3 : linkedList) {
-                        Activity activity2 = (c7019a3 == null || (a = c7019a3.a()) == null) ? null : a.get();
+                    for (a aVar3 : linkedList) {
+                        Activity activity2 = (aVar3 == null || (a2 = aVar3.a()) == null) ? null : a2.get();
                         if (activity2 != null && !activity2.isFinishing()) {
                             activity2.finish();
                         }

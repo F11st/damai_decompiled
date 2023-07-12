@@ -7,14 +7,13 @@ import com.efs.sdk.base.IConfigRefreshAction;
 public final class g33 implements IConfigRefreshAction {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.g33$a */
     /* loaded from: classes10.dex */
-    static class C9155a {
+    static class a {
         private static final g33 a = new g33();
     }
 
     public static g33 a() {
-        return C9155a.a;
+        return a.a;
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:31:0x00b3, code lost:
@@ -29,7 +28,7 @@ public final class g33 implements IConfigRefreshAction {
     public final java.lang.String refresh() {
         /*
             r10 = this;
-            tb.f33 r0 = com.efs.sdk.base.a.d.C4786a.a()
+            tb.f33 r0 = com.efs.sdk.base.a.d.a.a()
             android.content.Context r0 = r0.c
             android.net.NetworkInfo r0 = tb.m73.a(r0)
             r1 = 0
@@ -53,7 +52,7 @@ public final class g33 implements IConfigRefreshAction {
             tb.w63.a(r3, r0)
             return r4
         L2b:
-            com.efs.sdk.base.a.c.a.c r0 = com.efs.sdk.base.a.c.a.C4783c.a()
+            com.efs.sdk.base.a.c.a.c r0 = com.efs.sdk.base.a.c.a.c.a()
             java.lang.String r0 = r0.b(r2)
             tb.e53 r5 = tb.e53.a()
         L37:

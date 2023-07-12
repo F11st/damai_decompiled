@@ -19,7 +19,7 @@ import tb.a83;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public final class l1 {
-    private static List<C5818d0> g = new ArrayList();
+    private static List<d0> g = new ArrayList();
     private static JSONArray h = null;
     static AMapLocation i = null;
     static boolean j = false;
@@ -32,9 +32,8 @@ public final class l1 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.loc.l1$a */
     /* loaded from: classes10.dex */
-    public static /* synthetic */ class C5848a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -168,7 +167,7 @@ public final class l1 {
             if (context != null) {
                 try {
                     if (i1.e()) {
-                        List<C5818d0> list = g;
+                        List<d0> list = g;
                         if (list != null && list.size() > 0) {
                             ArrayList arrayList = new ArrayList();
                             arrayList.addAll(g);
@@ -348,11 +347,11 @@ public final class l1 {
             if (context != null) {
                 try {
                     if (i1.e()) {
-                        C5818d0 c5818d0 = new C5818d0(context, "loc", "6.1.0", str);
+                        d0 d0Var = new d0(context, "loc", "6.1.0", str);
                         if (jSONObject != null) {
-                            c5818d0.a(jSONObject.toString());
+                            d0Var.a(jSONObject.toString());
                         }
-                        g.add(c5818d0);
+                        g.add(d0Var);
                         if (g.size() >= 30) {
                             ArrayList arrayList = new ArrayList();
                             arrayList.addAll(g);
@@ -447,8 +446,8 @@ public final class l1 {
 
     public static void s(String str, Throwable th) {
         try {
-            if (th instanceof C5844k) {
-                an.h(j1.q(), str, (C5844k) th);
+            if (th instanceof k) {
+                an.h(j1.q(), str, (k) th);
             }
         } catch (Throwable unused) {
         }
@@ -476,7 +475,7 @@ public final class l1 {
             if (jSONArray == null || jSONArray.length() <= 0) {
                 return;
             }
-            bq.d(new C5807c0(context, j1.q(), h.toString()), context);
+            bq.d(new c0(context, j1.q(), h.toString()), context);
             h = null;
         } catch (Throwable th) {
             j1.h(th, "ReportUtil", "writeOfflineLocLog");
@@ -501,7 +500,7 @@ public final class l1 {
 
     public final void j(Context context, AMapLocationClientOption aMapLocationClientOption) {
         try {
-            int i2 = C5848a.a[aMapLocationClientOption.getLocationMode().ordinal()];
+            int i2 = a.a[aMapLocationClientOption.getLocationMode().ordinal()];
             int i3 = 3;
             if (i2 == 1) {
                 i3 = 4;

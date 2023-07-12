@@ -6,7 +6,6 @@ import android.graphics.drawable.Animatable;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Environment;
-import com.alibaba.pictures.utils.C3650a;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
@@ -21,7 +20,6 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.jvm.JvmOverloads;
 import kotlin.jvm.JvmStatic;
@@ -49,19 +47,18 @@ import tb.xr1;
 public final class MoImageDownloader {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C3611a Companion = new C3611a(null);
+    public static final a Companion = new a(null);
     private static final Lazy d;
     private String a;
     private IBitmapTransform b;
     private final Context c;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.moimage.MoImageDownloader$a */
     /* loaded from: classes7.dex */
-    public static final class C3611a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C3611a() {
+        private a() {
         }
 
         @JvmStatic
@@ -78,19 +75,18 @@ public final class MoImageDownloader {
             return AndroidInstantRuntime.support(ipChange, "1055933428") ? (MoImageDownloader) ipChange.ipc$dispatch("1055933428", new Object[]{this, context}) : new MoImageDownloader(context, null);
         }
 
-        public /* synthetic */ C3611a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.moimage.MoImageDownloader$b */
     /* loaded from: classes7.dex */
-    public static final class C3612b implements DownloadImgListener<Drawable> {
+    public static final class b implements DownloadImgListener<Drawable> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DownloadImgListener a;
 
-        C3612b(DownloadImgListener downloadImgListener) {
+        b(DownloadImgListener downloadImgListener) {
             this.a = downloadImgListener;
         }
 
@@ -106,10 +102,10 @@ public final class MoImageDownloader {
             if (drawable instanceof AnimatedImageDrawable) {
                 Bitmap bitmap = null;
                 try {
-                    C3650a c3650a = C3650a.INSTANCE;
-                    Object a = c3650a.b(AnimatedFramesBuffer.class, "newCachedEntityAt", Integer.TYPE).a((AnimatedFramesBuffer) c3650a.c(AnimatedImageDrawable.class, "mAnimatedFramesBuffer").b(AnimatedFramesBuffer.class).a(drawable), 0);
+                    com.alibaba.pictures.utils.a aVar = com.alibaba.pictures.utils.a.INSTANCE;
+                    Object a = aVar.b(AnimatedFramesBuffer.class, "newCachedEntityAt", Integer.TYPE).a((AnimatedFramesBuffer) aVar.c(AnimatedImageDrawable.class, "mAnimatedFramesBuffer").b(AnimatedFramesBuffer.class).a(drawable), 0);
                     if (a instanceof AnimatedFramesBuffer.CachedEntity) {
-                        bitmap = (Bitmap) c3650a.c(AnimatedFramesBuffer.CachedEntity.class, "bitmap").b(Bitmap.class).a(a);
+                        bitmap = (Bitmap) aVar.c(AnimatedFramesBuffer.CachedEntity.class, "bitmap").b(Bitmap.class).a(a);
                     }
                 } catch (Exception e) {
                     lg1 lg1Var = lg1.INSTANCE;
@@ -182,13 +178,12 @@ public final class MoImageDownloader {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.moimage.MoImageDownloader$c */
     /* loaded from: classes7.dex */
-    public static final class C3613c<T extends xr1> implements IPhenixListener<nh0> {
+    public static final class c<T extends xr1> implements IPhenixListener<nh0> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DownloadImgListener b;
 
-        C3613c(DownloadImgListener downloadImgListener) {
+        c(DownloadImgListener downloadImgListener) {
             MoImageDownloader.this = r1;
             this.b = downloadImgListener;
         }
@@ -216,13 +211,12 @@ public final class MoImageDownloader {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.moimage.MoImageDownloader$d */
     /* loaded from: classes7.dex */
-    public static final class C3614d<T extends xr1> implements IPhenixListener<ui2> {
+    public static final class d<T extends xr1> implements IPhenixListener<ui2> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DownloadImgListener b;
 
-        C3614d(DownloadImgListener downloadImgListener) {
+        d(DownloadImgListener downloadImgListener) {
             MoImageDownloader.this = r1;
             this.b = downloadImgListener;
         }
@@ -253,13 +247,12 @@ public final class MoImageDownloader {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.moimage.MoImageDownloader$e */
     /* loaded from: classes7.dex */
-    public static final class C3615e<T extends xr1> implements IPhenixListener<xr1> {
+    public static final class e<T extends xr1> implements IPhenixListener<xr1> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DownloadImgListener a;
 
-        C3615e(DownloadImgListener downloadImgListener) {
+        e(DownloadImgListener downloadImgListener) {
             this.a = downloadImgListener;
         }
 
@@ -278,8 +271,8 @@ public final class MoImageDownloader {
     }
 
     static {
-        Lazy b;
-        b = C8177b.b(new Function0<ExecutorService>() { // from class: com.alibaba.pictures.moimage.MoImageDownloader$Companion$executorService$2
+        Lazy b2;
+        b2 = kotlin.b.b(new Function0<ExecutorService>() { // from class: com.alibaba.pictures.moimage.MoImageDownloader$Companion$executorService$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             @Override // kotlin.jvm.functions.Function0
@@ -288,7 +281,7 @@ public final class MoImageDownloader {
                 return AndroidInstantRuntime.support(ipChange, "-510870357") ? (ExecutorService) ipChange.ipc$dispatch("-510870357", new Object[]{this}) : Executors.newFixedThreadPool(6);
             }
         });
-        d = b;
+        d = b2;
     }
 
     private MoImageDownloader(Context context) {
@@ -342,10 +335,10 @@ public final class MoImageDownloader {
                     throw new MoImageLoadException("responseCode != 200");
                 }
                 throw new NullPointerException("null cannot be cast to non-null type java.net.HttpURLConnection");
-            } catch (Exception e) {
+            } catch (Exception e2) {
                 lg1 lg1Var = lg1.INSTANCE;
-                lg1Var.c("MoImageDownloader:downloadImageAsFile" + e);
-                throw new MoImageLoadException(e);
+                lg1Var.c("MoImageDownloader:downloadImageAsFile" + e2);
+                throw new MoImageLoadException(e2);
             }
         }
         throw new MoImageLoadException("fullUrl.isNullOrEmpty||context==null");
@@ -363,7 +356,7 @@ public final class MoImageDownloader {
         if (AndroidInstantRuntime.support(ipChange, "443355810")) {
             ipChange.ipc$dispatch("443355810", new Object[]{this, downloadImgListener});
         } else {
-            d(new C3612b(downloadImgListener));
+            d(new b(downloadImgListener));
         }
     }
 
@@ -383,7 +376,7 @@ public final class MoImageDownloader {
         if (context != null) {
             o.z(context);
         }
-        wr1 i = o.s(this.a).m(new C3613c(downloadImgListener)).Q(new C3614d(downloadImgListener)).i(new C3615e(downloadImgListener));
+        wr1 i = o.s(this.a).m(new c(downloadImgListener)).Q(new d(downloadImgListener)).i(new e(downloadImgListener));
         IBitmapTransform iBitmapTransform = this.b;
         if (iBitmapTransform != null) {
             i.h(new tc0(iBitmapTransform));

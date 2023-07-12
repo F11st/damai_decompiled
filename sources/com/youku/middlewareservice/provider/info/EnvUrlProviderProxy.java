@@ -1,7 +1,7 @@
 package com.youku.middlewareservice.provider.info;
 
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -11,7 +11,7 @@ public class EnvUrlProviderProxy {
     public static String getDailyUrl() {
         try {
             if (sProxy == null) {
-                sProxy = (EnvUrlProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.EnvUrlProviderImpl").b().f();
+                sProxy = (EnvUrlProvider) a.j("com.youku.middlewareservice_impl.provider.info.EnvUrlProviderImpl").b().f();
             }
             return sProxy.getDailyUrl();
         } catch (Throwable th) {
@@ -23,7 +23,7 @@ public class EnvUrlProviderProxy {
     public static int getEnvType() {
         try {
             if (sProxy == null) {
-                sProxy = (EnvUrlProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.EnvUrlProviderImpl").b().f();
+                sProxy = (EnvUrlProvider) a.j("com.youku.middlewareservice_impl.provider.info.EnvUrlProviderImpl").b().f();
             }
             return sProxy.getEnvType();
         } catch (Throwable th) {
@@ -35,7 +35,7 @@ public class EnvUrlProviderProxy {
     public static String getOnlineUrl() {
         try {
             if (sProxy == null) {
-                sProxy = (EnvUrlProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.EnvUrlProviderImpl").b().f();
+                sProxy = (EnvUrlProvider) a.j("com.youku.middlewareservice_impl.provider.info.EnvUrlProviderImpl").b().f();
             }
             return sProxy.getOnlineUrl();
         } catch (Throwable th) {
@@ -47,7 +47,7 @@ public class EnvUrlProviderProxy {
     public static String getPreUrl() {
         try {
             if (sProxy == null) {
-                sProxy = (EnvUrlProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.EnvUrlProviderImpl").b().f();
+                sProxy = (EnvUrlProvider) a.j("com.youku.middlewareservice_impl.provider.info.EnvUrlProviderImpl").b().f();
             }
             return sProxy.getPreUrl();
         } catch (Throwable th) {
@@ -58,7 +58,7 @@ public class EnvUrlProviderProxy {
 
     public static EnvUrlProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (EnvUrlProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.EnvUrlProviderImpl").b().f();
+            sProxy = (EnvUrlProvider) a.j("com.youku.middlewareservice_impl.provider.info.EnvUrlProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -66,7 +66,7 @@ public class EnvUrlProviderProxy {
     public static String getUrl() {
         try {
             if (sProxy == null) {
-                sProxy = (EnvUrlProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.EnvUrlProviderImpl").b().f();
+                sProxy = (EnvUrlProvider) a.j("com.youku.middlewareservice_impl.provider.info.EnvUrlProviderImpl").b().f();
             }
             return sProxy.getUrl();
         } catch (Throwable th) {
@@ -88,7 +88,7 @@ public class EnvUrlProviderProxy {
     public static boolean isDaily() {
         try {
             if (sProxy == null) {
-                sProxy = (EnvUrlProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.EnvUrlProviderImpl").b().f();
+                sProxy = (EnvUrlProvider) a.j("com.youku.middlewareservice_impl.provider.info.EnvUrlProviderImpl").b().f();
             }
             return sProxy.isDaily();
         } catch (Throwable th) {
@@ -100,7 +100,7 @@ public class EnvUrlProviderProxy {
     public static boolean isOnline() {
         try {
             if (sProxy == null) {
-                sProxy = (EnvUrlProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.EnvUrlProviderImpl").b().f();
+                sProxy = (EnvUrlProvider) a.j("com.youku.middlewareservice_impl.provider.info.EnvUrlProviderImpl").b().f();
             }
             return sProxy.isOnline();
         } catch (Throwable th) {
@@ -112,7 +112,7 @@ public class EnvUrlProviderProxy {
     public static boolean isPre() {
         try {
             if (sProxy == null) {
-                sProxy = (EnvUrlProvider) C8883a.j("com.youku.middlewareservice_impl.provider.info.EnvUrlProviderImpl").b().f();
+                sProxy = (EnvUrlProvider) a.j("com.youku.middlewareservice_impl.provider.info.EnvUrlProviderImpl").b().f();
             }
             return sProxy.isPre();
         } catch (Throwable th) {

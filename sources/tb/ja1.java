@@ -13,12 +13,11 @@ public class ja1 {
     public static final long LOCATION_CACHE_TIME = 300000;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ja1$a */
     /* loaded from: classes4.dex */
-    public class C9304a implements LocateGpsPicListener {
+    public class a implements LocateGpsPicListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9304a() {
+        a() {
         }
 
         @Override // com.alibaba.pictures.piclocation.listener.LocateGpsPicListener
@@ -70,9 +69,9 @@ public class ja1 {
         if (AndroidInstantRuntime.support(ipChange, "2113474306")) {
             return (double[]) ipChange.ipc$dispatch("2113474306", new Object[0]);
         }
-        double[] a = a();
-        if (a != null) {
-            return a;
+        double[] a2 = a();
+        if (a2 != null) {
+            return a2;
         }
         return null;
     }
@@ -98,7 +97,7 @@ public class ja1 {
         if (AndroidInstantRuntime.support(ipChange, "-620666587")) {
             ipChange.ipc$dispatch("-620666587", new Object[0]);
         } else {
-            ia1.INSTANCE.c().startLocationWithCacheTime(new C9304a(), 0L);
+            ia1.INSTANCE.c().startLocationWithCacheTime(new a(), 0L);
         }
     }
 }

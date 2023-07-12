@@ -39,12 +39,11 @@ public class SearchAccountActivity extends DamaiBaseActivity {
     private List<String> mBAccountInfoList = new ArrayList();
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchAccountActivity$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1585a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1585a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -59,12 +58,11 @@ public class SearchAccountActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.SearchAccountActivity$b */
     /* loaded from: classes6.dex */
-    public class C1586b implements PagerIndicator.TabViewFactory {
+    public class b implements PagerIndicator.TabViewFactory {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1586b() {
+        b() {
         }
 
         @Override // cn.damai.uikit.indicator.PagerIndicator.TabViewFactory
@@ -130,7 +128,7 @@ public class SearchAccountActivity extends DamaiBaseActivity {
         this.mViewPager.setOffscreenPageLimit(1);
         this.mViewPager.setCurrentItem(this.mCurrentIndex);
         this.mPagerIndicator.setViewPager(this.mViewPager);
-        this.mPagerIndicator.setTabViewFactory(new C1586b());
+        this.mPagerIndicator.setTabViewFactory(new b());
     }
 
     @Override // cn.damai.common.app.base.BaseActivity
@@ -175,7 +173,7 @@ public class SearchAccountActivity extends DamaiBaseActivity {
         this.mPagerIndicator = (PagerIndicator) findViewById(R$id.indicator);
         this.mTvBack = (DMIconFontTextView) findViewById(R$id.tv_back);
         this.mTitleTv = (TextView) findViewById(R$id.tv_title);
-        this.mTvBack.setOnClickListener(new View$OnClickListenerC1585a());
+        this.mTvBack.setOnClickListener(new a());
     }
 
     /* JADX INFO: Access modifiers changed from: protected */

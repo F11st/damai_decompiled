@@ -2,16 +2,15 @@ package tb;
 
 import com.taobao.android.dinamicx.DXRootView;
 import com.taobao.android.dinamicx.DXRuntimeContext;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 import com.taobao.android.dinamicx.widget.DXRecyclerLayout;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class hw extends AbstractC6375a {
+public class hw extends com.taobao.android.dinamicx.expression.parser.a {
     public static final long DX_PARSER_GETRECYCLERSTATEDATASOURCE = 5890925234203956351L;
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         DXRootView rootView;
         DXWidgetNode expandWidgetNode;
@@ -29,7 +28,7 @@ public class hw extends AbstractC6375a {
         return null;
     }
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
     public String getDxFunctionName() {
         return "getRecyclerStateDataSource";
     }

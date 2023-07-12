@@ -12,9 +12,8 @@ import tb.hp0;
 public interface ListBasedJavaAnnotationOwner extends JavaAnnotationOwner {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.structure.ListBasedJavaAnnotationOwner$a */
     /* loaded from: classes3.dex */
-    public static final class C8360a {
+    public static final class a {
         @Nullable
         public static JavaAnnotation a(@NotNull ListBasedJavaAnnotationOwner listBasedJavaAnnotationOwner, @NotNull hp0 hp0Var) {
             Object obj;

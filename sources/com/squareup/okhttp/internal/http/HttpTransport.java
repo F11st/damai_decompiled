@@ -5,9 +5,9 @@ import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 import com.squareup.okhttp.ResponseBody;
 import java.io.IOException;
-import okio.C8844h;
 import okio.Sink;
 import okio.Source;
+import okio.h;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -62,7 +62,7 @@ public final class HttpTransport implements Transport {
 
     @Override // com.squareup.okhttp.internal.http.Transport
     public ResponseBody openResponseBody(Response response) throws IOException {
-        return new RealResponseBody(response.headers(), C8844h.d(getTransferStream(response)));
+        return new RealResponseBody(response.headers(), h.d(getTransferStream(response)));
     }
 
     @Override // com.squareup.okhttp.internal.http.Transport

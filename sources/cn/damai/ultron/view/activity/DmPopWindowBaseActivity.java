@@ -39,12 +39,11 @@ public abstract class DmPopWindowBaseActivity extends SimpleBaseActivity {
     private View v_outside;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ultron.view.activity.DmPopWindowBaseActivity$a  reason: invalid class name */
     /* loaded from: classes17.dex */
-    public class animationAnimation$AnimationListenerC2651a implements Animation.AnimationListener {
+    public class a implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        animationAnimation$AnimationListenerC2651a() {
+        a() {
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -93,7 +92,7 @@ public abstract class DmPopWindowBaseActivity extends SimpleBaseActivity {
         } else {
             Animation loadAnimation = AnimationUtils.loadAnimation(this, R$anim.activity_item_animexit);
             this.mAnimView.startAnimation(loadAnimation);
-            loadAnimation.setAnimationListener(new animationAnimation$AnimationListenerC2651a());
+            loadAnimation.setAnimationListener(new a());
         }
     }
 

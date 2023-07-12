@@ -9,11 +9,9 @@ import java.util.ListIterator;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
-import kotlin.collections.C8214m;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
 import kotlin.reflect.jvm.internal.impl.builtins.PrimitiveType;
+import kotlin.reflect.jvm.internal.impl.builtins.c;
 import kotlin.reflect.jvm.internal.impl.builtins.functions.FunctionClassKind;
-import kotlin.reflect.jvm.internal.impl.name.C8433a;
 import kotlin.reflect.jvm.internal.impl.resolve.jvm.JvmPrimitiveType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -46,12 +44,11 @@ public final class o51 {
     @NotNull
     private static final HashMap<ip0, hp0> k;
     @NotNull
-    private static final List<C9506a> l;
+    private static final List<a> l;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.o51$a */
     /* loaded from: classes3.dex */
-    public static final class C9506a {
+    public static final class a {
         @NotNull
         private final hj a;
         @NotNull
@@ -59,7 +56,7 @@ public final class o51 {
         @NotNull
         private final hj c;
 
-        public C9506a(@NotNull hj hjVar, @NotNull hj hjVar2, @NotNull hj hjVar3) {
+        public a(@NotNull hj hjVar, @NotNull hj hjVar2, @NotNull hj hjVar3) {
             b41.i(hjVar, "javaClass");
             b41.i(hjVar2, "kotlinReadOnly");
             b41.i(hjVar3, "kotlinMutable");
@@ -92,9 +89,9 @@ public final class o51 {
             if (this == obj) {
                 return true;
             }
-            if (obj instanceof C9506a) {
-                C9506a c9506a = (C9506a) obj;
-                return b41.d(this.a, c9506a.a) && b41.d(this.b, c9506a.b) && b41.d(this.c, c9506a.c);
+            if (obj instanceof a) {
+                a aVar = (a) obj;
+                return b41.d(this.a, aVar.a) && b41.d(this.b, aVar.b) && b41.d(this.c, aVar.c);
             }
             return false;
         }
@@ -110,7 +107,7 @@ public final class o51 {
     }
 
     static {
-        List<C9506a> j2;
+        List<a> j2;
         o51 o51Var = new o51();
         INSTANCE = o51Var;
         StringBuilder sb = new StringBuilder();
@@ -152,77 +149,77 @@ public final class o51 {
         i = new HashMap<>();
         j = new HashMap<>();
         k = new HashMap<>();
-        hj m3 = hj.m(C8277c.C8278a.iterable);
+        hj m3 = hj.m(c.a.iterable);
         b41.h(m3, "topLevel(FqNames.iterable)");
-        hp0 hp0Var = C8277c.C8278a.mutableIterable;
+        hp0 hp0Var = c.a.mutableIterable;
         hp0 h2 = m3.h();
         hp0 h3 = m3.h();
         b41.h(h3, "kotlinReadOnly.packageFqName");
-        hp0 g2 = C8433a.g(hp0Var, h3);
+        hp0 g2 = kotlin.reflect.jvm.internal.impl.name.a.g(hp0Var, h3);
         int i2 = 0;
         hj hjVar = new hj(h2, g2, false);
-        hj m4 = hj.m(C8277c.C8278a.iterator);
+        hj m4 = hj.m(c.a.iterator);
         b41.h(m4, "topLevel(FqNames.iterator)");
-        hp0 hp0Var2 = C8277c.C8278a.mutableIterator;
+        hp0 hp0Var2 = c.a.mutableIterator;
         hp0 h4 = m4.h();
         hp0 h5 = m4.h();
         b41.h(h5, "kotlinReadOnly.packageFqName");
-        hj hjVar2 = new hj(h4, C8433a.g(hp0Var2, h5), false);
-        hj m5 = hj.m(C8277c.C8278a.collection);
+        hj hjVar2 = new hj(h4, kotlin.reflect.jvm.internal.impl.name.a.g(hp0Var2, h5), false);
+        hj m5 = hj.m(c.a.collection);
         b41.h(m5, "topLevel(FqNames.collection)");
-        hp0 hp0Var3 = C8277c.C8278a.mutableCollection;
+        hp0 hp0Var3 = c.a.mutableCollection;
         hp0 h6 = m5.h();
         hp0 h7 = m5.h();
         b41.h(h7, "kotlinReadOnly.packageFqName");
-        hj hjVar3 = new hj(h6, C8433a.g(hp0Var3, h7), false);
-        hj m6 = hj.m(C8277c.C8278a.list);
+        hj hjVar3 = new hj(h6, kotlin.reflect.jvm.internal.impl.name.a.g(hp0Var3, h7), false);
+        hj m6 = hj.m(c.a.list);
         b41.h(m6, "topLevel(FqNames.list)");
-        hp0 hp0Var4 = C8277c.C8278a.mutableList;
+        hp0 hp0Var4 = c.a.mutableList;
         hp0 h8 = m6.h();
         hp0 h9 = m6.h();
         b41.h(h9, "kotlinReadOnly.packageFqName");
-        hj hjVar4 = new hj(h8, C8433a.g(hp0Var4, h9), false);
-        hj m7 = hj.m(C8277c.C8278a.set);
+        hj hjVar4 = new hj(h8, kotlin.reflect.jvm.internal.impl.name.a.g(hp0Var4, h9), false);
+        hj m7 = hj.m(c.a.set);
         b41.h(m7, "topLevel(FqNames.set)");
-        hp0 hp0Var5 = C8277c.C8278a.mutableSet;
+        hp0 hp0Var5 = c.a.mutableSet;
         hp0 h10 = m7.h();
         hp0 h11 = m7.h();
         b41.h(h11, "kotlinReadOnly.packageFqName");
-        hj hjVar5 = new hj(h10, C8433a.g(hp0Var5, h11), false);
-        hj m8 = hj.m(C8277c.C8278a.listIterator);
+        hj hjVar5 = new hj(h10, kotlin.reflect.jvm.internal.impl.name.a.g(hp0Var5, h11), false);
+        hj m8 = hj.m(c.a.listIterator);
         b41.h(m8, "topLevel(FqNames.listIterator)");
-        hp0 hp0Var6 = C8277c.C8278a.mutableListIterator;
+        hp0 hp0Var6 = c.a.mutableListIterator;
         hp0 h12 = m8.h();
         hp0 h13 = m8.h();
         b41.h(h13, "kotlinReadOnly.packageFqName");
-        hj hjVar6 = new hj(h12, C8433a.g(hp0Var6, h13), false);
-        hp0 hp0Var7 = C8277c.C8278a.map;
+        hj hjVar6 = new hj(h12, kotlin.reflect.jvm.internal.impl.name.a.g(hp0Var6, h13), false);
+        hp0 hp0Var7 = c.a.map;
         hj m9 = hj.m(hp0Var7);
         b41.h(m9, "topLevel(FqNames.map)");
-        hp0 hp0Var8 = C8277c.C8278a.mutableMap;
+        hp0 hp0Var8 = c.a.mutableMap;
         hp0 h14 = m9.h();
         hp0 h15 = m9.h();
         b41.h(h15, "kotlinReadOnly.packageFqName");
-        hj hjVar7 = new hj(h14, C8433a.g(hp0Var8, h15), false);
-        hj d2 = hj.m(hp0Var7).d(C8277c.C8278a.mapEntry.g());
+        hj hjVar7 = new hj(h14, kotlin.reflect.jvm.internal.impl.name.a.g(hp0Var8, h15), false);
+        hj d2 = hj.m(hp0Var7).d(c.a.mapEntry.g());
         b41.h(d2, "topLevel(FqNames.map).cr…mes.mapEntry.shortName())");
-        hp0 hp0Var9 = C8277c.C8278a.mutableMapEntry;
+        hp0 hp0Var9 = c.a.mutableMapEntry;
         hp0 h16 = d2.h();
         hp0 h17 = d2.h();
         b41.h(h17, "kotlinReadOnly.packageFqName");
-        j2 = C8214m.j(new C9506a(o51Var.h(Iterable.class), m3, hjVar), new C9506a(o51Var.h(Iterator.class), m4, hjVar2), new C9506a(o51Var.h(Collection.class), m5, hjVar3), new C9506a(o51Var.h(List.class), m6, hjVar4), new C9506a(o51Var.h(Set.class), m7, hjVar5), new C9506a(o51Var.h(ListIterator.class), m8, hjVar6), new C9506a(o51Var.h(Map.class), m9, hjVar7), new C9506a(o51Var.h(Map.Entry.class), d2, new hj(h16, C8433a.g(hp0Var9, h17), false)));
+        j2 = kotlin.collections.m.j(new a(o51Var.h(Iterable.class), m3, hjVar), new a(o51Var.h(Iterator.class), m4, hjVar2), new a(o51Var.h(Collection.class), m5, hjVar3), new a(o51Var.h(List.class), m6, hjVar4), new a(o51Var.h(Set.class), m7, hjVar5), new a(o51Var.h(ListIterator.class), m8, hjVar6), new a(o51Var.h(Map.class), m9, hjVar7), new a(o51Var.h(Map.Entry.class), d2, new hj(h16, kotlin.reflect.jvm.internal.impl.name.a.g(hp0Var9, h17), false)));
         l = j2;
-        o51Var.g(Object.class, C8277c.C8278a.any);
-        o51Var.g(String.class, C8277c.C8278a.string);
-        o51Var.g(CharSequence.class, C8277c.C8278a.charSequence);
-        o51Var.f(Throwable.class, C8277c.C8278a.throwable);
-        o51Var.g(Cloneable.class, C8277c.C8278a.cloneable);
-        o51Var.g(Number.class, C8277c.C8278a.number);
-        o51Var.f(Comparable.class, C8277c.C8278a.comparable);
-        o51Var.g(Enum.class, C8277c.C8278a._enum);
-        o51Var.f(Annotation.class, C8277c.C8278a.annotation);
-        for (C9506a c9506a : j2) {
-            INSTANCE.e(c9506a);
+        o51Var.g(Object.class, c.a.any);
+        o51Var.g(String.class, c.a.string);
+        o51Var.g(CharSequence.class, c.a.charSequence);
+        o51Var.f(Throwable.class, c.a.throwable);
+        o51Var.g(Cloneable.class, c.a.cloneable);
+        o51Var.g(Number.class, c.a.number);
+        o51Var.f(Comparable.class, c.a.comparable);
+        o51Var.g(Enum.class, c.a._enum);
+        o51Var.f(Annotation.class, c.a.annotation);
+        for (a aVar : j2) {
+            INSTANCE.e(aVar);
         }
         JvmPrimitiveType[] values = JvmPrimitiveType.values();
         int length = values.length;
@@ -235,7 +232,7 @@ public final class o51 {
             b41.h(m10, "topLevel(jvmType.wrapperFqName)");
             PrimitiveType primitiveType = jvmPrimitiveType.getPrimitiveType();
             b41.h(primitiveType, "jvmType.primitiveType");
-            hj m11 = hj.m(C8277c.c(primitiveType));
+            hj m11 = hj.m(kotlin.reflect.jvm.internal.impl.builtins.c.c(primitiveType));
             b41.h(m11, "topLevel(StandardNames.g…e(jvmType.primitiveType))");
             o51Var2.b(m10, m11);
         }
@@ -253,7 +250,7 @@ public final class o51 {
             o51 o51Var4 = INSTANCE;
             hj m13 = hj.m(new hp0(b41.r("kotlin.jvm.functions.Function", Integer.valueOf(i4))));
             b41.h(m13, "topLevel(FqName(\"kotlin.…m.functions.Function$i\"))");
-            o51Var4.b(m13, C8277c.a(i4));
+            o51Var4.b(m13, kotlin.reflect.jvm.internal.impl.builtins.c.a(i4));
             o51Var4.d(new hp0(b41.r(b, Integer.valueOf(i4))), g);
             if (i5 >= 23) {
                 break;
@@ -266,7 +263,7 @@ public final class o51 {
             o51 o51Var5 = INSTANCE;
             o51Var5.d(new hp0(b41.r(functionClassKind5.getPackageFqName().toString() + '.' + functionClassKind5.getClassNamePrefix(), Integer.valueOf(i2))), g);
             if (i6 >= 22) {
-                hp0 l2 = C8277c.C8278a.nothing.l();
+                hp0 l2 = c.a.nothing.l();
                 b41.h(l2, "nothing.toSafe()");
                 o51Var5.d(l2, o51Var5.h(Void.class));
                 return;
@@ -299,10 +296,10 @@ public final class o51 {
         hashMap.put(j2, hjVar);
     }
 
-    private final void e(C9506a c9506a) {
-        hj a2 = c9506a.a();
-        hj b2 = c9506a.b();
-        hj c2 = c9506a.c();
+    private final void e(a aVar) {
+        hj a2 = aVar.a();
+        hj b2 = aVar.b();
+        hj c2 = aVar.c();
         b(a2, b2);
         hp0 b3 = c2.b();
         b41.h(b3, "mutableClassId.asSingleFqName()");
@@ -351,7 +348,7 @@ public final class o51 {
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:9:0x0026, code lost:
-        r5 = kotlin.text.C8603n.i(r5);
+        r5 = kotlin.text.n.i(r5);
      */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
@@ -364,7 +361,7 @@ public final class o51 {
             java.lang.String r0 = "kotlinFqName.asString()"
             tb.b41.h(r5, r0)
             java.lang.String r0 = ""
-            java.lang.String r5 = kotlin.text.C8596g.C0(r5, r6, r0)
+            java.lang.String r5 = kotlin.text.g.C0(r5, r6, r0)
             int r6 = r5.length()
             r0 = 1
             r1 = 0
@@ -378,9 +375,9 @@ public final class o51 {
             r6 = 48
             r2 = 2
             r3 = 0
-            boolean r6 = kotlin.text.C8596g.y0(r5, r6, r1, r2, r3)
+            boolean r6 = kotlin.text.g.y0(r5, r6, r1, r2, r3)
             if (r6 != 0) goto L37
-            java.lang.Integer r5 = kotlin.text.C8596g.i(r5)
+            java.lang.Integer r5 = kotlin.text.g.i(r5)
             if (r5 == 0) goto L35
             int r5 = r5.intValue()
             r6 = 23
@@ -402,7 +399,7 @@ public final class o51 {
     }
 
     @NotNull
-    public final List<C9506a> j() {
+    public final List<a> j() {
         return l;
     }
 

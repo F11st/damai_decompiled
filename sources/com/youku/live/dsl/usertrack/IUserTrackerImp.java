@@ -3,7 +3,7 @@ package com.youku.live.dsl.usertrack;
 import android.app.Activity;
 import android.net.Uri;
 import android.text.TextUtils;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import com.ut.mini.UTAnalytics;
@@ -44,7 +44,7 @@ public class IUserTrackerImp implements IUserTracker {
         if (AndroidInstantRuntime.support(ipChange, "-868702747")) {
             ipChange.ipc$dispatch("-868702747", new Object[]{this, obj});
         } else {
-            C0529c.e().r(obj);
+            c.e().r(obj);
         }
     }
 
@@ -54,7 +54,7 @@ public class IUserTrackerImp implements IUserTracker {
         if (AndroidInstantRuntime.support(ipChange, "1107069750")) {
             ipChange.ipc$dispatch("1107069750", new Object[]{this, obj});
         } else {
-            C0529c.e().s(this);
+            c.e().s(this);
         }
     }
 
@@ -78,7 +78,7 @@ public class IUserTrackerImp implements IUserTracker {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        C0529c.e().t(obj);
+        c.e().t(obj);
     }
 
     @Override // com.youku.live.dsl.usertrack.IUserTracker
@@ -95,7 +95,7 @@ public class IUserTrackerImp implements IUserTracker {
         if (AndroidInstantRuntime.support(ipChange, "-874710405")) {
             ipChange.ipc$dispatch("-874710405", new Object[]{this, obj});
         } else {
-            C0529c.e().J(this);
+            c.e().J(this);
         }
     }
 
@@ -116,7 +116,7 @@ public class IUserTrackerImp implements IUserTracker {
         if (AndroidInstantRuntime.support(ipChange, "1395174963")) {
             ipChange.ipc$dispatch("1395174963", new Object[]{this, str, str2, map});
         } else {
-            C0529c.e().y(str, str2, map);
+            c.e().y(str, str2, map);
         }
     }
 
@@ -134,7 +134,7 @@ public class IUserTrackerImp implements IUserTracker {
         if (AndroidInstantRuntime.support(ipChange, "-30977174")) {
             ipChange.ipc$dispatch("-30977174", new Object[]{this, str, str2, map});
         } else {
-            C0529c.e().D(str, str2, "", "", map, 2201);
+            c.e().D(str, str2, "", "", map, 2201);
         }
     }
 
@@ -144,7 +144,7 @@ public class IUserTrackerImp implements IUserTracker {
         if (AndroidInstantRuntime.support(ipChange, "1607114255")) {
             ipChange.ipc$dispatch("1607114255", new Object[]{this, str, Integer.valueOf(i), str2, str3, str4, map});
         } else {
-            C0529c.e().D(str, str2, str3, str4, map, i);
+            c.e().D(str, str2, str3, str4, map, i);
         }
     }
 
@@ -170,7 +170,7 @@ public class IUserTrackerImp implements IUserTracker {
         if (AndroidInstantRuntime.support(ipChange, "-1789776144")) {
             ipChange.ipc$dispatch("-1789776144", new Object[]{this, obj, str});
         } else {
-            C0529c.e().N(obj, str);
+            c.e().N(obj, str);
         }
     }
 
@@ -180,7 +180,7 @@ public class IUserTrackerImp implements IUserTracker {
         if (AndroidInstantRuntime.support(ipChange, "239625927")) {
             ipChange.ipc$dispatch("239625927", new Object[]{this, obj, map});
         } else {
-            C0529c.e().O(obj, map);
+            c.e().O(obj, map);
         }
     }
 
@@ -198,7 +198,7 @@ public class IUserTrackerImp implements IUserTracker {
         if (AndroidInstantRuntime.support(ipChange, "-907007920")) {
             ipChange.ipc$dispatch("-907007920", new Object[]{this, str, str2, map});
         } else {
-            C0529c.e().D(str, str2, "", "", map, 19999);
+            c.e().D(str, str2, "", "", map, 19999);
         }
     }
 }

@@ -13,8 +13,8 @@ import okio.Buffer;
 import okio.BufferedSink;
 import okio.BufferedSource;
 import okio.ByteString;
-import okio.C8857o;
 import okio.Source;
+import okio.o;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -103,7 +103,7 @@ public final class Http2 implements Variant {
         }
 
         @Override // okio.Source
-        public C8857o timeout() {
+        public o timeout() {
             return this.source.timeout();
         }
     }

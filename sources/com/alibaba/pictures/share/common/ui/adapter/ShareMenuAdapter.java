@@ -69,13 +69,12 @@ public final class ShareMenuAdapter extends RecyclerView.Adapter<ShareMenuHolder
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.share.common.ui.adapter.ShareMenuAdapter$a */
     /* loaded from: classes8.dex */
-    public static final class View$OnClickListenerC3641a implements View.OnClickListener {
+    public static final class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC3641a(int i) {
+        a(int i) {
             this.b = i;
         }
 
@@ -128,15 +127,15 @@ public final class ShareMenuAdapter extends RecyclerView.Adapter<ShareMenuHolder
             return;
         }
         b41.i(shareMenuHolder, "holder");
-        ImageView a = shareMenuHolder.a();
-        if (a != null) {
-            a.setImageResource(this.a.get(i).a());
+        ImageView a2 = shareMenuHolder.a();
+        if (a2 != null) {
+            a2.setImageResource(this.a.get(i).a());
         }
         TextView title = shareMenuHolder.getTitle();
         if (title != null) {
             title.setText(this.a.get(i).c());
         }
-        shareMenuHolder.itemView.setOnClickListener(new View$OnClickListenerC3641a(i));
+        shareMenuHolder.itemView.setOnClickListener(new a(i));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

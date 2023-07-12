@@ -17,8 +17,8 @@ import tb.du1;
 public enum BloomFilterStrategies implements BloomFilter.Strategy {
     MURMUR128_MITZ_32 { // from class: com.google.common.hash.BloomFilterStrategies.1
         @Override // com.google.common.hash.BloomFilter.Strategy
-        public <T> boolean mightContain(T t, Funnel<? super T> funnel, int i, C5214a c5214a) {
-            long b = c5214a.b();
+        public <T> boolean mightContain(T t, Funnel<? super T> funnel, int i, a aVar) {
+            long b = aVar.b();
             long asLong = Hashing.a().hashObject(t, funnel).asLong();
             int i2 = (int) asLong;
             int i3 = (int) (asLong >>> 32);
@@ -27,7 +27,7 @@ public enum BloomFilterStrategies implements BloomFilter.Strategy {
                 if (i5 < 0) {
                     i5 = ~i5;
                 }
-                if (!c5214a.d(i5 % b)) {
+                if (!aVar.d(i5 % b)) {
                     return false;
                 }
             }
@@ -35,8 +35,8 @@ public enum BloomFilterStrategies implements BloomFilter.Strategy {
         }
 
         @Override // com.google.common.hash.BloomFilter.Strategy
-        public <T> boolean put(T t, Funnel<? super T> funnel, int i, C5214a c5214a) {
-            long b = c5214a.b();
+        public <T> boolean put(T t, Funnel<? super T> funnel, int i, a aVar) {
+            long b = aVar.b();
             long asLong = Hashing.a().hashObject(t, funnel).asLong();
             int i2 = (int) asLong;
             int i3 = (int) (asLong >>> 32);
@@ -46,7 +46,7 @@ public enum BloomFilterStrategies implements BloomFilter.Strategy {
                 if (i5 < 0) {
                     i5 = ~i5;
                 }
-                z |= c5214a.f(i5 % b);
+                z |= aVar.f(i5 % b);
             }
             return z;
         }
@@ -61,13 +61,13 @@ public enum BloomFilterStrategies implements BloomFilter.Strategy {
         }
 
         @Override // com.google.common.hash.BloomFilter.Strategy
-        public <T> boolean mightContain(T t, Funnel<? super T> funnel, int i, C5214a c5214a) {
-            long b = c5214a.b();
+        public <T> boolean mightContain(T t, Funnel<? super T> funnel, int i, a aVar) {
+            long b = aVar.b();
             byte[] bytesInternal = Hashing.a().hashObject(t, funnel).getBytesInternal();
             long lowerEight = lowerEight(bytesInternal);
             long upperEight = upperEight(bytesInternal);
             for (int i2 = 0; i2 < i; i2++) {
-                if (!c5214a.d((AbsPerformance.LONG_NIL & lowerEight) % b)) {
+                if (!aVar.d((AbsPerformance.LONG_NIL & lowerEight) % b)) {
                     return false;
                 }
                 lowerEight += upperEight;
@@ -76,14 +76,14 @@ public enum BloomFilterStrategies implements BloomFilter.Strategy {
         }
 
         @Override // com.google.common.hash.BloomFilter.Strategy
-        public <T> boolean put(T t, Funnel<? super T> funnel, int i, C5214a c5214a) {
-            long b = c5214a.b();
+        public <T> boolean put(T t, Funnel<? super T> funnel, int i, a aVar) {
+            long b = aVar.b();
             byte[] bytesInternal = Hashing.a().hashObject(t, funnel).getBytesInternal();
             long lowerEight = lowerEight(bytesInternal);
             long upperEight = upperEight(bytesInternal);
             boolean z = false;
             for (int i2 = 0; i2 < i; i2++) {
-                z |= c5214a.f((AbsPerformance.LONG_NIL & lowerEight) % b);
+                z |= aVar.f((AbsPerformance.LONG_NIL & lowerEight) % b);
                 lowerEight += upperEight;
             }
             return z;
@@ -92,14 +92,13 @@ public enum BloomFilterStrategies implements BloomFilter.Strategy {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.hash.BloomFilterStrategies$a */
     /* loaded from: classes10.dex */
-    public static final class C5214a {
+    public static final class a {
         final AtomicLongArray a;
         private final LongAddable b;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C5214a(long j) {
+        public a(long j) {
             du1.e(j > 0, "data length is zero!");
             this.a = new AtomicLongArray(Ints.c(LongMath.a(j, 64L, RoundingMode.CEILING)));
             this.b = LongAddables.a();
@@ -125,8 +124,8 @@ public enum BloomFilterStrategies implements BloomFilter.Strategy {
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C5214a c() {
-            return new C5214a(g(this.a));
+        public a c() {
+            return new a(g(this.a));
         }
 
         boolean d(long j) {
@@ -134,13 +133,13 @@ public enum BloomFilterStrategies implements BloomFilter.Strategy {
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public void e(C5214a c5214a) {
+        public void e(a aVar) {
             long j;
             long j2;
             boolean z;
-            du1.g(this.a.length() == c5214a.a.length(), "BitArrays must be of equal length (%s != %s)", this.a.length(), c5214a.a.length());
+            du1.g(this.a.length() == aVar.a.length(), "BitArrays must be of equal length (%s != %s)", this.a.length(), aVar.a.length());
             for (int i = 0; i < this.a.length(); i++) {
-                long j3 = c5214a.a.get(i);
+                long j3 = aVar.a.get(i);
                 while (true) {
                     j = this.a.get(i);
                     j2 = j | j3;
@@ -159,8 +158,8 @@ public enum BloomFilterStrategies implements BloomFilter.Strategy {
         }
 
         public boolean equals(@NullableDecl Object obj) {
-            if (obj instanceof C5214a) {
-                return Arrays.equals(g(this.a), g(((C5214a) obj).a));
+            if (obj instanceof a) {
+                return Arrays.equals(g(this.a), g(((a) obj).a));
             }
             return false;
         }
@@ -189,7 +188,7 @@ public enum BloomFilterStrategies implements BloomFilter.Strategy {
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C5214a(long[] jArr) {
+        public a(long[] jArr) {
             du1.e(jArr.length > 0, "data length is zero!");
             this.a = new AtomicLongArray(jArr);
             this.b = LongAddables.a();

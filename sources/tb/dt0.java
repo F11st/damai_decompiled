@@ -19,7 +19,7 @@ import org.jetbrains.annotations.Nullable;
 public final class dt0 implements GaiaX.IEventDelegate, GaiaX.IStatusDelegate, GaiaX.ITrackDelegate3 {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C9060a Companion = new C9060a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final HashMap<String, y0> h;
     @NotNull
@@ -37,15 +37,14 @@ public final class dt0 implements GaiaX.IEventDelegate, GaiaX.IStatusDelegate, G
     private final GaiaXUtParamsGenerator g;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.dt0$a */
     /* loaded from: classes7.dex */
-    public static final class C9060a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9060a() {
+        private a() {
         }
 
-        public /* synthetic */ C9060a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -98,9 +97,9 @@ public final class dt0 implements GaiaX.IEventDelegate, GaiaX.IStatusDelegate, G
             return;
         }
         b41.i(view, "itemView");
-        y0 a = Companion.a(this.c, this.d);
-        if (a != null) {
-            a.d(view, this.b, this.e, this.f, this.g);
+        y0 a2 = Companion.a(this.c, this.d);
+        if (a2 != null) {
+            a2.d(view, this.b, this.e, this.f, this.g);
         }
     }
 
@@ -111,25 +110,25 @@ public final class dt0 implements GaiaX.IEventDelegate, GaiaX.IStatusDelegate, G
             return;
         }
         b41.i(view, "itemView");
-        y0 a = Companion.a(this.c, this.d);
-        if (a != null) {
-            a.f(view, this.b, this.e, this.f, this.g);
+        y0 a2 = Companion.a(this.c, this.d);
+        if (a2 != null) {
+            a2.f(view, this.b, this.e, this.f, this.g);
         }
     }
 
     @Override // com.youku.gaiax.GaiaX.IEventDelegate
     public void onEvent(@NotNull EventParams eventParams) {
-        y0 a;
+        y0 a2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1061201009")) {
             ipChange.ipc$dispatch("1061201009", new Object[]{this, eventParams});
             return;
         }
         b41.i(eventParams, WXGlobalEventReceiver.EVENT_PARAMS);
-        if (this.b.isFinishing() || (a = Companion.a(this.c, this.d)) == null) {
+        if (this.b.isFinishing() || (a2 = Companion.a(this.c, this.d)) == null) {
             return;
         }
-        a.e(this.a, this.b, eventParams, this.e, this.f, this.g);
+        a2.e(this.a, this.b, eventParams, this.e, this.f, this.g);
     }
 
     @Override // com.youku.gaiax.GaiaX.ITrackDelegate3
@@ -151,9 +150,9 @@ public final class dt0 implements GaiaX.IEventDelegate, GaiaX.IStatusDelegate, G
         }
         b41.i(params, "params");
         b41.i(view, "resultView");
-        y0 a = Companion.a(this.c, this.d);
-        if (a != null) {
-            a.g(params, view, this.a, this.b, this.e, this.f, this.g);
+        y0 a2 = Companion.a(this.c, this.d);
+        if (a2 != null) {
+            a2.g(params, view, this.a, this.b, this.e, this.f, this.g);
         }
     }
 

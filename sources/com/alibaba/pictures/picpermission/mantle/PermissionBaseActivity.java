@@ -25,7 +25,7 @@ import java.util.Objects;
 import kotlin.Metadata;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tb.AbstractC8903ab;
+import tb.ab;
 import tb.b41;
 import tb.k50;
 import tb.ka;
@@ -38,7 +38,7 @@ public final class PermissionBaseActivity extends FragmentActivity {
     public static final int CODE_PERMISSIONS_REQUEST_WITHOUT_MANTLE = 2;
     public static final int CODE_PERMISSION_REQUEST = 1;
     @NotNull
-    public static final C3623a Companion = new C3623a(null);
+    public static final a Companion = new a(null);
     public static final int DELAY_SHOW_TIPS_CODE = 0;
     public static final long DELAY_SHOW_TIPS_TIME = 300;
     @NotNull
@@ -61,27 +61,25 @@ public final class PermissionBaseActivity extends FragmentActivity {
     private boolean theLast;
     private String title;
     private ka tipsView = new MantleTipsView();
-    private final Handler mHandler = new HandlerC3624b(Looper.getMainLooper());
+    private final Handler mHandler = new b(Looper.getMainLooper());
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.picpermission.mantle.PermissionBaseActivity$a */
     /* loaded from: classes7.dex */
-    public static final class C3623a {
-        private C3623a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3623a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.picpermission.mantle.PermissionBaseActivity$b */
     /* loaded from: classes7.dex */
-    public static final class HandlerC3624b extends Handler {
+    public static final class b extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        HandlerC3624b(Looper looper) {
+        b(Looper looper) {
             super(looper);
         }
 
@@ -117,9 +115,9 @@ public final class PermissionBaseActivity extends FragmentActivity {
             View inflate = LayoutInflater.from(this).inflate(this.tipsView.b(), (ViewGroup) null);
             this.tipsView.d(inflate);
             if (this.tipsView.a() != null) {
-                View a = this.tipsView.a();
-                if (a != null) {
-                    a.setVisibility(8);
+                View a2 = this.tipsView.a();
+                if (a2 != null) {
+                    a2.setVisibility(8);
                 }
                 ka kaVar = this.tipsView;
                 b41.h(inflate, "view");
@@ -287,13 +285,13 @@ public final class PermissionBaseActivity extends FragmentActivity {
             PicPermissionManager.Companion.instance().setFinishHandle(true);
         }
         PicPermissionManager.Companion companion2 = PicPermissionManager.Companion;
-        AbstractC8903ab customRationalBehavior = companion2.instance().getCustomRationalBehavior();
+        ab customRationalBehavior = companion2.instance().getCustomRationalBehavior();
         boolean z = this.theLast;
         if (z && ((!z || !companion2.instance().getTotalDeniedPermissions().isEmpty()) && customRationalBehavior != null)) {
             customRationalBehavior.b(this, companion2.instance().getTotalDeniedPermissions());
-            View a = this.tipsView.a();
-            if (a != null) {
-                a.setVisibility(8);
+            View a2 = this.tipsView.a();
+            if (a2 != null) {
+                a2.setVisibility(8);
                 return;
             }
             return;

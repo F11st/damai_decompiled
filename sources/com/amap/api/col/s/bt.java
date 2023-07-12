@@ -13,12 +13,12 @@ import org.json.JSONObject;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public final class bt {
-    private static volatile EnumC4397b a = EnumC4397b.Unknow;
-    private static volatile EnumC4399d b = EnumC4399d.Unknow;
+    private static volatile b a = b.Unknow;
+    private static volatile d b = d.Unknow;
     private static volatile String c = "";
     private static volatile String d = "";
     private static volatile long e = -1;
-    private static volatile EnumC4396a f = EnumC4396a.Unknow;
+    private static volatile a f = a.Unknow;
     private static volatile long g = -1;
     private static volatile String h = "";
     private static volatile String i = "";
@@ -28,16 +28,15 @@ public final class bt {
     private static volatile boolean m = true;
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.bt$a */
     /* loaded from: classes10.dex */
-    public enum EnumC4396a {
+    public enum a {
         Unknow(-1),
         NotAgree(0),
         DidAgree(1);
         
         private int d;
 
-        EnumC4396a(int i) {
+        a(int i) {
             this.d = i;
         }
 
@@ -45,27 +44,26 @@ public final class bt {
             return this.d;
         }
 
-        public static EnumC4396a a(int i) {
-            EnumC4396a enumC4396a = NotAgree;
-            if (i == enumC4396a.a()) {
-                return enumC4396a;
+        public static a a(int i) {
+            a aVar = NotAgree;
+            if (i == aVar.a()) {
+                return aVar;
             }
-            EnumC4396a enumC4396a2 = DidAgree;
-            return i == enumC4396a2.a() ? enumC4396a2 : Unknow;
+            a aVar2 = DidAgree;
+            return i == aVar2.a() ? aVar2 : Unknow;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.bt$b */
     /* loaded from: classes10.dex */
-    public enum EnumC4397b {
+    public enum b {
         Unknow(-1),
         NotContain(0),
         DidContain(1);
         
         private int d;
 
-        EnumC4397b(int i) {
+        b(int i) {
             this.d = i;
         }
 
@@ -73,20 +71,19 @@ public final class bt {
             return this.d;
         }
 
-        public static EnumC4397b a(int i) {
-            EnumC4397b enumC4397b = NotContain;
-            if (i == enumC4397b.a()) {
-                return enumC4397b;
+        public static b a(int i) {
+            b bVar = NotContain;
+            if (i == bVar.a()) {
+                return bVar;
             }
-            EnumC4397b enumC4397b2 = DidContain;
-            return i == enumC4397b2.a() ? enumC4397b2 : Unknow;
+            b bVar2 = DidContain;
+            return i == bVar2.a() ? bVar2 : Unknow;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.bt$c */
     /* loaded from: classes10.dex */
-    public enum EnumC4398c {
+    public enum c {
         SuccessCode(0),
         ShowUnknowCode(555570),
         ShowNoShowCode(555571),
@@ -99,7 +96,7 @@ public final class bt {
         
         private final int j;
 
-        EnumC4398c(int i) {
+        c(int i) {
             this.j = i;
         }
 
@@ -109,16 +106,15 @@ public final class bt {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.col.s.bt$d */
     /* loaded from: classes10.dex */
-    public enum EnumC4399d {
+    public enum d {
         Unknow(-1),
         NotShow(0),
         DidShow(1);
         
         private int d;
 
-        EnumC4399d(int i) {
+        d(int i) {
             this.d = i;
         }
 
@@ -126,24 +122,24 @@ public final class bt {
             return this.d;
         }
 
-        public static EnumC4399d a(int i) {
-            EnumC4399d enumC4399d = NotShow;
-            if (i == enumC4399d.a()) {
-                return enumC4399d;
+        public static d a(int i) {
+            d dVar = NotShow;
+            if (i == dVar.a()) {
+                return dVar;
             }
-            EnumC4399d enumC4399d2 = DidShow;
-            return i == enumC4399d2.a() ? enumC4399d2 : Unknow;
+            d dVar2 = DidShow;
+            return i == dVar2.a() ? dVar2 : Unknow;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public static boolean b(Context context, JSONObject jSONObject) {
         try {
-            C4404cn c4404cn = new C4404cn();
-            c4404cn.b = context;
-            c4404cn.a = jSONObject;
+            cn cnVar = new cn();
+            cnVar.b = context;
+            cnVar.a = jSONObject;
             new cz();
-            dg a2 = cz.a(c4404cn);
+            dg a2 = cz.a(cnVar);
             if (a2 != null) {
                 JSONObject jSONObject2 = new JSONObject(bw.a(a2.a));
                 if (jSONObject2.has("status")) {
@@ -190,12 +186,12 @@ public final class bt {
             return;
         }
         try {
-            a = EnumC4397b.a(Integer.parseInt(split[0]));
-            b = EnumC4399d.a(Integer.parseInt(split[1]));
+            a = b.a(Integer.parseInt(split[0]));
+            b = d.a(Integer.parseInt(split[1]));
             e = Long.parseLong(split[2]);
             d = split[3];
             d = split[4];
-            f = EnumC4396a.a(Integer.parseInt(split[5]));
+            f = a.a(Integer.parseInt(split[5]));
             g = Long.parseLong(split[6]);
             h = split[7];
             i = split[8];
@@ -218,22 +214,22 @@ public final class bt {
     }
 
     public static void a(Context context, boolean z, boolean z2, bv bvVar) {
-        EnumC4399d enumC4399d;
-        EnumC4397b enumC4397b;
+        d dVar;
+        b bVar;
         if (z2) {
-            enumC4399d = EnumC4399d.DidShow;
+            dVar = d.DidShow;
         } else {
-            enumC4399d = EnumC4399d.NotShow;
+            dVar = d.NotShow;
         }
         if (z) {
-            enumC4397b = EnumC4397b.DidContain;
+            bVar = b.DidContain;
         } else {
-            enumC4397b = EnumC4397b.NotContain;
+            bVar = b.NotContain;
         }
-        a(context, enumC4399d, enumC4397b, bvVar);
+        a(context, dVar, bVar, bvVar);
     }
 
-    private static synchronized void a(Context context, EnumC4399d enumC4399d, EnumC4397b enumC4397b, bv bvVar) {
+    private static synchronized void a(Context context, d dVar, b bVar, bv bvVar) {
         synchronized (bt.class) {
             if (context == null || bvVar == null) {
                 return;
@@ -243,13 +239,13 @@ public final class bt {
                 l = true;
             }
             Boolean bool = Boolean.FALSE;
-            if (enumC4399d != b) {
+            if (dVar != b) {
                 bool = Boolean.TRUE;
-                b = enumC4399d;
+                b = dVar;
             }
-            if (enumC4397b != a) {
+            if (bVar != a) {
                 bool = Boolean.TRUE;
-                a = enumC4397b;
+                a = bVar;
             }
             if (bool.booleanValue()) {
                 c = bvVar.b();
@@ -315,16 +311,16 @@ public final class bt {
     }
 
     public static void a(Context context, boolean z, bv bvVar) {
-        EnumC4396a enumC4396a;
+        a aVar;
         if (z) {
-            enumC4396a = EnumC4396a.DidAgree;
+            aVar = a.DidAgree;
         } else {
-            enumC4396a = EnumC4396a.NotAgree;
+            aVar = a.NotAgree;
         }
-        a(context, enumC4396a, bvVar);
+        a(context, aVar, bvVar);
     }
 
-    private static synchronized void a(Context context, EnumC4396a enumC4396a, bv bvVar) {
+    private static synchronized void a(Context context, a aVar, bv bvVar) {
         synchronized (bt.class) {
             if (context == null || bvVar == null) {
                 return;
@@ -333,8 +329,8 @@ public final class bt {
                 e(context);
                 l = true;
             }
-            if (enumC4396a != f) {
-                f = enumC4396a;
+            if (aVar != f) {
+                f = aVar;
                 h = bvVar.b();
                 i = bvVar.c();
                 long currentTimeMillis = System.currentTimeMillis();
@@ -354,29 +350,29 @@ public final class bt {
                     e(context);
                     l = true;
                 }
-                if (b != EnumC4399d.DidShow) {
-                    if (b == EnumC4399d.Unknow) {
-                        buVar = new bu(EnumC4398c.ShowUnknowCode, bvVar);
-                    } else if (b == EnumC4399d.NotShow) {
-                        buVar = new bu(EnumC4398c.ShowNoShowCode, bvVar);
+                if (b != d.DidShow) {
+                    if (b == d.Unknow) {
+                        buVar = new bu(c.ShowUnknowCode, bvVar);
+                    } else if (b == d.NotShow) {
+                        buVar = new bu(c.ShowNoShowCode, bvVar);
                     }
                     z = false;
                 } else {
                     z = true;
                 }
-                if (z && a != EnumC4397b.DidContain) {
-                    if (a == EnumC4397b.Unknow) {
-                        buVar = new bu(EnumC4398c.InfoUnknowCode, bvVar);
-                    } else if (a == EnumC4397b.NotContain) {
-                        buVar = new bu(EnumC4398c.InfoNotContainCode, bvVar);
+                if (z && a != b.DidContain) {
+                    if (a == b.Unknow) {
+                        buVar = new bu(c.InfoUnknowCode, bvVar);
+                    } else if (a == b.NotContain) {
+                        buVar = new bu(c.InfoNotContainCode, bvVar);
                     }
                     z = false;
                 }
-                if (z && f != EnumC4396a.DidAgree) {
-                    if (f == EnumC4396a.Unknow) {
-                        buVar = new bu(EnumC4398c.AgreeUnknowCode, bvVar);
-                    } else if (f == EnumC4396a.NotAgree) {
-                        buVar = new bu(EnumC4398c.AgreeNotAgreeCode, bvVar);
+                if (z && f != a.DidAgree) {
+                    if (f == a.Unknow) {
+                        buVar = new bu(c.AgreeUnknowCode, bvVar);
+                    } else if (f == a.NotAgree) {
+                        buVar = new bu(c.AgreeNotAgreeCode, bvVar);
                     }
                     z = false;
                 }
@@ -436,17 +432,17 @@ public final class bt {
                 m = false;
                 String f2 = bk.f(context);
                 if (f2 == null || f2.length() <= 0) {
-                    buVar = new bu(EnumC4398c.InvaildUserKeyCode, bvVar);
+                    buVar = new bu(c.InvaildUserKeyCode, bvVar);
                     Log.e(bvVar.b(), String.format("获取apikey失败：\nerrorCode : %d\n原因：%s", Integer.valueOf(buVar.a.a()), buVar.b));
                 }
                 if (z) {
-                    buVar = new bu(EnumC4398c.SuccessCode, bvVar);
+                    buVar = new bu(c.SuccessCode, bvVar);
                 } else {
                     Log.e(bvVar.b(), String.format("隐私合规校验失败：\nerrorCode : %d\n原因：%s", Integer.valueOf(buVar.a.a()), buVar.b));
                 }
                 return buVar;
             }
-            return new bu(EnumC4398c.IllegalArgument, bvVar);
+            return new bu(c.IllegalArgument, bvVar);
         }
     }
 

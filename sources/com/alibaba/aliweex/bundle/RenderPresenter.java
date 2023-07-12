@@ -11,10 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import com.alibaba.aliweex.AliWXSDKEngine;
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.IConfigAdapter;
-import com.alibaba.aliweex.bundle.C3086f;
 import com.alibaba.aliweex.bundle.WeexPageContract;
+import com.alibaba.aliweex.bundle.f;
 import com.alibaba.aliweex.utils.MemoryMonitor;
 import com.taobao.weex.IWXRenderListener;
 import com.taobao.weex.RenderContainer;
@@ -47,7 +46,7 @@ public class RenderPresenter implements WeexPageContract.IRenderPresenter {
     private String g;
     private String h;
     protected String i;
-    protected C3086f j;
+    protected f j;
     private WeexPageContract.IUTPresenter k;
     private WeexPageContract.IDynamicUrlPresenter l;
     private WeexPageContract.IProgressBar m;
@@ -57,28 +56,27 @@ public class RenderPresenter implements WeexPageContract.IRenderPresenter {
     private WXAbstractRenderContainer q = null;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.bundle.RenderPresenter$a */
     /* loaded from: classes5.dex */
-    class C3074a implements MemoryMonitor.MemoryListener {
-        C3074a() {
+    class a implements MemoryMonitor.MemoryListener {
+        a() {
         }
 
         @Override // com.alibaba.aliweex.utils.MemoryMonitor.MemoryListener
         public void onChange(String str) {
-            ArrayList<C3086f.C3089b> c;
+            ArrayList<f.b> c;
             WXSDKInstance c2;
             HashMap hashMap = new HashMap(1);
             hashMap.put("evaluatedStatus", str);
             RenderPresenter renderPresenter = RenderPresenter.this;
             renderPresenter.e(renderPresenter.b, "memoryevaluated", hashMap);
-            C3086f c3086f = RenderPresenter.this.j;
-            if (c3086f == null || (c = c3086f.c()) == null || c.size() == 0) {
+            f fVar = RenderPresenter.this.j;
+            if (fVar == null || (c = fVar.c()) == null || c.size() == 0) {
                 return;
             }
-            Iterator<C3086f.C3089b> it = c.iterator();
+            Iterator<f.b> it = c.iterator();
             while (it.hasNext()) {
-                C3086f.C3087a c3087a = it.next().b;
-                if (c3087a != null && (c2 = c3087a.c()) != null) {
+                f.a aVar = it.next().b;
+                if (aVar != null && (c2 = aVar.c()) != null) {
                     RenderPresenter.this.e(c2, "memoryevaluated", hashMap);
                 }
             }
@@ -93,7 +91,7 @@ public class RenderPresenter implements WeexPageContract.IRenderPresenter {
         this.l = iDynamicUrlPresenter;
         this.m = iProgressBar;
         this.o = iUrlValidate;
-        this.j = new C3086f(activity, iUrlValidate.getHandler());
+        this.j = new f(activity, iUrlValidate.getHandler());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -154,8 +152,8 @@ public class RenderPresenter implements WeexPageContract.IRenderPresenter {
             WXSDKInstance createWXSDKInstance = createWXSDKInstance(context);
             this.b = createWXSDKInstance;
             AliWXSDKEngine.m(createWXSDKInstance.getInstanceId());
-            if (C3004a.l().c() != null) {
-                if ("false".equals(C3004a.l().c().getConfig(r, "enableSanbox", "true"))) {
+            if (com.alibaba.aliweex.a.l().c() != null) {
+                if ("false".equals(com.alibaba.aliweex.a.l().c().getConfig(r, "enableSanbox", "true"))) {
                     this.b.setUseSandBox(false);
                 } else {
                     this.b.setUseSandBox(true);
@@ -166,16 +164,16 @@ public class RenderPresenter implements WeexPageContract.IRenderPresenter {
                 iUTPresenter.viewAutoExposure(this.b);
             }
             this.b.registerRenderListener(this.n);
-            C3086f c3086f = this.j;
-            if (c3086f != null) {
-                this.b.setNestedInstanceInterceptor(c3086f);
+            f fVar = this.j;
+            if (fVar != null) {
+                this.b.setNestedInstanceInterceptor(fVar);
             }
             this.b.onInstanceReady();
         }
     }
 
     private synchronized boolean i() {
-        IConfigAdapter c = C3004a.l().c();
+        IConfigAdapter c = com.alibaba.aliweex.a.l().c();
         if (c != null) {
             return Boolean.parseBoolean(c.getConfig("wx_namespace_ext_config", "get_deep_view_layer", Boolean.toString(true)));
         }
@@ -273,11 +271,11 @@ public class RenderPresenter implements WeexPageContract.IRenderPresenter {
 
     @Override // com.alibaba.aliweex.bundle.WeexPageContract.IRenderPresenter
     public NestedContainer getNestedContainer(WXSDKInstance wXSDKInstance) {
-        C3086f c3086f = this.j;
-        if (c3086f == null || wXSDKInstance == null) {
+        f fVar = this.j;
+        if (fVar == null || wXSDKInstance == null) {
             return null;
         }
-        return c3086f.b(wXSDKInstance);
+        return fVar.b(wXSDKInstance);
     }
 
     @Override // com.alibaba.aliweex.bundle.WeexPageContract.IRenderPresenter
@@ -334,7 +332,7 @@ public class RenderPresenter implements WeexPageContract.IRenderPresenter {
             startRenderByUrl(map, str, str5, str5);
         }
         this.b.onActivityCreate();
-        MemoryMonitor.a(this.b.getInstanceId(), new C3074a());
+        MemoryMonitor.a(this.b.getInstanceId(), new a());
     }
 
     @Override // com.alibaba.aliweex.bundle.WeexPageContract.IRenderPresenter
@@ -346,9 +344,9 @@ public class RenderPresenter implements WeexPageContract.IRenderPresenter {
             }
             this.b.onActivityDestroy();
         }
-        C3086f c3086f = this.j;
-        if (c3086f != null) {
-            c3086f.a();
+        f fVar = this.j;
+        if (fVar != null) {
+            fVar.a();
         }
     }
 
@@ -412,11 +410,11 @@ public class RenderPresenter implements WeexPageContract.IRenderPresenter {
         if (wXSDKInstance != null) {
             wXSDKInstance.onCreateOptionsMenu(menu);
         }
-        ArrayList<C3086f.C3089b> c = this.j.c();
+        ArrayList<f.b> c = this.j.c();
         if (c != null) {
-            Iterator<C3086f.C3089b> it = c.iterator();
+            Iterator<f.b> it = c.iterator();
             while (it.hasNext()) {
-                C3086f.C3089b next = it.next();
+                f.b next = it.next();
                 if (next.b.c() != null) {
                     next.b.c().onCreateOptionsMenu(menu);
                 }

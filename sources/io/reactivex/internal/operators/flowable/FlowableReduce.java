@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.subscriptions.DeferredScalarSubscription;
@@ -93,12 +93,12 @@ public final class FlowableReduce<T> extends AbstractFlowableWithUpstream<T, T> 
         }
     }
 
-    public FlowableReduce(AbstractC8147b<T> abstractC8147b, BiFunction<T, T, T> biFunction) {
-        super(abstractC8147b);
+    public FlowableReduce(b<T> bVar, BiFunction<T, T, T> biFunction) {
+        super(bVar);
         this.reducer = biFunction;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.source.subscribe((FlowableSubscriber) new ReduceSubscriber(subscriber, this.reducer));
     }

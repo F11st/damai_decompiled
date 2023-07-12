@@ -57,10 +57,9 @@ public final class c1 {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     @SuppressLint({"NewApi"})
-    /* renamed from: com.loc.c1$a */
     /* loaded from: classes10.dex */
-    public class C5808a extends TelephonyManager.CellInfoCallback {
-        C5808a() {
+    public class a extends TelephonyManager.CellInfoCallback {
+        a() {
         }
 
         @Override // android.telephony.TelephonyManager.CellInfoCallback
@@ -83,10 +82,9 @@ public final class c1 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.loc.c1$b */
     /* loaded from: classes10.dex */
-    public class C5809b extends PhoneStateListener {
-        C5809b() {
+    public class b extends PhoneStateListener {
+        b() {
         }
 
         @Override // android.telephony.PhoneStateListener
@@ -568,9 +566,9 @@ public final class c1 {
     private void s(boolean z, boolean z2) {
         if (!this.o && this.g != null && Build.VERSION.SDK_INT >= 29 && this.a.getApplicationInfo().targetSdkVersion >= 29) {
             if (this.m == null) {
-                this.m = new C5808a();
+                this.m = new a();
             }
-            this.g.requestCellInfoUpdate(C5866o0.f().c(), this.m);
+            this.g.requestCellInfoUpdate(o0.f().c(), this.m);
             if (z2 || z) {
                 for (int i = 0; !this.n && i < 20; i++) {
                     try {

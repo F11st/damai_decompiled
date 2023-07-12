@@ -36,22 +36,22 @@ public class fh extends LinearLayout {
         try {
             Bitmap a = eq.a(context, "zoomin_selected.png");
             this.g = a;
-            this.a = eq.a(a, C4614m.a);
+            this.a = eq.a(a, m.a);
             Bitmap a2 = eq.a(context, "zoomin_unselected.png");
             this.h = a2;
-            this.b = eq.a(a2, C4614m.a);
+            this.b = eq.a(a2, m.a);
             Bitmap a3 = eq.a(context, "zoomout_selected.png");
             this.i = a3;
-            this.c = eq.a(a3, C4614m.a);
+            this.c = eq.a(a3, m.a);
             Bitmap a4 = eq.a(context, "zoomout_unselected.png");
             this.j = a4;
-            this.d = eq.a(a4, C4614m.a);
+            this.d = eq.a(a4, m.a);
             Bitmap a5 = eq.a(context, "zoomin_pressed.png");
             this.k = a5;
-            this.e = eq.a(a5, C4614m.a);
+            this.e = eq.a(a5, m.a);
             Bitmap a6 = eq.a(context, "zoomout_pressed.png");
             this.l = a6;
-            this.f = eq.a(a6, C4614m.a);
+            this.f = eq.a(a6, m.a);
             ImageView imageView = new ImageView(context);
             this.m = imageView;
             imageView.setImageBitmap(this.a);
@@ -188,13 +188,13 @@ public class fh extends LinearLayout {
 
     public void a(int i) {
         try {
-            fd.C4542a c4542a = (fd.C4542a) getLayoutParams();
+            fd.a aVar = (fd.a) getLayoutParams();
             if (i == 1) {
-                c4542a.d = 16;
+                aVar.d = 16;
             } else if (i == 2) {
-                c4542a.d = 80;
+                aVar.d = 80;
             }
-            setLayoutParams(c4542a);
+            setLayoutParams(aVar);
         } catch (Throwable th) {
             hd.c(th, "ZoomControllerView", "setZoomPosition");
             th.printStackTrace();

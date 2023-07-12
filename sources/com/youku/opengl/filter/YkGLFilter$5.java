@@ -6,12 +6,12 @@ import java.nio.FloatBuffer;
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
 class YkGLFilter$5 implements Runnable {
-    final /* synthetic */ C8020b this$0;
+    final /* synthetic */ b this$0;
     final /* synthetic */ float[] val$arrayValue;
     final /* synthetic */ int val$location;
 
-    YkGLFilter$5(C8020b c8020b, int i, float[] fArr) {
-        this.this$0 = c8020b;
+    YkGLFilter$5(b bVar, int i, float[] fArr) {
+        this.this$0 = bVar;
         this.val$location = i;
         this.val$arrayValue = fArr;
     }

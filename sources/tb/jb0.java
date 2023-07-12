@@ -21,13 +21,12 @@ public class jb0 extends ib {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.jb0$a */
     /* loaded from: classes9.dex */
-    public class DialogInterface$OnClickListenerC9305a implements DialogInterface.OnClickListener {
+    public class a implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DmOrderActivity a;
 
-        DialogInterface$OnClickListenerC9305a(jb0 jb0Var, DmOrderActivity dmOrderActivity) {
+        a(jb0 jb0Var, DmOrderActivity dmOrderActivity) {
             this.a = dmOrderActivity;
         }
 
@@ -46,13 +45,12 @@ public class jb0 extends ib {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.jb0$b */
     /* loaded from: classes9.dex */
-    public class DialogInterface$OnClickListenerC9306b implements DialogInterface.OnClickListener {
+    public class b implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DmOrderActivity a;
 
-        DialogInterface$OnClickListenerC9306b(DmOrderActivity dmOrderActivity) {
+        b(DmOrderActivity dmOrderActivity) {
             this.a = dmOrderActivity;
         }
 
@@ -92,7 +90,7 @@ public class jb0 extends ib {
                     DMDialog dMDialog = new DMDialog(this.b);
                     dMDialog.v("部分宝贝购买成功");
                     dMDialog.q("请尽快付款来抢下，未成功宝贝已放回购物车。");
-                    dMDialog.n("确定", new DialogInterface$OnClickListenerC9306b(dmOrderActivity2)).i("取消", new DialogInterface$OnClickListenerC9305a(this, dmOrderActivity2));
+                    dMDialog.n("确定", new b(dmOrderActivity2)).i("取消", new a(this, dmOrderActivity2));
                     return;
                 }
                 lb0.c(dmOrderActivity, dmUltronPayResultBean);

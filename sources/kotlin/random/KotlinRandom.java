@@ -8,7 +8,7 @@ import tb.k50;
 /* loaded from: classes3.dex */
 final class KotlinRandom extends java.util.Random {
     @NotNull
-    private static final C8237a Companion = new C8237a(null);
+    private static final a Companion = new a(null);
     @Deprecated
     private static final long serialVersionUID = 0;
     @NotNull
@@ -16,13 +16,12 @@ final class KotlinRandom extends java.util.Random {
     private boolean seedInitialized;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.random.KotlinRandom$a */
     /* loaded from: classes3.dex */
-    private static final class C8237a {
-        private C8237a() {
+    private static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8237a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

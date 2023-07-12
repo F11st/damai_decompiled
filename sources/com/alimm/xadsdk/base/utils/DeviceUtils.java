@@ -14,7 +14,7 @@ import android.view.ViewConfiguration;
 import android.view.WindowManager;
 import androidx.annotation.NonNull;
 import com.youku.arch.v3.data.Constants;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -25,7 +25,7 @@ public class DeviceUtils {
         Point point = new Point();
         DisplayMetrics displayMetrics = new DisplayMetrics();
         try {
-            Display defaultDisplay = ((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
+            Display defaultDisplay = ((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
             if (Build.VERSION.SDK_INT >= 17) {
                 com.alibaba.wireless.security.aopsdk.replace.android.view.Display.getSize(defaultDisplay, point);
             } else {
@@ -71,7 +71,7 @@ public class DeviceUtils {
         } else if (Build.VERSION.SDK_INT < 17) {
             return (ViewConfiguration.get(context).hasPermanentMenuKey() || KeyCharacterMap.deviceHasKey(4)) ? false : true;
         } else {
-            Display defaultDisplay = ((WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
+            Display defaultDisplay = ((WindowManager) context.getSystemService(v.ATTACH_MODE_WINDOW)).getDefaultDisplay();
             Point point = new Point();
             Point point2 = new Point();
             com.alibaba.wireless.security.aopsdk.replace.android.view.Display.getSize(defaultDisplay, point);

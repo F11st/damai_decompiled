@@ -44,7 +44,7 @@ public abstract class RegularImmutableTable<R, C, V> extends ImmutableTable<R, C
             return RegularImmutableTable.this.size();
         }
 
-        /* synthetic */ CellSet(RegularImmutableTable regularImmutableTable, C5097a c5097a) {
+        /* synthetic */ CellSet(RegularImmutableTable regularImmutableTable, a aVar) {
             this();
         }
 
@@ -78,20 +78,19 @@ public abstract class RegularImmutableTable<R, C, V> extends ImmutableTable<R, C
             return RegularImmutableTable.this.size();
         }
 
-        /* synthetic */ Values(RegularImmutableTable regularImmutableTable, C5097a c5097a) {
+        /* synthetic */ Values(RegularImmutableTable regularImmutableTable, a aVar) {
             this();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.RegularImmutableTable$a */
     /* loaded from: classes10.dex */
-    public static class C5097a implements Comparator<Table.Cell<R, C, V>> {
+    public static class a implements Comparator<Table.Cell<R, C, V>> {
         final /* synthetic */ Comparator a;
         final /* synthetic */ Comparator b;
 
-        C5097a(Comparator comparator, Comparator comparator2) {
+        a(Comparator comparator, Comparator comparator2) {
             this.a = comparator;
             this.b = comparator2;
         }
@@ -116,7 +115,7 @@ public abstract class RegularImmutableTable<R, C, V> extends ImmutableTable<R, C
     public static <R, C, V> RegularImmutableTable<R, C, V> forCells(List<Table.Cell<R, C, V>> list, @NullableDecl Comparator<? super R> comparator, @NullableDecl Comparator<? super C> comparator2) {
         du1.p(list);
         if (comparator != null || comparator2 != null) {
-            Collections.sort(list, new C5097a(comparator, comparator2));
+            Collections.sort(list, new a(comparator, comparator2));
         }
         return forCellsInternal(list, comparator, comparator2);
     }
@@ -159,13 +158,13 @@ public abstract class RegularImmutableTable<R, C, V> extends ImmutableTable<R, C
     abstract V getValue(int i);
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    @Override // com.google.common.collect.ImmutableTable, com.google.common.collect.AbstractC5180h
+    @Override // com.google.common.collect.ImmutableTable, com.google.common.collect.h
     public final ImmutableSet<Table.Cell<R, C, V>> createCellSet() {
         return isEmpty() ? ImmutableSet.of() : new CellSet(this, null);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    @Override // com.google.common.collect.ImmutableTable, com.google.common.collect.AbstractC5180h
+    @Override // com.google.common.collect.ImmutableTable, com.google.common.collect.h
     public final ImmutableCollection<V> createValues() {
         return isEmpty() ? ImmutableList.of() : new Values(this, null);
     }

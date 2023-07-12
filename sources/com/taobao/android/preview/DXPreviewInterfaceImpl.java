@@ -4,9 +4,8 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 import androidx.annotation.Keep;
-import com.taobao.android.dinamicx.AbstractC6362a;
-import com.taobao.android.dinamicx.C6387n;
 import com.taobao.android.dinamicx.DXRuntimeContext;
+import com.taobao.android.dinamicx.n;
 import com.taobao.android.preview.DXTemplatePreviewActivity;
 import tb.hy;
 import tb.iz;
@@ -18,13 +17,12 @@ import tb.rt;
 public class DXPreviewInterfaceImpl implements DXTemplatePreviewActivity.DXPreviewInterface {
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.preview.DXPreviewInterfaceImpl$a */
     /* loaded from: classes11.dex */
-    class C6554a extends AbstractC6362a {
-        final /* synthetic */ C6387n a;
+    class a extends com.taobao.android.dinamicx.a {
+        final /* synthetic */ n a;
 
-        C6554a(DXPreviewInterfaceImpl dXPreviewInterfaceImpl, C6387n c6387n) {
-            this.a = c6387n;
+        a(DXPreviewInterfaceImpl dXPreviewInterfaceImpl, n nVar) {
+            this.a = nVar;
         }
 
         @Override // com.taobao.android.dinamicx.IDXEventHandler
@@ -33,14 +31,14 @@ public class DXPreviewInterfaceImpl implements DXTemplatePreviewActivity.DXPrevi
                 Log.i("lx", "checked=" + ((rt) hyVar).f());
             }
             String obj = objArr != null ? objArr.toString() : null;
-            Context f = C6387n.f();
+            Context f = n.f();
             Toast.makeText(f, "收到点击 参数为: " + obj, 0).show();
         }
     }
 
     @Override // com.taobao.android.preview.DXTemplatePreviewActivity.DXPreviewInterface
-    public void previewEngineDidInitialized(C6387n c6387n) {
+    public void previewEngineDidInitialized(n nVar) {
         Log.e("shandian", "反射调用previewEngineDidInitialized");
-        c6387n.k(iz.a("test"), new C6554a(this, c6387n));
+        nVar.k(iz.a("test"), new a(this, nVar));
     }
 }

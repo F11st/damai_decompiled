@@ -27,12 +27,11 @@ public class SoPatchLogicImpl2 implements SoPatchLogic {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sopatch.core.SoPatchLogicImpl2$a */
     /* loaded from: classes11.dex */
-    public class C6633a implements FileDownloader.Callback {
+    public class a implements FileDownloader.Callback {
         final /* synthetic */ Runnable a;
 
-        C6633a(SoPatchLogicImpl2 soPatchLogicImpl2, Runnable runnable) {
+        a(SoPatchLogicImpl2 soPatchLogicImpl2, Runnable runnable) {
             this.a = runnable;
         }
 
@@ -64,7 +63,7 @@ public class SoPatchLogicImpl2 implements SoPatchLogic {
     }
 
     private void e(final ge2 ge2Var, final pe2 pe2Var, final long j) {
-        qe2.b(pe2Var, new C6633a(this, new Runnable() { // from class: com.taobao.android.sopatch.core.SoPatchLogicImpl2.1
+        qe2.b(pe2Var, new a(this, new Runnable() { // from class: com.taobao.android.sopatch.core.SoPatchLogicImpl2.1
             @Override // java.lang.Runnable
             public void run() {
                 File e = oi0.e(pe2Var);

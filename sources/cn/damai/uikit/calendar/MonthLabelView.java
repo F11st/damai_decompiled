@@ -39,7 +39,7 @@ public class MonthLabelView extends CalendarPagerView {
     }
 
     @Override // cn.damai.uikit.calendar.CalendarPagerView, android.view.ViewGroup
-    public /* bridge */ /* synthetic */ CalendarPagerView.C2481a generateLayoutParams(AttributeSet attributeSet) {
+    public /* bridge */ /* synthetic */ CalendarPagerView.a generateLayoutParams(AttributeSet attributeSet) {
         return super.generateLayoutParams(attributeSet);
     }
 
@@ -64,17 +64,17 @@ public class MonthLabelView extends CalendarPagerView {
             ipChange.ipc$dispatch("-1000004188", new Object[]{this});
             return;
         }
-        C2490a c2490a = new C2490a();
+        a aVar = new a();
         for (DayLabelView dayLabelView : this.dayLabelViews) {
-            c2490a.q();
-            Iterator<C2492b> it = this.decoratorResults.iterator();
+            aVar.q();
+            Iterator<b> it = this.decoratorResults.iterator();
             while (it.hasNext()) {
-                C2492b next = it.next();
+                b next = it.next();
                 if (next.a.shouldDecorate(dayLabelView.getDayView().getDate())) {
-                    next.b.a(c2490a);
+                    next.b.a(aVar);
                 }
             }
-            dayLabelView.applyFacade(c2490a);
+            dayLabelView.applyFacade(aVar);
         }
     }
 

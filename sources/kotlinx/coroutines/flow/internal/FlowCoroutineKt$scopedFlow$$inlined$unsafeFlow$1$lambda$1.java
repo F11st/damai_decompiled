@@ -2,7 +2,6 @@ package kotlinx.coroutines.flow.internal;
 
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function2;
 import kotlinx.coroutines.CoroutineScope;
@@ -45,7 +44,7 @@ final class FlowCoroutineKt$scopedFlow$$inlined$unsafeFlow$1$lambda$1 extends Su
     @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
     @Nullable
     public final Object invokeSuspend(@NotNull Object obj) {
-        C8234b.d();
+        kotlin.coroutines.intrinsics.b.d();
         int i = this.label;
         if (i == 0) {
             i32.b(obj);

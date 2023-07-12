@@ -26,11 +26,11 @@ import java.util.HashMap;
 import java.util.Map;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tb.C9548pb;
 import tb.b41;
 import tb.d23;
 import tb.ja;
 import tb.k50;
+import tb.pb;
 import tb.qd2;
 import tb.u12;
 import tb.z20;
@@ -40,19 +40,18 @@ import tb.z20;
 public final class RankProjectPresenter extends BasePresenter<RankProjectModel, RankProjectView, BaseSection> implements RankProjectContract.Presenter<RankProjectModel, RankProjectView, BaseSection> {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C1948a Companion = new C1948a(null);
+    public static final a Companion = new a(null);
     public static final int LOGIN_FOR_FAVORITE = 4097;
     @Nullable
     private TrackInfo mTrackInfo;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.rank.RankProjectPresenter$a */
     /* loaded from: classes16.dex */
-    public static final class C1948a {
-        private C1948a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C1948a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -97,7 +96,7 @@ public final class RankProjectPresenter extends BasePresenter<RankProjectModel, 
         HashMap<String, String> g = d23.g();
         d23.h(g, "city", getRankCity().cityName);
         b41.f(rankItemBean);
-        d23.h(g, C9548pb.CNT_CONTENT_ID, rankItemBean.rankId);
+        d23.h(g, pb.CNT_CONTENT_ID, rankItemBean.rankId);
         d23.h(g, "item_id", rankItemBean.id + "");
         d23.h(g, "titlelabel", getRankFilterValue().weiDuTabName);
         b41.h(g, "map");

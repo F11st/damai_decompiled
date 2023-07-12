@@ -1,7 +1,6 @@
 package tb;
 
 import java.util.List;
-import kotlin.collections.C8212k;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
@@ -21,9 +20,8 @@ public final class sq2 {
     private static final te0 b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.sq2$a */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C9698a {
+    public /* synthetic */ class a {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
         public static final /* synthetic */ int[] $EnumSwitchMapping$1;
 
@@ -57,7 +55,7 @@ public final class sq2 {
                 A0 = CollectionsKt___CollectionsKt.A0(list);
                 return new CompositeAnnotations(A0);
             }
-            return (Annotations) C8212k.q0(list);
+            return (Annotations) kotlin.collections.k.q0(list);
         }
         throw new IllegalStateException("At least one Annotations object expected".toString());
     }
@@ -67,7 +65,7 @@ public final class sq2 {
         if (nq2.a(typeComponentPosition) && (classifierDescriptor instanceof ClassDescriptor)) {
             p51 p51Var = p51.INSTANCE;
             MutabilityQualifier b2 = s51Var.b();
-            int i = b2 == null ? -1 : C9698a.$EnumSwitchMapping$0[b2.ordinal()];
+            int i = b2 == null ? -1 : a.$EnumSwitchMapping$0[b2.ordinal()];
             if (i != 1) {
                 if (i == 2 && typeComponentPosition == TypeComponentPosition.FLEXIBLE_UPPER) {
                     ClassDescriptor classDescriptor = (ClassDescriptor) classifierDescriptor;
@@ -98,7 +96,7 @@ public final class sq2 {
     public static final ue0<Boolean> h(z71 z71Var, s51 s51Var, TypeComponentPosition typeComponentPosition) {
         if (nq2.a(typeComponentPosition)) {
             NullabilityQualifier c = s51Var.c();
-            int i = c == null ? -1 : C9698a.$EnumSwitchMapping$1[c.ordinal()];
+            int i = c == null ? -1 : a.$EnumSwitchMapping$1[c.ordinal()];
             if (i != 1) {
                 if (i != 2) {
                     return j(Boolean.valueOf(z71Var.d()));

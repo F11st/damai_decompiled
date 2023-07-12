@@ -7,8 +7,6 @@ import java.lang.reflect.Type;
 import java.lang.reflect.TypeVariable;
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.collections.C8202e;
-import kotlin.collections.C8214m;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaConstructor;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaValueParameter;
 import org.jetbrains.annotations.NotNull;
@@ -50,18 +48,18 @@ public final class f02 extends k02 implements JavaConstructor {
         Type[] genericParameterTypes = d().getGenericParameterTypes();
         b41.h(genericParameterTypes, "types");
         if (genericParameterTypes.length == 0) {
-            g = C8214m.g();
+            g = kotlin.collections.m.g();
             return g;
         }
         Class<?> declaringClass = d().getDeclaringClass();
         if (declaringClass.getDeclaringClass() != null && !Modifier.isStatic(declaringClass.getModifiers())) {
-            genericParameterTypes = (Type[]) C8202e.h(genericParameterTypes, 1, genericParameterTypes.length);
+            genericParameterTypes = (Type[]) kotlin.collections.e.h(genericParameterTypes, 1, genericParameterTypes.length);
         }
         Annotation[][] parameterAnnotations = d().getParameterAnnotations();
         if (parameterAnnotations.length >= genericParameterTypes.length) {
             if (parameterAnnotations.length > genericParameterTypes.length) {
                 b41.h(parameterAnnotations, "annotations");
-                parameterAnnotations = (Annotation[][]) C8202e.h(parameterAnnotations, parameterAnnotations.length - genericParameterTypes.length, parameterAnnotations.length);
+                parameterAnnotations = (Annotation[][]) kotlin.collections.e.h(parameterAnnotations, parameterAnnotations.length - genericParameterTypes.length, parameterAnnotations.length);
             }
             b41.h(genericParameterTypes, "realTypes");
             b41.h(parameterAnnotations, "realAnnotations");

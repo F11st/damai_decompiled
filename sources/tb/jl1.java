@@ -5,7 +5,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import cn.damai.common.image.C0504a;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.musicfestival.adapter.OnMarkListener;
 import cn.damai.musicfestival.bean.CityFilterBean;
@@ -20,7 +19,7 @@ import tb.ai1;
 
 /* compiled from: Taobao */
 /* loaded from: classes6.dex */
-public class jl1 extends ai1.AbstractC8911a<CityMusicBean> implements View.OnClickListener {
+public class jl1 extends ai1.a<CityMusicBean> implements View.OnClickListener {
     private static transient /* synthetic */ IpChange $ipChange;
     private View d;
     private TextView e;
@@ -32,41 +31,39 @@ public class jl1 extends ai1.AbstractC8911a<CityMusicBean> implements View.OnCli
     private int k;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.jl1$a */
     /* loaded from: classes6.dex */
-    public class C9314a implements IImageLoader.IImageSuccListener {
+    public class a implements IImageLoader.IImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
-        C9314a(jl1 jl1Var, ImageView imageView) {
+        a(jl1 jl1Var, ImageView imageView) {
             this.a = imageView;
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageSuccListener
-        public void onSuccess(IImageLoader.C2496b c2496b) {
+        public void onSuccess(IImageLoader.b bVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1416839628")) {
-                ipChange.ipc$dispatch("-1416839628", new Object[]{this, c2496b});
+                ipChange.ipc$dispatch("-1416839628", new Object[]{this, bVar});
             } else {
-                this.a.setImageDrawable(c2496b.a);
+                this.a.setImageDrawable(bVar.a);
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.jl1$b */
     /* loaded from: classes6.dex */
-    public class C9315b implements IImageLoader.IImageFailListener {
+    public class b implements IImageLoader.IImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9315b(jl1 jl1Var) {
+        b(jl1 jl1Var) {
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageFailListener
-        public void onFail(IImageLoader.C2495a c2495a) {
+        public void onFail(IImageLoader.a aVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1545680285")) {
-                ipChange.ipc$dispatch("1545680285", new Object[]{this, c2495a});
+                ipChange.ipc$dispatch("1545680285", new Object[]{this, aVar});
             }
         }
     }
@@ -84,7 +81,7 @@ public class jl1 extends ai1.AbstractC8911a<CityMusicBean> implements View.OnCli
         this.i = onMarkListener;
     }
 
-    @Override // tb.ai1.AbstractC8911a
+    @Override // tb.ai1.a
     /* renamed from: b */
     public void a(CityMusicBean cityMusicBean, int i) {
         IpChange ipChange = $ipChange;
@@ -114,10 +111,10 @@ public class jl1 extends ai1.AbstractC8911a<CityMusicBean> implements View.OnCli
                 viewGroup.setVisibility(0);
                 View childAt = viewGroup.getChildAt(0);
                 if (childAt instanceof ImageView) {
-                    C0504a b = C0504a.b();
+                    cn.damai.common.image.a b2 = cn.damai.common.image.a.b();
                     String str = musicIpBean.musicIpIcon;
                     int i3 = this.h;
-                    b.load(str, i3, i3, new C9314a(this, (ImageView) childAt), new C9315b(this));
+                    b2.load(str, i3, i3, new a(this, (ImageView) childAt), new b(this));
                 }
             }
         }

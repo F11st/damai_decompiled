@@ -3,7 +3,6 @@ package tb;
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
-import com.taobao.android.dinamic.C6313b;
 import com.taobao.android.dinamic.log.DinamicLog;
 
 /* compiled from: Taobao */
@@ -25,8 +24,8 @@ public class p62 {
         }
         String lowerCase = String.valueOf(obj).toLowerCase();
         if (TextUtils.isEmpty(lowerCase)) {
-            if (C6313b.e()) {
-                DinamicLog.a(C6313b.TAG, "size属性为空字符串");
+            if (com.taobao.android.dinamic.b.e()) {
+                DinamicLog.a(com.taobao.android.dinamic.b.TAG, "size属性为空字符串");
             }
             return i;
         }
@@ -41,8 +40,8 @@ public class p62 {
             }
             return Math.round(c * (Float.parseFloat(lowerCase) / 375.0f));
         } catch (NumberFormatException unused) {
-            if (C6313b.e()) {
-                DinamicLog.j(C6313b.TAG, (String) obj, "写法错误，解析出错");
+            if (com.taobao.android.dinamic.b.e()) {
+                DinamicLog.j(com.taobao.android.dinamic.b.TAG, (String) obj, "写法错误，解析出错");
             }
             return i;
         }

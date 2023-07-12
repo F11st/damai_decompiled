@@ -34,12 +34,11 @@ public class SVGDisplayActivity extends BaseActivity {
     private List<String> mUnrecognizedCommandList;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.seat.ui.SVGDisplayActivity$a */
     /* loaded from: classes7.dex */
-    public class C1702a implements RequestListener<ImageData, l11> {
+    public class a implements RequestListener<ImageData, l11> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1702a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.seatbiz.seat.qilin.loader.listener.RequestListener
@@ -89,7 +88,7 @@ public class SVGDisplayActivity extends BaseActivity {
             startProgressDialog();
             SVGRequest sVGRequest = new SVGRequest(new r11(false, str, -1L, true, false, null));
             this.mRequest = sVGRequest;
-            sVGRequest.d(new C1702a());
+            sVGRequest.d(new a());
         }
     }
 

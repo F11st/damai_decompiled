@@ -80,7 +80,7 @@ public class GaiaXCustomDialogView extends Dialog {
         if (string2 == null || string == null) {
             return null;
         }
-        View inflate = LayoutInflater.from(getContext()).inflate(R.C7918layout.custom_dialog_layout, (ViewGroup) null, false);
+        View inflate = LayoutInflater.from(getContext()).inflate(R.layout.custom_dialog_layout, (ViewGroup) null, false);
         this.mContainer = inflate;
         setContentView(inflate);
         return getHeightBuilder(new GaiaX.Params.Builder().templateId(string).templateBiz(string2).container(this.mContainer).width(getWidth()).data(getTemplateData()).mode(LoadType.SYNC_NORMAL));

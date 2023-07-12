@@ -258,7 +258,7 @@ public final class GaiaXBuilder {
             java.lang.String r1 = "tpp"
             goto L46
         L51:
-            boolean r1 = kotlin.text.C8596g.s(r19)
+            boolean r1 = kotlin.text.g.s(r19)
             if (r1 != 0) goto L59
             r14 = r2
             goto L63
@@ -269,7 +269,7 @@ public final class GaiaXBuilder {
             java.lang.String r1 = ""
             goto L46
         L63:
-            boolean r1 = kotlin.text.C8596g.s(r14)
+            boolean r1 = kotlin.text.g.s(r14)
             if (r1 == 0) goto L6b
             r0 = 0
             return r0

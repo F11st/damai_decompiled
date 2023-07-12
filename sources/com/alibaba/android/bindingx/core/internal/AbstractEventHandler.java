@@ -31,7 +31,7 @@ import tb.xg0;
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
 public abstract class AbstractEventHandler implements IEventHandler {
-    protected volatile Map<String, List<C3220j>> a;
+    protected volatile Map<String, List<j>> a;
     protected volatile Map<String, xg0> b;
     protected BindingXCore.JavaScriptCallback c;
     protected String e;
@@ -43,7 +43,7 @@ public abstract class AbstractEventHandler implements IEventHandler {
     protected Object[] k;
     protected Map<String, Object> m;
     protected final Map<String, Object> d = new HashMap(64);
-    private Cache<String, C3219i> l = new Cache<>(16);
+    private Cache<String, i> l = new Cache<>(16);
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
@@ -81,28 +81,28 @@ public abstract class AbstractEventHandler implements IEventHandler {
             this.a = new HashMap();
         }
         for (Map<String, Object> map2 : list) {
-            String h = C3227o.h(map2, "element");
-            String h2 = C3227o.h(map2, "instanceId");
-            String h3 = C3227o.h(map2, "property");
-            xg0 e = C3227o.e(map2, DXTraceUtil.TYPE_EXPRESSION_STRING);
+            String h = o.h(map2, "element");
+            String h2 = o.h(map2, "instanceId");
+            String h3 = o.h(map2, "property");
+            xg0 e = o.e(map2, DXTraceUtil.TYPE_EXPRESSION_STRING);
             Object obj = map2.get(Constants.CONFIG);
             if (obj != null && (obj instanceof Map)) {
                 try {
-                    map = C3227o.n(new JSONObject((Map) obj));
+                    map = o.n(new JSONObject((Map) obj));
                 } catch (Exception e2) {
                     bb1.c("parse config failed", e2);
                 }
                 if (!TextUtils.isEmpty(h) || TextUtils.isEmpty(h3) || e == null) {
                     bb1.b("skip illegal binding args[" + h + "," + h3 + "," + e + jn1.ARRAY_END_STR);
                 } else {
-                    C3220j c3220j = new C3220j(h, h2, e, h3, str, map);
-                    List<C3220j> list2 = this.a.get(h);
+                    j jVar = new j(h, h2, e, h3, str, map);
+                    List<j> list2 = this.a.get(h);
                     if (list2 == null) {
                         ArrayList arrayList = new ArrayList(4);
                         this.a.put(h, arrayList);
-                        arrayList.add(c3220j);
-                    } else if (!list2.contains(c3220j)) {
-                        list2.add(c3220j);
+                        arrayList.add(jVar);
+                    } else if (!list2.contains(jVar)) {
+                        list2.add(jVar);
                     }
                 }
             }
@@ -137,7 +137,7 @@ public abstract class AbstractEventHandler implements IEventHandler {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public void c(@Nullable Map<String, List<C3220j>> map, @NonNull Map<String, Object> map2, @NonNull String str) throws IllegalArgumentException, JSONException {
+    public void c(@Nullable Map<String, List<j>> map, @NonNull Map<String, Object> map2, @NonNull String str) throws IllegalArgumentException, JSONException {
         Map<String, Object> map3 = map2;
         h(map3);
         if (map == null) {
@@ -150,57 +150,57 @@ public abstract class AbstractEventHandler implements IEventHandler {
                 bb1.a(String.format(Locale.getDefault(), "consume expression with %d tasks. event type is %s", Integer.valueOf(map.size()), str));
             }
             LinkedList linkedList = new LinkedList();
-            for (List<C3220j> list : map.values()) {
-                for (C3220j c3220j : list) {
-                    if (str.equals(c3220j.e)) {
+            for (List<j> list : map.values()) {
+                for (j jVar : list) {
+                    if (str.equals(jVar.e)) {
                         linkedList.clear();
                         Object[] objArr = this.k;
                         if (objArr != null && objArr.length > 0) {
                             Collections.addAll(linkedList, objArr);
                         }
-                        String str2 = TextUtils.isEmpty(c3220j.b) ? this.e : c3220j.b;
+                        String str2 = TextUtils.isEmpty(jVar.b) ? this.e : jVar.b;
                         if (!TextUtils.isEmpty(str2)) {
                             linkedList.add(str2);
                         }
-                        xg0 xg0Var = c3220j.c;
+                        xg0 xg0Var = jVar.c;
                         if (xg0.c(xg0Var)) {
-                            C3219i c3219i = this.l.get(xg0Var.b);
-                            if (c3219i == null) {
-                                c3219i = C3219i.a(xg0Var);
-                                if (c3219i != null) {
+                            i iVar = this.l.get(xg0Var.b);
+                            if (iVar == null) {
+                                iVar = i.a(xg0Var);
+                                if (iVar != null) {
                                     if (!TextUtils.isEmpty(xg0Var.b)) {
-                                        this.l.put(xg0Var.b, c3219i);
+                                        this.l.put(xg0Var.b, iVar);
                                     }
                                 }
                             }
-                            Object c = c3219i.c(map3);
+                            Object c = iVar.c(map3);
                             if (c == null) {
                                 bb1.b("failed to execute expression,expression result is null");
                             } else if (((c instanceof Double) && Double.isNaN(((Double) c).doubleValue())) || ((c instanceof Float) && Float.isNaN(((Float) c).floatValue()))) {
                                 bb1.b("failed to execute expression,expression result is NaN");
                             } else {
-                                View findViewBy = this.h.g().findViewBy(c3220j.a, linkedList.toArray());
+                                View findViewBy = this.h.g().findViewBy(jVar.a, linkedList.toArray());
                                 BindingXPropertyInterceptor c2 = BindingXPropertyInterceptor.c();
-                                String str3 = c3220j.d;
+                                String str3 = jVar.d;
                                 PlatformManager.IDeviceResolutionTranslator e = this.h.e();
-                                Map<String, Object> map4 = c3220j.f;
+                                Map<String, Object> map4 = jVar.f;
                                 Object[] objArr2 = new Object[i];
-                                objArr2[0] = c3220j.a;
+                                objArr2[0] = jVar.a;
                                 objArr2[1] = str2;
                                 c2.d(findViewBy, str3, c, e, map4, objArr2);
                                 if (findViewBy == null) {
-                                    bb1.b("failed to execute expression,target view not found.[ref:" + c3220j.a + jn1.ARRAY_END_STR);
+                                    bb1.b("failed to execute expression,target view not found.[ref:" + jVar.a + jn1.ARRAY_END_STR);
                                     map3 = map2;
                                     i = 2;
                                 } else {
                                     i = 2;
-                                    this.h.h().synchronouslyUpdateViewOnUIThread(findViewBy, c3220j.d, c, this.h.e(), c3220j.f, c3220j.a, str2);
+                                    this.h.h().synchronouslyUpdateViewOnUIThread(findViewBy, jVar.d, c, this.h.e(), jVar.f, jVar.a, str2);
                                     map3 = map2;
                                 }
                             }
                         }
                     } else {
-                        bb1.a("skip expression with wrong event type.[expected:" + str + ",found:" + c3220j.e + jn1.ARRAY_END_STR);
+                        bb1.a("skip expression with wrong event type.[expected:" + str + ",found:" + jVar.e + jn1.ARRAY_END_STR);
                     }
                 }
                 map3 = map2;
@@ -212,7 +212,7 @@ public abstract class AbstractEventHandler implements IEventHandler {
     public boolean d(xg0 xg0Var, @NonNull Map<String, Object> map) {
         boolean z = false;
         if (xg0.c(xg0Var)) {
-            C3219i a = C3219i.a(xg0Var);
+            i a = i.a(xg0Var);
             if (a == null) {
                 return false;
             }
@@ -259,8 +259,8 @@ public abstract class AbstractEventHandler implements IEventHandler {
 
     @Override // com.alibaba.android.bindingx.core.IEventInterceptor
     public void performInterceptIfNeeded(@NonNull String str, @NonNull xg0 xg0Var, @NonNull Map<String, Object> map) {
-        C3219i a;
-        if (xg0.c(xg0Var) && (a = C3219i.a(xg0Var)) != null) {
+        i a;
+        if (xg0.c(xg0Var) && (a = i.a(xg0Var)) != null) {
             boolean z = false;
             try {
                 z = ((Boolean) a.c(map)).booleanValue();

@@ -6,10 +6,10 @@ import com.vivo.push.PushClientConstants;
 import com.youku.arch.v3.core.IContext;
 import io.flutter.wpkbridge.WPKFactory;
 import java.util.HashMap;
-import kotlin.C8177b;
 import kotlin.Lazy;
 import kotlin.LazyThreadSafetyMode;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -49,7 +49,7 @@ public final class RenderPluginConfigCenter {
 
     static {
         Lazy<RenderPluginConfigCenter> a;
-        a = C8177b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<RenderPluginConfigCenter>() { // from class: com.youku.arch.v3.view.render.RenderPluginConfigCenter$Companion$instance$2
+        a = b.a(LazyThreadSafetyMode.SYNCHRONIZED, new Function0<RenderPluginConfigCenter>() { // from class: com.youku.arch.v3.view.render.RenderPluginConfigCenter$Companion$instance$2
             private static transient /* synthetic */ IpChange $ipChange;
 
             /* JADX WARN: Can't rename method to resolve collision */

@@ -1,7 +1,6 @@
 package tb;
 
 import android.text.TextUtils;
-import com.taobao.pexode.mimetype.C6838a;
 import com.taobao.pexode.mimetype.MimeType;
 
 /* compiled from: Taobao */
@@ -33,7 +32,7 @@ public class oe0 extends ne0 {
             str = str.substring(1);
         }
         try {
-            for (MimeType mimeType : C6838a.ALL_EXTENSION_TYPES) {
+            for (MimeType mimeType : com.taobao.pexode.mimetype.a.ALL_EXTENSION_TYPES) {
                 if (mimeType != null && mimeType.e(str)) {
                     return mimeType;
                 }

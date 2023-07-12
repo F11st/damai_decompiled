@@ -17,12 +17,11 @@ public class t50 implements IFullTraceAnalysisV3 {
     private FalcoTracer b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.t50$a */
     /* loaded from: classes.dex */
-    public class C9707a implements IFullTraceAnalysisV3.ISpan<FalcoNetworkAbilitySpan> {
+    public class a implements IFullTraceAnalysisV3.ISpan<FalcoNetworkAbilitySpan> {
         private final FalcoNetworkAbilitySpan a;
 
-        C9707a(t50 t50Var, FalcoNetworkAbilitySpan falcoNetworkAbilitySpan) {
+        a(t50 t50Var, FalcoNetworkAbilitySpan falcoNetworkAbilitySpan) {
             this.a = falcoNetworkAbilitySpan;
         }
 
@@ -54,7 +53,7 @@ public class t50 implements IFullTraceAnalysisV3 {
             if (map != null && !map.isEmpty() && (extractMapToContext = this.b.extractMapToContext(map)) != null) {
                 buildSpan.asChildOf(extractMapToContext);
             }
-            return new C9707a(this, buildSpan.startNetworkAbilitySpan());
+            return new a(this, buildSpan.startNetworkAbilitySpan());
         }
         return null;
     }

@@ -37,7 +37,7 @@ public class MaterialAlertDialogBuilder extends AlertDialog.Builder {
     @AttrRes
     private static final int DEF_STYLE_ATTR = R.attr.alertDialogStyle;
     @StyleRes
-    private static final int DEF_STYLE_RES = R.C4819style.MaterialAlertDialog_MaterialComponents;
+    private static final int DEF_STYLE_RES = R.style.MaterialAlertDialog_MaterialComponents;
     @AttrRes
     private static final int MATERIAL_ALERT_DIALOG_THEME_OVERLAY = R.attr.materialAlertDialogTheme;
     @Nullable

@@ -1,6 +1,5 @@
 package tb;
 
-import com.alibaba.appmonitor.pool.C3316a;
 import com.alibaba.appmonitor.pool.ReuseJSONArray;
 import com.alibaba.appmonitor.pool.ReuseJSONObject;
 import com.alibaba.fastjson.JSONArray;
@@ -23,9 +22,9 @@ public class f4 extends qf0 {
         b.put(h23.POINT_SUCCESS_COUNT_MEASURE, (Object) Integer.valueOf(this.g));
         b.put(h23.POINT_FAIL_COUNT_MEASURE, (Object) Integer.valueOf(this.h));
         if (this.j != null) {
-            JSONArray jSONArray = (JSONArray) C3316a.a().poll(ReuseJSONArray.class, new Object[0]);
+            JSONArray jSONArray = (JSONArray) com.alibaba.appmonitor.pool.a.a().poll(ReuseJSONArray.class, new Object[0]);
             for (Map.Entry<String, Integer> entry : this.j.entrySet()) {
-                JSONObject jSONObject = (JSONObject) C3316a.a().poll(ReuseJSONObject.class, new Object[0]);
+                JSONObject jSONObject = (JSONObject) com.alibaba.appmonitor.pool.a.a().poll(ReuseJSONObject.class, new Object[0]);
                 String key = entry.getKey();
                 jSONObject.put("errorCode", (Object) key);
                 jSONObject.put("errorCount", (Object) entry.getValue());

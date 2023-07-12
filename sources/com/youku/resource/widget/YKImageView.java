@@ -219,7 +219,7 @@ public class YKImageView extends YKRatioImageView implements ICssSetter2 {
 
     private void drawBottomBg(Canvas canvas) {
         if (this.bottomBg == null) {
-            this.bottomBg = getResources().getDrawable(R.C8072drawable.item_bottom_bg);
+            this.bottomBg = getResources().getDrawable(R.drawable.item_bottom_bg);
         }
         Drawable drawable = this.bottomBg;
         if (drawable != null) {
@@ -325,13 +325,13 @@ public class YKImageView extends YKRatioImageView implements ICssSetter2 {
                     break;
             }
             if (c == 0) {
-                canvas.drawBitmap(((BitmapDrawable) getResources().getDrawable(R.C8072drawable.yk_item_label_no1)).getBitmap(), 0.0f, 0.0f, lTPaint);
+                canvas.drawBitmap(((BitmapDrawable) getResources().getDrawable(R.drawable.yk_item_label_no1)).getBitmap(), 0.0f, 0.0f, lTPaint);
             } else if (c == 1) {
-                canvas.drawBitmap(((BitmapDrawable) getResources().getDrawable(R.C8072drawable.yk_item_label_no2)).getBitmap(), 0.0f, 0.0f, lTPaint);
+                canvas.drawBitmap(((BitmapDrawable) getResources().getDrawable(R.drawable.yk_item_label_no2)).getBitmap(), 0.0f, 0.0f, lTPaint);
             } else if (c != 2) {
-                canvas.drawBitmap(((BitmapDrawable) getResources().getDrawable(R.C8072drawable.yk_item_label_no4)).getBitmap(), 0.0f, 0.0f, lTPaint);
+                canvas.drawBitmap(((BitmapDrawable) getResources().getDrawable(R.drawable.yk_item_label_no4)).getBitmap(), 0.0f, 0.0f, lTPaint);
             } else {
-                canvas.drawBitmap(((BitmapDrawable) getResources().getDrawable(R.C8072drawable.yk_item_label_no3)).getBitmap(), 0.0f, 0.0f, lTPaint);
+                canvas.drawBitmap(((BitmapDrawable) getResources().getDrawable(R.drawable.yk_item_label_no3)).getBitmap(), 0.0f, 0.0f, lTPaint);
             }
             String str2 = this.top_left_text;
             canvas.drawText(str2, str2.length() == 1 ? dp6 : dp1, this.top_left_y, lTPaint);
@@ -679,7 +679,7 @@ public class YKImageView extends YKRatioImageView implements ICssSetter2 {
         this.mBgColor = ColorConfigureManager.getInstance().getColorMap().get(DynamicColorDefine.YKN_PRIMARY_FILL_COLOR) != null ? ColorConfigureManager.getInstance().getColorMap().get(DynamicColorDefine.YKN_PRIMARY_FILL_COLOR).intValue() : Color.parseColor("#E4E4E4");
         this.mAdFillColor = ColorConfigureManager.getInstance().getColorMap().get(DynamicColorDefine.YKN_PRIMARY_FILL_COLOR) != null ? ColorConfigureManager.getInstance().getColorMap().get(DynamicColorDefine.YKN_PRIMARY_FILL_COLOR).intValue() : Color.parseColor("#E4E4E4");
         this.mDefaultBgColor = this.mBgColor;
-        this.sScoreColor = getResources().getColor(R.C8071color.cy_3);
+        this.sScoreColor = getResources().getColor(R.color.cy_3);
         this.mArithmeticSize = getResources().getDimensionPixelSize(R.dimen.resource_size_30);
         if (!AppPerfABUtils.isOpenPerf() || dp1 == 0) {
             dp1 = DimenUtils.getDimensionPixelSize(context, R.dimen.resource_size_1);

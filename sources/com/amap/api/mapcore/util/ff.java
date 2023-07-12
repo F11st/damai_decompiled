@@ -12,7 +12,6 @@ import com.autonavi.amap.mapcore.IPoint;
 import com.autonavi.amap.mapcore.VirtualEarthProjection;
 import com.autonavi.base.amap.api.mapcore.IAMapDelegate;
 import com.huawei.hms.framework.common.ExceptionCode;
-import com.taobao.android.dinamicx.C6368e;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -32,19 +31,19 @@ public class ff extends View {
         this.a = "";
         this.b = 0;
         this.h = 0.0f;
-        this.i = new int[]{ExceptionCode.CRASH_EXCEPTION, 5000000, 2000000, 1000000, 500000, C6368e.DX_ERROR_CODE_SLIDER_LAYOUT_ITEM_COUNT_0, 100000, VerifyActivity.ALIAUTH_CLIENT_ERROR_GENERIC, 30000, 20000, 10000, 5000, 2000, 1000, 500, 200, 100, 50, 25, 10, 5};
+        this.i = new int[]{ExceptionCode.CRASH_EXCEPTION, 5000000, 2000000, 1000000, 500000, com.taobao.android.dinamicx.e.DX_ERROR_CODE_SLIDER_LAYOUT_ITEM_COUNT_0, 100000, VerifyActivity.ALIAUTH_CLIENT_ERROR_GENERIC, 30000, 20000, 10000, 5000, 2000, 1000, 500, 200, 100, 50, 25, 10, 5};
         this.c = iAMapDelegate;
         this.d = new Paint();
         this.f = new Rect();
         this.d.setAntiAlias(true);
         this.d.setColor(-16777216);
-        this.d.setStrokeWidth(C4614m.a * 2.0f);
+        this.d.setStrokeWidth(m.a * 2.0f);
         this.d.setStyle(Paint.Style.STROKE);
         Paint paint = new Paint();
         this.e = paint;
         paint.setAntiAlias(true);
         this.e.setColor(-16777216);
-        this.e.setTextSize(C4614m.a * 20.0f);
+        this.e.setTextSize(m.a * 20.0f);
         this.h = ek.a(context, 1.0f);
         this.g = new IPoint();
     }
@@ -99,10 +98,10 @@ public class ff extends View {
         canvas.drawText(this.a, ((this.b - com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.width(this.f)) / 2) + xVar, yVar, this.e);
         float f = xVar;
         float height = yVar + (com.alibaba.wireless.security.aopsdk.replace.android.graphics.Rect.height(this.f) - 5);
-        canvas.drawLine(f, height - (this.h * 2.0f), f, height + C4614m.a, this.d);
+        canvas.drawLine(f, height - (this.h * 2.0f), f, height + m.a, this.d);
         canvas.drawLine(f, height, this.b + xVar, height, this.d);
         int i = this.b;
-        canvas.drawLine(xVar + i, height - (this.h * 2.0f), xVar + i, height + C4614m.a, this.d);
+        canvas.drawLine(xVar + i, height - (this.h * 2.0f), xVar + i, height + m.a, this.d);
     }
 
     public void a(String str) {

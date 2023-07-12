@@ -3,8 +3,8 @@ package cn.damai.user.userhome.activity;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.homepage.R$id;
 import cn.damai.homepage.R$layout;
@@ -55,8 +55,8 @@ public class UserHomeActivity extends SimpleBaseActivity {
             return;
         }
         super.onCreate(bundle);
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i(iv2.USER_HOME_PAGE));
-        C0529c.e().K(this);
+        setDamaiUTKeyBuilder(new a.b().i(iv2.USER_HOME_PAGE));
+        c.e().K(this);
     }
 
     @Override // cn.damai.common.app.base.BaseActivity

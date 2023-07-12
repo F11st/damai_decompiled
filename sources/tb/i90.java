@@ -4,8 +4,6 @@ import androidx.annotation.NonNull;
 import com.alibaba.android.ultron.vfw.event.ViewRenderErrorListener;
 import com.alibaba.android.umbrella.trace.UmbrellaTracker;
 import com.taobao.android.dinamic.exception.DinamicException;
-import com.taobao.android.dinamicx.AbstractC6362a;
-import com.taobao.android.dinamicx.C6387n;
 import com.taobao.android.dinamicx.DXEngineConfig;
 import com.taobao.android.dinamicx.notification.IDXNotificationListener;
 import com.taobao.android.dinamicx.template.download.DXTemplateItem;
@@ -16,14 +14,13 @@ import java.util.List;
 /* loaded from: classes6.dex */
 public class i90 {
     private ay2 a;
-    private C6387n b = null;
+    private com.taobao.android.dinamicx.n b = null;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.i90$a */
     /* loaded from: classes6.dex */
-    public class C9256a implements IDXNotificationListener {
-        C9256a() {
+    public class a implements IDXNotificationListener {
+        a() {
         }
 
         @Override // com.taobao.android.dinamicx.notification.IDXNotificationListener
@@ -69,19 +66,19 @@ public class i90 {
 
     private void e() {
         if (this.b == null) {
-            C6387n c6387n = new C6387n(new DXEngineConfig.C6355b(this.a.p()).x(false).u(1).t());
-            this.b = c6387n;
-            c6387n.l(new C9256a());
+            com.taobao.android.dinamicx.n nVar = new com.taobao.android.dinamicx.n(new DXEngineConfig.b(this.a.p()).x(false).u(1).t());
+            this.b = nVar;
+            nVar.l(new a());
         }
     }
 
     @NonNull
-    public C6387n d() {
+    public com.taobao.android.dinamicx.n d() {
         return this.b;
     }
 
-    public void f(long j, AbstractC6362a abstractC6362a) {
-        this.b.k(j, abstractC6362a);
+    public void f(long j, com.taobao.android.dinamicx.a aVar) {
+        this.b.k(j, aVar);
     }
 
     public void g(String str, w0 w0Var) throws DinamicException {

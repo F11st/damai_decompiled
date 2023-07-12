@@ -1,6 +1,6 @@
 package com.uc.webview.export.internal.setup;
 
-import com.uc.webview.export.internal.setup.C7257ae;
+import com.uc.webview.export.internal.setup.ae;
 import com.uc.webview.export.internal.setup.bh;
 import java.util.concurrent.Callable;
 
@@ -8,18 +8,18 @@ import java.util.concurrent.Callable;
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public final class bp implements Callable<Object> {
-    final /* synthetic */ bh.C7270a a;
+    final /* synthetic */ bh.a a;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public bp(bh.C7270a c7270a) {
-        this.a = c7270a;
+    public bp(bh.a aVar) {
+        this.a = aVar;
     }
 
     @Override // java.util.concurrent.Callable
     public final Object call() throws Exception {
-        bh.C7270a c7270a = this.a;
-        bt btVar = c7270a.e;
-        C7276g.b(btVar, af.a, btVar.mSdkShellClassLoader, c7270a.a);
-        return Integer.valueOf(C7257ae.C7262e.c);
+        bh.a aVar = this.a;
+        bt btVar = aVar.e;
+        g.b(btVar, af.a, btVar.mSdkShellClassLoader, aVar.a);
+        return Integer.valueOf(ae.e.c);
     }
 }

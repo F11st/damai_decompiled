@@ -3,7 +3,7 @@ package io.reactivex.internal.operators.parallel;
 import io.reactivex.functions.Predicate;
 import io.reactivex.internal.fuseable.ConditionalSubscriber;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
-import io.reactivex.parallel.AbstractC8161a;
+import io.reactivex.parallel.a;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 import tb.dg0;
@@ -11,9 +11,9 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ParallelFilter<T> extends AbstractC8161a<T> {
+public final class ParallelFilter<T> extends a<T> {
     final Predicate<? super T> predicate;
-    final AbstractC8161a<T> source;
+    final a<T> source;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
@@ -155,17 +155,17 @@ public final class ParallelFilter<T> extends AbstractC8161a<T> {
         }
     }
 
-    public ParallelFilter(AbstractC8161a<T> abstractC8161a, Predicate<? super T> predicate) {
-        this.source = abstractC8161a;
+    public ParallelFilter(a<T> aVar, Predicate<? super T> predicate) {
+        this.source = aVar;
         this.predicate = predicate;
     }
 
-    @Override // io.reactivex.parallel.AbstractC8161a
+    @Override // io.reactivex.parallel.a
     public int parallelism() {
         return this.source.parallelism();
     }
 
-    @Override // io.reactivex.parallel.AbstractC8161a
+    @Override // io.reactivex.parallel.a
     public void subscribe(Subscriber<? super T>[] subscriberArr) {
         if (validate(subscriberArr)) {
             int length = subscriberArr.length;

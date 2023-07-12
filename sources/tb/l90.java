@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.alibaba.android.ultron.vfw.template.ITemplateProvider;
 import com.alibaba.android.ultron.vfw.template.TemplateDownloadListener;
-import com.taobao.android.dinamicx.C6387n;
 import com.taobao.android.dinamicx.template.download.DXTemplateItem;
 import com.taobao.android.ultron.common.model.IDMComponent;
 import java.util.ArrayList;
@@ -16,7 +15,7 @@ import java.util.Map;
 /* loaded from: classes6.dex */
 public class l90 implements ITemplateProvider {
     private Map<String, DXTemplateItem> a = new HashMap();
-    private C6387n b;
+    private com.taobao.android.dinamicx.n b;
 
     public l90(ay2 ay2Var) {
         this.b = ay2Var.n().d();

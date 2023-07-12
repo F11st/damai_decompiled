@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.exceptions.CompositeException;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
@@ -18,7 +18,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class FlowableUsing<T, D> extends AbstractC8147b<T> {
+public final class FlowableUsing<T, D> extends b<T> {
     final Consumer<? super D> disposer;
     final boolean eager;
     final Callable<? extends D> resourceSupplier;
@@ -131,7 +131,7 @@ public final class FlowableUsing<T, D> extends AbstractC8147b<T> {
         this.eager = z;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super T> subscriber) {
         try {
             D call = this.resourceSupplier.call();

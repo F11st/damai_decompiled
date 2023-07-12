@@ -18,12 +18,11 @@ import tb.pq0;
 public interface GXIImageView extends GXIRoundCorner, GXIViewBindData {
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.render.view.basic.GXIImageView$a */
     /* loaded from: classes6.dex */
-    public static final class C3362a {
+    public static final class a {
         public static void a(@NotNull GXIImageView gXIImageView) {
             b41.i(gXIImageView, "this");
-            GXIViewBindData.C3361a.a(gXIImageView);
+            GXIViewBindData.a.a(gXIImageView);
         }
     }
 

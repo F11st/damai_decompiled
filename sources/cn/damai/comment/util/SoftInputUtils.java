@@ -24,15 +24,14 @@ public class SoftInputUtils {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.comment.util.SoftInputUtils$a */
     /* loaded from: classes13.dex */
-    public class ViewTreeObserver$OnGlobalLayoutListenerC0454a implements ViewTreeObserver.OnGlobalLayoutListener {
+    public class a implements ViewTreeObserver.OnGlobalLayoutListener {
         private static transient /* synthetic */ IpChange $ipChange;
         int a = -1;
         final /* synthetic */ View b;
         final /* synthetic */ OnSoftKeyboardChangeListener c;
 
-        ViewTreeObserver$OnGlobalLayoutListenerC0454a(View view, OnSoftKeyboardChangeListener onSoftKeyboardChangeListener) {
+        a(View view, OnSoftKeyboardChangeListener onSoftKeyboardChangeListener) {
             this.b = view;
             this.c = onSoftKeyboardChangeListener;
         }
@@ -95,7 +94,7 @@ public class SoftInputUtils {
             return;
         }
         View decorView = activity.getWindow().getDecorView();
-        decorView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver$OnGlobalLayoutListenerC0454a(decorView, onSoftKeyboardChangeListener));
+        decorView.getViewTreeObserver().addOnGlobalLayoutListener(new a(decorView, onSoftKeyboardChangeListener));
     }
 
     public static void d(Activity activity) {

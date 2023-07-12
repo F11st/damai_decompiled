@@ -38,7 +38,7 @@ public class InterceptDialog extends Dialog implements View.OnClickListener {
     }
 
     public InterceptDialog(@NonNull Context context) {
-        super(context, R.C7961style.lfcontainer_DialogStyleCommon);
+        super(context, R.style.lfcontainer_DialogStyleCommon);
         initView();
     }
 
@@ -48,7 +48,7 @@ public class InterceptDialog extends Dialog implements View.OnClickListener {
             ipChange.ipc$dispatch("390951291", new Object[]{this});
             return;
         }
-        View inflate = LayoutInflater.from(getContext()).inflate(R.C7960layout.dago_dialog_intercept, (ViewGroup) null);
+        View inflate = LayoutInflater.from(getContext()).inflate(R.layout.dago_dialog_intercept, (ViewGroup) null);
         this.dialogView = inflate;
         this.bgImgView = (ImageView) inflate.findViewById(R.id.dago_dialog_intercept_bg);
         this.leftBtnImgView = (ImageView) this.dialogView.findViewById(R.id.dago_dialog_intercept_left_btn);

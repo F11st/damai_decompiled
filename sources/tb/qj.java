@@ -4,7 +4,6 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
-import kotlin.collections.C8214m;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor;
@@ -27,7 +26,7 @@ public final class qj extends q72 {
     }
 
     private static final void b(ClassDescriptor classDescriptor, LinkedHashSet<ClassDescriptor> linkedHashSet, MemberScope memberScope, boolean z) {
-        for (DeclarationDescriptor declarationDescriptor : ResolutionScope.C8500a.a(memberScope, z60.CLASSIFIERS, null, 2, null)) {
+        for (DeclarationDescriptor declarationDescriptor : ResolutionScope.a.a(memberScope, z60.CLASSIFIERS, null, 2, null)) {
             if (declarationDescriptor instanceof ClassDescriptor) {
                 ClassDescriptor classDescriptor2 = (ClassDescriptor) declarationDescriptor;
                 if (classDescriptor2.isExpect()) {
@@ -61,7 +60,7 @@ public final class qj extends q72 {
         List g;
         b41.i(classDescriptor, "sealedClass");
         if (classDescriptor.getModality() != Modality.SEALED) {
-            g = C8214m.g();
+            g = kotlin.collections.m.g();
             return g;
         }
         LinkedHashSet linkedHashSet = new LinkedHashSet();

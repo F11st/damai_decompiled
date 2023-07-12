@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
-import com.alipay.sdk.m.c.C4151a;
+import com.alipay.sdk.m.c.a;
 import com.amap.api.mapcore.util.ep;
 import com.amap.api.mapcore.util.eq;
 import com.amap.api.mapcore.util.hd;
@@ -309,7 +309,7 @@ public class GLMapEngine implements IGLMapEngine, IAMapEngineCallback, NetworkSt
     private static String getEMUI() {
         try {
             Class<?> cls = Class.forName("android.os.SystemProperties");
-            return (String) cls.getDeclaredMethod(gn1.TYPE_OPEN_URL_METHOD_GET, String.class).invoke(cls, C4151a.a);
+            return (String) cls.getDeclaredMethod(gn1.TYPE_OPEN_URL_METHOD_GET, String.class).invoke(cls, a.a);
         } catch (Exception e) {
             e.printStackTrace();
             return null;

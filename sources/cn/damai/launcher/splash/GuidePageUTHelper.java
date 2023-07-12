@@ -1,8 +1,8 @@
 package cn.damai.launcher.splash;
 
 import android.view.View;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
@@ -10,7 +10,7 @@ import tb.z20;
 
 /* compiled from: Taobao */
 /* loaded from: classes5.dex */
-public class GuidePageUTHelper extends C0528b {
+public class GuidePageUTHelper extends b {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final String GUIDE_PAGE = "guide";
     private static GuidePageUTHelper b;
@@ -37,7 +37,7 @@ public class GuidePageUTHelper extends C0528b {
         }
         HashMap hashMap2 = hashMap;
         hashMap2.put("city", z20.c());
-        C0529c.e().x(e(GUIDE_PAGE, str, str2, hashMap2, Boolean.FALSE));
+        c.e().x(e(GUIDE_PAGE, str, str2, hashMap2, Boolean.FALSE));
     }
 
     public void g(View view, String str, String str2, HashMap hashMap) {
@@ -51,6 +51,6 @@ public class GuidePageUTHelper extends C0528b {
         }
         HashMap hashMap2 = hashMap;
         hashMap2.put("city", z20.c());
-        C0529c.e().G(view, str2, str, GUIDE_PAGE, hashMap2);
+        c.e().G(view, str2, str, GUIDE_PAGE, hashMap2);
     }
 }

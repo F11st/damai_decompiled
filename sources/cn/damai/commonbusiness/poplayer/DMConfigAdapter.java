@@ -19,13 +19,12 @@ public class DMConfigAdapter implements IConfigAdapter {
     private final Handler c = new Handler(Looper.getMainLooper());
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.poplayer.DMConfigAdapter$a */
     /* loaded from: classes4.dex */
-    public class C0772a implements OrangeConfigListener {
+    public class a implements OrangeConfigListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ PopLayer a;
 
-        C0772a(PopLayer popLayer) {
+        a(PopLayer popLayer) {
             this.a = popLayer;
         }
 
@@ -51,7 +50,7 @@ public class DMConfigAdapter implements IConfigAdapter {
         if (AndroidInstantRuntime.support(ipChange, "1446984553")) {
             ipChange.ipc$dispatch("1446984553", new Object[]{this, context, popLayer});
         } else {
-            OrangeConfig.getInstance().registerListener(new String[]{this.a}, new C0772a(popLayer));
+            OrangeConfig.getInstance().registerListener(new String[]{this.a}, new a(popLayer));
         }
     }
 

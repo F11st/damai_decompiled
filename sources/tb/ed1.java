@@ -26,9 +26,8 @@ public class ed1 {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ed1$a */
     /* loaded from: classes7.dex */
-    public class C9099a implements TickletAnimWindow.ICustomDialogEventListener {
+    public class a implements TickletAnimWindow.ICustomDialogEventListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Context a;
         final /* synthetic */ String b;
@@ -36,7 +35,7 @@ public class ed1 {
         final /* synthetic */ String d;
         final /* synthetic */ TickletAnimWindow e;
 
-        C9099a(Context context, String str, String str2, String str3, TickletAnimWindow tickletAnimWindow) {
+        a(Context context, String str, String str2, String str3, TickletAnimWindow tickletAnimWindow) {
             this.a = context;
             this.b = str;
             this.c = str2;
@@ -150,7 +149,7 @@ public class ed1 {
         } else {
             TickletVenueMapChooseView tickletVenueMapChooseView = new TickletVenueMapChooseView(context);
             TickletAnimWindow tickletAnimWindow = new TickletAnimWindow(context, view, tickletVenueMapChooseView, activity);
-            tickletVenueMapChooseView.initData(d, new C9099a(context, str, str2, str3, tickletAnimWindow));
+            tickletVenueMapChooseView.initData(d, new a(context, str, str2, str3, tickletAnimWindow));
             tickletAnimWindow.show();
         }
     }

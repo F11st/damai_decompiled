@@ -34,15 +34,14 @@ public class WeexActivity extends AppCompatActivity {
     private WeexPageFragment mWeexPageFragment;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.weex.WeexActivity$a */
     /* loaded from: classes9.dex */
-    public class C2790a extends WeexPageFragment.C3076b {
+    public class a extends WeexPageFragment.b {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2790a() {
+        a() {
         }
 
-        @Override // com.alibaba.aliweex.bundle.WeexPageFragment.C3076b
+        @Override // com.alibaba.aliweex.bundle.WeexPageFragment.b
         public void c(WXSDKInstance wXSDKInstance, boolean z, String str, String str2) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-666314577")) {
@@ -53,7 +52,7 @@ public class WeexActivity extends AppCompatActivity {
             WeexActivity.this.showErrorView();
         }
 
-        @Override // com.alibaba.aliweex.bundle.WeexPageFragment.C3076b, com.taobao.weex.IWXRenderListener
+        @Override // com.alibaba.aliweex.bundle.WeexPageFragment.b, com.taobao.weex.IWXRenderListener
         public void onViewCreated(WXSDKInstance wXSDKInstance, View view) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1581893659")) {
@@ -132,7 +131,7 @@ public class WeexActivity extends AppCompatActivity {
             } catch (Exception unused) {
             }
             startTime = System.currentTimeMillis();
-            this.mWeexPageFragment.setRenderListener(new C2790a());
+            this.mWeexPageFragment.setRenderListener(new a());
             return;
         }
         showErrorView();

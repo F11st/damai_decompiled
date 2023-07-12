@@ -6,7 +6,6 @@ import anet.channel.entity.EventCb;
 import anet.channel.session.HttpSession;
 import anet.channel.statist.Ipv6DetectStat;
 import anet.channel.status.NetworkStatusHelper;
-import anet.channel.strategy.C0213a;
 import anet.channel.strategy.IConnStrategy;
 import anet.channel.strategy.IStrategyFilter;
 import anet.channel.thread.ThreadPoolExecutorFactory;
@@ -18,11 +17,11 @@ import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
-import tb.C9708t9;
 import tb.hu0;
 import tb.jn1;
 import tb.lw2;
 import tb.sf0;
+import tb.t9;
 import tb.v70;
 import tb.x6;
 import tb.y90;
@@ -39,10 +38,9 @@ public class Ipv6Detector {
     private static NetworkStatusHelper.INetworkStatusChangeListener f;
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.detect.Ipv6Detector$a */
     /* loaded from: classes.dex */
-    static class C0177a implements IStrategyFilter {
-        C0177a() {
+    static class a implements IStrategyFilter {
+        a() {
         }
 
         @Override // anet.channel.strategy.IStrategyFilter
@@ -52,10 +50,9 @@ public class Ipv6Detector {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.detect.Ipv6Detector$b */
     /* loaded from: classes.dex */
-    static class C0178b implements NetworkStatusHelper.INetworkStatusChangeListener {
-        C0178b() {
+    static class b implements NetworkStatusHelper.INetworkStatusChangeListener {
+        b() {
         }
 
         @Override // anet.channel.status.NetworkStatusHelper.INetworkStatusChangeListener
@@ -69,12 +66,12 @@ public class Ipv6Detector {
         b = new AtomicInteger(1);
         c = new AtomicBoolean(false);
         d = new Random();
-        e = new C0177a();
-        f = new C0178b();
+        e = new a();
+        f = new b();
     }
 
     public static int d() {
-        if (C9708t9.B()) {
+        if (t9.B()) {
             String j = NetworkStatusHelper.j(NetworkStatusHelper.i());
             v70 v70Var = a;
             if (v70Var != null) {
@@ -94,7 +91,7 @@ public class Ipv6Detector {
     }
 
     public static void f() {
-        if (!C9708t9.B()) {
+        if (!t9.B()) {
             ALog.e("awcn.Ipv6Detector", "ipv6 detect is disable.", null, new Object[0]);
         } else if (!NetworkStatusHelper.n()) {
             ALog.e("awcn.Ipv6Detector", "network is not connected.", null, new Object[0]);
@@ -113,11 +110,11 @@ public class Ipv6Detector {
                     /* compiled from: Taobao */
                     /* renamed from: anet.channel.detect.Ipv6Detector$1$a */
                     /* loaded from: classes.dex */
-                    class C0176a implements EventCb {
+                    class a implements EventCb {
                         final /* synthetic */ Ipv6DetectStat a;
                         final /* synthetic */ long b;
 
-                        C0176a(Ipv6DetectStat ipv6DetectStat, long j) {
+                        a(Ipv6DetectStat ipv6DetectStat, long j) {
                             this.a = ipv6DetectStat;
                             this.b = j;
                         }
@@ -129,7 +126,7 @@ public class Ipv6Detector {
                         @Override // anet.channel.entity.EventCb
                         public void onEvent(Session session, int i, sf0 sf0Var) {
                             ?? r7 = i == 512 ? 1 : 0;
-                            this.a.cip = C0213a.a().getClientIp();
+                            this.a.cip = anet.channel.strategy.a.a().getClientIp();
                             Ipv6DetectStat ipv6DetectStat = this.a;
                             ipv6DetectStat.ret = r7;
                             ipv6DetectStat.detectTime = System.currentTimeMillis() - this.b;
@@ -142,7 +139,7 @@ public class Ipv6Detector {
                     @Override // java.lang.Runnable
                     public void run() {
                         String str;
-                        List<IConnStrategy> connStrategyListByHost = C0213a.a().getConnStrategyListByHost("amdc.m.taobao.com", Ipv6Detector.e);
+                        List<IConnStrategy> connStrategyListByHost = anet.channel.strategy.a.a().getConnStrategyListByHost("amdc.m.taobao.com", Ipv6Detector.e);
                         StringBuilder sb = new StringBuilder("http://");
                         if (connStrategyListByHost != null && connStrategyListByHost.size() > 0) {
                             str = connStrategyListByHost.get(0).getIp();
@@ -163,7 +160,7 @@ public class Ipv6Detector {
                         ALog.e("awcn.Ipv6Detector", "start ipv6 detect.", null, "url", sb);
                         String sb2 = sb.toString();
                         HttpSession httpSession = new HttpSession(hu0.c(), new zm(sb2, "Ipv6Detector-" + Ipv6Detector.b.getAndIncrement(), null));
-                        httpSession.v(LogType.UNEXP_OTHER, new C0176a(ipv6DetectStat, currentTimeMillis));
+                        httpSession.v(LogType.UNEXP_OTHER, new a(ipv6DetectStat, currentTimeMillis));
                         httpSession.e();
                     }
                 });

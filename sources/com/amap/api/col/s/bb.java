@@ -22,11 +22,11 @@ public final class bb implements IInputtipsSearch {
     private InputtipsQuery d;
 
     public bb(Context context, Inputtips.InputtipsListener inputtipsListener) throws AMapException {
-        bu a = bt.a(context, C4434h.a(false));
-        if (a.a == bt.EnumC4398c.SuccessCode) {
+        bu a = bt.a(context, h.a(false));
+        if (a.a == bt.c.SuccessCode) {
             this.a = context.getApplicationContext();
             this.b = inputtipsListener;
-            this.c = HandlerC4447t.a();
+            this.c = t.a();
             return;
         }
         String str = a.b;
@@ -49,7 +49,7 @@ public final class bb implements IInputtipsSearch {
             ao.a().a(new Runnable() { // from class: com.amap.api.col.s.bb.1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    Message obtainMessage = HandlerC4447t.a().obtainMessage();
+                    Message obtainMessage = t.a().obtainMessage();
                     obtainMessage.obj = bb.this.b;
                     obtainMessage.arg1 = 5;
                     try {
@@ -69,7 +69,7 @@ public final class bb implements IInputtipsSearch {
                 }
             });
         } catch (Throwable th) {
-            C4435i.a(th, "Inputtips", "requestInputtipsAsynThrowable");
+            i.a(th, "Inputtips", "requestInputtipsAsynThrowable");
         }
     }
 
@@ -91,16 +91,16 @@ public final class bb implements IInputtipsSearch {
     /* JADX INFO: Access modifiers changed from: private */
     public ArrayList<Tip> a(InputtipsQuery inputtipsQuery) throws AMapException {
         try {
-            C4444r.a(this.a);
+            r.a(this.a);
             if (inputtipsQuery != null) {
                 if (inputtipsQuery.getKeyword() != null && !inputtipsQuery.getKeyword().equals("")) {
-                    return new C4442p(this.a, inputtipsQuery).b();
+                    return new p(this.a, inputtipsQuery).b();
                 }
                 throw new AMapException("无效的参数 - IllegalArgumentException");
             }
             throw new AMapException("无效的参数 - IllegalArgumentException");
         } catch (Throwable th) {
-            C4435i.a(th, "Inputtips", "requestInputtips");
+            i.a(th, "Inputtips", "requestInputtips");
             if (th instanceof AMapException) {
                 throw th;
             }
@@ -123,6 +123,6 @@ public final class bb implements IInputtipsSearch {
     public bb(Context context, InputtipsQuery inputtipsQuery) {
         this.a = context.getApplicationContext();
         this.d = inputtipsQuery;
-        this.c = HandlerC4447t.a();
+        this.c = t.a();
     }
 }

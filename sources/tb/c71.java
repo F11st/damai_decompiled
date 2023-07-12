@@ -8,33 +8,32 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public abstract class c71 {
     @NotNull
-    public static final C8991b Companion = new C8991b(null);
+    public static final b Companion = new b(null);
     @NotNull
-    private static final C8993d a = new C8993d(JvmPrimitiveType.BOOLEAN);
+    private static final d a = new d(JvmPrimitiveType.BOOLEAN);
     @NotNull
-    private static final C8993d b = new C8993d(JvmPrimitiveType.CHAR);
+    private static final d b = new d(JvmPrimitiveType.CHAR);
     @NotNull
-    private static final C8993d c = new C8993d(JvmPrimitiveType.BYTE);
+    private static final d c = new d(JvmPrimitiveType.BYTE);
     @NotNull
-    private static final C8993d d = new C8993d(JvmPrimitiveType.SHORT);
+    private static final d d = new d(JvmPrimitiveType.SHORT);
     @NotNull
-    private static final C8993d e = new C8993d(JvmPrimitiveType.INT);
+    private static final d e = new d(JvmPrimitiveType.INT);
     @NotNull
-    private static final C8993d f = new C8993d(JvmPrimitiveType.FLOAT);
+    private static final d f = new d(JvmPrimitiveType.FLOAT);
     @NotNull
-    private static final C8993d g = new C8993d(JvmPrimitiveType.LONG);
+    private static final d g = new d(JvmPrimitiveType.LONG);
     @NotNull
-    private static final C8993d h = new C8993d(JvmPrimitiveType.DOUBLE);
+    private static final d h = new d(JvmPrimitiveType.DOUBLE);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.c71$a */
     /* loaded from: classes3.dex */
-    public static final class C8990a extends c71 {
+    public static final class a extends c71 {
         @NotNull
         private final c71 i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C8990a(@NotNull c71 c71Var) {
+        public a(@NotNull c71 c71Var) {
             super(null);
             b41.i(c71Var, "elementType");
             this.i = c71Var;
@@ -47,66 +46,64 @@ public abstract class c71 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.c71$b */
     /* loaded from: classes3.dex */
-    public static final class C8991b {
-        private C8991b() {
+    public static final class b {
+        private b() {
         }
 
-        public /* synthetic */ C8991b(k50 k50Var) {
+        public /* synthetic */ b(k50 k50Var) {
             this();
         }
 
         @NotNull
-        public final C8993d a() {
+        public final d a() {
             return c71.a;
         }
 
         @NotNull
-        public final C8993d b() {
+        public final d b() {
             return c71.c;
         }
 
         @NotNull
-        public final C8993d c() {
+        public final d c() {
             return c71.b;
         }
 
         @NotNull
-        public final C8993d d() {
+        public final d d() {
             return c71.h;
         }
 
         @NotNull
-        public final C8993d e() {
+        public final d e() {
             return c71.f;
         }
 
         @NotNull
-        public final C8993d f() {
+        public final d f() {
             return c71.e;
         }
 
         @NotNull
-        public final C8993d g() {
+        public final d g() {
             return c71.g;
         }
 
         @NotNull
-        public final C8993d h() {
+        public final d h() {
             return c71.d;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.c71$c */
     /* loaded from: classes3.dex */
-    public static final class C8992c extends c71 {
+    public static final class c extends c71 {
         @NotNull
         private final String i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C8992c(@NotNull String str) {
+        public c(@NotNull String str) {
             super(null);
             b41.i(str, "internalName");
             this.i = str;
@@ -119,13 +116,12 @@ public abstract class c71 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.c71$d */
     /* loaded from: classes3.dex */
-    public static final class C8993d extends c71 {
+    public static final class d extends c71 {
         @Nullable
         private final JvmPrimitiveType i;
 
-        public C8993d(@Nullable JvmPrimitiveType jvmPrimitiveType) {
+        public d(@Nullable JvmPrimitiveType jvmPrimitiveType) {
             super(null);
             this.i = jvmPrimitiveType;
         }

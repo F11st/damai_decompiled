@@ -49,7 +49,7 @@ import java.util.List;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class AppBarLayout extends LinearLayout implements CoordinatorLayout.AttachedBehavior {
-    private static final int DEF_STYLE_RES = R.C4819style.Widget_Design_AppBarLayout;
+    private static final int DEF_STYLE_RES = R.style.Widget_Design_AppBarLayout;
     private static final int INVALID_SCROLL_RANGE = -1;
     static final int PENDING_ACTION_ANIMATE_ENABLED = 4;
     static final int PENDING_ACTION_COLLAPSED = 2;

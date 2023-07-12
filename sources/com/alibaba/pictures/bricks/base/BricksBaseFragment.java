@@ -18,16 +18,15 @@ public abstract class BricksBaseFragment extends Fragment {
     /* loaded from: classes7.dex */
     public interface IClickListener {
         @NotNull
-        public static final C3445a Companion = C3445a.a;
+        public static final a Companion = a.a;
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.pictures.bricks.base.BricksBaseFragment$IClickListener$a */
         /* loaded from: classes7.dex */
-        public static final class C3445a {
+        public static final class a {
             private static transient /* synthetic */ IpChange $ipChange;
-            static final /* synthetic */ C3445a a = new C3445a();
+            static final /* synthetic */ a a = new a();
 
-            private C3445a() {
+            private a() {
             }
         }
 

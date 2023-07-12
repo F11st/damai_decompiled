@@ -2,7 +2,7 @@ package com.youku.middlewareservice.provider.kvdata;
 
 import android.content.SharedPreferences;
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -12,7 +12,7 @@ public class SPProviderProxy {
     public static boolean getPreferenceBoolean(String str) {
         try {
             if (sProxy == null) {
-                sProxy = (SPProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
+                sProxy = (SPProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
             }
             return sProxy.getPreferenceBoolean(str);
         } catch (Throwable th) {
@@ -24,7 +24,7 @@ public class SPProviderProxy {
     public static int getPreferenceInt(String str) {
         try {
             if (sProxy == null) {
-                sProxy = (SPProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
+                sProxy = (SPProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
             }
             return sProxy.getPreferenceInt(str);
         } catch (Throwable th) {
@@ -36,7 +36,7 @@ public class SPProviderProxy {
     public static long getPreferenceLong(String str) {
         try {
             if (sProxy == null) {
-                sProxy = (SPProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
+                sProxy = (SPProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
             }
             return sProxy.getPreferenceLong(str);
         } catch (Throwable th) {
@@ -48,7 +48,7 @@ public class SPProviderProxy {
     public static String getPreferenceString(String str) {
         try {
             if (sProxy == null) {
-                sProxy = (SPProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
+                sProxy = (SPProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
             }
             return sProxy.getPreferenceString(str);
         } catch (Throwable th) {
@@ -59,7 +59,7 @@ public class SPProviderProxy {
 
     public static SPProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (SPProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
+            sProxy = (SPProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -67,7 +67,7 @@ public class SPProviderProxy {
     public static SharedPreferences getSharedPreferences(String str) {
         try {
             if (sProxy == null) {
-                sProxy = (SPProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
+                sProxy = (SPProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
             }
             return sProxy.getSharedPreferences(str);
         } catch (Throwable th) {
@@ -89,7 +89,7 @@ public class SPProviderProxy {
     public static void savePreference(String str, String str2) {
         try {
             if (sProxy == null) {
-                sProxy = (SPProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
+                sProxy = (SPProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
             }
             sProxy.savePreference(str, str2);
         } catch (Throwable th) {
@@ -100,7 +100,7 @@ public class SPProviderProxy {
     public static boolean getPreferenceBoolean(String str, boolean z) {
         try {
             if (sProxy == null) {
-                sProxy = (SPProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
+                sProxy = (SPProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
             }
             return sProxy.getPreferenceBoolean(str, z);
         } catch (Throwable th) {
@@ -112,7 +112,7 @@ public class SPProviderProxy {
     public static int getPreferenceInt(String str, int i) {
         try {
             if (sProxy == null) {
-                sProxy = (SPProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
+                sProxy = (SPProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
             }
             return sProxy.getPreferenceInt(str, i);
         } catch (Throwable th) {
@@ -124,7 +124,7 @@ public class SPProviderProxy {
     public static long getPreferenceLong(String str, long j) {
         try {
             if (sProxy == null) {
-                sProxy = (SPProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
+                sProxy = (SPProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
             }
             return sProxy.getPreferenceLong(str, j);
         } catch (Throwable th) {
@@ -136,7 +136,7 @@ public class SPProviderProxy {
     public static String getPreferenceString(String str, String str2) {
         try {
             if (sProxy == null) {
-                sProxy = (SPProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
+                sProxy = (SPProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
             }
             return sProxy.getPreferenceString(str, str2);
         } catch (Throwable th) {
@@ -148,7 +148,7 @@ public class SPProviderProxy {
     public static SharedPreferences getSharedPreferences() {
         try {
             if (sProxy == null) {
-                sProxy = (SPProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
+                sProxy = (SPProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
             }
             return sProxy.getSharedPreferences();
         } catch (Throwable th) {
@@ -160,7 +160,7 @@ public class SPProviderProxy {
     public static void savePreference(String str, int i) {
         try {
             if (sProxy == null) {
-                sProxy = (SPProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
+                sProxy = (SPProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
             }
             sProxy.savePreference(str, i);
         } catch (Throwable th) {
@@ -171,7 +171,7 @@ public class SPProviderProxy {
     public static void savePreference(String str, long j) {
         try {
             if (sProxy == null) {
-                sProxy = (SPProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
+                sProxy = (SPProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
             }
             sProxy.savePreference(str, j);
         } catch (Throwable th) {
@@ -182,7 +182,7 @@ public class SPProviderProxy {
     public static void savePreference(String str, boolean z) {
         try {
             if (sProxy == null) {
-                sProxy = (SPProvider) C8883a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
+                sProxy = (SPProvider) a.j("com.youku.middlewareservice_impl.provider.kvdata.SPProviderImpl").b().f();
             }
             sProxy.savePreference(str, z);
         } catch (Throwable th) {

@@ -2,7 +2,7 @@ package android.taobao.windvane.extra.performance;
 
 import com.taobao.monitor.performance.IWXApmAdapter;
 import java.util.Map;
-import tb.C8890a0;
+import tb.a0;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -12,7 +12,7 @@ public class WVAPMManager {
 
     public WVAPMManager(String str) {
         try {
-            this.apmAdapter = C8890a0.a().createApmAdapterByType(str);
+            this.apmAdapter = a0.a().createApmAdapterByType(str);
         } catch (Throwable unused) {
         }
     }

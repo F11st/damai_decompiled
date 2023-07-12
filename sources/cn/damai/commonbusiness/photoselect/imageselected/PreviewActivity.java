@@ -67,12 +67,11 @@ public class PreviewActivity extends DamaiBaseActivity {
     private boolean isConfirm = false;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.PreviewActivity$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0740a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0740a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -87,12 +86,11 @@ public class PreviewActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.PreviewActivity$b */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0741b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0741b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -108,12 +106,11 @@ public class PreviewActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.PreviewActivity$c */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0742c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0742c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -128,12 +125,11 @@ public class PreviewActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.PreviewActivity$d */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC0743d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0743d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -150,12 +146,11 @@ public class PreviewActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.PreviewActivity$e */
     /* loaded from: classes4.dex */
-    public class C0744e implements ImagePagerAdapter.OnItemClickListener {
+    public class e implements ImagePagerAdapter.OnItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0744e() {
+        e() {
         }
 
         @Override // cn.damai.commonbusiness.photoselect.imageselected.adapter.ImagePagerAdapter.OnItemClickListener
@@ -173,12 +168,11 @@ public class PreviewActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.PreviewActivity$f */
     /* loaded from: classes14.dex */
-    public class DialogInterface$OnClickListenerC0745f implements DialogInterface.OnClickListener {
+    public class f implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC0745f(PreviewActivity previewActivity) {
+        f(PreviewActivity previewActivity) {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -255,7 +249,7 @@ public class PreviewActivity extends DamaiBaseActivity {
                     if (i2 == this.mSelectImages.size()) {
                         DMDialog dMDialog2 = new DMDialog(this);
                         dMDialog2.v(getResources().getString(R$string.damai_add_image_count, String.valueOf(this.mMaxCount)));
-                        dMDialog2.l(R$string.damai_know, new DialogInterface$OnClickListenerC0745f(this));
+                        dMDialog2.l(R$string.damai_know, new f(this));
                         dMDialog2.show();
                     }
                 }
@@ -322,10 +316,10 @@ public class PreviewActivity extends DamaiBaseActivity {
             ipChange.ipc$dispatch("-705845523", new Object[]{this});
             return;
         }
-        findViewById(R$id.btn_back).setOnClickListener(new View$OnClickListenerC0740a());
-        this.btnConfirm.setOnClickListener(new View$OnClickListenerC0741b());
-        this.tvSelect.setOnClickListener(new View$OnClickListenerC0742c());
-        this.tvVideoSelect.setOnClickListener(new View$OnClickListenerC0743d());
+        findViewById(R$id.btn_back).setOnClickListener(new a());
+        this.btnConfirm.setOnClickListener(new b());
+        this.tvSelect.setOnClickListener(new c());
+        this.tvVideoSelect.setOnClickListener(new d());
     }
 
     private void initVideo() {
@@ -375,7 +369,7 @@ public class PreviewActivity extends DamaiBaseActivity {
         }
         ImagePagerAdapter imagePagerAdapter = new ImagePagerAdapter(this, this.mImages);
         this.vpImage.setAdapter(imagePagerAdapter);
-        imagePagerAdapter.c(new C0744e());
+        imagePagerAdapter.c(new e());
         this.vpImage.addOnPageChangeListener(new ViewPager.OnPageChangeListener() { // from class: cn.damai.commonbusiness.photoselect.imageselected.PreviewActivity.6
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -388,10 +382,10 @@ public class PreviewActivity extends DamaiBaseActivity {
             }
 
             @Override // androidx.viewpager.widget.ViewPager.OnPageChangeListener
-            public void onPageScrolled(int i, float f, int i2) {
+            public void onPageScrolled(int i, float f2, int i2) {
                 IpChange ipChange2 = $ipChange;
                 if (AndroidInstantRuntime.support(ipChange2, "222531741")) {
-                    ipChange2.ipc$dispatch("222531741", new Object[]{this, Integer.valueOf(i), Float.valueOf(f), Integer.valueOf(i2)});
+                    ipChange2.ipc$dispatch("222531741", new Object[]{this, Integer.valueOf(i), Float.valueOf(f2), Integer.valueOf(i2)});
                 }
             }
 
@@ -508,10 +502,10 @@ public class PreviewActivity extends DamaiBaseActivity {
             /* compiled from: Taobao */
             /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.PreviewActivity$7$a */
             /* loaded from: classes14.dex */
-            public class C0739a extends AnimatorListenerAdapter {
+            public class a extends AnimatorListenerAdapter {
                 private static transient /* synthetic */ IpChange $ipChange;
 
-                C0739a() {
+                a() {
                 }
 
                 @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -536,7 +530,7 @@ public class PreviewActivity extends DamaiBaseActivity {
                     ipChange2.ipc$dispatch("1343191163", new Object[]{this});
                 } else if (PreviewActivity.this.llTopBar != null) {
                     ObjectAnimator duration = ObjectAnimator.ofFloat(PreviewActivity.this.llTopBar, "translationY", PreviewActivity.this.llTopBar.getTranslationY(), 0.0f).setDuration(300L);
-                    duration.addListener(new C0739a());
+                    duration.addListener(new a());
                     duration.start();
                     ObjectAnimator.ofFloat(PreviewActivity.this.rlBottomBar, "translationY", PreviewActivity.this.rlBottomBar.getTranslationY(), 0.0f).setDuration(300L).start();
                 }

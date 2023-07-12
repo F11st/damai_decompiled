@@ -72,7 +72,7 @@ public class BottomBarChatBtn extends BaseBottomBarBtn {
     @Override // com.youku.live.dago.widgetlib.view.bottombar.BaseBottomBarBtn
     public Bitmap getIcon() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "2090210744") ? (Bitmap) ipChange.ipc$dispatch("2090210744", new Object[]{this}) : BitmapFactory.decodeResource(getResources(), R.C7941drawable.dago_pgc_ic_chat_pcel);
+        return AndroidInstantRuntime.support(ipChange, "2090210744") ? (Bitmap) ipChange.ipc$dispatch("2090210744", new Object[]{this}) : BitmapFactory.decodeResource(getResources(), R.drawable.dago_pgc_ic_chat_pcel);
     }
 
     @Override // android.view.View

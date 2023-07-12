@@ -1,17 +1,16 @@
 package tb;
 
 import com.alibaba.android.umbrella.trace.UmbrellaTracker;
-import com.taobao.android.ultron.datamodel.imp.C6661a;
 import com.taobao.android.ultron.datamodel.imp.DMComponent;
 import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
 public class ww2 {
-    private C6661a a;
+    private com.taobao.android.ultron.datamodel.imp.a a;
 
-    public ww2(C6661a c6661a) {
-        this.a = c6661a;
+    public ww2(com.taobao.android.ultron.datamodel.imp.a aVar) {
+        this.a = aVar;
     }
 
     public xw2 a() {

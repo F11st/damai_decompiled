@@ -5,7 +5,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
 import anet.channel.RequestCb;
-import anet.channel.request.C0193a;
 import anet.channel.request.Cancelable;
 import anet.channel.session.HttpSession;
 import anet.channel.statist.RequestStatistic;
@@ -31,8 +30,8 @@ public class MultiPathTask implements IUnifiedTask {
     private static AtomicBoolean toastStatus = new AtomicBoolean(false);
     private static Handler uiHandler = new Handler(Looper.getMainLooper());
     private String f_refer;
-    private C0254b rc;
-    private C0193a req;
+    private b rc;
+    private anet.channel.request.a req;
     private volatile boolean isCanceled = false;
     volatile Cancelable cancelable = null;
     private int contentLength = 0;
@@ -40,15 +39,14 @@ public class MultiPathTask implements IUnifiedTask {
     private AtomicBoolean responseReturn = new AtomicBoolean(false);
 
     /* compiled from: Taobao */
-    /* renamed from: anetwork.channel.unified.MultiPathTask$a */
     /* loaded from: classes.dex */
-    class C0248a implements RequestCb {
+    class a implements RequestCb {
         final /* synthetic */ RequestStatistic a;
-        final /* synthetic */ C0193a b;
+        final /* synthetic */ anet.channel.request.a b;
 
-        C0248a(RequestStatistic requestStatistic, C0193a c0193a) {
+        a(RequestStatistic requestStatistic, anet.channel.request.a aVar) {
             this.a = requestStatistic;
-            this.b = c0193a;
+            this.b = aVar;
         }
 
         @Override // anet.channel.RequestCb
@@ -94,10 +92,10 @@ public class MultiPathTask implements IUnifiedTask {
         }
     }
 
-    public MultiPathTask(C0254b c0254b) {
-        this.rc = c0254b;
-        this.req = c0254b.a.b();
-        this.f_refer = c0254b.a.d().get(HttpHeaderConstant.F_REFER);
+    public MultiPathTask(b bVar) {
+        this.rc = bVar;
+        this.req = bVar.a.b();
+        this.f_refer = bVar.a.d().get(HttpHeaderConstant.F_REFER);
     }
 
     static /* synthetic */ int access$408(MultiPathTask multiPathTask) {
@@ -112,7 +110,7 @@ public class MultiPathTask implements IUnifiedTask {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private anet.channel.request.C0193a preProcessRequest(anet.channel.request.C0193a r6) {
+    private anet.channel.request.a preProcessRequest(anet.channel.request.a r6) {
         /*
             r5 = this;
             anetwork.channel.unified.b r0 = r5.rc
@@ -176,13 +174,13 @@ public class MultiPathTask implements IUnifiedTask {
                 }
             });
         }
-        C0193a preProcessRequest = preProcessRequest(this.req);
+        anet.channel.request.a preProcessRequest = preProcessRequest(this.req);
         o01 e = this.rc.a.e();
         RequestStatistic requestStatistic = this.rc.a.f;
         String e2 = zh2.e(e.j(), jg1.SCHEME_SLASH, e.d());
         Context c = hu0.c();
         HttpSession httpSession = new HttpSession(c, new zm(e2, this.rc.c + "_mc", null));
         httpSession.F(true);
-        this.cancelable = httpSession.w(preProcessRequest, new C0248a(requestStatistic, preProcessRequest));
+        this.cancelable = httpSession.w(preProcessRequest, new a(requestStatistic, preProcessRequest));
     }
 }

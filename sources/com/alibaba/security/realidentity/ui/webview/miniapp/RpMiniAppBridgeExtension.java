@@ -15,13 +15,13 @@ import com.alibaba.ariver.kernel.api.extension.bridge.BridgeExtension;
 import com.alibaba.ariver.kernel.api.security.Permission;
 import com.alibaba.ariver.kernel.common.service.executor.ExecutorType;
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.security.common.track.model.C3834a;
 import com.alibaba.security.common.track.model.TrackLog;
+import com.alibaba.security.common.track.model.a;
 import com.alibaba.security.realidentity.RPDetail;
 import com.alibaba.security.realidentity.RPEventListener;
 import com.alibaba.security.realidentity.RPResult;
 import com.alibaba.security.realidentity.RPVerify;
-import com.alibaba.security.realidentity.a.C3847g;
+import com.alibaba.security.realidentity.a.g;
 import java.util.List;
 
 /* compiled from: Taobao */
@@ -54,7 +54,7 @@ public class RpMiniAppBridgeExtension implements BridgeExtension {
                     bridgeCallback.sendBridgeResponse(new BridgeResponse.Error(102, "null context found"));
                     return;
                 } else {
-                    RPVerify.start(context, str, null, C3834a.C3835a.c, new RPEventListener() { // from class: com.alibaba.security.realidentity.ui.webview.miniapp.RpMiniAppBridgeExtension.1
+                    RPVerify.start(context, str, null, a.C0166a.c, new RPEventListener() { // from class: com.alibaba.security.realidentity.ui.webview.miniapp.RpMiniAppBridgeExtension.1
                         @Override // com.alibaba.security.realidentity.RPEventListener
                         public final void onFinish(RPResult rPResult, RPDetail rPDetail) {
                             JSONObject jSONObject = new JSONObject();
@@ -87,9 +87,9 @@ public class RpMiniAppBridgeExtension implements BridgeExtension {
             trackLog.setResult(str6);
             trackLog.setTags(list);
             trackLog.setMsg(str4);
-            trackLog.setLayer(C3834a.C3835a.c);
-            C3847g.C3848a.a.d = str;
-            C3847g.C3848a.a.a(trackLog);
+            trackLog.setLayer(a.C0166a.c);
+            g.a.a.d = str;
+            g.a.a.a(trackLog);
             JSONObject jSONObject = new JSONObject();
             jSONObject.put("code", (Object) 0);
             jSONObject.put("message", (Object) "success");

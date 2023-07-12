@@ -1,8 +1,8 @@
 package com.taobao.android.dinamic.log;
 
 import android.util.Log;
-import com.taobao.android.dinamic.C6312a;
-import com.taobao.android.dinamic.C6313b;
+import com.taobao.android.dinamic.a;
+import com.taobao.android.dinamic.b;
 import tb.nz;
 
 /* compiled from: Taobao */
@@ -26,10 +26,10 @@ public class DinamicLog {
 
         @Override // java.lang.Runnable
         public void run() {
-            if (C6313b.e()) {
-                DinamicLog.a(C6313b.TAG, "handleEvent module=" + this.val$module + "identifier=" + this.val$identifier + "consuming=" + (this.val$consumingTime / 1000000.0d));
+            if (b.e()) {
+                DinamicLog.a(b.TAG, "handleEvent module=" + this.val$module + "identifier=" + this.val$identifier + "consuming=" + (this.val$consumingTime / 1000000.0d));
             }
-            C6312a.h().d();
+            a.h().d();
             throw null;
         }
     }
@@ -69,7 +69,7 @@ public class DinamicLog {
     }
 
     public static void g(String str, String str2, long j) {
-        C6312a.h().d();
+        a.h().d();
     }
 
     public static void h(String str) {

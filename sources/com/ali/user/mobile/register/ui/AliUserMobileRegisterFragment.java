@@ -288,7 +288,7 @@ public class AliUserMobileRegisterFragment extends BaseFragment implements View.
 
     @Override // com.ali.user.mobile.base.ui.BaseFragment
     protected int getLayoutContent() {
-        return R.C2965layout.aliuser_fragment_mobile_register;
+        return R.layout.aliuser_fragment_mobile_register;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -508,7 +508,7 @@ public class AliUserMobileRegisterFragment extends BaseFragment implements View.
     @Override // androidx.fragment.app.Fragment
     public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
         menu.clear();
-        menuInflater.inflate(R.C2966menu.aliuser_menu, menu);
+        menuInflater.inflate(R.menu.aliuser_menu, menu);
         super.onCreateOptionsMenu(menu, menuInflater);
     }
 

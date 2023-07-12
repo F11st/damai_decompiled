@@ -8,7 +8,6 @@ import android.hardware.SensorManager;
 import android.view.WindowManager;
 import com.amap.api.maps.model.Marker;
 import com.autonavi.base.amap.api.mapcore.IAMapDelegate;
-import tb.C9796v;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
@@ -116,7 +115,7 @@ public class aa implements SensorEventListener {
 
     public static int a(Context context) {
         WindowManager windowManager;
-        if (context == null || (windowManager = (WindowManager) context.getSystemService(C9796v.ATTACH_MODE_WINDOW)) == null) {
+        if (context == null || (windowManager = (WindowManager) context.getSystemService(tb.v.ATTACH_MODE_WINDOW)) == null) {
             return 0;
         }
         try {

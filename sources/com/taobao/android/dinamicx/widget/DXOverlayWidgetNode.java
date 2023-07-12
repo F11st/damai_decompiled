@@ -8,19 +8,18 @@ import com.alibaba.fastjson.JSONObject;
 import com.taobao.android.abilitykit.AKIAbilityCallback;
 import com.taobao.weex.annotation.JSMethod;
 import com.youku.arch.v3.data.Constants;
-import tb.C9192h;
-import tb.C9392l;
-import tb.C9587q0;
-import tb.C9636r;
-import tb.C9796v;
-import tb.C9833w;
 import tb.hy;
+import tb.l;
 import tb.nz;
+import tb.q0;
+import tb.r;
+import tb.v;
+import tb.w;
 import tb.z10;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class DXOverlayWidgetNode extends C6493f {
+public class DXOverlayWidgetNode extends f {
     public static final long DXOVERLAY_ANIMATION = -60331626368423735L;
     public static final long DXOVERLAY_ANIMATIONTYPE = -7121038128194277777L;
     public static final long DXOVERLAY_EXITANIMATION = -5767894532178812313L;
@@ -45,21 +44,20 @@ public class DXOverlayWidgetNode extends C6493f {
     private boolean i;
     private int j;
     private int k;
-    C9192h l;
+    tb.h l;
     private JSONArray m;
     private DXTemplateWidgetNode n;
     private boolean o = false;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXOverlayWidgetNode$a */
     /* loaded from: classes11.dex */
-    public class C6445a implements AKIAbilityCallback {
-        C6445a() {
+    public class a implements AKIAbilityCallback {
+        a() {
         }
 
         @Override // com.taobao.android.abilitykit.AKIAbilityCallback
-        public void callback(String str, C9392l c9392l) {
+        public void callback(String str, l lVar) {
             if ("onClose".equals(str)) {
                 DXOverlayWidgetNode.this.c();
             }
@@ -68,22 +66,20 @@ public class DXOverlayWidgetNode extends C6493f {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXOverlayWidgetNode$b */
     /* loaded from: classes11.dex */
-    public class C6446b implements AKIAbilityCallback {
-        C6446b(DXOverlayWidgetNode dXOverlayWidgetNode) {
+    public class b implements AKIAbilityCallback {
+        b(DXOverlayWidgetNode dXOverlayWidgetNode) {
         }
 
         @Override // com.taobao.android.abilitykit.AKIAbilityCallback
-        public void callback(String str, C9392l c9392l) {
+        public void callback(String str, l lVar) {
             nz.s("dismiss pop " + str);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXOverlayWidgetNode$c */
     /* loaded from: classes11.dex */
-    public static class C6447c implements IDXBuilderWidgetNode {
+    public static class c implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(Object obj) {
             return new DXOverlayWidgetNode();
@@ -96,7 +92,7 @@ public class DXOverlayWidgetNode extends C6493f {
                 this.l = getDXRuntimeContext().getEngineContext().b().a();
             }
             if (this.l == null) {
-                this.l = new C9192h();
+                this.l = new tb.h();
             }
         }
         DXTemplateWidgetNode dXTemplateWidgetNode = this.n;
@@ -105,15 +101,15 @@ public class DXOverlayWidgetNode extends C6493f {
             JSONObject jSONObject = new JSONObject();
             jSONObject.put("type", (Object) "dismissDxPop");
             JSONObject jSONObject2 = new JSONObject();
-            jSONObject2.put(C9833w.KEY_POP_ID, (Object) str);
+            jSONObject2.put(w.KEY_POP_ID, (Object) str);
             jSONObject.put("params", (Object) jSONObject2);
-            C9636r c9636r = new C9636r(jSONObject);
+            r rVar = new r(jSONObject);
             z10 z10Var = new z10();
             z10Var.d(this.l);
             z10Var.i(getDXRuntimeContext().getRootView());
             z10Var.e(getDXRuntimeContext().getContext());
             z10Var.g(((Activity) getDXRuntimeContext().getContext()).getWindow().getDecorView());
-            this.l.b(c9636r, z10Var, new C6446b(this));
+            this.l.b(rVar, z10Var, new b(this));
         }
     }
 
@@ -133,8 +129,8 @@ public class DXOverlayWidgetNode extends C6493f {
                 this.l = getDXRuntimeContext().getEngineContext().b().a();
             }
             if (this.l == null) {
-                this.l = new C9192h();
-                this.l.h(new C9587q0(getDXRuntimeContext().getBizType(), "DX"));
+                this.l = new tb.h();
+                this.l.h(new q0(getDXRuntimeContext().getBizType(), "DX"));
             }
         }
         DXTemplateWidgetNode dXTemplateWidgetNode = this.n;
@@ -147,10 +143,10 @@ public class DXOverlayWidgetNode extends C6493f {
         JSONObject jSONObject = new JSONObject();
         jSONObject.put("type", "showDxPop");
         JSONObject jSONObject2 = new JSONObject();
-        jSONObject2.put(C9833w.KEY_POP_ID, obj);
+        jSONObject2.put(w.KEY_POP_ID, obj);
         JSONObject jSONObject3 = new JSONObject();
-        jSONObject3.put(C9796v.TAK_ABILITY_SHOW_POP_ANIMATION, (Object) "bottomInOut");
-        jSONObject3.put(C9796v.TAK_ABILITY_SHOW_POP_BACKGROUND_MODE, (Object) Integer.valueOf(this.f));
+        jSONObject3.put(v.TAK_ABILITY_SHOW_POP_ANIMATION, (Object) "bottomInOut");
+        jSONObject3.put(v.TAK_ABILITY_SHOW_POP_BACKGROUND_MODE, (Object) Integer.valueOf(this.f));
         JSONObject jSONObject4 = new JSONObject();
         JSONObject jSONObject5 = new JSONObject();
         jSONObject5.put("name", (Object) name);
@@ -158,19 +154,19 @@ public class DXOverlayWidgetNode extends C6493f {
         jSONObject5.put("url", (Object) this.n.getUrl());
         jSONObject4.put(Constants.TEMPLATE, (Object) jSONObject5);
         jSONObject4.put("data", (Object) getDXRuntimeContext().getData());
-        jSONObject4.put(C9833w.KEY_POP_ID, obj);
+        jSONObject4.put(w.KEY_POP_ID, obj);
         jSONObject2.put("popConfig", (Object) jSONObject3);
-        jSONObject2.put(C9796v.TAK_ABILITY_SHOW_POP_ANIMATION, "bottomInOut");
+        jSONObject2.put(v.TAK_ABILITY_SHOW_POP_ANIMATION, "bottomInOut");
         jSONObject2.put("content", (Object) jSONObject4);
         jSONObject2.put("gravity", getLayoutGravity() == 4 ? "center" : "bottom");
         jSONObject.put("params", (Object) jSONObject2);
-        C9636r c9636r = new C9636r(jSONObject);
+        r rVar = new r(jSONObject);
         z10 z10Var = new z10();
         z10Var.d(this.l);
         z10Var.i(getDXRuntimeContext().getRootView());
         z10Var.e(getDXRuntimeContext().getContext());
         z10Var.g(((Activity) getDXRuntimeContext().getContext()).getWindow().getDecorView());
-        this.l.b(c9636r, z10Var, new C6445a());
+        this.l.b(rVar, z10Var, new a());
         this.o = true;
     }
 
@@ -202,7 +198,7 @@ public class DXOverlayWidgetNode extends C6493f {
         return null;
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onBeforeBindChildData() {
         if (getChildrenCount() > 0 && (getChildAt(0) instanceof DXTemplateWidgetNode)) {
             this.n = (DXTemplateWidgetNode) getChildAt(0);
@@ -216,7 +212,7 @@ public class DXOverlayWidgetNode extends C6493f {
         super.onBindEvent(context, view, j);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onClone(DXWidgetNode dXWidgetNode, boolean z) {
         if (dXWidgetNode == null || !(dXWidgetNode instanceof DXOverlayWidgetNode)) {
             return;
@@ -257,7 +253,7 @@ public class DXOverlayWidgetNode extends C6493f {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onRenderView(Context context, View view) {
         if (this.i) {
             d();
@@ -265,7 +261,7 @@ public class DXOverlayWidgetNode extends C6493f {
         super.onRenderView(context, view);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetIntAttribute(long j, int i) {
         if (j == DXOVERLAY_ANIMATION) {
             this.a = i != 0;

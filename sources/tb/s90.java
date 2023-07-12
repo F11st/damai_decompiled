@@ -20,7 +20,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
@@ -53,13 +52,12 @@ public class s90 {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.s90$a */
     /* loaded from: classes5.dex */
-    public class C9683a implements ValueAnimator.AnimatorUpdateListener {
+    public class a implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
 
-        C9683a(View view) {
+        a(View view) {
             this.a = view;
         }
 
@@ -79,13 +77,12 @@ public class s90 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.s90$b */
     /* loaded from: classes5.dex */
-    public class C9684b implements ValueAnimator.AnimatorUpdateListener {
+    public class b implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
 
-        C9684b(View view) {
+        b(View view) {
             this.a = view;
         }
 
@@ -101,13 +98,12 @@ public class s90 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.s90$c  reason: invalid class name */
     /* loaded from: classes5.dex */
-    public class animationAnimation$AnimationListenerC9685c implements Animation.AnimationListener {
+    public class c implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ FrameLayout a;
 
-        animationAnimation$AnimationListenerC9685c(FrameLayout frameLayout) {
+        c(FrameLayout frameLayout) {
             this.a = frameLayout;
         }
 
@@ -139,21 +135,20 @@ public class s90 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.s90$d */
     /* loaded from: classes5.dex */
-    public class C9686d implements DMImageCreator.DMImageFailListener {
+    public class d implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnShareListener a;
 
-        C9686d(OnShareListener onShareListener) {
+        d(OnShareListener onShareListener) {
             this.a = onShareListener;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "147351975")) {
-                ipChange.ipc$dispatch("147351975", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("147351975", new Object[]{this, dVar});
                 return;
             }
             this.a.showLoading(false);
@@ -162,30 +157,29 @@ public class s90 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.s90$e */
     /* loaded from: classes5.dex */
-    public class C9687e implements DMImageCreator.DMImageSuccListener {
+    public class e implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OnShareListener a;
         final /* synthetic */ String b;
         final /* synthetic */ ThemeShare c;
 
-        C9687e(OnShareListener onShareListener, String str, ThemeShare themeShare) {
+        e(OnShareListener onShareListener, String str, ThemeShare themeShare) {
             this.a = onShareListener;
             this.b = str;
             this.c = themeShare;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1399472636")) {
-                ipChange.ipc$dispatch("1399472636", new Object[]{this, c0502e});
+                ipChange.ipc$dispatch("1399472636", new Object[]{this, eVar});
                 return;
             }
             this.a.showLoading(false);
-            if (c0502e == null || (bitmap = c0502e.b) == null) {
+            if (eVar == null || (bitmap = eVar.b) == null) {
                 return;
             }
             try {
@@ -220,13 +214,12 @@ public class s90 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.s90$f */
     /* loaded from: classes5.dex */
-    public static class C9688f {
+    public static class f {
         public final ValueAnimator a;
         public final boolean b;
 
-        public C9688f(ValueAnimator valueAnimator, boolean z) {
+        public f(ValueAnimator valueAnimator, boolean z) {
             this.a = valueAnimator;
             this.b = z;
         }
@@ -241,12 +234,12 @@ public class s90 {
             return;
         }
         Object tag = view.getTag();
-        if (tag instanceof C9688f) {
-            C9688f c9688f = (C9688f) tag;
-            if (c9688f.b == z) {
+        if (tag instanceof f) {
+            f fVar = (f) tag;
+            if (fVar.b == z) {
                 return;
             }
-            c9688f.a.cancel();
+            fVar.a.cancel();
         }
         if (z) {
             ofInt = ValueAnimator.ofInt(0, i);
@@ -259,9 +252,9 @@ public class s90 {
         }
         ofInt.setDuration(300L);
         ofInt.setInterpolator(new LinearInterpolator());
-        ofInt.addUpdateListener(new C9683a(view));
+        ofInt.addUpdateListener(new a(view));
         ofInt.start();
-        view.setTag(new C9688f(ofInt, z));
+        view.setTag(new f(ofInt, z));
     }
 
     @SuppressLint({"NewApi"})
@@ -272,19 +265,19 @@ public class s90 {
             return;
         }
         Object tag = view.getTag();
-        if (tag instanceof C9688f) {
-            C9688f c9688f = (C9688f) tag;
-            if (c9688f.b == z) {
+        if (tag instanceof f) {
+            f fVar = (f) tag;
+            if (fVar.b == z) {
                 return;
             }
-            c9688f.a.cancel();
+            fVar.a.cancel();
         }
         ValueAnimator ofInt = z ? ValueAnimator.ofInt(view.getScrollY(), 0) : ValueAnimator.ofInt(view.getScrollY(), -view.getMeasuredHeight());
         ofInt.setDuration(300L);
         ofInt.setInterpolator(new LinearInterpolator());
-        ofInt.addUpdateListener(new C9684b(view));
+        ofInt.addUpdateListener(new b(view));
         ofInt.start();
-        view.setTag(new C9688f(ofInt, z));
+        view.setTag(new f(ofInt, z));
     }
 
     public static String d() {
@@ -318,15 +311,15 @@ public class s90 {
                         List<BaseSection> sections = it.next().getSections();
                         if (!cb2.d(sections)) {
                             for (BaseSection baseSection : sections) {
-                                if (C9039db.j(baseSection.getComponentId()) && (item = baseSection.getItem()) != null && (jSONArray = item.getJSONArray("card")) != null) {
+                                if (db.j(baseSection.getComponentId()) && (item = baseSection.getItem()) != null && (jSONArray = item.getJSONArray("card")) != null) {
                                     i += jSONArray.size();
                                 }
                             }
                         }
                     }
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
         }
         return i;
@@ -361,8 +354,8 @@ public class s90 {
                 if (childAt != null && layoutManager != null) {
                     return layoutManager.getPosition(childAt) > 8;
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
         }
         return false;
@@ -471,10 +464,10 @@ public class s90 {
             int i = R$id.animation_view_id_after_publish;
             if (frameLayout.findViewById(i) == null) {
                 Context context = frameLayout.getContext();
-                int a = m62.a(context, 160.0f);
-                int a2 = m62.a(context, 214.0f);
+                int a2 = m62.a(context, 160.0f);
+                int a3 = m62.a(context, 214.0f);
                 ImageView imageView = new ImageView(context);
-                FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(a, a2);
+                FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(a2, a3);
                 layoutParams.gravity = 17;
                 imageView.setLayoutParams(layoutParams);
                 imageView.setId(i);
@@ -482,26 +475,26 @@ public class s90 {
                 imageView.setBackgroundResource(R$drawable.icon_tip_after_publish_success);
                 frameLayout.addView(imageView);
                 AnimationSet animationSet = new AnimationSet(false);
-                float f = a / 2;
                 float f2 = a2 / 2;
-                ScaleAnimation scaleAnimation = new ScaleAnimation(0.6f, 1.0f, 0.6f, 1.0f, f, f2);
+                float f3 = a3 / 2;
+                ScaleAnimation scaleAnimation = new ScaleAnimation(0.6f, 1.0f, 0.6f, 1.0f, f2, f3);
                 scaleAnimation.setDuration(300L);
                 animationSet.addAnimation(scaleAnimation);
-                ScaleAnimation scaleAnimation2 = new ScaleAnimation(1.0f, 0.9f, 1.0f, 0.9f, f, f2);
+                ScaleAnimation scaleAnimation2 = new ScaleAnimation(1.0f, 0.9f, 1.0f, 0.9f, f2, f3);
                 scaleAnimation2.setDuration(50L);
                 scaleAnimation2.setStartOffset((int) (0 + scaleAnimation.getDuration()));
                 animationSet.addAnimation(scaleAnimation2);
                 AnimationSet animationSet2 = new AnimationSet(true);
-                ScaleAnimation scaleAnimation3 = new ScaleAnimation(1.0f, 0.2f, 1.0f, 0.2f, a, a2);
+                ScaleAnimation scaleAnimation3 = new ScaleAnimation(1.0f, 0.2f, 1.0f, 0.2f, a2, a3);
                 scaleAnimation3.setDuration(700L);
-                TranslateAnimation translateAnimation = new TranslateAnimation(0.0f, (width - a) / 2, 0.0f, (height - a2) / 2);
+                TranslateAnimation translateAnimation = new TranslateAnimation(0.0f, (width - a2) / 2, 0.0f, (height - a3) / 2);
                 translateAnimation.setDuration(700L);
                 animationSet2.addAnimation(scaleAnimation3);
                 animationSet2.addAnimation(translateAnimation);
                 animationSet2.setInterpolator(new AccelerateInterpolator());
                 animationSet2.setStartOffset(((int) (j + scaleAnimation2.getDuration())) + 300);
                 animationSet.addAnimation(animationSet2);
-                animationSet.setAnimationListener(new animationAnimation$AnimationListenerC9685c(frameLayout));
+                animationSet.setAnimationListener(new c(frameLayout));
                 imageView.startAnimation(animationSet);
             }
         }
@@ -528,8 +521,8 @@ public class s90 {
         } else if (themeShare == null || !themeShare.isValid()) {
         } else {
             String str = themeShare.shareImage;
-            Application a = mu0.a();
-            C0504a.b().f(str, m62.a(a, 111.0f), m62.a(a, 148.0f)).n(new C9687e(onShareListener, str, themeShare)).e(new C9686d(onShareListener)).f();
+            Application a2 = mu0.a();
+            cn.damai.common.image.a.b().f(str, m62.a(a2, 111.0f), m62.a(a2, 148.0f)).n(new e(onShareListener, str, themeShare)).e(new d(onShareListener)).f();
         }
     }
 }

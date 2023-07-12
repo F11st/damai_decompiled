@@ -3,9 +3,9 @@ package com.taobao.android.dinamicx.monitor;
 import android.text.TextUtils;
 import androidx.annotation.NonNull;
 import com.alibaba.fastjson.JSONObject;
-import com.taobao.android.dinamicx.C6368e;
 import com.taobao.android.dinamicx.DXRuntimeContext;
 import com.taobao.android.dinamicx.DinamicXEngine;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.template.download.DXTemplateItem;
 import com.taobao.android.dinamicx.thread.DXMonitorRunnable;
 import com.youku.arch.v3.data.Constants;
@@ -110,28 +110,28 @@ public class DXAppMonitor {
         a = iDXAppMonitor;
     }
 
-    private static void k(@NonNull final C6368e c6368e, final boolean z) {
-        List<C6368e.C6369a> list;
+    private static void k(@NonNull final e eVar, final boolean z) {
+        List<e.a> list;
         try {
-            if (a != null && c6368e != null && c6368e.a != null && (list = c6368e.c) != null && list.size() > 0) {
+            if (a != null && eVar != null && eVar.a != null && (list = eVar.c) != null && list.size() > 0) {
                 y00.g(new DXMonitorRunnable() { // from class: com.taobao.android.dinamicx.monitor.DXAppMonitor.3
                     @Override // java.lang.Runnable
                     public void run() {
-                        C6368e c6368e2 = C6368e.this;
-                        String str = c6368e2.a;
-                        List<C6368e.C6369a> list2 = c6368e2.c;
+                        e eVar2 = e.this;
+                        String str = eVar2.a;
+                        List<e.a> list2 = eVar2.c;
                         int size = list2.size();
                         for (int i = 0; i < size; i++) {
-                            C6368e.C6369a c6369a = list2.get(i);
-                            if (c6369a != null && !TextUtils.isEmpty(c6369a.b)) {
-                                if (c6369a.f == null) {
-                                    c6369a.f = new HashMap();
+                            e.a aVar = list2.get(i);
+                            if (aVar != null && !TextUtils.isEmpty(aVar.b)) {
+                                if (aVar.f == null) {
+                                    aVar.f = new HashMap();
                                 }
-                                c6369a.f.put("eventId", C6368e.this.a());
+                                aVar.f.put("eventId", e.this.a());
                                 if (z) {
-                                    c6369a.c = "SimplePipeline" + c6369a.c;
+                                    aVar.c = "SimplePipeline" + aVar.c;
                                 }
-                                DXAppMonitor.r(str, C6368e.this.b, c6369a.c, c6369a.b, c6369a.f, c6369a.d, c6369a.e, c6369a.a);
+                                DXAppMonitor.r(str, e.this.b, aVar.c, aVar.b, aVar.f, aVar.d, aVar.e, aVar.a);
                             }
                         }
                     }
@@ -205,27 +205,27 @@ public class DXAppMonitor {
         }
     }
 
-    public static void n(@NonNull C6368e c6368e) {
-        o(c6368e, false);
+    public static void n(@NonNull e eVar) {
+        o(eVar, false);
     }
 
-    public static void o(@NonNull C6368e c6368e, boolean z) {
-        k(c6368e, z);
-        u(c6368e, z);
-        RuntimeProfilingInfoCollector.c().a(c6368e, z);
+    public static void o(@NonNull e eVar, boolean z) {
+        k(eVar, z);
+        u(eVar, z);
+        RuntimeProfilingInfoCollector.c().a(eVar, z);
     }
 
     public static void p(DXRuntimeContext dXRuntimeContext, String str, String str2, int i, String str3) {
         try {
-            C6368e c6368e = new C6368e(dXRuntimeContext.getBizType());
+            e eVar = new e(dXRuntimeContext.getBizType());
             if (dXRuntimeContext.getDxError() != null) {
-                c6368e.b(dXRuntimeContext.getDxError().a());
+                eVar.b(dXRuntimeContext.getDxError().a());
             }
-            c6368e.b = dXRuntimeContext.getDxTemplateItem();
-            C6368e.C6369a c6369a = new C6368e.C6369a(str, str2, i);
-            c6369a.e = str3;
-            c6368e.c.add(c6369a);
-            n(c6368e);
+            eVar.b = dXRuntimeContext.getDxTemplateItem();
+            e.a aVar = new e.a(str, str2, i);
+            aVar.e = str3;
+            eVar.c.add(aVar);
+            n(eVar);
         } catch (Throwable th) {
             ry.b(th);
         }
@@ -233,12 +233,12 @@ public class DXAppMonitor {
 
     public static void q(String str, DXTemplateItem dXTemplateItem, String str2, String str3, int i, String str4) {
         try {
-            C6368e c6368e = new C6368e(str);
-            c6368e.b = dXTemplateItem;
-            C6368e.C6369a c6369a = new C6368e.C6369a(str2, str3, i);
-            c6369a.e = str4;
-            c6368e.c.add(c6369a);
-            n(c6368e);
+            e eVar = new e(str);
+            eVar.b = dXTemplateItem;
+            e.a aVar = new e.a(str2, str3, i);
+            aVar.e = str4;
+            eVar.c.add(aVar);
+            n(eVar);
         } catch (Throwable th) {
             ry.b(th);
         }
@@ -271,7 +271,7 @@ public class DXAppMonitor {
         DXUmbrellaUtil.k(i, str, str2, str3, dXTemplateItem, map, d);
     }
 
-    private static void u(@NonNull C6368e c6368e, boolean z) {
-        DXUmbrellaUtil.i(c6368e, z);
+    private static void u(@NonNull e eVar, boolean z) {
+        DXUmbrellaUtil.i(eVar, z);
     }
 }

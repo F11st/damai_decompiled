@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.viewpager.widget.ViewPager;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.homepage.R$array;
@@ -42,12 +42,11 @@ public class MyCollectActivity extends SimpleBaseActivity {
     private MyCollectFragment myCollectFragment;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.mycollect.ui.MyCollectActivity$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1440a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1440a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -62,12 +61,11 @@ public class MyCollectActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.mine.mycollect.ui.MyCollectActivity$b */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1441b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC1441b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -102,7 +100,7 @@ public class MyCollectActivity extends SimpleBaseActivity {
             scrollTitleBean.name = this.mTitles[i];
             arrayList.add(scrollTitleBean);
         }
-        this.mTitleScroll.setFontColor(R$color.color_000000, R$color.color_666666).setFontSize(16, 16).setTitle(arrayList).setHeight(44).setOnTitleClickListener(new View$OnClickListenerC1441b()).commit();
+        this.mTitleScroll.setFontColor(R$color.color_000000, R$color.color_666666).setFontSize(16, 16).setTitle(arrayList).setHeight(44).setOnTitleClickListener(new b()).commit();
     }
 
     private void initTitleView() {
@@ -111,7 +109,7 @@ public class MyCollectActivity extends SimpleBaseActivity {
             ipChange.ipc$dispatch("-988341276", new Object[]{this});
             return;
         }
-        findViewById(R$id.icon_left_icon).setOnClickListener(new View$OnClickListenerC1440a());
+        findViewById(R$id.icon_left_icon).setOnClickListener(new a());
         ((TextView) findViewById(R$id.tv_header_title)).setText("想看的演出");
         View findViewById = findViewById(R$id.status_bar_space);
         if (Build.VERSION.SDK_INT >= 23) {
@@ -174,9 +172,9 @@ public class MyCollectActivity extends SimpleBaseActivity {
                     }
                     MyCollectActivity.this.mTitleScroll.selectTitle(i);
                     if (i == 0) {
-                        C0529c.e().x(hi1.m().p(0, MyCollectActivity.this.mTitles[0]));
+                        c.e().x(hi1.m().p(0, MyCollectActivity.this.mTitles[0]));
                     } else {
-                        C0529c.e().x(hi1.m().p(1, MyCollectActivity.this.mTitles[1]));
+                        c.e().x(hi1.m().p(1, MyCollectActivity.this.mTitles[1]));
                     }
                 }
             });

@@ -6,10 +6,10 @@ import android.os.Looper;
 import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
-import com.youku.e.C7901a;
-import com.youku.player.util.C8063c;
-import com.youku.player.util.C8064d;
-import com.youku.player.util.C8070g;
+import com.youku.e.a;
+import com.youku.player.util.c;
+import com.youku.player.util.d;
+import com.youku.player.util.g;
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
 import java.util.Map;
@@ -51,7 +51,7 @@ public class NetCacheSource {
                 if (NetCacheSource.this.mOnPreLoadDoneListener != null) {
                     NetCacheSource.this.mOnPreLoadDoneListener.onPreloadFail("");
                 }
-            } else if (C8063c.d) {
+            } else if (c.d) {
                 Log.e(NetCacheSource.TAG, "Unknown message type " + message.what);
             }
         }
@@ -76,7 +76,7 @@ public class NetCacheSource {
         }
         wk = new WeakReference<>(this);
         try {
-            this.preLoadCachesize = Integer.parseInt(C8064d.a().a("youku_player_config", "feedpreLoadCachesize", "400")) * 1024;
+            this.preLoadCachesize = Integer.parseInt(d.a().a("youku_player_config", "feedpreLoadCachesize", "400")) * 1024;
         } catch (Exception unused) {
             this.preLoadCachesize = 409600;
         }
@@ -91,10 +91,10 @@ public class NetCacheSource {
     public static String getInitPath() {
         if (cachePath == null) {
             try {
-                if (!"mounted".equals(Environment.getExternalStorageState()) || C7901a.a.getExternalCacheDir() == null) {
+                if (!"mounted".equals(Environment.getExternalStorageState()) || a.a.getExternalCacheDir() == null) {
                     Log.d(TAG, "not mounted");
                 } else {
-                    String absolutePath = C7901a.a.getExternalCacheDir().getAbsolutePath();
+                    String absolutePath = a.a.getExternalCacheDir().getAbsolutePath();
                     Log.d(TAG, "getExternalCacheDir().getAbsolutePath():" + absolutePath);
                     cachePath = absolutePath + "/youku_video_cache";
                 }
@@ -114,10 +114,10 @@ public class NetCacheSource {
     public static String getP2pCachePath() {
         if (p2pPath == null) {
             try {
-                if (!"mounted".equals(Environment.getExternalStorageState()) || C7901a.a.getExternalCacheDir() == null) {
+                if (!"mounted".equals(Environment.getExternalStorageState()) || a.a.getExternalCacheDir() == null) {
                     Log.d(TAG, "not mounted");
                 } else {
-                    String absolutePath = C7901a.a.getExternalCacheDir().getAbsolutePath();
+                    String absolutePath = a.a.getExternalCacheDir().getAbsolutePath();
                     Log.d(TAG, "getExternalCacheDir().getAbsolutePath():" + absolutePath);
                     p2pPath = absolutePath + "/youku_p2p_cache";
                 }
@@ -138,10 +138,10 @@ public class NetCacheSource {
         String str;
         long j = 0;
         try {
-            if (!"mounted".equals(Environment.getExternalStorageState()) || C7901a.a.getExternalCacheDir() == null) {
+            if (!"mounted".equals(Environment.getExternalStorageState()) || a.a.getExternalCacheDir() == null) {
                 str = "not mounted";
             } else {
-                j = (long) (((C8070g.a() * 0.04d) / 1024.0d) / 1024.0d);
+                j = (long) (((g.a() * 0.04d) / 1024.0d) / 1024.0d);
                 str = "size:" + j;
             }
             Log.d(TAG, str);
@@ -152,9 +152,9 @@ public class NetCacheSource {
         try {
             native_preload_init(getInitPath(), j, getPath(), 50L);
         } catch (UnsatisfiedLinkError unused) {
-            C8063c.b(TAG, "re-loadLibrary");
+            c.b(TAG, "re-loadLibrary");
             System.loadLibrary(AliMediaPlayer.ALIPLAYER);
-            if (C8070g.c()) {
+            if (g.c()) {
                 return;
             }
             System.loadLibrary(AliMediaPlayer.UPLAYER24);
@@ -184,8 +184,8 @@ public class NetCacheSource {
     }
 
     private static void preLoadCallbackFromNative(int i, int i2, int i3, Object obj) {
-        if (C8063c.d) {
-            C8063c.a(TAG, "preLoadCallbackFromNative() called with: what = [" + i + "], arg1 = [" + i2 + "], arg2 = [" + i3 + "], obj = [" + obj + jn1.ARRAY_END_STR);
+        if (c.d) {
+            c.a(TAG, "preLoadCallbackFromNative() called with: what = [" + i + "], arg1 = [" + i2 + "], arg2 = [" + i3 + "], obj = [" + obj + jn1.ARRAY_END_STR);
         }
         Message obtain = Message.obtain();
         obtain.what = i2;

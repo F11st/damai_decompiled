@@ -18,14 +18,13 @@ public abstract class FileUtil {
     public static ScheduledExecutorService b = Executors.newSingleThreadScheduledExecutor();
 
     /* compiled from: Taobao */
-    /* renamed from: com.huawei.hms.utils.FileUtil$a */
     /* loaded from: classes10.dex */
-    public static class RunnableC5733a implements Runnable {
+    public static class a implements Runnable {
         public final /* synthetic */ File a;
         public final /* synthetic */ long b;
         public final /* synthetic */ String c;
 
-        public RunnableC5733a(File file, long j, String str) {
+        public a(File file, long j, String str) {
             this.a = file;
             this.b = j;
             this.c = str;
@@ -87,7 +86,7 @@ public abstract class FileUtil {
     }
 
     public static void writeFile(File file, String str, long j) {
-        b.execute(new RunnableC5733a(file, j, str));
+        b.execute(new a(file, j, str));
     }
 
     public static void writeFileReport(Context context, File file, File file2, String str, long j, int i) {

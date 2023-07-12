@@ -29,21 +29,20 @@ public class WXParallax extends WXDiv implements ICheckBindingScroller, OnWXScro
     public static final String PARALLAX = "parallax";
     public static final String WX_OPACITY = "opacity";
     public static final String WX_TRANSFORM = "transform";
-    C3031b mBackgroundColor;
+    b mBackgroundColor;
     String mBindingRef;
     private float mOffsetY;
     private Integer mPreBackGroundColor;
-    ArrayList<C3032c> mTransformPropArrayList;
+    ArrayList<c> mTransformPropArrayList;
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.component.WXParallax$b */
     /* loaded from: classes15.dex */
-    public class C3031b {
+    public class b {
         int[] a;
         int[] b;
 
-        private C3031b() {
+        private b() {
         }
 
         int a(int i, int i2) {
@@ -81,9 +80,8 @@ public class WXParallax extends WXDiv implements ICheckBindingScroller, OnWXScro
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.component.WXParallax$c */
     /* loaded from: classes15.dex */
-    public class C3032c {
+    public class c {
         String a;
         float[] b;
         float[] c;
@@ -94,7 +92,7 @@ public class WXParallax extends WXDiv implements ICheckBindingScroller, OnWXScro
         float h;
         float i;
 
-        C3032c(String str, JSONObject jSONObject) {
+        c(String str, JSONObject jSONObject) {
             this.a = str;
             JSONArray jSONArray = jSONObject.getJSONArray("in");
             int size = jSONArray.size();
@@ -301,7 +299,7 @@ public class WXParallax extends WXDiv implements ICheckBindingScroller, OnWXScro
         if (TextUtils.isEmpty(str) || (parseObject = JSON.parseObject(str)) == null) {
             return;
         }
-        this.mBackgroundColor = new C3031b();
+        this.mBackgroundColor = new b();
         JSONArray jSONArray = parseObject.getJSONArray("in");
         this.mBackgroundColor.a = new int[jSONArray.size()];
         for (int i = 0; i < jSONArray.size(); i++) {
@@ -321,7 +319,7 @@ public class WXParallax extends WXDiv implements ICheckBindingScroller, OnWXScro
         }
         JSONObject parseObject = JSON.parseObject(str);
         if (parseObject != null) {
-            this.mTransformPropArrayList.add(new C3032c("opacity", parseObject));
+            this.mTransformPropArrayList.add(new c("opacity", parseObject));
         }
     }
 
@@ -334,7 +332,7 @@ public class WXParallax extends WXDiv implements ICheckBindingScroller, OnWXScro
         if (parseArray != null) {
             for (int i = 0; i < parseArray.size(); i++) {
                 JSONObject jSONObject = parseArray.getJSONObject(i);
-                this.mTransformPropArrayList.add(i, new C3032c(jSONObject.getString("type"), jSONObject));
+                this.mTransformPropArrayList.add(i, new c(jSONObject.getString("type"), jSONObject));
             }
         }
     }
@@ -360,17 +358,17 @@ public class WXParallax extends WXDiv implements ICheckBindingScroller, OnWXScro
         float f = i2;
         this.mOffsetY += f;
         if (getHostView() != 0) {
-            Iterator<C3032c> it = this.mTransformPropArrayList.iterator();
+            Iterator<c> it = this.mTransformPropArrayList.iterator();
             while (it.hasNext()) {
                 it.next().a(i, f);
             }
-            C3031b c3031b = this.mBackgroundColor;
-            if (c3031b != null) {
-                int a = c3031b.a(i, i2);
+            b bVar = this.mBackgroundColor;
+            if (bVar != null) {
+                int a2 = bVar.a(i, i2);
                 Integer num = this.mPreBackGroundColor;
-                if (num == null || num.intValue() != a) {
-                    ((WXFrameLayout) getHostView()).setBackgroundColor(a);
-                    this.mPreBackGroundColor = Integer.valueOf(a);
+                if (num == null || num.intValue() != a2) {
+                    ((WXFrameLayout) getHostView()).setBackgroundColor(a2);
+                    this.mPreBackGroundColor = Integer.valueOf(a2);
                 }
             }
         }

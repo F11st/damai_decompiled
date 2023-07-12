@@ -1,7 +1,7 @@
 package kotlin.reflect.jvm.internal.impl.resolve;
 
 import java.util.Collection;
-import kotlin.collections.C8212k;
+import kotlin.collections.k;
 import kotlin.jvm.JvmOverloads;
 import kotlin.jvm.functions.Function2;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableDescriptor;
@@ -77,7 +77,7 @@ public final class DescriptorEquivalenceForOverrides {
             }
             Collection<? extends CallableMemberDescriptor> overriddenDescriptors = callableMemberDescriptor.getOverriddenDescriptors();
             b41.h(overriddenDescriptors, "overriddenDescriptors");
-            callableDescriptor = (CallableMemberDescriptor) C8212k.r0(overriddenDescriptors);
+            callableDescriptor = (CallableMemberDescriptor) k.r0(overriddenDescriptors);
             if (callableDescriptor == null) {
                 return null;
             }
@@ -151,7 +151,7 @@ public final class DescriptorEquivalenceForOverrides {
             return h(this, (TypeParameterDescriptor) declarationDescriptor, (TypeParameterDescriptor) declarationDescriptor2, z, null, 8, null);
         }
         if ((declarationDescriptor instanceof CallableDescriptor) && (declarationDescriptor2 instanceof CallableDescriptor)) {
-            return b(this, (CallableDescriptor) declarationDescriptor, (CallableDescriptor) declarationDescriptor2, z, z2, false, b81.C8955a.INSTANCE, 16, null);
+            return b(this, (CallableDescriptor) declarationDescriptor, (CallableDescriptor) declarationDescriptor2, z, z2, false, b81.a.INSTANCE, 16, null);
         }
         return ((declarationDescriptor instanceof PackageFragmentDescriptor) && (declarationDescriptor2 instanceof PackageFragmentDescriptor)) ? b41.d(((PackageFragmentDescriptor) declarationDescriptor).getFqName(), ((PackageFragmentDescriptor) declarationDescriptor2).getFqName()) : b41.d(declarationDescriptor, declarationDescriptor2);
     }

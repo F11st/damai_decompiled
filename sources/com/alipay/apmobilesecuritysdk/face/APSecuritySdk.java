@@ -1,17 +1,14 @@
 package com.alipay.apmobilesecuritysdk.face;
 
 import android.content.Context;
-import com.alipay.apmobilesecuritysdk.a.C4095a;
-import com.alipay.apmobilesecuritysdk.b.C4096a;
-import com.alipay.apmobilesecuritysdk.e.C4105a;
-import com.alipay.apmobilesecuritysdk.e.C4108d;
-import com.alipay.apmobilesecuritysdk.e.C4111g;
-import com.alipay.apmobilesecuritysdk.e.C4112h;
-import com.alipay.apmobilesecuritysdk.e.C4113i;
-import com.alipay.apmobilesecuritysdk.f.C4115b;
+import com.alipay.apmobilesecuritysdk.a.a;
+import com.alipay.apmobilesecuritysdk.e.d;
+import com.alipay.apmobilesecuritysdk.e.g;
+import com.alipay.apmobilesecuritysdk.e.h;
+import com.alipay.apmobilesecuritysdk.e.i;
+import com.alipay.apmobilesecuritysdk.f.b;
 import com.alipay.apmobilesecuritysdk.otherid.UmidSdkWrapper;
 import com.alipay.apmobilesecuritysdk.otherid.UtdidWrapper;
-import com.alipay.sdk.m.z.C4368a;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -60,8 +57,8 @@ public class APSecuritySdk {
     }
 
     public String getApdidToken() {
-        String a2 = C4095a.a(this.b, "");
-        if (C4368a.a(a2)) {
+        String a2 = a.a(this.b, "");
+        if (com.alipay.sdk.m.z.a.a(a2)) {
             initToken(0, new HashMap(), null);
         }
         return a2;
@@ -79,11 +76,11 @@ public class APSecuritySdk {
         TokenResult tokenResult;
         tokenResult = new TokenResult();
         try {
-            tokenResult.apdidToken = C4095a.a(this.b, "");
-            tokenResult.clientKey = C4112h.f(this.b);
-            tokenResult.apdid = C4095a.a(this.b);
+            tokenResult.apdidToken = a.a(this.b, "");
+            tokenResult.clientKey = h.f(this.b);
+            tokenResult.apdid = a.a(this.b);
             tokenResult.umidToken = UmidSdkWrapper.getSecurityToken(this.b);
-            if (C4368a.a(tokenResult.apdid) || C4368a.a(tokenResult.apdidToken) || C4368a.a(tokenResult.clientKey)) {
+            if (com.alipay.sdk.m.z.a.a(tokenResult.apdid) || com.alipay.sdk.m.z.a.a(tokenResult.apdidToken) || com.alipay.sdk.m.z.a.a(tokenResult.clientKey)) {
                 initToken(0, new HashMap(), null);
             }
         } catch (Throwable unused) {
@@ -92,22 +89,22 @@ public class APSecuritySdk {
     }
 
     public void initToken(int i, Map<String, String> map, final InitResultListener initResultListener) {
-        C4096a.a().a(i);
-        String b = C4112h.b(this.b);
-        String c2 = C4096a.a().c();
-        if (C4368a.b(b) && !C4368a.a(b, c2)) {
-            C4105a.a(this.b);
-            C4108d.a(this.b);
-            C4111g.a(this.b);
-            C4113i.h();
+        com.alipay.apmobilesecuritysdk.b.a.a().a(i);
+        String b = h.b(this.b);
+        String c2 = com.alipay.apmobilesecuritysdk.b.a.a().c();
+        if (com.alipay.sdk.m.z.a.b(b) && !com.alipay.sdk.m.z.a.a(b, c2)) {
+            com.alipay.apmobilesecuritysdk.e.a.a(this.b);
+            d.a(this.b);
+            g.a(this.b);
+            i.h();
         }
-        if (!C4368a.a(b, c2)) {
-            C4112h.c(this.b, c2);
+        if (!com.alipay.sdk.m.z.a.a(b, c2)) {
+            h.c(this.b, c2);
         }
-        String a2 = C4368a.a(map, "utdid", "");
-        String a3 = C4368a.a(map, "tid", "");
-        String a4 = C4368a.a(map, "userId", "");
-        if (C4368a.a(a2)) {
+        String a2 = com.alipay.sdk.m.z.a.a(map, "utdid", "");
+        String a3 = com.alipay.sdk.m.z.a.a(map, "tid", "");
+        String a4 = com.alipay.sdk.m.z.a.a(map, "userId", "");
+        if (com.alipay.sdk.m.z.a.a(a2)) {
             a2 = UtdidWrapper.getUtdid(this.b);
         }
         final HashMap hashMap = new HashMap();
@@ -118,10 +115,10 @@ public class APSecuritySdk {
         hashMap.put("appKeyClient", "");
         hashMap.put("appchannel", "");
         hashMap.put("rpcVersion", "8");
-        C4115b.a().a(new Runnable() { // from class: com.alipay.apmobilesecuritysdk.face.APSecuritySdk.1
+        b.a().a(new Runnable() { // from class: com.alipay.apmobilesecuritysdk.face.APSecuritySdk.1
             @Override // java.lang.Runnable
             public void run() {
-                new C4095a(APSecuritySdk.this.b).a(hashMap);
+                new a(APSecuritySdk.this.b).a(hashMap);
                 InitResultListener initResultListener2 = initResultListener;
                 if (initResultListener2 != null) {
                     initResultListener2.onResult(APSecuritySdk.this.getTokenResult());

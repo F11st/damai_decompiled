@@ -1,7 +1,7 @@
 package com.alient.oneservice.appinfo;
 
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -11,7 +11,7 @@ public class AppInfoProviderProxy {
     public static String getCityId() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.alient.oneservice.provider.impl.appinfo.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.alient.oneservice.provider.impl.appinfo.AppInfoProviderImpl").b().f();
             }
             return sProxy.getCityId();
         } catch (Throwable th) {
@@ -23,7 +23,7 @@ public class AppInfoProviderProxy {
     public static String getComboChannel() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.alient.oneservice.provider.impl.appinfo.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.alient.oneservice.provider.impl.appinfo.AppInfoProviderImpl").b().f();
             }
             return sProxy.getComboChannel();
         } catch (Throwable th) {
@@ -34,7 +34,7 @@ public class AppInfoProviderProxy {
 
     public static AppInfoProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (AppInfoProvider) C8883a.j("com.alient.oneservice.provider.impl.appinfo.AppInfoProviderImpl").b().f();
+            sProxy = (AppInfoProvider) a.j("com.alient.oneservice.provider.impl.appinfo.AppInfoProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -42,7 +42,7 @@ public class AppInfoProviderProxy {
     public static String getTTID() {
         try {
             if (sProxy == null) {
-                sProxy = (AppInfoProvider) C8883a.j("com.alient.oneservice.provider.impl.appinfo.AppInfoProviderImpl").b().f();
+                sProxy = (AppInfoProvider) a.j("com.alient.oneservice.provider.impl.appinfo.AppInfoProviderImpl").b().f();
             }
             return sProxy.getTTID();
         } catch (Throwable th) {

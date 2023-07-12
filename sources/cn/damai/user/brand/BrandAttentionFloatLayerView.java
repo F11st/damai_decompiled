@@ -11,7 +11,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -52,12 +51,11 @@ public class BrandAttentionFloatLayerView extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.brand.BrandAttentionFloatLayerView$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2673a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2673a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -72,12 +70,11 @@ public class BrandAttentionFloatLayerView extends RelativeLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.brand.BrandAttentionFloatLayerView$b */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2674b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2674b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -139,7 +136,7 @@ public class BrandAttentionFloatLayerView extends RelativeLayout {
         TextView textView = this.tvBrandIntroduce;
         textView.setText("关注“" + str + "” 享受粉丝福利");
         this.attentionAction.setText(str2);
-        DMImageCreator c = C0504a.b().c(str3);
+        DMImageCreator c = cn.damai.common.image.a.b().c(str3);
         int i = R$drawable.uikit_default_image_bg_gradient;
         c.i(i).c(i).g(this.brandIcon);
         ns.c(this.brandIconShadow, 2, Color.parseColor("#00000000"), t60.a(this.context, 10.0f), Color.parseColor("#1A000000"), t60.a(this.context, 10.0f), t60.a(this.context, 10.0f), t60.a(this.context, 10.0f));
@@ -148,8 +145,8 @@ public class BrandAttentionFloatLayerView extends RelativeLayout {
         this.tvTroTwo.setText("上新通知");
         this.tvTroThree.setText("低价活动预告");
         if (this.callBack != null) {
-            this.attentionAction.setOnClickListener(new View$OnClickListenerC2673a());
-            this.close.setOnClickListener(new View$OnClickListenerC2674b());
+            this.attentionAction.setOnClickListener(new a());
+            this.close.setOnClickListener(new b());
         }
     }
 

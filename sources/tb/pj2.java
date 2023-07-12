@@ -1,7 +1,6 @@
 package tb;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import kotlin.text.C8603n;
 import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
@@ -15,7 +14,7 @@ public final /* synthetic */ class pj2 {
         Long k;
         String d = nj2.d(str);
         if (d != null) {
-            k = C8603n.k(d);
+            k = kotlin.text.n.k(d);
             if (k == null) {
                 throw new IllegalStateException(("System property '" + str + "' has unrecognized value '" + d + '\'').toString());
             }

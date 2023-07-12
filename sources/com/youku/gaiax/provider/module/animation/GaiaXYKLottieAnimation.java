@@ -2,17 +2,17 @@ package com.youku.gaiax.provider.module.animation;
 
 import android.animation.Animator;
 import android.view.View;
-import com.airbnb.lottie.C2821a;
-import com.airbnb.lottie.C2861b;
 import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.LottieListener;
 import com.airbnb.lottie.LottieTask;
+import com.airbnb.lottie.a;
+import com.airbnb.lottie.b;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.gaiax.GXTemplateEngine;
 import java.util.Objects;
 import kotlin.Metadata;
-import kotlin.text.C8604o;
 import kotlin.text.StringsKt__StringsKt;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -29,7 +29,7 @@ public final class GaiaXYKLottieAnimation extends mr0 {
     private final String localAppendJson(String str) {
         boolean p;
         if (str != null) {
-            p = C8604o.p(str, ".json", false, 2, null);
+            p = o.p(str, ".json", false, 2, null);
             return !p ? b41.r(str, ".json") : str;
         }
         return str;
@@ -69,39 +69,39 @@ public final class GaiaXYKLottieAnimation extends mr0 {
                 lottieAnimationView.removeAllUpdateListeners();
                 lottieAnimationView.removeAllLottieOnCompositionLoadedListener();
                 lottieAnimationView.setProgress(1.0f);
-                GXTemplateEngine.C3346h p = os0Var.p();
+                GXTemplateEngine.h p = os0Var.p();
                 if (p == null || (c = p.c()) == null) {
                     return;
                 }
-                GXTemplateEngine.C3338b c3338b = new GXTemplateEngine.C3338b();
+                GXTemplateEngine.b bVar = new GXTemplateEngine.b();
                 qr0 qr0Var2 = qr0.this;
                 LottieAnimationView lottieAnimationView2 = lottieAnimationView;
                 JSONObject jSONObject3 = jSONObject2;
-                c3338b.h(GXTemplateEngine.C3338b.STATE_END);
-                c3338b.g(qr0Var2.g());
-                c3338b.i(lottieAnimationView2);
-                c3338b.e(jSONObject3);
+                bVar.h(GXTemplateEngine.b.STATE_END);
+                bVar.g(qr0Var2.g());
+                bVar.i(lottieAnimationView2);
+                bVar.e(jSONObject3);
                 wt2 wt2Var = wt2.INSTANCE;
-                c.onAnimationEvent(c3338b);
+                c.onAnimationEvent(bVar);
             }
 
             @Override // tb.tq0, android.animation.Animator.AnimatorListener
             public void onAnimationStart(@Nullable Animator animator) {
                 GXTemplateEngine.GXIEventListener c;
-                GXTemplateEngine.C3346h p = os0Var.p();
+                GXTemplateEngine.h p = os0Var.p();
                 if (p == null || (c = p.c()) == null) {
                     return;
                 }
-                GXTemplateEngine.C3338b c3338b = new GXTemplateEngine.C3338b();
+                GXTemplateEngine.b bVar = new GXTemplateEngine.b();
                 qr0 qr0Var2 = qr0.this;
                 LottieAnimationView lottieAnimationView2 = lottieAnimationView;
                 JSONObject jSONObject3 = jSONObject2;
-                c3338b.h(GXTemplateEngine.C3338b.STATE_START);
-                c3338b.g(qr0Var2.g());
-                c3338b.i(lottieAnimationView2);
-                c3338b.e(jSONObject3);
+                bVar.h(GXTemplateEngine.b.STATE_START);
+                bVar.g(qr0Var2.g());
+                bVar.i(lottieAnimationView2);
+                bVar.e(jSONObject3);
                 wt2 wt2Var = wt2.INSTANCE;
-                c.onAnimationEvent(c3338b);
+                c.onAnimationEvent(bVar);
             }
         });
         lottieAnimationView.setClickable(false);
@@ -122,13 +122,13 @@ public final class GaiaXYKLottieAnimation extends mr0 {
         lottieAnimationView.removeAllUpdateListeners();
         lottieAnimationView.removeAllLottieOnCompositionLoadedListener();
         qr0Var.N(true);
-        final LottieTask<C2821a> s = C2861b.s(lottieAnimationView.getContext(), str);
-        s.f(new LottieListener<C2821a>() { // from class: com.youku.gaiax.provider.module.animation.GaiaXYKLottieAnimation$remotePlay$1
+        final LottieTask<a> s = b.s(lottieAnimationView.getContext(), str);
+        s.f(new LottieListener<a>() { // from class: com.youku.gaiax.provider.module.animation.GaiaXYKLottieAnimation$remotePlay$1
             @Override // com.airbnb.lottie.LottieListener
-            public void onResult(@Nullable C2821a c2821a) {
+            public void onResult(@Nullable a aVar) {
                 s.k(this);
-                qr0Var.N(c2821a != null);
-                if (c2821a == null) {
+                qr0Var.N(aVar != null);
+                if (aVar == null) {
                     return;
                 }
                 final LottieAnimationView lottieAnimationView2 = lottieAnimationView;
@@ -137,7 +137,7 @@ public final class GaiaXYKLottieAnimation extends mr0 {
                 final os0 os0Var2 = os0Var;
                 final JSONObject jSONObject3 = jSONObject2;
                 final JSONObject jSONObject4 = jSONObject;
-                lottieAnimationView2.setComposition(c2821a);
+                lottieAnimationView2.setComposition(aVar);
                 lottieAnimationView2.setRepeatCount(i2);
                 lottieAnimationView2.addAnimatorListener(new tq0() { // from class: com.youku.gaiax.provider.module.animation.GaiaXYKLottieAnimation$remotePlay$1$onResult$1$1
                     @Override // tb.tq0, android.animation.Animator.AnimatorListener
@@ -148,44 +148,44 @@ public final class GaiaXYKLottieAnimation extends mr0 {
                         lottieAnimationView2.removeAllUpdateListeners();
                         lottieAnimationView2.removeAllLottieOnCompositionLoadedListener();
                         lottieAnimationView2.setProgress(1.0f);
-                        GXTemplateEngine.C3346h p = os0Var2.p();
+                        GXTemplateEngine.h p = os0Var2.p();
                         if (p == null || (c = p.c()) == null) {
                             return;
                         }
-                        GXTemplateEngine.C3338b c3338b = new GXTemplateEngine.C3338b();
+                        GXTemplateEngine.b bVar = new GXTemplateEngine.b();
                         qr0 qr0Var3 = qr0.this;
                         LottieAnimationView lottieAnimationView3 = lottieAnimationView2;
                         JSONObject jSONObject5 = jSONObject3;
                         JSONObject jSONObject6 = jSONObject4;
-                        c3338b.h(GXTemplateEngine.C3338b.STATE_END);
-                        c3338b.g(qr0Var3.g());
-                        c3338b.i(lottieAnimationView3);
-                        c3338b.e(jSONObject5);
-                        c3338b.f(jSONObject6);
+                        bVar.h(GXTemplateEngine.b.STATE_END);
+                        bVar.g(qr0Var3.g());
+                        bVar.i(lottieAnimationView3);
+                        bVar.e(jSONObject5);
+                        bVar.f(jSONObject6);
                         wt2 wt2Var = wt2.INSTANCE;
-                        c.onAnimationEvent(c3338b);
+                        c.onAnimationEvent(bVar);
                     }
 
                     @Override // tb.tq0, android.animation.Animator.AnimatorListener
                     public void onAnimationStart(@Nullable Animator animator) {
                         GXTemplateEngine.GXIEventListener c;
                         qr0.this.N(true);
-                        GXTemplateEngine.C3346h p = os0Var2.p();
+                        GXTemplateEngine.h p = os0Var2.p();
                         if (p == null || (c = p.c()) == null) {
                             return;
                         }
-                        GXTemplateEngine.C3338b c3338b = new GXTemplateEngine.C3338b();
+                        GXTemplateEngine.b bVar = new GXTemplateEngine.b();
                         qr0 qr0Var3 = qr0.this;
                         LottieAnimationView lottieAnimationView3 = lottieAnimationView2;
                         JSONObject jSONObject5 = jSONObject3;
                         JSONObject jSONObject6 = jSONObject4;
-                        c3338b.h(GXTemplateEngine.C3338b.STATE_START);
-                        c3338b.g(qr0Var3.g());
-                        c3338b.i(lottieAnimationView3);
-                        c3338b.e(jSONObject5);
-                        c3338b.f(jSONObject6);
+                        bVar.h(GXTemplateEngine.b.STATE_START);
+                        bVar.g(qr0Var3.g());
+                        bVar.i(lottieAnimationView3);
+                        bVar.e(jSONObject5);
+                        bVar.f(jSONObject6);
                         wt2 wt2Var = wt2.INSTANCE;
-                        c.onAnimationEvent(c3338b);
+                        c.onAnimationEvent(bVar);
                     }
                 });
                 lottieAnimationView2.setClickable(false);

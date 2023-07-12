@@ -39,12 +39,11 @@ public class ProjectNoticeMatterFragment extends DamaiBaseMvpFragment {
     private ViewPager viewPager;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectNoticeMatterFragment$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2329a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2329a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -59,12 +58,11 @@ public class ProjectNoticeMatterFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectNoticeMatterFragment$b */
     /* loaded from: classes8.dex */
-    public class C2330b implements AnchorIndicatorView.OnAnchorItemClickListener {
+    public class b implements AnchorIndicatorView.OnAnchorItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2330b() {
+        b() {
         }
 
         @Override // cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.view.AnchorIndicatorView.OnAnchorItemClickListener
@@ -100,7 +98,7 @@ public class ProjectNoticeMatterFragment extends DamaiBaseMvpFragment {
         if (AndroidInstantRuntime.support(ipChange, "-511593689")) {
             ipChange.ipc$dispatch("-511593689", new Object[]{this});
         } else {
-            this.mOnCompleteClickListener = new View$OnClickListenerC2329a();
+            this.mOnCompleteClickListener = new a();
         }
     }
 
@@ -188,7 +186,7 @@ public class ProjectNoticeMatterFragment extends DamaiBaseMvpFragment {
             ipChange.ipc$dispatch("-89413902", new Object[]{this});
             return;
         }
-        this.mAnchorIndicator.setOnAnchorItemClickListener(new C2330b());
+        this.mAnchorIndicator.setOnAnchorItemClickListener(new b());
         this.tvComplete.setOnClickListener(this.mOnCompleteClickListener);
         this.viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() { // from class: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.fragment.ProjectNoticeMatterFragment.3
             private static transient /* synthetic */ IpChange $ipChange;

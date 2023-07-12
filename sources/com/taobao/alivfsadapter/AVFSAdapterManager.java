@@ -4,13 +4,13 @@ import android.app.Application;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
-import com.taobao.alivfsadapter.database.alidb.C6251a;
+import com.taobao.alivfsadapter.database.alidb.a;
 import com.taobao.android.alivfsdb.AliDBLogger;
-import tb.AbstractC9293j0;
-import tb.C9064e0;
-import tb.C9121f0;
-import tb.C9328k0;
-import tb.C9393l0;
+import tb.e0;
+import tb.f0;
+import tb.j0;
+import tb.k0;
+import tb.l0;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
@@ -24,7 +24,7 @@ public class AVFSAdapterManager {
         @Override // java.lang.Runnable
         public void run() {
             synchronized (AVFSAdapterManager.this.e) {
-                AVFSAdapterManager.this.d(C9121f0.a(), null, null);
+                AVFSAdapterManager.this.d(f0.a(), null, null);
                 AVFSAdapterManager.this.e.notify();
             }
         }
@@ -41,24 +41,24 @@ public class AVFSAdapterManager {
         return aVFSAdapterManager;
     }
 
-    private void h(Application application, AVFSSDKAppMonitor aVFSSDKAppMonitor, AbstractC9293j0 abstractC9293j0) {
+    private void h(Application application, AVFSSDKAppMonitor aVFSSDKAppMonitor, j0 j0Var) {
         this.d = application;
         if (aVFSSDKAppMonitor == null) {
             try {
-                this.b = new C9393l0();
+                this.b = new l0();
             } catch (ClassNotFoundException unused) {
             }
         } else {
             this.b = aVFSSDKAppMonitor;
         }
-        if (abstractC9293j0 == null) {
+        if (j0Var == null) {
             try {
                 Class.forName("com.taobao.android.alivfsdb.AliDB");
-                new C9064e0();
-                AliDBLogger.logger = new C6251a();
+                new e0();
+                AliDBLogger.logger = new a();
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
-                new C9328k0();
+                new k0();
             }
         }
         this.a = this.d != null;
@@ -89,15 +89,15 @@ public class AVFSAdapterManager {
             }
             return;
         }
-        d(C9121f0.a(), null, null);
+        d(f0.a(), null, null);
     }
 
     public void c(Application application) {
         d(application, null, null);
     }
 
-    public synchronized void d(Application application, AVFSSDKAppMonitor aVFSSDKAppMonitor, AbstractC9293j0 abstractC9293j0) {
-        h(application, aVFSSDKAppMonitor, abstractC9293j0);
+    public synchronized void d(Application application, AVFSSDKAppMonitor aVFSSDKAppMonitor, j0 j0Var) {
+        h(application, aVFSSDKAppMonitor, j0Var);
     }
 
     public Application e() {

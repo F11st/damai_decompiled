@@ -11,18 +11,17 @@ public enum ReportLevel {
     STRICT("strict");
     
     @NotNull
-    public static final C8332a Companion = new C8332a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final String description;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.ReportLevel$a */
     /* loaded from: classes3.dex */
-    public static final class C8332a {
-        private C8332a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C8332a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

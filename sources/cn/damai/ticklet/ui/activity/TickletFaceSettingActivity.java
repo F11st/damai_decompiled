@@ -13,8 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import cn.damai.common.app.widget.DMDialog;
-import cn.damai.common.user.C0525a;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.a;
 import cn.damai.member.R$id;
 import cn.damai.member.R$layout;
 import cn.damai.member.R$string;
@@ -50,12 +49,11 @@ public class TickletFaceSettingActivity extends TickletBaseActivity implements T
     private TextView mTvtitle;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TickletFaceSettingActivity$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2027a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2027a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -70,12 +68,11 @@ public class TickletFaceSettingActivity extends TickletBaseActivity implements T
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TickletFaceSettingActivity$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2028b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2028b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -85,19 +82,18 @@ public class TickletFaceSettingActivity extends TickletBaseActivity implements T
                 ipChange.ipc$dispatch("1701122737", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(un2.k().C());
+            cn.damai.common.user.c.e().x(un2.k().C());
             TickletFaceSettingActivity.this.showFaceFunctionIntroduceDialog();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TickletFaceSettingActivity$c */
     /* loaded from: classes16.dex */
-    public class DialogInterface$OnClickListenerC2029c implements DialogInterface.OnClickListener {
+    public class c implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ TickletWebDialog a;
 
-        DialogInterface$OnClickListenerC2029c(TickletFaceSettingActivity tickletFaceSettingActivity, TickletWebDialog tickletWebDialog) {
+        c(TickletFaceSettingActivity tickletFaceSettingActivity, TickletWebDialog tickletWebDialog) {
             this.a = tickletWebDialog;
         }
 
@@ -113,12 +109,11 @@ public class TickletFaceSettingActivity extends TickletBaseActivity implements T
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.activity.TickletFaceSettingActivity$d */
     /* loaded from: classes7.dex */
-    public class C2030d implements TickletDialogShowFragment.OnClickCloseListener {
+    public class d implements TickletDialogShowFragment.OnClickCloseListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2030d() {
+        d() {
         }
 
         @Override // cn.damai.ticklet.ui.fragment.TickletDialogShowFragment.OnClickCloseListener
@@ -182,8 +177,8 @@ public class TickletFaceSettingActivity extends TickletBaseActivity implements T
             ipChange.ipc$dispatch("1500723177", new Object[]{this});
             return;
         }
-        this.mOnBackClickListener = new View$OnClickListenerC2027a();
-        this.mOnIntroduceClickListener = new View$OnClickListenerC2028b();
+        this.mOnBackClickListener = new a();
+        this.mOnIntroduceClickListener = new b();
     }
 
     private void initTitleViews() {
@@ -238,7 +233,7 @@ public class TickletFaceSettingActivity extends TickletBaseActivity implements T
         TickletWebDialog tickletWebDialog = new TickletWebDialog(this);
         tickletWebDialog.setData(in2.DAMAI_FACE_FUNCTION_RULE_URL);
         DMDialog dMDialog = new DMDialog(this);
-        dMDialog.v(string).u(tickletWebDialog).n(getString(R$string.ticklet_know), new DialogInterface$OnClickListenerC2029c(this, tickletWebDialog));
+        dMDialog.v(string).u(tickletWebDialog).n(getString(R$string.ticklet_know), new c(this, tickletWebDialog));
         dMDialog.show();
     }
 
@@ -282,9 +277,9 @@ public class TickletFaceSettingActivity extends TickletBaseActivity implements T
         hashMap.put("screening_id", str2);
         hashMap.put("titlelabel", str);
         hashMap.put("usercode", z20.E());
-        C0525a.C0527b c0527b = new C0525a.C0527b();
-        c0527b.i(un2.TICKLET_FACE_SETTING).j(hashMap);
-        C0529c.e().l(this, c0527b);
+        a.b bVar = new a.b();
+        bVar.i(un2.TICKLET_FACE_SETTING).j(hashMap);
+        cn.damai.common.user.c.e().l(this, bVar);
     }
 
     public void closeTicketFragmentPopLayer() {
@@ -478,7 +473,7 @@ public class TickletFaceSettingActivity extends TickletBaseActivity implements T
             ticketDeatilResult.getTicketInfoList().add(userTicketTable);
             TickletDialogShowFragment tickletDialogShowFragment = TickletDialogShowFragment.getInstance(ticketDeatilResult.getPerformId(), null, ticketDeatilResult, TickletDialogShowFragment.SHOW_TICKLET_FROM_UNBIND_FACE);
             this.mTicketShowFragment = tickletDialogShowFragment;
-            tickletDialogShowFragment.setOnClickCloseListener(new C2030d());
+            tickletDialogShowFragment.setOnClickCloseListener(new d());
             getSupportFragmentManager().beginTransaction().replace(R$id.ticket_face_fg_container, this.mTicketShowFragment).commitAllowingStateLoss();
         }
     }

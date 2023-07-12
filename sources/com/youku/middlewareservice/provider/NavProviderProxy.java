@@ -4,7 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -13,7 +13,7 @@ public class NavProviderProxy {
 
     public static NavProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (NavProvider) C8883a.j("com.youku.middlewareservice_impl.provider.NavProviderImpl").b().f();
+            sProxy = (NavProvider) a.j("com.youku.middlewareservice_impl.provider.NavProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -31,7 +31,7 @@ public class NavProviderProxy {
     public static void toUri(Context context, String str, Bundle bundle) {
         try {
             if (sProxy == null) {
-                sProxy = (NavProvider) C8883a.j("com.youku.middlewareservice_impl.provider.NavProviderImpl").b().f();
+                sProxy = (NavProvider) a.j("com.youku.middlewareservice_impl.provider.NavProviderImpl").b().f();
             }
             sProxy.toUri(context, str, bundle);
         } catch (Throwable th) {
@@ -42,7 +42,7 @@ public class NavProviderProxy {
     public static void toUri(Context context, String str) {
         try {
             if (sProxy == null) {
-                sProxy = (NavProvider) C8883a.j("com.youku.middlewareservice_impl.provider.NavProviderImpl").b().f();
+                sProxy = (NavProvider) a.j("com.youku.middlewareservice_impl.provider.NavProviderImpl").b().f();
             }
             sProxy.toUri(context, str);
         } catch (Throwable th) {
@@ -53,7 +53,7 @@ public class NavProviderProxy {
     public static void toUri(Context context, Uri uri, Bundle bundle) {
         try {
             if (sProxy == null) {
-                sProxy = (NavProvider) C8883a.j("com.youku.middlewareservice_impl.provider.NavProviderImpl").b().f();
+                sProxy = (NavProvider) a.j("com.youku.middlewareservice_impl.provider.NavProviderImpl").b().f();
             }
             sProxy.toUri(context, uri, bundle);
         } catch (Throwable th) {
@@ -64,7 +64,7 @@ public class NavProviderProxy {
     public static void toUri(Context context, Uri uri) {
         try {
             if (sProxy == null) {
-                sProxy = (NavProvider) C8883a.j("com.youku.middlewareservice_impl.provider.NavProviderImpl").b().f();
+                sProxy = (NavProvider) a.j("com.youku.middlewareservice_impl.provider.NavProviderImpl").b().f();
             }
             sProxy.toUri(context, uri);
         } catch (Throwable th) {

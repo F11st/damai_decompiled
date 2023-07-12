@@ -8,9 +8,8 @@ import com.taobao.monitor.impl.processor.launcher.LauncherProcessor;
 public class v6 extends s1 {
 
     /* compiled from: Taobao */
-    /* renamed from: tb.v6$a */
     /* loaded from: classes11.dex */
-    public static class C9808a {
+    public static class a {
         public static long a() {
             return fu0.e().a().getSharedPreferences(xu1.DEFAULT_SAVE_DIR, 0).getLong("lastStartProcessTime", -1L);
         }
@@ -55,6 +54,6 @@ public class v6 extends s1 {
 
     public void h(long j) {
         this.a.e("startProcessSystemTime", j);
-        C9808a.b(j);
+        a.b(j);
     }
 }

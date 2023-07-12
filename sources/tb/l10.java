@@ -1,12 +1,11 @@
 package tb;
 
 import com.taobao.android.dinamicx.DXRuntimeContext;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 import java.util.StringTokenizer;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class l10 extends AbstractC6375a {
+public class l10 extends com.taobao.android.dinamicx.expression.parser.a {
     private Object a(DXRuntimeContext dXRuntimeContext, Object obj, String str) {
         if (obj == null || str == null) {
             return null;
@@ -14,7 +13,7 @@ public class l10 extends AbstractC6375a {
         return cy.a(dXRuntimeContext, obj, str);
     }
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         Object subData = dXRuntimeContext.getSubData();
         if (objArr != null && objArr.length != 0) {

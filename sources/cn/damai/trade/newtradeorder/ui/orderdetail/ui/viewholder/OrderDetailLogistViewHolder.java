@@ -27,13 +27,12 @@ public class OrderDetailLogistViewHolder extends RecyclerView.ViewHolder {
     private Context d;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailLogistViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2201a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        View$OnClickListenerC2201a(String str) {
+        a(String str) {
             this.a = str;
         }
 
@@ -75,7 +74,7 @@ public class OrderDetailLogistViewHolder extends RecyclerView.ViewHolder {
             this.a.setBackgroundColor(ContextCompat.getColor(this.d, R$color.white));
             this.b.setText(orderDetailStatusBean.logisticsDesc);
             this.c.setText(orderDetailStatusBean.logisticsTimeStr);
-            this.a.setOnClickListener(new View$OnClickListenerC2201a(str));
+            this.a.setOnClickListener(new a(str));
         }
     }
 }

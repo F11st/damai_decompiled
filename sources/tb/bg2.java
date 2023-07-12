@@ -1,6 +1,5 @@
 package tb;
 
-import com.alibaba.appmonitor.pool.C3316a;
 import com.alibaba.appmonitor.pool.ReuseJSONArray;
 import com.alibaba.appmonitor.pool.ReuseJSONObject;
 import com.alibaba.fastjson.JSONArray;
@@ -19,28 +18,27 @@ import java.util.Map;
 /* loaded from: classes6.dex */
 public class bg2 extends qf0 {
     private nf1 g;
-    private Map<DimensionValueSet, C8962a> h;
+    private Map<DimensionValueSet, a> h;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.bg2$a */
     /* loaded from: classes6.dex */
-    public class C8962a {
+    public class a {
         private int a = 0;
         private int b = 0;
         private List<MeasureValueSet> c = new ArrayList();
 
-        public C8962a() {
+        public a() {
         }
 
         private MeasureValueSet d(MeasureValueSet measureValueSet) {
             List<Measure> measures;
-            MeasureValueSet measureValueSet2 = (MeasureValueSet) C3316a.a().poll(MeasureValueSet.class, new Object[0]);
+            MeasureValueSet measureValueSet2 = (MeasureValueSet) com.alibaba.appmonitor.pool.a.a().poll(MeasureValueSet.class, new Object[0]);
             if (bg2.this.g != null && bg2.this.g.b() != null && (measures = bg2.this.g.b().getMeasures()) != null) {
                 int size = measures.size();
                 for (int i = 0; i < size; i++) {
                     Measure measure = measures.get(i);
                     if (measure != null) {
-                        MeasureValue measureValue = (MeasureValue) C3316a.a().poll(MeasureValue.class, new Object[0]);
+                        MeasureValue measureValue = (MeasureValue) com.alibaba.appmonitor.pool.a.a().poll(MeasureValue.class, new Object[0]);
                         MeasureValue value = measureValueSet.getValue(measure.getName());
                         if (value.getOffset() != null) {
                             measureValue.setOffset(value.getOffset().doubleValue());
@@ -118,13 +116,13 @@ public class bg2 extends qf0 {
         if (nf1Var != null) {
             b.put("isCommitDetail", (Object) String.valueOf(nf1Var.e()));
         }
-        JSONArray jSONArray = (JSONArray) C3316a.a().poll(ReuseJSONArray.class, new Object[0]);
-        Map<DimensionValueSet, C8962a> map = this.h;
+        JSONArray jSONArray = (JSONArray) com.alibaba.appmonitor.pool.a.a().poll(ReuseJSONArray.class, new Object[0]);
+        Map<DimensionValueSet, a> map = this.h;
         if (map != null) {
-            for (Map.Entry<DimensionValueSet, C8962a> entry : map.entrySet()) {
-                JSONObject jSONObject = (JSONObject) C3316a.a().poll(ReuseJSONObject.class, new Object[0]);
+            for (Map.Entry<DimensionValueSet, a> entry : map.entrySet()) {
+                JSONObject jSONObject = (JSONObject) com.alibaba.appmonitor.pool.a.a().poll(ReuseJSONObject.class, new Object[0]);
                 DimensionValueSet key = entry.getKey();
-                C8962a value = entry.getValue();
+                a value = entry.getValue();
                 Integer valueOf = Integer.valueOf(value.a);
                 Integer valueOf2 = Integer.valueOf(value.b);
                 jSONObject.put(AdUtConstants.XAD_UT_ARG_COUNT, (Object) valueOf);
@@ -143,34 +141,34 @@ public class bg2 extends qf0 {
         super.clean();
         this.g = null;
         for (DimensionValueSet dimensionValueSet : this.h.keySet()) {
-            C3316a.a().offer(dimensionValueSet);
+            com.alibaba.appmonitor.pool.a.a().offer(dimensionValueSet);
         }
         this.h.clear();
     }
 
     public synchronized void d(DimensionValueSet dimensionValueSet, MeasureValueSet measureValueSet) {
-        C8962a c8962a;
+        a aVar;
         if (dimensionValueSet == null) {
-            dimensionValueSet = (DimensionValueSet) C3316a.a().poll(DimensionValueSet.class, new Object[0]);
+            dimensionValueSet = (DimensionValueSet) com.alibaba.appmonitor.pool.a.a().poll(DimensionValueSet.class, new Object[0]);
         }
         if (this.h.containsKey(dimensionValueSet)) {
-            c8962a = this.h.get(dimensionValueSet);
+            aVar = this.h.get(dimensionValueSet);
         } else {
-            DimensionValueSet dimensionValueSet2 = (DimensionValueSet) C3316a.a().poll(DimensionValueSet.class, new Object[0]);
+            DimensionValueSet dimensionValueSet2 = (DimensionValueSet) com.alibaba.appmonitor.pool.a.a().poll(DimensionValueSet.class, new Object[0]);
             dimensionValueSet2.addValues(dimensionValueSet);
-            C8962a c8962a2 = new C8962a();
-            this.h.put(dimensionValueSet2, c8962a2);
-            c8962a = c8962a2;
+            a aVar2 = new a();
+            this.h.put(dimensionValueSet2, aVar2);
+            aVar = aVar2;
         }
         nf1 nf1Var = this.g;
         if (nf1Var != null ? nf1Var.g(dimensionValueSet, measureValueSet) : false) {
-            c8962a.f();
-            c8962a.c(measureValueSet);
+            aVar.f();
+            aVar.c(measureValueSet);
         } else {
-            c8962a.g();
+            aVar.g();
             nf1 nf1Var2 = this.g;
             if (nf1Var2 != null && nf1Var2.e()) {
-                c8962a.c(measureValueSet);
+                aVar.c(measureValueSet);
             }
         }
         super.a(null);

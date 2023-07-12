@@ -111,12 +111,12 @@ public final class ce0 implements ComponentFilterBridge {
     }
 
     @Override // com.alibaba.pictures.bricks.channel.bridge.ComponentFilterBridge
-    public void reportClick(@NotNull kc.C9346b c9346b) {
+    public void reportClick(@NotNull kc.b bVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "180546867")) {
-            ipChange.ipc$dispatch("180546867", new Object[]{this, c9346b});
+            ipChange.ipc$dispatch("180546867", new Object[]{this, bVar});
         } else {
-            b41.i(c9346b, "builder");
+            b41.i(bVar, "builder");
         }
     }
 

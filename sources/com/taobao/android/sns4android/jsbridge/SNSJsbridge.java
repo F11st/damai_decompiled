@@ -44,10 +44,9 @@ public class SNSJsbridge extends WVApiPlugin {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.sns4android.jsbridge.SNSJsbridge$a */
     /* loaded from: classes11.dex */
-    public class C6618a implements SNSSignInListener {
-        C6618a() {
+    public class a implements SNSSignInListener {
+        a() {
         }
 
         @Override // com.taobao.android.sns4android.SNSSignInListener
@@ -120,11 +119,11 @@ public class SNSJsbridge extends WVApiPlugin {
             return;
         }
         Activity activity = (Activity) this.mContext;
-        C6618a c6618a = new C6618a();
+        a aVar = new a();
         if (SNSPlatform.PLATFORM_WEIXIN == convertSNSPlatform) {
-            mWeixinListener = c6618a;
+            mWeixinListener = aVar;
         }
-        SNSAuth.auth(convertSNSPlatform, activity, c6618a, jSONObject);
+        SNSAuth.auth(convertSNSPlatform, activity, aVar, jSONObject);
     }
 
     @Override // android.taobao.windvane.jsbridge.WVApiPlugin

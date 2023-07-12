@@ -47,10 +47,10 @@ import com.youku.gaiax.impl.utils.PropUtils;
 import io.flutter.wpkbridge.WPKFactory;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import kotlin.C8177b;
 import kotlin.Deprecated;
 import kotlin.Lazy;
 import kotlin.Metadata;
+import kotlin.b;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import org.jetbrains.annotations.NotNull;
@@ -102,20 +102,20 @@ public final class GaiaX implements IGaiaXApi {
                 log.d("[GaiaX]", "GaiaX初始化逻辑 - GXTemplateEngine - start");
             }
             GXTemplateEngine.Companion.a().m(context);
-            GXRegisterCenter.C3333a c3333a = GXRegisterCenter.Companion;
-            GXRegisterCenter D = c3333a.a().v(new GXExtensionDataBinding()).y(GXExtensionExpression.Companion.getInstance()).r(new GXExtensionColor()).D(new GXExtensionSize());
-            GXRegisterCenter.C3334b c3334b = new GXRegisterCenter.C3334b();
-            c3334b.i(true);
-            c3334b.j(true);
-            c3334b.n(true);
-            c3334b.p(true);
-            c3334b.m(true);
-            c3334b.o(true);
-            c3334b.k(true);
-            c3334b.l(true);
+            GXRegisterCenter.a aVar = GXRegisterCenter.Companion;
+            GXRegisterCenter D = aVar.a().v(new GXExtensionDataBinding()).y(GXExtensionExpression.Companion.getInstance()).r(new GXExtensionColor()).D(new GXExtensionSize());
+            GXRegisterCenter.b bVar = new GXRegisterCenter.b();
+            bVar.i(true);
+            bVar.j(true);
+            bVar.n(true);
+            bVar.p(true);
+            bVar.m(true);
+            bVar.o(true);
+            bVar.k(true);
+            bVar.l(true);
             wt2 wt2Var = wt2.INSTANCE;
-            D.s(c3334b).w(new GXExtensionDynamicProperty()).E(new GXExtensionStaticProperty()).C(new GXExtensionScroll()).z(new GXExtensionGrid()).B(new GXExtensionNodeEvent()).t(new GXExtensionContainerDataUpdate()).u(new GXExtensionContainerItemBind()).F(GXExtensionTemplateInfoSource.Companion.getInstance(), 0).G(GXExtensionTemplateAssetsSource.Companion.assetsInstance(), 1).G(GXExtensionTemplateRemoteSource.Companion.remoteInstance(), 2).G(GXExtensionTemplateRealTimeSource.Companion.getInstance(), 15).A(new GXExtensionLottieAnimation()).x(new GXExtensionException());
-            c3333a.a().H("image", new Function1<Context, View>() { // from class: com.youku.gaiax.GaiaX$Companion$injectImpl$2
+            D.s(bVar).w(new GXExtensionDynamicProperty()).E(new GXExtensionStaticProperty()).C(new GXExtensionScroll()).z(new GXExtensionGrid()).B(new GXExtensionNodeEvent()).t(new GXExtensionContainerDataUpdate()).u(new GXExtensionContainerItemBind()).F(GXExtensionTemplateInfoSource.Companion.getInstance(), 0).G(GXExtensionTemplateAssetsSource.Companion.assetsInstance(), 1).G(GXExtensionTemplateRemoteSource.Companion.remoteInstance(), 2).G(GXExtensionTemplateRealTimeSource.Companion.getInstance(), 15).A(new GXExtensionLottieAnimation()).x(new GXExtensionException());
+            aVar.a().H("image", new Function1<Context, View>() { // from class: com.youku.gaiax.GaiaX$Companion$injectImpl$2
                 @Override // kotlin.jvm.functions.Function1
                 @NotNull
                 public final View invoke(@NotNull Context context2) {
@@ -125,7 +125,7 @@ public final class GaiaX implements IGaiaXApi {
                     return createView == null ? new GXView(context2) : createView;
                 }
             });
-            c3333a.a().H("lottie", new Function1<Context, View>() { // from class: com.youku.gaiax.GaiaX$Companion$injectImpl$3
+            aVar.a().H("lottie", new Function1<Context, View>() { // from class: com.youku.gaiax.GaiaX$Companion$injectImpl$3
                 @Override // kotlin.jvm.functions.Function1
                 @NotNull
                 public final View invoke(@NotNull Context context2) {
@@ -257,7 +257,7 @@ public final class GaiaX implements IGaiaXApi {
     }
 
     /* compiled from: Taobao */
-    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\bf\u0018\u00002\u00020\u0001J\u0018\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u0004H&J \u0010\n\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\b\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\u0004H&¨\u0006\u000b"}, d2 = {"Lcom/youku/gaiax/GaiaX$IScrollDelegate;", "", "Landroid/view/View;", "view", "", "newState", "Ltb/wt2;", GXTemplateEngine.C3344g.TYPE_ON_SCROLL_STATE_CHANGED, "dx", Constants.Name.DISTANCE_Y, GXTemplateEngine.C3344g.TYPE_ON_SCROLLED, "GaiaX-Android"}, k = 1, mv = {1, 5, 1})
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\bf\u0018\u00002\u00020\u0001J\u0018\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u0004H&J \u0010\n\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\b\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\u0004H&¨\u0006\u000b"}, d2 = {"Lcom/youku/gaiax/GaiaX$IScrollDelegate;", "", "Landroid/view/View;", "view", "", "newState", "Ltb/wt2;", GXTemplateEngine.g.TYPE_ON_SCROLL_STATE_CHANGED, "dx", Constants.Name.DISTANCE_Y, GXTemplateEngine.g.TYPE_ON_SCROLLED, "GaiaX-Android"}, k = 1, mv = {1, 5, 1})
     /* loaded from: classes2.dex */
     public interface IScrollDelegate {
         void onScrollStateChanged(@NotNull View view, int i);
@@ -310,7 +310,7 @@ public final class GaiaX implements IGaiaXApi {
 
     static {
         Lazy<GaiaX> b;
-        b = C8177b.b(new Function0<GaiaX>() { // from class: com.youku.gaiax.GaiaX$Companion$instance$2
+        b = b.b(new Function0<GaiaX>() { // from class: com.youku.gaiax.GaiaX$Companion$instance$2
             /* JADX WARN: Can't rename method to resolve collision */
             @Override // kotlin.jvm.functions.Function0
             @NotNull
@@ -408,7 +408,7 @@ public final class GaiaX implements IGaiaXApi {
         private boolean forceCreate;
         private boolean forceLocalTemplate;
         @Nullable
-        private GXTemplateEngine.C3341d gxExtendParams;
+        private GXTemplateEngine.d gxExtendParams;
         private int indexPosition;
         private boolean isReleased;
         @Nullable
@@ -696,7 +696,7 @@ public final class GaiaX implements IGaiaXApi {
         }
 
         @Nullable
-        public final GXTemplateEngine.C3341d getGxExtendParams() {
+        public final GXTemplateEngine.d getGxExtendParams() {
             return this.gxExtendParams;
         }
 
@@ -836,8 +836,8 @@ public final class GaiaX implements IGaiaXApi {
             this.forceLocalTemplate = z;
         }
 
-        public final void setGxExtendParams(@Nullable GXTemplateEngine.C3341d c3341d) {
-            this.gxExtendParams = c3341d;
+        public final void setGxExtendParams(@Nullable GXTemplateEngine.d dVar) {
+            this.gxExtendParams = dVar;
         }
 
         public final void setIndexPosition$GaiaX_Android(int i) {

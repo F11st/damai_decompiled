@@ -10,14 +10,13 @@ import tb.rm2;
 public class TBImageLifeCycleMonitor implements IPhenixLifeCycle {
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.phenix.compat.stat.TBImageLifeCycleMonitor$a */
     /* loaded from: classes11.dex */
-    private static class C6858a {
+    private static class a {
         private static final TBImageLifeCycleMonitor a = new TBImageLifeCycleMonitor();
     }
 
     public static TBImageLifeCycleMonitor a() {
-        return C6858a.a;
+        return a.a;
     }
 
     @Override // com.taobao.phenix.lifecycle.IPhenixLifeCycle

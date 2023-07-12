@@ -16,13 +16,12 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 import javax.annotation.Nullable;
-import okhttp3.internal.C8753a;
 import okhttp3.internal.io.FileSystem;
 import okio.BufferedSink;
 import okio.BufferedSource;
-import okio.C8844h;
 import okio.Sink;
 import okio.Source;
+import okio.h;
 import tb.jn1;
 import tb.ps1;
 
@@ -47,7 +46,7 @@ public final class DiskLruCache implements Closeable, Flushable {
     boolean q;
     private final Executor s;
     private long i = 0;
-    final LinkedHashMap<String, C8757c> k = new LinkedHashMap<>(0, 0.75f, true);
+    final LinkedHashMap<String, c> k = new LinkedHashMap<>(0, 0.75f, true);
     private long r = 0;
     private final Runnable t = new Runnable() { // from class: okhttp3.internal.cache.DiskLruCache.1
         @Override // java.lang.Runnable
@@ -70,7 +69,7 @@ public final class DiskLruCache implements Closeable, Flushable {
                 } catch (IOException unused2) {
                     DiskLruCache diskLruCache2 = DiskLruCache.this;
                     diskLruCache2.q = true;
-                    diskLruCache2.j = C8844h.c(C8844h.b());
+                    diskLruCache2.j = h.c(h.b());
                 }
             }
         }
@@ -78,46 +77,43 @@ public final class DiskLruCache implements Closeable, Flushable {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: okhttp3.internal.cache.DiskLruCache$a */
     /* loaded from: classes2.dex */
-    public class C8754a extends C8763c {
-        C8754a(Sink sink) {
+    public class a extends okhttp3.internal.cache.c {
+        a(Sink sink) {
             super(sink);
         }
 
-        @Override // okhttp3.internal.cache.C8763c
+        @Override // okhttp3.internal.cache.c
         protected void onException(IOException iOException) {
             DiskLruCache.this.m = true;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: okhttp3.internal.cache.DiskLruCache$b */
     /* loaded from: classes2.dex */
-    public final class C8755b {
-        final C8757c a;
+    public final class b {
+        final c a;
         final boolean[] b;
         private boolean c;
 
         /* compiled from: Taobao */
-        /* renamed from: okhttp3.internal.cache.DiskLruCache$b$a */
         /* loaded from: classes2.dex */
-        class C8756a extends C8763c {
-            C8756a(Sink sink) {
+        class a extends okhttp3.internal.cache.c {
+            a(Sink sink) {
                 super(sink);
             }
 
-            @Override // okhttp3.internal.cache.C8763c
+            @Override // okhttp3.internal.cache.c
             protected void onException(IOException iOException) {
                 synchronized (DiskLruCache.this) {
-                    C8755b.this.c();
+                    b.this.c();
                 }
             }
         }
 
-        C8755b(C8757c c8757c) {
-            this.a = c8757c;
-            this.b = c8757c.e ? null : new boolean[DiskLruCache.this.h];
+        b(c cVar) {
+            this.a = cVar;
+            this.b = cVar.e ? null : new boolean[DiskLruCache.this.h];
         }
 
         public void a() throws IOException {
@@ -169,17 +165,17 @@ public final class DiskLruCache implements Closeable, Flushable {
         public Sink d(int i) {
             synchronized (DiskLruCache.this) {
                 if (!this.c) {
-                    C8757c c8757c = this.a;
-                    if (c8757c.f != this) {
-                        return C8844h.b();
+                    c cVar = this.a;
+                    if (cVar.f != this) {
+                        return h.b();
                     }
-                    if (!c8757c.e) {
+                    if (!cVar.e) {
                         this.b[i] = true;
                     }
                     try {
-                        return new C8756a(DiskLruCache.this.a.sink(c8757c.d[i]));
+                        return new a(DiskLruCache.this.a.sink(cVar.d[i]));
                     } catch (FileNotFoundException unused) {
-                        return C8844h.b();
+                        return h.b();
                     }
                 }
                 throw new IllegalStateException();
@@ -189,18 +185,17 @@ public final class DiskLruCache implements Closeable, Flushable {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: okhttp3.internal.cache.DiskLruCache$c */
     /* loaded from: classes2.dex */
-    public final class C8757c {
+    public final class c {
         final String a;
         final long[] b;
         final File[] c;
         final File[] d;
         boolean e;
-        C8755b f;
+        b f;
         long g;
 
-        C8757c(String str) {
+        c(String str) {
             this.a = str;
             int i = DiskLruCache.this.h;
             this.b = new long[i];
@@ -236,7 +231,7 @@ public final class DiskLruCache implements Closeable, Flushable {
             throw a(strArr);
         }
 
-        C8758d c() {
+        d c() {
             if (Thread.holdsLock(DiskLruCache.this)) {
                 Source[] sourceArr = new Source[DiskLruCache.this.h];
                 long[] jArr = (long[]) this.b.clone();
@@ -249,13 +244,13 @@ public final class DiskLruCache implements Closeable, Flushable {
                             sourceArr[i2] = diskLruCache.a.source(this.c[i2]);
                             i2++;
                         } else {
-                            return new C8758d(this.a, this.g, sourceArr, jArr);
+                            return new d(this.a, this.g, sourceArr, jArr);
                         }
                     } catch (FileNotFoundException unused) {
                         while (true) {
                             DiskLruCache diskLruCache2 = DiskLruCache.this;
                             if (i < diskLruCache2.h && sourceArr[i] != null) {
-                                C8753a.g(sourceArr[i]);
+                                okhttp3.internal.a.g(sourceArr[i]);
                                 i++;
                             } else {
                                 try {
@@ -281,21 +276,20 @@ public final class DiskLruCache implements Closeable, Flushable {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: okhttp3.internal.cache.DiskLruCache$d */
     /* loaded from: classes2.dex */
-    public final class C8758d implements Closeable {
+    public final class d implements Closeable {
         private final String a;
         private final long b;
         private final Source[] c;
 
-        C8758d(String str, long j, Source[] sourceArr, long[] jArr) {
+        d(String str, long j, Source[] sourceArr, long[] jArr) {
             this.a = str;
             this.b = j;
             this.c = sourceArr;
         }
 
         @Nullable
-        public C8755b a() throws IOException {
+        public b a() throws IOException {
             return DiskLruCache.this.h(this.a, this.b);
         }
 
@@ -306,7 +300,7 @@ public final class DiskLruCache implements Closeable, Flushable {
         @Override // java.io.Closeable, java.lang.AutoCloseable
         public void close() {
             for (Source source : this.c) {
-                C8753a.g(source);
+                okhttp3.internal.a.g(source);
             }
         }
     }
@@ -344,7 +338,7 @@ public final class DiskLruCache implements Closeable, Flushable {
     public static DiskLruCache e(FileSystem fileSystem, File file, int i, int i2, long j) {
         if (j > 0) {
             if (i2 > 0) {
-                return new DiskLruCache(fileSystem, file, i, i2, j, new ThreadPoolExecutor(0, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue(), C8753a.I("OkHttp DiskLruCache", true)));
+                return new DiskLruCache(fileSystem, file, i, i2, j, new ThreadPoolExecutor(0, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue(), okhttp3.internal.a.I("OkHttp DiskLruCache", true)));
             }
             throw new IllegalArgumentException("valueCount <= 0");
         }
@@ -352,14 +346,14 @@ public final class DiskLruCache implements Closeable, Flushable {
     }
 
     private BufferedSink l() throws FileNotFoundException {
-        return C8844h.c(new C8754a(this.a.appendingSink(this.c)));
+        return h.c(new a(this.a.appendingSink(this.c)));
     }
 
     private void m() throws IOException {
         this.a.delete(this.d);
-        Iterator<C8757c> it = this.k.values().iterator();
+        Iterator<c> it = this.k.values().iterator();
         while (it.hasNext()) {
-            C8757c next = it.next();
+            c next = it.next();
             int i = 0;
             if (next.f == null) {
                 while (i < this.h) {
@@ -379,29 +373,29 @@ public final class DiskLruCache implements Closeable, Flushable {
     }
 
     private void n() throws IOException {
-        BufferedSource d = C8844h.d(this.a.source(this.c));
+        BufferedSource d2 = h.d(this.a.source(this.c));
         try {
-            String readUtf8LineStrict = d.readUtf8LineStrict();
-            String readUtf8LineStrict2 = d.readUtf8LineStrict();
-            String readUtf8LineStrict3 = d.readUtf8LineStrict();
-            String readUtf8LineStrict4 = d.readUtf8LineStrict();
-            String readUtf8LineStrict5 = d.readUtf8LineStrict();
+            String readUtf8LineStrict = d2.readUtf8LineStrict();
+            String readUtf8LineStrict2 = d2.readUtf8LineStrict();
+            String readUtf8LineStrict3 = d2.readUtf8LineStrict();
+            String readUtf8LineStrict4 = d2.readUtf8LineStrict();
+            String readUtf8LineStrict5 = d2.readUtf8LineStrict();
             if (!"libcore.io.DiskLruCache".equals(readUtf8LineStrict) || !"1".equals(readUtf8LineStrict2) || !Integer.toString(this.f).equals(readUtf8LineStrict3) || !Integer.toString(this.h).equals(readUtf8LineStrict4) || !"".equals(readUtf8LineStrict5)) {
                 throw new IOException("unexpected journal header: [" + readUtf8LineStrict + AVFSCacheConstants.COMMA_SEP + readUtf8LineStrict2 + AVFSCacheConstants.COMMA_SEP + readUtf8LineStrict4 + AVFSCacheConstants.COMMA_SEP + readUtf8LineStrict5 + jn1.ARRAY_END_STR);
             }
             int i = 0;
             while (true) {
                 try {
-                    o(d.readUtf8LineStrict());
+                    o(d2.readUtf8LineStrict());
                     i++;
                 } catch (EOFException unused) {
                     this.l = i - this.k.size();
-                    if (!d.exhausted()) {
+                    if (!d2.exhausted()) {
                         p();
                     } else {
                         this.j = l();
                     }
-                    a(null, d);
+                    a(null, d2);
                     return;
                 }
             }
@@ -424,19 +418,19 @@ public final class DiskLruCache implements Closeable, Flushable {
             } else {
                 substring = str.substring(i, indexOf2);
             }
-            C8757c c8757c = this.k.get(substring);
-            if (c8757c == null) {
-                c8757c = new C8757c(substring);
-                this.k.put(substring, c8757c);
+            c cVar = this.k.get(substring);
+            if (cVar == null) {
+                cVar = new c(substring);
+                this.k.put(substring, cVar);
             }
             if (indexOf2 != -1 && indexOf == 5 && str.startsWith("CLEAN")) {
                 String[] split = str.substring(indexOf2 + 1).split(" ");
-                c8757c.e = true;
-                c8757c.f = null;
-                c8757c.b(split);
+                cVar.e = true;
+                cVar.f = null;
+                cVar.b(split);
                 return;
             } else if (indexOf2 == -1 && indexOf == 5 && str.startsWith("DIRTY")) {
-                c8757c.f = new C8755b(c8757c);
+                cVar.f = new b(cVar);
                 return;
             } else if (indexOf2 == -1 && indexOf == 4 && str.startsWith("READ")) {
                 return;
@@ -457,10 +451,10 @@ public final class DiskLruCache implements Closeable, Flushable {
     @Override // java.io.Closeable, java.lang.AutoCloseable
     public synchronized void close() throws IOException {
         if (this.n && !this.o) {
-            for (C8757c c8757c : (C8757c[]) this.k.values().toArray(new C8757c[this.k.size()])) {
-                C8755b c8755b = c8757c.f;
-                if (c8755b != null) {
-                    c8755b.a();
+            for (c cVar : (c[]) this.k.values().toArray(new c[this.k.size()])) {
+                b bVar = cVar.f;
+                if (bVar != null) {
+                    bVar.a();
                 }
             }
             s();
@@ -472,31 +466,31 @@ public final class DiskLruCache implements Closeable, Flushable {
         this.o = true;
     }
 
-    synchronized void d(C8755b c8755b, boolean z) throws IOException {
-        C8757c c8757c = c8755b.a;
-        if (c8757c.f == c8755b) {
-            if (z && !c8757c.e) {
+    synchronized void d(b bVar, boolean z) throws IOException {
+        c cVar = bVar.a;
+        if (cVar.f == bVar) {
+            if (z && !cVar.e) {
                 for (int i = 0; i < this.h; i++) {
-                    if (c8755b.b[i]) {
-                        if (!this.a.exists(c8757c.d[i])) {
-                            c8755b.a();
+                    if (bVar.b[i]) {
+                        if (!this.a.exists(cVar.d[i])) {
+                            bVar.a();
                             return;
                         }
                     } else {
-                        c8755b.a();
+                        bVar.a();
                         throw new IllegalStateException("Newly created entry didn't create value for index " + i);
                     }
                 }
             }
             for (int i2 = 0; i2 < this.h; i2++) {
-                File file = c8757c.d[i2];
+                File file = cVar.d[i2];
                 if (z) {
                     if (this.a.exists(file)) {
-                        File file2 = c8757c.c[i2];
+                        File file2 = cVar.c[i2];
                         this.a.rename(file, file2);
-                        long j = c8757c.b[i2];
+                        long j = cVar.b[i2];
                         long size = this.a.size(file2);
-                        c8757c.b[i2] = size;
+                        cVar.b[i2] = size;
                         this.i = (this.i - j) + size;
                     }
                 } else {
@@ -504,22 +498,22 @@ public final class DiskLruCache implements Closeable, Flushable {
                 }
             }
             this.l++;
-            c8757c.f = null;
-            if (c8757c.e | z) {
-                c8757c.e = true;
+            cVar.f = null;
+            if (cVar.e | z) {
+                cVar.e = true;
                 this.j.writeUtf8("CLEAN").writeByte(32);
-                this.j.writeUtf8(c8757c.a);
-                c8757c.d(this.j);
+                this.j.writeUtf8(cVar.a);
+                cVar.d(this.j);
                 this.j.writeByte(10);
                 if (z) {
                     long j2 = this.r;
                     this.r = 1 + j2;
-                    c8757c.g = j2;
+                    cVar.g = j2;
                 }
             } else {
-                this.k.remove(c8757c.a);
+                this.k.remove(cVar.a);
                 this.j.writeUtf8("REMOVE").writeByte(32);
-                this.j.writeUtf8(c8757c.a);
+                this.j.writeUtf8(cVar.a);
                 this.j.writeByte(10);
             }
             this.j.flush();
@@ -546,30 +540,30 @@ public final class DiskLruCache implements Closeable, Flushable {
     }
 
     @Nullable
-    public C8755b g(String str) throws IOException {
+    public b g(String str) throws IOException {
         return h(str, -1L);
     }
 
-    synchronized C8755b h(String str, long j) throws IOException {
+    synchronized b h(String str, long j) throws IOException {
         j();
         c();
         t(str);
-        C8757c c8757c = this.k.get(str);
-        if (j == -1 || (c8757c != null && c8757c.g == j)) {
-            if (c8757c == null || c8757c.f == null) {
+        c cVar = this.k.get(str);
+        if (j == -1 || (cVar != null && cVar.g == j)) {
+            if (cVar == null || cVar.f == null) {
                 if (!this.p && !this.q) {
                     this.j.writeUtf8("DIRTY").writeByte(32).writeUtf8(str).writeByte(10);
                     this.j.flush();
                     if (this.m) {
                         return null;
                     }
-                    if (c8757c == null) {
-                        c8757c = new C8757c(str);
-                        this.k.put(str, c8757c);
+                    if (cVar == null) {
+                        cVar = new c(str);
+                        this.k.put(str, cVar);
                     }
-                    C8755b c8755b = new C8755b(c8757c);
-                    c8757c.f = c8755b;
-                    return c8755b;
+                    b bVar = new b(cVar);
+                    cVar.f = bVar;
+                    return bVar;
                 }
                 this.s.execute(this.t);
                 return null;
@@ -579,14 +573,14 @@ public final class DiskLruCache implements Closeable, Flushable {
         return null;
     }
 
-    public synchronized C8758d i(String str) throws IOException {
+    public synchronized d i(String str) throws IOException {
         j();
         c();
         t(str);
-        C8757c c8757c = this.k.get(str);
-        if (c8757c != null && c8757c.e) {
-            C8758d c = c8757c.c();
-            if (c == null) {
+        c cVar = this.k.get(str);
+        if (cVar != null && cVar.e) {
+            d c2 = cVar.c();
+            if (c2 == null) {
                 return null;
             }
             this.l++;
@@ -594,7 +588,7 @@ public final class DiskLruCache implements Closeable, Flushable {
             if (k()) {
                 this.s.execute(this.t);
             }
-            return c;
+            return c2;
         }
         return null;
     }
@@ -641,25 +635,25 @@ public final class DiskLruCache implements Closeable, Flushable {
         if (bufferedSink != null) {
             bufferedSink.close();
         }
-        BufferedSink c = C8844h.c(this.a.sink(this.d));
-        c.writeUtf8("libcore.io.DiskLruCache").writeByte(10);
-        c.writeUtf8("1").writeByte(10);
-        c.writeDecimalLong(this.f).writeByte(10);
-        c.writeDecimalLong(this.h).writeByte(10);
-        c.writeByte(10);
-        for (C8757c c8757c : this.k.values()) {
-            if (c8757c.f != null) {
-                c.writeUtf8("DIRTY").writeByte(32);
-                c.writeUtf8(c8757c.a);
-                c.writeByte(10);
+        BufferedSink c2 = h.c(this.a.sink(this.d));
+        c2.writeUtf8("libcore.io.DiskLruCache").writeByte(10);
+        c2.writeUtf8("1").writeByte(10);
+        c2.writeDecimalLong(this.f).writeByte(10);
+        c2.writeDecimalLong(this.h).writeByte(10);
+        c2.writeByte(10);
+        for (c cVar : this.k.values()) {
+            if (cVar.f != null) {
+                c2.writeUtf8("DIRTY").writeByte(32);
+                c2.writeUtf8(cVar.a);
+                c2.writeByte(10);
             } else {
-                c.writeUtf8("CLEAN").writeByte(32);
-                c.writeUtf8(c8757c.a);
-                c8757c.d(c);
-                c.writeByte(10);
+                c2.writeUtf8("CLEAN").writeByte(32);
+                c2.writeUtf8(cVar.a);
+                cVar.d(c2);
+                c2.writeByte(10);
             }
         }
-        a(null, c);
+        a(null, c2);
         if (this.a.exists(this.c)) {
             this.a.rename(this.c, this.e);
         }
@@ -674,32 +668,32 @@ public final class DiskLruCache implements Closeable, Flushable {
         j();
         c();
         t(str);
-        C8757c c8757c = this.k.get(str);
-        if (c8757c == null) {
+        c cVar = this.k.get(str);
+        if (cVar == null) {
             return false;
         }
-        boolean r = r(c8757c);
+        boolean r = r(cVar);
         if (r && this.i <= this.g) {
             this.p = false;
         }
         return r;
     }
 
-    boolean r(C8757c c8757c) throws IOException {
-        C8755b c8755b = c8757c.f;
-        if (c8755b != null) {
-            c8755b.c();
+    boolean r(c cVar) throws IOException {
+        b bVar = cVar.f;
+        if (bVar != null) {
+            bVar.c();
         }
         for (int i = 0; i < this.h; i++) {
-            this.a.delete(c8757c.c[i]);
+            this.a.delete(cVar.c[i]);
             long j = this.i;
-            long[] jArr = c8757c.b;
+            long[] jArr = cVar.b;
             this.i = j - jArr[i];
             jArr[i] = 0;
         }
         this.l++;
-        this.j.writeUtf8("REMOVE").writeByte(32).writeUtf8(c8757c.a).writeByte(10);
-        this.k.remove(c8757c.a);
+        this.j.writeUtf8("REMOVE").writeByte(32).writeUtf8(cVar.a).writeByte(10);
+        this.k.remove(cVar.a);
         if (k()) {
             this.s.execute(this.t);
         }

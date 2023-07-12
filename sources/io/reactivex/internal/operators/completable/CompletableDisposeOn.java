@@ -1,16 +1,16 @@
 package io.reactivex.internal.operators.completable;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
 import io.reactivex.Scheduler;
+import io.reactivex.a;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class CompletableDisposeOn extends AbstractC8146a {
+public final class CompletableDisposeOn extends a {
     final Scheduler scheduler;
     final CompletableSource source;
 
@@ -75,7 +75,7 @@ public final class CompletableDisposeOn extends AbstractC8146a {
         this.scheduler = scheduler;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     protected void subscribeActual(CompletableObserver completableObserver) {
         this.source.subscribe(new CompletableObserverImplementation(completableObserver, this.scheduler));
     }

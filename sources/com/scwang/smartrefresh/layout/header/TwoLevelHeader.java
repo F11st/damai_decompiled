@@ -35,9 +35,8 @@ public class TwoLevelHeader extends InternalAbstract implements RefreshHeader {
     protected OnTwoLevelListener mTwoLevelListener;
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.layout.header.TwoLevelHeader$a */
     /* loaded from: classes7.dex */
-    static /* synthetic */ class C6194a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -199,7 +198,7 @@ public class TwoLevelHeader extends InternalAbstract implements RefreshHeader {
         RefreshInternal refreshInternal = this.mRefreshHeader;
         if (refreshInternal != null) {
             refreshInternal.onStateChanged(refreshLayout, refreshState, refreshState2);
-            int i = C6194a.a[refreshState2.ordinal()];
+            int i = a.a[refreshState2.ordinal()];
             boolean z = true;
             if (i != 1) {
                 if (i != 3) {

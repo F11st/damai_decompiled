@@ -69,12 +69,11 @@ public class wt {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.wt$a */
     /* loaded from: classes11.dex */
-    public static class C9882a implements IConfigChangeListener {
+    public static class a implements IConfigChangeListener {
         final /* synthetic */ IDXConfigInterface a;
 
-        C9882a(IDXConfigInterface iDXConfigInterface) {
+        a(IDXConfigInterface iDXConfigInterface) {
             this.a = iDXConfigInterface;
         }
 
@@ -131,12 +130,11 @@ public class wt {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.wt$b */
     /* loaded from: classes11.dex */
-    public static class C9883b implements IConfigChangeListener {
+    public static class b implements IConfigChangeListener {
         final /* synthetic */ IDXConfigInterface a;
 
-        C9883b(IDXConfigInterface iDXConfigInterface) {
+        b(IDXConfigInterface iDXConfigInterface) {
             this.a = iDXConfigInterface;
         }
 
@@ -150,12 +148,11 @@ public class wt {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.wt$c */
     /* loaded from: classes11.dex */
-    public static class C9884c implements IConfigChangeListener {
+    public static class c implements IConfigChangeListener {
         final /* synthetic */ IDXConfigInterface a;
 
-        C9884c(IDXConfigInterface iDXConfigInterface) {
+        c(IDXConfigInterface iDXConfigInterface) {
             this.a = iDXConfigInterface;
         }
 
@@ -173,12 +170,11 @@ public class wt {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.wt$d */
     /* loaded from: classes11.dex */
-    public static class C9885d implements IConfigChangeListener {
+    public static class d implements IConfigChangeListener {
         final /* synthetic */ IDXConfigInterface a;
 
-        C9885d(IDXConfigInterface iDXConfigInterface) {
+        d(IDXConfigInterface iDXConfigInterface) {
             this.a = iDXConfigInterface;
         }
 
@@ -196,12 +192,11 @@ public class wt {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.wt$e */
     /* loaded from: classes11.dex */
-    public static class C9886e implements IConfigChangeListener {
+    public static class e implements IConfigChangeListener {
         final /* synthetic */ IDXConfigInterface a;
 
-        C9886e(IDXConfigInterface iDXConfigInterface) {
+        e(IDXConfigInterface iDXConfigInterface) {
             this.a = iDXConfigInterface;
         }
 
@@ -274,11 +269,11 @@ public class wt {
         if (b2 == null) {
             return;
         }
-        b2.registerListener(new String[]{"group_dinamicX_common_android"}, new C9882a(b2), true);
-        b2.registerListener(new String[]{"group_dinamicx_textview"}, new C9883b(b2), true);
-        b2.registerListener(new String[]{"group_dinamicx_elder"}, new C9884c(b2), true);
-        b2.registerListener(new String[]{"group_dinamicx_image_corner"}, new C9885d(b2), true);
-        b2.registerListener(new String[]{"group_dinamicx_rl_mem_perf"}, new C9886e(b2), true);
+        b2.registerListener(new String[]{"group_dinamicX_common_android"}, new a(b2), true);
+        b2.registerListener(new String[]{"group_dinamicx_textview"}, new b(b2), true);
+        b2.registerListener(new String[]{"group_dinamicx_elder"}, new c(b2), true);
+        b2.registerListener(new String[]{"group_dinamicx_image_corner"}, new d(b2), true);
+        b2.registerListener(new String[]{"group_dinamicx_rl_mem_perf"}, new e(b2), true);
     }
 
     static /* synthetic */ boolean L(boolean z2) {

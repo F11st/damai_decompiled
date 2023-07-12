@@ -4,7 +4,6 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 import com.real.android.nativehtml.common.dom.Element;
-import com.real.android.nativehtml.common.io.C6145a;
 import com.real.android.nativehtml.common.io.InternalLinkHandler;
 import java.io.Reader;
 import java.io.StringReader;
@@ -18,7 +17,7 @@ import tb.e41;
 /* loaded from: classes5.dex */
 public class HtmlView extends FrameLayout implements InternalLinkHandler {
     private static boolean mIsOneLine;
-    private C6145a htmlParser;
+    private com.real.android.nativehtml.common.io.a htmlParser;
     private b60 requestHandler;
 
     public HtmlView(Context context) {
@@ -31,7 +30,7 @@ public class HtmlView extends FrameLayout implements InternalLinkHandler {
         b60 b60Var = new b60(androidPlatform);
         this.requestHandler = b60Var;
         b60Var.c(this);
-        this.htmlParser = new C6145a(androidPlatform, this.requestHandler, null);
+        this.htmlParser = new com.real.android.nativehtml.common.io.a(androidPlatform, this.requestHandler, null);
         reset();
     }
 

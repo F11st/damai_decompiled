@@ -18,8 +18,8 @@ import cn.damai.tetris.component.drama.bean.FilterDateBean;
 import cn.damai.tetris.component.drama.bean.FilterMainBean;
 import cn.damai.tetris.component.drama.bean.FilterTagBean;
 import cn.damai.tetris.component.drama.viewholder.FilterViewHolder;
-import cn.damai.tetris.componentplugin.C1985a;
 import cn.damai.tetris.componentplugin.FilterCalendarPanel;
+import cn.damai.tetris.componentplugin.a;
 import cn.damai.tetris.componentplugin.bean.LoadData;
 import cn.damai.tetris.core.NodeData;
 import cn.damai.tetris.core.StyleInfo;
@@ -72,12 +72,11 @@ public class FilterPanelPlugin extends ComponentPlugin {
     private XHorizontalScrollView.OnScrollListener mSubTagScrollListener;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.componentplugin.FilterPanelPlugin$a */
     /* loaded from: classes7.dex */
-    public class C1982a implements XHorizontalScrollView.OnScrollListener {
+    public class a implements XHorizontalScrollView.OnScrollListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1982a() {
+        a() {
         }
 
         @Override // cn.damai.uikit.view.XHorizontalScrollView.OnScrollListener
@@ -92,12 +91,11 @@ public class FilterPanelPlugin extends ComponentPlugin {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.componentplugin.FilterPanelPlugin$b */
     /* loaded from: classes7.dex */
-    public class C1983b implements FilterCalendarPanel.OnCalendarListener {
+    public class b implements FilterCalendarPanel.OnCalendarListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1983b() {
+        b() {
         }
 
         @Override // cn.damai.tetris.componentplugin.FilterCalendarPanel.OnCalendarListener
@@ -132,15 +130,14 @@ public class FilterPanelPlugin extends ComponentPlugin {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.componentplugin.FilterPanelPlugin$c */
     /* loaded from: classes7.dex */
-    public class C1984c implements OnBizListener<LoadData> {
+    public class c implements OnBizListener<LoadData> {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ boolean a;
         final /* synthetic */ boolean b;
         final /* synthetic */ boolean c;
 
-        C1984c(boolean z, boolean z2, boolean z3) {
+        c(boolean z, boolean z2, boolean z3) {
             this.a = z;
             this.b = z2;
             this.c = z3;
@@ -218,12 +215,12 @@ public class FilterPanelPlugin extends ComponentPlugin {
             inflate.setVisibility(8);
             this.mMaskView.scrollTo(0, this.mPanelOffsetAboveFilter);
             this.mRecyclerContainer.addView(this.mMaskView);
-            FilterViewHolder filterViewHolder = new FilterViewHolder(this.mMaskView, new C1985a.C1986a(componentPageUi.getBaseContext()));
+            FilterViewHolder filterViewHolder = new FilterViewHolder(this.mMaskView, new a.C0080a(componentPageUi.getBaseContext()));
             this.mMaskViewHolder = filterViewHolder;
             XHorizontalScrollView h = filterViewHolder.h();
-            C1982a c1982a = new C1982a();
-            this.mSubTagScrollListener = c1982a;
-            h.setListener(c1982a);
+            a aVar = new a();
+            this.mSubTagScrollListener = aVar;
+            h.setListener(aVar);
         }
         this.mFilterViewType = om.c(mu0.a()).d(xl2.DM_PROJECT_FILTER_PANEL_CID);
         addScrollListener();
@@ -288,7 +285,7 @@ public class FilterPanelPlugin extends ComponentPlugin {
             return;
         }
         if (this.mCalendarPanel == null) {
-            this.mCalendarPanel = new FilterCalendarPanel(viewGroup, new C1983b());
+            this.mCalendarPanel = new FilterCalendarPanel(viewGroup, new b());
         }
         this.mRecyclerContainer.post(new Runnable() { // from class: cn.damai.tetris.componentplugin.FilterPanelPlugin.4
             private static transient /* synthetic */ IpChange $ipChange;
@@ -430,7 +427,7 @@ public class FilterPanelPlugin extends ComponentPlugin {
             if (z && (view = this.mMaskView) != null) {
                 z3 = view.getVisibility() == 0;
             }
-            this.mPanelModel.j(z, new C1984c(z2, z, z3));
+            this.mPanelModel.j(z, new c(z2, z, z3));
         }
     }
 
@@ -585,28 +582,28 @@ public class FilterPanelPlugin extends ComponentPlugin {
                 });
             }
             return true;
-        } else if (obj instanceof C1985a) {
+        } else if (obj instanceof cn.damai.tetris.componentplugin.a) {
             cb1.c(TAG, "FilterPanelPlugin onMessage");
-            C1985a c1985a = (C1985a) obj;
+            cn.damai.tetris.componentplugin.a aVar = (cn.damai.tetris.componentplugin.a) obj;
             switch (i) {
                 case 2048:
-                    FilterMainBean filterMainBean = c1985a.a;
-                    this.mPanelUt.e(filterMainBean, c1985a.d);
+                    FilterMainBean filterMainBean = aVar.a;
+                    this.mPanelUt.e(filterMainBean, aVar.d);
                     this.mRefFilterBean.setSelectTab(filterMainBean);
                     this.mPanelModel.m(this.mRefFilterBean.getQuery());
                     updatePanelUi();
                     load(true, true);
                     break;
-                case C1985a.TYPE_TAG_CLICK /* 2049 */:
-                    FilterTagBean filterTagBean = c1985a.b;
-                    this.mPanelUt.g(filterTagBean, c1985a.d);
+                case cn.damai.tetris.componentplugin.a.TYPE_TAG_CLICK /* 2049 */:
+                    FilterTagBean filterTagBean = aVar.b;
+                    this.mPanelUt.g(filterTagBean, aVar.d);
                     this.mRefFilterBean.setSelectTag(filterTagBean);
                     this.mPanelModel.m(this.mRefFilterBean.getQuery());
                     updatePanelUi();
                     load(true, true);
                     break;
                 case 2050:
-                    FilterViewHolder filterViewHolder = c1985a.c;
+                    FilterViewHolder filterViewHolder = aVar.c;
                     this.mRealViewHolder = filterViewHolder;
                     if (filterViewHolder != null) {
                         filterViewHolder.h().setListener(this.mSubTagScrollListener);

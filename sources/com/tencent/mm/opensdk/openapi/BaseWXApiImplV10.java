@@ -9,9 +9,9 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import com.alibaba.security.realidentity.jsbridge.AbstractC3893a;
+import com.alibaba.security.realidentity.jsbridge.a;
 import com.tencent.mm.opensdk.channel.MMessageActV2;
-import com.tencent.mm.opensdk.channel.a.C7054a;
+import com.tencent.mm.opensdk.channel.a.a;
 import com.tencent.mm.opensdk.constants.ConstantsAPI;
 import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.modelbase.BaseResp;
@@ -59,9 +59,9 @@ import com.tencent.mm.opensdk.modelmsg.WXWebpageObject;
 import com.tencent.mm.opensdk.modelpay.JumpToOfflinePay;
 import com.tencent.mm.opensdk.modelpay.PayResp;
 import com.tencent.mm.opensdk.modelpay.WXJointPay;
-import com.tencent.mm.opensdk.utils.C7065b;
 import com.tencent.mm.opensdk.utils.ILog;
 import com.tencent.mm.opensdk.utils.Log;
+import com.tencent.mm.opensdk.utils.b;
 import com.tencent.open.SocialOperation;
 import java.net.URLEncoder;
 import java.util.ArrayList;
@@ -92,7 +92,7 @@ class BaseWXApiImplV10 implements IWXAPI {
         this.appId = str;
         this.checkSignature = z;
         this.launchMode = i;
-        C7065b.a = context.getApplicationContext();
+        b.a = context.getApplicationContext();
     }
 
     private boolean checkSumConsistent(byte[] bArr, byte[] bArr2) {
@@ -134,7 +134,7 @@ class BaseWXApiImplV10 implements IWXAPI {
                 if (iWXChannelJumpInfo instanceof WXChannelJumpMiniProgramInfo) {
                     jSONObject.put("username", ((WXChannelJumpMiniProgramInfo) iWXChannelJumpInfo).username);
                     str = ((WXChannelJumpMiniProgramInfo) iWXChannelJumpInfo).path;
-                    str2 = AbstractC3893a.V;
+                    str2 = a.V;
                 } else if (iWXChannelJumpInfo instanceof WXChannelJumpUrlInfo) {
                     str = ((WXChannelJumpUrlInfo) iWXChannelJumpInfo).url;
                     str2 = "url";
@@ -170,18 +170,18 @@ class BaseWXApiImplV10 implements IWXAPI {
         } catch (Exception e) {
             Log.e(TAG, "handleWxInternalRespType fail, ex = " + e.getMessage());
         }
-        if (C7065b.b(queryParameter)) {
+        if (b.b(queryParameter)) {
             Log.e(TAG, "handleWxInternalRespType fail, respType is null");
             return false;
         } else if (queryParameter.equals("subscribemessage")) {
             SubscribeMessage.Resp resp = new SubscribeMessage.Resp();
             String queryParameter2 = parse.getQueryParameter("ret");
             if (queryParameter2 != null && queryParameter2.length() > 0) {
-                resp.errCode = C7065b.a(queryParameter2, 0);
+                resp.errCode = b.a(queryParameter2, 0);
             }
             resp.openId = parse.getQueryParameter("openid");
             resp.templateID = parse.getQueryParameter("template_id");
-            resp.scene = C7065b.a(parse.getQueryParameter("scene"), 0);
+            resp.scene = b.a(parse.getQueryParameter("scene"), 0);
             resp.action = parse.getQueryParameter("action");
             resp.reserved = parse.getQueryParameter("reserved");
             iWXAPIEventHandler.onResp(resp);
@@ -190,7 +190,7 @@ class BaseWXApiImplV10 implements IWXAPI {
             WXInvoiceAuthInsert.Resp resp2 = new WXInvoiceAuthInsert.Resp();
             String queryParameter3 = parse.getQueryParameter("ret");
             if (queryParameter3 != null && queryParameter3.length() > 0) {
-                resp2.errCode = C7065b.a(queryParameter3, 0);
+                resp2.errCode = b.a(queryParameter3, 0);
             }
             resp2.wxOrderId = parse.getQueryParameter("wx_order_id");
             iWXAPIEventHandler.onResp(resp2);
@@ -199,7 +199,7 @@ class BaseWXApiImplV10 implements IWXAPI {
             WXPayInsurance.Resp resp3 = new WXPayInsurance.Resp();
             String queryParameter4 = parse.getQueryParameter("ret");
             if (queryParameter4 != null && queryParameter4.length() > 0) {
-                resp3.errCode = C7065b.a(queryParameter4, 0);
+                resp3.errCode = b.a(queryParameter4, 0);
             }
             resp3.wxOrderId = parse.getQueryParameter("wx_order_id");
             iWXAPIEventHandler.onResp(resp3);
@@ -208,7 +208,7 @@ class BaseWXApiImplV10 implements IWXAPI {
             WXNontaxPay.Resp resp4 = new WXNontaxPay.Resp();
             String queryParameter5 = parse.getQueryParameter("ret");
             if (queryParameter5 != null && queryParameter5.length() > 0) {
-                resp4.errCode = C7065b.a(queryParameter5, 0);
+                resp4.errCode = b.a(queryParameter5, 0);
             }
             resp4.wxOrderId = parse.getQueryParameter("wx_order_id");
             iWXAPIEventHandler.onResp(resp4);
@@ -221,7 +221,7 @@ class BaseWXApiImplV10 implements IWXAPI {
             SubscribeMiniProgramMsg.Resp resp5 = new SubscribeMiniProgramMsg.Resp();
             String queryParameter6 = parse.getQueryParameter("ret");
             if (queryParameter6 != null && queryParameter6.length() > 0) {
-                resp5.errCode = C7065b.a(queryParameter6, 0);
+                resp5.errCode = b.a(queryParameter6, 0);
             }
             resp5.openId = parse.getQueryParameter("openid");
             resp5.unionId = parse.getQueryParameter(SocialOperation.GAME_UNION_ID);
@@ -596,7 +596,7 @@ class BaseWXApiImplV10 implements IWXAPI {
         }
         this.wxSdkVersion = 0;
         final CountDownLatch countDownLatch = new CountDownLatch(1);
-        C7065b.b.submit(new Runnable() { // from class: com.tencent.mm.opensdk.openapi.BaseWXApiImplV10.1
+        b.b.submit(new Runnable() { // from class: com.tencent.mm.opensdk.openapi.BaseWXApiImplV10.1
             @Override // java.lang.Runnable
             public void run() {
                 try {
@@ -641,7 +641,7 @@ class BaseWXApiImplV10 implements IWXAPI {
             int intExtra = intent.getIntExtra(ConstantsAPI.SDK_VERSION, 0);
             String stringExtra2 = intent.getStringExtra(ConstantsAPI.APP_PACKAGE);
             if (stringExtra2 != null && stringExtra2.length() != 0) {
-                if (!checkSumConsistent(intent.getByteArrayExtra(ConstantsAPI.CHECK_SUM), C7054a.a(stringExtra, intExtra, stringExtra2))) {
+                if (!checkSumConsistent(intent.getByteArrayExtra(ConstantsAPI.CHECK_SUM), com.tencent.mm.opensdk.channel.a.a.a(stringExtra, intExtra, stringExtra2))) {
                     Log.e(TAG, "checksum fail");
                     return false;
                 }
@@ -672,13 +672,13 @@ class BaseWXApiImplV10 implements IWXAPI {
                                     WXOpenBusinessWebview.Resp resp = new WXOpenBusinessWebview.Resp();
                                     String queryParameter = parse.getQueryParameter("ret");
                                     if (queryParameter != null && queryParameter.length() > 0) {
-                                        resp.errCode = C7065b.a(queryParameter, 0);
+                                        resp.errCode = b.a(queryParameter, 0);
                                     }
                                     resp.resultInfo = parse.getQueryParameter("resultInfo");
                                     resp.errStr = parse.getQueryParameter("errmsg");
                                     String queryParameter2 = parse.getQueryParameter("type");
                                     if (queryParameter2 != null && queryParameter2.length() > 0) {
-                                        resp.businessType = C7065b.a(queryParameter2, 0);
+                                        resp.businessType = b.a(queryParameter2, 0);
                                     }
                                     iWXAPIEventHandler.onResp(resp);
                                     return true;
@@ -850,12 +850,12 @@ class BaseWXApiImplV10 implements IWXAPI {
             this.appId = str;
         }
         Log.d(TAG, "register app " + this.context.getPackageName());
-        C7054a.C7055a c7055a = new C7054a.C7055a();
-        c7055a.a = "com.tencent.mm";
-        c7055a.b = ConstantsAPI.ACTION_HANDLE_APP_REGISTER;
-        c7055a.c = "weixin://registerapp?appid=" + this.appId;
-        c7055a.d = j;
-        return C7054a.a(this.context, c7055a);
+        a.C0341a c0341a = new a.C0341a();
+        c0341a.a = "com.tencent.mm";
+        c0341a.b = ConstantsAPI.ACTION_HANDLE_APP_REGISTER;
+        c0341a.c = "weixin://registerapp?appid=" + this.appId;
+        c0341a.d = j;
+        return com.tencent.mm.opensdk.channel.a.a.a(this.context, c0341a);
     }
 
     @Override // com.tencent.mm.opensdk.openapi.IWXAPI
@@ -983,14 +983,14 @@ class BaseWXApiImplV10 implements IWXAPI {
                 if (baseReq.getType() == 2) {
                     SendMessageToWX.Req req2 = (SendMessageToWX.Req) baseReq;
                     int type = req2.message.getType();
-                    if (C7065b.a(type)) {
+                    if (b.a(type)) {
                         if (getWXAppSupportAPI() < 620756993) {
                             wXWebpageObject = new WXWebpageObject();
                         } else if (type != 46 || getWXAppSupportAPI() >= 620953856) {
                             WXMiniProgramObject wXMiniProgramObject = (WXMiniProgramObject) req2.message.mediaObject;
                             wXMiniProgramObject.userName += "@app";
                             String str4 = wXMiniProgramObject.path;
-                            if (!C7065b.b(str4)) {
+                            if (!b.b(str4)) {
                                 String[] split = str4.split("\\?");
                                 if (split.length > 1) {
                                     sb = new StringBuilder();
@@ -1099,10 +1099,10 @@ class BaseWXApiImplV10 implements IWXAPI {
             return;
         }
         Log.d(TAG, "unregister app " + this.context.getPackageName());
-        C7054a.C7055a c7055a = new C7054a.C7055a();
-        c7055a.a = "com.tencent.mm";
-        c7055a.b = ConstantsAPI.ACTION_HANDLE_APP_UNREGISTER;
-        c7055a.c = "weixin://unregisterapp?appid=" + this.appId;
-        C7054a.a(this.context, c7055a);
+        a.C0341a c0341a = new a.C0341a();
+        c0341a.a = "com.tencent.mm";
+        c0341a.b = ConstantsAPI.ACTION_HANDLE_APP_UNREGISTER;
+        c0341a.c = "weixin://unregisterapp?appid=" + this.appId;
+        com.tencent.mm.opensdk.channel.a.a.a(this.context, c0341a);
     }
 }

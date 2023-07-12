@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.functions.BooleanSupplier;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
@@ -332,14 +332,14 @@ public final class FlowableBuffer<T, C extends Collection<? super T>> extends Ab
         }
     }
 
-    public FlowableBuffer(AbstractC8147b<T> abstractC8147b, int i, int i2, Callable<C> callable) {
-        super(abstractC8147b);
+    public FlowableBuffer(b<T> bVar, int i, int i2, Callable<C> callable) {
+        super(bVar);
         this.size = i;
         this.skip = i2;
         this.bufferSupplier = callable;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super C> subscriber) {
         int i = this.size;
         int i2 = this.skip;

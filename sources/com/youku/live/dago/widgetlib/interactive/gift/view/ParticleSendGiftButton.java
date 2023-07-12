@@ -239,7 +239,7 @@ public class ParticleSendGiftButton extends RelativeLayout implements View.OnTou
         }
         Context context = getContext();
         this.mContext = context;
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ykl_send_gift_linear_button, this);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_ykl_send_gift_linear_button, this);
         this.mSendBtn = (LinearProgressSendButton) findViewById(R.id.id_linear_send_bt);
         CombSendView combSendView = (CombSendView) findViewById(R.id.combSendView);
         this.mCombSendView = combSendView;

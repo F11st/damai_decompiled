@@ -2,8 +2,8 @@ package com.alibaba.mtl.appmonitor.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import com.alibaba.appmonitor.pool.C3316a;
 import com.alibaba.appmonitor.pool.Reusable;
+import com.alibaba.appmonitor.pool.a;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -33,11 +33,11 @@ public class DimensionValueSet implements Parcelable, Reusable {
     }
 
     public static DimensionValueSet create() {
-        return (DimensionValueSet) C3316a.a().poll(DimensionValueSet.class, new Object[0]);
+        return (DimensionValueSet) a.a().poll(DimensionValueSet.class, new Object[0]);
     }
 
     public static DimensionValueSet fromStringMap(Map<String, String> map) {
-        DimensionValueSet dimensionValueSet = (DimensionValueSet) C3316a.a().poll(DimensionValueSet.class, new Object[0]);
+        DimensionValueSet dimensionValueSet = (DimensionValueSet) a.a().poll(DimensionValueSet.class, new Object[0]);
         for (Map.Entry<String, String> entry : map.entrySet()) {
             dimensionValueSet.map.put(entry.getKey(), entry.getValue() != null ? entry.getValue() : "null");
         }
@@ -145,6 +145,6 @@ public class DimensionValueSet implements Parcelable, Reusable {
 
     @Deprecated
     public static DimensionValueSet create(int i) {
-        return (DimensionValueSet) C3316a.a().poll(DimensionValueSet.class, new Object[0]);
+        return (DimensionValueSet) a.a().poll(DimensionValueSet.class, new Object[0]);
     }
 }

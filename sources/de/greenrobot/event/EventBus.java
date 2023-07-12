@@ -19,16 +19,16 @@ import tb.uk1;
 public class EventBus {
     public static String p = "Event";
     static volatile EventBus q;
-    private static final C8102a r = new C8102a();
+    private static final de.greenrobot.event.a r = new de.greenrobot.event.a();
     private static final Map<Class<?>, List<Class<?>>> s = new HashMap();
-    private final Map<Class<?>, CopyOnWriteArrayList<C8108g>> a;
+    private final Map<Class<?>, CopyOnWriteArrayList<g>> a;
     private final Map<Object, List<Class<?>>> b;
     private final Map<Class<?>, Object> c;
-    private final ThreadLocal<C8101c> d;
-    private final HandlerC8103b e;
+    private final ThreadLocal<c> d;
+    private final de.greenrobot.event.b e;
     private final BackgroundPoster f;
     private final AsyncPoster g;
-    private final C8107f h;
+    private final f h;
     private final ExecutorService i;
     private final boolean j;
     private final boolean k;
@@ -44,25 +44,23 @@ public class EventBus {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: de.greenrobot.event.EventBus$a */
     /* loaded from: classes3.dex */
-    class C8099a extends ThreadLocal<C8101c> {
-        C8099a(EventBus eventBus) {
+    class a extends ThreadLocal<c> {
+        a(EventBus eventBus) {
         }
 
         /* JADX INFO: Access modifiers changed from: protected */
         @Override // java.lang.ThreadLocal
         /* renamed from: a */
-        public C8101c initialValue() {
-            return new C8101c();
+        public c initialValue() {
+            return new c();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: de.greenrobot.event.EventBus$b */
     /* loaded from: classes3.dex */
-    public static /* synthetic */ class C8100b {
+    public static /* synthetic */ class b {
         static final /* synthetic */ int[] a;
 
         static {
@@ -89,16 +87,15 @@ public class EventBus {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: de.greenrobot.event.EventBus$c */
     /* loaded from: classes3.dex */
-    public static final class C8101c {
+    public static final class c {
         final List<Object> a = new ArrayList();
         boolean b;
         boolean c;
         Object d;
         boolean e;
 
-        C8101c() {
+        c() {
         }
     }
 
@@ -126,11 +123,11 @@ public class EventBus {
         return q;
     }
 
-    private void d(C8108g c8108g, Object obj, Throwable th) {
+    private void d(g gVar, Object obj, Throwable th) {
         if (obj instanceof si2) {
             if (this.k) {
                 String str = p;
-                Log.e(str, "SubscriberExceptionEvent subscriber " + c8108g.a.getClass() + " threw an exception", th);
+                Log.e(str, "SubscriberExceptionEvent subscriber " + gVar.a.getClass() + " threw an exception", th);
                 si2 si2Var = (si2) obj;
                 String str2 = p;
                 Log.e(str2, "Initial event " + si2Var.b + " caused exception in " + si2Var.c, si2Var.a);
@@ -138,10 +135,10 @@ public class EventBus {
         } else if (!this.j) {
             if (this.k) {
                 String str3 = p;
-                Log.e(str3, "Could not dispatch event: " + obj.getClass() + " to subscribing class " + c8108g.a.getClass(), th);
+                Log.e(str3, "Could not dispatch event: " + obj.getClass() + " to subscribing class " + gVar.a.getClass(), th);
             }
             if (this.m) {
-                i(new si2(this, th, obj, c8108g.a));
+                i(new si2(this, th, obj, gVar.a));
             }
         } else {
             throw new EventBusException("Invoking subscriber failed", th);
@@ -165,7 +162,7 @@ public class EventBus {
         return list;
     }
 
-    private void j(Object obj, C8101c c8101c) throws Error {
+    private void j(Object obj, c cVar) throws Error {
         boolean k;
         Class<?> cls = obj.getClass();
         if (this.o) {
@@ -173,10 +170,10 @@ public class EventBus {
             int size = h.size();
             k = false;
             for (int i = 0; i < size; i++) {
-                k |= k(obj, c8101c, h.get(i));
+                k |= k(obj, cVar, h.get(i));
             }
         } else {
-            k = k(obj, c8101c, cls);
+            k = k(obj, cVar, cls);
         }
         if (k) {
             return;
@@ -191,74 +188,74 @@ public class EventBus {
         i(new uk1(this, obj));
     }
 
-    private boolean k(Object obj, C8101c c8101c, Class<?> cls) {
-        CopyOnWriteArrayList<C8108g> copyOnWriteArrayList;
+    private boolean k(Object obj, c cVar, Class<?> cls) {
+        CopyOnWriteArrayList<g> copyOnWriteArrayList;
         synchronized (this) {
             copyOnWriteArrayList = this.a.get(cls);
         }
         if (copyOnWriteArrayList == null || copyOnWriteArrayList.isEmpty()) {
             return false;
         }
-        Iterator<C8108g> it = copyOnWriteArrayList.iterator();
+        Iterator<g> it = copyOnWriteArrayList.iterator();
         while (it.hasNext()) {
-            C8108g next = it.next();
-            c8101c.d = obj;
+            g next = it.next();
+            cVar.d = obj;
             try {
-                l(next, obj, c8101c.c);
-                if (c8101c.e) {
+                l(next, obj, cVar.c);
+                if (cVar.e) {
                     return true;
                 }
             } finally {
-                c8101c.e = false;
+                cVar.e = false;
             }
         }
         return true;
     }
 
-    private void l(C8108g c8108g, Object obj, boolean z) {
-        int i = C8100b.a[c8108g.b.b.ordinal()];
+    private void l(g gVar, Object obj, boolean z) {
+        int i = b.a[gVar.b.b.ordinal()];
         if (i == 1) {
-            f(c8108g, obj);
+            f(gVar, obj);
         } else if (i == 2) {
             if (z) {
-                f(c8108g, obj);
+                f(gVar, obj);
             } else {
-                this.e.a(c8108g, obj);
+                this.e.a(gVar, obj);
             }
         } else if (i == 3) {
             if (z) {
-                this.f.enqueue(c8108g, obj);
+                this.f.enqueue(gVar, obj);
             } else {
-                f(c8108g, obj);
+                f(gVar, obj);
             }
         } else if (i == 4) {
-            this.g.enqueue(c8108g, obj);
+            this.g.enqueue(gVar, obj);
         } else {
-            throw new IllegalStateException("Unknown thread mode: " + c8108g.b.b);
+            throw new IllegalStateException("Unknown thread mode: " + gVar.b.b);
         }
     }
 
     private synchronized void n(Object obj, boolean z, int i) {
-        for (C8106e c8106e : this.h.a(obj.getClass())) {
-            o(obj, c8106e, z, i);
+        for (e eVar : this.h.a(obj.getClass())) {
+            o(obj, eVar, z, i);
         }
     }
 
-    private void o(Object obj, C8106e c8106e, boolean z, int i) {
+    private void o(Object obj, e eVar, boolean z, int i) {
         Object obj2;
-        Class<?> cls = c8106e.c;
-        CopyOnWriteArrayList<C8108g> copyOnWriteArrayList = this.a.get(cls);
-        C8108g c8108g = new C8108g(obj, c8106e, i);
+        Class<?> cls = eVar.c;
+        CopyOnWriteArrayList<g> copyOnWriteArrayList = this.a.get(cls);
+        g gVar = new g(obj, eVar, i);
         if (copyOnWriteArrayList == null) {
             copyOnWriteArrayList = new CopyOnWriteArrayList<>();
             this.a.put(cls, copyOnWriteArrayList);
-        } else if (copyOnWriteArrayList.contains(c8108g)) {
+        } else if (copyOnWriteArrayList.contains(gVar)) {
             throw new EventBusException("Subscriber " + obj.getClass() + " already registered to event " + cls);
         }
         int size = copyOnWriteArrayList.size();
         for (int i2 = 0; i2 <= size; i2++) {
-            if (i2 == size || c8108g.c > copyOnWriteArrayList.get(i2).c) {
-                copyOnWriteArrayList.add(i2, c8108g);
+            if (i2 == size || gVar.c > copyOnWriteArrayList.get(i2).c) {
+                copyOnWriteArrayList.add(i2, gVar);
                 break;
             }
         }
@@ -273,20 +270,20 @@ public class EventBus {
                 obj2 = this.c.get(cls);
             }
             if (obj2 != null) {
-                l(c8108g, obj2, Looper.getMainLooper() == Looper.myLooper());
+                l(gVar, obj2, Looper.getMainLooper() == Looper.myLooper());
             }
         }
     }
 
     private void q(Object obj, Class<?> cls) {
-        CopyOnWriteArrayList<C8108g> copyOnWriteArrayList = this.a.get(cls);
+        CopyOnWriteArrayList<g> copyOnWriteArrayList = this.a.get(cls);
         if (copyOnWriteArrayList != null) {
             int size = copyOnWriteArrayList.size();
             int i = 0;
             while (i < size) {
-                C8108g c8108g = copyOnWriteArrayList.get(i);
-                if (c8108g.a == obj) {
-                    c8108g.d = false;
+                g gVar = copyOnWriteArrayList.get(i);
+                if (gVar.a == obj) {
+                    gVar.d = false;
                     copyOnWriteArrayList.remove(i);
                     i--;
                     size--;
@@ -302,22 +299,22 @@ public class EventBus {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public void e(C8104c c8104c) {
-        Object obj = c8104c.a;
-        C8108g c8108g = c8104c.b;
-        C8104c.b(c8104c);
-        if (c8108g.d) {
-            f(c8108g, obj);
+    public void e(de.greenrobot.event.c cVar) {
+        Object obj = cVar.a;
+        g gVar = cVar.b;
+        de.greenrobot.event.c.b(cVar);
+        if (gVar.d) {
+            f(gVar, obj);
         }
     }
 
-    void f(C8108g c8108g, Object obj) {
+    void f(g gVar, Object obj) {
         try {
-            c8108g.b.a.invoke(c8108g.a, obj);
+            gVar.b.a.invoke(gVar.a, obj);
         } catch (IllegalAccessException e) {
             throw new IllegalStateException("Unexpected exception", e);
         } catch (InvocationTargetException e2) {
-            d(c8108g, obj, e2.getCause());
+            d(gVar, obj, e2.getCause());
         }
     }
 
@@ -326,21 +323,21 @@ public class EventBus {
     }
 
     public void i(Object obj) {
-        C8101c c8101c = this.d.get();
-        List<Object> list = c8101c.a;
+        c cVar = this.d.get();
+        List<Object> list = cVar.a;
         list.add(obj);
-        if (c8101c.b) {
+        if (cVar.b) {
             return;
         }
-        c8101c.c = Looper.getMainLooper() == Looper.myLooper();
-        c8101c.b = true;
-        if (!c8101c.e) {
+        cVar.c = Looper.getMainLooper() == Looper.myLooper();
+        cVar.b = true;
+        if (!cVar.e) {
             while (!list.isEmpty()) {
                 try {
-                    j(list.remove(0), c8101c);
+                    j(list.remove(0), cVar);
                 } finally {
-                    c8101c.b = false;
-                    c8101c.c = false;
+                    cVar.b = false;
+                    cVar.c = false;
                 }
             }
             return;
@@ -365,21 +362,21 @@ public class EventBus {
         }
     }
 
-    EventBus(C8102a c8102a) {
-        this.d = new C8099a(this);
+    EventBus(de.greenrobot.event.a aVar) {
+        this.d = new a(this);
         this.a = new HashMap();
         this.b = new HashMap();
         this.c = new ConcurrentHashMap();
-        this.e = new HandlerC8103b(this, Looper.getMainLooper(), 10);
+        this.e = new de.greenrobot.event.b(this, Looper.getMainLooper(), 10);
         this.f = new BackgroundPoster(this);
         this.g = new AsyncPoster(this);
-        this.h = new C8107f(c8102a.h);
-        this.k = c8102a.a;
-        this.l = c8102a.b;
-        this.m = c8102a.c;
-        this.n = c8102a.d;
-        this.j = c8102a.e;
-        this.o = c8102a.f;
-        this.i = c8102a.g;
+        this.h = new f(aVar.h);
+        this.k = aVar.a;
+        this.l = aVar.b;
+        this.m = aVar.c;
+        this.n = aVar.d;
+        this.j = aVar.e;
+        this.o = aVar.f;
+        this.i = aVar.g;
     }
 }

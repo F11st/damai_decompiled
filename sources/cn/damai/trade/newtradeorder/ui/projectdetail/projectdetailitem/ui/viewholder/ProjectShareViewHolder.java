@@ -23,12 +23,11 @@ public class ProjectShareViewHolder extends RecyclerView.ViewHolder {
     View.OnClickListener e;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectShareViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2413a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2413a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -56,7 +55,7 @@ public class ProjectShareViewHolder extends RecyclerView.ViewHolder {
 
     public ProjectShareViewHolder(Context context, ShareManagerImpl shareManagerImpl, ViewGroup viewGroup) {
         super(LayoutInflater.from(context).inflate(R$layout.project_item_share_layout, viewGroup, false));
-        this.e = new View$OnClickListenerC2413a();
+        this.e = new a();
         this.d = shareManagerImpl;
         b();
     }

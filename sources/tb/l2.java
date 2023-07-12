@@ -1,7 +1,6 @@
 package tb;
 
 import java.util.List;
-import kotlin.collections.C8214m;
 import kotlin.reflect.jvm.internal.impl.descriptors.annotations.Annotations;
 import kotlin.reflect.jvm.internal.impl.resolve.scopes.MemberScope;
 import kotlin.reflect.jvm.internal.impl.types.TypeConstructor;
@@ -12,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 /* loaded from: classes3.dex */
 public abstract class l2 extends fd2 {
     @NotNull
-    public static final C9400a Companion = new C9400a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final TypeConstructor b;
     private final boolean c;
@@ -20,13 +19,12 @@ public abstract class l2 extends fd2 {
     private final MemberScope d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.l2$a */
     /* loaded from: classes3.dex */
-    public static final class C9400a {
-        private C9400a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9400a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -44,7 +42,7 @@ public abstract class l2 extends fd2 {
     @NotNull
     public List<TypeProjection> b() {
         List<TypeProjection> g;
-        g = C8214m.g();
+        g = kotlin.collections.m.g();
         return g;
     }
 

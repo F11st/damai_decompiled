@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentMap;
-import kotlin.collections.C8212k;
+import kotlin.collections.k;
 import kotlin.jvm.functions.Function0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -84,9 +84,9 @@ public final class ScriptMoreComponent extends GenericComponent<ComponentValue> 
         if (AndroidInstantRuntime.support(ipChange, "-372293184")) {
             ipChange.ipc$dispatch("-372293184", new Object[]{this, Integer.valueOf(i)});
         } else if (!getModule().getContainer().getModules().isEmpty()) {
-            final IModule iModule = (IModule) C8212k.b0(getModule().getContainer().getModules());
+            final IModule iModule = (IModule) k.b0(getModule().getContainer().getModules());
             if (!iModule.getComponents().isEmpty()) {
-                IComponent iComponent = (IComponent) C8212k.b0(iModule.getComponents());
+                IComponent iComponent = (IComponent) k.b0(iModule.getComponents());
                 JSONObject data = iComponent.getProperty().getData();
                 if (data == null || (string = data.getString("componentId")) == null) {
                     return;

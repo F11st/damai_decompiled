@@ -31,14 +31,14 @@ public final class GXDataListener implements GXTemplateEngine.GXIDataListener {
 
     @Override // com.alibaba.gaiax.GXTemplateEngine.GXIDataListener
     @Nullable
-    public CharSequence onTextProcess(@NotNull GXTemplateEngine.C3348j c3348j) {
+    public CharSequence onTextProcess(@NotNull GXTemplateEngine.j jVar) {
         Object process;
-        b41.i(c3348j, "gxTextData");
-        View c = c3348j.c();
-        String b = c3348j.b();
-        CharSequence i = c3348j.i();
-        Integer a = c3348j.a();
-        JSONObject h = c3348j.h();
+        b41.i(jVar, "gxTextData");
+        View c = jVar.c();
+        String b = jVar.b();
+        CharSequence i = jVar.i();
+        Integer a = jVar.a();
+        JSONObject h = jVar.h();
         if (c == null || b == null || i == null) {
             return null;
         }

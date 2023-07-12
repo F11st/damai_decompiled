@@ -8,7 +8,6 @@ import android.os.Build;
 import android.util.AttributeSet;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.util.Bitmap12ColorHex;
 import cn.damai.commonbusiness.util.DMRGBUtil;
@@ -24,23 +23,22 @@ public class DMDXColorFrameLayout extends DXNativeFrameLayout {
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.colorlayout.DMDXColorFrameLayout$a */
     /* loaded from: classes4.dex */
-    public class C0656a implements DMImageCreator.DMImageFailListener {
+    public class a implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ float[] a;
         final /* synthetic */ float[] b;
 
-        C0656a(float[] fArr, float[] fArr2) {
+        a(float[] fArr, float[] fArr2) {
             this.a = fArr;
             this.b = fArr2;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-2040347675")) {
-                ipChange.ipc$dispatch("-2040347675", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("-2040347675", new Object[]{this, dVar});
             } else {
                 DMDXColorFrameLayout.this.resolveColor(this.a, this.b, Color.parseColor(Bitmap12ColorHex.C_HEX_DE3F64));
             }
@@ -48,21 +46,19 @@ public class DMDXColorFrameLayout extends DXNativeFrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.colorlayout.DMDXColorFrameLayout$b */
     /* loaded from: classes4.dex */
-    public class C0657b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
         final /* synthetic */ float[] b;
         final /* synthetic */ float[] c;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.commonbusiness.dynamicx.customwidget.colorlayout.DMDXColorFrameLayout$b$a */
         /* loaded from: classes4.dex */
-        public class C0658a implements DMRGBUtil.OnFetchColorListener {
+        public class a implements DMRGBUtil.OnFetchColorListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C0658a() {
+            a() {
             }
 
             @Override // cn.damai.commonbusiness.util.DMRGBUtil.OnFetchColorListener
@@ -72,26 +68,26 @@ public class DMDXColorFrameLayout extends DXNativeFrameLayout {
                     ipChange.ipc$dispatch("-1525117829", new Object[]{this, Integer.valueOf(i)});
                     return;
                 }
-                C0657b c0657b = C0657b.this;
-                DMDXColorFrameLayout.this.resolveColor(c0657b.b, c0657b.c, i);
+                b bVar = b.this;
+                DMDXColorFrameLayout.this.resolveColor(bVar.b, bVar.c, i);
             }
         }
 
-        C0657b(String str, float[] fArr, float[] fArr2) {
+        b(String str, float[] fArr, float[] fArr2) {
             this.a = str;
             this.b = fArr;
             this.c = fArr2;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             Bitmap bitmap;
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1981511098")) {
-                ipChange.ipc$dispatch("1981511098", new Object[]{this, c0502e});
-            } else if (c0502e == null || (bitmap = c0502e.b) == null) {
+                ipChange.ipc$dispatch("1981511098", new Object[]{this, eVar});
+            } else if (eVar == null || (bitmap = eVar.b) == null) {
             } else {
-                DMRGBUtil.h(bitmap, this.a, new C0658a());
+                DMRGBUtil.h(bitmap, this.a, new a());
             }
         }
     }
@@ -136,7 +132,7 @@ public class DMDXColorFrameLayout extends DXNativeFrameLayout {
         if (AndroidInstantRuntime.support(ipChange, "1275844927")) {
             ipChange.ipc$dispatch("1275844927", new Object[]{this, str, fArr, fArr2});
         } else {
-            C0504a.b().c(str).n(new C0657b(str, fArr2, fArr)).e(new C0656a(fArr2, fArr)).f();
+            cn.damai.common.image.a.b().c(str).n(new b(str, fArr2, fArr)).e(new a(fArr2, fArr)).f();
         }
     }
 

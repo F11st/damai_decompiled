@@ -9,8 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.im.AliMeUtil;
 import cn.damai.login.LoginManager;
@@ -53,15 +53,14 @@ public final class TicketExtFAQViewHolder extends BaseViewHolder<TicketExtFAQBea
     private final ImageView titleIcon;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.detailholder.TicketExtFAQViewHolder$a */
     /* loaded from: classes7.dex */
-    public static final class C2060a implements AliMeUtil.OnAliMeTokenListener {
+    public static final class a implements AliMeUtil.OnAliMeTokenListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String b;
         final /* synthetic */ String c;
         final /* synthetic */ String d;
 
-        C2060a(String str, String str2, String str3) {
+        a(String str, String str2, String str3) {
             this.b = str;
             this.c = str2;
             this.d = str3;
@@ -204,10 +203,10 @@ public final class TicketExtFAQViewHolder extends BaseViewHolder<TicketExtFAQBea
         hashMap.put("screening_id", str);
         b41.h(projectId, "projectId");
         hashMap.put("item_id", projectId);
-        C0529c e = C0529c.e();
-        C0528b c0528b = C0528b.getInstance();
+        c e = c.e();
+        b bVar = b.getInstance();
         Boolean bool = Boolean.TRUE;
-        e.x(c0528b.e(un2.TICKLET_DETAIL_PAGE, "ticket_info", pl.MY_ALIME_PAGE, hashMap, bool));
+        e.x(bVar.e(un2.TICKLET_DETAIL_PAGE, "ticket_info", pl.MY_ALIME_PAGE, hashMap, bool));
         if (b41.d(ticketExtFAQViewHolder.getValue().getRoleAndSceneGame(), bool)) {
             ticketExtFAQViewHolder.gotoMyKeFu(AliMeUtil.SESSION_SCRIPT_COUPON_DETAIL, null);
         } else {
@@ -227,7 +226,7 @@ public final class TicketExtFAQViewHolder extends BaseViewHolder<TicketExtFAQBea
             Context context = getContext();
             b41.g(context, "null cannot be cast to non-null type cn.damai.commonbusiness.base.DamaiBaseActivity<*, *>");
             ((DamaiBaseActivity) context).startProgressDialog();
-            AliMeUtil.d(k, str, new C2060a(str, str2, str3));
+            AliMeUtil.d(k, str, new a(str, str2, str3));
         } else if (LoginManager.k().q()) {
         } else {
             LoginManager k2 = LoginManager.k();
@@ -277,10 +276,10 @@ public final class TicketExtFAQViewHolder extends BaseViewHolder<TicketExtFAQBea
         hashMap.put("screening_id", str2);
         b41.h(projectId, "projectId");
         hashMap.put("item_id", projectId);
-        C0529c e = C0529c.e();
-        C0528b c0528b = C0528b.getInstance();
+        c e = c.e();
+        b bVar = b.getInstance();
         Boolean bool = Boolean.TRUE;
-        e.x(c0528b.e(un2.TICKLET_DETAIL_PAGE, "ticket_info", pl.MY_ALIME_PAGE, hashMap, bool));
+        e.x(bVar.e(un2.TICKLET_DETAIL_PAGE, "ticket_info", pl.MY_ALIME_PAGE, hashMap, bool));
         if (b41.d(ticketExtFAQViewHolder.getValue().getRoleAndSceneGame(), bool)) {
             ticketExtFAQViewHolder.gotoMyKeFu(AliMeUtil.SESSION_SCRIPT_COUPON_DETAIL, str);
         } else {

@@ -8,7 +8,7 @@ import io.flutter.wpkbridge.WPKFactory;
 import java.io.File;
 import java.util.UUID;
 import kotlin.Metadata;
-import kotlin.collections.C8202e;
+import kotlin.collections.e;
 import org.jetbrains.annotations.NotNull;
 import tb.b41;
 import tb.zi0;
@@ -92,7 +92,7 @@ public final class GaiaXRemoteCacheUtils {
                         if (genTemplateFile2.isDirectory() && genTemplateFile2.exists()) {
                             File[] listFiles = genTemplateFile2.listFiles();
                             String str2 = null;
-                            if (listFiles != null && (file = (File) C8202e.v(listFiles)) != null) {
+                            if (listFiles != null && (file = (File) e.v(listFiles)) != null) {
                                 str2 = file.getAbsolutePath();
                             }
                             if (str2 != null) {

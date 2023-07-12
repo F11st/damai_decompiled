@@ -110,14 +110,14 @@ public class iv0 implements DLConnection {
     }
 
     @Override // com.taobao.downloader.download.protocol.DLConnection
-    public void openConnection(URL url, C9613qq c9613qq) throws IOException {
-        if (url.getProtocol().equals("http") && !c9613qq.d()) {
-            url = new URL(a(url.toString(), c9613qq.a()));
+    public void openConnection(URL url, qq qqVar) throws IOException {
+        if (url.getProtocol().equals("http") && !qqVar.d()) {
+            url = new URL(a(url.toString(), qqVar.a()));
         }
         HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
         this.a = httpURLConnection;
-        httpURLConnection.setConnectTimeout(c9613qq.b());
-        this.a.setReadTimeout(c9613qq.c());
-        this.a.setInstanceFollowRedirects(C9613qq.i);
+        httpURLConnection.setConnectTimeout(qqVar.b());
+        this.a.setReadTimeout(qqVar.c());
+        this.a.setInstanceFollowRedirects(qq.i);
     }
 }

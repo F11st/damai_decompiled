@@ -38,12 +38,11 @@ public class HorScrollView extends HorizontalScrollView {
     private ViewPager pager;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.snake.HorScrollView$a */
     /* loaded from: classes8.dex */
-    public class View$OnClickListenerC2549a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2549a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -168,7 +167,7 @@ public class HorScrollView extends HorizontalScrollView {
         this.mLayout.setHeight(this.mHeight);
         this.mLayout.setIsEqual(this.mIsEqual);
         this.mLayout.setDefaultPadding(this.mPaddingLeftRight);
-        this.mLayout.setTitle(this.mList, new View$OnClickListenerC2549a());
+        this.mLayout.setTitle(this.mList, new a());
         if (this.mLayout.getLayoutParams() != null) {
             this.mLayout.getLayoutParams().height = this.mLayout.dip2px(this.mHeight);
         }

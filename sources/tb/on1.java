@@ -57,7 +57,7 @@ public class on1 {
         OrangeConfigCenter.c().e(HOME_OTHER_TIME_ZONE_IN_CHINA);
         OrangeConfigCenter.c().e("damai_webp");
         OrangeConfigCenter.c().e(GRAB_TICKLET_HIDE_AD_MINUTES);
-        C9318js.d();
+        js.d();
         c92.c();
         OrangeConfigCenter.c().e(y91.a);
         OrangeConfigCenter.c().e(LIVE_WEEX_CONFIG);
@@ -91,7 +91,7 @@ public class on1 {
         OrangeConfigCenter.c().g(HOME_OTHER_TIME_ZONE_IN_CHINA);
         OrangeConfigCenter.c().g("damai_webp");
         OrangeConfigCenter.c().g(GRAB_TICKLET_HIDE_AD_MINUTES);
-        C9318js.e();
+        js.e();
         c92.d();
         OrangeConfigCenter.c().g(y91.a);
         OrangeConfigCenter.c().g(LIVE_WEEX_CONFIG);

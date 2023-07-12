@@ -28,7 +28,7 @@ public class EncryptUtil {
         /*
             java.lang.String r0 = "EncryptUtil"
             java.lang.String r1 = "generateSecureRandomNew "
-            com.huawei.secure.android.common.encrypt.utils.C5742b.a(r0, r1)
+            com.huawei.secure.android.common.encrypt.utils.b.a(r0, r1)
             int r1 = android.os.Build.VERSION.SDK_INT     // Catch: java.security.NoSuchAlgorithmException -> L12
             r2 = 26
             if (r1 < r2) goto L17
@@ -36,7 +36,7 @@ public class EncryptUtil {
             goto L18
         L12:
             java.lang.String r1 = "getSecureRandomBytes: NoSuchAlgorithmException"
-            com.huawei.secure.android.common.encrypt.utils.C5742b.b(r0, r1)
+            com.huawei.secure.android.common.encrypt.utils.b.b(r0, r1)
         L17:
             r1 = 0
         L18:
@@ -74,12 +74,12 @@ public class EncryptUtil {
             java.lang.String r3 = " , you should implementation bcprov-jdk15on library"
             r4.append(r3)
             java.lang.String r3 = r4.toString()
-            com.huawei.secure.android.common.encrypt.utils.C5742b.b(r0, r3)
+            com.huawei.secure.android.common.encrypt.utils.b.b(r0, r3)
             com.huawei.secure.android.common.encrypt.utils.EncryptUtil.d = r2
             goto L6c
         L67:
             java.lang.String r2 = "NoSuchAlgorithmException"
-            com.huawei.secure.android.common.encrypt.utils.C5742b.b(r0, r2)
+            com.huawei.secure.android.common.encrypt.utils.b.b(r0, r2)
         L6c:
             return r1
         */
@@ -96,7 +96,7 @@ public class EncryptUtil {
                     secureRandom = SecureRandom.getInstance("SHA1PRNG");
                 }
             } catch (NoSuchAlgorithmException unused) {
-                C5742b.b(a, "genSecureRandom: NoSuchAlgorithmException");
+                b.b(a, "genSecureRandom: NoSuchAlgorithmException");
             }
             return secureRandom;
         }
@@ -112,16 +112,16 @@ public class EncryptUtil {
                     secureRandom = SecureRandom.getInstanceStrong();
                 }
             } catch (NoSuchAlgorithmException unused) {
-                C5742b.b(a, "getSecureRandomBytes: NoSuchAlgorithmException");
+                b.b(a, "getSecureRandomBytes: NoSuchAlgorithmException");
             }
             if (secureRandom == null) {
                 try {
                     secureRandom = SecureRandom.getInstance("SHA1PRNG");
                 } catch (NoSuchAlgorithmException unused2) {
-                    C5742b.b(a, "getSecureRandomBytes getInstance: NoSuchAlgorithmException");
+                    b.b(a, "getSecureRandomBytes getInstance: NoSuchAlgorithmException");
                     return new byte[0];
                 } catch (Exception e) {
-                    C5742b.b(a, "getSecureRandomBytes getInstance: exception : " + e.getMessage());
+                    b.b(a, "getSecureRandomBytes getInstance: exception : " + e.getMessage());
                     return new byte[0];
                 }
             }
@@ -140,14 +140,14 @@ public class EncryptUtil {
             try {
                 return KeyFactory.getInstance("RSA").generatePrivate(new PKCS8EncodedKeySpec(Base64.decode(str, 0)));
             } catch (GeneralSecurityException e) {
-                C5742b.b(a, "load Key Exception:" + e.getMessage());
+                b.b(a, "load Key Exception:" + e.getMessage());
                 return null;
             }
         } catch (IllegalArgumentException unused) {
-            C5742b.b(a, "base64 decode IllegalArgumentException");
+            b.b(a, "base64 decode IllegalArgumentException");
             return null;
         } catch (Exception e2) {
-            C5742b.b(a, "base64 decode Exception" + e2.getMessage());
+            b.b(a, "base64 decode Exception" + e2.getMessage());
             return null;
         }
     }
@@ -157,14 +157,14 @@ public class EncryptUtil {
             try {
                 return (RSAPublicKey) KeyFactory.getInstance("RSA").generatePublic(new X509EncodedKeySpec(Base64.decode(str, 0)));
             } catch (GeneralSecurityException e) {
-                C5742b.b(a, "load Key Exception:" + e.getMessage());
+                b.b(a, "load Key Exception:" + e.getMessage());
                 return null;
             }
         } catch (IllegalArgumentException unused) {
-            C5742b.b(a, "base64 decode IllegalArgumentException");
+            b.b(a, "base64 decode IllegalArgumentException");
             return null;
         } catch (Exception e2) {
-            C5742b.b(a, "base64 decode Exception" + e2.getMessage());
+            b.b(a, "base64 decode Exception" + e2.getMessage());
             return null;
         }
     }
@@ -174,7 +174,7 @@ public class EncryptUtil {
     }
 
     public static void setBouncycastleFlag(boolean z) {
-        C5742b.c(a, "setBouncycastleFlag: " + z);
+        b.c(a, "setBouncycastleFlag: " + z);
         c = z;
     }
 

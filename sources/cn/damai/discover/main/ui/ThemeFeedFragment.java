@@ -19,10 +19,10 @@ import cn.damai.uikit.irecycler.DamaiRootRecyclerView;
 import cn.damai.uikit.irecycler.helper.UpLoadMorePanel;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
-import tb.C9548pb;
-import tb.C9799v3;
 import tb.lm2;
 import tb.m62;
+import tb.pb;
+import tb.v3;
 import tb.x3;
 
 /* compiled from: Taobao */
@@ -41,12 +41,11 @@ public class ThemeFeedFragment extends Fragment implements UpLoadMorePanel.LoadM
     private int mIndex = 0;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeFeedFragment$a */
     /* loaded from: classes5.dex */
-    public class C1063a extends x3 {
+    public class a extends x3 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1063a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.wannasee.listener.MultiClickUt
@@ -55,18 +54,17 @@ public class ThemeFeedFragment extends Fragment implements UpLoadMorePanel.LoadM
             if (AndroidInstantRuntime.support(ipChange, "426344315")) {
                 ipChange.ipc$dispatch("426344315", new Object[]{this, noteBean, Integer.valueOf(i)});
             } else {
-                C9548pb.j(ThemeFeedFragment.this.mUt.z(i, noteBean.baseUserDO.havanaIdStr, ThemeFeedFragment.this.mIndex, noteBean.id));
+                pb.j(ThemeFeedFragment.this.mUt.z(i, noteBean.baseUserDO.havanaIdStr, ThemeFeedFragment.this.mIndex, noteBean.id));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.ThemeFeedFragment$b */
     /* loaded from: classes5.dex */
-    public class C1064b extends TopicAdapter.C1070d {
+    public class b extends TopicAdapter.d {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1064b() {
+        b() {
         }
 
         @Override // cn.damai.discover.main.ui.adapter.TopicAdapter.Exposure
@@ -110,9 +108,9 @@ public class ThemeFeedFragment extends Fragment implements UpLoadMorePanel.LoadM
             }
         });
         ThemeActivity themeActivity = this.mActivity;
-        TopicAdapter topicAdapter = new TopicAdapter(themeActivity, this.mIndex, new C9799v3(themeActivity, new C1063a()));
+        TopicAdapter topicAdapter = new TopicAdapter(themeActivity, this.mIndex, new v3(themeActivity, new a()));
         this.mWaterFallAdapter = topicAdapter;
-        topicAdapter.f(new C1064b());
+        topicAdapter.f(new b());
         this.mWaterFallAdapter.h(this.mUt);
         this.mWaterfallRev.setAdapter(this.mWaterFallAdapter);
         this.mWaterfallRev.setRefreshEnabled(false);

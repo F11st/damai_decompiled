@@ -19,13 +19,12 @@ public class e40 {
     private int a = 21;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.e40$a */
     /* loaded from: classes7.dex */
-    public class C9070a implements DbManager.DbUpgradeListener {
+    public class a implements DbManager.DbUpgradeListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Application a;
 
-        C9070a(Application application) {
+        a(Application application) {
             this.a = application;
         }
 
@@ -45,12 +44,11 @@ public class e40 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.e40$b */
     /* loaded from: classes7.dex */
-    public class C9071b implements DbManager.TableCreateListener {
+    public class b implements DbManager.TableCreateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C9071b(e40 e40Var) {
+        b(e40 e40Var) {
         }
 
         @Override // cn.damai.common.db.DbManager.TableCreateListener
@@ -139,12 +137,12 @@ public class e40 {
             if (databasePath != null && databasePath.exists() && databasePath.isFile()) {
                 databasePath.delete();
             }
-            DbManager.C0492a c0492a = new DbManager.C0492a();
-            c0492a.k(this.a);
-            c0492a.h("ticketlet.db");
-            c0492a.j(new C9070a(application));
-            c0492a.l(new C9071b(this));
-            c = f40.c(c0492a, application);
+            DbManager.a aVar = new DbManager.a();
+            aVar.k(this.a);
+            aVar.h("ticketlet.db");
+            aVar.j(new a(application));
+            aVar.l(new b(this));
+            c = f40.c(aVar, application);
         }
         if (c == null) {
             xn2.g(xn2.TICKLET_DB_INIT_ERROR_CODE, xn2.TICKLET_DB_INIT_ERROR_MSG, null);

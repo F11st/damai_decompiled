@@ -6,12 +6,11 @@ import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public class dh extends fu<String, C4515a> {
+public class dh extends fu<String, a> {
 
     /* compiled from: Taobao */
-    /* renamed from: com.amap.api.mapcore.util.dh$a */
     /* loaded from: classes10.dex */
-    public static class C4515a {
+    public static class a {
         public byte[] a;
         public int b = -1;
     }
@@ -33,7 +32,7 @@ public class dh extends fu<String, C4515a> {
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.amap.api.mapcore.util.fu
     /* renamed from: c */
-    public C4515a b(String str) throws ft {
+    public a b(String str) throws ft {
         return null;
     }
 
@@ -42,15 +41,15 @@ public class dh extends fu<String, C4515a> {
         return eq.a(getURL());
     }
 
-    @Override // com.amap.api.mapcore.util.AbstractC4517dp, com.amap.api.mapcore.util.ii
+    @Override // com.amap.api.mapcore.util.dp, com.amap.api.mapcore.util.ii
     public Map<String, String> getParams() {
         HashMap hashMap = new HashMap(16);
-        hashMap.put("key", C4554gc.f(this.f));
+        hashMap.put("key", gc.f(this.f));
         hashMap.put("output", "bin");
-        String a = gf.a();
-        String a2 = gf.a(this.f, a, gn.c(hashMap));
-        hashMap.put("ts", a);
-        hashMap.put("scode", a2);
+        String a2 = gf.a();
+        String a3 = gf.a(this.f, a2, gn.c(hashMap));
+        hashMap.put("ts", a2);
+        hashMap.put("scode", a3);
         return hashMap;
     }
 
@@ -67,9 +66,9 @@ public class dh extends fu<String, C4515a> {
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.amap.api.mapcore.util.fu
     /* renamed from: a */
-    public C4515a b(byte[] bArr) throws ft {
-        C4515a c4515a = new C4515a();
-        c4515a.a = bArr;
-        return c4515a;
+    public a b(byte[] bArr) throws ft {
+        a aVar = new a();
+        aVar.a = bArr;
+        return aVar;
     }
 }

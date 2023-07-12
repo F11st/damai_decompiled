@@ -3,7 +3,6 @@ package com.xiaomi.push;
 import android.os.SystemClock;
 import android.text.TextUtils;
 import com.alibaba.poplayerconsole.lib.StandOutWindow;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.dx;
 import com.xiaomi.push.fw;
 import com.xiaomi.push.service.XMPushService;
@@ -35,9 +34,9 @@ public class fs extends gd {
         }
         byte[] m887a = fj.m887a();
         if (m887a != null) {
-            dx.C7644j c7644j = new dx.C7644j();
-            c7644j.a(C7593a.a(m887a));
-            frVar.a(c7644j.m852a(), (String) null);
+            dx.j jVar = new dx.j();
+            jVar.a(a.a(m887a));
+            frVar.a(jVar.m852a(), (String) null);
         }
         return frVar;
     }
@@ -74,7 +73,7 @@ public class fs extends gd {
             try {
                 foVar.b();
             } catch (Exception e) {
-                AbstractC7535b.a(e);
+                com.xiaomi.channel.commonutils.logger.b.a(e);
             }
             this.f385a = null;
         }
@@ -88,18 +87,18 @@ public class fs extends gd {
             return;
         }
         if (flVar.m891a()) {
-            AbstractC7535b.m586a("[Slim] RCV blob chid=" + flVar.a() + "; id=" + flVar.e() + "; errCode=" + flVar.b() + "; err=" + flVar.m895c());
+            com.xiaomi.channel.commonutils.logger.b.m586a("[Slim] RCV blob chid=" + flVar.a() + "; id=" + flVar.e() + "; errCode=" + flVar.b() + "; err=" + flVar.m895c());
         }
         if (flVar.a() == 0) {
             if ("PING".equals(flVar.m888a())) {
-                AbstractC7535b.m586a("[Slim] RCV ping id=" + flVar.e());
+                com.xiaomi.channel.commonutils.logger.b.m586a("[Slim] RCV ping id=" + flVar.e());
                 g();
             } else if (StandOutWindow.ACTION_CLOSE.equals(flVar.m888a())) {
                 c(13, null);
             }
         }
-        for (fw.C7660a c7660a : ((fw) this).f404a.values()) {
-            c7660a.a(flVar);
+        for (fw.a aVar : ((fw) this).f404a.values()) {
+            aVar.a(flVar);
         }
     }
 
@@ -110,8 +109,8 @@ public class fs extends gd {
     }
 
     @Override // com.xiaomi.push.fw
-    public synchronized void a(bg.C7737b c7737b) {
-        fk.a(c7737b, c(), this);
+    public synchronized void a(bg.b bVar) {
+        fk.a(bVar, c(), this);
     }
 
     @Override // com.xiaomi.push.fw
@@ -126,7 +125,7 @@ public class fs extends gd {
             throw new gh("The BlobWriter is null.");
         }
         fl a = a(z);
-        AbstractC7535b.m586a("[Slim] SND ping id=" + a.e());
+        com.xiaomi.channel.commonutils.logger.b.m586a("[Slim] SND ping id=" + a.e());
         b(a);
         f();
     }
@@ -171,8 +170,8 @@ public class fs extends gd {
             if (!TextUtils.isEmpty(f)) {
                 hb.a(((fw) this).f400a, f, a, false, true, System.currentTimeMillis());
             }
-            for (fw.C7660a c7660a : ((fw) this).f407b.values()) {
-                c7660a.a(flVar);
+            for (fw.a aVar : ((fw) this).f407b.values()) {
+                aVar.a(flVar);
             }
         } catch (Exception e) {
             throw new gh(e);
@@ -184,8 +183,8 @@ public class fs extends gd {
         if (gnVar == null) {
             return;
         }
-        for (fw.C7660a c7660a : ((fw) this).f404a.values()) {
-            c7660a.a(gnVar);
+        for (fw.a aVar : ((fw) this).f404a.values()) {
+            aVar.a(gnVar);
         }
     }
 }

@@ -1,10 +1,10 @@
 package com.google.protobuf;
 
-import com.google.protobuf.C5402h;
 import com.google.protobuf.FieldSet.FieldDescriptorLite;
 import com.google.protobuf.Internal;
 import com.google.protobuf.MessageLite;
 import com.google.protobuf.WireFormat;
+import com.google.protobuf.h;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Map;
 public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<FieldDescriptorType>> {
     private boolean b;
     private boolean c = false;
-    private final C5409l<FieldDescriptorType, Object> a = C5409l.o(16);
+    private final l<FieldDescriptorType, Object> a = l.o(16);
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
@@ -38,9 +38,8 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.google.protobuf.FieldSet$a */
     /* loaded from: classes10.dex */
-    public static /* synthetic */ class C5376a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
         static final /* synthetic */ int[] b;
 
@@ -180,8 +179,8 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
     private void m(Map.Entry<FieldDescriptorType, Object> entry) {
         FieldDescriptorType key = entry.getKey();
         Object value = entry.getValue();
-        if (value instanceof C5402h) {
-            value = ((C5402h) value).i();
+        if (value instanceof h) {
+            value = ((h) value).i();
         }
         if (key.isRepeated()) {
             Object e = e(key);
@@ -218,7 +217,7 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
         r0 = false;
      */
     /* JADX WARN: Code restructure failed: missing block: B:8:0x001b, code lost:
-        if ((r3 instanceof com.google.protobuf.C5402h) == false) goto L7;
+        if ((r3 instanceof com.google.protobuf.h) == false) goto L7;
      */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
@@ -227,7 +226,7 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
     private static void q(com.google.protobuf.WireFormat.FieldType r2, java.lang.Object r3) {
         /*
             java.util.Objects.requireNonNull(r3)
-            int[] r0 = com.google.protobuf.FieldSet.C5376a.a
+            int[] r0 = com.google.protobuf.FieldSet.a.a
             com.google.protobuf.WireFormat$JavaType r2 = r2.getJavaType()
             int r2 = r2.ordinal()
             r2 = r0[r2]
@@ -250,7 +249,7 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
         L15:
             boolean r2 = r3 instanceof com.google.protobuf.MessageLite
             if (r2 != 0) goto L31
-            boolean r2 = r3 instanceof com.google.protobuf.C5402h
+            boolean r2 = r3 instanceof com.google.protobuf.h
             if (r2 == 0) goto L30
             goto L31
         L1e:
@@ -339,7 +338,7 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
 
     public Object e(FieldDescriptorType fielddescriptortype) {
         Object obj = this.a.get(fielddescriptortype);
-        return obj instanceof C5402h ? ((C5402h) obj).i() : obj;
+        return obj instanceof h ? ((h) obj).i() : obj;
     }
 
     public boolean equals(Object obj) {
@@ -391,7 +390,7 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
 
     public Iterator<Map.Entry<FieldDescriptorType, Object>> j() {
         if (this.c) {
-            return new C5402h.C5405c(this.a.entrySet().iterator());
+            return new h.c(this.a.entrySet().iterator());
         }
         return this.a.entrySet().iterator();
     }
@@ -428,7 +427,7 @@ public final class FieldSet<FieldDescriptorType extends FieldDescriptorLite<Fiel
         } else {
             q(fielddescriptortype.getLiteType(), obj);
         }
-        if (obj instanceof C5402h) {
+        if (obj instanceof h) {
             this.c = true;
         }
         this.a.put(fielddescriptortype, obj);

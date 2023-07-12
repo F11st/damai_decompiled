@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableOperator;
+import io.reactivex.b;
 import org.reactivestreams.Subscriber;
 import tb.dg0;
 import tb.i42;
@@ -11,12 +11,12 @@ import tb.i42;
 public final class FlowableLift<R, T> extends AbstractFlowableWithUpstream<T, R> {
     final FlowableOperator<? extends R, ? super T> operator;
 
-    public FlowableLift(AbstractC8147b<T> abstractC8147b, FlowableOperator<? extends R, ? super T> flowableOperator) {
-        super(abstractC8147b);
+    public FlowableLift(b<T> bVar, FlowableOperator<? extends R, ? super T> flowableOperator) {
+        super(bVar);
         this.operator = flowableOperator;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super R> subscriber) {
         try {
             Subscriber<? super Object> apply = this.operator.apply(subscriber);

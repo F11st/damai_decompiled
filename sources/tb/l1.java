@@ -26,16 +26,15 @@ public abstract class l1 extends wg1 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.l1$a */
     /* loaded from: classes3.dex */
-    public class C9394a implements Function0<fd2> {
+    public class a implements Function0<fd2> {
 
         /* JADX INFO: Access modifiers changed from: package-private */
         /* compiled from: Taobao */
-        /* renamed from: tb.l1$a$a */
+        /* renamed from: tb.l1$a$a  reason: collision with other inner class name */
         /* loaded from: classes3.dex */
-        public class C9395a implements Function1<b81, fd2> {
-            C9395a() {
+        public class C0458a implements Function1<b81, fd2> {
+            C0458a() {
             }
 
             @Override // kotlin.jvm.functions.Function1
@@ -55,22 +54,21 @@ public abstract class l1 extends wg1 {
             }
         }
 
-        C9394a() {
+        a() {
         }
 
         @Override // kotlin.jvm.functions.Function0
         /* renamed from: a */
         public fd2 invoke() {
             l1 l1Var = l1.this;
-            return fr2.u(l1Var, l1Var.getUnsubstitutedMemberScope(), new C9395a());
+            return fr2.u(l1Var, l1Var.getUnsubstitutedMemberScope(), new C0458a());
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.l1$b */
     /* loaded from: classes3.dex */
-    class C9396b implements Function0<MemberScope> {
-        C9396b() {
+    class b implements Function0<MemberScope> {
+        b() {
         }
 
         @Override // kotlin.jvm.functions.Function0
@@ -81,10 +79,9 @@ public abstract class l1 extends wg1 {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.l1$c */
     /* loaded from: classes3.dex */
-    class C9397c implements Function0<ReceiverParameterDescriptor> {
-        C9397c() {
+    class c implements Function0<ReceiverParameterDescriptor> {
+        c() {
         }
 
         @Override // kotlin.jvm.functions.Function0
@@ -102,9 +99,9 @@ public abstract class l1 extends wg1 {
             c(1);
         }
         this.a = ni1Var;
-        this.b = storageManager.createLazyValue(new C9394a());
-        this.c = storageManager.createLazyValue(new C9396b());
-        this.d = storageManager.createLazyValue(new C9397c());
+        this.b = storageManager.createLazyValue(new a());
+        this.c = storageManager.createLazyValue(new b());
+        this.d = storageManager.createLazyValue(new c());
     }
 
     private static /* synthetic */ void c(int i) {
@@ -212,11 +209,11 @@ public abstract class l1 extends wg1 {
         if (!br2Var.f()) {
             return new SubstitutingScope(b(b81Var), TypeSubstitutor.g(br2Var));
         }
-        MemberScope b = b(b81Var);
-        if (b == null) {
+        MemberScope b2 = b(b81Var);
+        if (b2 == null) {
             c(11);
         }
-        return b;
+        return b2;
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.DeclarationDescriptor
@@ -250,11 +247,11 @@ public abstract class l1 extends wg1 {
         if (br2Var == null) {
             c(14);
         }
-        MemberScope a = a(br2Var, DescriptorUtilsKt.k(d70.g(this)));
-        if (a == null) {
+        MemberScope a2 = a(br2Var, DescriptorUtilsKt.k(d70.g(this)));
+        if (a2 == null) {
             c(15);
         }
-        return a;
+        return a2;
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.Named
@@ -296,10 +293,10 @@ public abstract class l1 extends wg1 {
     @Override // kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor
     @NotNull
     public MemberScope getUnsubstitutedMemberScope() {
-        MemberScope b = b(DescriptorUtilsKt.k(d70.g(this)));
-        if (b == null) {
+        MemberScope b2 = b(DescriptorUtilsKt.k(d70.g(this)));
+        if (b2 == null) {
             c(16);
         }
-        return b;
+        return b2;
     }
 }

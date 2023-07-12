@@ -10,7 +10,7 @@ import com.ali.user.mobile.login.model.LoginConstant;
 import com.alimm.xadsdk.base.model.AdInfo;
 import com.alimm.xadsdk.base.model.BidInfo;
 import com.taobao.weex.common.Constants;
-import com.youku.a.C7792a;
+import com.youku.a.a;
 import com.youku.alixplayer.AlixPlayerHolderUnbindListener;
 import com.youku.alixplayer.AndroidXPlayer;
 import com.youku.alixplayer.IAlixPlayer;
@@ -903,7 +903,7 @@ public class PlayerImpl implements AlixPlayerHolderUnbindListener, IPlayerImplPr
             Logger.d(TAG, "getPlayInfoOfReuse use system player!");
             return null;
         }
-        IAlixPlayer c = C7792a.a(this.mContext).c(str);
+        IAlixPlayer c = a.a(this.mContext).c(str);
         if (c == null || isFree(c) || (currentMediaSource = c.getCurrentMediaSource()) == null || !(currentMediaSource instanceof BaseMediaSource)) {
             return null;
         }
@@ -1164,9 +1164,9 @@ public class PlayerImpl implements AlixPlayerHolderUnbindListener, IPlayerImplPr
             if (iAlixPlayer instanceof AndroidXPlayer) {
                 iAlixPlayer.release();
             } else if (this.mPlayInfo != null) {
-                C7792a.a(this.mContext).a(this.mAlixPlayer);
+                a.a(this.mContext).a(this.mAlixPlayer);
                 TLogUtil.loge(CacheManager.TAG_PLAYER, "player:release");
-                TLogUtil.loge(CacheManager.TAG_PLAYER, "returnAlixPlayer: " + this.mAlixPlayer.hashCode() + " id:" + this.mAlixPlayer.getPlayerId() + "|||TotalleftInusePlayer-" + C7792a.a(this.mContext).a());
+                TLogUtil.loge(CacheManager.TAG_PLAYER, "returnAlixPlayer: " + this.mAlixPlayer.hashCode() + " id:" + this.mAlixPlayer.getPlayerId() + "|||TotalleftInusePlayer-" + a.a(this.mContext).a());
             }
         }
     }

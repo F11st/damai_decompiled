@@ -4,8 +4,8 @@ import kotlin.Function;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.reflect.KFunction;
-import kotlin.reflect.jvm.internal.C8263a;
 import kotlin.reflect.jvm.internal.KFunctionImpl;
+import kotlin.reflect.jvm.internal.a;
 import kotlin.reflect.jvm.internal.impl.descriptors.SimpleFunctionDescriptor;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Function;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$TypeTable;
@@ -41,7 +41,7 @@ public final class ReflectLambdaKt {
                 b41.h(typeTable, "proto.typeTable");
                 SimpleFunctionDescriptor simpleFunctionDescriptor = (SimpleFunctionDescriptor) zv2.h(cls, component2, component1, new er2(typeTable), x61Var, ReflectLambdaKt$reflect$descriptor$1.INSTANCE);
                 if (simpleFunctionDescriptor != null) {
-                    return new KFunctionImpl(C8263a.INSTANCE, simpleFunctionDescriptor);
+                    return new KFunctionImpl(a.INSTANCE, simpleFunctionDescriptor);
                 }
             }
         }

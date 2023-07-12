@@ -13,21 +13,19 @@ public interface Channel<E> extends SendChannel<E>, ReceiveChannel<E> {
     public static final int CONFLATED = -1;
     @NotNull
     public static final String DEFAULT_BUFFER_PROPERTY_NAME = "kotlinx.coroutines.channels.defaultBuffer";
-    public static final C8638b Factory = C8638b.b;
+    public static final b Factory = b.b;
     public static final int OPTIONAL_CHANNEL = -3;
     public static final int RENDEZVOUS = 0;
     public static final int UNLIMITED = Integer.MAX_VALUE;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.channels.Channel$a */
     /* loaded from: classes9.dex */
-    public static final class C8637a {
+    public static final class a {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.channels.Channel$b */
     /* loaded from: classes9.dex */
-    public static final class C8638b {
+    public static final class b {
         public static final int BUFFERED = -2;
         public static final int CONFLATED = -1;
         @NotNull
@@ -35,10 +33,10 @@ public interface Channel<E> extends SendChannel<E>, ReceiveChannel<E> {
         public static final int OPTIONAL_CHANNEL = -3;
         public static final int RENDEZVOUS = 0;
         public static final int UNLIMITED = Integer.MAX_VALUE;
-        static final /* synthetic */ C8638b b = new C8638b();
+        static final /* synthetic */ b b = new b();
         private static final int a = nj2.b("kotlinx.coroutines.channels.defaultBuffer", 64, 1, 2147483646);
 
-        private C8638b() {
+        private b() {
         }
 
         public final int a() {

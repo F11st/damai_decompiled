@@ -2,9 +2,9 @@ package kotlin.reflect.jvm.internal.impl.serialization.deserialization;
 
 import com.youku.arch.v3.data.Constants;
 import java.util.Set;
-import kotlin.collections.C8201d0;
+import kotlin.collections.d0;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
+import kotlin.reflect.jvm.internal.impl.builtins.c;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor;
 import kotlin.reflect.jvm.internal.impl.serialization.deserialization.ClassDeserializer;
 import org.jetbrains.annotations.NotNull;
@@ -19,24 +19,23 @@ import tb.k50;
 /* loaded from: classes3.dex */
 public final class ClassDeserializer {
     @NotNull
-    public static final C8503b Companion = new C8503b(null);
+    public static final b Companion = new b(null);
     @NotNull
     private static final Set<hj> c;
     @NotNull
     private final h70 a;
     @NotNull
-    private final Function1<C8502a, ClassDescriptor> b;
+    private final Function1<a, ClassDescriptor> b;
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.serialization.deserialization.ClassDeserializer$a */
     /* loaded from: classes3.dex */
-    public static final class C8502a {
+    public static final class a {
         @NotNull
         private final hj a;
         @Nullable
         private final ej b;
 
-        public C8502a(@NotNull hj hjVar, @Nullable ej ejVar) {
+        public a(@NotNull hj hjVar, @Nullable ej ejVar) {
             b41.i(hjVar, "classId");
             this.a = hjVar;
             this.b = ejVar;
@@ -53,7 +52,7 @@ public final class ClassDeserializer {
         }
 
         public boolean equals(@Nullable Object obj) {
-            return (obj instanceof C8502a) && b41.d(this.a, ((C8502a) obj).a);
+            return (obj instanceof a) && b41.d(this.a, ((a) obj).a);
         }
 
         public int hashCode() {
@@ -62,13 +61,12 @@ public final class ClassDeserializer {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.serialization.deserialization.ClassDeserializer$b */
     /* loaded from: classes3.dex */
-    public static final class C8503b {
-        private C8503b() {
+    public static final class b {
+        private b() {
         }
 
-        public /* synthetic */ C8503b(k50 k50Var) {
+        public /* synthetic */ b(k50 k50Var) {
             this();
         }
 
@@ -80,14 +78,14 @@ public final class ClassDeserializer {
 
     static {
         Set<hj> c2;
-        c2 = C8201d0.c(hj.m(C8277c.C8278a.cloneable.l()));
+        c2 = d0.c(hj.m(c.a.cloneable.l()));
         c = c2;
     }
 
     public ClassDeserializer(@NotNull h70 h70Var) {
         b41.i(h70Var, Constants.COMPONENT);
         this.a = h70Var;
-        this.b = h70Var.u().createMemoizedFunctionWithNullableValues(new Function1<C8502a, ClassDescriptor>() { // from class: kotlin.reflect.jvm.internal.impl.serialization.deserialization.ClassDeserializer$classes$1
+        this.b = h70Var.u().createMemoizedFunctionWithNullableValues(new Function1<a, ClassDescriptor>() { // from class: kotlin.reflect.jvm.internal.impl.serialization.deserialization.ClassDeserializer$classes$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(1);
@@ -95,10 +93,10 @@ public final class ClassDeserializer {
 
             @Override // kotlin.jvm.functions.Function1
             @Nullable
-            public final ClassDescriptor invoke(@NotNull ClassDeserializer.C8502a c8502a) {
+            public final ClassDescriptor invoke(@NotNull ClassDeserializer.a aVar) {
                 ClassDescriptor c2;
-                b41.i(c8502a, "key");
-                c2 = ClassDeserializer.this.c(c8502a);
+                b41.i(aVar, "key");
+                c2 = ClassDeserializer.this.c(aVar);
                 return c2;
             }
         });
@@ -109,7 +107,7 @@ public final class ClassDeserializer {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public final kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor c(kotlin.reflect.jvm.internal.impl.serialization.deserialization.ClassDeserializer.C8502a r13) {
+    public final kotlin.reflect.jvm.internal.impl.descriptors.ClassDescriptor c(kotlin.reflect.jvm.internal.impl.serialization.deserialization.ClassDeserializer.a r13) {
         /*
             Method dump skipped, instructions count: 241
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -127,6 +125,6 @@ public final class ClassDeserializer {
     @Nullable
     public final ClassDescriptor d(@NotNull hj hjVar, @Nullable ej ejVar) {
         b41.i(hjVar, "classId");
-        return this.b.invoke(new C8502a(hjVar, ejVar));
+        return this.b.invoke(new a(hjVar, ejVar));
     }
 }

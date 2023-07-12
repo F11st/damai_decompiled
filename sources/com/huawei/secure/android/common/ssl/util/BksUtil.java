@@ -61,7 +61,7 @@ public class BksUtil {
         FileOutputStream fileOutputStream = null;
         try {
             try {
-                C5755g.c(a, "write output stream ");
+                g.c(a, "write output stream ");
                 FileOutputStream fileOutputStream2 = new FileOutputStream(file);
                 try {
                     byte[] bArr = new byte[2048];
@@ -70,18 +70,18 @@ public class BksUtil {
                         if (read != -1) {
                             fileOutputStream2.write(bArr, 0, read);
                         } else {
-                            AbstractC5754f.a((OutputStream) fileOutputStream2);
+                            f.a((OutputStream) fileOutputStream2);
                             return;
                         }
                     }
                 } catch (IOException unused) {
                     fileOutputStream = fileOutputStream2;
-                    C5755g.b(a, " IOException");
-                    AbstractC5754f.a((OutputStream) fileOutputStream);
+                    g.b(a, " IOException");
+                    f.a((OutputStream) fileOutputStream);
                 } catch (Throwable th) {
                     th = th;
                     fileOutputStream = fileOutputStream2;
-                    AbstractC5754f.a((OutputStream) fileOutputStream);
+                    f.a((OutputStream) fileOutputStream);
                     throw th;
                 }
             } catch (IOException unused2) {
@@ -109,20 +109,20 @@ public class BksUtil {
         String a2;
         String b2;
         synchronized (BksUtil.class) {
-            C5755g.c(a, "get bks from tss begin");
+            g.c(a, "get bks from tss begin");
             if (context != null) {
-                C5751c.a(context);
+                c.a(context);
             }
-            Context a3 = C5751c.a();
+            Context a3 = c.a();
             ByteArrayInputStream byteArrayInputStream2 = null;
             if (a3 == null) {
-                C5755g.b(a, "context is null");
+                g.b(a, "context is null");
                 return null;
-            } else if (!b(C5756h.a("com.huawei.hwid")) && !b(C5756h.a("com.huawei.hms"))) {
-                C5755g.b(a, "hms version code is too low : " + C5756h.a("com.huawei.hwid"));
+            } else if (!b(h.a("com.huawei.hwid")) && !b(h.a("com.huawei.hms"))) {
+                g.b(a, "hms version code is too low : " + h.a("com.huawei.hwid"));
                 return null;
             } else if (!c(a3, "com.huawei.hwid") && !b(a3, "com.huawei.hms")) {
-                C5755g.b(a, "hms sign error");
+                g.b(a, "hms sign error");
                 return null;
             } else {
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -141,21 +141,21 @@ public class BksUtil {
                             byteArrayOutputStream.flush();
                             byteArrayInputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
                             try {
-                                a2 = C5757i.a(r, "", a3);
+                                a2 = i.a(r, "", a3);
                                 b2 = b(byteArrayOutputStream.toByteArray());
                             } catch (Exception unused) {
                                 byteArrayInputStream2 = byteArrayInputStream;
-                                C5755g.b(a, "Get bks from HMS_VERSION_CODE exception : No content provider");
-                                AbstractC5754f.a(inputStream);
-                                AbstractC5754f.a((OutputStream) byteArrayOutputStream);
-                                AbstractC5754f.a((InputStream) byteArrayInputStream2);
+                                g.b(a, "Get bks from HMS_VERSION_CODE exception : No content provider");
+                                f.a(inputStream);
+                                f.a((OutputStream) byteArrayOutputStream);
+                                f.a((InputStream) byteArrayInputStream2);
                                 return getFilesBksIS(a3);
                             } catch (Throwable th) {
                                 th = th;
                                 byteArrayInputStream2 = byteArrayInputStream;
-                                AbstractC5754f.a(inputStream);
-                                AbstractC5754f.a((OutputStream) byteArrayOutputStream);
-                                AbstractC5754f.a((InputStream) byteArrayInputStream2);
+                                f.a(inputStream);
+                                f.a((OutputStream) byteArrayOutputStream);
+                                f.a((InputStream) byteArrayInputStream2);
                                 throw th;
                             }
                         } catch (Throwable th2) {
@@ -170,18 +170,18 @@ public class BksUtil {
                     inputStream = null;
                 }
                 if (c(a3) && a2.equals(b2)) {
-                    C5755g.c(a, "bks not update");
-                    AbstractC5754f.a(inputStream);
-                    AbstractC5754f.a((OutputStream) byteArrayOutputStream);
-                    AbstractC5754f.a((InputStream) byteArrayInputStream);
+                    g.c(a, "bks not update");
+                    f.a(inputStream);
+                    f.a((OutputStream) byteArrayOutputStream);
+                    f.a((InputStream) byteArrayInputStream);
                     return getFilesBksIS(a3);
                 }
-                C5755g.c(a, "update bks and sp");
+                g.c(a, "update bks and sp");
                 a(byteArrayInputStream, a3);
-                C5757i.b(r, b2, a3);
-                AbstractC5754f.a(inputStream);
-                AbstractC5754f.a((OutputStream) byteArrayOutputStream);
-                AbstractC5754f.a((InputStream) byteArrayInputStream);
+                i.b(r, b2, a3);
+                f.a(inputStream);
+                f.a((OutputStream) byteArrayOutputStream);
+                f.a((InputStream) byteArrayInputStream);
                 return getFilesBksIS(a3);
             }
         }
@@ -189,11 +189,11 @@ public class BksUtil {
 
     public static InputStream getFilesBksIS(Context context) {
         if (c(context)) {
-            C5755g.c(a, "getFilesBksIS ");
+            g.c(a, "getFilesBksIS ");
             try {
                 return new FileInputStream(b(context));
             } catch (FileNotFoundException unused) {
-                C5755g.b(a, "FileNotFoundExceptio: ");
+                g.b(a, "FileNotFoundExceptio: ");
                 return null;
             }
         }
@@ -205,7 +205,7 @@ public class BksUtil {
         if (TextUtils.isEmpty(str)) {
             return false;
         }
-        C5755g.c(a, "hms version code is : " + str);
+        g.c(a, "hms version code is : " + str);
         String[] split = str.split("\\.");
         String[] split2 = h.split("\\.");
         int length = split.length;
@@ -217,7 +217,7 @@ public class BksUtil {
                 try {
                     parseInt = Integer.parseInt(split[i2]);
                 } catch (Exception e2) {
-                    C5755g.b(a, " exception : " + e2.getMessage());
+                    g.b(a, " exception : " + e2.getMessage());
                     return i2 >= length2;
                 }
             } else {
@@ -270,7 +270,7 @@ public class BksUtil {
             messageDigest.update(bArr);
             return a(messageDigest.digest());
         } catch (NoSuchAlgorithmException unused) {
-            C5755g.b(a, "inputstraem exception");
+            g.b(a, "inputstraem exception");
             return "";
         }
     }
@@ -281,13 +281,13 @@ public class BksUtil {
         }
         File file = new File(str);
         if (file.exists()) {
-            C5755g.e(a, "The directory  has already exists");
+            g.e(a, "The directory  has already exists");
             return 1;
         } else if (file.mkdirs()) {
-            C5755g.a(a, "create directory  success");
+            g.a(a, "create directory  success");
             return 0;
         } else {
-            C5755g.b(a, "create directory  failed");
+            g.b(a, "create directory  failed");
             return -1;
         }
     }

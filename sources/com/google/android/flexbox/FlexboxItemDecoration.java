@@ -121,7 +121,7 @@ public class FlexboxItemDecoration extends RecyclerView.ItemDecoration {
         }
     }
 
-    private boolean c(int i, List<C4810a> list, FlexboxLayoutManager flexboxLayoutManager) {
+    private boolean c(int i, List<a> list, FlexboxLayoutManager flexboxLayoutManager) {
         int v = flexboxLayoutManager.v(i);
         if ((v == -1 || v >= flexboxLayoutManager.getFlexLinesInternal().size() || flexboxLayoutManager.getFlexLinesInternal().get(v).o != i) && i != 0) {
             return list.size() != 0 && list.get(list.size() - 1).p == i - 1;
@@ -137,7 +137,7 @@ public class FlexboxItemDecoration extends RecyclerView.ItemDecoration {
         return (this.b & 2) > 0;
     }
 
-    private void f(Rect rect, int i, FlexboxLayoutManager flexboxLayoutManager, List<C4810a> list) {
+    private void f(Rect rect, int i, FlexboxLayoutManager flexboxLayoutManager, List<a> list) {
         if (list.size() == 0 || flexboxLayoutManager.v(i) == 0) {
             return;
         }
@@ -160,7 +160,7 @@ public class FlexboxItemDecoration extends RecyclerView.ItemDecoration {
         }
     }
 
-    private void g(Rect rect, int i, FlexboxLayoutManager flexboxLayoutManager, List<C4810a> list, int i2) {
+    private void g(Rect rect, int i, FlexboxLayoutManager flexboxLayoutManager, List<a> list, int i2) {
         if (c(i, list, flexboxLayoutManager)) {
             return;
         }
@@ -198,7 +198,7 @@ public class FlexboxItemDecoration extends RecyclerView.ItemDecoration {
             return;
         }
         FlexboxLayoutManager flexboxLayoutManager = (FlexboxLayoutManager) recyclerView.getLayoutManager();
-        List<C4810a> flexLines = flexboxLayoutManager.getFlexLines();
+        List<a> flexLines = flexboxLayoutManager.getFlexLines();
         g(rect, childAdapterPosition, flexboxLayoutManager, flexLines, flexboxLayoutManager.getFlexDirection());
         f(rect, childAdapterPosition, flexboxLayoutManager, flexLines);
     }

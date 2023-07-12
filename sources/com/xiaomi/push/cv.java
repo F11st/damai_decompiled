@@ -13,8 +13,6 @@ import com.amap.api.services.district.DistrictSearchQuery;
 import com.huawei.hms.push.constant.RemoteMessageConst;
 import com.taobao.alivfssdk.utils.AVFSCacheConstants;
 import com.taobao.weex.ui.module.WXModalUIModule;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
-import com.xiaomi.push.service.C7718a;
 import com.xiaomi.push.service.module.PushChannelRegion;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -42,7 +40,7 @@ public class cv {
     protected static Context a;
 
     /* renamed from: a  reason: collision with other field name */
-    private static InterfaceC7623a f178a;
+    private static a f178a;
 
     /* renamed from: a  reason: collision with other field name */
     private static cv f179a;
@@ -56,7 +54,7 @@ public class cv {
     private cu f182a;
 
     /* renamed from: a  reason: collision with other field name */
-    protected InterfaceC7624b f183a;
+    protected b f183a;
 
     /* renamed from: a  reason: collision with other field name */
     private String f184a;
@@ -78,32 +76,30 @@ public class cv {
     protected static boolean f180a = false;
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.cv$a */
     /* loaded from: classes11.dex */
-    public interface InterfaceC7623a {
-        cv a(Context context, cu cuVar, InterfaceC7624b interfaceC7624b, String str);
+    public interface a {
+        cv a(Context context, cu cuVar, b bVar, String str);
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.cv$b */
     /* loaded from: classes11.dex */
-    public interface InterfaceC7624b {
+    public interface b {
         String a(String str);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public cv(Context context, cu cuVar, InterfaceC7624b interfaceC7624b, String str) {
-        this(context, cuVar, interfaceC7624b, str, null, null);
+    public cv(Context context, cu cuVar, b bVar, String str) {
+        this(context, cuVar, bVar, str, null, null);
     }
 
-    protected cv(Context context, cu cuVar, InterfaceC7624b interfaceC7624b, String str, String str2, String str3) {
+    protected cv(Context context, cu cuVar, b bVar, String str, String str2, String str3) {
         this.f185a = new HashMap();
         this.f184a = "0";
         this.f181a = 0L;
         this.f186b = 15L;
         this.f188c = 0L;
         this.f187b = "isp_prov_city_country_ip";
-        this.f183a = interfaceC7624b;
+        this.f183a = bVar;
         this.f182a = cuVar == null ? new cw(this) : cuVar;
         this.f184a = str;
         c = str2 == null ? context.getPackageName() : str2;
@@ -193,7 +189,7 @@ public class cv {
             String a2 = a(arrayList, str2, this.f184a, true);
             if (!TextUtils.isEmpty(a2)) {
                 JSONObject jSONObject3 = new JSONObject(a2);
-                AbstractC7535b.b(a2);
+                com.xiaomi.channel.commonutils.logger.b.b(a2);
                 if (WXModalUIModule.OK.equalsIgnoreCase(jSONObject3.getString(ExifInterface.LATITUDE_SOUTH))) {
                     JSONObject jSONObject4 = jSONObject3.getJSONObject("R");
                     String string = jSONObject4.getString(DistrictSearchQuery.KEYWORDS_PROVINCE);
@@ -202,13 +198,13 @@ public class cv {
                     String string4 = jSONObject4.getString(TbAuthConstants.IP);
                     String string5 = jSONObject4.getString(DistrictSearchQuery.KEYWORDS_COUNTRY);
                     JSONObject jSONObject5 = jSONObject4.getJSONObject(str2);
-                    AbstractC7535b.c("get bucket: net=" + string3 + ", hosts=" + jSONObject5.toString());
+                    com.xiaomi.channel.commonutils.logger.b.c("get bucket: net=" + string3 + ", hosts=" + jSONObject5.toString());
                     int i2 = 0;
                     while (i2 < arrayList.size()) {
                         String str3 = arrayList.get(i2);
                         JSONArray optJSONArray = jSONObject5.optJSONArray(str3);
                         if (optJSONArray == null) {
-                            AbstractC7535b.m586a("no bucket found for " + str3);
+                            com.xiaomi.channel.commonutils.logger.b.m586a("no bucket found for " + str3);
                             jSONObject = jSONObject5;
                         } else {
                             cr crVar2 = new cr(str3);
@@ -253,7 +249,7 @@ public class cv {
                             String next = keys.next();
                             JSONArray optJSONArray2 = optJSONObject.optJSONArray(next);
                             if (optJSONArray2 == null) {
-                                AbstractC7535b.m586a("no bucket found for " + next);
+                                com.xiaomi.channel.commonutils.logger.b.m586a("no bucket found for " + next);
                             } else {
                                 cr crVar3 = new cr(next);
                                 crVar3.a(j);
@@ -275,7 +271,7 @@ public class cv {
                 }
             }
         } catch (Exception e) {
-            AbstractC7535b.m586a("failed to get bucket " + e.getMessage());
+            com.xiaomi.channel.commonutils.logger.b.m586a("failed to get bucket " + e.getMessage());
         }
         for (int i5 = 0; i5 < arrayList.size(); i5++) {
             cr crVar4 = arrayList2.get(i5);
@@ -287,7 +283,7 @@ public class cv {
         return arrayList2;
     }
 
-    public static synchronized void a(Context context, cu cuVar, InterfaceC7624b interfaceC7624b, String str, String str2, String str3) {
+    public static synchronized void a(Context context, cu cuVar, b bVar, String str, String str2, String str3) {
         synchronized (cv.class) {
             Context applicationContext = context.getApplicationContext();
             a = applicationContext;
@@ -295,19 +291,19 @@ public class cv {
                 a = context;
             }
             if (f179a == null) {
-                InterfaceC7623a interfaceC7623a = f178a;
-                if (interfaceC7623a == null) {
-                    f179a = new cv(context, cuVar, interfaceC7624b, str, str2, str3);
+                a aVar = f178a;
+                if (aVar == null) {
+                    f179a = new cv(context, cuVar, bVar, str, str2, str3);
                 } else {
-                    f179a = interfaceC7623a.a(context, cuVar, interfaceC7624b, str);
+                    f179a = aVar.a(context, cuVar, bVar, str);
                 }
             }
         }
     }
 
-    public static synchronized void a(InterfaceC7623a interfaceC7623a) {
+    public static synchronized void a(a aVar) {
         synchronized (cv.class) {
-            f178a = interfaceC7623a;
+            f178a = aVar;
             f179a = null;
         }
     }
@@ -369,7 +365,7 @@ public class cv {
         }
         arrayList3.add(new bg("uuid", str2));
         arrayList3.add(new bg("list", bp.a(arrayList, ",")));
-        arrayList3.add(new bg("countrycode", C7718a.a(a).b()));
+        arrayList3.add(new bg("countrycode", com.xiaomi.push.service.a.a(a).b()));
         String b2 = b();
         cr c2 = c(b2);
         String format = String.format(Locale.US, "https://%1$s/gslb/?ver=4.0", b2);
@@ -396,8 +392,8 @@ public class cv {
                 buildUpon.appendQueryParameter(biVar.a(), biVar.b());
             }
             try {
-                InterfaceC7624b interfaceC7624b = this.f183a;
-                return interfaceC7624b == null ? bj.a(a, new URL(buildUpon.toString())) : interfaceC7624b.a(buildUpon.toString());
+                b bVar = this.f183a;
+                return bVar == null ? bj.a(a, new URL(buildUpon.toString())) : bVar.a(buildUpon.toString());
             } catch (IOException e2) {
                 e = e2;
             }
@@ -405,7 +401,7 @@ public class cv {
         if (e == null) {
             return null;
         }
-        AbstractC7535b.m586a("network exception: " + e.getMessage());
+        com.xiaomi.channel.commonutils.logger.b.m586a("network exception: " + e.getMessage());
         throw e;
     }
 
@@ -471,7 +467,7 @@ public class cv {
                 return false;
             }
             m757b(d2);
-            AbstractC7535b.b("loading the new hosts succeed");
+            com.xiaomi.channel.commonutils.logger.b.b("loading the new hosts succeed");
             return true;
         }
     }
@@ -481,7 +477,7 @@ public class cv {
     }
 
     protected String b() {
-        String a2 = C7718a.a(a).a();
+        String a2 = com.xiaomi.push.service.a.a(a).a();
         return (TextUtils.isEmpty(a2) || PushChannelRegion.China.name().equals(a2)) ? "resolver.msg.xiaomi.net" : "resolver.msg.global.xiaomi.net";
     }
 
@@ -530,9 +526,9 @@ public class cv {
                         try {
                             cr a3 = new cr(optString).a(jSONObject2);
                             b.put(a3.f175b, a3);
-                            AbstractC7535b.m586a("load local reserved host for " + a3.f175b);
+                            com.xiaomi.channel.commonutils.logger.b.m586a("load local reserved host for " + a3.f175b);
                         } catch (JSONException unused) {
-                            AbstractC7535b.m586a("parse reserved host fail.");
+                            com.xiaomi.channel.commonutils.logger.b.m586a("parse reserved host fail.");
                         }
                     }
                 }
@@ -577,7 +573,7 @@ public class cv {
                 }
                 bufferedWriter.close();
             } catch (Exception e) {
-                AbstractC7535b.m586a("persist bucket failure: " + e.getMessage());
+                com.xiaomi.channel.commonutils.logger.b.m586a("persist bucket failure: " + e.getMessage());
             }
         }
     }
@@ -601,7 +597,7 @@ public class cv {
             bufferedReader = null;
         }
         if (!file.isFile()) {
-            C7594ab.a((Closeable) null);
+            ab.a((Closeable) null);
             return null;
         }
         bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
@@ -617,10 +613,10 @@ public class cv {
         } catch (Throwable th2) {
             th = th2;
             try {
-                AbstractC7535b.m586a("load host exception " + th.getMessage());
+                com.xiaomi.channel.commonutils.logger.b.m586a("load host exception " + th.getMessage());
                 return null;
             } finally {
-                C7594ab.a(bufferedReader);
+                ab.a(bufferedReader);
             }
         }
     }

@@ -21,17 +21,16 @@ import org.jetbrains.annotations.Nullable;
 public final class rb0<BizResponse> {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C9647a Companion = new C9647a(null);
+    public static final a Companion = new a(null);
     public static final long PRELOAD_CACHE_DEFAULT_VALID_TIME = 500;
     private DoloresKernel<BizResponse> a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.rb0$a */
     /* loaded from: classes7.dex */
-    public static final class C9647a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C9647a() {
+        private a() {
         }
 
         @JvmStatic
@@ -56,7 +55,7 @@ public final class rb0<BizResponse> {
             return new rb0<>((BaseRequest) baseRequest, (k50) null);
         }
 
-        public /* synthetic */ C9647a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
@@ -82,11 +81,11 @@ public final class rb0<BizResponse> {
             ipChange.ipc$dispatch("-1730695975", new Object[]{this, doloresRequest});
             return;
         }
-        DoloresKernel<BizResponse> a = xb0.INSTANCE.a(doloresRequest);
-        this.a = a;
-        if (a != null) {
-            if (a != null) {
-                a.H(doloresRequest);
+        DoloresKernel<BizResponse> a2 = xb0.INSTANCE.a(doloresRequest);
+        this.a = a2;
+        if (a2 != null) {
+            if (a2 != null) {
+                a2.H(doloresRequest);
             }
             IDataTransformerFactory j = sb0.Companion.g().j();
             g(j != null ? j.createDataTransformer(doloresRequest) : null);

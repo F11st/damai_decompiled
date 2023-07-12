@@ -10,7 +10,7 @@ public class jv0 implements DLInputStream {
     private InputStream a;
 
     public jv0(InputStream inputStream) {
-        this.a = new BufferedInputStream(inputStream, C9613qq.f);
+        this.a = new BufferedInputStream(inputStream, qq.f);
     }
 
     @Override // com.taobao.downloader.download.protocol.DLInputStream

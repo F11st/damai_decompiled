@@ -11,7 +11,7 @@ final class MultimapBuilder$ArrayListSupplier<V> implements Supplier<List<V>>, S
     private final int expectedValuesPerKey;
 
     MultimapBuilder$ArrayListSupplier(int i) {
-        this.expectedValuesPerKey = C5191k.b(i, "expectedValuesPerKey");
+        this.expectedValuesPerKey = k.b(i, "expectedValuesPerKey");
     }
 
     @Override // com.google.common.base.Supplier

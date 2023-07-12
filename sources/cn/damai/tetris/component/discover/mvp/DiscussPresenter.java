@@ -13,10 +13,10 @@ import cn.damai.tetris.core.ut.TrackType;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
-import tb.C9548pb;
 import tb.cs;
 import tb.d23;
 import tb.ja;
+import tb.pb;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -26,13 +26,12 @@ public class DiscussPresenter extends BasePresenter<DiscussContract.Model, Discu
     private DiscussContract.Model tempModel;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.discover.mvp.DiscussPresenter$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC1817a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DiscussContract.Model a;
 
-        View$OnClickListenerC1817a(DiscussContract.Model model) {
+        a(DiscussContract.Model model) {
             this.a = model;
         }
 
@@ -49,7 +48,7 @@ public class DiscussPresenter extends BasePresenter<DiscussContract.Model, Discu
             HashMap<String, String> f = d23.f();
             f.put("content_id", this.a.getDiscussData().contentDetail.contentId);
             f.put("content_type", "note");
-            f.put("quanziid", DiscussPresenter.this.getModel().getTrackInfo().getArgsMap().get(C9548pb.CNT_CONTENT_ID));
+            f.put("quanziid", DiscussPresenter.this.getModel().getTrackInfo().getArgsMap().get(pb.CNT_CONTENT_ID));
             DiscussPresenter discussPresenter = DiscussPresenter.this;
             discussPresenter.userTrack(TrackType.click, null, ((DiscussContract.Model) ((BasePresenter) discussPresenter).mModel).getTrackInfo().trackB, "hot_discussion", "hot_discussion", f, true);
         }
@@ -92,8 +91,8 @@ public class DiscussPresenter extends BasePresenter<DiscussContract.Model, Discu
         }
         getView().getHotDiscussView().setItemId(model.getDiscussData().contentDetail.contentId);
         getView().getHotDiscussView().updateSpmBC(getTrackPointFromModel(Point.TRACK_B), "hot_discussion");
-        getView().getHotDiscussView().setCntContentId(this.mTrackInfo.getArgsMap().get(C9548pb.CNT_CONTENT_ID));
-        getView().getTitleView().setOnClickListener(new View$OnClickListenerC1817a(model));
+        getView().getHotDiscussView().setCntContentId(this.mTrackInfo.getArgsMap().get(pb.CNT_CONTENT_ID));
+        getView().getTitleView().setOnClickListener(new a(model));
     }
 
     @Override // cn.damai.tetris.core.BasePresenter

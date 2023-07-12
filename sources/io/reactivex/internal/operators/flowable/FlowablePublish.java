@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.exceptions.MissingBackpressureException;
 import io.reactivex.functions.Consumer;
@@ -31,7 +31,7 @@ public final class FlowablePublish<T> extends an<T> implements HasUpstreamPublis
     final int bufferSize;
     final AtomicReference<PublishSubscriber<T>> current;
     final Publisher<T> onSubscribe;
-    final AbstractC8147b<T> source;
+    final b<T> source;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
@@ -296,16 +296,16 @@ public final class FlowablePublish<T> extends an<T> implements HasUpstreamPublis
         }
     }
 
-    private FlowablePublish(Publisher<T> publisher, AbstractC8147b<T> abstractC8147b, AtomicReference<PublishSubscriber<T>> atomicReference, int i) {
+    private FlowablePublish(Publisher<T> publisher, b<T> bVar, AtomicReference<PublishSubscriber<T>> atomicReference, int i) {
         this.onSubscribe = publisher;
-        this.source = abstractC8147b;
+        this.source = bVar;
         this.current = atomicReference;
         this.bufferSize = i;
     }
 
-    public static <T> an<T> create(AbstractC8147b<T> abstractC8147b, int i) {
+    public static <T> an<T> create(b<T> bVar, int i) {
         AtomicReference atomicReference = new AtomicReference();
-        return i42.q(new FlowablePublish(new FlowablePublisher(atomicReference, i), abstractC8147b, atomicReference, i));
+        return i42.q(new FlowablePublish(new FlowablePublisher(atomicReference, i), bVar, atomicReference, i));
     }
 
     @Override // tb.an
@@ -340,7 +340,7 @@ public final class FlowablePublish<T> extends an<T> implements HasUpstreamPublis
         return this.source;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         this.onSubscribe.subscribe(subscriber);
     }

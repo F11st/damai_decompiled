@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Looper;
 import android.os.SystemClock;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -43,13 +42,12 @@ public class av implements au, InvocationHandler {
     private volatile long f106a = 0;
 
     /* renamed from: a  reason: collision with other field name */
-    private volatile C7604a f108a = null;
+    private volatile a f108a = null;
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.xiaomi.push.av$a */
     /* loaded from: classes11.dex */
-    public class C7604a {
+    public class a {
 
         /* renamed from: a  reason: collision with other field name */
         Boolean f113a;
@@ -60,7 +58,7 @@ public class av implements au, InvocationHandler {
         String c;
         String d;
 
-        private C7604a() {
+        private a() {
             this.f113a = null;
             this.f114a = null;
             this.b = null;
@@ -84,7 +82,7 @@ public class av implements au, InvocationHandler {
 
     private static Class<?> a(Context context, String str) {
         try {
-            return C7786v.a(context, str);
+            return v.a(context, str);
         } catch (Throwable unused) {
             return null;
         }
@@ -216,7 +214,7 @@ public class av implements au, InvocationHandler {
     }
 
     private static void b(String str) {
-        AbstractC7535b.m586a("mdid:" + str);
+        com.xiaomi.channel.commonutils.logger.b.m586a("mdid:" + str);
     }
 
     @Override // com.xiaomi.push.au
@@ -240,7 +238,7 @@ public class av implements au, InvocationHandler {
     public Object invoke(Object obj, Method method, Object[] objArr) {
         this.f106a = SystemClock.elapsedRealtime();
         if (objArr != null) {
-            C7604a c7604a = new C7604a();
+            a aVar = new a();
             int length = objArr.length;
             int i = 0;
             while (true) {
@@ -249,20 +247,20 @@ public class av implements au, InvocationHandler {
                 }
                 Object obj2 = objArr[i];
                 if (obj2 != null && !a(obj2)) {
-                    c7604a.f114a = (String) a(this.f112b, obj2, new Object[0]);
-                    c7604a.b = (String) a(this.c, obj2, new Object[0]);
-                    c7604a.c = (String) a(this.d, obj2, new Object[0]);
-                    c7604a.d = (String) a(this.e, obj2, new Object[0]);
-                    c7604a.f113a = (Boolean) a(this.f, obj2, new Object[0]);
+                    aVar.f114a = (String) a(this.f112b, obj2, new Object[0]);
+                    aVar.b = (String) a(this.c, obj2, new Object[0]);
+                    aVar.c = (String) a(this.d, obj2, new Object[0]);
+                    aVar.d = (String) a(this.e, obj2, new Object[0]);
+                    aVar.f113a = (Boolean) a(this.f, obj2, new Object[0]);
                     a(this.g, obj2, new Object[0]);
-                    if (c7604a.a()) {
+                    if (aVar.a()) {
                         StringBuilder sb = new StringBuilder();
                         sb.append("has get succ, check duplicate:");
                         sb.append(this.f108a != null);
                         b(sb.toString());
                         synchronized (av.class) {
                             if (this.f108a == null) {
-                                this.f108a = c7604a;
+                                this.f108a = aVar;
                             }
                         }
                     }

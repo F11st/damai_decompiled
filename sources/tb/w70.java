@@ -13,10 +13,10 @@ public class w70 {
     public static void a() {
         if (a.compareAndSet(false, true)) {
             if (hu0.j()) {
-                if (C9708t9.r()) {
+                if (t9.r()) {
                     Http3ConnectionDetector.l();
                 }
-                if (C9708t9.v()) {
+                if (t9.v()) {
                     HttpStrategyDetector.g();
                 }
             }

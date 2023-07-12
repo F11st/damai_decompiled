@@ -30,14 +30,13 @@ public class ko2 {
     private CalendarDay i = null;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ko2$a */
     /* loaded from: classes8.dex */
-    public class C9370a extends x5 {
+    public class a extends x5 {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ CharSequence a;
         final /* synthetic */ int b;
 
-        C9370a(CharSequence charSequence, int i) {
+        a(CharSequence charSequence, int i) {
             this.a = charSequence;
             this.b = i;
         }
@@ -103,7 +102,7 @@ public class ko2 {
             } else {
                 animate.translationY(i * (-1));
             }
-            animate.alpha(0.0f).setDuration(this.d).setInterpolator(this.f).setListener(new C9370a(format, i)).start();
+            animate.alpha(0.0f).setDuration(this.d).setInterpolator(this.f).setListener(new a(format, i)).start();
         }
         this.i = calendarDay;
     }

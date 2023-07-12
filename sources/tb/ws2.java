@@ -18,7 +18,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes8.dex */
 public class ws2 implements UTHelperPopupCallback {
     @NotNull
-    public static final C9881a Companion = new C9881a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String UT_CLOSE_KEY = "close";
     @NotNull
@@ -27,13 +27,12 @@ public class ws2 implements UTHelperPopupCallback {
     public static final String UT_ITEM_KEY = "item";
 
     /* compiled from: Taobao */
-    /* renamed from: tb.ws2$a */
     /* loaded from: classes8.dex */
-    public static final class C9881a {
-        private C9881a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9881a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

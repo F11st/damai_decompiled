@@ -13,12 +13,11 @@ public class ImageStageDispatcher extends AbsDispatcher<IImageStageListener> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.ImageStageDispatcher$a */
     /* loaded from: classes11.dex */
-    class C6795a implements AbsDispatcher.ListenerCaller<IImageStageListener> {
+    class a implements AbsDispatcher.ListenerCaller<IImageStageListener> {
         final /* synthetic */ int a;
 
-        C6795a(ImageStageDispatcher imageStageDispatcher, int i) {
+        a(ImageStageDispatcher imageStageDispatcher, int i) {
             this.a = i;
         }
 
@@ -30,6 +29,6 @@ public class ImageStageDispatcher extends AbsDispatcher<IImageStageListener> {
     }
 
     public void f(int i) {
-        c(new C6795a(this, i));
+        c(new a(this, i));
     }
 }

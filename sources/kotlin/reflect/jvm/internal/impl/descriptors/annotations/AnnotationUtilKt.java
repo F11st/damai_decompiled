@@ -3,11 +3,11 @@ package kotlin.reflect.jvm.internal.impl.descriptors.annotations;
 import com.taobao.android.dinamicx.monitor.DXTraceUtil;
 import java.util.List;
 import java.util.Map;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8226x;
+import kotlin.collections.m;
+import kotlin.collections.x;
 import kotlin.jvm.functions.Function1;
-import kotlin.reflect.jvm.internal.impl.builtins.AbstractC8271b;
-import kotlin.reflect.jvm.internal.impl.builtins.C8277c;
+import kotlin.reflect.jvm.internal.impl.builtins.b;
+import kotlin.reflect.jvm.internal.impl.builtins.c;
 import kotlin.reflect.jvm.internal.impl.descriptors.ModuleDescriptor;
 import kotlin.reflect.jvm.internal.impl.types.Variance;
 import org.jetbrains.annotations.NotNull;
@@ -56,18 +56,18 @@ public final class AnnotationUtilKt {
     }
 
     @NotNull
-    public static final AnnotationDescriptor a(@NotNull final AbstractC8271b abstractC8271b, @NotNull String str, @NotNull String str2, @NotNull String str3) {
+    public static final AnnotationDescriptor a(@NotNull final b bVar, @NotNull String str, @NotNull String str2, @NotNull String str3) {
         List g;
         Map l;
         Map l2;
-        b41.i(abstractC8271b, "<this>");
+        b41.i(bVar, "<this>");
         b41.i(str, "message");
         b41.i(str2, "replaceWith");
         b41.i(str3, "level");
-        hp0 hp0Var = C8277c.C8278a.replaceWith;
+        hp0 hp0Var = c.a.replaceWith;
         ni1 ni1Var = e;
-        g = C8214m.g();
-        l = C8226x.l(hq2.a(d, new ai2(str2)), hq2.a(ni1Var, new y7(g, new Function1<ModuleDescriptor, z71>() { // from class: kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationUtilKt$createDeprecatedAnnotation$replaceWithAnnotation$1
+        g = m.g();
+        l = x.l(hq2.a(d, new ai2(str2)), hq2.a(ni1Var, new y7(g, new Function1<ModuleDescriptor, z71>() { // from class: kotlin.reflect.jvm.internal.impl.descriptors.annotations.AnnotationUtilKt$createDeprecatedAnnotation$replaceWithAnnotation$1
             /* JADX INFO: Access modifiers changed from: package-private */
             {
                 super(1);
@@ -77,29 +77,29 @@ public final class AnnotationUtilKt {
             @NotNull
             public final z71 invoke(@NotNull ModuleDescriptor moduleDescriptor) {
                 b41.i(moduleDescriptor, "module");
-                fd2 l3 = moduleDescriptor.getBuiltIns().l(Variance.INVARIANT, AbstractC8271b.this.W());
+                fd2 l3 = moduleDescriptor.getBuiltIns().l(Variance.INVARIANT, b.this.W());
                 b41.h(l3, "module.builtIns.getArray…ce.INVARIANT, stringType)");
                 return l3;
             }
         })));
-        BuiltInAnnotationDescriptor builtInAnnotationDescriptor = new BuiltInAnnotationDescriptor(abstractC8271b, hp0Var, l);
-        hp0 hp0Var2 = C8277c.C8278a.deprecated;
+        BuiltInAnnotationDescriptor builtInAnnotationDescriptor = new BuiltInAnnotationDescriptor(bVar, hp0Var, l);
+        hp0 hp0Var2 = c.a.deprecated;
         ni1 ni1Var2 = c;
-        hj m = hj.m(C8277c.C8278a.deprecationLevel);
+        hj m = hj.m(c.a.deprecationLevel);
         b41.h(m, "topLevel(StandardNames.FqNames.deprecationLevel)");
         ni1 f = ni1.f(str3);
         b41.h(f, "identifier(level)");
-        l2 = C8226x.l(hq2.a(a, new ai2(str)), hq2.a(b, new d6(builtInAnnotationDescriptor)), hq2.a(ni1Var2, new xe0(m, f)));
-        return new BuiltInAnnotationDescriptor(abstractC8271b, hp0Var2, l2);
+        l2 = x.l(hq2.a(a, new ai2(str)), hq2.a(b, new d6(builtInAnnotationDescriptor)), hq2.a(ni1Var2, new xe0(m, f)));
+        return new BuiltInAnnotationDescriptor(bVar, hp0Var2, l2);
     }
 
-    public static /* synthetic */ AnnotationDescriptor b(AbstractC8271b abstractC8271b, String str, String str2, String str3, int i, Object obj) {
+    public static /* synthetic */ AnnotationDescriptor b(b bVar, String str, String str2, String str3, int i, Object obj) {
         if ((i & 2) != 0) {
             str2 = "";
         }
         if ((i & 4) != 0) {
             str3 = "WARNING";
         }
-        return a(abstractC8271b, str, str2, str3);
+        return a(bVar, str, str2, str3);
     }
 }

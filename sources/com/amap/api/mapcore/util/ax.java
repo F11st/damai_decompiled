@@ -14,7 +14,7 @@ import java.util.List;
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
 public class ax {
-    C4505de a;
+    de a;
     private List<av> b = new ArrayList();
     private AMap.OnMultiPointClickListener c;
     private IAMapDelegate d;
@@ -23,8 +23,8 @@ public class ax {
         this.d = iAMapDelegate;
     }
 
-    public C4505de a() {
-        C4505de gLShaderManager = this.d.getGLShaderManager();
+    public de a() {
+        de gLShaderManager = this.d.getGLShaderManager();
         this.a = gLShaderManager;
         return gLShaderManager;
     }

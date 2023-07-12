@@ -13,7 +13,7 @@ public final class w71 {
     public static final KotlinJvmBinaryClass a(@NotNull KotlinClassFinder kotlinClassFinder, @NotNull JavaClass javaClass) {
         b41.i(kotlinClassFinder, "<this>");
         b41.i(javaClass, "javaClass");
-        KotlinClassFinder.AbstractC8373a findKotlinClassOrContent = kotlinClassFinder.findKotlinClassOrContent(javaClass);
+        KotlinClassFinder.a findKotlinClassOrContent = kotlinClassFinder.findKotlinClassOrContent(javaClass);
         if (findKotlinClassOrContent == null) {
             return null;
         }
@@ -24,7 +24,7 @@ public final class w71 {
     public static final KotlinJvmBinaryClass b(@NotNull KotlinClassFinder kotlinClassFinder, @NotNull hj hjVar) {
         b41.i(kotlinClassFinder, "<this>");
         b41.i(hjVar, "classId");
-        KotlinClassFinder.AbstractC8373a findKotlinClassOrContent = kotlinClassFinder.findKotlinClassOrContent(hjVar);
+        KotlinClassFinder.a findKotlinClassOrContent = kotlinClassFinder.findKotlinClassOrContent(hjVar);
         if (findKotlinClassOrContent == null) {
             return null;
         }

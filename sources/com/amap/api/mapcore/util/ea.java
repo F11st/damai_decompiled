@@ -64,7 +64,7 @@ public class ea {
                 stringBuffer.append(jn1.ARRAY_END_STR);
                 String stringBuffer2 = stringBuffer.toString();
                 if (!TextUtils.isEmpty(stringBuffer2) && (weakReference = this.c) != null && weakReference.get() != null) {
-                    C4595ip.a(stringBuffer2, this.c.get());
+                    ip.a(stringBuffer2, this.c.get());
                 }
             }
             this.b.clear();

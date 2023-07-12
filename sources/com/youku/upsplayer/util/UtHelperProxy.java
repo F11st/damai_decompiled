@@ -7,7 +7,7 @@ import com.alibaba.mtl.appmonitor.model.DimensionValueSet;
 import com.alibaba.mtl.appmonitor.model.MeasureSet;
 import com.alibaba.mtl.appmonitor.model.MeasureValueSet;
 import com.alimm.xadsdk.base.ut.AdUtConstants;
-import com.alipay.sdk.m.l.C4231b;
+import com.alipay.sdk.m.l.b;
 import com.ut.mini.IUTApplication;
 import com.ut.mini.UTAnalytics;
 import com.ut.mini.UTHitBuilders;
@@ -202,7 +202,7 @@ public class UtHelperProxy {
             map.put("app_version", this.mAppVersion);
             map.put(RequestParams.client_ip, this.mClientIp);
             map.put("utdid", this.mUtdid);
-            map.put(C4231b.h, str);
+            map.put(b.h, str);
             map.put("page_name", str2);
             map.put(UTDataCollectorNodeColumn.EVENT_ID, String.valueOf(CUSTOM_EVENT_ID));
             map.put("event_name", str3);

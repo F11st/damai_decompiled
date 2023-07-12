@@ -27,7 +27,7 @@ import com.youku.live.dago.widgetlib.R;
 import com.youku.live.dago.widgetlib.ailpbaselib.utils.AppContextUtils;
 import com.youku.live.dago.widgetlib.interactive.utils.DensityUtil;
 import java.util.ArrayList;
-import tb.C9796v;
+import tb.v;
 
 /* compiled from: Taobao */
 /* loaded from: classes2.dex */
@@ -136,7 +136,7 @@ public class LoadingImageView extends AppCompatImageView {
             ipChange.ipc$dispatch("-1757791139", new Object[]{this});
             return;
         }
-        this.window = (WindowManager) getContext().getSystemService(C9796v.ATTACH_MODE_WINDOW);
+        this.window = (WindowManager) getContext().getSystemService(v.ATTACH_MODE_WINDOW);
         this.mShaderMatrix = new Matrix();
         this.mViewPaint = new Paint();
         this.mViewPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP));
@@ -190,7 +190,7 @@ public class LoadingImageView extends AppCompatImageView {
         }
         super.onAttachedToWindow();
         if (this.window == null) {
-            this.window = (WindowManager) getContext().getSystemService(C9796v.ATTACH_MODE_WINDOW);
+            this.window = (WindowManager) getContext().getSystemService(v.ATTACH_MODE_WINDOW);
         }
         this.mAnimatorSet.start();
     }

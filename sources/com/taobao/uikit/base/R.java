@@ -70,9 +70,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.uikit.base.R$color */
     /* loaded from: classes11.dex */
-    public static final class C6903color {
+    public static final class color {
         public static final int notification_action_color_filter = 0x7f060417;
         public static final int notification_icon_bg_color = 0x7f060418;
         public static final int ripple_material_light = 0x7f060478;
@@ -82,7 +81,7 @@ public final class R {
         public static final int uik_dialog_bg = 0x7f06053b;
         public static final int uik_text_color = 0x7f06053e;
 
-        private C6903color() {
+        private color() {
         }
     }
 
@@ -126,9 +125,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.uikit.base.R$drawable */
     /* loaded from: classes11.dex */
-    public static final class C6904drawable {
+    public static final class drawable {
         public static final int notification_action_background = 0x7f080b1d;
         public static final int notification_bg = 0x7f080b1e;
         public static final int notification_bg_low = 0x7f080b1f;
@@ -143,7 +141,7 @@ public final class R {
         public static final int notify_panel_notification_icon_bg = 0x7f080b29;
         public static final int uik_imagesave_btn = 0x7f080f3a;
 
-        private C6904drawable() {
+        private drawable() {
         }
     }
 
@@ -195,9 +193,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.uikit.base.R$layout */
     /* loaded from: classes11.dex */
-    public static final class C6905layout {
+    public static final class layout {
         public static final int notification_action = 0x7f0c05c4;
         public static final int notification_action_tombstone = 0x7f0c05c5;
         public static final int notification_template_custom_big = 0x7f0c05cc;
@@ -208,7 +205,7 @@ public final class R {
         public static final int uik_image_save_choice = 0x7f0c0802;
         public static final int uik_image_save_dialog = 0x7f0c0803;
 
-        private C6905layout() {
+        private layout() {
         }
     }
 
@@ -228,9 +225,8 @@ public final class R {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.uikit.base.R$style */
     /* loaded from: classes11.dex */
-    public static final class C6906style {
+    public static final class style {
         public static final int TextAppearance_Compat_Notification = 0x7f12023a;
         public static final int TextAppearance_Compat_Notification_Info = 0x7f12023b;
         public static final int TextAppearance_Compat_Notification_Line2 = 0x7f12023d;
@@ -241,7 +237,7 @@ public final class R {
         public static final int uik_imagesavechoice = 0x7f120574;
         public static final int uik_imagesavedialog = 0x7f120575;
 
-        private C6906style() {
+        private style() {
         }
     }
 

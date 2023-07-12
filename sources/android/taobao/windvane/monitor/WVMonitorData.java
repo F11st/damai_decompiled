@@ -20,21 +20,20 @@ public class WVMonitorData {
     public long init = 0;
     public String performanceInfo = "";
     public int wvAppMonitor = 1;
-    public C0001stat stat = new C0001stat();
-    public C0000extra args = new C0000extra();
+    public stat stat = new stat();
+    public extra args = new extra();
     public String protocolType = "";
 
     /* compiled from: Taobao */
-    /* renamed from: android.taobao.windvane.monitor.WVMonitorData$extra */
     /* loaded from: classes12.dex */
-    public class C0000extra {
+    public class extra {
         public int statusCode;
         public String via;
         public WVPerformanceMonitorInterface.NetStat netStat = null;
         public Map<String, Long> selfDefine = new ConcurrentHashMap();
         public Map<String, resStat> resStat = new ConcurrentHashMap();
 
-        public C0000extra() {
+        public extra() {
         }
     }
 
@@ -88,9 +87,8 @@ public class WVMonitorData {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: android.taobao.windvane.monitor.WVMonitorData$stat */
     /* loaded from: classes12.dex */
-    public class C0001stat {
+    public class stat {
         public long onLoad = 0;
         public long onDomLoad = 0;
         public int finish = 0;
@@ -106,7 +104,7 @@ public class WVMonitorData {
         public long allVerifyTime = 0;
         public int verifyCacheSize = 0;
 
-        public C0001stat() {
+        public stat() {
         }
     }
 

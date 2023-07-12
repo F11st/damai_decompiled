@@ -3,8 +3,6 @@ package tb;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.imagebrowse.bean.VideoInfo;
 import cn.damai.tetris.core.TrackInfo;
 import cn.damai.tetris.core.ut.TrackProxy;
@@ -18,7 +16,7 @@ import java.util.Map;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
-public class oy0 extends C0528b {
+public class oy0 extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange = null;
     public static final String HOME_PAGE = "home";
     public static final String WELCOME_PAGE = "welcome";
@@ -124,8 +122,8 @@ public class oy0 extends C0528b {
                 hashMap.put("scm", str3);
                 if (z) {
                     hashMap.put("ranklist_id", str4);
-                    hashMap.put(C9548pb.PRE_CONTENT_ID, str4);
-                    hashMap.put(C9548pb.PRE_CONTENT_TYPE, "ranklist");
+                    hashMap.put(pb.PRE_CONTENT_ID, str4);
+                    hashMap.put(pb.PRE_CONTENT_TYPE, "ranklist");
                 } else {
                     hashMap.put("item_id", str4);
                 }
@@ -333,8 +331,8 @@ public class oy0 extends C0528b {
             hashMap.put("titlelabel", "直击现场");
             hashMap.put("video_id", vid);
             hashMap.put("item_id", str);
-            hashMap.put(C9548pb.PRE_CONTENT_ID, vid);
-            hashMap.put(C9548pb.PRE_CONTENT_TYPE, "video");
+            hashMap.put(pb.PRE_CONTENT_ID, vid);
+            hashMap.put(pb.PRE_CONTENT_TYPE, "video");
             TrackType trackType = TrackType.expose;
             f(trackInfo, hashMap, trackType);
             TrackProxy.a().userTrack(trackType, view, trackInfo.trackB, trackInfo.trackC, "video", hashMap, false);
@@ -358,7 +356,7 @@ public class oy0 extends C0528b {
             d23.h(g, "duration", j + "");
             d23.h(g, "spm-url", "a2o4t." + str + "." + str2 + ".playend");
             d23.h(g, "play_session_id", str5);
-            C0529c e = C0529c.e();
+            cn.damai.common.user.c e = cn.damai.common.user.c.e();
             e.D(str, "page_" + str + "_playend", "playend", "", g, 12003);
         }
     }
@@ -380,7 +378,7 @@ public class oy0 extends C0528b {
             d23.h(g, "is_auto_play", z ? "1" : "0");
             d23.h(g, "spm-url", "a2o4t." + str + "." + str2 + ".playstart");
             d23.h(g, "play_session_id", str5);
-            C0529c e = C0529c.e();
+            cn.damai.common.user.c e = cn.damai.common.user.c.e();
             e.D(str, "page_" + str + "_playstart", "playstart", "", g, 12002);
         }
     }

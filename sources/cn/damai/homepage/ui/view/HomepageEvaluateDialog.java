@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import cn.damai.comment.util.CommentItemMoreUtil;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.coupondialog.net.CouponListResponse;
 import cn.damai.homepage.R$drawable;
 import cn.damai.homepage.R$id;
@@ -66,12 +66,11 @@ public class HomepageEvaluateDialog extends Dialog implements View.OnClickListen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.view.HomepageEvaluateDialog$a */
     /* loaded from: classes14.dex */
-    public class DialogInterface$OnDismissListenerC1180a implements DialogInterface.OnDismissListener {
+    public class a implements DialogInterface.OnDismissListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnDismissListenerC1180a() {
+        a() {
         }
 
         @Override // android.content.DialogInterface.OnDismissListener
@@ -92,18 +91,16 @@ public class HomepageEvaluateDialog extends Dialog implements View.OnClickListen
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.ui.view.HomepageEvaluateDialog$b */
     /* loaded from: classes5.dex */
-    public class C1181b implements DMRatingBar.OnStarChangeListener {
+    public class b implements DMRatingBar.OnStarChangeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.homepage.ui.view.HomepageEvaluateDialog$b$a */
         /* loaded from: classes14.dex */
-        public class C1182a implements Animator.AnimatorListener {
+        public class a implements Animator.AnimatorListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C1182a() {
+            a() {
             }
 
             @Override // android.animation.Animator.AnimatorListener
@@ -141,7 +138,7 @@ public class HomepageEvaluateDialog extends Dialog implements View.OnClickListen
             }
         }
 
-        C1181b() {
+        b() {
         }
 
         @Override // com.alibaba.pictures.bricks.view.DMRatingBar.OnStarChangeListener
@@ -162,7 +159,7 @@ public class HomepageEvaluateDialog extends Dialog implements View.OnClickListen
                 homepageEvaluateDialog2.u(homepageEvaluateDialog2.h);
                 HomepageEvaluateDialog.this.h.playAnimation();
                 if (Build.VERSION.SDK_INT >= 11) {
-                    HomepageEvaluateDialog.this.h.addAnimatorListener(new C1182a());
+                    HomepageEvaluateDialog.this.h.addAnimatorListener(new a());
                 }
             } else if (HomepageEvaluateDialog.this.l > 0) {
                 HomepageEvaluateDialog.this.m();
@@ -187,7 +184,7 @@ public class HomepageEvaluateDialog extends Dialog implements View.OnClickListen
 
     public HomepageEvaluateDialog(Context context, CouponListResponse.ContentList contentList, int i, DialogInterface.OnDismissListener onDismissListener) {
         super(context, R$style.dialog_fullscreen);
-        this.r = new C1181b();
+        this.r = new b();
         this.j = context;
         this.k = contentList;
         this.m = i;
@@ -211,7 +208,7 @@ public class HomepageEvaluateDialog extends Dialog implements View.OnClickListen
         hashMap.put("usercode", z20.E());
         hashMap.put("item_id", this.k.itemId);
         hashMap.put("target_id", this.k.targetId);
-        C0529c.e().C("evalute", "evaluate_alert", "home", "1.0", currentTimeMillis, hashMap, 2201);
+        c.e().C("evalute", "evaluate_alert", "home", "1.0", currentTimeMillis, hashMap, 2201);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -232,7 +229,7 @@ public class HomepageEvaluateDialog extends Dialog implements View.OnClickListen
             uTHelperCallback.confirmUt(String.valueOf(this.l));
             return;
         }
-        C0529c e = C0529c.e();
+        c e = c.e();
         py0 I = py0.I();
         CouponListResponse.ContentList contentList3 = this.k;
         e.x(I.H(contentList3.itemId, contentList3.targetId, String.valueOf(this.l)));
@@ -258,7 +255,7 @@ public class HomepageEvaluateDialog extends Dialog implements View.OnClickListen
             this.b.setOnClickListener(null);
             this.c.setOnClickListener(null);
             this.g.setOnStarChangeListener(this.r);
-            setOnDismissListener(new DialogInterface$OnDismissListenerC1180a());
+            setOnDismissListener(new a());
             v();
         }
     }
@@ -358,7 +355,7 @@ public class HomepageEvaluateDialog extends Dialog implements View.OnClickListen
                 uTHelperCallback.closeUt();
                 return;
             }
-            C0529c e = C0529c.e();
+            c e = c.e();
             py0 I = py0.I();
             CouponListResponse.ContentList contentList = this.k;
             e.x(I.G(contentList.itemId, contentList.targetId));

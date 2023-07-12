@@ -1,14 +1,14 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
 import io.reactivex.Observer;
 import io.reactivex.annotations.Nullable;
+import io.reactivex.d;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.observers.BasicQueueDisposable;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableFromArray<T> extends AbstractC8149d<T> {
+public final class ObservableFromArray<T> extends d<T> {
     final T[] array;
 
     /* compiled from: Taobao */
@@ -89,7 +89,7 @@ public final class ObservableFromArray<T> extends AbstractC8149d<T> {
         this.array = tArr;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     public void subscribeActual(Observer<? super T> observer) {
         FromArrayDisposable fromArrayDisposable = new FromArrayDisposable(observer, this.array);
         observer.onSubscribe(fromArrayDisposable);

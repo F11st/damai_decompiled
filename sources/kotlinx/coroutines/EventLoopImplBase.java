@@ -27,7 +27,7 @@ import tb.zk1;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
-public abstract class EventLoopImplBase extends AbstractC8700n implements Delay {
+public abstract class EventLoopImplBase extends n implements Delay {
     private static final AtomicReferenceFieldUpdater _queue$FU = AtomicReferenceFieldUpdater.newUpdater(EventLoopImplBase.class, Object.class, "_queue");
     private static final AtomicReferenceFieldUpdater _delayed$FU = AtomicReferenceFieldUpdater.newUpdater(EventLoopImplBase.class, Object.class, "_delayed");
     private volatile Object _queue = null;
@@ -103,12 +103,12 @@ public abstract class EventLoopImplBase extends AbstractC8700n implements Delay 
             if (obj == kj2Var) {
                 return;
             }
-            if (!(obj instanceof C8612a)) {
+            if (!(obj instanceof a)) {
                 obj = null;
             }
-            C8612a c8612a = (C8612a) obj;
-            if (c8612a != null) {
-                c8612a.g(this);
+            a aVar = (a) obj;
+            if (aVar != null) {
+                aVar.g(this);
             }
             kj2Var2 = ag0.a;
             this._heap = kj2Var2;
@@ -129,35 +129,35 @@ public abstract class EventLoopImplBase extends AbstractC8700n implements Delay 
             return this.index;
         }
 
-        public final synchronized int scheduleTask(long j, @NotNull C8612a c8612a, @NotNull EventLoopImplBase eventLoopImplBase) {
+        public final synchronized int scheduleTask(long j, @NotNull a aVar, @NotNull EventLoopImplBase eventLoopImplBase) {
             kj2 kj2Var;
             Object obj = this._heap;
             kj2Var = ag0.a;
             if (obj == kj2Var) {
                 return 2;
             }
-            synchronized (c8612a) {
-                DelayedTask b = c8612a.b();
+            synchronized (aVar) {
+                DelayedTask b = aVar.b();
                 if (eventLoopImplBase.isCompleted()) {
                     return 1;
                 }
                 if (b == null) {
-                    c8612a.b = j;
+                    aVar.b = j;
                 } else {
                     long j2 = b.nanoTime;
                     if (j2 - j < 0) {
                         j = j2;
                     }
-                    if (j - c8612a.b > 0) {
-                        c8612a.b = j;
+                    if (j - aVar.b > 0) {
+                        aVar.b = j;
                     }
                 }
                 long j3 = this.nanoTime;
-                long j4 = c8612a.b;
+                long j4 = aVar.b;
                 if (j3 - j4 < 0) {
                     this.nanoTime = j4;
                 }
-                c8612a.a(this);
+                aVar.a(this);
                 return 0;
             }
         }
@@ -199,13 +199,12 @@ public abstract class EventLoopImplBase extends AbstractC8700n implements Delay 
     }
 
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.EventLoopImplBase$a */
     /* loaded from: classes8.dex */
-    public static final class C8612a extends sm2<DelayedTask> {
+    public static final class a extends sm2<DelayedTask> {
         @JvmField
         public long b;
 
-        public C8612a(long j) {
+        public a(long j) {
             this.b = j;
         }
     }
@@ -291,13 +290,13 @@ public abstract class EventLoopImplBase extends AbstractC8700n implements Delay 
                 }
             } else {
                 pa1 pa1Var2 = (pa1) obj;
-                int a = pa1Var2.a(runnable);
-                if (a == 0) {
+                int a2 = pa1Var2.a(runnable);
+                if (a2 == 0) {
                     return true;
                 }
-                if (a == 1) {
+                if (a2 == 1) {
                     _queue$FU.compareAndSet(this, obj, pa1Var2.i());
-                } else if (a == 2) {
+                } else if (a2 == 2) {
                     return false;
                 }
             }
@@ -312,11 +311,11 @@ public abstract class EventLoopImplBase extends AbstractC8700n implements Delay 
 
     private final void rescheduleAllDelayed() {
         DelayedTask i;
-        TimeSource a = eo2.a();
-        long nanoTime = a != null ? a.nanoTime() : System.nanoTime();
+        TimeSource a2 = eo2.a();
+        long nanoTime = a2 != null ? a2.nanoTime() : System.nanoTime();
         while (true) {
-            C8612a c8612a = (C8612a) this._delayed;
-            if (c8612a == null || (i = c8612a.i()) == null) {
+            a aVar = (a) this._delayed;
+            if (aVar == null || (i = aVar.i()) == null) {
                 return;
             }
             reschedule(nanoTime, i);
@@ -327,14 +326,14 @@ public abstract class EventLoopImplBase extends AbstractC8700n implements Delay 
         if (isCompleted()) {
             return 1;
         }
-        C8612a c8612a = (C8612a) this._delayed;
-        if (c8612a == null) {
-            _delayed$FU.compareAndSet(this, null, new C8612a(j));
+        a aVar = (a) this._delayed;
+        if (aVar == null) {
+            _delayed$FU.compareAndSet(this, null, new a(j));
             Object obj = this._delayed;
             b41.f(obj);
-            c8612a = (C8612a) obj;
+            aVar = (a) obj;
         }
-        return delayedTask.scheduleTask(j, c8612a, this);
+        return delayedTask.scheduleTask(j, aVar, this);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -343,14 +342,14 @@ public abstract class EventLoopImplBase extends AbstractC8700n implements Delay 
     }
 
     private final boolean shouldUnpark(DelayedTask delayedTask) {
-        C8612a c8612a = (C8612a) this._delayed;
-        return (c8612a != null ? c8612a.e() : null) == delayedTask;
+        a aVar = (a) this._delayed;
+        return (aVar != null ? aVar.e() : null) == delayedTask;
     }
 
     @Override // kotlinx.coroutines.Delay
     @Nullable
     public Object delay(long j, @NotNull Continuation<? super wt2> continuation) {
-        return Delay.C8611a.a(this, j, continuation);
+        return Delay.a.a(this, j, continuation);
     }
 
     @Override // kotlinx.coroutines.CoroutineDispatcher
@@ -366,7 +365,7 @@ public abstract class EventLoopImplBase extends AbstractC8700n implements Delay 
         }
     }
 
-    @Override // kotlinx.coroutines.AbstractC8699m
+    @Override // kotlinx.coroutines.m
     protected long getNextTime() {
         DelayedTask e;
         kj2 kj2Var;
@@ -385,27 +384,27 @@ public abstract class EventLoopImplBase extends AbstractC8700n implements Delay 
                 return 0L;
             }
         }
-        C8612a c8612a = (C8612a) this._delayed;
-        if (c8612a == null || (e = c8612a.e()) == null) {
+        a aVar = (a) this._delayed;
+        if (aVar == null || (e = aVar.e()) == null) {
             return AbsPerformance.LONG_NIL;
         }
         long j = e.nanoTime;
-        TimeSource a = eo2.a();
-        return ry1.b(j - (a != null ? a.nanoTime() : System.nanoTime()), 0L);
+        TimeSource a2 = eo2.a();
+        return ry1.b(j - (a2 != null ? a2.nanoTime() : System.nanoTime()), 0L);
     }
 
     @NotNull
     public DisposableHandle invokeOnTimeout(long j, @NotNull Runnable runnable, @NotNull CoroutineContext coroutineContext) {
-        return Delay.C8611a.b(this, j, runnable, coroutineContext);
+        return Delay.a.b(this, j, runnable, coroutineContext);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // kotlinx.coroutines.AbstractC8699m
+    @Override // kotlinx.coroutines.m
     public boolean isEmpty() {
         kj2 kj2Var;
         if (isUnconfinedQueueEmpty()) {
-            C8612a c8612a = (C8612a) this._delayed;
-            if (c8612a == null || c8612a.d()) {
+            a aVar = (a) this._delayed;
+            if (aVar == null || aVar.d()) {
                 Object obj = this._queue;
                 if (obj != null) {
                     if (obj instanceof pa1) {
@@ -425,7 +424,7 @@ public abstract class EventLoopImplBase extends AbstractC8700n implements Delay 
 
     /* JADX WARN: Removed duplicated region for block: B:34:0x0053  */
     /* JADX WARN: Removed duplicated region for block: B:36:0x0057  */
-    @Override // kotlinx.coroutines.AbstractC8699m
+    @Override // kotlinx.coroutines.m
     /*
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
@@ -439,7 +438,7 @@ public abstract class EventLoopImplBase extends AbstractC8700n implements Delay 
             return r1
         L9:
             java.lang.Object r0 = r9._delayed
-            kotlinx.coroutines.EventLoopImplBase$a r0 = (kotlinx.coroutines.EventLoopImplBase.C8612a) r0
+            kotlinx.coroutines.EventLoopImplBase$a r0 = (kotlinx.coroutines.EventLoopImplBase.a) r0
             if (r0 == 0) goto L4d
             boolean r3 = r0.d()
             if (r3 != 0) goto L4d
@@ -515,8 +514,8 @@ public abstract class EventLoopImplBase extends AbstractC8700n implements Delay 
     public final DisposableHandle scheduleInvokeOnTimeout(long j, @NotNull Runnable runnable) {
         long d = ag0.d(j);
         if (d < hd0.MAX_MILLIS) {
-            TimeSource a = eo2.a();
-            long nanoTime = a != null ? a.nanoTime() : System.nanoTime();
+            TimeSource a2 = eo2.a();
+            long nanoTime = a2 != null ? a2.nanoTime() : System.nanoTime();
             DelayedRunnableTask delayedRunnableTask = new DelayedRunnableTask(d + nanoTime, runnable);
             schedule(nanoTime, delayedRunnableTask);
             return delayedRunnableTask;
@@ -528,15 +527,15 @@ public abstract class EventLoopImplBase extends AbstractC8700n implements Delay 
     public void scheduleResumeAfterDelay(long j, @NotNull CancellableContinuation<? super wt2> cancellableContinuation) {
         long d = ag0.d(j);
         if (d < hd0.MAX_MILLIS) {
-            TimeSource a = eo2.a();
-            long nanoTime = a != null ? a.nanoTime() : System.nanoTime();
+            TimeSource a2 = eo2.a();
+            long nanoTime = a2 != null ? a2.nanoTime() : System.nanoTime();
             DelayedResumeTask delayedResumeTask = new DelayedResumeTask(d + nanoTime, cancellableContinuation);
             dg.a(cancellableContinuation, delayedResumeTask);
             schedule(nanoTime, delayedResumeTask);
         }
     }
 
-    @Override // kotlinx.coroutines.AbstractC8699m
+    @Override // kotlinx.coroutines.m
     protected void shutdown() {
         pm2.INSTANCE.c();
         setCompleted(true);

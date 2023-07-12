@@ -41,7 +41,7 @@ public class PexodeOptions {
     protected void finalize() {
         try {
             if (this.tempHeaderBuffer != null) {
-                C6827a.f().h(this.tempHeaderBuffer);
+                a.f().h(this.tempHeaderBuffer);
             }
             super.finalize();
         } catch (Throwable unused) {

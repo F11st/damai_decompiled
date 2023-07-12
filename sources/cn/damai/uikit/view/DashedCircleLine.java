@@ -19,12 +19,11 @@ public class DashedCircleLine extends BaseDashedLine {
     private RectF mRectF;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.DashedCircleLine$a */
     /* loaded from: classes8.dex */
-    public class C2581a extends BaseDashedLine.C2567a {
+    public class a extends BaseDashedLine.a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        public C2581a(DashedCircleLine dashedCircleLine, int i, int i2, int i3) {
+        public a(DashedCircleLine dashedCircleLine, int i, int i2, int i3) {
             super(dashedCircleLine, i, i2, i3);
         }
 
@@ -63,8 +62,8 @@ public class DashedCircleLine extends BaseDashedLine {
             ipChange.ipc$dispatch("-585671418", new Object[]{this, typedArray});
             return;
         }
-        BaseDashedLine.C2567a c2567a = this.mDashEffect;
-        this.mDashEffect = new C2581a(this, c2567a.a, c2567a.b, c2567a.c);
+        BaseDashedLine.a aVar = this.mDashEffect;
+        this.mDashEffect = new a(this, aVar.a, aVar.b, aVar.c);
     }
 
     @Override // cn.damai.uikit.view.BaseDashedLine
@@ -115,7 +114,7 @@ public class DashedCircleLine extends BaseDashedLine {
                 f = f2 / 2.0f;
             }
         }
-        ((C2581a) this.mDashEffect).e(size, size2, f);
+        ((a) this.mDashEffect).e(size, size2, f);
     }
 
     public DashedCircleLine(Context context, AttributeSet attributeSet) {

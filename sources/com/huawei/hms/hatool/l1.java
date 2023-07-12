@@ -27,7 +27,7 @@ public abstract class l1 {
             a.a(i, str, linkedHashMap);
             return;
         }
-        C5653y.d("hmsSdk", "Data type no longer collects range.type: " + i);
+        y.d("hmsSdk", "Data type no longer collects range.type: " + i);
     }
 
     @Deprecated

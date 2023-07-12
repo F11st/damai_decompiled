@@ -33,12 +33,12 @@ public abstract class StarHeaderPresenterBase extends BasePresenter<StarHeaderCo
         } else if (getContext().getActivity() == null) {
         } else {
             if (i == 7002) {
-                C1970a.k(getModel().getData(), getContext().getActivity(), getView().getHeaderView(), this);
+                a.k(getModel().getData(), getContext().getActivity(), getView().getHeaderView(), this);
             } else if (i == 103 && (obj instanceof StarHeaderData)) {
                 StarHeaderData starHeaderData = (StarHeaderData) obj;
                 this.headerData = starHeaderData;
                 getModel().setData(starHeaderData);
-                C1970a.d(getContext().getActivity(), getView().getHeaderView(), getModel().getData(), getType(), getModel(), this);
+                a.d(getContext().getActivity(), getView().getHeaderView(), getModel().getData(), getType(), getModel(), this);
             }
             if (i == 11004) {
                 this.refreshTime = 0;
@@ -71,7 +71,7 @@ public abstract class StarHeaderPresenterBase extends BasePresenter<StarHeaderCo
             model.setFragmentType(i);
         }
         this.refreshTime++;
-        C1970a.d(getContext().getActivity(), getView().getHeaderView(), this.headerData, getType(), model, this);
+        a.d(getContext().getActivity(), getView().getHeaderView(), this.headerData, getType(), model, this);
         sendMsg(new Message(103, this.headerData));
     }
 }

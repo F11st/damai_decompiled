@@ -10,9 +10,8 @@ import com.taobao.android.dinamicx.view.DXNativeListLayout;
 public class DXListLayout extends DXLinearLayoutWidgetNode {
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamicx.widget.DXListLayout$a */
     /* loaded from: classes11.dex */
-    public static class C6444a implements IDXBuilderWidgetNode {
+    public static class a implements IDXBuilderWidgetNode {
         @Override // com.taobao.android.dinamicx.widget.IDXBuilderWidgetNode
         public DXWidgetNode build(@Nullable Object obj) {
             return new DXListLayout();

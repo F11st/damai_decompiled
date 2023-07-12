@@ -24,7 +24,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes8.dex */
 public final class lt1 {
     @NotNull
-    public static final C9421a Companion = new C9421a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String fileName = "popup_scene_type_config";
     @Nullable
@@ -43,13 +43,12 @@ public final class lt1 {
     private AtomicBoolean f = new AtomicBoolean(false);
 
     /* compiled from: Taobao */
-    /* renamed from: tb.lt1$a */
     /* loaded from: classes8.dex */
-    public static final class C9421a {
-        private C9421a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9421a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -87,11 +86,11 @@ public final class lt1 {
                 return false;
             }
             yh0 yh0Var = yh0.INSTANCE;
-            JSONObject a = yh0Var.a(c);
-            if (a.containsKey("sceneTypes") && (string2 = a.getString("sceneTypes")) != null) {
+            JSONObject a2 = yh0Var.a(c);
+            if (a2.containsKey("sceneTypes") && (string2 = a2.getString("sceneTypes")) != null) {
                 this.d = pt1.a((String[]) yh0Var.c(string2, String[].class));
             }
-            if (!a.containsKey("localPopupPages") || (string = a.getString("localPopupPages")) == null) {
+            if (!a2.containsKey("localPopupPages") || (string = a2.getString("localPopupPages")) == null) {
                 return false;
             }
             this.e = pt1.a((String[]) yh0Var.c(string, String[].class));
@@ -208,7 +207,7 @@ public final class lt1 {
             java.lang.String r0 = "application"
             tb.b41.i(r2, r0)
             if (r3 == 0) goto L10
-            boolean r0 = kotlin.text.C8596g.s(r3)
+            boolean r0 = kotlin.text.g.s(r3)
             if (r0 == 0) goto Le
             goto L10
         Le:

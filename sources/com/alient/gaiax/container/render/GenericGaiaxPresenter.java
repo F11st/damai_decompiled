@@ -23,7 +23,7 @@ import io.flutter.wpkbridge.WPKFactory;
 import java.util.HashMap;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -128,7 +128,7 @@ public class GenericGaiaxPresenter extends AbsPresenter<GenericItem<ItemValue>, 
         boolean q2;
         boolean q3;
         b41.i(str, "type");
-        q = C8604o.q(FragmentEvent.ON_FRAGMENT_RESUME, str, true);
+        q = o.q(FragmentEvent.ON_FRAGMENT_RESUME, str, true);
         if (q) {
             Object obj = map == null ? null : map.get("state");
             Boolean bool = obj instanceof Boolean ? (Boolean) obj : null;
@@ -140,11 +140,11 @@ public class GenericGaiaxPresenter extends AbsPresenter<GenericItem<ItemValue>, 
                 }
             }
         } else {
-            q2 = C8604o.q(ViewHolderEvent.ON_VIEW_ATTACHED_TO_WINDOW, str, true);
+            q2 = o.q(ViewHolderEvent.ON_VIEW_ATTACHED_TO_WINDOW, str, true);
             if (q2) {
                 ((GenericGaiaxView) getView()).viewVisible();
             } else {
-                q3 = C8604o.q(ViewHolderEvent.ON_VIEW_DETACHED_FROM_WINDOW, str, true);
+                q3 = o.q(ViewHolderEvent.ON_VIEW_DETACHED_FROM_WINDOW, str, true);
                 if (q3) {
                     ((GenericGaiaxView) getView()).viewInvisible();
                 }
@@ -231,7 +231,7 @@ public class GenericGaiaxPresenter extends AbsPresenter<GenericItem<ItemValue>, 
             if (r2 != 0) goto L5d
             goto Le8
         L5d:
-            java.lang.Object r2 = kotlin.collections.C8212k.P(r2)
+            java.lang.Object r2 = kotlin.collections.k.P(r2)
             com.youku.arch.v3.core.Render r2 = (com.youku.arch.v3.core.Render) r2
             if (r2 != 0) goto L67
             goto Le8

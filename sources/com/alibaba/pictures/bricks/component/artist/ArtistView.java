@@ -26,12 +26,11 @@ public class ArtistView extends AbsView<IItem<ItemValue>, ArtistContract.Model<I
     private final TextView performanceCount;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.artist.ArtistView$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC3449a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC3449a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -46,12 +45,11 @@ public class ArtistView extends AbsView<IItem<ItemValue>, ArtistContract.Model<I
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.component.artist.ArtistView$b */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC3450b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC3450b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -73,8 +71,8 @@ public class ArtistView extends AbsView<IItem<ItemValue>, ArtistContract.Model<I
         this.fansCount = (TextView) view.findViewById(R$id.fans_count);
         this.divider = view.findViewById(R$id.divider);
         this.performanceCount = (TextView) view.findViewById(R$id.performance_count);
-        view.findViewById(R$id.goto_home).setOnClickListener(new View$OnClickListenerC3449a());
-        view.setOnClickListener(new View$OnClickListenerC3450b());
+        view.findViewById(R$id.goto_home).setOnClickListener(new a());
+        view.setOnClickListener(new b());
     }
 
     @Override // com.alibaba.pictures.bricks.component.artist.ArtistContract.View

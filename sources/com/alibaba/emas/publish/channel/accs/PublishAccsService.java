@@ -7,7 +7,7 @@ import com.alibaba.emas.publish.channel.ut.PublishUtRequest;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.alipay.sdk.m.k.C4226b;
+import com.alipay.sdk.m.k.b;
 import com.taobao.accs.base.TaoBaseService;
 import com.taobao.aranger.exception.IPCException;
 import java.util.ArrayList;
@@ -38,8 +38,8 @@ public class PublishAccsService extends TaoBaseService {
                 if (jSONObject2.containsKey("batchId")) {
                     publishMtopUpdateInfo.batchId = jSONObject2.getLongValue("batchId");
                 }
-                if (jSONObject2.containsKey(C4226b.l)) {
-                    publishMtopUpdateInfo.biz = jSONObject2.getString(C4226b.l);
+                if (jSONObject2.containsKey(b.l)) {
+                    publishMtopUpdateInfo.biz = jSONObject2.getString(b.l);
                 }
                 if (jSONObject2.containsKey("payload")) {
                     publishMtopUpdateInfo.payload = jSONObject2.getJSONObject("payload");

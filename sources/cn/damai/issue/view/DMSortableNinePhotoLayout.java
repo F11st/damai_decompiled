@@ -27,9 +27,7 @@ import cn.damai.comment.R$id;
 import cn.damai.comment.R$layout;
 import cn.damai.comment.R$string;
 import cn.damai.common.app.widget.DMDialog;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.photoselect.imageselected.entry.Image;
 import cn.damai.commonbusiness.photoselect.imageselected.utils.ImageTask;
@@ -42,10 +40,10 @@ import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import tb.C9826vr;
 import tb.cb1;
 import tb.i41;
 import tb.t60;
+import tb.vr;
 import tb.xe;
 import tb.z20;
 
@@ -196,13 +194,12 @@ public class DMSortableNinePhotoLayout extends RecyclerView implements DMOnItemC
         private int j;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.issue.view.DMSortableNinePhotoLayout$PhotoAdapter$a */
         /* loaded from: classes5.dex */
-        public class C1305a implements ImageTask.Listener {
+        public class a implements ImageTask.Listener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ DMViewHolderHelper a;
 
-            C1305a(PhotoAdapter photoAdapter, DMViewHolderHelper dMViewHolderHelper) {
+            a(PhotoAdapter photoAdapter, DMViewHolderHelper dMViewHolderHelper) {
                 this.a = dMViewHolderHelper;
             }
 
@@ -219,13 +216,12 @@ public class DMSortableNinePhotoLayout extends RecyclerView implements DMOnItemC
         }
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.issue.view.DMSortableNinePhotoLayout$PhotoAdapter$b */
         /* loaded from: classes14.dex */
-        public class View$OnClickListenerC1306b implements View.OnClickListener {
+        public class b implements View.OnClickListener {
             private static transient /* synthetic */ IpChange $ipChange;
             final /* synthetic */ int a;
 
-            View$OnClickListenerC1306b(int i) {
+            b(int i) {
                 this.a = i;
             }
 
@@ -300,7 +296,7 @@ public class DMSortableNinePhotoLayout extends RecyclerView implements DMOnItemC
                 HashMap hashMap = new HashMap();
                 hashMap.put("usercode", z20.E());
                 i41.m(hashMap);
-                C0529c.e().G(dMViewHolderHelper.getView(i2), "picture_upload", "bottom", i41.PAGE_EVALUATE_SUBMIT, hashMap);
+                cn.damai.common.user.c.e().G(dMViewHolderHelper.getView(i2), "picture_upload", "bottom", i41.PAGE_EVALUATE_SUBMIT, hashMap);
             } else if (r(i)) {
                 dMViewHolderHelper.setVisibility(R$id.iv_item_nine_photo_flag, 8);
                 dMViewHolderHelper.setVisibility(R$id.add_photo_layout, 8);
@@ -322,7 +318,7 @@ public class DMSortableNinePhotoLayout extends RecyclerView implements DMOnItemC
                 HashMap hashMap2 = new HashMap();
                 hashMap2.put("usercode", z20.E());
                 i41.m(hashMap2);
-                C0529c.e().G(dMViewHolderHelper.getView(i3), "video_upload", "bottom", i41.PAGE_EVALUATE_SUBMIT, hashMap2);
+                cn.damai.common.user.c.e().G(dMViewHolderHelper.getView(i3), "video_upload", "bottom", i41.PAGE_EVALUATE_SUBMIT, hashMap2);
             } else if ("2".equals(image.getType()) && i == 0) {
                 dMViewHolderHelper.setVisibility(R$id.iv_item_nine_photo_flag, 0);
                 dMViewHolderHelper.setVisibility(R$id.add_photo_layout, 8);
@@ -343,10 +339,10 @@ public class DMSortableNinePhotoLayout extends RecyclerView implements DMOnItemC
                         dMViewHolderHelper.getImageView(i5).setImageBitmap(bitmap);
                         cb1.c("uploader 获取视频第一帧", "缓存获取成功");
                     } else if (i6 >= 3) {
-                        new ImageTask(this.b, new C1305a(this, dMViewHolderHelper)).execute(image.getPath(), image.getPath());
+                        new ImageTask(this.b, new a(this, dMViewHolderHelper)).execute(image.getPath(), image.getPath());
                     }
                 }
-                dMViewHolderHelper.getView(i4).setOnClickListener(new View$OnClickListenerC1306b(i));
+                dMViewHolderHelper.getView(i4).setOnClickListener(new b(i));
                 cb1.c("DMSortableNinePhotoLayout", "视频第一个" + i + "");
             } else {
                 dMViewHolderHelper.setVisibility(R$id.iv_item_nine_photo_flag, 0);
@@ -417,14 +413,13 @@ public class DMSortableNinePhotoLayout extends RecyclerView implements DMOnItemC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.view.DMSortableNinePhotoLayout$a */
     /* loaded from: classes14.dex */
-    public class DialogInterface$OnClickListenerC1307a implements DialogInterface.OnClickListener {
+    public class a implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
         final /* synthetic */ int b;
 
-        DialogInterface$OnClickListenerC1307a(View view, int i) {
+        a(View view, int i) {
             this.a = view;
             this.b = i;
         }
@@ -443,28 +438,27 @@ public class DMSortableNinePhotoLayout extends RecyclerView implements DMOnItemC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.view.DMSortableNinePhotoLayout$b */
     /* loaded from: classes5.dex */
-    public class C1308b implements DMImageCreator.DMImageSuccListener {
+    public class b implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ImageView a;
 
-        C1308b(ImageView imageView) {
+        b(ImageView imageView) {
             this.a = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "596663795")) {
-                ipChange.ipc$dispatch("596663795", new Object[]{this, c0502e});
-            } else if (c0502e != null) {
-                Bitmap bitmap = c0502e.b;
+                ipChange.ipc$dispatch("596663795", new Object[]{this, eVar});
+            } else if (eVar != null) {
+                Bitmap bitmap = eVar.b;
                 if (bitmap != null) {
                     this.a.setImageBitmap(bitmap);
                     return;
                 }
-                Drawable drawable = c0502e.a;
+                Drawable drawable = eVar.a;
                 if (drawable == null) {
                     this.a.setImageDrawable(DMSortableNinePhotoLayout.this.mContext.getResources().getDrawable(R$drawable.uikit_default_image_bg_grey));
                 } else {
@@ -475,13 +469,12 @@ public class DMSortableNinePhotoLayout extends RecyclerView implements DMOnItemC
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.issue.view.DMSortableNinePhotoLayout$c */
     /* loaded from: classes5.dex */
-    public class C1309c implements ImageTask2.Listener {
+    public class c implements ImageTask2.Listener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C1309c(DMSortableNinePhotoLayout dMSortableNinePhotoLayout, String str) {
+        c(DMSortableNinePhotoLayout dMSortableNinePhotoLayout, String str) {
             this.a = str;
         }
 
@@ -513,10 +506,10 @@ public class DMSortableNinePhotoLayout extends RecyclerView implements DMOnItemC
             imageView.setImageDrawable(this.mContext.getResources().getDrawable(R$drawable.uikit_default_image_bg_grey));
         } else if (str.startsWith("http")) {
             String str2 = str + "?x-oss-process=image/resize,m_fill,h_400,w_400,limit_0";
-            if (imageView.getTag() instanceof C9826vr) {
-                ((C9826vr) imageView.getTag()).cancel();
+            if (imageView.getTag() instanceof vr) {
+                ((vr) imageView.getTag()).cancel();
             }
-            imageView.setTag(C0504a.b().e(str2).n(new C1308b(imageView)).f());
+            imageView.setTag(cn.damai.common.image.a.b().e(str2).n(new b(imageView)).f());
         } else {
             imageView.setImageDrawable(this.mContext.getResources().getDrawable(R$drawable.uikit_default_image_bg_grey));
             imageView.setTag(str);
@@ -525,7 +518,7 @@ public class DMSortableNinePhotoLayout extends RecyclerView implements DMOnItemC
             if (bitmap != null) {
                 imageView.setImageBitmap(bitmap);
             } else if (i >= 3) {
-                new ImageTask2(this.mContext, true, imageView, new C1309c(this, str)).execute(str);
+                new ImageTask2(this.mContext, true, imageView, new c(this, str)).execute(str);
             }
         }
     }
@@ -541,9 +534,9 @@ public class DMSortableNinePhotoLayout extends RecyclerView implements DMOnItemC
         } else {
             this.mGridLayoutManager.setSpanCount(3);
         }
-        int a = (DisplayMetrics.getwidthPixels(t60.b(this.mActivity)) - t60.a(this.mActivity, this.mLRDistance)) / 3;
-        this.itemWidth = a;
-        int spanCount = a * this.mGridLayoutManager.getSpanCount();
+        int a2 = (DisplayMetrics.getwidthPixels(t60.b(this.mActivity)) - t60.a(this.mActivity, this.mLRDistance)) / 3;
+        this.itemWidth = a2;
+        int spanCount = a2 * this.mGridLayoutManager.getSpanCount();
         int itemCount = this.mPhotoAdapter.getItemCount() != 0 ? this.itemWidth * (((this.mPhotoAdapter.getItemCount() - 1) / this.mGridLayoutManager.getSpanCount()) + 1) : 0;
         ViewGroup.LayoutParams layoutParams = getLayoutParams();
         layoutParams.width = spanCount;
@@ -610,7 +603,7 @@ public class DMSortableNinePhotoLayout extends RecyclerView implements DMOnItemC
             DMDialog dMDialog = new DMDialog(this.mContext);
             dMDialog.v(getResources().getString(R$string.damai_delete_image));
             dMDialog.g(R$string.damai_no, null);
-            dMDialog.l(R$string.damai_yes, new DialogInterface$OnClickListenerC1307a(view, i));
+            dMDialog.l(R$string.damai_yes, new a(view, i));
             dMDialog.show();
         }
     }
@@ -622,9 +615,9 @@ public class DMSortableNinePhotoLayout extends RecyclerView implements DMOnItemC
             ipChange.ipc$dispatch("236998171", new Object[]{this, viewGroup, view, Integer.valueOf(i)});
         } else if (i > -1 && this.mPhotoAdapter.q(i)) {
             if (this.mPhotoAdapter.d().size() == 9) {
-                ToastUtil a = ToastUtil.a();
+                ToastUtil a2 = ToastUtil.a();
                 Context context = this.mContext;
-                a.e(context, context.getResources().getString(R$string.issue_add_image_limit));
+                a2.e(context, context.getResources().getString(R$string.issue_add_image_limit));
                 return;
             }
             OnNinePhotoClickListener onNinePhotoClickListener = this.mOnNinePhotoClickListener;
@@ -633,13 +626,13 @@ public class DMSortableNinePhotoLayout extends RecyclerView implements DMOnItemC
             }
         } else if (i > -1 && this.mPhotoAdapter.r(i)) {
             if (this.mPhotoAdapter.d().size() > 0 && "2".equals(this.mPhotoAdapter.d().get(0).getType())) {
-                ToastUtil a2 = ToastUtil.a();
-                Context context2 = this.mContext;
-                a2.e(context2, context2.getResources().getString(R$string.issue_add_video_limit));
-            } else if (this.mPhotoAdapter.d().size() == 9) {
                 ToastUtil a3 = ToastUtil.a();
+                Context context2 = this.mContext;
+                a3.e(context2, context2.getResources().getString(R$string.issue_add_video_limit));
+            } else if (this.mPhotoAdapter.d().size() == 9) {
+                ToastUtil a4 = ToastUtil.a();
                 Context context3 = this.mContext;
-                a3.e(context3, context3.getResources().getString(R$string.issue_add_video_limit_nine));
+                a4.e(context3, context3.getResources().getString(R$string.issue_add_video_limit_nine));
             } else {
                 this.mOnNinePhotoClickListener.onClickAddVideoItem(this, view, i, this.mPhotoAdapter.d());
             }

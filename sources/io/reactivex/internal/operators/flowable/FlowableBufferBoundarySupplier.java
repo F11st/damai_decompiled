@@ -1,7 +1,6 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
@@ -11,7 +10,7 @@ import io.reactivex.internal.subscribers.QueueDrainSubscriber;
 import io.reactivex.internal.subscriptions.EmptySubscription;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import io.reactivex.internal.util.QueueDrainHelper;
-import io.reactivex.subscribers.AbstractC8173b;
+import io.reactivex.subscribers.b;
 import java.util.Collection;
 import java.util.concurrent.Callable;
 import java.util.concurrent.atomic.AtomicReference;
@@ -31,7 +30,7 @@ public final class FlowableBufferBoundarySupplier<T, U extends Collection<? supe
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    public static final class BufferBoundarySubscriber<T, U extends Collection<? super T>, B> extends AbstractC8173b<B> {
+    public static final class BufferBoundarySubscriber<T, U extends Collection<? super T>, B> extends b<B> {
         boolean once;
         final BufferBoundarySupplierSubscriber<T, U, B> parent;
 
@@ -223,13 +222,13 @@ public final class FlowableBufferBoundarySupplier<T, U extends Collection<? supe
         }
     }
 
-    public FlowableBufferBoundarySupplier(AbstractC8147b<T> abstractC8147b, Callable<? extends Publisher<B>> callable, Callable<U> callable2) {
-        super(abstractC8147b);
+    public FlowableBufferBoundarySupplier(io.reactivex.b<T> bVar, Callable<? extends Publisher<B>> callable, Callable<U> callable2) {
+        super(bVar);
         this.boundarySupplier = callable;
         this.bufferSupplier = callable2;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super U> subscriber) {
         this.source.subscribe((FlowableSubscriber) new BufferBoundarySupplierSubscriber(new ua2(subscriber), this.bufferSupplier, this.boundarySupplier));
     }

@@ -22,7 +22,7 @@ import org.jetbrains.annotations.Nullable;
 public final class wo2 extends Handler {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C9874a Companion = new C9874a(null);
+    public static final a Companion = new a(null);
     @NotNull
     public static final String NO_SHOW_TEXT = "noShowText";
     @NotNull
@@ -35,13 +35,12 @@ public final class wo2 extends Handler {
     private int d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.wo2$a */
     /* loaded from: classes7.dex */
-    public static final class C9874a {
-        private C9874a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9874a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

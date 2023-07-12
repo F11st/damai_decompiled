@@ -50,13 +50,12 @@ public class TickletVenueExchangeSiteListAdapter extends RecyclerView.Adapter<Vi
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.adapter.TickletVenueExchangeSiteListAdapter$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2055a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
 
-        View$OnClickListenerC2055a(int i) {
+        a(int i) {
             this.a = i;
         }
 
@@ -72,13 +71,12 @@ public class TickletVenueExchangeSiteListAdapter extends RecyclerView.Adapter<Vi
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.adapter.TickletVenueExchangeSiteListAdapter$b */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2056b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ExchangeSiteInfo a;
 
-        View$OnClickListenerC2056b(ExchangeSiteInfo exchangeSiteInfo) {
+        b(ExchangeSiteInfo exchangeSiteInfo) {
             this.a = exchangeSiteInfo;
         }
 
@@ -96,13 +94,12 @@ public class TickletVenueExchangeSiteListAdapter extends RecyclerView.Adapter<Vi
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.adapter.TickletVenueExchangeSiteListAdapter$c */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2057c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ExchangeSiteInfo a;
 
-        View$OnClickListenerC2057c(ExchangeSiteInfo exchangeSiteInfo) {
+        c(ExchangeSiteInfo exchangeSiteInfo) {
             this.a = exchangeSiteInfo;
         }
 
@@ -144,7 +141,7 @@ public class TickletVenueExchangeSiteListAdapter extends RecyclerView.Adapter<Vi
             return;
         }
         viewHolder.itemView.setTag(Integer.valueOf(i));
-        viewHolder.itemView.setOnClickListener(new View$OnClickListenerC2055a(i));
+        viewHolder.itemView.setOnClickListener(new a(i));
         int i2 = this.b;
         if (i2 < 0 || i != i2) {
             viewHolder.a.setBackgroundColor(this.c.getResources().getColor(R$color.white));
@@ -177,8 +174,8 @@ public class TickletVenueExchangeSiteListAdapter extends RecyclerView.Adapter<Vi
         } else {
             viewHolder.j.setVisibility(8);
         }
-        viewHolder.f.setOnClickListener(new View$OnClickListenerC2056b(exchangeSiteInfo));
-        viewHolder.g.setOnClickListener(new View$OnClickListenerC2057c(exchangeSiteInfo));
+        viewHolder.f.setOnClickListener(new b(exchangeSiteInfo));
+        viewHolder.g.setOnClickListener(new c(exchangeSiteInfo));
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter

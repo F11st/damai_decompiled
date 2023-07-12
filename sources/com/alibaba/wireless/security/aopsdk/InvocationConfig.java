@@ -1,12 +1,12 @@
 package com.alibaba.wireless.security.aopsdk;
 
-import com.alibaba.wireless.security.aopsdk.e.f.RuleConfig;
+import com.alibaba.wireless.security.aopsdk.e.f.e;
 
 /* loaded from: classes.dex */
 public class InvocationConfig {
-    private RuleConfig a;
+    private e a;
     public int matchedAction;
-    public RuleConfig matchedRule;
+    public e matchedRule;
     public int matchedStrategyId;
     public Object newReturnValue;
     public Throwable newThrowable;
@@ -17,7 +17,7 @@ public class InvocationConfig {
     public boolean shouldChangeReturnValue;
     public boolean shouldIntercept;
 
-    public RuleConfig getCacheRule() {
+    public e getCacheRule() {
         return this.a;
     }
 
@@ -25,7 +25,7 @@ public class InvocationConfig {
         return this.matchedRule.m;
     }
 
-    public void setCacheRule(RuleConfig ruleConfig) {
-        this.a = ruleConfig;
+    public void setCacheRule(e eVar) {
+        this.a = eVar;
     }
 }

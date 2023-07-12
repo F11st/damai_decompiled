@@ -38,9 +38,8 @@ public final class PopLayerConsole extends StandOutWindow {
     private ViewPager l;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayerconsole.PopLayerConsole$a */
     /* loaded from: classes8.dex */
-    private static class C3704a extends PagerAdapter {
+    private static class a extends PagerAdapter {
         private List<ILogView> a;
 
         @Override // androidx.viewpager.widget.PagerAdapter
@@ -69,7 +68,7 @@ public final class PopLayerConsole extends StandOutWindow {
             return view == obj;
         }
 
-        private C3704a(List<ILogView> list) {
+        private a(List<ILogView> list) {
             this.a = list;
         }
     }
@@ -131,50 +130,50 @@ public final class PopLayerConsole extends StandOutWindow {
         this.k.add(new PopLayerConsoleLogView(frameLayout.getContext()));
         this.k.add(new PopLayerToolsView(frameLayout.getContext()));
         this.k.add(new GeekView(frameLayout.getContext()));
-        this.l.setAdapter(new C3704a(this.k));
+        this.l.setAdapter(new a(this.k));
         this.l.setCurrentItem(0);
     }
 
     @Override // com.alibaba.poplayerconsole.lib.StandOutWindow
-    public List<StandOutWindow.C3712d> j(final int i) {
+    public List<StandOutWindow.d> j(final int i) {
         ArrayList arrayList = new ArrayList();
-        arrayList.add(new StandOutWindow.C3712d(this, 17301568, "Status:page", new Runnable() { // from class: com.alibaba.poplayerconsole.PopLayerConsole.2
+        arrayList.add(new StandOutWindow.d(this, 17301568, "Status:page", new Runnable() { // from class: com.alibaba.poplayerconsole.PopLayerConsole.2
             @Override // java.lang.Runnable
             public void run() {
                 PopLayerConsole.this.O(2);
             }
         }));
-        arrayList.add(new StandOutWindow.C3712d(this, 17301568, "Status:app", new Runnable() { // from class: com.alibaba.poplayerconsole.PopLayerConsole.3
+        arrayList.add(new StandOutWindow.d(this, 17301568, "Status:app", new Runnable() { // from class: com.alibaba.poplayerconsole.PopLayerConsole.3
             @Override // java.lang.Runnable
             public void run() {
                 PopLayerConsole.this.O(1);
             }
         }));
-        arrayList.add(new StandOutWindow.C3712d(this, 17301568, "Status:view", new Runnable() { // from class: com.alibaba.poplayerconsole.PopLayerConsole.4
+        arrayList.add(new StandOutWindow.d(this, 17301568, "Status:view", new Runnable() { // from class: com.alibaba.poplayerconsole.PopLayerConsole.4
             @Override // java.lang.Runnable
             public void run() {
                 PopLayerConsole.this.O(3);
             }
         }));
-        arrayList.add(new StandOutWindow.C3712d(this, 17301661, "Console", new Runnable() { // from class: com.alibaba.poplayerconsole.PopLayerConsole.5
+        arrayList.add(new StandOutWindow.d(this, 17301661, "Console", new Runnable() { // from class: com.alibaba.poplayerconsole.PopLayerConsole.5
             @Override // java.lang.Runnable
             public void run() {
                 PopLayerConsole.this.N("Console");
             }
         }));
-        arrayList.add(new StandOutWindow.C3712d(this, 17301661, "PopLayer log", new Runnable() { // from class: com.alibaba.poplayerconsole.PopLayerConsole.6
+        arrayList.add(new StandOutWindow.d(this, 17301661, "PopLayer log", new Runnable() { // from class: com.alibaba.poplayerconsole.PopLayerConsole.6
             @Override // java.lang.Runnable
             public void run() {
                 PopLayerConsole.this.N("PopLayer");
             }
         }));
-        arrayList.add(new StandOutWindow.C3712d(this, 17301661, "windvane", new Runnable() { // from class: com.alibaba.poplayerconsole.PopLayerConsole.7
+        arrayList.add(new StandOutWindow.d(this, 17301661, "windvane", new Runnable() { // from class: com.alibaba.poplayerconsole.PopLayerConsole.7
             @Override // java.lang.Runnable
             public void run() {
                 PopLayerConsole.this.N("WindVane");
             }
         }));
-        arrayList.add(new StandOutWindow.C3712d(this, 17301591, "Tracking log", new Runnable() { // from class: com.alibaba.poplayerconsole.PopLayerConsole.8
+        arrayList.add(new StandOutWindow.d(this, 17301591, "Tracking log", new Runnable() { // from class: com.alibaba.poplayerconsole.PopLayerConsole.8
             @Override // java.lang.Runnable
             public void run() {
                 if (PopLayerConsole.this.k.get(PopLayerConsole.this.l.getCurrentItem()) instanceof PopLayerToolsView) {
@@ -188,7 +187,7 @@ public final class PopLayerConsole extends StandOutWindow {
                 }
             }
         }));
-        arrayList.add(new StandOutWindow.C3712d(this, 17301564, "Clear all console", new Runnable() { // from class: com.alibaba.poplayerconsole.PopLayerConsole.9
+        arrayList.add(new StandOutWindow.d(this, 17301564, "Clear all console", new Runnable() { // from class: com.alibaba.poplayerconsole.PopLayerConsole.9
             @Override // java.lang.Runnable
             public void run() {
                 if (PopLayerConsole.this.r(i) == null) {

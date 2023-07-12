@@ -8,10 +8,10 @@ import android.location.Location;
 import android.os.RemoteException;
 import android.view.MotionEvent;
 import android.view.View;
-import com.amap.api.mapcore.util.C4505de;
-import com.amap.api.mapcore.util.C4645x;
 import com.amap.api.mapcore.util.dd;
+import com.amap.api.mapcore.util.de;
 import com.amap.api.mapcore.util.jp;
+import com.amap.api.mapcore.util.x;
 import com.amap.api.maps.AMap;
 import com.amap.api.maps.model.BitmapDescriptor;
 import com.amap.api.maps.model.CameraPosition;
@@ -42,7 +42,7 @@ public interface IAMapDelegate extends IAMap {
 
     void addOverlayTexture(int i, GLTextureProperty gLTextureProperty);
 
-    void addTextureItem(C4645x c4645x);
+    void addTextureItem(x xVar);
 
     void animateCamera(AbstractCameraUpdateMessage abstractCameraUpdateMessage) throws RemoteException;
 
@@ -96,7 +96,7 @@ public interface IAMapDelegate extends IAMap {
 
     dd getGLShader(int i);
 
-    C4505de getGLShaderManager();
+    de getGLShaderManager();
 
     void getGeoCenter(int i, IPoint iPoint);
 
@@ -138,9 +138,9 @@ public interface IAMapDelegate extends IAMap {
 
     Rect getRect();
 
-    C4645x getTextureItem(BitmapDescriptor bitmapDescriptor);
+    x getTextureItem(BitmapDescriptor bitmapDescriptor);
 
-    C4645x getTextureItem(BitmapDescriptor bitmapDescriptor, boolean z);
+    x getTextureItem(BitmapDescriptor bitmapDescriptor, boolean z);
 
     IUiSettingsDelegate getUiSettings();
 

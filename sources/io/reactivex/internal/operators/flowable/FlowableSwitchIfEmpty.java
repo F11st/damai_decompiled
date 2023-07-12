@@ -1,7 +1,7 @@
 package io.reactivex.internal.operators.flowable;
 
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.internal.subscriptions.SubscriptionArbiter;
 import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;
@@ -54,12 +54,12 @@ public final class FlowableSwitchIfEmpty<T> extends AbstractFlowableWithUpstream
         }
     }
 
-    public FlowableSwitchIfEmpty(AbstractC8147b<T> abstractC8147b, Publisher<? extends T> publisher) {
-        super(abstractC8147b);
+    public FlowableSwitchIfEmpty(b<T> bVar, Publisher<? extends T> publisher) {
+        super(bVar);
         this.other = publisher;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         SwitchIfEmptySubscriber switchIfEmptySubscriber = new SwitchIfEmptySubscriber(subscriber, this.other);
         subscriber.onSubscribe(switchIfEmptySubscriber.arbiter);

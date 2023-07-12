@@ -3,7 +3,6 @@ package kotlinx.coroutines.flow.internal;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.CoroutineContext;
 import kotlin.coroutines.EmptyCoroutineContext;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.jvm.functions.Function3;
 import kotlinx.coroutines.channels.BufferOverflow;
 import kotlinx.coroutines.flow.Flow;
@@ -39,7 +38,7 @@ public final class ChannelFlowTransformLatest<T, R> extends ChannelFlowOperator<
         Object d;
         if (!k40.a() || id.a(flowCollector instanceof la2).booleanValue()) {
             Object a = nk0.a(new ChannelFlowTransformLatest$flowCollect$3(this, flowCollector, null), continuation);
-            d = C8234b.d();
+            d = kotlin.coroutines.intrinsics.b.d();
             return a == d ? a : wt2.INSTANCE;
         }
         throw new AssertionError();

@@ -1,7 +1,6 @@
 package tb;
 
 import android.text.TextUtils;
-import com.taobao.android.sopatch.download.C6634a;
 import com.taobao.android.sopatch.download.FileDownloader;
 import java.io.Closeable;
 import java.io.File;
@@ -23,7 +22,7 @@ public class qe2 {
     public static void b(pe2 pe2Var, FileDownloader.Callback callback) {
         File e = oi0.e(pe2Var);
         if (e != null) {
-            new C6634a().download(pe2Var.g(), e, callback);
+            new com.taobao.android.sopatch.download.a().download(pe2Var.g(), e, callback);
         } else {
             callback.onFail();
         }

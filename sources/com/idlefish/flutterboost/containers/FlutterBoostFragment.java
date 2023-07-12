@@ -33,7 +33,7 @@ public class FlutterBoostFragment extends FlutterFragment implements FlutterView
     private PlatformPlugin platformPlugin;
     private LifecycleStage stage;
     private final String who = UUID.randomUUID().toString();
-    private final C5780a textureHooker = new C5780a();
+    private final a textureHooker = new a();
     private boolean isAttached = false;
     private boolean isFinishing = false;
 

@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.trade.R$color;
 import cn.damai.trade.R$id;
@@ -35,12 +34,11 @@ public class OrderDetailTicketViewHolder extends RecyclerView.ViewHolder {
     private Context c;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailTicketViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2223a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2223a(OrderDetailTicketViewHolder orderDetailTicketViewHolder) {
+        a(OrderDetailTicketViewHolder orderDetailTicketViewHolder) {
         }
 
         @Override // android.view.View.OnClickListener
@@ -58,23 +56,22 @@ public class OrderDetailTicketViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailTicketViewHolder$b */
     /* loaded from: classes8.dex */
-    public class C2224b implements DMImageCreator.DMImageFailListener {
+    public class b implements DMImageCreator.DMImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DMIconFontTextView a;
         final /* synthetic */ ImageView b;
 
-        C2224b(OrderDetailTicketViewHolder orderDetailTicketViewHolder, DMIconFontTextView dMIconFontTextView, ImageView imageView) {
+        b(OrderDetailTicketViewHolder orderDetailTicketViewHolder, DMIconFontTextView dMIconFontTextView, ImageView imageView) {
             this.a = dMIconFontTextView;
             this.b = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-        public void onFail(DMImageCreator.C0501d c0501d) {
+        public void onFail(DMImageCreator.d dVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1910742983")) {
-                ipChange.ipc$dispatch("1910742983", new Object[]{this, c0501d});
+                ipChange.ipc$dispatch("1910742983", new Object[]{this, dVar});
                 return;
             }
             this.a.setVisibility(0);
@@ -83,27 +80,26 @@ public class OrderDetailTicketViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailTicketViewHolder$c */
     /* loaded from: classes8.dex */
-    public class C2225c implements DMImageCreator.DMImageSuccListener {
+    public class c implements DMImageCreator.DMImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ DMIconFontTextView a;
         final /* synthetic */ ImageView b;
 
-        C2225c(OrderDetailTicketViewHolder orderDetailTicketViewHolder, DMIconFontTextView dMIconFontTextView, ImageView imageView) {
+        c(OrderDetailTicketViewHolder orderDetailTicketViewHolder, DMIconFontTextView dMIconFontTextView, ImageView imageView) {
             this.a = dMIconFontTextView;
             this.b = imageView;
         }
 
         @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-        public void onSuccess(DMImageCreator.C0502e c0502e) {
+        public void onSuccess(DMImageCreator.e eVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1770807324")) {
-                ipChange.ipc$dispatch("1770807324", new Object[]{this, c0502e});
-            } else if (c0502e != null && c0502e.a != null) {
+                ipChange.ipc$dispatch("1770807324", new Object[]{this, eVar});
+            } else if (eVar != null && eVar.a != null) {
                 this.a.setVisibility(8);
                 this.b.setVisibility(0);
-                this.b.setImageDrawable(c0502e.a);
+                this.b.setImageDrawable(eVar.a);
             } else {
                 this.a.setVisibility(0);
                 this.b.setVisibility(8);
@@ -119,7 +115,7 @@ public class OrderDetailTicketViewHolder extends RecyclerView.ViewHolder {
         FlowLayout flowLayout = (FlowLayout) this.itemView.findViewById(R$id.fl_ticket_service);
         this.a = flowLayout;
         flowLayout.setSingleLine(true);
-        this.itemView.setOnClickListener(new View$OnClickListenerC2223a(this));
+        this.itemView.setOnClickListener(new a(this));
     }
 
     private View a(OrderDetailTicketServiceTitle orderDetailTicketServiceTitle) {
@@ -142,7 +138,7 @@ public class OrderDetailTicketViewHolder extends RecyclerView.ViewHolder {
         } catch (Exception unused) {
             textView.setTextColor(ContextCompat.getColor(this.c, R$color.color_666666));
         }
-        C0504a.b().c(orderDetailTicketServiceTitle.icon).n(new C2225c(this, dMIconFontTextView, imageView)).e(new C2224b(this, dMIconFontTextView, imageView)).f();
+        cn.damai.common.image.a.b().c(orderDetailTicketServiceTitle.icon).n(new c(this, dMIconFontTextView, imageView)).e(new b(this, dMIconFontTextView, imageView)).f();
         return inflate;
     }
 
@@ -159,9 +155,9 @@ public class OrderDetailTicketViewHolder extends RecyclerView.ViewHolder {
         this.a.removeAllViews();
         this.itemView.setTag(list);
         for (int i = 0; i < e; i++) {
-            View a = a(list.get(i).title);
-            if (a != null) {
-                this.a.addView(a);
+            View a2 = a(list.get(i).title);
+            if (a2 != null) {
+                this.a.addView(a2);
             }
         }
     }

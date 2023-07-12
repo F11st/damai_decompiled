@@ -3,7 +3,6 @@ package com.xiaomi.mipush.sdk;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.bp;
 import com.xiaomi.push.ho;
 import com.xiaomi.push.ii;
@@ -32,7 +31,7 @@ public class av {
     }
 
     public static void a(Context context, ii iiVar) {
-        AbstractC7535b.m586a("need to update local info with: " + iiVar.m1038a());
+        com.xiaomi.channel.commonutils.logger.b.m586a("need to update local info with: " + iiVar.m1038a());
         String str = iiVar.m1038a().get(Constants.EXTRA_KEY_ACCEPT_TIME);
         if (str != null) {
             MiPushClient.removeAcceptTime(context);
@@ -40,9 +39,9 @@ public class av {
             if (split.length == 2) {
                 MiPushClient.addAcceptTime(context, split[0], split[1]);
                 if ("00:00".equals(split[0]) && "00:00".equals(split[1])) {
-                    C7564b.m629a(context).a(true);
+                    b.m629a(context).a(true);
                 } else {
-                    C7564b.m629a(context).a(false);
+                    b.m629a(context).a(false);
                 }
             }
         }

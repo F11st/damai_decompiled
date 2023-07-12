@@ -1,7 +1,6 @@
 package tb;
 
 import android.text.TextUtils;
-import cn.damai.common.util.C0535a;
 import cn.damai.common.util.ToastUtil;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -17,7 +16,7 @@ public class qx0 {
             return (String) ipChange.ipc$dispatch("1856857007", new Object[0]);
         }
         try {
-            return C0535a.n(mu0.a().getAssets().open("home_appglobalconfig_mock_lottie_template.json"));
+            return cn.damai.common.util.a.n(mu0.a().getAssets().open("home_appglobalconfig_mock_lottie_template.json"));
         } catch (Exception e) {
             e.printStackTrace();
             return null;

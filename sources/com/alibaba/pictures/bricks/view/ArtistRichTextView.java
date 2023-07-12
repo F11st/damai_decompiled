@@ -14,7 +14,7 @@ import com.android.alibaba.ip.runtime.IpChange;
 import com.taobao.weex.ui.component.list.template.TemplateDom;
 import io.flutter.wpkbridge.WPKFactory;
 import java.util.List;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -28,9 +28,8 @@ public final class ArtistRichTextView extends LinearLayout {
     private final Context mContext;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.view.ArtistRichTextView$a */
     /* loaded from: classes7.dex */
-    public /* synthetic */ class C3562a {
+    public /* synthetic */ class a {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -95,12 +94,12 @@ public final class ArtistRichTextView extends LinearLayout {
         for (Object obj : list) {
             int i2 = i + 1;
             if (i < 0) {
-                C8214m.p();
+                m.p();
             }
             BaseArtistDataMo baseArtistDataMo = (BaseArtistDataMo) obj;
             if (baseArtistDataMo != null) {
                 BaseArtistDataMo.ValueType valueType = baseArtistDataMo.valueType;
-                int i3 = valueType == null ? -1 : C3562a.$EnumSwitchMapping$0[valueType.ordinal()];
+                int i3 = valueType == null ? -1 : a.$EnumSwitchMapping$0[valueType.ordinal()];
                 if (i3 != 1 && i3 != 2) {
                     String str = baseArtistDataMo.value;
                     b41.h(str, "data.value");

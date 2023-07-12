@@ -1,6 +1,6 @@
 package com.ali.user.mobile.rpc.safe;
 
-import com.alibaba.security.realidentity.a.AbstractC3840a;
+import com.alibaba.security.realidentity.a.a;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.security.KeyFactory;
@@ -85,7 +85,7 @@ public class Rsa {
             try {
                 keyFactory = KeyFactory.getInstance(str);
             } catch (Throwable unused) {
-                keyFactory = KeyFactory.getInstance(str, AbstractC3840a.V);
+                keyFactory = KeyFactory.getInstance(str, a.V);
             }
         } catch (Throwable unused2) {
             keyFactory = KeyFactory.getInstance(str);

@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.commonbusiness.discover.viewholder.NoteViewHolder;
 import cn.damai.commonbusiness.discover.viewholder.OnItemClickListener;
 import cn.damai.commonbusiness.search.Daojishi;
@@ -70,7 +70,7 @@ public class SearchAdapterV2 extends RecyclerView.Adapter<RecyclerView.ViewHolde
     private DataListener k;
     private int l;
     public Daojishi g = new Daojishi(true);
-    private OnItemClickListener<NoteBean> m = new C1610b();
+    private OnItemClickListener<NoteBean> m = new b();
 
     /* compiled from: Taobao */
     /* loaded from: classes15.dex */
@@ -79,12 +79,11 @@ public class SearchAdapterV2 extends RecyclerView.Adapter<RecyclerView.ViewHolde
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.adapter.SearchAdapterV2$a */
     /* loaded from: classes6.dex */
-    public class C1609a implements SearchTipViewHolder.OnLoadMoreClick {
+    public class a implements SearchTipViewHolder.OnLoadMoreClick {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1609a() {
+        a() {
         }
 
         @Override // cn.damai.search.ui.viewholder.SearchTipViewHolder.OnLoadMoreClick
@@ -99,12 +98,11 @@ public class SearchAdapterV2 extends RecyclerView.Adapter<RecyclerView.ViewHolde
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.ui.adapter.SearchAdapterV2$b */
     /* loaded from: classes6.dex */
-    public class C1610b implements OnItemClickListener<NoteBean> {
+    public class b implements OnItemClickListener<NoteBean> {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1610b() {
+        b() {
         }
 
         @Override // cn.damai.commonbusiness.discover.viewholder.OnItemClickListener
@@ -124,7 +122,7 @@ public class SearchAdapterV2 extends RecyclerView.Adapter<RecyclerView.ViewHolde
                 ipChange.ipc$dispatch("-1763484161", new Object[]{this, noteBean, Integer.valueOf(i)});
                 return;
             }
-            C0529c.e().x(b82.C().u(SearchAdapterV2.this.i, "", noteBean.id, SearchAdapterV2.this.j, i - SearchAdapterV2.this.e(18), ""));
+            c.e().x(b82.C().u(SearchAdapterV2.this.i, "", noteBean.id, SearchAdapterV2.this.j, i - SearchAdapterV2.this.e(18), ""));
             Bundle bundle = new Bundle();
             bundle.putString("contentId", noteBean.id);
             bundle.putFloat("picWhRatio", noteBean.localPicWhRatio);
@@ -179,11 +177,11 @@ public class SearchAdapterV2 extends RecyclerView.Adapter<RecyclerView.ViewHolde
                 hashMap.put("alg", projectItemBean.alg);
             }
             if (!z) {
-                C0529c e = C0529c.e();
+                c e = c.e();
                 e.G(view, "item_" + i, "list", "search", hashMap);
                 return;
             }
-            C0529c e2 = C0529c.e();
+            c e2 = c.e();
             e2.G(view, "item_" + i, "keywordother", "search", hashMap);
         }
     }
@@ -434,7 +432,7 @@ public class SearchAdapterV2 extends RecyclerView.Adapter<RecyclerView.ViewHolde
                 }
                 return flowerViewHolder;
             case 4:
-                return new SearchTipViewHolder(this.b, from, new C1609a());
+                return new SearchTipViewHolder(this.b, from, new a());
             case 5:
                 return new SearchEmptyViewHolder(from);
             case 6:

@@ -81,6 +81,6 @@ public class YearGridAdapter extends RecyclerView.Adapter<ViewHolder> {
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     @NonNull
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return new ViewHolder((TextView) LayoutInflater.from(viewGroup.getContext()).inflate(R.C4818layout.mtrl_calendar_year, viewGroup, false));
+        return new ViewHolder((TextView) LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.mtrl_calendar_year, viewGroup, false));
     }
 }

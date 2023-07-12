@@ -12,11 +12,10 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import cn.damai.baseview.CustomDialog;
 import cn.damai.common.askpermission.OnGrantListener;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.net.mtop.netfit.DMBaseMtopRequest;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
 import cn.damai.common.uploader.AusResult;
-import cn.damai.common.user.C0525a;
+import cn.damai.common.user.a;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.homepage.R$color;
@@ -123,18 +122,17 @@ public class ModifyAvatarActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.ModifyAvatarActivity$a */
     /* loaded from: classes9.dex */
-    public class C2660a implements CustomDialog.OnDialogClickListener {
+    public class a implements CustomDialog.OnDialogClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.user.ModifyAvatarActivity$a$a */
+        /* renamed from: cn.damai.user.ModifyAvatarActivity$a$a  reason: collision with other inner class name */
         /* loaded from: classes9.dex */
-        public class C2661a implements OnGrantListener {
+        public class C0092a implements OnGrantListener {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C2661a() {
+            C0092a() {
             }
 
             @Override // cn.damai.common.askpermission.OnGrantListener
@@ -148,7 +146,7 @@ public class ModifyAvatarActivity extends DamaiBaseActivity {
             }
         }
 
-        C2660a() {
+        a() {
         }
 
         @Override // cn.damai.baseview.CustomDialog.OnDialogClickListener
@@ -159,7 +157,7 @@ public class ModifyAvatarActivity extends DamaiBaseActivity {
                 return;
             }
             ModifyAvatarActivity modifyAvatarActivity = ModifyAvatarActivity.this;
-            ir1.b(modifyAvatarActivity, false, mr1.STORAGE, modifyAvatarActivity.getPermissionPostFix(), new C2661a());
+            ir1.b(modifyAvatarActivity, false, mr1.STORAGE, modifyAvatarActivity.getPermissionPostFix(), new C0092a());
         }
 
         @Override // cn.damai.baseview.CustomDialog.OnDialogClickListener
@@ -182,13 +180,12 @@ public class ModifyAvatarActivity extends DamaiBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.ModifyAvatarActivity$b */
     /* loaded from: classes9.dex */
-    public class C2662b extends q50 {
+    public class b extends q50 {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ String a;
 
-        C2662b(String str) {
+        b(String str) {
             this.a = str;
         }
 
@@ -220,7 +217,7 @@ public class ModifyAvatarActivity extends DamaiBaseActivity {
                 AusResult ausResult = (AusResult) ko.e().parseJson(uu2Var.d().getBizResult(), (Class<Object>) AusResult.class);
                 if (ausResult != null) {
                     ModifyAvatarActivity.this.uploadByMtop(ausResult.ossBucketName, ausResult.ossObjectKey);
-                    C0504a.b().c(ls.a(this.a)).g(ModifyAvatarActivity.this.img);
+                    cn.damai.common.image.a.b().c(ls.a(this.a)).g(ModifyAvatarActivity.this.img);
                     return;
                 }
                 a(uu2Var);
@@ -299,7 +296,7 @@ public class ModifyAvatarActivity extends DamaiBaseActivity {
         }
         CustomDialog customDialog = new CustomDialog(this, R$style.custom_dialog_style_nobg);
         this.dialog = customDialog;
-        customDialog.e(new C2660a());
+        customDialog.e(new a());
         this.dialog.show();
         this.dialog.setCanceledOnTouchOutside(false);
     }
@@ -354,15 +351,15 @@ public class ModifyAvatarActivity extends DamaiBaseActivity {
             return;
         }
         ArrayList arrayList = new ArrayList();
-        C2662b c2662b = new C2662b(str);
+        b bVar = new b(str);
         arrayList.add(str);
         if (TextUtils.isEmpty(this.from)) {
             return;
         }
         if (this.from.equals(FROM_MODIFY_BIG_IMG)) {
-            FileUploader.q("damai_bgimg_oss").C(c2662b).D(str);
+            FileUploader.q("damai_bgimg_oss").C(bVar).D(str);
         } else if (this.from.equals(FROM_MODIFY_USERR_HEAD)) {
-            FileUploader.q("perico_oss").C(c2662b).D(str);
+            FileUploader.q("perico_oss").C(bVar).D(str);
         }
     }
 
@@ -414,7 +411,7 @@ public class ModifyAvatarActivity extends DamaiBaseActivity {
         }
         this.imggallery = getIntent().getBooleanExtra("imggallery", false);
         if (!wh2.j(this.imgurl)) {
-            C0504a.b().c(this.imgurl).g(this.img);
+            cn.damai.common.image.a.b().c(this.imgurl).g(this.img);
         }
         this.corpType = getIntent().getIntExtra(IMG_CORP_TYPE, 0);
         int c = yr2.c(this, DisplayMetrics.getheightPixels(t60.b(this)) / 2, 0, 375, 375);
@@ -506,7 +503,7 @@ public class ModifyAvatarActivity extends DamaiBaseActivity {
         if (booleanExtra) {
             return;
         }
-        setDamaiUTKeyBuilder(new C0525a.C0527b().i("img_edit"));
+        setDamaiUTKeyBuilder(new a.b().i("img_edit"));
     }
 
     @Override // cn.damai.commonbusiness.base.DamaiBaseActivity

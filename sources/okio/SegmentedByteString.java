@@ -16,31 +16,31 @@ public final class SegmentedByteString extends ByteString {
     /* JADX INFO: Access modifiers changed from: package-private */
     public SegmentedByteString(Buffer buffer, int i) {
         super(null);
-        C8859p.b(buffer.size, 0L, i);
-        C8855m c8855m = buffer.head;
+        p.b(buffer.size, 0L, i);
+        m mVar = buffer.head;
         int i2 = 0;
         int i3 = 0;
         int i4 = 0;
         while (i3 < i) {
-            int i5 = c8855m.c;
-            int i6 = c8855m.b;
+            int i5 = mVar.c;
+            int i6 = mVar.b;
             if (i5 != i6) {
                 i3 += i5 - i6;
                 i4++;
-                c8855m = c8855m.f;
+                mVar = mVar.f;
             } else {
                 throw new AssertionError("s.limit == s.pos");
             }
         }
         this.segments = new byte[i4];
         this.directory = new int[i4 * 2];
-        C8855m c8855m2 = buffer.head;
+        m mVar2 = buffer.head;
         int i7 = 0;
         while (i2 < i) {
             byte[][] bArr = this.segments;
-            bArr[i7] = c8855m2.a;
-            int i8 = c8855m2.c;
-            int i9 = c8855m2.b;
+            bArr[i7] = mVar2.a;
+            int i8 = mVar2.c;
+            int i9 = mVar2.b;
             i2 += i8 - i9;
             if (i2 > i) {
                 i2 = i;
@@ -48,9 +48,9 @@ public final class SegmentedByteString extends ByteString {
             int[] iArr = this.directory;
             iArr[i7] = i2;
             iArr[bArr.length + i7] = i9;
-            c8855m2.d = true;
+            mVar2.d = true;
             i7++;
-            c8855m2 = c8855m2.f;
+            mVar2 = mVar2.f;
         }
     }
 
@@ -98,7 +98,7 @@ public final class SegmentedByteString extends ByteString {
 
     @Override // okio.ByteString
     public byte getByte(int i) {
-        C8859p.b(this.directory[this.segments.length - 1], i, 1L);
+        p.b(this.directory[this.segments.length - 1], i, 1L);
         int segment = segment(i);
         int i2 = segment == 0 ? 0 : this.directory[segment - 1];
         int[] iArr = this.directory;
@@ -289,14 +289,14 @@ public final class SegmentedByteString extends ByteString {
             int[] iArr = this.directory;
             int i3 = iArr[length + i];
             int i4 = iArr[i];
-            C8855m c8855m = new C8855m(this.segments[i], i3, (i3 + i4) - i2, true, false);
-            C8855m c8855m2 = buffer.head;
-            if (c8855m2 == null) {
-                c8855m.g = c8855m;
-                c8855m.f = c8855m;
-                buffer.head = c8855m;
+            m mVar = new m(this.segments[i], i3, (i3 + i4) - i2, true, false);
+            m mVar2 = buffer.head;
+            if (mVar2 == null) {
+                mVar.g = mVar;
+                mVar.f = mVar;
+                buffer.head = mVar;
             } else {
-                c8855m2.g.c(c8855m);
+                mVar2.g.c(mVar);
             }
             i++;
             i2 = i4;
@@ -315,7 +315,7 @@ public final class SegmentedByteString extends ByteString {
             int min = Math.min(i3, ((this.directory[segment] - i4) + i4) - i);
             int[] iArr = this.directory;
             byte[][] bArr2 = this.segments;
-            if (!C8859p.a(bArr2[segment], (i - i4) + iArr[bArr2.length + segment], bArr, i2, min)) {
+            if (!p.a(bArr2[segment], (i - i4) + iArr[bArr2.length + segment], bArr, i2, min)) {
                 return false;
             }
             i += min;

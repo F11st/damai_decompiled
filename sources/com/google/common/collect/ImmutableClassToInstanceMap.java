@@ -14,15 +14,14 @@ import tb.lu1;
 @Immutable(containerOf = {"B"})
 @GwtIncompatible
 /* loaded from: classes10.dex */
-public final class ImmutableClassToInstanceMap<B> extends AbstractC5202q<Class<? extends B>, B> implements ClassToInstanceMap<B>, Serializable {
+public final class ImmutableClassToInstanceMap<B> extends q<Class<? extends B>, B> implements ClassToInstanceMap<B>, Serializable {
     private static final ImmutableClassToInstanceMap<Object> EMPTY = new ImmutableClassToInstanceMap<>(ImmutableMap.of());
     private final ImmutableMap<Class<? extends B>, B> delegate;
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.collect.ImmutableClassToInstanceMap$b */
     /* loaded from: classes10.dex */
-    public static final class C4966b<B> {
-        private final ImmutableMap.C4977b<Class<? extends B>, B> a = ImmutableMap.builder();
+    public static final class b<B> {
+        private final ImmutableMap.b<Class<? extends B>, B> a = ImmutableMap.builder();
 
         private static <B, T extends B> T b(Class<T> cls, B b) {
             return (T) lu1.d(cls).cast(b);
@@ -38,7 +37,7 @@ public final class ImmutableClassToInstanceMap<B> extends AbstractC5202q<Class<?
 
         /* JADX WARN: Multi-variable type inference failed */
         @CanIgnoreReturnValue
-        public <T extends B> C4966b<B> c(Map<? extends Class<? extends T>, ? extends T> map) {
+        public <T extends B> b<B> c(Map<? extends Class<? extends T>, ? extends T> map) {
             for (Map.Entry<? extends Class<? extends T>, ? extends T> entry : map.entrySet()) {
                 Class<? extends T> key = entry.getKey();
                 this.a.c(key, b(key, entry.getValue()));
@@ -47,15 +46,15 @@ public final class ImmutableClassToInstanceMap<B> extends AbstractC5202q<Class<?
         }
     }
 
-    public static <B> C4966b<B> builder() {
-        return new C4966b<>();
+    public static <B> b<B> builder() {
+        return new b<>();
     }
 
     public static <B, S extends B> ImmutableClassToInstanceMap<B> copyOf(Map<? extends Class<? extends S>, ? extends S> map) {
         if (map instanceof ImmutableClassToInstanceMap) {
             return (ImmutableClassToInstanceMap) map;
         }
-        return new C4966b().c(map).a();
+        return new b().c(map).a();
     }
 
     public static <B> ImmutableClassToInstanceMap<B> of() {
@@ -89,7 +88,7 @@ public final class ImmutableClassToInstanceMap<B> extends AbstractC5202q<Class<?
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.google.common.collect.AbstractC5202q, com.google.common.collect.AbstractC5205t
+    @Override // com.google.common.collect.q, com.google.common.collect.t
     public Map<Class<? extends B>, B> delegate() {
         return this.delegate;
     }

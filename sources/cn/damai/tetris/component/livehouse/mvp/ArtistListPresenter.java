@@ -13,9 +13,9 @@ import cn.damai.user.userprofile.FeedsViewModel;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
-import tb.C9548pb;
 import tb.cs;
 import tb.ja;
+import tb.pb;
 import tb.z20;
 
 /* compiled from: Taobao */
@@ -119,8 +119,8 @@ public class ArtistListPresenter extends BasePresenter<ArtistListModel, ArtistLi
         if (Integer.parseInt(str4) == 1) {
             hashMap.put("item_id", str);
         } else {
-            hashMap.put(C9548pb.PRE_CONTENT_ID, str);
-            hashMap.put(C9548pb.PRE_CONTENT_TYPE, "note");
+            hashMap.put(pb.PRE_CONTENT_ID, str);
+            hashMap.put(pb.PRE_CONTENT_TYPE, "note");
         }
         hashMap.put("artist_id", str3);
         userTrackExpose(view, "item_" + i, hashMap, false);

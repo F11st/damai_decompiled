@@ -16,9 +16,9 @@ final class CallbackFlowBuilder$collectTo$1 extends ContinuationImpl {
     Object L$1;
     int label;
     /* synthetic */ Object result;
-    final /* synthetic */ C8670a this$0;
+    final /* synthetic */ a this$0;
 
-    CallbackFlowBuilder$collectTo$1(C8670a c8670a, Continuation continuation) {
+    CallbackFlowBuilder$collectTo$1(a aVar, Continuation continuation) {
         super(continuation);
     }
 

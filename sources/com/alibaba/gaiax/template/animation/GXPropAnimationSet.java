@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.text.C8604o;
+import kotlin.text.o;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.b41;
@@ -31,7 +31,7 @@ import tb.zp0;
 /* loaded from: classes6.dex */
 public final class GXPropAnimationSet implements GXIPropAnimation {
     @NotNull
-    public static final C3407a Companion = new C3407a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private GXPropOrderingType a = GXPropOrderingType.TOGETHER;
     @NotNull
@@ -52,7 +52,7 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
         COSINE;
         
         @NotNull
-        public static final C3401a Companion = new C3401a(null);
+        public static final a Companion = new a(null);
         @NotNull
         private static final String KEY_ACCELERATE = "ACCELERATE";
         @NotNull
@@ -73,13 +73,12 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
         private static final String KEY_STANDARD = "STANDARD";
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.template.animation.GXPropAnimationSet$GXPropInterpolator$a */
         /* loaded from: classes6.dex */
-        public static final class C3401a {
-            private C3401a() {
+        public static final class a {
+            private a() {
             }
 
-            public /* synthetic */ C3401a(k50 k50Var) {
+            public /* synthetic */ a(k50 k50Var) {
                 this();
             }
 
@@ -95,39 +94,39 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
                 boolean q8;
                 boolean q9;
                 b41.i(str, "value");
-                q = C8604o.q(str, GXPropInterpolator.KEY_LINEAR, true);
+                q = o.q(str, GXPropInterpolator.KEY_LINEAR, true);
                 if (q) {
                     return GXPropInterpolator.LINEAR;
                 }
-                q2 = C8604o.q(str, GXPropInterpolator.KEY_ACCELERATE, true);
+                q2 = o.q(str, GXPropInterpolator.KEY_ACCELERATE, true);
                 if (q2) {
                     return GXPropInterpolator.ACCELERATE;
                 }
-                q3 = C8604o.q(str, GXPropInterpolator.KEY_DECELERATE, true);
+                q3 = o.q(str, GXPropInterpolator.KEY_DECELERATE, true);
                 if (q3) {
                     return GXPropInterpolator.DECELERATE;
                 }
-                q4 = C8604o.q(str, "STANDARD", true);
+                q4 = o.q(str, "STANDARD", true);
                 if (q4) {
                     return GXPropInterpolator.STANDARD;
                 }
-                q5 = C8604o.q(str, GXPropInterpolator.KEY_ANTICIPATE, true);
+                q5 = o.q(str, GXPropInterpolator.KEY_ANTICIPATE, true);
                 if (q5) {
                     return GXPropInterpolator.ANTICIPATE;
                 }
-                q6 = C8604o.q(str, GXPropInterpolator.KEY_OVERSHOOT, true);
+                q6 = o.q(str, GXPropInterpolator.KEY_OVERSHOOT, true);
                 if (q6) {
                     return GXPropInterpolator.OVERSHOOT;
                 }
-                q7 = C8604o.q(str, GXPropInterpolator.KEY_SPRING, true);
+                q7 = o.q(str, GXPropInterpolator.KEY_SPRING, true);
                 if (q7) {
                     return GXPropInterpolator.SPRING;
                 }
-                q8 = C8604o.q(str, GXPropInterpolator.KEY_BOUNCE, true);
+                q8 = o.q(str, GXPropInterpolator.KEY_BOUNCE, true);
                 if (q8) {
                     return GXPropInterpolator.BOUNCE;
                 }
-                q9 = C8604o.q(str, GXPropInterpolator.KEY_COSINE, true);
+                q9 = o.q(str, GXPropInterpolator.KEY_COSINE, true);
                 return q9 ? GXPropInterpolator.COSINE : GXPropInterpolator.STANDARD;
             }
         }
@@ -146,18 +145,17 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
         REVERSE;
         
         @NotNull
-        public static final C3402a Companion = new C3402a(null);
+        public static final a Companion = new a(null);
         @NotNull
         public static final String KEY_LOOP_MODE = "loopMode";
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.template.animation.GXPropAnimationSet$GXPropLoopMode$a */
         /* loaded from: classes6.dex */
-        public static final class C3402a {
-            private C3402a() {
+        public static final class a {
+            private a() {
             }
 
-            public /* synthetic */ C3402a(k50 k50Var) {
+            public /* synthetic */ a(k50 k50Var) {
                 this();
             }
 
@@ -166,11 +164,11 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
                 boolean q;
                 boolean q2;
                 b41.i(str, "data");
-                q = C8604o.q(str, "RESET", true);
+                q = o.q(str, "RESET", true);
                 if (q) {
                     return GXPropLoopMode.RESET;
                 }
-                q2 = C8604o.q(str, "REVERSE", true);
+                q2 = o.q(str, "REVERSE", true);
                 return q2 ? GXPropLoopMode.REVERSE : GXPropLoopMode.RESET;
             }
         }
@@ -188,7 +186,7 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
         RENDER_COLOR;
         
         @NotNull
-        public static final C3403a Companion = new C3403a(null);
+        public static final a Companion = new a(null);
         @NotNull
         private static final String KEY_OPACITY = "opacity";
         @NotNull
@@ -203,13 +201,12 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
         private static final String KEY_SCALE = "scale";
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.template.animation.GXPropAnimationSet$GXPropName$a */
         /* loaded from: classes6.dex */
-        public static final class C3403a {
-            private C3403a() {
+        public static final class a {
+            private a() {
             }
 
-            public /* synthetic */ C3403a(k50 k50Var) {
+            public /* synthetic */ a(k50 k50Var) {
                 this();
             }
 
@@ -221,27 +218,27 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
                 boolean q4;
                 boolean q5;
                 boolean q6;
-                q = C8604o.q(str, GXPropName.KEY_POSITION_X, true);
+                q = o.q(str, GXPropName.KEY_POSITION_X, true);
                 if (q) {
                     return GXPropName.POSITION_X;
                 }
-                q2 = C8604o.q(str, GXPropName.KEY_POSITION_Y, true);
+                q2 = o.q(str, GXPropName.KEY_POSITION_Y, true);
                 if (q2) {
                     return GXPropName.POSITION_Y;
                 }
-                q3 = C8604o.q(str, "opacity", true);
+                q3 = o.q(str, "opacity", true);
                 if (q3) {
                     return GXPropName.OPACITY;
                 }
-                q4 = C8604o.q(str, "scale", true);
+                q4 = o.q(str, "scale", true);
                 if (q4) {
                     return GXPropName.SCALE;
                 }
-                q5 = C8604o.q(str, "rotation", true);
+                q5 = o.q(str, "rotation", true);
                 if (q5) {
                     return GXPropName.ROTATION;
                 }
-                q6 = C8604o.q(str, GXPropName.KEY_RENDER_COLOR, true);
+                q6 = o.q(str, GXPropName.KEY_RENDER_COLOR, true);
                 if (q6) {
                     return GXPropName.RENDER_COLOR;
                 }
@@ -250,9 +247,8 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.template.animation.GXPropAnimationSet$GXPropName$b */
         /* loaded from: classes6.dex */
-        public /* synthetic */ class C3404b {
+        public /* synthetic */ class b {
             public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
             static {
@@ -305,7 +301,7 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
 
         public final void setValue(@NotNull View view, float f) {
             b41.i(view, "targetView");
-            int i = C3404b.$EnumSwitchMapping$0[ordinal()];
+            int i = b.$EnumSwitchMapping$0[ordinal()];
             if (i == 1) {
                 setPositionX(view, f);
             } else if (i == 2) {
@@ -330,20 +326,19 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
         SEQUENTIALLY;
         
         @NotNull
-        public static final C3405a Companion = new C3405a(null);
+        public static final a Companion = new a(null);
         @NotNull
         public static final String KEY_ORDERING = "ordering";
         @NotNull
         private static final String KEY_SEQUENTIALLY = "SEQUENTIALLY";
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.template.animation.GXPropAnimationSet$GXPropOrderingType$a */
         /* loaded from: classes6.dex */
-        public static final class C3405a {
-            private C3405a() {
+        public static final class a {
+            private a() {
             }
 
-            public /* synthetic */ C3405a(k50 k50Var) {
+            public /* synthetic */ a(k50 k50Var) {
                 this();
             }
 
@@ -351,7 +346,7 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
             public final GXPropOrderingType a(@NotNull String str) {
                 boolean q;
                 b41.i(str, "value");
-                q = C8604o.q(str, GXPropOrderingType.KEY_SEQUENTIALLY, true);
+                q = o.q(str, GXPropOrderingType.KEY_SEQUENTIALLY, true);
                 return q ? GXPropOrderingType.SEQUENTIALLY : GXPropOrderingType.TOGETHER;
             }
         }
@@ -366,16 +361,15 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
         ColorType;
         
         @NotNull
-        public static final C3406a Companion = new C3406a(null);
+        public static final a Companion = new a(null);
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.template.animation.GXPropAnimationSet$GXPropValueType$a */
         /* loaded from: classes6.dex */
-        public static final class C3406a {
-            private C3406a() {
+        public static final class a {
+            private a() {
             }
 
-            public /* synthetic */ C3406a(k50 k50Var) {
+            public /* synthetic */ a(k50 k50Var) {
                 this();
             }
 
@@ -400,13 +394,12 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.template.animation.GXPropAnimationSet$a */
     /* loaded from: classes6.dex */
-    public static final class C3407a {
-        private C3407a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3407a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -426,10 +419,10 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
                             gXPropAnimationSet.a().add(a);
                         }
                     } else if (jSONObject2.containsKey("propAnimator")) {
-                        yr0.C9998a c9998a = yr0.Companion;
+                        yr0.a aVar = yr0.Companion;
                         JSONObject jSONObject3 = jSONObject2.getJSONObject("propAnimator");
                         b41.h(jSONObject3, "it.getJSONObject(KEY_PROP_ANIMATOR)");
-                        yr0 a2 = c9998a.a(jSONObject3);
+                        yr0 a2 = aVar.a(jSONObject3);
                         if (a2 != null) {
                             gXPropAnimationSet.a().add(a2);
                         }
@@ -450,21 +443,19 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.template.animation.GXPropAnimationSet$b */
     /* loaded from: classes6.dex */
-    public static abstract class AbstractC3408b {
+    public static abstract class b {
         @NotNull
-        public static final C3409a Companion = new C3409a(null);
+        public static final a Companion = new a(null);
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.template.animation.GXPropAnimationSet$b$a */
         /* loaded from: classes6.dex */
-        public static final class C3409a {
+        public static final class a {
 
             /* compiled from: Taobao */
-            /* renamed from: com.alibaba.gaiax.template.animation.GXPropAnimationSet$b$a$a */
+            /* renamed from: com.alibaba.gaiax.template.animation.GXPropAnimationSet$b$a$a  reason: collision with other inner class name */
             /* loaded from: classes6.dex */
-            public /* synthetic */ class C3410a {
+            public /* synthetic */ class C0144a {
                 public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
                 static {
@@ -476,45 +467,45 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
                 }
             }
 
-            private C3409a() {
+            private a() {
             }
 
-            public /* synthetic */ C3409a(k50 k50Var) {
+            public /* synthetic */ a(k50 k50Var) {
                 this();
             }
 
             @Nullable
-            public final AbstractC3408b a(@NotNull JSONObject jSONObject) {
+            public final b a(@NotNull JSONObject jSONObject) {
                 b41.i(jSONObject, "data");
-                GXPropValueType.C3406a c3406a = GXPropValueType.Companion;
+                GXPropValueType.a aVar = GXPropValueType.Companion;
                 String string = jSONObject.getString("valueType");
                 if (string == null) {
                     string = "";
                 }
-                GXPropValueType a = c3406a.a(string);
+                GXPropValueType a = aVar.a(string);
                 if (a == null) {
                     return null;
                 }
-                int i = C3410a.$EnumSwitchMapping$0[a.ordinal()];
+                int i = C0144a.$EnumSwitchMapping$0[a.ordinal()];
                 if (i != 1) {
                     if (i != 2) {
                         if (i == 3) {
-                            return C3411b.Companion.a(jSONObject);
+                            return C0145b.Companion.a(jSONObject);
                         }
                         throw new NoWhenBranchMatchedException();
                     }
-                    return C3413c.Companion.a(jSONObject);
+                    return c.Companion.a(jSONObject);
                 }
-                return C3413c.Companion.a(jSONObject);
+                return c.Companion.a(jSONObject);
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.template.animation.GXPropAnimationSet$b$b */
+        /* renamed from: com.alibaba.gaiax.template.animation.GXPropAnimationSet$b$b  reason: collision with other inner class name */
         /* loaded from: classes6.dex */
-        public static final class C3411b extends AbstractC3408b {
+        public static final class C0145b extends b {
             @NotNull
-            public static final C3412a Companion = new C3412a(null);
+            public static final a Companion = new a(null);
             @NotNull
             private final mq0 a;
             @NotNull
@@ -523,16 +514,16 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
             /* compiled from: Taobao */
             /* renamed from: com.alibaba.gaiax.template.animation.GXPropAnimationSet$b$b$a */
             /* loaded from: classes6.dex */
-            public static final class C3412a {
-                private C3412a() {
+            public static final class a {
+                private a() {
                 }
 
-                public /* synthetic */ C3412a(k50 k50Var) {
+                public /* synthetic */ a(k50 k50Var) {
                     this();
                 }
 
                 @Nullable
-                public final C3411b a(@NotNull JSONObject jSONObject) {
+                public final C0145b a(@NotNull JSONObject jSONObject) {
                     b41.i(jSONObject, "data");
                     String string = jSONObject.getString("valueFrom");
                     if (string == null) {
@@ -542,13 +533,13 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
                     String str = string2 != null ? string2 : "";
                     if (string.length() > 0) {
                         if (string.length() > 0) {
-                            mq0.C9449a c9449a = mq0.Companion;
-                            mq0 a = c9449a.a(string);
-                            mq0 a2 = c9449a.a(str);
+                            mq0.a aVar = mq0.Companion;
+                            mq0 a = aVar.a(string);
+                            mq0 a2 = aVar.a(str);
                             if (a == null || a2 == null) {
                                 return null;
                             }
-                            return new C3411b(a, a2);
+                            return new C0145b(a, a2);
                         }
                         return null;
                     }
@@ -557,7 +548,7 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C3411b(@NotNull mq0 mq0Var, @NotNull mq0 mq0Var2) {
+            public C0145b(@NotNull mq0 mq0Var, @NotNull mq0 mq0Var2) {
                 super(null);
                 b41.i(mq0Var, "valueFrom");
                 b41.i(mq0Var2, "valueTo");
@@ -577,27 +568,25 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.alibaba.gaiax.template.animation.GXPropAnimationSet$b$c */
         /* loaded from: classes6.dex */
-        public static final class C3413c extends AbstractC3408b {
+        public static final class c extends b {
             @NotNull
-            public static final C3414a Companion = new C3414a(null);
+            public static final a Companion = new a(null);
             private final float a;
             private final float b;
 
             /* compiled from: Taobao */
-            /* renamed from: com.alibaba.gaiax.template.animation.GXPropAnimationSet$b$c$a */
             /* loaded from: classes6.dex */
-            public static final class C3414a {
-                private C3414a() {
+            public static final class a {
+                private a() {
                 }
 
-                public /* synthetic */ C3414a(k50 k50Var) {
+                public /* synthetic */ a(k50 k50Var) {
                     this();
                 }
 
                 @Nullable
-                public final C3413c a(@NotNull JSONObject jSONObject) {
+                public final c a(@NotNull JSONObject jSONObject) {
                     b41.i(jSONObject, "data");
                     String string = jSONObject.getString("valueFrom");
                     if (string == null) {
@@ -607,7 +596,7 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
                     String str = string2 != null ? string2 : "";
                     if (string.length() > 0) {
                         if (string.length() > 0) {
-                            return new C3413c(Float.parseFloat(string), Float.parseFloat(str));
+                            return new c(Float.parseFloat(string), Float.parseFloat(str));
                         }
                         return null;
                     }
@@ -615,7 +604,7 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
                 }
             }
 
-            public C3413c(float f, float f2) {
+            public c(float f, float f2) {
                 super(null);
                 this.a = f;
                 this.b = f2;
@@ -630,18 +619,17 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
             }
         }
 
-        private AbstractC3408b() {
+        private b() {
         }
 
-        public /* synthetic */ AbstractC3408b(k50 k50Var) {
+        public /* synthetic */ b(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.template.animation.GXPropAnimationSet$c */
     /* loaded from: classes6.dex */
-    public /* synthetic */ class C3415c {
+    public /* synthetic */ class c {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -653,14 +641,13 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.gaiax.template.animation.GXPropAnimationSet$d */
     /* loaded from: classes6.dex */
-    public static final class C3416d extends tq0 {
+    public static final class d extends tq0 {
         final /* synthetic */ os0 a;
         final /* synthetic */ qr0 b;
         final /* synthetic */ View c;
 
-        C3416d(os0 os0Var, qr0 qr0Var, View view) {
+        d(os0 os0Var, qr0 qr0Var, View view) {
             this.a = os0Var;
             this.b = qr0Var;
             this.c = view;
@@ -675,35 +662,35 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
         public void onAnimationEnd(@Nullable Animator animator) {
             GXTemplateEngine.GXIEventListener c;
             this.b.N(false);
-            GXTemplateEngine.C3346h p = this.a.p();
+            GXTemplateEngine.h p = this.a.p();
             if (p == null || (c = p.c()) == null) {
                 return;
             }
-            GXTemplateEngine.C3338b c3338b = new GXTemplateEngine.C3338b();
+            GXTemplateEngine.b bVar = new GXTemplateEngine.b();
             qr0 qr0Var = this.b;
             View view = this.c;
-            c3338b.h(GXTemplateEngine.C3338b.STATE_END);
-            c3338b.g(qr0Var.g());
-            c3338b.i(view);
+            bVar.h(GXTemplateEngine.b.STATE_END);
+            bVar.g(qr0Var.g());
+            bVar.i(view);
             wt2 wt2Var = wt2.INSTANCE;
-            c.onAnimationEvent(c3338b);
+            c.onAnimationEvent(bVar);
         }
 
         @Override // tb.tq0, android.animation.Animator.AnimatorListener
         public void onAnimationStart(@Nullable Animator animator) {
             GXTemplateEngine.GXIEventListener c;
-            GXTemplateEngine.C3346h p = this.a.p();
+            GXTemplateEngine.h p = this.a.p();
             if (p == null || (c = p.c()) == null) {
                 return;
             }
-            GXTemplateEngine.C3338b c3338b = new GXTemplateEngine.C3338b();
+            GXTemplateEngine.b bVar = new GXTemplateEngine.b();
             qr0 qr0Var = this.b;
             View view = this.c;
-            c3338b.h(GXTemplateEngine.C3338b.STATE_START);
-            c3338b.g(qr0Var.g());
-            c3338b.i(view);
+            bVar.h(GXTemplateEngine.b.STATE_START);
+            bVar.g(qr0Var.g());
+            bVar.i(view);
             wt2 wt2Var = wt2.INSTANCE;
-            c.onAnimationEvent(c3338b);
+            c.onAnimationEvent(bVar);
         }
     }
 
@@ -792,7 +779,7 @@ public final class GXPropAnimationSet implements GXIPropAnimation {
     public Animator createAnimator(@NotNull View view) {
         b41.i(view, "targetView");
         AnimatorSet animatorSet = new AnimatorSet();
-        int i = C3415c.$EnumSwitchMapping$0[b().ordinal()];
+        int i = c.$EnumSwitchMapping$0[b().ordinal()];
         if (i == 1) {
             ArrayList arrayList = new ArrayList();
             for (GXIPropAnimation gXIPropAnimation : a()) {

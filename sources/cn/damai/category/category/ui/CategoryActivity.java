@@ -13,7 +13,6 @@ import cn.damai.category.category.ui.adapter.CategoryPagerAdapter;
 import cn.damai.common.DamaiConstants;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.commonbusiness.base.SimpleBaseActivity;
 import cn.damai.commonbusiness.tab.DamaiTabbarManager;
@@ -58,12 +57,11 @@ public class CategoryActivity extends SimpleBaseActivity {
     private ViewPager mViewPager;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.CategoryActivity$a */
     /* loaded from: classes.dex */
-    public class C0324a implements TabbarLayout.TabBarListener {
+    public class a implements TabbarLayout.TabBarListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0324a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.tab.TabbarLayout.TabBarListener
@@ -104,12 +102,11 @@ public class CategoryActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.CategoryActivity$b */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0325b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0325b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -128,12 +125,11 @@ public class CategoryActivity extends SimpleBaseActivity {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.category.ui.CategoryActivity$c */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0326c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC0326c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -143,7 +139,7 @@ public class CategoryActivity extends SimpleBaseActivity {
                 ipChange.ipc$dispatch("-813409309", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(bh.m().q());
+            cn.damai.common.user.c.e().x(bh.m().q());
             DMNav.from(CategoryActivity.this).toUri(NavUri.b("home_search"));
         }
     }
@@ -181,9 +177,9 @@ public class CategoryActivity extends SimpleBaseActivity {
         }
         CategoryPagerAdapter categoryPagerAdapter = this.mPagerAdapter;
         if (categoryPagerAdapter != null) {
-            Fragment b = categoryPagerAdapter.b();
-            if (b instanceof CategoryFragment) {
-                return (CategoryFragment) b;
+            Fragment b2 = categoryPagerAdapter.b();
+            if (b2 instanceof CategoryFragment) {
+                return (CategoryFragment) b2;
             }
             return null;
         }
@@ -197,9 +193,9 @@ public class CategoryActivity extends SimpleBaseActivity {
         }
         CategoryPagerAdapter categoryPagerAdapter = this.mPagerAdapter;
         if (categoryPagerAdapter != null) {
-            Fragment b = categoryPagerAdapter.b();
-            if (b instanceof DamaiBaseMvpFragment) {
-                return (DamaiBaseMvpFragment) b;
+            Fragment b2 = categoryPagerAdapter.b();
+            if (b2 instanceof DamaiBaseMvpFragment) {
+                return (DamaiBaseMvpFragment) b2;
             }
             return null;
         }
@@ -244,7 +240,7 @@ public class CategoryActivity extends SimpleBaseActivity {
             ipChange.ipc$dispatch("1066926420", new Object[]{this});
             return;
         }
-        DamaiTabbarManager damaiTabbarManager = new DamaiTabbarManager(this, (TabbarLayout) findViewById(R$id.category_bottom_tab), new C0324a());
+        DamaiTabbarManager damaiTabbarManager = new DamaiTabbarManager(this, (TabbarLayout) findViewById(R$id.category_bottom_tab), new a());
         this.mDamaiTabbarManager = damaiTabbarManager;
         damaiTabbarManager.j(DamaiConstants.TAB_CATEGORY);
     }
@@ -271,8 +267,8 @@ public class CategoryActivity extends SimpleBaseActivity {
         this.mTitleList.add(scrollTitleBean);
         this.mTitleList.add(scrollTitleBean2);
         this.mTitleList.add(scrollTitleBean3);
-        this.mTitleScroll.setFontColor(R$color.color_000000, R$color.color_9C9CA5).setFontSize(16, 20).setTitle(this.mTitleList).setHeight(44).setOnTitleClickListener(new View$OnClickListenerC0325b()).commit();
-        this.mSearchBtn.setOnClickListener(new View$OnClickListenerC0326c());
+        this.mTitleScroll.setFontColor(R$color.color_000000, R$color.color_9C9CA5).setFontSize(16, 20).setTitle(this.mTitleList).setHeight(44).setOnTitleClickListener(new b()).commit();
+        this.mSearchBtn.setOnClickListener(new c());
         View findViewById = findViewById(R$id.status_bar_space);
         if (Build.VERSION.SDK_INT >= 23) {
             findViewById.getLayoutParams().height = kg2.a(this);
@@ -356,10 +352,10 @@ public class CategoryActivity extends SimpleBaseActivity {
             ipChange.ipc$dispatch("1950627716", new Object[]{this});
             return;
         }
-        double[] b = ja1.b();
-        if (b != null) {
-            this.mData.conditionEntity.longitude = String.valueOf(b[0]);
-            this.mData.conditionEntity.latitude = String.valueOf(b[1]);
+        double[] b2 = ja1.b();
+        if (b2 != null) {
+            this.mData.conditionEntity.longitude = String.valueOf(b2[0]);
+            this.mData.conditionEntity.latitude = String.valueOf(b2[1]);
         }
     }
 
@@ -416,7 +412,7 @@ public class CategoryActivity extends SimpleBaseActivity {
                 }
             }
         }, 100L);
-        C0529c.e().K(this);
+        cn.damai.common.user.c.e().K(this);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -497,7 +493,7 @@ public class CategoryActivity extends SimpleBaseActivity {
         if (this.mData.isChediLikai || this.mSelectTitle == null) {
             return;
         }
-        C0529c.e().m(this);
+        cn.damai.common.user.c.e().m(this);
         changePage(this.mSelectTitle.index, false);
     }
 

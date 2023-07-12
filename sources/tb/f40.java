@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteStatement;
 import android.os.Build;
 import cn.damai.common.db.DbManager;
 import cn.damai.common.db.commonutil.util.KeyValue;
-import cn.damai.common.db.db.sqlite.C0497a;
 import cn.damai.common.db.ex.DbException;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -21,19 +20,19 @@ import java.util.List;
 /* loaded from: classes4.dex */
 public final class f40 extends d40 {
     private static transient /* synthetic */ IpChange $ipChange;
-    private static final HashMap<DbManager.C0492a, f40> f = new HashMap<>();
+    private static final HashMap<DbManager.a, f40> f = new HashMap<>();
     private SQLiteDatabase b;
-    private DbManager.C0492a c;
+    private DbManager.a c;
     private boolean d;
     private Context e;
 
-    private f40(DbManager.C0492a c0492a, Context context) {
-        if (c0492a != null) {
+    private f40(DbManager.a aVar, Context context) {
+        if (aVar != null) {
             this.e = context;
-            this.c = c0492a;
-            this.d = c0492a.g();
-            this.b = e(c0492a);
-            DbManager.DbOpenListener c = c0492a.c();
+            this.c = aVar;
+            this.d = aVar.g();
+            this.b = e(aVar);
+            DbManager.DbOpenListener c = aVar.c();
             if (c != null) {
                 c.onDbOpened(this);
                 return;
@@ -56,29 +55,29 @@ public final class f40 extends d40 {
         }
     }
 
-    public static synchronized DbManager c(DbManager.C0492a c0492a, Context context) {
+    public static synchronized DbManager c(DbManager.a aVar, Context context) {
         synchronized (f40.class) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "114247146")) {
-                return (DbManager) ipChange.ipc$dispatch("114247146", new Object[]{c0492a, context});
+                return (DbManager) ipChange.ipc$dispatch("114247146", new Object[]{aVar, context});
             }
-            if (c0492a == null) {
-                c0492a = new DbManager.C0492a();
+            if (aVar == null) {
+                aVar = new DbManager.a();
             }
-            HashMap<DbManager.C0492a, f40> hashMap = f;
-            f40 f40Var = hashMap.get(c0492a);
+            HashMap<DbManager.a, f40> hashMap = f;
+            f40 f40Var = hashMap.get(aVar);
             if (f40Var == null) {
-                f40Var = new f40(c0492a, context);
-                hashMap.put(c0492a, f40Var);
+                f40Var = new f40(aVar, context);
+                hashMap.put(aVar, f40Var);
             } else {
-                f40Var.c = c0492a;
+                f40Var.c = aVar;
             }
             SQLiteDatabase sQLiteDatabase = f40Var.b;
             int version = sQLiteDatabase.getVersion();
-            int e = c0492a.e();
+            int e = aVar.e();
             if (version != e) {
                 if (version != 0) {
-                    DbManager.DbUpgradeListener d = c0492a.d();
+                    DbManager.DbUpgradeListener d = aVar.d();
                     if (d != null) {
                         d.onUpgrade(f40Var, version, e);
                     } else {
@@ -110,16 +109,16 @@ public final class f40 extends d40 {
         return r0;
     }
 
-    private SQLiteDatabase e(DbManager.C0492a c0492a) {
+    private SQLiteDatabase e(DbManager.a aVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1002202280")) {
-            return (SQLiteDatabase) ipChange.ipc$dispatch("-1002202280", new Object[]{this, c0492a});
+            return (SQLiteDatabase) ipChange.ipc$dispatch("-1002202280", new Object[]{this, aVar});
         }
-        File a = c0492a.a();
+        File a = aVar.a();
         if (a != null && (a.exists() || a.mkdirs())) {
-            return SQLiteDatabase.openOrCreateDatabase(new File(a, c0492a.b()), (SQLiteDatabase.CursorFactory) null);
+            return SQLiteDatabase.openOrCreateDatabase(new File(a, aVar.b()), (SQLiteDatabase.CursorFactory) null);
         }
-        return this.e.openOrCreateDatabase(c0492a.b(), 0, null);
+        return this.e.openOrCreateDatabase(aVar.b(), 0, null);
     }
 
     private void endTransaction() {
@@ -138,7 +137,7 @@ public final class f40 extends d40 {
         }
         uk e = tk2Var.e();
         if (e.f()) {
-            execNonQuery(C0497a.e(tk2Var, obj));
+            execNonQuery(cn.damai.common.db.db.sqlite.a.e(tk2Var, obj));
             long d = d(tk2Var.f());
             if (d == -1) {
                 return false;
@@ -146,7 +145,7 @@ public final class f40 extends d40 {
             e.h(obj, d);
             return true;
         }
-        execNonQuery(C0497a.e(tk2Var, obj));
+        execNonQuery(cn.damai.common.db.db.sqlite.a.e(tk2Var, obj));
         return true;
     }
 
@@ -159,14 +158,14 @@ public final class f40 extends d40 {
         uk e = tk2Var.e();
         if (e.f()) {
             if (e.b(obj) != null) {
-                execNonQuery(C0497a.g(tk2Var, obj, new String[0]));
+                execNonQuery(cn.damai.common.db.db.sqlite.a.g(tk2Var, obj, new String[0]));
                 return;
             } else {
                 f(tk2Var, obj);
                 return;
             }
         }
-        execNonQuery(C0497a.f(tk2Var, obj));
+        execNonQuery(cn.damai.common.db.db.sqlite.a.f(tk2Var, obj));
     }
 
     private void setTransactionSuccessful() {
@@ -185,7 +184,7 @@ public final class f40 extends d40 {
             ipChange.ipc$dispatch("-80410641", new Object[]{this});
             return;
         }
-        HashMap<DbManager.C0492a, f40> hashMap = f;
+        HashMap<DbManager.a, f40> hashMap = f;
         if (hashMap.containsKey(this.c)) {
             hashMap.remove(this.c);
             this.b.close();
@@ -211,14 +210,14 @@ public final class f40 extends d40 {
                     return;
                 }
                 for (Object obj2 : list) {
-                    execNonQuery(C0497a.b(table, obj2));
+                    execNonQuery(cn.damai.common.db.db.sqlite.a.b(table, obj2));
                 }
             } else {
                 tk2 table2 = getTable(obj.getClass());
                 if (!table2.j()) {
                     return;
                 }
-                execNonQuery(C0497a.b(table2, obj));
+                execNonQuery(cn.damai.common.db.db.sqlite.a.b(table2, obj));
             }
             setTransactionSuccessful();
         } finally {
@@ -237,7 +236,7 @@ public final class f40 extends d40 {
         if (table.j()) {
             try {
                 beginTransaction();
-                execNonQuery(C0497a.d(table, obj));
+                execNonQuery(cn.damai.common.db.db.sqlite.a.d(table, obj));
                 setTransactionSuccessful();
             } finally {
                 endTransaction();
@@ -397,9 +396,9 @@ public final class f40 extends d40 {
     }
 
     @Override // cn.damai.common.db.DbManager
-    public DbManager.C0492a getDaoConfig() {
+    public DbManager.a getDaoConfig() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-557811063") ? (DbManager.C0492a) ipChange.ipc$dispatch("-557811063", new Object[]{this}) : this.c;
+        return AndroidInstantRuntime.support(ipChange, "-557811063") ? (DbManager.a) ipChange.ipc$dispatch("-557811063", new Object[]{this}) : this.c;
     }
 
     @Override // cn.damai.common.db.DbManager
@@ -425,12 +424,12 @@ public final class f40 extends d40 {
                 tk2<?> table = getTable(list.get(0).getClass());
                 a(table);
                 for (Object obj2 : list) {
-                    execNonQuery(C0497a.f(table, obj2));
+                    execNonQuery(cn.damai.common.db.db.sqlite.a.f(table, obj2));
                 }
             } else {
                 tk2<?> table2 = getTable(obj.getClass());
                 a(table2);
-                execNonQuery(C0497a.f(table2, obj));
+                execNonQuery(cn.damai.common.db.db.sqlite.a.f(table2, obj));
             }
             setTransactionSuccessful();
         } finally {
@@ -455,12 +454,12 @@ public final class f40 extends d40 {
                 tk2<?> table = getTable(list.get(0).getClass());
                 a(table);
                 for (Object obj2 : list) {
-                    execNonQuery(C0497a.e(table, obj2));
+                    execNonQuery(cn.damai.common.db.db.sqlite.a.e(table, obj2));
                 }
             } else {
                 tk2<?> table2 = getTable(obj.getClass());
                 a(table2);
-                execNonQuery(C0497a.e(table2, obj));
+                execNonQuery(cn.damai.common.db.db.sqlite.a.e(table2, obj));
             }
             setTransactionSuccessful();
         } finally {
@@ -556,14 +555,14 @@ public final class f40 extends d40 {
                     return;
                 }
                 for (Object obj2 : list) {
-                    execNonQuery(C0497a.g(table, obj2, strArr));
+                    execNonQuery(cn.damai.common.db.db.sqlite.a.g(table, obj2, strArr));
                 }
             } else {
                 tk2 table2 = getTable(obj.getClass());
                 if (!table2.j()) {
                     return;
                 }
-                execNonQuery(C0497a.g(table2, obj, strArr));
+                execNonQuery(cn.damai.common.db.db.sqlite.a.g(table2, obj, strArr));
             }
             setTransactionSuccessful();
         } finally {
@@ -650,7 +649,7 @@ public final class f40 extends d40 {
         if (table.j()) {
             try {
                 beginTransaction();
-                int executeUpdateDelete = executeUpdateDelete(C0497a.h(table, q13Var, keyValueArr));
+                int executeUpdateDelete = executeUpdateDelete(cn.damai.common.db.db.sqlite.a.h(table, q13Var, keyValueArr));
                 setTransactionSuccessful();
                 return executeUpdateDelete;
             } finally {
@@ -670,7 +669,7 @@ public final class f40 extends d40 {
         if (table.j()) {
             try {
                 beginTransaction();
-                int executeUpdateDelete = executeUpdateDelete(C0497a.c(table, q13Var));
+                int executeUpdateDelete = executeUpdateDelete(cn.damai.common.db.db.sqlite.a.c(table, q13Var));
                 setTransactionSuccessful();
                 return executeUpdateDelete;
             } finally {

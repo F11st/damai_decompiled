@@ -42,12 +42,11 @@ public class kw0 implements View.OnClickListener {
     FragmentAdapter f;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kw0$a */
     /* loaded from: classes9.dex */
-    public class View$OnClickListenerC9380a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9380a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -62,12 +61,11 @@ public class kw0 implements View.OnClickListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kw0$b */
     /* loaded from: classes9.dex */
-    public class View$OnClickListenerC9381b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9381b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -82,12 +80,11 @@ public class kw0 implements View.OnClickListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kw0$c */
     /* loaded from: classes9.dex */
-    public class View$OnClickListenerC9382c implements View.OnClickListener {
+    public class c implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9382c() {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -102,12 +99,11 @@ public class kw0 implements View.OnClickListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kw0$d */
     /* loaded from: classes9.dex */
-    public class View$OnClickListenerC9383d implements View.OnClickListener {
+    public class d implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9383d() {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -123,12 +119,11 @@ public class kw0 implements View.OnClickListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kw0$e */
     /* loaded from: classes9.dex */
-    public class View$OnClickListenerC9384e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9384e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -144,12 +139,11 @@ public class kw0 implements View.OnClickListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kw0$f */
     /* loaded from: classes9.dex */
-    public class View$OnClickListenerC9385f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9385f() {
+        f() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -165,12 +159,11 @@ public class kw0 implements View.OnClickListener {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.kw0$g */
     /* loaded from: classes9.dex */
-    public class View$OnClickListenerC9386g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC9386g() {
+        g() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -310,14 +303,14 @@ public class kw0 implements View.OnClickListener {
     }
 
     public void f(int i) {
-        int a;
+        int a2;
         int i2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1061056384")) {
             ipChange.ipc$dispatch("-1061056384", new Object[]{this, Integer.valueOf(i)});
             return;
         }
-        View e = e(R$id.toolbar);
+        View e2 = e(R$id.toolbar);
         if (this.c.type != 1) {
             i2 = h(R$dimen.USER_HEADER_HB) + h(R$dimen.NAVBAR_H) + i;
             if (this.c.mySelf) {
@@ -329,35 +322,35 @@ public class kw0 implements View.OnClickListener {
                 e(i3).setVisibility(0);
                 UserData userData = this.c;
                 if (userData.lat > 0.0d && userData.lng > 0.0d) {
-                    e(i3).findViewById(R$id.user_tv_desc).setOnClickListener(new View$OnClickListenerC9380a());
+                    e(i3).findViewById(R$id.user_tv_desc).setOnClickListener(new a());
                 }
             }
             e(R$id.rl_header_c).setVisibility(8);
         } else {
-            View e2 = e(R$id.user_iv_header);
-            RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) e2.getLayoutParams();
+            View e3 = e(R$id.user_iv_header);
+            RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) e3.getLayoutParams();
             if (!this.c.mySelf) {
-                a = h(R$dimen.USER_HEADER_HC) + h(R$dimen.NAVBAR_H) + i;
+                a2 = h(R$dimen.USER_HEADER_HC) + h(R$dimen.NAVBAR_H) + i;
                 layoutParams.setMargins(0, 0, 0, 0);
             } else {
-                a = t60.a(this.b, 322.0f);
+                a2 = t60.a(this.b, 322.0f);
                 e(R$id.user_tv_add).setVisibility(8);
                 e(R$id.ll_div).setVisibility(8);
                 int i4 = R$id.rl_header_c;
                 RelativeLayout.LayoutParams layoutParams2 = (RelativeLayout.LayoutParams) e(i4).getLayoutParams();
                 layoutParams2.setMargins(0, h(R$dimen.NAVBAR_H) + i + t60.a(this.b, 6.0f), 0, 0);
-                layoutParams2.height = a;
+                layoutParams2.height = a2;
                 e(i4).setLayoutParams(layoutParams2);
             }
             e(R$id.rl_header_b).setVisibility(8);
             e(R$id.rl_header_b_other).setVisibility(8);
             e(R$id.rl_header_c).setVisibility(0);
-            e2.setLayoutParams(layoutParams);
-            i2 = a;
+            e3.setLayoutParams(layoutParams);
+            i2 = a2;
         }
-        AppBarLayout.LayoutParams layoutParams3 = (AppBarLayout.LayoutParams) e.getLayoutParams();
+        AppBarLayout.LayoutParams layoutParams3 = (AppBarLayout.LayoutParams) e2.getLayoutParams();
         ((LinearLayout.LayoutParams) layoutParams3).height = i2;
-        e.setLayoutParams(layoutParams3);
+        e2.setLayoutParams(layoutParams3);
     }
 
     public void g() {
@@ -403,19 +396,19 @@ public class kw0 implements View.OnClickListener {
             ipChange.ipc$dispatch("450299706", new Object[]{this});
             return;
         }
-        View$OnClickListenerC9381b view$OnClickListenerC9381b = new View$OnClickListenerC9381b();
+        b bVar = new b();
         if (this.c.type != 1) {
-            e(R$id.rl_header_b).findViewById(R$id.user_iv_header).setOnClickListener(view$OnClickListenerC9381b);
+            e(R$id.rl_header_b).findViewById(R$id.user_iv_header).setOnClickListener(bVar);
         } else {
-            e(R$id.rl_header_c).findViewById(R$id.user_iv_header).setOnClickListener(view$OnClickListenerC9381b);
+            e(R$id.rl_header_c).findViewById(R$id.user_iv_header).setOnClickListener(bVar);
         }
-        e(R$id.toolbar).setOnClickListener(new View$OnClickListenerC9382c());
+        e(R$id.toolbar).setOnClickListener(new c());
         int i = R$id.rl_header_c;
-        e(i).findViewById(R$id.user_c_follow).setOnClickListener(new View$OnClickListenerC9383d());
-        e(i).findViewById(R$id.user_c_fans).setOnClickListener(new View$OnClickListenerC9384e());
+        e(i).findViewById(R$id.user_c_follow).setOnClickListener(new d());
+        e(i).findViewById(R$id.user_c_fans).setOnClickListener(new e());
         int i2 = R$id.rl_header_b;
-        e(i2).findViewById(R$id.ll_left).setOnClickListener(new View$OnClickListenerC9385f());
-        e(i2).findViewById(R$id.ll_mid).setOnClickListener(new View$OnClickListenerC9386g());
+        e(i2).findViewById(R$id.ll_left).setOnClickListener(new f());
+        e(i2).findViewById(R$id.ll_mid).setOnClickListener(new g());
     }
 
     public void j(UserResponse userResponse) {

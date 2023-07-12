@@ -7,8 +7,8 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.Surface;
 import android.view.SurfaceHolder;
-import com.youku.e.C7901a;
-import com.youku.player.util.C8063c;
+import com.youku.e.a;
+import com.youku.player.util.c;
 import java.util.Vector;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
@@ -172,16 +172,16 @@ public class SystemMediaPlayer extends OriginalMediaPlayer {
         this.mIsPlaylistPrepared = false;
         this.mSeekingState = 0;
         this.mCurrentPlayer = null;
-        C8063c.a(TAG, "init wait");
+        c.a(TAG, "init wait");
         try {
         } catch (InterruptedException e) {
-            C8063c.a(TAG, e);
+            c.a(TAG, e);
         }
         if (!mLock.tryLock(RELEASE_TIMEOUT, TimeUnit.SECONDS)) {
             throw new ReleaseTimeoutException("SystemMediaPlayer release timeout");
         }
         mLock.unlock();
-        C8063c.a(TAG, "init wait over");
+        c.a(TAG, "init wait over");
         myLogger("SystemMediaPlayer() ");
         this.mHandler = new Handler(Looper.getMainLooper());
         this.mCurrentItemIndex = 0;
@@ -219,14 +219,14 @@ public class SystemMediaPlayer extends OriginalMediaPlayer {
             this.mCurrentPlayer.prepareAsync();
             this.mPlayerState = 0;
         } catch (Exception e) {
-            C8063c.a(TAG, e);
+            c.a(TAG, e);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public void myLogger(String str) {
         String str2 = TAG;
-        C8063c.a(str2, str + " is called.");
+        c.a(str2, str + " is called.");
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -324,11 +324,11 @@ public class SystemMediaPlayer extends OriginalMediaPlayer {
                 SystemMediaPlayer.mLock.lock();
                 try {
                     SystemMediaPlayer.this.myLogger("release ");
-                    C8063c.a(SystemMediaPlayer.TAG, "start release");
+                    c.a(SystemMediaPlayer.TAG, "start release");
                     SystemMediaPlayer.this.mCurrentPlayer.setDisplay(null);
                     SystemMediaPlayer.this.mCurrentPlayer.reset();
                     SystemMediaPlayer.this.mCurrentPlayer.release();
-                    C8063c.a(SystemMediaPlayer.TAG, "end release");
+                    c.a(SystemMediaPlayer.TAG, "end release");
                     SystemMediaPlayer.this.resetData();
                     SystemMediaPlayer.this.mCurrentPlayer = null;
                 } finally {
@@ -361,7 +361,7 @@ public class SystemMediaPlayer extends OriginalMediaPlayer {
     public void setDataSource(String str) {
         myLogger("setDataSource ");
         this.mPath = str;
-        this.mCurrentPlayer.setDataSource(C7901a.a, Uri.parse(str));
+        this.mCurrentPlayer.setDataSource(a.a, Uri.parse(str));
     }
 
     @Override // com.youku.uplayer.Mediaplayer

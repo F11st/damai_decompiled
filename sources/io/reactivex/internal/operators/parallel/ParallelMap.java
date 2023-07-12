@@ -5,7 +5,7 @@ import io.reactivex.functions.Function;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.fuseable.ConditionalSubscriber;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
-import io.reactivex.parallel.AbstractC8161a;
+import io.reactivex.parallel.a;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 import tb.dg0;
@@ -13,9 +13,9 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ParallelMap<T, R> extends AbstractC8161a<R> {
+public final class ParallelMap<T, R> extends a<R> {
     final Function<? super T, ? extends R> mapper;
-    final AbstractC8161a<T> source;
+    final a<T> source;
 
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
@@ -162,17 +162,17 @@ public final class ParallelMap<T, R> extends AbstractC8161a<R> {
         }
     }
 
-    public ParallelMap(AbstractC8161a<T> abstractC8161a, Function<? super T, ? extends R> function) {
-        this.source = abstractC8161a;
+    public ParallelMap(a<T> aVar, Function<? super T, ? extends R> function) {
+        this.source = aVar;
         this.mapper = function;
     }
 
-    @Override // io.reactivex.parallel.AbstractC8161a
+    @Override // io.reactivex.parallel.a
     public int parallelism() {
         return this.source.parallelism();
     }
 
-    @Override // io.reactivex.parallel.AbstractC8161a
+    @Override // io.reactivex.parallel.a
     public void subscribe(Subscriber<? super R>[] subscriberArr) {
         if (validate(subscriberArr)) {
             int length = subscriberArr.length;

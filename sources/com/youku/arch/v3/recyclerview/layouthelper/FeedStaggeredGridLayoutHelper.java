@@ -23,7 +23,7 @@ public class FeedStaggeredGridLayoutHelper extends StaggeredGridLayoutHelper {
         this.hasForceOffBackgroundRes = false;
     }
 
-    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.alibaba.android.vlayout.layout.BaseLayoutHelper, com.alibaba.android.vlayout.a
     public void bindLayoutView(@NonNull View view) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1767865838")) {
@@ -53,7 +53,7 @@ public class FeedStaggeredGridLayoutHelper extends StaggeredGridLayoutHelper {
         }
     }
 
-    @Override // com.youku.arch.v3.recyclerview.layouthelper.StaggeredGridLayoutHelper, com.alibaba.android.vlayout.AbstractC3289a
+    @Override // com.youku.arch.v3.recyclerview.layouthelper.StaggeredGridLayoutHelper, com.alibaba.android.vlayout.a
     public void onOffsetChildrenVertical(int i, LayoutManagerHelper layoutManagerHelper) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "2045730886")) {

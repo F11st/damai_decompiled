@@ -1,11 +1,11 @@
 package io.reactivex.internal.operators.observable;
 
-import io.reactivex.AbstractC8149d;
-import io.reactivex.AbstractC8152e;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.SingleObserver;
+import io.reactivex.d;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.e;
 import io.reactivex.internal.disposables.DisposableHelper;
 import io.reactivex.internal.disposables.EmptyDisposable;
 import io.reactivex.internal.functions.Functions;
@@ -18,7 +18,7 @@ import tb.i42;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class ObservableToListSingle<T, U extends Collection<? super T>> extends AbstractC8152e<U> implements FuseToObservable<U> {
+public final class ObservableToListSingle<T, U extends Collection<? super T>> extends e<U> implements FuseToObservable<U> {
     final Callable<U> collectionSupplier;
     final ObservableSource<T> source;
 
@@ -77,11 +77,11 @@ public final class ObservableToListSingle<T, U extends Collection<? super T>> ex
     }
 
     @Override // io.reactivex.internal.fuseable.FuseToObservable
-    public AbstractC8149d<U> fuseToObservable() {
+    public d<U> fuseToObservable() {
         return i42.n(new ObservableToList(this.source, this.collectionSupplier));
     }
 
-    @Override // io.reactivex.AbstractC8152e
+    @Override // io.reactivex.e
     public void subscribeActual(SingleObserver<? super U> singleObserver) {
         try {
             this.source.subscribe(new ToListObserver(singleObserver, (Collection) ObjectHelper.requireNonNull(this.collectionSupplier.call(), "The collectionSupplier returned a null collection. Null values are generally not allowed in 2.x operators and sources.")));

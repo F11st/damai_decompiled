@@ -12,7 +12,7 @@ import android.text.TextUtils;
 import cn.damai.common.app.widget.DMDialog;
 import cn.damai.commonbusiness.R$string;
 import com.alipay.android.app.IAlixPay;
-import com.alipay.sdk.m.u.C4318n;
+import com.alipay.sdk.m.u.n;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.io.File;
@@ -158,7 +158,7 @@ public class MobileSecurePayHelper {
         if (isAppInstalled(context, "com.eg.android.AlipayGphone")) {
             return "com.eg.android.AlipayGphone.IAlixPay";
         }
-        if (isAppInstalled(context, C4318n.a)) {
+        if (isAppInstalled(context, n.a)) {
             return IAlixPay.Stub.DESCRIPTOR;
         }
         return null;
@@ -166,7 +166,7 @@ public class MobileSecurePayHelper {
 
     public boolean isMobile_spExist() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1024326252") ? ((Boolean) ipChange.ipc$dispatch("-1024326252", new Object[]{this})).booleanValue() : isAppInstalled(this.mContext, C4318n.a);
+        return AndroidInstantRuntime.support(ipChange, "-1024326252") ? ((Boolean) ipChange.ipc$dispatch("-1024326252", new Object[]{this})).booleanValue() : isAppInstalled(this.mContext, n.a);
     }
 
     public boolean retrieveApkFromAssets(Context context, String str, String str2) {

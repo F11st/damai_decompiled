@@ -6,7 +6,6 @@ import android.content.res.TypedArray;
 import android.os.Build;
 import android.taobao.windvane.packageapp.zipapp.utils.ZipAppUtils;
 import android.text.TextUtils;
-import com.alibaba.aliweex.C3004a;
 import com.taobao.weex.utils.WXLogUtils;
 
 /* compiled from: Taobao */
@@ -56,7 +55,7 @@ public class zz2 {
 
     public static boolean e() {
         if (TextUtils.isEmpty(b)) {
-            Application b2 = C3004a.l().b();
+            Application b2 = com.alibaba.aliweex.a.l().b();
             if (b2 == null) {
                 return false;
             }

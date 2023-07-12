@@ -1,6 +1,6 @@
 package kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement;
 
-import com.huawei.hms.opendevice.AbstractC5658c;
+import com.huawei.hms.opendevice.c;
 import com.meizu.cloud.pushsdk.notification.model.AdvanceSetting;
 import io.flutter.wpkbridge.WPKFactory;
 import java.util.ArrayList;
@@ -8,9 +8,9 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.Pair;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.m;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function1;
 import kotlin.reflect.jvm.internal.impl.descriptors.CallableMemberDescriptor;
 import kotlin.reflect.jvm.internal.impl.descriptors.ClassifierDescriptor;
@@ -70,15 +70,14 @@ public final class SignatureEnhancement {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.SignatureEnhancement$a */
     /* loaded from: classes3.dex */
-    public static class C8361a {
+    public static class a {
         @NotNull
         private final z71 a;
         private final boolean b;
         private final boolean c;
 
-        public C8361a(@NotNull z71 z71Var, boolean z, boolean z2) {
+        public a(@NotNull z71 z71Var, boolean z, boolean z2) {
             b41.i(z71Var, "type");
             this.a = z71Var;
             this.b = z;
@@ -229,23 +228,23 @@ public final class SignatureEnhancement {
     private final <D extends CallableMemberDescriptor> Annotations k(D d, r81 r81Var) {
         int q;
         List<? extends AnnotationDescriptor> k0;
-        ClassifierDescriptor a = c70.a(d);
-        if (a == null) {
+        ClassifierDescriptor a2 = c70.a(d);
+        if (a2 == null) {
             return d.getAnnotations();
         }
-        LazyJavaClassDescriptor lazyJavaClassDescriptor = a instanceof LazyJavaClassDescriptor ? (LazyJavaClassDescriptor) a : null;
+        LazyJavaClassDescriptor lazyJavaClassDescriptor = a2 instanceof LazyJavaClassDescriptor ? (LazyJavaClassDescriptor) a2 : null;
         List<JavaAnnotation> k = lazyJavaClassDescriptor != null ? lazyJavaClassDescriptor.k() : null;
         if (k == null || k.isEmpty()) {
             return d.getAnnotations();
         }
-        q = C8215n.q(k, 10);
+        q = n.q(k, 10);
         ArrayList arrayList = new ArrayList(q);
         for (JavaAnnotation javaAnnotation : k) {
             arrayList.add(new LazyJavaAnnotationDescriptor(r81Var, javaAnnotation, true));
         }
-        Annotations.C8302a c8302a = Annotations.Companion;
+        Annotations.a aVar = Annotations.Companion;
         k0 = CollectionsKt___CollectionsKt.k0(d.getAnnotations(), arrayList);
-        return c8302a.a(k0);
+        return aVar.a(k0);
     }
 
     private final SignatureParts l(CallableMemberDescriptor callableMemberDescriptor, Annotated annotated, boolean z, r81 r81Var, AnnotationQualifierApplicabilityType annotationQualifierApplicabilityType, Function1<? super CallableMemberDescriptor, ? extends z71> function1) {
@@ -253,7 +252,7 @@ public final class SignatureEnhancement {
         z71 invoke = function1.invoke(callableMemberDescriptor);
         Collection<? extends CallableMemberDescriptor> overriddenDescriptors = callableMemberDescriptor.getOverriddenDescriptors();
         b41.h(overriddenDescriptors, "this.overriddenDescriptors");
-        q = C8215n.q(overriddenDescriptors, 10);
+        q = n.q(overriddenDescriptors, 10);
         ArrayList arrayList = new ArrayList(q);
         for (CallableMemberDescriptor callableMemberDescriptor2 : overriddenDescriptors) {
             b41.h(callableMemberDescriptor2, AdvanceSetting.NETWORK_TYPE);
@@ -271,9 +270,9 @@ public final class SignatureEnhancement {
     @NotNull
     public final <D extends CallableMemberDescriptor> Collection<D> e(@NotNull r81 r81Var, @NotNull Collection<? extends D> collection) {
         int q;
-        b41.i(r81Var, AbstractC5658c.a);
+        b41.i(r81Var, c.a);
         b41.i(collection, "platformSignatures");
-        q = C8215n.q(collection, 10);
+        q = n.q(collection, 10);
         ArrayList arrayList = new ArrayList(q);
         Iterator<T> it = collection.iterator();
         while (it.hasNext()) {
@@ -287,7 +286,7 @@ public final class SignatureEnhancement {
         List g;
         b41.i(z71Var, "type");
         b41.i(r81Var, WPKFactory.INIT_KEY_CONTEXT);
-        g = C8214m.g();
+        g = m.g();
         return SignatureParts.h(new SignatureParts(null, z71Var, g, false, r81Var, AnnotationQualifierApplicabilityType.TYPE_USE, false, true, 64, null), null, 1, null).b();
     }
 
@@ -299,7 +298,7 @@ public final class SignatureEnhancement {
         b41.i(typeParameterDescriptor, "typeParameter");
         b41.i(list, "bounds");
         b41.i(r81Var, WPKFactory.INIT_KEY_CONTEXT);
-        q = C8215n.q(list, 10);
+        q = n.q(list, 10);
         ArrayList arrayList = new ArrayList(q);
         Iterator it2 = list.iterator();
         while (it2.hasNext()) {
@@ -314,7 +313,7 @@ public final class SignatureEnhancement {
             })) {
                 it = it2;
             } else {
-                g = C8214m.g();
+                g = m.g();
                 it = it2;
                 z71Var = SignatureParts.h(new SignatureParts(typeParameterDescriptor, z71Var, g, false, r81Var, AnnotationQualifierApplicabilityType.TYPE_PARAMETER_BOUNDS, true, false, 128, null), null, 1, null).b();
             }
@@ -494,7 +493,7 @@ public final class SignatureEnhancement {
                 java.util.Collection<tb.z71> r0 = r7.c
                 java.util.ArrayList r8 = new java.util.ArrayList
                 r1 = 10
-                int r1 = kotlin.collections.C8212k.q(r0, r1)
+                int r1 = kotlin.collections.k.q(r0, r1)
                 r8.<init>(r1)
                 java.util.Iterator r0 = r0.iterator()
             L13:
@@ -557,7 +556,7 @@ public final class SignatureEnhancement {
                 r4 = 0
             L74:
                 java.lang.Object r0 = r9.get(r15)
-                kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.b r0 = (kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.C8365b) r0
+                kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.b r0 = (kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.b) r0
                 tb.z71 r1 = r0.a()
                 tb.c51 r3 = r0.b()
                 kotlin.reflect.jvm.internal.impl.descriptors.TypeParameterDescriptor r5 = r0.c()
@@ -571,8 +570,8 @@ public final class SignatureEnhancement {
                 java.lang.Object r16 = r0.next()
                 r10 = r16
                 java.util.List r10 = (java.util.List) r10
-                java.lang.Object r10 = kotlin.collections.C8212k.S(r10, r15)
-                kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.b r10 = (kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.C8365b) r10
+                java.lang.Object r10 = kotlin.collections.k.S(r10, r15)
+                kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.b r10 = (kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.b) r10
                 if (r10 != 0) goto Lab
                 r10 = 0
                 goto Laf
@@ -635,7 +634,7 @@ public final class SignatureEnhancement {
             return b41.d(name, o51Var.i().g()) && b41.d(DescriptorUtilsKt.e(declarationDescriptor), o51Var.i());
         }
 
-        public static /* synthetic */ C8361a h(SignatureParts signatureParts, rq2 rq2Var, int i, Object obj) {
+        public static /* synthetic */ a h(SignatureParts signatureParts, rq2 rq2Var, int i, Object obj) {
             if ((i & 1) != 0) {
                 rq2Var = null;
             }
@@ -821,13 +820,13 @@ public final class SignatureEnhancement {
             return new Pair<>(new fm1(nullabilityQualifier, b.d()), Boolean.valueOf(b.c() == nullabilityQualifier));
         }
 
-        private final List<C8365b> q(z71 z71Var) {
+        private final List<b> q(z71 z71Var) {
             ArrayList arrayList = new ArrayList(1);
             r(this, arrayList, z71Var, this.e, null);
             return arrayList;
         }
 
-        private static final void r(SignatureParts signatureParts, ArrayList<C8365b> arrayList, z71 z71Var, r81 r81Var, TypeParameterDescriptor typeParameterDescriptor) {
+        private static final void r(SignatureParts signatureParts, ArrayList<b> arrayList, z71 z71Var, r81 r81Var, TypeParameterDescriptor typeParameterDescriptor) {
             AnnotationQualifierApplicabilityType annotationQualifierApplicabilityType;
             c51 a;
             List<Pair> H0;
@@ -843,7 +842,7 @@ public final class SignatureEnhancement {
                 }
                 a = b.a(annotationQualifierApplicabilityType);
             }
-            arrayList.add(new C8365b(z71Var, a, typeParameterDescriptor, false));
+            arrayList.add(new b(z71Var, a, typeParameterDescriptor, false));
             if (signatureParts.h && (z71Var instanceof RawType)) {
                 return;
             }
@@ -857,7 +856,7 @@ public final class SignatureEnhancement {
                 if (typeProjection.isStarProjection()) {
                     z71 type = typeProjection.getType();
                     b41.h(type, "arg.type");
-                    arrayList.add(new C8365b(type, a, typeParameterDescriptor2, true));
+                    arrayList.add(new b(type, a, typeParameterDescriptor2, true));
                 } else {
                     z71 type2 = typeProjection.getType();
                     b41.h(type2, "arg.type");
@@ -867,7 +866,7 @@ public final class SignatureEnhancement {
         }
 
         @NotNull
-        public final C8361a f(@Nullable final rq2 rq2Var) {
+        public final a f(@Nullable final rq2 rq2Var) {
             boolean c;
             final Function1<Integer, s51> c2 = c();
             Function1<Integer, s51> function1 = rq2Var == null ? null : new Function1<Integer, s51>() { // from class: kotlin.reflect.jvm.internal.impl.load.java.typeEnhancement.SignatureEnhancement$SignatureParts$enhance$qualifiersWithPredefined$1$1
@@ -905,8 +904,8 @@ public final class SignatureEnhancement {
                 c2 = function1;
             }
             z71 b = r51Var.b(z71Var, c2, this.h);
-            C8361a c8361a = b != null ? new C8361a(b, true, c) : null;
-            return c8361a == null ? new C8361a(this.b, false, c) : c8361a;
+            a aVar = b != null ? new a(b, true, c) : null;
+            return aVar == null ? new a(this.b, false, c) : aVar;
         }
 
         public /* synthetic */ SignatureParts(Annotated annotated, z71 z71Var, Collection collection, boolean z, r81 r81Var, AnnotationQualifierApplicabilityType annotationQualifierApplicabilityType, boolean z2, boolean z3, int i, k50 k50Var) {

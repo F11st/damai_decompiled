@@ -25,7 +25,7 @@ import com.alipay.android.phone.inside.api.result.OperationResult;
 import com.alipay.android.phone.inside.service.InsideOperationService;
 import com.alipay.sdk.app.AuthTask;
 import com.alipay.sdk.auth.OpenAuthTask;
-import com.alipay.sdk.m.u.C4316l;
+import com.alipay.sdk.m.u.l;
 import com.amap.api.services.core.AMapException;
 import com.ut.mini.behavior.edgecomputing.datacollector.core.UTDataCollectorNodeColumn;
 import java.util.HashMap;
@@ -258,7 +258,7 @@ public class AlipayOauthServiceProviderImpl extends BaseOauthServiceProviderImpl
                                     return;
                                 }
                                 AnonymousClass3 anonymousClass33 = AnonymousClass3.this;
-                                oauthCallback.onFail(str, 201, authV2.get(C4316l.b));
+                                oauthCallback.onFail(str, 201, authV2.get(l.b));
                             }
                         }
                     });

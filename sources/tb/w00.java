@@ -4,14 +4,10 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.view.View;
 import com.alibaba.fastjson.JSONArray;
-import com.taobao.android.dinamicx.C6366c;
 import com.taobao.android.dinamicx.DXRuntimeContext;
 import com.taobao.android.dinamicx.DinamicXEngine;
 import com.taobao.android.dinamicx.view.richtext.DXNativeRichText;
-import com.taobao.android.dinamicx.view.richtext.node.C6414a;
-import com.taobao.android.dinamicx.view.richtext.node.C6424b;
 import com.taobao.android.dinamicx.view.richtext.node.RichText;
-import com.taobao.android.dinamicx.widget.C6493f;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
 import com.taobao.android.dinamicx.widget.richtext.DXImageSpanWidgetNode;
 import java.util.ArrayList;
@@ -20,7 +16,7 @@ import tb.q32;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class w00 extends C6493f {
+public class w00 extends com.taobao.android.dinamicx.widget.f {
     public static final int DEFAULT_TEXT_COLOR = -16777216;
     public static final long DXRICHTEXT_BASELINE = 1445754069157927243L;
     public static final int DXRICHTEXT_BASELINE_BOTTOM = 0;
@@ -115,10 +111,9 @@ public class w00 extends C6493f {
     private Integer s = -16777216;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.w00$a */
     /* loaded from: classes11.dex */
-    class View$OnClickListenerC9834a implements View.OnClickListener {
-        View$OnClickListenerC9834a() {
+    class a implements View.OnClickListener {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -129,10 +124,9 @@ public class w00 extends C6493f {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.w00$b */
     /* loaded from: classes11.dex */
-    class View$OnClickListenerC9835b implements View.OnClickListener {
-        View$OnClickListenerC9835b() {
+    class b implements View.OnClickListener {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -142,10 +136,9 @@ public class w00 extends C6493f {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.w00$c */
     /* loaded from: classes11.dex */
-    class View$OnLongClickListenerC9836c implements View.OnLongClickListener {
-        View$OnLongClickListenerC9836c() {
+    class c implements View.OnLongClickListener {
+        c() {
         }
 
         @Override // android.view.View.OnLongClickListener
@@ -157,10 +150,9 @@ public class w00 extends C6493f {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.w00$d */
     /* loaded from: classes11.dex */
-    class View$OnClickListenerC9837d implements View.OnClickListener {
-        View$OnClickListenerC9837d() {
+    class d implements View.OnClickListener {
+        d() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -170,10 +162,9 @@ public class w00 extends C6493f {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.w00$e */
     /* loaded from: classes11.dex */
-    class View$OnClickListenerC9838e implements View.OnClickListener {
-        View$OnClickListenerC9838e() {
+    class e implements View.OnClickListener {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -184,10 +175,9 @@ public class w00 extends C6493f {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.w00$f */
     /* loaded from: classes11.dex */
-    class View$OnLongClickListenerC9839f implements View.OnLongClickListener {
-        View$OnLongClickListenerC9839f() {
+    class f implements View.OnLongClickListener {
+        f() {
         }
 
         @Override // android.view.View.OnLongClickListener
@@ -198,10 +188,9 @@ public class w00 extends C6493f {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.w00$g */
     /* loaded from: classes11.dex */
-    class View$OnLongClickListenerC9840g implements View.OnLongClickListener {
-        View$OnLongClickListenerC9840g() {
+    class g implements View.OnLongClickListener {
+        g() {
         }
 
         @Override // android.view.View.OnLongClickListener
@@ -239,14 +228,14 @@ public class w00 extends C6493f {
                         }
                     }
                 }
-            } catch (Exception e) {
-                ry.b(e);
+            } catch (Exception e2) {
+                ry.b(e2);
             }
         }
     }
 
     private RichText f() {
-        C6414a k;
+        com.taobao.android.dinamicx.view.richtext.node.a k;
         StringBuilder sb = new StringBuilder();
         ArrayList arrayList = new ArrayList();
         List<DXWidgetNode> children = getChildren();
@@ -255,20 +244,20 @@ public class w00 extends C6493f {
             if (dXWidgetNode.getVisibility() != 2) {
                 if (dXWidgetNode instanceof u10) {
                     u10 u10Var = (u10) dXWidgetNode;
-                    C6424b a = u10Var.a();
-                    if (a != null) {
+                    com.taobao.android.dinamicx.view.richtext.node.b a2 = u10Var.a();
+                    if (a2 != null) {
                         if (u10Var.d()) {
                             if (!this.z) {
                                 RichText richText = new RichText();
-                                richText.add(a);
+                                richText.add(a2);
                                 this.E.A(richText.renderText());
                                 this.f = 3;
                                 this.E.H(3);
                             }
                         } else {
-                            arrayList.add(a);
+                            arrayList.add(a2);
                         }
-                        sb.append(a.getText());
+                        sb.append(a2.getText());
                     }
                 } else if ((dXWidgetNode instanceof DXImageSpanWidgetNode) && (k = ((DXImageSpanWidgetNode) dXWidgetNode).k(true, this.D)) != null) {
                     arrayList.add(k);
@@ -442,7 +431,7 @@ public class w00 extends C6493f {
         return super.getDefaultValueForIntAttr(j);
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6493f
+    @Override // com.taobao.android.dinamicx.widget.f
     public boolean isDisableFlatten() {
         return true;
     }
@@ -453,35 +442,35 @@ public class w00 extends C6493f {
         if (j == 9859228430928305L && !TextUtils.isEmpty(this.i)) {
             this.F = true;
             if (this.H) {
-                view.setOnClickListener(new View$OnClickListenerC9834a());
+                view.setOnClickListener(new a());
             } else {
-                view.setOnClickListener(new View$OnClickListenerC9835b());
+                view.setOnClickListener(new b());
             }
         } else if (j == 5176476879387311985L && !TextUtils.isEmpty(this.m)) {
             this.G = true;
             if (this.I) {
-                view.setOnLongClickListener(new View$OnLongClickListenerC9836c());
+                view.setOnLongClickListener(new c());
             }
         } else if (j == 18903999933159L) {
             this.H = true;
             if (!this.F) {
-                view.setOnClickListener(new View$OnClickListenerC9837d());
+                view.setOnClickListener(new d());
             } else {
-                view.setOnClickListener(new View$OnClickListenerC9838e());
+                view.setOnClickListener(new e());
             }
         } else if (j == -6544685697300501093L) {
             this.I = true;
             if (!this.G) {
-                view.setOnLongClickListener(new View$OnLongClickListenerC9839f());
+                view.setOnLongClickListener(new f());
             } else {
-                view.setOnLongClickListener(new View$OnLongClickListenerC9840g());
+                view.setOnLongClickListener(new g());
             }
         } else {
             super.onBindEvent(context, view, j);
         }
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onClone(DXWidgetNode dXWidgetNode, boolean z) {
         if (dXWidgetNode == null || !(dXWidgetNode instanceof w00)) {
             return;
@@ -536,13 +525,13 @@ public class w00 extends C6493f {
             if (dXWidgetNode.getVisibility() != 2 && (dXWidgetNode instanceof u10)) {
                 u10 u10Var = (u10) dXWidgetNode;
                 if (this.B && u10Var.c() && u10Var.b() > 0) {
-                    u10Var.f((int) C6366c.b(dXRuntimeContext, u10Var.b()));
+                    u10Var.f((int) com.taobao.android.dinamicx.c.b(dXRuntimeContext, u10Var.b()));
                 }
                 u10Var.e(this.B && u10Var.c());
             }
         }
         if (this.B && dXRuntimeContext != null && dXRuntimeContext.getEngineContext().b().p()) {
-            this.u = (int) C6366c.b(dXRuntimeContext, this.u);
+            this.u = (int) com.taobao.android.dinamicx.c.b(dXRuntimeContext, this.u);
         }
     }
 
@@ -556,7 +545,7 @@ public class w00 extends C6493f {
     @Override // com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onMeasure(int i, int i2) {
         n();
-        q32.C9594a u = this.E.u(i, i2);
+        q32.a u = this.E.u(i, i2);
         if (u == null) {
             super.onMeasure(i, i2);
         } else {
@@ -565,7 +554,7 @@ public class w00 extends C6493f {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onRenderView(Context context, View view) {
         if (view instanceof DXNativeRichText) {
             ((DXNativeRichText) view).setRichTextRender(this.E);
@@ -575,23 +564,23 @@ public class w00 extends C6493f {
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.taobao.android.dinamicx.widget.DXWidgetNode
-    public void onSetDoubleAttribute(long j, double d) {
+    public void onSetDoubleAttribute(long j, double d2) {
         if (j == DXRICHTEXT_FIRSTLINEHEADINDENT) {
-            this.b = d;
+            this.b = d2;
         } else if (j == DXRICHTEXT_LINEHEIGHT) {
-            this.g = d;
+            this.g = d2;
         } else if (j == DXRICHTEXT_LINESPACING) {
-            this.h = d;
+            this.h = d2;
         } else if (j == -946376925464026374L) {
-            this.p = d;
+            this.p = d2;
         } else if (j == DXRICHTEXT_WORDKERN) {
-            this.x = d;
+            this.x = d2;
         } else {
-            super.onSetDoubleAttribute(j, d);
+            super.onSetDoubleAttribute(j, d2);
         }
     }
 
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetIntAttribute(long j, int i) {
         if (j == DXRICHTEXT_BASELINE) {
             this.a = i;
@@ -641,7 +630,7 @@ public class w00 extends C6493f {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.taobao.android.dinamicx.widget.C6493f, com.taobao.android.dinamicx.widget.DXWidgetNode
+    @Override // com.taobao.android.dinamicx.widget.f, com.taobao.android.dinamicx.widget.DXWidgetNode
     public void onSetListAttribute(long j, JSONArray jSONArray) {
         if (j == -946588628814454279L) {
             this.o = jSONArray;

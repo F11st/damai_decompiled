@@ -8,11 +8,11 @@ import com.android.alibaba.ip.runtime.IpChange;
 /* loaded from: classes11.dex */
 public class SmartEvaluator$1 extends Thread {
     private static transient /* synthetic */ IpChange $ipChange;
-    final /* synthetic */ C7812c this$0;
+    final /* synthetic */ c this$0;
     final /* synthetic */ String val$info;
 
-    SmartEvaluator$1(C7812c c7812c, String str) {
-        this.this$0 = c7812c;
+    SmartEvaluator$1(c cVar, String str) {
+        this.this$0 = cVar;
         this.val$info = str;
     }
 
@@ -24,8 +24,8 @@ public class SmartEvaluator$1 extends Thread {
             ipChange.ipc$dispatch("82068951", new Object[]{this});
             return;
         }
-        C7812c c7812c = this.this$0;
-        context = c7812c.c;
-        c7812c.a(context, this.val$info);
+        c cVar = this.this$0;
+        context = cVar.c;
+        cVar.a(context, this.val$info);
     }
 }

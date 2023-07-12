@@ -48,12 +48,12 @@ public class GiftKeyBoardAdapter extends MultiItemCommonAdapter<KeyBoardBean> {
                 }
                 int i2 = keyBoardBean.type;
                 if (i2 == 0) {
-                    return R.C7942layout.dago_pgc_ykl_send_gift_keyboard_num_0;
+                    return R.layout.dago_pgc_ykl_send_gift_keyboard_num_0;
                 }
                 if (i2 == 1) {
-                    return R.C7942layout.dago_pgc_ykl_send_gift_keyboard_num_1;
+                    return R.layout.dago_pgc_ykl_send_gift_keyboard_num_1;
                 }
-                return R.C7942layout.dago_pgc_ykl_send_gift_keyboard_num_2;
+                return R.layout.dago_pgc_ykl_send_gift_keyboard_num_2;
             }
         });
     }
@@ -63,7 +63,7 @@ public class GiftKeyBoardAdapter extends MultiItemCommonAdapter<KeyBoardBean> {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1352920764")) {
             ipChange.ipc$dispatch("1352920764", new Object[]{this, commonViewHolder, Integer.valueOf(i), keyBoardBean});
-        } else if (commonViewHolder.getLayoutId() == R.C7942layout.dago_pgc_ykl_send_gift_keyboard_num_0) {
+        } else if (commonViewHolder.getLayoutId() == R.layout.dago_pgc_ykl_send_gift_keyboard_num_0) {
             ((TextView) commonViewHolder.getView(R.id.id_tv)).setText(keyBoardBean.name);
             View view = commonViewHolder.getView(R.id.id_v_sp);
             int i2 = (i + 1) % 3;
@@ -80,7 +80,7 @@ public class GiftKeyBoardAdapter extends MultiItemCommonAdapter<KeyBoardBean> {
                 }
             }
             view.setVisibility(0);
-        } else if (commonViewHolder.getLayoutId() == R.C7942layout.dago_pgc_ykl_send_gift_keyboard_num_1) {
+        } else if (commonViewHolder.getLayoutId() == R.layout.dago_pgc_ykl_send_gift_keyboard_num_1) {
             View view2 = commonViewHolder.getView(R.id.id_v_sp);
             int i3 = (i + 1) % 3;
             if (i3 == 0) {
@@ -96,7 +96,7 @@ public class GiftKeyBoardAdapter extends MultiItemCommonAdapter<KeyBoardBean> {
                 }
             }
             view2.setVisibility(0);
-        } else if (commonViewHolder.getLayoutId() == R.C7942layout.dago_pgc_ykl_send_gift_keyboard_num_2) {
+        } else if (commonViewHolder.getLayoutId() == R.layout.dago_pgc_ykl_send_gift_keyboard_num_2) {
             View view3 = commonViewHolder.getView(R.id.id_v_sp);
             int i4 = (i + 1) % 3;
             if (i4 == 0) {

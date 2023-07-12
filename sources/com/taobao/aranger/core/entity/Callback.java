@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import com.taobao.aranger.core.wrapper.MethodWrapper;
 import com.taobao.aranger.core.wrapper.ParameterWrapper;
-import com.taobao.aranger.utils.C6699b;
+import com.taobao.aranger.utils.b;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -42,7 +42,7 @@ public class Callback implements Parcelable {
     public void readFromParcel(Parcel parcel) {
         this.mKey = parcel.readString();
         this.mMethodWrapper = MethodWrapper.CREATOR.createFromParcel(parcel);
-        this.mParameterWrappers = (ParameterWrapper[]) C6699b.e(getClass().getClassLoader(), parcel);
+        this.mParameterWrappers = (ParameterWrapper[]) b.e(getClass().getClassLoader(), parcel);
     }
 
     @Override // android.os.Parcelable
@@ -103,6 +103,6 @@ public class Callback implements Parcelable {
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(this.mKey);
         this.mMethodWrapper.writeToParcel(parcel, i);
-        this.mDataSize = C6699b.g(parcel, this.mParameterWrappers, i, true);
+        this.mDataSize = b.g(parcel, this.mParameterWrappers, i, true);
     }
 }

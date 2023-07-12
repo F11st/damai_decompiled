@@ -47,12 +47,11 @@ public class tr2 {
     private boolean b = false;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.tr2$a */
     /* loaded from: classes6.dex */
-    public class DialogInterface$OnClickListenerC9730a implements DialogInterface.OnClickListener {
+    public class a implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC9730a(tr2 tr2Var) {
+        a(tr2 tr2Var) {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -459,7 +458,7 @@ public class tr2 {
                     DMNav.from(context).stack(this.a).withExtras(bundle3).toUri(NavUri.b(str19));
                 }
             } else {
-                new DMDialog(context).o(true).v(PurchaseConstants.NORMAL_WARNING_TITLE).q("请更新APP到最新版使用哦.").t(3).n("我知道了", new DialogInterface$OnClickListenerC9730a(this)).show();
+                new DMDialog(context).o(true).v(PurchaseConstants.NORMAL_WARNING_TITLE).q("请更新APP到最新版使用哦.").t(3).n("我知道了", new a(this)).show();
                 b23.g("UIRouterManager:jsondata={appVersion:" + AppConfig.q() + ",url:" + parse.toString() + "}", StaticsUtil.PLAY_CODE_103, "UIRouterManager地址转换异常");
             }
         }

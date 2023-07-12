@@ -7,7 +7,6 @@ import android.text.TextUtils;
 import cn.damai.common.askpermission.OnGrantListener;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
-import cn.damai.common.user.C0529c;
 import cn.damai.commonbusiness.imagebrowse.bean.PicInfo;
 import cn.damai.commonbusiness.share.generateimage.DMShareMessage;
 import cn.damai.commonbusiness.share.generateimage.GenerateImageUtil;
@@ -25,14 +24,13 @@ public class gw1 {
     public static final String productUrl = "https://m.damai.cn/damai/detail/item.html?itemId=";
 
     /* compiled from: Taobao */
-    /* renamed from: tb.gw1$a */
     /* loaded from: classes8.dex */
-    public class C9188a implements OnGrantListener {
+    public class a implements OnGrantListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ Activity a;
         final /* synthetic */ DMShareMessage b;
 
-        C9188a(Activity activity, DMShareMessage dMShareMessage) {
+        a(Activity activity, DMShareMessage dMShareMessage) {
             this.a = activity;
             this.b = dMShareMessage;
         }
@@ -96,7 +94,7 @@ public class gw1 {
                 dMShareMessage.evaluateTime = str2;
                 dMShareMessage.projectId = String.valueOf(j);
                 dMShareMessage.commentType = "";
-                ir1.b(activity, false, mr1.STORAGE, "用于保存分享图片", new C9188a(activity, dMShareMessage));
+                ir1.b(activity, false, mr1.STORAGE, "用于保存分享图片", new a(activity, dMShareMessage));
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -145,7 +143,7 @@ public class gw1 {
             ipChange.ipc$dispatch("825921742", new Object[]{activity, str, str2, str3, str4, str5, str6});
         } else if (TextUtils.isEmpty(str4)) {
         } else {
-            C0529c.e().x(pp2.u().a1(str2));
+            cn.damai.common.user.c.e().x(pp2.u().a1(str2));
             Bundle bundle = new Bundle();
             bundle.putString("imageUrl", str5);
             bundle.putString("uniqueIdent", str2);

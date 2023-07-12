@@ -58,12 +58,11 @@ public class MusicFlipperPanel {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.music.viewholder.MusicFlipperPanel$a */
     /* loaded from: classes7.dex */
-    public class C1934a implements MusicFlipHotItemPanel.OnOneFlipperItemListener {
+    public class a implements MusicFlipHotItemPanel.OnOneFlipperItemListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1934a() {
+        a() {
         }
 
         @Override // cn.damai.tetris.component.music.viewholder.MusicFlipHotItemPanel.OnOneFlipperItemListener
@@ -98,12 +97,11 @@ public class MusicFlipperPanel {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.component.music.viewholder.MusicFlipperPanel$b */
     /* loaded from: classes16.dex */
-    public class C1935b implements ValueAnimator.AnimatorUpdateListener {
+    public class b implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1935b() {
+        b() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -206,10 +204,10 @@ public class MusicFlipperPanel {
         this.b.removeAllViews();
         this.b.setVisibility(0);
         this.c.removeAllViews();
-        int b = th2.b(list);
-        this.g = b;
+        int b2 = th2.b(list);
+        this.g = b2;
         this.f = 0;
-        this.a.setVisibility(b <= 0 ? 8 : 0);
+        this.a.setVisibility(b2 <= 0 ? 8 : 0);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -236,7 +234,7 @@ public class MusicFlipperPanel {
         for (int i = 0; i < size; i++) {
             MusicDispatchBean musicDispatchBean = list.get(i);
             musicDispatchBean.pos = i;
-            MusicFlipHotItemPanel musicFlipHotItemPanel = new MusicFlipHotItemPanel(this.b, new C1934a());
+            MusicFlipHotItemPanel musicFlipHotItemPanel = new MusicFlipHotItemPanel(this.b, new a());
             musicFlipHotItemPanel.b(musicDispatchBean);
             View d = musicFlipHotItemPanel.d();
             this.d.onFlipItemExpose(d, musicDispatchBean);
@@ -290,7 +288,7 @@ public class MusicFlipperPanel {
         ValueAnimator ofInt = ValueAnimator.ofInt(width, i);
         this.i = ofInt;
         ofInt.setDuration(300L);
-        this.i.addUpdateListener(new C1935b());
+        this.i.addUpdateListener(new b());
         this.i.start();
     }
 

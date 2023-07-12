@@ -28,7 +28,7 @@ public final class AwaitKt {
             r0.<init>(r6)
         L18:
             java.lang.Object r6 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L35
@@ -46,7 +46,7 @@ public final class AwaitKt {
             tb.i32.b(r6)
             boolean r6 = r5.isEmpty()
             if (r6 == 0) goto L43
-            java.util.List r5 = kotlin.collections.C8212k.g()
+            java.util.List r5 = kotlin.collections.k.g()
             goto L64
         L43:
             kotlinx.coroutines.c r6 = new kotlinx.coroutines.c
@@ -96,7 +96,7 @@ public final class AwaitKt {
             r0.<init>(r5)
         L18:
             java.lang.Object r5 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L35
@@ -120,7 +120,7 @@ public final class AwaitKt {
             r5 = 0
         L3e:
             if (r5 == 0) goto L45
-            java.util.List r4 = kotlin.collections.C8212k.g()
+            java.util.List r4 = kotlin.collections.k.g()
             goto L58
         L45:
             kotlinx.coroutines.c r5 = new kotlinx.coroutines.c
@@ -165,7 +165,7 @@ public final class AwaitKt {
             r0.<init>(r8)
         L18:
             java.lang.Object r8 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L46
@@ -248,7 +248,7 @@ public final class AwaitKt {
             r0.<init>(r8)
         L18:
             java.lang.Object r8 = r0.result
-            java.lang.Object r1 = kotlin.coroutines.intrinsics.C8233a.d()
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.a.d()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L4f

@@ -22,9 +22,9 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.BiConsumer;
 import kotlin.collections.ArraysKt___ArraysKt;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
+import kotlin.collections.m;
+import kotlin.collections.n;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.Ref$IntRef;
 import okio.ByteString;
@@ -62,14 +62,13 @@ public final class SVGAVideoEntity {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.SVGAVideoEntity$a */
     /* loaded from: classes10.dex */
-    public static final class C6107a implements SoundPool.OnLoadCompleteListener {
+    public static final class a implements SoundPool.OnLoadCompleteListener {
         final /* synthetic */ Ref$IntRef a;
         final /* synthetic */ List b;
         final /* synthetic */ Function0 c;
 
-        C6107a(Ref$IntRef ref$IntRef, List list, SVGAVideoEntity sVGAVideoEntity, Function0 function0, MovieEntity movieEntity) {
+        a(Ref$IntRef ref$IntRef, List list, SVGAVideoEntity sVGAVideoEntity, Function0 function0, MovieEntity movieEntity) {
             this.a = ref$IntRef;
             this.b = list;
             this.c = function0;
@@ -88,12 +87,11 @@ public final class SVGAVideoEntity {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.SVGAVideoEntity$b */
     /* loaded from: classes10.dex */
-    public static final class C6108b<T, U> implements BiConsumer<String, byte[]> {
+    public static final class b<T, U> implements BiConsumer<String, byte[]> {
         final /* synthetic */ HashMap a;
 
-        C6108b(HashMap hashMap) {
+        b(HashMap hashMap) {
             this.a = hashMap;
         }
 
@@ -121,9 +119,9 @@ public final class SVGAVideoEntity {
         this.a = true;
         this.b = new z42(0.0d, 0.0d, 0.0d, 0.0d);
         this.c = 15;
-        g = C8214m.g();
+        g = m.g();
         this.e = g;
-        g2 = C8214m.g();
+        g2 = m.g();
         this.f = g2;
         this.h = new HashMap<>();
         this.i = file;
@@ -157,7 +155,7 @@ public final class SVGAVideoEntity {
                 ref$IntRef.element = 0;
                 SoundPool soundPool2 = new SoundPool(Math.min(12, list2.size()), 2, 0);
                 HashMap hashMap2 = new HashMap();
-                soundPool2.setOnLoadCompleteListener(new C6107a(ref$IntRef, list2, this, function0, movieEntity));
+                soundPool2.setOnLoadCompleteListener(new a(ref$IntRef, list2, this, function0, movieEntity));
                 HashMap hashMap3 = new HashMap();
                 Map<String, ByteString> map = movieEntity.images;
                 if (map != null && (entrySet = map.entrySet()) != null) {
@@ -177,9 +175,9 @@ public final class SVGAVideoEntity {
                     }
                 }
                 if (hashMap3.size() > 0) {
-                    hashMap3.forEach(new C6108b(hashMap2));
+                    hashMap3.forEach(new b(hashMap2));
                 }
-                q = C8215n.q(list2, 10);
+                q = n.q(list2, 10);
                 ArrayList arrayList = new ArrayList(q);
                 for (AudioEntity audioEntity : list2) {
                     b41.e(audioEntity, "audio");
@@ -316,14 +314,14 @@ public final class SVGAVideoEntity {
         int q;
         List<SpriteEntity> list = movieEntity.sprites;
         if (list != null) {
-            q = C8215n.q(list, 10);
+            q = n.q(list, 10);
             g = new ArrayList<>(q);
             for (SpriteEntity spriteEntity : list) {
                 b41.e(spriteEntity, AdvanceSetting.NETWORK_TYPE);
                 g.add(new d52(spriteEntity));
             }
         } else {
-            g = C8214m.g();
+            g = m.g();
         }
         this.e = g;
     }
@@ -420,9 +418,9 @@ public final class SVGAVideoEntity {
         this.a = true;
         this.b = new z42(0.0d, 0.0d, 0.0d, 0.0d);
         this.c = 15;
-        g = C8214m.g();
+        g = m.g();
         this.e = g;
-        g2 = C8214m.g();
+        g2 = m.g();
         this.f = g2;
         this.h = new HashMap<>();
         this.j = movieEntity;

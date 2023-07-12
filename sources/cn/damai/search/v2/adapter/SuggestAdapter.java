@@ -32,15 +32,14 @@ public class SuggestAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.search.v2.adapter.SuggestAdapter$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1642a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ SearchWordViewHolder a;
         final /* synthetic */ SearchSuggest b;
         final /* synthetic */ int c;
 
-        View$OnClickListenerC1642a(SearchWordViewHolder searchWordViewHolder, SearchSuggest searchSuggest, int i) {
+        a(SearchWordViewHolder searchWordViewHolder, SearchSuggest searchSuggest, int i) {
             this.a = searchWordViewHolder;
             this.b = searchSuggest;
             this.c = i;
@@ -105,7 +104,7 @@ public class SuggestAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         SearchWordViewHolder searchWordViewHolder = (SearchWordViewHolder) viewHolder;
         SearchSuggest searchSuggest = this.a.get(i).mSuggestWord;
         searchWordViewHolder.a(searchSuggest);
-        searchWordViewHolder.itemView.setOnClickListener(new View$OnClickListenerC1642a(searchWordViewHolder, searchSuggest, i));
+        searchWordViewHolder.itemView.setOnClickListener(new a(searchWordViewHolder, searchSuggest, i));
         OnSuggestListener onSuggestListener = this.c;
         if (onSuggestListener != null) {
             onSuggestListener.onSuggestExpose(searchWordViewHolder.itemView, searchSuggest, i);

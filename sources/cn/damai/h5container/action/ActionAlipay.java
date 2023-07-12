@@ -8,7 +8,7 @@ import android.taobao.windvane.jsbridge.WVCallBackContext;
 import android.taobao.windvane.jsbridge.WVResult;
 import cn.damai.pay.alipay.Result2;
 import com.alipay.sdk.app.PayTask;
-import com.alipay.sdk.m.u.C4316l;
+import com.alipay.sdk.m.u.l;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 
@@ -35,9 +35,9 @@ public class ActionAlipay extends DMBridgeAction {
                     Result2 result2 = new Result2((String) message.obj);
                     try {
                         WVResult wVResult = new WVResult();
-                        wVResult.addData(C4316l.a, result2.resultStatus);
+                        wVResult.addData(l.a, result2.resultStatus);
                         wVResult.addData("result", result2.result);
-                        wVResult.addData(C4316l.b, result2.memo);
+                        wVResult.addData(l.b, result2.memo);
                         ActionAlipay.this.onAlipay(wVResult);
                     } catch (Exception e) {
                         e.printStackTrace();

@@ -1,6 +1,5 @@
 package com.alibaba.aliweex.adapter.module;
 
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.adapter.IAliPayModuleAdapter;
 import com.alibaba.aliweex.adapter.ICallback;
 import com.alibaba.fastjson.JSONObject;
@@ -13,13 +12,12 @@ import com.taobao.weex.common.WXModule;
 public class WXAliPayModule extends WXModule {
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.aliweex.adapter.module.WXAliPayModule$a */
     /* loaded from: classes5.dex */
-    class C3042a implements ICallback {
+    class a implements ICallback {
         final /* synthetic */ JSCallback a;
         final /* synthetic */ JSCallback b;
 
-        C3042a(WXAliPayModule wXAliPayModule, JSCallback jSCallback, JSCallback jSCallback2) {
+        a(WXAliPayModule wXAliPayModule, JSCallback jSCallback, JSCallback jSCallback2) {
             this.a = jSCallback;
             this.b = jSCallback2;
         }
@@ -43,9 +41,9 @@ public class WXAliPayModule extends WXModule {
 
     @JSMethod
     public void tradePay(JSONObject jSONObject, JSCallback jSCallback, JSCallback jSCallback2) {
-        IAliPayModuleAdapter a = C3004a.l().a();
-        if (a != null) {
-            a.tradePay(this.mWXSDKInstance, jSONObject, new C3042a(this, jSCallback, jSCallback2));
+        IAliPayModuleAdapter a2 = com.alibaba.aliweex.a.l().a();
+        if (a2 != null) {
+            a2.tradePay(this.mWXSDKInstance, jSONObject, new a(this, jSCallback, jSCallback2));
         } else {
             notSupported(jSCallback2);
         }

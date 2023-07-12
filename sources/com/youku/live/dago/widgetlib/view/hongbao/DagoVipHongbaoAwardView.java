@@ -185,7 +185,7 @@ public class DagoVipHongbaoAwardView extends FrameLayout implements IHongbaoCoun
         if (progressRing != null) {
             progressRing.setVisibility(8);
         }
-        this.mHongbaoIconView.setImageResource(R.C7941drawable.dago_hongbao_btn_get_bg);
+        this.mHongbaoIconView.setImageResource(R.drawable.dago_hongbao_btn_get_bg);
         this.mCountdownTextView.setText("抢");
         this.mCountdownTextView.setTextColor(Color.parseColor("#732F06"));
         ICallback iCallback = this.mCallback;
@@ -311,14 +311,14 @@ public class DagoVipHongbaoAwardView extends FrameLayout implements IHongbaoCoun
         } else {
             this.mGetHongbaoBtn.setVisibility(8);
             if (dagoHongbaoResultInfo.awardSuccess) {
-                this.mHongbaoResultBgView.setImageResource(R.C7941drawable.dago_hongbao_lucky_bg);
+                this.mHongbaoResultBgView.setImageResource(R.drawable.dago_hongbao_lucky_bg);
                 this.mHongbaoResultTitle.setText(dagoHongbaoResultInfo.info);
                 this.mHongbaoResultMsg.setVisibility(0);
                 this.mHongbaoCongirmInfoView.setText("恭喜你，抢到红包");
             } else {
                 this.mHongbaoResultMsg.setVisibility(8);
                 this.mHongbaoResultTitle.setText("很遗憾");
-                this.mHongbaoResultBgView.setImageResource(R.C7941drawable.dago_hongbao_bad_luck_bg);
+                this.mHongbaoResultBgView.setImageResource(R.drawable.dago_hongbao_bad_luck_bg);
                 this.mHongbaoCongirmInfoView.setText("手慢了，下次快点哦");
             }
             this.mHongbaoAttentionLayout.setVisibility(8);
@@ -327,7 +327,7 @@ public class DagoVipHongbaoAwardView extends FrameLayout implements IHongbaoCoun
             this.mHongbaoAwardResultInfoLayout.startAnimation(AnimationUtils.loadAnimation(this.mContext, R.anim.dago_hongbao_anim_bottom_in));
             this.mHongbaoAwardResultInfoLayout.setVisibility(0);
             this.mHongbaoAnimBStep.setVisibility(0);
-            this.mHongbaoAnimBStep.setImageResource(R.C7941drawable.dago_hongbao_detail_anim_d_bg);
+            this.mHongbaoAnimBStep.setImageResource(R.drawable.dago_hongbao_detail_anim_d_bg);
         }
     }
 
@@ -353,7 +353,7 @@ public class DagoVipHongbaoAwardView extends FrameLayout implements IHongbaoCoun
 
     public DagoVipHongbaoAwardView(@NonNull Context context, @Nullable AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        this.LAYOUT_ID = R.C7942layout.dago_youku_vip_hongbao_large_layout;
+        this.LAYOUT_ID = R.layout.dago_youku_vip_hongbao_large_layout;
         initView(context);
     }
 }

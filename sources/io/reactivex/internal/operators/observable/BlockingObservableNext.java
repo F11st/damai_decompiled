@@ -3,7 +3,7 @@ package io.reactivex.internal.operators.observable;
 import io.reactivex.ObservableSource;
 import io.reactivex.internal.util.BlockingHelper;
 import io.reactivex.internal.util.ExceptionHelper;
-import io.reactivex.observers.AbstractC8160b;
+import io.reactivex.observers.b;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -94,7 +94,7 @@ public final class BlockingObservableNext<T> implements Iterable<T> {
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
     /* loaded from: classes3.dex */
-    public static final class NextObserver<T> extends AbstractC8160b<ul1<T>> {
+    public static final class NextObserver<T> extends b<ul1<T>> {
         private final BlockingQueue<ul1<T>> buf = new ArrayBlockingQueue(1);
         final AtomicInteger waiting = new AtomicInteger();
 

@@ -13,8 +13,8 @@ import okio.ByteString;
 
 /* compiled from: Taobao */
 /* loaded from: classes10.dex */
-public final class ShapeEntity extends Message<ShapeEntity, C6130a> {
-    public static final ProtoAdapter<ShapeEntity> ADAPTER = new C6131b();
+public final class ShapeEntity extends Message<ShapeEntity, a> {
+    public static final ProtoAdapter<ShapeEntity> ADAPTER = new b();
     public static final ShapeType DEFAULT_TYPE = ShapeType.SHAPE;
     private static final long serialVersionUID = 0;
     @WireField(adapter = "com.opensource.svgaplayer.proto.ShapeEntity$EllipseArgs#ADAPTER", tag = 4)
@@ -32,8 +32,8 @@ public final class ShapeEntity extends Message<ShapeEntity, C6130a> {
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
-    public static final class EllipseArgs extends Message<EllipseArgs, C6120a> {
-        public static final ProtoAdapter<EllipseArgs> ADAPTER = new C6121b();
+    public static final class EllipseArgs extends Message<EllipseArgs, a> {
+        public static final ProtoAdapter<EllipseArgs> ADAPTER = new b();
         public static final Float DEFAULT_RADIUSX;
         public static final Float DEFAULT_RADIUSY;
         public static final Float DEFAULT_X;
@@ -49,9 +49,8 @@ public final class ShapeEntity extends Message<ShapeEntity, C6130a> {
         public final Float y;
 
         /* compiled from: Taobao */
-        /* renamed from: com.opensource.svgaplayer.proto.ShapeEntity$EllipseArgs$a */
         /* loaded from: classes10.dex */
-        public static final class C6120a extends Message.Builder<EllipseArgs, C6120a> {
+        public static final class a extends Message.Builder<EllipseArgs, a> {
             public Float a;
             public Float b;
             public Float c;
@@ -63,56 +62,55 @@ public final class ShapeEntity extends Message<ShapeEntity, C6130a> {
                 return new EllipseArgs(this.a, this.b, this.c, this.d, super.buildUnknownFields());
             }
 
-            public C6120a b(Float f) {
+            public a b(Float f) {
                 this.c = f;
                 return this;
             }
 
-            public C6120a c(Float f) {
+            public a c(Float f) {
                 this.d = f;
                 return this;
             }
 
-            public C6120a d(Float f) {
+            public a d(Float f) {
                 this.a = f;
                 return this;
             }
 
-            public C6120a e(Float f) {
+            public a e(Float f) {
                 this.b = f;
                 return this;
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.opensource.svgaplayer.proto.ShapeEntity$EllipseArgs$b */
         /* loaded from: classes10.dex */
-        private static final class C6121b extends ProtoAdapter<EllipseArgs> {
-            C6121b() {
+        private static final class b extends ProtoAdapter<EllipseArgs> {
+            b() {
                 super(FieldEncoding.LENGTH_DELIMITED, EllipseArgs.class);
             }
 
             @Override // com.youku.squareup.wire.ProtoAdapter
             /* renamed from: a */
             public EllipseArgs decode(ProtoReader protoReader) throws IOException {
-                C6120a c6120a = new C6120a();
+                a aVar = new a();
                 long beginMessage = protoReader.beginMessage();
                 while (true) {
                     int nextTag = protoReader.nextTag();
                     if (nextTag == -1) {
                         protoReader.endMessage(beginMessage);
-                        return c6120a.build();
+                        return aVar.build();
                     } else if (nextTag == 1) {
-                        c6120a.d(ProtoAdapter.FLOAT.decode(protoReader));
+                        aVar.d(ProtoAdapter.FLOAT.decode(protoReader));
                     } else if (nextTag == 2) {
-                        c6120a.e(ProtoAdapter.FLOAT.decode(protoReader));
+                        aVar.e(ProtoAdapter.FLOAT.decode(protoReader));
                     } else if (nextTag == 3) {
-                        c6120a.b(ProtoAdapter.FLOAT.decode(protoReader));
+                        aVar.b(ProtoAdapter.FLOAT.decode(protoReader));
                     } else if (nextTag != 4) {
                         FieldEncoding peekFieldEncoding = protoReader.peekFieldEncoding();
-                        c6120a.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
+                        aVar.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
                     } else {
-                        c6120a.c(ProtoAdapter.FLOAT.decode(protoReader));
+                        aVar.c(ProtoAdapter.FLOAT.decode(protoReader));
                     }
                 }
             }
@@ -237,21 +235,21 @@ public final class ShapeEntity extends Message<ShapeEntity, C6130a> {
 
         @Override // com.youku.squareup.wire.Message
         /* renamed from: newBuilder */
-        public Message.Builder<EllipseArgs, C6120a> newBuilder2() {
-            C6120a c6120a = new C6120a();
-            c6120a.a = this.x;
-            c6120a.b = this.y;
-            c6120a.c = this.radiusX;
-            c6120a.d = this.radiusY;
-            c6120a.addUnknownFields(unknownFields());
-            return c6120a;
+        public Message.Builder<EllipseArgs, a> newBuilder2() {
+            a aVar = new a();
+            aVar.a = this.x;
+            aVar.b = this.y;
+            aVar.c = this.radiusX;
+            aVar.d = this.radiusY;
+            aVar.addUnknownFields(unknownFields());
+            return aVar;
         }
     }
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
-    public static final class RectArgs extends Message<RectArgs, C6122a> {
-        public static final ProtoAdapter<RectArgs> ADAPTER = new C6123b();
+    public static final class RectArgs extends Message<RectArgs, a> {
+        public static final ProtoAdapter<RectArgs> ADAPTER = new b();
         public static final Float DEFAULT_CORNERRADIUS;
         public static final Float DEFAULT_HEIGHT;
         public static final Float DEFAULT_WIDTH;
@@ -270,9 +268,8 @@ public final class ShapeEntity extends Message<ShapeEntity, C6130a> {
         public final Float y;
 
         /* compiled from: Taobao */
-        /* renamed from: com.opensource.svgaplayer.proto.ShapeEntity$RectArgs$a */
         /* loaded from: classes10.dex */
-        public static final class C6122a extends Message.Builder<RectArgs, C6122a> {
+        public static final class a extends Message.Builder<RectArgs, a> {
             public Float a;
             public Float b;
             public Float c;
@@ -285,63 +282,62 @@ public final class ShapeEntity extends Message<ShapeEntity, C6130a> {
                 return new RectArgs(this.a, this.b, this.c, this.d, this.e, super.buildUnknownFields());
             }
 
-            public C6122a b(Float f) {
+            public a b(Float f) {
                 this.e = f;
                 return this;
             }
 
-            public C6122a c(Float f) {
+            public a c(Float f) {
                 this.d = f;
                 return this;
             }
 
-            public C6122a d(Float f) {
+            public a d(Float f) {
                 this.c = f;
                 return this;
             }
 
-            public C6122a e(Float f) {
+            public a e(Float f) {
                 this.a = f;
                 return this;
             }
 
-            public C6122a f(Float f) {
+            public a f(Float f) {
                 this.b = f;
                 return this;
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.opensource.svgaplayer.proto.ShapeEntity$RectArgs$b */
         /* loaded from: classes10.dex */
-        private static final class C6123b extends ProtoAdapter<RectArgs> {
-            C6123b() {
+        private static final class b extends ProtoAdapter<RectArgs> {
+            b() {
                 super(FieldEncoding.LENGTH_DELIMITED, RectArgs.class);
             }
 
             @Override // com.youku.squareup.wire.ProtoAdapter
             /* renamed from: a */
             public RectArgs decode(ProtoReader protoReader) throws IOException {
-                C6122a c6122a = new C6122a();
+                a aVar = new a();
                 long beginMessage = protoReader.beginMessage();
                 while (true) {
                     int nextTag = protoReader.nextTag();
                     if (nextTag == -1) {
                         protoReader.endMessage(beginMessage);
-                        return c6122a.build();
+                        return aVar.build();
                     } else if (nextTag == 1) {
-                        c6122a.e(ProtoAdapter.FLOAT.decode(protoReader));
+                        aVar.e(ProtoAdapter.FLOAT.decode(protoReader));
                     } else if (nextTag == 2) {
-                        c6122a.f(ProtoAdapter.FLOAT.decode(protoReader));
+                        aVar.f(ProtoAdapter.FLOAT.decode(protoReader));
                     } else if (nextTag == 3) {
-                        c6122a.d(ProtoAdapter.FLOAT.decode(protoReader));
+                        aVar.d(ProtoAdapter.FLOAT.decode(protoReader));
                     } else if (nextTag == 4) {
-                        c6122a.c(ProtoAdapter.FLOAT.decode(protoReader));
+                        aVar.c(ProtoAdapter.FLOAT.decode(protoReader));
                     } else if (nextTag != 5) {
                         FieldEncoding peekFieldEncoding = protoReader.peekFieldEncoding();
-                        c6122a.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
+                        aVar.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
                     } else {
-                        c6122a.b(ProtoAdapter.FLOAT.decode(protoReader));
+                        aVar.b(ProtoAdapter.FLOAT.decode(protoReader));
                     }
                 }
             }
@@ -480,31 +476,30 @@ public final class ShapeEntity extends Message<ShapeEntity, C6130a> {
 
         @Override // com.youku.squareup.wire.Message
         /* renamed from: newBuilder */
-        public Message.Builder<RectArgs, C6122a> newBuilder2() {
-            C6122a c6122a = new C6122a();
-            c6122a.a = this.x;
-            c6122a.b = this.y;
-            c6122a.c = this.width;
-            c6122a.d = this.height;
-            c6122a.e = this.cornerRadius;
-            c6122a.addUnknownFields(unknownFields());
-            return c6122a;
+        public Message.Builder<RectArgs, a> newBuilder2() {
+            a aVar = new a();
+            aVar.a = this.x;
+            aVar.b = this.y;
+            aVar.c = this.width;
+            aVar.d = this.height;
+            aVar.e = this.cornerRadius;
+            aVar.addUnknownFields(unknownFields());
+            return aVar;
         }
     }
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
-    public static final class ShapeArgs extends Message<ShapeArgs, C6124a> {
-        public static final ProtoAdapter<ShapeArgs> ADAPTER = new C6125b();
+    public static final class ShapeArgs extends Message<ShapeArgs, a> {
+        public static final ProtoAdapter<ShapeArgs> ADAPTER = new b();
         public static final String DEFAULT_D = "";
         private static final long serialVersionUID = 0;
         @WireField(adapter = "com.youku.squareup.wire.ProtoAdapter#STRING", tag = 1)
         public final String d;
 
         /* compiled from: Taobao */
-        /* renamed from: com.opensource.svgaplayer.proto.ShapeEntity$ShapeArgs$a */
         /* loaded from: classes10.dex */
-        public static final class C6124a extends Message.Builder<ShapeArgs, C6124a> {
+        public static final class a extends Message.Builder<ShapeArgs, a> {
             public String a;
 
             @Override // com.youku.squareup.wire.Message.Builder
@@ -513,35 +508,34 @@ public final class ShapeEntity extends Message<ShapeEntity, C6130a> {
                 return new ShapeArgs(this.a, super.buildUnknownFields());
             }
 
-            public C6124a b(String str) {
+            public a b(String str) {
                 this.a = str;
                 return this;
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.opensource.svgaplayer.proto.ShapeEntity$ShapeArgs$b */
         /* loaded from: classes10.dex */
-        private static final class C6125b extends ProtoAdapter<ShapeArgs> {
-            C6125b() {
+        private static final class b extends ProtoAdapter<ShapeArgs> {
+            b() {
                 super(FieldEncoding.LENGTH_DELIMITED, ShapeArgs.class);
             }
 
             @Override // com.youku.squareup.wire.ProtoAdapter
             /* renamed from: a */
             public ShapeArgs decode(ProtoReader protoReader) throws IOException {
-                C6124a c6124a = new C6124a();
+                a aVar = new a();
                 long beginMessage = protoReader.beginMessage();
                 while (true) {
                     int nextTag = protoReader.nextTag();
                     if (nextTag == -1) {
                         protoReader.endMessage(beginMessage);
-                        return c6124a.build();
+                        return aVar.build();
                     } else if (nextTag != 1) {
                         FieldEncoding peekFieldEncoding = protoReader.peekFieldEncoding();
-                        c6124a.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
+                        aVar.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
                     } else {
-                        c6124a.b(ProtoAdapter.STRING.decode(protoReader));
+                        aVar.b(ProtoAdapter.STRING.decode(protoReader));
                     }
                 }
             }
@@ -619,18 +613,18 @@ public final class ShapeEntity extends Message<ShapeEntity, C6130a> {
 
         @Override // com.youku.squareup.wire.Message
         /* renamed from: newBuilder */
-        public Message.Builder<ShapeArgs, C6124a> newBuilder2() {
-            C6124a c6124a = new C6124a();
-            c6124a.a = this.d;
-            c6124a.addUnknownFields(unknownFields());
-            return c6124a;
+        public Message.Builder<ShapeArgs, a> newBuilder2() {
+            a aVar = new a();
+            aVar.a = this.d;
+            aVar.addUnknownFields(unknownFields());
+            return aVar;
         }
     }
 
     /* compiled from: Taobao */
     /* loaded from: classes10.dex */
-    public static final class ShapeStyle extends Message<ShapeStyle, C6128a> {
-        public static final ProtoAdapter<ShapeStyle> ADAPTER = new C6129b();
+    public static final class ShapeStyle extends Message<ShapeStyle, a> {
+        public static final ProtoAdapter<ShapeStyle> ADAPTER = new b();
         public static final LineCap DEFAULT_LINECAP;
         public static final Float DEFAULT_LINEDASHI;
         public static final Float DEFAULT_LINEDASHII;
@@ -726,8 +720,8 @@ public final class ShapeEntity extends Message<ShapeEntity, C6130a> {
 
         /* compiled from: Taobao */
         /* loaded from: classes10.dex */
-        public static final class RGBAColor extends Message<RGBAColor, C6126a> {
-            public static final ProtoAdapter<RGBAColor> ADAPTER = new C6127b();
+        public static final class RGBAColor extends Message<RGBAColor, a> {
+            public static final ProtoAdapter<RGBAColor> ADAPTER = new b();
             public static final Float DEFAULT_A;
             public static final Float DEFAULT_B;
             public static final Float DEFAULT_G;
@@ -743,20 +737,19 @@ public final class ShapeEntity extends Message<ShapeEntity, C6130a> {
             public final Float r;
 
             /* compiled from: Taobao */
-            /* renamed from: com.opensource.svgaplayer.proto.ShapeEntity$ShapeStyle$RGBAColor$a */
             /* loaded from: classes10.dex */
-            public static final class C6126a extends Message.Builder<RGBAColor, C6126a> {
+            public static final class a extends Message.Builder<RGBAColor, a> {
                 public Float a;
                 public Float b;
                 public Float c;
                 public Float d;
 
-                public C6126a a(Float f) {
+                public a a(Float f) {
                     this.d = f;
                     return this;
                 }
 
-                public C6126a b(Float f) {
+                public a b(Float f) {
                     this.c = f;
                     return this;
                 }
@@ -767,46 +760,45 @@ public final class ShapeEntity extends Message<ShapeEntity, C6130a> {
                     return new RGBAColor(this.a, this.b, this.c, this.d, super.buildUnknownFields());
                 }
 
-                public C6126a d(Float f) {
+                public a d(Float f) {
                     this.b = f;
                     return this;
                 }
 
-                public C6126a e(Float f) {
+                public a e(Float f) {
                     this.a = f;
                     return this;
                 }
             }
 
             /* compiled from: Taobao */
-            /* renamed from: com.opensource.svgaplayer.proto.ShapeEntity$ShapeStyle$RGBAColor$b */
             /* loaded from: classes10.dex */
-            private static final class C6127b extends ProtoAdapter<RGBAColor> {
-                C6127b() {
+            private static final class b extends ProtoAdapter<RGBAColor> {
+                b() {
                     super(FieldEncoding.LENGTH_DELIMITED, RGBAColor.class);
                 }
 
                 @Override // com.youku.squareup.wire.ProtoAdapter
                 /* renamed from: a */
                 public RGBAColor decode(ProtoReader protoReader) throws IOException {
-                    C6126a c6126a = new C6126a();
+                    a aVar = new a();
                     long beginMessage = protoReader.beginMessage();
                     while (true) {
                         int nextTag = protoReader.nextTag();
                         if (nextTag == -1) {
                             protoReader.endMessage(beginMessage);
-                            return c6126a.build();
+                            return aVar.build();
                         } else if (nextTag == 1) {
-                            c6126a.e(ProtoAdapter.FLOAT.decode(protoReader));
+                            aVar.e(ProtoAdapter.FLOAT.decode(protoReader));
                         } else if (nextTag == 2) {
-                            c6126a.d(ProtoAdapter.FLOAT.decode(protoReader));
+                            aVar.d(ProtoAdapter.FLOAT.decode(protoReader));
                         } else if (nextTag == 3) {
-                            c6126a.b(ProtoAdapter.FLOAT.decode(protoReader));
+                            aVar.b(ProtoAdapter.FLOAT.decode(protoReader));
                         } else if (nextTag != 4) {
                             FieldEncoding peekFieldEncoding = protoReader.peekFieldEncoding();
-                            c6126a.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
+                            aVar.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
                         } else {
-                            c6126a.a(ProtoAdapter.FLOAT.decode(protoReader));
+                            aVar.a(ProtoAdapter.FLOAT.decode(protoReader));
                         }
                     }
                 }
@@ -931,21 +923,20 @@ public final class ShapeEntity extends Message<ShapeEntity, C6130a> {
 
             @Override // com.youku.squareup.wire.Message
             /* renamed from: newBuilder */
-            public Message.Builder<RGBAColor, C6126a> newBuilder2() {
-                C6126a c6126a = new C6126a();
-                c6126a.a = this.r;
-                c6126a.b = this.g;
-                c6126a.c = this.b;
-                c6126a.d = this.a;
-                c6126a.addUnknownFields(unknownFields());
-                return c6126a;
+            public Message.Builder<RGBAColor, a> newBuilder2() {
+                a aVar = new a();
+                aVar.a = this.r;
+                aVar.b = this.g;
+                aVar.c = this.b;
+                aVar.d = this.a;
+                aVar.addUnknownFields(unknownFields());
+                return aVar;
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.opensource.svgaplayer.proto.ShapeEntity$ShapeStyle$a */
         /* loaded from: classes10.dex */
-        public static final class C6128a extends Message.Builder<ShapeStyle, C6128a> {
+        public static final class a extends Message.Builder<ShapeStyle, a> {
             public RGBAColor a;
             public RGBAColor b;
             public Float c;
@@ -962,114 +953,113 @@ public final class ShapeEntity extends Message<ShapeEntity, C6130a> {
                 return new ShapeStyle(this.a, this.b, this.c, this.d, this.e, this.f, this.g, this.h, this.i, super.buildUnknownFields());
             }
 
-            public C6128a b(RGBAColor rGBAColor) {
+            public a b(RGBAColor rGBAColor) {
                 this.a = rGBAColor;
                 return this;
             }
 
-            public C6128a c(LineCap lineCap) {
+            public a c(LineCap lineCap) {
                 this.d = lineCap;
                 return this;
             }
 
-            public C6128a d(Float f) {
+            public a d(Float f) {
                 this.g = f;
                 return this;
             }
 
-            public C6128a e(Float f) {
+            public a e(Float f) {
                 this.h = f;
                 return this;
             }
 
-            public C6128a f(Float f) {
+            public a f(Float f) {
                 this.i = f;
                 return this;
             }
 
-            public C6128a g(LineJoin lineJoin) {
+            public a g(LineJoin lineJoin) {
                 this.e = lineJoin;
                 return this;
             }
 
-            public C6128a h(Float f) {
+            public a h(Float f) {
                 this.f = f;
                 return this;
             }
 
-            public C6128a i(RGBAColor rGBAColor) {
+            public a i(RGBAColor rGBAColor) {
                 this.b = rGBAColor;
                 return this;
             }
 
-            public C6128a j(Float f) {
+            public a j(Float f) {
                 this.c = f;
                 return this;
             }
         }
 
         /* compiled from: Taobao */
-        /* renamed from: com.opensource.svgaplayer.proto.ShapeEntity$ShapeStyle$b */
         /* loaded from: classes10.dex */
-        private static final class C6129b extends ProtoAdapter<ShapeStyle> {
-            C6129b() {
+        private static final class b extends ProtoAdapter<ShapeStyle> {
+            b() {
                 super(FieldEncoding.LENGTH_DELIMITED, ShapeStyle.class);
             }
 
             @Override // com.youku.squareup.wire.ProtoAdapter
             /* renamed from: a */
             public ShapeStyle decode(ProtoReader protoReader) throws IOException {
-                C6128a c6128a = new C6128a();
+                a aVar = new a();
                 long beginMessage = protoReader.beginMessage();
                 while (true) {
                     int nextTag = protoReader.nextTag();
                     if (nextTag != -1) {
                         switch (nextTag) {
                             case 1:
-                                c6128a.b(RGBAColor.ADAPTER.decode(protoReader));
+                                aVar.b(RGBAColor.ADAPTER.decode(protoReader));
                                 break;
                             case 2:
-                                c6128a.i(RGBAColor.ADAPTER.decode(protoReader));
+                                aVar.i(RGBAColor.ADAPTER.decode(protoReader));
                                 break;
                             case 3:
-                                c6128a.j(ProtoAdapter.FLOAT.decode(protoReader));
+                                aVar.j(ProtoAdapter.FLOAT.decode(protoReader));
                                 break;
                             case 4:
                                 try {
-                                    c6128a.c(LineCap.ADAPTER.decode(protoReader));
+                                    aVar.c(LineCap.ADAPTER.decode(protoReader));
                                     break;
                                 } catch (ProtoAdapter.EnumConstantNotFoundException e) {
-                                    c6128a.addUnknownField(nextTag, FieldEncoding.VARINT, Long.valueOf(e.value));
+                                    aVar.addUnknownField(nextTag, FieldEncoding.VARINT, Long.valueOf(e.value));
                                     break;
                                 }
                             case 5:
                                 try {
-                                    c6128a.g(LineJoin.ADAPTER.decode(protoReader));
+                                    aVar.g(LineJoin.ADAPTER.decode(protoReader));
                                     break;
                                 } catch (ProtoAdapter.EnumConstantNotFoundException e2) {
-                                    c6128a.addUnknownField(nextTag, FieldEncoding.VARINT, Long.valueOf(e2.value));
+                                    aVar.addUnknownField(nextTag, FieldEncoding.VARINT, Long.valueOf(e2.value));
                                     break;
                                 }
                             case 6:
-                                c6128a.h(ProtoAdapter.FLOAT.decode(protoReader));
+                                aVar.h(ProtoAdapter.FLOAT.decode(protoReader));
                                 break;
                             case 7:
-                                c6128a.d(ProtoAdapter.FLOAT.decode(protoReader));
+                                aVar.d(ProtoAdapter.FLOAT.decode(protoReader));
                                 break;
                             case 8:
-                                c6128a.e(ProtoAdapter.FLOAT.decode(protoReader));
+                                aVar.e(ProtoAdapter.FLOAT.decode(protoReader));
                                 break;
                             case 9:
-                                c6128a.f(ProtoAdapter.FLOAT.decode(protoReader));
+                                aVar.f(ProtoAdapter.FLOAT.decode(protoReader));
                                 break;
                             default:
                                 FieldEncoding peekFieldEncoding = protoReader.peekFieldEncoding();
-                                c6128a.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
+                                aVar.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
                                 break;
                         }
                     } else {
                         protoReader.endMessage(beginMessage);
-                        return c6128a.build();
+                        return aVar.build();
                     }
                 }
             }
@@ -1270,19 +1260,19 @@ public final class ShapeEntity extends Message<ShapeEntity, C6130a> {
 
         @Override // com.youku.squareup.wire.Message
         /* renamed from: newBuilder */
-        public Message.Builder<ShapeStyle, C6128a> newBuilder2() {
-            C6128a c6128a = new C6128a();
-            c6128a.a = this.fill;
-            c6128a.b = this.stroke;
-            c6128a.c = this.strokeWidth;
-            c6128a.d = this.lineCap;
-            c6128a.e = this.lineJoin;
-            c6128a.f = this.miterLimit;
-            c6128a.g = this.lineDashI;
-            c6128a.h = this.lineDashII;
-            c6128a.i = this.lineDashIII;
-            c6128a.addUnknownFields(unknownFields());
-            return c6128a;
+        public Message.Builder<ShapeStyle, a> newBuilder2() {
+            a aVar = new a();
+            aVar.a = this.fill;
+            aVar.b = this.stroke;
+            aVar.c = this.strokeWidth;
+            aVar.d = this.lineCap;
+            aVar.e = this.lineJoin;
+            aVar.f = this.miterLimit;
+            aVar.g = this.lineDashI;
+            aVar.h = this.lineDashII;
+            aVar.i = this.lineDashIII;
+            aVar.addUnknownFields(unknownFields());
+            return aVar;
         }
     }
 
@@ -1324,9 +1314,8 @@ public final class ShapeEntity extends Message<ShapeEntity, C6130a> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.proto.ShapeEntity$a */
     /* loaded from: classes10.dex */
-    public static final class C6130a extends Message.Builder<ShapeEntity, C6130a> {
+    public static final class a extends Message.Builder<ShapeEntity, a> {
         public ShapeType a;
         public ShapeStyle b;
         public Transform c;
@@ -1340,80 +1329,79 @@ public final class ShapeEntity extends Message<ShapeEntity, C6130a> {
             return new ShapeEntity(this.a, this.b, this.c, this.d, this.e, this.f, super.buildUnknownFields());
         }
 
-        public C6130a b(EllipseArgs ellipseArgs) {
+        public a b(EllipseArgs ellipseArgs) {
             this.f = ellipseArgs;
             this.d = null;
             this.e = null;
             return this;
         }
 
-        public C6130a c(RectArgs rectArgs) {
+        public a c(RectArgs rectArgs) {
             this.e = rectArgs;
             this.d = null;
             this.f = null;
             return this;
         }
 
-        public C6130a d(ShapeArgs shapeArgs) {
+        public a d(ShapeArgs shapeArgs) {
             this.d = shapeArgs;
             this.e = null;
             this.f = null;
             return this;
         }
 
-        public C6130a e(ShapeStyle shapeStyle) {
+        public a e(ShapeStyle shapeStyle) {
             this.b = shapeStyle;
             return this;
         }
 
-        public C6130a f(Transform transform) {
+        public a f(Transform transform) {
             this.c = transform;
             return this;
         }
 
-        public C6130a g(ShapeType shapeType) {
+        public a g(ShapeType shapeType) {
             this.a = shapeType;
             return this;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.opensource.svgaplayer.proto.ShapeEntity$b */
     /* loaded from: classes10.dex */
-    private static final class C6131b extends ProtoAdapter<ShapeEntity> {
-        C6131b() {
+    private static final class b extends ProtoAdapter<ShapeEntity> {
+        b() {
             super(FieldEncoding.LENGTH_DELIMITED, ShapeEntity.class);
         }
 
         @Override // com.youku.squareup.wire.ProtoAdapter
         /* renamed from: a */
         public ShapeEntity decode(ProtoReader protoReader) throws IOException {
-            C6130a c6130a = new C6130a();
+            a aVar = new a();
             long beginMessage = protoReader.beginMessage();
             while (true) {
                 int nextTag = protoReader.nextTag();
                 if (nextTag == -1) {
                     protoReader.endMessage(beginMessage);
-                    return c6130a.build();
+                    return aVar.build();
                 } else if (nextTag == 1) {
                     try {
-                        c6130a.g(ShapeType.ADAPTER.decode(protoReader));
+                        aVar.g(ShapeType.ADAPTER.decode(protoReader));
                     } catch (ProtoAdapter.EnumConstantNotFoundException e) {
-                        c6130a.addUnknownField(nextTag, FieldEncoding.VARINT, Long.valueOf(e.value));
+                        aVar.addUnknownField(nextTag, FieldEncoding.VARINT, Long.valueOf(e.value));
                     }
                 } else if (nextTag == 2) {
-                    c6130a.d(ShapeArgs.ADAPTER.decode(protoReader));
+                    aVar.d(ShapeArgs.ADAPTER.decode(protoReader));
                 } else if (nextTag == 3) {
-                    c6130a.c(RectArgs.ADAPTER.decode(protoReader));
+                    aVar.c(RectArgs.ADAPTER.decode(protoReader));
                 } else if (nextTag == 4) {
-                    c6130a.b(EllipseArgs.ADAPTER.decode(protoReader));
+                    aVar.b(EllipseArgs.ADAPTER.decode(protoReader));
                 } else if (nextTag == 10) {
-                    c6130a.e(ShapeStyle.ADAPTER.decode(protoReader));
+                    aVar.e(ShapeStyle.ADAPTER.decode(protoReader));
                 } else if (nextTag != 11) {
                     FieldEncoding peekFieldEncoding = protoReader.peekFieldEncoding();
-                    c6130a.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
+                    aVar.addUnknownField(nextTag, peekFieldEncoding, peekFieldEncoding.rawProtoAdapter().decode(protoReader));
                 } else {
-                    c6130a.f(Transform.ADAPTER.decode(protoReader));
+                    aVar.f(Transform.ADAPTER.decode(protoReader));
                 }
             }
         }
@@ -1580,15 +1568,15 @@ public final class ShapeEntity extends Message<ShapeEntity, C6130a> {
 
     @Override // com.youku.squareup.wire.Message
     /* renamed from: newBuilder */
-    public Message.Builder<ShapeEntity, C6130a> newBuilder2() {
-        C6130a c6130a = new C6130a();
-        c6130a.a = this.type;
-        c6130a.b = this.styles;
-        c6130a.c = this.transform;
-        c6130a.d = this.shape;
-        c6130a.e = this.rect;
-        c6130a.f = this.ellipse;
-        c6130a.addUnknownFields(unknownFields());
-        return c6130a;
+    public Message.Builder<ShapeEntity, a> newBuilder2() {
+        a aVar = new a();
+        aVar.a = this.type;
+        aVar.b = this.styles;
+        aVar.c = this.transform;
+        aVar.d = this.shape;
+        aVar.e = this.rect;
+        aVar.f = this.ellipse;
+        aVar.addUnknownFields(unknownFields());
+        return aVar;
     }
 }

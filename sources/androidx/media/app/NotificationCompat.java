@@ -29,7 +29,7 @@ public class NotificationCompat {
             if (this.mBuilder.getColor() != 0) {
                 color = this.mBuilder.getColor();
             } else {
-                color = this.mBuilder.mContext.getResources().getColor(R.C0080color.notification_material_background_media_default_color);
+                color = this.mBuilder.mContext.getResources().getColor(R.color.notification_material_background_media_default_color);
             }
             remoteViews.setInt(R.id.status_bar_latest_event_content, "setBackgroundColor", color);
         }
@@ -46,12 +46,12 @@ public class NotificationCompat {
 
         @Override // androidx.media.app.NotificationCompat.MediaStyle
         int getBigContentViewLayoutResource(int i) {
-            return i <= 3 ? R.C0082layout.notification_template_big_media_narrow_custom : R.C0082layout.notification_template_big_media_custom;
+            return i <= 3 ? R.layout.notification_template_big_media_narrow_custom : R.layout.notification_template_big_media_custom;
         }
 
         @Override // androidx.media.app.NotificationCompat.MediaStyle
         int getContentViewLayoutResource() {
-            return this.mBuilder.getContentView() != null ? R.C0082layout.notification_template_media_custom : super.getContentViewLayoutResource();
+            return this.mBuilder.getContentView() != null ? R.layout.notification_template_media_custom : super.getContentViewLayoutResource();
         }
 
         @Override // androidx.media.app.NotificationCompat.MediaStyle, androidx.core.app.NotificationCompat.Style
@@ -152,7 +152,7 @@ public class NotificationCompat {
 
         private RemoteViews generateMediaActionButton(NotificationCompat.Action action) {
             boolean z = action.getActionIntent() == null;
-            RemoteViews remoteViews = new RemoteViews(this.mBuilder.mContext.getPackageName(), R.C0082layout.notification_media_action);
+            RemoteViews remoteViews = new RemoteViews(this.mBuilder.mContext.getPackageName(), R.layout.notification_media_action);
             int i = R.id.action0;
             remoteViews.setImageViewResource(i, action.getIcon());
             if (!z) {
@@ -260,11 +260,11 @@ public class NotificationCompat {
         }
 
         int getBigContentViewLayoutResource(int i) {
-            return i <= 3 ? R.C0082layout.notification_template_big_media_narrow : R.C0082layout.notification_template_big_media;
+            return i <= 3 ? R.layout.notification_template_big_media_narrow : R.layout.notification_template_big_media;
         }
 
         int getContentViewLayoutResource() {
-            return R.C0082layout.notification_template_media;
+            return R.layout.notification_template_media;
         }
 
         @Override // androidx.core.app.NotificationCompat.Style

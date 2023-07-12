@@ -1,7 +1,6 @@
 package tb;
 
 import cn.damai.common.nav.DMNav;
-import cn.damai.commonbusiness.nav.C0724a;
 import cn.damai.commonbusiness.nav.NavHandler;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -18,7 +17,7 @@ public class zi1 {
             return;
         }
         try {
-            DMNav.registerStickPreprocessor(new C0724a());
+            DMNav.registerStickPreprocessor(new cn.damai.commonbusiness.nav.a());
             DMNav.registerStickPreprocessor(new y91());
             DMNav.registerStickPreprocessor(new pc0());
             DMNav.registerPreprocessor(new t4());

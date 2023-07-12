@@ -46,7 +46,7 @@ public class MaterialButtonToggleGroup extends LinearLayout {
     private boolean singleSelection;
     private boolean skipCheckedStateTracker;
     private static final String LOG_TAG = MaterialButtonToggleGroup.class.getSimpleName();
-    private static final int DEF_STYLE_RES = R.C4819style.Widget_MaterialComponents_MaterialButtonToggleGroup;
+    private static final int DEF_STYLE_RES = R.style.Widget_MaterialComponents_MaterialButtonToggleGroup;
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */

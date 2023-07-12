@@ -3,7 +3,7 @@ package kotlin.reflect.jvm.internal.impl.descriptors.runtime.structure;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.AnnotatedElement;
 import java.util.List;
-import kotlin.collections.C8214m;
+import kotlin.collections.m;
 import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaAnnotationOwner;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -17,9 +17,8 @@ import tb.yz1;
 public interface ReflectJavaAnnotationOwner extends JavaAnnotationOwner {
 
     /* compiled from: Taobao */
-    /* renamed from: kotlin.reflect.jvm.internal.impl.descriptors.runtime.structure.ReflectJavaAnnotationOwner$a */
     /* loaded from: classes3.dex */
-    public static final class C8322a {
+    public static final class a {
         @Nullable
         public static vz1 a(@NotNull ReflectJavaAnnotationOwner reflectJavaAnnotationOwner, @NotNull hp0 hp0Var) {
             Annotation[] declaredAnnotations;
@@ -39,7 +38,7 @@ public interface ReflectJavaAnnotationOwner extends JavaAnnotationOwner {
             AnnotatedElement element = reflectJavaAnnotationOwner.getElement();
             Annotation[] declaredAnnotations = element == null ? null : element.getDeclaredAnnotations();
             if (declaredAnnotations == null) {
-                g = C8214m.g();
+                g = m.g();
                 return g;
             }
             return yz1.b(declaredAnnotations);

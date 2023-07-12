@@ -18,13 +18,12 @@ import com.android.alibaba.ip.runtime.IpChange;
 public class h4 {
     private static transient /* synthetic */ IpChange $ipChange;
     private int a;
-    private final C9199a b;
+    private final a b;
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.h4$a */
     /* loaded from: classes8.dex */
-    public class C9199a {
+    public class a {
         public CharSequence a;
         public boolean b;
         public Context c;
@@ -41,7 +40,7 @@ public class h4 {
         public DialogInterface.OnCancelListener n;
         public DialogInterface.OnDismissListener o;
 
-        C9199a(h4 h4Var) {
+        a(h4 h4Var) {
         }
     }
 
@@ -77,14 +76,14 @@ public class h4 {
             dMDialog.y(linearLayout);
         }
         if (!TextUtils.isEmpty(this.b.i)) {
-            C9199a c9199a = this.b;
-            dMDialog.i(c9199a.i, c9199a.j);
+            a aVar = this.b;
+            dMDialog.i(aVar.i, aVar.j);
         }
         if (TextUtils.isEmpty(this.b.f)) {
             return;
         }
-        C9199a c9199a2 = this.b;
-        dMDialog.n(c9199a2.f, c9199a2.g);
+        a aVar2 = this.b;
+        dMDialog.n(aVar2.f, aVar2.g);
     }
 
     public DMDialog b() {
@@ -146,9 +145,9 @@ public class h4 {
         if (AndroidInstantRuntime.support(ipChange, "365058230")) {
             return (h4) ipChange.ipc$dispatch("365058230", new Object[]{this, charSequence, onClickListener});
         }
-        C9199a c9199a = this.b;
-        c9199a.i = charSequence;
-        c9199a.j = onClickListener;
+        a aVar = this.b;
+        aVar.i = charSequence;
+        aVar.j = onClickListener;
         return this;
     }
 
@@ -157,9 +156,9 @@ public class h4 {
         if (AndroidInstantRuntime.support(ipChange, "1367033778")) {
             return (h4) ipChange.ipc$dispatch("1367033778", new Object[]{this, charSequence, onClickListener});
         }
-        C9199a c9199a = this.b;
-        c9199a.l = charSequence;
-        c9199a.h = onClickListener;
+        a aVar = this.b;
+        aVar.l = charSequence;
+        aVar.h = onClickListener;
         return this;
     }
 
@@ -168,9 +167,9 @@ public class h4 {
         if (AndroidInstantRuntime.support(ipChange, "793356922")) {
             return (h4) ipChange.ipc$dispatch("793356922", new Object[]{this, charSequence, onClickListener});
         }
-        C9199a c9199a = this.b;
-        c9199a.f = charSequence;
-        c9199a.g = onClickListener;
+        a aVar = this.b;
+        aVar.f = charSequence;
+        aVar.g = onClickListener;
         return this;
     }
 
@@ -200,8 +199,8 @@ public class h4 {
 
     public h4(Context context, int i) {
         this.a = i;
-        C9199a c9199a = new C9199a(this);
-        this.b = c9199a;
-        c9199a.c = context;
+        a aVar = new a(this);
+        this.b = aVar;
+        aVar.c = context;
     }
 }

@@ -10,14 +10,7 @@ import com.uc.webview.export.cyclone.UCCyclone;
 import com.uc.webview.export.cyclone.UCKnownException;
 import com.uc.webview.export.extension.UCCore;
 import com.uc.webview.export.internal.SDKFactory;
-import com.uc.webview.export.internal.uc.startup.C7301a;
-import com.uc.webview.export.internal.uc.startup.C7302b;
-import com.uc.webview.export.internal.utility.C7325b;
-import com.uc.webview.export.internal.utility.C7327d;
-import com.uc.webview.export.internal.utility.C7336i;
-import com.uc.webview.export.internal.utility.C7343m;
-import com.uc.webview.export.internal.utility.C7345n;
-import com.uc.webview.export.internal.utility.C7349p;
+import com.uc.webview.export.internal.utility.d;
 import java.io.File;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -37,7 +30,7 @@ public class af {
     public static boolean e = true;
     private static ClassLoader f = af.class.getClassLoader();
     private static int g = 0;
-    private static EnumC7264a h = EnumC7264a.NONE;
+    private static a h = a.NONE;
     private static final AtomicBoolean i = new AtomicBoolean(false);
     private static final AtomicBoolean j = new AtomicBoolean(false);
     private static volatile String k = null;
@@ -47,9 +40,8 @@ public class af {
     private static final LinkedList<ValueCallback<String>> o = new LinkedList<>();
 
     /* compiled from: Taobao */
-    /* renamed from: com.uc.webview.export.internal.setup.af$a */
     /* loaded from: classes11.dex */
-    public enum EnumC7264a {
+    public enum a {
         NONE,
         INIT_START,
         INIT_FINISHED,
@@ -74,12 +66,12 @@ public class af {
         return false;
     }
 
-    public static EnumC7264a c() {
+    public static a c() {
         return h;
     }
 
     public static void d() {
-        h = EnumC7264a.NONE;
+        h = a.NONE;
     }
 
     public static ClassLoader e() {
@@ -94,7 +86,7 @@ public class af {
         AtomicBoolean atomicBoolean = n;
         synchronized (atomicBoolean) {
             if (i.get()) {
-                C7301a.a(9010, null);
+                com.uc.webview.export.internal.uc.startup.a.a(9010, null);
             } else {
                 atomicBoolean.set(true);
             }
@@ -120,17 +112,17 @@ public class af {
     }
 
     public static void a(ConcurrentHashMap<String, Object> concurrentHashMap) {
-        long d2 = C7302b.d();
+        long d2 = com.uc.webview.export.internal.uc.startup.b.d();
         d.putAll(concurrentHashMap);
         a = (Context) d.get("CONTEXT");
-        b = !C7349p.b((Boolean) d.get(UCCore.OPTION_USE_SDK_SETUP));
-        e = C7279j.a(C7349p.a(concurrentHashMap, UCCore.OPTION_HARDWARE_ACCELERATED));
+        b = !com.uc.webview.export.internal.utility.p.b((Boolean) d.get(UCCore.OPTION_USE_SDK_SETUP));
+        e = j.a(com.uc.webview.export.internal.utility.p.a(concurrentHashMap, UCCore.OPTION_HARDWARE_ACCELERATED));
         Integer num = (Integer) d.get(UCCore.OPTION_STARTUP_POLICY);
         if (num != null) {
             g = num.intValue();
         }
-        C7302b.a(15, String.valueOf(g));
-        C7302b.a(310, C7302b.d() - d2);
+        com.uc.webview.export.internal.uc.startup.b.a(15, String.valueOf(g));
+        com.uc.webview.export.internal.uc.startup.b.a(310, com.uc.webview.export.internal.uc.startup.b.d() - d2);
         Log.i("SetupController", "initSdkSetup sSetupPolicy:" + g + ", sUseSdkSetup:" + b + ", sIsHardwareAccleration:" + e);
     }
 
@@ -143,11 +135,11 @@ public class af {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static C7327d.C7328a c(Throwable th) {
+    public static d.a c(Throwable th) {
         String sb;
-        C7327d.C7328a a2 = new C7327d.C7328a("ucbsinit", th).a("ucbsVersion", Build.Version.NAME).a("coreVersion", C7325b.a()).a("coreTimestamp", C7325b.b()).a("supportMin", Build.Version.SUPPORT_U4_MIN).a("apiLevel", String.valueOf(Build.Version.API_LEVEL)).a("initStatus", h.toString()).a("errorCode", th instanceof UCKnownException ? String.valueOf(((UCKnownException) th).errCode()) : "0");
+        d.a a2 = new d.a("ucbsinit", th).a("ucbsVersion", Build.Version.NAME).a("coreVersion", com.uc.webview.export.internal.utility.b.a()).a("coreTimestamp", com.uc.webview.export.internal.utility.b.b()).a("supportMin", Build.Version.SUPPORT_U4_MIN).a("apiLevel", String.valueOf(Build.Version.API_LEVEL)).a("initStatus", h.toString()).a("errorCode", th instanceof UCKnownException ? String.valueOf(((UCKnownException) th).errCode()) : "0");
         bt btVar = c;
-        C7327d.C7328a b2 = a2.b("ucm info", btVar != null ? btVar.toString() : "No UCMPackageInfo!");
+        d.a b2 = a2.b("ucm info", btVar != null ? btVar.toString() : "No UCMPackageInfo!");
         if (k == null && l == null) {
             sb = "";
         } else {
@@ -168,8 +160,8 @@ public class af {
             }
             sb = sb2.toString();
         }
-        C7327d.C7328a b3 = b2.b("zip info", sb).b("quick path", C7343m.a(a));
-        C7327d.C7328a b4 = b3.b("file info", UCCyclone.listAllDerivedFiles(a, "ucmsdk") + "\n\n" + UCCyclone.listAllDerivedFiles(a, UCCyclone.dataFolder));
+        d.a b3 = b2.b("zip info", sb).b("quick path", com.uc.webview.export.internal.utility.m.a(a));
+        d.a b4 = b3.b("file info", UCCyclone.listAllDerivedFiles(a, "ucmsdk") + "\n\n" + UCCyclone.listAllDerivedFiles(a, UCCyclone.dataFolder));
         StringBuffer stringBuffer = new StringBuffer();
         try {
             Log.flushCachedLogs(stringBuffer);
@@ -188,13 +180,13 @@ public class af {
         return g;
     }
 
-    public static void a(EnumC7264a enumC7264a, Object... objArr) {
-        Log.i("SetupController", "initStatus: [" + enumC7264a + jn1.ARRAY_END_STR);
-        enumC7264a.toString();
-        h = enumC7264a;
-        int i2 = ai.a[enumC7264a.ordinal()];
+    public static void a(a aVar, Object... objArr) {
+        Log.i("SetupController", "initStatus: [" + aVar + jn1.ARRAY_END_STR);
+        aVar.toString();
+        h = aVar;
+        int i2 = ai.a[aVar.ordinal()];
         if (i2 == 1) {
-            C7302b.a();
+            com.uc.webview.export.internal.uc.startup.b.a();
             Context context = (Context) objArr[0];
             try {
                 PreStartup.class.getDeclaredMethod(StartupJointPoint.TYPE, Context.class).invoke(null, context);
@@ -202,43 +194,43 @@ public class af {
             }
             am.a(context);
         } else if (i2 == 2) {
-            C7302b.b();
+            com.uc.webview.export.internal.uc.startup.b.b();
         } else if (i2 == 3) {
             ClassLoader classLoader = (ClassLoader) objArr[0];
             if (classLoader != null) {
                 a(classLoader);
             }
-            C7279j.a();
+            j.a();
         } else if (i2 == 6) {
             if (SDKFactory.e() != 2) {
                 i.set(true);
-                C7301a.a(9003, null);
+                com.uc.webview.export.internal.uc.startup.a.a(9003, null);
                 AtomicBoolean atomicBoolean = n;
                 synchronized (atomicBoolean) {
                     if (atomicBoolean.get()) {
-                        C7301a.a(9010, null);
+                        com.uc.webview.export.internal.uc.startup.a.a(9010, null);
                     }
                 }
             }
-            C7302b.a(42);
+            com.uc.webview.export.internal.uc.startup.b.a(42);
             a(2);
             g();
         } else if (i2 == 7) {
             Throwable th = (Throwable) objArr[0];
-            C7302b.a(196, th != null ? th.toString() : "");
+            com.uc.webview.export.internal.uc.startup.b.a(196, th != null ? th.toString() : "");
             a(3);
-            if ((C7336i.a().c(UCCore.OPTION_INIT_FAILED_LOG_POLICY) & 1) != 0) {
+            if ((com.uc.webview.export.internal.utility.i.a().c(UCCore.OPTION_INIT_FAILED_LOG_POLICY) & 1) != 0) {
                 b(th);
             }
         } else if (i2 == 8) {
             Throwable th2 = (Throwable) objArr[0];
-            C7302b.a(197, th2 != null ? th2.toString() : "");
+            com.uc.webview.export.internal.uc.startup.b.a(197, th2 != null ? th2.toString() : "");
             a(4);
-            if ((C7336i.a().c(UCCore.OPTION_INIT_FAILED_LOG_POLICY) & 1) != 0) {
+            if ((com.uc.webview.export.internal.utility.i.a().c(UCCore.OPTION_INIT_FAILED_LOG_POLICY) & 1) != 0) {
                 b(th2);
             }
         }
-        enumC7264a.toString();
+        aVar.toString();
     }
 
     public static void a(int i2) {
@@ -248,7 +240,7 @@ public class af {
             }
             m.add(Integer.valueOf(i2));
             Log.d("SetupController", "doCoreStatusStat status:" + i2);
-            C7345n.a(new ag(i2));
+            com.uc.webview.export.internal.utility.n.a(new ag(i2));
         }
     }
 
@@ -265,16 +257,16 @@ public class af {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public static ClassLoader a(String str, String str2, String str3) {
-        C7302b.a(532);
+        com.uc.webview.export.internal.uc.startup.b.a(532);
         AtomicBoolean atomicBoolean = j;
         synchronized (atomicBoolean) {
             if (atomicBoolean.compareAndSet(false, true)) {
-                C7283m c7283m = new C7283m(str, str2, str3);
-                c7283m.run();
-                a(c7283m.c);
+                m mVar = new m(str, str2, str3);
+                mVar.run();
+                a(mVar.c);
             }
         }
-        C7302b.a(533);
+        com.uc.webview.export.internal.uc.startup.b.a(533);
         return e();
     }
 

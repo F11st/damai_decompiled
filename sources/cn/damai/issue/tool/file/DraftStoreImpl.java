@@ -3,7 +3,7 @@ package cn.damai.issue.tool.file;
 import android.os.Handler;
 import android.os.HandlerThread;
 import cn.damai.common.AppConfig;
-import cn.damai.common.util.C0535a;
+import cn.damai.common.util.a;
 import cn.damai.issue.bean.DraftBean;
 import cn.damai.issue.listener.MainThreadDraftListener;
 import cn.damai.issue.listener.OnDraftListener;
@@ -79,7 +79,7 @@ public class DraftStoreImpl implements IDraftStore {
                 try {
                     try {
                         File c = DraftStoreImpl.this.c.c(new DraftBean(str));
-                        if (c != null && c.isFile() && (h = C0535a.h(c)) != null && h.length > 0) {
+                        if (c != null && c.isFile() && (h = a.h(c)) != null && h.length > 0) {
                             draftBean = (DraftBean) m61.a(new String(h, Charset.forName("UTF-8")), DraftBean.class);
                         }
                     } catch (Exception e) {

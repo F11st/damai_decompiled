@@ -20,11 +20,10 @@ import android.widget.TextView;
 import androidx.core.internal.view.SupportMenu;
 import com.alibaba.poplayer.Domain;
 import com.alibaba.poplayer.factory.view.base.PopLayerBaseView;
-import com.alibaba.poplayer.layermanager.C3660e;
+import com.alibaba.poplayer.layermanager.e;
 import com.alibaba.poplayer.layermanager.view.PopLayerViewContainer;
 import com.alibaba.poplayer.trigger.BaseConfigItem;
 import com.alibaba.poplayer.utils.Monitor;
-import com.alibaba.poplayerconsole.C3705a;
 import com.alibaba.poplayerconsole.R$id;
 import com.alibaba.poplayerconsole.R$layout;
 import com.alibaba.poplayerconsole.lib.Window;
@@ -46,13 +45,12 @@ public class PopLayerInfoLogView extends LinearLayout implements ILogView {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.poplayerconsole.view.PopLayerInfoLogView$a */
     /* loaded from: classes8.dex */
-    public class C3723a extends ClickableSpan {
+    public class a extends ClickableSpan {
         final /* synthetic */ Map a;
         final /* synthetic */ String b;
 
-        C3723a(Map map, String str) {
+        a(Map map, String str) {
             this.a = map;
             this.b = str;
         }
@@ -61,7 +59,7 @@ public class PopLayerInfoLogView extends LinearLayout implements ILogView {
         public void onClick(View view) {
             String str;
             Map map = this.a;
-            List<BaseConfigItem> list = (List) ((Monitor.C3703a) map.get(this.b + ip1.MONITOR_CONFIG_ITEMS)).b;
+            List<BaseConfigItem> list = (List) ((Monitor.a) map.get(this.b + ip1.MONITOR_CONFIG_ITEMS)).b;
             AlertDialog create = new AlertDialog.Builder(PopLayerInfoLogView.this.getContext().getApplicationContext(), 3).setTitle("Current Configuration Items").create();
             ScrollView scrollView = new ScrollView(create.getContext());
             LinearLayout linearLayout = new LinearLayout(create.getContext());
@@ -136,13 +134,13 @@ public class PopLayerInfoLogView extends LinearLayout implements ILogView {
         spannableStringBuilder.setSpan(obj2, length2, spannableStringBuilder.length(), 33);
     }
 
-    private void updateConfigSet(Map<String, Monitor.C3703a> map) {
+    private void updateConfigSet(Map<String, Monitor.a> map) {
         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder();
         String domain = Domain.toString(this.mCurrentConfigDomain);
-        Monitor.C3703a c3703a = map.get(domain + ip1.MONITOR_CONFIG_SET);
-        if (c3703a != null) {
-            Object obj = c3703a.b;
-            addStatus(spannableStringBuilder, "", obj == null ? null : obj.toString(), null, new C3723a(map, domain));
+        Monitor.a aVar = map.get(domain + ip1.MONITOR_CONFIG_SET);
+        if (aVar != null) {
+            Object obj = aVar.b;
+            addStatus(spannableStringBuilder, "", obj == null ? null : obj.toString(), null, new a(map, domain));
         }
         if (this.mCurrentConfigDomain == 1) {
             List list = (List) map.get(domain + ip1.MONITOR_WHITELIST).b;
@@ -155,10 +153,10 @@ public class PopLayerInfoLogView extends LinearLayout implements ILogView {
         textView.setText(spannableStringBuilder);
     }
 
-    private void updateCurrentPopLayer(Map<String, Monitor.C3703a> map) {
+    private void updateCurrentPopLayer(Map<String, Monitor.a> map) {
         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder();
         if (this.mCurrentConfigDomain == 2) {
-            PopLayerViewContainer d = C3660e.f().d();
+            PopLayerViewContainer d = e.f().d();
             if (d == null) {
                 addStatus(spannableStringBuilder, "Popped List", null, null, null);
             } else {
@@ -190,7 +188,7 @@ public class PopLayerInfoLogView extends LinearLayout implements ILogView {
         textView.setText(spannableStringBuilder);
     }
 
-    private void updatePopLayerInfo(Map<String, Monitor.C3703a> map) {
+    private void updatePopLayerInfo(Map<String, Monitor.a> map) {
         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder();
         Object obj = map.get("version").b;
         addStatus(spannableStringBuilder, "Version", obj == null ? null : obj.toString(), null, null);
@@ -220,7 +218,7 @@ public class PopLayerInfoLogView extends LinearLayout implements ILogView {
 
     @Override // com.alibaba.poplayerconsole.view.ILogView
     public void update(Window window) throws Throwable {
-        Map<String, Monitor.C3703a> d = C3705a.d();
+        Map<String, Monitor.a> d = com.alibaba.poplayerconsole.a.d();
         updatePopLayerInfo(d);
         updateConfigSet(d);
         updateCurrentPopLayer(d);

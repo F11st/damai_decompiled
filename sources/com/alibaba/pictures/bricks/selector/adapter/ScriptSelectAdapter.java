@@ -30,15 +30,14 @@ public final class ScriptSelectAdapter extends RecyclerView.Adapter<RecyclerView
     @NotNull
     private ArrayList<ScriptSelectMo> c = new ArrayList<>();
     @NotNull
-    private C3544a f = new C3544a();
+    private a f = new a();
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.selector.adapter.ScriptSelectAdapter$a */
     /* loaded from: classes7.dex */
-    public static final class C3544a implements OnEventListener {
+    public static final class a implements OnEventListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C3544a() {
+        a() {
         }
 
         @Override // com.alibaba.pictures.bricks.orderconfirm.OnEventListener

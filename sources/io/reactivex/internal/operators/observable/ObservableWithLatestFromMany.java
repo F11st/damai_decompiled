@@ -219,7 +219,7 @@ public final class ObservableWithLatestFromMany<T, R> extends AbstractObservable
         this.combiner = function;
     }
 
-    @Override // io.reactivex.AbstractC8149d
+    @Override // io.reactivex.d
     protected void subscribeActual(Observer<? super R> observer) {
         int length;
         ObservableSource<?>[] observableSourceArr = this.otherArray;

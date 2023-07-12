@@ -32,12 +32,12 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.TreeMap;
-import okhttp3.C8823o;
-import okhttp3.C8827q;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
-import okhttp3.internal.C8753a;
+import okhttp3.internal.a;
+import okhttp3.o;
+import okhttp3.q;
 import org.apache.commons.lang3.StringUtils;
 import tb.m80;
 
@@ -249,14 +249,14 @@ public class InteractionDataManager implements Runnable {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public boolean parseIndex(C8827q c8827q, String str, int i) {
+    public boolean parseIndex(q qVar, String str, int i) {
         Throwable th;
         BufferedReader bufferedReader = null;
         IndexItem indexItem = null;
         bufferedReader = null;
         try {
             try {
-                BufferedReader bufferedReader2 = new BufferedReader(new InputStreamReader(c8827q.a().c()));
+                BufferedReader bufferedReader2 = new BufferedReader(new InputStreamReader(qVar.a().c()));
                 boolean z = false;
                 while (true) {
                     try {
@@ -292,7 +292,7 @@ public class InteractionDataManager implements Runnable {
                                 e2.printStackTrace();
                             }
                         }
-                        C8753a.g(c8827q);
+                        a.g(qVar);
                         return false;
                     } catch (Throwable th2) {
                         th = th2;
@@ -304,7 +304,7 @@ public class InteractionDataManager implements Runnable {
                                 e3.printStackTrace();
                             }
                         }
-                        C8753a.g(c8827q);
+                        a.g(qVar);
                         throw th;
                     }
                 }
@@ -316,7 +316,7 @@ public class InteractionDataManager implements Runnable {
                 } catch (IOException e4) {
                     e4.printStackTrace();
                 }
-                C8753a.g(c8827q);
+                a.g(qVar);
                 return true;
             } catch (Exception e5) {
                 e = e5;
@@ -365,21 +365,21 @@ public class InteractionDataManager implements Runnable {
     private void parseRangeData(final String str, final String str2, final int i) {
         TLogUtil.loge(TAG, "算法Index数据开始请求 " + str2);
         final long currentTimeMillis = System.currentTimeMillis();
-        new OkHttpClient().newCall(new C8823o.C8824a().k(str2).c().b()).enqueue(new Callback() { // from class: com.youku.playerservice.axp.modules.postprocessing.rotation.InteractionDataManager.1
+        new OkHttpClient().newCall(new o.a().k(str2).c().b()).enqueue(new Callback() { // from class: com.youku.playerservice.axp.modules.postprocessing.rotation.InteractionDataManager.1
             @Override // okhttp3.Callback
             public void onFailure(Call call, IOException iOException) {
                 InteractionDataManager.this.commitVpm("2", "0", str2, Double.valueOf(System.currentTimeMillis() - currentTimeMillis), String.valueOf(iOException instanceof SocketTimeoutException ? AdType.NATIVE_EXPRESS : ExtraID.ERRCODE_PARSER_SEEK_BUFFER_ERR));
             }
 
             @Override // okhttp3.Callback
-            public void onResponse(Call call, C8827q c8827q) {
+            public void onResponse(Call call, q qVar) {
                 int e;
                 boolean z;
-                if (c8827q.isSuccessful()) {
-                    z = InteractionDataManager.this.parseIndex(c8827q, str, i);
+                if (qVar.isSuccessful()) {
+                    z = InteractionDataManager.this.parseIndex(qVar, str, i);
                     e = !z ? 20000 : -1;
                 } else {
-                    e = c8827q.e() + 10000;
+                    e = qVar.e() + 10000;
                     z = false;
                 }
                 InteractionDataManager.this.commitVpm("2", z ? "1" : "0", str2, Double.valueOf(System.currentTimeMillis() - currentTimeMillis), String.valueOf(e));
@@ -394,19 +394,19 @@ public class InteractionDataManager implements Runnable {
         TLogUtil.loge(TAG, "算法Range数据开始请求 " + str);
         String format = String.format(Locale.CHINESE, "bytes=%d-%d", Integer.valueOf(indexItem.offset), Integer.valueOf((indexItem.offset + indexItem.length) - 1));
         final long currentTimeMillis = System.currentTimeMillis();
-        new OkHttpClient().newCall(new C8823o.C8824a().k(str).a("Range", format).c().b()).enqueue(new Callback() { // from class: com.youku.playerservice.axp.modules.postprocessing.rotation.InteractionDataManager.2
+        new OkHttpClient().newCall(new o.a().k(str).a("Range", format).c().b()).enqueue(new Callback() { // from class: com.youku.playerservice.axp.modules.postprocessing.rotation.InteractionDataManager.2
             @Override // okhttp3.Callback
             public void onFailure(Call call, IOException iOException) {
                 InteractionDataManager.this.commitVpm("1", "0", str, Double.valueOf(System.currentTimeMillis() - currentTimeMillis), Double.valueOf(indexItem.offset), Double.valueOf(indexItem.length), String.valueOf(iOException instanceof SocketTimeoutException ? AdType.NATIVE_EXPRESS : ExtraID.ERRCODE_PARSER_SEEK_BUFFER_ERR));
             }
 
             @Override // okhttp3.Callback
-            public void onResponse(Call call, C8827q c8827q) {
+            public void onResponse(Call call, q qVar) {
                 int e;
                 boolean z;
                 try {
-                    if (c8827q.isSuccessful()) {
-                        z = InteractionDataManager.this.parseInteractionDataImpl(c8827q.a().c(), i);
+                    if (qVar.isSuccessful()) {
+                        z = InteractionDataManager.this.parseInteractionDataImpl(qVar.a().c(), i);
                         if (z) {
                             TLogUtil.loge(InteractionDataManager.TAG, "算法Range数据请求成功");
                             InteractionDataManager.this.requestState = 1;
@@ -422,12 +422,12 @@ public class InteractionDataManager implements Runnable {
                             e = 20000;
                         }
                     } else {
-                        e = c8827q.e() + 10000;
+                        e = qVar.e() + 10000;
                         z = false;
                     }
                     InteractionDataManager.this.commitVpm("1", z ? "1" : "0", str, Double.valueOf(System.currentTimeMillis() - currentTimeMillis), Double.valueOf(indexItem.offset), Double.valueOf(indexItem.length), String.valueOf(e));
                 } finally {
-                    C8753a.g(c8827q);
+                    a.g(qVar);
                 }
             }
         });
@@ -446,7 +446,7 @@ public class InteractionDataManager implements Runnable {
             } catch (Throwable th) {
                 th = th;
                 fileInputStream2 = fileInputStream;
-                C8753a.g(fileInputStream2);
+                a.g(fileInputStream2);
                 throw th;
             }
         } catch (IOException unused2) {
@@ -454,7 +454,7 @@ public class InteractionDataManager implements Runnable {
         } catch (Throwable th2) {
             th = th2;
         }
-        C8753a.g(fileInputStream);
+        a.g(fileInputStream);
         return str;
     }
 

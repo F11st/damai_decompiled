@@ -140,7 +140,7 @@ public class CompactLinkedHashSet<E> extends CompactHashSet<E> {
 
     @Override // com.google.common.collect.CompactHashSet, java.util.AbstractCollection, java.util.Collection, java.util.Set
     public Object[] toArray() {
-        return C5158b0.f(this);
+        return b0.f(this);
     }
 
     CompactLinkedHashSet(int i) {
@@ -155,7 +155,7 @@ public class CompactLinkedHashSet<E> extends CompactHashSet<E> {
 
     @Override // com.google.common.collect.CompactHashSet, java.util.AbstractCollection, java.util.Collection, java.util.Set
     public <T> T[] toArray(T[] tArr) {
-        return (T[]) C5158b0.g(this, tArr);
+        return (T[]) b0.g(this, tArr);
     }
 
     public static <E> CompactLinkedHashSet<E> create(E... eArr) {

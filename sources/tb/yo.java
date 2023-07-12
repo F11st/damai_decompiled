@@ -1,14 +1,12 @@
 package tb;
 
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.HashMap;
 
 /* compiled from: Taobao */
 /* loaded from: classes4.dex */
-public class yo extends C0528b {
+public class yo extends cn.damai.common.user.b {
     private static transient /* synthetic */ IpChange $ipChange;
     private static yo b;
 
@@ -34,7 +32,7 @@ public class yo extends C0528b {
         hashMap.put("usercode", z20.E());
         hashMap.put("eventTrack", str2);
         long currentTimeMillis = System.currentTimeMillis() - j;
-        C0529c e = C0529c.e();
+        cn.damai.common.user.c e = cn.damai.common.user.c.e();
         e.C("item_" + i, "redpaper", str, "1.0", currentTimeMillis, hashMap, 2201);
     }
 
@@ -48,6 +46,6 @@ public class yo extends C0528b {
         hashMap.put("city", z20.c());
         hashMap.put("usercode", z20.E());
         hashMap.put("eventTrack", str);
-        C0529c.e().A(hashMap, "damai_redpacket_data_event", "redpacket_data");
+        cn.damai.common.user.c.e().A(hashMap, "damai_redpacket_data_event", "redpacket_data");
     }
 }

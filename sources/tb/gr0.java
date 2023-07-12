@@ -13,7 +13,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes6.dex */
 public final class gr0 {
     @NotNull
-    public static final C9184a Companion = new C9184a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final String a;
     @NotNull
@@ -36,13 +36,12 @@ public final class gr0 {
     private final List<gr0> j;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.gr0$a */
     /* loaded from: classes6.dex */
-    public static final class C9184a {
-        private C9184a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9184a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -84,7 +83,7 @@ public final class gr0 {
                 Method dump skipped, instructions count: 365
                 To view this dump change 'Code comments level' option to 'DEBUG'
             */
-            throw new UnsupportedOperationException("Method not decompiled: tb.gr0.C9184a.d(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, com.alibaba.fastjson.JSONObject):tb.gr0");
+            throw new UnsupportedOperationException("Method not decompiled: tb.gr0.a.d(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, com.alibaba.fastjson.JSONObject):tb.gr0");
         }
 
         private final boolean e(String str, String str2) {
@@ -239,7 +238,7 @@ public final class gr0 {
     }
 
     public final boolean s() {
-        GXRegisterCenter.C3334b d = GXRegisterCenter.Companion.a().d();
+        GXRegisterCenter.b d = GXRegisterCenter.Companion.a().d();
         return d != null && d.b() ? (b41.d(this.c, "gaia-template") && b41.d(this.d, "custom") && this.e == null) || (b41.d(this.c, "gaia-template") && this.d == null && this.e == null) : b41.d(this.c, "gaia-template") && b41.d(this.d, "custom") && this.e == null;
     }
 

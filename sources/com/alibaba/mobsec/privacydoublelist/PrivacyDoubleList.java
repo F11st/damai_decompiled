@@ -6,7 +6,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import com.alibaba.mobsec.privacydoublelist.config.ConfigCenter;
-import com.alibaba.mobsec.privacydoublelist.e.C3438e;
+import com.alibaba.mobsec.privacydoublelist.e.e;
 import com.alibaba.mobsec.privacydoublelist.report.PrivacyDoubleListReporter;
 import com.alibaba.wireless.security.aopsdk.AopEntry;
 import com.alibaba.wireless.security.aopsdk.AopManager;
@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 public class PrivacyDoubleList {
     public static PrivacyDoubleList b;
     public static ScheduledFuture<?> c;
-    public final ScheduledExecutorService a = Executors.newSingleThreadScheduledExecutor(new ThreadFactoryC3418a(this));
+    public final ScheduledExecutorService a = Executors.newSingleThreadScheduledExecutor(new a(this));
 
     /* compiled from: Taobao */
     /* loaded from: classes6.dex */
@@ -159,10 +159,9 @@ public class PrivacyDoubleList {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.mobsec.privacydoublelist.PrivacyDoubleList$a */
     /* loaded from: classes6.dex */
-    public class ThreadFactoryC3418a implements ThreadFactory {
-        public ThreadFactoryC3418a(PrivacyDoubleList privacyDoubleList) {
+    public class a implements ThreadFactory {
+        public a(PrivacyDoubleList privacyDoubleList) {
         }
 
         @Override // java.util.concurrent.ThreadFactory
@@ -174,10 +173,9 @@ public class PrivacyDoubleList {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.mobsec.privacydoublelist.PrivacyDoubleList$b */
     /* loaded from: classes6.dex */
-    public class RunnableC3419b implements Runnable {
-        public RunnableC3419b(PrivacyDoubleList privacyDoubleList) {
+    public class b implements Runnable {
+        public b(PrivacyDoubleList privacyDoubleList) {
         }
 
         @Override // java.lang.Runnable
@@ -187,10 +185,9 @@ public class PrivacyDoubleList {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.mobsec.privacydoublelist.PrivacyDoubleList$c */
     /* loaded from: classes6.dex */
-    public class C3420c implements Application.ActivityLifecycleCallbacks {
-        public C3420c(PrivacyDoubleList privacyDoubleList) {
+    public class c implements Application.ActivityLifecycleCallbacks {
+        public c(PrivacyDoubleList privacyDoubleList) {
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
@@ -249,12 +246,12 @@ public class PrivacyDoubleList {
 
     public void disableAll() {
         cancelReportTimer();
-        AopManager.getInstance().removeChainDelegate(C3421a.a());
+        AopManager.getInstance().removeChainDelegate(com.alibaba.mobsec.privacydoublelist.a.a());
     }
 
     public void enableAll() {
         startReportTimer();
-        AopManager.getInstance().addChainDelegate(C3421a.a());
+        AopManager.getInstance().addChainDelegate(com.alibaba.mobsec.privacydoublelist.a.a());
     }
 
     public void init(Context context) {
@@ -271,12 +268,12 @@ public class PrivacyDoubleList {
             if (PdlEnvUtils.a) {
                 Log.d("PDL-CORE", "Start report timer with delay: " + PrivacyDoubleListReporter.getInstance().getReportDelay());
             }
-            c = this.a.scheduleWithFixedDelay(new RunnableC3419b(this), PrivacyDoubleListReporter.getInstance().getReportInitDelay(), PrivacyDoubleListReporter.getInstance().getReportDelay(), TimeUnit.SECONDS);
+            c = this.a.scheduleWithFixedDelay(new b(this), PrivacyDoubleListReporter.getInstance().getReportInitDelay(), PrivacyDoubleListReporter.getInstance().getReportDelay(), TimeUnit.SECONDS);
         }
     }
 
     public void track(String str, Object obj) {
-        C3438e.b().a(str, obj);
+        e.b().a(str, obj);
     }
 
     public void init(Context context, InitConfig initConfig) {
@@ -287,7 +284,7 @@ public class PrivacyDoubleList {
         if (initConfig.initAop()) {
             AopEntry.init(context);
         }
-        AopManager.getInstance().addChainDelegate(C3421a.a());
+        AopManager.getInstance().addChainDelegate(com.alibaba.mobsec.privacydoublelist.a.a());
         if (initConfig.a) {
             ConfigCenter.getInstance().initConfig(context);
         }
@@ -302,7 +299,7 @@ public class PrivacyDoubleList {
         }
         PdlEnvUtils.e = context;
         if (application != null) {
-            application.registerActivityLifecycleCallbacks(new C3420c(this));
+            application.registerActivityLifecycleCallbacks(new c(this));
         }
     }
 }

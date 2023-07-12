@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.internal.fuseable.ConditionalSubscriber;
 import io.reactivex.internal.subscriptions.SubscriptionHelper;
 import io.reactivex.internal.util.AtomicThrowable;
@@ -114,12 +114,12 @@ public final class FlowableSkipUntil<T, U> extends AbstractFlowableWithUpstream<
         }
     }
 
-    public FlowableSkipUntil(AbstractC8147b<T> abstractC8147b, Publisher<U> publisher) {
-        super(abstractC8147b);
+    public FlowableSkipUntil(b<T> bVar, Publisher<U> publisher) {
+        super(bVar);
         this.other = publisher;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     protected void subscribeActual(Subscriber<? super T> subscriber) {
         SkipUntilMainSubscriber skipUntilMainSubscriber = new SkipUntilMainSubscriber(subscriber);
         subscriber.onSubscribe(skipUntilMainSubscriber);

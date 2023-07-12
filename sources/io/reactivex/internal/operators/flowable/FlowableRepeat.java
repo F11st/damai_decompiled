@@ -1,8 +1,8 @@
 package io.reactivex.internal.operators.flowable;
 
 import com.youku.live.livesdk.monitor.performance.AbsPerformance;
-import io.reactivex.AbstractC8147b;
 import io.reactivex.FlowableSubscriber;
+import io.reactivex.b;
 import io.reactivex.internal.subscriptions.SubscriptionArbiter;
 import java.util.concurrent.atomic.AtomicInteger;
 import org.reactivestreams.Publisher;
@@ -79,12 +79,12 @@ public final class FlowableRepeat<T> extends AbstractFlowableWithUpstream<T, T> 
         }
     }
 
-    public FlowableRepeat(AbstractC8147b<T> abstractC8147b, long j) {
-        super(abstractC8147b);
+    public FlowableRepeat(b<T> bVar, long j) {
+        super(bVar);
         this.count = j;
     }
 
-    @Override // io.reactivex.AbstractC8147b
+    @Override // io.reactivex.b
     public void subscribeActual(Subscriber<? super T> subscriber) {
         SubscriptionArbiter subscriptionArbiter = new SubscriptionArbiter();
         subscriber.onSubscribe(subscriptionArbiter);

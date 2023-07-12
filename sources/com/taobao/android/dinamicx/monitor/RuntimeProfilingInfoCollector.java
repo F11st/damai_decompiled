@@ -1,7 +1,7 @@
 package com.taobao.android.dinamicx.monitor;
 
 import androidx.annotation.NonNull;
-import com.taobao.android.dinamicx.C6368e;
+import com.taobao.android.dinamicx.e;
 import com.taobao.android.dinamicx.template.download.DXTemplateItem;
 import java.util.Set;
 import tb.uf0;
@@ -25,7 +25,7 @@ public class RuntimeProfilingInfoCollector {
     /* compiled from: Taobao */
     /* loaded from: classes12.dex */
     public interface ICollector {
-        void onCollectErrorInfo(C6368e c6368e, boolean z);
+        void onCollectErrorInfo(e eVar, boolean z);
 
         void onCollectPerformanceInfo(int i, String str, String str2, String str3, DXTemplateItem dXTemplateItem, double d);
     }
@@ -45,14 +45,14 @@ public class RuntimeProfilingInfoCollector {
         return c;
     }
 
-    public void a(@NonNull C6368e c6368e, boolean z) {
+    public void a(@NonNull e eVar, boolean z) {
         Set<ICollector> set = this.a;
         if (set == null) {
             return;
         }
         for (ICollector iCollector : set) {
             try {
-                iCollector.onCollectErrorInfo(c6368e, z);
+                iCollector.onCollectErrorInfo(eVar, z);
             } catch (Throwable unused) {
             }
         }

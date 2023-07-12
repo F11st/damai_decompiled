@@ -26,7 +26,6 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 import cn.damai.uikit.R$drawable;
-import cn.damai.uikit.image.C2497a;
 import cn.damai.uikit.image.IImageLoader;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
@@ -74,63 +73,61 @@ public class ClickGrayImageView extends ImageView {
     private String url;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.ClickGrayImageView$a */
     /* loaded from: classes8.dex */
-    public class C2569a implements IImageLoader.IImageSuccListener {
+    public class a implements IImageLoader.IImageSuccListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ IImageLoader.IImageSuccListener a;
 
-        C2569a(IImageLoader.IImageSuccListener iImageSuccListener) {
+        a(IImageLoader.IImageSuccListener iImageSuccListener) {
             this.a = iImageSuccListener;
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageSuccListener
-        public void onSuccess(IImageLoader.C2496b c2496b) {
+        public void onSuccess(IImageLoader.b bVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "785277442")) {
-                ipChange.ipc$dispatch("785277442", new Object[]{this, c2496b});
-            } else if (c2496b != null) {
-                Bitmap bitmap = c2496b.b;
+                ipChange.ipc$dispatch("785277442", new Object[]{this, bVar});
+            } else if (bVar != null) {
+                Bitmap bitmap = bVar.b;
                 if (bitmap != null) {
                     ClickGrayImageView.this.setImageBitmap(bitmap);
                 } else {
-                    Drawable drawable = c2496b.a;
+                    Drawable drawable = bVar.a;
                     if (drawable instanceof AnimatedImageDrawable) {
                         ClickGrayImageView.this.setImageDrawable((AnimatedImageDrawable) drawable);
                     }
                 }
                 IImageLoader.IImageSuccListener iImageSuccListener = this.a;
                 if (iImageSuccListener != null) {
-                    iImageSuccListener.onSuccess(c2496b);
+                    iImageSuccListener.onSuccess(bVar);
                 }
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.view.ClickGrayImageView$b */
     /* loaded from: classes8.dex */
-    public class C2570b implements IImageLoader.IImageFailListener {
+    public class b implements IImageLoader.IImageFailListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ int a;
         final /* synthetic */ IImageLoader.IImageFailListener b;
 
-        C2570b(int i, IImageLoader.IImageFailListener iImageFailListener) {
+        b(int i, IImageLoader.IImageFailListener iImageFailListener) {
             this.a = i;
             this.b = iImageFailListener;
         }
 
         @Override // cn.damai.uikit.image.IImageLoader.IImageFailListener
-        public void onFail(IImageLoader.C2495a c2495a) {
+        public void onFail(IImageLoader.a aVar) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1260735467")) {
-                ipChange.ipc$dispatch("1260735467", new Object[]{this, c2495a});
+                ipChange.ipc$dispatch("1260735467", new Object[]{this, aVar});
                 return;
             }
             ClickGrayImageView.this.setImageResource(this.a);
             IImageLoader.IImageFailListener iImageFailListener = this.b;
             if (iImageFailListener != null) {
-                iImageFailListener.onFail(c2495a);
+                iImageFailListener.onFail(aVar);
             }
         }
     }
@@ -196,9 +193,9 @@ public class ClickGrayImageView extends ImageView {
         this.mRoundRect = new RectF();
         this.mMaskColorFilter = new PorterDuffColorFilter(-7829368, PorterDuff.Mode.MULTIPLY);
         setScaleType(ImageView.ScaleType.CENTER_CROP);
-        int a = l62.a(getContext(), 0.5f);
-        this.mBorderWidth = a;
-        this.mBorderPaint.setStrokeWidth(a);
+        int a2 = l62.a(getContext(), 0.5f);
+        this.mBorderWidth = a2;
+        this.mBorderPaint.setStrokeWidth(a2);
         this.mBorderPaint.setColor(Color.parseColor("#1A000000"));
     }
 
@@ -454,7 +451,7 @@ public class ClickGrayImageView extends ImageView {
             this.url = str;
             if (this.isAttachedToWindow || this.alwaysLoadImage) {
                 int i = R$drawable.uikit_default_image_bg_grey;
-                this.ticket = C2497a.a().load(str, i, i, -1, -1, new C2569a(iImageSuccListener), new C2570b(i, iImageFailListener));
+                this.ticket = cn.damai.uikit.image.a.a().load(str, i, i, -1, -1, new a(iImageSuccListener), new b(i, iImageFailListener));
             }
         }
     }

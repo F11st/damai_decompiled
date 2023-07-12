@@ -22,11 +22,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseActivity;
 import cn.damai.commonbusiness.calendar.remind.CalendarsResolver;
@@ -82,7 +79,7 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
     private String H;
     private String I;
     private boolean J;
-    private HandlerC2214j K;
+    private j K;
     LinkedList<OrderDetailSeatBean> L;
     HashMap<String, Integer> M;
     private View.OnClickListener N;
@@ -117,12 +114,11 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
     private OrderDetailRefundView z;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailProjectViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2205a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2205a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -141,13 +137,12 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailProjectViewHolder$b */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2206b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OrderDetailMecItemInfo a;
 
-        View$OnClickListenerC2206b(OrderDetailMecItemInfo orderDetailMecItemInfo) {
+        b(OrderDetailMecItemInfo orderDetailMecItemInfo) {
             this.a = orderDetailMecItemInfo;
         }
 
@@ -166,14 +161,13 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailProjectViewHolder$c */
     /* loaded from: classes16.dex */
-    public class C2207c extends ClickableSpan {
+    public class c extends ClickableSpan {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OrderDetailMecItemInfo a;
         final /* synthetic */ OrderDetailSeatPic b;
 
-        C2207c(OrderDetailMecItemInfo orderDetailMecItemInfo, OrderDetailSeatPic orderDetailSeatPic) {
+        c(OrderDetailMecItemInfo orderDetailMecItemInfo, OrderDetailSeatPic orderDetailSeatPic) {
             this.a = orderDetailMecItemInfo;
             this.b = orderDetailSeatPic;
         }
@@ -185,7 +179,7 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
                 ipChange.ipc$dispatch("1180038723", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(pp2.u().w1(this.a.itemId, this.b.text));
+            cn.damai.common.user.c.e().x(pp2.u().w1(this.a.itemId, this.b.text));
             OrderDetailProjectViewHolder.this.y(this.b.url);
         }
 
@@ -202,13 +196,12 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailProjectViewHolder$d */
     /* loaded from: classes16.dex */
-    public class C2208d extends ClickableSpan {
+    public class d extends ClickableSpan {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ OrderDetailMecItemInfo a;
 
-        C2208d(OrderDetailMecItemInfo orderDetailMecItemInfo) {
+        d(OrderDetailMecItemInfo orderDetailMecItemInfo) {
             this.a = orderDetailMecItemInfo;
         }
 
@@ -237,12 +230,11 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailProjectViewHolder$e */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2209e implements View.OnClickListener {
+    public class e implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2209e() {
+        e() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -259,12 +251,11 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailProjectViewHolder$f */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2210f implements View.OnClickListener {
+    public class f implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2210f(OrderDetailProjectViewHolder orderDetailProjectViewHolder) {
+        f(OrderDetailProjectViewHolder orderDetailProjectViewHolder) {
         }
 
         @Override // android.view.View.OnClickListener
@@ -279,12 +270,11 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailProjectViewHolder$g */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2211g implements View.OnClickListener {
+    public class g implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2211g() {
+        g() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -304,12 +294,11 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailProjectViewHolder$h */
     /* loaded from: classes8.dex */
-    public class C2212h implements CalendarsResolver.RemindMeListener {
+    public class h implements CalendarsResolver.RemindMeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2212h() {
+        h() {
         }
 
         @Override // cn.damai.commonbusiness.calendar.remind.CalendarsResolver.RemindMeListener
@@ -336,12 +325,11 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailProjectViewHolder$i */
     /* loaded from: classes8.dex */
-    public class C2213i implements CalendarsResolver.RemindMeListener {
+    public class i implements CalendarsResolver.RemindMeListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C2213i() {
+        i() {
         }
 
         @Override // cn.damai.commonbusiness.calendar.remind.CalendarsResolver.RemindMeListener
@@ -364,13 +352,12 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailProjectViewHolder$j */
     /* loaded from: classes16.dex */
-    public static class HandlerC2214j extends Handler {
+    public static class j extends Handler {
         private static transient /* synthetic */ IpChange $ipChange;
         private WeakReference<DamaiBaseActivity> a;
 
-        public HandlerC2214j(DamaiBaseActivity damaiBaseActivity) {
+        public j(DamaiBaseActivity damaiBaseActivity) {
             this.a = new WeakReference<>(damaiBaseActivity);
         }
 
@@ -391,10 +378,10 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
         this.G = new StringBuilder();
         this.L = new LinkedList<>();
         this.M = new HashMap<>();
-        this.N = new View$OnClickListenerC2209e();
-        this.O = new View$OnClickListenerC2210f(this);
-        this.P = new View$OnClickListenerC2211g();
-        this.Q = new C2212h();
+        this.N = new e();
+        this.O = new f(this);
+        this.P = new g();
+        this.Q = new h();
         this.itemView.setLayoutParams(new RecyclerView.LayoutParams(-1, -2));
         this.D = context;
         if (context instanceof DamaiBaseActivity) {
@@ -417,9 +404,9 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
             ipChange.ipc$dispatch("862934864", new Object[]{this, orderDetailMecItemInfo, orderDetailStatusBean, str, str2});
         } else if (orderDetailMecItemInfo == null) {
         } else {
-            HandlerC2214j handlerC2214j = this.K;
-            if (handlerC2214j != null) {
-                handlerC2214j.removeCallbacksAndMessages(null);
+            j jVar = this.K;
+            if (jVar != null) {
+                jVar.removeCallbacksAndMessages(null);
                 this.K = null;
                 q(false);
             }
@@ -428,9 +415,9 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
                 linearLayout.setTag(orderDetailMecItemInfo);
             }
             this.I = orderDetailMecItemInfo.itemId;
-            DMImageCreator c = C0504a.b().c(orderDetailMecItemInfo.performImageUrl);
-            int i = R$drawable.uikit_default_image_bg_gradient;
-            c.i(i).c(i).g(this.b);
+            DMImageCreator c2 = cn.damai.common.image.a.b().c(orderDetailMecItemInfo.performImageUrl);
+            int i2 = R$drawable.uikit_default_image_bg_gradient;
+            c2.i(i2).c(i2).g(this.b);
             this.d.setText(orderDetailMecItemInfo.projectName);
             this.f.setText(orderDetailMecItemInfo.showTimeStr);
             if (!cb2.d(orderDetailMecItemInfo.subItemContentList())) {
@@ -439,7 +426,7 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
                 this.e.setClickable(true);
                 HashMap hashMap = new HashMap();
                 hashMap.put("item_id", this.I);
-                C0529c.e().G(this.e, "showchange", "show", pp2.ORDER_DETAL_PAGE, hashMap);
+                cn.damai.common.user.c.e().G(this.e, "showchange", "show", pp2.ORDER_DETAL_PAGE, hashMap);
             } else {
                 this.e.setClickable(false);
                 this.g.setVisibility(8);
@@ -455,12 +442,12 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
                         this.h.setVisibility(0);
                         HashMap hashMap2 = new HashMap();
                         hashMap2.put("item_id", orderDetailMecItemInfo.itemId);
-                        C0529c.e().G(this.h, "remindme", "top", pp2.ORDER_DETAL_PAGE, hashMap2);
+                        cn.damai.common.user.c.e().G(this.h, "remindme", "top", pp2.ORDER_DETAL_PAGE, hashMap2);
                         H(orderDetailMecItemInfo, str);
-                        this.h.setOnClickListener(new View$OnClickListenerC2206b(orderDetailMecItemInfo));
-                        boolean d = ao1.d(this.E, orderDetailMecItemInfo.projectName, orderDetailMecItemInfo.showDateTime);
+                        this.h.setOnClickListener(new b(orderDetailMecItemInfo));
+                        boolean d2 = ao1.d(this.E, orderDetailMecItemInfo.projectName, orderDetailMecItemInfo.showDateTime);
                         String B = z20.B(str + ao1.SHOW_CALENDER_POP_SUFFIX);
-                        if (!mo1.c(str2) && !ao1.SHOW_CALENDER_POP_TAG.equals(B) && !d) {
+                        if (!mo1.c(str2) && !ao1.SHOW_CALENDER_POP_TAG.equals(B) && !d2) {
                             z20.T(str + ao1.SHOW_CALENDER_POP_SUFFIX, ao1.SHOW_CALENDER_POP_TAG);
                             G(true);
                         }
@@ -473,11 +460,11 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
                         this.h.setVisibility(8);
                         G(false);
                     }
-                } catch (Exception e) {
+                } catch (Exception e2) {
                     HashMap hashMap3 = new HashMap();
                     hashMap3.put("item_id", orderDetailMecItemInfo.itemId);
-                    hashMap3.put("contentlabel", zm2.a(e));
-                    C0529c.e().x(C0528b.getInstance().e(pp2.ORDER_DETAL_PAGE, "top", "remindme_fail", hashMap3, Boolean.FALSE));
+                    hashMap3.put("contentlabel", zm2.a(e2));
+                    cn.damai.common.user.c.e().x(cn.damai.common.user.b.getInstance().e(pp2.ORDER_DETAL_PAGE, "top", "remindme_fail", hashMap3, Boolean.FALSE));
                     this.h.setVisibility(8);
                     G(false);
                 }
@@ -518,11 +505,11 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
             }
             int length3 = str3.length();
             SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(str3);
-            C2207c c2207c = new C2207c(orderDetailMecItemInfo, orderDetailSeatPic);
-            C2208d c2208d = new C2208d(orderDetailMecItemInfo);
-            int i2 = length3 - length2;
-            spannableStringBuilder.setSpan(c2207c, i2, length3, 18);
-            spannableStringBuilder.setSpan(c2208d, 0, i2, 17);
+            c cVar = new c(orderDetailMecItemInfo, orderDetailSeatPic);
+            d dVar = new d(orderDetailMecItemInfo);
+            int i3 = length3 - length2;
+            spannableStringBuilder.setSpan(cVar, i3, length3, 18);
+            spannableStringBuilder.setSpan(dVar, 0, i3, 17);
             this.n.setText(spannableStringBuilder);
             this.n.setMovementMethod(LinkMovementMethod.getInstance());
             this.n.setFocusable(false);
@@ -574,9 +561,9 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
         this.u.setVisibility(8);
         this.t.removeAllViews();
         this.M.clear();
-        int e = wh2.e(this.L);
-        for (int i = 0; i < e; i++) {
-            z(this.L.get(i), i);
+        int e2 = wh2.e(this.L);
+        for (int i2 = 0; i2 < e2; i2++) {
+            z(this.L.get(i2), i2);
         }
     }
 
@@ -588,13 +575,13 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
         }
         this.t.removeAllViews();
         this.M.clear();
-        int e = wh2.e(this.L);
-        this.u.setVisibility(e > 6 ? 0 : 8);
-        if (e > 6) {
-            e = 6;
+        int e2 = wh2.e(this.L);
+        this.u.setVisibility(e2 > 6 ? 0 : 8);
+        if (e2 > 6) {
+            e2 = 6;
         }
-        for (int i = 0; i < e; i++) {
-            z(this.L.get(i), i);
+        for (int i2 = 0; i2 < e2; i2++) {
+            z(this.L.get(i2), i2);
         }
     }
 
@@ -604,16 +591,16 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
             ipChange.ipc$dispatch("-1648700662", new Object[]{this, list});
             return;
         }
-        int e = wh2.e(list);
-        if (e == 0) {
+        int e2 = wh2.e(list);
+        if (e2 == 0) {
             this.o.setVisibility(8);
             return;
         }
         this.o.setVisibility(0);
         this.o.removeAllViews();
-        for (int i = 0; i < e; i++) {
+        for (int i2 = 0; i2 < e2; i2++) {
             View inflate = this.F.inflate(R$layout.order_detail_item_tag, (ViewGroup) null);
-            ((TextView) inflate.findViewById(R$id.tv_tag)).setText(list.get(i));
+            ((TextView) inflate.findViewById(R$id.tv_tag)).setText(list.get(i2));
             this.o.addView(inflate);
         }
     }
@@ -639,35 +626,35 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
                     }
                     int[] iArr = new int[2];
                     OrderDetailProjectViewHolder.this.h.getLocationOnScreen(iArr);
-                    int i = iArr[1];
-                    float f = iArr[0];
-                    cb1.b("showCalenderPop", "showPop x = " + f);
-                    int i2 = DisplayMetrics.getwidthPixels(t60.b(OrderDetailProjectViewHolder.this.D));
-                    int a = t60.a(OrderDetailProjectViewHolder.this.D, 11.0f);
-                    int a2 = t60.a(OrderDetailProjectViewHolder.this.D, 15.0f);
-                    int measuredWidth = OrderDetailProjectViewHolder.this.c.getMeasuredWidth() + t60.a(OrderDetailProjectViewHolder.this.D, 11.0f) + a;
+                    int i2 = iArr[1];
+                    float f2 = iArr[0];
+                    cb1.b("showCalenderPop", "showPop x = " + f2);
+                    int i3 = DisplayMetrics.getwidthPixels(t60.b(OrderDetailProjectViewHolder.this.D));
+                    int a2 = t60.a(OrderDetailProjectViewHolder.this.D, 11.0f);
+                    int a3 = t60.a(OrderDetailProjectViewHolder.this.D, 15.0f);
+                    int measuredWidth = OrderDetailProjectViewHolder.this.c.getMeasuredWidth() + t60.a(OrderDetailProjectViewHolder.this.D, 11.0f) + a2;
                     float measureText = OrderDetailProjectViewHolder.this.l.getPaint().measureText(r2) + t60.a(OrderDetailProjectViewHolder.this.D, 18.0f);
                     int measuredWidth2 = OrderDetailProjectViewHolder.this.j.getMeasuredWidth() / 2;
                     ((RelativeLayout.LayoutParams) OrderDetailProjectViewHolder.this.m.getLayoutParams()).rightMargin = ((OrderDetailProjectViewHolder.this.h.getMeasuredWidth() - t60.a(OrderDetailProjectViewHolder.this.D, 4.0f)) - measuredWidth2) - (OrderDetailProjectViewHolder.this.m.getMeasuredWidth() / 2);
-                    float a3 = f + t60.a(OrderDetailProjectViewHolder.this.D, 4.0f) + measuredWidth2;
+                    float a4 = f2 + t60.a(OrderDetailProjectViewHolder.this.D, 4.0f) + measuredWidth2;
                     RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) OrderDetailProjectViewHolder.this.l.getLayoutParams();
-                    float f2 = (i2 - a3) - measuredWidth;
-                    if (a3 >= i2 / 2) {
+                    float f3 = (i3 - a4) - measuredWidth;
+                    if (a4 >= i3 / 2) {
                         layoutParams.addRule(11);
                         layoutParams.removeRule(9);
-                        float f3 = measureText / 2.0f;
-                        float f4 = f2 - f3;
-                        if (f4 > 0.0f && a3 > f3) {
-                            layoutParams.rightMargin = (int) f4;
+                        float f4 = measureText / 2.0f;
+                        float f5 = f3 - f4;
+                        if (f5 > 0.0f && a4 > f4) {
+                            layoutParams.rightMargin = (int) f5;
                             layoutParams.leftMargin = 0;
                         }
                     } else {
-                        float f5 = measureText / 2.0f;
-                        float f6 = (a3 - a2) - f5;
+                        float f6 = measureText / 2.0f;
+                        float f7 = (a4 - a3) - f6;
                         layoutParams.addRule(9);
                         layoutParams.removeRule(11);
-                        if (f6 > 0.0f && f2 > f5) {
-                            layoutParams.leftMargin = (int) f6;
+                        if (f7 > 0.0f && f3 > f6) {
+                            layoutParams.leftMargin = (int) f7;
                             layoutParams.rightMargin = 0;
                         }
                     }
@@ -675,9 +662,9 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
                     OrderDetailProjectViewHolder.this.q(true);
                 }
             });
-            HandlerC2214j handlerC2214j = new HandlerC2214j(this.E);
-            this.K = handlerC2214j;
-            handlerC2214j.postDelayed(new Runnable() { // from class: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailProjectViewHolder.11
+            j jVar = new j(this.E);
+            this.K = jVar;
+            jVar.postDelayed(new Runnable() { // from class: cn.damai.trade.newtradeorder.ui.orderdetail.ui.viewholder.OrderDetailProjectViewHolder.11
                 private static transient /* synthetic */ IpChange $ipChange;
 
                 @Override // java.lang.Runnable
@@ -747,13 +734,13 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
         HashMap hashMap = new HashMap();
         hashMap.clear();
         this.L.clear();
-        int e = wh2.e(list);
-        for (int i = 0; i < e; i++) {
-            OrderDetailSeatBean orderDetailSeatBean = list.get(i);
+        int e2 = wh2.e(list);
+        for (int i2 = 0; i2 < e2; i2++) {
+            OrderDetailSeatBean orderDetailSeatBean = list.get(i2);
             if (TextUtils.isEmpty(orderDetailSeatBean.combineTicketId)) {
                 this.L.add(orderDetailSeatBean);
             } else if (!hashMap.containsKey(orderDetailSeatBean.combineTicketId)) {
-                hashMap.put(list.get(i).combineTicketId, Integer.valueOf(i));
+                hashMap.put(list.get(i2).combineTicketId, Integer.valueOf(i2));
                 this.L.add(orderDetailSeatBean);
             } else {
                 int intValue = ((Integer) hashMap.get(orderDetailSeatBean.combineTicketId)).intValue() + 1;
@@ -796,7 +783,7 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
         } else if (ao1.d(this.E, orderDetailMecItemInfo.projectName, orderDetailMecItemInfo.showDateTime)) {
             J(true);
         } else if (z) {
-            ao1.a(this.E, orderDetailMecItemInfo.projectName, orderDetailMecItemInfo.showDateTime, new C2213i());
+            ao1.a(this.E, orderDetailMecItemInfo.projectName, orderDetailMecItemInfo.showDateTime, new i());
         } else {
             J(false);
         }
@@ -853,7 +840,7 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
         this.l = (TextView) view.findViewById(R$id.trade_calender_pop_tip_content);
         this.n = (TextView) view.findViewById(R$id.tv_project_city_venue);
         this.e.setOnClickListener(this.O);
-        this.a.setOnClickListener(new View$OnClickListenerC2205a());
+        this.a.setOnClickListener(new a());
         this.o = (FlowLayout) view.findViewById(R$id.fl_mark);
         this.p = (TextView) view.findViewById(R$id.tv_ticket_notice);
         this.q = (DMIconFontTextView) view.findViewById(R$id.icon_ticket_notice);
@@ -908,11 +895,11 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
         }
     }
 
-    private void z(OrderDetailSeatBean orderDetailSeatBean, int i) {
-        char c;
+    private void z(OrderDetailSeatBean orderDetailSeatBean, int i2) {
+        char c2;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-794225809")) {
-            ipChange.ipc$dispatch("-794225809", new Object[]{this, orderDetailSeatBean, Integer.valueOf(i)});
+            ipChange.ipc$dispatch("-794225809", new Object[]{this, orderDetailSeatBean, Integer.valueOf(i2)});
         } else if (orderDetailSeatBean == null) {
         } else {
             View inflate = this.F.inflate(R$layout.order_detail_project_seat_item, (ViewGroup) null);
@@ -928,21 +915,21 @@ public class OrderDetailProjectViewHolder extends RecyclerView.ViewHolder {
             }
             textView2.setText(orderDetailSeatBean.seatNo);
             if (TextUtils.isEmpty(orderDetailSeatBean.combineTicketId)) {
-                c = 0;
+                c2 = 0;
             } else if (this.M.containsKey(orderDetailSeatBean.combineTicketId)) {
-                c = 2;
+                c2 = 2;
             } else {
-                this.M.put(orderDetailSeatBean.combineTicketId, Integer.valueOf(i));
-                c = 1;
+                this.M.put(orderDetailSeatBean.combineTicketId, Integer.valueOf(i2));
+                c2 = 1;
             }
-            if (c == 0) {
+            if (c2 == 0) {
                 textView4.setText("¥" + orderDetailSeatBean.price);
                 textView3.setVisibility(8);
-            } else if (c == 1) {
+            } else if (c2 == 1) {
                 textView3.setVisibility(0);
                 textView3.setText(TextUtils.isEmpty(orderDetailSeatBean.seatTypeDesc) ? "套票" : orderDetailSeatBean.seatTypeDesc);
                 textView4.setText("¥" + orderDetailSeatBean.price);
-            } else if (c == 2) {
+            } else if (c2 == 2) {
                 textView4.setText("");
                 textView3.setVisibility(4);
             }

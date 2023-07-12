@@ -2,11 +2,9 @@ package kotlinx.coroutines.flow;
 
 import kotlin.Metadata;
 import kotlin.coroutines.Continuation;
-import kotlin.coroutines.intrinsics.C8234b;
 import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function2;
-import kotlinx.coroutines.C8696j;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tb.i32;
@@ -45,7 +43,7 @@ final class FlowKt__MigrationKt$delayFlow$1 extends SuspendLambda implements Fun
     @Nullable
     public final Object invokeSuspend(@NotNull Object obj) {
         Object d;
-        d = C8234b.d();
+        d = kotlin.coroutines.intrinsics.b.d();
         int i = this.label;
         if (i == 0) {
             i32.b(obj);
@@ -53,7 +51,7 @@ final class FlowKt__MigrationKt$delayFlow$1 extends SuspendLambda implements Fun
             long j = this.$timeMillis;
             this.L$0 = flowCollector;
             this.label = 1;
-            if (C8696j.a(j, this) == d) {
+            if (kotlinx.coroutines.j.a(j, this) == d) {
                 return d;
             }
         } else if (i != 1) {

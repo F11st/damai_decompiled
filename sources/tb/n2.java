@@ -9,11 +9,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import kotlin.NoWhenBranchMatchedException;
-import kotlin.collections.C8212k;
-import kotlin.collections.C8213l;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8220r;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.jvm.JvmField;
 import kotlin.reflect.jvm.internal.impl.types.AbstractTypeCheckerContext;
@@ -43,9 +38,8 @@ public final class n2 {
     public static boolean a;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.n2$a */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C9459a {
+    public /* synthetic */ class a {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
         public static final /* synthetic */ int[] $EnumSwitchMapping$1;
 
@@ -151,7 +145,7 @@ public final class n2 {
 
     private final List<SimpleTypeMarker> e(AbstractTypeCheckerContext abstractTypeCheckerContext, SimpleTypeMarker simpleTypeMarker, TypeConstructorMarker typeConstructorMarker) {
         String Z;
-        AbstractTypeCheckerContext.AbstractC8531a r;
+        AbstractTypeCheckerContext.a r;
         List<SimpleTypeMarker> g;
         List<SimpleTypeMarker> e;
         List<SimpleTypeMarker> g2;
@@ -159,7 +153,7 @@ public final class n2 {
         List<SimpleTypeMarker> fastCorrespondingSupertypes = j.fastCorrespondingSupertypes(simpleTypeMarker, typeConstructorMarker);
         if (fastCorrespondingSupertypes == null) {
             if (!j.isClassTypeConstructor(typeConstructorMarker) && j.isClassType(simpleTypeMarker)) {
-                g2 = C8214m.g();
+                g2 = kotlin.collections.m.g();
                 return g2;
             } else if (j.isCommonFinalClassConstructor(typeConstructorMarker)) {
                 if (j.areEqualTypeConstructors(j.typeConstructor(simpleTypeMarker), typeConstructorMarker)) {
@@ -167,10 +161,10 @@ public final class n2 {
                     if (captureFromArguments != null) {
                         simpleTypeMarker = captureFromArguments;
                     }
-                    e = C8213l.e(simpleTypeMarker);
+                    e = kotlin.collections.l.e(simpleTypeMarker);
                     return e;
                 }
-                g = C8214m.g();
+                g = kotlin.collections.m.g();
                 return g;
             } else {
                 fastCorrespondingSupertypes = new xd2<>();
@@ -191,13 +185,13 @@ public final class n2 {
                             }
                             if (j.areEqualTypeConstructors(j.typeConstructor(captureFromArguments2), typeConstructorMarker)) {
                                 fastCorrespondingSupertypes.add(captureFromArguments2);
-                                r = AbstractTypeCheckerContext.AbstractC8531a.C8534c.INSTANCE;
+                                r = AbstractTypeCheckerContext.a.c.INSTANCE;
                             } else if (j.argumentsCount(captureFromArguments2) == 0) {
-                                r = AbstractTypeCheckerContext.AbstractC8531a.C8533b.INSTANCE;
+                                r = AbstractTypeCheckerContext.a.b.INSTANCE;
                             } else {
                                 r = abstractTypeCheckerContext.r(captureFromArguments2);
                             }
-                            if (!(!b41.d(r, AbstractTypeCheckerContext.AbstractC8531a.C8534c.INSTANCE))) {
+                            if (!(!b41.d(r, AbstractTypeCheckerContext.a.c.INSTANCE))) {
                                 r = null;
                             }
                             if (r != null) {
@@ -279,7 +273,7 @@ public final class n2 {
 
     private final boolean l(AbstractTypeCheckerContext abstractTypeCheckerContext, SimpleTypeMarker simpleTypeMarker) {
         String Z;
-        AbstractTypeCheckerContext.AbstractC8531a abstractC8531a;
+        AbstractTypeCheckerContext.a aVar;
         TypeSystemContext j = abstractTypeCheckerContext.j();
         TypeConstructorMarker typeConstructor = j.typeConstructor(simpleTypeMarker);
         if (j.isClassTypeConstructor(typeConstructor)) {
@@ -300,19 +294,19 @@ public final class n2 {
                 b41.h(pop, "current");
                 if (i.add(pop)) {
                     if (j.isClassType(pop)) {
-                        abstractC8531a = AbstractTypeCheckerContext.AbstractC8531a.C8534c.INSTANCE;
+                        aVar = AbstractTypeCheckerContext.a.c.INSTANCE;
                     } else {
-                        abstractC8531a = AbstractTypeCheckerContext.AbstractC8531a.C8533b.INSTANCE;
+                        aVar = AbstractTypeCheckerContext.a.b.INSTANCE;
                     }
-                    if (!(!b41.d(abstractC8531a, AbstractTypeCheckerContext.AbstractC8531a.C8534c.INSTANCE))) {
-                        abstractC8531a = null;
+                    if (!(!b41.d(aVar, AbstractTypeCheckerContext.a.c.INSTANCE))) {
+                        aVar = null;
                     }
-                    if (abstractC8531a == null) {
+                    if (aVar == null) {
                         continue;
                     } else {
                         TypeSystemContext j2 = abstractTypeCheckerContext.j();
                         for (KotlinTypeMarker kotlinTypeMarker : j2.supertypes(j2.typeConstructor(pop))) {
-                            SimpleTypeMarker a2 = abstractC8531a.a(abstractTypeCheckerContext, kotlinTypeMarker);
+                            SimpleTypeMarker a2 = aVar.a(abstractTypeCheckerContext, kotlinTypeMarker);
                             if (j.isNothingConstructor(j.typeConstructor(a2))) {
                                 abstractTypeCheckerContext.e();
                                 return true;
@@ -392,7 +386,7 @@ public final class n2 {
                 }
                 List<SimpleTypeMarker> j2 = n2Var.j(abstractTypeCheckerContext, simpleTypeMarker, typeConstructor);
                 int i = 10;
-                q = C8215n.q(j2, 10);
+                q = kotlin.collections.n.q(j2, 10);
                 ArrayList<SimpleTypeMarker> arrayList = new ArrayList(q);
                 for (SimpleTypeMarker simpleTypeMarker3 : j2) {
                     SimpleTypeMarker asSimpleType = j.asSimpleType(abstractTypeCheckerContext.p(simpleTypeMarker3));
@@ -415,7 +409,7 @@ public final class n2 {
                                 if (z) {
                                     typeConstructorMarker = typeConstructor;
                                 } else {
-                                    q2 = C8215n.q(arrayList, i);
+                                    q2 = kotlin.collections.n.q(arrayList, i);
                                     List<? extends KotlinTypeMarker> arrayList2 = new ArrayList<>(q2);
                                     for (SimpleTypeMarker simpleTypeMarker4 : arrayList) {
                                         TypeArgumentMarker argumentOrNull = j.getArgumentOrNull(simpleTypeMarker4, i2);
@@ -463,7 +457,7 @@ public final class n2 {
                         }
                         return true;
                     }
-                    return INSTANCE.o(abstractTypeCheckerContext, j.asArgumentList((SimpleTypeMarker) C8212k.P(arrayList)), simpleTypeMarker2);
+                    return INSTANCE.o(abstractTypeCheckerContext, j.asArgumentList((SimpleTypeMarker) kotlin.collections.k.P(arrayList)), simpleTypeMarker2);
                 }
                 return INSTANCE.l(abstractTypeCheckerContext, simpleTypeMarker);
             }
@@ -563,7 +557,7 @@ public final class n2 {
     @NotNull
     public final List<SimpleTypeMarker> j(@NotNull AbstractTypeCheckerContext abstractTypeCheckerContext, @NotNull SimpleTypeMarker simpleTypeMarker, @NotNull TypeConstructorMarker typeConstructorMarker) {
         String Z;
-        AbstractTypeCheckerContext.AbstractC8531a abstractC8531a;
+        AbstractTypeCheckerContext.a aVar;
         b41.i(abstractTypeCheckerContext, WPKFactory.INIT_KEY_CONTEXT);
         b41.i(simpleTypeMarker, "subType");
         b41.i(typeConstructorMarker, "superConstructor");
@@ -588,17 +582,17 @@ public final class n2 {
                 if (i.add(pop)) {
                     if (j.isClassType(pop)) {
                         xd2Var.add(pop);
-                        abstractC8531a = AbstractTypeCheckerContext.AbstractC8531a.C8534c.INSTANCE;
+                        aVar = AbstractTypeCheckerContext.a.c.INSTANCE;
                     } else {
-                        abstractC8531a = AbstractTypeCheckerContext.AbstractC8531a.C8533b.INSTANCE;
+                        aVar = AbstractTypeCheckerContext.a.b.INSTANCE;
                     }
-                    if (!(!b41.d(abstractC8531a, AbstractTypeCheckerContext.AbstractC8531a.C8534c.INSTANCE))) {
-                        abstractC8531a = null;
+                    if (!(!b41.d(aVar, AbstractTypeCheckerContext.a.c.INSTANCE))) {
+                        aVar = null;
                     }
-                    if (abstractC8531a != null) {
+                    if (aVar != null) {
                         TypeSystemContext j2 = abstractTypeCheckerContext.j();
                         for (KotlinTypeMarker kotlinTypeMarker : j2.supertypes(j2.typeConstructor(pop))) {
-                            h.add(abstractC8531a.a(abstractTypeCheckerContext, kotlinTypeMarker));
+                            h.add(aVar.a(abstractTypeCheckerContext, kotlinTypeMarker));
                         }
                     }
                 }
@@ -617,7 +611,7 @@ public final class n2 {
         for (SimpleTypeMarker simpleTypeMarker2 : xd2Var) {
             n2 n2Var = INSTANCE;
             b41.h(simpleTypeMarker2, AdvanceSetting.NETWORK_TYPE);
-            C8220r.v(arrayList, n2Var.f(abstractTypeCheckerContext, simpleTypeMarker2, typeConstructorMarker));
+            kotlin.collections.r.v(arrayList, n2Var.f(abstractTypeCheckerContext, simpleTypeMarker2, typeConstructorMarker));
         }
         return arrayList;
     }
@@ -656,7 +650,7 @@ public final class n2 {
                             if (i <= 100) {
                                 i2 = abstractTypeCheckerContext.a;
                                 abstractTypeCheckerContext.a = i2 + 1;
-                                int i7 = C9459a.$EnumSwitchMapping$0[h.ordinal()];
+                                int i7 = a.$EnumSwitchMapping$0[h.ordinal()];
                                 if (i7 == 1) {
                                     i3 = n2Var.i(abstractTypeCheckerContext, type2, type);
                                 } else if (i7 == 2) {

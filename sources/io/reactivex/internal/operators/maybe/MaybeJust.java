@@ -1,13 +1,13 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8148c;
 import io.reactivex.MaybeObserver;
-import io.reactivex.disposables.C8151a;
+import io.reactivex.c;
+import io.reactivex.disposables.a;
 import io.reactivex.internal.fuseable.ScalarCallable;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeJust<T> extends AbstractC8148c<T> implements ScalarCallable<T> {
+public final class MaybeJust<T> extends c<T> implements ScalarCallable<T> {
     final T value;
 
     public MaybeJust(T t) {
@@ -19,9 +19,9 @@ public final class MaybeJust<T> extends AbstractC8148c<T> implements ScalarCalla
         return this.value;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
-        maybeObserver.onSubscribe(C8151a.a());
+        maybeObserver.onSubscribe(a.a());
         maybeObserver.onSuccess((T) this.value);
     }
 }

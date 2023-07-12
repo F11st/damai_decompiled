@@ -11,7 +11,7 @@ import tb.jn1;
 /* compiled from: Taobao */
 @Immutable
 /* loaded from: classes10.dex */
-final class SipHashFunction extends AbstractC5229b implements Serializable {
+final class SipHashFunction extends b implements Serializable {
     static final HashFunction SIP_HASH_24 = new SipHashFunction(2, 4, 506097522914230528L, 1084818905618843912L);
     private static final long serialVersionUID = 0;
     private final int c;
@@ -20,9 +20,8 @@ final class SipHashFunction extends AbstractC5229b implements Serializable {
     private final long k1;
 
     /* compiled from: Taobao */
-    /* renamed from: com.google.common.hash.SipHashFunction$a */
     /* loaded from: classes10.dex */
-    private static final class C5225a extends AbstractC5231d {
+    private static final class a extends d {
         private final int d;
         private final int e;
         private long f;
@@ -32,7 +31,7 @@ final class SipHashFunction extends AbstractC5229b implements Serializable {
         private long j;
         private long k;
 
-        C5225a(int i, int i2, long j, long j2) {
+        a(int i, int i2, long j, long j2) {
             super(8);
             this.f = 8317987319222330741L;
             this.g = 7237128888997146477L;
@@ -84,7 +83,7 @@ final class SipHashFunction extends AbstractC5229b implements Serializable {
             }
         }
 
-        @Override // com.google.common.hash.AbstractC5231d
+        @Override // com.google.common.hash.d
         public HashCode a() {
             long j = this.k ^ (this.j << 56);
             this.k = j;
@@ -94,13 +93,13 @@ final class SipHashFunction extends AbstractC5229b implements Serializable {
             return HashCode.fromLong(((this.f ^ this.g) ^ this.h) ^ this.i);
         }
 
-        @Override // com.google.common.hash.AbstractC5231d
+        @Override // com.google.common.hash.d
         protected void d(ByteBuffer byteBuffer) {
             this.j += 8;
             g(byteBuffer.getLong());
         }
 
-        @Override // com.google.common.hash.AbstractC5231d
+        @Override // com.google.common.hash.d
         protected void e(ByteBuffer byteBuffer) {
             this.j += byteBuffer.remaining();
             int i = 0;
@@ -139,7 +138,7 @@ final class SipHashFunction extends AbstractC5229b implements Serializable {
 
     @Override // com.google.common.hash.HashFunction
     public Hasher newHasher() {
-        return new C5225a(this.c, this.d, this.k0, this.k1);
+        return new a(this.c, this.d, this.k0, this.k1);
     }
 
     public String toString() {

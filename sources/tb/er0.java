@@ -11,7 +11,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes6.dex */
 public final class er0 {
     @NotNull
-    public static final C9111a Companion = new C9111a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final JSONObject a;
     private final int b;
@@ -31,13 +31,12 @@ public final class er0 {
     private Boolean k;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.er0$a */
     /* loaded from: classes6.dex */
-    public static final class C9111a {
-        private C9111a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9111a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

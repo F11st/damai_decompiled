@@ -25,9 +25,8 @@ public final class u1 {
     private String[] k;
 
     /* compiled from: Taobao */
-    /* renamed from: com.loc.u1$a */
     /* loaded from: classes10.dex */
-    public static class C5886a {
+    public static class a {
         private String a;
         private String b;
         private String c;
@@ -36,30 +35,30 @@ public final class u1 {
         private String f = Point.STANDARD;
         private String[] g = null;
 
-        public C5886a(String str, String str2, String str3) {
+        public a(String str, String str2, String str3) {
             this.a = str2;
             this.b = str2;
             this.d = str3;
             this.c = str;
         }
 
-        public final C5886a a(String str) {
+        public final a a(String str) {
             this.b = str;
             return this;
         }
 
-        public final C5886a b(String[] strArr) {
+        public final a b(String[] strArr) {
             if (strArr != null) {
                 this.g = (String[]) strArr.clone();
             }
             return this;
         }
 
-        public final u1 c() throws C5844k {
+        public final u1 c() throws k {
             if (this.g != null) {
                 return new u1(this, (byte) 0);
             }
-            throw new C5844k("sdk packages is null");
+            throw new k("sdk packages is null");
         }
     }
 
@@ -68,16 +67,16 @@ public final class u1 {
         this.k = null;
     }
 
-    private u1(C5886a c5886a) {
+    private u1(a aVar) {
         this.c = 1;
         this.k = null;
-        this.f = c5886a.a;
-        this.g = c5886a.b;
-        this.i = c5886a.c;
-        this.h = c5886a.d;
-        this.c = c5886a.e ? 1 : 0;
-        this.j = c5886a.f;
-        this.k = c5886a.g;
+        this.f = aVar.a;
+        this.g = aVar.b;
+        this.i = aVar.c;
+        this.h = aVar.d;
+        this.c = aVar.e ? 1 : 0;
+        this.j = aVar.f;
+        this.k = aVar.g;
         this.b = v1.r(this.g);
         this.a = v1.r(this.i);
         v1.r(this.h);
@@ -85,8 +84,8 @@ public final class u1 {
         this.e = v1.r(this.j);
     }
 
-    /* synthetic */ u1(C5886a c5886a, byte b) {
-        this(c5886a);
+    /* synthetic */ u1(a aVar, byte b) {
+        this(aVar);
     }
 
     private static String b(String[] strArr) {

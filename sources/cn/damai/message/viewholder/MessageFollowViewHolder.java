@@ -30,14 +30,13 @@ public class MessageFollowViewHolder extends RecyclerView.ViewHolder {
     private DMAvatar f;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.message.viewholder.MessageFollowViewHolder$a */
     /* loaded from: classes15.dex */
-    public class View$OnClickListenerC1352a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ MessageItem a;
         final /* synthetic */ int b;
 
-        View$OnClickListenerC1352a(MessageItem messageItem, int i) {
+        a(MessageItem messageItem, int i) {
             this.a = messageItem;
             this.b = i;
         }
@@ -95,7 +94,7 @@ public class MessageFollowViewHolder extends RecyclerView.ViewHolder {
             if (!TextUtils.isEmpty(messageItem.getGmtCreateText())) {
                 this.d.setText(messageItem.getGmtCreateText());
             }
-            this.e.setOnClickListener(new View$OnClickListenerC1352a(messageItem, i));
+            this.e.setOnClickListener(new a(messageItem, i));
             if (!TextUtils.isEmpty(messageItem.getMsgBody())) {
                 this.c.setVisibility(0);
                 this.c.setText(messageItem.getMsgBody());

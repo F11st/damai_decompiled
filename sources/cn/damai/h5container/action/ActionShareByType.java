@@ -14,8 +14,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import cn.damai.common.askpermission.OnGrantListener;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
+import cn.damai.common.image.a;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -210,13 +210,13 @@ public class ActionShareByType extends DMBridgeAction {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void lambda$loadBgImg$3(Activity activity, ImageView imageView, ImageView imageView2, View view, String str, DMImageCreator.C0502e c0502e) {
+    public /* synthetic */ void lambda$loadBgImg$3(Activity activity, ImageView imageView, ImageView imageView2, View view, String str, DMImageCreator.e eVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1231966415")) {
-            ipChange.ipc$dispatch("-1231966415", new Object[]{this, activity, imageView, imageView2, view, str, c0502e});
+            ipChange.ipc$dispatch("-1231966415", new Object[]{this, activity, imageView, imageView2, view, str, eVar});
             return;
         }
-        Bitmap bitmap = c0502e.b;
+        Bitmap bitmap = eVar.b;
         if (bitmap == null) {
             GenerateImageUtil.I(activity);
             return;
@@ -230,23 +230,23 @@ public class ActionShareByType extends DMBridgeAction {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void lambda$loadBgImg$4(Activity activity, View view, String str, DMImageCreator.C0501d c0501d) {
+    public /* synthetic */ void lambda$loadBgImg$4(Activity activity, View view, String str, DMImageCreator.d dVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1625214527")) {
-            ipChange.ipc$dispatch("-1625214527", new Object[]{this, activity, view, str, c0501d});
+            ipChange.ipc$dispatch("-1625214527", new Object[]{this, activity, view, str, dVar});
         } else {
             requestQrcode(activity, view, str);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void lambda$loadHeadImg$1(View view, Activity activity, DMShareMessage dMShareMessage, String str, DMImageCreator.C0502e c0502e) {
+    public /* synthetic */ void lambda$loadHeadImg$1(View view, Activity activity, DMShareMessage dMShareMessage, String str, DMImageCreator.e eVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-706473222")) {
-            ipChange.ipc$dispatch("-706473222", new Object[]{this, view, activity, dMShareMessage, str, c0502e});
+            ipChange.ipc$dispatch("-706473222", new Object[]{this, view, activity, dMShareMessage, str, eVar});
             return;
         }
-        Bitmap bitmap = c0502e.b;
+        Bitmap bitmap = eVar.b;
         if (bitmap == null) {
             return;
         }
@@ -258,10 +258,10 @@ public class ActionShareByType extends DMBridgeAction {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void lambda$loadHeadImg$2(Activity activity, DMShareMessage dMShareMessage, View view, String str, DMImageCreator.C0501d c0501d) {
+    public /* synthetic */ void lambda$loadHeadImg$2(Activity activity, DMShareMessage dMShareMessage, View view, String str, DMImageCreator.d dVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1051481288")) {
-            ipChange.ipc$dispatch("1051481288", new Object[]{this, activity, dMShareMessage, view, str, c0501d});
+            ipChange.ipc$dispatch("1051481288", new Object[]{this, activity, dMShareMessage, view, str, dVar});
         } else {
             loadBgImg(activity, dMShareMessage, view, str);
         }
@@ -289,15 +289,15 @@ public class ActionShareByType extends DMBridgeAction {
         }
         final ImageView imageView = (ImageView) view.findViewById(R$id.share_page_projectbg);
         final ImageView imageView2 = (ImageView) view.findViewById(R$id.share_page_bg);
-        C0504a.b().h(activity).c(dMShareMessage.sharePictureUrl).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.b3
+        a.b().h(activity).c(dMShareMessage.sharePictureUrl).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.b3
             @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-            public final void onSuccess(DMImageCreator.C0502e c0502e) {
-                ActionShareByType.this.lambda$loadBgImg$3(activity, imageView, imageView2, view, str, c0502e);
+            public final void onSuccess(DMImageCreator.e eVar) {
+                ActionShareByType.this.lambda$loadBgImg$3(activity, imageView, imageView2, view, str, eVar);
             }
         }).e(new DMImageCreator.DMImageFailListener() { // from class: tb.z2
             @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-            public final void onFail(DMImageCreator.C0501d c0501d) {
-                ActionShareByType.this.lambda$loadBgImg$4(activity, view, str, c0501d);
+            public final void onFail(DMImageCreator.d dVar) {
+                ActionShareByType.this.lambda$loadBgImg$4(activity, view, str, dVar);
             }
         }).f();
     }
@@ -307,15 +307,15 @@ public class ActionShareByType extends DMBridgeAction {
         if (AndroidInstantRuntime.support(ipChange, "-1730786303")) {
             ipChange.ipc$dispatch("-1730786303", new Object[]{this, activity, dMShareMessage, str, view});
         } else {
-            C0504a.b().c(dMShareMessage.headUrl).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.c3
+            a.b().c(dMShareMessage.headUrl).n(new DMImageCreator.DMImageSuccListener() { // from class: tb.c3
                 @Override // cn.damai.common.image.DMImageCreator.DMImageSuccListener
-                public final void onSuccess(DMImageCreator.C0502e c0502e) {
-                    ActionShareByType.this.lambda$loadHeadImg$1(view, activity, dMShareMessage, str, c0502e);
+                public final void onSuccess(DMImageCreator.e eVar) {
+                    ActionShareByType.this.lambda$loadHeadImg$1(view, activity, dMShareMessage, str, eVar);
                 }
             }).e(new DMImageCreator.DMImageFailListener() { // from class: tb.a3
                 @Override // cn.damai.common.image.DMImageCreator.DMImageFailListener
-                public final void onFail(DMImageCreator.C0501d c0501d) {
-                    ActionShareByType.this.lambda$loadHeadImg$2(activity, dMShareMessage, view, str, c0501d);
+                public final void onFail(DMImageCreator.d dVar) {
+                    ActionShareByType.this.lambda$loadHeadImg$2(activity, dMShareMessage, view, str, dVar);
                 }
             }).f();
         }

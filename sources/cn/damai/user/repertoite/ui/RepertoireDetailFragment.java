@@ -13,11 +13,10 @@ import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import cn.damai.comment.bean.CommentsItemBean;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.common.image.DMRoundedCornersBitmapProcessor;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.commonbusiness.model.UserAttentionBean;
@@ -73,14 +72,13 @@ public class RepertoireDetailFragment extends DamaiBaseMvpFragment<RepertoireDet
     private boolean mMySelf = false;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.user.repertoite.ui.RepertoireDetailFragment$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2700a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         RepertoireDetailDataBean.ProjectCardInfoBean a;
         int b;
 
-        public View$OnClickListenerC2700a(RepertoireDetailDataBean.ProjectCardInfoBean projectCardInfoBean, int i) {
+        public a(RepertoireDetailDataBean.ProjectCardInfoBean projectCardInfoBean, int i) {
             this.b = 0;
             this.a = projectCardInfoBean;
             this.b = i;
@@ -93,7 +91,7 @@ public class RepertoireDetailFragment extends DamaiBaseMvpFragment<RepertoireDet
                 ipChange.ipc$dispatch("-512192565", new Object[]{this, view});
                 return;
             }
-            C0529c.e().x(u12.h().m(RepertoireDetailFragment.this.mRepertoireId, RepertoireDetailFragment.this.mUserType, RepertoireDetailFragment.this.mMySelf, this.a.getProjectId(), this.b));
+            c.e().x(u12.h().m(RepertoireDetailFragment.this.mRepertoireId, RepertoireDetailFragment.this.mUserType, RepertoireDetailFragment.this.mMySelf, this.a.getProjectId(), this.b));
             Intent intent = new Intent();
             intent.putExtra(IssueConstants.ProjectID, Long.valueOf(this.a.getProjectId()));
             qd2.a(RepertoireDetailFragment.this.getContext(), this.a.schema, intent.getExtras());
@@ -190,7 +188,7 @@ public class RepertoireDetailFragment extends DamaiBaseMvpFragment<RepertoireDet
             for (int i = 0; i < repertoireDetailDataBean.getProjectCardInfo().size(); i++) {
                 RepertoireDetailDataBean.ProjectCardInfoBean projectCardInfoBean = repertoireDetailDataBean.getProjectCardInfo().get(i);
                 if (i == 0) {
-                    DMImageCreator k = C0504a.b().c(projectCardInfoBean.getProjectPic()).k(new DMRoundedCornersBitmapProcessor(t60.a(getContext(), 3.0f), 0));
+                    DMImageCreator k = cn.damai.common.image.a.b().c(projectCardInfoBean.getProjectPic()).k(new DMRoundedCornersBitmapProcessor(t60.a(getContext(), 3.0f), 0));
                     int i2 = R$drawable.uikit_default_image_bg_gradient;
                     k.i(i2).c(i2).g(this.mProjectImage);
                     this.mProjectName.setText(projectCardInfoBean.getProjectName());
@@ -217,13 +215,13 @@ public class RepertoireDetailFragment extends DamaiBaseMvpFragment<RepertoireDet
                             this.mFlSales.addView(inflate);
                         }
                     }
-                    this.mProjectOnsale.setOnClickListener(new View$OnClickListenerC2700a(projectCardInfoBean, i));
+                    this.mProjectOnsale.setOnClickListener(new a(projectCardInfoBean, i));
                 } else {
                     View inflate2 = LayoutInflater.from(getContext()).inflate(R$layout.repertoire_project_onsale_city, this.mProjectOnsaleCity, false);
                     ((TextView) inflate2.findViewById(R$id.tv_city)).setText(projectCardInfoBean.getCityName());
                     ((TextView) inflate2.findViewById(R$id.tv_time)).setText(projectCardInfoBean.getShowTime());
                     ((TextView) inflate2.findViewById(R$id.tv_address)).setText(projectCardInfoBean.getVenueName());
-                    inflate2.setOnClickListener(new View$OnClickListenerC2700a(projectCardInfoBean, i));
+                    inflate2.setOnClickListener(new a(projectCardInfoBean, i));
                     this.mProjectOnsaleCity.addView(inflate2);
                 }
             }

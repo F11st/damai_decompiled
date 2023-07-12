@@ -13,7 +13,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.image.DMImageCreator;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.R$layout;
@@ -52,13 +51,12 @@ public class DMThemeProjectItemView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.view.DMThemeProjectItemView$a */
     /* loaded from: classes14.dex */
-    public class View$OnClickListenerC1071a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ProjectLabelClickListener a;
 
-        View$OnClickListenerC1071a(ProjectLabelClickListener projectLabelClickListener) {
+        a(ProjectLabelClickListener projectLabelClickListener) {
             this.a = projectLabelClickListener;
         }
 
@@ -74,13 +72,12 @@ public class DMThemeProjectItemView extends FrameLayout {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.discover.main.ui.view.DMThemeProjectItemView$b  reason: invalid class name */
     /* loaded from: classes14.dex */
-    public class animationAnimation$AnimationListenerC1072b implements Animation.AnimationListener {
+    public class b implements Animation.AnimationListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ ExposureCallBack a;
 
-        animationAnimation$AnimationListenerC1072b(ExposureCallBack exposureCallBack) {
+        b(ExposureCallBack exposureCallBack) {
             this.a = exposureCallBack;
         }
 
@@ -151,7 +148,7 @@ public class DMThemeProjectItemView extends FrameLayout {
             textView.setVisibility(0);
         }
         roundImageView.setBorder(1, Color.parseColor("#1A000000"));
-        DMImageCreator f = C0504a.b().f(projectItemBean.verticalPic, m62.a(this.mContext, 33.0f), m62.a(this.mContext, 44.0f));
+        DMImageCreator f = cn.damai.common.image.a.b().f(projectItemBean.verticalPic, m62.a(this.mContext, 33.0f), m62.a(this.mContext, 44.0f));
         int i2 = R$drawable.uikit_default_image_bg_gradient;
         f.i(i2).c(i2);
         f.g(roundImageView);
@@ -202,7 +199,7 @@ public class DMThemeProjectItemView extends FrameLayout {
         }
         Animation inAnimation = this.projectLoopView.getInAnimation();
         if (inAnimation != null) {
-            inAnimation.setAnimationListener(new animationAnimation$AnimationListenerC1072b(exposureCallBack));
+            inAnimation.setAnimationListener(new b(exposureCallBack));
         }
     }
 
@@ -211,7 +208,7 @@ public class DMThemeProjectItemView extends FrameLayout {
         if (AndroidInstantRuntime.support(ipChange, "1170421373")) {
             ipChange.ipc$dispatch("1170421373", new Object[]{this, projectLabelClickListener});
         } else {
-            this.projectLabel.setOnClickListener(new View$OnClickListenerC1071a(projectLabelClickListener));
+            this.projectLabel.setOnClickListener(new a(projectLabelClickListener));
         }
     }
 

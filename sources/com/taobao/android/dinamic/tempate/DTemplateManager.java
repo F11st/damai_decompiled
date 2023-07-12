@@ -6,11 +6,9 @@ import android.content.res.XmlResourceParser;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.LruCache;
-import com.taobao.android.dinamic.C6312a;
-import com.taobao.android.dinamic.C6313b;
+import com.taobao.android.dinamic.b;
 import com.taobao.android.dinamic.log.DinamicLog;
 import com.taobao.android.dinamic.tempate.SerialTaskManager;
-import com.taobao.android.dinamic.tempate.manager.C6350a;
 import com.taobao.weex.annotation.JSMethod;
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,7 +20,7 @@ import tb.rc0;
 /* loaded from: classes12.dex */
 public class DTemplateManager {
     private String a;
-    private C6350a b;
+    private com.taobao.android.dinamic.tempate.manager.a b;
     private Context e;
     private LruCache<String, Integer> c = new LruCache<>(100);
     private LruCache<String, Boolean> d = new LruCache<>(100);
@@ -47,10 +45,10 @@ public class DTemplateManager {
 
         @Override // java.lang.Runnable
         public void run() {
-            if (C6313b.e()) {
-                DinamicLog.a(C6313b.TAG, "fetch exact template=origin template=" + this.val$origin + "exact template=" + this.val$exact + "consuming=" + (this.val$consumingTime / 1000000.0d));
+            if (b.e()) {
+                DinamicLog.a(b.TAG, "fetch exact template=origin template=" + this.val$origin + "exact template=" + this.val$exact + "consuming=" + (this.val$consumingTime / 1000000.0d));
             }
-            C6312a.h().d();
+            com.taobao.android.dinamic.a.h().d();
             String unused = DTemplateManager.this.a;
             CacheStrategy unused2 = DTemplateManager.this.i;
             throw null;
@@ -65,12 +63,11 @@ public class DTemplateManager {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.android.dinamic.tempate.DTemplateManager$a */
     /* loaded from: classes11.dex */
-    class C6340a implements SerialTaskManager.LayoutFileLoadListener {
+    class a implements SerialTaskManager.LayoutFileLoadListener {
         final /* synthetic */ DinamicTemplateDownloaderCallback a;
 
-        C6340a(DTemplateManager dTemplateManager, DinamicTemplateDownloaderCallback dinamicTemplateDownloaderCallback) {
+        a(DTemplateManager dTemplateManager, DinamicTemplateDownloaderCallback dinamicTemplateDownloaderCallback) {
             this.a = dinamicTemplateDownloaderCallback;
         }
 
@@ -78,7 +75,7 @@ public class DTemplateManager {
         public void onFinished(rc0 rc0Var) {
             DinamicTemplateDownloaderCallback dinamicTemplateDownloaderCallback = this.a;
             if (dinamicTemplateDownloaderCallback == null) {
-                if (C6313b.e()) {
+                if (b.e()) {
                     DinamicLog.j("DTemplateManager", "DinamicTemplateDownloaderCallback is null");
                     return;
                 }
@@ -90,16 +87,16 @@ public class DTemplateManager {
 
     public DTemplateManager(String str) {
         this.a = str;
-        Context a = C6313b.a();
-        this.e = a;
-        if (a == null) {
-            Application a2 = o80.a();
-            this.e = a2;
-            C6313b.f(a2);
+        Context a2 = b.a();
+        this.e = a2;
+        if (a2 == null) {
+            Application a3 = o80.a();
+            this.e = a3;
+            b.f(a3);
         }
-        C6350a c6350a = new C6350a(this.e, str);
-        this.b = c6350a;
-        c6350a.i(C6312a.h().b());
+        com.taobao.android.dinamic.tempate.manager.a aVar = new com.taobao.android.dinamic.tempate.manager.a(this.e, str);
+        this.b = aVar;
+        aVar.i(com.taobao.android.dinamic.a.h().b());
     }
 
     private int f(String str) {
@@ -131,7 +128,7 @@ public class DTemplateManager {
         }
         String str2 = str + ".xml";
         try {
-            InputStream open = C6313b.a().getAssets().open(this.h + "/" + str2);
+            InputStream open = b.a().getAssets().open(this.h + "/" + str2);
             this.d.put(str, Boolean.valueOf(open != null));
             return open != null;
         } catch (IOException unused) {
@@ -141,20 +138,20 @@ public class DTemplateManager {
     }
 
     private void m(DinamicTemplate dinamicTemplate, DinamicTemplate dinamicTemplate2, long j) {
-        C6312a.h().d();
+        com.taobao.android.dinamic.a.h().d();
     }
 
     public static DTemplateManager q(String str) {
         if (TextUtils.isEmpty(str)) {
-            return C6313b.c("default").b;
+            return b.c("default").b;
         }
-        return C6313b.c(str).b;
+        return b.c(str).b;
     }
 
     public void c(List<DinamicTemplate> list, DinamicTemplateDownloaderCallback dinamicTemplateDownloaderCallback) {
-        C6340a c6340a = new C6340a(this, dinamicTemplateDownloaderCallback);
+        a aVar = new a(this, dinamicTemplateDownloaderCallback);
         SerialTaskManager.DownLoadTask downLoadTask = new SerialTaskManager.DownLoadTask(this.b, this.f);
-        downLoadTask.b = c6340a;
+        downLoadTask.b = aVar;
         downLoadTask.c = list;
         downLoadTask.d = this.a;
         this.g.b(downLoadTask);
@@ -198,7 +195,7 @@ public class DTemplateManager {
         return i2;
     }
 
-    public C6350a g() {
+    public com.taobao.android.dinamic.tempate.manager.a g() {
         return this.b;
     }
 

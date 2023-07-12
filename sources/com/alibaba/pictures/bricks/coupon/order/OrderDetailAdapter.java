@@ -49,7 +49,7 @@ import tb.zn1;
 public final class OrderDetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private static transient /* synthetic */ IpChange $ipChange = null;
     @NotNull
-    public static final C3514a Companion = new C3514a(null);
+    public static final a Companion = new a(null);
     public static final int FAQS = 7;
     public static final int GAIAX_UI = 9;
     public static final int GOODS = 3;
@@ -76,13 +76,12 @@ public final class OrderDetailAdapter extends RecyclerView.Adapter<RecyclerView.
     private BricksBaseFragment g;
 
     /* compiled from: Taobao */
-    /* renamed from: com.alibaba.pictures.bricks.coupon.order.OrderDetailAdapter$a */
     /* loaded from: classes7.dex */
-    public static final class C3514a {
-        private C3514a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C3514a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }

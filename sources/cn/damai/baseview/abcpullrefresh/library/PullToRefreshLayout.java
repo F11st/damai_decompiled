@@ -99,15 +99,15 @@ public class PullToRefreshLayout extends FrameLayout {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public PullToRefreshAttacher createPullToRefreshAttacher(Activity activity, C0284d c0284d) {
+    public PullToRefreshAttacher createPullToRefreshAttacher(Activity activity, d dVar) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "1235859749")) {
-            return (PullToRefreshAttacher) ipChange.ipc$dispatch("1235859749", new Object[]{this, activity, c0284d});
+            return (PullToRefreshAttacher) ipChange.ipc$dispatch("1235859749", new Object[]{this, activity, dVar});
         }
-        if (c0284d == null) {
-            c0284d = new C0284d();
+        if (dVar == null) {
+            dVar = new d();
         }
-        return new PullToRefreshAttacher(activity, c0284d);
+        return new PullToRefreshAttacher(activity, dVar);
     }
 
     public lw0 getHeaderTransformer() {
@@ -146,7 +146,7 @@ public class PullToRefreshLayout extends FrameLayout {
         } else if (indexOf == 0) {
             viewDelegateClassName = getContext().getPackageName() + viewDelegateClassName;
         }
-        return (ViewDelegate) C0283c.c(getContext(), viewDelegateClassName);
+        return (ViewDelegate) c.c(getContext(), viewDelegateClassName);
     }
 
     public final boolean isRefreshing() {

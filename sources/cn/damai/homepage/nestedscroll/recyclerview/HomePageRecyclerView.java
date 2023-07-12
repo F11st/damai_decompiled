@@ -76,12 +76,11 @@ public class HomePageRecyclerView extends ParentRecyclerView {
     int refreshHeaderLayoutRes;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.nestedscroll.recyclerview.HomePageRecyclerView$a */
     /* loaded from: classes14.dex */
-    public class C1147a implements ValueAnimator.AnimatorUpdateListener {
+    public class a implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1147a() {
+        a() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -106,12 +105,11 @@ public class HomePageRecyclerView extends ParentRecyclerView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.nestedscroll.recyclerview.HomePageRecyclerView$b */
     /* loaded from: classes5.dex */
-    public class C1148b extends vc2 {
+    public class b extends vc2 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1148b() {
+        b() {
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -164,12 +162,11 @@ public class HomePageRecyclerView extends ParentRecyclerView {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.homepage.nestedscroll.recyclerview.HomePageRecyclerView$c */
     /* loaded from: classes5.dex */
-    public class C1149c implements RefreshTrigger {
+    public class c implements RefreshTrigger {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1149c() {
+        c() {
         }
 
         @Override // cn.damai.uikit.irecycler.RefreshTrigger
@@ -867,9 +864,9 @@ public class HomePageRecyclerView extends ParentRecyclerView {
         this.mActivePointerId = -1;
         this.mLastTouchX = 0;
         this.mLastTouchY = 0;
-        this.mAnimatorUpdateListener = new C1147a();
-        this.mAnimationListener = new C1148b();
-        this.mRefreshTrigger = new C1149c();
+        this.mAnimatorUpdateListener = new a();
+        this.mAnimationListener = new b();
+        this.mRefreshTrigger = new c();
         this.mTouchSlop = ViewConfiguration.get(context).getScaledEdgeSlop();
         this.mContext = context;
         TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R$styleable.IRecyclerView, i, 0);

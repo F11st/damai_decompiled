@@ -6,8 +6,6 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Pair;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.jvm.JvmStatic;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Class;
@@ -19,7 +17,6 @@ import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Type;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$ValueParameter;
 import kotlin.reflect.jvm.internal.impl.metadata.deserialization.NameResolver;
 import kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf;
-import kotlin.reflect.jvm.internal.impl.protobuf.C8447c;
 import kotlin.reflect.jvm.internal.impl.protobuf.GeneratedMessageLite;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -32,10 +29,10 @@ public final class b71 {
     @NotNull
     public static final b71 INSTANCE = new b71();
     @NotNull
-    private static final C8447c a;
+    private static final kotlin.reflect.jvm.internal.impl.protobuf.c a;
 
     static {
-        C8447c d = C8447c.d();
+        kotlin.reflect.jvm.internal.impl.protobuf.c d = kotlin.reflect.jvm.internal.impl.protobuf.c.d();
         JvmProtoBuf.a(d);
         b41.h(d, "newInstance().apply(JvmP…f::registerAllExtensions)");
         a = d;
@@ -44,7 +41,7 @@ public final class b71 {
     private b71() {
     }
 
-    public static /* synthetic */ w61.C9845a d(b71 b71Var, ProtoBuf$Property protoBuf$Property, NameResolver nameResolver, er2 er2Var, boolean z, int i, Object obj) {
+    public static /* synthetic */ w61.a d(b71 b71Var, ProtoBuf$Property protoBuf$Property, NameResolver nameResolver, er2 er2Var, boolean z, int i, Object obj) {
         if ((i & 8) != 0) {
             z = true;
         }
@@ -54,7 +51,7 @@ public final class b71 {
     @JvmStatic
     public static final boolean f(@NotNull ProtoBuf$Property protoBuf$Property) {
         b41.i(protoBuf$Property, "proto");
-        yj0.C9988b a2 = v61.INSTANCE.a();
+        yj0.b a2 = v61.INSTANCE.a();
         Object extension = protoBuf$Property.getExtension(JvmProtoBuf.flags);
         b41.h(extension, "proto.getExtension(JvmProtoBuf.flags)");
         Boolean d = a2.d(((Number) extension).intValue());
@@ -123,27 +120,27 @@ public final class b71 {
     }
 
     @NotNull
-    public final C8447c a() {
+    public final kotlin.reflect.jvm.internal.impl.protobuf.c a() {
         return a;
     }
 
     @Nullable
-    public final w61.C9846b b(@NotNull ProtoBuf$Constructor protoBuf$Constructor, @NotNull NameResolver nameResolver, @NotNull er2 er2Var) {
+    public final w61.b b(@NotNull ProtoBuf$Constructor protoBuf$Constructor, @NotNull NameResolver nameResolver, @NotNull er2 er2Var) {
         int q;
         String Z;
         b41.i(protoBuf$Constructor, "proto");
         b41.i(nameResolver, "nameResolver");
         b41.i(er2Var, "typeTable");
-        GeneratedMessageLite.C8441c<ProtoBuf$Constructor, JvmProtoBuf.JvmMethodSignature> c8441c = JvmProtoBuf.constructorSignature;
-        b41.h(c8441c, "constructorSignature");
-        JvmProtoBuf.JvmMethodSignature jvmMethodSignature = (JvmProtoBuf.JvmMethodSignature) fx1.a(protoBuf$Constructor, c8441c);
+        GeneratedMessageLite.c<ProtoBuf$Constructor, JvmProtoBuf.JvmMethodSignature> cVar = JvmProtoBuf.constructorSignature;
+        b41.h(cVar, "constructorSignature");
+        JvmProtoBuf.JvmMethodSignature jvmMethodSignature = (JvmProtoBuf.JvmMethodSignature) fx1.a(protoBuf$Constructor, cVar);
         String string = (jvmMethodSignature == null || !jvmMethodSignature.hasName()) ? "<init>" : nameResolver.getString(jvmMethodSignature.getName());
         if (jvmMethodSignature != null && jvmMethodSignature.hasDesc()) {
             Z = nameResolver.getString(jvmMethodSignature.getDesc());
         } else {
             List<ProtoBuf$ValueParameter> valueParameterList = protoBuf$Constructor.getValueParameterList();
             b41.h(valueParameterList, "proto.valueParameterList");
-            q = C8215n.q(valueParameterList, 10);
+            q = kotlin.collections.n.q(valueParameterList, 10);
             ArrayList arrayList = new ArrayList(q);
             for (ProtoBuf$ValueParameter protoBuf$ValueParameter : valueParameterList) {
                 b71 b71Var = INSTANCE;
@@ -156,18 +153,18 @@ public final class b71 {
             }
             Z = CollectionsKt___CollectionsKt.Z(arrayList, "", jn1.BRACKET_START_STR, ")V", 0, null, null, 56, null);
         }
-        return new w61.C9846b(string, Z);
+        return new w61.b(string, Z);
     }
 
     @Nullable
-    public final w61.C9845a c(@NotNull ProtoBuf$Property protoBuf$Property, @NotNull NameResolver nameResolver, @NotNull er2 er2Var, boolean z) {
+    public final w61.a c(@NotNull ProtoBuf$Property protoBuf$Property, @NotNull NameResolver nameResolver, @NotNull er2 er2Var, boolean z) {
         String g;
         b41.i(protoBuf$Property, "proto");
         b41.i(nameResolver, "nameResolver");
         b41.i(er2Var, "typeTable");
-        GeneratedMessageLite.C8441c<ProtoBuf$Property, JvmProtoBuf.JvmPropertySignature> c8441c = JvmProtoBuf.propertySignature;
-        b41.h(c8441c, "propertySignature");
-        JvmProtoBuf.JvmPropertySignature jvmPropertySignature = (JvmProtoBuf.JvmPropertySignature) fx1.a(protoBuf$Property, c8441c);
+        GeneratedMessageLite.c<ProtoBuf$Property, JvmProtoBuf.JvmPropertySignature> cVar = JvmProtoBuf.propertySignature;
+        b41.h(cVar, "propertySignature");
+        JvmProtoBuf.JvmPropertySignature jvmPropertySignature = (JvmProtoBuf.JvmPropertySignature) fx1.a(protoBuf$Property, cVar);
         if (jvmPropertySignature == null) {
             return null;
         }
@@ -184,11 +181,11 @@ public final class b71 {
         } else {
             g = nameResolver.getString(field.getDesc());
         }
-        return new w61.C9845a(nameResolver.getString(name), g);
+        return new w61.a(nameResolver.getString(name), g);
     }
 
     @Nullable
-    public final w61.C9846b e(@NotNull ProtoBuf$Function protoBuf$Function, @NotNull NameResolver nameResolver, @NotNull er2 er2Var) {
+    public final w61.b e(@NotNull ProtoBuf$Function protoBuf$Function, @NotNull NameResolver nameResolver, @NotNull er2 er2Var) {
         List k;
         int q;
         List<ProtoBuf$Type> m0;
@@ -198,24 +195,24 @@ public final class b71 {
         b41.i(protoBuf$Function, "proto");
         b41.i(nameResolver, "nameResolver");
         b41.i(er2Var, "typeTable");
-        GeneratedMessageLite.C8441c<ProtoBuf$Function, JvmProtoBuf.JvmMethodSignature> c8441c = JvmProtoBuf.methodSignature;
-        b41.h(c8441c, "methodSignature");
-        JvmProtoBuf.JvmMethodSignature jvmMethodSignature = (JvmProtoBuf.JvmMethodSignature) fx1.a(protoBuf$Function, c8441c);
+        GeneratedMessageLite.c<ProtoBuf$Function, JvmProtoBuf.JvmMethodSignature> cVar = JvmProtoBuf.methodSignature;
+        b41.h(cVar, "methodSignature");
+        JvmProtoBuf.JvmMethodSignature jvmMethodSignature = (JvmProtoBuf.JvmMethodSignature) fx1.a(protoBuf$Function, cVar);
         int name = (jvmMethodSignature == null || !jvmMethodSignature.hasName()) ? protoBuf$Function.getName() : jvmMethodSignature.getName();
         if (jvmMethodSignature != null && jvmMethodSignature.hasDesc()) {
             r = nameResolver.getString(jvmMethodSignature.getDesc());
         } else {
-            k = C8214m.k(jx1.h(protoBuf$Function, er2Var));
+            k = kotlin.collections.m.k(jx1.h(protoBuf$Function, er2Var));
             List<ProtoBuf$ValueParameter> valueParameterList = protoBuf$Function.getValueParameterList();
             b41.h(valueParameterList, "proto.valueParameterList");
-            q = C8215n.q(valueParameterList, 10);
+            q = kotlin.collections.n.q(valueParameterList, 10);
             ArrayList arrayList = new ArrayList(q);
             for (ProtoBuf$ValueParameter protoBuf$ValueParameter : valueParameterList) {
                 b41.h(protoBuf$ValueParameter, AdvanceSetting.NETWORK_TYPE);
                 arrayList.add(jx1.n(protoBuf$ValueParameter, er2Var));
             }
             m0 = CollectionsKt___CollectionsKt.m0(k, arrayList);
-            q2 = C8215n.q(m0, 10);
+            q2 = kotlin.collections.n.q(m0, 10);
             ArrayList arrayList2 = new ArrayList(q2);
             for (ProtoBuf$Type protoBuf$Type : m0) {
                 String g = INSTANCE.g(protoBuf$Type, nameResolver);
@@ -231,6 +228,6 @@ public final class b71 {
             Z = CollectionsKt___CollectionsKt.Z(arrayList2, "", jn1.BRACKET_START_STR, jn1.BRACKET_END_STR, 0, null, null, 56, null);
             r = b41.r(Z, g2);
         }
-        return new w61.C9846b(nameResolver.getString(name), r);
+        return new w61.b(nameResolver.getString(name), r);
     }
 }

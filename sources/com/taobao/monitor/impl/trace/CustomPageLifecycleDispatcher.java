@@ -21,13 +21,12 @@ public class CustomPageLifecycleDispatcher extends AbsDispatcher<CustomPageLifec
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.CustomPageLifecycleDispatcher$a */
     /* loaded from: classes11.dex */
-    class C6777a implements AbsDispatcher.ListenerCaller<CustomPageLifecycle> {
+    class a implements AbsDispatcher.ListenerCaller<CustomPageLifecycle> {
         final /* synthetic */ pp1 a;
         final /* synthetic */ Map b;
 
-        C6777a(CustomPageLifecycleDispatcher customPageLifecycleDispatcher, pp1 pp1Var, Map map) {
+        a(CustomPageLifecycleDispatcher customPageLifecycleDispatcher, pp1 pp1Var, Map map) {
             this.a = pp1Var;
             this.b = map;
         }
@@ -40,12 +39,11 @@ public class CustomPageLifecycleDispatcher extends AbsDispatcher<CustomPageLifec
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.CustomPageLifecycleDispatcher$b */
     /* loaded from: classes11.dex */
-    class C6778b implements AbsDispatcher.ListenerCaller<CustomPageLifecycle> {
+    class b implements AbsDispatcher.ListenerCaller<CustomPageLifecycle> {
         final /* synthetic */ pp1 a;
 
-        C6778b(CustomPageLifecycleDispatcher customPageLifecycleDispatcher, pp1 pp1Var) {
+        b(CustomPageLifecycleDispatcher customPageLifecycleDispatcher, pp1 pp1Var) {
             this.a = pp1Var;
         }
 
@@ -57,12 +55,11 @@ public class CustomPageLifecycleDispatcher extends AbsDispatcher<CustomPageLifec
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.CustomPageLifecycleDispatcher$c */
     /* loaded from: classes11.dex */
-    class C6779c implements AbsDispatcher.ListenerCaller<CustomPageLifecycle> {
+    class c implements AbsDispatcher.ListenerCaller<CustomPageLifecycle> {
         final /* synthetic */ pp1 a;
 
-        C6779c(CustomPageLifecycleDispatcher customPageLifecycleDispatcher, pp1 pp1Var) {
+        c(CustomPageLifecycleDispatcher customPageLifecycleDispatcher, pp1 pp1Var) {
             this.a = pp1Var;
         }
 
@@ -74,12 +71,11 @@ public class CustomPageLifecycleDispatcher extends AbsDispatcher<CustomPageLifec
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.taobao.monitor.impl.trace.CustomPageLifecycleDispatcher$d */
     /* loaded from: classes11.dex */
-    class C6780d implements AbsDispatcher.ListenerCaller<CustomPageLifecycle> {
+    class d implements AbsDispatcher.ListenerCaller<CustomPageLifecycle> {
         final /* synthetic */ pp1 a;
 
-        C6780d(CustomPageLifecycleDispatcher customPageLifecycleDispatcher, pp1 pp1Var) {
+        d(CustomPageLifecycleDispatcher customPageLifecycleDispatcher, pp1 pp1Var) {
             this.a = pp1Var;
         }
 
@@ -91,18 +87,18 @@ public class CustomPageLifecycleDispatcher extends AbsDispatcher<CustomPageLifec
     }
 
     public void f(pp1 pp1Var) {
-        c(new C6778b(this, pp1Var));
+        c(new b(this, pp1Var));
     }
 
     public void g(pp1 pp1Var, Map<String, Object> map) {
-        c(new C6777a(this, pp1Var, map));
+        c(new a(this, pp1Var, map));
     }
 
     public void h(pp1 pp1Var) {
-        c(new C6780d(this, pp1Var));
+        c(new d(this, pp1Var));
     }
 
     public void i(pp1 pp1Var) {
-        c(new C6779c(this, pp1Var));
+        c(new c(this, pp1Var));
     }
 }

@@ -1,16 +1,16 @@
 package io.reactivex.internal.operators.completable;
 
-import io.reactivex.AbstractC8146a;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
 import io.reactivex.Scheduler;
+import io.reactivex.a;
 import io.reactivex.disposables.Disposable;
 import java.util.concurrent.TimeUnit;
 import tb.jm;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class CompletableDelay extends AbstractC8146a {
+public final class CompletableDelay extends a {
     final long delay;
     final boolean delayError;
     final Scheduler scheduler;
@@ -88,7 +88,7 @@ public final class CompletableDelay extends AbstractC8146a {
         this.delayError = z;
     }
 
-    @Override // io.reactivex.AbstractC8146a
+    @Override // io.reactivex.a
     protected void subscribeActual(CompletableObserver completableObserver) {
         this.source.subscribe(new Delay(new jm(), completableObserver));
     }

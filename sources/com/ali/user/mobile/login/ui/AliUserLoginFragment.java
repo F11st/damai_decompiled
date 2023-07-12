@@ -226,7 +226,7 @@ public class AliUserLoginFragment extends BaseLoginFragment implements UserLogin
 
     @Override // com.ali.user.mobile.base.ui.BaseFragment
     protected int getLayoutContent() {
-        return R.C2965layout.aliuser_fragment_user_login;
+        return R.layout.aliuser_fragment_user_login;
     }
 
     @Override // com.ali.user.mobile.login.ui.BaseLoginFragment, com.ali.user.mobile.login.ui.BaseLoginView
@@ -487,13 +487,13 @@ public class AliUserLoginFragment extends BaseLoginFragment implements UserLogin
             int selectionEnd = this.mPasswordET.getSelectionEnd();
             if (view.getTag() != null && ((Boolean) view.getTag()).booleanValue()) {
                 this.mPasswordET.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                this.mShowPasswordIV.setImageResource(R.C2964drawable.aliuser_ic_visibility_off);
+                this.mShowPasswordIV.setImageResource(R.drawable.aliuser_ic_visibility_off);
                 this.mShowPasswordIV.setContentDescription(getString(R.string.aliuser_assist_password_hide));
                 view.setTag(Boolean.FALSE);
                 addControl("Button-HidePwd");
             } else {
                 this.mPasswordET.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                this.mShowPasswordIV.setImageResource(R.C2964drawable.aliuser_ic_visibility);
+                this.mShowPasswordIV.setImageResource(R.drawable.aliuser_ic_visibility);
                 this.mShowPasswordIV.setContentDescription(getString(R.string.aliuser_assist_password_show));
                 view.setTag(Boolean.TRUE);
                 addControl("Button-ShowPwd");

@@ -5,21 +5,16 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Set;
-import kotlin.collections.C8203e0;
-import kotlin.collections.C8214m;
-import kotlin.collections.C8215n;
-import kotlin.collections.C8225w;
 import kotlin.collections.CollectionsKt___CollectionsKt;
 import kotlin.reflect.jvm.internal.impl.metadata.deserialization.NameResolver;
 import kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf;
-import kotlin.text.C8604o;
 import org.jetbrains.annotations.NotNull;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
 public final class y61 implements NameResolver {
     @NotNull
-    public static final C9953a Companion = new C9953a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private static final String e;
     @NotNull
@@ -34,21 +29,19 @@ public final class y61 implements NameResolver {
     private final List<JvmProtoBuf.StringTableTypes.Record> d;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.y61$a */
     /* loaded from: classes3.dex */
-    public static final class C9953a {
-        private C9953a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9953a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: tb.y61$b */
     /* loaded from: classes3.dex */
-    public /* synthetic */ class C9954b {
+    public /* synthetic */ class b {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {
@@ -67,17 +60,17 @@ public final class y61 implements NameResolver {
         Iterable<i21> G0;
         int q;
         int e2;
-        int a;
-        j = C8214m.j('k', 'o', 't', 'l', 'i', 'n');
+        int a2;
+        j = kotlin.collections.m.j('k', 'o', 't', 'l', 'i', 'n');
         Z = CollectionsKt___CollectionsKt.Z(j, "", null, null, 0, null, null, 62, null);
         e = Z;
-        j2 = C8214m.j(b41.r(Z, "/Any"), b41.r(Z, "/Nothing"), b41.r(Z, "/Unit"), b41.r(Z, "/Throwable"), b41.r(Z, "/Number"), b41.r(Z, "/Byte"), b41.r(Z, "/Double"), b41.r(Z, "/Float"), b41.r(Z, "/Int"), b41.r(Z, "/Long"), b41.r(Z, "/Short"), b41.r(Z, "/Boolean"), b41.r(Z, "/Char"), b41.r(Z, "/CharSequence"), b41.r(Z, "/String"), b41.r(Z, "/Comparable"), b41.r(Z, "/Enum"), b41.r(Z, "/Array"), b41.r(Z, "/ByteArray"), b41.r(Z, "/DoubleArray"), b41.r(Z, "/FloatArray"), b41.r(Z, "/IntArray"), b41.r(Z, "/LongArray"), b41.r(Z, "/ShortArray"), b41.r(Z, "/BooleanArray"), b41.r(Z, "/CharArray"), b41.r(Z, "/Cloneable"), b41.r(Z, "/Annotation"), b41.r(Z, "/collections/Iterable"), b41.r(Z, "/collections/MutableIterable"), b41.r(Z, "/collections/Collection"), b41.r(Z, "/collections/MutableCollection"), b41.r(Z, "/collections/List"), b41.r(Z, "/collections/MutableList"), b41.r(Z, "/collections/Set"), b41.r(Z, "/collections/MutableSet"), b41.r(Z, "/collections/Map"), b41.r(Z, "/collections/MutableMap"), b41.r(Z, "/collections/Map.Entry"), b41.r(Z, "/collections/MutableMap.MutableEntry"), b41.r(Z, "/collections/Iterator"), b41.r(Z, "/collections/MutableIterator"), b41.r(Z, "/collections/ListIterator"), b41.r(Z, "/collections/MutableListIterator"));
+        j2 = kotlin.collections.m.j(b41.r(Z, "/Any"), b41.r(Z, "/Nothing"), b41.r(Z, "/Unit"), b41.r(Z, "/Throwable"), b41.r(Z, "/Number"), b41.r(Z, "/Byte"), b41.r(Z, "/Double"), b41.r(Z, "/Float"), b41.r(Z, "/Int"), b41.r(Z, "/Long"), b41.r(Z, "/Short"), b41.r(Z, "/Boolean"), b41.r(Z, "/Char"), b41.r(Z, "/CharSequence"), b41.r(Z, "/String"), b41.r(Z, "/Comparable"), b41.r(Z, "/Enum"), b41.r(Z, "/Array"), b41.r(Z, "/ByteArray"), b41.r(Z, "/DoubleArray"), b41.r(Z, "/FloatArray"), b41.r(Z, "/IntArray"), b41.r(Z, "/LongArray"), b41.r(Z, "/ShortArray"), b41.r(Z, "/BooleanArray"), b41.r(Z, "/CharArray"), b41.r(Z, "/Cloneable"), b41.r(Z, "/Annotation"), b41.r(Z, "/collections/Iterable"), b41.r(Z, "/collections/MutableIterable"), b41.r(Z, "/collections/Collection"), b41.r(Z, "/collections/MutableCollection"), b41.r(Z, "/collections/List"), b41.r(Z, "/collections/MutableList"), b41.r(Z, "/collections/Set"), b41.r(Z, "/collections/MutableSet"), b41.r(Z, "/collections/Map"), b41.r(Z, "/collections/MutableMap"), b41.r(Z, "/collections/Map.Entry"), b41.r(Z, "/collections/MutableMap.MutableEntry"), b41.r(Z, "/collections/Iterator"), b41.r(Z, "/collections/MutableIterator"), b41.r(Z, "/collections/ListIterator"), b41.r(Z, "/collections/MutableListIterator"));
         f = j2;
         G0 = CollectionsKt___CollectionsKt.G0(j2);
-        q = C8215n.q(G0, 10);
-        e2 = C8225w.e(q);
-        a = ty1.a(e2, 16);
-        LinkedHashMap linkedHashMap = new LinkedHashMap(a);
+        q = kotlin.collections.n.q(G0, 10);
+        e2 = kotlin.collections.w.e(q);
+        a2 = ty1.a(e2, 16);
+        LinkedHashMap linkedHashMap = new LinkedHashMap(a2);
         for (i21 i21Var : G0) {
             linkedHashMap.put((String) i21Var.d(), Integer.valueOf(i21Var.c()));
         }
@@ -91,7 +84,7 @@ public final class y61 implements NameResolver {
         this.b = strArr;
         List<Integer> localNameList = stringTableTypes.getLocalNameList();
         if (localNameList.isEmpty()) {
-            E0 = C8203e0.d();
+            E0 = kotlin.collections.e0.d();
         } else {
             b41.h(localNameList, "");
             E0 = CollectionsKt___CollectionsKt.E0(localNameList);
@@ -161,17 +154,17 @@ public final class y61 implements NameResolver {
             List<Integer> replaceCharList = record.getReplaceCharList();
             b41.h(replaceCharList, "replaceCharList");
             b41.h(str2, "string");
-            str2 = C8604o.y(str2, (char) replaceCharList.get(0).intValue(), (char) replaceCharList.get(1).intValue(), false, 4, null);
+            str2 = kotlin.text.o.y(str2, (char) replaceCharList.get(0).intValue(), (char) replaceCharList.get(1).intValue(), false, 4, null);
         }
         String str3 = str2;
         JvmProtoBuf.StringTableTypes.Record.Operation operation = record.getOperation();
         if (operation == null) {
             operation = JvmProtoBuf.StringTableTypes.Record.Operation.NONE;
         }
-        int i2 = C9954b.$EnumSwitchMapping$0[operation.ordinal()];
+        int i2 = b.$EnumSwitchMapping$0[operation.ordinal()];
         if (i2 == 2) {
             b41.h(str3, "string");
-            str3 = C8604o.y(str3, '$', '.', false, 4, null);
+            str3 = kotlin.text.o.y(str3, '$', '.', false, 4, null);
         } else if (i2 == 3) {
             if (str3.length() >= 2) {
                 b41.h(str3, "string");
@@ -180,7 +173,7 @@ public final class y61 implements NameResolver {
             }
             String str4 = str3;
             b41.h(str4, "string");
-            str3 = C8604o.y(str4, '$', '.', false, 4, null);
+            str3 = kotlin.text.o.y(str4, '$', '.', false, 4, null);
         }
         b41.h(str3, "string");
         return str3;

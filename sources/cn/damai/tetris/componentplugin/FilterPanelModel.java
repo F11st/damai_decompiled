@@ -15,7 +15,7 @@ import com.alibaba.fastjson.JSON;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
 import com.android.alibaba.ip.runtime.IpChange;
 import java.util.ArrayList;
-import tb.C9039db;
+import tb.db;
 import tb.jn1;
 import tb.pg;
 
@@ -149,7 +149,7 @@ public class FilterPanelModel {
                     } else {
                         FilterPanelModel.h(FilterPanelModel.this);
                     }
-                    onBizListener.onSuccess(new LoadData(z, isCanRequestNextPage, new C9039db().f(baseResponse)));
+                    onBizListener.onSuccess(new LoadData(z, isCanRequestNextPage, new db().f(baseResponse)));
                 }
             }
         }));

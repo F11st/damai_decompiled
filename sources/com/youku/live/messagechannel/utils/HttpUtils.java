@@ -15,10 +15,10 @@ import mtopsdk.mtop.domain.MethodEnum;
 import mtopsdk.mtop.domain.MtopRequest;
 import mtopsdk.mtop.intf.Mtop;
 import mtopsdk.mtop.util.ReflectUtil;
-import okhttp3.C8737c;
-import okhttp3.C8823o;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
+import okhttp3.c;
+import okhttp3.o;
 
 /* compiled from: Taobao */
 /* loaded from: classes12.dex */
@@ -169,10 +169,10 @@ public class HttpUtils {
             return;
         }
         if (pullCDNMsgClient == null) {
-            OkHttpClient.C8734b c = new OkHttpClient().newBuilder().c(new C8737c(new File(context.getCacheDir(), "httpCacheDir"), PlaybackStateCompat.ACTION_SET_SHUFFLE_MODE));
+            OkHttpClient.b c = new OkHttpClient().newBuilder().c(new c(new File(context.getCacheDir(), "httpCacheDir"), PlaybackStateCompat.ACTION_SET_SHUFFLE_MODE));
             TimeUnit timeUnit = TimeUnit.MILLISECONDS;
             pullCDNMsgClient = c.d(3000L, timeUnit).k(3000L, timeUnit).b();
         }
-        pullCDNMsgClient.newCall(new C8823o.C8824a().k(str).b()).enqueue(callback);
+        pullCDNMsgClient.newCall(new o.a().k(str).b()).enqueue(callback);
     }
 }

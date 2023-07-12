@@ -42,9 +42,8 @@ public class ClassicsFooter extends InternalClassics<ClassicsFooter> implements 
     protected String mTextRelease;
 
     /* compiled from: Taobao */
-    /* renamed from: com.scwang.smartrefresh.layout.footer.ClassicsFooter$a */
     /* loaded from: classes7.dex */
-    static /* synthetic */ class C6190a {
+    static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
 
         static {
@@ -105,7 +104,7 @@ public class ClassicsFooter extends InternalClassics<ClassicsFooter> implements 
         if (this.mNoMoreData) {
             return;
         }
-        switch (C6190a.a[refreshState2.ordinal()]) {
+        switch (a.a[refreshState2.ordinal()]) {
             case 1:
                 imageView.setVisibility(0);
                 break;

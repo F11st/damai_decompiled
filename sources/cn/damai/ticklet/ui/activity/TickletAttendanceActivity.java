@@ -12,8 +12,8 @@ import cn.damai.common.DamaiConstants;
 import cn.damai.common.nav.DMNav;
 import cn.damai.common.nav.NavUri;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0528b;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.b;
+import cn.damai.common.user.c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.contacts.bean.IdCardTypes;
 import cn.damai.member.R$color;
@@ -442,7 +442,7 @@ public class TickletAttendanceActivity extends TickletBaseActivity implements Da
             bundle.putString("bundleName", "member");
             DMNav.from(this.mContext).forResult(ORDER_ADD_CONTACTS).withExtras(bundle).toUri(NavUri.b(cs.z));
         } else if (view.getId() == R$id.ticklet_attendance_confirm) {
-            C0529c.e().x(C0528b.getInstance().e(un2.TICKLET_TRANSFER_TABLE_PAGE, "bottom", "submitbtn", null, Boolean.FALSE));
+            c.e().x(b.getInstance().e(un2.TICKLET_TRANSFER_TABLE_PAGE, "bottom", "submitbtn", null, Boolean.FALSE));
             ArrayList<TickletContractResponse.IdInfosEntity> selectContactsList = getSelectContactsList();
             if (selectContactsList == null || selectContactsList.size() <= 0 || selectContactsList.size() != this.mContactsCount) {
                 ToastUtil.f(getResources().getString(R$string.ticklet_person_num_tip, String.valueOf(this.mContactsCount)));

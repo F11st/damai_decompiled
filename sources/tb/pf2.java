@@ -5,7 +5,6 @@ import java.util.Objects;
 import kotlin.Pair;
 import kotlin.Result;
 import kotlin.coroutines.jvm.internal.CoroutineStackFrame;
-import kotlin.text.C8604o;
 import kotlinx.coroutines.InternalCoroutinesApi;
 import kotlinx.coroutines.internal.ExceptionsConstuctorKt;
 import org.jetbrains.annotations.NotNull;
@@ -20,10 +19,10 @@ public final class pf2 {
         Object m1271constructorimpl;
         Object m1271constructorimpl2;
         try {
-            Result.C8174a c8174a = Result.Companion;
+            Result.a aVar = Result.Companion;
             m1271constructorimpl = Result.m1271constructorimpl(Class.forName("kotlin.coroutines.jvm.internal.BaseContinuationImpl").getCanonicalName());
         } catch (Throwable th) {
-            Result.C8174a c8174a2 = Result.Companion;
+            Result.a aVar2 = Result.Companion;
             m1271constructorimpl = Result.m1271constructorimpl(i32.a(th));
         }
         if (Result.m1274exceptionOrNullimpl(m1271constructorimpl) != null) {
@@ -31,10 +30,10 @@ public final class pf2 {
         }
         a = (String) m1271constructorimpl;
         try {
-            Result.C8174a c8174a3 = Result.Companion;
+            Result.a aVar3 = Result.Companion;
             m1271constructorimpl2 = Result.m1271constructorimpl(pf2.class.getCanonicalName());
         } catch (Throwable th2) {
-            Result.C8174a c8174a4 = Result.Companion;
+            Result.a aVar4 = Result.Companion;
             m1271constructorimpl2 = Result.m1271constructorimpl(i32.a(th2));
         }
         if (Result.m1274exceptionOrNullimpl(m1271constructorimpl2) != null) {
@@ -136,7 +135,7 @@ public final class pf2 {
 
     public static final boolean h(@NotNull StackTraceElement stackTraceElement) {
         boolean F;
-        F = C8604o.F(stackTraceElement.getClassName(), "\b\b\b", false, 2, null);
+        F = kotlin.text.o.F(stackTraceElement.getClassName(), "\b\b\b", false, 2, null);
         return F;
     }
 

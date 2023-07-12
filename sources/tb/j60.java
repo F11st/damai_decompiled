@@ -12,19 +12,18 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes3.dex */
 public final class j60 extends p60 implements CustomTypeVariable, DefinitelyNotNullTypeMarker {
     @NotNull
-    public static final C9300a Companion = new C9300a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final fd2 b;
     private final boolean c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.j60$a */
     /* loaded from: classes3.dex */
-    public static final class C9300a {
-        private C9300a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9300a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 
@@ -32,11 +31,11 @@ public final class j60 extends p60 implements CustomTypeVariable, DefinitelyNotN
             return (gu2Var.c() instanceof NewTypeVariableConstructor) || (gu2Var.c().getDeclarationDescriptor() instanceof TypeParameterDescriptor) || (gu2Var instanceof zj1) || (gu2Var instanceof ci2);
         }
 
-        public static /* synthetic */ j60 c(C9300a c9300a, gu2 gu2Var, boolean z, int i, Object obj) {
+        public static /* synthetic */ j60 c(a aVar, gu2 gu2Var, boolean z, int i, Object obj) {
             if ((i & 2) != 0) {
                 z = false;
             }
-            return c9300a.b(gu2Var, z);
+            return aVar.b(gu2Var, z);
         }
 
         private final boolean d(gu2 gu2Var, boolean z) {

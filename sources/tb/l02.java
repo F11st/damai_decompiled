@@ -35,10 +35,10 @@ public final class l02 extends k02 implements JavaMethod {
     @NotNull
     /* renamed from: g */
     public o02 getReturnType() {
-        o02.C9490a c9490a = o02.Factory;
+        o02.a aVar = o02.Factory;
         Type genericReturnType = d().getGenericReturnType();
         b41.h(genericReturnType, "member.genericReturnType");
-        return c9490a.a(genericReturnType);
+        return aVar.a(genericReturnType);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaMethod
@@ -53,7 +53,7 @@ public final class l02 extends k02 implements JavaMethod {
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaMethod
     public boolean getHasAnnotationParameterDefaultValue() {
-        return JavaMethod.C8358a.a(this);
+        return JavaMethod.a.a(this);
     }
 
     @Override // kotlin.reflect.jvm.internal.impl.load.java.structure.JavaTypeParameterListOwner

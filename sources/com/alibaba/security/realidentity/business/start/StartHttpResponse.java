@@ -1,8 +1,7 @@
 package com.alibaba.security.realidentity.business.start;
 
 import android.text.TextUtils;
-import com.alibaba.security.common.d.C3811h;
-import com.alibaba.security.realidentity.C3839a;
+import com.alibaba.security.common.d.h;
 import com.alibaba.security.realidentity.business.start.model.StartExtraInfo;
 import com.alibaba.security.realidentity.business.start.model.StartStatusResult;
 import com.alibaba.security.realidentity.business.start.model.StepItem;
@@ -183,7 +182,7 @@ public class StartHttpResponse extends AbsHttpResponse {
 
     public StartExtraInfo getExtraInfoBean() {
         ResultBean resultBean = this.result;
-        return (StartExtraInfo) C3811h.a(resultBean != null ? resultBean.getExtraInfo() : "", StartExtraInfo.class, false);
+        return (StartExtraInfo) h.a(resultBean != null ? resultBean.getExtraInfo() : "", StartExtraInfo.class, false);
     }
 
     public ResultBean getResult() {
@@ -191,11 +190,11 @@ public class StartHttpResponse extends AbsHttpResponse {
     }
 
     public boolean isLimited() {
-        return TextUtils.equals(this.retCode, C3839a.d);
+        return TextUtils.equals(this.retCode, com.alibaba.security.realidentity.a.d);
     }
 
     public boolean isNeedLogin() {
-        return TextUtils.equals(this.retCode, C3839a.e);
+        return TextUtils.equals(this.retCode, com.alibaba.security.realidentity.a.e);
     }
 
     public boolean isRepeatedSubmitted() {
@@ -252,7 +251,7 @@ public class StartHttpResponse extends AbsHttpResponse {
             return true;
         }
         try {
-            Map map2 = (Map) C3811h.a(str, Map.class, false);
+            Map map2 = (Map) h.a(str, Map.class, false);
             if (map2 == null || map2.isEmpty() || !map2.containsKey("isOpen")) {
                 return true;
             }

@@ -1,6 +1,5 @@
 package com.xiaomi.push.service;
 
-import com.xiaomi.channel.commonutils.logger.AbstractC7535b;
 import com.xiaomi.push.fl;
 import com.xiaomi.push.gh;
 import com.xiaomi.push.hi;
@@ -9,7 +8,7 @@ import com.xiaomi.push.service.XMPushService;
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class bt extends XMPushService.AbstractC7707j {
+public class bt extends XMPushService.j {
     private fl a;
 
     /* renamed from: a  reason: collision with other field name */
@@ -22,13 +21,13 @@ public class bt extends XMPushService.AbstractC7707j {
         this.a = flVar;
     }
 
-    @Override // com.xiaomi.push.service.XMPushService.AbstractC7707j
+    @Override // com.xiaomi.push.service.XMPushService.j
     /* renamed from: a */
     public String mo1157a() {
         return "send a message.";
     }
 
-    @Override // com.xiaomi.push.service.XMPushService.AbstractC7707j
+    @Override // com.xiaomi.push.service.XMPushService.j
     /* renamed from: a */
     public void mo878a() {
         try {
@@ -42,7 +41,7 @@ public class bt extends XMPushService.AbstractC7707j {
                 bz.a("category_coord_up", "coord_up", "com.xiaomi.xmsf", this.a.f364a);
             }
         } catch (gh e) {
-            AbstractC7535b.a(e);
+            com.xiaomi.channel.commonutils.logger.b.a(e);
             this.f941a.a(10, e);
         }
     }

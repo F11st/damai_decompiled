@@ -14,7 +14,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import cn.damai.common.app.widget.DMDialog;
 import cn.damai.common.net.mtop.netfit.DMMtopRequestListener;
-import cn.damai.common.user.C0529c;
 import cn.damai.common.util.ToastUtil;
 import cn.damai.commonbusiness.base.DamaiBaseMvpFragment;
 import cn.damai.login.LoginManager;
@@ -63,12 +62,11 @@ public class TickletFaceUnbindFragment extends DamaiBaseMvpFragment {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.TickletFaceUnbindFragment$a */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2075a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2075a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -79,19 +77,18 @@ public class TickletFaceUnbindFragment extends DamaiBaseMvpFragment {
                 return;
             }
             if (TickletFaceUnbindFragment.this.mTicketTable != null && TickletFaceUnbindFragment.this.mTicketDetailResult != null) {
-                C0529c.e().x(un2.k().E(TickletFaceUnbindFragment.this.mTicketDetailResult.getProjectId(), TickletFaceUnbindFragment.this.mTicketTable.performId, TickletFaceUnbindFragment.this.mTicketTable.voucherUniqueKey));
+                cn.damai.common.user.c.e().x(un2.k().E(TickletFaceUnbindFragment.this.mTicketDetailResult.getProjectId(), TickletFaceUnbindFragment.this.mTicketTable.performId, TickletFaceUnbindFragment.this.mTicketTable.voucherUniqueKey));
             }
             TickletFaceUnbindFragment.this.showTicketFaceUnbindDialog();
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.TickletFaceUnbindFragment$b */
     /* loaded from: classes7.dex */
-    public class View$OnClickListenerC2076b implements View.OnClickListener {
+    public class b implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2076b() {
+        b() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -105,18 +102,17 @@ public class TickletFaceUnbindFragment extends DamaiBaseMvpFragment {
             if (activity == null || !(activity instanceof TickletFaceSettingActivity) || TickletFaceUnbindFragment.this.mTicketTable == null || TickletFaceUnbindFragment.this.mTicketDetailResult == null) {
                 return;
             }
-            C0529c.e().x(un2.k().M(TickletFaceUnbindFragment.this.mTicketDetailResult.getProjectId(), TickletFaceUnbindFragment.this.mTicketTable.performId, TickletFaceUnbindFragment.this.mTicketTable.voucherUniqueKey));
+            cn.damai.common.user.c.e().x(un2.k().M(TickletFaceUnbindFragment.this.mTicketDetailResult.getProjectId(), TickletFaceUnbindFragment.this.mTicketTable.performId, TickletFaceUnbindFragment.this.mTicketTable.voucherUniqueKey));
             ((TickletFaceSettingActivity) activity).showCredentialsInfoDialog(TickletFaceUnbindFragment.this.mTicketDetailResult, TickletFaceUnbindFragment.this.mTicketTable);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.TickletFaceUnbindFragment$c */
     /* loaded from: classes7.dex */
-    public class DialogInterface$OnClickListenerC2077c implements DialogInterface.OnClickListener {
+    public class c implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC2077c() {
+        c() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -126,18 +122,17 @@ public class TickletFaceUnbindFragment extends DamaiBaseMvpFragment {
                 ipChange.ipc$dispatch("1070009417", new Object[]{this, dialogInterface, Integer.valueOf(i)});
             } else if (TickletFaceUnbindFragment.this.mTicketTable == null || TickletFaceUnbindFragment.this.mTicketDetailResult == null) {
             } else {
-                C0529c.e().x(un2.k().G(TickletFaceUnbindFragment.this.mTicketDetailResult.getProjectId(), TickletFaceUnbindFragment.this.mTicketTable.performId, TickletFaceUnbindFragment.this.mTicketTable.voucherUniqueKey));
+                cn.damai.common.user.c.e().x(un2.k().G(TickletFaceUnbindFragment.this.mTicketDetailResult.getProjectId(), TickletFaceUnbindFragment.this.mTicketTable.performId, TickletFaceUnbindFragment.this.mTicketTable.voucherUniqueKey));
             }
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.ticklet.ui.fragment.TickletFaceUnbindFragment$d */
     /* loaded from: classes7.dex */
-    public class DialogInterface$OnClickListenerC2078d implements DialogInterface.OnClickListener {
+    public class d implements DialogInterface.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        DialogInterface$OnClickListenerC2078d() {
+        d() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -148,7 +143,7 @@ public class TickletFaceUnbindFragment extends DamaiBaseMvpFragment {
                 return;
             }
             if (TickletFaceUnbindFragment.this.mTicketTable != null && TickletFaceUnbindFragment.this.mTicketDetailResult != null) {
-                C0529c.e().x(un2.k().F(TickletFaceUnbindFragment.this.mTicketDetailResult.getProjectId(), TickletFaceUnbindFragment.this.mTicketTable.performId, TickletFaceUnbindFragment.this.mTicketTable.voucherUniqueKey));
+                cn.damai.common.user.c.e().x(un2.k().F(TickletFaceUnbindFragment.this.mTicketDetailResult.getProjectId(), TickletFaceUnbindFragment.this.mTicketTable.performId, TickletFaceUnbindFragment.this.mTicketTable.voucherUniqueKey));
             }
             TickletFaceUnbindFragment.this.executeFaceUnbindRequest();
         }
@@ -273,8 +268,8 @@ public class TickletFaceUnbindFragment extends DamaiBaseMvpFragment {
             ipChange.ipc$dispatch("126130613", new Object[]{this});
             return;
         }
-        this.mOnUnbindFaceClickListener = new View$OnClickListenerC2075a();
-        this.mOnShowCredentialsClickListener = new View$OnClickListenerC2076b();
+        this.mOnUnbindFaceClickListener = new a();
+        this.mOnShowCredentialsClickListener = new b();
     }
 
     private void initViews() {
@@ -359,7 +354,7 @@ public class TickletFaceUnbindFragment extends DamaiBaseMvpFragment {
             TickletFaceUnbindDialogView tickletFaceUnbindDialogView = new TickletFaceUnbindDialogView(getContext());
             tickletFaceUnbindDialogView.initSeatData(this.mTicketTable);
             DMDialog dMDialog = new DMDialog(getContext());
-            dMDialog.v(string).u(tickletFaceUnbindDialogView).h(getContext().getString(R$string.ticklet_face_unbind), Color.parseColor("#111111"), new DialogInterface$OnClickListenerC2078d()).m(getContext().getString(R$string.ticklet_transfer_cancel_button_thought), Color.parseColor("#111111"), new DialogInterface$OnClickListenerC2077c());
+            dMDialog.v(string).u(tickletFaceUnbindDialogView).h(getContext().getString(R$string.ticklet_face_unbind), Color.parseColor("#111111"), new d()).m(getContext().getString(R$string.ticklet_transfer_cancel_button_thought), Color.parseColor("#111111"), new c());
             dMDialog.show();
         }
     }

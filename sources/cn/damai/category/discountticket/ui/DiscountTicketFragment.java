@@ -26,7 +26,6 @@ import cn.damai.category.discountticket.model.DtProxyModel;
 import cn.damai.category.discountticket.presenter.DiscountTicketPresenter;
 import cn.damai.category.discountticket.util.CityListener;
 import cn.damai.category.discountticket.widget.UpLoadMorePanel;
-import cn.damai.common.image.C0504a;
 import cn.damai.common.nav.DMNav;
 import cn.damai.commonbusiness.home.OnCityChangedListener;
 import cn.damai.commonbusiness.search.bean.ProjectItemBean;
@@ -66,7 +65,7 @@ public class DiscountTicketFragment extends CompatBaseFragment<DiscountTicketPre
     private static final int TITLE_BAR_HEIGHT_DP = 44;
     private boolean isViewCreated = false;
     private boolean isVisibleToUser = false;
-    private CityListener listener = new C0391a();
+    private CityListener listener = new a();
     private FragmentActivity mActivity;
     private AppBarLayout mAppBar;
     private TextView mBackBtn;
@@ -91,12 +90,11 @@ public class DiscountTicketFragment extends CompatBaseFragment<DiscountTicketPre
     private mv2 mUt;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.discountticket.ui.DiscountTicketFragment$a */
     /* loaded from: classes.dex */
-    public class C0391a implements CityListener {
+    public class a implements CityListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0391a() {
+        a() {
         }
 
         @Override // cn.damai.category.discountticket.util.CityListener
@@ -111,12 +109,11 @@ public class DiscountTicketFragment extends CompatBaseFragment<DiscountTicketPre
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.discountticket.ui.DiscountTicketFragment$b */
     /* loaded from: classes.dex */
-    public class C0392b extends qx1 {
+    public class b extends qx1 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0392b() {
+        b() {
         }
 
         @Override // tb.qx1, in.srain.cube.views.ptr.PtrHandler
@@ -150,12 +147,11 @@ public class DiscountTicketFragment extends CompatBaseFragment<DiscountTicketPre
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.discountticket.ui.DiscountTicketFragment$c */
     /* loaded from: classes.dex */
-    public class C0393c implements PtrHandler {
+    public class c implements PtrHandler {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0393c() {
+        c() {
         }
 
         @Override // in.srain.cube.views.ptr.PtrHandler
@@ -176,12 +172,11 @@ public class DiscountTicketFragment extends CompatBaseFragment<DiscountTicketPre
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.discountticket.ui.DiscountTicketFragment$d */
     /* loaded from: classes.dex */
-    public class C0394d implements AppBarLayout.OnOffsetChangedListener {
+    public class d implements AppBarLayout.OnOffsetChangedListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0394d() {
+        d() {
         }
 
         @Override // com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener, com.google.android.material.appbar.AppBarLayout.BaseOnOffsetChangedListener
@@ -213,12 +208,11 @@ public class DiscountTicketFragment extends CompatBaseFragment<DiscountTicketPre
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.discountticket.ui.DiscountTicketFragment$e */
     /* loaded from: classes.dex */
-    public class C0395e implements DiscountTicketAdapter.OnItemClickListener {
+    public class e implements DiscountTicketAdapter.OnItemClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0395e() {
+        e() {
         }
 
         @Override // cn.damai.category.discountticket.adapter.DiscountTicketAdapter.OnItemClickListener
@@ -290,12 +284,11 @@ public class DiscountTicketFragment extends CompatBaseFragment<DiscountTicketPre
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.category.discountticket.ui.DiscountTicketFragment$f */
     /* loaded from: classes.dex */
-    public class C0396f implements UpLoadMorePanel.LoadMoreEventListener {
+    public class f implements UpLoadMorePanel.LoadMoreEventListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0396f() {
+        f() {
         }
 
         @Override // cn.damai.category.discountticket.widget.UpLoadMorePanel.LoadMoreEventListener
@@ -319,12 +312,12 @@ public class DiscountTicketFragment extends CompatBaseFragment<DiscountTicketPre
         if (AndroidInstantRuntime.support(ipChange, "196635808")) {
             ipChange.ipc$dispatch("196635808", new Object[]{this});
         } else if (Build.VERSION.SDK_INT >= 23) {
-            int a = (m62.a(this.mActivity, 200.0f) - kg2.a(this.mActivity)) - m62.a(this.mActivity, 44.0f);
+            int a2 = (m62.a(this.mActivity, 200.0f) - kg2.a(this.mActivity)) - m62.a(this.mActivity, 44.0f);
             AppBarLayout appBarLayout = this.mAppBar;
             if (appBarLayout == null || (layoutParams = appBarLayout.getLayoutParams()) == null) {
                 return;
             }
-            layoutParams.height = a;
+            layoutParams.height = a2;
         }
     }
 
@@ -421,7 +414,7 @@ public class DiscountTicketFragment extends CompatBaseFragment<DiscountTicketPre
 
     @Override // cn.damai.category.discountticket.ui.CompatBaseFragment, cn.damai.common.app.base.BaseFragment
     public void initView() {
-        PtrHandler c0393c;
+        PtrHandler cVar;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1133920020")) {
             ipChange.ipc$dispatch("-1133920020", new Object[]{this});
@@ -461,44 +454,44 @@ public class DiscountTicketFragment extends CompatBaseFragment<DiscountTicketPre
                     }
                 }
             });
-            c0393c = new C0392b();
+            cVar = new b();
         } else {
             this.mBackBtn.setOnClickListener(this);
             this.mShareBtn.setOnClickListener(this);
             adjustAppBar();
-            c0393c = new C0393c();
+            cVar = new c();
             this.mPtr.addPtrUIHandler(new PtrClassicDefaultHeader(this.mActivity) { // from class: cn.damai.category.discountticket.ui.DiscountTicketFragment.5
                 private static transient /* synthetic */ IpChange $ipChange;
 
                 @Override // in.srain.cube.views.ptr.PtrClassicDefaultHeader, in.srain.cube.views.ptr.PtrUIHandler
-                public void onUIPositionChange(PtrFrameLayout ptrFrameLayout, boolean z, byte b, rx1 rx1Var) {
+                public void onUIPositionChange(PtrFrameLayout ptrFrameLayout, boolean z, byte b2, rx1 rx1Var) {
                     IpChange ipChange2 = $ipChange;
                     if (AndroidInstantRuntime.support(ipChange2, "643901998")) {
-                        ipChange2.ipc$dispatch("643901998", new Object[]{this, ptrFrameLayout, Boolean.valueOf(z), Byte.valueOf(b), rx1Var});
+                        ipChange2.ipc$dispatch("643901998", new Object[]{this, ptrFrameLayout, Boolean.valueOf(z), Byte.valueOf(b2), rx1Var});
                         return;
                     }
-                    super.onUIPositionChange(ptrFrameLayout, z, b, rx1Var);
-                    int d = rx1Var.d();
+                    super.onUIPositionChange(ptrFrameLayout, z, b2, rx1Var);
+                    int d2 = rx1Var.d();
                     ViewGroup.LayoutParams layoutParams = DiscountTicketFragment.this.mBgImg.getLayoutParams();
-                    int a = m62.a(getContext(), 212.0f);
-                    int abs = Math.abs(d) + a;
+                    int a2 = m62.a(getContext(), 212.0f);
+                    int abs = Math.abs(d2) + a2;
                     layoutParams.height = abs;
                     DiscountTicketFragment.this.mBgImg.setPivotX(DiscountTicketFragment.this.mBgImg.getWidth() / 2.0f);
-                    DiscountTicketFragment.this.mBgImg.setScaleX(abs / a);
+                    DiscountTicketFragment.this.mBgImg.setScaleX(abs / a2);
                     DiscountTicketFragment.this.mBgImg.setLayoutParams(layoutParams);
                 }
             });
-            this.mAppBar.addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new C0394d());
+            this.mAppBar.addOnOffsetChangedListener((AppBarLayout.OnOffsetChangedListener) new d());
         }
-        this.mPtr.setPtrHandler(c0393c);
+        this.mPtr.setPtrHandler(cVar);
         this.mPtr.disableWhenHorizontalMove(true);
-        this.mTicketAdapter = new DiscountTicketAdapter(this.mUt, this.mActivity, new C0395e());
+        this.mTicketAdapter = new DiscountTicketAdapter(this.mUt, this.mActivity, new e());
         this.mRecyclerView.setLayoutManager(new LinearLayoutManager(this.mActivity, 1, false));
         this.mRecyclerView.setAdapter(this.mTicketAdapter);
         this.mRecyclerView.setRefreshEnabled(false);
         this.mRecyclerView.setLoadMoreEnabled(true);
         this.mRecyclerView.setIsAutoToDefault(false);
-        UpLoadMorePanel upLoadMorePanel = new UpLoadMorePanel(this.mActivity, this.mRecyclerView, new C0396f());
+        UpLoadMorePanel upLoadMorePanel = new UpLoadMorePanel(this.mActivity, this.mRecyclerView, new f());
         this.mLoadMorePanel = upLoadMorePanel;
         upLoadMorePanel.b();
         ((DtProxyModel) this.mModel).prepare(this.mParams);
@@ -649,7 +642,7 @@ public class DiscountTicketFragment extends CompatBaseFragment<DiscountTicketPre
         this.mPtr.refreshComplete();
         HeaderData headerData = firstPageData.headerData;
         if (headerData != null) {
-            C0504a.b().f(headerData.bgPic, m62.a(this.mActivity, 375.0f), m62.a(this.mActivity, 212.0f)).g(this.mBgImg);
+            cn.damai.common.image.a.b().f(headerData.bgPic, m62.a(this.mActivity, 375.0f), m62.a(this.mActivity, 212.0f)).g(this.mBgImg);
             this.mBgHeaderTitleTv.setText(headerData.title);
             this.mBgHeaderDescTv.setText(headerData.subtitle);
             this.mTitleTv.setText(headerData.title);

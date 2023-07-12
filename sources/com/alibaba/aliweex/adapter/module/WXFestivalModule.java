@@ -1,6 +1,5 @@
 package com.alibaba.aliweex.adapter.module;
 
-import com.alibaba.aliweex.C3004a;
 import com.alibaba.aliweex.adapter.IFestivalModuleAdapter;
 import com.taobao.weex.annotation.JSMethod;
 import com.taobao.weex.bridge.JSCallback;
@@ -12,7 +11,7 @@ import java.util.Map;
 public class WXFestivalModule extends WXModule {
     @JSMethod(uiThread = false)
     public Map<String, String> queryFestivalStyle() {
-        IFestivalModuleAdapter g = C3004a.l().g();
+        IFestivalModuleAdapter g = com.alibaba.aliweex.a.l().g();
         if (g != null) {
             return g.queryFestivalStyle();
         }
@@ -21,7 +20,7 @@ public class WXFestivalModule extends WXModule {
 
     @JSMethod
     public void setFestivalStyle(String str, JSCallback jSCallback, JSCallback jSCallback2) {
-        IFestivalModuleAdapter g = C3004a.l().g();
+        IFestivalModuleAdapter g = com.alibaba.aliweex.a.l().g();
         if (g != null) {
             g.setFestivalStyle(this.mWXSDKInstance.getContext(), str, jSCallback, jSCallback2);
         }

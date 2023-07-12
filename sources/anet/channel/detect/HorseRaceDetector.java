@@ -5,20 +5,18 @@ import anet.channel.RequestCb;
 import anet.channel.Session;
 import anet.channel.entity.ConnType;
 import anet.channel.entity.EventCb;
-import anet.channel.request.C0193a;
-import anet.channel.session.C0201a;
+import anet.channel.request.a;
 import anet.channel.session.TnetSpdySession;
+import anet.channel.session.a;
 import anet.channel.statist.HorseRaceStat;
 import anet.channel.statist.RequestStatistic;
-import anet.channel.strategy.C0213a;
-import anet.channel.strategy.C0214b;
 import anet.channel.strategy.ConnProtocol;
 import anet.channel.strategy.IConnStrategy;
 import anet.channel.strategy.IStrategyListener;
+import anet.channel.strategy.b;
 import anet.channel.thread.ThreadPoolExecutorFactory;
 import anet.channel.util.ALog;
 import anet.channel.util.AppLifecycle;
-import anet.channel.util.C0240b;
 import com.ali.user.open.tbauth.TbAuthConstants;
 import com.alimm.xadsdk.request.builder.IRequestConst;
 import com.huawei.hms.support.hianalytics.HiAnalyticsConstant;
@@ -28,9 +26,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.concurrent.atomic.AtomicInteger;
-import org.android.netutil.C8875b;
 import org.android.netutil.PingTask;
-import tb.C9708t9;
 import tb.cf0;
 import tb.he;
 import tb.hu0;
@@ -38,6 +34,7 @@ import tb.jg1;
 import tb.lw2;
 import tb.o01;
 import tb.sf0;
+import tb.t9;
 import tb.x6;
 import tb.zm;
 
@@ -45,31 +42,30 @@ import tb.zm;
 /* compiled from: Taobao */
 /* loaded from: classes.dex */
 public class HorseRaceDetector {
-    private TreeMap<String, C0214b.C0220f> a = new TreeMap<>();
+    private TreeMap<String, b.f> a = new TreeMap<>();
     private AtomicInteger b = new AtomicInteger(1);
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.detect.HorseRaceDetector$a */
     /* loaded from: classes.dex */
-    public class C0168a implements IStrategyListener {
-        C0168a() {
+    public class a implements IStrategyListener {
+        a() {
         }
 
         @Override // anet.channel.strategy.IStrategyListener
-        public void onStrategyUpdated(C0214b.C0221g c0221g) {
-            C0214b.C0220f[] c0220fArr;
+        public void onStrategyUpdated(b.g gVar) {
+            b.f[] fVarArr;
             int i = 0;
             ALog.f("anet.HorseRaceDetector", "onStrategyUpdated", null, new Object[0]);
-            if (!C9708t9.s() || (c0220fArr = c0221g.d) == null || c0220fArr.length == 0) {
+            if (!t9.s() || (fVarArr = gVar.d) == null || fVarArr.length == 0) {
                 return;
             }
             synchronized (HorseRaceDetector.this.a) {
                 while (true) {
-                    C0214b.C0220f[] c0220fArr2 = c0221g.d;
-                    if (i < c0220fArr2.length) {
-                        C0214b.C0220f c0220f = c0220fArr2[i];
-                        HorseRaceDetector.this.a.put(c0220f.a, c0220f);
+                    b.f[] fVarArr2 = gVar.d;
+                    if (i < fVarArr2.length) {
+                        b.f fVar = fVarArr2[i];
+                        HorseRaceDetector.this.a.put(fVar.a, fVar);
                         i++;
                     }
                 }
@@ -79,20 +75,18 @@ public class HorseRaceDetector {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.detect.HorseRaceDetector$b */
     /* loaded from: classes.dex */
-    public class C0169b implements EventCb {
+    public class b implements EventCb {
         final /* synthetic */ HorseRaceStat a;
         final /* synthetic */ long b;
         final /* synthetic */ String c;
-        final /* synthetic */ C0214b.C0224j d;
+        final /* synthetic */ b.j d;
         final /* synthetic */ TnetSpdySession e;
 
         /* compiled from: Taobao */
-        /* renamed from: anet.channel.detect.HorseRaceDetector$b$a */
         /* loaded from: classes.dex */
-        class C0170a implements RequestCb {
-            C0170a() {
+        class a implements RequestCb {
+            a() {
             }
 
             @Override // anet.channel.RequestCb
@@ -101,33 +95,33 @@ public class HorseRaceDetector {
 
             @Override // anet.channel.RequestCb
             public void onFinish(int i, String str, RequestStatistic requestStatistic) {
-                ALog.f("anet.HorseRaceDetector", "LongLinkTask request finish", C0169b.this.c, HiAnalyticsConstant.HaKey.BI_KEY_RESULT, Integer.valueOf(i), "msg", str);
-                if (C0169b.this.a.reqErrorCode == 0) {
-                    C0169b.this.a.reqErrorCode = i;
+                ALog.f("anet.HorseRaceDetector", "LongLinkTask request finish", b.this.c, HiAnalyticsConstant.HaKey.BI_KEY_RESULT, Integer.valueOf(i), "msg", str);
+                if (b.this.a.reqErrorCode == 0) {
+                    b.this.a.reqErrorCode = i;
                 } else {
-                    HorseRaceStat horseRaceStat = C0169b.this.a;
+                    HorseRaceStat horseRaceStat = b.this.a;
                     horseRaceStat.reqRet = horseRaceStat.reqErrorCode == 200 ? 1 : 0;
                 }
-                HorseRaceStat horseRaceStat2 = C0169b.this.a;
+                HorseRaceStat horseRaceStat2 = b.this.a;
                 long currentTimeMillis = System.currentTimeMillis();
-                C0169b c0169b = C0169b.this;
-                horseRaceStat2.reqTime = (currentTimeMillis - c0169b.b) + c0169b.a.connTime;
-                synchronized (C0169b.this.a) {
-                    C0169b.this.a.notify();
+                b bVar = b.this;
+                horseRaceStat2.reqTime = (currentTimeMillis - bVar.b) + bVar.a.connTime;
+                synchronized (b.this.a) {
+                    b.this.a.notify();
                 }
             }
 
             @Override // anet.channel.RequestCb
             public void onResponseCode(int i, Map<String, List<String>> map) {
-                C0169b.this.a.reqErrorCode = i;
+                b.this.a.reqErrorCode = i;
             }
         }
 
-        C0169b(HorseRaceDetector horseRaceDetector, HorseRaceStat horseRaceStat, long j, String str, C0214b.C0224j c0224j, TnetSpdySession tnetSpdySession) {
+        b(HorseRaceDetector horseRaceDetector, HorseRaceStat horseRaceStat, long j, String str, b.j jVar, TnetSpdySession tnetSpdySession) {
             this.a = horseRaceStat;
             this.b = j;
             this.c = str;
-            this.d = c0224j;
+            this.d = jVar;
             this.e = tnetSpdySession;
         }
 
@@ -144,7 +138,7 @@ public class HorseRaceDetector {
                 if (g == null) {
                     return;
                 }
-                this.e.w(new C0193a.C0195b().a0(g).T(this.d.b.d).U(false).X(this.c).J(), new C0170a());
+                this.e.w(new a.b().a0(g).T(this.d.b.d).U(false).X(this.c).J(), new a());
                 return;
             }
             this.a.connErrorCode = sf0Var.a;
@@ -156,14 +150,13 @@ public class HorseRaceDetector {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: anet.channel.detect.HorseRaceDetector$c */
     /* loaded from: classes.dex */
-    public static class C0171c implements IConnStrategy {
-        final /* synthetic */ C0214b.C0224j a;
+    public static class c implements IConnStrategy {
+        final /* synthetic */ b.j a;
         final /* synthetic */ ConnProtocol b;
 
-        C0171c(C0214b.C0224j c0224j, ConnProtocol connProtocol) {
-            this.a = c0224j;
+        c(b.j jVar, ConnProtocol connProtocol) {
+            this.a = jVar;
             this.b = connProtocol;
         }
 
@@ -218,8 +211,8 @@ public class HorseRaceDetector {
         }
     }
 
-    private static IConnStrategy c(ConnProtocol connProtocol, C0214b.C0224j c0224j) {
-        return new C0171c(c0224j, connProtocol);
+    private static IConnStrategy c(ConnProtocol connProtocol, b.j jVar) {
+        return new c(jVar, connProtocol);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -227,11 +220,11 @@ public class HorseRaceDetector {
         ALog.e("anet.HorseRaceDetector", "network detect thread start", null, new Object[0]);
         while (true) {
             synchronized (this.a) {
-                if (!C9708t9.s()) {
+                if (!t9.s()) {
                     this.a.clear();
                     return;
                 }
-                Map.Entry<String, C0214b.C0220f> pollFirstEntry = this.a.pollFirstEntry();
+                Map.Entry<String, b.f> pollFirstEntry = this.a.pollFirstEntry();
                 if (pollFirstEntry == null) {
                     return;
                 }
@@ -244,26 +237,26 @@ public class HorseRaceDetector {
         }
     }
 
-    private void f(String str, C0214b.C0224j c0224j) {
-        ConnProtocol valueOf = ConnProtocol.valueOf(c0224j.b);
+    private void f(String str, b.j jVar) {
+        ConnProtocol valueOf = ConnProtocol.valueOf(jVar.b);
         ConnType l = ConnType.l(valueOf);
         if (l == null) {
             return;
         }
-        ALog.f("anet.HorseRaceDetector", "startLongLinkTask", null, "host", str, TbAuthConstants.IP, c0224j.a, "port", Integer.valueOf(c0224j.b.a), "protocol", valueOf);
+        ALog.f("anet.HorseRaceDetector", "startLongLinkTask", null, "host", str, TbAuthConstants.IP, jVar.a, "port", Integer.valueOf(jVar.b.a), "protocol", valueOf);
         String str2 = "HR" + this.b.getAndIncrement();
-        Context c = hu0.c();
+        Context c2 = hu0.c();
         StringBuilder sb = new StringBuilder();
         sb.append(l.k() ? "https://" : "http://");
         sb.append(str);
-        TnetSpdySession tnetSpdySession = new TnetSpdySession(c, new zm(sb.toString(), str2, c(valueOf, c0224j)));
-        HorseRaceStat horseRaceStat = new HorseRaceStat(str, c0224j);
+        TnetSpdySession tnetSpdySession = new TnetSpdySession(c2, new zm(sb.toString(), str2, c(valueOf, jVar)));
+        HorseRaceStat horseRaceStat = new HorseRaceStat(str, jVar);
         long currentTimeMillis = System.currentTimeMillis();
-        tnetSpdySession.v(257, new C0169b(this, horseRaceStat, currentTimeMillis, str2, c0224j, tnetSpdySession));
+        tnetSpdySession.v(257, new b(this, horseRaceStat, currentTimeMillis, str2, jVar, tnetSpdySession));
         tnetSpdySession.e();
         synchronized (horseRaceStat) {
             try {
-                int i = c0224j.b.c;
+                int i = jVar.b.c;
                 if (i == 0) {
                     i = 10000;
                 }
@@ -271,7 +264,7 @@ public class HorseRaceDetector {
                 if (horseRaceStat.connTime == 0) {
                     horseRaceStat.connTime = System.currentTimeMillis() - currentTimeMillis;
                 }
-                g(c0224j.a, horseRaceStat);
+                g(jVar.a, horseRaceStat);
                 x6.b().commitStat(horseRaceStat);
             } catch (InterruptedException unused) {
             }
@@ -282,83 +275,83 @@ public class HorseRaceDetector {
     private void g(String str, HorseRaceStat horseRaceStat) {
         if (lw2.d(str)) {
             try {
-                C8875b c8875b = new PingTask(str, 1000, 3, 0, 0).launch().get();
-                if (c8875b == null) {
+                org.android.netutil.b bVar = new PingTask(str, 1000, 3, 0, 0).launch().get();
+                if (bVar == null) {
                     return;
                 }
-                horseRaceStat.pingSuccessCount = c8875b.f();
+                horseRaceStat.pingSuccessCount = bVar.f();
                 horseRaceStat.pingTimeoutCount = 3 - horseRaceStat.pingSuccessCount;
-                horseRaceStat.localIP = c8875b.d();
+                horseRaceStat.localIP = bVar.d();
             } catch (Throwable th) {
                 ALog.d("anet.HorseRaceDetector", "ping6 task fail.", null, th, new Object[0]);
             }
         }
     }
 
-    private void h(String str, C0214b.C0224j c0224j) {
-        o01 g = o01.g(c0224j.b.b + jg1.SCHEME_SLASH + str + c0224j.c);
+    private void h(String str, b.j jVar) {
+        o01 g = o01.g(jVar.b.b + jg1.SCHEME_SLASH + str + jVar.c);
         if (g == null) {
             return;
         }
         ALog.f("anet.HorseRaceDetector", "startShortLinkTask", null, "url", g);
-        C0193a.C0195b Y = new C0193a.C0195b().a0(g).I(IRequestConst.CONNECTION, "close").O(c0224j.b.c).T(c0224j.b.d).U(false).Y(new C0240b(str));
-        C0193a J = Y.X("HR" + this.b.getAndIncrement()).J();
-        J.w(c0224j.a, c0224j.b.a);
+        a.b Y = new a.b().a0(g).I(IRequestConst.CONNECTION, "close").O(jVar.b.c).T(jVar.b.d).U(false).Y(new anet.channel.util.b(str));
+        anet.channel.request.a J = Y.X("HR" + this.b.getAndIncrement()).J();
+        J.w(jVar.a, jVar.b.a);
         long currentTimeMillis = System.currentTimeMillis();
-        C0201a.C0203b a = C0201a.a(J);
+        a.b a2 = anet.channel.session.a.a(J);
         long currentTimeMillis2 = System.currentTimeMillis() - currentTimeMillis;
-        HorseRaceStat horseRaceStat = new HorseRaceStat(str, c0224j);
+        HorseRaceStat horseRaceStat = new HorseRaceStat(str, jVar);
         horseRaceStat.connTime = currentTimeMillis2;
-        int i = a.a;
+        int i = a2.a;
         if (i <= 0) {
             horseRaceStat.connErrorCode = i;
         } else {
             horseRaceStat.connRet = 1;
-            horseRaceStat.reqRet = a.a == 200 ? 1 : 0;
-            horseRaceStat.reqErrorCode = a.a;
+            horseRaceStat.reqRet = a2.a == 200 ? 1 : 0;
+            horseRaceStat.reqErrorCode = a2.a;
             horseRaceStat.reqTime = horseRaceStat.connTime;
         }
-        g(c0224j.a, horseRaceStat);
+        g(jVar.a, horseRaceStat);
         x6.b().commitStat(horseRaceStat);
     }
 
-    private void i(C0214b.C0220f c0220f) {
-        C0214b.C0224j[] c0224jArr = c0220f.b;
-        if (c0224jArr == null || c0224jArr.length == 0) {
+    private void i(b.f fVar) {
+        b.j[] jVarArr = fVar.b;
+        if (jVarArr == null || jVarArr.length == 0) {
             return;
         }
-        String str = c0220f.a;
+        String str = fVar.a;
         int i = 0;
         while (true) {
-            C0214b.C0224j[] c0224jArr2 = c0220f.b;
-            if (i >= c0224jArr2.length) {
+            b.j[] jVarArr2 = fVar.b;
+            if (i >= jVarArr2.length) {
                 return;
             }
-            C0214b.C0224j c0224j = c0224jArr2[i];
-            String str2 = c0224j.b.b;
+            b.j jVar = jVarArr2[i];
+            String str2 = jVar.b.b;
             if (!str2.equalsIgnoreCase("http") && !str2.equalsIgnoreCase("https")) {
                 if (!str2.equalsIgnoreCase(ConnType.HTTP2) && !str2.equalsIgnoreCase(ConnType.SPDY) && !str2.equalsIgnoreCase(ConnType.QUIC)) {
                     if (str2.equalsIgnoreCase("tcp")) {
-                        j(str, c0224j);
+                        j(str, jVar);
                     }
                 } else {
-                    f(str, c0224j);
+                    f(str, jVar);
                 }
             } else {
-                h(str, c0224j);
+                h(str, jVar);
             }
             i++;
         }
     }
 
-    private void j(String str, C0214b.C0224j c0224j) {
+    private void j(String str, b.j jVar) {
         String str2 = "HR" + this.b.getAndIncrement();
-        ALog.f("anet.HorseRaceDetector", "startTcpTask", str2, TbAuthConstants.IP, c0224j.a, "port", Integer.valueOf(c0224j.b.a));
-        HorseRaceStat horseRaceStat = new HorseRaceStat(str, c0224j);
+        ALog.f("anet.HorseRaceDetector", "startTcpTask", str2, TbAuthConstants.IP, jVar.a, "port", Integer.valueOf(jVar.b.a));
+        HorseRaceStat horseRaceStat = new HorseRaceStat(str, jVar);
         long currentTimeMillis = System.currentTimeMillis();
         try {
-            Socket socket = new Socket(c0224j.a, c0224j.b.a);
-            int i = c0224j.b.c;
+            Socket socket = new Socket(jVar.a, jVar.b.a);
+            int i = jVar.b.c;
             if (i == 0) {
                 i = 10000;
             }
@@ -375,12 +368,12 @@ public class HorseRaceDetector {
     }
 
     public void d() {
-        C0213a.a().registerListener(new C0168a());
+        anet.channel.strategy.a.a().registerListener(new a());
         AppLifecycle.f(new AppLifecycle.AppLifecycleListener() { // from class: anet.channel.detect.HorseRaceDetector.2
             @Override // anet.channel.util.AppLifecycle.AppLifecycleListener
             public void background() {
                 ALog.f("anet.HorseRaceDetector", "background", null, new Object[0]);
-                if (C9708t9.s()) {
+                if (t9.s()) {
                     ThreadPoolExecutorFactory.f(new Runnable() { // from class: anet.channel.detect.HorseRaceDetector.2.1
                         @Override // java.lang.Runnable
                         public void run() {

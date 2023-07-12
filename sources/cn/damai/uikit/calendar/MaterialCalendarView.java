@@ -92,7 +92,7 @@ public class MaterialCalendarView extends ViewGroup {
     private Drawable rightArrowMask;
     @SelectionMode
     private int selectionMode;
-    private C2486d state;
+    private d state;
     private int tileHeight;
     private int tileWidth;
     private final TextView title;
@@ -103,7 +103,7 @@ public class MaterialCalendarView extends ViewGroup {
     /* loaded from: classes17.dex */
     public static class SavedState extends View.BaseSavedState {
         private static transient /* synthetic */ IpChange $ipChange;
-        public static final Parcelable.Creator<SavedState> CREATOR = new C2482a();
+        public static final Parcelable.Creator<SavedState> CREATOR = new a();
         boolean allowClickDaysOutsideCurrentMonth;
         boolean cacheCurrentPosition;
         CalendarMode calendarMode;
@@ -124,12 +124,11 @@ public class MaterialCalendarView extends ViewGroup {
         int weekDayTextAppearance;
 
         /* compiled from: Taobao */
-        /* renamed from: cn.damai.uikit.calendar.MaterialCalendarView$SavedState$a */
         /* loaded from: classes17.dex */
-        public static final class C2482a implements Parcelable.Creator<SavedState> {
+        public static final class a implements Parcelable.Creator<SavedState> {
             private static transient /* synthetic */ IpChange $ipChange;
 
-            C2482a() {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator
@@ -147,7 +146,7 @@ public class MaterialCalendarView extends ViewGroup {
             }
         }
 
-        /* synthetic */ SavedState(Parcel parcel, View$OnClickListenerC2483a view$OnClickListenerC2483a) {
+        /* synthetic */ SavedState(Parcel parcel, a aVar) {
             this(parcel);
         }
 
@@ -274,12 +273,11 @@ public class MaterialCalendarView extends ViewGroup {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.calendar.MaterialCalendarView$a */
     /* loaded from: classes17.dex */
-    public class View$OnClickListenerC2483a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2483a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -297,9 +295,8 @@ public class MaterialCalendarView extends ViewGroup {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.calendar.MaterialCalendarView$b */
     /* loaded from: classes17.dex */
-    public static /* synthetic */ class C2484b {
+    public static /* synthetic */ class b {
         static final /* synthetic */ int[] a;
 
         static {
@@ -326,18 +323,16 @@ public class MaterialCalendarView extends ViewGroup {
 
     /* JADX INFO: Access modifiers changed from: protected */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.calendar.MaterialCalendarView$c */
     /* loaded from: classes17.dex */
-    public static class C2485c extends ViewGroup.MarginLayoutParams {
-        public C2485c(int i) {
+    public static class c extends ViewGroup.MarginLayoutParams {
+        public c(int i) {
             super(-1, i);
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.calendar.MaterialCalendarView$d */
     /* loaded from: classes17.dex */
-    public class C2486d {
+    public class d {
         private static transient /* synthetic */ IpChange $ipChange;
         private final CalendarMode a;
         private final int b;
@@ -345,23 +340,22 @@ public class MaterialCalendarView extends ViewGroup {
         private final CalendarDay d;
         private final boolean e;
 
-        /* synthetic */ C2486d(MaterialCalendarView materialCalendarView, C2487e c2487e, View$OnClickListenerC2483a view$OnClickListenerC2483a) {
-            this(materialCalendarView, c2487e);
+        /* synthetic */ d(MaterialCalendarView materialCalendarView, e eVar, a aVar) {
+            this(materialCalendarView, eVar);
         }
 
-        private C2486d(MaterialCalendarView materialCalendarView, C2487e c2487e) {
-            this.a = c2487e.a;
-            this.b = c2487e.b;
-            this.c = c2487e.d;
-            this.d = c2487e.e;
-            this.e = c2487e.c;
+        private d(MaterialCalendarView materialCalendarView, e eVar) {
+            this.a = eVar.a;
+            this.b = eVar.b;
+            this.c = eVar.d;
+            this.d = eVar.e;
+            this.e = eVar.c;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.uikit.calendar.MaterialCalendarView$e */
     /* loaded from: classes17.dex */
-    public class C2487e {
+    public class e {
         private static transient /* synthetic */ IpChange $ipChange;
         private CalendarMode a = CalendarMode.MONTHS;
         private int b = Calendar.getInstance().getFirstDayOfWeek();
@@ -369,7 +363,7 @@ public class MaterialCalendarView extends ViewGroup {
         private CalendarDay d = null;
         private CalendarDay e = null;
 
-        public C2487e() {
+        public e() {
         }
 
         public void f() {
@@ -379,49 +373,49 @@ public class MaterialCalendarView extends ViewGroup {
                 return;
             }
             MaterialCalendarView materialCalendarView = MaterialCalendarView.this;
-            materialCalendarView.commit(new C2486d(materialCalendarView, this, null));
+            materialCalendarView.commit(new d(materialCalendarView, this, null));
         }
 
-        public C2487e g(boolean z) {
+        public e g(boolean z) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "1150811988")) {
-                return (C2487e) ipChange.ipc$dispatch("1150811988", new Object[]{this, Boolean.valueOf(z)});
+                return (e) ipChange.ipc$dispatch("1150811988", new Object[]{this, Boolean.valueOf(z)});
             }
             this.c = z;
             return this;
         }
 
-        public C2487e h(CalendarMode calendarMode) {
+        public e h(CalendarMode calendarMode) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "223056238")) {
-                return (C2487e) ipChange.ipc$dispatch("223056238", new Object[]{this, calendarMode});
+                return (e) ipChange.ipc$dispatch("223056238", new Object[]{this, calendarMode});
             }
             this.a = calendarMode;
             return this;
         }
 
-        public C2487e i(int i) {
+        public e i(int i) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-1925933280")) {
-                return (C2487e) ipChange.ipc$dispatch("-1925933280", new Object[]{this, Integer.valueOf(i)});
+                return (e) ipChange.ipc$dispatch("-1925933280", new Object[]{this, Integer.valueOf(i)});
             }
             this.b = i;
             return this;
         }
 
-        public C2487e j(@Nullable CalendarDay calendarDay) {
+        public e j(@Nullable CalendarDay calendarDay) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "654753046")) {
-                return (C2487e) ipChange.ipc$dispatch("654753046", new Object[]{this, calendarDay});
+                return (e) ipChange.ipc$dispatch("654753046", new Object[]{this, calendarDay});
             }
             this.e = calendarDay;
             return this;
         }
 
-        public C2487e k(@Nullable CalendarDay calendarDay) {
+        public e k(@Nullable CalendarDay calendarDay) {
             IpChange ipChange = $ipChange;
             if (AndroidInstantRuntime.support(ipChange, "-823573372")) {
-                return (C2487e) ipChange.ipc$dispatch("-823573372", new Object[]{this, calendarDay});
+                return (e) ipChange.ipc$dispatch("-823573372", new Object[]{this, calendarDay});
             }
             this.d = calendarDay;
             return this;
@@ -453,7 +447,7 @@ public class MaterialCalendarView extends ViewGroup {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public void commit(cn.damai.uikit.calendar.MaterialCalendarView.C2486d r9) {
+    public void commit(cn.damai.uikit.calendar.MaterialCalendarView.d r9) {
         /*
             Method dump skipped, instructions count: 325
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -526,7 +520,7 @@ public class MaterialCalendarView extends ViewGroup {
         linearLayout.setOrientation(0);
         this.topbar.setClipChildren(false);
         this.topbar.setClipToPadding(false);
-        addView(this.topbar, new C2485c(1));
+        addView(this.topbar, new c(1));
         this.buttonPast.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         this.topbar.addView(this.buttonPast, new LinearLayout.LayoutParams(0, -1, 1.0f));
         this.title.setGravity(17);
@@ -535,7 +529,7 @@ public class MaterialCalendarView extends ViewGroup {
         this.topbar.addView(this.buttonFuture, new LinearLayout.LayoutParams(0, -1, 1.0f));
         this.pager.setId(R$id.mcv_pager);
         this.pager.setOffscreenPageLimit(1);
-        addView(this.pager, new C2485c(this.calendarMode.visibleWeeksCount + 1));
+        addView(this.pager, new c(this.calendarMode.visibleWeeksCount + 1));
     }
 
     public static boolean showDecoratedDisabled(@ShowOtherDates int i) {
@@ -605,7 +599,7 @@ public class MaterialCalendarView extends ViewGroup {
     @Override // android.view.ViewGroup
     protected boolean checkLayoutParams(ViewGroup.LayoutParams layoutParams) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1683572233") ? ((Boolean) ipChange.ipc$dispatch("-1683572233", new Object[]{this, layoutParams})).booleanValue() : layoutParams instanceof C2485c;
+        return AndroidInstantRuntime.support(ipChange, "-1683572233") ? ((Boolean) ipChange.ipc$dispatch("-1683572233", new Object[]{this, layoutParams})).booleanValue() : layoutParams instanceof c;
     }
 
     public void clearSelection() {
@@ -835,9 +829,9 @@ public class MaterialCalendarView extends ViewGroup {
         return AndroidInstantRuntime.support(ipChange, "-564390213") ? ((Boolean) ipChange.ipc$dispatch("-564390213", new Object[]{this})).booleanValue() : this.pager.isPagingEnabled();
     }
 
-    public C2487e newState() {
+    public e newState() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1312375021") ? (C2487e) ipChange.ipc$dispatch("1312375021", new Object[]{this}) : new C2487e();
+        return AndroidInstantRuntime.support(ipChange, "1312375021") ? (e) ipChange.ipc$dispatch("1312375021", new Object[]{this}) : new e();
     }
 
     protected void onDateClicked(@NonNull CalendarDay calendarDay, boolean z) {
@@ -986,7 +980,7 @@ public class MaterialCalendarView extends ViewGroup {
         int childCount = getChildCount();
         for (int i9 = 0; i9 < childCount; i9++) {
             View childAt = getChildAt(i9);
-            childAt.measure(View.MeasureSpec.makeMeasureSpec(i8, 1073741824), View.MeasureSpec.makeMeasureSpec(((ViewGroup.MarginLayoutParams) ((C2485c) childAt.getLayoutParams())).height * i4, 1073741824));
+            childAt.measure(View.MeasureSpec.makeMeasureSpec(i8, 1073741824), View.MeasureSpec.makeMeasureSpec(((ViewGroup.MarginLayoutParams) ((c) childAt.getLayoutParams())).height * i4, 1073741824));
         }
     }
 
@@ -1462,16 +1456,16 @@ public class MaterialCalendarView extends ViewGroup {
         return false;
     }
 
-    public C2486d state() {
+    public d state() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "677732244") ? (C2486d) ipChange.ipc$dispatch("677732244", new Object[]{this}) : this.state;
+        return AndroidInstantRuntime.support(ipChange, "677732244") ? (d) ipChange.ipc$dispatch("677732244", new Object[]{this}) : this.state;
     }
 
     public MaterialCalendarView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         this.dayViewDecorators = new ArrayList<>();
-        View$OnClickListenerC2483a view$OnClickListenerC2483a = new View$OnClickListenerC2483a();
-        this.onClickListener = view$OnClickListenerC2483a;
+        a aVar = new a();
+        this.onClickListener = aVar;
         ViewPager.OnPageChangeListener onPageChangeListener = new ViewPager.OnPageChangeListener() { // from class: cn.damai.uikit.calendar.MaterialCalendarView.2
             private static transient /* synthetic */ IpChange $ipChange;
 
@@ -1532,8 +1526,8 @@ public class MaterialCalendarView extends ViewGroup {
         directionButton2.setContentDescription(getContext().getString(R$string.next));
         CalendarPager calendarPager = new CalendarPager(getContext());
         this.pager = calendarPager;
-        directionButton.setOnClickListener(view$OnClickListenerC2483a);
-        directionButton2.setOnClickListener(view$OnClickListenerC2483a);
+        directionButton.setOnClickListener(aVar);
+        directionButton2.setOnClickListener(aVar);
         ko2 ko2Var = new ko2(textView);
         this.titleChanger = ko2Var;
         ko2Var.l(DEFAULT_TITLE_FORMATTER);
@@ -1592,8 +1586,8 @@ public class MaterialCalendarView extends ViewGroup {
                 setDateTextAppearance(obtainStyledAttributes.getResourceId(R$styleable.MaterialCalendarView_mcv_dateTextAppearance, R$style.TextAppearance_MaterialCalendarWidget_Date));
                 setShowOtherDates(obtainStyledAttributes.getInteger(R$styleable.MaterialCalendarView_mcv_showOtherDates, 4));
                 setAllowClickDaysOutsideCurrentMonth(obtainStyledAttributes.getBoolean(R$styleable.MaterialCalendarView_mcv_allowClickDaysOutsideCurrentMonth, true));
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (Exception e2) {
+                e2.printStackTrace();
             }
             obtainStyledAttributes.recycle();
             this.adapter.x(DEFAULT_TITLE_FORMATTER);
@@ -1608,7 +1602,7 @@ public class MaterialCalendarView extends ViewGroup {
                 monthView.setDateTextAppearance(this.adapter.d());
                 monthView.setWeekDayTextAppearance(this.adapter.j());
                 monthView.setShowOtherDates(getShowOtherDates());
-                addView(monthView, new C2485c(this.calendarMode.visibleWeeksCount + 1));
+                addView(monthView, new c(this.calendarMode.visibleWeeksCount + 1));
             }
         } catch (Throwable th) {
             obtainStyledAttributes.recycle();
@@ -1618,15 +1612,15 @@ public class MaterialCalendarView extends ViewGroup {
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.view.ViewGroup
-    public C2485c generateDefaultLayoutParams() {
+    public c generateDefaultLayoutParams() {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1989075434") ? (C2485c) ipChange.ipc$dispatch("-1989075434", new Object[]{this}) : new C2485c(1);
+        return AndroidInstantRuntime.support(ipChange, "-1989075434") ? (c) ipChange.ipc$dispatch("-1989075434", new Object[]{this}) : new c(1);
     }
 
     @Override // android.view.ViewGroup
-    public C2485c generateLayoutParams(AttributeSet attributeSet) {
+    public c generateLayoutParams(AttributeSet attributeSet) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "1573571067") ? (C2485c) ipChange.ipc$dispatch("1573571067", new Object[]{this, attributeSet}) : new C2485c(1);
+        return AndroidInstantRuntime.support(ipChange, "1573571067") ? (c) ipChange.ipc$dispatch("1573571067", new Object[]{this, attributeSet}) : new c(1);
     }
 
     public void setCurrentDate(@Nullable Date date) {
@@ -1686,7 +1680,7 @@ public class MaterialCalendarView extends ViewGroup {
     @Override // android.view.ViewGroup
     protected ViewGroup.LayoutParams generateLayoutParams(ViewGroup.LayoutParams layoutParams) {
         IpChange ipChange = $ipChange;
-        return AndroidInstantRuntime.support(ipChange, "-1535001305") ? (ViewGroup.LayoutParams) ipChange.ipc$dispatch("-1535001305", new Object[]{this, layoutParams}) : new C2485c(1);
+        return AndroidInstantRuntime.support(ipChange, "-1535001305") ? (ViewGroup.LayoutParams) ipChange.ipc$dispatch("-1535001305", new Object[]{this, layoutParams}) : new c(1);
     }
 
     public void setCurrentDate(@Nullable CalendarDay calendarDay) {

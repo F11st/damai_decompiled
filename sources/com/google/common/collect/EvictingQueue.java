@@ -14,7 +14,7 @@ import tb.du1;
 @Beta
 @GwtCompatible
 /* loaded from: classes10.dex */
-public final class EvictingQueue<E> extends AbstractC5206u<E> implements Serializable {
+public final class EvictingQueue<E> extends u<E> implements Serializable {
     private static final long serialVersionUID = 0;
     private final Queue<E> delegate;
     @VisibleForTesting
@@ -30,7 +30,7 @@ public final class EvictingQueue<E> extends AbstractC5206u<E> implements Seriali
         return new EvictingQueue<>(i);
     }
 
-    @Override // com.google.common.collect.AbstractC5200o, java.util.Collection, java.util.Queue
+    @Override // com.google.common.collect.o, java.util.Collection, java.util.Queue
     @CanIgnoreReturnValue
     public boolean add(E e) {
         du1.p(e);
@@ -44,23 +44,23 @@ public final class EvictingQueue<E> extends AbstractC5206u<E> implements Seriali
         return true;
     }
 
-    @Override // com.google.common.collect.AbstractC5200o, java.util.Collection
+    @Override // com.google.common.collect.o, java.util.Collection
     @CanIgnoreReturnValue
     public boolean addAll(Collection<? extends E> collection) {
         int size = collection.size();
         if (size >= this.maxSize) {
             clear();
-            return C5152a0.a(this, C5152a0.j(collection, size - this.maxSize));
+            return a0.a(this, a0.j(collection, size - this.maxSize));
         }
         return standardAddAll(collection);
     }
 
-    @Override // com.google.common.collect.AbstractC5200o, java.util.Collection, java.util.Set
+    @Override // com.google.common.collect.o, java.util.Collection, java.util.Set
     public boolean contains(Object obj) {
         return delegate().contains(du1.p(obj));
     }
 
-    @Override // com.google.common.collect.AbstractC5206u, java.util.Queue
+    @Override // com.google.common.collect.u, java.util.Queue
     @CanIgnoreReturnValue
     public boolean offer(E e) {
         return add(e);
@@ -70,14 +70,14 @@ public final class EvictingQueue<E> extends AbstractC5206u<E> implements Seriali
         return this.maxSize - size();
     }
 
-    @Override // com.google.common.collect.AbstractC5200o, java.util.Collection, java.util.Set
+    @Override // com.google.common.collect.o, java.util.Collection, java.util.Set
     @CanIgnoreReturnValue
     public boolean remove(Object obj) {
         return delegate().remove(du1.p(obj));
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // com.google.common.collect.AbstractC5206u, com.google.common.collect.AbstractC5200o, com.google.common.collect.AbstractC5205t
+    @Override // com.google.common.collect.u, com.google.common.collect.o, com.google.common.collect.t
     public Queue<E> delegate() {
         return this.delegate;
     }

@@ -7,7 +7,7 @@ import com.xiaomi.push.cj;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class cg extends cj.C7621e {
+public class cg extends cj.e {
     private String a;
 
     public cg(String str, ContentValues contentValues, String str2) {
@@ -16,15 +16,15 @@ public class cg extends cj.C7621e {
         this.a = str2;
     }
 
-    public static cg a(Context context, String str, C7672hn c7672hn) {
-        byte[] a = it.a(c7672hn);
+    public static cg a(Context context, String str, hn hnVar) {
+        byte[] a = it.a(hnVar);
         if (a == null || a.length <= 0) {
             return null;
         }
         ContentValues contentValues = new ContentValues();
         contentValues.put("status", (Integer) 0);
         contentValues.put("messageId", "");
-        contentValues.put("messageItemId", c7672hn.d());
+        contentValues.put("messageItemId", hnVar.d());
         contentValues.put("messageItem", a);
         contentValues.put(ALBiometricsKeys.KEY_APP_ID, bx.a(context).b());
         contentValues.put("packageName", bx.a(context).m714a());

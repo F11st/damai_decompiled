@@ -2,7 +2,6 @@ package tb;
 
 import anet.channel.Session;
 import anet.channel.entity.ConnType;
-import anet.channel.strategy.C0213a;
 import anet.channel.strategy.IConnStrategy;
 import anet.channel.util.ALog;
 import anet.channel.util.Inet64Util;
@@ -18,7 +17,7 @@ public class em {
     public static final int IP_DEGRADE = 1;
 
     public static long a() {
-        return C9708t9.b();
+        return t9.b();
     }
 
     public static List<zm> b(Session session, List<zm> list, int i) {
@@ -47,7 +46,7 @@ public class em {
                 }
             }
             if (arrayList.isEmpty()) {
-                List<IConnStrategy> ipv4ConnStrategyListByHost = C0213a.a().getIpv4ConnStrategyListByHost(session.k(), session.h().startsWith("https"), session.g().e());
+                List<IConnStrategy> ipv4ConnStrategyListByHost = anet.channel.strategy.a.a().getIpv4ConnStrategyListByHost(session.k(), session.h().startsWith("https"), session.g().e());
                 if (ipv4ConnStrategyListByHost.isEmpty()) {
                     return arrayList;
                 }
@@ -77,6 +76,6 @@ public class em {
     }
 
     public static boolean d(String str, String str2) {
-        return C9708t9.p() && C9708t9.j(str) && Inet64Util.n() == 3 && lw2.d(str2);
+        return t9.p() && t9.j(str) && Inet64Util.n() == 3 && lw2.d(str2);
     }
 }

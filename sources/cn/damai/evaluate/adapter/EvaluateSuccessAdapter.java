@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import cn.damai.comment.R$id;
 import cn.damai.comment.R$layout;
 import cn.damai.common.nav.DMNav;
-import cn.damai.common.user.C0529c;
+import cn.damai.common.user.c;
 import cn.damai.evaluate.ui.EvaluateSuccessActivity;
 import com.alibaba.fastjson.JSONObject;
 import com.android.alibaba.ip.runtime.AndroidInstantRuntime;
@@ -42,14 +42,13 @@ public class EvaluateSuccessAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.evaluate.adapter.EvaluateSuccessAdapter$a */
     /* loaded from: classes5.dex */
-    public class C1076a implements GaiaX.IEventDelegate {
+    public class a implements GaiaX.IEventDelegate {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ JSONObject a;
         final /* synthetic */ int b;
 
-        C1076a(JSONObject jSONObject, int i) {
+        a(JSONObject jSONObject, int i) {
             this.a = jSONObject;
             this.b = i;
         }
@@ -64,7 +63,7 @@ public class EvaluateSuccessAdapter extends RecyclerView.Adapter<ViewHolder> {
             DMNav from = DMNav.from(EvaluateSuccessAdapter.this.b);
             from.toUri("damai://V1/ScriptDetail?scriptId=" + this.a.get("id"));
             ((EvaluateSuccessActivity) EvaluateSuccessAdapter.this.b).finish();
-            C0529c.e().x(dl.I().N(EvaluateSuccessAdapter.this.c, this.b, this.a.get("id").toString()));
+            c.e().x(dl.I().N(EvaluateSuccessAdapter.this.c, this.b, this.a.get("id").toString()));
         }
     }
 
@@ -82,7 +81,7 @@ public class EvaluateSuccessAdapter extends RecyclerView.Adapter<ViewHolder> {
         }
         JSONObject jSONObject = this.a.get(i);
         GaiaX.Params build = new GaiaX.Params.Builder().templateBiz("damai").templateId("damai_script_play_cell_go_see").container(viewHolder.a).data(jSONObject).width(ScreenUtils.INSTANCE.getScreenWidthPx(this.b)).build();
-        build.setEventDelegate(new C1076a(jSONObject, i));
+        build.setEventDelegate(new a(jSONObject, i));
         GaiaX.Companion.getInstance().bindView(build);
     }
 

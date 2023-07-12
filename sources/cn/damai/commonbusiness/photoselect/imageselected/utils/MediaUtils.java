@@ -31,13 +31,12 @@ public class MediaUtils {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.imageselected.utils.MediaUtils$a */
     /* loaded from: classes4.dex */
-    public class C0761a {
+    public class a {
         boolean a;
         String b;
 
-        public C0761a(MediaUtils mediaUtils) {
+        public a(MediaUtils mediaUtils) {
         }
     }
 
@@ -53,19 +52,19 @@ public class MediaUtils {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public C0761a g(long j) {
+    public a g(long j) {
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1306050946")) {
-            return (C0761a) ipChange.ipc$dispatch("-1306050946", new Object[]{this, Long.valueOf(j)});
+            return (a) ipChange.ipc$dispatch("-1306050946", new Object[]{this, Long.valueOf(j)});
         }
-        C0761a c0761a = new C0761a(this);
+        a aVar = new a(this);
         int i = b;
         if (j < i) {
-            c0761a.b = j + "B";
-            c0761a.a = false;
+            aVar.b = j + "B";
+            aVar.a = false;
         } else if (j < i * i) {
-            c0761a.b = (((int) j) / i) + "K";
-            c0761a.a = false;
+            aVar.b = (((int) j) / i) + "K";
+            aVar.a = false;
         } else {
             int i2 = (((int) j) / i) / i;
             int i3 = ((int) (j - ((i2 * i) * i))) / i;
@@ -80,24 +79,24 @@ public class MediaUtils {
                 StringBuilder sb = new StringBuilder();
                 sb.append(doubleValue);
                 sb.append("M");
-                c0761a.b = sb.toString();
+                aVar.b = sb.toString();
             } catch (Exception unused) {
-                c0761a.b = i2 + "." + valueOf + "M";
+                aVar.b = i2 + "." + valueOf + "M";
             }
             int i4 = b;
-            c0761a.a = ((i2 * i4) * i4) + (i3 * i4) > c;
+            aVar.a = ((i2 * i4) * i4) + (i3 * i4) > c;
         }
-        return c0761a;
+        return aVar;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public C0761a h(long j) {
+    public a h(long j) {
         long floor;
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-1561541070")) {
-            return (C0761a) ipChange.ipc$dispatch("-1561541070", new Object[]{this, Long.valueOf(j)});
+            return (a) ipChange.ipc$dispatch("-1561541070", new Object[]{this, Long.valueOf(j)});
         }
-        C0761a c0761a = new C0761a(this);
+        a aVar = new a(this);
         int i = (((int) j) / 1000) / 60;
         if (i > 0) {
             floor = (int) Math.floor((j - ((i * 60) * 1000)) / 1000);
@@ -105,17 +104,17 @@ public class MediaUtils {
             if (floor < 10) {
                 valueOf = "0" + floor;
             }
-            c0761a.b = i + ":" + valueOf;
+            aVar.b = i + ":" + valueOf;
         } else {
             floor = (int) Math.floor(j / 1000);
             String valueOf2 = String.valueOf(floor);
             if (floor < 10) {
                 valueOf2 = "0" + String.valueOf(floor);
             }
-            c0761a.b = "0:" + valueOf2;
+            aVar.b = "0:" + valueOf2;
         }
-        c0761a.a = ((long) (i * 60)) + floor < ((long) d);
-        return c0761a;
+        aVar.a = ((long) (i * 60)) + floor < ((long) d);
+        return aVar;
     }
 
     public Bitmap d(String str) {
@@ -183,10 +182,10 @@ public class MediaUtils {
                         long j3 = query.getLong(query.getColumnIndex("duration"));
                         String string4 = query.getString(query.getColumnIndex("bucket_id"));
                         String string5 = query.getString(query.getColumnIndex("bucket_display_name"));
-                        C0761a h = MediaUtils.this.h(j3);
+                        a h = MediaUtils.this.h(j3);
                         String str = h.b;
                         boolean z = h.a;
-                        C0761a g = MediaUtils.this.g(j2);
+                        a g = MediaUtils.this.g(j2);
                         String str2 = g.b;
                         boolean z2 = g.a;
                         int indexOf = string3.indexOf(".");

@@ -16,10 +16,9 @@ public final class w0 {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.loc.w0$a */
     /* loaded from: classes10.dex */
-    public final class C5898a implements Comparator<y0> {
-        C5898a(w0 w0Var) {
+    public final class a implements Comparator<y0> {
+        a(w0 w0Var) {
         }
 
         private static int a(y0 y0Var, y0 y0Var2) {
@@ -85,7 +84,7 @@ public final class w0 {
     }
 
     private List<y0> f(List<y0> list) {
-        Collections.sort(list, new C5898a(this));
+        Collections.sort(list, new a(this));
         return list;
     }
 

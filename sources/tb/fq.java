@@ -30,9 +30,8 @@ public class fq {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.fq$a */
     /* loaded from: classes5.dex */
-    public static /* synthetic */ class C9144a {
+    public static /* synthetic */ class a {
         static final /* synthetic */ int[] a;
         static final /* synthetic */ int[] b;
         static final /* synthetic */ int[] c;
@@ -438,7 +437,7 @@ public class fq {
         if (fArr != null && ordinal2 < fArr.length && this.b[ordinal2] != 0) {
             f2 = fArr[ordinal2];
         } else {
-            switch (C9144a.b[cssProperty.ordinal()]) {
+            switch (a.b[cssProperty.ordinal()]) {
                 case 1:
                 case 2:
                 case 3:
@@ -495,7 +494,7 @@ public class fq {
                     f2 = ordinal;
                     break;
                 default:
-                    int i2 = C9144a.a[i(cssProperty).ordinal()];
+                    int i2 = a.a[i(cssProperty).ordinal()];
                     if (i2 == 1) {
                         ordinal = CssEnum.NONE.ordinal();
                         f2 = ordinal;
@@ -514,7 +513,7 @@ public class fq {
             return f2;
         }
         if (i3 == CssUnit.ENUM && cssUnit == CssUnit.ARGB) {
-            switch (C9144a.c[l[(int) f2].ordinal()]) {
+            switch (a.c[l[(int) f2].ordinal()]) {
                 case 1:
                     return -1.0f;
                 case 2:
@@ -549,7 +548,7 @@ public class fq {
                     return -1.6777216E7f;
             }
         }
-        int[] iArr = C9144a.a;
+        int[] iArr = a.a;
         switch (iArr[i3.ordinal()]) {
             case 1:
                 if (f2 != CssEnum.NONE.ordinal()) {
@@ -659,7 +658,7 @@ public class fq {
     }
 
     public float g(CssProperty cssProperty, float f) {
-        int i2 = C9144a.b[cssProperty.ordinal()];
+        int i2 = a.b[cssProperty.ordinal()];
         if (i2 != 1) {
             if (i2 != 2) {
                 if (i2 != 3) {
@@ -687,7 +686,7 @@ public class fq {
                 return this.d;
             }
             CssUnit i2 = i(cssProperty);
-            int i3 = C9144a.a[i2.ordinal()];
+            int i3 = a.a[i2.ordinal()];
             if (i3 != 1) {
                 if (i3 != 2) {
                     StringBuilder sb = new StringBuilder();
@@ -733,7 +732,7 @@ public class fq {
             r4 = r4[r0]
             return r4
         L16:
-            int[] r0 = tb.fq.C9144a.b
+            int[] r0 = tb.fq.a.b
             int r4 = r4.ordinal()
             r4 = r0[r4]
             r0 = 12
@@ -978,7 +977,7 @@ public class fq {
             return this;
         }
         int i3 = 0;
-        switch (C9144a.b[cssProperty.ordinal()]) {
+        switch (a.b[cssProperty.ordinal()]) {
             case 39:
                 if (cssUnit == CssUnit.ARGB) {
                     o(CssProperty.BORDER_COLOR, f, cssUnit, 0);

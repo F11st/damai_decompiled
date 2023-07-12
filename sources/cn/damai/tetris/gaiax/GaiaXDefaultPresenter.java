@@ -19,12 +19,11 @@ public class GaiaXDefaultPresenter extends BasePresenter<GaiaXDefaultModel, Gaia
     private static transient /* synthetic */ IpChange $ipChange;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.gaiax.GaiaXDefaultPresenter$a */
     /* loaded from: classes7.dex */
-    public class C1988a implements GaiaX.IEventDelegate {
+    public class a implements GaiaX.IEventDelegate {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1988a() {
+        a() {
         }
 
         @Override // com.youku.gaiax.GaiaX.IEventDelegate
@@ -39,12 +38,11 @@ public class GaiaXDefaultPresenter extends BasePresenter<GaiaXDefaultModel, Gaia
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.tetris.gaiax.GaiaXDefaultPresenter$b */
     /* loaded from: classes7.dex */
-    public class C1989b implements GaiaX.ITrackDelegate3 {
+    public class b implements GaiaX.ITrackDelegate3 {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C1989b() {
+        b() {
         }
 
         @Override // com.youku.gaiax.GaiaX.ITrackDelegate3
@@ -126,8 +124,8 @@ public class GaiaXDefaultPresenter extends BasePresenter<GaiaXDefaultModel, Gaia
             return;
         }
         GaiaX.Params build = new GaiaX.Params.Builder().templateBiz(gaiaXDefaultModel.getBiz()).templateId(getSection().getComponentId()).container(getView().getGaiaXContainer()).data(gaiaXDefaultModel.getDesireRawJson()).width(gaiaXDefaultModel.getDefaultDesireWidth(getContext().getActivity())).build();
-        build.setEventDelegate(new C1988a());
-        build.setTrackDelegate3(new C1989b());
+        build.setEventDelegate(new a());
+        build.setTrackDelegate3(new b());
         GaiaX.Companion.getInstance().bindView(build);
     }
 }

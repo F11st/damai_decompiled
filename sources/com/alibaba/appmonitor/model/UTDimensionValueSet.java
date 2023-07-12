@@ -1,7 +1,7 @@
 package com.alibaba.appmonitor.model;
 
 import com.alibaba.analytics.core.model.LogField;
-import com.alibaba.appmonitor.pool.C3316a;
+import com.alibaba.appmonitor.pool.a;
 import com.alibaba.mtl.appmonitor.model.DimensionValueSet;
 import java.util.Map;
 import tb.oq1;
@@ -10,7 +10,7 @@ import tb.oq1;
 /* loaded from: classes6.dex */
 public class UTDimensionValueSet extends DimensionValueSet {
     public static UTDimensionValueSet create(Map<String, String> map) {
-        return (UTDimensionValueSet) C3316a.a().poll(UTDimensionValueSet.class, map);
+        return (UTDimensionValueSet) a.a().poll(UTDimensionValueSet.class, map);
     }
 
     @Override // com.alibaba.mtl.appmonitor.model.DimensionValueSet, com.alibaba.appmonitor.pool.Reusable

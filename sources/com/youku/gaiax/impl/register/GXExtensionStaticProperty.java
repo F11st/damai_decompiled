@@ -16,15 +16,15 @@ import tb.b41;
 public final class GXExtensionStaticProperty implements GXRegisterCenter.GXIExtensionStaticProperty {
     @Override // com.alibaba.gaiax.GXRegisterCenter.GXIExtensionStaticProperty
     @Nullable
-    public Object convert(@NotNull GXRegisterCenter.GXIExtensionStaticProperty.C3332a c3332a) {
+    public Object convert(@NotNull GXRegisterCenter.GXIExtensionStaticProperty.a aVar) {
         IProxyFeatures features;
-        b41.i(c3332a, "params");
-        if (b41.d(c3332a.a(), "text-overflow") && b41.d(c3332a.b(), "clip")) {
+        b41.i(aVar, "params");
+        if (b41.d(aVar.a(), "text-overflow") && b41.d(aVar.b(), "clip")) {
             return TextUtils.TruncateAt.END;
         }
-        if (!b41.d(c3332a.a(), TypefaceUtil.FONT_CACHE_DIR_NAME) || (features = GaiaXProxy.Companion.getInstance().getFeatures()) == null) {
+        if (!b41.d(aVar.a(), TypefaceUtil.FONT_CACHE_DIR_NAME) || (features = GaiaXProxy.Companion.getInstance().getFeatures()) == null) {
             return null;
         }
-        return features.createFontFamily(c3332a.b().toString());
+        return features.createFontFamily(aVar.b().toString());
     }
 }

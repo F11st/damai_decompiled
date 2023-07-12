@@ -50,13 +50,13 @@ import tb.y33;
 /* loaded from: classes10.dex */
 public final class bj {
     private static SoftReference<SSLContext> o;
-    private static SoftReference<C5790a0> p;
+    private static SoftReference<a0> p;
     private boolean a;
     private SSLContext b;
     private Proxy c;
     private String d;
-    private bg.InterfaceC5793a e;
-    private C5797d f;
+    private bg.a e;
+    private d f;
     private boolean h;
     private String i;
     private String j;
@@ -64,12 +64,11 @@ public final class bj {
     private boolean k = false;
     private boolean l = false;
     private String m = "";
-    private C5799f n = new C5799f();
+    private f n = new f();
 
     /* compiled from: Taobao */
-    /* renamed from: com.loc.bj$a */
     /* loaded from: classes10.dex */
-    public static class C5794a implements Cloneable, Comparable {
+    public static class a implements Cloneable, Comparable {
         public int a;
         public String b;
         public String c;
@@ -81,24 +80,24 @@ public final class bj {
         public long i;
         public volatile AtomicInteger j = new AtomicInteger(1);
 
-        public C5794a(C5796c c5796c) {
-            this.b = c5796c.c;
-            this.c = c5796c.e;
-            this.e = c5796c.d;
-            this.f = c5796c.m;
-            this.g = c5796c.n;
-            this.h = c5796c.b.a();
-            this.d = c5796c.a;
-            this.i = c5796c.f;
+        public a(c cVar) {
+            this.b = cVar.c;
+            this.c = cVar.e;
+            this.e = cVar.d;
+            this.f = cVar.m;
+            this.g = cVar.n;
+            this.h = cVar.b.a();
+            this.d = cVar.a;
+            this.i = cVar.f;
             if (this.f == 10) {
                 this.a = 0;
             }
         }
 
         /* renamed from: a */
-        public final C5794a clone() {
+        public final a clone() {
             try {
-                return (C5794a) super.clone();
+                return (a) super.clone();
             } catch (CloneNotSupportedException unused) {
                 return null;
             }
@@ -164,29 +163,27 @@ public final class bj {
 
         @Override // java.lang.Comparable
         public final int compareTo(Object obj) {
-            return this.a - ((C5794a) obj).a;
+            return this.a - ((a) obj).a;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.loc.bj$b */
     /* loaded from: classes10.dex */
-    public static class C5795b {
+    public static class b {
         public HttpURLConnection a;
         public int b = this.b;
         public int b = this.b;
 
-        public C5795b(HttpURLConnection httpURLConnection) {
+        public b(HttpURLConnection httpURLConnection) {
             this.a = httpURLConnection;
         }
     }
 
     /* compiled from: Taobao */
-    /* renamed from: com.loc.bj$c */
     /* loaded from: classes10.dex */
-    public static class C5796c implements Cloneable {
+    public static class c implements Cloneable {
         public String a = "";
-        public bl.EnumC5801b b = bl.EnumC5801b.FIRST_NONDEGRADE;
+        public bl.b b = bl.b.FIRST_NONDEGRADE;
         public String c = "";
         public String d = "";
         public String e = "";
@@ -202,9 +199,9 @@ public final class bj {
 
         /* JADX INFO: Access modifiers changed from: protected */
         /* renamed from: a */
-        public final C5796c clone() {
+        public final c clone() {
             try {
-                return (C5796c) super.clone();
+                return (c) super.clone();
             } catch (CloneNotSupportedException unused) {
                 return null;
             }
@@ -235,50 +232,48 @@ public final class bj {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.loc.bj$d */
     /* loaded from: classes10.dex */
-    public static class C5797d {
-        private Vector<C5798e> a;
-        private volatile C5798e b;
+    public static class d {
+        private Vector<e> a;
+        private volatile e b;
 
-        private C5797d() {
+        private d() {
             this.a = new Vector<>();
-            this.b = new C5798e((byte) 0);
+            this.b = new e((byte) 0);
         }
 
-        /* synthetic */ C5797d(byte b) {
+        /* synthetic */ d(byte b) {
             this();
         }
 
-        public final C5798e a(String str) {
+        public final e a(String str) {
             if (TextUtils.isEmpty(str)) {
                 return this.b;
             }
             for (int i = 0; i < this.a.size(); i++) {
-                C5798e c5798e = this.a.get(i);
-                if (c5798e != null && c5798e.a().equals(str)) {
-                    return c5798e;
+                e eVar = this.a.get(i);
+                if (eVar != null && eVar.a().equals(str)) {
+                    return eVar;
                 }
             }
-            C5798e c5798e2 = new C5798e((byte) 0);
-            c5798e2.c(str);
-            this.a.add(c5798e2);
-            return c5798e2;
+            e eVar2 = new e((byte) 0);
+            eVar2.c(str);
+            this.a.add(eVar2);
+            return eVar2;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: Taobao */
-    /* renamed from: com.loc.bj$e */
     /* loaded from: classes10.dex */
-    public static class C5798e implements HostnameVerifier {
+    public static class e implements HostnameVerifier {
         private String a;
         private String b;
 
-        private C5798e() {
+        private e() {
         }
 
-        /* synthetic */ C5798e(byte b) {
+        /* synthetic */ e(byte b) {
             this();
         }
 
@@ -308,18 +303,17 @@ public final class bj {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: com.loc.bj$f */
     /* loaded from: classes10.dex */
-    public class C5799f {
+    public class f {
         long a = 0;
         long b = 0;
-        C5796c c = new C5796c();
-        C5794a d;
-        C5796c e;
+        c c = new c();
+        a d;
+        c e;
         String f;
         URL g;
 
-        C5799f() {
+        f() {
         }
 
         public final void a() {
@@ -331,24 +325,24 @@ public final class bj {
             bj.f();
             try {
                 this.c.f = SystemClock.elapsedRealtime() - this.a;
-                C5796c c5796c = this.c;
-                c5796c.m = i;
-                if (c5796c.b.e()) {
-                    C5849m.p(false, this.c.e);
+                c cVar = this.c;
+                cVar.m = i;
+                if (cVar.b.e()) {
+                    m.p(false, this.c.e);
                 }
                 boolean i2 = bj.this.i(this.c.e);
                 if (i2) {
                     if (bj.this.l && !TextUtils.isEmpty(bj.this.j) && this.c.b.b()) {
-                        C5849m.H();
+                        m.H();
                     }
                     if (this.c.b.c()) {
-                        C5849m.p(this.c.b.c(), this.c.e);
+                        m.p(this.c.b.c(), this.c.e);
                     }
-                    C5849m.F(this.e);
-                    C5849m.o(false, this.d);
-                    C5849m.y(this.c);
+                    m.F(this.e);
+                    m.o(false, this.d);
+                    m.y(this.c);
                 }
-                C5849m.n(this.g.toString(), this.c.b.c(), true, i2);
+                m.n(this.g.toString(), this.c.b.c(), true, i2);
                 this.c.toString();
                 bj.f();
             } catch (Throwable unused) {
@@ -365,8 +359,8 @@ public final class bj {
             this.c.d = url.getPath();
             this.c.e = url.getHost();
             if (!TextUtils.isEmpty(bj.this.j) && blVar.D().b()) {
-                C5796c c5796c = this.c;
-                c5796c.c = c5796c.e.replace(jn1.ARRAY_START_STR, "").replace(jn1.ARRAY_END_STR, "");
+                c cVar = this.c;
+                cVar.c = cVar.e.replace(jn1.ARRAY_START_STR, "").replace(jn1.ARRAY_END_STR, "");
                 this.c.e = bj.this.j;
             }
             if (blVar.D().b()) {
@@ -378,34 +372,34 @@ public final class bj {
         }
 
         public final void e(t43 t43Var) {
-            C5796c clone;
+            c clone;
             try {
                 this.c.f = SystemClock.elapsedRealtime() - this.a;
                 if (t43Var != null) {
                     t43Var.e = this.c.b.c();
                 }
                 if (this.c.b.b()) {
-                    C5796c c5796c = this.c;
-                    if (c5796c.f > 10000) {
-                        C5849m.p(false, c5796c.e);
+                    c cVar = this.c;
+                    if (cVar.f > 10000) {
+                        m.p(false, cVar.e);
                     }
                 }
                 if (this.c.b.d()) {
-                    C5849m.p(false, this.f);
+                    m.p(false, this.f);
                 }
                 boolean i = bj.this.i(this.c.e);
                 if (i) {
-                    C5849m.F(this.c);
-                    C5849m.o(true, this.d);
-                    C5796c c5796c2 = this.c;
-                    if (c5796c2.f > C5849m.r && (clone = c5796c2.clone()) != null) {
+                    m.F(this.c);
+                    m.o(true, this.d);
+                    c cVar2 = this.c;
+                    if (cVar2.f > m.r && (clone = cVar2.clone()) != null) {
                         clone.m = 1;
-                        C5849m.y(clone);
+                        m.y(clone);
                         clone.toString();
                         bj.f();
                     }
                 }
-                C5849m.n(this.g.toString(), this.c.b.c(), false, i);
+                m.n(this.g.toString(), this.c.b.c(), false, i);
                 this.c.toString();
                 bj.f();
             } catch (Throwable unused) {
@@ -425,17 +419,17 @@ public final class bj {
         }
 
         public final void i() {
-            C5796c clone = this.c.clone();
-            if (this.c.f > C5849m.r) {
+            c clone = this.c.clone();
+            if (this.c.f > m.r) {
                 clone.m = 1;
             }
-            C5849m.j(clone);
+            m.j(clone);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public bj() {
-        C5849m.K();
+        m.K();
         try {
             this.d = UUID.randomUUID().toString().replaceAll("-", "").toLowerCase();
         } catch (Throwable th) {
@@ -498,7 +492,7 @@ public final class bj {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private tb.t43 d(com.loc.bj.C5795b r14) throws com.loc.C5844k, java.io.IOException {
+    private tb.t43 d(com.loc.bj.b r14) throws com.loc.k, java.io.IOException {
         /*
             Method dump skipped, instructions count: 541
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -511,7 +505,7 @@ public final class bj {
 
     private void g(Map<String, String> map, HttpURLConnection httpURLConnection) {
         String str;
-        C5796c N;
+        c N;
         if (map != null) {
             try {
                 for (String str2 : map.keySet()) {
@@ -528,28 +522,28 @@ public final class bj {
                 httpURLConnection.addRequestProperty(str3, bg.d.get(str3));
             }
         }
-        if (!this.i.contains("/v3/iasdkauth") && !TextUtils.isEmpty(this.g) && C5849m.r(this.g)) {
+        if (!this.i.contains("/v3/iasdkauth") && !TextUtils.isEmpty(this.g) && m.r(this.g)) {
             this.k = true;
-            httpURLConnection.addRequestProperty("lct", String.valueOf(C5849m.D(this.g)));
+            httpURLConnection.addRequestProperty("lct", String.valueOf(m.D(this.g)));
         }
         httpURLConnection.addRequestProperty("csid", this.d);
         if (i(this.n.c.e)) {
-            C5799f c5799f = this.n;
-            if (TextUtils.isEmpty(c5799f.c.c)) {
+            f fVar = this.n;
+            if (TextUtils.isEmpty(fVar.c.c)) {
                 str = "";
             } else {
-                String f = p1.f(r43.a(c5799f.c.c.getBytes(), "YXBtX25ldHdvcmtf".getBytes()));
-                String str4 = c5799f.c.c;
-                str = f;
+                String f2 = p1.f(r43.a(fVar.c.c.getBytes(), "YXBtX25ldHdvcmtf".getBytes()));
+                String str4 = fVar.c.c;
+                str = f2;
             }
             if (!TextUtils.isEmpty(str)) {
                 httpURLConnection.addRequestProperty("sip", str);
             }
-            if (C5849m.y && (N = C5849m.N()) != null) {
+            if (m.y && (N = m.N()) != null) {
                 httpURLConnection.addRequestProperty("nls", N.b());
                 this.n.e = N;
             }
-            C5794a M = C5849m.M();
+            a M = m.M();
             if (M != null) {
                 httpURLConnection.addRequestProperty("nlf", M.b());
                 this.n.d = M;
@@ -623,7 +617,7 @@ public final class bj {
             java.lang.Long r7 = java.lang.Long.valueOf(r7)     // Catch: java.lang.Throwable -> L72
             long r7 = r7.longValue()     // Catch: java.lang.Throwable -> L72
             java.lang.String r0 = r6.g     // Catch: java.lang.Throwable -> L72
-            boolean r7 = com.loc.C5849m.s(r0, r7)     // Catch: java.lang.Throwable -> L72
+            boolean r7 = com.loc.m.s(r0, r7)     // Catch: java.lang.Throwable -> L72
             r2 = r7
             goto L73
         L72:
@@ -634,14 +628,14 @@ public final class bj {
         throw new UnsupportedOperationException("Method not decompiled: com.loc.bj.j(java.util.Map, boolean):boolean");
     }
 
-    private C5790a0 k() {
+    private a0 k() {
         try {
-            SoftReference<C5790a0> softReference = p;
+            SoftReference<a0> softReference = p;
             if (softReference == null || softReference.get() == null) {
-                p = new SoftReference<>(new C5790a0(C5849m.g, this.b));
+                p = new SoftReference<>(new a0(m.g, this.b));
             }
-            C5790a0 c5790a0 = o != null ? p.get() : null;
-            return c5790a0 == null ? new C5790a0(C5849m.g, this.b) : c5790a0;
+            a0 a0Var = o != null ? p.get() : null;
+            return a0Var == null ? new a0(m.g, this.b) : a0Var;
         } catch (Throwable th) {
             an.m(th, "ht", "gsf");
             return null;
@@ -671,8 +665,8 @@ public final class bj {
         }
     }
 
-    private void m(bl blVar) throws C5844k {
-        this.f = new C5797d((byte) 0);
+    private void m(bl blVar) throws k {
+        this.f = new d((byte) 0);
         this.l = blVar.H();
         this.c = blVar.x();
         this.e = blVar.C();
@@ -681,7 +675,7 @@ public final class bj {
         this.a = q1.a().e(blVar.B());
         String v = blVar.D().b() ? blVar.v() : blVar.u();
         this.i = v;
-        this.i = C5900y.a(v, this.g);
+        this.i = y.a(v, this.g);
         this.j = blVar.s();
         if ("loc".equals(this.g)) {
             String u = blVar.u();
@@ -722,7 +716,7 @@ public final class bj {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private com.loc.bj.C5795b p(com.loc.bl r15) throws java.io.IOException, com.loc.C5844k {
+    private com.loc.bj.b p(com.loc.bl r15) throws java.io.IOException, com.loc.k {
         /*
             Method dump skipped, instructions count: 636
             To view this dump change 'Code comments level' option to 'DEBUG'
@@ -731,7 +725,7 @@ public final class bj {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public final t43 e(bl blVar) throws C5844k {
+    public final t43 e(bl blVar) throws k {
         DataOutputStream dataOutputStream;
         Throwable th;
         OutputStream outputStream;
@@ -739,12 +733,12 @@ public final class bj {
         try {
             try {
                 m(blVar);
-                t43 q = C5900y.q(this.i, this.g);
+                t43 q = y.q(this.i, this.g);
                 if (q != null) {
                     this.n.i();
                     return q;
                 }
-                C5795b p2 = p(blVar);
+                b p2 = p(blVar);
                 HttpURLConnection httpURLConnection2 = p2.a;
                 try {
                     this.n.b = SystemClock.elapsedRealtime();
@@ -761,9 +755,9 @@ public final class bj {
                                 q2 = hashMap;
                             }
                         }
-                        String c = c(q2);
-                        if (!TextUtils.isEmpty(c)) {
-                            r = v1.p(c);
+                        String c2 = c(q2);
+                        if (!TextUtils.isEmpty(c2)) {
+                            r = v1.p(c2);
                         }
                     }
                     if (r != null && r.length > 0) {
@@ -800,17 +794,17 @@ public final class bj {
                             throw th;
                         }
                     }
-                    t43 d = d(p2);
-                    this.n.e(d);
+                    t43 d2 = d(p2);
+                    this.n.e(d2);
                     try {
                         httpURLConnection2.disconnect();
                     } catch (Throwable th5) {
                         y33.e(th5, "ht", "mPt");
                     }
                     this.n.i();
-                    return d;
-                } catch (C5844k e) {
-                    e = e;
+                    return d2;
+                } catch (k e2) {
+                    e = e2;
                     if (!e.i() && e.g() != 10) {
                         this.n.b(e.g());
                     }
@@ -819,77 +813,77 @@ public final class bj {
                 } catch (InterruptedIOException unused) {
                     this.n.g(7101);
                     this.n.b(7);
-                    throw new C5844k(AMapException.ERROR_UNKNOWN);
-                } catch (ConnectException e2) {
-                    e = e2;
-                    e.printStackTrace();
-                    this.n.g(a(e));
-                    this.n.b(6);
-                    throw new C5844k(AMapException.ERROR_CONNECTION);
-                } catch (MalformedURLException e3) {
+                    throw new k(AMapException.ERROR_UNKNOWN);
+                } catch (ConnectException e3) {
                     e = e3;
                     e.printStackTrace();
-                    this.n.b(8);
-                    throw new C5844k("url异常 - MalformedURLException");
-                } catch (SocketException e4) {
-                    e = e4;
-                    e.printStackTrace();
                     this.n.g(a(e));
                     this.n.b(6);
-                    throw new C5844k(AMapException.ERROR_SOCKET);
-                } catch (SocketTimeoutException e5) {
+                    throw new k(AMapException.ERROR_CONNECTION);
+                } catch (MalformedURLException e4) {
+                    e = e4;
+                    e.printStackTrace();
+                    this.n.b(8);
+                    throw new k("url异常 - MalformedURLException");
+                } catch (SocketException e5) {
                     e = e5;
                     e.printStackTrace();
                     this.n.g(a(e));
-                    this.n.b(2);
-                    throw new C5844k("socket 连接超时 - SocketTimeoutException");
-                } catch (UnknownHostException e6) {
+                    this.n.b(6);
+                    throw new k(AMapException.ERROR_SOCKET);
+                } catch (SocketTimeoutException e6) {
                     e = e6;
                     e.printStackTrace();
-                    this.n.b(5);
-                    throw new C5844k("未知主机 - UnKnowHostException");
-                } catch (SSLException e7) {
+                    this.n.g(a(e));
+                    this.n.b(2);
+                    throw new k("socket 连接超时 - SocketTimeoutException");
+                } catch (UnknownHostException e7) {
                     e = e7;
                     e.printStackTrace();
-                    this.n.g(a(e));
-                    this.n.b(4);
-                    throw new C5844k("IO 操作异常 - IOException");
-                } catch (ConnectTimeoutException e8) {
+                    this.n.b(5);
+                    throw new k("未知主机 - UnKnowHostException");
+                } catch (SSLException e8) {
                     e = e8;
                     e.printStackTrace();
                     this.n.g(a(e));
-                    this.n.b(2);
-                    throw new C5844k("IO 操作异常 - IOException");
-                } catch (IOException e9) {
+                    this.n.b(4);
+                    throw new k("IO 操作异常 - IOException");
+                } catch (ConnectTimeoutException e9) {
                     e = e9;
                     e.printStackTrace();
+                    this.n.g(a(e));
+                    this.n.b(2);
+                    throw new k("IO 操作异常 - IOException");
+                } catch (IOException e10) {
+                    e = e10;
+                    e.printStackTrace();
                     this.n.b(7);
-                    throw new C5844k("IO 操作异常 - IOException");
+                    throw new k("IO 操作异常 - IOException");
                 } catch (Throwable th6) {
                     th = th6;
                     y33.e(th, "ht", "mPt");
                     this.n.b(9);
-                    throw new C5844k(AMapException.ERROR_UNKNOWN);
+                    throw new k(AMapException.ERROR_UNKNOWN);
                 }
-            } catch (C5844k e10) {
-                e = e10;
-            } catch (InterruptedIOException unused2) {
-            } catch (ConnectException e11) {
+            } catch (k e11) {
                 e = e11;
-            } catch (MalformedURLException e12) {
+            } catch (InterruptedIOException unused2) {
+            } catch (ConnectException e12) {
                 e = e12;
-            } catch (SocketException e13) {
+            } catch (MalformedURLException e13) {
                 e = e13;
-            } catch (SocketTimeoutException e14) {
+            } catch (SocketException e14) {
                 e = e14;
-            } catch (UnknownHostException e15) {
+            } catch (SocketTimeoutException e15) {
                 e = e15;
-            } catch (SSLException e16) {
+            } catch (UnknownHostException e16) {
                 e = e16;
-            } catch (ConnectTimeoutException e17) {
+            } catch (SSLException e17) {
                 e = e17;
-            } catch (IOException e18) {
+            } catch (ConnectTimeoutException e18) {
                 e = e18;
+            } catch (IOException e19) {
+                e = e19;
             } catch (Throwable th7) {
                 th = th7;
             }

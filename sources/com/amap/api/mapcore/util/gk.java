@@ -33,14 +33,14 @@ public class gk {
                     } catch (Throwable th) {
                         th = th;
                         try {
-                            C4573ha.a(th, MessageDigestAlgorithms.MD5, "gfm");
+                            ha.a(th, MessageDigestAlgorithms.MD5, "gfm");
                             return null;
                         } finally {
                             if (fileInputStream != null) {
                                 try {
                                     fileInputStream.close();
                                 } catch (IOException e) {
-                                    C4573ha.a(e, MessageDigestAlgorithms.MD5, "gfm");
+                                    ha.a(e, MessageDigestAlgorithms.MD5, "gfm");
                                 }
                             }
                         }
@@ -50,7 +50,7 @@ public class gk {
                 try {
                     fileInputStream.close();
                 } catch (IOException e3) {
-                    C4573ha.a(e3, MessageDigestAlgorithms.MD5, "gfm");
+                    ha.a(e3, MessageDigestAlgorithms.MD5, "gfm");
                 }
                 return e2;
             }
@@ -76,7 +76,7 @@ public class gk {
         try {
             return f(str);
         } catch (Throwable th) {
-            C4573ha.a(th, MessageDigestAlgorithms.MD5, "gmb");
+            ha.a(th, MessageDigestAlgorithms.MD5, "gmb");
             return new byte[0];
         }
     }
@@ -113,7 +113,7 @@ public class gk {
             messageDigest.update(bArr);
             return messageDigest.digest();
         } catch (Throwable th) {
-            C4573ha.a(th, MessageDigestAlgorithms.MD5, "gmb");
+            ha.a(th, MessageDigestAlgorithms.MD5, "gmb");
             return null;
         }
     }

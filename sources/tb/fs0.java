@@ -10,7 +10,7 @@ import org.jetbrains.annotations.Nullable;
 /* loaded from: classes6.dex */
 public final class fs0 {
     @NotNull
-    public static final C9146a Companion = new C9146a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final JSONObject a;
     private int b;
@@ -26,13 +26,12 @@ public final class fs0 {
     private Integer h;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.fs0$a */
     /* loaded from: classes6.dex */
-    public static final class C9146a {
-        private C9146a() {
+    public static final class a {
+        private a() {
         }
 
-        public /* synthetic */ C9146a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

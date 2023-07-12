@@ -1,16 +1,15 @@
 package tb;
 
 import com.taobao.android.dinamicx.DXRuntimeContext;
-import com.taobao.android.dinamicx.expression.parser.AbstractC6375a;
 import com.taobao.android.dinamicx.widget.DXRecyclerLayout;
 import com.taobao.android.dinamicx.widget.DXWidgetNode;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
-public class ix extends AbstractC6375a {
+public class ix extends com.taobao.android.dinamicx.expression.parser.a {
     public static final long DX_PARSER_RECYCLERDATAINDEX = -1158194156417975076L;
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.parser.IDXDataParser
     public Object evalWithArgs(Object[] objArr, DXRuntimeContext dXRuntimeContext) {
         if (dXRuntimeContext == null || dXRuntimeContext.getWidgetNode() == null) {
             return -1;
@@ -26,7 +25,7 @@ public class ix extends AbstractC6375a {
         return -1;
     }
 
-    @Override // com.taobao.android.dinamicx.expression.parser.AbstractC6375a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
+    @Override // com.taobao.android.dinamicx.expression.parser.a, com.taobao.android.dinamicx.expression.expr_v2.IDXFunction
     public String getDxFunctionName() {
         return "recyclerDataIndex";
     }

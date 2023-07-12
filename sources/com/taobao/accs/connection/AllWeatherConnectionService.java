@@ -26,7 +26,7 @@ import com.taobao.aranger.utils.IPCUtils;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
-import tb.C9708t9;
+import tb.t9;
 
 /* compiled from: Taobao */
 /* loaded from: classes8.dex */
@@ -200,7 +200,7 @@ public class AllWeatherConnectionService extends ConnectionService {
             if (connection instanceof InAppConnection) {
                 reset();
                 if (OrangeAdapter.normalChangesEnabled()) {
-                    C9708t9.z0(false);
+                    t9.z0(false);
                 }
                 ((InAppConnection) connection).unRegisterSessionInfo();
             }

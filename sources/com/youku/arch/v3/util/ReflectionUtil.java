@@ -13,8 +13,8 @@ import kotlin.Metadata;
 import kotlin.jvm.JvmStatic;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.joor.C8883a;
 import org.joor.ReflectException;
+import org.joor.a;
 import tb.b41;
 
 /* compiled from: Taobao */
@@ -201,7 +201,7 @@ public final class ReflectionUtil {
         ClassLoader classLoader = AppInfoProviderProxy.getAppContext().getClassLoader();
         if (classLoader != null) {
             try {
-                return C8883a.k(str, classLoader).b().f();
+                return a.k(str, classLoader).b().f();
             } catch (ReflectException e) {
                 LogUtil.e(TAG, b41.r("newInstance(String theClass, String location)  ", e));
                 return null;

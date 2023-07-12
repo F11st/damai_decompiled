@@ -116,10 +116,10 @@ public class DamaiTabViewHelper {
         }
         this.a.clear();
         BottomSheetBean bottomSheetBean = (BottomSheetBean) m61.a(z20.B(DamaiTabbarManager.TabBar), BottomSheetBean.class);
-        List<TabItem> h = C0938a.g(bottomSheetBean) ? C0938a.h(bottomSheetBean, this.c) : null;
+        List<TabItem> h = a.g(bottomSheetBean) ? a.h(bottomSheetBean, this.c) : null;
         if (cb2.d(h)) {
             this.d = true;
-            h = C0938a.e();
+            h = a.e();
         } else {
             this.d = false;
         }

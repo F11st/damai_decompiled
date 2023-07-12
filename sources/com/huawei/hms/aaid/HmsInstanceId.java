@@ -20,14 +20,14 @@ import com.huawei.hms.api.HuaweiApiAvailability;
 import com.huawei.hms.common.ApiException;
 import com.huawei.hms.common.HuaweiApi;
 import com.huawei.hms.common.internal.Preconditions;
-import com.huawei.hms.opendevice.AbstractC5658c;
-import com.huawei.hms.opendevice.AbstractC5674p;
-import com.huawei.hms.opendevice.C5665i;
-import com.huawei.hms.opendevice.C5667k;
-import com.huawei.hms.opendevice.C5668l;
-import com.huawei.hms.opendevice.C5673o;
-import com.huawei.hms.opendevice.C5675q;
-import com.huawei.hms.opendevice.CallableC5666j;
+import com.huawei.hms.opendevice.c;
+import com.huawei.hms.opendevice.i;
+import com.huawei.hms.opendevice.j;
+import com.huawei.hms.opendevice.k;
+import com.huawei.hms.opendevice.l;
+import com.huawei.hms.opendevice.o;
+import com.huawei.hms.opendevice.p;
+import com.huawei.hms.opendevice.q;
 import com.huawei.hms.support.log.HMSLog;
 
 /* compiled from: Taobao */
@@ -48,7 +48,7 @@ public class HmsInstanceId {
 
     public static HmsInstanceId getInstance(Context context) {
         Preconditions.checkNotNull(context);
-        AbstractC5658c.c(context);
+        c.c(context);
         return new HmsInstanceId(context);
     }
 
@@ -56,20 +56,20 @@ public class HmsInstanceId {
         if (TextUtils.isEmpty(str)) {
             return;
         }
-        if (AbstractC5674p.e(this.a)) {
-            String string = C5665i.a(this.a).getString("subjectId");
+        if (p.e(this.a)) {
+            String string = i.a(this.a).getString("subjectId");
             if (TextUtils.isEmpty(string)) {
-                C5665i.a(this.a).saveString("subjectId", str);
+                i.a(this.a).saveString("subjectId", str);
                 return;
             } else if (string.contains(str)) {
                 return;
             } else {
-                C5665i a = C5665i.a(this.a);
+                i a = i.a(this.a);
                 a.saveString("subjectId", string + "," + str);
                 return;
             }
         }
-        C5665i.a(this.a).removeKey("subjectId");
+        i.a(this.a).removeKey("subjectId");
     }
 
     public final void b() throws ApiException {
@@ -84,13 +84,13 @@ public class HmsInstanceId {
             if (this.b.containsKey("aaid")) {
                 this.b.removeKey("aaid");
                 this.b.removeKey("creationTime");
-                if (C5673o.e(this.a)) {
+                if (o.e(this.a)) {
                     if (ProxyCenter.getProxy() != null) {
                         HMSLog.i(TAG, "use proxy delete all token after delete AaId.");
                         ProxyCenter.getProxy().deleteAllToken(this.a);
                         return;
                     }
-                    DeleteTokenReq b = C5673o.b(this.a);
+                    DeleteTokenReq b = o.b(this.a);
                     b.setDeleteType(1);
                     b.setMultiSender(false);
                     a(b, 1);
@@ -107,14 +107,14 @@ public class HmsInstanceId {
     public void deleteToken(String str, String str2) throws ApiException {
         b();
         a();
-        DeleteTokenReq a = C5673o.a(this.a, str, str2);
+        DeleteTokenReq a = o.a(this.a, str, str2);
         a.setMultiSender(false);
         a(a, 1);
     }
 
     public Task<AAIDResult> getAAID() {
         try {
-            return Tasks.callInBackground(new CallableC5666j(this.a.getApplicationContext()));
+            return Tasks.callInBackground(new j(this.a.getApplicationContext()));
         } catch (Exception unused) {
             TaskCompletionSource taskCompletionSource = new TaskCompletionSource();
             taskCompletionSource.setException(ErrorEnum.ERROR_INTERNAL_ERROR.toApiException());
@@ -134,7 +134,7 @@ public class HmsInstanceId {
     }
 
     public String getId() {
-        return C5673o.c(this.a);
+        return o.c(this.a);
     }
 
     @Deprecated
@@ -149,10 +149,10 @@ public class HmsInstanceId {
     public String getToken(String str, String str2) throws ApiException {
         b();
         a();
-        TokenReq b = C5673o.b(this.a, null, str2);
+        TokenReq b = o.b(this.a, null, str2);
         b.setAaid(getId());
         b.setMultiSender(false);
-        C5665i.a(this.a).saveString(this.a.getPackageName(), "1");
+        i.a(this.a).saveString(this.a.getPackageName(), "1");
         return a(b, 1);
     }
 
@@ -160,13 +160,13 @@ public class HmsInstanceId {
         b();
         a();
         if (!TextUtils.isEmpty(str)) {
-            String d = C5673o.d(this.a);
+            String d = o.d(this.a);
             if (!TextUtils.isEmpty(d)) {
                 if (str.equals(d)) {
                     deleteToken(null, null);
                     return;
                 }
-                DeleteTokenReq a = C5673o.a(this.a, str);
+                DeleteTokenReq a = o.a(this.a, str);
                 a.setMultiSender(true);
                 a(a, 2);
                 return;
@@ -180,12 +180,12 @@ public class HmsInstanceId {
         b();
         a();
         if (!TextUtils.isEmpty(str)) {
-            String d = C5673o.d(this.a);
+            String d = o.d(this.a);
             if (!TextUtils.isEmpty(d)) {
                 if (str.equals(d)) {
                     return getToken(null, null);
                 }
-                TokenReq b = C5673o.b(this.a, str);
+                TokenReq b = o.b(this.a, str);
                 b.setAaid(getId());
                 b.setMultiSender(true);
                 return a(b, 2);
@@ -202,25 +202,25 @@ public class HmsInstanceId {
             return null;
         }
         a(tokenReq.getSubjectId());
-        String a = C5675q.a(this.a, "push.gettoken");
+        String a = q.a(this.a, "push.gettoken");
         try {
             String str = TAG;
             StringBuilder sb = new StringBuilder();
             sb.append("getToken req :");
             sb.append(tokenReq.toString());
             HMSLog.d(str, sb.toString());
-            C5668l c5668l = new C5668l("push.gettoken", tokenReq, this.a, a);
-            c5668l.setApiLevel(i);
-            return ((TokenResult) Tasks.await(this.c.doWrite(c5668l))).getToken();
+            l lVar = new l("push.gettoken", tokenReq, this.a, a);
+            lVar.setApiLevel(i);
+            return ((TokenResult) Tasks.await(this.c.doWrite(lVar))).getToken();
         } catch (Exception e) {
             if (e.getCause() instanceof ApiException) {
                 ApiException apiException = (ApiException) e.getCause();
-                C5675q.a(this.a, "push.gettoken", a, apiException.getStatusCode());
+                q.a(this.a, "push.gettoken", a, apiException.getStatusCode());
                 throw apiException;
             }
             Context context = this.a;
             ErrorEnum errorEnum = ErrorEnum.ERROR_INTERNAL_ERROR;
-            C5675q.a(context, "push.gettoken", a, errorEnum);
+            q.a(context, "push.gettoken", a, errorEnum);
             throw errorEnum.toApiException();
         }
     }
@@ -232,28 +232,28 @@ public class HmsInstanceId {
             ProxyCenter.getProxy().deleteToken(this.a, subjectId, null);
             return;
         }
-        String a = C5675q.a(this.a, "push.deletetoken");
+        String a = q.a(this.a, "push.deletetoken");
         try {
-            String b = C5665i.a(this.a).b(subjectId);
-            if (deleteTokenReq.isMultiSender() && (TextUtils.isEmpty(b) || b.equals(C5665i.a(this.a).b(null)))) {
-                C5665i.a(this.a).removeKey(subjectId);
+            String b = i.a(this.a).b(subjectId);
+            if (deleteTokenReq.isMultiSender() && (TextUtils.isEmpty(b) || b.equals(i.a(this.a).b(null)))) {
+                i.a(this.a).removeKey(subjectId);
                 HMSLog.i(TAG, "The local subject token is null");
                 return;
             }
             deleteTokenReq.setToken(b);
-            C5667k c5667k = new C5667k("push.deletetoken", deleteTokenReq, a);
-            c5667k.setApiLevel(i);
-            Tasks.await(this.c.doWrite(c5667k));
-            C5665i.a(this.a).c(subjectId);
+            k kVar = new k("push.deletetoken", deleteTokenReq, a);
+            kVar.setApiLevel(i);
+            Tasks.await(this.c.doWrite(kVar));
+            i.a(this.a).c(subjectId);
         } catch (Exception e) {
             if (e.getCause() instanceof ApiException) {
                 ApiException apiException = (ApiException) e.getCause();
-                C5675q.a(this.a, "push.deletetoken", a, apiException.getStatusCode());
+                q.a(this.a, "push.deletetoken", a, apiException.getStatusCode());
                 throw apiException;
             }
             Context context = this.a;
             ErrorEnum errorEnum = ErrorEnum.ERROR_INTERNAL_ERROR;
-            C5675q.a(context, "push.deletetoken", a, errorEnum);
+            q.a(context, "push.deletetoken", a, errorEnum);
             throw errorEnum.toApiException();
         }
     }

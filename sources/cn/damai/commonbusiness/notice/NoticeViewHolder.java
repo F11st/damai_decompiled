@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.common.nav.DMNav;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.commonbusiness.imagebrowse.bean.PicInfo;
@@ -106,7 +106,7 @@ public final class NoticeViewHolder extends RecyclerView.ViewHolder {
                     ViewGroup.LayoutParams layoutParams = fixImageView.getLayoutParams();
                     b41.g(layoutParams, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
                     ((ViewGroup.MarginLayoutParams) layoutParams).setMargins(0, 0, 0, q60.a(this.itemView.getContext(), 3.0f));
-                    C0504a.b().c(str).g(fixImageView);
+                    a.b().c(str).g(fixImageView);
                     fixImageView.setOnClickListener(new View.OnClickListener() { // from class: tb.sl1
                         @Override // android.view.View.OnClickListener
                         public final void onClick(View view) {

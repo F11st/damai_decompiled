@@ -6,8 +6,8 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.Objects;
 import okio.BufferedSink;
-import okio.C8844h;
 import okio.Source;
+import okio.h;
 
 /* compiled from: Taobao */
 /* loaded from: classes7.dex */
@@ -75,7 +75,7 @@ public abstract class RequestBody {
             public void writeTo(BufferedSink bufferedSink) throws IOException {
                 Source source = null;
                 try {
-                    source = C8844h.j(file);
+                    source = h.j(file);
                     bufferedSink.writeAll(source);
                 } finally {
                     Util.closeQuietly(source);

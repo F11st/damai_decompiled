@@ -15,13 +15,12 @@ public class qw0 {
     private View b;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.qw0$a */
     /* loaded from: classes.dex */
-    public class C9634a implements ValueAnimator.AnimatorUpdateListener {
+    public class a implements ValueAnimator.AnimatorUpdateListener {
         private static transient /* synthetic */ IpChange $ipChange;
         final /* synthetic */ View a;
 
-        C9634a(qw0 qw0Var, View view) {
+        a(qw0 qw0Var, View view) {
             this.a = view;
         }
 
@@ -50,7 +49,7 @@ public class qw0 {
             return (ValueAnimator) ipChange.ipc$dispatch("-24376375", new Object[]{this, view, Integer.valueOf(i), Integer.valueOf(i2)});
         }
         ValueAnimator ofInt = ValueAnimator.ofInt(i, i2);
-        ofInt.addUpdateListener(new C9634a(this, view));
+        ofInt.addUpdateListener(new a(this, view));
         return ofInt;
     }
 
@@ -66,9 +65,9 @@ public class qw0 {
             return;
         }
         view.setVisibility(0);
-        ValueAnimator a = a(view, 0, this.a);
-        a.setDuration(i);
-        a.start();
+        ValueAnimator a2 = a(view, 0, this.a);
+        a2.setDuration(i);
+        a2.start();
     }
 
     public void d(int i) {

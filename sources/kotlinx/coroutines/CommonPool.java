@@ -8,7 +8,6 @@ import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 import kotlin.coroutines.CoroutineContext;
-import kotlin.text.C8603n;
 import org.jetbrains.annotations.NotNull;
 import tb.eo2;
 import tb.ty1;
@@ -25,12 +24,11 @@ public final class CommonPool extends ExecutorCoroutineDispatcher {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: kotlinx.coroutines.CommonPool$a */
     /* loaded from: classes8.dex */
-    public static final class ThreadFactoryC8609a implements ThreadFactory {
+    public static final class a implements ThreadFactory {
         final /* synthetic */ AtomicInteger a;
 
-        ThreadFactoryC8609a(AtomicInteger atomicInteger) {
+        a(AtomicInteger atomicInteger) {
             this.a = atomicInteger;
         }
 
@@ -52,7 +50,7 @@ public final class CommonPool extends ExecutorCoroutineDispatcher {
             str = null;
         }
         if (str != null) {
-            i2 = C8603n.i(str);
+            i2 = kotlin.text.n.i(str);
             if (i2 != null && i2.intValue() >= 1) {
                 i = i2.intValue();
             } else {
@@ -68,7 +66,7 @@ public final class CommonPool extends ExecutorCoroutineDispatcher {
     }
 
     private final ExecutorService a() {
-        return Executors.newFixedThreadPool(f(), new ThreadFactoryC8609a(new AtomicInteger()));
+        return Executors.newFixedThreadPool(f(), new a(new AtomicInteger()));
     }
 
     private final ExecutorService c() {

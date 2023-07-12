@@ -175,7 +175,7 @@ public class DagoChatListView extends FrameLayout implements View.OnClickListene
             ipChange.ipc$dispatch("1828007152", new Object[]{this, context});
             return;
         }
-        LayoutInflater.from(context).inflate(R.C7942layout.dago_pgc_ailp_chat_list, this);
+        LayoutInflater.from(context).inflate(R.layout.dago_pgc_ailp_chat_list, this);
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.portrait_chat_recyclerview);
         this.mChatRecyclerView = recyclerView;
         recyclerView.setItemAnimator(null);

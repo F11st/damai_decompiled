@@ -94,7 +94,7 @@ public class FingerPrintDialog extends DialogFragment {
     }
 
     protected int getLayoutContent() {
-        return R.C2965layout.aliuser_fragment_fingerprint_dialog;
+        return R.layout.aliuser_fragment_fingerprint_dialog;
     }
 
     public String getPageName() {
@@ -173,7 +173,7 @@ public class FingerPrintDialog extends DialogFragment {
         if (this.transparent) {
             getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(0));
         } else {
-            getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(getContext().getResources().getColor(R.C2963color.aliuser_half_transparent_background)));
+            getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(getContext().getResources().getColor(R.color.aliuser_half_transparent_background)));
         }
     }
 

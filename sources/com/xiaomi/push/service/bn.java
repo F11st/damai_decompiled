@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.net.Uri;
 import android.provider.Settings;
-import com.xiaomi.push.C7596ae;
 
 /* compiled from: Taobao */
 /* loaded from: classes11.dex */
@@ -49,7 +48,7 @@ public class bn {
 
     /* renamed from: a  reason: collision with other method in class */
     public boolean m1203a() {
-        String str = C7596ae.f84a;
+        String str = com.xiaomi.push.ae.f84a;
         return str.contains("xmsf") || str.contains("xiaomi") || str.contains("miui");
     }
 }

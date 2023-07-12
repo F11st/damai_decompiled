@@ -22,20 +22,19 @@ import tb.k50;
 public final class WantSeeRecommendViewHolder extends RecyclerView.ViewHolder {
     private static transient /* synthetic */ IpChange $ipChange;
     @NotNull
-    public static final C0988a Companion = new C0988a(null);
+    public static final a Companion = new a(null);
     @NotNull
     private final WantSeeRecommendView a;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.wannasee.viewholder.WantSeeRecommendViewHolder$a */
     /* loaded from: classes.dex */
-    public static final class C0988a {
+    public static final class a {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        private C0988a() {
+        private a() {
         }
 
-        public /* synthetic */ C0988a(k50 k50Var) {
+        public /* synthetic */ a(k50 k50Var) {
             this();
         }
 

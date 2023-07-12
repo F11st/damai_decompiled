@@ -25,12 +25,11 @@ public class te {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.te$a */
     /* loaded from: classes11.dex */
-    public class C9715a extends ViewOutlineProvider {
+    public class a extends ViewOutlineProvider {
         final /* synthetic */ int a;
 
-        C9715a(te teVar, int i) {
+        a(te teVar, int i) {
             this.a = i;
         }
 
@@ -43,12 +42,11 @@ public class te {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.te$b */
     /* loaded from: classes11.dex */
-    public class C9716b extends ViewOutlineProvider {
+    public class b extends ViewOutlineProvider {
         final /* synthetic */ int a;
 
-        C9716b(te teVar, int i) {
+        b(te teVar, int i) {
             this.a = i;
         }
 
@@ -62,12 +60,11 @@ public class te {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.te$c */
     /* loaded from: classes11.dex */
-    public class C9717c extends ViewOutlineProvider {
+    public class c extends ViewOutlineProvider {
         final /* synthetic */ int a;
 
-        C9717c(te teVar, int i) {
+        c(te teVar, int i) {
             this.a = i;
         }
 
@@ -84,12 +81,11 @@ public class te {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.te$d */
     /* loaded from: classes11.dex */
-    public class C9718d extends ViewOutlineProvider {
+    public class d extends ViewOutlineProvider {
         final /* synthetic */ int a;
 
-        C9718d(te teVar, int i) {
+        d(te teVar, int i) {
             this.a = i;
         }
 
@@ -103,12 +99,11 @@ public class te {
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: tb.te$e */
     /* loaded from: classes11.dex */
-    public class C9719e extends ViewOutlineProvider {
+    public class e extends ViewOutlineProvider {
         final /* synthetic */ int a;
 
-        C9719e(te teVar, int i) {
+        e(te teVar, int i) {
             this.a = i;
         }
 
@@ -187,14 +182,14 @@ public class te {
             if (f == f2) {
                 float f3 = this.c;
                 if (f == f3 && f3 == this.d) {
-                    view.setOutlineProvider(new C9715a(this, (int) f));
+                    view.setOutlineProvider(new a(this, (int) f));
                     view.setClipToOutline(true);
                     this.g = true;
                     return;
                 }
             }
             if (f == f2 && this.c == 0.0f && this.d == 0.0f) {
-                view.setOutlineProvider(new C9716b(this, (int) f));
+                view.setOutlineProvider(new b(this, (int) f));
                 view.setClipToOutline(true);
                 this.g = true;
                 return;
@@ -202,17 +197,17 @@ public class te {
             float f4 = this.c;
             float f5 = this.d;
             if (f4 == f5 && f == 0.0f && f2 == 0.0f) {
-                view.setOutlineProvider(new C9717c(this, (int) f4));
+                view.setOutlineProvider(new c(this, (int) f4));
                 view.setClipToOutline(true);
                 this.g = true;
                 return;
             } else if (f == f4 && f2 == 0.0f && f5 == 0.0f) {
-                view.setOutlineProvider(new C9718d(this, (int) f));
+                view.setOutlineProvider(new d(this, (int) f));
                 view.setClipToOutline(true);
                 this.g = true;
                 return;
             } else if (f2 == f5 && f == 0.0f && f4 == 0.0f) {
-                view.setOutlineProvider(new C9719e(this, (int) f2));
+                view.setOutlineProvider(new e(this, (int) f2));
                 view.setClipToOutline(true);
                 this.g = true;
                 return;

@@ -29,7 +29,7 @@ public class PhotoViewAttacher implements View.OnLayoutChangeListener, View.OnTo
     private float A;
     private ImageView h;
     private GestureDetector i;
-    private C0768a j;
+    private cn.damai.commonbusiness.photoselect.photoview.a j;
     private OnMatrixChangedListener p;
     private OnPhotoTapListener q;
     private OnOutsidePhotoTapListener r;
@@ -55,7 +55,7 @@ public class PhotoViewAttacher implements View.OnLayoutChangeListener, View.OnTo
     private int z = 2;
     private boolean B = true;
     private ImageView.ScaleType C = ImageView.ScaleType.FIT_CENTER;
-    private OnGestureListener D = new C0764a();
+    private OnGestureListener D = new a();
 
     /* compiled from: Taobao */
     /* loaded from: classes4.dex */
@@ -174,12 +174,11 @@ public class PhotoViewAttacher implements View.OnLayoutChangeListener, View.OnTo
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.photoview.PhotoViewAttacher$a */
     /* loaded from: classes4.dex */
-    public class C0764a implements OnGestureListener {
+    public class a implements OnGestureListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0764a() {
+        a() {
         }
 
         @Override // cn.damai.commonbusiness.photoselect.photoview.OnGestureListener
@@ -240,12 +239,11 @@ public class PhotoViewAttacher implements View.OnLayoutChangeListener, View.OnTo
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.photoview.PhotoViewAttacher$b */
     /* loaded from: classes4.dex */
-    public class C0765b extends GestureDetector.SimpleOnGestureListener {
+    public class b extends GestureDetector.SimpleOnGestureListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        C0765b() {
+        b() {
         }
 
         @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnGestureListener
@@ -272,12 +270,11 @@ public class PhotoViewAttacher implements View.OnLayoutChangeListener, View.OnTo
     }
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.photoview.PhotoViewAttacher$c */
     /* loaded from: classes4.dex */
-    public class GestureDetector$OnDoubleTapListenerC0766c implements GestureDetector.OnDoubleTapListener {
+    public class c implements GestureDetector.OnDoubleTapListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        GestureDetector$OnDoubleTapListenerC0766c() {
+        c() {
         }
 
         @Override // android.view.GestureDetector.OnDoubleTapListener
@@ -349,9 +346,8 @@ public class PhotoViewAttacher implements View.OnLayoutChangeListener, View.OnTo
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.commonbusiness.photoselect.photoview.PhotoViewAttacher$d */
     /* loaded from: classes4.dex */
-    public static /* synthetic */ class C0767d {
+    public static /* synthetic */ class d {
         static final /* synthetic */ int[] a;
 
         static {
@@ -384,10 +380,10 @@ public class PhotoViewAttacher implements View.OnLayoutChangeListener, View.OnTo
             return;
         }
         this.A = 0.0f;
-        this.j = new C0768a(imageView.getContext(), this.D);
-        GestureDetector gestureDetector = new GestureDetector(imageView.getContext(), new C0765b());
+        this.j = new cn.damai.commonbusiness.photoselect.photoview.a(imageView.getContext(), this.D);
+        GestureDetector gestureDetector = new GestureDetector(imageView.getContext(), new b());
         this.i = gestureDetector;
-        gestureDetector.setOnDoubleTapListener(new GestureDetector$OnDoubleTapListenerC0766c());
+        gestureDetector.setOnDoubleTapListener(new c());
     }
 
     private void A() {
@@ -432,7 +428,7 @@ public class PhotoViewAttacher implements View.OnLayoutChangeListener, View.OnTo
         float I2 = I(this.h);
         float f6 = 0.0f;
         if (height <= I2) {
-            int i = C0767d.a[this.C.ordinal()];
+            int i = d.a[this.C.ordinal()];
             if (i != 2) {
                 if (i != 3) {
                     I2 = (I2 - height) / 2.0f;
@@ -459,7 +455,7 @@ public class PhotoViewAttacher implements View.OnLayoutChangeListener, View.OnTo
         }
         float J = J(this.h);
         if (width <= J) {
-            int i2 = C0767d.a[this.C.ordinal()];
+            int i2 = d.a[this.C.ordinal()];
             if (i2 != 2) {
                 if (i2 != 3) {
                     f4 = (J - width) / 2.0f;
@@ -595,7 +591,7 @@ public class PhotoViewAttacher implements View.OnLayoutChangeListener, View.OnTo
                 if (((int) this.A) % 180 != 0) {
                     rectF = new RectF(0.0f, 0.0f, f3, f);
                 }
-                int i = C0767d.a[this.C.ordinal()];
+                int i = d.a[this.C.ordinal()];
                 if (i == 1) {
                     this.k.setRectToRect(rectF, rectF2, Matrix.ScaleToFit.CENTER);
                 } else if (i == 2) {
@@ -709,7 +705,7 @@ public class PhotoViewAttacher implements View.OnLayoutChangeListener, View.OnTo
             ipChange.ipc$dispatch("-305569722", new Object[]{this, Float.valueOf(f)});
             return;
         }
-        C0770b.a(this.c, this.d, f);
+        cn.damai.commonbusiness.photoselect.photoview.b.a(this.c, this.d, f);
         this.e = f;
     }
 
@@ -719,7 +715,7 @@ public class PhotoViewAttacher implements View.OnLayoutChangeListener, View.OnTo
             ipChange.ipc$dispatch("-1505623601", new Object[]{this, Float.valueOf(f)});
             return;
         }
-        C0770b.a(this.c, f, this.e);
+        cn.damai.commonbusiness.photoselect.photoview.b.a(this.c, f, this.e);
         this.d = f;
     }
 
@@ -729,7 +725,7 @@ public class PhotoViewAttacher implements View.OnLayoutChangeListener, View.OnTo
             ipChange.ipc$dispatch("-369438184", new Object[]{this, Float.valueOf(f)});
             return;
         }
-        C0770b.a(f, this.d, this.e);
+        cn.damai.commonbusiness.photoselect.photoview.b.a(f, this.d, this.e);
         this.c = f;
     }
 
@@ -919,7 +915,7 @@ public class PhotoViewAttacher implements View.OnLayoutChangeListener, View.OnTo
             if (r0 == 0) goto Ldc
             r0 = r13
             android.widget.ImageView r0 = (android.widget.ImageView) r0
-            boolean r0 = cn.damai.commonbusiness.photoselect.photoview.C0770b.c(r0)
+            boolean r0 = cn.damai.commonbusiness.photoselect.photoview.b.c(r0)
             if (r0 == 0) goto Ldc
             int r0 = r14.getAction()
             if (r0 == 0) goto L8c
@@ -1023,7 +1019,7 @@ public class PhotoViewAttacher implements View.OnLayoutChangeListener, View.OnTo
             ipChange.ipc$dispatch("-1076981869", new Object[]{this, Float.valueOf(f), Float.valueOf(f2), Float.valueOf(f3)});
             return;
         }
-        C0770b.a(f, f2, f3);
+        cn.damai.commonbusiness.photoselect.photoview.b.a(f, f2, f3);
         this.c = f;
         this.d = f2;
         this.e = f3;
@@ -1033,7 +1029,7 @@ public class PhotoViewAttacher implements View.OnLayoutChangeListener, View.OnTo
         IpChange ipChange = $ipChange;
         if (AndroidInstantRuntime.support(ipChange, "-470518404")) {
             ipChange.ipc$dispatch("-470518404", new Object[]{this, scaleType});
-        } else if (!C0770b.d(scaleType) || scaleType == this.C) {
+        } else if (!cn.damai.commonbusiness.photoselect.photoview.b.d(scaleType) || scaleType == this.C) {
         } else {
             this.C = scaleType;
             t0();

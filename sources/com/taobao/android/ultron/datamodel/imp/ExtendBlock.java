@@ -40,15 +40,15 @@ public class ExtendBlock implements Serializable, Cloneable {
         this.blockComponents.put(str, list);
     }
 
-    public void addHierarchy(String str, C6661a c6661a) {
-        if (c6661a == null || TextUtils.isEmpty(str)) {
+    public void addHierarchy(String str, a aVar) {
+        if (aVar == null || TextUtils.isEmpty(str)) {
             return;
         }
         JSONObject jSONObject = this.blockHierarchy.get(str);
         if (jSONObject == null) {
             jSONObject = new JSONObject();
         }
-        JSONObject n = c6661a.n();
+        JSONObject n = aVar.n();
         if (n.containsKey(str)) {
             JSONArray jSONArray = n.getJSONArray(str);
             jSONObject.put(str, (Object) jSONArray);

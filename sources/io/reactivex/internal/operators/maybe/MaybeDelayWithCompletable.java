@@ -1,17 +1,17 @@
 package io.reactivex.internal.operators.maybe;
 
-import io.reactivex.AbstractC8148c;
 import io.reactivex.CompletableObserver;
 import io.reactivex.CompletableSource;
 import io.reactivex.MaybeObserver;
 import io.reactivex.MaybeSource;
+import io.reactivex.c;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.disposables.DisposableHelper;
 import java.util.concurrent.atomic.AtomicReference;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
-public final class MaybeDelayWithCompletable<T> extends AbstractC8148c<T> {
+public final class MaybeDelayWithCompletable<T> extends c<T> {
     final CompletableSource other;
     final MaybeSource<T> source;
 
@@ -92,7 +92,7 @@ public final class MaybeDelayWithCompletable<T> extends AbstractC8148c<T> {
         this.other = completableSource;
     }
 
-    @Override // io.reactivex.AbstractC8148c
+    @Override // io.reactivex.c
     protected void subscribeActual(MaybeObserver<? super T> maybeObserver) {
         this.other.subscribe(new OtherObserver(maybeObserver, this.source));
     }

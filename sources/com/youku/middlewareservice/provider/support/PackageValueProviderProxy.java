@@ -1,7 +1,7 @@
 package com.youku.middlewareservice.provider.support;
 
 import android.util.Log;
-import org.joor.C8883a;
+import org.joor.a;
 
 /* compiled from: Taobao */
 /* loaded from: classes13.dex */
@@ -11,7 +11,7 @@ public class PackageValueProviderProxy {
     public static <T> T get(String str) {
         try {
             if (sProxy == null) {
-                sProxy = (PackageValueProvider) C8883a.j("com.youku.middlewareservice_impl.provider.support.PackageValueProviderImpl").b().f();
+                sProxy = (PackageValueProvider) a.j("com.youku.middlewareservice_impl.provider.support.PackageValueProviderImpl").b().f();
             }
             return (T) sProxy.get(str);
         } catch (Throwable th) {
@@ -22,7 +22,7 @@ public class PackageValueProviderProxy {
 
     public static PackageValueProvider getProxy() {
         if (sProxy == null) {
-            sProxy = (PackageValueProvider) C8883a.j("com.youku.middlewareservice_impl.provider.support.PackageValueProviderImpl").b().f();
+            sProxy = (PackageValueProvider) a.j("com.youku.middlewareservice_impl.provider.support.PackageValueProviderImpl").b().f();
         }
         return sProxy;
     }
@@ -40,7 +40,7 @@ public class PackageValueProviderProxy {
     public static <T> T get(String str, T t) {
         try {
             if (sProxy == null) {
-                sProxy = (PackageValueProvider) C8883a.j("com.youku.middlewareservice_impl.provider.support.PackageValueProviderImpl").b().f();
+                sProxy = (PackageValueProvider) a.j("com.youku.middlewareservice_impl.provider.support.PackageValueProviderImpl").b().f();
             }
             return (T) sProxy.get(str, t);
         } catch (Throwable th) {

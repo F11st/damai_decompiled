@@ -2,7 +2,7 @@ package cn.damai.onearch.component.banner.venue;
 
 import android.view.View;
 import android.view.ViewGroup;
-import cn.damai.common.image.C0504a;
+import cn.damai.common.image.a;
 import cn.damai.commonbusiness.R$id;
 import cn.damai.onearch.component.banner.venue.VenueBannerContract;
 import cn.damai.tetris.component.home.widget.banner.sub.RoundRadiusImageView;
@@ -48,6 +48,6 @@ public final class VenueBannerView extends AbsView<GenericItem<ItemValue>, Venue
             return;
         }
         b41.i(str, "picUrl");
-        C0504a.b().c(str).g(this.image);
+        a.b().c(str).g(this.image);
     }
 }

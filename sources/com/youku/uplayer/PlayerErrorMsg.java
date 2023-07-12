@@ -1,7 +1,7 @@
 package com.youku.uplayer;
 
 import android.text.TextUtils;
-import com.youku.player.util.C8063c;
+import com.youku.player.util.c;
 
 /* compiled from: Taobao */
 /* loaded from: classes3.dex */
@@ -28,7 +28,7 @@ public class PlayerErrorMsg {
             String[] split = str.split(";");
             if (split == null || split.length < 9) {
                 String str3 = LogTag.TAG_PLAYER;
-                C8063c.a(str3, "PlayerErrorMsg ---> " + str);
+                c.a(str3, "PlayerErrorMsg ---> " + str);
             } else {
                 PlayerErrorMsg playerErrorMsg2 = new PlayerErrorMsg();
                 try {

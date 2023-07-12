@@ -36,12 +36,11 @@ public class ProjectEvaluateMineViewHolder extends RecyclerView.ViewHolder {
     private boolean h;
 
     /* compiled from: Taobao */
-    /* renamed from: cn.damai.trade.newtradeorder.ui.projectdetail.projectdetailitem.ui.viewholder.ProjectEvaluateMineViewHolder$a */
     /* loaded from: classes16.dex */
-    public class View$OnClickListenerC2392a implements View.OnClickListener {
+    public class a implements View.OnClickListener {
         private static transient /* synthetic */ IpChange $ipChange;
 
-        View$OnClickListenerC2392a() {
+        a() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -80,7 +79,7 @@ public class ProjectEvaluateMineViewHolder extends RecyclerView.ViewHolder {
         this.c = (TextView) this.itemView.findViewById(R$id.project_item_my_evaluate_time_tv);
         this.d = (DMRatingBar) this.itemView.findViewById(R$id.project_item_my_evaluate_rating_level);
         this.e = (TextView) this.itemView.findViewById(R$id.project_item_my_evaluate_score_tv);
-        this.itemView.setOnClickListener(new View$OnClickListenerC2392a());
+        this.itemView.setOnClickListener(new a());
     }
 
     public void c(ProjectDataHolder projectDataHolder) {

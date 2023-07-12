@@ -18,9 +18,8 @@ public final class oj0<T> implements Sequence<T> {
     private final Function1<T, Boolean> c;
 
     /* compiled from: Taobao */
-    /* renamed from: tb.oj0$a */
     /* loaded from: classes3.dex */
-    public static final class C9525a implements Iterator<T>, KMappedMarker {
+    public static final class a implements Iterator<T>, KMappedMarker {
         @NotNull
         private final Iterator<T> a;
         private int b = -1;
@@ -28,7 +27,7 @@ public final class oj0<T> implements Sequence<T> {
         private T c;
         final /* synthetic */ oj0<T> d;
 
-        C9525a(oj0<T> oj0Var) {
+        a(oj0<T> oj0Var) {
             this.d = oj0Var;
             this.a = ((oj0) oj0Var).a.iterator();
         }
@@ -85,6 +84,6 @@ public final class oj0<T> implements Sequence<T> {
     @Override // kotlin.sequences.Sequence
     @NotNull
     public Iterator<T> iterator() {
-        return new C9525a(this);
+        return new a(this);
     }
 }
